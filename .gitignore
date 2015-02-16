@@ -30,4 +30,6 @@ lib/TPURGE/
 lib/VAULTBACKUP/
 lib/typos
 lib/reboot_time
-
+lib/plrlog
+lib/slave.pid
+lib/names-*
