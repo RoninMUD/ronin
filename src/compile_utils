@@ -1,0 +1,27 @@
+gcc -m32 -o announce announce.c
+gcc -m32 -o charstats charstats.c
+mv  charstats ./lib/rent
+gcc -m32 -o goldstats goldstats.c -lm
+mv  goldstats ./lib/rent
+gcc -m32 -o listit listit.c
+mv  listit ./lib/rent
+gcc -m32 -o nlp nlp.c
+mv  nlp ./lib/rent
+gcc -m32 -o pcompare pcompare.c
+mv  pcompare ./lib/rent
+gcc -m32 -o showlvl showlvl.c
+mv  showlvl ./lib/rent
+gcc -m32 -o statlist statlist.c
+mv  statlist ./lib/rent
+gcc -m32 -o list_vaults list_vaults.c
+mv  list_vaults ./lib/vault
+gcc -m32 -o vcheck vcheck.c
+mv  vcheck ./lib/vault
+gcc -m32 -o vtest vtest.c
+mv  vtest ./lib/vault
+gcc -m32 -o vtestdual vtestdual.c
+mv  vtestdual ./lib/vault
+gcc -m32 -o ptest ptest.c
+mv  ptest ./lib/rent
+gcc -m32 -o ptestdual ptestdual.c
+mv  ptestdual ./lib/rent

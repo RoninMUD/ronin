@@ -1,0 +1,37 @@
+#!/bin/csh
+
+set max=200
+set counter=0
+tail -3 syslog.last >> runlog
+echo "*** Started by $user at: `date`" >> runlog
+
+while 1
+@ counter =  ($counter + 1)
+
+  echo "************* DIKUMUD REBOOT -- Run nr $counter *********" >> runlog
+
+  cp -f obj/ronin bin/
+  cp -f obj/roninslave bin/
+  bin/ronin $1 >>& runlog
+
+  set tmp=$status
+
+# If shutdown full or tried to reboot too many times.
+  if (($tmp == 0) || ($counter == $max)) then
+    if (`tail syslog.last | grep SIGSEGV | wc -l` == 0) then
+      echo "Terminating (after run nr $counter) (STATUS = $status)." >> runlog
+      exit
+    endif
+    echo "* Received SIGSEGV, continue to reload the mud." >> runlog
+  endif
+
+# Reboot signal
+  if ($tmp == 52) then
+   set counter=0
+  endif
+
+  tail -2 syslog.last >> runlog
+  echo "* Restarting game ($user) at `date`, status $status." >> runlog
+  sleep 20
+end
+   

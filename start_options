@@ -1,0 +1,12 @@
+0 - 0_is_off_1_is_on
+1 - GAMECHECK
+1 - GAMELOCK
+1 - WIZLOCK
+0 - GAMEHALT
+0 - PULSECHECK
+1 - disablereboot
+0 - BAMDAY
+0 - CHAOSMODE
+0 - BOOTFULL
+1 - reboottype
+5 - TOKENCOUNT
