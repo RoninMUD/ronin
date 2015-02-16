@@ -1,0 +1,388 @@
+#18200
+second seal~
+Second seal on the dark ones prison~
+A black and white disk is lying here.~
+~
+8 0 1
+0 0 0 0
+3 25000 2000000
+50
+E
+seal second~
+   A flat disk, the size of your palm half white, half
+black, the colors separated by a sinuous line. 
+The disk is made of cuendiar, and is one of the
+seven seals on the dark ones prison. If all seven 
+are broken, The Dark One will break free of his
+prison.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18201
+fourth seal~
+Fourth seal on the dark ones prison~
+A black and white disk is lying here.~
+~
+8 0 1
+0 0 0 0
+3 25000 2000000
+50
+E
+seal fourth~
+   A flat disk, the size of your palm half white, half
+black, the colors separated by a sinuous line. 
+The disk is made of cuendiar, and is one of the
+seven seals on the dark ones prison. If all seven 
+are broken, The Dark One will break free of his
+prison.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18202
+seventh seal~
+Seventh seal on the dark ones prison~
+A black and white disk is lying here.~
+~
+8 0 1
+0 0 0 0
+3 25000 2000000
+50
+E
+seal seventh~
+   A flat disk, the size of your palm half white, half
+black, the colors separated by a sinuous line. 
+The disk is made of cuendiar, and is one of the
+seven seals on the dark ones prison. If all seven 
+are broken, The Dark One will break free of his
+prison.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18203
+silver tray~
+silver tray~
+A silver tray is lying on the ground.~
+~
+13 0 1
+0 0 0 0
+3 25000 1500
+40
+E
+tray silver~
+You see nothing special...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18204
+rod fishing~
+fishing rod~
+a fishing pole is lying here.~
+~
+13 0 1
+0 0 0 0
+3 1000 1000
+40
+E
+rod fishing~
+You see nothing special...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18205
+fish bone~
+a fish bone~
+The bone of a fish is lying here.~
+~
+13 0 1
+0 0 0 0
+1 100 1000
+100
+E
+fish bone~
+You see nothing special...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18206
+nail lacquered~
+a lacquered nail~
+A nail is lying here.~
+~
+13 0 1
+0 0 0 0
+1 100 200
+10
+E
+nail lacquered~
+A blue lacquered fingernail.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18207
+tooth~
+a tooth~
+A jagged tooth is covered with dirt.~
+~
+13 0 1
+0 0 0 0
+1 5 5
+75
+E
+tooth~
+A human tooth.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18208
+helmet iron~
+an iron helmet~
+An iron helmet is lying here.~
+~
+9 0 17
+6 -1 -1 -1
+6 5000 10000
+25
+E
+helmet iron~
+A regular helmet made of iron.
+~
+X
+~
+0 0 0
+M
+You wear the iron helmet.~
+You remove the iron helmet.~
+$n wears an iron helmet.~
+$n removes an iron helmet.~
+A
+19 1
+A
+18 -1
+#18209
+boots~
+a pair of boots~
+A pair of boots is lying here~
+~
+9 0 65
+3 -1 -1 -1
+2 5000 70000
+20
+E
+boots~
+A pair of sturdy leather boots.
+~
+X
+~
+0 0 0
+M
+You wear the boots.~
+You remove the boots.~
+$n wears a pair of boots.~
+$n removes a pair of boots.~
+A
+19 1
+A
+1 -2
+A
+13 22
+#18210
+apron~
+an apron~
+An apron is lying here in a heap.~
+~
+9 0 1025
+2 -1 -1 -1
+2 6000 7000
+20
+E
+apron~
+The apron is white with small pockets along the sides.
+~
+X
+~
+0 0 0
+M
+You wear the apron.~
+You remove the apron.~
+$n wears an apron.~
+$n removes an apron.~
+A
+18 1
+A
+1 1
+#18211
+shirt blue~
+a blue shirt~
+A blue shirt is lying here.~
+~
+9 0 9
+1 -1 -1 -1
+2 12000 8000
+10
+E
+shirt blue~
+   The shirt is woven from silk and dyed blue. It has silver buttons 
+but embroideries.
+~
+E
+shirt blue~
+The shirt is woven from silk and dyed blue. It has silver buttons 
+but embroideries.
+~
+X
+~
+0 0 0
+M
+You wear the blue shirt.~
+You remove the blue shirt.~
+$n wears a blue shirt.~
+$n removes a blue shirt.~
+A
+12 33
+#18212
+belt~
+a belt~
+A belt is lying here.~
+~
+9 0 2049
+5 -1 -1 -1
+2 2000 5000
+20
+E
+belt~
+The belt is made of leather.
+~
+X
+~
+0 0 0
+M
+You wear the belt.~
+You remove the belt.~
+$n wears a belt around his waist.~
+$n removes a belt from his waist.~
+A
+13 10
+#18213
+wine pithcer~
+a pitcher of wine~
+A pitcher of wine is standing on the ground.~
+~
+13 0 1
+0 0 0 0
+1 1000 1000
+50
+E
+wine pitcher~
+The silver pitcher is filled with red vine.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18214
+crown gold~
+a crown of gold~
+A crown made of gold is lying here.~
+~
+9 0 17
+4 -1 -1 -1
+7 20000 10000
+20
+E
+crown gold~
+   The crown is quite heavy due to large mass of gold. It can not 
+be very comfortable.
+~
+X
+~
+0 0 0
+M
+You wear the crown on your head.~
+You remove the crown.~
+$n wears a gold crown.~
+$n removes a gold crown.~
+A
+19 2
+A
+1 -2
+#18215
+scepter~
+a scepter~
+A scepter is lying here.~
+~
+4 0 16385
+2 -1 -1 -1
+2 25000 8000
+15
+E
+scepter~
+The scepter is a rod two feet long and is carved from ivory.
+~
+X
+~
+0 0 0
+M
+You grab the scepter.~
+You let go of the scepter.~
+$n grabs a scepter.~
+$n lets go of a scepter.~
+A
+19 4
+A
+18 4
+A
+1 2
+#0
+$~

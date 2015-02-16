@@ -1,0 +1,2023 @@
+#11500
+Path Through the Graveyard~
+The muffled odor of decayed flesh reaches your nostrils as you walk through the
+home of long forgotten heroes and nobles. Despite the holy nature of this
+place, you feel a chill as you step between the crumbled gravestones. These
+dead men may once have been good people, but you can sense evil magic at work.
+Shadows seem to appear of their own accord in the mist that prevails here, and
+you hear occasional rustling sounds from all around you. Vague shapes flit
+about on the edge of your vision, but when you look there is nothing there.
+~
+115 128 1
+D0
+~
+~
+0 0 11501
+D2
+~
+~
+0 0 2514
+S
+#11501
+Path Through the Graveyard~
+The muffled odor of decayed flesh reaches your nostrils as you walk through the
+home of long forgotten heroes and nobles. Despite the holy nature of this
+place, you feel a chill as you step between the crumbled gravestones. These
+dead men may once have been good people, but you can sense evil magic at work.
+Shadows seem to appear of their own accord in the mist that prevails here, and
+you hear occasional rustling sounds from all around you. Vague shapes flit
+about on the edge of your vision, but when you look there is nothing there.
+~
+115 128 1
+D0
+~
+~
+0 0 11502
+D2
+~
+~
+0 0 11500
+S
+#11502
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+Something is written on the wall next to you.
+~
+115 152 0
+D0
+~
+~
+0 0 11506
+D1
+~
+~
+0 0 11503
+D2
+~
+~
+0 0 11501
+E
+writing wall~
+The writing on the wall reads:
+Next must you pass through fire, earth, water, and air.
+But first must you find a means to get there.
+This may be done without a fight, 
+Simply by filling the crypt with light.
+One last thing and well will you fare.
+Let the room blaze, but leave corners bare.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11503
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11507
+D1
+~
+~
+0 0 11504
+D3
+~
+~
+0 0 11502
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11504
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11508
+D1
+~
+~
+0 0 11505
+D3
+~
+~
+0 0 11503
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11505
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11509
+D3
+~
+~
+0 0 11504
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11506
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11510
+D1
+~
+~
+0 0 11507
+D2
+~
+~
+0 0 11502
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11507
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11511
+D1
+~
+~
+0 0 11508
+D2
+~
+~
+0 0 11503
+D3
+~
+~
+0 0 11506
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+S
+#11508
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11512
+D1
+~
+~
+0 0 11509
+D2
+~
+~
+0 0 11504
+D3
+~
+~
+0 0 11507
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11509
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11513
+D2
+~
+~
+0 0 11505
+D3
+~
+~
+0 0 11508
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11510
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11514
+D1
+~
+~
+0 0 11511
+D2
+~
+~
+0 0 11506
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11511
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11515
+D1
+~
+~
+0 0 11512
+D2
+~
+~
+0 0 11507
+D3
+~
+~
+0 0 11510
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11512
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11516
+D1
+~
+~
+0 0 11513
+D2
+~
+~
+0 0 11508
+D3
+~
+~
+0 0 11511
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11513
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D0
+~
+~
+0 0 11517
+D2
+~
+~
+0 0 11509
+D3
+~
+~
+0 0 11512
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11514
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D1
+~
+~
+0 0 11515
+D2
+~
+~
+0 0 11510
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11515
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D1
+~
+~
+0 0 11516
+D2
+~
+~
+0 0 11511
+D3
+~
+~
+0 0 11514
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11516
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D1
+~
+~
+0 0 11517
+D2
+~
+~
+0 0 11512
+D3
+~
+~
+0 0 11515
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11517
+The Crypt~
+All around you are coffins and monuments to the dead. The musty smell indicates
+that this room must have been sealed for centuries before now. You suddenly
+feel very calm after your walk through the graveyard, as if the evil presence
+haunting the area had not yet managed to breach the walls of this holy place.
+As you pass through, you try not to disturb even the dust covering every
+surface, for fear of disturbing those who rest here. The floor appears to be
+marked with strange runes, which have somehow remained free of dirt and dust.
+~
+115 152 0
+D2
+~
+~
+0 0 11513
+D3
+~
+~
+0 0 11516
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+S
+#11518
+Calm place~
+You are in a non-descript room with exits to the north, east, south, and west.
+There is a strange feeling about the place, reminiscent of the calm before a
+storm. There appear to be runes on the floor here, though what they mean you
+have no idea. In amongst these odd engravings, you notice the faint outline of
+a trap door in the floor.
+~
+115 8 0
+D0
+~
+~
+0 0 11519
+D1
+~
+~
+0 0 11530
+D2
+~
+~
+0 0 11541
+D3
+~
+~
+0 0 11552
+D5
+~
+trapdoor~
+0 0 11598
+E
+runes~
+The runes are engraved into the stone floor of the room. Under this close
+inspection, you can make out something of what they mean. You get the idea that
+they are warning you of something ahead....
+~
+S
+#11519
+Warm Hallway~
+You are in a mildly warm hallway. There is a vague red glow coming from the
+north.
+~
+115 8 0
+D0
+~
+~
+0 0 11520
+D2
+~
+~
+0 0 11518
+S
+#11520
+Hot Hallway~
+The air in the hallway is uncomfortably hot. The glow to the north is hurting
+your eyes a little with its brightness.
+~
+115 8 0
+D0
+~
+~
+0 0 11521
+D2
+~
+~
+0 0 11519
+S
+#11521
+Hot Room~
+You are in a huge room, and the heat here is painful. Your eyes feel like they
+are about to explode with the pain of the blazing light and heat, and the
+irritation of the sweat pouring into them.
+~
+115 8 0
+D0
+~
+~
+0 0 11526
+D1
+~
+~
+0 0 11522
+D2
+~
+~
+0 0 11520
+D3
+~
+~
+0 0 11525
+S
+#11522
+Hot Room~
+You are in a huge room, and the heat here is painful. Your eyes feel like they
+are about to explode with the pain of the blazing light and heat, and the
+irritation of the sweat pouring into them.
+~
+115 8 0
+D0
+~
+~
+0 0 11527
+D1
+~
+~
+0 0 11523
+D3
+~
+~
+0 0 11521
+S
+#11523
+Hot Room~
+You are in a huge room, and the heat here is painful. Your eyes feel like they
+are about to explode with the pain of the blazing light and heat, and the
+irritation of the sweat pouring into them.
+~
+115 8 0
+D3
+~
+~
+0 0 11522
+S
+#11524
+Hot Room~
+You are in a huge room, and the heat here is painful. Your eyes feel like they
+are about to explode with the pain of the blazing light and heat, and the
+irritation of the sweat pouring into them.
+~
+115 8 0
+D1
+~
+~
+0 0 11525
+S
+#11525
+Hot Room~
+You are in a huge room, and the heat here is painful. Your eyes feel like they
+are about to explode with the pain of the blazing light and heat, and the
+irritation of the sweat pouring into them.
+~
+115 8 0
+D0
+~
+~
+0 0 11528
+D1
+~
+~
+0 0 11521
+D3
+~
+~
+0 0 11524
+S
+#11526
+Blazing Inferno~
+The heat here will surely kill you if you stay much longer! Your skin is 
+charring before your eyes, and your armor seems to be welding itself onto your
+skin. The stone walls are glowing, and you doubt your eyes will hold up much
+longer either. There appears to be some sort of magical gate to the north.
+~
+115 0 0
+D0
+~
+~
+0 0 11529
+D1
+~
+~
+0 0 11527
+D2
+~
+~
+0 0 11521
+D3
+~
+~
+0 0 11528
+S
+#11527
+Blazing Inferno~
+The heat here will surely kill you if you stay much longer! Your skin is 
+charring before your eyes, and your armor seems to be welding itself onto your
+skin. The stone walls are glowing, and you doubt your eyes will hold up much
+longer either. There appears to be some sort of magical gate to the north.
+~
+115 0 0
+D2
+~
+~
+0 0 11522
+D3
+~
+~
+0 0 11526
+S
+#11528
+Blazing Inferno~
+The heat here will surely kill you if you stay much longer! Your skin is 
+charring before your eyes, and your armor seems to be welding itself onto your
+skin. The stone walls are glowing, and you doubt your eyes will hold up much
+longer either. There appears to be some sort of magical gate to the north.
+~
+115 0 0
+D1
+~
+~
+0 0 11526
+D2
+~
+~
+0 0 11525
+S
+#11529
+The Elemental Plane of Fire~
+Relief spreads over your limbs as you step through the gate. You are in the
+elemental plane of fire, and though everything around you is burning 
+violently you feel none of it. The gate remains behind you, and you can see
+the room you left through it like a painting on a wall.
+~
+115 0 0
+D2
+~
+~
+0 0 11526
+S
+#11530
+Breezy Hallway~
+A light breeze blows through here. It is pleasantly cool, and seems to be
+constantly changing direction.
+~
+115 8 0
+D1
+~
+~
+0 0 11531
+D3
+~
+~
+0 0 11518
+S
+#11531
+Windy Hallway~
+The wind blowing here whips at your hair and clothes, and the coolness of it
+makes you slightly uncomfortable. It seems to come from nowhere, and move in
+a random direction.
+~
+115 8 0
+D1
+~
+~
+0 0 11532
+D3
+~
+~
+0 0 11530
+S
+#11532
+Windy Room~
+The wind in this room is very strong. You are occasionally hit by bits of
+flying debris, and sometime you feel that you will be knocked over by the force
+of the wind.
+~
+115 8 0
+D0
+~
+~
+0 0 11536
+D1
+~
+~
+0 0 11537
+D2
+~
+~
+0 0 11533
+D3
+~
+~
+0 0 11531
+S
+#11533
+Windy Room~
+The wind in this room is very strong. You are occasionally hit by bits of
+flying debris, and sometime you feel that you will be knocked over by the force
+of the wind.
+~
+115 8 0
+D0
+~
+~
+0 0 11532
+D1
+~
+~
+0 0 11538
+D2
+~
+~
+0 0 11534
+S
+#11534
+Windy Room~
+The wind in this room is very strong. You are occasionally hit by bits of
+flying debris, and sometime you feel that you will be knocked over by the force
+of the wind.
+~
+115 8 0
+D0
+~
+~
+0 0 11533
+S
+#11535
+Windy Room~
+The wind in this room is very strong. You are occasionally hit by bits of
+flying debris, and sometime you feel that you will be knocked over by the force
+of the wind.
+~
+115 8 0
+D2
+~
+~
+0 0 11536
+S
+#11536
+Windy Room~
+The wind in this room is very strong. You are occasionally hit by bits of
+flying debris, and sometime you feel that you will be knocked over by the force
+of the wind.
+~
+115 8 0
+D0
+~
+~
+0 0 11535
+D1
+~
+~
+0 0 11539
+D2
+~
+~
+0 0 11532
+S
+#11537
+Raging Hurricane~
+You no longer make any effort to keep your feet on the ground; it is obvious
+as you are smashed violently off the wall that this would do you no good. 
+The wind is so strong here it is surprising the whole place doesn't blow over, 
+and you can see other things that have been caught here suffering the same fate
+as you. To the east, you can see some sort of magical gate.
+~
+115 8 0
+D0
+~
+~
+0 0 11539
+D1
+~
+~
+0 0 11540
+D2
+~
+~
+0 0 11538
+D3
+~
+~
+0 0 11532
+S
+#11538
+Raging Hurricane~
+You no longer make any effort to keep your feet on the ground; it is obvious
+as you are smashed violently off the wall that this would do you no good. 
+The wind is so strong here it is surprising the whole place doesn't blow over, 
+and you can see other things that have been caught here suffering the same fate
+as you. To the east, you can see some sort of magical gate.
+~
+115 8 0
+D0
+~
+~
+0 0 11537
+D3
+~
+~
+0 0 11533
+S
+#11539
+Raging Hurricane~
+You no longer make any effort to keep your feet on the ground; it is obvious
+as you are smashed violently off the wall that this would do you no good. 
+The wind is so strong here it is surprising the whole place doesn't blow over, 
+and you can see other things that have been caught here suffering the same fate
+as you. To the east, you can see some sort of magical gate.
+~
+115 8 0
+D2
+~
+~
+0 0 11537
+D3
+~
+~
+0 0 11536
+S
+#11540
+The Elemental Plane of Air~
+After fumbling your way through the magical gate, you are rewarded with instant
+relief from the constant beating off of the walls and other object you suffered
+in the hurricane. You are standing on a fluffy white cloud, and can see others
+like it all around you. Birds chirp merrily in the distance.
+~
+115 0 0
+D3
+~
+~
+0 0 11537
+S
+#11541
+Damp Hallway~
+The stone floor here is slippery with moisture. Moss grows on the walls, and
+the air is very humid.
+~
+115 8 0
+D0
+~
+~
+0 0 11518
+D2
+~
+~
+0 0 11542
+S
+#11542
+Wet Hallway~
+Small rivulets run along the ground here, and you often slip on the wet floor.
+The moisture in the air is almost tangible, and you can see little droplets of
+water condensing on your armor.
+~
+115 8 0
+D0
+~
+~
+0 0 11541
+D2
+~
+~
+0 0 11543
+S
+#11543
+Wet Room~
+Here the water swirls about your knees, and you feel a strong current pulling
+at your feet. Bits of debris float around, and occasionally bang into your
+legs.
+~
+115 8 0
+D0
+~
+~
+0 0 11542
+D1
+~
+~
+0 0 11547
+D2
+~
+~
+0 0 11548
+D3
+~
+~
+0 0 11544
+S
+#11544
+Wet Room~
+Here the water swirls about your knees, and you feel a strong current pulling
+at your feet. Bits of debris float around, and occasionally bang into your
+legs.
+~
+115 8 0
+D1
+~
+~
+0 0 11543
+D2
+~
+~
+0 0 11549
+D3
+~
+~
+0 0 11545
+S
+#11545
+Wet Room~
+Here the water swirls about your knees, and you feel a strong current pulling
+at your feet. Bits of debris float around, and occasionally bang into your
+legs.
+~
+115 8 0
+D1
+~
+~
+0 0 11544
+S
+#11546
+Wet Room~
+Here the water swirls about your knees, and you feel a strong current pulling
+at your feet. Bits of debris float around, and occasionally bang into your
+legs.
+~
+115 8 0
+D3
+~
+~
+0 0 11547
+S
+#11547
+Wet Room~
+Here the water swirls about your knees, and you feel a strong current pulling
+at your feet. Bits of debris float around, and occasionally bang into your
+legs.
+~
+115 8 0
+D1
+~
+~
+0 0 11546
+D2
+~
+~
+0 0 11550
+D3
+~
+~
+0 0 11543
+S
+#11548
+Violent Pool~
+The water is up to your neck here, and you can barely keep from being pulled
+under! Bigger debris bangs into you painfully from time to time. To the south, 
+you can see what appears to be a magical gate of some sort.
+~
+115 8 0
+D0
+~
+~
+0 0 11543
+D1
+~
+~
+0 0 11550
+D2
+~
+~
+0 0 11551
+D3
+~
+~
+0 0 11549
+S
+#11549
+Violent Pool~
+The water is up to your neck here, and you can barely keep from being pulled
+under! Bigger debris bangs into you painfully from time to time. You can see
+what appears to be a magical gate of some sort to the south.
+~
+115 8 0
+D0
+~
+~
+0 0 11544
+D1
+~
+~
+0 0 11548
+S
+#11550
+Violent Pool~
+The water is up to your neck here, and you can barely keep from being pulled
+under! Bigger debris bangs into you painfully from time to time. You can see
+what appears to be a magical gate of some sort to the south.
+~
+115 8 0
+D0
+~
+~
+0 0 11547
+D3
+~
+~
+0 0 11548
+S
+#11551
+The Elemental Plane of Water~
+You are finally free of the deadly currents that threatened to tear your limbs
+off. You find yourself completely submerged, and yet you can still breathe. All
+around you can see nothing but water and an occasional fish searching for a bite to eat.
+~
+115 0 0
+D0
+~
+~
+0 0 11548
+S
+#11552
+Trembling Hallway~
+The hallway trembles lightly occasionally, shaking loose dirt from the roof.
+You can hear a distant rumbling from here.
+~
+115 8 0
+D1
+~
+~
+0 0 11518
+D3
+~
+~
+0 0 11553
+S
+#11553
+Shaking Hallway~
+The ground here is shaking continuously, and small rocks occasionally fall
+from the walls and ceiling.
+~
+115 8 0
+D1
+~
+~
+0 0 11552
+D3
+~
+~
+0 0 11554
+S
+#11554
+Shaking Room~
+You are in a huge rock cavern, and it is shaking strongly. Large rocks fall
+on you time and again, causing you some pain. The ground is littered with
+dirt and boulders, and as you walk along you stumble repeatedly. The
+rumbling to the west drowns out all other noise.
+~
+115 8 0
+D0
+~
+~
+0 0 11555
+D1
+~
+~
+0 0 11553
+D2
+~
+~
+0 0 11558
+D3
+~
+~
+0 0 11559
+S
+#11555
+Shaking Room~
+You are in a huge rock cavern, and it is shaking strongly. Large rocks fall
+on you time and again, causing you some pain. The ground is littlered with
+dirt and boulders, and as you walk along you strumble repeatedly. The
+rumbling to the west drowns out all other noise.
+~
+115 8 0
+D0
+~
+~
+0 0 11556
+D2
+~
+~
+0 0 11554
+D3
+~
+~
+0 0 11560
+S
+#11556
+Shaking Room~
+You are in a huge rock cavern, and it is shaking strongly. Large rocks fall
+on you time and again, causing you some pain. The ground is littlered with
+dirt and boulders, and as you walk along you strumble repeatedly. The
+rumbling to the west drowns out all other noise.
+~
+115 8 0
+D2
+~
+~
+0 0 11555
+S
+#11557
+Shaking Room~
+You are in a huge rock cavern, and it is shaking strongly. Large rocks fall
+on you time and again, causing you some pain. The ground is littlered with
+dirt and boulders, and as you walk along you strumble repeatedly. The
+rumbling to the west drowns out all other noise.
+~
+115 8 0
+D0
+~
+~
+0 0 11558
+S
+#11558
+Shaking Room~
+You are in a huge rock cavern, and it is shaking strongly. Large rocks fall
+on you time and again, causing you some pain. The ground is littlered with
+dirt and boulders, and as you walk along you strumble repeatedly. The
+rumbling to the west drowns out all other noise.
+~
+115 8 0
+D0
+~
+~
+0 0 11554
+D2
+~
+~
+0 0 11557
+D3
+~
+~
+0 0 11561
+S
+#11559
+Massive Earthquake~
+The ground here seems to open wide in a new place every few seconds, only to
+be filled by the tremendous boulders falling from the ceiling a moment
+later. As a boulder mangles your foot, you realize that you are in danger
+of losing the few brain cells you must have if you are still here.
+There is a magical gate of some sort to the west.
+~
+115 8 0
+D0
+~
+~
+0 0 11560
+D1
+~
+~
+0 0 11554
+D2
+~
+~
+0 0 11561
+D3
+~
+~
+0 0 11562
+S
+#11560
+Massive Earthquake~
+The ground here seems to open wide in a new place every few seconds, only to
+be filled by the tremendous boulders falling from the ceiling a moment
+later. As a boulder mangles your foot, you realize that you are in danger
+of losing the few brain cells you must have if you are still here.
+There is a magical gate of some sort to the west.
+~
+115 8 0
+D1
+~
+~
+0 0 11555
+D2
+~
+~
+0 0 11559
+S
+#11561
+Massive Earthquake~
+The ground here seems to open wide in a new place every few seconds, only to
+be filled by the tremendous boulders falling from the ceiling a moment
+later. As a boulder mangles your foot, you realize that you are in danger
+of losing the few brain cells you must have if you are still here.
+There is a magical gate of some sort to the west.
+~
+115 8 0
+D0
+~
+~
+0 0 11559
+D1
+~
+~
+0 0 11558
+S
+#11562
+The Elemental Plane of Earth~
+You are finally free of the rumbling earthquake, and seem to have entered the
+plane of Earth. You seem to be swimming through solid rock, but somehow
+you can see and breathe. Pushing yourself through the rock feels just like
+moving through water; you guess that there must be powerful magic at work to
+keep you alive in here.
+~
+115 0 0
+D1
+~
+~
+0 0 11559
+S
+#11563
+Rock Cavern~
+You are in a cavern out of rock, seemingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11564
+S
+#11564
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11565
+D2
+~
+~
+0 0 11563
+S
+#11565
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11566
+D2
+~
+~
+0 0 11564
+S
+#11566
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11568
+D2
+~
+~
+0 0 11565
+S
+#11567
+The Wyvern's Lair~
+A huge cavern opens up before you. Bones litter the ground, and a nauseating
+smell assails your nostrils. The ground is rough and rocky, with bloodstains
+marring the uniform gray. The mangled remains of some unfortunate creature
+lie on the ground, half-eaten.
+~
+115 0 0
+D2
+~
+~
+0 0 11597
+S
+#11568
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11583
+D1
+~
+~
+0 0 11569
+D2
+~
+~
+0 0 11566
+D3
+~
+~
+0 0 11576
+S
+#11569
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D1
+~
+~
+0 0 11570
+D3
+~
+~
+0 0 11568
+S
+#11570
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11571
+D3
+~
+~
+0 0 11569
+S
+#11571
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D1
+~
+~
+0 0 11572
+D2
+~
+~
+0 0 11570
+S
+#11572
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11573
+D3
+~
+~
+0 0 11571
+S
+#11573
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D1
+~
+~
+0 0 11574
+D2
+~
+~
+0 0 11572
+S
+#11574
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear watter dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11575
+D3
+~
+~
+0 0 11573
+S
+#11575
+Rock Cavern~
+You are in a cavern out of rock, seemlingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D2
+~
+~
+0 0 11574
+S
+#11576
+Rock Cavern~
+You are in a cavern out of rock, seemingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D1
+~
+~
+0 0 11568
+D3
+~
+~
+0 0 11577
+S
+#11577
+Rock Cavern~
+You are in a cavern out of rock, seemingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11578
+D1
+~
+~
+0 0 11576
+S
+#11578
+Rock Cavern~
+You are in a cavern out of rock, seemingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D2
+~
+~
+0 0 11577
+D3
+~
+~
+0 0 11579
+S
+#11579
+Rock Cavern~
+You are in a cavern out of rock, seemingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11580
+D1
+~
+~
+0 0 11578
+S
+#11580
+Rock Cavern~
+You are in a cavern out of rock, seemingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D2
+~
+~
+0 0 11579
+D3
+~
+~
+0 0 11581
+S
+#11581
+Rock Cavern~
+You are in a cavern out of rock, seemingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D0
+~
+~
+0 0 11582
+D1
+~
+~
+0 0 11580
+S
+#11582
+Rock Cavern~
+You are in a cavern out of rock, seemingly through nothing but the force of
+nature. Moss grows on the walls, and there is some sort of slimy algae on the
+wet floor. You can hear water dripping periodically in the distance, and
+strange animal noises echo around. A distant roar reaches your ears.
+~
+115 8 0
+D2
+~
+~
+0 0 11581
+S
+#11583
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D0
+~
+~
+0 0 11584
+D2
+~
+~
+0 0 11568
+S
+#11584
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D0
+~
+~
+0 0 11585
+D2
+~
+~
+0 0 11583
+S
+#11585
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D0
+~
+~
+0 0 11596
+D1
+~
+~
+0 0 11586
+D2
+~
+~
+0 0 11584
+D3
+~
+~
+0 0 11591
+S
+#11586
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D1
+~
+~
+0 0 11587
+D3
+~
+~
+0 0 11585
+S
+#11587
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D0
+~
+~
+0 0 11588
+D3
+~
+~
+0 0 11586
+S
+#11588
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D1
+~
+~
+0 0 11589
+D2
+~
+~
+0 0 11587
+S
+#11589
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D0
+~
+~
+0 0 11590
+D3
+~
+~
+0 0 11588
+S
+#11590
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D2
+~
+~
+0 0 11589
+S
+#11591
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D1
+~
+~
+0 0 11585
+D3
+~
+~
+0 0 11592
+S
+#11592
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D0
+~
+~
+0 0 11593
+D1
+~
+~
+0 0 11591
+S
+#11593
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D2
+~
+~
+0 0 11592
+D3
+~
+~
+0 0 11594
+S
+#11594
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D0
+~
+~
+0 0 11595
+D1
+~
+~
+0 0 11593
+S
+#11595
+Rock Cavern~
+The cavern floor here is almost a small river. The ground has been turned to
+gravel by the passage of water, which is up to your ankles. The roaring sound
+is loud here, and reminds you of falling water. Moss and some other 
+unidentifiable plants grow on the walls and ceiling of the cavern.
+~
+115 8 0
+D2
+~
+~
+0 0 11594
+S
+#11596
+Behind the Falls~
+Sheets of water fall before your eyes. You can vaguely see outdoors through
+the torrents of frothing water. Sunlight catches the spray, making little
+rainbows play about all around you. The river flowing along the floor joins
+this greater body of water, plummeting to the pool beneath. The rock floor
+of the cavern extends out further to the north, through the waterfall.
+~
+115 0 0
+D0
+~
+~
+0 0 11597
+D2
+~
+~
+0 0 11585
+S
+#11597
+The Stone Bridge~
+As you walk along this narrow stretch of rock, you try to keep from thinking
+about what would happen if you fell off. All around you all you can see is
+falling water. The natural phenomenon here seems to be a large depression
+in a massive lake, with some sort of underground passages absorbing all the
+water or sending it somewhere else. A huge circular waterfall rages 
+everywhere, and the roar is deafening. The bridge you are walking across must
+be held in place magically, for it extends over several hundred feet and yet
+is only a few feet in width and depth. Something is engraved on the ground.
+~
+115 4 0
+D0
+~
+~
+0 0 11567
+D2
+~
+~
+0 0 11596
+E
+engraving writing ground~
+Only one who has mastered the alignments of concordant opposition may pass.
+~
+S
+#11598
+Nexial Point~
+At this point, the prime material plane meets all the elemental planes. You
+can see bits of them shimmering in and out of existence everywhere, but where
+you stand seems to be firmly rooted in the prime material plane and thus
+protected from the chaos permeating the rest of the room.
+~
+115 0 0
+S
+#11599
+The Temple of Light~
+Here worshipers come to pay homage to Vishnu, god of mercy and light. On the
+walls you see painted symbols of the sun-disc, seashell, lotus and mace.
+Maruts guard the temple and aid worshipers in need. A small altar is in one
+end, and monks sit around it meditating. A peaceful humming sound seems
+to come from the walls themselves, and you realize that you are hearing the
+sound of Vishnu's followers seeking enlightenment.
+~
+115 0 0
+S
+#0
+$~

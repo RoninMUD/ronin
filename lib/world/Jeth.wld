@@ -1,0 +1,222 @@
+#17700
+Tab B~
+   You have been inserted into Tab B.
+See directions for next step.
+~
+177 0 0
+S
+#17750
+The pit~
+   A large wheel with ratcheting levers takes up most of this filthy
+hole of a room. Spokes stick out of either side of the wheel, for the
+slaves to winch the cables up and down. Above you, the raising
+platforms move up and down, according to the actions of the slaves. A
+large horn hangs from the wall, attached to some tubing that runs up the
+shaft. Bits of food and rotting slop litters the floor. No one cleans
+it up except the rats, which occasionally drag a fragrant piece out
+of sight. There seem to be shattered pieces of old elevators lying about.
+~
+177 8 0
+D3
+~
+~
+0 -1 17751
+D4
+~
+~
+0 -1 17760
+S
+#17751
+The slave alcove~
+   This tiny alcove off of the pit seems to be where the slaves come
+when their shift ends. In the corner, there seems to be some activity near
+a little fire. The smell is something like burning shoe leather mixed
+with burning hair. In the center of the room, a small hole leads down
+into darkness, following a small stream of sewage.
+~
+177 8 0
+D1
+~
+~
+0 -1 17750
+D5
+~
+~
+0 -1 17752
+S
+#17752
+The sleeping hole~
+   The greasy slurry burbles down the wall onto a pile of bodies. The
+stench of sweat and sewage presses claustrophic thumbs against your
+eyeballs. You can't help but step on more bodies as you stumble a little
+bit. Some of the bodies react with whimpers and shudders. To your
+horror, some of the bodies don't react or move at all, even though you
+feel bones cracking under the weight of your heavy equipment.
+~
+177 8 0
+D4
+~
+~
+0 -1 17751
+S
+#17760
+The platform shaft~
+   You are standing in the platform shaft, but not on a platform! You
+look below to the bottom of the shaft, and hope you are flying!
+~
+177 262152 0
+D4
+~
+~
+0 -1 17761
+D5
+~
+~
+0 -1 17750
+S
+#17761
+The platform shaft~
+   You are standing in the platform shaft, but not on a platform! You
+look below to the bottom of the shaft, and hope you are flying!
+~
+177 262152 0
+D4
+~
+~
+0 -1 17762
+D5
+~
+~
+0 -1 17760
+S
+#17762
+The platform shaft~
+   You are standing in the platform shaft, but not on a platform! You
+look below to the bottom of the shaft, and hope you are flying!
+~
+177 262152 0
+D4
+~
+~
+0 -1 17763
+D5
+~
+~
+0 -1 17761
+S
+#17763
+The platform shaft~
+   You are standing in the platform shaft, but not on a platform! You
+look below to the bottom of the shaft, and hope you are flying!
+~
+177 262152 0
+D4
+~
+~
+0 -1 17764
+D5
+~
+~
+0 -1 17762
+S
+#17764
+The platform shaft~
+   You are standing in the platform shaft, but not on a platform! You
+look below to the bottom of the shaft, and hope you are flying!
+~
+177 262152 0
+D4
+~
+~
+0 -1 17765
+D5
+~
+~
+0 -1 17763
+S
+#17765
+The top of the shaft~
+   You are standing in the top of the platform shaft, but not on a
+platform! You look down the shaft below you and hope you are flying!
+~
+177 262152 0
+D5
+~
+~
+0 -1 17764
+S
+#17766
+On the platform~
+   You are standing on the polished wood floor of the platform. Finished
+wood panelling forms the walls of this relatively small boxed room. The
+only exit is an ornate metal grate of a door that opens by scrunching to
+the side like an accordion. On the wall near the doors, there are a
+number of thick buttons set into a brass panel. Above you, a small
+lantern glows with warmth and light and beams a comforting sense of
+safety straight to you from the captive fairy fluttering inside it.
+Next to the lantern, you see a faint rectangular outline.
+~
+177 67108872 0
+E
+5~
+The numeral 5 gleams on this pristine button.
+~
+E
+4~
+There is a 4 embossed on this pitted, cracked button.
+~
+E
+3~
+The 3 on this button is barely legible, and has mostly melted off.
+~
+E
+m~
+There is an M embossed on this slightly shiny button.
+~
+E
+2~
+There is a 2 embossed on this scuffed button.
+~
+E
+l~
+The letter L is embossed on this worn button.
+~
+E
+2~
+invalid~
+E
+hatch outline rectangle~
+On second glance, it appears to be a hatch, with a ring set in one side.
+~
+E
+panel~
+From bottom to top, the buttons are: L, M, 2, 3, 4, 5.
+~
+E
+button buttons~
+From bottom to top, the buttons are: L, M, 2, 3, 4, 5.
+~
+E
+m~
+The M is embossed on this slightly shiny button.
+~
+E
+l~
+The letter L is embossed on the worm button.
+~
+E
+lantern~
+The warmth in your heart swells as you gaze longingly into the lantern.
+The fairy, noticing your attention, beats her arms against the glass,
+making oh so cute "pink, pink" noises. You can't help smiling.
+~
+S
+#17799
+Slot A~
+   Tab B has been inserted into you.
+See directions for next step.
+~
+177 0 0
+S
+#0
+$~

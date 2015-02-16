@@ -1,0 +1,331 @@
+#22000
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22001
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way clear.
+~
+~
+0 -1 22002
+D4
+~
+~
+0 0 0
+S
+#22002
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way clear.
+~
+~
+0 -1 22003
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+S
+#22003
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way clear.
+~
+~
+0 -1 22004
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+S
+#22004
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way clear.
+~
+~
+0 -1 22005
+S
+#22005
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way clear.
+~
+~
+0 -1 22006
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+S
+#22006
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way clear.
+~
+~
+0 -1 22007
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+S
+#22007
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way clear.
+~
+~
+0 -1 22008
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+S
+#22008
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way clear.
+~
+~
+0 -1 22009
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+S
+#22009
+hidden passageway~
+A temporary description
+~
+220 9 0
+D0
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D1
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D2
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D3
+Only through divine inspiration can you see the way back.
+~
+~
+0 -1 22001
+D5
+Standing before you is a deep, dark well.  Peering into it's
+depths, you cannot see the bottom.  You can hear a dark
+ritualistic chanting bubble up from the murky depths below.
+~
+well~
+12 -1 22010
+E
+well~
+Standing before you is a deep, dark well.  Peering into it's
+depths, you cannot see the bottom.  A dark ritualistic chanting
+bubbles up from below.
+~
+S
+#22010
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22011
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22012
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22013
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22014
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22015
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22016
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22017
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22018
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22019
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22020
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#22099
+A temporary name~
+A temporary description
+~
+220 0 0
+S
+#0
+$~

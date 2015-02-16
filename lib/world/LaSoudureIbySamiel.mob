@@ -1,0 +1,34 @@
+#7137
+The Albatross~
+The Albatross~
+The Albatross flies around here looking for food.
+~
+   The albatross flies serenely through the air, secure in the fact that 
+he will not be shot down by any seafarer.
+~
+40 17039392 0 Y
+7 13 2 88d1+3 2d3+3
+400 3000
+9 9 1
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7138
+flying fish~
+The Flying Fish~
+The flying fish is riding on the wings of the winds and the waves.
+~
+The flying fish arcs through the air in a graceful flight, only to plunge
+back into the icy depths of La Soudure.
+~
+40 16777216 0 Y
+3 17 2 54d1+3 1d5+1
+350 1234
+9 9 2
+84 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

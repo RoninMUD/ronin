@@ -1,0 +1,2069 @@
+#18500
+workbench~
+a workbench~
+A workbench filled with alchemy equipment is standing along the wall.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+100
+E
+workbench~
+  The workbench is overflowing with vials, herbs and other equipment
+used in potion making. Notes with parts of recipes and other notes
+are piled in a corner of the bench. An oil burner is burning with
+with a blue flame and is used to finish mixed potions.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18501
+book~
+A book~
+A brown book is laying here.~
+~
+8 0 16385
+0 0 0 0
+2 100 100
+40
+E
+book~
+A worn book where a student has made 
+som notes and drawings.
+~
+X
+~
+0 0 0
+M
+You grab a book.~
+$n grabs a book.~
+You stop holding the book.~
+$n stops holding the book.~
+A
+3 1
+#18502
+Archaeologist's Cloak~
+An Archaeologist's cloak~
+The cloak of an Archaeologist is laying here.~
+~
+11 134217728 1025
+0 0 0 0
+3 15000 500000
+34
+E
+cloak~
+The cloak is made of fine leather and has a symbol sown onto the back. 
+The symbol looks like a castle or a big city with walls around it. The symbol 
+is made with silver and gold threads.
+~
+X
+~
+4 0 0
+M
+You wear an archaeologist's cloak~
+$n wears an archaeologist's cloak~
+You stop wearing an archaeologist's cloak~
+$n stops wearing an archaeologist's cloak~
+A
+19 5
+A
+18 5
+A
+13 80
+T
+1200
+#18503
+stone~
+A stone~
+A stone is laying here~
+~
+8 0 16385
+0 0 0 0
+50 200 500
+75
+E
+stone~
+A stone covered with ancient markings.
+~
+X
+~
+0 0 0
+M
+You grab a stone~
+$n grabs a stone~
+You stop holding a stone~
+$n stops holding a stone~
+#18504
+bone~
+A bone~
+A human bone is laying here~
+~
+8 0 16385
+0 0 0 0
+10 500 500
+30
+E
+bone~
+A human bone.
+~
+X
+~
+0 0 0
+M
+You grab a bone.~
+$n grabs a bone.~
+You stop holding a bone.~
+$n stops holding a bone.~
+A
+19 2
+A
+18 2
+A
+9 10
+#18505
+Silver bracelet~
+A silver bracelet~
+A silver bracelet is laying here.~
+~
+9 0 4097
+0 0 0 0
+3 10000 15000
+2
+E
+bracelet silver~
+The bracelet is braided from 8 chords of silver
+thread. It circles in an endless loop and you can
+not see where the chords are joined.
+~
+X
+~
+0 0 0
+M
+You slip the silver bracelet onto your wrist.~
+$n slips a silver bracelet onto $s wrist.~
+You remove the silver bracelet from your wrist.~
+$n removes a silver bracelet from $s wrist.~
+A
+19 1
+A
+18 2
+A
+17 -4
+#18506
+Dusty ring~
+A dusty ring.~
+What looks like a pile of dust is laying here.~
+~
+9 0 3
+0 0 0 0
+1 5000 7500
+20
+E
+ring dusty~
+An old ring covered with dust.
+~
+X
+~
+0 0 0
+M
+Yor hand gets dusty as you put on the ring.~
+$n gets $s hands dirty as $s puts on a dusty ring.~
+You remove the ring.~
+$n removes a ring from $s finger.~
+A
+18 3
+A
+19 3
+A
+13 75
+#18507
+plates leg gilded~
+gilded leg plates~
+Some leg plates gilded with gold are lying here.~
+~
+9 0 33
+4 0 0 0
+12 50000 20000
+18
+E
+plates leg gilded~
+The legplates are made of iron and gilded with gold. Where the gilding is damaged,
+you see rusted iron. Symbols cover the gilding, but they don't make much sense to
+you. It's like they're from a lost civilization.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 15
+#18508
+old key~
+An old key.~
+An old key is laying on the ground.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+30
+E
+old key~
+The key is made of bone and appear to have carvings on it, but time
+has worn them down to the point that the meaning of them are lost.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18509
+Helm Of The Forgotten King~
+Helm Of The Forgotten King~
+A well craftet helmet is lying on the ground.~
+~
+9 127987712 17
+5 -1 -1 -1
+32 50000 35000
+25
+E
+helmet helm king forgotten~
+The helm is dark brown with gold rimmed eyesockets. It extends down over
+your neck protecting you from decapitation.
+~
+X
+~
+0 0 0
+M
+You wear the Helmet Of The Forgotten King on your head.~
+$n wears the Helmet Of The Forgotten King on $s head.~
+You remove the Helmet Of The Forgotten King from your head.~
+$n removes the Helmet Of The Forgotten King from $s head.~
+A
+19 2
+A
+18 1
+A
+53 7
+#18510
+Helm Of The Forgotten King~
+Helm Of The Forgotten King~
+A well craftet helmet is lying on the ground.~
+~
+9 127987712 17
+5 -1 -1 -1
+32 50000 35000
+10
+E
+helmet helm king forgotten~
+The helm is dark brown with gold rimmed eyesockets. It extends down over
+your neck protecting you from decapitation.
+~
+X
+~
+4 0 0
+M
+You wear the Helmet Of The Forgotten King on your head.~
+$n wears the Helmet Of The Forgotten King on $s head.~
+You remove the Helmet Of The Forgotten King from your head.~
+$n removes the Helmet Of The Forgotten King from $s head.~
+A
+19 3
+A
+18 2
+A
+53 10
+T
+4000
+#18511
+a bush~
+a bush~
+A bush grows here, ready to be harvested.~
+~
+0 0 0
+33 18512 5 0
+10 10 10
+100
+E
+bush~
+This bush has delicate leaves that are ready to be harvested.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18512
+black nightshade~
+a Black Nightshade Herb~
+A Black Nightshade Herb is left on the ground.~
+~
+12 0 1
+5 -1 -1 -1
+1 5 50
+10
+E
+herb black nightshade~
+  The herb is a well preserved leaf from the Black Nightshade plant, used 
+to make potions.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18513
+Vial~
+a vial~
+A glass vial is left here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+E
+vial~
+  The glass vial is about a foot long. Its base wider than its top.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18515
+Black Nightshade~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18516
+Larkspur Flower~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18517
+Mandrake Root~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18518
+Orris Root~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18519
+Yarrow Herb~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18520
+Witch Hazel~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18521
+Tonka Beans~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18522
+Red Sandalwood~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18523
+White Sandalwood~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18524
+Pennyroyal Herb~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18525
+weak blessing potion~
+a weak blessing potion~
+A weak blessing potion is lying here.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak blessing potion~
+The potion is glowing with a soft yellow light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18526
+Jasmine Flower~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18527
+Galangal Flower~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18528
+Dogbane Herb~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18529
+Cloves Leaf~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18530
+Bay Leaf~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18531
+Blackthorn~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18532
+Damiana Flower~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18533
+Fennel Herb~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18534
+Lemongrass~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18535
+weak blessing potion~
+a weak blessing potion~
+A weak blessing potion is lying here.~
+~
+10 0 1
+150 -1 -1 -1
+10 10 10
+10
+E
+weak blessing potion~
+The potion is glowing with a soft yellow light.
+~
+E
+weak blessing potion~
+The potion is glowing with a soft yellow light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18536
+blessing potion~
+a blessing potion~
+A blessing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+blessing potion~
+The potion is glowing with a soft yellow light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18537
+powerful blessing potion~
+a powerful blessing potion~
+A powerful blessing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful blessing potion~
+The potion is glowing with a soft yellow light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18538
+weak green detecting potion~
+a weak green detecting potion~
+A weak green detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak green detecting potion~
+The potion is glowing with a green light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18539
+green detecting potion~
+a green detecting potion~
+A green detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+green detecting potion~
+The potion is glowing with a green light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18540
+powerful green detecting potion~
+a powerful green detecting potion~
+A powerful green detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful green detecting potion~
+The potion is glowing with a green light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18541
+weak red detecting potion~
+a weak red detecting potion~
+A weak red detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak red detecting potion~
+The potion is glowing with a red light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18542
+red detecting potion~
+a red detecting potion~
+A red detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+red detecting potion~
+The potion is glowing with a red light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18543
+powerful red detecting potion~
+a powerful red detecting potion~
+A powerful red detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful red detecting potion~
+The potion is glowing with a red light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18544
+weak purple detecting potion~
+a weak purple detecting potion~
+A weak purple detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak purple detecting potion~
+The potion is glowing with a purple light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18545
+purple detecting potion~
+a purple detecting potion~
+A purple detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+purple detecting potion~
+The potion is glowing with a purple light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18546
+powerful purple detecting potion~
+a powerful purple detecting potion~
+A powerful purple detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful purple detecting potion~
+The potion is glowing with a purple light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18547
+weak blue detecting potion~
+a weak blue detecting potion~
+A weak blue detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak blue detecting potion~
+The potion is glowing with a blue light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18548
+blue detecting potion~
+a blue detecting potion~
+A blue detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+blue detecting potion~
+The potion is glowing with a blue light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18549
+powerful blue detecting potion~
+a powerful blue detecting potion~
+A powerful blue detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful blue detecting potion~
+The potion is glowing with a blue light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18550
+weak yellow detecting potion~
+a weak yellow detecting potion~
+A weak yellow detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak yellow detecting potion~
+The potion is glowing with a yellow light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18551
+yellow detecting potion~
+a yellow detecting potion~
+A yellow detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+yellow detecting potion~
+The potion is glowing with a yellow light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18552
+powerful yellow detecting potion~
+a powerful yellow detecting potion~
+A powerful yellow detecting potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful yellow detecting potion~
+The potion is glowing with a yellow light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18553
+weak armament potion~
+a weak armament potion~
+A weak armament potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak armament potion~
+The potion is glowing with a soft grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18554
+armament potion~
+A armament potion~
+a armament potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+armament potion~
+The potion is glowing with a soft grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18555
+powerful armament potion~
+a powerful armament potion~
+A powerful armament potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful armament potion~
+The potion is glowing with a soft grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18556
+weak armament potion~
+a weak armament potion~
+A weak armament potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak armament potion~
+The potion is glowing with a soft grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18557
+armament potion~
+a armament potion~
+A armament potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+armament potion~
+The potion is glowing with a soft grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18558
+powerful armament potion~
+a powerful armament potion~
+A powerful armament potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful armament potion~
+The potion is glowing with a soft grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18559
+weak bearing potion~
+a weak bearing potion~
+A weak bearing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak bearing potion~
+The potion is glowing with a dark grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18560
+bearing potion~
+a bearing potion~
+A bearing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+bearing potion~
+The potion is glowing with a dark grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18561
+powerful bearing potion~
+a powerful bearing potion~
+A powerful bearing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful bearing potion~
+The potion is glowing with a dark grey light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18562
+refreshing potion~
+a refreshing potion~
+A refreshing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+refreshing potion~
+The potion is filled with a clear green liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18563
+purification potion~
+a purification potion~
+A purification potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+purification potion~
+The potion is filled with a clear blue liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18564
+curing potion~
+a curing potion~
+A curing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+curing potion~
+The potion is filled with a clear red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18565
+potion of seeing~
+a potion of seeing~
+A potion of seeing is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+potion of seeing~
+The potion is filled with a clear yellow liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18566
+moveing potion~
+a moveing potion~
+A moveing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+moveing potion~
+The potion is filled with a clear brown liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18567
+weak bright glowing potion~
+a weak bright glowing potion~
+A weak bright glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak bright glowing potion~
+The potion is emanating a holy glow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18568
+bright glowing potion~
+a bright glowing potion~
+A bright glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+bright glowing potion~
+The potion is emanating a holy glow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18569
+powerful bright glowing potion~
+a powerful bright glowing potion~
+A powerful bright glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful bright glowing potion~
+The potion is emanating a holy glow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18570
+weak dark glowing potion~
+a weak dark glowing potion~
+A weak dark glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak dark glowing potion~
+The potion is emanating a dark glow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18571
+dark glowing potion~
+a dark glowing potion~
+A dark glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+dark glowing potion~
+The potion is emanating a dark glow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18572
+powerful dark glowing potion~
+a powerful dark glowing potion~
+A powerful dark glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful dark glowing potion~
+The potion is emanating a dark glow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18573
+weak misty potion~
+a weak misty potion~
+A weak misty potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak misty potion~
+The potion is filled with swirling mist.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18574
+misty potion~
+a misty potion~
+A misty potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+misty potion~
+The potion is filled with swirling mist.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18575
+powerful misty potion~
+a powerful misty potion~
+A powerful misty potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful misty potion~
+The potion is filled with swirling mist.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18576
+weak transparent potion~
+a weak transparent potion~
+A weak transparent potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak transparent potion~
+The potion is seemingly empty.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18577
+transparent potion~
+a transparent potion~
+A transparent potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+transparent potion~
+The potion is seemingly empty.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18578
+powerful transparent potion~
+a powerful transparent potion~
+A powerful transparent potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful transparent potion~
+The potion is seemingly empty.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18579
+weak penetrating potion~
+a weak penetrating potion~
+A weak penetrating potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak penetrating potion~
+The potion is filled with a clear liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18580
+penetrating potion~
+a penetrating potion~
+A penetrating potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+penetrating potion~
+The potion is filled with a clear liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18581
+powerful penetrating potion~
+a powerful penetrating potion~
+A powerful penetrating potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful penetrating potion~
+The potion is filled with a clear liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18582
+weak energizing potion~
+a weak energizing potion~
+A weak energizing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak energizing potion~
+The potion is filled with a dark red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18583
+energizing potion~
+a energizing potion~
+A energizing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+energizing potion~
+The potion is filled with a dark red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18584
+powerful energizing potion~
+a powerful energizing potion~
+A powerful energizing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful energizing potion~
+The potion is filled with a dark red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18585
+weak windy potion~
+a weak windy potion~
+A weak windy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak windy potion~
+A cloud is floating around inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18586
+windy potion~
+a windy potion~
+A windy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+windy potion~
+A cloud is floating around inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18587
+powerful windy potion~
+a powerful windy potion~
+A powerful windy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful windy potion~
+A cloud is floating around inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18588
+weak shielding potion~
+a weak shielding potion~
+A weak shielding potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak shielding potion~
+The potion is filled with a pink liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18589
+shielding potion~
+a shielding potion~
+A shielding potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+shielding potion~
+The potion is filled with a pink liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18590
+powerful shielding potion~
+a powerful shielding potion~
+A powerful shielding potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful shielding potion~
+The potion is filled with a pink liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18591
+weak blocking potion~
+a weak blocking potion~
+A weak blocking potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak blocking potion~
+The potion is filled with a cyan liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18592
+blocking potion~
+a blocking potion~
+A blocking potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+blocking potion~
+The potion is filled with a cyan liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18593
+powerful blocking potion~
+a powerful blocking potion~
+A powerful blocking potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful blocking potion~
+The potion is filled with a cyan liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18594
+weak evil potion~
+a weak evil potion~
+A weak evil potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak evil potion~
+The potion is filled with a black liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18595
+evil potion~
+a evil potion~
+A evil potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+evil potion~
+The potion is filled with a black liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18596
+powerful evil potion~
+a powerful evil potion~
+A powerful evil potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful evil potion~
+The potion is filled with a black liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18597
+weak holy potion~
+a weak holy potion~
+A weak holy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak holy potion~
+The potion is filled with a white liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18598
+holy potion~
+a holy potion~
+A holy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+holy potion~
+The potion is filled with a white liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18599
+powerful holy potion~
+a powerful holy potion~
+A powerful holy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful holy potion~
+The potion is filled with a white liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

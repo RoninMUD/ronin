@@ -1,0 +1,329 @@
+#26000
+ewok starwars~
+An Ewok~
+A small furry creature is standing here.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+33554568 1835008 0 Y
+25 10 1 4d200+150 5d5+5
+1 10
+8 8 0
+86 0 100d10+2000 1
+5 3 10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26001
+Fuzzy Bunny~
+A Fuzzy Bunny~
+A small fuzzy bunny wiggles its nose at you.
+~
+This harmless fuzzy bunny is here awaiting slaughter.
+~
+201326602 0 0 Y
+30 0 5 400d1+0 10d1+10
+1 10
+8 8 1
+86 8192 1d1+0 1
+2 1 25 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26002
+rebel trooper starwars~
+A Rebel Trooper~
+A glorified extra, this camouflaged rebel trooper hopes he doesn't die.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+33554442 0 500 Y
+30 5 1 100d20+100 5d5+10
+1 10
+8 8 1
+68 8192 100d10+2000 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26003
+wookie starwars~
+A Wookie Warrior~
+A tall furry creature is standing here.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+520 268435456 500 Y
+35 0 0 100d50+100 5d5+12
+1 10
+8 8 1
+0 8192 100d10+2000 1
+4 3 15 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#26004
+jedi knight starwars~
+A Jedi Knight~
+A person is here practicing with a strange weapon.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+147466 268697600 750 Y
+40 -10 -5 100d30+150 5d5+30
+1 10
+8 8 1
+7 8192 100d10+2000 1
+1 6 15 28
+0 0 0 0
+K
+0 0 0 0 0 0
+#26005
+jedi master starwars~
+A Jedi Master~
+A person is sitting here meditating.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+671754 402950272 1000 Y
+50 -15 -10 100d10+1200 5d5+90
+1 10
+8 8 2
+9 8192 100d10+2000 1
+1 6 15 140
+0 0 0 0
+K
+0 0 0 0 0 0
+#26006
+sith lord dark jedi starwars~
+A Sith Lord~
+Cloaked in black with peircing red eyes, a dark jedi paces menacingly.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+67256328 268697600 -750 Y
+40 -10 -5 100d30+150 5d5+18
+1 10
+8 8 2
+8 8192 100d10+2000 1
+1 6 60 238
+0 0 0 0
+K
+0 0 0 0 0 0
+#26007
+sith master starwars~
+A Sith Master~
+An evil force lies within a cloak, juggling balls of force lightning.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+67780616 402950272 -1000 Y
+50 -15 -10 100d10+1500 5d5+35
+1 10
+8 8 1
+9 8192 100d10+2000 4
+1 6 60 102
+1 1 10 110
+1 1 40 37
+1 1 30 6
+0 0 0 0
+K
+0 0 0 0 0 0
+#26008
+droid astrometric starwars~
+An Astrometric Droid~
+A small robot is here repairing some equipment.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+652 268435456 0 Y
+25 10 5 4d200+150 5d5+5
+1 10
+8 8 0
+87 8192 100d10+2000 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26009
+jawa starwars~
+A Jawa~
+A strang little creature is here digging through some garabe.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+140 0 0 Y
+25 9 2 4d200+150 5d5+7
+1 10
+8 8 0
+0 8192 100d10+2000 1
+6 3 10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26010
+tuskin raider sand poeple starwars~
+A Tusken Raider~
+A mangled face shouts garbled warcries through tattered cloth.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+172 1572864 -500 Y
+30 5 0 100d20+100 5d5+10
+1 10
+8 8 0
+0 8192 100d10+2000 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26011
+rancor starwars~
+A Rancor~
+A Large creature is here waiting to eat you!
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+42 268697600 -1000 Y
+50 -18 -15 100d50+400 5d5+75
+1 10
+8 8 0
+82 8192 100d10+2000 1
+1 6 100 236
+0 0 9 0
+K
+0 0 0 0 0 0
+#26020
+Fuzzy Bunny~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26021
+Thug Bunny~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26022
+Armored Bunny~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26023
+Vorpal Bunny~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26024
+Red Haired Man~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26025
+Leprechaun~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26026
+Irish Pub Brawler~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26027
+Demonic Hung-over Leprechaun~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26080
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

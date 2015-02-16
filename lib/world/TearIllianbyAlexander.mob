@@ -1,0 +1,164 @@
+#18900
+dark shadow~
+A Dark Shadow~
+A Dark Shadow is floating through the air aimlessly.
+~
+A jet black shape floating in the air with no distinct features.
+~
+8 0 -1000 Y
+50 -10 -15 10d10+5000 4d4+100
+50000 1
+9 9 1
+95 0 4d4+500 1
+1 5 15 22
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18901
+soul ripper~
+A Soul Ripper~
+A Soul Ripper is lurking in the shadows.
+~
+The small creature has large eyes in its relatively small head. The eyes are jet 
+black which makes them look like holes in the head that lead into nothingness. 
+Its arms are long and the long nails on its hands scrape the ground as it walks.
+~
+8 0 -1000 Y
+50 -10 -17 10d10+15000 4d4+200
+100000 1
+8 8 1
+68 0 4d4+500 0
+0 0 0 0
+K
+25000 0 0 0 0 0 0
+#18902
+void knight~
+A Void Knight~
+A fully armored knight is standing here in his black armor.
+~
+The knight is all covered in blackened steel and none of its skin is visible. It 
+might be a human inside or it might not. No way to tell. The armor seems light as 
+the knight skillfully moves through some sword stances.
+~
+8 0 -1000 Y
+55 -12 -20 10d10+25000 4d4+400
+2000000 15000000
+8 8 1
+67 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18903
+void crawler~
+A Void Crawler~
+A long black and purple wormlike creature is crawling about here.
+~
+The long wormlike creature, crawls around on it hundreds of small legs. The 
+ground seems to wither away where it places its feet, and soon the whole area 
+looks like the life has been sucked away from it. Its head has large black eyes 
+and sharp black teeth fills its mouth in rows upon rows, able to rip its 
+victims apart when devouring them.
+~
+10 402653184 -1000 Y
+57 -12 -21 10d10+35000 4d4+400
+5000000 15000000
+8 8 2
+67 20480 4d4+500 0
+0 0 0 32
+R
+8
+K
+0 0 0 0 0 0 0
+#18904
+void summoner man~
+A Void Summoner~
+A man with pale white skin is walking about muttering incantations.
+~
+The man has skin as white as ivory which stand in contrast to his dead black 
+~
+10 402653184 -1000 Y
+60 -10 -21 10d10+55000 4d4+400
+7000000 15000000
+8 8 1
+67 20480 4d4+500 0
+0 0 0 32
+R
+8
+K
+0 0 0 0 0 0 0
+#18905
+doombringer~
+The Doombringer~
+The Doombringer stands proudly and wait.
+~
+The Doombringer is a man who looks to be in his 40s. But with the black eyes, 
+you are not really sure if it still is a man. He holds the Staff of Doom 
+ready to summon his master from the void.
+~
+10 402653184 -1000 Y
+60 -10 -21 10d10+85000 4d4+400
+10000000 15000000
+8 8 1
+67 20480 4d4+500 0
+0 0 0 32
+R
+8
+K
+0 0 0 0 0 0 0
+#18906
+voidbringer~
+The Voidbringer~
+The Voidbringer stands with his arms raised to the sky summoning the master of the Void.
+~
+This long creature looks to me a mix of a man and a snake, its skin covered with 
+scales and with a long tail which trails behind it, yet it has human features 
+in its face and form.
+~
+10 402653184 -1000 Y
+60 -10 -21 10d10+85000 4d4+400
+10000000 15000000
+8 8 1
+67 20480 4d4+500 0
+0 0 0 32
+R
+8
+K
+0 0 0 0 0 0 0
+#18907
+ungarnaz~
+Ungarnaz~
+Ungarnaz the Master of the Void has arrived. Time to die!
+~
+Ungarnaz is truly a creature from the void. It has the shape of a big beast like 
+a bear or an ogre, with what looks like fur, black as night. In stead of eyes, 
+its eye-sockets seem like caverns into the void itself. Long shadowy tentacles 
+grow out from its back whipping around hitting and crushing everything around it.
+~
+10 402653184 -1000 Y
+60 -10 -21 10d10+85000 4d4+400
+10000000 15000000
+8 8 1
+67 20480 4d4+500 0
+0 0 0 32
+R
+8
+K
+0 0 0 0 0 0 0
+#18908
+fracture hunter~
+A Fracture Hunter~
+A Fracture Hunter is standing here studying his surroundings.
+~
+The hunter is wearing a long brown coat with a white shirt and tan jeans
+in the air above.
+~
+10 0 0 Y
+50 0 -10 10d10+10000 4d4+200
+1 100
+8 8 1
+67 20480 4d4+500 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#0
+$~

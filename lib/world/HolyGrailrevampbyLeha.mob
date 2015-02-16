@@ -1,0 +1,545 @@
+#8601
+black knight guard~
+a Black Knight~
+A Black Knight is standing here blocking the way over the bridge.
+~
+A Knight with black armor is standing here blocking your way. You can 
+see his breath as it sifts through the large helmet on his head. Each 
+breath sounds like a wheeze and a hiss. As bits of light glide over the 
+surface of his armor, you can see the flawless sheen of his armor's 
+strength.
+~
+11 32776 0 Y
+24 -3 -4 2d50+1500 4d6+3
+10000 160000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8602
+european swallow~
+A european swallow~
+A european swallow waddles and loops around the area, trying to fly away.
+~
+The soft, down feathers of this pigeon-like bird float by you through 
+the air. It seems that this swallow is attempting to fly, but having 
+quite the difficult time of it. White, brown and grey feathers sift 
+through the air, as the bird continues to attempt to fly away in vain.
+~
+136 16777216 0 Y
+2 18 10 4d20+420 1d5+5
+0 3000
+9 9 0
+83 0 0d0+0 0
+0 0 0 0
+#8603
+african swallow~
+An african swallow~
+An african swallow swivels and soars around the surrounding areas.
+~
+With a coconut clenched tight in its beak, this swallow drifts lazily 
+on the under current of breeze that is sifting through the air. With 
+the grace of a long time flyer, it lands up on a high perch to sit and 
+watch you as it snacks on its meal.
+~
+136 16777216 0 Y
+3 17 8 4d20+420 1d5+5
+0 3000
+9 9 0
+83 0 0d0+0 0
+0 0 0 0
+#8604
+french guard~
+a French Guard~
+A French Guard stands guarding his fluently french fortress!
+~
+Looking quite scrawny and simple, this guard begins spouting out 
+obscene things at you. At first, it would seem this man has had a few 
+too many drinks, then you come to the realization that he is just 
+french. His faces most prominent feature is the twirled mustache which
+covers a majority of his face. His hair is scrambled brown locks which 
+just sit ontop his head in disarray. While you were paying attention to 
+his attire, it would seem he has continued to make remarks about you.
+~
+15 0 0 Y
+15 5 -1 4d200+420 3d8+1
+3000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8605
+crowd~
+A crowd~
+A big crowd stands here arguing over what to do with the witch.
+~
+A large enough crowd of people has circled around the burning block. 
+People of all statures and places in the chain have come to witness 
+what would appear to be a hanging to some, and a burning to others. 
+At the moment, it seems they are arguing on which way to kill the poor 
+soul.
+~
+15 268435456 -500 Y
+24 -2 -4 2d50+620 2d12+5
+10000 80000
+8 8 0
+69 0 0d0+0 0
+0 0 0 0
+#8606
+knight ni~
+A Knight of Ni~
+A knight of Ni stands blocking your way any deeper into the forest.
+~
+Before you stands the ugliest, stupidest, tallest knight that has been 
+seen in these parts for sometime. Brown stringy hair flops around on his 
+head as he sites you, yelling something at you about trespassing. As you 
+go to explain your situation, he begins to scream, 'Ni! Ni! Ni!'
+~
+11 32776 -500 Y
+27 -10 -4 2d50+1500 4d6+3
+10000 210000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8607
+knight~
+The Knight with Three Heads~
+The Knight with Three Heads peers in three directions, searching for a victim.
+~
+Distorted fat heads twist and peer around looking in every direction but 
+yours. If this knight were any more stupid, he might have another head. 
+Just as you think you have a clean shot at bringing him to his death, all
+of his heads turn and acknowledge your presence.
+~
+46 32776 -500 Y
+31 -8 -4 2d50+3000 20d2+10
+10000 300000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8608
+witch girl~
+an Accused Girl~
+A girl accused of being a witch sits here in the balance scale.
+~
+This poor girls locks hang down around her dirty body. Within the caged 
+area she is to occupy, there is straw and feces, as well as spoiled fruit 
+which has been thrown at her by the crowd. She sits in a balance scale, 
+as her fate becomes decided by the weight of the duck, which resides on 
+the other half of the scale.
+~
+14 0 0 Y
+15 8 0 10d100+25 4d8+0
+2000 32000
+6 6 2
+69 0 0d0+0 0
+0 0 0 0
+#8609
+bride~
+a Bride~
+A bride of no beauty, and much fat stands here awaiting her marriage.
+~
+Rolls of fat seem to cascade and ripple on the body of this young girl. 
+Pock marks, as well as giagantic boil-size blisters cover her face in a 
+disgusting array of colors. Just when you think it can get no worse, she 
+turns to you and smiles. You definately feel the pain that the man she 
+is to marry must be feeling right about now.
+~
+10 0 0 Y
+20 0 -1 4d400+40 4d4+4
+3000 90000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+#8610
+father~
+The Father of the Bride~
+The Father of the Bride stands tall and proud of his little girl.
+~
+This father stands with the largest smile a father could possibly have. 
+If you hadn't already seen his daughter, you would think that he was just 
+proud. Deep in his eyes you can read the relief he is feeling at finally 
+being given the chance to get rid of the monstrous beast that is his little 
+girl.
+~
+12 0 0 Y
+20 0 -1 4d400+40 4d4+4
+3000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8611
+prince~
+a Prince~
+A Prince stands here looking quite ready to commit suicide.
+~
+You can tell by the look on this princes face that this marriage was not 
+his idea. His lean body and muscular physique, is the complete opposite 
+of that of the bride. Blondish brown locks frame his cherub face, as huge 
+tears of sadness stroll down his cheeks.
+~
+14 0 0 Y
+20 0 -1 4d400+40 4d4+4
+3000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8612
+father~
+The Father of the Prince~
+The Father of the Prince stands with his chest thrust out in a sort of victory.
+~
+Never has a man looked more happy to give his son a fate of sadness. By 
+the look on his face, he seems to be more happy about getting some more 
+land through this wedding. His large face almost boils over with the 
+thoughts of things he can do with the land, making his pocketbook grow 
+just as much larger as the land itself.
+~
+12 0 0 Y
+20 0 -1 4d400+40 4d4+4
+3000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8613
+guard bridge death~
+a Guard of the Bridge of Death~
+The Guard of the Bridge of death stands blocking the way over the bridge.
+~
+Although this man looks quite old and frail, do not be taken in by looks
+alone. The tiny twinkle in his eyes warns you that what you see must be an
+illusion, or perhaps just an elaborate hoax. The robes of this guard seem
+to bulk and bustle with ways and means of hurting you badly.
+~
+10 32776 -1000 Y
+34 -14 -8 2d50+3000 10d2+38
+10000 375000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8614
+tim enchanter~
+Tim the Enchanter~
+Tim is standing here creating big explosions with his staff.
+~
+With the welcoming expression of one long in need of conversation,
+you see Tim in the light of friendship. As you draw nearer, you see
+that he is randomly throwing fire around and making it explode in
+various places. Upon closer sight, it would definately seem that 
+Tim isn't aiming at all, but merely cascading fire wherever it wants
+to land.
+~
+11 0 0 Y
+25 -4 -4 2d50+1300 4d6+4
+10000 130000
+8 8 1
+1 0 0d0+0 0
+0 0 0 0
+#8615
+cute little rabbit~
+a Cute Little Rabbit~
+A cute little rabbit bounces around softly, without a care in the world.
+~
+This cute little rabbit appears to be a harmless little creature, that got 
+lost in the big mountains. It's little pink nose wiggles about, making you 
+think of the old days of easily catching and skinning rabbits for dinner. 
+As you think of dinner, you remember it has been a while since you last ate. 
+I don't think this is the right rabbit for your stew though.
+~
+42 128 0 Y
+31 -8 0 2d50+2000 1d15+65
+30000 450000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+#8616
+man collecting dead people~
+a Man Collecting Dead People~
+A man is walking around here collecting dead people from all around.
+~
+Looking much like an extra in a skit, this man walks around yelling for 
+all to bring out their dead for pick up. His clothes are filthy and bloody 
+from working in such a business. His cart is about half full with dead bodies. 
+As you look closer, it would appear one of them isn't quite all the way dead,
+but suffocating to death in the stench and wretchedness of this old man's cart.
+~
+141 0 0 Y
+15 5 1 1d30+300 7d3+0
+1350 20000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8617
+farmer~
+a Farmer~
+A farmer is standing here complaining about the community.
+~
+This local farmer stands with his back hunched over as he works the dirt 
+into a soft, agreeable place to plant seeds. So far, it seems that this 
+farmer only likes to complain about the way the world is changing, and 
+in his opinion, not for the better. His coveralls are covered with dark
+brown mud stains.
+~
+12 0 0 Y
+10 10 5 1d10+110 2d8+1
+4 12000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#8618
+moose~
+a Moose~
+A moose slowly stumbles through the wood in a careless motion.
+~
+This tall moose just seems to stumble around without a care in the world. 
+His brown coat shines when the sunlight hits it, making him look almost 
+like a beautiful animal. The brown eyes that peer out at you from beneath 
+half closed lids, look like those you would find on a teddy bear. 
+Although, I wouldn't want to take this moose for granted.
+~
+72 0 0 Y
+7 13 65 1d10+80 3d3+2
+0 4200
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+#8619
+castle guard~
+a Castle Guard~
+A Castle Guard stands close to the Prince he has been instructed to protect!
+~
+This guard looks pretty stupid trying to stop the Prince from getting out. 
+You can tell that he has indeed had a bit too much to drink, and seems to 
+be falling on the prince to keep him here, rather than actually holding him 
+steady.
+~
+14 0 0 Y
+15 5 10 1d30+300 7d3+0
+1350 20000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8620
+girl redhead~
+a delicious looking redhead~
+A delicious looking redhead shows off her pouting lips as she purrs at you.
+~
+With hair as red as an apple, this woman looks just as delicious as one. 
+Her plump breasts sway and swell over the edge of her over-the-shoulder 
+boulder holder. Creamy white legs peek out from beneath a flimsy pink 
+lingerie. As you avert your head to look into her face, emerald green eyes
+tackle yours, sending shivers down your spine.
+~
+12 0 0 Y
+25 0 -5 5d100+420 6d5+3
+3000 90000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8621
+girl blonde~
+a scantily clad blonde~
+A scantily clad blonde contorts her body into quite obscene positions.
+~
+Silky blonde wisps of hair twirl down the backside of this half
+naked feminine creature. Her milky white skin glows in the dim
+lights surrounding her.  Wearing only a pair of g-string panties,
+there isn't much to be hidden on this scantily clad goddess.
+~
+12 0 0 Y
+25 0 -5 5d100+420 6d5+3
+3000 90000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8622
+girl brunette~
+a brunette in a pink teddy~
+A brunette in a pink teddy gyrates her hips slowly, moving towards you.
+~
+Long, dark legs connect up to devastatingly rich thighs. Brown locks 
+of curly hair hang down to the top of this woman's lovely heart shaped 
+buttock. A pink negligee shimmers over her body, making it look as 
+though a mist surrounds her torso area.
+~
+12 0 0 Y
+25 0 -5 5d100+420 6d5+3
+3000 90000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8623
+girl raven~
+a girl with raven hair~
+A girl with raven hair cascades into your vision with naughty desires.
+~
+The first thing your eyes catch are the leather strap buckles 
+holding on each of the shiny pieces of material covering her body. 
+Her long, straight black hair hangs down in a school girl fashion,
+but this is definatley no school girl. Black, patent leather gloves 
+fit firmly to her, covering her arm up to her elbow. Considering the 
+appearance of this woman, she must want to be hurt in a most loving way.
+~
+12 0 0 Y
+25 0 -5 5d100+420 6d5+3
+3000 90000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8624
+girl redhead~
+a mischievous redhead~
+A mischievous redhead is slowly undressing herself.
+~
+Freckles seem to be the most prominent thing all over the body of 
+this delicious creature. Her nails have been painted a firey red, 
+matching the bodice she seems to be slowly untying with each step 
+closer to you. With a simple wiggle of her nose, she loosens wisps
+of her red hair, sending them floating around her head in a silent 
+breeze.
+~
+12 0 0 Y
+25 0 -5 5d100+420 6d5+3
+3000 90000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8625
+girl brunette~
+a breathtaking brunette~
+A breathtaking brunette seductively slides into a teddy.
+~
+As your eyes catch glimpse of this delicate woman, you see just
+how perfect her buttocks are shaped. As she begins to stand up 
+straight, you can see a flimsy green teddy gliding into place.
+~
+12 0 0 Y
+25 0 -5 5d100+420 6d5+3
+3000 90000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8626
+girl blonde~
+an alluring blonde~
+An alluring blonde is trying to decide which nightgown to wear.
+~
+Blue scarves are the only thing wrapped around this delicate 
+beauty. Each step sends her hair into loose waves of sensuality. 
+As her crystal blue eyes meet yours, she begins plucking one
+scarf at a time, off of her.
+~
+12 0 0 Y
+25 0 -5 5d100+420 6d5+3
+3000 90000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8627
+girl dingo~
+Dingo~
+A woman carrying a cat-o-nine tails approaches you with a sway in her hips.
+~
+As you catch the eye of this heavenly woman, you notice that 
+she appears to be the twin of Zoot. With a sheepish grin, she 
+appears to be absolutely nothing like her naughty sister. Just 
+when you thought it was safe to smile at her, the oddest feeling 
+of being looked at like a sex toy comes over your senses.
+~
+14 2048 0 Y
+30 0 -7 4d200+420 4d4+20
+6000 150000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8628
+girl zoot~
+Zoot~
+A playful woman walks towards you with a naughty pout on her face.
+~
+The most innocent eyes peer out at you from her curly mane of hair. 
+With a wink and a nod, she moves towards you, attempting to touch 
+places on you that you would rather she not. With each attempt to 
+get her to remove her hands from you, she only seems to grow more 
+aggressive as she grasps and grabs in the most embarassing places.
+~
+14 2048 0 Y
+15 5 -7 4d200+420 4d4+20
+6000 150000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8629
+girl doctor piglet~
+Doctor Piglet~
+A gentle looking woman offers to help clean up your wounds.
+~
+With a shy smile, Doctor Piglet, as she insists you call her, boldly
+attempts to get you on to the examining table where she can have a good
+look at you. You have the feeling she's interested in more than your
+health.
+~
+14 2176 0 Y
+15 5 -10 4d420+420 7d3+0
+30000 20000
+8 8 2
+69 0 0d0+0 0
+0 0 2 0
+K
+0 0 0 0 0 0
+#8630
+doctor winston girl~
+Doctor Winston~
+A stern looking woman demands that you take your clothes off.
+~
+With her hair in braids and the girlish smile she gives you, Doctor
+Winston hardly seems to be a threat.. until she begins to insist that
+you undress immediately so that she can give you a thorough 
+examination.
+~
+14 2176 0 Y
+15 5 -10 4d420+420 7d3+0
+30000 20000
+8 8 2
+69 0 0d0+0 0
+0 0 2 0
+K
+0 0 0 0 0 0
+#8631
+wooden badger~
+a ferocious wooden badger~
+An enormous creature made of wood angles towards you with a loud growl.
+~
+Shaggy bits of brown hair fluff and fall off this mangey badger as it 
+growls and staggers towards you. White bubbles foam from its mouth, 
+showing quite clearly that this badger MUST be rabid. A simple bite 
+might just be enough to cause some real damage.
+~
+12 0 0 Y
+30 5 -10 4d420+420 7d7+7
+0 150000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

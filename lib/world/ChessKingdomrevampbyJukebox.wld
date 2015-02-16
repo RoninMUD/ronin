@@ -1,0 +1,1002 @@
+#2301
+White Square~
+This lustrous marble corner leads nowhere unusual.
+The monotonous black white pattern seems to go
+on indefinitely.  Here it is interrupted by a 
+wooden frame around the board.  Small chips and
+scratches on the marble act as memoirs of the
+numerous battles fought here.
+~
+23 8 2
+D1
+~
+~
+0 -1 2302
+D2
+~
+~
+0 -1 2309
+S
+#2302
+Black Square~
+As you wander across this eternal marble and
+obsidian field you yearn for a place to sit
+and rest.  Perhaps a chair, a bench, or a sofa?
+But alas, the flat board continues just as it
+has, alternating between obsidian and marble
+each and every step of the way.
+~
+23 8 2
+D1
+~
+~
+0 -1 2303
+D2
+~
+~
+0 -1 2310
+D3
+~
+~
+0 -1 2301
+S
+#2303
+White Square~
+Nestled against the cherry frame on the north
+side of the board, this pearly white square
+vastly contrasts the black side of the board.
+The seemingly endless checkerboard pattern
+continues south even to the horizon.
+~
+23 8 2
+D1
+~
+~
+0 -1 2304
+D2
+~
+~
+0 -1 2311
+D3
+~
+~
+0 -1 2302
+S
+#2304
+Black Square~
+The stench of perfumes, expensive oils, and bath
+oils billows through the room.  Lying upon the
+recently polished square is a dirty dust rag, and
+a small tuffet.  Someone has spent time attempting
+to make this spot fit for royalty.  Despite the
+efforts, it seems no different than the rest of
+the marble and obsidian squares across the large
+chessboard.
+~
+23 8 2
+D1
+~
+~
+0 -1 2305
+D2
+~
+~
+0 -1 2312
+D3
+~
+~
+0 -1 2303
+S
+#2305
+White Square~
+The marble square seems to sink slightly as you
+step upon it.  Unlike other squares, it doesn't
+seem to be quite flush with the obsidian tablets
+next to it.  This is the mighty black king's home.
+A sturdy stone throne, barely worthy of a king
+rests upon the obsidian floor.  More obsidian
+squares lie to the east, west and south of here.
+~
+23 8 2
+D1
+~
+~
+0 -1 2306
+D2
+~
+~
+0 -1 2313
+D3
+~
+~
+0 -1 2304
+D5
+~
+marble~
+8 -1 2342
+S
+#2306
+Black Square~
+This is the edge of the oversized chessboard. A
+frame of cherry wood fits snuggly against the
+obsidian tablet on this northern part of the
+board. The checkerboard pattern continues on
+in every direction but north.  To the east you
+faintly see the corner of the board.
+~
+23 8 2
+D1
+~
+~
+0 -1 2307
+D2
+~
+~
+0 -1 2314
+D3
+~
+~
+0 -1 2305
+S
+#2307
+White Square~
+Scuff marks tarnish the polished marble floor.
+The stench of manure of some sort makes your
+nose curl up at the first whiff.  The board
+ends abruptly her and continues no further to
+the north.  Just to the east is the northeast
+corner of the marble and obsidian chessboard.
+~
+23 8 2
+D1
+~
+~
+0 -1 2308
+D2
+~
+~
+0 -1 2315
+D3
+~
+~
+0 -1 2306
+S
+#2308
+Black Square~
+You have reached the northeast corner of the
+chessboard. Dents and chips in the obsidian
+floor are now homes to small plants and weeds
+trying to survive on this barren stone plain.
+~
+23 8 2
+D2
+~
+~
+0 -1 2316
+D3
+~
+~
+0 -1 2307
+S
+#2309
+Black Square~
+Another obsidian tile square, fitted tightly
+against the wooden frame and the marble tiles
+to the north, south, and east.  The smell of
+battle carries its foul stench on the slight
+breeze flowing across this plain.
+~
+23 8 2
+D0
+~
+~
+0 -1 2301
+D1
+~
+~
+0 -1 2310
+D2
+~
+~
+0 -1 2317
+S
+#2310
+White Square~
+Flies buzz around a human skull.  No other objects
+disturb the sereneness of this square.  Darkness
+seems to envelop this room, and a cold feeling
+overcomes your body as you edge closer to the tile
+north of here.
+~
+23 8 2
+D0
+~
+~
+0 -1 2302
+D1
+~
+~
+0 -1 2311
+D2
+~
+~
+0 -1 2318
+D3
+~
+~
+0 -1 2309
+S
+#2311
+Black Square~
+In hopes you'll wake from this nightmarish world
+of chess pieces and monotonous marble and obsidian
+square patterns you pinch yourself.  Unfortunately,
+as you reopen your eyes nothing seems to have
+changed. Just to the north the board seems to
+come to a halt though.  Perhaps there is salvation
+from this landscape.
+~
+23 8 2
+D0
+~
+~
+0 -1 2303
+D1
+~
+~
+0 -1 2312
+D2
+~
+~
+0 -1 2319
+D3
+~
+~
+0 -1 2310
+S
+#2312
+White Square~
+Imperfections in the marble catch your eye.
+Finally you've found some difference between
+the numerous squares that you have walked
+thus far.  Fortunately there seems to be an
+end in sight.  On the horizon to the north
+you no long see the black white pattern of
+the chessboard.
+~
+23 8 2
+D0
+~
+~
+0 -1 2304
+D1
+~
+~
+0 -1 2313
+D2
+~
+~
+0 -1 2320
+D3
+~
+~
+0 -1 2311
+S
+#2313
+Black Square~
+The mighty king's pawn obsidian square.  This is
+the gateway to his majesty and the treasures he
+holds. The pawn stationed her has been selected
+by the king for the sole purpose of being his
+loyal defender and bodyguard.  A long line of
+pawns continues to the east and west.
+~
+23 8 2
+D0
+~
+~
+0 -1 2305
+D1
+~
+~
+0 -1 2314
+D2
+~
+~
+0 -1 2321
+D3
+~
+~
+0 -1 2312
+S
+#2314
+White Square~
+The checkered pattern continues as you step onto
+this marble tile floor.  You're welcomed by odd
+glances from a small man in armor two sizes too
+big for him.  More similar looking men stand to
+the east and west.  You can see the edge of the
+board to the north.
+~
+23 8 2
+D0
+~
+~
+0 -1 2306
+D1
+~
+~
+0 -1 2315
+D2
+~
+~
+0 -1 2322
+D3
+~
+~
+0 -1 2313
+S
+#2315
+Black Square~
+The obsidian floor reflects light back on the newly
+shined chainlink of the black pawn.  His eyes glance
+around wearily but his feet are steady and prepared
+to fight the slowly advancing white army.  Looking
+past him you see a beautiful stallion to the north
+and a long line of pawns to the west.
+~
+23 8 2
+D0
+~
+~
+0 -1 2307
+D1
+~
+~
+0 -1 2316
+D2
+~
+~
+0 -1 2323
+D3
+~
+~
+0 -1 2314
+S
+#2316
+White Square~
+Small puddles of sweat coat the marble floor here.  The
+poor fearful pawn that occupies this space must spend a
+large portion of his life worrying.  The marble floor
+is now slippery as you walk across it.  More trembling
+pawns wait worriedly to the west.
+~
+23 8 2
+D0
+~
+~
+0 -1 2308
+D2
+~
+~
+0 -1 2324
+D3
+~
+~
+0 -1 2315
+S
+#2317
+White Square~
+Smooth, beautiful marbles makes up the square
+beneath your soiled feet.  The board continues
+to the north, east, and south of here with
+obsidian tiles.  Oddly enough, there seems to
+be a dark cloud cast over the board north of
+here, and sunny skies to the south.
+~
+23 8 2
+D0
+~
+~
+0 -1 2309
+D1
+~
+~
+0 -1 2318
+D2
+~
+~
+0 -1 2325
+S
+#2318
+Black Square~
+Standing upon the vast expanse of the chessboard you make
+up one of the many squares.  More of the slippery obsidian
+covers the floor here as you stand in neutral territory
+between the evil black pieces to the north, and the righteous
+white pieces to the south.
+~
+23 8 2
+D0
+~
+~
+0 -1 2310
+D1
+~
+~
+0 -1 2319
+D2
+~
+~
+0 -1 2326
+D3
+~
+~
+0 -1 2317
+S
+#2319
+White Square~
+Small links of chainmail armor litter the floor and tell
+tales of many a treacherous battles fought upon this marble
+and obsidian battlefield.  Currently the white and black
+pieces seem to be poised for battle but neither has made
+the first move.  This is neutral territory, for now.
+~
+23 8 2
+D0
+~
+~
+0 -1 2311
+D1
+~
+~
+0 -1 2320
+D2
+~
+~
+0 -1 2327
+D3
+~
+~
+0 -1 2318
+S
+#2320
+Black Square~
+Trickling into the cracks of the glossy obsidian
+square are blood, sweat, and tears.  Murmuring
+echoes through the air from the north and south.
+Currently neutral territory, this center of the
+board is frequently the hub of many battles.  A
+quick look around and then you should move along.
+~
+23 8 2
+D0
+~
+~
+0 -1 2312
+D1
+~
+~
+0 -1 2321
+D2
+~
+~
+0 -1 2328
+D3
+~
+~
+0 -1 2319
+S
+#2321
+White Square~
+After falling almost twenty feet from the top of
+the Sonicity well you manage to land on your feet
+upon a marble square in the middle of what seems
+to be a chessboard.  Smudged blood stains upon the
+marble show years of wear.  The board continues
+in every direction from here.  Above, the sky
+taunts you through the tunnelvision of the well.
+~
+23 8 2
+D0
+~
+~
+0 -1 2313
+D1
+~
+~
+0 -1 2322
+D2
+~
+~
+0 -1 2329
+D3
+~
+~
+0 -1 2320
+D4
+Sonicity is out there.
+~
+~
+0 -1 8024
+S
+#2322
+Black Square~
+Peering around the expansive chessboard from your perch
+here on the black obsidian square you see lines of pawns
+with halberds drawn, ready to sacrifice their life for
+the king's protection.
+~
+23 8 2
+D0
+~
+~
+0 -1 2314
+D1
+~
+~
+0 -1 2323
+D2
+~
+~
+0 -1 2330
+D3
+~
+~
+0 -1 2321
+S
+#2323
+White Square~
+A small chunk of the white marble is missing from
+this square.  Careful not to step in the gap formed
+by the broken tile you peer around in search of
+something different from the repetitive checkered
+field. Black is to the north, and white to the
+south from here.
+~
+23 8 2
+D0
+~
+~
+0 -1 2315
+D1
+~
+~
+0 -1 2324
+D2
+~
+~
+0 -1 2331
+D3
+~
+~
+0 -1 2322
+S
+#2324
+Black Square~
+Well polished, pitch-black obsidian forms a perfect
+square beneath your feet.  Standing on the edge of
+the expansive chessboard you realize the neutral
+ground you currently occupy may soon be the sight
+of a heated battle.  White seems to be the south,
+with black to the north.
+~
+23 8 2
+D0
+~
+~
+0 -1 2316
+D2
+~
+~
+0 -1 2332
+D3
+~
+~
+0 -1 2323
+S
+#2325
+Black Square~
+Walking along the western edge of the chessboard you
+encounter yet another cowardly pawn, awaiting his own
+demise as the black army moves closer.  The southwest
+corner of the board is just south of here.  Suddenly
+the pawn sneezes and his helmet slides to cover his
+face.
+~
+23 8 2
+D0
+~
+~
+0 -1 2317
+D1
+~
+~
+0 -1 2326
+D2
+~
+~
+0 -1 2333
+S
+#2326
+White Square~
+Gazing around you notice your positioned upon yet
+another poor pawn's square.  Perhaps he deserves a 
+break and you could just continue your journey with-
+out hurting the poor fellow.
+~
+23 8 2
+D0
+~
+~
+0 -1 2318
+D1
+~
+~
+0 -1 2327
+D2
+~
+~
+0 -1 2334
+D3
+~
+~
+0 -1 2325
+S
+#2327
+Black Square~
+The obsidian floor reflects light back on the newly
+shined chainlink of the white pawn.  His eyes glance
+around wearily as his feet tremble slightly.  To
+the south you see a tall man clothed in robes.  To
+the east and west the long pawn chain continues.
+~
+23 8 2
+D0
+~
+~
+0 -1 2319
+D1
+~
+~
+0 -1 2328
+D2
+~
+~
+0 -1 2335
+D3
+~
+~
+0 -1 2326
+S
+#2328
+White Square~
+The marble must have been replaced numerous times
+on this particular square because it has a newly
+polished look to it and gleams unlike any other
+you have seen thus far.  The pawn occupying this
+square seems to be slightly sturdier than others
+of his kind.  Her royal highness takes care of
+her nails to the south.
+~
+23 8 2
+D0
+~
+~
+0 -1 2320
+D1
+~
+~
+0 -1 2329
+D2
+~
+~
+0 -1 2336
+D3
+~
+~
+0 -1 2327
+S
+#2329
+Black Square~
+Beyond this obsidian square is the white king.  With
+no more pawns to protect him he should be no match
+in his old age.  The pawn line holds strong to the
+east and west and the queen's quiet mumbling can be
+heard to the southwest.
+~
+23 8 2
+D0
+~
+~
+0 -1 2321
+D1
+~
+~
+0 -1 2330
+D2
+~
+~
+0 -1 2337
+D3
+~
+~
+0 -1 2328
+S
+#2330
+White Square~
+The checkered pattern continues as you step onto
+this marble tile floor.  From beneath his improperly
+sized armor, a short man peers at you with weary
+eyes. Other misfits crouch with cowardice to
+the east and west.  Just to the south you can
+make out the edge of the board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2322
+D1
+~
+~
+0 -1 2331
+D2
+~
+~
+0 -1 2338
+D3
+~
+~
+0 -1 2329
+S
+#2331
+Black Square~
+The obsidian floor almost looks like a blackhole
+beneath your feet.  Glistening white armor contrasts
+the black floor as light reflects off the pawn's
+chainmail and dented helmet.  To the south the quiet
+'neigh' of a horse can be heard as he drags his
+hooves along the marble floor.
+~
+23 8 2
+D0
+~
+~
+0 -1 2323
+D1
+~
+~
+0 -1 2332
+D2
+~
+~
+0 -1 2339
+D3
+~
+~
+0 -1 2330
+S
+#2332
+White Square~
+Tide pools of sweat upon the marble floor imply
+that the frequent occupant of this space is quite
+nervous. The slippery surface almost causes you
+to fall but you quickly regain your center of
+gravity and continue on.
+~
+23 8 2
+D0
+~
+~
+0 -1 2324
+D2
+~
+~
+0 -1 2340
+D3
+~
+~
+0 -1 2331
+S
+#2333
+White Square~
+Stained with blood, sweat, and tears this marble
+square is occupied by a rotund warrior.  The long
+line of pawns stands at attention to the north and
+to the east are the constant sounds of uneasiness
+from the white army's knight and horse.
+~
+23 8 2
+D0
+~
+~
+0 -1 2325
+D1
+~
+~
+0 -1 2334
+S
+#2334
+Black Square~
+Unlike the other rooms where bloodshed seems to coat
+the atmosphere, calmness envelops the air here making
+this an actually relaxing spot amidst the raging war
+between white and black.  A small pile of hay is here
+for the horse owned by the white knight.
+~
+23 8 2
+D0
+~
+~
+0 -1 2326
+D1
+~
+~
+0 -1 2335
+D3
+~
+~
+0 -1 2333
+S
+#2335
+White Square~
+This room's host is the righthand man to the white
+queen. Unfortunately, he must do her bidding no
+matter what silly and trivial thing she requests.
+He is ordered to sacrifice himself for the crown.
+His white robes drag slightly on the marble square
+beneath his tired feet.  To the east is the holy
+white king.
+~
+23 8 2
+D0
+~
+~
+0 -1 2327
+D1
+~
+~
+0 -1 2336
+D3
+~
+~
+0 -1 2334
+S
+#2336
+Black Square~
+Standing on the black obsidian you gaze around her
+royal highness's chambers.  Well, they don't seem
+very different from the other squares you've passed
+through. Perhaps that explains her complaining to
+her poor maidens.  Her husband sits upon a throne
+to the east.
+~
+23 8 2
+D0
+~
+~
+0 -1 2328
+D1
+~
+~
+0 -1 2337
+D3
+~
+~
+0 -1 2335
+S
+#2337
+White Square~
+The marble floor fits loosely between the three
+obsidian squares surrounding it, unlike any of
+the other places where everything is perfectly
+fit. Resting on the floor is a plain throne of
+cherry wood.  Perched upon it's fluffy seat is
+the elderly white king.  His queen fidgets and
+whines about war to the west.
+~
+23 8 2
+D0
+~
+~
+0 -1 2329
+D1
+~
+~
+0 -1 2338
+D3
+~
+~
+0 -1 2336
+D5
+~
+marble~
+8 -1 2341
+S
+#2338
+Black Square~
+A sense of nervousness has overcome the white army
+as you advance closer and closer to their revered
+king. The obsidian floor reminds you of the dark
+forces stationed to the north.  Directly west is
+the white king.
+~
+23 8 2
+D0
+~
+~
+0 -1 2330
+D1
+~
+~
+0 -1 2339
+D3
+~
+~
+0 -1 2337
+S
+#2339
+White Square~
+A truly righteous image rises up in front of your eyes.
+A gorgeous white horse moves around on the small square
+of marble, breathing heavily through his damp nostrils.
+Saddled on his back is a beautiful female knight with
+her sword sheathed carefully on her back.  To the west
+is the elderly white king.
+~
+23 8 2
+D0
+~
+~
+0 -1 2331
+D1
+~
+~
+0 -1 2340
+D3
+~
+~
+0 -1 2338
+S
+#2340
+Black Square~
+This is the corner of the board, well past the pawn
+frontier and into the far realms of the white army.
+A large guardian of the white king glares at you,
+his hands tightening around a large battleaxe.  The
+black army is far to the north and the white king
+is well west of here.
+~
+23 8 2
+D0
+~
+~
+0 -1 2332
+D3
+~
+~
+0 -1 2339
+S
+#2341
+A temporary name~
+A temporary description
+~
+23 0 0
+D4
+~
+marble~
+8 -1 2337
+S
+#2342
+A temporary name~
+A temporary description
+~
+23 0 0
+D4
+~
+marble~
+8 -1 2305
+S
+#0
+$~

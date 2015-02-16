@@ -1,0 +1,558 @@
+#8301
+crab hermit~
+a hermit crab~
+A hermit crab scuttles about here, looking for food.
+~
+This tiny creature has made its dwelling within the shell of some
+poor conch. All that show from under the shell are two pincers, one
+larger than the other, and a pair of eyes on stalks. It scuttles
+sideways along the ground here, pausing occasionally to sniff at
+a clump of dried seaweed.
+~
+204 0 0 Y
+10 10 10 100d2+200 2d3+4
+0 15000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+1000 0 0 0 0 0 0
+#8302
+crab fiddler~
+a Fiddler Crab~
+A fiddler crab waves it pincers rhythmically here.
+~
+A small crab with a greenish-blue body, the remarkable thing about
+this crab is the gigantic size difference between one pincer and the
+other. One of the pincers is minute and almost peripheral, while the
+other is huge in proportion to the rest of the creature. Always advancing
+with the large claw facing danger, this little crab is almost menacing.
+~
+204 0 0 Y
+14 8 10 100d2+300 3d4+3
+0 30000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+1000 0 0 0 0 0 0
+#8303
+flea sand~
+a sand flea~
+A tiny sand flea hops about on the sand here.
+~
+This tiny creature looks almost antediluvian, some prehistoric monster
+shrunk down to a millionth of its size and placed on the beach here.
+However, all it is is a tiny little crustacean, easily crushed.
+~
+200 0 0 Y
+5 15 10 2d10+30 2d3+2
+0 1200
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+100 0 0 0 0 0 0
+#8315
+Twisted Dwarf~
+twisted dwarf~
+A twisted dwarf stands here, fuming.
+~
+This twisted creature looks as if it has never seen the end of the 
+stone age. A long black beard extends from its jaw to the ground,
+above the beard glitter two tiny black eyes. You see that its teeth
+have been sharpened somewhat as it opens its mouth. However, under all
+of this wild exterior you see that this creature is simply some kind
+of dwarf which has been twisted from its original roots to the strange
+beast-like thing you see before you.
+~
+16522 262144 0 Y
+22 3 0 2d200+400 3d6+6
+20000 90000
+8 8 1
+71 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8316
+lost sailor~
+lost sailor~
+A lost sailor has made a home for himself here.
+~
+   This sad old man makes his living off the detritus thrown off ships
+and brought to him by the currents of the ocean. He must be a bit daft,
+however, considering that civilization is so close.
+~
+142 268435456 0 Y
+22 -2 2 2d300+400 2d6+4
+10000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8317
+pirate captain lost~
+A lost Pirate Captain~
+An old pirate captain hobbles about on his peg leg here, swearing.
+~
+From his eyepatch to his peg leg, this grizzled old sea-dog fits the
+picture-book image of a Pirate Captain. However, this poor fellow
+seems to have lost his ship and his bearings, as he has made himself
+a home on this desert beach. The skeleton of a parrot still clutches
+on to this grey-bearded man's epaulette, and the strange pirate seems
+to be talking to it.
+~
+26 0 0 Y
+30 -10 2 2d2000+2000 3d10+10
+100000 600000
+8 8 1
+69 0 2d100+100 7
+11 1 5 93
+3 1 10 0
+1 6 8 28
+1 6 5 85
+9 1 10 0
+2 1 25 0
+4 1 25 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8318
+pirate lost~
+A lost pirate~
+A lost pirate is singing badly and doing a mad jig here.
+~
+This disgusting old pirate cackles as you look at him, displaying
+a mouth full of black and rotting stumps. He wears tattered rags and
+a kerchief to cover his balding head. Simple gold and silver jewellery
+decorate his gigantic, veined red nose and his outrageously large
+ears. He does an extra-high leap to finish a complex step in his
+jig, and then breathes his filthy breath on you before continuing.
+~
+138 268697600 0 Y
+25 -4 2 3d300+400 6d6+2
+10000 120000
+8 8 1
+69 0 1d1+1 1
+4 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8319
+pirate lost~
+A lost pirate~
+A lost pirate lies in a drunken stupor in a corner here.
+~
+Alcohol-laden grunts and snores erupt from this revolting piece of
+human refuse as he sleeps away a massive drinking spree. An eyepatch
+covers one of his eyes, and he scratches his belly with a tarnished
+silver hook which substitutes for one of his hands.
+~
+138 268697600 0 Y
+25 -4 0 3d300+450 6d6+2
+10000 120000
+8 8 1
+69 0 1d1+1 1
+4 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8320
+pirate lost first mate~
+The First Mate~
+The first mate of the lost pirates stands here, tapping his wooden leg.
+~
+This grumpy old pirate is the cleanest of the lot, his brass buttons
+shiny and his wooden leg recently refinished. He stands in the corner
+of this room and smokes his pipe, scowling at the antics of his captain's
+crew. He looks, well, very bored.
+~
+138 268697600 0 Y
+29 -9 -1 3d300+400 7d6+3
+30000 150000
+8 8 1
+69 0 1d1+1 2
+11 1 10 2
+4 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8321
+boy cabin john thomas~
+John Thomas, the Cabin Boy~
+A cabin boy whistles a merry pirate tune while mopping up some vomit.
+~
+This silly little boy wears knickers and a white shirt, and cleans
+up after every mess the pirates make. However, when those pirates
+were stuck in the doldrums many years ago, they found another use
+for the cabin boy. His eyes go blank and he starts whimpering when
+poor little John Thomas remembers how he got to play "diseased whore"
+on the deck of the ship those years past....
+~
+654 262144 0 Y
+15 10 5 2d100+500 2d6+2
+20 60000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8333
+lost child~
+Lost Child~
+A lost child scavenges about here, eyeing you warily.
+~
+This young child wears rags and seaweed, and looks as though he
+hasn't bathed in years. Even though he is only a child, you suspect
+he's quite good at defending himself. After all, he seems to have
+lived outside of civilization for some time.
+~
+140 786432 0 Y
+22 3 2 2d100+500 3d6+5
+10000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8335
+Grand Poobah~
+The Grand Poobah~
+The Grand Poobah stands here, glaring about haughtily.
+~
+This young boy of about twelve years wears a tin badge on his chest
+which is incribed with the words, "Thee Grannt Pewbah!!" This child
+is obviously the ruler of the children who dwell on the bluffs, and
+he actually wears a rusted iron gauntlet on his left hand. A long
+scar runs down his left cheek and his chest.
+~
+131086 8 0 Y
+30 -8 -10 5d2000+8000 6d10+20
+200000 800000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8336
+millipede yellow giant~
+A giant yellow millipede~
+A long yellow millipede scuttles surreally across the sand here.
+~
+This hideous insect is at least three feet in length, and glows with
+an unearthly light. Long pincer-mandibles clack loudly as it rushes
+towards you across the sand, its hundreds of legs scuttling like mad
+to create the effect of effortless gliding.
+~
+42 264320 0 Y
+28 -8 -4 10d20+500 2d10+20
+0 120000
+8 8 1
+76 16384 1d1+1 3
+11 1 30 111
+11 2 25 33
+5 2 50 0
+0 0 0 0
+K
+10000 0 0 0 0 0 0
+#8352
+baboon huge guard~
+a huge guard Baboon~
+A gigantic red-rumped ape searches for grubs under the junk heap.
+~
+This giant simian has a red rear end and is covered entirely with short,
+bristly black fur. It has a very pronounced dog-like snout and long,
+pointed teeth. Its human-like hands are quite capable of clutching
+simple objects, but they are now busily engaged in scratching the
+aforementioned red rump.
+~
+10 0 0 Y
+26 -1 -1 10d20+1000 2d4+28
+0 190000
+8 8 1
+86 16384 1d1+1 1
+5 1 75 0
+0 0 0 0
+K
+20000 0 0 0 0 0 0
+#8353
+plant carnivorous giant~
+A giant carnivorous plant~
+A large plant towers over you here, its fleshy maw gaping.
+~
+This foul creation is fully eight feet tall, with a bulbous "mouth"
+well over three feet in diameter. Small, vine-like fronds extend
+from various points on its trunk, and these wave slowly through the
+hot air. A small stream of sappy drool dribbles down from one side
+of the "mouth" as this thing senses your presence.
+~
+10 0 0 Y
+27 -6 0 10d20+1100 4d6+20
+20000 210000
+8 8 0
+92 16436 1d1+1 1
+3 1 20 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8354
+cockatiel fire bird~
+the Fire Cockatiel~
+A parrot-like bird perches here, its plumage a shifting red and orange.
+~
+As you gaze at this bird, you notice that its plumage is an amazingly
+strange, almost magical variety of reds. As hard as you stare, you
+cannot stop the pattern's semblance of movement. It almost looks as
+if this bird is on fire! This effect is aided by the tall crest of
+red feathers it raises and flutters on the top of its head.
+~
+10 0 0 Y
+27 -6 0 10d20+1100 3d6+15
+0 230000
+8 8 0
+83 16384 1d1+1 3
+11 1 5 25
+11 1 1 137
+11 1 40 93
+0 0 0 0
+K
+20000 0 0 0 0 0 0
+#8355
+blob fungal~
+The Fungal Blob~
+A gigantic blob of fungus oozes towards you.
+~
+This awful thing has no visible sensory organs or even limbs. The
+only way to describe it is, well, as a blob. A fuzzy coating of pale
+green fungus covers it, except in a few spots where toadstools grow
+from the creature's body. It seems that somebody must have ensorcelled
+this once-benign accumulation of small fungal organisms into some
+kind of guard-beast!
+~
+42 0 0 Y
+28 -4 0 10d20+1500 3d6+20
+0 240000
+8 8 0
+94 18880 1d1+1 2
+11 3 15 33
+11 3 25 38
+0 0 0 0
+K
+30000 0 0 0 0 0 0
+#8356
+knight skeletal~
+A skeletal Knight~
+A skeletal knight shambles towards you, armor clanking.
+~
+This strange creature is simply a human skeleton dressed up in a
+knight's armor and enchanted to defend this tower. Its eyes glow an
+odd yellowish color through the visor of its helm, and it approaches
+you with a single obvious purpose in mind: to expel you from this
+place at all costs. Oddly enough, you notice a dusting rag tucked
+into its belt.
+~
+42 0 0 Y
+28 -8 0 10d20+1500 1d30+10
+40000 250000
+8 8 0
+52 16384 1d1+1 4
+2 3 25 0
+7 3 25 0
+3 3 25 0
+9 3 25 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8357
+bear ice white~
+A white Ice Bear~
+A gigantic furry white bear shambles around here angrily.
+~
+Fully twelve feet long, this huge bear is completely white, from
+his nose to his stubby tail. Even the great beast's eyes are white,
+and the tongue and gums are a pale shade of blue. Probably hailing
+from the far north of the world, this creature has been tamed somehow
+and is entrapped in this tower for the sole purpose of guarding the
+secrets which lie above it.
+~
+42 0 0 Y
+29 -7 -1 20d10+2000 1d30+20
+0 300000
+8 8 1
+86 2121728 1d1+1 3
+11 1 1 82
+6 1 10 0
+5 1 25 0
+0 0 0 0
+K
+50000 0 0 0 0 0 0
+#8358
+toad lasher spiked~
+A Spiked Lasher Toad~
+A gigantic spiked toad gazes at you from within the pool.
+~
+This is one of the largest amphibians you have ever seen, at least
+seven feet in length. It gazes at you with basilisk eyes from beneath
+a brow laden with long, horny spikes. Deep green skin pebbled with
+greyish lumps of horny armor and the odd patch of long spikes make
+this creature a disgusting and frightening apparition to behold.
+~
+16426 128 0 Y
+29 -9 -2 10d20+2000 5d5+35
+0 330000
+8 8 1
+81 0 1d1+1 1
+5 1 20 0
+0 0 0 0
+K
+60000 0 0 0 0 0 0
+#8359
+spider red hunter~
+A red hunter spider~
+A large red hunting spider scuttles about on the sand here.
+~
+This spider is fully two hands across, from leg-tip to leg-tip. Its
+multifaceted eyes look at you warily as you invade its domain, and
+you can see venom droplets on the tip of its large mandibles.
+~
+42 268699648 0 Y
+28 -8 -4 10d20+500 2d10+30
+0 120000
+8 8 1
+77 16384 1d1+1 2
+11 2 25 4
+5 1 75 0
+0 0 0 0
+K
+10000 0 0 0 0 0 0
+#8360
+alchemist mad yuri madman~
+Yuri the Mad Alchemist~
+A short madman wearing a long white coat putters about the lab.
+~
+A short man wearing a long white coat, this strange madman has grey
+hair which sticks out at odd angles all over his head. His eyes don't
+seem to be pointing in the same direction, and a constant stream of
+drool from his lower lip has encrusted on the lapels of his coat.
+He mutters something like "hurguk snepat" and bustles towards you
+with a beaker full of lizard organs in his hand.
+~
+16426 264192 0 Y
+30 -10 -4 20d10+5000 10d4+20
+50000 420000
+8 8 1
+1 16736 20d10+1000 6
+1 1 40 30
+1 1 25 141
+1 2 10 95
+1 2 25 26
+1 6 35 36
+1 6 20 28
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8361
+wind dust elemental~
+the Dust Elemental~
+A whirling cloud of dust flies around here.
+~
+A gigantic whirling cloud of dust and wind, this strange nether creature
+is probably what drove poor Yuri mad. Not the greatest sorcerer, the
+dumb alchemist somehow stumbled upon a way to summon an elemental
+far too powerful for his meagre skills.
+~
+42 134480000 0 Y
+31 -11 -3 2d300+6000 10d5+30
+30000 600000
+8 8 1
+64 23483 1d1+1 3
+11 5 20 82
+11 5 15 141
+10 5 30 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8362
+octopus sewage beast~
+The Octopoid Sewage Beast~
+A gigantic creature with eight tentacles swims about in the muck here.
+~
+A gigantic purplish blob of protoplasm, the only thing that gives
+this horrendous, filthy creature any definition are its eight tentacles,
+which radiate from the base of its massive body. Two gleaming yellow
+eyes stare at you blankly, the slit pupils sideways. You hear some
+kind of strange clacking sound from somewhere within this beast, and
+it doesn't sound pleasant.
+~
+46 65538 0 Y
+26 -5 0 2d10+2000 4d6+5
+0 150000
+8 8 1
+84 16384 1d1+1 2
+5 1 25 0
+10 1 10 0
+0 0 0 0
+K
+10000 0 0 0 0 0 0
+#8363
+otter sea~
+a sea otter~
+A burly little sea otter trundles along the beach here, leaving webby footprints.
+~
+This cute little fellow has a pudgy belly, long bristly whiskers, and
+a zen-like stare on its face. These creatures are generally considered
+holy by any civilized people because they are obviously connected
+with some higher plane. This is evidenced by this one's quick little
+chuckle and mad scratching at its ear.
+~
+76 0 0 Y
+25 0 5 2d300+500 3d6+3
+0 100000
+8 8 1
+86 2097160 1d1+1 2
+8 1 25 0
+5 1 10 0
+0 0 0 0
+K
+2000 0 0 0 0 0 0
+#8364
+lizard beach white~
+a white beach lizard~
+A white beach lizard scuttles along here, almost invisible in the sand.
+~
+This tiny little lizard must live on whatever small insect happens
+to be foolish enough to land on the burning white sand of this beach.
+Almost perfectly camouflaged, you are hard-pressed to even be able
+to see this tiny lizard.
+~
+204 0 0 Y
+10 10 10 100d2+200 2d3+4
+0 15000
+8 8 1
+80 0 1d1+1 0
+0 0 0 0
+K
+1000 0 0 0 0 0 0
+#8398
+locust brown hell~
+a Brown Hell Locust~
+A gigantic, obese black locust lurches towards you here, mandibles dripping.
+~
+This foul insectoid is fully fifteen feet long, and over seven feet
+in diameter. Long antennae probe the darkness, and its legs are 
+somehow peripheral. Black armored plates cover its rotund body and
+give it the aspect of some kind of demon. As a matter of fact, this
+can only be the legendary Brown Hell Locust, banished to caverns beneath
+the earth because of their gluttony.
+~
+44 830777512 -1000 Y
+60 -20 -15 20d20+15000 6d66+100
+1 1
+8 8 1
+76 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

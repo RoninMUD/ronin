@@ -1,0 +1,222 @@
+#9900
+Baby Polar Bear~
+A baby polar bear~
+A baby polar bear stands here, looking for its mother.
+~
+You see a baby polar bear standing no more than 4 feet tall.
+~
+72 0 100 X
+18 5 3 1000d1+99 2d6+8
+0 30000
+8 8 1
+0 0 0d0+0 0
+#9901
+Polar Bear~
+A polar bear~
+A polar bear stands here searching for food.
+~
+The polar bears white fur makes it hard to see it among the snow and ice.
+~
+72 0 0 X
+20 5 2 1001d1+10 7d3+2
+0 60000
+8 8 2
+0 0 0d0+0 0
+#9902
+Giant Polar Bear~
+A giant polar bear~
+A giant polar bear stands here watching over his family.
+~
+You see a giant polar bear which seems to worry more about his family than you.
+~
+16460 40 -100 X
+25 4 0 2000d1+44 11d2+3
+0 150000
+8 8 1
+0 0 0d0+0 0
+#9903
+Penguin~
+A penguin~
+A penguin waddles along in the snow.
+~
+The suns rays reflect off of the snow, making the penguins black body shine.
+~
+72 0 0 X
+14 6 5 300d2+0 2d5+8
+0 18000
+8 8 1
+0 0 0d0+0 0
+#9904
+Cambrian Warrior~
+The Cambrian Warrior~
+The Cambrian Warrior stands here, guarding a large stone door.
+~
+The Cambrian Warrior is very old, but don't let his age deceive you.
+~
+16458 536903816 0 X
+29 2 0 700d2+1000 6d4+2
+0 360000
+8 8 1
+0 0 0d0+0 0
+#9906
+Cambrian Hermit~
+The Cambrian Hermit~
+A Cambrian Hermit eyes you from the shadows.
+~
+The Cambrian Hermit doesn't want to be bothered with the normal everyday
+life.  At one time  he was a wealthy man with many  friends, however for
+some mysterious  reason he has secluded  himself from  everyone but  his
+guards for the past 5 billion years or so...
+~
+540762 335577224 0 X
+30 2 0 500d3+2000 5d5+10
+0 450000
+8 8 1
+0 0 0d0+0 0
+#9907
+captain~
+The weary captain~
+A weary captain rests here.
+~
+You see an old captain, weary from his unfortunate crash into an iceberg.
+~
+16458 268435584 0 X
+26 0 -1 700d1+25 10d2+10
+5000 210000
+5 5 1
+0 0 0d0+0 0
+#9908
+seal~
+A seal~
+A seal is here swimming in circles around you.
+~
+The seal has a light coat of fur which makes him a fast swimmer.
+~
+76 0 0 X
+24 5 -1 1200d1+50 6d4+6
+0 90000
+8 8 1
+0 0 0d0+0 0
+#9909
+huge walrus~
+The Huge Walrus~
+A Huge Walrus is laying here.
+~
+  You see a huge walrus basking in the sun rays reflecting off of
+the mother pearl.  As nice and cuddly as he looks, getting too
+close to him might invite him to take off your head with one swipe
+of his tail.  Turn back now or pay the price.
+~
+16458 0 0 X
+27 0 -3 1500d1+50 6d4+4
+0 210000
+6 8 1
+0 0 0d0+0 0
+#9910
+brown bear~
+A Brown Bear~
+A Brown Bear is standing here blocking your way.
+~
+  The brown bear you see in front of you doesn't look like it wants to
+fight.  It seems he's looking for a way out, just like you should be.
+However, you might not cross his path or he might decide otherwise...
+~
+16458 268468392 0 X
+31 0 -3 2000d1+100 7d3+10
+0 360000
+8 8 1
+0 0 0d0+0 0
+#9911
+tribesman~
+The Lost Tribesman~
+You can barely make out a Lost Tribesman, hiding in the shadows.
+~
+  This tribesman probably wandered his way in here years ago and has
+not found a way out since then.  You notice he has scars on his eyes,
+maybe from battle or maybe his own madness.
+~
+1098 129 1000 X
+30 0 0 1500d1+50 6d5+10
+0 180000
+6 6 1
+0 0 0d0+0 0
+#9912
+ice toad~
+An Ice Toad~
+An Ice Toad is here, ready to fight.
+~
+  You see a rather large ice toad.  Unlike the other creatures you
+have encountered so far, this one likes his home here, however he
+does not like people invading his territory.
+~
+16490 939819176 0 X
+35 0 0 3000d1+1000 10d5+15
+0 540000
+8 8 1
+0 0 0d0+0 0
+#9913
+winter wolf~
+A Winter Wolf~
+A Winter Wolf stands here, waiting for something to eat.
+~
+  A pure white winter wolf stands before you.  It is the most beautiful
+animal you've ever seen.  His eyes are light blue and reflect the
+light of your lantern.  Spending much time looking at this beautiful
+animal, you forgot that he's going to eat you if you stick around.
+~
+16494 671383720 0 X
+35 0 0 6000d1+1000 10d5+60
+0 630000
+8 8 1
+0 0 0d0+0 0
+#9914
+giant snake~
+A Giant Constrictor Snake~
+A Giant Constrictor Snake slithers past you.
+~
+  This snake can literally squeeze the life out of you.  You can see
+just how muscular it is by the way it's back ripples as it moves.
+~
+16490 939622568 -1000 X
+36 0 -2 10000d1+100 12d5+80
+0 1440000
+8 8 1
+0 12 0d0+0 1
+5 2 5 0
+#9915
+frost giant~
+A Frost Giant~
+A Frost Giant stands here building a rather large house.
+~
+  This frost giant stands a good 15 feet off the ground.  Everything about
+him including his facial features are large.  He seems hard at work building
+a house for himself out of large ice blocks.
+~
+16458 939819176 0 X
+36 0 -2 15000d1+100 13d5+102
+0 2160000
+8 8 1
+0 0 0d0+0 2
+9 2 10 0
+4 2 5 0
+#9916
+white dragon~
+The White Dragon~
+The White Dragon stands before you, guarding his kingdom.
+~
+  You see the ruler of this kingdom, who is watching everything through
+a crystal ball in the center of his room.  He is completely white with
+a thin layer of frost covering him.  His beady white eyes gaze in your
+direction and he attacks!
+~
+17317998 939567272 1000 X
+38 -10 -10 13000d1+2020 17d7+102
+2000000 2700000
+8 8 1
+0 2036 100d5+200 4
+1 2 10 8
+1 2 5 82
+8 3 5 0
+9 3 10 0
+#0
+$~

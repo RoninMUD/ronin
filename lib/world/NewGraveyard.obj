@@ -1,0 +1,96 @@
+#2501
+key broken brokenkey~
+a broken key~
+a broken key is lying here.~
+~
+18 0 16385
+2 0 0 0
+3 100 500
+50
+A
+18 1
+A
+19 1
+#2502
+spear wooden~
+wooden spear~
+A wooden spear is lying on the ground.~
+~
+5 1 8193
+0 2 9 11
+5 8000 100
+50
+A
+18 1
+A
+19 2
+#2503
+belt golden goldenbelt~
+a golden belt~
+A golden belt is lying on the ground.~
+~
+9 134217792 2049
+12 0 0 0
+20 20000 200
+10
+A
+5 1
+A
+12 20
+#2504
+collar evil evilcollar~
+an evil collar~
+An evil collar is lying on the ground.~
+~
+9 578 5
+5 0 0 0
+10 8000 100
+50
+A
+1 1
+#2505
+ring dark darkring~
+a dark ring~
+A Dark Ring is resting on the ground.~
+~
+11 576 3
+0 0 0 0
+5 20000 300
+50
+A
+18 2
+A
+19 1
+#2506
+mask black blackmask~
+a black mask~
+A black mask is left on the ground.~
+~
+9 640 17
+5 0 0 0
+10 15000 300
+50
+A
+1 1
+A
+13 10
+#2507
+evil gun~
+an evil gun~
+an evil gun is lying on the ground.~
+~
+6 2561 16385
+2507 0 50 3
+15 200000 10000
+50
+#2508
+evil bullets~
+some evil bullets~
+some evil bullets is lying on the ground.~
+~
+23 2 1
+0 0 2507 4
+5 30000 3000
+50
+#0
+$~

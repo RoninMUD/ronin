@@ -1,0 +1,1212 @@
+#6801
+Gates to Cthorr~
+  Here lie the gates to Cthorr, city of the Dead.  These mighty gates 
+are made from black marble and are cool to the touch.  Upon these gates are
+inscribed the following:
+
+     "Aba a tuat maa a ateff,
+      Seheri a keikui."
+
+The gates lie open, with a gaping hole leading down. 
+~
+68 9 2
+D3
+~
+~
+0 -1 8325
+D5
+~
+~
+0 -1 6802
+S
+#6802
+On the steps to Cthorr~
+  Your footsteps echo strangely on the cool marble.  The air smells overly 
+sweet, and perhaps a bit ripe.
+~
+68 9 2
+D4
+~
+~
+0 -1 6801
+D5
+~
+~
+0 -1 6809
+S
+#6809
+Bottom of the stairs~
+  At the bottom of the stairs lies another inscription above the gates 
+to the east.
+
+   "An aau a to an t'a a tu er seba am a"
+
+Cold and dark, the city lies beyond.
+~
+68 9 2
+D1
+~
+~
+0 -1 6810
+D4
+~
+~
+0 -1 6802
+S
+#6810
+Beyond the gates~
+  The gates to Cthorr open from the side of a cliff.   Spread out below are
+the endless mausoleums and tombs of the silent inhabitants.  Far across the
+city a palace of grey granite rises above all, seemingly overseeing the entire
+valley.
+~
+68 9 1
+D0
+~
+~
+0 -1 6818
+D1
+~
+~
+0 -1 6813
+D2
+~
+~
+0 -1 -1
+D3
+~
+~
+0 -1 6809
+S
+#6811
+Among the Mausoleums~
+  In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6817
+D1
+~
+~
+0 -1 6816
+D2
+~
+~
+0 -1 6816
+D3
+~
+~
+0 -1 -1
+E
+mausoleum~
+   "takna auset em Neterxert erma nebu maat, 
+    seha men em sehket-hetpu."
+~
+S
+#6812
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6819
+D1
+~
+~
+0 -1 -1
+D2
+~
+~
+0 -1 6819
+D3
+~
+~
+0 -1 6815
+E
+mausoleum~
+   "sexa a rena em pa neser kherh pui en renput en tennut,
+    aba na em pa abu hati a na em pa hatu"
+~
+S
+#6813
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 -1
+D1
+~
+~
+0 -1 6817
+D2
+~
+~
+0 -1 6817
+D3
+~
+~
+0 -1 6810
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6814
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6815
+D1
+~
+~
+0 -1 6819
+D2
+~
+~
+0 -1 6818
+D3
+~
+~
+0 -1 6818
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6815
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6816
+D1
+~
+~
+0 -1 6812
+D2
+~
+~
+0 -1 6814
+D3
+~
+~
+0 -1 6817
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6816
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6811
+D1
+~
+~
+0 -1 6818
+D2
+~
+~
+0 -1 6815
+D3
+~
+~
+0 -1 6811
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6817
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6813
+D1
+~
+~
+0 -1 6815
+D2
+~
+~
+0 -1 6811
+D3
+~
+~
+0 -1 6813
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6818
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6814
+D1
+~
+~
+0 -1 6814
+D2
+~
+~
+0 -1 6810
+D3
+~
+~
+0 -1 6816
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6819
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6812
+D1
+~
+~
+0 -1 6820
+D2
+~
+~
+0 -1 6812
+D3
+~
+~
+0 -1 6814
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6820
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 -1
+D1
+~
+~
+0 -1 6822
+D2
+~
+~
+0 -1 6827
+D3
+~
+~
+0 -1 6819
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6821
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6822
+D1
+~
+~
+0 -1 6827
+D2
+~
+~
+0 -1 6823
+D3
+~
+~
+0 -1 6826
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6822
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6823
+D1
+~
+~
+0 -1 6825
+D2
+~
+~
+0 -1 6821
+D3
+~
+~
+0 -1 6820
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6823
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6821
+D1
+~
+~
+0 -1 6828
+D2
+~
+~
+0 -1 6822
+D3
+~
+~
+0 -1 6825
+E
+mausoleum~
+   "anx a anx-s nexext-a anx a sesen a nifu"
+~
+S
+#6824
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+Toward the east, you can catch glimpses of the greater tombs.
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6826
+D1
+~
+~
+0 -1 6829
+D2
+~
+~
+0 -1 -1
+D3
+~
+~
+0 -1 6827
+E
+mausoleum~
+   "athu nifu embah au xu er t'eru pet,
+    t'ery ta er t'ery Sy eb bau."
+~
+S
+#6825
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+Toward the east, you can catch glimpses of the greater tombs.
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6829
+D1
+~
+~
+0 -1 6823
+D2
+~
+~
+0 -1 6829
+D3
+~
+~
+0 -1 6822
+E
+mausoleum~
+   "Un na uat neb am pet am ta.
+    aba-a tuat maa-a atef-f."
+~
+S
+#6826
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+Off to the west, the tops of the greater tombs tower above the mausoleums.
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6828
+D1
+~
+~
+0 -1 6821
+D2
+~
+~
+0 -1 6824
+D3
+~
+~
+0 -1 6828
+E
+mausoleum~
+  "Ax ta a rex-sen sexeru neteru
+   ari en Heru em xemt atef-f Ausar"
+~
+S
+#6827
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+Off to the west, the tops of the greater tombs tower above the mausoleums.
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6820
+D1
+~
+~
+0 -1 6824
+D2
+~
+~
+0 -1 6828
+D3
+~
+~
+0 -1 6821
+E
+mausoleum~
+  "Ax ta a rex-sen sexeru neteru
+   ari en Heru em xemt atef-f Ausar"
+~
+S
+#6828
+Among the Mausoleums~
+    In every direction roads lead off to more and more mausoleums.   
+Off to the west, the tops of the greater tombs tower above the mausoleums.
+On every mausoleum is an inscription in a strange language.
+~
+68 9 1
+D0
+~
+~
+0 -1 6827
+D1
+~
+~
+0 -1 6826
+D2
+~
+~
+0 -1 6826
+D3
+~
+~
+0 -1 6823
+E
+mausoleum~
+  "Ax ta a rex-sen sexeru neteru
+   ari en Heru em xemt atef-f Ausar"
+~
+S
+#6829
+Gateway to the Greater Tombs~
+   A gateway rises above the mausoleums, arching over the road to the 
+east.  Beyond it lies the greater tombs. 
+~
+68 9 1
+D0
+~
+~
+0 -1 6825
+D1
+~
+~
+0 -1 6830
+D2
+~
+~
+0 -1 6825
+D3
+~
+~
+0 -1 6824
+E
+mausoleum~
+   "Ha em se0es sexu,
+    pert hait em Neterkhert xut em Amentet nefert."
+~
+S
+#6830
+Inside the Gateway to the Greater Tombs~
+   From this side, the Greater Tombs are truly spectacular.  Most are 
+the color of polished bone, though some are as black as night with gold
+tracing.  Back toward the west are the lesser mausoleums. 
+~
+68 9 1
+D0
+~
+~
+0 -1 -1
+D1
+~
+~
+0 -1 6833
+D2
+~
+~
+0 -1 6835
+D3
+~
+~
+0 -1 6829
+S
+#6831
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  Back
+toward the west are the lesser mausoleums and the gates to the city.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6836
+D1
+~
+~
+0 -1 6835
+D2
+~
+~
+0 -1 6836
+D3
+~
+~
+0 -1 6836
+E
+epitaph~
+    "Sem-a ab-a en unnut-f nebtet kerh"
+~
+S
+#6832
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  Back
+toward the west are the lesser mausoleums and the gates to the city.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6833
+D1
+~
+~
+0 -1 6839
+D2
+~
+~
+0 -1 6837
+D3
+~
+~
+0 -1 6833
+E
+epitaph~
+   "Ab a ab bennu pu aa enti em Suten-henen,
+    her entet nuk as fent pu  en neb nifu seanx rexit."
+~
+S
+#6833
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+Rising above the tombs to the east is the Palace of Cthorr.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6835
+D1
+~
+~
+0 -1 6832
+D2
+~
+~
+0 -1 6832
+D3
+~
+~
+0 -1 6830
+E
+epitaph~
+      "A sexen nefer hemi nefer en pet mehtet.
+       A rer pet sem taui, hemi nefer en pet amentet."
+~
+S
+#6834
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+Rising above the tombs to the east is the Palace of Cthorr.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6839
+D1
+~
+~
+0 -1 6837
+D2
+~
+~
+0 -1 6838
+D3
+~
+~
+0 -1 -1
+E
+epitaph~
+    "Ari kua auset sen xenti Neterxert, 
+     senemeh sen tut en kak"
+~
+S
+#6835
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  Back
+toward the west are the lesser mausoleums and the gates to the city.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6830
+D1
+~
+~
+0 -1 6836
+D2
+~
+~
+0 -1 6833
+D3
+~
+~
+0 -1 6831
+E
+epitaph~
+      "A ua, uben em aah a ua pest em aah.
+       Pert Ausar Anti pen em astk tui areruti."
+~
+S
+#6836
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs. Down 
+every street and alley is another tomb of unbelievable splendor. 
+The tomb here is simple, yet powerful in its stature. 
+Each tomb carries an epitaph, traced in gold.
+~
+68 9 1
+D0
+~
+~
+0 -1 6831
+D1
+~
+~
+0 -1 6831
+D2
+~
+~
+0 -1 6831
+D3
+~
+~
+0 -1 6835
+E
+epitaph~
+     "For my mother and father, both of whom are missed.
+      Daily I think of the time lost, and thoughts never shared."
+~
+S
+#6837
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+The gates to the palace are nearer and nearer toward the east.  They
+raise up above even the tallest of the Greater Tombs.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6832
+D1
+~
+~
+0 -1 6838
+D2
+~
+~
+0 -1 6839
+D3
+~
+~
+0 -1 6834
+E
+epitaph~
+    "Re en ertat rer su se er maa pa-f tep ta."
+~
+S
+#6838
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+The gates to the palace are nearer and nearer toward the east.  They
+raise up above even the tallest of the Greater Tombs.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6834
+D1
+~
+~
+0 -1 -1
+D2
+~
+~
+0 -1 -1
+D3
+~
+~
+0 -1 6837
+E
+epitaph~
+    "Re en ertat rer su se er maa pa-f tep ta."
+~
+S
+#6839
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+The gates to the palace are nearer and nearer toward the east.  They
+raise up above even the tallest of the Greater Tombs.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6837
+D1
+~
+~
+0 -1 6840
+D2
+~
+~
+0 -1 6834
+D3
+~
+~
+0 -1 6832
+E
+epitaph~
+    "Re en ertat rer su se er maa pa-f tep ta."
+~
+S
+#6840
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  Back
+toward the west are the lesser mausoleums and the gates to the city.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6843
+D1
+~
+~
+0 -1 -1
+D2
+~
+~
+0 -1 6841
+D3
+~
+~
+0 -1 6839
+E
+epitaph~
+    "Sem-a ab-a en unnut-f nebtet kerh"
+~
+S
+#6841
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  Back
+toward the west are the lesser mausoleums and the gates to the city.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6840
+D1
+~
+~
+0 -1 6849
+D2
+~
+~
+0 -1 6846
+D3
+~
+~
+0 -1 -1
+E
+epitaph~
+    "Sem-a ab-a en unnut-f nebtet kerh"
+~
+S
+#6842
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  Back
+toward the west are the lesser mausoleums and the gates to the city.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6844
+D1
+~
+~
+0 -1 6847
+D2
+~
+~
+0 -1 6843
+D3
+~
+~
+0 -1 6844
+E
+epitaph~
+   "Ab a ab bennu pu aa enti em Suten-henen,
+    her entet nuk as fent pu  en neb nifu seanx rexit."
+~
+S
+#6843
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+Rising above the tombs to the east is the Palace of Cthorr.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6842
+D1
+~
+~
+0 -1 6844
+D2
+~
+~
+0 -1 6840
+D3
+~
+~
+0 -1 -1
+E
+epitaph~
+      "A sexen nefer hemi nefer en pet mehtet.
+       A rer pet sem taui, hemi nefer en pet amentet."
+~
+S
+#6844
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+Rising above the tombs to the east is the Palace of Cthorr.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6849
+D1
+~
+~
+0 -1 6842
+D2
+~
+~
+0 -1 6842
+D3
+~
+~
+0 -1 6843
+E
+epitaph~
+    "Ari kua auset sen xenti Neterxert, 
+     senemeh sen tut en kak"
+~
+S
+#6845
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  Back
+toward the west are the lesser mausoleums and the gates to the city.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6847
+D1
+~
+~
+0 -1 6848
+D2
+~
+~
+0 -1 6847
+D3
+~
+~
+0 -1 6848
+E
+epitaph~
+      "A ua, uben em aah a ua pest em aah.
+       Pert Ausar Anti pen em astk tui areruti."
+~
+S
+#6846
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+Rising above the tombs to the east is the Palace of Cthorr.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6841
+D1
+~
+~
+0 -1 -1
+D2
+~
+~
+0 -1 6848
+D3
+~
+~
+0 -1 6847
+E
+epitaph~
+      "A sexen nefer hemi nefer en pet mehtet.
+       A rer pet sem taui, hemi nefer en pet amentet."
+~
+S
+#6847
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  
+Rising above the tombs to the east is the Palace of Cthorr.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6845
+D1
+~
+~
+0 -1 6846
+D2
+~
+~
+0 -1 6845
+D3
+~
+~
+0 -1 6842
+E
+epitaph~
+    "Ari kua auset sen xenti Neterxert, 
+     senemeh sen tut en kak"
+~
+S
+#6848
+By the Greater Tombs~
+   Scattered about the never-ending streets are the greater tombs.  Back
+toward the west are the lesser mausoleums and the gates to the city.
+Each tomb carries an epitaph.
+~
+68 9 1
+D0
+~
+~
+0 -1 6846
+D1
+~
+~
+0 -1 6845
+D2
+~
+~
+0 -1 6849
+D3
+~
+~
+0 -1 6845
+E
+epitaph~
+      "A ua, uben em aah a ua pest em aah.
+       Pert Ausar Anti pen em astk tui areruti."
+~
+S
+#6849
+Outside the Gates to the Palace~
+   By far, these jet-black gates are the most impressive of all the gates
+in Cthorr.   At least 30 feet tall, they seem to stretch to the very
+ceiling of heaven.  These dark monoliths emanate cold as though to leech
+the life-force of those that tarry too long.  Engraved and inlaid with gold
+letters is the following:
+
+      "Nergal, un na uat neb am pet, am ta nuk se meri"
+
+Inside the gate, darkness and silence greets you.
+~
+68 9 1
+D0
+~
+~
+0 -1 6848
+D1
+~
+~
+0 -1 6850
+D2
+~
+~
+0 -1 6844
+D3
+~
+~
+0 -1 6841
+S
+#6850
+Inner Gateway to the Palace~
+The street turns to rough hewn grey granite upon entering the gateway.
+The gibbering and wailing stops here, seemingly in awe of the power
+and might steeped into the walls of the Palace.  Further into the Palace 
+is the grand throne of Nergal, seat of Cthorr.
+~
+68 9 1
+D1
+~
+~
+0 -1 6851
+D3
+~
+~
+0 -1 6849
+S
+#6851
+Before the Grand Throne of Nergal~
+A throne, 20 feet tall, carved of onyx, inlaid with polished ebony, and
+inlaid with mother of pearl stands here in mute testament to the 
+size of the City of the Dead.
+~
+68 9 1
+D3
+~
+~
+0 -1 6850
+S
+#0
+$~
+

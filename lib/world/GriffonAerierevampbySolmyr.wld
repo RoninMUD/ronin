@@ -1,0 +1,369 @@
+#5301
+A path to the mountain griffons lair~
+    To the south lies a rocky path to the dreaded mountain griffons lair. Many
+a traveler has ventured along this path, but only a brave few have ever
+returned. You must look into  your heart to find the courage to continue, for
+cowards will not survive.
+~
+53 0 1
+D0
+The forest.~
+~
+0 -1 6001
+D2
+The village
+~
+~
+0 -1 5302
+S
+#5302
+A path to the mountain griffons lair~
+    To the south lies a rocky path to the dreaded mountain griffons lair. Many
+a traveler has ventured along this path, but only a brave few have ever
+returned. You must look into  your heart to find the courage to continue, for
+cowards will not survive.
+~
+53 0 1
+D0
+~
+~
+0 -1 5301
+D2
+~
+~
+0 -1 5303
+S
+#5303
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power.
+~
+53 0 1
+D0
+~
+~
+0 -1 5302
+D2
+~
+~
+0 -1 5304
+S
+#5304
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power.
+~
+53 0 1
+D0
+~
+~
+0 -1 5303
+D1
+~
+~
+0 -1 5310
+D3
+~
+~
+0 -1 5305
+S
+#5305
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power.
+~
+53 0 1
+D1
+~
+~
+0 -1 5304
+D3
+~
+~
+0 -1 5306
+S
+#5306
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power. To the west there
+is a dark cave.
+~
+53 0 1
+D1
+~
+~
+0 -1 5305
+D3
+~
+~
+0 -1 5307
+S
+#5307
+Inside a griffons lair~
+    You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible 
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 0 1
+D0
+~
+~
+0 -1 5308
+D1
+~
+~
+0 -1 5306
+D2
+~
+~
+0 -1 5309
+S
+#5308
+Inside a griffons lair~
+    You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 0 1
+D2
+~
+~
+0 -1 5307
+S
+#5309
+Inside a griffons lair~
+     You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 0 1
+D0
+~
+~
+0 -1 5307
+S
+#5310
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power.
+~
+53 0 1
+D1
+~
+~
+0 -1 5311
+D3
+~~
+~
+0 -1 5304
+S
+#5311
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power.
+~
+53 0 1
+D2
+~
+~
+0 -1 5312
+D3
+~
+~
+0 -1 5310
+S
+#5312
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power.
+~
+53 0 1
+D0
+~
+~
+0 -1 5311
+D2
+~
+~
+0 -1 5313
+S
+#5313
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power.
+~
+53 0 1
+D0
+~
+~
+0 -1 5312
+D2
+~
+~
+0 -1 5314
+S
+#5314
+A path to the mountain griffons lair~
+    You are traveling along a rocky path that in time will lead you into
+great danger. It would be wise to turn back and leave this place for the
+dangers here are far greater than your own mortal power.
+~
+53 0 1
+D0
+~
+~
+0 -1 5313
+D1
+~
+~
+0 -1 5315
+D3
+~
+~
+0 -1 5317
+S
+#5315
+Inside a griffons lair~
+    You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 0 1
+D1
+~
+~
+0 -1 5316
+D3
+The end of the garden
+~
+~
+0 -1 5314
+S
+#5316
+Inside a griffons lair~
+    You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 0 1
+D2
+~
+~
+0 -1 5321
+D3
+~
+~
+0 -1 5315
+S
+#5317
+Inside a griffons lair~
+   You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 0 1
+D1
+~
+~
+0 -1 5314
+D3
+~
+~
+0 -1 5318
+S
+#5318
+Inside a griffons lair~
+    You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 0 1
+D1
+~
+~
+0 -1 5317
+D3
+~
+~
+0 -1 5319
+S
+#5319
+Inside a griffons lair~
+    You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 0 1
+D1
+~
+~
+0 -1 5318
+D2
+~
+~
+0 -1 5320
+D3
+~
+~
+0 -1 7040
+S
+#5320
+Griffon Captains Lair~
+    The room is cold and lacking any character at all. No decorative 
+objects. Nothing that would indicate anything of the personality of its 
+occupant. Some weapons and armor litter the floor and walls.
+~
+53 8 0
+D0
+~
+~
+0 -1 5319
+S
+#5321
+Inside a griffon's lair~
+    You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 8 0
+D0
+~
+~
+0 -1 5316
+D1
+~
+~
+0 -1 5322
+S
+#5322
+Inside a griffon's lair~
+   You are now inside a large dark cave, possibly the lair of those terrible
+griffons. You can barely see around the cave in this darkness. A terrible
+stench fills the air and burns your nose. Whatever those griffons are, they
+sure are not clean.
+~
+53 8 0
+D3
+~
+~
+0 -1 5321
+S
+#0
+$~

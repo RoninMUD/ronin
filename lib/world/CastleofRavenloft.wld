@@ -1,0 +1,548 @@
+#11401
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich on the mountaintop.
+The road continues to the south, but you may still turn back, and go east, 
+to the safety of Barovia.
+~
+114 0 2
+D1
+~
+~
+0 -1 11349
+D2
+~
+~
+0 -1 11402
+S
+#11402
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich on the mountaintop.
+The road continues to the north and west.
+~
+114 0 2
+D0
+~
+~
+0 -1 11401
+D3
+~
+~
+0 -1 11403
+S
+#11403
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich on the mountaintop.
+The road continues to the east and west.
+~
+114 0 2
+D1
+~
+~
+0 -1 11402
+D3
+~
+~
+0 -1 11404
+S
+#11404
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich on the mountaintop.
+The road continues to the east and west.
+~
+114 0 2
+D1
+~
+~
+0 -1 11403
+D3
+~
+~
+0 -1 11405
+S
+#11405
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich.
+You are now quite near the top of this mountain and you can see the castle to
+the north. The road continues to the north and east.
+~
+114 0 2
+D0
+~
+~
+0 -1 11406
+D1
+~
+~
+0 -1 11404
+S
+#11406
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich.
+You are now quite near the top of this mountain and you can see the castle to
+the north. The road continues to the north and south.
+~
+114 0 2
+D0
+~
+~
+0 -1 11407
+D2
+~
+~
+0 -1 11405
+S
+#11407
+The Gate of Strahd's castle~
+You stand at the gate of the castle. The gate is open, as always. You hear
+howling and wailing sounds from the castle...maybe you should turn back,
+before it's too late.
+~
+114 0 2
+D0
+~
+gate~
+1 -1 11408
+D2
+~
+~
+0 -1 11406
+S
+#11408
+Courtyard~
+You stand at the front courtyard. Two massive, ornate wooden doors form the
+entrance to the castle. You see debris everywhere this place has rotted
+for centuries.
+~
+114 0 1
+D0
+~
+gate~
+0 -1 11411
+D2
+~
+gate~
+1 -1 11407
+S
+#11411
+The Halls of Weeping~
+Many statues are here, some are broken, limbs are missing, or head has been
+smashed to pieces. They represent the long dead family of Zarovich, among them
+were many Great War heroes, now disgracefully beheaded. This place is cloaked
+with dust and decay.
+~
+114 8 1
+D0
+~
+gate~
+0 -1 11412
+D1
+~
+~
+0 -1 11415
+D2
+~
+~
+0 -1 11408
+D3
+~
+~
+0 -1 11419
+S
+#11412
+A Hallway~
+This hallway leads to the Chapel to the north. The Windows here are broken,
+rubble, dust and decay cloak the floors. You are beginning to feel a little
+depressed here, for this has once been a very beautiful place, now nothing
+more than a ruin.
+~
+114 8 1
+D0
+~
+~
+0 -1 11413
+D2
+~
+~
+0 -1 11411
+S
+#11413
+The Chapel~
+This is the Chapel of the castle. The stained glass windows are broken and
+boarded up. Pews and benches lie in jumbled disarray, and are coated with
+dust. All the wall paintings are almost destroyed, and only little of the
+beauty of them remains.
+~
+114 8 1
+D2
+~
+~
+0 -1 11412
+D3
+~
+~
+0 -1 11414
+S
+#11414
+The Garden~
+This has once been the garden of the castle, now nothing but weed grows here.
+A couple of fallen trees rot in the ground, fungus eating through them.
+~
+114 0 1
+D1
+~
+~
+0 -1 11413
+S
+#11415
+The eastern hallway~
+This is one of the hallways of this castle, cloaked with dust and decay.
+~
+114 8 1
+D1
+~
+~
+0 -1 11416
+D3
+~
+~
+0 -1 11411
+S
+#11416
+The eastern hallway~
+This is one of the hallways of this castle, cloaked with dust and decay.
+~
+114 8 1
+D0
+~
+~
+0 -1 11417
+D3
+~
+~
+0 -1 11415
+D5
+~
+~
+0 -1 11430
+S
+#11417
+The base of the high tower~
+You are standing at the base of the high tower, where Strahd is often looking
+over his domain. The stairs lead to the top of the tower.
+~
+114 8 1
+D2
+~
+~
+0 -1 11416
+D4
+~
+~
+0 -1 11418
+S
+#11418
+The stairs~
+You are on a circular stairs going up to the high tower.
+~
+114 8 1
+D4
+~
+~
+0 -1 11424
+D5
+~
+~
+0 -1 11417
+S
+#11419
+The western hallway~
+This is one of the hallways of this castle, cloaked with dust and decay.
+~
+114 8 1
+D1
+~
+~
+0 -1 11411
+D3
+~
+~
+0 -1 11420
+S
+#11420
+The western hallway~
+This is one of the hallways of this castle, cloaked with dust and decay.
+~
+114 8 1
+D0
+~
+~
+0 -1 11423
+D1
+~
+~
+0 -1 11419
+D3
+~
+~
+0 -1 11421
+S
+#11421
+The western hallway~
+This is one of the hallways of this castle, cloaked with dust and decay.
+~
+114 8 1
+D0
+~
+~
+0 -1 11422
+D1
+~
+~
+0 -1 11420
+S
+#11422
+The Guest's Hall~
+This is the guest's hall of the castle, but here, as in everywhere in this
+ruined castle, debris and dust cloak the floors and furniture. Broken and
+torn paintings are hanging on the walls.
+~
+114 8 1
+D2
+~
+~
+0 -1 11421
+S
+#11423
+The dining hall~
+This is the dining hall of the castle. Broken tables and benches lay here,
+dust and debris everywhere. This hasn't been used in decades.
+~
+114 8 1
+D2
+~
+~
+0 -1 11420
+S
+#11424
+The stairs~
+You are on a circular stairs going up to the high tower.
+~
+114 8 1
+D4
+~
+~
+0 -1 11425
+D5
+~
+~
+0 -1 11418
+S
+#11425
+The stairs~
+You are on a circular stairs near the top of the to the high tower. You can
+imagine Strahd gazing over his lands from this tower.
+~
+114 8 1
+D4
+~
+~
+0 -1 11426
+D5
+~
+~
+0 -1 11424
+S
+#11426
+At the top of the High Tower~
+You are standing at the top of the high tower. You can see over all Barovia
+from this tower, the gypsy camp, the burgomaster's home, the mist, to name
+a few places.
+~
+114 8 1
+D5
+~
+~
+0 -1 11425
+S
+#11430
+The Dungeon~
+This damp, dark place is Strahd's dungeon. Bones are scattered across the
+floors, and you can hear wailing echoing through the hallways...
+You can go north or west. To the east is a door.
+~
+114 9 1
+D0
+~
+~
+0 -1 11431
+D1
+~
+door~
+1 -1 11436
+D3
+~
+~
+0 -1 11432
+D4
+~
+~
+0 -1 11416
+E
+door~
+The door is old and covered in fungus.
+~
+S
+#11431
+The Torture Chamber~
+You are in Strahd's torture chamber, many cruel looking devices hang from
+the walls. You wonder how anyone can be so cruel to use these things on
+humans. The only exit it to the south.
+~
+114 9 1
+D2
+~
+~
+0 -1 11430
+S
+#11432
+A dungeon hallway~
+You are in the dungeon hallway. Bones lay on the floors, and spiders run up
+and down the walls. To the north is a cell, and this hallway continues to
+east and west.
+~
+114 9 1
+D0
+~
+door~
+1 -1 11435
+D1
+~
+door~
+0 -1 11430
+D3
+~
+~
+0 -1 11433
+E
+door~
+The door is old and covered by fungi.
+~
+S
+#11433
+A dungeon hallway~
+You are in the dungeon hallway. Bones lay on the floors, and spiders run up
+and down the walls. To the north is a cell, and this hallway continues to the
+east.
+~
+114 9 1
+D0
+~
+door~
+1 -1 11434
+D1
+~
+door~
+0 -1 11432
+S
+#11434
+A prison cell~
+This is a very small prison cell, barely enough room to lay down. A corpse of
+a late prisoner lay on the floor, it's bones  gnawed on by rats. You'll want to 
+leave this place as soon as possible. Only exit is to the south
+~
+114 9 1
+D2
+~
+door~
+1 -1 11433
+S
+#11435
+A prison cell~
+This is a very small prison cell, barely enough room to lay down. A corpse of
+a late prisoner lay on the floor, it's bones gnawed by rats. You'll want to 
+leave this place as soon as possible. Only exit is to the south
+~
+114 9 1
+D2
+~
+door~
+1 -1 11432
+S
+#11436
+A dungeon hallway~
+You are in the dungeon hallway. Bones lay on the floors, and spiders run up
+and down the walls. To the south is a cell, and this hallway continues to
+east and west.
+~
+114 9 1
+D1
+~
+~
+0 -1 11437
+D2
+~
+~
+0 -1 11438
+D3
+~
+door~
+1 -1 11430
+E
+door~
+The door is old and covered by fungi.
+~
+S
+#11437
+A dungeon hallway~
+You are in the dungeon hallway. Bones lay on the floors, and spiders run up
+and down the walls. To the south is a cell, and this hallway continues to the
+west.
+~
+114 9 1
+D2
+~
+~
+0 -1 11439
+D3
+~
+door~
+0 -1 11436
+E
+door~
+The door is old and covered by fungi.
+~
+S
+#11438
+A cell~
+You are in a cell. A large table is here, and on top of it is a large coffin.
+You wonder why it is here, and what lives in it...
+~
+114 9 1
+D0
+~
+~
+0 -1 11436
+E
+coffin~
+The coffin looks quite ordinary, old but sturdy. You wonder why it is here...
+~
+S
+#11439
+A cell~
+You are in a cell. Two large tables are here, on top of them two coffins.
+It might be a good idea just to leave quietly, or just run away, while you
+still can...
+~
+114 9 1
+D0
+~
+~
+0 -1 11437
+E
+coffin~
+The coffin looks quite ordinary, old but sturdy. You wonder why it is here...
+~
+S
+#0
+$~
+

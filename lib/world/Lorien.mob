@@ -1,0 +1,379 @@
+#11601
+squirrel~
+The squirrel~
+A small squirrel jumps from tree to tree.
+~
+The squirrel freeze his moves as you look at him. He seems to be VERY upset at
+you, you'd better leave quick to avoid getting killed by it.
+~
+140 524288 0 Y
+2 18 10 1d10+20 1d5+1
+100 600
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11602
+guard elven sentry outpost~
+The elven guard~
+The elven guard stands here protecting his forest
+~
+He wouldnt hesitate a second to get a chance defending his forest against
+unwanted visitors. Although tall and slender you realize that he has more
+power than what is shown by just looking at him.
+~
+147466 268435456 500 Y
+15 5 0 1d1+400 3d6+4
+3000 20000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11603
+guardian master~
+Guardian training master~
+The Guardian training master is here waiting eagerly for his trainees to come
+~
+You see a tall and well-built man in his best years. You see by the scares
+that he must have been in many battles. He seems like he's wanting to make
+a fight with you, teaching you his techniques, just by wellmean.
+~
+147466 268697728 500 Y
+28 -6 -4 1d1+2300 3d8+20
+30000 260000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11604
+elven pupil~
+The Elven pupil~
+The Elven fighting pupil is here watching his masters every move.
+~
+The pupil hasn't noticed your appearance yet, his attention is completely
+drawn to his master. Although he is just a pupil he doesn't seem to be
+totally helpless.
+~
+10 262144 1000 Y
+10 10 8 1d1+110 4d4+2
+800 13000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11605
+head craftsman~
+The head of the craftsmen~
+The head of the craftsmen is standing here, carving some wood.
+~
+He looks very confident and concentrated and as you look at him he lifts his
+head and looks at you. By the look at his face he doesnt seem to enjoy being
+disturbed by some barbarian like you.
+~
+16394 262144 1000 Y
+24 -3 1 1d1+1100 2d8+12
+5000 110000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11606
+supervisor elven~
+The Elven supervisor~
+The supervisor of the weaver's glade is here watching the works.
+~
+To be an elf she looks kind of boring and dull.
+~
+16394 0 1000 Y
+24 -3 1 1d1+1100 2d8+8
+5000 110000
+8 8 2
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11607
+sailor elven~
+The Elven sailor~
+The Elven sailor stands here, his nose dipped in some drawings.
+~
+He looks like a peaceful and quiet elf.
+~
+16394 262144 1000 Y
+24 -3 1 1d1+1100 2d8+12
+5000 110000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11608
+elven sewing pupil~
+The Elven sewing pupil~
+The Elven sewing pupil is here sewing frenetically.
+~
+The pupils attention is completely drawn to his works and doesn't notice you.
+~
+138 262144 1000 Y
+10 10 8 1d1+110 4d4+2
+800 13000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11609
+master singer elven~
+The master-singer~
+The master-singer is standing here, practicing his singing.
+~
+He looks as if he has some problems with his throat, harkling and coughing.
+~
+16394 262144 1000 Y
+24 -3 1 1d1+1100 2d8+12
+5000 110000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11610
+keeper forest~
+The keeper of the forest~
+The keeper of the forest stands here talking with some birds.
+~
+He seems to be a man in harmony with nature.
+~
+147466 262144 1000 Y
+26 -4 -3 2d20+1400 3d8+18
+20000 190000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11611
+baker elven~
+The Elven baker~
+The Elven baker is here baking some bread in the open air.
+~
+He has flour all over the body.
+~
+10 0 1000 Y
+24 -3 1 1d1+1100 2d8+12
+40000 110000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11612
+elven mastersmith~
+The Elven mastersmith~
+The Elven mastersmith stands here, forging a sword.
+~
+He is sweating intensely.
+~
+147466 262272 1000 Y
+26 -4 -2 2d20+1300 3d8+16
+20000 180000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11613
+elven gatekeeper~
+The Elven gatekeeper~
+The Elven gatekeeper stands here, hiding in the shadows.
+~
+He looks like he is a gatekeeper worthy his assignment.
+~
+10 1310720 1000 Y
+20 0 0 1d50+650 3d6+7
+2200 70000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11614
+elven veteran~
+The Elven veteran~
+The Elven veteran stands here gossiping.
+~
+He is old even measured in elven age.
+~
+10 268697728 1000 Y
+28 -6 -5 2d50+1800 15d2+4
+10000 260000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11615
+elven youngster~
+an Elven youngster~
+An Elven youngster is here practicing gardening.
+~
+He is dirty all over.
+~
+10 0 1000 Y
+5 15 7 1d10+60 1d10+2
+200 2700
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11616
+elven citizen~
+the elven citizen~
+The Elven citizen is sitting here contemplating.
+~
+He looks very concentrated.
+~
+14 0 1000 Y
+16 4 0 1d40+320 7d3+1
+1500 23000
+6 6 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11617
+elven mystic~
+The Elven mystic~
+The Elven mystic stands here muttering some strange words.
+~
+He looks real mystic :)
+~
+16399 136 1000 Y
+28 -6 -6 2d50+1800 20d2+0
+20000 260000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11618
+royal castle guard elven~
+the royal castle guard~
+The royal castle guard stands here protecting his king and queen.
+~
+He seems to be too proud of what he's doing to even notice you.
+~
+147470 268697728 1000 Y
+26 -4 -5 2d40+1500 4d6+5
+10000 200000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11619
+celeborn king~
+Celeborn~
+Celeborn, the king of Lorien is sitting here on his throne.
+~
+He is completely dressed in white, with hair as shining silver. The time
+doesn't seem to have made any marks on the face, but the eyes are glowing
+like the tip of a lance but never the less with a boundless depth.
+~
+131082 268697736 1000 Y
+32 -10 -7 4d50+5000 20d2+24
+200000 500000
+6 6 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11620
+galadriel queen~
+Galadriel~
+Galadriel is sitting here by Celeborns side.
+~
+She is completely dressed in white. Her hair gleaming as dark gold and
+eyes with an intense, piercing look. She looks very sad and thinking,
+although, or maybe because of it, she looks more beautiful than no other
+creature walking on this planet.
+~
+10 2184 1000 Y
+32 -8 -7 4d50+5000 20d2+16
+100000 500000
+6 6 2
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11621
+elven citizen~
+the elven citizen~
+The Elven citizen is strolling around in the city.
+~
+The Elf's face is split in a wide grin and you cant help smile.
+~
+14 0 1000 Y
+16 4 0 1d40+320 7d3+1
+1500 23000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11622
+elven gardener~
+Celeborn's gardener~
+Celeborn's gardener is standing here, glancing at his works.
+~
+He looks like a jolly old elf, but he is watching you suspiciously as you
+clamps around in his garden.
+~
+10 128 1000 Y
+24 -3 1 1d1+1100 2d8+8
+5000 130000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11623
+white wolf~
+a white wolf~
+The white wolf is standing here, fuming with anger.
+~
+You see a wolf which seems to have gone off his ordinary paths, looking kind
+of angry.
+~
+40 8 -1000 Y
+10 10 5 1d10+110 2d8+1
+0 15000
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11624
+tracker elven~
+The Elven tracker~
+The Elven tracker sneaks around, tracking unwanted creatures in the forest.
+~
+He really doesn't like you being here, but his directives are to let you
+get caught and questioned later, and hopefully even get killed.
+~
+76 524296 1000 Y
+13 7 3 2d10+170 3d6+6
+1000 17000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

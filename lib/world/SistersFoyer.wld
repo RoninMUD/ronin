@@ -1,0 +1,581 @@
+#3700
+A Well Tended Path~
+You are standing on a well tended path which runs north and south.  To the east and west you can 
+see the manor grounds.  You here a loud barking.
+You see a sign which reads BEWARE OF DOGS!
+~
+37 4 0
+D0
+A Well Tended Path
+~
+~
+0 0 3701
+D1
+The Manor Grounds
+~
+~
+0 0 3703
+D2
+The edge of the big forest
+~
+~
+0 0 6001
+D3
+The Manor Grounds
+~
+~
+0 0 3702
+S
+#3701
+A Well Tended Path~
+You are standing on a well tended path.  The path continues north and south
+while to the east you see the servants quarters.
+~
+37 4 0
+D0
+A Well Tended Path
+~
+~
+0 0 3704
+D1
+In Front of Servants Quarters
+~
+~
+0 0 3705
+D2
+A Well Tended Path ~
+~
+0 0 3700
+D3
+The Manor Grounds
+~
+~
+0 0 3707
+S
+#3702
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3707
+D1
+A Well Tended Path
+~
+~
+0 0 3700
+D3
+The Manor Grounds
+~
+~
+0 0 3726
+S
+#3703
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+In Front of the Servant's Quarters
+~
+~
+0 0 3705
+D1
+The Manor Grounds
+~
+~
+0 0 3720
+D3
+A Well Tended Path
+~
+~
+0 0 3700
+S
+#3704
+A Well Tended Path~
+You are standing on a well tended path which runs north and south.  To the east and west you can 
+see the manor grounds.
+~
+37 4 0
+D0
+In Front of the Manor
+~
+~
+0 0 3708
+D1
+The Manor Grounds
+~
+~
+0 0 3710
+D2
+A Well Tended Path
+~
+~
+0 0 3701
+D3
+The Manor Grounds
+~
+~
+0 0 3709
+S
+#3705
+In Front of the Servants Quarters~
+You are standing on a well tended path running east and west.  To the east 
+you see the entrance to a small tidy cottage.
+~
+37 4 0
+D0
+Manor Grounds
+~
+~
+0 0 3710
+D1
+Servant's Kitchen
+~
+~
+0 0 3717
+D2
+Manor Grounds
+~
+~
+0 0 3703
+D3
+A Well Tended Path
+~
+~
+0 0 3701
+S
+#3707
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3709
+D1
+A Well Tended Path
+~
+~
+0 0 3701
+D2
+The Manor Grounds
+~
+~
+0 0 3702
+D3
+The Manor Grounds
+~
+~
+0 0 3725
+S
+#3708
+In Front of the Manor~
+You are standing in front of the summer house of the Mayor's sister. 
+There is a large oak door to your north supported on either side by 
+ornately carved buttresses.  The manor grounds stretch out to the east
+and west.
+~
+37 4 0
+D0
+The Foyer of the Manor
+~
+oak~
+0 0 3713
+D1
+The Manor Grounds
+~
+~
+0 0 3712
+D2
+A Well Tended Path
+~
+~
+0 0 3704
+D3
+The Manor Grounds
+~
+~
+0 0 3711
+S
+#3709
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3711
+D1
+A Well Tended Path
+~
+~
+0 0 3704
+D2
+The Manor Grounds
+~
+~
+0 0 3707
+D3
+The Manor Grounds
+~
+~
+0 0 3724
+S
+#3710
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3712
+D1
+The Manor Grounds
+~
+~
+0 0 3721
+D2
+In Front of the Servant's Quarters
+~
+~
+0 0 3705
+D3
+A Well Tended Path
+~
+~
+0 0 3704
+S
+#3711
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D1
+In Front of the Manor
+~
+~
+0 0 3708
+D2
+The Manor Grounds
+~
+~
+0 0 3709
+D3
+The Manor Grounds
+~
+~
+0 0 3723
+S
+#3712
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D1
+The Manor Grounds
+~
+~
+0 0 3722
+D2
+The Manor Grounds
+~
+~
+0 0 3710
+D3
+In Front of the Manor
+~
+~
+0 0 3708
+S
+#3713
+The Foyer of the Manor~
+You standing inside the foyer of the manor.  You are astounded by the
+brilliant colored tapestries and exotic carpet which speaks at the same
+time of equal measures of wealth and poor taste.  There is an open door 
+east which leads to the living room and another to the west which leads to 
+the sitting room.
+~
+37 0 0
+D1
+The Living Room
+~
+~
+0 0 3714
+D2
+In Front of the Manor
+~
+oak~
+0 0 3708
+D3
+The Sitting Room
+~
+~
+0 0 3715
+S
+#3714
+The Living Room~
+You find yourself in the living room of the manor.  The same garish 
+furnishings you witnessed in the foyer are as much in evidence here.
+There is a stone fireplace blazing merrily and a comfortable if somewhat
+tacky sofa arranged about the room.
+~
+37 4 0
+D3
+The Foyer of the Manor
+~
+~
+0 0 3713
+S
+#3715
+The Sitting Room~
+You have entered the sitting room of the manor.  There is a large window 
+to the south which affords a panoramic view of the manor grounds.  Scattered
+about the room are a large number of cheesy paperback novels.  There is small
+statue of Elvis on the coffee table.  There is a door to the north and an exit to the east.
+~
+37 0 0
+D0
+The Mayor's Sister's Bedroom
+~
+door~
+2 3702 3716
+D1
+The Foyer of the Manor
+~
+~
+0 0 3713
+S
+#3716
+The Mayor's Sister's Bedroom~
+This is the bedroom of the owner of this manor.  The room is dominated by a
+large four poster bed in the center.  The air is stale with smell of cheap
+perfume.  Against the far wall is a makeup table laden with the tools of the
+trade.  On the wall hangs a picture of her brother, the Mayor.
+~
+37 0 0
+D2
+The Sitting Room
+~
+door~
+0 3702 3715
+S
+#3717
+The Servant's Kitchen~
+
+You are standing in the servant's kitchen.  There is a table with settings
+for 15 people.  Evidently the servants are a promiscuous bunch.
+~
+37 0 0
+D0
+The Pantry
+~
+~
+0 0 3718
+D2
+The Common Room
+~
+~
+0 0 3719
+D3
+In Front of the Servant's Quarters
+~
+~
+0 0 3705
+S
+#3718
+The Pantry~
+This is the pantry.  Various food stuffs and canned goods are stacked neatly
+along the walls.
+~
+37 0 0
+D2
+The Servant's Kitchen
+~
+~
+0 0 3717
+S
+#3719
+The Common Room~
+You are standing in the common room.  There are hundreds of toys scattered 
+about the room, many of them broken.  The servant's children must be a 
+rowdy bunch.
+~
+37 0 0
+D0
+The Servant's Kitchen
+~
+~
+0 0 3717
+S
+#3720
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D3
+The Manor Grounds
+~
+~
+0 0 3703
+S
+#3721
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3722
+D3
+The Manor Grounds
+~
+~
+0 0 3710
+S
+#3722
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D2
+The Manor Grounds
+~
+~
+0 0 3721
+D3
+The Manor Grounds
+~
+~
+0 0 3712
+S
+#3723
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D1
+The Manor Grounds
+~
+~
+0 0 3711
+D2
+The Manor Grounds
+~
+~
+0 0 3724
+S
+#3724
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3723
+D1
+The Manor Grounds
+~
+~
+0 0 3709
+D2
+The Manor Grounds
+~
+~
+0 0 3725
+S
+#3725
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3724
+D1
+The Manor Grounds
+~
+~
+0 0 3707
+D2
+The Manor Grounds
+~
+~
+0 0 3726
+S
+#3726
+The Manor Grounds~
+You are standing on the manor grounds.  The manicured lawn is dotted with
+dog-manure... Lots of it!  You don't want to be around when the maker of 
+this excrement returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3725
+D1
+The Manor Grounds
+~
+~
+0 0 3702
+S
+#3799
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+37 576 0
+S
+#0
+$~

@@ -1,0 +1,299 @@
+#17100
+Deep inside a dark forest~
+Walking inside the forest, you notice that in the horizon there are some enormous stones. The stones somehow gets ur eyes to focus on it and makes you wonder what they are for. The trees around here seems to grow to be enormous big
+and the colour on the trees is pink! What evil power could make trees go pink? The road continues north deeper inside the forest.
+~
+171 0 0
+D0
+~
+~
+0 -1 17101
+S
+#17101
+Deep inside a dark forest~
+When looking around, you notice the trees grows closer and closer for how longer you move inside the forest and the trees seems to have changed colour to blue and grey. It seems they future you move inside the forest the less colour these 
+trees seems to get. The stones seems to be humming and as the stones hum you feel like you are moving to them without moving. The road continues deeper inside the forest to the east.
+~
+171 0 0
+D1
+~
+~
+0 -1 17102
+D2
+~
+~
+0 -1 17100
+S
+#17102
+End of the dark forest~
+There are large stones all over the place. Some of the stones seems to to place in some kind of ritual places. The humming seems to have stop as you entered the area, or maybe someone ran away when they noticed you arrived? Behind the stones
+you can see an entrance to a cave, the only problem with the cave is that it is cover with large stones.When taking a closer look at the cave entrance, you notice a small hole. The road stops here and only exit seems to go back west.
+~
+171 0 0
+D3
+~
+~
+0 -1 17101
+D5
+When looking closer on the cave you notice there is a small hole that can fits one person.
+~
+hole~
+9 -1 17103
+E
+cave~
+When looking closer upon the cave, you notice a there is a hole that seems to fit one person.
+~
+S
+#17103
+Entrance of a dark Cave~
+When entering the cave you can see alot of skeletons are lying all over the room. The ground is dirty with mud and alot of food crates are lying around here. In distance you can hear monsters yells in some kind of unknow language.
+It seems like the cave is some how a sanctuary to some kind of creatuers and you have entrance seems to have upset them. The road in the cave goes north and east.
+~
+171 73 0
+D0
+~
+~
+0 -1 17113
+D1
+~
+~
+0 -1 17104
+D4
+~
+wall~
+11 -1 17102
+S
+#17104
+Inside a dirty Cave~
+When looking around in the cavern all you can see is lots of dirt. It seems like there havent been cleaned for lots of years. The floor is covered with 1 feet of mud and the mud cakes around your legs slowing your movement. What kind of 
+creatuers can live in such a mess? One thing are sure they dont seems like to like intruders since there are lying skeltons of humans hanging down from the roof The cave continues to the west.
+~
+171 8 0
+D1
+~
+~
+0 -1 17105
+D3
+~
+~
+0 -1 17103
+S
+#17105
+Inside a dirty Cave~
+When looking around in the cavern all you can see is lots of dirt. It seems like there havent been cleaned for lots of years. The floor is covered with 1 feet of mud and the mud cakes around your legs slowing your movement. What kind of 
+creatuers can live in such a mess? One thing are sure they dont seems like to like intruders since there are lying skeltons of humans hanging down from the roof The cave continues to the east.
+~
+171 8 0
+D1
+~
+~
+0 -1 17106
+D3
+~
+~
+0 -1 17104
+S
+#17106
+Southwest corner of a dirty old Cave~
+A temporary description
+~
+171 8 0
+D0
+~
+~
+0 -1 17107
+D3
+~
+~
+0 -1 17105
+S
+#17107
+River of dirt~
+A temporary description
+~
+171 8 0
+D0
+~
+~
+0 -1 17108
+D2
+~
+~
+0 -1 17106
+S
+#17108
+River of dirt~
+A temporary description
+~
+171 8 0
+D2
+~
+~
+0 -1 17107
+D3
+~
+~
+0 -1 17109
+S
+#17109
+Inside a dirty old cave~
+A temporary description
+~
+171 8 0
+D1
+~
+~
+0 -1 17108
+D3
+~
+~
+0 -1 17110
+S
+#17110
+Split in a dirty old cave~
+A temporary description
+~
+171 8 0
+D0
+~
+~
+0 -1 17114
+D1
+~
+~
+0 -1 17109
+D3
+~
+~
+0 -1 17111
+S
+#17111
+A dirty old cave~
+A temporary description
+~
+171 8 0
+D1
+~
+~
+0 -1 17110
+D3
+~
+~
+0 -1 17112
+S
+#17112
+River of dirt~
+A temporary description
+~
+171 8 0
+D1
+~
+~
+0 -1 17111
+D2
+~
+~
+0 -1 17113
+S
+#17113
+River of dirt~
+A temporary description
+~
+171 8 0
+D0
+~
+~
+0 -1 17112
+D2
+~
+~
+0 -1 17103
+S
+#17114
+Cleaner part of a dirty old cave~
+A temporary description
+~
+171 8 0
+D0
+~
+~
+0 -1 17115
+D2
+~
+~
+0 -1 17110
+S
+#17115
+Cleaner part of a dirty old cave~
+A temporary description
+~
+171 8 0
+D1
+~
+~
+0 -1 17116
+D2
+~
+~
+0 -1 17114
+S
+#17116
+Cleaner part of a dirty old cave~
+A temporary description
+~
+171 8 0
+D0
+~
+~
+0 -1 17117
+D3
+~
+~
+0 -1 17115
+S
+#17117
+Cleaner part of a dirty old cave~
+A temporary description
+~
+171 8 0
+D2
+~
+~
+0 -1 17116
+D3
+~
+~
+0 -1 17118
+S
+#17118
+Cleaner part of a dirty old cave~
+A temporary description
+~
+171 8 0
+D1
+~
+~
+0 -1 17117
+D3
+~
+~
+0 -1 17119
+S
+#17119
+Clean part of a dirty old cave~
+A temporary description
+~
+171 8 0
+D1
+~
+~
+0 -1 17118
+S
+#17199
+A temporary name~
+A temporary description
+~
+171 0 0
+S
+#0
+$~

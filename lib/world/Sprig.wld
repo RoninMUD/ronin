@@ -1,0 +1,62 @@
+#21300
+Fulguri's Orchard~
+ About you is the greenest, most resplendant garden imaginable.
+Fruit-bearing trees of all sorts sway about in the breeze --
+the lawn's expanse meets a veranda before you, a hill of gentle
+slope, and a winding cobblestone path to the north.
+~
+213 0 0
+D0
+~
+window~
+10 -1 21399
+D1
+~
+veranda house~
+0 -1 21399
+D4
+~
+ladder~
+11 -1 21399
+E
+path~
+The cobblestones are perfectly aligned, the grout is sublimely scrubbed. It looks brand new.
+~
+E
+path~
+The cobblestones are perfectly aligned, the grout is sublimely scrubbed. It looks brand new.~
+E
+window~
+3014@
+l
+~
+E
+floor~
+3084~
+E
+veranda~
+Set together without nails or pins, it rests in balanced harmony with the orchard landscape. The veranda is a cozy covered patio set apart from the villa, set with fine stoned oak tables and chairs and diaphanous, linen curtains.
+~
+S
+#21301
+A temporary name~
+A temporary description
+~
+213 0 0
+S
+#21399
+Sprig's Room~
+This is Sprig's room. Now get the hell out of it.
+~
+213 0 0
+D2
+~
+~
+0 -1 21300
+D5
+~
+ladder~
+11 -1 21300
+S
+#0
+$~

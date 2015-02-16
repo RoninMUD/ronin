@@ -1,0 +1,658 @@
+#17300
+frosted bracelet~
+Frosted Bracelet~
+A beautiful crystalline bracelet lies on the ground.~
+~
+11 136314976 4097
+5 0 0 0
+1 100000 1000
+55
+E
+bracelet~
+This beautiful bracelet seems to be made from
+some type of frosted crystal. However, when you
+tap it against the wall it gives off an almost
+metallic ring.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+1 1
+#17303
+crystal key ~
+A beautiful Crystal Key~
+A beautiful pulsing crystal key lies discarded here.~
+~
+18 268959744 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17306
+fiend necklace~
+Fiend's Necklace~
+An amulet bearing an actual Demon's Eye lies here.~
+~
+9 204484672 5
+8 0 0 0
+3 20000 10000
+8
+E
+necklace~
+The stone on this necklace has been precisely cut
+to resemble a demon's eye. As you look at it, the
+eye blinks!!~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+19 1
+B
+1024
+#17307
+war mage bracers~
+Militant Bracers~
+A set of beautiful glowing bracers lies on the ground.~
+~
+9 250638400 257
+5 0 0 0
+4 1000000 50000
+8
+E
+bracers~
+Unlike most sets of bracers, these are not covered
+with the classic runes of protection or spell
+storage. This set of bracers is covered with runes
+commonly found on magical swords.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+B
+16777216
+#17308
+dagger war mage militant~
+War-mage's Dagger~
+An exquisitely crafted dagger is on the ground here.~
+$r Dagger hits $V with a blindingly fast attack.~
+5 250638336 8193
+0 2 7 11
+30 30000 30000
+10
+E
+dagger~
+This dagger has a serrated leaf-shaped blade. Obviously
+this item was made for the express purpose of killing
+an enemy in the most efficient way possible.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 9
+A
+12 -100
+B
+268435456
+#17309
+girdle demon pit fiend skin~
+Fiend's Girdle~
+A girdle of Demon's Hide lies here, forgotten in a corner.~
+~
+9 402653248 2049
+7 0 0 0
+4 50000 5000
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 5
+A
+13 5
+B
+16777216
+#17310
+seal illusions dark ring~
+The Dark Seal of Illusions~
+A seal is lying here discarded, giving off a pale green aura.~
+~
+9 267416150 3
+4 0 0 0
+5 26000 36000
+8
+E
+seal illusions ring dark~
+
+  This ring emanates a pale, evil green glow as it slowly fades in and out
+of existence.  When visible you can see that it is a harbor for lost,
+tormented souls.  The ring is somewhat translucent, other then the souls
+of those less fortunate floating in the green haze.
+
+~
+X
+~
+4 0 0
+M
+You feel an evil wave of power pulsating in your body.~
+$n shudders in agony as an evil wave of power pulsates from $s ring.~
+The Dark Seal of Illusions fades as you remove it.~
+The Dark Seal of Illusions fades as $n removes it.~
+A
+19 3
+A
+18 4
+A
+12 15
+T
+14000
+#17311
+sign crystal~
+A beautiful crystalline sign~
+A beautiful crystalline sign stands by the door.~
+~
+13 0 0
+0 0 0 0
+40 10 10
+100
+E
+sign~
+I am Marcus. I value my privacy and I assume you value your life. If you do,
+leave my tower and my meditations in peace; enter and die.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17316
+key bone knuckle~
+A knuckle bone key~
+A key made from the knuckle bone of a human lies here.~
+~
+18 0 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17321
+cube~
+Cube of Awareness~
+A small black cube of obsidian is lying on the ground.~
+~
+11 320 16385
+0 0 0 0
+10 500000 1000
+50
+E
+cube~
+This smoky black cube looks almost worthless
+at first glance. As you examine it closer, however,
+you notice that you perceive more and the images
+you see are sharper.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+16810024
+#17322
+shield highlord dragon black~
+Dragon Highlord's Shield~
+A beautiful, black shield is lying here, discarded.~
+~
+9 259321860 513
+15 0 0 0
+10 1000000 10000
+10
+E
+shield~
+This shiny black shield is emblazoned with a red dragon's head on the front.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 5
+#17330
+chain leg irons~
+Leg Irons~
+A heavy chain is lying here.~
+~
+9 0 33
+0 0 0 0
+10 10000 1000
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+39 15
+B
+17408
+#17342
+pan frying cast iron~
+A large Frying Pan~
+A large black cast-iron frying pan is lying here.~
+$r Frying Pan wacks $V upside the head with a loud CLANG!~
+5 206582784 8193
+7 6 5 6
+20 1000 1000
+10
+E
+pan~
+This pan is made of thick cast-iron. It seems that
+maybe it would be an effective attention getter, if
+applied properly.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17343
+recipe secret lobster bisque parchment~
+a recipe for lobster bisque~
+A worn piece of parchment with cooking instructions for lobster bisque.~
+~
+32 268959808 1
+17344 23007 27711 17394
+3 131071 131071
+7
+E
+recipe~
+
+ Mmmm, sounds delicious!
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+107
+#17344
+shell homarid giant mithril~
+a mithril-plated Giant Homarid Shell~
+The empty silvery shell left by an enormous molting crustacean.~
+~
+9 265338880 513
+21 -1 -1 -1
+503 9369319 76801
+0
+E
+shell~
+
+ The carapace of an enormous crustacean has been plated
+with mithril, forming a magnificently powerful shield.
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+13 37
+A
+18 4
+A
+52 14
+T
+17659
+#17345
+parchment piece charred~
+a piece of charred parchment~
+A blackened piece of parchment, still warm and crispy.~
+~
+32 268435460 1
+17346 17398 11720 14026
+3 4457 3010349
+7
+E
+parchment~
+
+ Marcus was always fond of the beasts kept in the Crystal
+Tower, but his interests were founded more in magical and
+alchemical origins rather than emotional. The many uses
+for dragon's blood, the strength of dragon-fire wrought
+metal, and the teeth of dragons and pyrolisks all excited
+Marcus' ambition to create.
+ With cunning wizardry Marcus was able to coax the foundry
+knowledge from the smithy Ragar. That font of knowledge
+had only begun to be tapped when Marcus first helped Kiri
+craft The Fang.
+ This parchment is the grand conclusion of all Marcus' work
+to create a truly devastating weapon: a weapon forged from
+mithril, the firey fury of a pyrolisk's fang, and a Flame
+Dragon's tooth.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+117
+#17346
+tooth charred flame dragon~
+Flame Dragon's charred tooth~
+A giant charred tooth lies here, radiating immense heat.~
+The Flame Dragon's tooth chars $V with $r savage strike.~
+5 267441152 8193
+56 7 5 11
+30 1046527 72073
+0
+E
+tooth~
+
+ This weapon, forged from the fang of a Pyrolisk and the
+tooth of a flame dragon, is imbued with the firey rage of
+a volcano. A blistering warmth radiates from the tip of the
+charred tooth yet the wielder is immune to the heat. Not
+since the reign of the old dwarven kings has a blade been
+crafted with such a powerful magic at its heart.
+~
+X
+$r firey tooth glows white hot then cools in an instant.~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+A
+45 7
+T
+22111
+#17371
+dragon horn light sceptre~
+Dragon Horn~
+A glowing, blood-covered, reddish horn is lying on the ground here.~
+~
+1 217069633 65537
+0 0 -1 0
+15 500000 75000
+15
+E
+horn~
+This reddish-hued horn seems to glow with an
+inner light~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+12 10
+#17372
+seal drake ring~
+The Seal of the Drake~
+A polished ring the color of flames was forgotten here.~
+~
+9 265351761 3
+7 0 0 0
+5 17500 22500
+7
+E
+seal drake ring~
+
+  This ring is made of an unknown substance which is said to be hidden
+deep within the earth, near its molten core.  The material glows the
+bright red of flames at all times, though it isn't hot to the touch.
+The only mark on the seal is an engraved emblem on the top, an open,
+staring eye.
+
+~
+X
+None~
+4 0 0
+M
+Your eyes gleam deep scarlet as the seal is placed on your finger.~
+$n's eyes gleam deep scarlet as the seal is placed on $s finger.~
+Your eyes fade as the seal is removed from your finger.~
+$n's eyes fade as the seal is removed from $s finger.~
+A
+19 3
+A
+18 4
+A
+52 15
+T
+14000
+#17393
+scroll parchment~
+A neatly written scroll.~
+A parchment scroll is here.~
+~
+12 0 1
+0 0 0 0
+1 5 1
+100
+E
+scroll~
+There are a couple pages to the scroll, one labelled page1, and the other
+page2.
+~
+E
+page1~
+                                Kiri-Torin, friend and compatriot
+  The enchantment of items is an exacting process, my friend. It is good 
+that you are interested in such an undertaking, but you have no idea what 
+you are getting yourself in to. 
+  First off, the item has to be made of the best material to be found. Since 
+the project you are describing is a weapon of power, you must use the 
+best metal for a weapon. My advice would be either Adamantite or 
+Mithril. These two metals both have the qualities endearing to a blade 
+and both are precious enough to be of aid in the enchantment process.
+  Second, the enchantment process requires a rare item that has the 
+inherent magical properties you are looking for. In this case the tooth of
+either a Red Dragon or a Pyrolisk would be advised. Not any tooth will 
+do, therefore I suggest the Canine tooth of an elder of one of the two 
+species in question.  (continues on page 2)
+~
+E
+page2~
+
+Considering you relationship with one of the possible donors, I assume you will
+be looking for a Pyrolisk in short order.  Lastly, you need a mage to enchant 
+an Item to forge the object into the desired form.  To this end, I am making a 
+hammer as a gift to you and am enclosing the directions on its use, so that a 
+lesser mage can bind the magic to the item in question.  The main part to 
+remember is that once you put the components on the anvil, a mage must use the
+hammer to forge the components together.  This will release the spell I have 
+ingrained into the hammer and the object of you interest will be formed.
+  Also, many valuable items can be joined to form an even more valuable item.
+The only way to be figure out the right combination is by experimentation.
+
+                                                    Signed, Marcus
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17394
+Mithril bar silver metal~
+A bar of silvery mithril.~
+A bar of heavy silvery metal lies here.~
+~
+8 134217728 1
+0 0 0 0
+30 100000 50000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17395
+Tooth dragon~
+A gore covered tooth~
+A bloody tooth lies upon the floor.~
+~
+13 134217728 1
+0 0 0 0
+15 50555 7777
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17396
+hammer silver mithril~
+A mithril hammer~
+A beautiful silvery hammer is lying on the floor.~
+~
+5 134217792 24577
+0 4 6 6
+20 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17397
+anvil~
+Anvil~
+A large Anvil made of Adamantite is here.~
+~
+15 0 0
+0 0 0 0
+30 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17398
+fang sword tooth dragon ~
+The Fang~
+A sword formed in the shape of a large tooth is lying here. ~
+$r Fang leaves charred flesh in its wake.~
+5 135266369 8193
+0 6 5 11
+22 100000 7512
+10
+E
+Fang~
+This beautiful reddish-hued sword is crafted to look like
+an incisor of some carniverous beast.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 5
+#0
+$~

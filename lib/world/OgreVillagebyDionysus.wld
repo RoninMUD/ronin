@@ -1,0 +1,1068 @@
+#21300
+Overlooking an Ogre Village~
+   This perch in the air high above the ogre village offers a wonderful view.
+The ogres can be seen moving around the village, the bugbear in lounging in 
+his cave, the otyugh mount looming, and even in through the windows of the 
+black tower.
+~
+213 0 0
+D0
+~
+~
+0 -1 21351
+D1
+~
+~
+0 -1 21316
+D2
+~
+~
+0 -1 21352
+D3
+~
+~
+0 -1 21327
+D4
+~
+~
+0 -1 21335
+D5
+~
+~
+0 -1 21345
+S
+#21301
+A Dark Wood~
+   The trees here are large and imposing, their dense foliage blocking out
+nearly all light. Echoing through the trees are distant sounds of large
+creatures crashing through the brush, obviously paying no heed to anything
+in their way. Only the occasional birdcall provides respit from the eerie
+feeling in the air. Trees block the way south and west. 
+~
+213 0 3
+D0
+~
+~
+0 -1 21307
+D1
+~
+~
+0 -1 21302
+D3
+~
+~
+0 -1 7043
+S
+#21302
+A Dark Wood~
+   The trees here are large and imposing, their dense foliage blocking out
+nearly all light. Echoing through the trees are distant sounds of large
+creatures crashing through the brush, obviously paying no heed to anything
+in their way. Only the occasional birdcall provides respit from the eerie
+feeling in the air. An enormous fallen log bars any journey southward.
+~
+213 0 3
+D0
+~
+~
+0 -1 21308
+D1
+~
+~
+0 -1 21303
+D3
+~
+~
+0 -1 21301
+S
+#21303
+A Dark Wood~
+   The trees here are large and imposing, their dense foliage blocking out
+nearly all light. Echoing through the trees are distant sounds of large
+creatures crashing through the brush, obviously paying no heed to anything
+in their way. Only the occasional birdcall provides respit from the eerie
+feeling in the air. Thick brush eclipses the possibility of venturing south.
+~
+213 0 3
+D0
+~
+~
+0 -1 21309
+D1
+~
+~
+0 -1 21304
+D3
+~
+~
+0 -1 21302
+S
+#21304
+A Dark Wood~
+   The trees here are large and imposing, their dense foliage blocking out
+nearly all light. Echoing through the trees are distant sounds of large
+creatures crashing through the brush, obviously paying no heed to anything
+in their way. Only the occasional birdcall provides respit from the eerie
+feeling in the air. The foliage south of here is too dense to pass.
+~
+213 0 3
+D0
+~
+~
+0 -1 21310
+D1
+~
+~
+0 -1 21305
+D3
+~
+~
+0 -1 21303
+S
+#21305
+A Thinning Wood~
+   The forest here is much less gothic, with pine and juniper replacing the
+dense oak. Birds flit through the air aimlessly, and bees hum contentedly
+while gathering pollen from the bright flowers which are growing. A small
+stream trickles south into a mass of brambles so thick as to be impassable.
+To the north is a large clearing, and what appears to be a cave mouth.
+~
+213 0 3
+D0
+~
+~
+0 -1 21311
+D3
+~
+~
+0 -1 21304
+S
+#21306
+Before a Large Tree~
+   An enchanting tree reaches up and spreads into an awe-inspiring canopy.
+It seems to possess the leaves of oak, maple, birch, and a thousand other 
+unfamiliar species. The trunk is thick with age, and lined with streaks 
+of silver and gold. It is laden with fruits and nuts of all shapes and 
+sizes, and seems to be trapped in an eternal Spring.  Water trickles from
+between its roots, nourishing the many flowers which grow underneath. This
+appears to be an ideal spot to lay down and rest, to forget the worries of
+the world, and let Nature's sweet embrace sooth a troubled soul.
+~
+213 8192 3
+D0
+~
+~
+0 -1 21312
+E
+tree~
+The most incredibly beautiful tree you can imagine grows here,
+all manner of fruits and nuts dangling from it's branches,
+pungent aromas emenating from its bark.
+~
+S
+#21307
+A Dark Wood~
+   The trees here are large and imposing, their dense foliage blocking out
+nearly all light. Echoing through the trees are distant sounds of large
+creatures crashing through the brush, obviously paying no heed to anything
+in their way. Only the occasional birdcall provides respit from the eerie
+feeling in the air. Two gnarled oaks have grown and twisted together,
+impeding travel to the north or west.
+~
+213 0 3
+D1
+~
+~
+0 -1 21308
+D2
+~
+~
+0 -1 21301
+S
+#21308
+A Dark Wood~
+   The trees here are large and imposing, their dense foliage blocking out
+nearly all light. Echoing through the trees are distant sounds of large
+creatures crashing through the brush, obviously paying no heed to anything
+in their way. Only the occasional birdcall provides respit from the eerie
+feeling in the air. To the north the forest gives way to some sort of
+man-made path, which curves sharply out of sight.
+~
+213 0 3
+D0
+~
+~
+0 -1 21313
+D1
+~
+~
+0 -1 21309
+D2
+~
+~
+0 -1 21302
+D3
+~
+~
+0 -1 21307
+S
+#21309
+A Dark Wood~
+   The trees here are large and imposing, their dense foliage blocking out
+nearly all light. Echoing through the trees are distant sounds of large
+creatures crashing through the brush, obviously paying no heed to anything
+in their way. Only the occasional birdcall provides respit from the eerie
+feeling in the air. Thick brush circuvents travel to the north.
+~
+213 0 3
+D1
+~
+~
+0 -1 21310
+D2
+~
+~
+0 -1 21303
+D3
+~
+~
+0 -1 21308
+S
+#21310
+A Dark Wood~
+   The trees here are large and imposing, their dense foliage blocking out
+nearly all light. Echoing through the trees are distant sounds of large
+creatures crashing through the brush, obviously paying no heed to anything
+in their way. Only the occasional birdcall provides respit from the eerie
+feeling in the air. A deep treacherous ditch halts any venture to the north
+or east.
+~
+213 0 3
+D2
+~
+~
+0 -1 21304
+D3
+~
+~
+0 -1 21309
+S
+#21311
+A Large Clearing~
+   Tall grass covers the ground in this clearing, swaying gently in the
+breeze. Narcissus flowers peek out from the grass, peering down at the
+ground in silent obsession, and yellow buttercups are scattered around,
+lending a yellow hue to the otherwise green scene. To the north is a
+damp cave opening, moss almost obscuring it from view, water dripping
+down steadily to the ground. A cool gust of air emanates from within, 
+carrying a faint bubbling sound. To the east is what appears to
+be a broken down wagon.
+~
+213 0 2
+D0
+~
+~
+0 -1 21316
+D1
+~
+~
+0 -1 21312
+D2
+~
+~
+0 -1 21305
+S
+#21312
+A Broken Wagon~
+   A large, broken down wagon sits in the middle of the meadow here. The 
+axles are broken off, and much of the wood has been smashed. There are 
+what appear to be large bite marks in the wood, and what could be very 
+aged bloodstains up near the front of the wagon. Weeds grow around and
+through the slats, some nearly as big as bushes, making it apparent that 
+this wagon was left here long, long ago.
+~
+213 0 1
+D2
+~
+~
+0 -1 21306
+D3
+~
+~
+0 -1 21311
+S
+#21313
+A Path Into a Village~
+  This path of tramped down dirt leads into a dilapidated village.  
+There are no living animals on the path, though there are small piles 
+of bones littering the ground. There are clearly recognizable skeletons
+of squirrels and wolves and deer, and there are also some larger piles 
+of unfamiliar bones. Occasionally there is a human skull mixed in 
+with the animal bones, raising the disconcerting question of whether 
+the inhabitants of these islands view the humans as friend or food.
+~
+213 4 0
+D1
+~
+~
+0 -1 21314
+D2
+~
+~
+0 -1 21308
+S
+#21314
+A Path Through a Village~
+   This path of tramped down dirt passes through a ruined village.  
+There are no living animals on the path, though there are small piles 
+of bones littering the ground. There are clearly recognizable skeletons
+of squirrels and wolves and deer, and there are also some larger piles 
+of unfamiliar bones. Occasionally a large roar echoes from somewhere 
+in the distance, followed immediately by raucous laughter. To the east
+is what at one time was probably a hut, but now is little more than a 
+collection of support beams and thatch fallen in on themselves. To the
+north the path continues through the village.
+~
+213 0 0
+D0
+~
+~
+0 -1 21319
+D1
+~
+~
+0 -1 21315
+D3
+~
+~
+0 -1 21313
+S
+#21315
+A Collapsed Hut~
+   Once this was probably a reasonable dwelling for a sentient creature,
+but now it could hardly keep the rain out in a storm. The support beams
+have fallen in, either from time or some force knocking them down. The
+thatch is rotting, and mostly littering the floor. Heaps of bones and
+scat are strewn about, in some cases spattering the wall where they were
+obviously thrown. The stench is nearly unbearable, and the slight breeze
+of fresh air from the west is extremely welcome.
+~
+213 0 0
+D3
+~
+~
+0 -1 21314
+S
+#21316
+A Damp Cave~
+   Water drips from the walls in this cave, causing an eerie echo.  The
+air is so moist it almost feels as if the cave is underwater, making it
+difficult to breathe. Strange drawings cover the walls, done in the deep
+umbers and blue-greys of clay. They seem to depict a race of giants,
+being herded off by spear-carrying smaller men--perhaps humans or elves.
+The drawings cut off in what appears to be the middle of the story, with
+the giants being sealed in a valley by what best resembles a powerful 
+wizard.
+~
+213 0 0
+D2
+~
+~
+0 -1 21311
+S
+#21317
+An Overgrown Path~
+   Thick brambles and dense walls of ivy have choked this path nearly 
+out of existence. Nonetheless, it is still recognizable, and broken 
+branches and uprooted blackberry bushes seem to indicate that someone
+has passed this way in the not so distant past. An occasional rusted
+blade or piece of broken pottery litters the ground, dropped there by
+some unknown creature.
+~
+213 0 0
+D0
+~
+~
+0 -1 21322
+D1
+~
+~
+0 -1 21318
+S
+#21318
+An Overgrown Path~
+   Thick brambles and dense walls of ivy have choked this path nearly 
+out of existence. Nonetheless, it is still recognizable, and broken 
+branches and uprooted blackberry bushes seem to indicate that someone
+has passed this way in the not so distant past. An occasional rusted
+blade or piece of broken pottery litters the ground, dropped there by
+some unknown creature. Directly to the north is a large meadow, also 
+choked with bushes and plants.
+~
+213 0 0
+D0
+~
+~
+0 -1 21323
+D3
+~
+~
+0 -1 21317
+S
+#21319
+A Dirt Path~
+   This path of tramped down dirt, passes through a ruined village. 
+The sounds of fighting and screaming and laughing seem to come from 
+all around, giving the impression that the inhabitants of this 
+village have a very different idea of fun than conventional human
+societies do. The path continues to the east, and far off in the 
+distance to the north, the looming shape of a large black tower is
+barely visible.
+~
+213 0 0
+D1
+~
+~
+0 -1 21320
+D2
+~
+~
+0 -1 21314
+S
+#21320
+A Dirt Path~
+   This path of tramped down dirt, passes through a ruined village. 
+The sounds of fighting and screaming and laughing seem to come from 
+all around, giving the impression that the inhabitants of this 
+village have a very different idea of fun than conventional human
+societies do. The path continues to the north through the village, 
+and directly to the east is a small hut, worn with age, but still 
+standing.
+~
+213 0 0
+D0
+~
+~
+0 -1 21325
+D1
+~
+~
+0 -1 21321
+D3
+~
+~
+0 -1 21319
+S
+#21321
+An Old Hut~
+   This hut is old, but certainly still livable. Attempts appear 
+to have been made to repair the roof where it was caving in, and 
+it would probably stand up to a small sized storm. A small fire
+pit sits smoldering in the center of the room, and the air is 
+slightly smoky.
+~
+213 0 0
+D3
+~
+~
+0 -1 21320
+S
+#21322
+An Overgrown Path~
+   Thick brambles and dense walls of ivy have choked this path nearly 
+out of existance. Nonetheless, it is still recognizable, and broken 
+branches and uprooted blackberry bushes seem to indicate that someone 
+has passed this way in the not so distant past. An occasional rusted
+blade or piece of broken pottery litters the ground, dropped there by
+some unknown creature. Directly to the north is an enormous heap of 
+garbage, and the scent carried on the wind is nearly unbearable.
+~
+213 0 0
+D0
+~
+~
+0 -1 21327
+D2
+~
+~
+0 -1 21317
+S
+#21323
+An Overgrown Meadow~
+   At one point, perhaps this was an idyllic meadow, but that was 
+obviously long ago. The fountain in the center of the meadow is 
+covered in vines and algae, and dead bugs are caked to the cracking 
+stone. The stone path appears to have been actively destroyed, and 
+chunks of granite have been thrown into the various statuary, 
+eradicating any recognizable features that may once have graced the
+beautiful white marble.  An overgrown path seems to lead out of the
+meadow to the south.
+~
+213 0 0
+D1
+A door hangs precarious on its hinges.
+~
+door~
+1 -1 21324
+D2
+~
+~
+0 -1 21318
+S
+#21324
+An Old Hut~
+   This hut is old, but certainly still livable. Attempts appear to have
+been made to repair the roof where it was caving in, and it would probably
+stand up to a small sized storm. A small fire pit sits smoldering in the
+center of the room, and the air is slightly smoky. A small door has been
+ripped off of its hinges and wedged in the doorway to the west.
+~
+213 0 0
+D1
+~
+~
+0 -1 21325
+D3
+A door hangs precariously on its hinges.
+~
+door~
+1 -1 21323
+S
+#21325
+A Dirt Path~
+   This path of tramped down dirt, passes through a ruined village. 
+The sounds of fighting and screaming and laughing seem to come from 
+all around, giving the impression that the inhabitants of this 
+village have a very different idea of fun than conventional human
+societies do. Directly to the east and west are old huts, almost 
+identical in build and in the stages of ruin they are going through.
+The path continues to the north through the village, and a large 
+black tower is beginning to be very visible, jutting up from a 
+small hillock.
+~
+213 0 0
+D0
+~
+~
+0 -1 21329
+D1
+~
+~
+0 -1 21326
+D2
+~
+~
+0 -1 21320
+D3
+~
+~
+0 -1 21324
+S
+#21326
+An Old Hut~
+   This hut is old, but certainly still livable.  Attempts appear to have
+been made to repair the roof where it was caving in, and it would probably
+stand up to a small sized storm. A cold fire pit sits in the center of
+the room, and bits of cracked bone, the marrow long since sucked out of
+them, litter the edges.
+~
+213 0 0
+D3
+~
+~
+0 -1 21325
+S
+#21327
+A Mound of Rubbish~
+   An enormous, foul-smelling heap of rubbish has formed here.  Years of
+the ogres' waste and refuse must have been carted here once it got too
+bad for even them to have in the village. Now it seems to have almost
+become alive, and for a moment it appears to be breathing in and out 
+slowly. The stench though, is so overwhelmingly foul that it's 
+difficult to see accurately. 
+~
+213 0 0
+D0
+The rubbish is thick here, but you think you could crawl through it.
+~
+rubbish~
+9 -1 21332
+D2
+~
+~
+0 -1 21322
+S
+#21328
+An Old Hut~
+   This hut is old, but certainly still livable.  Attempts appear to have
+been made to repair the roof where it was caving in, and it would probably
+stand up to a small sized storm. A skeleton, obviously that of a human
+child, sits in one corner, propped up and with bits of clothing stuck
+haphazardly to it and a small china teacup hooked over one of the finger
+bones.
+~
+213 0 0
+D1
+~
+~
+0 -1 21329
+E
+skeleton child~
+This is truly a gruesome sight.  Obviously some sort of doll
+for an Ogre child to toy with.  You can only imagine the
+hideous tea parties they must have...
+~
+S
+#21329
+A Dirt Path~
+   This path of tramped down dirt, passes through a ruined village. 
+The sounds of fighting and screaming and laughing seem to come from 
+all around, giving the impression that the inhabitants of this 
+village have a very different idea of fun than conventional human
+societies do. To the east is a large, open-air hut, and to the west
+is an older, personal living hut. The path continues further north,
+seemingly away from the glistening black tower.
+~
+213 0 0
+D0
+~
+~
+0 -1 21333
+D1
+~
+~
+0 -1 21330
+D2
+~
+~
+0 -1 21325
+D3
+~
+~
+0 -1 21328
+S
+#21330
+A Common Hut~
+   This is less of a hut, and more of an awning covering a communal
+space. Various crude pots and savage attempts at artistic expression 
+are strewn about, as well as hides stretched out to tan. From the 
+size and looks of this place, it seems probable that it is the 
+central gathering spot for the tribe that lives in this village. 
+To the east is an enormous cooking pit, and to the west is the dirt
+path through the village.
+~
+213 0 0
+D1
+~
+~
+0 -1 21331
+D3
+~
+~
+0 -1 21329
+S
+#21331
+A Cooking Pit~
+   This pit is about three feet deep, and filled with dying embers. It
+is easy to avoid being burned, unless of course you are one of the dead
+carcusses being spitted above for roasting. Wild zartugs, deer and 
+bandersnatches are roughly speared on long pointed sticks, their blood
+dripping down softly on to the coals.
+~
+213 8196 0
+D3
+~
+~
+0 -1 21330
+S
+#21332
+Within a Mound of Rubbish~
+   Inside, the smell is so bad that all other senses are drowned out.
+Decaying corpses, feces and vegetation combine to produce the ripest of
+smells, and the air is both hot and thick with the various gasses being
+formed. Strangely, there also seem to be some large statuary, similar
+to those in the clearing, standing in odd positions throughout this
+carved out space within the mound.
+~
+213 0 0
+D2
+The rubbish is thick here, but you think you could crawl through it.
+~
+rubbish~
+9 -1 21327
+S
+#21333
+A Dirt Path~
+   This path of tramped down dirt, passes through a ruined village. 
+The sounds of fighting and screaming and laughing seem to come from 
+all around, giving the impression that the inhabitants of this 
+village have a very different idea of fun than conventional human
+societies do. To the east is a lavish hut, the first in the village so
+far to show fine craftsmanship of any sort. To the north, the path
+leaves the village entirely, heading through dense thicket.
+~
+213 0 0
+D0
+~
+~
+0 -1 21337
+D1
+~
+~
+0 -1 21334
+D2
+~
+~
+0 -1 21329
+S
+#21334
+The Chief's Hut~
+   This hut is finely crafted from gark, the silvery grain betraying its
+great worth. The roof appears to be a continuous, thick fiber, though
+you cannot imagine what tree would produce such a leaf. An iron stove
+sits against one wall, happily generating heat. It would appear that
+whoever dwells in this hut has a much higher standard of living than
+do the rest of the villagers.
+~
+213 0 0
+D1
+~
+~
+0 -1 21335
+D3
+~
+~
+0 -1 21333
+S
+#21335
+The Chief's Hut~
+   This hut is finely crafted from gark, the silvery grain betraying its
+great worth. The roof appears to be a continuous, thick fiber, though
+you cannot imagine what tree would produce such a leaf. A large dresser 
+sits against one wall, with an old battered brass mirror on it. There 
+is also a plush bed, made from the down of some enormous bird. This
+could be quite a nice place to take a nap. To the north is a small
+garden, and to the west is the entrance to the hut.
+~
+213 0 0
+D0
+~
+~
+0 -1 21339
+D3
+~
+~
+0 -1 21334
+S
+#21336
+A Bloody Pen~
+   This entire room seems to be one large pen. The walls are thick
+and unbroken, though covered with deep scratch marks. Whatever
+made those marks had to have claws strong enough to penetrate solid
+stone--a thought which brings little comfort. Everything seems to
+be covered in heavy blood, ranging all across the color spectrum,
+from deep crimson to light green to an almost irridescent cyan.
+~
+213 0 0
+D0
+~
+door~
+1 -1 21340
+S
+#21337
+A Dirt Path~
+   This path of tramped down dirt, passes through a ruined village. 
+The sounds of fighting and screaming and laughing seem to come from 
+all around, giving the impression that the inhabitants of this 
+village have a very different idea of fun than conventional human
+societies do. To the east a large tree has fallen, almost barring the
+path completely. To the south is the village, looking even more 
+broken down from this angle.
+~
+213 0 0
+D1
+~
+~
+0 -1 21338
+D2
+~
+~
+0 -1 21333
+S
+#21338
+A Fallen Tree~
+   A large tree has been felled here, blocking off the path almost
+entirely. The wood is rotting and strange bugs flit in and out of
+small holes pockmarking its surface. The wind rustles strangely 
+through the leaves, making a sound much like that of bones scraping
+against each other. The path continues beyond the tree to the north, 
+towards an enormous, jet-black tower.  
+~
+213 0 0
+D0
+~
+~
+0 -1 21343
+D3
+~
+~
+0 -1 21337
+S
+#21339
+Behind the Chief's Hut~
+   A fine vegetable garden has been planted here, with all manner of
+leeks, climbing beans, lettuces, tomatoes, and many other foods 
+growing heartily. It is hard to imagine the inhabitants of this 
+village eating--much less upkeeping--such food crops.
+~
+213 0 0
+D2
+~
+~
+0 -1 21335
+S
+#21340
+In a Stairwell~
+   This wide twisting staircase is directly in the center of the onyx
+citadel. To ascend these stairs, one must walk with her right arm facing
+in towards the wall, a position which would clearly give an advantage
+this would yield a defender if they were to engage from above in melee
+combat. Then again, it appears the denizens of this tower have little
+interest in melee combat.
+~
+213 0 0
+D1
+~
+~
+0 -1 21341
+D2
+~
+door~
+6 21303 21336
+D4
+~
+~
+0 -1 21344
+S
+#21341
+Entrance to the Onyx Citadel~
+   Here lies the entry chamber to the dreaded Onyx Citadel. Home of dark
+magic, birthplace for many of the most hideous spells and incantations
+known to the field of wizardry. The walls shine with an almost malignant
+black gleam, seeming to dare you to wander down the twisting corridor to
+your east.
+~
+213 0 0
+D1
+A heavy steel door bars the way back to freedom.
+~
+door~
+2 21304 21342
+D3
+~
+~
+0 -1 21340
+S
+#21342
+Before an Onyx Citadel~
+   An awe-inspiring citidel stands to the west, carved out of what
+appears to be a single, unbroken piece of onyx. Light seems to vanish
+into the tower, absorbed by the sheer blackness it exudes. This is not
+the sort of tower that makes one feel happy and joyful about life, it
+is more the sort of tower that makes one feel like they need to change
+their codpiece and get home to a nice bath and maybe some warm cookies.
+Oh well.
+~
+213 0 0
+D1
+~
+~
+0 -1 21343
+D3
+A heavy steel door bars the way here.
+~
+door~
+2 21304 21341
+S
+#21343
+On a Dirt Path~
+   This dirt path leads out of the village and through an incredibly
+dense thicket. To the south a large tree has fallen and barred the path,
+and to the west an enormous black tower pierces the sky magnificently.
+~
+213 0 0
+D2
+~
+~
+0 -1 21338
+D3
+~
+~
+0 -1 21342
+S
+#21344
+Twisting Stairwell~
+   This wide twisting staircase is directly in the center of the onyx
+citadel. To ascend these stairs, one must walk with her right arm facing
+in towards the wall, a position which would clearly give an advantage
+this would yield a defender if they were to engage from above in melee
+combat. Then again, it appears the denizens of this tower have little
+interest in melee combat. The staircase spirals up, reaching closer to
+its apex.
+~
+213 0 0
+D1
+~
+door~
+5 21303 21345
+D2
+~
+door~
+3 21303 21346
+D4
+~
+~
+0 -1 21347
+D5
+~
+~
+0 -1 21340
+S
+#21345
+A Cage~
+   This entire room has been converted into a large cage. Metal bars
+cover the walls and floor, reinforcing the onyx itself. The room is 
+bare, with no sleeping surfaces, no furniture, nothing but hard metal
+bars. It certainly doesn't seem like the nicest of dwellings.
+~
+213 0 0
+D3
+~
+door~
+1 11903 21344
+S
+#21346
+A Cage~
+   This entire room has been converted into a large cage. Metal bars
+cover the walls and floor, reinforcing the onyx itself. The room is 
+bare, with no sleeping surfaces, no furniture, nothing but hard metal
+bars. It certainly doesn't seem like the nicest of dwellings. A single
+exit leads north into a spiraling black staircase.
+~
+213 0 0
+D0
+~
+door~
+1 11903 21344
+S
+#21347
+Twisting Stairwell~
+   This wide twisting staircase is directly in the center of the onyx
+citadel. To ascend these stairs, one must walk with her right arm facing
+in towards the wall, a position which would clearly give an advantage
+this would yield a defender if they were to engage from above in melee
+combat. Then again, it appears the denizens of this tower have little
+interest in melee combat. The top of the staircase is now visible just
+above here.
+~
+213 0 0
+D1
+~
+door~
+1 -1 21348
+D2
+~
+door~
+1 -1 21349
+D4
+~
+~
+0 -1 21350
+D5
+~
+~
+0 -1 21344
+S
+#21348
+A Library~
+   The walls in this room are lined with books. Book after book, with
+cryptic titles in languages both known and unfamilar. Some are bound in
+paper, some papyrus, some dried human flesh. Some are long and thick,
+some small and skinny, others are simply rolled scrolls, bound with a
+crimson ribbon. It would be easy to get lost within this vast 
+repository of knowledge, spending years just trying to sort through the
+many titles.
+~
+213 0 0
+D3
+~
+door~
+1 -1 21347
+S
+#21349
+A Study~
+   This large room consists of nothing more than a gigantic oaken 
+table, with a few large scrolls held open on its surface by some 
+mysterious force. A fireplace sits unlit against one wall, and a
+bear rug sits on the floor, warming your feet.
+~
+213 0 0
+D0
+~
+door~
+1 -1 21347
+S
+#21350
+Top of the Twisting Stairwell~
+   This wide twisting staircase is directly in the center of the onyx
+citadel. To ascend these stairs, one must walk with her right arm facing
+in towards the wall, a position which would clearly give an advantage
+this would yield a defender if they were to engage from above in melee
+combat. Then again, it appears the denizens of this tower have little
+interest in melee combat. The staircase reaches it's top here, and two
+daunting onyx doors lead to the east and south.
+~
+213 0 0
+D1
+~
+door~
+1 -1 21351
+D2
+~
+door~
+2 21302 21352
+D5
+~
+~
+0 -1 21347
+S
+#21351
+A Tidy Workshop~
+   This workshop has the remarkable quality of not looking as though a
+hurricane had recently made its way through. Everything is neatly 
+organized and catalogued, with tiny little runic inscriptions 
+describing each vial, book or scrap of parchment. It  seems as though
+within this tiny room lie all the spell components necessary to cast
+any spell any mage could possibly need.  Quite surprising.
+~
+213 0 0
+D3
+~
+door~
+1 -1 21350
+S
+#21352
+A Bloody Pentagram~
+   A large pentagram has been carved in the onyx here, and is forming
+a channel for a virtual flood of blood, deep and red, to flow in this
+strange pattern throughout the room. A sulfurious smoke fills the
+air, making it difficult to breathe.
+~
+213 0 0
+D0
+~
+door~
+2 21302 21350
+S
+#0
+$~

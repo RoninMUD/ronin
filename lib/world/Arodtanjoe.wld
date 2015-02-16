@@ -1,0 +1,2007 @@
+#14200
+A dense path through the Ven Forest~
+    A dark, scary forest surrounds you on all sides.  Very few rays of light
+break through the dense foliage of the canopy. There are hardly any sounds.
+No animals can be seen or heard.  No birds sing in the canopy.   Something
+either has them very scared, or it is your presence they are worried about.  
+The trees have seemingly closed behind you, making the return path, not
+an option.
+~
+142 1 3
+D1
+~
+~
+0 -1 14237
+S
+#14201
+An alcove off the trail~
+  You enter a small alcove off to the side of the main trail.  A large rock
+ledge lies to the west.  The forest floor beneath your feet is covered
+with soft, plush grass and flowers spring out in random places.  The sky 
+is clear and a nice warm breeze blows through the forest.  The smell of 
+fresh flowers and grass is a nice change.  The air is clean and pure.
+~
+142 0 3
+D1
+~
+~
+0 -1 14202
+D3
+A large ledge with warn handholds
+~
+ledge~
+11 -1 14258
+S
+#14202
+A path through the Ven Forest~
+  A tranquil forest surrounds you.  There is a sweet aroma emanating from 
+the maple trees surrounding the path.  A slight breeze wafts in and blows 
+through your hair.  Birds sing a soft tune, as critters scamper on the path 
+in front of you.  The dirt path is visible, but grass and flowers cover patches 
+of the ground.  The path is not very worn, as large rocks can be seen every now 
+and then.
+~
+142 0 3
+D0
+~
+~
+0 -1 14200
+D2
+~
+~
+0 -1 14203
+D3
+~
+~
+0 -1 14201
+S
+#14203
+A path through the Ven Forest.~
+  A tranquil forest surrounds you.  There is a sweet aroma emanating from 
+the maple trees surrounding the path.  A slight breeze wafts in and blows 
+through your hair.  Birds sing a soft tune, as critters scamper on the path 
+in front of you.  The dirt path is visible, but grass and flowers cover patches 
+of the ground.  The path is not very worn, as large rocks can be seen every now 
+and then.
+~
+142 0 3
+D0
+~
+~
+0 -1 14202
+D2
+~
+~
+0 -1 14204
+S
+#14204
+A path through the Ven Forest.~
+  A tranquil forest surrounds you.  There is a sweet aroma emanating from 
+the maple trees surrounding the path.  A slight breeze wafts in and blows 
+through your hair.  To the north lies more of the Ven Forest.  To the west 
+lies the Town of Hartland.
+~
+142 0 3
+D0
+~
+~
+0 -1 14203
+D1
+~
+~
+0 -1 14205
+D3
+~
+~
+0 -1 14212
+S
+#14205
+A path through the Ven Forest.~
+  A tranquil forest surrounds you.  There is a sweet aroma emanating from 
+the maple trees surrounding the path.  A slight breeze wafts in and blows 
+through your hair.  Birds sing a soft tune, as critters scamper on the path 
+in front of you.  The dirt path is visible, but grass and flowers cover patches 
+of the ground.  The path is not very worn, as large rocks can be seen every now 
+and then.
+~
+142 0 3
+D1
+~
+~
+0 -1 14206
+D3
+~
+~
+0 -1 14204
+S
+#14206
+A path through the Ven Forest~
+  A tranquil forest surrounds you.  There is a sweet aroma emanating from 
+the maple trees surrounding the path.  A slight breeze wafts in and blows 
+through your hair.  Birds sing a soft tune, as critters scamper on the path 
+in front of you.  The dirt path is visible, but grass and flowers cover patches 
+of the ground.  The path is not very worn, as large rocks can be seen every now 
+and then.
+~
+142 0 3
+D1
+~
+~
+0 -1 14209
+D3
+~
+~
+0 -1 14205
+S
+#14207
+Almost at the Boundary~
+   The field is entirely gone.  All around you is just dirt.  No life grows
+this close to the boundary.  The wall of energy is getting closer now. Even
+from a distance, you can see strange things moving around, within its walls.
+~
+142 0 3
+D0
+~
+~
+0 -1 14211
+D1
+~
+~
+0 -1 14208
+S
+#14208
+The Boundary~
+  A giant wall of ethereal magic stands to the east.   It is taller
+then you can see.   The wall is not of this world, but a part of the
+underworld called into this world.  It protects the Westland from 
+the D'haran Empire and Midlands and the magic.
+~
+142 0 3
+D3
+~
+~
+0 -1 14207
+S
+#14209
+Approaching the Boundary~
+  A few spare trees line the trail.  No animals can be seen and no sounds can 
+be heard. Large boulders and tree trunks lay strewn accross the path.  
+Smaller rocks protude up from the dirt path.  The tall grass looks ominous,
+and hopefully there is nothing to be afraid of. Far off to the east, you 
+can see a large wall of energy rising up into the sky. A sign posted by 
+the Boundary Wardens says "Turn Back"
+~
+142 0 3
+D0
+~
+~
+0 -1 14210
+D3
+~
+~
+0 -1 14206
+S
+#14210
+Approaching the Boundary~
+  A few spare trees line the trail.  No animals can be seen and no sounds can 
+be heard. Large boulders and tree trunks lay strewn accross the path.  
+Smaller rocks protude up from the dirt path.  The tall grass looks ominous,
+and hopefully there is nothing to be afraid of. Far off to the east, you 
+can see a large wall of energy rising up into the sky. A sign posted by 
+the Boundary Wardens says "Turn Back"
+~
+142 0 3
+D1
+~
+~
+0 -1 14211
+D2
+~
+~
+0 -1 14209
+S
+#14211
+Approaching the Boundary~
+  A few sparse trees are spread few and far between.  All that grows along the 
+path now is small patches of grass. Everything to the east is slowly becoming 
+more and more devoid of life. In the distance, you see the giant wall of 
+ethereal energy rising up from the ground.  The path is cluttered with rocks 
+and tree limbs.  Huge claw marks can be seen in a few of the limbs lying on 
+the path.  A broken sign lies on the ground.  All you can make out is "run".
+~
+142 0 3
+D2
+~
+~
+0 -1 14207
+D3
+~
+~
+0 -1 14210
+S
+#14212
+Path to Hartland~
+  A very nice and well kept path leads to the south. Along the trail, signs
+have been posted to show the way to the Town of Hartland.  The trail is very 
+traveled and no major obstacles lie in your path.  There is a nice breeze 
+blowing in from the west.  The clean, fresh air and the wonderous sounds of 
+the forest, truly make the forest seem alive.
+~
+142 0 3
+D1
+~
+~
+0 -1 14204
+D2
+~
+~
+0 -1 14213
+S
+#14213
+Path to Hartland~
+  A very nice and well kept path leads to the south. Along the trail, signs
+have been posted to show the way to the Town of Hartland.  The trail is very 
+traveled and no major obstacles lie in your path.  There is a nice breeze 
+blowing in from the west.  The clean, fresh air and the wonderous sounds of 
+the forest, truly make the forest seem alive.
+~
+142 0 3
+D0
+~
+~
+0 -1 14212
+D2
+~
+~
+0 -1 14214
+S
+#14214
+Approaching the Gate to Hartland~
+  You see smoke billowing in the distance.  THe forest has become to thin out.
+More sunlight begins to illuminate the path, and you can see the clear blue 
+sky through the canopy.  Birds can be seen flying high in the sky.  The dirt 
+path beneath you seems very well traveled.  Only a handful of small rocks 
+litters your path.
+~
+142 0 3
+D0
+~
+~
+0 -1 14213
+D3
+~
+~
+0 -1 14215
+S
+#14215
+The Gate to Hartland~
+  The dirt path you have been following abruptly ends at a massive gate.
+A burly old gatekeeper stands watch.  He eyes you suspiciously.  Above 
+the gate you see a sign which says "Town of Hartland".  From beyond the 
+gate, you hear the laughter of small children and can hear a town that 
+is awake and alive.
+~
+142 0 1
+D0
+In front of you stands a giant, wood gate protecting the 
+the town from the dangers beyond.
+~
+gate~
+1 14204 14216
+D1
+~
+~
+0 -1 14214
+S
+#14216
+Town of Hartland~
+  Off the sides of the road, you see small houses where the townsfolk live. They
+are doing laundry, making food, or simply walking around the town, enjoying the
+day.  Kids run and play, ducking and weaving through the crowd.  It is a lively 
+place. The well layed stone path beneath your feet looks very intricate and very
+thought out.  The grounds around each house are well taken care.  The smell of
+fresh laundry drifts through the air.
+~
+142 4 1
+D0
+~
+~
+0 -1 14217
+D2
+A large, wooden gate bars your path.
+~
+gate~
+1 14204 14215
+S
+#14217
+Town of Hartland~
+  Off the sides of the road, you see small houses where the townsfolk live. They
+are doing laundry, making food, or simply walking around the town, enjoying the
+day.  Kids run and play, ducking and weaving through the crowd.  It is a lively 
+place. The well layed stone path beneath your feet looks very intricate and very
+thought out.  The grounds around each house are well taken care.  The smell of
+fresh laundry drifts through the air.
+~
+142 0 1
+D0
+~
+~
+0 -1 14218
+D1
+~
+~
+0 -1 14222
+D2
+~
+~
+0 -1 14216
+S
+#14218
+Town Square~
+  The town square is a very busy place.  People are going to and frow.
+Shopkeepers are selling their merchandise to the townsfolk.  Some greet
+you warmly, while some eye you with suspicions.  They dont trust those
+they haven't seen before.
+~
+142 0 1
+D0
+~
+~
+0 -1 14219
+D1
+~
+~
+0 -1 14221
+D2
+~
+~
+0 -1 14217
+D3
+~
+~
+0 -1 14224
+S
+#14219
+Town of Hartland~
+  To the north you see a sign saying "General Store".  Perhaps you should
+go there are browse the wares so you are better prepared for your journey.
+~
+142 0 1
+D0
+~
+~
+0 -1 14235
+D1
+~
+~
+0 -1 14220
+D2
+~
+~
+0 -1 14218
+D3
+~
+~
+0 -1 14223
+S
+#14220
+Town of Hartland~
+  Off the sides of the road, you see small houses where the townsfolk live. They
+are doing laundry, making food, or simply walking around the town, enjoying the
+day.  Kids run and play, ducking and weaving through the crowd.  It is a lively 
+place. The well layed stone path beneath your feet looks very intricate and very
+thought out.  The grounds around each house are well taken care.  The smell of
+fresh laundry drifts through the air.
+~
+142 0 1
+D2
+~
+~
+0 -1 14221
+D3
+~
+~
+0 -1 14219
+S
+#14221
+Town of Hartland~
+  Off the sides of the road, you see small houses where the townsfolk live. They
+are doing laundry, making food, or simply walking around the town, enjoying the
+day.  Kids run and play, ducking and weaving through the crowd.  It is a lively 
+place. The well layed stone path beneath your feet looks very intricate and very
+thought out.  The grounds around each house are well taken care.  The smell of
+fresh laundry drifts through the air.
+~
+142 0 1
+D0
+~
+~
+0 -1 14220
+D2
+~
+~
+0 -1 14222
+D3
+~
+~
+0 -1 14218
+S
+#14222
+Town of Hartland~
+  Off the sides of the road, you see small houses where the townsfolk live. They
+are doing laundry, making food, or simply walking around the town, enjoying the
+day.  Kids run and play, ducking and weaving through the crowd.  It is a lively 
+place. The well layed stone path beneath your feet looks very intricate and very
+thought out.  The grounds around each house are well taken care.  The smell of
+fresh laundry drifts through the air.
+~
+142 0 1
+D0
+~
+~
+0 -1 14221
+D3
+~
+~
+0 -1 14217
+S
+#14223
+Town of Hartland~
+  The forests of Westland lie to the north.  Deer are walking through the 
+clearings and the sounds of birds can be heard wafting down from the 
+trees.  The tall oak trees have stood the test of time.  The sweet smell 
+of blooming flowers and the freshness of the breeze gently blows through 
+the forest.  THe forest is alive with life and the large and small 
+critters are enjoying a day in the sun.
+~
+142 0 1
+D1
+~
+~
+0 -1 14219
+D2
+~
+~
+0 -1 14224
+S
+#14224
+Town of Hartland~
+  To the east you see the townspeople, busy with their daily lives.
+Merchants are yelling, trying to attract any customer they can. 
+Children laugh and play, as their parents tell them to calm down. 
+To the north, you see the Ven.  The warm air drifting in from north 
+invites you to the forest.  To the west you notice a large structure
+rising out of the forest.  Beneath your feet, leading to the east is
+a very well kept road.....I wonder where it leads?
+~
+142 0 1
+D0
+~
+~
+0 -1 14223
+D1
+~
+~
+0 -1 14218
+D3
+~
+~
+0 -1 14225
+S
+#14225
+Road to the First Councilors Home~
+   A well layed stone path lines the road.   The grass is cut short 
+and the stones keep your feet dry.   The stones are intricately layed at 
+your feet. Someone has taken a lot of time to make sure the stones 
+retain the design. Travellers along the path stare stangely at you, like 
+you don't belong in this land.  Off in the distance, you see a large, 
+stately manor, rising up in between of the forest.
+~
+142 0 1
+D1
+~
+~
+0 -1 14224
+D3
+~
+~
+0 -1 14226
+S
+#14226
+Road to the First Councilors Home~
+   A well layed stone path lines the road.   The grass is cut short 
+and the stones keep your feet dry.   The stones are intricately layed at 
+your feet. Someone has taken a lot of time to make sure the stones 
+retain the design. Travellers along the path stare stangely at you, like 
+you don't belong in this land.  Off in the distance, you see a large, 
+stately manor, rising up in between of the forest.
+~
+142 4 1
+D1
+~
+~
+0 -1 14225
+D2
+~
+~
+0 -1 14227
+S
+#14227
+The Courtyard~
+   Other then the path to the north, a large house surrounds you.
+Someone very important must live here based on how well everything
+is taken care of and the elegence of the items you see.  
+~
+142 4 1
+D0
+~
+~
+0 -1 14226
+D1
+~
+~
+0 -1 14228
+D2
+~
+~
+0 -1 14231
+D3
+~
+~
+0 -1 14229
+S
+#14228
+First Councilors Home~
+   Large bay windows illumnate the hallways.  You look around and see the
+sunlight glisten off the finely polished silver candle holders and watch 
+as the light is reflected through the beautiful, glass chandeliers.
+~
+142 0 0
+D2
+~
+~
+0 -1 14232
+D3
+~
+~
+0 -1 14227
+S
+#14229
+First Councilors Home~
+   A crystal chandelier hangs from the ceiling.  Its candles produce light
+which cuts away at the darkness of the hallway.  It is very tranquil.  The
+glow from the candles provides a warm comfort.
+~
+142 0 0
+D1
+~
+~
+0 -1 14227
+D2
+~
+~
+0 -1 14230
+D3
+You see a very nice room.
+~
+~
+0 -1 14236
+S
+#14230
+First Councilors Home~
+   The hallway is brightly illuminated by the light streaming in through the 
+windows.   The paintings on the walls of previous councilor's look so lifelike 
+you think they come right out of the frame.
+~
+142 0 0
+D0
+~
+~
+0 -1 14229
+D1
+~
+~
+0 -1 14231
+S
+#14231
+First Councilors Home~
+   Hallways run east and west.   A few maids are around cleaning and
+keeping everything tidy.   To the north, you can see the courtyard with 
+its marvelous marble fountain.  To the south, you see a door with a sign
+above it saying "First Councilor's Office".
+~
+142 0 0
+D0
+~
+~
+0 -1 14227
+D1
+~
+~
+0 -1 14232
+D2
+You see a sign above the door
+    "First Councilor's Office"
+~
+door~
+2 14201 14234
+D3
+~
+~
+0 -1 14230
+S
+#14232
+First Councilors Home~
+   To the east is a small room.  Every so often papers blow out of it 
+and you hear a the man behind its desk mutter a curse word under his
+breath.  To the west you see long, elegant hallways with many decorations.
+To the north you see more hallways with long, bay windows to let the light 
+in.  
+~
+142 0 0
+D0
+~
+~
+0 -1 14228
+D1
+You see a small room with piles of paper everywhere. There is a 
+small desk and man sitting behind it.
+~
+~
+0 -1 14233
+D3
+~
+~
+0 -1 14231
+S
+#14233
+Aides Room~
+   A small, cramped room surrounds you.  Piles of paper are scattered
+everywhere.  Behind a very small desk, in the back of the room sits
+an average sized man.  He looks very frustrated and very busy.
+~
+142 0 0
+D3
+~
+~
+0 -1 14232
+S
+#14234
+First Councilors Chamber~
+   You stand in a large office.  Bookshelves line the walls. They are filled 
+with books including the history of the town and history of Westland. Behind
+the large desk, in the center of the room, sits a man buried in paperwork.   
+He is very busy, and shouldn't be disturbed.
+~
+142 4 0
+D0
+~
+door~
+1 14201 14231
+S
+#14235
+General Store~
+   Shelves line the walls, filled with items that any adventurer may need. 
+Large knives, lanterns, and fine wool blankets are just a few things that 
+catch your eye.   The most popular item here though, are the sleeves that are 
+hand woven for use by the boundary wardens.
+~
+142 67108940 0
+D2
+~
+~
+0 -1 14219
+S
+#14236
+Servants Quarters~
+  A nice room is laid out in front of you.  Linen sheets are layed out
+on the beds.  The large windows placed along the wall, allow light to brighten
+the room.  You are amazed that the servants are treated so well.  It is a 
+very strange custom.
+~
+142 0 0
+D1
+~
+~
+0 -1 14229
+S
+#14237
+A dense path through the Ven Forest~
+  The trees become darker and the trees are beginning to close in around you.
+There is hardly any light coming down.  Cobwebs hang between the trees.  
+Branches hang low.  The path you travel on is hardly worn.  Large rocks and 
+fallen branches block your way.   Large boulders jut every which way.  Still, 
+you hear no animals.  A brisk breeze blows through the woods.
+~
+142 32769 3
+D1
+~
+~
+0 -1 14238
+S
+#14238
+A dense forest trail through the Ven Forest~
+  The path narrows and the path becomes harder to see.  Leaves have been blown
+into small piles throughout the path.  You see a single bird flutter through
+the canopy.  Two sparse beams of light shine through the thick forest canopy.
+The brisk breeze blows again, and the complete silence is very erie.  The 
+trees still close around you, and the path up ahead can hardly been seen
+at all through the thick branches and sparse light.
+~
+142 32769 3
+D0
+~
+~
+0 -1 14239
+S
+#14239
+A dense forest trail through the Ven Forest~
+  A branch hangs dangerously close to you head and looks as if it may fall at 
+any minute.  The sky is almost invisible as you look up.  The dense foliage
+and the thick leaves prevent anything from penetrating the awesome canopy. 
+The beautiful colors of the leaves and the shadows generated by the spare
+light paint a very wonderful picture. It is beautiful, but at the same time
+ominous as no life can still be seen or heard.
+~
+142 32769 3
+D0
+~
+~
+0 -1 14240
+D1
+~
+~
+0 -1 14239
+D2
+~
+~
+0 -1 14239
+D3
+~
+~
+0 -1 14239
+S
+#14240
+A dense forest trail through the Ven Forest~
+  The trees around you are all broken and scared.   As you look up, you can see
+a large hole in the canopy of trees.   There are broken branches barely hanging
+onto the trees they were broken from, along with more broken branches littering 
+the already congested trail.  You see large claw marks up and down trees, and 
+they are leading in the same direction that the path is currently taking you.
+You hear a large, deafening roar in the distance.
+~
+142 32769 3
+D0
+~
+~
+0 -1 14240
+D1
+~
+~
+0 -1 14241
+D2
+~
+~
+0 -1 14240
+D3
+~
+~
+0 -1 14240
+S
+#14241
+A dense forest trail through the Ven Forest~
+  More broken limbs are scattered on the path.  You can see branches, very high
+up, that have been partially broken, but no major hole can be seen in the 
+canopy.  Leaves still cover parts of the trail, and large rocks still jut out 
+in random spots.  The roars grow louder and are seem a lot closer.  A few beams 
+of light trickle down through the canopy.
+~
+142 32769 3
+D0
+~
+~
+0 -1 14241
+D1
+~
+~
+0 -1 14242
+D2
+~
+~
+0 -1 14241
+D3
+~
+~
+0 -1 14241
+S
+#14242
+A dense forest trail through the Ven Forest~
+  The claw marks on the trees can still be seen as you travel along the trail.  
+A single beam of light pierces the dense foliage.  Dark beaty eyes can be
+seen peering at your through the darkness.  The volume of the ominous roars
+continues to become louder.  One large rock juts down the center of the 
+path. On it, you can make out the faded letters "R" and "U".  In the space of 
+the last letter, a long thin streak has been carved into the rock.
+~
+142 0 3
+D0
+~
+~
+0 -1 14242
+D1
+~
+~
+0 -1 14242
+D2
+~
+~
+0 -1 14243
+D3
+~
+~
+0 -1 14242
+S
+#14243
+A dense forest trail through the Ven Forest~
+  The tree marks have ceased to exist.  As you peer around the clearing, you 
+can find no trace of broken limbs, or claw marks on the trees or rocks.  
+The trees are still thick and the canopy is very dense, and still, very few
+rays of light can find a hole to illuminate the forest floor.
+~
+142 0 3
+D0
+~
+~
+0 -1 14243
+D1
+~
+~
+0 -1 14243
+D2
+~
+~
+0 -1 14244
+D3
+~
+~
+0 -1 14243
+S
+#14244
+A dense forest trail through the Ven Forest~
+  The trees begin to thin out, allowing you a glimpse of the forest off to 
+the sides of the path.  The canopy has thinned out and at last you get
+a glimpse of the sky again.   The trail is still closed behind you.  
+The exit to this trail has to be around here somewhere...?
+~
+142 0 3
+D0
+~
+~
+0 -1 14245
+D1
+~
+~
+0 -1 14244
+D2
+~
+~
+0 -1 14244
+D3
+~
+~
+0 -1 14244
+S
+#14245
+Entrance to a tall grass field~
+  As you burst through the trees, branches snap off and leaves scatter to all 
+sides.  You are on the edge of a grass field.  The grass extends well above 
+your head. You notice a small trail leading off into the field.  A few drops
+of blood can be seen on the ground.  Birds can be seen circling overhead.
+~
+142 0 2
+D1
+~
+~
+0 -1 14246
+S
+#14246
+Tall Grass~
+  The tall grass extends in all directions.  Looking up, you can barely make 
+out the sky, making it impossible to navigate. A breeze blows through the
+field sending a chill down your spine.  You can hear the growls of 
+something coming from somewhere in the field, but you cant tell which
+direction it is coming from.  You see a small stream to the east.
+~
+142 0 2
+D1
+A small blue stream.
+~
+stream~
+10 -1 14247
+D3
+~
+~
+0 -1 14245
+S
+#14247
+Tall Grass~
+  The tall grass extends in all directions.  Looking up, you can barely make 
+out the sky, making it impossible to navigate. A breeze blows through the
+field sending a chill down your spine.  You can hear the growls of 
+something coming from somewhere in the field, but you cant tell which
+direction it is coming from.
+~
+142 0 2
+D0
+~
+~
+0 -1 14248
+D3
+A small blue stream.
+~
+stream~
+10 -1 14246
+S
+#14248
+Tall Grass~
+  The tall grass extends in all directions.  Looking up, you can barely make 
+out the sky, making it impossible to navigate. A breeze blows through the
+field sending a chill down your spine.  You can hear the growls of 
+something coming from somewhere in the field, but you cant tell which
+direction it is coming from.
+~
+142 0 2
+D1
+~
+~
+0 -1 14249
+D2
+~
+~
+0 -1 14247
+D3
+~
+~
+0 -1 14249
+S
+#14249
+Tall Grass~
+  The tall grass extends in all directions.  Looking up, you can barely make 
+out the sky, making it impossible to navigate. A breeze blows through the
+field sending a chill down your spine.  You can hear the growls of 
+something coming from somewhere in the field, but you cant tell which
+direction it is coming from.
+~
+142 0 2
+D0
+~
+~
+0 -1 14251
+D1
+~
+~
+0 -1 14250
+D2
+~
+~
+0 -1 14248
+D3
+~
+~
+0 -1 14248
+S
+#14250
+Tall Grass~
+  The tall grass extends in all directions.  Looking up, you can barely make 
+out the sky, making it impossible to navigate. A breeze blows through the
+field sending a chill down your spine.  You can hear the growls of 
+something coming from somewhere in the field, but you cant tell which
+direction it is coming from.
+~
+142 0 2
+D0
+~
+~
+0 -1 14251
+D1
+~
+~
+0 -1 14251
+D2
+~
+~
+0 -1 14252
+D3
+~
+~
+0 -1 14249
+S
+#14251
+A small clearing, with a small buddle of blood~
+  A small pool of blood sits in the clearing.  No corpse can be seen on the
+ground, but a few small bones can be seen scattered around.  The grass in
+the center has been matted flat, but the grass around the edge of the 
+clearing have been bent at a 90 degree angle facing away from the center.
+The growls you heard travelling through the grass have grown louder, and
+you hear the flapping of wings.
+~
+142 0 2
+D1
+~
+~
+0 -1 14252
+D3
+~
+~
+0 -1 14250
+S
+#14252
+Tall Grass~
+  The tall grass extends in all directions.  Looking up, you can barely make 
+out the sky, making it impossible to navigate. A breeze blows through the
+field sending a chill down your spine.  You can hear the growls of 
+something coming from somewhere in the field, but you cant tell which
+direction it is coming from.
+~
+142 0 2
+D0
+~
+~
+0 -1 14250
+D1
+~
+~
+0 -1 14253
+D2
+~
+~
+0 -1 14252
+D3
+~
+~
+0 -1 14249
+S
+#14253
+Edge of a tall grass field~
+  You are now at the edge of the field.  To the south, you see a grove of
+pine trees.  It looks as if you can crawl under the branches if you 
+require shelter.  Behind the branches, you can also make out a faint
+glow. Animals can be seen in the branches above the pine, and you notice
+a deer sleeping in the shade.   The pines look like a decent place to 
+rest if you should be tired.
+~
+142 0 2
+D0
+~
+~
+0 -1 14248
+D1
+~
+~
+0 -1 14247
+D2
+~
+pine~
+9 -1 14254
+D3
+~
+~
+0 -1 14252
+S
+#14254
+Inside a Wayward Pine~
+  Underneath the branches, you find a warm and cozy nook.  There are fresh
+branches and leaves on the ground to provide some insulation. A small torch
+lies next to the door.  The wayward pine extends to form multiple rooms, 
+giving more then enough space to be comfy.
+~
+142 0 0
+D0
+~
+pine~
+9 -1 14253
+D2
+~
+~
+0 -1 14255
+S
+#14255
+Central Chamber within a Wayward Pine~
+  A small circle of rocks sits in the middle of the floor.  Inside the circle,
+you can see remanants of burnt logs, and a few glowing embers from a fire
+put out not long ago.  The trunk of the tree has been hollowed out and has
+been created into a small nook to act as a shelf.
+~
+142 0 0
+D0
+~
+~
+0 -1 14254
+D1
+~
+~
+0 -1 14256
+D3
+~
+~
+0 -1 14257
+S
+#14256
+A side room~
+  A low hanging room with a small stool that you can sit on.  In the center
+of the room, a small glowing ball of energy.  The ball seems to be alive, 
+but is very dim compared.  It is a night-wisp.  A creature born of magic, 
+not normally seen in this land.  Being devoid of magic, the wisp is dying.
+She hasnt much time left.
+~
+142 0 0
+D3
+~
+~
+0 -1 14255
+S
+#14257
+A sleeping chamber~
+  There is a bed of pine needles on the floor to act as insulation against
+the ground.  The room is small enough, so that the fire will heat the 
+entire wayward pine without the fire being out of control.  The is a 
+small gap under one of the low hanging branches by the area where your 
+feet would be.
+~
+142 0 0
+D1
+~
+~
+0 -1 14255
+D3
+~
+pine~
+9 -1 14202
+S
+#14258
+A dense trail through the Upper Ven~
+  A dark forest surrounds you.  This path is off the normal route for locals,
+so not many people travel on it.  That is supported by the evidence of 
+small rocks and branches that sparsely litter the trail.  The foliage is 
+thick and the canopy covers part of the sky, but it is still visible. 
+A deer suddenly bolts in front of you and disapears in the forest.  Birds
+fly above you head.
+~
+142 0 3
+D1
+A trail can be seen through the trees below.
+~
+ledge~
+11 -1 14201
+D3
+~
+~
+0 -1 14259
+S
+#14259
+A dense trail through the Upper Ven~
+  A dark forest surrounds you.  This path is off the normal route for locals,
+so not many people travel on it.  That is supported by the evidence of 
+small rocks and branches that sparsely litter the trail.  The foliage is 
+thick and the canopy covers part of the sky, but it is still visible. 
+A bear stumbles lazily across the path.  He is not the least bit startled
+by your pressence.  The bear continues on its way.
+~
+142 0 3
+D1
+~
+~
+0 -1 14258
+D3
+~
+~
+0 -1 14260
+S
+#14260
+A dense trail through the Upper Ven~
+  A dark forest surrounds you.  This path is off the normal route for locals,
+so not many people travel on it.  That is supported by the evidence of 
+small rocks and branches that sparsely litter the trail.  The foliage is 
+thick and the canopy covers part of the sky, but it is still visible. 
+Signs have been posted along the trail warning against straying off the 
+path or wandering around at night.
+~
+142 0 3
+D1
+~
+~
+0 -1 14259
+D2
+~
+~
+0 -1 14261
+S
+#14261
+A dense trail through the Upper Ven~
+  A dark forest surrounds you.  This path is off the normal route for locals,
+so not many people travel on it.  That is supported by the evidence of 
+small rocks and branches that sparsely litter the trail.  The foliage is 
+thick and the canopy covers part of the sky, but it is still visible. 
+Signs have been posted along the trail warning against straying off the 
+path or wandering around at night.
+~
+142 0 3
+D0
+~
+~
+0 -1 14260
+D2
+~
+~
+0 -1 14262
+S
+#14262
+An intersection in the forest~
+  Trails continue to the west and south.  To the south, the trees and the 
+path seem more welcoming.  The path to the west is dark and gloomy. The 
+trees are more dense and the sky is covered by the canopy.  To the 
+south, the path is well taken care of.  The dirt along the path is 
+clean and smooth. There are no rocks or branches on the ground.  The 
+trail to the west has leaves and branches scattered across the path.
+~
+142 0 3
+D0
+~
+~
+0 -1 14261
+D2
+~
+~
+0 -1 14264
+D3
+~
+~
+0 -1 14263
+S
+#14263
+A dense trail through the Upper Ven~
+  A dark forest surrounds you.  This path is off the normal route for locals,
+so not many people travel on it.  That is supported by the evidence of 
+small rocks and branches that sparsely litter the trail.  The foliage is 
+thick and the canopy covers part of the sky, but it is still visible. 
+Signs have been posted along the trail warning against straying off the 
+path or wandering around at night.
+~
+142 0 3
+D1
+~
+~
+0 -1 14262
+D3
+~
+~
+0 -1 14265
+S
+#14264
+A trail through the Upper Ven~
+  There is something magical about these trees.  There is a magical
+essence that floats on the breeze.  The path below your feet is
+pristine.   The dirt seems to be have sweeped clean.  There are
+no rocks beneath your feet,  there are no broken branches 
+covering the ground.  There are blue flowers along the sides of the
+trail.  The short cut grass and the flowers emit a pleasant aroam.
+~
+142 0 3
+D0
+~
+~
+0 -1 14262
+S
+#14265
+A dense trail through the Upper Ven~
+  A dark forest surrounds you.  This path is off the normal route for locals,
+so not many people travel on it.  That is supported by the evidence of 
+small rocks and branches that sparsely litter the trail.  The foliage is 
+thick and the canopy covers part of the sky, but it is still visible. 
+Signs have been posted along the trail warning against straying off the 
+path or wandering around at night.
+~
+142 0 3
+D1
+~
+~
+0 -1 14263
+D2
+~
+~
+0 -1 14266
+S
+#14266
+A dense trail through the Upper Ven~
+  A dark forest surrounds you.  This path is off the normal route for locals,
+so not many people travel on it.  That is supported by the evidence of 
+small rocks and branches that sparsely litter the trail.  The foliage is 
+thick and the canopy covers part of the sky, but it is still visible. 
+Signs have been posted along the trail warning against straying off the 
+path or wandering around at night.
+~
+142 0 3
+D0
+~
+~
+0 -1 14265
+D2
+~
+~
+0 -1 14267
+S
+#14267
+A clearing in the forest~
+  You are in a small clearing within the forest.  The trail you were on
+continues to the south.  The canopy above your head is completely open,
+allowing you to see the sky with no interference.  To the west you 
+notice a small difference in the forest. The branches and vines have
+grown especially thick.  The thicket seems to be natural, but there 
+is an unnatural feel to it.
+~
+142 0 3
+D0
+~
+~
+0 -1 14266
+D2
+~
+~
+0 -1 14268
+D3
+A very dense thicket of trees and vines.
+~
+thicket~
+12 -1 14269
+S
+#14268
+A desne trail through the Upper Ven~
+  A dark forest surrounds you.  This path is off the normal route for locals,
+so not many people travel on it.  That is supported by the evidence of 
+small rocks and branches that sparsely litter the trail.  The foliage is 
+thick and the canopy covers part of the sky, but it is still visible. 
+Signs have been posted along the trail warning against straying off the 
+path or wandering around at night.
+~
+142 0 3
+D0
+~
+~
+0 -1 14267
+S
+#14269
+Hidden Trail~
+  You are on a well hidden trail.  Someone has gone to a great deal of 
+trouble to camouflage the path beneath your feet.   It is covered in
+leaves and branches.  Rocks are scattered about.  Animal tracks can be 
+seen in the mud.  You notice something move off in the forest, but when 
+you look around nothing is out of place.  Nothing seems out of the 
+ordinary.
+~
+142 0 3
+D1
+A very dense thicket of trees and vines.
+~
+thicket~
+12 -1 14267
+D3
+~
+~
+0 -1 14270
+S
+#14270
+Hidden Trail~
+  You are on a well hidden trail.  Someone has gone to a great deal of 
+trouble to camouflage the path beneath your feet.   It is covered in
+leaves and branches.  Rocks are scattered about.  Animal tracks can be 
+seen in the mud.  You notice something move off in the forest, but when 
+you look around nothing is out of place.  Nothing seems out of the 
+ordinary.
+~
+142 0 3
+D1
+~
+~
+0 -1 14269
+D3
+~
+~
+0 -1 14271
+S
+#14271
+Hidden Trail~
+  You are on a well hidden trail.  Someone has gone to a great deal of 
+trouble to camouflage the path beneath your feet.   It is covered in
+leaves and branches.  Rocks are scattered about.  Animal tracks can be 
+seen in the mud.  You notice something move off in the forest, but when 
+you look around nothing is out of place.  Nothing seems out of the 
+ordinary.
+~
+142 0 3
+D0
+~
+~
+0 -1 14272
+D1
+~
+~
+0 -1 14270
+S
+#14272
+Trail to the Captains Home~
+  The trail you are on is silent. Nothing moves and no sounds can be heard
+in any direction.  To the north, in the distance, you can see a large 
+house with a single light on.  On each side of the path, there are 
+posts with unlit torches on them.  The space above you head is open, and
+the sky is visible.  You are headed towards the home of the captain
+of the Boundary Wardens.
+~
+142 0 3
+D0
+~
+~
+0 -1 14273
+D2
+~
+~
+0 -1 14271
+S
+#14273
+Trail to the Captains Home~
+  The trail you are on is silent. Nothing moves and no sounds can be heard
+in any direction.  To the north, in the distance, you can see a large 
+house with a single light on.  On each side of the path, there are 
+posts with unlit torches on them.  The space above you head is open, and
+the sky is visible.  You are headed towards the home of the captain
+of the Boundary Wardens.
+~
+142 0 3
+D0
+~
+~
+0 -1 14274
+D2
+~
+~
+0 -1 14272
+S
+#14274
+Outside the Boundary Wardens Home~
+  You stand outside a large Wooden house.  The oak beams have been cut with
+precision and layed very cafefully on its foundation.  The oak porch that
+surrounds the house adds a certain elegance to the place.  The railing 
+around the house is made from the finest pine from the westland.   The 
+grass beneath your feet is long and unkempt.
+~
+142 0 3
+D0
+A railing runs around the edge of the porch.
+~
+railing~
+11 -1 14281
+D1
+~
+~
+0 -1 14275
+D2
+~
+~
+0 -1 14273
+D3
+~
+~
+0 -1 14276
+S
+#14275
+Outside the Boundary Wardens Home~
+  You stand outside a large Wooden house.  The oak beams have been cut with
+precision and layed very cafefully on its foundation.  The oak porch that
+surrounds the house adds a certain elegance to the place.  The railing 
+around the house is made from the finest pine from the westland.   The 
+grass beneath your feet is long and unkempt.
+~
+142 0 3
+D0
+A railing runs around the edge of the porch.
+~
+railing~
+11 -1 14282
+D3
+~
+~
+0 -1 14274
+S
+#14276
+Outside the Boundary Wardens Home~
+  You stand outside a large Wooden house.  The oak beams have been cut with
+precision and layed very cafefully on its foundation.  The oak porch that
+surrounds the house adds a certain elegance to the place.  The railing 
+around the house is made from the finest pine from the westland.   The 
+grass beneath your feet is long and unkempt.  The steps onto the porch, 
+lies to the north.
+~
+142 0 3
+D0
+~
+~
+0 -1 14279
+D1
+~
+~
+0 -1 14274
+D3
+~
+~
+0 -1 14277
+S
+#14277
+Outside the Boundary Wardens Home~
+  You stand outside a large Wooden house.  The oak beams have been cut with
+precision and layed very cafefully on its foundation.  The oak porch that
+surrounds the house adds a certain elegance to the place.  The railing 
+around the house is made from the finest pine from the westland.   The 
+grass beneath your feet is long and unkempt.
+~
+142 0 3
+D0
+~
+~
+0 -1 14278
+D1
+~
+~
+0 -1 14276
+S
+#14278
+Outside the Boundary Wardens Home~
+  You stand outside a large Wooden house.  The oak beams have been cut with
+precision and layed very cafefully on its foundation.  The oak porch that
+surrounds the house adds a certain elegance to the place.  The railing 
+around the house is made from the finest pine from the westland.   The 
+grass beneath your feet is long and unkempt.  To the north, you see a 
+small tool shed.
+~
+142 0 3
+D0
+A small tool shed.
+~
+door~
+1 -1 14280
+D1
+A railing runs around the edge of the porch.
+~
+railing~
+11 -1 14279
+D2
+~
+~
+0 -1 14277
+S
+#14279
+On the porch~
+  The floorboards emit a creak as you step upon them. The noise is so soft, 
+that you hardly noticed it at all.  The porch wraps around to the side of
+the house.  To the east, you notice a door leading into the house.  To the 
+north, you notice a large window leading into a side room.  To the west,
+the railing prevents you from falling off the porch.
+~
+142 0 0
+D0
+~
+~
+0 -1 14283
+D1
+~
+~
+0 -1 14281
+D2
+~
+~
+0 -1 14276
+D3
+A railing runs around the edge of the porch.
+~
+railing~
+11 -1 14278
+S
+#14280
+A storage shed ~
+  Shelves line the walls as you enter the shed.  Everything seems to have
+its place.  A toolbox sits on the floor.  The glass jars on the shelves
+are filled with nails.  Tools line the walls of the shed, hung on their
+solid, iron hooks.  The shed smells of musk, but at the same time, 
+slightly sweet.  The only light comes from a small window on the ceiling.
+~
+142 0 0
+D2
+~
+door~
+1 -1 14278
+S
+#14281
+On the porch~
+  The floorboards emit a creak as you step upon them. The noise is so soft, 
+that you hardly noticed it at all.  A large oak door lies to the north. 
+The railing lies behind you, and if you feel like you need to leave quickly,
+you could always climb over it.  A chilly breeze blows in from the south.
+There is a mat on the ground saying "Welcome", and a sign on the door
+saying "Home Sweet Home".
+~
+142 4 0
+D0
+A Large Oak Door.
+~
+door~
+1 -1 14284
+D1
+~
+~
+0 -1 14282
+D2
+A railing runs around the edge of the porch.
+~
+railing~
+11 -1 14274
+D3
+~
+~
+0 -1 14279
+S
+#14282
+On the porch~
+  The floorboards emit a creak as you step upon them. The noise is so soft, 
+that you hardly noticed it at all. The railing lies behind you, and if 
+you feel like you need to leave quickly,you could always climb over it. 
+The porch does not continue.  There is a rocking chair in the corner, and
+a few candles on the railing behind the back of the chair.
+~
+142 0 0
+D2
+A railing runs around the edge of the porch.
+~
+railing~
+11 -1 14275
+D3
+~
+~
+0 -1 14281
+S
+#14283
+On the porch~
+  The floorboards emit a creak as you step upon them. The noise is so soft, 
+that you hardly noticed it at all.  To the north, there is a large window
+leading into the house.  As you peer inside, you notice a kitchen and a 
+living room with all the furniture.  You see no lights on within the house
+and dont hear anybody walking around.
+~
+142 0 0
+D0
+A large open window.
+~
+window~
+10 -1 14286
+D2
+~
+~
+0 -1 14279
+S
+#14284
+Entry Way~
+  Skulls of all kinda of creatures line the walls.  You recognize a deer,
+badger, bear, but as you continue down the hall, the skulls become more
+distored and disfigured.  The walls are solid oak, and they have been 
+stained to bring out their true brilliance.  Candle's sit in their iron
+holders hung on the wall.  To the east is a very small room with a 
+single wooden bench against its wall.  
+~
+142 0 0
+D0
+~
+~
+0 -1 14285
+D1
+~
+~
+0 -1 14287
+D2
+A Large Oak Door.
+~
+door~
+1 -1 14281
+S
+#14285
+Dining Room~
+  A grand table made out of maple sits in the middle of the room.  A
+centerpiece made out of bones, branches, leaves, and a single large 
+candle sits in the middle.  Nine solid, sturdy wooden chairs are placed 
+around the table. Seven of the chairs have names carved into the top.  
+To the north lies the kitchen.  To the east lies the Den.
+~
+142 0 0
+D0
+~
+~
+0 -1 14288
+D1
+~
+~
+0 -1 14289
+D2
+~
+~
+0 -1 14284
+D3
+~
+~
+0 -1 14286
+S
+#14286
+The Living Room~
+  A large, bay window lies to the north.  It allows a wonderful view of 
+the dark woods that lie behind the house.  A large, oak table lies
+in the center of the room.  An arrangement of candles sits in the
+center.  A wood bench sits beneath the window.  A brick fireplace
+lies in the wall.  On the mantle, a skull of creature that doesnt
+seem to be of this world.  The embers in the fireplace are still 
+glowing.
+~
+142 0 0
+D1
+~
+~
+0 -1 14285
+D2
+A large open window.
+~
+window~
+10 -1 14283
+S
+#14287
+Sitting Room~
+  A large wooden bench sits against the wall.  Behind it, a large window
+allowing light to illuminate the room.   The smells of the forest waft
+into the room, tingling your senses.  The wooden floorboards hardly 
+creak under your fleet.  Lining the walls are exquisite arrangements
+of branches and leaves that seem to be a tribute to nature herself.
+~
+142 0 0
+D3
+~
+~
+0 -1 14284
+S
+#14288
+The Kitchen~
+  Wood counters topped with smoothed granite line the walls.  A basin with
+a pump sits near an open window.  Clay jars sit on shelves, that line
+the kitchen, filled with bread, rice, and all the other staples
+for a growing family.  Fresh flowers sit in a glass vase on the window
+sill.  Their fragrance floats on the breeze, making the kitchen smell
+equisite.
+~
+142 0 0
+D1
+~
+~
+0 -1 14290
+D2
+~
+~
+0 -1 14285
+S
+#14289
+The Den~
+  The room is pretty bare.  Only a single table stands in the center of
+the room.  The table is scarred with a bunch of deep gouges and traces
+of blood.  A large cleaver lays embedded in the rough timber.  A large 
+barrel lies in the corner.   On the lid, you see small specs of clear 
+crystals.
+~
+142 0 0
+D0
+~
+~
+0 -1 14290
+D3
+~
+~
+0 -1 14285
+S
+#14290
+The Foyer~
+  A large oak staircase descends upwards.  The railings are covered in
+oddly shaped branches.  A large window lies in the east wall.  
+Paintings off nature's wonders hang on the wall.  A chandelier hangs 
+from the ceiling. It is made from black rocks, that seem to glow no
+matter how light hits them.
+~
+142 0 0
+D2
+~
+~
+0 -1 14289
+D3
+~
+~
+0 -1 14288
+D4
+A ornate, oak staircase.
+~
+staircase~
+11 -1 14291
+S
+#14291
+Upstairs Hallway~
+  The walls are lined with all sorts of blades.  Small thin ones sit in 
+groups, ready to be thrown, while the large ones lay in sheaths sitting
+on their racks.   What really catches your eye is the giant battle axe 
+sitting by itself on a wall.  The blades gleam in the candle light.  To 
+the west, you see a large door leading into a room.  There is also a 
+door to the south further down the hall.
+~
+142 67108864 0
+D3
+~
+~
+0 -1 14292
+D5
+An ornate, oak staircase.
+~
+staircase~
+11 -1 14290
+S
+#14292
+Upstairs Hallway~
+  The battle axe clearly comes into view now.  It sites outside a door
+to the west.  The axe handle is made out of solid oak, and the dual
+sided blades are solid iron.  Light can be seen from underneath the 
+door.  To the south, there is a smaller door.  No light can be seen
+from that room.
+~
+142 67108868 0
+D1
+~
+~
+0 -1 14291
+D2
+A solid oak door.
+~
+door~
+1 -1 14293
+D3
+A solid oak door.
+~
+door~
+1 -1 14295
+S
+#14293
+Lee's room~
+  The room is decorated from the ceiling to the floor with a cascade of
+colors.  Feathers, leaves, rocks, fabric, blankets, and shells make
+up just some of the vast collection of items on the floor.  A small 
+wooden chest sits against the wall. A large window, surrounded by 
+feathers lies to the south.  Above it is a plaque, which says 
+"Gateway to the Mind".
+~
+142 0 0
+D0
+A solid oak door.
+~
+door~
+1 -1 14292
+D1
+~
+~
+0 -1 14294
+S
+#14294
+Lee's Room~
+  A large bed sits in the corner.  It is piled high with pillows and
+blankets, as well as a Giant Teddy bear with a crown on its head.
+The air smells sweet, with the aroma eminating from a small box at
+the foot of the bed.  The lid is open, and crushed leaves of flowers
+can be seen scattered on the ground outside the box.
+~
+142 0 0
+D3
+~
+~
+0 -1 14293
+S
+#14295
+Chases and Emmas Master Bedroom~
+  The room is quite bland compared to the rest of the house.  The walls
+have almost no decoration, just a few hooks scattered over the wall. 
+A Large bed stands in the corner with 4 posts extending to the
+ceiling.  The dresser along the wall has glass bottles with corked 
+stoppers in them, containing differnet colored liquids.  Large, wooden
+candle holders are bolted to each wall.
+~
+142 0 0
+D1
+A solid oak door.
+~
+door~
+1 -1 14292
+D2
+~
+~
+0 -1 14296
+D3
+~
+~
+0 -1 14298
+S
+#14296
+Chases and Emmas Master Bedroom~
+  The five drawers of the dresser have intricately carved knobs.  Most are
+of flowers or other items found in nature.  The top drawer has knobs 
+carved in the shape of hearts.  On the top of the dresser, it reads
+"To my darling Emma.  Love Chase"
+~
+142 0 0
+D0
+~
+~
+0 -1 14295
+D3
+~
+~
+0 -1 14297
+S
+#14297
+Chases and Emmas Master Bedroom~
+  The four posts on the oak bed extend to the ceiling.  The canopy of 
+the bed is a deep purple, with silver strands running parallel with
+the bed.  The Silk curatins around the bed are the only thing that 
+is stunning within the room.  Next to the bed is a wooden nightstand
+with a single drawer.  To the north, a door sits in the wall.
+~
+142 0 0
+D0
+~
+~
+0 -1 14298
+D1
+~
+~
+0 -1 14296
+S
+#14298
+Chases and Emmas Master Bedroom~
+  A windows lies in the west wall.  Cloth curtains hang around the 
+edges.  The smell of the forest blows into the room on a draft.
+The overwhelming smell of pine fills your senses.  The cool 
+breeze is fresh and is somewhat chilly.  The wood boards beneath 
+your fleet creak ever so slighty.
+~
+142 0 0
+D0
+A brown closet door.~
+closet~
+1 -1 14299
+D1
+~
+~
+0 -1 14295
+D2
+~
+~
+0 -1 14297
+S
+#14299
+Master Bedrooms Closet~
+  The closet has shelves lining the walls, as well as a bar on one side
+to hang stuff on.  The vibrant colors of the dresses hanging up create
+an a unique comparison to the black and green clothes sitting on the
+shelves.  Everything has been put in its place, because there doesnt 
+seem to be any place for a light.
+~
+142 0 0
+D2
+~
+~
+1 -1 14298
+S
+#0
+$~

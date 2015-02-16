@@ -1,0 +1,624 @@
+#26300
+The top of the Course~
+A temporary description
+~
+263 4 0
+D0
+~
+~
+0 -1 26302
+D1
+~
+~
+0 -1 26301
+D2
+~
+~
+0 -1 26304
+D3
+~
+~
+0 -1 26303
+D5
+~
+~
+0 -1 26399
+S
+#26301
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26303
+D1
+~
+~
+0 -1 26304
+D2
+~
+~
+0 -1 26305
+D3
+~
+~
+0 -1 26300
+D4
+~
+~
+0 -1 26399
+D5
+~
+~
+0 -1 26302
+S
+#26302
+On the shovel racing course~
+A temporary description
+~
+263 256 0
+D1
+~
+~
+0 -1 26399
+D2
+~
+~
+0 -1 26300
+D3
+~
+~
+0 -1 26399
+D4
+~
+~
+0 -1 26301
+D5
+~
+~
+0 -1 26304
+S
+#26303
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26306
+D1
+~
+~
+0 -1 26300
+D2
+~
+~
+0 -1 26301
+D3
+~
+~
+0 -1 26399
+D4
+~
+~
+0 -1 26307
+D5
+~
+~
+0 -1 26399
+S
+#26304
+On the shovel racing course~
+A temporary description
+~
+263 256 0
+D0
+~
+~
+0 -1 26300
+D1
+~
+~
+0 -1 26305
+D2
+~
+~
+0 -1 26399
+D3
+~
+~
+0 -1 26301
+D4
+~
+~
+0 -1 26302
+D5
+~
+~
+0 -1 26307
+S
+#26305
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26301
+D1
+~
+~
+0 -1 26308
+D2
+~
+~
+0 -1 26307
+D3
+~
+~
+0 -1 26304
+D4
+~
+~
+0 -1 26309
+D5
+~
+~
+0 -1 26399
+S
+#26306
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26308
+D1
+~
+~
+0 -1 26307
+D2
+~
+~
+0 -1 26303
+D3
+~
+~
+0 -1 26310
+D4
+~
+~
+0 -1 26399
+D5
+~
+~
+0 -1 26301
+S
+#26307
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26305
+D1
+~
+~
+0 -1 26310
+D2
+~
+~
+0 -1 26399
+D3
+~
+~
+0 -1 26306
+D4
+~
+~
+0 -1 26304
+D5
+~
+~
+0 -1 26303
+S
+#26308
+On the shovel racing course~
+A temporary description
+~
+263 256 0
+D0
+~
+~
+0 -1 26309
+D1
+~
+~
+0 -1 26310
+D2
+~
+~
+0 -1 26306
+D3
+~
+~
+0 -1 26305
+D5
+~
+~
+0 -1 26399
+S
+#26309
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26310
+D1
+~
+~
+0 -1 26312
+D2
+~
+~
+0 -1 26311
+D3
+~
+~
+0 -1 26312
+D4
+~
+~
+0 -1 26399
+D5
+~
+~
+0 -1 26305
+S
+#26310
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26399
+D1
+~
+~
+0 -1 26314
+D2
+~
+~
+0 -1 26309
+D3
+~
+~
+0 -1 26399
+D4
+~
+~
+0 -1 26311
+D5
+~
+~
+0 -1 26318
+S
+#26311
+On the shovel racing course~
+A temporary description
+~
+263 256 0
+D0
+~
+~
+0 -1 26309
+D1
+~
+~
+0 -1 26313
+D2
+~
+~
+0 -1 26312
+D3
+~
+~
+0 -1 26399
+D4
+~
+~
+0 -1 26314
+D5
+~
+~
+0 -1 26310
+S
+#26312
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26311
+D1
+~
+~
+0 -1 26309
+D2
+~
+~
+0 -1 26313
+D3
+~
+~
+0 -1 26309
+D4
+~
+~
+0 -1 26312
+D5
+~
+~
+0 -1 26312
+S
+#26313
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26312
+D1
+~
+~
+0 -1 26399
+D2
+~
+~
+0 -1 26315
+D3
+~
+~
+0 -1 26311
+D4
+~
+~
+0 -1 26399
+D5
+~
+~
+0 -1 26399
+S
+#26314
+On the shovel racing course~
+A temporary description
+~
+263 256 0
+D0
+~
+~
+0 -1 26315
+D1
+~
+~
+0 -1 26399
+D2
+~
+~
+0 -1 26316
+D3
+~
+~
+0 -1 26310
+D4
+~
+~
+0 -1 26317
+D5
+~
+~
+0 -1 26311
+S
+#26315
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26313
+D1
+~
+~
+0 -1 26320
+D2
+~
+~
+0 -1 26314
+D3
+~
+~
+0 -1 26399
+D4
+~
+~
+0 -1 26316
+D5
+~
+~
+0 -1 26399
+S
+#26316
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26314
+D1
+~
+~
+0 -1 26317
+D2
+~
+~
+0 -1 26399
+D3
+~
+~
+0 -1 26318
+D4
+~
+~
+0 -1 26319
+D5
+~
+~
+0 -1 26315
+S
+#26317
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26318
+D1
+~
+~
+0 -1 26399
+D2
+~
+~
+0 -1 26399
+D3
+~
+~
+0 -1 26316
+D4
+~
+~
+0 -1 26319
+D5
+~
+~
+0 -1 26314
+S
+#26318
+On the shovel racing course~
+A temporary description
+~
+263 256 0
+D0
+~
+~
+0 -1 26319
+D1
+~
+~
+0 -1 26316
+D2
+~
+~
+0 -1 26317
+D3
+~
+~
+0 -1 26320
+D4
+~
+~
+0 -1 26310
+D5
+~
+~
+0 -1 26399
+S
+#26319
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26399
+D1
+~
+~
+0 -1 26399
+D2
+~
+~
+0 -1 26321
+D3
+~
+~
+0 -1 26320
+D4
+~
+~
+0 -1 26399
+D5
+~
+~
+0 -1 26316
+S
+#26320
+On the shovel racing course~
+A temporary description
+~
+263 0 0
+D0
+~
+~
+0 -1 26321
+D1
+~
+~
+0 -1 26319
+D3
+~
+~
+0 -1 26315
+S
+#26321
+THE FINISH!!!!!!!!!!!!!!!!!!!~
+You did it, just be the first to say here, and you win!
+~
+263 4 0
+S
+#26399
+Out of bounds!~
+No cheating! Go back to the start!
+~
+263 4 0
+D4
+~
+~
+0 -1 26300
+S
+#0
+$~

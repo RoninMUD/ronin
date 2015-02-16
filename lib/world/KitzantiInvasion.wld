@@ -1,0 +1,1905 @@
+#4600
+At a gruesome sight.~
+   The forest is suddenly interrupted here.  The trees are broken and
+some look as if they were snapped by some incredible force.  Looking
+around, the source of this disturbance can be seen.  A gigantic corpse
+of a super sized humanoid figure lies here.  It looks to be a hunter
+of some sorts.  From the stench, it can logically be concluded that
+the corpse has been here for some time.  There is nothing of value on
+the remains, but taking a closer look at the face, it looks possible
+to crawl into the mouth, in fact, tracks can be seen leading in, but
+what would want to go in such a place?
+~
+46 0 3
+D0
+~
+~
+0 -1 24980
+D2
+The mouth looks large enough to enter, but not in a full upright position.
+You think you may be able to crawl in, but think it is probably not a good
+idea.
+~
+mouth~
+9 -1 4601
+E
+mouth~
+It looks stink, just like the mouthes of the halfling crews - and
+it smells as bad as it looks.
+~
+E
+tracks~
+They do not appear to be human, but a smaller version, perhaps that
+of a halfling or gnome.
+~
+E
+face~
+It looks male and in bad shape.  This was an ugly, ugly humanoid.
+~
+E
+face~
+It looks male and in bad shape.  This was an ugly, ugly man.
+~
+E
+face~
+It looks male and in bad shape.
+~
+E
+remains~
+Tattered rags cover the dead body.
+~
+E
+corpse~
+It is nearly one hundred times your size and smells terrible.
+~
+E
+corpse~
+It is nearly one hundred times your size.
+~
+E
+trees~
+Some are broken and twisted, yet others remain undamaged.
+~
+E
+forest~
+It abruptly stops here, where a giant corpse lies.
+~
+S
+#4601
+Within the mouth.~
+   The mouth of the gigantic corpse smells terrible.  Rotten flesh hangs
+all around and the decayed remains of some teeth scatter the makeshift
+cave.  A faint light radiates from the outside world, but it barely can
+penetrate the corpses lips which hang loosely from the skeleton.  Looking
+forward, what appears to be a pit looms in the back of the mouth and it
+is probably the esophagus which leads even deeper into the corpses remains.
+The odd thing is, that there is a rope hanging from a tooth which leads
+down into the darkness below.
+~
+46 9 0
+D0
+The mouth is slightly open.  Rigor mortis must have set in by now and it
+may be possible to crawl out of this awful place.
+~
+mouth~
+9 -1 4600
+D4
+~
+tooth~
+2 4606 4649
+D5
+A rope dangles, leading down into the darkness.
+~
+rope~
+11 -1 4602
+E
+tooth~
+It looks like it is on a swivel, almost like it opens up.
+~
+E
+teeth~
+The teeth are decaying and look like yellow, rotten wood.  However,
+one tooth looks slightly different than the rest.
+~
+E
+rope~
+It has been tied to a tooth and goes straight down into the darkness.
+~
+E
+esophagus~
+It looks dark and smells terrible.
+~
+E
+pit~
+It descends into darkness.
+~
+E
+skeleton~
+Pieces of the skeleton can be seen through the decaying flesh.
+~
+E
+lips~
+They can hardly be called lips because they are sagging from their
+proper place.
+~
+E
+teeth~
+The teeth are decaying and look like yellow, rotten wood.
+~
+E
+remains~
+The teeth are decaying and look like yellow, rotten wood.
+~
+E
+flesh~
+It is rotten and beginning to decay off the skeletal remains.
+~
+S
+#4602
+Descending down into the darkness.~
+   The rope continues it's descent down into the darkness.  It is
+getting difficult to hold on because of the moisture which looms
+in this area.  The walls here seem to be a bit more solid than the
+rotten flesh above and the tunnel down seems to get more cramped
+directly below.  Every so often, a faint noise can be heard from
+below followed by a short clicking sound.
+~
+46 9 0
+D4
+The rope descends from above, looking like it is tied to a rotting
+tooth.
+~
+rope~
+11 -1 4601
+D5
+The rope contines to descend down into the darkness.
+~
+rope~
+11 -1 4603
+E
+flesh~
+It is rotten and stinks to high heaven.
+~
+E
+tunnel~
+It leads down.
+~
+E
+walls~
+They don't appear to be flesh, but made of entirely something else.
+~
+E
+rope~
+It is getting harder to hold on due to the moisture here.
+~
+S
+#4603
+Lodged within the throat.~
+   It is really getting cramped here.  The walls of this tunnel
+press gently against your body.  Getting this close to them, it is
+realized that they feel very solid, like some sort of crystal
+substance.  They seem to widen out below and only a faint trace
+of daylight can be seen from above this far down.  The rope hangs
+further down and it is getting very difficult to hold on now, as
+this area is almost misty with the moisture, but the looming stench
+seems to be getting better.
+~
+46 265 0
+D4
+The rope hangs from somewhere above.  Where it begins cannot be seen, but
+it would seem that it is somewhere very high up.
+~
+rope~
+11 -1 4602
+D5
+The rope still continues down into the darkness.  The end must be near!
+~
+rope~
+11 -1 4604
+E
+rope~
+It looks damp, almost wet.
+~
+E
+daylight~
+A dull shine hits the wall about two inches above your head.
+~
+E
+walls~
+They seem to be squeezing the life out of you!
+~
+S
+#4604
+Behind the rib cage.~
+   A large cage like structure fills this room.  It does not block
+movement in any direction, but nonetheless appears to be a cage.  Upon
+close inspection, this cage appears to be made of bone.  To the east
+and west, large white domes fill the passage while to the south a large
+fleshy mass can be faintly made out of the darkness.  The rope ends
+here, but there is a sloping area near the back of this area which leads
+down into more darkness.
+~
+46 9 0
+D0
+~
+~
+0 -1 4621
+D1
+~
+~
+0 -1 4606
+D2
+~
+~
+0 -1 4607
+D3
+~
+~
+0 -1 4605
+D4
+A rope hangs from far above.  It is the only way out of this seemingly
+endless cavity.
+~
+rope~
+11 -1 4603
+D5
+~
+~
+0 -1 4609
+E
+cage~
+It doesn't really block anything and is made of bone.
+~
+E
+structure~
+It's a cage like object.
+~
+E
+domes~
+They look puffy and swelled up.
+~
+E
+mass~
+It is too dark to make out any detail.
+~
+E
+rope~
+It dangles here, your only way back up.
+~
+E
+area~
+It slopes downward.
+~
+S
+#4605
+Inside the left lung.~
+   This room resembles the inside of a large white wineskin that has been
+filled with air.  Small sack-like clusters line the walls of the entire
+dome-shaped room.  Every so often, one of the sack like objects twitches
+and a slight breeze fills the room.  The only way out of this place is to
+head back to the east, yet looking behind the sacks, dried strands dangle
+loosely and appear to lead somewhere.
+~
+46 9 0
+D1
+~
+~
+0 -1 4604
+E
+strands~
+They dangle freely and when looked upon closer actually lead nowhere.
+~
+E
+sacks~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+sack~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+walls~
+They are lined with clusters of the sack like objects.
+~
+E
+clusters~
+Each cluster contains about twenty of the small sacks.
+~
+E
+room~
+It looks like a big puffy wineskin.
+~
+E
+strands~
+They dangle freely and when looked upon closer actually lead nowhere.
+~
+E
+sacks~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+sack~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+walls~
+They are lined with clusters of the sack like objects.
+~
+E
+clusters~
+Each cluster contains about twenty of the small sacks.
+~
+E
+room~
+It looks like a big puffy wineskin.
+~
+S
+#4606
+Inside the right lung.~
+   This room resembles the inside of a large white wineskin that has been
+filled with air.  Small sack-like clusters line the walls of the entire
+dome-shaped room.  The tip of a large wooden point hangs through the ceiling
+which looks like the tip of a massive spear.  The only way out of this place
+is to head back to the west, yet looking behind the sacks, dried strands
+dangle loosely and appear to lead somewhere.
+~
+46 9 0
+D3
+~
+~
+0 -1 4604
+E
+point~
+It looks very sharp and is covered with dried blood.  It actually
+punctures several of the sacks.
+~
+E
+strands~
+They dangle freely and when looked upon closer actually lead nowhere.
+~
+E
+sacks~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+sack~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+walls~
+They are lined with clusters of the sack like objects.
+~
+E
+clusters~
+Each cluster contains about twenty of the small sacks.
+~
+E
+room~
+It looks like a big puffy wineskin.
+~
+S
+#4607
+Approaching the heart.~
+   The fleshy mass looms in the darkness ahead.  This room resembles
+a large tube and the walls seem to twitch from time to time.  The tube
+is smooth and cold to the touch but smells awful.  The floor and ceiling
+are the same and the tube seems to take a slight slope downward.  To the
+north, the large cage can barely be seen through the darkness, and it
+seems like a safer place to be than what lies ahead.
+~
+46 9 0
+D0
+~
+~
+0 -1 4604
+D2
+~
+~
+0 -1 4608
+E
+mass~
+It is rather large and looks disgusting.
+~
+E
+room~
+It is actually part of a tube heading toward the fleshy mass.
+~
+E
+tube~
+It heads toward the fleshy mass.
+~
+E
+floor~
+It is actually part of a tube heading toward the fleshy mass.
+~
+E
+ceiling~
+It is actually part of a tube heading toward the fleshy mass.
+~
+E
+cage~
+It looms high above with protrusions descending to the floor.
+~
+S
+#4608
+At the dead heart.~
+   In the middle of this room is the large fleshy mass.  It is covered
+in a green fuzzy substance and oddly does not emit any foul odors.
+Other than the green fuzzy substance, nothing more can be made out of
+the large decaying mass.  There are several tubes similar to the one to
+the north here, each heading off in another direction, but the others
+are contracted, making them too small to enter.
+~
+46 9 0
+D0
+~
+~
+0 -1 4607
+E
+mass~
+It is covered with a green fuzzy substance that looks like mold.
+~
+E
+tubes~
+They are in a constricted state, too small to enter.
+~
+S
+#4609
+Further down the digestive track.~
+   The slope suddenly gets very steep and begins to look more like a
+tunnel down than a slope.  The walls get very close here and are covered
+with a slimy substance.  Moisture fills the air and it is getting difficult
+to breath due to the massive stink which hangs in the immediate area.
+The walls and floor are soft to the touch and appear to be made of some
+type of dead organic material.  The tunnel continues down and a faint
+gurgling noise can be heard coming from the darkness below.
+~
+46 9 0
+D4
+~
+~
+0 -1 4604
+D5
+~
+~
+0 -1 4610
+E
+slime~
+It is clear.
+~
+E
+tunnel~
+The slope turns into the tunnel, which leads further down.
+~
+E
+floor~
+It is covered with a clear slime and smells bad.
+~
+E
+substance~
+The slime is clear.
+~
+E
+walls~
+They are rough and covered with a clear slime.  They smell bad too.
+~
+E
+slope~
+It is very steep here, better watch your step!
+~
+S
+#4610
+At the top of the stomach.~
+   The tunnel suddenly opens up to a gigantic room.  The lining of
+this room is very wrinkled and reeks of sulfur.  Far below your
+current position a pool of liquid can faintly be seen.  Looking down,
+there are many ledges leading off into various directions and each
+appears to be made of a torn section of the fleshy walls of this room.
+The tunnel leads back up, and it is probably safe to continue your
+descent, for now.
+~
+46 13 0
+D4
+~
+~
+0 -1 4609
+D5
+~
+~
+0 -1 4611
+E
+room~
+This is the biggest room you've seen inside this giant, rotting corpse.
+~
+E
+lining~
+It is wrinkled and looks like rotten flesh.  It smells terrible.
+~
+E
+pool~
+It is very far away and cannot be seen very well.
+~
+E
+ledges~
+They are made of torn sections of the fleshy walls.
+~
+E
+walls~
+They are decaying and smell awful.
+~
+E
+tunnel~
+It leads back up.
+~
+S
+#4611
+Within the stomach.~
+   Scaling the wrinkle lined walls leads to the central chamber of
+the once-pulsating stomach.  The air is filled with moisture and it
+is rather warm here.  There are several tears in the wall in all
+directions which have created ledge-like openings.  This room continues
+back up as well as further down, and the pool of liquid can faintly
+be seen.
+~
+46 9 0
+D0
+~
+~
+0 -1 4614
+D1
+~
+~
+0 -1 4613
+D2
+~
+~
+0 -1 4615
+D3
+~
+~
+0 -1 4612
+D4
+~
+~
+0 -1 4610
+D5
+~
+~
+0 -1 4616
+E
+pool~
+It looks rather large, but still no detail can be seen.
+~
+E
+openings~
+They are formed from tears in the wall.
+~
+E
+tears~
+They create ledges of torn flesh and small openings in all directions.
+~
+E
+walls~
+They look wrinkled and disgusting.
+~
+S
+#4612
+Within the stomach.~
+   This small alcove is carved from the wall of the stomach interior.
+It seems like some great force carved this area out, but in an
+uncontrolled manner because the tears are rough and strewn, not clean
+and precise.  It smells real bad here and the moisture makes it feel
+as if it is raining.
+~
+46 9 0
+D1
+~
+~
+0 -1 4611
+E
+tears~
+They look jagged and rather painful.
+~
+E
+alcove~
+It is carved from the wrinkled wall.
+~
+S
+#4613
+Within the stomach.~
+   This small alcove is carved from the wall of the stomach interior.
+It seems like some great force carved this area out, but in an
+uncontrolled manner because the tears are rough and strewn, not clean
+and precise.  It smells real bad here and the moisture makes it feel
+as if it is raining.
+~
+46 9 0
+D3
+~
+~
+0 -1 4611
+E
+tears~
+They look jagged and rather painful.
+~
+E
+alcove~
+It is carved from the wrinkled wall.
+~
+S
+#4614
+Within the stomach.~
+   This small alcove is carved from the wall of the stomach interior.
+It seems like some great force carved this area out, but in an
+uncontrolled manner because the tears are rough and strewn, not clean
+and precise.  It smells real bad here and the moisture makes it feel
+as if it is raining.
+~
+46 9 0
+D2
+~
+~
+0 -1 4611
+E
+tears~
+They look jagged and rather painful.
+~
+E
+alcove~
+It is carved from the wrinkled wall.
+~
+S
+#4615
+Within the stomach.~
+   This small alcove is carved from the wall of the stomach interior.
+It seems like some great force carved this area out, but in an
+uncontrolled manner because the tears are rough and strewn, not clean
+and precise.  It smells real bad here and the moisture makes it feel
+as if it is raining.
+~
+46 9 0
+D0
+~
+~
+0 -1 4611
+E
+tears~
+They look jagged and rather painful.
+~
+E
+alcove~
+It is carved from the wrinkled wall.
+~
+S
+#4616
+Above the pool of acid~
+   This area of the room is very near the bottom of the what
+appears to be giant stomach of the deceased corpse.  There are
+still the tears in the lining of the walls that create ledges
+in all directions.  The great room extends upward quite a ways,
+and below a vile green pool of a bubbling substance can be
+seen.  It reeks of acid and looks very dangerous.  Looking closer,
+small skeletons of animals can be seen floating in the muck.
+~
+46 9 0
+D0
+~
+~
+0 -1 4619
+D1
+~
+~
+0 -1 4618
+D2
+~
+~
+0 -1 4620
+D3
+~
+~
+0 -1 4617
+D4
+~
+~
+0 -1 4611
+D5
+There is a large pool of a bubbling green liquid.  It smells very acidic
+and you can see a humanoid skeleton floating in it.
+~
+~
+0 -1 4622
+E
+acid~
+Foul odor rises from the deadly acidic pool.  A piece of flesh
+drops down from the wall and instantly dissolves.
+~
+E
+pool~
+Foul odor rises from the deadly acidic pool.  A piece of flesh
+drops down from the wall and instantly dissolves.
+~
+E
+skeletons~
+They look to be about horse size and the flesh has been eaten
+off of them.
+~
+E
+walls~
+They are very wrinkled and smell awful.
+~
+E
+lining~
+It is very wrinkled and smells awful.
+~
+E
+tears~
+They are rough and random, not accurate and precise.
+~
+E
+stomach~
+It is huge and expands in all directions.
+~
+S
+#4617
+Further down the stomach.~
+   This ledge is a lot larger than the ones above, but smells
+and looks very similar.  The main difference is that this place
+is more rotted than the other.  The wrinkled lining of the wall
+hangs loosely from some type of frame which looks similar to
+the giant cage above.  It's grayish color adds to the gloomyness
+of this place.
+~
+46 9 0
+D1
+~
+~
+0 -1 4616
+E
+frame~
+It is probably a bone of some type.
+~
+E
+wall~
+It is rotten, wrinkled, and disgusting.
+~
+E
+lining~
+It is rotten, wrinkled, and disgusting.
+~
+E
+ledge~
+It is larger than the previous four above.
+~
+S
+#4618
+Further down the stomach.~
+   This ledge is a bit different than the rest.  The tears which
+created it are much deeper and there is actually another passage
+leading east.  The walls are still lined with wrinkled and rotting
+flesh and the smell has not improved.  However, within the flesh,
+small bits of crystal are present, and the further east the flesh
+goes, the more of the crystal that is present.
+~
+46 9 0
+D1
+~
+~
+0 -1 4623
+D3
+~
+~
+0 -1 4616
+E
+ledge~
+This one is different than the rest.  It is larger and deeper.
+~
+E
+tears~
+They are big and look painful.
+~
+E
+walls~
+They are lined with the same flesh as above.
+~
+E
+flesh~
+It has bits of crystal in it.
+~
+E
+crystal~
+The crystal looks like the flesh in crystal form.  Wierd.
+~
+S
+#4619
+Further down the stomach.~
+   This ledge is a lot larger than the ones above, but smells
+and looks very similar.  The main difference is that this place
+is more rotted than the other.  The wrinkled lining of the wall
+hangs loosely from some type of frame which looks similar to
+the giant cage above.  It's grayish color adds to the gloomyness
+of this place.
+~
+46 9 0
+D2
+~
+~
+0 -1 4616
+E
+frame~
+It is probably a bone of some type.
+~
+E
+wall~
+It is rotten, wrinkled, and disgusting.
+~
+E
+lining~
+It is rotten, wrinkled, and disgusting.
+~
+E
+ledge~
+It is larger than the previous four above.
+~
+S
+#4620
+Further down the stomach.~
+   This ledge is a lot larger than the ones above, but smells
+and looks very similar.  The main difference is that this place
+is more rotted than the other.  The wrinkled lining of the wall
+hangs loosely from some type of frame which looks similar to
+the giant cage above.  It's grayish color adds to the gloomyness
+of this place.
+~
+46 9 0
+D0
+~
+~
+0 -1 4616
+E
+frame~
+It is probably a bone of some type.
+~
+E
+wall~
+It is rotten, wrinkled, and disgusting.
+~
+E
+lining~
+It is rotten, wrinkled, and disgusting.
+~
+E
+ledge~
+It is larger than the previous four above.
+~
+S
+#4621
+At the spinal cord.~
+   Large strands of some strange substance fill this room.  There is one
+strand that is nearly fifty times the size of any of the others.  These
+all hang from above and some continue on to the floor while others simply
+dangle in the air.  Crackling sounds can be heard as they gently sway back
+and forth, almost sounding like static electricity.  This place smells
+rather rotten and the fleshy walls in all directions seem to indicate that
+it might be a good idea to go back south.
+~
+46 9 0
+D2
+~
+~
+0 -1 4604
+E
+strands~
+They dangle and sway and are very disturbing to look at.
+~
+E
+strand~
+It is huge and seems to be the source of the crackling noise.
+~
+E
+floor~
+Some of the strands reach the fleshy floor.
+~
+E
+walls~
+They are made of some sort of decaying flesh.  Icky.
+~
+S
+#4622
+In a bath of stomach acid.~
+   The acid is everywhere.  It gets all over your body and begins
+to eat away at your gear.  Within seconds it has penetrated your
+equipment and reached your flesh.  The stinging feel as it burns
+your flesh away paralyzes you with pain.  It is almost unbearable
+and you guess you have a very short time to live before it eats
+you alive.
+~
+46 15 0
+D4
+~
+~
+0 -1 4616
+E
+acid~
+It is all over your body and everywhere!
+~
+S
+#4623
+Further down the stomach.~
+   The passage takes a sudden turn down.  This would probably be
+the place where the intestines should begin, but the once fleshy
+walls are now almost entirely made of crystal.  The crystal
+is not shiny and bright, but more a dull flesh color.  It is hard
+to the touch and at least the smell seems to be contained within
+it's structures.
+~
+46 13 0
+D3
+~
+~
+0 -1 4618
+D5
+~
+~
+0 -1 4624
+E
+passage~
+It now heads down.
+~
+E
+walls~
+They are no longer made of rotten flesh, but of some sort of
+crystal material.
+~
+E
+crystal~
+It is the same color as the flesh, but has a crystal like quality
+about it.
+~
+S
+#4624
+A crystallized room.~
+   The normal walls of organic material are now replaced with an
+almost rock like crystal substance.  The crystal does not reflect
+any light, and looks like it was somehow formed from the once fleshy
+walls.  The air is no longer moist or stinky here and for the first
+time in a great while, you inhale a breath of what seems to be fresh
+air.  The room leads east and back up to the stomach area.
+~
+46 9 0
+D1
+~
+~
+0 -1 4625
+D4
+~
+~
+0 -1 4623
+E
+walls~
+Rather than the nasty rotted flesh, they are made of a crystal
+substance.
+~
+E
+crystal~
+It looks like it is half rock and half crystal and all flesh color.
+~
+E
+substance~
+It looks like it is half rock and half crystal and all flesh color.
+~
+S
+#4625
+A crystallized tunnel.~
+  The tunnel takes a sharp turn south at this point.  Ahead, the
+tunner looks to take yet another turn, probably following the
+path that the intestines would have taken, if they weren't somehow
+crystallized.
+~
+46 9 0
+D2
+~
+~
+0 -1 4626
+D3
+~
+~
+0 -1 4624
+E
+tunnel~
+It leads back west and turn south here.
+~
+S
+#4626
+A crystallized tunnel.~
+   The tunnel once again makes another sharp turn.  This time it
+leads back west.  The crystal walls are much duller here, almost
+like they are older than the crystals in the tunnel near the stomach
+area.  The floor here is beginning to show some wear and small broken
+pieces of the wall are scattered about indicating that someone or
+something at one time was trying to destroy the walls.
+~
+46 9 0
+D0
+~
+~
+0 -1 4625
+D3
+~
+~
+0 -1 4627
+E
+crystals~
+They are made of crystal and are rather dull.
+~
+E
+walls~
+They are made of crystal and are rather dull.
+~
+E
+pieces~
+They are about the size of small pebbles.
+~
+E
+floor~
+It is worn and small fragments of crystal are scattered about.
+~
+E
+tunnel~
+It leads north and west.
+~
+S
+#4627
+A crystallized tunnel.~
+   For once, the tunnel does not twist and turn, but instead is
+straight and narrow.  This section of the tunnel looks older than
+the rest and again the floor is worn considerably.  One odd thing
+about this place is that there are some scratches on the wall,
+which looks to be some sort of writing, albeit writing you have
+never seen before.  To the west, it looks like the tunnel takes
+another sharp turn.
+~
+46 9 0
+D1
+~
+~
+0 -1 4626
+D3
+~
+~
+0 -1 4628
+E
+writing~
+Hask3548sfhawd234ynvlv34.
+
+Hmm, make sense?
+~
+E
+floor~
+It is worn to the point it looks polished.
+~
+E
+scratches~
+They are actually some sort of writing.
+~
+E
+tunnel~
+To the west it takes another turn.
+~
+S
+#4628
+A crystallized tunnel.~
+   The tunnel takes yet another turn.  This time it bends to
+the north.  This time the bend is actually smooth as it curves,
+rather than forming a corner.  The occasional clicking sound can
+be heard from around the corner, and the walls, floor, and
+ceiling are polished and smooth, an odd sight, when compared with
+the rest of the tunnel.
+~
+46 9 0
+D0
+~
+~
+0 -1 4629
+D1
+~
+~
+0 -1 4627
+E
+floor~
+It is smooth and polished.
+~
+E
+ceiling~
+It is smooth and polished.
+~
+E
+tunnel~
+It turns to the north.
+~
+E
+walls~
+They are smooth and polished.
+~
+S
+#4629
+A crystallized tunnel.~
+   The tunnel abruptly ends here, but this is not a dead end.
+There is a large sized hole in the floor here and it looks big
+enough for a person to fit through.  Only darkness can be seen
+below and the smooth and polished walls of this room seem to
+be made around this hole.  This is probably the point where the
+small intesting changed into the large intestine.
+~
+46 9 0
+D2
+~
+~
+0 -1 4628
+D5
+~
+~
+0 -1 4630
+E
+hole~
+It is big enough for a large person to fit through.
+~
+E
+walls~
+Again, they are polished and smooth.
+~
+S
+#4630
+A crystallized tunnel.~
+   The hole has led to a very steep tunnel descending further down.
+This entire area is smooth and polished, so it might be wise to take
+extra precautions to not slide down into the darkness below.  Looking
+back up, nothing can be seen besides darkness and below, a faint
+intersection is present.  The clicking noises now seem like they are
+coming from all around.
+~
+46 9 0
+D4
+~
+~
+0 -1 4629
+D5
+~
+~
+0 -1 4631
+E
+hole~
+It leads to the intersetion below.
+~
+E
+intersection~
+It spans off in three directions, north, west, and east.
+~
+S
+#4631
+A crystallized intersection.~
+   The tunnel has now opened up to a series of crystallized halls.
+The halls are made of the crystal material, but look like they
+have been carefully crafted to become hallways.  The ceiling is
+about twenty feet tall and the walls are about twenty feet apart.
+This square like construction indicates that something intelligent
+carved out these halls.
+~
+46 9 0
+D0
+~
+~
+0 -1 4635
+D1
+~
+~
+0 -1 4638
+D3
+~
+~
+0 -1 4632
+D4
+~
+~
+0 -1 4630
+E
+material~
+It's made of the same material as the tunnel.
+~
+E
+tunnel~
+It has opened up into a hallway!
+~
+E
+ceiling~
+Yep, it's a ceiling.
+~
+E
+walls~
+They are about twenty feet apart.
+~
+E
+halls~
+They lead north, west, and east.
+~
+S
+#4632
+A crystallized hall.~
+   The western tunnel is slightly wider than the intersection.  A
+line is carved down the middle of this hallway in a straight pattern.
+There are also scratches along this line every four inches or so and
+yet it seems that they are not actually there when your foot touches
+the place where the scratches should be.  Ahead, the hallway takes
+a sharp turn north.
+~
+46 9 0
+D1
+~
+~
+0 -1 4631
+D3
+~
+~
+0 -1 4633
+E
+hallway~
+It takes a turn north ahead.
+~
+E
+scratches~
+They are seen every four inches, but when you go to touch them,
+you cannot even feel them, almost as if they don't exist.
+~
+E
+pattern~
+It looks like a straight line.
+~
+E
+line~
+It is about one half inch deep and extends down the hall.
+~
+S
+#4633
+A crystallized hall.~
+   The hallway takes a sudden turn north here.  In the corner of this
+room, there is a small table-like structure.  To the north, the hallway
+opens up to an elevated room where there appears to be a lot of odd-
+looking furniture.  The hallway continues back east and the line in
+the floor takes a ninety degree turn in the middle of the floor and
+heads toward the room north.  The scratches still line the etching and
+are present every four inches.
+~
+46 9 0
+D0
+~
+~
+0 -1 4634
+D1
+~
+~
+0 -1 4632
+E
+scratches~
+Again, you cannot feel them, yet you can see them.
+~
+E
+line~
+It heads north.
+~
+E
+hallway~
+It goes north and east.
+~
+E
+walls~
+They are still made of the crystallized fleshy material.
+~
+E
+furniture~
+It looks to be made of the same substance the walls are.
+~
+E
+room~
+The room is to the north.
+~
+E
+vase~
+It's empty and somehow attached to the table!
+~
+E
+table~
+It is not made of wood, but of the crystallized substance.  There
+is a small vase on the table.
+~
+S
+#4634
+A crystallized outpost.~
+   This room appears to be more of an outpost than a normal room.  The
+floor curves upward and stairs lead to a platform in the middle of the
+room.  On this platform, a rail extends on the outside edge and there
+are several weapon and armor racks in the middle.  Some strange-looking
+objects are scattered about the platform and look to be some equivalent
+to chairs, but no human could sit on one of them comfortably.  The outpost
+is pretty basic and since there is only one exit from this place, you
+can't help but wonder why would an outpost be built here?
+~
+46 9 0
+D2
+~
+~
+0 -1 4633
+E
+objects~
+They look like devices to sit on, but not if you're human!
+~
+E
+racks~
+Some look like weapon racks and other look like armor racks, no
+matter because they are all empty.
+~
+E
+rail~
+The rail lines the platform, probably to keep things from falling
+off.
+~
+E
+platform~
+It is large and in the middle of the room.
+~
+E
+stairs~
+They lead from the floor to the platform.
+~
+E
+floor~
+It takes a slight curve upward as it enters the room.
+~
+S
+#4635
+A crystallized hall.~
+   The northern tunnel is of the same build as the intersection,
+and is as featureless as it too.  To the north, it looks like the
+hall ends and the intersection is back south.  The air here is
+stagnant, almost like it has not been refreshed in quite some time.
+Looking closer at the walls, it is noticed that they are made up
+of the insides of the corpse as well.
+~
+46 9 0
+D0
+~
+~
+0 -1 4636
+D2
+~
+~
+0 -1 4631
+E
+walls~
+Somehow the flesh was turned into this wall, but how and by who?
+~
+E
+wall~
+Somehow the flesh was turned into this wall, but how and by who?
+~
+S
+#4636
+A crystallized hall.~
+   The northern hall has come to an end.  This dead end is pretty
+undecorated and there is no real choice but to turn back.  The
+floor here is a little different than the rest of the hall because
+there is a carpet like object on the ground.  Other than the carpet,
+nothing else is in this room.
+~
+46 9 0
+D2
+~
+~
+0 -1 4635
+D5
+~
+carpet~
+8 -1 4637
+E
+carpet~
+It is black in color and is made of some sort of organic material.
+There are small indents on it almost like it was hiding something,
+but you'd have to move it to be sure.
+~
+E
+floor~
+A large carpet is on the floor.
+~
+S
+#4637
+A crystallized storage room.~
+   This area seems to be some sort of storage room.  There are
+shelves on all the walls containing various items and several
+boxes strewn about.  Although nothing looks that valuable, or
+even useful, there are several items which you have never seen
+before.  The walls here are not the usual flesh color, but instead
+have been painted black.
+~
+46 9 0
+D4
+A large carpet looks like it could cover the way out of this room.
+~
+carpet~
+8 -1 4636
+E
+carpet~
+It looks like it can be moved to conceal this room.
+~
+E
+shelves~
+There is one on each wall and they mostly contain junk.
+~
+E
+junk~
+It's junk, old pieces of metal, some rocks, even a picture of some
+gimpy looking fellow with bugs all over him.
+~
+E
+boxes~
+There is nothing of value in them.
+~
+E
+items~
+A wierd symbol, a piece of glowing air, and some green fuzzy
+looking nail are here, but you dare not touch them.
+~
+E
+symbol~
+It looks to be a holy symbol of sorts.
+~
+E
+nail~
+It's green and fuzzy.  Wierd.
+~
+E
+air~
+It glows unlike anything you have seen before.
+~
+S
+#4638
+A crystallized hall.~
+   The eastern hall takes a slight descent.  The walls here are
+slightly different than the previous areas because the crystal seems
+almost like stone.  The fleshy color now is growing darker and
+darker with each step east.  Looking east down the hallway, there is no
+end in sight.  The slope continues downward and you suddenly realize
+where about in the corpse you should be and it doesn't bring any
+plesant thoughts.
+~
+46 9 0
+D1
+~
+~
+0 -1 4639
+D3
+~
+~
+0 -1 4631
+E
+walls~
+They look more like solid rock than crystallized flesh.
+~
+E
+crystal~
+It now resembles stone.
+~
+E
+slope~
+It continues down.
+~
+E
+hallway~
+It continues down.
+~
+S
+#4639
+A crystallized hall.~
+   The eastern hallway continues down into the darkness.  Ahead,
+it looks like it curves south.  The walls now look like they have
+some sort of runes etched into them.  They make no sense and it
+is probably not possible to translate them, if they are even meant
+to be writing.
+~
+46 9 0
+D1
+~
+~
+0 -1 4640
+D3
+~
+~
+0 -1 4638
+E
+hallway~
+It goes east and west.
+~
+E
+walls~
+There are some runes on them.
+~
+E
+runes~
+They look more like random symbols than actual writing.
+~
+S
+#4640
+A bend in the crystallized hall.~
+   The hallway takes a turn southward.  Looking at the end of this
+hall, a glowing sphere can be seen.  There are more of the runes on
+the walls here and the floor has suddenly switched from the polished
+crystal to actual tiles which are dark grey in color and have a paper
+feel to them.  Upon closer inspection, the walls are now actually
+very similar to the floor and some of them are actually beginning to
+peel loose.
+~
+46 9 0
+D2
+~
+~
+0 -1 4641
+D3
+~
+~
+0 -1 4639
+E
+sphere~
+It glows a faint blue color.
+~
+E
+runes~
+Again, they don't look like they were meant to be writing.
+~
+E
+walls~
+They contain runes and seem to be made of a paper like substance.
+~
+E
+floor~
+It is made of a paper like substance, which is broken down into tiles.
+~
+S
+#4641
+A crystallized hall.~
+   The hallway now heads southward.  The runes are becoming more and
+more common the further down this hall you travel.  The walls, floor,
+and ceiling are now entirely made of the paper like gray material,
+which reminds you of a wasp's nest.  Far to the south, the glowing
+blue sphere is hovering above the ground.
+~
+46 9 0
+D0
+~
+~
+0 -1 4640
+D2
+~
+~
+0 -1 4642
+E
+runes~
+They are everywhere!
+~
+E
+walls~
+It looks and feels like a wasp's nest.
+~
+E
+floor~
+It looks and feels like a wasp's nest.
+~
+E
+ceiling~
+It looks and feels like a wasp's nest.
+~
+E
+sphere~
+It now looks like it is as high as the room is tall.
+~
+S
+#4642
+A crystallized hall.~
+   The hall seems to continue on forever.  There has been no real
+change in the hallway scenery, but the blue sphere is now almost
+within reach!  Taking a closer look around, there are several
+scratches all around this room and it would appear that there was
+a great battle here in the past.
+~
+46 9 0
+D0
+~
+~
+0 -1 4641
+D2
+~
+~
+0 -1 4643
+E
+sphere~
+It is close enough to see that it looks big enough to surround a
+human sized victim.
+~
+E
+scratches~
+They look like sword slashes, spear jab holes, and axe hacks.
+~
+S
+#4643
+Approaching a shimmering portal.~
+   The light from the blue sphere fills this room.  Although the
+sphere is actually still in the next room, the intensity of its
+light nearly blinds you.  The walls, floor, and ceiling are all
+illuminated by this light and assume a bluish glow.  The remains
+of a gate are scattered on the floor as if at one time someone
+or something wanted to keep people away from the sphere, or perhaps
+to keep people in.
+~
+46 9 0
+D0
+~
+~
+0 -1 4642
+D2
+~
+~
+0 -1 4644
+E
+sphere~
+You have almost reached it!
+~
+E
+walls~
+They look blue when bathed with the light from the sphere.
+~
+E
+ceiling~
+It looks blue when bathed with the light from the sphere.
+~
+E
+floor~
+It looks blue when bathed with the light from the sphere.
+~
+E
+gate~
+It is smashed on the floor, something obviously destroyed it.
+~
+S
+#4644
+Before a shimmering portal.~
+   The bluish sphere is actually a large portal of some sorts.
+Peeking through, a large staging room can be seen.  There are
+many Kitzanti on the other side preparing for invasion.  The room
+looks very similar to the halls, made of the papery substance.
+It is probably not safe to enter the portal at this time.
+~
+46 9 0
+D0
+~
+~
+0 -1 4643
+E
+sphere~
+It is actually a portal.
+~
+E
+portal~
+It is large and fills the room, and you can see another world
+through it.
+~
+S
+#4645
+In the center of the brain cavity.~
+   The decayed remains of a brain fill this room.  The large gray mass
+of folded tissue rests in the back corner.  Once filled with activity,
+this now dead and decaying organ looks like it has seen better days.
+The walls of this domed room are made entirely of bone.  The smell in
+here is nearly unbearable, but other than the dead brain, the room seems
+very clean.
+~
+46 9 0
+D3
+~
+~
+0 -1 4646
+E
+brain~
+It looks like a folded mass of dead tissue.
+~
+E
+tissue~
+It is decaying.
+~
+E
+organ~
+It looks like a folded mass of dead tissue.
+~
+E
+walls~
+They are made of bone.
+~
+S
+#4646
+Inside the brain cavity.~
+   This featureless room is rather dull.  The walls are made of bone, and
+there is an opening to the east.  Glancing in that direction, what appears
+to be a mass of decaying flesh can be seen.  The floor here is soft and
+squishy, except for the slope which led here from below.
+~
+46 9 0
+D1
+~
+~
+0 -1 4645
+D5
+~
+~
+0 -1 4647
+E
+walls~
+They are made of bone.
+~
+E
+opening~
+It leads to another, bigger room.
+~
+E
+mass~
+It looks like a rotting brain.
+~
+E
+flesh~
+It looks like a rotting brain.
+~
+E
+floor~
+It is made of some sort of flesh, but seems solid.
+~
+E
+slope~
+It leads to the room below.
+~
+S
+#4647
+Near the brain cavity.~
+   An opening in the floor here is filled with a giant slime covered
+strand.  The walls are very solid and unlike the previous rooms, do
+not contain any claw or bite marks.  Upon closer inspection, the walls
+appear to be made of bone.  There is a giant crack on the northern
+section of the wall, probably from a massive blow to that area.  The
+crack is too small to fit through, but is filled with the same slime
+which covered the giant strand.
+~
+46 9 0
+D4
+~
+~
+0 -1 4646
+D5
+The strand of some organic material leads down to the optic nerve.
+It might be possible to climb down.
+~
+strand~
+11 -1 4648
+E
+opening~
+It looks like it leads to the area behind the optic nerve.
+~
+E
+strand~
+It is slime covered and leads to the room below.
+~
+E
+slime~
+It is colorless and odorless.
+~
+E
+walls~
+They are made of bone.
+~
+E
+crack~
+It is about half your size and filled in with a colorless and
+odorless slime.
+~
+S
+#4648
+Behind the optic nerve.~
+   The nasal passage has suddenly opened up to a makeshift room.  From
+here, light from outside shines in through two large openings on the
+western wall.  A large strand of material protrudes from the eastern wall
+to these openings.  The strands are very clean and seem to be coated with
+some sort of slime.  The walls in the room are as clean as those in the
+nasal passage and the same claw and bite marks are present.
+~
+46 9 0
+D4
+One of the strands protrudes upward, almost begging you to climb to
+the dangers above.
+~
+strand~
+11 -1 4647
+D5
+~
+~
+0 -1 4649
+E
+room~
+It opened up from the nasal passage.
+~
+E
+openings~
+They look like large eye sockets.
+~
+E
+strand~
+It is rather large and is actually two strands stuck together with
+the slime which covers them.
+~
+E
+slime~
+It is clear and has no odor.
+~
+E
+walls~
+They are clean, but the claw and bite marks are everywhere.
+~
+E
+marks~
+The claw and bite marks look like an insect made them.
+~
+E
+strand~
+It is rather large and is actually two strands stuck together with the
+slime which covers them.  Looking closer, it looks like it there is a
+portion of the strand which rises through an opening in the ceiling.
+You think it may be possible to climb it up.
+~
+S
+#4649
+Inside the nasal passage.~
+   The nasal passage of this rotting corpse seems like a gigantic
+tunnel.  There is no mucus or other bodily fluids here, and the walls
+of this place seem very clean, as if someone or something took a lot
+of time cleaning it up.  There are some strands of what look like nose
+hair on the ground and the passage continues up. Taking a closer look
+at the wall, some claw marks can be seen as well as some bite marks.
+~
+46 9 0
+D4
+~
+~
+0 -1 4648
+D5
+~
+tooth~
+2 4606 4601
+E
+tunnel~
+It's the nasal passage.
+~
+E
+walls~
+They are very clean, but there appears to be some sort of claw
+marks lining them followed by some bites.
+~
+E
+strands~
+They are about three feet long and two inches in diameter.
+~
+E
+hair~
+They are about three feet long and two inches in diameter.
+~
+E
+marks~
+They look almost like an insect made them.
+~
+E
+marks~
+The claw and bite marks look like an insect made them.
+~
+S
+#0
+$~

@@ -1,0 +1,22 @@
+#1700
+templar initiate~
+A Templar Initiate~
+A Templar Initiate stands here on sentry duty.
+~
+Gazing out at the world from beneath a visored helmet this man
+is little more than a boy.  Heavily armored from head to foot
+it is too difficult to discern any actual features besides the
+dark brown irises.  A rather large sword is strapped to his back
+and oddly enough he looks as though he can and will use it at
+any given moment.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

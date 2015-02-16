@@ -1,0 +1,203 @@
+#5100
+longsword commoner~
+A commoner's longsword~
+A commoner's longsword made of adamantite has been left here.~
+~
+5 0 8193
+0 1 8 3
+2 1000 500
+50
+A
+18 1
+A
+19 1
+#5101
+longsword noble~
+A noble's longsword~
+A drow noble's longsword made of adamantite lies here~
+~
+5 0 8193
+0 1 8 3
+2 1500 700
+50
+A
+18 2
+A
+19 2
+#5102
+whip snake twoheaded~
+2 snake headed whip~
+A whip with two snakes heads lies here.~
+~
+5 65 8193
+0 2 6 2
+0 4750 2000
+50
+A
+18 2
+A
+19 2
+#5103
+whip snake threeheaded~
+3 snake headed whip~
+A whip with three snake heads has been left here~
+~
+5 65 8193
+0 2 7 2
+0 5000 2740
+50
+A
+18 2
+A
+19 2
+#5104
+whip snake fourheaded~
+4 snake headed whip~
+A whip with four snake heads has been left here~
+~
+5 65 8193
+0 2 8 2
+0 10250 5000
+50
+A
+18 1
+A
+19 1
+#5105
+longsword black~
+black longsword~
+A black longsword has been carelessly left here~
+~
+5 65 8193
+0 2 8 3
+0 10250 1000
+50
+A
+18 1
+A
+19 1
+#5106
+whip snake fiveheaded~
+5 snake headed whip~
+A whip with 5 snake heads is lying here~
+~
+5 577 8193
+0 3 6 2
+0 32000 5000
+50
+#5107
+whip snake sixheaded~
+6 snake headed whip~
+A whip with six snake heads has been dropped here~
+whip makes some strange noise --- Fitt Fitt.~
+5 577 8193
+0 4 5 2
+0 50000 5000
+50
+A
+3 -2
+#5108
+bracers iron~
+A pair of bracers~
+A pair of bracers has been dropped here~
+~
+9 65 257
+2 0 0 0
+3 2000 100
+50
+#5109
+gauntlets iron~
+A pair of gauntlets~
+A pair of gauntlets has been dropped~
+~
+11 1 129
+0 0 0 0
+2 10000 300
+50
+A
+1 2
+#5110
+wand lightning blue silver~
+A silvery blue wand~
+A silvery blue wand has been dropped in the dirt~
+~
+3 64 16385
+10 3 3 30
+1 4000 600
+50
+#5111
+helmet helm~
+A small helmet~
+A small helmet lies up against a rock~
+~
+9 64 17
+1 0 0 0
+5 6000 2000
+50
+A
+3 2
+#5112
+ring ruby~
+A small ruby ring~
+A small ruby ring lies in the dirt~
+~
+11 64 3
+0 0 0 0
+1 20000 1000
+50
+A
+13 20
+#5113
+dagger sacrificial~
+spider shaped dagger~
+A dagger with spider leg shaped blades lies on the ground~
+dagger makes a big spider shadow on the ground.~
+5 576 8193
+0 3 5 11
+2 12000 5500
+50
+A
+18 3
+A
+19 3
+#5114
+hat green~
+A small bright green hat~
+A small bright green hat lies in the dirt~
+~
+11 128 17
+0 0 0 0
+1 4000 1600
+50
+A
+9 -15
+A
+17 -2
+#5115
+halberd~
+halberd~
+A mighty halberd lies against the wall.~
+~
+5 320 8193
+0 3 7 3
+16 12000 400
+50
+A
+18 2
+A
+19 2
+#5116
+banded mail~
+A glowing suit of banded mail~
+A glowing suit of banded mail lies on the ground.~
+~
+9 65 9
+7 0 0 0
+10 36000 4480
+50
+A
+2 2
+A
+17 -3
+#0
+$~

@@ -1,0 +1,479 @@
+#8000
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+80 576 0
+S
+#8001
+The entrance~
+	This is the entrance to Sonicity. Welcome. There is a very big tree
+here.
+~
+80 0 2
+D1
+~
+~
+0 -1 6130
+D3
+~
+~
+0 -1 8002
+D4
+~
+~
+0 -1 9000
+S
+#8002
+Path to city centre~
+	The view here is exceptionally nice.
+The peaceful surroundings make you feel comfortable.
+~
+80 0 2
+D1
+~
+~
+0 -1 8001
+D3
+~
+~
+0 -1 8003
+S
+#8003
+Path to city centre~
+        The view here is exceptionally nice.
+The peaceful surroundings make you feel comfortable.
+~
+80 0 2
+D1
+~
+~
+0 -1 8002
+D3
+~
+~
+0 -1 8004
+S
+#8004
+City centre~
+	You have reached the centre. There are people walking 
+pass you all the time, they look very busy.
+~
+80 0 1
+D0
+~
+~
+0 -1 8005
+D1
+~
+~
+0 -1 8003
+D2
+~
+~
+0 -1 8006
+D3
+~
+~
+0 -1 8008
+S
+#8005
+City centre~
+        You have reached the centre. There are people walking 
+pass you all the time, they look very busy.
+~
+80 0 2
+D2
+~
+~
+0 -1 8004
+D3
+~
+~
+0 -1 8009
+S
+#8006
+City centre~
+        You have reached the centre. There are people walking 
+pass you all the time, they look very busy. To the south is an
+Armour Shop.
+~
+80 0 2
+D0
+z~
+~
+0 -1 8004
+D2
+~
+~
+0 -1 8014
+D3
+~
+~
+0 -1 8007
+S
+#8007
+City centre~
+        You have reached the centre. There are people walking 
+pass you all the time, they look very busy. To the south is a
+small General Store.
+~
+80 0 2
+D0
+~
+~
+0 -1 8008
+D1
+~
+~
+0 -1 8006
+D2
+~
+~
+0 -1 8016
+D3
+~
+~
+0 -1 8010
+S
+#8008
+City centre~
+        You have reached the centre. There are people walking
+pass you all the time, they look very busy.
+~
+80 0 2
+D0
+~
+~
+0 -1 8009
+D1
+~
+~
+0 -1 8004
+D2
+~
+~
+0 -1 8007
+D3
+~
+~
+0 -1 8011
+S
+#8009
+City centre~
+        You have reached the centre. There are people walking
+pass you all the time, they look very busy. To the north is a
+new Weapon Shop.
+~
+80 0 2
+D0
+~
+~
+0 -1 8015
+D1
+~
+~
+0 -1 8005
+D2
+~
+~
+0 -1 8008
+D3
+~
+~
+0 -1 8012
+S
+#8010
+City centre~
+        You have reached the centre. There are people walking
+pass you all the time, they look very busy. To the south is a
+very high tower. The Cop's Tower.
+~
+80 0 2
+D0
+~
+~
+0 -1 8011
+D1
+~
+~
+0 -1 8007
+D2
+~
+~
+0 -1 8018
+S
+#8011
+City centre~
+        You have reached the centre. There are people walking
+pass you all the time, they look very busy.
+~
+80 0 2
+D0
+~
+~
+0 -1 8012
+D1
+~
+~
+0 -1 8008
+D2
+~
+~
+0 -1 8010
+D3
+A big Well
+~
+~
+0 -1 8024
+S
+#8012
+City centre~
+        You have reached the centre. There are people walking
+pass you all the time, they look very busy. To the north is a
+very famous restaurant.
+~
+80 0 2
+D0
+~
+~
+0 -1 8017
+D1
+~
+~
+0 -1 8009
+D2
+~
+~
+0 -1 8011
+S
+#8014
+The Armoury~
+   The armoury with all kinds of armours on the walls and in the window.  You
+see helmets, shields and chain mails.  To the north is the main street.
+On the wall is a small note.
+~
+80 8 2
+D0
+~
+~
+0 -1 8006
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#8015
+The Weapon Shop~
+   You are inside the weapon shop.  There is a small note on the counter.	
+~
+80 8 2
+D2
+~
+~
+0 -1 8009
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#8016
+The General Store~
+   You are inside the general store.  All sorts of items are stacked on shelves
+behind the counter, safely out of your reach.
+A small note hangs on the wall.
+~
+80 8 2
+D0
+~
+~
+0 -1 8007
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#8017
+Sonic's restaurant~
+	The restaurant is full at the moment. 
+The smell of food fills the room, you just wish you have booked a table.
+There is a little sign here.
+~
+80 8 2
+D2
+~
+~
+0 -1 8012
+E
+sign~
+The sign reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+~
+S
+#8018
+Cop's Tower~
+   You see a very high tower in front of you. You notice that
+the top level is a prison, because the windows there are full of iron bars.
+There is a staircase here leading to the wharf of the sonicity.
+There is a sign here.
+~
+80 0 2
+D0
+~
+~
+0 -1 8010
+D4
+~
+~
+0 -1 8019
+D5
+~
+~
+0 -1 8201
+E
+sign~
+The sign reads:
+  This is a tower for the cops to rest. The upper floor is a prison.
+NO ONE CAN ENTER THE PRISON! THERE ARE VERY DANGEROUS PEOPLE IN IT.
+~
+S
+#8019
+The Second Floor of the Tower~
+   You are in a very high tower. You see some beds lying on the ground.
+There is a stair going upwards. The exits are up and down here.
+~
+80 8 2
+D4
+~
+~
+0 -1 8020
+D5
+~
+~
+0 -1 8018
+S
+#8020
+The Third Floor of the Tower~
+   You are in a very high tower. You see some beds lying on the ground.
+You can hear some noises upstairs, very horrible noises just like some chains
+hitting each other. The stair continues upwards. The exits are up and down here.
+~
+80 8 2
+D4
+~
+~
+0 -1 8021
+D5
+~
+~
+0 -1 8019
+S
+#8021
+The Fourth Floor of the Tower~
+   You are in a very high tower. You see some beds lying on the ground.
+You can hear some noises upstairs, very horrible noises just like some chains
+hitting each other. The stair continues upwards to a large iron door.
+~
+80 8 2
+D4
+~
+~
+0 -1 8022
+D5
+~
+~
+0 -1 8020
+S
+#8022
+The door~
+   You are on the top floor of the cop's tower, this is the leader's office
+and also the entrance to the jail.  The sound of clanking chains is almost
+maddening, and the stench of unwashed bodies drifting through the iron door 
+to the north almost makes you sick to your stomach.
+~
+80 8 2
+D0
+~
+door~
+2 8001 8023
+D5
+~
+~
+0 -1 8021
+S
+#8023
+Prison~
+   You are inside the prison. It is very dirty. You discover that the floor
+is full of chains. What? All the prisoners are not tired with chains!
+~
+80 8 2
+D2
+~
+~
+1 -1 8022
+S
+#8024
+Well~
+  You are standing near a big well. The well is the only way to go to the
+Chess Kingdom. To the west lies the Quest of the Holy Grail.
+~
+80 8 2
+D1
+~
+~
+0 -1 8011
+D3
+~
+~
+0 -1 8600
+D5
+Chess Kingdom
+~
+~
+0 -1 2321
+S
+#8099
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+80 576 0
+S
+#0
+$~

@@ -1,0 +1,185 @@
+#6700
+acolyte man~
+An Acolyte~
+An acolyte is walking casually around the cathedral.
+~
+  The young man is wearing a white surplice with lace inserts
+over the long, black cassock.  The acolyte is an aspiring
+member of the clergy and performs different kinds of altar
+duties.
+~
+16392 8220 1000 Y
+40 -12 0 25d40+4700 5d5+75
+15000 595000
+8 8 1
+69 192 5d5+150 2
+1 5 15 81
+1 5 15 22
+0 0 0 512
+K
+0 0 0 0 0 0 0
+#6701
+deacon man~
+A Deacon~
+A deacon stands here with his arms crossed.
+~
+  The deacon is wearing an alb and a long, wide-sleeved tunic.
+He wears a stole lined with gold decorations over his left
+shoulder, which is tied cross-wise at his right side under
+the cincture.
+~
+16392 8220 1000 Y
+43 -14 0 30d30+5500 5d7+89
+35000 675000
+8 8 1
+69 0 7d7+185 2
+1 5 20 81
+1 5 20 22
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#6702
+priest man~
+A Priest~
+A priest walks determinently over the cathedral floor.
+~
+  The middle-aged man wears a chasuble embroidered with the
+christian cross in gold over his alb.  He wears a stole lined
+with gold decorations around his neck.  The cincture around
+his waist is worn over the stole.
+~
+16392 8380 1000 Y
+51 -16 0 25d45+5350 7d7+112
+65000 1850000
+8 8 1
+69 128 3d13+295 4
+1 5 25 22
+1 5 15 81
+1 2 20 119
+1 6 5 187
+0 0 0 544
+K
+0 0 0 0 0 0 0
+#6703
+priest high man~
+A High Priest~
+An old priest is standing here, facing west towards the nave with his arms
+crossed and a solemn look on his face.
+~
+  The grey-haired man, possibly in his fifties and with a
+long, well-tended beard, is wearing a heavily decorated
+chasuble over his alb.  A stole lined with gold decorations
+hangs around his neck.  The cincture around his waist is
+worn over the stole.
+~
+16394 8380 1000 Y
+55 -19 0 35d50+6750 7d9+135
+200000 2350000
+8 8 1
+69 939541696 5d10+330 3
+1 6 10 187
+1 2 30 190
+1 5 15 22
+0 1 0 480
+R
+509
+K
+0 0 0 0 0 0 0
+#6704
+archbishop arch bishop man~
+The Archbishop~
+The Archbishop is kneeling here with his head bowed down in prayer.
+~
+  An old, grey-haired man in his sixties and with a long,
+well-tended beard is wearing a chasuble that is heavily
+embroidered with gold on the chest, while it is made of
+gold-cloth around the neck and hanging over his arms.  He
+is wearing a golden mitre.
+~
+16394 268476588 1000 Y
+60 -19 -2 50d50+18500 8d8+200
+1200000 5000000
+6 8 1
+69 939545792 20d20+500 2
+1 6 3 85
+1 5 30 190
+0 1 0 480
+R
+509
+K
+0 0 0 0 0 0 0
+#6705
+skeleton skeletal magi king wiseman larvandad~
+The Skeletal Magi~
+A blank of primal clay stands here, waiting to be shaped
+~
+  As your eyes concentrate on the skeleton a crimson flash
+of light flows from its eye-sockets and strikes you.
+~
+50348042 411148476 1000 Y
+70 -21 -5 30d30+15000 10d10+250
+0 1000000
+8 8 1
+53 943724716 10d10+500 1
+1 3 50 190
+0 1 0 992
+R
+511
+K
+0 0 0 0 0 0 0
+#6706
+skeleton skeletal magi king wiseman gushnasaph~
+The Skeletal Magi~
+A blank of primal clay stands here, waiting to be shaped
+~
+  As your eyes concentrate on the skeleton a crimson flash
+of light flows from its eye-sockets and strikes you.
+~
+50348042 411148476 1000 Y
+70 -21 -5 30d30+15000 10d10+250
+0 1000000
+8 8 1
+53 943724716 10d10+500 1
+1 3 50 190
+0 1 0 992
+R
+511
+K
+0 0 0 0 0 0 0
+#6707
+skeleton skeletal magi king wiseman hormisdas~
+The Skeletal Magi~
+A blank of primal clay stands here, waiting to be shaped
+~
+  As your eyes concentrate on the skeleton a crimson flash
+of light flows from its eye-sockets and strikes you.
+~
+50348042 411148476 1000 Y
+70 -21 -5 30d30+15000 10d10+250
+0 1000000
+8 8 1
+53 943724716 10d10+500 1
+1 3 50 190
+0 1 0 992
+R
+511
+K
+0 0 0 0 0 0 0
+#6740
+god~
+God~
+God exists.
+~
+  God is nothing like South Park.
+~
+8 1073741823 1000 Y
+70 -50 -100 3333d3333+333333333 3d3+3
+0 3
+6 6 1
+67 8192 99d99+99 1
+1 1 100 190
+0 1 1073741817 1
+K
+0 0 0 0 0 0 0
+#0
+$~

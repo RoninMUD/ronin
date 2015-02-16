@@ -1,0 +1,2141 @@
+#2999
+A temporary name~
+A temporary description
+~
+30 512 0
+S
+#3000
+Trade and Barter Shop~
+   Stepping inside this wondrous establishment, you can't help but notice
+an odor of which is much more foul than any mob you've fallen.  Pictures
+of famous long gone legends hang on the walls, dusty and forgotten.  Piles
+of empty boxes scatter all over the floor, along with crates filled with
+interesting wares of which customers can purchase. Looking up, you see a
+huge, overweight man sitting behind a desk, staring intently at you.  He
+lets off a rip-roarer and lets off a hearty laugh. 
+~
+30 72 0
+D2
+~
+~
+0 -1 3155
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#3001
+The Temple Of Midgaard~
+   You feel dwarfed as you stand in the center of this imposing church.
+Its ebony floor is shattered by a deep fiery rift, whose brilliant flame
+is reflected and refracted by the arching marble walls.   You feel a
+welcoming tranquility in the air as you stand before this wondrous
+landmark, almost like a protective guardian that will not allow no harm in
+its vacinity.  However, if you wander astray too far, you will no longer
+be susceptible to the temple's protection.  Forsaken souls come
+here to beg for the renewal of their lifeless mortal shells. If the Gods
+are generous they may grant such a request in return for a small amount of
+that character's former power.  A set of stairs consumed with flames, 
+descends below,  leading to what appears to be altar.  Nearby 
+to your west position is a donation rooms for adventures in need, 
+given by the generous and  humble citizens of Midgaard.  To your 
+east lies a street that travels well  into the heart of this city.
+~
+30 76 0
+D1
+~
+~
+0 -1 3092
+D3
+~
+~
+0 -1 3099
+D5
+~
+~
+0 -1 3054
+S
+#3002
+Cleric's Inner Sanctum~
+   This is the inner sanctum.  A picture of the mighty Thor, is hanging on
+the wall, just above the altar which is set against the western wall.  A well
+in the middle of the floor leads down into darkness.  Vile smells waft from
+the depths.
+~
+30 12 0
+D1
+You see your favorite place, the bar of divination.
+~
+~
+0 -1 3003
+S
+#3003
+Cleric's Bar~
+   The bar is one of the finest in the land, lucky it is members only.  Fine
+furniture is set all around the room.  A small sign is hanging on the wall.
+~
+30 12 0
+D2
+You see the entrance.
+~
+~
+0 -1 3004
+D3
+You see the inner sanctum.
+~
+~
+0 -1 3002
+E
+sign~
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialities, and tell the price of each.
+~
+S
+#3004
+Entrance to Cleric's Guild~
+  The large entrance is a grand place made from polished ivory that's been
+imported here from the distant Ivory Tower.  On the west wall you see massive
+iron doors.  Above them is a plaque with some writings on it.  The exit leads
+east to the temple square.  A small entrance to the bar is in the northern wall.
+~
+30 8 0
+D0
+You see the bar, richly decorated with really stylish furniture.
+~
+~
+0 -1 3003
+D1
+You see the Temple Square.
+~
+~
+0 -1 3005
+D3
+~
+doors~
+3 0 29700
+D4
+~
+~
+0 -1 3090
+E
+plaque~
+The faded writing on it reads:
+ "Here within lies Thelgar Wolfslayer, scourge of the barbarians, keeper of the
+ seven sacred scrolls, guardian of the light, slain in battle with orcs in
+ Haon-Dor forest in the twenty-second day of the month of the Dragon in the
+ year of the Howling Wolf.  His deeds will not be forgotten."
+~
+E
+doors~
+The lock looks outdated and the doors old and brittle.  A swift kick would
+probably break them right off the hinges.
+~
+S
+#3005
+South of Temple~
+   You can see the heights and peaks of the temple in the distance, lying
+north from here.  Frantic clerics race past you and almost knocking you
+down as they head over there -- droping their scrolls and herbal
+ingredients in the process.  The entrance of the Cleric guild is here, its
+doors wide open to those adventures willing to dedicate their lives to
+healing and moral codes -- its guild lies directly to your west. The path
+north will lead you to the temple and the northern portion of town, while
+the south road seems less busy.
+~
+30 0 1
+D0
+~
+~
+0 -1 3092
+D2
+~
+~
+0 -1 3025
+D3
+You see the entrance to the Clerics Guild.
+~
+~
+0 -1 3004
+S
+#3006
+Entrance to the Grunting Boar Inn~
+   You are standing in the entrance hall of the Grunting Boar Inn.  The hall
+has been wisely decorated with simple but functional furniture.  The traffic and
+noise which assail you here is amazing, especially the raucous sounds emanating
+from the local pub, which lies to the east. A small staircase leads up to the reception.
+~
+30 8 0
+D1
+Surprise! You see the bar.
+~
+~
+0 -1 3007
+D3
+~
+~
+0 -1 3150
+D4
+You see the room reception.
+~
+~
+0 -1 3008
+S
+#3007
+The Grunting Boar~
+   You are standing in the bar.  The bar is set against the northern wall, old
+archaic writing, carvings and symbols cover its top.  A fireplace is built into
+the western wall, and through the southeastern windows you can see the busy 
+market square.  This bar existed for as long as Midgaard has been standing and
+through the years have become a landmark and a favorite in this town. People
+come here to gossip, chug a few beers, enjoy a laughs and exchange war stories.
+This establishment has in recent times expanded its market and has added 
+rooms that are available for vacancy.  Those rooms are just north of here and
+are available for a price.  The bar also has taken the role of providing lodging
+for new adventurers free of charge.  Just south of here are those accommodations.
+A small sign with big letters is fastened to the bar.
+~
+30 8 0
+D0
+~
+~
+0 -1 3091
+D1
+~
+~
+0 -1 3620
+D2
+~
+~
+0 -1 3039
+D3
+You see the exit to the entrance hall.
+~
+~
+0 -1 3006
+E
+writing carving carvings symbols symbol~
+Although it is very hard to understand, you think it looks a lot like beer,
+poems about beer, and small beer-mugs.
+~
+E
+sign~
+The sign reads:
+Free instructions provided by the Grunting Boar Inn.
+
+   Buy  - Buy something (drinkable) from the bartender.
+   List - The bartender will show you all the different drinks and
+          specialities, and tell the price of each.
+~
+S
+#3008
+The Reception~
+   You are standing in the reception.  The staircase leads down to the
+entrance hall.  There is a small sign on the counter.
+~
+30 76 0
+D1
+~
+~
+0 -1 3089
+D5
+You see the entrance hall.
+~
+~
+0 -1 3006
+E
+sign~
+Rooms are expensive but good!  You may:
+
+   Offer - get an offer on a room - Time is in real life days.
+   Rent  - Rent a room (saves your stuff, and quits the game),
+           minimum charge is one day.
+
+
+                          MY WAY OR THE HIGHWAY
+                             PAY YOUR RENT!
+                WE WON'T THINK TWICE BEFORE KICKING YOU OUT.
+~
+S
+#3009
+Drake's Bake Shop~
+   You are standing inside the small bakery.  A sweet scent of Danish and
+fine bread fills the room.  The bread and Danish are arranged in fine order
+on the shelves, and seem to be of the finest quality.
+A small sign is on the counter.
+~
+30 8 0
+D2
+You see the main street.
+~
+~
+0 -1 3013
+E
+sign~
+Free instructions provided by the store:
+
+   Buy  - Will buy you some bread or pastry.
+   List - The baker will kindly tell you the price and sort of the bread in
+          his bakery.
+~
+E
+danish pastry~
+You see that this is truly delicious pastry.  Must be made by a Dane from
+Denmark (which surely is not the capital of Sweden!).  Former ruler of
+Scandinavia, England, Northern Germany, Northern France, Russia, Greenland,
+Iceland, Estonia etc. etc.
+   The sight of those large, wholesome chokoladeboller makes your mouth water
+and your soul sing.
+
+~
+S
+#3010
+Midgaard Provisions~
+   You are inside the general store.  All sorts of items are stacked on shelves
+behind the counter, safely out of your reach.
+A small note hangs on the wall.
+~
+30 8 0
+D2
+~
+~
+0 -1 3044
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#3011
+Brightbeard's Iron Anvil~
+   You are standing in Brightbeard's weaponshop, where all weapons are
+made to perfection.  There is a brazier off to the wall and an giant iron
+anvil standing square in the center of the room.  Buckets of water are
+nearby, along with iron ores that lie in a small pile.  Weapons adorn the
+walls, ranging from axes to swords to scimitars.  There is also a crest of
+a dwarven family hanging on the wall that seems to be the most   
+predominant item of all the wall hung specialties.  Standing off to the
+side, there is a sweaty dwarf, holding a hammer in his hand, scowling at a
+sword.  
+~
+30 8 0
+D2
+You see the main street.
+~
+~
+0 -1 3016
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#3012
+Western Main Street~
+   It is a busy day in the streets of Midgaard, as activity is blossoming
+nicely. This is the typical day in this town, as merchants surround you
+and your party, offering their wares -- Camel and horseback riders trot in
+and out, along with cityguards and town officials that roam around and
+about, checking to make sure order and justice is preserved.  An explosion
+of rocks the area, followed by massive swearing and yelling.  Just north
+of here is a magic shop, and a few meters south is a mage's guild.
+~
+30 0 1
+D0
+You see the magic shop.
+~
+~
+0 -1 3033
+D1
+You see the main street.
+~
+~
+0 -1 3013
+D3
+You see the main street.
+~
+~
+0 -1 3059
+S
+#3013
+Western Main Street~
+   It is a busy day in the streets of Midgaard, as activity is blossoming
+nicely. This is the typical day in this town, as merchants surround you
+and your party, offering their wares -- Camel and horseback riders trot
+in and out, along with cityguards and town officials that roam around and
+about, checking to make sure order and justice is preserved.  You smell a
+inviting aroma of pastry goods, and rightfully so, a baker is just north
+of where you're standing.
+~
+30 0 1
+D0
+You see the bakery.
+~
+~
+0 -1 3009
+D1
+You see the market square.
+~
+~
+0 -1 3014
+D3
+You see the main street.
+~
+~
+0 -1 3012
+S
+#3014
+Market Square~
+   You are standing on the market square, the famous Square of Midgaard.
+Almost all activity happens here, with groups of merchants busily    
+trying to push past you in the crowd trying to see the day's wares. 
+Caravans and groups form to combat the terrors beyond these city gates,
+the dangers this time of year is very real and it would make sense to
+travel in a heavily armed group. An argument shouts out from amongst
+the crowd, apparently over faulty barter and trade.  A large, peculiar
+looking statue is standing in the middle of the square. Roads lead in
+every direction, north to autumn road, south to the common square,     
+east and westbound is the main street. Spiral steps lead up towards     
+the shop in the sky.
+~
+30 0 1
+D0
+~
+~
+0 -1 3150
+D1
+You see the main street.
+~
+~
+0 -1 3015
+D2
+~
+~
+0 -1 3093
+D3
+You see the main street.
+~
+~
+0 -1 3013
+D4
+~
+~
+0 -1 3085
+E
+statue~
+What you see is the Midgaard Worm, stretching around the Palace of Midgaard.
+~
+S
+#3015
+Eastern Main Street~
+   It is a busy day in the streets of Midgaard, as activity is blossoming
+nicely. This is the typical day in this town, as merchants surround you
+and your party, offering their wares -- Camel and horseback riders trot in
+and out, along with cityguards and town officials that roam around and
+about, checking to make sure order and justice is preserved.  Just north
+of here is a general store.
+~
+30 0 1
+D0
+~
+~
+0 -1 3020
+D1
+You see the main street.
+~
+~
+0 -1 3016
+D3
+You see the market square.
+~
+~
+0 -1 3014
+S
+#3016
+Eastern Main Street~
+   It is a busy day in the streets of Midgaard, as activity is blossoming
+nicely. This is the typical day in this town, as merchants surround you
+and your party, offering their wares -- Camel and horseback riders trot in
+and out, along with cityguards and town officials that roam around and
+about, checking to make sure order and justice is preserved.  You hear the
+sounds of banging metal on metal coming from the north -- with a wooden
+sign on the front that says 'Brightbeards Anvil'. A warriors guild lies
+due south, the prominence of the guild transcends even you as stories of
+its glory lives in the hearts of many.
+~
+30 0 1
+D0
+You see the weapon shop.
+~
+~
+0 -1 3011
+D1
+You see the main street.
+~
+~
+0 -1 3062
+D3
+You see the main street leading to the market square.
+~
+~
+0 -1 3015
+S
+#3017
+Entrance to Mage's Guild~
+   The entrance hall is a small, poor lighted room.
+~
+30 8 0
+D2
+You see your favourite place, the Mage's Bar.
+~
+~
+0 -1 3018
+S
+#3018
+Mage's Bar~
+   The bar is one of the wierdest in the land.  Mystical images float around
+the air.  Illusions of fine furniture appear all around the room.
+~
+30 12 0
+D0
+You see the lobby.
+~
+~
+0 -1 3017
+D4
+~
+~
+0 -1 3019
+S
+#3019
+Mage's Laboratory~
+   This is the Magical Experiments Laboratory.  Dark smoke-stained stones
+arch over numerous huge oaken tables, most of these cluttered with strange-
+looking pipes and flasks.  The floor is covered with half-erased pentagrams
+and even weirder symbols, and a blackboard in a dark corner has only been
+partially cleaned, some painful-looking letters faintly visible.  A well in
+the middle of the floor leads down into darkness.  Vile smells waft from the
+depths.
+~
+30 12 0
+D5
+~
+~
+0 -1 3018
+S
+#3020
+Tirain's Armour and Shield~
+   The armoury with all kinds of armours on the walls and in the window.  You
+see helmets, shields and chain mails.  To the north is the main street.
+On the wall is a small note.
+~
+30 8 0
+D2
+~
+~
+0 -1 3015
+E
+note~
+  You can use these commands for trading:
+
+  value <item>     To get the price of an item in your possession.
+  sell <item>      To sell something.
+  buy <item>       To buy something (provided that the shop has it in store).
+  list             Gives you a listing of the shop's inventory.
+
+        WE DON'T GIVE CREDIT; WE DON'T EXPECT TO RECEIVE CREDIT!
+                             NO HAGGLING
+~
+S
+#3021
+Entrance Hall to the Guild of Swordsmen~
+   The entrace hall to the Guild of Swordsmen.  A place where one has to be
+careful not to say something wrong (or right).  To the east is the bar and to
+the north is the main street.
+~
+30 8 0
+D1
+You see the swordsmen's bar, many noises comes from there.
+~
+~
+0 -1 3022
+S
+#3022
+The Bar of Swordsmen~
+   The bar of swordsmen, once upon a time beautifully furnished.  But now the
+furniture is all around you in small pieces.  To the south is the yard, and
+to the west is the entrance hall.
+~
+30 12 0
+D2
+You see the practice yard.
+~
+~
+0 -1 3023
+D3
+You see the entrance hall to the thieves guild.
+~
+~
+0 -1 3021
+S
+#3023
+The Tournament and Practice Yard~
+   The practice yard of the fighters.  To the north is the bar.  A well leads
+down into darkness.
+~
+30 12 0
+D0
+You see the bar.
+~
+~
+0 -1 3022
+S
+#3024
+Summer's Walk~
+   Trash litters the ground here, as the wind casually blows the dust around.
+Looking around, you can plainly see that this district of town isn't the 
+exactly the most predominant.  Slumped along the walls are former
+adventurers now turned alcholics, muttering incoherent phrases and
+waking up occassionally in cold sweat.  However, there are various 
+vendors here that do pretty well for themselves.  South of here is the 
+Grubby Inn and to the east you see common square.  
+The alley continues further west.  To the north is the Ninja's Guild.
+~
+30 0 1
+D1
+You see the common square.
+~
+~
+0 -1 3025
+D3
+You see the poor alley.
+~
+~
+0 -1 3044
+S
+#3025
+Common Square~
+   Walking deeper into the heart of Midgaard, you have seemly stumbled
+upon the lesser, less prominent merchant square -- known as the 'common
+square'. Wares sold here are usually less expensive, but so is the
+quality. However, that is not always the case.  Spiral stairs wrap around
+a huge oaken tree and into an auction hall. Due south is one the gates
+that leads out of town, the northern path leads towards the market square.
+West and east are dark alleyways of which you cannot make out much from
+where you are standing now.
+~
+30 0 1
+D0
+~
+~
+0 -1 3005
+D1
+You see the dark alley.
+~
+~
+0 -1 3026
+D2
+~
+~
+0 -1 3151
+D3
+You see the poor alley.
+~
+~
+0 -1 3024
+D4
+You see the avatar's guild.
+~
+~
+0 -1 3072
+S
+#3026
+Summer's Walk~
+   You are standing in one of the darker roads of midgaard, as activity
+seems to be at a standstill.  There is a shrill silence around you, as you
+feel eyes upon you watching your every move. You can hear the distant 
+sounds of the market, however, that is soon replaced by quiet footsteps 
+moving towards and away from you.  Just west of you is the common square and
+to the north is the Nomad's Guild. The alley continues east.
+~
+30 0 1
+D1
+The alley continues east.
+~
+~
+0 -1 3045
+D3
+You see the common square.
+~
+~
+0 -1 3025
+E
+guild~
+It is the thieves guild, don't enter if you care about your health or money.
+~
+S
+#3027
+Entrance to the Thieves Guild~
+   A dimly lit den serves as the entrance to the thieves guild.  Sputtering
+torches send shadows dancing on all the walls, shadows in which adept
+rogues could easily hide from all notice.  
+~
+30 0 0
+D0
+~
+~
+0 -1 3028
+D1
+~
+~
+0 -1 3029
+D4
+~
+grate~
+8 -1 3160
+S
+#3028
+The Thieves Bar~
+   The bar of the thieves.  Once upon a time this place was beautifully
+furnished, but now it seems almost empty.  To the south is the yard, and to
+the west is the entrance hall.
+   (Maybe the furniture has been stolen?!)
+~
+30 12 0
+D2
+~
+~
+0 -1 3027
+E
+furniture~
+As you look at the furniture, the chair you sit on disappears.
+~
+S
+#3029
+The Secret Yard~
+   The sparse furniture and dim lighting leads you to believe that the study is
+not used very often.  A wooden board with hooks against the north wall displays
+a set of lockpicks and other tools vital to a rogue's trade.  The furniture
+consists of a few haphazardly built wooden chairs and an empty desk, each
+nailed securely to the floor.  The master of the guild is obviously very
+aware of some of his members.  
+~
+30 12 0
+D3
+~
+~
+0 -1 3027
+D5
+~
+well~
+1 0 3932
+E
+well~
+A large iron grating with a formidable-looking lock on it covers the well.
+~
+S
+#3030
+The Dump~
+   The dump, where the people from the city drop their garbage.  Through the
+garbage you can see a large junction of pipes, looks like the entrance to the
+sewer system.  To the north is the common square. To the south is the trainning
+ground.
+~
+30 4 2
+D2
+~
+~
+0 -1 3550
+S
+#3031
+The Pet Shop~
+   The Pet Shop is a small crowded store, full of cages and animals of
+various sizes.  There is a sign on the wall.
+~
+30 8 0
+D0
+~
+~
+0 -1 3062
+E
+sign~
+The sign reads:
+
+  Use 'List' to see the available pets.
+  Use 'Buy <pet>' to buy yourself a pet.
+
+  Instructions for having pets:
+
+  You can use 'order <pet> <instructions>' to order your pets around.
+  If you abuse your pet, it will no longer regard you as its master.
+  If you have several pets you may use 'order followers <instructions>'
+
+  You can name the pet you buy as : "buy <pet> <name>"
+
+ Regards,
+
+ The Shopkeeper
+~
+S
+#3032
+Pet Shop Store~
+   This  is the small dark room in which the Pet shop keeps his pets.
+It is vital that this room's virtual number is exactly one larger
+than the Pet Shop number.
+~
+30 520 0
+S
+#3033
+The shop of magic and socery~
+   Behind the counter you see various items, neatly placed in racks,
+presumably most of them are magic.
+~
+30 8 0
+D2
+You see the main street.
+~
+~
+0 -1 3012
+S
+#3034
+The Entrance to the Ninja's Guild~
+   This is the entrance to the ninja's guild. The guild is very old
+and dirty. To the south is the poor alley. To the west is the secret
+room.
+~
+30 8 0
+D3
+~
+~
+0 -1 3035
+S
+#3035
+Secret Room~
+  This is the secret room of your guildmaster. To the east is the
+entrance of the Ninja's guild. The only exit is east.
+~
+30 8 0
+D1
+~
+~
+0 -1 3034
+S
+#3036
+The Entrance of the Nomad's Guild~
+   This is the entrance to the nomad guild. To the east is the Forest Room.
+To the south is the dark alley. You can go east or south here.
+~
+30 8 0
+D1
+~
+~
+0 -1 3037
+S
+#3037
+Forest Room~
+  The room is full of trees and grass.  Looks like a small forest in here.
+To the east is the entrance to of the Nomad's Guild which is also the
+only exit.
+~
+30 8 0
+D3
+~
+~
+0 -1 3036
+S
+#3038
+The Quest Room~
+  You have reached the place where adventurous mortals come to read up on
+the latest quest happenings of the realm.  You can feel the excitement
+in the air and the expectation of adventure and challenge.
+~
+30 72 0
+D3
+~
+~
+0 -1 3096
+S
+#3039
+New Adventurer's Club~
+  The comfortable resting room of the club has wall-to-wall carpeting and
+seating arrangements for up to 80 people at once.  For the weary and tired there
+are several beds with silk sheets and bedclothes on them.  Mounted on the walls 
+here are many hunting trophies, many of which are from magnificent animals which
+you've never seen before. Amongst the greatest of them is the head of the great
+grunting boar,  which is reputed to have killed a dozen men before being felled.
+~
+30 76 0
+D0
+~
+~
+0 -1 3007
+S
+#3040
+Inside the West Gate of Midgaard~
+   You are within the safe confines of midgaard, however, once you step
+beyond this gate -- You will no longer be protected.  The outside
+world offers wild, untame dangers -- yet the excitement and adventures
+you will experience will be worth the risks you as an adventurer will
+undergo.  Always carry a few extra recalls, potions, weapons and heavy
+armor with you at all times.  It's also to your advantage to bring along a
+few friends.  Up ahead is a huge stone gate, archers perched on top, ready
+to defend the town. Behind you, a trail leads back into the heart of town.
+~
+30 0 1
+D1
+You see Main Street.
+~
+~
+0 -1 3059
+D2
+You see the road running along the inner side of the city wall.  You notice
+that it is called Wall Road.
+~
+~
+0 -1 3042
+D3
+The city gate is to the west.
+~
+gate~
+0 0 3052
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+gate~
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock.
+~
+E
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
+~
+S
+#3041
+Inside the East Gate of Midgaard~
+   You are within the safe confines of midgaard, however, once you step
+beyond this gate -- You will no longer be protected.  The outside
+world offers wild, untame dangers -- yet the excitement and adventures
+you will experience will be worth the risks you as an adventurer will
+undergo.  Always carry a few extra recalls, potions, weapons and heavy
+armor with you at all times.  It's also to your advantage to bring along a
+few friends.  Up ahead is a huge stone gate, archers perched on top, ready
+to defend the town. Behind you, a trail leads back into the heart of town.
+~
+30 0 1
+D1
+You see the city gate.
+~
+gate~
+0 0 3053
+D3
+You see Main Street.~
+~
+0 -1 3062
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+gate~
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock.
+~
+E
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
+~
+S
+#3042
+Wall Road~
+   You are walking next to the western city wall.  The road continues further
+south and the city gate is just north of here.  A large oak door is embedded
+into the stone wall to the west.
+~
+30 0 1
+D0
+You see the city gate.
+~
+~
+0 -1 3040
+D2
+~
+~
+0 -1 3057
+D3
+~
+~
+0 -1 3200
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+S
+#3043
+Wall Road~
+   You are walking next to the western city wall.  Wall Road continues further
+north and south.  A small, poor alley leads east.
+Some letters have been written on the wall here.
+~
+30 0 1
+D0
+~
+~
+0 -1 3056
+D1
+~
+~
+0 -1 3097
+D2
+The road continues further south.
+~
+~
+0 -1 3047
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+letters~
+It says 'Who watches the watchmen?'
+~
+S
+#3044
+Summer's Walk~
+   Trash litters the ground here, as the wind casually blows the dust around.
+Looking around, you can plainly see that this district of town isn't the 
+exactly the most predominant.  Slumped along the walls are former
+adventurers now turned alcholics, muttering incoherent phrases and
+waking up occassionally in cold sweat.  However, there are various
+vendors here that do pretty well for themselves.  You see a huge wall
+in the distance off to the west. The alley continues east.
+~
+30 0 1
+D0
+~
+~
+0 -1 3010
+D1
+The alley leads east.
+~
+~
+0 -1 3024
+D2
+~
+~
+0 -1 3900
+D3
+~
+~
+0 -1 3097
+S
+#3045
+Entrance to the Levee~
+   You are standing in one of the darker roads of midgaard, as activity
+seems to be at a standstill.  The docks lies south, its black waters flows
+down the river and disappears in the distance. Standing around long 
+enough, you can see a ferry pull in, dropping off its passengers and 
+taking new ones. The alley continues east.
+~
+30 0 1
+D1
+The alley leads east.
+~
+~
+0 -1 3046
+D2
+You see the levee.
+~
+~
+0 -1 3049
+D3
+The alley leads west.
+~
+~
+0 -1 3026
+S
+#3046
+Summer's Walk~
+   You are standing in one of the darker corners of midgaard, as activity
+seems to be at a standstill.  There is a shrill silence around you, as you
+feel eyes upon you watching your every move. You can hear the distant
+sounds of the market, however, that is soon replaced by quiet footsteps 
+moving towards and away from you.  A small warehouse is directly south
+of here. The Commando's Guild is at your north.
+~
+30 0 1
+D2
+You see the warehouse.
+~
+~
+0 -1 3050
+D3
+You see the alley.
+~
+~
+0 -1 3045
+S
+#3047
+Wall Road~
+   You are standing on the road next to the western city wall, which
+continues north.  South of here is a bridge across the river.
+~
+30 0 1
+D0
+~
+~
+0 -1 3043
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+S
+#3048
+Grubby Inn~
+   You are inside the old Grubby Inn.  This place has not been cleaned for
+several decades, vile smells make you dizzy.
+~
+30 8 0
+D2
+~
+~
+0 -1 3158
+S
+#3049
+Levee~
+  You are at the levee.  South of here you see the river gently flowing west.
+The river bank is very low making it possible to enter the river.
+~
+30 0 1
+D0
+You see the Alley.
+~
+~
+0 -1 3045
+D2
+You see the river flowing south.~
+~
+0 -1 16645
+S
+#3050
+Warehouse~
+   You are inside the warehouse.  The room is decorated with various old
+items from ships. To the east is a river which leads to the ocean.
+~
+30 8 0
+D0
+You see the Alley.
+~
+~
+0 -1 3046
+D1
+~
+~
+0 -1 3058
+S
+#3051
+On the Bridge~
+   You are standing on the stone bridge crosses the river.  The bridge is
+built out from the western city wall and the river flows west through an
+opening in the wall ten feet below the bridge.
+~
+30 0 1
+D0
+~
+~
+0 -1 3098
+D2
+You see the Concourse.
+~
+~
+0 -1 3100
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+opening~
+You cannot really see it from here as it is somewhere beneath your feet.
+~
+E
+bridge~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar, just like the wall.
+~
+S
+#3052
+Outside the West Gate of Midgaard~
+   You are by two small towers that have been built into the city wall and
+connected with a footbridge across the heavy wooden gate.  Archers perch
+overhead, scanning the area with their crossbows armed and ready to defend
+the city. To the west you can see the edge of a big forest.
+~
+30 0 1
+D1
+The city gate is to the east.
+~
+gate~
+0 0 3040
+D3
+The forest edge is to the west.
+~
+~
+0 -1 6000
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+gate~
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock.
+~
+E
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
+~
+S
+#3053
+Outside the East Gate of Midgaard~
+   You are by two small towers that have been built into the city wall and
+connected with a footbridge across the heavy wooden gate.  Archers perch
+overhead, scanning the area with their crossbows armed and ready to defend
+the city. A path is swallowed up by the open plains in the distance, 
+squinting your eyes -- you see a village of some sorts a few leagues away.
+~
+30 0 1
+D1
+You see the plains.~
+~
+0 -1 3503
+D3
+You see the city gate.
+~
+gate~
+0 0 3041
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
+~
+E
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+gate~
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock.
+~
+E
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
+~
+S
+#3054
+By the Temple Altar~
+   You are by the temple altar in the central part of the Temple of Midgaard.
+A huge altar made from white polished marble is standing in front of you and
+behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
+~
+30 72 0
+D4
+~
+~
+0 -1 3001
+E
+statue odin king god~
+The statue represents the one-eyed Odin sitting on a his throne.  He has
+long, grey hair and beard and a strict look on his face.  On top of the
+throne, just above his shoulders, his two ravens Hugin and Munin are sitting
+and at his feet are his wolves Gere and Freke.
+~
+E
+altar~
+Even though the altar is more than ten feet long it appears to be made from a
+single block of white virgin marble.
+~
+S
+#3055
+Odin's Store~
+   This is the small dark room in which Odin keeps the player items that he
+takes care of.  It is vital that this room's virtual number is exactly one
+larger than the room by the temple altar.
+~
+30 8 0
+S
+#3056
+Wall Road~
+   You are at a river. The end of the river is a ocean.
+~
+30 0 1
+D0
+~
+~
+0 -1 3057
+D2
+~
+~
+0 -1 3043
+S
+#3057
+Wall Road~
+   You are at a river. The end of the river is a ocean.
+~
+30 0 1
+D0
+~
+~
+0 -1 3042
+D2
+~
+~
+0 -1 3056
+S
+#3058
+A river~
+   You are at a river. To the east is a very big ocean.
+~
+30 0 7
+D1
+~
+~
+0 -1 8104
+D3
+~
+~
+0 -1 3050
+S
+#3059
+Western Main Street~
+   It is a busy day in the streets of Midgaard, as activity is blossoming
+nicely. This is the typical day in this town, as merchants surround you
+and your party, offering their wares -- Camel and horseback riders trot in
+and out, along with cityguards and town officials that roam around and
+about, checking to make sure order and justice is preserved.  A cute
+little flower boutique lies south of here.
+~
+30 0 1
+D1
+You see the main street.
+~
+~
+0 -1 3012
+D2
+You see the Flower Boutique.
+~
+~
+0 -1 3061
+D3
+You see the city gate.
+~
+~
+0 -1 3040
+S
+#3060
+Gemstones and Jewels~
+  This is the official Jeweler's Shop of Midgaard.  In here you can buy and
+sell tradebars and diamonds issued by the Mayor of Midgaard.  Due to some
+financial difficulties the Mayor has decided not to buy tradebars or diamonds
+issued by other cities.  Counterfeiting is a crime punishable by lashing and
+up to 6 months in the inhospitable Midgaard Jail.
+~
+30 136 0
+D2
+~
+~
+0 -1 3160
+S
+#3061
+Flower Boutique~
+   It is a very beautiful shop. There are many flowers here.
+The glass door is at your north. There is a sign here.
+~
+30 8 0
+D0
+~
+~
+0 -1 3059
+E
+sign~
+
+If you buy a flower here, we can send the flower to your lover.
+~
+S
+#3062
+Eastern Main Street~
+   It is a busy day in the streets of Midgaard, as activity is blossoming
+nicely. This is the typical day in this town, as merchants surround you
+and your party, offering their wares -- Camel and horseback riders trot in
+and out, along with cityguards and town officials that roam around and
+about, checking to make sure order and justice is preserved.  Look! how
+cute! A nice pet shop is available south of here.
+~
+30 0 1
+D1
+~
+~
+0 -1 3041
+D3
+~
+~
+0 -1 3016
+S
+#3063
+Entrance to the Paladins' Guild~
+The forces of good are very strong here.  Portraits of exemplary paladins
+line the walls and you notice that each is attired rather humbly.  The guild
+is very well financed thanks to the generosity of its members.  Unfortunately,
+being religious zelots, the Paladins have banished the ubitiquous guild bar.
+A small shrine is to the north.
+~
+30 8 0
+D0
+~
+~
+0 -1 3064
+D2
+~
+~
+0 -1 3154
+S
+#3064
+The Paladins' Shrine~
+You have a very powerful sense of good in this chamber.  A pure white altar
+stands by the west wall.  The rich carpet is worn bare before the altar--
+especially where the paladins kneel to pray.
+~
+30 8 0
+D2
+~
+~
+0 -1 3063
+S
+#3065
+Entrance to the Anti-Paladin's Guild~
+This room emanates evil.  Light from the street cannot permeate the perpetual
+darkness.  The heads of powerful good creatures, stuffed and mounted, are
+hanging along the walls.  There is a dark passage to the north.
+~
+30 8 0
+D2
+~
+~
+0 -1 3066
+S
+#3066
+Dark Room~
+This room emanates evil. You can feel some very evil beings here.
+The only exit is south from here.
+~
+30 8 0
+D0
+~
+~
+0 -1 3065
+S
+#3067
+Entrance to the Commando's Guild~
+   This is the entrance to the commando's guild. To the east is the
+Army Room. To the South is the end of dark alley.
+~
+30 8 0
+D1
+~
+~
+0 -1 3068
+S
+#3068
+Army Room~
+   This room is full of different kind of lethal weapons. This must be
+a room for a super-fighter. The only exit is west.
+~
+30 8 0
+D3
+~
+~
+0 -1 3067
+S
+#3069
+Entrance to the Bard's Guild~
+   This the entrance to the bard's guild. To the south is the Piano
+Room. To the north is the main street. You can hear very lovely music
+now.
+~
+30 8 0
+D2
+~
+~
+0 -1 3070
+S
+#3070
+Piano Room~
+   There is a very big piano here. The only exit here is north.
+~
+30 8 0
+D0
+~
+~
+0 -1 3069
+S
+#3071
+Musical Shop~
+   There are many different types of musical instruments on sale
+here. There must be one which suitable for you. The only exit is
+south here.
+~
+30 8 0
+D2
+~
+~
+0 -1 3156
+S
+#3072
+The Auction Hall~
+  You are standing in a vast chamber.  Numerous display cabinets are scattered
+about here, some containing weapons, armor and other valuables while others are
+empty. Closer examination of the cabinets reveals them to be made of some
+sort of glassteel material which resists even the mightiest blow.
+~
+30 8 5
+D5
+~
+~
+0 -1 3025
+S
+#3073
+The Robot Room~
+   It is the Robot Room, there must be a very tough robot somewhere
+here. This Room is completely made of metal. You are wondering why
+it can float into the sky. Down is the Entrance to the Avatar's Guild.
+There is a sign here.
+~
+30 520 5
+D5
+You see the entrance of the guild.
+~
+~
+0 -1 3072
+E
+sign~
+This robot can teach you many spells and skills.
+But REMEMBER never attack it, otherwise you will be dead.
+~
+S
+#3074
+Post Office~
+   It is the famous Post Office. You can see many postcards on the floor.
+There are many postmans here trying to separate the postcards into groups.
+Down from here is the Temple Square. There is a sign here.
+~
+30 8 1
+D5
+~
+~
+0 -1 3095
+E
+sign~
+You can type:
+mail - to receive mail
+mail <person> - to mail your postcard to that person
+post - to receive a package
+post <person> - to mail a package to that person
+list - lists items for sale
+buy - to buy an item
+
+Listing multiple persons while mailing will send a duplicate postcard
+to those persons. - mail <person1> <person2> etc
+~
+S
+#3075
+Entrance to the NoName's Club~
+   It is the entrance to the NoName's Famous Fans Club.
+West from here is the Resting room. To the east is the chain.
+There is a big sign here.
+~
+30 72 1
+D1
+~
+~
+0 -1 3077
+D3
+~
+~
+0 -1 3076
+E
+sign~
+The Club only admits those who buy a membership.
+You can gain faster hp recovery but you can only
+join 1 club at a time.
+
+~
+S
+#3076
+Resting Room~
+  The comfortable resting room of the club has wall-to-wall carpeting and 
+seating arrangements for up to 80 people at once.  For the weary and tired there
+are several beds with silk sheets and bedclothes on them.
+  This club was founded by the NoName the rogue who among other things founded
+the NoName's Sales shop.  Other exploits that made him famous were stealing the
+Zyca King's sceptre of power and plundering the hoard of Puff the fractal
+dragon.
+  NoName disappeared without a trace many years ago and no-one has heard from 
+him since.
+~
+30 8264 0
+D1
+~
+~
+0 -1 3075
+S
+#3077
+Reception of High Society~
+   You are at the end of the big chain. There are four clubs here.
+To your west is the NoName's Fans Club, to your east is the DeathAdder's
+Fans Club, to your north is the Caster's Fans Club, and to your south
+is the Azoun's Fans Club. A chain leads downward towards an entranceway.
+~
+30 64 2
+D0
+~
+~
+0 -1 3078
+D1
+~
+~
+0 -1 3080
+D2
+~
+~
+0 -1 3082
+D3
+~
+~
+0 -1 3075
+D5
+~
+~
+0 -1 3091
+S
+#3078
+Entrance to the Caster's Club~
+   It is the entrance to the Caster's Famous Fans Club.
+North from here is the Resting room. To the south is the chain.
+There is a big sign here.
+~
+30 72 1
+D0
+~
+~
+0 -1 3079
+D2
+~
+~
+0 -1 3077
+E
+sign~
+  Our club is intended mainly to aid spellcasters in regaining their mana
+after their strength has been depleted but anyone who pays the membership
+fee is welcome to join.
+But remember the Mayor's policy on club membership forbids you from joining
+more than one club at a time.
+~
+S
+#3079
+Resting Room~
+  The comfortable resting room of the club has wall-to-wall carpeting and
+seating arrangements for up to 80 people at once.  For the weary and tired there
+are several beds with silk sheets and bedclothes on them.  Mounted on the
+walls here are the trophies of the great magician Caster who lived in Midgaard
+ages ago before retiring to the astral plane for meditation and the pursuit of
+magical knowledge.
+~
+30 8264 0
+D2
+~
+~
+0 -1 3078
+S
+#3080
+Entrance to the DeathAdder's Club~
+   It is the entrance to the DeathAdder's Famous Fans Club.
+East from here is the Resting room. To the west is the chain.
+There is a big sign here.
+~
+30 72 1
+D1
+~
+~
+0 -1 3081
+D3
+~
+~
+0 -1 3077
+E
+sign~
+The Club only admits those who buy a membership.
+You can gain faster hp recovery but you can only 
+join 1 club at a time.
+~
+S
+#3081
+Resting Room~
+  The comfortable resting room of the club has wall-to-wall carpeting and
+seating arrangements for up to 80 people at once.  For the weary and tired there
+are several beds with silk sheets and bedclothes on them.  Mounted on the
+walls here are the weapons and armor of the berserker warrior DeathAdder who
+is reportedly the only mortal to have ever slain an ant queen singlehanded.
+~
+30 8264 0
+D3
+~
+~
+0 -1 3080
+E
+weapons~
+The huge battleaxe and spear are much too large for you to be able to lift.
+~
+E
+armor~
+The old worm's hide has rotted away partially and is useless now.
+~
+S
+#3082
+Entrance to the Azoun's Club~
+   It is the entrance to the Azoun's Famous Fans Club.
+South from here is the Resting room. To the North is the chain.
+There is a big sign here.
+~
+30 72 1
+D0
+~
+~
+0 -1 3077
+D2
+~
+~
+0 -1 3083
+E
+sign~
+The Club admits only our members.
+You can gain faster mana recovery.
+But you can only join 1 club.
+~
+S
+#3083
+Resting Room~
+  The comfortable resting room of the club has wall-to-wall carpeting and
+seating arrangements for up to 80 people at once.  For the weary and tired there
+are several beds with silk sheets and bedclothes on them.  On the walls here
+can be seen the religious symbols of the cleric Azoun who was the Archbishop of
+Midgaard in ancient times before his god called on him to wander the lower 
+planes and fight evil there.
+~
+30 8264 0
+D0
+~
+~
+0 -1 3082
+S
+#3084
+Donation Room~
+  This is where the heroes who have items to spare can graciously donate some
+equipment for new players.  It is intended for the use of newbies or the less
+fortunate and taking it for the purpose of selling it in auction or otherwise
+WILL bring the wrath of the gods down upon you.
+~
+30 72 0
+D0
+~
+~
+0 -1 3190
+D1
+~
+~
+0 -1 3099
+D2
+~
+~
+0 -1 3191
+D3
+~
+~
+0 -1 3088
+E
+3001~
+l
+~
+S
+#3085
+Meta Shop~
+   This shop looks like an old chinese restaurant. Old tables, old lamps,
+old chairs, old cups which covered by dust.  A large sign sits behind the
+metaphysician.
+~
+30 76 0
+D5
+~
+~
+0 -1 3014
+E
+sign large~
+From the sign you can see...
+
+************************************
+*     	   Meta Prices:            *
+*				   *
+*   Hit points:		2000000+   *
+*   Mana:		2000000+   *
+*   Movement: 		1000000    *
+*   Practice sessions:	 300000    *
+*   Stats:		 100000+   *
+*				   *
+*      all prices are in exp       *
+************************************
+~
+S
+#3086
+Hall of Democracy~
+You are standing inside a room with a crowd of people that has
+gathered here to see what kind of things there is for them to vote 
+for and against. You can hear people arguing about certain subjects.
+There seems to be a sign that says 'One man, one vote'. As you look
+the walls you see that they are sculpted from marble and there is long
+pillars everywhere holding the most beautiful glass hemisphere roof.
+~
+30 76 0
+D2
+~
+~
+0 -1 3099
+S
+#3087
+Inner Sanctum~
+  You've reached the holiest of places where mortals come to meditate on life,
+the universe and everything.  By pondering the workings of the world and how it
+can be made better for all, the true believer makes the busy gods' life that
+little bit easier.
+~
+30 584 0
+D1
+~
+~
+0 -1 3093
+D3
+~
+~
+0 -1 3086
+S
+#3088
+The Midgaard Morgue~
+  You stand in the gloomy, dark morgue of Midgaard.  You sense a great loss in
+the air.  Several candles have been lit around the room in memory of the fallen.
+This is the place where the the bodily remains of the dead are sent to rest in
+peace forever or until the next incarnation of the hero who died returns to
+claim her possessions.  Speak softly, for the souls of the deceased roam about,
+seeking a new body to possess.
+~
+30 64 0
+D1
+~
+~
+0 -1 3084
+S
+#3089
+The Vault~
+  This is a tiny cramped cell with hundreds of numbered steel
+boxes scattered about.  All around you feel the faint presence of
+powerful magical wards.  Through the low doorway to the west you see
+the reception.
+~
+30 520 0
+D3
+~
+~
+0 -1 3008
+S
+#3090
+Sanctum of Healing~
+   You are standing in a warm, and comfortable room.  There are various beds
+and pillows around here for sick patients to lie on.  Off to one side of the
+room, on some shelves are various beakers and flasks containing various herbs 
+and healing devices.  There is a cauldron bubbling over the a fire in the 
+center of the room, it fills the room with a sweet smell.  This is the hospital
+of the famous Doctor Naikrovek of Midgaard.  He is known for healing young 
+adventurers who seek his help.  This is a good place to come if you need some
+medical assistance.  
+~
+30 76 0
+D5
+~
+~
+0 -1 3004
+S
+#3091
+Club Entrance~
+   You are standing at the base of the luxurious fan club of all the gods
+long gone.  On the walls are pictures of the famous Azoun, Caster,
+DeathAdder and NoName.  Adjacent to them are time line tapestries, with
+obscure dates and pictures showing the passage of time of the Ronin World.
+In the center of the room is a huge iron chain, leading upward to clubs
+that mortals go to regenerate and heal their wounds. 
+~
+30 12 0
+D2
+~
+~
+0 -1 3007
+D4
+~
+~
+0 -1 3077
+E
+tapestries~
+These beautiful tapestries are made from a silk fabric woven from magic of 
+a powerful wizard long ago.  It magically keeps the records of time in the
+form of abstract images and words that can only read by archmages that
+have spent years of study and scholar.  Looking at the pictures, you see
+an image that represents a split, recession, then prosperity.  There are
+also some images of a time of chaos, uncertainty and of cleansing. 
+~
+E
+pictures~
+Here are pictures of some of the high gods of long ago, Azoun, Caster,
+DeathAdder and NoNames.  
+~
+E
+wall~
+On the walls are pictures of some of the high gods of long ago, Azoun,
+Caster, DeathAdder and NoNames.  
+~
+S
+#3092
+Temple Crossing~
+   The temple of Midgaard looms to your west, its holiness radiating for
+miles, and somehow drawing you back to this very place.  Priests and
+priestesses quickly scurry past you, making their way towards the temple.
+Junior clerics and scholars loom around, learning new spells and skills,
+hoping to hone them and move up in rank.  You hear a commotion of a failed
+spell nearby and wails of "damnit, I need more practice in fireball!" The
+northern and southern portions of the town can be reached here with 
+their respected paths.  
+~
+30 0 0
+D0
+~
+~
+0 -1 3093
+D2
+~
+~
+0 -1 3005
+D3
+~
+~
+0 -1 3001
+S
+#3093
+North of Temple~
+   You can see the heights and peaks of the temple in the distance, lying
+south from here.  Frantic clerics race past you and almost knocking you
+down as they head over there -- droping their scrolls and herbal
+ingredients in the process.  Nearby is a busy market, filled with mercants
+with wares to sell.  The south path leads to the temple, and the southern
+portion of town. To the north lies what appears to be a the town's market.
+~
+30 0 0
+D0
+~
+~
+0 -1 3014
+D2
+~
+~
+0 -1 3092
+S
+#3094
+Autumn and Spring Crossing~
+   Soft winds blow quietly on the road here.  Leaves fly in the air and
+clutter all over the ground, making it seem like autumn all year round.
+No matter how humid the weather may get, the branches and trees always
+seem to look more brown rather than the lively green.  That is the
+special aura that surrounds this road, an aura magically created by the
+wizards long ago.  Traveling south, you will head towards the fabled
+market square of midgaard, the north trail leads into northern town.
+A worn path leaves off to the west, some guilds and stores open to all.
+~
+30 0 0
+D0
+~
+~
+0 -1 3095
+D2
+~
+~
+0 -1 3150
+D3
+~
+~
+0 -1 3155
+S
+#3095
+Autumn Road~
+   Soft winds blow quietly on the road here.  Leaves fly in the air and
+clutter all over the ground, making it seem like autumn all year round.
+No matter how humid the weather may get, the branches and trees always
+seem to look more brown rather than the lively green.  That is the
+special aura that surrounds this road, an aura magically created by the
+wizards long ago.  Traveling south, you will head towards the fabled
+market square of midgaard, the north trail leads into northern town.
+~
+30 0 0
+D0
+~
+~
+0 -1 3096
+D2
+~
+~
+0 -1 3094
+D4
+~
+~
+0 -1 3074
+S
+#3096
+Inside the North Gates of Midgaard~
+   You are within the safe confines of midgaard, however, once you step
+beyond this gate -- You will no longer be protected.  The outside
+world offers wild, untame dangers -- yet the excitement and adventures
+you will experience will be worth the risks you as an adventurer will
+undergo.  Always carry a few extra recalls, potions, weapons and heavy
+armor with you at all times.  It's also to your advantage to bring along a
+few friends.  Up ahead is a huge stone gate, archers perched on top, ready
+to defend the town. Behind you, a trail leads back into the heart of town.
+~
+30 0 0
+D0
+~
+~
+0 -1 3153
+D2
+~
+~
+0 -1 3095
+S
+#3097
+Summer's Walk~
+   You are within the safe confines of midgaard, however, once you step
+beyond this gate -- You will no longer be protected.  The outside
+world offers wild, untame dangers -- yet the excitement and adventures
+you will experience will be worth the risks you as an adventurer will
+undergo.  Always carry a few extra recalls, potions, weapons and heavy
+armor with you at all times.  It's also to your advantage to bring along a
+few friends.  Up ahead is a huge stone gate, archers perched on top, ready
+to defend the town. Behind you, a trail leads back into the heart of town.
+~
+30 0 0
+D1
+~
+~
+0 -1 3044
+D3
+~
+~
+0 -1 3043
+S
+#3098
+Winter Road~
+   Snow falls lightly overhead, collecting in small piles along this dirt
+ground.  However, it always seem to know when to stop whenever
+someone passes by - as if to give him or her the chance to  admire the
+beauty of nature's work, a work that almost seems magical. That is the
+special aura that surrounds this road, an aura created by the wizards long
+ago.  Traveling north, you will head towards the fabled market square of
+midgaard, the south trail leads into the southern portion of town.
+~
+30 0 0
+D0
+~
+~
+0 -1 3152
+D2
+~
+~
+0 -1 3051
+S
+#3099
+Cozy House~
+   This is a nice little cozy house.  There is a small fireplace, and also a
+single chair in the corner.  The walls are bare and although the house is
+unfurnished, you feel right at home here. A doorway leads north to a
+hall of democrazy for those willing to cast their votes. There is a small
+storage room to the west where you can donate equipment into for people to use.
+~
+30 76 0
+D0
+~
+~
+0 -1 3086
+D1
+~
+~
+0 -1 3001
+D3
+~
+~
+0 -1 3084
+S
+#0
+$~

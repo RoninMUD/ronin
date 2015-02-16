@@ -1,0 +1,240 @@
+#29800
+gorilla~
+an enraged gorilla~
+An enraged gorilla lumbers towards you, fangs bared.
+~
+This 7 foot tall mountain of muscles seems to be upset by somthing and
+perfectly willing to take it out on you.  It's razor-sharp canines glisten
+with saliva and it's mouth foams with froth.
+~
+536870984 0 300 X
+24 -4 6 5d100+6000 2d14+12
+0 330000
+8 8 1
+0 0 1d1+1 3
+5 1 20 0
+7 1 15 0
+3 1 10 0
+#29801
+swarm killer bees~
+a swarm of killer bees~
+A swarm of killer bees buzzes angrily in circles here.
+~
+The killer bees swarm back and forth, occasionally descending upon hapless
+victims.  Their bites, while individually merely irritating, can cause
+death if sufficient numbers gather in the swarm.
+~
+536870920 0 0 X
+31 -11 10 1d100+100 4d20+10
+0 25000
+8 8 1
+0 0 1d1+1 1
+11 1 30 33
+#29802
+wyrd warrior~
+A wyrd clan warrior~
+A lithe wyrd clan warrior stands here hissing at you.
+~
+The wyrd clan warriors are trained in the arts of assassination and the
+use of minor spells.  The wyrd's natural aptitude for killing and their
+cruelty is said to be comparable only to the pit fiends of the nether
+hells.  To fall captive to a wyrd hunting party is guaranteed to bring
+a slow and agonizing death followed by the consumption of the victim.
+~
+268451854 819218 -800 X
+27 -6 -8 27d10+3000 1d12+50
+12000 330000
+8 8 1
+5 0 27d10+400 5
+9 1 18 0
+1 1 12 136
+1 1 10 8
+1 1 8 113
+1 1 4 106
+#29803
+wyrd loremaster~
+a wyrd loremaster~
+A wyrd loremaster stands here.
+~
+The wyrd loremasters are skilled warriors as well as being adept in
+the use of offensive and healing magic in battle.  The loremasters
+are the ruling class among the wyrds and the clan warriors and the
+lesser wyrds obey them without question, even giving up their lives
+in the process.  A loremaster usually travels with 2-3 clan warriors
+at his side.
+~
+268451852 819218 -900 X
+30 -6 -10 27d10+3000 1d12+50
+25000 400000
+8 8 1
+5 0 29d20+800 9
+1 2 6 30
+1 2 5 111
+1 1 6 104
+1 1 6 27
+1 1 1 141
+1 1 8 113
+1 1 4 106
+1 2 4 6
+1 1 4 23
+#29804
+lich skelos archmage~
+Skelos the Lich~
+Skelos the Mad stands here, his skeletal frame dressed in rags.
+~
+You see before you the skeletal form of the archmage Skelos the Mad. What
+remains of his flesh still clings tentatively to his bones here and there,
+creating a nauseating mixture of crawling maggots, decaying flesh and bones
+that jut out from underneath. His finely embroidered robes have long since
+rotted away into tattered rags while his rings and crown cling to their
+owner's withered frame which no longer properly supports them.  Two bright
+red lights burn in his hollow sockets and pierce you to the soul as he
+looks your way.
+~
+17825800 35004 0 X
+38 -18 -25 1d20+21000 10d30+100
+1500000 1200000
+8 8 1
+0 0 1d20+2000 9
+1 2 6 25
+1 2 2 143
+1 2 4 141
+1 2 4 95
+1 2 6 26
+1 2 7 136
+1 2 6 111
+1 1 1 130
+1 1 2 109
+#29805
+wyrd warmaster chieftain~
+The wyrd warmaster~
+The wyrd warmaster stands here growling at you.~
+The lord of the wyrd clan is the most powerful of the adepts of the clan. He
+commands the wyrd loremasters, who in turn each commands several clan of the
+clan warriors.  To achieve the rank of warmaster a wyrd must first kill the
+existing warmaster in a duel.  Not surprisingly, the warmaster's fighting
+skills are the finest among his clan.
+~
+268451854 819218 -900 X
+34 -6 -10 34d12+12000 5d40+105
+25000 960000
+8 8 1
+5 0 29d20+800 9
+1 2 6 30
+1 2 5 111
+1 1 6 104
+1 1 6 27
+1 1 1 141
+1 1 8 113
+1 1 4 106
+1 6 3 85
+1 6 1 102
+#29806
+slaad green~
+a green slaad~
+A frog-like green slaad hops around here.
+~
+The frog-like race of the slaadi come from the plane of Limbo, where they
+roam around, seeking to further the means of chaos an anarchy through
+scheming or random acts of violence.  This particular slaad is of the green
+servant race, often enslaved by powerful magic-users.
+~
+536870924 268699648 0 X
+28 -3 10 4d100+1200 10d4+40
+0 240000
+8 8 1
+0 0 1d1+1 0
+#29807
+hangman tree oak~
+a hangman tree~
+A solitary dark oak grows here.
+~
+This tree is a carnivorous plant that feeds on the blood of the living.
+It poses as a harmless tree and waits for victims to pass underneath the
+branches where it tries to snag them with vines that have the rough shape
+of nooses.  Also known as a hangman tree, it then chokes the hapless victim
+to death and stuffs the carcass into it's gaping maw, after which it digests
+it slowly for days.
+~
+536870926 32 0 X
+29 -5 10 1d1000+8000 6d10+60
+80000 400000
+8 8 1
+0 0 1d1+1 0
+#29808
+wyrd warrior~
+A wyrd clan warrior~
+A lithe wyrd clan warrior stands here hissing at you.
+~
+The wyrd clan warriors are trained in the arts of assassination and the
+use of minor spells.  The wyrd's natural aptitude for killing and their
+cruelty is said to be comparable only to the pit fiends of the nether
+hells.  To fall captive to a wyrd hunting party is guaranteed to bring
+a slow and agonizing death followed by the consumption of the victim.
+~
+268451854 819218 -800 X
+27 -6 -8 27d10+3000 1d12+50
+12000 330000
+8 8 1
+5 0 27d10+400 5
+9 1 18 0
+1 1 12 136
+1 1 10 8
+1 1 8 113
+1 1 4 106
+#29809
+wyrd loremaster~
+A wyrd loremaster~
+A wyrd loremaster stands here.
+~
+The wyrd loremasters are skilled warriors as well as being adept in
+the use of offensive and healing magic in battle.  The loremasters
+are the ruling class among the wyrds and the clan warriors and the
+lesser wyrds obey them without question, even giving up their lives
+in the process.  A loremaster usually travels with 2-3 clan warriors
+at his side.
+~
+268451852 819218 -900 X
+30 -6 -10 27d10+3000 1d12+50
+25000 400000
+8 8 1
+5 0 29d20+800 9
+1 2 6 30
+1 2 5 111
+1 1 6 104
+1 1 6 27
+1 1 1 141
+1 1 8 113
+1 1 4 106
+1 2 4 6
+1 1 4 23
+#29810
+ghoul undead man~
+a pale man in rags~
+A pale man in rags crouches here, waiting for an opening.
+~
+Appearing almost alive, the ghoul mimics that which he hates the most.  The eyes are glowing
+red with hatred for the living and you can see bits of flesh sticking from between his teeth
+as he flashes a wicked grin in your direction.
+~
+536887308 0 -700 X
+32 -4 6 3d200+6000 2d20+16
+40000 270000
+8 8 1
+0 0 1d1+1 0
+#29811
+elephant guardian spirit~
+elephant guardian spirit~
+The guardian spirit of elephants shimmers in the air here,
+~
+  The legends speak of the elder elephants, whose wisdom was said to rival the
+gods. That may have been the reason  for their destruction at their hands, in
+the years that followed the Godslayer wars.
+~
+8 0 0 X
+31 -4 -25 1d5000+5000 5d40+52
+0 550000
+8 8 1
+0 0 1d1+1 0
+#0
+$~

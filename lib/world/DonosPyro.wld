@@ -1,0 +1,301 @@
+#9700
+Entrance to the Path of Deception~
+  You climb through the hole previously covered by the statue and emerge outside
+of the castle walls.  Looking around you notice a roughly made dirt path leading
+into a dark, dangerous looking forest.  You shudder at the thought of what could be lurking in those woods.  You can continue north into the foreboding forest
+or you can head south back into the castle.
+~
+97 0 3
+D0
+~
+~
+0 -1 9701
+S
+#9701
+Path of Deception~
+  This weird path seems to have ended as quickly as it started.  You find it
+almost impossible to penetrate what appears to be the only path.  As you enter 
+this small clearing, you notice thick brush surrounding you, save to the north 
+where an old tree has fallen over the underbrush.
+~
+97 0 3
+D0
+~
+fallen tree~
+11 -1 9702
+D1
+~
+brush~
+9 -1 9703
+D2
+~
+~
+0 -1 9700
+S
+#9702
+Clearing in the brush~
+  As you climb the tree you find yourself at a dead end.  You are completely
+surrounded by very thick brush.  You notice that the tree you used to enter
+this foresaken place is out of reach from this side.  You seem to be stuck.
+As you investigate further, you begin to wonder if you can crawl under the
+dense brush.
+~
+97 1 3
+D2
+~
+under brush underbrush~
+9 -1 9701
+S
+#9703
+Path of Deception~
+  Crawling wearily through the seemingly endless underbrush you finally find
+yourself once again on the dirt path.  The trees block all but the smallest
+beams of light and all around you hear the noises of predators lurking about
+in the dark.  You shiver uncomfortably and grimly continue onwards towards what
+seems to be your final adventure.
+~
+97 1 3
+D0
+~
+~
+0 -1 9704
+D3
+~
+brush~
+9 -1 9701
+S
+#9704
+Path of Deception~
+  With each step taken, the path behind you seems to close just a little.
+Is it just your imagination gone wild, or does this place actually seem to
+be drawing you forward.  You begin to make out a small clearing to the north.
+~
+97 1 3
+D0
+~
+~
+0 -1 9705
+D2
+~
+~
+0 -1 9703
+S
+#9705
+A bright clearing~
+  Stealthy entering the clearing you look upon a scene of utter beauty.
+The forest is alive with beautiful colors and as you begin to relax you suddenly
+feel very weary.  Wandering sleepily over to an inviting oak tree for a quick 
+nap, a thought suddenly occurs to you, this is all too perfect for a path such
+as this one.  Just as suddenly the scene fades away to reveal a dark clearing
+littered with the bones of past travelers and a heart wrenching site you
+recognize as the Mind-Vermin of Delkash, thought twisting demons thought to have
+been hunted to extinction by the valiant forces of Midgaard.  You feel you had
+better get out of here before you succumb to the demons' awful power and become
+extinct yourself.
+~
+97 1 3
+D0
+~
+~
+0 -1 9706
+D2
+~
+~
+0 -1 9704
+S
+#9706
+Path of Deception~
+  You cautiously exit the clearing and continue onwards along the path,
+even more alert than before now that you have experienced a new definition of
+evil.  The path seems to go on forever but you don't know if you can trust
+your eyes anymore, or any other of your senses for that matter.
+~
+97 1 3
+D0
+~
+~
+0 -1 9707
+D2
+~
+~
+0 -1 9705
+S
+#9707
+Path of Deception~
+  The path continues onwards and you grimly struggle to maintain a constant
+watch for trouble.  You dread the thought of what may lie ahead but you shrug
+nonchalantly as you realize the worst anything can do to you is kill you.
+~
+97 1 3
+D0
+~
+~
+0 -1 9708
+D2
+~
+~
+0 -1 9706
+S
+#9708
+Path of Deception~
+  Continuing your exhausting journey you begin to notice the signs of
+people in this harsh area.  Bending down you notice small footprints
+seeming to belong to small children.  You lift your head and scan the
+surrounding area for signs of the source of these markings, wondering
+if this is just another trick.
+~
+97 1 3
+D0
+~
+~
+0 -1 9709
+D1
+~
+~
+0 -1 9710
+D2
+~
+~
+0 -1 9707
+D3
+A small crack can be seen lurking between the shadows.
+~
+crack~
+9 -1 9714
+S
+#9709
+End of the Path of Deception~
+  You walk low to the ground, tracking the footprints and desperately hoping
+to find their source, be it friendly or hostile.  Suddenly, you feel an odd
+sense, like a joyous voice booming congradulations into your mind.  You look
+up suddenly and your jaw drops in wonder at how you could have missed the 
+pure beams of sunlight cascading through the canopy and marking the last few
+steps leading to the end of the Path of Deception.
+~
+97 0 3
+D0
+Huge iron gate cast in solid granite.
+~
+gate~
+1 -1 9713
+D2
+~
+~
+0 -1 9708
+S
+#9710
+Path of Deception~
+  You immediately notice the lack of footsteps.  The grass has grown
+to the knee and makes walking somewhat slower.  The distinct lack of
+sounds makes you keenly aware of your increased heartrate and the
+sweat dripping from your face.  To the south lies the only unexplored
+exit, looking much the same as this entrance.
+~
+97 1 0
+D2
+~
+~
+0 -1 9711
+D3
+~
+~
+0 -1 9708
+S
+#9711
+Path of Deception~
+  You continue to wade through the tall grass, occasionally wincing in
+pain as something sharp cuts your legs.  The ominous silence continues to
+trouble you and the feeling of despair never leaves your consciousness.
+To the east lies the only untested pathway.
+~
+97 1 0
+D0
+~
+~
+0 -1 9710
+D1
+~
+~
+0 -1 9712
+S
+#9712
+Path of Deception~
+  Gradually, the grass clears leaving only small clumps of it along the path.
+You once again hear the usual, though foreboding, sounds of this dark path and
+to your south lies a clearing.
+~
+97 1 0
+D2
+~
+~
+0 -1 9702
+D3
+~
+~
+0 -1 9711
+S
+#9713
+Foyer of Fallo's Castle~
+A sudden chill flows down your spine, right your toes.  You gaze
+in wonder at the drab, yet eerie wall furnishings.  They seem to
+call out for a unweary traveller to look beyond their coverings,
+to some deep recess of you very soul.  You snap to and think it
+wise to continue the journey, else fail right at the very doorstep.
+~
+97 67112960 0
+D2
+~
+~
+0 -1 9709
+S
+#9714
+Rarely Used Passage~
+A temporary description
+~
+97 265 0
+D0
+~
+~
+0 -1 9715
+D1
+You see a crack in the wall of bushes.
+~
+crack~
+9 -1 9708
+S
+#9715
+Cave of Bones~
+A temporary description
+~
+97 265 0
+D0
+~
+~
+0 -1 9716
+D2
+~
+~
+0 -1 9714
+S
+#9716
+Fowl Smelling Crawlspace~
+A temporary description
+~
+97 0 0
+D1
+~
+~
+0 -1 9713
+D2
+~
+~
+0 -1 9715
+S
+#9799
+A temporary name~
+A temporary description
+~
+97 0 0
+S
+#0
+$~

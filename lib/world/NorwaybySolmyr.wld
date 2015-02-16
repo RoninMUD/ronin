@@ -1,0 +1,835 @@
+#19000
+Leaving the Trail~
+   You are on a grassy field surrounded by pine trees and steep
+but low mountains.  Pines also grow where they manage to take
+hold on the mountain sides.  You can enter the forest to the east
+or leave by the trail that leads west.
+~
+190 4 2
+D1
+You see a pine forest of slender trees.
+~
+~
+0 -1 19001
+D3
+~
+~
+0 -1 28597
+S
+#19001
+In the Pine Forest~
+   Stretching 20 meters or more into the sky, the slender pine
+trees leave the forest bed mostly in shadow - at least during
+the day.  The barren, sandy soil is covered with brown pine
+needles as well as blueberry and lingonberry bushes.
+~
+190 0 3
+D0
+You can go further into the forest in this direction.
+~
+~
+0 -1 19002
+D3
+This way leads out of the forest and onto a field.
+~
+~
+0 -1 19000
+S
+#19002
+In the Pine Forest~
+   The soil here is barren and mostly made out of sand.  The pine
+trees stand slender and tall against the sky.  A small stream
+separates the forest from a moor at the foot of the mountain to
+the west.  There is a woodpecker digging for food in a nearby tree.
+~
+190 0 3
+D0
+The forest seems to open up a bit further north.
+~
+~
+0 -1 19003
+D2
+The pine forest continues this way.
+~
+~
+0 -1 19001
+S
+#19003
+Entering the Valley~
+   The landscape opens up here.  Looking north you see a
+spectacular sight:  a large, wide valley with steep mountains on
+each side towering four hundred meters over the valley bed, where
+lies a large lake of clear blue water -- the very image of purity.
+Waterfalls cascade from the high mountain plateaus into the
+lake below.  Along the lake shore there are trees, adding colour
+between the steep, grey mountain sides and the blue lake.
+~
+190 0 3
+D0
+This way leads to the lake shore.
+~
+~
+0 -1 19004
+D2
+You see a pine forest of slender trees in this direction.
+~
+~
+0 -1 19002
+S
+#19004
+At the Rocky Lake Shore~
+   This is the rocky shore of the big lake.  Some small islands
+cut the lake surface, some of them rocky, some lightly
+vegetated.  A moraine makes a natural levee that blocks the
+lake from flooding the marsh that fills the landscape in the
+southwest.  The lake turns into a river that flows southeast
+on its way to the distant sea.
+~
+190 0 3
+D1
+Due to the low water there's a ford where you can cross
+the river. There's a green pasture on the other side.
+~
+~
+0 -1 19009
+D2
+There's a forest down there.
+~
+~
+0 -1 19003
+D3
+The shore leads towards the mountain side.
+~
+~
+0 -1 19005
+S
+#19005
+Along the Southern Shore~
+   A broad moraine, left by the glaciers of past ages, creates
+a levee that keeps the lake from flooding much of the southern
+land.  Some water seeps through the rocks and sediment
+creating wetlands in the lower areas to the south.  Although
+rough, it should be possible to go along the dry land
+leading north between the mountain side and the lake.
+~
+190 4 3
+D0
+The terrain is quite unfriendly this way, but you should
+be able to make your way through it.
+~
+~
+0 -1 19006
+D1
+You can walk along the lake shore this way.
+~
+~
+0 -1 19004
+S
+#19006
+Along the Western Shore~
+   Through forest and over rocks and creeks, the terrain
+between the mountainside and the lake makes for difficult
+movement.  The forest mostly consists of pine trees, but in
+some of the gorges, which have more fertile soil, there are
+spruce trees, which with their broad and tall trunks rise
+so high that they level with the pine trees.
+~
+190 0 3
+D0
+You should be able to make your way further north.
+~
+~
+0 -1 19007
+D2
+This way will lead you to the southern shores of the lake.
+~
+~
+0 -1 19005
+E
+w west wall~
+The steep wall of rock towers over you, several hundred meters
+high. There is no way anyone could climb this wall without
+breaking their necks.
+~
+E
+west~
+The steep wall of rock towers over you, several hundred meters
+high. There is no way anyone could climb this wall without
+breaking their necks.
+~
+S
+#19007
+In the Deep Valley~
+   You are in a deep valley with tall mountains and a big
+lake.  A cleft in the mountains makes it possible to
+venture west into higher grounds.  Further north the
+mountain walls go straight down into the deep water,
+making it impossible to continue that way.  Although rough,
+it should be possible to move along the dry land leading
+south between the mountain side and the lake.
+~
+190 0 3
+D2
+There's rough terrain this way, but you should be able to
+make your way through.
+~
+~
+0 -1 19006
+D3
+A cleft leads west between the mountains.
+~
+~
+0 -1 19008
+S
+#19008
+In the Cleft~
+   This highly vegetated area, with grass, bushes, birch
+and asp, makes a play of colours along the steep slope that
+leads up to the higher grounds to the west.  The cleft runs
+east, down to the large lake in the valley bed.  The cleft
+is also filled with small animals.  Mice and squirrels
+run about trying to stay out of the way.  They need to
+watch their steps.  There are traces of where vipers have
+been lying between some of the rocks that lie scattered
+along the slope.
+~
+190 0 3
+D1
+The cleft leads down to the valley bed.
+~
+~
+0 -1 19007
+D3
+The cleft grows steeper this way.
+~
+~
+0 -1 19017
+S
+#19009
+On a Green Pasture~
+   You are now on the eastern side of where the big lake
+forms a river leading southeast.  The soil here is very
+fertile, making the grass that grows here very green.
+Even though this area has cold and harsh winters, a
+couple of large oak trees stand firm on the pasture.
+There is a small hill to the north, behind which the
+valley continues.  The pasture continues east to the
+foot of a mountain.
+~
+190 0 2
+D0
+There's a small hill that you should be able to climb to
+the north. It's not very tall but a bit jagged.
+~
+hill~
+11 -1 19010
+D1
+The pasture leads to the foot of a mountain.
+~
+~
+0 -1 19013
+D3
+The lake shore to the west is quite rocky. You can reach
+it by crossing the river. Due to the low water, you can
+easily cross it at the ford.
+~
+~
+0 -1 19004
+S
+#19010
+Lake Inlet~
+   This is the shore in an inlet of the big lake that
+takes up most of this valley.  There's a forest between the
+mountain side and the sandy shores along the lake.  There
+is a small hill to the south.
+~
+190 0 3
+D0
+You can follow the sandy shore on the way north.
+~
+~
+0 -1 19011
+D2
+There's a small hill here. You should be able to climb it.
+~
+hill~
+11 -1 19009
+S
+#19011
+Along the Sandy Shore~
+   Some large boulders lie around on the sandy shore, some
+of them almost completely covered in the sand.  A pine
+forest grows in the poor soil along the shore, and where
+ever it manages to take hold in mountain cracks and small
+gorges up the mountain wall.
+~
+190 0 2
+D0
+The sandy shore leads north.
+~
+~
+0 -1 19012
+D2
+There's an inlet in the lake south of here.
+~
+~
+0 -1 19010
+S
+#19012
+In Rough Terrain~
+   The terrain here is very tough and rugged and all exits
+seem at first glance to be blocked, except the shore to the
+south, because the mountain wall, the lake and a very thick
+forest make it too difficult to go any further.  Water
+trickles down the mountain side, leaving the soil quite wet
+and mossy.
+~
+190 0 3
+D1
+The trees mostly stand in your way to venture further east,
+or is there a way to get through the thicket?
+~
+thicket~
+9 -1 19030
+D2
+A sandy shore, filled with boulders, leads south along the lake.
+~
+~
+0 -1 19011
+S
+#19013
+At the Foot of a Mountain~
+   A mountain towers over you to the east.  The river flows
+west of you, leading south towards the distant ocean.  The dry
+soil shows signs of busy animal life with the footprints of
+hooves and paws.  There are pine trees scattered pretty much
+everywhere and they are full of life.
+~
+190 0 2
+D2
+The rivershore leads south between the river and the mountain.
+~
+~
+0 -1 19014
+D3
+The pasture leads towards the lake in the west.
+~
+~
+0 -1 19009
+S
+#19014
+Along the River~
+   The river flows silently towards the distant ocean.  You
+venture its eastern shore which leads north towards a green
+pasture below the mountain in the east, and south between
+pine trees and heath.
+~
+190 0 3
+D0
+The rivershore leads north towards the green pasture below a
+tall mountain.
+~
+~
+0 -1 19013
+D2
+The shore leads south between pines and heath beneath the mountain.
+~
+~
+0 -1 19015
+S
+#19015
+Along the River~
+   The soil is more fertile here, so the pine trees grow thicker
+and taller than the ones in the other parts of the area.  The
+shores of the river are covered with tall grass.  There are
+beavers out on the river too, trying to build and mend their dams.
+The river takes a turn to the west further down.  A faint path
+leads south into higher grounds.
+~
+190 4 3
+D0
+The shore leads north between the river and the mountain.
+~
+~
+0 -1 19014
+D2
+A seemingly rarely used path leads south into higher grounds
+in the south.
+~
+~
+0 -1 19016
+S
+#19016
+A Small Farm~
+   The path leads to a small farm.  Between a few fields, there
+are several small buildings:  there's a storehouse erected on
+pillars, to store food out of reach for mice and rats; A barn
+holds animals and hay in the winters, and also has several other
+rooms where the farmers keep their tools or forge new tools or
+horseshoes when they need them.  The farmhouse is located so
+that the farmers can see as much of their property as possible
+without leaving the house.
+~
+190 0 2
+D0
+The path leads north towards the rivershore.
+~
+~
+0 -1 19015
+E
+storehouse stabbur~
+   The storehouse is erected on pillars to keep mice, rats
+and other vermin from eating and contaminating the food
+stored inside.  The building is also locked up to prevent
+strangers from entering the storehouse.
+~
+E
+barn~
+   A large barn, painted in red, stands southeast of the main
+farmhouse. It is entirely made out of wood, except the smithy
+which is made of stone. The big double doors on the upper floor
+are closed, but you can enter the barn through the opening
+of a door in the west wall of the barn.
+~
+E
+house farmhouse~
+   The farmhouse is made of wood and is painted dark brown.
+There are a few windows on each side of the house. An open door
+in the southern wall makes it possible to enter the house.
+~
+S
+#19017
+In the Cleft~
+   A steep slope leads up to the mountain plateau above.  The
+other way, it leads east and down towards the valley floor.
+A small creek flows in the bottom of the cleft.  The sides of
+the slope is filled with heath, grass and plants carrying
+different sorts of berries.  Small wild animals run around on
+the ground and some jump into holes in the ground for security.
+~
+190 0 3
+D1
+A steep descent towards the valleybed below.
+~
+~
+0 -1 19008
+D4
+A steep slope leads up to the mountain plateau above.
+~
+~
+0 -1 19018
+S
+#19018
+Reaching Higher Lands~
+   You are at the edge of where the mountain plateau connects
+with the valley below.  A steep slope drops into a cleft leading
+east towards the lake.  In the other directions the ground
+elevates slightly towards distant mountaintops.
+~
+190 0 5
+D0
+You can venture this way along the mountain ridge.
+~
+~
+0 -1 19019
+D2
+You can venture this way along the mountain ridge.
+~
+~
+0 -1 19024
+D3
+The mountain plateau stretches out as far as the eye can see.
+~
+~
+0 -1 19022
+D5
+A steep slope drops down towards the valleybed far below.
+~
+~
+0 -1 19017
+S
+#19019
+In the High Lands~
+   A breathtaking view opens to the east.  The steep cliffs
+plummit into the lake, some 400 meters below, then only to
+rise again just as sharply on the other side.  In the other
+direction, the moor seems to continue indefinitely, only
+interrupted by mountain tops, stretching for the heavens.
+~
+190 0 5
+D2
+There is a steep slope running down from the mountain
+plateau down there.
+~
+~
+0 -1 19018
+D3
+The mountain plateau stretches out as far as the eye can see.
+~
+~
+0 -1 19020
+S
+#19020
+In the High Lands~
+   In the cracks, crevices, holes and gorges of the rugged
+bedrock, wet grass, bushes and small, crooked trees of all kinds
+are scattered.  Wildlife is abundant: mice, lemmings, different
+species of birds, both small and large, deer, roedeer, moose
+and reindeer fill these lands, eating whatever edible they find.
+In the darker corners, and hiding behind bushes or trees, the
+predators of the area:  vipers, minx, wolves and bears, try to
+corner, lure or surprise their unsuspecting counterparts.
+~
+190 0 5
+D1
+The high lands continue a bit further until it ends in a sharp
+drop into the valley below.
+~
+~
+0 -1 19019
+D2
+The high lands continue this way.
+~
+~
+0 -1 19022
+D3
+The high lands continue this way.
+~
+~
+0 -1 19021
+S
+#19021
+In the High Lands~
+   In the cracks, crevices, holes and gorges of the rugged
+bedrock, wet grass, bushes and small, crooked trees of all kinds
+are scattered.  Wildlife is abundant: mice, lemmings, different
+species of birds, both small and large, deer, roedeer, moose
+and reindeer fill these lands, eating whatever edible they find.
+In the darker corners, and hiding behind bushes or trees, the
+predators of the area:  vipers, minx, wolves and bears, try to
+corner, lure or surprise their unsuspecting counterparts.
+~
+190 0 5
+D1
+The high lands continue this way.
+~
+~
+0 -1 19020
+D2
+The high lands continue this way.
+~
+~
+0 -1 19023
+S
+#19022
+In the High Lands~
+   In the cracks, crevices, holes and gorges of the rugged
+bedrock, wet grass, bushes and small, crooked trees of all kinds
+are scattered.  Wildlife is abundant: mice, lemmings, different
+species of birds, both small and large, deer, roedeer, moose
+and reindeer fill these lands, eating whatever edible they find.
+In the darker corners, and hiding behind bushes or trees, the
+predators of the area:  vipers, minx, wolves and bears, try to
+corner, lure or surprise their unsuspecting counterparts.
+~
+190 0 5
+D0
+The high lands continue this way.
+~
+~
+0 -1 19020
+D1
+There is a steep slope running down from the edge of
+the mountain plateau in the east.
+~
+~
+0 -1 19018
+D2
+The high lands continue this way.
+~
+~
+0 -1 19025
+D3
+The high lands continue this way.
+~
+~
+0 -1 19023
+S
+#19023
+In the High Lands~
+   In the cracks, crevices, holes and gorges of the rugged
+bedrock, wet grass, bushes and small, crooked trees of all kinds
+are scattered.  Wildlife is abundant: mice, lemmings, different
+species of birds, both small and large, deer, roedeer, moose
+and reindeer fill these lands, eating whatever edible they find.
+In the darker corners, and hiding behind bushes or trees, the
+predators of the area:  vipers, minx, wolves and bears, try to
+corner, lure or surprise their unsuspecting counterparts.
+~
+190 0 5
+D0
+The high lands continue this way.
+~
+~
+0 -1 19021
+D1
+The high lands continue this way.
+~
+~
+0 -1 19022
+D2
+The high lands continue this way.
+~
+~
+0 -1 19026
+S
+#19024
+In the High Lands~
+   In the cracks, crevices, holes and gorges of the rugged
+bedrock, wet grass, bushes and small, crooked trees of all kinds
+are scattered.  Wildlife is abundant: mice, lemmings, different
+species of birds, both small and large, deer, roedeer, moose
+and reindeer fill these lands, eating whatever edible they find.
+In the darker corners, and hiding behind bushes or trees, the
+predators of the area:  vipers, minx, wolves and bears, try to
+corner, lure or surprise their unsuspecting counterparts.
+~
+190 0 5
+D0
+There is a steep slope running down from the mountain plateau
+in the north.
+~
+~
+0 -1 19018
+D2
+The mountain ridge continues this way.
+~
+~
+0 -1 19027
+D3
+The mountain plateau stretches out as far as the eye can see.
+~
+~
+0 -1 19025
+S
+#19025
+In the High Lands~
+   In the cracks, crevices, holes and gorges of the rugged
+bedrock, wet grass, bushes and small, crooked trees of all kinds
+are scattered.  Wildlife is abundant: mice, lemmings, different
+species of birds, both small and large, deer, roedeer, moose
+and reindeer fill these lands, eating whatever edible they find.
+In the darker corners, and hiding behind bushes or trees, the
+predators of the area:  vipers, minx, wolves and bears, try to
+corner, lure or surprise their unsuspecting counterparts.
+~
+190 0 5
+D0
+The high lands continue this way.
+~
+~
+0 -1 19022
+D1
+The high lands continue a bit further until it ends in a sharp
+drop from the mountain ridge into the valley below.
+~
+~
+0 -1 19024
+D3
+The high lands continue this way.
+~
+~
+0 -1 19026
+S
+#19026
+In the High Lands~
+   In the cracks, crevices, holes and gorges of the rugged
+bedrock, wet grass, bushes and small, crooked trees of all kinds
+are scattered.  Wildlife is abundant: mice, lemmings, different
+species of birds, both small and large, deer, roedeer, moose
+and reindeer fill these lands, eating whatever edible they find.
+In the darker corners, and hiding behind bushes or trees, the
+predators of the area:  vipers, minx, wolves and bears, try to
+corner, lure or surprise their unsuspecting counterparts.
+~
+190 0 5
+D0
+The high lands continue this way.
+~
+~
+0 -1 19023
+D1
+~
+~
+0 -1 19025
+S
+#19027
+On the Mountain Ridge~
+   The mountain ridge continues south over the wetlands to
+the east, some 300 meters below.  Some crooked pine trees, bent
+over by the wind, grow here between the naturally askew kinds
+of birch trees that twist up from the swampy cracks among
+the bedrock.
+~
+190 0 5
+D0
+The ridge leads onto a large mountain plateau.
+~
+~
+0 -1 19024
+D2
+The ridge continues south, but the terrain seems to become more rugged.
+~
+~
+0 -1 19028
+S
+#19028
+On the Mountain Ridge~
+   The mountain ridge continues south over the wetlands to
+the east, some 300 meters below.  Some crooked pine trees, bent
+over by the wind, grow here between the naturally askew kinds
+of birch trees that twist up from the swampy cracks among
+the bedrock.  There appears to be a small shadowy spot in a
+part of the rock here.
+~
+190 0 5
+D0
+The mountain ridge leads north towards the mountain plateau in the distance.
+~
+~
+0 -1 19027
+D3
+Upon closer inspection you find that the small, shadowy spot
+in the rock is a small hole. The hole looks just wide enough
+for a person to crawl into.
+~
+hole~
+9 -1 19029
+E
+hole~
+Upon closer inspection you find that the small, shadowy spot
+in the rock is a small hole. The hole looks as though a person
+would be able to crawl into.
+~
+S
+#19029
+Inside a Small Cave~
+   Hard granite walls surround you in this cramped, moist space
+with fungi covered walls.  A slight draft of fresh air emanates
+from a small opening in the eastern wall.
+~
+190 265 5
+D1
+A hole in the wall leads back out into the open air.
+~
+hole~
+9 -1 19028
+E
+hole~
+There's a hole in the eastern wall that leads back out into
+the open air.
+~
+S
+#19030
+Among the Trees on the Inlet Shoreline~
+   Trees grow whereever they can grab a hold on the bedrock,
+or in the sand or unfertile soil in the cracks between the
+different parts of solid granite.  The rocks are steep and never
+less than 10 meters above the lake.  Trees and thicket cover up
+the edge towards a sandy beach in the west.  Tall spruces grow
+in the deeper shadows of the eastern mountains.
+~
+190 1 3
+D1
+Deep shadows from the mountains and the tall trees give the
+land to the east an eerie atmosphere.
+~
+~
+0 -1 19031
+D3
+The thicket and trees block easy travel west.
+~
+thicket~
+9 -1 19012
+S
+#19031
+A Rotting Carcass~
+   Far into the end of the inlet, in a deep, deep cleft, where
+the tall, thick spruce cover the land in shadow.  Between moss-
+ridden roots and sharp, dead branches lies a decayed carcass,
+reeking of rotten flesh.  Which of the elegant forest creatures
+this once was is hard to make out, but deep gashes torn into
+flesh and bone says a thing or two about the vileness of the
+creature that ended its life.
+~
+190 1 3
+D3
+Rough terrain makes for tough travel along the inlet shoreline
+in the west.
+~
+~
+0 -1 19030
+S
+#19032
+Inside the Farmhouse~
+   The house has several small rooms that all can be accessed
+from the central room.  The central room is a bit bigger than
+the other rooms, but there are not many pieces of furniture
+here.  Beneath the window in the western wall there is a bench
+sitting in front of a table.  On the other side of the table
+stand two simple, wooden chairs.  A beautiful large closet is
+standing in one of the room corners.  The kitchen is located
+in the southern part of the house, through which you can exit
+the building via the kitchen door.
+~
+190 8 0
+D2
+In the southern wall of the kitchen there is a door that
+leads back outside.
+~
+~
+0 -1 19016
+S
+#19033
+Inside the Barn~
+   You are now inside a large barn.  The majority of the barn
+is made out of wood, but the smithy in the northeastern part
+of the building is naturally made of stone.  In the other end
+there are enclosures where the sheep stays in the winter,
+being fed the hay that will be kept in the very large storing
+zone that takes up the rest of this level of the building.
+There is a ladder that leads up to the other floor and a door
+in the west wall that leads back outside.
+~
+190 9 0
+D3
+There is a door in this wall that leads back outside.
+~
+~
+0 -1 19016
+D4
+A steep ladder leads up to the upper floor of the barn.
+~
+ladder~
+11 -1 19034
+S
+#19034
+The Loft~
+   The upper floor of the barn is held up by the beams that
+also support the roof.  There is a large hole in the floor
+over the storing zone for the hay.  Double doors, now locked
+and closed, is the way out of the barn from this level.  The
+other exits would be climbing down the ladder or jumping
+through the hole in the floor.  Along the sides and at the
+far wall there is farming equipment being stored for when
+the farmer needs it.
+~
+190 9 0
+D5
+A steep ladder leads back down to the ground floor of the barn.
+~
+ladder~
+11 -1 19033
+S
+#0
+$~

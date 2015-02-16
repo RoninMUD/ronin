@@ -1,0 +1,217 @@
+#18800
+key bone~
+a small bone~
+A bone has been left on the ground.~
+~
+18 524288 1
+0 0 0 0
+10 175 10
+100
+E
+bone key~
+The small bone is carved to function as a key.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18801
+black cloak~
+a Dead black cloak~
+A pice of black cloth has been left here.~
+~
+9 0 1025
+10 -1 -1 -1
+15 55000 22500
+7
+E
+black cloak~
+  The cloak is black as night with no visible stitching. The cloak does not stir 
+in the wind, hanging motionless even while youre moving around.
+~
+X
+~
+5 0 0
+M
+You put on the Dead black cloak.~
+$n puts on $s Dead black cloak.~
+You remove the Dead black cloak.~
+$n removes $s Dead black cloak.~
+A
+19 3
+A
+18 2
+A
+52 -5
+T
+1000
+#18802
+grey cloak~
+A grey cloak~
+A grey cloak is lying on the ground.~
+~
+9 0 1025
+5 -1 -1 -1
+10 10000 7500
+10
+E
+cloak grey~
+  The grey cloak is like any travel cloaks you have seen. It does not stand out
+in any way. Its just a plain cloak.
+~
+X
+~
+4 0 0
+M
+You put on the grey cloak.~
+$n puts on $s grey cloak.~
+You remove the grey cloak.~
+$n removes $s grey cloak.~
+A
+19 2
+T
+500
+B
+524288
+#18803
+mask pale skin~
+A mask made of pale skin~
+The pale skin of a humanlike face is left on the ground.~
+~
+9 0 17
+0 0 0 0
+10 100000 15000
+10
+E
+skin pale mask~
+  The mask is made from the skin of Shadar Haran, his skin cut from his skull. 
+Holes are made for breathing and seeing. Wearing it makes you stomach turn
+but you also feel pride in owning it, making it worth the nausea.
+~
+X
+~
+0 0 0
+M
+You pull the pale skin over your head. Yuk!~
+$n pulls a pale skin over $s head.~
+You remove the pale skin from your head. What a relief!~
+$n pulls a pale skin from $s head.~
+A
+19 2
+A
+18 3
+A
+52 15
+#18804
+cour'souvra coursouvra~
+a Cour'souvra~
+A small wire construct is left here.~
+~
+9 0 5
+0 0 0 0
+10 250000 30000
+20
+E
+coursouvra cour'souvra wire~
+  The Coursouvra is made if fine steel wire holding small blue crystals. When worn
+the wire will look like a web on your chest. The blue crystals gives off a feint glow.
+~
+X
+~
+0 0 0
+M
+You wear the Cour'souvra around your neck.~
+$name wears a Cour'souvra around $s neck.~
+You remove the Cour'souvra.~
+$name removes a Cour'souvra.~
+A
+19 3
+A
+18 2
+A
+13 -50
+#18805
+boots worm skin~
+boots made from a worm hide~
+A pair of wormhide boots are left here.~
+~
+9 0 65
+8 -1 -1 -1
+12 25000 25000
+7
+E
+boots worm skin~
+  The boots are made from the skin of a Jumara, making it very sturdy. They fit
+comfortable on your feet making it easier to walk. The boots are high, almost
+reaching your knees with lace going all the way down to the ankle.
+~
+X
+~
+0 0 0
+M
+You put on the wormhide boots.~
+$n wears $s wormhide boots.~
+~
+~
+A
+19 2
+A
+53 5
+A
+12 20
+#18806
+horn valere~
+The Horn of Valere~
+An old curled horn is left on the ground.~
+~
+11 0 16385
+0 0 0 0
+15 500000 500000
+30
+E
+horn valere~
+  The Horn is curled and golden, with a line of silver script 
+inlaid around the rim, reading "Tia mi aven Moridin isainde vadin", 
+which translates to "The grave is no bar to my call".
+~
+X
+~
+512 0 0
+M
+You grab The Horn of Valere.~
+$n grabs The Horn of Valere.~
+You remove The Horn of Valere.~
+$n lets go of The Horn of Valere.~
+A
+19 5
+A
+18 5
+#18807
+pile~
+a pile of bodies~
+A pile of bloody body parts is stacked here.~
+~
+15 0 0
+0 0 0 0
+10 10 10
+100
+E
+pile~
+  The huge pile contains houndreds of bodies. Some just bones, and some
+still with flesh on its bones. The belongings of the people slaughtered
+here still lays among the corpses.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

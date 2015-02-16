@@ -1,0 +1,69 @@
+#26500
+Hall of Kludges~
+
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+265 576 0
+S
+#26581
+The Guru's Retreat ~
+  This is the place where the great Guru comes, to rest himself after
+spending an exhaustive day helping his disciples to learn about Nirvana.
+It is a brightly lit room, with flowing silk banners in gold and orange
+hanging from the walls. The floor is littered with books and scrolls and
+weathered parchments. You can smell tea brewing up somewhere in the corner.
+Soft pipe music accompanied by chants can be heard from below.
+~
+265 4104 0
+D4
+You see the chamber of the enlightened one.
+~
+~
+0 -1 26582
+D5
+You see the chamber of fasting.
+~
+~
+0 -1 26480
+S
+#26582
+The Chamber of Enlightenment ~
+  You see a pure white room. Rumor has it that the last Mahayogi to attain
+enlightenment from this realm, reached Nirvana from this chamber. Hence,
+it is considered hallowed ground by the followers of this cult. The Chamber
+is illuminated by a single ray of light which shines into the room from a 
+small hole in the ceiling. It is believed that the Gods themselves protect
+this chamber from zealots who believe in violence and practice it.
+~
+265 4232 0
+D5
+The resting place of the great guru.
+~
+~
+0 -1 26581
+S
+#26599
+Hall of Kludges~
+
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+265 576 0
+S
+#0
+$~

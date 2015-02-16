@@ -1,0 +1,192 @@
+#30101
+ogre~
+an Ogre~
+A filthy Ogre squats in a pile of his own waste here, scratching himself.
+~
+A tremendous Ogre scratches his furry head with a scabrous hand as you
+look at him. He seems very confused and very angry. You can tell this
+because he grunts, snarls, and attacks you!
+~
+2148394 262144 -400 Y
+23 3 0 10d10+1000 3d10+5
+10000 150000
+8 8 1
+0 4 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30102
+ratwolf rat wolf~
+Ratwolf~
+A strange creature skulks here, a cross between a rat and a wolf!
+~
+Huge yellow fangs, green, glowing eyes, and a naked tail. This lovely beast
+likes both fresh AND rotted meat, so he may save some of you for later.
+~
+46 268730410 -600 Y
+25 -4 -2 20d10+2000 4d10+10
+10000 200000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30103
+chigger~
+bloodsucking chigger~
+A bloodthirsty chigger is waiting to spring on its next victim.
+~
+This fattened chigger has had many hosts for dinner, maybe you are next on
+his menu. It pauses only a moment before springing at your jugular.
+~
+20494 268795904 -700 Y
+26 -6 -4 1d1+2500 8d7+15
+25000 220000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30104
+banshee woman~
+The Banshee~
+A willowy woman stands here screaming, the mist visible behind her.
+~
+As you look at the Banshee, she turns her shriek directly at you!!!
+~
+16426 1409024 0 Y
+30 -9 -5 3d100+4000 5d11+5
+20000 500000
+8 8 2
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30105
+water muck monster bubble~
+Water Muck Monster~
+The water bubbles slightly as it feels your presence.
+~
+The watery muck monster mobilizes its body into a humanoid form to put an 
+end to this infernal intrusion. Large flowing hands reach out to grab and
+once again absorb the energy of foolish prey.
+~
+17422 268795906 -500 Y
+30 -10 -6 20d10+5500 20d2+25
+100100 650000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30106
+pookah horse demon~
+the Pookah~
+A demonic horse's head rises from the water here, red eyes gleaming.
+~
+The Pookah is a small horse, almost as small as a pony. However, it is
+covered by water plants, and it has very sharp teeth and glowing red eyes.
+You even notice that it has sharp claws on its paws, as it neighs a demonic
+sound and attacks you with them.
+~
+42 264202 -1000 Y
+30 -10 -5 10d10+3500 8d10+40
+30000 300000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30107
+redcap dwarf~
+Redcap~
+A dwarf wearing a blood-red cap stands here, grinning.
+~
+A short, hunchbacked dwarf stands here, picking his sharp canines with
+a gleaming knife. He wears a red skullcap, dyed with human blood, and a
+necklace made of fingerbones.
+~
+42 268730370 -1000 Y
+27 -7 -2 2d100+1000 3d30+30
+10000 200000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30108
+suit living armor~
+A suit of living armor~
+A suit of armor comes to life to guard the museum's treasures.
+~
+A classic suit of full steel platemail creaks forward from its eternal sleep
+to stop your thievery of the museum's treasures. A greenish glow radiates
+from behind the visor of his sturdy helm. The full length tower shield held
+by the armor has a beautiful crest of a locust etched into it.
+~
+17422 805404672 -500 Y
+30 -10 -8 4d50+6000 25d3+25
+35000 500000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30110
+gold~
+The Gold~
+[1] A massive pile of gold glitters alluringly here.
+~
+A massive pile of gold lies here, seemingly stuck together somehow...
+~
+18442 0 0 Y
+31 -8 -1 10d100+7000 10d10+40
+5000000 100000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30111
+tamur were beast~
+Tamur the Were-beast~
+A fearsome were-beast turns his head to look at you, yellow eyes gleaming...
+~
+Covered in short, sable fur, Tamur stands only slightly hunched over. His
+eyes gleam a fierce, mad yellow; the pupils narrow stripes of black
+running vertically. His huge canines jut out from under a large, black,
+damp nose. His whiskers quiver and a stream of drool dangles from his lower
+lip. Tamur's sharp claws make no sound as he erotically extends them from
+the tips of his furred fingers.
+~
+42 268470272 -600 Y
+33 -13 -7 300d10+10000 10d10+50
+50000 900000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#30115
+domovoi troll~
+A Domovoi~
+A stumpy troll sits here, peacefully gazing at the small brook.
+~
+The Domovoi is a short troll, barely as tall as a young lad. Yet he is built
+very strongly, and his ropy muscles ripple beneath his ragged, dusty 
+clothing. His dull grey hair is tousled and cowlick-ridden, and it has never
+even heard tales of combs or their like. The Domovoi smiles peacefully
+as he takes a rest from his life's work of keeping his bridge tidy, and
+watches the glimmering surface of the small eddy of the brook which chuckles
+merrily beneath his bridge.
+~
+16394 268705920 500 Y
+34 -14 -6 300d20+15000 30d2+50
+500000 2000000
+6 6 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

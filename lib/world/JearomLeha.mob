@@ -1,0 +1,470 @@
+#20400
+chance mono~
+a Mob of Chance~
+A Mob of Chance stands here, preparing for you to take a chance.
+~
+This is a Chance Mob! Kill it for your chance card!
+~
+10 402923648 1000 Y
+51 -20 -10 4000d2+0 2d8+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20401
+community chest mono~
+a Mob of Community Chest~
+A Mob of Community Chest is here.
+~
+This is a Chance Mob! Kill it for your chance card!
+~
+10 402923648 1000 Y
+51 -20 -10 4000d2+0 2d8+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20402
+property mono~
+Mediterranean Avenue~
+Mediterranean Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 134217856 1000 Y
+51 -15 0 2000d2+500 5d5+100
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20403
+property mono~
+Baltic Avenue~
+Baltic Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 134217856 1000 Y
+51 -15 0 2000d2+500 5d5+100
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20404
+property mono~
+Oriental Avenue~
+Oriental Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 134217856 1000 Y
+51 0 -7 4000d2+0 20d2+16
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20405
+property mono~
+Vermont Avenue~
+Vermont Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 134217856 1000 Y
+51 0 -7 4000d2+0 20d2+16
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20406
+property mono~
+Connecticut Avenue~
+Conecticut Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 134217856 1000 Y
+51 0 -7 4000d2+0 20d2+16
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20407
+property mono~
+St.Charles Place~
+St.Charles Place is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402686120 1000 Y
+51 -8 -2 2000d2+500 3d12+50
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20408
+property mono~
+States Avenue~
+States Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402686120 1000 Y
+51 -8 -2 2000d2+500 3d12+50
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20409
+property mono~
+Virginia Avenue~
+Virginia Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402686120 1000 Y
+51 -8 -2 2000d2+500 3d12+50
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20410
+property mono~
+St.James Place~
+St.James Place is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 939819144 1000 Y
+51 -12 -10 2000d2+500 3d8+40
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20411
+property mono~
+Tennessee Avenue~
+Tennessee Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 939819144 1000 Y
+51 -12 -10 2000d2+500 3d8+40
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20412
+property mono~
+New York Avenue~
+New York Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 939819144 1000 Y
+51 -12 -10 2000d2+500 3d8+40
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20413
+property mono~
+Kentucky Avenue~
+Kentucky Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402948232 1000 Y
+51 -20 -10 3000d2+0 8d10+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20414
+property mono~
+Indiana Avenue~
+Indiana Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402948232 1000 Y
+51 -20 -10 3000d2+0 8d10+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20415
+property mono~
+Illinois Avenue~
+Illinois Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402948232 1000 Y
+51 -20 -10 3000d2+0 8d10+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20416
+property mono~
+Atlantic Avenue~
+Atlantic Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402917544 1000 Y
+51 -12 -15 5000d2+2000 7d7+50
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20417
+property mono~
+Ventnor Avenue~
+Ventnor Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402917544 1000 Y
+51 -12 -15 5000d2+2000 7d7+50
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20418
+property mono~
+Marvin Gardens~
+Marvin Gardens is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402917544 1000 Y
+51 -12 -15 5000d2+2000 7d7+50
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20419
+property mono~
+Pacific Avenue~
+Pacific Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 939819016 0 Y
+51 -15 -15 4000d3+2000 8d10+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20420
+property mono~
+North Carolina Avenue~
+North Carolina Avenue is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 939819016 0 Y
+51 -15 -15 4000d3+2000 8d10+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20421
+property mono~
+Pennsylvania Avenue~
+A Mob of Chance stands here, preparing for you to take a chance.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 939819016 1000 Y
+51 -15 -15 4000d3+2000 8d10+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20422
+property mono~
+Short Line Railroad~
+Short Line Railroad is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 295048 1000 Y
+51 -8 -11 5000d3+0 4d12+48
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20423
+property mono~
+Park Place~
+Park Place is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402686088 1000 Y
+51 -30 -11 5000d2+1500 20d20+40
+0 50000
+8 8 1
+0 0 100d1+1 1
+7 2 50 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20424
+property mono~
+Boardwalk~
+Boardwalk is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 402948232 1000 Y
+51 -30 -11 5000d2+1500 20d20+40
+0 50000
+8 8 1
+0 0 100d1+0 1
+7 2 50 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20425
+property mono~
+Reading Railroad~
+Reading Railroad is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 295048 1000 Y
+51 -8 -11 5000d3+0 4d12+48
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20426
+chance mono~
+Electric Company~
+Electric Company is here.
+~
+This is a Chance Mob! Kill it for your chance card!
+~
+10 402923648 1000 Y
+51 -20 -10 4000d2+0 2d8+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20427
+property mono~
+Pennsylvania Railroad~
+Pennsylvania Railroad is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 295048 1000 Y
+51 -8 -11 5000d3+0 4d12+48
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20428
+property mono~
+B&O Railroad~
+B&O Railroad is here.
+~
+This is a property mob! Kill it for access to the property!
+~
+10 295048 1000 Y
+51 -8 -11 5000d3+0 4d12+48
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20429
+chance mono~
+Water Works~
+Water Works is here.
+~
+This is a Chance Mob! Kill it for your chance card!
+~
+10 402923648 1000 Y
+51 -20 -10 4000d2+0 2d8+110
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20430
+free parking mono~
+Free Parking~
+Free Parking! Free Parking! Free Parking!
+~
+This is a Free Parking mob! Kill it for access to the cash collected
+on this free parking set!
+~
+10 134217728 1000 Y
+51 -31 -20 1000d1+0 2d1+0
+0 50000
+8 8 1
+0 0 100d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

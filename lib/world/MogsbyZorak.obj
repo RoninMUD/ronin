@@ -1,0 +1,324 @@
+#900
+portrait frame~
+a Portrait of a Lady~
+A portrait of a beautiful lady hangs on the wall here.~
+~
+15 0 0
+5 5 -1 0
+1000 10 10
+100
+E
+portrait~
+A beautiful dark haired young lady sits in a rocking chair surrounded
+on all sides by huge Mogs, the likes of which you have never seen!
+Hopefully these ferocious beasts don't still exist....~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#901
+iron key yarn~
+an bit of yarn tied to an iron key~
+A small length of pinkish yarn is tied to an iron key here.~
+~
+18 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#902
+brass key~
+a heavy Brass Key~
+A heavy-looking brass key lies here.~
+~
+18 524288 1
+0 0 0 0
+14 10 10
+65
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#903
+green velvet pillow~
+a Green Crushed-Velvet Pillow~
+A beetle-green crushed-velvet pillow lies here invitingly.~
+~
+7 0 49153
+2 4 0 0
+4 1 1
+79
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#904
+black silk pillow~
+a black silk pillow~
+A black silk pillow lies here, almost in shreds from Mog claws.~
+~
+7 0 49153
+2 10 0 0
+10 10 10
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#905
+orange velveteen pillow~
+an orange velveteen pillow~
+A revolting orange velveteen pillow exudes a uric odor here.~
+~
+7 0 49153
+2 3 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#906
+yellow cotton pillow~
+a yellow cotton pillow~
+A lumpy yellow cotton pillow sits here invitingly, only a few stains on it.~
+~
+7 0 49153
+4 4 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#907
+pillowcase dirty pillow case~
+a dirty pillowcase~
+A large, dirty pillowcase lies here.~
+~
+15 0 17
+30 0 -1 0
+10 10 10
+89
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+1
+#908
+nut brown acorn~
+A small brown nut~
+A small brown nut lies on the ground here, looking delicious.~
+~
+19 0 1
+1 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#909
+cheese~
+A small chunk of cheese~
+A piece of cheese lies here quietly.~
+~
+19 0 0
+5 0 0 0
+2 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#910
+mogpelt pelt stripedy~
+a Stripedy Mogpelt~
+A pile of striped fur lies here.~
+~
+9 4194304 9
+7 0 0 0
+10 100 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+45 10
+A
+18 1
+#911
+mogbell mog bell~
+a Mogbell~
+A small bell on a long piece of yarn glints in the dust here.~
+~
+11 4194304 5
+0 0 0 0
+2 10000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 2
+A
+25 -72
+#912
+sleeves mogfur fur~
+Mogfur Sleeves~
+A pile of grey fur lies crumpled up on the ground here.~
+~
+0 4194304 257
+0 0 0 0
+25 20000 1000
+37
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+20 20
+#922
+pillow~
+a fluffy pillow~
+A big, white, fluffy pillow lies here.~
+~
+15 0 1
+15 5 -1 0
+10 10 10
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#953
+old book~
+A really old book~
+A really old book lies here, covered in dust.~
+~
+2 2 1
+30 75 0 0
+1 2000 20
+56
+E
+book~
+Only one page is left in this book, and it looks like it'd probably
+do something weird if you read it out load. In fact, it says on the
+top of the page: "This will do something weird if you read it out
+loud." That's hand-written by someone other than the author, but
+it might be an indicator...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#954
+mog collar~
+A Shiny Tin Mog-Collar~
+A small circlet of tin lies on the ground here.~
+~
+9 268435460 5
+5 1 10 1
+6 1000 100
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+25 23
+A
+1 1
+B
+8
+#999
+lizardskin board watch~
+a lizardskin watch~
+A small strip of lizardskin lies on the ground here, ticking.~
+~
+27 65536 4097
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

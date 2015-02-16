@@ -1,0 +1,548 @@
+#27700
+yeti mountain~
+A Mountain Yeti~
+A large, furry white beast with sharp teeth growls with rage.
+~
+A great hairy beast, the mountain yeti is a primordial leftover from an age
+long past.  Humanoid in stature, this shaggy creature stands erect on it's huge
+hind legs.  Large arms and clawed hands look as if they were designed
+specifically for ripping small creatures apart.  With red-stained teeth and ice
+blue eyes, this beast looks around with savage hunger for anything to eat.
+~
+106 295040 0 Y
+45 -15 -10 50d50+10000 23d8+75
+0 1021923
+8 8 1
+68 18568 1d1+1 1
+7 2 20 0
+0 0 0 34
+K
+510285 27710 0 0 0 0 0
+#27701
+troll ice~
+An Ice Troll~
+An angry ice troll is here, defending its territory.
+~
+The ice troll is a fearsome monster, originally from the plane of ice.  It is
+said that long ago, a wizard of great power opened a planer gate to this place
+and summoned forth an entire army of trolls.  Now, they are rare to find but
+not unheard of in remote areas.  A thin mist hovers around this large angular
+creature.  Jagged white teeth drip half-frozen water droplets onto the ground,
+leaving small icicles upon the troll's chin.
+~
+536887406 294912 -197 Y
+38 -14 -6 20d20+2000 4d22+30
+62834 339238
+8 8 0
+75 268451968 1d1+1 2
+6 2 5 0
+5 1 10 0
+0 0 0 34
+R
+1
+K
+0 0 0 0 0 0 0
+#27702
+basilisk juvenile~
+A Juvenile Basilisk~
+A juvenile basilisk is here, devouring some recent prey.
+~
+The basilisk is one of the most feared denizens of the underdark.  Its ability
+to turn other living things to stone with a sheer glance gives it a great
+advantage over other predators.  The basilisk can consume its statue-made
+victims by secreting saliva upon the section it wishes to dine upon.  The
+chemical reaction turns the affected area back into living flesh for
+consumption.  This particular basilisk is smaller than usual, and lighter
+colored, which indicates that it has not grown to its full size.  When you
+catch the gleam in its eye however, you realize it should be treated with the
+full respect due to such a monster.
+~
+536871018 268730408 0 Y
+40 -20 -20 10d10+3600 10d10+10
+1 302393
+8 8 0
+80 1023 1d1+1 3
+6 1 5 0
+8 1 5 0
+5 1 5 0
+0 0 0 126
+K
+70283 27712 0 0 0 0 0
+#27710
+imp wicked little demon~
+An Imp~
+A wicked little demon hops about here, seeking a victim to torment.
+~
+This insidious little creature darts about the air on its small wings, looking
+for something to torture or kill.  A small bead of poison drips from a large
+stinger at the end of a bony tail that constantly whips back and forth, seeking
+soft flesh.  The imp's eyes are tiny red dots on an otherwise black fleshy
+body.  This foul denizen of the lower planes is the weakest of it's sort, and
+stands only about half a meter tall.  While not particularly intelligent, the
+imp seems cunning enough to overcome a weak opponent.
+~
+524364 0 -1000 Y
+35 -1 0 40d40+400 6d6+4
+7328 236209
+9 9 0
+62 16448 1d1+1 2
+5 2 5 0
+6 2 5 0
+0 0 0 0
+R
+9
+K
+0 0 0 0 0 0 0
+#27711
+lemure hideous mound flesh~
+A Hideous Lemure~
+A hideous mound of flesh shambles about, drooling blood.
+~
+The appearance of a lemure is beyond the definition of disgusting.  Only
+vaguely humanoid in shape, these trembling mounds of flesh are mindless
+servants of the more powerful demons.  Bones fill this creature in seemingly
+haphazard locations, serving only to keep the putrid thing from collapsing in
+on itself.  Though it has no will of its own, it is proficient in the ways of
+killing, using jagged claws and teeth to rip its victims apart.
+~
+108 0 0 Y
+40 -15 -5 22d22+4800 7d7+7
+7157 501234
+8 8 0
+62 16384 1d1+1 0
+0 0 0 64
+K
+0 0 0 0 0 0 0
+#27712
+bebilith stalker purple spider insect~
+A Bebilith Stalker~
+A dark purple spider-like insect chews upon the remains of its last victim.
+~
+Large and spider-like, the bebilith stalker is a terrifying monster.  A lesser
+demon from the abyss, this creature is most often summoned to the material
+plane to serve as a guardian or protector of some sort.  Curiously, this terror
+has only six legs instead of the usual eight for an arachnid.  Two larger
+appendages, similar to crab pincers, sprout from near its drooling maw.  The
+arms lack actual pincers, having instead sharp-bladed endings made of the same
+material as the creature's shell.  Efficient killers, bebiliths never miss an
+opportunity to deal out death.
+~
+536887406 276856892 -832 Y
+47 -26 -20 123d127+18347 40d6+287
+0 1593423
+8 8 0
+62 268452044 1d1+1 0
+0 0 0 376
+K
+1391242 27711 0 0 0 0 0
+#27713
+osyluth patroller demon~
+An Osyluth Patroller~
+An Osyluth Patroller makes its rounds, alert to any intruders.
+~
+Standing nearly three meters tall, the Osyluth is a terrible sight indeed.
+Thin and bony, this lesser demon serves as the main workforce of demonkind.
+Osyluths share the same origins as imps, but are much larger and do not have
+wings.  Sickly grey skin stretches tautly over its angular features and bony
+protrusions.  The Osyluth has incredibly long arms and fingers, tipped with
+sharp claws used to strike at its opponents.  Like imps, the Osyluth wields a
+dangerous barbed tail--similar to that of a scorpion--which it takes great
+pleasure in impaling its victims with.
+~
+108 268468224 -800 Y
+47 -13 -9 30d7+6660 10d2+33
+7203 926586
+8 8 0
+62 16388 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#27714
+hellcat hell cat demon~
+A Hellcat~
+A hellcat prowls the area, searching for prey.
+~
+Hellcats are an evil incarnation of some ancient ancestor to great cats.
+Looking like a tusked lion with stark white fur, these predators from the outer
+planes live and breathe only to kill and serve their masters.  Demons most
+often use these creatures for hunting down victims and intruders, as well as
+guard-beasts.  Hellcats have superb senses of smell and hearing, but also have
+the ability to sense the thought patterns of nearby creatures.  Massive clawed
+paws and wickedly sharp teeth flex and grind, waiting for a fresh meal of flesh
+to tear into.
+~
+104 9207868 -750 Y
+38 -13 -11 36d4+5893 23d3+13
+0 616878
+8 8 0
+62 268452289 1d1+1 2
+5 2 10 0
+6 2 10 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#27715
+gelugon guardian guard demon~
+A Gelugon Guardian~
+A Gelugon Guardian blocks entry beyond his station.
+~
+The super-elite guards and protectors of demonkind, Gelugons resemble humanoid
+insects that stand over ten feet tall on their hind legs.  Powerful chitinous
+mandibles take up much of the facial area of this thing, set just beneath
+bulbous multifaceted eyes.  Gelugons are protected by a thick exoskeleton of
+closely interlocking plates, which end in sharp protrusions all around its
+body.  Having not the necessary parts to speak, these hideous demons
+communicate by means of telepathy and are adept at blocking mind attacks.
+Gelugons are fearless, relentless warriors that serve their more powerful
+masters to the limits of their existence.
+~
+16490 277088416 -850 Y
+48 -19 -12 120d8+8329 47d2+43
+39458 1532393
+8 8 0
+63 18880 1d1+1 0
+0 0 0 34
+R
+265
+K
+0 0 0 0 0 0 0
+#27716
+batazu warrior demon~
+A Batazu Warrior~
+A Batazu Warrior roams the area, waiting for orders.
+~
+One of the most fearsome denizens of the outer planes, Batazu look like
+something out of the most terrible nighmare ever dreamed.  These creatures are
+the second in command in their home plane, candidates for transformation one
+day into the most feared demon of all--The Pit Fiend.  Only vaguely humanoid in
+shape, these greater demons are covered with jagged green scales and sport a
+pair of leathery bat-like wings.  A long, wickedly-barbed tail sprouts from the
+base of its back.
+~
+16488 277118988 -950 Y
+50 -23 -13 46d49+16439 21d7+46
+6593 2971125
+8 8 0
+63 17103 1d1+1 1
+8 2 15 0
+0 1 0 48
+K
+0 0 0 0 0 0 0
+#27717
+demon spawn~
+A Demon Spawn~
+A Demon Spawn wanders the mists, seeking its next victim.
+~
+Grotesque and ungainly-looking, demon spawn are a disturbing sight to look
+upon.  These creatures are the beginnings of what will eventually become full-
+fledged demons--that is, if they survive the torments that the transformation
+requires.  Demons are the result of corrupt mortals or beings from other planes
+of existence that have been twisted by greed and the desire to torture and
+kill.  Every spawn looks different as each retains some semblance of its former
+shape, but all are unmistakably evil.  Some will fail and become the fodder of
+demonkind--the misshapen lemures--while others will fill the ranks of the
+greater demons and may even attain the status of Pit Fiend, the ultimate
+killing-machine.
+~
+536871020 8421376 -999 Y
+35 -13 -3 30d30+800 24d4+14
+0 293874
+8 8 0
+62 24769 1d1+1 2
+5 2 30 0
+6 2 30 0
+0 0 0 33
+R
+1
+K
+0 0 0 0 0 0 0
+#27720
+myrdon master thief zyekia~
+Myrdon, the Master Thief~
+Myrdon, the Master Thief of Zyekia is here, gathering crystals.
+~
+Myrdon is a short, thin man probably in his mid-thirties.  A finely groomed
+moustache and goatee adorn the angular features of his face.  He wears no hat
+upon his head, which is completely bald--a sharp contrast to his facial hair.
+His clothes are drably colored, but perfectly-tailored and fine looking,
+seeming to be made to not stand out in any way.  Numerous small bags and
+leather pouches hang from his belt and his backpack but no sound comes from
+them as he shifts about.  He appears to be armed with only two small, well
+crafted daggers, which he wears easily in sheaths on his hips.
+~
+16462 794624 573 Y
+45 -22 -15 23d32+22349 10d20+75
+342039 1202924
+8 8 1
+3 402674112 1d1+1 0
+0 0 0 960
+K
+0 0 0 0 0 0 0
+#27721
+shadowraith ninja assassin jal pur~
+Shadowraith, the Ninja Assassin~
+Shadowraith, the Ninja Assassin of Jal-Pur is here, biding her time.
+~
+A black-garbed figure is all that can describe this being.  It moves with a
+stealthy flow, not making a sound.  Two long sword hilts reach from either of
+its shoulders, ready to draw at a moments notice.  Two smaller blades attached
+at the hip look deadly indeed, with two more even smaller weapons sheathed in
+each cloth-wrapped boot.  This thing is a walking artillery, ready to deal out
+death to any in the way.  Two eyes stare icily from behind a black silk veil,
+taking in every detail of the surroundings.
+~
+16458 8650880 -703 Y
+45 -25 -15 26d32+13212 30d6+36
+120429 1302343
+8 8 2
+5 536891852 5d50+350 2
+2 2 10 0
+9 2 10 0
+0 0 0 832
+K
+0 0 0 0 0 0 0
+#27722
+shomed nomad hero tarion desert~
+Shomed, the Nomad Hero~
+Shomed, the Nomad Hero of the Tarion Desert, lies in wait here.
+~
+A tall man with proud, angular features stands here in defiance of his
+surroundings.  He wears a sand-colored robe and a white head-cloth wrapped
+around his brow.  Strangely enough, even in this cold place, this creature of
+the land wears no cover upon his feet which are darkly colored and calloused
+from wear.  Armed only with a huge axe, this bear of a man looks more dangerous
+than a real bear could ever be.  A master of traps and tracking his prey,
+Shomed seems to be on a hunt of his own at this very moment.
+~
+16458 1318944 832 Y
+48 -25 -25 100d100+75000 9d14+132
+82740 1922526
+8 8 1
+6 268458184 1d1+1 2
+9 2 10 0
+2 2 15 0
+0 0 0 832
+R
+16
+K
+0 0 0 0 0 0 0
+#27723
+trysta wandering minstrel lorien bard~
+Trysta, the Wandering Minstrel~
+Trysta, the Wandering Minstrel of Lorien is here, humming to herself.
+~
+A beautiful elven woman stands here, humming to herself with a voice like music
+itself.  She is lightly armed with only a short sword at her side and a small
+crossbow over her shoulder.  Her clothing is standard traveling affair but
+colored most beautifully a shimmering coral blue.  With her golden hair tied
+back, the tips of slightly pointed ears can be seen, studded with opalescent
+earrings that catch the light from the torch that she carries.  This young
+woman seems to take in every detail of her surroundings with a curiosity akin
+to that of a child.
+~
+33554506 305336 874 Y
+48 -18 -15 100d5+28000 26d10+182
+238432 2019838
+8 8 2
+10 21440 1d1+1 0
+0 0 0 832
+K
+0 0 0 0 0 0 0
+#27724
+velxok archmage canticle mage magic-user~
+Velxok, the Archmage~
+Velxok, the Archmage of Canticle searches the area with keen intrest.
+~
+At first glance, this hunched over figure of a man looks humble and quiet.  A
+second glance brings a sense of dread as the malice in his eyes becomes all too
+clear.  Velxok has devoted several human lifetimes to the pursuit of magic and
+its ultimate control, leaving him twisted and broken in more dimensions than
+just the physical.  He is dressed simply and all in black--a most terrible
+black--that makes his thick robe and wilted but still pointed hat seem sinister
+indeed.  The only other item about him is a gnarled staff of misshapen black
+wood that he clutches in one of his twisted hands.
+~
+16777450 142641340 -905 Y
+49 -20 -10 55d55+15555 6d12+200
+3019233 3770874
+8 8 1
+1 29632 127d127+9999 6
+1 2 5 241
+1 2 10 110
+1 1 20 109
+1 5 30 80
+1 5 40 23
+1 2 50 26
+0 2 0 865
+R
+4
+K
+0 0 0 0 0 0 0
+#27725
+stram blackbane commando captain zyca~
+Stram Blackbane, the Ex-Commando Captain~
+Stram, the Ex-Commando Captain of Zyca Kingdom stands here, poised for action.
+~
+Once a battle-mage captain in the army of Zyca Kingdom in the west, Stram
+Blackbane is a formidable man indeed.  A long black and purple robe drawn
+around the waist, complete with cloak and hood, drapes his muscular frame,
+embroidered with magical symbols around the half-length sleeves and collar as
+well as several other locations.  Stram wears his hood back, proudly displaying
+his short spiked hair and battle-scarred face.  He has no preferred method of
+combat, sometimes hacking his enemies to pieces and other times disintegrating
+them into a pile of ash--whichever method gets the job done.
+~
+536887370 276857000 -925 Y
+49 -20 -15 120d40+26000 70d2+120
+234934 3250182
+8 8 1
+11 536899968 1d1+1 3
+3 2 40 0
+9 2 30 0
+2 2 20 0
+0 0 1 864
+K
+0 0 0 0 0 0 0
+#27726
+tohiri legendary healer daimyo cleric~
+Tohiri, the Legendary Healer~
+Tohiri, the Legendary Healer of The Daimyo studies her surroundings intently.
+~
+Tohiri is an ancient woman but she wears her years proudly.  She is a relic of
+the old days when the people of The Daimyo walked the world beside their gods.
+Her clothing is simple, consisting of a light-green silk robe embroidered with
+a dragon wrapped about a lotus stem and flower.  Her silver-gray hair is
+wrapped tightly and held up in a bun on the top of her head by a pair of wooden
+chopsticks.  Her sandaled feet, just visible below her robe, seem to glide over
+the floor as she walks about making hardly a sound.  She seems to be muttering
+something quietly to herself in her own language, perhaps a prayer of some
+sort.
+~
+33554506 134260924 989 Y
+49 -20 -15 140d40+24390 34d6+103
+47 2719348
+8 8 2
+2 30660 127d127+9999 5
+1 6 2 85
+1 2 20 129
+1 2 30 141
+1 5 30 81
+1 6 75 28
+0 0 0 864
+K
+0 0 0 0 0 0 0
+#27727
+aniston blackbane general zyca warrior~
+Aniston Blackbane, the Ex-General~
+Aniston Blackbane, the Ex-General of Zyca Kingdom is here, blocking the path.
+~
+Aniston Blackbane is a tall and sinister looking man with black hair and dark
+features.  He once served as a general in the Zyca Kingdom's grand army, along
+with his half-brother Stram, but both were expelled for evil-intended conduct.
+Plainly put, Aniston is a killer, and is extremely proficient at his craft.  He
+has seen countless battles and yet has little physical scarring to show for it.
+Oddly enough, even a dozen years after expulsion from the Zyca Kingdom, Aniston
+still wears the battle-garb and much of the armor of his former station with
+one notable change--every place once emblazoned with a 'Z' has been scratched
+out or marked over in some way.  While not particularly large in stature,
+Aniston Blackbane stands ever at the ready, performing his chosen task with
+utter determination.
+~
+16777290 276856872 -965 Y
+49 -27 -22 120d100+80000 54d9+278
+403933 3930239
+8 8 1
+4 268456952 1d1+1 2
+10 2 10 0
+4 2 50 0
+0 0 1 864
+K
+0 0 0 0 0 0 0
+#27728
+law avatar light figure paladin~
+Law, Avatar of Light~
+A light-shrouded figure stands here, preparing to battle a great force.
+~
+Standing tall and proud amidst the disorder of his surroundings is a man unlike
+any other.  Long white hair cascades from his head, with not a strand
+overlapping another, perfectly-straight and cut with precision.  Everything
+about him speaks of order and control.  He is slightly taller than the average
+human but looks much the same, save for his eyes which are shining blue orbs of
+pure light.  Law is clad in shining silver and gold armor that displays perfect
+symmetry in design.  His only weapon is a massive two-handed sword that glows
+with a dull light the same color as his eyes and which leaves a slight trail of
+frost behind its every movement.  Law radiates the energy of a being that is
+directly touched by a divine force.
+~
+131178 43196 1000 Y
+50 -30 -24 24d100+23988 10d5+2000
+0 8201938
+8 8 1
+9 32717 127d127+9999 6
+3 2 30 0
+1 6 25 187
+9 2 20 0
+1 2 15 27
+10 2 10 0
+1 2 10 119
+0 0 0 547
+K
+0 0 0 0 0 0 0
+#27729
+chaos avatar darkness being evil anti-paladin~
+Chaos, Avatar of Darkness~
+A being of pure evil sneaks about, ready to strike his next opponent.
+~
+Once a man of some race of the world, Chaos is now almost unrecognizable as
+such.  A swirling mass of smoke and darkness makes a barely tangible outline of
+what his body may once have looked like.  No defining features can be made out
+of his blurry figure except for the fact that every part of him is frightening
+and evil.  Crimson orbs burn from dark sockets and an evil grin of wicked teeth
+made from pure shadow is fixed upon what once passed for a face.  Hideous
+laughter erupts from his location in a thousand different voices, as if the
+souls of the underworld are channeling their amusement through his body about
+some unknown and sinister joke.
+~
+536887402 144476220 -1000 Y
+50 -23 -25 100d30+37293 66d6+444
+0 8392732
+8 8 1
+9 32717 127d127+9999 3
+1 2 5 203
+1 2 20 136
+1 2 30 172
+0 0 0 553
+K
+0 0 0 0 0 0 0
+#27730
+xykloqtium pit fiend general~
+Xykloqtium, the Pit Fiend General~
+Xykloqtium, the great Pit Fiend General stands here, flexing its wings.
+~
+Standing just over three meters tall Xykloqtium is short for the standards of
+its kind.  However, three meters and over five hundred kilograms is simply not
+enough to contain the sheer horror that is a Pit Fiend.  Having spent more than
+a thousand years in the torments of the deepest, most terrible regions of the
+Abyss, Xykloqtium is one of the most deeply changed and powerful demons ever
+produced.  Pit Fiends are the result of the unceasing torture and dementation
+of a greater demon into something even more fearsome.  Covered in a thick red
+hide the color of smoldering blood and outfitted with a pair of huge wyvern-
+like wings, Xykloqtium is a terrifying sight to behold.
+~
+537411688 428116028 -1000 Y
+66 -40 -22 1d1+111110 40d4+438
+0 18903985
+9 9 0
+63 29645 127d127+9999 5
+1 2 8 203
+1 2 10 100
+1 5 20 106
+8 2 25 0
+10 2 30 0
+0 2 1 881
+R
+160
+K
+4109934 27733 0 0 0 0 0
+#0
+$~

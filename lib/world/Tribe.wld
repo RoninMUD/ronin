@@ -1,0 +1,151 @@
+#600
+A dirty pathway.~
+  This dirty pathway made of mud and gravel leads north towards a large fortress,
+the gates of this large place are hugh and made of dark metal, they open as you
+come closer
+~
+6 1 5
+D0
+~
+~
+0 -1 601
+S
+#601
+A Large Stone Courtyard.~
+  A large stone courtyard which has no sounds running through it and darkness
+consuming most the space is here. When you look around you see a large wall,
+then when you look north you see steps leading into the building.
+~
+6 1 0
+D0
+~
+~
+0 -1 602
+D2
+~
+~
+0 -1 600
+S
+#602
+Before the large doors.~
+  Before the large doors, they stand tall and the wood which they are made from,is ready to decay. 
+The cold mist here is letting off a foul smell. A large door knocker is rusted and looks unused.
+~
+6 0 0
+D1
+~
+~
+0 -1 603
+D2
+~
+~
+0 -1 601
+S
+#603
+A poor lighted hallway.~
+  The walls have jagged rocks all over them. The temperature has risen a lot from
+before. The room is full of candle which are not given off much light. Noises
+come from the east.
+~
+6 0 0
+D0
+~
+~
+0 -1 605
+D1
+~
+~
+0 -1 604
+D3
+~
+~
+0 -1 602
+S
+#604
+A temporary name~
+A temporary description
+~
+6 0 0
+D3
+~
+~
+0 -1 603
+S
+#605
+A temporary name~
+A temporary description
+~
+6 0 0
+D2
+~
+~
+0 -1 603
+S
+#606
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#607
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#608
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#609
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#610
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#611
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#612
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#613
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#614
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#615
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#699
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#0
+$~

@@ -1,0 +1,286 @@
+#9800
+The Casino Lobby~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9801
+D1
+~
+~
+0 -1 9805
+D3
+~
+~
+0 -1 9804
+S
+#9801
+The Casino Hallway~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9802
+D1
+~
+~
+0 -1 9807
+D2
+~
+~
+0 -1 9800
+D3
+~
+~
+0 -1 9806
+S
+#9802
+The Casino Hallway~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9803
+D1
+~
+~
+0 -1 9811
+D2
+~
+~
+0 -1 9801
+D3
+~
+~
+0 -1 9812
+S
+#9803
+The Casino Hallway~
+A temporary description
+~
+98 8 0
+D2
+~
+~
+0 -1 9802
+D3
+~
+~
+0 -1 9816
+S
+#9804
+The Casino Lounge~
+A temporary description
+~
+98 8 0
+D1
+~
+~
+0 -1 9800
+S
+#9805
+The Casino Bar~
+A temporary description
+~
+98 8 0
+D3
+~
+~
+0 -1 9800
+S
+#9806
+The Midgaard Lottery~
+A temporary description
+~
+98 8 0
+D1
+~
+~
+0 -1 9801
+S
+#9807
+A Circular Glass Room~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9808
+D1
+~
+~
+0 -1 9809
+D2
+~
+~
+0 -1 9810
+D3
+~
+~
+0 -1 9801
+S
+#9808
+Slot Machine Parlour I~
+A temporary description
+~
+98 8 0
+D2
+~
+~
+0 -1 9807
+S
+#9809
+Slot Machine Parlour II~
+A temporary description
+~
+98 8 0
+D3
+~
+~
+0 -1 9807
+S
+#9810
+Slot Machine Parlour III~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9807
+S
+#9811
+A Circular Glass Room~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9817
+D1
+~
+~
+0 -1 9818
+D2
+~
+~
+0 -1 9819
+D3
+~
+~
+0 -1 9802
+S
+#9812
+A Circular Glass Room~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9813
+D1
+~
+~
+0 -1 9802
+D2
+~
+~
+0 -1 9814
+D3
+~
+~
+0 -1 9815
+S
+#9813
+BlackJack Parlour I~
+A temporary description
+~
+98 8 0
+D2
+~
+~
+0 -1 9812
+S
+#9814
+BlackJack Parlour III~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9812
+S
+#9815
+BlackJack Parlour II~
+A temporary description
+~
+98 8 0
+D1
+~
+~
+0 -1 9812
+S
+#9816
+A Scummy Bathroom~
+A temporary description
+~
+98 8 0
+D1
+~
+~
+0 -1 9803
+S
+#9817
+Poker Parlour I~
+A temporary description
+~
+98 8 0
+D2
+~
+~
+0 -1 9811
+S
+#9818
+Poker Parlour II~
+A temporary description
+~
+98 8 0
+D3
+~
+~
+0 -1 9811
+S
+#9819
+Poker Parlour III~
+A temporary description
+~
+98 8 0
+D0
+~
+~
+0 -1 9811
+S
+#9820
+A temporary name~
+A temporary description
+~
+98 8 0
+S
+#9899
+A temporary name~
+A temporary description
+~
+98 0 0
+S
+#0
+$~

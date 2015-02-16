@@ -1,0 +1,1478 @@
+#5900
+Caved-In Passageway~
+   You are standing in a caved-in passageway, surrounded by rocks, stones and
+huge boulders that extend up towards this shallow ceiling.  You try not to
+stir anything, for that can lead to more rocks that can quickly bury you.
+There is a small entryway in the rubble that looks like it can fit a person.
+~
+59 9 0
+D1
+~
+rubble~
+9 -1 5541
+S
+#5901
+Burrowed Tunnel of Rock~
+   Huge, long tracks of some underground worms are visible on the ground 
+here, going in multiple directions.  Dirt and other pieces of rock lie
+spread out and broken here, dust and other filth flying in your face.
+This burrowed tunnel looks recently worked on and judging by the falling 
+boulders overhead -- this passageway is extremely unstable and might 
+collapse at any given moment.  
+~
+59 9 0
+D1
+~
+~
+0 -1 5923
+D3
+~
+~
+0 -1 5562
+S
+#5902
+Freshly Mined Tunnel~
+   Gnomes feverishly run about, screaming in excited fashion about their
+discovery.  Evidently, they have uncovered an ancient tunnel that was
+buried and forgotten altogether.  From the looks of it, this tunnel looks
+to lead somewhere, for the gnomes are quickly sending their teams of
+scouts with maps to explore the rocks below.  However, you feel that the
+gnome's good fortune might have been your doing, and ultimately this
+world's eventual demise.  Could this occurrence, the discover of the new
+tunnel a lucky twist of fate? or your destiny in the making.  Only
+after until you finally figure out the answer, can you truly rest.
+~
+59 13 0
+D0
+~
+~
+0 -1 5903
+D1
+~
+~
+0 -1 5158
+S
+#5903
+Jagged Stone Tunnel~
+   As you slowly walk into the newly discovered tunnel, dust particles fly
+everywhere.  Looking along the fresh cut on the wall, you can see
+the distinct difference of rock.  The outer rock has a greenish taint to
+it, lined with gemstones and minerals.  The inner half contains cold, dark
+and innate stone that is very much morbid to touch and sight.  Gnomes are
+running past your feet, chattering incomprehensibly about something.  You
+catch a few phrases of "bah! useless rock," and "no riches here."
+~
+59 9 0
+D2
+~
+~
+0 -1 5902
+D5
+~
+~
+0 -1 5904
+S
+#5904
+Jagged Stone Tunnel~
+   Holding out your torch, you trek on, hoping to reach the end of this
+tunnel. The gnomes have already given up their search, noticing that
+these walls are not rich in any properties.  However, they'd told you
+that, "If you find something, holler!"  These walls here hold extremely
+thin air, for your torch dims ever-so-slightly with every step deeper into
+the tunnel.  If you didn't know better, you'd say these tunnels are lined
+with century-old coal...  
+~
+59 9 0
+D1
+~
+~
+0 -1 5905
+D4
+~
+~
+0 -1 5903
+S
+#5905
+End of the Jagged Stone Tunnel~
+   Charred and dust-filled, breathing in these tunnels can be a challenge.
+Shifting your torch towards the edge of the wall, you get a closer
+examination of the black rock.  It is dull in appearance, and it is rough
+to the touch.  Gnomes vigorously mine at the stone, running past your feet
+and almost tripping on their faces in the process.  The mining stops here,
+as Gnomes are conversed in heated debate about mining plans.
+~
+59 9 0
+D3
+~
+~
+0 -1 5904
+S
+#5906
+Wall of Solid Granite~
+   You have reached a dead-ended path.  A huge wall made of solid granite
+stands before you, looming impressively yet pitifully blocking any way of
+getting around it.  Getting a closer look, you can see the cracks of the
+wall as if attempts were made to drill through it.  However, the cracks
+are nothing more than mere scratches compared to the size of the granite
+obstacle.  Out of the corner of your eye, you see a tiny passage that is  
+small enough for a person to crawl through.
+~
+59 13 0
+D2
+~
+~
+0 -1 5922
+D5
+~
+passage~
+9 -1 5907
+S
+#5907
+Sandstone-Walled Passageway~
+   You crawl through the hole and have reached another section of the
+mountain.  Apparently, there was a weak imperfection in the granite wall
+and diggers were quick to exploit it.  They had planned to dig straight
+through the wall and onto the other side, however, didn't plan on patching
+onto another section of the mountain.  You peek your head out of the
+small passageway and see a tunnel completely lined with sandstone tiles.
+These tiles have no particular design, well, no design that you can figure
+out anyhow.  However, they seem to be neatly stacked and lined together in
+a ordered fashion making the tunnels look all much impressive.  A small
+passage leads back to your original location in the coal-filled passages.
+~
+59 9 0
+D3
+~
+~
+0 -1 5908
+D4
+~
+passage~
+9 -1 5906
+S
+#5908
+Sandstone-Walled Passageway~
+   Millions of tiles made from fine sandstone line this tunnel wall.
+There are no particular design on the tiles, yet the ordered visual
+presentation of them are a awe to behold.  You wonder what group of people
+created such a fine work of art... and then suddenly abandoned them.  Such
+thoughts are quickly plaguing you, as you yonder for more of this
+wondrous craftsmanship.
+~
+59 9 0
+D0
+~
+~
+0 -1 5909
+D1
+~
+~
+0 -1 5907
+S
+#5909
+Sandstone-Walled Passageway~
+   Millions of tiles made from fine sandstone line this tunnel wall.
+There are no particular design on the tiles, yet the ordered visual
+presentation of them are a awe to behold.  You wonder what group of people
+created such a fine work of art... and then suddenly abandoned them.  Such
+thoughts are quickly plaguing you, as you yonder for more of this
+wondrous craftsmanship.
+~
+59 9 0
+D0
+~
+~
+0 -1 5911
+D2
+~
+~
+0 -1 5908
+S
+#5910
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5912
+D2
+~
+~
+0 -1 5961
+S
+#5911
+Sandstone-Walled Passageway~
+   Millions of tiles made from fine sandstone line this tunnel wall.
+There are no particular design on the tiles, yet the ordered visual
+presentation of them are a awe to behold.  You wonder what group of people
+created such a fine work of art... and then suddenly abandoned them.  Such
+thoughts are quickly plaguing you, as you yonder for more of this
+wondrous craftsmanship.
+~
+59 9 0
+D2
+~
+~
+0 -1 5909
+D3
+~
+~
+0 -1 5136
+S
+#5912
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5913
+D2
+~
+~
+0 -1 5910
+S
+#5913
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D1
+~
+~
+0 -1 5914
+D2
+~
+~
+0 -1 5912
+S
+#5914
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5915
+D3
+~
+~
+0 -1 5913
+S
+#5915
+Moss-Covered Dead End~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+Unfortunately, this path is completely block off, with stones and huge
+rocks that seems settled in for centuries now.  There is no hope to go
+through it, guess you have to turn around.
+~
+59 16393 0
+D2
+~
+~
+0 -1 5914
+S
+#5920
+Mushroom Grove~
+   You have stepped onto the greener pastures of the underground.  Huge 
+mammoth mushrooms grow prosperously here, unemotional and frighteningly 
+mobile.  Lets just say you wouldn't want to stand in their path if they 
+came your way.  Don't panic however, they don't care for flesh creatures, 
+if you don't provoke them... Fresh water runs down the walls here, 
+collecting in small blotches of pools all over the grove.  Once the 
+water runs out here, the grove moves to another part of the mountain.
+There they will set up again, making that area their home for a short 
+while.  But for now, this patch will suffice.
+~
+59 13 0
+D2
+~
+~
+0 -1 5197
+S
+#5921
+Mushroom Grove~
+   You have stepped onto the greener pastures of the underground.  Huge 
+mammoth mushrooms grow prosperously here, unemotional and frighteningly 
+mobile.  Lets just say you wouldn't want to stand in their path if they 
+came your way.  Don't panic however, they don't care for flesh creatures, 
+if you don't provoke them... Fresh water runs down the walls here, 
+collecting in small blotches of pools all over the grove.  Once the 
+water runs out here, the grove moves to another part of the mountain.
+There they will set up again, making that area their home for a short 
+while.  But for now, this patch will suffice.
+~
+59 9 0
+D1
+~
+~
+0 -1 5949
+D3
+~
+~
+0 -1 5922
+S
+#5922
+Mushroom Grove~
+   You have stepped onto the greener pastures of the underground.  Huge 
+mammoth mushrooms grow prosperously here, unemotional and frighteningly 
+mobile.  Lets just say you wouldn't want to stand in their path if they 
+came your way.  Don't panic however, they don't care for flesh creatures, 
+if you don't provoke them... Fresh water runs down the walls here, 
+collecting in small blotches of pools all over the grove.  Once the 
+water runs out here, the grove moves to another part of the mountain.
+There they will set up again, making that area their home for a short 
+while.  But for now, this patch will suffice.
+~
+59 9 0
+D0
+~
+~
+0 -1 5906
+D1
+~
+~
+0 -1 5921
+S
+#5923
+Burrowed Tunnel of Rock~
+   Huge, long tracks of some underground worms are visible on the ground 
+here, going in multiple directions.  Dirt and other pieces of rock lie
+spread out and broken here, dust and other filth flying in your face.
+This burrowed tunnel looks recently worked on and judging by the falling 
+boulders overhead -- this passageway is extremely unstable and might 
+collapse at any given moment.  
+~
+59 9 0
+D0
+~
+~
+0 -1 5924
+D3
+~
+~
+0 -1 5901
+S
+#5924
+Burrowed Tunnel of Rock~
+   Huge, long tracks of some underground worms are visible on the ground 
+here, going in multiple directions.  Dirt and other pieces of rock lie
+spread out and broken here, dust and other filth flying in your face.
+This burrowed tunnel looks recently worked on and judging by the falling 
+boulders overhead -- this passageway is extremely unstable and might 
+collapse at any given moment.  
+~
+59 9 0
+D0
+~
+~
+0 -1 5925
+D2
+~
+~
+0 -1 5923
+S
+#5925
+Burrowed Tunnel of Rock~
+   Huge, long tracks of some underground worms are visible on the ground 
+here, going in multiple directions.  Dirt and other pieces of rock lie
+spread out and broken here, dust and other filth flying in your face.
+This burrowed tunnel looks recently worked on and judging by the falling 
+boulders overhead -- this passageway is extremely unstable and might 
+collapse at any given moment.  
+~
+59 9 0
+D2
+~
+~
+0 -1 5924
+S
+#5930
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D0
+~
+~
+0 -1 5931
+D1
+~
+~
+0 -1 5586
+S
+#5931
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D0
+~
+~
+0 -1 5932
+D2
+~
+~
+0 -1 5930
+S
+#5932
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D0
+~
+~
+0 -1 5933
+D2
+~
+~
+0 -1 5931
+S
+#5933
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D1
+~
+~
+0 -1 5934
+D2
+~
+~
+0 -1 5932
+S
+#5934
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D1
+~
+~
+0 -1 5935
+D3
+~
+~
+0 -1 5933
+S
+#5935
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D1
+~
+~
+0 -1 5936
+D2
+~
+~
+0 -1 5943
+D3
+~
+~
+0 -1 5934
+S
+#5936
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D1
+~
+~
+0 -1 5937
+D3
+~
+~
+0 -1 5935
+S
+#5937
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D1
+~
+~
+0 -1 5938
+D3
+~
+~
+0 -1 5936
+S
+#5938
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D2
+~
+~
+0 -1 5939
+D3
+~
+~
+0 -1 5937
+S
+#5939
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D0
+~
+~
+0 -1 5938
+D2
+~
+~
+0 -1 5940
+S
+#5940
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D0
+~
+~
+0 -1 5939
+D2
+~
+~
+0 -1 5941
+S
+#5941
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D0
+~
+~
+0 -1 5940
+D3
+~
+~
+0 -1 5942
+S
+#5942
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D1
+~
+~
+0 -1 5941
+D3
+~
+~
+0 -1 5585
+S
+#5943
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Turning around, you
+see a midget two-headed Koala Bear tugging at your leg, offering refreshments
+in her thin hula skirt. Glancing up, you gaze in awe by the floating
+muffins of rich blueberries just urging you to devour them.  Yes, yes -- you
+can get used to this.  Everything of your imagination can be conjured up
+with just a single thought, a paradise that seems to fulfill your every
+needs and wants.  It's like a pleasant dream come true, only better!
+~
+59 32784 0
+D0
+~
+~
+0 -1 5935
+D2
+~
+~
+0 -1 5944
+S
+#5944
+Bottom of the Cloud Staircase~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Looking up, you
+see a huge chapel hovering on the top of a cloud of flame.   The chapel
+looks distant from here, however right before you eyes, a set of stairs
+materializes before you, and gradually building up until it reaches its
+destination.
+~
+59 32784 0
+D0
+~
+~
+0 -1 5943
+D4
+~
+~
+0 -1 5945
+S
+#5945
+Steps of Clouds~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  Looking up, you
+see a huge chapel hovering on the top of a cloud of flame.   The chapel
+looms ahead, as you can see the tendrils of darkness hovering over and
+about.  Thunder flashes overhead as you claim plainly see that it is
+darker where the chapel rests.  Trudging ahead, you continue to walk these
+soft steps, up and up you go.
+~
+59 32784 0
+D4
+~
+~
+0 -1 5589
+D5
+~
+~
+0 -1 5944
+S
+#5946
+The Astral Plane~
+   Clouds of fire light up the sky in the horizon in this strange plane.
+Seemingly, this is a place of alternate realities, a place you should fear,
+yet could embrace if you wanted to.  Running water here flows upward, instead
+of the latter.  Chairs, tables and all assorted furniture hangs upside down,
+held on by nothing except the thin force of imagination.  You are standing 
+on a cliff in this domain, with amazing sights and sounds before you.  On
+the horizon, you can make out from what appears to be a hovering black
+chapel wrapped around by some tendrils of darkness and lighting crackling
+above.  An ancient tree, probably of a couple of centuries old, grows
+prosperously here, watches all that happens in this domain.
+~
+59 32784 0
+D5
+~
+~
+0 -1 5588
+S
+#5949
+Mushroom Grove~
+   You have stepped onto the greener pastures of the underground.  Huge 
+mammoth mushrooms grow prosperously here, unemotional and frighteningly 
+mobile.  Lets just say you wouldn't want to stand in their path if they 
+came your way.  Don't panic however, they don't care for flesh creatures, 
+if you don't provoke them... Fresh water runs down the walls here, 
+collecting in small blotches of pools all over the grove.  Once the 
+water runs out here, the grove moves to another part of the mountain.
+There they will set up again, making that area their home for a short 
+while.  But for now, this patch will suffice.
+~
+59 9 0
+D1
+~
+~
+0 -1 5135
+D3
+~
+~
+0 -1 5921
+S
+#5950
+Thick Blanket of Darkness~
+   You walk among the pitch darkness and absolute silence.  Your torches 
+here seem to dim at the presence of the air here, and for some reason, 
+the silence here thrive and prosper.  You try to speak, but find yourself
+holding your mouth.  You try to open your mouth, but find that your 
+thoughts doesn't correspond to your motor functions.  Even your sounds of 
+walking seem to be drowned out by the very silence that instills in these 
+walls.  Laughter suddenly screeches in your thoughts and echo with
+every step.  Maybe it's all in your mind, however one things for sure - 
+you hunger for that alluring sunlight of the surface right about now.
+~
+59 1097741 0
+D0
+~
+~
+0 -1 5596
+S
+#5951
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5952
+D4
+~
+~
+0 -1 5136
+S
+#5952
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5953
+D2
+~
+~
+0 -1 5951
+S
+#5953
+An Underground Pond~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  There is
+water coming from a small spring here, filling up the dents in the ground
+and creating several ponds.  It is about 4 feet deep and crystal clear.
+If you need a rest spot and want to fill up your water supply, now is a
+good time and place to do so.
+~
+59 16457 0
+D0
+~
+~
+0 -1 5965
+D2
+~
+~
+0 -1 5952
+D3
+~
+~
+0 -1 5954
+S
+#5954
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D1
+~
+~
+0 -1 5953
+D3
+~
+~
+0 -1 5955
+S
+#5955
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D1
+~
+~
+0 -1 5954
+D3
+~
+~
+0 -1 5956
+S
+#5956
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+moss~
+8 -1 5957
+D1
+~
+~
+0 -1 5955
+S
+#5957
+On top of a cliff, looking down~
+   You cast aside the last of the overgrown moss and almost walk to your
+death.  The drop, you estimate at about thirty-five feet, the slope at a
+sixty-five degree angle, with sharp rocks, pebbles and all sorts of
+gemstone particles just waiting to claim it's next careless victim.  The
+length of the ledge -- from the mossy entrance is relatively short.
+However, it is sufficiently enough to fit a whole band of rakishly,
+rabid and bloodthirsty adventurers.  Looking casually over, you can see
+the less fortunate individuals who didn't make it.  Hardly to say, their
+bodies were torn to pieces by the spiked rocks protruding from the side of
+the sloped wall.  Glancing past and ahead, you spot lights, though these
+are lights that you have never seen before.  The lights are of a purple
+haze, and shines dimly like a morbid gravesite.  Shifting uneasily, you
+scan the immediate area and spot a trail that looks like a safe path down.
+Adjusting your backpack and reaching for your weapon, you head on.
+~
+59 16397 0
+D2
+~
+moss~
+8 -1 5956
+D5
+~
+~
+0 -1 5134
+S
+#5958
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5962
+D1
+~
+~
+0 -1 5959
+D2
+~
+~
+0 -1 5965
+S
+#5959
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D1
+~
+~
+0 -1 5960
+D3
+~
+~
+0 -1 5958
+S
+#5960
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D1
+~
+~
+0 -1 5961
+D3
+~
+~
+0 -1 5959
+S
+#5961
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+Unfortunately, this path is completely block off, with stones and huge
+rocks that seems settled in for centuries now.  There is no hope to go
+through it, guess you have to turn around.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5910
+D3
+~
+~
+0 -1 5960
+S
+#5962
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5963
+D2
+~
+~
+0 -1 5958
+S
+#5963
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5964
+D2
+~
+~
+0 -1 5962
+S
+#5964
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+Unfortunately, this path is completely block off, with stones and huge
+rocks that seems settled in for centuries now.  There is no hope to go
+through it, guess you have to turn around.
+~
+59 16393 0
+D2
+~
+~
+0 -1 5963
+S
+#5965
+Moss-Covered Passageway~
+   Wild growth of soft-glowing vegetation lines these jagged tunnel walls
+and brings light where it was once morbidly dark.  Vegetation this deep
+into a mountain is quite odd, however, upon hearing running water nearby,
+it justify such a strange, prosperous growth of plant-life.  Getting a
+closer look at moss that inhabits the tunnels here, you can sense
+liveliness -- movement that seems unnatural and is nothing that you've
+ever seen before.  There is a lot you do not know of the inhabitants of the
+underdark, whether visible mobile singularities, nor plants.
+~
+59 16393 0
+D0
+~
+~
+0 -1 5958
+D2
+~
+~
+0 -1 5953
+S
+#5970
+Deep, descending passage~
+   Descending downward into the darkness, you can feel your weight shift
+uneasily from the angle of the tunnel.  Your weapons, backpack and armor
+takes an unfamiliar dive because of the awkward slope, and at times, you
+have to hold your equipment otherwise it fall right off.  You are walking
+down a unfamiliar tunnel in your years of experience.  You don't recognize
+the rock, and the passage seems... eerie.  Footprints line the dirt
+ground, however you cannot make anything of it, mainly because there so
+many tracks going in both directions.  All alone, it seems so quiet...
+just you and the sudden sound of marching feet in the distance.
+~
+59 9 0
+D0
+~
+~
+0 -1 5971
+D2
+~
+~
+0 -1 5592
+S
+#5971
+Deep, descending passage~
+   Descending downward into the darkness, you can feel your weight shift
+uneasily from the angle of the tunnel.  Your weapons, backpack and armor
+takes an unfamiliar dive because of the awkward slope, and at times, you
+have to hold your equipment otherwise it fall right off.  You are walking
+down a unfamiliar tunnel in your years of experience.  You don't recognize
+the rock, and the passage seems... eerie.  Footprints line the dirt
+ground, however you cannot make anything of it, mainly because there so
+many tracks going in both directions.  All alone, it seems so quiet...
+just you and the sudden sound of marching feet in the distance.
+~
+59 9 0
+D0
+~
+~
+0 -1 5972
+D2
+~
+~
+0 -1 5970
+S
+#5972
+Deep, descending passage~
+   Descending downward into the darkness, you can feel your weight shift
+uneasily from the angle of the tunnel.  Your weapons, backpack and armor
+takes an unfamiliar dive because of the awkward slope, and at times, you
+have to hold your equipment otherwise it fall right off.  You are walking
+down a unfamiliar tunnel in your years of experience.  You don't recognize
+the rock, and the passage seems... eerie.  Footprints line the dirt
+ground, however you cannot make anything of it, mainly because there so
+many tracks going in both directions.  All alone, it seems so quiet...
+just you and the sudden sound of marching feet in the distance.
+~
+59 9 0
+D0
+~
+~
+0 -1 5973
+D2
+~
+~
+0 -1 5971
+S
+#5973
+Deep, descending passage~
+   Descending downward into the darkness, you can feel your weight shift
+uneasily from the angle of the tunnel.  Your weapons, backpack and armor
+takes an unfamiliar dive because of the awkward slope, and at times, you
+have to hold your equipment otherwise it fall right off.  You are walking
+down a unfamiliar tunnel in your years of experience.  You don't recognize
+the rock, and the passage seems... eerie.  Footprints line the dirt
+ground, however you cannot make anything of it, mainly because there so
+many tracks going in both directions.  All alone, it seems so quiet...
+just you and the sudden sound of marching feet in the distance.
+~
+59 9 0
+D0
+~
+~
+0 -1 5974
+D2
+~
+~
+0 -1 5972
+S
+#5974
+A set of broken stairs~
+   You have arrived at the end of the passage and discover a set of stairs
+that lead down.  Getting a quick glance at it, it appears fragile to the
+naked eye -- brittle stone, cracks on every step, and broken-off pieces of
+rock that lie nearby.  However, you are more concerned about what lies
+ahead more than stability of the staircase.  Squinting hard into the
+opening, you can't see much but darkness and feel an uneasiness in your
+stomach.  The rising aroma of dead carcasses doesn't help either.
+~
+59 13 0
+D2
+~
+~
+0 -1 5973
+D5
+~
+~
+0 -1 5593
+S
+#5975
+Thick Blanket of Darkness~
+   You walk among the pitch darkness and absolute silence.  Your torches 
+here seem to dim at the presence of the air here, and for some reason, 
+the silence here thrive and prosper.  You try to speak, but find yourself
+holding your mouth.  You try to open your mouth, but find that your 
+thoughts doesn't correspond to your motor functions.  Even your sounds of 
+walking seem to be drowned out by the very silence that instills in these 
+walls.  Laughter suddenly screeches in your thoughts and echo with
+every step.  Maybe it's all in your mind, however one things for sure - 
+you hunger for that alluring sunlight of the surface right about now.
+~
+59 1622029 0
+D1
+~
+~
+0 -1 5595
+S
+#5976
+Thick Blanket of Darkness~
+   You walk among the pitch darkness and absolute silence.  Your torches 
+here seem to dim at the presence of the air here, and for some reason, 
+the silence here thrive and prosper.  You try to speak, but find yourself
+holding your mouth.  You try to open your mouth, but find that your 
+thoughts doesn't correspond to your motor functions.  Even your sounds of 
+walking seem to be drowned out by the very silence that instills in these 
+walls.  Laughter suddenly screeches in your thoughts and echo with
+every step.  Maybe it's all in your mind, however one things for sure - 
+you hunger for that alluring sunlight of the surface right about now.
+~
+59 1622029 0
+D2
+~
+~
+0 -1 5597
+S
+#5977
+Thick Blanket of Darkness~
+   You walk among the pitch darkness and absolute silence.  Your torches 
+here seem to dim at the presence of the air here, and for some reason, 
+the silence here thrive and prosper.  You try to speak, but find yourself
+holding your mouth.  You try to open your mouth, but find that your 
+thoughts doesn't correspond to your motor functions.  Even your sounds of 
+walking seem to be drowned out by the very silence that instills in these 
+walls.  Laughter suddenly screeches in your thoughts and echo with
+every step.  Maybe it's all in your mind, however one things for sure - 
+you hunger for that alluring sunlight of the surface right about now.
+~
+59 1622029 0
+D5
+~
+~
+0 -1 5598
+S
+#5978
+Thick Blanket of Darkness~
+   You walk among the pitch darkness and absolute silence.  Your torches 
+here seem to dim at the presence of the air here, and for some reason, 
+the silence here thrive and prosper.  You try to speak, but find yourself
+holding your mouth.  You try to open your mouth, but find that your 
+thoughts doesn't correspond to your motor functions.  Even your sounds of 
+walking seem to be drowned out by the very silence that instills in these 
+walls.  Laughter suddenly screeches in your thoughts and echo with
+every step.  Maybe it's all in your mind, however one things for sure - 
+you hunger for that alluring sunlight of the surface right about now.
+~
+59 1622029 0
+D3
+~
+~
+0 -1 5979
+S
+#5979
+Thick Blanket of Darkness~
+   You walk among the pitch darkness and absolute silence.  Your torches 
+here seem to dim at the presence of the air here, and for some reason, 
+the silence here thrive and prosper.  You try to speak, but find yourself
+holding your mouth.  You try to open your mouth, but find that your 
+thoughts doesn't correspond to your motor functions.  Even your sounds of 
+walking seem to be drowned out by the very silence that instills in these 
+walls.  Laughter suddenly screeches in your thoughts and echo with
+every step.  Maybe it's all in your mind, however one things for sure - 
+you hunger for that alluring sunlight of the surface right about now.
+~
+59 1097741 0
+D3
+~
+~
+0 -1 5950
+S
+#5980
+An opening in the mountain~
+   You peer inside the hole inside this portion of the mountain and see a
+camp set here.  Picks, shovels and other various equipment lie spread on
+the ground, as a recent campfire sits long extinguished in the center.
+Camping bags, old boots lie in the corner as you can hear the clanking of
+rock against metal -- and noises of busy chatter in the distance.   
+~
+59 8 0
+D0
+~
+~
+0 -1 6249
+D2
+~
+~
+0 -1 5100
+S
+#5981
+Rushing Water~
+   SPLOOSH! The icy water threatens to paralyze you as your system tries
+to overcome the initial shock of the sudden submersion into this fast-
+moving aquaductal torrent. Unfortunately, the temperature and volume of
+the water is too much to overcome and you are quickly swept up like a wee
+twig and pulled beneath the surface...
+~
+59 10130049 7
+S
+#5982
+Riding the Submerged Aquaduct~
+   Everything is dark and cold and wet; you are submerged in an elaborate
+underground waterway. The drow engineers of this twisting aquaduct clearly
+never intended it to be used as a means of conveyance; riding the torrential
+current is proving to be extremely unpleasant as you are stuck in an airless
+tube for much of the journey and smashed into walls and jagged rocks as the
+system twists and turns its way ever downward.
+~
+59 9998977 7
+S
+#5983
+Riding the Submerged Aquaduct~
+   Everything is dark and cold and wet; you are submerged in an elaborate
+underground waterway. The drow engineers of this twisting aquaduct clearly
+never intended it to be used as a means of conveyance; riding the torrential
+current is proving to be extremely unpleasant as you are stuck in an airless
+tube for much of the journey and smashed into walls and jagged rocks as the
+system twists and turns its way ever downward.
+~
+59 9998977 7
+S
+#5998
+Rift in the Astral Plane~
+   You seem to be inside some sort of 'tear' in the fabric of the astral 
+plane, apparently its some kind of extradimensional bubble that has been
+set up as a refuge.  All is quiet here, all seems empty.  In the corner
+of your eye, you see blotches of fresh blood on the ground, leading away
+from your position and moving toward a hovering figure snarling angrily at
+you.
+~
+59 49168 0
+S
+#5999
+Azure Blue Matrix~
+   You are traveling in the azure blue portal.  Sparks of light flicker
+everywhere as the thin fabric of reality closes from behind you.  This
+realm has an sad emptiness yet, full of untapped life as you can see souls
+swirling about, trapped within this domain.  Nearby ahead, there is an
+opening in the blue fabric, accompanied by strings of chilling laughter.  
+~
+59 49304 0
+D1
+~
+~
+0 -1 5998
+S
+#0
+$~

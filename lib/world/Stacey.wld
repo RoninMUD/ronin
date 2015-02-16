@@ -1,0 +1,2456 @@
+#27200
+A Quaint Side Street in a Bustling Town~
+  The wilderness slowly gives way to more and more edifices, and soon enough
+you find yourself on a small paved roadway. Large, several story stone
+buildings line the way, each building having many places for flowers to
+be planted and bloom, giving the area a very pleasant feel. Denizens bustle
+about on their daily business, all looking very prim and proper.
+  The street opens up to your east and continues to the south. Your way to
+the west is blocked by the large buildings. To the north you can return
+to the forest.
+~
+272 67108864 1
+D1
+~
+~
+0 -1 27201
+D2
+~
+~
+0 -1 27202
+S
+#27201
+A Quaint Side Street in a Bustling Town~
+  The wilderness slowly gives way to more and more edifices, and soon enough
+you find yourself on a small paved roadway. Large, several story stone
+buildings line the way, each building having many places for flowers to
+be planted and bloom, giving the area a very pleasant feel. Denizens bustle
+about on their daily business, all looking very prim and proper.
+  The street opens up to your west and continues to the south. Your way to
+the east is blocked by the large buildings. To the north you can return
+to the forest.
+~
+272 67108864 1
+D2
+~
+~
+0 -1 27203
+D3
+~
+~
+0 -1 27200
+S
+#27202
+A Quaint Side Street in a Bustling Town~
+  The large multi-story stone buildings continue to crowd in on you from
+either side of the street. However, flower boxes, topiaries, and various
+small trees make the neighborhood more pleasant and livable. The denizens
+of this area of town bustle about on their daily business, taking little
+notice of you. They are all dressed very properly and carry an air of
+sophistication.
+  The street continues to your north, south, and east. Your way to the
+west is blocked by large buildings. 
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27200
+D1
+~
+~
+0 -1 27203
+D2
+~
+~
+0 -1 27204
+S
+#27203
+A Quaint Side Street in a Bustling Town~
+  The large multi-story stone buildings continue to crowd in on you from
+either side of the street. However, flower boxes, topiaries, and various
+small trees make the neighborhood more pleasant and livable. The denizens
+of this area of town bustle about on their daily business, taking little
+notice of you. They are all dressed very properly and carry an air of
+sophistication.
+  The street continues to your north, south, and west. Your way to the
+east is blocked by large buildings. 
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27201
+D2
+~
+~
+0 -1 27205
+D3
+~
+~
+0 -1 27202
+S
+#27204
+A Quaint Side Street in a Bustling Town~
+  The large multi-story stone buildings continue to crowd in on you from
+either side of the street. However, flower boxes, topiaries, and various
+small trees make the neighborhood more pleasant and livable. The denizens
+of this area of town bustle about on their daily business, taking little
+notice of you. They are all dressed very properly and carry an air of
+sophistication.
+  The street continues to your north, south, and east. Your way to the
+west is blocked by large buildings. 
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27202
+D1
+~
+~
+0 -1 27205
+D2
+~
+~
+0 -1 27206
+S
+#27205
+A Quaint Side Street in a Bustling Town~
+  The large multi-story stone buildings continue to crowd in on you from
+either side of the street. However, flower boxes, topiaries, and various
+small trees make the neighborhood more pleasant and livable. The denizens
+of this area of town bustle about on their daily business, taking little
+notice of you. They are all dressed very properly and carry an air of
+sophistication.
+  The street continues to your north, south, and west. Your way to the
+east is blocked by large buildings.
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27203
+D2
+~
+~
+0 -1 27207
+D3
+~
+~
+0 -1 27204
+S
+#27206
+A Quaint Side Street in a Bustling Town~
+  The large multi-story stone buildings continue to crowd in on you from
+either side of the street. However, flower boxes, topiaries, and various
+small trees make the neighborhood more pleasant and livable. The denizens
+of this area of town bustle about on their daily business, taking little
+notice of you. They are all dressed very properly and carry an air of
+sophistication.
+  The street continues to your north, south, and east. Your way to the
+west is blocked by large buildings.
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27204
+D1
+~
+~
+0 -1 27207
+D2
+~
+~
+0 -1 27208
+D3
+~
+door~
+1 -1 27216
+S
+#27207
+A Quaint Side Street in a Bustling Town~
+  The large multi-story stone buildings continue to crowd in on you from
+either side of the street. However, flower boxes, topiaries, and various
+small trees make the neighborhood more pleasant and livable. The denizens
+of this area of town bustle about on their daily business, taking little
+notice of you. They are all dressed very properly and carry an air of
+sophistication.
+  The street continues to your north, south, and west. Your way to the
+east is blocked by large buildings.
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27205
+D2
+~
+~
+0 -1 27209
+D3
+~
+~
+0 -1 27206
+S
+#27208
+A Quaint Side Street in a Bustling Town~
+  There is a large commotion happening in the street. A horse and carriage
+have crashed onto the sidewalk, shattering the carriage and leaving many
+unhappy people babbling about. Onlookers gawk at the site, and several
+others stand in fearful amazement for some strange reason. One of the many
+doors to the buildings looks particularly inviting, and is where the
+commotion is centered.
+  The street continues to your north, and east. Your way to the south is
+blocked by city officials, trying to contain the mayhem. You can enter the
+building lining the street to the west.
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27206
+D1
+~
+~
+0 -1 27209
+D3
+~
+door~
+1 -1 27210
+S
+#27209
+A Quaint Side Street in a Bustling Town~
+  There is a large commotion happening in the street to your west. A horse
+and carriage have crashed onto the sidewalk, shattering the carriage and
+leaving many unhappy people babbling about. Onlookers gawk at the site, and
+several others stand in fearful amazement for some strange reason. One of 
+the many doors to the buildings looks particularly inviting, and is where the
+commotion is centered.
+  The street continues to your north, and west. Your way to the south is
+blocked by city officials, trying to contain the mayhem.
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27207
+D3
+~
+~
+0 -1 27208
+S
+#27210
+Townhouse Entrance~
+  You step into the entrance of a common townhouse through the large wooden door.
+The ground floor of the house consists of a large open area, including dining
+room, and sitting room, separated only by half walls. A door does open to the 
+north leading into the kitchen however. The house is nicely decorated, and quite
+modest. You imagine that a nice family lives here, because of the care that has
+been taken to keep up this older house. A large, nicely polished, wooden
+banister is to your left, lining the stairs that lead to the upper floor.
+~
+272 67108876 0
+D0
+~
+~
+0 -1 27211
+D1
+~
+door~
+1 -1 27208
+D4
+~
+~
+0 -1 27212
+S
+#27211
+A Modest Kitchen~
+  The kitchen of this townhouse is equally as modest as the main room. It
+consists simply of a large iron stove, an icebox, a sink, and various types of
+cabinetry. All the surfaces are kept immaculately clean. An open window over the
+sink lets the noise of the commotion on the outside leak in and spoil the
+pleasantness and warmth of this room. From the smell, you think that there may
+be bread cooking in the oven. The only way out is back into the main room, to
+the south.
+~
+272 67108872 0
+D2
+~
+~
+0 -1 27210
+S
+#27212
+The Upstairs Foyer~
+  The stairs deposit you into a nondescript hallway. Several paintings,
+supposedly of family members, line the walls hung in thick frames. A small table
+is placed here and there, topped with doilies and tapestries. A long blue carpet
+runs down the center of the hallway looking soft and plush. A door opens to
+your west leading into a different room, and the hallway continues to the north.
+You can, of course, return back down the stairs.
+~
+272 67108872 0
+D0
+~
+~
+0 -1 27213
+D3
+~
+~
+0 -1 27214
+D5
+~
+~
+0 -1 27210
+S
+#27213
+Upstairs Hallway~
+  The hallway ends here. A large painting of a country scene decorates the wall
+that blocks your passage further, and compliments the rather drab paintings of
+dead folks that have been displayed everywhere else in the hallway. A door opens
+to the west into another room, and your only other recourse is to head south
+back to the foyer.
+~
+272 67108872 0
+D2
+~
+~
+0 -1 27212
+D3
+~
+~
+0 -1 27215
+S
+#27214
+A Child's Bedroom~
+  You enter a smaller room and can immediately deduce it is the room of a young
+boy. Pictures of knights and trolls line the walls, as well as various pictures
+of war heroes. What surprises you is how immaculately clean the room is. It
+makes you feel as if the resident of the room has been away for quite some time.
+A small, child-sized bed is tucked into the corner, and a clothes dresser and 
+toy box complete the other furniture in the room. Next to a door, which most
+likely leads into the closet, is a much smaller door, which has been wallpapered
+the same as the rest of the room in order to try and hide its existence. Perhaps
+this door necessitates greater investigation. Otherwise, you can return to the
+hallway to the east.
+~
+272 67108872 0
+D1
+~
+~
+0 -1 27212
+D3
+You see a small doorway that has been wallpapered over. You may be able to crawl into the eaves.
+~
+eaves~
+9 -1 27217
+S
+#27215
+The Master Bedroom~
+  The largest bedroom of the house. A large four-posted bed sits in the middle of
+the room, the canopy made out of tapestry with some fine needle-working on it.
+The rest of the furniture in the room is stained to match the finish on the bed,
+and are also hung with various cloths to make the room feel bright and lively.
+The most interesting thing about this room, however, seems to be the door leading
+back out into the hallway.
+~
+272 67108872 0
+D1
+~
+~
+0 -1 27213
+S
+#27216
+The Neighbor's House~
+  This house seems to have been deserted for years.
+~
+272 67142152 0
+D1
+~
+door~
+1 -1 27206
+S
+#27217
+Dusty Crawlspace~
+  You are inside the eaves that run along the side of the roof of the house. It
+is very dark and dusty, not to mention very cramped. You can't stand up straight,
+and find yourself either crawling on hands and knees or bent uncomfortably at
+the waist. Bringing your light to bear you notice that the length of the entire
+eaves seems to be deceivingly long, much longer than the size of the house you
+were just in. Cobwebs cover every nook and cranny.
+  You can return to the house interior by crawling back through the eaves.
+~
+272 32777 0
+D0
+~
+~
+0 -1 27218
+D1
+A faint crack of light makes you think you can crawl out of the eaves.
+~
+eaves~
+9 -1 27214
+S
+#27218
+Dusty Crawlspace~
+  You are inside the eaves that run along the side of the roof of the house. It
+is very dark and dusty, not to mention very cramped. You can't stand up straight,
+and find yourself either crawling on hands and knees or bent uncomfortably at
+the waist. Bringing your light to bear you notice that the length of the entire
+eaves seems to be deceivingly long, much longer than the size of the house you
+were just in. Cobwebs cover every nook and cranny.
+  The eaves continue to run north and south along the direction of the houses.
+~
+272 32777 0
+D0
+~
+~
+0 -1 27219
+D2
+~
+~
+0 -1 27217
+S
+#27219
+Dusty Crawlspace~
+  You are inside the eaves that run along the side of the roof of the house. It
+is very dark and dusty, not to mention very cramped. You can't stand up straight,
+and find yourself either crawling on hands and knees or bent uncomfortably at
+the waist. Bringing your light to bear you notice that the length of the entire
+eaves seems to be deceivingly long, much longer than the size of the house you
+were just in. Cobwebs cover every nook and cranny.
+  You can faintly see the outline of another door similar to the one you entered
+in. If you are brave you could try crawling through this one too.
+~
+272 32777 0
+D1
+A faint crack of light in the wall signifies a doorway out of the eaves you may
+be able to crawl through.
+~
+eaves~
+9 -1 27220
+D2
+~
+~
+0 -1 27218
+S
+#27220
+Strange Bedroom of a Part-time Wizard~
+  You emerge from the eaves into an extremely dark and cluttered round room.
+Huge tomes, most of them open, are scattered about the room: on the floor, on 
+desks, on the bed. A middle-aged man is sitting at a small round table in the
+middle of the room pouring over these enormous books. He cackles to
+himself, not realizing you are in the room yet. You notice scads of small
+bottles lining the shelves of the room, getting dusty from having been there so
+long. On closer inspection at the small table the man is at, you notice he is
+reading from a strange book, giving off an ominously green glow.
+  Crawling through the small door back into the eaves seems like a good option,
+as the main door out of the room has been blocked by pieces of furniture.
+~
+272 67141640 0
+D3
+A doorway back into the eaves, perfect for crawling through.
+~
+eaves~
+9 -1 27219
+D4
+~
+~
+0 -1 27221
+S
+#27221
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+~
+272 67145920 3
+D0
+~
+~
+0 -1 27222
+D1
+~
+~
+0 -1 27227
+D2
+~
+~
+0 -1 27223
+D3
+~
+~
+0 -1 27226
+D5
+~
+~
+0 -1 27220
+S
+#27222
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+~
+272 67145920 3
+D1
+~
+~
+0 -1 27225
+D2
+~
+~
+0 -1 27221
+D3
+~
+~
+0 -1 27224
+S
+#27223
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+  As you make your way through the forest you happen upon a small pond. 
+Like the rest of this world, it is without defect. No ripples grace the surface
+of the water, and the pond is so clear you can see straight to the bottom.
+Unfortunately, this makes it impossible for you to determine how deep it is.
+A strange light radiates from the very bottom of this pool, and you feel a
+strange urge to jump in and determine where it's coming from.
+~
+272 67145920 3
+D0
+~
+~
+0 -1 27221
+D1
+~
+~
+0 -1 27229
+D3
+~
+~
+0 -1 27228
+D5
+~
+~
+0 -1 27230
+S
+#27224
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+  As you make your way through the forest you happen upon a small pond. 
+Like the rest of this world, it is without defect. No ripples grace the surface
+of the water, and the pond is so clear you can see straight to the bottom.
+Unfortunately, this makes it impossible for you to determine how deep it is.
+A strange light radiates from the very bottom of this pool, and you feel a
+strange urge to jump in and determine where it's coming from.
+~
+272 67145920 3
+D1
+~
+~
+0 -1 27222
+D2
+~
+~
+0 -1 27226
+D5
+~
+~
+0 -1 27245
+S
+#27225
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+  As you make your way through the forest you happen upon a small pond. 
+Like the rest of this world, it is without defect. No ripples grace the surface
+of the water, and the pond is so clear you can see straight to the bottom.
+Unfortunately, this makes it impossible for you to determine how deep it is.
+A strange light radiates from the very bottom of this pool, and you feel a
+strange urge to jump in and determine where it's coming from.
+~
+272 67145920 3
+D2
+~
+~
+0 -1 27227
+D3
+~
+~
+0 -1 27222
+D5
+~
+~
+0 -1 27231
+S
+#27226
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+~
+272 67145920 3
+D0
+~
+~
+0 -1 27224
+D1
+~
+~
+0 -1 27221
+D2
+~
+~
+0 -1 27228
+S
+#27227
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+~
+272 67145920 3
+D0
+~
+~
+0 -1 27225
+D2
+~
+~
+0 -1 27229
+D3
+~
+~
+0 -1 27221
+S
+#27228
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+~
+272 67145920 3
+D0
+~
+~
+0 -1 27226
+D1
+~
+~
+0 -1 27223
+S
+#27229
+A World Between Worlds~
+  You are standing in the midst of an incredibly dense forest. It seems to
+extend forever in all directions. There is an eerie calmness about this place,
+there is no wind, in fact no movement at all. Every single needle on all of the
+coniferous trees shows no sign of perturbation. Your movements, as well, seem to
+have no residual effect on the environment. A quick movement with your arm
+creates no breeze, scuffling your feet on the ground creates no dust. The
+immaculate greenness of the place, from the perfectly shaped trees to the
+incredibly uniform grass covering of the forest floor is intoxicating. If it
+weren't for the apparent lack of food and atmosphere, you feel you could live
+here peacefully for quite some time.
+~
+272 67145920 3
+D0
+~
+~
+0 -1 27227
+D3
+~
+~
+0 -1 27223
+S
+#27230
+`aInky Blackness`q~
+`aIt appears you have stumbled upon a world that has not yet been created.
+You float in a void of nothingness. Light disappears as quickly as it's created.
+The only visible feature is a slight disturbance in the nothingness, originating
+from where you just came. Common sense suggests you should return.
+~
+272 16393 0
+D4
+~
+~
+0 -1 27223
+S
+#27231
+Bottom of a Huge Marble Stairway~
+  Dark, ominous clouds fill the sky, blotting out much of the light that would
+be coming from this world's sun. An acrid odor hangs in the air, and no
+living thing, plant nor animal, can be seen. In front of you are huge steps
+carved out of fine marble. They have obviously been constructed for creatures
+larger than yourself, as they appear more as climbing obstacles than steps.
+The steps appear to be quite ancient, as time and weather have slowly eaten
+away at the sharp edges and fine luster that used to exist.
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27232
+D4
+~
+~
+0 -1 27225
+S
+#27232
+Top of a Huge Marble Stairway~
+  You struggle to get your body over step after step, and after what seems like
+hours you begin to reach the top. In front of you is an enormous castle, of
+the same scale as the steps, obviously built for a race of giants. Still, 
+years of wear and tear are obvious on many of the facets of the building.
+Either it has been abandoned for some time, or its owners are neglecting its
+upkeep. A grand entrance is directly in front of you, adorned with many
+sculptures and intricate carvings.
+~
+272 67108864 1
+D0
+~
+~
+0 -1 27233
+D2
+~
+~
+0 -1 27231
+S
+#27233
+The Atrium of Castle Decilon~
+  In through the massive doors you step and before you is a cavernous room.
+The ceiling appears impossibily high, and is covered with a myriad of
+supporting structures and arches to keep it aloft. Surprising though, is
+the drabness of the entire place. There is no decoration other than fine
+stonework to be seen. No banners, no paintings, nothing composed of any
+organic material.
+  A large archway to your north leads into a long room that looks like a 
+glorified corridor. To your west is an even larger room filled with many
+statues of giants.
+~
+272 9 0
+D0
+~
+~
+0 -1 27234
+D2
+~
+~
+0 -1 27232
+D3
+~
+~
+0 -1 27235
+S
+#27234
+The Grand Hall of Castle Decilon~
+  You are in a long room used to connect the front castle where all the pomp
+and circumstance, the official business, and state meetings happen, to the
+back castle, the much more utilitarian part of the castle. Large A-shaped 
+windows line both sides of the hall, but let in little light due to the 
+unfortunate state of this world's dreary atmosphere. Barren metal rods line
+the ceiling, signifying places where colorful banners might have hung in a 
+previous time.
+  Your pathway into the back castle has been blocked as the archway has given
+way and become an impassable pile of rubble. Your only recourse is to return
+to the atrium to the south.
+~
+272 67108872 0
+D2
+~
+~
+0 -1 27233
+S
+#27235
+Grand Hall of Lords and Ladies~
+  You enter a large circular room containing no windows. A number of metal
+brackets are seen along the walls where torches must have hung. The light
+from your torch barely reaches the far side of the room but you can get a
+good idea of the layout. The room is designed as an atrium, the middle
+sunken down into the ground and decorated with a sunburst in a flat stone
+slab. Surrounding it are enormous chairs with statues of giant people,
+each looking towards the center of the circle with intent expressions on
+their faces.
+  The room continues around the center of the atrium, north and west. Or
+you can continue back through the entryway to the east.
+~
+272 9 0
+D0
+~
+~
+0 -1 27236
+D1
+~
+~
+0 -1 27233
+D3
+~
+~
+0 -1 27238
+S
+#27236
+Grand Hall of Lords and Ladies~
+  You walk up to the giant stone statue sitting in a chair and are amazed at
+the incredible detail carved into this work of art. The master sculptor that
+created these must have been far more talented than any you have ever seen.
+It seems as even each strand of hair has been carved out individually,
+looking so fragile, yet sturdy as the rock its made out it. Gazing at the
+expression on the statue's face sends a slight shiver down your spine, again
+the sculptor has surpassed anything that could be humanly possible to 
+represent in stone, as the startled expression on the statue's face seems
+far too realistic for comfort.
+  The circular room continues to the north and the south, or you can step 
+down into the center of the room to the west.
+~
+272 0 0
+D0
+~
+~
+0 -1 27237
+D2
+~
+~
+0 -1 27235
+D3
+~
+~
+0 -1 27239
+S
+#27237
+Grand Hall of Lords and Ladies~
+  You walk up to the giant stone statue sitting in a chair and are amazed at
+the incredible detail carved into this work of art. The master sculptor that
+created these must have been far more talented than any you have ever seen.
+It seems as even each strand of hair has been carved out individually,
+looking so fragile, yet sturdy as the rock its made out it. Gazing at the
+expression on the statue's face sends a slight shiver down your spine, again
+the sculptor has surpassed anything that could be humanly possible to 
+represent in stone, as the startled expression on the statue's face seems
+far too realistic for comfort.
+  The circular room continues to the south and west.
+~
+272 0 0
+D2
+~
+~
+0 -1 27236
+D3
+~
+~
+0 -1 27240
+S
+#27238
+Grand Hall of Lords and Ladies~
+  You walk up to the giant stone statue sitting in a chair and are amazed at
+the incredible detail carved into this work of art. The master sculptor that
+created these must have been far more talented than any you have ever seen.
+It seems as even each strand of hair has been carved out individually,
+looking so fragile, yet sturdy as the rock its made out it. Gazing at the
+expression on the statue's face sends a slight shiver down your spine, again
+the sculptor has surpassed anything that could be humanly possible to 
+represent in stone, as the startled expression on the statue's face seems
+far too realistic for comfort.
+  The circular room continues to the east and west, and to the north you can
+step down in the center circle of the room.
+~
+272 9 0
+D0
+~
+~
+0 -1 27239
+D1
+~
+~
+0 -1 27235
+D3
+~
+~
+0 -1 27241
+S
+#27239
+Grand Hall of Lords and Ladies~
+  Standing in the center of this room in the recessed circle, you start
+to get a feeling for what the petitioners of this land might have felt when
+they stood in this exact same spot. With the ominous figures from above, each
+seated in their chair, wearing their fancy and flowing clothes, looking down
+upon you with their judging eyes, it must have been unnerving. Looking down at
+the floor an image of a large star has been inlaid in gold in the huge singular
+slab of stone that makes up the inner circle. Layers of tarnish have dulled the
+sheen of the gold, but a quick rub with your sleeve brings back its old luster.
+As far as interesting features, the slab and the star are the only ones here.
+To the north however, is a different story.
+~
+272 0 0
+D0
+~
+~
+0 -1 27240
+D1
+~
+~
+0 -1 27236
+D2
+~
+~
+0 -1 27238
+D3
+~
+~
+0 -1 27242
+S
+#27240
+Grand Hall of Lords and Ladies~
+  Another stone statue is here, but this one is the grandest yet. You can
+tell simply by dress and by the noble visage of this statue that they were
+meant to be more important than the rest. Still, the lifelike qualities of the
+statue are creepy, especially this one, because it appears the statue is
+turning to look behind him to the north, toward a grand archway leading to what
+looks like a large raised throne area. The look on his face however is very
+unsettling, it appears to be that of abject fear.
+  The circular room continues to the east and the west, or you can venture
+down into the central area of the room. A grand archway is to the north
+leading to a raised throne.
+~
+272 0 0
+D0
+~
+~
+0 -1 27244
+D1
+~
+~
+0 -1 27237
+D2
+~
+~
+0 -1 27239
+D3
+~
+~
+0 -1 27243
+S
+#27241
+Grand Hall of Lords and Ladies~
+  You walk up to the giant stone statue sitting in a chair and are amazed at
+the incredible detail carved into this work of art. The master sculptor that
+created these must have been far more talented than any you have ever seen.
+It seems as even each strand of hair has been carved out individually,
+looking so fragile, yet sturdy as the rock its made out it. Gazing at the
+expression on the statue's face sends a slight shiver down your spine, again
+the sculptor has surpassed anything that could be humanly possible to 
+represent in stone, as the startled expression on the statue's face seems
+far too realistic for comfort.
+  The circular room continues to the north and east.
+~
+272 9 0
+D0
+~
+~
+0 -1 27242
+D1
+~
+~
+0 -1 27238
+S
+#27242
+Grand Hall of Lords and Ladies~
+  You walk up to the giant stone statue sitting in a chair and are amazed at
+the incredible detail carved into this work of art. The master sculptor that
+created these must have been far more talented than any you have ever seen.
+It seems as even each strand of hair has been carved out individually,
+looking so fragile, yet sturdy as the rock its made out it. Gazing at the
+expression on the statue's face sends a slight shiver down your spine, again
+the sculptor has surpassed anything that could be humanly possible to 
+represent in stone, as the startled expression on the statue's face seems
+far too realistic for comfort.
+  The circular room continues to the north and the south, or you can step
+down into the center of the room to the east.
+~
+272 9 0
+D0
+~
+~
+0 -1 27243
+D1
+~
+~
+0 -1 27239
+D2
+~
+~
+0 -1 27241
+S
+#27243
+Grand Hall of Lords and Ladies~
+  You walk up to the giant stone statue sitting in a chair and are amazed at
+the incredible detail carved into this work of art. The master sculptor that
+created these must have been far more talented than any you have ever seen.
+It seems as even each strand of hair has been carved out individually,
+looking so fragile, yet sturdy as the rock its made out it. Gazing at the
+expression on the statue's face sends a slight shiver down your spine, again
+the sculptor has surpassed anything that could be humanly possible to 
+represent in stone, as the startled expression on the statue's face seems
+far too realistic for comfort.
+  The circular room continues to the south and east.
+~
+272 0 0
+D1
+~
+~
+0 -1 27240
+D2
+~
+~
+0 -1 27242
+S
+#27244
+The Throne Room at Castle Decilon~
+  You enter the throne room through the large archway separating this alcove
+from the main audience chamber. The sides of the hall are lined with suits
+of armor and empty brass poles where banners used to hang. Before you is a
+large throne carved out of stone made to look like wood sits upon a raised
+platform with more giant-sized stone steps leading up to it. Intricate carvings
+of abstract design adorn each step which must have taken twenty masons years
+to finish. A queen sits upon the throne, you can tell she's a queen simply from
+the look of austerity and confidence the sculptor has given to the visage of
+the woman. Were she real, you might consider her the most beautiful being you
+had ever seen. You spend a moment trying to grasp the extreme wealth this
+civilization must have had to create an entire castle populated by nothing
+but stone statues.
+  Once you get your fill of the wonderment of this throne room, your only
+exit lies back through the arch to the south.
+~
+272 0 0
+D2
+~
+~
+0 -1 27240
+S
+#27245
+Barren Valley in a Brand New World~
+  You have happened upon a world so new that nothing yet has started to grow.
+Around you is rock, and nothing but rock, and soon you realize you are
+standing in a valley. You wonder, was I standing in a valley just a second ago?
+A few more moments of observation show that some powerful magic is at work here
+causing the natural time of the world to drastically speed up. Hills and 
+mountains are forming before your eyes, causing streams and lakes to appear
+and change flows. Small sprouts turn into giant trees in a matter of a few
+seconds. It's all very miraculous. In just a few moments you seems to have
+witnessed a billion years of what would happen in our normal timeframe.
+  It appears the world gets more developed to the north, and has yet to be
+grown as you go to the south. New mountain walls hinder your travel to the
+east and the west.
+~
+272 67108864 5
+D0
+~
+~
+0 -1 27249
+D2
+~
+~
+0 -1 27246
+D4
+~
+~
+0 -1 27224
+S
+#27246
+Approaching the End of the World~
+  The mountains and hills begin to flatten out until the world is completely
+flat for as far as you can see. This land must be so young, that the powerful
+magical forces haven't had time to create the features of the contryside yet.
+No plants or animals can be seen either, giving this place an eerie sense of
+evil. Soon enough though you assure yourself it will be covered with the 
+cheery greenery of the rest of the world.
+~
+272 67108864 5
+D0
+~
+~
+0 -1 27245
+D2
+~
+~
+0 -1 27247
+S
+#27247
+The End of the World~
+  You approach a giant fissure in the land. Here you can see the edge of this
+new world creeping forward. Magma from the world's core bubbles up and gets
+cooled by the air forming steaming hot, solid rock at the edge of a sheer cliff.
+You can feel the heat of the giant pool of bubbling molten rock biting at your
+face as you approach the precipice. Your footing doesn't seem to be too stable
+on this new rock, you ought to watch your step it may be your last.
+~
+272 67108864 2
+D0
+~
+~
+0 -1 27246
+D2
+You would surely fall into the pit of magma and die if you went this way.
+~
+~
+0 -1 27248
+S
+#27248
+Falling into the World's Core~
+  Your fascination gets the best of you. You inch closer and closer to the
+edge, peering down into the fantastic maelstrom that is the magma that heads
+straight into this world's core. Suddenly, the rock gives way beneath your feet
+and you slip, clawing for anything to hold on to but you fail. The white hot
+lava makes quick work of your skin and your bones, so fortunately you feel
+little pain as you die.
+~
+272 67108866 8
+D0
+~
+~
+0 -1 27247
+S
+#27249
+End of the Valley~
+  As you continue to travel northwards the mountains on either side of you
+gradually abate and give way to a grand basin. This basin is now filled with
+flora and fauna, gifts of the powerful magic that have created this world. The
+wheels of time in this area have appeared to slow slightly allowing life to
+proceed at a normal pace. However, by no means has the magic over this area
+subsided. You can feel the magic still flowing through your body, causing your
+extremeties to tingle slightly. From your slightly elevated vantage point you
+can spot large forests, beautiful lakes and streams, a huge waterfall, and in
+the distance enormous snowcapped mountains. The view is breathtaking, you 
+feel you could stand here taking in this beauty for a long time.
+~
+272 67108864 5
+D2
+~
+~
+0 -1 27245
+D3
+~
+~
+0 -1 27250
+S
+#27250
+A Perfectly Circular Clearing in the Forest~
+  You walk through the beautifully new forest from the valley, simply entranced
+by the sights and sounds. The journey may have been only half a mile but it has
+taken you much longer than it would have normally to traverse this distance.
+Suddenly, the treeline stops and you are standing on a thick carpet of grass
+dotted with various wildflowers. The grassy section is perfectly circular
+guarded three hundred sixty degrees by large deciduous trees all around it.
+There seems to be a huge golden figure who appears to be knowledgable of your
+presence.
+  The forest continues to the south and west. To the north you can just barely
+glimpse between the trees an abrupt stop in the coniferous growth. You can
+always return to the valley you entered through to the east.
+~
+272 67108868 3
+D0
+~
+~
+0 -1 27254
+D1
+~
+~
+0 -1 27249
+D2
+~
+~
+0 -1 27251
+D3
+~
+~
+0 -1 27252
+S
+#27251
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to your west, and you can spy a peculiar clearing to
+your north.
+~
+272 0 3
+D0
+~
+~
+0 -1 27250
+D3
+~
+~
+0 -1 27253
+S
+#27252
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to your south, and a peculiar clearing is to the east.
+To the north you can just barely glimpse between the trees an abrupt stop in
+the coniferous growth.
+~
+272 0 3
+D0
+~
+~
+0 -1 27255
+D1
+~
+~
+0 -1 27250
+D2
+~
+~
+0 -1 27253
+S
+#27253
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to your north and east.
+~
+272 0 3
+D0
+~
+~
+0 -1 27252
+D1
+~
+~
+0 -1 27251
+S
+#27254
+At the Rim of a Large Canyon~
+  The forest abates and gives way to simple grassy turf. You can follow this
+turf only so far because it terminates in a fantastically large canyon. The
+magic of this world has done a magnificent job with this wonder. Despite being
+only a couple hours old now, the canyon exhibits the gradiated stone color one
+would expect would signify millions of years of rock formation and subsequent
+erosion by the river that created the canyon. The bands of stone that wrap
+around the entire canyon exhibit such colors as you wouldn't imagine to see in
+stone, soft greens, striking reds, and here and there a small light blue, are
+seen all intermingled with the more common tans and greys. From the right
+vantage point you can see all the way into the depths of the canyon and get
+glimpse of the turbulent blue water of the river.
+  The canyon continues to your west, and the forest begins again to your south.
+~
+272 0 2
+D2
+~
+~
+0 -1 27250
+D3
+~
+~
+0 -1 27255
+S
+#27255
+At the Rim of a Large Canyon~
+  The forest abates and gives way to simple grassy turf. You can follow this
+turf only so far because it terminates in a fantastically large canyon. The
+magic of this world has done a magnificent job with this wonder. Despite being
+only a couple hours old now, the canyon exhibits the gradiated stone color one
+would expect would signify millions of years of rock formation and subsequent
+erosion by the river that created the canyon. The bands of stone that wrap
+around the entire canyon exhibit such colors as you wouldn't imagine to see in
+stone, soft greens, striking reds, and here and there a small light blue, are
+seen all intermingled with the more common tans and greys. From the right
+vantage point you can see all the way into the depths of the canyon and get
+glimpse of the turbulent blue water of the river.
+  The canyon continues to your east and west. The forest remains to your
+south.
+~
+272 0 2
+D1
+~
+~
+0 -1 27254
+D2
+~
+~
+0 -1 27252
+D3
+~
+~
+0 -1 27256
+S
+#27256
+At the Rim of a Large Canyon~
+  The forest abates and gives way to simple grassy turf. You can follow this
+turf only so far because it terminates in a fantastically large canyon. The
+magic of this world has done a magnificent job with this wonder, as the world
+is only a couple hours old now, the canyon exhibits the gradiated stone color
+one would expect would signify millions of years of rock formation and
+subsequent erosion by the river that created the canyon. The bands of stone
+that wrap around the entire canyon exhibit such colors as you wouldn't imagine
+to see in stone, soft greens, striking reds, and here and there a small light
+blue are seen all intermingled with the more common tans and greys. From the
+right vantage point you can see all the way into the depths of the canyon and
+get a glimpse of the turbulent blue water of the river.
+  It appears that the canyon has been formed so thin here that you may be
+able to jump across it. The rim of the canyon extends to your east and west.
+~
+272 0 2
+D0
+The river has cut the canyon so narrow here that with a little effort you can
+probably jump to the other side.
+~
+canyon~
+10 -1 27279
+D1
+~
+~
+0 -1 27255
+D3
+~
+~
+0 -1 27257
+S
+#27257
+At the Rim of a Large Canyon~
+  The forest abates and gives way to simple grassy turf. You can follow this
+turf only so far because it terminates in a fantastically large canyon. The
+magic of this world has done a magnificent job with this wonder. Despite being
+only a couple hours old now, the canyon exhibits the gradiated stone color one
+would expect would signify millions of years of rock formation and subsequent
+erosion by the river that created the canyon. The bands of stone that wrap
+around the entire canyon exhibit such colors as you wouldn't imagine to see in
+stone, soft greens, striking reds, and here and there a small light blue, are
+seen all intermingled with the more common tans and greys. From the right
+vantage point you can see all the way into the depths of the canyon and get
+glimpse of the turbulent blue water of the river.
+  The rim of the canyon continues to your east and west. There is more forest
+to your south.
+~
+272 0 2
+D1
+~
+~
+0 -1 27256
+D2
+~
+~
+0 -1 27259
+D3
+~
+~
+0 -1 27258
+S
+#27258
+At the Base of a Towering Waterfall~
+  Now you can see what powerful force has created this vast canyon. You
+approach a sheer cliff several hundred feet high and through which a waterfall
+pours down. Such a volume of water you're not sure you've ever seen before.
+The temperature near the waterfall is much cooler than the rest of the
+countryside as the amount of mist and vapor created by the violent churning
+of the water down below is quite abundant.
+  To your west is the cliff face, and after any amount of studying you do not
+see any possible way to climb its height. There simply are not enough hand
+holds and the ascent is far too long to be safe. Looking down into the path of
+the water from the waterfall you do see a ledge that you might be able to jump
+down towards. The rock is slippery so it could be a risky undertaking, but
+what is life without a little risk?
+~
+272 0 2
+D0
+With a little care you think you can jump down to a ledge down into the canyon
+by the waterfall.
+~
+ledge~
+10 -1 27263
+D1
+~
+~
+0 -1 27257
+D3
+You do not see any possible way to climb this cliff face. The distance is simply
+too great, with too few handholds.
+~
+~
+0 -1 27287
+S
+#27259
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  All you can see in all directions is the lushness of this forest.
+~
+272 0 3
+D0
+~
+~
+0 -1 27257
+D1
+~
+~
+0 -1 27260
+D2
+~
+~
+0 -1 27261
+D3
+~
+~
+0 -1 27262
+S
+#27260
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to your west.
+~
+272 0 3
+D3
+~
+~
+0 -1 27259
+S
+#27261
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to your north.
+~
+272 0 3
+D0
+~
+~
+0 -1 27259
+S
+#27262
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to your east.
+~
+272 0 3
+D1
+~
+~
+0 -1 27259
+S
+#27263
+Amongst the Soothing Spray of the Waterfall~
+  You scramble down the slippery rocks successfully and reach the bottom of
+the canyon. You are surrounded by the hazy mist created by the deluge of water
+pouring over the side of the cliff face. It obscures your vision, but you
+don't much care, you feel as though nothing could be out to hurt you with this
+kind of bliss in this world. Looking in the correct directions a multitude of
+fantastic rainbows are formed by the tiny water droplets.
+  It appears you can climb up to either the northern or southern rim from this
+part of the canyon. The river continues to the east after it has collected
+in an incredibly deep and relatively calm pool.
+~
+272 67108992 6
+D0
+With a little care you think you can climb up the slippery canyon wall to the
+northern rim from here.
+~
+wall walls~
+11 -1 27273
+D1
+~
+~
+0 -1 27264
+D2
+Despite the glistening wet rocks, you think you can get enough traction to be
+able to climb the canyon wall to the south.
+~
+wall walls~
+11 -1 27258
+S
+#27264
+A River Flowing Through a Canyon~
+  You are wading through one of the calm eddies in the shallows of the river
+that has created this massive canyon. The fast moving water and the lack of
+wind caused by the towering walls of the canyon makes the air smell of the
+river, crisp and clean. Rapids fill your ears with the white-noise of water
+rumbling over rocks, and around fallen logs. In calmer sections the crystal
+clear water lets you see straight to the bottom, displaying a myriad of colors.
+Blues, browns, greens, reds, each in their own sections shimmer as the water
+passes over them.
+  The river continues to flow to the east, and the canyon walls are to the
+north and south.
+~
+272 0 6
+D0
+~
+~
+0 -1 27270
+D1
+~
+~
+0 -1 27266
+D2
+~
+~
+0 -1 27265
+D3
+~
+~
+0 -1 27263
+S
+#27265
+The Canyon Walls~
+  Towering above you are the gigantic canyon walls. The sheer face of the stone
+allows you to see the fantastic gradiation of color that travels up the wall
+face. It's very interesting to see, because from your knowledge you know it
+takes millions of years to create this type of rock layering, yet you know that
+this world can only be a few hours old. Litte shrubs seem to have taken root
+anywhere they could get a foothold in the stone, making little green tufts
+dot the scenery. You can still hear the echoes of the rushing water of the
+great river off of the walls.
+  To your north is the river that created the canyon. A huge cliff to your
+west prevents any further travel in that directions. The canyon extends out to
+the east for a great distance.
+~
+272 0 2
+D0
+~
+~
+0 -1 27264
+D1
+~
+~
+0 -1 27267
+S
+#27266
+A River Flowing Through a Canyon~
+  You are wading through one of the calm eddies in the shallows of the river
+that has created this massive canyon. The fast moving water and the lack of
+wind caused by the towering walls of the canyon makes the air smell of the
+river, crisp and clean. Rapids fill your ears with the white-noise of water
+rumbling over rocks, and around fallen logs. In calmer sections the crystal
+clear water lets you see straight to the bottom, displaying a myriad of colors.
+Blues, browns, greens, reds, each in their own sections shimmer as the water
+passes over them.
+  The river continues to flow to the east, and the canyon walls are to the
+north and south.
+~
+272 0 6
+D0
+~
+~
+0 -1 27271
+D1
+~
+~
+0 -1 27268
+D2
+~
+~
+0 -1 27267
+D3
+~
+~
+0 -1 27264
+S
+#27267
+The Canyon Walls~
+  Towering above you are the gigantic canyon walls. The sheer face of the stone
+allows you to see the fantastic gradiation of color that travels up the wall
+face. It's very interesting to see, because from your knowledge you know it
+takes millions of years to create this type of rock layering, yet you know that
+this world can only be a few hours old. Litte shrubs seem to have taken root
+anywhere they could get a foothold in the stone, making little green tufts
+dot the scenery. You can still hear the echoes of the rushing water of the
+great river off of the walls.
+  To your north is the river that created the canyon. You can follow along
+the canyon walls to your east or west.
+~
+272 0 2
+D0
+~
+~
+0 -1 27266
+D1
+~
+~
+0 -1 27269
+D3
+~
+~
+0 -1 27265
+S
+#27268
+A River Flowing Through a Canyon~
+  You are wading through one of the calm eddies in the shallows of the river
+that has created this massive canyon. The fast moving water and the lack of
+wind caused by the towering walls of the canyon makes the air smell of the
+river, crisp and clean. Rapids fill your ears with the white-noise of water
+rumbling over rocks, and around fallen logs. In calmer sections the crystal
+clear water lets you see straight to the bottom, displaying a myriad of colors.
+Blues, browns, greens, reds, each in their own sections shimmer as the water
+passes over them.
+  The canyon walls extend upwards to your north and south. The way to the
+east has become impassable due to a towering pile of fallen rocks. You can
+continue back up the river to the west.
+~
+272 0 6
+D0
+~
+~
+0 -1 27272
+D2
+~
+~
+0 -1 27269
+D3
+~
+~
+0 -1 27266
+S
+#27269
+The Canyon Walls~
+  Towering above you are the gigantic canyon walls. The sheer face of the stone
+allows you to see the fantastic gradiation of color that travels up the wall
+face. It's very interesting to see, because from your knowledge you know it
+takes millions of years to create this type of rock layering, yet you know that
+this world can only be a few hours old. Litte shrubs seem to have taken root
+anywhere they could get a foothold in the stone, making little green tufts
+dot the scenery. You can still hear the echoes of the rushing water of the
+great river off of the walls.
+  To your north is the river that created the canyon. Your travel eastwards
+is blocked due to a sudden narrowing of the canyon. You can follow along the
+canyon wall to your west however.
+~
+272 0 2
+D0
+~
+~
+0 -1 27268
+D3
+~
+~
+0 -1 27267
+S
+#27270
+The Canyon Walls~
+  Towering above you are the gigantic canyon walls. The sheer face of the stone
+allows you to see the fantastic gradiation of color that travels up the wall
+face. It's very interesting to see, because from your knowledge you know it
+takes millions of years to create this type of rock layering, yet you know that
+this world can only be a few hours old. Litte shrubs seem to have taken root
+anywhere they could get a foothold in the stone, making little green tufts
+dot the scenery. You can still hear the echoes of the rushing water of the
+great river off of the walls.
+  To your south is the river that created the canyon. A huge cliff to your
+west prevents any further travel in that direction. The canyon extends out to
+the east for a great distance.
+~
+272 0 2
+D1
+~
+~
+0 -1 27271
+D2
+~
+~
+0 -1 27264
+S
+#27271
+The Canyon Walls~
+  Towering above you are the gigantic canyon walls. The sheer face of the stone
+allows you to see the fantastic gradiation of color that travels up the wall
+face. It's very interesting to see, because from your knowledge you know it
+takes millions of years to create this type of rock layering, yet you know that
+this world can only be a few hours old. Litte shrubs seem to have taken root
+anywhere they could get a foothold in the stone, making little green tufts
+dot the scenery. You can still hear the echoes of the rushing water of the
+great river off of the walls.
+  To your south is the river that created the canyon. You can follow the
+canyon wall to the east or the west.
+~
+272 0 2
+D1
+~
+~
+0 -1 27272
+D2
+~
+~
+0 -1 27266
+D3
+~
+~
+0 -1 27270
+S
+#27272
+The Canyon Walls~
+  Towering above you are the gigantic canyon walls. The sheer face of the stone
+allows you to see the fantastic gradiation of color that travels up the wall
+face. It's very interesting to see, because from your knowledge you know it
+takes millions of years to create this type of rock layering, yet you know that
+this world can only be a few hours old. Litte shrubs seem to have taken root
+anywhere they could get a foothold in the stone, making little green tufts
+dot the scenery. You can still hear the echoes of the rushing water of the
+great river off of the walls.
+  To your south is the river which created the canyon. Your travel eastward
+is impassable due to a narrowing of the canyon, but there is enough room to
+hug the canyon wall to the west.
+~
+272 0 2
+D2
+~
+~
+0 -1 27268
+D3
+~
+~
+0 -1 27271
+S
+#27273
+At the Base of a Towering Waterfall~
+  Now you can see what powerful force has created this vast canyon. You
+approach a sheer cliff several hundred feet high and through which a waterfall
+pours down. Such a volume of water you're not sure you've ever seen before.
+The temperature near the waterfall is much cooler than the rest of the
+countryside as the amount of mist and vapor created by the violent churning
+of the water down below is quite abundant.
+  To your west is the cliff face, and after any amount of studying you do not
+see any possible way to climb its height. There simply are not enough hand
+holds and the ascent is far too long to be safe. Looking down into the path of
+the water from the waterfall you do see a ledge that you might be able to jump
+down towards. The rock is slippery so it could be a risky undertaking, but
+what is life without a little risk?
+~
+272 0 2
+D0
+~
+~
+0 -1 27274
+D1
+~
+~
+0 -1 27275
+D2
+With a little care you think you can jump down to a ledge down into the canyon
+by the waterfall.
+~
+ledge~
+10 -1 27263
+D3
+You do not see any way of climbing this cliff. It is simply too high, with too
+few handholds.
+~
+~
+0 -1 27289
+S
+#27274
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to the north and the east. The north rim of the canyon
+lies to the south.
+~
+272 0 3
+D0
+~
+~
+0 -1 27277
+D1
+~
+~
+0 -1 27276
+D2
+~
+~
+0 -1 27273
+S
+#27275
+The North Rim of The Canyon~
+  Having crossed over the canyon you can see that the north rim of the canyon
+is a little wilder, and even feels a little darker than the southern rim.
+Maybe this is just the angle that the sun is taking currently, you don't know
+but you decide to keep a sharper lookout for things lurking in the shadows.
+Besides this feeling everything looks very similar. Soft green grass grows
+beneath your feet in a carpet all the way up to the rim of the canyon.
+Wildflowers are interspersed in the grass, and birds, beetles, and butterflies
+dart to and fro in mirth.
+  The canyon rim to the south prevents any further travel in that direction. 
+The canyon itself runs east and west, and a forest begins to your north.
+~
+272 0 2
+D0
+~
+~
+0 -1 27276
+D1
+~
+~
+0 -1 27279
+D3
+~
+~
+0 -1 27273
+S
+#27276
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to the north and the west. The north rim of the canyon
+can be seen to the south.
+~
+272 0 3
+D0
+~
+~
+0 -1 27278
+D2
+~
+~
+0 -1 27275
+D3
+~
+~
+0 -1 27274
+S
+#27277
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to the east and the south.
+~
+272 0 3
+D1
+~
+~
+0 -1 27278
+D2
+~
+~
+0 -1 27274
+S
+#27278
+A Lush Green Forest~
+  The trees grow thick and plentiful in this part of the world. Large green
+bows scatter the light from the warm sun here and there, making dancing
+patterns of light on the ground as the wind blows playfully through the forest.
+Scads of different woodland creatures romp about in their euphoria of getting
+to explore their very own brand new world. You walk through the trees without
+a care in the world, taken in by the magic that is surrounding you.
+  The forest continues to the south and the west.
+~
+272 0 3
+D0
+A thick passage of branches blocks your way to the north.
+~
+branches~
+8 -1 27298
+D2
+~
+~
+0 -1 27276
+D3
+~
+~
+0 -1 27277
+S
+#27279
+The North Rim of The Canyon~
+  Having crossed over the canyon you can see that the north rim of the canyon
+is a little wilder, and even feels a little darker than the southern rim.
+Maybe this is just the angle that the sun is taking currently, you don't know
+but you decide to keep a sharper lookout for things lurking in the shadows.
+Besides this feeling everything looks very similar. Soft green grass grows
+beneath your feet in a carpet all the way up to the rim of the canyon.
+Wildflowers are interspersed in the grass, and birds, beetles, and butterflies
+dart to and fro in mirth.
+  Here the canyon has been cut by the river in such a way that you
+believe you might be able to make the jump to the other side. Your only other
+recourse is to follow the canyon rim to the east and the west.
+~
+272 0 2
+D1
+~
+~
+0 -1 27280
+D2
+The river has cut the canyon so narrow here that with a little effort you can
+probably jump to the other side.
+~
+canyon~
+10 -1 27256
+D3
+~
+~
+0 -1 27275
+S
+#27280
+The North Rim of the Canyon~
+  Having crossed over the canyon you can see that the north rim of the canyon
+is a little wilder, and even feels a little darker than the southern rim.
+Maybe this is just the angle that the sun is taking currently, you don't know
+but you decide to keep a sharper lookout for things lurking in the shadows.
+Besides this feeling everything looks very similar. Soft green grass grows
+beneath your feet in a carpet all the way up to the rim of the canyon.
+Wildflowers are interspersed in the grass, and birds, beetles, and butterflies
+dart to and fro in mirth.
+  To your north you can see a vast array of low, gently sloping hills covered
+with thickets of heather. The smell from their purple flowers wafts in your
+direction and is enough to make you want to run through their midst. The canyon
+still continues to your east and west.
+~
+272 0 2
+D0
+~
+~
+0 -1 27282
+D1
+~
+~
+0 -1 27281
+D3
+~
+~
+0 -1 27279
+S
+#27281
+The North Rim of the Canyon~
+  Having crossed over the canyon you can see that the north rim of the canyon
+is a little wilder, and even feels a little darker than the southern rim.
+Maybe this is just the angle that the sun is taking currently, you don't know
+but you decide to keep a sharper lookout for things lurking in the shadows.
+Besides this feeling everything looks very similar. Soft green grass grows
+beneath your feet in a carpet all the way up to the rim of the canyon.
+Wildflowers are interspersed in the grass, and birds, beetles, and butterflies
+dart to and fro in mirth.
+ The canyon rim continues to your west.
+~
+272 0 2
+D3
+~
+~
+0 -1 27280
+S
+#27282
+Thicketed Rolling Hills~
+  The forest gives way to gently sloping hills covered not with trees, but a
+thick blanket of low bushes covered with blooming purple flowers. The smell is
+so sweet, and fills your nostrils so, that you don't mind when your leg brushes
+past the odd thistle or other thorned plant. The heather is so thick in places
+that you have to lift your feet above the plants in order to move through them.
+  The hills continue to your north, or you can return to the canyon rim to
+your south.
+~
+272 0 4
+D0
+~
+~
+0 -1 27283
+D2
+~
+~
+0 -1 27280
+S
+#27283
+Thicketed Rolling Hills~
+  The forest gives way to gently sloping hills covered not with trees, but a
+thick blanket of low bushes covered with blooming purple flowers. The smell is
+so sweet, and fills your nostrils so, that you don't mind when your leg brushes
+past the odd thistle or other thorned plant. The heather is so thick in places
+that you have to lift your feet above the plants in order to move through them.
+  The coppice extends in all directions from this vantage point.
+~
+272 0 4
+D0
+~
+~
+0 -1 27285
+D1
+~
+~
+0 -1 27286
+D2
+~
+~
+0 -1 27282
+D3
+~
+~
+0 -1 27284
+S
+#27284
+Thicketed Rolling Hills~
+  The forest gives way to gently sloping hills covered not with trees, but a
+thick blanket of low bushes covered with blooming purple flowers. The smell is
+so sweet, and fills your nostrils so, that you don't mind when your leg brushes
+past the odd thistle or other thorned plant. The heather is so thick in places
+that you have to lift your feet above the plants in order to move through them.
+  The coppice continues to your east.
+~
+272 0 4
+D1
+~
+~
+0 -1 27283
+S
+#27285
+Thicketed Rolling Hills~
+  The forest gives way to gently sloping hills covered not with trees, but a
+thick blanket of low bushes covered with blooming purple flowers. The smell is
+so sweet, and fills your nostrils so, that you don't mind when your leg brushes
+past the odd thistle or other thorned plant. The heather is so thick in places
+that you have to lift your feet above the plants in order to move through them.
+  The coppice continues to your south.
+~
+272 0 4
+D2
+~
+~
+0 -1 27283
+S
+#27286
+Thicketed Rolling Hills~
+  The forest gives way to gently sloping hills covered not with trees, but a
+thick blanket of low bushes covered with blooming purple flowers. The smell is
+so sweet, and fills your nostrils so, that you don't mind when your leg brushes
+past the odd thistle or other thorned plant. The heather is so thick in places
+that you have to lift your feet above the plants in order to move through them.
+ The coppice continues to your west.
+~
+272 0 4
+D3
+~
+~
+0 -1 27283
+S
+#27287
+Overlooking the Cliff~
+  The view from here is really quite spectacular. You are easily several
+thousand feet above the ground below you, and from the great height
+the entire world opens up before you. You can see the entirety of the 
+enormous canyon in all its splendor. Acres and acres of forestland, and plains,
+spotted with bright blue lakes and meandering streams are all visible. You can
+even see where the powerful magic of this world has yet to reach. It appears as
+glowing red magma, giving of smoke and steam as it cools down to form brand
+new rock features.
+  A mountain range begins to your west ending the flat highland. The cliff
+continues to your north. To your east the cliff drops off, you would most
+certainly not be able to climb its impressive height.
+~
+272 0 2
+D0
+~
+~
+0 -1 27288
+D1
+This leads over the cliff. The cliff face is far too sheer to be able to climb. Any attempt would surely lead to your death.
+~
+~
+0 -1 27258
+D3
+~
+~
+0 -1 27291
+S
+#27288
+Overlooking the Cliff~
+  The view from here is really quite spectacular. You are easily several
+thousand feet above the ground below you, and from the great height
+the entire world opens up before you. You can see the entirety of the 
+enormous canyon in all its splendor. Acres and acres of forestland, and plains,
+spotted with bright blue lakes and meandering streams are all visible. You can
+even see where the powerful magic of this world has yet to reach. It appears as
+glowing red magma, giving of smoke and steam as it cools down to form brand
+new rock features.
+  Nestled between two mountain ranges lies a valley of trees and cool looking
+streams. The cliff you are standing on extends to your north and south. Travel
+to the east is blocked because of a river that culminates in a waterfall.
+~
+272 0 2
+D0
+~
+~
+0 -1 27289
+D2
+~
+~
+0 -1 27287
+D3
+~
+~
+0 -1 27290
+S
+#27289
+Overlooking the Cliff~
+  The view from here is really quite spectacular. You are easily several
+thousand feet above the ground below you, and from the great height
+the entire world opens up before you. You can see the entirety of the 
+enormous canyon in all its splendor. Acres and acres of forestland, and plains,
+spotted with bright blue lakes and meandering streams are all visible. You can
+even see where the powerful magic of this world has yet to reach. It appears as
+glowing red magma, giving off smoke and steam as it cools down to form brand
+new rock features.
+  To your west snowcapped mountains sprout up from the flat mesa. The cliff
+continues to your south. It appears impossible to climb down the side of the
+cliff to the ground below, and any attempt would most surely cost your life.
+~
+272 0 2
+D1
+This leads over the cliff. The cliff face is far to sheer to be able to climb. Any attempy would surely lead to your death.
+~
+~
+0 -1 27273
+D2
+~
+~
+0 -1 27288
+D3
+~
+~
+0 -1 27297
+S
+#27290
+A Valley Nestled in Between Mountains~
+  Peaceful. In stark contrast to the dry windswept dirt of the mesa and the
+harsh cold climate of the mountains, this sheltered valley is just perfect.
+Protected by trees and mountains on all sides, the flora and fauna in this
+valley seem completely at peace with the world and even with you. Time seems
+to slow as you brush past limbs of coniferous trees on your trek.
+  As you continue on your journey you come across a huge golden gate to your
+west. The gate opens into what looks like a small garden that is surrounded
+on all sides by high hedgerows. There appear to be some words written upon the
+gate. To your north and south are two huge mountain ranges that you may
+attempt to traverse, and the east opens into a large flat mesa.
+~
+272 0 3
+D0
+~
+~
+0 -1 27297
+D1
+~
+~
+0 -1 27288
+D2
+~
+~
+0 -1 27291
+D3
+Great golden gates stand closed, guarding the entrance to the garden. On them
+is written a phrase to warn possible travellers.
+Do not seek this garden for your own benefit. Only take from this garden that
+which to help others. Any attempt to steal from this garden shall be punished
+with the powerful magic of this land!
+~
+gate~
+1 -1 27299
+S
+#27291
+A Great Snowcapped Mountain Range~
+  You slowly pick your way through the mountains, climbing higher and higher
+into the sky. The air begins to thin and you are short of breath. Trudging
+through the unpredictable snow is taxing, you do not know whether your next
+step will leave you knee deep in freezing cold powder, or if you will begin to
+slip on rock hard ice. Every once in a while you are able to distance yourself
+from your anger and take a look down into the valley where you can see the
+luscious greens and blues, along with a myriad of birds taking advantage of the
+strong air currents created by the mountains.
+  The range continues to your west, or you can climb down from the heights
+into the valley north of you. The flat mesa is to your east.
+~
+272 0 9
+D0
+~
+~
+0 -1 27290
+D1
+~
+~
+0 -1 27287
+D3
+~
+~
+0 -1 27292
+S
+#27292
+A Great Snowcapped Mountain Range~
+  You slowly pick your way through the mountains, climbing higher and higher
+into the sky. The air begins to thin and you are short of breath. Trudging
+through the unpredictable snow is taxing, you do not know whether your next
+step will leave you knee deep in freezing cold powder, or if you will begin to
+slip on rock hard ice. Every once in a while you are able to distance yourself
+from your anger and take a look down into the valley where you can see the
+luscious greens and blues, along with a myriad of birds taking advantage of the
+strong air currents created by the mountains.
+  The mountains continue to your east and west. To your north you can climb
+down to a small hedged in garden.
+~
+272 0 9
+D0
+A set of high hedges separates you from the garden to the north.
+~
+hedge hedges~
+11 -1 27299
+D1
+~
+~
+0 -1 27291
+D3
+~
+~
+0 -1 27293
+S
+#27293
+A Great Snowcapped Mountain Range~
+  You slowly pick your way through the mountains, climbing higher and higher
+into the sky. The air begins to thin and you are short of breath. Trudging
+through the unpredictable snow is taxing, you do not know whether your next
+step will leave you knee deep in freezing cold powder, or if you will begin to
+slip on rock hard ice. Every once in a while you are able to distance yourself
+from your anger and take a look down into the valley where you can see the
+luscious greens and blues, along with a myriad of birds taking advantage of the
+strong air currents created by the mountains.
+  The mountain range extends off to the east. To your north the mountains
+abate, and you can see a small green hill instead.
+~
+272 0 9
+D0
+~
+~
+0 -1 27294
+D1
+~
+~
+0 -1 27292
+S
+#27294
+A Small Green Hill Behind a Garden~
+  From atop this little hill you have the perfect view into the little square
+garden below. You can see a few rows of flowers and a beautiful silver tree.
+There isn't much room for anything else. You can also see the hedges guarding
+three of the four sides of the garden. In the fourth side, the furthest away
+from you, you can see a large golden gate, shining in the sunlight.
+  If you climb down the hill you can get access to one of the hedges guarding
+the garden, which you can most likely climb over. Both north and south of you
+are large mountain ranges.
+~
+272 0 4
+D0
+~
+~
+0 -1 27295
+D1
+A set of high hedges separates you from the garden to the east.
+~
+hedge hedges~
+11 -1 27299
+D2
+~
+~
+0 -1 27293
+S
+#27295
+A Great Snowcapped Mountain Range~
+  You slowly pick your way through the mountains, climbing higher and higher
+into the sky. The air begins to thin and you are short of breath. Trudging
+through the unpredictable snow is taxing, you do not know whether your next
+step will leave you knee deep in freezing cold powder, or if you will begin to
+slip on rock hard ice. Every once in a while you are able to distance yourself
+from your anger and take a look down into the valley where you can see the
+luscious greens and blues, along with a myriad of birds taking advantage of the
+strong air currents created by the mountains.
+  The mountain range extends off to the east. To your south the mountains
+abate, and you can see a small green hill instead.
+~
+272 0 9
+D1
+~
+~
+0 -1 27296
+D2
+~
+~
+0 -1 27294
+S
+#27296
+A Great Snowcapped Mountain Range~
+  You slowly pick your way through the mountains, climbing higher and higher
+into the sky. The air begins to thin and you are short of breath. Trudging
+through the unpredictable snow is taxing, you do not know whether your next
+step will leave you knee deep in freezing cold powder, or if you will begin to
+slip on rock hard ice. Every once in a while you are able to distance yourself
+from your anger and take a look down into the valley where you can see the
+luscious greens and blues, along with a myriad of birds taking advantage of the
+strong air currents created by the mountains.
+ The mountain range continues both to your east and west. You can climb down
+from these heights to the south to arrive at a small hedged in garden.
+~
+272 0 9
+D1
+~
+~
+0 -1 27297
+D3
+~
+~
+0 -1 27295
+S
+#27297
+A Great Snowcapped Mountain Range~
+  You slowly pick your way through the mountains, climbing higher and higher
+into the sky. The air begins to thin and you are short of breath. Trudging
+through the unpredictable snow is taxing, you do not know whether your next
+step will leave you knee deep in freezing cold powder, or if you will begin to
+slip on rock hard ice. Every once in a while you are able to distance yourself
+from your anger and take a look down into the valley where you can see the
+luscious greens and blues, along with a myriad of birds taking advantage of the
+strong air currents created by the mountains.
+  The mountain range continues to your west. To your south you can climb down
+into the peaceful valley between the two great mountain ranges. A large flat
+mesa begins in the east.
+~
+272 0 9
+D1
+~
+~
+0 -1 27289
+D2
+~
+~
+0 -1 27290
+D3
+~
+~
+0 -1 27296
+S
+#27298
+A Small Stream Running Through a Forest~
+  The trees give way to a small stream with a wide, flat bank on either side.
+The water of the stream runs over rocks and fallen branches filling the air
+with the pleasant sound of babbling water. This appears to be a favorite spot
+for the newly created wildlife to take their first drink, as many of them have
+gathered at this spot. After a few moments it appears to you that there are
+far too many animals here for simply a drink, and that perhaps they are gathered
+here for another purpose.
+~
+272 0 3
+D2
+A thick passage of branches blocks your way to the south.
+~
+branches~
+8 -1 27278
+S
+#27299
+The Garden of Old Magic~
+  As the golden gates recede behind you, you step into the garden. It appears
+much larger than you would have guessed from outside, but you suppose that this
+feat is particularly easy considering the other types of magic you have seen
+in this land. There are a vast array of trees and flowers in the garden, but
+you can tell immediately which one you are after. It stands separate, in the
+middle of the garden behind a slowly trickling fountain.
+  The leaves of the tree are a dull silver and the apples that grow on this tree
+give off their own glow, sending streaks of light out in various directions.
+You realize this is a happy place to be, but there is a tone of seriousness as
+well.
+~
+272 0 3
+D1
+~
+gate~
+1 -1 27290
+S
+#0
+$~

@@ -1,0 +1,673 @@
+#1800
+Small Cherub~
+A small cherub~
+A small cherub is happily fluttering about.
+~
+This small fellow is fluttering around, simply happy to be alive.
+In time, he could develop into an angel, but for now he is
+content, spreading his happiness around.
+~
+34078792 0 300 Y
+15 5 7 5d100+1750 3d10+25
+1000 120000
+8 8 1
+66 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1801
+Tiny Angel~
+A tiny angel~
+A tiny angel is walking around.
+~
+This angel is about 1/2 the size of an average human.  It has a very
+faint halo about it's head and a small pair of underdeveloped wings
+can be seen protruding from the white robes it wears.
+~
+33554504 0 500 Y
+20 0 5 5d150+2500 10d4+30
+2500 333333
+8 8 0
+66 0 1d1+499 2
+1 1 10 32
+1 6 10 15
+0 0 0 0
+K
+0 0 0 0 0 0
+#1802
+Unholy Presence~
+An unholy presence~
+An unholy presence surrounds this room.
+~
+This swirling mass of grayness emits an unholy aura.  It has no
+true physical form and is constantly changing how it looks, for
+an instant, you can see yourself within its swirling mass, perhaps
+an indication of the evil which lies within your soul.
+~
+67108872 293865600 -500 Y
+45 -25 -17 15d400+9000 7d25+100
+100000 900000
+8 8 0
+67 8978488 10d250+2500 5
+1 2 10 242
+1 1 10 106
+10 4 5 0
+5 2 5 0
+1 3 15 136
+0 0 0 128
+K
+0 0 0 0 0 0
+#1803
+Gigantic Golden Wyrm~
+A Gigantic Golden Wyrm~
+A Gigantic Golden Wyrm sits here, pondering you intently.
+~
+A wyrm is resting here in it's nest.  It shines like gold and it's
+scales seem to be made of gold itself.  It notices you are here and
+is looking right at you, but you sense no imminent danger as it
+radiates an aura of friendliness.
+~
+34078728 285220992 1000 Y
+50 -30 -5 1d7500+12250 2d100+125
+1000000 450000
+5 5 1
+57 4224 10d500+5000 2
+6 2 15 0
+1 2 12 26
+0 0 0 0
+R
+2
+K
+0 0 0 0 0 0
+#1804
+Saint Peter~
+Saint Peter~
+Saint Peter is here, busy reading a gigantic book.
+~
+Saint Peter is one of the archangels of heaven.  He is
+performing his duties here ensuring that only those who
+have lived good lives can enter Heaven Proper.  He is
+reading a book which contains the list of people who
+can enter, and you wonder if your name is on the list.
+His giant wings span nearly 15 feet and a faint halo
+floats above his head.
+~
+33554442 419694752 1000 Y
+50 -30 -15 5d1000+12000 50d15+200
+500000 750000
+8 8 1
+67 16436 5d2500+3000 4
+1 1 5 141
+1 3 3 109
+1 3 10 81
+1 3 10 190
+0 0 0 160
+T
+......Saint Peter is bathed in holy light!~
+K
+0 0 0 0 0 0
+#1805
+Archangel Angel Gabriel~
+The Archangel Gabriel~
+A heavenly being is here, proclaiming the greatness of the Heavens.
+~
+The Archangel Gabriel is one of heavens greatest generals.  His
+courage is known throughout the heavens and hells.  A fierce warrior,
+there are many battle scars which line his body, but yet he looks
+proud to bear these.  He is currently speaking on the greatness of
+Heaven.
+~
+33554442 134217856 1000 Y
+50 -30 -15 5d2500+7000 3d125+80
+100000 1000000
+8 8 1
+67 0 2d250+500 4
+1 1 15 22
+4 3 5 0
+2 3 5 0
+9 3 5 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1806
+Angel~
+An angel~
+An angel hovers here, looking rather holy.
+~
+This angel's wings have matured, but look as if they are useless
+for flying in their current state.  Dressed in white robes, angels
+typically study literature and train for combat against the minions
+of Hell.  Once fully matured, they make excellent fighters as well
+as scholars.
+~
+33554504 0 600 Y
+25 -5 2 1d500+4250 10d6+50
+5000 450000
+8 8 1
+66 0 1d1+749 1
+1 1 20 142
+0 0 0 0
+K
+0 0 0 0 0 0
+#1807
+Large Angel~
+A large, powerful looking Angel~
+A large, powerful looking Angel is flying here.
+~
+This Angel looks like one of the soldiers who fight for Heaven
+from time to time in the unending war against Hell.  Her wings
+span beautifully and her halo emits a faint light that serves
+as some sort of protection against evil powers.  She has some
+scars and looks very seasoned to combat.
+~
+33554504 16785440 800 Y
+40 -20 -7 8d200+2000 10d6+45
+17500 500000
+8 8 2
+66 0 1d1+799 4
+1 2 5 26
+1 6 10 28
+1 3 5 81
+1 1 10 32
+0 0 0 0
+K
+0 0 0 0 0 0
+#1808
+Archangel Angel Charles~
+The Archangel Charles~
+A Scholarly Archangel is here, unlocking the secrets of the universe.
+~
+Charles, or Charlie as the other Archangels call him, is a rather
+nerdy guy.  He spends most of his day in this room, researching the
+secrets of the universe and performing various expariments.
+Although he looks fraile physically, the powers of Heaven would
+surely come to his aid if needed, wouldn't they?
+~
+33554442 134217856 1000 Y
+50 -25 -10 4d1000+5500 8d25+35
+100000 1000000
+8 8 1
+67 50364416 20d500+2000 2
+1 3 15 110
+1 3 5 109
+0 0 0 128
+R
+4
+K
+0 0 0 0 0 0
+#1809
+Archangel Angel Michael~
+The Archangel Michael~
+An Archangel of Heaven is here, reading a book.
+~
+Michael is one of the greater Archangels of Heaven.  He is dressed
+in a pure white robe and emits a great aura of holiness.  He is
+currently reading one of the many books in the library of Heaven
+and his halo shines brightly.
+~
+33554442 134217856 1000 Y
+50 -20 -12 2d2500+7500 10d25+95
+100000 1000000
+8 8 1
+67 0 1d1000+5000 4
+4 2 5 0
+9 3 5 0
+1 6 15 140
+1 2 10 22
+0 0 0 0
+K
+0 0 0 0 0 0
+#1810
+Archangel Angel Samantha~
+The Archangel Samantha~
+A beautiful Archangel is counting the infinite riches of Heaven.
+~
+Samantha is one of the female Archangels of Heaven.  Her talents of
+mathematics lend her to the unending job of counting the riches of
+Heaven.  She doesn't wear the normal robes, but instead chooses to
+wear a full set of battle armor, longing for the day she can fight
+the forces of Hell, but for now, she is stuck in this very room,
+counting, and counting......
+~
+33554442 134482080 1000 Y
+50 -20 -17 4d1000+4000 10d50+120
+750000 1000000
+8 8 2
+67 939524096 5d100+750 2
+1 2 20 212
+4 3 15 0
+0 0 0 32
+K
+0 0 0 0 0 0
+#1811
+Archdevil Devil Xalith'kragtar'kruk~
+The Archdevil Xalith'kragtar'kruk~
+A tremendously evil being is trying to escape this place.
+~
+Xalith'kragtar'kruk's attention is currently focused on escaping
+this place.  His skin is completely black and two huge wings
+protrude from his muscular back.  Battle scars line his body and
+when he occasionally flexes his muscles, they expand to nearly
+twice their normal size.  He evokes an aura of pure evil and
+combat is no stranger from him.
+~
+67108874 427821224 -1000 Y
+70 -50 -18 15d1500+20000 7d55+250
+100000 900000
+8 8 0
+67 549508 500d5+10000 7
+1 1 5 104
+1 3 5 203
+10 5 7 0
+1 1 5 106
+1 3 12 136
+1 3 5 141
+1 3 7 130
+0 0 1 0
+T
+......The Archdevil Xalith'kragtar'kruk is engulfed in an aura of pure EVIL!~
+K
+0 0 0 0 0 0
+#1812
+Holy Guardian Alexander~
+The Holy Guardian Alexander~
+The Holy Guardian of Heaven Proper is on patrol here.
+~
+Alexander is one of the most honored guardians of the Heavens.  He
+has defeated many of the forces of hell in his day and serves as a
+role model for the younger angels.  One rank above Arch Angel, he
+is a feared opponent of the forces of hell and commands the utmost
+respect from all who he fights.  He has a huge set of white wings
+which could sweep you off your feet.
+~
+33570826 402915368 1000 Y
+50 -30 -15 12d1250+7500 5d75+60
+750000 900000
+8 8 1
+67 20484 5d1000+500 5
+1 3 5 22
+1 3 5 81
+1 3 10 142
+1 3 7 119
+1 6 12 102
+0 0 0 0
+T
+......The Holy Guardian Alexander studies you with great interest!~
+K
+0 0 0 0 0 0
+#1813
+Holy Crusader Veteran~
+a Holy Crusader~
+A seasoned veteran of combat stands here, awaiting a challenge.
+~
+This man has dedicated his life to fighting evil for the powers of
+Heaven. However, he has sworn to only defend vileness, rather than
+provoke attacks.  He looks powerful indeed, and with several of his
+friends together, could be a very deadly force.
+~
+33570826 134479872 750 Y
+40 -5 -12 2d1250+2250 3d50+100
+7500 45000
+8 8 1
+7 0 1d1+99 4
+2 3 10 0
+3 3 5 0
+4 3 5 0
+9 3 5 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1814
+Misty Figure Assassin~
+The misty outline of an assassin~
+A shadowy mist covered figure approaches.
+~
+The shadowy figure moves silently through the mist, almost supernaturally.
+In an instant, you lose track of where he went, and the next second you
+feel a sharp pain in your back.
+~
+33554442 402655274 500 Y
+40 -5 5 2d500+3000 10d10+25
+10000 120000
+8 8 1
+3 0 1d1+1 2
+3 3 20 0
+11 3 10 65
+0 0 0 0
+K
+0 0 0 0 0 0
+#1815
+Rock Boulder~
+a tremendous rock~
+A tremendous rock blocks your path.
+~
+It's a gigantic rock.  It seems to move to get in your path, so you
+would guess it is alive.
+~
+10 134285312 0 Y
+40 -10 -25 2d1000+1000 2d100+25
+1 210000
+8 8 1
+0 0 5d50+750 1
+1 4 25 143
+0 0 0 0
+K
+0 0 0 0 0 0
+#1816
+Alter Ego~
+Your alter ego~
+Your alter ego is here, looking rather sickened by your presence.
+~
+This figure is your complete opposite.  It seems to be everything which
+you hate about yourself.  If seems to have the same feelings towards you
+and will do anything to get rid of your presence, a solution you would
+like to enforce as well.
+~
+16426 134219904 0 Y
+40 -20 0 4d2500+5000 25d4+50
+100000 1
+8 8 1
+69 0 5d250+1500 2
+1 1 5 80
+1 2 5 179
+0 0 0 0
+K
+0 0 0 0 0 0
+#1817
+Saint Jessica~
+Saint Jessica~
+One of the many Saints of heaven is standing here.
+~
+Jessica is one of the female saints of heaven.  She is best known for
+a great piece of armor she no longer uses, but has hidden.
+~
+33570824 268705920 1000 Y
+45 -25 -7 2d2500+8500 15d8+100
+50000 900000
+8 8 2
+67 8 2d500+3500 2
+4 2 10 0
+1 6 30 140
+0 0 0 128
+K
+0 0 0 0 0 0
+#1818
+Saint Mark~
+Saint Mark~
+One of the many Saints of heaven is standing here.
+~
+Mark is one of the apostles of heaven and now a saint.  He has been
+around for countless years and is a loyal servant of heaven.  However,
+when it comes time to fight, he usually prefers to stay out of direct
+combat, not because he is a coward, but because he serves heaven better
+by healing the wounded.
+~
+33570824 268707968 1000 Y
+45 -20 -7 3d1000+9000 15d8+100
+50000 900000
+8 8 1
+67 0 2d2500+1000 3
+4 2 10 0
+1 6 30 140
+1 6 25 28
+0 0 0 0
+K
+0 0 0 0 0 0
+#1819
+Saint Kevin~
+Saint Kevin~
+One of the many Saints of heaven is standing here.
+~
+Saint Kevin is the newest saint in heaven.  He was recently promoted
+during the last major battle of heaven.  His prized possession is an
+axe that he was awarded at the heaven forge after that last battle.
+~
+33570824 268705920 1000 Y
+45 -20 -7 20d500+6000 15d8+100
+50000 900000
+8 8 1
+67 0 5d100+2000 2
+4 2 10 0
+1 6 30 140
+0 0 0 0
+K
+0 0 0 0 0 0
+#1820
+Saint Kathryn~
+Saint Kathryn~
+One of the many Saints of heaven is standing here.
+~
+Kathryn was once known for wearing a cloak which was named after
+her, but has since decided to keep it hidden as it was more of a
+personal item than one for show.  She is a kind and gentle soul,
+and would help anyone that needed it.
+~
+33570824 268705920 1000 Y
+45 -5 -7 1d700+3000 15d8+100
+50000 900000
+8 8 2
+67 51085319 5d200+2500 2
+4 2 10 0
+1 6 30 140
+0 0 0 2
+R
+4
+K
+0 0 0 0 0 0
+#1821
+Saint William~
+Saint William~
+One of the many Saints of heaven is standing here.
+~
+William has been in heaven for some time.  He is one of the lesser
+known saints because he prefers to keep a low profile, researching
+the weaknesses of hell.
+~
+33570824 268705920 1000 Y
+45 -25 -7 1d5000+7500 15d10+110
+50000 900000
+8 8 2
+67 0 1d1+999 2
+4 2 10 0
+1 6 30 140
+0 0 0 0
+K
+0 0 0 0 0 0
+#1822
+Greater Devil Kragg'nkrzzugh~
+The Greater Devil Kragg'nkrzzugh~
+An evil looking demon-like creature is here, looking for it's master.
+~
+This greater devil from the depths of hell is completely covered in black
+scales. It has massive wings that resemble that of a bat extending from
+the middle of it's back.  It is completely naked and fights with it's
+powerful claws and massive strength.  It's body seems to pull all the light
+in the room into it.
+~
+67649548 134220930 -750 Y
+60 -40 -10 100d250+10000 10d50+125
+500000 750000
+8 8 0
+67 4672 5d1000+2000 5
+6 2 10 0
+8 2 5 0
+9 3 5 0
+10 5 12 0
+1 2 50 218
+0 0 0 32
+R
+4
+K
+0 0 0 0 0 0
+#1823
+Light Elemental~
+An Elemental of Light~
+A bright light shines here, made of pure elemental energy.
+~
+It shines with a fierce light that almost blinds you as you try to
+get a better look.  Unfortunately, all you can see is a figure
+surrounded by a very bright light.
+~
+34078792 134481952 1000 Y
+50 -30 -15 5d1000+5000 20d5+75
+100000 1800000
+9 9 0
+65 4354 1d1+2000 3
+1 2 5 4
+9 2 5 0
+1 6 5 102
+0 2 0 0
+T
+......an Elemental of Light shines as bright as the sun!~
+K
+0 0 0 0 0 0
+#1824
+Star Shooting~
+a shooting star~
+a bright star rapidly moves around the area
+~
+This seven point star is shooting around the room at a very fast pace.
+It is difficult to make out any detail as it is surrounded by a very
+bright light.  Occasional smaller stars shoot out from the main body,
+making the appearance of a tail of light emerge from behind the star.
+~
+16392 10408 1000 Y
+50 -30 -25 100d20+1000 5d60+200
+0 1
+8 8 0
+67 2 2d100+2000 1
+1 1 25 104
+0 0 0 0
+T
+......a shooting star is surrounded by a constant blur of motion!~
+K
+0 0 0 0 0 0
+#1825
+Star Shooting~
+a shooting star~
+a bright star rapidly moves around the area
+~
+This seven point star is shooting around the room at a very fast pace.
+It is difficult to make out any detail as it is surrounded by a very
+bright light.  Occasional smaller stars shoot out from the main body,
+making the appearance of a tail of light emerge from behind the star.
+~
+16392 10408 1000 Y
+50 -30 -25 1d1+1 5d20+50
+0 1
+8 8 0
+67 2 2d100+2000 1
+1 1 25 104
+0 0 0 0
+T
+......a shooting star is surrounded by a constant blur of motion!~
+K
+0 0 0 0 0 0
+#1826
+Star Shooting~
+a shooting star~
+a bright star rapidly moves around the area
+~
+This seven point star is shooting around the room at a very fast pace.
+It is difficult to make out any detail as it is surrounded by a very
+bright light.  Occasional smaller stars shoot out from the main body,
+making the appearance of a tail of light emerge from behind the star.
+~
+16392 10408 1000 Y
+50 -30 -25 1d1+1 5d20+50
+0 1
+8 8 0
+67 2 2d100+2000 1
+1 1 25 104
+0 0 0 0
+T
+......a shooting star is surrounded by a constant blur of motion!~
+K
+0 0 0 0 0 0
+#1827
+Star Shooting~
+a shooting star~
+a bright star rapidly moves around the area
+~
+This seven point star is shooting around the room at a very fast pace.
+It is difficult to make out any detail as it is surrounded by a very
+bright light.  Occasional smaller stars shoot out from the main body,
+making the appearance of a tail of light emerge from behind the star.
+~
+16392 10408 1000 Y
+50 -30 -25 1d1+1 5d20+50
+0 1
+8 8 0
+67 2 2d100+2000 1
+1 1 25 104
+0 0 0 0
+T
+......a shooting star is surrounded by a constant blur of motion!~
+K
+0 0 0 0 0 0
+#1828
+Star Shooting~
+a shooting star~
+a bright star rapidly moves around the area
+~
+This seven point star is shooting around the room at a very fast pace.
+It is difficult to make out any detail as it is surrounded by a very
+bright light.  Occasional smaller stars shoot out from the main body,
+making the appearance of a tail of light emerge from behind the star.
+~
+16392 10408 1000 Y
+50 -30 -25 1d1+1 5d20+50
+0 1
+8 8 0
+67 2 2d100+2000 1
+1 1 25 104
+0 0 0 0
+T
+......a shooting star is surrounded by a constant blur of motion!~
+K
+0 0 0 0 0 0
+#1829
+Star Shooting~
+a shooting star~
+a bright star rapidly moves around the area
+~
+This seven point star is shooting around the room at a very fast pace.
+It is difficult to make out any detail as it is surrounded by a very
+bright light.  Occasional smaller stars shoot out from the main body,
+making the appearance of a tail of light emerge from behind the star.
+~
+16392 10408 1000 Y
+50 -30 -25 1d1+1 5d20+50
+0 1
+8 8 0
+67 2 2d100+2000 1
+1 1 25 104
+0 0 0 0
+T
+......a shooting star is surrounded by a constant blur of motion!~
+K
+0 0 0 0 0 0
+#1830
+Star Child~
+A star child~
+the shape of a small child can faintly be seen within a shooting star.
+~
+The small child is engulfed in a bright light that resembles a star.  He
+appears to be about three or four years old, yet eminates a wisdom of an
+old man.  From time to time, he darts about the room in a random like 
+manner.
+~
+524296 2088 1000 Y
+50 -30 -25 5d750+8500 5d25+100
+500000 450000
+8 8 1
+67 2 2d1000+2500 2
+9 3 10 0
+1 6 25 28
+0 0 0 0
+T
+......a star child is surrounded by a constant blur of motion!~
+K
+0 0 0 0 0 0
+#0
+$~

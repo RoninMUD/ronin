@@ -1,0 +1,1287 @@
+#2301
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D1
+~
+~
+0 -1 2302
+D2
+~
+~
+0 -1 2309
+S
+#2302
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D1
+~
+~
+0 -1 2303
+D2
+~
+~
+0 -1 2310
+D3
+~
+~
+0 -1 2301
+S
+#2303
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D1
+~
+~
+0 -1 2304
+D2
+~
+~
+0 -1 2311
+D3
+~
+~
+0 -1 2302
+S
+#2304
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D1
+~
+~
+0 -1 2305
+D2
+~
+~
+0 -1 2312
+D3
+~
+~
+0 -1 2303
+S
+#2305
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D1
+~
+~
+0 -1 2306
+D2
+~
+~
+0 -1 2313
+D3
+~
+~
+0 -1 2304
+S
+#2306
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D1
+~
+~
+0 -1 2307
+D2
+~
+~
+0 -1 2314
+D3
+~
+~
+0 -1 2305
+S
+#2307
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D1
+~
+~
+0 -1 2308
+D2
+~
+~
+0 -1 2315
+D3
+~
+~
+0 -1 2306
+S
+#2308
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D2
+~
+~
+0 -1 2316
+D3
+~
+~
+0 -1 2307
+S
+#2309
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2301
+D1
+~
+~
+0 -1 2310
+D2
+~
+~
+0 -1 2317
+S
+#2310
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2302
+D1
+~
+~
+0 -1 2311
+D2
+~
+~
+0 -1 2318
+D3
+~
+~
+0 -1 2309
+S
+#2311
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2303
+D1
+~
+~
+0 -1 2312
+D2
+~
+~
+0 -1 2319
+D3
+~
+~
+0 -1 2310
+S
+#2312
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2304
+D1
+~
+~
+0 -1 2313
+D2
+~
+~
+0 -1 2320
+D3
+~
+~
+0 -1 2311
+S
+#2313
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2305
+D1
+~
+~
+0 -1 2314
+D2
+~
+~
+0 -1 2321
+D3
+~
+~
+0 -1 2312
+S
+#2314
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2306
+D1
+~
+~
+0 -1 2315
+D2
+~
+~
+0 -1 2322
+D3
+~
+~
+0 -1 2313
+S
+#2315
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2307
+D1
+~
+~
+0 -1 2316
+D2
+~
+~
+0 -1 2323
+D3
+~
+~
+0 -1 2314
+S
+#2316
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2308
+D2
+~
+~
+0 -1 2324
+D3
+~
+~
+0 -1 2315
+S
+#2317
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2309
+D1
+~
+~
+0 -1 2318
+D2
+~
+~
+0 -1 2325
+S
+#2318
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2310
+D1
+~
+~
+0 -1 2319
+D2
+~
+~
+0 -1 2326
+D3
+~
+~
+0 -1 2317
+S
+#2319
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2311
+D1
+~
+~
+0 -1 2320
+D2
+~
+~
+0 -1 2327
+D3
+~
+~
+0 -1 2318
+S
+#2320
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2312
+D1
+~
+~
+0 -1 2321
+D2
+~
+~
+0 -1 2328
+D3
+~
+~
+0 -1 2319
+S
+#2321
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2313
+D1
+~
+~
+0 -1 2322
+D2
+~
+~
+0 -1 2329
+D3
+~
+~
+0 -1 2320
+D4
+Sonicity is out there.
+~
+~
+0 -1 8024
+S
+#2322
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2314
+D1
+~
+~
+0 -1 2323
+D2
+~
+~
+0 -1 2330
+D3
+~
+~
+0 -1 2321
+S
+#2323
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2315
+D1
+~
+~
+0 -1 2324
+D2
+~
+~
+0 -1 2331
+D3
+~
+~
+0 -1 2322
+S
+#2324
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2316
+D2
+~
+~
+0 -1 2332
+D3
+~
+~
+0 -1 2323
+S
+#2325
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2317
+D1
+~
+~
+0 -1 2326
+D2
+~
+~
+0 -1 2333
+S
+#2326
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2318
+D1
+~
+~
+0 -1 2327
+D2
+~
+~
+0 -1 2334
+D3
+~
+~
+0 -1 2325
+S
+#2327
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2319
+D1
+~
+~
+0 -1 2328
+D2
+~
+~
+0 -1 2335
+D3
+~
+~
+0 -1 2326
+S
+#2328
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2320
+D1
+~
+~
+0 -1 2329
+D2
+~
+~
+0 -1 2336
+D3
+~
+~
+0 -1 2327
+S
+#2329
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2321
+D1
+~
+~
+0 -1 2330
+D2
+~
+~
+0 -1 2337
+D3
+~
+~
+0 -1 2328
+S
+#2330
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2322
+D1
+~
+~
+0 -1 2331
+D2
+~
+~
+0 -1 2338
+D3
+~
+~
+0 -1 2329
+S
+#2331
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2323
+D1
+~
+~
+0 -1 2332
+D2
+~
+~
+0 -1 2339
+D3
+~
+~
+0 -1 2330
+S
+#2332
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2324
+D2
+~
+~
+0 -1 2340
+D3
+~
+~
+0 -1 2331
+S
+#2333
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2325
+D1
+~
+~
+0 -1 2334
+D2
+~
+~
+0 -1 2341
+S
+#2334
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2326
+D1
+~
+~
+0 -1 2335
+D2
+~
+~
+0 -1 2342
+D3
+~
+~
+0 -1 2333
+S
+#2335
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2327
+D1
+~
+~
+0 -1 2336
+D2
+~
+~
+0 -1 2343
+D3
+~
+~
+0 -1 2334
+S
+#2336
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2328
+D1
+~
+~
+0 -1 2337
+D2
+~
+~
+0 -1 2344
+D3
+~
+~
+0 -1 2335
+S
+#2337
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2329
+D1
+~
+~
+0 -1 2338
+D2
+~
+~
+0 -1 2345
+D3
+~
+~
+0 -1 2336
+S
+#2338
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2330
+D1
+~
+~
+0 -1 2339
+D2
+~
+~
+0 -1 2346
+D3
+~
+~
+0 -1 2337
+S
+#2339
+White square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2331
+D1
+~
+~
+0 -1 2340
+D2
+~
+~
+0 -1 2347
+D3
+~
+~
+0 -1 2338
+S
+#2340
+Black square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2332
+D2
+~
+~
+0 -1 2348
+D3
+~
+~
+0 -1 2339
+S
+#2341
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2333
+D1
+~
+~
+0 -1 2342
+D2
+~
+~
+0 -1 2349
+S
+#2342
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2334
+D1
+~
+~
+0 -1 2343
+D2
+~
+~
+0 -1 2350
+D3
+~
+~
+0 -1 2341
+S
+#2343
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2335
+D1
+~
+~
+0 -1 2344
+D2
+~
+~
+0 -1 2351
+D3
+~
+~
+0 -1 2342
+S
+#2344
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2336
+D1
+~
+~
+0 -1 2345
+D2
+~
+~
+0 -1 2352
+D3
+~
+~
+0 -1 2343
+S
+#2345
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2337
+D1
+~
+~
+0 -1 2346
+D2
+~
+~
+0 -1 2353
+D3
+~
+~
+0 -1 2344
+S
+#2346
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2338
+D1
+~
+~
+0 -1 2347
+D2
+~
+~
+0 -1 2354
+D3
+~
+~
+0 -1 2345
+S
+#2347
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2339
+D1
+~
+~
+0 -1 2348
+D2
+~
+~
+0 -1 2355
+D3
+~
+~
+0 -1 2346
+S
+#2348
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2340
+D2
+~
+~
+0 -1 2356
+D3
+~
+~
+0 -1 2347
+S
+#2349
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2341
+D1
+~
+~
+0 -1 2350
+D2
+~
+~
+0 -1 2357
+S
+#2350
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2342
+D1
+~
+~
+0 -1 2351
+D2
+~
+~
+0 -1 2358
+D3
+~
+~
+0 -1 2349
+S
+#2351
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2343
+D1
+~
+~
+0 -1 2352
+D2
+~
+~
+0 -1 2359
+D3
+~
+~
+0 -1 2350
+S
+#2352
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2344
+D1
+~
+~
+0 -1 2353
+D2
+~
+~
+0 -1 2360
+D3
+~
+~
+0 -1 2351
+S
+#2353
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2345
+D1
+~
+~
+0 -1 2354
+D2
+~
+~
+0 -1 2361
+D3
+~
+~
+0 -1 2352
+S
+#2354
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2346
+D1
+~
+~
+0 -1 2355
+D2
+~
+~
+0 -1 2362
+D3
+~
+~
+0 -1 2353
+S
+#2355
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2347
+D1
+~
+~
+0 -1 2356
+D2
+~
+~
+0 -1 2363
+D3
+~
+~
+0 -1 2354
+S
+#2356
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2348
+D2
+~
+~
+0 -1 2364
+D3
+~
+~
+0 -1 2355
+S
+#2357
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2349
+D1
+~
+~
+0 -1 2358
+S
+#2358
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2350
+D1
+~
+~
+0 -1 2359
+D3
+~
+~
+0 -1 2357
+S
+#2359
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2351
+D1
+~
+~
+0 -1 2360
+D3
+~
+~
+0 -1 2358
+S
+#2360
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2352
+D1
+~
+~
+0 -1 2361
+D3
+~
+~
+0 -1 2359
+S
+#2361
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2353
+D1
+~
+~
+0 -1 2362
+D3
+~
+~
+0 -1 2360
+S
+#2362
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2354
+D1
+~
+~
+0 -1 2363
+D3
+~
+~
+0 -1 2361
+S
+#2363
+Black Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2355
+D1
+~
+~
+0 -1 2364
+D3
+~
+~
+0 -1 2362
+S
+#2364
+White Square~
+You are standing on a large checkered chess board.
+~
+23 8 2
+D0
+~
+~
+0 -1 2356
+D3
+~
+~
+0 -1 2363
+S
+#0
+$~

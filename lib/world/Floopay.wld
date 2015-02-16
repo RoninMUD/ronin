@@ -1,0 +1,1604 @@
+#3801
+A Path to an Old Abandoned Mansion~
+  This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large building in the distance.  The path continues east and west.
+~
+38 0 3
+D1
+~
+~
+0 -1 3802
+S
+#3802
+A Path to an Old Abandoned Mansion~
+  This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large building in the distance.  The path continues east and west.
+~
+38 67108864 3
+D1
+~
+~
+0 -1 3803
+D3
+~
+~
+0 -1 3801
+S
+#3803
+A Path to an Old Abandoned Mansion~
+  This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large building in the distance.  The path continues east and west.
+~
+38 67108864 3
+D1
+~
+~
+0 -1 3804
+D3
+~
+~
+0 -1 3802
+S
+#3804
+A Path to an Old Abandoned Mansion~
+  This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large building in the distance.  The path continues east and west.
+~
+38 67108864 3
+D1
+~
+~
+0 -1 3805
+D3
+~
+~
+0 -1 3803
+S
+#3805
+A Path to an Old Abandoned Mansion~
+  This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large building in the distance.  The path continues east and west.
+~
+38 67108864 3
+D1
+~
+~
+0 -1 3806
+D3
+~
+~
+0 -1 3804
+S
+#3806
+A Path to an Old Abandoned Mansion~
+  Scattered amongst the trail, there are many footprints.  None of which
+appear human, but there is most definately a brigade of travelers who have used
+this path. The path continues east and west
+~
+38 67108864 3
+D1
+~
+~
+0 -1 3807
+D3
+~
+~
+0 -1 3805
+S
+#3807
+A Path to an Old Abandoned Mansion~
+    This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large, dark mansion.  The path continues west and north.
+~
+38 67108864 3
+D0
+~
+~
+0 -1 3808
+D3
+~
+~
+0 -1 3806
+S
+#3808
+A Path to an Old Abandoned Mansion~
+  This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large, dark mansion.  The path continues north and south.
+~
+38 67108864 3
+D0
+~
+~
+0 -1 3809
+D2
+~
+~
+0 -1 3807
+S
+#3809
+A Path to an Old Abandoned Mansion~
+  This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large, dark mansion.  The path continues north and south.
+~
+38 67108864 3
+D0
+~
+~
+0 -1 3810
+D2
+~
+~
+0 -1 3808
+S
+#3810
+A Path to an Old Abandoned Mansion~
+  This worn path seems to have been abandoned long ago.  Looking down the road
+you can see a large, dark mansion.  The path continues north and south.
+~
+38 67108864 3
+D0
+~
+~
+0 -1 3811
+D2
+~
+~
+0 -1 3809
+S
+#3811
+Doorway to an Old Abandoned Mansion~
+  A massive doorway stands before you.  The doors are worn and tattered,
+probably due to time and weather.  It looks as if this mansion has not been
+occupied by anything but vermin for some time now.  There is a light visible
+through the doorway, perhaps somebody is inside.  The yard extends east, west,
+and to the south there is a path.
+~
+38 67108864 3
+D0
+These gigantic doors are in excellent condition, despite their
+old age.  There are muddy handprints on the door, indicating that
+they are probably still in use.
+~
+doors~
+1 -1 3833
+D1
+~
+~
+0 -1 3812
+D2
+~
+~
+0 -1 3810
+D3
+~
+~
+0 -1 3832
+E
+doors~
+  These gigantic doors are in excellent condition, despite their
+old age.  There are muddy handprints on the door, indicating that
+they are probably still in use.
+~
+S
+#3812
+The Yard~
+  The grass, for the most part, is quite tall, aside from a few dead
+patches of yellow grass.  The only sounds are those of insects, with the
+exception of a few trailing noises from inside the mansion.  The yard
+continues east and back west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3813
+D3
+~
+~
+0 -1 3811
+S
+#3813
+The Yard~
+  The grass, for the most part, is quite tall, aside from a few dead
+patches of yellow grass.  The only sounds are those of insects, with the
+exception of a few trailing noises from inside the mansion.  The yard
+continues east and back west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3814
+D3
+~
+~
+0 -1 3812
+S
+#3814
+The Yard~
+  Hidden amongst grass and weeds are a few rusty tools for lawn care.  They are
+completely worn, and do not appear to have served any purpose for decades.
+~
+38 67141632 3
+D0
+~
+~
+0 -1 3815
+D3
+~
+~
+0 -1 3813
+S
+#3815
+The Yard~
+  The grass here is stained with blood.  Judging from its color,
+one would guess it to be fresh.  The blood trail continues north,
+and to the south is another portion of the yard.
+~
+38 67141632 3
+D0
+~
+~
+0 -1 3816
+D2
+~
+~
+0 -1 3814
+S
+#3816
+The Yard~
+  There is a deep impression in the grass here.  Also, there is a lot of
+blood, indicating that something was dragged through.  The yard extends
+north and south.
+~
+38 67141632 3
+D0
+~
+~
+0 -1 3817
+D2
+~
+~
+0 -1 3815
+S
+#3817
+The Yard~
+  The blood here is much less than it was before, although the impression within
+the grass has not changed.  Whatever was dragged was most definitely dead by 
+this point and whatever killed it dragged its carcass northward.
+~
+38 67141632 3
+D0
+~
+~
+0 -1 3818
+D2
+~
+~
+0 -1 3816
+S
+#3818
+The Yard~
+  Crows gather around the top of the building, squawking as if they were waiting
+for something.  Hidden among their squawking is a faint, odd noise emanating
+from the west.
+~
+38 67141632 3
+D2
+~
+~
+0 -1 3817
+D3
+~
+~
+0 -1 3819
+S
+#3819
+The Yard~
+  A faint breeze wafts in from the west, reeking of death.  There is
+nothing here but birds.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3818
+D3
+~
+~
+0 -1 3820
+S
+#3820
+The Yard~
+  The faint noise now reveals itself more clearly, although still remaining
+undefined. A foul odor extends from the west, which also appears to
+where the crows are both going to and coming from.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3819
+D3
+~
+~
+0 -1 3821
+S
+#3821
+At the Cellar Door~
+  Scattered around the backyard of the mansion are the remains of multiple
+animals of varying sizes.  The crows here feast on whatever flesh remains on
+their already decomposing carcasses.  At the base of the mansion's back wall
+is a broken and tattered cellar door.  From within, an indescribable noise
+emanates now with much more clarity.  The yard extends both to the east and
+west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3820
+D3
+~
+~
+0 -1 3822
+D5
+There are cellar doors in front of these staircases, however
+they are so worn and broken that they can barely remain shut.
+~
+~
+0 -1 3856
+S
+#3822
+The Yard~
+  Some odd chittering noises can be heard to the east, along with the definite,
+foul odor of decaying flesh.  Even from here the stench is almost unbearable.
+The yard continues east and west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3821
+D3
+~
+~
+0 -1 3823
+S
+#3823
+The Yard~
+  From the east a faint, indescribable noise can be heard.  There are very few
+scraps here, and what scraps there are provide a feast for some lucky insects.
+The yard continues east, and west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3822
+D3
+~
+~
+0 -1 3824
+S
+#3824
+The Yard~
+  There are bits of scrap lying about the room, most definitely from something
+bringing food from the scrap pile back east with itself.  The yard continues
+east and west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3823
+D3
+~
+~
+0 -1 3825
+S
+#3825
+The Yard~
+  Food scraps and animal remnants are left about this corner of the yard, and
+are being picked away by various scavengers.  It is a wonder why these scraps
+are thrown in this area, as opposed to the junk pile to the south.  The yard
+continues to the east and west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3824
+D2
+~
+~
+0 -1 3826
+S
+#3826
+The Yard~
+  An odd mix of both fresh and spoiled food blows in from the north.  The sound 
+of birds can be heard in the distance, squawking over something.  The yard
+extends to the south and to the north.
+~
+38 67141632 3
+D0
+~
+~
+0 -1 3825
+D2
+~
+~
+0 -1 3827
+S
+#3827
+The Yard~
+  There are piles of junk across this section of the yard.  A few small rodents
+have made this place home, scurrying about and gnawing on scraps.  The yard continues
+north and south.
+~
+38 67141632 3
+D0
+~
+~
+0 -1 3826
+D2
+~
+~
+0 -1 3828
+S
+#3828
+The Yard~
+  There are scraps of wood and cloth thrown about the back of this yard.  It
+seems as if this portion of the yard has been turn into a junk pile.  The yard 
+continues north and south.
+~
+38 67141632 3
+D0
+~
+~
+0 -1 3827
+D2
+~
+~
+0 -1 3829
+S
+#3829
+The Yard~
+  Wafting in from the east is the smell of some divine cooking.  This corner of
+the yard contains almost no interesting land markers.  The yard continues east
+and north.
+~
+38 67141632 3
+D0
+~
+~
+0 -1 3828
+D1
+~
+~
+0 -1 3830
+S
+#3830
+The Yard~
+  For some reason, this portion of the yard smells particularly good.  The smell
+is almost completely and utterly irresistible.  It would be a safe bet to assume
+on the other side of that wall is either the kitchen or the dining room.  The
+yard continues east and west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3831
+D3
+~
+~
+0 -1 3829
+S
+#3831
+The Yard~
+  There is a window on the side of the mansion, although it is a bit too high to
+peer into.  The bellowing voices and screams of various individuals can be heard
+The language spoken is incomprehensible, but it is most definitely spoken in an 
+angry tone.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3832
+D3
+~
+~
+0 -1 3830
+S
+#3832
+The Yard~
+  The grass here, for the most part, is quite tall.  The only sounds are those
+of insects, with the exception of a few trailing noises from inside the mansion.
+The yard continues to the west.
+~
+38 67141632 3
+D1
+~
+~
+0 -1 3811
+D3
+~
+~
+0 -1 3831
+S
+#3833
+Before a Great Fountain~
+  The sheer size of this room is amazing.  The walls are decorated with 
+marvelous wall torches.  The carpet is a comely red, and the walls are
+completely composed of marble.  All of these features centralize around a giant
+four tier fountain, which extends almost all the way to the ceiling.  This
+gigantic room was probably built around this fountain.  The sound of water
+flowing down the fountain obscures almost all other sound as it is amplified
+by its surroundings.  There are muddy foot prints leading from the outside to
+both the east and west.  The fountain appears to allow itself to be entered to
+the north, and the room continues to both the east and west.
+~
+38 67108876 0
+D0
+~
+~
+0 -1 3841
+D1
+~
+~
+0 -1 3834
+D2
+invalid~
+doors~
+1 -1 3811
+D3
+~
+~
+0 -1 3840
+S
+#3834
+Southeast Corner of the Fountain Room~
+  There are a few muddy foot prints here, but for the most part this room
+is quite clean.  To the north is a very fancy doorway, and to the west is
+the entrance.
+~
+38 67108872 0
+D0
+~
+~
+0 -1 3835
+D3
+~
+~
+0 -1 3833
+S
+#3835
+Next to a Fancy Doorway~
+  This section of the room is extremely clean, in fact, there is almost
+no dust. To the east there is a very fancy looking door, decorated with
+gems and some very sturdy wood.  To the north is an almost completely
+vacant corner of the room, and to the south there is much the same.
+~
+38 67108872 0
+D0
+~
+~
+0 -1 3836
+D1
+Wow! That is a very fancy door!
+~
+door~
+1 -1 3842
+D2
+~
+~
+0 -1 3834
+S
+#3836
+Northeast Corner of the Fountain Room~
+  This corner of the room is almost completely vacant. There are no
+muddy foot prints, and other than the wall torches and carpeting, there
+are almost no decorations.  It would appear this corner of the room has
+been neglected.  To the west there are a couple of pillars and a large
+staircase. To the south is a very fancy looking door.
+~
+38 67108872 0
+D2
+~
+~
+0 -1 3835
+D3
+~
+~
+0 -1 3837
+S
+#3837
+Beneath a Staircase~
+  There is a very large staircase here, and there is a large pillar on either
+side of it, both of which are much too tall to see what's on top.  The floor
+below makes an odd noise when it is walked over.  After close examination, 
+an outline of something appears.  Perhaps there is something underneath
+the carpet.  To the west there is a vacant room, as well as to the east.
+~
+38 67108872 0
+D1
+~
+~
+0 -1 3836
+D3
+~
+~
+0 -1 3838
+D4
+This staircase is pretty well decorated.
+~
+~
+0 -1 3847
+D5
+~
+trapdoor~
+1 -1 3858
+S
+#3838
+Northwest Corner of the Fountain Room~
+  This corner of the room is just as well decorated as the rest of the room.
+Although there are not many footprints here, and the ones that are here,
+for the most part, are much larger than the rest.  The smaller tracks,
+though few, track mainly to the south.  The larger tracks, on the other
+hand, continue in both directions.  To the east there are a couple of
+large pillars and a staircase, and to the south there is a large door.
+~
+38 67108872 0
+D1
+~
+~
+0 -1 3837
+D2
+~
+~
+0 -1 3839
+S
+#3839
+West of the Great Fountain~
+  This room is directly west of the fountain.  There is a very nice 
+looking door to the west.  Even over the fountain and the closed
+door, there is the definite sound of rustling and commotion.  To
+the north and south are the corners of this massive room.
+~
+38 67108872 0
+D0
+~
+~
+0 -1 3838
+D2
+~
+~
+0 -1 3840
+D3
+~
+door~
+1 -1 3843
+S
+#3840
+Southwest Corner of the Fountain Room
+~
+  Like the rest of the room, this corner is quite vibrant and beautiful, 
+excepts for the muddy prints along the floor.  Judging by the size of
+the prints, it is more likely than not that this place is being occupied
+by smaller humanoids, with a few larger and giant sized prints.  The room
+continues north, and back east towards the entrance.
+~
+38 67108872 0
+D0
+~
+~
+0 -1 3839
+D1
+~
+~
+0 -1 3833
+S
+#3841
+First Tier of the Great Fountain~
+  Around the fountain there are statues of various humanoids, most of which
+are goblins.  It is almost as if the statues themselves are trying to climb
+their way to the next tier, like they are trying to reach the top. It is much
+to slippery to climb to the next tier, and none of these statues are tall enough
+to climb on, and reach it. If only there were a statue tall large enough to climb
+on to reach the second level.  The only way to get out is to go south, back into
+the entrance room.
+~
+38 67108872 0
+D2
+~
+~
+0 -1 3833
+S
+#3842
+A Very Fancy Bedroom~
+  This room is very well decorated, it consists of a dresser with
+a very nice looking lamp on it, as well as a very fancy bed. 
+There are various paintings on the wall, and the carpet is much
+cleaner, and probably made of a different material, as it is
+much softer than the carpet in the rest of the house.  The only
+exit is back west through the doorway.
+~
+38 67108872 0
+D3
+~
+door~
+1 -1 3835
+S
+#3843
+Servant's Quarters~
+  This room is full of makeshift bedrolls, and scraps of broken wood and
+sheets which, judging by the pattern, looks to be a cut up tablecloth.
+At one point in time this room was probably some sort of dining hall,
+but its only purpose now is that of housing these vermin.  The size of
+the room would indicate that at one point this dining hall was meant to 
+accommodate a large number of guests.  From the west is a surprisingly
+good smelling food, just the smell of it is brings forth feelings of
+almost unbearable hunger.  This room continues to the south.
+~
+38 67108872 0
+D1
+~
+door~
+1 -1 3839
+D2
+~
+~
+0 -1 3844
+D3
+~
+door~
+1 -1 3845
+S
+#3844
+Servant's Quarters~
+ This room is almost identical to the one that preceded it.  There are
+a lot more scraps of wood in this section, and the only exit is to the
+north. At the southern wall is a window, which is pretty far off
+the ground, too high to peer out of.
+~
+38 67108872 0
+D0
+~
+~
+0 -1 3843
+S
+#3845
+The Kitchen~
+  There are pots and pans all over the room, someone must be cooking
+for the whole mansion!  The smell of the food being cooked couldn't
+be described as anything less than gourmet.  Truly a great chef must
+be cooking for these vermin, and cooking food good enough to
+satisfy a king at that.  There is a door to the south and to the
+east.
+~
+38 67108872 0
+D1
+~
+door~
+1 -1 3843
+D2
+~
+door~
+1 -1 3846
+S
+#3846
+Pantry~
+  All around the room are various spices and dried food scattered
+among the shelves on one half of the room, and on the other half
+are fresh foods and freshly cleaned meat.  Rabbit, venison, beef,
+and poultry of some sort.  To the north is the kitchen, and other
+than that there do not appear to be any more exits.
+~
+38 67108872 0
+D0
+~
+door~
+1 -1 3845
+S
+#3847
+A Midway Between Staircases~
+  After a long walk up, the staircase comes to a small platform between
+two sets of stairs splitting in opposite directions.  Sitting upon this large
+platform is a giant, golden throne studded with jewels of various sorts.
+The throne is sitting just far enough forward to peer around the various
+portions of the mansion, yet just far enough back to see up the other two
+sets of stairs.  The only way out is to climb back down the stairs or to
+to continue up any of the other two sets of stairs.
+~
+38 67108872 0
+D1
+~
+~
+0 -1 3848
+D3
+~
+~
+0 -1 3852
+D5
+~
+~
+0 -1 3837
+S
+#3848
+Top of the Eastern Staircase~
+  The top of the stairs are pretty clean, and overall kind of pleasant.  This
+section of the house seems completely spartan.  There is a curtain to the
+north, which seems to have remained untouched by time.  There is also a
+hallway that extends to the south.
+~
+38 67108872 0
+D0
+This is a pristine curtain!
+~
+curtain~
+1 -1 3851
+D2
+~
+~
+0 -1 3849
+D3
+~
+~
+0 -1 3847
+E
+curtain~
+This is a pristine curtain!
+~
+E
+curtain~
+This is a prestine curtain!
+~
+S
+#3849
+The Eastern Hallway~
+  This hallway is nearly spotless, as if someone has been cleaning up around
+here, and at the same time it appears as if nobody has been in this area
+at all!  Obviously this is quite the conundrum.  There is a door to the
+west, which looks very nice.  To the north is the top of the staircase.
+~
+38 67108872 0
+D0
+~
+~
+0 -1 3848
+D3
+This is a very fancy doorway, there is a picture of a wand on it.
+~
+door~
+1 -1 3850
+E
+door~
+This is a very fancy door, with a picture of a wand on it.
+~
+S
+#3850
+The Study~
+  This is a nearly empty room.  There is nothing but a few rotted scraps of wood
+on the floor, a wooden armoire in the corner, and a desk against the wall for
+studying. This room is fairly clean, but looks as if it has been in use
+recently. The only way out is back the way you came.
+~
+38 67108872 0
+D1
+~
+door~
+1 -1 3849
+S
+#3851
+The Eastern Bathroom~
+  There is a bit of the usual bathroom smell which idles in this area, but
+it has obviously not been used in quite some time.  The toilet in this
+room is very fancy, obviously it would be an honor to use, or even flush
+such a fancy toilet.  The temptation is almost unbearable!
+~
+38 67108872 0
+D2
+~
+door~
+1 -1 3848
+S
+#3852
+Top of the Western Staircase~
+  The walk up the stairs does not appear to have been worth the effort.  To the
+north is a stained brown curtain, and to the south is a dusty hallway.  The
+odor extending from the north is quite overpowering, almost too much to
+consider traveling in that direction.
+~
+38 67108872 0
+D0
+This is a pretty crappy curtain.
+~
+curtain.~
+1 -1 3855
+D1
+~
+~
+0 -1 3847
+D2
+~
+~
+0 -1 3853
+E
+curtain~
+This is a pretty crappy curtain.
+~
+S
+#3853
+The Western Hallway~
+  There is a doorway standing here, greased with blood.  There are a few bits of
+rotted wood scattered amongst the floor, along with a few pages which are now
+illegible due to its singed edges and blood soaked body.  Something has made
+its way here and was obviously not too happy with who it found.
+~
+38 8 0
+D0
+~
+~
+0 -1 3852
+D1
+~
+door~
+1 -1 3854
+S
+#3854
+A Small Library~
+  Bodies of goblins are scattered around the room, all of which have been
+burned or frozen.  The smell of death and fire empowers this room, along
+with books whose pages have been drawn in or desecrated by some foul
+manner. Their scattered entrails mark the grave of these goblins, blown
+to the pits of hell for their presence and defilement unto this library.
+The bookshelves have been re-organized with what few books have not
+been marked.  There is nothing but death here, the only exit is west
+through the doorway.
+~
+38 67108872 0
+D3
+~
+door~
+1 -1 3853
+S
+#3855
+The Western Restroom~
+  What foul vermin has used this bathroom?  There is urine scattered along
+the walls, along with what you hope to be mud.  This toilet has obviously not
+been flushed for quite awhile, even going near it is almost enough to make
+one lose their lunch!  Surely one must be a brave adventurer to even
+consider going near THAT toilet.
+~
+38 9 0
+D2
+~
+door~
+1 -1 3852
+S
+#3856
+The Cellar~
+  Around the room there are scraps of what looks to be old wooden crates, 
+most of which are half-eaten, and as for the rest, they may as well just be
+planks. There is a door on the far end of the room, although it seems it
+has been nailed shut.  Whatever used to be in this room is gone now, and 
+the only thing left are these wooden planks.  You can see a bunch of 
+overgrown grass at the top of the stairs.
+~
+38 32777 0
+D4
+~
+~
+0 -1 3821
+S
+#3858
+Beneath the Damp Staircase~
+  This room is disgusting and damp.  There is mold all around the room, and its
+more than a little stuffy.  There is a wine rack filled with various bottles.
+It looks almost as if this portion of the mansion is older than the rest.  It
+is unknown as to what purpose it may have served.  After looking around the
+room, there is a mattress in the corner of the room.  Although it is worn, damp,
+battered, and emits a foul odor worse than that of rotten fish...it feels oddly
+comfortable. It is strange, this is the most foul odored, dusty, disgusting room
+you may have ever witnessed, but yet you feel tired.  Perhaps resting your
+head would not be such a bad idea...  Obviously you can exit up the stairs,
+and there is a door on the opposite end of the room, but it appears it has been
+nailed shut.
+~
+38 9 0
+D4
+~
+trapdoor~
+1 -1 3837
+D5
+~
+wall~
+2 -1 3886
+S
+#3859
+Bottom of the Dark Staircase~
+  This room is covered in spider webs, among them swarms of tiny little
+spiders. Although it is unclear as to whether or not they are
+poisonous, they are definitely very creepy looking, perhaps it would
+be best to avoid them.  There is a doorway with some odd markings
+on it to the north, and it is too dark to see what is to the south.
+There is a hallway continuing to the west.
+~
+38 32777 0
+D0
+~
+door~
+1 -1 3860
+D2
+~
+~
+0 -1 3861
+D3
+~
+~
+0 -1 3862
+D4
+The staircase ascends upwards.
+~
+~
+0 -1 3886
+S
+#3860
+A Dark Room~
+  Cold, dark, and damp are the only words that come to mind.  Although 
+perhaps not the coziest of rooms, atleast it is not filled with bodies.  
+This room seems to be completely and utterly useless, perhaps it is
+just here to create symmetry.  After examining the room, it may not be
+the worst place in the world to take a rest.  The only way out it to the
+south.
+~
+38 32845 0
+D2
+~
+door~
+1 -1 3859
+S
+#3861
+By a Giant Web~
+  This room is almost completely empty, except of course for a giant 
+spider web!  This is an eerie room, it feels as if something is watching
+you. Nothing of value seems to stick out.  Like the rest of this basement 
+of decay and destruction, it reeks of decomposing flesh.  After looking
+around, perhaps using fire in this room is not a good idea.  The only way 
+out is back the way you came.
+~
+38 32777 0
+D0
+~
+~
+0 -1 3859
+S
+#3862
+A Dark Hallway Leading Across the Basement~
+  The cold desolate feeling provided in this hallway is enough to make the hair
+stand up on even the most brave and proud of warriors.  The cracked door to the
+north provides no feeling of comfort, for it is spattered with the dried blood
+of some unfortunate creature.  To the south is a very fancy door, and probably
+the only thing left in this construct of destitute that reflects any sign of
+humanity.
+~
+38 32777 0
+D0
+~
+door~
+1 -1 3863
+D1
+~
+~
+0 -1 3859
+D2
+This is a very fancy doorway, on it there is an insignia of some sort.
+~
+door~
+1 -1 3868
+D3
+~
+~
+0 -1 3866
+E
+door~
+This is a very fancy doorway, on it there is an insignia of some sort.
+~
+S
+#3863
+Soldiers' Resting Quarters~
+  A feeling of sorrow envelops this place.  The bedrolls are lain on the floor,
+a few of which contain the remnants of some unfortunate soldiers, slaughtered
+in their sleep.  Whatever or whoever vexed this place did not even give these
+abeyant souls a shred of hope to avoid their untimely fate.  The resting 
+quarters continue west, and to the south there is a dark hallway.
+~
+38 32777 0
+D2
+~
+door~
+1 -1 3862
+D3
+~
+~
+0 -1 3864
+S
+#3864
+Soldiers' Resting Quarters~
+  This room is filled with nothing but the foul stench left behind from the corpses
+of the unawakened dead that lie here.  There is nothing here but a single, undamaged
+trunk lying at the end of one of the bedrolls.  This room extends to both the east and
+west.
+~
+38 32777 0
+D1
+~
+~
+0 -1 3863
+D3
+~
+~
+0 -1 3865
+S
+#3865
+Soldiers' Resting Quarters~
+  Bedrolls and bodies are scattered around this section of the room, none of
+which are properly dressed or armed to defend themselves by any means.
+Something attempted to remove these soldiers from this world in their sleep,
+but instead left behind the massacre that is this room.  To the south is a
+dark hallway, and the room continues to the east.
+~
+38 32777 0
+D1
+~
+~
+0 -1 3864
+D2
+~
+door~
+1 -1 3867
+S
+#3866
+A Dark Hallway Leading Across the Basement~
+  A few sconces decorate this wall.  The flames within stand flickering on 
+the verge of death, and provide very little light to this place.  Although, it 
+may be better to not know what terrors occupy this hallway.  The hall 
+continues both to the east and west.
+~
+38 67141640 0
+D1
+~
+~
+0 -1 3862
+D2
+~
+door~
+1 -1 3869
+D3
+~
+~
+0 -1 3867
+S
+#3867
+A Dark Hallway Leading Across the Basement~
+  There is nothing here but darkness.  The doorway to the north has been
+battered and broken.  This barracks continues to get darker, colder, and
+more uncomfortable the further in you venture.  To the east is a little
+bit of light, it is too dark to see what is west.
+~
+38 32777 0
+D0
+~
+door~
+1 -1 3865
+D1
+~
+~
+0 -1 3866
+D3
+~
+~
+0 -1 3871
+S
+#3868
+Officer's Bedroom~
+  This room is much newer than the rest of the barracks.  It looks as if it has
+recently been occupied.  There is a lot of fancy equipment around this room,
+and one very fancy weapon rack in the corner, with one empty spot.  Everything
+in this room is neat and organized.  The only exit is to the north.
+~
+38 67141640 0
+D0
+~
+door~
+1 -1 3862
+S
+#3869
+Soldiers' Resting Quarters~
+  There is a lot of dust, and quite a few bedrolls around this room, but
+overall it is almost completely vacant.  The room continues to the west,
+and to the north is the shady hallway.
+~
+38 32777 0
+D0
+~
+door~
+1 -1 3866
+D3
+~
+~
+0 -1 3870
+S
+#3870
+Soldiers' Resting Quarters~
+  Like the room preceding, the bedrolls in this room are completely empty.
+There is a board on the wall containing guard shedules, soldier names,
+and officer names.  The only exit is east.
+~
+38 32777 0
+D1
+~
+~
+0 -1 3869
+S
+#3871
+Before a Descending Staircase~
+  The hallway ends, and a new stairway begins.  Step by step it extends
+into the unknown darkness, the sight of it alone sends shivers down your
+spine. A bit of fear envelops you, maybe it's not too late to turn around.
+It would take a true hero to brave the descent.
+~
+38 32777 0
+D1
+~
+~
+0 -1 3867
+D5
+The staircase descends further into the darkness.
+~
+~
+0 -1 3872
+S
+#3872
+Bottom of the Stairs~
+  This is the beginning of a much larger room.  It is dark here, and much
+colder than the area preceding it.  An abysmal feeling envelops this area.
+All of a sudden the feeling of every tormented soul, every tortured spirit
+comes to mind.  Whatever plagued this ancient barracks resides here.
+A feeling of deep rancor shrouds any feeling of rapture that may have
+remained in the floors above.  This room stretches in almost all directions
+The stairs lead back to the floor above.
+~
+38 32777 0
+D0
+~
+~
+0 -1 3873
+D2
+~
+~
+0 -1 3874
+D3
+~
+~
+0 -1 3875
+D4
+The stairs ascend upward towards the light.
+~
+~
+0 -1 3871
+S
+#3873
+Inside a Large Chamber~
+  There is nothing but emptiness and despair left in this place.  There
+are no decorations, and no signs of life.  This place is completely void
+of even the smallest of insects, there is not even a trace of mold within
+these walls.  The only exits are to the south and west.
+~
+38 32777 0
+D2
+~
+~
+0 -1 3872
+D3
+~
+~
+0 -1 3876
+S
+#3874
+Inside a Large Chamber~
+  There is a bit of light in this corner, and yet there are no torches.  It is
+almost as if the walls themselves are emitting faint signs of light.  The
+brick laid wall of this area looks different than the rest, obviously it was
+lain by someone with very little experience.  The only exits are to the
+north and west.
+~
+38 67141640 0
+D0
+~
+~
+0 -1 3872
+D2
+There is a faint bit of light being emitted from the walls.
+~
+wall~
+7 3844 3887
+D3
+~
+~
+0 -1 3877
+S
+#3875
+Inside a Large Chamber~
+  The chamber ends here, and a hallway begins.  The hallway extends to
+the west.  There is something odd lingering from the west.  It is also
+possible to retreat back to the east...instead of going forward.
+~
+38 32777 0
+D0
+~
+~
+0 -1 3876
+D1
+~
+~
+0 -1 3872
+D2
+~
+~
+0 -1 3877
+D3
+~
+~
+0 -1 3878
+S
+#3876
+Inside a Large Chamber~
+  There are no signs of life here.  To the east is another vacant corner,
+and to the south is the beginning of another hallway.
+~
+38 32777 0
+D1
+~
+~
+0 -1 3873
+D2
+~
+~
+0 -1 3875
+S
+#3877
+Inside a Large Chamber~
+  Like the rest of the room, this corner is completely void of anything
+of even remote interest.  The room extends to the north and east.
+~
+38 32777 0
+D0
+~
+~
+0 -1 3875
+D1
+~
+~
+0 -1 3874
+S
+#3878
+A Hallway Between Two Storage Rooms~
+  Unwillingly, you begin to tremble.  For some reason you feel as if you
+may soon join the ranks of these soldiers if you continue westward.
+To the north there is a fairly well kept door with the picture of a bottle
+carved into it.  To the south is another door with the picture of a box
+on its surface.
+~
+38 32781 0
+D0
+There is a picture of a potion on this door.
+~
+door~
+1 -1 3879
+D1
+~
+~
+0 -1 3875
+D2
+There is a picture of a storage container on this door.
+~
+door~
+1 -1 3880
+D3
+~
+~
+0 -1 3881
+S
+#3879
+Apothecary~
+  Strewn across the room are broken bottles and vials.  Whatever liquid
+once in them has been absorbed into its surrounding, leaving a faint and
+eerie glow.  Dust has accumulated across nearly every surface, leading
+one to believe this place has remained out of use for quite some time.
+The only way out is south.
+~
+38 67141640 0
+D2
+~
+door~
+1 -1 3878
+S
+#3880
+A Storage Room Filled with Boxes
+~
+   There are several boxes in this room, most of which have been broken
+apart.  Hundreds of small spiders are crawling about, feasting off each
+other.  Most of the containers are beyond any means of salvation, but
+there are a few that show promise.  The only exit is to the north.
+~
+38 32777 0
+D0
+~
+door~
+1 -1 3878
+S
+#3881
+Chamber Before a Forge~
+  The room here is hot, unlike the rest of this place.  It appears as if it
+has been turned into a home for such an abomination.  Scraps of flesh
+are scattered around the room, each of which looks as if it has been
+used as either clothing, or perhaps strung together as a blanket.  There
+are sewing needles thrown about, as well as string.  The walls within
+this forsaken room are decorated with a list of names, all of which match
+those of the soldiers listed in the bulletin board.  There is, however,
+one new name, belonging to a "Captain Max Knavy."  Truly the
+embodiment of evil has made this room home, and this barracks the
+retainer of death and despair.  There is a door to the west, which has
+remained completely untouched and untainted by the horror surrounding it.
+~
+38 32777 0
+D1
+~
+~
+0 -1 3878
+D3
+This is a very fancy doorway, on it is a holy symbol of some sort.
+~
+door~
+1 -1 3882
+E
+door~
+This is a very fancy doorway, on it is a holy symbol of some sort.
+~
+S
+#3882
+The Great Forge~
+  This place is very well organized, and looks as if it has had a recent
+visitor. The forge here is perfection incarnate.  There is a very fancy
+mithril chest on the floor, but it looks as if somebody has removed
+the belongings within.  The forge burns with an immense heat, it
+would probably be a good idea to keep your items away from it.  The
+only exit is to the east.
+~
+38 67141640 0
+D1
+~
+door~
+1 -1 3881
+S
+#3883
+Second Tier of the Great Fountain~
+  Among this tier are the statues of many beetles.  All of them seem to 
+have the same goal, for they are all climbing towards the center, possibly
+to get to the top.  The beetles range anything from the size of a quarter
+to the size of your average wolf.  None of these stand tall enough to climb
+to the next tier with.  The only way out is to climb back down to where
+you came from.
+~
+38 32776 0
+D5
+~
+tier~
+10 -1 3841
+S
+#3884
+Third Tier of the Great Fountain~
+  The statues here are of some vile scene.  They are of mangled corpses
+thrown about the room, some of which are being feasted upon by some
+very large spiders.  The distance between this tier and the next is far
+greater than that of the previous tiers.  From here a faint light can be
+seen at the top of the fountain, but whatever is emitting it remains
+unclear. The only way out is to climb back down the fountain.
+~
+38 32776 0
+D5
+~
+tier~
+10 -1 3883
+S
+#3885
+Top of the Great Fountain~
+  This is the epicenter of this gigantic room.  Looking down the fountain from this
+point, it looks as if an army of monsters is climbing towards this position.  This
+summit served as a last stand, one final heroic battle against overwhelming forces.
+It becomes apparent that this fountain tells a story of some brave adventurers.
+The world may be oblivious to their story, but this fountain tells some portion of
+their tale of bravery.  There is nothing above here but ceiling, which can practically
+be touched from this position.
+~
+38 32776 0
+D5
+~
+tier~
+10 -1 3884
+E
+ceiling~
+`jAnd though we may be gone,
+`j  forever we live on.
+`jIn here we shall remain,
+`j  our bodies now decayed.
+`o 
+`nWith gold we hold our wealth,
+`n  hidden deep with stealth.
+`nOur knowledge held in wood,
+`n  once ancient when it stood.
+`nIn adamantine, we hold our strength,
+`n  unbreakable and great.
+`nOur will we shield with mithril,
+`n  in its purity we trust.
+`o 
+`mDeep within this mansion,
+`m  we hold our greatest treasures.
+`mUp atop the fountain,
+`m  we lost our favorite trinkets.
+`mIn our chambers we will lounge,
+`m  until our stuff is found.
+`o 
+`jSo to you we wish good luck,
+`n  we hope you can endure.
+`mFor though we may be gone,
+`o  forever we live on.
+~
+S
+#3886
+A Large Stone Room~
+  What happened here!?  There is a trough in the middle of the room, and inside
+it is a wide assortment of mangled bodies and scattered parts.  What is left of
+What is left of the bodies is nothing more than bones and decomposed flesh, along
+along with various pieces of rusted armor and weaponry.  This room appears much
+older than the mansion above it.  Whatever happened, this would be the center of
+whatever malice plagued this ancient barracks.  At the end of the room is a dark
+staircase descending downwards.
+~
+38 32777 0
+D4
+This wall has been broken down from this side.
+~
+wall~
+1 -1 3858
+D5
+This creepy staircase is covered in spider webs.
+~
+~
+0 -1 3859
+S
+#3887
+A Secret Chamber!~
+  This room is most definitely an addition, it resembles that of a cave more
+than a real chamber.  Truly it was unfinished.  Lying on the ground is the
+body of some poor soldier, who may be the culprit responsible for the poor
+bricklaying.  Apparently he must have walled himself in with haste to 
+escape whatever reality was being wrought outside.  The only exit is north.
+~
+38 67141640 0
+D0
+~
+wall~
+1 -1 3874
+S
+#3899
+A temporary name~
+A temporary description
+~
+38 512 0
+S
+#0
+$~

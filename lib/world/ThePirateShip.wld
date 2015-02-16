@@ -1,0 +1,347 @@
+#7500
+The Main Deck of Pirate Sloop~
+You are at the main deck of the vessel. There are many winches here for
+working the rigging and anchors. many swivel guns are mounted on the bulwarks.
+To your west you can see the bridge.
+~
+75 0 1
+D0
+~
+~
+0 -1 7234
+D3
+You can see the bridge to your west.
+~
+~
+0 -1 7501
+D4
+You see the mast rising up, with some ropes and rope ladders hanging down.
+~
+~
+0 -1 7506
+D5
+You see a wooden trapdoor on the deck.
+~
+trapdoor wooden~
+1 -1 7502
+S
+#7501
+On the Bridge~
+You are on the bridge. There of a wooden steering wheel here.
+To your east you can see the main deck.
+~
+75 0 1
+D1
+You can see the main deck to your east.
+~
+~
+0 -1 7500
+S
+#7502
+The Cargo Deck~
+You are at the cargo deck. Here are stored provisions for the crew, and you
+can see the bulk of water barrels, shots for cannons, extra sails and all
+other things necessary for sailing long distances.
+To your west you can see a large wooden door with a sign on it.
+~
+75 0 1
+D1
+You see a small wooden door.
+~
+door wooden small~
+2 7519 7504
+D3
+You can see a large wooden door with a sign on it.
+~
+door wooden large~
+1 -1 7503
+D4
+You see a wooden trapdoor on the ceiling.
+~
+trapdoor wooden~
+1 -1 7500
+E
+sign~
+The sign says 'Captain's Cabin. Keep Out!'
+~
+S
+#7503
+The Captains Cabin~
+You are in a richly decorated cabin. There are beautiful paintings hanging 
+on the walls. Thick and soft carpets are lying on the floor. You can see the
+waves of the ocean through the window in the back of the cabin. There is a
+big desk under the window. 
+~
+75 0 1
+D1
+You can see a large wooden door.
+~
+door wooden large~
+1 -1 7502
+S
+#7504
+Storage Cabin~
+You are in the storage cabin. There are many shelves on the walls here.
+They are filled with many bullets, cutlasses, gun powder and other fighting
+equipment. There are also many different kind of flags here.
+~
+75 12 0
+D1
+You see a small room to the east.
+~
+~
+0 -1 7505
+D3
+You see a small wooden door.
+~
+door wooden small~
+2 7519 7502
+S
+#7505
+Treasure Cabin~
+You have entered a small treasure room. For some strange reason, it is empty
+already.
+~
+75 133 0
+D3
+You see the storage room to the west.
+~
+~
+0 -1 7504
+S
+#7506
+On the Mast~
+You have climbed to the mast. You can see ocean all over the sloop. The deck
+down there seems quite small from all the way up here. Better hope you don't
+fall down.
+~
+75 0 4
+D4
+You can see the top of the mast.
+~
+~
+0 -1 7507
+D5
+You can see the main deck down there.
+~
+~
+0 -1 7500
+S
+#7507
+On the top of the Mast~
+You are standing on the top of the mast--looking down makes you a little ill.
+~
+75 0 4
+D5
+You can see the lower part of the mast down there.
+~
+~
+0 -1 7506
+S
+#7508
+Desert Island~
+You are standing on a deserted island. All you can see is water, sand and a
+palm tree in the middle of this island.
+~
+75 0 8
+D1
+You see the sands continue over there too...
+~
+~
+0 -1 7509
+D2
+You see the sands continue over there too...
+~
+~
+0 -1 7511
+S
+#7509
+Desert Island~
+You are standing on a deserted island. All you can see is water, sand and a
+palm tree in the middle of this island.
+~
+75 0 8
+D1
+You see the sands continue over there too...
+~
+~
+0 -1 7510
+D2
+You see the sands continue over there too...
+~
+~
+0 -1 7512
+D3
+You see the sands continue over there too...
+~
+~
+0 -1 7508
+S
+#7510
+Desert Island~
+You are standing on a deserted island. All you can see is water, sand and a
+palm tree in the middle of this island.
+~
+75 0 8
+D2
+You see the sands continue over there too...
+~
+~
+0 -1 7513
+D3
+You see the sands continue over there too...
+~
+~
+0 -1 7509
+S
+#7511
+Desert Island~
+You are standing on a deserted island. All you can see is water, sand and a
+palm tree in the middle of this island.
+~
+75 0 8
+D0
+You see the sands continue over there too...
+~
+~
+0 -1 7508
+D1
+You see the sands continue over there too...
+~
+~
+0 -1 7512
+D2
+You see the sands continue over there too...
+~
+~
+0 -1 7514
+D3
+~
+~
+0 -1 7153
+S
+#7512
+Desert Island~
+You are standing in the middle of this island. You can see a big palm tree
+growing right here.
+~
+75 0 8
+D0
+You see the sands continue over there too...
+~
+~
+0 -1 7509
+D1
+You see the sands continue over there too...
+~
+~
+0 -1 7513
+D2
+You see the sands continue over there too...
+~
+~
+0 -1 7515
+D3
+You see the sands continue over there too...
+~
+~
+0 -1 7511
+E
+big tree palm~
+The palm is here reaching for the sky. It's a really huge one.
+~
+S
+#7513
+Desert Island~
+You are standing on a deserted island. All you can see is water, sand and a
+palm tree in the middle of this island.
+~
+75 0 8
+D0
+You see the sands continue over there too...
+~
+~
+0 -1 7510
+D2
+You see the sands continue over there too...
+~
+~
+0 -1 7516
+D3
+You see the sands continue over there too...
+~
+~
+0 -1 7512
+S
+#7514
+Desert Island~
+You are standing on a deserted island. All you can see is water, sand and a
+palm tree in the middle of this island.
+~
+75 0 8
+D0
+You see the sands continue over there too...
+~
+~
+0 -1 7511
+D1
+You see the sands continue over there too...
+~
+~
+0 -1 7515
+S
+#7515
+Desert Island~
+You are standing on a deserted island. All you can see is water, sand and a
+palm tree in the middle of this island.
+~
+75 0 8
+D0
+You see the sands continue over there too...
+~
+~
+0 -1 7512
+D1
+You see the sands continue over there too...
+~
+~
+0 -1 7516
+D3
+You see the sands continue over there too...
+~
+~
+0 -1 7514
+S
+#7516
+Desert Island~
+You are standing on a deserted island. All you can see is water, sand and a
+palm tree in the middle of this island.
+~
+75 0 8
+D0
+You see the sands continue over there too...
+~
+~
+0 -1 7513
+D3
+You see the sands continue over there too...
+~
+~
+0 -1 7515
+S
+#7599
+Ye Grand Hall of Kludging~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+75 512 0
+S
+#0
+$~

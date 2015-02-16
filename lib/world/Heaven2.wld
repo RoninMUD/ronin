@@ -1,0 +1,1814 @@
+#8100
+Approaching an Archway.~
+   The air of Heaven Proper engulfs your very soul in this place.
+There are soft, white clouds scattered all around and yet trees
+somehow manage to grow from the very mist that makes up the clouds.
+To the north the gigantic palace of Heaven Proper towers over the
+landscape.  A bright light also shines through an archway, bathing
+this place with its warm aura.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8101
+S
+#8101
+The Magnificent Archway of Heaven Proper.~
+   A gigantic archway stands here, made entirely of gold.  It shines
+brightly and beyond its arch a bridge spans a vast opening in the
+ground, shining as if it were made entirely of light.  The archway
+has several inscriptions written all over it and some pictures of
+St. Peter and the other Arch Angels of Heaven defending it in times
+past.  The archway seemingly invites all visitors to the palace,
+almost speaking through some psychic force.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8102
+D2
+~
+~
+0 -1 8100
+S
+#8102
+A bridge made of Holy Light.~
+   The bridge that leads from the archway to the palace is made
+entirely of light.  The translucent floor lets one see the endless
+pit beneath the light.  There are railings constructed of some
+sort of precious metal to prevent weary travellers from falling
+over.  The bridge itself seems to be quite long and there is
+still some way to the other side.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8103
+D2
+~
+~
+0 -1 8101
+S
+#8103
+The center of a bridge made of Holy Light.~
+   This is the mid point of the bridge to the palace.  It is very
+similar to the rest of the bridge, but somehow, the railing seems
+a bit different.  Looking east or west, Heaven Proper can be seen
+in its entirety.  Massive buildings dot the clouds as far as the
+eye can see, and the occasional angel can be seen in the distance
+wandering about.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8116
+D2
+~
+~
+0 -1 8102
+D5
+~
+railing~
+10 -1 8104
+E
+railing~
+It looks worn, as if someone has recently jumped it.
+~
+S
+#8104
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.  A railing can be
+seen peeking through the mists from time to time.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8111
+D1
+~
+~
+0 -1 8111
+D2
+~
+~
+0 -1 8109
+D3
+~
+~
+0 -1 8105
+D4
+~
+railing~
+11 -1 8103
+D5
+~
+~
+0 -1 8112
+E
+railing~
+It looks possible to climb onto the railing.
+~
+S
+#8105
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8106
+D1
+~
+~
+0 -1 8104
+D2
+~
+~
+0 -1 8109
+D3
+~
+~
+0 -1 8112
+D5
+~
+~
+0 -1 8113
+S
+#8106
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8107
+D1
+~
+~
+0 -1 8110
+D2
+~
+~
+0 -1 8105
+D3
+~
+~
+0 -1 8104
+D5
+~
+~
+0 -1 8115
+S
+#8107
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8106
+D1
+~
+~
+0 -1 8112
+D2
+~
+~
+0 -1 8106
+D3
+~
+~
+0 -1 8109
+D5
+~
+~
+0 -1 8108
+S
+#8108
+Atop Cloud Nine.~
+   There is a huge cloud here, that spans infinitely in every
+direction.  Tables are scattered about and are filled with various
+platters of every kind of food imaginable.  Giant fountains of
+champagne fill the air with a bubbly fizz competing with the soft
+music that seems to be coming from above.  The souls of many
+departed beings are here, seemingly having a good time.  They ignore
+your presence, perhaps because they are too busy enjoying the
+party.  A huge dancefloor can be seen far to the north.
+~
+81 201367552 1
+D4
+~
+~
+0 -1 8107
+S
+#8109
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8110
+D1
+~
+~
+0 -1 8104
+D2
+~
+~
+0 -1 8111
+D3
+~
+~
+0 -1 8110
+D5
+~
+~
+0 -1 8106
+S
+#8110
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8115
+D1
+~
+~
+0 -1 8104
+D2
+~
+~
+0 -1 8105
+D3
+~
+~
+0 -1 8112
+D5
+~
+~
+0 -1 8104
+S
+#8111
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8114
+D1
+~
+~
+0 -1 8105
+D2
+~
+~
+0 -1 8112
+D3
+~
+~
+0 -1 8109
+D5
+~
+~
+0 -1 8109
+S
+#8112
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8114
+D1
+~
+~
+0 -1 8105
+D2
+~
+~
+0 -1 8109
+D3
+~
+~
+0 -1 8104
+D5
+~
+~
+0 -1 8113
+S
+#8113
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8115
+D1
+~
+~
+0 -1 8105
+D2
+~
+~
+0 -1 8111
+D3
+~
+~
+0 -1 8110
+D5
+~
+~
+0 -1 8109
+S
+#8114
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8115
+D1
+~
+~
+0 -1 8113
+D2
+~
+~
+0 -1 8109
+D3
+~
+~
+0 -1 8109
+D5
+~
+~
+0 -1 8112
+S
+#8115
+Floating in the Heavens.~
+   Clouds fill this place with a constant swirling mist.  There
+doesn't appear to be a floor to this place, or a ceiling for
+that matter.  In all directions, the mist extends as far as the
+eye can see.  Occasional gusts of wind agitate the mist to form
+intricate patterns which disorient the mind.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8110
+D1
+~
+~
+0 -1 8114
+D2
+~
+~
+0 -1 8111
+D3
+~
+~
+0 -1 8104
+D5
+~
+~
+0 -1 8104
+S
+#8116
+A bridge made of Holy Light.~
+   The bridge continues northward, approaching the towering Palace
+of Heaven Proper.  The floor is still translucent, but it's surface
+is slowly being replaced by the ever familiar clouds.  Two massive
+gates can be seen to the north and to the south, the once gigantic
+arch appears to be nothing more than a mousehole in the clouds.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8117
+D2
+~
+~
+0 -1 8103
+S
+#8117
+The Magnificent Palace Gates.~
+   The mighty gates to the Palace of Heaven Proper block the way
+north.  They rise as high as the eye can see and are made of solid
+gold.  Small gemstones of various sizes decorate the gate and
+sparkle brightly, reflecting the light from the bridge into various
+colors.  Looking passed the golden bars, a small coutryard can be
+seen and far to the north, the Inner Palace Gates can be seen.
+~
+81 67145728 1
+D0
+~
+gates~
+2 8100 8118
+D2
+~
+~
+0 -1 8116
+S
+#8118
+In the Courtyard.~
+   The courtyard of the Palace is filled with a variety of lush plants.
+Tall trees line the brick pathway that leads north, east, and west.  A
+giant fountain can be seen, as well as heard, to the north and beyond it
+the inner gates shine brightly. Two towers loom above the horizon to
+the northeast and northwest.  The brick pathway leads back south towards
+the outer palace gates.  The sound of birds chirping and fluttering
+about fills the air.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8119
+D1
+~
+~
+0 -1 8126
+D2
+~
+gates~
+2 8100 8117
+D3
+~
+~
+0 -1 8125
+S
+#8119
+Center of the Courtyard.~
+A temporary description
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8120
+D1
+~
+~
+0 -1 8122
+D2
+~
+~
+0 -1 8118
+D3
+~
+~
+0 -1 8121
+D5
+~
+fountain~
+8 -1 8188
+S
+#8120
+In the Courtyard.~
+A temporary description
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8127
+D1
+~
+~
+0 -1 8124
+D2
+~
+~
+0 -1 8119
+D3
+~
+~
+0 -1 8123
+S
+#8121
+In the Courtyard.~
+A temporary description
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8123
+D1
+~
+~
+0 -1 8119
+D2
+~
+~
+0 -1 8125
+D3
+~
+~
+0 -1 8147
+S
+#8122
+In the Courtyard.~
+   The pathway intersects andother pathway at this point.  To the
+north, the brick pathway continues and curves to the west after a
+short distance.  To the south, it leads to the southwest corner
+of the courtyard.  The gravel pathway leads west to the center of the
+courtyward, where a gigantic fountain has been placed and to the
+east, where one of the two massive towers looms in the sky.  Tall
+trees once again line the pathway.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8124
+D1
+~
+~
+0 -1 8149
+D2
+~
+~
+0 -1 8126
+D3
+~
+~
+0 -1 8119
+S
+#8123
+In the Courtyard.~
+A temporary description
+~
+81 67145728 1
+D1
+~
+~
+0 -1 8120
+D2
+~
+~
+0 -1 8121
+S
+#8124
+In the Courtyard.~
+A temporary description
+~
+81 67145728 1
+D2
+~
+~
+0 -1 8122
+D3
+~
+~
+0 -1 8120
+S
+#8125
+In the Courtyard.~
+A temporary description
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8121
+D1
+~
+~
+0 -1 8118
+S
+#8126
+In the Courtyard.~
+   The pathway curves northward here, following the west wall of the
+courtyard.  Small hedges have replaced the tall trees that once lined
+the pathway.  The constant flow of water from the fountain can still
+be heard and the outer walls of the palace block the way south.  A
+small bench has been placed in the corner next to a massive oak tree.
+A variety of flowers also grow near the tree, showing evidence of
+recent watering.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8122
+D3
+~
+~
+0 -1 8118
+S
+#8127
+The Inner Palace Gates.~
+Open Gates
+~
+81 67145728 1
+D0
+~
+gates~
+2 -1 8128
+D2
+~
+~
+0 -1 8120
+S
+#8128
+The Grand Entry Hall.~
+Open Gates
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8129
+D2
+~
+gates~
+2 -1 8127
+S
+#8129
+Grand Entry Hall Intersection.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8130
+D2
+~
+~
+0 -1 8128
+S
+#8130
+Grand Entry Hall.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8131
+D1
+~
+~
+0 -1 8133
+D2
+~
+~
+0 -1 8129
+D3
+~
+~
+0 -1 8132
+S
+#8131
+Below the Balcony.~
+A temporary description
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8160
+D2
+~
+~
+0 -1 8130
+D3
+~
+~
+0 -1 8159
+S
+#8132
+A Winding Staircase.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8134
+D1
+~
+~
+0 -1 8130
+S
+#8133
+A Winding Staircase.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8135
+D3
+~
+~
+0 -1 8130
+S
+#8134
+On the Balcony.~
+A temporary description
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8136
+D2
+~
+~
+0 -1 8132
+D3
+~
+~
+0 -1 8146
+S
+#8135
+On the Balcony.~
+A temporary description
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8138
+D2
+~
+~
+0 -1 8133
+D3
+~
+~
+0 -1 8136
+S
+#8136
+Center of the Balcony.~
+Jump Railing
+~
+81 67145728 1
+D1
+~
+~
+0 -1 8135
+D2
+~
+railing~
+10 -1 8137
+D3
+~
+~
+0 -1 8134
+S
+#8137
+Atop the Chandelier.~
+Jump Railing
+~
+81 67145728 0
+D0
+~
+railing~
+10 -1 8136
+S
+#8138
+On the Balcony.~
+A temporary description
+~
+81 67145728 0
+D2
+~
+~
+0 -1 8139
+D3
+~
+~
+0 -1 8135
+S
+#8139
+East Side of the Balcony.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8138
+D2
+~
+~
+0 -1 8140
+S
+#8140
+On the Balcony.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8139
+D3
+~
+~
+0 -1 8141
+S
+#8141
+South Side of the Balcony.~
+Jump Cloud
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8140
+D3
+~
+~
+0 -1 8142
+D4
+~
+cloud~
+10 -1 8196
+S
+#8142
+Overlooking the Courtyard.~
+A temporary description
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8141
+D3
+~
+~
+0 -1 8143
+S
+#8143
+South Side of the Balcony.~
+A temporary description
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8142
+D3
+~
+~
+0 -1 8144
+S
+#8144
+On the Balcony.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8145
+D1
+~
+~
+0 -1 8143
+S
+#8145
+West Side of the Balcony.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8146
+D2
+~
+~
+0 -1 8144
+S
+#8146
+On the Balcony.~
+A temporary description
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8134
+D2
+~
+~
+0 -1 8145
+S
+#8147
+Small Garden Path.~
+A temporary description
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8148
+D1
+~
+~
+0 -1 8121
+S
+#8148
+Entrance to the West Tower.~
+Open Door
+~
+81 67145728 1
+D0
+~
+door~
+2 -1 8151
+D2
+~
+~
+0 -1 8147
+S
+#8149
+Small Garden Path.~
+   The gigantic east tower looms above.  It is covered with a greenish
+white ivy and rises as high as the eye can see.  Small windows are
+scattered about its outer surface providing brief breaks from the ivy
+covering.  High in the sky, a creature is can be seen flying in circles
+around the tower.  The main entrance to the tower is directly north.
+~
+81 67145728 1
+D0
+~
+~
+0 -1 8150
+D3
+~
+~
+0 -1 8122
+S
+#8150
+Entrance to the East Tower.~
+   Two wooden doors hang from sturdy hinges barring entrance to the east
+tower.  The ivy has abandon its attempts to cover the doors as it seems
+like it has been cut back by a caretaker of some sorts.  One of the most
+complex locks in existance hangs in the middle of the doors, deterring
+even the most adept thief from breaking in.  Whatever is kept in the
+tower must be highly valued by someone in Heaven Proper.
+~
+81 67145728 1
+D0
+~
+door~
+2 -1 8152
+D2
+~
+~
+0 -1 8149
+S
+#8151
+Base level of the West Tower.~
+Open Door
+~
+81 4096 0
+D2
+~
+door~
+2 -1 8148
+D4
+~
+~
+0 -1 8153
+S
+#8152
+Base level of the Eest Tower.~
+   The base level of the East Tower is completely barren.  Some stairs
+lead upwards, seemingly extending from the circular outer walls.  A thick
+layer of dust covers the stone floor indicating that this place has not
+been disturbed for a long time.  High above, light shines in through
+several massive windows.  Occasionally, a shadow finds its way into the
+interior, caused by something on the outside, perhaps circling the
+perimeter of the tower.
+~
+81 4096 0
+D2
+~
+door~
+2 -1 8150
+D4
+~
+~
+0 -1 8156
+S
+#8153
+Ascending the West Tower.~
+A temporary description
+~
+81 67145728 0
+D4
+~
+~
+0 -1 8154
+D5
+~
+~
+0 -1 8151
+S
+#8154
+Ascending the West Tower.~
+A temporary description
+~
+81 67145728 0
+D4
+~
+~
+0 -1 8155
+D5
+~
+~
+0 -1 8153
+S
+#8155
+Top of the West Tower.~
+A temporary description
+~
+81 67145728 0
+D5
+~
+~
+0 -1 8154
+S
+#8156
+Ascending the East Tower.~
+   The stairs continue their journey upwards.  The steps are about half a
+meter in width and made of rock.  They are fused to the outer walls and
+there is no handrail, making the upward ascent increasingly dangerous.
+The light from the windows above illuminates this portion of the tower
+making small claw marks in wall of the tower visible.
+~
+81 67145728 0
+D4
+~
+~
+0 -1 8157
+D5
+~
+~
+0 -1 8152
+S
+#8157
+Ascending the East Tower.~
+   The massive windows begin at this level of the tower and extend
+upwards, cut off only by the ceiling which also serves as the floor
+to the top of the East Tower.  The stairs continue their ascent,
+through a small opening in the ceiling.  Light floods this section
+of the tower and an occasional gust of wind scatters the dust about
+the area in a whirlwind fashion.
+~
+81 67145728 0
+D4
+~
+~
+0 -1 8158
+D5
+~
+~
+0 -1 8156
+S
+#8158
+Top of the East Tower.~
+A temporary description
+~
+81 67145728 0
+D5
+~
+~
+0 -1 8157
+S
+#8159
+Before the Doors to the Throne Room.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+doors~
+2 -1 8161
+D1
+~
+~
+0 -1 8131
+S
+#8160
+Before the Doors to the Throne Room.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+doors~
+2 -1 8163
+D3
+~
+~
+0 -1 8131
+S
+#8161
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8164
+D1
+~
+~
+0 -1 8162
+D2
+~
+doors~
+2 -1 8159
+S
+#8162
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8165
+D1
+~
+~
+0 -1 8163
+D3
+~
+~
+0 -1 8161
+S
+#8163
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8166
+D2
+~
+doors~
+2 -1 8160
+D3
+~
+~
+0 -1 8162
+S
+#8164
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8167
+D1
+~
+~
+0 -1 8165
+D2
+~
+~
+0 -1 8161
+S
+#8165
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8168
+D1
+~
+~
+0 -1 8166
+D2
+~
+~
+0 -1 8162
+D3
+~
+~
+0 -1 8164
+S
+#8166
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8169
+D2
+~
+~
+0 -1 8163
+D3
+~
+~
+0 -1 8165
+S
+#8167
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8170
+D1
+~
+~
+0 -1 8168
+D2
+~
+~
+0 -1 8164
+S
+#8168
+Nearing the Throne of Heaven Proper.~
+Open Curtain
+~
+81 67145728 0
+D0
+~
+curtain~
+2 -1 8183
+D1
+~
+~
+0 -1 8169
+D2
+~
+~
+0 -1 8165
+D3
+~
+~
+0 -1 8167
+S
+#8169
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8171
+D2
+~
+~
+0 -1 8166
+D3
+~
+~
+0 -1 8168
+S
+#8170
+Nearing the Throne of Heaven Proper.~
+Open Curtain
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8172
+D1
+~
+curtain~
+2 -1 8183
+D2
+~
+~
+0 -1 8167
+D3
+~
+~
+0 -1 8177
+S
+#8171
+Nearing the Throne of Heaven Proper.~
+Open Curtain
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8174
+D1
+~
+~
+0 -1 8175
+D2
+~
+~
+0 -1 8169
+D3
+~
+curtain~
+2 -1 8183
+S
+#8172
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8173
+D2
+~
+~
+0 -1 8170
+S
+#8173
+Nearing the Throne of Heaven Proper.~
+Open Curtain
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8176
+D1
+~
+~
+0 -1 8174
+D2
+~
+curtain~
+2 -1 8183
+D3
+~
+~
+0 -1 8172
+S
+#8174
+The Throne Room of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D2
+~
+~
+0 -1 8171
+D3
+~
+~
+0 -1 8173
+S
+#8175
+Approaching a Massive Column.~
+Climb Column
+~
+81 67145728 0
+D3
+~
+~
+0 -1 8171
+D4
+~
+column~
+11 -1 8180
+S
+#8176
+Approaching a Massive Column.~
+Climb Column
+~
+81 67145728 0
+D2
+~
+~
+0 -1 8173
+D4
+~
+column~
+11 -1 8179
+S
+#8177
+Approaching a Massive Column.~
+Climb Column
+~
+81 67145728 0
+D1
+~
+~
+0 -1 8170
+D4
+~
+column~
+11 -1 8178
+S
+#8178
+A small ledge on the Column.~
+Climb Column
+Jump Chain
+~
+81 67145728 0
+D1
+~
+chain~
+10 -1 8181
+D5
+~
+column~
+11 -1 8177
+S
+#8179
+A small ledge on the Column.~
+Climb Column
+Jump Chain
+~
+81 67145728 0
+D2
+~
+chain~
+10 -1 8181
+D5
+~
+column~
+11 -1 8176
+S
+#8180
+A small ledge on the Column.~
+Climb Column
+Jump Chain
+~
+81 67145728 0
+D3
+~
+chain~
+10 -1 8181
+D5
+~
+column~
+11 -1 8175
+S
+#8181
+Nexus of Chains.~
+Jump Chain N,W,E
+Climb Chain
+~
+81 201363456 0
+D0
+~
+chain~
+10 -1 8179
+D1
+~
+chain~
+10 -1 8180
+D3
+~
+chain~
+10 -1 8178
+D4
+~
+chain~
+11 -1 8182
+S
+#8182
+Above the Nexus.~
+Climb Chain
+~
+81 201363456 0
+D5
+~
+chain~
+11 -1 8181
+S
+#8183
+Below the Holy Light.~
+Open Curtain N,S,E,W
+~
+81 67145728 0
+D0
+~
+curtain~
+2 -1 8173
+D1
+~
+curtain~
+2 -1 8171
+D2
+~
+curtain~
+2 -1 8168
+D3
+~
+curtain~
+2 -1 8170
+D4
+~
+~
+0 -1 8184
+S
+#8184
+Bathed in Holy Light.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8185
+D5
+~
+~
+0 -1 8183
+S
+#8185
+Very near the Throne of Heaven Proper.~
+A temporary description
+~
+81 67145728 0
+D0
+~
+~
+0 -1 8186
+D2
+~
+~
+0 -1 8184
+S
+#8186
+The Throne of Heaven Proper.~
+Open Cloud
+~
+81 67145728 0
+D2
+~
+~
+0 -1 8185
+D4
+~
+cloud~
+2 -1 8187
+S
+#8187
+Above the Throne of Heaven Proper.~
+Open Cloud
+~
+81 67407872 0
+D5
+~
+cloud~
+2 -1 8186
+S
+#8188
+Descending the Stairs.~
+A temporary description
+~
+81 36865 0
+D4
+~
+fountain~
+8 -1 8119
+D5
+~
+stairs~
+11 -1 8189
+S
+#8189
+Bottom of the Stairs.~
+A temporary description
+~
+81 36865 0
+D0
+~
+door~
+1 -1 8190
+D4
+~
+stairs~
+11 -1 8188
+S
+#8190
+In the Cellar.~
+A temporary description
+~
+81 36865 0
+D0
+~
+~
+0 -1 8191
+D2
+~
+door~
+1 -1 8189
+S
+#8191
+In the Cellar.~
+A temporary description
+~
+81 36865 0
+D0
+~
+~
+0 -1 8192
+D2
+~
+~
+0 -1 8190
+S
+#8192
+In the Cellar.~
+A temporary description
+~
+81 36865 0
+D0
+~
+~
+0 -1 8193
+D2
+~
+~
+0 -1 8191
+S
+#8193
+In the Cellar.~
+A temporary description
+~
+81 36865 0
+D0
+~
+~
+0 -1 8194
+D2
+~
+~
+0 -1 8192
+S
+#8194
+End of the Cellar.~
+A temporary description
+~
+81 36865 0
+D0
+~
+door~
+1 -1 8195
+D2
+~
+~
+0 -1 8193
+S
+#8195
+Storage Room.~
+A temporary description
+~
+81 0 0
+D2
+~
+door~
+1 -1 8194
+S
+#8196
+Floating in Air.~
+Jump Cloud
+~
+81 67407872 0
+D3
+~
+~
+0 -1 8197
+D5
+~
+~
+0 -1 8141
+S
+#8197
+Caught in the Wind.~
+A temporary description
+~
+81 299008 0
+D1
+~
+~
+0 -1 8196
+D3
+~
+~
+0 -1 8198
+D5
+~
+~
+0 -1 8196
+S
+#8198
+Caught in the Wind.~
+A temporary description
+~
+81 299008 0
+D1
+~
+~
+0 -1 8197
+D3
+~
+~
+0 -1 8199
+D5
+~
+~
+0 -1 8197
+S
+#8199
+Within the Vortex.~
+A temporary description
+~
+81 299008 0
+D1
+~
+~
+0 -1 8198
+D5
+~
+~
+0 -1 8198
+S
+#0
+$~

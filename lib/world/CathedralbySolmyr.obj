@@ -1,0 +1,1066 @@
+#6700
+cassock black~
+A Cassock~
+A black robe with a multitude of buttons is here.~
+~
+11 0 1025
+0 0 0 0
+5 5000 1200
+100
+E
+cassock black~
+  The cassock is a long, black, close-fitting robe.  It has
+thirty-three buttons in the front to hold it together.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+#6701
+dalmatic violet~
+A Violet Dalmatic~
+A long and wide violet tunic lies in a heap on the ground.~
+~
+11 0 1025
+0 0 0 0
+8 9500 2000
+100
+E
+dalmatic violet~
+  The dalmatic is a long, wide, violet tunic with two broad
+stripes running from the shoulders to the hem.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6702
+alb white~
+An Alb~
+A long and widesleeved white robe is lying here.~
+~
+11 0 9
+0 0 0 0
+7 6000 1500
+100
+E
+alb white~
+  The alb is a long and white robe which is very plain.  It
+has fairly wide sleeves but the garment is generally close-
+fitting.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 1
+A
+12 12
+#6703
+surplice white~
+A Laced Surplice~
+A white pile of laced linen lies here.~
+~
+11 0 9
+0 0 0 0
+4 5000 1200
+100
+E
+surplice white~
+  The surplice is white and short and made of linen.  It has
+lace inserts around the waist and around the sleeves and a
+fairly lage opening around the neck.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+A
+12 8
+#6704
+cinture violet~
+A Violet Cinture~
+A violet piece of rope lies tangled on the ground.~
+~
+11 0 2049
+0 0 0 0
+2 1000 200
+100
+E
+cinture violet~
+  The cincture is worn around the waist, but is basically
+just a violet rope that is tied into a girdle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6705
+stole violet~
+A Violet Stole~
+A long violet band lined with gold lies here, spread across the ground.~
+~
+11 0 5
+0 0 0 0
+4 15000 1050
+100
+E
+stole violet~
+  The stole is a long band of violet silk cloth to wear
+around the neck.  It is lined with gold and has an
+embroidered gold cross in each end.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6706
+chasuble violet~
+A Violet Chasuble~
+A clean, violet pile of cloth embroidered with gold lies on the ground.~
+~
+11 0 9
+0 0 0 0
+10 40000 1900
+100
+E
+chasuble violet~
+  The violet chasuble has a golden cross embroidered on the
+chest and the depiction of a saint on the back.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6707
+dalmatic violet~
+Violet Dalmatic of the Archbishop~
+A heavily embroidered dalmatic lies neatly folded on the ground.~
+~
+11 0 1025
+0 0 0 0
+11 150000 2500
+100
+E
+dalmatic violet~
+  The dalmatic is a long, wide, violet tunic with two broad
+stripes running from the shoulders to the hem. This dalmatic
+also has delicate embroidery between the stripes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6708
+chasuble violet~
+Violet Chasuble of the Archbishop~
+A heavily embellished chasuble lies here.~
+~
+11 0 9
+0 0 0 0
+14 225000 3500
+100
+E
+chasuble violet~
+  The violet chasuble has a golden cross embroidered on the
+chest and the depiction of a saint on the back. Delicately
+embroidered patterns make the chasuble to look almost three-
+dimensional.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6709
+crosier~
+Archbishop's Crosier~
+A long oaken staff with ornamentation in gold lies here gleaming.~
+~
+1 0 65537
+0 0 0 0
+18 500000 10000
+8
+E
+crosier staff~
+  The crosier consists of a long oak shaft with ornamentation
+in gold.  A golden sculpture adorns the top of the staff.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6710
+cross gold chain~
+A Roman Cross on a Chain~
+A long, golden chain with a roman cross lies here.~
+~
+11 0 5
+0 0 0 0
+2 165000 10000
+10
+E
+cross gold chain~
+  A roman cross hangs from a long chain, both in solid gold.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6711
+mitre white gold~
+Golden Mitre of the Archbishop~
+A pointy, golden mitre sits on the ground here.~
+~
+11 0 17
+0 0 0 0
+3 20000 3000
+100
+E
+mitre white gold~
+  The mitre is tall and pointy in the front and back. It is
+made of gold cloth and has to short lappets hanging down
+from the back.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6712
+sarcophagus shrine~
+The Shrine of the Three Kings~
+The Shrine of the Three Kings dominates the high altar.~
+~
+15 0 0
+1500 4 0 0
+4500 45000000 30000000
+100
+E
+sarcophagus shrine~
+  This epic reliquary is ornamented with gilded figures in gold
+and silver and filigree panels set with precious stones.  Scenes
+from the bible are depicted on all sides of the shrine.  The
+detail and craftmanship exhibited in the making of the sarcophagus
+is simply astonishing.  The shrine is said to contain the remains
+of the Biblical Magi as well as many treasures and relics.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6713
+sarcophagus larvandad~
+Golden Sarcophagus~
+A Golden Sarcophagus sits upon the high altar.~
+~
+15 0 0
+500 1 0 0
+1500 15000000 10000000
+0
+E
+sarcophagus larvandad~
+  This is one of the three sarcophagi that make up the Shrine of
+the Three Kings and that once contained the bones of the Biblical
+Magi.  It is ornamented with gilded figures in gold and silver
+and filigree panels set with precious stones.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6714
+sarcophagus gushnasaph~
+Golden Sarcophagus~
+A Golden Sarcophagus sits upon the high altar.~
+~
+15 0 0
+500 1 0 0
+1500 15000000 10000000
+0
+E
+sarcophagus gushnasaph~
+  This is one of the three sarcophagi that make up the Shrine of
+the Three Kings and that once contained the bones of the Biblical
+Magi.  It is ornamented with gilded figures in gold and silver
+and filigree panels set with precious stones.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6715
+sarcophagus hormisdas~
+Golden Sarcophagus~
+A Golden Sarcophagus sits upon the high altar.~
+~
+15 0 0
+500 1 0 0
+1500 15000000 10000000
+0
+E
+sarcophagus hormisdas~
+  This is one of the three sarcophagi that make up the Shrine of
+the Three Kings and that once contained the bones of the Biblical
+Magi.  It is ornamented with gilded figures in gold and silver
+and filigree panels set with precious stones.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6716
+sword jurisdiction~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+5 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6717
+coins gold treasure pile~
+a pile of gold coins.~
+A nice pile of gold coins is spread across the ground.~
+~
+20 0 1
+5000000 0 0 0
+3 1 1
+66
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6718
+crown~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6719
+crown~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6720
+crown~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6721
+dalmatic white~
+A White Dalmatic~
+A long and wide white tunic lies in a heap on the ground.~
+~
+11 0 1025
+0 0 0 0
+8 9500 2000
+100
+E
+dalmatic white~
+  The dalmatic is a long, wide, white tunic with two broad
+stripes running from the shoulders to the hem.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6722
+cinture white~
+A White Cinture~
+A white piece of rope lies tangled on the ground.~
+~
+11 0 2049
+0 0 0 0
+2 1000 200
+100
+E
+cinture white~
+  The cincture is worn around the waist, but is basically
+just a white rope that is tied into a girdle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6723
+stole white~
+A White Stole~
+A long white band lined with gold lies here, spread across the ground.~
+~
+11 0 5
+0 0 0 0
+4 15000 1050
+100
+E
+stole white~
+  The stole is a long band of white silk cloth to wear
+around the neck.  It is lined with gold and has an
+embroidered gold cross in each end.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6724
+chasuble white~
+A White Chasuble~
+A clean, white pile of cloth embroidered with gold lies on the ground.~
+~
+11 0 9
+0 0 0 0
+10 40000 1900
+100
+E
+chasuble white~
+  The white chasuble has a golden cross embroidered on the
+chest and the depiction of a saint on the back.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6725
+dalmatic white~
+White Dalmatic of the Archbishop~
+A heavily embroidered dalmatic lies neatly folded on the ground.~
+~
+11 0 1025
+0 0 0 0
+11 150000 2500
+100
+E
+dalmatic white~
+  The dalmatic is a long, wide, white tunic with two broad
+stripes running from the shoulders to the hem. This dalmatic
+also has delicate embroidery between the stripes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6726
+chasuble white~
+White Chasuble of the Archbishop~
+A heavily embellished chasuble lies here.~
+~
+11 0 9
+0 0 0 0
+14 225000 3500
+100
+E
+chasuble white~
+  The white chasuble has a golden cross embroidered on the
+chest and the depiction of a saint on the back. Delicately
+embroidered patterns make the chasuble to look almost three-
+dimensional.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6731
+dalmatic red~
+A Red Dalmatic~
+A long and wide red tunic lies in a heap on the ground.~
+~
+11 0 1025
+0 0 0 0
+8 9500 2000
+100
+E
+dalmatic red~
+  The dalmatic is a long, wide, red tunic with two broad
+stripes running from the shoulders to the hem.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6732
+cinture red~
+A Red Cinture~
+A red piece of rope lies tangled on the ground.~
+~
+11 0 2049
+0 0 0 0
+2 1000 200
+100
+E
+cinture red~
+  The cincture is worn around the waist, but is basically
+just a red rope that is tied into a girdle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6733
+stole red~
+A Red Stole~
+A long red band lined with gold lies here, spread across the ground.~
+~
+11 0 5
+0 0 0 0
+4 15000 1050
+100
+E
+stole red~
+  The stole is a long band of red silk cloth to wear
+around the neck.  It is lined with gold and has an
+embroidered gold cross in each end.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6734
+chasuble red~
+A Red Chasuble~
+A clean, red pile of cloth embroidered with gold lies on the ground.~
+~
+11 0 9
+0 0 0 0
+10 40000 1900
+100
+E
+chasuble red~
+  The red chasuble has a golden cross embroidered on the
+chest and the depiction of a saint on the back.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6735
+dalmatic red~
+Red Dalmatic of the Archbishop~
+A heavily embroidered dalmatic lies neatly folded on the ground.~
+~
+11 0 1025
+0 0 0 0
+11 150000 2500
+100
+E
+dalmatic red~
+  The dalmatic is a long, wide, red tunic with two broad
+stripes running from the shoulders to the hem. This dalmatic
+also has delicate embroidery between the stripes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6736
+chasuble red~
+Red Chasuble of the Archbishop~
+A heavily embellished chasuble lies here.~
+~
+11 0 9
+0 0 0 0
+14 225000 3500
+100
+E
+chasuble red~
+  The red chasuble has a golden cross embroidered on the
+chest and the depiction of a saint on the back. Delicately
+embroidered patterns make the chasuble to look almost three-
+dimensional.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6741
+dalmatic black~
+A Black Dalmatic~
+A long and wide black tunic lies in a heap on the ground.~
+~
+11 0 1025
+0 0 0 0
+8 9500 2000
+100
+E
+dalmatic black~
+  The dalmatic is a long, wide, black tunic with two broad
+stripes running from the shoulders to the hem.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6742
+cinture black~
+A Black Cinture~
+A black piece of rope lies tangled on the ground.~
+~
+11 0 2049
+0 0 0 0
+2 1000 200
+100
+E
+cinture black~
+  The cincture is worn around the waist, but is basically
+just a black rope that is tied into a girdle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6743
+stole black~
+A Black Stole~
+A long black band lined with gold lies here, spread across the ground.~
+~
+11 0 5
+0 0 0 0
+4 15000 1050
+100
+E
+stole black~
+  The stole is a long band of black silk cloth to wear
+around the neck.  It is lined with gold and has an
+embroideblack gold cross in each end.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6744
+chasuble black~
+A Black Chasuble~
+A clean, black pile of cloth embroidered with gold lies on the ground.~
+~
+11 0 9
+0 0 0 0
+10 40000 1900
+100
+E
+chasuble black~
+  The black chasuble has a golden cross embroideblack on the
+chest and the depiction of a saint on the back.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6745
+dalmatic black~
+Black Dalmatic of the Archbishop~
+A heavily embroidered dalmatic lies neatly folded on the ground.~
+~
+11 0 1025
+0 0 0 0
+11 150000 2500
+100
+E
+dalmatic black~
+  The dalmatic is a long, wide, black tunic with two broad
+stripes running from the shoulders to the hem. This dalmatic
+also has delicate embroidery between the stripes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6746
+chasuble black~
+Black Chasuble of the Archbishop~
+A heavily embellished chasuble lies here.~
+~
+11 0 9
+0 0 0 0
+14 225000 3500
+100
+E
+chasuble black~
+  The black chasuble has a golden cross embroideblack on the
+chest and the depiction of a saint on the back. Delicately
+embroideblack patterns make the chasuble to look almost three-
+dimensional.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6751
+dalmatic green~
+A Green Dalmatic~
+A long and wide green tunic lies in a heap on the ground.~
+~
+11 0 1025
+0 0 0 0
+8 9500 2000
+100
+E
+dalmatic green~
+  The dalmatic is a long, wide, green tunic with two broad
+stripes running from the shoulders to the hem.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6752
+cinture green~
+A Green Cinture~
+A green piece of rope lies tangled on the ground.~
+~
+11 0 2049
+0 0 0 0
+2 1000 200
+100
+E
+cinture green~
+  The cincture is worn around the waist, but is basically
+just a green rope that is tied into a girdle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6753
+stole green~
+A Green Stole~
+A long green band lined with gold lies here, spread across the ground.~
+~
+11 0 5
+0 0 0 0
+4 15000 1050
+100
+E
+stole green~
+  The stole is a long band of green silk cloth to wear
+around the neck.  It is lined with gold and has an
+embroidegreen gold cross in each end.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6754
+chasuble green~
+A Green Chasuble~
+A clean, green pile of cloth embroidered with gold lies on the ground.~
+~
+11 0 9
+0 0 0 0
+10 40000 1900
+100
+E
+chasuble green~
+  The green chasuble has a golden cross embroidegreen on the
+chest and the depiction of a saint on the back.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6755
+dalmatic green~
+Green Dalmatic of the Archbishop~
+A heavily embroidered dalmatic lies neatly folded on the ground.~
+~
+11 0 1025
+0 0 0 0
+11 150000 2500
+100
+E
+dalmatic green~
+  The dalmatic is a long, wide, green tunic with two broad
+stripes running from the shoulders to the hem. This dalmatic
+also has delicate embroidery between the stripes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6756
+chasuble green~
+Green Chasuble of the Archbishop~
+A heavily embellished chasuble lies here.~
+~
+11 0 9
+0 0 0 0
+14 225000 3500
+100
+E
+chasuble green~
+  The green chasuble has a golden cross embroidegreen on the
+chest and the depiction of a saint on the back. Delicately
+embroidegreen patterns make the chasuble to look almost three-
+dimensional.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6761
+bones larvandad~
+The Bones of Larvandad~
+A pile of bones is all that remain of one of the Biblical Magi~
+~
+12 0 0
+0 0 0 0
+19 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 2031
+#6762
+bones gushnasaph~
+The Bones of Gushnasaph~
+A pile of bones is all that remain of one of the Biblical Magi~
+~
+12 0 0
+0 0 0 0
+19 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 2054
+#6763
+bones hormisdas~
+The Bones of Hormisdas~
+A pile of bones is all that remain of one of the Biblical Magi~
+~
+12 0 0
+0 0 0 0
+19 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 2072
+#0
+$~

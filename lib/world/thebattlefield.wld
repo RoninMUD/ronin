@@ -1,0 +1,1937 @@
+#7301
+The entrance to the battle field.~
+You notice that the ground here has a parched and arid look.
+Further afield you see a barren landscape with a scant covering of grass and
+shrubbery. A sixth sense tells you there was great magic at work here......
+you cannot tell when.
+~
+73 4 2
+D0
+~
+~
+0 -1 7302
+D2
+~
+~
+0 -1 9401
+S
+#7302
+To the side of the battle field.~
+You notice that the ground here has a parched and arid look about it.
+You see a barren landscape with a scant covering of grass and shrubbery.
+A sixth sense tells you there was great magic at work here..... you do not 
+know when.
+~
+73 4 2
+D0
+A parched landscape.~
+~
+0 0 7303
+D2
+You see rolling plains of grass ahead.~
+~
+0 -1 7301
+S
+#7303
+The entrance to the battle field.~
+You notice that the ground here has a parched and arid look about it.
+Further afield you see a barren landscape with a scant covering of grass
+and shrubbery.
+~
+73 4 2
+D0
+You see a stony landscape.
+~
+~
+0 -1 7304
+D2
+Stone, rubble and more desolation.~
+~
+0 -1 7302
+S
+#7304
+Stony path.~
+Mist curls and billows around you, making the place seem cold and desolate.
+Hundreds of small plants have sprouted through the stonework of the path,
+obviously it has been a while since any road tax was paid here.
+~
+73 4 2
+D0
+You see a landscape filled with rocks.~
+~
+0 -1 7305
+D2
+You see worn hills covered with scrub.~
+~
+0 -1 7303
+S
+#7305
+Shattered path.~
+You are walking on a very rough path.  You notice the path is made up of
+shattered rocks which makes you feel uneasy about the powers that caused
+this destruction.  The path stops here but you still see a vague outline of
+where the path continued to the north.
+~
+73 4 4
+D0
+You see a misty plateau.~
+~
+0 -1 7319
+D2
+You see a stone strewn land.~
+~
+0 -1 7304
+S
+#7306
+Scarred landscape.~
+You walk around a scarred landscape, you look around and see no living thing
+in this barren land.
+~
+73 0 2
+D0
+You see a scarred landscape.~
+~
+0 -1 7306
+D1
+You see an ash filled landscape.~
+~
+0 -1 7356
+D2
+You see a scarred landscape.~
+~
+0 -1 7306
+D3
+You see a scarred landscape.~
+~
+0 -1 7306
+S
+#7307
+A land filled with ash~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared.  Everywhere you look the 
+landscape is a soft ash which seems to be shifting ever so slightly around 
+you. A cliff can dimly be seen to the north.
+~
+73 0 2
+D0
+You see the base of a cliff.~
+~
+0 -1 7308
+D1
+The ground becomes covered with splinters of rock.~
+~
+0 -1 7316
+D2
+The ground is covered with a layer of ash.~
+~
+0 -1 7356
+S
+#7308
+Beside a glazed cliff.~
+Your foot steps crunch on the soft ash here.
+You look behind you to see if anyone has noticed your passage, but your 
+footprints disappear before your eyes.
+The soft ash shifts ever so slightly around you in the gentle breeze. 
+You stand beside a cliff which has a glazed look, a testament to the 
+powers used here.
+~
+73 0 2
+D0
+You see the base of the cliff.~
+~
+0 -1 7309
+D1
+You see vague outlines of figures in the distance.~
+~
+0 -1 7315
+D2
+You see the base of the cliff.~
+~
+0 -1 7307
+S
+#7309
+Beside a melted cliff~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you.
+You stand beside a huge cliff which has melted under a titanic onslaught.  
+Large chunks of rock from the cliff lie around here, all are glassy in 
+appearance.
+~
+73 0 2
+D0
+You see the base of the cliff.~
+~
+0 -1 7310
+D2
+You see the base of the cliff.~
+~
+0 -1 7308
+S
+#7310
+Beside a melted cliff~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. You stand beside a huge cliff which has melted
+under a titanic onslaught, there are HUGE craters in the cliff made by
+something.  Large chunks of rock from the cliff lie around here, all are glassy
+in appearance.
+~
+73 0 2
+D0
+You see a sheltered corner in the cliff.~
+~
+0 -1 7311
+D1
+The ground becomes more littered with debris.~
+~
+0 -1 7313
+D2
+You see the base of the cliff.~
+~
+0 -1 7309
+S
+#7311
+In a sheltered corner~
+You are in a sheltered corner made by the cliffs north and west face, a huge
+pile of rubble to the east. The ash here has been blown up against the cliff
+base.  Here and there in the ash you see small glints of metal, on closer
+examination you realize they are fragments of sword and armor.
+You stand beside a huge cliff which has melted under a titanic onslaught,
+there are HUGE craters in the cliff made by something.  Large chunks of rock
+from the cliff lie around here, all are glassy in appearance.
+~
+73 4 2
+D1
+You see a heap of rubble.~
+~
+0 -1 7312
+D2
+You see the base of the cliff.~
+~
+0 -1 7310
+S
+#7312
+By a heap of junk~
+A huge pile of rubble to the east, from the heap you feel a vague sense of
+peace. The ash here is full of small metal pieces, on closer examination you
+realize they are fragments of swords and armor. To the west you see dimly see a
+cliff.
+~
+73 0 2
+D2
+You see the edge of the rubble.~
+~
+0 -1 7313
+D3
+You see a sheltered corner in the cliff.~
+~
+0 -1 7311
+E
+JUNK~
+Junk surrounds you, layer upon layer, all of it rusting and horribly twisted.~
+S
+#7313
+By edge of heap~
+A huge pile of rubble to the north east, from there you feel a vague sense
+of peace. The ash here is full of small metal pieces and bone, on closer
+examination you realize they are fragments of swords, armor and petrified
+limbs. To the west you see dimly see a cliff, to the south you see peculiar
+bits of rock littering the landscape, you have a chill sense from the south.
+~
+73 0 2
+D0
+You see a pile of rubble.~
+~
+0 -1 7312
+D2
+You dimly see the outline of something in the distance.~
+~
+0 -1 7314
+D3
+You see the cliff base.~
+~
+0 -1 7310
+S
+#7314
+By a frozen army~
+You stumble upon a platoon of perfectly frozen soldiers all in full armor,
+frozen in aggressive stances, on closer examination they all look south with a
+terrorized look on there faces.  You feel a malevolence from the south.
+~
+73 0 2
+D0
+You see a heap of rubble.~
+~
+0 -1 7313
+D1
+The monsters bulk stretches away into the distance.~
+~
+0 -1 7321
+D2
+You dimly make out rows of statue like figures.~
+~
+0 -1 7315
+D3
+You see a cliff base.~
+~
+0 -1 7309
+E
+SOLDIERS~
+Each is perfectly lined up, perfectly frozen, with a perfectly horrible look 
+on their faces.~
+S
+#7315
+A partly covered corpse~
+Around you looms the petrified remains of a giant monster resembling a giant
+worm.  The monster seems to of been blasted into many pieces by an incredible
+force, even now you THINK you can see the segments twitching.  Surrounding you
+you see the ever present ash, to the east you can dimly see more of the
+monster.
+~
+73 0 3
+D0
+You can dimly make out the bulk of something BIG.~
+~
+0 -1 7314
+D1
+You notice the frozen army disappearing into the mist.~
+~
+0 -1 7322
+D2
+You see a shattered land.~
+~
+0 -1 7316
+D3
+You see a cliff base.~
+~
+0 -1 7308
+E
+MONSTER WORM~
+The worm has been blown apart, segments lying around like oversized cart 
+wheels.~
+S
+#7316
+On the shattered land~
+You walk into a landscape of shattered land, around you see the stumps of a
+once thriving forest, now you see no living thing here.
+From the north you have a vague feeling of malevolence.
+Here and there you see small diggings made by scavengers.
+~
+73 0 3
+D0
+You dimly see figures in the distance.~
+~
+0 -1 7315
+D1
+You see a shattered landscape.~
+~
+0 -1 7323
+D2
+The splinters of rock give way to ash.~
+~
+0 -1 7318
+D3
+You dimly see the base of a cliff.~
+~
+0 -1 7307
+S
+#7317
+Above the shattered land in a GOD room.~
+You are high above the battlefield, where only the immortals can be.
+You see small figures slowly moving across the destroyed landscape.
+There is a VERY comfortable chesterfield sofa here, as you seat your self in
+adjusts to you body contours, kinky.  There are Oreo crumbs on the floor and
+an empty packet in the bin.  There is a pin board here with a message on it.
+~
+73 588 1
+D5
+Far away you see the entrance to the battle field, where mortals seek there
+fortunes.~
+~
+0 -1 7301
+E
+SOFA CHESTERFIELD~
+The Chesterfield Sofa is finished in a very tasteful dark blue leather, 
+trimmed in black leather.  Along side it is a matching drinks table with a
+copy of "Mud Weekly" open to the news section~
+E
+MUD WEEKLY~
+The Mud Weekly is open to the 'New arrivals' section, here you read about the
+new 'Battle field area' by Tedric, THE Oreo Pirate.  Interesting reading.~
+E
+PIN BOARD~
+		 IDEAS FOR EXPANSIONS TO THIS AREA.
+I have many planned expansions to this area, all link in to this area, all
+of the descs give many hints to `things afar in the distance'.
+
+1:      The crater/basin.   (around **49 room)
+	Maze extraordinaire... this time a true random maze done with a generator
+on boot up time.  Put lots of nasties in there, aggr, dual, fury, invuln etc.
+nastier the better 'cos of all the goodies in the ramp ;) .
+ 
+2:      The ramp.   (through the basin area preferably)
+	What the gods fought over. The buildings on there could be sort of
+embassies to various gods or guilds representing gods.  The top broken off
+because the gods did it (foul tempers etc).  I think this would be a good
+high level area, groups especially.  I thought about having rooms which only
+certain classes could enter etc, nice objs in them.  Make it a no reloc area,
+make it _hard_ for the mortals. *cackle*
+
+3:      Area of darkness.   (northish from **72 area)
+	This could be like another zyca (underground part) or the pirate area
+usually put just of the graveyard.  Basically one really nice item at the end
+of a series of increasingly nasty set of mobs.
+
+4:      The village.
+	A complete rewrite/additions??  The village is very underdeveloped, it
+could do with about 3 times as many rooms and different mobs.
+
+5:      General expansion direction.
+	Room 4006 (or what ever it is called now **06) is there for general
+expansion, it is desert/scrub land but is open to all sorts of weird and 
+wonderful ideas.
+
+
+Of course there are more ideas from me but I will leave them up to you who 
+are reading this ;)  The ideas here are not cast in concrete but are here 
+for guidance, the area theme has set them up for use, I just might not be 
+here to finish them, this one took long enough *chuckle*.
+
+All for now,
+	    Tedric THE Oreo Pirate.
+
+P.S If you want me I may still be at this address r.j.hodkinson@bradford.ac.uk
+
+P.P.S  Happy mudding all.  Cul8r.
+
+~
+S
+#7318
+A landscape filled with ash~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all features on the horizon
+except for a vague roughening of the land to the east and north.
+~
+73 0 2
+D0
+You see ash give way to splinters of rock.~
+~
+0 -1 7316
+D1
+You see ash give way to splinters of rock.~
+~
+0 -1 7324
+D2
+You see an ash covered landscape.~
+~
+0 -1 7320
+D3
+You see an ash covered landscape.~
+~
+0 -1 7356
+S
+#7319
+A hazy outlook.~
+You come to a crest of what was once a hill.  To the north and east you see an
+immense battle field.  As you peer through the haze which shifts and changes
+you see a destroyed landscape. Try as you might you cannot see any sign of
+movement from here.... but a sense of foreboding about this landscape tugs at
+your mind.  The path continues north but it would be possible to climb down to
+your east.
+~
+73 4 4
+D0
+You see an ash covered slope.~
+~
+0 -1 7356
+D1
+You see and ash covered slope.~
+~
+0 -1 7320
+D2
+Down below you see a rock strewn landscape.~
+~
+0 -1 7305
+S
+#7320
+A landscape filled with ash~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all from your view except for
+a vague roughening to the north and east.
+~
+73 0 2
+D0
+You see an ash covered landscape.~
+~
+0 -1 7318
+D1
+You see an ash covered landscape.~
+~
+0 -1 7325
+D2
+You see an ash covered landscape.~
+~
+0 -1 7320
+D3
+Dimly in the distance you see a plateau.~
+~
+0 -1 7319
+S
+#7321
+By a frozen army~
+You stumble upon a platoon of perfectly frozen soldiers all in full armor and
+frozen in aggressive stances, on closer examination they all look with a
+terrorized look on there faces, all crowded up against the heap of junk to the
+north.
+~
+73 0 2
+D1
+You see a blasted land.~
+~
+0 -1 7327
+D2
+You dimly see rows of figures in the mist.~
+~
+0 -1 7322
+D3
+You see the body of the monster disappearing in the distance.~
+~
+0 -1 7314
+E
+SOLDIERS~
+Each is roughly lined up, with a perfectly frozen, with a perfectly horrible 
+look on their faces.~
+S
+#7322
+A petrified corpse of a worm~
+Around you looms the petrified remnant of a giant monster resembling a giant
+worm.  The monster seems to of been blasted into many pieces incredible forces,
+even now you THINK you can see the segments twitching.  Surrounding you is the
+ever present ash, to the west and east you can dimly see more of the monster.
+~
+73 0 3
+D0
+You dimly make out the large bulk in the distance.~
+~
+0 -1 7321
+D1
+The haphazard army marches away into the distance.~
+~
+0 -1 7328
+D2
+You see lands strewn with splinters of rock.~
+~
+0 -1 7323
+D3
+The haphazard army marches away into the distance.~
+~
+0 -1 7315
+S
+#7323
+On the shattered land~
+You walk into a landscape of shattered land, around you see the stumps of a
+once thriving forest, now you see no living thing here.
+Through the obscuring mist you see nothing to note.  From the north you have a
+vague feeling of malevolence.  Here and there you see small diggings made by
+scavengers.
+~
+73 0 3
+D0
+You dimly make out a clump of figures in the distance.~
+~
+0 -1 7322
+D2
+You see a land strewn with splintered rock.~
+~
+0 -1 7324
+D3
+You see a land strewn with splinters of rock.~
+~
+0 -1 7316
+S
+#7324
+On the shattered land~
+You walk around in a shattered landscape.  Through the obscuring mist you
+see nothing to note. Here and there you see small diggings made by scavengers.
+~
+73 0 3
+D0
+You see a land filled with splintered rocks.~
+~
+0 -1 7323
+D1
+You see plains of shattered stone.~
+~
+0 -1 7330
+D2
+You see plains of shattered rock.~
+~
+0 -1 7324
+D3
+In the distance you see clouds of ash.~
+~
+0 -1 7318
+S
+#7325
+A landscape filled with ash~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all from your view except for
+a vague roughening to the east.
+~
+73 0 2
+D0
+You see an ash filled landscape.~
+~
+0 -1 7325
+D1
+You see plains of splintered rocks.~
+~
+0 -1 7331
+D2
+You see an ash filled landscape.~
+~
+0 -1 7326
+D3
+You see an ash filled landscape.~
+~
+0 -1 7320
+S
+#7326
+A landscape filled with ash~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all from your view.
+~
+73 0 2
+D0
+You see an ash filled landscape.~
+~
+0 -1 7325
+D1
+You see an ash filled landscape.~
+~
+0 -1 7332
+D2
+You see an ash filled landscape.~
+~
+0 -1 7326
+S
+#7327
+By a frozen army~
+You stand on a blasted land. Nothing normal is here. The rocks have been
+splintered and blobs of lava litter the alien like landscape.
+You stumble upon a platoon of perfectly frozen soldiers all in full armor and
+frozen in aggressive stances, on closer examination they all look with a
+terrorized look on there faces, all crowd up against the heap of junk to the
+north.
+~
+73 0 2
+D1
+You make out a narrow path.~
+~
+0 -1 7345
+D2
+You dimly see rows of figures in the distance.~
+~
+0 -1 7328
+D3
+You dimly make out the bulk of something.~
+~
+0 -1 7321
+S
+#7328
+A petrified corpse of a worm~
+The end of the worm seems to have landed on column of soldiers.
+To the west looms the petrified remnant of a giant monster resembling a giant
+worm.  What looks like the end (tail?) of the worm has crushed the western end
+of a petrified army.  Surrounding you is the ever present ash, to the west you
+see more of the monster. The way east has been blocked by immense heaps of
+battle detritus.
+~
+73 0 3
+D0
+You see a dead land to the north.~
+~
+0 -1 7327
+D3
+You see a large something in the distance.~
+~
+0 -1 7322
+S
+#7329
+The blasted land~
+ You stand in a blasted unnatural land.  The rocks have been splintered and
+blobs of lava litter the alien like landscape.  To the east two great
+unknown beasts are frozen in combat, around them lies destruction on an
+incredible scale, mounds of rubble lie scraped up in random places as if giant
+feet have slipped and gathered detritus.
+~
+73 0 3
+D3
+You see a shattered land.~
+~
+0 -1 7323
+S
+#7330
+the shattered land~
+You walk around more shattered landscape.  Through the obscuring mist you
+can vaguely see shapes in the north east. Here and there you see small diggings
+made by scavengers.
+~
+73 0 3
+D1
+You see a dead land.~
+~
+0 -1 7333
+D2
+You see plains of splintered rocks.~
+~
+0 -1 7331
+D3
+You see plains of splintered rock.~
+~
+0 -1 7324
+S
+#7331
+the shattered land~
+You walk into a landscape of shattered land, around you huge boulders have
+been reduced to piles of rubble.
+The mist here seems to be alive as it swirl around you, making your lose your
+bearings.  Here and there you see evidence of scavengers.
+~
+73 0 3
+D0
+You see plains of splintered rocks.~
+~
+0 -1 7325
+D1
+You see an ash filled landscape.~
+~
+0 -1 7332
+D2
+You see plains of splintered rocks.~
+~
+0 -1 7330
+D3
+You see plains of splintered rocks.~
+~
+0 -1 7334
+S
+#7332
+Ash ridden landscape~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared, you notice small pieces of bone
+and armor in the ash around you.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all from view.
+~
+73 0 3
+D0
+You see plains of splintered rocks.~
+~
+0 -1 7331
+D1
+You see plains of splintered rocks.~
+~
+0 -1 7335
+D2
+You see an ash filled landscape.~
+~
+0 -1 7332
+D3
+You see an ash filled landscape.~
+~
+0 -1 7326
+S
+#7333
+The blasted land~
+You stand on a blasted land. Nothing normal is here. The ground has been
+splintered and blobs of lava litter the alien like landscape.
+You see lava spattered tree stumps in profusion here, some torn from the
+ground incredible force, what little remains of tree trunks and bare branches
+is twisted and mutilated, all leans in a southerly direction as if to flee.
+~
+73 0 3
+D0
+You see a dead land, devoid of life.~
+~
+0 -1 7329
+D1
+You see a heap of junk.~
+~
+0 -1 7337
+D2
+You see plains of splintered rocks.~
+~
+0 -1 7334
+D3
+You see plains of splintered rocks.~
+~
+0 -1 7330
+S
+#7334
+traveling the glassy landscape~
+Your steps become cautious as you walk on a plain scattered with splintered
+glass, each splinter razor sharp.  Littered around the landscape you see
+decaying corpses, all with glass shards piercing the bodies in many places.
+You become even more cautious in crossing the landscape.  Here and there you
+see small diggings made by scavengers.
+~
+73 0 5
+D0
+You see a dead land, devoid of all life.~
+~
+0 -1 7333
+D1
+You see plains of splintered rocks and a hill in the dim distance.~
+~
+0 -1 7338
+D2
+You see plains of splintered rocks.~
+~
+0 -1 7335
+D3
+You see plains of splintered rocks.~
+~
+0 -1 7331
+S
+#7335
+Traveling the glassy landscape~
+Your steps become cautious as you walk on a plain scattered with splintered
+glass, each splinter razor sharp.  Littered around the landscape you see
+decaying corpses, all with glass shards piercing the bodies in many places.
+You become even more cautious in crossing the landscape.  To the south ash
+covers the razor sharp glass.  Here and there you see small diggings made by
+scavengers.
+~
+73 0 5
+D0
+You see plains of splintered rocks.~
+~
+0 -1 7334
+D1
+The shattered lands fade into a massive hill of junk.~
+~
+0 -1 7339
+D2
+You see an ash filled landscape in the distance.~
+~
+0 -1 7336
+D3
+You see an ash filled landscape.~
+~
+0 -1 7332
+S
+#7336
+Ash ridden landscape~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared, you notice small pieces of bone
+and armor in the ash around you.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all from view.
+~
+73 0 3
+D0
+You see plains of shattered rocks in the distance.~
+~
+0 -1 7335
+D1
+You see an ash filled landscape.~
+~
+0 -1 7340
+D2
+You see an ash filled landscape.~
+~
+0 -1 7336
+D3
+You see an ash filled landscape.~
+~
+0 -1 7336
+S
+#7337
+Beside the mountain of rubble.~
+You stumble on into a field of debris.  Junk piles up to your east into
+a veritable mountain, its top lost in the mist.  To the north the ground has
+been torn up by huge gashes in the ground making the debris pile up in long
+heaps.  Throughout the mist to the north you see two massive beasts frozen in
+combat.
+~
+73 0 5
+D2
+Far off you see glints of light, like that of glass.~
+~
+0 -1 7338
+D3
+You see a dead land, devoid of all life.~
+~
+0 -1 7333
+S
+#7338
+traveling the glassy landscape~
+Your steps become cautious as you walk on a plain scattered with splinters of
+glass, each splinter razor sharp.  Littered around the landscape you see
+decaying corpses, all with glass shards piercing the bodies in many places.
+You become even more cautious in crossing the landscape.  To the east is
+mountain of rubble, its top lost in the mist.  Here and there you see small
+diggings made by scavengers.
+~
+73 0 5
+D0
+You see a heap of junk.~
+~
+0 -1 7337
+D2
+You see plains of splintered glass.~
+~
+0 -1 7339
+D3
+You see plains of splintered glass.~
+~
+0 -1 7334
+S
+#7339
+traveling the glassy landscape~
+Your steps become cautious as you walk on a plain scattered with splinters of
+glass, each splinter razor sharp.  There are two heaps of what look like
+two heaps of bones separated by only spear length, among the bones glints the
+ever present glass.  You become even more cautious in crossing the landscape.
+To the south ash covers the razor sharp glass.  Here and there you see small
+diggings made by scavengers.
+~
+73 0 5
+D0
+You see plains of volcanic glass.~
+~
+0 -1 7338
+D1
+You seen a mound of junk.~
+~
+0 -1 7341
+D2
+You see plains of ash.~
+~
+0 -1 7340
+D3
+You see plains volcanic glass.~
+~
+0 -1 7335
+S
+#7340
+ash ridden landscape~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared, you notice small pieces of bone
+and armor in the ash around you.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all from view.
+~
+73 0 3
+D0
+You see plains of splintered glass.~
+~
+0 -1 7339
+D1
+You see an ash covered landscape.~
+~
+0 -1 7342
+D2
+You see an ash covered landscape.~
+~
+0 -1 7340
+D3
+You see an ash covered landscape.~
+~
+0 -1 7336
+E
+ARMOR~
+Fragments of armor lie, twisted and half covered in the ash, emblems on them 
+scoured away but time, but still some vivid color remains in nooks and 
+crannies.~
+E
+BONE~
+bits of bone stick out of the grey ash here.  All are worn smooth by endless 
+days of wind and grit, still the bones tell of a violent end to the body it 
+once belonged to.~
+S
+#7341
+By a mountain of junk~
+The landscape is filled with battle detritus as far as the eye can reach.  Near
+to hand you can see white bones of unknowable creatures in rusting remains of
+fantastic armor, rusting weapons abound here, all are broken.
+To the east looms the mountain of junk, up the mountain a flattened path leads
+away into the misty clouds.
+~
+73 0 5
+D1
+You make out a small path up the mound of junk.~
+~
+0 -1 7357
+D2
+You see an ash filled landscape.~
+~
+0 -1 7342
+D3
+You see plains of volcanic glass.~
+~
+0 -1 7339
+E
+ARMOR~
+Twisted and rusted pieces of armor seem to reach out at you, you reach out
+to touch some, it crumbles under your fingers, the rust drifting away with
+the wind.~
+E
+BONE~~
+Splinters of bones lie everywhere, sticking like knives out of the mass of 
+junk surrounding you.~
+S
+#7342
+Ash ridden landscape~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared, you notice small pieces of bone
+and armor in the ash around you.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all from view except a looming
+mound of something to the north east.
+~
+73 0 3
+D0
+You see the foot of a mound of junk.~
+~
+0 -1 7341
+D1
+You dimly see a mound of junk.~
+~
+0 -1 7343
+D2
+You see an ash filled landscape.~
+~
+0 -1 7342
+D3
+You see an ash filled landscape.~
+~
+0 -1 7340
+S
+#7343
+By the mountain of debris~
+You are hemmed in on the north and south sides by the mountain of junk
+To the north and east lies an impenetrable mess of bodies with a sprinkling of
+rocks.  Amongst the mess you see huge white and black bones of impossible
+size, as you glance round you notice that every weapon has been shattered to
+pieces.  To the south and west the mess of debris eases as the ever present
+covers it.
+~
+73 0 5
+D2
+You see an ash covered landscape.~
+~
+0 -1 7344
+D3
+You see an ash covered landscape.~
+~
+0 -1 7342
+S
+#7344
+Ash ridden landscape~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+you notice your foot prints have disappeared, you notice small pieces of bone
+and armor in the ash around you.
+Every where you look the landscape is a soft ash which seems to be shifting
+ever so slightly around you. The mist hides all from view except a looming
+mound of something to the north east.
+~
+73 0 3
+D0
+You dimly see a mound of junk.~
+~
+0 -1 7343
+D2
+You see an ash filled landscape.~
+~
+0 -1 7344
+D3
+You see an ash covered landscape.~
+~
+0 -1 7344
+S
+#7345
+The narrow path past the frozen monsters.~
+You squeeze between the pile of junk while keeping as far away from the
+frozen monsters as possible.  The ground here and to the east is made
+treacherous by huge gouging trenches dug by the scrambling feet of the 
+monsters you shy away from.
+~
+73 0 5
+D0
+You see east side of the junk mound.~
+~
+0 -1 7346
+D3
+You see a blasted land, devoid of all life.~
+~
+0 -1 7327
+S
+#7346
+Beside a mountain of junk.~
+The land here is dominated by mounds of junk from the long past battles here.
+To the west is a huge wall of junk, its top lost in the mist.  The north and
+west view is dominated by a drop in the land, further out you dimly see a
+line disappearing into the clouds.
+~
+73 0 3
+D0
+A winding path by the mountain of junk.~
+~
+0 -1 7347
+D1
+You see a diminishing amount of junk and a mysterious line disappearing in the
+clouds.~
+~
+0 -1 7349
+D2
+You see a narrow path between the mountain of junk and the frozen monsters.~
+~
+0 -1 7345
+S
+#7347
+Entrance to the mound.~
+You are in the middle of a relatively flat area, which looks suspiciously like
+an arena.  To your west gapes a dark entrance into the mountain of junk,
+around the entrance you see numerous charred remains of things.  To the north
+and east the land drops away slowly.
+~
+73 0 3
+D0
+You see less junk in this direction, far away you see nothing but mist.~
+~
+0 -1 7348
+D1
+You see less junk in this direction, far away you see what looks like a ramp
+disappearing into the clouds.~
+~
+0 -1 7350
+D2
+You see a path winding its way around the mountain of debris.~
+~
+0 -1 7346
+D3
+You see a dark entrance into the mountain of junk.~
+~
+0 -1 7352
+E
+CHARRED REMAINS~
+The remains have been burnt beyond recognition, metal has melted into pools,
+the bones shattered under the head, everything else is a mass of black.~
+S
+#7348
+The View.~
+You stand on the brink of a crater.  The mist fills the entire crater to
+overflowing, the far side of the crater a dim ghost. Your gaze is drawn to
+the east by a huge ramp like structure in the middle of the crater, its base
+hidden in the mist, its top lost in the clouds, to one side you see a river
+and buildings to the other.  You look down and see a sheer slope descending
+into a mist shrouded forest, the forest looks very thick.
+~
+73 0 3
+D2
+You see a winding path by the mountain of junk.~
+~
+0 -1 7347
+E
+CRATER~
+The crater is filled with lush, dense undergrowth.  Fog billows up the crater
+walls and over you.  Un appetizing sounds drift up from below to your ears,
+you move away from the lip of the crater~
+S
+#7349
+The misty view.~
+You stand on the misty brink of the crater.  The mist fills the entire crater
+to overflowing, the far side is lost in the mist. Your gaze is drawn to the
+east by a large shadowy line in the middle of the crater, its base hidden in
+the mist, its top lost in the clouds.  To the east you see a very steep path
+descending into the crater, at the bottom you see dark forest mingling with
+the thick mist.
+~
+73 0 3
+D0
+You see a rising path along the craters edge.~
+~
+0 -1 7350
+D3
+You see a mountain of junk.~
+~
+0 -1 7346
+E
+CRATER~
+The crater is filled with lush, dense undergrowth.  Fog billows up the crater
+walls and over you.  Un appetizing sounds drift up from below to your ears,
+you move away from the lip of the crater~
+S
+#7350
+The View.~
+You stand on the brink of a crater.  The mist fills the entire crater to
+overflowing, the far side of the crater is dim ghost. Your gaze is drawn to
+the east by a huge ramp like structure in the middle of the crater, its base
+hidden in the mist, its top lost in the clouds, to one side you see a river
+and buildings to the other.  You look down and see a sheer slope descending
+into a mist shrouded forest, the forest looks very thick.  The crater wall
+descends to the south.
+~
+73 0 3
+D2
+You see a path along the edge of the crater.~
+~
+0 -1 7349
+D3
+You see a mountain of junk.~
+~
+0 -1 7347
+E
+CRATER~
+The crater is filled with lush, dense undergrowth.  Fog billows up the crater
+walls and over you.  Un appetizing sounds drift up from below to your ears,
+you move away from the lip of the crater~
+S
+#7352
+A dank tunnel in the mountain of junk.~
+Metallic odors abound here in the dank tunnel.  Around you the tunnel walls
+are made of many distinct layers of junk, from each layer sharp bits of armor
+and bone all sticking out into the tunnel at odd angles, on each point glistens
+a point of moisture ready to fall.  You make your way down the tunnel with
+great care.
+~
+73 13 0
+D1
+You see an entrance.~
+~
+0 -1 7347
+D3
+You see only a dark tunnel.~
+~
+0 -1 7353
+S
+#7353
+A dark tunnel.~
+You are in a dark dry tunnel.  The walls around you are made of numerous
+slanting layers of debris from the battles fought here.  You notice some
+rather peculiar bones in some of the layers, red if you are not mistaken.  To
+the east you hear the drip, drip of water.  On the floor are some new looking
+bones mingled with shredded metal.
+~
+73 9 0
+D0
+You see a dim light a head.~
+~
+0 -1 7354
+D1
+You see a dark tunnel, it looks wet.~
+~
+0 -1 7352
+S
+#7354
+A dimly light room.~
+The light here is very dim.  More bones are scattered here on the floor.
+Around you the layers of debris are more compressed and the walls smoother
+as if many people (things?) have passed here.  From the north you see a pure
+white light, almost blinding in its intensity.... an evil part in you feels
+repelled when you look at the light, you ponder your position with your god.
+~
+73 9 0
+D0
+You see a very bright and pure light further up the tunnel, the evil in you
+feels repelled.~
+~
+0 -1 7355
+D2
+You see a dark tunnel.~
+~
+0 -1 7353
+S
+#7355
+The chamber of light.~
+You stand in a chamber of light, every part of the chamber gives out the
+brilliant white light.  In front of you is small throne carved from a single
+white pearl.  Shuffling around the chamber are translucent vapors, all
+constantly shifting form and muttering to them selves in strange languages.
+One of the vapors looks up briefly into your eyes and in an instant you
+feel a judgement passed upon you, you feel very nervous.
+~
+73 8 0
+D2
+You see a dark corridor.~
+~
+0 -1 7354
+S
+#7356
+A landscape filled with ash.~
+Your foot steps crunch on the soft ash here.
+You look around quickly behind you to see if anyone has noticed your passage,
+but your foot prints have disappeared.  Everywhere you look the landscape is
+a soft ash which seems to be shifting ever so slightly around you. There is
+no feature on the horizon as the mist hides all from your view.
+~
+73 4 2
+D0
+You see an ash filled landscape.~
+~
+0 -1 7307
+D1
+You see an ash filled landscape.~
+~
+0 -1 7318
+D2
+You dimly see a plateau through the mist.~
+~
+0 -1 7319
+D3
+The ground is covered with a patchy layer of ash.~
+~
+0 -1 7306
+S
+#7357
+at the base of the mountain~
+You stand at the base of the mountain of junk.  As you look more closely you
+notice that the mountain is made up of hundreds of layers of compressed
+battle detritus, armor, bodies and the ever present broken swords. In front of
+you is the small path up the mountain, the surface made up of countless armor
+suits and shields all in various states of decay.  Still you pick your path
+with great care.
+~
+73 0 5
+D3
+A mound of junk.~
+~
+0 -1 7341
+D4
+The steep path upwards into the mist.~
+~
+0 -1 7358
+S
+#7358
+climbing the mountain of junk.~
+As you look more closely you notice that the mountain is made up of hundreds of
+layers of compressed battle detritus, armor, corpses and the ever present broken
+swords.  The small path leads up and down the mountain, the surface made up of
+countless armor suits and shields all in various states of decay.  Still you
+pick your path with great care.  Around you is the ever present mist blocking
+all from view.
+~
+73 0 5
+D4
+A steep path upwards into the mist.~
+~
+0 -1 7359
+D5
+A _very_ steep path tumbling down the hill.~
+~
+0 -1 7357
+S
+#7359
+The panorama spreads before you.~
+You emerge onto plateau of junk, the ground is a sea of rust flakes with a few
+lichens clinging onto the odd weathered bone. To the north and west the view
+of the land you have been wanting so badly.  What catches you eye is another
+mountain far in the east and an enormous ramp reaching up into the clouds
+far the north, the base lost in basin filled with mist and what dense forest.
+~
+73 0 5
+D1
+You see more rust and some new looking corpses.~
+~
+0 -1 7360
+D5
+A steep mountain path made of armor and shields.~
+~
+0 -1 7358
+S
+#7360
+By the side of a hut made of junk~
+You move on a plateau made up of rust flakes mixed with new looking corpses,
+all have their weapons shattered.  As you pass you notice a small hut to 
+the south made up of what looks like large shields and armor plates.  The 
+door is made of a mixture of skulls and intricately woven metal strips with 
+strips of leather moving in the breeze, the roof is a patchwork of metal 
+squares, there are wisps of smoke coming from the chimney.  The smell coming 
+from the house is unimaginably foul.
+~
+73 0 4
+D1
+you see rust and junk leading to a plateau.~
+~
+0 -1 7363
+D2
+The small and disgusting hut.~
+~
+1 -1 7361
+D3
+You see rust and junk leading to a plateau.~
+~
+0 -1 7359
+E
+HUT~
+It smells!!!!!!!! *puke*.~
+S
+#7361
+In the kitchen of the foul hut.~
+The smell in intolerable here in the kitchen.  You see the reason when you see
+weeks old corpses heaped on the floor, other than the corpses littered on the
+floor the kitchen seems normal, except everything is made of junk from the
+battle field.  You become very nervous when you hear shuffling noises in
+near by rooms.
+~
+73 9 0
+D0
+An exit to less nose taxing world.~
+exit~
+1 -1 7360
+D3
+You see a dark room, you think its a workroom.~
+door~
+1 -1 7362
+E
+CORPSES~
+The corpses all seem to be missing limbs, mostly there arms.  Anyway all are 
+in advanced stages of rotting.~
+S
+#7362
+A well equipped work room.~
+Huge rats flee away from you, a few of them start making interesting noises in
+your direction.  Around you is a well equipped workroom, hung on the walls is a
+large array of metal working tools.  Under the pitted and scarred workbenches
+lie captious amounts of scrap metal, you see rats scurrying around among it.
+~
+73 9 0
+D1
+The smelly kitchen.~
+door~
+1 -1 7361
+E
+WORKBENCH~
+The workbench looks hard used, the tools all very sharp and ready for use.~
+S
+#7363
+The panorama spreads before you.~
+You emerge onto plateau of junk, the ground is a sea of rust flakes with 
+lichens clinging onto the odd weathered bone. To the north you see an 
+enormous ramp reaching up into the clouds, its base lost a large basin 
+filled with mist with scrawny trees poking through.  There is a very steep 
+path down to plains here.
+~
+73 4 5
+D3
+You see some rust and new looking corpses.~
+~
+0 -1 7360
+D5
+A steep looking path.~
+~
+0 -1 7364
+E
+BASIN~
+The Basin bathed in fog, what can only be described as a ramp emerges from
+the center of the basin and disappears in the clouds above you, its long shadow
+marking the landscape below.~
+S
+#7364
+A very steep path.~
+You slip and slide down the very steep path here.  You try to scramble back
+up, but to no avail, you content yourself by sliding further down the mound
+towards the plains below.
+~
+73 0 5
+D5
+The very steep path continues downwards.~
+~
+0 -1 7365
+S
+#7365
+Base of the mound of junk.~
+You stand at the base of a huge mound of junk.  Around you, you see vast
+plains of blasted land.  To the west you see a vaguely trampled area ending
+with a heap of junk. From the east you see a small path and vague wisps of
+smoke.  You see every small and steep path up the mound of junk.
+~
+73 0 4
+D1
+You see a blasted land.~
+~
+0 -1 7369
+D2
+A small, dark hole leading inside the huge pile of junk.~
+~
+0 0 7366
+D4
+You see a very steep path upwards.~
+~
+0 -1 7364
+S
+#7366
+The damp tunnel.~
+The damp tunnel is almost filled with debris.  Among the battered armor
+scattered on the floor you see dead fires and small heaps of bones, the smell
+here is incredible.  The tunnel gets smaller as it heads west.
+~
+73 9 0
+D0
+A bright point of life.~
+~
+0 0 7365
+D3
+You see a dark passage partially filled with junk.~
+~
+0 -1 7367
+E
+junk~
+You see broken bits of weapons and armor scattered on the floor.~
+E
+bones~
+You notice that all have been split in half, most have bits of rotting meat on.~
+S
+#7367
+The chamber.~
+You emerge from the small tunnel into a dimly lit chamber.  To one side the
+chamber is filled with armor and weapons in various states of disrepair.  The
+other side is lined with a large bench containing mage items.  The middle of
+the room is dominated by a small forge and a low table of Blackrock, the forge
+is hot. The wall to the west is covered with blackened drapes of unknown
+origins.
+~
+73 9 0
+D1
+You see a small dark tunnel.~
+~
+0 -1 7366
+D3
+You see a hidden door.~
+hidden door~
+1 -1 7368
+E
+forge~
+The forge is still hot, along one side are tools for metal working.~
+E
+Blackrock table~
+The light seems to disappears into the table, you feel waves of cold and
+malevolence coming from the table.~
+S
+#7368
+The smelly tunnel.~
+The damp tunnel slowly fills up with debris the further you travel east.  You
+duck you head to avoid brushing against unknown foliage on the ceiling, the
+smell from them is incredible.  The tunnel is lighter towards the east.
+~
+73 9 0
+D1
+You see a dark tunnel.~
+hidden door~
+1 -1 7367
+D3
+There is a bright light ahead.~
+~
+0 -1 7337
+E
+bones~
+You notice that all have been split in half, most have bits of rotting meat on.~
+E
+junk~
+You see broken bits of weapons and armor scattered on the floor.~
+S
+#7369
+The blasted lands.~
+Around you is a scene of desolation.  The land rises slightly to the north,
+plains  continue to the south.  The blasted lands of the west continue
+to the east.  The ground around you is scattered with splinters of rock, here
+and there are scattered pieces of rusty armor.  The wandering path continues
+west and east.
+~
+73 0 4
+D1
+You see a wandering path across the blasted plains.~
+~
+0 -1 7370
+D3
+You vaguely make out a mound of something in the distance.~
+~
+0 -1 7365
+S
+#7370
+The blasted land.~
+Around you is a desolate blasted land.  The unchanging land gently rises to
+the east and north, you notice a lessening in debris here.  The wandering path
+splits here, one going north, the other continuing west.  Far above your head
+you see specks circling in the sky, as you move they silently follow you.
+~
+73 4 4
+D1
+The blasted lands start to rise in the distance.~
+~
+0 -1 7371
+D3
+You see a desolate, blasted land.~
+~
+0 -1 7369
+S
+#7371
+A rising in the desolate plain.~
+You stand half way up a rise, to the west you see unending barren plains
+stretching away into the misty distance.  Far above you, you can make out large
+birds of prey.  A winding path continues east towards the crest of a hill.
+~
+73 0 4
+D1
+You see the crest of a small hill.~
+~
+0 -1 7372
+D3
+You see desolate plains ahead of you, to the north there is a slight rise.~
+~
+0 -1 7370
+S
+#7372
+At the crest of the rise.~
+From the top of the rise have a panoramic view.  To the north beyond barren
+plains is a straggly dark and chilling area.  The east is dominated by endless
+seas of grey ash, west is a wandering path leading down into a desolate and
+barren plains ending in a mysterious shaped mound.  Leading south is a small
+winding path.  From the south you see wisps of smoke.
+~
+73 0 4
+D2
+You see a winding path leading down the hill.~
+~
+0 -1 7373
+D3
+You see a winding path winding down to a desolate plain below.~
+~
+0 -1 7371
+S
+#7373
+A winding path.~
+To the south you see a village cunningly hidden among the steep sides of the
+hill, the wisps of smoke have become more substantial.  A winding path leads
+north and south.
+~
+73 0 4
+D0
+A winding path leading up the hill.~
+~
+0 -1 7372
+D2
+A small path to the village.~
+~
+0 -1 7374
+S
+#7374
+Entrance to the village.~
+You stand in the gated entrance of the secluded village, outside of the gate
+is a barren landscape rising up towards the top of the hill.  Inside the gate
+is a ramshackle village made up of huts which seem to blend in with the land,
+each hut made up of stone pieces and battered sheet metal.
+~
+73 4 3
+D0
+A path leading out of the village.~
+~
+0 -1 7373
+D2
+You see the center of the village.~
+~
+0 -1 7375
+S
+#7375
+At cross-roads in a the village.~
+You enter the center of the village, around you are small houses made of rough
+stone, the roofs are a patchwork of leather and small battered sheets of metal.
+A small litter filled alleys lead north, south, east and west.  Around you small
+scruffy children shuffle by you, eyeing you suspiciously, each fingering
+something in a pocket.  You then notice armed men standing in the
+doorways of huts, all eye you warily.
+~
+73 0 1
+D0
+The entrance to the village.~
+~
+0 -1 7374
+D1
+A side street.~
+~
+0 -1 7376
+D2
+The alley seems to be in better condition.~
+~
+0 -1 7388
+D3
+You see a filthy alley.~
+~
+0 -1 7382
+S
+#7376
+A dirty litter filled alley.~
+You walk into a dank, smelly, litter filled alley.  The huts here look about
+to fall over here.  From the huts around you come strange smells.  You notice
+the house east of here is of a peculiar build.  As you look at the doorways
+of houses you notice them twitching slightly.  You feel watched.  There are
+exits in all directions.
+~
+73 0 1
+D0
+A rough hut.~
+~
+0 -1 7377
+D1
+Entrance to a strange house.~
+~
+0 -1 7379
+D2
+You see a dirty shack.~
+~
+0 -1 7381
+D3
+You see the center of the village.~
+~
+0 -1 7375
+S
+#7377
+In a small dirty hut.~
+As you enter the dirty hut you hear the skittering of small claws as a hoard
+of rats run for cover.  Around you is an assortment of rundown furniture.  The
+cooking hearth is warm, on it is a foul smelling pot of something.  To the
+left of the doorway is a collection worn weapons at the ready.  Above you, you
+hear a shuffling.
+~
+73 8 0
+D2
+The doorway out of the miserable hut.~
+~
+0 -1 7376
+D4
+A set of ladders leads up to a hayloft.~
+~
+0 -1 7378
+E
+POT~
+The small pot is filled by a mass of bubbling brown stuff, not very palatable
+you think.~
+S
+#7378
+In a hayloft.~
+You climb up into a partially filled hayloft.  As you glance round you see
+heaps of rugs, from the looks of it someone was here not long ago.
+~
+73 8 0
+D5
+A ladder leading down out of the hayloft.~
+~
+0 -1 7377
+S
+#7379
+In a magus house.~
+When you enter the house you realize why the house is strange, it belongs to
+mage.  Around you heaped in miscellaneous piles are assortments of runes and
+charms, under tables are heaped battered armors and weapons.  To one side is
+dominated by an empty table made of strange stone. On it stands a smoking pot
+giving out a mysterious smell and a dark Orb.  In the air you feel the
+presence of many... many... things.  You feel uneasy here.  You then notice
+that your magic is absorbed by your surroundings.  You feel _very_ uneasy.
+~
+73 136 0
+D1
+You see a dark entrance to a dark room.~
+~
+0 -1 7380
+D3
+the door to the filthy alley.~
+~
+0 -1 7376
+E
+ORB~
+As you gaze at the Orb you feel drawn to an alien castle, you feel blood and
+magic emanating from it, you jerk away as you realizing you are losing your 
+mind.~
+S
+#7380
+The room of dark casting.~
+You stand in a dark room.  You light seems to be absorbed by the air
+surrounding you making it hard to see.  All walls are a soot black with many
+scuffed runes hastily written upon them with a greyish substance.  The air is
+filled with the presence of dark magic.  On the floor are scribbled many
+scuffed markings which are not recognizable.  You feel the presence of someone
+evil here.
+~
+73 137 0
+D3
+You see a way out!!~
+~
+0 -1 7379
+S
+#7381
+A dirty shack.~
+You enter a dirty shack, more like a hovel.  As you move further in you hear
+the scurry of rats running to the back of the hut.  Around you is furniture to
+match the opulence of the shack, battered stools and rickety tables, piles of
+rags. You look up and notice holes in the roof.  To the left of the doorway is
+an ordered row of well use weapons, all look particularly lethal.  From
+outside you hear a quick shuffling of feet.......
+~
+73 8 0
+D0
+The filthy alley.~
+~
+0 -1 7376
+S
+#7382
+The dirty alley.~
+You walk into a festering alley, around you is the discarded rubbish of people
+living here.  As you examine the dilapidated shacks you see twitches of rag
+curtain and door coverings.  From the shacks comes a rather pungent evil
+smell.
+~
+73 0 1
+D0
+A smelly shack.~
+~
+0 -1 7383
+D1
+Over the piles of rubbish you see the village cross-roads.~
+~
+0 -1 7375
+D2
+An empty shack.~
+~
+0 -1 7387
+D3
+A smelly shack with a wooden door.~
+~
+0 -1 7385
+S
+#7383
+Inside a smell shack.~
+You enter the evil smelling shack.  Inside you are surprised by the neatness
+of the interior, someone has made an effort to disguise the ramshackle affair
+of the shack.  On the floor is a very battered but strangely clean rug.  The
+tables and chairs seem to be in usable condition, on the hearth is a bubbling
+pot of food.  You hear a quiet shuffling of feet outside......
+~
+73 1 0
+D2
+A not so smelly alley.~
+~
+0 -1 7382
+D5
+You see a trapdoor downwards to somewhere.~
+trapdoor~
+1 -1 7384
+S
+#7384
+The hidden room.~
+The pit hides a dark secret.  Formless shapes hovers in a corner of the pit.
+You cannot make out its shape as it shifts so fast, as you look closer you see
+that is moves in and out of the walls with ease, you then notice other
+formless shapes appearing and disappearing from the walls.  You become very
+uneasy as one makes a move in your direction.
+~
+73 1 0
+D4
+An exit upwards.~
+exit trapdoor~
+1 -1 7383
+S
+#7385
+In a dark and dusty shack.~
+As you walk in the door closes by itself with a thud.  Your light is reduced
+to a glimmer by the dust in the air, you can make out the usual battered
+stools and benches. The back of the room is lost in the dust, you hear
+shuffling from that direction.....
+~
+73 1 0
+D1
+A door to the alley.~
+~
+0 -1 7382
+D3
+Deeper into the dusty shack.~
+~
+0 -1 7386
+S
+#7386
+At the back of a smelly shack.~
+Warily you move further into the dusty shack.  Out of the corner of your eye
+you see a formless thing move, a moment later it is gone.  Around you are
+heaps of sleeping rugs, all in a disgusting state, the smell here is even
+worse than outside.... You start to shuffle back towards the door westwards...
+~
+73 1 0
+D1
+the dusty room continues....~
+~
+0 -1 7385
+S
+#7387
+An empty shack.~
+You move around an empty shack, only a few bits of rubbish are scattered here
+on the floor, as you listen you can hear the ever present rats skittering
+around the walls.  As you scuff the floor with your feet you kick up clouds of
+choking dust.  There is nothing in here to take your interest.  You begin to
+more towards the cloth door.
+~
+73 5 0
+D0
+The rubbish filled alley.~
+~
+0 -1 7382
+S
+#7388
+The dirty street.~
+You pass into a dirty alley filled with junk.  To the south the alley opens
+into a small street with an imposing building ending it.  North is what could
+be laughingly called the town square.  It stinks here!
+~
+73 0 1
+D0
+The market square.~
+~
+0 -1 7375
+D2
+The street continues.~
+~
+0 -1 7389
+S
+#7389
+Roughly cobbled streets.~
+You enter a surprisingly well kept street.  North is a thoroughly disreputable
+alley and south, behind a set of dark gates, a rather impressive well kept
+house.  Each side of the roughly cobbled streets is lined with two story timber
+houses all in black, pressing into the road.  You feel someone watching you
+with greedy eyes.
+~
+73 4 1
+D0
+An incredible odor is drifting from the dimly lit alley.~
+~
+0 -1 7388
+D2
+A set of gates leading to a darkened courtyard.~
+~
+0 -1 7401
+S
+#0
+$~

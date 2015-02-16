@@ -1,0 +1,205 @@
+#26100
+texas bob movie ~
+Texas Bob~
+Texas Bob is here, wanting to be your friend.
+~
+Texas Bob is a right friendly fellow.  He just wants to be your
+friend. On his head, he has what must be a 50 gallon hat.  He
+likes it when people compliment him on his nice hat.  Maybe you
+should tell him what a lovely hat he has.
+(Remember, no capitalization.)
+~
+8 134219904 1000 Y
+35 -15 -15 1d1+25000 69d69+69
+10 621
+8 8 1
+0 1073741823 6d6+6 0
+0 0 0 0
+R
+0
+#26101
+austin powers wannabe lookalike movie ~
+An Austin Powers Look-A-Like~
+An Austin Powers Look-A-Like is here, trying to be Austin Powers.
+~
+You see a man with a great desire to be Austin Powers. Yet, alas,
+he is not, and will never be, Austin Powers.  He has good looking
+teeth and no sense of grooviness.  Maybe you should be a good chap
+and tell him that he is not Austin Powers.
+(Remember, do not use contractions.)
+~
+8 134219904 1000 Y
+35 -15 -15 1d1+25000 69d69+69
+10 621
+8 8 1
+0 134217727 6d6+6 0
+0 0 0 0
+R
+0
+#26102
+real austin powers movie ~
+Austin Powers~
+Austin Powers, International Man of Mystery, is here.
+~
+You see a man with an uncanny sense of grooviness.  This is
+Austin Powers, International Man of Mystery.  He has horribly
+ugly teeth, but he is still a sex symbol.  He is also very horny
+at the moment.  He is looking for girls.  You should tell him to
+behave himself.  If you don't he might do something rash.
+(Remember, no punctuation.)
+~
+8 134219904 1000 Y
+35 -15 -15 1d1+25000 69d69+69
+10 621
+8 8 1
+0 134217727 6d6+6 0
+0 0 0 0
+R
+0
+#26103
+miss kensington~
+Miss Kensington~
+Miss Kensington is here, looking very beautiful.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 134219904 1000 Y
+35 -15 -15 1d1+25000 69d69+69
+10 621
+8 8 2
+0 1073741823 6d6+6 0
+0 0 0 0
+R
+0
+#26104
+basil exposisition movie~
+Basil Exposistion~
+Basil Exposistion is here, looking for his mother.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 134219904 1000 Y
+35 -15 -15 1d1+25000 69d69+69
+10 621
+8 8 1
+0 1073741823 6d6+6 0
+0 0 0 0
+R
+0
+#26105
+hottie female robot fembot~
+A Fembot~
+A Fembot is here, trying to woo you with her beauty.
+~
+She is a truely beautiful thing. She may be a robot, but she looks
+like a full fledged goddess. Her breats and thighs are rounded 
+and shaped, and made of steel. You are not sure you have the will
+power to destroy such a beatiful thing.
+~
+8 134217728 -500 Y
+31 -8 -9 1d1+7000 10d9+11
+10 621
+8 8 2
+0 12288 60d7+160 3
+1 2 10 82
+1 2 25 26
+1 2 75 32
+0 0 0 0
+R
+0
+#26106
+doctor evil movie ~
+Doctor Evil~
+Doctor Evil is here, being eeeeeeevil.
+~
+Before you stands a bald, very evil man.  He had a bad
+childhood, but that is no exuse for his misdeeds.  He
+is wearing an obsurd looking ring on his right hand.
+~
+136 2176 -1000 Y
+31 -11 -10 60d60+4500 8d9+7
+10 621
+8 8 1
+0 12352 60d9+150 2
+1 1 4 100
+1 2 10 26
+0 0 0 0
+R
+0
+#26107
+guard evil movie ~
+An Evil Guard~
+A Guard is here, looking for Austin Powers.
+~
+Here is one of Doctor Evil's lackeys, trained to serve.  His only
+weaknesses are truely beautiful women and a lack of brain power.
+~
+8 268697600 -500 Y
+31 -6 -8 60d60+3600 7d9+11
+10 621
+8 8 1
+0 12288 6d6+6 3
+7 2 15 0
+4 2 10 0
+3 2 10 0
+0 0 0 0
+R
+0
+#26108
+cat bigglesworth movie ~
+Mr. Bigglesworth~
+Mr. Bigglesworth is here, waiting for Doctor Evil.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 -1000 Y
+31 11 10 1d1+1 1d1+1
+10 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+R
+0
+#26150
+King Knight Man Soldier~
+The King's Knight~
+The King's Knight is here, serving his king.
+~
+The King's Knight is a loyal servant of the king.  He will serve his
+Liege until death.  The King does not want Humpty Dumpty back together
+again and if you intend to try, you must go through this brave knight.
+~
+8 262272 700 Y
+31 11 -8 40d60+4000 9d9+9
+10 621
+8 8 1
+0 12288 1d1+1 4
+3 2 15 0
+9 2 15 0
+4 1 30 0
+7 2 20 0
+0 0 0 0
+R
+0
+#26151
+King Footman Man Soldier~
+The King's Man~
+The King's Man is here, serving his king.
+~
+This is one of the King's Men.  He has vowed to serve his king in
+anyway he can.  He is strong and powerful.  If you want a piece of
+Humpty Dumpty, you will have to go through him.
+~
+8 262144 500 Y
+31 -8 -6 61d61+5000 8d7+11
+10 621
+8 8 1
+0 12288 1d1+1 3
+9 2 35 0
+3 1 25 0
+4 2 30 0
+0 0 0 0
+R
+0
+#0
+$~

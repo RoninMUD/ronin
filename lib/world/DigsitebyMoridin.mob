@@ -1,0 +1,69 @@
+#18501
+student~
+A hungry student~
+A student is standing here looking curiously at a small stone.
+~
+   The student is in his youth and looks eager in his studies.
+His eyes are watchful and register every detail. He looks rather 
+skinny, and you hear him mutter about getting something to eat.
+~
+12 0 100 Y
+35 -15 -5 1d1+5000 4d4+45
+15000 542846
+8 8 1
+68 0 1d1+300 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18502
+archaeologist~
+An archaeologist~
+An archaeologist is studying an old parchment.
+~
+   The archaeologist's clothes are dirty and ragged. He is wearing
+a brown coat over his clothes that are just ragged. The way he 
+studies his documents leaves no room for interest in clothing. He 
+wears a big hat to shield him from working in the sun.
+~
+12 268435456 130 Y
+46 -17 -15 1d2500+11111 3d3+74
+30000 1150000
+8 8 1
+68 0 1d1+300 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18503
+ant~
+An ant~
+An ant is crawling on the beach.
+~
+   The ant is crawling around on the beach close to the anthill.
+~
+10 8 0 Y
+40 -12 -10 1d50+400 3d2+60
+0 50000
+8 8 1
+76 0 1d1+300 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18504
+archaeologist master~
+The master archaeologist~
+The master archaeologist is looking suspiciously at you.
+~
+   The Master Archeologist is wearing grey pants and a white shirt. 
+His coat is made of brown leather and has strange markings and symbols 
+on it. Some of them looks like the cavern wall near the entrance.
+~
+16777226 0 200 Y
+50 -19 -15 10d10+40000 10d127+50
+4000000 4000000
+8 8 1
+68 0 1d1+3000 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

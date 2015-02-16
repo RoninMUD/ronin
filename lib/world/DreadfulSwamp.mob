@@ -1,0 +1,511 @@
+#12001
+huge queen ant~
+The huge queen ant~
+The huge queen ant snaps and gnaws her teeth as she crouches here.
+~
+The queen ant has huge jaws that easily could cut you to pieces. Her long
+tenious legs twitch and creep into position to fight you. As you look deep
+into her eyes, a light flashes, and you become stone.
+~
+16491 403013770 1000 Y
+70 -28 -10 1d15000+14000 100d5+100
+5000000 5000000
+8 8 2
+76 0 0d0+0 0
+0 0 0 0
+R
+0
+#12002
+guard ant~
+Ant guard~
+An ant guard stands here guarding the village proper.
+~
+The ant guard looks like strong and good fighter, for all his legs could
+also be construed as hands. With the ability to grasp many weapons at a 
+time, this guard is to be feared. His agile moves could out do the best
+of fighters.
+~
+76 8 700 Y
+21 -1 -2 1d100+800 4d7+12
+5000 50000
+8 8 1
+76 0 0d0+0 0
+0 0 0 0
+R
+0
+#12003
+ant gatemaster guard~
+Ant gatemaster~
+An ant gatemaster is here guarding the gate from intruders.
+~
+The ant gatemaster holds the key to the village. His devilish ways, and
+excellent fighting skills earned him this high post. His duty in life is
+to protect his village from those who might seek to destroy it.
+~
+16494 268730504 900 Y
+36 -8 -6 4d1200+3200 4d12+14
+30000 530000
+8 8 1
+76 0 0d0+0 0
+0 0 0 0
+R
+0
+#12004
+ant gateguard guard~
+Ant guard~
+An ant guard is guarding the gate entrance from intruders.
+~
+The ant guard spits over his left shoulder as he looks in your general 
+direction. The dirt under his nails and on his clothing, shows that he is
+not afraid to roll around and get dirty if things progress that far. His
+long sword scrapes the ground, as it gleams in the light.
+~
+16494 268435464 700 Y
+28 -6 -5 5d150+950 4d7+23
+9000 290000
+8 8 1
+76 0 0d0+0 0
+0 0 0 0
+R
+0
+#12005
+dragon ancient huge dra anc~
+The huge ancient dragon~
+The huge ancient dragon is standing here, defending his treasury.
+~
+The huge ancient dragon gazes fire towards you as you look at it. The 
+glistening scales are the last thing you see as you feel your body turn
+rock solid and turn to stone.
+~
+147566 268796042 -1000 Y
+46 -12 -9 2d4000+8000 4d9+53
+300000 800000
+8 8 1
+57 0 0d0+0 0
+0 0 0 0
+R
+0
+#12006
+huge mos mosquito~
+The huge mosquito~
+The huge mosquito is buzzing around the swamp causing mischief.
+~
+For a mosquito, this is quite a large one. It's stinger, almost as large
+as a sword, swivels and swerves along the swamps paths looking for that
+perfect victim. You can see a large pouch on it's back, with a collection
+of odds and ends within it.
+~
+16620 268730376 -1000 Y
+50 -3 8 2d111+222 20d20+20
+3 15000
+8 8 1
+76 0 0d0+0 0
+0 0 0 0
+R
+0
+#12007
+white dragon whi dra~
+The White Dragon~
+The White Dragon shakes the room as his snoring slumber progresses.
+~
+Beautiful white scales glitter and gleam in the light of the room. The soft
+rise and fall of this beasts body causes kalidescopes to form on the rock
+walls as the light reflects off it. His diamond shaped eyes show off the
+many layers of lids, as they flicker and move.
+~
+16488 268697600 -800 Y
+29 -6 -7 1d950+1450 4d9+25
+25000 395000
+8 8 1
+56 0 0d0+0 0
+0 0 0 0
+R
+0
+#12008
+dragon guard dra~
+The Dragon Guard~
+The Dragon Guard stands guarding the others of his kind.
+~
+The dragon guard stands at attention with his excellent armor and equipment.
+His large black belly looks like an onyx treasure as he breathes, and it
+expands. As his eyes begin to focus on you, the emerald green of them 
+springs to life, ready for a good fight.
+~
+147502 805601416 -1000 Y
+36 -11 -10 5d1800+2500 4d9+29
+150000 570000
+8 8 1
+56 0 0d0+0 0
+0 0 0 0
+R
+0
+#12009
+lost adventurer adv~
+The lost adventurer~
+The lost adventurer looks around for an escape from his captors.
+~
+The lost adventurer looks very angry! Maybe because he can't find the way 
+back to Midgaard. His rage and terror, as well as lack of food, has made
+him into a crazied man. You can see the terror and rage in his wood brown
+eyes. What used to be magnificent armor, is now encrouched with dirt and
+bugs as he scavenges for some sign of escape.
+~
+16490 805601416 0 Y
+40 -14 -10 5d2500+5750 4d14+64
+300000 1500000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+R
+0
+#12010
+spider guard spi~
+The spider guard~
+The spider guard crouches on his legs, looking for intruders.
+~
+One of the best fighters spiders can offer, this guard peers with his many
+eyes for intruders within his arena. With the slighter chitter of his mouth,
+strings of web can flow around anyone not meant to be here, capturing them
+for this guards next meal.
+~
+16492 32776 -1000 Y
+42 5 -5 10d100+4500 3d20+50
+4000 494987
+8 8 1
+77 0 0d0+0 2
+11 1 1 111
+5 3 3 0
+0 0 0 0
+R
+0
+#12011
+chief guard guards~
+The Chief of the Guards~
+The Chief of the Guards over-looks his many guardlings.
+~
+The Chief of the Guards looks very confident, but he's always ready to blow 
+his horn and command the guards to attack you. The black fuzz which showers
+his whole body comes to attention, as all the hundreds of his eyes focus in
+on you.
+~
+147692 268730504 -1000 Y
+38 4 -9 15d250+4250 6d15+0
+25000 590000
+8 8 1
+77 0 0d0+0 1
+5 2 4 0
+0 0 0 0
+R
+0
+#12012
+king spider spi~
+The King spider~
+The King spider crouches over his treasure, maddened by your presence.
+~
+Large and hairy, this black spider wears the crown of his kind. His huge 
+jaws and muscular legs twitch and flitter across the floor. Just as your
+eyes focus in on the one huge eye in the middle of his forehead, you feel
+your body crumble and break as it turns to stone.
+~
+16490 403013770 -1000 Y
+52 -20 -10 5d1500+5000 20d15+80
+1000000 1500000
+8 8 1
+77 0 0d0+0 0
+0 0 0 0
+R
+0
+#12013
+gigantic mushroom mus~
+A Gigantic Mushroom~
+A gigantic mushroom grows up from the mush of the land here.
+~
+HEEHEE... FOOD! Wait!! It seems to have eyes with in the circular dots all
+around it's head. As you look closer, you become sure that this is indeed a
+living creature. From within the fans under it's cap, you can make out the
+shapely arms of this planted animal.
+~
+16462 32776 0 Y
+36 -8 -3 33d38+12250 4d7+15
+30000 700000
+8 8 1
+78 0 0d0+0 0
+0 0 0 0
+R
+0
+#12014
+cobra king~
+The King Cobra~
+The King Cobra sways and hisses as it looks for its next meal.
+~
+The King Cobra is a large snake with sharp and poisonous teeth. Since the 
+dawn of history it has been here guarding the entrance to the Ettin village. 
+This large monster has some special skills and quite the poisonous bite.
+~
+16494 537165960 -1000 Y
+36 -13 -10 2d4200+3100 4d9+31
+170000 710000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+R
+0
+#12015
+black worm~
+The Black Worm~
+A Black Worm slithers in the mud, wanting to make you its next meal.
+~
+The Black Worm is covered by mud and slime as it slithers semi-hidden in the
+muck of this swampy territory. Small beads for eyes peer from one end of 
+this hideous thing. As you look a bit closer, you can see what appear to be
+fangs, proving that this is no ordinary dirt worm.
+~
+16490 294922 -1000 Y
+42 -8 0 12d34+5678 4d7+12
+20000 750000
+8 8 1
+98 0 0d0+0 2
+5 2 3 0
+5 3 1 0
+0 0 0 0
+R
+0
+#12016
+chief ettin~
+The Chief of the Ettins~
+The Chief of the Ettins relaxes in his office, waiting for reports.
+~
+With his two monstrous heads peering at two things at once, you can tell 
+that this is a well seasoned warrior, well-deserved of his job. His armor
+boasts of many metals, glimmering with the pride you can see in his eyes.
+As his one head reads reports, the other seems to be looking right at you.
+~
+147566 805601416 -300 Y
+38 -13 -10 190d90+5600 4d9+48
+200000 1000000
+8 8 1
+59 0 0d0+0 0
+0 0 0 0
+R
+0
+#12017
+ettin~
+An Ettin~
+An Ettin stands here, poised to defend its land.
+~
+A large two-headed giant with muscular legs and arms, he looks like an 
+excellent fighter. If anything, his endurance might just be high. Huge eyes,
+black with no whites, peer from each head, taking in all of you. His grey
+skin ripples, as he assesses the danger.
+~
+72 268468232 -300 Y
+38 -11 -10 20d50+4000 4d7+12
+10000 500000
+8 8 1
+58 0 0d0+0 2
+2 2 3 0
+7 3 6 0
+0 0 0 0
+R
+0
+#12018
+large ettin~
+A Large Ettin~
+A Large Ettin screams from both heads, looking for prey.
+~
+Both of his over-inflated heads scream with rage as they look about with a
+vicious terror to find someone, or something, to ravage. The dark grey skin
+of this monstrousity shows tears and rips all along his flank and arms. With
+another hideous scream, his wild eyes look upon you with victory.
+~
+17000 268468232 -300 Y
+42 -8 -10 10d600+7500 8d4+12
+20000 750000
+8 8 1
+59 0 0d0+0 3
+2 2 4 0
+3 3 2 0
+9 2 3 0
+0 0 0 0
+R
+0
+#12019
+ettin wife~
+The Ettin Chief's Wife~
+The Angry Ettin wife stands here, ready to hit you with her rolling pin.
+~
+This wife of the highly ranked chief, seems to be angry at the world. But
+perhaps it is only due to her husband working overtime today. Grotesque grey
+skin wrinkles and bonds with the flaps of fatty tissue hanging from her
+chest.
+~
+232 0 -1000 Y
+20 8 0 2d40+210 4d7+4
+2 40000
+8 8 2
+58 0 0d0+0 0
+0 0 0 0
+R
+0
+#12020
+ghost ettin~
+A Ghost of an Ettin~
+A ghost of an Ettin is wailing here, in a frightening way.
+~
+This ghastly ghost wails with horror at the realization that he is dead. He
+no longer holds color in his eyes, but a horribly frightening white,
+translucent hole where eyes used to be in both his heads. No longer is his
+body grey, but the pale white of the dead.
+~
+16490 98440 -1000 Y
+38 -13 -10 20d200+3500 4d7+19
+75000 600000
+8 8 1
+95 0 0d0+0 0
+0 0 0 0
+R
+0
+#12021
+ettin wizard mage ett~
+The Dark Ettin Wizard~
+The Dark Ettin Wizard utters the words 'uljdeusos' as he attacks!
+~
+An old wizard sporting long black hair looks through his books for just the
+right spell. Wearing dark robes, special made to preserve both his ugly 
+heads, it flutters and skitters across the floor with every movement he
+makes. As you look at him he turns and prepares to attack you.
+~
+148591 939557002 -1000 Y
+50 -18 -10 10d250+5300 4d14+49
+280000 1850000
+8 8 1
+1 0 0d0+0 0
+0 0 0 0
+R
+0
+#12022
+oak stoned huge~
+Huge Stoned Oak~
+A Huge Stoned Oak softly sways in the light gusts of wind.
+~
+As each gust blows by, not only does it bring bad smells, but you watch in
+amazement as each part of this tree moves in unison. As grey, and hard as 
+rock, you can't imagine what must have happened for it to be turned to this
+hard and encrusted texture. As you turn to look away, you see it yawn, and
+realize it is quite alive.
+~
+16458 32776 0 Y
+33 -13 -10 25d80+7700 4d7+25
+100000 460000
+8 8 0
+92 0 0d0+0 0
+0 0 0 0
+R
+0
+#12023
+stone big~
+Big Stone~
+Big Stone stands tall and firm, the king of his kind.
+~
+As the king of the stoned ones, his duty throughout the land is to make sure
+and preserve the message that his kind send. Once, he was a simple 
+adventurer, but by a strange twist of fate, crossed the Ettin Wizard, and
+his life has never been the same. Take heed of this warning he sends, and
+never trust a two-head monster in dark robes.
+~
+16456 295048 0 Y
+35 -13 -10 75d95+8700 4d12+45
+195000 945000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+R
+0
+#12024
+salamander sal~
+a Salamander~
+A salamander is hiding behind the trees.
+~
+This slick, green scaled creature slithers through the swamps undetected. 
+His biggest fear is those which carry the magic to sense his presence. Like
+those of the basilisk family, as he gazes deep into your eyes, you feel all
+your limbs harden, as your soul leaves your body.
+~
+16616 807239818 -1000 Y
+35 -11 -10 20d400+3600 4d14+30
+200000 810000
+8 8 1
+81 0 0d0+0 0
+0 0 0 0
+R
+0
+#12025
+huge purple worm~
+a Huge Purple Worm~
+You can see something purple hiding under the mud.
+~
+Striking purple lobes flex and expand as this treacherous worm moves within
+the mud. Its large fang shaped teeth, show that this is no ordinary worm, 
+even though its huge size gives you that impression already. Its glistening
+skin is almost translucent under your light, letting you see its many veins
+as the swell and pump its blood through its body.
+~
+16490 134512682 -900 Y
+51 -15 -10 10d100+9000 4d25+90
+275000 1000000
+8 8 1
+98 0 0d0+0 3
+5 4 2 0
+8 2 3 0
+5 3 2 0
+0 0 0 0
+R
+0
+#12026
+ancient crocodile cro~
+Ancient Crocodile~
+Something is drifting in the river... it looks like a log.
+~
+The crackled skin of this huge creature shows its ancient ridges with that
+with which to show this croc respect. Its teeth have grown to sizes unheard
+of in that but of fairy tales. With a choking feeling, you feel your body
+turn hard under his gaze, and realize your mistake at once.
+~
+16490 134512682 -1000 Y
+50 -20 -10 20d100+11000 5d25+75
+500000 1200000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+R
+0
+#12098
+shopkeeper~
+Shopkeeper~
+The Ant Shopkeeper stands here, ready to sell his goods.
+~
+~
+147535 939819144 1000 Y
+51 -28 -10 10d10+29800 90d90+100
+500000 1
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#12099
+shopkeeper~
+Shopkeeper~
+The Ant Shopkeeper stands here, ready to sell his goods.
+~
+~
+147535 939819144 1000 Y
+51 -28 -10 10d10+29800 90d90+100
+500000 1
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#0
+$~

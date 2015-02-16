@@ -1,0 +1,151 @@
+#10700
+key glowing~
+A glowing key~
+A key made of glowing stone lies here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+#10701
+key flaming~
+A flaming key~
+A key is here roaring with flames.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+#10703
+sword~
+The Sword of JuanPablo~
+A sword lies here made of a strange glowing stone.~
+~
+5 0 8193
+0 4 6 3
+15 40000 4000
+15
+A
+19 3
+A
+18 3
+#10704
+belt~
+A belt made of dragon scales~
+A belt made of scales lies here.~
+~
+9 0 2049
+10 0 0 0
+10 25000 2500
+10
+A
+12 20
+#10705
+ring pearl ring~
+a pearl ring~
+A ring covered in slime lies here.~
+invalid~
+9 79694081 3
+5 0 0 0
+8 45000 15000
+8
+A
+17 -8
+A
+18 2
+#10706
+pile coins~
+coins~
+There is a small pile of coins here.~
+~
+20 0 1
+39458 0 21 0
+10 10 10
+100
+#10707
+amulet vampire~
+A vampire's amulet~
+An amulet with a blood vial lies here.~
+~
+9 2560 5
+10 0 10 -1
+10 131313 10013
+25
+A
+19 1
+A
+9 -5
+#10708
+altar~
+an altar~
+A stone altar caked with dried blood sits here.~
+~
+13 0 0
+0 0 0 0
+99999 10 10
+100
+E
+altar~
+     This altar is cut of a rough stone that has been sanded down by
+time.  The base of the altar, although, looks cracked as iff it has
+been moved around.  Maybe if you gave it a push you could move it or knock it
+over.
+~
+#10709
+sign~
+a sign~
+A sign stands here beside the road.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+sign~
+Welcome to San JuanPablo.  The grand festival is today!
+~
+#10710
+board~
+a board~
+A loose board sticks up from the bridge and almost trips you.~
+~
+13 0 0
+0 0 0 0
+9999 10 10
+100
+#10711
+tapestry~
+a tapestry~
+A long red velvet tapestry hangs in front of you from ceiling to floor.~
+invalid~
+13 0 0
+0 0 0 0
+9999 10 10
+100
+#10712
+altar~
+an altar~
+An altar is here, revealing a trapdoor in the floor.~
+~
+13 0 0
+0 0 0 0
+99999 10 10
+100
+E
+altar~
+     This altar is cut of a rough stone that has been sanded down by
+time.  The base of the altar, although, looks cracked as iff it has
+been moved around.  Maybe if you gave it a push you could move it or knock it
+over.
+~
+#10713
+board~
+a board~
+A board has been moved, revealing a hole in the bridge.~
+~
+13 0 0
+0 0 0 0
+9999 10 10
+100
+#0
+$~

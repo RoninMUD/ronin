@@ -1,0 +1,1603 @@
+#17110
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The only exits
+are east and north.
+~
+171 0 3
+D0
+The dense jungle obscures a path to the north.
+~
+~
+0 -1 17128
+D1
+The dense jungle obscures a path to the east.
+~
+~
+0 -1 17113
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions.
+~
+S
+#17111
+Along The Clearwater River~
+The river flows slowly along here.  The water is crystal clear and
+the rocks on the bottom reflect the brilliant sunlight, making each
+and every one appear diamond-like.  On either side of the river grows
+a dense and forbidding forest.  The river runs east to west here.
+~
+171 0 7
+D1
+The clear river continues silently to the east.
+~
+~
+0 -1 17112
+E
+rocks~
+These pinpoints of light shimmer and shine from the shallows of the
+river-bottom.
+~
+E
+forest~
+Dense vegetation seems almost to choke the river on both sides.
+~
+S
+#17112
+Along The Clearwater River~
+The river flows slowly along here.  The water is crystal clear and
+the rocks on the bottom reflect the brilliant sunlight, making each
+and every one appear diamond-like.  On either side of the river grows
+a dense and forbidding forest.  The river runs east to west here.
+~
+171 0 7
+D1
+The clear river continues silently to the east.
+~
+~
+0 -1 17114
+D3
+The clear river continues silently to the west.
+~
+~
+0 -1 17111
+E
+rocks~
+These pinpoints of light shimmer and shine from the shallows of the
+river-bottom.
+~
+E
+forest~
+Dense vegetation seems almost to choke the river on both sides.
+~
+S
+#17113
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The jungle
+expands out in all directions.
+~
+171 0 3
+D0
+The dense jungle obscures a path to the north.
+~
+~
+0 -1 17129
+D1
+The dense jungle obscures a path to the east.
+~
+~
+0 -1 17127
+D2
+A small path leads south through the dense overgrowth.
+~
+~
+0 -1 17121
+D3
+The dense jungle obscures a path to the west.
+~
+~
+0 -1 17110
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions.
+~
+S
+#17114
+Along The Clearwater River~
+The river makes a sharp turn westward here after arriving from the
+north. The forest has grown higher and more dense, flooding the area
+with sinister shadows.  The water is clear and a pebbeled sand
+bottom can be seen, as well as an occasional glimpse of something
+that might be valuable.
+~
+171 0 7
+D0
+The clear river continues silently to the north.
+~
+~
+0 -1 17115
+D3
+The clear river continues silently to the west.
+~
+~
+0 -1 17112
+E
+bottom~
+The silt and sandy bottom shifts under the power and weight of the river.
+~
+S
+#17115
+Along The Clearwater River~
+The river flows sluggishly along here.  The water is crystal clear
+and the rocks lining the bottom reflect defiant sunlight, making each
+and every one appear like a diamond.  On either side of the river
+grows a dense and forbidding forest.  It's strangely quiet with only
+the soft-flowing babble of the water to keep you company.
+~
+171 0 7
+D0
+The clear river continues silently to the north.
+~
+~
+0 -1 17116
+D2
+The clear river continues silently to the south.
+~
+~
+0 -1 17114
+E
+rocks~
+These pinpoints of light shimmer and shine from the shallows of the
+river-bottom.
+~
+E
+forest~
+Dense vegetation seems almost to choke the river on both sides.
+~
+S
+#17116
+A Bend In The Clearwater River~
+The river makes a turn here coming in from the east and continuing
+south on its journey toward the Misty Swamp.  The water is crystal
+clear, revealing beautiful rounded rocks at the bottom.  A dense
+forest looms on either side of the river, forcing you to follow it.
+~
+171 0 7
+D1
+The clear river continues silently to the east.
+~
+~
+0 -1 17117
+D2
+The clear river continues silently to the south.
+~
+~
+0 -1 17115
+E
+rocks~
+These pinpoints of light shimmer and shine from the shallows of the
+river-bottom.
+~
+E
+forest~
+Dense vegetation seems almost to choke the river on both sides.
+~
+S
+#17117
+A Bend In The River~
+The river makes a sharp turn westward here after arriving from the
+north. The forest has grown higher and more dense, flooding the area
+with sinister shadows.  The water is clear and a pebbeled sand
+bottom can be seen, as well as an occasional glimpse of something
+that might be valuable.
+~
+171 0 7
+D0
+The clear river continues silently to the north.
+~
+~
+0 -1 17118
+D3
+The clear river continues silently to the west.
+~
+~
+0 -1 17116
+E
+bottom~
+The silt and sandy bottom shifts under the power and weight of the river.
+~
+S
+#17118
+A Bend In The Clearwater River~
+The river makes a turn here coming in from the east and continuing
+south on its journey toward the Misty Swamp.  The water is crystal
+clear, revealing beautiful rounded rocks at the bottom.  A dense
+forest looms on either side of the river, forcing you to follow it.
+~
+171 4 7
+D1
+The clear river continues silently to the east.
+~
+~
+0 -1 17119
+D2
+The clear river continues silently to the south.
+~
+~
+0 -1 17117
+E
+rocks~
+These pinpoints of light shimmer and shine from the shallows of the
+river-bottom.
+~
+E
+forest~
+Dense vegetation seems almost to choke the river on both sides.
+~
+S
+#17119
+An Intersection With The Servos River~
+At this intersection, the river grows deeper.  From the north, the
+Servos River joins the Clearwater on its journey through the forest.
+The wildlife seems to have picked up and every now and then, you can
+see a monkey swinging gleefully across the branches of the huge
+trees. The Clearwater River continues east and west, while the
+Servos River leads the way to the north.
+~
+171 0 7
+D0
+The Servos River leads onward to the north among tree-lined riverbanks.
+~
+~
+0 -1 17120
+D3
+The Clearwater River leads further to the west.
+~
+~
+0 -1 17118
+S
+#17120
+The Servos River~
+The river flows along gently here.  The water runs very deep and no
+bottom can be seen.  The trees growing on the riverbanks are huge
+and stretch their branches out over the river.  Fish periodically
+jump out of the water and the occasional monkey swings itself across
+the branches of the trees.  The river continues north and south.
+~
+171 0 7
+D0
+The river flows silently to the north toward a bend.
+~
+~
+0 -1 17121
+D2
+The river flows into a larger one in an intersection to the south.
+~
+~
+0 -1 17119
+E
+trees~
+They tower and expand on both sides of the river, blotting out the sun.
+~
+S
+#17121
+Entrance To The Servos Jungle~
+The river makes a sharp turn south, arriving from the east.  To the
+north, a discreet path leads through the brush and into the deep
+jungle. The animal life has picked up as you near the jungle, and
+monkeys hang down from the vines and branches, staring intently
+at you.
+~
+171 4 7
+D0
+A beaten path leads among the brush and into the dense jungle.
+~
+~
+0 -1 17113
+D1
+The Servos River leads on into the east.
+~
+~
+0 -1 17122
+D2
+The Servos River leads on toward an intersection in the south.
+~
+~
+0 -1 17120
+S
+#17122
+The Servos River~
+The river flows along gently here.  The water runs very deep and no
+bottom can be seen.  The trees growing on the riverbanks are huge
+and stretch their branches out over the river.  Fish periodically
+jump out of the water and the occasional monkey swings itself across
+the branches of the trees.  The river continues east and west.
+~
+171 0 7
+D1
+The river flows silently between the trees.
+~
+~
+0 -1 17123
+D3
+The river flows silently between the trees.
+~
+~
+0 -1 17121
+E
+trees~
+They tower and expand on both sides of the river, blotting out the sun.
+~
+S
+#17123
+The Servos River~
+The river flows along gently here.  The water runs very deep and no
+bottom can be seen.  The trees growing on the riverbanks are huge
+and stretch their branches out over the river.  Fish periodically
+jump out of the water and the occasional monkey swings itself across
+the branches of the trees.  The river continues east and west.
+~
+171 0 7
+D1
+The river flows silently between the trees.
+~
+~
+0 -1 17124
+D3
+The river flows silently between the trees.
+~
+~
+0 -1 17122
+E
+trees~
+They tower and expand on both sides of the river, blotting out the sun.
+~
+S
+#17124
+The Servos River~
+The river flows along gently here.  The water runs very deep and no
+bottom can be seen.  The trees growing on the riverbanks are huge
+and stretch their branches out over the river.  Fish periodically
+jump out of the water and the occasional monkey swings itself across
+the branches of the trees.  The river continues west and north.
+~
+171 0 7
+D0
+The river flows silently between the trees.
+~
+~
+0 -1 17125
+D3
+The river flows silently between the trees.
+~
+~
+0 -1 17123
+E
+trees~
+They tower and expand on both sides of the river, blotting out the sun.
+~
+S
+#17125
+The Servos River~
+The river flows along gently here.  The water runs very deep and no
+bottom can be seen.  The trees growing on the riverbanks are huge
+and stretch their branches out over the river.  Fish periodically
+jump out of the water and the occasional monkey swings itself across
+the branches of the trees.  The river continues north and south.
+~
+171 0 7
+D0
+The river flows silently between the trees.
+~
+~
+0 -1 17126
+D2
+The river flows silently between the trees.
+~
+~
+0 -1 17124
+E
+trees~
+They tower and expand on both sides of the river, blotting out the sun.
+~
+S
+#17126
+The Servos River~
+The river flows along gently here.  The water runs very deep and no
+bottom can be seen.  The trees growing on the riverbanks are huge
+and stretch their branches out over the river.  Fish periodically
+jump out of the water and the occasional monkey swings itself across
+the branches of the trees.  The river runs north between thick,
+dense trees and underbrush, making any passage impossible.
+~
+171 0 7
+D2
+The river flows silently between the trees.
+~
+~
+0 -1 17125
+E
+trees~
+They tower and expand on both sides of the river, blotting out the sun.
+~
+S
+#17127
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The only exits
+are north and west.
+~
+171 0 3
+D0
+The dense jungle obscures a path to the north.
+~
+~
+0 -1 17130
+D3
+The dense jungle obscures a path to the west.
+~
+~
+0 -1 17113
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions.
+~
+S
+#17128
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The jungle
+expands out to the east.
+~
+171 0 3
+D0
+The dense jungle obscures a path to the north.
+~
+~
+0 -1 17131
+D1
+The dense jungle obscures a path to the east.
+~
+~
+0 -1 17129
+D2
+The dense jungle obscures a path to the south.
+~
+~
+0 -1 17110
+D5
+A dense pile of brush almost seems to have been placed here on purpose.
+~
+brush~
+8 -1 17195
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions with a
+conspicuous pile of brush spread about on the ground before you.
+~
+E
+brush~
+A dense pile of brush has been spread to cover a hole in the ground.
+~
+S
+#17129
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The jungle
+expands out in all directions from here.
+~
+171 0 3
+D0
+The dense jungle obscures a path to the north.
+~
+~
+0 -1 17132
+D1
+The dense jungle obscures a path to the east.
+~
+~
+0 -1 17130
+D2
+The dense jungle obscures a path to the south.
+~
+~
+0 -1 17113
+D3
+The dense jungle obscures a path to the west.
+~
+~
+0 -1 17128
+D5
+A dense pile of brush almost seems to have been placed here on purpose.
+~
+brush~
+8 -1 17196
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions with a
+conspicuous pile of brush spread about on the ground before you.
+~
+E
+brush~
+A dense pile of brush has been spread to cover a hole in the ground.
+~
+S
+#17130
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The jungle
+expands out to the west.
+~
+171 0 3
+D0
+The dense jungle obscures a path to the north.
+~
+~
+0 -1 17133
+D2
+The dense jungle obscures a path to the south.
+~
+~
+0 -1 17127
+D3
+The dense jungle obscures a path to the west.
+~
+~
+0 -1 17129
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions.
+~
+S
+#17131
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The only exits
+are south and east.
+~
+171 0 3
+D1
+The dense jungle obscures a path to the east.
+~
+~
+0 -1 17132
+D2
+The dense jungle obscures a path to the south.
+~
+~
+0 -1 17128
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions.
+~
+S
+#17132
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The jungle
+expands in all directions with a rumbling coming from the north.
+~
+171 0 3
+D0
+A spray of fresh water and the roar of a waterfall drifts from the north.
+~
+~
+0 -1 17193
+D1
+The dense jungle obscures a path to the east.
+~
+~
+0 -1 17133
+D2
+The dense jungle obscures a path to the south.
+~
+~
+0 -1 17129
+D3
+The dense jungle obscures a path to the west.
+~
+~
+0 -1 17131
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions.
+~
+S
+#17133
+The Servos Jungle~
+Here the jungle is thick and full of life.  Vines hang down
+haphazardly from languid tree-branches among which lizards and
+birds scatter and buzz constantly.  Now and then, the odd roar or
+shriek is heard, and the underbrush seems to move as well as the
+thornbushes that cover the trunks of huge trees.  The only exits
+are west and south.
+~
+171 0 3
+D2
+The dense jungle obscures a path to the south.
+~
+~
+0 -1 17130
+D3
+The dense jungle obscures a path to the west.
+~
+~
+0 -1 17132
+E
+vines~
+Thick, winding vines droop from various branches, swaying with life.
+~
+E
+thornbushes~
+Giant spikes jut out in a chaotic jumble of bushes at the base of
+each tree.
+~
+E
+underbrush~
+The dense foliage blooms and spreads in all directions.
+~
+S
+#17160
+Inside The Gate Of The Floating City~
+You are standing inside a huge wooden gate.  To your south,
+a city stretches out.  A street made entirely from seaweed
+winds south.  The air is stale, and an eerie silence rests
+upon the city.  Now and then, you can pick up some strange
+muttering of words from somewhere.
+~
+171 0 1
+D2
+The seaweed street meanders onward to the south.
+~
+~
+0 -1 17161
+E
+gate~
+A worn and weathered gate stands at the center of the granite wall.
+~
+S
+#17161
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  To the south, a large tower of woven
+seaweed arises.  A solid iron door prevents unwanted beings
+from entering.  The street heads off to the north and west.
+~
+171 0 1
+D0
+The seaweed street continues to the north toward a great wall.
+~
+~
+0 -1 17160
+D1
+~
+~
+0 -1 17171
+D2
+A door leads into a giant tower of seaweed.
+~
+door~
+1 -1 17172
+D3
+The seaweed street continues to the west.
+~
+~
+0 -1 17162
+E
+door~
+A square slab of iron has been painstakingly beaten into the
+ominous door standing before you.
+~
+E
+tower~
+At the center of the floating city, the seaweed tower dwarfs
+its surroundings.
+~
+S
+#17162
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  The seaweed street continues north and
+east.
+~
+171 0 1
+D0
+The seaweed street continues to the north.
+~
+~
+0 -1 17163
+D1
+The seaweed street continues to the east.
+~
+~
+0 -1 17161
+D2
+~
+~
+0 -1 17164
+S
+#17163
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  A large tower made entirely from black
+rock stands to your west.  The street goes south from here.
+~
+171 0 1
+D2
+The seaweed street continues to the south.
+~
+~
+0 -1 17162
+D3
+An entrance to a black tower lies in the west.
+~
+~
+0 -1 17178
+S
+#17164
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  To the east, a huge tower made from woven
+seaweed stands.  A wrought-iron door prevents unwanted beings
+from entering.  The seaweed street winds southward.
+~
+171 0 1
+D0
+~
+~
+0 -1 17162
+D1
+A door leads into a giant tower of seaweed.
+~
+door~
+1 -1 17172
+D2
+The seaweed street continues to the south.
+~
+~
+0 -1 17165
+E
+door~
+A square slab of iron has been painstakingly beaten into the
+ominous door standing before you.
+~
+E
+tower~
+At the center of the floating city, the seaweed tower dwarfs
+its surroundings.
+~
+S
+#17165
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  A large tower made from grey rock stands
+to your west.  The seaweed street meanders to the north.
+~
+171 0 1
+D0
+The seaweed street continues to the north.
+~
+~
+0 -1 17164
+D1
+~
+~
+0 -1 17166
+D3
+An entrance to a grey tower lies in the west.
+~
+~
+0 -1 17181
+S
+#17166
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  To your north, a large tower made from
+seaweed stands defiantly.  A wrought-iron door blocks any
+entrance within.  The seaweed street continues east.
+~
+171 0 1
+D0
+A door leads into a giant tower of seaweed.
+~
+door~
+1 -1 17172
+D1
+The seaweed street continues to the east.
+~
+~
+0 -1 17167
+D3
+~
+~
+0 -1 17165
+E
+door~
+A square slab of iron has been painstakingly beaten into the
+ominous door standing before you.
+~
+E
+tower~
+At the center of the floating city, the seaweed tower dwarfs
+its surroundings.
+~
+S
+#17167
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  A towering spire made from blue marble
+stands to your south, while the seaweed street continues
+into the west.
+~
+171 0 1
+D0
+~
+~
+0 -1 17168
+D2
+~
+~
+0 -1 17169
+D3
+The seaweed street continues to the west.
+~
+~
+0 -1 17166
+S
+#17168
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  A large tower made entirely from woven
+seaweed arises to the west.  A wrought-iron door keeps any
+strangers away.  The street winds to the north and east.
+~
+171 0 1
+D0
+~
+~
+0 -1 17171
+D2
+~
+~
+0 -1 17167
+D3
+A door leads into a giant tower of seaweed.
+~
+door~
+1 -1 17172
+E
+door~
+A square slab of iron has been painstakingly beaten into the
+ominous door standing before you.
+~
+E
+tower~
+At the center of the floating city, the seaweed tower dwarfs
+its surroundings.
+~
+S
+#17169
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  A giant oak stands at a dead-end to
+your north, and a seemingly magical archway grants passage
+within the tree.  The street winds south toward an intersection.
+
+~
+171 0 0
+D0
+~
+~
+0 -1 17167
+D1
+~
+~
+0 -1 17184
+S
+#17171
+A Seaweed Street~
+The street you are standing on is made entirely from seaweed
+woven together to create a hard surface.  A chilly draft
+caresses your face and the pungent odor of sulfur stings your
+nose. It is very quiet and only a faint muttering can be
+heard now and then.  A huge tower carved from white marble
+arises to the east, while the street continues south.
+~
+171 0 1
+D1
+~
+~
+0 -1 17190
+D2
+~
+~
+0 -1 17168
+D3
+~
+~
+0 -1 17161
+S
+#17172
+The Ground Floor Of The Seaweed Tower~
+As you enter the vestibule within the tower, you are enveloped
+within the cool salty-air atmosphere.  The walls are decorated
+with various carvings in archaic design and chairs line the
+perimeter, each a perfect distance and position from the center.
+A circular receptionist's desk lies directly in the middle, but
+no one seems to be around.  Large iron doors lead out in every
+direction to other sections of the city.
+~
+171 136 1
+D0
+A wrought-iron door leads out from the tower of seaweed.
+~
+door~
+1 -1 17161
+D1
+A wrought-iron door leads out from the tower of seaweed.
+~
+door~
+1 -1 17168
+D2
+A wrought-iron door leads out from the tower of seaweed.
+~
+door~
+1 -1 17166
+D3
+A wrought-iron door leads out from the tower of seaweed.
+~
+door~
+1 -1 17164
+D4
+The ceiling curves away from a trapdoor set in the center.
+~
+trapdoor~
+2 17114 17173
+E
+desk~
+A smooth-top, perfectly round desk occupies a large portion
+of the center of the room.  Papers and supplies clutter up
+most of it, except for a thin section in front of a chair.
+~
+E
+carvings~
+These carvings appear to be in the t'skrang dialect, an ancient
+language used now only by the dragonkine elders.
+~
+E
+chairs~
+Several chairs line the wall around you, each plush with
+leather and seemingly unused.  They shine with new polish.
+~
+E
+trapdoor~
+At the top of the dome-shaped ceiling, a narrow trapdoor is set.
+~
+S
+#17173
+The First Floor Of The Seaweed Tower~
+Tables and chairs lay scattered across the room.  It seems that
+a huge battle went on inside the tower walls.  Sweeping burnmarks
+cover the walls and pieces of charred furniture lie strewn about,
+some still smoking.  A chandelier dangles from a trapdoor in the
+ceiling while another trapdoor leading down is barely visible
+beneath the jagged fragments of wood.
+~
+171 136 0
+D4
+A trapdoor leads further up the tower.
+~
+trapdoor~
+2 17115 17174
+D5
+A trapdoor leads further down the tower.
+~
+trapdoor~
+2 17114 17172
+E
+burnmarks~
+Charred and smoking holes appear at random on the walls around you,
+evidence of dragonkine anger.
+~
+E
+chandelier~
+A brass chandelier hangs askew from a trapdoor above.
+~
+S
+#17174
+The Second Floor Of The Seaweed Tower~
+Tables and chairs lay scattered across the room.  It seems that
+a huge battle went on inside the tower walls.  Sweeping burnmarks
+cover the walls and pieces of charred furniture lie strewn about,
+some still smoking.  A chandelier dangles from a trapdoor in the
+ceiling while another trapdoor leading down is barely visible
+beneath the jagged fragments of wood.
+~
+171 136 0
+D4
+A trapdoor leads further up the tower.
+~
+trapdoor~
+2 17116 17175
+D5
+A trapdoor leads further down the tower.
+~
+trapdoor~
+2 17115 17173
+E
+burnmarks~
+Charred and smoking holes appear at random on the walls around you,
+evidence of dragonkine anger.
+~
+E
+chandelier~
+A brass chandelier hangs askew from a trapdoor above.
+~
+S
+#17175
+The Third Floor Of The Seaweed Tower~
+Tables and chairs lay scattered across the room.  It seems that
+a huge battle went on inside the tower walls.  Sweeping burnmarks
+cover the walls and pieces of charred furniture lie strewn about,
+some still smoking.  A chandelier dangles from a trapdoor in the
+ceiling while another trapdoor leading down is barely visible
+beneath the jagged fragments of wood.
+~
+171 136 0
+D4
+A trapdoor leads further up the tower.
+~
+trapdoor~
+2 17117 17176
+D5
+A trapdoor leads further down the tower.
+~
+trapdoor~
+2 17116 17174
+E
+burnmarks~
+Charred and smoking holes appear at random on the walls around you,
+evidence of dragonkine anger.
+~
+E
+chandelier~
+A brass chandelier hangs askew from a trapdoor above.
+~
+S
+#17176
+The Fourth Floor Of The Seaweed Tower~
+Tables and chairs lay scattered across the room.  It seems that
+a huge battle went on inside the tower walls.  Sweeping burnmarks
+cover the walls and pieces of charred furniture lie strewn about,
+some still smoking.  A chandelier dangles from a trapdoor in the
+ceiling while another trapdoor leading down is barely visible
+beneath the jagged fragments of wood.  The sick, pungent odor
+of sulfur and blood drifts down from above.
+~
+171 136 0
+D4
+A charred trapdoor leads up within the smoke.
+~
+trapdoor~
+2 17118 17177
+D5
+A trapdoor leads further down the tower.
+~
+trapdoor~
+2 17117 17175
+E
+burnmarks~
+Charred and smoking holes appear at random on the walls around you,
+evidence of dragonkine anger.
+~
+E
+chandelier~
+A brass chandelier hangs askew from a trapdoor above.
+~
+S
+#17177
+Saulot's Chamber~
+  A large oak table is situated in the middle of this smoke-
+filled room, supporting various potions and mechanical devices.
+Four chairs have been meticulously placed around the perimeter
+of the table.  Lining the walls are giant shelves with dusty
+books scattered about, a trove of knowledge unheard of in these
+dark times.  The floor is immaculately clean except for a pile
+of ash smoldering in the corner.  Heat ripples off in waves
+from the glowing figure behind the desk.
+~
+171 8 0
+D4
+~
+~
+0 -1 17198
+D5
+~
+trapdoor~
+2 17118 17176
+S
+#17178
+The Tower of Fire~
+  This tower has been made entirely from volcanic rock. The walls arise
+like looming black shadows. The air is damp and hot and small pieces of
+glowing coal have been placed along the walls to provide light. Fiery
+torches burn along the railway to a staircase leading up.
+~
+171 8 0
+D1
+~
+~
+0 -1 17163
+D4
+~
+~
+0 -1 17179
+S
+#17179
+The Tower of Fire~
+   This tower has been made entirely from volcanic rock. The walls arise
+like looming black shadows. The air is damp and hot and small pieces of
+glowing coal have been placed along the walls to provide light. Fiery  
+torches burn along the railway to a staircase leading up and down.
+~
+171 12 0
+D4
+~
+~
+0 -1 17180
+D5
+~
+~
+0 -1 17178
+S
+#17180
+The Top of The Tower of Fire~
+  You are standing at the top of the tower. The ceiling is dome shaped
+and covered with beautiful carvings. In the center of the room a huge
+black rock has been placed. On top of the rock flickers a red hot flame.
+The light from the flame gives the black rock a bluish tone. The walls of
+the room are covered with arcane symbols most of them look like wardings.
+A crude stairway leads down.
+~
+171 8 0
+D5
+~
+~
+0 -1 17179
+S
+#17181
+The Tower of Earth~
+  You are standing inside a large structure made entirely from rock. The
+walls are rough and uneven, and hanging on them are heavy looking
+torches. A large stairway leads up while an archway leads east into the 
+seaweed street.
+~
+171 12 0
+D1
+~
+~
+0 -1 17165
+D4
+~
+~
+0 -1 17182
+S
+#17182
+The Tower of Earth~
+  You are standing inside a large structure made entirely from rock. The
+walls are rough and uneven, and hanging on them are heavy looking
+torches. A large stairway leads up and down
+~
+171 12 0
+D4
+~
+~
+0 -1 17183
+D5
+~
+~
+0 -1 17181
+S
+#17183
+The Top of The Tower of Earth~
+  This is the top of the tower although it looks more like a large
+underground cave. The walls are covered with a faintly glowing fungus
+creating an eerie orange light. Some crude carvings can bee seen along
+the walls mostly resembling underground creatures. Large stalagmites hang
+down from the ceiling. A huge rock stairway leads down.
+~
+171 8 0
+D5
+~
+~
+0 -1 17182
+S
+#17184
+The Tower of Water~
+  The air is moist and cold inside this blue marble tower. Water runs
+along the walls and covers most of the floor. Carvings of fish and
+fishing equipment, mostly nets, cover the walls. A large waveshaped  
+stairway leads up while a large archway leads out to the north.
+~
+171 8 0
+D3
+~
+~
+0 -1 17169
+D4
+~
+~
+0 -1 17185
+S
+#17185
+The Tower of Water~
+  The air is moist and cold inside this blue marble tower. Water runs
+along the walls and covers most of the floor. Carvings of fish and
+fishing equipment, mostly nets, cover the walls. A large waveshaped  
+stairway leads up and down.
+~
+171 12 0
+D4
+~
+~
+0 -1 17186
+D5
+~
+~
+0 -1 17184
+S
+#17186
+The Top of The Tower of Water~
+  The top floor of the blue marble tower is quite a view. A large round
+pool has been placed in the middle of the room. In the middle of it
+stands a beautiful fountain. The walls and ceiling are covered with  
+carvings of strange mythical sea creatures. A large marble staircase
+leads down.
+~
+171 8 0
+D5
+~
+~
+0 -1 17185
+S
+#17190
+The Tower of Air~
+  The skyblue marble walls of this tower are magically enchanted so that
+it seems like clouds drift along them. A sweet warming breeze rolls
+through the room. A marble staircase leads up while a beautiful archway 
+leads westwards into the street.
+~
+171 8 0
+D3
+~
+~
+0 -1 17171
+D4
+~
+~
+0 -1 17191
+S
+#17191
+The Tower of Air~
+  The skyblue marble walls of this tower are magically enchanted so that 
+it seems like clouds drift along them. A sweet warming breeze rolls
+through the room. A marble staircase leads up and down.
+~
+171 12 0
+D4
+~
+~
+0 -1 17192
+D5
+~
+~
+0 -1 17190
+S
+#17192
+The Top of The Tower of Air~
+  This is the roof of the tower of white marble. The floor below you
+seems to swirl and move. Large statues of tornadoes have been but in each
+corner of the roof. The each have a name acording to the celectial
+direction they have from the center of the roof. A large marble staircase
+leads down.
+~
+171 8 0
+D5
+~
+~
+0 -1 17191
+S
+#17193
+The Griffin Falls~
+You reach a spot in the jungle where its true beauty is finally
+revealed. A gargantuan waterfall roars down from a cliff and into
+a placid, clear lake.  An ancient oak towers overhead in the north,
+its branches stretching far to caress the water below.  A large
+nest resides among the leaves in the upper branches of the oak.
+The relentless jungle continues to the south.
+~
+171 4 3
+D0
+A solid wall of oak lie directly before you, the enormous trunk of
+an ancient tree.  Some of the bark on one side hangs loosely.
+~
+bark~
+8 -1 17194
+D2
+A dense and humid jungle barely conceals a path leading south.
+~
+~
+0 -1 17132
+E
+waterfall~
+A glorious spectacle of water and gravity, it flows constantly
+down the cliff and into the lake, roaring with intense power.
+~
+E
+lake~
+The lake shimmers with a light of its own, beckoning attention.
+~
+E
+oak~
+A towering tree that has survived throughout the eons,
+providing shade for roughly half of the giant lake.
+~
+E
+nest~
+The nest appears to be large enough to house several eaglets.
+~
+E
+bark~
+This flap of bark appears to barely hang from the trunk.
+~
+S
+#17194
+Inside The Tree Trunk~
+You are standing within the trunk of the ancient oak.  A large
+room has been painstakingly carved out of the inside.  The floor
+is littered with bones, mostly human, but some dragon-like
+craniums can be found among the debris.  A foul stench of rot
+and decay assails your nostrils as you struggle to breathe,
+and a vibrato roar echoes within.
+~
+171 9 0
+D2
+A crack of light lines a scrap of bark hanging to the south.
+~
+bark~
+8 -1 17193
+E
+bark~
+This flap of bark appears to be barely attached to the tree.
+~
+E
+bones~
+An assortment of skeletal forms have been picked clean and left
+to dry in the dirt.
+~
+E
+craniums~
+They appear to be the skulls of less-fortunate and a certainly
+weaker species of dragon.
+~
+S
+#17195
+In A Jungle Trap~
+You find yourself standing in a large hole dug into the ground.
+Remains of dead creatures lie scattered about the floor and large
+wooden spears have been placed all along the walls in order to
+prevent animals from escaping.  They might be useful to you for
+climbing out of there, though.
+~
+171 589833 0
+D4
+The mouth of the pit appears to be lined with spears and bits
+of brush and leaves used as camouflage.
+~
+spears~
+11 -1 17128
+E
+spears~
+A volley of particularly sharp-looking spears protrude from the walls,
+dripping blood and gore.
+~
+E
+remains~
+Rotting corpses and body parts are strewn about in various stages
+of decay.
+~
+S
+#17196
+In A Jungle Trap~
+You find yourself standing in a large hole dug into the ground.
+Remains of dead creatures lie scattered about the floor and large
+wooden spears have been placed all along the walls in order to
+prevent animals from escaping.  They might be useful to you for
+climbing out of there, though.
+~
+171 655369 0
+D4
+The mouth of the pit appears to be lined with spears and bits
+of brush and leaves used as camouflage.
+~
+spears~
+11 -1 17129
+E
+spears~
+A volley of particularly sharp-looking spears protrude from the walls,
+dripping blood and gore.
+~
+E
+remains~
+Rotting corpses and body parts are strewn about in various stages
+of decay.
+~
+S
+#17197
+Aboard a Pirate Marauder~
+  You are standing midship on this large river vessel. The air is fresh
+and a cool breeze runs through your hair. To the east there's a
+large wooden door and to the west the bow stretches out. Now and then
+creaking noises come from the vessel as well as the constant shouting from   
+the pirates. A large rope ladder leads down into the river.
+~
+171 0 2
+D1
+~
+door~
+1 -1 17199
+E
+ladder~
+A shoddy rope ladder has been attached hastily to the side
+of the galleon, allowing access to the river.
+~
+S
+#17198
+The Dark Altar of Magic~
+A temporary description
+~
+171 0 0
+D5
+~
+~
+0 -1 17177
+S
+#17199
+Inside The Pirate Marauder~
+  A large table stands in the middle of the room. Chairs and benches line
+it. A large map has been placed onthe table along with some bottles of  
+wine and a barrel of ale. The stench here is horrible and unbearing. A  
+large treasure chest stands in one corner. A wooden door leads out.
+~
+171 8 0
+D3
+~
+door~
+1 -1 17197
+S
+#0
+$~

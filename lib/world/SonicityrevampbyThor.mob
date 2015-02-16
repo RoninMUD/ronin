@@ -1,0 +1,203 @@
+#8001
+sheriff deputy guard~
+A Deputy Sheriff of Sonicity~
+A Deputy Sheriff is here, protecting his city.
+~
+     He is a Deputy Sheriff of Sonicity.  He is patrolling the city for
+theives and vagrants, for it is his duty to keep the city clean of
+unwanted trash.  ~
+201 0 500 Y
+10 10 1 10d3+150 2d7+1
+1750 15000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8002
+brave quester~
+A Brave Quester~
+A brave quester is here, pursuing fame.
+~
+     A brave quester stands before you, trying to earn a name for himself.
+He wants to vanguish evil so that he can earn his fame a fortune, and
+happiness among the beautiful maidens whom he plans to rescue.
+~
+72 0 500 Y
+8 12 6 10d3+80 2d7+1
+500 12000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8003
+sheriff constable guard~
+The Sonicity Sheriff~
+The Sonicity Sheriff is here, guarding the prison.
+~
+     A very large man wearing a sheriff's badge stands before you.  His chest
+must be the size of a barrel.  He could probably kill a bear with his bare
+hands.  His job is to protect Sonicity and keep it safe for its inhabitants.
+~
+10 8 1000 Y
+20 0 -2 10d3+1000 6d3+4
+2000 60000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8004
+prisoner~
+A Prisoner~
+A disgusting and ugly man is standing here.
+~
+     This shabby person has been imprisoned for years, on a diet of
+nothing but bread and water.  He is not very happy about being
+imprisoned, and wishes only to gain his freedom by means possible.
+~
+42 1048584 -1000 Y
+15 5 0 10d3+150 6d2+5
+5 7000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8005
+odey~
+Odey~
+Odey is standing here.
+~
+     Odey is very dangerous.  He has killed many people and earned
+a reputation of a ruthless killer.  The glint in his eyes sends a
+shiver running down you back.  Maybe leaving would be a good idea.
+~
+131115 128 -1000 Y
+25 -3 -3 100d3+2500 10d2+25
+5 150000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8006
+golem stone huge~
+A Huge Stone Goldem~
+A Huge Stone Golem is standing here.
+~
+     A Huge Stone Golem stands before you, seven feet tall.
+He was born from the bowels of moether earth.  He is strong
+and powerful.  As you gaze at him he picks up a rock and
+shatters it with his bare hands.
+~
+10 0 500 Y
+20 1 3 10d3+900 9d2+3
+1000 60000
+8 8 1
+79 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8007
+shopkeeper weaponsmith smith~
+The Sonicity Weaponsmith~
+The Sonicity Weaponsmith stands he anxiously waiting for you to buy something.
+~
+     A strong man with course brown hair stands before you.  He is gruff and
+tells you to go away if you aren't going to buy anything, because he says he
+has better things to do.  He grunts.  So...are you going to buy anything?!?!
+~
+10 134217856 500 Y
+23 0 0 10d3+3000 10d2+5
+20000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8008
+restaurant waiter~
+The Restaurant's Waiter~
+A Restaurant Waiter is standing here, ready to take your order.
+~
+     A skinny, hard working man stands before you, smiling.  He is eager and
+diligent.  He is waiting for you to make up your mind so that he can take
+your order.  ~
+10 134217856 500 Y
+20 0 0 10d3+4500 10d2+5
+5000 70000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8009
+shopkeeper blacksmith smith~
+The Sonicity Blacksmith~
+The Sonicity Blacksmith is here, working hard.
+~
+     He is a middle-aged man with the wear of the years showing in his eyes.
+He wears a brown leather apron and heavy leather gloves.  He smiles at you and
+you notice several missing teeth.  Nonetheless, he is an excellent smith and
+offers fine merchandise.  ~
+10 134217856 500 Y
+23 0 0 10d3+3000 10d2+5
+20000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8010
+shopkeeper~
+The Sonicity General Store Shopkeeper~
+The Sonicity General Store Shopkeeper is here, watching over his store.
+~
+     A small burly man sits on his stool in front of you.  His hair is gray
+and shaggy.  He glances up and smiles gently, then asks you if you need any
+assistance.  ~
+10 134217856 500 Y
+23 0 0 10d3+3000 10d2+5
+20000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8011
+restaurant guard bouncer~
+A Restaurant Guard~
+A Restaurant Guard is standing here, protecting the restaurant.
+~
+     A large, burly man stands before you.  He has been assigned to watch
+over the restaurant because recently several patrons and waiters have been
+injured in brawls.  It would not be recommended to start any trouble today.
+~
+15 136 500 Y
+25 -3 -10 10d3+4000 20d1+5
+1000 150000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8012
+shopkeeper magician~
+The Sonicity Magician~
+The Sonicity Magician stands behing the counter, mixing potions.
+~
+     A small man with a long white beard stands in front of you.  He appears
+both knowledgeable and friendly.  If you have any questions, you can ask him
+for help.  ~
+10 134217856 500 Y
+23 0 0 10d3+3000 10d2+5
+20000 90000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

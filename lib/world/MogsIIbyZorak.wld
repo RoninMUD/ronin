@@ -1,0 +1,586 @@
+#19800
+Among the branches of the gigantic tree~
+  You easily climb through the humongous branches of this tree, the top
+of which you cannot see through the dense kudzu and native foliage of this
+tree and its various parasites. Strange fungi grow like a stairway along
+the massive trunk, emitting a strange, misty stream of spores in a pollen-
+like cloud, which drifts through the branches and leaves, lending an
+eerie atmosphere to this tree. You hear much rustling with every move
+you make, as though something were scurrying to avoid your gaze.
+~
+198 0 0
+D4
+~
+~
+0 -1 19801
+D5
+~
+~
+0 -1 917
+S
+#19801
+Among the branches of the Gigantic Tree~
+  You easily climb through the humongous branches of this tree, the top
+of which you cannot see through the dense kudzu and native foliage of this
+tree and its various parasites. Strange fungi grow like a stairway along
+the massive trunk, emitting a strange, misty stream of spores in a pollen-
+like cloud, which drifts through the branches and leaves, lending an
+eerie atmosphere to this tree. You hear much rustling with every move
+you make, as though something were scurrying to avoid your gaze.
+~
+198 0 0
+D4
+~
+~
+0 -1 19802
+D5
+~
+~
+0 -1 19800
+S
+#19802
+Among the branches of the Gigantic Tree~
+  You easily climb through the humongous branches of this tree, the top
+of which you cannot see through the dense kudzu and native foliage of this
+tree and its various parasites. Strange fungi grow like a stairway along
+the massive trunk, emitting a strange, misty stream of spores in a pollen-
+like cloud, which drifts through the branches and leaves, lending an
+eerie atmosphere to this tree. You hear much rustling with every move
+you make, as though something were scurrying to avoid your gaze.
+~
+198 0 0
+D4
+~
+~
+0 -1 19803
+D5
+~
+~
+0 -1 19801
+S
+#19803
+Among the Branches of the gigantic Tree~
+  You easily climb through the humongous branches of this tree, the top
+of which you cannot see through the dense kudzu and native foliage of this
+tree and its various parasites. Strange fungi grow like a stairway along
+the massive trunk, emitting a strange, misty stream of spores in a pollen-
+like cloud, which drifts through the branches and leaves, lending an
+eerie atmosphere to this tree. You hear much rustling with every move
+you make, as though something were scurrying to avoid your gaze.
+~
+198 0 0
+D4
+~
+~
+0 -1 19804
+D5
+~
+~
+0 -1 19802
+S
+#19804
+In the Canopy~
+  The thick, green foliage of the canopy of this tree surrounds you on
+all sides, a strange emerald light filtering through the spore clouds and
+the mist here, glimmering off of raindrops collected on the spoon-shaped
+leaves of the tree. Timid canopy-dwellers peek at you from behind branches
+and around the much thinner trunk here.
+~
+198 0 0
+D0
+~
+~
+0 -1 19807
+D1
+~
+~
+0 -1 19805
+D2
+~
+~
+0 -1 19808
+D3
+~
+~
+0 -1 19806
+D4
+~
+~
+0 -1 19813
+D5
+~
+~
+0 -1 19803
+S
+#19805
+In the Canopy~
+  A thick, wet mist clouds the air here, making everything appear very 
+ethereal and otherworldly. The leaves droop with wetness, and the air is
+clear of the thick spore-clouds which have been plagueing your sinuses.
+Small tree-frogs, insects, and marsupials stop their activities for a
+brief moment to stare at you in goggle-eyed wonder, deciding whether or not
+you are a threat to them. The branches thin out to your east, making travel
+there impossible.
+~
+198 0 0
+D0
+~
+~
+0 -1 19812
+D2
+~
+~
+0 -1 19809
+D3
+~
+~
+0 -1 19804
+S
+#19806
+In the Canopy~
+  A thick, wet mist clouds the air here, making everything appear very
+ethereal and otherworldly. The leaves droop with wetness, and the air is
+clear of the thick spore-clouds which have been plagueing your sinuses.
+Small tree-frogs, insects, and marsupials stop their activities for a 
+brief moment to stare at you in goggle-eyed wonder, deciding whether or not
+you are a threat to them. The branches thin out to your west, making travel
+there impossible.
+~
+198 0 0
+D0
+~
+~
+0 -1 19811
+D1
+~
+~
+0 -1 19804
+D2
+~
+~
+0 -1 19810
+D4
+~
+~
+0 -1 19816
+S
+#19807
+In the Canopy~
+  A thick, wet mist clouds the air here, making everything appear very
+ethereal and otherworldly. The leaves droop with wetness, and the air is
+clear of the thick spore-clouds which have been plagueing your sinuses.
+Small tree-frogs, insects, and marsupials stop their activities for a
+brief moment to stare at you in goggle-eyed wonder, deciding whether or not
+you are a threat to them. The branches thin out to your north, making travel
+there impossible.
+~
+198 0 0
+D1
+~
+~
+0 -1 19812
+D2
+~
+~
+0 -1 19804
+D3
+~
+~
+0 -1 19811
+D4
+~
+~
+0 -1 19815
+S
+#19808
+In the Canopy~
+  A thick, wet mist clouds the air here, making everything appear very
+ethereal and otherworldly. The leaves droop with wetness, and the air is
+clear of the thick spore-clouds which have been plagueing your sinuses.
+Small tree-frogs, insects, and marsupials stop their activities for a
+brief moment to stare at you in goggle-eyed wonder, deciding whether or not
+you are a threat to them. The branches thin out to your south, making travel
+there impossible.
+~
+198 0 0
+D0
+~
+~
+0 -1 19804
+D1
+~
+~
+0 -1 19809
+D3
+~
+~
+0 -1 19810
+D4
+~
+~
+0 -1 19817
+S
+#19809
+In the Canopy~
+  A thick, wet mist clouds th air here, making everything appear very
+ethereal and otherworldly. The leaves droop with wetness, and the air is
+clear of the thick spore-clouds which have been plagueing your sinuses.
+Small tree-frogs, insects, and marsupials stop their activities for a
+brief moment to stare at you in goggle-eyed wonder, deciding whether or not
+you are a threat to them.
+~
+198 0 0
+D0
+~
+~
+0 -1 19805
+D3
+~
+~
+0 -1 19808
+S
+#19810
+In the Canopy~
+  A thick, wet mist clouds the air here, making everything appear very
+ethereal and otherworldly. The leaves droop with wetness, and the air is
+clear of the thick spore-clouds which have been plagueing your sinuses.
+Small tree-frogs, insects, and marsupials stop their activities for a
+brief moment to stare at you in goggle-eyed wonder, deciding whether or not
+you are a threat to them.
+~
+198 0 0
+D0
+~
+~
+0 -1 19806
+D1
+~
+~
+0 -1 19808
+D4
+~
+~
+0 -1 19818
+S
+#19811
+In the Canopy~
+   A thick, wet mist clouds the air here, making everything appear very
+ethereal and otherworldly. The leaves droop with wetness, and the air is
+clear of the thick spore-clouds which havebeen plagueing your sinuses.
+Small tree-frogs, insects, and marsupials stop their activities for a
+brief moment to stare at you in goggle-eyed wonder, deciding whether or not
+you are a threat to them.
+~
+198 0 0
+D1
+~
+~
+0 -1 19807
+D2
+~
+~
+0 -1 19806
+D4
+~
+~
+0 -1 19819
+S
+#19812
+In the Canopy~
+  A thick, wet mist clouds the air here, making everything appear very 
+ethereal and otherworldly. The leaves droop with wetness, and the air is
+clear of the thick spore-clouds which have been plagueing your sinuses.
+Small tree-frogs, insects, and marsupials stop their activities for a
+brief moment to stare at you in goggle-eyed wonder, deciding whether or not
+you are a threat to them.
+~
+198 0 0
+D2
+~
+~
+0 -1 19805
+D3
+~
+~
+0 -1 19807
+S
+#19813
+In the Dense Canopy~
+  Runners and long vines encircle the trunk here, which (though much
+more slender than it was at the base) is still far too thick for you to
+be able to touch your hands together at the other side. Thick kudzu
+dangles from the branches, getting in your face and making it very difficult
+to maneuver about. The mist is very thick here, and the vegetation drips
+with dew.  The mist glows a dark emerald, as the light which filters through
+the thick foliage is  transformed to this deep green color. Small creatures
+avoid your gaze while still peeking at you from behind their various hiding
+spots.
+~
+198 0 0
+D0
+~
+~
+0 -1 19815
+D1
+~
+~
+0 -1 19814
+D2
+~
+~
+0 -1 19817
+D3
+~
+~
+0 -1 19816
+D5
+~
+~
+0 -1 19804
+S
+#19814
+Amongst the Dense Leaves of the Canopy~
+  The branches here are large enough to create comfortable trails
+amongst the thick foliage and kudzu dangling all about you. Small
+rustlings and chirps are all about you as you walk along, and the
+only danger appears to be stepping on a slippery patch of moss.
+~
+198 0 0
+D0
+~
+~
+0 -1 19820
+D2
+~
+~
+0 -1 19821
+D3
+~
+~
+0 -1 19813
+D5
+~
+~
+0 -1 19805
+S
+#19815
+Amongst the Dense Leaves of the Canopy~
+  The branches here are large enough to create comfortable trails
+amongst the thick foliage and kudzu dangling all about you. Small
+rustlings and chirps are all about you as you walk along, and the
+only danger appears to be stepping on a slippery patch of moss.
+~
+198 0 0
+D1
+~
+~
+0 -1 19820
+D2
+~
+~
+0 -1 19813
+D3
+~
+~
+0 -1 19819
+D5
+~
+~
+0 -1 19807
+S
+#19816
+Among the Dense leaves of the Canopy~
+  The thick kudzu dangling in your face here makes it very difficult
+to see where you are going. Luckily, the branches are wide enough
+that you have little fear of falling to your death on the thick
+spanghum far below after hitting every branch on the way down.
+The sounds of small creatures surrounds you, and a deep emerald
+light filters in from above.
+~
+198 0 0
+D0
+~
+~
+0 -1 19819
+D1
+~
+~
+0 -1 19813
+D2
+~
+~
+0 -1 19818
+D5
+~
+~
+0 -1 19806
+S
+#19817
+Amongst the Dense Leaves of the Canopy~
+  The branches are thick here, more than wide enough for a party of
+three to walk abreast along. The kudzu dangles all around you, and
+heavy vines dangle from the branch you are walking along, making
+it possible to descend to lower branches.
+~
+198 0 0
+D0
+~
+~
+0 -1 19813
+D1
+~
+~
+0 -1 19821
+D3
+~
+~
+0 -1 19818
+D5
+~
+~
+0 -1 19808
+S
+#19818
+Amongst the Dense Leaves of the Canopy~
+  The branches seem to be a bit thinner here, but more than wide 
+enough to comfortably walk along without fear. Dangling kudzu 
+limits your visibility to about three meters here, which creates
+a lovely, lush environment for many small tree-dwellers to reside
+in.
+~
+198 0 0
+D0
+~
+~
+0 -1 19816
+D1
+~
+~
+0 -1 19817
+D5
+~
+~
+0 -1 19810
+S
+#19819
+Amongst the Dense Leaves of the Canopy~
+  Many small bowers have been created from the foliage around you
+here, it looks as if you are near some sort of nesting area. A huge
+highway of a branch leads west, and many more bowers and nests 
+appear to lie along it. The deep emerald light here gives an eerie
+and almost sinister appearance to these delicate sleeping places.
+The only question is, what nests in these bowers?
+~
+198 0 0
+D1
+~
+~
+0 -1 19815
+D2
+~
+~
+0 -1 19816
+D3
+~
+~
+0 -1 19822
+D5
+~
+~
+0 -1 19811
+S
+#19820
+Amongst the Dense Leaves of the Canopy~
+  The branches here are large enough to create comfortable trails
+amongst the thick foliage and kudzu dangling all about you. Small
+rustlings and chirps are all about you as you walk along, and the
+only danger appears to be stepping on a slippery patch of moss.
+~
+198 0 0
+D2
+~
+~
+0 -1 19814
+D3
+~
+~
+0 -1 19815
+D5
+~
+~
+0 -1 19812
+S
+#19821
+Amongst the Dense Leaves of the Canopy~
+  The branches seem to be a bit thinner here, but more than wide 
+enough to comfortably walk along without fear. Dangling kudzu 
+limits your visibility to about three meters here, which creates
+a lovely, lush environment for many small tree-dwellers to reside
+in.
+~
+198 0 0
+D0
+~
+~
+0 -1 19814
+D3
+~
+~
+0 -1 19817
+D5
+~
+~
+0 -1 19809
+S
+#19822
+A temporary name~
+A temporary description
+~
+198 0 0
+D1
+~
+~
+0 -1 19819
+D3
+~
+~
+0 -1 19823
+S
+#19823
+A temporary name~
+A temporary description
+~
+198 0 0
+D0
+~
+~
+0 -1 19824
+D1
+~
+~
+0 -1 19822
+S
+#19824
+A temporary name~
+A temporary description
+~
+198 0 0
+D2
+~
+~
+0 -1 19823
+S
+#19825
+A temporary name~
+A temporary description
+~
+198 0 0
+S
+#19899
+A temporary name~
+A temporary description
+~
+198 0 0
+S
+#0
+$~

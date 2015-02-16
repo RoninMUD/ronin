@@ -1,0 +1,507 @@
+#26700
+arch great mighty aperture~
+The Great Arch~
+The Great Arch spans the path here, marking the entrance to these lands.~
+~
+15 0 0
+10002 0 0 0
+10000 10 10
+100
+E
+arch great mighty~
+This is a mighty arch indeed, constructed for the great Lord Emithoynarthe who
+ruled these lands in a time unknown.  It is inscribed with many beautiful
+carvings and words written in an ancient language that is all but forgotten in
+this world.  The Great Arch marks the entrance to Emithoynarthe's Realm and is
+an icon of his power.  Only the brave or the foolish would dare pass beneath it
+and into the lands beyond.  At the base of one of the supporting columns a
+small aperture can be seen.
+~
+E
+aperture~
+A small aperture can be seen at the base of one of the supporting columns of
+The Great Arch.  It looks to be just the right shape and size to store a
+scroll in.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26701
+oar wooden rotten~
+a wooden oar~
+A wooden oar lies here and looks pretty rotten.~
+~
+12 134742016 16385
+0 0 0 0
+10 10 10
+100
+E
+oar wooden rotten~
+This is a small wooden oar that has seen better days in a time long forgotten.
+The once-fine wood has been bleached with age and parts of it have begun to rot
+away.  It looks to have been left here for a good many years since it was last
+used.  It is doubtful that it would survive any extended use as a paddle in
+water.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+39
+#26702
+throne bones~
+A Throne of Bones~
+A throne of bones stands here, still partially covered with decaying flesh.~
+~
+12 0 0
+0 0 0 0
+1000 10 10
+100
+E
+throne bones flesh~
+The throne is constructed of many bleached-white bones, possibly once belonging
+to humans.  Carvings adorn every square inch of the structure but are worn and
+faded and in a language long forgotten.  The bones flicker in a crimson light
+that burns out of a fire placed behind the chair.  This is the holy throne of
+the Great Lord of Emithoynarthe, one of the ancient kings of the Old World and
+possibly the last of that old order.  The throne does not look very comfortable
+and does not seem to be used very often.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26703
+mast rotten~
+a rotten mast~
+A rotten mast protrudes from the center of the ship, towering up into the sky.~
+~
+12 0 0
+0 0 0 0
+1000 10 10
+100
+E
+mast rotten~
+This mast is very rotten but it still stands tall from the center of this ship.
+It now serves as a nesting place for a flock of albatross', many of which are
+currently resting at the top.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26704
+book black tower emithoynarthe~
+The Black Book of the Tower of Emithoynarthe~
+A black book covered in dust and faded with age rests here.~
+~
+12 134742016 1
+0 0 0 0
+10 10 10
+100
+E
+book black tower emithoynarthe~
+The book is crafted from a deep-black leather that is dusted and cracked with
+age.  It has several inscriptions written upon it in a language that once was
+used in the lands of its origin.  A closer look at it reveals the words to be
+written in gold leaf, though the exact designs are unclear because of the worn
+nature of the tome.
+It looks like page1 and page2 contain very important parts of the book.
+~
+E
+page1~
+These lands are ruled by the mighty Emithoynarthe, the great king of old who is
+one of the survivors of the downfall of this once-great empire.  He now lives
+alone in his great house to the west, viewable through the fixed telescope I
+have placed in my tower.  He values his privacy above all things and has a
+grand guard that defends his residence with his life.  If any were to get past
+the guard, Emithoynarthe himself would rain his wrath upon the intruders and
+stamp out their pitiful lives for sure.  None shall live here that do not
+submit themselves to His absolute rulership, for his reign is a terrible one
+that cannot be denied.  It is not advisable to go against His wishes when
+within this Empire, for to do so would be to invite death.
+~
+E
+page2~
+The prophecies tell of a time to come when this land shall once more exist in
+its former splendor.  The Empire shall grow from these forests and the mighty
+King Emithoynarthe shall once again rule all that exist within His realm.  For
+the current Lord Emithoynarthe is the son of the first Imperial that came to
+this land and built it into the Grand Empire of the Golden Age.  In this first
+age all was good until the Old King was deceived by one of his own followers
+and was forced to give his life to save his empire.  His son, Emithoynarthe
+took over the rulership but the Kingdom crumbled and he is now among the few
+that remain.  He lives here still, as he has for ages, sitting on his throne
+awaiting the day that His Empire will rise again.  Here He shall remain for
+ages to come, watching and waiting for His time to rule again.  All should fear
+the Mighty Emithoynarthe, for He is great and it is folly to underestimate the
+powers he exerts over His land.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26705
+key heavy metal~
+a heavy metal key~
+A large heavy metal key lies here, dropped by some careless individual.~
+~
+18 134742016 1
+0 0 0 0
+5 10 10
+70
+E
+key heavy metal~
+This dark metal key is inscribed in an ancient language.  The actual words
+cannot be made out as much of the inscription has been eroded away by time.
+~
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26706
+scroll beautiful~
+a beautiful scroll~
+A beautiful scroll lies here.~
+~
+12 134742016 1
+0 0 0 0
+1 10 10
+100
+E
+scroll beautiful~
+This scroll contains a translation of what is written upon the Great Arch:
+
+"This is the icon of the entrance to the lands of the Emithoynarthe which is
+ruled by the Lord of Greatness that bears the same name.  Here friends shall be
+treated as friends, and foes shall be treated with extreme prejudice.  If you
+have no reason to stay within this realm, leave now or feel the wrath of the
+Lord Emithoynarthe as he banishes you from this glorious land."
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26707
+plant purple~
+a purple plant~
+A purple plant grows here, waiting to be picked.~
+~
+19 134217728 1
+5 0 0 0
+1 10 10
+66
+E
+plant purple~
+This is a very beautiful plant with a deep purple flower and a bright green
+stalk.  It is said that these plants have special properties that heal some
+people but harm others when eaten.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26708
+cloak glowing regeneration~
+A Glowing Cloak~
+A glowing cloak lies upon the floor in a heap.~
+~
+11 134283267 1025
+0 0 0 0
+10 100000000 100000000
+100
+E
+cloak glowing regeneration~
+This is a huge green and black cloak that once belonged to the mighty King
+Emithoynarthe and kept him safe from old age and injury.  It has extremely
+powerful regenerative properties which it bestows upon its wearer.  However,
+only the mightiest of people can wear it as it is guarded by protective spells
+that keep it from falling into the wrong hands.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+52 8700
+#26709
+cape grand emithoynarthe~
+The Grand Cape of Emithoynarthe~
+The Grand Cape of Emithoynarthe lies here, glowing softly.~
+~
+9 134217729 5
+24 0 0 0
+200 280000 60000
+15
+E
+cape grand emithoynarthe~
+This is a huge cape made from a strange deep-purple fabric that glows with an
+eerie internal light.  Golden script and runes line the edges of the cape in a
+glittering display of wealth and power.  The perfect tailoring of this cloak is
+amazing.  It looks as new as the day it was crafted and yet it has the aura of
+being as ancient as the empire it originated from.
+~
+X
+~
+0 0 0
+M
+You stagger under the heavy weight of the Grand Cape of Emithoynarthe.~
+$n staggers under the heavy weight of the Grand Cape of Emithoynarthe.~
+You feel a burden lifted as you remove the Grand Cape of Emithoynarthe.~
+$n looks less burdened as $e removes the Grand Cape of Emithoynarthe.~
+A
+19 3
+A
+18 1
+A
+1 1
+#26710
+cutlass transparent~
+A Transparent Cutlass~
+A transparent cutlass is here, fading in and out of existence.~
+$r starts slashing $s cutlass through the body of $V.~
+5 243322912 8193
+0 5 5 3
+11 15000 10000
+10
+E
+cutlass transparent~
+This ghostly weapon flickers with a pale light of its own, as if it were made
+up of some mysterious energy that is bleeding out from the world of the dead.
+It once belonged to a pirate that died in captivity and now haunts the ship of
+his captors for all eternity.  When wielded by mortals it bestows upon them
+some of the powers of the dead.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 2
+#26711
+greatsword sword guard~
+The Greatsword of the Guard~
+A huge sword of dark steel lies upon the ground, separated from its owner.~
+$r greatsword slashes into $V with awesome power!~
+5 143715586 8193
+0 14 2 3
+21 75000 50000
+8
+E
+greatsword sword guard~
+This is a huge sword made from a thick and powerful form of steel.  It is heavy
+and its heft and sturdiness hint at its unbreakable nature.  This is a relic of
+the Ancient Kingdom of Emithoynarthe and was issued to only the most honored
+soldiers of the Mighty King, to be used to protect the Empire and its
+inhabitants.  The only way that the true owner of this weapon would have parted
+with it would be through the eternal release of death...
+~
+X
+$n swings $s greatsword about wildly, but to no effect.~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+52 15
+#26712
+gloves heavy red~
+Heavy Red Gloves~
+A pair of blood-red gloves lie on the ground, getting dirty.~
+~
+9 134220289 129
+5 0 0 0
+5 200000 100000
+15
+E
+gloves heavy red~
+These gloves are crafted from a heavy dark-red mesh-like fabric and seem very
+strong.  It almost seems that these gloves were once white and were
+intentionally stained red with some dark fluid... blood comes to mind.  They
+resize themselves to a perfect fit whenever a hand is placed inside.  Whoever
+made them was a master of the glove-making craft.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 6
+A
+52 3
+#26713
+cloak clean red~
+A Clean Red Cloak~
+An extraordinarily clean and vibrantly red cloak rests upon the ground here.~
+~
+9 175127552 1025
+2 0 0 0
+15 120000 60000
+5
+E
+cloak clean red~
+This is a beautify-colored red cloak made from the finest of fabric.  It has
+not a stain or a mark upon it and looks like a new cloak at every glance.
+Mysterious golden runes adorn the neck of the cloak and shine in the light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+1 1
+A
+13 -30
+#26714
+staff glowing gnarled wood~
+A Glowing Staff of Gnarled Wood~
+A gnarled staff of wood rests here, glowing brightly with its own light.~
+~
+1 134219777 65537
+0 0 -1 0
+8 150000 75000
+5
+E
+staff glowing gnarled wood~
+This is a rather unremarkable staff made from some sort of gnarled wood which
+is about a meter long.  A strange unearthly light emanates from the top of the
+staff in a brilliant glow that illuminates even the darkest of places.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 27
+A
+19 2
+A
+52 17
+#26715
+greaves shimmering metallic~
+Shimmering Metallic Greaves~
+A pair of shimmering metallic greaves has been left here.~
+~
+9 170940419 33
+10 0 0 0
+35 200000 18000
+15
+E
+greaves shimmering metallic~
+These greaves are extraordinarily crafted, made from some sort of incredibly
+strong metal that seems to reflect more light than is cast upon it.  Strange
+carvings adorn the leg plates and seem to glow with their own inner light when
+viewed from certain angles.  The shimmering light that emanates from these
+greaves is almost enough to blind.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+18 1
+A
+19 2
+#26719
+cape grand emithoynarthe~
+The Grand Cape of Emithoynarthe~
+The Grand Cape of Emithoynarthe lies here, glowing softly.~
+~
+9 134217793 5
+24 0 0 0
+200 280000 60000
+2
+E
+cape grand emithoynarthe~
+This is a huge cape made from a strange deep-purple fabric that glows with an
+eerie internal light.  Golden script and runes line the edges of the cape in a
+glittering display of wealth and power.  The perfect tailoring of this cloak is
+amazing.  It looks as new as the day it was crafted and yet it has the aura of
+being as ancient as the empire it originated from.
+~
+X
+~
+0 0 0
+M
+You stagger under the heavy weight of the Grand Cape of Emithoynarthe.~
+$n staggers under the heavy weight of the Grand Cape of Emithoynarthe.~
+You feel a burden lifted as you remove the Grand Cape of Emithoynarthe.~
+$n looks less burdened as $e removes the Grand Cape of Emithoynarthe.~
+A
+19 4
+A
+18 1
+A
+1 1
+#0
+$~

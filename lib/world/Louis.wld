@@ -1,0 +1,1337 @@
+#10700
+The Technicolour Workshop~
+This is the weirdest room you've ever seen!  Shag carpet lines the walls.
+A big red and orange lava lamp is in the corner.  In the middle of the room
+is a tye-dyed couch with a bong on the coffee table.  Beside the massive
+4 foot bong is a pile of batman comic books.
+~
+107 512 0
+S
+#10701
+An Eerie Path~
+     You are on a path that isn't very well worn.  The plants surrounding the
+path are dead.  Something is moving inside the forest around you.  It's 
+probably some rabbits or something.  Still the fog that covers the path
+and the sudden chill you get give you the feeling that you shouldn't stick
+around to find out.
+~
+107 0 3
+D0
+~
+~
+0 -1 10702
+S
+#10702
+A Turn in an Eerie Path~
+     You have come to a turn in the path.  The fog is getting thicker and 
+you just can't seem to shake off that chill that you've gotten.  The old
+trees are casting long shadows that seem to reach out and grab you.  The
+sound of an owl startles you and pushes you on your way.
+~
+107 0 3
+D1
+~
+~
+0 -1 10703
+D2
+~
+~
+0 -1 10701
+S
+#10703
+An Eerie Path~
+     Walking down the path, you start to get irritated at the weeds and 
+thorns that are beginning to collect around your ankles.  The fog covers
+up most of the undergrowth of the forest that you are in and swirls around
+your feet with each step.  The movement that you heard before has stopped.
+Come to think of it, it is very quiet at the moment.  A little too quiet for
+your tastes.  You wish that the owl would hoot or that something would
+make some type of noise.  You start to hum to yourself to keep your sanity.
+~
+107 0 3
+D0
+~
+~
+0 -1 10704
+D3
+~
+~
+0 -1 10702
+S
+#10704
+End of an Eerie Path~
+     As you come into the clearing at the end of the path, you see a small
+castle to the east.  It looks run down and abandoned and it reminds you of
+the path that you just came from.  There is a small puddle of blood at your
+feet and it goes in the direction of the castle.  To the west, there is a
+river and a meadow.  That looks more inviting.  At least there is grass there.
+Any type of life would calm your nerves at the moment.  Maybe you could
+rest in the field or soak your feet in the river.
+~
+107 0 3
+D1
+~
+~
+0 -1 10730
+D2
+~
+~
+0 -1 10703
+D3
+~
+~
+0 -1 10705
+S
+#10705
+A Rolling Meadow~
+     You are standing in the middle of a grassy field.  It is filled with 
+flowers of all kinds.  The birds sing so beautifully that you feel as though
+you were attending a symphony.  Even the insects seem to join in at a 
+climactic point of the concerto.  The butterflies dance to the music and
+kiss each flower only for a brief moment.  The grass is so green and soft.
+The flowers are so vibrant with color.  The river nearby gives you a soothing
+feeling as it gently flows past the rocks and plants.
+~
+107 0 2
+D1
+~
+~
+0 -1 10704
+D3
+~
+~
+0 -1 10706
+S
+#10706
+On the Banks of a Lazy River~
+     As you walk up to the edge of the river, you notice that the quiet
+rippling of the running water makes you feel very serene.  The water runs
+slowly, and brushes up next to the grass on the bank of the river.  A fish
+jumps up out of the water to catch some insect and splashes back down into
+the water creating ripples that disturb the pools of water on the bank,
+making them muddy.  Up ahead you see a bridge and a town in the distance.
+The town is very beautiful from what you can tell at the distance that you
+are and looks friendly enough.
+~
+107 0 2
+D0
+~
+~
+0 -1 10707
+D1
+~
+~
+0 -1 10705
+S
+#10707
+Along the Banks of a Lazy River~
+     The river moves along slowly, and you notice that you are walking faster
+than the water is moving.  You slow your pace down to match that of the water.
+The water looks so calm and soothing.  The breeze blowing off of the top of
+the water tells you that the water is not too cold.  You think to yourself 
+that a quick dip wouldn't do any harm, or maybe a little fishing would be
+nice.  The bridge is just up ahead, so maybe you could do those things on the
+way back.
+~
+107 0 2
+D2
+~
+~
+0 -1 10706
+D3
+~
+~
+0 -1 10708
+S
+#10708
+On a Wooden Bridge~
+     As you walk over the bridge you can feel the cool breeze coming from the
+river.  Your feet make a loud stomping sound as you step on the wooden boards
+of the bridge.  A couple of the boards are loose and can probably be pulled
+up pretty easily but you feel that the bridge will hold long enough for you
+to get across.  On the west bank, up ahead in the distance is a town.  It
+looks very beautiful and you can hear music in the faint distance.  To the 
+east is a meadow that looks vary tranquil.
+~
+107 4 1
+D1
+~
+~
+0 -1 10707
+D3
+~
+~
+0 -1 10710
+D5
+~
+hole~
+9 -1 10709
+E
+board~
+    This board looks a little bit loose.  Maybe if you push on it, it will move.
+~
+S
+#10709
+Under the Bridge~
+     You are wading waist deep in the river and can see the underside of 
+the bridge.  You notice some writing on the walls that tell about lovers
+and who has visited here.  There is some sort of warning too, but you can't
+make it out.  Suddenly you notice something moving in the water.
+~
+107 1 1
+D4
+~
+hole~
+9 -1 10708
+E
+wall~
+ Bob loves Sarah!
+
+                                         Ian sucks
+
+Elaina loves Greg
+~
+S
+#10710
+On a Cobblestone Road~
+     You are on the other side of the river on a cobblestone road leading
+to a town.  The music is getting louder and there seems to be a faint smell
+of liquor in the air.  From what you can see, there is a huge white temple
+in the center of town.  The towers on the temple protrude higher than any
+of the other buildings in the town.  There is a sign up ahead to the north.
+To the east is the bridge.
+~
+107 0 1
+D0
+~
+~
+0 -1 10711
+D1
+~
+~
+0 -1 10708
+S
+#10711
+A Cobblestone Road~
+     You are on a cobblestone road at the edge of a town.  The stones are
+very well taken care of and are firmly placed into the ground.  The music
+is now accompanied by singing and you definately can smell a variety of
+alcoholic beverages.  There is a sign here that faces you as you walk to
+the north.  As you turn around to look at the bridge you can see the 
+ripples of something playing under the bridge.
+~
+107 0 1
+D0
+~
+~
+0 -1 10712
+D2
+~
+~
+0 -1 10710
+S
+#10712
+Southern gate of San JuanPablo~
+     You are standing at the southern gate of the city of San JuanPablo.
+There is some sort of festival going on.  There are Drakes all over the place
+having what seems to be a good time.  Maybe you could join in on the fun.
+In the far off distance to the north you see a large building surrounded
+by a small city.  To the south is the path that you just came from.
+~
+107 0 1
+D0
+~
+~
+0 -1 10713
+D2
+~
+~
+0 -1 10711
+S
+#10713
+Temple Road~
+     As you walk, you notice that to the north is a large temple.  There
+is a fountain in front of the temple that looks as though it were made of
+glass.  The temple itself is very beautiful and seems to be glowing.  The main
+road travels north and south and to the east and west are back roads in
+this small town.  This city seems too holy to have bad parts, and you 
+figure that the back streets seem safe.
+~
+107 0 1
+D0
+~
+~
+0 -1 10714
+D1
+~
+~
+0 -1 10726
+D2
+~
+~
+0 -1 10712
+D3
+~
+~
+0 -1 10728
+S
+#10714
+In front of the temple of JuanPablo~
+     You stand before the temple of San JuanPablo.  To the north you can see
+the calm waters of a giant fountain that run the length of the temple.  
+In the middle of the fountain there is some sort of sacrificial altar with water
+shooting up all around it.  A blue flame shoots out from the altar.  The
+temple radiates from the glowing masonry that it is made from.  To the 
+east and west there are staircases that lead up to the front of the temple.
+~
+107 0 1
+D1
+~
+~
+0 -1 10724
+D2
+~
+~
+0 -1 10713
+D3
+~
+~
+0 -1 10715
+D5
+~
+altar~
+8 -1 10729
+S
+#10715
+The west wing~
+     You are in the west wing of the temple.  To the east you can see the
+staircase that leads outside in front of the fountain.  You can see the pool
+and the altar and you realize that you have never seen a blue flame before.
+To the north the hall continues to a wooden door.  Up ahead also is a turn
+in the hall that goes east.  Everything is so clear because of the light from
+the walls.
+~
+107 8 0
+D0
+~
+~
+0 -1 10716
+D1
+~
+~
+0 -1 10714
+S
+#10716
+The west hall~
+     You notice that there are no light fixtures in this temple.  It seems
+to be lit by the glowing masonry that the temple is made from.  To the east,
+you can see a hall that leads outside to a fountain.  Further down the hall
+to the north is a door that you can see.  The hall continues to the south.
+~
+107 8 0
+D0
+~
+~
+0 -1 10717
+D1
+~
+~
+0 -1 10719
+D2
+~
+~
+0 -1 10715
+S
+#10717
+The northwest hall~
+     You are standing in front of a large wooden door that is reinforced with
+iron.  There is a knight standing here that stares coldly at you as you 
+approach.  Once you get close enough you realize that it's just a suit of 
+armour.  It sure looked like a knight.  To the south is a hallway.
+~
+107 8 0
+D0
+~
+door~
+1 -1 10718
+D2
+~
+~
+0 -1 10716
+S
+#10718
+The High Priest's room~
+     This room is pretty bare except for a bed on one wall and an altar on
+the opposite wall.  There are pictures of San JuanPablo on the walls.  This
+room looks alot like the sleeping quarters of the drakes but there is only
+one bed here.  Most likely it is used by some high clergyman or a high
+official.  There is a door to the south.
+~
+107 8 0
+D2
+~
+door~
+1 -1 10717
+D5
+~
+trapdoor~
+1 10700 10725
+S
+#10719
+The Sanctuary~
+     You are standing above the pool looking out over the city.  There 
+are giant pillars that reach all the way to the ceiling.  The blue flame from
+the altar is magnificently reflecting from the water below it.  On the north
+wall there is a huge picture of San JuanPablo.  You think to yourself
+'What an attractive man!!'  There are halls to the east and west.
+~
+107 0 0
+D1
+~
+~
+0 -1 10720
+D3
+~
+~
+0 -1 10716
+S
+#10720
+The east hall~
+     You notice that there are no light fixtures in this temple.  It must
+be lit by that glowing rock that the temple is made from.  To the west, you
+can see a hall that leads outside.  To the north the hall continues.
+~
+107 8 0
+D0
+~
+~
+0 -1 10721
+D2
+~
+~
+0 -1 10724
+D3
+~
+~
+0 -1 10719
+S
+#10721
+The northeast hall~
+     You are standing in front of a wooden door that is reinforced by iron.
+The door handles and hinges are polished to a brilliant shine that reflects
+the light from the walls beautifully.  The hall continues to the south, where
+you can see a turn and a straightaway.
+~
+107 8 0
+D0
+~
+door~
+1 -1 10722
+D2
+~
+~
+0 -1 10720
+S
+#10722
+The sleeping quarters~
+     This must be where all of the drakes sleep.  There must be almost a
+hundred beds here.  The beds line the walls with a picture of San JuanPablo
+above each bed.  All of the beds are made neatly and the place is spotless.
+There is a door reinforced with iron to the south and the room continues
+to the west.
+~
+107 8 0
+D2
+~
+door~
+1 -1 10721
+D3
+~
+~
+0 -1 10723
+S
+#10723
+The sleeping quarters~
+     There are so many beds here that you wonder how the Drakes could
+stand to live so close to one another and still tolerate each other.  The
+pictures of San JuanPablo are everywhre.  He is in different poses and
+settings in each picture.  You are starting to get tired of looking at him.
+To the east the room continues.
+~
+107 8 0
+D1
+~
+~
+0 -1 10722
+S
+#10724
+The east wing~
+     You are in the east wing of the temple.  Pictures of San JuanPablo line
+the walls and you catch a faint scent of candles.  This place seems so 
+serene and peaceful.  To the north the hall leads to a door.  The staircase
+is to the west which leads outside.
+~
+107 8 0
+D0
+~
+~
+0 -1 10720
+D3
+~
+~
+0 -1 10714
+S
+#10725
+Secret treasury~
+     This is where the high priest keeps the money offerings of the Drake 
+people.  You wonder if he used it for the benefit of everyone or just 
+for himself.  There isn't that much here anyway.  It doesn't really matter now.
+It looks like it's yours.  As you play with it you enjoy the way that the
+light from the masonry bounces off of the gold coins.
+~
+107 8 0
+D4
+~
+trapdoor~
+1 10700 10718
+S
+#10726
+Saint's Road~
+     You are on a cobblestone road that runs east and west.  To the east you
+can see a small house.  It is built of the same masonry that the temple is
+made of and radiates with a glowing aura.  The house itself is very simple
+and plain, but the glowing stone makes it look magnificent.  To the west
+you can see the main road where the festival is.
+~
+107 0 1
+D1
+~
+~
+0 -1 10727
+D3
+~
+~
+0 -1 10713
+S
+#10727
+Inside the Guru's house~
+     You are inside of the small house.  It is filled with books and is 
+furnished with only an altar and a small cot.  The floor is made of the
+same cobblestone as the road outside.  On the wall is a large wooden
+crucifix.  The door is to the west where you can hear loud singing and music.
+~
+107 8 0
+D3
+~
+~
+0 -1 10726
+E
+crucifix~
+On the wall hangs a huge crucifix with a golden figure.  The glowing stone
+causes it to have a holy aura.  The wood of the cross looks old and weathered
+a bit as if it has existed for centuries, maybe even millenia.
+~
+S
+#10728
+An Alley~
+     The Saint's road ends here.  You can hear the festival that is still
+going on in front of the temple.  Although this seems to be a holy city,
+you still get the feeling that maybe the alleys aren't the place to be.
+The road travels back to the east, where you can hear the noises of the
+festival.
+~
+107 0 1
+D1
+~
+~
+0 -1 10713
+S
+#10729
+Secret room under the Altar~
+     You are under the main altar in front of the temple.  The walls are made
+from that glowing stone.  There are runes all over the walls, but you can't
+make them out.  It must be some sort of ancient script.  This place looks
+older that the rest of the city.  The only exit is up, from which you came.
+~
+107 8 0
+D4
+~
+altar~
+8 -1 10714
+S
+#10730
+A bloody road~
+     This road has not been very well taken care of.  Actually, there is blood
+on parts of the road.  The plants all seem dead, and the fog is extremely
+thick.  To the east you see a castle.  It looks like it might be shelter, but
+then again maybe not.  To the west the road continues into the forest.
+~
+107 0 3
+D1
+~
+~
+0 -1 10731
+D3
+~
+~
+0 -1 10704
+S
+#10731
+A bloody road~
+     The blood on the road seems to occur more often as you go along.  More
+and more blood spots seem to be everywhere.  The fog is getting so bad that 
+you can not even see you own hand.  You really need to stop somewhere.  You
+know that the castle is up ahead and it will have to do.  The castle is to
+the east and the road continues west.
+~
+107 0 3
+D1
+~
+~
+0 -1 10732
+D3
+~
+~
+0 -1 10730
+S
+#10732
+A bloody road~
+     You are in front of the castle.  To the north you can see that the walls
+are covered with ivy and mold.  The ivy is sort of a brownish yellow colour
+that looks as though even it can't live here.  You sense some sort of evil
+eminating from the castle, but that might be from the graveyard to the east.
+Maybe it's the fog, or you're just having a bad flashback.
+~
+107 0 3
+D0
+~
+~
+0 -1 10733
+D3
+~
+~
+0 -1 10731
+S
+#10733
+In Front of an Evil Castle~
+     You are standing in front of the castle.  YOu don't like the feeling
+that you get when you look at it.  Before you is a huge wooden door that looks
+as though it has seen better days.  On the door is an engraving that is worn
+and you can't make out what it says.  Below the engraving are a set of
+old rusty brass knockers.  The only place to go is either through this door
+or back south on that awful road.
+~
+107 0 3
+D0
+~
+door~
+1 -1 10734
+D2
+~
+~
+0 -1 10732
+E
+door~
+     This door is worn by the countless years of weather.  The wood is aged 
+to be rock hard and the iron reinforcements are rusted.  These doors tower
+over you with a haunting height.  Before your face are two giant brass 
+knockers that have been rusted.  The won't move because they are to rusty.
+~
+E
+knockers~
+     Before you are two giant heads of gargoyles with a ring in each mouth.
+At the bottom of each ring is a ball that is rusted to the knocking plate.
+From the appearance you don't think that the rings will move.
+~
+S
+#10734
+Inside an Evil Castle~
+     You are standing just inside the door of the castle.  For an old
+abanbandoned castle the inside sure is well kept.  Maybe someone does still 
+live here.  It is decorated in an old Victorian style.  The room is suddenly
+lit by flashes of lightning and you can see some candle chandeliers hanging
+from the ceiling.  You decide to light them.  After you lower the first 
+chandelier, you light the first candle and all of the candles in the castle
+light at the same time.  There is a hallway that runs to the east an west.
+To the north is a giant set of stairs.
+~
+107 8 0
+D0
+~
+~
+0 -1 10758
+D1
+~
+~
+0 -1 10735
+D2
+~
+door~
+1 -1 10733
+D3
+~
+~
+0 -1 10751
+S
+#10735
+A Victorian hallway~
+     Your footsteps are softened by the red velvet carpet that lines the 
+hallway.  Pictures of prominent looking people are along the walls.  It
+is a little drafty and the air is damp.  To the west is the entrance where
+you came in.  To the east the hallway continues.
+~
+107 8 0
+D1
+~
+~
+0 -1 10736
+D3
+~
+~
+0 0 10734
+S
+#10736
+A Victorian hallway~
+     To the north you can see a set of stairs that lead down.  The stairs
+appear not to be as well decorated as the rest of the castle from what you
+can see.  The red velvet carpet stops at the top of the stairs.  The stairs
+must go down to a wine cellar or something.  Wine sounds like a good way to
+pass the time of you stay here.  There is a bone chilling draft coming from
+the stairs.  Your wine will at least be chilled.  To the west, the hallway
+leads to the front door.
+~
+107 8 0
+D0
+~
+~
+0 -1 10737
+D3
+~
+~
+0 -1 10735
+S
+#10737
+A Victorian hallway~
+     The air is getting colder and you detect a strange odor.  You can't
+actually identify the smell but it isn't a good smell and it isn't a bad
+smell.  The evilness you sense is getting stronger and you are a little
+uneasy about this whole castle.  The stairway to the north is dark but you
+can tell that there are candles further down it because of a faint glow in
+the corner.  You hear something moving to the south around the corner of the
+hallway.
+~
+107 8 0
+D0
+~
+~
+0 -1 10738
+D2
+~
+~
+0 -1 10736
+S
+#10738
+Top of a Spiraling Staircase~
+     You are standing at the top of a stone stairway that leads down.  It is
+not very well lit and a chilling breeze comes from below.  The stairway is
+narrow and makes you feel as though the walls are going to fall on you.
+Looking back south you feel as though maybe other parts of the castle would
+be a better place to explore.  But then again wine does sound nice.  The
+hallway was so much more comfortable than this stairway.
+~
+107 8 0
+D2
+~
+~
+0 -1 10737
+D5
+~
+~
+0 -1 10739
+S
+#10739
+A Spiraling Staircase~
+     You can hear your footsteps echo down the stairway.  The stone is cold to
+the touch and the air is also cold and damp.  There are single candles that
+flicker with the draft along the walls but they don't give off enough light to
+see anything.  You would have to have excellent sight to be able to see. Maybe
+even a supernatural sense of sight.  The staircase continues up and down.
+~
+107 13 0
+D4
+~
+~
+0 -1 10738
+D5
+~
+~
+0 -1 10740
+S
+#10740
+A Spiraling Staircase~
+     You can hear your footsteps echo down the staircase getting louder.  The
+stones are so cold and damp.  Some of the stones in the wall stick out a 
+little further than the rest and it seems as though the walls are getting
+closer together.  Something moved further down the staircase but you can't
+see it.  You wonder why anyone would go to the trouble to put in candles that
+don't even light the staircase.  The staircase goes up and down.
+~
+107 13 0
+D0
+~
+stone~
+1 -1 10756
+D4
+~
+~
+0 -1 10739
+D5
+~
+~
+0 -1 10741
+S
+#10741
+The Crypt~
+    For such a small castle, this crypt is huge.  It has to run underneath
+that graveyard that you saw beside the castle.  You wonder why the castle 
+would have direct access to a crypt.  The walls are filled with holes to 
+place bodies.  The staircase is up and the crypt is to the south.
+~
+107 9 0
+D2
+~
+~
+0 -1 10742
+D4
+~
+~
+0 -1 10740
+S
+#10742
+The Crypt~
+     You are standing inside the crypt.  The walls are crude, and still made
+of dirt.  The floor looks well worn and all of those holes in the wall give
+you the creeps.  The staircase is to the north and the crypt continues to
+the east and south.
+~
+107 9 0
+D0
+~
+~
+0 -1 10741
+D1
+~
+~
+0 -1 10743
+D2
+~
+~
+0 -1 10747
+S
+#10743
+The Crypt~
+     You are walking along the north wall of the crypt.  The walls are crude,
+and are made of damp earth.  Rocks and roots jut out from the ceiling and the
+floor is packed hard.  The graves in the walls are both old and new.  Some
+of the fresh ones still have withered flowers around them.  You glance back
+west to make sure that the staircase is still there.  To the south and the
+east you see the long crypt.
+~
+107 9 0
+D1
+~
+~
+0 -1 10744
+D2
+~
+~
+0 -1 10748
+D3
+~
+~
+0 -1 10742
+S
+#10744
+The Crypt~
+     You are walking along the north wall of the crypt.  You can't help but
+wonder who all of these people were that are buried here.  The open ones 
+bother you a little but then again grave robbers probably got to those.  To t
+the east you can see something that looks important.  You can't tell what it 
+is.  you'll have to get closer to make it out.  The crypt continues to the 
+south and east.  to the west you can still see the staircase.
+~
+107 9 0
+D1
+~
+~
+0 -1 10745
+D2
+~
+~
+0 -1 10749
+D3
+~
+~
+0 -1 10743
+S
+#10745
+The Crypt~
+     You are standing in the northeast corner of the crypt.  The hair on your
+neck is standing on end but you don't feel a breeze or the slight bit of 
+coldness.  To the east something grabs your attention.  You can't make out 
+what it is but for some reason you want to be there.  Your senses tell you 
+that maybe you shouldn't.  The crypt continues to the south and west.
+~
+107 9 0
+D1
+~
+~
+0 -1 10746
+D2
+~
+~
+0 -1 10750
+D3
+~
+~
+0 -1 10744
+S
+#10746
+The Sacrificial Circle~
+     You are standing in the place where ritual sacrifices are performed.
+Evil forces keep you from leaving the pentagram circle on the floor.  There
+is blood everywhere and ancient symbols are drawn on the floor and walls.
+Exits leave in every direction but you seem to be trapped and end up in the
+same place as you were before.
+~
+107 9 0
+D0
+~
+~
+0 -1 10746
+D1
+~
+~
+0 -1 10746
+D2
+~
+~
+0 -1 10746
+D3
+~
+~
+0 -1 10746
+S
+#10747
+The Crypt~
+     You are standing at the southwest corner of the crypt.  Luckily if
+anything were to happen, you are still close to the staircase.  So you can
+still make a run for it if worse comes to worse.  The walls are crudely
+cut out of the earth and are slightly damp.  The crypt continues to the north
+and east.
+~
+107 9 0
+D0
+~
+~
+0 -1 10742
+D1
+~
+~
+0 -1 10748
+S
+#10748
+The Crypt~
+     As you walk along the south wall of the crypt you notice that some of the
+burial chambers are open.  Inside one of them, the walls of the chamber are
+clawed as though someone or something tried to get out.  Another one is sealed
+up and looks fresh.  The crypt continues to the north, east, and west.
+~
+107 9 0
+D0
+~
+~
+0 -1 10743
+D1
+~
+~
+0 -1 10749
+D3
+~
+~
+0 -1 10747
+S
+#10749
+The Crypt~
+     You are standing quite along way from the staircase.  You glance back at
+the burial chambers that you have already passed.  Something about this place
+gives you the creeps.  You try to think of good things to keep your mind off
+of the morbidity of this place.  The air is thick and damp and smells of
+rotting clothes.  The crypt continues to the north, east, and west.
+~
+107 9 0
+D0
+~
+~
+0 -1 10744
+D1
+~
+~
+0 -1 10750
+D3
+~
+~
+0 -1 10748
+S
+#10750
+The Crypt~
+     You are standing inside the crypt at the southeast corner.  The ceiling
+drips with ther percipitation from above the ground.  At your feet is a small
+puddle of water and footprints.  Some of them are yours, but the rest of the 
+footprints are all different sizes.  The crypt continues to the north and
+west.
+~
+107 9 0
+D0
+~
+~
+0 -1 10745
+D3
+~
+~
+0 -1 10749
+S
+#10751
+A Victorian hallway~
+     Your footsteps are softened by the red velvet carpet.  The place is 
+reasonably clean for an old castle.  That sense of evil still haunts you
+though.  The torches on the wall light the place well.  To the west you see
+that the hallway turns.  To the east is the entrance to the castle.
+~
+107 8 0
+D1
+~
+~
+0 -1 10734
+D3
+~
+~
+0 -1 10752
+S
+#10752
+A Victorian hallway~
+     You are standing in the bend of the hallway.  The carpet turns with the
+hallway.  On the walls you notice pictures of people that you have never seen
+before.  Maybe they were the owners of this castle at one time.  To the north
+you see a door.  To the east you see the entrance and the other end of the
+hallway.
+~
+107 0 0
+D0
+~
+~
+0 -1 10753
+D1
+~
+~
+0 -1 10751
+S
+#10753
+A Victorian hallway~
+     As walk down this hallway you take time to look at each picture, studying
+each face and expression.  One by one you look at them till they begin to
+give you that feeling that you had when you entered this castle.  You can 
+smell the smoke from the torch on the wall.  The flames of the torch keep you
+in a gaze for a moment.  You turn to look at the door to the north.  To the
+south is the hallway.
+~
+107 0 0
+D0
+~
+~
+0 -1 10754
+D2
+~
+~
+0 -1 10752
+S
+#10754
+A Victorian hallway~
+     Your footsteps are softened by the red velvet carpet.  You stop in front
+of the door and it opens by itself.  Maybe the wind opened it for you.  You
+shrug it off.  You look into the room and it appears to be a library.  You
+glance back to the south to make sure the hallway is clear, hoping that maybe
+the owner of this castle would show up.  And then again maybe you don't want
+the owner to show up.
+~
+107 0 0
+D0
+~
+~
+0 -1 10755
+D2
+~
+~
+0 -1 10753
+S
+#10755
+A library~
+     You are standing at the entrance to the library.  There are so many books
+here.  If you stay, you could read one of these books to keep yourself 
+entertained because you know that you will not be able to sleep in this castle
+tonight.  But then again you might be a Warrior.  The hallway is to the south.
+To the west the library continues.
+~
+107 8 0
+D2
+~
+~
+0 -1 10754
+D3
+~
+~
+0 -1 10757
+S
+#10756
+Secret Stair room~
+     You are in a room that is stuffy and small.  The walls are moldy and there
+is an awful smell in the room.  There are all kinds of torture devices that 
+clutter up this already small space.  The chains on the wall are so large that
+they could hold back an elephant.  There are corpses of dead rats along the
+wall and they are extremely shriveled up.  The only exit is to the south.
+~
+107 9 0
+D2
+~
+stone~
+1 -1 10740
+S
+#10757
+A library~
+     You are standing in the library.  There are books lining all of the walls
+on every side.  They span up to the high ceiling.  You've never seen this 
+many books in one place.  The room is well lit by a chandelier at the top of
+the room.  The light reflects off of the many windows at the top of the room.
+The library continues to the east.
+~
+107 8 0
+D1
+~
+~
+0 -1 10755
+S
+#10758
+A Large Staircase~
+     You are on a large staircase that leads to the second floor of the 
+castle.  As you go along you notice that the stairs are rather steep and
+you notice that the red velvet carpet covers the stairs and appears to
+continue to the second floor.  Directly above the stairs is a large crystal
+chandelier that lights the staircase.  It looks like the gems on that might
+be worth something if you could ever get up there to get them.
+~
+107 12 0
+D2
+~
+~
+0 -1 10734
+D4
+~
+~
+0 -1 10759
+S
+#10759
+The Top of a Large Staircase~
+     As you reach the top of the staircase, you decide to catch your breath
+and look around at your surroundings.  The second floor is more or less a 
+balcony that surrounds the staircase.  The large chandelier above the 
+staircase lights the whole floor.  On the south wall you can see a tapestry
+of what looks like a man standing in front of this castle.  The man looks
+as though he were sick when the tapestry was made, and the castle and 
+surroundings don't look all that different from what they do now.
+~
+107 8 0
+D1
+~
+~
+0 -1 10760
+D3
+~
+~
+0 -1 10766
+D5
+~
+~
+0 -1 10758
+S
+#10760
+The Second Floor~
+     You are standing in the northeast corner of the second floor balcony.
+The hallway continues to the west and to the south.  There is a statue in 
+the corner of a demon or some sort of gargoyle.  Across the rails you can
+see a tapestry.  Something behind you moves but when you look nothing is 
+there.
+~
+107 8 0
+D2
+~
+~
+0 -1 10761
+D3
+~
+~
+0 -1 10759
+E
+statue~
+   This demon stares at you with a stone cold glaze.  She has a strange grin
+on her face that almost isn't there.  As you move around her you feel as 
+though her eyes are following you.
+~
+S
+#10761
+The Second Floor~
+     You are walking down the east hall of the second floor.  To the west
+you can see that the hall continues all the way around the perimeter of the
+staircase.  The floor is covered with the same red velvet carpet that the
+first floor was covered with.  The stone walls are cool to the touch and
+give you chills when you walk close to them.  The hallway continues to the
+north and to the south.
+~
+107 8 0
+D0
+~
+~
+0 -1 10760
+D2
+~
+~
+0 -1 10762
+S
+#10762
+The Second Floor~
+     You are in the southeast corner of the second floor.  You notice how 
+bright the light from the chandelier above the staircase is.  You stop for a
+moment when you realize that you didn't light the chandelier.  Something 
+about this castle just isn't right.  You decide that you will walk a little
+faster.  At least the red velvet carpet will muffle your footsteps.  Then
+again who is around to hear them.
+~
+107 8 0
+D0
+~
+~
+0 -1 10761
+D3
+~
+~
+0 -1 10763
+S
+#10763
+The Second Floor~
+     You are on the south side of the second floor balcony overlooking the
+large staircase.  Overhead is a large chandelier.  On the south wall is a
+large tapestry of a prominent looking man.  He is a little too pale for your
+liking and he makes you uneasy.  As the coldness sends a chill up your body,
+you notice that the tapestry moves, as though there is a draft.  You decide
+to keep moving, but the eyes of the man in the tapestry follow you where
+ever you go.
+~
+107 8 0
+D1
+~
+~
+0 -1 10762
+D2
+~
+tapestry~
+8 -1 10767
+D3
+~
+~
+0 -1 10764
+E
+tapestry~
+     This is a finely woven tapestry made of the best fabrics that you have
+ever seen.  It is a little bit worn by age.  It has a picture of a stong,
+powerful looking man that is very pale.  It is lined with gold tassles.  The
+tapestry moves a little bit from a draft that sends chills down your back.
+~
+S
+#10764
+The Second Floor~
+     You have come to the southeast corner of the second floor.  To the 
+north you can see a large tapestry, that doesn't really do much for the 
+insulation of the castle.  It does look nice hanging there over the balcony
+though.  To the north the hallway continues to the top of the stairs.
+~
+107 8 0
+D0
+~
+~
+0 -1 10765
+D1
+~
+~
+0 -1 10763
+S
+#10765
+The Second Floor~
+     As you walk down the hallway, you look down at the first floor of the 
+rails and notice how high you are.  The castle didn't look this big from the
+outside.  The chill from the wall is starting to get to you, and the dampness
+of the air makes you feel ill.  The hallway continues to the north and south
+from here.
+~
+107 8 0
+D0
+~
+~
+0 -1 10766
+D2
+~
+~
+0 -1 10764
+S
+#10766
+The Second Floor~
+     You are standing on the second floor of the castle.  To the east is
+the staircase that brought you here.  The walls are made of stone and you
+can feel the coolness of the air coming from the walls.  The floor is 
+covered in red velvet that cushions your footsteps.  To the south the hallway
+continues.
+~
+107 8 0
+D1
+~
+~
+0 -1 10759
+D2
+~
+~
+0 -1 10765
+S
+#10767
+Behind the tapestry~
+     You are standing in a secret room behind the tapestry.  You thought it 
+was cold in the hallway.  That is nothing compared to what it feels like back
+here.  The walls of this room are not decorated at all.  They are only made
+of crudely cut stone.  It is a rather large room that you should have noticed
+before and is covered in candles.  There are so many candles in this room that
+it is brighter in here than it would be outside on the clearest of days.  
+There is some sort of altar on the south side of the room made of finely
+polished marble.  There are runes imbedded into the marble.  On top are even
+more candles and some holy looking items made of iron.
+~
+107 9 0
+D0
+~
+tapestry~
+8 -1 10763
+S
+#10799
+A temporary name~
+A temporary description
+~
+107 0 0
+S
+#0
+$~

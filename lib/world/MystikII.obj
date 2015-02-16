@@ -1,0 +1,761 @@
+#17500
+symbol ishap~
+An Ornate Holy Symbol of Ishap~
+A beautifully crafted Holy Symbol lies here.~
+~
+1 263241024 65537
+0 0 -1 0
+5 100000 50000
+10
+E
+Symbol~
+This beutifully constructed symbol of Ishap's Faith almost
+vibrates with holy power. just touching it makes you
+want to use it with holy vengeance.~
+A
+19 3
+A
+18 3
+#17501
+sword righteous righteousness~
+the Sword of Righteousness~
+A Sword with a flawless white blade is glowing with an angry light, here.~
+Sword slices through $$V with righteous anger.~
+5 254868800 8193
+0 3 13 3
+30 500000 50000
+10
+A
+19 3
+A
+18 3
+#17502
+hammer faith~
+Hammer of Faith~
+A hammer, whose head is glowing with a holy, blue light, is laying here.~
+Hammer hits $$V with the power of the faithful.~
+5 246463808 8193
+0 4 8 6
+18 1000000 5000
+10
+E
+runes~
+My Faith is in Ishap
+~
+E
+hammer~
+A closer examination of this ornate hammer reveals
+faintly glowing runes.~
+A
+19 5
+A
+18 3
+#17503
+ring power~
+Ring of Power~
+A beautiful ring is here.~
+~
+11 183549248 16387
+0 0 0 0
+1 500000 5000
+10
+A
+13 30
+A
+12 30
+#17504
+cane~
+Cane~
+A faded and chipped white cane is here.~
+Cane slams into the head of $$V with painful precision.~
+5 135274752 24577
+0 5 5 7
+10 900 1000
+10
+E
+cane~
+Closer examination reveals a sword hidden inside the cane.~
+A
+19 5
+A
+18 3
+B
+1
+#17505
+cloak thief stealth~
+Cloak of Stealth~
+A Cloak made of a dull black material is here.~
+~
+9 224448608 1025
+7 0 0 0
+12 10000 1000
+10
+A
+19 1
+B
+524290
+#17506
+broom straw old~
+An old straw broom~
+A tattered straw broom has been discarded here.~
+Broom thwacks $$V on the rump.~
+5 134348864 24577
+0 4 8 7
+10 900 500
+10
+E
+word~
+SHOO!!!
+~
+E
+broom~
+This old broom has seen many better days.
+There is a word engraved into the handle.~
+A
+17 10
+#17507
+robe scholar~
+Scholar's Robe~
+A simple robe made of white cloth is here.~
+~
+9 134220864 9
+5 0 0 0
+7 10000 10000
+10
+A
+19 -2
+A
+12 30
+#17508
+spoon ladle~
+the Ladle~
+A beautiful silver ladle is lying here.~
+~
+4 134218816 16385
+30 10 10 90
+10 10 10
+10
+#17509
+armor holy~
+Holy Armor~
+a glowing suit of armor is here.~
+~
+9 263238976 9
+20 0 0 0
+15 100000 10000
+10
+E
+armor~
+  This set of Platemail seems to almost tingle with Holy Power.
+~
+A
+19 2
+A
+12 20
+#17510
+Bag pipes bagpipes~
+Bagpipes~
+A set of bagpipes has been discarded here.~
+~
+24 233893888 16385
+0 0 0 0
+10 4000 2000
+10
+A
+19 3
+#17511
+totesack sack tote~
+a Totesack~
+A discarded sack is lying here.~
+~
+15 0 1
+40 0 0 0
+12 50 50
+10
+#17512
+cloak meditation scholar~
+Cloak of Meditation~
+A plain brown cloak has been discarded here.~
+~
+9 134220800 1025
+10 0 0 0
+4 5000 2000
+10
+A
+12 45
+A
+19 -4
+B
+16
+#17513
+ring dragon~
+Shok-Kar's Ring~
+An ornate ring is on the floor.~
+~
+11 134217728 3
+0 0 0 0
+1 9000 18000
+10
+A
+19 3
+#17514
+hand withered dead undead~
+a Withered Hand~
+A shriveled hand is lying on the ground.~
+~
+11 134220288 16385
+0 0 0 0
+4 1234 1234
+10
+A
+19 2
+A
+12 20
+#17515
+dagger swordbreaker~
+a Swordbreaker~
+A strange looking dagger is lying here.~
+~
+5 0 8193
+0 4 6 9
+6 700 700
+10
+A
+43 10
+A
+36 10
+#17516
+staff office oak~
+Staff of Office~
+A long oaken staff is leaning against this wall.~
+~
+1 134220800 65537
+0 0 -1 0
+15 5000 5000
+10
+A
+12 10
+A
+13 10
+#17517
+shield flawed silver~
+Flawed Shield~
+A poorly made silver shield.~
+~
+9 178306112 513
+3 0 0 0
+22 500 700
+10
+A
+12 20
+#17518
+star symbol~
+Star of Ishap~
+A beautiful star with the symbol of Ishap engraved on the front.~
+~
+9 179354688 16385
+1 0 0 0
+10 6000 6000
+10
+A
+18 2
+A
+19 2
+#17519
+shield star silver mithril~
+Star Shield~
+An elegant silver and mithril shield radiating with Holy Power~
+~
+9 179354688 513
+12 0 0 0
+24 100000 1000
+10
+A
+19 1
+A
+12 5
+#17520
+bottle winterhaven red~
+A bottle of Winterhaven Red~
+A dusty bottle of a reddish liquid.~
+~
+17 134217728 1
+30 30 2 0
+3 1000 10
+100
+#17521
+flamberge claymore blade sword~
+McDurran's Flamberge~
+A sword with a 5 ft wavy blade is lying here.~
+Flamberge rips open $$V's chest with one devastating hit.~
+5 229699584 8193
+0 4 9 3
+30 100000 10000
+10
+E
+FLAMBERGE~
+This sword has been in the McDurran Clan for years. McDurrans have been 
+reknown through the realms as talented Bagpipers.~
+#17522
+badge~
+Badge of Authority~
+An old brass badge is lying here.~
+~
+3 134217792 16385
+30 3 3 111
+3 200 2000
+10
+#17523
+cinnamon roll~
+Cinnamon Roll~
+ This is the ultimate breakfast roll. Who, but Pasha, would have thought
+of adding the rare spice called cinnamon to a normal breakfast roll?
+She must be a genius.~
+~
+19 134742016 1
+24 0 0 0
+1 50 10
+100
+#17524
+hammer resolve~
+The Hammer of Resolve~
+A beautiful golden hammer is lying on the ground, here.~
+Hammer slams into $$V, eliciting moans of pain.~
+5 134220800 8193
+6 4 7 6
+17 10000 5000
+10
+A
+19 3
+A
+18 3
+#17525
+doom black sword~
+Sword of Doom~
+A black bladed sword is on the ground, here.~
+Sword flashes and $$V realizes he is `bDOOMED`h!!~
+5 182509636 8193
+0 5 7 3
+13 1000000 1000
+10
+E
+inscription~
+In the end all are DOOMED!!
+~
+E
+sword~
+There is an inscription carved into this black blade.
+~
+A
+19 5
+A
+18 2
+#17526
+blinding cane blindman blind~
+Blinding Cane~
+A sharp pointed, metal shod white cane is here.~
+Cane thrusts towards $$V's eyes with deadly accuracy.~
+5 202379328 8193
+1 5 7 9
+16 1000000 5000
+10
+A
+19 4
+A
+18 2
+#17527
+avatar shield~
+Avatar's Shield~
+A white, rune covered shield is on the ground here.~
+~
+9 238074945 513
+14 0 0 0
+15 1000000 10000
+10
+A
+19 2
+#17528
+blind man cane~
+Blind Man's Cane~
+A white blind man's cane is laying on the ground, forgotten.~
+~
+5 202395712 8193
+0 5 7 7
+16 500000 30000
+10
+A
+19 3
+A
+18 3
+#17529
+avatar boots~
+Avatar's Boots~
+The pair of boots on the ground radiate with a holy light.~
+~
+9 238074944 65
+10 0 0 0
+5 1000000 10000
+10
+E
+boots~
+  These beautiful white boots are covered with what looks to be 
+scales. each scale seesm to have a rune of some sort engraved upon
+it.
+~
+A
+19 2
+#17530
+armor plate avatar holy~
+Armor of the Avatar~
+A suit of white full plate armor with green trim is lying here.~
+~
+9 238074944 9
+0 0 0 0
+100 2000000 30000
+10
+E
+armor~
+  This suit of armor looks like it is made of Platinum. Upon closer 
+inspection the green trim seems to be composed of finely chiseled 
+jade inserts.
+~
+A
+19 3
+#17531
+gem power glowing diamond~
+Power Gem~
+A huge glowing diamond is here.~
+~
+8 134217793 16385
+0 0 0 0
+10 50000000 10000000
+10
+#17540
+book tome history sarth~
+a Leather bound Book~
+An old book bound in leather is here.~
+~
+13 134217728 1
+0 0 0 0
+10 10 10
+10
+E
+page1~
+  Erik Shadesbane gathered about him fifty hearty souls, and their 
+families, and claimed the area now known as Sarth for himself. They
+were settled in and fortified by the end of the year. The following 
+year the budding town was attacked by barbarians who sailed Long-ships
+into the harbor. This was a dark time, for though the raiders were 
+fought off, half the town was destroyed and many lives were lost.
+Seeing the need for better defenses and more defenders, Erik split 
+his remaining forces into two groups. He sent his ten most trusted men
+on a mission to other cities and towns to recruit more families. He
+took the remaining followers, after burning the town that they worked
+so hard to build, up to the top of the single nearby mountain. At the
+summit they built a heavily fortified Keep to defend themselves until
+the reinforcements arrived.
+~
+E
+book~
+Journal of the Priesthood (History of Sarth)
+Table of Contents:
+page1
+page2
+page3
+page4
+page5
+page6
+page7
+page8
+~
+E
+page8~
+  I am Father Pratix, Abbot of Shadesbane Abbey. Today is the one 
+hundredth anniversary of the Liberation of Sarth. The city's Archmage,
+with the help of an Oriental Elementalist made a suit of armor for 
+the event. They are going to have it blessed by Ishap and donated it 
+to the church in thanks for us saving them from misery. This is 
+definitely a good day to rejoice in a century of peace and prosperity.
+This will be the last entry in this journal, as age is taking its 
+toll on the pages.
+~
+E
+page6~
+  Today we discuss how this city should be ruled. Some of our clerics
+favor a Theocracy. I, however, believe that the politics intrinsic 
+with government would corrupt and eventually destroy our order. My 
+plan is to keep the government along the lines of what the renown 
+Erik Shadesbane intended, with added safeguards to keep this type of 
+atrocity from happening again. My proposed m as r  a e ...
+~
+E
+page4~
+  I am Malach. It has been twenty years since the Second Mayor of
+Sarth had the High Priest Adrach beheaded and our faith denounced as
+heresy. Our temple in Sarth was looted and burned. That evil leader 
+even dared to send an army of mercenaries to attack our Abbey. It was
+a close fight, but our stronghold was made for defense and our 
+Templars were up to the challenge. This isn't the only city in which 
+these revolting deeds were perpetrated. Of the fifty-three temples 
+our faith had in various cities and towns, only this one and our main
+Temple survive.
+~
+E
+page3~
+... It has been a fulfilling sixty years as High Priest of Sarth. 
+Tomorrow, however, I must engage in a sorrow-filled task. Erik, the 
+Mayor and my good friend, has passed away. I can only hope that the 
+next Mayor is as helpful to the priesthood. Erik has been a true ally
+to us.
+  The funeral was today. The body has been interred. Though it 
+grieves me dearly to lose a trusted friend, I know that there are few
+people in history who have accomplished more than Erik in their 
+lives. Erik's will was read over the gravesite. He left the church 
+one final gift. It seems that he had an anvil enchanted by a passing 
+wizard and has bequeathed it to our faith. I have already made plans 
+for it to be moved to the mountaintop Abbey. I would prefer to keep
+it here, but I am an old man who may go to meet Ishap any day and I
+have no idea how the new Mayor will act towards the Faith.
+~
+E
+page5~
+  The ordained religion in the city below us believes in an evil god
+whose name is too vile for me to desecrate this parchment with. 
+Luckily, we have two advantages on our side. One, because the 
+government below is so harsh, we have no shortage of volunteers to
+train as priests and templars. Second, we have an ally staying with
+us. Mordikai, the City's Magician, fled the city after destroying his 
+tower so that its secrets wouldn't be found by those heretics.
+  Mordikai is going to help us carry out a task that has been forced
+upon us. In order to save our faith and the knowledge that we guard,
+we have no choice but to attack Sarth and free it from the clutches
+of the vile God whose minions now rule.
+  We did it!!! Mordikai transported our forces directly into Town 
+Square. I had to do something that shall surely weigh heavily on my 
+soul for the rest of my days. I ran up to the guard barracks and 
+asked Ishap to smite that structure with an earthquake. There were no
+survivors.
+~
+E
+page2~
+  Two years later the recruiters returned, bringing with them more 
+than a hundred warriors and their families. Also in the group was a 
+budding mage, named Mordikai, and myself, a humble Acolyte of Ishap.
+  Erik left a small garrison at the Keep, then took the rest of his
+followers down to the harbor to rebuild their city. I went with the 
+builders and raised a small outdoor altar to my Deity. Erik was so
+pleased to have a cleric to heal the injuries of the workers. He made
+a promise to me that, when the City was completed, he would donate
+the Keep to Ishap so that the priesthood would have a Safe Haven to
+study and train new priests.
+~
+E
+page7~
+  Today was very heartwarming to my old soul. One of the orphans that
+that we raised in the Abbey helped to kill a dragon about a year ago. 
+He really has become a great adventurer. Why I remember... Forgive me,
+I am rambling like an old man, which I am. The boy-turned-adventurer
+went to my friend Mordikai and with his help they made a pair of 
+boots from the dragon's hide. The process is unknown to me.. I never 
+really had a grasp on magic no matter how much Mordikai... I'm 
+rambling again. Anyway, the young man, on the day I declared my 
+retirement, donated the boots to Ishap in my name. It brightened my 
+soul to know that this brave young man considered me as his role-
+model while growing up. When Ishap calls me I know I'll go willingly,
+for I am sure that I have made a difference in at least one life.
+~
+#17541
+bookshelf shelf~
+a bookshelf~
+A sturdy bookshelf is standing in the corner.
+~
+~
+15 0 0
+0 0 0 0
+10 10 10
+10
+E
+bookshelf~
+  This sturdy bookshelf is made of thick oak planks. Obviously the
+builder intended for it to last many years. If only craftsmen put
+such effort into their creations today, the world woud be a better
+place.
+~
+#17542
+book tome leather history~
+A Leather-bound Book~
+A Leather-bound book is lying here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+E
+page5~
+  There was a ferocious battle waged in the town today... I'll write 
+about it in detail as soon as the reports come in.
+  I was right, it was a terrible battle. Half the City was demolished
+and many residents and soldiers were killed. It was actually two 
+separate battles, one on each side of the City, and it was against a 
+most unusual enemy. A pair Blue Dragons attacked and wreaked havoc 
+until one was killed and the other was driven off. Here are the 
+details as they were told to me.
+~
+E
+page9~
+  It has been a month since the attack. We've tried everything in our
+power to restore Greybeard's sight, to no avail. Unable to do his job,
+in spite of his battle prowess, The old soldier has reluctantly 
+resigned, naming Jorge, nicknamed One-Eye, as his Successor. It is
+a sad day for the City. Greybeard has proven himself the best Captain
+the place has ever had. May Greybeard live in peace for the rest of 
+his years.
+~
+E
+page8~
+strike before the lizard could line up its mouth for another breath.
+The Dragon finally realized it was no match for the cunning soldier
+it was facing and tried to back off and flee. Greybeard, realizing
+his opportunity, tumbled in and slammed his sword into the Dragon's
+wounded chest, piercing the heart and sending the Dragon into death 
+throes. By the time the other fighters arrived the Dragon was already
+a still corpse. 
+  The guards were in awe of their Captain's fighting prowess, even 
+more so when they realized that the Dragon's breath had seared their 
+leader's eyes shut before he had even managed to strike one blow. He 
+had fought a Dragon while injured and blinded, yet had managed to 
+kill it when the City's entire guard force had only managed to fight 
+off the other dragon which had attacked.
+~
+E
+page7~
+    BATTLE 2:
+  Greybeard rushed upon the Dragon while it was busy destroying a
+tavern. Greybeard's attempt to get inside the Dragon's deadly breath
+was unsuccessful, however. The Dragon was a little more alert than 
+the wily fighter gave it credit for. The Dragon swiftly turned and 
+sent a searing bolt of electricity at its lone assailant. Greybeard
+saw the Dragon's swift turn and dodged deftly to the side, missing
+most of the effects of the breath. As the fighter screamed in pain,
+he reached the dragon and delivered a series of blinding fast 
+attacks, slashing his sword between scales and through dragon skin
+with an accuracy unrivaled by any other fighter in Sarth. The damage 
+caused by the Dragons breath attack would not be known by any other 
+than Greybeard until the fight was over. Every time the dragon tried
+to catch the Captain of the Guard with a claw or bite, the 
+experienced warrior would dodge nimbly away, only to come back in and
+~
+E
+page6~
+    BATTLE 1:
+  A Blue Dragon attacked the east side of town, destroying the City's
+East Plaza. The guards responded, led by the Captain of the Guard,
+Greybeard. As the soldiers engaged the Dragon, another attacked the 
+undefended west side of town. The Captain of the Guard left the east 
+battle to attempt to keep the other dragon busy while this one was 
+handled. He left a daring young guardsman known as Jorge in charge
+of the City Guards in his absence. Jorge led an all out attack on the
+Dragon going so far as to actually go into melee with the fearsome
+creature. During the fight Jorge lost his left eye to a devastating
+swipe of a dragon's claw. The Dragon slowly gave way under the 
+assault and was forced to flee the City, leaving its mate to fend for
+himself.
+~
+E
+page4~
+  Today was a bleak day in the annals of this Abbey. An evil general 
+led an army against our Keep. The army appeared out of nowhere and  
+assaulted our holy stronghold before we could get our defenses 
+organized. The General and his mount, a vicious red dragon, attacked 
+and killed our Defender. His Army then climbed the walls, forcing us 
+to retreat to the Keep proper. Instead of attacking and destroying us
+the General merely took all the Magic Items our Defender was wearing 
+and the Magical anvil that was in the courtyard.. The General and the
+army then disappeared in a flash of light. Our defender's body has 
+been consecrated to the earth already.
+  I have talked to the other priests about hiring mercenaries to 
+track down this rogue and recover our items... After all, we can't 
+make any more Holy Relics without a replacement for the magical Anvil
+that the fouls beings stole.
+~
+E
+page3~
+  Marcus was taken to jail by the Captain of the Sarthian Guard. The
+Mayor set the trial for later in the morning. Marcus was found guilty
+and sentenced to death by stoning. Mordikai then did what most people
+least expected. He asked the judge to reconsider the sentence and,
+instead of Execution, banish the cold hearted murderer from the City
+forever. The Judge, swayed by the eloquent words of the Archmage,
+remanded the sentence and took Mordikai's advice... About an hour ago
+Marcus was escorted from the City in chains and was warned that if he
+returned his life would be forfeit. 
+  As the apprentice was escorted from the City, Mordikai made a 
+public apology for the damage, promised to pay for all expenses the 
+fight had caused, and vowed to never take another apprentice as long 
+as he lived in Sarth.
+~
+E
+page2~
+  I have never seen Mordikai use his magical ability before today. 
+Indeed I am still unsure if what I witnessed was the limits of his 
+vaunted powers. Even if it wasn't, it was an awe-inspiring spectacle
+which will forever remind the people of this town just how deadly the
+Archmage really is.
+  The event I am talking about is the attempted assassination of 
+Mordikai by his apprentice Marcus. The Archmage and I were in the
+Town Square debating on whether to have an early dinner when Marcus 
+struck.  The attack came without warning and, though I wasn't the 
+target, it knocked me through  the window into the Pastry Shop to the 
+north. Unfortunately for the murderous Marcus, Mordikai's clothes
+weren't even singed. Mordikai's counter attack not only nearly killed
+the apprentice but also Destroyed the Armorer's Shop that was 
+directly behind him.
+~
+E
+page1~
+  Mordikai announced today that he was taking an apprentice. He 
+explained it by saying that the City was growing to such a size that
+the demands for magical assistance were more than one mage could 
+handle. He called himself an tired, old mage who would like to relax
+in his later years. I never thought of Mordikai as old, but he has to
+be at least one-hundred-eighty years of age. It would be hard to 
+imagine a Sarth without Mordikai as the City's Archmage. If anything 
+should happen to him, I hope that this new apprentice, Marcus, can 
+fill his shoes adequately.
+~
+E
+book~
+Journal of the Priesthood (History of Sarth)
+Table of Contents:
+page1
+page2
+page3
+page4
+page5
+page6
+page7
+page8
+page9
+page10
+~
+#17543
+armor avatar holy~
+Avatar's Armor~
+A suit of white full plate armor with red trim is lying here.~
+~
+9 246459456 9
+18 0 0 0
+100 10000000 1000
+10
+E
+armor~
+  This suit of armor looks like it is made of Platinum. Upon closer 
+inspection the red trim seems to be composed of crushed gemstones,
+possibly rubies.
+~
+A
+19 1
+A
+18 1
+#0
+$~

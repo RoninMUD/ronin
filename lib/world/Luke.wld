@@ -1,0 +1,1435 @@
+#30300
+Entrance to the corrupted forest~
+You are standing in front of an old forest that used 
+to be one of the most beautifull in the whole world.
+But now all you can see is lots of dead trees and black grass.
+You wonder what have happened to this forest?The sky is black 
+and no sun light manage to come trough. What happened to the 
+beautifull forest that used to be here?
+~
+303 64 3
+D2
+~
+~
+0 -1 30301
+S
+#30301
+A Small path trough the corrupted forest~
+The path is surrounded buy all sort of dead animals, you can see corpses
+and bones all over the place. It feels like you are walking on a graveyard.
+All the animals and bones are all black. You wonder what kind of magic can do 
+such a terrible thing. The path continues to the south
+~
+303 0 3
+D0
+~
+~
+0 -1 30300
+D2
+~
+~
+0 -1 30303
+D3
+~
+bush~
+12 -1 30302
+E
+bush~
+You see a shaking bush. There is a small hole in the bottom of the bush.~
+E
+bush~
+You see a large shaking bush. There is a small black hole in the bottom of the bush, big enough for one person to crawl trough. 
+~
+S
+#30302
+Inside a black bush~
+You are standing inside a huge bush, you notice that the bush no longer is green, it is black. The bush is shaking and it seems like the bush is surrounded by a black aura, so is the ground. There is a huge stone on the 
+ground, the stone is not surrounded by a black aura. There is coming some weird sound from the stone. It seems like something is trying to get out.  
+~
+303 18874369 0
+D1
+~
+bush~
+12 -1 30301
+E
+stone~
+invalid~
+S
+#30303
+A Small path trough the corrupted forest~
+Once again there is dead animals and pile of bones luying around the path, but
+the path itself is clean. Its almost like someone have cleaned the pathway. 
+You notice that there are some small bugs comming out of the corpses and the bones.
+The path continues to the east.
+~
+303 1 3
+D0
+~
+~
+0 -1 30301
+D1
+~
+~
+0 -1 30304
+S
+#30304
+A turn in the path~
+The pile of corpses and bones makes a perfect split in the pathway.
+Its almost like someone have cleaned the corpse and bones out of the path
+to make a perfect split. To the far north you can see a big river and a gigantic Wall
+The path also continues to the south.
+~
+303 1 3
+D0
+~
+~
+0 -1 30305
+D2
+~
+~
+0 -1 30317
+D3
+~
+~
+0 -1 30303
+S
+#30305
+A dark path~
+The sky is black you can not see the sun. It seems like something is preventing the sun from shinning here. The path continues to the north and it is getting darker and darker. Far far to the north west you can a tower, You start 
+wondering if it is just a tower, or is it a city? You can also turn back and go south. 
+~
+303 1 2
+D0
+~
+~
+0 -1 30306
+D2
+~
+~
+0 -1 30304
+S
+#30306
+A dark path~
+You are walking on a dark path, wondering where this path will take you. The sky is dark, the few threes that are left are corrupted with darkness, and you sense dark powers all over the place. To the north you can se a river of darkness and 
+to the northwest you can now see that it is a city not just a tower. You can follow the path to the west, or you can go back south. 
+~
+303 0 0
+D2
+~
+~
+0 -1 30305
+D3
+~
+~
+0 -1 30307
+S
+#30307
+A path to the Infested City~
+You are walking on an ancient path. The sky is still dark, and there are lots of dying threes along the path.  You notice there is hanging an old sign on one of the dying threes. You can see a huge weird fish jumping high in the air to the 
+northeast. You find it weird that you can see a fish so far away in the air. You are frightened about this. To the northwest you can now see a huge city wall. You can follow the path to the north, or you can go back east.
+~
+303 0 0
+D0
+~
+~
+0 -1 30308
+D1
+~
+~
+0 -1 30306
+S
+#30308
+A path to the Infested City~
+You are walking on an ancient path. They sky is dark, and there are dead threes along the path. You notice there is a three lying on the ground in front of you. The three is dark and is humming. It seems like it has it own life. The three is
+about four meters long, and you can't go pass it. All the others threes are lying far away from the humming one. It's like they have been thrown away from the path. Around the humming three the ground is black and seems like the ground
+is surrounded buy some sort of aura. The path continues to the north, and the path goes back south. 
+~
+303 0 0
+D0
+~
+~
+0 -1 30309
+D2
+~
+~
+0 -1 30307
+S
+#30309
+A path to the Infested City~
+You are walking on an ancient path. They sky is dark, and there are lots of death threes along the path. There is a split in the path. The path is surrounded buy a dark aura. It is like walking on the water. You can't feel or
+see the ground. You can only see the aura and the dead threes that lie along the path. To the east you can see a huge dark river. You can see a huge fish jumping in the air. The path to the infested city continues to the west.
+~
+303 0 0
+D1
+~
+~
+0 -1 30313
+D2
+~
+~
+0 -1 30308
+D3
+~
+~
+0 -1 30310
+S
+#30310
+A path to the Infested City~
+You are walking on an ancient path. The sky is dark and is surrounded buy a shimmering aura. There are lots of dead threes around the path, and they are surrounded buy an aura of darkness. The path is a shimmering aura of darkness
+and your feet hurts as you walk on it. To the north you can see an enormous gate. The city is lying right north of you, and you feel an evil force coming from the north. The path continues to the north, and you can also go back east. 
+~
+303 0 0
+D0
+~
+~
+0 -1 30311
+D1
+~
+~
+0 -1 30309
+S
+#30311
+Before the gates of the Infested City~
+You are standing in front of the first gate of the infested city. This gate is standing open, and you sense evil power coming out from the gate. The sky is dark and is surround buy a shimmering aura. The wall also surrounded buy that 
+shimmering aura and it seems like this aura makes the wall indestructible. The path continues closer to the gate, or you can walk back to the south. 
+~
+303 0 0
+D0
+~
+~
+0 -1 30312
+D2
+~
+~
+0 -1 30310
+S
+#30312
+The gates of the Infested City~
+You are standing in front of the main gate of the infested city. They sky is dark and surrounded buy a shimmering aura. The gate and wall is surrounded buy a shimmering dark aura. The aura makes it impossible to open this gate. All around
+the gates and walls is also surrounded buy a shimmering dark aura. When you try to walk close to the gate, the aura sends you back a few meters. The only exit is back from where you got. To the south.
+~
+303 0 0
+D2
+~
+~
+0 -1 30311
+S
+#30313
+A side path~
+You are walking on a side path, heading away from the infested city and forest. The trees are normal, and you can notice that the shimmering aura on the ground is almost gone. Far to the east you can see a river. The skies are still black 
+and surrounded buy a shimmering aura. The path continues to the east, to the river. You can also go back to the west. 
+~
+303 0 0
+D1
+~
+~
+0 -1 30314
+D3
+~
+~
+0 -1 30309
+S
+#30314
+A path to the river~
+You are walking on a path towards river sikonomia. You notice that the shimmering aura on the ground is gone, and the skies are clearing up. The forest is clearing up, and you notice that some of the trees are moving, moving away
+from the river. The path continues toward the river sikonomia and back west. 
+~
+303 0 0
+D1
+~
+~
+0 -1 30315
+D3
+~
+~
+0 -1 30313
+S
+#30315
+A path to the river~
+You are walking on the path of river sikonomia, the ancient river of elder lands. The skies are blue and clear, the ground is clear. It feels good to walk on the ground again, and see the sun shinning again. You can hear the river to 
+the east, you are getting closer. The path continues to the east towards the ancient river of the elder lands, or you can go back to the west. 
+~
+303 0 0
+D1
+~
+~
+0 -1 30316
+D3
+~
+~
+0 -1 30314
+S
+#30316
+Standing in front of a dark river~
+You are standing in front of the river sikonomia. You notice there is something wrong with the river. The water in the river is black, not blue. There is something in the water, you can't see what it is, but it is HUGE. You can
+see over to the other side, and it seems like you can manage to jump over to the other side from one spot. All the trees around the river is dead. The sky over the river is black and dark. Around the river the sky are clear. 
+The only exit is back west, away from the dark river
+~
+303 0 0
+D1
+~
+river dark evil~
+10 -1 30386
+D3
+~
+~
+0 -1 30315
+S
+#30317
+A path to the old forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30304
+D2
+~
+~
+0 -1 30318
+S
+#30318
+A path to the old forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30317
+D2
+~
+~
+0 -1 30319
+S
+#30319
+The Bridge~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30318
+D2
+~
+~
+0 -1 30320
+S
+#30320
+On the Bridge~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30319
+D2
+~
+~
+0 -1 30321
+S
+#30321
+On the Bridge~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30320
+D2
+~
+~
+0 -1 30322
+S
+#30322
+On the edge of the bridge~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30321
+D1
+~
+~
+0 -1 30323
+S
+#30323
+In the front of a huge forest~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30324
+D3
+~
+~
+0 -1 30322
+S
+#30324
+Standing in a huge dark forest~
+A temporary description
+~
+303 0 0
+D2
+~
+~
+0 -1 30325
+D3
+~
+~
+0 -1 30323
+S
+#30325
+In a huge dark evil forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30324
+D2
+~
+~
+0 -1 30326
+S
+#30326
+In a huge dark evil forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30325
+D2
+~
+~
+0 -1 30327
+S
+#30327
+In a huge dark evil forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30326
+D2
+~
+~
+0 -1 30328
+S
+#30328
+In a huge dark evil forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30327
+D2
+~
+~
+0 -1 30329
+S
+#30329
+In a huge dark evil forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30328
+D1
+~
+~
+0 -1 30330
+S
+#30330
+In front of the caves~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30347
+D1
+~
+~
+0 -1 30331
+D3
+~
+~
+0 -1 30329
+S
+#30331
+Entrance to the cave of the dragons~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30332
+D3
+~
+~
+0 -1 30330
+S
+#30332
+Inside the cave~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30333
+D3
+~
+~
+0 -1 30331
+S
+#30333
+Cave of the dragons~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30334
+D2
+~
+~
+0 -1 30335
+D3
+~
+~
+0 -1 30332
+S
+#30334
+Cave of the dragons~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30344
+D2
+~
+~
+0 -1 30333
+S
+#30335
+Cave of the Dragons~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30333
+D1
+~
+~
+0 -1 30336
+S
+#30336
+Cave of the Dragons~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30337
+D3
+~
+~
+0 -1 30335
+S
+#30337
+Cave of the dragons~
+A temporary description
+~
+303 0 0
+D2
+~
+~
+0 -1 30338
+D3
+~
+~
+0 -1 30336
+S
+#30338
+Room of The Dragons~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30337
+D1
+~
+~
+0 -1 30340
+D2
+~
+~
+0 -1 30339
+D3
+~
+~
+0 -1 30343
+S
+#30339
+Room of The Dragons~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30338
+D1
+~
+~
+0 -1 30341
+D3
+~
+~
+0 -1 30342
+S
+#30340
+Room of The Dragons~
+A temporary description
+~
+303 0 0
+D2
+~
+~
+0 -1 30341
+D3
+~
+~
+0 -1 30338
+S
+#30341
+Room of The Dragons~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30340
+D3
+~
+~
+0 -1 30339
+S
+#30342
+Room of the Dragons~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30343
+D1
+~
+~
+0 -1 30339
+S
+#30343
+A temporary name~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30338
+D2
+~
+~
+0 -1 30342
+S
+#30344
+Cave of the dragons~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30345
+D2
+~
+~
+0 -1 30334
+S
+#30345
+Near the nest~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30346
+D3
+~
+~
+0 -1 30344
+S
+#30346
+In the nest of Mother Dragon~
+A temporary description
+~
+303 0 0
+S
+#30347
+Deeper inside the evil forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30348
+D2
+~
+~
+0 -1 30330
+S
+#30348
+Deeper inside the evil forest~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30349
+D2
+~
+~
+0 -1 30347
+S
+#30349
+The Ancient Forest~
+A temporary description
+~
+303 0 0
+D2
+~
+~
+0 -1 30350
+D3
+~
+~
+0 -1 30348
+S
+#30350
+The Ancient Forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30349
+D1
+~
+~
+0 -1 30351
+S
+#30351
+The Ancient Forest~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30352
+D3
+~
+~
+0 -1 30350
+S
+#30352
+The Infested Ancient Forest~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30353
+D3
+~
+~
+0 -1 30351
+S
+#30353
+The Infested Ancient Forest~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30354
+D3
+~
+~
+0 -1 30352
+S
+#30354
+The Infested Ancient Forest~
+A temporary description
+~
+303 0 0
+D2
+~
+~
+0 -1 30355
+D3
+~
+~
+0 -1 30353
+S
+#30355
+The Infested Ancient Forest~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30354
+D1
+~
+~
+0 -1 30356
+S
+#30356
+The Infested Ancient Forest~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30357
+D3
+~
+~
+0 -1 30355
+S
+#30357
+Road to the Stone~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30358
+D3
+~
+~
+0 -1 30356
+S
+#30358
+Road to the Stone~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30359
+D2
+~
+~
+0 -1 30357
+S
+#30359
+Road to the Stone~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30360
+D3
+~
+~
+0 -1 30358
+S
+#30360
+Road to the Stone~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30361
+D3
+~
+~
+0 -1 30359
+S
+#30361
+Road to the Stone~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30362
+D3
+~
+~
+0 -1 30360
+S
+#30362
+Standing in front of a Huge dark stone~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30363
+D2
+~
+~
+0 -1 30361
+D5
+~
+stone huge black~
+8 -1 30364
+S
+#30363
+In front of an Ancient Temple~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30365
+D2
+~
+~
+0 -1 30362
+S
+#30364
+Under the huge black stone~
+A temporary description
+~
+303 0 0
+D4
+~
+stone huge black~
+8 -1 30362
+S
+#30365
+Gates of The Ancient Temple~
+A temporary description
+~
+303 0 0
+D0
+~
+gates~
+1 -1 30366
+D2
+~
+~
+0 -1 30363
+S
+#30366
+Entrance of The Ancient Temple~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30367
+D2
+~
+nopick~
+1 -1 30365
+D3
+~
+~
+0 -1 30383
+S
+#30367
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30368
+D3
+~
+~
+0 -1 30366
+S
+#30368
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30369
+D3
+~
+~
+0 -1 30367
+S
+#30369
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30370
+D3
+~
+~
+0 -1 30368
+S
+#30370
+Walking in The Ancient Temple~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30371
+D2
+~
+~
+0 -1 30369
+S
+#30371
+Walking in The Ancient Temple~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30372
+D2
+~
+~
+0 -1 30370
+S
+#30372
+Walking in The Ancient Temple~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30373
+D2
+~
+~
+0 -1 30371
+S
+#30373
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D2
+~
+~
+0 -1 30372
+D3
+~
+~
+0 -1 30374
+S
+#30374
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30373
+D3
+~
+~
+0 -1 30375
+S
+#30375
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30374
+D3
+~
+~
+0 -1 30376
+S
+#30376
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30375
+D2
+~
+~
+0 -1 30377
+S
+#30377
+Walking in The Ancient Temple~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30376
+D2
+~
+~
+0 -1 30378
+S
+#30378
+Walking in the Ancient Temple~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30377
+D2
+~
+~
+0 -1 30379
+S
+#30379
+Walking in The Ancient Temple~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30378
+D2
+~
+~
+0 -1 30380
+S
+#30380
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30379
+D1
+~
+~
+0 -1 30381
+S
+#30381
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30382
+D3
+~
+~
+0 -1 30380
+S
+#30382
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30383
+D3
+~
+~
+0 -1 30381
+S
+#30383
+An ancient hallway~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30366
+D3
+~
+~
+0 -1 30382
+S
+#30384
+In the ancient tombs of Archmage Jikonika~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30396
+S
+#30385
+Bedroom of Master Jukamani~
+A temporary description
+~
+303 0 0
+S
+#30386
+The other side of the dark river~
+You are standing on the other side of river sikonomia. There are lots of trees standing around the river surrounded buy a black aura. You notice that there is a path between some of the dark trees. You can't see the sun trough all the dark
+skies that is on the heaven. You can now see that there is a giant fish in the river, larger then you ever have seen before. You can follow the dark path trough the trees to the east, or you could try jump back.
+~
+303 1 0
+D1
+~
+~
+0 -1 30387
+S
+#30387
+An evil path~
+You are walking on a very evil path. The trees are dark and you feel a wicked power oozing out from them. The sky is surrounded buy a black aura and you can't see the skies or the sun cause of this aura. The path continues to the north
+into the dark forest, or you can turn back and go back east to the dark river sikonomia.
+~
+303 131073 0
+D0
+~
+~
+0 -1 30388
+D3
+~
+~
+0 -1 30386
+S
+#30388
+An evil path!~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30389
+D2
+~
+~
+0 -1 30387
+S
+#30389
+An evil path!!~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30390
+D3
+~
+~
+0 -1 30388
+S
+#30390
+Near a Black House~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30391
+D3
+~
+~
+0 -1 30389
+S
+#30391
+In Front of a Black House~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30392
+D2
+~
+~
+0 -1 30390
+S
+#30392
+Inside a Black House~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30393
+D2
+~
+~
+0 -1 30391
+D3
+~
+~
+0 -1 30394
+S
+#30393
+Living Room of Master Hikotoka~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30395
+D3
+~
+~
+0 -1 30392
+S
+#30394
+Bathroom of Master Hikotoka~
+A temporary description
+~
+303 0 0
+D1
+~
+~
+0 -1 30392
+S
+#30395
+Bedroom of Master Hikotoka~
+A temporary description
+~
+303 0 0
+D2
+~
+~
+0 -1 30393
+S
+#30396
+In the ancient tombs of Archmage Jikonika~
+A temporary description
+~
+303 0 0
+D2
+~
+~
+0 -1 30397
+D3
+~
+~
+0 -1 30384
+S
+#30397
+In the ancient tombs of Archmage Jikonika~
+A temporary description
+~
+303 0 0
+D0
+~
+~
+0 -1 30396
+D1
+~
+~
+0 -1 30398
+S
+#30398
+In the ancient tombs of Archmage Jikonika~
+A temporary description
+~
+303 0 0
+D3
+~
+~
+0 -1 30397
+D5
+~
+~
+0 -1 30399
+S
+#30399
+In the ancient tombs of Archmage Jikonika~
+A temporary description
+~
+303 0 0
+D4
+~
+~
+0 -1 30398
+S
+#0
+$~

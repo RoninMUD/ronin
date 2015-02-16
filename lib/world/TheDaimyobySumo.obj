@@ -1,0 +1,879 @@
+#500
+Katana Musashi Sword~
+Musashi's Katana~
+A razor-edged katana is shining brightly, waiting for its next victim.~
+$r Katana shines with the brightness of a thousand suns.~
+5 142664960 8193
+63 4 9 3
+20 50000 7500
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 3
+#501
+Spear Nihongo~
+Nihongo~
+Nihongo lies here, anxious to free its enemies of their souls.~
+$r hands glow eerily as a surge of power flows through the spear.~
+5 177332225 8193
+0 3 10 9
+12 10 450
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 12
+A
+13 -20
+#502
+noodle petrified~
+a petrified noodle~
+A petrified noodle is here, looking strangely important.~
+~
+18 0 1
+0 0 0 0
+2 200000 0
+95
+E
+noodle~
+This is the holy of holies, a noodle believed to have fallen from
+the sky during the fabled Noodle Molt of the Hovering Noodle Creature.
+An inedible noodly relic, this is said to allow one to pass between
+planes, just as HNC does as it peacefully visits its planar subjects.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#506
+Bamboo Flute Key~
+Bamboo Flute~
+A beautiful bamboo flute lies on the ground, waiting to be played.~
+~
+18 524288 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#508
+teacup porcelain tea cup~
+Porcelain Teacup~
+A porcelain teacup sits on the ground shining brightly.~
+~
+17 0 16385
+6 6 11 0
+1 10 1500
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+A
+3 1
+#516
+prybar~
+a metal prybar~
+A steel bar is on the floor, it looks like it might be good for prying.~
+~
+18 524288 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#517
+Shuriken star throwing~
+Shuriken~
+A sharp metal star is stuck in the wall.~
+~
+7 0 49153
+10 9 0 0
+10 6500 2500
+45
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#518
+shinobigawa shi stick~
+a shinobigawa~
+Left on the ground here you see a stick with a curved blade attached to it.~
+~
+5 0 8193
+0 2 6 3
+10 2500 1250
+14
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+49 25
+#519
+firepit fire pit~
+A firepit~
+A small firepit radiates a warm glow from the embers within it.~
+~
+15 0 0
+50 50 5 0
+500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#520
+venison deer meat~
+A thin strip of venison~
+A succulent piece of venison is here, practically begging to be eaten.~
+~
+19 0 1
+20 0 0 0
+10 10 10
+95
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#525
+Naginata nagi~
+A shining naginata~
+A long halberd with a curved blade has been propped up against the wall here.~
+~
+5 135266304 8193
+21 5 4 14
+20 1750000 9750
+80
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#526
+wakizashi short sword~
+wakizashi~
+A curved wakizashi reflects the sunlight into a dozen shimmering beams.~
+~
+5 249622528 16385
+21 2 12 14
+18 3500000 5750
+27
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+2 2
+#527
+katana sword~
+A razor-edged katana~
+An extremely curved katana rests against the wall here.~
+~
+5 134217728 8193
+21 1 26 3
+20 2000000 7750
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+2 2
+#529
+Katana Sword~
+Katana~
+A rather plain-looking katana is on the floor.~
+~
+5 0 8193
+0 2 7 3
+10 1000 75
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#530
+Noodles~
+A bowl of noodles~
+Steam rises from a bowl of noodles, better eat them while they're still hot!~
+~
+19 0 1
+36 0 0 0
+10 12500 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#531
+jar sake~
+A jar of sake~
+A warm jar of sweet-smelling sake lies here.~
+~
+17 0 1
+15 10 8 0
+10 10000 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#538
+Scroll~
+Shogun's scroll~
+You see an imperial-looking scroll fastened to the wall.
+~
+~
+2 0 16385
+30 39 39 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#540
+loincloth sumo~
+A Sumo Wrestler's Loincloth~
+A sweaty sumo wrestler's loincloth lies on the ground in a heap.~
+~
+9 181467394 2049
+7 0 0 0
+5 37500 12500
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+46 -20
+#543
+cloak tengu straw~
+a Tengu Cloak of Straw~
+A ragged looking cloak of straw lies on the ground here.~
+~
+9 0 1025
+4 0 0 0
+10 75000 12500
+7
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+26 10
+A
+14 15
+B
+2
+#554
+body corpse~
+A horribly mutilated corpse~
+A badly mutilated body is propped up against the wall, covered in blood.~
+~
+15 0 0
+20 0 -1 0
+10 10 10
+100
+E
+body~
+You see the corpse of something which you can only guess was human, the arms
+and legs have been savagely torn from their sockets, the face has been 
+ravaged beyond recognition, but there still remains the clothing and ceremonial
+armor which can only belong to one of the Shogun's attendants.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#557
+pool blood~
+A pool of blood~
+A shimmering crimson pool of blood adorns the floor.~
+~
+17 0 0
+1000 1000 13 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#565
+stalagmite~
+A stalagmite~
+A large stalagmite grows out of the center of a pool of blood here.~
+~
+13 0 0
+0 0 0 0
+6666 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#569
+altar stone~
+A Huge Stone Altar~
+A huge stonemade altar is here, covered with items of unspeakable evil.~
+~
+0 0 0
+0 0 0 0
+9999 10 10
+100
+E
+stone~
+Littering the top of the altars are many strange bottles containing many
+vile smelling liquids, a small cauldron which is being heated by an unseen
+source, and many other oddities.  A sharp and pointy dagger covered with
+fresh blood appears to have been used recently in some sort of dark
+sacrificial ritual.
+~
+E
+altar~
+Littering the top of the altars are many strange bottles containing many
+vile smelling liquids, a small cauldron which is being heated by an unseen
+source, and many other oddities.  A sharp and pointy dagger covered with
+fresh blood appears to have been used recently in some sort of dark
+sacrificial ritual.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#570
+thorn withering~
+The Thorn of Withering~
+A midnight black thorn lies here, it looks like a rather deadly weapon.~
+$r Thorn sprays blood everywhere as it rips through $V's hide.~
+5 250638400 8193
+3 2 22 11
+21 77500 10000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -10
+A
+12 25
+#571
+armguards ebon~
+Ebon Armguards~
+A pair of shiny black armguards etched with numerous arcane glyphs lie here.~
+~
+9 82850304 257
+10 0 0 0
+23 67500 6750
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+1 3
+#572
+wand root oaken~
+An oaken root wand~
+A twisted oaken root wand covered in glyphs has been stuck in the ground.~
+~
+3 116928512 16385
+30 1 0 110
+10 15000 5000
+3
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#584
+brazier magical~
+A magical brazier~
+A brazier of magical fire is here, silently burning for eternity.~
+~
+0 0 0
+0 0 0 0
+300 10 10
+100
+E
+brazier~
+It is a large iron bowl supported nearly waist high above the ground by a 
+tripod of stout metal rods. Looking closer into the fire, you realize that
+it gives off no heat at all, and putting your hand into it does you no harm.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#585
+portal ring evil~
+Small Portal of Evil~
+You see a ring on the ground with a black center like you have never beheld.~
+~
+9 267444756 3
+4 0 0 0
+1 17000 22000
+7
+E
+blackness~
+  It is so black your eyes are drawn in and you lose sense of yourself as
+you feel overwhelmed with evil.  You are sure that this blackness is the
+key to the demonic powers of this ring.
+
+~
+E
+portal evil ring~
+
+  This ring is fashioned from a material of which you have not seen before.
+On its exterior are remnants of its original owner, dried blood and small
+flakes of charred skin.  You try and clean them off but they seem to have
+become part of the ring itself.  Other than that it is simple in appearance
+and you cannot see through the middle which is simply a Blackness like
+you have never before experienced.
+
+~
+X
+None~
+4 0 0
+M
+Your finger disappears into oblivion as you wear the portal.~
+$n's finger disappears into oblivion as $e wears the portal.~
+Your finger appears as you remove the portal.~
+$n's finger appears as $e removes the portal.~
+A
+19 3
+A
+18 4
+A
+52 15
+T
+14000
+#586
+onyx portal gate~
+An Onyx Portal~
+A shiny black onyx portal stands against the northern wall.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+onyx~
+Looking beyond the faint reflection of yourself, you see another much darker
+dimension beyond the solid slab of onyx.  Apparently this is the entrance into
+the demon's home plane of existence where shadow and darkness are the only 
+things that exist.
+~
+E
+portal~
+Looking beyond the faint reflection of yourself, you see another much darker
+dimension beyond the solid slab of onyx.  Apparently this is the entrance into
+the demon's home plane of existence where shadow and darkness are the only 
+things that exist.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#587
+icon possession onyx~
+Icon of Possession~
+A grotesquely carved icon of a demon on a loop of string lies on the ground.~
+~
+15 171988996 4097
+150 5 0 0
+125 57500 3750
+4
+E
+icon~
+You see a small figurine carved from rainbow colored onyx of a horrible 
+looking demon crushing a human's head with its bare hands.
+~
+E
+possession~
+You see a small figurine carved from rainbow colored onyx of a horrible 
+looking demon crushing a human's head with its bare hands.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+17 -10
+B
+16
+#588
+Key Large Silvery~
+Large silvery key~
+A large silvery key shines in the sunlight.~
+~
+18 524288 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#590
+potion ginseng~
+A ginseng potion~
+A murky brown herbal potion lies on the ground here.~
+~
+10 268435520 16385
+30 90 116 132
+10 375000 15000
+65
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#591
+potion nightshade~
+A nightshade potion~
+A dark potion made from the spores of the nightshade mushroom lies here.~
+~
+10 268435520 16385
+30 19 33 44
+10 47500 5000
+80
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#593
+journal ancient~
+An ancient journal~
+An ancient, weathered journal has been left here.~
+~
+16 0 1
+0 0 0 0
+10 10 10
+100
+E
+journal~
+You see a weathered old manuscript, at the top of the only pages that the
+ink hasn't been smeared, you see the words Page1, Page2 and Page3.
+~
+E
+Page1~
+This is the story of a brave samurai named Seijiro. For many years of his
+life he fought and killed many of the evil creatures that roamed the land.
+One day he heard talk of a vicious demon that had recently killed a dozen
+skilled samurai. Upon hearing of this, he immediately set out to find and
+slay this foul creature. He searched for many days and when he finally caught
+up with it, it calmly looked at him and said 'I am Arago of the Shadows and
+you are dead.' This enraged Seijiro so much that he attacked Arago in a fit
+of rage and was horribly wounded by Arago.
+~
+E
+page2~
+It is not clear why the demon didn't finish off Seijiro, but the next day a
+group of sohei (warrior monks) happened upon him and took him back to their
+temple to nurse him back to health. It was only after talking with the monks
+did Seijiro learn that he could only stop the demon by using a magical scroll
+of binding to trap him underground. Shortly after this, Seijiro decided to
+join the monks' order and learn their mystical ways.
+~
+E
+page3~
+A few months after he began his training with the monks, Seijiro learned that
+the demon had found out that he was indeed still alive and was intending to
+finish the job. Seijiro was prepared however, he had learned of a tunnel
+beneath the temple and had enlisted the help of the grandmaster in writing
+his scroll of binding. Once the demon reached the temple, Seijiro taunted
+him by throwing rocks and then quickly fled into the tunnels and waited for 
+him. When the demon arrived, Seijiro said 'I am Seijiro and you are dead.' With
+that, Seijiro uttered a holy mantra to the gods and brought down the tunnel
+behind them, trapping both inside forever.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#594
+cot bed~
+A small priest's cot~
+A small, rather uncomfortable looking cot has been set against the wall.~
+~
+15 0 0
+100 5 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#595
+scroll binding~
+A scroll of binding~
+An ancient scroll sealed with a waxen blob lies here covered in dust.~
+~
+2 134217728 16385
+30 90 36 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#596
+Shrine~
+A small wooden shrine~
+A small wooden shrine has been set up against the wall here.~
+~
+15 0 0
+100 15 597 0
+450 10 10
+100
+E
+shrine~
+It is a beautiful shrine made from rich dark brown lacquered Ho wood that 
+stands roughly five feet tall and has many writings and relief carvings on 
+every side of it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#597
+key runed iron~
+A runed iron key~
+A key with many unusual runes has been left here.~
+~
+18 0 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#598
+gong large brass~
+A large brass gong~
+A large brass gong is mounted to the wall here.~
+~
+0 0 0
+0 0 0 0
+500 10 10
+100
+E
+gong~
+It is a simply made disk of brass, and bears many shallow dents in it from
+being struck dozens of times.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#599
+gong unholy wrath~
+The Gong of Unholy Wrath~
+A large gong etched with runes and unholy symbols rests on the ground.~
+~
+24 217116688 16385
+0 0 0 0
+10 50000 3500
+8
+E
+Gong~
+It is a round metal disk about the size of a large buckler, made from some
+sort of shiny black metal. Unusual runes unlike anything you've ever seen
+wind their way around the periphery of the gong.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+12 15
+B
+1024
+#0
+$~

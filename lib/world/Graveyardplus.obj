@@ -1,0 +1,526 @@
+#3400
+candlestick pewter candle~
+a candlestick~
+A pewter candlestick is standing here.~
+~
+1 0 16385
+0 0 24 0
+5 150 50
+50
+E
+candlestick~
+It is a rather old-looking three-armed candlestick made from pewter.  Its
+candles are a yellowish white colour.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3401
+oops~
+oops~
+oops~
+~
+12 0 16384
+0 0 0 0
+5 150 50
+50
+E
+oops~
+oops
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3402
+tickler~
+a nightguant's tickler~
+A nightgaunt's tickler has been left here~
+~
+5 128 1
+0 2 5 3
+5 5 1
+50
+E
+tickler~
+A horrid black mass of gooey tentacles obviously ripped from the corpse
+of a nightgaunt...disgusting.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#3403
+webbing plasma pink pile~
+disgusting pinkish plasma webbing~
+A pile of pink material is lying here~
+~
+12 2624 9
+0 0 0 0
+10 5000 50
+50
+E
+plasma webbing~
+Yuck mossy and wet it looks like some sorta webbing
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -2
+#3410
+rod key~
+a queerly shaped rod~
+a queerly shaped rod is lying here~
+~
+18 0 1
+0 0 0 0
+5 0 20000
+50
+E
+rod key~
+  This rod look sorta octagonal, and sorta like a key and crowbar. You
+recognize that it will probably fit the lock at the entrance of the tombs.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3411
+large black dirty key~
+a large black dirty key~
+a large black dirty key is lying here~
+~
+18 0 16385
+0 0 0 0
+3 0 20000
+50
+E
+large black dirty key~
+  One of those traditional old lock type key...except huge, black and
+filty...hmm...like it has been buried for some time...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3412
+head jubal mummy~
+the mummified head of Jubal the Benevolent~
+the mummified head of Jubal the Benevolent is lolling here back and forth~
+~
+15 1024 1
+3 5 -1 0
+20 0 500
+50
+E
+head jubal mummy~
+  ACK! Its half eaten away...yet it is whole...infact I think it can be opened
+and closed...is there something in its teeth!?!?!? ACK you do it!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3413
+black marble ring~
+a black marble ring~
+a black marble ring is lying here on the ground...~
+~
+11 1088 3
+0 0 0 0
+2 4000 20
+50
+E
+black marble ring~
+  It is pitch black and has beautiful swirls characteristic of marble all
+through it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 10
+A
+24 1
+#3414
+thin rapier~
+a whisper thin rapier~
+a rapier is lying here~
+~
+5 2 8193
+0 4 2 11
+4 1000 35
+50
+E
+thin rapier~
+  It seems so thin that it would be useless but at the same time it
+looks deadly.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+10 10
+#3415
+sarcophagus coffin stone~
+a stone sarcophagus~
+a stone sarcophagus is sitting here~
+~
+15 0 0
+400 15 3416 0
+2000 0 0
+50
+E
+sarcophagus coffin~
+  I well crafted, if dusty and ancient, home for the afterworld it seems
+to be able to be opened but needs a key.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3416
+iron heavy key~
+a heavy iron key~
+a heavy iron key is lying here~
+~
+18 0 16385
+0 0 0 0
+4 0 30000
+50
+E
+iron heavy key~
+  It looks to be a very heavy old iron key.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3417
+flask wineflask~
+a wineflask~
+a wineflask has been curiously been left lying around~
+~
+17 0 16385
+4 4 2 0
+5 80 2
+50
+E
+wineflask flask~
+  A nice leather wineflask that has somehow survived the ages in a coffin.
+The wine should be nicely aged.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3418
+coins~
+a mound of coins fit for a dead king~
+you see a mound of coins fit for a dead king here~
+~
+20 0 1
+5000 0 0 0
+50 0 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3419
+key~
+key to the coffin~
+The key to the coffin is lying here~
+~
+18 0 16385
+0 0 0 0
+3 0 50000
+50
+E
+key~
+   Neat you have the key to the coffin...is is a soft orange color
+and burns in your hand a bit.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3420
+rat'hcor rathcor~
+a hidden conpartment in the room~
+~
+~
+15 4 0
+10 5 -1 0
+1000 0 0
+50
+E
+rat'hcor rathcor~
+  AH HA! a hidden compartment!!!!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3421
+rusty sword curved scimitar~
+a rusty curved scimitar~
+a sword has been left lying here~
+~
+5 0 8193
+0 2 3 3
+6 500 14
+50
+E
+rusty sword scimitar~
+  Very rusty and old...it has a wide blade and chunks missing from
+its cutting edge.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3422
+piece slime~
+a piece of slime~
+You step on a piece of slime...your foot squishes a bit~
+~
+19 0 1
+15 0 0 0
+1 15 5
+50
+E
+slime piece~
+  ICK! This is a piece of slug-like brownish green slime...
+Blech!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3423
+smock~
+An artists smock~
+An artists smock is lying here on the floor~
+~
+11 0 9
+0 0 0 0
+7 100 5
+50
+E
+smock~
+  It has paint and little shavings of different materials all over it.
+It is very old an smells of paint, mildew, and rot.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 -3
+#3424
+scroll tightly rolled~
+a tightly rolled scroll~
+a yellowing tightly rolled scroll is here~
+~
+2 64 16385
+15 10 12 32
+5 5000 1429
+50
+E
+scroll tightly rolled~
+  It is tightly wound. The writing on the inside when opened up is very
+unreadable but the scroll has a seal on it with a grey :
+
+    88
+    88 
+8888  8888
+    88
+    88
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3425
+auburn orb~
+An auburn-colored orb~
+An orb is here~
+~
+4 66 16385
+10 2 2 7
+10 15000 4638
+50
+E
+auburn orb~
+  You gaze into the orb and are almost lost in the swirling mists of color
+inside of this rare and beautiful object.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3427
+cape dark black~
+a dark black cape~
+A dark black cape is lying here~
+~
+12 64 1025
+0 0 0 0
+10 8000 20
+50
+E
+dark black cape~
+  The cape is gently flows and pulls in the light so evenly and perfectly
+that the cape seems to be simply a void of blackness. It is quite beautiful
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+17 -4
+#3428
+flaming sword long longsword~
+a pitch-black longsword~
+a sword lies here~
+~
+5 64 8193
+0 3 6 3
+20 7000 20
+50
+E
+flaming sword long longsword~
+  This sword is amazing! It almost wields itself! As you test it out, the 
+flames seems to roar brighter as you go thru basic swordsman routines.
+it is obviously a great find!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#3429
+plate breast dented worn armour~
+a worn and dented breast plate~
+a piece of armour is here~
+~
+9 0 9
+8 0 0 0
+50 20000 80
+50
+E
+breast dented plate worn~
+  Tho this piece of armour is worn and dented it looks very usable.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

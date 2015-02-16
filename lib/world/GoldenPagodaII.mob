@@ -1,0 +1,59 @@
+#26583
+guru~
+The Guru~
+The Guru stands here gazing at a corner deep in thought.
+~
+You are completely enthralled by the dominating personality and towering
+size of the Great Guru. He wears an ancient war armor even though he has
+forsaken violence. He wears a red turban on his head and has a long
+moustache. All in all, he looks terrifying and you wish you were anywhere
+else but here.
+~
+16458 805601448 0 Y
+57 -17 -4 2d30+16850 10d8+115
+1 1500000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26584
+enlightened~
+The Enlightened One~
+The Enlightened One stands here holding both hands joined above his head.
+~
+The Enlightened One stands here bathed in a rainbow aura. You see a smile
+of intense joy and happiness on his face. He has reached Nirvana, but has
+chosen to remain amoung the mortals to guide them on the path of Karma.
+~
+74 268732552 1000 Y
+60 -20 -10 1d300+28000 10d20+100
+1 2000000
+8 8 1
+66 8 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26585
+enlightened uber~
+The Uber Enlightened One~
+The Uber Enlightened One sits here, folded blissfully like a pretzel.
+~
+The Uber Enlightened One sits here, his arms and legs twined about his lithe
+body in what must be a pose intended only for those who have reached complete
+Nirvana. Though it looks uncomfortable, he is bathed in a rainbow glow and
+wears a cheshire smile on his beaming face. He is here by choice, to guide
+the followers in his pagoda on their own path to enlightenment and teach them
+the ways of Karma.
+~
+74 268732552 1000 Y
+60 -25 -25 10d300+200000 20d20+200
+10000000 100000000
+8 8 1
+67 8 100d100+10000 1
+11 6 50 197
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#0
+$~

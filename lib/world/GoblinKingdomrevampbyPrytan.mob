@@ -1,0 +1,105 @@
+#4501
+Goblin Peasant~
+the peasant~
+A goblin peasant is here.~
+bah
+~
+72 0 -500 Y
+10 12 -2 3d10+200 2d3+1
+1000 10000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+#4502
+goblin sentry~
+the goblin sentry~
+A Clan Kraznor Sentry keeps watch here.
+~
+The sentry is has a slightly green tone to his skin, like all of his kind. He
+is wearing chainmail armor from head to toe and looks as though he would be
+a difficult opponent to best.
+~
+74 0 -500 Y
+13 10 -3 3d10+400 3d4+1
+6000 15000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+#4503
+Elite Goblin Guard~
+an Elite Goblin Guard~
+Druxlor's Elite Goblin Guard stands here.
+~
+This is Druxlor's Elite Goblin Guard. They are the best trained fighters in
+all of clan Kraznor. The guard wears solid plate armor from heat to toe. The
+armor was once bright emerald green with yellow and red trappings but because
+of neglect and missuse, it now has a dingy tarnished cast.
+~
+104 0 -600 Y
+15 7 -4 4d10+650 3d5+1
+10000 35000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+#4504
+Priestess Quareen~
+Quareen~
+Quareen, Priestess of the Kraznor clan is here.
+~
+As your gaze passes Quareen, you feel an odd mixture of revultion and longing.
+You suddenly realize that there must be some sort of spell at work here. If 
+you had looked at her for much longer, you would have been transfixed by her
+spell and lost forever in it's depths.
+~
+42 0 -800 Y
+22 3 -5 20d10+870 4d4+6
+12000 60000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+#4505
+Chief Druxlor~
+Druxlor~
+Druxlor is here presiding from his throne.
+~
+Druxlor is a goblin of immense girth. He is easily the largest beast you have
+ever seen. He is also quite a nasty looking thing. Druxlor is attired in
+a mottly assortment of skins, bones, skulls, and cloth. On most beings this
+would be ludicrous but it serves to enhance Druxlor's fierce nature.
+~
+43 0 -1000 Y
+25 -3 -6 20d10+1270 6d4+6
+15000 100000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+#4506
+Snarak~
+the Snarak~
+A Snarak is lying in wait.
+~
+The Snarak is a parasitic creature. It lives off the waste of Goblins.
+~
+72 32768 -600 Y
+13 7 -4 10d6+450 4d4+4
+8000 25000
+8 8 1
+54 0 1d1+1 0
+0 0 0 0
+#4507
+gatekeeper goblin~
+the Gatekeeper~
+The Gatekeeper is here barring your way.
+~
+The keeper of the gate is a truely ominous figure. He stands 8'2" tall and is
+as wide as an oak. With a snarl on his lips he advances a few steps to await
+your puny assault.
+~
+10 0 -800 Y
+19 5 -5 20d10+1000 6d5+5
+10000 75000
+8 8 1
+79 0 1d1+1 0
+0 0 0 0
+#0
+$~

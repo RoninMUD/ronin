@@ -1,0 +1,174 @@
+#200
+vagabond female pirate~
+A female vagabond~
+A slinkily dressed vagabond struts by, a little wiggle in her hips.
+~
+   A tattered shirt barely contains a heaving bosom. Long hair streams down her
+narrow back as a pair of leather breeches fit snugly over solid legs and a 
+healthy curving derriere.
+~
+8 0 -150 Y
+30 -10 -8 54d54+2900 7d7+16
+12000 450000
+8 8 2
+69 0 1d1+1 2
+4 1 10 0
+2 2 5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#201
+vagabond male pirate~
+A male vagabond~
+A gaudily dressed vagabond struts proudly, chest hair leading the way.
+~
+   Thick curly hair sprouts from his tanned, muscled chest. Ragged suspenders
+hold up a loose pair of shredded pantaloons. The pungent smell of gunpowder and
+a special blend of smoked herbs permeates his greasy hair.
+~
+8 0 -150 Y
+30 -10 -8 54d54+2900 7d7+14
+12000 425000
+8 8 1
+69 0 1d1+1 2
+4 1 12 0
+2 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#202
+bugbear creature humanoid~
+A shuffling bugbear~
+A tall, bearlike creature shuffles along in the dirt.
+~
+   Mandibles clack loudly as a multitude of eyes roll quickly around searching
+for danger. Thick fur covers its lumbering body, sharp claws flashing wickedly
+from massive paws.
+~
+8 0 -10 Y
+38 -11 -9 70d85+4532 9d8+25
+10000 625000
+8 8 1
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#204
+bugbear chief humanoid~
+A bugbear chief~
+A tall humanoid, clad in bark and wearing small spectacles, glances up.
+~
+   A towering mountain of claws and fur rears upwards in the cramped house. Sharp
+daggerlike claws flash in the dim light as giant mandibles drool thick globs of
+phlegm on the splintered wood floor. Countless eyes glint in the darkness 
+staring down at you unblinking.
+~
+10 268437632 0 Y
+40 -17 -11 9d9+9899 12d9+26
+72000 175000
+8 8 1
+68 20544 1d1+1 0
+0 0 1 384
+K
+0 0 0 0 0 0 0
+#205
+vagabond female pirate~
+A female vagabond~
+A slinkily dressed vagabond struts by, a little wiggle in her hips.
+~
+   A tattered shirt barely contains a heaving bosom. Long hair streams down her
+narrow back as a pair of leather breeches fit snugly over solid legs and a 
+healthy curving derriere.
+~
+8 0 -150 Y
+38 -18 -12 60d60+5600 8d8+28
+12000 765000
+8 8 2
+69 0 1d1+1 2
+4 1 10 0
+2 2 5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#206
+vagabond male pirate~
+A male vagabond~
+A gaudily dressed vagabond struts proudly, chest hair leading the way.
+~
+   Thick curly hair sprouts from his tanned, muscled chest. Ragged suspenders
+hold up a loose pair of shredded pantaloons. The pungent smell of gunpowder and
+a special blend of smoked herbs permeates his greasy hair.
+~
+8 0 -150 Y
+38 -18 -12 60d60+5600 8d8+28
+12000 765000
+8 8 1
+69 0 1d1+1 2
+4 1 12 0
+2 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#207
+spider green creature~
+A glinting green spider~
+A spider, green legs glinting between the bushes, scuttles up a branch.
+~
+   Long sticklike legs click furiously as the swirling green and black colors
+mesh into the forest floor. Thick strands of cobweb are strung along the path
+as it spins a net to catch wandering forest creatures.
+~
+8 268697600 -200 Y
+35 -13 -9 8d8+3500 7d7+7
+6000 640000
+8 8 1
+77 0 1d1+1 2
+5 1 5 0
+10 2 11 0
+0 0 9 0
+K
+0 0 0 0 0 0 0
+#208
+wolverine creature~
+A ferocious wolverine~
+A small black and brown creature cowers down, hissing wildly.
+~
+   Beady red eyes flare brightly as his lips curl upwards in a dark snarl
+showing teeth covered in decayed meat and clotted blood. Grey brown fur shows
+a distinctive white stripe covered in dirt and thick with broken twigs.
+~
+40 0 200 Y
+37 -15 -8 12d12+1876 9d9+20
+1 457000
+8 8 1
+86 0 1d1+1 2
+6 2 12 0
+5 1 15 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#209
+lookout vagabond scout leader~
+A vagabond lookout~
+A lookout claps a gleaming spyglass to his eye as he sureys the forest below.
+~
+   Wavy blonde hair frames a handsome chiseled face, two clear blue eyes gazing
+intently out across the far landscape. A narrow frame carries a well tailored
+uniform, buttons and trappings shiny and clean.
+~
+10 0 120 Y
+42 19 -16 54d54+36000 12d12+44
+350000 900000
+8 8 1
+69 21316 1d1+1 4
+1 6 9 28
+1 1 12 37
+2 2 11 0
+1 2 6 218
+0 0 0 850
+R
+32
+K
+0 0 0 0 0 0 0
+#0
+$~

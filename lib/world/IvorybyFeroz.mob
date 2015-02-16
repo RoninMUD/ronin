@@ -1,0 +1,203 @@
+#2801
+wiseman~
+The Wiseman~
+The Wiseman sits here, legs crossed, thinking about the universe.
+~
+The Wiseman is human, although rumors elseways circulate because of
+his age.  There's not a man alive in the city that knows of a time
+when the Wiseman didn't sit here, atop the tower, examing the world
+as time passes and debating it's meaning with himself and those
+who come here to speak with him and share in this view from atop
+the world.
+~
+10 411314348 0 Y
+33 -10 -8 20d20+5000 1d10+35
+30000 360000
+8 8 1
+0 0 0d0+0 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#2802
+old man~
+An Old Man~
+An Old Man is standing here, talking to himself.
+~
+This is man looks befuddled and lost in the big city.  He doesn't
+look like he would be too tough in a fight, but may have been
+a warrior in the past.
+~
+72 0 200 Y
+20 5 0 3d50+500 3d6+3
+10000 50000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2803
+knight retire retired~
+The Retired Knight~
+The Retired Knight rests here in his chair.
+~
+Once upon a time, this Knight was known as a powerful fighter
+and protected the forces of good all across the world, but now
+he's old and has come here to this city of peace to relax before
+his last day comes.  But during his retirement, he gladly helps
+younger paladins learn the most advanced skills of their art.
+~
+11 0 1000 Y
+60 -7 -6 10d100+4400 6d4+60
+20000 400000
+8 8 1
+7 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2804
+street sweeper~
+A Street Sweeper~
+A Street Sweeper is here, cleaning the streets.
+~
+In order for the Ivory City to maintain its beautiful appearance,
+it must maintain a large city cleaning staff.  This man is one of
+many of the city employed workers attempting to clean up the messes
+made by all of the citizens and visitors to the city.
+~
+76 0 100 Y
+21 2 0 3d30+1000 4d4+4
+2000 110000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2805
+old physicist~
+The Old Physicist~
+An Old Physicist is standing here.
+~
+This old man wanders the city with a purpose.  He is seeking ingredients
+or rare and magical sources to use in his work.  But he appears to be more
+of the book worm type than a fighter.
+~
+72 0 300 Y
+19 4 -3 5d50+700 2d12+0
+10000 95000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2806
+old philosopher~
+A Philosopher~
+A Philosopher wanders the city, in search of knowledge.
+~
+This Philosopher has come to live in this city because of all the
+knowledge and experiences that are traded in the city, and
+additionally has at his disposal the Wiseman that lives at the
+top of the tower.
+~
+72 0 0 Y
+25 1 -4 9d20+1100 3d6+6
+1000 140000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2807
+negress~
+The Negress~
+The Negress is standing here.
+~
+This black skinned woman hails from a far off land.  She is one
+of many foreigners and travelers that come to visit this center
+of commerce.
+~
+72 0 500 Y
+27 -2 0 10d3+1300 9d2+7
+10000 180000
+8 8 2
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2808
+roe~
+The Roe~
+A Roe is standing here.
+~
+A small Lovely Asiatic deer.
+~
+72 0 700 Y
+10 10 5 20d2+100 2d6+3
+100 9000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2809
+doctor~
+The Doctor~
+A Doctor is standing here.
+~
+He is a very good doctor.
+~
+74 128 1000 Y
+30 -7 -10 1000d3+20000 10d10+20
+100 600000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2810
+shopkeeper shop keeper food~
+The Food Shopkeeper~
+The Food ShopKeeper smiles and patiently waits for you to buy something.
+~
+He will fight like a madman to protect his store from riff raff like you.
+~
+74 134217856 600 Y
+24 -3 -7 90d10+4000 4d8+0
+500 100000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2811
+shopkeeper shop keeper general~
+The General Shopkeeper~
+The General ShopKeeper smiles and patiently waits for you to buy something.
+~
+He will fight like a madman to protect his store from riff raff like you.
+~
+74 134217856 600 Y
+24 -3 -7 90d10+4000 4d8+0
+500 100000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2812
+wizard~
+The Wizard~
+The Wizard is standing here talking to himself.
+~
+He is a very tough man.
+~
+74 134217856 600 Y
+24 -3 -7 90d10+4000 4d8+0
+50000 100000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

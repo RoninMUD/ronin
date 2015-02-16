@@ -1,0 +1,501 @@
+#10901
+helmet steel~
+a steel helmet~
+A shiny steel helmet is lying on the ground.~
+~
+9 1024 17
+5 0 0 0
+10 12000 120
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 20
+A
+13 -20
+#10902
+shield steel~
+a steel shield~
+A shining steel shield is lying on the ground.~
+~
+9 0 513
+7 0 0 0
+10 20000 120
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+#10903
+ring steel~
+a steel ring~
+A shining steel ring is lying on the ground.~
+~
+11 1024 3
+5 0 0 0
+5 24000 180
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+18 2
+#10904
+sword steel~
+a steel sword~
+Someone has carelessly left a steel sword here.~
+~
+5 1024 8193
+0 2 8 3
+13 16000 90
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#10905
+plates arm zyca~
+a pair of Zyca arm plates~
+A pair of Zyca arm plates are lying on the ground.~
+~
+9 134217728 257
+8 0 0 0
+10 30000 3000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#10906
+plates leg zyca~
+a pair of Zyca leg plates~
+A pair of Zyca leg plates are lying on the ground.~
+~
+9 134217728 33
+8 0 0 0
+10 30000 3000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#10907
+ring zyca~
+a Zyca ring~
+a Zyca ring is lying on the ground.~
+~
+11 134217728 3
+0 0 0 0
+5 30000 3000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 40
+#10908
+orb zyca~
+a Zyca Orb~
+a black orb is lying on the ground.~
+~
+5 1048576 8193
+0 4 6 6
+19 50000 5000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+19 1
+#10909
+gloves~
+a pair of thick leather gloves~
+A pair of thick leather gloves is lying on the ground.~
+~
+9 0 129
+7 0 0 0
+8 15000 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+18 1
+#10910
+collar~
+a metal collar~
+A metal collar is lying on the ground.~
+~
+9 0 5
+4 0 0 0
+4 2000 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10911
+buckler steel~
+a steel buckler~
+A steel buckler is lying on the ground.~
+~
+9 0 4097
+0 0 0 0
+5 7000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -6
+#10912
+key steel~
+a steel key~
+A steel key is lying on the ground.~
+~
+18 0 1
+2 0 0 0
+4 10 100000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10913
+ring zyca emperor~
+The Ring of the Zyca Emperor~
+The diamond-studded ring of the Zyca Emperor lies here.~
+~
+8 134217792 3
+0 0 0 0
+2 1000000 5000
+10
+E
+ring~
+It's priceless.  Truly worthy of an emperor...or whoever stole it from him.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#10914
+arm plates zyca emperor~
+The arm plates of the Zyca Emperor~
+The diamond-studded arm plates of the Zyca Emperor lies here abandoned.~
+~
+9 134217792 257
+15 0 0 0
+5 1000000 5000
+10
+E
+arm~
+They look priceless, the diamonds on them must be worth a fortune.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#10915
+leg plates zyca emperor~
+The leg plates of the Zyca Emperor~
+The diamond-studded leg-plates of the Zyca Emperor lie here abandoned.~
+~
+9 134217792 33
+15 0 0 0
+4 1000000 5000
+10
+E
+leg~
+They look priceless, the diamonds on them must be worth a fortune.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+#10916
+shield steel zyca emperor~
+The steel shield of the Zyca Emperor~
+The diamond-studded steel shield of the Zyca Emperor lies here abandoned.~
+~
+9 134217792 513
+25 0 0 0
+10 10 10
+10
+E
+shield~
+The diamond-studded shield of the Zyca Emperor lies here abandoned.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#10917
+buckler steel zyca emperor~
+The steel buckler of the Zyca Emperor~
+The steel buckler of the Zyca Emperor lies here abandoned.~
+~
+9 134217792 4097
+10 0 0 0
+3 500000 2000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#10918
+orb imperial zyca~
+The Imperial Orb~
+The Imperial Orb of the Zyca Emperor lies here abandoned.~
+~
+5 134217792 8193
+0 7 6 6
+19 800000 10000
+10
+E
+orb~
+It's made from glassteel, unbreakable and everlasting.  Inside it there's a
+fiery red ruby that glows with a soft light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+17 -10
+#10919
+armor chromium imperial~
+The Imperial Chromium Armor~
+The chromium armor of the Zyca Emperor lies here abandoned.~
+~
+9 134217792 9
+30 0 0 0
+8 600000 6000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+53 5
+#10920
+sceptre imperial power~
+The Imperial Sceptre of Power~
+The Sceptre of the Zyca Emperor lies here abandoned.~
+~
+1 134217792 65537
+0 0 -1 0
+5 400000 7000
+10
+E
+sceptre~
+It's the two-headed eagle symbol of the Zyca Emperor cast in gold and inlaid
+with rubies and diamonds.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+#10921
+ring signet imperial~
+The Imperial Signet Ring~
+The Imperial Signet Ring lies here abandoned.~
+~
+11 134217792 3
+1 0 0 0
+0 250000 1000
+10
+E
+ring~
+It bears the two-headed eagle symbol of the Zyca Emperor.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+17 -5
+#10922
+tradebar bar bronze trade~
+a bronze tradebar~
+A small bronze tradebar lies here on the ground.~
+~
+8 402653184 16385
+0 0 0 0
+10 50000 0
+90
+E
+bronze~
+It's a bronze tradebar issued by the Mayor of Midgaard.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10923
+tradebar silver bar trade~
+a silver tradebar~
+A silver tradebar lies on the ground here.~
+~
+8 402653184 16385
+0 0 0 0
+10 100000 0
+10
+E
+silver~
+It's a silver tradebar issued by the Mayor of Midgaard.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10924
+key greasy~
+a greasy key~
+A greasy key, caked with charred bits of souffle was dropped here.~
+~
+18 0 1
+0 -1 -1 -1
+1 5 2
+80
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

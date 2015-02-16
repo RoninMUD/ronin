@@ -1,0 +1,177 @@
+#16700
+invalid~
+invalid~
+A Viking is standing here.
+~
+This broad shouldered grim faced beast of a man looks like he eats the likes
+of you to breakfeat every morning. Better stay clear, or start praying.
+~
+72 536870912 0 Y
+26 -4 -8 1d1+1600 4d6+3
+10000 200000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#16701
+invalid~
+invalid~
+Grim, the viking chief, fumes with rage when he spots you.
+~
+Grim is the leader of thees vikings.  He is the thoughest viking in town
+~
+106 536870912 0 Y
+30 -10 -10 1d1+2550 6d8+3
+100000 400000
+8 8 1
+0 2232 0d0+0 0
+0 0 0 0
+#16702
+invalid~
+invalid~
+A viking is standing here.
+~
+A large strong man stands before you. He looks really mean so maby it's time to move on.
+~
+72 536870912 0 Y
+30 60 -11 1d1+2000 4d7+8
+12121 150000
+8 8 1
+0 384 40d-23672+-18296 0
+0 0 0 0
+#16710
+Divineress~
+The Divineress~
+A beautifull Divineress is standing here.
+~
+You are stunned by the beauty of this woman. Her long blond hair cascades down
+her back.Long legs end in a tiny waist suporting a nicely built bust. 
+Then your eyes meet her and you are filled with terror. Her hatered pierce your
+soul when you know you are gonna die!
+~
+537002058 268697640 -500 Y
+35 -15 -15 30d100+10500 5d5+100
+750000 1000000
+8 8 2
+0 0 1d1+1 0
+0 0 0 0
+#16740
+Viking Warlord~
+The Viking Warlord~
+The Viking Warlord is peering around looking for more heads to chop off!
+~
+Before you stands a man that moves with the grase of a panther, and looks as strong as a bear. Your first thought is that this man could demolish an army 
+single handed. To face him alone would mean sertain death.
+~
+8 402915456 0 Y
+60 -30 40 10d10+32500 5d125+10
+1000000 800000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+#16741
+Viking Chief~
+A Viking Chief~
+A Viking Chief is standing here shouting orders to his men.
+~
+This huge man looks as if he could snap your neck like a twig with his bare
+hands. As his scared face settels his gaze on you, you feel chilled to the bone.
+An inner vois tells you to: PANIC!!
+~
+16392 277086336 -750 Y
+50 -14 -15 10d300+3000 5d15+40
+5000 50000
+8 8 1
+69 0 1d10+100 2
+1 6 1 102
+7 3 25 0
+0 0 1 0
+#16742
+Viking~
+The Viking~
+A Viking is hiding in the shadows.
+~
+This is a though man. His face is scared, and his shoulders broad. Used to
+blistering cold and horrible storms. A hard man to beat in any battle.
+~
+8 276832256 0 Y
+35 -15 -8 10d100+1300 3d15+10
+1 15000
+8 8 1
+11 0 10d10+150 1
+4 2 5 0
+0 0 0 0
+#16743
+Erik Chief Viking~
+Erik the Viking Chief~
+A Viking Chief is standing here shouting orders to his men.
+~
+This huge man looks as if he could snap your neck like a twig with his bare
+hands. As his scared face settels his gaze on you, you feel chilled to the bone.
+An inner vois tells you to: PANIC!!
+~
+8 411041792 -750 Y
+50 -25 -15 10d300+4500 5d15+45
+50000 250000
+8 8 1
+4 0 1d1+1 2
+4 2 5 0
+7 4 4 0
+0 0 1 0
+#16750
+Viking~
+The Viking~
+A Viking is standing here, ready to kill everyone in sight.
+~
+A large strong man stands before you.
+His scares all over his body shows that he has been in battle before.
+He wont give up easilly.
+~
+104 0 0 Y
+20 0 10 1d1+1600 3d3+30
+30000 100000
+8 8 1
+73 0 1d1+100 0
+0 0 0 0
+#16751
+Grimdur~
+Grimdur~
+The viking cheiftain, Grimdur, is looking over his domain.
+~
+The leader, and also the biggest of the vikings is coming
+towards you.
+~
+16506 32768 0 Y
+20 0 3 1d1+2199 5d5+33
+100000 350000
+8 8 1
+73 0 1d1+100 0
+0 0 0 0
+#16752
+Viking Guard.~
+A Viking Guard~
+invalid~
+You see a large 'human'. Dressed up in some kind of uniform.
+You cant descide whether it is ugly or pretty. Anyway. He seems like
+a mean guy.
+~
+74 128 -536 Y
+20 0 -6 1d1+999 5d5+25
+25232 111211
+5 8 1
+73 0 1d1+99 0
+0 0 0 0
+#16753
+Child~
+Viking child~
+A nasty little child with a helmet with two horns, is running around here.
+~
+This little child is just here to have fun. At least what he think is fun.
+~
+136 0 0 Y
+20 0 10 1d4+300 10d1+10
+3 1500
+8 8 1
+73 0 1d1+1 0
+0 0 0 0
+#0
+$~

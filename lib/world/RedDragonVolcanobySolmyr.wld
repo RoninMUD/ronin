@@ -1,0 +1,772 @@
+#17500
+At a Cave Bend~
+   Huge boulders litter the ground of the large cave that runs west
+and south from here.  The cave is warm and dry and the walls are
+quite rugged.  Apart from the boulders, the ground is fairly smooth
+and appears to be plutonic.  The boulders originate from the
+ceiling, and considering their pure surfaces, they must have fallen
+down quite recently.
+~
+175 557065 0
+D2
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17507
+D3
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17501
+S
+#17501
+A Volcano Branch Pipe~
+   The large, warm cave takes a turn here, running north and east.
+The ground is quite smooth but the walls and ceiling are more
+jagged.  The rock is plutonic, solidified magma, which means that
+this is an old, dried out branch pipe of a volcano.
+~
+175 557065 0
+D0
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17502
+D1
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17500
+S
+#17502
+A Volcano Branch Pipe~
+   The ground here is smooth while the walls and ceiling are a bit
+jagged.  The air seems thick, making breathing more uncomfortable.
+The cave continues north, where it widens out further, and in the
+distance you see a faint crimson glow.  In the other direction, the
+cave is completely covered in darkness.
+~
+175 557065 0
+D0
+There's a faint glow of crimson in the distance.
+~
+~
+0 -1 17503
+D2
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17501
+S
+#17503
+A Volcano Branch Pipe~
+   There is a crimson glow coming from the north, where the cave
+appears to expand even more.  The air here is an almost suffocating
+hot steam.  To the south, the cave narrows considerably and fades
+into the darkness.
+~
+175 557065 0
+D0
+A crimson lights up the cave this way.
+~
+~
+0 -1 17504
+D2
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17502
+S
+#17504
+Southern End of a Magma Chamber~
+   You arrive at the edge of a giant, underground magma chamber.
+The magma is boiling and stirring about ten meters down from the
+ledge.  The chamber walls gradually narrow down into a large pipe
+at the top.  There is a natural ridge along the eastern side of the
+chamber leading to a large, uneven plateau on the other side of
+the magma pit.
+~
+175 557064 0
+D1
+A ridge runs along the chambers eastern wall.
+~
+~
+0 -1 17505
+D2
+An old magma branch pipe runs into the wall here, creating a dark cave.
+~
+~
+0 -1 17503
+S
+#17505
+On the Ridge of a Magma Chamber~
+   The ridge leading around the east side of the magma chamber is
+consistently about eight meters wide and quite smooth.  The ridge
+leans slightly towards the centre of the chamber - meaning
+venturing here could potentially be quite dangerous.  The ridge
+leads north to a plateau and west to where an old magma branch
+pipe runs into the chamber wall.
+~
+175 557064 0
+D0
+The ridge leads to an uneven plateau that tilts slightly towards the magma pit.
+~
+~
+0 -1 17506
+D3
+The ridge runs along the chamber wall to a cave up ahead.
+~
+~
+0 -1 17504
+S
+#17506
+Magma Chamber Plateau~
+   The plateau is large and uneven and tilts towards the magma pit
+in the centre of the chamber.  The walls glow from the crimson and
+golden rays of colour emitted by the magma.  The walls of the
+chamber narrow down into a large hole in the ceiling, through which
+the suffocating, hot steam is allowed passage.
+~
+175 557064 0
+D2
+A ridge runs along the chambers eastern wall.
+~
+~
+0 -1 17505
+S
+#17507
+A Volcano Branch Pipe~
+   The cave is dark, warm and dry and runs north and south from
+here.  The ground is quite smooth, while the walls and ceiling are
+more jagged.  The rock is plutonic, solidified magma, which means
+that this is an old, dried out branch pipe of a volcano.
+~
+175 557065 0
+D0
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17500
+D2
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17508
+S
+#17508
+A Volcano Branch Pipe~
+   The cave is dark, warm and dry and takes a turn here.  The ground
+is quite smooth, while the walls and ceiling are more jagged.  The
+rock is plutonic, solidified magma, which means that this is an old,
+dried out branch pipe of a volcano.
+~
+175 557065 0
+D0
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17507
+D3
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17509
+S
+#17509
+A Volcano Branch Pipe~
+   The cave is dark, warm and dry.  The ground is quite smooth,
+while the walls and ceiling are more jagged.  The rock is plutonic,
+solidified magma, which means that this is an old, dried out
+branch pipe of a volcano.  The cave seems to narrow down to the west.
+~
+175 557065 0
+D1
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17508
+D3
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17510
+S
+#17510
+End of the Volcano Branch Pipe~
+  You are in the narrow end of a dried out volcano branch pipe.
+The cave opens up in the east, which appears to be the only way
+to go.  There's a small crack in the rock floor.
+~
+175 557081 0
+D1
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17509
+E
+hole~
+The hole is too small to crawl but it might be possible to
+wedge something into it.
+~
+E
+crack~
+The crack in the floor runs for about two meters.  It isn't
+particularly wide except for a hole on one side.
+~
+S
+#17511
+In the Deeper Tunnels~
+   After the cave-in a large pile of rocks and boulders block the
+tunnel to the west.  The tunnel runs east through the dark, granite
+mountain.  In contrast to the cave above, this tunnel is quite cold.
+~
+175 557065 0
+D1
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17512
+S
+#17512
+In the Deeper Tunnels~
+   A tunnel leads east and west through the dark mountain.  The
+cold granite walls are quite rough to the touch, but glimmer as
+rays of light strike upon them.  The dead silence in the tunnel
+suggests that there are few, if any, creatures around; but the
+utter darkness of the hidden corners could offer valuable hiding
+spots for creatures who do not wish to be seen.
+~
+175 557065 0
+D1
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17513
+D3
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17535
+S
+#17513
+In the Deeper Tunnels~
+   The tunnel turns here and leads south through the dark mountain.
+The cold granite walls are quite rough to the touch, but glimmer as
+rays of light strike upon them.  The dead silence in the tunnel
+suggests that there are few, if any, creatures around; but the
+utter darkness of the hidden corners could offer valuable hiding
+places for creatures who do not wish to be seen.
+~
+175 557065 0
+D2
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17514
+D3
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17512
+S
+#17514
+In the Deeper Tunnels~
+   The cold granite walls are quite rough to the touch, but they
+glimmer as rays of light strike upon them.  The tunnel leads north,
+west and south through the mountain.  The sound of a small trickle
+of water pierces through the darkness, but it's difficult to say
+from which direction.
+~
+175 557065 0
+D0
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17513
+D2
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17515
+D3
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17520
+S
+#17515
+In the Deeper Tunnels~
+   The cold granite walls of the tunnel are quite rough to the
+touch, but glimmer as rays of light strike upon them.  The tunnel
+leads north, east and south through the mountain -- the one
+leading east being considerably larger than the others.  The faint
+sound of a water trickle flows through the darkness from afar.
+~
+175 557065 0
+D0
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17514
+D1
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17521
+D2
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17516
+S
+#17516
+In the Deeper Tunnels~
+   The tunnel turns here and leads west and north through the dark
+mountain.  The cold granite walls are quite rough to the touch,
+but glimmer as rays of light strike upon them.  The dead silence
+in the tunnel suggests that there are few, if any, creatures
+around; but the utter darkness of the hidden corners could offer
+valuable hiding places for creatures who do not wish to be seen.
+~
+175 557065 0
+D0
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17515
+D3
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17517
+S
+#17517
+In the Deeper Tunnels~
+   A tunnel leads east and west through the dark mountain.  The
+cold granite walls are quite rough to the touch, but glimmer as
+rays of light strike upon them.  The dead silence in the tunnel
+suggests that there are few, if any, creatures around; but the
+utter darkness of the hidden corners could offer valuable hiding
+spots for creatures who do not wish to be seen.
+~
+175 557065 0
+D1
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17516
+D3
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17518
+S
+#17518
+In the Deeper Tunnels~
+   The tunnel turns and changes characteristics.  To the east,
+it is reasonably narrow, leading through the darkness.  To the
+south, it widens out into a large, illuminated cave, from which
+a deep, rumbling sound pours out into the tunnel.
+~
+175 557065 0
+D1
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17517
+D2
+A deep rumble spills out from the lit cave.
+~
+~
+0 -1 17519
+S
+#17519
+At the Wall of Fire~
+   A thundering blaze shakes the cave from a gigantic wall of fire
+that burns frantically in a display of heat and colour.  The wall
+of fire takes up the whole breadth of the cave and licks the tall
+ceiling above.  There are other smaller fires rising from small
+cracks in the ground as well.  The immense heat from the wall of
+fire makes it impossible to go anywhere near it.  The only exit
+is north.
+~
+175 557065 0
+D0
+The cave narrows down into a tunnel.
+~
+~
+0 -1 17518
+S
+#17520
+In the Deeper Tunnels~
+   The tunnel is blocked by boulders, suggesting that it has
+caved in at some point.  This part of the tunnel is moist and
+there is a small pool of water in the southwestern end where
+the tunnel wall meets the rocks and boulders.  The wet, granite
+walls sparkle as light falls upon them.  The only exit is east.
+~
+175 557065 0
+D1
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17514
+S
+#17521
+In the Deeper Tunnels~
+   The cold granite walls of the tunnel are quite rough to the
+touch, but glimmer as rays of light strike upon them.  The
+tunnel leads east and west.  To the west it splits into two
+tunnels leading north and south.
+~
+175 557065 0
+D1
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17522
+D3
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17515
+S
+#17522
+In the Deeper Tunnels~
+   The cold granite walls of the tunnel are quite rough to the
+touch, but glimmer as rays of light strike upon them.  This
+tunnel leads south, where it appears to take another turn
+to the east, and west into the darkness. 
+~
+175 557065 0
+D2
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17523
+D3
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17521
+S
+#17523
+At a Gateway in the Deeper Tunnels~
+   The cold granite walls of the tunnel are quite rough to the
+touch, but glimmer as rays of light strike upon them.  The
+tunnel turns east and leads into a large gateway carved into
+the granite tunnel.  The gateway is ornamented with crimson
+letters in the draconic language.
+~
+175 557069 0
+D0
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17522
+D1
+It's too dark to make out what's through the gateway.
+~
+~
+0 -1 17524
+S
+#17524
+The Underground Dragon's Lair~
+   This is the underground lair of a Red Dragon, deep down inside
+the mountain.  The large, underground lair is hundreds of meters
+both long and wide, and is taller than it is possible to see.  The
+lair is littered with the bones of old knights and adventurers, as
+well as the remains of countless other creatures.  Broken pieces
+of armour and weaponry, both human and orc, as well as the decayed
+remnants of the cloaks and capes of the users of magic show that
+this lair is not a recreational venue.  This is a theatre of death,
+from which the wise would turn back, and where brave men of both
+past and future will die.
+~
+175 557065 0
+D0
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17525
+D1
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17527
+D3
+It's too dark to make out what's on the other side of the gateway.
+~
+~
+0 -1 17523
+S
+#17525
+The Underground Dragon's Lair~
+   This is the underground lair of a Red Dragon, deep down inside
+the mountain.  The large, underground lair is hundreds of meters
+both long and wide, and is taller than it is possible to see.  The
+lair is littered with the bones of old knights and adventurers, as
+well as the remains of countless other creatures.  Broken pieces
+of armour and weaponry, both human and orc, as well as the decayed
+remnants of the cloaks and capes of the users of magic show that
+this lair is not a recreational venue.  This is a theatre of death,
+from which the wise would turn back, and where brave men of both
+past and future will die.
+~
+175 557065 0
+D1
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17526
+D2
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17524
+S
+#17526
+The Underground Dragon's Lair~
+   This is the underground lair of a Red Dragon, deep down inside
+the mountain.  The large, underground lair is hundreds of meters
+both long and wide, and is taller than it is possible to see.  The
+lair is littered with the bones of old knights and adventurers, as
+well as the remains of countless other creatures.  Broken pieces
+of armour and weaponry, both human and orc, as well as the decayed
+remnants of the cloaks and capes of the users of magic show that
+this lair is not a recreational venue.  This is a theatre of death,
+from which the wise would turn back, and where brave men of both
+past and future will die.
+~
+175 557065 0
+D0
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17531
+D1
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17529
+D2
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17527
+D3
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17525
+S
+#17527
+The Underground Dragon's Lair~
+   This is the underground lair of a Red Dragon, deep down inside
+the mountain.  The large, underground lair is hundreds of meters
+both long and wide, and is taller than it is possible to see.  The
+lair is littered with the bones of old knights and adventurers, as
+well as the remains of countless other creatures.  Broken pieces
+of armour and weaponry, both human and orc, as well as the decayed
+remnants of the cloaks and capes of the users of magic show that
+this lair is not a recreational venue.  This is a theatre of death,
+from which the wise would turn back, and where brave men of both
+past and future will die.
+~
+175 557065 0
+D0
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17526
+D1
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17528
+D3
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17524
+S
+#17528
+The Underground Dragon's Lair~
+   This is the underground lair of a Red Dragon, deep down inside
+the mountain.  The large, underground lair is hundreds of meters
+both long and wide, and is taller than it is possible to see.  The
+lair is littered with the bones of old knights and adventurers, as
+well as the remains of countless other creatures.  Broken pieces
+of armour and weaponry, both human and orc, as well as the decayed
+remnants of the cloaks and capes of the users of magic show that
+this lair is not a recreational venue.  This is a theatre of death,
+from which the wise would turn back, and where brave men of both
+past and future will die.
+~
+175 557065 0
+D0
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17529
+D3
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17527
+S
+#17529
+The Underground Dragon's Lair~
+   This is the underground lair of a Red Dragon, deep down inside
+the mountain.  The large, underground lair is hundreds of meters
+both long and wide, and is taller than it is possible to see.  The
+lair is littered with the bones of old knights and adventurers, as
+well as the remains of countless other creatures.  Broken pieces
+of armour and weaponry, both human and orc, as well as the decayed
+remnants of the cloaks and capes of the users of magic show that
+this lair is not a recreational venue.  This is a theatre of death,
+from which the wise would turn back, and where brave men of both
+past and future will die.
+~
+175 557065 0
+D0
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17530
+D2
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17528
+D3
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17526
+S
+#17530
+The Underground Dragon's Lair~
+   This is the underground lair of a Red Dragon, deep down inside
+the mountain.  The large, underground lair is hundreds of meters
+both long and wide, and is taller than it is possible to see.  The
+lair is littered with the bones of old knights and adventurers, as
+well as the remains of countless other creatures.  Broken pieces
+of armour and weaponry, both human and orc, as well as the decayed
+remnants of the cloaks and capes of the users of magic show that
+this lair is not a recreational venue.  This is a theatre of death,
+from which the wise would turn back, and where brave men of both
+past and future will die.
+~
+175 557065 0
+D2
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17529
+D3
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17531
+S
+#17531
+The Underground Dragon's Lair~
+   This is the underground lair of a Red Dragon, deep down inside
+the mountain.  The large, underground lair is hundreds of meters
+both long and wide, and is taller than it is possible to see.  The
+lair is littered with the bones of old knights and adventurers, as
+well as the remains of countless other creatures.  Broken pieces
+of armour and weaponry, both human and orc, as well as the decayed
+remnants of the cloaks and capes of the users of magic show that
+this lair is not a recreational venue.  This is a theatre of death,
+from which the wise would turn back, and where brave men of both
+past and future will die.
+~
+175 557065 0
+D1
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17530
+D2
+The lair is too dark for you to see very far.
+~
+~
+0 -1 17526
+S
+#17532
+The Crater Shelf~
+   Located on the eastern wall of the large crater, this large
+shelf offers no way of escape.  The rugged rock is visibly scarred
+by fire, and soot covers large parts of the shelf.  A spiraling
+cloud of smoke rises up from a hole in the centre of the crater,
+around which the barren crater floor spreads out, interrupted
+occationally by steaming pools of contaminated water. The crater
+walls rise up hundreds of meters from the crater bed.
+~
+175 67141632 5
+S
+#17533
+Pit of Magma~
+   A boiling stew of molten rock shifts and emits a hot,
+sufficating, sulfuric steam that rises almost invisibly towards
+the hole in the chamber ceiling.  The crimson magma glow makes
+the steam shimmer, making it hard to see through.
+~
+175 0 0
+D1
+It looks possible to climb up the ledge on the eastern side of the pit.
+~
+ledge pit~
+11 -1 17506
+D2
+The steep southern pit wall is rugged enough to support climbing.
+~
+wall pit~
+11 -1 17504
+S
+#17534
+At the Caved-In Branch Pipe~
+   The floor of the cave has fallen in recently, exposing a
+tunnel below.  The naked walls do not appear to support climbing,
+but for those who dare to take the risk, it may be possible to
+jump into the darkness below.
+~
+175 0 0
+D1
+The cave is too dark to make out anything in particular.
+~
+~
+0 -1 17509
+S
+#17535
+In the Deeper Tunnels~
+   A tunnel stretches out to the east while it narrows down into
+the western wall.  The tunnel appears to be very tall here, the
+ceiling too high to percieve in the darkness.
+~
+175 0 0
+D1
+The utter darkness prevents you from making out anything down the tunnel.
+~
+~
+0 -1 17512
+S
+#17536
+Behind the Wall of Fire~
+   A huge wall of fire rises to the north.  Other than that
+the large cave is naked.
+~
+175 32768 0
+S
+#17537
+Flying Around the Volcano~
+   Smoke spirals towards the sky from a large volcano below.
+The land around the volcano is draped in different shades of
+green from the forests that spread out in all directions.
+~
+175 32768 5
+S
+#0
+$~

@@ -1,0 +1,43 @@
+#27300
+A Stoic Gate Guard~
+A Stoic Guard~
+A Stoic Guard stands at his post, watching the gate.
+~
+A large guard of some 7 or 8 feet tall. His stone cold eyes are barely visible underneath the brow of his cap. Of course then again, why would you want to stare into the eyes of a man this large.
+~
+131274 2048 -1000 Y
+20 10 1 50d10+1500 10d4+0
+150 60000
+8 8 1
+69 16512 100d1+0 1
+4 2 10 0
+0 0 0 512
+T
+..... stands glaring at everyone in the room.~
+K
+0 0 0 0 0 0
+#27399
+Protector of the Faith~
+A Protector of Faith~
+Protector of Faith
+~
+You can't see any features of the protector, the brilliant white aura completely surrounds him.
+~
+16924746 402958464 1000 Y
+40 -5 -10 50d150+2500 8d8+25
+0 300000
+8 8 1
+69 941645767 5d100+150 4
+3 2 15 0
+9 2 10 0
+4 2 10 0
+1 4 27 15
+0 0 0 1022
+R
+509
+T
+.....the protector is engulfed in a brilliant white aura.~
+K
+0 0 0 0 0 0
+#0
+$~

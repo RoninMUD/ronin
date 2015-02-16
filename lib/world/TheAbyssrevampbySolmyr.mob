@@ -1,0 +1,572 @@
+#25000
+demi lich~
+The Demi-Lich~
+The Demi-Lich leaps from his throne as you enter the room, his evil eyes fixed dead upon you!
+~
+   The Demi-Lich is, perhaps, the single, most powerful undead creature known
+to exist. Greatly resembling a wight or mummy, gaunt and skeletal in form,
+it is nevertheless a being of forboding might. Its eye sockets are black and
+empty, save for the fierce pinpoints of light which serve as eyes. An aura of
+cold and darkness radiates from it, which makes it an ominous and fearsome
+sight. Despite the wasted, rotten flesh, it is garbed in the rich clothes of
+nobility.
+~
+46 268470408 -1000 Y
+55 -17 -15 15d300+8000 5d10+250
+1000000 2000000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25001
+keftab~
+Keftab, the Ancient One~
+Keftab, the Ancient One stands here, calmly searching ceaslessly.
+~
+   A writhing, quivering mass of horrific, unspeakable flesh-like
+material, this ancient one stares coldly about through its many
+multifacted eyes. Viscious, vile smelling liquid seeps through its
+flesh in many places, originating from the ghastly, crater like
+pores which pepper his body. Disgustingly, large portions of its
+flesh seem to bubble with an alien life of their own. The surface
+of its body, where not oozing, is covered with mottled, grey, mossy
+protrusions, like some strange malignant blemishes. It emits low,
+gutteral mewlings from its fange, quivering orifice.
+~
+14 32904 -1000 Y
+55 -15 0 100d10+8000 30d8+0
+900000 1000000
+8 8 0
+98 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25002
+death crimson~
+Crimson Death~
+A crimson death materializes from a dense patch of mist.
+~
+   Its skeletal form is garbed in a robe of crimson; the blood of its many
+victims stain the robe. Its skeletal figure resembles that of the angel of
+death. Its eyes glow with a furious fire to kill.
+~
+111 1573000 -1000 Y
+50 -15 -10 20d50+6000 5d10+150
+0 400000
+8 8 0
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25003
+mist daemon~
+A Mist Daemon~
+A mist daemon hovers here, in a cloud of grey mist.
+~
+   A large, demon like creature hovers above you, in a cloud of grey mist.
+Its winged form stares down at you in utter hatred.
+~
+46 17825792 -1000 Y
+30 0 -6 6d12+2000 6d12+0
+10000 50000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25004
+black slayer~
+a Black Slayer~
+A huge, shadowy figure materializes from the shadows around you.
+~
+   The black slayer is a shadowy figure, about 7 feet tall, garbed in a
+heavy, black cloak. In his right hand he wields a wicked dagger.
+~
+46 32776 -1000 Y
+15 5 2 10d10+1000 1d6+18
+0 21000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25005
+lost soul~
+a Lost Soul~
+A ghostly apparition floats here, staring at you in utter hatred.
+~
+   The lost soul is a ghostly apparition, seeking revenge on the living.
+~
+46 32776 -1000 Y
+10 10 0 1d10+400 1d10+5
+0 12000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25006
+storm giant~
+a Storm Giant~
+A storm giant stands here, angered by your presence.
+~
+   This huge creature is approximately 8 feet tall. He grasps a huge bolt
+of lightning in his right hand... He doesn't look happy to see you.
+~
+47 32776 -1000 Y
+35 0 -4 7d10+1000 7d6+0
+10000 24000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25007
+white gold manticore~
+a White Gold Manticore~
+A statuesque manticore stands here, crafted entirely of white gold.
+~
+   This beautifully crafted statue is formed entirely of
+white gold. Its eyes seem to watch your every move...
+It almost appears as if it is alive!
+~
+14 136 0 Y
+12 9 -2 1d10+120 2d6+0
+0 14000
+8 8 0
+58 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25008
+flaming efreet~
+an Efreet~
+A huge flaming figure stands here with a glint of evil in its eyes.
+~
+   The efreet is formed entirely of flames and gives off an intense heat.
+~
+42 134217728 -1000 Y
+35 -10 5 10d10+3000 5d8+20
+0 400000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25009
+hydra~
+the Hydra~
+A huge eight headed hydra is sleeping here
+~
+   This huge, scaled creature has eight heads, each capable of
+breathing a dangerous stream of fire. An amulet hangs around
+its central neck.
+~
+47 32776 -1000 Y
+40 -10 -10 10d20+2500 12d2+70
+0 500000
+8 8 0
+56 0 0d0+0 0
+0 0 0 0
+K
+200000 0 0 0 0 0 0
+#25010
+kraken~
+the kraken~
+A large squid-like creature erupts from the waters beneath you!
+~
+   This large creature is a close relative to the squid, but is
+much larger in size. Its huge tentacles grasp something, but you
+can't make out what it is grasping.
+~
+107 268697728 -1000 Y
+55 -17 -15 10d100+9000 10d10+200
+0 700000
+8 8 0
+98 0 0d0+0 0
+0 0 0 0
+K
+200000 0 0 0 0 0 0
+#25011
+treant tree~
+the Treant~
+A large tree-like creature reaches out for you with its many limbs.
+~
+   It is a rather large creature, resembling a tree. At the base of the
+trunk is a large opening that looks very much like a mouth.
+~
+46 128 -1000 Y
+35 -2 0 2d4+4000 2d6+20
+0 120000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25012
+githyanki~
+a Githyanki~
+A disgusting creature of ethereal nature stands here, its body
+completely wrapped in bandages.
+~
+   This man-sized creature is completely covered in bandages. Its eyes
+glow with a brilliant red fire and in its grasp is an extremely sharp
+blade of magical nature.
+~
+205 32776 -1000 Y
+25 -4 -7 1d1+1700 3d8+12
+30000 120000
+8 8 0
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25013
+kalas~
+Kalas~
+Kalas, the knight and guardian of the castle, stands here
+preparing himself for battle.
+~
+   Kalas is a large, muscular man. He is clad in a magical
+suit of armour. His sword is burning fiercly.
+~
+43 268697728 -1000 Y
+52 -13 -10 10d100+5000 10d5+150
+200000 1000000
+8 8 1
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25014
+death knight~
+the Death knight~
+The death knight stands here, preparing to do you in.
+~
+   This creature is the result of a powerful mage, animating the dead remains
+of a once mighty warrior. Its eyes are fixed coldly upon you. Unsheathing
+its sword, it charges for battle.
+~
+47 939786368 -1000 Y
+50 -10 -5 30d5+4000 15d5+30
+150000 360000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25015
+Neo Otyugh~
+the Neo-Otyugh~
+A large, disgusting, vile creature stands here, smelling putrid.
+~
+This creature is covered with a slime like substance, many tentacles
+protrude from its disgusting body.
+~
+46 128 -1000 Y
+20 0 0 3d10+600 3d6+1
+1000 60000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25016
+shadow daemon~
+a Shadow Daemon~
+A shadowy figure stands here, looking you over with greed.
+~
+This creature has almost no form, it looks like some sort of shadow with
+wings.
+~
+44 8 -1000 Y
+18 3 -2 8d10+600 4d4+6
+500 45000
+8 8 0
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25017
+gatekeeper gate keeper~
+The Gatekeeper~
+A huge warrior stands here, guarding the portal beyond.
+~
+   He is a huge man. His strong, muscular body stands about 8 feet tall.
+He guards the portal beyond him angrily.
+~
+11 128 -1000 Y
+30 -8 5 25d10+2000 2d8+25
+10000 120000
+8 8 0
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25018
+elemental water prince~
+The water prince~
+The prince of water elementals flows here
+~
+He looks like a giant wave, about to swoop down upon you.
+~
+11 128 0 Y
+51 -9 -6 12d8+3000 7d8+90
+30000 240000
+8 8 1
+64 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25019
+earth elemental king~
+The Earth King~
+The King of earth elementals stands here.. cower fool!
+~
+  It is a large stone figure, emitting coldness.
+~
+11 128 0 Y
+51 -9 -8 10d100+5000 5d10+70
+30000 240000
+8 8 1
+64 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25020
+air elemental lord~
+The lord of Air~
+A huge tornado is squeezed into this impossibly small space.
+~
+   This huge tornado picks up and devours everything in its path.
+~
+11 8 0 Y
+49 -10 -10 12d8+3000 5d10+90
+30000 260000
+8 8 1
+64 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25021
+fire elemental sultan~
+The Sultan of Fire~
+The Sultan of fire elementals stands before you, making you feel crisp.
+~
+   The Sultan has a vaguely man-shaped form and consumes everything in his fiery wake.
+~
+11 8 0 Y
+51 -15 -7 12d8+2500 10d10+150
+100000 260000
+8 8 1
+64 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25022
+king goblin~
+The goblin king~
+The goblin king is here.
+~
+He looks like david bowie
+~
+9 8 -351 Y
+18 3 -2 1d8+700 5d4+3
+5000 54000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25023
+goblin cannon~
+A goblin cannon~
+A goblin cannon is here, warming up
+~
+He looks like a tank
+~
+10 128 -351 Y
+30 2 -10 50d10+1000 1d100+1
+50000 300000
+8 8 0
+87 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25024
+goblin gatling~
+A gatling goblin~
+A gatling goblin is here!  Duck!
+~
+  He looks like a walking gatling gun
+~
+10 0 -351 Y
+20 8 0 10d10+1000 1d40+1
+5000 60000
+8 8 0
+87 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25025
+acid blob~
+An acid blob~
+An acid blob is here
+~
+  he looks like a big blob of acid
+~
+10 0 0 Y
+10 10 0 5d2+80 1d10+1
+10 10000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25026
+acid blob giant~
+A giant acid blob~
+A gaint acid blob is here
+~
+  he looks like a huge blob of acid
+~
+10 0 0 Y
+34 -12 -5 5d2+2000 35d3+50
+20000 360000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25030
+demon vrock~
+A vrock~
+A Vrock stands here
+~
+   This creature resembles both human and vulture. It is a
+very ugly sight.
+~
+44 8 -666 Y
+16 4 0 10d10+1500 1d6+15
+0 45000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+K
+10000 0 0 0 0 0 0
+#25031
+demon hezrou~
+A hezrou~
+A demon Hezrou stands here.
+~
+   This is a humanoid creature with black skin and a toad-like face.
+~
+44 8 -666 Y
+17 3 -2 10d2+1400 1d6+15
+4000 48000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25032
+demon glabrezu~
+A glabrezu~
+A demon Glabrezu stands here
+~
+   This is a large four-armed creature with a dog's head with horns.
+~
+44 8 -666 Y
+18 2 -4 10d5+1200 1d8+15
+0 50000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+K
+40000 0 0 0 0 0 0
+#25033
+demon nalfeshnee~
+Nalfeshnee~
+Nalfeshnee stands here
+~
+   This creature resembles both an ape and a boar and is
+winged with a couple of very small wings.
+~
+44 8 -666 Y
+40 -4 -4 10d10+2000 1d10+30
+0 400000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+K
+20000 0 0 0 0 0 0
+#25034
+demon marilith~
+Marilith~
+Marilith slithers here
+~
+   This six-armed creature has the upper body of a woman
+and a long and powerful snake's tail. In each hand it
+wields a sword.
+~
+44 268435464 -666 Y
+42 -10 -6 20d10+2500 10d4+20
+4000 400000
+8 8 2
+62 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25035
+demon balor~
+Balor~
+Balor stands here, surrounded by electrical fire
+~
+   This powerful creature has bull horns and clawed hands.
+Flame surrounds its dark skin and it is wielding a sword
+and a flaming whip.
+~
+46 136 -666 Y
+47 -13 -12 10d50+4000 3d15+110
+250000 800000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25040
+death lord~
+The Death Lord~
+The Death Lord stands here, ready to fight.
+~
+   This creature is the result of a powerful mage, animating the dead remains
+of a once mighty warrior. Its eyes glimmer and are fixed coldly upon you.
+~
+15 805570688 -1000 Y
+50 -15 -12 30d10+6000 15d8+40
+300000 700000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25050
+killer bee~
+a Killer Bee~
+A tremendous Killer Bee buzzes in to stab you in the throat!
+~
+Goddam, that stinger is huge!  Oh man, it's dripping poison, too...what 
+are these killer bees doing up here is your last thought as the bee 
+stabs you in the throat with its stinger...
+~
+524332 32768 0 Y
+32 -12 10 10d20+3000 10d25+100
+1 1
+8 8 1
+76 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

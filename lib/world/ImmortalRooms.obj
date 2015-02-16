@@ -1,0 +1,865 @@
+#1200
+case display~
+a display case~
+A display case stands in the corner.~
+~
+15 524288 0
+20000 5 -1 0
+0 10 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1201
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+13 524288 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1202
+flag red~
+A Red Flag~
+A red flag lies on the ground here, collecting dust.~
+~
+13 536870912 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#1203
+flag blue~
+A Blue Flag~
+A blue flag lies on the ground here, collecting dust.~
+~
+13 536870912 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#1204
+potion fury adamantium~
+an adamantium potion~
+An adamantium potion lies here abandoned.~
+~
+10 134217728 16385
+30 28 102 0
+1 5000 2000
+10
+E
+potion~
+It's a vile-looking brew, anger seems to flare inside you as you look within.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1205
+longbow bow~
+a diamond-studded longbow~
+A diamond-studded longbow lies here unused.~
+~
+27 0 16385
+1 1000 7 6
+12 50000 5000
+10
+E
+longbow~
+It's studded with diamonds and pearls, looks like a lethal weapon.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+2 1
+#1206
+quiver blood red blood-red~
+a blood-red quiver~
+A blood-red quiver rests on the ground here.~
+~
+28 0 131073
+0 20 20 0
+14 25000 3000
+10
+E
+quiver~
+The quiver seems to be made from the partially cured skin of some unknown
+animal. Dried blood leaks down the sides of it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#1207
+potion cobalt metallic-blue blue metallic haste~
+a metallic-blue potion~
+A metallic-blue potion lies here.~
+~
+10 134217728 16385
+30 127 0 0
+2 100000 2000
+10
+E
+potion~
+It's a small but sturdy container made from cobalt.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1208
+recipe mouthwash noshoutremoval~
+a recipe for mouthwash~
+A recipe for mouthwash: cleans even the filthiest of maws!~
+~
+32 0 1
+1209 16512 3605 4447
+2 421 197
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1209
+soap suds bucket~
+a bucket of soap suds~
+A bucket filled with soap suds has been left here.~
+~
+10 524288 1
+0 0 0 0
+73 1013 229
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1210
+board immortal log~
+An IMM Log Board~
+An Immortal log board is hanging on the wall here.~
+~
+27 0 0
+51 51 51 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1211
+board deity temporal log~
+A DEI/TEM Log Board~
+A Deity and Temporal log board is hanging on the wall here.~
+~
+27 0 0
+52 52 54 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1212
+board wizard eternal log~
+A WIZ/ETE Log Board~
+A Wizard and Eternal log board is hanging on the wall here.~
+~
+27 0 0
+54 54 54 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1213
+board quest~
+A God Quest Board~
+A quest board is hanging on the wall here.~
+~
+27 0 0
+51 51 54 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1214
+board feedback~
+A Feedback Board~
+A feedback board is hanging here.~
+~
+27 0 0
+51 51 51 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1215
+board todo~
+A General ToDo Board~
+A ToDo board is hanging here.~
+~
+27 0 0
+51 51 54 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1216
+Token~
+A Quest Token~
+An EXTREMELY valuable token lies here.~
+~
+8 67 1
+0 0 0 0
+1 250000 1000
+0
+E
+token~
+The token is a circular disc made entirely of gold and lined
+with diamonds on the edge.  It looks to be EXTREMELY valuable
+and perhaps the gods themselves would be willing to trade
+to get some of these.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1217
+gun chaingun chain samhain~
+Chain Gun of Samhain~
+An orange chaingun lay here in a pool of black ichor on the ground.~
+~
+12 402653249 16385
+0 0 0 0
+2 9999999 33333
+0
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+A
+17 10
+A
+13 31
+A
+14 2002
+#1218
+candy bullets halloween samhain~
+Bullet-shaped Halloween Candy~
+A pile of halloween candy in the shape of bullets lies here.~
+~
+23 134217729 1
+0 0 1217 3
+5 0 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1219
+scroll fire ice~
+A scroll of fire and ice~
+A small piece of paper with writing on it lays on the floor.~
+~
+2 0 1
+50 26 82 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1227
+cool lighter~
+A Very Cool Lighter~
+A lighter is laying here.  It looks Very Cool!~
+~
+1 524288 65537
+0 0 -1 0
+1 3000 100
+50
+E
+lighter light_source~
+This is just the coolest lighter you ever saw.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1231
+spiked club~
+Spiked Club~
+A wicked-looking spiked club lies here.~
+$r spiked club comes crashing down on the foe.~
+5 134217744 8193
+1 8 3 7
+15 27000 7000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+19 5
+#1235
+cap hat ~
+The God, Guns and Guts Cap (tm)~
+You see the special God, Guns and Guts cap lying here.
+~
+~
+8 268435459 17
+0 0 0 0
+1 10000 10
+10
+E
+cap~
+On the patch of the cap you see three guys tripping over each other and
+generally making a fool of themselves. You think they can't even kill a mouse.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1236
+tee shirt~
+The Hairy Back Brothers T-Shirt (tm)~
+You see a torn and smelly Hairy Back Brothers T-Shirt here.
+~
+~
+8 268435459 9
+0 0 0 0
+1 10000 10
+10
+E
+shirt~
+You see three wierd dudes on the t-shirt falling all over each other and
+generally makin a mess out of the place. You'd think they need help killing
+even a small rat.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1237
+zippo lighter~
+The Junky Bunch Zippo Lighter (tm)~
+You see a shiny Junky Bunch Zippo Lighter lying here.
+~
+~
+8 268435459 16385
+0 0 0 0
+1 10000 10
+10
+E
+zippo~
+The engraving on the lighter shows three figures clowning around and trying
+to act serious. One look at the three of them and you feel like breaking out
+into a fit of laughter.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1238
+bandana~
+The Diva Bandana (tm)~
+You see a wrinkled Diva bandana lying here.
+~
+~
+8 268435459 4277
+0 0 0 0
+1 10000 10
+10
+E
+bandana~
+In the pattern on the red bandana you can see a group of three guys trying
+to appear to be warriors. A closer look reveals that they are short and fat
+and just sit around mudding all day.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1239
+banner~
+The Dead Meat Banner (tm)~
+You see the torn and tattered Dead Meat Banner lying here.
+~
+~
+1 268435459 65537
+0 0 -1 0
+1 10000 10
+10
+E
+banner~
+You see three guys trying to appear like they are brave warriors but a closer
+look reveals what clutzs they really are ! You'd think they can't even hurt
+a fly, forget about killing scary monsters.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1240
+shot glass shotglass~
+The Marker Shot Glass (tm)~
+You see a dirty Markers Shot Glass lying here.
+~
+~
+8 268959747 1
+0 0 0 0
+1 10000 10
+10
+E
+glass~
+You see a small painting in the small glass showing three funny looking guys
+wearing strange clothes and dressed up to goto a fancy dress party. They
+look like they wanna be fighters, but you feel they're just foolin around out 
+there.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1250
+citrine pendant necklace~
+A Citrine Pendant~
+A pendant made of a strange looking crystal sits here.~
+~
+9 134217795 5
+10 0 0 0
+10 100000 100000
+50
+E
+citrine~
+Formed from a single crystal fastened by a thin gold chain, the citrine
+catches the light and scatters it in a thousand directions.
+~
+E
+pendant~
+Formed from a single crystal fastened by a thin gold chain, the citrine
+catches the light and scatters it in a thousand directions.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+12 30
+B
+32768
+#1265
+tablet stone~
+Stone Tablet of Tasty Knowledge~
+A big stone tablet lies on the ground, with strange writing on it.~
+~
+27 134217729 0
+1 1 1 1
+0 0 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1267
+couch~
+A long couch~
+A long comfortable couch sits here.~
+invalid~
+0 0 0
+0 0 0 0
+10 10 10
+100
+E
+couch~
+The couch is an antique. It's made of some very nice red fabric, with some dark
+stained oak for highlights. It looks very expensive. Yet...you feel drawn to it,
+like you want to sit on it and discuss all your problems.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1268
+lightsabre red~
+A Red Lightsabre~
+a piece of metal lies here, it appears to be some sort of weapon.~
+$r lightsabre crackles viciously as $n pulls it from $V's body.~
+5 65554 8193
+0 5 5 11
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+#1269
+lightsabre red~
+A Green Lightsabre~
+a piece of metal lies here, it appears to be some sort of weapon.~
+$r lightsabre crackles viciously as $n pulls it from $V's body.~
+5 65554 8193
+0 5 5 11
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+#1275
+desk~
+A hand-carved desk~
+A hand-carved desk leans against one wall, missing a leg.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+E
+desk~
+A mahogany desk with three good legs, it leans against the east wall, where
+a writer can be inspired by the peaceful view. The top drawer is full of notes
+and papers that are ideas and sketches that provide an insight to the genius
+mind that often sits and works here. The desktop is strangely clear of clutter,
+but the wastepaper basket that rests next to it is full of items that aren't
+garbage, but look like they were swept off the desk in a hurry to make the room
+appear more tidy.
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1287
+sign~
+An MK4 sign~
+`iA new sign has been posted in the ground here.~
+~
+12 0 0
+0 0 0 0
+10000 10 10
+100
+E
+sign~
+MORTAL KOMBAT FOUR! A TEST OF MIGHT! COME ONE COME ALL!!
+If you wish to test your skills in a battle of wits, power,
+and LUCK, your day is drawing near. The greatest Mortal Kombat
+tournament ever is fast approaching. Who will win? What will
+the prize be for the man who is proven the best fighter and
+more importantly the best THINKER, under some incredibly adverse
+circumstances? Try and add your name to the books of legend as
+an all-time great. Test your luck, skills, and courage! Prepare for
+the battle of your life! Prepare for MORTAL KOMBAT FOUR!
+(For further details check the Mortal Quest Board to the East
+of the Altar board and the Midgaard Newspaper.)
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1288
+orb shadow~
+The Shadow Orb~
+a ball of black, swirling matter is lying here.~
+~
+8 134217792 16385
+0 0 0 0
+25 175038 14700
+10
+E
+orb shadow~
+The Shadow orb is about 5" in diameter, a globe full of swirling, grey smoke.~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+12 40
+A
+52 50
+#1296
+coffin mahogany~
+a Mahogany Coffin~
+A Mahogany coffin is lying here with its lid open, beckoning invitingly.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+100
+E
+word~
+Chills run down your spine as you recognize your own name.~
+E
+coffin~
+A closer looks reveals the quality of this coffin. I looks like
+it could be around for years. There seems to be a `bword`h written upon it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1297
+Flag~
+Norwegian flag~
+The Norwegian flag waves in the wind here, on a long pole.~
+~
+12 524288 16385
+0 0 0 0
+10 10 10
+100
+E
+flag~
+`b#########`o###`e###`o###`b##################
+`b#########`o###`e###`o###`b##################
+`b#########`o###`e###`o###`b##################
+`o############`e###`o#####################
+`e####################################
+`o############`e###`o#####################
+`b#########`o###`e###`o###`b##################
+`b#########`o###`e###`o###`b##################
+`b#########`o###`e###`o###`b##################
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1298
+gator skin vest~
+Gator Skin Vest~
+A vest made from gator's skin rests here.~
+invalid~
+9 134283264 9
+20 0 0 0
+10 10 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 50
+A
+19 4
+B
+128
+#1299
+jacket strait~
+A strait jacket~
+A torn strait jacket has been carelessly tossed in the corner.~
+~
+9 134742016 9
+40 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 7
+A
+12 30
+A
+18 7
+B
+16818176
+#0
+$~

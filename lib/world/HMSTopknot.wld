@@ -1,0 +1,284 @@
+#5800
+In the Burned Forest~
+You are standing in the middle of something which might once have been
+a great forest. There has been a big forest fire here lately. Some smoke
+is still rising from the warm ashes.
+~
+58 0 3
+D1
+You see a crater in the east.
+~
+~
+0 0 5801
+D3
+You see more forest.
+~
+~
+0 0 1927
+E
+tree burned~
+The tops of the trees have been burned badly.
+~
+S
+#5801
+In the Huge Crater~
+This is a really HUGE crater. In the bottom of it lies a strange looking
+big silvery thing. It seems to have a little hatch in it. There are lot
+of little footprints around the thing. Most of them are leading to the
+forest.
+~
+58 0 5
+D1
+You see a small corridor through the hatch.
+~
+hatch~
+1 0 5802
+D3
+You see some burned trees in the west.
+~
+~
+0 0 5800
+E
+thing silvery object ship vessel~
+When you examine the thing closer you realize that it is some kind of ship.
+You wonder what it is doing here. There is some writing in the hull of the
+vessel.
+~
+E
+writing text~
+It says: HMS TopKnot
+~
+E
+footprint prints footprints print~
+The footprints seem to be quite small, like children had been playing here.
+~
+S
+#5802
+Corridor~
+You are standing in a corridor which continues to north and south. Behind you
+in the west you can see to the crater through the hatch. There is a small 
+ladder here which leads up.
+~
+58 8 0
+D0
+You see the corridor continuing there.
+~
+~
+0 0 5804
+D2
+You see the corridor continuing there.
+~
+~
+0 0 5803
+D3
+You see the crater through the hatch there.
+~
+hatch~
+1 0 5801
+D4
+You see the ladder leading to a transparent globe.
+~
+~
+0 0 5810
+E
+ladder~
+The ladder is quite small. It makes you wonder if it can bear your weight.
+~
+S
+#5803
+Corridor~
+You are standing in the south end of the corridor. There are small doors in the
+east and west wall. The doors seems to be magical, they open when you go near
+them. There is a bigger door in the south wall, but it seems to be broken.
+~
+58 8 0
+D0
+You see the corridor continuing there.
+~
+~
+0 0 5802
+D1
+The door leads into a small room.
+~
+~
+0 0 5811
+D2
+The door leads to a dark room.
+~
+door~
+1 -1 5805
+D3
+The door leads to a small room.
+~
+door~
+1 5812 5807
+E
+door doors~
+All but southern door open when you go near them. Cool but really weird.
+~
+S
+#5804
+Corridor~
+You are standing in the north end of the corridor. There are small doors in the
+west, north and east wall. The doors open when you go near them.
+~
+58 8 0
+D0
+The door leads to a big hall.
+~
+~
+0 0 5806
+D1
+The door leads to a small room full of lights.
+~
+~
+0 0 5808
+D2
+You see the corridor continuing there.
+~
+~
+0 0 5802
+D3
+You see a small comfortable looking room there.
+~
+~
+0 0 5809
+E
+door~
+The doors open when you go near them. Really funny.
+~
+S
+#5805
+Crashed Room~
+You are in quite big room. In the middle of the room there is a huge machine.
+The walls are covered with all kinds of strange levers and buttons. There is
+a table in the corner of the room. The floor is filled with rubble.
+~
+58 141 0
+D0
+The door leads to the corridor.
+~
+door~
+1 -1 5803
+E
+buttons~
+These are green square buttons.
+~
+E
+button~
+This is a red round button.
+~
+E
+lever~
+This is a small lever.
+~
+E
+rubble parts~
+There are many kinds of parts and rubble on the floor.
+~
+E
+liquid~
+The liquid is black and quite sticky and it tastes really awful.
+~
+E
+machine~
+The machine seems to be badly damaged. All sorts of parts seem to have fallen
+to the floor. It is leaking some kind of black liquid.
+~
+S
+#5806
+Bridge~
+You are in the bridge of the ship. This is a big round room and there are five
+chairs in the middle of the room. In the northern wall there is a big silver
+screen. Other walls are covered with smaller ones.
+~
+58 8 0
+D2
+The door leads to the corridor.
+~
+~
+0 0 5804
+S
+#5807
+Storage Room~
+This is a small room with seems to be used to store things.
+~
+58 8 0
+D1
+The door leads to the corridor.
+~
+door~
+1 5812 5803
+S
+#5808
+Room with Flashing Lights~
+You are in a small room. There are lots of flashing light bulbs in the walls.
+There is a console table in the middle of the room. On the table there is a
+small sign. It says "Lt Heinrich Kluge".
+~
+58 8 0
+D3
+The door leads to the corridor.
+~
+~
+0 0 5804
+E
+console table~
+There are lots of small buttons and a screen on the table.
+~
+S
+#5809
+Captain's Quarters~
+This is quite comfortable looking small room. There is a bed in one corner and
+a coffin in another corner. There is a pink soft and thick carpet on the floor.
+~
+58 8 0
+D1
+The door leads to the corridor.
+~
+~
+0 0 5804
+E
+bed~
+It is a very small comfortable looking bed with a soft and thick mattress.
+~
+S
+#5810
+Transparent Globe~
+The walls and ceiling of this room seem to be transparent. Through them you can
+see the crater and behind it the forest. There is round hole in the globe.
+~
+58 8 0
+D5
+The ladder goes down to the corridor.
+~
+~
+0 0 5802
+S
+#5811
+Crew's Quarters~
+The room is full of small beds. Next to every bed there is a small closet.
+The floor is so clean that it almost shines. There is absolutely no dust here.
+Whoever lives here is under strict discipline.
+~
+58 8 0
+D3
+The door leads to the corridor.
+~
+~
+0 0 5803
+S
+#5858
+Inside the Coffin~
+You have entered the coffin. It seems to be real big inside. You must be in an
+extra dimensional space. There are no walls here. The room just seems to go on
+and on. You wonder how you will get out of here.
+~
+58 9 0
+E
+wall walls~
+There are no walls here !!
+~
+S
+#0
+$~

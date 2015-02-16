@@ -1,0 +1,989 @@
+#28000
+Gawyn's Command Center~
+This room is full of military maps.  Though none seem to
+have any bearing on what he is supposed to be doing.  It
+seems that maybe he needs to get it in gear and get to
+work on his zone.  There are some doodles on the papers
+on his desk.  Perhaps he has some ideas already.
+~
+280 0 0
+D5
+~
+~
+0 -1 28001
+S
+#28001
+Beyond the Elven Sentry~
+The forest which teemed with life where the elves tended it has grown silent.
+The path you are on is slightly overgrown, obviously the elves do not come to
+this part of the forest and whatever lives here does not visit the elves.
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28002
+S
+#28002
+Into the quite woods~
+The path is silent except for what noise you are making.  Shadows shift with a
+faint breeze that rustles the leaves of the trees.  Again you are struck by the
+silence of the woods.
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28003
+D2
+~
+~
+0 -1 28001
+S
+#28003
+A path through the silent woods~
+The faint breeze has stopped, but the shadows now shift on their own accord.
+Perhaps it is just your imagination, but faintly you think you hear the sound of
+running water from up ahead.
+~
+280 67108868 0
+D0
+~
+~
+0 -1 28004
+D2
+~
+~
+0 -1 28002
+S
+#28004
+The Bridge~
+Before you stands a large stone bridge.  It was constructed in antiquity and has
+obviously weathered many storms.  Each of the four piles of the bridge has
+been sculpted into the shape of an animal.  The shapes on this end are a bear
+and a dragon.  You get the uneasy feeling that the statues eyes, though carved
+from stone seem to be following you.
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28005
+D2
+~
+~
+0 -1 28003
+S
+#28005
+The far side of the bridge~
+This side of the bridge has seen more use than the other.  The path bends up
+ahead of you.  The two stone statues on this end of the bridge are a snake and
+an eagle.  The eyes of these statues seem to watch you also
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28006
+D2
+~
+~
+0 -1 28004
+S
+#28006
+Before the Barbarian Village~
+You see ahead of you a crude village.  There are several huts are made of
+thick animal hide and logs surrounding a huge central structure.  This long
+hall dominates the village, with the village path circling around it.
+~
+280 67108864 0
+D2
+~
+~
+0 -1 28005
+D3
+~
+~
+0 -1 28007
+S
+#28007
+Entrance to the Long Hall~
+Before you stands the Long Hall.  It is constructed of massive timbers and
+stands well over twice your height.  On each of the large pillars are carvings
+of grotesque shapes.  Most dominant are large man figures surrounded by
+bears. Along the hall are no openings to the outside, apparently you stand at
+its only entrance.  The village path bends both left and right around the
+structure.
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28011
+D1
+~
+~
+0 -1 28006
+D2
+~
+~
+0 -1 28020
+D3
+~
+~
+0 -1 28008
+S
+#28008
+In the Long Hall~
+As you progress down the hall you make out more of the carvings.  The bear
+and large man figures that you have seen seem to be working together to crush
+a variety of opponents.  Smaller man figures, elves, goblins and a variety of
+beast are depicted in scenes of bears and large men savaging them.  You get
+the feeling that maybe the tribe that lives here is not overly friendly to
+outsiders. There are tables and benches lining the walls here.
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28007
+D3
+~
+~
+0 -1 28009
+S
+#28009
+Along the Long Hall~
+The hall continues, carvings along the table and walls becoming more and more
+intricate and violent.  The bears and men in the carvings are now shown with
+a dragon aiding them.  There are other animals with them also: snake, spider,
+eagle, jaguar and strangely a rabbit.
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28008
+D3
+~
+~
+0 -1 28010
+S
+#28010
+At the head of the Long Hall~
+This part of the hall is dominated by a large intricately carved table.  There
+are several chairs at this table, a marked difference from the benches in the
+rest of the hall.  This is obviously where the notables in the clan sit during
+meals and meetings.
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28009
+S
+#28011
+Corner of the path~
+The path turns here leading down the sides of the Long Hall.  
+~
+280 67108864 0
+D2
+~
+~
+0 -1 28007
+D3
+~
+~
+0 -1 28012
+S
+#28012
+Village path~
+This path leads around the Long Hall of the clan.  On one side is the wall of
+the Long Hall and on the other is a hut
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28017
+D1
+~
+~
+0 -1 28011
+D3
+~
+~
+0 -1 28013
+S
+#28013
+Village path~
+This path leads around the Long Hall of the clan.  On one side is the wall of
+the Long Hall and on the other is a hut
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28018
+D1
+~
+~
+0 -1 28012
+D3
+~
+~
+0 -1 28014
+S
+#28014
+Village path~
+This path leads around the Long Hall of the clan.  On one side is the wall of
+the Long Hall and on the other is a hut
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28019
+D1
+~
+~
+0 -1 28013
+D3
+~
+~
+0 -1 28015
+S
+#28015
+A split in the path~
+The village path splits here heading north into a small grove of trees
+and south around the back of the Long Hall.
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28033
+D1
+~
+~
+0 -1 28014
+D2
+~
+~
+0 -1 28016
+S
+#28016
+Behind the Long Hall~
+The paths around the Long Hall come together behind the head of the hall
+near a cluster of buildings.  The central building stands before you,
+though not as ornate as the others it still radiates a certain sort of
+power. The posts at the entrance are carved with fierce bear motifs that
+seem to radiate a feeling of strength.
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28015
+D2
+~
+~
+0 -1 28024
+D3
+~
+~
+0 -1 28031
+S
+#28017
+A Barbarian Hut~
+Inside the hut you find very little.  There is a small pile of furs for sleeping
+in one corner.  Various knickknacks of carved wood or bone lay around the
+interior. It seems that eating and meal preparation are done elsewhere.
+~
+280 0 0
+D2
+~
+~
+0 -1 28012
+S
+#28018
+A Barbarian Hut~
+Inside the hut you find very little.  There is a small pile of furs for sleeping
+in one corner.  Various knickknacks of carved wood or bone lay around the
+interior. It seems that eating and meal preparation are done elsewhere.
+~
+280 0 0
+D2
+~
+~
+0 -1 28013
+S
+#28019
+A Barbarian Hut~
+Inside the hut you find very little.  There is a small pile of furs for sleeping
+in one corner.  Various knickknacks of carved wood or bone lay around the
+interior. It seems that eating and meal preparation are done elsewhere.
+~
+280 0 0
+D2
+~
+~
+0 -1 28014
+S
+#28020
+Corner of the path~
+The path turns here leading down the sides of the Long Hall.  
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28007
+D3
+~
+~
+0 -1 28021
+S
+#28021
+Before the Proving Grounds~
+The path splits here.  To the east lies the path to the entrance of the Great
+Hall, to the west the path continues further into the village.  The well worn
+path to the south leads to a large stone gate.
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28020
+D2
+~
+~
+0 -1 28025
+D3
+~
+~
+0 -1 28022
+S
+#28022
+Village path~
+This path leads around the Long Hall of the clan.  On one side is the wall of
+the Long Hall and on the other is a hut
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28021
+D2
+~
+~
+0 -1 28026
+D3
+~
+~
+0 -1 28023
+S
+#28023
+Village path~
+This path leads around the Long Hall of the clan.  On one side is the wall of
+the Long Hall and on the other is a hut
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28022
+D2
+~
+~
+0 -1 28027
+D3
+~
+~
+0 -1 28024
+S
+#28024
+A split in the path~
+The village path splits here, heading west towards a strange stone hut
+and north around the back end of the Long Hall.
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28016
+D1
+~
+~
+0 -1 28023
+D3
+~
+~
+0 -1 28028
+S
+#28025
+Gateway to the Proving Grounds~
+There is a large stone gate here dividing the village from a large
+section of forest where the barbarian youths try their might against
+creatures of the forest.  Perhaps you should investigate further to
+see what you are up against...
+~
+280 4 0
+D0
+~
+~
+0 -1 28021
+D2
+~
+gate~
+1 -1 28052
+S
+#28026
+A Barbarian Hut~
+Inside the hut you find very little.  There is a small pile of furs for sleeping
+in one corner.  Various knickknacks of carved wood or bone lay around the
+interior. It seems that eating and meal preparation are done elsewhere.
+~
+280 0 0
+D0
+~
+~
+0 -1 28022
+S
+#28027
+A Barbarian Hut~
+Inside the hut you find very little.  There is a small pile of furs for sleeping
+in one corner.  Various knickknacks of carved wood or bone lay around the
+interior. It seems that eating and meal preparation are done elsewhere.
+~
+280 0 0
+D0
+~
+~
+0 -1 28023
+S
+#28028
+In front of the strange stone hut~
+Before you stands a hut with no windows.  The hut is long and kind of low.
+Unlike the other structures here it is made of stone.  There are several odd
+marks above the door, perhaps a sign in a language you don't know.  Its open
+door beckons you in, but its eerie silence makes you wonder of the wisdom of
+entering.
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28024
+D3
+~
+~
+0 -1 28029
+S
+#28029
+Inside the strange stone hut~
+This room takes up the front third of the structure.  The room is almost
+completely bare.  In one corner the broom that was used to sweep this room
+sits alone, the rooms only decoration.  A doorway leads further into the stone
+hut.
+~
+280 1 0
+D1
+~
+~
+0 -1 28028
+D3
+~
+~
+0 -1 28030
+S
+#28030
+Trapped!!!~
+Behind you a stone slab slams shut, blocking your retreat.  The lone occupant
+of this room faces you from a raised platform.  With a resounding clang, pits
+open in the floor around you and this strange man.  Balancing lightly he
+advances towards you and you get the feeling he is not happy to have been
+disturbed...
+~
+280 257 0
+D1
+There is a tiny hole between the stone and the wall that you might crawl through.~
+hole~
+9 -1 28029
+S
+#28031
+Inside the Chief's Hut~
+This hut looks to be somehow grander than the other huts that you have seen.
+Not that it doesn't have dirty, nasty furs and such hanging on the walls or
+that it smells any better.  Perhaps this is just a barbarian with an elevated
+sense of himself.  You should take it down a notch.
+~
+280 67108868 0
+D1
+~
+~
+0 -1 28016
+D3
+~
+~
+0 -1 28032
+S
+#28032
+Inside the Chief's Hut~
+This is definately where the jumped up barbarian chief lives.  You get the
+feeling that this guy didn't get his position in the village by heriditary
+hand-me-down kind of system.  He kicked the last chief around long and hard
+and took the chiefdom for himself.  Might be a bad idea to ruffle his sense
+of self.
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28031
+S
+#28033
+Before an unusual grove of trees~
+Sound from the village fades behind you being swallowed up by
+the grove of trees before you.  As you pass under the trees a
+ripple of cold passes over you.
+~
+280 67108864 0
+D0
+~
+~
+0 -1 28034
+D2
+~
+~
+0 -1 28015
+S
+#28034
+Inside the unusual grove of trees~
+A temporary description
+~
+280 67108864 0
+D2
+~
+~
+0 -1 28033
+D3
+~
+~
+0 -1 28035
+S
+#28035
+Deeper inside the grove of unusual trees~
+A temporary description
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28034
+D5
+~
+~
+0 -1 28036
+S
+#28036
+Bear Cave~
+A temporary description
+~
+280 1 0
+D3
+~
+~
+0 -1 28037
+D4
+~
+~
+0 -1 28035
+S
+#28037
+Path to the gate~
+A temporary description
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28036
+D3
+~
+~
+0 -1 28038
+S
+#28038
+Spirit Gate~
+Links to 28039 through gate
+~
+280 67108864 0
+D1
+~
+~
+0 -1 28037
+D2
+~
+~
+0 -1 28050
+S
+#28039
+Spirit Gate~
+Links to 28038 through gate
+~
+280 0 0
+D0
+~
+~
+0 -1 28040
+S
+#28040
+Spectral Web~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28041
+D2
+~
+~
+0 -1 28039
+S
+#28041
+Path through a spectral forest~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28042
+D2
+~
+~
+0 -1 28040
+S
+#28042
+A bend in the path~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28043
+D2
+~
+~
+0 -1 28041
+S
+#28043
+Almost to the spectral mountain~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28044
+D3
+~
+~
+0 -1 28042
+S
+#28044
+Cave at the base of the spectral mountain~
+A temporary description
+~
+280 0 0
+D3
+~
+~
+0 -1 28043
+D4
+~
+~
+0 -1 28045
+S
+#28045
+Eyrie on the spectral mountain~
+A temporary description
+~
+280 0 0
+D4
+~
+~
+0 -1 28046
+D5
+~
+~
+0 -1 28044
+S
+#28046
+Top of the spectral mountain~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28047
+D5
+~
+~
+0 -1 28045
+S
+#28047
+Cave entrance at the top of the mountain~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28048
+D3
+~
+~
+0 -1 28046
+S
+#28048
+Madcoil's Den~
+link to 28047 via command
+~
+280 0 0
+D3
+~
+hole~
+9 -1 28047
+D5
+~
+~
+0 -1 28049
+S
+#28049
+Madcoil's Inner Lair~
+link to 28048 via climb chute command
+~
+280 0 0
+D4
+~
+chute~
+11 -1 28048
+S
+#28050
+Escape tunnel~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28038
+D2
+~
+~
+0 -1 28051
+S
+#28051
+Escape tunnel~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28050
+S
+#28052
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D0
+~
+gate~
+1 -1 28025
+D1
+~
+~
+0 -1 28060
+D2
+~
+~
+0 -1 28055
+D3
+~
+~
+0 -1 28053
+S
+#28053
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D1
+~
+~
+0 -1 28052
+D2
+~
+~
+0 -1 28054
+S
+#28054
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D0
+~
+~
+0 -1 28053
+D1
+~
+~
+0 -1 28055
+D2
+~
+~
+0 -1 28059
+S
+#28055
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D0
+~
+~
+0 -1 28052
+D1
+~
+~
+0 -1 28056
+D2
+~
+~
+0 -1 28058
+D3
+~
+~
+0 -1 28054
+S
+#28056
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D0
+~
+~
+0 -1 28060
+D2
+~
+~
+0 -1 28057
+D3
+~
+~
+0 -1 28055
+S
+#28057
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D0
+~
+~
+0 -1 28056
+D3
+~
+~
+0 -1 28058
+S
+#28058
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D0
+~
+~
+0 -1 28055
+D1
+~
+~
+0 -1 28057
+D3
+~
+~
+0 -1 28059
+S
+#28059
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D0
+~
+~
+0 -1 28054
+D1
+~
+~
+0 -1 28058
+S
+#28060
+Barbarian Proving Ground~
+This large area is used by the barbarians to train their youth in the art of
+combat. There are fallen trees for hiding behind, open ground for attacking or
+flanking. All in all it is a pretty decent area for training, and if needed the
+young barbarians can always run to the gate in the north part of this area.
+~
+280 0 0
+D2
+~
+~
+0 -1 28056
+D3
+~
+~
+0 -1 28052
+S
+#28099
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#0
+$~

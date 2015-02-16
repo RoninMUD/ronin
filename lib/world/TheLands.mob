@@ -1,0 +1,508 @@
+#1901
+guard gatekeeper~
+The Gatekeeper~
+The Gatekeeper is here, polishing his sword.
+~
+The Gatekeeper stands against the gate here.  He is very tall, with
+dark black hair, making him appear young, but as you look into his eyes
+you feel that this man is much older and wiser than he appears to be.
+~
+10 0 1000 Y
+31 0 0 5d5+1200 5d5+20
+10000 142542
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1902
+spider dynzee~
+The dynzee~
+A dynzee jumps at you from the trees.
+~
+The dynzee is a small, spider-like creature.  It's no taller
+than your knees, but its fangs make it a sizable opponent.
+~
+108 34078728 -1000 Y
+4 16 6 3d4+48 1d8+1
+0 600
+8 8 0
+77 0 0d0+0 0
+0 0 0 0
+K
+0 1 0 0 0 0 0
+#1903
+zyekian scout~
+The Zyekian scout~
+A small Zyekian scout is here.
+~
+From the looks of him, he has been awake for days searching
+the woods for signs of trouble.
+~
+92 524296 150 Y
+28 5 2 100d8+300 10d8+0
+100 90000
+8 8 1
+6 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1904
+guard zyekian~
+The Zyekian guard~
+A Zyekian guard stands here on the alert.
+~
+Obviously this man takes pride in his job, as you notice 
+his armor and equipment are very clean and organized.
+From the looks of his muscles, you can see why he was chosen
+to be a guard.
+~
+72 0 500 Y
+30 6 1 187d5+750 4d18+2
+500 211233
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1905
+worker~
+The field worker~
+A field worker is here tending to his crop.
+~
+He was sewing the ground with small seeds, but as you
+look at him, he raises he hoe, leans upon it, and
+whips a small bead of sweat from his brow.
+~
+218 0 100 Y
+8 13 6 3d4+98 1d8+1
+10 4500
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1906
+ox~
+The ox~
+An extremely large ox is resting here.
+~
+The ox is very large, and smells none to pleasant.
+~
+200 0 0 Y
+13 16 0 2d5+161 2d5+0
+0 15000
+5 5 2
+91 0 0d0+0 0
+0 0 0 0
+K
+0 1 0 0 0 0 0
+#1907
+owl~
+The white owl~
+A large white owl is sitting on a branch here.
+~
+The owl is very beautiful, having large white feathers
+and midnight black eyes.  It is a very graceful creature.
+~
+88 8 400 Y
+9 12 2 2d5+111 1d10+0
+0 7000
+6 6 2
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1908
+owl grey~
+The grey owl~
+A small grey owl is resting on a fallen log here.
+~
+The grey owl is no larger than a small melon, but
+its talons make it a fierce survivor.
+~
+72 0 0 Y
+6 14 4 3d4+80 1d8+0
+0 2300
+5 5 1
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1909
+orak~
+Orak~
+Orak is here, feeding on small fish.
+~
+He has very large tusks protruding from his mouth, making you 
+feel a little uneasy, yet you find yourself facinated by this 
+beast.
+~
+74 8 -200 Y
+35 -1 -1 15d30+1600 4d17+15
+0 301231
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+60000 0 0 0 0 0 0
+#1910
+zyekian cleric~
+The Zyekian cleric~
+A Zyekian cleric is studying a book he has picked up here.
+~
+Deep in study, he barely notices you, or simply, ignores you.
+~
+74 8 1000 Y
+37 -2 -1 4d10+1450 4d28+0
+40000 265233
+6 6 1
+2 0 0d0+0 1
+1 6 5 28
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1911
+zyekian mage~
+The Zyekian mage~
+A Zyekian mage is here carving something into his staff.
+~
+He is covered only by a simple robe.  
+~
+75 10 450 Y
+37 -2 -6 5d15+1201 3d21+10
+500 256123
+8 8 1
+1 0 0d0+0 2
+1 3 5 100
+1 1 5 26
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1912
+king zyekian kalek~
+Kalek~
+The King is here, sitting on his throne.
+~
+He is dressed in fine clothing.  Clean shaven and well mannered, he
+looks at you with all knowing eyes.  A broad smile covers his
+face as he greets you.  He is the last survivor of the great 
+Jiran race.
+~
+75 134217864 1000 Y
+40 -8 -8 9d90+1950 4d6+16
+200000 300532
+6 6 1
+69 0 0d0+0 1
+2 3 15 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1913
+giant leech~
+The giant leech~
+A giant leech jumps from beneath the water at you.
+~
+You see large needle-like fangs come from an opening 
+underneath its bulging eyes.
+~
+108 1048584 -1000 Y
+30 4 1 30d11+800 2d30+10
+0 149123
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+5000 0 0 0 0 0 0
+#1914
+xfxqrfmwfgjp~
+Something~
+Something rushes at you.
+~
+Oh yea, something got a hold of you.
+~
+108 269484072 -1000 Y
+32 -4 5 20d62+1000 11d8+10
+0 278932
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1915
+thrag beastman master~
+Thrag the Beastman~
+A legendary nomad stands proudly before you.
+~
+The legend of the beastman standing before you is known far and wide
+in the land.  He fears nothing that breathes.  He has fought proudly
+and victorously in many battles.  One look at him tells you why.  He
+is truely the Lord of Nomads.
+~
+16777354 294956 0 Y
+60 -20 -15 4000d1+0 5d5+20
+10 90
+8 8 0
+6 16512 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1917
+queen zyekian~
+The Zyekian Queen~
+The Zyekian Queen is resting here.
+~
+She looks very peaceful.  Nothing could harm a hair
+on this beautiful beings head.
+~
+72 136 1000 Y
+32 0 -10 20d5+900 10d6+2
+0 129153
+6 6 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1918
+servant~
+The servant~
+A servant is here carrying a tray.
+~
+She looks calm.  There is no hatred in hers eyes, only
+love.
+~
+24 0 600 Y
+25 4 2 10d2+650 10d3+10
+9 95323
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1919
+cook~
+The cook~
+The castle cook is here preparing some gourmet foods.
+~
+He is very short and bald.  The only hair on his head is a 
+long mustache which curves upwards.  He claps his hands
+and a few servants start running in different directions.
+~
+74 0 500 Y
+26 2 2 1d200+750 3d10+9
+543 102123
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1920
+young boy~
+The young boy~
+A young boy is playing here.
+~
+His face is covered with dirt and his clothes are dirty, but
+all he cares about is playing.  You see him act out a great battle
+of a knight fighting a dragon.
+~
+24 0 500 Y
+6 15 4 3d4+86 1d8+0
+0 1555
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1921
+blue conger~
+The blue conger~
+A blue conger grabs onto your leg and starts gnawing away.
+~
+It is long and thin.  This eel-like creature loves the taste 
+of blood.
+~
+40 33554440 -1000 Y
+31 2 3 5d10+1000 10d7+6
+0 180123
+8 8 0
+86 0 0d0+0 1
+5 1 4 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1922
+baby~
+The baby~
+A baby is crawling around on all fours.
+~
+Isn't he adorable?
+~
+72 0 1000 Y
+2 19 8 3d4+20 1d4+0
+0 200
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1923
+merchant~
+The merchant~
+A merchant is here trying to make a bargain.
+~
+He is finely dressed and smells of scented oils.
+~
+72 0 300 Y
+26 0 0 5d10+750 3d15+0
+90000 40000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1924
+ferryman charon~
+Charon~
+Charon awaits his payment.
+~
+He is covered in a pitch-black cloak.  Your knees give way to
+fear as you look at him.  Slowly he reaches a skeletal hand
+towards you.
+~
+74 8 -1000 Y
+51 -4 -10 100d20+1200 10d10+10
+50000 341235
+8 8 1
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1926
+dragon black~
+The black dragon~
+A large black dragon evolves from the water.
+~
+His fangs, like swords, his claws, daggers.  He bellows loudly.
+You have disturbed his rest.
+~
+110 33554440 -1000 Y
+31 0 -10 1d150+950 10d5+5
+0 151532
+8 8 1
+57 0 0d0+0 1
+8 1 2 0
+0 0 0 0
+K
+1000 1 0 0 0 0 0
+#1927
+woolly bear~
+The giant woolly bear~
+A large woolly bear sits here watching for her young.
+~
+She has many legs, and is covered with large hairs.
+~
+12 33554432 0 Y
+15 6 1 3d4+154 2d5+0
+0 21000
+6 6 2
+86 0 0d0+0 0
+0 0 0 0
+K
+1000 1 0 0 0 0 0
+#1928
+woolly bear~
+The baby woolly bear~
+A baby woolly bear is here gnawing on some wood.
+~
+Even though it is a baby, it is taller than your knees.
+~
+12 33554432 0 Y
+6 15 4 3d4+70 1d7+0
+0 1555
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 1 0 0 0 0 0
+#1930
+elk~
+The elk~
+A large elk is here.
+~
+It has very large antlers.
+~
+72 0 100 Y
+12 9 2 3d4+148 2d5+0
+0 14000
+8 8 1
+91 0 0d0+0 0
+0 0 0 0
+K
+0 1 0 0 0 0 0
+#1931
+zyekian commander~
+The Zyekian commander~
+A Zyekian commander stands here.
+~
+He has extremely large muscles.
+~
+10 8 900 Y
+35 -4 -4 10d10+1590 8d10+2
+15000 298123
+8 8 1
+7 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1932
+zyekian sphen~
+Sphen~
+Sphen is here organizing his goods.
+~
+He is very old and feeble, yet with his obvious magical abilities, he
+would be a harsh foe in battle.
+~
+10 268435464 800 Y
+33 -2 -25 3d5+1900 3d6+12
+10000 50000
+8 8 1
+1 0 0d0+0 1
+1 1 3 26
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1933
+zyekian warder lorin~
+Lorin~
+Lorin the Warder is standing here.
+~
+He has a smile on his face.  This man is a faithful servant to the king.
+~
+72 268435464 900 Y
+33 -4 -9 3d5+2500 5d4+20
+1000 298123
+8 8 1
+7 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1934
+Kalten~
+Kalten~
+Kalten the Necromancer is resting here at his table.
+~
+Kalten is tall and old.  Staring at him, you become awed at the 
+knowledge he must possess.  Kalten is the Kings' advisor.
+~
+10 268435464 900 Y
+35 -6 -9 20d20+1300 5d4+10
+1452 50000
+5 5 1
+1 0 0d0+0 2
+1 1 6 82
+1 1 6 26
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

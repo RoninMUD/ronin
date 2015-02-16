@@ -1,0 +1,799 @@
+#2400
+Above the Chaos Zone~
+  You find yourself on a small crystal disc that hovers about a hundred
+feet over the Chaos Zone.  Far below several adventurers have gone berserk
+trying to kill each other.  Anarchy rules they day as heads roll and the
+blood flows freely.  Seems the gods have forsaken this part of the world
+and turned it into a nightmare of mayhem and destruction.  Looks like fun,
+you can't wait to join the bloodshed.
+~
+24 4288 0
+D5
+~
+~
+0 -1 2408
+S
+#2401
+Inside the gates of Hell~
+  You stand inside a vast circular chamber that's halfway filled with molten
+lava.  At every step you take you find the lava pulling you down into its fiery
+embrace and certain death.  For some reason the intense in here heat doesn't
+harm you, it only makes you sweat intensely and your skin turn red.  The chamber
+is half-lit by the glow from the lava which turns everything a shade of red and
+otherwise harmless-looking rocky formations into scowling gargoyles and demons
+lurking for a chance to rip your throat out.
+~
+24 4096 0
+D1
+~
+~
+0 -1 2402
+D2
+~
+~
+0 -1 2406
+D4
+~
+~
+0 -1 2416
+S
+#2402
+The Central Courtyard~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2403
+D2
+~
+~
+0 -1 2407
+D3
+~
+~
+0 -1 2401
+S
+#2403
+Walking on Water~
+  The water here is so solid it bears your weight without any trouble.
+You feel it give slightly way under your feet each time you step down 
+but it resists deeper penetration as if it were covered with some extremely
+thin and strong membrane.  Looking down you see several piranhas and sharks
+swimming merrily together, happily ignoring the fact that their habitats
+are entirely different.
+~
+24 4096 0
+D0
+~
+~
+0 -1 2420
+D1
+~
+~
+0 -1 2404
+D2
+~
+~
+0 -1 2408
+D3
+~
+~
+0 -1 2402
+S
+#2404
+The Central Courtyard~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2405
+D2
+~
+~
+0 -1 2409
+D3
+~
+~
+0 -1 2403
+S
+#2405
+The Central Courtyard~
+A temporary description
+~
+24 4096 0
+D2
+~
+~
+0 -1 2410
+D3
+~
+~
+0 -1 2404
+D4
+~
+~
+0 -1 2417
+S
+#2406
+The Central Courtyard~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2401
+D1
+~
+~
+0 -1 2407
+D2
+~
+~
+0 -1 2411
+D3
+~
+~
+0 -1 2443
+S
+#2407
+On the Rainbow Bridge~
+  You walk along a wide bridge that's made from solid colours.  How this
+is possible you cannot fathom, perhaps it's due to the wild nature of the
+Chaos Zone.  Peering down through the semi-translucent bridge you see only 
+a few dark clouds and the flat disk of Gaia below you.  You spot faint 
+movement down there.  Must be a war going on or something.
+~
+24 4096 0
+D0
+~
+~
+0 -1 2402
+D1
+~
+~
+0 -1 2408
+D2
+~
+~
+0 -1 2412
+D3
+~
+~
+0 -1 2406
+S
+#2408
+Below the Dark Sun~
+  You find yourself standing in a desert.  Every way you look there is
+sand, sand and more sand.  In the sky above you a dark sun burns your skin
+and makes you reach out for that waterbottle you were supposed to pack
+for this journey.  In the sky above you spy a transparent disk that seems
+to be beckoning you towards it.  You feel you could almost will yourself
+up into the sky.
+~
+24 4096 0
+D0
+~
+~
+0 -1 2403
+D1
+~
+~
+0 -1 2409
+D2
+~
+~
+0 -1 2413
+D3
+~
+~
+0 -1 2407
+D4
+~
+~
+0 -1 2400
+S
+#2409
+On top of the Pillar of Death~
+  You stand atop a great marble pillar that extends several hundred feet
+above the ground.  The pillar extends far above the clouds even and seems
+almost to be an island floating on a milky white ocean.  Scattered around
+here are the dried bones and broken armour of some humanoid creatures that
+met their doom up here.  The air up here is uncomfortably thin and cold.
+~
+24 4096 0
+D0
+~
+~
+0 -1 2404
+D1
+~
+~
+0 -1 2410
+D2
+~
+~
+0 -1 2414
+D3
+~
+~
+0 -1 2408
+S
+#2410
+The Central Courtyard~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2405
+D1
+~
+~
+0 -1 2431
+D2
+~
+~
+0 -1 2415
+D3
+~
+~
+0 -1 2409
+S
+#2411
+The Central Courtyard~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2406
+D1
+~
+~
+0 -1 2412
+D4
+~
+~
+0 -1 2418
+S
+#2412
+Under the Ice~
+  Looking up you see several feets of ice separate you from the surface.
+The lighting in here is marginal and comes from what little light escapes
+through the ice.  You see the frozen decapitated body of some other 
+unfortunate soul that has been dumped here, presumably by whoever did him
+in. Your lungs yearn for air and you bang on the thick ice but to no
+avail. The only way out of here is to swim under the ice.
+~
+24 4105 6
+D0
+~
+~
+0 -1 2407
+D1
+~
+~
+0 -1 2413
+D3
+~
+~
+0 -1 2411
+S
+#2413
+On top of the Glacier~
+  You stand atop a large glacier that covers most of the mountainrange
+you're traveling through.  The cold biting wind nips at your unprotected
+body and snow blows into your face every now and then.  Staying here for
+too long would mean dying from cold or starvation and being absorbed by
+the glacier as your body was covered with snow.
+~
+24 4096 0
+D0
+~
+~
+0 -1 2408
+D1
+~
+~
+0 -1 2414
+D2
+~
+~
+0 -1 2421
+D3
+~
+~
+0 -1 2412
+S
+#2414
+The Central Courtyard~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2409
+D1
+~
+~
+0 -1 2415
+D3
+~
+~
+0 -1 2413
+S
+#2415
+The Central Courtyard~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2410
+D3
+~
+~
+0 -1 2414
+D4
+~
+~
+0 -1 2419
+S
+#2416
+A shop~
+A temporary description
+~
+24 4224 0
+D5
+~
+~
+0 -1 2401
+S
+#2417
+A rest area~
+A temporary description
+~
+24 12352 0
+D5
+~
+~
+0 -1 2405
+S
+#2418
+A rest area~
+A temporary description
+~
+24 12352 0
+D5
+~
+~
+0 -1 2411
+S
+#2419
+A shop~
+A temporary description
+~
+24 4224 0
+D5
+~
+~
+0 -1 2415
+S
+#2420
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2425
+D2
+~
+~
+0 -1 2403
+S
+#2421
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2413
+D2
+~
+~
+0 -1 2437
+S
+#2422
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2423
+D2
+~
+~
+0 -1 2445
+S
+#2423
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2424
+D3
+~
+~
+0 -1 2422
+S
+#2424
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2425
+D3
+~
+~
+0 -1 2423
+S
+#2425
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2426
+D2
+~
+~
+0 -1 2420
+D3
+~
+~
+0 -1 2424
+S
+#2426
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2427
+D3
+~
+~
+0 -1 2425
+S
+#2427
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2428
+D3
+~
+~
+0 -1 2426
+S
+#2428
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D2
+~
+~
+0 -1 2429
+D3
+~
+~
+0 -1 2427
+S
+#2429
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2428
+D2
+~
+~
+0 -1 2430
+S
+#2430
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2429
+D2
+~
+~
+0 -1 2431
+S
+#2431
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2430
+D2
+~
+~
+0 -1 2432
+D3
+~
+~
+0 -1 2410
+S
+#2432
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2431
+D2
+~
+~
+0 -1 2433
+S
+#2433
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2432
+D2
+~
+~
+0 -1 2434
+S
+#2434
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2433
+D3
+~
+~
+0 -1 2435
+S
+#2435
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2434
+D3
+~
+~
+0 -1 2436
+S
+#2436
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2435
+D3
+~
+~
+0 -1 2437
+S
+#2437
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2421
+D1
+~
+~
+0 -1 2436
+D3
+~
+~
+0 -1 2438
+S
+#2438
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2437
+D3
+~
+~
+0 -1 2439
+S
+#2439
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2438
+D3
+~
+~
+0 -1 2440
+S
+#2440
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2441
+D1
+~
+~
+0 -1 2439
+S
+#2441
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2442
+D2
+~
+~
+0 -1 2440
+S
+#2442
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2443
+D2
+~
+~
+0 -1 2441
+S
+#2443
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2444
+D1
+~
+~
+0 -1 2406
+D2
+~
+~
+0 -1 2442
+S
+#2444
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D0
+~
+~
+0 -1 2445
+D2
+~
+~
+0 -1 2443
+S
+#2445
+Outside Passage~
+A temporary description
+~
+24 4096 0
+D1
+~
+~
+0 -1 2422
+D2
+~
+~
+0 -1 2444
+S
+#2480
+Apocalypse Room~
+  You're floating in mid-air over Midgaard.  You are completely surrounded by
+a transparent field of energy that resists all attempts to penetrate it and you
+realize you're never going to escape from here without help from the gods.
+Nice view though.
+~
+24 712 0
+S
+#2481
+Apocalypse Room~
+  You're floating in mid-air over Midgaard.  You are completely surrounded by
+a transparent field of energy that resists all attempts to penetrate it and you
+realize you're never going to escape from here without help from the gods.
+Nice view though.
+~
+24 712 0
+S
+#2499
+Entrance to the Chaos Zone~
+   Here is the entrance to the fabled Chaos Zone.  Many adventures have
+ventured into this magic area for the pleasure of killing their comrads without
+risk.  Covering an entire wall is a large portal, however you have no clue how
+to possibly work it.  Its best to let the Chaos guard operate it for you.
+~
+24 192 0
+S
+#0
+$~

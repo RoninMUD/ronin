@@ -1,0 +1,484 @@
+#26100
+Santa Claus~
+Santa Claus~
+Santa Claus is sitting here, waiting for help!
+~
+Coverd with his red suit Santa is sitting here with a broken foot. Around him you see many large sacks with xmas gifts.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+5 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26101
+Boy chrismas~
+A boy~
+A boy is standing here waiting for his chrismas gift from Santa~
+This boy has been very good this year
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26102
+zyca skyknight captain~
+the Captain of the Zyca Skyknights~
+The Captain of the Zyca Skyknights is here
+~
+The Captain of the Skyknights must be a member of the Royal family and
+must show outstanding skill with weapons to be chosen.  He wears a crown
+that indicates his noble heritage.
+~
+8 294912 -400 Y
+28 -8 -8 2d50+3000 20d2+8
+35000 300000
+8 8 1
+0 0 0d0+0 1
+3 5 100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26103
+a boy bad~
+A BAD BOY!!!~
+A boy is standing here, hoping to get a gift from Santa
+~
+This is a VEERY BAD BOY!!!!
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26104
+basil exposisition movie~
+Basil Exposistion~
+Basil Exposistion is here, looking for his mother.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 134219904 1000 Y
+35 -15 -15 1d1+25000 69d69+69
+10 621
+8 8 1
+0 1073741823 6d6+6 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26105
+hottie female robot fembot~
+A Fembot~
+A Fembot is here, trying to woo you with her beauty.
+~
+She is a truely beautiful thing. She may be a robot, but she looks
+like a full fledged goddess. Her breats and thighs are rounded 
+and shaped, and made of steel. You are not sure you have the will
+power to destroy such a beatiful thing.
+~
+8 134217728 -500 Y
+31 -8 -9 1d1+7000 10d9+11
+10 621
+8 8 2
+0 12288 60d7+160 3
+1 2 10 82
+1 2 25 26
+1 2 75 32
+0 0 0 0
+K
+0 0 0 0 0 0
+#26106
+doctor evil movie ~
+Doctor Evil~
+Doctor Evil is here, being eeeeeeevil.
+~
+Before you stands a bald, very evil man.  He had a bad
+childhood, but that is no exuse for his misdeeds.  He
+is wearing an obsurd looking ring on his right hand.
+~
+136 2176 -1000 Y
+31 -11 -10 60d60+4500 8d9+7
+10 621
+8 8 1
+0 12352 60d9+150 2
+1 1 4 100
+1 2 10 26
+0 0 0 0
+K
+0 0 0 0 0 0
+#26107
+guard evil movie ~
+An Evil Guard~
+A Guard is here, looking for Austin Powers.
+~
+Here is one of Doctor Evil's lackeys, trained to serve.  His only
+weaknesses are truely beautiful women and a lack of brain power.
+~
+8 268697600 -500 Y
+31 -6 -8 60d60+3600 7d9+11
+10 621
+8 8 1
+0 12288 6d6+6 3
+7 2 15 0
+4 2 10 0
+3 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26108
+cat bigglesworth movie ~
+Mr. Bigglesworth~
+Mr. Bigglesworth is here, waiting for Doctor Evil.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 -1000 Y
+31 11 10 1d1+1 1d1+1
+10 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26110
+Sith Aprentice~
+The Aprentice Sith~
+A figure swathed in black stands here.
+~
+   A figure of total darkness stands before you. Robed head to toe in
+black, you can feel the hatred radiating in waves towards you. You glimpse
+red and black whorles completely covering the hood shrouded face that
+gazes back at you.
+~
+40 268435584 500 Y
+52 -5 -5 5d10+4500 5d7+35
+25000 0
+8 8 1
+4 0 50d10+400 3
+1 3 15 5
+3 7 3 0
+1 2 15 37
+0 0 0 0
+K
+0 0 0 0 0 0
+#26111
+Imperial Guard~
+The Imperial Guard~
+A guard of the Imperial Fleet stands here.
+~
+   A guard of the Imperial Fleet stands before you. Encased in
+red body armor, his blood red cape swirls around him. He is
+unwavering in his duty and deadly to behold.
+~
+46 0 0 Y
+46 -12 -10 5d10+6000 5d6+25
+1 900000
+8 8 1
+5 0 50d10+200 1
+9 3 8 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26112
+Imperial Trooper guard~
+The Imperial Trooper~
+A trooper of the Imperial Fleet stands here.
+~
+   A trooper of the Imperial Fleet stands before you. Encased in
+white body armor, his snow white cape swirls around him. He is
+unwavering in his duty and a deadly foe.
+~
+40 8683656 -1000 Y
+51 -31 -10 30d100+5000 7d20+60
+10000 1800000
+8 8 1
+4 0 1d1+1 2
+5 1 15 0
+6 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26113
+Sith Aprentice figure~
+The Aprentice Sith~
+A figure swathed in black stands here.
+~
+   A figure of total darkness stands before you. Robed head to toe in
+black, you can feel the hatred radiating in waves towards you. You glimpse
+red and black whorles completely covering the hood shrouded face that
+gazes back at you.
+~
+10 8 900 Y
+35 -4 -4 10d10+1590 8d10+2
+15000 298123
+8 8 1
+7 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26114
+fido dog~
+The Beastly Fido~
+Beastly Fido is here.
+~
+Fido is a small dog that has a foul smell and pieces of rotted meat hanging
+around his teeth.
+~
+536871081 0 -200 Y
+1 19 10 1d100+10000 100d4+0
+10 25
+8 8 1
+89 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26115
+Sith Aprentice figure~
+The Aprentice Sith~
+A figure swathed in black stands here.
+~
+   A figure of total darkness stands before you. Robed head to toe in
+black, you can feel the hatred radiating in waves towards you. You glimpse
+red and black whorles completely covering the hood shrouded face that
+gazes back at you.
+~
+104 16777216 -500 Y
+38 -18 -2 20d55+3500 5d6+17
+10000 460000
+8 8 1
+95 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26116
+Sith Lord~
+The Lord of the Sith~
+A Sith Lord stands here infused with the power of the force.
+~
+   Purest evil stands before you. Bathed in the power of the force,
+lightning radiating from his outstretched hands, you know that death
+walks the land. No other can promise oblivion as does the Sith Lord.
+~
+16425 402948234 1000 Y
+70 -28 -10 1d20000+21000 100d5+120
+0 5000000
+8 8 1
+76 0 0d0+0 0
+0 0 0 0
+K
+5000000 0 0 0 0 0
+#26120
+A big turkey~
+An enormous big Turkey~
+A big Turkey is jumping around here saying "Gobble Gobble Eat Lemon Gobble Gobble"
+~
+Gooble Gooble Gobble Gobble, thats all you notice when look upon this wierd looking monster!! Gobble?
+~
+8 0 0 Y
+30 0 -10 10d10+2000 10d2+80
+1 1
+8 8 0
+86 0 1d1+1 0
+0 0 0 0
+K
+30303 0 0 0 0 0
+#26121
+mutated turkey animal~
+An Two headed mutated Turkey~
+An Enormous two headed mutated Turkey is walking around, looking for something to EAT.
+~
+This ugly monster has 2 head, and is BIG! Bigger than your self.. when you look close you see that the turkey has a tattoo: I gonna Eat LEMON!
+~
+8 0 0 Y
+1 19 -6 10d10+4000 1d10+100
+1 500000
+8 8 0
+86 0 1d1+1 0
+0 0 0 0
+K
+30 0 0 0 0 0
+#26123
+Enormous ugly monster~
+Enormous big and Ugly monster~
+Something big and ugly is walking around here!!~
+This monster is so ugly that you eyes hurts!!!!!
+~
+536870920 524416 -1000 Y
+70 19 -20 10d50+7000 10d3+140
+1000000 230230
+8 8 1
+63 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26124
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26125
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26127
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26128
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26129
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26150
+King Knight Man Soldier~
+The King's Knight~
+The King's Knight is here, serving his king.
+~
+The King's Knight is a loyal servant of the king.  He will serve his
+Liege until death.  The King does not want Humpty Dumpty back together
+again and if you intend to try, you must go through this brave knight.
+~
+8 262272 700 Y
+31 11 -8 40d60+4000 9d9+9
+10 621
+8 8 1
+0 12288 1d1+1 4
+3 2 15 0
+9 2 15 0
+4 1 30 0
+7 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26151
+King Footman Man Soldier~
+The King's Man~
+The King's Man is here, serving his king.
+~
+This is one of the King's Men.  He has vowed to serve his king in
+anyway he can.  He is strong and powerful.  If you want a piece of
+Humpty Dumpty, you will have to go through him.
+~
+8 262144 500 Y
+31 -8 -6 61d61+5000 8d7+11
+10 621
+8 8 1
+0 12288 1d1+1 3
+9 2 35 0
+3 1 25 0
+4 2 30 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26197
+ugly big monster~
+Big Ugly Monster~
+A ugly monster is sniffing around here.
+~
+This monster is so ugly that you eyes hurts!!!!!
+~
+536870920 524288 -1000 Y
+70 19 -20 10d50+7000 10d3+140
+1000000 1
+8 8 1
+63 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26198
+Ugly Creature~
+Ugly Creature~
+Ugly creature is walking around!!
+~
+This monster is so ugly that you eyes hurts!!!!!
+~
+536870920 524288 -1000 Y
+70 19 -20 10d50+7000 5d5+100
+1000000 1
+8 8 1
+63 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26199
+Enormous ugly monster~
+Enormous big and Ugly monster~
+Something big and ugly is walking around here!!~
+This monster is so ugly that you eyes hurts!!!!!
+~
+536870920 524288 -1000 Y
+70 19 -20 10d50+7000 10d3+140
+1000000 1
+8 8 1
+63 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

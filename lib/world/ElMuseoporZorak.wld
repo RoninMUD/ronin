@@ -1,0 +1,538 @@
+#16500
+Marble Steps~
+  The wall lies in rubble to your south, while a large, crumbling
+marble staircase rises above you. A brass sign with the green patina
+of great age is fastened onto one of the short pedestals here. It looks
+as though whatever statues once stood on these short marble pillars
+have long since been weathered into dust. Either that or they got up
+and walked away.
+~
+165 4100 0
+D2
+~
+~
+0 -1 10040
+D4
+Crumbling marble steps rise above you.
+~
+~
+0 -1 16501
+E
+sign~
+Meedgaarde Museom of Waxen Figures
+           est. 203 A.V.
+~
+S
+#16501
+The Grand Entrance~
+   Tall, rotting mahogany doors lie hanging from their ancient
+hinges before you. They are tall enough to admit two people, one
+standing on the other's shoulders, and wide enough for two fat men
+to walk in abreast. 
+~
+165 0 0
+D0
+Creaking, rotten doors hang from their hinges.
+~
+~
+0 -1 16502
+D5
+Crumbling marble steps go down here.
+~
+~
+0 -1 16500
+S
+#16502
+The Reception to the Wax Museum~
+  A huge desk lies thrown against the north wall here, its old
+wood almost destroyed by dry rot, and broken as well by whatever
+tremendous force wrenched it from its familiar moorings, upright.
+A grand hall leads east and west to the exhibits here. What once
+passed for a map to the building hangs from the wall over the 
+desk.
+~
+165 8 0
+D1
+A tall archway.
+~
+~
+0 -1 16522
+D2
+Creaking, rotten doors hang from their hinges.
+~
+~
+0 -1 16501
+D3
+A tall archway.
+~
+~
+0 -1 16504
+E
+map~
+The map is far too stained by mildew and age to read.
+~
+S
+#16503
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+165 584 0
+S
+#16504
+Decrepit Hallway~
+  This hallway is hung with tattered tapestries which are so
+victimized by their many years hanging from the walls of the
+untended museum that they are completely covered in a fine, pale
+brown veneer of dust and mold. A sign on the northern wall here 
+reads "Ye Weste Winge"
+~
+165 8 0
+D1
+A tall archway.
+~
+~
+0 -1 16502
+D3
+The hallway continues.
+~
+~
+0 -1 16505
+S
+#16505
+A Bend in the Hallway~
+   The walls here have large black streaks burned into them, as
+well as large chunks gouged out of them, seemingly by a monstrous
+ball and chain. The hallway continues to the north, where the west
+wing proper begins.
+~
+165 8 0
+D0
+The hallway continues.
+~
+~
+0 -1 16506
+D1
+The hallway continues.
+~
+~
+0 -1 16504
+S
+#16506
+The West Wing~
+  This is the once-grand west wing of the Midgaard Wax Museum. A
+sign over the eastern archway reads "Heestorikal Warrs". The hall
+continues north and south.
+~
+165 8 0
+D0
+~
+~
+0 -1 16509
+D1
+A grand archway.
+~
+~
+0 -1 16507
+D2
+A bend in the hallway.
+~
+~
+0 -1 16505
+S
+#16507
+First Exhibit: The Hall of Warlords~
+   The walls here were once painted in bright, cheery colors, but 
+now the paint is blistered, cracked, and peeling- as if from a 
+combination of great age and heat. The exhibit was once closed off
+by ropes, but they dangle from their short poles now, rotting and
+broken.
+~
+165 8 0
+D0
+~
+door ~
+1 16506 16508
+D3
+A grand archway.
+~
+~
+0 -1 16506
+S
+#16508
+Maintenance Closet for the First Exhibit~
+  Once upon a time this room was filled with cleaning supplies and 
+sundries for changing the exhibit and cleaning the rooms. Now, all the
+mops and brooms are rotted, and the soap has long since deteriorated
+into very clean dust. Cobwebs cover the walls, and it looks as though
+this room hasn't been disturbed in centuries.
+~
+165 8 0
+D2
+~
+door~
+1 16506 16507
+S
+#16509
+The West Wing~
+  This is the once-grand west wing of the Midgaard Wax Museum. The
+floor here has a dark brown crunchy substance covering it. At first
+you think it might be dried blood, but on closer inspection you
+realize that it is just dark red wax, bubbled up as if some great
+heat came from below here.
+~
+165 8 0
+D0
+~
+~
+0 -1 16510
+D2
+~
+~
+0 -1 16506
+S
+#16510
+A bend in the Hallway~
+  The wax on the floor here is a pale yellow in color, almost an ivory.
+The West Wing lies to your south, and the hallway bends east here.
+The walls are covered in ancient, rotting tapestries.
+~
+165 8 0
+D1
+You see nothing special.
+~
+~
+0 -1 16511
+D2
+~
+~
+0 -1 16509
+S
+#16511
+The North Wing~
+  A sign on the wall here reads "Thee Northe Winge". Wax on the
+floor crackles beneath your feet as you walk along here.
+~
+165 8 0
+D1
+You see nothing special.
+~
+~
+0 -1 16512
+D3
+You see nothing special.
+~
+~
+0 -1 16510
+S
+#16512
+The North Wing~
+  Tattered tapestries hang from rusted nails in the walls here. The
+wax on the floor is crenellated and bubbled, and it seems that you
+can see clawed footprints in it. A sign on the south wall reads, "Forin
+Barbars," and a carved wooden archway leads to an exhibit to the south.
+~
+165 8 0
+D1
+You see nothing special.
+~
+~
+0 -1 16514
+D2
+You see nothing special.
+~
+~
+0 -1 16513
+D3
+You see nothing special.
+~
+~
+0 -1 16511
+S
+#16513
+The Barbar Exhibit~
+  The tattered remnants of a wax figure lie shattered against a wall.
+A name tag on its chest reads, "Vezergorth Eenvader". It looks as though 
+something very powerful smashed this figure with a huge clawed, hoof-shaped
+paw.
+~
+165 8 0
+D0
+~
+~
+0 -1 16512
+S
+#16514
+The North Wing~
+  You tenderly avoid the huge rend in the floor here. A reek of
+rot and must rises from the gouge, and the tapestries here are
+stained a dark, uniform brown-yellow. A huge door lies to the south,
+remarkably well-preserved compared to the rest of this building.
+~
+165 8 0
+D1
+~
+~
+0 -1 16518
+D2
+~
+door~
+1 16515 16515
+D3
+~
+~
+0 -1 16512
+S
+#16515
+The Exhibit of Mythical Beasts~
+  This room stinks of something acrid, almost a cross between sulphur
+and urine. The floors and walls have deep gouges torn into them, as
+if some huge beast went berserk here. The southern wall has what appears
+to be a tunnel carved into it. But how would a tunnel be dug through air,
+as you are on the second floor?
+~
+165 8 0
+D0
+~
+door~
+1 16515 16514
+D2
+~
+~
+0 -1 16516
+S
+#16516
+Wax Tunnel~
+   The curving walls here are made entirely of a semi-clear wax, and huge
+claw-marks are marked in them. The floor has footprints in it.... as though
+the wax was melted at one time.
+~
+165 8 0
+D0
+~
+~
+0 -1 16515
+D3
+~
+~
+0 -1 16517
+S
+#16517
+Wax Tunnel~
+  The curving walls here are made entirely of a semi-clear wax, and huge
+claw-marks are marked in them. The footprints cover the floor here, and 
+scratches and scrapes surround a circular metal hatch with odd runes
+carved into it.
+~
+165 8 0
+D1
+~
+~
+0 -1 16516
+D5
+~
+~
+0 -1 16523
+S
+#16518
+A Bend in the Hallway~
+  The hallway here turns to the west. Wax is bubbled in a 
+crunchy patina on the floor, the color of a fine curry powder.
+Tapestries on the walls are covered in a dark, smoky dust,
+with the small black leavings of flies all over them.
+~
+165 8 0
+D2
+~
+~
+0 -1 16519
+D3
+~
+~
+0 -1 16514
+S
+#16519
+The East Wing~
+  This hallway is as run-down as the rest of the building,
+although it looks as though you might be able to make out
+something of what the tapestries here depict...
+~
+165 8 0
+D0
+~
+~
+0 -1 16518
+D2
+~
+~
+0 -1 16520
+E
+tapestry~
+The pictures on this tapestry show some sort of an official
+ceremony, with what appears to be the frontage of this 
+museum in the background, and an important-looking fellow
+cutting a ribbon tied to statues at the steps.
+~
+S
+#16520
+The East Wing~
+  The floor here has many small crevices and jagged cracks
+in it, as though the ground itself moved underneath it. The
+tapestries that you assume once hung on the walls here have
+been reduced to charred strips of ancient cloth dangling
+miserably from a few nails in the wall.
+~
+165 8 0
+D0
+~
+~
+0 -1 16519
+D2
+~
+~
+0 -1 16521
+S
+#16521
+A Bend in the Hallway~
+  The hall here turns to the north, a large chunk of the
+inside corner of the turn missing, while ragged hunks of
+marble lie scattered about the floor.
+~
+165 8 0
+D0
+~
+~
+0 -1 16520
+D3
+~
+~
+0 -1 16522
+S
+#16522
+Decrepit Hallway~
+  The ceiling here is lumped and sagging from a combination
+of age and humidity, and the wall-hangings are covered in dark
+mildew. It looks as though a tremendous amount of water was once
+splashed about here.
+~
+165 8 0
+D1
+~
+~
+0 -1 16521
+D3
+~
+~
+0 -1 16502
+S
+#16523
+Exhibit Storage~
+  This section of the museum was once used as a storage facility for
+maintenance equipment. The walls are now covered in a thin layer of dark
+brown wax, and the ceiling glows with a strange sort of green, luminescent
+fungus.
+~
+165 8 0
+D1
+~
+~
+0 -1 16524
+D4
+~
+~
+0 -1 16517
+S
+#16524
+A Cramped Hallway~
+  Janitorial equipment lies scattered about the floor of this small
+hallway, and the walls are covered with a rust brown wax. The air is
+exceptionally humid and hot. You seem to smell a slight hint of sulphur
+here.
+~
+165 8 0
+D1
+~
+~
+0 -1 16525
+D3
+~
+~
+0 -1 16523
+S
+#16525
+A Cramped Hallway~
+  The scent of sulphur is stronger here, and it appears to be rising
+from small cracks in the floor in this room. A small trapdoor is set into
+the ground here, and a large ornate door stands to your east.
+~
+165 8 0
+D1
+A huge ornate door with many engravings in it.
+~
+door~
+1 -1 16526
+D3
+~
+~
+0 -1 16524
+D5
+~
+trapdoor~
+1 -1 16527
+S
+#16526
+The Consort's Boudoir~
+  A tremendous odor of some kind of nasty perfume overpowers you as you
+enter this room. Fancy rugs lie strewn about in an almost casual manner,
+although closer inspection reveals that this affect is really very artfully
+done. The huge four-poster brass bed in the corner is hung with diaphanous
+veils of lilac and pink, with an extremely comfortable-looking quilt
+covering the pink silk sheets beneath. A full sized mirror stands against
+the south wall, and various beauty aids are neatly arranged on a small
+ivory table next to it.
+~
+165 8 0
+D3
+The inside of a large, ornate door with many carvings on it.
+~
+door~
+1 -1 16525
+S
+#16527
+The Sorcerer's Workshop~
+  This room has been hollowed out entirely from a huge ball of red wax,
+with a small trapdoor set in the ceiling. Tables and benches support vast
+arrays of crucibles, beakers, and other alchemical devices, all bubbling
+merrily away. A large pentagram is etched into the floor, and sulphurous
+smoke rises from the cracks to form a miasma of putrid gases, almost
+choking you.
+~
+165 8 0
+D4
+~
+trapdoor~
+1 -1 16525
+S
+#16599
+Ye Grande Hall of Kludgi and Locusti~
+   Bits of wax, string, specks of blood, and powdered Tang are
+strewn about the floor here, all surrounding a huge neon orange
+sign in the center of the room:
+               Do NOT Touch ANYTHING!
+               ON THREAT OF SUMMONING
+              OUR DARK LORD VERGIGORM
+             TO EAT YOUR ENTRAILS!!!
+Kludged by Zorak, 12/1/95
+~
+165 512 0
+S
+#0
+$~

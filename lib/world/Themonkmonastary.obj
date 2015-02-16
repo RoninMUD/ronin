@@ -1,0 +1,1114 @@
+#10301
+cot small~
+a small cot~
+A small cot lies in the corner of the room.~
+~
+15 0 1
+30 0 0 0
+50 20 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10302
+beads prayer necklace string~
+a string of prayer beads~
+A small bead necklace lies in a pile here.~
+~
+9 0 5
+2 0 0 0
+1 30 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10303
+string ball~
+a ball of string~
+A neat, little ball of string is rolling around on the floor.~
+~
+12 0 16385
+0 0 0 0
+1 100 75
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10304
+vial water holy potion~
+a vial of Holy water~
+A small vial of what appears to be water is on the ground.~
+~
+10 96 16385
+15 3 16 -1
+1 450 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10305
+wafer holy~
+a Holy wafer~
+A small, light colored wafer with a Holy symbol on it lies here.~
+~
+19 0 1
+4 0 0 0
+0 20 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10306
+robe saffron~
+a saffron colored robe~
+A pile of saffron colored cloth lies on the ground here.~
+~
+9 0 1025
+2 0 0 0
+1 250 25
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#10307
+ream paper white~
+a ream of white paper~
+A neatly stacked ream of white paper lies here.~
+~
+12 0 1
+0 0 0 0
+3 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10308
+fungus green~
+a piece of luminous green fungus~
+A piece of luminous green fungus is lying here.~
+~
+1 1 65537
+0 0 48 0
+1 20 5
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10309
+fungus red~
+a piece of luminous red fungus~
+A piece of lunimous red fungus is lying here.~
+~
+1 1 65537
+0 0 36 0
+1 15 3
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10310
+cask wine~
+a small cask of wine~
+A small cask of wine lies on the ground.~
+~
+17 0 1
+30 30 2 0
+30 200 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10311
+water cup~
+a cup~
+A cup has been set here.~
+~
+17 0 1
+1 1 0 2
+1 2 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10312
+bookshelf book shelf narrow oak~
+a narrow oak bookshelf~
+A narrow oak bookshelf is here filled with various documents and texts.~
+~
+15 0 0
+50 0 0 0
+1 100 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10313
+bookshelf book shelf wide oak~
+a wide oak bookshelf~
+A wide oak bookshelf is here filled with various documents and texts.~
+~
+15 0 0
+50 0 0 0
+1 100 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10314
+bookshelf book shelf tall oak~
+a tall oak bookshelf~
+A tall oak bookshelf is here filled with various documents and texts.~
+~
+15 0 0
+50 0 0 0
+1 100 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10315
+bookshelf book shelf short oak~
+a short oak bookshelf~
+A short oak bookshelf is here filled with various documents and texts.~
+~
+15 0 0
+50 0 0 0
+1 100 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10316
+bookshelf book shelf long oak~
+a long oak bookshelf~
+A long oak bookshelf is here filled with various documents and texts.~
+~
+15 0 0
+50 0 0 0
+1 100 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10317
+book brown history~
+a brown history book~
+A brown history book is resting here.~
+~
+12 0 1
+0 0 0 0
+10 250 15
+50
+E
+book brown history~
+   The book is titled "The Recent History of the Western Lands" which seems to
+include a history of Midgaard and the surrounding lands.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10318
+book tan history~
+a tan history book~
+a tan history book is resting here.~
+~
+12 0 1
+0 0 0 0
+8 300 15
+50
+E
+book tan history~
+The book is titled "The History of the Eastern Lands" which seems to include
+a history of Old and New Thalos, with some mention made to the Great Eastern
+Desert and the nomads who live there.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10319
+book black history~
+a black history book~
+A black history book is lying here.~
+~
+12 0 1
+0 0 0 0
+8 500 25
+50
+E
+book black history~
+The book is titled "The History of the Middle Lands" which seems to include a
+history of the Mountains and the groups of people that tend to live there.
+References are made to the goblins, harpies, drow, gypsy villagers, and the
+strange and sometimes dangerous monsters that live there.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10320
+book leather black small~
+a small, black leather book~
+A small, black leather book is lying here.~
+~
+12 0 1
+0 0 0 0
+5 1500 35
+50
+E
+book leather black small~
+This small book is actually a journal of a brave adventurer who journeyed
+into the Abyss and made his way out again. Unfoutunately, the script seems
+hastily written and messy so it would take a long time to decipher it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10321
+textbook text book thick~
+a thick textbook~
+A thick textbook lies here heavily.~
+~
+12 0 1
+0 0 0 0
+12 500 20
+50
+E
+textbook text book thick~
+This rather large and heavy text is titled "The Laws of the Physical World".
+The language is rather wordy and uses very long and vague words that would
+probably only interest mages or scholars with plenty of time on their hands.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10322
+textbook text book large~
+a large textbook~
+A rather large textbook lies here heavily.~
+~
+12 0 1
+0 0 0 0
+12 250 10
+50
+E
+textbook large text book~
+This large textbook is titled "The Laws of a Civilized World" and is a rather
+boring list of laws and customs in various parts of the world such as Thalos
+and Midgaard.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10323
+book small leather brown~
+a small, brown leather book~
+A small, brown leather book rests here.~
+~
+2 0 1
+20 5 26 -1
+5 1000 300
+50
+E
+book small leather brown~
+This book is titled "The Use of Large Area Fire Spells" and seems to go into
+some detail about the use and casting of the spells 'burning hands' and the
+ever popular, 'fireball'.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10324
+manual small~
+a small manual~
+A small manual is lying here.~
+~
+2 0 1
+10 16 15 -1
+4 1000 300
+50
+E
+manual small~
+This manuscript, written in a very neat handwriting, is obviously the work of a
+high priest. It discusses the prayers and preperations that seemed to help her
+in healing the wounded. It is divided into three parts: "The Curing of Light
+Wounds", "The Curing of More Serious Wounds", and "Curing the Critically
+Injured".
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10325
+book small leather~
+a small leather book~
+A small leather book is lying here.~
+~
+2 0 1
+10 12 -1 -1
+5 1000 300
+50
+E
+book small leather~
+This small, tightly bound leather book is titled "Feeding the Faithful" and
+includes the prayers and preparations that a high priest uses when she is
+conjuring food for her faithful followers. This book has only one section:
+"Creation of Food".
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10326
+book forest green~
+a forest green book~
+A forest green book is lying here.~
+~
+12 0 1
+0 0 0 0
+6 300 20
+50
+E
+book forest green~
+This oddly colored book was obviously written by a druid (that probably would
+explain the color) and dicusses various trees and such that live in the forest.
+One thing that does catch your eye is a chapter about telling which trees are
+able to cast spells. Apparently, Eucalyptus trees and the trees that "shiver"
+do not cast spells, but the trees that "moan" do.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10327
+manual history~
+a history manual~
+A manual is lying here.~
+~
+12 0 1
+0 0 0 0
+6 200 15
+50
+E
+manual history~
+This manual is titled "The Conflict Between the Aborigines and Roos" and tells
+about how the Aborigines and Roos are constantly fighting each other. Though
+nobody knows what started the fighting (not even they remember anymore), some
+historians believe it has something to do with the death of a Roo princess and
+an Aborigine prince.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10328
+paper map~
+a map~
+A rolled up piece of paper is lying here.~
+~
+12 0 1
+0 0 0 0
+1 200 30
+50
+E
+map paper~
+                  The FesWest odgaard
+       En                             Shre
+           |                                |
+ Sr___/------------------------------------- Midgaard
+       /    (Darst) |  |(Liorest)|
+       |                 _/  |     [cain]  |
+      _/                 |_   \         +---+--st
+     /                    |    |     dr /
+     |____________________|    |___________|
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10329
+map paper~
+a map~
+A rolled up piece of paper is lying here.~
+~
+12 0 1
+0 0 0 0
+1 200 30
+50
+E
+map paper~
+             The Mountains East of Midgaard
+              +----------->>+<strange lifting device>
+              |   +---X----+|
+              +-+-+---|R|  +-[Strange Craft]
+                |     |A|__|
+                +-----|V|  \___-[Gypsy Village]
+              +-+     |I|      \___[to Eastern part of world]
+              |       |N|
+     |     +--+-----\ |E|
+   --#-----+     |   \----\
+     |           |[Goblin |
+[Crossroads]     | Caves] |
+                 \--------/
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10330
+book wood~
+a wood bound book~
+A book, nicely bound in a sturdy wood binding.~
+~
+12 0 1
+0 0 0 0
+6 500 20
+50
+E
+book wood~
+   This rather sturdy, wood-bound book is titled "Surviving In the Wilderness".
+It covers some interesting material regarding living off of the land, foraging
+for food, and finding potable water sources.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10331
+encyclopedia book a~
+an encyclopedia vol. A~
+A hide bound book with a large A on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book a~
+   This book is just packed with creatures and items that begin with the letter
+A. Some of the entries look like these:
+Anaconda- Anacondas don't want "none" unless you've got buns, hun'.
+Aphrodesiac- For some reason, females seem to really like a good aphrodesiac.
+   You should try some sometime... you may be surprised!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10332
+encyclopedia book b~
+an encyclopedia vol. B~
+A hide bound book with a large B on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book b~
+   This book is just packed with creatures and items that begin with the letter
+B. Some of the entries look like these:
+Bozo, clown- known for his big red nose, this joker is real annoying.
+Bitter Blade- This very evil item has a real attitude and has been know to use
+   people for pointless violence.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10333
+encyclopedia book c~
+an encyclopedia vol. C~
+A hide bound book with a large C on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book c~
+   This book is just packed with creatures and items that begin with the letter
+C. Some of the entries look like these:
+The "Cub*" Clan- this group has been know to wander around the world with no
+   paticular goal except to just see what it can kill.
+Club- very effective in the harvesting of seal fur.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10334
+encyclopedia book d~
+an encyclopedia vol. D~
+A hide bound book with a large D on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book d~
+   This book is just packed with creatures and items that begin with the letter
+D. Some of the entries look like these:
+Dracolich- often underrated (at least recently), the dracolich is quite deadly
+   to even powerful opponents.
+Dice, fuzzy- often seen hanging from the top of various "mounts" these cute
+   little things are quite soft and warm.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10335
+encyclopedia book e~
+an encyclopedia vol. E~
+A hide bound book with a large A on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book e~
+   This book is just packed with creatures and items that begin with the letter
+E. Some of the entries look like these:
+Enfan- little child-like creatures... so cute you want to kill them on sight!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10336
+encyclopedia book f~
+an encyclopedia vol. F~
+A hide bound book with a large F on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book f~
+   This book is just packed with creatures and items that begin with the letter
+F. Some of the entries look like these:
+Friend- though most people claim to be one, you never can seem to find one when
+   you need one the most... especially on wednesday nights.
+Flaming scorpion- a very potent drink from New Thalos.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10337
+encyclopedia book g~
+an encyclopedia vol. G~
+A hide bound book with a large G on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book g~
+   This book is just packed with creatures and items that begin with the letter
+G. Some of the entries look like these:
+Golem- there are so many variaties of golems that it would be impossible to
+   name them all... in fact, more are being made today than ever before!
+Gold- for some reason, this soft metal has a high value though one would wonder
+   why since you can't even make a decent weapon out of it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10338
+encyclopedia book h~
+an encyclopedia vol. H~
+A hide bound book with a large H on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book h~
+   This book is just packed with creatures and items that begin with the letter
+H. Some of the entries look like these:
+Humans- while good in a fight, they just lack the concentration for serious
+   study of most other disciplines.
+Halberd- if you have the strength for one, a halberd is a fairly sturdy weapon
+   with fairly decent damage and medium upkeep.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10339
+encyclopedia book i~
+an encyclopedia vol. I~
+A hide bound book with a large I on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book i~
+   This book is just packed with creatures and items that begin with the letter
+I. Some of the entries look like these:
+Ice, Vanilla- an individual with a high opinion of his singing and dancing
+   skills who said "Word" to your mother. (personally I'd beat him up)
+Ice Boots- these are for people that enjoy getting cold feet (others just seem
+   to lose them or something since they disappear after a while).
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10340
+encyclopedia book j~
+an encyclopedia vol. J~
+A hide bound book with a large J on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book j~
+   This book is just packed with creatures and items that begin with the letter
+J. Some of the entries look like these:
+Jugglernaut- this stupid oaf couldn't juggle two items, let alone the several
+   that he tries to toss around. Fortunately, he gets a large allowance that
+   goes to replace the items he is constantly dropping.
+Jello pudding pop- a truly wonderful invention, life would just not be the same
+   without an occasional one of these.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10341
+encyclopedia book k~
+an encyclopedia vol. K~
+A hide bound book with a large K on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book k~
+   This book is just packed with creatures and items that begin with the letter
+K. Some of the entries look like these:
+Kanga-Roo, Captain- leader of the Roo forces in their fued against their hated
+   enemies, the Aborigines. Fortunately, the Aborigine Chief is just as inept
+   or else the war would have ended in defeat for the Roos.
+Knife- a very useful invention, the knife helps us in many ways. When one is
+   done with a knife, it is also discovered that it fits nicely in someone's
+   back. [See "Friend" in vol. F]
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10342
+encyclopedia book l~
+an encyclopedia vol. L~
+A hide bound book with a large L on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book l~
+   This book is just packed with creatures and items that begin with the letter
+L. Some of the entries look like these:
+Lamia- for some reason, these rather noisy and annoying creatures seem to hang
+   out in Old Thalos in large numbers.
+Light source- for some reason, these always seem to expire right after you flee
+   so you do not have any idea where you are or how to get out.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10343
+encyclopedia book m~
+an encyclopedia vol. M~
+A hide bound book with a large M on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book m~
+   This book is just packed with creatures and items that begin with the letter
+M. Some of the entries look like these:
+Mime- these guys must have a serious mental problem! If I ever started acting
+   like one of them, I'd pray that someone would kill me!
+Musical Instruments- while many types are out there, unfortunately, there are
+   just as many people that think that they can use them and couldn't carry
+   a tune if it were glued to them and weighed nothing.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10344
+encyclopedia book n~
+an encyclopedia vol. N~
+A hide bound book with a large N on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book n~
+   This book is just packed with creatures and items that begin with the letter
+N. Some of the entries look like these:
+Nomad- talk about crazy, these people seem to get some sort of thrill out of
+   living in a hot, dry place with little water. At least some carry money.
+Nail- useful in construction, these small pieces of metal can also be used to
+   nail someone to the wall.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10345
+encyclopedia book o~
+an encyclopedia vol. O~
+A hide bound book with a large O on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book o~
+   This book is just packed with creatures and items that begin with the letter
+O. Some of the entries look like these:
+Otyugh- these vile and disgusting creatures live an filth and trash, but why do
+   some of them seem to have a more pleasant personality than politicians?
+Onyx- another highly valued material, things made of this stuff tend to be
+   highly praised until their power is made more realistic.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10346
+encyclopedia book p~
+an encyclopedia vol. P~
+A hide bound book with a large P on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book p~
+   This book is just packed with creatures and items that begin with the letter
+P. Some of the entries look like these:
+Purple Worm- this large creature lives in the Desert and is always looking for
+   something to snack on. Also quite sociable, he is often known to have even
+   univited visitors for lunch.
+Pick- a useful tool in digging all of the graves for the people who die a bit
+   too often.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10347
+encyclopedia book q~
+an encyclopedia vol. Q~
+A hide bound book with a large Q on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book q~
+   This book is just packed with creatures and items that begin with the letter
+Q. Some of the entries look like these:
+Quickling- these annoying little faeries must be on drugs! Nothing normal in
+   this world would move as fast as they do if they weren't on speed.
+Quickness, Sword of- even if you are not so quick (checked your intelligence
+   recently?), this sword will help quicken your speed in combat.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10348
+encyclopedia book r~
+an encyclopedia vol. R~
+A hide bound book with a large R on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book r~
+   This book is just packed with creatures and items that begin with the letter
+R. Some of the entries look like these:
+Rat- there are many varieties of rat (flying, sewer, wererat, ...) you will
+   also discover that while not all, a few are good eatin' if you cook them
+   properly (the radioactive rats are sought by the best chefs).
+Rapier- a useful weapon, it can really help get your point across if you get
+   in an argument.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10349
+encyclopedia book s~
+an encyclopedia vol. S~
+A hide bound book with a large S on the side is lying here.~
+~
+12 0 1
+0 0 0 0
+6 750 20
+50
+E
+encyclopedia book s~
+   This book is just packed with creatures and items that begin with the letter
+S. Some of the entries look like these:
+Shark- they are waiting for you with big, nasty, pointy teeth. They've got a
+   mean streak a mile wide!
+Sting- not only a popular weapon, Sting also makes a fairly good living as
+   a rock musician.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

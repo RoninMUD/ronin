@@ -1,0 +1,1027 @@
+#18000
+On the Island ~
+   You find yourself standing on the edge of an uncharted island.
+Why would this not be on the map unless someone did not want it to
+be found? It is also a mystery that you can only see the island from
+this point of view. Perhaps it is only a mirage. A sandy beach extends
+east to west and much the same as you look to the north. Some driftwood
+has floated ashore as well as some shells belonging to the ocean
+dwelling critters.
+~
+180 0 0
+D0
+~
+~
+0 -1 18001
+D1
+~
+~
+0 -1 18003
+D3
+~
+~
+0 -1 18037
+S
+#18001
+On the Island ~
+   As you travel further onto the island, you notice foodprints in the
+sanc. They don't appear to be human and you suspect that you are not
+alone here. Some of the sand has been fused to glass, suggesting that
+a great amount of heat was let loose here. To the west and east you can
+see more of the sandy beach and to the north something doesn't seem
+to be quite right.
+~
+180 0 0
+D0
+~
+~
+0 -1 18002
+D2
+~
+~
+0 -1 18000
+S
+#18002
+On the Island ~
+   Walking around on this sandy island you notice more footprints that
+just seem to wander with no particular destination. A shatterd tree lies
+just a few feet from you. It appears to have been frozen and then struck
+with great force. You notice that more of the sand is fused into glass
+here. You can't quite make it out but there seems to be a shimmer in the
+air before you just to the north...
+~
+180 0 0
+D0
+~
+~
+0 -1 18005
+D2
+~
+~
+0 -1 18001
+S
+#18003
+On the Island ~
+   There seems to be only one area that is possible to enter or exit this
+island, and this isn't it. Large jagged rocks and the crashing surf would
+prevent the arrival or departure of any watercraft and you don't think 
+flying over it would be such a great idea either. The gail winds make it
+all but impossible for the gulls that inhabit this island to take flight
+at this point. Footprints that are not quite human but certainly humanoid
+in nature are scatterd around here. Driftwood and crabgrass is strewn 
+haphazerdly around the beach. Perhaps further investigation is in order.
+~
+180 0 0
+D1
+~
+~
+0 -1 18004
+D3
+~
+~
+0 -1 18000
+S
+#18004
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18007
+D3
+~
+~
+0 -1 18003
+S
+#18005
+Inside the mage training camp. ~
+   You find yourself inside the hidden camp of the mage elite. Mages
+are born with the innate ability to do magics. To become a truely 
+powerful mage however, you must train and learn to focus your ablities.
+Some mages come searching for this island to pursue greatness, while
+others are wisked away by the mages at birth to come here and train.
+Plans of world domination, higher enlightnment and just sheer power
+are a few of the things the mages of this island are in search of.
+Feel free to look around, just don't get caught! You can go south and
+leave this terrible island or go north, further into the camp.
+~
+180 0 0
+D0
+~
+~
+0 -1 18006
+D2
+~
+~
+0 -1 18002
+S
+#18006
+Inside the mage training camp. ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18038
+D2
+~
+~
+0 -1 18005
+S
+#18007
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18008
+D3
+~
+~
+0 -1 18004
+S
+#18008
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18009
+D3
+~
+~
+0 -1 18007
+S
+#18009
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18010
+D2
+~
+~
+0 -1 18008
+S
+#18010
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18011
+D2
+~
+~
+0 -1 18009
+S
+#18011
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18012
+D2
+~
+~
+0 -1 18010
+S
+#18012
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18013
+D2
+~
+~
+0 -1 18011
+S
+#18013
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18014
+D2
+~
+~
+0 -1 18012
+S
+#18014
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18015
+D2
+~
+~
+0 -1 18013
+S
+#18015
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18016
+D2
+~
+~
+0 -1 18014
+S
+#18016
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18017
+D2
+~
+~
+0 -1 18015
+S
+#18017
+On the Island ~
+A temporary description
+~
+180 0 0
+D2
+~
+~
+0 -1 18016
+D3
+~
+~
+0 -1 18018
+S
+#18018
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18017
+D3
+~
+~
+0 -1 18019
+S
+#18019
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18018
+D3
+~
+~
+0 -1 18020
+S
+#18020
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18019
+D3
+~
+~
+0 -1 18021
+S
+#18021
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18020
+D3
+~
+~
+0 -1 18022
+S
+#18022
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18021
+D3
+~
+~
+0 -1 18023
+S
+#18023
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18022
+D3
+~
+~
+0 -1 18024
+S
+#18024
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18023
+D3
+~
+~
+0 -1 18025
+S
+#18025
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18024
+D2
+~
+~
+0 -1 18026
+S
+#18026
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18025
+D2
+~
+~
+0 -1 18027
+S
+#18027
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18026
+D2
+~
+~
+0 -1 18028
+S
+#18028
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18027
+D2
+~
+~
+0 -1 18029
+S
+#18029
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18028
+D2
+~
+~
+0 -1 18030
+S
+#18030
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18029
+D2
+~
+~
+0 -1 18031
+S
+#18031
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18030
+D2
+~
+~
+0 -1 18032
+S
+#18032
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18031
+D2
+~
+~
+0 -1 18033
+S
+#18033
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18032
+D2
+~
+~
+0 -1 18034
+S
+#18034
+On the Island ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18033
+D1
+~
+~
+0 -1 18035
+S
+#18035
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18036
+D3
+~
+~
+0 -1 18034
+S
+#18036
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18037
+D3
+~
+~
+0 -1 18035
+S
+#18037
+On the Island ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18000
+D3
+~
+~
+0 -1 18036
+S
+#18038
+Inside the mage training camp. ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18039
+D2
+~
+~
+0 -1 18006
+S
+#18039
+Inside the mage training camp. ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18040
+D2
+~
+~
+0 -1 18038
+S
+#18040
+The center of camp. ~
+   You have reached the center of this camp apparently undetected by
+the powers that protect it. You see much the same in any direction you
+happen to look. To the north, you see mages training their spells. To
+the south, you see mages training their spells. East and West you see
+the same types of activities going on. Mages barely into their teens
+are casting their magics at straw dummies, some are alone and some with
+mages that are a little older. Perhaps they are learning from these 
+older mages. 
+~
+180 0 0
+D0
+~
+~
+0 -1 18041
+D1
+~
+~
+0 -1 18045
+D2
+~
+~
+0 -1 18039
+S
+#18041
+Inside the mage training camp. ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18042
+D2
+~
+~
+0 -1 18040
+D3
+~
+~
+0 -1 18060
+S
+#18042
+Inside the mage training camp. ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18043
+D2
+~
+~
+0 -1 18041
+D3
+~
+~
+0 -1 18063
+S
+#18043
+Inside the mage training camp. ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18044
+D2
+~
+~
+0 -1 18042
+S
+#18044
+Northern edge of the camp ~
+A temporary description
+~
+180 0 0
+D2
+~
+~
+0 -1 18043
+D3
+~
+~
+0 -1 18056
+S
+#18045
+A temporary name~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18046
+D3
+~
+~
+0 -1 18040
+S
+#18046
+A temporary name~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18047
+D3
+~
+~
+0 -1 18045
+S
+#18047
+The holding pen ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18052
+D1
+~
+~
+0 -1 18048
+D2
+~
+~
+0 -1 18055
+D3
+~
+~
+0 -1 18046
+S
+#18048
+The holding pen ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18051
+D1
+~
+~
+0 -1 18049
+D2
+~
+~
+0 -1 18054
+D3
+~
+~
+0 -1 18047
+S
+#18049
+The holding pen ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18050
+D2
+~
+~
+0 -1 18053
+D3
+~
+~
+0 -1 18048
+S
+#18050
+The holding pen ~
+   You are standing almost knee deep in mud and filth. This is truely
+disgusting. Scraps of food and clothing are laying about the ground
+and you almost feel sorry for the creatures that are kept in this area.
+Perhaps it would be best if you just put them out of their misery by
+slaying the pathetic vermin. You can move further around the pen by
+heading west or south. There seems to be a small crack in the fence to
+the east.
+~
+180 0 0
+D1
+~
+crack fence~
+9 -1 18015
+D2
+~
+~
+0 -1 18049
+D3
+~
+~
+0 -1 18051
+S
+#18051
+The holding pen ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18050
+D2
+~
+~
+0 -1 18048
+D3
+~
+~
+0 -1 18052
+S
+#18052
+The holding pen ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18051
+D2
+~
+~
+0 -1 18047
+S
+#18053
+The holding pen ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18049
+D3
+~
+~
+0 -1 18054
+S
+#18054
+The holding pen ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18048
+D1
+~
+~
+0 -1 18053
+D3
+~
+~
+0 -1 18055
+S
+#18055
+The holding pen ~
+A temporary description
+~
+180 0 0
+D0
+~
+~
+0 -1 18047
+D1
+~
+~
+0 -1 18054
+S
+#18056
+Northern edge of the camp ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18044
+D3
+~
+~
+0 -1 18057
+S
+#18057
+Northern edge of the camp ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18056
+D3
+~
+~
+0 -1 18058
+S
+#18058
+Before the large yellow tent ~
+  You find yourself before a very large yellow tent. The fabric is very
+bright, clean and looks quite durable. There are several trees and 
+bushes planted here and the area is quite beautiful. You notice that 
+there are fewer footprints left on the ground here and have to assume
+that most of the inhabitants avoid this area for some reason. Your only
+options are to go south towards the center of the camp, east along the 
+edge of the camp or you could try your luck by going west into the tent.
+~
+180 0 0
+D1
+~
+~
+0 -1 18057
+D3
+~
+~
+0 -1 18059
+S
+#18059
+Inside the headmasters quarters ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18058
+S
+#18060
+A temporary name~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18041
+D3
+~
+~
+0 -1 18061
+S
+#18061
+A temporary name~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18060
+D3
+~
+~
+0 -1 18062
+S
+#18062
+The cafeteria ~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18061
+S
+#18063
+A temporary name~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18042
+D3
+~
+~
+0 -1 18064
+S
+#18064
+A temporary name~
+A temporary description
+~
+180 0 0
+D1
+~
+~
+0 -1 18063
+D3
+~
+~
+0 -1 18065
+S
+#18065
+Componants and things ~
+   As you walk into this building your senses are flooded with a spicy
+sweet smell of herbs and all things magical. Wands, staves and other
+items adorn the walls, giving off a faint glow. Once inside it would 
+seem that this building is much larger that it appeard to be from the 
+outside. The fledgling mages must come here for the supplies needed to
+cast such powerful magics. For every spell, there is a price apparently.
+There are several cabinets here, some containing exotic herbs and plants.
+Others contain jars with small eyes, legs and other parts of some 
+unknown creatures. Perhaps you should see what this shopkeeper has to
+offer, there might be something you will find usefull. 
+~
+180 0 0
+D1
+~
+~
+0 -1 18064
+S
+#18099
+A temporary name~
+A temporary description
+~
+180 0 0
+S
+#0
+$~

@@ -1,0 +1,146 @@
+#19200
+goblin humanoid~
+A goblin~
+A goblin is here, arguing over a few coins on the floor.
+~
+He looks scrawny, hungry perhaps?
+~
+106 0 -500 S
+2 19 6 1d2+10 1d2+1
+30 400
+8 8 1
+#19201
+trader man~
+A trader~
+You see a man lying on a bed peacefully.
+~
+~
+206 0 -100 S
+3 17 5 3d2+15 1d5+1
+50 600
+4 5 1
+#19202
+stirge~
+A stirge~
+A stirge flies towards you at great speed and attacks!
+~
+It does NOT look happy about you being here.
+~
+42 0 -700 S
+4 18 8 1d2+23 1d3+4
+60 800
+8 8 0
+#19203
+kobold~
+A large kobold~
+A large, rust-brown kobold stands here, eyeing you suspiciously.
+~
+He doesnt know whether to trust you or not.
+~
+206 0 -200 S
+2 19 7 1d2+10 1d6+1
+30 400
+8 8 0
+#19204
+shrew giant~
+A giant shrew~
+A giant shrew scuttles around the room..
+~
+The shrew has no eyes, and "sees" with its ears..
+~
+42 0 -200 S
+3 18 5 1d2+15 1d7+0
+35 600
+8 8 0
+#19205
+wolf white~
+A huge white wolf~
+A huge white wolf jumps up and pounces on you!
+~
+Its drooling at you.. better not let it get what it wants, would ruin your whole day.
+~
+40 0 -1000 S
+5 15 5 4d2+30 2d3+2
+180 1500
+8 8 0
+#19206
+cleric evil priestess~
+The evil priestess~
+A priestess of Set kneels at the altar here.
+~
+She looks at you through blackened eyes.. you can tell shes been through
+a lot in her life.
+~
+10 0 -1000 S
+9 11 2 9d2+80 2d6+2
+261 3000
+6 6 2
+#19207
+beetle fire~
+The fire beetle~
+A huge beetle sits on a dusty carpet here.
+~
+Funny, he seems to be glowing..
+~
+106 0 -200 S
+2 19 4 1d2+10 1d6+2
+12 370
+8 8 0
+#19208
+crab spider~
+A crab spider~
+A crab spider drops from the ceiling and attacks!
+~
+~
+42 1048576 -100 S
+7 14 4 10d2+50 1d9+1
+12 1300
+8 8 0
+#19209
+bandit man~
+The bandit~
+A bandit is here, eyeing you suspiciously.
+~
+He has obviously made this room a hideout, and doesnt like you intruding.
+~
+106 0 -750 S
+4 16 4 10d2+20 1d6+1
+212 1500
+8 8 1
+#19210
+bandit leader man~
+The bandit leader~
+The bandit leader is here, giving you an icy glare.
+~
+He has the bandits under his control and will do anything to get you out
+of here.
+~
+106 0 -750 S
+8 13 4 14d2+45 1d8+2
+307 3300
+8 8 1
+#19211
+goblin~
+A wandering goblin~
+A goblin is here, wandering through the hallways..
+~
+~
+76 0 -500 S
+2 19 6 1d3+15 1d6+1
+30 400
+8 8 0
+#19212
+edgar swordpupil believer~
+Edgar~
+Edgar the Swordpupil/Believer is standing here
+~
+You see before you the great Edgar!  Adorned in the finest adamantine 
+armor, he bulges his huge muscles, and frightens you into submission.
+Best step cautiously around me!
+~
+200 0 0 S
+5 19 10 1d10+50 1d8+1
+300 1800
+8 8 1
+#0
+$~

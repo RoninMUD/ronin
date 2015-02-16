@@ -1,0 +1,746 @@
+#27201
+Harry the Guinea Pig~
+Harry the Guinea Pig~
+A small guinea pig darts about, he seems the cutest in the world.
+~
+The cutest guinea pig in the world. He has spots of orange and white fur
+covering his body which has occasional whorls that just add to the amount of
+character he displays. His eyes are just black and his little lips bright pink.
+He seems ever so pleased to live his life in this land full of fantastic grass.
+~
+140 0 0 Y
+10 10 -20 10d10+0 1d1+1
+1 10
+8 8 1
+86 0 1d1+1 0
+0 1 0 0
+T
+......an aura of cuteness surrounds Harry.~
+K
+0 0 0 0 0 0
+#27202
+talking elk~
+a Talking Elk~
+A Talking Elk is bounding through the forest from hiding place to hiding place.
+~
+Much larger than your average elk this majestic creature stands before you.
+You don't get long to observe the fantastic antlers or perfectly colored coat
+of the animal before it is spooked by some noise you make or odor that it
+smells.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27203
+a Dumb Elk~
+a Dumb Elk~
+A Dumb Elk is bent over eating the plentiful grass.
+~
+A little smaller than his talking relative, this non-talking elk seems to
+enjoy life no less. He can be seen prancing about the countryside, eating
+grass and all manner of other things elk enjoy doing.
+~
+8 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1150000
+8 8 1
+86 0 1d5+10 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27204
+playful faun~
+a Playful Faun~
+A Playful Faun is here, prancing about without a care in the world.
+~
+This odd looking creature appears to have been created half goat, half
+humanoid. The bottom half being the goatish part.
+~
+136 0 0 Y
+52 -25 -6 4d100+8000 4d10+80
+0 1200000
+8 8 1
+68 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27205
+shy satyr~
+a Shy Satyr~
+a Satyr is here viewing you from a safe distance behind a tree.
+~
+Despite the flowing horse tail and prominent goat horns on his head, this satyr
+looks very much like a smaller human male. Naked, of course, for this world has
+yet to invent clothing, he romps around the forest mostly in search of the
+nymphs to satisfy his salacious desires. He carries around a set of pipes,
+maybe if you make him feel comfortable enough he'll play a tune for you.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1200000
+8 8 1
+68 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27206
+talking bear~
+a Talking Bear~
+a Talking bear sits on his haunches looking at you with a cocked head.
+~
+Talking Bears have been magically shrunk in this world to be more the size of
+humans. Though smaller they are no less ferocious than their dumb counter-
+parts, for they still have nasty claws and enormous buggling muscles.
+~
+8 0 0 Y
+52 -25 -6 4d100+8000 4d15+80
+0 1150000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27207
+dumb bear~
+a Dumb Bear~
+a Dumb Bear is hear foraging in the underbrush for berries and insects.
+~
+Slightly larger then his talking counterpart this bear has not been given the
+gift of speech. He behaves like most bears, fiercely protective of its young,
+yet with the intelligence of most omnivores. He can be seen catching fish near
+the plentiful streams, foraging for berries, or scavenging his favorite bee-
+hives.
+~
+8 0 0 Y
+52 -25 -6 4d100+8000 4d15+80
+0 1150000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27208
+walking oak tree~
+a Walking Oak~
+A Large Oak Tree is here walking on its unearthed roots.
+~
+Your eyes widen in amazement when you hear this tree open its mouth and speak
+to you. It uses two of its lower branches very similar to arms, and it waddles
+about on two large sets of roots. Its great bulk causes to the ground to shake
+as it moves it root legs, and its leaves rustle wildly as it sweeps its branch
+arms, making it very hard for it to sneak up on anyone.
+~
+8 268435456 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 0
+92 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27209
+talking elephant~
+a Talking Elephant~
+a Talking Elephant discusses security tactics with other disinterested animals.
+~
+All talking animals in this world have had their size modified so they are
+closer to the equal size of the rest of the talking animals. The smallest have
+grown and the largest have shrunk. Therefore this talking elephant seems to
+you almost like a baby elephant, but the size of his tusks tells your he is
+indeed full grown. He uses his trunk to hose himself off under the hot sun.
+~
+136 0 0 Y
+52 -25 -6 4d10+9000 4d10+80
+0 1300000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 27201 0 0 0 0
+#27210
+dumb elephant~
+a Dumb Elephant~
+a Dumb Elephant is standing around flapping his ears and swishing his tail.
+~
+This hulking creature moves around the world very slowly. With his tough skin
+and enormous size he doesn't need to worry much about predators. One look at
+the large tusks on the beast makes you think that predators need worry more
+about him!
+~
+8 0 0 Y
+52 -25 -6 4d10+9000 4d10+80
+0 1150000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 27201 0 0 0 0
+#27211
+talking tapir~
+a Talking Tapir~
+a Talking Tapir is here looking squat and happy.
+~
+This talking tapir still spends much of his time browsing around with his 
+prehensile snout for fresh young sprouts of plants.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27212
+dumb tapir~
+a Dumb Tapir~
+A Dump Tapir has found a mud pit to wallow in to keep the insects away.
+~
+This dumb tapir spends much of his time browsing around with his prehensile
+snout for fresh young sprouts of plants.
+~
+8 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1150000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27213
+talking panther~
+a Talking Panther~
+A Talking Panther slinks along keeping close to the shadows.
+~
+You see a large black panther, eager to learn new things about his
+surroundings. He moves silently throughout the environment, each movement
+seemingly well-planned.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 1
+90 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27214
+dumb panther~
+a Dumb Panther~
+a Dumb Panther is here looking for a tree to curl up in.
+~
+You see a large black panther, eager to learn new things about his
+surroundings. He moves silently throughout the environment, each movement
+seemingly well-planned.
+~
+8 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1150000
+8 8 1
+90 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27215
+talking horse~
+a Talking Horse~
+a Talking Horse contemplating the ethics of taking on riders is standing here.
+~
+You see every little girl's dream: a talking horse! This particular horse is
+a beautiful, clean white, with seemingly perfectly groomed mane and tail. You
+suppose that this world isn't even old enough yet for the horse to get them
+dirty yet. Your observations of this horse suggest that it is particularly
+fond of strawberries as it seeks them out before other grasses and berries in
+the environment.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27216
+dumb horse~
+a Dumb Horse~
+a Dumb Horse is galloping around, leaving a trail of dust behind it.
+~
+You see what you've come to expect from a horse, mane, tail, hooves, head,
+the regular accoutrements. It takes great pleasure in using its incredible
+speed to try and beat all the other animals in races.
+~
+8 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1150000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27217
+talking frog~
+a Talking Frog~
+A Talking Frog sits on a rock singing a song.
+~
+Larger than any frog you've seen before, the magic of this land has enlarged
+this frog and given it the ability to talk. This green and warty frog, despite
+its size, looks like any you have seen before, however, its apparent like of
+operatic music confounds you.
+~
+136 0 0 Y
+52 -25 -7 4d10+8000 4d10+80
+0 1300000
+8 8 0
+81 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27218
+dumb frog~
+a Dumb Frog~
+A Dumb Frog is here looking for a place to sit and croak loudly.
+~
+Green and with long spindly legs, this frog is a great swimmer and jumper. Eyes
+bulge out on each side of his head, keeping a sharp lookout for insects that
+venture within range of his sticky tongue.
+~
+8 0 0 Y
+52 -25 -7 4d10+8000 4d10+80
+0 1150000
+8 8 1
+81 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27219
+river god~
+the God of the River~
+The River God is here floating in a patch of turbulent white water.
+~
+Half man, half serpent, the god of the river looks exactly like you'd expect
+from picture books. He is incredibly muscular, has a white beard and a large
+golden crown. In his hand he holds a menacing looking trident. In his eyes you
+see a level of wisdom unsurpassed by most creatures in this world.
+~
+136 268435456 0 Y
+52 -25 -6 6d10+9000 4d10+80
+0 1500000
+8 8 1
+68 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27220
+naiad~
+a Naiad~
+A Naiad is here helping the River God maintain the waterways.
+~
+This Naiad appears as a beautiful woman, swimming in the waters of the river.
+Despite her beauty she is still capable of revenge and jealousy, so you had
+better watch your step.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 2
+68 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27221
+talking beaver~
+a Talking Beaver~
+A Talking Beaver is here discussing politics with the Naiads.
+~
+Much larger than your average beaver, this beaver has been given the gift of
+speech. He still maintains his thick brown coat, wide flat tail, and sharp 
+front teeth.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 0
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27222
+dumb beaver~
+a Dumb Beaver~
+A Dumb Beaver is here trying to thwart the River God by building a dam.
+~
+You see your average looking beaver. He's an adept swimmer and capable of quick
+movements on land, making him particularly difficult for predators to catch. He
+is always working hard to create new fisheries for himself by creating dams in
+various places in the river.
+~
+8 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1150000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27223
+talking donkey~
+a Talking Donkey~
+A Talking Donkey is here befouling the trail up the canyon with numerous droppings.
+~
+You see a grey donkey with big floppy ears. The hair on the back of his neck
+and on the tip of his tail is jet black. He doesn't seem to pleased with how
+things are going so far.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27224
+dumb donkey~
+a Dumb Donkey~
+A Dumb Donkey is here ferrying less sure-footed creatures up and down the canyon.
+~
+This donkey spends its time climbing and descending the walls of the canyon.
+Why? Because it can, of course! The frequency with which he makes this trip
+makes the route perilous for all other trying to make the same journey due to
+the sheer amount of scat he leaves in his wake. Maybe you should find a
+different route up the canyon.
+~
+8 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1150000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27225
+talking rabbit~
+a Talking Rabbit~
+A Talking Rabbit is here trying to keep track of its young.
+~
+You see a huge rabbit, that is nearly half a human's height tall. It also tends
+to stand in a more erect position than most rabbits in your world. Even more
+astonishing yet is that this rabbit is able to talk!
+~
+136 0 0 Y
+52 -25 -6 4d7+7800 4d9+75
+0 1300000
+8 8 0
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27226
+dumb rabbit~
+a Dumb Rabbit~
+A Dumb Rabbit is hopping about nibbling on just about everything it can reach.
+~
+You see a cute and cuddly rabbit, with a pure white, cotton tail, and large ears
+that stick straight up from its head. Its large hind legs give it the useful
+ability of jumping far and fast.
+~
+8 0 0 Y
+52 -25 -6 4d7+7800 4d9+75
+0 1150000
+8 8 0
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27227
+talking mole~
+a Talking Mole~
+A Talking Mole is here busily digging holes to plant his friends in!
+~
+Like all other of the talking varieties of animal in this world, their size has
+been augmented to bring them closer to the size of human. Therefore, this
+usually small mole has been enlarged quite severely. This has an unintended
+side effect that is dangerous for the casual passerby because of the sheer size
+of the hole they now dig. As opposed to maybe twisting your ankle in a mole hole
+now it is a definite possibility to be completely swallowed up in one!
+~
+136 0 0 Y
+52 -25 -6 4d7+7800 4d9+75
+0 1300000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27228
+dumb mole~
+a Dumb Mole~
+A Dumb Mole is here poking its head out of one of its many holes.
+~
+You are amazed that despite the fact that this mole is its regular weenie size
+that it is able to fight as well as it can. The magic of this world is quite
+powerful indeed.
+~
+8 0 0 Y
+52 -25 -6 4d7+7800 4d9+75
+0 1150000
+8 8 0
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27229
+talking jackdaw jack daw~
+a Talking Jackdaw~
+A Talking Jackdaw is here laughing at itself.
+~
+Even though the jackdaw is one of the smaller birds in the raven family this
+bird appears to you the biggest raven you've ever seen. The jackdaw has jet
+black feathers with a grey nape and distinctive white irises. This jackdaw is
+very open with its ability to talk, and is rather social and to be frank
+annoying.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+9 9 0
+83 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27230
+talking he-owl he owl~
+a Talking He-Owl~
+A Talking He-Owl is here, prefering to stay silent and sleep through the days.
+~
+This gigantic owl appears wise and learned, yet incredibly lazy. This mass of
+feathers likes to spend most of his time resting, and will only go out to hunt
+when he absolutely needs to. He still maintains his incredible stealth flying
+ability which makes him very difficult to spot in the wild.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+9 9 1
+83 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27231
+talking warthog wart hog~
+a Talking Warthog~
+A Talking Warthog is here convinced you are some type of tree.
+~
+This is one large pig. Not overly fat though, but well proportioned. Its sturdy
+look, low to the ground stance, and ample tusks make it look like it could be
+a tough opponent.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 0
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27232
+dumb warthog wart hog~
+a Dumb Warthog~
+You can smell a Dumb Warthog from a mile away!
+~
+Even though regular sized, most adventurers will tell you that getting in a
+scrape with a warthog is not a good idea. They can mess you up. Good. From the
+look of this fellow he seems to have reaped the bounty of this countryside
+quite well.
+~
+8 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1150000
+8 8 1
+86 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27233
+common dwarf~
+a Common Dwarf~
+A Common Dwarf is here surveying the newly created land for ore deposits.
+~
+This squat fellow look like he does not wish to be bothered. Despite his overall
+diminutive stature, the size of his muscles gives you the impression that maybe
+you shouldn't bother him afterall.
+~
+136 0 0 Y
+52 -25 -6 4d10+8000 4d10+80
+0 1300000
+8 8 1
+71 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27234
+the Chief Dwarf~
+the Chief Dwarf~
+The Chief Dwarf is here lording over the mountainous parts of the land.
+~
+The Chief Dwarf is one of the more important creatures in this world. When
+security issues arise he is always summoned before the king and the queen and
+asked his advice. Looking at him you can tell he is experienced in the ways of
+advanced combat and it would be rather wise not to anger him in any way.
+~
+136 268435456 0 Y
+52 -25 -6 6d10+9000 4d10+80
+0 1500000
+8 8 1
+71 0 5d5+100 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#27235
+prissy socialite~
+a prissy socialite~
+A prissy socialite is using her parasol as a fashion statement not sun protection.
+~
+This middle aged lady walks about in the fanciest clothes. Her current garment
+is a long white, lacy dress that you just know had to cost quite a sum of gold.
+For her though, it's the cost of the thing rather than its actual
+functionality. She walks down the street pretending everyone she passes is her
+best friend.
+~
+72 0 0 Y
+31 0 0 10d150+1000 8d10+0
+2009 23232
+8 8 2
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27236
+proper gentleman~
+a proper gentleman~
+A proper gentleman walks down the street in tails and a top hat.
+~
+This gentleman walks around the town with all the pomp that his social position
+has given him the right to display. His haughty appearance is only heightened
+by the monocle he wears in one eye, and the immaculate neatness of his attire.
+His suit is perfectly creased and cleaned, and his white shirt has been starched
+and bleached professionally.
+~
+72 0 0 Y
+31 0 0 10d150+1000 8d10+0
+1492 23232
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27237
+cabby~
+the Hansom's Cabby~
+The Hansom's Cabby is here looking distraught over the shape of his vehicle.
+~
+This cabby has a sharp look about him that has been developed over years and
+years of darting through the heavy traffic of this city hauling various well-
+off passengers to their fancy galas and important dinners. His accent is quite
+simple, and his wit great, but you can tell by looking at him that there's
+still a bit of the country life left in his eyes.
+~
+10 128 950 Y
+34 -14 -6 1d10+2900 2d5+30
+500 111333
+8 8 1
+69 0 1d1+1 2
+2 2 17 0
+4 2 8 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27238
+wizard roland amateur~
+Roland, the Amateur Wizard~
+Roland, the Part-Time Wizard is here his face illuminated in a green-yellow glow.
+~
+This gentlemen has to be in his late sixties. He has a tall, incredibly lean
+frame, white thinning hair and wrinkled skin. His health is failing him which
+comes from the amount of time he spends shut inside his study, usually failing
+at performing any magic. He seems to have stumbled upon something now and is
+obsessed with finding a way to test it.
+~
+268451850 268435456 0 Y
+45 -2 -6 50d100+3500 20d2+30
+15 700100
+8 8 1
+69 0 1d100+100 1
+1 3 50 32
+0 0 0 0
+K
+0 0 0 0 0 0
+#27239
+queen ice witch decilon~
+the Ice Queen of Decilon~
+The Ice Queen of Decilon is here, wakened from her eons long respite!
+~
+The queen's skin is very, very pale. Her hair is a silvery white and shimmers
+even though there is very little light in the room - a sign, perhaps, of how
+much magic is flowing through her body. Her eyes give an ice-cold stare and
+her rage is entirely evident. The lives of millions of people which she has
+taken do not weigh on her conscience, why would yours?
+~
+16430 268699776 -1000 Y
+50 -10 -7 10d750+3000 4d50+150
+450000 1500000
+8 8 2
+68 0 200d2+150 1
+1 3 25 82
+0 0 0 0
+K
+0 27221 27210 0 0 0
+#27240
+guardian tree right~
+the Guardian Tree of Right~
+The Tree of Right is here, making sure only the worthy reap the garden's benefits.
+~
+An animated tree is something that doesn't surprise you from this world. The
+tree gives you the evil eye, or is it an evil knot? He is going to make sure
+that your resolve is sufficient to take the apple of protection.
+~
+42 294952 1000 Y
+54 -15 -10 50d50+9500 70d3+250
+1 1000000
+8 8 1
+92 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27241
+lion sorcerer omniscient~
+the Omniscient Lion Sorcerer~
+a hulking Lion is here breathing life into the land with powerful magic.
+~
+A fantastic golden lion stands before you. You look deep into his eyes and all
+your worries in the world vanish immediately. You are entranced by the kindness
+that he exudes. You know that you are safe from all ills while you are in his
+presence. The magic that he portrays is incredibly powerful, but you are more
+worried about the magic that he does not perform, but you are quite aware he
+has at his command.
+~
+16793610 402661544 1000 Y
+55 -31 -10 1250d2+10000 20d5+10
+0 2500000
+8 8 1
+90 1073709064 10d1000+20000 4
+6 2 10 0
+7 2 10 0
+1 6 25 187
+1 6 1 102
+0 0 9 256
+K
+700000 27220 0 0 0 0
+#0
+$~

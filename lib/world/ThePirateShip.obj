@@ -1,0 +1,568 @@
+#7500
+cutlass jeweled~
+a jeweled cutlass~
+A jeweled cutlass has been dropped here.~
+$r jeweled cutlass flashes in the air.~
+5 134218816 8193
+0 3 11 3
+13 84032 10000
+20
+E
+cutlass jeweled~
+The cutlass is really sharp and easy to swing back and forth. The beautiful 
+jewels in its hilt look very valuable. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -10
+A
+39 20
+#7501
+glass spy~
+a spy glass~
+An exquisite spy glass has been dropped here, gleaming brightly in the light.~
+~
+12 0 16385
+0 0 0 0
+6 15002 1000
+50
+E
+glass spy~
+As you look through the spy glass, you can see really far...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+40 20
+#7502
+pistol dueling~
+a dueling pistol~
+A mean-looking dueling pistol has been left here.~
+~
+6 0 16385
+7502 1 1 500
+10 24900 2000
+50
+E
+pistol dueling~
+This is certainly the weapon of choice for any self-respecting pirate with
+the option to choose. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7503
+belt crocodile skin~
+Crocodile skin belt~
+A beautiful crocodile skin belt has been left here.~
+~
+9 134219584 2049
+0 0 0 0
+5 37450 20000
+15
+E
+belt crocodile skin~
+The belt wraps itself around your waist softly, making you feel powerful. It
+is made of first class crocodile skin.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+17 10
+#7504
+cutlass~
+a cutlass~
+A pirate's cutlass has been dropped here.~
+~
+5 0 8193
+0 5 4 3
+15 26530 2000
+50
+E
+cutlass~
+The sharp edge and its light weight make this weapon very useful for many 
+pirates, and others too, should the need arise.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7505
+pistol flintlock~
+a flintlock pistol~
+A flintlock pistol has been dropped here.~
+~
+6 0 16385
+7505 1 1 100
+15 16918 1000
+50
+E
+pistol flintlock~
+This is certainly the weapon of choice for any self-respecting pirate. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7506
+scarf silk~
+a silk scarf~
+There is a beautiful silk scarf lying on the floor.~
+~
+9 163612224 21
+0 0 0 0
+1 65300 15000
+15
+E
+scarf silk~
+The scarf is black and has some skulls and bones woven to it with white silk
+thread. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 -30
+A
+19 1
+#7507
+map treasure paper~
+a treasure map~
+a wet piece of paper has been dropped here.~
+~
+12 524288 1
+0 0 0 0
+1 1 1
+100
+E
+map treasure paper~
+In the map you can see a little island.
+
+    N
+   /|\ ^         ^    ^        ^   ^    ^     ^       ^    ^       ^     
+    |      ^       _-___--_-_-_-_____-__--__-__------_      ^            
+  ^    ^          /  .       .       .      .         \      ^   ^        
+  ^         ^    /  .  .   .   .   .   .  .  .   .     \                  
+   ^    ^        \      .      .       .        .  .    |    ^     ^     
+     ^      ^    /  .  .   .       .      .  .          /        
+      ^         [  .       .  .  __  __         .   .  /            ^
+    ^   ^        \  .   .       / _\/_ \  .   .   .    [     ^      ^    
+   ^       ^     /    . .   .  / / ][ \ \   .  .    .   ]    ^              
+            ^    /   .    .     /  ][  \  .   \/  . .  . \         ^ ^^   
+     ^          /       .   .      ][  .  .   /\ .   .   |                  
+         ^ ^    [   .     .     .  ][ .  .   .   .  .    ]        ^    
+    ^            \   .   .   .    .   .   .   . .  .   . /       ^           
+        ^         [     .  .    .  .  .    .  .    . .  /   ^  ^      ^     
+        ^          |  .   .   .    .     . .    .    .  ]         ^         
+          ^    ^    \__-_----___--___-___-__--_--__--__/       
+     ^                      ^                           ^         ^          
+         ^  ^         ^           ^          ^           ^                  
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7508
+coins pile large~
+a large pile of coins~
+A large pile of coins has been left here.~
+~
+20 0 1
+500000 0 0 0
+100 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7509
+gloves silk~
+a pair of silk gloves~
+A pair of silk gloves has been dropped here.~
+~
+9 149975104 129
+5 0 0 0
+1 25002 15000
+10
+E
+gloves silk~
+These gloves feel like they would cling to your skin, but still they make 
+you feel like second skin is there to protect you.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 30
+A
+24 -5
+#7510
+ring diamond~
+a diamond ring~
+A beautiful diamond ring has been dropped on the floor.~
+~
+11 134217792 16387
+5 0 0 0
+1 12411 15000
+10
+E
+ring diamond~
+The ring shines beautifully when it reflects light rays to your eyes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+19 3
+#7511
+bracelet diamond~
+a diamond bracelet~
+A beautiful diamond bracelet has been dropped on the floor.~
+~
+11 134217792 4097
+5 0 0 0
+1 23556 12000
+10
+E
+bracelet diamond~
+The bracelet is decorated with many small diamonds.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 30
+A
+19 1
+#7512
+flag midgaard~
+the flag of Midgaard~
+A colorful flag has been dropped here.~
+~
+8 536870912 16385
+0 0 0 0
+1 75244 5000
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#7513
+flag aldor~
+the flag of Aldor~
+A colorful flag has been dropped here.~
+~
+8 536870912 16385
+0 0 0 0
+1 75244 5000
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#7514
+flag barovia~
+the flag of Barovia~
+A colorful flag has been dropped here.~
+~
+8 536870912 16385
+0 0 0 0
+1 75244 5000
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#7515
+flag zyca~
+the flag of Zyca~
+A colorful flag has been dropped here.~
+~
+8 536870912 16385
+0 0 0 0
+1 75244 5000
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#7516
+flag zyekian~
+the flag of Zyekian~
+A colorful flag has been dropped here.~
+~
+8 536870912 16385
+0 0 0 0
+1 75244 5000
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#7517
+flag trust~
+the trust flag~
+A colorful flag has been dropped here.~
+~
+8 536870912 16385
+0 0 0 0
+1 1 1
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#7518
+shovel old~
+an old shovel~
+An old shovel is lying on the floor.~
+~
+12 134217728 16385
+0 0 0 0
+15 5000 41769
+100
+E
+shovel old~
+The shovel is covered in rust. Maybe it is still useful for digging.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7519
+ring key~
+a key ring~
+A key ring with many keys has been dropped here.~
+~
+18 0 18433
+7519 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7520
+knife butchering~
+a butchering knife~
+A wicked looking knife is lying here.~
+~
+5 0 8193
+0 1 39 11
+12 12400 12500
+30
+E
+knife butchering~
+The knife is covered in grease. It is really sharp though.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -1
+A
+41 20
+#7521
+chest old treasure~
+an old treasure chest~
+An old chest is lying on the bottom of the pit, full of treasures.~
+~
+15 0 1
+500 15 7519 0
+2000 1 1
+50
+E
+chest old treasure~
+The chest is locked with a huge padlock, and the iron bands all around it
+make it look very durable despite its apparent old age. The size and weight
+of it are surely enough to prevent you from taking it with you.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7522
+pants silk white flowing~
+a pair of white, flowing silk pants~
+A pair of white pants has been dropped on the ground.~
+~
+9 149975104 33
+4 0 0 0
+1 65743 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+39 15
+#7523
+parchment scrap sea~
+a sea-soaked scrap of parchment~
+A drenched scrap of parchment lies here, smelling of the sea.~
+~
+32 0 1
+7524 20130 3917 595
+7 93563 3697
+13
+E
+parchment~
+
+ A disused treasure map has new script written wildly over
+the unfamiliar landmarks beneath. The predominant feature
+on the revised map is a large red circle on an island. The
+cartography is relatively amateur work, despite that it's
+clear that the island in question is the Daimyo.
+~
+X
+~
+258 0 0
+M
+~
+~
+~
+~
+T
+9
+#7524
+boots marauder~
+marauder's boots~
+A pair of stylish black leather boots.~
+~
+9 232838148 65
+8 0 0 0
+29 514229 43201
+0
+E
+boots~
+
+ Popular amongst swashbucklers, highwaymen and privateers
+these simple leather boots instantly identify the wearer
+as a fashionable knave.
+~
+X
+~
+4 0 0
+M
+~
+~
+Your desire to cause mischief fades as you remove the boots.~
+The mischievous glint in $n's eye fades as $e removes $s boots.~
+A
+19 2
+T
+22189
+#0
+$~

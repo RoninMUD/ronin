@@ -1,0 +1,2023 @@
+#31200
+High Commander's Tent~
+   Inside the tent is a huge mass of maps, armor, and other articles of war
+command. There is a rather plush looking day bed along one wall that the
+Commander would sleep upon. In the center of the tent is a medium sized table
+that is littered with maps showing enemy positions and fortifications. Messages
+and notes from officers and scouts, are stacked hapazardly on one edge of the
+table. There is a baton with a carved badger at one end laying on the table,
+the symbol of the commanders rank. There are thick plush carpets covering the
+ground, and a few lit braziers around the inside of the tent at a false attempt
+to dispel the cold. From the door the entire layout of the camp can be seen
+sloping down the hill to the south, a massive camp and well fortified it
+appears to be quite ready for any attack.
+~
+312 0 0
+D2
+~
+~
+0 -1 31201
+S
+#31201
+Before the High Commander's Tent~
+   The tent to the north is much larger then any of the others. On top of a
+small hill, it commands an almost eagle eye view of the camp and battlefield
+below. The tent Is embroidered with a growling badger on each side of the door
+facing in. Pennants fly from the two peaks of the tent. One is the growling
+badger, blue upon black. The other, slightly smaller is a Silver Dragon being
+strangled by a monstrous red snake upon a black background. These must be the
+kingdom and commanders sigils. To the west can be heard the clink of dishes
+from a smaller tent, and to the east an even smaller tent with a few beds just
+visible inside the door.
+~
+312 0 0
+D0
+~
+~
+0 -1 31200
+D1
+~
+~
+0 -1 31202
+D2
+~
+~
+0 -1 31204
+D3
+~
+~
+0 -1 31203
+S
+#31202
+Officers Quarters~
+   It is necessary to duck in order to enter this tent. Lining all the walls
+are bunks stacked three high. There are Armor racks in the center of the tent
+for hanging suits of mail upon before retiring to ones bunk. By the colors and
+flags lining some of the armament, it is quite apparent this is the officers
+quarters and each one is some lord here to fight for his King and country. The
+armor is in various states of repair, due to the amount of funds available to
+the lords. There are a few braziers spread about the tent to keep off the most
+biting of the cold, but not enough to give much warmth to the room. The ground
+has been scraped clear of ice and snow and does not appear to be quite as
+frozen as the outside.
+~
+312 0 0
+D3
+~
+~
+0 -1 31201
+S
+#31203
+Officers Mess Tent~
+   A medium sized tent, there is room for about 5 tables with 4 chairs at each.
+This is the officers mess, where the different ranking commanders come to chow
+down at various parts of the day. A table stands along one wall covered in
+steaming platters, and ever once in a while a cooks helper brings in
+replacement trays. The chairs are little more then stools, each without arms to
+allow for hasty exit from the tent in the event of an attack. The Officers
+horses are all picketed close by so it is just a matter of mounting and riding
+to their respective places on the battlefield.
+~
+312 0 0
+D1
+~
+~
+0 -1 31201
+S
+#31204
+Officers Picket Line~
+   The horses here are a bit bulkier. War Stallions all of them, they are the
+officers select war horses. Each one has a fantastic looking bridle and hanging
+in a tent close by are visible the saddles and harness' each one wears. The
+saddles are embroidered with the insignia of the nobles house to whom the horse
+belongs. The horses are all tethered to picket lines strung between stakes.
+Just to the north at the top of the hill can be seen a huge tent, its proud
+pennants fluttering in the breeze. The High Commanders tent stands tall and
+fearless, defying any attack upon this encampment.
+~
+312 0 0
+D0
+~
+~
+0 -1 31201
+D1
+~
+~
+0 -1 31205
+D2
+~
+~
+0 -1 31211
+D3
+~
+~
+0 -1 31208
+S
+#31205
+Scout HeadQuarters~
+   This tent has wide open doors, allowing free, unrestricted access to the
+tent and the report headquarters. A table covered with maps and various reports
+stands just to one side, there are documents pinned to the canvas walls,
+detailing scouting patrols, who is where and what information is needed. There
+are cases from messengers sent by different officers, detailing certain aspects
+of the battlefield they want to be familiar with, or asking for enemy troop
+movements and numbers. From the exits it is possible to view the lower parts of
+the encampment, the huge gates in the pallisade and the infantry trenches. Each
+layer lethal and precise in its own way.
+~
+312 0 0
+D1
+~
+~
+0 -1 31206
+D3
+~
+~
+0 -1 31204
+S
+#31206
+Picket Line~
+   The Cavalry horses are all massive beasts, each capable of carrying well
+over 200lbs of armor as well as its Cavalier wearing a breastplate and helm.
+Each horse is battle trained and as capable of killing as its rider. Some are
+armored and waiting their riders in patience, others are just tethered to the
+picket line and are munching their grass contentedly. Each horse has its armor
+stacked in a neat pile just next to it and covered in waterproof canvas. The
+horses all stamp their feet occasionally to keep themselves warm. Just a bit
+farther on can be seen the edges of the forest and the walls of the pallisade.
+~
+312 0 0
+D1
+~
+~
+0 -1 31207
+D2
+~
+~
+0 -1 31217
+D3
+~
+~
+0 -1 31205
+S
+#31207
+Forest~
+   A few sparse trees are scattered about. Off to the east a bit is a small k
+ennel of hunting dogs, the walls of the pallisade are visible through the
+sparse underbrush just to the east. There are a few birds in the trees, and
+some hardy flowers are just poking up amongst their roots. There is nothing
+here but trees and brush, and a small refuse pile from the camp. Not a very
+exciting place.
+~
+312 0 0
+D3
+~
+~
+0 -1 31206
+S
+#31208
+Scout Picket Line~
+   Just outside the Scout sleeping tent, there are long lines of horses.
+Some saddled, some not. Each one is tethered to a long rope stretching between
+two stakes driven deep into the earth about 100 feet away from each other. The
+horses closest to the tent are all saddled and ready to leap away at a moments
+notice on a scouting mission, or to bring information from one part of the camp
+to another. Each horse is a fearsome looking fighter, capable of dealing
+massive amounts of damage with its hooves and biting teeth.
+~
+312 0 0
+D1
+~
+~
+0 -1 31204
+D2
+~
+~
+0 -1 31215
+D3
+~
+~
+0 -1 31209
+S
+#31209
+Scout Tents~
+   This tent is quite low, but long. All along the longer walls there are
+single man cots spread out to allow enough room for a mass scramble to the
+exits if needed. There are courier bags hanging on stands next to each exit,
+each one ready, in the event of emergency, to be snatched up at a moments
+notice. Light leather jerkins and soft riding boots are piled in the center of
+the room in case a scout does not have proper equipment when he is pulled out
+of bed. Each cot has a long belt knife hanging next to it, the only weapon a
+scout carries. All the scouts horses are picketed just outside the tent, half
+of them already saddled and waiting riders.
+~
+312 0 0
+D1
+~
+~
+0 -1 31208
+D3
+~
+~
+0 -1 31210
+S
+#31210
+Forest~
+   The trees are sparse and the underbrush has been thinned out to prevent
+enemies from sneaking in undetected. There is a wooden pallisade just visible
+to the west, its sharp ends sticking up over 12 feet in the air. The trees are
+quite tall rising over 100 feet into the air and swaying gently in some breeze
+tickling the upper reaches of the canopy.
+~
+312 0 0
+D1
+~
+~
+0 -1 31209
+S
+#31211
+Seige Line~
+   Standing upon this part of the platform are 2 catapults. Smaller then the
+trebuchets standing to the east and west they do not look as fearsome, but the
+damage they deal out is quite as real. This is the center of the seige line
+platform, and to each side can be seen the command platforms just beyond the
+trebuchets. The line stretches to the east and west, bearing its load of
+weapons of mass destruction.
+~
+312 0 0
+D0
+~
+~
+0 -1 31204
+D1
+~
+~
+0 -1 31216
+D2
+~
+~
+0 -1 31224
+D3
+~
+~
+0 -1 31215
+S
+#31212
+Forest~
+   The trees are sparse and the underbrush has been thinned out to prevent
+enemies from sneaking in undetected. There is a wooden pallisade just visible
+to the west, its sharp ends sticking up over 12 feet in the air. The trees are
+quite tall rising over 100 feet into the air and swaying gently in some breeze
+tickling the upper reaches of the canopy.
+~
+312 0 0
+D1
+~
+~
+0 -1 31213
+S
+#31213
+End of Seige Line~
+   This is the end of a long line of seige engines. Each one stark and fearsome
+in its own way. The platforms are wooden and raised from the normal camp area,
+providing a better view of the killing ground in front of the encampment. Along
+the seige line can be seen a few viewing platforms, and different kinds of
+seige machinery, ballistas, catapults, trebuchets, scorpions etc...
+~
+312 0 0
+D1
+~
+~
+0 -1 31214
+D2
+~
+~
+0 -1 31221
+D3
+~
+~
+0 -1 31212
+S
+#31214
+Seige Line Viewing Platform~
+   This platform is used by the seige officers. From here they can overlook the
+catapults range, aim, and where it should be pointed next. A set of flags is
+stuck into a pole here to be used by the signalist to direct the men aiming the
+machines. From this platform it is possible to see all the way down the line to
+the east and the west.
+~
+312 0 0
+D1
+~
+~
+0 -1 31215
+D2
+~
+~
+0 -1 31222
+D3
+~
+~
+0 -1 31213
+S
+#31215
+Seige Line~
+   This platform has a massive trebuchet standing upon it. Its massive arm is
+at least 50 feet in length, and the counterweight upon the end is nearly the
+size of a small hut. The range upon this machine must be incredible. It appears
+to be rather cumbersome and slow, but the damage it must inflict is astounding.
+There are stairs leading off the back of the platform and the platform
+continues to the east and west.
+~
+312 0 0
+D0
+~
+~
+0 -1 31208
+D1
+~
+~
+0 -1 31211
+D2
+~
+~
+0 -1 31223
+D3
+~
+~
+0 -1 31214
+S
+#31216
+Seige Line~
+   Upon this portion of the platform, a massive trebuchet stands pointed at the
+forest beyond the small village. Its massive arm is bent back and poised to
+throw an enormous load of rock and shale at any enemy crossing the plains. Made
+for tearing down walls of besieged cities, one can only imagine what this would
+do to human flesh.
+~
+312 0 0
+D1
+~
+~
+0 -1 31217
+D2
+~
+~
+0 -1 31225
+D3
+~
+~
+0 -1 31211
+S
+#31217
+Seige Line Command Platform~
+   This platform commands a view of the killing ground as well as the seige
+line to the east and west. Here the Seige Line Commander stands in order to
+gain a sense for where each machine should drop its destructive load. A pair of
+signal flags stand ready for the signal man to instruct the machines and the
+officers on the other command platform where to attack and where to avoid.
+Slightly higher then the rest of the seige line, this platform allows one to
+view most of the camp below, the archer lines, the infantry trench and the
+great pallisade at the foot of the encampment.
+~
+312 0 0
+D0
+~
+~
+0 -1 31206
+D1
+~
+~
+0 -1 31218
+D2
+~
+~
+0 -1 31226
+D3
+~
+~
+0 -1 31216
+S
+#31218
+End of Seige Line~
+   This is the end of the line of massive siege engines. Looking to the west it
+is possible to see the massive trebuchets, and the numerous catapults all
+waiting to throw their deadly arms forward and unleash hell upon anyone who
+dares attack this camp.
+~
+312 0 0
+D1
+~
+~
+0 -1 31219
+D2
+~
+~
+0 -1 31227
+D3
+~
+~
+0 -1 31217
+S
+#31219
+Perimeter Fence~
+   This is the edge of the camp. To the west, siege engines rear their massive
+structures high into the sky. Trees and shrubs grow close to the fence in this
+area, the fence itself looming many feet into the air.
+~
+312 0 0
+D2
+~
+~
+0 -1 31228
+D3
+~
+~
+0 -1 31218
+S
+#31220
+Latrines~
+   This is one of the most foul smelling places ever created by mankind. There
+are four seats all cut out of one bench along the northern wall. The stink is
+much more pronounced the closer to these seats one gets. There is some
+unidentified substance clogging up the one on the left, god only knows. The
+only way to retreat from the stench is back through the door to the east.
+~
+312 0 0
+D1
+~
+~
+0 -1 31221
+S
+#31221
+Archer Line~
+   Here and there are groups of archers. Each one has his bow and quiver nearby
+in case of an attack. They are litterally steps away from their posts. To the
+south there are archer posts, each with an extra quiver and bow string wrapped
+in hide to keep it safe from the rain. If there is an attack, each archer has
+his place and never is more then a few feet away. In the distance to the east
+is visible more groups of archers and interspersed between them are small
+cooking fires, and cooks tending to the preperation of the next meal.
+
+~
+312 0 0
+D0
+~
+~
+0 -1 31213
+D1
+~
+~
+0 -1 31222
+D2
+~
+~
+0 -1 31230
+D3
+~
+~
+0 -1 31220
+S
+#31222
+Cooking Fire~
+   Here there are small cooking fires set up three paces apart. A cook huddles
+anxiously over each one, tasting and stirring, preparing each meal for a group
+of archers. Hungry archers, are archers that are not able to shoot as well in
+battle should the enemy attack. In the distance a commander can be seen
+drilling a group of archers in firing practice. It appears that they are using
+fire arrows and trying to hit targets in mid-air. A new strategy with the
+ballista perhaps...
+~
+312 0 0
+D0
+~
+~
+0 -1 31214
+D1
+~
+~
+0 -1 31223
+D2
+~
+~
+0 -1 31231
+D3
+~
+~
+0 -1 31221
+S
+#31223
+Archer Line~
+   Groups of archers are lying here, dicing and making crude jokes. For all the
+apparent lack of watchfulness, it is quite clear that these men could be up in
+an instant and ready to fire within seconds of hearing the watchmans bugle.
+Quivers and bows are stacked in precise order. Each one having its own place in
+the chaos of camp life. These weapons are treated with almost as much care as
+the men who use them. Each one a killing machine in its own right. For with
+these, the archers can cut down massive amounts of men before they would be
+able to reach the perimeter fence.
+~
+312 0 0
+D0
+~
+~
+0 -1 31215
+D1
+~
+~
+0 -1 31224
+D2
+~
+~
+0 -1 31232
+D3
+~
+~
+0 -1 31222
+S
+#31224
+Fletchers Tent~
+   This tent is cluttered with baskets of arrows in various stages of
+construction. There is a large pile of branches in the corner waiting to be
+trimmed down to arrow length. A basket of feathers sits on a table fresh from
+the geese being cooked for the next meal. There is a large table where the
+fletcher would sit with his apprentices and make arrows in a sort of assembly
+line fasion. Sometimes archers who like their arrows to be made with a certain
+twist to the feathers, or extra length or some other peculiarity, will come in
+and sit and make their own arrows as well. There is a special little side table
+for those who wish to do just that.
+~
+312 0 0
+D0
+~
+~
+0 -1 31211
+D1
+~
+~
+0 -1 31225
+D2
+~
+~
+0 -1 31233
+D3
+~
+~
+0 -1 31223
+S
+#31225
+Archer Line~
+   Lounging about and staring idly at passing soldiers and commanders, This is
+another archer gathering area. Some nap under their cloaks, others collect
+branches and bits of firewood from around the edges of their space. Each one
+never strays far from his post however, a ready quiver by his side attack is
+inevitable, victory seems predetermined, but that does not lessen the vigilance
+of these men in anyway.
+~
+312 0 0
+D0
+~
+~
+0 -1 31216
+D1
+~
+~
+0 -1 31226
+D2
+~
+~
+0 -1 31234
+D3
+~
+~
+0 -1 31224
+S
+#31226
+Cooking Fire~
+   Cooking pots hang over open fires here. Each one is neatly spaced from the
+others, leaving enough room between each one for archers to slip through to
+their respective places in the lines. Cooks chatter back and forth as archers
+lounge keeping watch over everything that happens. Keeping an eye on the tower
+that will signal an attack if it comes. All is peaceful for now.
+~
+312 0 0
+D0
+~
+~
+0 -1 31217
+D1
+~
+~
+0 -1 31227
+D3
+~
+~
+0 -1 31225
+S
+#31227
+Archer Line~
+   Targets line the hillside, a few archers are taking practice shots at them,
+honing skills that could be desperately needed in the battle to come, and it
+does seem like its coming. There are bows and quivers stacked neatly here,
+close by the archer lines. Each ready to be used in the heat of battle.
+~
+312 0 0
+D0
+~
+~
+0 -1 31218
+D1
+~
+~
+0 -1 31228
+D2
+~
+~
+0 -1 31235
+D3
+~
+~
+0 -1 31226
+S
+#31228
+Perimeter Fence~
+fence, not much else
+~
+312 0 0
+D0
+~
+~
+0 -1 31219
+D2
+~
+~
+0 -1 31236
+D3
+~
+~
+0 -1 31227
+S
+#31230
+Infantry Trench Position~
+Soldiers, lying about, weapons, halberds spears etc.
+~
+312 0 0
+D0
+~
+~
+0 -1 31221
+D1
+~
+~
+0 -1 31231
+D2
+~
+~
+0 -1 31237
+S
+#31231
+Infantry Trench~
+Soliders, low officers, etc
+~
+312 0 0
+D0
+~
+~
+0 -1 31222
+D1
+~
+~
+0 -1 31232
+D2
+~
+~
+0 -1 31239
+D3
+~
+~
+0 -1 31230
+S
+#31232
+Infantry Trench~
+Soldiers, workers working on trench and fortifying etc
+~
+312 0 0
+D0
+~
+~
+0 -1 31223
+D1
+~
+~
+0 -1 31233
+D2
+~
+~
+1 -1 31240
+D3
+~
+~
+0 -1 31231
+S
+#31233
+Infantry Command post~
+Commanders, messengers, maps, tables tent etc
+~
+312 0 0
+D0
+~
+~
+0 -1 31224
+D1
+~
+~
+0 -1 31234
+D2
+~
+~
+0 -1 31241
+D3
+~
+~
+0 -1 31232
+S
+#31234
+Infantry map shelter~
+Maps, scouts, messages, etc
+~
+312 0 0
+D0
+~
+~
+0 -1 31225
+D1
+~
+~
+0 -1 31235
+D2
+~
+~
+0 -1 31242
+D3
+~
+~
+0 -1 31233
+S
+#31235
+Infantry Trench~
+Soldiers, weapons dice, cards 
+~
+312 0 0
+D0
+~
+~
+0 -1 31227
+D1
+~
+~
+0 -1 31236
+D2
+~
+~
+0 -1 31243
+D3
+~
+~
+0 -1 31234
+S
+#31236
+Infantry Trench~
+Soldiers, patrols etc
+~
+312 0 0
+D0
+~
+~
+0 -1 31228
+D2
+~
+~
+0 -1 31244
+D3
+~
+~
+0 -1 31235
+S
+#31237
+Perimeter Watch Tower~
+Low officer, soldiers, fireplace, food tables, maps
+~
+312 0 0
+D0
+~
+~
+0 -1 31230
+D1
+~
+~
+0 -1 31238
+D4
+~
+~
+0 -1 31246
+S
+#31238
+Perimeter Fence~
+Fence way, few soldiers on patrol, archers overhead.
+~
+312 0 0
+D1
+~
+~
+0 -1 31239
+D3
+~
+~
+0 -1 31237
+S
+#31239
+Behind the huge Gate~
+Huge Gate, lots of infantry, overhead watch tower
+~
+312 0 0
+D0
+~
+~
+0 -1 31231
+D1
+~
+~
+0 -1 31240
+D2
+~
+~
+0 -1 31255
+D3
+~
+~
+0 -1 31238
+D4
+~
+~
+0 -1 31247
+S
+#31240
+Behind the huge Gate~
+Huge gate, infantry,  Oficer
+~
+312 0 0
+D0
+~
+~
+0 -1 31232
+D1
+~
+~
+0 -1 31241
+D2
+~
+~
+1 -1 31254
+D3
+~
+~
+0 -1 31239
+D4
+~
+~
+0 -1 31248
+S
+#31241
+Perimeter Fence~
+A temporary description
+~
+312 0 0
+D0
+~
+~
+0 -1 31233
+D1
+~
+~
+0 -1 31242
+D3
+~
+~
+0 -1 31240
+S
+#31242
+Perimeter Fence~
+A temporary description
+~
+312 0 0
+D0
+~
+~
+0 -1 31234
+D1
+~
+~
+0 -1 31243
+D3
+~
+~
+0 -1 31241
+S
+#31243
+Perimeter Fence~
+A temporary description
+~
+312 0 0
+D0
+~
+~
+0 -1 31235
+D1
+~
+~
+0 -1 31244
+D3
+~
+~
+0 -1 31242
+S
+#31244
+Perimeter Watch Tower~
+A temporary description
+~
+312 0 0
+D0
+~
+~
+0 -1 31236
+D3
+~
+~
+0 -1 31243
+D4
+~
+~
+0 -1 31245
+S
+#31245
+Perimeter Watch Platform~
+A temporary description
+~
+312 0 0
+D5
+~
+~
+0 -1 31244
+S
+#31246
+Perimeter Watch Platform~
+Watch officers
+~
+312 0 0
+D5
+~
+~
+0 -1 31237
+S
+#31247
+On top of the Gate~
+Viewing platform, few archers, officer
+~
+312 0 0
+D1
+~
+~
+0 -1 31248
+D5
+~
+~
+0 -1 31239
+S
+#31248
+On top of the Gate~
+Officers, archers viewing platform
+~
+312 0 0
+D3
+~
+~
+0 -1 31247
+D5
+~
+~
+0 -1 31240
+S
+#31250
+A deep trench~
+Muddy trench, a few soldiers on patrol. 
+~
+312 0 0
+D2
+~
+~
+0 -1 31258
+D3
+~
+~
+0 -1 31251
+S
+#31251
+A deep trench~
+Trench with few soldiers on patrol etc...
+~
+312 0 0
+D1
+~
+~
+0 -1 31250
+D2
+~
+~
+0 -1 31259
+D3
+~
+~
+0 -1 31252
+S
+#31252
+A deep trench~
+Muddy trench, few soldiers etc..
+~
+312 0 0
+D1
+~
+~
+0 -1 31251
+D2
+~
+~
+0 -1 31260
+D3
+~
+~
+0 -1 31253
+S
+#31253
+A deep trench~
+Muddy trench, not much, a few soldiers patrolling.
+~
+312 0 0
+D1
+~
+~
+0 -1 31252
+D2
+~
+~
+0 -1 31261
+D3
+~
+~
+0 -1 31254
+S
+#31254
+A deep trench~
+Muddy trench few soldiers 
+~
+312 0 0
+D0
+~
+gate huge~
+1 -1 31240
+D1
+~
+~
+0 -1 31253
+D2
+~
+~
+0 -1 31262
+D3
+~
+~
+0 -1 31255
+S
+#31255
+A deep trench~
+Muddy trench, few soldiers etc..
+~
+312 0 0
+D0
+~
+gate huge~
+1 -1 31239
+D1
+~
+~
+0 -1 31254
+D2
+~
+~
+0 -1 31263
+D3
+~
+~
+0 -1 31256
+S
+#31256
+A deep trench~
+Few soldiers, mud etc..
+~
+312 0 0
+D1
+~
+~
+0 -1 31255
+D2
+~
+~
+0 -1 31264
+D3
+~
+~
+0 -1 31257
+S
+#31257
+A deep trench~
+Few soldiers mud etc...
+~
+312 0 0
+D1
+~
+~
+0 -1 31256
+D2
+~
+~
+0 -1 31265
+S
+#31258
+Behind a wall of sharpened stakes~
+Punji sticks, soldiers, grass etc...
+~
+312 0 0
+D0
+~
+~
+0 -1 31250
+D2
+~
+~
+0 -1 31267
+D3
+~
+~
+0 -1 31259
+S
+#31259
+Behind a wall of sharpened stakes~
+Soldiers, grass, above trench, punji sticks
+~
+312 0 0
+D0
+~
+~
+0 -1 31251
+D1
+~
+~
+0 -1 31258
+D3
+~
+~
+0 -1 31260
+S
+#31260
+Behind a wall of sharpened stakes~
+Soldiers, Punji sticks, grass etc....
+~
+312 0 0
+D0
+~
+~
+0 -1 31252
+D1
+~
+~
+0 -1 31259
+D2
+~
+~
+0 -1 31268
+D3
+~
+~
+0 -1 31261
+S
+#31261
+Behind a wall of sharpened stakes~
+soldiers stakes grass etc.
+~
+312 0 0
+D0
+~
+~
+0 -1 31253
+D1
+~
+~
+0 -1 31260
+D2
+~
+~
+0 -1 31269
+D3
+~
+~
+0 -1 31262
+S
+#31262
+Behind a wall of sharpened stakes~
+Sticks, soldiers grass etc,
+~
+312 0 0
+D0
+~
+~
+0 -1 31254
+D1
+~
+~
+0 -1 31261
+D2
+~
+~
+0 -1 31270
+D3
+~
+~
+0 -1 31263
+S
+#31263
+Behind a wall of sharpened stakes~
+Punji sticks, few soldiers grass above trench..
+~
+312 0 0
+D0
+~
+~
+0 -1 31255
+D1
+~
+~
+0 -1 31262
+D2
+~
+~
+0 -1 31271
+D3
+~
+~
+0 -1 31264
+S
+#31264
+Behind a wall of sharpened stakes~
+Punji sticks, soldiers patrolling
+~
+312 0 0
+D0
+~
+~
+0 -1 31256
+D1
+~
+~
+0 -1 31263
+D2
+~
+~
+0 -1 31272
+D3
+~
+~
+0 -1 31265
+S
+#31265
+Behind a wall of sharpened stakes~
+Punji Sticks, above muddy trench 
+~
+312 0 0
+D0
+~
+~
+0 -1 31257
+D1
+~
+~
+0 -1 31264
+D2
+~
+~
+0 -1 31273
+S
+#31266
+Forest~
+Forest, lots of trees plains to the west
+~
+312 0 3
+D2
+~
+~
+0 -1 31275
+D3
+~
+~
+0 -1 31267
+S
+#31267
+The edge of the plains~
+Wide open fields, punji stick line to north
+~
+312 0 2
+D0
+~
+~
+0 -1 31258
+D1
+~
+~
+0 -1 31266
+D2
+~
+~
+0 -1 31276
+D3
+~
+~
+0 -1 31268
+S
+#31268
+The high plains~
+Rolling fields, maybe a mounted patroll. trench visible to the north
+~
+312 0 0
+D0
+~
+~
+0 -1 31260
+D1
+~
+~
+0 -1 31267
+D2
+~
+~
+0 -1 31277
+D3
+~
+~
+0 -1 31269
+S
+#31269
+The high plains~
+Rolling plains, etc..
+~
+312 0 0
+D0
+~
+~
+0 -1 31261
+D1
+~
+~
+0 -1 31268
+D2
+~
+~
+0 -1 31278
+D3
+~
+~
+0 -1 31270
+S
+#31270
+The high plains~
+High plains, maybe some cattle grazing, sheep etc.
+~
+312 0 0
+D0
+~
+~
+0 -1 31262
+D1
+~
+~
+0 -1 31269
+D2
+~
+~
+0 -1 31279
+D3
+~
+~
+0 -1 31271
+S
+#31271
+The high plains~
+Rolling plains, mounted patrol, farmers etc...
+~
+312 0 0
+D0
+~
+~
+0 -1 31263
+D1
+~
+~
+0 -1 31270
+D2
+~
+~
+0 -1 31280
+D3
+~
+~
+0 -1 31272
+S
+#31272
+The high plains~
+Fields, a few trees, some farmers etc...
+~
+312 0 0
+D0
+~
+~
+0 -1 31264
+D1
+~
+~
+0 -1 31271
+D2
+~
+~
+0 -1 31281
+D3
+~
+~
+0 -1 31273
+S
+#31273
+The western edge of the plains~
+few trees, some deer, elk etc..
+~
+312 0 0
+D0
+~
+~
+0 -1 31265
+D1
+~
+~
+0 -1 31272
+D2
+~
+~
+0 -1 31282
+D3
+~
+~
+0 -1 31274
+S
+#31274
+Forest~
+Trees, the plains visible to the east, deer etc..
+~
+312 0 0
+D1
+~
+~
+0 -1 31273
+D2
+~
+~
+0 -1 31283
+S
+#31275
+Forest~
+Trees lots of trees, a few mobs fighting, patrols etc...
+~
+312 0 3
+D0
+~
+~
+0 -1 31266
+D2
+~
+~
+0 -1 31285
+D3
+~
+~
+0 -1 31276
+S
+#31276
+Forest~
+Trees patrols, mobs, more trees
+~
+312 0 0
+D0
+~
+~
+0 -1 31267
+D1
+~
+~
+0 -1 31275
+D2
+~
+~
+0 -1 31286
+D3
+~
+~
+0 -1 31277
+S
+#31277
+Forest~
+Trees, the plains to the west, mobs deer etc.
+~
+312 0 0
+D0
+~
+~
+0 -1 31268
+D1
+~
+~
+0 -1 31276
+D2
+~
+~
+0 -1 31287
+D3
+~
+~
+0 -1 31278
+S
+#31278
+The high plains~
+Plains, a few trees, forest to east, cattle grazing, village visible west
+~
+312 0 0
+D0
+~
+~
+0 -1 31269
+D1
+~
+~
+0 -1 31277
+D2
+~
+~
+0 -1 31288
+D3
+~
+~
+0 -1 31279
+S
+#31279
+The high plains~
+Outskirts of village, a few farmers, cattle etc..
+~
+312 0 0
+D0
+~
+~
+0 -1 31270
+D1
+~
+~
+0 -1 31278
+D2
+~
+~
+0 -1 31289
+D3
+~
+~
+0 -1 31280
+S
+#31280
+The edges of a small village~
+Inside the village, a few houses, people etc..
+~
+312 0 0
+D0
+~
+~
+0 -1 31271
+D1
+~
+~
+0 -1 31279
+D2
+~
+~
+0 -1 31290
+D3
+~
+~
+0 -1 31281
+S
+#31281
+The edges of a small village~
+Northern edge of village, few farmers, villagers etc.
+~
+312 0 0
+D0
+~
+~
+0 -1 31272
+D1
+~
+~
+0 -1 31280
+D2
+~
+~
+0 -1 31291
+D3
+~
+~
+0 -1 31282
+S
+#31282
+The edges of a small village~
+Few villagers, farmers, rundown houses etc
+~
+312 0 0
+D0
+~
+~
+0 -1 31273
+D1
+~
+~
+0 -1 31281
+D2
+~
+~
+0 -1 31292
+D3
+~
+~
+0 -1 31283
+S
+#31283
+Forest~
+Trees, edge of village. a few woodsmen or something
+~
+312 0 0
+D0
+~
+~
+0 -1 31274
+D1
+~
+~
+0 -1 31282
+D2
+~
+~
+0 -1 31293
+D3
+~
+~
+0 -1 31284
+S
+#31284
+Forest~
+Trees, a few deer, maybe a patrol etc...
+~
+312 0 0
+D1
+~
+~
+0 -1 31283
+S
+#31285
+Forest~
+Forest, mobs, patrols...
+~
+312 0 0
+D0
+~
+~
+0 -1 31275
+D2
+~
+~
+0 -1 31294
+D3
+~
+~
+0 -1 31286
+S
+#31286
+Forest~
+Plains to the west, woodsman, deer etc.. onod trees too.
+~
+312 0 0
+D0
+~
+~
+0 -1 31276
+D1
+~
+~
+0 -1 31285
+D2
+~
+~
+0 -1 31295
+D3
+~
+~
+0 -1 31287
+S
+#31287
+The high plains~
+Fields, a few farmers, scattering of trees, maybe a cow or 3
+~
+312 0 0
+D0
+~
+~
+0 -1 31277
+D1
+~
+~
+0 -1 31286
+D2
+~
+~
+0 -1 31296
+D3
+~
+~
+0 -1 31288
+S
+#31288
+Inside a small village~
+A few houses, villagers wandering around dogs etc.
+~
+312 0 0
+D0
+~
+~
+0 -1 31278
+D1
+~
+~
+0 -1 31287
+D2
+~
+~
+0 -1 31297
+D3
+~
+~
+0 -1 31289
+S
+#31289
+Inside a small village~
+A few villagers, some nicer houses etc.
+~
+312 0 0
+D0
+~
+~
+0 -1 31279
+D1
+~
+~
+0 -1 31288
+D2
+~
+~
+0 -1 31298
+D3
+~
+~
+0 -1 31290
+S
+#31290
+Inside a small village~
+Swanky houses, villagers, children dogs etc...
+~
+312 0 0
+D0
+~
+~
+0 -1 31280
+D1
+~
+~
+0 -1 31289
+D2
+~
+~
+0 -1 31299
+D3
+~
+~
+0 -1 31291
+S
+#31291
+Inside a small village~
+Houses, children, nice streets, shops etc...
+~
+312 0 0
+D0
+~
+~
+0 -1 31281
+D1
+~
+~
+0 -1 31290
+D2
+~
+~
+0 -1 31300
+D3
+~
+~
+0 -1 31292
+S
+#31292
+Inside a small village~
+Houses, villagers people wandering around etc..
+~
+312 0 0
+D0
+~
+~
+0 -1 31282
+D1
+~
+~
+0 -1 31291
+D2
+~
+~
+0 -1 31301
+D3
+~
+~
+0 -1 31293
+S
+#31293
+Inside a small village~
+Houses, run down villagers, mean dogs etc..
+~
+312 0 0
+D0
+~
+~
+0 -1 31283
+D1
+~
+~
+0 -1 31292
+D2
+~
+~
+0 -1 31302
+S
+#31294
+Forest~
+Trees, mobs fighting, patrols etc
+~
+312 0 0
+D0
+~
+~
+0 -1 31285
+D2
+~
+~
+0 -1 31304
+D3
+~
+~
+0 -1 31295
+S
+#31295
+Forest~
+Trees, deer, villagers, stuff
+~
+312 0 0
+D0
+~
+~
+0 -1 31286
+D1
+~
+~
+0 -1 31294
+D2
+~
+~
+0 -1 31305
+D3
+~
+~
+0 -1 31296
+S
+#31296
+The high plains~
+Farmers, cows, sheep, wheat fields
+~
+312 0 0
+D0
+~
+~
+0 -1 31287
+D1
+~
+~
+0 -1 31295
+D2
+~
+~
+0 -1 31306
+D3
+~
+~
+0 -1 31297
+S
+#31297
+Inside a small village~
+Shopkeepers, few villagers, houses etc..
+~
+312 0 0
+D0
+~
+~
+0 -1 31288
+D1
+~
+~
+0 -1 31296
+D2
+~
+~
+0 -1 31307
+D3
+~
+~
+0 -1 31298
+S
+#31298
+Inside a small village~
+Decent houses, a few shops, a well or something
+~
+312 0 0
+D0
+~
+~
+0 -1 31289
+D1
+~
+~
+0 -1 31297
+D2
+~
+~
+0 -1 31308
+D3
+~
+~
+0 -1 31299
+S
+#31299
+Inside a small village~
+villagers, soldiers, a few farmers etc..
+~
+312 0 0
+D0
+~
+~
+0 -1 31290
+D1
+~
+~
+0 -1 31298
+D2
+~
+~
+0 -1 31309
+D3
+~
+~
+0 -1 31300
+S
+#0
+$~

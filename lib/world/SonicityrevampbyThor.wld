@@ -1,0 +1,660 @@
+#8000
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+80 576 0
+S
+#8001
+Along the trail to Sonicity~
+     A dusty trail winds westward toward Sonicity.  More travelers
+can be seen on the road as you approach the city.  The trees are
+beginning to clear.  A huge tree is here climbing upward towards the
+sky. It looks as if the tree could be climbed, and the trail goes
+back to the east as well as going west.
+~
+80 0 3
+D1
+The trails leads back into the dark, dense part of the forest.
+~
+~
+0 -1 6130
+D3
+The dusty trails leads toward Sonicity.
+~
+~
+0 -1 8002
+D4
+A great climbing tree leads the way up.
+~
+~
+0 -1 9000
+E
+tree~
+A large oak tree stands before you.~
+E
+tree~
+A large oak tree stands before you.
+~
+S
+#8002
+On the road to Sonicity~
+     The rolling hills extend to the north and south, covered with the
+fields of farmers who earn their livelyhood off the land.  The road
+is well worn, and ruts where wagon wheels have traveled are beginning
+to develop.  As you look back to the east you see that you are now
+clear of the forest, and as you look west you can clearly make out the
+entrance to Sonicity.
+~
+80 0 2
+D1
+The road changes into a dusty trail as it winds east.
+~
+~
+0 -1 8001
+D3
+The road continues to the entrance of the city.
+~
+~
+0 -1 8003
+S
+#8003
+The Entrance to Sonicity~
+     You stand before the entrance of Sonicity.  A high wall surrounds the
+outside boundary of the city.  A large wooden gate is swung wide open.
+You can here noise from the inside of the city, as it is always a bustle
+with activity.
+~
+80 0 1
+D1
+The road winds back to the east, towards the forest.
+~
+~
+0 -1 8002
+D3
+The road leads directly to the city center.
+~
+~
+0 -1 8004
+E
+gate~
+It is a solid oak gate reinforced with iron bars.
+~
+S
+#8004
+The Entrance to the City Center~
+     You are now inside Sonicity.  The area you are in now seems
+cheery, and everything is bright and lively.  Back to the east lies
+the gate through which you entered, but in every other direction
+the city center sprawls before you.
+~
+80 0 1
+D0
+The city center continues to the north.
+~
+~
+0 -1 8005
+D1
+Through the gate lies the road going back to the east.
+~
+~
+0 -1 8003
+D2
+The city center continues to the south.
+~
+~
+0 -1 8006
+D3
+To the west is the middle of the city center.
+~
+~
+0 -1 8008
+E
+gate~
+It is a solid oak gate reinforced with iron bars.
+~
+E
+gate~
+It is a solid oak gate reinforced with iron bars.~
+S
+#8005
+City Center~
+     You are in the northeastern corner of the city center.  To your
+north is the Magic Shop.  To the south is the eastern entrance to town,
+and to the west is the entrance to the Weapon Shop.  As you look up see
+birds flying overhead.  The breeze coming from the Sea of Love is quite
+refreshing.
+~
+80 0 1
+D0
+The Sonicity Magic Shop lies to your north.
+~
+~
+0 -1 8013
+D2
+The eastern entrance to Sonicity is to the south.
+~
+~
+0 -1 8004
+D3
+The city center continues to the west.
+~
+~
+0 -1 8009
+S
+#8006
+City Center~
+    The southeastern corner of the city center is extremely busy.
+You can hear the forger to south working on armor in the Armour Shop.
+The wind is gusting from the south, coming across the Sea of Love.
+The atmosphere is very pleasant at the moment.
+~
+80 0 1
+D0
+The eastern entrance to Sonicity is to the north.
+~
+~
+0 -1 8004
+D2
+The Sonicity Armour Shop stands before you.
+~
+~
+0 -1 8014
+D3
+The city center continues to the west.
+~
+~
+0 -1 8007
+S
+#8007
+City Center~
+     You are standing on the southern end of the city center.  To
+the south is Sonicity General Store.  To the north is the middle of
+the city center.  The city center also continues to the east and west.
+~
+80 0 1
+D0
+To the north is the middle of the city center.
+~
+~
+0 -1 8008
+D1
+The city center continues to the east.
+~
+~
+0 -1 8006
+D2
+Sonicity's General Store is to your south.
+~
+~
+0 -1 8016
+D3
+The city center continues to the west.
+~
+~
+0 -1 8010
+S
+#8008
+Middle of the City Center~
+     You are in the middle of the Sonicity city center.  There
+are very many people from all walks of life passing through here.
+The city center spreads in all directions from here.  To the
+southwest you can see the the Sheriff's tower, the place where
+the Sheriff places those who have violated the laws or not paid
+their taxes.
+~
+80 0 1
+D0
+The city center continues to the north.
+~
+~
+0 -1 8009
+D1
+The city center continues to the east.
+~
+~
+0 -1 8004
+D2
+The city center continues to the south.
+~
+~
+0 -1 8007
+D3
+The city center continues to the west.
+~
+~
+0 -1 8011
+S
+#8009
+City Center~
+     The city center is abustle with activity.  Street vendors and
+clowns are here trying to make their days wages.  To the north is
+the Sonicity Weapon Shop.
+~
+80 0 1
+D0
+The Sonicity Weapon Shop stands just to you north.
+~
+~
+0 -1 8015
+D1
+To the east is the middle of the city center.
+~
+~
+0 -1 8005
+D2
+To the south is the middle of the city center.
+~
+~
+0 -1 8008
+D3
+The entrance to Sonicity's Sonic Restaurant is a little to the west of here.
+~
+~
+0 -1 8012
+S
+#8010
+City Center~
+     You are in the southwest corner of the city center.  To the
+northwest the city center sprawls.  To the south its the base of
+the Sheriff's Tower and also the wharf onto the Sea of Love.
+~
+80 0 1
+D0
+To the north is the western entrance to Sonicity.
+~
+~
+0 -1 8011
+D1
+The city center continues to the east.
+~
+~
+0 -1 8007
+D2
+The Sheriff's Tower and the Wharf are to your south.
+~
+~
+0 -1 8018
+S
+#8011
+The Entrance to the City Center~
+     This is one of the three entrances into the city, including
+the wharf.  To the west is the well just outside of the city.  To
+the north a little ways is Sonicity's famed Sonic Restaurant.  All
+around people are bustling around while going about their business.
+~
+80 0 1
+D0
+The city center continues to the north.
+~
+~
+0 -1 8012
+D1
+To the east is the middle of the city center.
+~
+~
+0 -1 8008
+D2
+The city center continues to the south.
+~
+~
+0 -1 8010
+D3
+The road leads to the well.
+~
+~
+0 -1 8024
+S
+#8012
+City Center~
+     You stand in the northwest corner of the city center.
+To your north is the famous Sonicity Sonic Restaurant.  There
+are many people lined up to enter the restaurant.  Other than
+that the bustle is lighter than in the middle of the city center.
+~
+80 0 1
+D0
+The doors to the Sonic Restaurant stand before you; they are open.
+~
+~
+0 -1 8017
+D1
+The city center continues to the east.
+~
+~
+0 -1 8009
+D2
+To the south is the western entrance to Sonicity.
+~
+~
+0 -1 8011
+S
+#8013
+Sonicity Magic Shop~
+     This room is stocked with shelves full of potions and scrolls.
+Everything is very neat and tidy.  The shopkeeper spends long hours
+making sure everything is meticulous and clean.  He prides himself
+in his shop, and hopes you will do lots of business with him.  After
+all, he is out to make as much money as he can.  There is no back
+room that you can see, which leaves the only exit being the one you
+came in through.
+~
+80 72 1
+D2
+Through the door to the south is the City Center.
+~
+~
+0 -1 8005
+S
+#8014
+The Armoury~
+     The Armoury has many different kinds of armor on the wall.
+From chainmail to plate this place has a little of everything.
+Some of it is very expensive.  There is a note posted on one of
+the walls which appears to have buyers information on it.  In the
+back you hear the pounding of metal against metal.  The door to
+the north takes you back to where you came from.
+~
+80 72 1
+D0
+Through the door to the north is the City Center.
+~
+~
+0 -1 8006
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#8015
+The Weapon Shop~
+     As you step inside the room you feel a rush of heat pulse against your
+face.  You hear the roar of the forge in the back, and its heat makes you
+begin to sweat.  A large strong man stands before you wearing leather gloves
+and a heavy apron to protect him from the sparks of the metal he works.
+Many fine looking weapons stand on the wall, some of them look extremely
+vicious.  On the counter is a small note with dirty smudges that has several
+scribles on it.  You are glad there is a cool breeze blowing from the Sea of
+Love to the south.
+~
+80 72 1
+D2
+A cool breeze blows from the south, coming across the city center and
+into your face, cooling you.
+~
+~
+0 -1 8009
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#8016
+The General Store~
+     You step into a small building well stocked with provisions.  A small
+but burly man stands behind the counter, watching over the shop.  It is a
+little dusty, and it is obvious not much business is transacted here.  Some
+things that sit on this shelf were probably old when you grandfather was
+you age.  Nonetheless, it seems somehow very comfortable here.  As you
+glance over toward the shopkeeper it seems as if he has dozed off.  You
+notice a small note in front of where his feet rest, perched on top of the
+counter.
+~
+80 72 1
+D0
+To you north is the busy and bustling City Center.
+~
+~
+0 -1 8007
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
+S
+#8017
+Sonic's restaurant~
+     As you step through the doors you can tell why this restaurant is so
+popular.  Good smells permeate the room, and you become very hungry.
+The waiter runs around very quickly, trying to serve all the patrons here.
+You realize that there is no hope of getting a table, so maybe you will
+just get something to go.  There is a sign standing near the exit that
+might have some useful ordering information.
+~
+80 8 1
+D2
+The doors swing open onto the City Center, where people are lining up to
+get into the restaurant.
+~
+~
+0 -1 8012
+E
+sign~
+The sign reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+~
+S
+#8018
+The Sheriff's Tower~
+     The Sheriff's Tower looms above you.  This is where trouble makers
+are placed; at the top of this very high tower.  You can see the barred
+windows from here, but just barely.  There is set of stairs leading up
+to the second floor of thise ominious tower.  There is also another
+set of stairs leading down to the wharf and the Sea of Love.
+~
+80 0 1
+D0
+To the north the City Center sprawls before you, and you see the shadow
+cast by the tower spread across the plaza.
+~
+~
+0 -1 8010
+D4
+The stairs lead up to the second floor of the tower.
+~
+~
+0 -1 8019
+D5
+The stairs lead down to the base of the tower.
+~
+~
+0 -1 8201
+E
+sign~
+The sign reads:
+  This is a tower for the cops to rest. The upper floor is a prison.
+NOONE CAN ENTRY THE PRISON! THERE IS A VERY DANGERIOUS PEOPLE IN IT.
+~
+S
+#8019
+The second floor of the tower~
+     You are on the second floor of his high tower.  You have some ways to
+go before reaching the top.  There are some beds scattered along the outer
+edge of the room.  Other than that the room is quite bare.  As your eyes
+wander towards the stairs you hear a shrill scream come from above, how
+curious, Maybe you should go find out what it was.
+~
+80 8 1
+D4
+The stairs lead up to the third floor of the tower.
+~
+~
+0 -1 8020
+D5
+~
+~
+0 -1 8018
+S
+#8020
+The third floor of the tower~
+    You are half way up the tower now.  On this floor there are several desks
+and bookshelves.  There are also batons and swords in sheaths on the wall here.
+This must be the gathering room of the Sheriff and his deputies.  The stairs
+continue upward, no reason to stop now.
+~
+80 8 1
+D4
+The stairs lead up to the fourth floor of the tower.
+~
+~
+0 -1 8021
+D5
+The stairs lead down to the floor below.
+~
+~
+0 -1 8019
+S
+#8021
+The forth floor of the Tower~
+     You are almost to the top of the tower now.  A few beds lie on the floor
+in this room.  Above you hear a muffled scream, and ocassional chain clanks.
+A nice breeze blows through the windows here, they are nicely arched stone
+windows, and have an excellent view of Sonicity and the Sea of Love.  The
+stairs go up just a little bit further, maybe you should take a look.
+~
+80 8 1
+D4
+The stairs lead up to the top floor of the tower.
+~
+~
+0 -1 8022
+D5
+The stairs lead down to the floor below.
+~
+~
+0 -1 8020
+S
+#8022
+Top of the tower~
+     You are now at the top of the tower.  There is definately a rank smell
+coming through the door to the north.  Its smells of rot and feces.  You
+hear what seems to be the sounds of chains clanking together.  The breeze
+coming through the window in the room from the sea makes the smell more
+tolerable.  This place is unpleasant and makes your somewhat sick in your
+stomach.  Maybe you should move on.
+~
+80 8 1
+D0
+A small wooden door with iron-cross bars and a small window closed with bars
+stands before you.
+~
+door~
+2 8001 8023
+D5
+The stairs lead down to the floor below.
+~
+~
+0 -1 8021
+S
+#8023
+Inside the prison cell
+~
+     Standing at the entrance you see a small dirty smell.  Human refuse and
+rotting flesh give the room a putrid odor to it.  There are a few small windows
+blocked with thick iron rods, even though were anyone to get through the window
+they would surely plumet to their death.  You eyes now come back to the center
+of the room and you realize that a large pile of shackles is sitting there.
+Shouldn't they be attached to the prisoner's limbs?!?!
+~
+80 8 1
+D2
+A small wooden door with iron-cross bars and a small window closed with bars
+stands before you.
+~
+~
+1 -1 8022
+E
+door~
+It is made of heavy oak and has iron bars one inch thick baring the small window.
+~
+E
+door~
+The door made of heavy oak and has iron bars one inch thick baring the small window.
+~
+E
+door~
+The door made of heavy oak and has iron bars one inch thick baring the small
+window.
+~
+E
+window~
+Thick iron bars fill in for the place of stone and mortar to form a window.
+~
+E
+shackles~
+Many shackles are spread across the floor, broken open.
+~
+S
+#8024
+Sonicity's Well~
+     A large stone well sits before you.  It has been very well kept.
+The stone sits firm, and the cover is clean and free of debris.  Not
+only is the well used for water, but it also has an entrance to the
+Chess Kingdom.  And off to the west is the trail that those in search
+of the Holy Grail use on there quest.
+~
+80 8 1
+D1
+The road leads back to Sonicity.
+~
+~
+0 -1 8011
+D3
+The road leads west toward fame and fortune as you seek the Holy Grail.
+~
+~
+0 -1 8600
+D5
+At the bottom of the well you see a checkered board.
+~
+~
+0 -1 2321
+E
+well~
+A large stone well stands in front of you here.
+~
+S
+#8099
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+80 576 0
+S
+#0
+$~

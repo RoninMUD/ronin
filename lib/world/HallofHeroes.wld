@@ -1,0 +1,294 @@
+#29600
+The Entrance to the Halls of Heroes~
+    You have entered the Halls of Heroes, a place where those
+adventurers who achieve the most fame and glory in their travels
+are recognized and enshrined. The building is very well kept. The
+floor is covered with polished marble tiles and the ceiling is high
+and arching. There are various weapons of war hung on the walls. The
+halls continue to the North, and the Temple Altar is to the South.
+~
+296 4 0
+D0
+~
+~
+0 -1 29601
+D2
+~
+~
+0 -1 3054
+S
+#29601
+The Halls of Heroes~
+    This is the center of the Halls of Heroes. There are hallways leading
+to the East and West with rooms branching off of them. This room is
+enormous. The arching ceiling reaches a peak in the center high overhead.
+Your foot steps echo off the marble floors, and are the only sound. This
+place has a very reverent feel to it, almost like a church. To the North
+is the back exit of the building.
+~
+296 0 0
+D0
+~
+~
+0 -1 29602
+D1
+~
+~
+0 -1 29603
+D2
+~
+~
+0 -1 29600
+D3
+~
+~
+0 -1 29605
+S
+#29602
+The Back Entrance to the Halls of Heroes~
+    You have reached the back entrance to the Halls of Heroes. This is
+the place where the most famous adventurers who achieve great things in
+their travels are recognized and enshrined for their deeds. This is the
+place where the legends come to life. The floors are made of sparkling
+polished white marble. There are large round marble columns that lead up
+to the high arching ceilings. The exit out to the North is blocked by two
+huge polished oak doors that are boarded tightly shut.
+~
+296 4 0
+D0
+Two huge polished oak doors are boarded up tightly.
+~
+doors~
+2 -1 0
+D2
+~
+~
+0 -1 29601
+S
+#29603
+The Halls of Heroes~
+    The echo of your foot falls on the polished marble floors is the only
+sound in this sacred place. The ceiling arches high overhead with large
+round marble pillars connecting it to the floor. There are various weapons
+hanging on the walls. Some of them look used, all of them well crafted. There
+are paintings on the walls between the weapons of noble looking warriors in
+majestic and victorious poses. The shrine dedicated to recognition of
+brave commandos is to the North, the one dedicated to mages is South.
+~
+296 0 0
+D0
+~
+~
+0 -1 29612
+D1
+~
+~
+0 -1 29604
+D2
+~
+~
+0 -1 29613
+D3
+~
+~
+0 -1 29601
+S
+#29604
+The Halls of Heroes~
+    The echo of your foot falls on the polished marble floors is the only
+sound in this sacred place. The ceiling arches high overhead with large
+round marble pillars connecting it to the floor. There are various weapons
+hanging on the walls. Some of them look used, all of them well crafted. There
+are paintings on the walls between the weapons of noble looking warriors in
+majestic and victorious poses. There is a shrine to the most adventurous
+of bards is to the North. A holy shrine recognizing the most dedicated of
+paladins is to the East, and an altar to the most prolofic clerics lies
+just to the South of here.
+~
+296 0 0
+D0
+~
+~
+0 -1 29614
+D1
+~
+~
+0 -1 29616
+D2
+~
+~
+0 -1 29615
+D3
+~
+~
+0 -1 29603
+S
+#29605
+The Halls of Heroes~
+    The echo of your foot falls on the polished marble floors is the only
+sound in this sacred place. The ceiling arches high overhead with large
+round marble pillars connecting it to the floor. There are various weapons
+hanging on the walls. Some of them look used, all of them well crafted. There
+are paintings on the walls between the weapons of noble looking warriors 
+in majestic and victorious poses. The shrine in recognition of great
+achievement by adventuring warriors is to the North, with the shrine
+dedicated to the most powerful among the ninja guild to the South.
+~
+296 0 0
+D0
+~
+~
+0 -1 29610
+D1
+~
+~
+0 -1 29601
+D2
+~
+~
+0 -1 29611
+D3
+~
+~
+0 -1 29606
+S
+#29606
+The Halls of Heroes~
+    The echo of your foot falls on the polished marble floors is the only
+sound in this sacred place. The ceiling arches high overhead with large
+round marble pillars connecting it to the floor. There are various weapons
+hanging on the walls. Some of them look used, all of them well crafted. There
+are paintings on the walls between the weapons of noble looking warriors 
+in majestic and victorious poses. A shrine to the North appears to
+comemorate the glorious travels and victories of the under-rated nomad
+guild. The darkness of the room to the West would likely mark it as the
+shrine to the unholiest of classes, the anti-paladin. The bareness of the
+walls to the South can likely be blamed on those who the altar there is
+meant to glorify, thieves.
+~
+296 0 0
+D0
+~
+~
+0 -1 29608
+D1
+~
+~
+0 -1 29605
+D2
+~
+~
+0 -1 29609
+D3
+~
+~
+0 -1 29607
+S
+#29607
+The Anti-Paladin Shrine~
+A temporary description
+~
+296 64 0
+D1
+~
+~
+0 -1 29606
+S
+#29608
+The Nomad Shrine~
+A temporary description
+~
+296 64 0
+D2
+~
+~
+0 -1 29606
+S
+#29609
+The Thief Shrine~
+A temporary description
+~
+296 64 0
+D0
+~
+~
+0 -1 29606
+S
+#29610
+The Warrior Shrine~
+A temporary description
+~
+296 64 0
+D2
+~
+~
+0 -1 29605
+S
+#29611
+The Ninja Shrine~
+A temporary description
+~
+296 64 0
+D0
+~
+~
+0 -1 29605
+S
+#29612
+The Commando Shrine~
+A temporary description
+~
+296 64 0
+D2
+~
+~
+0 -1 29603
+S
+#29613
+The Mage Shrine~
+A temporary description
+~
+296 64 0
+D0
+~
+~
+0 -1 29603
+S
+#29614
+The Bard Shrine~
+A temporary description
+~
+296 64 0
+D2
+~
+~
+0 -1 29604
+S
+#29615
+The Cleric Shrine~
+A temporary description
+~
+296 64 0
+D0
+~
+~
+0 -1 29604
+S
+#29616
+The Paladin Shrine~
+A temporary description
+~
+296 64 0
+D3
+~
+~
+0 -1 29604
+S
+#29699
+A temporary name~
+A temporary description
+~
+296 0 0
+S
+#0
+$~

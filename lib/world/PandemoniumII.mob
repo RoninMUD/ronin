@@ -1,0 +1,188 @@
+#21701
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21750
+monk novice~
+A Novice Monk~
+A man with a shaven head, wearing a simple grey robe is here.
+~
+A shaven headed man donning a drab grey novice's robe.
+He appears lost in thought but smiles as he sees you and
+bows his head.
+~
+72 786432 0 Y
+35 10 -5 1000d4+1000 10d6+10
+0 480000
+8 8 1
+5 0 10d10+10 1
+4 1 15 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21751
+monk novice~
+A Novice Monk~
+A woman with a shaven head, donning a grey robe is here.
+~
+A woman with a shaven head is here, wearing
+a simple grey monks robe. She bows her head
+and averts her eyes and continues on her way.
+~
+72 786432 0 Y
+35 10 -5 1000d4+1000 10d6+10
+0 480000
+8 8 2
+5 0 10d10+10 1
+4 1 15 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21752
+dummy practice wood wooden~
+A Wooden Practice Dummy~
+A stout wooden dummy is mounted here, with wooden arms and legs protruding.~
+A stout wooden dummy, with various wooden appendages
+protruding from it. It appears to be mounted on a swivel,
+so that any strike upon its surface will cause it to rotate,
+and anyone standing close to it would most likely have to
+dodge its wooden appendages.
+~
+16777226 268435456 0 Y
+40 5 -5 5000d2+500 3d20+5
+1 900000
+8 8 0
+79 0 1d1+1 4
+4 1 20 0
+2 2 20 0
+9 2 10 0
+7 1 5 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21753
+stout wooden dummy wood~
+A massive Wooden Dummy~
+A massive wooden dummy is mounted here.
+~
+A exceptionally thick wooden dummy is here, its various
+wooden limbs bound with thick strips of leather.
+~
+16777226 268435456 0 Y
+45 5 -7 5000d3+1000 10d5+25
+1 1800000
+8 8 0
+79 0 1d1+1 4
+2 2 25 0
+4 1 25 0
+9 2 25 0
+7 2 15 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21754
+kirin ki-rin~
+`kThe Ki-Rin`q~
+A mystical deer-like creature is here, its hooves floating above the ground. ~
+   With the body of a deer, the tail of a cow, the hooves of a horse, and a
+head like a cross between a dragon and a horse, the `kKi-Rin`q is truely a strange
+beast. A shimmering mane of many colors trails down its neck and back, and a
+single gleaming horn sprouts from its forehead. What impresses you most is how
+its feet never seem to touch the ground, it seems to float above the ground,
+and it has no trouble what so ever keeping its balance on this shifting mound
+of rubble.
+~
+8 285474952 1000 Y
+60 -5 -6 300d88+5000 20d10+35
+0 1800000
+8 8 1
+56 0 50d50+50 0
+0 0 0 0
+R
+37
+K
+0 0 0 0 0 0
+#21755
+animated samurai armor~
+Animated Samurai Armor~
+A empty suit of samurai armor stands here, swords bared and ready.~
+   A decrepit and battered set of samurai armor stands here, empty and
+lifeless, yet it holds two tarnished and rusty swords out before it, barring
+your way. It is completely motionless, yet seems poised to strike, like a
+coiled serpent. Looking closer, the armor is completely empty, nothing supports
+it. Clearly powerful magic is at work.
+~
+10 268435456 0 Y
+51 0 -5 5000d3+5000 50d4+25
+0 1200000
+8 8 1
+79 0 1d1+1 2
+4 2 10 0
+7 2 10 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#21756
+priest zen~
+A Zen Priest~
+A bald headed man wearing grey robes is here.
+~
+A middle aged man stands here, his head shaven completely bald. The grey
+robes of a Zen Priest hang loosesly from his wiry frame and he looks friendly
+enough, but his eyes blaze with an unholy light as he glares up at you. He
+beings to mutter arcane chants and grins at you, and in the blink of an eye the
+grin becomes a snarl of rage and he rushes at you!
+~
+10 134219904 1000 Y
+55 0 -3 3000d4+5000 30d3+50
+150000 1200000
+8 8 1
+2 0 100d10+300 0
+0 0 0 0
+T
+......A Zen Priest's eyes burn with an unholy light!~
+K
+0 0 0 0 0 0
+#21757
+samurai takeshi ta-ke-shi~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21758
+akuma demon~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,1545 @@
+#11601
+The Oak Forest~
+   You enter a forest filled to the limit by huge oak trees. The forest seems
+to be a little too clean to be untouched by the hands of some sort of creature.
+There's a mild summer breeze coming down from a green hill up ahead.
+~
+116 4 3
+D1
+~
+~
+0 0 11602
+D3
+~
+~
+0 0 4002
+D4
+~
+~
+0 -1 27570
+S
+#11602
+The Elven Sentry~
+   You stand in a little glade surrounded by oaks. This is one of the outposts 
+of the elven kingdom Lorien, and unless something real serious has happened, 
+you will always find elven guards here.
+You can go to the east and the west. A river flows at the north.
+~
+116 0 2
+D0
+~
+~
+0 0 11604
+D1
+~
+~
+0 0 11603
+D3
+~
+~
+0 0 11601
+S
+#11603
+A Small Path in the forest~
+   The path leads east-west but doesn't seem to have been used for a real 
+long time, maybe because of the huge oak tree which has fallen down at the 
+path, blocking all traffic eastwards.
+~
+116 0 2
+D3
+~
+~
+0 0 11602
+S
+#11604
+At the River Celebrant~
+   The river has a steady but strong flow, making your trip across the river
+a real pain in the ass. The riverbanks at the east and south are quite high, 
+making it almost impossible to climb up.
+~
+116 4 6
+D1
+~
+~
+0 0 11605
+D2
+~
+~
+0 0 11602
+S
+#11605
+At the edge of Lorien~
+   You stand amazed by the beauty of this forest. The trunks and branches of
+the Mallorn trees are covered by a smooth silver-white bark. The leaves are
+pale-green on top and silver underneath, it almost looks like some maniac has
+come up with some brilliant idea to paint all leaves in the forest with silver
+paint. A path leads eastwards and the river is to the west.
+~
+116 0 2
+D1
+~
+~
+0 0 11606
+D3
+~
+~
+0 0 11604
+S
+#11606
+Guardian's Glade~
+   You have entered an open spot in the forest. The ground is well used due to
+what could be fighting. This place is devoted for the defenders of Lorien -
+the Guardians. A small cabin in the south offers some roof for the tired souls.
+The path continues to the north.
+~
+116 0 2
+D0
+~
+~
+0 0 11607
+D2
+~
+~
+0 -1 11667
+D3
+~
+~
+0 0 11605
+S
+#11607
+A Bend in the Path~
+   The small path bends to the east here.  The high, beautiful Mallorn trees 
+towers up at the sides of the path. You can clearly see that someone cleans 
+the path up very often. The path continues to the south and to the east.
+~
+116 0 2
+D1
+~
+~
+0 0 11608
+D2
+~
+~
+0 0 11606
+S
+#11608
+A Path Crossing~
+   You have entered a forest clearing. You can see the sky above the Mallorn-
+trees, the silvery leaves with the sky in the background makes a startling
+sight. The path leads north, east, west and south.
+~
+116 0 2
+D0
+~
+~
+0 0 11629
+D1
+~
+~
+0 0 11628
+D2
+~
+~
+0 0 11609
+D3
+~
+~
+0 0 11607
+S
+#11609
+At the Bend of a Path~
+   This path seems to be not very well used. Although not very used, it is as
+clean as any path in the forest. You can spot a river further south.
+The path leads east to a clearing and north to the crossing.
+~
+116 0 2
+D0
+~
+~
+0 0 11608
+D1
+~
+~
+0 0 11610
+S
+#11610
+The Craftsmen's Glade~
+   The path opens up to a clearing in the forest. This is the guild of the
+craftsmen. The craftsmen handles with almost anything where wood is
+involved and there are tools placed against a tree. You can spot a river
+further south. Exits leads west and east.
+~
+116 0 2
+D1
+~
+~
+0 0 11611
+D3
+~
+~
+0 0 11609
+E
+tools~
+They look very nice but doesn't seem to be to any use for you, so you
+better leave them.
+~
+S
+#11611
+A Path in the Beautiful Forest~
+   The path leads through the forest. You can hear sounds of what seems
+to be small and harmless animals. The Mallorn trees glitters with their
+beauty.
+Exits leads west and east.
+~
+116 0 2
+D1
+~
+~
+0 0 11612
+D3
+~
+~
+0 0 11610
+S
+#11612
+A Path in the Beautiful Forest~
+   The path leads through the forest. You can hear sounds of what seems
+to be small and harmless animals. The Mallorn trees glitters with their
+beauty.
+To the west is a path and to the east is a clearing.
+~
+116 0 2
+D1
+~
+~
+0 0 11613
+D3
+~
+~
+0 0 11611
+S
+#11613
+The Weavers' Glade~
+   As the trees disappears in front of you, a glade appears. This is the 
+weaver's glade and this is where most of the clothing for the populace of 
+Lorien is made. It is quite a big glade and usually there are many elves here 
+working. The path continues to the west and north.
+~
+116 0 2
+D0
+~
+~
+0 0 11614
+D3
+~
+~
+0 0 11612
+S
+#11614
+A Path in the Beautiful Forest~
+   The path leads through the forest. You can hear sounds of what seems
+to be small and harmless animals. The Mallorn trees glitters with their
+beauty. The wide path from the north continues to the east and another path 
+leads south.
+~
+116 0 2
+D0
+~
+~
+0 0 11622
+D1
+~
+~
+0 0 11615
+D2
+~
+~
+0 0 11613
+S
+#11615
+The Boatmen's Glade~
+   You have entered a big glade with unfinished boats all over the place.
+This is the guild of the boat builders and boatmen. A bit down the south
+you can spot the river Celebrant where you can see elves testing their new-
+built boats. There is a note on a tree.
+The path continues to the west and to the north.
+~
+116 0 2
+D0
+~
+~
+0 0 11616
+D3
+~
+~
+0 0 11614
+E
+sign note~
+
+     Sorry friend - no boats available at this moment
+
+~
+S
+#11616
+In front of Caras Galadhon~
+   You see a big hill completely covered with Mallorn trees. In front of the
+hill there is a gate-bridge and a high grass-covered wall. At the top of the
+hill you see the biggest Mallorn tree ever seen.
+At the north a bridge leads to Caras Galadhon and paths continues to the east
+and to the south.
+~
+116 0 2
+D0
+~
+~
+0 0 11634
+D1
+~
+~
+0 0 11617
+D2
+~
+~
+0 0 11615
+S
+#11617
+The Elven Sentry~
+   You stand in a little glade surrounded by mallorns. This is one of the 
+outpost of the elven kingdom Lorien, and unless something real serious has 
+happened, you will always find elven guards here. You can go to north or west.
+~
+116 0 2
+D0
+~
+~
+0 0 11618
+D3
+~
+~
+0 0 11616
+S
+#11618
+A Bend in the Path~
+   The small path slightly bends here. The high, beautiful Mallorn trees
+towers up at the sides of the path. You can clearly see that someone cleans
+the path up very often.  The path continues to the south and to the east.
+~
+116 0 2
+D2
+~
+~
+0 0 11617
+D3
+~
+~
+0 0 11619
+S
+#11619
+A Split in the Path~
+   The path you are walking at splits to two equally big paths. The trees
+around you sways in the comfortable breeze. You see a big glade at the north.
+Paths lead north, east and west.
+~
+116 0 2
+D0
+~
+~
+0 0 11620
+D1
+~
+~
+0 0 11618
+D3
+~
+~
+0 0 11621
+S
+#11620
+The Minstrels' Glade~
+   You have entered a big clearing in the forest. You see a big fireplace in
+the middle of the glade with long logs placed around it. This is the
+meeting place of the Loremasters of the Golden Wood, the ones who remember
+and teaches the history of the Elves. They also preserve the magical spell
+which holds the forest apart from the rest of the world. You can go back 
+south from here.
+~
+116 0 2
+D2
+~
+~
+0 0 11619
+S
+#11621
+An intersection in the forest~
+   The path leads through the forest. You can hear sounds of what seems
+to be small and harmless animals. The Mallorn trees glitters with their
+beauty. A big path comes from the south and continues westwards. A smaller one
+comes from east.
+~
+116 0 2
+D1
+~
+~
+0 0 11619
+D2
+~
+~
+0 0 11622
+D3
+~
+~
+0 0 11623
+S
+#11622
+A wide path in the beautiful forest~
+You are walking on a path bigger than most of the others in this forest,
+leading south and north. The path seems to be regularly used by many people.
+The trees surrounding you glitters with their beauty.
+~
+116 0 2
+D0
+~
+~
+0 0 11621
+D2
+~
+~
+0 0 11614
+S
+#11623
+The Woodsmen's Glade~
+   You have entered a big clearing in the forest. This place sort of looks
+like a garden with small fields of plants, each field containing one type of 
+plant. This is the guild place of the woodsmen, the keepers of the forest. The
+woodsmen handles the maintenance of Lorien's gardens, vineyard, fields and
+paths. The path leads from east to west. To the west you see a great
+grass-covered hill.
+~
+116 0 2
+D1
+~
+~
+0 0 11621
+D3
+~
+~
+0 0 11624
+S
+#11624
+Cerin Amroth~
+   You stand at a grass-covered hill. Two concentric rings of trees, the
+inner one of great mallorns, the outer one of gracile white leafless trees, 
+surround a huge central mallorn. You see a ladder leading up in the huge tree.
+The path leads from east to west and a small path leads north through the 
+forest.
+~
+116 0 2
+D0
+~
+~
+0 0 11625
+D1
+~
+~
+0 0 11623
+D3
+~
+~
+0 0 11626
+D4
+~
+~
+0 0 11633
+S
+#11625
+The Elven Sentry~
+   You stand in a little glade surrounded by mallorns. This is one of the 
+outpost of the elven kingdom Lorien. Unless something real serious has 
+happened, you will always find elven guards here. The only way you can go is
+back south.
+~
+116 0 2
+D2
+~
+~
+0 0 11624
+S
+#11626
+A bend in the wide path~
+   The wide path slightly bends here. This path has to be one of the main paths
+here in Lorien - it seems to be very well-used, but as always, very well-kept
+too. The path leads south and east.
+~
+116 0 2
+D1
+~
+~
+0 0 11624
+D2
+~
+~
+0 0 11627
+S
+#11627
+The Bakers' Glade~
+   You enter a glade which is used by the bakers of Lorien. The Bakers
+handle everything which involves food such as making bread, cheese, honey,
+wine and beer. The glade is filled with barrels and other sorts of containers.
+You can go to the north or south.
+~
+116 0 2
+D0
+~
+~
+0 0 11626
+D2
+~
+~
+0 0 11628
+E
+barrel container~
+You hear a faint humming from all the containers, they must be magically
+locked.
+~
+S
+#11628
+A bend in the wide path~
+   The wide path slightly bends here. This path has to be one of the main paths
+here in Lorien - it seems to be very well-used, but as always, very well-kept
+too. The path leads north and west to a forest-clearing.
+~
+116 0 2
+D0
+~
+~
+0 0 11627
+D3
+~
+~
+0 0 11608
+S
+#11629
+The Smiths' Glade~
+   You have entered a small glade surrounded by mallorns. This is the glade of
+Lorien's smiths. The smiths of Lorien are well-known for their weapons and armor
+of unique, delicate beauty and strength. A sign is mounted on a tree. You may
+continue your journey to the west or south.
+~
+116 0 2
+D2
+~
+~
+0 0 11608
+D3
+~
+~
+0 0 11630
+D5
+~
+door~
+1 -1 11668
+E
+sign~
+You may enter the smithy and buy some of Midgaard's finest weapons and armor by
+entering the hole.
+~
+S
+#11630
+A bend in the path~
+   The not so very used path bends as its getting smaller and smaller. The
+forest seems a bit darker as you come closer to the boarder of Lorien. Far
+away at the west you can spot big mountain tops towering like giants, far more
+big than the usual small hills you usually see. You can go north or east from
+here.
+~
+116 0 3
+D0
+~
+~
+0 0 11631
+D1
+~
+~
+0 0 11629
+S
+#11631
+The Elven sentry~
+   You stand in a little glade surrounded by mallorns. This is one of the
+outposts of the Elven Kingdom Lorien. Unless something real serious has
+happened, you will always find elven guards here. Looking west you see a huge
+mountain, making you feel not as comfortable as you have felt inside the woods.
+You can go west or south from here.
+~
+116 0 3
+D2
+~
+~
+0 0 11630
+D3
+~
+~
+0 0 11632
+S
+#11632
+The mountain-wall~
+   Suddenly the path stops in a vertical mountain-wall with rocks and stones
+covering the ground and bottom of the wall. When you look up your instincts
+tell you to leave this place immediately. The rocks above you seems to be able
+to loose their hold of the wall any second. You spot a small opening among the
+rocks. The sentry is still at the east, making it a welcome place to go.
+~
+116 4 3
+D1
+~
+~
+0 0 11631
+D3
+~
+stone~
+1 -1 11674
+S
+#11633
+Up in the tree~
+   You stand on a gleaming white platform built on the topmost branches of the
+mallorn. This place used to be the former Lorien king Amroth's residence, but
+after his withdrawal the house was rebuilt to this platform. This is a place of
+peace and reverence used by the people in the forest. The only exit is back
+down.
+~
+116 0 3
+D5
+~
+~
+0 0 11624
+S
+#11634
+At the gate bridge~
+   You stand on the bridge of Caras Galadhon. You see a high grass covered wall
+and a dry-moat at the sides of the bridge. This is the protection of the city -
+beautiful and simple yet powerful. To the north you see a gate which prevents 
+unwanted creatures from entering the city. You can go back to the forest at
+the south. You notice something moving in the shadows.
+~
+116 4 1
+D0
+~
+gate~
+1 11620 11635
+D2
+~
+~
+0 0 11616
+S
+#11635
+Inside Caras Galadhon, the City of Trees~
+   You have entered the City of Trees. Looking around, you notice that there 
+seems to be some sort of buildings in the trees all over the hill. You hear
+voices coming from everywhere but you just cant locate them. If there is people
+here, they sure must be invisible to you since they seem to be just beside you.
+Exits leads to west and east to a garden.
+~
+116 0 2
+D1
+~
+~
+0 0 11647
+D2
+~
+gate~
+1 11620 11634
+D3
+~
+~
+0 0 11636
+S
+#11636
+A Path under the trees~
+   You are walking on a well-kept path with trees towering above you. Although 
+the branches and leaves cover much of the sky the light makes it way to the 
+ground. The silver-covered leaves makes the light almost blinding. At the 
+southern side of the path you see a tree which seems to be a bit bigger and 
+higher than the others. You can go east, west or up in the tree from here.
+~
+116 0 2
+D1
+~
+~
+0 0 11635
+D3
+~
+~
+0 0 11638
+D4
+~
+~
+0 0 11637
+S
+#11637
+The Warriors' Hall~
+   You have entered a big platform founded on the big branches of the 
+mallorn tree. This is the place where the guards of Caras Galadhon and 
+other elven fighters and adventurers meet to relax, talk about the art 
+of fighting and defense. Here the fighters also can practice their skills 
+against other fellow fighters. Two long tables are placed in a corner of 
+the big platform with benches along the sides. You can go back down to the 
+path from here.
+~
+116 0 2
+D5
+~
+~
+0 0 11636
+S
+#11638
+The South-Western Garden~
+   You enter a garden with various flowers and bushes. The flowers vary in all
+sorts of forms and colors, making every flower a part in the perfection of the
+garden. There are also some sort of fruit-trees growing in the garden, making
+it a struggle to resist pinching a few delicious looking fruits. You can go
+either to the north or to the east from here.
+~
+116 0 2
+D0
+~
+~
+0 0 11639
+D1
+~
+~
+0 0 11636
+S
+#11639
+A Path in the City of Trees~
+   You are walking on a well-kept path with trees towering above you. Although 
+the branches and leaves cover much of the sky the light makes it way to the 
+ground. The silver-covered leaves makes the light almost blinding. The 
+path continues to the west and south.
+~
+116 0 2
+D2
+~
+~
+0 0 11638
+D3
+~
+~
+0 0 11640
+S
+#11640
+A sloping path~
+   You are walking on a sloping path surrounded by mallorns. You can hear 
+laughing, clear voices coming from the trees. You see a thick rope hanging
+down a tree. As you come closer to the tree the laughter and the noise coming
+from the tree suddenly stops. You can go to the east, to the north or use the
+rope to climb up the tree.
+~
+116 0 2
+D0
+~
+~
+0 0 11642
+D1
+~
+~
+0 0 11639
+D4
+~
+~
+0 0 11641
+S
+#11641
+The Elven home~
+   You have entered a platform built on the branches of the tree. Another 
+platform above this one serves as a roof. A table and a few chairs made of 
+the finest wood placed in the middle of the platform indicates that this 
+home has to belong to a wealthy elven family. You can climb up to a smaller 
+platform or go back down to the path.
+~
+116 0 4
+D4
+~
+~
+0 0 11665
+D5
+~
+~
+0 0 11640
+S
+#11642
+A Path in the City of Trees~
+   You are walking on a well-kept path with trees towering above you. Although
+the branches and leaves cover much of the sky the light makes it way to the
+ground. The silver-covered leaves makes the light almost blinding. You can
+go north or south from here.
+~
+116 0 2
+D0
+~
+~
+0 0 11643
+D2
+~
+~
+0 0 11640
+S
+#11643
+A Bend in the Path~
+   You are walking at path in a light forest. The trees are as light as ever 
+and you can hear distant voices every now and then. The path continues to the 
+east and south.
+~
+116 0 2
+D1
+~
+~
+0 0 11644
+D2
+~
+~
+0 0 11642
+S
+#11644
+A Sloping Path~
+   You are walking on a sloping path surrounded by mallorns. You can hear
+laughing, clear voices coming from the trees. You see a thick rope hanging
+down a tree. As you come closer to the tree the laughter and the noise coming
+from the tree suddenly stops. You can go to the west, to the north or use the
+rope to climb up the tree. A small path leads east.
+~
+116 0 2
+D0
+~
+~
+0 0 11646
+D1
+~
+~
+0 -1 11660
+D3
+~
+~
+0 0 11643
+D4
+~
+~
+0 0 11645
+S
+#11645
+The Elven home~
+   You have entered a platform build on the branches of the tree. Another 
+platform above this one built of leaves and small branches serves as a roof. 
+A table and a few chairs made of the finest wood placed in the middle of 
+the platform indicates that this home has to belong to a wealthy elven family. 
+You can climb back down to the path.
+~
+116 0 3
+D5
+~
+~
+0 0 11644
+S
+#11646
+Celeborn's Orchard~
+   You walk into a garden with small twisting paths placed randomly all over.
+The paths are made of small stones outlined by pearl white stones. Along the
+paths small mallorn trees are swaying softly in the cool breeze. You can go
+back south.
+~
+116 0 2
+D2
+~
+~
+0 0 11644
+S
+#11647
+Galadriel's Garden~
+   You walk through a high, green hedge in to a fenced garden without
+any trees. In a deep green depression in the ground a small brook is gently 
+flowing. A pedestal stands at the bottom of the depression. You can walk
+to the west or north from here.
+~
+116 0 2
+D0
+~
+~
+0 0 11648
+D3
+~
+~
+0 0 11635
+E
+pedestal~
+The pedestal is shaped like a wide tree with a shallow, wide bowl placed
+on it.~
+E
+bowl~
+The bowl is filled with water and the reflections it gives is like a mirror.~
+S
+#11648
+A Path under the trees~
+   You are walking on a well-kept path with trees towering above you. Although 
+the branches and leaves cover much of the sky, the light makes it way to the 
+ground. The silver-covered leaves makes the light almost blinding. The path
+continues from south to east and there is a ladder up in a big tree at the side
+of the path. A small and steep side path goes up north. 
+~
+116 0 2
+D0
+~
+~
+0 0 11650
+D1
+~
+~
+0 0 11651
+D2
+~
+~
+0 0 11647
+D4
+~
+~
+0 0 11649
+S
+#11649
+The Mystic's Hall~
+   You enter the mystic's hall. There is a mist covering the floor and
+shadows floating around in the corners of the room. The only exit is back
+down.
+~
+116 0 3
+D5
+~
+~
+0 0 11648
+S
+#11650
+On a steep path~
+   As you begin to walk the path you realize that this can be no real path,
+you have to climb to get through. You start to wonder why you had to bring
+all your heavy equipment on your little trip. The path continues up to the west
+from south.
+~
+116 0 5
+D2
+~
+~
+0 0 11648
+D3
+~
+~
+0 0 11664
+S
+#11651
+A Bend in the Path~
+   You are walking at path in a light forest. The trees are as light as ever 
+and you can hear distant voices every now and then. The path continues to the 
+west and north.
+~
+116 0 2
+D0
+~
+~
+0 0 11652
+D3
+~
+~
+0 0 11648
+S
+#11652
+A Path under the trees~
+   You are walking on a well-kept path with trees towering above you. Although 
+the branches and leaves cover much of the sky, the light makes it way to the 
+ground. The silver-covered leaves makes the light almost blinding. At the 
+western side of the path you see a tree which seems to be a bit bigger and 
+higher than the others. The path continues from south to north and there is a
+ladder up in the big tree. 
+~
+116 0 2
+D0
+~
+~
+0 0 11654
+D2
+~
+~
+0 0 11651
+D4
+~
+~
+0 0 11653
+S
+#11653
+The Elven home~
+   You have entered a platform build on the branches of the tree. Another 
+platform above this one built of leaves and small branches serves as a roof. 
+A table and a few chairs made of the finest wood placed in the middle of 
+the platform indicates that this home has to belong to a wealthy elven family. 
+You can climb back down to the path.
+~
+116 0 3
+D5
+~
+~
+0 0 11652
+S
+#11654
+North-Eastern Garden~
+   This garden looks kind of overgrown. But although the grass on the ground
+is very long and the paths are just walked-down grass this is a place for
+recreation. This garden is a place for elves to just lie down on the ground
+and think. You can go through the garden and walk to the west or south.
+~
+116 0 2
+D2
+~
+~
+0 0 11652
+D3
+~
+~
+0 0 11655
+S
+#11655
+A bend in the sloping path~
+   You are walking at path in a light forest. The trees are as light as ever 
+and you can hear distant voices every now and then. The path is going upwards
+to the hill and continues to the east and north.
+~
+116 0 2
+D0
+~
+~
+0 0 11656
+D1
+~
+~
+0 0 11654
+S
+#11656
+A bend in the sloping path~
+   You are walking at path in a light forest. The trees are as light as ever 
+and you can hear distant voices every now and then. The path is going upwards
+to the hill and continues to the west and south.
+~
+116 0 2
+D2
+~
+~
+0 0 11655
+D3
+~
+~
+0 0 11657
+S
+#11657
+A bend in the sloping path~
+   You are walking at path in a light forest. The trees are as light as ever
+and you can hear distant voices every now and then. The path is going upwards
+to the hill and continues to the west and south. A small ladder leads up.
+~
+116 0 2
+D1
+~
+~
+0 -1 11656
+D2
+~
+~
+0 -1 11659
+D4
+~
+~
+0 -1 11658
+S
+#11658
+The Elven home~
+   You have entered a platform build on the branches of the tree. Another 
+platform above this one built of leaves and small branches serves as a roof. 
+A table and a few chairs made of the finest wood placed in the middle of 
+the platform indicates that this home has to belong to a wealthy elven family. 
+You can climb back down to the path.
+~
+116 0 3
+D5
+~
+~
+0 -1 11657
+S
+#11659
+A Bend in the Path~
+   You are walking at path in a light forest. The trees are as light as ever 
+and you can hear distant voices every now and then. The path continues to the 
+west and north.
+~
+116 0 2
+D0
+~
+~
+0 0 11657
+D3
+~
+~
+0 0 11660
+S
+#11660
+A bend in the sloping path~
+   You are walking on a sloping path surrounded by shining mallorns. The
+main path continues upwards south and downwards east. You hardly notice the
+little track going west from here into the trees. As you look north you see
+a big tree with some kind of big ladder, almost like stairs, leading up in
+the tree.
+~
+116 0 2
+D1
+~
+~
+0 -1 11659
+D2
+~
+~
+0 -1 11662
+D3
+~
+~
+0 -1 11644
+S
+#11662
+A bend in the sloping path~
+   You are walking at path in a light forest. The trees are as light as ever
+and you can hear distant voices every now and then. The path is going upwards
+to the hill and continues to the east and north. A small ladder leads up to a
+platform. Looking east you spot a big glade.
+~
+116 0 2
+D0
+~
+~
+0 -1 11660
+D1
+~
+~
+0 -1 11664
+D4
+~
+~
+0 -1 11663
+S
+#11663
+The Elven home~
+   You have entered a platform build on the branches of the tree. Another 
+platform above this one built of leaves and small branches serves as a roof. 
+A table and a few chairs made of the finest wood placed in the middle of the 
+platform indicates that this home has to belong to a wealthy elven family. 
+You can climb back down to the path.
+~
+116 0 3
+D5
+~
+~
+0 -1 11662
+S
+#11664
+The High Lawn~
+   As you enter a wide lawn you realize that this got to be the very top of
+the whole hill. Standing at one side of the lawn is the greatest tree in the
+wood, a mighty silver-bough tree. At the other side is a fountain, a spring
+which is the source of a stream running down the hill and out of the city.
+High in the branches of the tree a house is built, resembling the shape of a
+ship. You can enter the house by climbing up a wide, white ladder placed at
+the side of the tree.
+~
+116 0 2
+D1
+~
+~
+0 0 11650
+D3
+~
+~
+0 0 11662
+D4
+~
+~
+0 0 11666
+S
+#11665
+The Meditation Chamber~
+   This place has completely no furniture. This place is used for recreation 
+and thinking. The view from the platform is a startling sight - an ocean of 
+green trees with hills looking like small waves on the ocean.
+~
+116 0 4
+D5
+~
+~
+0 0 11641
+S
+#11666
+Climbing up the big tree~
+   As you walk up the ladder you see various small platforms randomly
+placed around the stem. Except the platforms you see almost nothing but 
+golden leaves all around you. You may climb the ladder up or back down.
+~
+116 0 2
+D4
+~
+~
+0 0 11675
+D5
+~
+~
+0 0 11664
+S
+#11667
+The small cabin~
+   The cabin is sparsely decorated with just one small bed placed beside a
+weapons rack. This place used to be used by people passing through Lorien but
+is now a place where the guards put their weapons after training. You can go
+back south.
+~
+116 8 0
+D0
+~
+~
+0 0 11606
+E
+weapon rack weapons rack~
+The rack is empty at the moment.
+~
+E
+bed~
+The small bed is more a bench then a real bed. The bed is dusty and quite
+dirty.
+~
+S
+#11668
+A tunnel~
+   You are climbing on a ladder in a narrow tunnel. You feel a distinct change
+in the temperature as you climb further down, and its not getting colder.
+~
+116 9 3
+D4
+~
+door~
+1 -1 11629
+D5
+~
+~
+0 0 11669
+S
+#11669
+A tunnel~
+   You are climbing on a ladder in a narrow tunnel. You feel a distinct change
+in the temperature and you are beginning to sweat as you climb further down.
+~
+116 9 3
+D4
+~
+~
+0 0 11668
+D5
+~
+~
+0 0 11670
+S
+#11670
+A tunnel~
+   You are climbing on a ladder in a narrow tunnel. You feel a light breeze
+and when you look down you see light and what appears to be the bottom of the
+tunnel.
+~
+116 9 3
+D4
+~
+~
+0 0 11669
+D5
+~
+~
+0 0 11671
+S
+#11671
+The end of the tunnel~
+   You have come to the end of the narrow tunnel. The temperature is making
+you sweat all of your bodies water. You feel your mouth and throat getting
+drier and drier. You see a clear yellow light at the west.
+~
+116 9 2
+D3
+~
+~
+0 0 11672
+D4
+~
+~
+0 0 11670
+S
+#11672
+The Smithy~
+   You stand in a big, hot room, enlightened by a big furnace at the west. 
+This is the place where all of Lorien's metalwork is done by experienced 
+smiths. You see various armors and weapons on the walls, just waiting to 
+be bought by a smart one like you. A small note lies on a desk.
+~
+116 8 2
+D1
+~
+~
+0 0 11671
+D3
+~
+~
+0 0 11673
+E
+note~
+    Sorry - the shop is down for a while - we need all the weapons there
+    is to fight the forces of evil.
+
+~
+E
+furnace oven~
+You look into the big oven - it looks very hot and cosy - don't you feel like
+jumping into it?. Well - maybe a bit TOO hot and cosy.
+~
+S
+#11673
+Inside the oven~
+   A bit too late you realize that your body cant stand the heat of the flames
+inside an oven - MELT!!!!!
+~
+116 14 1
+E
+death_text~
+The oven's intense heat cooks your internal organs, leaving you to die.
+~
+S
+#11674
+The dark cave~
+   You stand in a cave with walls covered by dirt and, YUCK!, excrement. The 
+air is not breathable and you just want to run back out in the fresh air. You 
+see skulls and bones of various sizes spread out all over the floor. The only 
+exit is back east.
+~
+116 9 4
+D1
+~
+stone~
+1 -1 11632
+S
+#11675
+Climbing up a big tree~
+   As you walk up the ladder you see various small platforms randomly placed 
+around the stem. Except the platforms you see almost nothing but golden leaves 
+all around you. You catch a glimpse of a small platform at the west. The 
+ladder continues up.
+~
+116 0 2
+D3
+~
+~
+0 0 11676
+D4
+~
+~
+0 0 11677
+D5
+~
+~
+0 0 11666
+S
+#11676
+A small platform~
+   The platform is very small and is almost completely covered by leaves,
+making it hard to notice from outside. But from the inside you get a very
+good view of the terrain around.
+~
+116 0 2
+D1
+~
+~
+0 0 11675
+S
+#11677
+Climbing up a big tree~
+   As you walk up the ladder you see various small platforms randomly
+placed around the stem. Except the platforms you see almost nothing but
+golden leaves all around you. Looking at east you spot another platform.
+The ladder continues up.
+~
+116 0 2
+D1
+~
+~
+0 0 11678
+D4
+~
+~
+0 0 11679
+D5
+~
+~
+0 0 11675
+S
+#11678
+The guest's platform~
+   This platform is used by visiting people for sleep or meditation. It has
+a nice view to the east, showing a sea of trees. The only exit is back west.
+~
+116 0 2
+D3
+~
+~
+0 0 11677
+S
+#11679
+Climbing up a big tree~
+   As you walk up the ladder you see various small platforms randomly
+placed around the stem. Except the platforms you see almost nothing but
+golden leaves all around you. A small suspension bridge leads north to
+another platform and upwards you spot a very big platform.
+~
+116 0 2
+D0
+~
+~
+0 0 11680
+D4
+~
+~
+0 0 11681
+D5
+~
+~
+0 0 11677
+S
+#11680
+A tiny platform~
+   This platform is very small but have a terrific view in all directions
+except south. This platform is used by the rulers of Lorien to view their
+kingdom and to just zip in the beautiful atmosphere of the forest.
+~
+116 0 2
+D2
+~
+~
+0 0 11679
+S
+#11681
+The entrance of the great hall~
+   As you enter the platform you realize that it's not just an ordinary
+platform, it is more like a palace, as big as any hall made on the ground.
+The hall is oval and looks like the deck of a big ship and the stem of the
+huge tree is going through the hall, reaching for heaven. At the left side
+you see two thrones and to the east and north the big hall continues.
+~
+116 0 2
+D0
+~
+~
+0 0 11682
+D1
+~
+~
+0 0 11685
+D3
+~
+~
+0 0 11684
+D5
+~
+~
+0 0 11679
+S
+#11682
+The northern part of the hall~
+   You stand in the great hall of Lorien, illuminated by a mild shimmer. The
+walls are green and the roof golden. The hall is used by all elves in the
+kingdom, they are free to enter the hall as they wish. You may go east, south
+or west.
+~
+116 0 2
+D1
+~
+~
+0 0 11686
+D2
+~
+~
+0 0 11681
+D3
+~
+~
+0 0 11683
+S
+#11683
+In front of Galadriel's throne~
+   You stand in front of Galadriel's throne. The throne is made of the finest
+wood, shimmering like gold. It looks even more beautiful than anything in
+this forest kingdom. A real limb of the great mallorn tree covered with golden
+leaves serves as canopy. To the south you see another throne and the hall
+continues to the east.
+~
+116 0 2
+D1
+~
+~
+0 0 11682
+D2
+~
+~
+0 0 11684
+S
+#11684
+In front of Celeborn's throne~
+   You stand in front of Celeborn's throne. The throne is made of the finest
+wood, shimmering like silver. A real limb of the tree covered with golden
+leaves serves as canopy. To the north you see another throne and to the east
+you see the entrance.
+~
+116 0 2
+D0
+~
+~
+0 0 11683
+D1
+~
+~
+0 0 11681
+S
+#11685
+The south-eastern part of the great hall~
+   You stand in the great hall of Lorien, illuminated by a mild shimmer. The
+walls are green and the roof golden. The hall is used by all elves in the
+kingdom, they are free to enter the hall as they wish. You may go to the
+west or to the north.
+~
+116 0 2
+D0
+~
+~
+0 0 11686
+D3
+~
+~
+0 0 11681
+S
+#11686
+The south-eastern part of the great hall~
+   You stand in the great hall of Lorien, illuminated by a mild shimmer. The
+walls are green and the roof golden. The hall is used by all elves in the
+kingdom, they are free to enter the hall as they wish. You can go south or
+west.
+~
+116 0 2
+D2
+~
+~
+0 0 11685
+D3
+~
+~
+0 0 11682
+S
+#0
+$~

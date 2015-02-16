@@ -1,0 +1,823 @@
+#9800
+General Zediker's Private Quarters~
+A welcoming chamber with a warm roaring fire and comfy sofas everywhere.
+~
+98 0 0
+S
+#9801
+The Great steps of Oberon~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withstand these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9802
+S
+#9802
+Upon the Great Walkway~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9803
+D2
+~
+~
+0 -1 9801
+S
+#9803
+The southern edge of the courtyard~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9807
+D1
+~
+~
+0 -1 9804
+D2
+~
+~
+0 -1 9802
+D3
+~
+~
+0 -1 9805
+S
+#9804
+The south-eastern corner of the courtyard~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9809
+D3
+~
+~
+0 -1 9803
+S
+#9805
+The south-western corner of the courtyard~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9806
+D1
+~
+~
+0 -1 9803
+S
+#9806
+The western edge of the courtyard~
+Music and Art building will be to the west.
+~
+98 0 0
+D0
+~
+~
+0 -1 9812
+D1
+~
+~
+0 -1 9807
+D2
+~
+~
+0 -1 9805
+S
+#9807
+Ancient Courtyard of Oberon~
+Walking towards the center of the city, you glace aoround and are in awe of the beautiful sights that surround the once majestic kingdom of Oberon.
+All around you lag the remains of a legendary city once devoted to the pursuit  of knowledge and beauty.  Fables of a city built with magic have been rumored for centuries.  But the wizard known as Oberon hasn't been seen in over a hundred years.
+~
+98 0 0
+D0
+~
+~
+0 -1 9811
+D1
+~
+~
+0 -1 9809
+D2
+~
+~
+0 -1 9803
+D3
+~
+~
+0 -1 9806
+S
+#9808
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9809
+D2
+~
+~
+0 -1 9801
+S
+#9809
+The eastern edge of the courtyard~
+Library will go the the east.
+~
+98 0 0
+D0
+~
+~
+0 -1 9810
+D2
+~
+~
+0 -1 9804
+D3
+~
+~
+0 -1 9807
+S
+#9810
+The north-eastern corner of the courtyard~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D2
+~
+~
+0 -1 9809
+D3
+~
+~
+0 -1 9811
+S
+#9811
+The northern edge of the courtyard~
+Great hall of Democracy will go in to the north.
+~
+98 0 0
+D1
+~
+~
+0 -1 9810
+D2
+~
+~
+0 -1 9807
+D3
+~
+~
+0 -1 9812
+S
+#9812
+The north-western corner of the courtyard~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D1
+~
+~
+0 -1 9811
+D2
+~
+~
+0 -1 9806
+S
+#9813
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9814
+D1
+~
+~
+0 -1 9812
+D2
+~
+~
+0 -1 9806
+S
+#9814
+A temporary name~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9821
+D2
+~
+~
+0 -1 9813
+S
+#9815
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9819
+D2
+~
+~
+0 -1 9811
+S
+#9816
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D0
+~
+~
+0 -1 9817
+D2
+~
+~
+0 -1 9809
+S
+#9817
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D2
+~
+~
+0 -1 9816
+D3
+~
+~
+0 -1 9818
+S
+#9818
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D1
+~
+~
+0 -1 9817
+D3
+~
+~
+0 -1 9819
+S
+#9819
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D1
+~
+~
+0 -1 9818
+D2
+~
+~
+0 -1 9815
+D3
+~
+~
+0 -1 9820
+S
+#9820
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.
+~
+98 0 0
+D1
+~
+~
+0 -1 9819
+D3
+~
+~
+0 -1 9821
+S
+#9821
+On the ice flats~
+A cold chill blows past your freezing body as you look across what seems to b
+e a never ending frozen tundra.  Nothing but the desolate wasteland of this a
+rctic terrain surrounds you, freezing both your body as well as your soul.  S
+hivering uncomfortably, you wonder what freak of nature could possibly withst
+and these harsh living conditions.  Your heart is filled with a sigh of relief when you notice a change in scenery to the north.
+~
+98 0 0
+D0
+~
+~
+0 -1 9822
+D1
+~
+~
+0 -1 9820
+D2
+~
+~
+0 -1 9814
+S
+#9822
+Along the frozen river~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9823
+D2
+~
+~
+0 -1 9821
+S
+#9823
+On the frozen river~
+A temporary description
+~
+98 0 0
+D2
+~
+~
+0 -1 9822
+D3
+~
+~
+0 -1 9824
+S
+#9824
+Top of the Frozen Falls~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9823
+D5
+~
+~
+0 -1 9825
+S
+#9825
+At the foot of the Frozen Falls~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9826
+S
+#9826
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9827
+D3
+~
+~
+0 -1 9825
+S
+#9827
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9830
+D2
+~
+~
+0 -1 9826
+E
+9830~
+invalid~
+S
+#9828
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9844
+D2
+~
+~
+0 -1 9829
+S
+#9829
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9828
+D2
+~
+~
+0 -1 9830
+S
+#9830
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9829
+D1
+~
+~
+0 -1 9835
+D3
+~
+~
+0 -1 9827
+S
+#9831
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9832
+S
+#9832
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9833
+D3
+~
+~
+0 -1 9831
+S
+#9833
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9834
+D3
+~
+~
+0 -1 9832
+S
+#9834
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9849
+D2
+~
+~
+0 -1 9833
+D3
+~
+~
+0 -1 9835
+S
+#9835
+Inside and icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9834
+D3
+~
+~
+0 -1 9830
+S
+#9836
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9840
+D2
+~
+~
+0 -1 9849
+D3
+~
+~
+0 -1 9837
+S
+#9837
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9836
+D3
+~
+~
+0 -1 9838
+S
+#9838
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9839
+D1
+~
+~
+0 -1 9837
+S
+#9839
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9843
+D2
+~
+~
+0 -1 9838
+S
+#9840
+Inside and icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9841
+D2
+~
+~
+0 -1 9836
+S
+#9841
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D2
+~
+~
+0 -1 9840
+D3
+~
+~
+0 -1 9842
+S
+#9842
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9841
+D3
+~
+~
+0 -1 9843
+S
+#9843
+Inside and icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9842
+D2
+~
+~
+0 -1 9839
+D3
+~
+~
+0 -1 9844
+S
+#9844
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D1
+~
+~
+0 -1 9843
+D2
+~
+~
+0 -1 9828
+S
+#9845
+Secret lair of the Yetti~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9842
+D1
+~
+~
+0 -1 9840
+D2
+~
+~
+0 -1 9837
+D3
+~
+~
+0 -1 9839
+S
+#9846
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9849
+D2
+~
+~
+0 -1 9847
+S
+#9847
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9846
+D2
+~
+~
+0 -1 9848
+S
+#9848
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9847
+D4
+~
+~
+0 -1 9809
+S
+#9849
+Inside an icy cave~
+A temporary description
+~
+98 0 0
+D0
+~
+~
+0 -1 9836
+D2
+~
+~
+0 -1 9846
+D3
+~
+~
+0 -1 9834
+S
+#9899
+A temporary name~
+A temporary description
+~
+98 0 0
+S
+#0
+$~

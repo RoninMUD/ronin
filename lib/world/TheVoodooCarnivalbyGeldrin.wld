@@ -1,0 +1,1311 @@
+#4200
+A Zobop Voodoo Altar~
+   An altar of bloodied chicken heads and mangled chicken feet smeared with red
+brick dust and wreathed in filth lies here. Under it glows a cold stone cross
+of sorts that hums with the malevolent power of those who have "arranged"
+this Wanga.  There is a stench of candle wax, rot mixed with the light scent
+of flowers.
+~
+42 0 2
+D2
+~
+~
+0 -1 4201
+S
+#4201
+entrance to the carnival of unholy wonders~
+   A place where weird meets horrific, the Carnival of Unholy Wonders exists
+for one purpose and one purpose alone.  A large gate made of bones is all
+that stands between you and the carnival.
+~
+42 0 2
+D0
+~
+~
+0 -1 4200
+D2
+~
+gate made of bones~
+1 -1 4202
+S
+#4202
+A Carnival of Unholy Wonders~
+There are candles blowing wildly in the windy gusts that inhabit these
+desolate plains. The candles are wreathed around a giant set of pylons that
+welcome their newest customers in the melee of strange wares and forbidden
+services. You feel very out of place here. There is magic in the air like
+that of the Haitian slums. The magic is Voodoo, and this black Wanga is of
+the Zobop.
+~
+42 0 0
+D0
+a gate made of bones
+~
+gate bones~
+2 -1 4201
+D1
+~
+~
+0 -1 4204
+D2
+~
+~
+0 -1 4203
+S
+#4203
+A Tent in the Carnivale of Unholy Wonders~
+The tent that you find yourself in is just right for your height at its
+fringes and vaulted in the middle with large wooden beams pushing it skyward.
+The tent blows stiffly in the wind of the plains. There is a man standing at
+the other end of the tent, his eyes following you around the room. There are
+signs plastered everywhere on the cloth walls of the tent
+~
+42 8 0
+D0
+~
+~
+0 -1 4202
+S
+#4204
+A Main Path Through the Carnival of Unholy Wonders~
+The Main Path of the Carnival appears at first to be deserted, but as you
+eye the tents all around you, you notice shadows behind the red and
+multi-colored cloths. Eyes are watching you from secret places all about.
+There are strange smells of spice and rot in the winds of the plains. And
+there is a certain magic holding the strange scene together, almost as though
+it would disappear all together with the right enchantment.
+~
+42 0 2
+D0
+~
+~
+0 -1 4205
+D1
+~
+~
+0 -1 4206
+D2
+~
+~
+0 -1 4207
+D3
+~
+~
+0 -1 4202
+S
+#4205
+Dwelling of the Petro Loa (EVIL Spirits) and Their Boko Master~
+A shroud of darkness taunts one's vision to stray in this quivering temple
+of lies and blasphemous magics. A Boko hides in the corner of the room,
+eyeing you with curiosity. His "hot point" controls the Petro Loa floating
+about, but only for a limited period of enchantment. For the Petro Loa crave
+blood, and if their demands are not met, they will claim the Boko and wear
+his skin like a suit until another better husk comes along...
+~
+42 8 0
+D2
+~
+~
+0 -1 4204
+S
+#4206
+A Main Path Through the Carnivale of Unholy Wonders~
+The Main Path of the Carnival appears at first to be deserted, but as you
+eye the tents all around you, you notice shadows behind the red and
+multi-colored cloths. Eyes are watching you from secret places all about.
+There are strange smells of spice and rot in the winds of the plains. And
+there is a certain magic holding the strange scene together, almost as though
+it would disappear all together with the right enchantment.
+~
+42 0 2
+D0
+~
+~
+0 -1 4208
+D1
+~
+~
+0 -1 4209
+D2
+~
+~
+0 -1 4210
+D3
+~
+~
+0 -1 4204
+S
+#4207
+The Hut of a Bush Priest~
+The Bush Priest is a teacher of Truths in the heart of Paganism. His practices
+are strange and mystical, but effective for producing curatives and forces of
+protection. This meager hut is full of strange and wonderful items and LOTS of gold.
+~
+42 8 0
+D0
+~
+~
+0 -1 4204
+S
+#4208
+A Hungan's Library of Potions and Incantations~
+Though it is little more than a hut, its numerous shelves and boxes are
+filled to the brim with potions and spices and pills and books and parchments
+of all kinds. There is a magic circle inscribed in chalk on the
+stone floors of this half stone hut. And there are shrunken heads and animal
+hides hanging from the walls, along with long and dirty roots and wedges of
+strange dried foods. All in all, you are horified by the scene. But curious
+as well...
+~
+42 8 0
+D2
+~
+~
+0 -1 4206
+S
+#4209
+A Main Path Through the Carnival of Unholy Wonders~
+The Main Path of the Carnival appears at first to be deserted, but as you
+eye the tents all around you, you notice shadows behind the red and
+multi-colored cloths. Eyes are watching you from secret places all about.
+There are strange smells of spice and rot in the winds of the plains. And
+there is a certain magic holding the strange scene together, almost as though
+it would disappear all together with the right enchantment.
+~
+42 0 2
+D0
+~
+~
+0 -1 4211
+D1
+~
+~
+0 -1 4212
+D2
+~
+~
+0 -1 4213
+D3
+~
+~
+0 -1 4206
+S
+#4210
+A Hastily Built Voodoo Bagi~
+This is where the Zobop come to pay homage to the Loa. The building was
+apparently built centuries ago and was presumably abandoned, but the Zobop
+rebuilt much of this room's damaged support beams and brick and mortar walls.
+Now there is a giant altar in the room, its stone surface concealed by
+a dark gelatinous ooze left behind by numerous sacrifices. The copper stench 
+of blood is in the air.
+~
+42 8 0
+D0
+~
+~
+0 -1 4206
+S
+#4211
+A Voodoo Hungan's Magic Shop~
+This is the residence of the Hungan and Lesser Diety, Papa Midnight, who
+serves the Loa by serving both good and evil entities with his services in
+magic. Papa Midnight is a great Bokor in some respects, having learned the
+methods of Pwen Achte in order that he might learn the secret and forbidden
+magics of the ancients. The room is filled with all sorts of magical symbols
+- carved into the walls and the furniture. There are also many scraps of
+paper with spells and incantations littering the floor. And there are messy
+masses of magically enchanted items, most assuredly for sale, as is
+everything else.
+~
+42 8 0
+D2
+~
+~
+0 -1 4209
+S
+#4212
+A Main Path Through the Carnival of Unholy Wonders~
+The Main Path of the Carnival appears at first to be deserted, but as you
+eye the tents all around you, you notice shadows behind the red and
+multi-colored cloths. Eyes are watching you from secret places all about.
+There are strange smells of spice and rot in the winds of the plains. And
+there is a certain magic holding the strange scene together, almost as though
+it would disappear all together with the right enchantment.
+~
+42 0 2
+D0
+~
+~
+0 -1 4214
+D1
+~
+~
+0 -1 4216
+D2
+~
+~
+0 -1 4215
+D3
+~
+~
+0 -1 4209
+S
+#4213
+The Store Front of Legba-Petro, Grand Master of Charms~
+There is a Spiritual and Cosmic Battle being waged. Forces of balance like
+Legba-Petro provide charms and specialty armor to keep the balance between
+warring evil and wrathful good. Before you resides the path to equality - a
+shop where all kinds and types can gain protection for a price....
+~
+42 8 0
+D0
+~
+~
+0 -1 4209
+S
+#4214
+A Haitian (Vodou) Food Market~
+Here before you stands a vast produce and meat market, its shelves and boxes
+and various displays filled to the brim with fruits and vegetables and
+poultry and pork, among its many choices. You feel your stomach growl as the
+woman at the front counter slices some bananas up and throws them in a frier.
+You wonder what else could be in the back room behind the counter, but the
+woman keeps an eye locked on your every move, and she DOESN'T want you back
+there. You can smell spices and raw meat in the air as the wind breezes
+through. And there are strange jars of syrup on some of the shelves that
+greatly interest you...
+~
+42 8 0
+D2
+~
+~
+0 -1 4212
+S
+#4215
+Sully Elly's Voodoo pub~
+   The one room Tavern is little more than a tent put up by the greedy owner
+of the Carnival. You hear that in all their money-grubbing wisdom, the less than
+legitimate management put spells in some of the foul concoctions served to
+gain control over its patrons. Not all of the drinks are of an evil
+intention, however. Some might even be considered beneficial to one's
+spiritual and physical health.
+~
+42 8 0
+D0
+~
+~
+0 -1 4212
+S
+#4216
+A Main Path Through the Carnivale of Unholy Wonders~
+The Main Path of the Carnival appears at first to be deserted, but as you
+eye the tents all around you, you notice shadows behind the red and
+multi-colored cloths. Eyes are watching you from secret places all about.
+There are strange smells of spice and rot in the winds of the plains. And
+there is a certain magic holding the strange scene together, almost as though
+it would disappear all together with the right enchantment.
+~
+42 0 2
+D0
+~
+~
+0 -1 4218
+D2
+~
+~
+0 -1 4217
+D3
+~
+~
+0 -1 4212
+S
+#4217
+inside a blue and yellow striped tent~
+Weapons of Magic are clearly this shop keepers language. He is the brother
+of the Voodoo Carnival Gatekeeper. Some would say that they are twins, 
+based on their descriptions alone. But this vendor sells more than zombie pets and
+keys and the like. The tent is filled with an arsenal of weaponry
+that could only be created by a powerful voodoo Hungan or the like. There are
+strange weapons lying all around in plain sight. But the vendor 
+keeps one eye on you at all times.
+~
+42 8 0
+D0
+~
+~
+0 -1 4216
+S
+#4218
+A Main Path Through the Carnival of Unholy Wonders~
+The Main Path of the Carnival appears at first to be deserted, but as you
+eye the tents all around you, you notice shadows behind the red and
+multi-colored cloths. Eyes are watching you from secret places all about.
+There are strange smells of spice and rot in the winds of the plains. And
+there is a certain magic holding the strange scene together, almost as though
+it would disappear all together with the right enchantment.
+~
+42 0 2
+D0
+~
+~
+0 -1 4219
+D1
+~
+~
+0 -1 4220
+D2
+~
+~
+0 -1 4216
+S
+#4219
+a Voodoo Gaming Tent~
+There are various games all over this small tent. They all appear to be 
+automated strange magical machines. You wonder if anyone has ever really
+won a game here. With this in mind, you decide not to play any games today.
+~
+42 8 0
+D2
+~
+~
+0 -1 4218
+S
+#4220
+A Bend in the Main Path Through the Carnival~
+The Main Path of the Carnival appears at first to be deserted, but as you
+eye the tents all around you, you notice shadows behind the red and
+multi-colored cloths. Eyes are watching you from secret places all about.
+There are strange smells of spice and rot in the winds of the plains. And
+there is a certain magic holding the strange scene together, almost as though
+it would disappear all together with the right enchantment.
+~
+42 4 2
+D0
+~
+~
+0 -1 4221
+D1
+~
+~
+0 -1 4222
+D2
+~
+~
+0 -1 4223
+D3
+~
+~
+0 -1 4218
+S
+#4221
+A Baka's Golgotha~
+
+
+You are dead as Hell!
+
+
+or at least that was your first thought after entering the room.
+Numerous bodies are strewn across the earthen floor like broken
+ragdolls. And their mouths hang open in screams that will never be heard
+again. This is the Golgotha of the EVIL Baka Spirit. The Baka need human
+blood to survive. You notice that the fountain in the Golgotha is filled to
+the brim with blood and guts. You wonder with great fear, "Where is the Baka?!"
+~
+42 9 0
+D2
+~
+~
+0 -1 4220
+S
+#4222
+The Voodoo Alter of Loa Ogu Bodagris~
+The alter is laden with the mutilated corpses of various animal sacrifices. 
+You feel an ancient and profane magic pulsing in the air around you,
+and with each breath you take, you feel as though your life was being
+squeezed - as if your very soul was being pushed up and out of your body for
+the eyes of a god to behold.  This strange alter must server some kind of 
+purpose.  I wonder what it does?
+~
+42 0 2
+D3
+~
+~
+0 -1 4220
+S
+#4223
+A Main Path Through the Carnival of Unholy Wonders~
+   The Main Path of the Carnival appears at first to be deserted, but as you
+eye the tents all around you, you notice shadows behind the red and
+multi-colored cloths. The shadows here seem more menacing than they did just
+moments ago. Eyes are watching you from secret places all about.
+There are strange smells of spice and rot in the winds of the plains. And
+there is a certain magic holding the strange scene together, almost as though
+it would disappear all together with the right enchantment.
+~
+42 0 2
+D0
+~
+~
+0 -1 4220
+D2
+~
+~
+0 -1 4224
+S
+#4224
+A Western bend in the Main Path~
+   The Main Path seems less peaceful than before.  You here strange noises 
+all around, and the shadows around the tents no longer seem natural.  
+The multi-colored cloths that make up the tents seem to be less stable,
+they alter slightly under your gaze. The strange smells of spice and rot
+seem to be more rot than spice, and the slight winds of the plains feel 
+much colder all of a sudden. There is a certain magic holding the strange
+scene together, if only it would dissipate.
+~
+42 0 2
+D0
+~
+~
+0 -1 4223
+D3
+~
+~
+0 -1 4225
+S
+#4225
+a wide path through the Unholy Carnival~
+   The Main Path seems less peaceful than before.  You here strange noises 
+all around, and the shadows around the tents no longer seem natural.  
+The multi-colored cloths that make up the tents seem to be less stable,
+they shift slightly, as do the shadows all around you. The horrible 
+smell of something rotting is much worse, and it seems to be all around
+you. The wind is stronger and colder here. You notice a dark alley to
+the north.
+~
+42 0 2
+D0
+~
+~
+0 -1 4226
+D1
+~
+~
+0 -1 4224
+D2
+~
+~
+0 -1 4228
+D3
+~
+~
+0 -1 4230
+S
+#4226
+an alley between two tents~
+   The Alley is VERY Dark and Lonely, the cloth walls of the tents chatter as
+they brush against each other in the icy wind. The unnatural shadows all 
+around make you uneasy. They don't look like friendly shadows. And there is a
+certain quiet about this Alley, You hear no sound at all from the North.
+~
+42 5 2
+D0
+~
+~
+0 -1 4227
+D2
+~
+~
+0 -1 4225
+S
+#4227
+the end of the alley~
+   The end of the alley is Dark but you no longer feel alone. Large shadows 
+are moving all around you.  The cloth walls of the tents are silent as 
+they ripple in the icy wind. It's as though someone has magically sound
+proofed the area to prevent any noise from rising to the winds and 
+eventually to the rest of the Carnival.
+~
+42 1064961 2
+D2
+~
+~
+0 -1 4226
+S
+#4228
+a narrow path between the tents~
+   The path is much narrower here. To the south you see the entrance to a mid
+sized tent deep within the shadows. The world around you still seems 
+unstable and you notice small changes all around you.
+~
+42 0 2
+D0
+~
+~
+0 -1 4225
+D2
+~
+~
+0 -1 4229
+S
+#4229
+a Voodoo Carnival freak show~
+   They are the fringes of society that we only see in Carnivals or in the
+record books. The crowd throws things at them and shouts at them, "FREAK!" as
+though this might affirm the crowd's very own existence. But instead, it
+reinforces the cruel nature of mankind - These supposed freaks are really
+quite intelligent and potentially beneficial members of society. For it is
+their knowledge of mankind's evil nature that makes them worthy of something
+more. But, instead, they are put on display for the amusment of others. Some
+None of them seem to enjoy the humiliation...
+~
+42 8 0
+D0
+~
+~
+0 -1 4228
+S
+#4230
+a wide path through the Unholy Carnival~
+   The Main Path seems less peaceful than before.  You here strange noises 
+all around, and the shadows around the tents no longer seem natural.  
+The multi-colored cloths that make up the tents seem to be less stable,
+they shift slightly, as do the shadows all around you. The horrible 
+smell of something rotting is much worse, and it seems to be all around
+you. The wind is stronger and colder here.
+~
+42 0 2
+D0
+~
+~
+0 -1 4231
+D1
+~
+~
+0 -1 4225
+D2
+~
+~
+0 -1 4233
+D3
+~
+~
+0 -1 4236
+S
+#4231
+a side path through the carnival~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4232
+D2
+~
+~
+0 -1 4230
+S
+#4232
+a fire breather's tent~
+   You notice scorch marks on all sides of the tent that you are now within,
+and you wonder to yourself, "How many tents have been burned down in this;fashion?" The Voodoo Fire Breather sees your look of concern and he grins at
+you real big. He seems to be treating the fire like a pet! His Hungan magics
+may be powerful, but can they stop imminent death by burning!? The Fire Breather
+seems to think that death is a part of his work, from what you can gather. So
+you take a seat and enjoy the show. Perhaps the fire will claim 
+nothing this day...
+~
+42 8 0
+D2
+~
+~
+0 -1 4231
+S
+#4233
+a side path through the carnival~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4230
+D1
+~
+~
+0 -1 4234
+S
+#4234
+a side path through the carnival~
+A temporary description
+~
+42 0 2
+D2
+~
+~
+0 -1 4235
+D3
+~
+~
+0 -1 4233
+S
+#4235
+a snake handler's tent~
+   You stand within a tent reinforced with chain links and chicken wire - A
+cage is really the word for this place. Huge pythons slither to and fro,
+bunching up around your feet as you creep warily towards the female snake
+handler at the center of the tent. She seems to have her hands full with some
+sort of snake catching, or perhaps snake killing device. Pythons are wrapped
+all around her neck and legs as she sings some sort of abrasive song that 
+seems to be attracting the snakes. The whole scene is quite an abomination
+for the snake haters of the world. But for those who do not mind the serpent
+persuasions, its a sublime scene of acute fascination...
+~
+42 8 0
+D0
+~
+~
+0 -1 4234
+S
+#4236
+a wide path through the Unholy Carnival~
+   The Main Path seems less peaceful than before.  You here strange noises 
+all around, and the shadows around the tents no longer seem natural.  
+The multi-colored cloths that make up the tents seem to be less stable,
+they shift slightly, as do the shadows all around you. The horrible 
+smell of something rotting is much worse, and it seems to be all around
+you. You see a rusted gate to the north.
+~
+42 0 2
+D0
+a rusted gate
+~
+rusted gate~
+1 -1 4237
+D1
+~
+~
+0 -1 4230
+D2
+~
+~
+0 -1 4239
+D3
+~
+~
+0 -1 4250
+S
+#4237
+a fenced in space between the tents~
+There are high chain link fences running the length and breadth of this
+small dirt patch between the tents. At first, you wonder what these walls could be
+fencing in. Then you see the Werewolves eyeing you eagerly from deep shadows 
+along the edges of the fence. They seem hungry as they glare at you. But something,
+or someone, is controlling their ability to kill. Perhaps it is the Bokor 
+management of the carnival somehow keeping them at bay, or maybe the female variety of
+werewolf is just more benign than its alpha male counterpart. Still, you get a
+chill down your spine as you imagine them tearing you limb from limb and licking
+the skin and meat off of your bones. You better keep moving...
+~
+42 0 2
+D0
+a rusted gate
+~
+rusted gate~
+1 -1 4238
+D2
+a rusted gate
+~
+rusted gate~
+1 -1 4236
+S
+#4238
+a heavily reinforced cage~
+You notice that this dead end in the Carnival appears to be covered over in
+chicken wire and chain links that rise from beneath the ground and up into
+the air, some fifteen or more feet. There is a rusted gate to the south of you,
+which was not locked. You find it odd that the Bokor management of the
+Carnival would create this "Cage" of sorts and then leave it more or less
+open to the public. Could this be some sort of trap set up for the all too
+curious adventurer?
+~
+42 0 0
+D2
+a rusted gate
+~
+rusted gate~
+1 -1 4237
+S
+#4239
+a strange barrier~
+A temporary description
+~
+42 132 2
+D0
+~
+~
+0 -1 4236
+D1
+~
+~
+0 -1 4240
+S
+#4240
+outside the barrier~
+A temporary description
+~
+42 0 2
+D2
+~
+~
+0 -1 4241
+D3
+~
+~
+0 -1 4239
+S
+#4241
+a small path through the open field~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4240
+D2
+~
+~
+0 -1 4242
+S
+#4242
+a small path through the open field~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4241
+D1
+~
+~
+0 -1 4243
+D2
+~
+~
+0 -1 4247
+S
+#4243
+a small path through the open field~
+A temporary description
+~
+42 0 2
+D3
+~
+~
+0 -1 4242
+S
+#4244
+A temporary name~
+A temporary description
+~
+42 0 0
+D1
+~
+~
+0 -1 4245
+S
+#4245
+A temporary name~
+A temporary description
+~
+42 0 0
+D0
+~
+~
+0 -1 4246
+D3
+~
+~
+0 -1 4244
+S
+#4246
+A temporary name~
+A temporary description
+~
+42 0 0
+D2
+~
+~
+0 -1 4245
+S
+#4247
+approaching a small grove of alder trees~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4242
+D3
+~
+~
+0 -1 4248
+S
+#4248
+a small grove of alder~
+A temporary description
+~
+42 0 3
+D1
+~
+~
+0 -1 4247
+D2
+~
+~
+0 -1 4249
+S
+#4249
+the missionary camp~
+A temporary description
+~
+42 0 3
+D0
+~
+~
+0 -1 4248
+S
+#4250
+a wide path through the Unholy Carnival~
+   The Main Path seems less peaceful than before.  You here strange noises 
+all around, and the shadows around the tents no longer seem natural.  
+The multi-colored cloths that make up the tents seem to be less stable,
+they shift slightly, as do the shadows all around you. The horrible 
+smell of something rotting is much worse, and it seems to be all around
+you.
+~
+42 0 2
+D0
+~
+~
+0 -1 4251
+D1
+~
+~
+0 -1 4236
+D2
+~
+~
+0 -1 4253
+D3
+~
+~
+0 -1 4257
+S
+#4251
+the path to the fortune teller~
+   You approach the outer elaborations of a tent that is marked with various
+runes of various sizes and emphasis. There is a sign that
+marks the lair as being that of a Fortune Teller. You can smell incense
+burning in the air. And from within the tent, you hear the sound of a woman
+chanting in low and muffled voice. There are shadows moving in the tent
+with the shadow of the woman.
+~
+42 0 2
+D0
+tent flap
+~
+flap~
+1 -1 4252
+D2
+~
+~
+0 -1 4250
+S
+#4252
+the tent of the voodoo fortune teller~
+   As you enter the tent, you wonder to yourself, "What will the Voodoo Fortune
+Teller say?" The interior of the tent is dark, but you can make out the thin 
+forms of what appear to be giant, walking Tarot Cards. And in the middle of 
+the chaos, a woman throws her hands in the air, her eyes shut tightly and 
+her mouth agape as though she were dreaming. The speaks in tongues. There 
+is a crystal ball in front of her, swirling with strange and foggy lights...
+~
+42 8 0
+D2
+tent flap
+~
+flap~
+1 -1 4251
+S
+#4253
+a side path in the carnival~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4250
+D2
+~
+~
+0 -1 4254
+S
+#4254
+a bend in the small path between the tents~
+A temporary description
+~
+42 4 2
+D0
+~
+~
+0 -1 4253
+D3
+~
+~
+0 -1 4255
+S
+#4255
+a small tomb hidden between the tents~
+   It is a tomb of sorts enclosed by the tents on three sides. From the sheer size and
+elaboration of its marble walls, you figure that someone important must be
+buried within. There are statues of cherubs and ferocious looking demons carved from
+what looks like ebony stone. You notice a strong mildew smell creeping up from the
+dirt, as though something were still rotting below. There is a sign on the open door
+of the tomb that reads, "Management Resides Here. A Good Boss is a Dead Boss!" You 
+wonder what that means as you eye the reanimated guardian of the tomb with suspicion.
+~
+42 0 2
+D1
+~
+~
+0 -1 4254
+D5
+~
+~
+0 -1 4256
+S
+#4256
+the tomb below the carnival~
+   There are rows of dusty book on shelves lining the interior of the tomb - the
+magic incantations and Hoodoo spells of the Bokor, no doubt. And there is an
+OLD smell of rot within the confines of the tomb. A skeleton lies on the floor
+in the middle of the tomb. Rotten bits of flesh still cling to some of the
+bones. The skeleton seems different from everything else here in the carnival.
+Its shadows seem real.. its color and texture consistent. What could this mean?
+~
+42 8 0
+D4
+~
+~
+0 -1 4255
+S
+#4257
+a path through the Unholy Carnival~
+A temporary description
+~
+42 0 2
+D1
+~
+~
+0 -1 4250
+D2
+~
+~
+0 -1 4258
+S
+#4258
+a path leading away from the carnival~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4257
+D3
+~
+~
+0 -1 4259
+S
+#4259
+a path at the outer edge of the carnival~
+A temporary description
+~
+42 0 2
+D1
+~
+~
+0 -1 4258
+D3
+~
+~
+0 -1 4260
+S
+#4260
+a path through the dead grass~
+A temporary description
+~
+42 0 2
+D1
+~
+~
+0 -1 4259
+D2
+~
+~
+0 -1 4261
+S
+#4261
+a path through the dead grass~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4260
+D1
+~
+~
+0 -1 4262
+S
+#4262
+a winding path through the dead grass~
+A temporary description
+~
+42 0 2
+D2
+~
+~
+0 -1 4263
+D3
+~
+~
+0 -1 4261
+S
+#4263
+a bend in the path through the dead grass~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4262
+D3
+~
+~
+0 -1 4264
+S
+#4264
+a path through the dead grass~
+A temporary description
+~
+42 0 2
+D1
+~
+~
+0 -1 4263
+D3
+~
+~
+0 -1 4265
+S
+#4265
+a large boulder in the path~
+A temporary description
+~
+42 0 2
+D0
+~
+~
+0 -1 4266
+D1
+~
+~
+0 -1 4264
+S
+#4266
+the rocky hiding place~
+   Jagged rocks are scattered everywhere. There is a large pile of rocks that
+someone seems to be using to try to conceal a small hole that leads down
+into the earth.  The hole is dark, but it looks like its probably filled
+with razor sharp stones. Perhaps if you move things around a little you
+might be able to squeeze your way in.
+~
+42 0 2
+D2
+~
+~
+0 -1 4265
+D5
+hole
+~
+hole~
+9 -1 4267
+S
+#4267
+squeezing through the entrance~
+You scrape yourself up on the sharp rocks as you frantically struggle
+to fight your way through the tiny opening.  Perhaps this wasnt a 
+very good idea after all.
+~
+42 257 0
+D0
+~
+~
+0 -1 4268
+D4
+hole
+~
+hole~
+9 -1 4266
+S
+#4268
+the inside the small cave~
+   There are cave paintings here, depicting great battles in an ocean that may
+very well have covered these lands so long ago. The paintings show giant
+ships crashing into one another, and a mountain in the distance, belching
+lava and ash and smoke. What does all of this mean?
+~
+42 5 0
+D1
+~
+~
+0 -1 4269
+D2
+~
+~
+0 -1 4267
+S
+#4269
+the rocky cavern~
+   The walls of the cavern are rather jagged. Sharp points stick threaten
+to impale you at every turn.  The ceiling is not very high in here even
+though this part of the cavern is somewhat larger than the rest. 
+Glistening with jewels and minerals of all kinds the walls tempt you to
+approach. The floor is only slightly less jagged as the walls, but much
+less interesting.  It is quite difficult to walk here.
+~
+42 1 0
+D0
+~
+~
+0 -1 4271
+D1
+~
+~
+0 -1 4270
+D3
+~
+~
+0 -1 4268
+S
+#4270
+the rocky cavern~
+   The walls of the cavern are rather jagged. Sharp points stick threaten
+to impale you at every turn.  The ceiling is not very high in here even
+though this part of the cavern is somewhat larger than the rest. 
+Glistening with jewels and minerals of all kinds the walls tempt you to
+approach. The floor is only slightly less jagged as the walls, but much
+less interesting.  It is quite difficult to walk here.
+~
+42 1 0
+D0
+~
+~
+0 -1 4272
+D3
+~
+~
+0 -1 4269
+S
+#4271
+the rocky cavern~
+   The walls of the cavern are rather jagged. Sharp points stick threaten
+to impale you at every turn.  The ceiling is not very high in here even
+though this part of the cavern is somewhat larger than the rest. 
+Glistening with jewels and minerals of all kinds the walls tempt you to
+approach. The floor is only slightly less jagged as the walls, but much
+less interesting.  It is quite difficult to walk here.  You notice 
+a small alcove to the west. It might be possable to get to it in one peice.
+~
+42 1 0
+D1
+~
+~
+0 -1 4272
+D2
+~
+~
+0 -1 4269
+D3
+~
+~
+0 -1 4273
+S
+#4272
+the rocky cavern~
+   The walls of the cavern are rather jagged. Sharp points stick threaten
+to impale you at every turn.  The ceiling is not very high in here even
+though this part of the cavern is somewhat larger than the rest. 
+Glistening with jewels and minerals of all kinds the walls tempt you to
+approach. The floor is only slightly less jagged as the walls, but much
+less interesting.  It is quite difficult to walk here.
+~
+42 1 0
+D2
+~
+~
+0 -1 4270
+D3
+~
+~
+0 -1 4271
+S
+#4273
+a small alcove in the cavern~
+A temporary description
+~
+42 1 0
+D1
+~
+~
+0 -1 4271
+D5
+~
+~
+0 -1 4274
+S
+#4274
+the hideout of Lilith Papa Loa~
+This is the secret hide out of the infamous Lilith Papa Loa, EVIL Murderer and
+Robber of the Zobops. Her Lair is not much to speak about. There are a few
+women's magazines in the corner of the room, as well as a pit dug for
+toiletry and a stream of water in which to shower. Everything seems to 
+drain through a small crack in the rocks.
+~
+42 1 0
+D4
+~
+~
+0 -1 4273
+E
+crack~
+the drainage crack is much too small to climb into, not that you would 
+want to.. it really is quite disgusting.
+~
+S
+#4299
+A temporary name~
+A temporary description
+~
+42 0 0
+S
+#0
+$~

@@ -1,0 +1,191 @@
+#100
+small mushroom~
+A small mushroom~
+A delicious mushroom is here on the ground.
+~
+~
+19 0 1
+8 0 0 0
+2 50 25
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#101
+glasses~
+A pair of glasses~
+An odd pair of glasses has been left here.
+~
+~
+9 1 17
+0 0 0 0
+2 500 250
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -1
+A
+4 1
+#102
+sprite herb pouch bag~
+A Herb Pouch~
+A small pouch has been left here.
+~
+~
+15 0 1
+100 0 0 0
+2 50 25
+50
+E
+herb pouch~
+This pouch looks small, but it can hold a lot.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#103
+hammer small~
+a small hammer~
+A small hammer lies here.~
+~
+5 0 8193
+0 2 6 7
+2 2000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#104
+small stethoscope~
+A small stethoscope~
+A small stethoscope is lying on the ground.~
+~
+9 1 5
+0 0 0 0
+2 500 250
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 1
+A
+17 -2
+#105
+pink potion~
+A pink potion~
+A pink potion is barely visible on the ground
+~
+~
+10 0 1
+6 43 14 -1
+2 500 250
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#106
+wand~
+A small wand~
+A small wand lies on the ground.
+~
+~
+3 0 16385
+5 1 1 5
+2 500 250
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#107
+key tiny~
+A tiny key~
+A tiny key is lying on the ground.
+~
+~
+18 0 1
+2 0 0 0
+2 50 25
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#108
+small well~
+a small well~
+A small well is here.~
+~
+17 0 0
+50 50 0 0
+500 3000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#109
+key small iron~
+A small iron key~
+A small iron key is here.~
+This is a small key, I wonder what is opens?
+~
+18 0 1
+2 0 0 0
+2 50 25
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

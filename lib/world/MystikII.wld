@@ -1,0 +1,2042 @@
+#17500
+`bIn Front of the Abbey's Gate`h~
+  This Abbey looks more like a fortress than a religious retreat. 
+Considering the steep, treacherous road and the massive gates and 
+walls, it can be assumed that these fervent believers will enjoy the
+fruit of religious freedom for some time to come. 
+  The massive gates swing wide at your approach.
+~
+175 0 0
+D0
+~
+~
+0 -1 17501
+D2
+~
+~
+0 -1 17615
+S
+#17501
+`bInside the Gate`h~
+  You are standing in an immaculate courtyard. As you look around the
+feeling that this is actually a fortress lessens. There are no siege 
+engines evident, as would be expected in a military stronghold. 
+Instead, there is a well-tended herb garden on the eastern side of 
+the courtyard and a small smithy on the western side. To the north 
+is the entrance to the Keep, err Abbey, proper.
+~
+175 0 0
+D0
+~
+~
+0 -1 17502
+D1
+~
+~
+0 -1 17503
+D2
+~
+~
+0 -1 17500
+D3
+~
+~
+0 -1 17504
+S
+#17502
+`bBefore the Main Doors`h~
+  This place assails the mind with conflicting impressions. This 
+place looks like a fortress, but doesn't feel like one. There is an 
+almost tangible essence of holiness permeating the place, but any 
+fool could see that a bunch of old men and boys could hold this place
+against an army. Another glance at the walls and the fool could 
+observe that a bunch of old men and boys armed with slings and using 
+table legs as clubs could hold this place forever. 
+  The door you are standing before is made of thick oak planks bound 
+with thick iron bands. This door looks as if it has been in use for
+centuries.
+~
+175 0 0
+D0
+~
+~
+0 -1 17509
+D2
+~
+~
+0 -1 17501
+S
+#17503
+`bEastern Courtyard`h~
+  This side of the courtyard has been converted into an herb garden. 
+Only about half of the plants in this garden are identifiable. The 
+others are varieties not normally found in this area. There is a path
+through the garden, leading south to a tower built into the wall.
+~
+175 0 0
+D2
+~
+~
+0 -1 17505
+D3
+~
+~
+0 -1 17501
+S
+#17504
+`bWestern Courtyard`h~
+  The western side of the courtyard has been converted into an 
+open-air smithy. This shop seems to be capable of making anything 
+from nails to Great Swords, making it the most versatile shop you've
+seen outside of Midgaard. The smith is a burly monk, who seems to 
+derive great satisfaction if hammering a plain chunk of steel into a 
+metal object that would be valued by its usefulness. To the south is 
+a tower built into the wall and to the east is the central courtyard. 
+~
+175 0 0
+D1
+~
+~
+0 -1 17501
+D2
+~
+~
+0 -1 17506
+S
+#17505
+`bEastern Gate TowerAt the Foot of a Cliff~
+  This tower is full of sacks. Closer examination reveals the sacks 
+to be full of various types of grains. On the south wall is an 
+interesting feature. It looks like a large iron bowl suspended in the
+air about knee height, by three cables. Looking up, you see a hole in
+the ceiling and the cables going through the hole to the room above. 
+There is a ladder going up to a trapdoor in the ceiling.
+~
+175 8 0
+D0
+~
+~
+0 -1 17503
+D4
+~
+~
+0 -1 17507
+S
+#17506
+`bWestern Gate Tower~
+  This tower is being used as a storehouse for the necessities for 
+running a smithy.  There are ingots of different metals, extra 
+hammers and tongs, and a bin full of coal in sight. On the south 
+wall is an interesting feature. It looks like a large iron bowl 
+suspended in the air about knee height by three cables. Looking up, 
+you see a hole in the ceiling and the cables going through the hole 
+to the room above. There is a ladder going up to a trapdoor in the 
+ceiling.
+~
+175 8 0
+D0
+~
+~
+0 -1 17504
+D4
+~
+~
+0 -1 17508
+S
+#17507
+`bAtop the Gate Tower~
+ You are standing on the roof of the tower. There is a small 
+building up here that you didn't notice from the ground. This 
+building is too small for a person to squeeze into. There are huge 
+iron rings imbedded into the stone of the tower, also. These rings 
+look to be tie-downs for siege engines. Perhaps this place was once a 
+fortress, after all. Looking west you see the top of the other tower 
+with a similar building upon it. 
+  There is a man standing by the edge, gazing south down the trail.
+~
+175 8 0
+D5
+~
+~
+0 -1 17505
+S
+#17508
+`bAtop the Gate Tower~
+ You are standing on the roof of the tower. There is a small building
+up here, that you didn't notice from the ground. This building is too
+small for a person to squeeze into. There are huge iron rings 
+imbedded into the stone of the tower, also. These rings look to be 
+tie-downs for siege engines. Perhaps this place was once a fortress, 
+after all. Looking east you see the top of the other tower with a 
+similar building upon it. 
+Standing on the other tower is a man, gazing south towards the trail 
+below.
+~
+175 8 0
+D5
+~
+~
+0 -1 17506
+S
+#17509
+`bThe Main Hall~
+  This hall is the epitome of simplicity. Whoever the monks are, they
+seem to be satisfied with the simple pleasures that life has to 
+offer. The tapestries covering these walls are made of an unadorned, 
+coarse, brown cloth. To the north is the entrance to the Abbey's 
+temple. Hallways extend both east and west.
+~
+175 8 0
+D0
+~
+~
+0 -1 17510
+D1
+~
+~
+0 -1 17511
+D2
+~
+~
+0 -1 17502
+D3
+~
+~
+0 -1 17512
+S
+#17510
+`bThe Temple~
+The decorators of this temple relied on the beauty of simple 
+workmanship instead of the cost of expensive materials. This gives 
+the temple a beauty that touches the soul, as well as the eyes. You 
+see a small door behind the Altar. Standing in front of that door is 
+a temple guard. From the way he is looking at you, you doubt if 
+you'll be invited inside for Tea.
+~
+175 8 0
+D0
+~
+door~
+1 -1 17517
+D2
+~
+~
+0 -1 17509
+S
+#17511
+`bEastern Hallway~
+  This rough stone hallway extends east from the main hall. The walls
+are cracked from years of supporting this secure fortress. You notice
+that though this place is old, it is extremely clean. Further to the 
+east the hallway turns towards the north.
+~
+175 8 0
+D1
+~
+~
+0 -1 17513
+D3
+~
+~
+0 -1 17509
+S
+#17512
+`bWestern Hallway~
+  This unadorned hallway extends west from the main hall. The 
+flagstones are well worn along this area from years of constant 
+traffic. Further west this hallway comes to an abrupt end at a door.
+~
+175 8 0
+D1
+~
+~
+0 -1 17509
+D3
+~
+~
+0 -1 17514
+S
+#17513
+`bA Bend in the Hallway~
+    The hallway extends both west and north from this point. To the 
+east is a set of stairs leading up into the darkness above. The gray 
+stones that make up the walls of this wide, bare hallway are cracked 
+with age. This structure must be centuries old.
+~
+175 8 0
+D0
+~
+~
+0 -1 17520
+D1
+~
+~
+0 -1 17515
+D3
+~
+~
+0 -1 17511
+S
+#17514
+`bEnd of the Hallway~
+  The western hallway ends suddenly, here. Looking around, you see 
+doors to the north and west. Both doors look as if the wood could
+petrify at any moment from sheer age.
+~
+175 8 0
+D0
+~
+~
+0 -1 17518
+D1
+~
+~
+0 -1 17512
+D3
+~
+door~
+1 -1 17516
+S
+#17515
+`bAt the Bottom of a Long Stair~
+  These rough-hewn steps lead up into the unknown darkness, above. 
+The light from the torches below barely illuminate these worn stone
+steps to any degree of safety. The stones that make up the steps have
+had a groove worn into them by countless feet traversing them over 
+the centuries.
+~
+175 8 0
+D3
+~
+~
+0 -1 17513
+D4
+~
+~
+0 -1 17534
+S
+#17516
+`bStairway Leading Down~
+These well-worn steps lead down into the stone below the Abbey. 
+There is a soft glow coming from the room below. The walls of this 
+stairwell seem to be cut directly from the stone of the mountain that
+this Abbey uses as a foundation.
+~
+175 8 0
+D1
+~
+door~
+1 -1 17514
+D5
+~
+~
+0 -1 17537
+S
+#17517
+`bAbbot's Sanctum~
+  This room, though not as simple as the rest of the Abbey, is 
+virtually impoverished when compared to other sanctums of religious 
+figures of the same rank. The tapestries that cover the walls in this
+holy room depict various religious rites used in the worship of the 
+patron Deity of this Abby. The Abbot steps around his desk to greet 
+you.
+~
+175 8 0
+D2
+~
+door~
+1 -1 17510
+S
+#17518
+`bDining Hall~
+  This room has several tables and benches arrayed in neat rows. 
+There are three tables, each with four place settings. The order in 
+which everything is set up bespeaks of a chef who wants everything as
+perfect as possible for the people he serves. The only non-
+utilitarian devices in the room are a small wooden plaque hanging on 
+the west wall and a large wooden figurine representing Ishap, the 
+protector of knowledge. The smell of well prepared food waft in from
+the doorway to the north.
+~
+175 8 0
+D0
+~
+~
+0 -1 17519
+D2
+~
+~
+0 -1 17514
+S
+#17519
+`bKitchen~
+  A pot is simmering on a large wood-burning stove. There is a single
+tattered page lying on the counter by the stove. Beside the page is 
+an empty jar with a reddish residue inside it. The walls of the 
+kitchen are covered with shelves and utensils hanging on sturdy 
+wooden pegs.
+~
+175 8 0
+D2
+~
+~
+0 -1 17518
+S
+#17520
+`bEastern Hallway~
+  This rough stone hallway extends both north and south. There are 
+doors to the east and west. South of here the hallway turns towards 
+the west. Though these old walls are cracked with age, there is no
+noticeable draft that would indicate a breach in the solidity of the
+structure.
+~
+175 8 0
+D0
+~
+~
+0 -1 17521
+D1
+~
+~
+0 -1 17526
+D2
+~
+~
+0 -1 17513
+D3
+~
+~
+0 -1 17525
+S
+#17521
+`bEastern Hallway~
+  This rough stone hallway extends north and south. There is a door 
+to the east and a well lit room to the west. North of here the 
+hallway turns towards the west.
+~
+175 8 0
+D0
+~
+~
+0 -1 17522
+D1
+~
+~
+0 -1 17527
+D2
+~
+~
+0 -1 17520
+D3
+~
+~
+0 -1 17533
+S
+#17522
+`bBend in the Hallway~
+  The hallway extends west and south from this point. There are 
+doors to both the south and the west. Obviously the original doors
+had succumbed to age in the past, because when compared to the 
+others in the structure, they are obviously much newer.
+~
+175 8 0
+D0
+~
+~
+0 -1 17529
+D1
+~
+~
+0 -1 17528
+D2
+~
+~
+0 -1 17521
+D3
+~
+~
+0 -1 17523
+S
+#17523
+`bNorthern Hallway~
+  This hallway extends east and west from here. There is a door to 
+the north and a well lit room to the south. The temperature in this
+fortress seems to be cooler than the air outside. This would indicate
+that the walls are so thick that they completely insulate the 
+interior from the blazing sun outside.
+~
+175 8 0
+D0
+~
+~
+0 -1 17530
+D1
+~
+~
+0 -1 17522
+D2
+~
+~
+0 -1 17533
+D3
+~
+~
+0 -1 17524
+S
+#17524
+`bEnd of the Hallway~
+  The hallway comes to an end here. There are doors to the north and 
+west. 
+~
+175 8 0
+D0
+~
+~
+0 -1 17531
+D1
+~
+~
+0 -1 17523
+D3
+~
+~
+0 -1 17532
+S
+#17525
+`bBrother Gardan's Cell~
+  This is the room of the young Brother Gardan. On one side is a 
+small desk covered with books and manuscripts. Books are stacked up 
+around the desk in haphazard fashion, also. On the other side of this
+cluttered room is a simple, rough-hewn bed covered by a coarse wool 
+quilt. There is a `bPicture`h on the Wall.
+~
+175 8 0
+D1
+~
+~
+0 -1 17520
+E
+picture~
+  This is a surrealistic painting of a huge stone building that seems
+to be on an island in the middle of a bay or lake of some type. There
+are huge stone bridges connecting the island to the shore. A large,
+richly painted sign over the entrance to the building reads:
+ The Ishapian Library 
+  The writing at the bottom states that this is a painting of the Old
+Ishapian Library at Moon Lake, which was attacked and destroyed by 
+the evil followers of the Daemon Isharbarak. 
+~
+S
+#17526
+`bBrother Tomas's Cell~
+  This room belongs to Brother Tomas, the head Scholar for this 
+religious retreat. This room has a simple bed along the far side. 
+Unlike other rooms, however, this one has several ornate bookshelves 
+lining every inch of spare wall space. All the books are arrayed on 
+the shelves in an orderly fashion. This is a fair indication that 
+this man has a well-ordered mind, a mind that is well suited for 
+scholarly studies.
+~
+175 8 0
+D3
+~
+~
+0 -1 17520
+S
+#17527
+`bBrother Anthony's Cell~
+  This small cubicle is the abode of the rotund Brother Anthony. The 
+room is quite bare, with the only pieces of furniture being a simple 
+bed and a small cabinet filled with cookbooks. The room itself looks 
+rather unused, however. It almost seems that the holy fryer, err 
+Friar, enjoys the kitchen more than his own bed.
+~
+175 8 0
+D3
+~
+~
+0 -1 17521
+S
+#17528
+`bHugh's Room~
+  This is the room of the Temple's guardian, Hugh. Rumor has it that 
+this individual was found as an infant by the Monks and raised here 
+at the Abbey. He, however, wasn't able to acquire the love of 
+knowledge that drives these holy men. Instead of leaving the Abbey in
+shame, he decided to stay on and use his talents to protect the 
+people who raised him into the man that he is. This room is adorned 
+with a simple bed as its sole bit of furnishing.
+~
+175 8 0
+D3
+~
+~
+0 -1 17522
+S
+#17529
+`bSir Frederick's Room~
+  This room houses the Assistant Templar. While Ishap's followers are
+Mostly scholar/priests, there is a militant arm made up of paladin's 
+and war-priests. These individuals are known as The Blood of Ishap 
+and serve as Templars and Couriers for the holy order. This room is 
+much more lavish than the monks cells because Templars do not have to
+maintain the purity of thought necessary for the priesthood. 
+~~
+175 8 0
+D2
+~
+~
+0 -1 17522
+S
+#17530
+`bSir Krenshaw's Room~
+  This is the living quarters for the Head Templar of this Abbey. His
+station is second only to Brother Micah when it comes to the defense 
+of this Fortress. This room is slightly larger than most of the 
+living spaces in this Abbey, giving the elderly Paladin the room to 
+don his armor in relative comfort. While Templars don't have to 
+follow the mendicant code that the priests must, Sir Krenshaw does so
+by choice. Other than an armor stand and weapons rack, this room 
+only contains a bed with a comfortable feather mattress.  
+~
+175 8 0
+D2
+~
+~
+0 -1 17523
+S
+#17531
+`bBrother Erwin's cell~
+This is the room of the young student defender Erwin. Erwin seems to 
+like the pleasures of a comfortable room more than most of these 
+dedicated fellows. His room is lavish when compared to those of his 
+compatriots. For example, he has a soft and comfortable feather 
+mattress, as compared to the hard reed mattresses favored by his 
+associates. His room also has tapestries.. sheets at least, 
+covering the rough gray walls. Then there is the fact that he 
+actually has rugs on the cold stone floor... His compatriots must 
+really see him as a wicked purveyor of worldly pleasures. Poor guy 
+probably doesn't even realize that his excesses are probably 
+considered bare necessities by the peasants of most areas of the 
+world. 
+~
+175 8 0
+D2
+~
+~
+0 -1 17524
+S
+#17532
+`bBrother Micah's Cell~
+  This looks more like an Armory than a priest's bedroom. Leaning 
+against one wall is an assortment of training weapons. The most 
+outstanding of these weapons is a well crafted oaken hammer. Along 
+the other wall is various pieces of padded training armor. On the 
+final wall is an oil `bpainting`h of fine quality. The bed in this room 
+has no mattress, giving the impression of a man who prefers hardship 
+over comfort.
+~
+175 8 0
+D1
+~
+~
+0 -1 17524
+E
+painting~
+  This painting is of a man resplendent in a set of Full Plate Mail 
+sitting astride a Great War Stallion. This man's armor seems to be 
+made of either silver or mithril trimmed in gold. The man is wearing 
+the rank of Knight Marshal of the Realms and seems to wear the rank 
+as if born to it. The War Stallion is a great white horse that stands
+at least six feet high at the shoulder. The Stallion's eyes seem to 
+blaze with a fury only matched by the fury in the eyes of its rider. 
+Behind the horse and rider is a battle standard boasting of more than
+a hundred victories won by this man's leadership. 
+~
+S
+#17533
+`bMeditation Room~
+  This is where the monks come to contemplate the days events, and to
+purify their thoughts for the day to come. The only furnishings this 
+room boasts is a dozen small reed mats and a candlestick in front of 
+each.
+~
+175 8 0
+D0
+~
+~
+0 -1 17523
+D1
+~
+~
+0 -1 17521
+S
+#17534
+`bClimbing Up a Long Stair~
+  This stairway goes up several levels. You begin to wonder if you'll
+ever reach the top. The walls seem to be closing in from all sides.
+One could conclude from this that this tower is getting narrower as 
+it rises into the air.
+~
+175 8 0
+D4
+~
+~
+0 -1 17535
+D5
+~
+~
+0 -1 17515
+S
+#17535
+`bAt the Top of a Long Stair~
+  This is too much! As you quit climbing to catch your breath, you 
+look up to see the stairway finally come to an end at a trap door.
+The trap door seems a lot younger than the rest of the structure. 
+Perhaps this part is an add-on to the original fortress.
+~
+175 8 0
+D4
+~
+~
+0 -1 17536
+D5
+~
+~
+0 -1 17534
+S
+#17536
+`bThe Observatory~
+  You are standing on a small platform. Looking over the edge, you 
+realize that this tower extends about four stories above the rest of 
+the building. From this perch you can see for miles in any direction.
+There is a long brass tube mounted on a stand attached to the edge of
+the platform.
+~
+175 0 0
+D5
+~
+~
+0 -1 17535
+S
+#17537
+`bThe Vaults~
+  This area was probably, at one time, used to store captured 
+treasure. Now, the place has been converted by the monks to be used 
+for more mundane storage. To the south lies a large food storage 
+area, east is a wine cellar, and north is a rather large library.
+~
+175 8 0
+D0
+~
+~
+0 -1 17541
+D1
+~
+~
+0 -1 17538
+D2
+~
+~
+0 -1 17539
+D4
+~
+~
+0 -1 17516
+S
+#17538
+`bWine Cellar~
+  From the racks of bottles lining the walls, you gather that this
+Order doesn't believe that one must refrain from all worldly 
+pleasures in the pursuit of the favor of their Deity. The bottles
+are dust free, indicating that either they get replaced often or that
+they are cleaned regularly.
+~
+175 8 0
+D3
+~
+~
+0 -1 17537
+S
+#17539
+`bPantry~
+  This place is full of foodstuffs of every description. There are 
+jars of spices, barrels of dried fruit, covered strips of beef jerky,
+and many, many other types of edibles on shelves in this massive 
+cellar room.
+~
+175 8 0
+D0
+~
+~
+0 -1 17537
+D2
+~
+~
+0 -1 17540
+S
+#17540
+`bPantry~
+  This room is unbelievably cold. There is frost covering the walls
+and patches of ice on the floor. This room must be enchanted with a
+special dweomer to keep the temperature so low. Stored in this room 
+are fresh meats and vegetables. This is a very efficient way to keep 
+from losing valuable food to spoilage. Too bad every home couldn't 
+have a room like this.
+~
+175 8 0
+D0
+~
+~
+0 -1 17539
+S
+#17541
+`bLibrary~
+  This room is filled with books describing plants, animals, and 
+Cultures galore. Some of the creatures listed in these books must
+live in lands far from any that you have visited. Some might just be
+fairy tales created to intrigue children. This has to be the case
+in a few instances... After all, what kind of furry creature has a bill
+like a duck. Anyway, these books would make intriguing reading if
+you had the century or two that it would take to complete every one.
+~
+175 8 0
+D1
+~
+~
+0 -1 17542
+D2
+~
+~
+0 -1 17537
+S
+#17542
+`bLibrary~
+  This part of the library seems to be devoted to books that deal 
+with magic in one type or another. These books would be very helpful 
+for the most novice apprentice or the most experienced Arch Mage. 
+This is definitely a library to be envied.
+~
+175 8 0
+D3
+~
+~
+0 -1 17541
+S
+#17543
+Inside the Main Gate~
+  You stand inside of the massive northern gates of Sarth. From what 
+you can see from here, this city is exceptionally clean. There is no 
+smell of offal and urine, which is normal to a place with this many 
+dwellings. The litter upon the streets is scarce to nonexistent. You 
+silently wonder what type of Mayor could possibly keep such a large 
+city in this type orderliness. Maybe, just maybe, the Mayor of 
+Midgaard should come here to visit and take notes. To the east lies 
+the guard barracks for the city's guard forces and to the west lies
+the Jail House.
+~
+175 0 0
+D0
+~
+gate~
+1 -1 17600
+D1
+~
+~
+0 -1 17544
+D2
+~
+~
+0 -1 17546
+D3
+~
+~
+0 -1 17545
+S
+#17544
+Guard House~
+  This is the barracks for the city's guard force. At first you assume 
+that you have looked into the wrong building. This clean and orderly 
+room filled with thirty or so well made beds can hardly belong to 
+city guards. Why, in Midgaard the Mayor can barely get the guards to
+bathe more than once per month, let alone make there beds every 
+morning. If this room is any indication, these guards are more 
+professional than the ones of your home city and professional means 
+dangerous when it comes to people wielding swords.
+~
+175 8 0
+D3
+~
+~
+0 -1 17543
+S
+#17545
+Jail House~
+  This small prison houses the City's undesirables. The cells, though 
+uncomfortable looking, are clean and odor free. In one corner of the 
+entry room sits the large oaken desk of the Captain of the City 
+Guard. Laying beside the desk is a pile of manacles that look as if 
+they have seen much use. Maybe this man is the reason this city is so
+peaceful and beautiful.
+~
+175 8 0
+D1
+~
+~
+0 -1 17543
+E
+manacles~
+  These well-oiled chains are a criminal's nightmare. Not only do
+they bind him hand and foot, but they put him at the mercy of the
+City's constabulary. These steel cuffs are the ultimate in submission
+for a would be law breaker. They put him in a position where he has
+no choice but to obey or accept whatever punishment he reaps for  
+disobeying. When one is in chains one realizes the futility of trying
+to fight the established government of that area (As long as the
+government in question makes hard punishments and carries those
+punishments out swiftly and mercilessly).
+~
+S
+#17546
+North Zephyr Street~
+  This north-south road has buildings on both sides. To the north lies
+a large city gate and to the south there seems to be a town square of
+some sort. To the east there is a building with a sign that reads 
+"Sarth's Magical Scrolls and Talismans". To the west lies an old 
+warehouse with a sign proclaiming it to be the Mercenaries' Hall.
+~
+175 0 0
+D0
+~
+~
+0 -1 17543
+D1
+~
+~
+0 -1 17547
+D2
+~
+~
+0 -1 17549
+D3
+~
+~
+0 -1 17548
+S
+#17547
+Marcus's Magic Shop~
+  The secret of Marcus's fortune is a secret no longer. If Marcus has
+more shops like this scattered throughout the towns and cities of the
+world it is likely that he is even richer than you first assumed. The
+Apprentice running this shop is probably doing so for the magical 
+scraps from Marcus's table of Arcane knowledge. This shop sells 
+wands and scrolls of various powers at a cost even a minor noble 
+could afford. Such underbidding of price is guaranteed to give Marcus
+a large share of the Arcane market.
+~
+175 8 0
+D3
+~
+
+~
+0 -1 17546
+S
+#17548
+Mercenaries' Hall~
+  This smelly, dirty building is where desperate people come to hire 
+Mercenaries. From the looks of the place, a person would have to be 
+desperate, indeed, to even set foot in this foul smelling, poorly 
+lighted, trash filled building. A small `bsign`h is tacked to the 
+door and a bulletin `bboard`h is in the center of this large odious 
+room.
+~
+175 8 0
+D1
+~
+~
+0 -1 17546
+E
+sign~
+  NOW HIRING!! The Mayor of this beautiful city is in need of a scout
+force to get information on a possible threat to our safety. The
+contract involves scouting and possible skirmishing actions. The Town
+has authorized payment of one and a half times the standard mercenary
+contract to any and all interested parties. The scouting mission 
+involves entering an active volcano and finding the Fortress of a 
+knave known as Kiri-Torin. Risk should be minimal, after all he is 
+hiding in a volcano much as a rat hides from the cat. So, make 
+yourself some easy loot and help out the caring citizens of this just
+city.
+~
+S
+#17549
+North Zephyr Street~
+  This road leads north and south. To the north you can see large 
+city gates in the distance and to the south there looks to be a town 
+square of some sort. To the east is a small temple dedicated to the 
+worship of Ishap and to the west is the a small shop with a sign 
+proclaiming "The Leaky Pen".
+~
+175 0 0
+D0
+~
+~
+0 -1 17546
+D1
+~
+~
+0 -1 17550
+D2
+~
+~
+0 -1 17552
+D3
+~
+~
+0 -1 17551
+S
+#17550
+Ishapian Temple~
+  This small temple to Ishap is a pale comparison to the Abbey 
+outside of town when one compares it on the basis of size. However, 
+the decorations and tapestries are made of much finer materials. One 
+can tell that the builders of this temple, and possibly the current 
+residents, weren't as concerned about the purity of poverty as they 
+were about the comfort of cost.
+~
+175 8 0
+D3
+~
+~
+0 -1 17549
+S
+#17551
+The Leaky Pen~
+  This is the premier scribe shop in Sarth. Neat stacks of paper line
+the walls and boxes of pens are stacked upon the counter. Other than 
+the organized clutter and the normal assortment of stool and tables, 
+this shop is pretty much unadorned.
+~
+175 8 0
+D1
+~
+~
+0 -1 17549
+S
+#17552
+North Zephyr Street~
+  This street runs north and south. To the south is the Town Square 
+of Sarth and far in the distance to the north you think you can just 
+make out city gates. To the east is a vine covered wall. There is a 
+gate in the wall and a sign on the gate that says "Elaf's Elven 
+Eatery". To the west lies a building that has no sign, but has the 
+delicious smell of sweet pastries wafting out the door.
+
+~
+175 0 0
+D0
+~
+~
+0 -1 17549
+D1
+~
+gate~
+1 -1 17553
+D2
+~
+~
+0 -1 17555
+D3
+~
+~
+0 -1 17554
+S
+#17553
+Elaf's Elven Eatery~
+  This Restaurant is considered an anomaly in this part of the world.
+Elaf, an elf, has specialized in serving simple foods that taste 
+gourmet. Since his foods are for the most part common, the prices 
+aren't too steep, either. The eating room is of Elven design with 
+tables and chairs actually being designed from well shaped living 
+shrubs and tree branches. Because of the well placed bushes and leafy
+trees, even though you are in town you seem to be in an exotic forest.
+~
+175 8 0
+D3
+~
+gate~
+1 -1 17552
+S
+#17554
+Pasha's Fine Pastries~
+ This little old woman is busy making treats to sell to the customers
+of her shop. You do notice, however, she almost seems determined to 
+eat a pastry for every one she puts on the shelves.
+~
+175 8 0
+D1
+~
+~
+0 -1 17552
+D2
+~
+~
+0 -1 17557
+S
+#17555
+Town Square~
+  This is the center of almost all the activity in this seaside town. 
+Peddler's are hawking their wares and so are some scantily clad women
+of doubtful reputation.  This is literally a town where if it isn't 
+sold, you probably don't want it anyhow.
+~
+175 0 0
+D0
+~
+~
+0 -1 17552
+D1
+~
+~
+0 -1 17556
+D2
+~
+~
+0 -1 17558
+D3
+~
+~
+0 -1 17557
+S
+#17556
+East Dragon Way~
+  This east west street is heading from Town Square to the East Gate.
+To the south lies a rather large shop with a pair of crossed swords 
+emblazoned on the door. To the north lies a vine-covered wall with no
+apparent openings. The road continues on to the east.
+~
+175 0 0
+D1
+~
+~
+0 -1 17567
+D2
+~
+~
+0 -1 17559
+D3
+~
+~
+0 -1 17555
+S
+#17557
+West Dragon Way~
+  This east west street is heading from Town Square to West Gate. To 
+The north is another entrance to the pastry shop, while to the south 
+is a well-kept tavern with a sign that only has a red and a blue "T" 
+side by side on it. This street continues on to the west.
+~
+175 0 0
+D0
+~
+~
+0 -1 17554
+D1
+~
+~
+0 -1 17555
+D2
+~
+~
+0 -1 17560
+D3
+~
+~
+0 -1 17571
+S
+#17558
+South Zephyr Street~
+  This north south street is heading from Town Square to the docks. 
+To the east lies a rather large shop with a pair of crossed swords 
+emblazoned on the door. To the west lies a well kept tavern with a 
+sing that has two Ts, one red and one blue, painted upon it. 
+~
+175 0 0
+D0
+~
+~
+0 -1 17555
+D1
+~
+~
+0 -1 17559
+D2
+~
+~
+0 -1 17561
+D3
+~
+~
+0 -1 17560
+S
+#17559
+The Sharp Sword~
+  This shop is considered to be the finest weapons shop anywhere in 
+the known world. As you look at the weapons he has on stock you can 
+understand why. Any weapon that can be made by Arkon, the weapon 
+master, is insured for life. If it ever breaks in battle, bring the 
+pieces back, if you live, and your money will be refunded, no 
+questions asked.
+~
+175 8 0
+D0
+~
+~
+0 -1 17556
+D3
+~
+~
+0 -1 17558
+S
+#17560
+Tomaka's Tavern~
+  This Tavern is filled with items that you haven't seen since you'd 
+left the Daimyo. In fact this tavern would probably fit into that 
+region with no problem. Tomaka, the proprietor, has specialized this
+tavern to serve exotic meals that one can't normally find in this 
+part of the world, though travelers may have become used to them in 
+other locales. The patronage of this tavern is composed of such 
+varied customers that it is almost comical. In very few places will 
+one find Nobles sitting down and eating in the same room with 
+traveling students and semi-barbaric ship captains.
+~
+175 8 0
+D0
+~
+~
+0 -1 17557
+D1
+~
+~
+0 -1 17558
+S
+#17561
+South Zephyr Street~
+  This road runs north and south. Just to the south you see ships and
+boats of various sizes moored up to a series of sturdy wooden docks. 
+To the east lies a dirty building with a sign that says "The Broken 
+Mast" hanging on one hinge. To the west lies a neat office with a 
+well made sign proclaiming " Byron's Ships and Sails".
+~
+175 0 0
+D0
+~
+~
+0 -1 17558
+D1
+~
+~
+0 -1 17563
+D2
+~
+~
+0 -1 17562
+D3
+~
+~
+0 -1 17564
+S
+#17562
+The Dock Yards~
+  This long group of docks extends far out into the small bay. Tied 
+to the docks are boats and ships of just about every make and model 
+you have ever heard of. To the north is the street leading back to 
+the Town Square and to the west is the Dry Docks. To the east you see
+the office of the Harbormaster.
+~
+175 0 0
+D0
+~
+~
+0 -1 17561
+D1
+~
+~
+0 -1 17566
+D3
+~
+~
+0 -1 17565
+S
+#17563
+The Broken Mast~
+  This tavern is considered by most of the residents in this port-side
+ city to be the roughest tavern in town... possibly in the world. It 
+is ran by Racksorel, a Cyclops from the No-Night Tundra. From the 
+amount of bloodstains on the floor, you doubt not the reputation 
+this place holds. The rough hewn tables and chairs show the signs of 
+many repairs. The bar itself, however seems miraculously untouched. 
+Then you take a look at the bartender and decide that maybe it isn't
+so miraculous.
+~
+175 8 0
+D3
+~
+~
+0 -1 17561
+S
+#17564
+Byron's Ships and Sails~
+  This is the main room in the Shipwright's office. Byron not only 
+buys and sells ships and any tack that is required to maintain a 
+ship, but he will also custom build a ship to any reasonable 
+specifications. He is considered one of the few masters of this 
+craft. 
+  This office is the epitome of chaos. There are stacks of blank 
+bills of sale spilling over into stacks of receipts spilling over
+into stacks of bills of lading spilling over into... you get the 
+picture.
+~
+175 8 0
+D1
+~
+~
+0 -1 17561
+S
+#17565
+The Dry Dock~
+  Here you see a line of heavy wooden rails extending down into the 
+water. At the upper end of the rails is a huge winch connected to a 
+rope. It seems to you that a boat could be brought up to the rails 
+and connected to  the winch, then a team of horses could be connected
+to the winch to pull the boat upon the rails and out of the water. It
+is an ingenious device used to fix ships with the minimum of hassle.
+~
+175 0 0
+D1
+~
+~
+0 -1 17562
+D5
+~
+rail~
+11 -1 17689
+E
+rails~
+  These thick wooden boards are nothing more than tree trunks that 
+Have been smoothed out. Close to the bottom of the farthest rail, you
+see a drainage tunnel that probable leads into the Citys sewer 
+system. Hmm, it might be possible to climb down this slick rail, but 
+who would want to muck around in a sewer?
+~
+S
+#17566
+The Harbormaster's Office~
+  This is the office of the man in charge of the harbor area. A `bsign`h
+is posted on the door. Inside you see a heavy wooden desk with a 
+comfortable chair. On one wall is a large map of the harbor area. 
+Along another wall are cabinets full of papers. The harbormaster 
+seems to be a well-organized man... or at least a man with a good 
+secretary.
+~
+175 8 0
+D3
+~
+~
+0 -1 17562
+E
+sign~
+  I'm out of the office for a while. Leave a note for me or come back
+once I return.
+                                                     The HarborMaster
+~
+S
+#17567
+East Dragon Way~
+  This road goes east and west. Far to the west you see the town 
+square and far to the east to see a gate in the city wall. To the 
+south stands an ominous gray tower and to the north stands a 
+cluttered shop surrounded by a cluttered yard.
+~
+175 0 0
+D0
+~
+~
+0 -1 17577
+D1
+~
+~
+0 -1 17568
+D2
+~
+~
+0 -1 17587
+D3
+~
+~
+0 -1 17556
+S
+#17568
+Eastern Intersection~
+  You are standing in an intersection of streets. There are a group 
+of signs here to help the lost traveler find his way through this 
+maze. To the west and east lies East Dragon Way and to the south 
+lies Gemstone road. To the north is a small street called Beggar's 
+Alley. Of the four directions the Alley to the north looks the least 
+inviting to an innocent traveler... luckily you aren't one.
+~
+175 0 0
+D0
+~
+~
+0 -1 17574
+D1
+~
+~
+0 -1 17569
+D2
+~
+~
+0 -1 17584
+D3
+~
+~
+0 -1 17567
+S
+#17569
+East Dragon Way~
+  This road runs east to the Eastern City Gate. To the north you see 
+a shop with a potion painted onto the door. To the south you see a 
+small dirty grog shop.
+~
+175 0 0
+D0
+~
+~
+0 -1 17583
+D1
+~
+~
+0 -1 17570
+D2
+~
+~
+0 -1 17586
+D3
+~
+~
+0 -1 17568
+S
+#17570
+Inside the East Gate~
+  You are standing in front of a massive Iron bound gate. You notice,
+to your dismay, that the gate is barred and locked. Attached to the 
+bar is a weathered `bsign`h. 
+~
+175 0 0
+D3
+~
+~
+0 -1 17569
+E
+sign~
+  By order of the Mayor, all traffic to the eastern realms must be 
+blocked  until the threat of Dragon attack is no more.
+~
+S
+#17571
+West Dragon Way~
+  This east west street is heading from Town Square to West Gate. Far
+to the west you see a city gate. A little closer to you, also in the 
+west, you see what looks to be a public building of some sort. To the
+east lies the Town Square, with all of the shops and vendors that 
+one usually finds in that type of locale.
+~
+175 0 0
+D1
+~
+~
+0 -1 17557
+D3
+~
+~
+0 -1 17572
+S
+#17572
+West Dragon Way~
+  This east west street is heading from Town Square to West Gate. To
+the west you see a city gate, to the north you see a beautifully
+decorated mansion, to the south you see what looks to be the
+administrative center for this town, and far to the east you see
+what looks to be the center of this amazing city.
+~
+175 0 0
+D0
+~
+~
+0 -1 17593
+D1
+~
+~
+0 -1 17571
+D2
+~
+~
+0 -1 17591
+D3
+~
+~
+0 -1 17573
+S
+#17573
+Inside the West Gate~
+   This road end abruptly at a large Iron reinforced wooden gate. The
+gate seems to be locked and closed. There is a `bsign `hattached to 
+the gate.
+~
+175 0 0
+D1
+~
+~
+0 -1 17572
+E
+sign~
+  By order of the Mayor, all traffic to the western realms must be 
+blocked  until the threat of Dragon attack is no more.
+~
+S
+#17574
+Beggar's Alley~
+  This narrow street extends from East Dragon Way north through the 
+poor quarter of town. Though it isn't an actual Alley, it still 
+gives you the same feeling of unease that you would get in any back 
+alley of any city that you've ever been in. The closeness of 
+buildings.. and the lack of windows on those buildings doesn't  
+alleviate that feeling in the least. The road continues to the north 
+from here... There seems to be a small shop to the east and a junk 
+filled yard to the west.
+~
+175 0 0
+D0
+~
+~
+0 -1 17575
+D1
+~
+~
+0 -1 17583
+D2
+~
+~
+0 -1 17568
+D3
+~
+~
+0 -1 17577
+S
+#17575
+Beggar's Alley~
+  This narrow street extends from East Dragon Way north through the 
+poor quarter of town. Though it isn't an actual Alley, it still 
+gives you the same feeling of unease that you would get in any back 
+alley of any city that you've ever been in. The closeness of 
+buildings.. and the lack of windows on those buildings doesn't  
+alleviate that feeling in the least. The road continues to the north 
+from here... There is a seedy looking Tavern to the West and an
+actual alley to the east.
+~
+175 0 0
+D0
+~
+~
+0 -1 17576
+D1
+~
+~
+0 -1 17582
+D2
+~
+~
+0 -1 17574
+D3
+~
+~
+0 -1 17579
+S
+#17576
+Beggar's Alley~
+  This narrow street extends from East Dragon Way north through the 
+poor quarter of town. Though it isn't an actual Alley, it still 
+gives you the same feeling of unease that you would get in any back 
+alley of any city that you've ever been in. The closeness of 
+buildings.. and the lack of windows on those buildings doesn't  
+alleviate that feeling in the least. There is a small hovel to the
+north, a well-kept, if old house to the west, and an old boarded
+up warehouse to the east.
+~
+175 0 0
+D0
+~
+~
+0 -1 17580
+D1
+~
+~
+0 -1 17581
+D2
+~
+~
+0 -1 17575
+D3
+~
+~
+0 -1 17578
+S
+#17577
+Peddler's Wares~
+  The sign you saw as you entered this yard stated proudly `cPeddler's
+Wares`h. You could more aptly describe the chaos before you as "Junk 
+in search of a welder". There is absolutely no order to the items in 
+this place. You figure that is would take a team of men 10 years to 
+catalog and order this mess. A small bearded figure is busily working
+behind the counter.
+~
+175 0 0
+D1
+~
+~
+0 -1 17574
+D2
+~
+~
+0 -1 17567
+S
+#17578
+Foyer of Arthur's House~
+A temporary description
+~
+175 8 0
+D1
+~
+~
+0 -1 17576
+S
+#17579
+The Sailor's Grief~
+  This rickety, dry-rotted structure does not inspire confidence.
+Especially with the obvious signs of repair instigated by some poor 
+drunk who was tossed clean through the driftwood walls. The name of 
+this seedy tavern is definitely descriptive of what awaits anyone 
+who is not a regular patron here.
+~
+175 8 0
+D1
+~
+~
+0 -1 17575
+S
+#17580
+Greybeard's Hovel~
+  As you step into this little one room shack you are struck at the 
+neatness of the place. This abode would do a professional maid proud.
+After a few moments thought, however, you understand the need for a 
+blind man to have everything in its place and a mental map of where
+everything should be. Nevertheless this place tells of a well-ordered
+mind... one that could easily think and fight at the same time.
+~
+175 8 0
+D2
+~
+~
+0 -1 17576
+S
+#17581
+In Front of Weazel's Warehouse~
+  You are standing next to the large oaken doors to a spooky old 
+Warehouse. The doors are so securely barred that any hope of bashing 
+them in is quickly dispelled. The structure towers ominously into the
+sky. It may be just a strange fluke of the wind, but it seems to be a
+bit chillier than normal in this particular area. Perhaps exploring 
+somewhere else is advised in this particular situation. After all, 
+discretion is definitely the better part of valor on some occasions.
+~
+175 0 0
+D0
+~
+hole~
+9 -1 17665
+D1
+This Door is barred so securely, you doubt if you'll ever break 
+though. However, there does seem to be a loose board near the 
+door...
+~
+door~
+1 -1 17665
+D3
+~
+~
+0 -1 17576
+E
+board~
+You pull the loose board away to open a small hole in the wall... it 
+looks just about large enough for you to crawl through.
+~
+S
+#17582
+Hobo's Refuge~
+  You enter this covered, dead-end alley with a little trepidation. 
+It isn't what fearsome opponent resides within that worries you. 
+Instead, it is what fearsome disease you might catch from the 
+miserable retches that reside in this smelly, waste-filled, alcove. 
+The only smell that overpowers the scent of fresh urine is the odor 
+of rotting meat. That odor seems to be coming from one particular 
+individual crouched in one corner.
+~
+175 0 0
+D3
+~
+~
+0 -1 17575
+S
+#17583
+The Alchemist~
+  This shop is filled with neatly shelved jars of... well... of just 
+about anything and everything one could imagine being put in jars. 
+With a shudder you notice some things floating in fluid filled jars 
+that you would never have imagined. Repressing the urge to feel 
+yourself to make sure that everything is still attached, you focus 
+your attention on the well-dressed old man sitting behind the 
+counter.
+~
+175 8 0
+D2
+~
+~
+0 -1 17569
+D3
+~
+~
+0 -1 17574
+S
+#17584
+Gemstone Road~
+  This road runs south from East Dragon Way. This area considered the
+extremely rich part of town. You see great mansions lining this road.
+Directly to the east you see a small but well-kept inn with a faded 
+sign depicting a skinny rabbit hanging just outside the door. To the 
+west is a squat, foreboding gray tower, which is probably the home of
+the City's wizard. The road continues on to the south.
+~
+175 0 0
+D0
+~
+~
+0 -1 17568
+D1
+~
+~
+0 -1 17586
+D2
+~
+~
+0 -1 17585
+S
+#17585
+Gemstone Road~
+ You are on a road that leads south from Dragon Way. This road winds
+through the nicer part of Sarth. To the east you see a beautiful 
+mansion. To the west lies a smaller, but somehow more elegant, house.
+To the south, overlooking the ocean, is the house of the Captain of 
+the City Guard.
+~
+175 0 0
+D0
+~
+~
+0 -1 17584
+D1
+~
+~
+0 -1 17590
+D2
+~
+~
+0 -1 17589
+D3
+~
+~
+0 -1 17588
+S
+#17586
+The Scrawny Hare~
+  This converted hovel of a grog shop caters to those not welcomed in
+any other establishment of the same type in the city. It is known far
+and wide for watered down drinks, disease-ridden prostitutes, and 
+rats large enough to make any sane cat smaller than a panther run and
+hide. Speaking of cats, if you eat here, you'll probably find out how
+one tastes barbecued.
+~
+175 0 0
+D0
+~
+~
+0 -1 17569
+D3
+~
+~
+0 -1 17584
+S
+#17587
+In Front of the Tower~
+  You are standing in front of the tower of Mordikai, the Archmage
+of Sarth. This tower has none of the elegance of Marcus's Crystal 
+Tower, but this one seems to have been made by a more practical 
+person. This tower has no regular door, but where you would expect
+the door to be there is a wall of crackling `bflames`h. Maybe this 
+Fire Wall is a not so subtle hint for you to go bother someone else.
+~
+175 0 0
+D0
+~
+~
+0 -1 17567
+D2
+~
+~
+0 -1 17627
+E
+flames~
+  This is a wall of crackling blue flames. You can feel the heat from
+where you stand. Do you really want to enter this fiery doorway?
+~
+S
+#17588
+The Shipwright's House~
+  You are standing before the well-kept Cottage of Byron, shipmaster
+of Sarth. Unlike his cluttered place of business, his house is very 
+tidy, showing to all his true preferences. The white house with green
+shutters is one of the most pleasing to the eye in Sarth. The house 
+is surrounded by a wrought iron fence with a locked gate and no 
+apparent keyhole. Perhaps the gate is a magical gift of some grateful
+mage. Perhaps.
+~
+175 0 0
+D1
+~
+~
+0 -1 17585
+S
+#17589
+One-eye's Abode~
+  This house, currently inhabited by One-Eye, is the residence that
+a grateful city supplies to their Captain of the Guard. The house is
+neat, if sparsely furnished. One-Eye seems to keep his house in much
+the same order as he keeps the city under his care.
+  There is a small `bplaque`h attached to the doorpost.
+~
+175 0 0
+D0
+~
+~
+0 -1 17585
+E
+plaque~
+  This plaque is to commemorate the all of the people who have 
+accepted the duty of Captain of the Guard. These brave souls honored 
+this city by keeping its streets safe for law abiding citizens. The
+following list names these brave souls.
+Radnar
+Syphus
+Krellar
+Mozad
+Juhn
+Greybeard
+~
+S
+#17590
+Front Lawn of the Harbormasters Home~
+  This marble pathway winds up the hill to the front doors of a 
+lovely house. The grounds are well tended, as are the beautiful 
+flowerbeds that cover parts of the hill like a multicolored patchwork
+quilt. The Harbormaster must be a rich man indeed to afford such an 
+incredible estate.
+~
+175 0 0
+D1
+~
+~
+0 -1 17649
+D3
+~
+~
+0 -1 17585
+S
+#17591
+City Hall~
+  This marvelous structure is where all the major decisions affecting 
+the city are made. In this particular room, the council meets with 
+the Mayor and they advise him on points that concern residents of the
+city. The Mayor has the final say on all matters in this city, 
+however, making some residents wonder just how useful the council 
+actually is.
+~
+175 0 0
+D0
+~
+~
+0 -1 17572
+D2
+~
+~
+0 -1 17592
+S
+#17592
+Mayor's Office~
+  This is the office of the Ruler of this city. Though he goes by 
+the title Mayor, the ruler is elected for life. This makes him one
+of the few elected Kings of this day and time. 
+  This office can only be described as organized chaos. There are
+piles of documents in all four corners of this room. The shelf on the
+east wall is literally bowing from the weight of too many leather
+bound tomes. The Mayor's oak desk is barely visible because of all
+the books stacked on the floor around it. It really doesn't seem that
+the Mayor is a normally sloppy guy. This chaotic mess can easily be
+blamed on entirely too much going wrong in a short amount of time.
+~
+175 0 0
+D0
+~
+~
+0 -1 17591
+S
+#17593
+Foyer of the Mayor's House~
+  You are standing in the entryway to the Mayor's Mansion. The walls
+and floor of this room are made of a near flawless marble. If the 
+rest of the house is made of materials that are even half as costly, 
+then this edifice probably cost more than half the buildings in 
+Midgaard combined. To the north you see a doorway that leads further 
+into the house.
+~
+175 0 0
+D0
+~
+~
+0 -1 17594
+D1
+~
+~
+0 -1 17599
+D2
+~
+~
+0 -1 17572
+D3
+~
+~
+0 -1 17595
+S
+#17594
+Main Hall~
+  This is the Great Room of the Mayor's Abode. In one corner there is
+a beautiful walk-in fireplace that looks about large enough to easily
+burn a whole cord of wood at once. The sofas in this room look 
+extremely comfortable, though if one would sit on them in traveler's 
+clothes one would probably wind up in the stockade. There are doors 
+in all four walls of this room.
+~
+175 0 0
+D0
+~
+~
+0 -1 17597
+D1
+~
+~
+0 -1 17598
+D2
+~
+~
+0 -1 17593
+D3
+~
+~
+0 -1 17596
+S
+#17595
+Kitchen~
+  This cavernous kitchen was obviously not engineered with beauty in 
+mind. It does look, however, like it could easily be used to prepare 
+food for hundreds of guests at once without much strain. It must have
+been designed like this for the famous yearly picnics that the Mayor 
+holds on the lawn every year.
+~
+175 0 0
+D0
+~
+~
+0 -1 17596
+D1
+~
+~
+0 -1 17593
+S
+#17596
+Dining Hall~
+ This dining hall, though large, is not as big as is to be expected.
+The Mayor must hold most of his feasts outside on the row of picnic 
+tables that you saw outside. The table in here can seat up to twenty 
+or so guests comfortably, so must only be used for those quiet 
+get-togethers with only his closest of friends.
+~
+175 0 0
+D1
+~
+~
+0 -1 17594
+D2
+~
+~
+0 -1 17595
+S
+#17597
+Mayor's Bedroom~
+  This beautiful bedroom is adorned with a quaint bed. The most 
+amazing things about this room are the total lack of windows and the 
+fact that three of the four walls are nothing but open door closets. 
+~
+175 0 0
+D2
+~
+~
+0 -1 17594
+S
+#17598
+Guest Room~
+  This room is set-aside for whatever dignitaries happen to be 
+visiting this wondrous city. The Oak bed is large enough for four 
+people to sleep and tussle in comfortably. Either the Mayor is used 
+to having Kings bring in their harems, or he makes sure that they are
+properly taken care of while they are here. Either way, if this room 
+could talk, it would probably have many, many interesting stories to 
+tell.
+~
+175 0 0
+D3
+~
+~
+0 -1 17594
+S
+#17599
+Storage Room~
+  This small room is used to store cleaning equipment that the house 
+staff finds necessary to maintain this beautiful home.
+~
+175 0 0
+D3
+~
+~
+0 -1 17593
+S
+#0
+$~

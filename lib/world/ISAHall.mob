@@ -1,0 +1,332 @@
+#27800
+stack books pile mountain arvis~
+Precarious Stack of Books~
+A mountain of books and scrolls stacked high in the corner.
+~
+Haphazardly thrown into a pile, this stack of books teeters
+precariously, appearing as if the faintest breeze will blow
+it over.
+~
+10 268435456 0 Y
+45 19 10 12d10+100 1d1+1
+1 1
+8 8 1
+1 1073741823 1d1+1 0
+0 1 1 31
+K
+0 0 0 0 0 0 0
+#27801
+podo potions dealer cheat fat huge man~
+Podo~
+Podo the potion dealer stands here busying himself with his shelves.
+~
+Podo is a pompous man, filled with his own self righteousness.
+He is fat beyond all belief and jiggles as he moves around.
+Most important in his life besides his food is his love of his
+potions, each one having its own small niche on the shelf where
+it was placed with precise care.
+~
+10 268437632 0 Y
+45 19 10 12d10+100 1d1+1
+1 1
+8 8 1
+1 1073741823 1d1+1 0
+0 1 1 31
+K
+0 0 0 0 0 0 0
+#27802
+baker storekeeper man owner~
+The Baker~
+The Baker is standing here up to his elbows in flour.
+~
+The Baker is a strong patient man. He has been here for a long
+time and will be here for an even longer time to come. He knows the
+tricks to this town and is silently confidant in his lot in life.
+~
+16908298 0 350 Y
+60 -4 -22 20d12+20 12d36+0
+1 1
+8 8 1
+69 1073741823 1d1+1 0
+0 1 0 1023
+K
+0 0 0 0 0 0 0
+#27810
+horatio paladin ancient old~
+Horatio the ancient paladin~
+An ancient paladin, withered and frail.
+~
+Once a strong and proud paladin, Horatio now shows his years
+and bends with the weight of the world.
+~
+50462988 8652932 1000 Y
+50 -10 -12 20d31+200 16d30+20
+1 1
+5 5 1
+7 806113344 12d13+30 2
+4 1 100 0
+9 1 25 0
+0 0 0 728
+K
+0 0 0 0 0 0 0
+#27811
+priest cleric holy wise~
+The Cleric~
+A wise and venerable cleric, with the power of the gods behind him, stands here.
+~
+Long has this cleric been journeying, spreading the warmth
+and compassion of his class to all he comes in contact with.
+Now nearing the end of his journey, he has come here to
+live out his days in the tranquility of this frozen town.
+~
+33554442 264320 1000 Y
+35 8 10 7000d4+200 6d6+20
+1000 3000
+8 8 1
+2 1024 20d20+1000 1
+1 6 90 85
+0 0 0 54
+K
+0 0 0 0 0 0 0
+#27812
+wizard old man stumpy ragged greybeard~
+Wizard Greybeard~
+A stumpy, ragged, lonely old man stands here muttering to himself...
+~
+A lonely old wizard, who has lost his marbles....
+~
+16780 8552448 350 Y
+45 5 -4 20d45+100 4d14+12
+20 1
+8 8 1
+1 268435456 23d43+231 6
+1 7 20 26
+1 7 10 56
+1 7 12 57
+1 7 12 74
+1 7 12 43
+1 7 12 23
+0 0 0 512
+K
+0 0 0 0 0 0 0
+#27813
+theodore wizard old magic user fake~
+Wizard Theodore~
+A stout, grumbling Wizard is here frowning suspiciously
+~
+Wizard Theodore is a lonely, fat man who has no life outside
+making trouble for the other wizards in this city. A man who
+loves causing problems and annoyances that others have to fix.
+~
+8 0 0 Y
+45 19 10 3d3+100 12d4+20
+1 1
+8 8 1
+1 1073741823 1d1+1 0
+0 0 0 31
+K
+0 0 0 0 0 0 0
+#27814
+master dojo ninja~
+The Dojo Master~
+The Dojo Master sits here meditating.
+~
+The Dojo Master is a proud patient man. Waiting here to teach
+those who wish to learn the martial arts, how to fight.
+~
+16908298 268437632 0 Y
+60 -13 -10 100d500+100000 12d6+20
+1 1
+6 6 1
+5 32647 1d1+1 2
+3 1 35 0
+9 1 23 0
+0 1 0 127
+K
+0 0 0 0 0 0 0
+#27815
+laroche fighter warrior mighty gheywad~
+Sir LaRoche~
+A mighty warrior stands here, looking to be the greatest living fighter ever.
+~
+A once noble proud knight, he seems to be a bit lost and
+drifing without anything to fight for, or anyone to fight with.
+~
+8 268435456 0 Y
+30 19 10 12d12+100 12d31+20
+1 1
+8 8 1
+4 0 1d1+1 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#27816
+old decrepit hunched guy man~
+A bent over old man~
+A man stands here, bent with the wisdom of the ages.
+~
+He stands here thinking over the wisdom gained, and the wisdom
+lost in his years as an adventurer. To bad he lost his tongue to a pirate,
+He might have some interesting stories to tell otherwise.
+~
+17038 0 0 Y
+32 19 10 12d12+200 12d12+0
+1 1
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27817
+woman ugly girl old matt~
+An ugly old woman~
+An ugly old woman, smelling of refuse and human waste, crouches here.
+~
+This woman has been beaten down with time and poverty.
+Ugly and deformed she is the object of much cruelty and
+ridicule. Scrambling for a crust of bread and eyeing
+you suspiciously she begins chattering wildly to her
+left hand about the evil in the world and the kindness
+of strangers.
+~
+17038 0 0 Y
+32 19 10 12d12+200 12d12+0
+1 1
+8 8 2
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27818
+child runt ugly annoying adam~
+A runt of a child~
+A small child stands here, trying to hide his pig like face and small hands.
+~
+This child, the result of a union between possibly the two
+ugliest people in the world, has a few defects. The features
+of a pig, the hands of a baby and the voice of a dying cow,
+this lad has made it this far by stealing and begging, and
+harping on peoples sympathies for the hideously ugly. Perhaps
+someday something heavy will end all his problems.
+~
+131722 0 0 Y
+10 17 2 30d30+100 2d4+10
+10 12
+8 8 0
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27820
+armor guard shining black figure isa~
+Shining black Armor~
+A Shining figure, resplendent in pitch black armor, blocks the way forward.
+~
+An empty suit of armor, quite ready to be torn apart defending
+its Masters in the ISA Clan.
+~
+16924682 268437632 0 Y
+60 -40 -24 20d50+3000 12d60+100
+0 0
+8 8 0
+87 1072136191 40d50+1000 1
+1 6 100 85
+0 1 1 1023
+K
+0 0 0 0 0 0 0
+#27821
+widget captain pirate kender girl crazy~
+Captain Widget~
+Captain Widget Stands here looking fearsome in her pirate getup
+~
+Captain Widget salutes you, looking a ridiculous character in
+her pirate getup. A fake mustache plastered across her upper lip gives
+a foppish air to her already laughable appearance. A painted wooden
+leg adorns her high topped boots that are turned down above the knee.
+Trying to keep a straight face is near impossible but it is necessary
+to get across the lake somehow....
+~
+16908298 268697728 0 Y
+55 -20 -10 30d71+100 12d21+50
+3 1
+8 8 2
+74 1073741823 12d12+100 0
+0 2 1 31
+K
+0 0 0 0 0 0 0
+#27822
+butler receptionist doorkeeper asshole man alan~
+The Butler~
+A man dressed in a black suit, wearing a white shirt, stands here quite stiffly.
+~
+After years of travel, working for some of the most prestigious
+and prominent members of Midgaards upper class, this butler had had his
+fill of snooty aristocrats. So after looting three castles of most of
+the family heirlooms, he fled to Fortress seeking to live out his days
+in comfort. However when the mighty Jearom came across him while
+searching for a good spot for a clan hall, he promptly relieved the
+butler of all his loot and invited him to come serve in the castle.
+With no cash and no choice he came to serve ISA until the day when
+he can strike back!
+~
+16394 0 -1000 Y
+50 2 -25 4d8000+500 20d20+20
+3 3000
+8 8 1
+69 30660 1d1+1 3
+2 1 20 0
+5 6 5 0
+9 2 20 0
+0 0 0 59
+K
+0 0 0 0 0 0 0
+#27823
+grulg dwarf chef cook rotund bloody spencer~
+Grulg the Chef Destroyer~
+A very rotund dwarf stands here, a spoon in one hand, a sword in the other.
+~
+Grulg the Chef Destroyer is a fearsome sight. Wearing a blood
+spattered apron and wielding a spoon in one hand and a blood soaked sword in
+the other, he bustles about the kitchen, stirring this, and skewering that.
+Descended from the Destroyer Clan, Grulg set out to become a chef when he
+discovered that meat could be extraordinarily good with just the right
+spices. His favorite dish, A chunk of raw wolf meat with a hint of chicken
+grease and two pints of rum. Let the whole thing sit for a week and it
+literally melts in your mouth. Found by Boba on one of his journeys into
+the woods west of Midgaard Grulg was more then happy to share his culinery
+skills with the ISA clan.
+~
+266 2176 0 Y
+51 8 -25 2d10000+10000 12d12+100
+400 4000
+8 8 1
+71 28869 1d1+1 2
+2 1 25 0
+7 1 25 0
+0 2 0 57
+K
+0 0 0 0 0 0 0
+#27824
+lizard man guard vault~
+Sthisss T'hor~
+A lizard man, his eyes flickering red, stands guarding the vaults of ISA.
+~
+Sthisss T'hor is a strange cross of lizard and man. Hailing 
+from the mystical caves of the east, he has come, braving hardship,
+ridicule and being shunned by all civilizations, he finally arrived
+in Fortress and was welcomed into the ISA castle to help guard the
+precious belongings of the brave people there.
+~
+74 0 0 Y
+45 0 -30 -12144d1+1000 30d30+24
+2000 2000
+8 8 0
+0 30660 1d1+1 3
+6 1 50 0
+8 1 30 0
+9 1 15 0
+0 2 0 575
+K
+0 0 0 0 0 0 0
+#0
+$~

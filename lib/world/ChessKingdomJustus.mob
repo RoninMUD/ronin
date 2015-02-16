@@ -1,0 +1,262 @@
+#2301
+White pawn~
+white pawn~
+A white pawn is standing here.
+~
+A protector of its own colour, also a very brave solider, one that never flee and walk away from away battle.
+It is waiting to be promoted to be a more important piece in its class.
+~
+78 0 500 Y
+10 10 5 3d10+150 2d8+1
+1000 12000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2302
+white queen's castle~
+white queen's castle~
+A white queen's castle is standing here.
+~
+A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
+Its job is to protect the Queen.
+~
+78 0 500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2303
+white queen's knight~
+white queen's knight~
+A white queen's knight is standing here.
+~
+The most powerful soilder of the white chess, it is responsible to the Queen's safety.
+It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
+~
+79 268697600 500 Y
+16 4 0 6d10+300 3d6+1
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2304
+white queen's bishop~
+white queen's bishop~
+A white queen's bishop is standing here.
+~
+A happy bishop who can do everything in an incredibly quick motion.
+~
+78 0 500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2305
+white queen~
+white queen~
+The white queen is standing here
+~
+She is the most respected and powerful figure in the white chess.
+She is bad-tempered and gets mad easily, watch out!
+~
+78 0 500 Y
+20 0 0 10d10+600 10d2+4
+6000 60000
+8 8 2
+87 0 0d0+0 0
+0 0 0 0
+#2306
+white king~
+white king~
+The white king is standing here.
+~
+Unlike most kings, he does not enjoy the feeling of being powerful.
+He gave all his power to the queen, yet he is still a very tough fighter.
+~
+78 0 500 Y
+23 -1 -4 10d10+800 10d2+4
+10000 80000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2307
+white king's castle~
+white king's castle~
+A white king's castle is standing here.
+~
+A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
+Its job is to protect the king.
+~
+78 0 500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2308
+white king's knight~
+white king's knight~
+A white king's knight is standing here.
+~
+The most powerful soilder of the white chess, it is responsible to the king's safety.
+It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
+~
+79 268697600 500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2309
+white king's bishop~
+white king's bishop~
+A white king's bishop is standing here.
+~
+A happy bishop who can do everything in an incredibly quick motion.
+~
+78 0 500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2310
+black pawn~
+black pawn~
+A black pawn is standing here.
+~
+A protector of its own colour, also a very brave solider, one that never flee and walk away from away battle.
+It is waiting to be promoted to be a more important piece in its class.
+~
+110 0 -500 Y
+10 10 5 3d10+150 2d8+1
+1000 12000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2311
+black queen's castle~
+black queen's castle~
+A black queen's castle is standing here.
+~
+A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
+Its job is to protect the Queen.
+~
+110 0 -500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2312
+black queen's knight~
+black queen's knight~
+A black queen's knight is standing here.
+~
+The most powerful soilder of the black chess, it is responsible to the Queen's safety.
+It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
+~
+111 268697600 -500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2313
+black queen's bishop~
+black queen's bishop~
+A black queen's bishop is standing here.
+~
+A happy bishop who can do everything in an incredibly quick motion.
+~
+110 0 -500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2314
+black queen~
+black queen~
+The black queen is standing here
+~
+She is the most respected and powerful figure in the black chess.
+She is bad-tempered and gets mad easily, watch out!
+~
+110 8 -500 Y
+20 0 0 10d10+600 10d2+4
+6000 60000
+8 8 2
+87 0 0d0+0 0
+0 0 0 0
+#2315
+black king~
+black king~
+The black king is standing here.
+~
+Unlike most kings, he does not enjoy the feeling of being powerful.
+He gave all his power to the queen, yet he is still a very tough fighter.
+~
+110 8 -500 Y
+23 -1 -4 10d10+800 10d2+4
+10000 80000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2316
+black king's castle~
+black king's castle~
+A black king's castle is standing here.
+~
+A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
+Its job is to protect the king.
+~
+110 8 -500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2317
+black king's knight~
+black king's knight~
+A black king's knight is standing here.
+~
+The most powerful soilder of the black chess, it is responsible to the king's safety.
+It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
+~
+111 268697608 -500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2318
+black king's bishop~
+black king's bishop~
+A black king's bishop is standing here.
+~
+A happy bishop who can do everything in an incredibly quick motion.
+~
+110 8 -500 Y
+16 4 0 6d10+300 8d2+2
+1500 18000
+8 8 1
+87 0 0d0+0 0
+0 0 0 0
+#2320
+chessmaster master~
+White chessmaster~
+A white chessmaster is standing here.~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 268435584 -351 Y
+40 -5 -12 5d10+10000 20d10+50
+900000 2700000
+8 8 1
+69 28672 1d1+1 0
+0 0 1 0
+#0
+$~

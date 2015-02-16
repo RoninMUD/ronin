@@ -1,0 +1,135 @@
+#17500
+dragon red young~
+A Young Red Dragon~
+A young red dragon lies on the ground, coiled up against the wall.
+~
+   The young red dragon's scales gleam in the crimson rays of light
+in the chamber.  Its wings are tipped with razor-sharp talons and
+two curved horns adorn its head.  From the horny nose, to the tip of
+its powerful tail, this tremendous creature's presence is ominous.
+~
+537411594 402685984 -506 Y
+49 -19 -13 6d982+14716 5d10+200
+1000000 1500000
+8 8 1
+56 134239161 1d1+1 0
+0 1 0 480
+R
+12
+K
+1000000 0 0 0 0 0 0
+#17501
+dragon red adult~
+An Adult Red Dragon~
+An adult red dragon flies around here.
+~
+   The adult red dragon's scales gleam in the crimson rays of light
+in the chamber.  Its wings are tipped with razor-sharp talons and
+two curved horns adorn its head.  From the horny nose, to the tip of
+its powerful tail, this tremendous creature's presence is ominous.
+~
+268976138 419430400 -601 Y
+53 -21 -15 10d829+54944 8d10+400
+6500000 5000000
+9 8 1
+56 134239161 1d1+1 0
+0 1 0 480
+R
+12
+K
+4000000 17500 0 0 0 0 0
+#17502
+dragon red adult~
+An Adult Red Dragon~
+An adult red dragon lies coiled up against the granite wall.
+~
+   The adult red dragon emits an inner heat in this otherwise cold
+chamber. It is covered in scales and two curved horns adorn its head.
+Its wings are tipped with razor-sharp talons and from the horny nose,
+to the tip of its powerful tail, this tremendous creature's presence
+is ominous.
+~
+540714 419430400 -599 Y
+54 -21 -15 14d781+66228 10d10+600
+3500000 6500000
+8 8 1
+56 134239161 1d1+1 0
+0 1 0 480
+R
+12
+K
+4000000 17502 17510 0 0 0 0
+#17503
+dragon red elder~
+An Elder Red Dragon~
+An Elder Red Dragon is flying around here.
+~
+   With its wings spread in flight, this elder red dragon is an
+awesome sight to behold.  The scales covering its huge body sparkle
+and gleam in the cave's fiery light.  The long, strong tail steers the
+powerful creature through the heights of the tall cavern.  Streams of
+fire spew forth from the large mouth, adding to the heat and intensity
+of the cave.
+~
+540714 419430400 -711 Y
+59 -26 -17 18d1029+95838 9d11+750
+10320000 10000000
+9 8 1
+57 134239161 1d1+1 0
+0 1 0 480
+R
+12
+K
+10000000 17509 17511 0 0 0 0
+#17504
+dragon red elder~
+An Elder Red Dragon~
+An Elder Red Dragon flies around here.
+~
+   With its wings spread in flight, this elder red dragon is an
+awesome sight to behold.  The ruggedness of the scales and the odd
+scar on its skin and wings shows that this dragon has seen many
+battles.  The dragons majestic presence is ominous as it navigates
+its lair with grace and confidence.  A burning glow of crimson
+pierces your eyes as the dragon opens its mouth and expels its
+inner fire.
+~
+537411592 419430400 -679 Y
+63 -28 -21 22d961+103764 11d10+750
+7500000 11000000
+9 8 1
+57 134247353 1d1+1 0
+0 1 0 480
+R
+12
+K
+10000000 17501 0 0 0 0 0
+#17505
+dragon red ancient~
+An Ancient Red Dragon~
+An Ancient Red Dragon flies around in rage.
+~
+   Poets have tried to capture the beauty and majesty of the ancient
+horn-nosed red dragon but none have lived long enough in its presence
+to record even one stanza of the epic this creature deserves.  A long
+triumphant and feathery frill runs the length of the tail and neck, framed
+by the metre long horns jutting prominently from atop its head.  Its
+enormous smooth red wings, tipped with a single vicious talon, cast a
+dreadful shadow as it lopes through the air.  The elegant movement of
+the thick scales which sheath the dragon's heart serve as inspiration
+for Welmar's royal blacksmith's scaled armours.  Behind the unsettling
+horny features of its head lies a mouth of even more frightening teeth
+and a mind cleverer than even a sphinx.
+~
+537395210 419430400 -999 Y
+70 -32 -25 28d777+176692 15d15+900
+20000000 25000000
+9 8 1
+57 134239161 1d1+1 0
+0 1 0 480
+R
+12
+K
+25000000 17504 17505 17513 17514 17515 0
+#0
+$~

@@ -1,0 +1,1649 @@
+#26100
+Thor's Throne Room.~
+A temporary description
+~
+261 33476 0
+S
+#26101
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26102
+D3
+~
+~
+0 -1 26112
+S
+#26102
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26103
+D2
+~
+~
+0 -1 26101
+D3
+~
+~
+0 -1 26111
+S
+#26103
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D2
+~
+~
+0 -1 26102
+D3
+~
+~
+0 -1 26104
+D4
+~
+~
+0 -1 26116
+S
+#26104
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D1
+~
+~
+0 -1 26103
+D2
+~
+~
+0 -1 26111
+D3
+~
+~
+0 -1 26105
+D4
+~
+~
+0 -1 26117
+S
+#26105
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D1
+~
+~
+0 -1 26104
+D2
+~
+~
+0 -1 26110
+D3
+~
+~
+0 -1 26106
+D4
+~
+~
+0 -1 26118
+S
+#26106
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D1
+~
+~
+0 -1 26105
+D2
+~
+~
+0 -1 26109
+D3
+~
+~
+0 -1 26107
+D4
+~
+~
+0 -1 26119
+S
+#26107
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D1
+~
+~
+0 -1 26106
+D2
+~
+~
+0 -1 26108
+D4
+~
+~
+0 -1 26120
+S
+#26108
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26107
+D1
+~
+~
+0 -1 26109
+D2
+~
+~
+0 -1 26115
+S
+#26109
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26106
+D1
+~
+~
+0 -1 26110
+D2
+~
+~
+0 -1 26114
+D3
+~
+~
+0 -1 26108
+S
+#26110
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26105
+D1
+~
+~
+0 -1 26111
+D2
+~
+~
+0 -1 26113
+D3
+~
+~
+0 -1 26109
+S
+#26111
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26104
+D1
+~
+~
+0 -1 26102
+D2
+~
+~
+0 -1 26112
+D3
+~
+~
+0 -1 26110
+S
+#26112
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26111
+D1
+~
+~
+0 -1 26101
+D3
+~
+~
+0 -1 26113
+S
+#26113
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26110
+D1
+~
+~
+0 -1 26112
+D3
+~
+~
+0 -1 26114
+S
+#26114
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26109
+D1
+~
+~
+0 -1 26113
+D3
+~
+~
+0 -1 26115
+S
+#26115
+Bottom of the Tower~
+You are at the base of a tall tower. All you can see about you is a lot of
+different cords,cables and brackets.
+~
+261 0 0
+D0
+~
+~
+0 -1 26108
+D1
+~
+~
+0 -1 26114
+S
+#26116
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D2
+~
+~
+0 -1 26136
+D3
+~
+~
+0 -1 26117
+D4
+~
+~
+0 -1 26125
+D5
+~
+~
+0 -1 26103
+S
+#26117
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26116
+D2
+~
+~
+0 -1 26139
+D3
+~
+~
+0 -1 26118
+D4
+~
+~
+0 -1 26124
+D5
+~
+~
+0 -1 26104
+S
+#26118
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26117
+D2
+~
+~
+0 -1 26140
+D3
+~
+~
+0 -1 26119
+D4
+~
+~
+0 -1 26123
+D5
+~
+~
+0 -1 26105
+S
+#26119
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26118
+D2
+~
+~
+0 -1 26142
+D3
+~
+~
+0 -1 26120
+D4
+~
+~
+0 -1 26122
+D5
+~
+~
+0 -1 26106
+S
+#26120
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26119
+D2
+~
+~
+0 -1 26143
+D4
+~
+~
+0 -1 26121
+D5
+~
+~
+0 -1 26107
+S
+#26121
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26122
+D2
+~
+~
+0 -1 26151
+D4
+~
+~
+0 -1 26130
+D5
+~
+~
+0 -1 26120
+S
+#26122
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26123
+D2
+~
+~
+0 -1 26150
+D3
+~
+~
+0 -1 26121
+D4
+~
+~
+0 -1 26129
+D5
+~
+~
+0 -1 26119
+S
+#26123
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26124
+D3
+~
+~
+0 -1 26122
+D4
+~
+~
+0 -1 26128
+D5
+~
+~
+0 -1 26118
+S
+#26124
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26125
+D3
+~
+~
+0 -1 26123
+D4
+~
+~
+0 -1 26127
+D5
+~
+~
+0 -1 26117
+S
+#26125
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D2
+~
+~
+0 -1 26144
+D3
+~
+~
+0 -1 26124
+D4
+~
+~
+0 -1 26126
+D5
+~
+~
+0 -1 26116
+S
+#26126
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D2
+~
+~
+0 -1 26152
+D3
+~
+~
+0 -1 26127
+D4
+~
+~
+0 -1 26135
+D5
+~
+~
+0 -1 26125
+S
+#26127
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26126
+D2
+~
+~
+0 -1 26155
+D3
+~
+~
+0 -1 26128
+D4
+~
+~
+0 -1 26134
+D5
+~
+~
+0 -1 26124
+S
+#26128
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26127
+D2
+~
+~
+0 -1 26156
+D3
+~
+~
+0 -1 26129
+D4
+~
+~
+0 -1 26133
+D5
+~
+~
+0 -1 26123
+S
+#26129
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26128
+D2
+~
+~
+0 -1 26164
+D3
+~
+~
+0 -1 26130
+D4
+~
+~
+0 -1 26132
+D5
+~
+~
+0 -1 26122
+S
+#26130
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26129
+D4
+~
+~
+0 -1 26131
+D5
+~
+~
+0 -1 26121
+S
+#26131
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26132
+D4
+~
+HOLE~
+9 -1 26186
+D5
+~
+~
+0 -1 26130
+S
+#26132
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26133
+D3
+~
+~
+0 -1 26131
+D5
+~
+~
+0 -1 26129
+S
+#26133
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26134
+D2
+~
+~
+0 -1 26160
+D3
+~
+~
+0 -1 26132
+D4
+~
+HOLE~
+9 -1 26184
+D5
+~
+~
+0 -1 26128
+S
+#26134
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D1
+~
+~
+0 -1 26135
+D2
+~
+~
+0 -1 26159
+D3
+~
+~
+0 -1 26133
+D5
+~
+~
+0 -1 26127
+S
+#26135
+Motherboard~
+Your on a Motherboard. DUH.
+~
+261 0 0
+D2
+~
+~
+0 -1 26158
+D3
+~
+~
+0 -1 26134
+D4
+~
+HOLE~
+9 -1 26182
+D5
+~
+~
+0 -1 26126
+S
+#26136
+3 1/2 Drive~
+You are now in the most usless part of a copmuter today.
+~
+261 0 0
+D0
+~
+~
+0 -1 26116
+D2
+~
+~
+0 -1 26137
+D3
+~
+~
+0 -1 26139
+S
+#26137
+3 1/2 Drive~
+You are now in the most usless part of a copmuter today.
+~
+261 0 0
+D0
+~
+~
+0 -1 26136
+D3
+~
+~
+0 -1 26138
+S
+#26138
+3 1/2 Drive~
+You are now in the most usless part of a copmuter today.
+~
+261 0 0
+D0
+~
+~
+0 -1 26139
+D1
+~
+~
+0 -1 26137
+S
+#26139
+3 1/2 Drive~
+You are now in the most usless part of a copmuter today.
+~
+261 0 0
+D0
+~
+~
+0 -1 26117
+D1
+~
+~
+0 -1 26136
+D2
+~
+~
+0 -1 26138
+S
+#26140
+Memory~
+I wish i had more of this stuff.
+~
+261 0 0
+D0
+~
+~
+0 -1 26118
+D2
+~
+~
+0 -1 26141
+S
+#26141
+Memory~
+I wish i had more of this stuff.
+~
+261 0 0
+D0
+~
+~
+0 -1 26140
+S
+#26142
+Sound Card~
+Makes it so you can hear cool sounds.
+~
+261 0 0
+D0
+~
+~
+0 -1 26119
+D3
+~
+~
+0 -1 26143
+S
+#26143
+Sound Card~
+Makes it so you can hear cool sounds.
+~
+261 0 0
+D0
+~
+~
+0 -1 26120
+D1
+~
+~
+0 -1 26142
+S
+#26144
+Burner~
+It is a Burner. Don't you wish you had one?
+~
+261 0 0
+D0
+~
+~
+0 -1 26125
+D1
+~
+~
+0 -1 26145
+D2
+~
+~
+0 -1 26149
+S
+#26145
+Burner~
+It is a Burner. Don't you wish you had one?
+~
+261 0 0
+D1
+~
+~
+0 -1 26146
+D2
+~
+~
+0 -1 26148
+D3
+~
+~
+0 -1 26144
+S
+#26146
+Burner~
+It is a Burner. Don't you wish you had one?
+~
+261 0 0
+D2
+~
+~
+0 -1 26147
+D3
+~
+~
+0 -1 26145
+S
+#26147
+Burner~
+It is a Burner. Don't you wish you had one?
+~
+261 0 0
+D0
+~
+~
+0 -1 26146
+D3
+~
+~
+0 -1 26148
+S
+#26148
+Burner~
+It is a Burner. Don't you wish you had one?
+~
+261 0 0
+D0
+~
+~
+0 -1 26145
+D1
+~
+~
+0 -1 26147
+D3
+~
+~
+0 -1 26149
+S
+#26149
+Burner~
+It is a Burner. Don't you wish you had one?
+~
+261 0 0
+D0
+~
+~
+0 -1 26144
+D1
+~
+~
+0 -1 26148
+S
+#26150
+Video Card~
+Makes it easier to see what you are doing.
+~
+261 0 0
+D0
+~
+~
+0 -1 26122
+D3
+~
+~
+0 -1 26151
+S
+#26151
+Video Card~
+Makes it easier to see what you are doing.
+~
+261 0 0
+D0
+~
+~
+0 -1 26121
+D1
+~
+~
+0 -1 26150
+S
+#26152
+Zip Drive~
+My second favorite device i have in my computer.
+~
+261 0 0
+D0
+~
+~
+0 -1 26126
+D2
+~
+~
+0 -1 26153
+D3
+~
+~
+0 -1 26155
+S
+#26153
+Zip Drive~
+My second favorite device i have in my computer.
+~
+261 0 0
+D0
+~
+~
+0 -1 26152
+D3
+~
+~
+0 -1 26154
+S
+#26154
+Zip Drive~
+My second favorite device i have in my computer.
+~
+261 0 0
+D0
+~
+~
+0 -1 26155
+D1
+~
+~
+0 -1 26153
+S
+#26155
+Zip Drive~
+My second favorite device i have in my computer.
+~
+261 0 0
+D0
+~
+~
+0 -1 26127
+D1
+~
+~
+0 -1 26152
+D2
+~
+~
+0 -1 26154
+S
+#26156
+Processor~
+It is a Pentium II, it's way too big for its own good.
+~
+261 0 0
+D0
+~
+~
+0 -1 26128
+D2
+~
+~
+0 -1 26157
+S
+#26157
+Processor~
+It is a Pentium II, it's way too big for its own good.
+~
+261 0 0
+D0
+~
+~
+0 -1 26156
+S
+#26158
+CD-Rom~
+One of the few thigns you need it today's computers.
+~
+261 0 0
+D0
+~
+~
+0 -1 26135
+D2
+~
+~
+0 -1 26163
+D3
+~
+~
+0 -1 26159
+S
+#26159
+CD-Rom~
+One of the few thigns you need it today's computers.
+~
+261 0 0
+D0
+~
+~
+0 -1 26134
+D1
+~
+~
+0 -1 26158
+D2
+~
+~
+0 -1 26162
+D3
+~
+~
+0 -1 26160
+S
+#26160
+CD-Rom~
+One of the few thigns you need it today's computers.
+~
+261 0 0
+D0
+~
+~
+0 -1 26133
+D1
+~
+~
+0 -1 26159
+D2
+~
+~
+0 -1 26161
+S
+#26161
+CD-Rom~
+One of the few thigns you need it today's computers.
+~
+261 0 0
+D0
+~
+~
+0 -1 26160
+D1
+~
+~
+0 -1 26162
+S
+#26162
+CD-Rom~
+One of the few thigns you need it today's computers.
+~
+261 0 0
+D0
+~
+~
+0 -1 26159
+D1
+~
+~
+0 -1 26163
+D3
+~
+~
+0 -1 26161
+S
+#26163
+CD-Rom~
+One of the few thigns you need it today's computers.
+~
+261 0 0
+D0
+~
+~
+0 -1 26158
+D3
+~
+~
+0 -1 26162
+S
+#26164
+Power Supply~
+It's a Power supply, it gives power.
+~
+261 0 0
+D0
+~
+~
+0 -1 26129
+D2
+~
+~
+0 -1 26165
+D3
+~
+~
+0 -1 26167
+D4
+~
+~
+0 -1 26171
+S
+#26165
+Power Supply~
+It's a Power supply, it gives power.
+~
+261 0 0
+D0
+~
+~
+0 -1 26164
+D3
+~
+~
+0 -1 26166
+D4
+~
+~
+0 -1 26170
+S
+#26166
+Power Supply~
+It's a Power supply, it gives power.
+~
+261 0 0
+D0
+~
+~
+0 -1 26167
+D1
+~
+~
+0 -1 26165
+D4
+~
+~
+0 -1 26169
+S
+#26167
+Power Supply~
+It's a Power supply, it gives power.
+~
+261 0 0
+D1
+~
+~
+0 -1 26164
+D2
+~
+~
+0 -1 26166
+D4
+~
+~
+0 -1 26168
+S
+#26168
+Power Supply~
+It's a Power supply, it gives power.
+~
+261 0 0
+D1
+~
+~
+0 -1 26171
+D2
+~
+~
+0 -1 26169
+D5
+~
+~
+0 -1 26167
+S
+#26169
+Power Supply~
+It's a Power supply, it gives power.
+~
+261 0 0
+D0
+~
+~
+0 -1 26168
+D1
+~
+~
+0 -1 26170
+D4
+~
+HOLE~
+9 -1 26176
+D5
+~
+~
+0 -1 26166
+S
+#26170
+Power Supply~
+It's a Power supply, it gives power.
+~
+261 0 0
+D0
+~
+~
+0 -1 26171
+D3
+~
+~
+0 -1 26169
+D4
+~
+HOLE~
+9 -1 26178
+D5
+~
+~
+0 -1 26165
+S
+#26171
+Power Supply~
+It's a Power supply, it gives power.
+~
+261 0 0
+D2
+~
+~
+0 -1 26170
+D3
+~
+~
+0 -1 26168
+D5
+~
+~
+0 -1 26164
+S
+#26172
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26181
+D3
+~
+~
+0 -1 26173
+S
+#26173
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26180
+D1
+~
+~
+0 -1 26172
+D3
+~
+~
+0 -1 26174
+S
+#26174
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26179
+D1
+~
+~
+0 -1 26173
+D3
+~
+~
+0 -1 26175
+S
+#26175
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26178
+D1
+~
+~
+0 -1 26174
+D3
+~
+~
+0 -1 26176
+S
+#26176
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26177
+D1
+~
+~
+0 -1 26175
+D5
+~
+HOLE~
+9 -1 26169
+S
+#26177
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26186
+D1
+~
+~
+0 -1 26178
+D2
+~
+~
+0 -1 26176
+S
+#26178
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26185
+D1
+~
+~
+0 -1 26179
+D2
+~
+~
+0 -1 26175
+D3
+~
+~
+0 -1 26177
+D5
+~
+HOLE~
+9 -1 26170
+S
+#26179
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26184
+D1
+~
+~
+0 -1 26180
+D2
+~
+~
+0 -1 26174
+D3
+~
+~
+0 -1 26178
+S
+#26180
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26183
+D1
+~
+~
+0 -1 26181
+D2
+~
+~
+0 -1 26173
+D3
+~
+~
+0 -1 26179
+S
+#26181
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D0
+~
+~
+0 -1 26182
+D2
+~
+~
+0 -1 26172
+D3
+~
+~
+0 -1 26180
+S
+#26182
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D2
+~
+~
+0 -1 26181
+D3
+~
+~
+0 -1 26183
+D5
+~
+HOLE~
+9 -1 26135
+S
+#26183
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D1
+~
+~
+0 -1 26182
+D2
+~
+~
+0 -1 26180
+D3
+~
+~
+0 -1 26184
+S
+#26184
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D1
+~
+~
+0 -1 26183
+D2
+~
+~
+0 -1 26179
+D3
+~
+~
+0 -1 26185
+D5
+~
+HOLE~
+9 -1 26133
+S
+#26185
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D1
+~
+~
+0 -1 26184
+D2
+~
+~
+0 -1 26178
+D3
+~
+~
+0 -1 26186
+S
+#26186
+Top of Case~
+You are top of a computer case. It is flat.
+~
+261 0 2
+D1
+~
+~
+0 -1 26185
+D2
+~
+~
+0 -1 26177
+D5
+~
+HOLE~
+9 -1 26131
+S
+#26199
+A temporary name~
+A temporary description
+~
+261 0 0
+S
+#0
+$~

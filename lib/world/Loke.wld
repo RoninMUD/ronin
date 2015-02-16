@@ -1,0 +1,34 @@
+#16700
+The land of the Vikings~
+This is the southern end of the country.  The place looks cold and very
+unforgiving. We have all heard about this place, but we did not believe
+that it existed.  The Vikings that lives here make their living by killing
+and stealing everything they can see.  Often the Vikings take their boats
+and sail southwards only so they can kill, steal and rape.
+~
+167 4 3
+D0
+~
+~
+0 -1 16701
+D1
+~
+~
+0 -1 16751
+S
+#16799
+The city longhouse.~
+You are inside the longhouse of this city. This is the place
+where the city leaders come togheter and talks about who to
+kill nex. The chieftain of this town lives upstairs.
+To the north you can get back out on the street and when
+you look up you see some kinda trapdoor.
+~
+167 0 0
+D0
+~
+~
+0 -1 16794
+S
+#0
+$~

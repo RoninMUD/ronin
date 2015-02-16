@@ -1,0 +1,33 @@
+#12401
+sign~
+A wooden sign~
+A wooden sign is stuck in the ground.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+E
+sign~
+  This is the Strangelove Garden Hedge Maze.  Don't get
+lost, there isn't a lifeguard around to fish you out.  Watch
+out for dead ends, the flora can be a killer.  The fauna,
+on the other hand, is a whole other story.
+~
+#12455
+sign~
+A wooden sign~
+A wooden sign is stuck in the ground.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+10
+E
+sign~
+   Congratulations!  You made it through the Strangelove
+Garden Hedge Maze.  That wasn't as difficult as you thought,
+was it?
+~
+#0
+$~

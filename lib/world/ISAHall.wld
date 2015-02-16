@@ -1,0 +1,1576 @@
+#27800
+ISA Reception~
+   The reception area is as solemn and austere as befits a castle of an old and
+wise clan.  The wood paneling around the edge of the room is dark and polished
+to a dull gleam and shows its splendor through age.  A large wooden desk
+occupies the center of the room, covered in various papers and documents
+relating to clan business.  The ceilings rise high above with carved rafters
+and ceiling panels showing in full detail the wonderful opulence of this
+castle.  All around the walls are pictures and memorabilia of the different
+people who have, at one time or another, been a part of the ISA Clan.
+~
+278 67141644 0
+D0
+~
+~
+0 -1 27802
+D1
+~
+drawbridge~
+2 27800 27826
+D2
+~
+~
+0 -1 27803
+D3
+~
+~
+0 -1 27804
+D4
+~
+~
+0 -1 27801
+S
+#27801
+ISA Center of Operations~
+   The ISA Center of Operations is a rather barren room, designed with utility
+and purpose in mind.  An enormous oval-shaped stone table occupies the entire
+center of the room, its circumference lined with sturdy padded metal and
+leather chairs.  A magical map of the world hovers over the table in a ghostly
+hue of white, its wispy image dotted with faint colors and symbols, marking
+important places or events.  A large bulletin board lines the far wall, a place
+for clan members to post information, questions or details of their latest
+adventures.  The thick gray stone that surrounds this room seems designed to
+deaden the sounds within and to keep them from leaking to the outside.  A
+single metal door is set in the southern wall, leading down a flight of stairs
+to the ISA Reception.
+~
+278 67141660 0
+D5
+~
+~
+0 -1 27800
+S
+#27802
+ISA Vault~
+   A vast number of holding cells line the walls of this chamber, one for each
+member of the ISA Clan.  Above the door of each cell is engraved the name of
+its owner in a gleaming bronze plaque.  A heavy iron door with a magical lock
+set in the solid stone wall makes sure that no nimble-fingered thief will be
+looting these stores.  The ever-present figure of the vault guard and the
+glowing magic wards and seals that surround this room insure that anything
+stored here will be safe until its owner returns for it.
+~
+278 67141724 0
+D2
+~
+~
+0 -1 27800
+S
+#27803
+ISA Resting Room~
+   The room is filled with wonderfully cozy looking beds. Each bed has piles of
+blankets and pillows, each looking more comfortable then the other. All the
+blankets have the ISA flag emblazoned upon it. There is more then enough room
+to accomodate even the largest of groups in here. A crackling fire burns in a
+fireplace at the end of the room surrounded by a small cluster of easy chairs
+so that one can rest comfortably and enjoy a nice fire and a book, or a cup of
+coffee.
+~
+278 67149916 0
+D0
+~
+~
+0 -1 27800
+S
+#27804
+The Castle Courtyard~
+   This open courtyard is paved with flagstones and surrounded by the inner
+walls of the castle that loom a good fifteen meters into the air.  Several
+archery targets have been lined up at the far end of the courtyard for target
+practice.  A few fencing dummies have been placed next to these at a safe
+distance for melee weapon practice.  A small stand has been propped in the
+corner, filled with a wide assortment of training swords and bows.  The ISA
+Castle looms like a vast shadow against the horizon to the west, blocking
+everything else in that direction from view.  The massive castle represents all
+that the clan has fought for over the years and stands as an icon of leadership
+in these lands.  Huge stained glass windows line its walls, each depicting
+scenes of valor and great heroism from years gone by.  The castle's domed
+ceiling and gleaming black walls is truly a magnificent sight to behold.
+~
+278 32852 1
+D1
+~
+~
+0 -1 27800
+D3
+~
+portculis~
+2 -1 27805
+S
+#27805
+The Grand ISA Clan Hall~
+   The huge domed ceiling overhead gives this room a feeling of such space and
+freedom that it is quite clear why this is the formal entertainment hall of the
+ISA Clan.  Two massive fire places set opposite each other at the middle of the
+hall give warmth and light to the room.  Bronze wall sconces decorate each
+pillar that lines the hall, shaped in the Line and Diamond of the ISA Flag, and
+light up the room magnificently with their magical glow.  The pillars reach
+upwards to support the massive dome of the hall far above.  Painted on the
+ceiling is a massive picture of the battle to claim the town of Fortress
+and this island from the monsters that once ruled here.  Scattered about the
+room and on the walls are portraits of important clan members, and a vast array
+of artifacts that have been collected over the years.  Suits of armor, weapons
+of unsurpassed beauty, gold cups, and other trinkets are set everywhere.  Above
+each fireplace is carved the arms of the wizards who had the castle built--a
+knight upon a warhorse charging an ancient red dragon.  A large ballroom lies
+through a massive double door to the west while a smaller hall is to the north.
+~
+278 67141724 0
+D0
+~
+~
+0 -1 27809
+D1
+~
+portculis~
+2 -1 27804
+D3
+~
+~
+0 -1 27806
+S
+#27806
+Grand Ballroom~
+   The Room is richly decorated with tapestries and suits of armor along the
+walls, a hardwood dance floor and a scattering of smaller tables and chairs
+around the edges where tired couples can sit and relax for a few minutes. At
+the far end of the hall is a raised dias for a band with space for more then
+your common three musician wandering minstrels, this ballroom is used to having
+large orchestras and many people dancing. There is a large chandelier hanging
+here. Made from diamonds it sparkles and casts a thousand sparkling images
+around the walls, it is a room filled with magic and possibility.
+~
+278 67141724 0
+D0
+~
+~
+0 -1 27807
+D1
+~
+~
+0 -1 27805
+S
+#27807
+A Huge Dining Hall~
+   In the center of the room is a giant hardwood table that runs nearly the
+length of the room and looks to be carved from the center of a single tree.
+Chairs line each side and it looks to easily seat 80. There is a sideboard
+running the entire length of the northern wall, where dishes can be set in
+preperation for serving. In the far eastern corner is a small bar with every
+variety of drink known to exist. The kitchen is to the west and the smells
+eminating from that room are enough to make even the pickiest of eaters hungry.
+~
+278 67141724 0
+D2
+~
+~
+0 -1 27806
+D3
+~
+door~
+1 -1 27808
+S
+#27808
+The Castle Kitchens~
+   The kitchen is quite spacious, there are fireburning stoves along the
+northern wall, while the southern wall holds massive ovens. A number of cooks
+bustle about preparing the days meal and keeping the black slate floor clean.
+Pots and pans hang from a large iron rack suspended from the ceiling. Each
+utensil has its place in the drawers built into the cutting table in the
+center. There are many different pantries built into the far wall, each holding
+a variety of different foods. From whole cows hanging by their hooves, to salt
+beef, corn, rice, sugar and flour. Everything a Kitchen and Cook need.
+~
+278 67141724 0
+D1
+~
+door~
+1 -1 27807
+S
+#27809
+The North Hall~
+   Smaller then the Grand Hall, the North Hall is for everyday use. Rich wood
+paneling lines walls, while overheard wooden rafters cross underneath a peaked
+stone ceiling. There is just one fireplace at the end of the hall, and the wall
+hangings are not nearly so rich as in the other Hall. Suits of armor
+interspersed with partially faded tapestries line the walls, while in the
+center of the room, a table with 10 seats around it stands for normal everyday
+meals. At the North end of the hall is visible the entrance to a curving
+stairwell and against the wall to each side are suits of mail holding halberds
+~
+278 67141724 0
+D0
+~
+~
+0 -1 27810
+D2
+~
+~
+0 -1 27805
+S
+#27810
+Below the Grand Staircase~
+   Standing at the bottom of this curving staircase and looking upwards it is
+possible to see the top and the beginning of the hall of the founders. The
+staircase is carpeted in a deep blue with a brass railing running down the
+outside edge. In the curve of the staircase, yet high overhead is a massive
+chandelier made from crystal and diamond, it provides soft, yet sparkling
+illumination to this staircase.
+~
+278 67141724 0
+D2
+~
+~
+0 -1 27809
+D4
+~
+~
+0 -1 27811
+S
+#27811
+Hall of the Founders~
+   At the top of the stairs, there is a plush carpeted hallway, open on one
+side to look over the hall below. The western wall has three openings, evenly
+spaced showing the entry ways to the rooms of the founders of the clan. Each
+one has the name of the Founder engraved above it and represents years of work
+to master the ways of the world. at the end of the hallway is an enormous
+mirror that reflects the entire hallway back upon itself. This is a solemn
+hallway filled with prestige and mystery, wonderfully decorated and filled with
+the riches of the world. To the west is the Hall of Magic, above the entry way
+are carved the names; Night, Relic, Glyph, Coral.
+~
+278 67141724 0
+D2
+~
+~
+0 -1 27816
+D3
+~
+door~
+1 -1 27812
+D5
+~
+~
+0 -1 27810
+S
+#27812
+The Hall of Might~
+None.
+~
+278 67141724 0
+D0
+~
+door~
+2 27800 27813
+D1
+~
+door~
+1 -1 27811
+D2
+~
+door~
+2 27800 27814
+D3
+~
+door~
+2 27800 27815
+S
+#27813
+Glyph's Room~
+None.
+~
+278 67141724 0
+D2
+~
+door~
+1 -1 27812
+S
+#27814
+Coral's Room~
+None.
+~
+278 67141724 0
+D0
+~
+door~
+1 -1 27812
+S
+#27815
+Relic's Room~
+None.
+~
+278 67141724 0
+D1
+~
+door~
+1 -1 27812
+S
+#27816
+Hall of the Founders~
+   Standing in the center of the hall the beauty of the carpet and tapestries
+hanging on the wall is even more apparent. With the light cast from the
+chandelier above the stairs it is possible to see the intricate weaving
+involved and the skill with which these things are crafted. There is a bust of
+the creator of the hall standing in all his regalness on a pedestal next to
+this door. To the west is the Hall of Magic, above the entry way are carved the
+names; Ammo, Tepir, Virte, Magma.
+~
+278 67141724 0
+D0
+~
+~
+0 -1 27811
+D2
+~
+~
+0 -1 27821
+D3
+~
+door~
+1 -1 27817
+S
+#27817
+The Hall of Magic~
+None.
+~
+278 67141724 0
+D0
+~
+door~
+2 27800 27818
+D1
+~
+door~
+1 -1 27816
+D2
+~
+door~
+2 27800 27819
+D3
+~
+door~
+2 27800 27820
+S
+#27818
+Virte's Room~
+None.
+~
+278 67141724 0
+D2
+~
+door~
+1 -1 27817
+S
+#27819
+Magma's Room~
+None.
+~
+278 67141724 0
+D0
+~
+door~
+1 -1 27817
+S
+#27820
+Tepir's Room~
+None.
+~
+278 67141724 0
+D1
+~
+door~
+1 -1 27817
+S
+#27821
+Hall of the Founders~
+   At the end of the hallway is a large mirror, reflecting everything in the
+hallway back, closer inspection lets you almost get lost in another galaxy from
+looking into it to deeply. The walls of the hallway are painted a deep red in
+contrast to the blue carpeting, while the stone surround on the entry way is
+grey rock. To the west is the Hall of Mastery, above the entry way are carved
+the names; Jearom, Ellisande, Aemon, Shadowkiller.
+~
+278 67633884 0
+D0
+~
+~
+0 -1 27816
+D2
+~
+mirror~
+12 -1 27876
+D3
+~
+door~
+1 -1 27822
+S
+#27822
+The Hall of Mastery~
+None.
+~
+278 67141724 0
+D0
+~
+door~
+2 27800 27823
+D1
+~
+door~
+1 -1 27821
+D2
+~
+door~
+2 27800 27824
+D3
+~
+door~
+2 27800 27825
+S
+#27823
+Aemon's Room~
+None.
+~
+278 67141724 0
+D2
+~
+door~
+1 -1 27822
+S
+#27824
+Shadowkiller's Room~
+None.
+~
+278 67141724 0
+D0
+~
+door~
+1 -1 27822
+S
+#27825
+Ellisande's Room~
+None.
+~
+278 67141724 0
+D1
+~
+door~
+1 -1 27822
+S
+#27826
+Before the Grand ISA Castle~
+   The Castle looms overhead it spires rising high above the mist into the
+sky above. The walls are giant, impenetrable walls of stone polished to
+a deep black lustere. A drawbridge is built into the wall at the eastern most
+point and can be let down to cross the wide and deep moat that encircles the
+walls. Every hundred paces or so along the wall a shining black guard tower
+rises, and from each towers battlements flies a flag of one or another of its
+members representing heros of today and heros that have long been forgotten.
+There are two huge hulking metal shapes guarding the entrance to the
+drawbridge, what precisely these shapes are is hard to discern, whether magical
+or humanoid who knows, yet both appear to be formidable foes.
+~
+278 32784 2
+D1
+~
+~
+0 -1 27827
+D3
+~
+drawbridge~
+2 -1 27800
+S
+#27827
+Upon the Shores of a Mist-Shrouded Island~
+   The bank slopes gently towards upwards to the west, away from the lake and
+upwards towards the looming walls of Castle ISA in the distance. The castle
+casts a stark and forbidding shadow down upon the lake, and even though it is
+impossible to tell where the path is, the way is easy going and quite
+navigable. To the east the lake appears to be nothing more then a billowing
+blanket of fog rolling off into the distance and the barely discernable town
+of Fortress across the lake. Everything is silent, waiting for something, or
+perhaps someone.
+~
+278 32784 2
+D3
+~
+~
+0 -1 27826
+S
+#27828
+The Misty Shores of Everfrost Lake~
+   The banks of the lake are shrouded in a fog that is almost waist deep. The
+ground feels as if it slopes gently down towards to water, and is coated with
+heave frost, in places so slick that it would not be hard to lose ones footing
+and slide down into the icy water. There is a little dock here that appears to
+be for a ferry that shuttles out to an island. The island is barely visible
+rising up through the fog, crowned by the Grand ISA Castle. Its spires reaching
+wonderously high in the air, each tower gleaming with its own mystical light.
+~
+278 32784 1
+D1
+~
+~
+0 -1 27829
+S
+#27829
+Everfrost Lane~
+   The lane here has a heavy coating of frost, sprinkled heavily over the
+layers of ice upon the road. The buildings and trees all glimmer as the light
+catches and refracts, throwing patterns of light and color across the buildings
+and road. The air swirls and mists faintly as water droplets freeze and fall to
+the ground. Ahead at the end of the lane the glimmering banks of Everfrost Lake
+are just visible as the light glints off the waves.
+~
+278 32784 1
+D1
+~
+~
+0 -1 27830
+D3
+~
+~
+0 -1 27828
+S
+#27830
+The Crossroads~
+   This is the center of the once lost town of Fortress. Having been
+rediscovered by the members of the clan of ISA, this town is beginning to
+breathe once again. Here at the crossroads of the town, there are small stands
+that street vendors once used to hawk their wares. Now these stands are empty,
+and with the exception of a few north folk bundled up against the cold there
+aren't many townsmen about. All the stands are now frozen over, the once bright
+fabrics that made up the roofs and walls are quite solidly frozen and would
+probably shatter easily under the touch. All around the square are mighty
+buildings and broken symbols of what was once a strong and beautiful town. In
+its day this must have been a fantastic sight to behold.
+   To the north can be seen a path of trees that seem to twist reality so the
+eye is never certain they are there. To the south is a calm and serene looking
+path that slops gently upwards. West, a small lane that appears to be
+completely coated with frost, not solid ice or snow, but just a glimmering of
+frost, as if was just begginning to freeze. To the east are piled massive
+snowdrifts with a small path winding between them. This city once was
+resplendent beyond any glimmer of a doubt, but now........
+~
+278 67141648 1
+D0
+~
+~
+0 -1 27833
+D1
+~
+~
+0 -1 27831
+D2
+~
+~
+0 -1 27850
+D3
+~
+~
+0 -1 27829
+S
+#27831
+Snowdrift Road~
+   The snowdrifts are quite deep here. The storm is very close at hand. The
+winds are whipping the snow into new drifts all the time. It would be very easy
+to be buried here if someone stood still to long. The few houses that can be
+seen above the drifts are quite solidly frozen. There seems to no life in this
+part of the city. How can anything survive this?
+~
+278 32784 1
+D0
+~
+~
+0 -1 27858
+D1
+~
+~
+0 -1 27832
+D3
+~
+~
+0 -1 27830
+S
+#27832
+Snowdrift Road~
+The snowdrifts are quite deep here. The storm is very close at hand. The
+winds are whipping the snow into new drifts all the time. It would be very easy
+to be buried here if someone stood still to long. The few houses that can be
+seen above the drifts are quite solidly frozen. There seems to no life in this
+part of the city. How can anything survive this?
+~
+278 33296 1
+D1
+~
+~
+0 -1 27859
+D3
+~
+~
+0 -1 27831
+S
+#27833
+The Path of Magic~
+   The tree lined path seems to shift and twist the longer it is looked at. The
+very air seems to tingle with an aura of magic. The buildings to each side are
+perfectly sculpted in ice. Something not natural sustains them, for they appear
+to be well kept up and comfortable. The shop to the north has a sign above it
+proclaiming in magical fire that this is Podo's Potion Depot. Arvis' Scroll
+Shop is just next door appearing to be standing upside down?? Just to the west
+is the Circle of Magic, different colors rise from the circle, swirling and
+dancing as they rise up to the sky and twist out of view. The path is unnerving
+to say the least. Some questions are better left unasked.
+~
+278 33296 1
+D0
+~
+~
+0 -1 27836
+D1
+~
+~
+0 -1 27835
+D2
+~
+~
+0 -1 27830
+D3
+~
+~
+0 -1 27834
+S
+#27834
+Podo's Potion Depot~
+   The perfectly sculpted entryway of this potion shop seems to fortell high
+prices.... The counter and walls of the shop appear to be crystal clear Ice(tm)
+formed by the finest craftsman, and kept solidly frozen through the works of
+many wizards. The man behind the counter, Podo himself one might think, Is a
+well dressed, clean shaven man. Who by the looks of him has done fairly well in
+this harsh environment. Lining the walls behind him are countless potions
+bottled and lined up with a precise caring hand. Nothing is out of place in
+this shop.
+~
+278 67142236 0
+D1
+~
+~
+0 -1 27833
+S
+#27835
+Arvis' Scroll Shop~
+   Entering the room and standing on the ceiling is quite an odd experience.
+Everything is in its rightful place, the sales counter, a couple of charis, a
+staircase to the upper floor. However it is all upside down. The counter,
+stairs and chairs are all sitting quite comfortably on the floor above!! The
+ceiling which upon which one walks is quite covered in stacks of dusty papers.
+It is impossible to find a path through the piles of scrolls and letters
+cluttering the room. From the back corner a stack of books sneezes, apparently
+the shop is not as deserted as it would seem. Every kind of scroll that could
+have gone through this part of the world ended up copied down in this shop it
+seems. Mountains of papers are stacked in mismatch form all across the room,
+there is no apparent organization. Tacked to a small clear space in one corner
+of the wall is a parchment bearing a list of all the scrolls available for sale
+mostly faded but still legible.
+~
+278 67142236 0
+D3
+~
+~
+0 -1 27833
+S
+#27836
+The Circle of Magic~
+   This place is warm, and there is no evidence of snow or ice..... The
+buildings are tall and perfectly formed. Smoothly curved and without
+interuption, the faces of the building are each colored differently, without
+any evidence of paint or other coloring techniques. The grass is green and
+etched in the ground is a circle mounded from topsoil. It looks freshly dug,
+but no matter how the wind swirls, or countless feet pass over it, the circle
+remains unchanged, undamaged. Rising from the circle is a constant swirl of
+color. Rising uninterrupted into the air, it swirls and changes as it rises
+never staying constant. Any wise man would know to avoid stepping into that
+circle without good reason. Just to the north there is a grove of trees, that
+appear to be older then anything ever before seen.
+~
+278 32784 1
+D0
+~
+~
+0 -1 27837
+D1
+~
+~
+0 -1 27849
+D2
+~
+~
+0 -1 27833
+D3
+~
+~
+0 -1 27845
+S
+#27837
+Grove of the Magi~
+   The trees here are old. No one knows when they were planted, or who planted
+them. Each tree is smooth trunked, with heavy foliage just overheard. There is
+a bench under one of the tree where one could sit and meditate for hours. The
+trees are very close together and there does not appear to be any way through
+them, but as one moves through the grove, the trees seem to move out of the way
+and gently surround you. The trees seem to be protectors, almost sentient,
+careing for this grove is what these trees exist for  and woe be to the one who
+tries to hurt them.
+~
+278 33300 3
+D0
+~
+~
+0 -1 27838
+D2
+~
+~
+0 -1 27836
+S
+#27838
+Inside the Tower of the Magi~
+   The tower entry way is a vaulted room, its ceilings arching almost out of
+sight above. There is no decoration, just a sense that something is there,
+something is watching everything that occurs. Stairs float here in the middle
+of the room, curving and rising into the air. Vast windows do not look outside,
+rather they portray pictures of old Magic Users who can be linked to the line
+of Magic Users in existence today. The floor appears to be completely made of
+glass, below is only darkness...... What is down there? The noises that rise up
+from there....ugh, It would not be a wise decision to venture down there......
+~
+278 67142236 0
+D2
+~
+~
+0 -1 27837
+D4
+~
+~
+0 -1 27839
+D5
+~
+~
+0 -1 27842
+S
+#27839
+The Library~
+   Huge bookshelves line the walls of this room. Their are two levels, with a
+curved walkway granting access to the second level. Each section of books is
+divided into categories, ranging from the history of Midgaard to documentaries
+on different wizards lives and even self help manuals for the wizards who don't
+quite know how to use their powers. The room glows with a soft light perfect
+for reading, of course the strange thing is there is no discernable source of
+light, and it does not cast shadows. Mages are strange folk.
+~
+278 67142236 0
+D4
+~
+~
+0 -1 27840
+D5
+~
+~
+0 -1 27838
+S
+#27840
+The Chamber of Waiting~
+   This chamber was designed to allow Wizards to wait until the Focus at the
+top of the tower was available. The Focus is a place where one can meditate and
+heal their spiritual side. It allows one to bring all their magics together to
+focus in one direction. This chamber has seats set up to allow Wizards to
+rest and gather their energies for the Focus. Along one wall is a map of the
+known world, showing the location of each Hero as they venture on their quests.
+It allows Wizards to learn the comings and goings of different heros across the
+world.
+~
+278 67142236 0
+D4
+~
+door~
+1 -1 27841
+D5
+~
+~
+0 -1 27839
+S
+#27841
+The Focus~
+   The room is completely bare except for a small carpet placed in the precise
+center of the room. Wizards sit here and meditate, focusing their energies for
+battles to come. The walls are all completely clear crystal, shaped to a
+perfect sphere allowing unobstructed views of the surrounding countryside. The
+grove, the lake and the endless blizzard. The weight of the world comes into
+perspective.
+~
+278 67141724 0
+D5
+~
+door~
+1 -1 27840
+S
+#27842
+The Path of Shadows~
+   The hall is quite visible to the naked eye, there is no doubt as to the
+direction of the path. It goes straight south and a door can be discerned at
+the end of the walkway. The walls however cannot be seen. There is no obvious
+edge to the hallway, however there is an aura of darkness coming from the sides
+and below that give the idea that perhaps stepping off the illuminated carpet
+would be a bad idea. Shadows cling to the ceiling giving off impressions that
+there might be something to see, if only there were a little more
+illumination...... To the south can be seen the doorway to Strategic Command.
+The military presence keeps fear of the dark from being to overwhelming. Just
+in front of the door can be seen the bare edges of a ladder going down into the
+darkness, only people who were invited would want to risk going into those
+depths....
+~
+278 32860 0
+D2
+~
+door~
+1 -1 27843
+D4
+~
+~
+0 -1 27838
+D5
+~
+ladder~
+11 -1 27844
+S
+#27843
+Strategic Command~
+   The room is lit by a single overheard fluorescent bulb that is flickering
+fitfully and creating a droning buzz that fills the room. There is a map spread
+out on the giant table that fills the center of the room. On the map little
+player characters move around showing the location of different people in the
+world at any given time. The Southern wall is completely covered with an on
+screen communicator for keeping in touch with the special commando unit of the
+feared ISA Clan. It is from this room that military units plan rescue missions
+and send the best of the best to complete them. On the western wall are
+newspaper clippings of the famous missions that ISA commandos have completed.
+None give names or even an inkling of who might have completed them, but among
+the elite, no names are necessary. Against the eastern wall equipment lockers
+are lined up. A personalized one for each commando in ISA. A place to store
+gear and plan missions this room is completely utilitarian.
+~
+278 67141724 0
+D0
+~
+door~
+1 -1 27842
+S
+#27844
+Assassin's Paradise~
+   The room is obscured in shadows overlapping shadows.... Nothing is defined
+or completely visible in this room. Along the walls shapes of stealth weapons
+can be seen faintly each gleaming with an incredibly sharp edge. There are
+small niches carved into the wall where one can have a private conversation
+without fear of unseen attack or eavesdropping. The room is impeccably clean,
+for where there is dust and grease one leaves more footprints and fingerprints
+then is prudent. The master of this room is a little gnome who appears only to
+take a coat or scarf and hang it in the corner. He insures that only members
+who have reason to, and can be trusted to see the faces of other members are
+allowed into this room. For here there is honor, a strange kind of honor but
+nonetheless honor. No one would want to set a foot wrong for the wrath of the
+clan would fall upon him and it would only be a matter of time before he was
+silenced for good.
+~
+278 32796 0
+D1
+~
+wall~
+8 -1 27877
+D4
+~
+ladder~
+11 -1 27842
+S
+#27845
+The Permafrost Gardens~
+   The ground here is completely frozen. It does not seem that these gardens
+have ever seen more then a little light and warmth. There are two massive
+sculptures made entirely from Ice that guard the way to the Circle of Magic.
+They appear to be very old Wizards, whether they simply turned themselves into
+ice sculptures when they wished to leave the mortal world, or the sculptures
+were created in honor of them, no one knows. Around the base of each one there
+are planted frost lilies that bloom all year round. These flowers never fade,
+never whither and are whiter then the snow and ice covering the ground. The
+stark white of their petals is sharply contrasted to the dark green stem that
+holds them up. The aura surrounding these gardens is completely peaceful and
+calm. It would be easy to be lost for days in here without wondering where the
+exit was or how to get out. The path of snow and ice continues North and in the
+distance you can see massive fountains of water, yet no splashes can you hear.
+Peculiar.
+~
+278 32784 1
+D0
+~
+~
+0 -1 27846
+D1
+~
+~
+0 -1 27836
+S
+#27846
+The Permafrost Gardens~
+   This section of the gardens is filled with unique fountains. Each base is a
+different shape, a six sided one, a triangular one, in the far corner is a base
+with more sides then could possibly be counted. Yet each fountain has a
+different shape to the water that flows out of it The closest being a spreading
+fan of water that arcs brilliantly into the air. before settling back into the
+basin. There are water spouts and arches, a few fountains even boast spray that
+is spouts within spouts with crowns of water falling back to the basin before
+arching high into the air again. The thing that is eerie is that none of these
+fountains make any noise whatsoever, despite the volumn and height of the water
+that appears to be flowing from them. An eerie light plays across the waters
+but adds no warmth to the scene. The truly striking thing is the silence and
+solitude of this area. The path continues to the east and behind the tower of
+the Magi it is possible to see many types of tree, each coated with its own
+crown of ice.
+~
+278 33296 1
+D1
+~
+~
+0 -1 27847
+D2
+~
+~
+0 -1 27845
+S
+#27847
+The Permafrost Gardens~
+   The grove of trees here is absolutely stunning. There are hundreds of
+different types of trees, each one with its own coloring and shape. These trees
+appear to have been brought here from all the different places that the wizards
+that frequent these gardens have traveled. The mark of a wizards abilities is
+to be able to bring back another tree. One that is not already planted in this
+garden. It is a way for one to acheive lasting recognition even hundreds of
+years after his death. Each different tree has a unique type of fruit that
+blossoms at different times of the year. There are trees with small berries,
+large fruit, flowers of all colors and shapes, even trees that appear to have
+small bushes or mushrooms growing in the upper reaches of the canopies. Each
+tree has around it an aura of magic that allows it to grow in the this garden
+no matter what kind of climate it came from. The splendor of this part of the
+garden is not rivaled anywhere in the world. The frost and ice sparkle and
+dance in ways to dazzle the eyes. Under the largest of these trees are a few
+small benches for guests to sit and enjoy the beauty of the grove. The path
+continues to the east and west back to the fountains or on to fields of flowers
+all shades of the rainbow, just visible through the trees.
+~
+278 33296 1
+D1
+~
+~
+0 -1 27848
+D3
+~
+~
+0 -1 27846
+S
+#27848
+The Permafrost Gardens~
+   The path here splits garden beds of flowers that go on in all different
+colors and sizes. The flowers almost appear to be tiered, the way the small
+flowers are planted close along the path, and they get taller the farther back
+you look. Some appear capable of dwarfing even a half ogre. It is a valley of
+color, each flower frozen behind its own coating of ice. Who knows how old
+these flowers are, yet each is perfectly preserved in full bloom and with none
+of its brilliant color tainted by time. The path bends slightly as it makes its
+way through the small field of flowers, curving gently among the red and blue
+roses. It is a peaceful walk uninterrupted by anything of the outside world.
+~
+278 33296 1
+D2
+~
+~
+0 -1 27849
+D3
+~
+~
+0 -1 27847
+S
+#27849
+The Permafrost Gardens~
+   The garden here is of a strange variety. It is rock formations, each placed
+with obvious care and much consideration. There are tall spires colored in a
+deep red, and wide rocks with deep basins in them filled with water. Each stone
+has a history behind it, there for any who wish to know it to learn. Small
+rocks follow the course of the path, while large ones appear to be stacked at
+impossible angles, even though it is rumored that there was no magic put into
+this part of the garden. According to legend each rock was carefully placed by
+an old Wizard who used the project as a means of clearing his mind in
+preperation for tranporting himself to the meditation plane and a higer
+existence. Whoever is responsible for this area, no matter Wizard, God or
+passerby, has created a stunning collection of rock that lets the eye wander
+blissfully through a maze of curves and angles that manage to bring a peace to
+any who look upon them.
+~
+278 33296 1
+D0
+~
+~
+0 -1 27848
+D3
+~
+~
+0 -1 27836
+S
+#27850
+The Path of Divinity~
+   The broad path curves to slightly to the north giving it a peaceful, serene
+air. You can hear the noise and bustle of the crowds coming from the Crossroads
+to the north. Trees line the path on both sides, evergreens, their boughs
+weighed down with snow and ice. Ahead, as the path curves the Grand Temple
+comes into view, the Chamber of Prayer at the top gleaming frostily, light with
+its own magical light, flickering from the upper rooms. The entrance is just
+visible topping a slight rise to the South. To the west, you can see the
+Ginzuishou road leading off in the distance, a few shops in sight.
+~
+278 32784 1
+D0
+~
+~
+0 -1 27830
+D2
+~
+~
+0 -1 27851
+D3
+~
+~
+0 -1 27853
+S
+#27851
+The Grand Temple of the North~
+   Inside the Temple the ceilings rise to majestic heights. The decorations are
+plain, yet elegant, the entire building seems to radiate peace and meditation.
+Along one wall are carved the statues of the clerics and paladins who have
+brought fame and fortune to the ISA Clan. They gaze down in strength and peace
+warning all who enter, that this is their guard and woe to any who trespass.
+The other walls are covered in tapestries, depicting famous battles and scenes
+from the lives of the heroes of ISA. Rising in the center of the room, stairs
+curve up in a winding fashion towards a landing at the entrance to the chamber
+of prayer. The staircase has an intricately carved handrail and gleaming marble
+steps worn smooth from years of feet treading upon them. These stairs lead up
+to the Chamber of Prayer above.
+~
+278 67141656 0
+D0
+~
+~
+0 -1 27850
+D4
+~
+~
+0 -1 27852
+S
+#27852
+The Chamber of Prayer~
+   There are kneeling cushions spaced evenly across the floor in this massive
+tower top room. All are facing North to the enormous stained glass window that
+illuminates the room. The light comes slanting down through the glass and casts
+beautiful colored patterns on the floor, the light sparkles and gleams across
+the gilding on the cusions and wall hangings. The wall opposite the window
+has carved into the rock a relief carved out of the solid rock showing a
+historic scene between a now unknown paladin and Whrymscar the might red dragon
+long ago. The ceiling vaults majestically towards a point many feet above the
+floor, fading into shadow and darkness as it rises. The entire room was made
+for the purpose of meditation, and it achieves a most wonderful feeling of
+serenity. Who could think of violence in this setting?
+~
+278 67141656 0
+D5
+~
+~
+0 -1 27851
+S
+#27853
+Ginzuishou Road~
+   The road is not as smooth as before, the buildings to each side are a bit
+morerun down. The Path of Divinity beckons in the distance. Once this road had
+an air of majesty, a forbidding thing to look upon, now, covered in frost and
+snow, the broken edges of these stark buildings look down silently upon the
+street. Behind the broken glass of dirty windows, suspicious faces peer out
+into the street wondering who is out there and why. Just ahead there is a Dojo
+whose doors frame a welcome escape from the street.
+~
+278 32784 1
+D1
+~
+~
+0 -1 27850
+D3
+~
+~
+0 -1 27854
+S
+#27854
+Ginzuishou Road~
+   It appears that some of the buildings have been fixed up on this stretch of
+the road. Some effort has gone into restoring the buildings here to their
+former majesty and austere facades. The most prominent of these appear to be a
+dojo to the north that sits with calm exterior and welcome doors, while from
+the building to the south you can hear the crash of battle that signals an
+arena. It is obvious that the lives of the few brave enough to survive in these
+harsh regions, shape their lives around the skills of weapons and might.
+~
+278 32784 1
+D0
+~
+~
+0 -1 27855
+D1
+~
+~
+0 -1 27853
+D2
+~
+~
+0 -1 27857
+S
+#27855
+The Yume Senshi Dojo~
+   The Dojo is fashioned as most are, with rice paper walls and woods that
+appear to be aged and quite solid. The walls are covered with trophies and
+swords of famous warriors, long forgotten. Through the practice room and out to
+the north there is a serene looking rockgarden that beckons with solitude and
+focus. On the floor are bamboo mats, along the walls are small tables for food
+and drink. Practice swords and spears are set in a rack along the eastern wall,
+while to the east sparring robes are hanging on hooks. This room of training,
+its entire focus is to teach those who wish to learn how to be ready for
+combat, how to fight with honor, and even to die with honor.
+~
+278 67141656 0
+D0
+~
+~
+0 -1 27856
+D2
+~
+~
+0 -1 27854
+S
+#27856
+The Dojo Rockgarden~
+   In the center a pool bubbles out of the ground and flows down a slight
+riverbed made of carefully placed stones. The ground around the stream is
+carefully leveled, and around the edges of the perfectly manicured lawn are
+small raised beds of small trees shaped, with years of care and attention, into
+twisted and curving forms that let the eye wander thoughtfully among them. The
+garden brings a sense of focus that would seem to allow concentration on the
+weapons training that brings you to this place.
+~
+278 67141648 1
+D2
+~
+~
+0 -1 27855
+S
+#27857
+The Ice Palace Training Grounds~
+   The seats of the arena frown down upon the testing grounds. The walls have
+gates at the four points of the compass, who knows what has passed through
+those steel bars? Is it possible to live up to the feats of those who have
+tested themselves on these grounds before??? The Seats are aged wood, cracked
+with the frost, there is a feeling in the air, something is going to happen,
+what will it be? Where will it come from? The walls surrounding the arena floor
+are etched with battle marks, each marking the style, height and stength of the
+warrior who made that mark. They tell nothing of the stories, who died, who
+lived to fight another day, but each has meaning in its own way.
+~
+278 67141680 1
+D0
+~
+~
+0 -1 27854
+D1
+~
+bars~
+8 -1 27878
+D2
+~
+bars~
+8 -1 27880
+D3
+~
+bars~
+8 -1 27879
+S
+#27858
+Ye Olde Food Shoppe~
+   The snowdrifts piled on and around this little shoppe has made it
+wonderfully quiet and sheltered from the wind. The log fire crackling on the
+hearth, adds to the warmth of the room. It is quite a nice little shop, its
+walls lined with baked foods and goodies to water the mouths of even the
+pickiest of travelers. The heavy wooden beams above, weathered with age, and
+warmth, add an air of stoicism to the room. It is quite apparent the the
+shopkeeper has learned the trick to surviving these conditions and will not
+easily be chased out. From across the counter you can see the him tidying his
+shelves and keeping a close eye upon any who enter his shop. On the counter
+there is a faded and worn list of items this shopkeeper has for sale. hmmm is
+it possible that they are as old as he is?
+~
+278 67141724 0
+D2
+~
+~
+0 -1 27831
+S
+#27859
+The Eternal Blizzard~
+It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27860
+The Eternal Blizzard~
+It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27861
+The Eternal Blizzard~
+It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27862
+The Eternal Blizzard~
+It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27863
+The Eternal Blizzard~
+   It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27864
+The Eternal Blizzard~
+   It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27865
+The Eternal Blizzard~
+   It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27866
+The Eternal Blizzard~
+   It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27867
+The Eternal Blizzard~
+   It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27868
+The Eternal Blizzard~
+   It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+obscuring any obvious exits from this storm. Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27869
+The Eternal Blizzard~
+It is impossible to see more then two feet into the storm! The winds rage,
+swirling the snow in a blinding white dance. Drifts pile up in the road
+quickly burying any possible landmarks. Is there some bit of light ahead? or
+simply a cruel trick of the imagination? Where is safety? Where is the way
+out? Everywhere is blinding whiteness and biting winds, this is not a safe
+place to be, which way to go!?!?
+~
+278 33296 9
+S
+#27870
+At the Base of the Towering Mountains~
+   The Mountain looms above, frowning down upon the plains and the storm that
+rages in the distance. When did this storm start? When will it end? Who knows,
+it is impossible to see into it. The mountain side is very rocky and does not
+look to be an easy climb... There are a few crevices and cracks that could
+possibly serve for hand holds in climbing this surface, but the way is long and
+very dangerous. Is it possible to see an opening in the mountainside up there?
+~
+278 33296 9
+D0
+~
+~
+0 -1 27869
+D4
+~
+cliff~
+11 -1 27871
+S
+#27871
+The Frozen Maw of a Mountain Cave~
+   The cave is quite coated with frost and ice. Hanging down from over head are
+what appear to be massive stalagtites of frozen water. From the ledge the view
+is severly restricted by a massive snowstorm in the distance which cannot be
+pierced by mortal eyes. The way down is steep and treacherous, are there maybe
+a few cracks and crevices that one could climb down? Fatal is the only
+way to describe this ledge.
+~
+278 33296 5
+D2
+~
+~
+0 -1 27872
+D5
+~
+cliff~
+11 -1 27870
+S
+#27872
+A Small Tunnel of Roots and Earth~
+   The tunnel is quite low, roots and vines dangling down in clumps at various
+points. The earthen walls look quite solid, no danger of those
+collapsing....... In the distance a small hole of light beckons, possibly the
+end of the tunnel. A few grubs wiggle in the dirt, carrying on importantly on
+some task given by a power no one can guess at.
+~
+278 33297 5
+D0
+~
+~
+0 -1 27871
+D1
+~
+~
+0 -1 27873
+S
+#27873
+Behind the Falls~
+   The path here opens up into a middling sized cave. The open side is blocked
+off by the sheet of water from the falls, the sound of it echoing around the
+chamber. There is a small hole in the western wall surrounded by the deep
+burrowing roots of the trees on the cliff side. The dark walls are loose rock
+and shale mixed with dark brown soil. From the roof dangle small roots from the
+plants above. The cave is a perfect resting spot from ones adventures.
+~
+278 33297 5
+D2
+~
+~
+0 -1 27874
+D3
+~
+~
+0 -1 27872
+S
+#27874
+Near A Cascading Waterfall~
+   The trail wraps around the edge of the stream running behind the waterfall
+the ledge beneath overhangs a crystalline pool. Deep in its depths many
+varieties of fish are swimming to and fro, obviously enjoying the pressure of
+the falls. Surrounding the edge of the pond and cliff face are many different
+types of plants and trees. All this plant life is kept fresh by the spray of
+the waterfall, creating an almost temple like atmosphere with the sound of the
+falls and the fresh scented air, this is one of natures truly beautiful spots.
+~
+278 33296 3
+D0
+~
+~
+0 -1 27873
+D2
+~
+~
+0 -1 27875
+S
+#27875
+A Worn Trail Along a Mountain Stream~
+   The path looks as if many pairs of feet have gone both directions here.
+Perhaps what lies ahead has scared them off, perhaps not. A stream is off to
+one side, the path overhanging it slightly, it appears to be a bit of a drop
+down. Every once in a while a few loose rocks tumble off the edge and roll down
+the slope splashing into the stream. The trail is well packed dirt, a few loose
+leaves have fallen on the path and crunch under foot. Once this was a well
+traveled trail, now it appears to be traveled less and less each year.
+~
+278 33296 3
+D0
+~
+~
+0 -1 27874
+S
+#27876
+A Galaxy far far away....~
+Star Wars, The home of the famous, the scum and the simple travelers.
+Each to his own, and to his own each may go.
+~
+278 16 0
+D0
+~
+~
+0 -1 27821
+D4
+~
+~
+0 -1 27881
+S
+#27877
+Paladins Purgatory~
+   This exclusive hole in the wall hideout behind the thieves
+guild is reserved for only men and woman who have pledged their
+souls and talents to a darker form. Shapes and shadows move and
+writhe on the wall, to the untrained eye they seem to be merely
+flickers in the candlelight. Close attention to detail reveals a
+more mystical side to each shadow, where they come from, or what 
+they wait for no one knows.... best not to question the dark arts
+to closely.
+~
+278 16 0
+D3
+~
+wall~
+8 -1 27844
+S
+#27878
+Prayer Room~
+   This room, just off the main arena, is used by the
+wandering groups known as Paladins. In preparation for 
+battle, many fighters will spend time in quiet reflection
+and prayer to their gods, for help in the upcoming fight.
+The room is sparse and bare, with a minimum of comfort.
+Only enough furnishings to keep one comfortable in the final
+moments before fighting.
+~
+278 32784 0
+D3
+~
+bars~
+8 -1 27857
+S
+#27879
+Frozen Barracks~
+   This frozen hall is lined with beds. Each cot has its
+own sheet and blanket, small pillow and towel hung on 
+the footboard. The state of everything is perfectly
+preserved beneath the ice. Nothing has been moved in years.
+Waiting silently beneath its white coat, the barracks waits
+for the day the arena once more becomes the frantic mob
+swamped place it once was, when Hero's once more return to
+fight on the icy sands.
+~
+278 32784 0
+D1
+~
+bars~
+8 -1 27857
+S
+#27880
+Frozen Campground~
+   This frozen campsite sits inside a vast, vaulted chamber
+made of frozen blocks of granite. Scattered across the 
+flooring is an array of various skins, bear, tiger, sheep,
+even human. A number of small tents are scattered around a
+central campfire area. The entire area is set up to provide
+the maximum of comfort to each traveller that rests here
+before testing himself in the arena beyond.
+~
+278 32784 0
+D0
+~
+bars~
+8 -1 27857
+S
+#27881
+TK421's Com Room~
+A temporary description
+~
+278 0 0
+D4
+~
+~
+0 -1 27882
+D5
+~
+~
+0 -1 27876
+S
+#27882
+Command Deck of the Executor~
+A temporary description
+~
+278 0 0
+D5
+~
+~
+0 -1 27881
+S
+#27899
+The SS LadyMay~
+   Standing on deck of this fearsome Pirate vessel, a few things become evident
+from the start. This is not a regular pirate vessel, there are baskets of
+flowers next to the great guns, all the rigging has flowers and vines twisted
+amongst them, and the quarterdeck is painted a brilliant pink color. Other then
+a few decorating quirks, this seems to be a fully equipped sailing vessel, and
+her crew appears to be of the fiercest nature, though oddly dressed, they all
+looks of deep concentration as the boat begins to get underway.
+~
+278 33280 0
+S
+#0
+$~

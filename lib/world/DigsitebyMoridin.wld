@@ -1,0 +1,738 @@
+#18501
+A Sandy Beach~
+   Here the beach ends in steep cliff walls to the south. It is too steep to 
+climb. The beach is covered with rocks of all sizes. They look like they have 
+fallen down the cliffside. The jungle to the west is too thick to pass through. 
+It looks like there is no other way than to turn back north.
+~
+185 0 8
+D0
+~
+~
+0 -1 18502
+S
+#18502
+A Sandy Beach~
+   The beautiful shoreline streches to the north-east and also stretches a 
+little ways to the south. Along the shoreline, small animals from the jungle 
+are trying to catch crabs in the shallow waters. More often than not, the 
+crabs fight back and the outcome is not set: there are several animal corpses 
+floating in the sea a little off the shore.
+~
+185 0 8
+D1
+~
+~
+0 -1 18503
+D2
+~
+~
+0 -1 18501
+S
+#18503
+A Sandy Beach~
+   The shoreline gets very narrow as it turns westwards. High palmtrees are 
+hanging out over the sea and sometimes coconuts fall down on the shore. 
+You'd better step carefully to avoid having them falling on your head. 
+There is a feeling of being watched from the trees, but no sound to reveal 
+any watchers.
+~
+185 0 8
+D0
+~
+~
+0 -1 18504
+D3
+~
+~
+0 -1 18502
+S
+#18504
+The Harbour~
+   You are on the islands' only dock. Some ships are anchored here and 
+are being loaded with artifacts. Fresh supplies are also being offloaded 
+from the supply ships and put on carts. The carts are driven by horses on 
+the narrow path into the jungle. A few houses are standing along the docks, 
+occupied by traders trying to sell their goods. On the outer docks, some 
+kids are fishing and playing games. 
+~
+185 0 8
+D0
+~
+~
+0 -1 18505
+D1
+~
+~
+0 -1 18515
+D2
+~
+~
+0 -1 18503
+D3
+~
+~
+0 -1 7197
+S
+#18505
+A Sandy Beach~
+   The shore stretches to the north with beautiful white beaches. Just to the 
+south, you can see a dock with some ships and buildings surrounding it. The 
+mighty jungle to the east looks dense, and you have the feeling of eyes 
+watching you. Along the treeline, fallen coconuts are spread on the ground.
+~
+185 0 8
+D0
+~
+~
+0 -1 18506
+D2
+~
+~
+0 -1 18504
+S
+#18506
+A Sandy Beach~
+   A large flock of seagulls takes off from the beach as you approach and lands
+in the sea a little off-coast. They have obviously been hunting, because you 
+see some of them have large chunks of fish in their beaks. The beach continues 
+to the south and to the east. To the east, you can see what looks like a big 
+black rock almost up by the edge of the trees.
+~
+185 0 8
+D1
+~
+~
+0 -1 18507
+D2
+~
+~
+0 -1 18505
+S
+#18507
+A Sandy Beach~
+   What looked like a black rock from afar, but upon closer inspection is 
+obviously a giant anthill. It reaches almost 3 meters high and 15 meters 
+around. Ants the size of your fist are crawling around the anthill and even 
+though they look hostile, they will not attack you unless you get close to 
+their home. The beach continues to the north and to the west.
+~
+185 0 8
+D0
+~
+~
+0 -1 18508
+D3
+~
+~
+0 -1 18506
+S
+#18508
+A Sandy Beach~
+   Large reefs stand out of the sea just off-shore. They will easily rip a boat 
+apart if they get too close. To the south you see a big black rock, or 
+something that looks like it, close to the trees. 
+~
+185 0 8
+D1
+~
+~
+0 -1 18509
+D2
+~
+~
+0 -1 18507
+S
+#18509
+A Sandy Beach~
+   The beach stretches onwards to the east and west. A large skeleton from some 
+kind of sea-creature is laying partly in water and partly on the sand. There 
+is much blood on the sand, but no meat left on the bones. What could have 
+done this so quickly?
+~
+185 0 8
+D1
+~
+~
+0 -1 18510
+D3
+~
+~
+0 -1 18508
+S
+#18510
+A Sandy Beach~
+   As the beach turns north, a path leads south into the jungle. The path 
+looks narrow and dark, and you have the feeling of being watched from the 
+trees. No horses and carts would travel this path easily.
+~
+185 0 8
+D0
+~
+~
+0 -1 18511
+D2
+~
+~
+0 -1 18513
+D3
+~
+~
+0 -1 18509
+S
+#18511
+A Sandy Beach~
+   The beach, makes a turn eastwards. This would be a very quiet and relaxing 
+beach if not for the eyes watching from the trees. Small creatures roam 
+about the beach looking for food.
+~
+185 0 8
+D1
+~
+~
+0 -1 18512
+D2
+~
+~
+0 -1 18510
+S
+#18512
+A Sandy Beach~
+   The beach stops where the jungle grows all the way down to the sea. A 
+big anthill stands up against a tree and big ants run in and out of the 
+forest bringing food to their hive. They look like if you get too close, 
+they will all attack.
+~
+185 0 8
+D3
+~
+~
+0 -1 18511
+S
+#18513
+A Path Through The Jungle~
+   The smell of salt from the sea into the jungle is still strong as the 
+pathway leads from the beach into the jungle. The trees are tall and full 
+of coconuts. Occasionally, coconuts fall down on the path. A rather large rock 
+is covering half the width of the path, but the path is just wide enough to 
+walk past it without climbing over.
+~
+185 0 3
+D0
+~
+~
+0 -1 18510
+D2
+~
+~
+0 -1 18514
+S
+#18514
+A Path Through The Jungle~
+   It gets darker as you get deeper into the jungle. The trees are hanging 
+over the path and blocking the sunlight. The feeling of eyes watching is 
+back, and you can hear movement in the jungle at both sides. There seems 
+to be a clearing with a crossroads to the south. To the north, you can just 
+make out a blue point to be the sea through the jungle.
+~
+185 0 3
+D0
+~
+~
+0 -1 18513
+D2
+~
+~
+0 -1 18517
+S
+#18515
+A Path Through The Jungle~
+   Many people are walking in and out of the jungle. The sound of chatter 
+is constant. To the west, you see the back of some buildings by the harbour 
+and to the east, the path leads deeper into the jungle. The path is several 
+meters wide and the horse carts have no problem getting through the crowd.
+~
+185 0 3
+D1
+~
+~
+0 -1 18516
+D3
+~
+~
+0 -1 18504
+S
+#18516
+A Path Through The Jungle~
+  There are still a lot of people on the path and horse carts are frequently 
+passing by. They are mostly made up of students, archaeologists, traders, but 
+some adventurers can also be seen talking about what treasures are to be 
+found here. When archaeologists hears them they laugh and tell them there is 
+no treasure to be found, just old corpses and stone.
+~
+185 0 3
+D1
+~
+~
+0 -1 18517
+D3
+~
+~
+0 -1 18515
+S
+#18517
+A Crossroads In The Jungle~
+  There are three exits from the crossroads: one leading north to the shore, 
+one to the west leading to the harbour and one to the south leading to the 
+digsites. The path to the north looks narrower and darker than the one to the 
+west. People on horsecarts pass by on their daily buisness.
+~
+185 4 3
+D0
+~
+~
+0 -1 18514
+D2
+~
+~
+0 -1 18518
+D3
+~
+~
+0 -1 18516
+S
+#18518
+A Digsite Pathway~
+   As you get out of the jungle, you see a big open clearing. Large piles of 
+timber are placed along the pathway and around one of them a horseteam is 
+trying to load timber onto the cart. A pathway starts here and leads through 
+the clearing. Hundreds of people are working around the clearing, 
+most of them on the numerous digsites throughout the clearing. On the opposite 
+side there are campfires with large tents set up around them.
+~
+185 0 2
+D0
+~
+~
+0 -1 18517
+D1
+~
+~
+0 -1 18519
+S
+#18519
+A Digsite Pathway~
+   On the edges of the pathway rope fences are keeping people and horse carts 
+from stepping into digsites where archaeologist and their students are 
+talking, digging and writing. The people here seem friendly and greet you 
+as they walk by. To the immediate east, you see a digsite and there is an 
+opening in the rope fence.
+~
+185 0 2
+D1
+~
+~
+0 -1 18526
+D2
+~
+~
+0 -1 18520
+D3
+~
+~
+0 -1 18518
+S
+#18520
+A Digsite Pathway~
+   The pathway is mostly made up of gravel and small rocks. In several places, 
+wooden boards are placed over small trenches going across the pathway. The 
+horse cart drivers have people guiding them over the boards so that they don't 
+fall in. The trenches must have been small streams when this place was covered 
+with jungle.
+~
+185 0 2
+D0
+~
+~
+0 -1 18519
+D1
+~
+~
+0 -1 18527
+D2
+~
+~
+0 -1 18521
+S
+#18521
+A Digsite Pathway~
+   It gets more crowded the closer you get to the campfires, and when 
+horsecarts pass the people have to stand still to the side until they have 
+passed. Whenever that happens, worried looks from the adjacent digsite follow 
+the people almost pushing through the rope fence.
+~
+185 0 2
+D0
+~
+~
+0 -1 18520
+D1
+~
+~
+0 -1 18522
+D2
+~
+~
+0 -1 18533
+D3
+~
+~
+0 -1 18535
+S
+#18522
+A Digsite Pathway~
+   Along the pathway towards the campfires you see digsites. What have they 
+found? Stone tablets and the remains of ceramic and bones are all you see the 
+workers carrying around. A faint smell of cooking meat is hanging in the air. 
+The fumes must come from the campfires.
+~
+185 0 2
+D1
+~
+~
+0 -1 18523
+D3
+~
+~
+0 -1 18521
+S
+#18523
+A Digsite Pathway~
+   The smell of food is getting stronger as you get closer to the campfires. To 
+the north and south are the last digsites on this side of the clearing. A 
+painter is standing on the side of the pathway painting a picture of the 
+digsites. He keeps muttering: "These archaeologists want everything done 
+yesterday".
+~
+185 0 2
+D0
+~
+~
+0 -1 18528
+D1
+~
+~
+0 -1 18524
+D2
+~
+~
+0 -1 18529
+D3
+~
+~
+0 -1 18522
+S
+#18524
+Campfires~
+   You arrive at a campsite and several fires are burning. On all the burning 
+fires, people are preparing food. Different kinds of animals are being cooked 
+on spits and big pots with stew or vegetables are boiling. All around the 
+edges of the clearing, numerous tents for sleeping are placed. On the east 
+side of the campfires a larger tent than the rest stands by itself.
+~
+185 0 2
+D1
+~
+~
+0 -1 18525
+D3
+~
+~
+0 -1 18523
+S
+#18525
+Archaeologist's Tent~
+   This is a very simple tent - the only furniture in the room is a shelf with 
+books on different topics, and a desk in the middle of the room. is all the 
+furniture present. Papers with symbolic writing are laying scattered on the 
+desk. On one wall, a big map of the island is hung up. This tent is obviously 
+just meant for working. There are no chairs beside the one at the desk.
+~
+185 0 0
+D3
+~
+~
+0 -1 18524
+S
+#18526
+Digsite~
+   All around on the digsite, square holes dug into the ground. It looks 
+like they are digging up an entire graveyard. The remains of skeletons 
+brought up from the holes are being carefully loaded into wooden crates 
+and brought away for study. 
+~
+185 0 2
+D3
+~
+~
+0 -1 18519
+S
+#18527
+Digsite~
+   This digsite must have been one of the first, because not much work is left 
+here. The area is mostly used for storage of wooden crates and some 
+tutoring for the students. Every now and then a horse and cart arrives and 
+either brings more crates or takes some away.
+~
+185 0 2
+D3
+~
+~
+0 -1 18520
+S
+#18528
+Digsite~
+   The head of a big statue is laying on its side leaving one of its eyes 
+underground. Some distance from the head, a broken crown lies in several 
+pieces. This must have been a king of some forgotten kingdom. There can't 
+have been a kingdom here for thousands of years.
+~
+185 0 2
+D2
+~
+~
+0 -1 18523
+S
+#18529
+Digsite~
+   Three houses are standing inside the digsite. The houses are so small that 
+they can't contain more than 2 or 3 rooms. The main doors are all facing 
+towards the center of the digsite, where pieces of a fountain lie. The 
+houses are made of stone and there are several holes in the walls where stones 
+have fallen down.
+~
+185 0 2
+D0
+~
+~
+0 -1 18523
+S
+#18530
+Digsite~
+   Whatever structure stood here, it's only a pile of rubble now. A great force 
+must have destroyed this building. People are searching the pile to uncover 
+any artifacts that may lying under the rocks.  
+~
+185 0 2
+D3
+~
+~
+0 -1 18533
+S
+#18531
+Digsite~
+   This looks like a new digsite. A few stone pillars are standing out of the 
+ground and the rope fence surrounding the digsite is just being finished. 
+A group of people are gathered around the pillar, which has markings or 
+drawings on it.  
+~
+185 0 2
+D3
+~
+~
+0 -1 18532
+S
+#18532
+A Digsite Pathway~
+   The pathway ends just 20 meters from the forest to the south. To the west 
+lies a big pile of timber. Beside it, a horse and cart team is loading the 
+cart with logs. Another team is standing behind it waiting for them to 
+finish. To the east, you see a digsite where a huge pillar is being studied.
+~
+185 0 2
+D0
+~
+~
+0 -1 18533
+D1
+~
+~
+0 -1 18531
+S
+#18533
+A Digsite Pathway~
+   A three-way path lies here - the campfires can be reached by going north 
+and east. Going south moves closer to the southern part of the clearing and 
+to the east you see people working at digsites.
+~
+185 0 2
+D0
+~
+~
+0 -1 18521
+D1
+~
+~
+0 -1 18530
+D2
+~
+~
+0 -1 18532
+S
+#18534
+Crypt~
+   The crypt is lit by one torch in each corner. Along all the walls, skeletons 
+hang from metal spikes. All the skeletons are hung in a similar fashion, and 
+it has an aura of ceremony about it.
+~
+185 0 0
+D0
+~
+~
+0 -1 18535
+D5
+~
+~
+0 -1 18537
+S
+#18535
+A Digsite Pathway~
+   To the north you see a big rock in the center of the digside and a lot of 
+people are working around it. To the south you can see a stone house with 
+students going in and out of it.
+~
+185 0 2
+D0
+~
+~
+0 -1 18536
+D1
+~
+~
+0 -1 18521
+D2
+~
+~
+0 -1 18534
+S
+#18536
+Digsite~
+   This digsite looks a bit different from the others. Instead of corpses and 
+ceramics, what looks like the remainder of a wall is standing at the center 
+of the site. Big tablets of stone covered with writing are laying about. Lots 
+of archaeologists and students are working hard to write it all down and 
+to catalogue the stone pieces.
+~
+185 0 2
+D2
+~
+~
+0 -1 18535
+D5
+One of the tablets seems to be covering an opening.
+~
+tablet~
+8 -1 18539
+S
+#18537
+Torture Chamber~
+   In the center of the room there is a bench shaped like a man. The remains of 
+straps can be seen on the arms, legs, and head of the bench. On one wall, 
+several chairs are lined up. On a table you see different types of knives and 
+sharp objects. Whatever happened in this room, it was not plesant.
+~
+185 0 0
+D2
+~
+~
+0 -1 18538
+D4
+~
+~
+0 -1 18534
+S
+#18538
+Deathchamber~
+   The room is full of chains hanging from the ceiling. The chains are between 
+one and two feet long, and on the end of each chain a sharp hook hangs. On 
+several of the hooks, skeletons hang upside down. Several of them are missing 
+bones, indicating seperation of limbs in the other room, since no bones are 
+laying on the floor. 
+~
+185 0 0
+D0
+~
+~
+0 -1 18537
+S
+#18539
+Cave~
+   Inside the cave, the air is bad and hard to breathe. The cave is lit 
+by two torches mounted on the cave walls. The wall is dominated by symbols 
+and drawings. Several students try to sketch the symbols in the poor light. 
+The cave continues downslope to the west.
+~
+185 41943048 0
+D3
+~
+~
+0 -1 18540
+D4
+~
+tablet~
+8 -1 18536
+S
+#18540
+Cave~
+   The cave looks much like the entrance, and is lit by two torches. By the 
+walls, students are taking a lecture from one of the archaeologists explaining 
+some of the basic symbolism used on the walls. The air is even worse than by 
+the opening up to the east. The cave continues downwards to the west.
+~
+185 41943048 0
+D1
+~
+~
+0 -1 18539
+D3
+~
+~
+0 -1 18541
+S
+#18541
+Cave~
+   A huge drawing of a city surrounded by water completely covers one wall. 
+Most of the details have been worn down over the years, but even now it 
+looks like it was a wealthy city. Fine houses, palaces and city walls are 
+all covered with silver. The air down here is almost impossible to breathe 
+and you feel your lungs are burning. The cave continues even further down 
+to the south.
+~
+185 41943049 0
+D1
+~
+~
+0 -1 18540
+D2
+~
+~
+0 -1 18542
+S
+#18542
+Cave~
+   As you reach the end of the cave your lungs scream for air and you feel 
+drained of energy. On the dead end wall, four big torches light up the 
+drawing of a big gate. The borders of the gate are pure gold and shine 
+brightly, but the rest of the detais are worn away. No students are working 
+here and only a few archaeologists try to work. The archaeologists need
+frequent trips to the cave above where it's possible to breathe. How can
+they stand it?
+~
+185 41947145 0
+D0
+~
+~
+0 -1 18541
+S
+#0
+$~

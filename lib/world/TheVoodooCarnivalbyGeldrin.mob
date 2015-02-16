@@ -1,0 +1,62 @@
+#4200
+angry zombie~
+angry zombie~
+An ANGRY Zombie stands here, unsure of what he is angry about...
+~
+the zombie is bloody and bruised, it has obviously been mistreated.
+~
+8 268468224 -100 Y
+48 -15 2 90d90+18000 10d10+200
+0 3600000
+8 8 1
+52 16836 1d1+1 3
+5 3 15 0
+5 3 25 0
+6 3 5 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#4201
+zobop henchman~
+a Zobop theif's henchman~
+a Zobop thief's henchman is here, trying to hide in the shadow...
+~
+The henchman seems to be watching the Zobop thief intently. Perhaps he is waiting for instructions.
+~
+16392 262144 0 Y
+38 0 -12 50d50+2000 4d8+60
+100000 700000
+8 8 1
+3 16512 1d1+1 1
+11 2 8 35
+0 0 0 0
+K
+0 0 0 0 0 0
+#4202
+Haitian witch doctor~
+a Haitian witch doctor~
+an old and decrepit witch doctor stands here, eyeing you curiously...
+~
+Although he is old and very feeble looking, something in this old man's eyes
+tells you that you better not cross him.
+~
+16394 142639232 350 Y
+46 -2 -2 40d100+20000 8d35+100
+1000000 4500000
+8 8 1
+2 16768 30d30+100 10
+1 6 5 85
+1 6 5 1
+1 6 2 3
+1 6 10 28
+1 6 5 34
+1 6 5 74
+1 6 5 145
+1 6 1 217
+1 6 1 192
+1 2 5 119
+0 0 0 32
+K
+0 0 0 0 0 0
+#0
+$~

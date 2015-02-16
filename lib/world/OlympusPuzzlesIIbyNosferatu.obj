@@ -1,0 +1,94 @@
+#28600
+crucifix small wooden~
+A Small Wooden Crucifix~
+A small cross made of wood was forgotten here.~
+~
+1 244370689 65537
+1 1 -1 0
+12 4550000 45000
+4
+E
+crucifix~
+This small crucifix is made of splintered, uneven wood. It glows with
+incredible brightness so that it looks like its on fire but you can
+see no flames coming from it.
+~
+X
+~
+0 0 0
+M
+The crucifix emits a steady glow as you raise it over your head.~
+$n's crucifix emits a steady glow as $e raises it over $s head.~
+The crucifix loses its glow as you release it.~
+$n's crucifix stops glowing as $e lets go of it.~
+A
+19 3
+A
+18 3
+A
+24 3
+B
+8192
+#28601
+cross chain necklace~
+A Small Cross on a Fine Silver Chain~
+A small silver necklace was left behind here.~
+~
+9 144768321 5
+0 0 0 0
+5 1500750 45000
+2
+E
+chain~
+    This is the fine silver necklace that is said to have been made by the
+great artisan Hephaestus to be worn by Zeus himself. It was made to be full
+of the power and magic of Olympus. Zeus gave it to Athena as a gift for her
+great powers and bravery in battle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+A
+17 20
+B
+4
+#28602
+plates leg olympian~
+Olympian Leg Plates~
+Some fine leg armor was left behind here.~
+~
+9 216046594 33
+2 0 0 0
+8 567489 47599
+4
+E
+leg~
+These fine leg plates were made by Hephaestus himself to be adorned in battle
+by the great Athena during the war with the Titans. They have taken much
+abuse but still shine and appear undented.
+~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+A
+17 -5
+#0
+$~

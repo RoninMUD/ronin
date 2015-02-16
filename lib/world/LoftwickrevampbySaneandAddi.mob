@@ -1,0 +1,321 @@
+#9301
+spectral minion~
+A spectral minion~
+A spectral figure continues about his business, unaware that you are here.
+~
+You see an ancient figure that is still attempting to complete his life's
+task. Githyanki like to keep them around as trophies and entertainment.
+~
+10 8 0 Y
+37 1 -4 1d50+1500 7d7+7
+10000 150000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9302
+slave human~
+A Human Slave~
+A Human Slave stands here drooling and calling mindlessly for his master.
+~
+A creature that once human stands here. He is gibbering incoherently and
+calling for his Githyanki master. He turns a blank stare upon you and drools
+on his chest.
+~
+536870988 0 -450 Y
+26 1 4 1d1000+700 5d6+25
+0 3900
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9303
+acolyte~
+An Acolyte of Yunin~
+An Acolyte of Yunin is here acting silly (like her goddess).
+~
+An Acolyte of Yunin is wondering why the HELL Yunin put her here. She runs 
+up to you and rubs against you asking for help, she seems to be carrying a 
+bag full of snowballs.
+~
+12 0 1000 Y
+45 17 6 1d40+60 1d8+4
+300 5000
+8 8 2
+2 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9304
+wraith~
+A shadowy figure~
+A shadowy figure materializes from out of nowhere.
+~
+You cannot tell where this being begins and ends, it does indeed defy
+description. It is simply a shadow, as nimble and deceptive as light itself. 
+~
+16492 538476552 -1000 Y
+50 -8 -7 2d2000+2100 8d8+1
+10000 500000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9305
+baby shadow dragon~
+A baby shadow dragon~
+A small shadow dragon is here, looking around for it's mother.
+~
+You can barely make out the form of a small shadow dragon. It runs among the
+other shadows cast on the ground, making it impossible to follow. You can
+only catch a fleeting glance. Except for it's eyes. The eyes of this dragon
+burn with a flame not of this world.
+~
+8 268992552 -600 Y
+40 -2 -1 2d50+1400 1d5+48
+2000 125000
+8 8 0
+56 0 0d0+0 0
+0 2 1 0
+K
+0 0 0 0 0 0
+#9306
+hatchling shadow dragon~
+The shadow dragon hatchling~
+A tiny shadow dragon is here, being nursed by it's mother.
+~
+This tiny shadow gives only a vague glimpse of what it can become. Although
+it has the potential to become a full fledged nightmare, it's tiny claws
+and undeveloped spikes make you think it could be easily destroyed now, before
+it becomes that nightmare.
+~
+536870922 32808 -1000 Y
+3 17 6 2d50+1000 1d5+39
+1000 60000
+8 8 0
+56 0 0d0+0 0
+0 2 0 0
+K
+0 0 0 0 0 0
+#9307
+Ancient Shadow Dragon~
+The ancient shadow dragon~
+A huge shadow dragon lies contently as she nurses her young.
+~
+A massive, nondescript shadow moves about, seemingly fading in and out of
+existance as she moves slowly among the shadows cast across the ground. A
+truely majestic creature, she gazes upon you with firey eyes, as if she was
+sizing you up as a fight or a meal. 
+~
+46 269516840 -1000 Y
+30 -10 -10 5d500+8000 16d16+16
+50000 800000
+8 8 2
+57 0 0d0+0 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#9308
+dark stalker~
+The Dark Stalker~
+The Dark Stalker is here stalking YOU!
+~
+The Dark Stalker is a tall figure dressed in dirty black bandages. The
+bandages are splotched all over from blood, the black color appears to come
+from the dried blood of victims dispatched long ago. He returns your stare,
+not with the curiousity of yours, but with pure hatred only the dead could
+muster.
+~
+78 1572874 -1000 Y
+52 -10 -2 1d2000+6000 20d8+12
+400000 250000
+8 8 0
+8 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9309
+githyanki child~
+A githyanki child~
+A child is here screaming at you...WAAAAAAAAAAAA!
+~
+A child with a big biskit eatin' head stands here wailin at you!
+~
+204 557064 -1000 Y
+12 9 -5 1d100+2 1d10+2
+200 20000
+8 8 2
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9310
+githyanki citizen~
+A Githyanki Citizen~
+A Githyanki Citizen is here going about his business.
+~
+A Githyanki Citizen walks about minding his own business, like buying 
+slaves, buying humans for dinner, pieces of mindflayers as jewelry etc.
+~
+204 32776 -1000 Y
+10 11 2 4d30+20 1d8+5
+300 9921
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9311
+githyanki warrior~
+The Githyanki warrior~
+The Githyanki warrior leaps to attack you!
+~
+A defender of the Githyanki race, this creature looks very deadly.
+He screams I AM GITHYANKI! DIE DIE DIE DIE!
+~
+536870989 32776 -1000 Y
+27 -7 -9 10d100+1700 1d120+1
+1000 14000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9312
+githyanki sergeant~
+A Githyanki Sergeant~
+A Githyanki Sergeant stands here watching over his underlings.
+~
+A Githyanki Seargent, known throughout the world and planes as the most 
+viscious creatures to ever exist, stands here glaring at you. Before you 
+can even think he screams "DIE ADVENTURER SCUM!!" and attacks you...
+~
+77 557064 -1000 Y
+30 -1 1 10d200+1400 3d60+0
+2500 17501
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9313
+githyanki guard~
+A Githyanki Royal Guard~
+A Githyanki Royal Guard Stands here watching diligently.
+~
+The guard is dressed in what appears to be the finest Githyanki armor 
+bearing the symbol of Lofwick.
+~
+77 32904 -351 Y
+31 -5 -1 1d2000+1500 20d10+0
+1500 50000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#9315
+githyanki warlock~
+A Warlock~
+A Githyanki Warlock is here making strange gestures in your direction.
+~
+A Githyanki Warlock the most feared of all Githyanki stands here. He is 
+dressed in strange garb covered with arcane runes. As you enter his domain 
+he looks at you and begins gesturing....
+~
+11 143687850 -1000 Y
+47 -8 -4 15d200+1500 10d10+0
+15000 190000
+8 8 1
+1 0 0d0+0 0
+0 2 0 0
+K
+0 0 0 0 0 0
+#9316
+githyanki priest~
+A Priest~
+A Githyanki Priest is here praying to Sinat for his blessings.
+~
+A Githyanki Priest wearing the symbols of Sinat and Karn prays for someone 
+to work his ministrations of Magic, Mayhem, Chaos, Destruction, and Death 
+on. When you enter he states simply..."My prayers have been answered!".
+~
+67108879 1083530 -1000 Y
+47 -8 -4 3d20+2800 3d50+11
+20000 260000
+8 8 1
+2 0 0d0+0 0
+0 2 0 0
+K
+0 0 0 0 0 0
+#9317
+loftwick lich~
+Loftwick~
+A once powerful knight and brother of Redferne stands here.
+~
+This knight stands here in defiance to all that are living. He is a Lich of
+the greatest power. As you look at him a disembodied voice rasps....
+
+I am LOFTWICK THE LICH-KING of the GITHYANKI! Prepare to meet your gods...
+~
+46 402686088 -1000 Y
+55 -11 -9 1d3000+8000 3d60+35
+30000 2500000
+8 8 1
+51 0 100d100+100 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#9318
+mirissa wife~
+Mirissa Redferne~
+Mirissa the undead wife of Loftwick is sleeping here in eternal torment.
+~
+A beautiful female lies here on the bed. When she turns over you are 
+horrified to see that one half of her face has been ritually and
+methodically burned away, leaving horrible scars.
+~
+138 805339304 1000 Y
+46 -5 2 10d500+5000 1d100+0
+100 2000000
+4 4 2
+53 0 0d0+0 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#9319
+dark creeper~
+A Dark Creeper~
+A Dark Creeper is here trying to hide in the shadows.
+~
+A small creature about the size of the dwarf is skulking here. He is 
+dressed from head to toe in dark and somber clothes.
+~
+262348 1835016 -500 Y
+40 9 2 40d160+0 1d100+0
+5000 12000
+8 8 0
+71 0 0d0+0 0
+0 2 0 0
+K
+0 0 0 0 0 0
+#9399
+Charlie guard check point checkpoint~
+Checkpoint Charlie~
+A guard stands here guarding the check point.
+~
+Before you stands the lamest joke ever to hit ronin! Beware the bard!
+~
+10 128 -1000 Y
+35 8 -10 1d1+1 1d1+1
+1 80000000
+8 8 1
+10 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

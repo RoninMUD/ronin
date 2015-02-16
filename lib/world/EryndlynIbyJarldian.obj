@@ -1,0 +1,1067 @@
+#5100
+dirk adamantite~
+an adamantite dirk~
+a long dirk is stuck in the ground here.~
+~
+5 0 8193
+0 2 7 5
+2 1000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#5101
+scimitar~
+a scimitar~
+a scimitar rests gentle on the ground here.~
+~
+5 0 8193
+0 3 5 9
+2 1500 700
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#5102
+scimitar enchanted weapon~
+an enchanted scimitar~
+a nicely crafted weapon lies on the floor here, beaming in bright light.~
+~
+5 320 8193
+0 3 6 9
+0 4750 2000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#5103
+emblem family crest drow~
+An emblem of the drow~
+An emblem bearing the family crest of a drow family is here.~
+~
+4 2 16389
+30 1 1 85
+10 10000 5000
+9
+E
+emblem~
+There is crest of a drow family on this emblem.~
+E
+crest~
+The crest signifies the drow family Tzjar-Fey.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+1 1
+#5104
+whip snake fourheaded~
+4 snake headed whip~
+A whip with four snake heads has been left here~
+~
+5 65 8193
+0 2 8 2
+0 10250 5000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#5105
+scimitar jeweled~
+a jeweled scimitar~
+a beautifully hand crafted weapon made from jewels is resting here.~
+~
+5 134217793 8193
+1 5 4 3
+0 10250 5000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+13 10
+#5106
+whip snake fiveheaded~
+5 snake headed whip~
+A whip with 5 snake heads is lying here~
+~
+5 577 8193
+0 3 6 2
+0 32000 5000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5107
+whip snake sixheaded~
+6 snake headed whip~
+A whip with six snake heads has been dropped here~
+$r whip lashes out, with it's snakeheads bearing down.~
+5 577 8193
+2 7 3 2
+0 50000 5000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 -2
+#5108
+oozing spider bracelet~
+Oozing Spider Bracelet~
+An Oozing spider squirms along the floor here.~
+~
+11 74453059 4097
+10 0 0 0
+3 5000 2000
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 10
+#5109
+gauntlets drow battle~
+Drow Battle Gauntlets~
+A pair of battle gauntlets lie in the dirt here.~
+~
+9 1 129
+6 0 0 0
+2 10000 9911
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+18 2
+#5110
+tome forbidden magic~
+A tome of forbidden magic~
+a beautiful leather bound tome is resting here.~
+~
+11 250638401 16385
+10 0 0 0
+1 100000 5000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 30
+#5111
+polished marble ring~
+a polished marble ring~
+a polished ring is resting here, gleaming brightly.~
+~
+9 65 3
+8 0 0 0
+5 6000 2000
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+#5112
+cowl arcane powers~
+Cowl of Arcane Powers~
+a mysterious looking hood is fluttered on the ground here.~
+~
+9 250640450 17
+5 0 0 0
+1 20000 15000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 25
+#5113
+dagger sacrificial~
+spider shaped dagger~
+A dagger with spider leg shaped blades lies on the ground~
+$r dagger makes a big spider shadow on the ground.~
+5 576 8193
+0 3 5 11
+2 12000 5500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+#5114
+necklace dwarven skulls~
+necklace of dwarven skulls~
+A pile of skulls lies here, humming quietly.~
+~
+11 2 5
+0 0 0 0
+1 4000 1600
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 -15
+A
+18 5
+#5115
+blade curved~
+a curved blade~
+a curved blade rests along the wall here.~
+~
+5 320 8193
+0 3 7 3
+16 12000 400
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#5116
+piwafwi cloak~
+a piwafwi cloak~
+a mystical black cloak flutters on the ground here.~
+~
+9 107008321 1025
+19 0 0 0
+10 36000 9000
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+26 10
+#5117
+pants black~
+a pair of black pants~
+a pair of black pants lie here disgarded.~
+~
+9 0 33
+3 0 0 0
+10 30000 5000
+19
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#5118
+black gloves~
+a pair of black gloves~
+a pair of black gloves lie here forgotten.~
+~
+9 0 129
+10 0 0 0
+10 5000 4000
+19
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#5119
+black baldric~
+a black leather baldric~
+a black baldric rests here, collecting dust.~
+~
+9 0 2049
+7 0 0 0
+10 7000 1000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+5 1
+#5122
+leg segment first key~
+the first spider segment~
+the first segment of a spider rests here.~
+~
+18 524288 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5123
+leg segment second key~
+the second spider segment~
+the second segment of a spider rests here.~
+~
+18 524288 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5124
+altar dagoor~
+Altar of Dagoor~
+A bloodied stone altar rests at the center of this room.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+altar~
+Blood drips freely from this blackened stone altar, a mutilated corpse still
+lies there -- face suggesting of a most horrible and painful death.  This is
+the altar of Dagoor, a sacrificial stone slab used primarily to send freshly
+killed souls to the Spider Queen herself as a form of prayer in good intent.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5125
+leg segment third key~
+the third spider segment~
+the third segment of a spider rests here.~
+~
+18 524288 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5126
+leg segment fourth key~
+the fourth spider segment~
+a fourth spider segment rests here.~
+~
+18 524288 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5129
+portal~
+A Shimmering Portal~
+A Portal of Swirling Mists hovers around here.~
+~
+8 0 0
+0 0 0 0
+10 10 10
+100
+E
+mists~
+Crackling Purple Haze and sparks of light flares from this rift in time and
+space. Looking in, you can almost see the other side of it, but you can
+make out what and where it is.  The portal looks stable enough to cross, maybe
+you should jump in? 
+~
+E
+portal~
+Crackling Purple Haze and sparks of light flares from this rift in time and
+space. Looking in, you can almost see the other side of it, but you can
+make out what and where it is.  The portal looks stable enough to cross, maybe
+you should jump in?
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5140
+spider key one~
+a spider with a huge probing diamond eye~
+A Spider-shaped key lies here, it's huge diamond eye probing about.~
+~
+18 134742016 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5150
+table~
+A Round Table Printed With Runes~
+A round stone table with arcane runes chiselled into its surface rests here.~
+~
+12 524288 0
+0 0 0 0
+10 10 10
+100
+E
+runes~
+The runes seems to give the table a source of power.  It radiates with
+strength and seems to focus it's energies outward.
+~
+E
+table~
+This alluring table catches your eyes, it's runes and craftsmanship impressing
+you. It is a furniture of the highest quality and seems to be made from
+an onyx, volcanic rock that is shaped and carved accordingly into this
+magnificent piece of artwork.  It's runes seems to give it some source
+of power, you feel it radiate angrily outward.  This table doesn't seem heavy
+and looks as if it can be moved.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5151
+gem stone~
+a gem~
+a piece of stone lies broken here.~
+~
+8 524289 0
+0 0 0 0
+15 10 10
+100
+E
+stone~
+A sparkling piece of rock catches your eye as it shines an azure light.
+Though it is only a broken fragment, it still has a visual appeal worth
+gazing at.  The stone looks extremely heavy and fixed into the ground.
+~
+E
+gem~
+A sparkling piece of rock catches your eye as it shines an azure light. 
+Though it is only a broken fragment, it still has a visual appeal worth
+gazing at.  The stone looks extremely heavy and fixed into the ground.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5161
+timber rotting~
+A rotting timber~
+A rotting timber with roughly hewn handholds is propped against the wall.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+timber~
+Nearly rotted through, this chunk of ancient wood looks like it might
+support your weight, but not for very long.
+~
+E
+rotting~
+Nearly rotted through, this chunk of ancient wood looks like it might
+support your weight, but not for very long.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5166
+wooden sign~
+a small wooden sign~
+a small wooden sign is here, wedged firmly into the ground.~
+~
+16 0 0
+0 0 0 0
+9999 10 1000000
+100
+E
+sign~
+ATTENTION: DUE TO UNFORTUNATE CIRCUMSTANCES, THE AREA AHEAD IS CLOSED.
+THERE ARE TO BE NO MINING EXPEDITIONS OR DEBATE ABOUT THIS ISSUE.
+DROW ACTIVITY HAVE BEEN REPORTED IN THIS VICINITY AND IT IS FOR YOUR
+SAFETY THAT WE ABANDON THE RICHES IN THESE WALLS.  ANY INCIDENTS
+BEYOND THIS POINT IS NOT OUR CONCERN.  PLEASE BE ADVISED IF YOU CHOOSE
+TO GO BEYOND THIS POINT, YOU TRAVEL AT YOUR OWN RISK.
+ 
+- Vrilishloparis, Mining Coordinator
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5167
+wooden cart~
+A large wooden cart~
+A large wooden cart rests here, one of it's wheels broken.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+cart~
+The wheel of this cart seems to have detached itself and lies broken here.
+Some of the dwarves work feverishly, replacing the damaged wheel, cursing
+under their breaths for being stuck in such a vulnerable position.  They
+are headed into Eryndlyn the drow city, to sell their wares.  Getting a closer
+glance at it's contents, you see crates and crates of giant crab legs and
+other delicacies.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5170
+Narbondel huge stone pillar~
+Narbondel~
+A Towering Onyx Pillar stands here, emitting a beam of orange haze.~
+~
+1 0 0
+0 0 -1 0
+5000 10 10
+100
+E
+pillar~
+This tower pillar glows with brilliance and can be seen in any point of the 
+city. It is the timeclock of Eryndlyn, the only way the dark elves mark 
+the passage of time in a world that otherwise knew no days and no seasons.
+A city appointed mage casts his magical fires into the base of this 
+pillar and there, the spell lingers throughout the cycle -- a full day 
+on the surface.  At the end of each day, the mage repeats this process 
+-- beginning the cycle anew.
+~
+E
+narbondel~
+This tower pillar glows with brilliance and can be seen in any point of the 
+city. It is the timeclock of Eryndlyn, the only way the dark elves mark 
+the passage of time in a world that otherwise knew no days and no seasons.
+A city appointed mage casts his magical fires into the base of this 
+pillar and there, the spell lingers throughout the cycle -- a full day 
+on the surface.  At the end of each day, the mage repeats this process 
+-- beginning the cycle anew.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5174
+dark globe~
+Globe of Magic~
+A Black Globe of cloud and mists floats in the air here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+black~
+Swirling clouds and mists fill this black globe.  It rotates clockwise
+consistently and seems to come alive the closer you get.  You can feel the
+power of this object radiate forward, however, not sure on how to harness
+it's power.  Evidently, this was meant for drow spellcasting and not meant 
+for anyone else.
+~
+E
+globe~
+Swirling clouds and mists fill this black globe.  It rotates clockwise
+consistently and seems to come alive the closer you get.  You can feel the
+power of this object radiate forward, however, not sure on how to harness
+it's power.  Evidently, this was meant for drow spellcasting and not meant
+for anyone else.  
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5175
+eyepatch~
+an eyepatch~
+an eyepatch lies here unwanted.~
+~
+9 0 17
+4 0 0 0
+10 10 100
+19
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+#5177
+jagged edged short sword~
+A jagged-edged Short Sword~
+a wicked looking sword is sitting here.~
+$r Short Sword becomes possessed as it hacks away with viciousness!~
+5 134217794 8193
+0 7 3 3
+10 10000 5000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 2
+A
+18 7
+#5179
+pool dark chalcedony water~
+pool of chalcedony water~
+You are standing in a pool of bubbling dark water.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+pool~
+Dark in color and illuminating in microcrystalline allure, this pool bubbles
+hungrily. Looking at the water, you can see lizards and all sorts of stuff 
+swimming in it, trying to avoid your outstretched hands.  There is a large 
+whirlpool in the center of the waters that looks very inviting...
+~
+E
+water~
+Dark in color and illuminating in microcrystalline allure, this pool bubbles
+hungrily. Looking at the water, you can see lizards and all sorts of stuff
+swimming in it, trying to avoid your outstretched hands.  There is a large 
+whirlpool in the center of the waters that looks very inviting... 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5184
+spider key three~
+a spider with three probing eyes~
+A Spider-shaped key lies here gazing about with it's three eyes.~
+~
+18 134742016 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5189
+spider key four~
+a spider with four probing eyes~
+A Spider-shaped key lies here gazing about with it's four eyes.~
+~
+18 134742016 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5190
+oozing spider bracelet~
+Oozing Spider Bracelet~
+An Oozing spider squirms along the floor here.~
+~
+11 74453059 4097
+10 0 0 0
+3 5000 2000
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 10
+#5191
+spider key two~
+a spider with two probing eyes~
+A Spider-shaped key lies here gazing about with it's two eyes.~
+~
+18 134742016 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5192
+gauntlets drow battle~
+Drow Battle Gauntlets~
+A pair of battle gauntlets lie in the dirt here.~
+~
+9 1 129
+6 0 0 0
+2 10000 9911
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+18 2
+#5193
+tome forbidden magic~
+A tome of forbidden magic~
+a beautiful leather bound tome is resting here.~
+~
+11 250638401 16385
+10 0 0 0
+1 100000 5000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 30
+#5194
+polished marble ring~
+a polished marble ring~
+a polished ring is resting here, gleaming brightly.~
+~
+9 65 3
+8 0 0 0
+5 6000 2000
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+#5195
+cowl arcane powers~
+Cowl of Arcane Powers~
+a mysterious looking hood is fluttered on the ground here.~
+~
+9 250640450 17
+5 0 0 0
+1 20000 15000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 25
+#5196
+necklace dwarven skulls~
+necklace of dwarven skulls~
+A pile of skulls lies here, humming quietly.~
+~
+11 2 5
+0 0 0 0
+1 4000 1600
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 -15
+A
+18 5
+#5197
+ball of faerie fire~
+Ball of Faerie Fire~
+An orb sits here with a faerie trapped inside.~
+~
+1 322 65537
+0 0 -1 0
+16 12000 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+B
+32
+#5198
+mask flaming~
+Flaming Mask~
+Burning slowly here is a bright red mask.~
+~
+9 134218321 17
+2 0 0 0
+10 1000 9999
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+12 20
+B
+32768
+#0
+$~

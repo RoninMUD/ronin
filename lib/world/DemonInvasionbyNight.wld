@@ -1,0 +1,2418 @@
+#27700
+A Devastated Woodland~
+   The forest thins a bit as the trail approaches the side of a snowcapped
+mountain with steep, unclimbable slopes.  The landscape here has been
+devastated by some tremendous force, natural or otherwise.  Fallen leaves and
+branches litter the ground between trees that have been uprooted.  Jagged
+stumps reach to the sky with broken wood fingers and bleed sap upon the forest
+floor.  A small, thin trail seems to have been recently hacked through the
+least obstructed parts of the woods, heading in a westerly direction toward a
+mound of earthen rubble.
+~
+277 0 3
+D2
+~
+~
+0 -1 28599
+D3
+~
+~
+0 -1 27701
+S
+#27701
+A Pile of Boulders~
+   A large pile of boulders has accumulated at the base of the mountain here.
+Much of the rubble appears to be recently deposited from locations higher up
+the mountainside.  Large slabs of basalt have literally cleaved tree trunks at
+their base with the amount of force behind the falling rock.  Debris size
+varies from silt and dust to immense, unmovable chunks of the hillside.  A low
+whisper of rushing wind comes from behind a large boulder to the north.
+~
+277 0 3
+D0
+A large boulder partially conceals an opening into a small cave.
+~
+boulder~
+8 -1 27702
+D1
+~
+~
+0 -1 27700
+E
+boulder~
+A large boulder sits here and looks like it can just bearly be moved.
+~
+S
+#27702
+A Tight Crevice~
+   The walls of this small crevice are still sharp and unweathered, hinting at
+the recent nature of this entrance into the mountain.  Long veins of pale white
+quartz form intricate bands of contrast to the dark gray color of the
+surrounding stone.  A larger chamber, or perhaps a tunnel can be seen through
+an opening in the floor.
+~
+277 4 0
+D2
+A large boulder partially conceals the exit from this cave.
+~
+boulder~
+8 -1 27701
+D5
+An opening in the floor opens into a tunnel below.
+~
+opening~
+9 -1 27703
+E
+opening~
+An opening in the floor opens into a tunnel below.
+~
+E
+boulder~
+A large boulder sits here and looks like it can just bearly be moved.
+~
+S
+#27703
+Within a Dark Cave~
+   A stark contrast to the entrance through the opening above, the walls of
+this cave are quite smooth and worn with age.  The floor is covered with a fine
+layer of moist silt that bears markings of recent disturbance.  A few patches
+of moss grow along cracks in the walls and floor, and a small cluster of nearly
+translucent, dun-colored fungi grows in a small enclave.  The sound of
+trickling water comes from a passage to the north.  A smaller exit turns around
+a corner to the west.
+~
+277 9 0
+D0
+~
+~
+0 -1 27708
+D3
+~
+~
+0 -1 27704
+D4
+An opening in the ceiling opens into a small crevice behind some rocks.
+~
+opening~
+9 -1 27702
+E
+moss fungus fungi cracks walls floor~
+Dark green moss and light brown fungi grows from cracks in the walls.
+~
+E
+opening~
+A small opening in the ceiling opens into a small crevice behind some rocks.
+~
+S
+#27704
+A Small Tunnel~
+   This small tunnel twists and turns its way through the interior of the
+mountain, following the path of least resistance through the stone.  A low
+ceiling and close walls make the passage a less than desirable place to meet up
+with anything unfriendly.  Any sound at all seems amplified and distorted by
+the strange reflections caused by the surrounding rock.
+~
+277 9 0
+D0
+~
+~
+0 -1 27705
+D1
+~
+~
+0 -1 27703
+S
+#27705
+A Small Tunnel~
+   The tunnel makes another sharp turn at this point, leading on to yet another
+turn farther ahead.  Along one wall, dark black columns of rock are exposed,
+passing vertically and perpendicular to the floor.  This rock appears to be
+volcanic in nature, perhaps the core of a long ago eruption.  The tunnel itself
+seems to be much newer and not formed by flowing magma.
+~
+277 9 0
+D2
+~
+~
+0 -1 27704
+D3
+~
+~
+0 -1 27706
+E
+columns column rock~
+The columns appear to be made from some sort of dark volcanic material.
+~
+S
+#27706
+A Small Tunnel~
+   The top of this section of tunnel is slightly damp, with small droplets of
+water dripping from the tips of stalactites, forming several bulbous
+stalagmites that dot the floor directly beneath.  Small puddles of muddy water
+have collected on the floor, waiting to soak into the stone or evaporate.  The
+passage seems to end a short distance to the north.
+~
+277 9 0
+D0
+~
+~
+0 -1 27707
+D1
+~
+~
+0 -1 27705
+S
+#27707
+Above a Small Crack~
+   The tunnel ends abruptly at this point, with only a small crack leading
+deeper into the earth along the floor near the northern wall.  Dark patches of
+old earth can be seen on sections of the ceiling and along the wall to the
+north.  The appearance of soil might mean that the surface is near.  A strange
+and foul smell permeates the air here, wafting up from the crack in the floor.
+~
+277 9 0
+D2
+~
+~
+0 -1 27706
+D5
+A small crack in the stone is just big enough to crawl through.
+~
+crack~
+9 -1 27714
+S
+#27708
+A Damp Tunnel~
+   A chill breeze blows through the tunnel, carrying with it the smell of moist
+stone and soil.  The rock floor is damp and covered in some places with a thin
+slime-mold of some sort.  Algae grows along quartz seams in the wall, turning
+the normally white veins a sickly green color.  The sound of flowing water can
+be heard farther down the passage.
+~
+277 9 0
+D1
+~
+~
+0 -1 27709
+D2
+~
+~
+0 -1 27703
+S
+#27709
+A Damp Tunnel~
+   Small droplets of mineral-saturated water drip from the ceiling here,
+forming deposits in small mounds on the floor.  Water from a large puddle or
+pool off to the north seeps through cracks along the ground and fills low spots
+with muddy liquid.  It is quite cold with the constant wind blowing past,
+stealing the heat away from anything warm that it touches.
+~
+277 9 0
+D0
+~
+~
+0 -1 27710
+D3
+~
+~
+0 -1 27708
+S
+#27710
+Along an Underground Stream~
+   Most of the cavern floor here is covered with water which is flowing slowly
+but steadily from a pool to the north.  Much of the pool's runoff flows to this
+point before disappearing through the many cracks along the floor.  Small ice
+crystals have formed along the edges of the waterline due to the incessant wind
+blowing from farther down the tunnel.  The sound of water tumbling over rocks
+and into the pond fills the cavern.
+~
+277 9 0
+D0
+~
+~
+0 -1 27711
+D2
+~
+~
+0 -1 27709
+S
+#27711
+A Deep Dark Pool~
+   Much of this chamber is filled by a dark and very deep-looking pool of
+water.  A small waterfall to the north deposits its liquid load into the pool
+at a steady rate.  Here and there a small chunk of ice can be seen floating
+about in the swirling current.  The pool seems to empty at the same rate that
+water flows in, passing deeper into the earth through some unseen outlet,
+perhaps below the surface.
+~
+277 9 0
+D2
+~
+~
+0 -1 27710
+D4
+A small waterfall descends from higher chambers above.  It looks fairly easy to
+climb.
+~
+waterfall~
+11 -1 27712
+E
+waterfall~
+It might be possible to climb the waterfall to the chamber above.
+~
+S
+#27712
+Above the Cascade~
+   Slow-moving slushy water flows through this cramped space above a small
+easily climbable waterfall.  Ice crystals form various patterns along the
+walls, floor and ceiling--fragile but beautiful.  This part of the tunnel seems
+to have been cut by this steady stream of water, smoothing and rounding the
+walls as it passes by.  The tunnel opens up into a much wider expanse to the
+east.
+~
+277 13 9
+D1
+~
+~
+0 -1 27713
+D5
+A small waterfall cascades into the chambers below.  It looks fairly easy to
+climb.
+~
+waterfall~
+11 -1 27711
+E
+waterfall~
+It might be possible to climb the waterfall down to the chamber below.
+~
+S
+#27713
+Along the Stream~
+   The tunnel here is wide and fairly level, though much of the floor space is
+occupied by the flowing stream of ice.  Both stalagmites and icicles reach down
+from the ceiling, dripping water in a steady rain.  Many of the stalagmites
+have been weathered down by the abrasive flow, save for a few that linger along
+the tunnel walls.  The tunnel continues to the north where it turns around a
+bend.
+~
+277 9 9
+D0
+~
+~
+0 -1 27750
+D3
+~
+~
+0 -1 27712
+S
+#27714
+Within a Foul Smelling Cave~
+   This small cave appears to be the home of some creature.  Skins of animals
+lay in piles on the stone floor--one particularly large heap looks like a bed
+of some sort.  Strange glyphs have been painted on the wall with some red
+substance, most likely blood.  A foul smell swirls about, a mixture of dead
+meat and the even more putrid scent of bodily waste.  The cave opens up to the
+outside world to the north, while a crack along the back wall leads up into
+darker chambers above.
+~
+277 13 0
+D0
+~
+~
+0 -1 27715
+D4
+A small crack barely big enough to crawl through, leads into the chambers above.
+~
+crack~
+9 -1 27707
+E
+waste meat~
+Needless to say, there are flies... lots of them...
+~
+E
+glyphs wall walls blood~
+Indecipherable pictures cover the walls and are written in blood.
+~
+S
+#27715
+Glacial Moraine~
+   Great piles of rubble have been heaped at the base of a large glacier to the
+east, the deposited stones various shapes and sizes.  Huge boulders have been
+literally ripped in half by the sheer force of the moving ice.  Large basalt
+slabs stick out of the ground like black monoliths reaching for the sky.  To
+the south a small cave entrance leads into the mountainside.
+~
+277 0 5
+D0
+~
+~
+0 -1 27716
+D2
+~
+~
+0 -1 27714
+S
+#27716
+Glacial Moraine~
+   Upon this mound of stone a small river can be seen below and to the west,
+flowing from beneath the glacier.  The massive ice formation to the east looks
+ancient, though it seems as if it has recently begun to recede and shrink in
+size--perhaps due to some sudden warming.  The edges of the moraine are steep
+but the slope to the west looks traversable.
+~
+277 0 5
+D2
+~
+~
+0 -1 27715
+D3
+~
+~
+0 -1 27717
+S
+#27717
+An Ice Flow~
+   Ice-melt from the glacier and surrounding snow drifts stream down a slight
+slope to the west.  Swampy marshland in that direction is covered with a layer
+of frost and scattered snow.  The river is broken up in several places by bergs
+of ice and glacial debris, making it possible to jump cross without too much
+difficulty.
+~
+277 0 9
+D0
+Large bergs of ice and outcroppings of rock make it possible to jump the river.
+~
+river~
+10 -1 27718
+D1
+~
+~
+0 -1 27716
+S
+#27718
+An Ice Flow~
+   The river here chuckles along with the sound of rocks rolling along beneath
+the water.  Melting ice crackles and pops as it makes contact with the flow,
+making the bank slushy where it joins the river.  Small scattered clumps of
+brown grass shoot out from the ground in various places, claiming a spot to
+grow in.  The lowest part of the glacier slopes down to touch the valley floor
+to the north.
+~
+277 0 9
+D0
+~
+~
+0 -1 27719
+D2
+Large bergs of ice and outcroppings of rock make it possible to jump the river.
+~
+river~
+10 -1 27717
+S
+#27719
+The Base of the Glacier~
+   The frozen tip of the glacier looms along the northern wall, looking small
+from the distance, but very large up close.  The grade at this point is still
+steep, but looks climbable.  Freshly cut hand and foot holds have been hacked
+into the ice in places.  The pale blue-white surface is chill to the touch and
+hard as stone.
+~
+277 0 9
+D2
+~
+~
+0 -1 27718
+D4
+Small, slippery hand and footholds can just be made out along the glacial wall.
+~
+wall~
+11 -1 27720
+S
+#27720
+Climbing the Glacier~
+   Climbing the glacier is a treacherous and slow process.  The chill, biting
+wind blows relentlessly through the valley, carrying with it flakes of snow and
+frost whipped up from the glacier's surface.  Though the slope is not vertical
+here, it is very close to being so.  Strangely, newly cut climbing holds have
+been dug into the wall in this inhospitable land.  There may be more about than
+just the natural wildlife to be found here.  The slope eases off a ways up,
+opening onto the top of the glacier.
+~
+277 0 9
+D4
+The slope decreases and the path continues upwards.
+~
+wall~
+11 -1 27721
+D5
+Small slippery hand and footholds can just be made out along the glacial wall.
+~
+wall~
+11 -1 27719
+S
+#27721
+A Glacial Cliff~
+   The top of the glacier is a cold and desolate place of ice and wind.  No
+plants can take hold in the frozen surface, where there is no soil.  The wind
+is very strong and very cold, being blown into the valley from the north-east.
+An immense fissure in the ice can be seen running from the north side of the
+glacier to the south.  Judging from the sharp edges, it appears to be fairly
+recent.  The valley floor can be reached by climbing down the steep cliff wall.
+~
+277 4 9
+D1
+~
+~
+0 -1 27722
+D5
+The slope increases steadily as the path descends.
+~
+wall~
+11 -1 27720
+S
+#27722
+Upon the Glacier~
+   The surface along the edge of the glacier is smooth and slippery, polished
+to a glassy sheen by the frozen winds.  Small dips and rises, which would
+normally be unnoticeable on ordinary terrain, prove to be difficult to traverse
+and slow to circumvent.  Frost and snow cover most of the rest of the ice flow,
+gradually adding to the overall bulk of the glacier.  Footprints make a winding
+path through the snow to the north, heading for an immense crack in the ice.
+~
+277 0 9
+D0
+~
+~
+0 -1 27723
+D1
+There's a soft pile of snow lying here.
+~
+snow pile~
+8 -1 23070
+D3
+~
+~
+0 -1 27721
+S
+#27723
+Upon the Glacier~
+   The middle of the glacier is a lonely place indeed.  Nothing seems to be
+able to survive anywhere on this barren landscape.  Snow drifts pile up in
+places several meters thick and a few meters tall, their surfaces crystalline
+and crumbly.  Some footprints in the snow appear to branch off at this point, a
+larger number of them lead to the north, but a few turn to the east, farther
+out onto the glacier.
+~
+277 0 9
+D0
+~
+~
+0 -1 27724
+D1
+~
+~
+0 -1 27727
+D2
+~
+~
+0 -1 27722
+S
+#27724
+Upon the Glacier~
+   The desolate wasteland that is the glacier flows lazily on a geologic time
+scale, down through this eternally frozen valley.  Towering mountains surround
+it with snow-capped spires that reach for the sky.  Mist rolls down the slopes
+to gather on the floor and linger in the trees.  It seems as if nothing could
+survive this hostile environment, yet a few varieties of plants and evergreens
+have found a foothold along the valley edge.  Some fresh footprints can be seen
+marching from the south to the north-east where a large crack in the ice splits
+the glacier.
+~
+277 0 9
+D1
+~
+~
+0 -1 27725
+D2
+~
+~
+0 -1 27723
+S
+#27725
+Near a Glacial Rift~
+   The path drops down a sharp, slick slope into a small bowl-shaped
+depression.  The glacier surface here is semi-transparent ice with no snow
+cover.  There seems to be some slight movement apparent through the glassy
+material, though what exactly causes it cannot be seen.  The slope up to the
+west is too slippery to climb, but the path continues to the east and then the
+north, up and along a large snow drift.
+~
+277 0 9
+D0
+~
+~
+0 -1 27726
+D1
+~
+~
+0 -1 27730
+D3
+~
+~
+0 -1 27724
+E
+map designs battle plans drawing~
+
+==========
+| \ \    |
+|+ | \   |
+|  \ x|  |
+|   `-'  |
+==========
+~
+S
+#27726
+Entrance to the Glacial Rift~
+   The break in the glacier is massive and deep.  A very narrow ice ledge juts
+out from the cliff wall and travels at a mild slope down into the icy depths
+below.  The path down looks quite treacherous, but no other way presents
+itself.  What strange things might be discovered within an ancient glacier such
+as this, one can only guess... or find out for themselves.
+~
+277 4 9
+D2
+~
+~
+0 -1 27725
+D5
+A narrow ledge of ice leads down into the ravine.
+~
+~
+0 -1 27731
+S
+#27727
+Glassy Surface~
+   The path drops down a sharp, slick slope into a small bowl-shaped
+depression.  The glacier surface here is semi-transparent ice with no snow
+cover.  There seems to be some slight movement apparent through the glassy
+material, though what exactly causes it cannot be seen.  The slope up to the
+west is too slippery to climb, but the path continues to the north up and along
+a large snow drift.
+~
+277 0 9
+D1
+~
+~
+0 -1 27728
+E
+glass glassy surface~
+The floor here is semi-clear and slick, offering just a hint of what lies below.
+~
+S
+#27728
+Upon a Snow Drift~
+   The climb up the side of this snow drift is a slow and dangerous process,
+with many soft spots in the snow for unweary hands and feet to slip into.  Much
+of the surrounding area, including the entirety of the glacier, can bee seen
+from the top of this white mound.  Tall mountains ring this area with snow-
+covered peaks, blocking off passage from nearly every direction.  To the west
+the valley continues, but the glacier ends and a swampy marshland fills the
+rest of this hidden place.  A narrow river flows through that area, flowing
+from the base of the glacier.
+~
+277 0 9
+D0
+~
+~
+0 -1 27729
+D3
+~
+~
+0 -1 27727
+S
+#27729
+Along the Ravine~
+   The path along the ravine continues for a ways before turning away from it
+and heading to the south.  This change of direction seems to be due to the fact
+that the edge looks cracked and unstable at that point.  Footprints in the snow
+here do not look to be entirely human made, some being too large and deep for
+an adventurer.  A small stack of stones rests along the side of a dune, piled
+by someone or something for a not-so-apparent reason.
+~
+277 0 9
+D2
+~
+~
+0 -1 27728
+D3
+~
+~
+0 -1 27730
+E
+ravine fissure edge~
+The glacier ends abruptly and drops off into darkness below.
+~
+E
+stones stone stack pile~
+
+  ( )
+ (   )
+(_____)
+~
+E
+foot footprints~
+
+Oooo
+\  |
+ | |
+  o
+~
+S
+#27730
+Along the Ravine~
+   A narrow path has been made by some sort of foot travel along the edge of a
+ravine in the glacier.  The rift floor is far down from here, but is visible.
+Large snowdrifts crowd around the edge, depositing snow into the fissure when
+piled too high or disturbed.  A narrow ice shelf along the ravine wall can be
+seen to the west.
+~
+277 0 9
+D1
+~
+~
+0 -1 27729
+D3
+~
+~
+0 -1 27725
+E
+ravine fissure edge~
+The glacier ends abruptly and drops off into darkness below.
+~
+S
+#27731
+Descending Into the Ravine~
+   After a descent of about fifty meters, the ice ledge levels off and travels
+at a slighter slope to the east.  The sun does not find this place but for a
+few minutes each day when directly overhead, making it much colder here than
+above.  Ice crystals crunch beneath any contact with the frozen surface--the
+only sound other than the low howl of wind blowing through the canyon.
+~
+277 4 9
+D1
+~
+~
+0 -1 27732
+D4
+The ledge ends a little higher up and opens onto the surface of the glacier.
+~
+~
+0 -1 27726
+S
+#27732
+Descending Into the Ravine~
+   The ice ledge continues deeper into the glacier, darker and colder with each
+step of the way.  At a point about three meters above the rift floor, the ledge
+ends abruptly.  A cave mouth opens from the canyon floor like a jagged-toothed
+gaping maw.  A short jump from the ledge would put you directly within the icy
+mouth of the cave into the glacier.  Freezing drafts of air blow from the
+opening in a continuous flow.
+~
+277 4 9
+D3
+~
+~
+0 -1 27731
+D5
+A short jump over the ledge lies the entrance to a cave.
+~
+ledge~
+10 -1 27733
+S
+#27733
+The Mouth of an Icy Cavern~
+   The entrance to this cave is fairly small but it quickly opens up into the
+interior of the glacier and becomes much wider and taller.  A long, dark tunnel
+winds its way through the ice, undulating up and down in an irregular fashion.
+The tunnel does not look to be manmade, rather a natural occurrence of some
+sort.  A chill wind blows through the tunnel, escaping through the opening
+above.  A short jump up is an ice ledge leading up along the cliff wall above.
+~
+277 4 9
+D1
+~
+~
+0 -1 27734
+D4
+Just within reach, a ledge above leads up the ravine wall.
+~
+ledge~
+10 -1 27732
+S
+#27734
+An Icy Cavern~
+   The tunnel through the glacier is very large indeed, more like a continuing
+cavern through the ice.  Huge icicles reach down from the ceiling, some even
+touching the floor with their icy grasp.  Small stalagmite mounds made of
+frozen water pile up on the floor, built-up by dripping water from above.  The
+floor is slick in many places, but a general path has been made through here,
+roughened up enough to stand on reasonably.  Small puddles of reddish-black
+liquid can be found in places--blood perhaps...  The cavern makes a turn to the
+south at this point, away from the cave entrance to the west.
+~
+277 9 9
+D2
+~
+~
+0 -1 27735
+D3
+~
+~
+0 -1 27733
+S
+#27735
+An Icy Cavern~
+   The glacial tunnel splits at this point into two sections equally large.
+Wind of some sort blows from the southern tunnel, while the passage to the east
+seems to be still and silent.  Spattered blood and pieces of torn and frozen
+flesh can be seen along the walls and on the floor.  The blood has soaked into
+the ice, tinting it red.  Continuing to the south, the path leads into another
+section of the glacier.  A few small scratches in the ice floor point to the
+eastern tunnel.  These markings appear to be made by some sort of sharp object,
+like a knife or a dagger.
+~
+277 9 9
+D0
+~
+~
+0 -1 27734
+D1
+~
+~
+0 -1 27736
+D2
+~
+~
+0 -1 27741
+E
+scratches markings ice~
+These markings appear to be made by some sort of sharp object, like a knife or a
+dagger.
+~
+S
+#27736
+Deeper Within the Glacier~
+   After making a few turns away from the main tunnel to the west, this one
+tapers down to a much smaller diameter.  A few signs of recent travel show in
+the form of some bloody gore and cuts into the ice.  Whatever left behind this
+mess of tissue might still be down here somewhere.  The markings on the walls
+seem to be some sort of guide marks, leading from the main tunnel into here.
+The grade of the tunnel has increased a little, leading deeper down into the
+glacier.  The passage leads on to what looks like an intersection to the east.
+~
+277 9 9
+D1
+~
+~
+0 -1 27737
+D3
+~
+~
+0 -1 27735
+S
+#27737
+Tunnel Junction~
+   The tunnel comes to a north-south T-Junction at this point.  The path to the
+north opens up into some darker and larger chamber even deeper in the glacier.
+A strange glow flickers around a bend in the tunnel to the south, caused by
+some unknown source.  The same markings that have been made in other parts of
+this cave complex lead to the south, while the north remains inconspicuous.
+Bloody red stains have been left in a curving fashion bending from the western
+tunnel to the south, refraining from the northern chamber for some reason.
+~
+277 9 9
+D0
+To the north lies a dark cavern filled with a dark pool of water.
+~
+~
+0 -1 27738
+D2
+~
+~
+0 -1 27739
+D3
+~
+~
+0 -1 27736
+S
+#27738
+An Immense, Pool-Filled Cavern~
+   This cavern is enormous in size, with much of the floor-space occupied by a
+large and dark lagoon.  The back half of the cave is made of stone, leading to
+the conclusion that it is part of the northern mountainside that has been cut
+into by the relentless force that is the glacier.  No stalactites or
+stalagmites have formed since the carving of that stone, being much too recent
+for such a long process to have occurred.  Large icicles drip water in a
+constant rain into the pool of water like drizzle after a storm.  In one corner
+near the back of the chamber bones and skins of several creatures have been
+strewn about amongst the stone rubble.
+~
+277 13 9
+D2
+~
+~
+0 -1 27737
+E
+bones skins rubble~
+Pieces of bone and skin from several unrecognizable creatures have been left in
+a pile of gore near the back of the chamber.
+~
+S
+#27739
+Deep Within the Glacier~
+   At this point, the tunnel has descended very deep into the glacier.  The
+walls are no longer stark white in color, but an aqua blue, mixed with dark
+earthy material.  A shimmering light filters around a bend in the passage to
+the south as it turns eastward even deeper into the ice.  The same sort of
+bloody trail that has been left elsewhere in this cave system exists in this
+part as well.  The trail ends in a dark pool of gore before the point the
+tunnel turns--it looks as if it doubles back on itself.  Whatever left the
+trail, turned back the way it came.
+~
+277 9 9
+D0
+~
+~
+0 -1 27737
+D1
+A small cavern sparkling with its own light is to the east.
+~
+~
+0 -1 27740
+S
+#27740
+A Sparkling Cavern~
+   Dazzling sparkles of light dance around in this cave, making it hard to look
+at the walls and ceiling.  What look at first like ice crystals embedded in the
+wall prove to be actual mineral crystals of some sort.  These were probably
+formed over several thousand years of compression and material buildup within
+the glacier.  Now the perfectly shaped stones are held fast within the icy grip
+of their creator, waiting to be released.  Parts of the walls of this chamber
+have been chipped away by some sharp instrument, as if someone were digging out
+the crystals for themselves.
+~
+277 13 9
+D3
+~
+~
+0 -1 27739
+S
+#27741
+An Icy Cavern~
+   The frozen tunnel of ice narrows down a bit at this point, becoming more
+like a tube through the glacier.  To the north and south, the tube opens up
+again, the southern tunnel being smaller still than the northern end.  The same
+blood and gore that can be found elsewhere in this cave complex can be seen
+here--even splattered across the ceiling and on the walls.  Air continues to
+blow through this tunnel at a steady rate but unlike before, the breeze seems
+to be warmer than the ambient temperature of the tunnel.  The path continues to
+the south and then around a corner there to the east.
+~
+277 9 9
+D0
+~
+~
+0 -1 27735
+D2
+~
+~
+0 -1 27742
+S
+#27742
+An Icy Cavern~
+   This section of the icy tunnel complex is relatively unremarkable, save for
+a trail of blood on the floor.  The walls and ceiling are thick and solid, a
+light blue in color.  The wind continues to blow through here from farther
+along and around another bend to the east.  The path seems to be gradually
+traveling deeper and farther down into the glacier with every turn.
+~
+277 9 9
+D0
+~
+~
+0 -1 27741
+D1
+~
+~
+0 -1 27743
+S
+#27743
+An Icy Cavern~
+   Coming to another bend, the tunnel continues from the west around a turn to
+the south.  Frosted ice crystals cling to the walls, flaking off at the
+slightest disturbance.  A gentle but steady breeze flows through this place,
+bringing with it a moist smell of fresh water from somewhere beyond.  A bloody
+trail continues to wind its way through this tunnel, leading from either
+direction.  Whatever caused it must have lost a lot of blood in the process.
+~
+277 9 9
+D2
+~
+~
+0 -1 27744
+D3
+~
+~
+0 -1 27742
+S
+#27744
+An Icy Cavern~
+   The walls of the tunnel at this point look glassy and shine with a liquid
+sheen.  The air blowing from around the bend to the east is warm enough that it
+has begun to ever so slowly melt away the walls.  Ridges where weaker spots in
+the ice have melted faster than other places run vertical paths to the floor,
+where some of the melted water has gathered in ripples and re-solidified where
+it is slightly cooler.  Red blood trails along the floor look fresh here,
+probably because the fluid has not frozen into the ice.
+~
+277 9 9
+D0
+~
+~
+0 -1 27743
+D1
+~
+~
+0 -1 27745
+S
+#27745
+Trickling Water~
+   A small pool of water has gathered on the tunnel floor here, spilling over
+an abrupt edge along the floor down and to the south.  Melted ice flows and
+drips from the walls and ceiling to gather in this puddle after being warmed by
+the rush of air coming from along the tunnel to the east.  Water is not the
+only thing that has gathered in this pool however--reddish wisps of blood lace
+the water, flowing from places along the edge of the tunnel walls.  The wind
+blows both into the chamber beyond the edge and also into a continuing tunnel
+to the west.  Above, the ceiling is semi-transparent, allowing some light to
+filter through the melting ice.
+~
+277 9 9
+D1
+~
+~
+0 -1 27751
+D3
+~
+~
+0 -1 27744
+D5
+Melted ice and water flow over the edge and form a small stream beyond.
+~
+~
+0 -1 27746
+S
+#27746
+A Slow Flowing Rivulet~
+   A small but steady stream of water flows out from beneath a large sheet of
+ice here.  All of the walls appear to be made entirely of packed snow and ice,
+blue-white in color.  The water forms into a small rivulet that travels south
+into a broader channel there.  A short but steep wall along the northern
+section of the tunnel looks as if it leads on to another chamber above.
+~
+277 9 9
+D2
+~
+~
+0 -1 27747
+D4
+A steady stream of water and ice flows over a small ledge above.
+~
+~
+0 -1 27745
+S
+#27747
+A Fork in the Stream~
+   Here the underground stream branches into two parts.  The main water flow
+comes from somewhere to the north and turns to the west at this point.  A
+secondary, smaller rivulet trickles to the south and out of sight around a
+slight bend.  The tunnel walls are difficult to make out through all of the ice
+that covers them and much of the floor is made up of tightly packed ice.  The
+continual draft of air also blows from the north.
+~
+277 9 9
+D0
+~
+~
+0 -1 27746
+D2
+~
+~
+0 -1 27748
+D3
+~
+~
+0 -1 27750
+S
+#27748
+A Water-Carved Tunnel~
+   The tunnel ends abruptly here, at a smoothly rounded wall.  The small
+channel of water flowing through here disappears down a large and very deep
+looking hole in the ground.  The sound of water rushing into the tube fills the
+chamber with a somewhat loud and hollow sound.  It looks as if there would be
+no escaping the icy embrace of death if one were to slip into the tube in the
+floor.
+~
+277 13 9
+D0
+~
+~
+0 -1 27747
+D5
+A dark hole drops deep into the center of the glacier, offering no return.
+~
+~
+0 -1 27749
+S
+#27749
+Frozen Deep Within the Glacier!~
+   You slide along the slick icy walls down twists and turns at a breakneck
+speed.  Freezing water with shards of ice splash around you and soak you to the
+bone.  You claw and scrabble with the smooth walls to no avail and eventually
+disappear into the frozen core of a glacier.  Take heart, in a few thousand
+years you may be discovered and written about by some archeologist.
+You are dead.
+~
+277 14 9
+S
+#27750
+Along the Stream~
+   The stream is nearly at a standstill at this point.  The cold permeates the
+whole area, stealing away all warmth with its chill grasp.  Along the edges of
+the stream are thin sheets of ice that thicken along the walls making passage
+through here slightly treacherous.  To the east the stream forks--the main flow
+coming from the north with a small side-stream flowing to the south.
+~
+277 9 9
+D1
+~
+~
+0 -1 27747
+D2
+~
+~
+0 -1 27713
+S
+#27751
+Heavily Scarred Bedrock~
+   The icy floor of this tunnel tapers away into the deeply scarred bedrock
+beneath the glacier.  Ages of abrasive wear upon the stone has gouged deep ruts
+into the surface, but has also polished the rock to a very smooth texture.
+Warm air blowing from around a corner to the north has begun to quickly melt
+away the surrounding ice walls and ceiling.  The melted water trickles along
+the tunnel floor to the west where it gathers in a small pool.  A few smears of
+blood and globs of tissue have been left upon the rock floor by something, or
+someone.
+~
+277 9 0
+D0
+~
+~
+0 -1 27752
+D3
+~
+~
+0 -1 27745
+S
+#27752
+Heavily Scarred Bedrock~
+   The rush of air is very warm and strong at this point, blowing constantly
+from some sort of opening in the floor to the west.  This part of the tunnel is
+actually a cave within the glacier.  The walls, floor and ceiling are all
+stone, carved out by the centuries of ice flowing over and through the rock.
+The sheer force required to tear apart the rock like this is overwhelming, and
+yet it must have taken hundreds of years just to chip away a foot or two.  Huge
+gouges in the stone are apparent, probably dug out by ice-encased debris as it
+passed along with nowhere to go but through.  To the south, the tunnel walls
+and ceiling turn from stone to ice as the passage opens into the interior of
+the surrounding glacier.
+~
+277 9 0
+D2
+~
+~
+0 -1 27751
+D3
+~
+~
+0 -1 27753
+S
+#27753
+The Top of a Warm Air Vent~
+   Coming to an abrupt halt at a rock wall, the tunnel ends above a fairly
+large opening in the floor.  Through this dark opening, warm air rushes out
+into the cold chambers beyond, seeking the lower pressure of the surface.  It
+seems that this is the reason for the melting happening throughout the
+surrounding glacier.  All of the stone in this area has been worn smooth by the
+abrasive base of the flowing ice.  However, the vent looks like it has been
+mostly untouched by the glacier's wrath.  The edges of the crack into the rock
+are broken up and sport many hand and foot-holds for any who are adventurous
+enough to descend into the depths of the earth.
+~
+277 13 0
+D1
+~
+~
+0 -1 27752
+D5
+An opening into the earth vents warm air from the darkness below.
+~
+vent~
+11 -1 27754
+S
+#27754
+Climbing Down the Vent~
+   The walls of the vent are made of jagged and broken stone.  Moist air
+streams through the opening, seeking the lower pressure of the surface above.
+The rock walls are damp and slightly slick--patches of slime grow along seams
+and cracks, making the way down difficult for a climber.  The vent is not
+overly-long, being perhaps ten meters in length and fairly straight down.  It
+opens up into a dark tunnel below.
+~
+277 269 5
+D4
+Warm air rushes out of the vent opening above.
+~
+vent~
+11 -1 27753
+D5
+Warm air rushes to the surface from the dark depths below.
+~
+vent~
+11 -1 27755
+S
+#27755
+Beneath a Vent to the Surface~
+   The space here, beneath a hole in the ceiling, is quite cramped.  The alcove
+opens up quickly to the north, where it becomes a tunnel traveling
+perpendicular to this one.  The walls and floor are non-descript dull colored
+stone, though slightly moist from the air rushing through.  As the wind blows
+through this place, it makes a change in direction and continues up through the
+vent and to the surface.
+~
+277 9 5
+D0
+~
+~
+0 -1 27756
+D4
+Warm air rushes past and up through a vent in the ceiling.
+~
+vent~
+11 -1 27754
+S
+#27756
+A Tunnel of Fire and Ice~
+   This narrow tunnel runs east-west through the earth, walled by thick, rough
+stone.  A draft of wind blows steadily from around a bend in the tunnel to the
+west.  To the east, a dark and eerily silent passage winds and twists its way
+through the darkness.  While the air to the west seems relatively mild, if not
+warm--the air to the east seems stagnant and cold.  The wind flows mostly
+through the exit to the south and up through a vent in the ceiling there.
+~
+277 9 5
+D1
+~
+~
+0 -1 27757
+D2
+~
+~
+0 -1 27755
+D3
+~
+~
+0 -1 27771
+S
+#27757
+A Lukewarm Passage~
+   The air here is a strange and sticky mixture of moist warm air and stale
+cold air.  The sound of wind blowing through the tunnels comes from the west,
+while a deadly silence hangs on the air to the east.  A small tunnel of some
+sort has been dug out by something into the wall to the north.  The small
+passage disappears around a sharp corner and into darkness, though it might be
+possible to crawl through to discover where it leads.  The main east-west
+tunnel continues a ways further in both directions.
+~
+277 9 5
+D0
+A small crawl-tunnel leads into the stone to the north.
+~
+tunnel~
+9 -1 27766
+D1
+~
+~
+0 -1 27758
+D3
+~
+~
+0 -1 27756
+S
+#27758
+An Icy Tunnel of Stone~
+   Descending deeper into the earth, the ambient temperature in the tunnel
+continues to drop at a steady rate.  Small traces of frost crystals have begun
+to form along the many cracks and fissures running through the stone.  The
+construction of the tunnel appears to be more natural in this direction as the
+diameter of it begins to fluctuate along patterns of density and hardness of
+the surrounding rock walls.  The passage begins to twist and turn more
+frequently and turns to the north at this point.  The air seems warmer to the
+west.
+~
+277 9 5
+D0
+~
+~
+0 -1 27759
+D3
+~
+~
+0 -1 27757
+S
+#27759
+An Icy Tunnel of Stone~
+   As the temperature continues to drop, the tunnel walls become even more
+rough and cracked.  Freezing water has eroded many parts of the passage as ice
+expanded within the stone, breaking and displacing large chunks of rock from
+along the walls and the ceiling.  Every now and then a small crackling sound
+can be heard as the process continues in its geological time scale.  Piles of
+debris cover much of the floor and is the only other interesting feature in
+this section of the tunnel.  Turning yet another bend, the passage from the
+south heads to the east.
+~
+277 9 5
+D1
+~
+~
+0 -1 27760
+D2
+~
+~
+0 -1 27758
+S
+#27760
+Fractured Ice Crystals~
+   The tunnel opens up into a low, wide chamber, filled with stalactites,
+stalagmites and pillars.  The floor is littered with splinters of ice and rock
+that have literally been blasted from the stone surfaces of the cavern.  The
+swathe of destruction has cleared a path through this subterranean room that
+winds through the maze of remaining frozen formations and into another tunnel
+to the south, having started from the west.  Almost hidden by several
+interlocking structures is what looks like a continuation of the tunnel to the
+north.
+~
+277 9 9
+D0
+~
+~
+0 -1 27762
+D2
+~
+~
+0 -1 27761
+D3
+~
+~
+0 -1 27759
+S
+#27761
+A Cavern of Frost~
+   A thin mist of partially frozen water droplets fills this moderately sized
+cavern with a white haze.  The walls of this chamber undulate with strange
+ripples caused by the slow flow of ice over the rock surface.  Delicate
+crystalline formations hang from the ceiling in a dazzling array of shapes and,
+strangely enough, earth-tone colors--caused perhaps by some sort of impurity in
+the stone.  Several large outcroppings of rock jut out and stand freely from
+the walls.  The main tunnel to the north appears to be the only way out of this
+place.
+~
+277 133133 9
+D0
+~
+~
+0 -1 27760
+S
+#27762
+A Junction of Sound and Silence~
+   The tunnel comes to a T-Junction at this point with a passage both to the
+east and to the west, as well as to the south.  A continuous and strange off-
+beat, pipe-like melody can be heard drifting through the air from the west,
+caused by some unseen thing.  The sound does not seem musical and yet, at the
+same time is not unpleasant to hear.  A stark contrast to this is the utter
+silence of the hall of stone leading to the east and out of sight.  The
+temperature has ceased to decline, maintaining a frigid constant at this point.
+~
+277 13 5
+D1
+~
+~
+0 -1 27764
+D2
+~
+~
+0 -1 27760
+D3
+~
+~
+0 -1 27763
+S
+#27763
+Soot-Billowing Pipes~
+   As the passage turns around a small bend, it comes to an end.  On the wall
+where the tunnel ends can be seen a strange sight indeed.  Several pipe-shaped
+structures protrude from the wall, floor and ceiling at this point.  Small,
+thick black clouds billow out of the pipe openings at random intervals,
+accompanied by a brief music-like note.  The sooty puffs of air escape through
+small blackened vents in the ceiling, depositing and darkening the surrounding
+stone.  The tunnel back to the east is the only exit.
+~
+277 13 5
+D1
+~
+~
+0 -1 27762
+E
+pipes pipe structures wall walls floor ceiling~
+Pipe-shaped protrusions stick out from many places in this chamber, each
+puffing out a small cloud of black smoke which is accompanied by a brief
+musical note.
+~
+S
+#27764
+A Blackened Cavern~
+   This part of the tunnel opens into a small cavern made entirely of what
+looks like blackened stone.  Upon closer inspection however, the stone can be
+seen to be the same as the rest of this underground place.  Something has
+blasted the rock with a super-hot force, scorching it with a carbonized glaze.
+The focus of the devastating blast appears to be a small opening on the north
+wall, through which a faint flickering light can be seen.
+~
+277 9 5
+D0
+~
+~
+0 -1 27765
+D3
+~
+~
+0 -1 27762
+S
+#27765
+A Room of Twisted Statues and Glyphs~
+   Beyond the blasted wall of stone from the chamber to the south, lies a
+small, obviously man-made chamber filled with wondrous sights.  The room is
+bricked with hand-made stones that once held vivid colors.  These colored
+bricks were set in the wall in many beautiful patterns, though much of the
+detail has worn away through time.  Mysterious glyphs adorn sections of
+uncolored bricks set at intervals along the walls.  Strange statues depicting
+men and other creatures rise from the tiled floors with twisted bodies and
+expressions of agony.  A large slab of broken stone fills the center of the
+room, but whatever its contents were has been smashed or taken, as the
+partially exposed area beneath is empty.
+~
+277 13 5
+D2
+~
+~
+0 -1 27764
+S
+#27766
+Crawling Through the Stone~
+   The small tunnel through the stone narrows down rapidly to an average
+diameter of about one meter, though less in some places.  It is almost an
+impossible task to crawl through such a tight place, but with rotations and
+contortions of the body slow progress can be made.  Scuff marks upon the floor
+and walls appear to be made by some sort of regular travel through this passage
+by some unknown thing.  The walls are smooth along the length of the tunnel,
+looking unnatural, and yet not seeming to be made by any sort of tool or claw.
+Whatever made it looks to have burrowed through the solid rock by some other
+means.  The crawl-space bends at this point, traveling west in one direction,
+and south in the other.
+~
+277 265 5
+D2
+The crawl-tunnel continues to the south.
+~
+tunnel~
+9 -1 27757
+D3
+The crawl-tunnel continues to the west.
+~
+tunnel~
+9 -1 27767
+S
+#27767
+Within a Small Lair~
+   The crawl space opens up into a small and very close room, not more than two
+meters from wall-to-wall and floor-to-ceiling.  A foul smell rises from several
+partially eaten and rotting corpses of unrecognizable creatures.  Several
+gnawed-on bones litter the floor, as well as a thin layer of what appears to be
+bone powder.  The rounded ceiling makes standing in this room by anyone taller
+than a meter and a half quite a hunched-over task.  Meeting with the creature
+who dwells here is probably not the wisest thing one could do.  This place has
+two exits, a crawl-tunnel to the north and another to the east.
+~
+277 135299977 5
+D0
+A small tunnel, barely large enough to crawl through leads to the north.
+~
+tunnel~
+9 -1 27768
+D1
+A small tunnel, barely large enough to crawl through leads to the east.
+~
+tunnel~
+9 -1 27766
+E
+bones corpses rotting creatures~
+The foul remains of half-eaten creatures has been left upon the floor to rot.
+~
+S
+#27768
+Crawling Through the Stone~
+   This small tube travels in a fairly straight fashion from north to south.
+Traces of recent travel through this space hint at the fact that something
+might indeed live wherever this may lead.  A few dark stains show up on the
+floor and walls in various places, though it is too old to be certain of what
+the substance might be.  A foul smell wafts from the south every now and again,
+smelling very much like the stench of death.  Passage through this tight place
+is slow and painful, but possible.
+~
+277 265 5
+D0
+The crawl-tunnel continues to the north.
+~
+tunnel~
+9 -1 27769
+D2
+The crawl-tunnel continues to the south.
+~
+tunnel~
+9 -1 27767
+S
+#27769
+Decending Deeper Into the Earth~
+   Freshly-hewn stone makes up the majority of the exposed surfaces in this
+part of the tunnel.  The passage descends at a steep angle deeper into the
+earth through a series of twists and turns, heading in an eastern direction.
+The stone has been crudely hacked by someone or something that wanted to reach
+an exit to the surface in a short time, uncaring about aesthetics.  Much of the
+stone debris still dusts the floor with rock silt and gravel pieces.  A small
+opening in the stone to the south looks like a more natural tunnel through the
+earth, though it is only large enough to crawl through.
+~
+277 9 5
+D1
+~
+~
+0 -1 27770
+D2
+A small crawl-tunnel leads into the stone to the south.
+~
+tunnel~
+9 -1 27768
+D3
+~
+~
+0 -1 27773
+S
+#27770
+Above a Twisting Staircase of Stone~
+   After descending even deeper into the earth, the tunnel from the west ends
+in a small gully occupied only by a dark pit at the end.  Spiraling into the
+depths of the darkness beyond is a crudely hacked staircase of solid stone.
+Like the previous section of tunnel, this staircase looks very recently made,
+and by the same sort of tools.  The lengths and widths of each step vary in
+size, serving only the function required by a stair.  No torches or any light
+source of any sort line the walls on the way down, but the faintest hint of a
+reddish glow flickers its way up from the depths.  This opening is the single
+source of the drafts of heat that fill the chambers above.
+~
+277 13 5
+D3
+~
+~
+0 -1 27769
+D5
+~
+~
+0 -1 27774
+S
+#27771
+An Ancient Magma Tube~
+   A warm current of air continues to blow through the tunnel from the north.
+The passage from the east opens into a large round tube, formed at some time by
+magma that flowed through the earth.  The walls are mostly smooth here, though
+covered in ripples and flow-lines where some of the molten stone had time to
+cool and harden as it passed through.  The rock here is much darker than the
+tunnel to the east and seems to be of a different, more recent era.  The magma
+tube flows in a fairly straight course from north to south.
+~
+277 9 5
+D0
+~
+~
+0 -1 27772
+D1
+~
+~
+0 -1 27756
+S
+#27772
+An Ancient Magma Tube~
+   The dark tube through the earth continues on its north-south course, making
+very few turns, and minor ones when it does.  The intensity of the heat which
+flowed with the molten rock must have been great indeed to have burrowed so
+proficiently through the stony depths.  The grade begins to steepen perceptibly
+as the tunnel heads deeper and deeper.  The diameter of the tunnel is such that
+perhaps ten men could comfortably walk side by side, each carrying six meter
+pikes over their shoulders.
+~
+277 9 5
+D0
+~
+~
+0 -1 27773
+D2
+~
+~
+0 -1 27771
+S
+#27773
+An Ancient Magma Tube~
+   After traveling the length of the lava tube of several hundred meters deeper
+into the earth, the tunnel breaks away and to the east down an ever-steeper
+incline.  The actual tube ends here, blocked by some ancient cave-in, while the
+exit to the east seems to be more recently made than the rest of the tunnel.
+The steadily-warming air rushes through the small opening from the depths of
+the passage beyond on its journey south and to the surface.
+~
+277 9 5
+D1
+~
+~
+0 -1 27769
+D2
+~
+~
+0 -1 27772
+S
+#27774
+A Narrow Hallway of Stone~
+   The twisting stairs from above end in a narrow hallway of hewn stone.  None
+of the surfaces here look natural and all appear to be freshly cut.  Small
+balls of what can only be magical fire flicker dimly at random intervals,
+producing more shadows than light.  The heat in this new section of tunnels is
+incredibly high, generated by some unseen source.  Guttural, unearthly sounds
+emanate from somewhere down the passage to the south, while a shadowy hallway
+intersects this one to the north.  A faint rumbling, yet liquidy and slightly-
+unpleasant sound makes its way through the halls in that direction.
+~
+277 67108872 0
+D0
+~
+~
+0 -1 27782
+D2
+~
+~
+0 -1 27775
+D4
+~
+~
+0 -1 27770
+S
+#27775
+Entrance to the Barracks~
+   A most unsettling sight for any mortal with a will to live, this section of
+the tunnel complex has been made into a sort of barracks--a dwelling place for
+demonkind on the prime material plane.  Unlike many other sections of tunnel in
+this area, much more care--if that is what it can be called--has been taken in
+the cutting out and design of the surrounding rooms.  Several twisted runes and
+carvings adorn the hewn stone and strange, demonic drawings and words are
+scrawled upon the walls, floor and even the ceiling of this area.  Demons have
+no need for non-essential personal belongings, thus most of the space here is
+left unoccupied.  The tunnel branches both to the east and the west at this
+point, leading to other rooms of similar layout.
+~
+277 67108872 0
+D0
+~
+~
+0 -1 27774
+D1
+~
+~
+0 -1 27776
+D3
+~
+~
+0 -1 27781
+E
+runes carvings drawings words walls floor ceiling~
+The symbols written around this area are frightening in appearance but
+indecipherable to the uninitiated.
+~
+S
+#27776
+The Demonic Barracks~
+   A large stone table fills much of this room and is the only structure within
+it.  Several scraps of leathery, almost skin-like parchment rest upon the
+table, some rolled and sealed and others held open by weights.  The writing
+upon all of these is the same kind of other-worldly text that can be seen in
+other parts of this tunnel system and from the looks of it, blood appears to be
+the ink of choice.  Little else of any notice can be seen in this otherwise
+blank chamber.  A foul smell of smoke drifts from a glowing room to the south
+beyond a thickly-arched tunnel.  The room extends to the west to the entrance
+of the barracks where the entry tunnel joins this area to those beyond.
+~
+277 67108872 0
+D2
+~
+~
+0 -1 27777
+D3
+~
+~
+0 -1 27775
+E
+parchment scraps writing~
+The writing seems to indicated battle strategies, plans and orders.
+~
+E
+table~
+The table is covered with scraps of what look like battle-plans and orders.
+~
+S
+#27777
+The Forge Room~
+   This room is unbearably hot and filled with a choking black and acrid-
+smelling smoke.  The entire center of the room is filled with a large forge and
+anvil.  Many unfinished weapons lay scattered around the room while others that
+have been completed rest in stacks along the back wall, ready for use or
+storage.  A small hole has been cut in the floor next to the forge and a
+strange contraption consisting of several ropes and pulleys rests atop the
+opening.  Terrible grinding and cackling noises drift up through the stone
+portal and every minute or two a bucket filled with raw metal emerges and
+deposits its contents into a bubbling vat of metallic liquid.  This unknown and
+impromptu method of mining is strange indeed to the uninitiated.  A fairly
+empty chamber can be seen through an archway to the north, while a simple stone
+door is set in the western wall.
+~
+277 67108872 0
+D0
+~
+~
+0 -1 27776
+D3
+A large stone door has been placed on the western wall, separating this room
+from the next.
+~
+door~
+1 -1 27778
+E
+27777 vat~
+The vat is filled with liquid metal and radiates tremendous heat.
+~
+E
+27777 hole opening portal~
+The opening in the stone floor looks just large enough for a small creature to
+crawl into or a bucket to come out of.
+~
+E
+27777 contraption ropes pulleys~
+This contraption is made from a strange-looking metal and glows with a magical
+light.  It continually turns a wheel that pulls several ropes through a series
+of pulleys.
+~
+E
+27777 anvil~
+A large metal anvil, seemingly too large for a human to use practically.
+~
+E
+27777 forge~
+A blazingly hot forge, used to melt the mined metal.
+~
+S
+#27778
+Supply Storage Room~
+   A small room with three doors serves as a storage room for the barracks.  A
+few large stone picks and sledgehammers lie against the northern wall.  Two
+crudely-constructed wheelbarrows occupy the majority of the open space, while
+the southern wall remains bare except for a door similar to those on the east
+and west walls.  This room appears to be generally unused now that much of the
+barrack complex has been cut out, though there is a definite cleared path
+leading from the eastern door to the southern one.  Unlike the other two doors,
+the one to the south has an unusual locking mechanism of some sort.  The lock
+looks to be mechanical in design and could possibly be picked with the right
+instrument.
+~
+277 8 0
+D1
+A large stone door has been placed on the eastern wall, separating this room
+from the next.
+~
+door~
+1 -1 27777
+D2
+A stone door made of dark rock makes up the southern wall of this room.  A
+strange mechanical locking device is used to keep the door secured.
+~
+door~
+2 27730 27779
+D3
+A large stone door has been placed on the western wall, separating this room
+from the next.
+~
+door~
+1 -1 27780
+E
+door~
+A stone door made of dark rock makes up the southern wall of this room.  A
+strange mechanical locking device is used to keep the door secured.
+~
+S
+#27779
+Weapon Storage Room~
+   This narrow room is filled from floor to ceiling with every kind of weapon
+imaginable, and several that are not.  An entire wall is devoted to polearms of
+every shape and size--glaives, halberds, spears and more, all forged of crude
+black metal and sharpened to a razor edge.  Another wall is lined with shelves
+laden with arrows and crossbow bolts tipped with wickedly barbed heads, some of
+which glisten with a poisonous gleam.  Beneath these shelves are stacks of
+bows--long, short, cross and even hand-held types.  Several of the instruments
+of war that can be seen are of demonic design--the only certainty about their
+use is in the infliction of pain and the dealing of death.  The door from the
+supply storage room to the north is the only exit.
+~
+277 1085580 0
+D0
+~
+door~
+1 -1 27778
+S
+#27780
+The Demonic Barracks~
+   Narrower and more dimly lit than the room to the north, this space seems to
+have been freshly made and put to little use.  Stone rubble has been piled in
+the corners, waiting to be removed.  More of the strange balls of fire-light
+provide illumination to this section of tunnel, though whatever spell keeps the
+pseudo-flames burning looks to be waning, as the light flickers in a torch-like
+fashion instead of a steady glow.  A crudely-made but seemingly effective stone
+door has been set into the eastern wall at the rear of the chamber.
+~
+277 67108872 0
+D0
+~
+~
+0 -1 27781
+D1
+A large stone door has been placed on the eastern wall, separating this room
+from the next.
+~
+door~
+1 -1 27778
+S
+#27781
+The Demonic Barracks~
+   The eastern section of the barrack complex has been set up as a training
+hall of sorts, filled with what appears to be tactical setups of obstacles and
+targets.  Large pools of blood and gore soak various parts of the floor, some
+old and dry, but others much more fresh.  Whatever unknown creature or
+creatures this mess belonged too can only be guessed, as the majority of the
+body parts left have been chewed upon, or worse.  Bits of tattered leather,
+broken blades and hacked stone are strewn about--many of these gathered near a
+pile of gore.  Demonic scrawls of the language of the outer planes can be seen
+next to intricate but strange pictures of battle plans drawn on the walls and
+the floors.  A narrow and slightly winding passage exits this room to the
+south, leading into yet another lit chamber beyond.
+~
+277 67108872 0
+D1
+~
+~
+0 -1 27775
+D2
+~
+~
+0 -1 27780
+E
+scrawls pictures plans walls~
+Intricate battle-plans and pictures of attack targets fill the room.
+~
+E
+blood pools gore body parts mess floor~
+The amount of gore and variation of the body parts strewn about seems to
+indicate a large number of creatures were killed, maimed or mutilated in this
+room.
+~
+S
+#27782
+An Intersection of Hallways~
+   A broad east-west hallway intersects a smaller tunnel from the south
+containing a stairway that opens into the ceiling and beyond.  This hall is
+unlit, save for an angry reddish-orange glow from the west, caused by what
+looks to be a cavern full of molten rock.  A narrow ledge in that direction
+connects to a stone bridge that snakes its way through the magma flows and
+disappears beyond sight to the north.  The passage fades into darkness to the
+east as it continues in a straight line through the earth.
+~
+277 67108872 0
+D1
+~
+~
+0 -1 27783
+D2
+~
+~
+0 -1 27774
+D3
+~
+~
+0 -1 27786
+S
+#27783
+A Shadowy Hall of Stone~
+   The hall becomes increasingly darker as it continues to the east and away
+from the faint light there.  The width of the hallway broadens and the height
+of the ceiling becomes ever higher as it vanishes beyond what little light
+makes it to this place.  The space here is already large enough to hold several
+dozen beings and it appears to increase in size further along.  A faint blue
+glow trickles around what seems to be a bend in the hall to the east and south.
+~
+277 8 0
+D1
+~
+~
+0 -1 27784
+D3
+~
+~
+0 -1 27782
+S
+#27784
+A Shadowy Hall of Stone~
+   As the hall continues to widen it makes a gradual turn to the south toward
+some sort of magical construct.  The darkness becomes slightly less here as a
+bit of light reflects off of the construct's surface and reaches this point as
+a dim glow.  The rest of this hall is very much the same as the sections before
+it in the west.  The stone has been hacked away with sheer brute force,
+displaying little care for design other than utility.  It is obvious that this
+passage is some sort of conduit from somewhere deeper in the tunnel complex,
+constructed for the quick transport of a large number of creatures or cargo.
+~
+277 8 0
+D2
+~
+~
+0 -1 27785
+D3
+~
+~
+0 -1 27783
+S
+#27785
+The Gate Room~
+   A glowing portal of immense proportions occupies the entirety of the
+southern wall where the hallway ends.  The walls to both sides have been cut
+far back to increase the capacity of this area, tapering to where the
+shimmering vortex spills out its faint blue light.  There is no mistake, this
+is a gateway of some sort, connecting this place to some other location by
+means of magical transportation.  The size of this gateway and the number of
+beings that could pass through it at any given time is disturbingly large.  The
+destination on the other side is difficult to make out through the distortion,
+but it somehow looks familiar.  Preparation of a full-scale invasion on the
+prime material plane seems to be well underway.
+~
+277 67141644 0
+D0
+~
+~
+0 -1 27784
+S
+#27786
+Upon a Burning Bridge of Stone~
+   A narrow ledge of stone juts out from a dark opening and hallway to the east
+and connects to a thin bridge of dark, hot rock.  The sides of the bridge are
+sheer and drop straight down a score or meters into a fiery flow of magma
+below.  Flames lick up and over the edges of the bridge as pockets of gas
+ignite when found by the relentless molten fluid.  The bridge itself seems to
+be made of some harder, more resistant rock than the rest of the stone in the
+area--perhaps an old core of dense metal or other material.  The bridge winds
+its way to the north in a haphazard way, though heat waves make it nearly
+impossible to see clearly to the opposite end.
+~
+277 67108872 0
+D0
+The narrow stone bridge winds its way through the cavern to the north.
+~
+~
+0 -1 27788
+D1
+~
+~
+0 -1 27782
+D2
+The rock there crumbles into the fiery depths below.
+~
+~
+0 -1 27787
+D3
+The rock there crumbles into the fiery depths below.
+~
+~
+0 -1 27787
+S
+#27787
+Burning Within the Molten Rock~
+   As you tumble off the edge of the stone bridge you wonder why it was you
+decided to leave the safety of having something solid beneath your feet.  You
+plummet into the vast pool of molten rock and begin to melt the moment you come
+in contact with the magma.  Your flesh chars and then burns from your bones in
+liquid agony as you gasp a lung-full of soot-filled air.  The white-hot pain
+that fills your body is so intense that you almost don't notice your life
+slipping away... almost.
+~
+277 67174412 8
+S
+#27788
+Upon a Burning Bridge of Stone~
+   The treacherous stone bridge continues its meandering path through the lava
+cavern, heading still in a northerly direction.  The width of the bridge
+constantly changes as it winds along, sometimes a few meters wide, and others
+mere centimeters across--so narrow that it looks fragile enough to crumble away
+at the slightest disturbance.  The heat is incredibly intense here, threatening
+to ignite any flammable substance that stays within its grip for long.  A deep
+rumble sends tremors through the rock from the churning earth below, adding to
+the danger of remaining in this place.  The far side of the chamber can barely
+be made out as a blurred rock shelf that thrusts out from the northern wall, to
+which the bridge seems to connect.
+~
+277 67108872 0
+D0
+The narrow bridge continues on to the north, deeper into the fiery chamber.
+~
+~
+0 -1 27789
+D1
+The rock there crumbles into the fiery depths below.
+~
+~
+0 -1 27787
+D2
+The stone bridge leads to the south and to more stable ground.
+~
+~
+0 -1 27786
+D3
+The rock there crumbles into the fiery depths below.
+~
+~
+0 -1 27787
+S
+#27789
+Upon a Burning Bridge of Stone~
+   As the width of the bridge begins to increase, so too does the ambient
+temperature.  Lung-searing blasts of super-heated air whip across the barren
+surface of the stone structure, emanating from the now violently churning magma
+below.  Through the buffeting winds and blurring heat waves can clearly be seen
+two seemingly opposed forces, facing off on a broad stone platform attached to
+the north cavern wall.  The sheer intensity of the surrounding environment is
+nearly enough to overload the senses of even the most hardy adventurers.  The
+ultimate destination of the bridge is clearly the ledge to the north, and
+whatever it is that may be found upon it.
+~
+277 67141644 0
+D0
+The bridge broadens onto a wide stone ledge to the north.
+~
+~
+0 -1 27790
+D1
+The rock there crumbles into the fiery depths below.
+~
+~
+0 -1 27787
+D2
+The bridge winds away to the south, following no defined pattern.
+~
+~
+0 -1 27788
+D3
+The rock there crumbles into the fiery depths below.
+~
+~
+0 -1 27787
+S
+#27790
+The Ledge~
+   A wide, thick stone ledge pushes out from the north wall that marks the end
+of the cavern and the bridge from the south.  Strange crackles of energy arc
+through the air along with gusts of wind that are blazingly hot one moment and
+bone-chillingly cool the next.  A sliver of non-light is apparent to the north,
+though only visible when not looking directly at it.  A paradox of order and
+chaos flow from its direction simultaneously, leaving a sense of confusion in
+its wake.  To the west, a sphere of pure energy hangs upon the air shedding a
+blue-white light that cannot so much be seen as felt.  The east side of the
+ledge supports a much more sinister sight, for a blazing sigil has been drawn
+upon rock, burning within yet another fiery source--a wall of nearly-black
+flame.  These two forces oppose each other, and yet they seem to be somewhat
+mediated by whatever it is that lies to the north, almost as if the energies
+are being siphoned off and nullified.
+~
+277 67141640 0
+D0
+To the north lies what can only be described as a tear or rip in the fabric
+of reality.  It seems to exist and at the same time not to exist within the
+boundries of this dimension.
+~
+~
+0 -1 27793
+D1
+A large blazing pentagram burns upon the ledge floor to the east.
+~
+~
+0 -1 27792
+D2
+A narrow stone bridge snakes through the cavern to the south.
+~
+~
+0 -1 27789
+D3
+A bright blue aura glows brilliantly on the ledge to the west.
+~
+~
+0 -1 27791
+S
+#27791
+Within a Protective Aura~
+   A powerful globe of holy protection radiates here in a sphere several meters
+in diameter.  The rumbling, bubbling noise of the surrounding magma chamber can
+still be heard but no longer seems as intense or dangerous.  A sense of calm
+and serenity floods the area in a tangible way, inviting peace and safety.  The
+intense heat of the cavern drains away to a warm breeze that only serves as a
+reminder of what lies just outside the aura's influence.  Soft, whisper-like
+sounds drift upon the slight wind, repeating some sort of chant in a language
+unknown to this plane.  The creator of this protective field must be mighty
+indeed to counteract the evil forces assaulting this place.
+~
+277 67141644 0
+D1
+~
+~
+0 -1 27790
+E
+aura protective holy~
+A powerful globe of pure holiness radiates from this spot, filling the
+immediate area with a sense of safety and protection.  Thought impossible to
+see with mortal eyes, the aura has a cool blue-white feel.
+~
+S
+#27792
+Standing on a Fiery Pentagram~
+   A half-wall of dark flame surrounds much of the east side of the rock ledge.
+In the center of this inferno an unholy pentagram has been scratched into the
+stone floor and is itself burning with an evil light.  A hint of wicked
+laughter can be heard echoing in the air from a thousand places at once,
+sometimes near and other times far away.  The very essence of dread washes the
+air and radiates from the symbol on the ground as if the very molecules in
+this place are trying to escape.  It is obvious that whoever or whatever
+marked this place has been here recently and may still be somewhere nearby.
+~
+277 67141644 0
+D3
+~
+~
+0 -1 27790
+E
+pentagram fiery unholy~
+An unholy pentagram as been etched into the stone floor here.  Flames burn from
+within the drawn lines in tribute to some evil deity.  Though hastily drawn,
+the rune emanates great power.
+~
+S
+#27793
+A Tear in the Fabric of Space and Time~
+   What is existence?  Is it being corporeal and having a definite shape?
+Perhaps it is simply being alive in some sense of the word, being represented
+in an indescribable way of some sort.  If that is the case, then this place
+defies reality in every way imaginable, and of course in ways that are not.
+Space, time, even shape have no meaning here.  A place where the infinite
+future blurs with the ancient past in a haze of colors so strange that they
+overload all five senses, plus others previously unknown.  A narrow band of
+familiarity flickers in some undefined direction for both an instant and an
+eternity, a last glimpse of what might have been reality.
+~
+277 494453388 0
+D0
+~
+~
+0 -1 0
+D1
+~
+~
+0 -1 0
+D2
+~
+~
+0 -1 0
+D3
+~
+~
+0 -1 0
+D4
+~
+~
+0 -1 0
+D5
+~
+~
+0 -1 0
+S
+#27794
+The Abyss~
+   The Abyss is a hot smoky realm of toxic vapors and acid rains.  Countless
+horrors dwell within this infinite plane of existence, many taking unimaginable
+forms impossible to maintain in another reality.  Shadows shift and bend in the
+ghostly-pale light that somehow penetrates the heavy air, while clouds of dust
+billow about as if disturbed by something just out of sight.  This is the home
+of the demons, a land spawned from the most terrible of nightmares ever
+dreamed.  Up and down, north and south, even east and west have no meaning in
+this place that knows no direction.  The landscape seems to never change and
+yet a simple step can turn the world upside down and inside out, leaving the
+wanderer forever lost.
+~
+277 220758536 8
+D0
+~
+~
+0 -1 27797
+D1
+~
+~
+0 -1 27799
+D2
+~
+~
+0 -1 27796
+D3
+~
+~
+0 -1 27795
+D4
+~
+~
+0 -1 27794
+D5
+~
+~
+0 -1 27798
+S
+#27795
+The Abyss~
+   The Abyss is a hot smoky realm of toxic vapors and acid rains.  Countless
+horrors dwell within this infinite plane of existence, many taking unimaginable
+forms impossible to maintain in another reality.  Shadows shift and bend in the
+ghostly-pale light that somehow penetrates the heavy air, while clouds of dust
+billow about as if disturbed by something just out of sight.  This is the home
+of the demons, a land spawned from the most terrible of nightmares ever
+dreamed.  Up and down, north and south, even east and west have no meaning in
+this place that knows no direction.  The landscape seems to never change and
+yet a simple step can turn the world upside down and inside out, leaving the
+wanderer forever lost.
+~
+277 69894664 8
+D0
+~
+~
+0 -1 27798
+D1
+~
+~
+0 -1 27797
+D2
+~
+~
+0 -1 27799
+D3
+~
+~
+0 -1 27795
+D4
+~
+~
+0 -1 27794
+D5
+~
+~
+0 -1 27797
+S
+#27796
+The Abyss~
+   The Abyss is a hot smoky realm of toxic vapors and acid rains.  Countless
+horrors dwell within this infinite plane of existence, many taking unimaginable
+forms impossible to maintain in another reality.  Shadows shift and bend in the
+ghostly-pale light that somehow penetrates the heavy air, while clouds of dust
+billow about as if disturbed by something just out of sight.  This is the home
+of the demons, a land spawned from the most terrible of nightmares ever
+dreamed.  Up and down, north and south, even east and west have no meaning in
+this place that knows no direction.  The landscape seems to never change and
+yet a simple step can turn the world upside down and inside out, leaving the
+wanderer forever lost.
+~
+277 86540808 8
+D0
+~
+~
+0 -1 27799
+D1
+~
+~
+0 -1 27795
+D2
+~
+~
+0 -1 27797
+D3
+~
+~
+0 -1 27796
+D4
+~
+~
+0 -1 27798
+D5
+~
+~
+0 -1 27797
+S
+#27797
+The Abyss~
+   The Abyss is a hot smoky realm of toxic vapors and acid rains.  Countless
+horrors dwell within this infinite plane of existence, many taking unimaginable
+forms impossible to maintain in another reality.  Shadows shift and bend in the
+ghostly-pale light that somehow penetrates the heavy air, while clouds of dust
+billow about as if disturbed by something just out of sight.  This is the home
+of the demons, a land spawned from the most terrible of nightmares ever
+dreamed.  Up and down, north and south, even east and west have no meaning in
+this place that knows no direction.  The landscape seems to never change and
+yet a simple step can turn the world upside down and inside out, leaving the
+wanderer forever lost.
+~
+277 69894664 8
+D0
+~
+~
+0 -1 27798
+D1
+~
+~
+0 -1 27797
+D2
+~
+~
+0 -1 27796
+D3
+~
+~
+0 -1 27795
+D4
+~
+~
+0 -1 27799
+D5
+~
+~
+0 -1 27798
+S
+#27798
+The Abyss~
+   The Abyss is a hot smoky realm of toxic vapors and acid rains.  Countless
+horrors dwell within this infinite plane of existence, many taking unimaginable
+forms impossible to maintain in another reality.  Shadows shift and bend in the
+ghostly-pale light that somehow penetrates the heavy air, while clouds of dust
+billow about as if disturbed by something just out of sight.  This is the home
+of the demons, a land spawned from the most terrible of nightmares ever
+dreamed.  Up and down, north and south, even east and west have no meaning in
+this place that knows no direction.  The landscape seems to never change and
+yet a simple step can turn the world upside down and inside out, leaving the
+wanderer forever lost.
+~
+277 86540808 8
+D0
+~
+~
+0 -1 27797
+D1
+~
+~
+0 -1 27795
+D2
+~
+~
+0 -1 27796
+D3
+~
+~
+0 -1 27799
+D4
+~
+~
+0 -1 27796
+D5
+~
+~
+0 -1 27798
+S
+#27799
+The Abyss~
+   The Abyss is a hot smoky realm of toxic vapors and acid rains.  Countless
+horrors dwell within this infinite plane of existence, many taking unimaginable
+forms impossible to maintain in another reality.  Shadows shift and bend in the
+ghostly-pale light that somehow penetrates the heavy air, while clouds of dust
+billow about as if disturbed by something just out of sight.  This is the home
+of the demons, a land spawned from the most terrible of nightmares ever
+dreamed.  Up and down, north and south, even east and west have no meaning in
+this place that knows no direction.  The landscape seems to never change and
+yet a simple step can turn the world upside down and inside out, leaving the
+wanderer forever lost.
+~
+277 204112392 8
+D0
+~
+~
+0 -1 27795
+D1
+~
+~
+0 -1 27799
+D2
+~
+~
+0 -1 27797
+D3
+~
+~
+0 -1 27798
+D4
+~
+~
+0 -1 27796
+D5
+~
+~
+0 -1 27796
+S
+#0
+$~

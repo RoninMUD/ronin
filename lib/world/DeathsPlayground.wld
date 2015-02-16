@@ -1,0 +1,2889 @@
+#21100
+The gate outside the graveyard~
+   Reflecting the moonlight is a rusty, old gate.  It is about three meters
+high and is attached to a long iron fence which seems to go on forever in both
+the eastern and western directions.  Many small mice and rats scurry along the
+cobblestone road which leads up to the fence.  A group of bats flies overhead
+and off into the distance.  It's always night here, and the moon is always
+full.  All is silent but the mysterious hooting of an owl in a dead oak tree
+just beyond the gate.  Is this truly a place of eternal rest?
+~
+211 1 2
+D0
+A rusty gate stands before you.
+~
+gate~
+1 21102 21104
+D2
+~
+~
+0 -1 10988
+E
+gate~
+A rusty old gate stands here, just oxidizing more and more as time goes on.
+~
+E
+gate~
+As you stare straight up, the gate doesn't seem to have an end.
+~
+S
+#21101
+Southwest corner of the graveyard~
+   The fence of the graveyard loops around to the side here and heads both
+north and east.  The charred-black fence radiates evil, obliterating any hope
+of escape.  From a distance a soft moaning is heard.  Your once-silent
+footsteps become audible when the wet ground beneath them sinks after stepping
+upon it.  The wind howls through the tombstones and bears a melodic, yet erie
+whistle.  A small bush rustles but just as quickly as it started, it becomes
+still.  The moon is so large here it looks close enough to almost touch.  From
+here the path leads east and north.
+~
+211 1 2
+D0
+~
+~
+0 -1 21111
+D1
+~
+~
+0 -1 21102
+E
+fence~
+The black fence here is so tall you can't even see the top.
+~
+E
+bush~
+The bush sits here silently watching your every move.
+~
+S
+#21102
+A grassy path through the graveyard~
+   The ground here is covered in about an inch of fresh blood.  The tips of
+grass blades stick up through the surface of the blood.  Pieces of stone from
+shattered tombstones lie scattered about along with many bones and internal
+organs.  The moon shines down upon the gate which blocks any attempt to escape
+to the south.  The blood on the ground seems to be flowing, yet the ground here
+is perfectly level...
+~
+211 1 2
+D0
+~
+~
+0 -1 21112
+D1
+~
+~
+0 -1 21103
+D3
+~
+~
+0 -1 21101
+E
+bones~
+Dirty, brownish rib cages and skulls lie stuck in the ground here, not very
+well buried.
+~
+E
+blood~
+The blood here washes by your feet as you stand still.
+~
+S
+#21103
+Dead end~
+   A large mound of dirt lies in the middle of the path, and even from on
+top of that it is impossible to see the top of the fence to the south.  A
+few bodies lie on the ground here, many with two fang marks in the neck.
+The stench of decay fills the air, and about half of the bodies on the
+ground are moving!  On top of the mound stands a tombstone, marked "unknown."
+~
+211 1 2
+D0
+~
+~
+0 -1 21113
+D1
+~
+~
+0 -1 21104
+D3
+~
+~
+0 -1 21102
+E
+bodies~
+Bodies lie here, some dead, some barely alive.
+~
+S
+#21104
+The entrance to the graveyard~
+   This first step into the graveyward is a chilling one.  Bones lie sprawled
+about on the ground, tombstones stand upright despite being bloody and cracked.
+The soft, blood soaked earth seems to moan and groan as if it were alive and
+could feel your every step.  There is dead silence and to the north above
+the rows of endless headstones is a dark lavender sky.  The moon is full and is
+so large that it takes up a significant portion of the sky.  An owl is hooting
+in an oak tree here while never removing you from his cold gaze.  There are
+exits north, east, west, and south from here.
+~
+211 1 2
+D0
+~
+~
+0 -1 21114
+D1
+~
+~
+0 -1 21105
+D2
+A rusty gate stands here.
+~
+gate~
+1 21102 21100
+D3
+~
+~
+0 -1 21103
+E
+bones~
+Large and small bones lie sprawled all about in this room and you can't
+help but step on a few every now and again.
+~
+E
+oak~
+An old, dead oak tree stands here, gazing at you.
+~
+E
+tree~
+An old, dead oak tree stands here, gazing at you.
+~
+E
+owl~
+An owl is perched in the oak tree here, gazing solemnly at you.
+~
+S
+#21105
+An Open Grave~
+   A hole has been dug here six feet into the ground.  Ghosts and spirits,
+among other living-dead, wander aimlessly among the headstones.  From beneath
+the ground comes a soft moaning as if it were being hurt by your steps.
+Roots tickle you as they move throughout your armor.  Unfortunately they
+don't stop.  The roots here begin to dig into your flesh and it starts to
+hurt.  These are no ordinary roots...
+~
+211 1 2
+D0
+~
+~
+0 -1 21115
+D1
+~
+~
+0 -1 21106
+D3
+~
+~
+0 -1 21104
+E
+ghosts spirits~
+Ghosts and spirits float by you, ignoring your presence.
+~
+E
+roots~
+The small roots growing up from the ground wiggle as you watch them.
+~
+S
+#21106
+An Open Grave~
+   Here lies a half-dug grave, only about three feet deep.  Bones and
+chipped armor have been carelessly strewn about.  Shattered graves and
+broken coffins are piled into a large heap off to the side.  Beetles and
+spiders move about your feet freely.  Occasionally birds passing by
+suddenly fall from the sky and hit the ground, dead.  All else seems to
+be calm and quiet until the bones begin to move...
+~
+211 1 2
+D0
+~
+~
+0 -1 21116
+D1
+~
+~
+0 -1 21107
+D3
+~
+~
+0 -1 21105
+E
+bones~
+Bones of all sorts lie here, some broken, some intact.
+~
+E
+armor~
+A few pieces of useless rusty armor have been left here.
+~
+E
+graves coffins~
+Many coffins and graves are here, broken and unusable.
+~
+S
+#21107
+Dead end~
+   Here is the end of the path.  Bits of bones lie scattered about here,
+and a couple of grassy patches color the ground.  Other than these features,
+the endless rows of tombstones, and the bright moon, the area is completely
+bare.  There is a large, black iron fence to the south, enclosing everything.
+~
+211 1 2
+D0
+~
+~
+0 -1 21117
+D1
+~
+~
+0 -1 21108
+D3
+~
+~
+0 -1 21106
+E
+fence~
+The fence here stands taller than the eye can see.
+~
+E
+bones~
+Some leg and arm bones have been left here, many broken in half.
+~
+E
+patches grass~
+A few patches of green grass grow here, one of the only living things around.
+~
+S
+#21108
+A path through the graveyard~
+   Cracked and broken headstones decorate the path while the moon illuminates
+the area.  A black fence still stops hope of any progress to the south.  The
+ground seems to moan after every step, creating an atmosphere of melancholy.
+Vultures soar by overhead, waiting for someone to fall.  Gusts of wind pass
+by, slightly breaking the silence.  This is a very sad place.
+~
+211 1 2
+D0
+~
+~
+0 -1 21118
+D1
+~
+~
+0 -1 21109
+D3
+~
+~
+0 -1 21107
+E
+headstones~
+Headstones lie in many pieces here, completely destroyed.
+~
+E
+fence~
+The huge iron fence here looks more sturdy than anything else in the graveyard.
+~
+S
+#21109
+A grassy path through the graveyard~
+   Here lies a turn in the path.  A black, iron fence surrounding the graveyard
+blocks the land south of here.  The ground here is a flat field of rock hard
+dirt.  The landscape looks as if it have never seen the likes of rain.
+A single skull lying on the ground stares up at you, grinning.
+~
+211 1 2
+D0
+~
+~
+0 -1 21119
+D1
+~
+~
+0 -1 21110
+D3
+~
+~
+0 -1 21108
+E
+fence~
+The black fence here seems go straight up forever.
+~
+E
+skull~
+It stares at you, and seems to move as you move.
+~
+S
+#21110
+Southeast corner of the graveyard~
+   This corner of the graveyard is boxed in by the fence to the east and
+the south, and a tombstone to the north.  Little critters scurry about on
+the ground while splinters of bone crumble under your feet with every step.
+Although this is the end of the graveyard, darkness reigns as far as the
+eye can see.  In fact, the only light here is your own and the faint glow of
+the moon.  The only exit is back west.
+~
+211 1 2
+D3
+~
+~
+0 -1 21109
+E
+fence~
+The fence here towers over you, a seemingly endless barrier.
+~
+S
+#21111
+A path through the tombstones~
+   Many graves line this section of dirt and dead grass.  Most of them are
+rather small, with faded inscriptions.  Many of them have been scarred by
+claw and weapon marks, signs of the many struggles that have taken place here.
+A brisk wind passes you by, kicking up loose dirt as it leaves.  The fence to
+the west towers over you, trapping everything inside.
+~
+211 9 2
+D0
+~
+~
+0 -1 21121
+D1
+~
+~
+0 -1 21112
+D2
+~
+~
+0 -1 21101
+E
+graves~
+Dozens of small graves line the sides of the path here.
+~
+E
+fence~
+The fence seems to go on forever as you gaze at it.
+~
+S
+#21112
+Dead end~
+   The path stops here.  Tombstones lie to the north, west, and east, blocking
+the path.  Hideous screams pierce the otherwise silent air here.  A few rodents
+climb upon the tombstones and the rubble left in this room.  The moon shines
+very brightly in the sky, warming your eyes but leaving the damp air to chill
+the rest of your body.  Other than the few mice and rats, no plant life or
+signs of animal habitat are here.
+~
+211 9 2
+D0
+~
+~
+0 -1 21122
+D1
+~
+~
+0 -1 21113
+D2
+~
+~
+0 -1 21102
+D3
+~
+~
+0 -1 21111
+S
+#21113
+A path through the graveyard~
+   Here the path bends to the north.  The ground here is rough with rocks
+and dead trees. The ground has been dug up and everything seems to be in a
+state of chaos.  Bats flutter about as the moon illuminates everything around
+you, yet the area still appears to be very dark.  Completely intact skeletons
+rest on the ground.  As you walk, the skulls of the skeletons seem to move
+with you, almost as if watching you...
+~
+211 1 2
+D0
+~
+~
+0 -1 21123
+D1
+~
+~
+0 -1 21114
+D2
+~
+~
+0 -1 21103
+D3
+~
+~
+0 -1 21112
+E
+skeletons skulls~
+These skeletons are interested in you.  Perhaps they're not dead afterall...
+~
+E
+rocks trees~
+Rocks and trees of many sizes make for a round landscape.
+~
+S
+#21114
+A river of blood~
+   Upon entering the graveyard, the most notable thing is the clear view of
+the moon.  Its beauty radiates with bastard light.  Its bright glow makes it
+seem as if it be smiling.  It creates the silhouette of bats as they fly
+across your line of sight.  The ground here is covered in blood and innards,
+and it's impossible not to step on some every now and again.  Moans of sorrow
+come from every direction.  Headstones cover the vast landscape as far as the
+eye can see, which seems to be forever.
+~
+211 1 7
+D0
+~
+~
+0 -1 21124
+D1
+~
+~
+0 -1 21115
+D2
+~
+~
+0 -1 21104
+D3
+~
+~
+0 -1 21113
+E
+blood innards~
+Blood, intestines, stomachs, and other insides have been left here.
+~
+E
+headstones~
+Headstones stand here, some broken, some still intact.
+~
+S
+#21115
+A path through the graveyard~
+   Bits of broken weapons and armor have been deserted here, rusting away.  A
+strange mist hanging in the air engulfs the area around you, making it very
+difficult to see much of anything.  The smell here is unbearable; it reeks
+of raw sewage and rotting flesh.  The ground crunches with your every step,
+occasionally emitting a squish.  There does not seem to be an end to the
+unusual mist, it would probably be best just to pick one direction and to
+keep heading that way.
+~
+211 1 2
+D0
+~
+~
+0 -1 21125
+D1
+~
+~
+0 -1 21116
+D2
+~
+~
+0 -1 21105
+D3
+~
+~
+0 -1 21114
+E
+weapons armor~
+A few swords and breastplates have been left here to rust.
+~
+S
+#21116
+A patch of dirt~
+   In the middle of the area there is a large patch of dirt.  This is one of
+the only parts of the graveyard not soaked in blood.  Small tufts of grass
+have sprouted up around the area, adding a touch of color to the scene.
+Heavy clouds hang overhead, passing bolts of lightning from one to another.
+Although the clouds glow purple and threaten storm, it is obvious this place
+has not seen much rain, due to the lack of life.  There is a crackling noise
+to the south, followed by maniacal laughter.
+~
+211 1 2
+D0
+~
+~
+0 -1 21126
+D1
+~
+~
+0 -1 21117
+D2
+~
+~
+0 -1 21106
+D3
+~
+~
+0 -1 21115
+E
+tufts grass~
+Tiny patches of green grass grow here.
+~
+S
+#21117
+A path through the graveyard~
+   This part of the path is dead quiet.  Perhaps that's because everything
+here is dead.  A blackened, leafless tree hangs overhead here, just barely
+standing with its dead roots in the ground.  Unidentifiable, half-eaten
+bodies have been left here to rot.  The tombstones here show signs of age:
+the inscriptions aren't clear due to weathering and most of them have been
+broken in two.  Claw marks cover the ground here.  This looks like a feeding
+ground...
+~
+211 1 2
+D0
+~
+~
+0 -1 21127
+D1
+~
+~
+0 -1 21118
+D2
+~
+~
+0 -1 21107
+D3
+~
+~
+0 -1 21116
+E
+tree~
+This black, dead tree looks very old.
+~
+E
+bodies~
+Green, decaying bodies decorate the scene here.
+~
+S
+#21118
+Dead end~
+   Surrounding this area are tombstones to the east, south, and west.  There
+is only one path that leads out of here, and that is back north.  Dirt covers
+the ground here, and there are traces of blood on each tombstone.  Small
+splinters of bone shine brightly, reflecting the moonlight.  A low rumbling
+noise emerges from the distance and a swarm of bats collects and escapes from
+the direction of that rumble.
+~
+211 1 2
+D0
+~
+~
+0 -1 21128
+D1
+~
+~
+0 -1 21119
+D2
+~
+~
+0 -1 21108
+D3
+~
+~
+0 -1 21117
+S
+#21119
+A grassy path through the graveyard~
+   There is one distinguishable aspect of this part of the graveyard, and
+that is that it reeks far worse than the rest.  The stench of decay provokes
+thoughts of rotting flesh as it fills the air.  Small mushrooms grow near
+the trunk of a dead and charred tree, adding some contrast to the otherwise
+darkened path.  The grass on this part of the path is very wet, glittering
+in the moonlight as a brisk zephyr approaches from the west.
+~
+211 1 2
+D0
+~
+~
+0 -1 21129
+D2
+~
+~
+0 -1 21109
+D3
+~
+~
+0 -1 21118
+E
+grass~
+The grass here is brown and dead.
+~
+E
+mushrooms~
+These mushrooms have red and white spotted tops.
+~
+S
+#21120
+Dead end~
+   Here lies a dead end in the trail.  There is nothing special here, no blood,
+no bones, not even any bats on the ceiling of the cave.  Just a pile of dirt
+and the cave walls wait here.  Blood-curdling screams and howls echo through
+the cave.  Not much action can be found here.  The cave walls enclose the
+whole room except for the passage to the north.
+~
+211 9 0
+D0
+~
+~
+0 -1 21130
+S
+#21121
+A grassy path~
+   This grassy path is really more of a path of dead weeds.  A fence to the
+west blocks any progression in that direction.  Although it looks dreary on
+the outside of the graveyard, it looks rather inviting compared to inside
+this fence.  On the top of the iron black fence is perched a vulture, waiting
+for its next victim.  Here, no one needs to work for food, there is always
+fresh meat lying about.
+~
+211 1 2
+D0
+~
+~
+0 -1 21131
+D1
+~
+~
+0 -1 21122
+D2
+~
+~
+0 -1 21111
+E
+fence~
+The huge, black iron fence stretches on forever.
+~
+S
+#21122
+A path through the graveyard~
+   Small pebbles have been spread everywhere here.  Larger rocks seem to form
+a path through the graves.  Little creatures scurry all about, from this rock
+to that, keeping a close eye on you.  Other than the noises that these vermin
+make, the path is quiet.  Your walking disrupts the sound little, for although
+you walk on gravel, the ground beneath this gravel is mud.  The pebbles simply
+sink as you walk.  From here you may head east or west.
+~
+211 1 2
+D0
+~
+~
+0 -1 21132
+D1
+~
+~
+0 -1 21123
+D2
+~
+~
+0 -1 21112
+D3
+~
+~
+0 -1 21121
+E
+rocks pebbles~
+Small and large grey stones have been placed all around the area.
+~
+S
+#21123
+A path through the graveyard~
+   Here the path bends back west.  An odd smell fills the air.  A heap of
+tombstones is piled up on the ground in the middle of the area.  They seem
+to have been dragged out and just dumped.  Small insects crawl all over the
+ground.  The moon shines on everything here: the pile of rubble, the insects,
+and the erect tombstones, making visible the names inscribed upon them.
+~
+211 1 2
+D0
+~
+~
+0 -1 21133
+D1
+~
+~
+0 -1 21124
+D2
+~
+~
+0 -1 21113
+D3
+~
+~
+0 -1 21122
+E
+heap tombstones~
+A pile of cracked and crumbling tombstones has been left here.
+~
+S
+#21124
+A river of blood~
+   This path has been freshly sprayed with blood.  Something must have died
+very recently here, because there is blood and gore still dripping from the
+tombstones.  There is still dust in the air from a struggle, and still powder
+in the grooves of headstones from where talons have scratched them.  All this
+indicates a recent struggle and yet... there's no body.
+~
+211 1 7
+D0
+~
+~
+0 -1 21134
+D1
+~
+~
+0 -1 21125
+D2
+~
+~
+0 -1 21114
+D3
+~
+~
+0 -1 21123
+S
+#21125
+A charred hill~
+   It is very hard to breathe here.  Ashes from a recent fire fill the air.
+Any wildlife which may have resided here is gone, it's just a small hill of
+black dirt now.  There may be bats or vultures flying overhead; you can't tell
+because the cloud of ashes is so dense.  Something must have kicked up all
+these ashes.  In fact, there are footprints visible in the dirt.  These
+footprints are far too large to be human, though.
+~
+211 1 4
+D0
+~
+~
+0 -1 21135
+D1
+~
+~
+0 -1 21126
+D2
+~
+~
+0 -1 21115
+D3
+~
+~
+0 -1 21124
+E
+footprints~
+Large, three-toed footprints have been made in the soot here.
+~
+S
+#21126
+A pile of bones~
+   To one side of the area here, there is a small hill covered in dead grass.
+On the other side there is a large hill of bones.  There are all kinds of bones
+here: ribs, pelvis bones, skulls, and more.  Some look as if they've been here
+for thousands of years, some look as if they've been freshly torn from a
+victim.  There is a bad smell coming from the middle of the pile.  Flies buzz
+all around here, and ants crawl all over the ground.  Perhaps it'd be best to
+leave before the hoard of insects detects you.
+~
+211 1 2
+D0
+~
+~
+0 -1 21136
+D1
+~
+~
+0 -1 21127
+D2
+~
+~
+0 -1 21116
+D3
+~
+~
+0 -1 21125
+E
+bones pile~
+This pile of bones stands about five feet tall.
+~
+S
+#21127
+Dead end~
+   A small room of tombstones has been created here.  Although there is no
+roof, graves block the way to the north, west, and east.  The only way to
+leave is to go back south.  The tombstones have been scratched so much they
+are unreadable.  Small pebbles have been scattered about here, creating
+a speckled pattern on the ground.
+~
+211 1 2
+D0
+~
+~
+0 -1 21137
+D1
+~
+~
+0 -1 21128
+D2
+~
+~
+0 -1 21117
+D3
+~
+~
+0 -1 21126
+S
+#21128
+A grassy path~
+   The grass on this path is nice and plush.  It's refreshing to see
+some color in this otherwise dark cemetary.  The moon's shine is
+incredible, illuminating everything around you.  Critters scutter all
+over the ground here, while bats fly above you.  As odd as it may seem,
+this part of the graveyard is one that actually doesn't look at all
+dreary.  In fact, it's almost enlightening.
+~
+211 1 2
+D0
+~
+~
+0 -1 21138
+D1
+~
+~
+0 -1 21129
+D2
+~
+~
+0 -1 21118
+D3
+~
+~
+0 -1 21127
+E
+grass~
+The green grass gently bends in the direction the wind is traveling.
+~
+S
+#21129
+A patch of burnt grass~
+   There are a few blades of dead grass here, but most of the trail is
+charred dirt.  The tombstones all around here have been blackened by the
+flames that scorched the path.  Except for a few insects that crawl in
+the dirt, there is no life here.  The sky is pitch black and not even
+the radiant moon seems to put much shine on this place.
+~
+211 1 2
+D0
+~
+~
+0 -1 21139
+D2
+~
+~
+0 -1 21119
+D3
+~
+~
+0 -1 21128
+S
+#21130
+Deeper inside the cave~
+   Here the cavern walls are very sharp.  Bats hang overhead, and bat guano
+covers the floor so thickly that walking on it causes your feet to stick,
+making a noise after every step.  The cave smells very badly.  The smell is
+overpowering.  Just as everything is calm, a shriek enters the room from a
+distance, echoing through the cave.
+~
+211 9 0
+D0
+~
+~
+0 -1 21140
+D2
+~
+~
+0 -1 21120
+S
+#21131
+Dead end~
+   To the west stands an enormous iron fence.  Charred from many fires and
+scratched by many claws, it looms over the graveyard, indestructable.  Graves
+to the north and south of here block the path in those directions.  The only
+direction exiting the area is back east.
+~
+211 1 2
+D0
+~
+~
+0 -1 21141
+D1
+~
+~
+0 -1 21132
+D2
+~
+~
+0 -1 21121
+E
+fence~
+An endless iron fence stands erect to the west, trapping you in here.
+~
+S
+#21132
+Bloody grass~
+   Here the blood is about six inches deep.  As you trudge along, creatures
+slither unseen through this swamp of gore, brushing up against your ankles
+and then quickly scurrying away.  No plants, dead or alive, can be seen from
+here.  No bats or vultures fly overhead, the moon is the only thing that
+is visible among this vast pool.  The only sound is the splashing of blood
+as you walk.
+~
+211 1 2
+D0
+~
+~
+0 -1 21142
+D1
+~
+~
+0 -1 21133
+D2
+~
+~
+0 -1 21122
+D3
+~
+~
+0 -1 21131
+E
+blood~
+You can see the reflection of the moon in the pool of blood here.
+~
+S
+#21133
+A path of grass~
+   Most of the grass on this path is brown and dead.  However, the west side
+of the path is covered in blood.  Gore seems to be flowing in from the west,
+coming closer and closer to your feet as you stand here.  A breeze causes the
+grass to bend slightly, and ripples to occur in the pool of blood.  Other than
+the tombstone blocking the path to the south, you are free to move in any
+direction.
+~
+211 1 2
+D0
+~
+~
+0 -1 21143
+D1
+~
+~
+0 -1 21134
+D2
+~
+~
+0 -1 21123
+D3
+~
+~
+0 -1 21132
+E
+pool blood~
+The pool of blood is about 5 feet in diameter.  It ripples with the wind.
+~
+S
+#21134
+A river of blood~
+   The gore in this section of the path isn't as bad as it has been up until
+now.  Only light trails of blood stain the ground.  For the most part, the
+dirt here is dry.  Spiders and insects crawl around here, avoiding your
+footsteps.  Rats also hide in the brush on the sides of the trails, gazing
+intently at you.  Other than the brush and a few stones, this terrain is
+mostly barren.
+~
+211 1 7
+D0
+~
+~
+0 -1 21144
+D1
+~
+~
+0 -1 21135
+D2
+~
+~
+0 -1 21124
+D3
+~
+~
+0 -1 21133
+E
+stones brush~
+A few small, dead bushes and some small, round pebbles are here.
+~
+S
+#21135
+A river of blood~
+   The howl of a wolf echos through the cemetary as you enter this section of
+the path.  The blood on the path flows like a river.  As it runs, this small
+stream of blood carries fragments of bones and appendages with it.  Small,
+dead bushes line the sides of the path, and a large tree juts up from the
+center of it.  Large, fresh footprints have been imprinted by the bushes.
+Something was here very recently, something not human.  And it may be coming
+back...
+~
+211 1 7
+D0
+~
+~
+0 -1 21145
+D1
+~
+~
+0 -1 21136
+D2
+~
+~
+0 -1 21125
+D3
+~
+~
+0 -1 21134
+E
+bushes~
+The bushes here are all dead, branches sticking out in all directions, leafless.
+~
+E
+tree~
+A large tree grows in the middle of the river here.
+~
+E
+footprints prints~
+Footprints have been made here, not by anything human though.
+~
+S
+#21136
+A river of blood~
+   Continued here is the trail of blood and guts.  Flesh torn from God knows
+what has been scattered here among limbs and shreds of cloth.  Pieces of armor
+have been left on the ground, some with torsos still inside.  Screams can be
+heard from every direction as vultures rush to the scene.  It is impossible
+to walk silently here, for the blood-soaked dirt squishes with every step.
+This is certainly not the most quiet part of the graveyard.
+~
+211 1 7
+D0
+~
+~
+0 -1 21146
+D1
+~
+~
+0 -1 21137
+D2
+~
+~
+0 -1 21126
+D3
+~
+~
+0 -1 21135
+E
+armor~
+Bits and pieces of breastplates and bracers have been junked here.
+~
+S
+#21137
+A mound of grass~
+   In the middle of the room stands a small hill.  From the top of the hill a
+magnificent view of the graveyard can be seen.  A large tombstone blocks travel
+to the south.  A gentle breeze floats past you, rattling the leafless limbs
+of a dead tree on one side of the hill.  A hole has been dug at the bottom of
+the eastern side of the hill, just large enough to fit a body.  The hoot of an
+owl breaks the silence.
+~
+211 1 4
+D0
+~
+~
+0 -1 21147
+D1
+~
+~
+0 -1 21138
+D2
+~
+~
+0 -1 21127
+D3
+~
+~
+0 -1 21136
+E
+tree limbs~
+The limbs of the dead tree seem to be reaching out at you, asking for help.
+~
+E
+hole~
+A hole about six feet deep, seven feet tall, and five feet wide has been dug here.
+~
+S
+#21138
+A path of grass~
+   There is a fresh patch of green grass here in the shape of a human.
+Other than that patch, the earth around you has been dug up, creating
+a bumpy landscape.  Mice and rats scutter around here, looking for food.
+By the looks of it, they aren't finding much.  The tombstones here have
+been stained red with blood.  A large tombstone to the north blocks the
+path in that direction.
+~
+211 1 2
+D0
+~
+~
+0 -1 21148
+D1
+~
+~
+0 -1 21139
+D2
+~
+~
+0 -1 21128
+D3
+~
+~
+0 -1 21137
+S
+#21139
+A path of grass~
+   The grass here is scarce, but there are a few patches here and there.
+A light trail of blood has been left here, evidence of a minor wound.
+Small shards of bone lie in a few places here.  Bats fly overhead, creating
+silhouettes with the moon.  Flies buzz around a fresh corpse here.
+~
+211 1 2
+D0
+~
+~
+0 -1 21149
+D2
+~
+~
+0 -1 21129
+D3
+~
+~
+0 -1 21138
+E
+corpse~
+A decaying, half-eaten corpse rots here.
+~
+S
+#21140
+A pile of bones~
+   A large pile of bones has been made here in the cave.  Ants crawl
+all over it, quickly devouring any food they can find.  Moans echo
+throughout the cave as you walk, only to cease when you stop walking.
+Mischievous laughter can be heard very far off, probably somewhere
+outside of the cave.  Claw marks cover the walls from top to bottom,
+a sign of a recent struggle.
+~
+211 1 2
+D0
+~
+~
+0 -1 21150
+D2
+~
+~
+0 -1 21130
+E
+pile bones~
+Many bones of have been piled up here, some with meat still attached.
+~
+S
+#21141
+Dead end~
+   Tombs block the directions north and south of here.  Towering over you to
+the west is a very large iron fence.  Nothing escapes to the west, the fence
+stands indifferent to all.  The only direction of possible escape is to the
+east.
+~
+211 1 2
+D0
+~
+~
+0 -1 21151
+D1
+~
+~
+0 -1 21142
+D2
+~
+~
+0 -1 21131
+E
+fence~
+The enormous, iron fence watches your every move.
+~
+S
+#21142
+A burnt path~
+   The ground here has been very recently burned.  Sticks and small patches of
+grass are still smouldering, basking in the smoke-filled air.  It is
+impossible to see more than three feet ahead of your light source because of
+the thick, black air.  You can't help but cough as you walk through this
+black patch.  Although the smoke here is so thick, it's still possible to
+see the moon very clearly in the sky.
+~
+211 1 2
+D0
+~
+~
+0 -1 21152
+D1
+~
+~
+0 -1 21143
+D2
+~
+~
+0 -1 21132
+D3
+~
+~
+0 -1 21141
+S
+#21143
+Dead end~
+   There are no exits here except for south.  Headstones block the north, east,
+and west directions.  Most of the tombstones here are very old, many crumbling
+and falling apart.  Many of the tombstones have been slightly spattered with
+blood.
+~
+211 1 2
+D0
+~
+~
+0 -1 21153
+D1
+~
+~
+0 -1 21144
+D2
+~
+~
+0 -1 21133
+D3
+~
+~
+0 -1 21142
+E
+headstones~
+The headstones here are old and cracked.
+~
+S
+#21144
+Dead end~
+   Here lies another dead end in the path.  The only direction is the way from
+which the path entered this room.  Tombstones block the directions south,
+west, and east.  On the ground is a headstone and just behind it a rectangular
+hole, fit for a coffin.
+~
+211 1 2
+D0
+~
+~
+0 -1 21154
+D1
+~
+~
+0 -1 21145
+D2
+~
+~
+0 -1 21134
+D3
+~
+~
+0 -1 21143
+E
+hole~
+The hole is about six feet deep, seven feet tall, and five feet wide.
+~
+S
+#21145
+Dead end~
+   This dead end is more of an indentation in the line of tombstones.  It's not
+very big at all, just some place in the row where someone forgot to place
+headstones.  Small rodents walk about calmly, chewing on various objects.
+The only direction to go is back north.
+~
+211 1 2
+D0
+~
+~
+0 -1 21155
+D1
+~
+~
+0 -1 21146
+D2
+~
+~
+0 -1 21135
+D3
+~
+~
+0 -1 21144
+S
+#21146
+A river of blood~
+   Bones line the side of the path here, containing all the gore inside of
+the trail.  The grass here has been trampled and painted red.  Air bubbles
+appear and then pop in the small stream of blood.  The moon shines brightly
+overhead as you walk.  Bats fly back and forth, collecting their dinner as you
+attract insects.  There are tombstones to the west and east blocking any
+hope of travel in those directions.
+~
+211 1 7
+D0
+~
+~
+0 -1 21156
+D1
+~
+~
+0 -1 21147
+D2
+~
+~
+0 -1 21136
+D3
+~
+~
+0 -1 21145
+E
+bones~
+Femur bones line the sides of the path here.
+~
+S
+#21147
+A path of stone~
+   The path here takes a different course.  Instead of dirt, gravel, and grass,
+the path is made of stone.  The scene hasn't changed much though.  Tombstones
+have been placed on their sides here, carelessly abandoned.  The stone on the
+path is stained with blood and scratches from many differntly sized claws and
+talons scar it.  Tombstones block the path to the west.
+~
+211 1 2
+D0
+~
+~
+0 -1 21157
+D1
+~
+~
+0 -1 21148
+D2
+~
+~
+0 -1 21137
+D3
+~
+~
+0 -1 21146
+S
+#21148
+A path of stone~
+   Continuing on the path of stone is a nice change from the blood-soaked
+earth.  This is the only place in the graveyard which looks somewhat decent.
+There is not as much gore here, and the firm stone that creates the path
+makes for a feeling of security.  Grave stones have still been marked by
+claws, and the road has still been tainted with spilled blood, but for some
+reason it does not seem as horrific.
+~
+211 1 2
+D0
+~
+~
+0 -1 21158
+D1
+~
+~
+0 -1 21149
+D2
+~
+~
+0 -1 21139
+D3
+~
+~
+0 -1 21147
+S
+#21149
+A path of stone~
+   The stones which once made the path here have been shattered and their
+shards kicked all about.  Pieces of cobblestone lie scattered about here in
+various positions, creating a beautiful array of chaos.  As the wind picks up,
+some of these pieces are carried to new positions, creating a new chaotic mess.
+Barely alive, small bushes grow from where the stone has been completely
+uprooted.  Everything seems to cease as the howl of some creature in the
+distance enters the room.
+~
+211 1 2
+D0
+~
+~
+0 -1 21159
+D2
+~
+~
+0 -1 21139
+D3
+~
+~
+0 -1 21148
+E
+bushes~
+The bushes here are almost all dead.
+A few still have some brown leaves on them.
+~
+E
+shards~
+The shards here have many different shapes, some sharp, some rounded and dull.
+~
+S
+#21150
+Deeper into the cave~
+   This section of the cave is really damp.  Water drips from the ceiling and
+collects in a small pool on the west side.  The pool is so clear that you can
+see your reflection in it.  Bats hang upside down overhead, sleeping.
+Occationally one will quietly fly in or out, being careful not to wake the
+others.  The eastern wall has a large crack in the side of it, allowing hot
+air to rush in.
+~
+211 9 0
+D0
+~
+~
+0 -1 21160
+D2
+~
+~
+0 -1 21140
+E
+crack~
+The crack is only about three inches wide, but runs almost to the cave's ceiling.
+~
+S
+#21151
+Dead end~
+   Here the path comes to an end.  The fence to the west looks almighty,
+towering over you as you gaze at its fortitude.  Graves block the path to the
+east and south.  Bats fly overhead, feeding on small insects.  Small insects
+crawl on the ground, feeding on dead animals.  As you're about to leave, a
+skull catches your eye.  It's almost as if it be grinning at you.
+~
+211 1 2
+D0
+~
+~
+0 -1 21161
+D1
+~
+~
+0 -1 21152
+D2
+~
+~
+0 -1 21141
+E
+skull~
+A human skull lies here, staring back at you.
+~
+E
+fence~
+The tall fence here stops the path from continuing on to the west.
+~
+S
+#21152
+A burnt path~
+   The path is badly burned here.  Although the fire doesn't seem to have been
+too recent, the entire area has been seared, allowing nothing to grow back.  
+There is no plant life here, no wood, just a vast landscape of charred
+headstones, rocks, and dirt.  A few bones lie scattered about, also burned.
+The moon seems utterly powerful, unscathed by any of this scalding.
+~
+211 1 2
+D0
+~
+~
+0 -1 21162
+D1
+~
+~
+0 -1 21153
+D2
+~
+~
+0 -1 21142
+D3
+~
+~
+0 -1 21151
+S
+#21153
+A liquid path~
+   Here the path ends in a pool of blood.  Deeper than the rest of the path,
+this end gets up to about a foot and a half deep in some places.  The ground
+beneath your feet sinks as you walk, it almost feels like quicksand.  On the
+western side, there is an end to the pool where a small hill starts.  A very
+large tree stands on the hill, and a very large tombstone stands behind that.
+A grave blocks the path to the south.
+~
+211 0 7
+D0
+~
+~
+0 -1 21163
+D1
+~
+~
+0 -1 21154
+D2
+~
+~
+0 -1 21143
+D3
+~
+~
+0 -1 21152
+E
+pool~
+The pool is about ten feet in diameter.
+~
+E
+tree~
+The tree stands about sixty feet tall and has many branches which stick out.
+~
+S
+#21154
+A liquid path~
+   The deep path of blood continues here.  Small, dead animals float in the
+river here.  The tops of dead plants stick out from the blood as if grasping
+for something.  A large tombstone on the northern embankment blocks the path
+in that direction.  The hill to the north is covered in mud and small pebbles.
+Short blades of dead grass line the hill, but never had any chance to survive.
+~
+211 1 7
+D0
+~
+~
+0 -1 21164
+D1
+~
+~
+0 -1 21155
+D2
+~
+~
+0 -1 21144
+D3
+~
+~
+0 -1 21153
+S
+#21155
+A liquid path~
+   The path here is covered in blood.  A few inches deep, the blood sloshes as
+you walk through it.  Ripples are created as a light shower picks up, but it
+quickly stops.  Small hills stand on the east and west sides of the path, and
+a very large tombstone blocks the direction to the west.  Dead branches have
+been left on the sides of these hills, but their source isn't clear as there
+are no trees here.
+~
+211 1 7
+D0
+~
+~
+0 -1 21165
+D1
+~
+~
+0 -1 21156
+D2
+~
+~
+0 -1 21145
+D3
+~
+~
+0 -1 21154
+E
+branches~
+Small branches litter the area.
+~
+S
+#21156
+A river of blood~
+   Here the path has been decorated by limbs and other various body parts.
+Heads hang on chains from the tombstones, while insides have been spread all
+across the path.  Everything in this room is some shade of red.  Skin and nails
+have been left behind for small animals to eat.  The moon shines on everything,
+warming everything with its glow.  A cold gust of wind picks up as you stand
+here, sending a shiver down your spine.
+~
+211 1 7
+D0
+~
+~
+0 -1 21166
+D1
+~
+~
+0 -1 21157
+D2
+~
+~
+0 -1 21146
+D3
+~
+~
+0 -1 21155
+E
+limbs heads chains~
+Limbs and heads create a terrifying scene.
+~
+S
+#21157
+Dead end~
+   Here is a room surrounded by tombstones on all sides.  The only direction
+with an exit is back south.  Open coffins with rotting bodies have been
+placed here, inviting all sorts of animals and fungi to collect.  A few
+rusty pieces of jewelry have been placed in the coffins, but it looks as if
+all the valuable stuff has already been looted.
+~
+211 1 2
+D0
+~
+~
+0 -1 21167
+D1
+~
+~
+0 -1 21158
+D2
+~
+~
+0 -1 21147
+D3
+~
+~
+0 -1 21156
+E
+coffins~
+These broken boxes hosting bodies look as if they are ready to fall apart.
+~
+E
+jewelry~
+Rusty necklaces and rings lie in the coffins here, worthless.
+~
+S
+#21158
+A path of stone~
+   The path of stones suddenly becomes a bit dirty here.  Mud covers the
+headstones that line the sides of the path.  Rats run around with nothing
+apparent in mind.  Blood stains the ground and many of the stones have been
+smashed.  An erie aroma hangs in this room, perhaps it's the smell of death.
+A few bones have been scattered across the walkway, most of them half-buried
+and the others, shattered.
+~
+211 1 2
+D0
+~
+~
+0 -1 21168
+D1
+~
+~
+0 -1 21159
+D2
+~
+~
+0 -1 21148
+D3
+~
+~
+0 -1 21157
+E
+headstones~
+Crumbling and unreadable, headstones create a path here.
+~
+S
+#21159
+A path of stone~
+   Dragging itself across the stones here is half of a body, begging to be
+slain.  Large blocks of stone have been placed among the graves on the sides
+of the path.  This pattern of tombstone, boulder, tombstone, boulder is rather
+interesting.  Vermin scurry around here, looking for a meal.  Vultures circle
+overhead, waiting for dinner.
+~
+211 1 2
+D0
+~
+~
+0 -1 21169
+D2
+~
+~
+0 -1 21149
+D3
+~
+~
+0 -1 21158
+E
+body~
+A body lies here, freshly torn in half, dripping blood.
+~
+E
+blocks~
+Large cubes of rock have been used as path indicators.
+~
+S
+#21160
+Entrance to a cave~
+   The entrace to the cave looks like a huge mouth.  Stalactites and
+stalagmites grow from the roof and floor of the mouth, creating an image
+of sharp teeth.  The path into the cave is elevated slightly, creating a
+tongue.  Finally, two alcoves above the mouth contain torches, looking like
+two blazing eyes.  As you gaze at the cave, it seems to smile.
+~
+211 9 0
+D0
+~
+~
+0 -1 21170
+D2
+~
+~
+0 -1 21150
+E
+stalactites stalagmites~
+Spikes grow from the roof and floor of the cave, creating rows of teeth.
+~
+S
+#21161
+A river of blood~
+   The river of blood has finally come to an end.  The continuous gore on the
+previous path tapers off about halfway through this area.  South of where
+the gore ends is a small field full of little headstones.  Birds of prey are
+perched on the few branches of dead trees that stand here.  The moon floats
+over the field, illuminating everything in sight.
+~
+211 1 7
+D0
+~
+~
+0 -1 21171
+D1
+~
+~
+0 -1 21162
+D2
+~
+~
+0 -1 21151
+E
+trees~
+A few dead trees are huddles together here.
+~
+S
+#21162
+A burnt path~
+   This section of the path still has some shrubbery, although it's all dead.
+The fire that scorched the path didn't burn this part of it too much.  The
+dirt on the trail is still black, but not everything has been incinerated
+as it has been on the rest of the path.  A small, furry animal darts around
+the landscape.  A gentle breeze enters from the east.
+~
+211 1 2
+D0
+~
+~
+0 -1 21172
+D1
+~
+~
+0 -1 21163
+D2
+~
+~
+0 -1 21152
+D3
+~
+~
+0 -1 21161
+E
+shrubbery~
+Small, dead plants once grew here, but now they're just branches.
+~
+S
+#21163
+Dead end~
+   The path ends abruptly here.  Tombstones block the path to the north, west,
+and east.  The ground here has been uprooted, and many tiny bones stick out
+of the loose dirt.  Small patches of mud surround the area, inhabiting small
+salamanders.
+~
+211 1 2
+D0
+~
+~
+0 -1 21173
+D1
+~
+~
+0 -1 21164
+D2
+~
+~
+0 -1 21153
+D3
+~
+~
+0 -1 21162
+E
+bones~
+Tiny shards of bones stick out of the ground here.
+~
+S
+#21164
+A liquid path~
+   This section of the graveyard is covered in gore.  The river of blood in the
+middle of this area is a few inches deep.  Body parts and dead carcasses float
+around in it.  Tombstones block the path to the west and south.  The stench
+here is awful.  Vultures fly overhead, not even daring to come down.  From here
+the path leads east or back north.
+~
+211 1 7
+D0
+~
+~
+0 -1 21174
+D1
+~
+~
+0 -1 21165
+D2
+~
+~
+0 -1 21154
+D3
+~
+~
+0 -1 21163
+E
+carcasses parts~
+Body parts have just been left here to rot.
+~
+S
+#21165
+A liquid path~
+   The blood here is deep, reaching almost a foot in some places.  Mud creating
+the bed of the river of blood here clings to your feet, making progress very
+difficult.  Insides float down the river.  A tombstone to the north and one
+to the east stop you from going in those directions.  No plants are visible
+here, but some are evident below the surface of blood because they brush up
+against your legs.
+~
+211 1 7
+D0
+~
+~
+0 -1 21175
+D1
+~
+~
+0 -1 21166
+D2
+~
+~
+0 -1 21155
+D3
+~
+~
+0 -1 21164
+S
+#21166
+A river of blood~
+   This section of the path smells really bad.  The odor is so terrible it
+almost makes breathing impossible.  The river of blood is not too terribly
+deep, but bodies lie split open all over the path.  There must be hundreds
+of them.  Heads torn from bodies, arms and legs removed, and torsos torn
+in half decorate the embankments of the river.  Shreds of cloth which must
+have been clothes at one time float by in the river.  This place is truly
+wretched.
+~
+211 1 7
+D0
+~
+~
+0 -1 21176
+D1
+~
+~
+0 -1 21167
+D2
+~
+~
+0 -1 21156
+D3
+~
+~
+0 -1 21165
+E
+shreds cloth~
+Small pieces of cloth float by you, soaked in blood.
+~
+E
+bodies heads arms legs torsos~
+Many different body parts float by in the river.
+~
+S
+#21167
+Dead end~
+   Grave stones block the directions north, west, and south of here.  Small
+headstones carved from marble lie here, withered so much the inscriptions
+aren't even visible anymore.  A few bats dart back and forth, from here to
+there, catching food.  The moon beams overhead, engulfing all in its glow.
+~
+211 1 2
+D0
+~
+~
+0 -1 21177
+D1
+~
+~
+0 -1 21168
+D2
+~
+~
+0 -1 21157
+D3
+~
+~
+0 -1 21166
+S
+#21168
+A path of stone~
+   The stones on this path are not as stained as the ones before them, but
+they are certainly far from clean.  Dirt has been spilled across one end of
+the path, and tombstones have been dumped on one another.  Shattered pieces
+of glass can be seen in the dirt and on the pile of tombstones.  A large
+grave blocks the direction east.
+~
+211 1 2
+D0
+~
+~
+0 -1 21178
+D1
+~
+~
+0 -1 21169
+D2
+~
+~
+0 -1 21158
+D3
+~
+~
+0 -1 21167
+E
+glass~
+Small shards of glass reflect the moonlight here.
+~
+S
+#21169
+Dead end~
+  You have come to a dead end.  Tombs block the directions north, south, and
+west.  Large boulders have been deposited here, and many pieces of debris
+lie scattered about here.  A few dead bodies lie here and there, feasted
+upon by vultures.
+~
+211 1 2
+D0
+~
+~
+0 -1 21179
+D1
+~
+~
+0 -1 21170
+D2
+~
+~
+0 -1 21159
+D3
+~
+~
+0 -1 21168
+E
+bodies~
+Half-eaten bodies lie all over the area.
+~
+E
+driftwood~
+The debris has been here for a while, rotting.
+~
+E
+boulders~
+Large blocks of rock dominate the area.
+~
+S
+#21170
+A dark path~
+   This path does not have much light.  Although the moon is crystal clear, it
+does not seem to shed light on anything here.  Tombstones lie crumbled on the
+ground, withered by time.  In the southwest, you can see large amounts of smoke
+rising into the air.  All of a sudden, you hear the cry of a wolf, yearning
+for blood.  A large cave mouth is in view in the south.
+~
+211 1 2
+D0
+~
+~
+0 -1 21180
+D2
+~
+~
+0 -1 21160
+D3
+~
+~
+0 -1 21169
+S
+#21171
+A river of blood~
+   The river of blood continues here.  Body parts float by among the drift
+wood.  Branches stick up here and there, indicating that this wasn't always a
+river of death.  To the west is an enormous iron fence, the top of which can't
+be seen.  To the east is a small embankment with a large grave blocking the
+exit.
+~
+211 1 7
+D0
+~
+~
+0 -1 21181
+D1
+~
+~
+0 -1 21172
+D2
+~
+~
+0 -1 21161
+E
+fence~
+The fence here keeps you from exiting west.
+~
+S
+#21172
+A burnt path~
+   Tombstones block the path to the east and north in this part of the trail.
+A buzzard circles the area, looking for something to eat.  The moon shines
+on everything around you, the embankment to the north and east, your armor,
+it even illuminates the buzzard.  A few pieces of rusty armor can be found
+here and there, remains of dead soldiers.  A few shattered pieces of bone
+lie at the base of the embankment to the east.
+~
+211 1 2
+D0
+~
+~
+0 -1 21182
+D1
+~
+~
+0 -1 21173
+D2
+~
+~
+0 -1 21162
+D3
+~
+~
+0 -1 21171
+E
+bone~
+Small pieces of bone cover the ground.
+~
+E
+armor~
+Rust-eaten armor has been thrown away here.
+~
+S
+#21173
+A burnt path~
+   Large, black rocks sit in the middle of the path here.  The rocks are much
+taller than a human, and much wider.  They look rather out of place among the
+rest of the scene.  You can smell the burnt grass and trees.  Bushes grow all
+around the rocks in the center of the path, some even grow on the rocks
+themselves.  As you come nearer to the rocks, a flock of vultures flies up and
+away from behind the boulders.
+~
+211 1 2
+D0
+~
+~
+0 -1 21183
+D1
+~
+~
+0 -1 21174
+D2
+~
+~
+0 -1 21163
+D3
+~
+~
+0 -1 21172
+E
+bushes~
+Dead branches extend from the bushes, clinging on to anything they can find.
+~
+E
+rocks~
+Very large boulders tower over you in the middle of the path here.
+~
+S
+#21174
+A burnt path~
+   Three very large trees stand on the north side of the path here.  They tower
+over you, staring back as you gaze at them.  Although the rest of the path has
+been burned, the three trees don't seem to have been touched.  They're dead,
+just not burned.  A pile of rocks and a large tombstone lie in front of the
+trees, making them impossible to touch.  An unidentifiable bird sits perched
+alone in the tree with glowing red eyes.
+~
+211 1 2
+D0
+~
+~
+0 -1 21184
+D1
+~
+~
+0 -1 21175
+D2
+~
+~
+0 -1 21164
+D3
+~
+~
+0 -1 21173
+E
+trees~
+The three trees here reach out to touch you with their limbs.
+~
+S
+#21175
+A burnt path~
+  The grass on this path has been scorched, but it's still here.  Trees and
+bushes have been singed by a fire which passed through here not too long ago.
+The dirt on the ground has been charred by the flames as well.  Graves block
+the path to the north and south.  The tombstones all around you have also
+been burned.
+~
+211 1 2
+D0
+~
+~
+0 -1 21185
+D1
+~
+~
+0 -1 21176
+D2
+~
+~
+0 -1 21165
+D3
+~
+~
+0 -1 21174
+E
+trees bushes~
+The trees and bushes here are all dead, adding more sorrow to the scene.
+~
+S
+#21176
+A river of blood~
+   Here lies a split in the path.  Any direction of travel is possible from
+here: north, east, south, or west.  Two paths have been crossed here.  There
+are tombstones on every side of the paths, but not large enough to block any
+exits.  The river of blood continues to the east.  A bat flies around your
+party, devouring any insects it can find.
+~
+211 1 7
+D0
+~
+~
+0 -1 21186
+D1
+~
+~
+0 -1 21177
+D2
+~
+~
+0 -1 21166
+D3
+~
+~
+0 -1 21175
+S
+#21177
+A river of blood~
+   The blood on this part of the path isn't very deep, but it evidently has
+soaked deep into the earth by its mollescence.  The ground squishes with
+every step, leaving an indentation where the step occured.  Walking softly
+is impossible here.  The ground seems to moan with every step and squish, as
+if it were alive.
+~
+211 1 7
+D0
+~
+~
+0 -1 21187
+D1
+~
+~
+0 -1 21178
+D2
+~
+~
+0 -1 21167
+D3
+~
+~
+0 -1 21176
+S
+#21178
+A path of stone~
+   Here is the end of the path of stones.  North and east are dead ends, the
+only place to go other than in those directions is back south.  The stone path
+here moans and seems to move a little bit, rising and falling as if it were
+breathing.  Pieces of dead bark and branches have been placed in a neat pile
+in the middle of the room.  It is unfortunate that this path led nowhere,
+since compared to the rest of the graveyard, it was such a nice one.
+~
+211 1 2
+D0
+~
+~
+0 -1 21188
+D1
+~
+~
+0 -1 21179
+D2
+~
+~
+0 -1 21168
+D3
+~
+~
+0 -1 21177
+E
+bark branches~
+Dead bark and branches litter the area.
+~
+S
+#21179
+Dead end~
+   Tombstones make the northern, eastern, and southern part of this path
+impassable.  Small pebbles have been spread all over the ground here.  A
+tall, dead tree stands in the middle of the room, ready to fall at any
+moment.
+~
+211 1 2
+D0
+~
+~
+0 -1 21189
+D1
+~
+~
+0 -1 21180
+D2
+~
+~
+0 -1 21169
+D3
+~
+~
+0 -1 21178
+E
+tree~
+The tree takes up most of the spaec in this area, standing at about fifty feet.
+~
+S
+#21180
+A dark path~
+   The path here is unbelievably dark.  Even with your light source and the
+moon, the area here seems to absorb all that is bright.  Screams echo through
+the path, coming from the south.  A slight rustling comes from the bushes,
+but the source of the noise is invisible.  Rocks and branches make for a rough
+path, especially since they aren't visible.  A chilling wind enters the path
+from the south.
+~
+211 1 2
+D0
+~
+~
+0 -1 21190
+D2
+~
+~
+0 -1 21170
+D3
+~
+~
+0 -1 21179
+S
+#21181
+A river of blood~
+  The blood in this part of the river is only a few inches deep.  The mud below
+your feet is rather thick, so your feet don't sink too much into it.  A tree
+has fallen across the path, diverting the blood to the eastern side of the
+path, and then on down towards the south.  There is an enormous iron fence to
+the west of here.
+~
+211 1 7
+D0
+~
+~
+0 -1 21191
+D2
+~
+~
+0 -1 21171
+E
+fence~
+The fence here is taller than you can see.
+~
+E
+tree~
+A large tree has fallen here, damming up the river.
+~
+S
+#21182
+A small hut~
+   Deadly, razor-sharp knives hang on the walls here in the hut.  A desk is
+in the corner of the room, on top of which is a book of victims weighted down
+by a skull.  A human skin has been stretched out as a rug in the middle of
+the floor.  A cracked and dirty mirror hangs on the northern wall.  A small
+window with no glass has been made in the southern wall.
+~
+211 9 0
+D1
+~
+~
+0 -1 21183
+E
+knives~
+Knives of many sizes line the walls on hooks.
+~
+E
+desk~
+A desk made from oak sits in the corner of the room.
+~
+E
+skull~
+A white, bleached skull sits on top of the desk.
+~
+E
+skin~
+A human skin with the head still intact has been stretches across the floor.
+~
+E
+mirror~
+It's not posible to get much of a reflection from this shattered mirror.
+~
+E
+window~
+A soft breeze enters the room from the window to the south.
+~
+S
+#21183
+A burnt path~
+   Here ends the burned path.  To the west is a small hut.  To the north and
+east are large tombstones which stop progress in those directions.  The
+ground here is very black, charred from a very recent fire.  The graves all
+around the room have been completely blackened, hiding the names inscribed
+in the camouflaged shadows.
+~
+211 1 2
+D0
+~
+~
+0 -1 21193
+D1
+~
+~
+0 -1 21184
+D2
+~
+~
+0 -1 21173
+D3
+~
+~
+0 -1 21182
+S
+#21184
+Dead end~
+  Here lies another dead end.  The directions to the west, south, and east
+have been blocked by tombstones.  The ground here is rather soft, and dead
+grass covers the entire area.  Perfectly rounded rocks lie among the dead
+grass.  A brisk wind enters the area, chilling everything it touches with
+its icy breath.  It kicks some dirt up which soon settles as the breeze
+leaves.
+~
+211 1 2
+D0
+~
+~
+0 -1 21194
+D1
+~
+~
+0 -1 21185
+D2
+~
+~
+0 -1 21174
+D3
+~
+~
+0 -1 21183
+E
+rocks~
+The rocks here are perfectly rounded, as if tumbled.
+~
+S
+#21185
+Dead end~
+  The exits west, south, and east have been blocked by headstones.  Cracked
+tombstones have been strewn all around here, bits and pieces of them
+everywhere.  Large rocks lie scattered among the tombstones, creating a large
+mess.  There's isn't any ground visible here, you're standing completely on
+rocks and tombstones.  A few bushes sprout up from cracks here and there but
+other than that no wildlife is visible.
+~
+211 1 2
+D0
+~
+~
+0 -1 21195
+D1
+~
+~
+0 -1 21186
+D2
+~
+~
+0 -1 21175
+D3
+~
+~
+0 -1 21184
+E
+rocks bushes~
+Rocks and dead bushes decorate the area.
+~
+S
+#21186
+Dead end~
+   The path ends here.  North, west, and south have been blocked by grave
+stones.  There are blood spots on the ground and claw marks on the
+tombstones.  Bones have been thrown about here, lying all helter skelter.
+Talons broken off in a struggle stick in some of the headstones.  A howl
+is suddenly emitted from the southern end of the graveyard.
+~
+211 1 2
+D0
+~
+~
+0 -1 21196
+D1
+~
+~
+0 -1 21187
+D2
+~
+~
+0 -1 21176
+D3
+~
+~
+0 -1 21185
+E
+bones~
+Many different kinds of bones have been left here to attract bacteria.
+~
+S
+#21187
+A river of blood~
+  The river of blood isn't too deep right here, only an inch or two.  The
+embankments on the east and west keep the river's form.  On top of the
+embankments are tombstones, which block procession in those directions.
+The moon illuminates everything very well: the dirt on the embankments, the
+tombstones, even the river itself.
+~
+211 1 7
+D0
+~
+~
+0 -1 21197
+D1
+~
+~
+0 -1 21188
+D2
+~
+~
+0 -1 21177
+D3
+~
+~
+0 -1 21186
+S
+#21188
+Dead end~
+   Here is the end of the stone path.  Tombstones block the path to the north,
+west, and east.  The stone creating the end of the path here is covered in
+fresh blood.  Rats scurry about here, searching for a meal.  The only exit
+from here is back south.
+~
+211 1 2
+D0
+~
+~
+0 -1 21198
+D1
+~
+~
+0 -1 21189
+D2
+~
+~
+0 -1 21178
+D3
+~
+~
+0 -1 21187
+S
+#21189
+A dark path~
+   Here the path is very dark.  The only thing visible is the moon, and not
+even that is very bright.  Your light source does not seem to work very
+well.  Hideous screams can be heard from all directions.  Tombstones all
+around the area here crumble and fall to the ground.  Bats fly about, some
+inches from your face.  As the path continues, the branches that hang down
+in front of it get thicker.
+~
+211 1 2
+D0
+~
+~
+0 -1 21199
+D1
+~
+~
+0 -1 21190
+D2
+~
+~
+0 -1 21178
+D3
+~
+~
+0 -1 21188
+E
+branches~
+Long, bonelike branches brush up against you as you venture deeper along the path.
+~
+S
+#21190
+A dark path~
+   The dark path has taken a turn here.  To the north is a force pulsating
+evil, which is probably the fence that lines the graveyard.  It is not
+possible to see the source of the force though, it is much too dark.
+Not even a light source illuminates the area around you.  To the east is
+the same force.  From the south moans and roars are heard, and a faint
+black area in that direction forms what looks like a cave opening.
+~
+211 1 2
+D2
+~
+~
+0 -1 21180
+D3
+~
+~
+0 -1 21189
+E
+fence~
+The fence is the only thing really visible here, and it stands very tall.
+~
+S
+#21191
+A river of blood~
+   The river of blood continues here.  Headstones halfway emerged in the river
+stick up in various places.  The ground underneath the river here is a bit
+rocky, as opposed to the normal muddy riverbed.  To the north and west is
+a very tall fence.  Eddies in the stream have formed where the embankment
+widens slightly.  Many screams can be heard in the distance.
+~
+211 1 7
+D1
+~
+~
+0 -1 21192
+D2
+~
+~
+0 -1 21181
+E
+fence~
+The black, iron fence creates a corner in the graveyard as it bends.
+~
+S
+#21192
+A river of blood~
+   Here the embankment is very steep.  A large, iron fence stands to the north.
+Many tombstones stand on the southern embankment of the river, preventing exit
+in that direction.  Dead grass patches are scattered all over the sides of
+both embankments, along with small, dead trees and bushes.  Vultures are
+perched in the limbs of the dead trees, waiting for someone to die.
+~
+211 1 7
+D1
+~
+~
+0 -1 21193
+D3
+~
+~
+0 -1 21191
+E
+trees~
+A few trees grow here, inhabited by vultures.
+~
+E
+fence~
+The fence here keeps everything inside and outside seperate.
+~
+S
+#21193
+A river of blood~
+   The river is rather deep here, reaching almost up to a foot in some places.
+Patches of sticky and solid ground can both be found on the bottom of the
+river.  To the north is an enormous fence that keeps anything from escaping.
+Bats zip by overhead, just out of reach.  The moon looks very large here,
+shining down on all and causing the fence to glow.  Large branches and other
+various objects below the surface make for a rough riverbed.
+~
+211 1 7
+D1
+~
+~
+0 -1 21194
+D2
+~
+~
+0 -1 21183
+D3
+~
+~
+0 -1 21192
+E
+fence~
+The fence glows in the moon's light.
+~
+S
+#21194
+A river of blood~
+   Dead animals float on the top of the river of blood.  Small branches and
+dead leaves pass by with them.  The smell here is terrible, it smells like
+rotten eggs.  Birds create silhouettes in the sky with the golden moon.  The
+fence to the north is enormous and silent.  It stands aloof to you.  Small
+animals run by on the northern embankment, avoiding the river.
+~
+211 1 7
+D1
+~
+~
+0 -1 21195
+D2
+~
+~
+0 -1 21184
+D3
+~
+~
+0 -1 21193
+E
+animals wood~
+Animal corpses float by among the wood, occationally bumping in to your legs.
+~
+E
+fence~
+The enormous fence looms over you, expelling the outside.
+~
+S
+#21195
+A river of blood~
+   Small, red frogs hop around near the edge of the river here.  The iron fence
+to the north seems to jail everything evil in with you, for the land just
+outside of it doesn't seem nearly as wretched as that inside.  The river is
+rather shallow here, and the bed beneath it is soft.  The mud doesn't cling to
+your boots here as it does in most of the rest of the river.  You can feel
+small lumps in the riverbed, possibly from pebbles in the mud.
+~
+211 1 7
+D1
+~
+~
+0 -1 21196
+D2
+~
+~
+0 -1 21185
+D3
+~
+~
+0 -1 21194
+E
+fence~
+The fence stands tall above you here, shunning the outside world.
+~
+E
+frogs~
+Frogs stained with blood hop to and fro on the embankments here.
+~
+S
+#21196
+A river of blood~
+   Here the river flows very rapidly.  The incline to the west is very steep.
+A large grave blocks the direction south, while an enormous fence blocks the
+north.  Large rocks have been placed in the middle of the stream, creating
+rapids as the river flows.  Small trees line the embankment to the north,
+while the embankment to the south is virtually barren.  The rocks in the
+river look as if they could shatter the bones of a fallen adventurer very
+easily.
+~
+211 1 7
+D1
+~
+~
+0 -1 21197
+D2
+~
+~
+0 -1 21186
+D3
+~
+~
+0 -1 21195
+E
+fence~
+The iron, black fence is very tall, trapping you inside the graveyard.
+~
+S
+#21197
+A river of blood~
+   Here the river of blood takes a turn.  It continues on down a slight incline
+to the west.  To the east is a very dark path.  To the north is a very tall,
+sturdy iron fence, standing taller than you can see.  It even seems to shut
+out the moon.  Just about everything inside of the fence is dead or dying.
+Even the dead grass and tombstones on the northern embankment of the river
+look as if they be full of sorrow.
+~
+211 1 7
+D1
+~
+~
+0 -1 21198
+D2
+~
+~
+0 -1 21187
+D3
+~
+~
+0 -1 21196
+E
+fence~
+The black, iron fence here is very sturdy.
+~
+S
+#21198
+A dark path~
+   The path becomes rather dark here.  The moon still shines in the sky, but
+it seems to be many times smaller than it previously was, and it doesn't
+illuminate anything around this area.  The silhouettes of bats that fly all
+around you are barely visible.  Your light source doesn't seem to shine light
+on anything.  Various objects in the path cause it to be rather rough.
+~
+211 1 2
+D1
+~
+~
+0 -1 21199
+D2
+~
+~
+0 -1 21188
+D3
+~
+~
+0 -1 21197
+S
+#21199
+A dark path~
+   Here the path is extremely dark.  The only way to make your way through
+it is to bump into the tombstones on the sides of the path, hoping that they
+will lead the way.  Roots and rocks constantly provide for a very rough walk,
+and just as plentiful are the branches that hang down in the path.  To the
+east and north something radiates evil, probably the fence which surrounds
+the graveyard.  The path only gets darker to the south.
+~
+211 1 2
+D2
+~
+~
+0 -1 21189
+D3
+~
+~
+0 -1 21198
+S
+#0
+$~

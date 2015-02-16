@@ -1,0 +1,404 @@
+#3901
+stable boy~
+the stable boy~
+The stable boy is here waiting to serve you.
+~
+You see a rather young man, seemingly untouched by the ravages of life.
+However, if rumors are true he was once a great warrior and he now
+works here to get away from the horror of battle.
+~
+16459 268697728 500 Y
+9 11 10 8d8+400 1d6+12
+2000 21000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3902
+mule~
+a mule~
+A stubborn mule stands here.
+~
+The mule sneers in indignation as you look at her. She flattens her long ears
+along her skull as you consider mounting her, swishing her tail back and
+forth to swipe away flies.
+~
+262411 0 500 Y
+5 15 10 1d8+80 1d5+5
+0 1000
+8 8 2
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3903
+horse~
+a riding horse~
+A riding horse shakes its mane here.
+~
+This tall, slender horse is a light chestnut in color, with a white
+stripe down its forehead. It prances and capers about as it considers
+the idea of galloping through wonderful forests and plains, whinnying in
+horsey delight, its shaggy mane cascading over its neck.
+~
+262411 0 500 Y
+11 13 10 1d8+150 1d8+5
+0 2000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3904
+warhorse heavy horse~
+a heavy warhorse~
+A proud warhorse snorts in defiance at you.
+~
+This massive stallion is a very dark grey in color, typical of the wild
+horses of the Vilosian wastelands. A fierce black mane stands erect on
+his thick, ropy neck, and his fetlocks are each larger than your full
+chest. He snorts fiercely and rolls his eyes, stamping in eagerness for
+battle!
+~
+262411 0 500 Y
+17 10 10 1d8+250 1d17+5
+0 4000
+8 8 1
+86 0 0d0+0 1
+7 1 5 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3905
+camel~
+a camel~
+A haughty camel regards you with disinterest.
+~
+This camel is a rather chubby specimen, having been well-fed recently. His
+hump is nice and full, ready for a long wander in the desert. He chews on
+something complacently as you examine him, looking directly into your
+face without moving his head. He looks very very bored.
+~
+262411 0 500 Y
+23 6 10 1d8+350 1d23+5
+0 10000
+8 8 1
+86 0 0d0+0 1
+5 1 6 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3906
+elephant~
+A large elephant~
+A large elephant trumpets with derision here.
+~
+You see the huge, grey, wrinkled flank of an elephant. It peers at you
+with small, wise eyes and curls its trunk into a wheedling question mark,
+seeming to ask "Will you be my friend?", presenting its foreleg for an
+easy step up to howdah-position.
+~
+262411 0 500 Y
+29 -1 10 1d8+500 1d29+5
+0 20000
+8 8 1
+86 0 0d0+0 2
+7 1 7 0
+10 1 8 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3907
+giant bat~
+a giant bat~
+A giant bat flaps its leathery wings here.
+~
+This huge bat is a deep brown in color, its visible skin black as night.
+It makes an eeping sound as you approach, raising its wings in
+preparation for flight, dodging and diving amongst the night skies
+it loves so much.
+~
+786699 16777216 0 Y
+5 15 10 1d8+50 1d5+5
+0 2000
+8 8 1
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3908
+griffon~
+a noble griffon~
+A noble griffon flaps its wings here.
+~
+This frightening beast clacks its bright yellow beak as you look
+at it, raking its talons along the ground and crouching with its lion's
+tail swishing in the air. All in anticipation of the freedom of a long
+flight.
+~
+786699 16777216 0 Y
+11 13 10 1d8+100 1d11+5
+0 4000
+8 8 1
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3909
+giant eagle~
+a giant eagle~
+A giant eagle glides effortlessly here.
+~
+This great bird screams a haunting cry to the wind and flaps its great
+wings as you examine it.  Its yellow eyes sharply considering you from
+its large white head. This predatory bird has evolved into a humongous
+freak of nature, making it a very valuable mount whilst making it
+almost incapable of creating a secure niche for itself in a sky full
+of lighter, more maneuverable birds.
+~
+786699 16777216 0 Y
+17 10 10 1d8+200 1d17+5
+0 8000
+8 8 1
+83 0 0d0+0 1
+6 1 5 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3910
+wyvern~
+a large wyvern~
+A hungry wyvern flaps its wings impatiently here.
+~
+A great feathered serpent hisses at you as you look at it, flicking its
+bright tongue in and out while gazing at you with baleful reptilian eyes.
+Its huge feathered wings are extended, ready to take off with a 
+primordial scream of cold-blooded hate and fury, little else being
+known to its tiny brain.
+~
+786699 16777216 0 Y
+23 6 10 1d8+300 1d23+5
+0 12000
+8 8 1
+83 0 0d0+0 1
+5 1 6 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3911
+small dragon~
+A small dragon~
+A small blue dragon swoops down from the sky here.
+~
+This small dragon was forced out of the great northern wastelands by
+its larger brethren. It is still rather massive compared to YOU, but it
+seems to be rather pleasant and content, a large smile on its blue face.
+~
+786699 16777216 0 Y
+29 -1 10 1d8+400 1d29+5
+0 20000
+8 8 1
+56 0 0d0+0 2
+8 1 7 0
+6 1 8 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3912
+racing snail~
+a large racing snail~
+A large racing snail is slithering by here.
+~
+This large gastropod wears a tremendous, spiralled shell on its back, with
+distinctive Trog runes carved into it. Some brave trapper obviously ventured
+into the deep caves of the deadly Trogs to recover a mount to sell at market,
+a price hardly worth the risk.
+~
+262411 0 -500 Y
+5 15 10 1d8+80 1d5+5
+0 2000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3913
+giant scorpion~
+a giant scorpion~
+A giant scorpion lashes its poisoned sting at you.
+~
+This huge, nasty creature is almost completely translucent. You can see the
+internal workings of the arthropod, but those are not nearly as interesting
+as the poison-bearing sting it is lashing about blindly...
+~
+262411 0 -500 Y
+5 15 10 1d8+150 1d11+5
+0 4000
+8 8 1
+76 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3914
+giant tarantula~
+a giant tarantula~
+An incredibly huge tarantula scuttles about here.
+~
+A hairy spider is frightening, yes, but a 12-foot hairy spider is blood-
+curdling! This creature audibly clicks its mandibles, poison drool dripping
+and hairy legs scuttling madly. It is incredibly fast, and it looks like
+a great fighter.
+~
+262411 0 -500 Y
+11 10 10 1d8+250 1d17+5
+0 8000
+8 8 1
+77 0 0d0+0 1
+5 1 6 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3915
+bull lizard~
+A huge Bull-Lizard~
+A huge bull-lizard stares balefully at you from independently moving eyes.
+~
+This beast has the body of a bull and the head of a white lizard. Fungus
+grows on its back, and encrusting its eyes are mineral deposits of
+some sort. It has apparently lived for a long time, and it doesn't
+look like many creatures will dare to fight this powerful beast.
+~
+262411 0 -500 Y
+23 6 10 1d8+350 1d23+5
+0 10000
+8 8 1
+80 0 0d0+0 1
+8 1 7 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3916
+flesh golem~
+a flesh golem~
+A flesh golem awaits your commands.
+~
+This thing is a hodge-podge of collected human and Trog parts, all sewn together
+with twine and bound with some primitive magic. It glares around with 
+mismatched eyes, drooling a huge string to the ground and scratching its
+not-so-private parts as it grunts incomprehensibly.
+~
+262411 0 -500 Y
+29 -1 10 1d8+500 1d29+5
+0 20000
+8 8 1
+79 0 0d0+0 2
+3 1 5 0
+4 1 7 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3917
+hunchback dwarf igor~
+a hunchback~
+A hunchbacked, beady-eyed dwarf eyes you warily and chews on some tobacco.
+~
+This is the infamous hunchback Igor, sentenced by the previous Mayor to life
+in prison for stealing a loaf of bread.  The current mayor had him released a
+few years ago, but by that time it was too late; Igor had lost his mind and
+been crippled by the grueling labour in the old mines.  Out of pity the mayor
+lets him tend to the animals here in return for a meal and a place to sleep.
+~
+16395 10240 -100 Y
+25 -5 6 8d10+2000 5d4+25
+40000 270000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3918
+stable master~
+the master of the stables~
+The Master of the Midgard Stables tends to his beasts here.
+~
+  The Master of the Stables is a mysterious creature with the head of an
+eagle and a human body.  No one know his origin, but his uncanny ability to
+communicate with avians has earned him his position here.
+~
+16395 402948264 700 Y
+31 -8 10 1d6+8000 5d20+50
+90000 600000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3919
+celestial dragon~
+The Celestial Dragon~
+The mighty Celestial Dragon, master of the skies, is here.
+~
+  The Celestial Dragon is one of the largest dragons alive today, measuring
+120 feet from head to tail.  Its slender body is completely covered with 
+glittering scales that shine like diamonds and its ruby eyes burn with the
+fires of the sun. 
+~
+540682 486539392 200 Y
+38 -18 10 1d100+16000 10d6+70
+500000 1200000
+9 8 1
+57 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3920
+vulture~
+a vulture~
+A scrawny vulture
+~
+  A scavenging avian that will eat almost anything.  It has an uncanny ability
+to sense impending death and destruction and as such is so reviled as a bird
+of ill omens.
+~
+16394 16777216 -500 Y
+18 8 4 1d20+500 2d8+2
+0 60000
+9 8 1
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3921
+thug guard~
+a seedy-looking thug~
+A seedy-looking thug stands guard here.
+~
+  He looks bored since few people come here.  He glances at you briefly then 
+goes back to picking dirt from under his fingernails with a stiletto. A stifled
+yawn escapes his lips as he leans against the wall.
+~
+76 786464 0 Y
+31 -3 8 1d100+6000 4d50+102
+15000 600000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#3922
+The Mayor of Midgaard~
+the Mayor~
+The Mayor of Midgaard is here.~
+He is a stocky, middle-aged man with thin, grey hair.
+~
+10 297020 500 Y
+51 -11 -15 1d8+20000 1d6+30
+50000 1
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

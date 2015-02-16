@@ -1,0 +1,456 @@
+#19501
+ring nova bautzan ender world~
+The Ring of the Nova~
+A small ring, with an endlessly exploding star mounted in its prong, sits here.~
+~
+9 0 3
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19502
+ink inky darkness~
+A Pool of Inky Darkness~
+A pool of black ink is here, absorbing the light.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19503
+mantle terror octalon~
+The Mantle of Terror~
+A large, black octopus hide lies on the ground.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19504
+mantle priest dark night soutane~
+The Soutane of the High Priest~
+A tight-fitting cloak sits here, absorbing all light.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19505
+chaos belt chorlachtogna chorlach
+~
+A Belt of Chaos~
+This belt seems to be possessed with an almost living essence.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19506
+order belt chorlachtogna chorlach~
+A Belt of Order~
+A belt lies here, calm and serene.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19507
+crown basalt~
+A Crown of Basalt~
+A large crown, carved out of basalt, sits here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19508
+leopard hide ixthian ix~
+The Hide of an Ixthian Leopard~
+A thick spotted fur lies here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19509
+halo battered bent broken~
+A Battered Halo~
+This halo is long past its prime, and sits here looking miserable.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19510
+wand light pure~
+A Wand of Pure Light~
+A bunch of light has coalesced here into the shape of a wand.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19511
+ring garnet invisibility invis~
+A Garnet Ring of Invisibility~
+You can vaguely make out the shape of a ring sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19512
+token trinket past~
+a Trinket~
+You're not quite sure what this is, but it looks neat.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19513
+message~
+a message, scrawled in blood~
+Someone has scribbled something in blood across the eastern wall.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19514
+salt~
+a Small Shard of Salt~
+A shard of salt sits in a pile here.~
+~
+11 0 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#19515
+salt~
+A Medium-Sized Shard of Salt~
+A shard of salt sits in a pile here.~
+~
+11 0 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#19516
+salt~
+A Small Chunk of Salt Crystals~
+A shard of salt sits in a pile here.~
+~
+11 0 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+#19517
+salt~
+A Large Chunk of Salt Crystals~
+A shard of salt sits in a pile here.~
+~
+11 0 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+#19518
+salt~
+A Small Pillar of Salt~
+A shard of salt sits in a pile here.~
+~
+11 0 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+#19519
+salt~
+A Large Pillar of Salt~
+A shard of salt sits in a pile here.~
+~
+11 0 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 6
+#19520
+salt~
+An Enormous Pillar of Salt~
+A shard of salt sits in a pile here.~
+~
+11 0 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 7
+#19521
+chunk basalt~
+A Large Chunk of Basalt~
+An enormous piece of basalt sits here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19522
+strand magical essence shimmering~
+A Shimmering Strand of Magical Essence~
+A shimmering bit of nothingness sits here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19523
+black shimmering basalt~
+A Shimmering Black Piece of Basalt~
+A shimmering chunk of rock sits here, covered in inky blackness.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19524
+key basalt crumbling~
+A Crumbling Basalt Key~
+A large piece of basalt in the shape of a key lies here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19525
+chunk meteorite~
+A Chunk of Meteorite~
+A big piece of meteorite is sitting here, still smoldering.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

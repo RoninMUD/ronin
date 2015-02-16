@@ -1,0 +1,740 @@
+#1801
+griswold blacksmith~
+Griswold the Blacksmith~
+Griswold the Blacksmith is standing here.
+~
+This tall, round man carries himself as if he was a proud warrior
+in a previous life.  However, now he stands over his forge crafting
+weapons of unmatched power.
+~
+74 142878848 0 Y
+70 -50 -40 1d1+25000 10d10+150
+50000000 60000000
+8 8 1
+69 0 1d1+1 1
+1 6 50 85
+0 1 0 0
+R
+6
+K
+0 0 0 0 0 0 0
+#1802
+guard~
+A city guard~
+One of Obervon's city guards is standing here.
+~
+The guard is here, whistling to himself.  Obviously he is very bored,
+and waiting to get off duty.  It's a wonder how Obervon has such a low
+crime rate.
+~
+72 0 100 Y
+40 -9 -10 40d12+8500 1d12+60
+6000 610000
+8 8 1
+69 0 40d6+100 1
+4 1 20 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1803
+bishop~
+A Bishop~
+A bishop of Polo Fay is standing here.
+~
+Being self proclaimed bishop of this gallery, he really has no duties.
+He spends his days wandering about, giving thanks to Polo Fay on 
+occassion.
+~
+72 0 300 Y
+45 -5 -6 400d4+5000 1d20+45
+1 490000
+8 8 1
+69 0 35d10+100 2
+1 6 20 28
+1 1 5 93
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1804
+citizen~
+An Obervon Citizen~
+A citizen of Obervon is standing here.
+~
+This is one of Obervon's many citizens, he spends his day wandering the
+streets, giving thanks to Polo Fay, perhaps even dining in at the local
+restaurant.
+~
+72 0 0 Y
+30 9 -1 200d2+1000 3d6+6
+3000 210000
+8 8 1
+69 0 20d10+100 2
+9 1 20 0
+3 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1805
+citizen~
+An Obervon Citizen~
+A citizen of Obervon is standing here.
+~
+This is one of Obervon's many citzens, she spends her day wandering the
+streets, giving thanks to Polo Fay, perhaps even dining in at the local
+restaurant.
+~
+72 0 0 Y
+30 9 -1 200d2+1000 3d6+6
+3000 210000
+8 8 2
+69 0 20d10+100 2
+7 1 20 0
+3 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1806
+noble citizen~
+An Obervon Noble~
+One of Obervon's noble citizens is standing here.
+~
+Being a noble in Obervon means he has been one of the lucky investors 
+in the local "Hall of Champions".  He is definitely not affraid to
+wear bright colors, even in a city infamous for its "Mercenary's
+Guild".
+~
+72 0 -200 Y
+30 8 -1 200d2+1200 3d6+5
+9000 270000
+8 8 1
+69 0 20d10+200 2
+1 1 20 32
+7 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1807
+noble citizen~
+An Obervon Noble~
+One of Obervon's noble citizens is standing here.
+~
+She is clearly a trophy wife to some other rich person in Obervon.
+~
+72 0 -300 Y
+30 9 -1 200d2+1000 3d6+6
+9500 275000
+8 8 2
+69 0 20d10+100 2
+1 1 5 26
+3 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1808
+chef van micharrd orrelle~
+Chef Van Micharrd Orrelle~
+Chef Van Micharrd Orrelle is here, cooking to his heart's desire.
+~
+He is about 178 cm tall, probably weighs 84 kg or so.  He has a buzz
+cut hairstyle, and he is blonde.  His skin is pale, probably from being
+indoors all day.  Surprisingly, even in the heat of the kitchen, there
+is little sweat on his brow.
+~
+74 402925696 0 Y
+55 -15 -20 200d10+16000 10d12+400
+750000 3300000
+8 8 1
+69 0 55d10+1000 5
+1 2 5 137
+1 5 10 104
+1 6 20 140
+11 2 10 65
+1 4 10 218
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1809
+cook~
+A cook~
+One of Chef Orelle's cooks is standing here.
+~
+This cook serves as an apprentice to Chef Van Micharrd Orrelle.  He stands
+here, doing everything he's told.
+~
+74 268697600 -100 Y
+48 -8 10 15d50+8000 5d5+460
+18000 720000
+8 8 1
+69 0 1d1+1 2
+4 2 20 0
+3 2 20 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1810
+waiter~
+A Waiter~
+The Restaurant of Polo Fay's only waiter is standing here, ready to take your order.
+~
+This old man stands here, waiting to serve.  After years of service, even
+the most complicated of orders and tasks create little more than an
+automated response out of him. 
+~
+74 142878848 0 Y
+55 -30 -40 1d1+14000 10d10+100
+1 5000000
+8 8 1
+69 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1811
+priest~
+A Priest~
+A priest of Polo Fay is standing here.
+~
+The priests of Polo Fay's chapel are rumored to pocket a portion of each
+donation.  Their corruption is although heard of far and wide, has never
+actually been observed.
+~
+72 0 -200 Y
+30 9 -1 200d3+1000 3d6+7
+10000 290000
+8 8 1
+69 0 20d10+100 2
+1 1 5 93
+1 6 5 28
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1812
+syszivexkeya hydra~
+Syszivexkeya~
+Syszivexkeya, the beast of legend is lying here.
+~
+This legendary beast has been the downfall of many adventurers.  Its name
+was given to it because the few challengers that could be dragged away from
+its grasp only lived long enough to utter a few incomprehensible vowel noises.
+Thus it was given a name to match its victims last words. 
+~
+616 142870656 -1000 Y
+65 -25 -30 10d300+23000 10d10+300
+0 12000000
+8 8 0
+80 0 10d10+6000 3
+1 3 40 130
+8 2 10 0
+10 5 20 0
+0 1 0 0
+K
+6000000 1844 1844 1844 1844 1847 0
+#1813
+beast fur enormous~
+An Enormous Fur Beast~
+A enormous beast of fur is lying here, growling towards the door.
+~
+This thing is a big puffy ball of fur.  Its cheeks are round an buffy.  It
+has two large, black, beady eyes.  It has a pink nose at the end of it's 
+snout, with several large whiskers protruding from it.  Finally it has two
+round ears coming out of the top of its head.
+~
+106 268730504 -1000 Y
+55 -30 -24 40d40+15500 100d3+425
+0 5000000
+8 8 2
+86 0 1d1+1 4
+10 5 10 0
+5 1 10 0
+6 2 10 0
+9 3 20 0
+0 1 0 0
+R
+4
+K
+500000 1849 1848 0 0 0 0
+#1814
+warrior pagodian pagoda~
+A Pagodian Warrior~
+The former master of some pagoda is meditating here.
+~
+This sinister looking bushi is here, awaiting battle.  He wears
+heavy armor, with the crest of a red dragon on it.  In preparation
+for his next battle, he is here doing some awkward looking stretches,
+bending his body into nearly impossible poses.
+~
+106 268740744 350 Y
+55 -30 -30 400d3+18000 5d5+300
+250000 6000000
+8 8 1
+4 0 100d5+1200 4
+3 3 15 0
+9 3 15 0
+1 3 10 8
+1 3 10 110
+0 1 9 0
+K
+0 0 0 0 0 0 0
+#1815
+snake cobra sultan~
+The Sultan Cobra~
+The Sultan Cobra is slithering around here, waiting to strike it's prey.
+~
+This cobra's hood is full of vibrant and beautiful colors.  The rest of
+its body is covered in different patterns.  Obviously this cobra projects
+itself as the alpha male.
+~
+106 264320 -1000 Y
+55 -30 10 75d30+14173 50d5+600
+0 5000000
+8 8 1
+80 0 100d50+2000 7
+1 3 10 111
+1 3 10 105
+1 3 10 8
+1 3 10 38
+1 3 10 25
+8 3 10 0
+1 3 10 104
+0 1 0 0
+K
+500000 1854 1855 0 0 0 0
+#1816
+shopkeeper forgotten jalpur~
+A Forgotten Shopkeeper~
+An ancient shopkeer from beyond the mountains is standing here, reciting old sales pitches.
+~
+He is a very large man.  He is above average height, and his trememdous girth
+consists of both fat and muscle.  The guards must be bringing him three dinners,
+because there is no way someone should be this big off a prison diet.
+~
+74 142616704 0 Y
+55 -30 -10 500d10+17500 5d5+150
+3000000 9000000
+8 8 1
+69 0 200d20+0 2
+1 6 20 28
+1 1 10 136
+0 1 0 0
+R
+6
+K
+0 0 0 0 0 0 0
+#1817
+ettin berserker~
+The Ettin Berserker~
+An ettin is here pounding on the walls and screaming in a fit of rage!
+~
+He screams, and gestures aggressively.  It's almost as if he never stops screaming,
+and his muscles appear to always be fully bulged.  It is a wonder how he can keep
+functioning at a pace like this.  But the real question is...does he sleep?
+~
+106 805306369 -1000 Y
+55 -20 10 50d50+11000 5d5+550
+500000 5000000
+8 8 1
+73 0 55d10+100 5
+9 3 20 0
+3 3 10 0
+4 3 10 0
+7 3 10 0
+2 3 10 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1818
+guard ethereal figure image blurry~
+An Ethereal Figure of a Guard~
+A blurry image is barely visible as it moves in and out of the shadows.
+~
+You can barely make out an outline of a guard.
+~
+106 202639528 -200 Y
+55 -25 -35 100d20+13950 10d20+300
+500000 5000000
+8 8 1
+95 0 55d10+500 1
+1 1 10 98
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1819
+legionnaire~
+A Legionnaire~
+A legionnaire is here, waiting for his payment.
+~
+This man carries himself well.  He openly prides himself on his fighting
+capabilities, and of the previous jobs he has done.  Judging by his manner,
+it is doubtful he would show any remorse over slitting your throat.
+~
+16460 524288 -500 Y
+50 -10 -5 50d20+6125 4d6+60
+9000 1150000
+8 8 1
+69 0 50d4+200 3
+2 2 5 0
+3 2 5 0
+7 2 5 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1820
+mercenary~
+A Mercenary~
+A mercenary is here, counting his coin.
+~
+Judging by his manner, he is new to this profession.  Perhaps he was a
+guard, soldier, or just had some form of combat training in the past.
+But, regardless, the concept of fighting for money seems relatively new
+to him.
+~
+72 0 -500 Y
+50 -8 -4 50d12+6000 4d4+60
+6000 1000000
+8 8 1
+69 0 50d10+100 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1821
+hireling~
+A Hireling~
+A hireling is sitting here, awaiting his first job.
+~
+Optomistic, and not completely without morals, this guy has probably
+not taken a job yet.  Although he is in the building, it is doubtful
+he really grasps the concepts behind the term "sword for hire".
+~
+76 0 0 Y
+50 -5 -4 50d12+5500 4d6+50
+3000 900000
+8 8 1
+69 0 50d10+100 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1822
+soldier fortune~
+A Soldier of Fortune~
+A battle-worn soldier of fortune is here, taking a break.
+~
+This soldier has been emotionally devastated through years, possibly even
+decades, of killing human beings for money.  He is quiet, and although
+watching the room intently, pays no real attention to any one individual.
+~
+76 0 -500 Y
+50 -12 -3 50d12+7000 4d6+70
+12000 1250000
+8 8 1
+69 0 50d10+100 2
+3 2 10 0
+9 2 10 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1823
+guard cell~
+The Cell Guard~
+A guard is here guarding the cells.
+~
+The cell guards are well trained, and capable of holding their own.  Despite
+this fact, they may have the worst job in town.  The fatality rates are high,
+most of them quit to become mercenaries, they are always under staffed, and
+they are not paid very well.
+~
+72 262272 -1000 Y
+50 -12 -15 50d12+9000 4d6+90
+9000 1500000
+8 8 1
+69 0 50d10+100 2
+4 2 20 0
+7 2 10 0
+0 1 0 0
+R
+4
+K
+0 0 0 0 0 0 0
+#1824
+gravekeeper grave keeper~
+The Gravekeeper~
+Obervon's only gravekeeper is here.
+~
+He is old, probably been at this job for years.  However, despite his age he
+is very well fit.  He beams a smile in your direction as you look at him.
+~
+72 277088384 400 Y
+40 -15 -18 55d20+14000 5d6+200
+750000 3600000
+8 8 1
+69 0 55d10+100 3
+1 2 10 136
+9 2 10 0
+3 2 10 0
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#1825
+hamster miniature giant space mini furball~
+A miniature giant space hamster.~
+A miniature furball is here, scurrying about.
+~
+`o.............................
+`o......(`-`;-"```"-;`-`)......
+`o.......\.'         './.......
+`o......./             \.......
+`o.......;   0     0   ;.......
+`o....../| =         = |\......
+`o.....; \   '._Y_.'   / ;.....
+`o....;   `-._ \|/ _.-'   ;....
+`o...;        `"""`        ;...
+`o...;    `""-.   .-""`    ;...
+`o.../;  '--._ \ / _.--   ;\...
+`o..:  `.   `/|| ||\`   .'  :..
+`o...'.  '-._       _.-'   .'..
+`o...(((-'`  `"""""`   `'-)))..
+`o.............................
+~
+16777288 277618688 0 Y
+60 -30 -40 60d12+240 20d20+0
+1 1500000
+8 8 1
+86 0 1d1+1 0
+0 1 9 0
+R
+6
+K
+0 1865 0 0 0 0 0
+#1826
+cryer town~
+The Town Cryer~
+The Town Cryer is here doing what he does best.
+~
+The Town Cryer stands in town, shouting irrelevent news.  He is a former champion
+from the Arena.  Local legend says he was capable of withstanding any number of
+attacks from any number of foes.  Nobody knows exactly where he came from, it is
+said he was found outside of town with no memory, it is possible he was one of
+the many soldiers who assisted Polo Fay with his struggles.
+~
+72 142878848 0 Y
+70 -30 -30 1d1+25000 100d2+0
+1000000 9000000
+8 8 1
+0 0 1d1+200 1
+1 6 100 85
+0 1 0 0
+R
+6
+K
+0 0 0 0 0 0 0
+#1827
+baros templar~
+Baros~
+Baros, the grand templar, is praying here.
+~
+Baros is about average height, balding, and a little on the heavy side.  He is
+the last remaining member from the former temple of the "Sunguards".  Although
+a little out of shape, he still looks as if he could hold his own.
+~
+72 134228096 1000 Y
+55 -20 10 55d20+17000 100d3+200
+1250000 5000000
+8 8 1
+2 0 55d10+2000 6
+1 2 10 119
+1 5 5 137
+1 6 1 85
+1 6 40 28
+1 5 10 81
+1 6 10 246
+0 1 0 0
+R
+6
+K
+0 0 0 0 0 0 0
+#1828
+jabon bladesinger~
+Jabon~
+Jabon the Bladesinger is standing here.~
+A master bladesinger, Jabon seem very well practiced.  He spends most of his time
+managing and distributing jobs for other mercenaries, and very rarely taking any
+for himself.  However, his unique skill set and mastery in combat would make him
+quite the formidable foe.
+~
+74 294396074 0 Y
+55 -30 -15 80d40+15000 10d10+200
+1500000 6000000
+8 8 1
+10 0 55d6+1200 0
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#1829
+freya chanter~
+Freya~
+Freya, the master chanter, is standing here.
+~
+Freya is the announcer for the "Hall of Champions".  She is known for her ability
+to rally a crowd, but also known for her prowess in a fight.  She stands guard over
+the entrance to the bastile below the Halls.
+~
+74 286001322 1000 Y
+55 -35 -16 100d20+16000 10d8+180
+2000000 6000000
+8 8 1
+10 0 50d6+1000 0
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#1830
+abhoraz defiler demon~
+Abhoraz~
+A demon of immense power stands before you.
+~
+Destined to spend eternity chained inside this crypt, Abhoraz waits patiently for
+for some unsuspecting adventurer to free him.  According to local history, he was
+one of many adventurers to save the town from some gargantuan.  However, soon after
+he was not to be trusted to roam free, and was bound to this tomb.
+~
+106 612663432 -1000 Y
+60 -20 -25 55d12+17000 8d4+300
+2250000 6500000
+8 8 1
+8 0 55d10+5000 10
+1 3 20 25
+1 3 20 242
+1 3 10 100
+1 3 5 38
+3 2 10 0
+1 5 5 105
+1 5 5 104
+1 3 5 111
+1 3 5 17
+1 3 15 136
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1831
+wilfred axe gladiator~
+Wilfred the Axe~
+The gladiatorial champion, Wilfred the Axe, is standing here.
+~
+Although definitely not the brightest bult on the tree, he very well may be the
+sharpest tool in the shed.  His prowess in the Arena is legendary, only a fool
+would challenge him.
+~
+106 268697728 -300 Y
+55 -30 10 55d20+18000 10d4+580
+1000000 6000000
+8 8 1
+4 0 1d1+99 4
+11 3 10 63
+7 3 10 0
+4 3 50 0
+11 5 20 68
+0 1 9 0
+K
+0 0 0 0 0 0 0
+#1832
+prax mercenary~
+Prax~
+Prax, the mercenary leader, is standing here.
+~
+Prax was once a member of the Roman Army.  His combat training is nearly unmatched,
+along with his short fuse.  It is said no one person has ever challenged him and
+lived to tell the tale, even groups have only survived by sacrificing one while the
+others fled in terror.  He stands tall, and does not seemed threatened by your
+presence.
+~
+74 276824192 -1000 Y
+55 -15 -25 55d12+16000 8d4+300
+1000000 6500000
+8 8 1
+11 0 55d6+2000 7
+1 3 20 181
+1 5 20 236
+1 5 20 179
+1 2 10 136
+7 2 5 0
+3 2 5 0
+11 2 20 63
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#1833
+jobo bandit~
+Jobo~
+Jobo the bandit king is hiding here, waiting to ambush his next target.
+~
+Jobo is known worldwide for her mischief.  She steals from unsuspecting travelers, and
+those who catch her in the act are either disposed of, or witnessed her "disappearing
+act".  Very few individuals are aware that they have been victim to her cunning.
+~
+72 10223616 -1000 Y
+55 -15 -23 55d20+17500 10d4+350
+4000000 7000000
+8 8 2
+3 0 1d1+99 1
+11 2 100 65
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1834
+warren crusader~
+Warren~
+Warren, the legendary crusader, is praying here.
+~
+Warren stands here, ready for battle at any moment.  Although he has given up his
+crusading lifestyle, it stands no secret that he is looking for any excuse to pick
+up his adventures where he left off.
+~
+33554504 536879268 1000 Y
+55 -30 10 55d12+17000 10d4+500
+1000000 7000000
+8 8 1
+7 0 55d10+2000 3
+1 2 20 119
+1 6 20 187
+3 1 60 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1835
+champion~
+The Champion~
+The Champion of the Mercenary's Guild stands here, guarding the back room.
+~
+The Champion of the Mercenary's Guild stands guard over the back room.  In recent months
+he was known as the "One Man Army".  Because of his vast resume, and lifelong list of
+accomplishments, he has been promoted to be next in line as leader of the Guild.
+~
+74 402655360 -500 Y
+50 -15 -15 250d10+9500 5d4+100
+350000 2100000
+8 8 1
+69 0 50d50+500 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1836
+warden prison guard~
+The Warden~
+The Warden is standing here, guarding the Grand Chamber.
+~
+The warden, also known as the head guard, spends the majority of his day doing paperwork.
+He manages guard shifts, and oversees all operations beneath the "Hall of Champions".
+The most important of his duties is to be sure all procedures are executed properly when
+escorting monsters out of their chambers.
+~
+2097162 402917512 200 Y
+55 -35 -20 55d10+15000 5d5+200
+3000000 6000000
+8 8 1
+4 0 55d6+2500 4
+1 6 20 252
+1 2 20 143
+9 2 20 0
+4 3 20 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

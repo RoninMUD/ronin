@@ -1,0 +1,27 @@
+#28400
+key~
+A black metal key~
+A black metal key covered with ash is here.~
+~
+18 0 1
+0 0 0 0
+1 10 10
+100
+#28401
+campfire~
+a dying campfire~
+invalid~
+~
+15 0 0
+10 0 0 0
+10 10 10
+10
+E
+campfire~
+The campfire is almost dead now, but still 
+emiting a soft glow from the warm ashes. Upon 
+close examination you notice the glint of metal 
+within the ashes. 
+~
+#0
+$~

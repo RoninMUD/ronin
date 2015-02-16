@@ -1,0 +1,1650 @@
+#28000
+Main Street~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 2813
+D2
+~
+~
+0 -1 28003
+S
+#28001
+Ivory Way~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28002
+D2
+~
+~
+0 -1 28011
+D3
+~
+~
+0 -1 28003
+S
+#28002
+Ivory Way~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28004
+D2
+~
+~
+0 -1 28011
+D3
+~
+~
+0 -1 28001
+S
+#28003
+Intersection of Main Street and Ivory Way~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28000
+D1
+~
+~
+0 -1 28001
+D2
+~
+~
+0 -1 28009
+D3
+~
+~
+0 -1 28053
+S
+#28004
+Ivory Way~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28005
+D2
+~
+~
+0 -1 28010
+D3
+~
+~
+0 -1 28002
+S
+#28005
+Ivory Way~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28006
+D2
+~
+~
+0 -1 28013
+D3
+~
+~
+0 -1 28004
+S
+#28006
+Ivory Way~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28007
+D2
+~
+~
+0 -1 28013
+D3
+~
+~
+0 -1 28005
+S
+#28007
+Ivory Way~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28008
+D2
+~
+~
+0 -1 28014
+D3
+~
+~
+0 -1 28006
+S
+#28008
+Ivory Way~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28090
+D1
+~
+~
+0 -1 28069
+D2
+~
+~
+0 -1 28015
+D3
+~
+~
+0 -1 28007
+S
+#28009
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28003
+D1
+~
+~
+0 -1 28010
+D2
+~
+~
+0 -1 28016
+S
+#28010
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28001
+D1
+~
+~
+0 -1 28011
+D2
+~
+~
+0 -1 28017
+D3
+~
+~
+0 -1 28009
+S
+#28011
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28001
+D1
+~
+~
+0 -1 28012
+D2
+~
+~
+0 -1 28017
+D3
+~
+~
+0 -1 28010
+S
+#28012
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28005
+D1
+~
+~
+0 -1 28013
+D2
+~
+~
+0 -1 28019
+D3
+~
+~
+0 -1 28011
+S
+#28013
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28005
+D1
+~
+~
+0 -1 28014
+D2
+~
+~
+0 -1 28021
+D3
+~
+~
+0 -1 28012
+S
+#28014
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28007
+D1
+~
+~
+0 -1 28015
+D2
+~
+~
+0 -1 28021
+D3
+~
+~
+0 -1 28013
+S
+#28015
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28008
+D2
+~
+~
+0 -1 28022
+D3
+~
+~
+0 -1 28014
+S
+#28016
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28009
+D1
+~
+~
+0 -1 28017
+D2
+~
+~
+0 -1 28023
+S
+#28017
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28010
+D1
+~
+~
+0 -1 28018
+D2
+~
+~
+0 -1 28025
+D3
+~
+~
+0 -1 28016
+S
+#28018
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28012
+D1
+~
+~
+0 -1 28019
+D3
+~
+~
+0 -1 28017
+S
+#28019
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28012
+D1
+~
+~
+0 -1 28020
+D2
+~
+~
+0 -1 28026
+D3
+~
+~
+0 -1 28018
+S
+#28020
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28014
+D1
+~
+~
+0 -1 28021
+D2
+~
+~
+0 -1 28027
+D3
+~
+~
+0 -1 28019
+S
+#28021
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28013
+D1
+~
+~
+0 -1 28022
+D2
+~
+~
+0 -1 28029
+D3
+~
+~
+0 -1 28020
+S
+#28022
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28015
+D2
+~
+~
+0 -1 28030
+D3
+~
+~
+0 -1 28021
+S
+#28023
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28016
+D1
+~
+~
+0 -1 28024
+D2
+~
+~
+0 -1 28031
+S
+#28024
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28017
+D1
+~
+~
+0 -1 28025
+D2
+~
+~
+0 -1 28033
+D3
+~
+~
+0 -1 28023
+S
+#28025
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28019
+D1
+~
+~
+0 -1 28026
+D2
+~
+~
+0 -1 28033
+D3
+~
+~
+0 -1 28024
+S
+#28026
+The Ivory City Market~
+center of market
+~
+280 0 0
+D0
+~
+~
+0 -1 28018
+D1
+~
+~
+0 -1 28027
+D2
+~
+~
+0 -1 28033
+D3
+~
+~
+0 -1 28025
+S
+#28027
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28020
+D1
+~
+~
+0 -1 28028
+D2
+~
+~
+0 -1 28035
+D3
+~
+~
+0 -1 28026
+S
+#28028
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28020
+D1
+~
+~
+0 -1 28029
+D2
+~
+~
+0 -1 28036
+D3
+~
+~
+0 -1 28027
+S
+#28029
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28022
+D1
+~
+~
+0 -1 28030
+D2
+~
+~
+0 -1 28036
+D3
+~
+~
+0 -1 28028
+S
+#28030
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28022
+D2
+~
+~
+0 -1 28037
+D3
+~
+~
+0 -1 28029
+S
+#28031
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28023
+D1
+~
+~
+0 -1 28032
+D2
+~
+~
+0 -1 28038
+S
+#28032
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28024
+D1
+~
+~
+0 -1 28033
+D2
+~
+~
+0 -1 28040
+D3
+~
+~
+0 -1 28031
+S
+#28033
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28024
+D1
+~
+~
+0 -1 28034
+D2
+~
+~
+0 -1 28041
+D3
+~
+~
+0 -1 28032
+S
+#28034
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28026
+D1
+~
+~
+0 -1 28035
+D2
+~
+~
+0 -1 28043
+D3
+~
+~
+0 -1 28033
+S
+#28035
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28027
+D1
+~
+~
+0 -1 28036
+D2
+~
+~
+0 -1 28043
+D3
+~
+~
+0 -1 28034
+S
+#28036
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28029
+D1
+~
+~
+0 -1 28037
+D2
+~
+~
+0 -1 28044
+D3
+~
+~
+0 -1 28035
+S
+#28037
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28030
+D2
+~
+~
+0 -1 28044
+D3
+~
+~
+0 -1 28036
+S
+#28038
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28031
+D1
+~
+~
+0 -1 28039
+D2
+~
+~
+0 -1 28045
+S
+#28039
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28032
+D1
+~
+~
+0 -1 28040
+D2
+~
+~
+0 -1 28045
+D3
+~
+~
+0 -1 28038
+S
+#28040
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28032
+D1
+~
+~
+0 -1 28041
+D2
+~
+~
+0 -1 28047
+D3
+~
+~
+0 -1 28039
+S
+#28041
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28034
+D1
+~
+~
+0 -1 28042
+D2
+~
+~
+0 -1 28048
+D3
+~
+~
+0 -1 28040
+S
+#28042
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28035
+D1
+~
+~
+0 -1 28043
+D2
+~
+~
+0 -1 28048
+D3
+~
+~
+0 -1 28041
+S
+#28043
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28036
+D1
+~
+~
+0 -1 28044
+D2
+~
+~
+0 -1 28050
+D3
+~
+~
+0 -1 28042
+S
+#28044
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28037
+D2
+~
+~
+0 -1 28051
+D3
+~
+~
+0 -1 28043
+S
+#28045
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28038
+D1
+~
+~
+0 -1 28046
+D2
+~
+~
+0 -1 28052
+D3
+~
+~
+0 -1 28063
+S
+#28046
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28039
+D1
+~
+~
+0 -1 28047
+D3
+~
+~
+0 -1 28045
+S
+#28047
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28040
+D1
+~
+~
+0 -1 28048
+D3
+~
+~
+0 -1 28046
+S
+#28048
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28040
+D1
+~
+~
+0 -1 28049
+D3
+~
+~
+0 -1 28047
+S
+#28049
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28042
+D1
+~
+~
+0 -1 28050
+D3
+~
+~
+0 -1 28048
+S
+#28050
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28042
+D1
+~
+~
+0 -1 28051
+D3
+~
+~
+0 -1 28049
+S
+#28051
+The Ivory City Market~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28044
+D3
+~
+~
+0 -1 28050
+S
+#28052
+Inside the Gleaming Gates of Ivory~
+basically, it's locked shut until another area wants to be connected
+~
+280 0 0
+D0
+~
+~
+0 -1 28045
+S
+#28053
+Ivory Way~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28003
+D3
+~
+~
+0 -1 28054
+S
+#28054
+Intersection of Ivory Way and Guild Street~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28053
+D2
+~
+~
+0 -1 28068
+D3
+~
+~
+0 -1 28055
+S
+#28055
+Ivory Way~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28054
+D3
+~
+~
+0 -1 28056
+S
+#28056
+A Road Along the Wall of Ivory~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28057
+D1
+~
+~
+0 -1 28055
+D2
+~
+~
+0 -1 28058
+S
+#28057
+A Road Along the Wall of Ivory~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 2802
+D2
+~
+~
+0 -1 28056
+S
+#28058
+A Road Along the Wall of Ivory~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28056
+D2
+~
+~
+0 -1 28059
+S
+#28059
+A Road Along the Wall of Ivory~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28058
+D2
+~
+~
+0 -1 28060
+S
+#28060
+A Road Along the Wall of Ivory~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28059
+D1
+~
+~
+0 -1 28061
+S
+#28061
+A Road Along the Wall of Ivory~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28062
+D3
+~
+~
+0 -1 28060
+S
+#28062
+A Road Along the Wall of Ivory~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28064
+D1
+~
+~
+0 -1 28063
+D3
+~
+~
+0 -1 28061
+S
+#28063
+A Road Along the Wall of Ivory~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28045
+D3
+~
+~
+0 -1 28062
+S
+#28064
+Guild Street~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28065
+D1
+~
+~
+0 -1 28088
+D2
+~
+~
+0 -1 28062
+D3
+~
+~
+0 -1 28086
+S
+#28065
+Guild Street~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28066
+D1
+~
+~
+0 -1 28084
+D2
+~
+~
+0 -1 28064
+D3
+~
+~
+0 -1 28082
+S
+#28066
+Guild Street~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28067
+D1
+~
+~
+0 -1 28080
+D2
+~
+~
+0 -1 28065
+D3
+~
+~
+0 -1 28078
+S
+#28067
+Guild Street~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28068
+D1
+~
+~
+0 -1 28076
+D2
+~
+~
+0 -1 28066
+D3
+~
+~
+0 -1 28074
+S
+#28068
+Guild Street~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28054
+D1
+~
+~
+0 -1 28072
+D2
+~
+~
+0 -1 28067
+D3
+~
+~
+0 -1 28070
+S
+#28069
+The Wharf~
+A temporary description
+~
+280 0 0
+D3
+~
+~
+0 -1 28008
+S
+#28070
+The Paladin's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28068
+D3
+~
+~
+0 -1 28071
+S
+#28071
+The Holy Altar~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28070
+S
+#28072
+The Cleric's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28073
+D3
+~
+~
+0 -1 28068
+S
+#28073
+The Cleric's Altar~
+A temporary description
+~
+280 0 0
+D3
+~
+~
+0 -1 28072
+S
+#28074
+The Bard's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28067
+D3
+~
+~
+0 -1 28075
+S
+#28075
+The Minstre's Stage~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28074
+S
+#28076
+The Commando's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28077
+D3
+~
+~
+0 -1 28067
+S
+#28077
+The Training Grounds~
+A temporary description
+~
+280 0 0
+D3
+~
+~
+0 -1 28076
+S
+#28078
+The Ninja's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28066
+D3
+~
+~
+0 -1 28079
+S
+#28079
+The Shadowy Room~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28078
+S
+#28080
+The Nomad's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28081
+D3
+~
+~
+0 -1 28066
+S
+#28081
+The Practice Yard~
+A temporary description
+~
+280 0 0
+D3
+~
+~
+0 -1 28080
+S
+#28082
+The Warrior's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28065
+D3
+~
+~
+0 -1 28083
+S
+#28083
+The Fencing Field~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28082
+S
+#28084
+The Thieves Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28085
+D3
+~
+~
+0 -1 28065
+S
+#28085
+The Thief's Yard~
+A temporary description
+~
+280 0 0
+D3
+~
+~
+0 -1 28084
+S
+#28086
+The Magic-User's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28064
+D3
+~
+~
+0 -1 28087
+S
+#28087
+The Laboratory~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28086
+S
+#28088
+The Anti-Paladin's Guild~
+A temporary description
+~
+280 0 0
+D1
+~
+~
+0 -1 28089
+D3
+~
+~
+0 -1 28064
+S
+#28089
+The Unholy Altar~
+A temporary description
+~
+280 0 0
+D3
+~
+~
+0 -1 28088
+S
+#28090
+Ocean Street~
+A temporary description
+~
+280 0 0
+D0
+~
+~
+0 -1 28091
+D2
+~
+~
+0 -1 28008
+S
+#28091
+Ocean Street~
+A temporary description
+~
+280 0 0
+D2
+~
+~
+0 -1 28090
+S
+#28092
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#28093
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#28094
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#28095
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#28096
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#28097
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#28098
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#28099
+A temporary name~
+A temporary description
+~
+280 0 0
+S
+#0
+$~

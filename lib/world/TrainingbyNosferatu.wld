@@ -1,0 +1,590 @@
+#3500
+The Plains~
+   You are on the plains, to the north you notice a small path into the hills.
+~
+35 0 1
+D0
+~
+~
+0 0 4000
+D2
+~
+~
+0 0 3501
+S
+#3501
+The Lane~
+   You are strolling along a pleasant, shady lane. The road is lined on both
+sides by tall, stately trees which lend the scene with a sense of quiet
+serenity. You can follow the road north or south.
+~
+35 0 1
+D0
+~
+~
+0 0 3500
+D2
+~
+~
+0 0 3502
+S
+#3502
+The Turning Point~
+  The trees stand close here, and the tall, bushy undergrowth prevents you
+from seeing far in any direction save north, where a broad lane leads off into
+the distance; and west, where the same lane continues towards what looks like
+a fairly large city. The muted sounds of city commotion reach your ears from a
+distance; stray dogs barking, children crying, and street salesmen shouting.
+~
+35 0 1
+D0
+~
+~
+0 0 3501
+D1
+The village of Halfing
+~
+~
+0 0 4839
+D2
+~
+~
+0 0 3504
+D3
+~
+~
+0 0 3503
+D5
+~
+~
+0 0 6500
+S
+#3503
+City Entrance~
+  You stand on the outskirts of Midgaard, the capital of the land.
+The road leads east into the peace and quiet - and dangers - of the
+forest, and to the west it becomes the main street of the town, a
+confusion of shops, bars, and market places surrounding it.
+~
+35 4 1
+D0
+~
+~
+0 0 10001
+D1
+~
+~
+0 0 3502
+D2
+a very high tower
+~
+~
+0 0 1801
+D3
+~
+~
+0 0 3053
+S
+#3504
+A Long Path~
+     The path is becoming rockier and to the south lies a mountain range.
+The First Turning Point is north from here and the Second Turning Point
+is just at your south.
+~
+35 0 3
+D0
+~
+~
+0 -1 3502
+D2
+~
+~
+0 -1 3505
+S
+#3505
+Second Turning Point~
+     You are now at the Second Turning Point. The trees stand close here,
+and the tall, bushy undergrowth prevents you from seeing far in any direction.
+There is a big mountain at your east and you are covered by the shadow of this
+big mountain.
+~
+35 4 2
+D0
+~
+~
+0 -1 3504
+D1
+~
+~
+0 -1 2900
+D2
+~
+~
+0 -1 11300
+S
+#3550
+Entrance to a Small Field~
+     You have found a small field just south of Midgaard.  The citizens
+once used this field for sport, but in recent years it has become
+overgrown and full of annoying creatures.  Thus, this is the perfect
+place for a young adventurer to test weapons and skills.  You may also
+find a mysterious Guardian wandering around.  She has devoted her life
+to the well being of the very young and may heal your wounds if you
+seek her out and wait patiently near her. Remember that not all of these
+creatures will be simple to kill from the very start.**LOOK** at them and
+**CONSIDER** them before deciding for sure which creatures are about your
+size and which you would be better off avoiding for now. (type HELP
+CONSIDER for details.)
+~
+35 67108864 2
+D0
+You see the southern gates of Midgaard.
+~
+~
+0 -1 3095
+D2
+~
+~
+0 -1 3551
+S
+#3551
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and  brown. The grass ripples lightly in the soft breeze and seems almost
+to imitate small ocean waves. There are very low hills here and there but
+the land is chiefly flat. Where you now stand the grass brushes your
+knees, but you can see that further out it might reach chest level. Many
+small animals who live in this field are scurrying about, doing their
+business, and taking little notice of you. Other then the slight rustle of
+the grass and the occasional noise from an animal, this place is
+completely silent. From here you can exit in all directions.
+~
+35 67108864 2
+D0
+~
+~
+0 -1 3550
+D1
+~
+~
+0 -1 3556
+D2
+~
+~
+0 -1 3552
+D3
+~
+~
+0 -1 3554
+S
+#3552
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost to
+imitate small ocean waves. There are very low hills here and there but the
+land is chiefly flat. Where you now stand the grass brushes your knees, but
+you can see that further out it might reach chest level. Many small animals
+who live in this field are scurrying about, doing their business, and
+taking little notice of you. Other then the slight rustle of the grass and
+the occasional noise from an animal, this place is completely silent.
+From here you can exit in all directions.
+~
+35 67108864 2
+D0
+~
+~
+0 -1 3551
+D1
+~
+~
+0 -1 3560
+D2
+~
+~
+0 -1 3553
+D3
+~
+~
+0 -1 3559
+S
+#3553
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost to
+imitate small ocean waves. There are very low hills here and there but the
+land is chiefly flat. Where you now stand the grass brushes your knees, but
+you can see that further out it might reach chest level. Many small animals
+who live in this field are scurrying about, doing their business, and
+taking little notice of you. Other then the slight rustle of the grass and
+the occasional noise from an animal, this place is completely silent.
+There is an ancient looking wall made of loose stones which blocks your
+path to the south and west. It is above head level so you can't tell for
+sure what is on the other side, but it does add to the rustic beauty.
+You can leave from here to the north and east.
+~
+35 67108864 2
+D0
+~
+~
+0 -1 3552
+D1
+~
+~
+0 -1 3562
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3554
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and  brown. The grass ripples lightly in the soft breeze and seems almost
+to imitate small ocean waves. There are very low hills here and there but
+the land is chiefly flat. Where you now stand the grass brushes your
+knees, but you can see that further out it might reach chest level. Many
+small animals who live in this field are scurrying about, doing their
+business, and taking little notice of you. Other then the slight rustle of
+the grass and the occasional noise from an animal, this place is
+completely silent. There is an ancient looking wall made of loose stones
+which blocks your path to the north. It is above head level so you can't
+tell for sure what is on the other side, but it does add to the rustic
+beauty. You can leave from here to the south, east, or west.
+~
+35 67108864 2
+D1
+~
+~
+0 -1 3551
+D2
+~
+~
+0 -1 3559
+D3
+~
+~
+0 -1 3555
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3555
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost
+to imitate small ocean waves. There are very low hills here and there but
+the land is chiefly flat. Where you now stand the grass brushes your
+knees, but you can see that further out it might reach chest level. Many
+small animals who live in this field are scurrying about, doing their
+business, and taking little notice of you. Other then the slight rustle of
+the grass and the occasional noise from an animal, this place is
+completely silent. There is an ancient looking wall made of loose stones
+which blocks your path. It surrounds you from all sides but the path you
+came from. This spot is very lovely, with one of only a few trees the
+field has to offer standing tall and proud. The only exit from here is
+to the east.
+~
+35 67108864 2
+D1
+~
+~
+0 -1 3554
+E
+tree~
+     This tree is one of very few on this field. It looks proud and
+tall, yet somehow lonely. Some dead leaves surround its base and help
+paint a scene that would inspire any artist.
+~
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3556
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and  brown. The grass ripples lightly in the soft breeze and seems almost
+to imitate small ocean waves. There are very low hills here and there but
+the land is chiefly flat. Where you now stand the grass brushes your
+knees, but you can see that further out it might reach chest level. Many
+small animals who live in this field are scurrying about, doing their
+business, and taking little notice of you. Other then the slight rustle of
+the grass and the occasional noise from an animal, this place is
+completely silent. There is an ancient looking wall made of loose stones
+which blocks your path to the north. It is above head level so you can't
+tell for sure what is on the other side, but it does add to the rustic
+beauty. You can leave from here to the south, east, or west.
+~
+35 67108864 2
+D1
+~
+~
+0 -1 3557
+D2
+~
+~
+0 -1 3560
+D3
+~
+~
+0 -1 3551
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3557
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and  brown. The grass ripples lightly in the soft breeze and seems almost
+to imitate small ocean waves. There are very low hills here and there but
+the land is chiefly flat. Where you now stand the grass brushes your
+knees, but you can see that further out it might reach chest level. Many
+small animals who live in this field are scurrying about, doing their
+business, and taking little notice of you. Other then the slight rustle of
+the grass and the occasional noise from an animal, this place is
+completely silent. There is an ancient looking wall made of loose stones
+which blocks your path to the north. It is above head level so you can't
+tell for sure what is on the other side, but it does add to the rustic
+beauty. You can leave from here to the south, east, or west.
+~
+35 67108864 2
+D1
+~
+~
+0 -1 3558
+D2
+~
+~
+0 -1 3561
+D3
+~
+~
+0 -1 3556
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3558
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost
+to imitate small ocean waves. There are very low hills here and there but
+the land is chiefly flat. Where you now stand the grass brushes your
+knees, but you can see that further out it might reach chest level. Many
+small animals who live in this field are scurrying about, doing their
+business, and taking little notice of you. Other then the slight rustle of
+the grass and the occasional noise from an animal, this place is
+completely silent. There is an ancient looking wall made of loose stones
+which blocks your path. It surrounds you from all sides but the path you
+came from. This spot is very lovely, with one of only a few trees the
+field has to offer standing tall and proud. The only exit from here is
+to the west.
+~
+35 67108864 2
+D3
+~
+~
+0 -1 3557
+E
+tree~
+     This tree is one of very few on this field. It looks proud and
+tall, yet somehow lonely. Some dead leaves surround its base and help
+paint a scene that would inspire any artist.
+~
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3559
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost
+to imitate small ocean waves. There are very low hills here and there but
+the land is chiefly flat. Where you now stand the grass brushes your
+knees, but you can see that further out it might reach chest level. Many
+small animals who live in this field are scurrying about, doing their
+business, and taking little notice of you. Other then the slight rustle of
+the grass and the occasional noise from an animal, this place is
+completely silent. There is an ancient looking wall made of loose stones
+which blocks your path to the south and west. It is above head level so
+you can't tell for sure what is on the other side, but it does add to the
+rustic beauty. You can leave from here to the north and east.
+~
+35 67108864 2
+D0
+~
+~
+0 -1 3554
+D1
+~
+~
+0 -1 3552
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3560
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost to
+imitate small ocean waves. There are very low hills here and there but the
+land is chiefly flat. Where you now stand the grass brushes your knees, but
+you can see that further out it might reach chest level. Many small animals
+who live in this field are scurrying about, doing their business, and
+taking little notice of you. Other then the slight rustle of the grass and
+the occasional noise from an animal, this place is completely silent.
+From here you can exit in all directions.
+~
+35 67108864 2
+D0
+~
+~
+0 -1 3556
+D1
+~
+~
+0 -1 3561
+D2
+~
+~
+0 -1 3562
+D3
+~
+~
+0 -1 3552
+S
+#3561
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost to
+imitate small ocean waves. There are very low hills here and there but the
+land is chiefly flat. Where you now stand the grass brushes your knees, but
+you can see that further out it might reach chest level. Many small animals
+who live in this field are scurrying about, doing their business, and
+taking little notice of you. Other then the slight rustle of the grass and
+the occasional noise from an animal, this place is completely silent.
+There is an ancient looking wall made of loose stones which blocks your
+path to the south and east. It is above head level so you can't tell for
+sure what is on the other side, but it does add to the rustic beauty.
+You can leave from here to the north and west.
+~
+35 67108864 2
+D0
+~
+~
+0 -1 3557
+D3
+~
+~
+0 -1 3560
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3562
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost to
+imitate small ocean waves. There are very low hills here and there but the
+land is chiefly flat. Where you now stand the grass brushes your knees, but
+you can see that further out it might reach chest level. Many small animals
+who live in this field are scurrying about, doing their business, and
+taking little notice of you. Other then the slight rustle of the grass and
+the occasional noise from an animal, this place is completely silent.
+There is an ancient looking wall made of loose stones which blocks your
+path to the east. It is above head level so you can't tell for sure what
+is on the other side, but it does add to the rustic beauty.
+You can leave from here to the north, south, or west.
+~
+35 67108864 2
+D0
+~
+~
+0 -1 3560
+D2
+~
+~
+0 -1 3563
+D3
+~
+~
+0 -1 3553
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3563
+A Small Field~
+     The land here is covered with tall grasses in various shades of green
+and brown. The grass ripples lightly in the soft breeze and seems almost to
+imitate small ocean waves. There are very low hills here and there but the
+land is chiefly flat. Where you now stand the grass brushes your knees, but
+you can see that further out it might reach chest level. Many small animals
+who live in this field are scurrying about, doing their business, and
+taking little notice of you. Other then the slight rustle of the grass and
+the occasional noise from an animal, this place is completely silent.
+There is an ancient looking wall made of loose stones which blocks your
+path. It surrounds you from all sides but the path you came from. This
+spot is very lovely, with one of only a few trees the field has to
+offer standing tall and proud. The only exit from here is to the north.
+~
+35 67108864 2
+D0
+~
+~
+0 -1 3562
+E
+tree~
+     This tree is one of very few on this field. It looks proud and
+tall, yet somehow lonely. Some dead leaves surround its base and help
+paint a scene that would inspire any artist.
+~
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+S
+#3599
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing.  A sign on the wall catches your attention.
+
+             /----------------/
+             [  IMPORTANT:    ]
+             [                ]
+             [  DON'T TOUCH   ]
+             [   ANYTHING!    ]
+             [                ]
+             [----------------]/
+~
+35 588 0
+S
+#0
+$~

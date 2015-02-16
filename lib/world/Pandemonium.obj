@@ -1,0 +1,1216 @@
+#21600
+hellblade hell blade~
+HellBlade~
+There is a blade forged from hell sitting here.~
+DIE DIE DIE!~
+5 0 8193
+3 88 88 6
+10 10 10
+10
+X
+DIE DIE DIE!~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+19 5
+B
+536870912
+#21601
+key serpents~
+A serpents key~
+A slimy black key is lying here.~
+~
+18 524288 1
+100 0 0 0
+10 10 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21602
+bracer spiked wickedly~
+A Wickedly Spiked Bracer~
+A green, metal wristband studded with fangs is lying here.~
+~
+9 116537936 4097
+5 1 20 1073749936
+5 10 15000
+2
+X
+~
+257 0 0
+M
+~
+~
+~
+~
+A
+53 10
+A
+19 0
+A
+12 25
+B
+32
+#21603
+crown horned~
+Horned Crown~
+A blackend circle of iron with many projecting thorns is lying here.~
+~
+9 108051025 17
+10 5 10 1073749936
+10 500000 25000
+2
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+A
+47 5
+B
+8388608
+#21604
+cloak scales shimmering~
+A Shimmering Cloak of Scales~
+A pile of greenish scales is shimmering here.~
+~
+9 82901585 1025
+15 1 140926976 1073749936
+10 900000 40000
+2
+X
+~
+80 0 0
+M
+You wrap the cloak about your body and it shimmers with an evil light.~
+$n wraps the cloak about $m and it shimmers with an evil light.~
+~
+~
+A
+19 3
+A
+13 35
+A
+51 5
+B
+1048576
+#21605
+greatsword sword doom~
+Greatsword of Doom~
+A giant two-handed sword is here, glowing with a dark light.~
+$e raise your massive blade and try to cleave $V in half.~
+5 105968148 8193
+1 10 4 3
+30 1000000 65000
+2
+X
+$r Greatsword of Doom is engulfed in black lightning.~
+16 0 0
+M
+You wield the Greatsword of Doom and the blade begins to hum violently.~
+$n wields the Greatsword of Doom and a dark shadow falls over the room.~
+The massive blade stops humming and its evil light dims as you release it.~
+$n wipes the blood from $s Greatsword of Doom and sheathes the massive blade.~
+A
+18 2
+A
+19 2
+A
+48 5
+#21606
+platemail bloody plate stained~
+Blood-Stained Platemail~
+A blood-stained and battered set of platemail lies here.~
+~
+9 4237840 9
+22 4 10 1073749936
+30 500000 13000
+4
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+#21607
+hellfire ball flaming~
+A Flaming Ball of Hellfire~
+A mass of flickering flames lies here, burning everything around it.~
+~
+1 4196864 196609
+1 1 -1 1073749936
+5 3000000 50000
+2
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+B
+36
+#21608
+bracer black steel~
+Black Steel Bracer~
+A bracer of jet-black steel lies here, apparently forgotten.~
+~
+9 32768 4097
+5 1 140193792 1073749936
+35 150000 1500
+2
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 14
+#21609
+belt scales serpent~
+Belt of the Serpent~
+A pile of scales lies here.~
+~
+9 4194816 2049
+10 12 140193792 1073749936
+10 500000 15000
+2
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 20
+#21610
+shield spiked iron~
+Spiked Iron Shield~
+A heavily battered and dented shield has been discarded here.~
+~
+9 2560 513
+15 538976288 139644928 1073749936
+100 750000 9000
+3
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 8
+A
+14 -150
+#21611
+hood execution bloody cloth~
+Hood of Execution~
+A bloody scrap of cloth lies here. ~
+~
+9 113310208 17
+10 1 20 2
+4 2000000 75000
+2
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+50 5
+B
+32
+#21612
+voulge polearm~
+An Ancient Voulge~
+A large polearm is lying here, it appears to be quite old.~
+$n wield the Ancient Voulge like a giant meat cleaver and cut $V to pieces.~
+5 57344 8193
+0 5 5 12
+19 175000 3000
+10
+X
+$n grips an Ancient Voulge and prepares for combat.~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+33 5
+#21613
+pike awl awlpike pikestaff~
+An Ancient Awl-Pike~
+A very long and ancient looking spear is here.~
+~
+5 49152 8193
+0 6 6 10
+19 175000 3000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+A
+17 -5
+#21614
+maul war~
+War Maul~
+A stout hammer with a soild hardwood handle is lying here.~
+$s mighty hammer smashes into $V with sickening crunch.~
+5 33595392 8193
+0 10 3 6
+15 150000 1500
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 1
+#21615
+cleaver blood bloody stained~
+A Blood-Stained Cleaver~
+A bloody meat cleaver has been discarded here.~
+~
+5 512 8193
+0 5 6 12
+9 50000 500
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+A
+41 10
+#21616
+apron leather~
+A Thick Leather Apron~
+A soot covered leather blacksmiths apron is lying here.~
+~
+9 262144 1025
+20 1 14 30
+14 75000 3700
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+A
+23 5
+#21617
+armor oiled leather cuirbouilli~
+Oiled Leather Armor~
+A well-oiled set of cuirbouilli has been cast aside here.~
+~
+9 108056576 9
+18 4 10 1073749936
+6 250000 5000
+2
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -5
+A
+25 10
+A
+39 5
+#21618
+javelin lightning~
+Javelin of Lighting~
+A sizzling bolt of lighting has imbedded itself into the floor here.~
+~
+7 0 49153
+15 15 140931072 1073749936
+18 100000 15000
+2
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+38 10
+A
+18 3
+#21619
+burner incense bronze~
+Bronze Incense Burner~
+A small bronze incense burner on a chain is lying here, giving off a pungent fume.~
+~
+1 0 65537
+10 10 -1 1073749936
+3 15000 150
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#21620
+incense cone~
+A Cone of Incense~
+A tiny cone shaped object is lying here.~
+~
+1 0 81921
+1 1 1 1073749936
+1 500 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 2
+#21621
+chalice skull~
+A Chalice made from a Human Skull~
+A hideous chalice made from a skull is lying here.~
+~
+17 268435456 1
+2 2 13 1043557948
+5 10 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21622
+rod serpent~
+Rod of the Serpent~
+A short rod of blackened steel is here, its crown topped with the head of a serpent.~
+~
+12 2640 16385
+0 0 0 0
+19 500000 25000
+3
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 60
+A
+12 35
+A
+17 -10
+#21623
+heart blood demon~
+Heart of the Blood Demon~
+A gaint black heart is here, still pulsating and spouting blood.~
+~
+11 4718592 16385
+0 20 140931072 1073749936
+1 500000 10
+10
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+12 50
+A
+13 50
+A
+19 10
+T
+10
+B
+536870912
+#21624
+essense evil~
+Essense of Evil~
+A vial of swirling vapors is lying here, tightly sealed.~
+~
+10 0 1
+80 113 113 108
+10 200000 250000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21625
+avenger holy~
+Holy Avenger~
+A golden hilted sword is lying here, its blade glowing brightly.~
+$n raise the mighty blade and bring it down upon $V in holy fury!~
+5 112262465 8193
+1 8 5 14
+25 1000000 100000
+2
+E
+holy~
+One of legendary holy blades, handed down to the most
+pure and devout mortals, to aid them in the struggle
+against evil. A gift from the gods themselves!
+How it got here you can only imagine, but you are
+sure the warrior who wielded this mighty blade
+before you met a most gruesome fate at the
+hands of unspeakable evil.
+~
+X
+$n raises the Holy Avenger to the heavens and gives praise to the gods above.~
+16 0 0
+M
+You unsheathe the Holy Avenger and the blade flares with a pure white light.~
+$n draws forth the Holy Avenger, let the powers of darkness beware!~
+You sheathe the Holy Blade, and the room seems to grow darker.~
+$n sheathes the Holy Avenger, and the world seems a little darker.~
+A
+19 2
+A
+18 2
+A
+53 8
+B
+8212
+#21626
+staff serpent~
+The Staff of the Serpent~
+A metal-shod staff toppped with a fanged snake-skull is floating here.~
+~
+5 116439574 8193
+2 12 3 7
+25 2000000 175000
+1
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+12 15
+A
+53 2
+B
+16
+#21627
+chest small rune~
+Small Rune Covered Chest~
+A small chest is sitting here, every inch of it covered with runes of evil power.~
+~
+15 0 16385
+10 15 21628 0
+50 150000 9000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21628
+key runes~
+Key enlaid with evil runes~
+A small black key is lying here.~
+~
+18 0 1
+2 0 140931072 1073749936
+1 1 500
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21629
+spear long~
+A long spear ~
+A long sharp spear is resting on the ground here.~
+~
+5 0 8193
+0 5 5 10
+13 15000 750
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#21630
+chainmail hauberk~
+A Chainmail Hauberk~
+A fine suit of chainmail is heaped on the floor here.~
+~
+9 0 9
+15 4 10 1073749936
+15 25000 900
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+#21631
+shield battered~
+A Battered Shield~
+The well-worn shield of a fallen soldier is resting here.~
+~
+9 0 513
+14 10 140931072 1073749936
+10 10000 500
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+#21632
+gold coins~
+Lots of gold coins~
+A large pile of gold coins is here, a tribute to the fallen.~
+~
+20 0 1
+350000 460140635 459632239 1073749936
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21633
+gauntlets serpent skin~
+Serpent Skin Gauntlets~
+A pair of gauntlets is here, made from the hide of a reptile.~
+~
+9 108058624 129
+7 1 46 1073749936
+3 175000 23000
+3
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+45 5
+A
+29 5
+#21634
+eye serpent~
+The Eye of the Serpent~
+A small necklace bearing a emerald emblem of the serpent lies here.~
+~
+9 4250177 5
+8 1 20 2
+12 500000 35000
+7
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 5
+A
+13 5
+#21635
+ring ruby~
+Ruby Ring~
+A thick band of solid ruby lies here, gleaming brightly as it lies here.~
+invalid~
+9 38861312 3
+3 0 0 1073749936
+2 500000 50000
+2
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+13 10
+#21636
+platemail gothic~
+Gothic Platemail ~
+A black suit of ornate platemail has been left here.~
+~
+9 47245312 9
+18 4 140963840 1073749936
+120 750000 125000
+1
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 -1
+A
+18 0
+A
+52 2
+#21637
+rack weapon~
+A stout metal weapons rack~
+A stout metal weapons rack is mounted here, bristling with metal-shod weapons of war.~
+~
+15 0 1
+10 5 0 0
+10000 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21638
+glaive sharp~
+A wickedly sharp Glaive~
+A long pole with a sharp blade at the end is stuck into the floor here.~
+~
+5 0 8193
+0 6 6 14
+18 90000 1500
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#21639
+cloak tattered black~
+A Tattered Black Cloak~
+A few tattered shreds of cloth lie here in a heap.~
+~
+9 114356736 1025
+10 0 0 0
+10 150000 500000
+1
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+13 35
+A
+18 5
+A
+19 2
+T
+120
+B
+268435456
+#21640
+plate mail barding ~
+Plate-Mail Barding ~
+A giant set of metal plates and straps is sitting here.~
+~
+9 250671104 9
+30 4 10 1073749936
+200 500000 500000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 6
+A
+52 10
+B
+32
+#21641
+wings balrogs~
+A Mighty Balrog's Wings~
+A giant pair of severed batwings lies here.~
+~
+9 4205072 257
+6 1 15 100
+30 475000 90000
+4
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+14 100
+T
+1440
+B
+16777216
+#21642
+bell cow~
+A rusty cow bell~
+A rusted bell on a worn leather strap is here.~
+~
+24 0 16389
+0 0 0 0
+5 5000 5000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+5 1
+#21643
+scroll balrog skin~
+A balrog skin scroll~
+A bloody bit of parchment is here.~
+~
+16 0 16385
+0 0 0 0
+1 500 500
+10
+E
+scroll~
+Written in blood upon the scroll is a mantra of ancient power.
+~
+E
+mantra~
+There are several lines of text here, but they are faded
+and what little you can make out is in a language that is
+unknown to you.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 2
+#21644
+staff notched~
+A notched steel staff~
+A notched shaft of steel has been discarded here.~
+~
+18 524288 1
+1 168626750 879639584 1073749936
+15 1 1
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21645
+key iron~
+A iron key ~
+A key made of iron is here on the ground before you.~
+~
+18 524288 1
+0 0 0 0
+5 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21646
+key scaled~
+A scaled key~
+A strange looking reptiles scale is lying here.~
+~
+18 524288 1
+0 0 0 0
+4 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21647
+staff notched steel~
+A notched steel staff~
+A notched steel staff is lying here.~
+~
+18 524288 1
+0 0 0 0
+15 10 10
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21648
+crown stone~
+Stone Crown~
+A stone circlet is lying here.~
+~
+9 34816 17
+8 16 6 1073749936
+25 5000 1500
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 10
+A
+5 1
+#21649
+chainlink heavy iron~
+A Heavy Iron Chainlink~
+A think length of chain lies coiled here.~
+~
+9 4229632 4097
+7 1 19 1073749936
+25 5000 1500
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 25
+A
+18 1
+#21650
+beer stout stein~
+A Stein of Imperial Stout~
+A mug full of a thick black substance is here.~
+~
+17 524288 1
+3 3 16 0
+1 25 0
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21651
+mead mug~
+A Mug of Mead~
+A mug of wine with spices floating in it is sitting here.~
+~
+17 524288 1
+3 3 2 0
+1 25 10
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21652
+whiskey glass~
+A glass of whiskey~
+A small glass full of a dark brown liquid is here.~
+~
+17 524288 1
+1 1 5 0
+1 30 0
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21653
+platter beef roast~
+A huge platter of roast beef~
+A heaping platter of roast beef with fresh horseradish is sitting here.~
+~
+19 524288 1
+45 0 0 0
+5 150 0
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21654
+stew rabbit~
+A bowl of rabbit stew~
+A steaming bowl of stew is sitting here, getting cold.~
+~
+19 524288 1
+25 0 0 0
+2 80 10
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21655
+longbow bow hunters~
+A Hunters Longbow~
+A longbow made of ashwood is resting here.~
+~
+6 0 16385
+187 20 7 8
+18 35000 7000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21656
+quiver arrows~
+A quiver full of hunting arrows~
+A quiver made of leather and wood is sitting here, full of arrows.~
+~
+23 0 1
+0 0 187 0
+5 5000 1000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21657
+key bloody red~
+A bloody red key.~
+A small blood stained key is lying here.~
+~
+18 524288 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

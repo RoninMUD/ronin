@@ -1,0 +1,336 @@
+#20800
+rusted iron ladder~
+a rusted iron ladder~
+a rusted iron ladder dangles around here.~
+~
+12 0 0
+0 0 0 0
+800 10 10
+100
+E
+ladder~
+this rusty ladder looks old and ready to fall apart if pressure is applied.
+~
+E
+rusted~
+this rusty ladder looks old and ready to fall apart if pressure is applied. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20801
+sign~
+a decayed sign~
+a badly decayed sign is standing here.~
+~
+12 0 0
+0 0 0 0
+100000 10 10
+100
+E
+sign~
+Seas ned adve tur s beware! Monst ers flock in doze s and may be haz rdo s to
+yo r hea th.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20805
+brain spattered head~
+a spattered brain of an osquip~
+a very attractive looking brain sits here.~
+~
+19 524288 1
+24 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20811
+wooden mop~
+A wooden mop~
+A long looking mop is sitting here waiting for someone to take it home!~
+$r Mop cleans up the floor with a twist of a wrist!~
+5 0 8193
+0 1 10 0
+10 10 10
+90
+E
+mop~
+a trustworthy mop that everyone should have by his side.~
+E
+wooden~
+a trustworthy mop that everyone should have by his side.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20820
+Stick of Fungus Powers~
+Stick of Fungus Powers~
+a long stick sits here, radiating power.~
+~
+1 65 65537
+0 0 -1 0
+10 5000 8000
+25
+E
+fry~
+An extremely oily potato fry shines with a golden brilliance.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+#20821
+Moldy leg plates~
+A pair of moldy leg plates~
+A moldy looking set of leg plates lie here.~
+~
+9 256 33
+5 0 10 0
+8 10 8000
+20
+E
+leg~
+Mould covers these old leg plates that once shined to the dimmest of light.~
+E
+moldy~
+Mould covers these old leg plates that once shined to the dimmest of light.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+B
+4
+#20825
+Wings Cloaker Lord~
+Wings of the Cloaker Lord~
+A pair of wings are hovering about the room, waiting to take off.~
+~
+9 134217734 257
+10 0 0 0
+10 10 5000
+20
+E
+wings~
+The very touch of this material brings shivers down your spine. It is unlike
+any piece of fabric you've ever seen and it grabs around your body like a 
+glove. Seemingly, you sense an aura of protection to those who wear it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 100
+A
+9 4
+B
+16777216
+#20840
+shield mottled flesh~
+a shield of mottled flesh~
+a piece of rotting flesh lies here.~
+~
+9 200331264 513
+4 0 0 0
+18 50000 30000
+12
+E
+shield~
+This piece of gear looks like it was made out of scorched skin from some
+huge monster. It radiates with power and you can sense protective
+properties to those who bear this shield. 
+~
+E
+mottled~
+This piece of gear looks like it was made out of scorched skin from some
+huge monster. It radiates with power and you can sense protective
+properties to those who bear this shield.
+~
+E
+flesh~
+This piece of gear looks like it was made out of scorched skin from some
+huge monster. It radiates with power and you can sense protective
+properties to those who bear this shield.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+1 -2
+#20848
+a meatball~
+meatball~
+A hairy-lookin' Meatball rolls around here looking mighty tasty.~
+~
+7 0 49153
+20 2 0 0
+10 10 10
+90
+E
+meatball~
+A hearty-looking piece of meat waits for the moment when it will be devoured
+and digested up by your stomach fluids.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20851
+toupe~
+A toupe~
+A hairy-lookin' toupe is sitting here waiting to be worn!~
+~
+11 524288 17
+0 0 0 0
+10 10 10
+50
+E
+toupe~
+Looks like a rug, but wait! It fits perfectly on your head.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+32768
+#20852
+satchel~
+A satchel~
+A satchel rests in the corner here.~
+~
+15 0 16385
+1000 5 0 0
+45 32768 2000
+15
+E
+satchel~
+This small cotton bag has many patches on it, a leather strap attached.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 3
+#20854
+helmet dumb runt~
+a helmet for runts~
+A dumb-lookin' helmet is lying here, waiting for a runt to come along.~
+~
+0 134217729 17
+0 0 0 0
+10 50000 50000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#20856
+slug entrails bracelet~
+a bracelet of slug entrails~
+A pile of entrails sits here looking slimey.~
+~
+11 0 4097
+0 0 0 0
+10 10 5000
+30
+E
+bracelet~
+Slimey, gooey and look! It fits perfectly on your wrist.~
+E
+entrails~
+Slimey, gooey and look! It fits perfectly on your wrist.~
+E
+slug~
+Slimey, gooey and look! It fits perfectly on your wrist.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+18 1
+#20857
+rune bone key~
+a rune-boned key~
+A runed key is lying here untouched.~
+~
+18 524288 16385
+5 0 10 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

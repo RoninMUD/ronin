@@ -1,0 +1,273 @@
+#18400
+helmet~
+a plumed helmet~
+A helmet with plumes like insect feelers is lying here.~
+~
+9 0 17
+5 -1 -1 -1
+5 15000 2000
+15
+E
+helmet~
+You see nothing special...
+~
+X
+~
+0 0 0
+M
+You wear a plumed helmet.~
+You remove the plumed helmet.~
+$n wears a plumed helmet.~
+$n removes a plumed helmet.~
+A
+19 -4
+A
+18 4
+#18401
+plates~
+shining leg plates~
+A pair of shining leg plates is lying here.~
+~
+9 0 33
+4 -1 -1 -1
+6 20000 4000
+15
+E
+plates~
+The leg plates are polished to perfection.
+~
+X
+~
+0 0 0
+M
+You wear the shining leg plates.~
+You remove the shining leg plates.~
+$n wears some shining leg plates.~
+$n removes some shining leg plates.~
+A
+19 1
+A
+18 1
+A
+13 22
+#18402
+bone large~
+a large bone~
+A long bone is lying here.~
+~
+13 0 1
+0 0 0 0
+8 3000 3000
+25
+E
+bone large~
+A large bone from some animal.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18403
+a'dam~
+an a'dam~
+A bracelet and collar connected by a silvery leach is lying here.~
+~
+9 0 4097
+1 -1 -1 -1
+4 30000 30000
+10
+E
+a'dam~
+   A leash of silvery metal, connecting a bracelet in one end and a collar in 
+the other. You can't tell if its woven or jointed, but seems you be both.
+The a'dam is how the seanchen control women why can channel, like 
+the uncaught women in the white tower. With the a'dam you can inflict
+pain through the bracelet to the one wearing the collar and make 
+them do anything.
+~
+X
+~
+0 0 0
+M
+You wear the a'dam on your wrist.~
+You remove the a'dam from your wrist.~
+$n wears an a'dam on $s wrist.~
+$n removes an a'dam from $s wrist.~
+A
+19 1
+A
+12 3
+#18404
+blade~
+a Heron Blade~
+A blade with a heron on the hilt is lying here.~
+$n strike $V with $s sword.~
+5 0 8193
+0 2 5 3
+4 300000 30000
+10
+E
+blade~
+   The blade, very slightly curved and sharp only on one edge, bears a heron 
+etched into the steel. Short quillons, worked to look like braid, flanks the hilt.
+~
+X
+$n strike at $r target but it is not here.~
+0 0 0
+M
+You whirl the blade in you hands as you wield it.~
+You remove the sword.~
+$n whirls the blade as $e wields it.~
+$n removes his sword.~
+A
+19 13
+A
+18 1
+#18405
+cloak white~
+a white cloak~
+A white cloak is lying here.~
+~
+9 0 1025
+1 -1 -1 -1
+4 5000 1000
+13
+E
+cloak white~
+The cloak is white as snow. With a large sunburst on the back.
+~
+X
+~
+3 0 0
+M
+You throw the white cloak around your shoulder.~
+You remove the white cloak.~
+$n throws a white cloak around $s shoulders.~
+$n removes a white cloak.~
+A
+19 1
+A
+18 -2
+A
+13 -200
+T
+300
+#18406
+crook~
+a shepherds crook~
+A shepherds crook is lying here.~
+~
+4 0 16385
+0 0 0 0
+5 30000 10000
+15
+E
+crook~
+A long staff with a crook at the end.
+~
+X
+~
+0 0 0
+M
+You grab the shepherds crook.~
+You remove the shepherds crook.~
+$n grabs a shepherds crook.~
+$n removes a shepherds crook.~
+A
+19 2
+#18407
+bloody claw~
+bloody claw~
+A bloody claw is lying here.~
+~
+13 0 1
+0 0 0 0
+3 2000 1000
+20
+E
+bloody claw~
+A bloody claw of some beast.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18408
+pen~
+a pen~
+A pen is lying here.~
+~
+13 0 1
+0 0 0 0
+1 20 10
+30
+E
+pen~
+A dry pen. Got any ink?
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18409
+paper~
+sheets of paper~
+Some sheets of paper lays here.~
+~
+13 0 1
+0 0 0 0
+1 20 10
+20
+E
+paper~
+viktig info om ett eller annet, legg til senere
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18410
+cloak~
+The cloak of the Captain-Commander~
+A sturdy cloak lays here, white as snow and with a golden sunburst on its back.~
+~
+9 0 1025
+0 0 0 0
+20 5000 200
+100
+E
+cloak~
+   The cloak of the Captain-Commander is made of fine silk. A golded sunburst
+decorate the back of the cloak.
+~
+E
+cloak~
+The cloak of the Captain-Commander is made of fine silk. A golded sunburst
+decorate the back of the cloak.
+~
+X
+~
+0 0 0
+M
+You wear cloak of the Captain-Commander.~
+You remove the cloak of the Captain-Commander.~
+$n wears the cloak of the Captain-Commander.~
+$n removes the cloak of the Captain-Commander.~
+#0
+$~

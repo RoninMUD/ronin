@@ -1,0 +1,244 @@
+#18400
+renegade~
+a renegade Asha'man~
+A man with a dark cloak is walking here trying not to bee seen.
+~
+   The man is wearing a dark cloak and tries to keep his face hidden. 
+In the large crowd nobody seems to care about him, even if he seems
+glare at people passing by.
+~
+8 0 -750 Y
+38 -9 -10 2d50+4000 2d2+100
+70000 550000
+8 8 1
+1 0 2d2+400 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18401
+citizen~
+citizen~
+
+
+   The citizen has a ragged brown cloak and worn boots. Living conditions 
+are hard in a city and many citizens cant afford spending money on new 
+clothes.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 150 Y
+10 10 -5 1d1+1 2d2+18
+2000 150000
+8 8 2
+69 0 2d2+300 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18402
+gatekeeper~
+A gatekeeper~
+A gatekeeper is guarding the gate.
+~
+   A large guard in shining armor is protecting the gate. He keeps a close 
+eye on the people approaching the gate.
+~
+8 0 250 Y
+30 -10 -9 2d50+2900 4d5+30
+5000 80000
+8 8 2
+4 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18403
+Padrion Niall~
+Padrion Niall~
+Padrion Niall is standing here.
+~
+   Pedron Niall is all sinew and bone, with hair completely hair. He has 
+dark eyes starring at you intently.
+~
+8 268435584 1000 Y
+50 -20 -22 2d50+21000 10d10+800
+2000000 7000000
+8 8 1
+7 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18404
+Rhadam Asunawa~
+Rhadam Asunawa~
+Rhadam Asunawa is standing here.
+~
+   Rhadam Asunawa is tall and graying with a gaunt face and deep-set
+eyes and thick gray eyebrows. He wears a snowy white cloak with 
+only the red shepherd's crook of the questioners.
+~
+8 268435584 1000 Y
+50 -18 -21 2d50+15000 10d10+600
+1000000 4000000
+8 8 1
+7 0 4d4+500 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#18405
+whitecloak~
+A whitecloak~
+A whitecloak is walking the hallway.
+~
+   The whitecloak is wearing an armor polished to perfection with the 
+sunburst of the children of the light on the breast. A snow white cloak 
+hangs aroundhis shoulders.
+~
+8 0 800 Y
+38 -13 -14 2d50+6350 2d5+75
+20000 1050000
+8 8 1
+7 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18406
+Bawler~
+Bawler~
+Bawler is standing by his desk, looking up at you as you come close.
+~
+   The secretary wears a white shirt under his brown west. His hair is dark 
+with streaks of grey. His eyes are large and blue. His eyes seems to notice
+everything around him.
+~
+8 268435456 700 Y
+45 -16 -13 2d50+20000 2d70+400
+200000 1500000
+8 8 1
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18407
+Turak~
+Turak~
+Turak is standing here.
+~
+Turak is tall and hair dark eyes. His head is completely shaved and the 
+first two fingernails of each hand are lacquered blue.
+~
+8 268435456 700 Y
+55 -22 -25 2d50+29000 2d70+900
+2000000 2000000
+8 8 1
+4 0 4d4+500 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#18408
+guard~
+A seanchen guard~
+A seanchen guard is patrolling here.
+~
+   The guard wears a shining breastplate with a symbol of a raven on
+the chest. 
+~
+8 0 400 Y
+37 -16 -13 2d50+7100 2d2+70
+21000 1000000
+8 8 1
+4 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18409
+captain~
+A seanchen captain~
+A seanchen captain  is commanding his soldiers.
+~
+   The guard wears a shining breastplate with a symbol of a raven on
+the chest. The helmet looks very much like some monstrous 
+insect's head, with thin red plumes like feelers, and the wearer 
+seems to be peering out through mandibles.
+~
+8 0 450 Y
+43 -18 -18 2d50+10100 2d2+90
+50000 1500000
+8 8 1
+4 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18410
+raken~
+A raken~
+A raken is flying here.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+46 -14 -10 2d50+6000 2d10+150
+0 1800000
+8 8 1
+86 0 4d4+500 2
+8 4 15 0
+5 4 10 0
+0 0 0 0
+K
+200000 0 0 0 0 0
+#18411
+suldam domani~
+A suldam and domani~
+A suldam and domani is standing here, connected by a silver leash.
+~
+   Two women, one in gray with a collar with a silver leash connection the 
+woman to a bracelet on the other woman's wrist. The other woman is clad in 
+white with a symbol of forked lightning on the dress.
+~
+8 0 0 Y
+47 -10 -10 2d50+6400 2d10+50
+40000 2000000
+8 8 2
+1 0 4d4+500 3
+1 4 30 248
+1 4 30 218
+1 4 40 26
+0 0 0 0
+K
+0 0 0 0 0 0
+#18412
+animal grolm~
+A grolm~
+A large bestial animal is walking here.
+~
+   Weighing in at three hundred to five hundred pounds, the grolm is the 
+size of a large bear, only with the gray green coloration and skin 
+texture of very tough frogs.
+~
+8 0 0 Y
+47 -10 -20 2d50+12000 10d10+180
+0 3200000
+8 8 2
+1 0 4d4+500 2
+8 4 30 0
+5 4 30 0
+0 0 0 0
+K
+120000 0 0 0 0 0
+#18413
+lanfear~
+Lanfear~
+Lanfear is standing here.
+~
+   She is incredibly beautiful and graceful. She has pale, smooth skin, 
+long, black hair and eyes dark as night. She dresses in white with 
+silver jewelry.
+~
+8 268435456 -1000 Y
+60 -23 -20 2d50+43500 1d10+750
+10000000 10000000
+8 8 2
+1 0 4d4+500 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,501 @@
+#29200
+Top of the Warren  ~
+Knee deep blue grass is swaying gently in the cool breeze. You spot a hole in the middle of the grass. Small blue pebbles are arranged in a strange circle fashion. Strange chirps, howls, and growls can be heard emitting from the hole. 
+Looks like the only way is down.
+~
+292 0 4
+D5
+Dirt tunnel~
+~
+0 -1 29201
+S
+#29201
+Top of the rabbit hole~
+You are at the top of the rabbit hole. Mud and dirt is everywhere. The hole you came from has vanished. You sink deeper into the mud. Take a deep breath and down you go! 
+~
+292 9 0
+D5
+~
+~
+0 -1 29202
+S
+#29202
+Dark rabbit hole~
+You are at the top of the rabbit hole. Mud and dirt is everywhere. The hole you came from has vanished. You sink deeper into the mud. Take a deep breath and down you go! 
+~
+292 9 0
+D5
+~
+~
+0 -1 29203
+S
+#29203
+Dark rabbit hole~
+You are at the top of the rabbit hole. Mud and dirt is everywhere. The hole you came from has vanished. You sink deeper into the mud. Take a deep breath and down you go! 
+~
+292 9 0
+D5
+~
+~
+0 -1 29204
+S
+#29204
+Dark rabbit hole~
+You are at the top of the rabbit hole. Mud and dirt is everywhere. The hole you came from has vanished. You sink deeper into the mud. Take a deep breath and down you go! 
+~
+292 9 0
+D5
+~
+~
+0 -1 29205
+S
+#29205
+Mud floor~
+You are at the top of the rabbit hole. Mud and dirt is everywhere. The hole you came from has vanished. You sink deeper into the mud. Take a deep breath and down you go! 
+~
+292 9 0
+D5
+~
+~
+0 -1 29206
+S
+#29206
+First level of the warren~
+SPLAT!! After falling from the room above, you are covered with large amounts of mud. Low growls can be heard coming from the east. A sweet scent can be smelled lingering in the air. On the wall is scrawled barely legible rabbit scratch. 
+~
+292 9 0
+D1
+~
+~
+0 -1 29207
+S
+#29207
+First level of the warren~
+You see small brown rabbits laboring away in this room. Some are plowing the dirt, others are planting seeds. You see large stacks of foot long carrots in the corners of each room. A sign is pointing to the south that reads  
+Carrot Storage. A rabbit looks at you, throws acarrot at your head, yells fat-head and runs off.
+~
+292 9 0
+D1
+~
+~
+0 -1 29208
+D2
+~
+~
+0 -1 29231
+D3
+~
+~
+0 -1 29206
+S
+#29208
+First level of the warren~
+You see small brown rabbits laboring away in this room. Some are plowing the dirt, others are planting seeds. You see large stacks of big fat cabbages in the corners of each room. A sign is pointing to the south that reads Cabbage Storage.  
+A rabbit looks at you, throws a cabbage at your head, yells fat-head and runs off. 
+~
+292 9 0
+D1
+~
+~
+0 -1 29209
+D2
+~
+~
+0 -1 29222
+D3
+Dirt tunnel~
+~
+0 -1 29207
+S
+#29209
+First level of the warren.~
+A litter of moon rabbits are sitting here. They are mashing sticky rice into mochi. Large piles of rice are storage in 3 wicker baskets. As you stand in the room, the moon rabbits toss  sticky rice which clings to your face and hair.  
+~
+292 9 0
+D1
+Dirt tunnel~
+~
+0 -1 29210
+D3
+~
+~
+0 -1 29208
+S
+#29210
+First level of the warren.~
+You see a small puddle of water center in the northern part of the room. The water is crystal clear. As you move closer to the puddle, you trip and fall. A small brown rabbit bops you on your nose, he seems to want you to follow him. 
+You can hear faint barking in the distance.
+~
+292 9 0
+D0
+~
+~
+0 -1 29211
+D3
+~
+~
+0 -1 29209
+S
+#29211
+A large hallway~
+The dirt suddenly stops here, on the floor is a giant red carpet covering everything from wall to wall as far as the eye can see. There any many paintings on the walls. A large white rabbit statue is in the middle of the hallway.
+~
+292 9 0
+D0
+~
+~
+0 -1 29212
+D2
+~
+~
+0 -1 29210
+S
+#29212
+Turn in the hallway~
+The red carpet continues into this hallway, which only goes to the right. On the left wall there is a painting of an epic battle between a hound and a rabbit.  You see that someone has spilled some kind of  liquid on the floor in the corner.  
+You can hear faint barks  echoing somewhere in the distance.
+~
+292 9 0
+D1
+~
+~
+0 -1 29213
+D2
+~
+~
+0 -1 29211
+S
+#29213
+Turn in the hallway~
+In the middle of the floor is a patch of black velvet carpeting the runs to the north. On each side of the room is a small table with two chairs. On one table is a chessboard with a few missing pieces. On the other table is are smoldering 
+remains of something you can't make out.
+~
+292 9 0
+D0
+~
+~
+0 -1 29214
+D3
+~
+~
+0 -1 29212
+S
+#29214
+A dark red hallway~
+Dark red marble pillar are holding a large green mosaic on the ceiling. There a dark spots on the floor, which accent the creepiness of this room. There are emeralds eyes plastered on the wall that follow your every move.
+~
+292 9 0
+D2
+~
+~
+0 -1 29213
+D3
+~
+~
+0 -1 29215
+S
+#29215
+A dark red hallway~
+Dark red marble pillar are holding a large green mosaic on the ceiling. There a dark spots on the floor, which accent the creepiness of this room. There are emeralds eyes plastered on the wall that follow your every move.
+~
+292 9 0
+D1
+~
+~
+0 -1 29214
+D3
+~
+~
+0 -1 29216
+S
+#29216
+A dark red hallway~
+Dark red marble pillar are holding a large green mosaic on the ceiling. There a dark spots on the floor, which accent the creepiness of this room. There are emeralds eyes plastered on the wall that follow your every move.
+~
+292 9 0
+D1
+Dirt tunnel~
+~
+0 -1 29215
+D2
+Dirt tunnel~
+~
+0 -1 29217
+S
+#29217
+A dark red hallway~
+Dark red marble pillar are holding a large green mosaic on the ceiling. There a dark spots on the floor, which accent the creepiness of this room. There are emeralds eyes plastered on the wall that follow your every move.
+~
+292 9 0
+D0
+~
+~
+0 -1 29216
+D5
+~
+~
+0 -1 29218
+S
+#29218
+Forge~
+Large clouds of steam and smoke billow forth. In this room is a large forge. The floor and walls are smeared in soot and a unknown black substance. From the ceiling drops lumps of soot. The forge has speckles of blood dripping from it. 
+There is a small ladder below the forge. 
+~
+292 9 0
+D4
+~
+~
+0 -1 29217
+S
+#29219
+Mud room~
+All you can see in this room is a faint soft glowing light coming from somewhere. Somewhere and nowhere all at once. You can hear water dripping nearby. The floor is covered in knee deep mud. You find it hard to move. 
+~
+292 9 0
+D4
+~
+~
+0 -1 29218
+D5
+~
+~
+0 -1 29220
+S
+#29220
+Mud Pool~
+Squish! Squish! Squish! Emits from all around, this mud feels slick with blood, but not so deep. Dirt crumbles down nearby, water gushes out of a crack in the wall on the ceiling.
+~
+292 9 0
+D4
+~
+~
+0 -1 29219
+S
+#29221
+Carrot room~
+Carrots! Carrots! Carrots! This room is filled with carrots. Small carrots, large carrots, purple carrots, and blue carrots fill this room to the top and bottom. You begin to ponder where purple and blue carrots came from. There is a 
+very small hole to the south of you. You can see a small ray of light flicker from the hole. 
+~
+292 9 0
+D0
+~
+~
+0 -1 29207
+S
+#29222
+Cabbage room~
+Cabbages! Cabbages! Cabbages! Cabbages bigger than your head are stacked from the floor to the ceiling. Luckily for all of these cabbages are green. In the middle of the room is a long table with chopped of lettuce leaves everywhere
+As you move through the room, you slip on the cabbage leaves. You see a small hole in the middle of the floor.
+~
+292 9 0
+D0
+~
+~
+0 -1 29208
+S
+#29223
+Second level of the warren.~
+Broke bits of glass and jewels are strew about in a haphazard fashion. A large staff made of crystal is floating in the middle of the air. Three silver crowns are place in a triangle around the crystal staff.
+~
+292 9 0
+S
+#29224
+Second level of the warren~
+This room has a red aura too it. Blue lights flashes wildly on the ceiling, orange lights flash on the ceiling. Strange growls and hummings grow louder then softer with each passing moment.
+~
+292 9 0
+D2
+~
+~
+0 -1 29226
+S
+#29225
+Golden room~
+Large torches hang on the wall, giving off a golden glow.  The walls appear to be stacked from floor to ceiling with gold bricks. You notice that instead of dirt, you are standing on a golden floor.  Golden wind chimes hang from the ceiling.
+~
+292 9 0
+D0
+~
+~
+0 -1 29223
+D1
+~
+~
+0 -1 29226
+S
+#29226
+Silver room~
+In the four corners of the room, four feet high silver candle holders stand. In each of the candle are four silver candles that give off a silver hue.  The walls appear to be stacked from floor to ceiling with silver coins. You notice 
+that instead of dirt, you are standing on a silver floor.  
+~
+292 9 0
+D0
+~
+~
+0 -1 29224
+D3
+~
+~
+0 -1 29225
+S
+#29227
+White room~
+The entire room is a brilliant white. The glow from somewhere is nearly blinding. You see a small white rabbit dart in front of you. As your eyes adjust to the light you see more white rabbits with small little ears staring at you. 
+~
+292 9 0
+D1
+~
+~
+0 -1 29228
+D3
+~
+~
+0 -1 29226
+S
+#29228
+Mud tunnel~
+At first glance nothing looks unusual about this tunnel, until you notice the red mud ceiling. Blue mud covers the floor. Blue mud??? Yellow mud covers the walls. You can see a faint  purple light in the next room. SPLAT!!! A large 
+piece of the ceiling falls on your head, covering your nice clothing (hopefully you have clothes on, but hey if you want to talk walk around naked go ahead) and all over your face. Hey a free mud mask!
+~
+292 9 0
+D2
+~
+~
+0 -1 29229
+D3
+Dirt tunnel~
+~
+0 -1 29227
+S
+#29229
+Storage room hall~
+Large orange boxes are stacked in the right corner of this room. In the left corner of the room green boxes are wobbling back and forth. Looks like one get push could knock them over. From far away above your head you hear a loud crack
+as you hear something loud and heavy fall nearby. A large brown rabbit is lying spread -eagle (or rabbit in this case) next to you.
+~
+292 9 0
+D0
+~
+~
+0 -1 29228
+D3
+~
+~
+0 -1 29230
+S
+#29230
+Storage hall~
+A single rabbit is sitting here playing a card game.  He looks lost in thought and doesn't seem to notice your presence. Without looking up the rabbit yells "Get back to work ye, smelly ferret". A bag of coffee beans goes flying across 
+the bridge of your nose.
+~
+292 9 0
+D1
+~
+~
+0 -1 29229
+D3
+~
+~
+0 -1 29231
+S
+#29231
+A Large Domed room~
+In the middle of the ceiling is a natural skylight, which through golden rays of light shine down. In the center of the rays there is a patch of grass. Spread throughout floor, you can see small patches of grass poking through. You see a 
+sign that stays "Stay off the lawn!!!"
+~
+292 9 0
+D1
+~
+~
+0 -1 29230
+D5
+~
+~
+0 -1 29232
+S
+#29232
+Red tunnel~
+The hallways of this room are painted a bright red. The floor is painted a dull red. On the wall there are five drawings of fearsome rabbits with names etched beneath each drawing. There are long scratches in the floor leading to a dark hole.
+~
+292 9 0
+D1
+~
+~
+0 -1 29231
+D5
+~
+~
+0 -1 29233
+S
+#29233
+Waiting room~
+In the middle of the floor is a giant velvet couch.  In each direction there is a door. On each door is name and a crude drawing of a rabbit. The names and drawings are the same as in the previous room.  In front of each door there 
+hangs long silk cloth.
+~
+292 4 0
+D0
+~
+~
+0 -1 29237
+D1
+~
+~
+0 -1 29234
+D2
+~
+~
+0 -1 29236
+D3
+~
+~
+0 -1 29235
+D4
+~
+~
+0 -1 29232
+S
+#29234
+The plain of Kalulu~
+As you enter this room, you are magically whisked away to an open field. You are now in standing in the middle of a savannah. The tall grass is waist high. Far away to the east you can see a long, dark blue river snaking its way towards a 
+lake. The sun is directly above you. You can feel its heat pressing down upon you. The grass rattles as small object darts back and forth.
+~
+292 0 0
+D3
+~
+~
+0 -1 29233
+S
+#29235
+The teepee of Mishaabooz~
+You are now standing in an enormous teepee. There is a large fire casting orange shadows on the wall. You can see great shimmering spirits floating all around you. As your eyes adjust to the light, so can see a very large rabbit sitting 
+crossed legged, smoking on a peace pipe. He looks at you and grins evilly as he lets out a stream of tobacco smoke in your face.
+~
+292 0 0
+D1
+~
+~
+0 -1 29233
+S
+#29236
+The temple of Centzon Totochtin~
+Atop of an Aztec pyramid four hundred rabbits are standing around. In each corner of the temple is a giant golden statue holding drinking horns. Flowing through the horns is a clear liquid. It appears that all four hundred of the 
+rabbits are drunk. Centzon Totochtin stares at you and makes a threatening gesture at you, while moving a bladed weapon across his throat.
+~
+292 0 0
+D0
+~
+~
+0 -1 29233
+S
+#29237
+The forest of Wolpertinger~
+Two great White Mountains stand in the far distance. Tall pine trees are all around you. The forest floor is covered in pine needles that get stuck in your footwear.  There is a small opening in the middle of this forest. There is the 
+strangest creature dancing around a non-existent bonfire. It is making odd grunts and howls.
+~
+292 0 0
+D2
+~
+~
+0 -1 29233
+S
+#0
+$~

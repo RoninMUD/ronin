@@ -1,0 +1,110 @@
+#2700
+man old madman~
+The Madman~
+An old man is resting quietly on the cold, stony floor.
+~
+The sight of the man on the floor in front of you makes you feel uneasy. His
+almost lunatic face and eyes seem to pierce right into your soul, but at 
+the same time, his continuous, mindless blabbering lulls you into a feeling
+of safety...
+~
+157 268697600 -150 Y
+24 -3 2 10d12+1000 2d8+30
+134 28000
+5 5 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2701
+queen hive~
+The Hive Queen~
+The Hive Queen is lying here, on the top of a pile of gold mixed with slime.
+~
+Roughly 11 feet tall, the Hive Queen is a swollen, spidery nightmare. Her
+hide is glistening black, mottled with red. Her humanoid torso extends from
+that abhorrent abdomen supported by four legs, along with four arms projecting
+from her rib cage. Thin, muddy hair hangs about her head in an oily corona,
+long fangs protrude from her wide mouth, dripping venom. A poisonous stinger
+juts from the rear of her drooping abdomen.
+~
+16395 268468360 -1000 Y
+55 -20 -10 10d100+10000 3d60+100
+0 600000
+8 8 2
+76 4100 0d0+0 0
+0 0 0 0
+K
+500000 2720 2716 0 0 0 0
+#2702
+marikith elder~
+An Elder Marikith~
+Suddenly you notice a faint glimmer of red in the corner of your eye.
+~
+Against the dark background of the passage, you can hardly discern a huge
+black skinned humanoid with white glowing fangs. It has a pair of glowing
+red eyes that draw your attention like a magnet. Every once in a while,
+you can hear a silent hissing coming from this shadowy giant.
+~
+73 337412226 -1000 Y
+51 -13 -4 40d12+3000 4d6+69
+0 130000
+8 8 0
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2703
+marikith shadow~
+A Marikith~
+You see a large shadow moving in the murky waters near you, without a sound.
+~
+You are staring at a hulking, musclebound humanoid with tough, black, leathery
+skin. Its glowing red eyes seem to pierce straight into you, flickering on and
+off constantly. As the thing moves through the murky waters, the only thing
+you hear is a slight splashes of water.
+~
+109 270303232 -1000 Y
+35 -8 0 10d12+2000 3d6+45
+0 40000
+8 8 0
+68 0 0d0+0 0
+0 2 0 0
+K
+0 0 0 0 0 0 0
+#2704
+marikith larvae~
+The Marikith Larvae~
+The black larvae is squirming around restlessly on the ground.
+~
+The larvae has a black and leathery body and its body is soft and moist, 
+covered with smelly and slick substance, like oil. They are mainly made 
+of two parts, the body and four tentacles that seem very flexible and agile.
+~
+9 1048704 -1000 Y
+15 10 7 1d12+350 1d7+0
+0 3500
+8 8 0
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2705
+ghost girl~
+The young girl~
+A faint shape of a young, beautiful girl is resting here.
+~
+Suddenly the sad face of the girl turns to you, and smiles to you. She tries
+to say something, but stops suddenly. Her shape is faint and sometimes you
+can see through it.
+~
+139 17301632 500 Y
+28 -5 -10 10d10+800 1d8+8
+15 20
+9 9 2
+95 128 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

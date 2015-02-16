@@ -1,0 +1,558 @@
+#19500
+claegon clae~
+a Claegon~
+a Claegon is here, hovering above the Abyssal Plane.
+~
+This malformed beast was brought by the Dark Lord from his home
+realm to help patrol the outlying lands of his new kingdom.  Twice the
+size of a normal man, it hovers just above the silent abyssal plane.
+Nearly ursine in its shape, the features that draw your attention
+most are the razor-sharp claws, measuring almost four feet in length.
+~
+4204 1048576 -400 Y
+44 -8 -15 120d14+6500 10d5+10
+0 900000
+8 8 1
+66 0 1d1+1 1
+7 2 8 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19501
+bautzan ender world worlds~
+Bautzan, Ender of Worlds~
+Bautzan, the Great Beast from the Outer Realms is here, contemplating reality.
+~
+A visitor from a distant realm, Bautzan arrived one day, streaking
+through the heavens.  Observers mistook his shape for that of a rogue
+meteor plunged to earth, and many would-be collectors found their end
+in trying to collect a sample.  While not evil in any strict sense of
+the word, that which Bautzan requires to sustain himself, namely the
+life-energy of planets, has earned him his reputation. 
+
+~
+16458 402688168 0 Y
+52 -12 -10 400d400+10000 30d30+100
+0 5000000
+8 8 1
+67 0 500d10+1000 2
+1 4 10 212
+1 1 30 191
+0 0 9 0
+K
+2000000 0 0 0 0 0 0
+#19502
+salt elemental ele~
+a Salt Elemental~
+A pile of salt has formed into a ghastly parody of a human shape.
+~
+A truly startling apparition, this creature takes a somewhat human
+form, created by a swirling mass of salt crystals.  One of the rarer
+elemental beings, it is rumored they are the spawn of a fire and
+water elemental.  This has yet to be proven.
+~
+72 524290 0 Y
+70 -30 -6 100d100+20000 30d10+150
+0 3000000
+8 8 1
+65 209584128 1d1+1 1
+10 4 10 0
+0 0 0 2
+R
+32
+K
+0 0 0 0 0 0 0
+#19503
+octalon tentacled terror~
+Octalon, the Many-Tentacled Terror~
+An enormous, writhing mass of tentacles stirs up the water here.
+~
+An amorphous black tentacled creature, Octalon is one of the lords
+of night that the Dark Lord brought to help rule his kingdom.  Out of
+the darkness he was spawned, many aeons ago.  Ruler of the murky depths
+and the horrific creatures which live there, he possesses power far
+surpassing that of any of his minions.  While he is not confined to
+the water, his strength is far greater when in his native element.
+
+~
+57448 411306152 -1000 Y
+50 -25 -20 20000d4+15000 30d5+600
+0 4500000
+8 8 1
+98 134217730 1d1+10000 2
+8 4 10 0
+1 4 95 136
+0 0 9 286
+K
+4000000 0 0 0 0 0 0
+#19504
+basalt servitor~
+a Basalt Servitor~
+A large human-shaped statue of basalt wanders the city.
+~
+These servitors were created from basalt by the lord of the city,
+Chorlach-Togna.  Their hard chiseled features betray their only true
+purpose:  To protect their lord and master by whatever means neccesary.
+They wield long onyx glaives, and you do not relish the thought of
+finding yourself on the other end of one of these horrific weapons.
+~
+57448 805306516 -1000 Y
+47 -6 -7 50d10+6500 20d5+30
+500 1300000
+8 8 1
+64 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19505
+high priest night darkness~
+the High Priest of the Night~
+A tall man in long flowing robes of darkness sits here in meditation.
+~
+A darkness seems to cloak this man, and his features are nearly lost
+to the night.  What you do see of his face sends a shiver down your
+spine.  Nothing in his eyes could be called evil as such, but such a
+chilling air eminates from them, you are sure he would kill you as soon
+as look at you, if he felt it would further the cause of his Dark 
+master, Chatundah the Unspeakable.  He himself has promised his life
+away by accepting the position of high-priest, a position which lasts
+a mere four years, and culmunates in his inevitable sacrifice to his
+lord, Chatundah.
+
+~
+30826 402925704 -1000 Y
+70 -42 -28 200d200+35000 12d14+800
+24000000 24000000
+8 8 1
+2 1352 20d200+300 5
+1 4 10 93
+1 4 10 111
+1 4 15 119
+1 6 30 145
+1 6 10 192
+0 2 0 32
+K
+0 0 0 0 0 0 0
+#19506
+priest night~
+a Priest of the Night~
+A sallow man dressed in robes the color of darkness stands here in worship.
+~
+A lesser priest of the night, this man has sworn away all semblence of
+his former humanity in order to serve his new master, Chatundah the
+Unspeakable.  For a moment you think you see a glimmer of recognition
+in his eyes as he gazes upon you, but then something seems to rise up
+within him and crush that recognition.  You do not feel safe in the
+presence of this man.
+
+~
+106 402663432 -1000 Y
+48 -22 -18 40d50+14500 9d8+180
+500000 2300000
+8 8 1
+2 0 10d50+1000 1
+1 4 20 119
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19507
+human sacrifice slave~
+a Human Sacrifice~
+A miserable figure of a human is here, whimpering in a corner softly.
+~
+It is impossible to say how this poor wretch earned his fate, but you
+know there is nothing you can do to save him at this point.  Forced to
+live with the knowledge that he would be sacrificed when it pleased the
+priests
+forced to live with the knowledge that every meal meant one
+less companion and one more rung down the ladder of humanity
+forced
+to live with the knowledge that the land he once knew was now enveloped
+in darkness, this man is mad, as would you be, were you in his
+position.
+
+~
+74 1 600 Y
+21 12 5 10d4+8 2d3+4
+0 20000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19508
+chorlach togna chorlach-togna~
+Chorlach-Togna~
+Chorlach Togna, one of the greater lords of darkness, waits patiently for the fall of light.
+~
+The greatest of Xandolap's lords, Chorlach-Togna was born of the rift
+between Chaos and Order, during the early days of the universe.  
+Feeding on the discontent which was in the hearts of his parents at
+seeing their creation fall, he grew in the outer reaches of Void,
+awaiting the day when his purpose would become clear.  When the Dark
+Lord came upon him, he bound him to service with the promise that one
+day even his powerful mater and pater would one day bow before him.
+~
+42 268476584 -1000 Y
+70 -27 -17 100d200+85000 20d38+112
+0 9000000
+8 8 1
+63 939580909 1d1+1800 10
+1 5 8 137
+1 5 10 179
+1 5 20 182
+1 5 8 209
+1 4 12 242
+1 4 20 135
+1 4 9 38
+1 4 9 111
+1 5 12 105
+1 5 12 104
+0 0 0 376
+K
+5000000 0 0 0 0 0 0
+#19509
+lord city king~
+the Lord of the City~
+A tall man sits perched atop his throne, smiling with insane glee.
+~
+This is the puppet figure Chorlach-Togna chose to run the affairs of
+state in his city.  He holds sway over the basalt guardians, and once
+even over his own mind.  Now, alas, too long has he been in service of
+his lord, and his sanity has fallen as surely as his many foes.  His
+brain still retains enough cohesion to recognize you as an enemy
+however, and his eyes take on a purposeful look as he unsheathes his
+sword.
+
+~
+106 805570696 -1000 Y
+52 -10 -5 30d100+2200 50d9+130
+2000000 900000
+8 8 1
+69 131072 100d4+100 1
+9 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19510
+basalt guardian~
+a Basalt Guardian~
+A large basalt figure carved to resemble a warrior keeps guard.
+~
+These guardians were created from basalt by the lord of the city,
+Chorlach-Togna.  Their hard chiseled features betray their only true
+purpose:  To protect their lord and master by whatever means neccesary.
+They wield long onyx glaives, and you do not relish the thought of
+finding yourself on the other end of one of these horrific weapons.
+
+~
+16488 268697728 -850 Y
+53 -8 -7 6d10+4000 7d7+40
+0 1450000
+8 8 1
+64 0 50d10+500 2
+3 2 5 0
+1 5 10 23
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19511
+fallen one~
+a Fallen One~
+A large, misshapen beast rises from a pit in the ground.
+~
+It is impossible to say what this beast once was, only that it has
+fallen so far as to be unrecognizable.  Perhaps once an angel in the
+pantheon of the old inhabitants of the city, it too fell as its masters
+did.  Now it lives merely for the thrill of murder.  Not to survive,
+but to enjoy.
+
+~
+68698190 268806280 -950 Y
+45 -20 10 2d10000+5000 5d99+5
+0 3000000
+8 8 1
+67 0 3d99+99 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19512
+ixthian leopard cat ix~
+Ixthian Leopard~
+The Ixthian Leopard smiles slowly at you, showing its many rows of teeth.
+~
+This visitor from far beyond is certainly nothing to tangle with.
+While at first it appears to be a simple relation to the mountain
+lion, upon closer examination, something else stands out. A superior
+intellect is hidden beneath this feline exterior, and something about
+the way its eyes light over you sends shivers down your spine. 
+~
+202 134514858 0 Y
+55 -35 -20 20d2000+22000 30d30+600
+0 6000000
+8 8 1
+90 11 1d1000+1000 2
+5 2 20 0
+6 2 40 0
+0 0 0 30
+K
+12000000 0 0 0 0 0 0
+#19513
+paltro warrior friend~
+Paltro, Warrior in Exile~
+A long-hidden warrior of the old regime stands in the shadows, smiling at you.
+~
+Once the right-hand fighter for the king, Paltro was one of the few who
+managed to escape the pogrom launched by the Dark Lord upon the old
+inhabitants of the realm.  He is perhaps the only one of these few to
+retain his sanity, and it is with a relieved smile that he looks upon
+your countanence. 
+~
+16474 268707976 1000 Y
+62 -42 -28 200d100+45000 30d30+300
+350000 12000000
+8 8 1
+68 0 100d10+200 2
+3 7 20 0
+2 2 30 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19514
+shambling mass flesh shamble~
+a Shambling Mass of Flesh~
+A large mass of flesh shambles towards you.
+~
+A grotesque form, made entirely of what appears to be human flesh,
+comes shambling towards you.  You're not sure what will happen once it
+reaches you, but you have a sneaking suspicion it won't be asking you
+over for tea and crumpets.
+
+~
+48202 134219776 -700 Y
+43 -8 -12 200d50+8000 20d10+30
+0 3300000
+8 8 1
+94 1064705918 10d20+100 1
+10 2 20 0
+0 0 0 478
+K
+0 0 0 0 0 0 0
+#19515
+decay beast run~
+a Decay Beast~
+A medium-sized creature vaguely resembling an anteater comes moving towards you.
+~
+This creature doesn't appear to be physically dangerous in any way.
+You do notice, however, that it seems to leave behind it a trail of
+shattered weapons, decayed armor, and melted glass.  While you don't
+think it would cause you much harm, your possessions seem to be trying
+to pull away from it with an almost sentient will.
+
+~
+74 134482056 300 Y
+44 -2 -5 200d100+15000 3d8+12
+0 600000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+20000000 0 0 0 0 0 0
+#19516
+basalt sentry~
+the Basalt Sentry~
+A statue of basalt stands sentry here.
+~
+This sentry was created from basalt by the lord of the city,
+Chorlach-Togna.  His hard chiseled features betray his only true
+purpose:  To protect his lord and master by whatever means neccesary.
+He wields a long onyx glaive, and you do not relish the thought of
+finding yourself on the other end of this horrific weapon.
+
+~
+20554 268699776 -1000 Y
+48 -21 -8 20d100+8000 10d10+90
+0 2000000
+8 8 1
+64 0 1d1+1 2
+10 4 10 0
+3 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19517
+abomination human abom~
+a Human Abomination~
+A twisted and mutated human form stands slavering here at the entrance.
+~
+This beast was once human, you can tell that by its general shape.
+Sometime in the past however, a crazed sorcerer got his hands on this
+poor soul, and worked his art to create the beast you see in front of
+you.  Instilled with only one purpose, the man has no need of brain
+mass, and it seems instead that this excess mass has been transfered
+to create the long, imposing claws which seem to be heading towards
+your body.
+
+~
+16490 805306376 0 Y
+48 -28 0 1d1+25000 1d1+500
+0 9000000
+8 8 1
+69 939526976 1d1+1 1
+5 2 10 0
+0 0 9 256
+K
+0 0 0 0 0 0 0
+#19518
+magi mage arch-magi arch wizard sorcerer~
+an Arch-Magi~
+An imposing sorcerer smiles and rubs his hands with anticipation at the thought of killing you.
+~
+Dressed in robes woven from captured starlight, this sorcerer is one
+of the most powerful ever to inhabit this plane of existance.
+Coaxed to the realm of Xandolap by promises of even more power, he has
+taken up residence in this cave due to its strange properties.  Magical
+energies seem to crackle about his head, and he grins down at you
+with an amused look, as if wondering why you think you even have a chance at
+defeating him.  "Ah well,"  He mutters under his breath, "Have to
+keep in practice I suppose."  With that he begins weaving his hands in a
+series of complex gestures, all the while humming a soft tune.
+~
+8298 134490242 -1000 Y
+67 -8 10 100d100+20000 1d1+1
+3000000 6000000
+8 8 1
+1 0 200d200+20000 7
+1 7 10 241
+1 2 30 248
+1 6 30 252
+1 2 20 136
+1 5 9 130
+1 6 2 248
+1 6 2 246
+0 0 0 0
+R
+511
+K
+0 0 0 0 0 0 0
+#19519
+guard reptilian reptile~
+a Reptilian Guard~
+A reptilian guard stands watch over the toll-booth.
+~
+Sent by the High-Sorcerer Nil to protect the path to his tower, this
+guard stands a good eight feet tall, each foot lined with scales which
+make the nicest armor you've ever seen pale in comparison.  Thick rows
+of teeth fill its mouth, and saliva runs down its chin at the thought
+of your delicate flesh.
+~
+16490 268697600 -1000 Y
+44 -13 -20 30d400+4000 20d10+80
+0 1200000
+8 8 1
+80 0 10d10+100 3
+6 2 20 0
+8 2 20 0
+9 2 20 0
+0 0 0 0
+K
+900000 0 0 0 0 0 0
+#19520
+dralogh beast~
+a Dralogh~
+A sickly ooze crawls along the floor, coalescing into a demonic beast.
+~
+This beast is one of the nether creatures which had been kept at bay
+for the thousands of years the Vaurons ruled the land.  Now, with the
+coming of darkness, they have moved up, inhabiting the now empty cave 
+networks.  These beasts share only one similarity:  Their absolute 
+love for the taste of human flesh.
+
+~
+110 404488192 -1000 Y
+51 -24 8 50d20+14000 20d20+200
+1 1
+8 8 1
+81 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19521
+eel eyeless white~
+An Eyeless White Eel~
+A sickly albino eel slithers at the water's surface here, occasionally glowing slightly.
+~
+This disgusting creature seems to have been summoned from the depths of the
+endless pool.  It is completely white, and where its eyes should be are only
+thick sheets of flesh.  It hums with an eerie energy, and occasionally its
+form is wreathed in a halo of iridescent blue light. 
+~
+42 134219776 -400 Y
+51 -10 -3 1d100+1500 10d3+10
+0 1
+8 8 1
+84 0 20d10+120 2
+1 2 4 110
+1 2 20 37
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19522
+pike sharp fang~
+A Sharp-Fanged Pike~
+A long pike breaches the surface here, gnashing its razor-sharp teeth.
+~
+Nearly twelve feet long, this pike could easily be a century old.  Its long
+needle-sharp teeth form three distinct layers in its mouth, and it gnashes
+them wickedly in anticipation of a fresh meal.
+~
+42 805306368 -800 Y
+55 -16 -12 80d7+0 20d30+10
+0 1
+8 8 1
+84 0 5d10+20 1
+5 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19523
+squid inky black~
+An Inky-Black Squid~
+An enormous squid swims here, its long black tentacles churning the water.
+~
+This giant squid is as black as the inky water that surrounds it.  Its beak
+is jagged, and covered in the remnants of various aquatic creatures it has
+feasted on.  Its tentacles are covered with spiked suckers, and bits of
+blubber are stuck to them.
+~
+42 0 -450 Y
+41 2 -2 1d800+4000 12d12+6
+0 1
+8 8 1
+86 0 1d1+1 1
+1 2 10 25
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19524
+radiant angel
+~
+A Radiant Angel
+~
+A stunningly-beautiful angel floats here, wreathed in golden light.
+~
+This angelic creature possesses a tragic beauty.  A single
+tear wends its way down its porcelin cheek, and the golden
+light that wreathes its form seems reflected from another
+plane entirely.
+~
+8 0 1000 Y
+70 19 10 10d10+50000 30d60+0
+1 1
+8 8 1
+67 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

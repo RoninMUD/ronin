@@ -1,0 +1,28 @@
+#13300
+The Podium of Earth~
+You are standing in a small room, surrounded by thick earthen walls
+from all sides. Huge stony stairs lead upwards, to unknown darkness.
+~
+133 32768 3
+D4
+You can see stairs leading upwards.
+~
+~
+0 -1 13303
+S
+#13303
+The Earth Altar~
+A huge block of pure marble to serve as an altar to honor the Earth.
+The rumbling you hear from all directions sounds like an earthquake.
+Hopefully it's not an earthquake.
+~
+133 32768 3
+D5
+You can see stairs leading downwards.
+~
+~
+0 -1 13300
+S
+#0
+$~
+

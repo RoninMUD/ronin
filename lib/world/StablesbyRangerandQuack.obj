@@ -1,0 +1,418 @@
+#3900
+bridle~
+A leather bridle~
+A fine leather bridle lies here.~
+~
+12 524288 5
+0 0 0 0
+1 1000 1
+100
+E
+bridle~
+The bridle is made of a tough leather.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3901
+pitchfork~
+A pitchfork~
+A very dirty pitchfork rests against the wall here.~
+~
+5 0 8192
+0 1 6 11
+6 10 10
+100
+E
+pitchfork~
+It has three prongs, perfect for moving hay.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3902
+hay haystack~
+hay~
+A pile of hay is propped against the west wall.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+hay~
+A small pile of golden hay lies here.  It must be food for
+the mounts.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3903
+ring glass invisibility~
+a glass ring~
+A small ring made of glass lies here.~
+~
+11 0 3
+0 0 0 0
+1 500000 50000
+5
+E
+ring~
+It looks incredibly fragile, yet it is stronger than the hardest steel.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -8
+A
+19 -8
+B
+67125248
+#3904
+saddle~
+a saddle~
+A riding saddle rests here.~
+~
+12 524288 9
+4 0 0 0
+6 10 10
+100
+E
+saddle~
+Made from the finest leather availible, it will last decades, even centuries.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3905
+fountain~
+A large fountain~
+A large fountain stands here, its top going through the roof of the tunnel.~
+~
+17 0 0
+10000 10000 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3906
+feather sleeves~
+Feather Sleeves~
+A pair of feathered sleeves lie here on the ground.~
+~
+9 0 257
+8 0 0 0
+1 5000 500
+45
+E
+sleeves~
+They appear to be made from the feathers of a giant eagle and have been sewn
+together and painted in all the colours of the rainbow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 2
+A
+19 1
+#3907
+tail dragon~
+The tail of the Celestial Dragon~
+The long tail of the Celestial Dragon lies coiled here.~
+~
+9 0 2049
+12 0 0 0
+8 6000 20000
+10
+E
+tail~
+The long tail has coiled itself into a shape that is convenient to worn as a
+belt. Raw power can be felt flowing from the tail into the surroundings.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+36 15
+A
+32 25
+#3908
+tooth dragon~
+a dragon's tooth~
+A huge tooth of draconian origin lies here.~
+~
+4 0 16385
+48 30 30 39
+19 40000 10000
+10
+E
+tooth~
+The smallest of the dragon's fangs is as big as your thighbone.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+19 2
+#3909
+sign~
+A large sign has been posted on the wall here.~
+A sign has been posted here with a small note attached to it.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+100
+E
+sign~
+Mount commands are:
+ List - To get a list of availible mounts
+ Buy <mount> <name> - To buy a mount
+ Ride <mount/name> - To ride your mount
+ Dismount - To stop riding your mount
+ Free - To dismiss your mount back to the stables
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3910
+dragon blood potion vial~
+a vial of dragon's blood~
+A vial of dragon's blood lies here.~
+~
+10 0 1
+30 36 39 39
+2 20000 5000
+50
+E
+blood~
+It's searing hot to the touch!!
+
+~
+E
+vial~
+It's searing hot to the touch!!
+~
+E
+potion~
+It's searing hot to the touch!!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3911
+lockpicks~
+A set of lockpicks~
+A set of lockpicks has been carelessly left behind here.~
+~
+25 72404992 18433
+10 10 0 0
+2 10 50000
+20
+E
+lockpicks~
+This set of various small picks and utility tools will open almost every door
+in the world!!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+29 25
+A
+19 1
+#3912
+hankie silk handkerchief~
+a silk handkerchief~
+A silk handkerchief has been dropped here.~
+~
+11 0 5
+0 0 0 0
+1 10 10
+10
+E
+handkerchief~
+It's a square shaped object made from absorbent silk.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3913
+scroll~
+a neatly-bound scroll~
+A neatly-bound scroll lies here on the ground.~
+~
+16 0 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3914
+holy symbol~
+a holy symbol~
+A holy symbol lies here on the ground.~
+~
+0 0 16385
+0 0 0 0
+10 10 10
+10
+E
+symbol~
+It's the symbol of some faith or other.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3915
+unholy symbol~
+an unholy symbol~
+An unholy symbol lies here on the ground.~
+~
+0 0 16385
+0 0 0 0
+10 10 10
+10
+E
+symbol~
+It's the symbol of some faith or other.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3916
+note paper~
+a scribbled note~
+A crumpled piece of paper.~
+~
+32 524308 1
+3917 17080 704 518
+2 23 97
+79
+E
+note~
+
+ This note bears the marauder's mark, a symbol known to all
+highwaymen. It is a sign of the roguish brethren; showing
+this symbol grants one access to the dens of thieves across
+the land.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3917
+charm lucky marauder trinket~
+marauder's lucky charm~
+A shiny trinket of unknown origins.~
+~
+8 134217748 1
+0 0 0 0
+1 1709 1021
+0
+E
+charm~
+
+ The well-worn surface of this charm bears an engraving of
+the marauder's mark. Despite the mud and blood which has
+smeared the surface, the mark has a strange magical aura
+that shines through the grime like the sun shining through
+the clouds.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

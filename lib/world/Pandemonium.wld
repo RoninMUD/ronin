@@ -1,0 +1,3038 @@
+#21600
+A grove of decaying trees~
+   You are standing in a thick grove of dead and decaying trees.
+Not a single sound permeates the grove and the sound of your passing
+is muffled by your surroundings. The stench of decay is nearly 
+overwhelming yet for a brief moment you catch the faint scent of 
+sandalwood, but then it gives way once again to the cloying reek of 
+rotting vegetation.
+~
+216 0 3
+D0
+~
+~
+0 -1 21601
+D2
+~
+~
+0 -1 21602
+S
+#21601
+A dark forest~
+   A chill runs through your body as you trod through this dark and 
+forbidding forest. It is completely quiet save for the sound of the 
+chill north wind rustling though the trees.  There is no path here, 
+and it seems that no-one has been here in quite a long time.
+~
+216 0 3
+D0
+~
+~
+0 -1 21601
+D1
+~
+~
+0 -1 21602
+D2
+~
+~
+0 -1 21600
+D3
+~
+~
+0 -1 21607
+S
+#21602
+A dark forest~
+   You trek onwards into the dark expanse of forest, your boots mud 
+stained and thoroughly soaked.  All about your are tall, seemingly 
+ancient pine trees that tower above you and hide much of your 
+surroundings from view. Looking about you notice some tracks in the 
+muddy earth, something with four legs has passed by here recently 
+and although the tracks remind you of those of a wolf or dog, they 
+are far too big to belong to any canine you know of. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21603
+D1
+~
+~
+0 -1 21602
+D2
+~
+~
+0 -1 21602
+D3
+~
+~
+0 -1 21601
+S
+#21603
+A dark forest~
+   The wind picks up a bit and howls through the tree's about you, 
+the sound of which is quite mournful and disheartening. Huddling 
+further into your cloak you pause for a moment and gaze about you. 
+Save for your own footprints in the soft muddy earth, there is not a 
+single landmark in sight, and your footprints are quickly fading. 
+Unable to see the sky or stars above you and with no clear point to 
+set out for in the darkening forest, you mutter angrily to yourself 
+as you realize you are quite lost. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21603
+D1
+~
+~
+0 -1 21604
+D2
+~
+~
+0 -1 21602
+D3
+~
+~
+0 -1 21603
+S
+#21604
+A dark forest~
+   Trudging onwards through the endless sea of trees you notice that 
+the forest begins to thin out a little and the ground is a little 
+more solid. You pause to adjust your pack and a peculiar feeling 
+comes over you. You slowly look about and that is when it dawns on 
+you; There is no sound here. Not the rushing of the wind nor the 
+buzzing of insects, even your own breathing seems muffled. You strain 
+to listen and all that you can hear is the pounding of your pulse in 
+your ears as the oppressive silence of the forest seems to bear down 
+on you.  You curse your ill luck and quickly make ready to depart. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21605
+D1
+~
+~
+0 -1 21604
+D2
+~
+~
+0 -1 21604
+D3
+~
+~
+0 -1 21603
+S
+#21605
+A dark forest~
+   The chilling wind howls down and batters you from the north, all 
+about you the trees sway back and forth in the gale.  A moment later 
+the wind dies down a bit and you notice that you have entered a 
+particularly dark corner of the forest.  The trees about you seem 
+bigger and more menacing.  Out of the corner of your eye you catch 
+a flicker of movement, but as you turn to look you see nothing there. 
+Lying before you, embedded firmly in the cold hard ground, is a worn 
+stone slab and there seems to be some sort of runic markings on its 
+surface, but they are far to old and faded to make any sense of.
+~
+216 0 3
+D0
+~
+~
+0 -1 21603
+D2
+~
+~
+0 -1 21604
+D5
+The worn stone slab is engraved with many strange symbols and 
+pictures, none of which make any sense to you. It appears very old, 
+but still quite solid and heavy.
+~
+stone~
+8 -1 21606
+S
+#21606
+An ancient crypt~
+   The room in which you are standing was clearly never meant for 
+use by the living. Dust lies thick upon most of the room, but it is 
+clearly a crypt of some kind. Looking about the room you notice many 
+intricate stone carvings upon the walls and ceiling.  These depict 
+skeletal warriors and serpents locked in mortal combat. Upon the 
+northern wall there is a life size carving of a warrior in plate 
+armor with his hands resting upon a large sword. As you step closer 
+to examine the carving you hear the grating of steel on steel and to 
+your horror realize this carving has not only unsheathed its blade, 
+but is shambling towards you with the clear intent to make this your 
+final resting place.
+~
+216 32777 0
+D0
+~
+stoneportal~
+1 21644 21636
+D4
+~
+stone~
+8 -1 21605
+S
+#21607
+A dark forest~
+   You trek onwards into the dark expanse of forest, your boots mud 
+stained and thoroughly soaked.  All about your are tall, seemingly 
+ancient pine trees that tower above you and hide much of your 
+surroundings from view. Looking about you notice some tracks in the 
+muddy earth, something with four legs has passed by here recently 
+and although the tracks remind you of those of a wolf or dog, they 
+are far too big to belong to any canine you know of. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21607
+D1
+~
+~
+0 -1 21603
+D2
+~
+~
+0 -1 21607
+D3
+~
+~
+0 -1 21608
+S
+#21608
+A dark forest~
+   The wind picks up a bit and howls through the tree's about you, the 
+sound of which is quite mournful and disheartening. Huddling further 
+into your cloak you pause for a moment and gaze about you. Save for 
+your own footprints in the soft muddy earth, there is not a single 
+landmark in sight, and your footprints are quickly fading. Unable to 
+see the sky or stars above you and with no clear point to set out for 
+in the darkening forest, you mutter angrily to yourself as you 
+realize you are quite lost. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21620
+D1
+~
+~
+0 -1 21607
+D2
+~
+~
+0 -1 21608
+D3
+~
+~
+0 -1 21608
+S
+#21609
+A field near a small village~
+   A field of tall grass surrounds you, still wet with morning dew.
+Looking up at the cloudy sky, you wonder if this place ever gets any 
+sun. A cool breeze picks up and you huddle deeper into your cloak.  
+A short distance to the north is a small village and a lazy column of
+smoke drifts skywards.
+~
+216 0 0
+D0
+~
+~
+0 -1 21610
+D3
+~
+~
+0 -1 21619
+S
+#21610
+Next to a weather beaten tavern~
+   You slosh through the muddy dirt road of this small village and 
+cast a quick glance about you, and it takes but a moment to discern 
+that this is indeed a fairly unremarkable village.  The familiar 
+sounds of drunken rivalry coming from the large building to your east 
+proves that even simple country folk still know how to have a good 
+time. A sign hangs nearby advising travelers of the tavern's 
+hospitality.  Although the tavern itself looks like it has been 
+standing here for ages, it has clearly seen better days.  The sound 
+of laughter and the smell of roasted pork makes the tavern seem very 
+inviting indeed!  The well worn and muddy road leads onward from 
+here, and you spy several smaller buildings to the west.
+~
+216 0 0
+D0
+~
+~
+0 -1 21618
+D1
+~
+~
+0 -1 21617
+D2
+~
+~
+0 -1 21609
+D3
+~
+~
+0 -1 21611
+E
+sign~
+THE DRUNKEN TOAD, TRAVELERS WELCOME!
+~
+S
+#21611
+A muddy road in a small village~
+   The road here is quite muddy and there are several deep ruts that 
+mark the recent passage of a heavily laden wagons.  For a brief moment 
+there is silence, then the steady sound of a hammer falling assaults 
+your ears from the north.  There is the tell-tale stench of a tannery 
+nearby as well.  You are not quite sure if the smell is making you 
+feel the need to retch or whether it is making you homesick.
+~
+216 0 0
+D0
+~
+~
+0 -1 21612
+D1
+~
+~
+0 -1 21610
+D2
+~
+~
+0 -1 21613
+D3
+~
+~
+0 -1 21614
+S
+#21612
+A soot covered smithy~
+   The entire workroom before you is covered with a fine layer of soot 
+and the heat in here is of hell-like proportions.  You wonder how any 
+individual can last more than five minutes in a place like this, much 
+less make a living from working here.  A massive forge composes the 
+entire northern wall of this workshop and a giant anvil lies bolted to 
+the floor nearby with a half finished helmet still resting on it.  
+Sweat begins pouring down your body and you feel your vision becoming 
+quite blurry.  Best not stay here too long, lest you pass out from the 
+heat.
+~
+216 8 0
+D2
+~
+~
+0 -1 21611
+S
+#21613
+A small cottage~
+   This small cottage looks quite old, yet as you step inside, you 
+find it quite warm and comfortable. There are several simple 
+furnishings of fair craftsmanship and a large wolf-skin covered bed 
+lies in the corner.
+~
+216 8 0
+D0
+~
+~
+0 -1 21611
+S
+#21614
+A muddy road~
+   The muddy road stretches onward through this small village. A draft 
+of air hits you from the large building to the north, and the smell 
+nearly knocks you over, making your head swim. There is no doubt in 
+your mind why this place is on the very edge of the village, for if 
+it were any closer you doubt anyone would live here at all, save of 
+course, the tanner.
+~
+216 0 0
+D0
+~
+~
+0 -1 21615
+D1
+~
+~
+0 -1 21611
+D3
+~
+~
+0 -1 21616
+S
+#21615
+A tannery~
+   You cover your mouth and nose as you enter this horrid smelling 
+place. This is obviously a tannery and from the looks of things, 
+business is quite good. Leather goods of all kinds lie piled about 
+the workshop and at least a dozen hides lie stretched out on racks, 
+awaiting the attention of the master tanner.
+~
+216 8 0
+D2
+~
+~
+0 -1 21614
+S
+#21616
+A field near a small village~
+   A field of tall grass surrounds you.  As you walk along, a chill 
+breeze picks up and rustles the grass, making you shiver.  Looking 
+eastward, you spot a small village and catch the faint smell of a 
+tannery.  To the west and north, a forest of black trees extends out 
+before you.  To the south the grassy field continues.
+~
+216 0 2
+D0
+~
+~
+0 -1 21625
+D1
+~
+~
+0 -1 21614
+D2
+~
+~
+0 -1 21619
+D3
+~
+~
+0 -1 21625
+S
+#21617
+The Drunken Toad Tavern~
+   You enter a large, well lit room and are greeted by a most 
+welcoming of sights! A cheery place to say the least, a large fire 
+burns merrily in the hearth and there are half a dozen benches and 
+tables scattered about the room.  About half of the tables are 
+filled with patrons. A large, intricately carved wooden bar stretches 
+along the entire south wall of this establishment and several of the 
+village folk are partaking of the fine beer and ale they serve here. 
+A couple of the patrons wave as you enter and you are made to feel 
+most welcome. A rowdy bunch of villagers suddenly break out in song 
+and half the tavern joins in with much banging on the tables and 
+yells for the barmaid to bring another round.
+~
+216 8 0
+D3
+~
+~
+0 -1 21610
+S
+#21618
+A muddy road~
+   You trek down this muddy and decrepit road, casting a glance at the 
+grey and cloudy sky overhead as you walk.  You begin wondering how soon 
+until the next downpour soaks you to the bone. A small village lies to 
+the south and further north a forest of black trees spreads out before 
+you.
+~
+216 0 3
+D0
+~
+~
+0 -1 21624
+D2
+~
+~
+0 -1 21610
+S
+#21619
+A field near a small village~
+   A field of tall grass surrounds you.  The rustling of the grass is 
+soothing to your senses, although the chill wind biting at your face 
+and hands is making you shiver in your boots. To the northeast lies a 
+small village.  You begin to look forward to a nice evening by a warm 
+fire with a nice cup of mulled cider as simple thoughts of the village 
+flow through your mind.
+~
+216 0 2
+D0
+~
+~
+0 -1 21616
+D1
+~
+~
+0 -1 21609
+S
+#21620
+A dark forest~
+   You trek onwards into the dark expanse of forest, your boots mud 
+stained and thoroughly soaked.  All about your are tall, seemingly 
+ancient pine trees that tower above you and hide much of your 
+surroundings from view. Looking about you notice some tracks in the 
+muddy earth, something with four legs has passed by here recently 
+and although the tracks remind you of those of a wolf or dog, they 
+are far too big to belong to any canine you know of. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21620
+D1
+~
+~
+0 -1 21620
+D2
+~
+~
+0 -1 21608
+D3
+~
+~
+0 -1 21621
+S
+#21621
+A dark forest~
+   A chill runs through your body as you trod through this dark and 
+forbidding forest. It is completely quiet save for the sound of the 
+chill north wind rustling though the trees.  There is no visible path 
+here, and it seems that no-one has been here in quite a long time.
+~
+216 0 3
+D0
+~
+~
+0 -1 21621
+D1
+~
+~
+0 -1 21620
+D2
+~
+~
+0 -1 21620
+D3
+~
+~
+0 -1 21622
+S
+#21622
+A dark forest~
+   Trudging onwards through the endless sea of trees you notice that 
+the forest begins to thin out a little and the ground is a little 
+more solid. You pause to adjust your pack and a peculiar feeling 
+comes over you. You slowly look about and that is when it dawns on 
+you; There is no sound here. Not the rushing of the wind nor the 
+buzzing of insects, even your own breathing seems muffled. You 
+strain to listen and all that you can hear is the pounding of your 
+pulse in your ears as the oppressive silence of the forest seems to 
+bear down on you.  You curse your ill luck and quickly make ready to 
+depart. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21623
+D1
+~
+~
+0 -1 21621
+D2
+~
+~
+0 -1 21620
+D3
+~
+~
+0 -1 21622
+S
+#21623
+A dark forest~
+   A chill runs through your body as you trod through this dark and 
+forbidding forest. It is completely quiet save for the sound of the 
+chill north wind rustling though the trees.  There is no visible path 
+here, and it seems that no-one has been here in quite a long time.
+~
+216 0 3
+D0
+~
+~
+0 -1 21623
+D1
+~
+~
+0 -1 21621
+D2
+~
+~
+0 -1 21622
+D3
+~
+~
+0 -1 21624
+S
+#21624
+A dark forest~
+   The wind picks up a bit and howls through the tree's about you, the 
+sound of which is quite mournful and disheartening. Huddling further 
+into your cloak you pause for a moment and gaze about you. Save for 
+your own footprints in the soft muddy earth, there is not a single 
+landmark in sight, and your footprints are quickly fading. Unable to 
+see the sky or stars above you and with no clear point to set out for 
+in the darkening forest, you mutter angrily to yourself as you 
+realize you are quite lost. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21624
+D1
+~
+~
+0 -1 21623
+D2
+~
+~
+0 -1 21618
+D3
+~
+~
+0 -1 21623
+S
+#21625
+A dark forest~
+   Trudging onwards through the endless sea of trees you notice that 
+the forest begins to thin out a little and the ground is a little 
+more solid. You pause to adjust your pack and a peculiar feeling 
+comes over you. You slowly look about and that is when it dawns on 
+you; There is no sound here. Not the rushing of the wind nor the 
+buzzing of insects, even your own breathing seems muffled. You 
+strain to listen and all that you can hear is the pounding of your 
+pulse in your ears as the oppressive silence of the forest seems to 
+bear down on you.  You curse your ill luck and quickly make ready to 
+depart. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21624
+D1
+~
+~
+0 -1 21625
+D2
+~
+~
+0 -1 21609
+D3
+~
+~
+0 -1 21626
+S
+#21626
+A dark forest~
+   Tall black pine trees surround you on all sides, and their black 
+branches and needles sway gently in the wind. In the distance a lone 
+wolf howls, a sad and haunting cry in  this dark and ancient forest. 
+A deep feeling of loneliness wells up in your soul and you stop for a 
+moment to dwell on your own mortality and the purpose of existence 
+and how fast you can get the hell out of here as over a dozen more 
+wolves howl in answer to the call of the hunt. 
+~
+216 0 3
+D0
+~
+~
+0 -1 21627
+D1
+~
+~
+0 -1 21625
+D2
+~
+~
+0 -1 21626
+D3
+~
+~
+0 -1 21627
+S
+#21627
+A dark forest~
+   A chill runs through your body as you trod through this dark and 
+forbidding forest. It is completely quiet save for the sound of the 
+chill north wind rustling though the trees.  There is no visible path 
+here, and it seems that no-one has been here in quite a long time.
+~
+216 0 3
+D1
+~
+~
+0 -1 21626
+S
+#21628
+On the lake of `iblood`q~
+   Your arms and legs feel so heavy, and you can barely keep your 
+head above water.  Onward you struggle, although there are no 
+landmarks or anything else visible save for the ceiling of jagged 
+rocks.
+~
+216 36865 6
+D0
+~
+~
+0 -1 21640
+D1
+~
+~
+0 -1 21628
+D2
+~
+~
+0 -1 21628
+D3
+~
+~
+0 -1 21629
+S
+#21629
+On the lake of `iblood`q~
+   A vast lake of blood stretches out in all directions.  The crimson 
+waters ripple about you, and you struggle to keep your head above the 
+fetid liquid. Your arms grow tired and you have to struggle harder to 
+make any progress. Turn back now, or this hellish place will be last 
+thing you ever see.
+~
+216 36865 6
+D0
+~
+~
+0 -1 21635
+D1
+~
+~
+0 -1 21628
+D2
+~
+~
+0 -1 21630
+D3
+~
+~
+0 -1 21630
+S
+#21630
+On the lake of `iblood`q~
+   Your arms and legs feel so heavy, and you can barely keep your head 
+above water.  Onward you struggle, although there are no landmarks or 
+anything else visible save for the ceiling of jagged rocks.
+~
+216 36865 6
+D0
+~
+~
+0 -1 21632
+D1
+~
+~
+0 -1 21629
+D2
+~
+~
+0 -1 21631
+D3
+~
+~
+0 -1 21630
+S
+#21631
+On the lake of `iblood`q~
+   A vast lake of blood stretches out in all directions.  The crimson 
+waters ripple about you, and you struggle to keep your head above the 
+fetid liquid. Your arms grow tired and you have to struggle harder to 
+make any progress. Turn back now, or this hellish place will be last 
+thing you ever see.
+~
+216 36865 6
+D0
+~
+~
+0 -1 21630
+D1
+~
+~
+0 -1 21631
+D2
+~
+~
+0 -1 21634
+D3
+~
+~
+0 -1 21630
+S
+#21632
+On the lake of `iblood`q~
+   Your arms and legs feel so heavy, and you can barely keep your head 
+above water.  Onward you struggle, although there are no landmarks or 
+anything else visible save for the ceiling of jagged rocks.
+~
+216 36873 6
+D0
+~
+~
+0 -1 21630
+D1
+~
+~
+0 -1 21633
+D2
+~
+~
+0 -1 21630
+D3
+~
+~
+0 -1 21632
+S
+#21633
+On the lake of `iblood`q~
+   A vast lake of blood stretches out in all directions.  The crimson 
+waters ripple about you, and you struggle to keep your head above the 
+fetid liquid. Your arms grow tired and you have to struggle harder to 
+make any progress. Turn back now, or this hellish place will be last 
+thing you ever see.
+~
+216 36865 6
+D0
+~
+~
+0 -1 21633
+D1
+~
+~
+0 -1 21695
+D2
+~
+~
+0 -1 21630
+D3
+~
+~
+0 -1 21632
+S
+#21634
+On the lake of `iblood`q~
+   The lake of blood is rough and choppy here, and the mighty current 
+tosses you about like a child's plaything.  You struggle as best you 
+can against the relentless current, but it is a losing battle. You had 
+better swim for your life or risk being drawn into the depths of this 
+horrid lake.
+~
+216 36865 6
+D0
+~
+~
+0 -1 21631
+D1
+~
+~
+0 -1 21632
+D2
+~
+~
+0 -1 21628
+D3
+~
+~
+0 -1 21633
+D5
+~
+~
+0 -1 21700
+S
+#21635
+A small island of jagged rock~
+   You have finally reached the center of this gruesome lake.  A small 
+island of jagged rocks juts out from the crimson liquid.  A six foot 
+statue of a half-man, half-serpent dominates this small island.  Its 
+horrible visage is very oppressive and hostile.  Your ears perk up as 
+you hear a sound, and you strain to listen.  Very softly it comes, 
+barely audible... HisSsssSSssSsS.
+~
+216 32769 6
+D0
+~
+~
+0 -1 21628
+D1
+~
+~
+0 -1 21628
+D2
+~
+~
+0 -1 21629
+D3
+~
+~
+0 -1 21628
+S
+#21636
+An Ancient Crypt~
+   You have entered into the second chamber of the crypt, and it 
+appears much like the first, only smaller.  Both sides of the 
+narrow crypt are heavily carved with images of skeletal warriors and 
+knights fighting against huge fanged serpents and mis-shaped serpent 
+men.  On the northern wall of the crypt is a large carving of great 
+craftsmanship depicting a mighty army of skeletal warriors facing one 
+huge serpent many times their size. Above this carving you see another, 
+yet this one is much smaller, and depicting a tall man with a grim 
+expression holding a large sword.  Directly below the carving of this 
+man, is what appears to be another stone portal, leading into a third 
+chamber of the crypt.
+~
+216 32905 0
+D0
+~
+stoneportal~
+2 21647 21637
+D2
+~
+stoneportal~
+1 -1 21606
+S
+#21637
+An Ancient Crypt~
+   You have entered into the third chamber of this crypt.  This one 
+is even smaller than the others. Glancing about, you notice that this 
+crypt is also much cleaner than the other two, there is not a single 
+speck of dust anywhere.  Everything is in perfect order and although 
+you are sure this crypt is quite ancient, everything in this chamber 
+looks as if it was just left here moments ago.  The carvings in this 
+chamber are fresh looking and clear, with an amazing amount of detail. 
+The west wall depicts a hoard of serpent-men being driven before a 
+army of skeletons and their mounts. The east wall pictures twelve 
+skeletal warriors bearing a fallen warrior, the fallen figure wears a 
+crown and you assume that must have been their king. The northern wall 
+depicts a panoramic scene of beautiful detail, with a temple on a 
+mountain surrounded by a vast forest of majestic trees. There are no 
+skeletal warriors shown in this carving, but the in scene above there 
+is the carved head of a serpent, severed from its body. Next to this 
+is written several lines of a strange text, one that you have never 
+seen before. Glancing about the room once more, you notice the only 
+exit is back the way you came.
+~
+216 32777 0
+D1
+A large statue of a skeletal warrior stands against the eastern wall.
+~
+statue~
+8 -1 21639
+D2
+~
+stoneportal~
+8 -1 21636
+D3
+A large statue of a skeletal warrior stands against the western wall.
+~
+statue~
+8 -1 21638
+S
+#21638
+A Small Tomb~
+   A large slab of polished marble lies in the center of this room. 
+All about the base of the slab are small piles of gems, jewelry and 
+objects wrought of gold and silver.  Clearly this is the tomb of 
+some departed king.
+~
+216 32905 0
+D1
+~
+statue~
+8 -1 21637
+S
+#21639
+A Small Crypt~
+   A large stone slab dominates the room.  About it are stacked 
+various weapons and armor, all of which are old and battered 
+beyond repair.
+~
+216 32905 0
+D3
+~
+statue~
+8 -1 21637
+S
+#21640
+On the lake of `iblood`q~
+   A vast lake of blood stretches out in all directions.  The crimson 
+waters ripple about you, and you struggle to keep your head above the 
+fetid liquid. Your arms grow tired and you have to struggle harder to 
+make any progress. Turn back now, or this hellish place will be last 
+thing you ever see.
+~
+216 36865 6
+D0
+~
+~
+0 -1 21640
+D1
+~
+~
+0 -1 21640
+D2
+~
+~
+0 -1 21628
+D3
+~
+~
+0 -1 21640
+S
+#21641
+Halls of Attrition~
+   The black stone of the hall reverberates with the ever present 
+sound of dull chanting. A thin trail of smoke wafts through the room, 
+causing you to nearly gag, as the smell of charnel burns your nose. 
+Somewhere nearby, you can distinctly smell that bodies are burning. 
+This dark sect clearly does not waste time dealing with possible 
+would-be defilers. 
+~
+216 36873 0
+D0
+~
+~
+0 -1 21716
+D1
+~
+~
+0 -1 21642
+D2
+~
+~
+0 -1 21644
+D3
+~
+~
+0 -1 21717
+S
+#21642
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the 
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21643
+D3
+~
+~
+0 -1 21641
+S
+#21643
+Halls of Attrition~
+   The black stone of the hall reverberates with the ever present 
+sound of dull chanting. A thin trail of smoke wafts through the room, 
+causing you to nearly gag, as the smell of charnel burns your nose. 
+Somewhere nearby, you can distinctly smell that bodies are burning. 
+This dark sect clearly does not waste time dealing with possible 
+would-be defilers. 
+~
+216 36873 0
+D1
+~
+~
+0 -1 21715
+D3
+~
+~
+0 -1 21642
+D5
+Looking down you notice a very dark and narrow passageway leading down 
+into the earth. It would be a very tight fit, but you might be able to 
+climb down here.
+~
+dark~
+11 -1 21653
+S
+#21644
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the 
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting.
+~
+216 32777 0
+D0
+~
+~
+0 -1 21641
+D1
+~
+~
+0 -1 21645
+D2
+~
+~
+0 -1 21647
+D3
+~
+~
+0 -1 21711
+S
+#21645
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the 
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting.  A crude ladder stretches upwards from 
+here.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21646
+D2
+~
+~
+0 -1 21648
+D3
+~
+~
+0 -1 21644
+D4
+~
+ladder~
+11 -1 21650
+S
+#21646
+Halls of Attrition~
+   The black stone of the hall reverberates with the ever present 
+sound of dull chanting. A thin trail of smoke wafts through the room, 
+causing you to nearly gag, as the smell of charnel burns your nose. 
+Somewhere nearby, you can distinctly smell that bodies are burning. 
+This dark sect clearly does not waste time dealing with possible 
+would-be defilers. 
+~
+216 36873 0
+D2
+~
+~
+0 -1 21649
+D3
+~
+~
+0 -1 21645
+S
+#21647
+Halls of Attrition~
+   The smooth black of the stone walls are tainted a dull red here, 
+and the echo of chanting seems to have stopped for the moment. A 
+reddish powder covers part of the floor at your feet. Peering closer, 
+it appears to be dried blood, quite a bit of it too. A sharp, hissing 
+command has shouted from below and it begins to echo throughout the 
+hall. The sound of foot fall reaches your ears, and seems to be 
+getting closer.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21644
+D1
+~
+~
+0 -1 21648
+D2
+~
+~
+0 -1 21713
+D3
+~
+~
+0 -1 21712
+S
+#21648
+Halls of Attrition~
+   The air in this passage is thick with the reeking stench of burning 
+corpses. A shrill scream in the distance startles you, then is followed 
+by another. Someone, somewhere in this dark pit of evil, is dying what
+sounds like a most horrible death. Suddenly, the distant chanting 
+increases in pitch and another high pitched scream comes forth from the
+depths, but it is quickly silenced. You break out in a cold sweat and 
+force yourself onward.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21645
+D1
+~
+~
+0 -1 21649
+D3
+~
+~
+0 -1 21647
+S
+#21649
+Halls of Attrition~
+   The passage here is much cleaner and the stone walls have been worn 
+very smooth. A tiny snake hisses at you from the corner of the room 
+before fleeing into a small crevice in the wall. You notice burn marks 
+on the ceiling here, and as you contemplate their meaning, the whole 
+hall is shaken by its foundations, nearly throwing you to the floor. A 
+bone-chilling roar echoes throughout the hall, and again the hall 
+trembles. There is some shouting in the distance, but it soon dies down, 
+leaving you to wonder what the hell is going on.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21646
+D1
+~
+~
+0 -1 21714
+D3
+~
+~
+0 -1 21648
+S
+#21650
+A pitch black passageway~
+   This passageway is very stuffy and its hard to breathe in here.  
+All about you is the faint scent of sandalwood.  There is a faint 
+hint of something else, a familiar smell, but one that you are 
+unable to place. Even with your light you can barely see anything 
+further than arms reach away, and you have frantic fleeting notions 
+of a hoard of demons lying in wait just out of sight in the inky 
+blackness.  This fear is quickly abated as your eyes slowly adjust 
+to the darkness, and you realize that this room is actually quite 
+small, a mere ten by ten passageway.  You notice a crude ladder in 
+one corner of the room leading downward into darkness and you could 
+swear you heard the faint sound of demonic talons scraping against 
+the cold stone.   Try as you might, you cannot dispel the image from 
+your mind, as if was put there by a power much greater than yourself.
+~
+216 561161 0
+D5
+You see a crude ladder descending downwards into darkness.
+~
+ladder~
+11 -1 21645
+S
+#21651
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here.  The source of the chanting seems to be much 
+closer, although you still cannot make out the words.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21720
+D1
+~
+~
+0 -1 21652
+D2
+~
+~
+0 -1 21654
+S
+#21652
+Halls of Attrition~
+   The passage here is much cleaner and the stone walls have been worn 
+very smooth. A tiny snake hisses at you from the corner of the room 
+before fleeing into a small crevice in the wall. You notice burn marks 
+on the ceiling here, and as you contemplate their meaning, the whole 
+hall is shaken by its foundations, nearly throwing you to the floor. A 
+bone-chilling roar echoes throughout the hall, and again the hall 
+trembles. There is some shouting in the distance, but it soon dies down, 
+leaving you to wonder what the hell is going on.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21653
+D3
+~
+~
+0 -1 21651
+S
+#21653
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here.  The source of the chanting seems to be much 
+closer, although you still cannot make out the words.
+~
+216 36873 0
+D2
+~
+~
+0 -1 21656
+D3
+~
+~
+0 -1 21652
+D4
+A dark passageway leads up here.
+~
+dark~
+11 -1 21643
+S
+#21654
+Halls of Attrition~
+   The air in this passage is thick with the reeking stench of burning 
+corpses. A shrill scream in the distance startles you, then is followed 
+by another. Someone, somewhere in this dark pit of evil, is dying what
+sounds like a most horrible death. Suddenly, the distant chanting 
+increases in pitch and another high pitched scream comes forth from the
+depths, but it is quickly silenced. You break out in a cold sweat and 
+force yourself onward.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21651
+D1
+~
+~
+0 -1 21655
+D2
+~
+~
+0 -1 21657
+S
+#21655
+Halls of Attrition~
+   This room is identical to the numerous others you have passed 
+through save for the two blazing braziers flanking a shallow pool of 
+murky water. Looking up you see a giant statue of a serpent poised 
+over the pool, mouth agape and fangs bared. As you watch, a single 
+drop of murky ichor drips from the giant fangs of this statue, into 
+the pool below. A black steel portal leads downwards past the pool, 
+but it is clearly locked.
+~
+216 67145737 0
+D0
+~
+pool~
+12 -1 21660
+D3
+~
+~
+0 -1 21654
+D5
+A black steel portal leads downwards into the darkness below, it is 
+securely locked.
+~
+portal~
+2 21601 21661
+E
+pool~
+The liquid in the pool is thick and vile and is clearly not 
+something you want to drink. Gazing into the pool you notice that 
+it seems rather deep.  Perhaps these evil doers bathe in this vile 
+stuff? That would certainly explain their foul behavior.
+~
+E
+portal~
+The black portal is engraved with the image of a serpent and is 
+made of solid steel and is quite strong. There is a large keyhole 
+visible and the lock looks to be of excellent construction.
+~
+S
+#21656
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here.  The source of the chanting seems to be much 
+closer, although you still cannot make out the words.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21653
+D1
+~
+~
+0 -1 21726
+D2
+~
+~
+0 -1 21659
+S
+#21657
+Halls of Attrition~
+   The smooth black of the stone walls are tainted a dull red here, 
+and the echo of chanting seems to have stopped for the moment. A reddish 
+powder covers part of the floor at your feet. Peering closer, it appears 
+to be dried blood, quite a bit of it too. A sharp, hissing command has 
+shouted from below and it begins to echo throughout the hall. The sound 
+of foot fall reaches your ears, and seems to be getting closer.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21654
+D1
+~
+~
+0 -1 21658
+D2
+~
+~
+0 -1 21721
+D3
+~
+~
+0 -1 21722
+S
+#21658
+Halls of Attrition~
+   The air in this passage is thick with the reeking stench of burning 
+corpses. A shrill scream in the distance startles you, then is followed 
+by another. Someone, somewhere in this dark pit of evil, is dying what
+sounds like a most horrible death. Suddenly, the distant chanting 
+increases in pitch and another high pitched scream comes forth from the
+depths, but it is quickly silenced. You break out in a cold sweat and 
+force yourself onward.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21659
+D3
+~
+~
+0 -1 21657
+S
+#21659
+Halls of Attrition~
+   The smooth black of the stone walls are tainted a dull red here, 
+and the echo of chanting seems to have stopped for the moment. A reddish 
+powder covers part of the floor at your feet. Peering closer, it appears 
+to be dried blood, quite a bit of it too. A sharp, hissing command has 
+shouted from below and it begins to echo throughout the hall. The sound 
+of foot fall reaches your ears, and seems to be getting closer.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21656
+D3
+~
+~
+0 -1 21658
+S
+#21660
+A murky pool~
+   You are swimming through a dark pool of murky ichor. The strange 
+fluid burns your eyes and your skin.  It seems to claw at your very 
+soul.  You struggle and gasp, swallowing some of the dreadful ichor 
+in the process and immediately your stomach beings to cramp violently.  
+With a final surge of desperation and adrenaline, you fight to free 
+yourself of this vile pool.
+~
+216 545951753 0
+D2
+~
+pool~
+11 -1 21655
+S
+#21661
+At the mouth of a dark tunnel~
+   Twin columns of flame leap up from two braziers, filling this room 
+with a hellish glow. The flames flicker and die down a bit, as you 
+begin to see your surroundings more clearly.  Before you, flanked by 
+the twin braziers, is a yawning tunnel entrance. The tunnel proceeds 
+northward and looks somewhat narrow. The again, what really gets your 
+attention is the giant statue in the center of the room.  It looks to 
+be made in the image of some sort of man-serpent and all about the 
+base of the statue lie bloody white robes, some of which are still wet 
+and oozing blood.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21662
+D4
+~
+portal~
+1 -1 21655
+E
+portal~
+This black portal is engraved with the image of a serpent and is made 
+of solid steel and is quite strong. There is a small latch on this 
+side of the portal allowing it to be opened.
+~
+E
+statue~
+The statue stands an impressive 13 feet tall and seems to be carved 
+from solid stone. It depicts a giant warrior with the head of a 
+snake, standing with it's chest bared and with arms raised.  In it's 
+left hand is clutched a small rod with the head of a serpent at its 
+crown.  In its right hand it wields a wickedly spiked dagger. What 
+truly draws your attention is the wicked grin on its stone face and 
+the burning hatred that has been so accurately portrayed in the eyes 
+of this grotesque piece of artwork.
+~
+S
+#21662
+A cold dark tunnel leading onwards into blackness~
+   A long narrow tunnel runs north and south here.  The sides of the 
+tunnel are as smooth as glass and somewhat slick to the touch. A 
+faint breeze blows from the north, carrying with it the faint scent 
+of sandalwood and the rancid odor of decaying flesh.
+~
+216 37129 0
+D0
+~
+~
+0 -1 21663
+D2
+~
+~
+0 -1 21661
+S
+#21663
+A cold dark tunnel leading onwards into blackness~
+   A long narrow tunnel runs north and south here.  The sides of the 
+tunnel are as smooth as glass and somewhat slick to the touch. A faint 
+breeze blows from the north, carrying with it the faint scent of 
+sandalwood and the rancid odor of decaying flesh.
+~
+216 37129 0
+D0
+~
+~
+0 -1 21664
+D2
+~
+~
+0 -1 21662
+S
+#21664
+In a blood-stained hall~
+   You enter into a wide room with a rather low ceiling, all about 
+you are rotted and decaying corpses, some of which are still oozing 
+blood from many gaping holes and jagged cut marks. The stench is 
+truly foul and it makes your eyes burn and water, as your stomach 
+becomes quite tense. You cover your mouth and nose with your hand 
+and quickly turn away, stumbling over something in the process. 
+Looking down you notice that the entire floor of the hall around 
+you is covered with the smashed, burned, broken and defiled remains 
+of hundreds of holy and religious symbols and artifacts.  The sight 
+of this makes your blood boil and for a brief moment you forget about 
+the horrid stench of this place, let alone the terrible danger before 
+you.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21669
+D1
+~
+~
+0 -1 21666
+D2
+~
+~
+0 -1 21663
+D3
+~
+~
+0 -1 21665
+S
+#21665
+A blood stained tunnel~  ~
+   A narrow tunnel runs east and west here. The floor is slick with 
+rivulets of blood and all about the tunnel are scattered the decaying 
+remains of those unfortunate souls who came before you.
+~
+216 37129 0
+D1
+~
+~
+0 -1 21664
+D3
+~
+~
+0 -1 21667
+S
+#21666
+A blood stained tunnel~  ~
+   A narrow tunnel runs east and west here. The floor is slick with 
+rivulets of blood and all about the tunnel are scattered the decaying 
+remains of those unfortunate souls who came before you.
+~
+216 37129 0
+D1
+~
+~
+0 -1 21668
+D3
+~
+~
+0 -1 21664
+S
+#21667
+A large torch-lit, circular room~
+   You enter a large circular room, with a high vaulted ceiling.  
+The room is rather bare, save for a set of iron rings connected to 
+a massive set of chains on the far wall. There is a small pile of 
+filthy pelts and straw in one corner of the room.  They reek of 
+stale sweat and other far less pleasant smells.  Stepping further 
+into the room, you look back at the passageway behind you and notice 
+that there, above the doorway, are a series of crude shelves.  Upon 
+these shelves are a myriad collection of skulls; some humanoid and 
+some completely unknown to you. Who could possibly want such a 
+gruesome trophy collection?  Better not stay to find out, lest your 
+grinning white skull be the next in the collection.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21665
+S
+#21668
+A large torch-lit, circular room~
+   The room before you is blanketed with thick smoke, and you can 
+barely see your hand in front of your face. The foul stench of decay 
+from the tunnels behind you is quickly overpowered by a new smell, 
+one that burns your nose and throat and makes your eyes water heavily. 
+You blink uncontrollably as the tears stream down your face and you do 
+the best you can to cover your nose and mouth. A few moments later a 
+slight breeze stirs the chamber and some of the smoke clears. Casting 
+a quick look at your surroundings, you see that you are standing in a 
+large circular room, with a very high, vaulted ceiling. The room is
+bare except for a giant set of iron rings embedded in the far wall. 
+The massive chains that are attached could easily be as thick as your
+waist. Suddenly, your muscles tense and your stomach clenches as you 
+finally realize what the peculiar smell in this room is; Sulfur.
+Casting a frantic look about the chamber, you notice there are no 
+windows, no vents, no other passageways other than the one you just 
+came through.  Where did that sudden breeze come from and why is it 
+so smokey in here?  Again, the faint breeze swirls the smoke about 
+the room, and when the smoke finally clears, the sight before you
+makes your pulse race and a cold sweat drench your body.
+~
+216 36873 0
+D3
+~
+~
+0 -1 21666
+S
+#21669
+A blood stained tunnel~
+   A narrow tunnel runs from the north to south here.  The floors 
+and walls are covered with blood, some dried, some fresh and still 
+dripping down the walls and collecting in fetid pools on the dark,
+stone floor. A large iron door lies to the north of here, and a 
+steady stream of blood comes seeping out from under the door,
+feeding the pools of filth at your feet. Whatever lies beyond this
+door is likely to be more then the most powerful of warriors could
+handle. You get the uneasy feeling in your gut that you should turn 
+back now.
+~
+216 37129 0
+D0
+~
+irondoor~
+1 -1 21670
+D1
+~
+~
+0 -1 21728
+D2
+~
+~
+0 -1 21664
+D3
+~
+~
+0 -1 21727
+S
+#21670
+A large torch-lit, circular room~
+   You enter a large, well lit, circular room with a high vaulted
+ceiling. There are several low tables in the room, all covered with 
+broken bits of armor and weapons. A large oak chair, well used and 
+heavily stained with blood, sits against the far wall.  Above this 
+gruesome seat are a set of giant iron rings mounted into the wall, 
+with a set of massive iron chains dangling from them.  On closer 
+inspection, the chains appear to have been severed at the ends and 
+whatever creature or beast these chains once held is no longer an 
+unwilling captive.
+~
+216 36873 0
+D2
+~
+irondoor~
+1 -1 21669
+D5
+~
+stoneslab~
+2 21646 21671
+S
+#21671
+A torch-lit chamber of horrors ~
+   You enter a dim and smoke filled room, all about you are 
+passageways winding off into the darkness. Your ears detect the faint 
+sound of hissing, although you cannot pin-point its exact location, 
+it seems to come from everywhere. A ladder carved from the living 
+stone is here.
+~
+216 67145736 0
+D0
+~
+steeldoor~
+2 21645 21680
+D1
+~
+~
+0 -1 21673
+D2
+~
+steeldoor~
+1 -1 21682
+D3
+~
+~
+0 -1 21672
+D4
+A small stone tunnel winds upwards here.
+~
+tunnel~
+11 -1 21670
+S
+#21672
+A torch-lit chamber of horrors~
+   You can barely make out the outlines of the chamber from the dim 
+light that the few sputtering torches in this chamber provide. 
+Echoing all about you is the faint sound of movement and an ever
+present hissing intake of breath. The sound quickly grows unnerving
+and makes you restless. You swear quietly to yourself and hope that 
+in the future you can meet your enemies on the open battlefield in 
+full daylight, and never again have to suffer this clinging darkness.
+~
+216 67145736 0
+D0
+~
+celldoor~
+1 -1 21676
+D1
+~
+~
+0 -1 21671
+D2
+~
+celldoor~
+1 -1 21678
+D3
+~
+celldoor~
+1 -1 21675
+S
+#21673
+A torch-lit chamber of horrors~
+   You can barely make out the outlines of the chamber from the dim 
+light that the few sputtering torches in this chamber provide. 
+Echoing all about you is the faint sound of movement and an ever
+present hissing intake of breath. The sound quickly grows unnerving
+and makes you restless. You swear quietly to yourself and hope that 
+in the future you can meet your enemies on the open battlefield in 
+full daylight, and never again have to suffer this clinging darkness.
+~
+216 67145736 0
+D0
+~
+celldoor~
+1 -1 21677
+D1
+~
+celldoor~
+1 -1 21674
+D2
+~
+celldoor~
+1 -1 21679
+D3
+~
+~
+0 -1 21671
+S
+#21674
+A makeshift shrine of bloody entrails~
+   This small stone cell has been converted into a horrific shrine of 
+evil. A small copper bowl full of bloody entrails lies on the floor 
+between two lit candles. A small incense burner hangs from the wall 
+and shrouds the room in a haze of smoke. The vile stench of offal 
+mixed with the overpowering stench of incense is enough to make your 
+head spin and your stomach churn.
+~
+216 36873 0
+D3
+~
+celldoor~
+1 -1 21673
+S
+#21675
+A cramped stone cell~
+   You enter into a rough-hewn stone cell. There is little of interest 
+here, save for a few tattered remnants of clothing and some dried 
+blood stains on the walls and floor. You turn to leave and notice
+that the lock to this cell has been torn out of the cell door. Your 
+hand instinctively goes to the hilt of your weapon.  Whatever did 
+this is clearly no longer a prisoner here. And your sure it will not 
+be glad to see you.
+~
+216 36873 0
+D1
+~
+celldoor~
+1 -1 21672
+S
+#21676
+A wretched smelling stone cell~
+   This is a bare stone cell, rank and dirty.  Five minutes in this 
+reeking hell-hole would be more than you could take, and to stay any 
+longer would certainly test your sanity. 
+~
+216 4104 0
+D2
+~
+~
+1 -1 21672
+S
+#21677
+A bleak stone cell~
+   You enter into this small stone cell and are immediately overcome 
+by grief and remorse. Something so horrible and tragic has happened
+in this cell that it has left some sort of permanent emotional aura 
+behind although now the cell stands empty of inhabitants. Fighting 
+back the waves of sadness that threaten to overcome you, you notice 
+scratch marks on the wall of the cell, caked in dried blood. As if 
+someone had tried to claw their way through the stone of this horrid 
+place in a vain effort to escape.
+~
+216 36873 0
+D2
+~
+~
+1 -1 21673
+S
+#21678
+A blood stained stone cell~
+   You enter into a small stone cell, and immediately notice the 
+fresh blood stains on the walls on floor, and looking up, you notice 
+that blood has even splashed up to stain the ceiling a deep crimson. 
+What ever poor soul was forcibly imprisoned here has clearly been 
+put out of their misery.
+~
+216 36873 0
+D0
+~
+~
+1 -1 21672
+S
+#21679
+A large, stone holding cell~
+   You enter into a fairly large stone cell and notice that this one 
+is much more dirty than the rest. A large heap of soiled straw lies 
+piled in the center of the room, although you cant tell if it's a bed
+or a toilet. You cover your nose with your hand and peer about the 
+remainder of the room. It is then you notice that you are not alone, 
+several prisoners lie motionless on the floor and you cannot tell if 
+they are living or dead.
+~
+216 36873 0
+D0
+~
+celldoor~
+1 -1 21673
+S
+#21680
+A room stacked with putrid bodies~
+   This large room is nearly stacked full of decomposing bodies, so 
+much in fact that none of the room is clearly visible. To your horror 
+you notice that some of the bodies have been carved clean of flesh as
+if some horrific butcher has plied his trade here. The thought both 
+sickens and angers you.
+~
+216 36873 0
+D0
+~
+bodies~
+11 -1 21681
+D2
+~
+~
+1 -1 21671
+E
+bodies~
+A putrid pile of bodes lies stacked here, almost to the ceiling.  Its 
+impossible to see further into the room, and from the looks of things, 
+that is probably a small blessing.
+~
+S
+#21681
+A blood-stained altar~
+   A giant stone altar dominates the north end of the room.  Droplets 
+of fresh blood still drip slowly from the altar, as the lifeblood of 
+its last victim slowly make their way to the floor. Looking down you 
+notice a blood stained grate set into the floor, half clogged with 
+bits of flesh and bone. Glancing behind you at the stack of bodies 
+and again at the altar in from of you, you are reminded of a bloody 
+butchers block, although the horrific denizens of this place feast 
+upon the flesh of sentient creatures, not animals.
+~
+216 36873 0
+D2
+~
+bodies~
+11 -1 21680
+D5
+~
+bloodygrate~
+2 21657 21683
+S
+#21682
+A bloody-stained pantry~
+   A wave of nausea nearly overtakes you as you enter this horrid room. 
+All about the room hang slabs of meat, in various states of decay. A 
+swarm of flies feasts hungrily on the festering meat and you notice 
+that nearly half of the carcasses are literally crawling with maggots. 
+You push aside the nearest hanging meat slab with your weapon and peer
+further into the room, and notice that a makeshift bed lies in the far 
+corner of this rancid pantry. What monstrous fiend could possibly wish 
+to sleep among these carrion slabs and maggots?
+~
+216 36865 0
+D0
+~
+steeldoor~
+1 -1 21671
+S
+#21683
+A gore-filled pit~
+   You splash down into a bloody pit. You immediately regret your 
+actions, as you sink up to your neck in the foul liquid. All about 
+you float the remains of what was once adventurers like yourself, 
+now nothing more than broken bits of bone and torn ligaments. You 
+hold your breath as you struggle to gain a firm foothold in this 
+gruesome pool of blood and gore. You stumble and nearly choke on 
+blood as your foot strikes a solid object in the floor.
+~
+216 36873 0
+D4
+~
+~
+0 -1 21681
+D5
+Although you cannot see through the putrid bloody remains floating in 
+the pool, you can feel a circular metal object on the floor with your 
+foot. Perhaps it is a drain of sorts, but it is clearly not working, 
+no doubt clogged with the ghastly remains of deceased adventurers.
+~
+drain~
+9 -1 21684
+E
+drain~
+Although you cannot see through the putrid bloody remains floating in 
+the pool, you can feel a circular metal object on the floor with your 
+foot. Perhaps it is a drain of sorts, but it is clearly not working, 
+no doubt clogged with the ghastly remains of deceased adventurers.
+~
+S
+#21684
+A bloody torrent of entrails and gore~
+   You slip and fall downwards and land with a sickening splash. You 
+slowly stand and regain your footing and look about you.  This room 
+looks to be much like a sewer of sorts with small tunnels leading 
+off in many directions, but this is a sewer of blood, and sewer rats 
+are the very least of your worries.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21685
+D1
+~
+~
+0 -1 21685
+D2
+~
+~
+0 -1 21686
+D3
+~
+~
+0 -1 21686
+S
+#21685
+A bloody tunnel leading off into blackness~
+   Curse this blasted darkness! You begin to wonder if all the fires 
+of hell could illuminate this cursed place. What diabolical fiend 
+constructed this fetid sewer of death you wonder. You would welcome
+the opportunity to meet with him, and splinter his skull with one 
+mighty blow of your sword arm.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21693
+D1
+~
+~
+0 -1 21685
+D2
+~
+~
+0 -1 21686
+D3
+~
+~
+0 -1 21685
+S
+#21686
+A bloody tunnel leading off into blackness~
+   The darkness here is almost like a living thing, it clings to your 
+body and seems to mock your pathetic light source. No matter how hard 
+you try you cannot see more than a few feet in front of you, and it 
+is quite hard to tell if this tunnel is leading you in circles or not. 
+You curse your luck and vow to spend a fortnight at a fine tavern if 
+you ever make it out of here alive.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21686
+D1
+~
+~
+0 -1 21685
+D2
+~
+~
+0 -1 21686
+D3
+~
+~
+0 -1 21687
+S
+#21687
+A bloody tunnel leading off into blackness~
+   The darkness is so thick here, its like a veil has been cast over 
+your eyes. You hold your light aloft but to little avail, the light 
+seems to be swallowed up by the darkness, as if it was a greedily 
+hungry entity. You cannot make out much of anything, and slowly feel 
+your way along the walls of the tunnel.  The slow trickle and gurgling 
+of the river of blood at your feet is the only sound. You wonder if 
+this is a dream, no, more akin to a nightmare. Will this darkness 
+never cease?
+~
+216 36873 0
+D0
+~
+~
+0 -1 21685
+D1
+~
+~
+0 -1 21686
+D2
+~
+~
+0 -1 21688
+D3
+~
+~
+0 -1 21686
+S
+#21688
+A bloody tunnel leading off into blackness~
+   The thick cloak of darkness surrounds you and almost seems to 
+struggle with your light source as it flickers and fades, shedding 
+even less light. Slowly, carefully, you make your way through the 
+blackness, the sickening gurgle and splash of blood that follows your 
+every footstep are the only sounds. Where to go from here?  Better 
+yet, where are you to begin with.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21686
+D1
+~
+~
+0 -1 21688
+D2
+~
+~
+0 -1 21689
+D3
+~
+~
+0 -1 21688
+S
+#21689
+A bloody tunnel leading off into blackness~
+   The darkness is so thick here, its like a veil has been cast over 
+your eyes. You hold your light aloft but to little avail, the light 
+seems to be swallowed up by the darkness, as if it was a greedily 
+hungry entity. You cannot make out much of anything, and slowly feel 
+your way along the walls of the tunnel.  The slow trickle and gurgling 
+of the river of blood at your feet is the only sound. You wonder if 
+this is a dream, no, more akin to a nightmare. Will this darkness 
+never cease?
+~
+216 36873 0
+D0
+~
+~
+0 -1 21686
+D1
+~
+~
+0 -1 21687
+D2
+~
+~
+0 -1 21688
+D3
+~
+~
+0 -1 21690
+S
+#21690
+A bloody tunnel leading off into blackness~
+   The darkness here is almost like a living thing, it clings to your 
+body and seems to mock your pathetic light source. No matter how hard 
+you try you cannot see more than a few feet in front of you, and it 
+is quite hard to tell if this tunnel is leading you in circles or not. 
+You curse your luck and vow to spend a fortnight at a fine tavern if 
+you ever make it out of here alive.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21690
+D1
+~
+~
+0 -1 21686
+D2
+~
+~
+0 -1 21686
+D3
+~
+~
+0 -1 21691
+S
+#21691
+A rushing torrent of `iblood`q~
+   The sewer tunnels converge here to dump a raging torrent of blood 
+over the side of a steep subterranean cliff. Cautiously looking over 
+the edge you try to catch a glimpse of the bottom, but your view is 
+obstructed by the spray of blood off the jagged rocks of the cliff.
+You have no way of knowing how far down the drop is or what awaits you 
+there. You spend several moments looking for handholds to climb down, 
+and find none.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21690
+D5
+A rushing torrent of blood cascades over the side of this jagged 
+cliff, the rocks stained a deep crimson from the rushing current of 
+blood. How is it possible that so much blood is here, have these 
+serpent fanatics really slaughtered that many innocents? The thought 
+makes you cringe in fear, perhaps your blood will soon join those of 
+the fallen.
+~
+cliff~
+10 -1 21692
+S
+#21692
+Beneath a rushing torrent of `iblood`q~
+   A rushing torrent of blood crashes down all around you, striking the 
+jagged rocks and throwing up a shimmering haze of blood that stains all 
+it touches a deep crimson. The putrid river of blood stretches onwards 
+from here, into the dark reaches of this subterranean hell. The air 
+here is stale and thin, and the stench is most foul, but you can 
+breathe, just barely.
+~
+216 561161 0
+D3
+~
+~
+0 -1 21694
+S
+#21693
+A large cave~
+   The tunnels end here, and before you is a sizable cave.  There is a 
+small makeshift table of stone and a pile of filthy hair and fragments 
+of cloth that seems to serve as a bed. Several jars full of bloody 
+remains line the walls of the cave, and a pile of bones lies against 
+the far wall, picked clean of all flesh.  A hissing sound fills your 
+ears and from the darkness you see a figure emerge.
+~
+216 36873 0
+D2
+~
+~
+0 -1 21686
+S
+#21694
+On the shore of the lake of `iblood`q~
+   Before you looms a twisted and evil sight, and you feel bile rising 
+in your throat as you take in the view. Looking westwards you see a 
+massive yawning cavern, with a ceiling of jagged black rock, like 
+broken fangs of some great beast. And the floor of this cavern is a 
+vast lake of putrescent blood, so massive in fact that tiny waves 
+ripple along its shores of stone like some horrific mockery of the 
+ocean. You could almost swear you saw something moving in this ghastly 
+lake, and you wonder with horror what creatures could live in such a 
+place.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21692
+D3
+~
+~
+0 -1 21695
+S
+#21695
+On the lake of `iblood`q~
+   You struggle onwards through the bloody lake, and the thick, 
+vicious fluid seems to cling to you, trying to pull you under the 
+crimson waters. How easy it would be, to just give in, to let go 
+and drift down, into the depths of this gruesome lake. Gritting 
+your teeth in determination, you steel your nerve and force your 
+arms and legs to keep moving. Glancing upwards, the vast rocky 
+ceiling stretches out in all directions and you find it impossible 
+to tell how far you have come or if there is really anywhere to go, 
+except to your doom. 
+~
+216 36873 6
+D0
+~
+~
+0 -1 21696
+D1
+~
+~
+0 -1 21694
+D2
+~
+~
+0 -1 21697
+D3
+~
+~
+0 -1 21640
+S
+#21696
+On the lake of `iblood`q~
+   A vast lake of blood stretches out in all directions. The crimson 
+waters ripple about you, and you struggle to keep your head above the 
+fetid liquid. Your arms grow tired and you have to struggle harder to 
+make any progress. Turn back now, or this hellish place will be last 
+thing you ever see.
+~
+216 36873 6
+D0
+~
+~
+0 -1 21697
+D1
+~
+~
+0 -1 21640
+D2
+~
+~
+0 -1 21695
+D3
+~
+~
+0 -1 21640
+S
+#21697
+On the lake of `iblood`q~
+   A vast lake of blood stretches out in all directions. The crimson 
+waters ripple about you, and you struggle to keep your head above the 
+fetid liquid. Your arms grow tired and you have to struggle harder to 
+make any progress. Turn back now, or this hellish place will be last 
+thing you ever see.
+~
+216 36873 6
+D0
+~
+~
+0 -1 21695
+D1
+~
+~
+0 -1 21640
+D2
+~
+~
+0 -1 21696
+D3
+~
+~
+0 -1 21698
+S
+#21698
+On the lake of `iblood`q~
+   You struggle onwards through the bloody lake, and the thick, 
+vicious fluid seems to cling to you, trying to pull you under the 
+crimson waters. How easy it would be, to just give in, to let go 
+and drift down, into the depths of this gruesome lake. Gritting 
+your teeth in determination, you steel your nerve and force your 
+arms and legs to keep moving. Glancing upwards, the vast rocky 
+ceiling stretches out in all directions and you find it impossible 
+to tell how far you have come or if there is really anywhere to go, 
+except to your doom. 
+~
+216 36873 6
+D0
+~
+~
+0 -1 21640
+D1
+~
+~
+0 -1 21640
+D2
+~
+~
+0 -1 21640
+D3
+~
+~
+0 -1 21699
+S
+#21699
+The High Altar to the `cS`jerpent `cG`jod`q~
+   A giant block of intricately carved jade rests against the cavern 
+wall, bloodstained and horrible. Carven images of serpents and human 
+sacrifice cover both the walls of the cavern and the altar.  All about 
+you are black candles flickering and burning with a supernatural flame, 
+casting dancing shadows over the walls and floor, making the carven 
+images almost seem to come alive and writhe about in agony or delight. 
+There is a heavy presence here, a feeling that you do not belong. 
+Suddenly your mind races and sweat pours from your body, your heart
+beats uncontrollably fast and your eyes widen in fear. Looking up you 
+see a huge and menacing statue of a giant serpent staring down at you, 
+with jaws agape and fangs bared. You blood runs cold as you feel a 
+power tugging at your soul, trying to rip the very life force from your 
+body. You cry out in terror, but not a sound escapes your lips.
+~
+216 67686408 0
+D1
+~
+~
+0 -1 21695
+D3
+A smooth stone wall with what might be the outline of a hidden door.
+~
+hidden~
+9 -1 21704
+S
+#21700
+Drowning in the lake of `iblood`q~
+   You are pulled under by the mighty current.  Spinning around and 
+around you lose all sense of direction as you slowly sink further and
+further into the hellish lake. You enter into utter darkness and 
+finally, against your will, your lungs expel the last of their sweet 
+air.  Your brain goes numb, and you cease to feel anything. The only 
+thing you can hear is the slow beating of your heart, growing ever 
+slower.  And finally it stops. Sweet nothingness embraces you. And 
+there, in the darkness, in the last few fleeting moments of your life, 
+you hear a voice, sinister and evil, and it is laughing, a hideous and 
+mocking laughter. This is the last thing you hear as you slowly sink 
+even deeper into the crimson waters.
+~
+216 36873 6
+D4
+~
+~
+0 -1 21634
+D5
+~
+~
+0 -1 21701
+S
+#21701
+Slowly sinking into `ibloody`q oblivion~
+   The laughter grows louder as you sink ever deeper into nothingness. 
+The current has grown much stronger and it is pulling you straight 
+down. Bubbles drift up from the depths and what few touch your body
+scorch your armor and sear your flesh.  Suddenly a wave of agony 
+tears through your mortal flesh, and you realize your very soul is 
+struggling and fighting desperately to cling to your pathetic mortal 
+coil.  What is most surprising is the fact that it seems to be winning. 
+Although your body is burned and battered and in much pain, you have 
+not left this world. With a massive mental effort, you force your 
+sword arm to grip your weapon. With grim defiance you prepare to face 
+your doom, and the current sucks you even deeper into this 
+hell spawned lake.
+~
+216 561161 6
+D4
+~
+~
+0 -1 21700
+D5
+~
+~
+0 -1 21702
+S
+#21702
+The chamber of `iblood`q~
+   Suddenly you are falling through open air.  You land with a thud 
+upon a hard and rocky floor. The pain shooting through every inch of 
+your body lets you know you are still alive.  Forcing yourself to your 
+feet you look around and see that you are in large chamber with a dry 
+floor, and you notice that your clothes and equipment are completely 
+dry as well, no trace of blood to be found. This room is clearly the 
+product of powerful magic. The transparent walls keep back the torrent 
+of blood, and you can see the lake of blood above and all about, 
+rushing past you. You notice that this chamber seems to continue to 
+the north.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21703
+D4
+~
+~
+0 -1 21701
+S
+#21703
+The portal of `iblood`q~
+   You enter into this chamber full of apprehension and for good 
+reason, as the spectacle before you is one that tests your very 
+sanity to look upon.  The entire floor of this twisted chamber is a 
+huge swirling pool of blood, but what is most appalling is the 
+ribbon-like fountains of blood that seem to ebb and flow from its 
+surface, seeming both to feed from and add too the massive lake of 
+blood above and about you. The pool shimmers with a supernatural 
+power and more blood is issued from and drawn into the pool.  
+The hair on the back of your neck stands on end as you hear a 
+familiar voice; a horrid, menacing voice that seems to come from 
+inside your head. It speaks no language you know, but the words 
+themselves seem to burn your mind. The voice breaks into laughter 
+and the sound makes you drop to your knees in a spasm of pain. A 
+moment later you once again force yourself to stand, and looking 
+down into the pool, you see a sight that drives you to the brink 
+of madness.
+~
+216 67145736 0
+D2
+~
+~
+0 -1 21702
+S
+#21704
+Stairs into darkness~
+   The air in this narrow passageway is thick with the smoke of burning 
+incense. Before you, through the thick haze of smoke, you see a small 
+stairway leading up. Pausing for a moment to listen, you hear nothing. 
+Perhaps no-one has used this passage for some time.
+~
+216 37129 0
+D1
+A smooth stone wall with what appears to be the outline of a hidden door.
+~
+hidden~
+9 -1 21699
+D4
+~
+~
+0 -1 21705
+S
+#21705
+Stairs into darkness~
+   The narrow stairway leads straight up at a steep angle.  You begin 
+to sweat heavily from the exertion in the thin air of the passageway, 
+and your nose starts to burn from the thick smokey haze of incense.
+~
+216 37129 0
+D4
+~
+~
+0 -1 21706
+D5
+~
+~
+0 -1 21704
+S
+#21706
+Stairs into darkness~
+   The smoke grows thicker and the darkness more complete with every 
+step you take. You start to feel light headed from the effort and your 
+body is now drenched in sweat.
+~
+216 37129 0
+D4
+~
+~
+0 -1 21707
+D5
+~
+~
+0 -1 21705
+S
+#21707
+Stairs into darkness~
+   Gasping for air you trudge onwards into the darkness.  The stairs 
+continue to climb at a steep angle, and the ever-present smoke grows 
+so thick you can hardly breathe.
+~
+216 37129 0
+D4
+~
+~
+0 -1 21708
+D5
+~
+~
+0 -1 21706
+S
+#21708
+Stairs into darkness~
+   You trudge slowly onwards as your legs begin to cramp from the 
+effort and the thick smoke is burning your eyes and throat.  Wiping the 
+sweat from your brow, you wonder how much farther you can make it.
+~
+216 37129 0
+D4
+~
+~
+0 -1 21709
+D5
+~
+~
+0 -1 21707
+S
+#21709
+Before the `cS`jerpent `cP`jortal`q~
+   Finally you reach the top of the stairs, gasping for breath, your
+eyes and lungs burning, your legs weak from the strain.  As you pause 
+to catch your breath, you notice before you a large stone portal, 
+carved into the circular image of a serpent, with the tail of the 
+beast being bitten by the fanged head.  All around this carving a set 
+a myriad of carven runes, stained red with what appears to be dried 
+blood. The portal is slightly ajar, and from the slight opening comes 
+billowing clouds of incense smoke.
+~
+216 37129 0
+D0
+~
+Portal~
+1 -1 21710
+D5
+~
+~
+0 -1 21708
+S
+#21710
+The Private Chambers of the `cH`jigh `cP`jriestess`q~
+   The thick smoke makes its hard to see much of this chamber, but 
+from what little you can see, it looks very well furnished, with 
+several ornately carved chairs and many silken cushions lie scattered 
+about. A thick red carpet covers the floor and in the center of the 
+room is a large burning brazier, the apparent source of the scented 
+smoke.
+~
+216 67670024 0
+D2
+~
+portal~
+1 -1 21709
+S
+#21711
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting. A horribly mutilated corpse is here.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21644
+E
+corpse~
+It was humanoid, that is all you can tell from what is left of this corpse. 
+It looks like the front of the skull was shattered by the massive 
+impact of a blunt object.
+~
+S
+#21712
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21647
+S
+#21713
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the 
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting. A horribly burned corpse is here.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21647
+E
+corpse~
+This corpse is little more than a pile of ash and scorched fragments 
+of bone and leather. A small bit of vellum remains, badly burned, but 
+legible.
+~
+E
+vellum~
+The piece of vellum is badly burned and you fear that touching it 
+would cause it to crumble into dust. You crouch down as close as 
+you can and can barely make out some writing.
+~
+E
+writing~
+   I, Vylik, having renounced my faith and devotion to the serpent, 
+and having been tortured for three days in the black pool for my 
+heresy, lay here now, awaiting my purification by fire. They promised 
+power and wealth of nations, but the forked tongued devils lie. Too 
+late I saw through their deception, and now I shall pay for my folly 
+with my very soul. If any should find these, my last words, I ask for 
+vengeance. Slay the high priest, so at least in death my soul can 
+finally be at peace.
+
+They come!
+
+Heed my words! 
+
+Fear not the face of these foul traitors, and beware the black pool. 
+And beware the priesthood!
+
+Know that I, Vylik, Did live! Let not my death go unavenged!
+~
+S
+#21714
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the 
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting. Ashes are scattered about the room, 
+staining the floor with soot.
+~
+216 36873 0
+D3
+~
+~
+0 -1 21649
+E
+ashes~
+You have a bad feeling that these are human ashes.
+~
+S
+#21715
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the 
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting.  A small glowing brazier is bolted to 
+the floor here.
+~
+216 67145736 0
+D3
+~
+~
+0 -1 21643
+E
+brazier~
+A small brass brazier, about 2 feet high is here. It is firmly bolted 
+to the floor and seems to have been heavily used. It gives off wispy 
+tendrils of incense smoke and provides a very meager amount of light.
+~
+S
+#21716
+Halls of Attrition~
+   Unlike the other rooms you have seen, the black stone walls and 
+floor of this room are highly polished and smooth. All about the room 
+are cast off robes, some burnt and tattered, some slashed and bloody. 
+Clearly many beings have met a violent end here.  The cultists do not 
+take lightly to intruders and would be thieves.
+~
+216 36873 0
+D2
+~
+~
+0 -1 21641
+S
+#21717
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you is the 
+faint smell of sandalwood. Faint echo's reach you, carrying the sounds 
+of what seems to be chanting.  A fresh corpse is here, still dripping 
+blood from multiple puncture wounds.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21641
+E
+corpse~
+Looking at the mutilated corpse, you surmise that this poor soul was 
+either a sacrificial victim or a very unsuccessful thief.
+~
+S
+#21718
+Halls of Attrition~
+   You stand in a large hall of black stone, and all about you 
+is the faint smell of sandalwood. Faint echo's reach you, 
+carrying the sounds of what seems to be chanting.  A stone 
+carving dominates the northern wall.
+~
+216 36873 0
+D2
+~
+~
+0 -1 21720
+E
+carving~
+A huge carven image of a serpent, and all about the creature are the 
+images of skeletons and serpent men locked in combat.
+~
+S
+#21719
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here and the source of the chanting seems to be much 
+closer, although you still cannot make out the words.  A black plaque 
+of obsidian is bolted to the wall here.
+~
+216 36873 0
+D3
+~
+~
+0 -1 21720
+E
+plaque~
+Deepest Evil....
+
+Darkest Night....
+
+Lord of the Serpents
+
+Burn Me With Thine Holy Venom!
+
+I Await Your Coming Master!
+
+The Souls Of The Fallen
+
+Feed Thy Rage!
+
+Come Forth And Cleanse
+
+Come Forth And Feed
+
+Come Forth And Let the Darkness Fall!
+~
+S
+#21720
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here and the source of the chanting seems to be much 
+closer, although you still cannot make out the words.  A pile of 
+scorched and broken bones lies on the ground here.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21718
+D1
+~
+~
+0 -1 21719
+D2
+~
+~
+0 -1 21651
+E
+bones~
+Several dozen splintered and burnt bones are cast about the room, 
+picked clean by rats and other vermin.
+~
+S
+#21721
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here and the source of the chanting seems to be much 
+closer, although you still cannot make out the words.  A severed head 
+is here, brain matter from it has apparently been splattered against 
+the wall.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21657
+D3
+~
+~
+0 -1 21725
+E
+head~
+Bits of a shattered helm still cling to the severed head, the reinforced 
+steel buckled from a massive impact.
+~
+S
+#21722
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here and the source of the chanting seems to be much 
+closer, although you still cannot make out the words. A smoldering 
+corpse is here, the stench makes you gag uncontrollably.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21657
+D3
+~
+~
+0 -1 21723
+E
+corpse~
+The charred remains still smolder and send up a noxious cloud of fumes, 
+choking you with the foul stench.
+~
+S
+#21723
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here and the source of the chanting seems to be much 
+closer, although you still cannot make out the words. A mangled wicker 
+basket lies here on the floor.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21724
+D1
+~
+~
+0 -1 21722
+E
+basket~
+The tattered basket lies in several pieces on the floor, and you detect 
+a faint smell, one that you cannot place.  Kicking aside pieces of the 
+basket you see scattered droplets of dried blood on the floor.
+~
+S
+#21724
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here and the source of the chanting seems to be much 
+closer, although you still cannot make out the words. A small leather 
+cushion lies on the floor next to some burned out candles.
+~
+216 36873 0
+D2
+~
+~
+0 -1 21723
+E
+candles~
+The burnt stubs of black candles line the walls of this chamber.
+~
+E
+cushion~
+A small black leather cushion lies here, perhaps used by a dark priest 
+to kneel upon?
+~
+S
+#21725
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here and the source of the chanting seems to be much 
+closer, although you still cannot make out the words.  A dead rat is 
+here, nailed to the floor with a steel spike.
+~
+216 36873 0
+D1
+~
+~
+0 -1 21721
+E
+rat~
+A seven inch steel spike nails the festering corpse of this deceased 
+rodent to the black stone of the floor.
+~
+S
+#21726
+Halls of Attrition~
+   You stand in a large hall of black stone, the smell of sandalwood 
+is much stronger here and the source of the chanting seems to be much 
+closer, although you still cannot make out the words. A mutilated body 
+is nailed to the wall here, still dripping with blood.
+~
+216 36873 0
+D3
+~
+~
+0 -1 21656
+E
+body~
+A decapitated body is nailed to the wall here, seven inch spikes driven 
+thru its hacked and bleeding body.
+~
+S
+#21727
+In a blood-stained hall~
+   You have entered a dark hall, barren and devoid of decoration or 
+furniture.  It appears to be heavily traveled and bloody footprints
+are everywhere.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21729
+D1
+~
+~
+0 -1 21669
+S
+#21728
+In a blood-stained hall~
+   You have entered a dark hall, barren and devoid of decoration or 
+furniture.  It appears to be heavily traveled and bloody footprints
+are everywhere.
+~
+216 36873 0
+D0
+~
+~
+0 -1 21730
+D3
+~
+~
+0 -1 21669
+S
+#21729
+In a blood-stained hall~
+   You have entered a dead end in the hall, no passageway lies before 
+you and you must return the way you came. As you turn to leave you 
+spot a small plaque mounted on the wall.
+~
+216 36873 0
+D2
+~
+~
+0 -1 21727
+E
+plaque~
+I offer the blood of mine enemies!
+
+I burn the sacred smoke!
+
+Pain! Blood! Vengeance! Death!
+
+Dark Wanderer, Come and Slay!
+
+Come and Slay!
+~
+S
+#21730
+In a blood-stained hall~
+   You have entered into a dark barren room of stone, with no exits 
+save for the way you just came.  A small scroll is nailed to the wall 
+here, crumbling with age.
+~
+216 36873 0
+D2
+~
+~
+0 -1 21728
+E
+scroll~
+Sacred Smoke and Sacred Fire!
+
+Blood of Innocents!
+
+Hear the Tolling of the Bell of Judgement!
+
+Bow your head and await eternity!
+~
+S
+#21731
+A Dimensional Gate~
+   A mass of swirling chaotic energy fills the room. It seems to 
+come from a large pulsating portal that floats in the center of 
+the room.  Looking into the portal, you see countless other places 
+and creatures.  The images flicker for a split second then changing 
+to show another place, and perhaps another time.
+~
+216 37002 0
+D5
+~
+~
+0 -1 21699
+S
+#0
+$~

@@ -1,0 +1,233 @@
+#2200
+snapdragon maji antirrhinum majus~
+a Maji Snapdragon~
+The dragon-faced flower of an antirrhinum maji sniffs the air.
+~
+ The resemblence of the flowered "face" of this plant to that of
+a young red dragon is uncanny. No doubt this similarity is even
+more pronounced with the infusion of the Enchantress' magic into
+this snapdragon than its unenlivened cousins elsewhere. The maji
+inclines its head toward you and hiccups, expelling a small puff
+of black smoke through its "nostrils". Apparently the likeness to
+a dragon goes beyond the purely visual.
+~
+8 0 0 Y
+53 19 10 1d1+1 1d1+1
+1 1542687
+8 8 0
+92 7883144 1d1+1 0
+0 0 0 320
+R
+4
+K
+0 0 0 0 0 0 0
+#2201
+cactus cactaceae doom bloom blooming echinopsis~
+a Doom-Bloom Cactaceae~
+A squat, prickly cactus with an ominously long flower tube.
+~
+ A dense, bulbous spheroid marked by longitudinal prickers is
+somehow disturbingly more alive than a plant should be. Much to
+your surprise, it appears capable of movement through some sort
+of shuffling waddle that gives it mobility through the dogwood
+forest. Cacti here, in the forest, is at odds with all records
+of their usual habitat. Then again, much here is out of place;
+the Enchantress' magic has turned this once beautiful and serene
+realm into a distopia of strangeness - exaggerated seasons, agg-
+ressive flora and animated inanimates.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 0
+92 7883144 1d1+1 0
+0 0 0 320
+R
+4
+K
+0 0 0 0 0 0 0
+#2202
+nightshade deadly belladonna~
+a Deadly Nightshade~
+An alluring viny shrub creeps along, exuding a pleasant odor.
+~
+ A lithe writhing shrub waves an attractive array of fruits and
+flowers in your direction. Tantalizing aromas and undefinable
+allures draw you towards the odd annual. Clumps of bright red
+cherry-like berries hang alongside petal whorls, the shrub lifts
+its leaves to reveal these treats like a lady of the night flaunts
+her own ample assets.
+~
+8 0 0 Y
+53 19 10 1d1+1 1d1+1
+1 1542687
+8 8 0
+92 7883144 1d1+1 0
+0 0 0 320
+R
+4
+K
+0 0 0 0 0 0 0
+#2203
+juniper kendoka~
+a Kendoka Juniper~
+A giant, gnarled juniper shuffles back and forth on its roots.
+~
+ An animated juniper holds a smoothed, twigless branch aloft
+like a shinai. Trailing an iced mane of scaled leaves and small,
+cloudy-blue berries, it stalks through the forest. With each
+precise strike a rumbling kiai echoes forth from the gnarled
+tree. Recruited by the beautiful Enchantress for its sturdiness
+and wintry nature, she imbued these gnarled junipers with the
+ancient art of Kendo.
+~
+8 0 0 Y
+53 19 10 1d1+1 1d1+1
+1 1542687
+8 8 0
+92 7883144 1d1+1 0
+0 0 0 320
+R
+4
+K
+0 0 0 0 0 0 0
+#2204
+golem iron wrought wroughtiron~
+a wrought-iron golem~
+A strange anthropomorphic golem made from the wrought-iron gates.
+~
+ The gates that once protected the castle have been animated by
+the magic of the Enchantress. No weak points on this strange golem
+can be easily identified; it has no eyes or nose or any real dis-
+cernible facial features. Enormous long arms extend from a dense
+labyrinth of twisting iron set atop two short stumps for legs.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 0
+79 1065246685 1d1+1 0
+0 0 0 992
+R
+502
+K
+0 0 0 0 0 0 0
+#2205
+armor armour suit reanimated~
+a reanimated suit of armour~
+An empty, enchanted suit of armour stalks around noisily.
+~
+ Animated by the powerful magic of the Enchantress, this ancient
+relic of battles long since passed has been appointed guardian of
+the castle. A full three meters tall the battle-hardened steel of
+the armour clanks, the joints scrape, and the steps echo as this
+soulless puppet shuffles about.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 0
+79 557057 1d1+1 0
+0 0 0 18
+K
+0 0 0 0 0 0 0
+#2206
+primal clay blank~
+a phantasmal Darknut~
+An armoured suit of jet-black steel stands before you.
+~
+ Despite its empty appearance, there is a phantasmal, shadowy
+presence lurking within this stalking suit of steel. Exceptionally 
+well-armoured, yet deceptively graceful, it prowls the halls of
+the Enchantress's castle; sometimes as it moves you catch glimpses
+of a wispy dark form betwixt the panels of heavy platemail, but
+these moments are too fleeting to gain any sense of the true nature
+of whatever dwells within.
+ Suddenly a haunting, other-worldly growl echoes forth and the
+Darknut reaches for its giant abyssal blade...
+~
+44 526344 0 Y
+60 -40 -23 50d50+82000 25d10+50
+0 20000000
+8 8 0
+67 4755912 100d100+1000 0
+0 0 0 0
+R
+4
+K
+0 0 0 0 0 0 0
+#2207
+primal clay blank~
+a Shadow Daemon~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+63 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2208
+primal clay blank~
+a beastly book~
+An engorged book claps its covers together menacingly.
+~
+ The ancient tome has been enlarged ten fold, and somehow simultan-
+eously imbued with the power of flight. It hovers several inches off
+the ground while strange gutturul groans emanate from within. While
+previously the binding was nothing more than flimsy old leather, now
+at ten-times size it acts as an incredibly thick hide for this odd
+creature.
+~
+8 262144 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2209
+bookwyrm wyrm~
+an Ancient Bookwyrm~
+An exceptionally well-read, enormous wwrm writhes here before you.
+~
+ Although many worms have a slimy film covering them, this segmented
+beast is dry to the point of chapping and cracking. Its brown-grey
+skin is uniform in colour save for a jet-black spectacled pattern on
+its head, pigmented glasses for eyes it doesn't have. A wavy, crimson 
+tongue-like lobe on its crown weaves to and fro, sampling the air in 
+what must be a sensory capacity; though it also bears a faint resem-
+blance to a rooster's cockscomb.
+~
+536870920 262144 0 Y
+55 -20 -5 50d50+100 20d10+200
+0 300000
+8 8 0
+98 4 1d1+1 0
+0 0 0 0
+R
+6
+K
+25000 0 0 0 0 0 0
+#2210
+primal clay blank~
+placeholder: enchantress~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

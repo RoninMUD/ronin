@@ -1,0 +1,1801 @@
+#10900
+A beautiful path~
+   This beautiful path leads to a river. You feel a soft wind blow through
+your hair as you study the beautiful flowers along the path. To the south
+is a dark cave.
+~
+109 4 2
+D0
+~
+~
+0 -1 10901
+D2
+A dark cave over there.
+~
+~
+0 -1 4504
+S
+#10901
+A beautiful path~
+   You just walked on a beautiful path. This path is full of different
+kind of flowers. There is a long river at your north. If you want to
+carry on your journey, then you must walk across the river.
+~
+109 4 2
+D0
+You see a long river at your north.
+~
+~
+0 -1 10902
+D2
+~
+~
+0 -1 10900
+S
+#10902
+On the River~
+   The water here is very clear. You can see some a few small fishes swimming
+happily in the river. There is a riverside path at your north.
+~
+109 4 7
+D0
+It is a small path along the river.
+~
+~
+0 -1 10903
+D2
+It is a beautiful path over there.
+~
+~
+0 -1 10901
+S
+#10903
+Riverside Path~
+   The path is along the river. You can hear the water flowing along the
+river. There is some wind blowing in your face. It's a lovely refreshing
+breeze. It is very comfortable here. The path continues to your east.
+~
+109 4 2
+D1
+~
+~
+0 -1 10904
+D2
+There is a beautiful river over there. Across the river is another path.
+~
+~
+0 -1 10902
+S
+#10904
+Riverside Path~
+   The path is along the river. You can hear the water floating along the
+river. There is some wind blowing towards your face. A lovely refreshing
+breeze. It is very comfortable here. The path continues to the north and
+west.
+~
+109 4 2
+D0
+The path continues to there.
+~
+~
+0 -1 10905
+D3
+The end of the riverside path, and there is a river next to it.
+~
+~
+0 -1 10903
+S
+#10905
+Riverside Path~
+   There is a long river at your east and a big lake at your west. At
+the other side of the lake, you can see a big plaza. The path continues
+to the north and the south.
+~
+109 4 2
+D0
+It is very dark over there.
+~
+~
+0 -1 10906
+D2
+Still the riverside path.
+~
+~
+0 -1 10904
+S
+#10906
+Dark Corner~
+   There are many trees here which block all the light coming through.
+You are completely covered by darkness. There is a riverside path at your
+south and a lakeside path to your west.
+~
+109 1 3
+D2
+Some lights are coming from that direction. You can see a small path over there.
+~
+~
+0 -1 10905
+D3
+Some lights coming from that direction. There is a long path which leads
+to somewhere.
+~
+~
+0 -1 10907
+S
+#10907
+Lakeside Path~
+   Another lovely path. There is a vast lake to your south. You can
+see yourself through the reflection from the lake. There is a big plaza
+next to the lake, but it is very quiet there.
+~
+109 0 2
+D0
+~
+~
+0 -1 10985
+D1
+It is very dark over there.
+~
+~
+0 -1 10906
+D3
+The path continues to that direction.
+~
+~
+0 -1 10908
+S
+#10908
+Lakeside Path~
+   It is a west-east leading path. To your south is a big lake. You can
+see a big plaza next to the lake.
+~
+109 0 2
+D1
+The path continues to that direction.
+~
+~
+0 -1 10907
+D3
+The path continues to that direction.
+~
+~
+0 -1 10909
+S
+#10909
+Lakeside Path~
+   This is an west-east leading path. The path seems to continue forever.
+The lake is just at your south. There is some wind blowing in your face.
+To the north is an old mansion with movement in the upstairs window.
+~
+109 0 2
+D0
+The porch to a spooky house.
+~
+~
+0 -1 14000
+D1
+~
+~
+0 -1 10908
+D3
+~
+~
+0 -1 10910
+S
+#10910
+Lakeside Path~
+   This is the end of the lakeside path. To the west is a big plaza. There is
+a path along the lake to your east.
+~
+109 4 2
+D1
+There is a path over there.
+~
+~
+0 -1 10909
+D3
+You see a big plaza over there.
+~
+~
+0 -1 10911
+S
+#10911
+Entrance of the Zyca City~
+   This is the entrance to the Zyca City. There is a big tree next to the
+entrance with a sign on it. There is a lakeside path at your east.
+~
+109 0 1
+D1
+You see a path over there.
+~
+~
+0 -1 10910
+D2
+You see a beautiful but quiet plaza.
+~
+~
+0 -1 10912
+D3
+You see a beautiful but quiet plaza.
+~
+~
+0 -1 10916
+E
+tree~
+There is a big sign there.
+~
+E
+sign~
+There is something on it:
+
+     ========
+    =       =
+          =        =    =   =====   =====
+        =     =    =    =   =       =   =
+     =========     ======   =====   ===== =
+                        =
+                   ======
+~
+S
+#10912
+City Plaza~
+   The plaza is very beautiful, the owner here must has done a good
+job maintaining the plaza. But it is so very quiet here, it doesn't make any
+sense for such beautiful plaza to be this quiet.
+~
+109 0 1
+D0
+The entrance of the Zyca City, you can see a big tree over there.
+~
+~
+0 -1 10911
+D2
+The south-east part of the plaza.
+~
+~
+0 -1 10913
+D3
+The center of the plaza.
+~
+~
+0 -1 10915
+S
+#10913
+City Plaza~
+   It is the south-east part of the plaza. There is a big lake at your
+east. It is a hauntingly beautiful place, BUT very QUIET!
+~
+109 0 2
+D0
+The city plaza.
+~
+~
+0 -1 10912
+D3
+The City Plaza.
+~
+~
+0 -1 10914
+S
+#10914
+City Plaza~
+   The plaza is quite beautiful, the owner here must be very rich. Although
+the plaza is a beautiful place, it seems too quiet.
+~
+109 0 2
+D0
+You can see the center of the plaza.
+~
+~
+0 -1 10915
+D1
+You can see the south-east part of the plaza.
+~
+~
+0 -1 10913
+D3
+You can see  the south-west part of the plaza.
+~
+~
+0 -1 10919
+S
+#10915
+Center of the Plaza~
+   You are at the center of the Plaza. There is a 20 feet high statue of the
+King here who is pointing a big sword towards the sky.
+~
+109 0 2
+D0
+~
+~
+0 -1 10916
+D1
+~
+~
+0 -1 10912
+D2
+~
+~
+0 -1 10914
+D3
+~
+~
+0 -1 10918
+E
+statue king~
+The statue is made of bronze.
+He is pointing a big sword towards the sky.
+~
+S
+#10916
+The City Plaza~
+   The plaza is beautiful but quiet. The owner here has done a good job
+maintaining the plaza. There is a big tree next to the entrance
+at your east. To your south is the center of the plaza.
+~
+109 0 1
+D1
+You see the entrance over there.
+~
+~
+0 -1 10911
+D2
+You see a bronze statue over there.
+~
+~
+0 -1 10915
+D3
+It is the north-west part of the plaza.
+~
+~
+0 -1 10917
+S
+#10917
+North-west part of the plaza~
+   It is the north-west part of the plaza. There are some empty houses
+to your west. You can't see anybody over there. Although the plaza is
+beautiful, it is unusually quiet.
+~
+109 0 1
+D1
+~
+~
+0 -1 10916
+D2
+~
+~
+0 -1 10918
+E
+house houses~
+The houses over there are very old, hmmmm.... the plaza is so beautiful,
+how come the houses next to it are so old and poor?
+~
+S
+#10918
+City Plaza~
+   The plaza is very beautiful, the owner here must be very rich. There
+are some empty houses to your west. To your east is the center of the
+plaza.
+~
+109 0 1
+D0
+~
+~
+0 -1 10917
+D1
+You see a bronze statue over there.
+~
+~
+0 -1 10915
+D2
+The south-west part of the plaza.
+~
+~
+0 -1 10919
+E
+house houses~
+The houses over there are over old, hmmmm.... the plaza is so beautiful,
+how comes the houses next to it are so old and poor.
+~
+S
+#10919
+South-west part of the Plaza~
+   You are at the south-west part of the plaza. There is a road path to
+your west. It seems to lead to a big castle.
+~
+109 0 2
+D0
+~
+~
+0 -1 10918
+D1
+~
+~
+0 -1 10914
+D3
+A road to the castle.
+~
+~
+0 -1 10920
+S
+#10920
+A wide road~
+   This is a very wide road. It can allow four wagons passage at the same
+time. The road is well maintained with some trees having been planted
+along the roadside.  There is a big plaza at your east.
+~
+109 4 2
+D1
+There is a city plaza over there.
+~
+~
+0 -1 10919
+D3
+~
+~
+0 -1 10926
+S
+#10926
+A wide road~
+   This is a very wide road. It can allow four wagons passage at the same
+time. The road is well maintained with some trees having been planted
+along the roadside. There is a bridge at your south which connects the
+road and the castle together.
+~
+109 4 2
+D1
+~
+~
+0 -1 10920
+D2
+You see a big bridge over there.
+~
+~
+0 -1 10927
+S
+#10927
+On the Bridge~
+   You stand atop a big bridge. It is big enough for a few wagons to
+pass through at the same time. The castle is just at your south now.
+~
+109 0 2
+D0
+You see a wide road over there.
+~
+~
+0 -1 10926
+D2
+There is a big castle over there.
+~
+~
+0 -1 10928
+S
+#10928
+The Entrance of the Castle~
+   You are now in front of a big castle. You can see some people laughing
+at you through the windows of the castle. There is a bridge at your north
+which leads back to the city plaza.
+~
+109 0 1
+D0
+The bridge is over there.
+~
+~
+0 -1 10927
+D2
+The hall of the castle.
+~
+~
+0 -1 10929
+S
+#10929
+Hall of the Castle~
+    The floor of the hall is made of black marble. It makes a lot of noise
+when you walk on them. Everything in here is gold-covered. You can't see
+anything here which is old or ugly. The entrance of the castle is at your
+north.
+~
+109 8 1
+D0
+You see the entrance of the castle over there.
+~
+~
+0 -1 10928
+D1
+The north-east corner of the hall.
+~
+~
+0 -1 10930
+D2
+The center of the hall.
+~
+~
+0 -1 10933
+D3
+The north-west corner of the hall.
+~
+~
+0 -1 10931
+S
+#10930
+The hall of the Castle~
+    It is the north-east part of the hall. The floor here is made of black
+marble. It makes a lot of noise when you walk on them. Everything in here
+is gold-covered. You can't see anything here which is old or ugly. There
+is a hallway at your east.
+~
+109 8 1
+D1
+You see a beautiful hallway over there.
+~
+~
+0 -1 10938
+D2
+Still the hall of the castle.
+~
+~
+0 -1 10934
+D3
+Still the hall of the castle.
+~
+~
+0 -1 10929
+S
+#10931
+The hall of the Castle~
+    The floor of the hall is made of black marble. It makes a lot of noise
+when you walk on them. Everything in here is gold-covered. You can't see
+anything here which is old or ugly
+~
+109 8 1
+D1
+~
+~
+0 -1 10929
+D2
+~
+~
+0 -1 10932
+S
+#10932
+The hall of the Castle~
+    The floor of the hall is made of black marble. It makes a lot of noise
+when you walk on them. Everything in here is gold-covered. You can't see
+anything here which is old or ugly.  There is a hallway at your west.
+~
+109 8 1
+D0
+The north-west part of the hall.
+~
+~
+0 -1 10931
+D1
+The center of the hall.
+~
+~
+0 -1 10933
+D2
+The south-west part of the hall.
+~
+~
+0 -1 10935
+D3
+You see a beautiful hallway over there.
+~
+~
+0 -1 10944
+S
+#10933
+The Center of the Hall~
+   It is the center of the hall. The floor here is made of black marble.
+It is a very luxurious hall with everything gold-covered that's in here.
+~
+109 8 1
+D0
+~
+~
+0 -1 10929
+D1
+~
+~
+0 -1 10934
+D2
+~
+~
+0 -1 10936
+D3
+~
+~
+0 -1 10932
+S
+#10934
+The hall of the Castle~
+    It is the eastern part of the hall. The floor here is made of black
+marble. It makes a lot of noise when you walk on them. Everything in here
+is gold-covered. You can't see anything here which is old or ugly.
+~
+109 8 1
+D0
+The north-east part of the hall.
+~
+~
+0 -1 10930
+D2
+The south-east part of the hall.
+~
+~
+0 -1 10937
+D3
+The center of the hall.
+~
+~
+0 -1 10934
+S
+#10935
+The hall of the Castle~
+    It is the south-west part of the hall. The floor here is made of black
+marble. It makes a lot of noise when you walk on them.  Everything here
+is gold-covered. You can't see anything here which is old or ugly. There
+are golden stairs here which lead up to the second floor of the castle.
+~
+109 8 1
+D0
+~
+~
+0 -1 10932
+D1
+~
+~
+0 -1 10936
+D4
+Due to your position, you can see anything there. But you can hear
+someone speaking up there.
+~
+~
+0 -1 10954
+S
+#10936
+The hall of the Castle~
+    It is the south-west part of the hall. The floor here is made of black
+marble. It makes a lot of noise when you walk on them.  Everything here
+is gold-covered. You can't see anything here which is old or ugly.
+~
+109 8 1
+D0
+The center of the hall.
+~
+~
+0 -1 10933
+D1
+~
+~
+0 -1 10937
+D3
+~
+~
+0 -1 10935
+S
+#10937
+The hall of the Castle~
+    The floor of the hall is made of black marble. It makes a lot of noise
+when you walk on them. Everything in here is gold-covered. You can't see
+anything here which is old or ugly.
+~
+109 8 1
+D0
+~
+~
+0 -1 10934
+D2
+A tiny door opens in a brick wall to the south.
+~
+door~
+1 -1 16879
+D3
+~
+~
+0 -1 10936
+E
+door~
+A tiny, wooden door set in the brick wall.
+~
+S
+#10938
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D1
+~
+~
+0 -1 10939
+D3
+The great hall of the castle is over there.
+~
+~
+0 -1 10930
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10939
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D1
+~
+~
+0 -1 10940
+D3
+~
+~
+0 -1 10938
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10940
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marbles.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D2
+~
+~
+0 -1 10941
+D3
+~
+~
+0 -1 10939
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10941
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D0
+~
+~
+0 -1 10940
+D2
+~
+~
+0 -1 10942
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10942
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people. There is a big kitchen at your east.
+~
+109 8 1
+D0
+~
+~
+0 -1 10941
+D1
+You see a big kitchen over there.
+~
+~
+0 -1 10943
+D3
+~
+~
+0 -1 10953
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10943
+Kitchen~
+   A very big kitchen. Every cooking and eating tools are made of gold.
+There are many ovens at the middle of the room. The hallway is at your
+west.
+~
+109 8 1
+D3
+The hallway is over there.
+~
+~
+0 -1 10942
+D5
+~
+oven~
+1 10924 10972
+E
+oven~
+A particularly large, well-used oven stands out from the rest,
+probably due to the giant grease-caked keyhole on the door.
+~
+S
+#10944
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich family. The Castle's hall is just at your east.
+~
+109 8 1
+D1
+~
+~
+0 -1 10932
+D3
+~
+~
+0 -1 10945
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10945
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D1
+~
+~
+0 -1 10944
+D2
+~
+~
+0 -1 10946
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10946
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D0
+~
+~
+0 -1 10945
+D2
+~
+~
+0 -1 10947
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10947
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D0
+~
+~
+0 -1 10946
+D1
+~
+~
+0 -1 10948
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10948
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D1
+~
+~
+0 -1 10949
+D3
+~
+~
+0 -1 10947
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10949
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D1
+~
+~
+0 -1 10950
+D3
+~
+~
+0 -1 10948
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10950
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D1
+~
+~
+0 -1 10951
+D3
+~
+~
+0 -1 10949
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10951
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D1
+~
+~
+0 -1 10952
+D3
+~
+~
+0 -1 10950
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10952
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D0
+~
+~
+0 -1 10953
+D3
+~
+~
+0 -1 10951
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10953
+Hallway~
+   It is a long wide hallway. The floor here is also made of black marble.
+There are many golden vessels along the hallway. Many famous paintings are
+hanging on the wall of the hallway. The owner of the castle must be a very
+rich people.
+~
+109 8 1
+D1
+~
+~
+0 -1 10942
+D2
+~
+~
+0 -1 10952
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
+~
+E
+paintings~
+You didn't recognize who were the people in the paintings.
+~
+S
+#10954
+The Second floor of the Castle~
+   This floor of the castle is guarded by many castle guards. They will
+not allow everyone to enter here. The golden stair continues up and down.
+~
+109 8 1
+D0
+~
+~
+0 -1 10955
+D1
+~
+~
+0 -1 10961
+D4
+Due to your poor position, you can't see anything there.
+~
+~
+0 -1 10963
+D5
+The hall of the castle is over there.
+~
+~
+0 -1 10935
+S
+#10955
+The second floor of the Castle~
+   This floor is a bit smaller than the first floor, but it is as
+beautiful as the first floor. The floor here is still made of black
+marble and everything here is gold-covered too.
+~
+109 8 1
+D0
+~
+~
+0 -1 10956
+D1
+~
+~
+0 -1 10959
+D2
+~
+~
+0 -1 10954
+S
+#10956
+The second floor of the Castle~
+   This floor is a bit smaller than the first floor, but it is as
+beautiful as the first floor. The floor here is still made of black
+marble and everything here is gold-covered too.
+~
+109 8 1
+D1
+~
+~
+0 -1 10957
+D2
+~
+~
+0 -1 10955
+S
+#10957
+The second floor of the Castle~
+   This floor is a bit smaller than the first floor, but it is as
+beautiful as the first floor. The floor here is still made of black
+marble and everything here is gold-covered too.
+~
+109 8 1
+D1
+~
+~
+0 -1 10958
+D2
+~
+~
+0 -1 10959
+D3
+~
+~
+0 -1 10956
+S
+#10958
+The second floor of the Castle~
+   This floor is a bit smaller than the first floor, but it is as
+beautiful as the first floor. The floor here is still made of black
+marble and everything here is gold-covered too.
+~
+109 8 1
+D2
+~
+~
+0 -1 10960
+D3
+~
+~
+0 -1 10957
+S
+#10959
+The second floor of the Castle~
+   This floor is a bit smaller than the first floor, but it is as
+beautiful as the first floor. The floor here is still made of black
+marble and everything here is gold-covered too.
+~
+109 8 1
+D0
+~
+~
+0 -1 10957
+D1
+~
+~
+0 -1 10960
+D2
+~
+~
+0 -1 10961
+D3
+~
+~
+0 -1 10955
+S
+#10960
+The second floor of the Castle~
+   This floor is a bit smaller than the first floor, but it is as
+beautiful as the first floor. The floor here is still made of black
+marbles and everything here is gold-covered too.
+~
+109 8 1
+D0
+~
+~
+0 -1 10958
+D2
+~
+~
+0 -1 10962
+D3
+~
+~
+0 -1 10959
+S
+#10961
+The second floor of the Castle~
+   This floor is a bit smaller than the first floor, but it is as
+beautiful as the first floor. The floor here is still made of black
+marble and everything here is gold-covered too.
+~
+109 8 1
+D0
+~
+~
+0 -1 10959
+D1
+~
+~
+0 -1 10962
+D3
+~
+~
+0 -1 10954
+S
+#10962
+The second floor of the Castle~
+   This floor is a bit smaller than the first floor, but it is as
+beautiful as the first floor. The floor here is still made of black
+marble and everything here is gold-covered too.
+~
+109 8 1
+D0
+~
+~
+0 -1 10960
+D3
+~
+~
+0 -1 10961
+S
+#10963
+The Third floor of the Castle~
+   It is the top floor of the Castle. The King's family are living here.
+There must be a bunch of guards here protecting them. There is a golden
+stair here which leads to the second floor and the first floor of the
+castle.
+~
+109 8 1
+D0
+~
+~
+0 -1 10964
+D1
+~
+~
+0 -1 10968
+D5
+You can see the second floor down there.
+~
+~
+0 -1 10954
+S
+#10964
+The third floor of the Castle~
+   The floor here is now made of the best black marble. It seems to be
+a big mirror that you can see your face from it. Everything here is made
+of gold now. There is a small but beautiful fountain in the middle of the
+room.
+~
+109 8 1
+D0
+~
+~
+0 -1 10965
+D1
+You see a small fountain over there.
+~
+~
+0 -1 10967
+D2
+There is a golden stair over there.
+~
+~
+0 -1 10963
+S
+#10965
+The third floor of the Castle~
+   The floor here is now made from the best black marble. It seems to be
+a big mirror that you can see your reflection in. Everything here is made
+of gold now. There is a small but beautiful fountain in the middle of this
+floor. There are many windows here.  Looking through them, you can see
+a beautiful plaza next to the lake.
+~
+109 8 1
+D1
+~
+~
+0 -1 10966
+D2
+~
+~
+0 -1 10964
+E
+window windows~
+Through the windows, you can see a beautiful plaza next to the lake.
+~
+S
+#10966
+The third floor of the Castle~
+    On this floor, there are three luxury chambers. There is one of them
+at your east, the Prince Chamber.
+~
+109 8 1
+D1
+The prince chamber.
+~
+~
+0 -1 10969
+D2
+You see a fountain over there.
+~
+~
+0 -1 10967
+D3
+~
+~
+0 -1 10965
+S
+#10967
+The third floor of the Castle~
+   The floor here is now made of the best black marble. It seems almost
+like a big mirror that you can see your reflection in. Everything here is
+made of gold now. There is a small but beautiful fountain here. On this 
+floor, there are three luxury chambers, and there is one of them, the 
+Queen Chamber,at your east.
+~
+109 8 1
+D0
+~
+~
+0 -1 10966
+D1
+The Queen Chamber.
+~
+~
+0 -1 10970
+D2
+~
+~
+0 -1 10968
+D3
+~
+~
+0 -1 10964
+E
+fountain~
+The fountain is made of ivory.
+~
+S
+#10968
+The third floor of the Castle~
+    On this floor, there are three luxury chambers. There is one of them
+at your east, the King Chamber.
+~
+109 8 1
+D0
+You see a small fountain over there.
+~
+~
+0 -1 10967
+D1
+The King Chamber.
+~
+~
+0 -1 10971
+D3
+You see a golden stair over there.
+~
+~
+0 -1 10963
+S
+#10969
+The Prince Chamber~
+   It is a luxury chamber. Everything here are made of gold. You just
+walked on the most expensive carpet in the whole world and you left
+some muddy footprints on it. The only exit is to the west.
+~
+109 8 1
+D3
+~
+~
+0 -1 10966
+S
+#10970
+The Queen Chamber~
+   It is a very luxurious chamber. All the furniture here was made by the
+best carpenter. Although they were made of wood, they were much more expensive
+than the golden furniture. The floor here is covered with the most expensive
+carpet gold can buy. The only exit is to the west.
+~
+109 8 1
+D3
+~
+~
+0 -1 10967
+S
+#10971
+The King Chamber~
+   It is a very very luxury chamber. It has a very beautiful fountain in
+the room and the fountain is filled with the best wine. The bed here is
+bigger than a big dinner table. The floor here is covered with the most
+expensive carpet. The only exit is to the west.
+~
+109 8 1
+D3
+~
+~
+0 -1 10968
+S
+#10972
+Dark Den~
+   You are in a very dark den. The whole den is full of water, and the water
+level here is higher than your knees. The water is dirty, cold, and stink.
+The whole den is also full of moss, the foul smelling air here makes you
+sick.
+~
+109 9 6
+D3
+~
+~
+0 -1 10973
+D4
+~
+oven~
+1 0 10943
+S
+#10973
+Dark Den~
+   You are in a very dark den. The whole den is full of water, and the water
+level here is higher than your knees. The water is dirty, cold, and stink.
+The whole den is also full of moss, the foul smelling air here makes you
+sick.
+~
+109 9 6
+D1
+~
+~
+0 -1 10972
+D3
+~
+~
+0 -1 10974
+S
+#10974
+Dark Den~
+   You are in a very dark den. The whole den is full of water, and the water
+level here is higher than your knees. The water is dirty, cold, and stink.
+The whole den is also full of moss, the foul smelling air here makes you
+sick. The den seems like a tunnel, it directs you to somewhere.
+~
+109 9 6
+D1
+~
+~
+0 -1 10973
+D2
+~
+~
+0 -1 10975
+S
+#10975
+Dark Den~
+   You are in a very dark den. The whole den is full of water, and the water
+level here is higher than your knees. The water is dirty, cold, and stink.
+The whole den is also full of moss, the foul smelling air here makes you
+sick. The den seems like a tunnel, it directs you to somewhere.
+~
+109 9 6
+D0
+~
+~
+0 -1 10974
+D2
+~
+~
+0 -1 10976
+S
+#10976
+Dark Den~
+   You are in a very dark den. The whole den is full of water, and the water
+level here is higher than your knees. The water is dirty, cold, and stink.
+The whole den is also full of moss, the foul smelling air here makes you
+sick. The den seems like a tunnel, it directs you to somewhere.
+~
+109 9 6
+D0
+~
+~
+0 -1 10975
+D3
+~
+~
+0 -1 10977
+S
+#10977
+Dark Den~
+   You are in a very dark den. The whole den is full of water, and the water
+level here is higher than your knees. The water is dirty, cold, and stink.
+The whole den is also full of moss, the foul smelling air here makes you
+sick. The den seems like a tunnel, it directs you to somewhere.
+~
+109 9 6
+D1
+~
+~
+0 -1 10976
+D2
+~
+~
+0 -1 10978
+S
+#10978
+Dark Den~
+   You are in a very dark den. The whole den is full of water, and the water
+level here is higher than your knees. The water is dirty, cold, and stink.
+The whole den is also full of moss, the foul smelling air here makes you
+sick. If the den is a tunnel, then you are now at the end of the tunnel.
+There is a steel door to your west.
+~
+109 9 6
+D0
+~
+~
+0 -1 10977
+D3
+~
+door~
+2 10912 10979
+S
+#10979
+A Dark Room~
+   You are now in a very dark room. The whole room is covered with blood.
+Every few steps, you will kick a bone from the floor. It is not a good
+idea to stay here. If you want to live longer, leave now.
+~
+109 9 6
+D0
+~
+~
+0 -1 10980
+D1
+~
+door~
+2 10912 10978
+D3
+~
+~
+0 -1 10982
+S
+#10980
+A Dark Room~
+   You are now in a very dark room. The whole room is covered with blood.
+Every few steps, you will kick a bone from the floor. It is not a good
+idea to stay here. If you want to live longer, leave now.
+~
+109 9 6
+D2
+~
+~
+0 -1 10979
+D3
+~
+~
+0 -1 10981
+S
+#10981
+A Dark Room~
+   You are now in a very dark room. The whole room is covered with blood.
+Every few steps, you will kick a bone from the floor. It is not a good
+idea to stay here. If you want to live longer, leave now.
+~
+109 9 6
+D1
+~
+~
+0 -1 10980
+D2
+~
+~
+0 -1 10982
+D3
+~
+~
+0 -1 10983
+S
+#10982
+A Dark Room~
+   You are now in a very dark room. The whole room is covered with blood.
+Every few steps, you will kick a bone from the floor. It is not a good
+idea to stay here. If you want to live longer, leave now.
+~
+109 9 6
+D0
+~
+~
+0 -1 10981
+D1
+~
+~
+0 -1 10979
+D3
+~
+~
+0 -1 10984
+S
+#10983
+A Dark Room~
+   You are now in a very dark room. The whole room is covered with blood.
+Every few steps, you will kick a bone from the floor. It is not a good
+idea to stay here. If you want to live longer, leave now.
+~
+109 9 6
+D1
+~
+~
+0 -1 10981
+D2
+~
+~
+0 -1 10984
+S
+#10984
+A Dark Room~
+   You are now in a very dark room. The whole room is covered with blood.
+Every few steps, you will kick a bone from the floor. It is not a good
+idea to stay here. If you want to live longer, leave now.
+~
+109 9 6
+D0
+~
+~
+0 -1 10983
+D1
+~
+~
+0 -1 10982
+S
+#10985
+An old, dusty trail~
+   Broken cobblestones pave the way here.  Rocks and dead trees line the
+sides of the trail.  A few tumbleweeds blow by as the wind kicks dust into
+the air.  The sky is overcast, creating a dreary atmosphere around the
+path.  Other than the wind whistling past the rocks and blowing about the
+dead branches of the trees, there is silence.  The dim sky casts faint
+shadows onto the path which leads north and south.
+~
+109 0 0
+D0
+~
+~
+0 -1 10986
+D2
+~
+~
+0 -1 10907
+E
+rocks trees~
+Dead trees stand behind the large rocks which line the trail here.
+~
+E
+tumbleweed tumbleweeds~
+Three tumbleweeds quickly blow across the path.
+~
+S
+#10986
+An old, dusty trail~
+   The path begins to narrow a bit here.  A row of marble pillars lines
+each side of the path, each growing larger in succession.  A few birds fly
+overhead, their calls into the wind causing the only interruption of
+silence. A few mice mutely crawl about the rough trail.  A few shreds of
+cloth have been scattered along the eastern side of the path.  The path
+continues to narrow to the north.
+~
+109 0 0
+D0
+~
+~
+0 -1 10987
+D2
+~
+~
+0 -1 10985
+E
+pillars~
+Marble pillars for the sides of the path here, each pillar larger than the last.
+~
+E
+shreds cloth~
+A few red and white rags have been left by the side of the road.
+~
+S
+#10987
+An old, dusty trail~
+   The path is very narrow here.  The pillars on either side of it continue
+to grow in size and width, making for a smaller path.  They block
+much of the light as they tower above you.  The ground here is much more
+rough than the previous section of this trail.  The trail is rocky and
+has been uprooted.  No grass grows on the ground.  The wind makes a howling
+noise as it whips through the spaces between the pillars.  The path
+narrows even further to the north as the size of the pillars maintains its
+growth.
+~
+109 0 0
+D0
+~
+~
+0 -1 10988
+D2
+~
+~
+0 -1 10986
+E
+pillars~
+The pillars here are about three meters in diameter and ten meters tall.
+~
+S
+#10988
+Approaching a tall gate~
+   The pillars cease to continue here.  The path is very narrow here as the
+pillars have grown to enormous sizes.  It is impossible to see between the
+cracks of the pillars and they are taller than the eye can see.  The path
+is very rough with large rocks piled in the middle of it.  No light enters
+except for a faint glow from the north where the pillars stop, leaving an
+opening large enough for a man to enter.  This place is completely silent.
+~
+109 0 0
+D0
+~
+~
+0 -1 21100
+D2
+~
+~
+0 -1 10987
+E
+pillars~
+The pillars here are far too large for a human to have created.
+~
+S
+#10999
+An ant nest~
+   You stand in a small hole in the earth...the walls are made of
+sand and loose dirt.  It looks as though you've stumbled upon an ant's
+nest somehow, and damn, is it a busy one.
+~
+109 9 0
+S
+#0
+$~

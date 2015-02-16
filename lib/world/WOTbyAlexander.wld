@@ -1,0 +1,2024 @@
+#18700
+Arad Doman~
+  You are in the lands of Arad Doman, between Saldaea to the north and Almoth
+Plain to the south. The Aryth Ocean streches west to the horizon. Dark hills
+cover the land to the west.
+~
+187 0 2
+D0
+~
+~
+0 -1 18778
+D1
+~
+~
+0 -1 18762
+D2
+~
+~
+0 -1 18703
+S
+#18701
+Bandar Eban~
+  Before you lies Bandar Eban, the capital and trade center of Arad Doman. Almost all 
+merchants in Arad Doman are women and their success makes most of the nation's wealth. 
+To the south-west lies the peninsula Toman Head. The lands of Arad Doman continue to 
+the east.
+~
+187 0 2
+D1
+~
+~
+0 -1 18702
+D2
+~
+~
+0 -1 18705
+S
+#18702
+Arad Doman~
+  You are in the lands of Arad Doman, between Saldaea to the north-east and 
+Almoth Plain to the south. The Aryth Ocean stretches north to the horizon.
+The capital of Arad Doman, Bandar Eban, lies to the west.
+~
+187 0 2
+D1
+~
+~
+0 -1 18703
+D2
+~
+~
+0 -1 18706
+D3
+~
+~
+0 -1 18701
+S
+#18703
+Arad Doman~
+  You are in the lands of Arad Doman, between Saldaea to the north and Almoth
+Plain to the south. A cold wind comes down from the Mountains of Mist to the east.
+A large ocean is visible to the north-west.
+~
+187 0 2
+D0
+~
+~
+0 -1 18700
+D2
+~
+~
+0 -1 18707
+D3
+~
+~
+0 -1 18702
+S
+#18704
+Falme~
+   The city of Falme lies here on the western coast of Toman Head. The  
+great Aryth Ocean stretches to the horizon in the west. The peninsula of 
+Toman Head continue west towards Almoth Plain.
+~
+187 0 2
+D1
+~
+~
+0 -1 18705
+D5
+~
+city~
+12 -1 18434
+S
+#18705
+Toman Head~
+  The peninsula of Toman Head extends from the west coast into the Aryth Ocean 
+with its biggest town Falme on its western tip. The great plains of Almoth 
+cover the lands to the east. To the north is the land of Arad Doman and its 
+capital Bandar Eban.
+~
+187 0 2
+D0
+~
+~
+0 -1 18701
+D1
+~
+~
+0 -1 18706
+D3
+~
+~
+0 -1 18704
+S
+#18706
+Almoth Plain~
+  Almoth Plain is a large area, and Almoth was once a nation in itself. For the 
+last houndreds of years, the plains has been a battleground for Tarabon and 
+Arad Doman that both want control over it. Villages of all sizes cover the plains 
+but they have no major cities. The Mountains of Mist roam to the east.
+~
+187 0 2
+D0
+~
+~
+0 -1 18702
+D1
+~
+~
+0 -1 18707
+D2
+~
+~
+0 -1 18708
+D3
+~
+~
+0 -1 18705
+S
+#18707
+Almoth Plain~
+  Almoth Plain is a large area, and Almoth was once a nation in itself. For the 
+last houndreds of years, the plains has been a battleground for Tarabon and 
+Arad Doman that both want control over it. Villages of all sizes cover the plains 
+but they have no major cities. The Mountains of Mist roam to the east.
+~
+187 0 2
+D0
+~
+~
+0 -1 18703
+D2
+~
+~
+0 -1 18709
+D3
+~
+~
+0 -1 18706
+S
+#18708
+Almoth Plain~
+  Almoth Plain is a large area, and Almoth was once a nation in itself. For the 
+last houndreds of years, the plains has been a battleground for Tarabon and 
+Arad Doman that both want control over it. Villages of all sizes cover the plains 
+but they have no major cities. The Mountains of Mist roam to the east.
+~
+187 0 2
+D0
+~
+~
+0 -1 18706
+D1
+~
+~
+0 -1 18709
+D2
+~
+~
+0 -1 18711
+S
+#18709
+Almoth Plain~
+  Almoth Plain is a large area, and Almoth was once a nation in itself. For the 
+last houndreds of years, the plains has been a battleground for Tarabon and 
+Arad Doman that both want control over it. Villages of all sizes cover the plains 
+but they have no major cities. The Mountains of Mist roam to the east.
+~
+187 0 2
+D0
+~
+~
+0 -1 18707
+D2
+~
+~
+0 -1 18712
+D3
+~
+~
+0 -1 18708
+S
+#18710
+Tanchico~
+  The city of Tanchico is the capital of Tarabon and one of the oldest cities 
+in the world. It is also one of the largest. It lies at the mouth of the river 
+Andahar as it comes down from the Mountains of Mist. The city streets are not safe
+because of the huge amount of cutthroats that almost rule the streets. Bodyguards
+are a necessity for travel anywhere in the city.
+~
+187 0 1
+D1
+~
+~
+0 -1 18711
+S
+#18711
+Tarabon~
+  Tarabon lies to the south of Almoth Plain and the people claim their descent 
+back to the nobles from the Age of Legends before the Breaking of the World. 
+Multiple wars have lead to civil war between its big cities. East of Tarabon lies 
+Amadicia. The Aryth Ocean stretches to the west and south.
+~
+187 0 2
+D0
+~
+~
+0 -1 18708
+D1
+~
+~
+0 -1 18712
+D2
+~
+~
+0 -1 18713
+D3
+~
+~
+0 -1 18710
+S
+#18712
+Tarabon~
+  Tarabon lies to the south of Almoth Plain and the people claim their descent 
+back to the nobles from the Age of Legends before the Breaking of the World. 
+Multiple wars have lead to civil war between its big cities. East of Tarabon lies 
+Amadicia. The Aryth Ocean stretches to the west adn south.
+~
+187 0 2
+D0
+~
+~
+0 -1 18709
+D2
+~
+~
+0 -1 18714
+D3
+~
+~
+0 -1 18711
+S
+#18713
+Tarabon~
+  Tarabon lies to the south of Almoth Plain and the people claim their descent 
+back to the nobles from the Age of Legends before the Breaking of the World. 
+Multiple wars have lead to civil war between its big cities. East of Tarabon lies 
+Amadicia. The Aryth Ocean stretches to the west adn south.
+~
+187 0 2
+D0
+~
+~
+0 -1 18711
+D1
+~
+~
+0 -1 18714
+S
+#18714
+Tarabon~
+  Tarabon lies to the south of Almoth Plain and the people claim their descent 
+back to the nobles from the Age of Legends before the Breaking of the World. 
+Multiple wars have lead to civil war between its big cities. East of Tarabon lies 
+Amadicia. The Aryth Ocean stretches to the west adn south.
+~
+187 0 2
+D0
+~
+~
+0 -1 18712
+D1
+~
+~
+0 -1 18715
+D3
+~
+~
+0 -1 18713
+S
+#18715
+Amador~
+  Amador is the capital of Amadicia and is the home of The Children of the
+of Storms rage with furious winds.
+channelers. The Mountains of Mist rise to the north and to the south, the Sea
+Light. The Children are hostile to Aes Sedai, making these lands almost free of
+~
+187 0 1
+D1
+~
+~
+0 -1 18717
+D2
+~
+~
+0 -1 18716
+D3
+~
+~
+0 -1 18714
+D5
+~
+fortress~
+12 -1 18435
+S
+#18716
+Amadicia~
+  Forests cover this part of Amadicia with an occational farm where the forest
+have been cleared away. The Mountains of Mist stand tall to the north, and to 
+the south you see several islands in the Sea of Storms. Traveling to the west 
+will bring you to Tarabon and Altara lies to the east.
+~
+187 0 2
+D0
+~
+~
+0 -1 18715
+D1
+~
+~
+0 -1 18718
+S
+#18717
+Amadicia~
+  This region of Amadicia have several large towns with large farms scattered 
+around them. The Mountains of Mist stand tall to the north, and to the south 
+you see several islands in the Sea of Storms. Traveling to the west will bring 
+you to Tarabon and Altara lies to the east.
+~
+187 0 2
+D0
+~
+~
+0 -1 18725
+D1
+~
+~
+0 -1 18723
+D2
+~
+~
+0 -1 18718
+D3
+~
+~
+0 -1 18715
+S
+#18718
+Amadicia~
+  There is mostly wilderness around this parts of Amadicia. Forested hills lie 
+all around. The Mountains of Mist stand tall to the north, and to the south you 
+see several islands in the Sea of Storms. Traveling to the west will bring 
+you to Tarabon and Altara lies to the east.
+~
+187 0 2
+D0
+~
+~
+0 -1 18717
+D1
+~
+~
+0 -1 18720
+D3
+~
+~
+0 -1 18716
+S
+#18719
+Ebou Dar~
+  Ebou Dar is the capital of Altara and beautiful a city with pale white buildings.
+The city is divided in two by the river Eldar that windens into a delta leading 
+out into the sea. Both parts of the city have plenty of canals and transportation 
+is easy both by boat and over the wide bridges throughout the city.
+  One side of the city holds the palace, shops and houses for the upper and middle 
+classes. The other side, called the Rahad, is home to the lower class, thieves and 
+trouble makers. Dueling is common practice in the streets of Ebou Dar to settle
+arguments and disputes.
+~
+187 0 1
+D0
+~
+~
+0 -1 18720
+S
+#18720
+Altara~
+  These forested hills in Altara stretch all the way to the river Eldar that
+separates Altara from Amadicia in the west. Many smaller streams wind their way
+between the hills and flow into the Eldar. A wide road connects the larger towns
+in the area, but when getting near the towns even the wide road will be packed
+with travelers and merchant carts. Bordering many greater nations, Altara is
+a nation in name only. Most people say they would swear to a local lord rather
+than swearing to a king or queen.
+~
+187 0 2
+D0
+~
+~
+0 -1 18723
+D1
+~
+~
+0 -1 18721
+D2
+~
+~
+0 -1 18719
+D3
+~
+~
+0 -1 18718
+S
+#18721
+Altara~
+  The land here is mostly flat plains with only a few thickets and rises. The 
+great nation of Illian lies to the east, and larger hills and forests cover the 
+land to the west. A large sea stretches to the south. Bordering many greater 
+nations, Altara is a nation in name only. Most people say they would swear to a 
+local lord rather than swearing to a king or queen.
+~
+187 0 2
+D0
+~
+~
+0 -1 18722
+D1
+~
+~
+0 -1 18731
+D3
+~
+~
+0 -1 18720
+S
+#18722
+Altara~
+  The land here is mostly flat plains with only a few thickets and rises. The 
+great nation of Illian lies to the east, and larger hills and forests cover the 
+land to the west. A large sea stretches to the south. Bordering many greater 
+nations, Altara is a nation in name only. Most people say they would swear to a 
+local lord rather than swearing to a king or queen.
+~
+187 0 2
+D0
+~
+~
+0 -1 18741
+D1
+~
+~
+0 -1 18728
+D2
+~
+~
+0 -1 18721
+D3
+~
+~
+0 -1 18723
+S
+#18723
+Altara~
+  These forested hills in Altara stretch all the way to the river Eldar that 
+separates Altara from Amadicia in the west. Many smaller streams wind their way
+between the hills and flow into the Eldar. A wide road connects the larger towns
+in the area, but when getting near the towns even the wide road will be packed 
+with travelers and merchant carts. Bordering many greater nations, Altara is 
+a nation in name only. Most people say they would swear to a local lord rather 
+than swearing to a king or queen.
+~
+187 0 2
+D0
+~
+~
+0 -1 18724
+D1
+~
+~
+0 -1 18722
+D2
+~
+~
+0 -1 18720
+D3
+~
+~
+0 -1 18717
+S
+#18724
+Ghealdan~
+  Green fields and hills cover this region, with the Mountains of Mist with their
+ever cloud covered peaks donimating the skyline to the far west. Thick forests 
+are visible to the north and to the south lies Altara. Almost every hilltop has 
+villages and farms on its slopes. Traveling east will get you to Murandy.
+~
+187 0 2
+D0
+~
+~
+0 -1 18727
+D1
+~
+~
+0 -1 18741
+D2
+~
+~
+0 -1 18723
+D3
+~
+~
+0 -1 18725
+S
+#18725
+Ghealdan~
+  Green fields and hills cover this region, with the Mountains of Mist with their
+ever cloud covered peaks donimating the skyline to the west. Thick forests are 
+visible to the north and to the south lies Amadicia. Almost every hilltop has 
+villages and farms on its slopes. 
+~
+187 0 2
+D0
+~
+~
+0 -1 18726
+D1
+~
+~
+0 -1 18724
+D2
+~
+~
+0 -1 18717
+S
+#18726
+Ghealdan~
+  This area of Ghealdan is cornered in by the Manetherendrelle, or the White 
+River to the north, and The Mountains of Mist raising to the west. The land
+is covered with forests close to the rivers but open hills and plains cover the
+land to the south.
+~
+187 0 2
+D1
+~
+~
+0 -1 18727
+D2
+~
+~
+0 -1 18725
+S
+#18727
+Ghealdan~
+  This area of Ghealdan has the Manetherendrelle, or the White River to the 
+north, and The Mountains of Mist raising to the far west. The land is covered 
+with forests close to the rivers but open hills and plains cover the land to 
+the south. Past the river to the north a huge swamp stretches as far as your
+eye can see. Traveling east will get you to Murandy.
+~
+187 0 2
+D0
+~
+~
+0 -1 18749
+D1
+~
+~
+0 -1 18746
+D2
+~
+~
+0 -1 18724
+D3
+~
+~
+0 -1 18726
+S
+#18728
+Illian~
+  Illian is a powerful nation bordering weaker nations like Altara and Murandy. 
+It's wealthy from sea, land, and river trade. Altara lies to the west, Murandy 
+to the north and across the Plains of Maredo to the east lies Tear.
+~
+187 0 2
+D0
+~
+~
+0 -1 18742
+D1
+~
+~
+0 -1 18729
+D2
+~
+~
+0 -1 18731
+D3
+~
+~
+0 -1 18722
+S
+#18729
+Illian~
+  Illian is a powerful nation bordering weaker nations like Altara and Murandy. 
+It's wealthy from sea, land, and river trade. Altara lies to the west, Murandy 
+to the north and across the Plains of Maredo to the east lies Tear.
+~
+187 0 2
+D0
+~
+~
+0 -1 18743
+D1
+~
+~
+0 -1 18733
+D2
+~
+~
+0 -1 18730
+D3
+~
+~
+0 -1 18728
+S
+#18730
+Illian~
+  Illian is a powerful nation bordering weaker nations like Altara and Murandy. 
+It's wealthy from sea, land, and river trade. Altara lies to the west, Murandy 
+to the north and across the Plains of Maredo to the east lies Tear.
+~
+187 0 2
+D0
+~
+~
+0 -1 18729
+D1
+~
+~
+0 -1 18734
+D3
+~
+~
+0 -1 18731
+S
+#18731
+Illian~
+  Illian is a powerful nation bordering weaker nations like Altara and Murandy. 
+It's wealthy from sea, land, and river trade. Altara lies to the west, Murandy 
+to the north and across the Plains of Maredo to the east lies Tear.
+~
+187 0 2
+D0
+~
+~
+0 -1 18728
+D1
+~
+~
+0 -1 18730
+D2
+~
+~
+0 -1 18732
+D3
+~
+~
+0 -1 18721
+S
+#18732
+City of Illian~
+  Unlike other great cities, Illian has no city wall. The terrain around the 
+city is marshy land, so an assault on the city is no threat. The city itself was 
+built by Ogier, the most skilled stone workers in the world. Large trade posts, 
+shipyards and fishing shops lie side by side along its many ports.
+~
+187 0 1
+D0
+~
+~
+0 -1 18731
+S
+#18733
+Plains of Maredo~
+  The Plains of Maredo lie between the great nations of Illian to the west and 
+Tear to the east. The plains have no particular landmarks but you see small 
+streams and thickets as you travel.
+~
+187 0 2
+D0
+~
+~
+0 -1 18744
+D1
+~
+~
+0 -1 18739
+D2
+~
+~
+0 -1 18734
+D3
+~
+~
+0 -1 18729
+D5
+~
+city~
+12 -1 18471
+S
+#18734
+Plains of Maredo~
+  The Plains of Maredo lie between the great nations of Illian to the west and 
+Tear to the east. The plains have no particular landmarks but you see small 
+streams and thickets as you travel.
+~
+187 0 2
+D0
+~
+~
+0 -1 18733
+D1
+~
+~
+0 -1 18735
+D3
+~
+~
+0 -1 18730
+S
+#18735
+City of Tear~
+  The city of Tear lies at the mouth of the river Erinin. Its huge docks are 
+protected by the Stone of Tear, the city fortress. Huge trade ships sail both 
+out to sea and upriver all the way to the Borderlands. The sword that is not a 
+sword, the legendary Callandor, is said to be inside the Stone of Tear.
+~
+187 0 1
+D0
+~
+~
+0 -1 18739
+D1
+~
+~
+0 -1 18736
+D3
+~
+~
+0 -1 18734
+S
+#18736
+Tear~
+  Tear lies by the Sea of Storms and is a great trading and military nation.
+Across the Plains of Maredo to the west lies Illian and to the east lies the 
+small nation of Mayene. To the north lies Haddon Mirk. Large olive farms are 
+around every village and town and oviles are one of Tear's main trade goods.
+~
+187 0 2
+D0
+~
+~
+0 -1 18740
+D1
+~
+~
+0 -1 18737
+D3
+~
+~
+0 -1 18735
+S
+#18737
+Tear~
+  Tear lies by the Sea of Storms and is a great trading and military nation.
+Across the Plains of Maredo to the west lies Illian and to the east lies the 
+small nation of Mayene. To the north lies Haddon Mirk. Large olive farms are 
+around every village and town and oviles are one of Tear's main trade goods.
+~
+187 0 2
+D1
+~
+~
+0 -1 18738
+D3
+~
+~
+0 -1 18736
+S
+#18738
+Mayene~
+  Mayene is a city-state and claims independence even if Tear looks at 
+Mayene as a province of Tear. Mayene lies in the shadow of the Dragonwall,
+the largest mountain chain in the world, whose tops dwarf the Mountains of 
+Mist.
+~
+187 0 1
+D3
+~
+~
+0 -1 18737
+S
+#18739
+Haddon Mirk~
+  Haddon Mirk has no major cities, just scattered villages as the area is 
+one big marsh fed by the river Iralell. To the east roams the Dragonwall and 
+to the west lies Murandy. It borders to two great nations, Tear to the south 
+and Cairhien to the north.
+~
+187 0 2
+D0
+~
+~
+0 -1 18745
+D1
+~
+~
+0 -1 18740
+D2
+~
+~
+0 -1 18735
+D3
+~
+~
+0 -1 18733
+S
+#18740
+Haddon Mirk~
+  Haddon Mirk has no major cities, just scattered villages as the area is 
+one big marsh fed by the river Iralell. To the east roams the Dragonwall and 
+to the west lies Murandy. It borders to two great nations, Tear to the south 
+and Cairhien to the north.
+~
+187 0 2
+D2
+~
+~
+0 -1 18736
+D3
+~
+~
+0 -1 18739
+S
+#18741
+Murandy~
+  Murandy lies south of Andor and north of Altara. People do not have trust in 
+their king and because of this the king has no real control outside the capital 
+of Lugard. Murandy lies between large nations and therefor the roads are 
+constantly crowded with travelers and merchants.
+~
+187 0 2
+D0
+~
+~
+0 -1 18746
+D1
+~
+~
+0 -1 18742
+D2
+~
+~
+0 -1 18722
+D3
+~
+~
+0 -1 18724
+S
+#18742
+Lugard~
+  Lugard is located in the center of Murandy and is its capital. It lies on the
+banks of the river Storn. Constant trade traffic runs through the city to and from
+the major cities in the south. Bad maintenance has let parts of the city wall 
+crumble and fall apart. Many of the streets are unpaved, and the city is 
+filled with thieves and other criminals.
+~
+187 0 1
+D0
+~
+~
+0 -1 18747
+D1
+~
+~
+0 -1 18743
+D2
+~
+~
+0 -1 18728
+D3
+~
+~
+0 -1 18741
+S
+#18743
+Hills of Kintara~
+  The Hills of Kintara lie between Murandy to the south and Andor to the north.
+The hills are not populated and the ground is not suitable for growing. The area 
+is pretty barren exept for travelers you see on the road and wild animals roaming
+the country side.
+~
+187 0 2
+D1
+~
+~
+0 -1 18744
+D2
+~
+~
+0 -1 18729
+D3
+~
+~
+0 -1 18742
+S
+#18744
+Haddon Mirk~
+  Haddon Mirk has no major cities, just scattered villages as the area is 
+one big marsh fed by the river Iralell. To the east roams the Dragonwall and 
+to the west lies Murandy. It borders to two great nations, Tear to the south 
+and Cairhien to the north.
+~
+187 0 2
+D1
+~
+~
+0 -1 18745
+D2
+~
+~
+0 -1 18733
+D3
+~
+~
+0 -1 18743
+S
+#18745
+Haddon Mirk~
+  Haddon Mirk has no major cities, just scattered villages as the area is 
+one big marsh fed by the river Iralell. To the east roams the Dragonwall and 
+to the west lies Murandy. It borders to two great nations, Tear to the south 
+and Cairhien to the north.
+~
+187 0 2
+D2
+~
+~
+0 -1 18739
+D3
+~
+~
+0 -1 18744
+S
+#18746
+Murandy~
+  Murandy lies south of Andor and north of Altara. People do not have trust in 
+their king and because of this the king has no real control outside the capital 
+of Lugard. Murandy lies between large nations and therefor the roads are 
+constantly crowded with travelers and merchants.
+~
+187 0 2
+D0
+~
+~
+0 -1 18750
+D1
+~
+~
+0 -1 18747
+D2
+~
+~
+0 -1 18741
+D3
+~
+~
+0 -1 18727
+S
+#18747
+Murandy~
+  Murandy lies south of Andor and north of Altara. People do not have trust in 
+their king and because of this the king has no real control outside the capital 
+of Lugard. Murandy lies between large nations and therefor the roads are 
+constantly crowded with travelers and merchants.
+~
+187 0 2
+D0
+~
+~
+0 -1 18751
+D2
+~
+~
+0 -1 18742
+D3
+~
+~
+0 -1 18746
+S
+#18748
+The Two Rivers~
+  Emond's Field, where the Dragon Reborn grew up, has grown rapidly the last few 
+years and due to trolloc attacks a stockade has been built surrounding the
+village. Farms are scattered around the village and in the forests covering
+this region.
+  This area is a "forgotten" part of Andor. Many of the villagers haven't 
+seen a tax collector in generations and don't see themselves as part of Andor, 
+or even know that they are. The area is contained by the river Taren to the 
+north and The White River to the south. A huge swamp to the east and the 
+Mountains of Mist to the west make The Two Rivers only accessible by ferry on 
+the river Taren.
+~
+187 0 2
+D0
+To the north, a ferry is waiting to carry people across the river.
+~
+ferry~
+12 -1 18752
+S
+#18749
+Whitebridge~
+  The name of the town of Whitebridge comes from the huge white bridge over the 
+river Arinelle. The bridge is said to date back to the Age of Legends and looks 
+like it's made of white glass, but it's so strong that no hammer or chisel can 
+make a mark on it.
+~
+187 0 2
+D0
+~
+~
+0 -1 18753
+D1
+~
+~
+0 -1 18750
+D2
+~
+~
+0 -1 18727
+S
+#18750
+Four Kings~
+  Four Kings is a village around a junction on the road from Whitebridge to 
+Camelyn, where a road leads south to Lugard. Heavy trade traffic runs 
+through the town, and several inns along the road offer warm beds and hot meals
+for anyone that has coins to spend.
+~
+187 0 2
+D0
+~
+~
+0 -1 18754
+D1
+~
+~
+0 -1 18751
+D2
+~
+~
+0 -1 18746
+D3
+~
+~
+0 -1 18749
+S
+#18751
+Camelyn~
+  Camelyn is the capital of Andor, home to Queen Morgase and one of the most 
+beautiful cities in the world. The Inner City is built on a hilltop surrounded 
+by a stone wall. The New City is built around The Inner City and a new wall had 
+been put up around the new addition to the city. Both walls have lots of beautiful 
+towers and decorations. The streets in the Inner City are carefully designed to
+follow the natural curves of the hill, spiraling upwards and ending before the gate
+to the queen's palace.
+~
+187 0 1
+D0
+~
+~
+0 -1 18755
+D1
+~
+~
+0 -1 18761
+D2
+~
+~
+0 -1 18747
+D3
+~
+~
+0 -1 18750
+S
+#18752
+Baerlon~
+  Baerlon is a mining town near the Mountains of Mist. It lies 
+north of The Two Rivers and south of the Black Hills. A ferry 
+docked to the south is able to carry passagers into The Two Rivers.
+~
+187 0 2
+D0
+~
+~
+0 -1 18763
+D1
+~
+~
+0 -1 18753
+D2
+To the south, a ferry is waiting to carry people across the river.
+~
+ferry~
+12 -1 18748
+S
+#18753
+Andor~
+  Andor is a mighty and rich nation. It is also the largest and oldest. Its 
+sovereignty dates back to Artur Hawkwing and the War of the Hunded Years.
+Unlike most other nations, the people swear to the Queen and have not had a king 
+since it was founded. To the north the Black Hills stretch towards the 
+Borderlands. To the east lies Cairhien and to the south, Murandy.
+~
+187 0 2
+D0
+~
+~
+0 -1 18764
+D1
+~
+~
+0 -1 18754
+D2
+~
+~
+0 -1 18749
+D3
+~
+~
+0 -1 18752
+D5
+~
+forest~
+12 -1 18860
+S
+#18754
+Andor~
+  Andor is a mighty and rich nation. It is also the largest and oldest. Its 
+sovereignty dates back to Artur Hawkwing and the War of the Hunded Years.
+Unlike most other nations, the people swear to the Queen and have not had a king 
+since it was founded. To the north the Black Hills stretch towards the 
+Borderlands. To the east lies Cairhien and to the south, Murandy.
+~
+187 0 2
+D0
+~
+~
+0 -1 18765
+D1
+~
+~
+0 -1 18755
+D2
+~
+~
+0 -1 18750
+D3
+~
+~
+0 -1 18753
+S
+#18755
+Andor~
+  Andor is a mighty and rich nation. It is also the largest and oldest. Its 
+sovereignty dates back to Artur Hawkwing and the War of the Hunded Years.
+Unlike most other nations, the people swear to the Queen and have not had a king 
+since it was founded. To the north the Black Hills stretch towards the 
+Borderlands. To the east lies Cairhien and to the south, Murandy.
+~
+187 0 2
+D0
+~
+~
+0 -1 18766
+D1
+~
+~
+0 -1 18756
+D2
+~
+~
+0 -1 18751
+D3
+~
+~
+0 -1 18754
+S
+#18756
+Cairhien~
+  This nation as almost as old as Andor, dating back to the end of the War of the
+Hundred Years. It contains much fertile farmland and food is an important export
+good. To the east stands the Dragonwall and to the north stand the mountain
+called the Kinslayer's Dagger. The land to the west is Andor and to the south
+lies Haddon Mirk.
+~
+187 0 2
+D0
+~
+~
+0 -1 18767
+D1
+~
+~
+0 -1 18757
+D2
+~
+~
+0 -1 18761
+D3
+~
+~
+0 -1 18755
+S
+#18757
+City of Cairhien~
+  The city of Cairhien is still being rebuilt after it was burned in the 
+Aiel War. The war began when King Laman cut down the Avendoraldera, a gift 
+from the Aiel and the last known sapling of the Tree of Life. The city is built
+on the site of the ancient city Al'cair'rahienallen, Hill of the Golden Dawn.
+The modern city is built in a precise grid pattern, forming a perfect square
+outlined by a great wall.
+~
+187 0 1
+D0
+~
+~
+0 -1 18768
+D1
+~
+~
+0 -1 18758
+D2
+~
+~
+0 -1 18760
+D3
+~
+~
+0 -1 18756
+S
+#18758
+Cairhien~
+  This nation as almost as old as Andor, dating back to the end of the War of the
+Hundred Years. It contains much fertile farmland and food is an important export
+good. To the east stands the Dragonwall and to the north stand the mountain
+called the Kinslayer's Dagger. The land to the west is Andor and to the south
+lies Haddon Mirk.
+~
+187 0 2
+D0
+~
+~
+0 -1 18769
+D2
+~
+~
+0 -1 18759
+D3
+~
+~
+0 -1 18757
+S
+#18759
+Cairhien~
+  This nation as almost as old as Andor, dating back to the end of the War of the
+Hundred Years. It contains much fertile farmland and food is an important export
+good. To the east stands the Dragonwall and to the north stand the mountain
+called the Kinslayer's Dagger. The land to the west is Andor and to the south
+lies Haddon Mirk.
+~
+187 0 2
+D0
+~
+~
+0 -1 18758
+D3
+~
+~
+0 -1 18760
+S
+#18760
+Cairhien~
+  This nation as almost as old as Andor, dating back to the end of the War of the
+Hundred Years. It contains much fertile farmland and food is an important export
+good. To the east stands the Dragonwall and to the north stand the mountain
+called the Kinslayer's Dagger. The land to the west is Andor and to the south
+lies Haddon Mirk.
+~
+187 0 2
+D0
+~
+~
+0 -1 18757
+D1
+~
+~
+0 -1 18759
+D3
+~
+~
+0 -1 18761
+S
+#18761
+Cairhien~
+  This nation as almost as old as Andor, dating back to the end of the War of the
+Hundred Years. It contains much fertile farmland and food is an important export
+good. To the east stands the Dragonwall and to the north stand the mountain
+called the Kinslayer's Dagger. The land to the west is Andor and to the south
+lies Haddon Mirk.
+~
+187 0 2
+D0
+~
+~
+0 -1 18756
+D1
+~
+~
+0 -1 18760
+D3
+~
+~
+0 -1 18751
+S
+#18762
+The Black Hills~
+  The Black Hills are a huge area almost empty of human civilization. Hills
+and forests are all you can see in every diraction.
+~
+187 0 4
+D0
+~
+~
+0 -1 18777
+D1
+~
+~
+0 -1 18763
+D3
+~
+~
+0 -1 18700
+S
+#18763
+The Black Hills~
+  The Black Hills are a huge area almost empty of human civilization. Hills
+and forests are all you can see in every diraction.
+~
+187 0 4
+D0
+~
+~
+0 -1 18776
+D1
+~
+~
+0 -1 18764
+D2
+~
+~
+0 -1 18752
+D3
+~
+~
+0 -1 18762
+S
+#18764
+The Black Hills~
+  The Black Hills are a huge area almost empty of human civilization. Hills
+and forests are all you can see in every diraction.
+~
+187 0 4
+D0
+~
+~
+0 -1 18775
+D1
+~
+~
+0 -1 18765
+D2
+~
+~
+0 -1 18753
+D3
+~
+~
+0 -1 18763
+S
+#18765
+Dragonmount~
+  The legendary Dragonmount, where the Dragon, Lews Therin Telamon died. He 
+drew to much of the One Power and destroyed himself in sorrow for the death
+of his wife and children by his own mad hands. Ishamael, the most powerful of 
+The Forsaken, cured Lews Therin's madness so he could see all the horrors he 
+had preformed with his own hands. The result was the highest mountain in the 
+world where once there were only grassy fields before.
+~
+187 0 2
+D0
+~
+~
+0 -1 18774
+D1
+~
+~
+0 -1 18766
+D2
+~
+~
+0 -1 18754
+D3
+~
+~
+0 -1 18764
+S
+#18766
+Tar Valon~
+  Tar Valon is the biggest city in the world and the home of the Amyrlin Seat, 
+leader of channelers of the One Power, Aes Sedai. This grand city is build on an 
+island with large bridges leading to the banks of the river Erinin. No army has 
+ever managed to conquer the city even while the Aes Sedai are bound by the 
+Three Oaths. To speak no word that is not true. To make no weapon with which 
+one man can kill another. And finally: Never to use the One Power as a weapon 
+except against shadowspawn or in the last extreme defense of own life or that 
+of her warder or another Aes Sedai.
+~
+187 0 2
+D0
+~
+~
+0 -1 18773
+D1
+~
+~
+0 -1 18767
+D2
+~
+~
+0 -1 18755
+D3
+~
+~
+0 -1 18765
+D5
+~
+city~
+12 -1 18600
+S
+#18767
+Kinslayer's Dagger~
+  A mountain range north of Cairhien, east of Tar Valon and south of Shienar.
+To the east stands the great Dragonwall. The only pass through the Dragonwall 
+is the Jangai Pass, which is closed by huge boulders. A crew is working 
+to get the pass open.
+~
+187 0 5
+D0
+~
+~
+0 -1 18772
+D1
+~
+~
+0 -1 18768
+D2
+~
+~
+0 -1 18756
+D3
+~
+~
+0 -1 18766
+S
+#18768
+Kinslayer's Dagger~
+  A mountain range north of Cairhien, east of Tar Valon and south of Shienar.
+To the east stands the great Dragonwall. The only pass through the Dragonwall 
+is the Jangai Pass, which is closed by huge boulders. A crew is working 
+to get the pass open.
+~
+187 0 5
+D0
+~
+~
+0 -1 18771
+D1
+~
+~
+0 -1 18769
+D2
+~
+~
+0 -1 18757
+D3
+~
+~
+0 -1 18767
+S
+#18769
+Kinslayer's Dagger~
+  A mountain range north of Cairhien, east of Tar Valon and south of Shienar.
+To the east stands the great Dragonwall. The only pass through the Dragonwall 
+is the Jangai Pass, which is closed by huge boulders. A crew is working 
+to get the pass open.
+~
+187 0 5
+D0
+~
+~
+0 -1 18770
+D1
+~
+~
+0 -1 18797
+D2
+~
+~
+0 -1 18758
+D3
+~
+~
+0 -1 18768
+S
+#18770
+Shienar~
+  This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that are carried back 
+into the Blight to eat. To the east lies Arafel and to the north the Tarwin's Gap 
+lead into the Blight.
+~
+187 0 2
+D0
+~
+~
+0 -1 18787
+D2
+~
+~
+0 -1 18769
+D3
+~
+~
+0 -1 18771
+S
+#18771
+Shienar~
+  This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that are carried back 
+into the Blight to eat. To the east lies Arafel and to the north the Tarwin's Gap 
+lead into the Blight.
+~
+187 0 2
+D0
+~
+~
+0 -1 18786
+D1
+~
+~
+0 -1 18770
+D2
+~
+~
+0 -1 18768
+D3
+~
+~
+0 -1 18772
+S
+#18772
+Arafel~
+   This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant
+raids from the north steal livestock, food, and even people that they carry back
+into the Blight to eat. Shienar lies to the east and Kandor to the west.
+~
+187 0 2
+D0
+~
+~
+0 -1 18785
+D1
+~
+~
+0 -1 18771
+D2
+~
+~
+0 -1 18767
+D3
+~
+~
+0 -1 18773
+S
+#18773
+Arafel~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant
+raids from the north steal livestock, food, and even people that they carry back
+into the Blight to eat. Shienar lies to the east and Kandor to the west.
+~
+187 0 2
+D0
+~
+~
+0 -1 18784
+D1
+~
+~
+0 -1 18772
+D2
+~
+~
+0 -1 18766
+D3
+~
+~
+0 -1 18774
+S
+#18774
+Kandor~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. Arafel lies to the east and Saldaea to the west.
+~
+187 0 2
+D0
+~
+~
+0 -1 18783
+D1
+~
+~
+0 -1 18773
+D2
+~
+~
+0 -1 18765
+D3
+~
+~
+0 -1 18775
+S
+#18775
+Kandor~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. Arafel lies to the east and Saldaea to the west.
+~
+187 0 2
+D0
+~
+~
+0 -1 18782
+D1
+~
+~
+0 -1 18774
+D2
+~
+~
+0 -1 18764
+D3
+~
+~
+0 -1 18776
+S
+#18776
+Saldaea~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. To the west is the Shadow Coast and to the east 
+lies Kandor.
+~
+187 0 2
+D0
+~
+~
+0 -1 18781
+D1
+~
+~
+0 -1 18775
+D2
+~
+~
+0 -1 18763
+D3
+~
+~
+0 -1 18777
+S
+#18777
+Saldaea~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. To the west is the Shadow Coast and to the east 
+lies Kandor.
+~
+187 0 2
+D0
+~
+~
+0 -1 18780
+D1
+~
+~
+0 -1 18776
+D2
+~
+~
+0 -1 18762
+D3
+~
+~
+0 -1 18778
+S
+#18778
+Saldaea~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. To the west is the Shadow Coast and to the east 
+lies Kandor.
+~
+187 0 2
+D0
+~
+~
+0 -1 18779
+D1
+~
+~
+0 -1 18777
+D2
+~
+~
+0 -1 18700
+S
+#18779
+Saldaea~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. To the west is the Shadow Coast and to the east 
+lies Kandor.
+~
+187 0 2
+D1
+~
+~
+0 -1 18780
+D2
+~
+~
+0 -1 18778
+S
+#18780
+Saldaea~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. To the west is the Shadow Coast and to the east 
+lies Kandor.
+~
+187 0 2
+D1
+~
+~
+0 -1 18781
+D2
+~
+~
+0 -1 18777
+D3
+~
+~
+0 -1 18779
+S
+#18781
+Saldaea~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. To the west is the Shadow Coast and to the east 
+lies Kandor.
+~
+187 0 2
+D1
+~
+~
+0 -1 18782
+D2
+~
+~
+0 -1 18776
+D3
+~
+~
+0 -1 18780
+S
+#18782
+Kandor~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. Arafel lies to the east and Saldaea to the west.
+~
+187 0 2
+D1
+~
+~
+0 -1 18783
+D2
+~
+~
+0 -1 18775
+D3
+~
+~
+0 -1 18781
+S
+#18783
+Kandor~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that they carry 
+back into the Blight to eat. Arafel lies to the east and Saldaea to the west.
+~
+187 0 2
+D1
+~
+~
+0 -1 18784
+D2
+~
+~
+0 -1 18774
+D3
+~
+~
+0 -1 18782
+S
+#18784
+Arafel~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant
+raids from the north steal livestock, food, and even people that they carry back
+into the Blight to eat. Shienar lies to the east and Kandor to the west.
+~
+187 0 2
+D1
+~
+~
+0 -1 18785
+D2
+~
+~
+0 -1 18773
+D3
+~
+~
+0 -1 18783
+S
+#18785
+Shienar~
+This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant
+raids from the north steal livestock, food, and even people that they carry back
+into the Blight to eat. Shienar lies to the east and Kandor to the west.
+~
+187 0 2
+D1
+~
+~
+0 -1 18786
+D2
+~
+~
+0 -1 18772
+D3
+~
+~
+0 -1 18784
+S
+#18786
+Shienar~
+  This is one of the four borderlands guarding the world from the trolloc raids
+from the Blight. The living conditions are harsh, with cold winters and dry
+summers. These nations are friendly towards all but the Blight, whose constant 
+raids from the north steal livestock, food, and even people that are carried back 
+into the Blight to eat. To the east lies Arafel and to the north the Tarwin's Gap 
+lead into the Blight.
+~
+187 0 2
+D1
+~
+~
+0 -1 18787
+D2
+~
+~
+0 -1 18771
+D3
+~
+~
+0 -1 18785
+S
+#18787
+Tarwin's Gap~
+  A gap in the mountains leads into the blight. Armed guards keep anyone from 
+getting in or out.
+~
+187 0 5
+D2
+~
+~
+0 -1 18770
+D3
+~
+~
+0 -1 18786
+S
+#18797
+Through the spine~
+  A narrow gap leads through the mountains. The mountain walls tower above with 
+no way to climb them. To the west you see out of the gap into Kinslayer's Dagger. 
+To the east the gap continues deeper into the mountains.
+~
+187 0 5
+D1
+~
+~
+0 -1 18798
+D3
+~
+~
+0 -1 18769
+S
+#18798
+Through the spine~
+  A narrow gap leads through the mountains. The mountain walls tower above with 
+no way to climb them. To the west you see out of the gap into Kinslayer's Dagger. 
+To the east the gap continues deeper into the mountains.
+~
+187 0 5
+D1
+~
+~
+0 -1 18799
+D3
+~
+~
+0 -1 18797
+S
+#18799
+Through the spine~
+  A narrow gap leads through the mountains. The mountain walls tower above with 
+no way to climb them. To the west the gap continues deeper into the mountains. 
+To the east you can feel warm dry air blowing into the gap. You must approach 
+a warm place.
+~
+187 0 5
+D3
+~
+~
+0 -1 18798
+S
+#0
+$~

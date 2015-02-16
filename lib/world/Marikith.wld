@@ -1,0 +1,564 @@
+#2700
+On a cobblestone path~
+You are walking on a narrow path of cobblestones leading to an old building.
+The building seems to have collapsed upon itself, and only parts of it are
+still standing. On both sides of the path, there is a number of old oaks and
+elms. To the south, the cobblestones on the path end, but the path continues
+back to the city streets.
+~
+27 4 1
+D0
+You can see an old building to the north.
+~
+~
+0 -1 2701
+D2
+You can see the path continuing southwards back to the city.
+~
+~
+0 -1 5617
+S
+#2701
+In front of a fallen door~
+As you look around you, you can see trees and bushes surrounding the building
+that lies to the north from you. Through the doorway to the north, you see a
+large hall opening up inside the building. To the east, you can see a small
+garden, with roses and tulips. Partly blocking the doorway is the broken front
+door, lying on the ground.
+~
+27 0 1
+D0
+You see a large hall opening inside the building.
+~
+~
+0 -1 2704
+D1
+You see the garden over to the east.
+~
+~
+0 -1 2702
+D2
+You see the cobblestone path leading to the south.
+~
+~
+0 -1 2700
+E
+door broken fallen~
+The front door of the building has broken down, and lies on the floor,
+gathering dust...
+~
+S
+#2702
+In the garden~
+While standing among all the different kinds of flowers that there are in the
+garden, your eyes come across a beautiful marble statue standing in the middle
+of a huge patch of red roses. A large part of the garden has fallen somehow
+into the shadow of the building, and the flowers have withered, but the red
+roses are still hanging in.
+~
+27 0 2
+D3
+You can see the entrance to the building to your west.
+~
+~
+0 -1 2701
+E
+statue small marble~
+The statue looks like a young girl, but the face of it has clearly been
+torn away a long time ago. You can see the shards from the statue lying
+on the ground, partly hidden by the flowers.
+~
+E
+flowers~
+The flowers look so beautiful and so fragile, that should you touch them,
+they would simply crumble to dust.
+~
+S
+#2703
+In the kitchen~
+With almost half of the roof collapsed, the kitchen has been reduced to
+simple rubble. The forces of nature, winds and rains have decimated almost
+everything in here. A broken table lies in the middle of the floor, and pieces
+of numerous pots and pans lie everywhere. Through the large cracks in the
+walls, you can see the dark trees surrounding the building.
+~
+27 8 0
+D1
+You can see the main hall through a low doorway.
+~
+~
+0 -1 2704
+E
+trees dark~
+The dark trees on the western side of this dark and ominous building look
+equally gloomy. Their dark leaves and spidery branches reach out to you
+through the openings in the wall, as if trying to touch you.
+~
+S
+#2704
+In the main hall~
+Standing in the open hall, under a half-collapsed roof, you feel the age
+and the stillness of the whole building around you slightly disturbing and
+oppressive. High on all the walls you can see some paintings of fighting
+scenes. On the northern wall, you see a wooden door, and to the east of you,
+a large metal door.
+~
+27 8 0
+D0
+You see a wooden door.
+~
+door wooden~
+1 -1 2706
+D1
+You see a large metal door.
+~
+door large metal~
+2 2705 2705
+D2
+You look out through the doorway, and see a cobblestone path leading south.
+~
+~
+0 -1 2701
+D3
+Through the door, you see a room that looks part kitchen, part dining room.
+~
+~
+0 -1 2703
+E
+paintings~
+The numerous paintings in the room depict scenes each more and more skillful
+display of prowess with various weapons. The people in the paintings are all
+dark haired men, clothed in dark garbs.
+~
+S
+#2705
+In the hall of swords~
+This small chamber is dark and gloomy, and regardless of the decayed state
+of the rest of the building, this place seems to be in the exact condition
+as it was left on that last day. Only the faint traces in the dust on the
+floor give you any idea of visitors since that day. On the walls, you see
+several small, metal hooks and holders that obviously were used to store
+weapons of many different kinds. No, only the holders remain.
+~
+27 9 0
+D3
+You can see a metal door.
+~
+door metal~
+2 2705 2704
+S
+#2706
+In the training room~
+In this large hall, there is a large open space in the middle of the floor,
+shaped a bit like an arena. Several long benches line the walls, some of them
+broken by the blocks of stone that have fallen from the ceiling. You see a
+dark doorway leading west, and a wooden door leading south, back to the main
+hall.
+There is a large metal hatch on the floor.
+~
+27 8 0
+D2
+You can see a wooden door.
+~
+door wooden~
+1 -1 2704
+D3
+You can see a small and dark room.
+~
+~
+0 -1 2707
+D5
+You see a heavy, metal hatch leading down.
+~
+hatch metal heavy~
+2 2718 2710
+S
+#2707
+In the storage room~
+This dark and dusty room is filled with broken crates and chests, and
+although the whole room looks like no-one has been in here for ages,
+you can feel a strange, musky odor floating in the air.
+~
+27 9 0
+D1
+You see a large hall with something like an arena in the middle.
+~
+~
+0 -1 2706
+E
+footprints prints foot~
+They are a bit larger than the ones you are leaving on the floor, but
+these were made by bare feet.
+~
+E
+crate chest broken~
+All the crates are smashed and torn to bits, as if someone or something
+very powerful had lost his temper. Examining the remains of the crates,
+you can clearly discern that marks on those were clearly made by huge
+and sharp claws.
+
+Suddenly, you notice some footprints on the dust gathered on the floor.
+~
+S
+#2710
+The main cellar~
+In the center of the cellar room, there are strong metal ladders coming
+down from the hatch in the ceiling. On the walls, you can see shelves
+and racks that might have one day been filled with various jars and
+crates, but now only dust and stale air remains...
+On the western wall, there is a burned torch in an old torch holder.
+~
+27 9 0
+D1
+~
+~
+0 0 -1
+D4
+You see a heavy, metal hatch in the ceiling.
+~
+hatch metal heavy~
+2 2718 2706
+E
+holder torch~
+The torch holder on the western wall looks like it's been out of use for
+ages. The blackened torch that one day might have brought light to the
+room is dark and cold.
+~
+E
+ladder metal~
+The metal ladder leading down into the room from the hatch on the ceiling
+are squeaky clean of any traces of dust. This might be because you just
+descended them, or ...
+~
+S
+#2715
+In a dark passage~
+In this dark and cold passage, you can immediately smell the same, peculiar
+fragrance that you encountered upstairs, only that it is much stronger here
+and seems to be coming from ahead. The bare rock walls are smooth and seeping
+with ooze-like wetness. Behind you, the secret doorway has swung close
+abruptly. There are cobwebs all over, covering even the badly rusted iron
+lever on the western end of the passage.
+You can feel a strange pull from east, as if something was beckoning you...
+~
+27 9 0
+D1
+You see the dark passage, leading to unknown...
+~
+~
+0 -1 2716
+D3
+~
+~
+0 0 -1
+S
+#2716
+In a dark passage~
+As you move in this dark passage, the same, peculiar is getting even stronger.
+The bare rock walls are smooth and seeping with ooze-like wetness. Here, the
+ooze is flowing freely along the passage floor, and makes walking very
+slippery and dangerous.
+You can feel the pull from east becoming even stronger. It is coming harder
+and harder to resist it...
+~
+27 9 0
+D1
+You see the dark passage, leading to unknown...
+~
+~
+0 -1 2717
+D3
+You see the dark passage, leading to unknown...
+~
+~
+0 -1 2715
+S
+#2717
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues north and south.
+~
+27 9 0
+D0
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2724
+D2
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2725
+D3
+You see the dark passage, leading to unknown...
+~
+~
+0 -1 2716
+S
+#2718
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues north and south.
+~
+27 9 0
+D0
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2723
+D2
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2726
+D5
+You can see a flight of stone stairs descending in to the bowels of the earth.
+~
+~
+0 -1 2728
+S
+#2719
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues north and south.
+~
+27 9 0
+D1
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2720
+D3
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2724
+S
+#2720
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues east and west.
+~
+27 9 0
+D1
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2723
+D3
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2719
+S
+#2721
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues east and west.
+~
+27 9 0
+D1
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2722
+D3
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2725
+S
+#2722
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues east and west.
+~
+27 9 0
+D1
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2726
+D3
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2721
+S
+#2723
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues south and west.
+~
+27 9 0
+D2
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2718
+D3
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2720
+S
+#2724
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues east and south.
+~
+27 9 0
+D1
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2719
+D2
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2717
+S
+#2725
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues north and east.
+~
+27 9 0
+D0
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2717
+D1
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2721
+S
+#2726
+On the edge of the chasm~
+You are standing on a narrow ledge above a dark chasm of unimaginable depth.
+Both cold and hot gusts of air are blowing up from the depths, carrying along
+with them the same strange, and now almost seductive smell. On the very edge
+of the chasm, there is an obviously man-made railing, carved full of runes.
+The ledge continues north and west.
+~
+27 9 0
+D0
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2718
+D3
+You see the edge of the dark chasm continuing...
+~
+~
+0 -1 2722
+S
+#2728
+In the stone stairs~
+All along the stairs, there is thick and slippery ooze flowing down them, and
+on a few steps you have seen dead rats, choked on the very same ooze. Walking
+carefully onwards, you can feel you heart almost burst as the strange force
+pulling you closer and closer is increasing with every step.
+~
+27 9 0
+D4
+You see the edge of the chasm on the top of the stairs.
+~
+~
+0 -1 2718
+D5
+You see the stairs leading down to darkness...
+~
+~
+0 -1 2730
+S
+#2730
+In a dark passage~
+Walking onwards in this dark passage, almost as if without a will of your own,
+you feel your head spin and breathing comes difficult. Although it is dark in
+this passage, you can feel a bright source of power to the west, blinding the
+eye of your soul with its glow... You must go to it!
+~
+27 9 0
+D3
+You see a huge cavern opening on the bottom of the chasm, full of darkness.
+~
+~
+0 -1 2731
+D4
+You see the stairs leading upwards, to darkness.
+~
+~
+0 -1 2728
+S
+#2731
+On the bottom of the dark chasm~
+The bottom of the chasm has created a huge cavern deep into the earth, hidden
+from prying eyes. By now, you are wading knee-deep in the same ooze, that had
+been the death of so many rats. In the middle of the cavern, you see a stone
+pedestal rising from the ooze like an island on high seas. That pedestal seems
+to be the source of the pulling force. High above you, the strange winds howl
+in the chasm, creating an eerie feeling.
+~
+27 9 0
+D1
+You see the dark passage, leading to unknown...
+~
+~
+0 -1 2730
+D3
+There is a small, dark cave in front of you.
+~
+~
+0 -1 2732
+S
+#2732
+A small cave~
+This dark cave has a forbidding feeling, and the air around you is stale and 
+dark. To the east you can see a huge cavern opening up.
+~
+27 265 0
+D1
+You see a huge cavern opening up in the darkness.
+~
+~
+0 0 2731
+S
+#2733
+The purging room~
+You don't want to be here...
+~
+27 0 0
+S
+#0
+$~

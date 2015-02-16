@@ -1,0 +1,98 @@
+#3500
+dragonfly fly dragon~
+a dragonfly~
+A small dragonfly is droning about in search of a good spot to land.
+~
+     This flying insect has four large fragile wings which shimmer and
+gleam in the sunlight during its flight. It has a long, slender body and a
+small head filled with its large bead-like eyes. It darts too and fro in
+search of its next meal, a smaller unfortunate insect. This creature seems
+to be right for a level 1 adventurer.
+~
+72 0 0 Y
+1 20 10 17d1+0 1d4+0
+100 300
+8 8 1
+76 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3501
+mouse fieldmouse~
+a field mouse~
+A scrawny field mouse is scurrying about foraging for food.
+~
+     This small rodent has soft dusty fur and a small pointed snout. It
+has shiny round eyes that look like small beads or oil drops. It regards
+you intently, seeming prepared to run at the first sign of trouble. This
+creature seems about right for a level 2 adventurer.
+~
+72 0 0 Y
+2 19 10 24d1+0 1d5+0
+100 600
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3502
+dog prairiedog~
+a prairie dog~
+A prairie dog is peeking up out of its hole, looking for predators.
+~
+     This rodent greatly resembles a chipmunk but barks like a small dog.
+It has short legs, long sharp claws, and a short flat tail. Its fur is a
+dusty brown color. It looks about the area very alertly, not only with its
+eyes but with its nose and ears as well. It isn't a creature to be toyed
+with and it will defend its home at all cost. This creature seems about
+right for a level 3 adventurer.
+~
+72 0 0 Y
+3 18 10 36d1+0 1d7+0
+100 1200
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3503
+porcupine~
+a porcupine~
+A porcupine is standing here, fiercly guarding its home.
+~
+     Covered with strong, stiff quills on its back, sides, and tail, this
+creature has an amazing defense mechanism. If you get too near him he will
+strike at you with his tail, leaving his quills embedded deep within your
+flesh. The creature itself is slow, pudgy, and very vulnerable looking if
+not for the barbed quills. It is standing in front of a burrow you assume
+to be its home, eyeing you carefully. Best not to disturb him. This
+creature seems about fit for a level 4 adventurer.
+~
+72 0 0 Y
+4 17 10 48d1+0 1d9+0
+100 2400
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3504
+guardian~
+guardian~
+Your guardian is here taking care of the low level players.
+~
+    This is the famous guardian that newbies have been turning to for
+help at the start of their careers for ages. She has taken the aging well
+and still looks quite vital despite the affects of time. If you stay in the
+room with her for a few moments she will heal your wounds.
+~
+89 128 1000 Y
+30 -7 -1000 5d10+5550 4d6+3
+1000 155000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

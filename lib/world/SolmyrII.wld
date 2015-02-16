@@ -1,0 +1,1869 @@
+#8800
+On the Tall Brick Wall~
+   A vast city with multitudinous housing and dazzling beauty unfolds to the
+east. Rooftops shimmer in the immense glare of the sun. A worn but clean road
+extends to the city. From this huge brick wall the view of the enormous
+chinampas to the west is truly astonishing. The northern part of the city,
+where the road leads, has generally lower and poorer housing than the south.
+Far to the southeast a mountainous structure cuts the horizon. The sunlight
+is cast off with a golden glimmer from the peak of the structure, creating
+a blinding impression of purity and wonder.
+~
+88 16 0
+D1
+~
+~
+0 -1 8801
+D5
+~
+~
+0 -1 8747
+S
+#8801
+Route to the City~
+   In an east-west route between the docks and the city, this road has been
+heavily trafficated for many years. Something that has put its marks on the
+stone buildingblocks of this worn but clean road. The road leads steadily
+to the northern parts of the city, where it twines in between the buildings.
+On each side of the road the country is very soily. Some smaller boats are
+rowed in powerful jerks, giving them a rather solid speed. A small amount
+of people loaf around, some in each direction. Life seems peaceful for the
+seemingly indifferent people of this large metropolis.
+~
+88 16 0
+D1
+~
+~
+0 -1 8802
+D3
+~
+~
+0 -1 8800
+S
+#8802
+Before a Great Arch~
+   Reaching a large Arch, towering to the sky, shouts from playing
+children and their watchers can be heard. The arch itself is embellished
+with skillfully crafted ornamentation. And where the pillars meet, carved
+in the stone, the word Tenochtitlan appears, announcing the name of this 
+mighty metropolis. A statue depicting an eagle adorns the top of the arch.
+The road transforms into a city street, crossing others on its path as far
+as eye can see.
+~
+88 20 0
+D1
+~
+~
+0 -1 8803
+D3
+~
+~
+0 -1 8801
+S
+#8803
+City Street~
+   Large houses made of rock and clay stand steadily on each side of the
+street. A large amount of people, in all ages, are around. Although rich
+in architecture, this is obviously the poorer part of town. People's
+clothing has a great amount of colours, in many nuances. They all seem
+happy as they go about their business, wether it be sweeping or just 
+sitting on the pavement. To the west the Arch stands steadfast over the
+road, while a crossing can be seen to the east.
+~
+88 16 0
+D1
+~
+~
+0 -1 8804
+D3
+~
+~
+0 -1 8802
+S
+#8804
+Street Crossing~
+   Two streets meet here, one travelling in the north-south direction,
+the other east-west. This part of the city seems very populated. Large
+quantities of people walk around, and smoke comes out of the chimneys,
+proving that there are someone everywhere. The street to the north goes
+on for a bit before it ends at another city crossing. To the south
+the street is culminating in activity, stopping the view. To the east,
+the street seems to run on forever, being crossed by others on the way.
+~
+88 16 0
+D0
+~
+~
+0 -1 8844
+D1
+~
+~
+0 -1 8805
+D2
+~
+~
+0 -1 8860
+D3
+~
+~
+0 -1 8803
+S
+#8805
+City Street~
+   Some children have gathered up here, playing some kind of sport
+involving a rather large ball of leather. They kick it around, which
+sometimes results in undesirable episodes, including crying babies,
+angry adults and need of health care. Peace seems to rule the streets
+in the east, while the west is dominated by commotion and
+overpopulated streets.
+~
+88 16 0
+D1
+~
+~
+0 -1 8806
+D3
+~
+~
+0 -1 8804
+S
+#8806
+City Street~
+   Some citizens are walking around peacefully, while others just
+sit around enjoying the silence. A well sits on the pavement, being
+used by a small party of women. It seems to be the time and place
+for loose conversations, small laughs and snickers are uttered as
+the people of this calm neighbourhood enjoy the sunny weather. A
+new crossing can be seen to the east, while a gang of children are
+playing some kind of game west of here.
+~
+88 16 0
+D1
+~
+~
+0 -1 8807
+D3
+~
+~
+0 -1 8805
+S
+#8807
+Street Crossing~
+   Here in the poorer parts of Tenochtitlan the people seem tranquil
+and happy. Some places they crowd up in noisy bands, while others
+walk alone or in small groups. Inside there are women cooking,
+making the chimneys deliver smoke which glows in the powerful
+sunshine. The streets issue forth in all cardinal directions, the
+large houses following them continuingly.
+~
+88 16 0
+D0
+~
+~
+0 -1 8854
+D1
+~
+~
+0 -1 8808
+D2
+~
+~
+0 -1 8857
+D3
+~
+~
+0 -1 8806
+S
+#8808
+Street Crossing~
+   To the west the street is crossed by other city streets. Few people 
+wander around here, but a small party of older men talk loudly as
+they slowly stroll along. Outbursts of laughter is dominant in the
+obviously loose conversation. An unfinished building rests to the
+south. It only needs a roof for the exterior to be complete, but 
+noone seems to work here at the moment.
+~
+88 16 0
+D1
+~
+~
+0 -1 8809
+D3
+~
+~
+0 -1 8807
+S
+#8809
+City Street~
+   The cobbled street continues in an east-west direction. Further to
+the east it seems to change somewhat, although it would be hard
+to determine the extent of the change from this far away. Through
+an open door in a building to the north, a faint glimmer from a
+lamp or fire flickers, decorating the inner walls with dancing
+shadows. Another door stands open to the south, a sign hanging
+above the doorway reads "Lenna's flowers". A beautiful woman stands
+in the shade behind one of the windows.
+~
+88 16 0
+D0
+~
+~
+0 -1 8786
+D1
+~
+~
+0 -1 8810
+D2
+~
+~
+0 -1 8787
+D3
+~
+~
+0 -1 8808
+S
+#8810
+City Street~
+   By the wall of a large house there is a small wooden hatch. It
+looks quite tough for its small size, being made of pliable
+branches unsimilar to any other. The houses here look unoccupied,
+the street is desolate. beside the doors someone have painted
+human skulls. A chill wind, with an undescribable reek, passes here.
+~
+88 16 0
+D1
+~
+~
+0 -1 8811
+D3
+~
+~
+0 -1 8809
+D5
+A very sturdy wooden hatch is here.
+~
+hatch wooden~
+2 -1 8793
+S
+#8811
+Street Crossing~
+   Two streets cross eachother here, one leading east-west, the
+other north-south. Both are cobbled, but the one leading east
+seems to convert into a dirt-road. The scorching sun is hard
+to be relieved from, as there are no places of shadow in
+the vicinity.
+~
+88 16 0
+D0
+~
+~
+0 -1 8848
+D1
+~
+~
+0 -1 8812
+D2
+~
+~
+0 -1 8851
+D3
+~
+~
+0 -1 8810
+S
+#8812
+City Street~
+   The cobbled street transforms into a dirt road. Though
+seemingly heavily used, the poverty of this part of town
+doesn't demand superior infrastructure. The buildings shows
+lack of building skills, as well as inability of maintainance.
+To the west the cobbled street runs straightly into the horizon.
+The dirt road continues to the west.
+~
+88 16 0
+D1
+~
+~
+0 -1 8813
+D3
+~
+~
+0 -1 8811
+S
+#8813
+Dirt Road~
+   Up ahead to the east the road is intersected from the north.
+This poor neighbourhood is quiet, without any parties of people
+wandering around. Here and there individuals shuffle heavily,
+obviously enfeebled by poor future prospects.
+~
+88 16 0
+D1
+~
+~
+0 -1 8814
+D3
+~
+~
+0 -1 8812
+S
+#8814
+Dirt Road Crossing~
+   The dirt road continues to the east, while another one leads
+north. A mountain can be seen towering in the northeast
+horizon. There are some houses along both roads, looking as
+though they are about to collapse any minute.
+~
+88 16 0
+D0
+~
+~
+0 -1 8826
+D1
+~
+~
+0 -1 8815
+D3
+~
+~
+0 -1 8813
+S
+#8815
+Dirt Road~
+   There is one house on each side of the road, and they both
+look about to collapse. Many of the windows are shuttered, and
+the houses seem to be unoccupied. The road leads east toward a
+couple more houses, or back to the paved city street in the
+distance.
+~
+88 16 0
+D0
+~
+~
+0 -1 8893
+D1
+~
+~
+0 -1 8816
+D2
+~
+~
+0 -1 8894
+D3
+~
+~
+0 -1 8814
+S
+#8816
+Dirt Road~
+   A couple more houses are left on this road, east of here.
+After that, its very desolate. In the northeast horizon you
+can see a small mountain, towering over the dirt. The city
+in the west glimmers in the sunlight.
+~
+88 16 0
+D1
+~
+~
+0 -1 8817
+D3
+~
+~
+0 -1 8815
+S
+#8817
+Dirt Road~
+   Here are the last two houses of the city. They look
+unoccupied and unsafe for habitation, their doorways are cracked
+and outworn, being unable to show the once so beautiful
+decorations they were fitted with.
+~
+88 16 0
+D0
+~
+~
+0 -1 8895
+D1
+~
+~
+0 -1 8818
+D2
+~
+~
+0 -1 8896
+D3
+~
+~
+0 -1 8816
+S
+#8818
+Dirt Road~
+   Just outside the city, the dirt road leads in an east-west
+route. While the city adorns the west horizon, the east is
+mostly dirt wasteland. A small mountain rises in the north
+horizon, and the road seems to lead to it, taking a turn
+a bit farther east.
+~
+88 16 0
+D1
+~
+~
+0 -1 8819
+D3
+~
+~
+0 -1 8817
+S
+#8819
+Dirt Road~
+   The road takes a turn to the north here, leading towards
+the mountain that decorates the northern horizon. There's
+some distance back to the city from here, where it lies to
+the west. Desolation is around, and the road is the only
+clear path to follow.
+~
+88 16 0
+D0
+~
+~
+0 -1 8820
+D3
+~
+~
+0 -1 8818
+S
+#8820
+Dirt Road~
+   In a northern route, this road leads to the mountain
+towering ahead. To the south, the road turns west toward the
+city that can be seen in the distance. An eagle can be heard,
+and seen against the azure sky, circling over the mountain top.
+~
+88 16 0
+D0
+~
+~
+0 -1 8821
+D2
+~
+~
+0 -1 8819
+S
+#8821
+Dirt Road~
+   Nearing the base of the mountain, a small path can be seen,
+leading towards the top. This one mountain seems to stand alone
+out here in the desolate wasteland. More or less no vegitation
+adorns the dry ground. Except scattered brush, rolling about
+in the winds.
+~
+88 16 0
+D0
+~
+~
+0 -1 8822
+D2
+~
+~
+0 -1 8820
+S
+#8822
+Reaching the Base of the Mountain~
+   The mountain towers to the sky ahead. A small path leads up
+towards the mountain top. The mountain sides are very steep,
+and small landslides of rocks and dirt are a frequent occurance
+on the mountainside.
+~
+88 16 0
+D0
+~
+~
+0 -1 8823
+D2
+~
+~
+0 -1 8821
+S
+#8823
+At a Steep Mountainside~
+   The path leads up the steep mountainside, reaching for the
+top. The mountain looks a lot higher from here than from the
+road leading south and then west, back to the city.
+~
+88 16 0
+D2
+~
+~
+0 -1 8822
+D4
+~
+~
+0 -1 8824
+S
+#8824
+On a Mountainside Path~
+   In a strong climb, the path leads up towards the mountain
+top. Dirt and dust slides down the mountainside, and footing
+is risky. Its a steep mountainside with a fresh wind, that
+increases in strength with the altitude.
+~
+88 16 0
+D4
+~
+~
+0 -1 8825
+D5
+~
+~
+0 -1 8823
+S
+#8825
+Almost at the Top~
+   Closing in on the mountaintop on this very steep climb, the
+wind blows strong. Whipping dust and dirt in the air, making
+both breathing and seeing a painful endeavour. The path runs
+steeply along the mountainside, leading the little last
+distance to the top.
+~
+88 16 0
+D4
+~
+~
+0 -1 8792
+D5
+~
+~
+0 -1 8824
+S
+#8826
+Dirt Road~
+   This road appears to be more or less unused for a very long time.
+To the south, it leads to a road crossing. And north, it seems to lead
+on for a distance, before turning west. Some houses stand abandoned by
+the road, about to fall to pieces. Dirt covers the surroundings, not
+only the road, leaving only small amounts of vegetation to be seen.
+~
+88 16 0
+D0
+~
+~
+0 -1 8827
+D2
+~
+~
+0 -1 8814
+S
+#8827
+Dirt Road~
+
+   A house on each side of the road, both in a state of decay, confirms
+that this road must have been used in a greater extent than it is now.
+The houses could have been beautiful when they were used, but now, 
+dilapidation has taken its toll on the once so stature buildings.
+~
+88 16 0
+D0
+~
+~
+0 -1 8828
+D1
+~
+~
+0 -1 8883
+D2
+~
+~
+0 -1 8826
+D3
+~
+~
+0 -1 8884
+S
+#8828
+Dirt Road~
+   To the south, two dangerously ruinous houses can be seen. Looking
+barely able to keep themselves standing. To the north however, the
+houses look solid, proudly overviewing the road. The road to the north
+is cobbled, while here, and to the south, the road is made of dirt.
+~
+88 16 0
+D0
+~
+~
+0 -1 8829
+D2
+~
+~
+0 -1 8827
+S
+#8829
+Dirt Road~
+   This road is cobbled to the north, where it takes a turn, then
+leading west. The road also continues to the south, but in another form,
+namely made of dirt. On each side of the road, a proud house towers over
+your head. The house looks prosperous, regarding that its in the
+outskirts of the city, in the poorer part of town.
+~
+88 16 0
+D0
+~
+~
+0 -1 8830
+D1
+~
+~
+0 -1 8881
+D2
+~
+~
+0 -1 8828
+D3
+~
+~
+0 -1 8882
+S
+#8830
+City Street~
+   The street takes a turn here. To the west, a long line of buildings run
+along the road. While to the south, the street turns into a dirt road, and
+a few scattered, decayed and dilapidated buildings stand nervously, almost
+falling over the road.
+~
+88 16 0
+D2
+~
+~
+0 -1 8829
+D3
+~
+~
+0 -1 8831
+S
+#8831
+City Street~
+   East of here the street takes a turn south, while to the west it runs
+on, with several buildings on each side of the street. A few inhabitants
+have gathered on one side of the street, playing a game of some sort. A
+small well stands on one side of the street and a couple of women are
+there, filling their pots with water.
+~
+88 16 0
+D1
+~
+~
+0 -1 8830
+D3
+~
+~
+0 -1 8832
+S
+#8832
+City Street~
+   A building stands to the north, with its door wide open. A man sits on a
+bench outside of the doorway, shutting his eyes, obviouslly trying to get a
+rest. There is a hugely decorated building on the other side of the street.
+A man and a woman in colourfull clothing stand in the doorway, eyeing some
+children who are running in the street.
+~
+88 16 0
+D0
+~
+~
+0 -1 8879
+D1
+~
+~
+0 -1 8831
+D2
+~
+~
+0 -1 8880
+D3
+~
+~
+0 -1 8833
+S
+#8833
+City Street~
+   This street runs in an east-west route. Buildings on either side stand
+tall, gleaming in the intense sunlight. This part of Tenochtitlan looks very
+busy, with a great deal of people walking around, some carrying big pots,
+textiles, or big sacks of corn and vegetables. Children run around or sit
+on the side of the street playing games. A couple of adults seem to look
+after them, although there seems to be no impending danger.
+~
+88 16 0
+D1
+~
+~
+0 -1 8832
+D3
+~
+~
+0 -1 8834
+S
+#8834
+City Street~
+   This street heads both east and west, with large buildings running along.
+To the north, a house is being repaired. Two men inside the building seem
+to be arguing, probably about the layout of the repairs. The house to the
+south looks as though it could need a bit of maintainance too, although the
+building is stunning, even in a slightly decayed state.
+~
+88 16 0
+D0
+~
+~
+0 -1 8877
+D1
+~
+~
+0 -1 8833
+D2
+~
+~
+0 -1 8878
+D3
+~
+~
+0 -1 8835
+S
+#8835
+City Street~
+   A lot of people are wandering the streets here, most of them looking like
+they are doing something usefull. Others appear just to stroll along, talking
+together, while being overtaken by the busy crowd. A couple of real strong
+looking men carry a large boulder, probably to be used for a building that
+seems to be under repair east of here. The men look as though they have
+carried many a boulder before, using the strength of their gigantic arms and
+legs.
+~
+88 16 0
+D1
+~
+~
+0 -1 8834
+D3
+~
+~
+0 -1 8836
+S
+#8836
+City Street~
+   To the north, the entrance to a house is attracting a lot of people. They
+stand around the doorway trying to look inside the house. A huge commotion
+can be heard from inside the house, although it's hard to say what is causing
+the stir. Another house stands by the side of the road to the south, and a
+couple of people can be seen inside, looking out of the window to see what
+all the fuss is about.
+~
+88 16 0
+D0
+~
+~
+0 -1 8875
+D1
+~
+~
+0 -1 8835
+D2
+~
+~
+0 -1 8876
+D3
+~
+~
+0 -1 8837
+S
+#8837
+City Street~
+   This road leads both east and west for a long distance. Many buildings run
+along the road and the street is very busy. Children play, adults either work,
+recreate or just watch over their childrens games. The children seem to be
+enjoying themselves, but show a very bad temper if they feel something is wrong,
+and occationally a fight breaks loose and the adults will come to close the
+dispute.
+~
+88 16 0
+D1
+~
+~
+0 -1 8836
+D3
+~
+~
+0 -1 8838
+S
+#8838
+City Street~
+   A house on each side of the street gives the chance of resting in the shade.
+Something many seem to make use of, sitting on benches or simply on the ground
+for a little rest. Not all take use of this opportunity though, some go about
+heading for some destination. Both houses have open doorways, and inside there
+are women cooking or weaving. A couple of old men stand in the shade given by
+one of the houses, talking together and generally looking troubled.
+~
+88 16 0
+D0
+~
+~
+0 -1 8873
+D1
+~
+~
+0 -1 8837
+D2
+~
+~
+0 -1 8874
+D3
+~
+~
+0 -1 8839
+S
+#8839
+City Street~
+   A very large building to the north towers over the street. All the windows
+have decorations carved out of the stone, then painted in bright colours. The
+roof looks healthy and shines brightly in the strong sunlight. To the east the
+street continues on. To the west, the street runs on, but meets with a street
+from the south. The entrance to the large building can be seen there also,
+looking very majestic.
+~
+88 16 0
+D1
+~
+~
+0 -1 8838
+D3
+~
+~
+0 -1 8840
+S
+#8840
+In Front of a Large Building~
+   The street runs in three different directions here. Leading east, west and
+south from here. A very large building can be entered to the north. Its entrance
+and its windows being very beautifully decorated. From inside the sound of many
+people can be heard, and smoke indicates that somebody is cooking. This seems to
+be the largest house in this part of the city, and some well-dressed people sit
+on benches beside the entrance, relaxing in the shade given by the house.
+~
+88 16 0
+D0
+~
+~
+0 -1 8864
+D1
+~
+~
+0 -1 8839
+D2
+~
+~
+0 -1 8847
+D3
+~
+~
+0 -1 8841
+S
+#8841
+City Street~
+   To the west, the street runs on for a bit before it stops, being blocked by a
+tall brick wall. To the east it continues, being met by another road coming up
+from the south. Buildings running on both sides of the street stand tall,
+especially one with its entrance just west of here. Being very big, and also
+highly decorated. Some people walk the streets here, looking fairly untroubled
+as they go about.
+~
+88 16 0
+D1
+~
+~
+0 -1 8840
+D3
+~
+~
+0 -1 8842
+S
+#8842
+City Street~
+   A house on each side of the road gleam in the strong sunlight. A couple of
+sturdy looking men sit with their arms crossed outside one of the houses,
+probably trying to get a rest. Others go about their business, and some children
+play games on one side of the street. This street runs a little further to the
+west before running into a tall brick wall. To the east, the street runs on into
+the horizon.
+~
+88 16 0
+D0
+~
+~
+0 -1 8871
+D1
+~
+~
+0 -1 8841
+D2
+~
+~
+0 -1 8872
+D3
+~
+~
+0 -1 8843
+S
+#8843
+End of the City Street~
+   The street ends here, being terminated by a tall brick wall. To the east it
+runs on though, far into the horizon, with buildings standing on both sides. No
+people are around here, except a few guards walking along casually on top of the
+wall. They are beautifully clothed and are armed with sharp looking swords.
+~
+88 16 0
+D1
+~
+~
+0 -1 8842
+S
+#8844
+City Street~
+   This street runs both north and south. To the north, it runs on for a while,
+with some buildings on each side, before meeting up with another street. To the
+south is another street crossing where you can go in all cardinal directions.
+The city stirs as many people walk around, carrying sacks of agricultural goods
+or large pots of water.
+~
+88 16 0
+D0
+~
+~
+0 -1 8845
+D2
+~
+~
+0 -1 8804
+S
+#8845
+City Street~
+   This street runs north and south. A house on the eastern side of the road
+is being repaired. Apparently one of the window frames has cracked, and the
+skilled masons of the Aztecs are in place to repair the damages. On the other
+side of the road, a couple of children are peeking over the window frames,
+looking at some other children thats playing some sort of ball game.
+~
+88 16 0
+D0
+~
+~
+0 -1 8846
+D1
+~
+~
+0 -1 8788
+D2
+~
+~
+0 -1 8844
+D3
+~
+~
+0 -1 8789
+S
+#8846
+City Street~
+   One house on each side of the road gives some, but little shade from the
+scorching sunlight. Some people in hooded cloaks walk in a small group in the
+middle of the road. Talking without looking at eachother, looking like very
+important people. Other people give space for the hooded men to walk, but they
+don't seem to make a fuss about them, indicating that this is a common sight.
+~
+88 16 0
+D0
+~
+~
+0 -1 8847
+D1
+~
+~
+0 -1 8790
+D2
+~
+~
+0 -1 8845
+D3
+~
+~
+0 -1 8791
+S
+#8847
+City Street~
+   Up ahead to the north a very large building terminates this street, but
+another street leads both east and west. People walk around casually and
+everything seems to be perfectly normal. To the south, buildings run on both
+sides of the street as long as the eye can see. A man is sitting on one side
+of the street, smoking his pipe and talking to some young children that has
+gathered up around him.
+~
+88 16 0
+D0
+~
+~
+0 -1 8840
+D2
+~
+~
+0 -1 8846
+S
+#8848
+Side Street~
+   You are now on a side street, leading north between some houses. This is
+a quiet part of the city and only a few people walk around here. A couple of
+men is having a small conversation in front of one of the houses, a woman
+inside is looking at them while she brushes the floor. A bird of some sort
+rests in the shade of a window, looking tired from the scorching sun.
+~
+88 16 0
+D0
+~
+~
+0 -1 8849
+D1
+~
+~
+0 -1 8885
+D2
+~
+~
+0 -1 8811
+D3
+~
+~
+0 -1 8886
+S
+#8849
+Side Street~
+   You are now on a side street, connecting some houses to the main road
+network. The sorroundings are quiet and peaceful, only a few children playing
+happily breaks the silence of the local environment. A man sits on the ground
+looking at the playing children. He looks like he's about to fall asleep,
+witnessing the calm nature in this part of town.
+~
+88 16 0
+D0
+~
+~
+0 -1 8850
+D2
+~
+~
+0 -1 8848
+S
+#8850
+Side Street Ending~
+   The side street ends here with one house on each side of the road. Smoke
+indicates cooking in the western house. The eastern house looks empty, but
+brushing sounds can be heard from within. A man stands beside the doorway
+looking into the open air, apparently having no important businesses to
+attend to.
+~
+88 16 0
+D1
+~
+~
+0 -1 8887
+D2
+~
+~
+0 -1 8849
+D3
+~
+~
+0 -1 8888
+S
+#8851
+Side Street~
+   You are now on a side street connecting a handful of houses to the main
+road network. A house to the west looks very crowded and something must be
+happening, because the people inside are very loud. The house on the opposite
+side of the street is more quiet, a woman standing in the window, looking at
+the weather.
+~
+88 16 0
+D0
+~
+~
+0 -1 8811
+D1
+~
+~
+0 -1 8889
+D2
+~
+~
+0 -1 8852
+D3
+~
+~
+0 -1 8890
+S
+#8852
+Side Street~
+   You are on a side street, connecting a small group of houses to the main
+road network. The street runs south until it stops just up ahead. Back to
+the north it leads by a couple of houses before it crosses one of the main
+city streets, leading to another small group of buildings. A small boy has
+found a twig that he finds very exciting, sitting on the ground with not a
+care in the world for anything else.
+~
+88 16 0
+D0
+~
+~
+0 -1 8851
+D2
+~
+~
+0 -1 8853
+S
+#8853
+Side Street~
+   The side street ends here with one house on each side of the road. Back
+north it continues on for a while, connecting with one of the main streets.
+A wall is what terminates this road. at least 20 feet high it blocks any
+possible view of what lies behind, and a couple of guards marching on the
+top of the wall eye the people down on the ground. That is not much of a
+job today though, the street being fairly empty.
+~
+88 16 0
+D0
+~
+~
+0 -1 8852
+D1
+~
+~
+0 -1 8891
+D3
+~
+~
+0 -1 8892
+S
+#8854
+Side Street~
+   You are now on a side street. To the south, it leads back onto one of
+the main streets again, but can also be crossed where it continues to
+another couple of houses. A very small woman stands on the side of the
+street, staring at the ground. A man coming up to her, takes her hand and
+leads her slowly along the street.
+~
+88 16 0
+D0
+~
+~
+0 -1 8855
+D2
+~
+~
+0 -1 8807
+S
+#8855
+Side Street~
+   On each side of the street is a house, both houses have a couple of
+people cleaning and cooking in them. There's noone out on the street at the
+moment. The street leads a little longer to the north before it stops at a
+pond. To the south it leads back to one of the main city streets.
+~
+88 16 0
+D0
+~
+~
+0 -1 8856
+D1
+~
+~
+0 -1 8897
+D2
+~
+~
+0 -1 8854
+D3
+~
+~
+0 -1 8898
+S
+#8856
+Side Street~
+   This side street ends here. An almost overgrown pond stretches out a
+little to the north. Some birds swim in the pond and some others stand on
+the shore. A couple of boys sit by the waterside, throwing small rocks into
+the pond. A man and a woman in their teenagers sit in eachothers arms on
+the other side of the pond, looking as though they're having the time of
+their lives. A scream breaks the sky. A large eagle can be seen floating
+through the air.
+~
+88 16 0
+D2
+~
+~
+0 -1 8855
+S
+#8857
+Side Street~
+   This side street leads to the south. To the north it crosses one of the
+main streets of the city. There is a house on each side of the street just
+south of here. They both stand quietly, emitting a small amount of smoke,
+indicating that a meal is being cooked. The street is empty, but a small
+gang of children can be seen outside one of the houses to the south.
+~
+88 16 0
+D0
+~
+~
+0 -1 8807
+D2
+~
+~
+0 -1 8858
+S
+#8858
+Side Street~
+   There is a house on each side of the street here. A small gang of
+children stand just outside one of the houses. They are very loud, but
+it's impossible to see what they are doing. Inside the houses, women can
+be seen cooking. Many exotic fumes fill the air, the Aztec women sure
+knows how to cook.
+~
+88 16 0
+D0
+~
+~
+0 -1 8857
+D1
+~
+~
+0 -1 8899
+D2
+~
+~
+0 -1 8859
+D3
+~
+~
+0 -1 8785
+S
+#8859
+Side Street~
+   The street is terminated by a wall towering the sky to the south of here.
+A couple of guards can be seen patrolling the wall. Their casual walk
+indicates that there should be no reason to feel uneasy, this city is as
+peaceful as a tomb.
+~
+88 16 0
+D0
+~
+~
+0 -1 8858
+S
+#8860
+City Street~
+   To the north this street is crossed by another big street. To the south
+this street is followed by a tall wall on each side, with guards casually
+patrolling on top of them. The street here is very clean, but also very worn.
+Many people walk this street. Some of them with carriages full og goods,
+being dragged along by various types of draft animals. The goods is often
+packed in pots or large pieces of cloth, probably to keep it away from the
+direct sunlight, which haunts this land like a plague.
+~
+88 16 0
+D0
+~
+~
+0 -1 8804
+D2
+~
+~
+0 -1 8861
+S
+#8861
+City Street~
+   On each side of the street there is a tall wall. Some guards can be seen
+patrolling on top of them. This street has become very worn as people
+bringing goods are constantly using it, having large carriages full of goods
+being dragged by draft animals. Many other people with large baskets that
+are either empty or full of vegetables or different kinds of goods, walk
+around here, everyone looking very busy. You can follow the street north or
+south.
+~
+88 16 0
+D0
+~
+~
+0 -1 8860
+D2
+~
+~
+0 -1 8862
+S
+#8862
+City Street~
+   A guarded wall on each side of the street ensures the safety of all the
+traders that are constantly travelling this street. Many other people walk
+around with baskets or pots both full and empty. Gangs of children run
+around, being eyed by the guards on the top of the wall. This street leads
+between the walls to the homes to the north, and south where it seems to
+wide up and a huge amount of people swarm around.
+~
+88 20 0
+D0
+~
+~
+0 -1 8861
+D2
+~
+~
+0 -1 8863
+S
+#8863
+City Street~
+   This street runs north towards the poor district of Tenochtitlan and
+south towards a big plaza crowded with people. Tall walls stand on each
+side of the street, on top of which are guards that make sure that all
+the people who pass by here don't make any trouble.
+~
+88 16 0
+D0
+~
+~
+0 -1 8862
+D2
+~
+~
+0 -1 9200
+S
+#8864
+Standing in the Doorway~
+   You are standing in a tall and broad doorway that connects this large
+building to the streets outside. The doorway is beautifully decorated, with
+figures carved out of the rock and painted in many bright colours. A couple
+of large men stand just outside the doorway, eyeing everyone who goes by.
+~
+88 16 0
+D0
+~
+~
+0 -1 8865
+D2
+~
+~
+0 -1 8840
+S
+#8865
+Inside the Large Building~
+   This building is very busy, many well dressed men and women go about
+doing different chores as children run around playing games. This room is
+gigantic and has a very large and beautifully crafted carpet taking up
+much of the floor. Different furniture made in a dark type of strong
+looking wood stand up against the walls. They have many carvings
+illustrating many different creatures, many of which you have never seen
+before. An open doorway in the east of the room leads to what looks like a
+kitchen, and a room with a very large table can be reached through a doorway
+to the west. A large stair made in stone leads up to another floor.
+~
+88 16 0
+D1
+~
+~
+0 -1 8866
+D2
+~
+~
+0 -1 8864
+D3
+~
+~
+0 -1 8867
+D4
+~
+~
+0 -1 8868
+S
+#8866
+A Large Kitchen~
+   This large kitchen has many pots with different contents standing up to
+the wall. Many metal pans and other kitchen utensils lie on shelves or benches
+around the room. A very large stove made in rock, with room for a large fire
+beneath, takes up the eastern wall. One could be able to make food for half
+a city at a time on something like that. Many working people, mostly women,
+go about cleaning or making everything ready for cooking the next meal. The
+only exit from this room lies to the west, in a broad decorated doorway,
+leading out to the centre room of the building.
+~
+88 16 0
+D3
+~
+~
+0 -1 8865
+S
+#8867
+Lounge~
+   A very large table, big enough for dozens of people, stands in the middle
+of the room. Many pieces of furniture stand up to the walls and are adorned
+with many kinds of ornamentation. A carpet goes almost wall to wall,
+decorating the floor. Few people are in here, only a couple of maids walk
+about cleaning. A broad sideboard takes up much of the northern wall, and
+has lots of different eating utensils on it. A doorway to the east leads out
+of the room.
+~
+88 16 0
+D1
+~
+~
+0 -1 8865
+S
+#8868
+Upper Level~
+   A large staircase leads back to the lower level of the house. A doorway
+on each side of the room leads to other rooms on this level. The southern 
+wall in this room is decorated with artwork painted right on the stone wall.
+A tall shelf, fairly unreachable, is filled with bookworks and scrolls. An
+abundance of animal skins fill up the remainder of the walls. No people can
+be seen or heard up here, except the workers that are cleaning downstairs.
+~
+88 16 0
+D1
+~
+~
+0 -1 8869
+D3
+~
+~
+0 -1 8870
+D5
+~
+~
+0 -1 8865
+S
+#8869
+A Large Bedroom~
+   A huge bed takes up much of this room. A tall and strong looking woman
+stand looking out of a window. She's dressed in a light blue gown falling
+all the way to the floor. Other than the bed this room is scarcely
+furnished. The walls are painted in dark colours, making the room a bit dim.
+The light from the windows gives the room an eerie atmosphere.
+~
+88 16 0
+D3
+~
+~
+0 -1 8868
+S
+#8870
+Salon~
+   A tranquil feel fills the air when entering this room. Its walls are
+painted in a calm semi-dark colour, whats left of it anyway, many animal
+skins and other decorating objects fill the walls. Comfortable chairs stand
+around small tables around the room. A man sits in the corner, smoking a
+large shiny pipe. His eyes glow with knowledge and wisdom, and he sits there
+calmly, taking a hit off his pipe.
+~
+88 16 0
+D1
+~
+~
+0 -1 8868
+S
+#8871
+Inside a House~
+   No people can be seen inside this house. There are two beds here, running
+along the eastern wall. The house is poorly furnished. Other than the beds
+only a table, a couple of chairs and some shelves fill up this small house.
+There's a small fireplace in the northwestern corner, while in the southern
+wall a doorway leads back to the street.
+~
+88 16 0
+D2
+~
+~
+0 -1 8842
+S
+#8872
+Inside a House~
+   A woman is brushing the floor in here while a man sits on a bed, looking
+very tired. A carpet is hung on the southern wall, making the room look more
+lively. It's woven in bright colours making a very fascinating pattern. It's
+adorned with some kind of two headed fabled creature. To the north, the
+doorway leads back to the street.
+~
+88 16 0
+D0
+~
+~
+0 -1 8842
+S
+#8873
+Inside a House~
+   A woman sits on a chair here, weaving. She works with an incredible
+agility and accuracy and its clear she's done this before. She looks fit for
+her age, and her almost fully children are sitting in a corner, talking
+quietly. This house is poorly furnished. A doorway leads south back to the
+street.
+~
+88 16 0
+D2
+~
+~
+0 -1 8838
+S
+#8874
+Inside a House~
+   A woman is in the process of making a meal here, standing upright before
+the large metal pot thats hanging over the fireplace. This room is fairly
+well furnished, but nothing adorn the walls. A young woman is brushing the
+floor, as it is partially very dusty.
+~
+88 16 0
+D0
+~
+~
+0 -1 8838
+S
+#8875
+Inside a House~
+   A group of people are having a very loud argument. Many people are
+watching, both from the inside and outside. It is impossible to say what
+the argument is about, but a young girl is sitting on a chair among the
+crowd with her head looking down at the floor. An old woman, possibly her
+mother bearing i great resemblance, stands over the young girl with a hand
+on her shoulder.
+~
+88 16 0
+D2
+~
+~
+0 -1 8836
+S
+#8876
+Inside a House~
+   A few people are standing in the windows, watching the commotion that can
+be heard from across the street. This house has little furniture and few
+things adorn the walls. The floor is quite dusty and everything implies that
+this is a poor family.
+~
+88 16 0
+D0
+~
+~
+0 -1 8836
+S
+#8877
+Inside a House~
+   A couple of men, looking like stoneworkers with their hammers and chisels,
+are arguing loudly. Probably about something work-related since they are
+frequently pointing at a very misshapen boulder lieing on the floor. The
+family who lives in this house are going about their business, brushing the
+floor or in the case of the woman of the house, weaving a carpet.
+~
+88 16 0
+D2
+~
+~
+0 -1 8834
+S
+#8878
+Inside a House~
+   This house has an astonishing architecture. An ornamented doorway, several
+windows with beautiful carvings, the walls are covered with breathtaking
+carpets. The years have taken its toll on all of these though, looking a bit
+decayed. Maintainance should be right around the corner because the current
+state of this house is not doing it justice.
+~
+88 16 0
+D0
+~
+~
+0 -1 8834
+S
+#8879
+Inside a House~
+   This house is more or less empty, a table and a couple of benches are
+more or less all the furniture here. The floor is quite dusty and there are
+no people inside. Some children can be heard playing in the street. The
+doorway on the southwall leads back outside.
+~
+88 16 0
+D2
+~
+~
+0 -1 8832
+S
+#8880
+Inside a House~
+   The walls here are filled with different trophies, skins and carpets. A
+huge carpet also covers most of the floor. A large table made in a very
+exotic dark wood stands in the middle of the room. A man and a woman is
+standing in the doorway looking at some children that are playing outside.
+A maid is sitting on a bench, getting some rest before beginning on the
+next chore.
+~
+88 16 0
+D0
+~
+~
+0 -1 8832
+S
+#8881
+Inside a House~
+   This house is beautifully decorated. A large fireplace on the eastern
+wall has stone carvings along its rims. A pot hangs over the fire steaming
+heavily. A meal must be just around the corner. A maid stirs the pot every
+once in awhile while another one is setting the table which stands in the
+middle of the room. Large comfortable chairs stand around the table.
+~
+88 16 0
+D3
+~
+~
+0 -1 8829
+S
+#8882
+Inside a House~
+   A huge carpet covers most of the floor here. A woman is cleaning it,
+while another woman is brushing the rest of the floor. Some of beds are
+running along the southern wall, looking very comfortable. In front of the
+window, a man and a child sits on a bench talking quietly together while
+tieing some twigs together.
+~
+88 16 0
+D1
+~
+~
+0 -1 8829
+S
+#8883
+A Dilapidated House~
+   This house seems about to collapse. Large cracks in the structure of the
+building makes this an unsafe place to be. Some parts of the ceiling has
+already fallen down, leaving the dusty floor with small rocks here and there.
+Once this building might have been a beautiful sight indeed, small evidence
+of stone carvings on the door and window frames can be seen. The doorway in
+the western wall leads back out onto the road.
+~
+88 16 0
+D3
+~
+~
+0 -1 8827
+S
+#8884
+A Dilapidated House~
+   You are inside a heavily decayed house. The walls and floor is filled with
+layers of dirt and dust. Spider webs fill the corners and around them spiders
+big as rats reside. There are huge cracks in the structure of this building and
+parts of the ceiling has already fallen down, filling the floor with small
+rocks. This might not be the safest house to be in, looking about to collapse.
+~
+88 16 0
+D1
+~
+~
+0 -1 8827
+S
+#8885
+Inside a House~
+   The atmosphere is quite calm, a woman is brushing the floor while looking at
+a couple of men talking in the street. A pot hanging over the fire in the
+fireplace is steaming, spreading wonderful odours around the room. A small boy
+is sitting on a carpet by the southern wall, playing with a couple rocks. A
+doorway to the west leads back out into the street.
+~
+88 16 0
+D3
+~
+~
+0 -1 8848
+S
+#8886
+Inside a House~
+   Tables and chairs fill up the norhtwestern corner of the room. A woman is 
+setting the table while another is cooking a meal. A richly coloured bird sits
+in the window, resting in the shade. A large animal skin hangs on one of the
+walls. Together with carvings in the window and door frames it makes this a
+beautiful house to look at.
+~
+88 16 0
+D1
+~
+~
+0 -1 8848
+S
+#8887
+Inside a House~
+   This house is rather empty, almost no furniture or decorations. A woman is
+sweeping the floor with a long broom and she looks rather tired. A man is
+resting in a chair, the only chair in the house. He seems to be eyeing the
+woman who is sweeping, he must be three times her age.
+~
+88 16 0
+D3
+~
+~
+0 -1 8850
+S
+#8888
+Inside a House~
+   This house is a big maze of furniture, it must be hard just to walk across
+the floor without taking a wrong turn. A woman is making a very large meal,
+this must be a big family or they have a big number of friends coming over.
+the doorway to the east leads back into the street.
+~
+88 16 0
+D1
+~
+~
+0 -1 8850
+S
+#8889
+Inside a House~
+   An old woman stands, half hangs out one of the windows. She seems to be
+looking up to the sky, probably trying to predict the weather. An even older
+man stands in the corner of the room, painting a picture of something on one
+of the walls.
+~
+88 16 0
+D3
+~
+~
+0 -1 8851
+S
+#8890
+Inside a House~
+   Dozens of people stand around the house talking loudly to eachother, but
+what they are talking about is hard to understand. The people are in all
+ages, shapes, sex and sizes, so maybe this is some kind of neighbourhood or
+family get-together. They seem to be throwing down the beverages like it
+was water, but the smell suggests otherwise.
+~
+88 16 0
+D1
+~
+~
+0 -1 8851
+S
+#8891
+Inside a House~
+   This house is empty, but is not abandoned. Although there is no furniture
+of any kind, the house is very clean. It looks like somebody has just moved
+out and someone else is about to move in. A man stands at the southern wall.
+He seems to be inspecting the solidity of the wall, knocking on it with his
+hand while listening carefully.
+~
+88 16 0
+D3
+~
+~
+0 -1 8853
+S
+#8892
+Inside a House~
+   The walls in this house are painted in vibrant colours. There is noone
+about though and floor is rather messy. A broom stands up to one of the walls.
+The several cobwebs attached to the broom suggests that it has not been in
+use for quite some time.
+~
+88 16 0
+D1
+~
+~
+0 -1 8853
+S
+#8893
+Inside a House~
+   This house may have been a real sight at some point, but now it is about
+to collapse. It has clearly been unoccupied for a long time and only these
+saddening ruins are left. A broken doorway in the south wall leads back out
+onto the dirt road.
+~
+88 16 0
+D2
+~
+~
+0 -1 8815
+S
+#8894
+Inside a House~
+   This house is rather small and cramped. It is still furnished but it all
+looks very dilapidated. It has clearly been unoccupied for a long time and
+only these saddening ruins are left. A broken doorway in the north wall leads
+back out onto the dirt road.
+~
+88 16 0
+D0
+~
+~
+0 -1 8815
+S
+#8895
+Inside a House~
+   It is probably not a great idea to be inside this building. The walls
+are seriously cracked and look as though they can fall apart at any minute.
+The dilapidated doorway to the south leads back out onto the safe dirt road.
+~
+88 16 0
+D2
+~
+~
+0 -1 8817
+S
+#8896
+Inside a House~
+   It is probably not a great idea to be inside this building. The walls
+are seriously cracked and look as though they can fall apart at any minute.
+The dilapidated doorway to the north leads back out onto the safe dirt road.
+~
+88 16 0
+D0
+~
+~
+0 -1 8817
+S
+#8897
+Inside a House~
+   There are two women in this house, one of them is cleaning while the
+other is preparing a very big meal. The house itself is rather anonymous,
+as are the women. The doorway in the western wall leads back out into
+the street.
+~
+88 16 0
+D3
+~
+~
+0 -1 8855
+S
+#8898
+Inside a House~
+   A small boy is doing his best to sweep the floor here although it would
+be too kind to say he's doing a very good job. What probably is his mother
+is slaving over the stove, making something that looks pretty bad, but
+smells even worse. The doorway in the eastern wall leads back into the
+~
+88 16 0
+D1
+~
+~
+0 -1 8855
+S
+#8899
+Inside a House~
+   Exotic fumes fill this beautifully furnished house. A gorgeous woman is
+responsible for these fumes as she is in the final stages of preparing a
+meal. Loud noises come in through the doorway in the western wall.
+~
+88 16 0
+D3
+~
+~
+0 -1 8858
+S
+#0
+$~

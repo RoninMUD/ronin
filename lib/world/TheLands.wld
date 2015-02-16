@@ -1,0 +1,1527 @@
+#1901
+The glade~
+Soft grass and moss cover the ground here.  A peaceful feeling seems
+to take over your thoughts as you wander around. To the south is a small
+forest.
+~
+19 0 2
+D0
+~
+~
+0 0 1902
+D2
+~
+~
+0 -1 4849
+S
+#1902
+The glade~
+Soft grass and moss cover the ground here.  Exits lead in all directions.
+~
+19 0 2
+D0
+~
+~
+0 0 1906
+D1
+~
+~
+0 0 1904
+D2
+~
+~
+0 0 1901
+D3
+~
+~
+0 0 1903
+S
+#1903
+The glade~
+A cool breeze comes from the north.  A small patch of flowers cover the 
+here.  You may leave north or east from here.  
+~
+19 0 2
+D0
+~
+~
+0 0 1907
+D1
+~
+~
+0 0 1902
+E
+flowers~
+The are deep blue, with a fire red center.  They have a very
+strong, pleasant aroma.
+~
+S
+#1904
+The glade~
+You see exits leading west and north.  
+~
+19 0 2
+D0
+~
+~
+0 0 1905
+D3
+~
+~
+0 0 1902
+S
+#1905
+The glade~
+You see small tracks in the ground here.  Exits lead south and west.
+~
+19 0 2
+D1
+~
+~
+0 0 1915
+D2
+~
+~
+0 0 1904
+D3
+~
+~
+0 0 1906
+S
+#1906
+The glade~
+Soft grass and moss cover the ground here.  A peaceful feeling seems
+to take over your thoughts as you wander around.
+~
+19 0 2
+D1
+~
+~
+0 0 1905
+D2
+~
+~
+0 0 1902
+D3
+~
+~
+0 0 1907
+S
+#1907
+The glade~
+The green fades to the north as the ground slowly turns into a 
+path.  Exits also lead east and south.
+~
+19 0 2
+D0
+~
+~
+0 0 1908
+D1
+~
+~
+0 0 1908
+D2
+~
+~
+0 0 1903
+S
+#1908
+The sloping path~
+To the south you see the glade.  The path continues to the north
+and also to the west.  There are many small pebbles and twigs on the 
+ground.
+~
+19 0 3
+D0
+The path continues.~
+~
+0 0 1909
+D2
+~
+~
+0 0 1907
+D3
+The path continues.~
+~
+0 0 1910
+E
+twigs~
+Normal twigs from the trees.
+~
+E
+pebbles~
+They are small and smooth.  It appears that they were
+placed here by someone...or something.
+~
+S
+#1909
+The sloping path~
+The path leads to the north and south.
+~
+19 0 3
+D0
+~
+~
+0 0 1911
+D2
+~
+~
+0 0 1908
+S
+#1910
+The path~
+You find yourself at the edge of a large marsh.  In the distance
+you hear sounds of animals moving in different directions.  It is
+none to pleasant.  You may go either west or east from here.
+~
+19 4 2
+D1
+~
+~
+0 0 1908
+D3
+You stomach turns as you get a snout full of the smell from the west.~
+~
+0 0 1914
+S
+#1911
+The forest~
+The trees stand high above making the land seem firm and healthy.  
+To the west the land starts to loose substance, and to the
+north the forest continues.
+~
+19 0 3
+D0
+~
+~
+0 0 1912
+D2
+~
+~
+0 0 1909
+D3
+~
+~
+0 0 1913
+S
+#1912
+Within the forest~
+You see the forest to the north and south.  Just as you think
+you are alone, you hear a screech owl in the distance...the 
+silence is broken.
+~
+19 0 3
+D0
+~
+~
+0 0 1918
+D2
+~
+~
+0 0 1911
+S
+#1913
+The edge of the marsh~
+Your boots sink deep into the ground here.  Many small insects scurry
+along on some unknown task.
+~
+19 4 2
+D1
+~
+~
+0 0 1911
+D3
+~
+~
+0 0 1919
+E
+insects~
+They are small and ugly.
+~
+S
+#1914
+The marsh~
+You are in a marsh.  Tree tops cover the sky, making it very dark and 
+gloomy here.  As you move along, you feel something rub against your
+leg from underneath the water.  It is possible to leave west from 
+here, or to go back east.
+~
+19 0 3
+D1
+~
+~
+0 0 1908
+D3
+~
+~
+0 0 1920
+S
+#1915
+Beside the logs~
+There are hundreds of small tracks in the ground here.  A large 
+stack of logs are stacked to the north.  Exits lead to the 
+west and east.
+~
+19 0 2
+D0
+~
+logs~
+1 -1 1916
+D1
+~
+~
+0 0 1921
+D3
+~
+~
+0 0 1905
+E
+logs~
+There are many logs.  They almost appear to be set here by something.
+As you examine them, you hear a deep moaning sound from the north.
+~
+S
+#1916
+The woolly bear den~
+It is warm here.  You can see why this place was chosen by the woolly
+bears to call home.
+~
+19 1 2
+D2
+~
+logs~
+1 -1 1915
+D5
+~
+~
+0 0 1922
+S
+#1917
+The forest~
+The air is fresh, making you want to take in a deep breath and a rest.
+~
+19 0 2
+D0
+~
+~
+0 0 1923
+D1
+~
+~
+0 0 1924
+D2
+~
+~
+0 0 1921
+S
+#1918
+The forest~
+You feel the trees towering above you.  Exits lead in all directions.
+~
+19 0 3
+D0
+~
+~
+0 0 1925
+D1
+~
+~
+0 0 1926
+D2
+~
+~
+0 0 1912
+D3
+~
+~
+0 0 1927
+S
+#1919
+The marsh~
+The water goes past your knees. Trees have moss and lichen on them.
+The stench is very strong here.  It is very unpleasant and you decide
+to leave in the only possible exit, west.
+~
+19 0 4
+D3
+The marsh continues.~
+~
+0 0 1928
+S
+#1920
+The Marsh~
+From the looks of the broken limbs of the many trees here, you 
+can guess that something lies ahead.  There are many bubbles coming
+from beneath the water.
+~
+19 0 4
+D0
+~
+~
+0 0 1929
+D3
+You see a cave in the distance.~
+~
+0 0 1930
+S
+#1921
+The forest~
+A small ray of light filters through the trees here.
+~
+19 0 2
+D0
+~
+~
+0 0 1917
+D3
+~
+~
+0 0 1915
+S
+#1922
+The inner den~
+This is the home of the woolly bears.  A large nest is here.
+~
+19 0 2
+D4
+~
+~
+0 0 1916
+S
+#1923
+The forest~
+Soft grass and moss cover the ground here.
+~
+19 0 2
+D1
+~
+~
+0 0 1931
+D2
+~
+~
+0 0 1917
+S
+#1924
+The forest~
+A large rock protrudes from the ground here.  The forest continues
+to the north and west.
+~
+19 0 2
+D0
+~
+~
+0 0 1931
+D3
+~
+~
+0 0 1917
+E
+rock~
+Long live the Jirans.
+~
+S
+#1925
+The trail~
+It is much easier walking here.  The trail not only gives comfort to your
+feet, it seems to be safe.  You can go south, north or east from here.
+~
+19 0 1
+D0
+~
+~
+0 0 1932
+D1
+~
+~
+0 0 1947
+D2
+~
+~
+0 0 1927
+S
+#1926
+The forest~
+The trees loom above you.  It is hard to make progress here because
+at every step you must beat back a new found obstacle.
+~
+19 0 3
+D2
+~
+~
+0 0 1918
+D3
+~
+~
+0 0 1927
+D5
+A network of roots extends down into a small hole below the trees here.
+~
+roots~
+9 -1 16820
+E
+roots~
+A loosely-woven wall of roots obscures a small hole below.
+~
+S
+#1927
+The forest~
+The forest you can make out a trail to the north.  You may leave 
+in that direction or go back into the forest.  Also, a large burned
+out clearing lies to the east.
+~
+19 0 3
+D0
+~
+~
+0 0 1925
+D1
+~
+~
+0 0 5800
+D2
+~
+~
+0 0 1926
+S
+#1928
+The marsh~
+This looks very much the same as the direction you came from.  The 
+bugs here bite at you, making you want to run.
+~
+19 0 4
+D2
+~
+~
+0 0 1929
+D3
+~
+~
+0 0 1933
+S
+#1929
+The marsh~
+What could possibly be making this horrible smell?  You cover your 
+nose as you walk here.  You move along quickly, exits lead south,
+west, and north.
+~
+19 0 4
+D0
+~
+~
+0 0 1928
+D2
+~
+~
+0 0 1920
+D3
+~
+~
+0 0 1934
+S
+#1930
+The marsh~
+Something slithers below the surface of the water here.
+~
+19 0 4
+D1
+~
+~
+0 0 1920
+D3
+~
+~
+0 0 1936
+S
+#1931
+A small path~
+You find what appears to be a small path.  It isn't well traveled, but
+it looks like a good road to travel in safety.
+~
+19 0 1
+D0
+~
+~
+0 0 1944
+D1
+~
+~
+0 -1 11731
+D2
+~
+~
+0 0 1924
+D3
+~
+~
+0 0 1923
+S
+#1932
+The edge of the field~
+Not far from here you see a few farmers tending the soil.  The trees 
+stand behind you, and a large field is before you.  In the distance you
+can see the top of a castle above the tree line.
+~
+19 0 2
+D1
+~
+~
+0 0 1945
+D2
+~
+~
+0 0 1925
+S
+#1933
+The marsh~
+The brush is very tangled here.  With every step you find a new 
+obstacle to overcome.
+~
+19 0 4
+D1
+~
+~
+0 0 1928
+D3
+~
+~
+0 0 1937
+S
+#1934
+The marsh~
+You hear something shuffle in the trees, but when you look up, nothing 
+is to be seen.  It's probably not a good idea to stay here for long.
+~
+19 0 4
+D1
+~
+~
+0 0 1929
+D3
+~
+~
+0 0 1935
+S
+#1935
+The marsh~
+You have come to a dead end.  Trees cover the north, west, and south, 
+making it impossible to pass.  The only obvious exit leads back the 
+way you came from, east.
+~
+19 0 4
+D1
+~
+~
+0 0 1934
+D5
+~
+cover~
+1 -1 1941
+S
+#1936
+Near the cave~
+The ground becomes more solid here, easing you a bit.  The entrance to a large 
+cave lies the west, while the marsh is to the east.
+~
+19 0 2
+D1
+~
+~
+0 0 1930
+D3
+It looks very dark inside.~
+~
+0 0 1938
+E
+wall~
+A carving is here, it seems to depict a large beast of some sort...
+     and people running from it....
+~
+E
+cave~
+The entrance has many weeds grown around it.  You see something carved 
+into one wall.
+~
+S
+#1937
+The rock~
+You have walked onto a large rock.  It's a little nicer here than the 
+rest of the marsh, and probably safer.  You could even take a nap here.
+Exits lead west and east.
+~
+19 4 1
+D1
+~
+~
+0 0 1933
+D3
+~
+~
+0 0 1940
+S
+#1938
+The cave~
+You walk down sharp incline to find yourself at a large pool.  The 
+reflection from the pool is better than a mirror.  You see large fish 
+swim in the pool.
+~
+19 1 2
+D0
+~
+~
+0 0 1939
+D1
+~
+~
+0 0 1936
+E
+fish~
+The have extremely large, bulging eyes.
+~
+S
+#1939
+Near the cave~
+A cave is to the south, and the marsh is to the north.  
+~
+19 0 2
+D0
+~
+~
+0 0 1940
+D2
+~
+~
+0 0 1938
+S
+#1940
+The marsh~
+It looks the same here, as anywhere in the marsh.  Bubbles break the 
+surface of the water and the trees look old and dying.
+~
+19 0 4
+D0
+~
+exit~
+1 -1 1942
+D1
+~
+~
+0 0 1937
+D2
+~
+~
+0 0 1939
+S
+#1941
+Under the marsh~
+As you enter, trees fall in from above, making it impossible to leave the
+way from which you came.  It is VERY hot here.
+~
+19 0 2
+D3
+~
+~
+0 0 1939
+S
+#1942
+Leaving the marsh~
+You have discovered an exit from the marsh.  From here you can leave the 
+stench behind, or go back into it.
+~
+19 0 2
+D1
+~
+~
+0 0 1943
+D2
+~
+exit~
+1 -1 1940
+S
+#1943
+The solid ground~
+You may be able to squeeze through to the east, but making it back would be 
+impossible.  The marsh still lies back to the west.
+~
+19 0 2
+D1
+~
+~
+0 0 1927
+D3
+~
+~
+0 0 1942
+S
+#1944
+The trail~
+You are on a trail that leads north and south.  The ground is worn here.
+~
+19 0 2
+D0
+~
+~
+0 0 1946
+D2
+~
+~
+0 0 1931
+S
+#1945
+The field~
+It looks as if the crops will be plentiful this year.  The farmers have 
+taken great care in plowing the soil and sewing the seeds.  Exits leave 
+south, west and east.
+~
+19 0 3
+D1
+~
+~
+0 0 1948
+D2
+~
+~
+0 0 1947
+D3
+~
+~
+0 0 1932
+S
+#1946
+Beside the cabin~
+A small wood cabin is to the east of here.  The trail continues to the 
+north and south.
+~
+19 0 2
+D0
+~
+~
+0 0 1950
+D1
+~
+door~
+1 -1 1949
+D2
+~
+~
+0 0 1944
+S
+#1947
+The field~
+There are a few apple trees being grown here as well as crops 
+in the ground.
+~
+19 0 3
+D0
+~
+~
+0 0 1945
+D3
+~
+~
+0 0 1925
+S
+#1948
+The road~
+You are on one of the only roads within hours of walking.  It is well 
+traveled.  The fields are to the west and a castle lies to the north.
+~
+19 0 2
+D0
+~
+~
+0 0 1951
+D2
+~
+~
+0 0 1950
+D3
+~
+~
+0 0 1945
+S
+#1949
+The cabin~
+You are in a dim cabin.  Shelves line the walls here, holding various 
+containers.  A small table makes up the furnishings for this 
+home.  A small ladder leads up.
+~
+19 0 2
+D3
+~
+door~
+1 -1 1946
+D4
+~
+~
+0 0 1952
+S
+#1950
+The trail~
+To the south east you can make out a small cabin, to the north a 
+castle, and to the west a field.
+~
+19 0 2
+D0
+~
+~
+0 0 1948
+D2
+~
+~
+0 0 1946
+D3
+~
+~
+0 0 1947
+S
+#1951
+The entrance~
+You are in the large entrance to Castle Flacon.  There are holes in 
+the top of the wall to the left and right.  To the north there is a 
+very large gate.
+~
+19 0 2
+D0
+~
+~
+0 0 1953
+D2
+~
+~
+0 0 1948
+S
+#1952
+The hayloft~
+A small mattress is on the ground here.  The ladder goes back down.
+You hear pigeons on the roof.  The stink of some strange immortal
+is still reticent in the air.
+~
+19 1 2
+D5
+~
+~
+0 0 1949
+E
+mattress~
+It is made of hay and looks very comfortable.
+~
+S
+#1953
+The gallery~
+A large gate lies to the south.  It appears that it would be very 
+effective in holding out unwanted people in case of siege.  You still 
+notice holes in the top left and right of the walls here.  You may go 
+north or south from here.
+~
+19 0 2
+D0
+~
+~
+0 0 1954
+D2
+~
+~
+0 0 1951
+S
+#1954
+In front of the gate~
+You are at the entrance to the inner castle.  To the north you hear people 
+trying to make a deal.  There are many small carts and street vendors there.  
+You notice a sign on the gate.
+~
+19 0 2
+D0
+~
+~
+0 0 1955
+D2
+~
+~
+0 0 1953
+E
+sign~
+Welcome stranger, to castle Flacon.  You will find safety here.
+~
+S
+#1955
+The market~
+This is the place where to people of the castle and surrounding lands 
+come to trade various items and stories.  Many bags and carts are here.
+The commons are to the east and west, while the heart of the city lies 
+to the north.
+~
+19 0 2
+D0
+~
+~
+0 0 1960
+D1
+~
+~
+0 0 1956
+D2
+~
+~
+0 0 1954
+D3
+~
+~
+0 0 1964
+E
+carts~
+They are full of various things to be traded today.
+~
+E
+bags~
+They are full of various things that will be traded today.
+~
+S
+#1956
+Zyashy way~
+People run about on various tasks here.  A small boy runs up to you 
+pretends to kill you with his mighty sword, that of the King.  Exits 
+lead to the east and west.
+~
+19 0 2
+D1
+~
+~
+0 0 1957
+D3
+~
+~
+0 0 1955
+S
+#1957
+Zyashy way~
+From here you can see a tower to the north-west.  The road continues 
+to the north and west.
+~
+19 0 2
+D0
+~
+~
+0 0 1958
+D3
+~
+~
+0 0 1956
+S
+#1958
+Zyashy way~
+To the east you can see the trees above the wall.  It appears to be 
+less busy here.  You can go north or south.
+~
+19 0 2
+D0
+~
+~
+0 0 1969
+D2
+~
+~
+0 0 1957
+S
+#1959
+The office~
+This is the local meeting place for the business officials of the 
+city, as well as a guard check point.
+~
+19 0 2
+D3
+~
+door~
+1 -1 1960
+S
+#1960
+Main street~
+The street venders are to the south, while the citadel lies to the 
+north.  A small building is to the east and you can tell there is a 
+small shop to the west from the sign above the door.
+~
+19 0 2
+D0
+~
+~
+0 0 1967
+D1
+~
+door~
+1 -1 1959
+D2
+~
+~
+0 0 1955
+D3
+~
+~
+0 0 1961
+E
+sign~
+It has the mark of the tradesman on it.
+~
+S
+#1961
+Sphen's shop~
+The owner of this shop is a very old man.  There are many shelves and 
+cabinets along the wall here.
+~
+19 0 2
+D1
+~
+~
+0 0 1960
+S
+#1962
+Zyashy way~
+People roam about on various tasks here.  You see houses along the street 
+both east and west.  The road continues north and south.
+~
+19 0 2
+D0
+~
+~
+0 0 1965
+D2
+~
+~
+0 0 1963
+S
+#1963
+Zyashy way~
+You are at a turn in the road.  It continues to the north and east.
+~
+19 0 2
+D0
+~
+~
+0 0 1962
+D1
+~
+~
+0 0 1964
+S
+#1964
+Zyashy way~
+To the east you can hear the voices of many people.  You can 
+go west or east from here.
+~
+19 0 2
+D1
+~
+~
+0 0 1955
+D3
+~
+~
+0 0 1963
+S
+#1965
+Zyashy way~
+To the south you see the forest towering above the walls.  You 
+also hear the roar of an ocean.  You may go south or east from here.
+~
+19 0 2
+D1
+~
+~
+0 0 1966
+D2
+~
+~
+0 0 1962
+S
+#1966
+The end of the road~
+You are at the end of Zyashy way.  The only exit is back to the west.
+~
+19 0 2
+D1
+~
+trapdoor~
+1 -1 1974
+D3
+~
+~
+0 0 1965
+S
+#1967
+The entrance~
+You see to the north a citadel.  It is the largest structure you have 
+seen here.  The gate to it is open now.  
+~
+19 0 2
+D0
+~
+~
+0 0 1970
+D2
+~
+~
+0 0 1960
+S
+#1968
+The dark alley~
+You are at the end of a dark alley.  The only exit leads to the east.
+You hear something shuffle (?) in the darkness.
+~
+19 1 2
+D1
+~
+~
+0 0 1969
+D5
+~
+trapdoor~
+1 1980 1979
+S
+#1969
+The alley~
+If there is any, this is the slums of the town.  It is very 
+unpleasant here.
+~
+19 0 2
+D2
+~
+~
+0 0 1958
+D3
+~
+~
+0 0 1968
+S
+#1970
+The parlor~
+Huge columns line the walls.  Exits lead in all directions.  You 
+see servants running quickly on some unknown task.
+~
+19 0 2
+D0
+~
+~
+0 0 1973
+D1
+~
+~
+0 0 1971
+D2
+~
+~
+0 0 1967
+D3
+~
+door~
+1 -1 1974
+E
+column~
+It has a torch hanging from it.  Above it is a statue of some unknown
+person.
+~
+S
+#1971
+Below the first tower~
+Stairs lead up here to some unknown place.  You see no one here.
+~
+19 4 0
+D0
+~
+~
+0 0 1972
+D3
+~
+~
+0 0 1970
+D4
+~
+~
+0 0 1980
+S
+#1972
+The citadel~
+The ceiling is very high, almost making you feel dizzy as you look 
+up.  A large tapestry hangs here.   You can go south, west, and 
+north from here.
+~
+19 0 0
+D0
+~
+~
+0 0 1978
+D2
+~
+~
+0 0 1971
+D3
+~
+~
+0 0 1973
+E
+tapestry~
+It shows a great king and his army in battle.  The flag of the Jirans 
+flies high, but it appears the battle turns against the Jirans.
+~
+S
+#1973
+The grand stairway~
+You very large stairway gives you passage to the second floor.
+You may go up, west, east, or back south to the city from here.
+~
+19 0 0
+D1
+~
+~
+0 0 1972
+D2
+~
+~
+0 0 1970
+D3
+~
+~
+0 0 1975
+D4
+~
+~
+0 0 1981
+S
+#1974
+The guard barracks~
+There are many small cots here and a few desks.  A small winding 
+ladder leads up from here where you can hear loud shuffling.
+~
+19 0 0
+D1
+~
+door~
+1 -1 1970
+D3
+~
+trapdoor~
+1 -1 1966
+D4
+~
+~
+0 0 1982
+S
+#1975
+The citadel~
+A pleasant aroma comes from the north.  A large tapestry hangs on the 
+wall here.
+~
+19 0 0
+D0
+~
+door~
+1 -1 1976
+D1
+~
+~
+0 0 1973
+E
+tapestry~
+It shows a great funeral for some unknown king.  The many people in it
+all wear robes which cover their faces.
+~
+S
+#1976
+The kitchen~
+A large fireplace is here to cook the food for the people within 
+the citadel.  Pots and pans hang from hooks in the ceiling.
+~
+19 0 0
+D2
+~
+door~
+1 -1 1975
+D4
+~
+~
+0 0 1983
+S
+#1977
+The citadel~
+A large window is to the north.  You see yet another tapestry on the 
+wall here.  The only exit is to the east.  This room is obviously where 
+the tired come and rest.  The benches here look very comfortable.
+~
+19 0 0
+D1
+~
+~
+0 0 1978
+E
+window~
+It is very large.  When you look outside you see that you are many feet 
+above sea level.  The ocean expands as far as the eye can see to the 
+north.  You can see why this place was chosen by the people, it's safety.
+~
+E
+tapestry~
+This tapestry depicts a great moving.  It shows a whole land of people 
+moving to a new and different home.  In another part of the tapestry it 
+shows that they have found a place to start their new home.  It is on 
+the edge of a great cliff.  Forests surround the area, and below the 
+cliff, a vast ocean.
+~
+S
+#1978
+Below a tower~
+You find yourself below what appears to be a tower.  A stone 
+staircase leads up from here and on the wall you see a simple wooden
+cross.
+~
+19 0 0
+D2
+~
+~
+0 0 1972
+D3
+~
+~
+0 0 1977
+D4
+~
+~
+0 0 1984
+S
+#1979
+The hideout~
+Bags of grain are stacked here, and a few barrels add to the decor also.
+This seems to be a place of refuge.
+~
+19 1 2
+D4
+~
+trapdoor~
+1 1980 1968
+S
+#1980
+The mage's study~
+There are various vials sitting in cabinets and on shelves here.
+The attendant must take great care with them, the room is spotless.
+~
+19 0 0
+D5
+~
+~
+0 0 1971
+S
+#1981
+The outer sanctum~
+A large set of doors lie to the north.  You may leave down, or continue 
+to the north.
+~
+19 0 0
+D0
+~
+~
+0 0 1985
+D5
+~
+~
+0 0 1973
+S
+#1982
+The warrior's academy~
+There are many diagrams of humans here, obviously telling various 
+pressure points and lethal blow areas.  A few straw dummies are here 
+also to help the young warriors learn.
+~
+19 0 0
+D5
+~
+~
+0 0 1974
+S
+#1983
+Above the kitchen~
+A set of stairs go back down into the kitchen from here.  This
+room is connected to the corridor which servants use to take
+essentials to the people of the court.
+~
+19 0 0
+D1
+~
+~
+0 0 1986
+D5
+~
+~
+0 0 1976
+S
+#1984
+The cleric's study~
+This is a very plain room, a simple bench and table are the only
+things you notice besides a large wooden cross.
+~
+19 0 0
+D5
+~
+~
+0 0 1978
+S
+#1985
+The sanctum~
+Surely you have reached the heart of this city.  At the far end of this 
+you see a large throne with a figure resting in it.  A peaceful feeling 
+seems to take over your state of being.
+~
+19 0 0
+D0
+~
+~
+0 -1 1988
+D2
+~
+~
+0 0 1981
+D5
+~
+throne~
+2 1939 1987
+S
+#1986
+The corridor~
+It is very plain here, probably to keep it easy to move in.
+~
+19 0 0
+D1
+~
+~
+0 0 1988
+D3
+~
+~
+0 0 1983
+S
+#1987
+The treasury~
+Many treasures cover the floor here.  The room has a light of its' 
+own.
+~
+19 0 0
+D4
+~
+throne~
+2 1939 1985
+S
+#1988
+The waiting quarters~
+The Queen waits here for her husband to take care of the matters 
+of state.  This room also serves to purpose of a tea room for her 
+guests at times.
+~
+19 0 0
+D2
+~
+~
+0 0 1985
+D3
+~
+~
+0 0 1986
+S
+#0
+$~

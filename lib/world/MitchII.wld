@@ -1,0 +1,79 @@
+#1400
+Before a Gate in the Dunes~
+  A wall of scrap metal stands to the south.  Large squares of random
+pieces of metal make up the wall, making it look quite strange.  Some
+of the squares are coated in rust, making it look as though some areas
+would be less protected than others.  On top of the wall the silhouette
+of a sentry silently paces back and forth.  In the middle of the wall
+a gate stands as a way through.  To the north the path leads out back 
+into the dunes.
+~
+14 0 0
+D2
+~
+gate~
+1 -1 1401
+S
+#1401
+Inside the Gates~
+  Inside the mighty gates the town looks quite drab.  The huts of the
+commoners are made from the same hodgepodge of metal that the city
+wall is.  In the center of town there is a small oasis that has been
+formed in the dunes.  The center of the town is at a much lower
+elevation than the outside ring of town making it possible to see
+the entire town.  On the southern end of town a large tower is built
+starting at the pool and rising towards the sky.  To the East and
+West are small side streets that follow along with the walls.  A
+sturdy looking ladder leads up to the sentry post above the gate,
+while to the south is a road that leads down the hill into town.
+~
+14 0 0
+D0
+~
+gate~
+1 -1 1400
+D1
+~
+~
+0 -1 1403
+D4
+~
+ladder~
+11 -1 1402
+S
+#1402
+The Sentry Post~
+  The sentry post is simply a platform built outward from the wall.
+There are no railings or guards to prevent someone from falling off
+of the platform, making a rather dangerous situation near the ledge.
+Near the wall a small stool sits for the sentries to take their
+breaks.
+~
+14 0 0
+D5
+~
+ladder~
+11 -1 1401
+S
+#1403
+A Dirty Side Street~
+  This small street leads around the town just inside the wall.  Dirt
+and debris fly around the street from small gusts of wind, while rats
+anxiously dart around looking for something to eat.  The roofs of most
+the shacks can be seen from here, reflecting odd lights with their
+metallic shine.
+~
+14 0 0
+D3
+~
+~
+0 -1 1401
+S
+#1499
+A temporary name~
+A temporary description
+~
+14 0 0
+S
+#0
+$~

@@ -1,0 +1,457 @@
+#28600
+A dimly lit tunnel~
+     This hidden tunnel is very dry and quiet. The only sound is your
+own echoing footfalls. As you leave the Traveler's Rest behind you the
+tunnel grows dark very quickly and you are left relying only on the
+flickering torchlight. The tunnel bends ahead and the warmth and
+safety of the Rest is above.
+~
+286 49677 0
+D0
+A dimly lit tunnel leads off to the North.
+~
+~
+0 -1 28601
+D4
+A plank can be opened to lead back into the Traveller's Rest.
+~
+plank~
+2 28760 28794
+S
+#28601
+A dimly lit tunnel~
+     The tunnel continues in darkness and utter silence. Even the
+steady thud of your own footfalls seems to have dropped in volume.
+The tunnel narrows substantially here, allowing only single-file
+travel. The low ceiling makes you hunch as you walk, squinting through
+the torchlight to see what lies ahead. There is another turn ahead and
+you can return toward safety to the South.
+~
+286 49933 0
+D1
+A dimly lit chamber lies to the East.
+~
+~
+0 -1 28602
+D2
+The tunnel leads back toward safety to the South.
+~
+~
+0 -1 28600
+S
+#28602
+The Chamber of Reflection~
+    The tunnel ends abruptly here in a small, dimly lit chamber. The
+walls are smooth and a small altar to Zeus is set up in the far
+corner. The flickering torchlight throws sinister shadows on the
+walls and makes it difficult to tell if this room is empty or not.
+You are surrounded by utter silence. You can still flee for safety
+to the West.
+~
+286 573965 0
+D3
+A dark tunnel leads out of the chamber.
+~
+~
+0 -1 28601
+S
+#28603
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28605
+D1
+~
+~
+0 -1 28604
+S
+#28604
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28606
+D3
+~
+~
+0 -1 28603
+S
+#28605
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28607
+D1
+~
+~
+0 -1 28606
+D2
+~
+~
+0 -1 28603
+S
+#28606
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28608
+D2
+~
+~
+0 -1 28604
+D3
+~
+~
+0 -1 28605
+S
+#28607
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28609
+D1
+~
+~
+0 -1 28608
+D2
+~
+~
+0 -1 28605
+S
+#28608
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28610
+D2
+~
+~
+0 -1 28606
+D3
+~
+~
+0 -1 28607
+S
+#28609
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28611
+D1
+~
+~
+0 -1 28610
+D2
+~
+~
+0 -1 28607
+D3
+~
+~
+0 -1 28611
+S
+#28610
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28611
+D1
+~
+~
+0 -1 28611
+D2
+~
+~
+0 -1 28608
+D3
+~
+~
+0 -1 28609
+S
+#28611
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D0
+~
+~
+0 -1 28612
+D1
+~
+~
+0 -1 28610
+D3
+~
+~
+0 -1 28609
+S
+#28612
+Upon a moonlit battlefield~
+  As you look around you feel slightly disorientated. The sky is dark as
+night and you can see quite well by the moon light. The flat battlefield
+stretches far into the distance. The ground beneath your feet is rocky
+and devoid and thing living. You feel strangely out of sync with your own
+body and time. Where have you traveled? Will you ever get back?
+~
+286 134250505 2
+D2
+~
+~
+0 -1 28611
+S
+#28613
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28614
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28615
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28616
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28617
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28618
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28619
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28620
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28621
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28622
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28623
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28624
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28625
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28626
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28627
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28628
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28629
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28630
+Atop Mount Olympus~
+  The mountain summit stretches out before you. The large ragged expanse
+of solid granite is cracked and slippery under foot. A cold wind whips
+at your exposed skin urging you forward towards the action. While the
+sheer cliff in all directions occupies part of your attention, you try
+to focus on finding that throne.
+~
+286 32768 5
+S
+#28699
+A temporary name~
+A temporary description
+~
+286 512 0
+S
+#0
+$~

@@ -1,0 +1,191 @@
+#18501
+book~
+A book~
+A brown book is laying here.~
+~
+8 0 16385
+0 0 0 0
+2 100 100
+40
+E
+book~
+A worn book where a student has made 
+som notes and drawings.
+~
+X
+~
+0 0 0
+M
+You grab a book.~
+$n grabs a book.~
+You stop holding the book.~
+$n stops holding the book.~
+A
+3 1
+#18502
+Archaeologist's Cloak~
+An Archaeologist's cloak~
+The cloak of an Archaeologist is laying here.~
+~
+11 134217728 1025
+0 0 0 0
+3 15000 500000
+34
+E
+cloak~
+The cloak is made of fine leather and has a symbol sown onto the back. 
+The symbol looks like a castle or a big city with walls around it. The symbol 
+is made with silver and gold threads.
+~
+X
+~
+2 0 0
+M
+You wear an archaeologist's cloak~
+$n wears an archaeologist's cloak~
+You stop wearing an archaeologist's cloak~
+$n stops wearing an archaeologist's cloak~
+A
+19 5
+A
+18 5
+A
+13 80
+T
+1200
+#18503
+stone~
+A stone~
+A stone is laying here~
+~
+8 0 16385
+0 0 0 0
+50 200 500
+75
+E
+stone~
+A stone covered with ancient markings.
+~
+X
+~
+0 0 0
+M
+You grab a stone~
+$n grabs a stone~
+You stop holding a stone~
+$n stops holding a stone~
+#18504
+bone~
+A bone~
+A human bone is laying here~
+~
+8 0 16385
+0 0 0 0
+10 500 500
+30
+E
+bone~
+A human bone.
+~
+X
+~
+0 0 0
+M
+You grab a bone.~
+$n grabs a bone.~
+You stop holding a bone.~
+$n stops holding a bone.~
+A
+19 2
+A
+18 2
+A
+9 10
+#18505
+Silver bracelet~
+A silver bracelet~
+A silver bracelet is laying here.~
+~
+9 0 4097
+0 0 0 0
+3 10000 15000
+2
+E
+bracelet silver~
+The bracelet is braided from 8 chords of silver
+thread. It circles in an endless loop and you can
+not see where the chords are joined.
+~
+X
+~
+0 0 0
+M
+You slip the silver bracelet onto your wrist.~
+$n slips a silver bracelet onto $s wrist.~
+You remove the silver bracelet from your wrist.~
+$n removes a silver bracelet from $s wrist.~
+A
+19 1
+A
+18 2
+A
+17 -4
+#18506
+Dusty ring~
+A dusty ring.~
+What looks like a pile of dust is laying here.~
+~
+9 0 3
+0 0 0 0
+1 5000 7500
+20
+E
+ring dusty~
+This ring is covered in dust. After a few moments
+of brushing the dust away, a new layer of dust is
+found. It looks like it has been lying untouched for
+a long time, only having been unearthed recently.
+~
+X
+~
+0 0 0
+M
+Yor hand gets dusty as you put on the ring.~
+$n gets $s hands dirty as $s puts on a dusty ring.~
+You remove the ring.~
+$n removes a ring from $s finger.~
+A
+18 3
+A
+19 3
+A
+13 30
+#18507
+plates leg gilded~
+gilded leg plates~
+Some leg plates gilded with gold are lying here.~
+~
+9 0 33
+4 0 0 0
+12 50000 20000
+18
+E
+plates leg gilded~
+The legplates are made of iron and gilded with gold. Where the gilding is damaged,
+you see rusted iron. Symbols cover the gilding, but they don't make much sense to
+you. It's like they're from a lost civilization.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 15
+#0
+$~

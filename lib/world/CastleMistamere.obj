@@ -1,0 +1,105 @@
+#19200
+chest leather large~
+a large leather chest~
+A large leather chest sits in the corner of the room.~
+~
+15 0 0
+20 5 -1 0
+5 50 100
+50
+#19201
+statue shepherd~
+The statue of a shepherd~
+A huge statue of a shepherd stands in the middle of the room.~
+~
+12 1 0
+0 0 0 0
+500 0 0
+50
+E
+STATUE SHEPHERD~
+The statue of a shepherd says 'Beware of the trapdoor in the locked room...'
+~
+#19202
+a glowing gland~
+a glowing gland~
+There is something half covered in dirt here, its giving off light..~
+~
+1 0 16385
+0 0 168 0
+2 50 1
+50
+#19203
+axe large~
+a large axe~
+A large axe lies on the ground here.~
+~
+5 0 8193
+0 1 10 3
+10 890 33
+50
+#19204
+gem moonstone~
+A small moonstone~
+A moonstone lies at your feet, its white with a pale blue aura..~
+~
+8 0 1
+0 0 0 0
+1 500 500
+50
+#19205
+gem jasper~
+A small jasper stone~
+A small stone has been set here, its pitch black with streaks of dark blue..~
+~
+8 0 1
+0 0 0 0
+1 1000 1000
+50
+#19206
+altar large~
+A large altar of Set~
+An altar is here, above it on the wall is an invocation to Set~
+~
+15 0 0
+400 5 -1 0
+500 0 0
+50
+#19207
+potion vial black~
+a small black vial~
+A small black vial stands here at your feet.~
+~
+10 64 1
+10 16 1 -1
+2 1362 9
+50
+#19208
+sword short~
+a short sword~
+There is a short sword here.~
+~
+5 0 8193
+0 2 4 11
+8 800 30
+50
+#19209
+spear long~
+a long spear~
+A spear lies thrown on the ground here..~
+~
+5 0 8193
+0 2 5 11
+10 1000 98
+50
+#19211
+key large rusted~
+a large rusted key~
+a rusted key is lying on the ground..~
+~
+18 0 16385
+2 0 0 0
+1 0 0
+50
+#0
+$~

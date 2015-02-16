@@ -1,0 +1,32 @@
+#600
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 X
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 5d125+125 1
+1 6 20 102
+#699
+thok chee lich betrayer~
+Thok Chee the Betrayer~
+Thok Chee floats silently here, eyeing you as his next undead minion.
+~
+As you look at him, you see the cold and uncaring visage which once may
+have been human, but whose flesh has long since withered away and is
+naught more than a magically sustained skeleton. The only things remotely
+resembling life are the brilliant red orbs in it's eye sockets, each
+glowing bright like burning coals. 
+~
+536870972 128 -575 X
+31 -11 -25 5d1750+2000 1d127+100
+125000 666666
+8 8 1
+0 0 5d125+125 1
+1 6 20 102
+#0
+$~

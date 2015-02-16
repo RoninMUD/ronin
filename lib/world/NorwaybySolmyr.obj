@@ -1,0 +1,305 @@
+#19000
+closet~
+A closet~
+An ornamentally painted closet rests in a corner.~
+~
+15 134217728 0
+1000 15 19004 0
+5000 250 1000000
+100
+E
+closet~
+  The closet is large and painted with ornamental flowers in red and
+green on a blue background.  At the bottom of the closet is a large,
+closed drawer, while the rest is covered by two locked doors, behind
+which is the main compartment.
+~
+X
+~
+320 0 0
+M
+~
+~
+~
+~
+#19001
+table~
+A table~
+A table is located at the bench under the window in the western wall.~
+~
+12 0 0
+0 0 0 0
+290 712 217
+100
+E
+table~
+  A simple but sturdy wooden table rests on the floor.  It is
+rectangular and its legs shape down from the four corners to
+form two broad legs.  A wooden beam is run through the two
+broad legs, and secured on both sides with wedges, to keep
+the table rigid.
+~
+X
+~
+320 0 0
+M
+~
+~
+~
+~
+#19002
+chair~
+A wooden chair~
+A worn, wooden chair sits by the table beneath the western window.~
+~
+12 0 0
+0 0 0 0
+70 214 75
+100
+E
+chair~
+  A simple wooden chair sits by the table.  The back of the chair
+is quite worn and the seat has a big crack down the middle.
+~
+X
+~
+320 0 0
+M
+~
+~
+~
+~
+#19003
+shovel~
+A Rusty Shovel~
+An old, rusty shovel is planted into the ground here.~
+$n raise$z $s rusty shovel and hit$z $V over the head with it.~
+5 160739584 24577
+5 3 5 13
+9 100 300
+20
+E
+shovel~
+  The handle and shaft is made from tough pine which connects to
+the metal head.  The metal, however, is very rusty and it is clear
+that this shovel has been in use for many a year.
+~
+X
+$n raise$z $s rusty shovel to hit someone, but hit$z $mself on the hip with it instead.~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+14 20
+A
+9 50
+T
+3500
+#19004
+key~
+A copper key~
+A key made of copper lies here.~
+~
+18 403177472 1
+0 0 0 0
+1 25 1
+0
+E
+key~
+  This is a key made of copper.  It is a bit green from oxidation,
+but other than that it appears to be in a good condition.
+~
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#19005
+tooth bear tann bjoern~
+a bear tooth~
+A small, white tooth is lying here.~
+~
+5 402653184 8193
+0 2 2 9
+1 1200 500
+15
+E
+tooth bear bjoernetann~
+  This is a white, canine tooth. It appears to be
+fractured and has a hole in it as well. The poor
+bear who walked around with this must have been in
+a lot of pain.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+13 13
+#19006
+string wool ulltraad~
+a string of wool~
+A long string is lying here.~
+~
+13 402653184 16385
+0 0 0 0
+1 5 10
+0
+E
+string wool ulltraad~
+  This is a piece of wool string which measures about
+three feet in length.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19007
+amulet bear tooth amulett bjoernetann~
+a bear-tooth amulet~
+A canine tooth on a string is left behind here.~
+~
+11 0 16389
+0 0 0 0
+2 1000 1000
+0
+E
+amulet bear-tooth bjoernetannsamulett~
+  A piece of wool string is threaded through the
+canine tooth of a bear to make a simple amulet.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+52 5
+A
+18 1
+A
+4 2
+#19008
+boots bearskin bjoerneskinnstoevler~
+bearskin boots~
+Some brown fur boots are littering the ground~
+~
+11 0 65
+0 0 0 0
+12 20000 12000
+17
+E
+boots bearskin bjoerneskinnstoevler~
+  These boots are made from the furry legs of a large
+bear. They are brown and appear warm and comfortable.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+18 2
+#19009
+sweater wool ullgenser~
+a wool sweater~
+A wool sweater has been tossed aside here.~
+~
+11 213959680 9
+0 0 0 0
+3 15000 5000
+11
+E
+sweater wool ullgenser~
+  This is a warm piece of clothing, made to withstand
+the cold chill of long, harsh winters.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 35
+A
+17 11
+A
+5 1
+#19010
+closet~
+A closet~
+An ornamentally painted closet rests in a corner.~
+~
+15 134217728 0
+1000 15 19004 0
+5000 250 1000000
+0
+E
+closet~
+  The closet is large and painted with ornamental flowers in red and
+green on a blue background.  At the bottom of the closet is a large,
+open drawer.
+~
+X
+~
+320 0 0
+M
+~
+~
+~
+~
+#19011
+paper instructions papir instruksjoner~
+an instructional paper~
+A piece of paper is lying here.~
+~
+32 0 1
+19007 19005 19006 -1
+1 1 1
+0
+E
+paper instructions papir instruksjoner~
+  Dette er instruksjonene for aa lage en amulett.  Legg dette
+papiret sammen med ingrediensene paa riktig sted og vil bli
+i besittelse av en hjelpfull, dog kanskje ikke saerlig vakker
+nakkepryd.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

@@ -1,0 +1,1986 @@
+#6200
+A secret room in the stack~
+   You are surrounded here on all sides by large, stacked chunks of 
+firewood.  Whoever built this place wasn't looking for a long-term hideout,
+just a place to sit out a search of the surrounding territory.  A 
+squirrel's nest on the ground indicates that this little room hasn't been
+used for a while.
+~
+62 9 4
+D4
+You see nothing special.
+~
+oak~
+1 0 6245
+E
+nest~
+The squirrel's nest is made up of sticks and twigs, as well as pieces of
+somebody's old shirt...wonder where that could have come from?~
+S
+#6201
+End of the Tunnel~
+   The tunnel ends here, in a small, rounded cul-de-sac.  It looks as though
+a dog has been sleeping here, or maybe a mountaineer who is truly in touch
+with nature has made this little hole in the woods his home.
+~
+62 1 3
+D0
+You see more of the tunnel in the woods.~
+~
+0 0 6209
+S
+#6202
+A path in the hills~
+   The path seems to peter out here, leaving you at the end of a very thick
+stand of trees, a living wall of green that must have sprung up here in 
+days of old.  To the east the foliage seems a bit more sparse, but maybe
+a spring rose up here overnight in response to some breaking of the earth
+somewhere else.  The trail goes back to the east.
+~
+62 0 4
+D1
+You see a path in the hills.~
+~
+0 0 6203
+S
+#6203
+A path in the hills~
+   This small path in the hills leads in three directions here, with an
+insurmountable hill to the south.  The foliage seems to be thicker to the 
+northwest of here.
+~
+62 0 4
+D0
+You see a path in the hills.~
+~
+0 0 6211
+D1
+You see a path in the hills.~
+~
+0 0 6204
+D3
+You see a path in the hills.~
+~
+0 0 6202
+S
+#6204
+A path in the hills~
+   This path heads into the high mountains.  Looking above and to the
+northeast, you can see the mountain peaks rising up out of the ground, like
+some sort of barrier.  Trees cover the ground around the bottoms of the
+mountainsides, but at the peaks you can see only grey rock.  The gravel
+road lies to the south.
+~
+62 4 4
+D1
+You see a path in the hills.~
+~
+0 0 6205
+D2
+~
+~
+0 -1 5675
+S
+#6205
+A path in the hills~
+   This path seems to have been trod as often by animals as by men.  To
+the west is the trail head and the way back to the gravel road.  To the
+east, the trail narrows down to a barely visible single track trapper's 
+route.  The smell of water drifts down from the north, carried along by
+a strong southwesterly wind.
+~
+62 0 4
+D0
+You see a small stream running through the hills.~
+~
+0 0 6213
+D1
+You see a small path through the hills.~
+~
+0 0 6206
+D3
+You see the trail head, and the way back to gravel road.~
+~
+0 0 6204
+S
+#6206
+A path in the hills~
+   This path seems as though it is fairly well traveled -- for a mountain
+single track through rough country, that is.  Although not well maintained,
+it is clear that the turns it takes are the best ones, chosen time and 
+again by people who know where they're going and know how to get there.
+~
+62 0 4
+D1
+You see a path in the hills.~
+~
+0 0 6207
+D3
+You see a path in the hills.~
+~
+0 0 6205
+S
+#6207
+A path in the hills~
+   The path leads between two hills here.  Small scrub growth struggles
+on the leeward side of the hills.  The hot wind sweeping from the 
+northeast seems to burn the northeastern sides of the hills, while on the
+southwestern sides, to leeward, small plants can grow and die, over and 
+over again.
+~
+62 0 4
+D1
+You see a path in the hills.~
+~
+0 0 6208
+D3
+You see a path in the hills.~
+~
+0 0 6206
+S
+#6208
+A path in the hills~
+   The path seems to peter out here, stopping at a ramshackle old cabin,
+which lies to the north, and a badly tended farm field in the east.
+This hill seems a bit lower than the others, as the hills seem to rise
+up towards the mountains to north and south.  The trail runs back
+towards the west.
+~
+62 0 4
+D0
+There is a small, ramshackle cabin to the north.~
+~
+0 0 6216
+D1
+~
+~
+0 -1 986
+D3
+You see a path in the hills.~
+~
+0 0 6207
+E
+mountain~
+You see a lonely mountain peak off to the south.~
+E
+mountains~
+The mountains seem tall and forbidding, blocking the sky and your view of
+the terrain in that direction.~
+S
+#6209
+Secret tunnel in the woods~
+   The growth here looks as though it has been trained to grow back onto
+itself, making a small tunnel in the woods.  The walls of this living
+burrow are packed so tightly that almost no light can penetrate here.
+A strange, heady warmth fills the tunnel, seeming to wrap around your body,
+enclosing you, covering you with its touch.
+~
+62 0 3
+D0
+You see more of the tunnel in the woods.~
+~
+0 0 6218
+D2
+You see the end of the tunnel in the woods.~
+~
+0 0 6201
+E
+walls~
+The walls of the burrow are made up of interwoven vines and branches.~
+S
+#6210
+A path in the hills~
+   The path ends here at a solid wall of trees, which seems to be giving
+off a subtle, thick wave of heat, constantly getting warmer and cooler.
+Thick cables of vines and tree branches which have curled back inwards make
+up the wall, with high patches of grass, shrubs, and thorn bushes at the
+base.  The trail heads back to the east.
+~
+62 0 4
+D1
+You see a path in the hills.~
+~
+0 0 6211
+E
+vines~
+The vines are very thick -- no chance of cutting through here.~
+E
+trees~
+The trees grow together so closely that their roots must look like 
+rope, intertwined as they are.~
+E
+bushes~
+The thorn bushes are not the kind you'd want to get tangled in -- some of
+the thorns are razor sharp, and big enough to take off a finger, if you're
+hasty trying to get through them.~
+E
+grass~
+It's grass, what more do you want? :)~
+S
+#6211
+A path in the hills~
+   The path heads east, west, and south here.  To the north and west extends
+an L-shaped wall of trees, vines and bushes, so tightly packed that it seems
+someone must have shaped it that way.  The smell of water is blowing down
+from the northeast, carried by the hard, hot wind that blows downwards from
+the mountaintops.
+~
+62 0 4
+D0
+A large bush blocks the way to what looks to be some sort of tunnel.
+~
+bush~
+2 0 6220
+D1
+You see a path in the hills.~
+~
+0 0 6212
+D2
+You see a path in the hills.~
+~
+0 0 6203
+D3
+You see the end of the trail.~
+~
+0 0 6210
+E
+wall~
+You'll have to head further west to get a good look at the wall.~
+S
+#6212
+A path in the hills~
+   The path spreads out here, becoming less of a path, as to the north seems
+to be terrain that can be fairly easily traveled.  The choice of the best
+route is not as important here, as the number of possible destinations 
+increases.  There is a smell of water coming from the east, and the trail 
+heads back to the gravel road to the west.
+~
+62 0 4
+D0
+You see a burnt patch of ground.~
+~
+0 0 6221
+D3
+You see a path in the hills.~
+~
+0 0 6211
+S
+#6213
+A small stream in the hills~
+   This stream is what carries water to the few plants that can survive 
+here.  A bit warm to the touch, the water moves sluggishly from east to
+west, seeming to pick up a little to the north of here, where it runs 
+slightly downhill.
+~
+62 0 4
+D0
+You see a small stream in the hills, running a bit faster than it is here.~
+~
+0 0 6222
+D1
+To the east of you, you see a small backwater, where the stream is slowed
+by the turn it is taking from south back to north.~
+~
+0 0 6214
+D2
+You see a path through the hills.~
+~
+0 0 6205
+S
+#6214
+A small stream in the hills~
+   The stream seems to be moving a bit more quickly here, and has widened
+out a bit.  This must be the low point of the stream's course, and muddy
+backwaters have formed here, holding a variety of drifting detritus.
+~
+62 0 4
+D1
+You see a small stream in the hills.~
+~
+0 0 6215
+D3
+You see a small stream in the hills.~
+~
+0 0 6213
+S
+#6215
+A small stream in the hills~
+   This stream runs slowly, climbing up, down, and around the hillsides
+it provides water to.  The water seems a bit warm to the touch, just like
+the heavy, hot wind blowing down from the northeast.  The stream runs 
+north and west from here.
+~
+62 0 4
+D0
+The stream continues to the north.~
+~
+0 0 6224
+D3
+The stream continues to the west.~
+~
+0 0 6214
+S
+#6216
+A ramshackle old cabin~
+   This cabin is good for nothing but keeping off the rain, and only
+barely meets that qualification.  Obviously a trapper sleeps here to get
+out of the wet, or to clean his skins.  Tree branches make up the roof,
+looking as though they could use a bit of work...some trapper's gear 
+lies in one corner.
+~
+62 0 4
+D2
+You see a path in the hills.~
+~
+0 0 6208
+E
+roof~
+As you look up at the so-called "roof," you can't help but think how
+nice this cabin is, and how nice it must be to lie on your back at
+night...under the roof...gazing up at the stars...~
+E
+branches~
+The tree branches look as though they've been used as fodder for some
+kind of vegetarian salad.~
+E
+gear~
+You see a jumbled pile of old, worn pieces of equipment, looking as 
+though they've been in this half-cabin for way too long.~
+S
+#6217
+At the bottom of a hill~
+   You stand at the bottom of a high hill, or what might be a small mountain.
+The northern side of the hill seems stripped bare, leaving mostly a dull,
+dry, sandy soil.  The wind has certainly done its work here.
+~
+62 0 4
+D0
+You see some scraggly pines, struggling to grow.~
+~
+0 0 6226
+S
+#6218
+Secret tunnel in the woods~
+   The growth here looks as though it has been trained to turn back onto
+itself, making a small tunnel in the woods.  The walls of this living
+burrow are packed so tightly that almost no light can penetrate here.  A
+strange, heady warmth fills the tunnel, the feel of a trapped animal heat,
+unable to escape for lack of moving air.
+~
+62 0 3
+D1
+You see more of the tunnel in the woods.~
+~
+0 0 6219
+D2
+You see more of the tunnel in the woods.~
+~
+0 0 6209
+S
+#6219
+Secret tunnel in the woods~
+   The growth here looks as though it has been trained to turn back onto
+itself, making a small tunnel in the woods.  The walls of this living
+burrow are packed so tightly that almost no light can penetrate here.
+~
+62 0 3
+D1
+You see the end of the tunnel in the woods.~
+~
+0 0 6220
+D3
+You see more of the tunnel in the woods.~
+~
+0 0 6218
+S
+#6220
+End of the tunnel~
+   You stand at one end of a living tunnel, a tunnel made of close-knit
+branches and vines.  The tunnel stretches out to the west...You are
+surrounded and enveloped by green to north east and south.
+~
+62 0 3
+D2
+A large bush blocks the way to what might be an exit from this tunnel.
+~
+bush~
+2 0 6211
+D3
+You see the tunnel in the woods.~
+~
+0 0 6219
+S
+#6221
+A burnt patch of ground~
+   An old fire destroyed what little vegetation was here, but most of the
+trees and undergrowth have grown back in to the west, where a solid wall
+of trees and vines blocks your passage.  You can see a glimpse of the stream
+to the east.
+~
+62 0 4
+D0
+You see a small stand of trees.~
+~
+0 0 6231
+D2
+You see a path in the hills.~
+~
+0 0 6212
+S
+#6222
+A small stream in the hills~
+   The stream is beginning to move a little faster here, as the ground
+(and the course of the stream) slopes downhill a bit.  The stream runs
+north and south.
+~
+62 0 4
+D0
+You see a small stream in the hills.~
+~
+0 0 6232
+D2
+You see a small stream in the hills.~
+~
+0 0 6213
+S
+#6223
+A dirt patch~
+   This patch of dirt has been trampled clear by mules, dogs, and people.
+To the north is the trading post, and the stream lies to east, west, and
+south.
+~
+62 0 3
+D0
+You see the trading post.~
+~
+0 0 6233
+D1
+You see a small stream in the hills.~
+~
+0 0 6224
+S
+#6224
+A small stream in the hills~
+   The stream is beginning to slow here, as twists and turns and the hills
+that lie in its path take their toll on the force of the streams current.
+On the banks are a few paw prints where something has come to drink, but
+there are no animals around.
+~
+62 0 4
+D0
+You see a dirt patch.~
+~
+0 0 6234
+D1
+You see a small stream in the hills.~
+~
+0 0 6225
+D2
+You see a small stream in the hills.~
+~
+0 0 6215
+D3
+You see a dirt patch.~
+~
+0 0 6223
+S
+#6225
+A small stream in the hills~
+   The stream is a bit cooler here than it is to the west and south, 
+probably because it is exposed to the hot, hard wind that comes down from
+the northeast.  The stream runs east and west here.
+~
+62 0 4
+D0
+You see an unused chapel to the north.~
+~
+0 0 6235
+D1
+You see a small stream in the hills.~
+~
+0 0 6226
+D3
+You see a small stream in the hills.~
+~
+0 0 6224
+S
+#6226
+A small stream in the hills~
+   The stream is coursing swiftly here, powered by the driving force of
+the wind that blows down from the northeastern mountain tops, and by the
+lay of the land as it heads closer to sea level towards the south.
+~
+62 0 4
+D0
+You see a small stream in the hills.~
+~
+0 0 6236
+D1
+You see a high hill to the east.~
+~
+0 0 6227
+D2
+You see a high hill to the south.~
+~
+0 0 6217
+D3
+You see a small stream in the hills.~
+~
+0 0 6225
+S
+#6227
+A high hill~
+   This hill has a grand view of the surrounding area to the west and 
+north, but it seems impossible to climb any higher to the east.  Cutting a
+horse-shoe shape through the hills is a stream which comes down from the
+northeast, briefly runs west, then cuts back towards the northwest.  Off
+to the west, there is a strange L-shaped stand of trees, so closely packed
+that it seems as though it is maintained that way.  High mountain peaks are
+visible to the north of here, and a lone mountain to the south cuts sharply
+into the sky.  Directly northwest as the crow flies, a cliff face juts
+outwards, and the stream seems to have cut its way through the bottom of
+the wall.  A hard, hot wind blows down from the north.
+~
+62 68 4
+D0
+You see a cabin in the high hills.~
+~
+0 0 6237
+D3
+You see a small stream in the hills.~
+~
+0 0 6226
+S
+#6228
+A pile of hides and traps~
+   These hides are beginning to shed the hair that once flourished on
+whatever animals that used to wear them, but it looks as though the traps
+that caught the animals haven't been used for a while either.  Perhaps
+the wreckage to the east holds some more clues.
+~
+62 0 4
+D0
+You see some trees to the north.~
+~
+0 0 6239
+D1
+You see a demolished cabin.~
+~
+0 0 6229
+E
+hides~
+These hides were taken long ago, but have been out in the weather for 
+far too long.~
+E
+traps~
+Wind, sun, and rain have taken their toll here, making these traps worse
+than useless.~
+S
+#6229
+A demolished cabin~
+   Here lie the wrecked remains of what was once a trapper's cabin, his
+hide-hole in the woods.  The old timbers of the house were torn
+asunder, and it looks like the work of a large, unstoppable animal -- as
+can be seen from the claw marks.  Obviously these claws are powerful
+tools for one wise in the ways of using them.
+~
+62 0 4
+D1
+You see a smoke shack.~
+~
+0 0 6230
+D3
+You see some tattered old hides and traps.~
+~
+0 0 6228
+S
+#6230
+A smoke shack~
+   You stand before a smoke shack, made from green pine boughs.  Peering 
+inside, you can see a chunk of meat hanging on a spit, high off the ground
+from a blackened patch where the smoke fire burned.
+~
+62 0 4
+D0
+You see a little shack with the traditional half-moon on the door.~
+~
+0 0 6241
+D1
+You see a small stand of trees.~
+~
+0 0 6231
+D3
+You see a demolished cabin over to the west.~
+~
+0 0 6229
+E
+beef meat~
+The meat looks as though maybe it's been hanging a little bit too long.~
+E
+blackened patch~
+The ground is black, as though a fire once burned there.~
+S
+#6231
+A small stand of trees~
+   These trees are a bit smaller than one might expect, given the obvious
+twisted nature of their branches (probably from the wind).  That's probably
+because there seems to have been a fire here, as evidenced by the burnt
+patch of ground to the south.
+~
+62 0 4
+D0
+You see some trees to the north.~
+~
+0 0 6242
+D1
+You see a small stream in the hills.~
+~
+0 0 6232
+D2
+You see a burnt patch of ground to the south.~
+~
+0 0 6221
+D3
+You see a small smoke shack, set up for curing meat.~
+~
+0 0 6230
+S
+#6232
+A small stream in the hills~
+   The stream is a bit wider here than to the southeast.  Perhaps this
+is because it is becoming more of a watershed, as the whole countryside 
+here seems to slope up to the northeast, and down to the southwest.  The
+stream continues north and south.
+~
+62 0 4
+D0
+You see a small stream in the hills.~
+~
+0 0 6243
+D2
+You see a small stream in the hills.~
+~
+0 0 6222
+D3
+You see a small stand of trees.~
+~
+0 0 6231
+S
+#6233
+The mountain trading post~
+   This store doesn't see much business, and maybe that's why the store keep
+isn't even here.  A couple of barrels of flour sit in one corner, and in
+the other lies a bundle of skins.  Some chairs stand empty almost in the
+center of the room, but look as though the last occupants haven't rested
+there for a long, long time.
+~
+62 0 4
+D2
+You see a dirt patch.~
+~
+0 0 6223
+E
+barrels~
+These barrels of flour are the last of the items in storage here, and
+it looks as though the shop may be closing for good.~
+E
+chairs~
+Covered with dust and made from warped pine-wood, these chairs weren't
+built for heavy usage in the dining room of the mayor.~
+E
+skins~
+On top of this pile of skins lies a note, which reads: This is for a
+barrel of flour, I took it right after that big rain we had, when the 
+old tree crashed up by the lookout hill.~
+S
+#6234
+A dirt patch~
+   This is where supply shipments are left, on the few occasions when 
+shipments of city-life niceties actually make it out this far.  You are
+moving into rougher mountain country now, and the empty store yard only
+serves as a reminder of an easier way of life.
+~
+62 0 4
+D0
+You see a large pile of firewood, neatly stacked.~
+~
+0 0 6245
+D1
+You see the doorstep of a large chapel.~
+~
+0 0 6235
+D2
+You see a small stream in the hills.~
+~
+0 0 6224
+S
+#6235
+Outside a chapel in the foothills~
+   You stand outside a large, old chapel in the foothills of the Helventia
+Mountains.  It seems to have been built with a thriving community in mind,
+not the kind of lonely, solitary mountain trappers who exist out here.
+But, it looks nice and picturesque here, though it probably hasn't been
+used for many years.  The church apparently hasn't forgotten, for there
+is a lock on the door, and a sign on the door over the lock.
+~
+62 0 4
+D0
+You see a large door with a huge lock on it.
+~
+large~
+1 6220 6246
+D1
+You see a small stream in the hills.~
+~
+0 0 6236
+D2
+You see a small stream in the hills.~
+~
+0 0 6225
+D3
+You see a dirt patch.~
+~
+0 0 6234
+E
+sign~
+
+
+			TRESPASSERS WILL BE DAMNED.
+			-- YOU HAVE BEEN WARNED --
+
+~
+E
+large doors~
+The doors don't look as though they would stop a determined man with an
+axe, but maybe that's what the sign is for...~
+S
+#6236
+A small stream in the hills~
+   The stream is flowing quickly here, pushed along by the wind and
+by the lay of the land.  Higher ground lies to the north, while the 
+ground is a bit lower to the south and west.
+~
+62 0 4
+D0
+You see a small stream in the hills.~
+~
+0 0 6247
+D1
+You see a cabin in the high hills.~
+~
+0 0 6237
+D2
+You see a small stream in the hills.~
+~
+0 0 6226
+D3
+You see an abandoned chapel.~
+~
+0 0 6235
+S
+#6237
+A cabin in the high hills~
+   You see before you a cabin, sturdily built of thin logs, bound together 
+into walls by thin branches.  The branches have since dried, shrunk, and 
+hardened, making a tight wrap.  The hard wind blows through here, but the 
+spaces between logs in the walls are too narrow to allow much dirt or 
+detritus in.  That seems to be the right way to deal with any wind, not 
+fighting it, but allowing the wind to come through and around you, bending 
+with the wind, but not breaking before it.
+~
+62 9 4
+D0
+You see a small stream in the hills.~
+~
+0 0 6248
+D1
+You see a high, rocky hill.~
+~
+0 0 6238
+D2
+You see a high hilltop that looks like it'd be a good place for 
+reconnaissance.~
+~
+0 0 6227
+D3
+You see a small stream in the hills.~
+~
+0 0 6236
+E
+cabin~
+This cabin is a study in how to live with unsurmountable forces, and
+triumph.~
+S
+#6238
+A rocky hilltop~
+   This hill is a bit rockier than most of the terrain that can be seen
+to the south and west.  Looking further to the north, high mountain peaks
+seem to block the view of the source of the hot, hard wind that is blowing
+down from that direction.  A large tree lies to the east, and looks to
+have been blasted down off the eastern cliff, perhaps in some bad storm.
+There is a cabin to the west.
+~
+62 0 4
+D3
+You see a cabin in the high hills.~
+~
+0 0 6237
+E
+cliff~
+The cliff is very sheer -- don't even think about trying to climb it.~
+E
+tree~
+This tree is big enough to have killed anything in its path when it fell,
+especially if it fell off that cliff, which seems to be the case.~
+S
+#6239
+A copse of trees~
+   These trees have stood here for ages, untouched by the harms and pains
+that befall mere men.  Quiet, unmoving, and permanent, their roots reach
+deep into the earth, and only the hungry, quick, and abortive actions of
+mankind can pull up their roots -- not counting even more powerful forces
+of nature, of course.
+~
+62 0 4
+D1
+You see some more trees.~
+~
+0 0 6240
+D2
+You see some old hides and traps.~
+~
+0 0 6228
+S
+#6240
+A copse of trees~
+   These trees have stood here for ages, untouched by the harms and pains
+that befall mere men.  Quiet, unmoving, and permanent, their roots reach
+deep into the earth, and only the hungry, quick, and abortive actions of
+mankind can pull up their roots -- not counting even more powerful forces
+of nature, of course.
+~
+62 0 4
+D1
+You see a small shed to the east.~
+~
+0 0 6241
+D2
+You see a demolished cabin to the south.~
+~
+0 0 6229
+D3
+You see some more trees.~
+~
+0 0 6239
+S
+#6241
+An outhouse in the hills~
+   This dirty little shed bears the traditional half-moon symbol on its
+door, and is so old that it is beginning to fall into the pit that it 
+stands above -- better get away before you go, too.
+~
+62 0 4
+D1
+Some trees lie to the east.~
+~
+0 0 6242
+D2
+You see a smoke shack to the south.~
+~
+0 0 6230
+D3
+You see some trees.~
+~
+0 0 6240
+S
+#6242
+A copse of trees~
+   The trees here are lush and green, tall and thick, towering over the
+little shed that stands to the west -- maybe the trees get most of their
+food from the shed somehow?
+~
+62 0 4
+D1
+You see a small stream in the hills.~
+~
+0 0 6243
+D2
+You see some trees to the south.~
+~
+0 0 6231
+D3
+You see a little shed to the west.~
+~
+0 0 6241
+S
+#6243
+A small stream in the hills~
+   The stream is widening here, as it becomes a watershed for the rest
+of the high country to the northeast.  Backwaters have formed to the sides
+of the channel, but a strong current runs from west to east through the
+center.
+~
+62 0 4
+D1
+You see a small stream in the hills.~
+~
+0 0 6244
+D2
+You see a small stream to the south.~
+~
+0 0 6232
+D3
+You see some trees to the west.~
+~
+0 0 6242
+S
+#6244
+A small stream in the hills~
+   The stream is beginning to narrow again, as it starts turning towards
+the north, and higher ground.  Still fueled by its long descent and only
+beginning to head up high here, the stream runs fairly quickly, but is 
+stripping off unnecessary  width so that it can continue on its way.
+~
+62 0 4
+D0
+You see a small stream in the hills.~
+~
+0 0 6252
+D3
+You see a small stream in the hills.~
+~
+0 0 6243
+S
+#6245
+A stack of firewood~
+   This wood has been stockpiled here, to be used by mule drovers who get
+caught in the mountains by the snows, or by trappers who come here to hole
+up in extremely bad weather.  A large chunk of oak with a curved, twisted
+grain catches your eye.
+~
+62 0 4
+D2
+You see a dirt patch.~
+~
+0 0 6234
+D5
+You see nothing special.
+~
+oak~
+1 0 6200
+E
+oak~
+This chunk of oak looks as though it fits into a particular
+niche...perhaps as a door?
+~
+S
+#6246
+The chapel in the mountains~
+   Unused for years, this chapel has been stripped of even the pews.  The
+last caretaker obviously swept up, but a thin layer of dust has settled
+onto the floor and windowpanes, slowly clinging its way up the glass until
+one day it will reach the top.
+~
+62 93 4
+D2
+You see nothing special.
+~
+large~
+1 0 6235
+D5
+~
+trapdoor~
+1 -1 6291
+S
+#6247
+A small stream in the hills~
+   The stream slows a bit here as it takes a turn, losing momentum as it
+rounds the corner.  The water is clearer here, and fresher too.  Since
+the current runs south and southwest, the source must be to the northeast.
+~
+62 0 4
+D1
+You see a small stream in the hills.~
+~
+0 0 6248
+D2
+You see a small stream in the hills.~
+~
+0 0 6236
+S
+#6248
+A small stream in the hills~
+   Clear, fast, cold water flows over you in this section of the stream,
+washing sand further down to the southwest.  The coolness of the water
+is a refreshing contrast with the dry, hot wind that blows down off the
+northern peaks.
+~
+62 0 4
+D0
+You see a small stream in the hills.~
+~
+0 0 6256
+D2
+You see a cabin in the high hills.~
+~
+0 0 6237
+D3
+You see a small stream in the hills.~
+~
+0 0 6247
+S
+#6249
+High in the mountains~
+   This is truly higher ground here, as the terrain is stripped of any 
+plant life that cannot stand against the hard winds that blow up this 
+high.  The ground continues to climb to the east, dropping down to a 
+stream bed to the west.  An opening in the mountain lies southward.
+~
+62 0 5
+D1
+You see high mountain country to the east.~
+~
+0 0 6250
+D2
+~
+~
+0 -1 5980
+S
+#6250
+High in the mountains~
+   This mountain peak is completely bare, down to the rock.  No trees or
+shrubs mar the simple beauty of stark bare rock against the empty sky
+here, and no animals bother anymore to trudge up the mountainside -- why
+should they?
+~
+62 0 5
+D0
+You see high mountain country.~
+~
+0 0 6258
+D3
+You see high mountain country.~
+~
+0 0 6249
+S
+#6251
+A rock pile~
+   This pile of rock is a bit different from the larger pile you can see to
+the northeast.  Smaller rocks make up this pile, as though someone had
+been culling rocks from the ground in order to prepare a garden bed.
+~
+62 0 5
+D0
+You see a cliff face.~
+~
+0 0 6259
+E
+rocks~
+These rocks are small, and covered with sandy soil.~
+S
+#6252
+A small stream in the mountains~
+   The stream takes a bend here, carefully finding the lowest ground
+available as the lay of the land forces it to take a turn back towards higher
+ground.  The current is slowing, and the channel is narrowing...the stream
+continues to the east and south.
+~
+62 0 5
+D0
+You see more mountain country to the north.~
+~
+0 0 6260
+D1
+You see a small stream in the mountains.~
+~
+0 0 6253
+D2
+You see a small stream in the hills.~
+~
+0 0 6244
+S
+#6253
+A small stream in the mountains~
+   The stream straightens out to the north, gratefully flowing down a short
+incline around a rock pile, and heading towards the cliff face you can see
+towering to the northwest of here.  The stream continues to the north and
+west.
+~
+62 0 5
+D0
+You see a small stream in the mountains.~
+~
+0 0 6261
+D1
+You see some high mountain terrain.~
+~
+0 0 6254
+D3
+You see a small stream in the mountains.~
+~
+0 0 6252
+S
+#6254
+High in the mountains~
+   The forest in these mountains is almost eerie, in that what trees there
+are grow in rows.  Perhaps this is a result of the ever-present northeast
+wind that blows down from the mountaintops.  There is a cabin to the north,
+and to the south is the back of a large building.
+~
+62 0 5
+D0
+You see a cabin in the mountains.~
+~
+0 0 6262
+D1
+You see some trees in the high mountains.~
+~
+0 0 6255
+D3
+You see a small stream in the mountains.~
+~
+0 0 6253
+S
+#6255
+High in the mountains~
+   The ground is getting sandier here, with a light dusting of thin soil,
+not very good for thick vegetation.  Large pines dominate the forestation
+in this section of the mountains, growing almost in rows as though they 
+were set down in a hurry, by someone with no care for proper dispersion.
+~
+62 0 5
+D0
+You see some trees in the high mountains.~
+~
+0 0 6263
+D3
+You see some trees in the high mountains.~
+~
+0 0 6254
+E
+pines~
+The pines are  tall, with no branches to grab onto until about 30 feet up 
+the trunk.~
+S
+#6256
+A small stream in the mountains~
+   The stream heads south, flowing swiftly out of the Helventia Mountains.
+Clear and pure, the stream is a delight to the lips, and smooth as silk on
+the adventurer's skin at the end of the day.  The stream runs east and
+south.
+~
+62 0 5
+D1
+You see a small stream in the mountains.~
+~
+0 0 6257
+D2
+You see a small stream in the hills.~
+~
+0 0 6248
+S
+#6257
+A small stream in the mountains~
+   The stream burbles along, filled with bubbles as though it has just 
+emerged from a freshwater spring.  There is a slight chill in the air here
+when the hot, dry wind lets up, suggesting a larger body of water close 
+nearby.  The stream continues north and west.
+~
+62 0 5
+D0
+You see a small stream in the mountains.~
+~
+0 0 6265
+D3
+You see a small stream in the mountains.~
+~
+0 0 6256
+S
+#6258
+High in the mountains~
+   Mountain country isn't always all that is expected when staring upwards
+from the ground, but this one hardly leaves anything to the imagination.
+There is nothing here but nature, stern, stark, and forbidding.  A spring
+is to the north.
+~
+62 0 5
+D0
+You see a mountain spring to the north.~
+~
+0 0 6266
+D2
+You see high mountain country.~
+~
+0 0 6250
+S
+#6259
+A high cliff face~
+   A cliff face blocks passage to the west here, rising from the ground
+where it shouldn't be.  The cliff face looks almost new, unworn by weather,
+hard as the rock it is made of.  You can almost picture the time of its 
+birth, cataclysmic forces shaking these mountains, solid earth grinding
+against solid earth, force upon force, until this cliff juts out sharply
+into the sky above you.
+~
+62 0 5
+D1
+You see a rock pile.~
+~
+0 0 6260
+D2
+You see a pile of rock.~
+~
+0 0 6251
+S
+#6260
+A pile of rock~
+   The rock pile here looks as though every chunk of rock was broken away
+from its neighbor with a pickaxe.  Water-worn surfaces sharply contrast
+with broken edges, once again demonstrating that nature is long, enduring,
+and patient, while man is swift, brutal, and hungry.
+~
+62 0 5
+D0
+You see the end of a mountain stream.~
+~
+0 0 6267
+D3
+You see an abrupt cliff face.~
+~
+0 0 6259
+E
+rocks~
+These rocks look like the were chinked from the streambed with a pickaxe.~
+S
+#6261
+A small stream in the mountains~
+   The stream is slowing here, spreading out into a wide pool to the north.
+The channel looks almost man-made, a perfect half-circle dug into the 
+mountain rock.  Rock piles standing close by lend support to this premise,
+and the faint, water-worn outlines of what might have been shovel marks
+make odd patterns in the streambed.
+~
+62 0 5
+D0
+You see a small pool to the north.~
+~
+0 0 6268
+D2
+You see a small stream in the mountains.~
+~
+0 0 6253
+E
+outlines shovel marks~
+The marks look as though they could have been made by a shovel, but it's
+impossible to be certain.~
+S
+#6262
+A cabin in the mountains~
+   This cabin seems to have been built with the intention of keeping 
+predators out.  Cross-hatch patterns of thin pine branches make up the
+walls and roof, creating a very definite division of what is outside, and
+what is inside.  The cabin is empty.
+~
+62 0 5
+D2
+You see some mountain terrain.~
+~
+0 0 6254
+E
+branches~
+The pine branches look as though they started out green, but have since
+dried out and hardened.~
+S
+#6263
+In the high mountains~
+   This rough mountain country is no place for a farmer.  Not much grows
+here, and there is a sense of rightness in this bare aspect of the land. 
+In this sort of country, everything gets stripped down to the barest of
+essentials...there isn't much time for anything else.
+~
+62 0 5
+D0
+You see some high mountain country.~
+~
+0 0 6270
+S
+#6264
+High in the mountains~
+   The ground is getting rockier here, occasionally turning to rough 
+sand...not the kind that can be found at a beach or in the toddler's 
+sandbox.  Only occasional pines grow to break up the monotony of the 
+landscape, and from time to time there is an outcropping of rock to be
+seen.
+~
+62 0 5
+D0
+You see some high mountain country.~
+~
+0 0 6271
+D1
+You see a small stream in the mountains.~
+~
+0 0 6265
+S
+#6265
+A small stream in the mountains~
+   The stream here has almost no current, only the slightest tug towards
+the south.  To the east lies the source of the stream, a cool mountain 
+spring, water growing out of the earth as though by magic.
+~
+62 0 5
+D1
+You see a cool mountain spring.~
+~
+0 0 6266
+D2
+You see a small stream in the mountains.~
+~
+0 0 6257
+D3
+You see some high mountain country.~
+~
+0 0 6264
+S
+#6266
+A cool spring in the Helventia Mountains~
+   This spring is the source of all life for these mountains, and you can
+tell that here is a place where the magic of nature shines through.  Water
+wells up from the ground, seemingly by magic, yet it is obvious that there
+is no magic here, only the lowest and strongest of elemental forces.
+~
+62 0 5
+D2
+You see some high mountain country.~
+~
+0 0 6258
+D3
+You see the beginnings of a small stream in the mountains.~
+~
+0 0 6265
+S
+#6267
+A hole in the cliff face~
+   The stream runs into the cliff here, where a perfect square hole opens
+to allow the stream ingress.  Wooden supports hold open the top and sides
+of the hole.
+~
+62 0 5
+D1
+You see a small mountain pool.~
+~
+0 0 6268
+E
+supports~
+The supports are made from seasoned pinewood.~
+S
+#6268
+A small pool in the mountains~
+   This pool is oblong, pointed at the western end, where the stream runs
+right into a hole at the base of the cliff that looms to the west.  Small
+animals have been here...but why is there a patch of fur floating in the
+water?  Obviously the predators know about this place too.
+~
+62 0 5
+D0
+You see a rock pile.~
+~
+0 0 6274
+D1
+You see a small mountain pool.~
+~
+0 0 6269
+D2
+You see a small mountain stream.~
+~
+0 0 6261
+D3
+You see a hole in the cliff face which allows the stream to run under the 
+cliff.~
+~
+0 0 6267
+S
+#6269
+High in the mountains~
+   The ground here looks as though many feet have trod it over and over,
+making smooth stretches that are cleared of rubble and loose rock.  To
+the west is a stream, and to the south is the back of a sturdy-looking 
+cabin.
+~
+62 0 5
+D0
+You see a rock pile.~
+~
+0 0 6275
+D1
+You see some high mountain country.~
+~
+0 0 6270
+D3
+You see a small mountain stream.~
+~
+0 0 6268
+S
+#6270
+High in the mountains~
+   The mountainside is rockier to the north, while to the south a small
+amount of green dots the hills.  Going farther north would mean leaving
+behind the settled portion of the mountains and their foothills.
+~
+62 0 5
+D0
+You see some high mountain country.~
+~
+0 0 6276
+D1
+You see some high mountain country.~
+~
+0 0 6271
+D2
+You see more of the same mountain terrain, though it's a bit greener to the
+south.~
+~
+0 0 6263
+D3
+You see some high mountain country.~
+~
+0 0 6269
+S
+#6271
+High in the mountains~
+   Mountain country at its best is very beautiful...at its worst, it can
+be ugly, barren, and frightening.  The Helventia Mountains are both
+beautiful and ugly, pleasing and scary...giving a sense of completeness 
+that is lacking in other regions of the world.
+~
+62 0 5
+D1
+You see some high mountain country.~
+~
+0 0 6272
+D3
+You see more of the same mountain terrain.~
+~
+0 0 6270
+S
+#6272
+High in the mountains~
+   The air is getting warmer as you head farther to the north and higher
+into the mountains.  The view to the north is one of stark mountain peaks,
+while to the south you can see the curve of the stream, and an L-shaped
+stand of trees a bit further southwest.  There is a huge, sandy pit to
+the east.
+~
+62 0 5
+D0
+You see high mountain country.~
+~
+0 0 6278
+D1
+You see a huge, gaping pit about 50 feet in diameter...there is some
+sort of clicking noise coming from the bottom of the pit.
+~
+~
+0 0 6273
+D3
+You see more of the same mountain terrain.~
+~
+0 0 6271
+S
+#6273
+The ant lion's lair~
+   This is the lair of the ant lion, and he has carefully built and
+rearranged his pit so that none of his guests may leave.  Some
+rather large exoskeleton decorate the pit to the east, but the 
+ant lion keeps his home neat -- no survivors!
+~
+62 0 5
+E
+exoskeletons~
+Stripped completely clean of flesh, these exoskeletons are large enough
+to make up the frame for a large seafaring vessel.
+~
+S
+#6274
+A rock pile~
+   The rock pile you stand upon is built up of chunks of rock, smooth
+and water-polished on one side, but jagged and rough on the edges and on
+the other side.  Some timbers lay off to one edge of the pile, unneeded
+to complete the work that forced the stream into the cliff face to the 
+southwest.
+~
+62 0 5
+D2
+You see a small mountain pool.~
+~
+0 0 6268
+E
+timbers~
+The timbers that lie here are long, seasoned, and rough-hewn.~
+E
+rocks~
+The rocks are rough and smooth, polished and jagged.~
+S
+#6275
+A rock pile~
+   This rock pile is not as large as the one to the west, but probably
+serves to keep the stream from turning its course in this direction.  The
+hard, driving wind is picking up small chunks of rock here, flinging them
+in your face.
+~
+62 0 5
+D2
+You see some high mountain country.~
+~
+0 0 6269
+S
+#6276
+High in the mountains~
+   The country is much higher up to the north than to the south, and as
+the elevation increases, the decoration decreases.  Bare rock and sand
+make up the ground here, fixed in place only by the bare, struggling pine
+trees that feebly attempt to push their way skyward.  At the base of
+each trunk is a small drift of sand and stone on the northern side of the
+trunk.  A hard burst of hot wind hits from the north, driving sand and 
+fallen branches along the ground.
+~
+62 0 5
+D2
+You see some rough mountain terrain.~
+~
+0 0 6270
+S
+#6277
+A lean-to shelter~
+   This lean-to was never intended to stay up for this long.  It was most
+likely built to keep off the sun and the main force of the wind while
+some weary traveler waited out the day so he could travel in the cool 
+darkness of the night.  The only way out without knocking down the shelter
+is to the east.
+~
+62 9 5
+D1
+You see some rough mountain terrain.~
+~
+0 0 6278
+S
+#6278
+High in the mountains~
+   The air here is exceedingly hot, enough to dry the throat and crack
+skin open.  To the north, mountaintops dominate the sky, which has a 
+golden tint to it -- almost as though something just over the mountains
+is giving off light, or perhaps reflecting the sun.  Chunks of rock mix
+with the sand on the ground here, making travel difficult.  A makeshift 
+lean-to shelter droops on the ground to the west.
+~
+62 0 5
+D1
+You see some high mountain country.~
+~
+0 0 6279
+D2
+You see rough mountain terrain to the south.~
+~
+0 0 6272
+D3
+A temporary shelter is to the west.~
+~
+0 0 6277
+S
+#6279
+High in the mountains~
+   Jutting rocks block your way to the east here, and to the north lies
+a mountain peak, which would probably give you a great view of the 
+surrounding countryside.  The unceasing wind blows down from the north.
+~
+62 0 5
+D0
+You see a grand mountain peak, which would probably afford you with a
+great view.~
+~
+0 0 6284
+D3
+You see some rough mountain terrain.~
+~
+0 0 6278
+S
+#6280
+A gate at the cave mouth~
+   You stand before a gate, which has been partially clawed through.
+Claw marks on the ground tell a story of the beast's prior passage, before
+this gate was erected to keep whatever lives in that cave inside.
+~
+62 0 5
+D1
+You see some rough mountain country.~
+~
+0 0 6281
+D3
+You see a dark cave mouth behind the gate.~
+gate~
+0 0 6295
+E
+claw marks tracks~
+Scratched in parallel, you can tell from the distance between each claw
+mark that the paw which made these marks is not one you'd want patting
+you on the head!~
+S
+#6281
+High in the mountains~
+   The ground is completely composed of bare rock here, as though the
+wind has stripped every piece of life completely away.  There are some
+odd tracks on the ground here that look like the markings of a huge
+beast.
+~
+62 0 5
+D1
+You see some rough mountain country.~
+~
+0 0 6282
+D3
+You see some sort of large gate to the west.~
+~
+0 0 6280
+E
+claw marks tracks~
+Scratched in parallel on the rock ground, you can tell from the distance
+between the marks that this paw is not one you'd want patting your head!~
+S
+#6282
+High in the mountains~
+   The ground slopes downward to the west, seeming to roll the weary
+traveler towards a dark, forbidding cave mouth.  To the east, the ground
+slopes sharply upwards towards the mountain peak that stands in stark
+contrast with the blue sky.
+~
+62 0 5
+D1
+You see some rough mountain terrain.~
+~
+0 0 6283
+D3
+You see some rough mountain country, and a dark cave mouth farther along.~
+~
+0 0 6281
+S
+#6283
+High in the Mountains~
+   You are extremely high up in the mountains now, moving on only to find the
+way out.  To the east the ground rises to a soaring height, suggesting a
+grand view of the countryside.  To the west, you can see a dark cave mouth,
+with flies buzzing in and out of the hole.
+~
+62 0 5
+D0
+You see some high mountain country, but not as high as you are here.~
+~
+0 0 6286
+D1
+The ground rises to a soaring height to the east.  You'd probably have a
+great view from there.~
+~
+0 0 6284
+D3
+You see some rough mountain terrain...a cave mouth lies a bit farther on.~
+~
+0 0 6282
+S
+#6284
+The peaks of the Helventia Mountains~
+   This mountaintop commands a superb view of the surrounding countryside.
+To the east, a mist covers the land, laying a cloak over the seeming
+non-existent quality of the world in that direction.  To the southeast,
+a small village is visible, with a castle at the far eastern end of the
+village, separated by a moat.  To the southwest, a small town can be seen
+close by the foothills of the Helventia Mountain range, with some sort
+of circular zoo in the center.  Further to the southwest, there lies a 
+large castle, close onto another large building, from which emanates a 
+feeling of peace and serenity.  Even farther away, one can see a large,
+sprawling city, with a river at its south.  Many leagues away from the
+city lies a vast, shimmering ocean, while closer to the city, a little 
+southeast of it, is a small farming community and its surrounding fields.
+Directly south of this mountain overlook lies a small forest with a rather
+sturdy looking gate in the center of it, and further south of this forest
+is some sort of canyon.  To the north, a vast, unseen desert shimmers
+in the sunlight.  A hard, hot wind catches you full in the face as you
+gaze upon the desert.
+~
+62 0 5
+D0
+You see some high mountain country.~
+~
+0 0 6287
+D2
+You see some high mountain country.~
+~
+0 0 6279
+D3
+You see more rough mountain terrain.~
+~
+0 0 6283
+S
+#6285
+North face of the Helventia Mountains~
+   The northern face of the mountains serves only to keep back the desert,
+nothing else.  No man lives here, and none could survive the howling,
+ferocious careless madness that is the desert wind for long, not without 
+losing himself to the wind, becoming a part of it forever...whether he 
+travels on to other lands or not.
+~
+62 0 5
+D1
+You see bare mountain rock to the east.~
+~
+0 0 6286
+D2
+It looks as though it's a little less windy to the south.~
+~
+0 0 6282
+S
+#6286
+North face of the Helventia Mountains~
+   This is the northern face of the Helventia Mountain range, which keeps
+back the desert, but is losing ground year by year.  The constant desert
+wind grinds inexorably away at the mountain, unstoppable force upon
+immovable object.  To the north, tiny-looking dust devils tear apart the
+countryside.
+~
+62 0 5
+D0
+You see some cacti to the north.~
+~
+0 0 6289
+D1
+You see some pared-down mountain rock to the east.~
+~
+0 0 6287
+D3
+You see some pared-down mountain rock to the west.~
+~
+0 0 6285
+S
+#6287
+North face of the Helventia Mountains~
+   The mountains descend swiftly to the north, giving a view of the vast
+desert which stretches across to the northeast.  The wind is much stronger
+up here, with nothing to block the force and course of its passage.  There
+is some sort of encampment to the northeast, on the fringes of the desert.
+~
+62 0 5
+D2
+You see the mountain peak, which probably would give you a great view.~
+~
+0 0 6284
+D3
+You see more rocky mountain terrain.~
+~
+0 0 6286
+S
+#6288
+At the feet of the Helventia Mountains~
+   You are at the base of the Helventia Mountains, where the desert has
+taken hold.  This area probably used to be covered with mountain, but the
+desert wind has taken this land for its own.  Small cacti cover the ground
+here.
+~
+62 0 3
+D0
+~
+~
+0 -1 2160
+D1
+You see more cacti to the east.~
+~
+0 0 6289
+E
+cacti~
+Small and stubby, these cacti are nonetheless plants only the wind could
+love, the desert's way of saying, you're in my country now.~
+S
+#6289
+At the feet of the Helventia Mountains~
+   You are at the foot of the mountains now, and the wind is less of a
+power here.  The desert has taken hold regardless, though, with a number
+of short, thick cacti on the ground.
+~
+62 0 3
+D1
+More cacti grow to the east.~
+~
+0 0 6290
+D2
+~
+~
+0 -1 6286
+D3
+More scrub covers the ground to the west.~
+~
+0 0 6288
+E
+cacti~
+Small and stubby, these cacti are plants only the wind could love, the
+desert's way of saying, you're in my country now.~
+S
+#6290
+At the feet of the Helventia Mountains~
+   You are at the base of the Helventia Mountains, where the desert has
+taken hold.  This area probably used to be covered with mountain, but the
+desert wind has taken this land for its own.  Small cacti cover the ground
+here.
+~
+62 0 3
+D0
+An encampment lies to the north.~
+~
+0 0 6293
+D3
+You see more cacti to the west.~
+~
+0 0 6289
+E
+cacti~
+Small and stubby, these cacti are nonetheless plants only the wind could
+love, the desert's way of saying, you're in my country now.~
+S
+#6291
+Priest's Hole~
+   This is a traditional priest's hole, its purpose dating back
+to time immemorial when persecution was the daily fare for all
+of the state's officers.  A small chair stands next to the crude
+wooden table that holds a bloodstained hide-bound book.  Human
+waste lies in a corner...obviously this is not the domain of
+a normal or healthy cleric.
+~
+62 9 0
+D4
+~
+trapdoor~
+1 -1 6246
+E
+table~
+A small wooden table supports a hide-bound book.
+~
+E
+desk~
+The desk is made of unfinished wood, and would be unremarkable
+except for the dark grimoire that rests upon its surface.
+~
+E
+chair~
+You see a small wooden chair, badly used.
+~
+E
+book~
+This book is so filthy and so abhorrent to human sensibilities
+that your eyes seem to avoid looking at it of their own accord.
+~
+S
+#6293
+Outside a desert base~
+   You stand in the breach between mountain and desert, where a small
+army of men struggle to eke out any kind of existence they can, constantly
+doing battle with the desert to keep their lives, and their sanity.
+~
+62 0 3
+D2
+You see the feet of the Helventia Mountains.~
+~
+0 0 6290
+S
+#6294
+Inside the cave~
+   The cave is even smellier here, a mix and blending of the smells of
+death, water, and a beast enraged.  The smells are stronger to the north,
+and a buzzing sense of tension bounces off the cave walls.
+~
+62 9 5
+D0
+Looking to the north, you can see . . . only darkness, and fear.~
+~
+0 0 6296
+D1
+You see the cave mouth, and the way back to fresh air.~
+~
+0 0 6295
+S
+#6295
+Inside the cave~
+   This cave has a dank, animal smell to it, and watery prints on the
+ground tell the story of a large bear somewhere inside, if you couldn't
+guess from the smell and the bones.
+~
+62 9 5
+D1
+You see a large gate to the east.~
+gate~
+0 0 6280
+D3
+You see more cave, heading into darkness.~
+~
+0 0 6294
+E
+prints~
+The prints on the ground are made with water, and are unspeakably huge.~
+E
+bones~
+Since they've been cracked in half by a massive set of jaws, it's hard to
+tell what kind of flesh these bones once held together.~
+S
+#6296
+Inside the cave~
+   Everything is trapped in here, water, animal, smell, rage, fear, 
+hunger, death.  Men have made this cave a prison for everything they
+don't wish to think about, and the feeling intensifies as you think about 
+what lies to the north.  The smell of unclean water slicks in from the
+east.
+~
+62 9 0
+D0
+Looking to the north, you see only darkness.~
+~
+0 0 6298
+D1
+You can see nothing but darkness to the east, and a little trickle of
+water coming towards your feet.~
+~
+0 0 6297
+D2
+~
+~
+0 -1 6294
+S
+#6297
+A pool of water in the cave~
+   So here's where the stream goes to!  Men have piped water up here,
+so that the bear won't need to break out for water.  They have tricked
+nature into doing what they want it to, by giving it almost everything
+it needs.
+~
+62 9 5
+D3
+You see only darkness to the west.~
+~
+0 0 6296
+S
+#6298
+Home of the cave-bear~
+   This is the place of defeat, the home of humiliation.  You sense a
+feeling of deep regret, of total loss.  The longer you stand here, the
+harder it is to fight the dull senselessness that comes from complete
+lack of will.  Get out while you can.
+~
+62 9 5
+D2
+You see only darkness to the south.~
+~
+0 0 6296
+S
+#6299
+Inside the whirlwind~
+   This is the center of the whirlwind, where you must become the wind,
+be a part of it, dance with it and bend to it, or you die.
+~
+62 512 0
+S
+#0
+$~

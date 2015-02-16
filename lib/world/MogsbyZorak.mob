@@ -1,0 +1,302 @@
+#900
+squirrel grey~
+a grey squirrel~
+A small grey squirrel nibbles on a pine-nut here.
+~
+This fluffy grey creature must live in the stunted trees around here.
+Not a bit frightened by your heavy footsteps, this creature obviously
+has seen little of man. His pelt is a gorgeous pale grey, save the
+very tips of his ears, which are covered in a russet fur.
+~
+140 0 0 Y
+2 18 7 2d20+20 2d3+109
+2 300
+8 8 1
+0 0 1d1+1 1
+5 1 10 0
+0 0 0 0
+#902
+brown squirrel~
+A cute brown squirrel~
+A cute brown squirrel nibbles cutely on a nut here.
+~
+This cute little fella is nibbling cutely on a cute nut that he probably
+got from a very cute little tree. His short brown fur looks comfy and,
+on him, very cute.
+~
+200 0 300 Y
+2 18 8 10d2+10 2d10+0
+1 900
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#909
+farting transvestite hedgehog~
+Farting Transvestite Hedgehog~
+A small hedgehog snuffles in the mulch here, seeking cheese.
+~
+You peer through the prickles of this strange beast and are rewarded with
+a loud belching sound and a raunchy odor! It just farted on you! How
+utterly disgusting! And is that a dress it's wearing??? It grunts at
+you and says "Gimme cheese."
+~
+14 268435456 0 Y
+2 18 0 40d2+10 2d2+7
+2 1200
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#921
+mog tiger striped~
+a Stripedy Mog~
+A tiger-striped mog blinks charmingly up at you, a bit of yarn dangling from its mouth.
+~
+This mog has yellow and black stripes, almost like those of a tiger.
+Its fur is extremely long and full, extending almost a full foot from the
+meat of its body without pulling it out straight. The Stripedy Mog seems
+to be fond of yarn, as miscellaneous bits of colored string dangle from
+various protuberances of the creature's body. It also has very, very sharp
+and long claws.
+~
+1048586 819200 0 Y
+15 5 0 3d30+400 3d15+10
+50 60000
+8 8 2
+90 0 1d1+1 1
+6 1 25 0
+0 0 0 0
+#922
+graumog mog~
+Der GrauMog~
+A huge, grey-pelted Mog sits here, looking regal.
+~
+As you gaze upon Der GrauMog, he regally curls his furry lip in a magnificent
+display of condescension. This tremendous beast could be mistaken for
+a small grey cloud from a distance. His fur is an amazingly deep, dark grey
+color, and is very luxuriant as well. Der GrauMog looks like he's been
+around the block, regardless of his apparent nobility. A few small scars
+are visible about his face and wherever else on his body you can spot a
+slightly less hairy patch. Der GrauMog is feared by all other Mogs, and
+respected -- in a Moggish manner -- as a great and fearsome leader. This
+might have something to do with the fact that he's well over five feet long
+and three feet tall at the shoulder. His claws are seven-inch long yellowed
+daggers, when he extends them, and his fangs are chipped from the many
+battles that Der GrauMog has been in. Basically, a very tough customer.
+~
+537919498 268697600 -100 Y
+25 -2 10 20d30+500 6d7+10
+100 200000
+8 8 1
+90 0 1d1+1 2
+5 1 35 0
+6 1 35 0
+0 0 0 0
+#923
+flammenveffermog flammenveffer mog~
+Der FlammenvefferMog~
+A charcoal-black Mog looks up at you, smoke rising from his nostrils.
+~
+This Mog is completely black, as if he just crawled out of a chimney flue.
+When he meows, you notice a strange tubular tongue instead of a normal
+Mog's tongue. His eyes are a bright, unnatural orange. Smoke follows this
+Mog wherever he goes, and he seems to be having digestion problems, as
+he is continually releasing small, delicate belches. You notice that the product
+of his belches seems to be.... small gouts of flame??? Could this be the
+legendary FlammenvefferMog which the adventurer Gerhardt Glockenspiel
+claimed to have lost his eyebrows to? Nah! Gerhardt said he killed Der
+FlammenvefferMog!
+~
+1048618 262144 -400 Y
+25 -5 0 20d20+600 2d20+1
+4000 300000
+8 8 1
+90 0 2d20+400 1
+11 1 50 26
+0 0 0 0
+#924
+maus mouse das~
+Das Maus~
+A tiny maus squeaks as it scurries around the room.
+~
+Das Maus is small. Das Maus is brown. You might say Das Maus is small
+and brown. This cute little critter looks terrified, as if he might die of
+fright any second. That is, if something else doesn't get him first.
+~
+8 0 0 Y
+3 17 10 4d4+4 3d3+3
+0 100
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+#949
+mog~
+a fluffy mog~
+A fluffy mog looks up from licking itself as you enter the room.
+~
+A ball of fur with luminous yellow eyes looks at you blankly, wondering
+what you plan on doing and if your plans include a dish full of trout.
+~
+10 268435456 0 Y
+13 7 3 5d100+30 2d6+3
+0 21000
+8 8 1
+90 72 1d1+1 0
+0 0 0 0
+#951
+siamese mog~
+Siamese Mog~
+A tan mog with dark splotches around its eyes and feet and tail sits here.
+~
+This mog is less fluffy than most, and has very distinctive markings.
+Its pelt is a creamy tan, and darker brown markings on its ears, tail,
+feet and eyes remind you of a siamese cat. Its ears have very little
+space between them, and its eyes are a bright green. It stops licking
+its sharp claws to stare at you.
+~
+16526 262144 100 Y
+12 10 3 100d2+10 3d6+3
+10 23000
+8 8 1
+90 2240 1d1+1 0
+0 0 0 0
+#953
+small mog~
+a Small Mog~
+A Small Mog sniffs the ground here, switching his fluffy tail back and forth.
+~
+This Mog is smaller than your average Mog, only about a foot long
+and about a foot tall. Completely covered in hair, as most Mogs
+seem to be, this one's pelt is a fine orange color. His eyes are
+large, and they glow an uncanny shade of blue. The Small Mog's 
+whiskers extend a full six inches to either side of his face from
+just above enormous fangs. A drop of drool seems on the verge of
+tumbling from the end of one of these monstrous teeth as the
+Small Mog turns his head to face you.
+~
+72 819200 -200 Y
+12 8 0 3d20+250 3d8+15
+569 43000
+8 8 1
+90 2152 1d1+1 1
+5 1 31 0
+0 0 0 0
+#954
+Darkmog mog~
+Darkmog~
+A Darkmog crouches in the corner here, hissing and looking fearsome.
+~
+The Darkmog is a dusky grey color, his hair long enough that you
+can barely see the tips of his ears and whiskers poking out of his pelt.
+Down by where his hairiness brushes the ground you can see many
+long, yellowed claws sticking out. As you look in his direction,
+the Darkmog hisses loudly and lays his ears flat against his skull.
+~
+16426 268730368 0 Y
+15 5 0 100d2+50 4d6+4
+40 60000
+8 8 1
+90 192 1d1+1 0
+0 0 0 0
+#955
+Bookmog mog~
+Bookmog~
+A mog with a pretty tortoise-shell patterned fur looks up at you.
+~
+This mog looks as though it's had just about as much human attention
+as it feels necessary, and as though it won't tolerate much more.
+But, boy oh boy is it pretty! Its fur is a beautiful patchwork of
+browns, tans, reds, and greys in a nice tortoise-shell pattern,
+and its eyes are the nicest color of grey. Even the long, nasty
+claws sticking out of its paws are kinda cute!
+~
+16426 268730368 0 Y
+15 5 0 100d2+50 4d6+7
+40 60000
+8 8 1
+90 192 1d1+1 0
+0 0 0 0
+#957
+Mogling~
+A Mogling~
+A small bundle of fur mewls cutely at your feet here.
+~
+This Mogling is almost an almost perfectly spherical ball of hair.
+You can barely see large, limpid grey eyes staring up at you cutely
+through the dense foliage on this small creature's face. The Mogling,
+however, does have tremendously long, nasty claws...
+~
+170 262144 0 Y
+15 14 2 56d3+20 3d10+4
+1000 60000
+8 8 1
+90 0 1d1+1 1
+6 1 45 0
+0 0 0 0
+#958
+black mogling~
+Black Mogling~
+A small, black mogling sniffs your boot here.
+~
+This little ball of charcoal has large pools of copper for eyes. Its
+lower teeth jut out from under its chin in an almost cutely threatening
+manner.
+~
+170 262144 0 Y
+15 14 2 56d3+20 3d10+4
+1000 60000
+8 8 1
+90 0 1d1+1 1
+5 1 45 0
+0 0 0 0
+#959
+Creamy Mogling~
+a Creamy Mogling~
+A Mogling with smooth, creamy fur plays with a bit of string here.
+~
+This little powderpuff looks like he just stepped out of a bucket
+of flour or lady's cosmetics. His eyes are a strange shade of green,
+similar to jade, and it doesn't seem like he has any prominent
+pointy bits like the other Moglings you've seen...
+~
+170 262144 0 Y
+16 14 2 60d3+30 3d10+4
+1000 60000
+8 8 1
+90 0 100d1+1 1
+11 1 33 104
+0 0 0 0
+#960
+wompusmog mog tabby~
+De WompusMog~
+A two-headed tabby mog is caterwauling a duet here.
+~
+Like something from the nightmares of a frightened dog, this beast
+has two heads, both inquisitive and cute orange tabby with cream
+spots near the whiskers and above the eyes. It seems somewhat
+confused as it caterwauls a terrible duet, and you notice that
+it has rather large, yellowed teeth.
+~
+16492 268959744 0 Y
+25 11 -1 20d35+500 6d5+12
+100 200000
+8 8 1
+0 4096 10d20+100 2
+1 3 15 100
+1 3 15 80
+0 0 0 0
+#999
+erik retail guy~
+Erik, the happy Retail Guy~
+Erik, the Happy Retail Guy stands here, happy!
+~
+Erik smiles happily as you walk up to the register.... he greets you with 
+a happy "Hi there! You all ready?"
+~
+10 128 1000 Y
+34 -14 -10 1000d1+10000 2d100+-56
+10 99999999
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#0
+$~

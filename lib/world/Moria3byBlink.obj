@@ -1,0 +1,554 @@
+#21200
+ring bone dark darkened~
+Darkened Bone Ring~
+A dark ring made of bone lies here.~
+~
+11 191935041 3
+0 0 0 0
+10 10 10000
+18
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 42
+A
+3 1
+#21201
+plate dark darkened bone~
+Darkened Bone Plate~
+A huge plate made of bone is here.~
+~
+11 264270401 9
+0 1 0 0
+80 10 45000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#21202
+gauntlets iron ancient gloves~
+Ancient Iron Gauntlets~
+A pair of huge iron gauntlets are here.
+~
+~
+9 134217794 129
+8 0 0 0
+10 1000000 80000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#21203
+mask concentration~
+The Mask of Concentration~
+A mask is one the ground here.~
+~
+11 182513728 17
+0 0 0 0
+10 10 10
+18
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 28
+A
+4 1
+#21204
+lute ancient~
+Ancient Lute~
+An ancient looking lute lies here.~
+~
+24 515 16385
+0 0 0 0
+10 300000 28000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+12 15
+#21205
+boots stealth~
+Boots of Stealth~
+A nice looking pair of boots are on the ground here.~
+~
+11 151048195 65
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+29 5
+A
+18 2
+B
+524288
+#21206
+armlinks sleeves fire~
+Armlinks of Fire~
+A pair of blazing armlinks are on the ground here.~
+~
+9 134218241 257
+10 0 12 0
+10 10 8000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 2
+A
+19 1
+#21207
+talon demon black~
+Black Demon's Talon~
+A black talon is dug into the dirt here.~
+~
+12 142620738 16385
+0 0 0 0
+10 100000 30000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 4
+#21208
+charm magic magical~
+Magical Charm~
+A magical charm is on the ground here.~
+~
+11 134217792 5
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 35
+A
+2 -2
+#21209
+demon sceptre~
+Demon's Sceptre~
+A powerful looking sceptre is here radiating power.~
+~
+1 235986947 65537
+0 0 -1 0
+10 10000 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 3
+#21210
+belt dragon scale~
+a Dragon Scale Belt~
+A belt made of armored dragon scales is here.~
+~
+9 134217793 2049
+8 0 0 0
+10 10000 10
+17
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+1 2
+#21212
+shield dragon stone~
+The Stone Dragon's Shield~
+A stone dragon shield is here.~
+~
+9 196146242 513
+10 0 0 0
+10 10000 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#21213
+symbol god mykras~
+symbol of Mykras~
+An ancient symbol floats here.~
+~
+1 0 65537
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+B
+16777216
+#21214
+dagger thin curved ritual god~
+Thin, Curved Ritual Dagger~
+A ritual dagger lies in there dirt here.~
+$r dagger glows with godly powers!~
+5 0 8193
+0 2 3 9
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21215
+dagger golden~
+Golden Dagger~
+An expensive looking dagger is here.~
+$r dagger glows with a golden light.~
+5 1048577 8193
+0 3 4 9
+10 10 10
+29
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 10
+A
+18 5
+#21216
+ring lich cold ice~
+a Ring of the Lich~
+An evil looking ring glows with a dark aura here.~
+~
+9 242221585 3
+7 1 13 15
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#21217
+mallet underworld~
+the Mallet of the Underworld~
+A black mallet is in the dirt here.~
+$r Mallet explodes with blue flames as it hits $V!~
+5 135266304 8193
+0 2 6 6
+10 10000 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 14
+A
+12 10
+#21218
+scroll protection~
+Scroll of Protection~
+A magical scroll has been left here.~
+~
+2 0 16385
+40 1 103 36
+10 450000 300
+10
+E
+scroll~
+The runes on this parchment glow with a spooky light.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21219
+plate full platemail fullplate~
+A platinum full plate~
+A heavy looking plate is on the ground here.~
+~
+9 0 1
+10 15 10 0
+10 45000 5000
+90
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+#21220
+robe burlap~
+A crafted burlap robe~
+A burlap robe is here on the ground~
+~
+9 0 1
+10 1 13 10
+10 40000 10
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+#21221
+whip spiked~
+A spiked whip~
+A spiked whip is here on the ground.~
+$r whip cracks at $V!~
+5 0 8193
+0 2 7 1
+10 25000 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+#21222
+slender dagger knife~
+A slender knife~
+A slender looking knife glimmers in the sun here.~
+$r knife glimmers in the sunlight!~
+5 0 8193
+0 2 7 9
+10 20000 10
+60
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#21223
+pita stuffed morian~
+A stuffed pita~
+A yummy looking pita is here making you hungry.~
+~
+19 0 16385
+24 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21224
+lemonade sweet canteen~
+A Canteen of Sweet Lemonade~
+A canteen lies forgotten here.~
+~
+17 0 1
+10 10 6 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21225
+potion silver silvery~
+A Silvery Potion~
+a silvery potion lies fogotten here.~
+~
+10 0 1
+30 35 43 0
+10 250000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21226
+key golden~
+A golden key~
+A golden key lies on the ground here.~
+~
+18 524290 1
+1 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21227
+dragon key shaped~
+A Dragon-Shaped Key~
+A small key shaped like a dragon is here on the ground.~
+~
+18 524290 1
+1 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21298
+board~
+board~
+There is a bit of nothing sitting here.~
+~
+27 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

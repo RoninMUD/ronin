@@ -1,0 +1,450 @@
+#2801
+broom~
+A broom~
+A broom is lying on the ground.~
+~
+5 1024 8193
+0 2 7 7
+10 2000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#2802
+skirt tigerskin~
+A tigerskin skirt~
+A tigerskin skirt is lying on the ground.~
+~
+9 1024 33
+8 0 0 0
+8 1000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+#2803
+necklace shining~
+A shining necklace~
+A shinning necklace is lying on the ground.~
+~
+9 134218753 5
+6 0 0 0
+20 100000 13000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 20
+A
+18 1
+#2804
+shield honour~
+The Shield of Honour~
+The Shield of Honour is lying on the ground.~
+~
+9 134218752 513
+12 0 0 0
+30 50000 9000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 -1
+#2805
+ivory buckler~
+An ivory buckler~
+a ivory buckler is lying on the ground.~
+~
+9 1024 4097
+3 0 0 0
+10 4000 450
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+13 10
+#2806
+book songs~
+A book of songs~
+a book of songs is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+#2807
+book magic~
+A Negress~
+a book of magic is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 5
+#2808
+book wars~
+A book of wars~
+a book of wars is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#2809
+book maths~
+A book of maths~
+a book of maths is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+#2810
+book languages~
+A book of languages~
+a book of languages is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 1
+#2811
+book jokes~
+A book of jokes~
+a book of jokes is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+#2812
+book history~
+A book of history~
+a book of history is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 5
+#2813
+apple~
+An apple~
+an apple is lying on the ground.~
+~
+19 0 1
+10 0 0 0
+1 4 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2814
+orange~
+An orange~
+an orange is lying on the ground.~
+~
+19 0 1
+10 0 0 0
+1 4 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2815
+pineapple~
+A pineapple~
+a pineapple is lying on the ground.~
+~
+19 0 1
+20 0 0 0
+2 10 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2816
+bananna~
+A banana~
+a bananna is lying on the ground.~
+~
+19 0 1
+14 0 0 0
+1 8 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2817
+belt traveller~
+A traveller's belt~
+a traveller belt is lying on the ground.~
+~
+15 0 2049
+100 0 0 0
+4 30 7
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2818
+large candle~
+A large candle~
+a large candle is lying on the ground.~
+~
+1 0 65537
+0 0 96 0
+1 35 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2819
+scroll teleport~
+A scroll of teleport~
+A scroll of teleport has careless been left here.~
+~
+2 64 16385
+20 2 -1 -1
+2 2000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2820
+scroll remove curse~
+A scroll of remove curse~
+A scroll of remove curse has careless been left here.~
+~
+2 64 16385
+20 35 -1 -1
+2 9000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2821
+potion invisibility~
+A potion of invisibility~
+A potion of invisibility is lying on the ground.~
+~
+10 268435520 16385
+20 29 0 0
+2 1000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2822
+pale gray robe grey~
+A pale gray robe~
+A robe of pale gray color rests upon the ground here.~
+~
+11 146800960 9
+0 0 0 0
+15 1000000 100000
+10
+X
+~
+0 0 0
+M
+You wear the robe, and sense a feeling of inner understanding.~
+$n wears the robe, and seems to gain an aura of knowledge.~
+You take off the robe and you're left with a sense of longing.~
+$n takes off the robe and loses $s aura of knowledge.~
+A
+3 3
+A
+4 3
+A
+53 10
+#2823
+scales scale balance~
+The Scales of Balance~
+A set of shiny scales sits upon the ground, creaking back and forth.~
+~
+12 0 16385
+0 0 0 0
+20 1000000 50000
+10
+X
+~
+0 0 0
+M
+~
+~
+You release your hands from the Scales, but you can still feel their power.~
+~
+A
+19 2
+A
+18 2
+#2824
+potion heal healing~
+A potion of healing~
+A potion of healing sits here, neglected.~
+~
+10 268435520 16385
+20 28 0 0
+2 1000 100
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

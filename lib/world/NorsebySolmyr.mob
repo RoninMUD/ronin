@@ -1,0 +1,328 @@
+#1000
+Viking guard~
+A Viking guard~
+A Viking guard stands here.
+~
+A Viking guard stands here.
+~
+10 537952256 0 Y
+25 -5 -8 5d50+450 3d3+5
+2873 111111
+5 8 1
+73 16384 0d0+0 1
+1 6 15 36
+0 1 0 0
+K
+0 0 0 0 0 0
+#1001
+Child~
+A Nasty little child~
+A nasty child is here, looking for people to bother.
+~
+When you look into these eyes, you wonder if there was ever
+so much purity in the world.. Before he kicks you in the legs.
+~
+652 536903680 -1000 Y
+8 17 9 4d8+232 1d8+0
+7 394
+8 8 1
+73 2232 0d0+0 0
+0 1 0 0
+K
+0 0 0 3052 0 0
+#1002
+Viking merchant~
+A viking merchant~
+A Viking merchant is here, travelling with his goods.
+~
+This viking merchant is always in a hurry, transporting goods
+from one village to another. Its a hard work to be a merchant.
+~
+72 536870912 0 Y
+34 -14 -4 10d10+700 5d5+3
+75000 47623
+8 8 1
+0 384 40d-23672+-18296 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1003
+Moose~
+A moose~
+A merchant moose is here, carrying heavy load of goods.
+~
+This is a large animal. Not normally used for merchant purposes,
+but these fierce people are using every resources they can.
+The animal itself is covered with thick wool, so it can substain
+through the long and cold winter.
+~
+262472 0 0 Y
+34 -14 10 9d9+1232 9d9+44
+0 219383
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+84738 0 0 0 0 0
+#1004
+Grimdur~
+Grimdur, the viking chief~
+Grimdur is looking straight into your eyes.
+~
+Grimdur is a fierce warrior, like most vikings are. Since this is 
+their leader, he must be more fierce than the fiercest of them.
+Grimdur's eyes are covered in a mist, it could have been something
+with the mushroom's he is eating.
+~
+16750 294920 -500 Y
+33 5 -4 10d10+1300 5d5+30
+87362 333333
+8 8 1
+73 0 1d1+1 0
+0 1 0 0
+T
+......Grimdur's eyes are going in all directions.~
+K
+0 0 0 0 0 0
+#1005
+Hagar~
+Hagar the viking chieftain~
+Hagar is looking deep into your eyes, trying to scare you away.
+~
+This viking is the head of the other vikings in the village.
+Not without reason. His combat scars, and fierce apperance
+has scared many competitors to his throne, and he has 
+killed even more of them.
+~
+16494 134512648 -500 Y
+45 19 -10 10d10+1300 9d9+12
+87362 402837
+8 8 1
+73 0 1d1+1 0
+0 1 0 0
+T
+......Hagar's eyes are going in all directions.~
+K
+0 0 0 0 0 0
+#1006
+Snorre~
+Snorre, the wise~
+Snorre, the wise, are reading a book.
+~
+This viking is the head of the other vikings in the village.
+Not without reason. His combat scars, and fierce apperance
+has scared many competitors to his throne, and he has 
+killed even more of them.
+~
+16462 134512648 -500 Y
+45 19 -10 9d9+1322 9d9+12
+87362 402837
+8 8 1
+73 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0
+#1007
+Daughter of Hagar~
+Hagar's daughter~
+Hagar's daughter is cleaning the house
+~
+The daughter is dressed up in a traditional outfit for the vikings.
+Young, and not particular pretty, she does her job cleaning her
+father's house.
+~
+138 0 0 Y
+41 -21 -5 10d10+1506 10d10+40
+1 83734
+8 8 1
+73 0 100d10+700 4
+1 1 20 102
+1 1 2 246
+1 1 50 203
+1 6 70 85
+0 1 0 0
+K
+0 0 0 0 0 0
+#1008
+Viking Captain~
+A Viking Captain~
+A man is almost dozing off
+~
+The Viking Captain has been to the seven seas, he has travelled all
+over the realm, and he has seen it all. This is a rough viking who
+has lived for the sea, and he will die at the sea.
+The Viking Captain now lives on driving people around on his boat
+for new generations to experience the sea.
+~
+8 2176 0 Y
+51 -31 -10 50d50+15000 100d100+1000
+1 1
+5 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1010
+Elias~
+Elias Dugan~
+Elias Dugan Lord of Destruction
+~
+Elias Dugan Lord of Destruction, Master of death.
+~
+8 1073720318 0 Y
+70 -15 -5 10d10+22222 10d10+100
+1 1
+8 8 1
+0 0 1d1+16959 1
+1 1 30 241
+0 0 1073741817 0
+K
+0 0 0 0 0 0
+#1011
+Sigbert~
+Sigbert, the creator of vikings~
+Someone is crashing the test site here.
+~
+A tall, viking is standnig here, looking to KILL YOU!
+~
+8 277094400 -1000 Y
+70 -50 -5 10d10+22222 10d10+100
+1 98324983
+8 8 1
+5 0 1d1+30000 10
+1 6 10 211
+1 6 10 192
+1 6 10 246
+1 6 10 252
+1 6 10 238
+1 6 10 102
+1 6 10 195
+1 1 10 105
+1 6 2 85
+1 6 2 108
+0 0 1 0
+T
+......A cold shivering runs trough your body!~
+K
+0 0 0 0 0 0
+#1012
+polar bear~
+A polar bear~
+A polar bear is looking for food in the snow.
+~
+This bear is completely white. White as snow is the perfect camouflage in
+this time of year.
+~
+8 268435456 0 Y
+30 -10 3 10d10+500 3d3+9
+0 15000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+13403 16760 0 0 0 0
+#1019
+Shopkeeper~
+The shopkeeper~
+A shop keeper is here, winking you in
+~
+This shopkeeper is a well fed, well dress man. He trades
+with the other villages, and had made a living out of it.
+A good living actually.
+~
+16777290 0 0 Y
+50 19 10 100d100+10000000 1d1+1
+0 1
+8 8 1
+0 32768 1d1+1 0
+0 3 0 0
+T
+......The shopkeeper wont have any monkey business!~
+K
+0 0 0 0 0 0
+#1020
+viking~
+A Viking~
+A Viking Guard stands guard, ignoring your precence.
+~
+This viking has lived his whole life here in the village.
+He is a stout man which has big working hands, which
+indicates that he is a good worker.
+~
+8 0 200 Y
+33 -13 -4 5d50+2345 5d5+7
+13827 84738
+8 8 1
+0 0 5d5+400 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1021
+viking woman~
+A Viking woman~
+A viking woman is here, cleaning her clothes
+~
+This viking has lived his whole life here in the village.
+He is a stout man which has big working hands, which
+indicates that he is a good worker.
+~
+8 0 200 Y
+33 -13 -4 5d50+2345 5d5+7
+13827 84738
+8 8 2
+0 0 5d5+400 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1022
+Worker~
+A Viking worker~
+A viking is using his axe to make a road here.
+~
+This viking has lived his whole life here in the village.
+He is a stout man which has big working hands, which
+indicates that he is a good worker.
+~
+74 0 200 Y
+33 -13 -4 5d50+2345 5d5+7
+13827 84738
+8 8 1
+0 0 5d5+400 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1033
+test~
+Test~
+A test character stands here, ready to be killed
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+4136 335577088 -1000 Y
+47 -20 -7 10d10+2200 2d5+70
+15000 120000
+8 8 1
+0 0 100d100+3000 1
+1 1 50 136
+0 2 0 0
+K
+0 0 0 0 0 0
+#1050
+Volva~
+Volva the seereseses~
+Volva, is sitting in a trance like state.
+~
+Sitting on a platform, Volva is slipping into a trance like state,
+to be able to communicate with spirits to learn the answers to questions.
+
+~
+8 134217728 0 Y
+45 19 10 10d10+2222 10d10+0
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

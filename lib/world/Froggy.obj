@@ -1,0 +1,135 @@
+#9900
+pangaen bracelet~
+Pangaen Bracelet~
+A bracelet made of dirt rests at your feet.~
+~
+9 197192193 4097
+0 0 0 0
+4 50000 10000
+5
+A
+13 30
+#9901
+stone key~
+A stone key~
+A stone key lies here.~
+~
+18 524320 1
+0 0 0 0
+1 0 0
+100
+#9902
+fossil shield~
+A Fossil Shield~
+A shield made of ancient fossils has been left here.~
+~
+9 259043905 513
+7 0 0 0
+10 100000 20000
+5
+A
+12 20
+B
+4
+#9904
+frosty sleeves~
+frosty sleeves~
+A pair of sleeves sit here radiating mist.~
+~
+9 250662978 257
+10 0 0 0
+4 10000 10000
+5
+A
+19 3
+A
+45 -10
+#9905
+black white suit~
+a black and white suit~
+A black and white suit sits here all folded up.~
+~
+9 0 9
+5 0 0 0
+5 1000 1000
+33
+A
+4 2
+A
+13 5
+#9906
+fur coat~
+a heavy fur coat~
+A large pile of white fur sits here.~
+~
+9 1 1025
+4 0 0 0
+8 2000 3000
+25
+A
+13 12
+A
+18 1
+#9907
+platinum key~
+a platinum key~
+A platinum key stands upright in the middle of the floor.~
+~
+18 524288 1
+0 0 0 0
+1 0 0
+100
+#9908
+quest dollar~
+A Quest Dollar~
+A quest dollar lies here crumpled.~
+~
+18 402653249 1
+0 0 0 0
+10 10000000 0
+10
+#9909
+stone leggings~
+Stone Leggings~
+A pair of stone leggings lay before you.~
+~
+9 49340416 33
+0 0 0 0
+10 100 400
+25
+A
+46 5
+A
+19 1
+#9910
+frosty staff~
+A Frosty Staff~
+A large staff sits here surrounded by a foggy mist.~
+~
+1 146856960 65537
+0 0 -1 0
+18 10000 18000
+5
+A
+19 3
+A
+12 10
+B
+8192
+#9911
+crystal ball~
+A crystal ball~
+A large crystal ball sits here in the middle of the room.~
+~
+0 0 0
+0 0 0 0
+500 100000 10
+100
+E
+crystal~
+The surface of the crystal ball is perfectly smooth. When you
+concentrate on the inside, tiny pieces of color seem to come
+together to form an image of a frozen landscape.
+~
+#0
+$~

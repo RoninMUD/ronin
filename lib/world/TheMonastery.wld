@@ -1,0 +1,856 @@
+#12900
+Above The Bottomless Pit~
+You are hanging on a rope above the bottomless pit.  There are many of these 
+ropes hanging from the ceiling into the pit, and also poles stuck in the walls 
+to climb up and down.  But be very careful, for only the most nimble will
+survive here, and the rest will fall to an endless death.  The wind howling in
+the pit makes your head spin.  Getting to either side of the pit without
+falling forever will be quite a challenge.
+~
+129 12 0
+D0
+You can see a small passage.
+~
+~
+0 -1 12916
+D2
+You can see a small passage.
+~
+~
+0 -1 12913
+D5
+You can see the bottomless pit and the ropes and poles down there.
+~
+~
+0 -1 12901
+E
+poles ropes~
+The ropes and poles have been carefully positioned to allow movement in the
+pit. They look secure enough, if you just can get a hold of them.
+~
+E
+pit bottomless~
+The Pit below you extends downwards and downwards beyond the range of your
+eyes. From somewhere deep, a chilling and howling wind pulls you back and
+forth.
+~
+S
+#12901
+Hanging In The Bottomless Pit~
+You are hanging with only one arm on a pole stuck in the wall of the pit
+that seems has no bottom. There are many ropes and poles here, to enable
+climbing up and down. But be careful, for only the most nimble will survive
+here. The wind howling in the pit makes your head spin.
+~
+129 8 0
+D4
+You can see the ropes hanging above you.
+~
+~
+0 -1 12900
+D5
+You can see the bottomless pit and the ropes and poles down there.
+~
+~
+0 -1 12902
+E
+pit bottomless~
+The Pit below you extends downwards and downwards beyond the range of your
+eyes. From somewhere deep, a chilling and howling wind pulls you back and
+forth.
+~
+E
+poles ropes~
+The ropes and poles have been carefully positioned to allow movement in the
+pit. They look secure enough, if you just can get a hold of them.
+~
+S
+#12902
+Hanging In The Bottomless Pit~
+You are hanging on a rope in the pit, that seemingly has no bottom. There
+are many of these ropes here, and also poles stuck in the walls to enable
+climbing up and down. But be careful, for only the most nimble will survive
+here. There is a small opening on the north wall of the pit.
+~
+129 8 0
+D0
+You can see a small passage.
+~
+~
+0 -1 12904
+D4
+You can see the ropes and poles above you.
+~
+~
+0 -1 12901
+D5
+You can see the bottomless pit.
+~
+~
+0 -1 12903
+E
+pit bottomless~
+The Pit below you extends downwards and downwards beyond the range of your
+eyes. From somewhere deep, a chilling and howling wind pulls you back and
+forth.
+~
+E
+poles ropes~
+The ropes and poles have been carefully positioned to allow movement in the
+pit. They look secure enough, if you just can get a hold of them.
+~
+S
+#12903
+In The Bottomless Pit, Falling...~
+You have let go of the last rope. Why, you may think? That thought will
+remain with you forever as you fall down the pit. As you fall, you feel
+a strange and powerful force pulling you down into the pit, deeper and
+deeper. Eventually you lose consciousness and all turns black...
+~
+129 14 0
+D4
+~
+~
+0 -1 12902
+E
+death_text~
+Vertigo overcomes your conscious sanity, severing your final thread
+and leaving you to die alone.
+~
+S
+#12904
+A Small Tunnel, by the Bottomless Pit~
+You are standing in a small tunnel with a low arched ceiling. The walls are
+granite, and look definitively solid. To the south of you, you can see the
+pit and the ropes hanging in it. From the north, a white mist flows your way.
+~
+129 9 0
+D0
+You can see the mist.
+~
+~
+0 -1 12905
+D2
+You can see the bottomless pit.
+~
+~
+0 -1 12902
+E
+pit~
+The pit looks as deep from here, as it looks from the top. Still no sight
+of the bottom.
+~
+S
+#12905
+The Room of Mists~
+You are standing in a room full of white mist, impenetrable by your already
+watery eyes. The chilling mist may hold horrors beyond your imagination, if
+you only could see them.
+~
+129 140 0
+D0
+You can see the mist.
+~
+~
+0 -1 12904
+D1
+You can see the mist.
+~
+~
+0 -1 12904
+D2
+You can see the mist.
+~
+~
+0 -1 12904
+D3
+You can see the mist.
+~
+~
+0 -1 12904
+D5
+You can see the mist.
+~
+hatch floor silver~
+2 12900 12906
+E
+mist~
+The white mist fills the whole chamber, limiting the vision almost to nothing.
+The mist seems to irritates your eyes, and makes them watery. You see some
+vague shape in the mist, maybe a statue of some kind.
+~
+E
+statue~
+The statue resembles a bald man wearing a violently fluttering robe. He
+stands in an alert position. While examining the statue, you notice a small
+hatch on the floor beside the statue's podium. It's made of pure silver.
+~
+S
+#12906
+The Forgotten Chamber~
+You are standing in a room that has been out of use for an eternity, or at
+least appears to be so. A thick layer of dust and spider webs cover the floor
+and the walls. A large murky looking pedestal stands in the middle of the room.
+The ominous silence of this chamber makes you feel uneasy. Narrow stone stairs
+come down from a hatch in the ceiling.
+There is a piles of bones in the far corner.
+~
+129 524 0
+D4
+You can see the silver hatch on the ceiling.
+~
+hatch floor silver~
+2 12900 12905
+E
+pile bones~
+The bones are obviously of human origin, but from where and whose ???
+~
+E
+pedestal~
+The pedestal is made of black stone, and has bloody splashes all over it.
+Maybe it has sometimes been used for sacrifices.
+~
+S
+#12910
+The Entrance Hall~
+You are standing in a huge hall with floor made of marble plates of
+considerable size. Only the silence and the age of this place are
+noticeable. Not a sign of life can be seen anywhere. Wide passages
+lead both east and west. To the south you can see the path climbing
+up to the entrance.
+~
+129 8 0
+D1
+You can see a passage leading east.
+~
+~
+0 -1 12911
+D2
+You can see the path outside.
+~
+~
+0 -1 12960
+D3
+You can see a passage leading west.
+~
+~
+0 -1 12915
+S
+#12911
+The Eastern Way~
+You are standing in a wide passage leading west and north. The walls are
+smooth, as if they have been touched very often during the past millennium.
+The echoes of your steps sound unbearably loud to your ears, anyone else 
+here must also hear them.
+~
+129 8 0
+D0
+You can see a passage leading north.
+~
+~
+0 -1 12912
+D3
+You can see the entrance hall.
+~
+~
+0 -1 12910
+S
+#12912
+The Eastern Way~
+You are standing in a wide passage leading west and south. The walls are
+smooth, as if something has been touching them very often during the past
+millennium. Stony stairs encrusted with bones, teeth and skulls of humans
+lead down in the farthest corner of passage. You feel something cold and
+malevolent touching your feet, something coming from down the stairs.
+~
+129 8 0
+D2
+You can see the passage leading south.
+~
+~
+0 -1 12911
+D3
+You can see a large hall.
+~
+~
+0 -1 12913
+D5
+You can see stairs leading down.
+~
+~
+0 -1 12920
+S
+#12913
+The Way of The Brave, by the Bottomless Pit~
+You are standing in the southern edge of a dark and bottomless pit. Thick wooden
+poles and cotton ropes are hanging in the pit, leading down to the depths.
+You would have to climb across the pit by way of the ropes and poles.
+It would take a very nimble, lucky, or courageous person to make it across the
+pit without falling into its endless darkness.  Wide passages lead both east
+and west from the pit, winding southwards quickly.  On the other side of the  
+pit, you can barely make out a passage leading northward..
+~
+129 8 0
+D0
+You can see the bottomless pit.
+~
+~
+0 -1 12900
+D1
+You can see the eastern way.
+~
+~
+0 -1 12912
+D3
+You can see the western way.
+~
+~
+0 -1 12914
+E
+pit~
+You stare down the pit and you see no bottom. There are, however, some ropes
+and poles in the pit, hanging from the ceiling and walls. Climbers on them
+you don't see, but why ?
+~
+E
+ropes poles~
+You can see ropes and poles hanging above the pit, to make it look like you
+could pass it by using them to help you. But the pit seems awfully deep...
+~
+S
+#12914
+The Western Way~
+You are standing in a wide passage leading south and east. The walls are
+smooth, as if something has been touching them very often during the past
+millennium.
+~
+129 8 0
+D1
+You can see a large hall.
+~
+~
+0 -1 12913
+D2
+You can see the passage leading south.
+~
+~
+0 -1 12915
+S
+#12915
+The Western Way~
+You are standing in a wide passage leading north and east. The walls are
+smooth, as if something has been touching them very often during the past
+millennium.
+~
+129 8 0
+D0
+You can see the passage leading north.
+~
+~
+0 -1 12914
+D1
+You can see the passage leading east.
+~
+~
+0 -1 12910
+S
+#12916
+The Way of The Brave, by the Bottomless Pit~
+You are standing in the edge of a dark and deep pit. Thick wooden poles
+and cotton ropes are hanging in the pit, leading down to the depths. Wide
+passage leads northwards. To the south, you can see the pit. The pit that
+you have successfully passed.
+~
+129 8 0
+D0
+You can see a passage leading north to a huge hall.
+~
+~
+0 -1 12917
+D2
+You can see the bottomless pit.
+~
+~
+0 -1 12900
+S
+#12917
+The Eastern end of The Hall~
+You are standing in the eastern end of a huge hall. The hall extends to the
+west for some distance. The walls are adorned with strange symbols and charts,
+that bear even stranger symbols. Light filters through the huge glass dome in
+the ceiling. There is a black door to the north. Through the doorway on the
+eastern wall, you can smell the sweet kitchen aroma. Small passage leads
+south.
+~
+129 8 0
+D0
+You can see a black door.
+~
+door black~
+1 -1 12940
+D1
+You can see a large room with a huge table in the middle of it.
+~
+~
+0 -1 12919
+D2
+You can see a small passage.
+~
+~
+0 -1 12916
+D3
+You can see the western end of the hall.
+~
+~
+0 -1 12918
+E
+charts~
+The charts are written in a language beyond your capabilities, but from the
+seals and their obvious style, you can guess them to be some kind of treaties
+or land grants.
+~
+E
+symbols~
+You are not exactly sure what they might mean, but all the symbols on the
+walls, creating a huge pattern, come in pairs. The pattern looks like a
+huge dagger.
+~
+S
+#12918
+The Western end of The Hall~
+You are standing in the eastern end of a huge hall. The hall extends to the
+west for some distance. Light filters through the huge glass dome in the 
+ceiling. There is a brown door to the north. Stone stairs lead up, to the
+second floor. You can hear loud snoring from upstairs.
+There is a huge crystal globe here, playing soft tunes.
+~
+129 8 0
+D0
+You can see a brown door.
+~
+door brown~
+1 -1 12941
+D1
+You can see the eastern end of the hall.
+~
+~
+0 -1 12917
+D4
+You can see the stairs leading up.
+~
+~
+0 -1 12930
+E
+globe crystal~
+The crystal globe is tightly fastened to the floor with strange metal bands.
+They look like gold, but are incredibly strong.
+~
+S
+#12919
+The Dining Room~
+You are standing in a large dining hall. There is a huge dining table in the
+middle of the floor, with a cotton table cloth on top of it. The trays and
+plates have been set for at least ten persons. Through an archway to the
+north, you can see the kitchen. Smelling where the kitchen is also very
+easy.
+~
+129 8 0
+D0
+You can see the kitchen.
+~
+~
+0 -1 12942
+D3
+You can see the eastern end of the hall.
+~
+~
+0 -1 12917
+S
+#12920
+The Crypt Entrance~
+You are standing in a bare room with a stone-tiled floor. It feels cold and
+wet to your touch. This dimly-lit chamber appears to be the entrance to the
+real crypt, for through the doorway to the east, you can see it. Stone stairs
+lead up, to the eastern way. A chilly presence taunts you to continue.
+~
+129 13 0
+D1
+You can see the crypt.
+~
+~
+0 -1 12921
+D4
+You can see stairs leading up.
+~
+~
+0 -1 12912
+S
+#12921
+The Main Crypt~
+You are standing in the main crypt. Three identical doors lead to north, east
+and south. The exit to the west leads to the stairs to upstairs. There is a
+large stone plaque set in to the middle of the floor.
+~
+129 9 0
+D0
+You can see a crypt.
+~
+door crypt~
+1 -1 12924
+D1
+You can see a crypt.
+~
+door crypt~
+1 -1 12923
+D2
+You can see a crypt.
+~
+door crypt~
+1 -1 12922
+D3
+You can see the main entrance to the crypt hall.
+~
+~
+0 -1 12920
+E
+plaque stone~
+
+			Behold the Glory of the Masters of Lore
+
+			They have given their life in the pursuit
+			of the discipline. The discoveries they
+			have made are for us to explore even
+			further.
+
+The text above is followed by a long list of names dating back many
+centuries...
+~
+S
+#12922
+The Crypt~
+You are standing in a small chamber, that is ruled by a stone platform in
+the middle of it. The chamber reeks of death, of ancient and corrupt evil.
+The thick layers of dust, vast spider webs and the air in the room suggest
+that any living presence hasn't been here for a long while.
+A great sarcophagus is lying on the platform.
+~
+129 9 0
+D0
+You can see the main crypt.
+~
+door crypt~
+1 -1 12921
+E
+sarcophagus great~
+The sarcophagus is made of finest marble you've seen in your short life. The
+lid is already open, so you'd better watch your back.
+~
+S
+#12923
+The Crypt~
+You are standing in a small room, that is ruled by a stone platform in
+the middle of it. The chamber reeks of death, of ancient and corrupt evil.
+The thick layers of dust, vast spider webs and the air in the room suggest
+that any living presence hasn't been here for a long while.
+A great sarcophagus is lying on the platform.
+~
+129 9 0
+D3
+You can see the main crypt.
+~
+door crypt~
+1 -1 12921
+E
+sarcophagus great~
+The sarcophagus is made of finest marble you've seen in your short life. The
+lid is already open, so you'd better watch your back.
+~
+S
+#12924
+The Crypt~
+You are standing in a small room, that is ruled by a stone platform in
+the middle of it. The chamber reeks of death, of ancient and corrupt evil.
+The thick layers of dust, vast spider webs and the air in the room suggest
+that any living presence hasn't been here for a long while.
+A great sarcophagus is lying on the platform.
+~
+129 9 0
+D2
+You can see the main crypt.
+~
+door crypt~
+1 -1 12921
+E
+sarcophagus great~
+The sarcophagus is made of finest marble you've seen in your short life. The
+lid is already open, so you'd better watch your back.
+~
+S
+#12930
+The Second Chamber~
+You are standing in a small chamber with a couple of mattresses on the floor.
+The walls are bare but for a single painting. You can hear snoring from the 
+passage leading east. There is an iron door leading to the west.
+There are wide stairs leading down in the corner.
+~
+129 8 0
+D1
+You can see a small passage leading east.
+~
+~
+0 -1 12932
+D3
+You can see an iron door blocking your sight.
+~
+door iron~
+1 -1 12931
+D5
+You can see the stairs leading down.
+~
+~
+0 -1 12918
+E
+painting~
+The painting is of a man. A man so calm and peaceful, that you feel yourself
+gaining a bit of your inner harmony. His face bears none of the greed and
+anger of this world, but is a void of all emotion. He must be a truly
+dedicated person.
+~
+S
+#12931
+The First Chamber~
+You are standing in an room closest to an office you can find in a monastery.
+The large bookcase on the south wall seems to dominate the room. There is a
+large table in the middle of the room, on top of which lies a dusty tome of
+equal size. The only exit seems to be to the east, through the iron door.
+~
+129 8 0
+D1
+You can see the iron door.
+~
+door iron~
+1 -1 12930
+D2
+You can see a bookcase with a mirror on the wall.
+~
+mirror~
+2 12900 12938
+E
+tome strange~
+The tome is opened on a page that bears a painting of a golden battle axe. The
+book says that the huge axe is made of Aurum, and that it was made by a god.
+~
+E
+mirror~
+The mirror is huge, almost the size of you. When looking in it, you can see
+yourself as you've always wanted to look. But there is something else...
+Is that a small keyhole in the mirror?
+~
+E
+bookcase~
+The bookcase on the southern wall is filled with mysterious scrolls and
+tomes, but the most interesting sight must be the large mirror in the middle
+of the bookcase.
+~
+S
+#12932
+The Shadowy Hallway~
+You are standing in a hallway leading east and west dimly lit by a lone 
+torch on the wall. The walls are made of small slabs of stone. Small 
+archways lead south and north, to small rooms, which appear to be sleeping 
+chambers. You can hear a loud snoring coming from one of the rooms.
+~
+129 8 0
+D0
+You can see a scarcely furnished sleeping chamber.
+~
+~
+0 -1 12934
+D1
+You can see a shadowy hallway.
+~
+~
+0 -1 12933
+D2
+You can see a scarcely furnished sleeping chamber.
+~
+~
+0 -1 12937
+D3
+You can see a small chamber with stairs leading down.
+~
+~
+0 -1 12930
+S
+#12933
+The Shadowy Hallway~
+You are standing in a hallway leading east and west dimly lit by a lone torch
+on the wall. The walls are made of small slabs of stone. Small archways lead
+south and north, to small rooms, which appear to be sleeping chambers.
+~
+129 8 0
+D0
+You can see a scarcely furnished sleeping chamber.
+~
+~
+0 -1 12935
+D2
+You can see a scarcely furnished sleeping chamber.
+~
+~
+0 -1 12936
+D3
+~
+~
+0 -1 12932
+S
+#12934
+The Sleeping Chamber~
+You are standing in a small chamber furnished by a single bed and a night
+table. Through a small slit of a window, you can see the mountains outside.
+~
+129 8 0
+D2
+~
+~
+0 -1 12932
+S
+#12935
+The Sleeping Chamber~
+You are standing in a small chamber furnished by a single bed and a night
+table. Through a small slit of a window, you can see the mountains outside.
+~
+129 8 0
+D2
+~
+~
+0 -1 12933
+S
+#12936
+The Sleeping Chamber~
+You are standing in a small chamber furnished by a single bed and a night
+table. Through a small slit of a window, you can see the mountains outside.
+~
+129 8 0
+D0
+~
+~
+0 -1 12933
+S
+#12937
+The Sleeping Chamber~
+You are standing in a small chamber furnished by a single bed and a night
+table. Through a small slit of a window, you can see the mountains outside.
+~
+129 8 0
+D0
+~
+~
+0 -1 12932
+S
+#12938
+The Secret Vault~
+You are standing in a dusty chamber with a mirror on the north wall. The
+mirror isn't a very good one, because you can see through it. The room 
+itself is very small, just large enough for you to stand inside. There is 
+a small table in the western side of this room.
+~
+129 525 0
+D0
+You can see a large chamber through the mirror.
+~
+mirror~
+2 12900 12931
+E
+mirror~
+You can see a large chamber through the mirror.
+~
+S
+#12940
+The Meditation Chamber~
+You are standing in a room with completely jet black walls. Even the door
+is black. All the sounds you make are softened and the light is sucked in to
+the walls. This looks like a good place to forget everything, and concentrate
+on yourself.
+~
+129 8 0
+D2
+You can see a black door.
+~
+door black~
+1 -1 12917
+S
+#12941
+The Chamber of Divine Wisdom~
+You are standing in a large chamber so full of various kinds of books, tomes
+and scrolls that you can barely move among them. Stacks of books stood on the
+tables in the room, each stack containing more books than the last. Pale brown
+light fills the chamber. A brown door leads to the south.
+~
+129 524 0
+D2
+You can see the brown door.
+~
+door brown~
+1 -1 12918
+E
+books~
+The huge piles of books tower upon one another, threatening to topple over and
+crush you underneath them. Dozens and dozens of books haphazardly collected at
+the bases of the shelves.
+~
+S
+#12942
+The Kitchen~
+You are standing in the kitchen of this monastery. Huge, steaming pots hang
+above flaming fires. Knives, great and small, hang on the walls alongside with
+numerous bunches of herbs, especially garlic, the smell of which flows heavy
+in the air. The scene makes you drool with hunger.
+~
+129 8 0
+D2
+You can see the dining hall.
+~
+~
+0 -1 12919
+S
+#12950
+Inside the Crystal Ring~
+You are standing inside a huge crystal. Might this be the very crystal in
+the ring that was just recently in your finger? The walls are fairly
+reflective, so you can't see through them. The room itself is a roughly
+semi-spherical place of bright light accompanied by strange play of light
+and shadows in the crystal's outer shell.
+~
+129 648 0
+E
+walls crystal~
+The walls look very thick and strong, being made of crystal. The strange play
+that the shadows are engaged in, seem to have an almost hypnotic effect on you.
+~
+S
+#12960
+On the Climbing Path~
+You are standing in a path climbing up the mountain side. Up ahead, you can
+see a huge structure carved into the stone. The structure is a large archway
+of a building entrance. The passage inside the arch is very dimly lit. The
+shadows made by the shining sun on the northern side of the building form
+curious shapes, like they would be alive.  To the west you see a small 
+crevice that you think you might be able to crawl through.
+~
+129 4 5
+D0
+~
+~
+0 -1 12910
+D1
+~
+~
+0 -1 4002
+D3
+~
+crevice~
+9 -1 17311
+S
+#0
+$~

@@ -1,0 +1,809 @@
+#30101
+Outside the black hole~
+	You see a very big hole, you try to look inside it,
+but it is too dark, you can't see anything. You can hear
+someone moving inside.
+~
+68 9 2
+D3
+~
+~
+0 -1 8325
+D5
+It is too dark, but you think it shall be safe to go down.
+~
+~
+0 -1 30102
+S
+#30102
+Black Hole~
+	You are halfway down the hole.
+~
+68 9 2
+D4
+~
+~
+0 -1 30101
+D5
+~
+~
+0 -1 30103
+S
+#30103
+The End of the Hole~
+	It is the end of the hole. There is a small tunnel to
+the east. There is a hole at your top which leads outside.
+~
+68 9 2
+D1
+~
+~
+0 -1 30104
+D4
+~
+~
+0 -1 30102
+S
+#30104
+A small tunnel~
+	The tunnel continues to the east.
+~
+68 9 2
+D1
+~
+~
+0 -1 30105
+D3
+~
+~
+0 -1 30103
+S
+#30105
+The End of the tunnel~
+	There is a hole on the ground. There surroundings
+are very cold. You can hear someone moving inside the hole.
+You can go west and down here.
+~
+68 9 2
+D3
+~
+~
+0 -1 30104
+D5
+~
+~
+0 -1 30106
+S
+#30106
+Black Hole~
+	You are half way down the hole. You just stepped on a
+small web. It is sticky. You can go up or down here.
+~
+68 9 2
+D4
+~
+~
+0 -1 30105
+D5
+~
+~
+0 -1 30107
+S
+#30107
+Large Web~
+	You are walking on a very large web. There must be a very
+large spider somewhere. You can see some bones sticked on the web.
+To the east is a very big cave.
+~
+68 9 2
+D1
+~
+~
+0 -1 30108
+D4
+~
+~
+0 -1 30106
+S
+#30108
+Big Cave~
+	It is a very big cave. You knock on the wall here, and make
+some very strange noise. It's sound like metal. There is a big hole
+on the ground. When you look at the hole, there is a big ladder there.
+~
+68 13 2
+D3
+~
+~
+0 -1 30107
+D5
+~
+~
+0 -1 30109
+S
+#30109
+A large tunnel~
+	It is a very large tunnel. The walls and floor are made of
+steel. It is very cold here. You can see some small holes on the floor.
+You can go up, north, south, west or east here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30110
+D1
+~
+~
+0 -1 30131
+D2
+~
+~
+0 -1 30134
+D3
+~
+~
+0 -1 30128
+D4
+~
+~
+0 -1 30108
+S
+#30110
+A large tunnel~
+	There are many funny hierographs on the walls. They seems to
+be untranslatable. The tunnel continues to both south and north.
+~
+68 9 1
+D0
+~
+~
+0 -1 30111
+D2
+~
+~
+0 -1 30109
+S
+#30111
+End of the large tunnel~
+	There are two small tunnels here. One to the east and one to the
+west. You can see some small holes on the floor. They seems to be caused
+by acid. You can go west, east and south here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30112
+D2
+~
+~
+0 -1 30110
+D3
+~
+~
+0 -1 30120
+S
+#30112
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go north, west or east here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30114
+D1
+~
+~
+0 -1 30113
+D3
+~
+~
+0 -1 30111
+S
+#30113
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go west or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30119
+D3
+~
+~
+0 -1 30112
+S
+#30114
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go north or south here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30115
+D2
+~
+~
+0 -1 30112
+S
+#30115
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go south or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30116
+D2
+~
+~
+0 -1 30114
+S
+#30116
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go west or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30117
+D3
+~
+~
+0 -1 30115
+S
+#30117
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go west or south here.
+~
+68 9 1
+D2
+~
+~
+0 -1 30118
+D3
+~
+~
+0 -1 30116
+S
+#30118
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go north or south here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30117
+D2
+~
+~
+0 -1 30119
+S
+#30119
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go west or north here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30118
+D3
+~
+~
+0 -1 30113
+S
+#30120
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go north, west or east here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30121
+D1
+~
+~
+0 -1 30111
+D3
+~
+~
+0 -1 30127
+S
+#30121
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go north or south here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30122
+D2
+~
+~
+0 -1 30120
+S
+#30122
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go west or south here.
+~
+68 9 1
+D2
+~
+~
+0 -1 30121
+D3
+~
+~
+0 -1 30123
+S
+#30123
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go west or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30122
+D3
+~
+~
+0 -1 30124
+S
+#30124
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go south or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30123
+D2
+~
+~
+0 -1 30125
+S
+#30125
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go north or south here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30124
+D2
+~
+~
+0 -1 30126
+S
+#30126
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go north or east here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30125
+D1
+~
+~
+0 -1 30127
+S
+#30127
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+There are some funny hierographs on the walls, but you don't understand
+what it means. You can go west or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30120
+D3
+~
+~
+0 -1 30126
+S
+#30128
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30109
+D3
+~
+~
+0 -1 30129
+S
+#30129
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30128
+D3
+~
+~
+0 -1 30130
+S
+#30130
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30129
+D3
+~
+~
+0 -1 30146
+S
+#30131
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30132
+D3
+~
+~
+0 -1 30109
+S
+#30132
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30133
+D3
+~
+~
+0 -1 30131
+S
+#30133
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30148
+D3
+~
+~
+0 -1 30132
+S
+#30134
+A large tunnel~
+	It is a very large tunnel. There are many water drops falling from
+the ceiling. When the water drops fell on the ground. They corrupted the
+ground. Oh My God! They are acid, very strong acid. You can go north and
+south here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30109
+D2
+~
+~
+0 -1 30135
+S
+#30135
+The End of the large tunnel~
+	There are two small tunnels here. One to the west and one to the
+east. So you can go north, east or west here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30134
+D1
+~
+~
+0 -1 30141
+D3
+~
+~
+0 -1 30136
+S
+#30136
+A small tunnel~
+	The tunnel is very beautiful. You don't know why, but you are
+scared. You can go west or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30135
+D3
+~
+~
+0 -1 30137
+S
+#30137
+A small tunnel~
+	The tunnel is very beautiful. You don't know why, but you are
+scared. You can go west or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30136
+D3
+~
+~
+0 -1 30138
+S
+#30138
+Corner of the small tunnel~
+	It is the corner of the small tunnel. You knocked on the walls
+and made some strange noises. There are some big holes on the ground.
+You can go east and south here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30137
+D2
+~
+~
+0 -1 30139
+S
+#30139
+Outside a big room~
+	You are now at the end of the small tunnel. There is a very big
+room at your south. You can feel a very dangerous monster living inside.
+You can go north or south here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30138
+D2
+~
+~
+0 -1 30140
+S
+#30140
+A large room~
+	There are many strange things on the walls. They look like clocks.
+Oh... What's clock? There is a very big chair on the center of the room.
+The only exit is north.
+~
+68 9 1
+D0
+~
+~
+0 -1 30139
+S
+#30141
+A small tunnel~
+	The tunnel is very beautiful. You don't know why, but you are
+scared. You can go west or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30142
+D3
+~
+~
+0 -1 30135
+S
+#30142
+A small tunnel~
+	The tunnel is very beautiful. You don't know why, but you are
+scared. You can go west or east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30143
+D3
+~
+~
+0 -1 30141
+S
+#30143
+Corner of the small tunnel~
+	It is the corner of the small tunnel. You knocked on the walls
+and made some strange noises. There are some big holes on the ground.
+You can go west and south here.
+~
+68 9 1
+D2
+~
+~
+0 -1 30144
+D3
+~
+~
+0 -1 30142
+S
+#30144
+Outside a big room~
+	You are now at the end of the small tunnel. There is a very big
+room at your south. You can feel a very dangerous monster living inside.
+You can go north or south here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30143
+D2
+~
+~
+0 -1 30145
+S
+#30145
+A large room~
+	There are many giant eggs here. When you look at the eggs, you saw
+some brown spots on the eggs. You are standing on some sticky liquid. The
+only exit is north here.
+~
+68 9 1
+D0
+~
+~
+0 -1 30144
+S
+#30146
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30130
+D3
+~
+~
+0 -1 30147
+S
+#30147
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30146
+D3
+~
+~
+0 -1 30149
+S
+#30148
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30149
+D3
+~
+~
+0 -1 30133
+S
+#30149
+A small tunnel~
+	it is a small tunnel. The tunnel is very cold. You are freezing.
+You knocked on the walls and discovered that the walls are made of very strong
+materials. You can go west and east here.
+~
+68 9 1
+D1
+~
+~
+0 -1 30147
+D3
+~
+~
+0 -1 30148
+S
+#30199
+Treasure Room.~
+   You have reached a place where no other mortal has reached before.
+The treasure room of the frost giants.  Here is the spoils of the giants
+latest victory.  Take it, you've earned it.
+~
+68 140 0
+D4
+The Temple of Midgaard.
+~
+~
+0 0 3001
+S
+#0
+$~

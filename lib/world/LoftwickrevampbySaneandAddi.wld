@@ -1,0 +1,1768 @@
+#9300
+On the road outside the lost city of Loftwick~
+To the south is the gate to the lost city of Loftwick.  The walls stand in
+disrepair, and are crumbling, but they were tall to begin with and still
+standing. It appears they maybe have been white at one time, but are so
+covered in grime from age that you can only guess.  <add where it came from
+here>
+~
+93 32773 0
+D2
+You see a large deteriorated entrance to the City of Loftwick.
+~
+gate~
+1 -1 9301
+S
+#9301
+Entrance to the lost city of Loftwick~
+This is the entrance to the lost city of Loftwick.  The once beautiful
+architecture has long since been destroyed.  Part of the ceiling here
+has caved in and rubble lines the streets.  There appears to be footprints
+in the dust on the ground here.  Fresh ones......
+~
+93 32777 3
+D0
+You see a large deteriorated entrance to the city of Loftwick.
+~
+gate~
+1 -1 9300
+D1
+A building just large enough to hold a single person.
+~
+~
+0 0 9302
+D2
+An intersection surrounded by crumbling buildings.
+~
+~
+0 0 9305
+D3
+A guard post larger than the one to the east, it has more than one room.
+~
+~
+0 0 9303
+S
+#9302
+A small guard outpost~
+This room appears to once have been a guard room.  There are several chairs 
+smashed about the room.  A table lies on the floor, minus it's legs.  Against
+the south wall you notice what once was probably a weapons rack. There are 
+fresh footprints all around.
+~
+93 32777 3
+D3
+A doorway out into the dim light outside.
+~
+~
+0 0 9301
+S
+#9303
+A small guard outpost~
+This was once a guard post.  Amongst the rubble you see a broken pitcher
+along with several wooden cups.  A table stands in the center of the room.
+The door to the captain's chamber is ripped off of it's hinges and leans 
+against the far wall. The room seems recently used.
+~
+93 32777 3
+D1
+A doorway out into the dim light outside.
+~
+~
+0 0 9301
+D3
+It's another small room, you can see a map on the wall through the door.
+~
+~
+0 0 9304
+S
+#9304
+The Captain's office~
+This room once housed the captain of the guard.  You can tell because he's
+still here, laying in the corner behind his desk; or what's left of him, that
+is. On the southern wall is a map of the town, and on the eastern wall, next
+to the door is a rack holding spears and swords.  The whole room is covered in
+dust from years of neglect.
+~
+93 32781 3
+D1
+The empty guard room, which this room was used to supervise.
+~
+~
+0 0 9303
+S
+#9305
+Check Point~
+This street leads into the city of loftwick.  Shops and homes have been carved
+from the stone surrounding the street.  The whole place looks to be in horrid
+shape. The devices that once provided perpetual light here are gone, leaving
+this place in complete darkness, probably for some time now. You can see a
+small guard building here, apparently to house the guard for this checkpoint.
+It hasn't been inhabited for some time, due to the large rock that's crushed
+the roof and one of the walls.
+~
+93 32777 3
+D0
+A large gate and a crumbling wall.
+~
+~
+0 0 9301
+D1
+A road disappears into the darkness.
+~
+~
+0 0 9306
+D2
+The street is much cleaner and more used.
+~
+~
+0 0 9310
+D3
+An evil light illuminates a dirty street lined with torn down buildings.
+~
+~
+0 0 9321
+S
+#9306
+Jalpa Drive~
+An ordinary city street, except for the shape that it's in.  But then again,
+all the streets here are in pretty rough shape, so this could be normal. A
+pair of footprints can faintly be seen in the dust.
+~
+93 32777 3
+D1
+A road disappears into the darkness.
+~
+~
+0 0 9307
+D3
+An intersection surrounded by crumbling buildings.
+~
+~
+0 0 9305
+S
+#9307
+Jalpa Drive~
+An ordinary city street, except for the shape that it's in.  But then again,
+all the streets here are in pretty rough shape, so this could be normal. A
+pair of footprints can faintly be seen in the dust.
+~
+93 32777 3
+D1
+A road disappears into the darkness.
+~
+~
+0 0 9308
+D3
+A road disappears into the darkness.
+~
+~
+0 0 9306
+S
+#9308
+Jalpa Drive~
+The street ends here.  There is an old shop to your north.  The street is in
+terrible shape.  There actually seems to be more potholes than pavement.
+The buildings all around you, except for one to the north have crumbled, almost
+beyond the point of being able to say they were once buildings, they look more
+like debris piles than structures.
+~
+93 32777 3
+D0
+An old decaying shop with broken glass windows.
+~
+~
+0 0 9309
+D3
+A road disappears into the darkness.
+~
+~
+0 0 9307
+S
+#9309
+Metal Smith~
+This was once the shop of an accomplished metal smith.  Various items lay
+scattered in the dust, rusted and ruined beyound all hope.  It appears as 
+though a battle took place in this room.  Whoever was defending the shop
+must have lost, for you see a skeleton with a spear shoved through it.
+~
+93 32777 3
+D2
+An unlit and potholed street.
+~
+~
+0 0 9308
+S
+#9310
+Hokar Ave~
+This street is in an amazing state of repair.  Gone are the signs of decay
+and ruin.  This street probably leads to a section of town more used.
+The dust on the ground here is only along the sides of the street, as 
+though something big moves through here from time to time.
+~
+93 32777 0
+D0
+An intersection surrounded by crumbling buildings.
+~
+~
+0 0 9305
+D1
+A building with the front torn off.
+~
+~
+0 0 9311
+D2
+The clean street continues to the south.
+~
+~
+0 0 9313
+D3
+An official looking, but still crumbling building.
+~
+~
+0 0 9322
+S
+#9311
+Bank of Loftwick~
+This was once the bank of loftwick, where citizens stored their fortunes.
+Against the far wall, behind the teller windows, you can vaguely make out
+the outlines of the vault door. The vault has been torn apart and is filled 
+with rubble. The destruction continues out the much enlargened doorway.
+~
+93 32777 0
+D3
+Through the ripped off store front you can see Hokar Ave.
+~
+~
+0 0 9310
+S
+#9312
+Chapel~
+This chapel has been untouched by time.  Everything in this chapel is in 
+excellent condition.  All the pews are polished to a gleem.  To the far end
+you can just make out an altar.  There are numerous candles along the walls,
+all of which are lit and burning.  You sense a presence of Peace in this 
+room. You can barely make out the sounds of chanting here.
+~
+93 32776 0
+D3
+~
+~
+0 0 9313
+S
+#9313
+Hokar Ave~
+The building fronts here look as though they've been scraped by something
+large. Some have had their fronts completely knocked off, causing them to
+collapse. There are some large foot prints here, centered in the road, but
+there's also 6 feet between them, whatever did this must have been big, and
+comes this way often.
+~
+93 32777 0
+D0
+The clean street continues to the north.
+~
+~
+0 0 9310
+D1
+A building with a large cross over the door stands here.
+~
+~
+0 0 9312
+D2
+The clean street continues to the south.
+~
+~
+0 0 9314
+S
+#9314
+Hokar Ave~
+This is the end of the street.  To the west is the entrance to a grand arena.
+Looking to the west you notice a heavy metal gate blocking your entrance west.
+There are deep gouges from something passing this way many times.  A stench
+like that of a sewer assaults your nostrils.
+~
+93 32781 0
+D0
+The clean street continues to the north.
+~
+~
+0 0 9313
+D3
+Standing to the west is a large building with an evil aura.
+~
+~
+0 0 9315
+S
+#9315
+Arena Entrance~
+This is the entrance to a very large arena.  You can from here see that this
+building is different from all the others you have seen. As you get a little
+closer you can see that it is because the outside is covered with claw marks
+large and small from the ground to the roof.
+~
+93 32777 0
+D0
+~
+~
+0 0 9316
+D1
+You see a wide, clean street.
+~
+~
+0 0 9314
+D3
+~
+~
+0 0 9318
+S
+#9316
+Concession Stand~
+This is what appears to have been the concession stand.  A sign still hangs 
+from rusty hinges.  All around this room are candy wrappers, as if something
+has been snacking between meals....  All candies have been eaten save for
+a Mars bar with a bite taken out of it.  The bite appears to have been spit
+back on the ground in disgust.
+~
+93 32777 0
+D2
+~
+~
+0 0 9315
+D3
+~
+~
+0 0 9317
+S
+#9317
+Hall of Victors~
+This is a great hall dedicated to the gladiators that fought and won in the
+arena. They will be immortalized here forever in these statues.  The statues
+line the hall on both sides, and show gladiators in various different poses.
+But, instead of looking victorious, or attacking, as you might expect, they
+all seem to be cringing away from something.
+~
+93 32776 0
+D1
+~
+~
+0 0 9316
+D2
+~
+~
+0 0 9318
+S
+#9318
+Arena Hallway~
+This hall leads to the great arena and the hall of victors.  The scratch
+marks on the wall here are enormous.  None of the creatures you've met so far
+could have done this.
+~
+93 32777 0
+D0
+~
+~
+0 0 9317
+D1
+~
+~
+0 0 9315
+D3
+~
+~
+0 0 9319
+S
+#9319
+Arena Grounds~
+The walls of this arena are marked with scratches, chips and cracks of age;
+and battle.  There are many dark brown blotches where blood was spilt and
+never cleaned.  The dirt floor is a little uneven, with pieces of armor, weapons
+and occasional bones scattered around.  Each step you take kicks up a cloud of
+dust. The Arena extends to the north of you.
+~
+93 32777 0
+D0
+~
+~
+0 0 9320
+D1
+~
+~
+0 0 9318
+S
+#9320
+Arena Grounds~
+This section of the arena appears to have been converted into a nursery for a
+dragon. There are huge marks on the wall where the dragon has scratched at
+it, and smaller ones where her offspring have. The size of the nest suggests a
+huge and powerful dragon would live here. Many bodies lay strewn about, half
+eaten. There are no tracks out.
+~
+93 32777 5
+D2
+~
+~
+0 0 9319
+S
+#9321
+Jalpa Drive~
+This is an ordinary city street, as long as you consider crumbling buildings
+and potholed streets ordinary. There are buildings to the north and south of
+you. All the windows and doors are boarded over on both buildings, though.
+An evil breeze blows through here, sending shivers up and down your spine.
+As you look closer, you see that this must have been a very beautiful place
+at one time long in the past, but centuries of neglect have torn it down
+to little more than rubble.
+~
+93 32777 5
+D1
+An intersection surrounded by crumbling buildings.
+~
+~
+0 0 9305
+D3
+~
+~
+0 0 9326
+S
+#9322
+Royal Guard Headquarters~
+This is the headquarters of the elite Githyanki guard of Loftwick. The Githyanki
+Bring their prisoners here for torture and abuse, and sometimes to die. There's
+a desk on the wall farthest from the enterence, placed hidden from the door to
+the cells. There's also many pieces of broken weapons laying around the floor,
+intermixed with some bones.
+~
+93 32777 5
+D1
+A clean swept street covered in darkness.
+~
+~
+0 0 9310
+D3
+The door to the jail cells stands open, well...not there, actually.
+~
+~
+0 0 9323
+S
+#9323
+Jail~
+This is the jail of Loftwick.  Prisoners of old were kept just to the west of
+here in cells.  You can hear sounds from the west now...  To the west you
+see the cell door. It looks as if new residents have moved in.
+~
+93 32777 5
+D1
+Through the ripped off door you see the headquarters of the Royal Guard.
+~
+~
+0 0 9322
+D3
+Many cell doors stand open, allowing the rats to run freely.
+~
+door~
+1 9372 9324
+S
+#9324
+Cell Block~
+This hallway is lined with little jail cells. Each cell has 2 beds, one on
+top of the other.  There are 3 cells on the north side, and 2 on the south side
+with a place for a guard to sit on the south side.  The bars are thick and
+made of good strong iron.  This room looks to have been very secure at one
+time, but now all the cell doors stand open.
+~
+93 32777 5
+D1
+A solid stone wall with a large iron door.
+~
+door~
+1 9372 9323
+D3
+You see a dark and dismal room, and smell death as you look.
+~
+door~
+1 9372 9325
+S
+#9325
+Death Row~
+Here is where the most vile prisoners were kept.  There are scratch marks on
+the walls from prisoners counting the days they were here. Or maybe the days
+until they wouldn't be here?  There are no cells here, each inmate was chained
+to the wall until his turn to be killed came.  Looking around you see some
+of them stayed chained up after that, too.
+~
+93 32777 5
+D1
+The place many souls never saw after seeing this room, the outside.
+~
+door~
+1 9372 9324
+S
+#9326
+Jalpa Drive~
+All of the buildings here are in some state of disrepair or another, but the
+building to the north is more so than the rest.  The doors and windows are all
+boarded over, like the rest, but it won't do much good as it has no walls.
+To the south, the building has some walls, but is still in such a state of
+disrepair that going inside would probably cause it to crumble.
+~
+93 32777 5
+D1
+~
+~
+0 0 9321
+D3
+~
+~
+0 0 9327
+S
+#9327
+Jalpa Drive~
+This section of street is worse than most.  It looks as if something stood on
+the building to your south.  Infact, if it weren't for the piles around it,
+you may suspect the building was intended to just be a floor.  The building
+on the north looks to be in pretty good shape, except it appears to have been
+shifted to the right a good foot or two, as if something had given it a good
+push. Looking closer you see a large hole in the left side of the building,
+like something large had been thrown against it.
+~
+93 32777 5
+D1
+~
+~
+0 0 9326
+D3
+~
+~
+0 0 9328
+S
+#9328
+Jalpa Drive~
+The road turns south here, to Farmer's Row.  The buildings don't change much,
+though. More crumbling and broken down buildings in every direction.  The
+stones from the building to the northwest have crumbled onto the street, making
+it impossible to go west here. An evil breeze blows from the south.
+~
+93 32777 5
+D1
+~
+~
+0 0 9327
+D2
+~
+~
+0 0 9329
+S
+#9329
+Farmer's Row~
+This street was the center of trading and business of this city in times
+long since gone.  It is different from the other streets in that not all of
+the doors and windows have been boarded over.  To the west you see a small
+produce shop with an open door.  The door into the shop to the east isn't
+boarded over, either, but the pile of ruble coming through the door prohibits
+entry.
+~
+93 32777 5
+D0
+~
+~
+0 0 9328
+D2
+~
+~
+0 0 9331
+D3
+~
+~
+0 0 9330
+S
+#9330
+A small produce shop~
+This shop is like any other, there are shelves on 2 sides with produce, and an
+isle down the center. The money drawer is against the third wall, near the
+door. In the window, there's the remains of long-rotted lettuce, carrots and
+other vegetables. The stench in this shop is over powering.
+~
+93 32777 5
+D1
+~
+~
+0 0 9329
+S
+#9331
+Farmer's Row~
+This street was the center of trading and business of this city in times
+long since gone.  It is different from the other streets in that not all of
+the doors and windows have been boarded over.  To the west you see a small
+bakery with an open door.  The door into the shop to the east isn't
+boarded over, either, but the pile of ruble coming through the door prohibits
+entry.
+~
+93 32777 5
+D0
+~
+~
+0 0 9329
+D2
+~
+~
+0 0 9333
+D3
+~
+~
+0 0 9332
+S
+#9332
+A small bakery~
+This shop is like any other, there are shelves on 2 sides with breads, and an
+isle down the center. There is a spot against the third wall, near the door for
+the baker to stand at while the shop was open. In the window, there's the
+remains of long-rotted bread, buns and rolls.
+~
+93 32777 5
+D1
+~
+~
+0 0 9331
+S
+#9333
+Farmer's Row~
+This street was the center of trading and business of this city in times
+long since gone. It is different from the other streets in that not all of
+the doors and windows have been boarded over. To the west you see a small
+shop with an open door. To the east, there is a dark alley way.
+~
+93 32777 5
+D0
+~
+~
+0 0 9331
+D1
+~
+~
+0 0 9335
+D2
+~
+~
+0 0 9340
+D3
+~
+~
+0 0 9334
+S
+#9334
+A weaver's shop~
+This shop is like any other, there are shelves on 2 sides with carpets,
+baskets and other weaves, and an isle down the center. There is a spot against
+the third wall, near the door for the merchant to stand at while the shop was
+open. In the window, there's the remains of long-rotted weaves.
+~
+93 32777 5
+D1
+~
+~
+0 0 9333
+S
+#9335
+Dark Alley~
+The light is very low in this alley, and there is little to see. Trash lines
+the edges, and the smell invades your nostrils with a foul stench. An
+occasional rat scurries beneath the trash, sometimes poking it's head out, and
+just as quickly disappearing back into the quiet. To the north is a bar, and
+to the west is Farmer's row.
+~
+93 32777 5
+D0
+~
+~
+0 0 9336
+D3
+~
+~
+0 0 9333
+S
+#9336
+MoonMurg Bar~
+This was once a place to kick back and relax. There are many card tables all
+about the room, many of them occupied by some long term patrons. Most patrons
+hold some cards in their hands, or on the table infront of them. The smell of
+death is only overpowered by one smell here, beer.
+~
+93 32777 5
+D0
+~
+~
+0 0 9337
+D2
+~
+~
+0 0 9335
+S
+#9337
+Sleazy Inn~
+This is the enterence to an old inn. There's the remnants of a dusty couch
+off to one side, opposite a counter and desk. On the counter, there is a guest
+book. You see a sign on the wall behind the desk.
+~
+93 32777 5
+D1
+~
+~
+0 0 9338
+D2
+~
+~
+0 0 9336
+E
+guestbook~
+This inn got lots of business, often by the same people, even on the same day.
+~
+E
+book~
+This inn got lots of business, often by the same people, even on the same day.
+~
+E
+guest~
+This inn got lots of business, often by the same people, even on the same day.
+~
+E
+sign~
+The sign shows the hourly rate for a room.
+~
+S
+#9338
+A Brothel~
+This place reeks even more than the bar below does.  There a few clothes
+scattered about the room, laying on the floor and draped over the backs of
+chairs. The decor of this room is what grabs the attention of anyone who
+enters, though. It is truely awful. The combination of pink and red curtains,
+a brown rug and the dirty lamp shades is enough to make an interior decorator
+commit suicide. There's been some graffite scrawled on the wall.
+~
+93 32777 5
+D3
+~
+~
+0 0 9337
+D4
+~
+~
+0 0 9339
+E
+wall~
+You see the words 'Toyo was here.' scratched on the wall.
+~
+S
+#9339
+Lords Room~
+This was the Lord of the Citiesy's secret room.  You wonder what the 
+Lord of the City would have a room above the Brothel for?  
+Maybe you can ask the current occupant.
+~
+93 32777 5
+D5
+~
+~
+0 0 9338
+S
+#9340
+Farmer's Row~
+This street was the center of trading and business of this city in times
+long since gone. It is different from the other streets in that not all of
+the doors and windows have been boarded over. To the west you see a small
+shop with an open door. Bastro Road is to your east, and beyond that you can
+see a palace in ruin. The rest of Farmer's row extends to the north.
+~
+93 32777 5
+D0
+~
+~
+0 0 9333
+D1
+~
+~
+0 0 9343
+D3
+~
+~
+0 0 9341
+S
+#9341
+The shop of the Apothecary~
+A long time ago, this shop was used to sell potions and salves. Now, it
+collects dust and spider webs. The shelves on the walls are covered with
+broken glass and stains from all sorts of spilt mixtures. There are several
+skeletons in this shop, each clutching an unbroken, but empty vial in it's
+hand.
+~
+93 32777 5
+D1
+~
+~
+0 0 9340
+D4
+~
+~
+0 0 9342
+S
+#9342
+Mage's Private Lab~
+You have entered a room filled with every type of test tube and glass pipe
+you can imagine. Some of it lies is pieces but others parts are intact and
+look fairly new. The room is filled with strange smells, some are pleasant and
+others are most horribly vile. They waft slowly past your nose like waves on
+calm sea. The only sound is a bubbling coming from the beaker on the stove.
+~
+93 32777 0
+D5
+~
+~
+0 0 9341
+S
+#9343
+Bastro Road~
+This road is amazingly in great shape.
+~
+93 32781 0
+D1
+The broad well-paved street continues on.
+~
+~
+0 0 9344
+D3
+This way leads to a street with many shops.
+~
+~
+0 0 9340
+S
+#9344
+Bastro Road~
+ As you enter, you stumble wearily on the large paving stones.  The road is 
+in poor shape here. This is a sharp contrasts to the excellent appearance 
+of the road you've been travelling on. It is curious that this  stretch of 
+road is so different.  Your attention is quickly drawn away - In the distance 
+to the east looms the shape of an enormous palace.
+~
+93 32777 0
+D1
+The road disappears into the shadow of a large castle.
+~
+~
+0 0 9346
+D3
+The road seems to continue and improve this way.
+~
+~
+0 0 9343
+D5
+You notice the street sinks down at this point... As if it is slowly
+collapsing. Perhaps the cause is underneath the stones.
+~
+stone ~
+8 0 9345
+S
+#9345
+A tunnel under the street~
+ It is hard to keep your balance here as there is a fast moving current of 
+ankle deep green-tinted water covering the floor.  It appears this may once
+have been a sewer drain, but in it's current state of ruin it's hard to tell.
+To the west the tunnel is reduced to caved in rubble, leaving you  with the 
+options of either trying to climb out or venturing into the slime-coated
+tunnel to your east.
+~
+93 32777 0
+D1
+Water flows down the tunnel and into darkness.
+~
+~
+0 0 9352
+D4
+Looking up you can a small hole just large enough to squeeze through.
+~
+stone~
+8 0 9344
+S
+#9346
+Bastro Road~
+A small building with intricately carved stone work lies to the north.  
+Looking east, the Palace of Loftwick is an imposing sight, blocking out the 
+sky. While this place clearly was lively and colorful once, everything 
+within sight is in an advanced state of decay.
+~
+93 32777 0
+D0
+You see a small stone library.
+~
+~
+0 0 9347
+D1
+You see what appears to be an abandoned castle or palace.
+~
+~
+0 0 9350
+D3
+A paved road stretches on this way.
+~
+~
+0 0 9344
+E
+stonework~
+It is hard to make out all of what all of the carvings once were - This
+appears to be a mural of everyday life here in the city. Unfortunately the
+stonework is chipped and cracking in quite a few places. What you can make out
+are creatures of every conceivable type. Some are carrying books, some are 
+reading, still others seem to be on a pilgrimage of some sort - dressed in 
+fine clothes. 
+~
+S
+#9347
+Library of Loftwick~
+  There are literally hundreds of books lying here. They are surprisingly
+in good condition. A brief search of the texts reveals that Loftwick was not 
+only the founder of this city but was also the brother of Redferne the Grand 
+Knight of Paladins. Loftwick left Midgaard after a bitter dispute with 
+Redferne. He used vile magics in pursuit of immortality. Through his magics 
+he met a race called the GITHYANKI that offered to help him in exchange for a 
+haven on this plane that they could raid Midgaard from. Loftwick agreed but he
+didn't count on the Githyanki turning his city into a realm of the living 
+dead and a truly EVIL place.
+~
+93 32777 0
+D2
+Thru the doorway you can see a paved road.
+~
+~
+0 0 9346
+S
+#9350
+Palace~
+This room is awe inspiring.  It is clearly the beginning of Loftwick's
+Palace.  What had looked dark and abandoned from the outside is actually
+in magnificent shape. Loftwick must be incredibly powerful to have such
+an extravagent home.
+~
+93 32777 0
+D3
+You see the doorway to the palace, which leads outside.
+~
+~
+0 0 9346
+D4
+A small yet ornate spiral staircase leads upward.
+~
+~
+0 0 9351
+S
+#9351
+The Bedchamber~
+This is the bedroom of Loftwick.  A huge canopy bed rests in the middle of the
+floor.  A Picture of the God Karn is on the wall.  You begin to see where 
+Loftwick got the power of Darkness from.  The Bed appears to have been slept
+in only moments ago.  You sense a great anger as it becomes apparent 
+that for Karn to grant Loftwicks request, Loftwick had to murder his own wife
+to show dedication to Karn.
+~
+93 32777 0
+D5
+Just thru the doorway a spiral staircase leads downward.
+~
+~
+0 0 9350
+E
+bed~
+A lavish bed stands here, seemingly filling the room.  It is enshrouded in
+a black lace curtain which hangs from its' canopy.  Its' black satin sheets
+lay in a crumpled pile, as if someone had just climbed out of it.
+~
+E
+picture~
+This picture is so hideous it defies imagination.  Karn is a god of 
+unfathomable evil and this picture reflects it in every way.  Cold
+seems to radiate from it, and it is conspicuously devoid of cobwebs
+or dust.
+~
+S
+#9352
+The Catacombs~
+As you travel along the tunnel there are subtle hints that this might not
+be a sewar after all. At the base of one wall you can see a low opening
+surrounded by carvings. Through the opening you see the slimy water cascading
+down steps cut into the rock.
+~
+93 32777 0
+D3
+The tunnel slopes slightly upward in this direction.
+~
+~
+0 0 9345
+D5
+Precariously steep steps lead into absolute darkness below.
+~
+~
+0 0 9353
+E
+carvings~
+Examining the carving  closely, you see figures of twisted skeletons, decaying
+corpses, and what appear to be warnings of a curse on all who enter.
+~
+S
+#9353
+The Catacombs~
+The stairs are narrow and very steep here. The sounds of falling water fill
+the room.  Surrounding you on all sides are crypts cut deep into the rock 
+walls.  They all appear to have been sealed at one time, but all now stand 
+open and violated, with the remains they once held missing or scattered 
+across the floor. The stairs continue downward into the depths.
+~
+93 32777 0
+D1
+You can make out a small doorway here, but mist and falling water
+obscures your view of what lays beyond. 
+~
+~
+0 0 9301
+D4
+Water cascades down small steps cut into the rocky wall.
+~
+~
+0 0 9352
+D5
+Barely discernable steps can be seen below the swiftly moving water.
+~
+~
+0 0 9354
+E
+bones~
+Looking at the bones you see that they have been ripped apart and scattered.
+From the way the moss and mold is disrupted you guess these bones have been
+recently rummaged through.
+~
+E
+crypt~
+Looking into one of the crypts, you see that a few skeletons do remain fairly
+intact, but even these have signs of being disturbed.  Everything of value 
+has been stripped.. fingers that had been wearing rings are conspicously 
+missing.
+~
+S
+#9354
+The Cavern~
+Here the narrow flight of stairs emerges into an enormous cavern. Water drips
+from stalagtites overhead and it is evident that the caves are still being 
+formed.  The water that had been flowing at your feet disappears into 
+thousands of small cracks in the floor. Tunnels of various sizes seem to
+reach out in every direction, and an eerie wind blows through them, making a
+soft wailing sound. To the north the soft flicker of lit torches is visible,
+and to the east the largest part of the cavern continues.
+~
+93 32781 0
+D0
+Soft torchlight tempts you to explore what lies down this tunnel..
+~
+~
+0 0 9355
+D1
+The cavern continues into the darkness.
+~
+~
+0 0 9356
+D4
+Steps lead upward at an incredibly steep slope, covered by swiftly 
+running water.  Nevertheless, ascent is possible.
+~
+~
+0 0 9353
+S
+#9355
+A lighted room~
+There is an ornate altar here stained by the blood of the many sacrifices 
+performed on it. You see a another section of the room filled with books 
+full of arcane writing and a comfortable reading desk. In the other corner 
+you see a bed fit for a God. You feel strangley relaxed, as if you will
+never leave this place. 
+
+		In fact you won't without MAGICAL HELP!!!!
+
+~
+93 32781 0
+E
+altar~
+A circular stone altar lies here, having been cut from the same flawless 
+coal black stone which makes up the floor. The base of the altar is 
+decorated with relief carvings which picture the followers of Karn 
+performing depraved rituals and ceremonial acts. Shallow oval depressions
+line the rim of the altar. Candle wax and candles remain in most, but 
+dried blood has pooled and dried in several of the others.
+~
+E
+bed~
+A exquisite bronze bed sits in the corner.  Silver vines seem to be 
+curled about the frame, and extremelly small animal figurines peek
+out from behind the vines in places.  Clearly these must have been
+created by a master silversmith.  This was obviously a bed only someone
+wealthy could have owned.  There are braided velvet cords hanging 
+from a few of the corners. 
+~
+E
+desk~
+Made of richly colored mahogany, this desk obviously took someone a 
+long time to carve.  With it's simple spacious design it is  obviously 
+meant as a place for serious study. The top of the desk is inlaid with
+teak to create a picture of a forest glade.  A small luminous orb hangs 
+from a slender chain above the desk.  It's gentle light is easy on the 
+eyes, making it a confortable place to read for hours. Shelves line the
+back of the desk , full to the brim with books of every imaginable
+shape and size. 
+~
+E
+books~
+These books have been very well used.  The bindings are creased and cracked
+as if they have been handled by a thousand readers.  Their topics cover a 
+wide range of topics, including "The History of the Realm", "Celestial 
+Bodies and their Movement", "The Science and Theory of Alchemy", and "Gods, 
+Godesses and Deities".
+~
+S
+#9356
+A Damp tunnel~
+The cavern narrows to no more than a tunnel at this point. The smell of death
+and decay mixed with the damp musty cave is overpowering.  The noxious odor
+seems to permeate everything.  The walls here have been worn smooth from water,
+leaving you few options on where to go.
+~
+93 32777 0
+D1
+The cavern seems to narrow even further in this direction.
+~
+~
+0 0 9357
+D3
+The cavern seems to become much bigger to the west.
+~
+~
+0 0 9354
+S
+#9357
+A Damp tunnel~
+All progress east is stopped here as the damp tunnel becomes too narrow to
+continue any further. Crawling further on hands and knees is not an option.To
+the north a doorway has been hewn from the smooth tunnel stone.  An inscription
+is etched into the rock above the doorway.
+~
+93 32777 0
+D0
+Nothing can be seen through this stone doorway.
+~
+~
+0 0 9358
+D3
+The tunnel becomes tall enough to stand up straight to the west.
+~
+~
+0 0 9356
+E
+inscription~
+Within lies my private fortress.  If you do not bear my invitation
+you shall receive a swift death sentence at the hands of my guards.
+	-Loftwick
+~
+E
+rock~
+Within lies my private fortress.  If you do not bear my invitation
+you shall receive a swift death sentence at the hands of my guards.
+-Loftwick
+~
+E
+doorway~
+Within lies my private fortress.  If you do not bear my invitation
+you shall receive a swift death sentence at the hands of my guards.
+-Loftwick
+~
+S
+#9358
+An ancient ruined hallway~
+This once was a long hallway of an ancient castle, but it has fallen
+into disrepair.  More accurately, it looks as if everything was ripped
+apart by some enraged beast.  Piles of debris line the floor and a broken
+torch is still barely hanging from one wall.
+~
+93 32777 1
+D0
+The hallway seems to continue in this direction.
+~
+~
+0 0 9359
+D2
+You see a low stone doorway, and a small passage beyond.
+~
+~
+0 0 9357
+E
+torch~
+This torch is nothing more than a crude oil lamp on a wooden shaft.  The
+handle has been broken nearly in half, connected only by several long 
+splinters.
+~
+S
+#9359
+A ruined Hallway~
+The hallway turns to the east here leading towards a very large doorway.
+A thin layer of debris still lays scattered across the floor. You sense 
+a great evil ahead.  A pile of armor and bones that was once a warrior 
+lies off to one side of the room.  Whoever ended his life is probably 
+still close nearby. A cool chill fills the air and runs up and down 
+your spine.
+~
+93 32777 1
+D1
+A cathedral-like hall opens to your east.
+~
+~
+0 0 9360
+D2
+Ruins of a hallway extend this direction.
+~
+~
+0 0 9358
+E
+pile~
+A femur and clavicle are the only bones that you can make out besides the
+skull in this messy pile.  They are all partially covered by the leather
+and guilded metal armor that the unfortunate victim had been wearing.
+The leather looks as if rats have been gnawing on it.
+~
+S
+#9360
+A Grand Hall~
+This is truly an immense hall.  The hollow echo of your footsteps 
+reverberates throughout the room.  There are long faded murals painted here 
+of many vile deeds and sacrifices to Karn and Sinat. The horrible acts 
+depicted in the pictures are enough to make almost anyone feel ill.
+~
+93 32777 1
+D1
+A smaller Hall branches off to the east.
+~
+~
+0 0 9361
+D3
+A hallway stretches off to the west.
+~
+~
+0 0 9359
+E
+picture mural~
+As you look on the mural and see the horrible things in it, you are 
+overcome by a feeling of nausea.  Viewing the graphic torture and killings
+it displays takes it's toll on you, and you feel the room starting to spin.
+~
+S
+#9361
+A Dining Hall~
+This is a large room with a long table in the center. Elaborate dinners
+might once have been served here.  Many skeletons lie slumped on the table 
+as if they had been poisoned sitting at the table.  You can almost hear 
+the laughter of the ones who were responsible.
+~
+93 32777 1
+D2
+To the south is a small kitchen.
+~
+~
+0 0 9362
+D3
+An enormous hall adjoins this one.
+~
+~
+0 0 9360
+E
+table~
+This stout table is as thick as a man's arm, and fills much of the room.
+It's top is scarred and scratched from years of abuse by careless soldiers.
+Some of the skeletons which lie slumped on the table still clutch goblets,
+while others rest over their pewter and wood plates. Curiously, bits of
+food remains on some of the plates, as if perhaps rats and other creatures
+did not come into this room.
+~
+S
+#9362
+The Kitchen~
+The stench here is enough to make you gag. Were it not for the cooking
+equipment one might guess this place was a morgue.  Grease and filthy soot
+cover the wood fired oven and grilling pit in the middle of the room.
+Everything smells of rotten flesh and filth. A narrow door leads to a small
+closet to the south, and the dining hall is to the north.
+~
+93 32777 1
+D0
+A large dining hall opens to the north.
+~
+~
+0 0 9361
+D2
+You see a pantry meant to hold the kitchen's provisions.
+~
+~
+0 0 9363
+S
+#9363
+The Pantry~
+This room is hardly more than a large closet.  Shelves that once contained many
+provisions for the kitchen now contain little more than mold and rot.  The 
+floor is covered by slime and scum, and in one corner a set of small rickety 
+stairs lead downward.
+~
+93 32777 1
+D0
+You see the main kitchen which serves the dining hall.  
+~
+~
+0 0 9362
+D5
+You gaze in distaste at the decrepit old stairs. To say they are in disrepair
+would be a massive understatement of their dismal state.  Splinters of wood
+are missing from all of the steps, and the wood looks soft, as if dry rot
+has set in.
+~
+~
+0 0 9364
+E
+food~
+The kitchen staples which had been stored here are in an advanced state of
+decay.  Weevils and other little bugs have nested in the sacks of grain 
+and their burlap bags have weakened and broken open. A mass of indescernible
+green mold fills the corner of one shelf.  Perhaps it was once cheese. 
+~
+E
+stairs~
+You gaze in distaste at the decrepit old stairs. To say they are in disrepair 
+would be a massive understatement of their dismal state.  Splinters of wood
+are missing from all of the steps, and the wood looks soft, as if dry rot
+has set in.
+~
+S
+#9364
+Some rickety stairs~
+This staircase is in ruins, who knows if it will support your weight? The 
+wood looks like it should have rotted through and fallen apart ages ago. 
+To climb back up is no more dangerous than to continue - or is it?
+~
+93 32781 1
+D4
+A set of rickety and dilapidated stairs lead upward. 
+~
+~
+0 0 9363
+D5
+Splintered wood resembling stairs leads below.
+~
+~
+0 0 9365
+S
+#9365
+A hallway~
+You find yourself in a massive hallway. The decorations here were once
+magnificent. Like everything else here, however, a dark and gloomy atmosphere
+has fallen over this room.  You suddenly are keenly aware of your own
+mortality. Perhaps you should not have entered this city afterall. The stairs
+ascend to the pantry above you, and to then north you see a bright light.
+~
+93 32781 1
+D0
+An even bigger hall stretches out before you. Do you dare enter?
+~
+~
+0 0 9366
+D4
+Stairs of dubious strength lead high above the hallway.
+~
+~
+0 0 9364
+S
+#9366
+The Grand Cathedral of Evil~
+You are in awe of this place. You cannot find words to describe the horrors
+portrayed on the walls here. The floor is covered with a slick substance - it 
+looks like blood and entrails. The images on the walls appear to picture this
+very place, as if those acts happened here. The same character is pictured
+in every image, overseeing the sacrifices. He bears an uncanny resemblance
+to the description of Loftwick.
+~
+93 32780 1
+D2
+~
+~
+0 -1 9365
+E
+slab~
+Gazing in the slab that is blocking your exit, you see deep scratches
+where others have frantically tried to escape in vain.  The stone is
+easily as thick as three men - Leaving the way you came is definitely 
+not an option.
+~
+S
+#9367
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9368
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9369
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9370
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9371
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9372
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9373
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9374
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9375
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9376
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9377
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9378
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9379
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9380
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9381
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9382
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9383
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9384
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9385
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9386
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9387
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9388
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9389
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9390
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9391
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9392
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9393
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9394
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9395
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9396
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9397
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9398
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#9399
+Deep in the Helventia Mountains~
+The mountains reach above the clouds all around you, blocking out nearly all
+light. The low light casts errie shadows all around you.  It is impossible to
+tell which way you came from, and you can only guess which way to go.  Through
+the darkness, you can hear horrible groans and terrified screams.  They seem to
+say 'Turn back now, while you still can.'  But alas, you can't tell which way
+back is.
+~
+93 32769 5
+S
+#0
+$~

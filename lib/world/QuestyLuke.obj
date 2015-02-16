@@ -1,0 +1,853 @@
+#26100
+book clues hints~
+Ansel's Clue Book~
+There is a book of clues on the ground here.~
+~
+13 524288 1
+0 0 0 0
+1 10 10
+10
+E
+book~
+1. If you remember where the sikhs used to be, you're pretty close.
+2. Know where the elementals play?  You're in for a shock.
+3. Are you below level 3 don't enter these mines.
+4. If you play this game, be careful not to get checkmated.
+5. To find this piece, you must chop down the mightiest tree in the forest
+   with a herring!
+6. Chances are, the royal snake won't know this piece is here.
+7. This king carries an apple, but I wouldn't eat it.
+8. The Beatles probably didn't have this in mind when they wrote this song.
+9. You can eat the fungus that grows here, but it isn't of the magic variety.
+10. This prince's father is forcing him to marry an ugly princess, but he
+    has nothing to do with the British comedy troupe.
+11. To get to the people who inhabit this area, you must cross the rope
+    bridge beyond the forest of Haon-Dor.
+12. These creatures are part lion, part eagle, and may be guarding a piece.
+13. In the village of half-height folks,  you'll find an item where you'll
+    find some eggs.
+14. Funland doesn't exist anymore, but the man who took that area over has
+    an item where his food is prepared.
+15. You'll find an item here, even though it is not made of blue silk.
+16. Somewhere in the forest near the mighty vampire, you'll find an item.
+    Be careful not to get lost, though.
+17. Somewhere underground, these little green people have an item.
+18. There is an item located in the library of the people who sleep on cots.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26101
+easter egg colorfull~
+A beautifully colored Easter Egg.~
+A beautifully colored easter egg is here nestled in the grass.~
+~
+15 0 1
+50 0 0 0
+40 10 10
+100
+E
+egg easter colored~
+This fantastically designed easter egg, surpasses all comprehension
+with the complexity of its colors and patterns. It is obvious that 
+mere mortal hands made this treasure.
+~
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26102
+chocolate candy piece small~
+A piece of chocolate~
+A delicious looking piece of chocolate.~
+~
+19 0 1
+1 0 0 0
+0 10 10
+100
+E
+candy piece chocolate~
+A tempting morsel of chocolate... can you resist eating just one?
+~
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26103
+lollipop candy small~
+A lollipop~
+A tempting looking lollipop on a short wooden stick~
+~
+19 0 1
+0 0 0 0
+0 10 10
+100
+E
+candy lollipop small~
+A colorfull swirl of hardend candy, awaiting the eager tongue of
+some young child to give it satisfaction...
+~
+E
+candy lollipop small~
+A colorfull swirl of hardend candy, awaiting the eager tongue of
+some young child to give it satisfaction...
+some young child to give it satisfaction...
+~
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26104
+key gilded pretty~
+A richly gilded key~
+A wonderously gilded key, patterned with many swirls of color is resting here.~
+~
+0 0 1
+0 0 0 0
+1 10 10
+100
+E
+key gilded color~
+This key is covered in layers of gilt and ornate patterns,
+each made of swirls of color fantastical to behold.
+~
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26105
+key plain silver~
+A plain steel key.~
+A plain, slightly rusted steel key sits here looking lost and confused.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+E
+steel rusted plain key~
+A slightly rusted steel key, that fits nothing... thats rather 
+boring isn't it?
+~
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26106
+grass short green~
+A patch of lush, green grass~
+A patch of lush green grass, sways slightly in the breeze~
+~
+15 0 0
+200 0 0 0
+20 10 10
+100
+E
+grass green patch~
+A patch of green grass, so comfortable looking that every 
+adventurer should take the opportunity to lay down and admire
+the peacefulness of the forest.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26107
+tree large oak~
+A tall, leafy oak tree~
+A tall, leafy oak tree stands here. Whispers of a breeze playing through
+its upper branches.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+oak tree tall~
+A sturdy oak with plenty of branches for climbing. It seems as 
+if it has weathered many such quests in its time. The years just
+keep on marching steadily on....
+~
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26108
+sleeves bunnyskin~
+A pair of bunnyskin sleeves~
+A soft and furry pair of bunnyskin sleeves are here, not looking to lively...~
+invalid~
+9 469772288 257
+10 205 10 1073749936
+5 500 1000
+10
+E
+sleeves bunny skin ~
+This pair of sleeves is made from the skin of a beautiful 
+rabbit. Who knows where that rabbit came from, or what its
+purpose was, but it does make one fine pair of sleeves!!
+~
+X
+~
+0 0 0
+M
+You sigh in relief as these warm sleeves slip onto your arms~
+$n sighs in contentment as he slips $s bunnyskin sleeves on his arm.~
+You feel a loss of comfort as you remove you snazzy bunnyskin sleeves~
+$n begins to pout as $e removes $s bunnyskin sleeves.~
+A
+13 10
+A
+19 3
+#26109
+rabbit belt hair~
+A belt of woven rabbit hair~
+A belt intricately woven from rabbit hair, rests here, making you think of a giant hairball~
+~
+9 471885824 2049
+5 0 10 5
+10 10 1000
+10
+E
+belt hair rabbit~
+This belt was woven by possibly the finest weavers ever known.
+To be able to create a strong and beautiful belt from the short
+hairs of a rabbit takes an enormous amount of talent. Good thing 
+that some people still have that.
+~
+X
+~
+0 0 0
+M
+You feel a soft and fuzzy feeling inside as you strap the belt across your waist... naughty naughty~
+$n begins to smile in an eerily pleasured way, as $e wears the belt of rabbit hair about $s waist.~
+You feel less satisfied with life as you remove the rabbit hair belt from
+your waist~
+$n has a slightly frustrated look as $e removes the rabbit hair belt from its snug position about $s waist.~
+A
+19 2
+A
+53 5
+#26110
+marshmellow peeps chicks~
+A small marshmellow peep~
+A small, squishy, brightly colored marshmellow chick sits here~
+~
+19 0 1
+1 0 0 0
+10 10 10
+50
+E
+marshmellow colored~
+Made from marshmellows, this small little chicken looks to be able to melt
+in your mouth... go ahead, try one...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26111
+sith robe red~
+The robe of a Sith~
+The robe of a Sith~
+~
+9 65552 9
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26112
+dual red lightsabre sabre~
+Dual Red Lightsabre~
+A Dual Red Lightsabre~
+~
+26 65536 8193
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26113
+red lightsabre sabre~
+A Red Lightsabre~
+A Red Lightsabre~
+~
+0 65536 8193
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26114
+hat pointy~
+A Pointy Hat~
+a pointy hat is lying on the ground.~
+~
+11 524288 131089
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 0
+A
+12 0
+#26115
+belt thick green leather~
+Thick green leather belt~
+a huge, green belt made of leather covers the floor~
+invalid~
+9 150994944 2049
+15 2 0 1073749936
+10 10 100000
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#26116
+robe sith master~
+Robe of the Sith master~
+A robe of ancient dark powers is lying here.~
+invalid~
+9 155191824 1025
+15 0 0 1073749936
+10 10 300000
+10
+E
+This ancient artifact was used by an old Sith Master during the fight against the Jedis.~
+It is woven from a material you never before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.  
+~
+E
+look robe~
+This ancient artifact was used by an old Sith Master during the fight against the Jedis.
+It is woven from a material you never before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.  
+~
+E
+look robe~
+This ancient artifact was used by an old Sith Master during the
+fight against the Jedis.It is woven from a material you never 
+before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.
+~
+X
+~
+0 0 0
+M
+As you wear the robe, your mind becomes corrupted by the dark side.~
+You sense a disturbance in the force, as $n wears $s robe.~
+The dark side of the force looses its grip on you for a moment.~
+Once again the balance of the force has been achieved.~
+A
+19 4
+A
+18 4
+#26120
+turkey skin~
+Turkey Skin~
+Something disgusting is lying here, smelling like jearoms pants~
+invalid~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26121
+Voodoo turkey necklace giblets~
+Voodoo Necklace of Turkey Giblets~
+A necklace with wierd symbols is lying here.~
+invalid~
+11 134217728 5
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+17 20
+A
+52 20
+#26122
+turkey feather belt~
+A Belt made of Turkey feathers~
+There are lying some feathers on the ground here.~
+~
+11 134217728 2049
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#26123
+Diamond tyrkey skin~
+A Diamond covered turkey skin~
+a skin covered with diamonds is lying here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26124
+kombat sleeves mortal~
+Bracers of Mortal Kombat~
+Some bracers are lying here~
+invalid~
+9 134217728 257
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+B
+128
+#26125
+kombat shield mortal zazu~
+Kombat Champion's Shield~
+A long forgotten shield is lying here.~
+~
+9 134217728 513
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+A
+53 10
+B
+40
+#26126
+kombat belt king zazu~
+Belt of the Kombat King~
+Someone has left a kombat belt here~
+~
+9 134217728 2049
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+A
+53 10
+B
+268435456
+#26127
+kombat plate hethra mortal~
+The Kombat Plate~
+Someone has dropped a plate of mortal kombat here.~
+~
+9 134217728 9
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 4
+A
+53 10
+B
+524296
+#26128
+kombat boots mortal aemon~
+The Kombat Boots~
+Someone has dropped some kombat boots.~
+~
+9 134217728 65
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+B
+128
+#26129
+kombat mortal helm trenn~
+The Kombat Helm~
+Someone has dropped a kombat helm here.~
+~
+9 134217728 17
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+B
+128
+#26130
+kombat mortal gloves feanor~
+The Ultimate Kombat Gloves~
+Some gloves of kombat is lying here.~
+~
+9 134217728 129
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+B
+128
+#26131
+kombat mortal leggings sirblade~
+Some Kombat Leggings~
+There are lying some leggings on the ground here.~
+~
+9 134217728 33
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+B
+128
+#26132
+santas red slippers~
+`iSantas HUGE red Slippers~
+`bThere are lying some red slippers here.~
+~
+9 134217728 65
+10 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+#26133
+santas belt red~
+Santas red lether belt~
+A long red lether belt is lying on the ground here~
+~
+9 134217728 2049
+10 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#26134
+cow udder dairy moo qt quest~
+Cow's Udder~
+A fleshy mound of teats rests here, oddly fashioned into a hat.~
+invalid~
+9 402653184 17
+0 0 0 0
+10 10 10
+10
+E
+udder~
+An unfortunate cow seems to have had its udder surgically removed in an effort to preserve its milk-making abilities. This odd battle trophy slowly lactates from its pink spires pointing triumphantly at the sky.  
+Despite it's strangeness, it does have a certain suave look to it.
+~
+E
+cow udder dairy moo qt quest~
+An unfortunate cow seems to have had its udder surgically removed in an effort to preserve its milk-making abilities.  This odd battle trophy slowly lactates from its pink spires pointing triumphantly at the sky.  
+Despite it's strangeness, it does have a certain suave look to it.
+~
+E
+cow udder dairy moo qt quest~
+An unfortunate cow seems to have had its udder surgically removed in an effort to preserve its milk-making abilities.  This odd battle trophy slowly lactates from its pink spires pointing triumphantly at the sky.  Despite it's strangeness, it does have 
+~
+E
+cow udder dairy moo qt quest~
+An unfortunate cow seems to have had its
+udder surgically removed in an effort to preserve its milk-making abilities. This odd battle trophy slowly lactates from its pink spires pointing triumphantly at the sky. Despite its' 
+~
+X
+~
+0 0 0
+M
+Milk drips from the teats of the udder as you pull it tightly over your head.~
+$n squeezes $s head into the cow's udder.~
+The desire to chew cud wanes as you yank off the udder.~
+$n lets out a mournful moo as $e yanks off the udder.~
+A
+13 50
+A
+19 3
+#26135
+udder cow moo qt quest lemon juke dairy~
+Cow's Udder~
+A fleshy mound of teats rests here, oddly fashioned into a hat.~
+~
+9 402653184 17
+0 0 0 0
+10 10 80000
+10
+E
+udder~
+An unfortunate cow seems to have had its udder surgically removed in an
+effort to preserve its milk-making abilities.  This odd battle trophy
+slowly lactates from its pink spires, which point triumphantly to the
+sky.  Despite its strangeness, it does have a certain suave look to it.
+~
+X
+~
+0 0 0
+M
+Milk drips from the teats of the udder as you pull it tightly over your head.~
+$n squeezes $s head into the cow's udder.~
+The desire to chew cud wanes as you yank off the udder.~
+$n lets out a mournful moo as $e yanks off the udder.~
+A
+19 3
+A
+13 50
+#26136
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26137
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26138
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26160
+Ray of Light~
+Ray of Light~
+Something is glowing with a saintly light~
+invalid~
+1 1280 65537
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+#0
+$~

@@ -1,0 +1,117 @@
+#6207~
+-1
+-1
+3050
+3052
+6204
+1.500000
+0.300000
+2
+3
+4
+10
+0
+%s Haven't got that on storage - try list!~
+%s I don't buy!~
+%s I don't buy!~
+%s I don't buy!~
+%s If you have no money, you'll have to go!~
+%s That'll be %d coins.~
+%s Here you have %d coins for that.~
+0
+0
+6207
+0
+6220
+0
+28
+0
+0
+#6208~
+-1
+-1
+-1
+-1
+-1
+1.000000
+0.500000
+5
+0
+0
+0
+0
+%s I haven't got that kind of a weapon.~
+%s You don't carry that weapon.~
+%s I only buy weapons.~
+%s I can't afford such a great weapon.~
+%s sorry, but NO CREDIT!~
+%s That just costs %d coins.~
+%s Here you have %d coins for that.~
+0
+0
+6208
+0
+6218
+0
+28
+0
+0
+#6209~
+-1
+-1
+-1
+-1
+-1
+1.000000
+0.500000
+9
+0
+0
+0
+0
+%s Haven't got that on storage - try list!~
+%s You don't seem to have that.~
+%s I only buy armours.. Go away!~
+%s That is too expensive for me - Try a wizard!~
+%s You can't afford it!~
+%s That'll be %d coins, please.~
+%s You'll get %d coins for it!~
+0
+0
+6209
+0
+6225
+0
+28
+0
+0
+#6210~
+-1
+-1
+3031
+6205
+6206
+1.000000
+0.500000
+1
+15
+17
+0
+0
+%s Haven't got that on storage - try list!~
+%s I don't buy!~
+%s I don't buy!~
+%s I don't buy!~
+%s If you have no money, you'll have to go!~
+%s That'll be %d coins.~
+%s Here you have %d coins for that.~
+0
+0
+6210
+0
+6224
+0
+28
+0
+0
+$~

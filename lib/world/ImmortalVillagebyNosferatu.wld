@@ -1,0 +1,2520 @@
+#28700
+The Main Square and Altar to the Almighty~
+    This bustling square is one of the most beautiful sights your eyes
+have beheld in this lifetime. The street is made of perfectly fitting
+golden cobblestones. There is an immense marble fountain with a statue of
+Zeus, the King of the gods, posing majestically in the middle of it. The
+foot traffic is heavy here with many immortals who you remember from the
+tales your mother used to put you to bed with. More of the immortals you are
+seeing now, however, you can't seem to remember hearing about. Some of them
+are walking fairly quickly with a destination in mind, but most of them seem
+to just be wandering aimlessly and talking to their friends, or to themselves.
+You can see some tent-like structures along the East to West road here, and
+there appear to be more of them on the other main streets.
+~
+287 32768 1
+D0
+Hera Street continues to the North.
+~
+~
+0 -1 28713
+D1
+Zeus Avenue continues to the East.
+~
+~
+0 -1 28701
+D2
+Hera Street continues to the South.
+~
+~
+0 -1 28724
+D3
+Zeus Avenue continues to the West.
+~
+~
+0 -1 28714
+S
+#28701
+Zeus Avenue~
+    The sky is perfectly blue overhead and the sun shines down brightly
+from directly above. The street, made of perfectly aligned cobblestones
+made of pure gold, sparkles brilliantly in the light. It is close to
+blinding but somehow soft and comforting at the same time. People are
+standing all over the place, some standing around talking and others on
+their way somewhere, but not too quickly. The atmosphere is very laid
+back. You get only a couple quick glances, but otherwise the folks don't
+appear to even register your arrival. A street sign made of solid gold 
+posted on a pure marble post claims that this street running East to West
+is Zeus Avenue. The noisy and bustling Main Square can be seen directly
+to the West. A golden, silky tent-like structure shimmers to the North,
+with another golden sign proclaiming it to be Herecles' Fitness Center.
+~
+287 32768 1
+D0
+A tent to the north marks one of this towns business'.
+A sign proclaims it to be Herecles' Fitness Center.
+~
+~
+0 -1 28741
+D1
+Zeus Avenue continues to the East.
+~
+~
+0 -1 28702
+D3
+Zeus Avenue intersects Hera Street to the West to form the towns
+Main Square. It is marked with a huge fountain and statue of Zeus himself.
+~
+~
+0 -1 28700
+S
+#28702
+Zeus Avenue~
+    The sky is perfectly blue overhead and the sun shines down brightly
+from directly above. The street, made of perfectly aligned cobblestones
+made of pure gold, sparkles brilliantly in the light. It is close to
+blinding but somehow soft and comforting at the same time. People are
+standing all over the place, some standing around talking and others on
+their way somewhere, but not too quickly. The atmosphere is very laid
+back. You get only a couple quick glances, but otherwise the folks don't
+appear to even register your arrival. A street sign made of solid gold 
+posted on a pure marble post claims that this street running East to West
+is Zeus Avenue. A golden, silky tent-like structure shimmers to the South,
+with another golden sign proclaiming it to be Atlas' Map Shop.
+~
+287 32768 1
+D1
+Zeus Avenue continues to the East.
+~
+~
+0 -1 28703
+D2
+A golden-silk tent houses a local business to the South.
+A sign proclaims it to be Atlas' Map Shop.
+~
+~
+0 -1 28745
+D3
+Zeus Avenue continues to the West.
+~
+~
+0 -1 28701
+S
+#28703
+Zeus Avenue~
+    The sky is perfectly blue overhead and the sun shines down brightly
+from directly above. The street, made of perfectly aligned cobblestones
+made of pure gold, sparkles brilliantly in the light. It is close to
+blinding but somehow soft and comforting at the same time. People are
+standing all over the place, some standing around talking and others on
+their way somewhere, but not too quickly. The atmosphere is very laid
+back. You get only a couple quick glances, but otherwise the folks don't
+appear to even register your arrival. A street sign made of solid gold 
+posted on a pure marble post claims that this street running East to West
+is Zeus Avenue. This street intersects with another one directly to the
+East. A golden, silky tent-like structure shimmers to the North, with
+another golden sign proclaiming it to be Demeter's Bakery.
+~
+287 32768 1
+D0
+A lovely gold-spun tent houses a business to the North.
+A sign proclaims it to be Demeter's Bakery.
+~
+~
+0 -1 28743
+D1
+Zeus Avenue intersects Ares Street to the East.
+~
+~
+0 -1 28704
+D3
+Zeus Avenue continues to the West.
+~
+~
+0 -1 28702
+S
+#28704
+Intersection of Zeus Avenue and Ares Street~
+    According to the solid gold street sign, this is where Zeus Avenue
+merges with Ares Street. Ares Street is made of shimmering golden 
+cobblestones, as Zeus Avenue was, but they seem to be slightly less 
+lusterous then those named for the King of the Gods. You remember hearing
+about  Ares. He is the cruel and vindictive god of war and revenge. A tall
+golden fence sparkles directly to your East, marking the boundary of this
+amazing city. Past it you can see the pure white, fluffy top of a cloud
+running off into the  distance. You aren't sure if you'd be able to walk
+on those clouds or not, but something tells you that you could. The people
+continue to wander and talk around this place, and the sky is a beautiful
+blue above you.
+~
+287 32768 1
+D0
+Ares Street continues to the North.
+~
+~
+0 -1 28705
+D2
+Ares Street continues to the South.
+~
+~
+0 -1 28732
+D3
+Zeus Avenue continues to the West.
+~
+~
+0 -1 28703
+S
+#28705
+Ares Street~
+     Ares Street is fairly wide, but not nearly as wide as the main
+avenues. It has some foot traffic but is not bustling like they are. Most
+of the people, clad in bright white togas, seem to be on their way to a
+meeting on one of the main avenues. This street is every bit as beautiful
+as those avenues are, however. The golden cobblestones shimmer flawlessly,
+not seeming to have so much as a single scratch or blemish on them. The
+blue sky overhead is also flawless. The beauty of this place is finer and
+more perfect then any painting could aspire to be. To the East is a tall
+golden fence that marks the boundaries of this amazing city in the clouds.
+Beyond it you can see those clouds, the tops of them at least, stretching
+fluffy and pure white into the distance. To the West is the side of a
+tent, which must be a business on another street. To the South is an
+intersection.
+~
+287 32768 1
+D0
+Ares Street continues to the North.
+~
+~
+0 -1 28706
+D2
+Ares Street intersects Zeus Avenue to the South.
+~
+~
+0 -1 28704
+S
+#28706
+Ares Street~
+    Ares Street is fairly wide, but not nearly as wide as the main
+avenues. It has some foot traffic but is not bustling like they are. Most
+of the people, clad in bright white togas, seem to be on their way to a
+meeting on one of the main avenues. This street is every bit as beautiful
+as those avenues are, however. The golden cobblestones shimmer flawlessly,
+not seeming to have so much as a single scratch or blemish on them. The
+blue sky overhead is also flawless. The beauty of this place is finer and
+more perfect then any painting could aspire to be. To the East is a
+brick building unlike the flapping golden tents that mark the other
+buildings in this village. It has no sign on the front, and appears
+to be vacant. To the West is the side of another tent, which must be a
+business on another street. To the North is an intersection.
+~
+287 32768 1
+D0
+Ares Street intersects Apollo AVenue to the North.
+~
+~
+0 -1 28707
+D1
+A brick building to the East stands in stark contrast to the
+other business buildings in this town. It appears to be vacant.
+~
+~
+0 -1 28773
+D2
+Ares Street continues to the South.
+~
+~
+0 -1 28705
+S
+#28707
+Intersection of Apollo Avenue and Ares Street~
+    A beautiful golden street sign mounted on a pure marble post proclaims
+that this is the intersection of Apollo Avenue, running East to West, and
+Ares Street, running North to South. You remember hearing about these
+powerful gods in bedtime stories. Ares, you recall, is the widely hated
+god of war and revenge. His hateful and murderous nature are causes of his
+extreme lack of popularity. You remember hearing that Apollo was Artemis's
+twin brother, known for musical talents on the lyre and as the god of the
+sun. This is a busy spot with locals standing around talking and in no
+particular hurry to get anywhere. The streets are both made of pure golden
+cobblestones that fit together perfectly on the ground. The sky is bright
+blue above and seems almost close enough to touch. To the North and East
+you are blocked by a very tall golden fence, marking the boundaries of 
+this beautiful city. Beyond them is the pure white, fluffy tops of the 
+clouds as far as the eye can see.
+~
+287 32768 1
+D2
+Ares Street continues to the South.
+~
+~
+0 -1 28706
+D3
+Apollo Avenue continues to the West.
+~
+~
+0 -1 28708
+S
+#28708
+Apollo Avenue~
+     Apollo Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the last street that visitors reach, it has
+some of the towns slightly struggling businesses. All of the businesses
+are inside long tent-like structures. They are made of a shiny material
+that could only be described as pure gold spun into silk. They flap gently
+in the light breeze, reflecting the sun to you in amazing patterns of
+golden light. The blue sky stretched above from horizon to horizon. A tall
+golden fence blocks you in to the North, marking the boundary of this
+beautiful city. You can only stand and gape in awe at the wonderous
+mountain that appears in the distance beyond this fence. You can see a
+trail leading from town that turns into foothills in the distance, and
+then climbs to treacherous snowcapped peaks. You can't even hazard a guess
+at the size of this mountain that has been named Olympus. To the South is
+the back of a tent which must be a business on a different street.
+~
+287 32768 1
+D1
+Apollo Avenue intersects Ares Street to the East.
+~
+~
+0 -1 28707
+D3
+Apollo Avenue continues to the West.
+~
+~
+0 -1 28709
+S
+#28709
+Apollo Avenue~
+     Apollo Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the last street that visitors reach, it has
+some of the towns slightly struggling businesses. All of the businesses
+are inside long tent-like structures. They are made of a shiny material
+that could only be described as pure gold spun into silk. They flap gently
+in the light breeze, reflecting the sun to you in amazing patterns of
+golden light. The blue sky stretched above from horizon to horizon. A tall
+golden fence blocks you in to the North, marking the boundary of this
+beautiful city. You can only stand and gape in awe at the wonderous
+mountain that appears in the distance beyond this fence. You can see a
+trail leading from town that turns into foothills in the distance, and
+then climbs to treacherous snowcapped peaks. You can't even hazard a guess
+at the size of this mountain that has been named Olympus. To the South is
+one of the tented businesses. A sign on the front proclaims it to be
+'Pegasus' Stables'.
+~
+287 32768 1
+D1
+Apollo Avenue continues to the East.
+~
+~
+0 -1 28708
+D2
+A long tent to the south houses a local business.
+A sign proclaims it to be Pegasus' Stables.
+~
+~
+0 -1 28761
+D3
+Apollo Avenue continues to the West.
+~
+~
+0 -1 28710
+S
+#28710
+Apollo Avenue~
+     Apollo Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the last street that visitors reach, it has
+some of the towns slightly struggling businesses. All of the businesses
+are inside long tent-like structures. They are made of a shiny material
+that could only be described as pure gold spun into silk. They flap gently
+in the light breeze, reflecting the sun to you in amazing patterns of
+golden light. The blue sky stretched above from horizon to horizon. A tall
+golden fence blocks you in to the North, marking the boundary of this
+beautiful city. You can only stand and gape in awe at the wonderous
+mountain that appears in the distance beyond this fence. You can see a
+trail leading from town that turns into foothills in the distance, and
+then climbs to treacherous snowcapped peaks. You can't even hazard a guess
+at the size of this mountain that has been named Olympus. To the South is
+the back of a tent which must be a business on a different street.
+~
+287 32768 1
+D1
+Apollo Avenue continues to the East.
+~
+~
+0 -1 28709
+D3
+Apollo Avenue intersects Hera Street to the West.
+~
+~
+0 -1 28711
+S
+#28711
+Intersection of Apollo Avenue and Hera Street~
+    A beautiful golden street sign mounted on a pure marble post proclaims
+that this is the intersection of Apollo Avenue, running East to West, and
+Hera Street, running North to South. You remember hearing about these
+powerful gods in bedtime stories. Hera, as you recall, is the Queen of the
+gods, Zeus' wife. She is known for her amazingly quick and brutal temper,
+and her insane jealousy toward any woman Zeus is fond of. You remember
+hearing that Apollo was Artemis's twin brother, known for musical talents
+on the lyre and as the god of the sun. This is a busy spot with locals
+standing around talking and in no particular hurry to get anywhere. The
+streets are both made of pure golden cobblestones that fit together
+perfectly on the ground. The sky is bright blue above and seems almost
+close enough to touch. To the North is a huge sparkling golden gate
+marking the boundary of this amazing city. Far beyond the gate to the
+North you can see the beginning hills building up to rising peaks and
+snowcaps of Mount Olympus.
+~
+287 32768 1
+D0
+A huge golden gate stands here. Far in the distance you can see Mount Olympus.
+~
+gate~
+1 -1 28770
+D1
+Apollo Avenue continues to the East.
+~
+~
+0 -1 28710
+D2
+Hera Street continues to the South.
+~
+~
+0 -1 28712
+D3
+Apollo Avenue continues to the West.
+~
+~
+0 -1 28723
+S
+#28712
+Hera Street~
+     Hera Street, named after the Queen of the gods, is really little more
+then an alley. It is very beautiful, with the blue sky above and the golden
+cobblestones below, but it is much more narrow then the luxurious avenues
+that run East to West. This street is fairly well traveled, but no one stays
+on it to meet their friends and have a discussion. Most of the time it stands
+quite empty. To the East and West are the sides of tents. They must be 
+businesses located on the other streets. Hera Street intersects one of the
+main avenues to the North.
+~
+287 32768 1
+D0
+Hera Street intersects Apollo Avenue to the North.
+~
+~
+0 -1 28711
+D2
+Hera Street continues to the South.
+~
+~
+0 -1 28713
+S
+#28713
+Hera Street~
+     Hera Street, named after the Queen of the gods, is really little more
+then an alley. It is very beautiful, with the blue sky above and the golden
+cobblestones below, but it is much more narrow then the luxurious avenues
+that run East to West. This street is fairly well traveled, but no one stays
+on it to meet their friends and have a discussion. Most of the time it stands
+quite empty. To the East and West are the sides of tents. They must be 
+businesses located on the other streets. You can hear a lot of footsteps
+and chatter coming directly from the South, where Hera Street intersects
+Zeus Avenue to create the Main Square.
+~
+287 32768 1
+D0
+Hera Street continues to the North.
+~
+~
+0 -1 28712
+D2
+Hera Street intersects Zeus Avenue to the South to create the towns
+Main Square which is marked by a great statue and altar dedicated
+to the greatest god, Zeus.
+~
+~
+0 -1 28700
+S
+#28714
+Zeus Avenue~
+    The sky is perfectly blue overhead and the sun shines down brightly
+from directly above. The street, made of perfectly aligned cobblestones
+made of pure gold, sparkles brilliantly in the light. It is close to
+blinding but somehow soft and comforting at the same time. People are
+standing all over the place, some standing around talking and others on
+their way somewhere, but not too quickly. The atmosphere is very laid
+back. You get only a couple quick glances, but otherwise the folks don't
+appear to even register your arrival. A street sign made of solid gold 
+posted on a pure marble post claims that this street running East to West
+is Zeus Avenue. The bustling main square is visible directly to the East. 
+A golden, silky tent-like structure shimmers to the North, with another
+golden sign proclaiming it to be Medusa's Beauty Parlor.
+~
+287 32768 1
+D0
+A golden tent to the North marks another of the towns businesses.
+A sign marks it as Medusa's Beauty Parlor.
+~
+~
+0 -1 28739
+D1
+Zeus Avenue intersects Hera Street to the East to form the towns
+Main Square. It contains a huge statue of the great Zeus himself.
+~
+~
+0 -1 28700
+D3
+Zeus Avenue continues to the West.
+~
+~
+0 -1 28715
+S
+#28715
+Zeus Avenue~
+    The sky is perfectly blue overhead and the sun shines down brightly
+from directly above. The street, made of perfectly aligned cobblestones
+made of pure gold, sparkles brilliantly in the light. It is close to
+blinding but somehow soft and comforting at the same time. People are
+standing all over the place, some standing around talking and others on
+their way somewhere, but not too quickly. The atmosphere is very laid
+back. You get only a couple quick glances, but otherwise the folks don't
+appear to even register your arrival. A street sign made of solid gold 
+posted on a pure marble post claims that this street running East to West
+is Zeus Avenue. A golden, silky tent-like structure shimmers to the South,
+with another golden sign proclaiming it to be The Tavern of the Gods.
+~
+287 32768 1
+D1
+Zeus Avenue continues to the East.
+~
+~
+0 -1 28714
+D2
+A golden tent to the south contains a business.
+A sign says it is the Tavern of the Gods.
+~
+~
+0 -1 28747
+D3
+Zeus Avenue continues to the West.
+~
+~
+0 -1 28716
+S
+#28716
+Zeus Avenue~
+    The sky is perfectly blue overhead and the sun shines down brightly
+from directly above. The street, made of perfectly aligned cobblestones
+made of pure gold, sparkles brilliantly in the light. It is close to
+blinding but somehow soft and comforting at the same time. People are
+standing all over the place, some standing around talking and others on
+their way somewhere, but not too quickly. The atmosphere is very laid
+back. You get only a couple quick glances, but otherwise the folks don't
+appear to even register your arrival. A street sign made of solid gold 
+posted on a pure marble post claims that this street running East to West
+is Zeus Avenue. This street intersects with another one directly to the
+West. A golden, silky tent-like structure shimmers to the North, with
+another golden sign proclaiming it to be Midas' Golden Armoury.
+~
+287 32768 1
+D0
+A shiny golden tent to the North marks a business.
+A sign proclaims it to be Midas' Golden Armoury.
+~
+~
+0 -1 28749
+D1
+Zeus Avenue continues to the East.
+~
+~
+0 -1 28715
+D3
+Zeus Avenue intersects Poseidon Street to the West.
+~
+~
+0 -1 28717
+S
+#28717
+Intersection of Zeus Avenue and Poseidon Street~
+    According to the solid gold street sign, this is where Zeus Avenue
+merges with Poseidon Street. Poseidon Street is made of shimmering golden
+cobblestones, as Zeus Avenue was, but they seem to be slightly less lusterous
+then those named for the King of the Gods. You remember hearing about
+Poseidon. He is one of the most feared gods, the god of the oceans. A tall
+golden fence sparkles directly to your West, marking the boundary of this
+amazing city. Past it you can see the pure white, fluffy top of a cloud
+running off into the  distance. You aren't sure if you'd be able to walk
+on those clouds or not, but something tells you that you could. The people
+continue to wander and talk around this place, and the sky is a beautiful
+blue above you.
+~
+287 32768 1
+D0
+Poseidon Street continues to the North.
+~
+~
+0 -1 28718
+D1
+Zeus Avenue continues to the East.
+~
+~
+0 -1 28716
+D2
+Poseidon Street continues to the South.
+~
+~
+0 -1 28738
+S
+#28718
+Poseidon Street~
+     Poseidon Street is fairly wide, but not nearly as wide as the main
+avenues. It has some foot traffic but is not bustling like they are. Most
+of the people, clad in bright white togas, seem to be on their way to a
+meeting on one of the main avenues. This street is every bit as beautiful
+as those avenues are, however. The golden cobblestones shimmer flawlessly,
+not seeming to have so much as a single scratch or blemish on them. The
+blue sky overhead is also flawless. The beauty of this place is finer and
+more perfect then any painting could aspire to be. To the West is a tall
+golden fence that marks the boundaries of this amazing city in the clouds.
+Beyond it you can see those clouds, the tops of them at least, stretching
+fluffy and pure white into the distance. To the East is the side of a
+tent, which must be a business on another street.
+~
+287 32768 1
+D0
+Poseidon Street continues to the North.
+~
+~
+0 -1 28719
+D2
+Poseidon Street intersects Zeus Avenue to the South.
+~
+~
+0 -1 28717
+S
+#28719
+Poseidon Street~
+     Poseidon Street is fairly wide, but not nearly as wide as the main
+avenues. It has some foot traffic but is not bustling like they are. Most
+of the people, clad in bright white togas, seem to be on their way to a
+meeting on one of the main avenues. This street is every bit as beautiful
+as those avenues are, however. The golden cobblestones shimmer flawlessly,
+not seeming to have so much as a single scratch or blemish on them. The
+blue sky overhead is also flawless. The beauty of this place is finer and
+more perfect then any painting could aspire to be. To the West is a
+business in a tent that is flapping in the light breeze and seems to be
+made of golden silk. A sign on the front says that it is 'Daedalus' Wax
+Wings'.
+~
+287 32768 1
+D0
+Poseidon Street intersects Apollo Avenue to the North.
+~
+~
+0 -1 28720
+D2
+Poseidon Street continues to the South.
+~
+~
+0 -1 28718
+D3
+A small business tent lies to the West.
+A sign proclaims it to be Daedalus' Wax Wings.
+~
+~
+0 -1 28772
+S
+#28720
+Intersection of Apollo Avenue and Poseidon Street~
+    A beautiful golden street sign mounted on a pure marble post proclaims
+that this is the intersection of Apollo Avenue, running East to West, and
+Poseidon Street, running North to South. You remember hearing about these
+powerful gods in bedtime stories. Poseidon, you recall, is the god of the 
+oceans. He is the most widely feared and prayed to god because of the
+necessity of sea travel for survival. You remember hearing that Apollo was
+Artemis's twin brother, known for musical talents on the lyre and as the
+god of the sun. This is a busy spot with locals standing around talking
+and in no particular hurry to get anywhere. The streets are both made of
+pure golden cobblestones that fit together perfectly on the ground. The
+sky is bright blue above and seems almost close enough to touch. To the
+North and West you are blocked by a very tall golden fence, marking the
+boundaries of  this beautiful city. Beyond them is the pure white, fluffy
+tops of the clouds as far as the eye can see.
+~
+287 32768 1
+D1
+Apollo Avenue continues to the East.
+~
+~
+0 -1 28721
+D2
+Poseidon Street continues to the South.
+~
+~
+0 -1 28719
+S
+#28721
+Apollo Avenue~
+     Apollo Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the last street that visitors reach, it has
+some of the towns slightly struggling businesses. All of the businesses
+are inside long tent-like structures. They are made of a shiny material
+that could only be described as pure gold spun into silk. They flap gently
+in the light breeze, reflecting the sun to you in amazing patterns of
+golden light. The blue sky stretched above from horizon to horizon. A tall
+golden fence blocks you in to the North, marking the boundary of this
+beautiful city. You can only stand and gape in awe at the wonderous
+mountain that appears in the distance beyond this fence. You can see a
+trail leading from town that turns into foothills in the distance, and
+then climbs to treacherous snowcapped peaks. You can't even hazard a guess
+at the size of this mountain that has been named Olympus. To the South you
+see the back of a tent which must be a business on another street.
+~
+287 32768 1
+D1
+Apollo Avenue continues to the East.
+~
+~
+0 -1 28722
+D3
+Apollo Avenue intersects Poseidon Street to the West.
+~
+~
+0 -1 28720
+S
+#28722
+Apollo Avenue~
+     Apollo Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the last street that visitors reach, it has
+some of the towns slightly struggling businesses. All of the businesses
+are inside long tent-like structures. They are made of a shiny material
+that could only be described as pure gold spun into silk. They flap gently
+in the light breeze, reflecting the sun to you in amazing patterns of
+golden light. The blue sky stretched above from horizon to horizon. A tall
+golden fence blocks you in to the North, marking the boundary of this
+beautiful city. You can only stand and gape in awe at the wonderous
+mountain that appears in the distance beyond this fence. You can see a
+trail leading from town that turns into foothills in the distance, and
+then climbs to treacherous snowcapped peaks. You can't even hazard a guess
+at the size of this mountain that has been named Olympus. To the South is
+one of the tented businesses. A sign on the front proclaims it to be
+'Eros' Valentine Parlor'.
+~
+287 32768 1
+D1
+Apollo Avenue continues to the East.
+~
+~
+0 -1 28723
+D2
+A beautiful tented business lies to the South.
+A sign proclaims it to be Eros' Valentine Parlor.
+~
+~
+0 -1 28759
+D3
+Apollo Avenue continues to the West.
+~
+~
+0 -1 28721
+S
+#28723
+Apollo Avenue~
+     Apollo Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the last street that visitors reach, it has
+some of the towns slightly struggling businesses. All of the businesses
+are inside long tent-like structures. They are made of a shiny material
+that could only be described as pure gold spun into silk. They flap gently
+in the light breeze, reflecting the sun to you in amazing patterns of
+golden light. The blue sky stretched above from horizon to horizon. A tall
+golden fence blocks you in to the North, marking the boundary of this
+beautiful city. You can only stand and gape in awe at the wonderous
+mountain that appears in the distance beyond this fence. You can see a
+trail leading from town that turns into foothills in the distance, and
+then climbs to treacherous snowcapped peaks. You can't even hazard a guess
+at the size of this mountain that has been named Olympus. To the South is
+the back of a tent which must be a business on a different street.
+~
+287 32768 1
+D1
+Apollo Avenue intersects Hera Street to the East.
+~
+~
+0 -1 28711
+D3
+Apollo Avenue continues to the West.
+~
+~
+0 -1 28722
+S
+#28724
+Hera Street~
+     Hera Street, named after the Queen of the gods, is really little more
+then an alley. It is very beautiful, with the blue sky above and the golden
+cobblestones below, but it is much more narrow then the luxurious avenues
+that run East to West. This street is fairly well traveled, but no one stays
+on it to meet their friends and have a discussion. Most of the time it stands
+quite empty. To the East and West are the sides of tents. They must be 
+businesses located on the other streets. You can hear a lot of footsteps
+and chatter coming directly from the North, where Hera Street intersects
+Zeus Avenue to create the Main Square.
+~
+287 32768 1
+D0
+Hera Street intersects Zeus Avenue to the North to create the towns
+Main Square. There is a huge altar to Zeus himself in the center.
+~
+~
+0 -1 28700
+D2
+Hera Street continues to the South.
+~
+~
+0 -1 28725
+S
+#28725
+Hera Street~
+     Hera Street, named after the Queen of the gods, is really little more
+then an alley. It is very beautiful, with the blue sky above and the golden
+cobblestones below, but it is much more narrow then the luxurious avenues
+that run East to West. This street is fairly well traveled, but no one stays
+on it to meet their friends and have a discussion. Most of the time it stands
+quite empty. To the East and West are the sides of tents. They must be 
+businesses located on the other streets. Hera Street intersects one of the
+main avenues to the South.
+~
+287 32768 1
+D0
+Hera Street continues to the North.
+~
+~
+0 -1 28724
+D2
+Hera Street intersects Artemis Avenue to the South.
+~
+~
+0 -1 28726
+S
+#28726
+Intersection of Artemis Avenue and Hera Street~
+    A beautiful golden street sign mounted on a pure marble post proclaims
+that this is the intersection of Artemis Avenue, running East to West, and
+Hera Street, running North to South. You remember hearing about these
+powerful goddesses in bedtime stories. Hera, you recall, is the Queen of
+the gods, Zeus' wife. She is known for having an amazingly quick and
+brutal temper. You remember hearing that Artemis was Apollo's twin sister,
+known for her hunting skill and as the goddess of the moon. This is a busy
+spot with locals standing around talking and in no particular hurry to get
+anywhere. The streets are both made of pure golden cobblestones that fit
+together perfectly on the ground. The sky is bright blue above and seems
+almost close enough to touch. The golden gate leading in and out of this
+amazing city is directly to the South.
+~
+287 32768 1
+D0
+Hera Street continues to the North.
+~
+~
+0 -1 28725
+D1
+Artemis Avenue continues to the East.
+~
+~
+0 -1 28727
+D2
+A huge gate made of solid gold towers over you.
+~
+gate~
+1 -1 28769
+D3
+Artemis Avenue continues to the West.
+~
+~
+0 -1 28733
+S
+#28727
+Artemis Avenue~
+     Artemis Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the first street that visitors reach, it has
+some of the towns finer businesses. All of the businesses are inside long
+tent-like structures. They are made of a shiny material that could only be
+described as pure gold spun into silk. They flap gently in the light
+breeze, reflecting the sun to you in amazing patterns of golden light. The
+blue sky stretched above from horizon to horizon. A tall golden fence
+blocks you in to the South, marking the boundary of this beautiful city.
+Beyond it the pure white, fluffy tops of clouds stretch out as far as the
+eye can see. To the North is one of the tented businesses. A sign
+proclaims it to be 'Hermes' Air Mail'.
+~
+287 32768 1
+D0
+A golden tent containing a local business sits to the North.
+A sign proclaims it to be Hermes' Air Mail.
+~
+~
+0 -1 28751
+D1
+Artemis Avenue continues to the East.
+~
+~
+0 -1 28728
+D3
+Artemis Avenue intersects Hera Street to the West.
+~
+~
+0 -1 28726
+S
+#28728
+Artemis Avenue~
+     Artemis Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the first street that visitors reach, it has
+some of the towns finer businesses. All of the businesses are inside long
+tent-like structures. They are made of a shiny material that could only be
+described as pure gold spun into silk. They flap gently in the light
+breeze, reflecting the sun to you in amazing patterns of golden light. The
+blue sky stretched above from horizon to horizon. A tall golden fence
+blocks you in to the South, marking the boundary of this beautiful city.
+Beyond it the pure white, fluffy tops of clouds stretch out as far as the
+eye can see. To the North you can see the back of a tent that must be a
+business on a different street.
+~
+287 32768 1
+D1
+Artemis Avenue continues to the East.
+~
+~
+0 -1 28729
+D3
+Artemis Avenue continues to the West.
+~
+~
+0 -1 28727
+S
+#28729
+Artemis Avenue~
+     Artemis Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the first street that visitors reach, it has
+some of the towns finer businesses. All of the businesses are inside long
+tent-like structures. They are made of a shiny material that could only be
+described as pure gold spun into silk. They flap gently in the light
+breeze, reflecting the sun to you in amazing patterns of golden light. The
+blue sky stretched above from horizon to horizon. A tall golden fence
+blocks you in to the South, marking the boundary of this beautiful city.
+Beyond it the pure white, fluffy tops of clouds stretch out as far as the
+eye can see. To the North is one of the tented businesses. A sign
+proclaims it to be 'Aphrodite's Music Shop'.
+~
+287 32768 1
+D0
+A sparkling golden tent houses a business to the North.
+A sign proclaims it to be Aphrodite's Music Shop.
+~
+~
+0 -1 28757
+D1
+Artemis Avenue intersects with Ares Street to the East.
+~
+~
+0 -1 28730
+D3
+Artemis Avenue continues to the West.
+~
+~
+0 -1 28728
+S
+#28730
+Intersection of Ares Street and Artemis Avenue~
+    A beautiful golden street sign mounted on a pure marble post proclaims
+that this is the intersection of Artemis Avenue, running East to West, and
+Ares Street, running North to South. You remember hearing about these
+powerful gods in bedtime stories. Ares, you recall, is the widely hated
+god of war and revenge. His hateful and murderous nature are causes of his
+extreme lack of popularity. You remember hearing that Artemis was Apollo's
+twin sister, known for her hunting skill and as the goddess of the moon.
+This is a busy spot with locals standing around talking and in no
+particular hurry to get anywhere. The streets are both made of pure golden
+cobblestones that fit together perfectly on the ground. The sky is bright
+blue above and seems almost close enough to touch. To the South and East
+you are blocked by a very tall golden fence, marking the boundaries of 
+this beautiful city. Beyond them is the pure white, fluffy tops of the 
+clouds as far as the eye can see.
+~
+287 32768 1
+D0
+Ares Street continues to the North.
+~
+~
+0 -1 28731
+D3
+Artemis Avenue continues to the West.
+~
+~
+0 -1 28729
+S
+#28731
+Ares Street~
+     Ares Street is fairly wide, but not nearly as wide as the main
+avenues. It has some foot traffic but is not bustling like they are. Most
+of the people, clad in bright white togas, seem to be on their way to a
+meeting on one of the main avenues. This street is every bit as beautiful
+as those avenues are, however. The golden cobblestones shimmer flawlessly,
+not seeming to have so much as a single scratch or blemish on them. The
+blue sky overhead is also flawless. The beauty of this place is finer and
+more perfect then any painting could aspire to be. To the East is a
+business in a tent that appears to be made of golden silk, flapping
+gently in the breeze. A sign proclaims it to be 'Asclepius' House of
+Healing'. To the West is the side of another tent, which must be a
+business on another street. To the South is an intersection.
+~
+287 32768 1
+D0
+Ares Street continues to the North.
+~
+~
+0 -1 28732
+D1
+A smaller golden tent houses a business to the East.
+A sign proclaims it to be Asclepius' House of Healing.
+~
+~
+0 -1 28774
+D2
+Ares Street intersects with Artemis Avenue to the South.
+~
+~
+0 -1 28730
+S
+#28732
+Ares Street~
+     Ares Street is fairly wide, but not nearly as wide as the main
+avenues. It has some foot traffic but is not bustling like they are. Most
+of the people, clad in bright white togas, seem to be on their way to a
+meeting on one of the main avenues. This street is every bit as beautiful
+as those avenues are, however. The golden cobblestones shimmer flawlessly,
+not seeming to have so much as a single scratch or blemish on them. The
+blue sky overhead is also flawless. The beauty of this place is finer and
+more perfect then any painting could aspire to be. To the East is a tall
+golden fence that marks the boundaries of this amazing city in the clouds.
+Beyond it you can see those clouds, the tops of them at least, stretching
+fluffy and pure white into the distance. To the West is the side of a
+tent, which must be a business on another street. To the North is an
+intersection.
+~
+287 32768 1
+D0
+Ares Street intersects Zeus Avenue to the North.
+~
+~
+0 -1 28704
+D2
+Ares Street continues to the South.
+~
+~
+0 -1 28731
+D5
+A round lid made of pure gold covers a hole in the middle of the street.
+~
+lid~
+2 28730 28763
+S
+#28733
+Artemis Avenue~
+     Artemis Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the first street that visitors reach, it has
+some of the towns finer businesses. All of the businesses are inside long
+tent-like structures. They are made of a shiny material that could only be
+described as pure gold spun into silk. They flap gently in the light
+breeze, reflecting the sun to you in amazing patterns of golden light. The
+blue sky stretched above from horizon to horizon. A tall golden fence
+blocks you in to the South, marking the boundary of this beautiful city.
+Beyond it the pure white, fluffy tops of clouds stretch out as far as the
+eye can see. To the North is one of the tented businesses. A sign on the
+front proclaims it to be 'Hypnos' Magic Shop and Sleep Aids'.
+~
+287 32768 1
+D0
+A shop in a sparkling golden tent lies to the North.
+A sign proclaims it to be Hypnos' Magic Shop.
+~
+~
+0 -1 28753
+D1
+Artemis Avenue intersects Hera Street to the East.
+~
+~
+0 -1 28726
+D3
+Artemis Avenue continues to the West.
+~
+~
+0 -1 28734
+S
+#28734
+Artemis Avenue~
+     Artemis Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the first street that visitors reach, it has
+some of the towns finer businesses. All of the businesses are inside long
+tent-like structures. They are made of a shiny material that could only be
+described as pure gold spun into silk. They flap gently in the light
+breeze, reflecting the sun to you in amazing patterns of golden light. The
+blue sky stretched above from horizon to horizon. A tall golden fence
+blocks you in to the South, marking the boundary of this beautiful city.
+Beyond it the pure white, fluffy tops of clouds stretch out as far as the
+eye can see. To the North you can see the back of a tent that must be a
+business on a different street.
+~
+287 32768 1
+D1
+Artemis Avenue continues to the East.
+~
+~
+0 -1 28733
+D3
+Artemis Avenue continues to the West.
+~
+~
+0 -1 28735
+S
+#28735
+Artemis Avenue~
+     Artemis Avenue is a very wide road made out of bright golden
+cobblestones. Since it is the first street that visitors reach, it has
+some of the towns finer businesses. All of the businesses are inside 
+long tent-like structures. They are made of a shiny material that could 
+only be described as pure gold spun into silk. They flap gently in the 
+light breeze, reflecting the sun to you in amazing patterns of golden 
+light. The blue sky stretches above from horizon to horizon. A tall 
+golden fence blocks you in to the  South, marking the boundary of this 
+beautiful city. Beyond it the pure white, fluffy tops of  clouds stretch 
+out as far as the eye can see. To the North is one of the tented 
+businesses. A sign on the front proclaims it to be 'Epimethius' 
+Tools of War'.
+~
+287 32768 1
+D0
+A business in a beautiful golden tent is to the North.
+A sign proclaims it to be Epimethius' Tools of War.
+~
+~
+0 -1 28755
+D1
+Artemis Avenue continues to the East.
+~
+~
+0 -1 28734
+D3
+Artemis Avenue intersects Poseidon Street to the West.
+~
+~
+0 -1 28736
+S
+#28736
+Intersection of Artemis Avenue and Poseidon Street~
+    A beautiful golden street sign mounted on a pure marble post proclaims
+that this is the intersection of Artemis Avenue, running East to West, and
+Poseidon Street, running North to South. You remember hearing about these
+powerful gods in bedtime stories. Poseidon, you recall, is the god of the 
+oceans. He is one of the most universally feared gods because of the
+necessity of sea travel for survival. You remember hearing that Artemis
+was Apollo's twin sister, known for her hunting skill and as the goddess
+of the moon. This is a busy spot with locals standing around talking and
+in no particular hurry to get anywhere. The streets are both made of pure
+golden cobblestones that fit together perfectly on the ground. The sky is
+bright blue above and seems almost close enough to touch. To the South and
+West you are blocked by a very tall golden fence, marking the boundaries
+of this beautiful city. Beyond them is the pure white, fluffy tops of the
+clouds as far as the eye can see.
+~
+287 32768 1
+D0
+Poseidon Street continues to the North.
+~
+~
+0 -1 28737
+D1
+Artemis Avenue continues to the East.
+~
+~
+0 -1 28735
+S
+#28737
+Poseidon Street~
+    Poseidon Street is fairly wide, but not nearly as wide as the main
+avenues. It has some foot traffic but is not bustling like they are. Most
+of the people, clad in bright white togas, seem to be on their way to a
+meeting on one of the main avenues. This street is every bit as beautiful
+as those avenues are, however. The golden cobblestones shimmer flawlessly,
+not seeming to have so much as a single scratch or blemish on them. The
+blue sky overhead is also flawless. The beauty of this place is finer and
+more perfect then any painting could aspire to be. To the West is a
+large wooden building much unlike the silken tents that marks the
+other businesses in this town. A sign on the front marks it to be
+'The Traveler's Rest.'
+~
+287 32768 1
+D0
+Poseidon Street continues to the North.
+~
+~
+0 -1 28738
+D2
+Poseidon Street intersects Artemis Avenue to the South.
+~
+~
+0 -1 28736
+D3
+A large wooden building that doesn't really fit in with
+the golden tents of this town lies to the West. A sign
+calls it the Traveler's Rest.
+~
+~
+0 -1 28771
+S
+#28738
+Poseidon Street~
+     Poseidon Street is fairly wide, but not nearly as wide as the main
+avenues. It has some foot traffic but is not bustling like they are. Most
+of the people, clad in bright white togas, seem to be on their way to a
+meeting on one of the main avenues. This street is every bit as beautiful
+as those avenues are, however. The golden cobblestones shimmer flawlessly,
+not seeming to have so much as a single scratch or blemish on them. The
+blue sky overhead is also flawless. The beauty of this place is finer and
+more perfect then any painting could aspire to be. To the West is a tall
+golden fence that marks the boundaries of this amazing city in the clouds.
+Beyond it you can see those clouds, the tops of them at least, stretching
+fluffy and pure white into the distance. To the East is the side of a
+tent, which must be a business on another street.
+~
+287 32768 1
+D0
+Poseidon Street intersects Zeus Avenue to the North.
+~
+~
+0 -1 28717
+D2
+Poseidon Street continues to the South.
+~
+~
+0 -1 28737
+S
+#28739
+Entrance to Medusa's Beauty Parlor~
+    There are mirrors on both sides of the room with shelves jutting out
+from them. On the shelves are hundreds of bottles and jars of various shapes
+and sizes. All of them have little signs on them proclaiming some miricle
+affect they are to have on you when used. Some say "Removes Wrinkles!" and
+others talk about "Adds Color!". None of them seem like they could be of
+much particular use to you on your journey. The counter is to the North
+and the street is back to the South.
+~
+287 32776 0
+D0
+The counter of the store lies to the North.
+~
+~
+0 -1 28740
+D2
+Zeus Avenue lies back to the South.
+~
+~
+0 -1 28714
+S
+#28740
+Medusa's Beauty Parlor~
+    The shelf lined mirrors continue to the far end of this golden silky
+tent. The sun shines brightly through the thin material, making it almost
+as bright inside as it is out. There is a large counter with a cash register
+on top of it. Also on the counter are a few small displays of "Best-Selling"
+beauty aids. Behind the counter is the complete opposite of beauty, Medusa.
+~
+287 32776 0
+D2
+The rest of the shop and the street lie to the South.
+~
+~
+0 -1 28739
+S
+#28741
+Entrance to Herecles' Fitness Center~
+    This tent is full of excercise equipment. The desire to be beautiful
+in this place is apparent by looking at the huge pools of sweat formed
+at the base of most of the well-used machines. Most of them are very
+high-tech looking, nothing like you have ever encountered before. Then off
+in the corner are the old fashioned rock barbells that remind you of the
+ones you used to lift. There are little displays between some of the
+machines of strange elixers and protein drinks that make for a more effective
+workout. There is a counter to the North, and the street is back to the South.
+~
+287 32776 0
+D0
+The counter of the center lies to the North.
+~
+~
+0 -1 28742
+D2
+Zeus Avenue lies back to the South.
+~
+~
+0 -1 28701
+S
+#28742
+Heracles' Fitness Center~
+    There are some displays on either side of the counter here, showing
+off some "Natural Steroids" and something that is supposed to "Buff
+up your glut!" whatever that means. On the counter is an old-fashioned cash
+and behind it is shelves of various health products and a massive hulk of a
+shop keeper. This huge, beastly looking fellow can only be Herecles.
+~
+287 32776 0
+D2
+The rest of the center and the street lie back to the South.
+~
+~
+0 -1 28741
+S
+#28743
+Entrance to Demeter's Bakery~
+    This bakery gives off amazingly wonderful scents that make your mouth
+water uncontrollably. There are closed glass cases on both sides of the
+golden silky tent, displaying freshly baked goods. All of the breads and
+cakes look absolutely perfect, not a single flaw of any kind in sight.
+You can hear the sounds of a churning machine ahead. There is a counter
+to the North and the street is back to the South.
+~
+287 32776 0
+D0
+The counter of this store lies to the North.
+~
+~
+0 -1 28744
+D2
+Zeus Avenue lies back to the South.
+~
+~
+0 -1 28703
+S
+#28744
+Demeter's Bakery~
+    There is a chest-high glass display case full of freshly baked breads
+and cakes here, also serving as the counter. There is a cash register on
+top of it, along with bags and a price list. Behind the counter is a mixing
+machine working on some dough and a lovely shop keeper waiting to collect
+some. This must be Demeter, the goddess of grains.
+~
+287 32776 0
+D2
+The rest of the store and the street lie back to the South.
+~
+~
+0 -1 28743
+S
+#28745
+Entrance to Atlas' Map Shop~
+    On the silky golden tent walls are posted maps of what seems to be
+every part of the world. Many of these maps are of places you have never
+even heard of. They show paths through immense mountains, underground
+caverns and waterfalls, forest paths, strange cities, and much more.
+There is a counter near the far wall to the South, and the street is back
+to the North.
+~
+287 32776 0
+D0
+Zeus Avenue lies back to the North.
+~
+~
+0 -1 28702
+D2
+The counter to this shop lies to the South.
+~
+~
+0 -1 28746
+S
+#28746
+Atlas' Map Shop~
+    The maps continue to line the walls. Something that catches your
+attention is that you can't find a map of Mount Olympus itself. The
+golden silky roof of this tent lets through plenty of sunlight to see
+all the maps of someones amazing travels. Someone would have to be very
+adventurous to go out and map all these places. There is a counter near the
+back wall with some maps spread out on it. There are a few bins next to it
+with maps neatly folded and ready for sale inside. Behind the counter is the
+famous titan, Atlas.
+~
+287 32776 0
+D0
+The rest of this shop and the street lie to the North.
+~
+~
+0 -1 28745
+S
+#28747
+Entrance to the Tavern of the Gods~
+    This is the favorite drinking and meeting spot for most of the local
+immortals. Beauty and drink are the most important things to these folks,
+as is evidenced by the huge amounts of immortal coin this bar takes in
+every night. There are dozens of round tables surrounded by chairs around
+the room. The place isn't too packed at the moment, but you can tell that
+it quite frequently is. The bar is to the South, and the street is back
+to the North.
+~
+287 32776 0
+D0
+Zeus Avenue lies back to the North.
+~
+~
+0 -1 28715
+D2
+The bar is located to the South.
+~
+~
+0 -1 28748
+S
+#28748
+The Tavern of the Gods~
+    There are more round tables around the room and a long bar across
+it near the back wall. Behind the bar is a tall series of shelves that holds
+the largest array of alchoholic beverages you have ever laid your eyes on.
+This bar is very well stocked, that's for sure. There is a sign on the bar
+with a price and specials list. There is a large round satyr behind the
+cash register who could only be the god of drink, Dionysus.
+~
+287 32776 0
+D0
+The rest of the place and the street are North of here.
+~
+~
+0 -1 28747
+S
+#28749
+Entrance to Midas' Golden Armoury~
+    The walls are covered with hanging armors. All of them look to be
+extremely well crafted, and made of pure gold. They glimmer and sparkle in
+the light that leaks through the thin roof of the silky tent. Between some
+of the armors are paintings of brave adventures in victorious poses
+while wearing the sparkling golden armors that Midas created with his
+unique gift. There is a golden counter to the North and the street is
+back to the South.
+~
+287 32776 0
+D0
+The counter of this store is to the North.
+~
+~
+0 -1 28750
+D2
+Zeus Avenue lies back to the South.
+~
+~
+0 -1 28716
+S
+#28750
+Midas' Golden Armoury~
+    There are display cases on the walls here and behind the counter
+that show off Midas' finest works. These exquisite armors are just too
+perfect to ever see battle. The counter near the back wall is made of pure
+gold, as is the cash register sitting on top of it. It is clear that while
+the gift of turning any touched item into gold is a blessing, it is just
+as much a curse. The man with the golden touch himself, Midas, is standing
+behind the counter here, looking at you expectantly.
+~
+287 32776 0
+D2
+The rest of the shop and the street lie to the South.
+~
+~
+0 -1 28749
+S
+#28751
+Entrance to Hermes' Air Mail~
+    This is the start of a very neat and organized mailroom. There are
+bins lining both walls marked incoming and outgoing to different areas
+of both god and mortal realms. The golden silky tent flaps gently overhead
+and the thin material allows plenty of sunlight to enter this place. There
+is a counter to the North and the street is back to the South.
+~
+287 32776 0
+D0
+The counter and shopkeeper are to the North.
+~
+~
+0 -1 28752
+D2
+Artemis Avenue lies back to the South.
+~
+~
+0 -1 28727
+S
+#28752
+Hermes' Air Mail~
+    There are more incoming and outgoing bins neatly organized along
+the walls. There are also neat stacks of blank postcards and empty packages
+for future sale and use. This place seems remarkably well run. The person
+responsible for that now stands behind the counter near the far wall here,
+the legendary messenger of the gods, Hermes.
+~
+287 32776 0
+D2
+The rest of the store and the street are back to the South.
+~
+~
+0 -1 28751
+S
+#28753
+Entrance to Hypnos' Magic Shop and Sleep Aids~
+    There are shelves of potions and medications in this tent. Hundreds
+of elixers line the walls, each offering a unique and amazing affect.
+Cures, enhancements, and protections are only the beginning of the possible
+purposes for these drinks. There are also some rolled up scrolls with
+unknown affects. Best to be wary where magic is concerned. There is a counter
+at the far end of the room, and the street is back to the South.
+~
+287 32776 0
+D0
+The counter of the Magic Shop lies to the North.
+~
+~
+0 -1 28754
+D2
+Artemis Avenue lies back to the South.
+~
+~
+0 -1 28733
+S
+#28754
+Hypnos' Magic Shop and Sleep Aids~
+    The shelves lined with bottles and scrolls continue up to the counter
+near the far wall. There are several small cauldron-shaped pots simmering
+over a fire behind the counter. Plenty of new potions being brewed for
+needy customers. The thin silky material of the tent overhead lets in plenty
+of light thankfully, you can't help but think that this could be a
+frightening scene in the dark. Hypnos, the god of sleep, is behind the
+counter here waiting for your order.
+~
+287 32776 0
+D2
+The rest of the business and the street lie to the South.
+~
+~
+0 -1 28753
+S
+#28755
+Entrance to Epimethius' Tools of War~
+   Some of the finest weapons ever created hang on the walls here in and
+out of large display cases. Huge broadswords, mighty axes, and immense
+spears are only the begining of this amazing arsenal. There are large
+portraits between weapons of mighty warriors standing triumphantly over
+their beaten foe, sword raised high. There are more cases and a counter
+ahead, and the street is back to the South.
+~
+287 32776 0
+D0
+The counter of this establishment lies to the North.
+~
+~
+0 -1 28756
+D2
+Artemis Avenue lies back to the South.
+~
+~
+0 -1 28735
+S
+#28756
+Epimethius' Tools of War~
+    The amazing weapons and inspiring portraits continue lining the walls
+of this silky smooth and yet amazingly sturdy tent. The weapons on the
+walls here are of incredible quality, possibly well forged enough to
+challenge Hephaestus himself. In fact, for a good long time locals
+have argued and debated over whether or not these weapons were in fact
+shipped down here from Hephaestus' shop far into the highest peaks of
+Mount Olympus. There is a counter near the far wall, and behind it is 
+one of the most infamous gods in greek lore, Epimethius.
+~
+287 32776 0
+D2
+The rest of the business and the street lie back to the South.
+~
+~
+0 -1 28755
+S
+#28757
+Entrance to Aphrodite's Music Shop~
+    The walls are lined with glass display cases containing various kinds
+of musical instruments. Some you recognize, and some you don't. You pick
+out a drum, a flute, a horn, and a guitar right away. Some of the others are
+similar but different. There is music playing in the background to set a
+buying mood. The golden silky material of the tent flaps gently overhead
+and allows plenty of sunlight in. The light makes the glass fronts
+of the cases sparkle brilliantly. There is a counter near the far wall
+to the North, and the street is back to the South.
+~
+287 32776 0
+D0
+The counter of the shop lies to the North.
+~
+~
+0 -1 28758
+D2
+Artemis Avenue lies back to the South.
+~
+~
+0 -1 28729
+S
+#28758
+Aphrodite's Music Shop~
+    The display cases continue to line the walls, full of strange and
+beautiful musical instruments, crafted and imported from all corners
+of the world. There is a counter near the far wall, with a cash register on
+top of it. The legendary goddess of love and beauty, Aphrodite, stands
+behind the counter, looking sad and beautiful. You can't help but wonder
+how the most beautiful of all the goddesses got stuck selling instruments
+while the ugliest is selling beauty aids about a block away. Sad, but true.
+~
+287 32776 0
+D2
+The rest of the store and the street lie to the South.
+~
+~
+0 -1 28757
+S
+#28759
+Entrance to Eros' Valentine Parlor~
+    The walls of this tent are heavilly decorated with red hearts and
+flowers and lace. There is soft music playing and the scent of incense wafts
+from further in the tent. The light coming through the thin silkiness of
+the ceiling is dimmer then the other businesses. There is the definite feel
+of a mood being set here. There is a counter to the South, and the street
+is back to the North.
+~
+287 32776 0
+D0
+Apollo Avenue lies back to the North.
+~
+~
+0 -1 28722
+D2
+The counter of the parlor lies to the South.
+~
+~
+0 -1 28760
+S
+#28760
+Eros' Valentine Parlor~
+    The red and pink hearts continue lining the walls here, joined by
+some lacy material and some flowers. The soft slow music is coming from
+a red jukebox up against the far wall. There is a counter here with
+a cash register and a plate full of burning incense on top of it. There are
+bins on the side wall marked 'Incoming' and 'Outgoing'. Behind the counter
+is none other then the god of love, Eros.
+~
+287 32776 0
+D0
+The rest of the shop and the avenue lie to the North.
+~
+~
+0 -1 28759
+S
+#28761
+Entrance to Pegasus' Stables~
+    This tent has a narrow strip to walk through with stables on either
+side along the walls. In each stable is one of the famed winged horses.
+There was a time when Pegasus was thought to be the last, but now they
+are a thriving breed that enjoys serving the gods as mounts. They whicker
+softly and stomp their feet while munching on some oats. This stable has
+none of the disgusting animal smells that you usually associate with
+stables. There is a counter to the South, and the street to the North.
+~
+287 32776 0
+D0
+Apollo Avenue lies back to the North.
+~
+~
+0 -1 28709
+D2
+The counter of the stable lies to the South.
+~
+~
+0 -1 28762
+S
+#28762
+Pegasus' Stables~
+    The stables continue lining the walls on either side. Almost all of the
+spots are filled by one of the most famous of creatures, a winged horse.
+The thin material of the tent lets plenty of light into this place, and a
+gentle breeze sweeps through. There is a counter near the South wall with
+some books and pens on top of it. Behind it is the most famous of the winged
+horses himself, Pegasus.
+~
+287 32776 0
+D0
+The rest of the stable and the street lie to the North.
+~
+~
+0 -1 28761
+S
+#28763
+Sewers~
+    You have found your way down into the Immortal Village's sewer
+system. The underground pipe system dosen't appear to be necessary,
+as it is completely spotless. There is no noticeable smell of any
+kind down here. The pipe is a very tight fit, crawling room only.
+If you are claustrophobic, this would be the time to turn back.
+There is no way to tell where this leads.
+~
+287 33037 0
+D0
+The sewers continue into darkness to the North.
+~
+~
+0 -1 28764
+D4
+The golden lid above covers the way back to Ares Street.
+~
+lid~
+2 28730 28732
+S
+#28764
+Sewers~
+    This pipe seems to twist and turn its way under the village. You
+can't figure out why they would bother building it in the first place if
+it wasn't really needed. Was someone just trying to live like they had
+in their mortal past? The tunnel makes a painfully sharp turn to the
+East here, and seems to make another ahead. Your back rubs against the
+top of the tunnel as you crawl, and your limbs brush against the sides.
+Now that you have come this far, better to continue then go back.
+~
+287 33037 0
+D1
+The sewers continue into darkness to the East.
+~
+~
+0 -1 28765
+D2
+The sewers continue into darkness to the South.
+~
+~
+0 -1 28763
+S
+#28765
+Sewers~
+    The pipe makes another sharp turn to the North here. The bends in
+the pipe make the travel extremely slow. You don't hear any of the sounds
+that you have over the years and adventures learned to always go with
+sewer travel. There is no distant dripping, no scurrying rodents, and
+not a single echo reaches your ears. The only sound is your shuffling
+and your labored breathing. You can just make out another corner ahead.
+~
+287 33037 0
+D0
+The sewers continue into darkness to the North.
+~
+~
+0 -1 28766
+D3
+The sewers continue into darkness to the West.
+~
+~
+0 -1 28764
+S
+#28766
+Sewers~
+    The pipe makes yet another sharp turn here, and your body starts
+to ache from the contortions it is forced through to squeeze around
+each of those turns. The pipe feels smaller and smaller to you as you
+proceed, and the fear of getting eternally stuck down here dances
+around in your head. It could just be your imagination, but it seems
+as though you can see some sort of dim light from ahead that isnt
+coming from your light.
+~
+287 33037 0
+D1
+The sewers continue into darkness to the East.
+~
+~
+0 -1 28767
+D2
+The sewers continue into darkness to the South.
+~
+~
+0 -1 28765
+S
+#28767
+Sewers~
+    The pipe ends abruptly here, apparently not having been completed
+back whenever some foolish immortal in denial of his own immortality
+decided to build it. You notice the source of that strange glow
+directly below you. There is a jagged hole in the bottom of the pipe
+right at the end, and some sort of chamber beneath it. That jagged
+hole is the first sign of imperfection you have seen in this place.
+You can drop down into the chamber and see what is there, or start
+crawling backward to the entrance, as there is no room to turn around.
+~
+287 33037 0
+D3
+The sewers continue into darkness to the West.
+~
+~
+0 -1 28766
+D5
+The sewers end in a dimly glowing chamber just below here.
+~
+~
+0 -1 28768
+S
+#28768
+A Glowing Chamber~
+    This place far below the golden cobblestones of the Immortal
+Village glows dimly an eerie green color that seems to emanate from
+the walls. The light is just barely enough to see by. The room is small
+and square, walled in some sort of stone. There is nothing else in this
+room at all. Even though that appears to be the case, you can't shake
+the feeling that you are being watched, and closely. It feels like there
+is a presence here, and that it doesn't like your intrusion.
+~
+287 32777 0
+D4
+You can exit the glowing chamber for the darkness of the sewers
+just up from here.
+~
+~
+0 -1 28767
+S
+#28769
+Entrance to the Village of Immortality~
+    You stand in awe, able only to gape, open-mouthed, at the beauty that
+now spreads out before you. Directly in front of you is an enormous gate
+made of solid gold that stretches to the East and West as far as you can
+see. Beyond the gate you see what appears to be a city street set on top
+of the clouds. You can see a great number of people walking around and talking
+merrily, and a number of tent-like structures that might be shops of some
+kind. When you look up you can see the bright sun and endless blue sky in
+all directions. The gate ahead dosent appear to be locked or guarded.
+~
+287 32772 1
+D0
+A huge gate made of solid gold towers over you.
+~
+gate~
+1 -1 28726
+D5
+The stairs descend and disappear into the fluffy white clouds.
+~
+~
+0 -1 28775
+E
+gate~
+The gate is huge, towering over you with its sparkling golden glow. The sun
+glints off of it, making it look even more beautiful. Despite the immense
+size of this golden gate, it seems to weigh almost nothing as it gives
+easily when pushed.
+~
+S
+#28770
+Gateway to Olympus~
+    A trail opens up before you as you pass out of the back gate of the
+Immortal Village. The trail leads up to rolling hills, steep trails,
+high cliffs, and eventually the high snowy peaks of the grandest mountain
+that exists. There is still one thing between you and a clear shot at your
+goal though. A massive hulking beast of a creature blocks your path to
+the sacred rock.
+~
+287 32772 1
+D0
+A trail opens up and leads into rolling hills, steep mountain
+trails, and eventually the massive rising peaks of Olympus.
+~
+~
+0 -1 28800
+D2
+A huge golden gate leading back into the city.
+~
+gate~
+1 -1 28711
+S
+#28771
+Entrance to The Traveler's Rest~
+    This building seems slightly out of place in the immortal village.
+It is made of tall wooden planks. It has three steps leading up to a
+wooden plank porch. The building is very old fashioned looking all the
+way down to the large, dusty front windows and squeaky bat-wing doors.
+The roof is held up by wooden beams on the corners of the porch. You
+can hear the sounds of loud talking and a piano plinking from inside.
+This taste of the old days seems to show that the gods do have a taste
+for fun and the mortal way of life.
+~
+287 33288 0
+D1
+Poseidon Street lies back to the East.
+~
+~
+0 -1 28737
+D3
+The main hall of the Rest lies to the West.
+~
+~
+0 -1 28790
+S
+#28772
+Daedalus' Wax Wings!~
+    This small tent shop is where the master inventor, Daedalus, sells
+his most famous invention to people. Wax wings are great fun for adventurers
+with weary legs. They allow you to fly like the birds! There are wax wings
+of various shapes and sizes hanging up on the walls. Signs attatched to
+them proclaim them to be "The World's Greatest Marvel!" and "Made from
+50% wax and 50% magic straight from Olympus!". It is obvious that in
+addition to being a great inventor, Daedalus is also a great salesman.
+He stands behind the counter here, waiting to tally your purchase.
+~
+287 32776 0
+D1
+Poseidon Street lies back to the East.
+~
+~
+0 -1 28719
+D2
+There is a small door behind a pile of merchandise.
+~
+door~
+2 28728 28797
+S
+#28773
+Vacant Space~
+    This building isn't a tent like the rest, but an actual brick
+structure like the ones you grew up around. It is a little crumbly
+now, and dosen't look like it was ever completely finished. You 
+wonder why, with that amazing golden silk fabric and the beautiful
+weather in this place, someone would want to make a building using
+the old mortal ways of brick. Is it possible that someone isn't
+fully content with their immortality, and is trying to relive
+their mortal days somehow? There is no way to tell now as this place
+looks to be long abandoned. The street is back to the West.
+~
+287 32776 0
+D0
+Looking through a small hole in the wall you see an alley.
+~
+hole~
+9 -1 28781
+D3
+Ares Street lies back to the West.
+~
+~
+0 -1 28706
+S
+#28774
+Asclepius' House of Healing~
+    This small tent is where the god of healing works his magic for
+a small fee. There are several cots lining the floor and chairs against
+the wall. There are no patients here currently, but from the look of the
+place they come and go. Why would an immortal being need healing you ask?
+Maybe the great Asclepius can offer more then just physical healing.
+There is a counter against the back wall with a concerned soul, who could
+only be Asclepius himself, looking at you from behind it. The street is
+back to the West.
+~
+287 32776 0
+D3
+Ares Street lies back to the West.
+~
+~
+0 -1 28731
+S
+#28775
+The Golden Staircase~
+    You can no longer see the ground beneath you, only the tops of fluffy
+white clouds as far as you can see in all directions. As thick as they look
+you almost feel you could step off of this solid gold staircase and walk on
+top of them. The sudden bright sunlight as you left the shade of the clouds 
+has blinded you temporarily but you can almost see the end of this stairway
+and the start of something even more magnificent just up ahead.
+~
+287 32768 5
+D4
+The stairs meet their destination just up ahead.
+~
+~
+0 -1 28769
+D5
+The stairs descend and disappear into the fluffy white clouds.
+~
+~
+0 -1 28776
+S
+#28776
+The Golden Staircase~
+    You have finally reached the clouds that have blurred your vision of
+this stairway's final destination since you began your climb. The clouds
+are quite thick and seem to add a chill to the air. You can only see a few
+feet ahead of and behind you in these clouds, but you are close to leaving
+them behind. The stairs continue their ascent upward.
+~
+287 32768 5
+D4
+A blur of white clouds keeps you from seeing what lies ahead.
+~
+~
+0 -1 28775
+D5
+You can no longer see the ground below.
+~
+~
+0 -1 28777
+S
+#28777
+The Golden Staircase~
+    You are ascending an amazing staircase of solid gold. As you continue
+your climb and the ground gets smaller and smaller below the staircase, you
+feel more and more excited about what you might see at the top. Despite
+the high altitude and lack of handrails you don't feel at all frightened.
+The stairs which seemingly appeared from nowhere and have nothing supporting
+them, continue up and disappear into the clouds.
+~
+287 32768 5
+D4
+The stairs ascend toward the clouds above.
+~
+~
+0 -1 28776
+D5
+The stairs descend toward the ground below.
+~
+~
+0 -1 28778
+S
+#28778
+The Golden Staircase~
+    You are ascending an amazing staircase of solid gold. As you continue
+your climb and the ground gets smaller and smaller below the staircase, you
+feel more and more excited about what you might see at the top. Despite
+the high altitude and lack of handrails you don't feel at all frightened.
+The stairs which seemingly appeared from nowhere and have nothing supporting
+them, continue up and disappear into the clouds.
+~
+287 32768 5
+D4
+The stairs ascend toward the clouds above.
+~
+~
+0 -1 28777
+D5
+The stairs descend toward the ground below.
+~
+~
+0 -1 28779
+S
+#28779
+The Golden Staircase~
+    You are ascending an amazing staircase of solid gold. As you continue
+your climb and the ground gets smaller and smaller below the staircase, you
+feel more and more excited about what you might see at the top. Despite
+the high altitude and lack of handrails you don't feel at all frightened.
+The stairs which seemingly appeared from nowhere and have nothing supporting
+them, continue up and disappear into the clouds.
+~
+287 32768 5
+D4
+The Golden Stairs ascend toward the clouds above.
+~
+~
+0 -1 28778
+D5
+The stairs descend toward the ground below.
+~
+~
+0 -1 28780
+S
+#28780
+The Golden Staircase~
+    You are ascending an amazing staircase made of solid gold. You can
+still see the ground directly below you, and the top of the stairs is
+hidden from your view by the clouds. The stairs seemed to have come from
+nowhere and have nothing supporting them. There are no handrails but you
+still feel a warmth and safety as you climb higher. These must lead to a
+very spectacular sight.
+~
+287 32768 5
+D4
+The Golden Staircase climbs steadily toward the bank of clouds in the sky.
+~
+~
+0 -1 28779
+D5
+~
+~
+0 -1 28542
+S
+#28781
+A dark alley~
+    You have emerged in a dark, narrow alley. This is completely out
+of place in the bright beauty of the rest of this city. The brick wall
+of the vacant building lines the alley to the South and a brick wall
+of another building lines to the North. You don't remember seeing
+another brick building when you were looking from the street...
+The alley is blocked to the West by a pile of rock and continues
+in darkness to the East.
+~
+287 32769 1
+D1
+A dark alley leads to the East.
+~
+~
+0 -1 28782
+D2
+Through a hole in the wall you can see an abandoned shop.
+~
+hole~
+9 -1 28773
+S
+#28782
+A dark alley~
+    The dark, brick-lined alley continues on. There is a great deal of
+litter covering the ground. There are dingy bottles, filthy rags, and
+battered old pieces of paper. You can't tell through the filth if the
+road here was originally golden cobblestones or not. This is a bit of
+dirty reality in an otherwise perfect and beautiful sanctuary. The
+alley is somehow extremely dark in spite of the brightness of the street
+which lies only several feet away. It continues to the East and West.
+~
+287 32769 1
+D1
+A dark alley leads to the East.
+~
+~
+0 -1 28783
+D3
+A dark alley leads to the West.
+~
+~
+0 -1 28781
+S
+#28783
+A dark alley~
+    The filthy dark alley ends here at a tall brick wall with junk piled
+up against it. You can't get over how out of place this alley it. The
+trash left all over the place is like sacrilege in a holy place. It seems
+as if someone is mocking all that the beautiful immortal village is meant
+to stand for. There is a large non-descript steel door to the North. The
+alley leads back to the West.
+~
+287 32769 1
+D0
+A heavy black iron door is barely visible in the darkness.
+~
+door~
+2 28729 28796
+D3
+A dark alley leads to the West.
+~
+~
+0 -1 28782
+S
+#28784
+Pluto's Secret Night Club~
+    This is a very large room with a high ceiling. Candles glow in holders
+on the walls and in a large holder in the center of the far wall. In the
+candles dim glow you can't see anyone else in this room, but you know
+that there are other people or creatures present. You can hear some sort
+of worshiping chant coming from all over the room, and the rhythmic bang
+of a large drum. You see movement from the corners of your eyes but when
+you turn to look straight on you see no one. You gaze in horror at the
+sacrifices which hang bloodilly from hooks on the walls. Most of the
+pieces of meat appear to have once been parts of a goat, but many are
+indistinguishable. Something slick coats the floor but you can't see it
+in the candles dim glow. A deep growl comes from somewhere in the room.
+It might not be a bad idea to turn back and leave this unholy place.
+~
+287 42504201 0
+D0
+You see only darkness.
+~
+~
+0 -1 28787
+D1
+You see only darkness.
+~
+~
+0 -1 28785
+D2
+You see only darkness.
+~
+~
+0 -1 28796
+D3
+You see only darkness.
+~
+~
+0 -1 28786
+S
+#28785
+Pluto's Secret Night Club~
+    This is a very large room with a high ceiling. Candles glow in holders
+on the walls and in a large holder in the center of the far wall. In the
+candles dim glow you can't see anyone else in this room, but you know
+that there are other people or creatures present. You can hear some sort
+of worshiping chant coming from all over the room, and the rhythmic bang
+of a large drum. You see movement from the corners of your eyes but when
+you turn to look straight on you see no one. You gaze in horror at the
+sacrifices which hang bloodilly from hooks on the walls. Most of the
+pieces of meat appear to have once been parts of a goat, but many are
+indistinguishable. Something slick coats the floor but you can't see it
+in the candles dim glow. A deep growl comes from somewhere in the room.
+It might not be a bad idea to turn back and leave this unholy place.
+~
+287 42504201 0
+D0
+You see only darkness.
+~
+~
+0 -1 28788
+D3
+You see only darkness.
+~
+~
+0 -1 28784
+S
+#28786
+Pluto's Secret Night Club~
+    This is a very large room with a high ceiling. Candles glow in holders
+on the walls and in a large holder in the center of the far wall. In the
+candles dim glow you can't see anyone else in this room, but you know
+that there are other people or creatures present. You can hear some sort
+of worshiping chant coming from all over the room, and the rhythmic bang
+of a large drum. You see movement from the corners of your eyes but when
+you turn to look straight on you see no one. You gaze in horror at the
+sacrifices which hang bloodilly from hooks on the walls. Most of the
+pieces of meat appear to have once been parts of a goat, but many are
+indistinguishable. Something slick coats the floor but you can't see it
+in the candles dim glow. A deep growl comes from somewhere in the room.
+It might not be a bad idea to turn back and leave this unholy place.
+~
+287 42504201 0
+D0
+You see only darkness.
+~
+~
+0 -1 28789
+D1
+You see only darkness.
+~
+~
+0 -1 28784
+S
+#28787
+Pluto's Secret Night Club~
+    This is a very large room with a high ceiling. Candles glow in holders
+on the walls and in a large holder in the center of the far wall. In the
+candles dim glow you can't see anyone else in this room, but you know
+that there are other people or creatures present. You can hear some sort
+of worshiping chant coming from all over the room, and the rhythmic bang
+of a large drum. You see movement from the corners of your eyes but when
+you turn to look straight on you see no one. You gaze in horror at the
+sacrifices which hang bloodilly from hooks on the walls. Most of the
+pieces of meat appear to have once been parts of a goat, but many are
+indistinguishable. Something slick coats the floor but you can't see it
+in the candles dim glow. A deep growl comes from somewhere in the room.
+In this part of the room there is a large stone altar covered with blood.
+There is also a very large throne against the wall which appears empty.
+~
+287 42504201 0
+D1
+You see only darkness.
+~
+~
+0 -1 28788
+D2
+You see only darkness.
+~
+~
+0 -1 28784
+D3
+You see only darkness.
+~
+~
+0 -1 28789
+S
+#28788
+Pluto's Secret Night Club~
+    This is a very large room with a high ceiling. Candles glow in holders
+on the walls and in a large holder in the center of the far wall. In the
+candles dim glow you can't see anyone else in this room, but you know
+that there are other people or creatures present. You can hear some sort
+of worshiping chant coming from all over the room, and the rhythmic bang
+of a large drum. You see movement from the corners of your eyes but when
+you turn to look straight on you see no one. You gaze in horror at the
+sacrifices which hang bloodilly from hooks on the walls. Most of the
+pieces of meat appear to have once been parts of a goat, but many are
+indistinguishable. Something slick coats the floor but you can't see it
+in the candles dim glow. A deep growl comes from somewhere in the room.
+It might not be a bad idea to turn back and leave this unholy place.
+~
+287 42504201 0
+D2
+You see only darkness.
+~
+~
+0 -1 28785
+D3
+You see only darkness.
+~
+~
+0 -1 28787
+S
+#28789
+Pluto's Secret Night Club~
+    This is a very large room with a high ceiling. Candles glow in holders
+on the walls and in a large holder in the center of the far wall. In the
+candles dim glow you can't see anyone else in this room, but you know
+that there are other people or creatures present. You can hear some sort
+of worshiping chant coming from all over the room, and the rhythmic bang
+of a large drum. You see movement from the corners of your eyes but when
+you turn to look straight on you see no one. You gaze in horror at the
+sacrifices which hang bloodilly from hooks on the walls. Most of the
+pieces of meat appear to have once been parts of a goat, but many are
+indistinguishable. Something slick coats the floor but you can't see it
+in the candles dim glow. A deep growl comes from somewhere in the room.
+It might not be a bad idea to turn back and leave this unholy place.
+~
+287 42504201 0
+D1
+You see only darkness.
+~
+~
+0 -1 28787
+D2
+You see only darkness.
+~
+~
+0 -1 28786
+S
+#28790
+The Traveler's Rest~
+    This is a large meeting hall that stretches to the North and South.
+There are several round wooden tables surrounded by wooden chairs. The
+tables have green felt covering and appear to be used for cards. There
+aren't many people here at the moment, but you can tell that it must
+get hopping at some times of day. There is a piano in the middle of the room
+plinking away a honky-tonk sounding tune. Large faded carpets cover parts of
+the wooden plank floor. There is a door to the West and the entrance to
+the Rest is to the East.
+~
+287 33288 0
+D0
+The main hall of the rest stretches to the North.
+~
+~
+0 -1 28791
+D1
+The Entrance to the Rest lies East of here.
+~
+~
+0 -1 28771
+D2
+The main hall of the rest stretches to the South.
+~
+~
+0 -1 28792
+D3
+A door with 'Room Two' marked on it.
+~
+door~
+1 -1 28793
+S
+#28791
+The Traveler's Rest~
+    This is the Northern end of the Traveler's Rest meeting hall.
+There are several tables here and there with empty and half-empty
+glasses on them. The bar is against the North wall, with a line of
+tall wooden stools in front of it. Behind the bar is a large shelf
+full of various kinds of liquor. This place isn't as fancy or as
+well-stocked at the Tavern of the Gods, but it seems to suit
+enough of the population. Above the liquor cabinet is a monsterous
+hunting trophy. It is the head of what must have been a mammoth of
+an elk, and it has two heads joined at the neck. A sign hanging
+around the double headed monster's neck proclaims it to be "The
+Romp". There is a door to the West and the room continues South.
+~
+287 33288 0
+D2
+The main hall of the Rest stretches to the South.
+~
+~
+0 -1 28790
+D3
+A door with 'Room Three' marked on it.
+~
+door~
+1 -1 28794
+S
+#28792
+The Traveler's Rest~
+    This is the South end of the Traveler's Rest meeting hall.
+There are lots of round wooden tables surrounded by chairs and
+covered with half or completely empty glasses. Some of the tables
+have faded green felt on the top, and some don't. Faded carpets cover
+parts of the wooden plank floors. There is a fireplace roaring against the
+South wall, keeping the place very warm and comfortable. This place seems
+like a whole different world from the tented city it sits in. Even from
+this far end of the room you can feel The Romp's glassy gaze falling
+upon you. There is a door to the West and the room continues to the North.
+~
+287 33288 0
+D0
+The main hall of the Rest stretches to the North.
+~
+~
+0 -1 28790
+D3
+A door with 'Room One' marked on it.
+~
+door~
+1 -1 28795
+S
+#28793
+A Room in The Traveler's Rest~
+    This is a rustic looking hotel room with a wooden plank floor. There
+is a round, wooden table surrounded by wooden chairs in the middle, an
+oak dresser with a tall mirror against one wall and the heads of two soft
+and well-used looking beds against the other. A large faded rug covers
+part of the floor. There is one window looking out onto a golden fence and
+endless clouds and blue sky beyond. The sheets and the curtains are both a
+faded, yet somehow comfortable shade of blue. The desk and table are both
+slightly dusty and the mirror has a small crack. This room is far from
+luxurious, but quite comfortable.
+~
+287 41548 0
+D1
+A door leading back into the main hall of the Rest.
+~
+door~
+1 -1 28790
+S
+#28794
+A Room in The Traveler's Rest~
+    This is a rustic looking hotel room with a wooden plank floor. There
+is a round, wooden table surrounded by wooden chairs in the middle, an
+oak dresser with a tall mirror against one wall and the heads of two soft
+and well-used looking beds against the other. A large faded rug covers
+part of the floor. There is one window looking out onto a golden fence and
+endless clouds and blue sky beyond. The sheets and the curtains are both a
+faded, yet somehow comfortable shade of blue. The desk and table are both
+slightly dusty and the mirror has a small crack. This room is far from
+luxurious, but quite comfortable.
+~
+287 41548 0
+D1
+A door leading back into the main hall of the Rest.
+~
+door~
+1 -1 28791
+D5
+Strangely, one of the planks in the floor has a small keyhole in it.
+~
+plank~
+2 28760 28600
+S
+#28795
+A Room in The Traveler's Rest~
+    This is a rustic looking hotel room with a wooden plank floor. There
+is a round, wooden table surrounded by wooden chairs in the middle, an
+oak dresser with a tall mirror against one wall and the heads of two soft
+and well-used looking beds against the other. A large faded rug covers
+part of the floor. There is one window looking out onto a golden fence and
+endless clouds and blue sky beyond. The sheets and the curtains are both a
+faded, yet somehow comfortable shade of blue. The desk and table are both
+slightly dusty and the mirror has a small crack. This room is far from
+luxurious, but quite comfortable.
+~
+287 41548 0
+D1
+A door leading back into the main hall of the Rest.
+~
+door~
+1 -1 28792
+S
+#28796
+Entrance to Pluto's Secret Night Club~
+    This is a small hallway that connects to a very large room ahead.
+There are candles on each wall which flicker, giving off eerie shadows.
+You can hear strange noises coming from the room: chanting, a drum, a deep
+growl. None of these sounds encourages you much, and exiting seems a very
+real option now. Once you enter the room it might be too late. A loud
+breathing sound suddenly comes from directly in front of you even though
+you can't see anyone here.
+~
+287 42500109 0
+D0
+You see only darkness.
+~
+~
+0 -1 28784
+D2
+A huge heavy iron door leading out into the alley.
+~
+door~
+2 28729 28783
+S
+#28797
+Daedalus' Secret Workshop~
+    This room is extremely cluttered to the point that there is almost
+no room to walk. There are wax wings in all stages of production all
+over the place. There are hardened mounds of spilled wax here and there.
+There are dozens of boxes stacked on top of each other, some stacks almost
+reaching the ceiling. The only exit is the small, partially blocked door
+back to the main shop to the North.
+~
+287 32776 0
+D0
+A small door leading back into the shop.
+~
+door~
+2 28728 28772
+D3
+A little hole in the wall leads to another secret room.
+~
+hole~
+9 -1 28798
+S
+#28798
+The Secret Closet of Daedalus' Secret Workshop~
+    This room could barely be called a room at all. It is large enough
+to fit maybe a dozen people shoulder to shoulder if it was perfectly
+empty. But it isn't empty at all. It is packed with stacks of boxes, each
+stack reaching all the way to the low ceiling. There is a spot between
+the stacks which you have squeezed your way into only by sliding in
+sideways and holding your breath. The only exit is the small hole you
+squeezed through to get into this tight spot.
+~
+287 33033 0
+D1
+A small hole leads back into the secret workshop.
+~
+hole~
+9 -1 28797
+D5
+The faint outlines of a trapdoor hidden with dust.
+~
+trapdoor~
+2 28727 28799
+S
+#28799
+The Secret Basement of The Secret Closet of Daedalus' Secret Workshop~
+    You somehow manage to squeeze down through the small and mostly
+blocked trapdoor into a small storage basement. There are some dusty
+boxes scattered around the room, but it is mostly empty. You are able to
+breathe down here, and it is wide enough to fit a few people although you
+can't imagine why anyone would want to hang around in this dark, dusty
+mess of a room for long. You suddenly realize that you can hear the sounds
+of another person down here. The room is dark so it is hard to tell with
+the shadows being played off the boxes by your light, but you don't think
+you are alone here.
+~
+287 32777 0
+D4
+A trapdoor leads back up and out.
+~
+trapdoor~
+2 28727 28798
+S
+#0
+$~

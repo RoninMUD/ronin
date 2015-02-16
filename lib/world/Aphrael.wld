@@ -1,0 +1,2122 @@
+#11700
+Floating on a Meandering River~
+   The river is so peaceful, slowly drifting along, you begin to daydream.
+You start to imagine yourself in a world of the past, complete with magical
+beings and wonderous visions.  You chuckle to yourself as you realize how
+silly it sounds.  The rhythmic lap of the waves along the shore and against
+the sides of your boat lull you into a state of tranquility, and you feel
+like you could float along this river forever, completely happy.
+~
+117 0 6
+D0
+The River speeds up in that direction.  You decide the rapids would probably
+tear your boat to pieces.
+~
+~
+0 0 -1
+D2
+The River continues...
+~
+~
+0 0 11701
+D3
+Into the woods
+~
+~
+0 0 11738
+S
+#11701
+Along a Meandering River~
+   You continue to float along this lazy river.  To the east you see a mass 
+of trees, butting right up to the river.  There doesn't seem to be anywhere
+to the east you could gain a foothold.  To the south the river continues, and
+to the west is a patch of woods.  You hear the cheerful sounds of birds and
+frogs, and think you could lie in your boat and sleep happily here.
+~
+117 0 6
+D0
+Along a meandering river.
+~
+~
+0 0 11700
+D2
+Along a meandering river.
+~
+~
+0 0 11702
+D3
+Into the woods.
+~
+~
+0 0 11739
+S
+#11702
+Along a Meandering River~
+   You've been drifting along with the current for quite a while now. It is
+very still and calm here, and a deep sense of peace overwhelms you.  Thick
+stands of trees to the east and west provide a beautiful view in both 
+directions.  Through the trees to the east, you think you spot a flash of
+color.  The faintest sound of laughter reaches your ears; so faint you're
+not sure if you really heard it.  The trees are much too thick to investigate
+in that direction though.  You can continue downriver to the south, or leave
+the peace of the water and enter the woods to the west.
+~
+117 0 6
+D0
+Along the meandering river.
+~
+~
+0 0 11701
+D2
+Along the meandering river.
+~
+~
+0 0 11703
+D3
+Into the woods.
+~
+~
+0 0 11740
+S
+#11703
+Along the Meandering River~
+   The river speeds slightly here, but barely enough to cause any kind of
+concern.  You still hear the chirp of birds and the low croak of small frogs
+from along the shores.  You can follow the river to the north or south, enter
+the woods to the east, or just lie in your boat and bask in the warmth of the
+sun.
+~
+117 0 6
+D0
+Along the meandering river.
+~
+~
+0 0 11702
+D2
+Along the meandering river.
+~
+~
+0 0 11704
+D3
+Into the woods.
+~
+~
+0 0 11741
+S
+#11704
+Along a Meandering River~
+   The river speeds up a little more, lapping gently against the side of your
+boat.  You think you spy a bend (or end) to the south - you can't really
+tell from here.  You hear faint giggles and laughter carried over the waters
+of the river.  You can't tell how far away they are - this woods seems to
+deceive your senses in regards to distance.  To the east is a stand of young 
+trees, perfect for climbing or just for lying in the shade.  There is a much
+denser wood to the east, offering nowhere to climb off the riverbank.
+~
+117 0 6
+D0
+Along the meandering river.
+~
+~
+0 0 11703
+D2
+Along a meandering river.
+~
+~
+0 0 11705
+D3
+Into the woods.
+~
+~
+0 0 11743
+S
+#11705
+On the Riverbend~
+  The river bends to the east here.  You can't see very far downriver, but
+you think you hear sounds of life from that direction.  To the west and 
+south is the beautiful wood you've been gazing at as you've traveled along
+this peaceful river.  You feel a thrill of anticipation as you realize that
+the farther you head down this river, the more magical and calming it all is.
+You could envision yourself settling down and living in these woods forever.
+~
+117 0 6
+D0
+Along the meandering river.
+~
+~
+0 0 11704
+D1
+Along the meandering river.
+~
+~
+0 0 11706
+D2
+Into the woods
+~
+~
+0 0 11745
+D3
+Into the woods.
+~
+~
+0 0 11744
+E
+desk~
+A huge cherry rolltop, worn and scratched from years of loving use.  Every
+pigeonhole is crammed with papers, and there are several pop cans and spiral notebooks pushed to the back.
+~
+S
+#11706
+Along a Meandering River~
+   As you come around the bend in the river, your senses perk up at the 
+feeling of life which surrounds you.  The woods and river all seem to possess
+life of their own, and it seems to welcome you in.  To the north is a thick
+patch of trees - too thick to enter.  The woods to the south has become more
+dense, preventing you from going there either.  You can go west back to the
+riverbend or east, continuing along the river as you have been.
+~
+117 0 6
+D1
+Along the meandering river.
+~
+~
+0 0 11707
+D3
+The riverbend.
+~
+~
+0 0 11705
+S
+#11707
+Along a Meandering River~
+   The river slows here, and you drift along lazily.  The warmth from the sun
+and the lazy lap of the wavelets against your boat is almost hypnotic.  You
+hear the peaceful chirp of crickets and frogs from the shore.  You think
+you see another bend in the river to the east.
+~
+117 0 6
+D1
+Along a Meandering River.
+~
+~
+0 0 11708
+D3
+Along a Meandering River.
+~
+~
+0 0 11706
+S
+#11708
+Along a Meandering River~
+   The river continues.  You begin to wonder just how long this river is.
+The frogs still croak quietly and the crickets still chirp merrily.  You
+think you hear a gentle tinkling laughter from somewhere along the river,
+but you can't be quite sure.  The woods to the north and south are much too
+think to allow passage.  To the east, you are sure you see another bend in 
+the river.  You think you see some sort of trail through the trees far to 
+the north, possibly just shadows from the trees, though.
+~
+117 0 6
+D2
+Another bend in the river.
+~
+~
+0 0 11709
+D3
+Along the meandering river.
+~
+~
+0 0 11707
+S
+#11709
+On a Meandering River~
+   The River bends to the south here, and slows to a lazy crawl.  The
+warm sun and still air are almost hypnotic.  As you float along in your
+little boat, you wonder if there is more to this place than the slow pulse
+of the river and the sultry caress of the sun.
+~
+117 0 6
+D2
+Downriver.
+~
+~
+0 0 11710
+D3
+Upriver.
+~
+~
+0 0 11708
+S
+#11710
+Along a Meandering River~
+   The river continues to the south, and you think maybe it is speeding
+up slightly, but you can't be quite sure.  You finally see a spot on the
+riverbank to the east where it might be possible to get a handhold and climb
+into the woods.  The trees there are close together though, so you can't see
+much in that direction.  To the south, the river widens and makes another
+smooth arc, flowing out of sight.
+~
+117 0 6
+D0
+Another bend in the river.
+~
+~
+0 0 11709
+D1
+Into a small forest.
+~
+~
+0 0 11812
+D2
+More River.
+~
+~
+0 0 11711
+S
+#11711
+Nearing A Bend in the River~
+   To the south, the river widens and slows again, drifting lazily to the
+east.  You can almost imagine the distant sound of voices wafting over
+the breeze, but you attribute that to the trance-like state the sun and
+water have put you in.  The breeze blows gently over your skin, refreshing
+you somewhat.
+~
+117 0 6
+D0
+You see the river you've been traveling down.
+~
+~
+0 0 11710
+D2
+Another bend in the river.
+~
+~
+0 0 11712
+S
+#11712
+A Bend in the River~
+   As you round the curver in the river, you catch sight of a huge
+stretch of river, nearly as wide as a lake.  Almost still, the water
+gently laps against the embankment, and the fresh scent of the pure
+woods makes you feel almost giddy.
+~
+117 0 6
+D0
+Up the lazy river.
+~
+~
+0 0 11711
+D1
+A wide still stretch of river.
+~
+~
+0 0 11713
+S
+#11713
+On a Slowly Moving Stretch of River~
+   The water gently splashes the embankment here, allowing you to enter
+the woods to the south.  The water is wide, deep and cold here, and the
+warm sun and still air make a swim seem very inviting.  The river continues
+both east and west, disappearing around bends in both directions.  The 
+rich dirt to the south is a welcome sight after the monotony of the trees
+and water.
+~
+117 0 6
+D1
+More slowly moving water.
+~
+~
+0 0 11714
+D2
+Into the Mystic Forest.
+~
+~
+0 0 11818
+D3
+A bend in the river.
+~
+~
+0 0 11712
+S
+#11714
+On a Slowly Moving Stretch of River~
+   The river slows even more here, and you can see multiple sand bars
+where the silt has been pushed up towards the embankment and downriver
+at the same time.  The lure of the woods to the south is nearly too much
+for you, but as always, you also want to know what's around that next
+bend in the river.  This entire area seems to be alive, even the trees
+seeming to have a certain awareness.
+~
+117 0 6
+D1
+Towards another bend in the river.
+~
+~
+0 0 11715
+D2
+Into the mystical forest.
+~
+~
+0 0 11820
+D3
+Along the river where you came from.
+~
+~
+0 0 11713
+S
+#11715
+Nearing a Riverbend~
+   To the north and south are thick stands of trees, and the river
+continues east and west.  To the east, you see another gentle curve,
+and the water seems to flow with something akin to eagerness, as if it
+is rushing to meet an old friend up ahead.  You think you hear the 
+gentle peal of laughter from somewhere up ahead, but it could be the
+river itself, babbling with exuberance.
+~
+117 0 6
+D1
+A riverbend.
+~
+~
+0 0 11716
+D3
+A slowly moving stretch of water.
+~
+~
+0 0 11714
+S
+#11716
+A Bend in the River~
+   From the west, the lazy murmur of the river beckons, while to the north
+you spot rows and rows of graceful trees enclosing the river on both sides.
+You're sure now that you hear laughter and voices coming from the north, but
+you see no signs of anyone living or camping near here.  The pristine beauty
+of the river is enhanced by the light tinkling laughter you hear.
+~
+117 0 6
+D0
+The river bends to the north.
+~
+~
+0 0 11717
+D3
+The river speeds up slightly.
+~
+~
+0 0 11715
+S
+#11717
+In a Corridor of Trees~
+   On either side of the river, huge trees of all varieties crowd the 
+riverbanks, as if enamored with the river itself.  The willows bend their
+boughs down to gently kiss the surface of the water, while the tall pines
+sway and hum in the freshening wind.  As you gaze upon the waters, you 
+spot movement from underneath the surface, but it seems much too big to 
+be a fish.  To the north, you can continue along this wonderous hallway of 
+trees.
+~
+117 0 6
+D0
+You see a river flowing between the trees.
+~
+~
+0 0 11718
+D2
+The river flows between the rows of trees.
+~
+~
+0 0 11716
+S
+#11718
+In a Corridor of Trees~
+   On either side of the river, huge trees of all varieties crowd the 
+riverbanks, as if enamored with the river itself.  The willows bend their
+boughs down to gently kiss the surface of the water, while the tall pines
+sway and hum in the freshening wind.  As you gaze upon the waters, you 
+spot movement from underneath the surface, but it seems much too big to 
+be a fish.  To the north, you can continue along this wonderous hallway of 
+trees.
+~
+117 0 6
+D0
+You see the river flowing between the trees.
+~
+~
+0 0 11719
+D2
+The river flows between rows of trees.
+~
+~
+0 0 11717
+S
+#11719
+In a Corridor of Trees~
+   On either side of the river, huge trees of all varieties crowd the 
+riverbanks, as if enamored with the river itself.  The willows bend their
+boughs down to gently kiss the surface of the water, while the tall pines
+sway and hum in the freshening wind.  As you gaze upon the waters, you 
+spot movement from underneath the surface, but it seems much too big to 
+be a fish.  To the north, you can continue along this wonderous hallway of 
+trees.
+~
+117 0 6
+D0
+More trees.
+~
+~
+0 0 11720
+D2
+The river flows between the trees.
+~
+~
+0 0 11718
+S
+#11720
+In a Corridor of Trees~
+   On either side of the river, huge trees of all varieties crowd the 
+riverbanks, as if enamored with the river itself.  The willows bend their
+boughs down to gently kiss the surface of the water, while the tall pines
+sway and hum in the freshening wind.  As you gaze upon the waters, you 
+spot movement from underneath the surface, but it seems much too big to 
+be a fish.  To the north, you can see the river curve away to the west.
+~
+117 0 6
+D0
+The river bends slightly.
+~
+~
+0 0 11721
+D2
+The river flows between the trees.
+~
+~
+0 0 11719
+S
+#11721
+A Bend in the River~
+   The river narrows here, speeding up slightly.  It also begins to twist
+and turn, almost doubling back on itself, it seems.  To the north, you 
+spot some sort of clearing through the trees, but can't find any way to 
+get there.  Small figures seem to dance and flit in and out of the edges
+of your vision, making you wish you could be in that glade.
+~
+117 0 6
+D2
+The river enters a corridor of trees.
+~
+~
+0 0 11720
+D3
+The river starts to twist ahead of you.
+~
+~
+0 0 11722
+S
+#11722
+The River Begins to Twist~
+   The river here twists and turns, back and forth.  It has become much
+shallower, and you worry about your boat getting hung up on the bottom.
+Following the twists, you sometimes catch glimpses of that glade, and
+wish even more you were there.  But you look for a way to the clearing from 
+the river and find none.
+~
+117 0 6
+D1
+The river bends out of sight as it enters the trees.
+~
+~
+0 0 11721
+D3
+The river bends to the north.
+~
+~
+0 0 11723
+S
+#11723
+A Twisty Part of the River~
+   The river here twists and turns, back and forth.  It has become much
+shallower, and you worry about your boat getting hung up on the bottom.
+Following the twists, you sometimes catch glimpses of that glade, and
+wish even more you were there.  But you look for a way to the clearing from 
+the river and find none.
+~
+117 0 6
+D0
+You can't see much as the river bends again almost immediately.
+~
+~
+0 0 11724
+D1
+The river almost immediately bends to the south.
+~
+~
+0 0 11722
+S
+#11724
+A Twisty Part of the River~
+   The river here twists and turns, back and forth.  It has become much
+shallower, and you worry about your boat getting hung up on the bottom.
+Following the twists, you sometimes catch glimpses of that glade, and
+wish even more you were there.  But you look for a way to the clearing from 
+the river and find none.
+~
+117 0 6
+D0
+The river bends again.
+~
+~
+0 0 11725
+D2
+The river bends, and you can't see much else.
+~
+~
+0 0 11723
+S
+#11725
+A Bend in the River~
+   The river bends sharply to the east, and before you lies a fast, young
+river.  The water bubbles merrily as it dances over the colored pebbles
+on the bed.  To the north the trees are so thick you can't see anything
+beyond more than a few yards.  To the south, you spot glimpses of that
+same elusive glade.
+~
+117 0 6
+D1
+The river speeds up slightly.
+~
+~
+0 0 11726
+D2
+The river twists and turns.
+~
+~
+0 0 11724
+S
+#11726
+The River Sings~
+   As the river dances along its bed, the sound of the water racing over the
+glittering pebbles on the bottom combined with the breeze flowing through
+the many trees is almost a song.  As you listen, the minute variations in
+tone form a sort of melody, and you realize why people say this part of
+the river sings.
+~
+117 0 6
+D1
+The river intensifies.
+~
+~
+0 0 11727
+D3
+The river bends to the south.
+~
+~
+0 0 11725
+S
+#11727
+The River Sings~
+   The quickening river sings a bit more loudly and urgently here.  The
+water has speeded up appreciably, and the song seems to take on an almost
+ominous note.  You wonder about the sanity of your present course of action.
+~
+117 0 6
+D1
+The river speeds up a little more.
+~
+~
+0 0 11728
+D3
+The same stretch of river you were just on.
+~
+~
+0 0 11726
+S
+#11728
+The River Sings~
+   As you near another bend in the river, the howling of the river is 
+drowned out by the scream and thunder of nearby rapids.  You see the
+frothing and splashing water from over the rocks to the east, and realize
+that if you continue that way, you'll be in serious whitewater.
+~
+117 0 6
+D1
+~
+~
+0 0 11729
+D3
+Back to safety...but what glory can be gained without risk?
+~
+~
+0 0 11727
+S
+#11729
+At the Head of the Rapids~
+   As your boat momentarily slows, you gasp at the sight of what lies before
+you.  As far as you can see downriver, the water seems alive, and determined
+to kill you.  Huge boulders jut from the riverbed, and the water smashes 
+against them, frustrated by their immobility.  Just as you take in the
+enormity of what lies before you, your peace is shattered as your boat is
+swept into the rapids!
+~
+117 0 6
+D2
+Rocks and whitewater is all you can see.
+~
+~
+0 0 11730
+D3
+Too late!  You're moving much too quickly to turn back now!
+~
+~
+0 0 -1
+S
+#11730
+In the Rapids~
+   You bump over rocks, ineffectively trying to steer your helpless little
+craft away from the biggest ones.  As you are tumbled downriver, you get
+soaked to the skin.  Wet, freezing and scared, you close your eyes and
+hang on as tight as you can, hoping to just get out alive.
+~
+117 0 6
+D0
+You must think you're a salmon!
+~
+~
+0 0 -1
+D2
+More rapids...this is pretty exciting~
+~
+0 0 11731
+S
+#11731
+In the Rapids~
+   You bump over rocks, ineffectively trying to steer your helpless little
+craft away from the biggest ones.  As you are tumbled downriver, you get
+soaked to the skin.  Wet, freezing and scared, you close your eyes and
+hang on as tight as you can, hoping to just get out alive.
+~
+117 0 6
+D0
+Heh.  GOOD LUCK.
+~
+~
+0 0 -1
+D2
+This is the best whitewater you've ever seen... hope you survive it!
+~
+~
+0 0 11732
+S
+#11732
+Nearing the Foot of the Rapids~
+   You bump over rocks, ineffectively trying to steer your helpless little
+craft away from the biggest ones.  As you are tumbled downriver, you get
+soaked to the skin.  Wet, freezing and scared, you close your eyes and
+hang on as tight as you can, hoping to just get out alive.  As you pry
+your eyelids open a little, you think you spot something ahead.  But you
+can't be sure if it's your salvation or your damnation.
+~
+117 0 6
+D0
+You have GOT to be kidding.
+~
+~
+0 0 -1
+D2
+You see the water frothing and boiling ahead of you.
+~
+~
+0 0 11733
+S
+#11733
+The Water Froths and Boils~
+   As you approach the end of the rapids, you breathe a sigh of relief that
+you are still alive.  But hold that thought...Just as you come flying out
+of the rapids, you spot a sharp turn in the river.  The water crashes against
+every rock and bank, making the entire area a churning, boiling hell.  You
+cross your fingers and hope for the best...
+~
+117 0 6
+D0
+heeheehee... NOT!
+~
+~
+0 0 -1
+D2
+You nearly pee your pants, but you think you can make it through there alive.
+~
+~
+0 0 11734
+S
+#11734
+Where the Rapids and the Riverbank Collide~
+   There are no words to describe the foaming mass of water you've somehow
+ended up right in the middle of.  You boat is tossed around like a plaything
+of the gods, and you can do no more than scream and hold on for dear life.
+Huge columns of water, formed when the river smashed against the banks, 
+threaten to overwhelm your little craft and drive you under, to be dragged
+along the bottom of the river for miles.  You spin helplessly as eddies
+catch your boat and whip it around, pushing you from eddy to eddy, rapid 
+to rapid.  You close your eyes and pray.
+~
+117 0 6
+D0
+The churning water pushes you forward.. there's no turning back in this.
+~
+~
+0 0 -1
+D1
+The river mercifully slows a bit.
+~
+~
+0 0 11735
+S
+#11735
+The River Builds up Speed~
+   Whew!  You survived, and you are grateful for the small respite you
+now have.  To the south, you see that the bank is overgrown with weeds
+and small bushes, and you could probably use them for handholds to climb
+out of the river.  This seems like a pretty good idea after the soaking
+you just received.  This relatively slow water you're sitting in now
+speeds up again to the east.
+~
+117 0 6
+D1
+The river speeds up.
+~
+~
+0 0 11736
+D2
+You see a dark forest.
+~
+~
+0 0 11851
+D3
+The water rushing around the bend pushes you back.
+~
+~
+0 0 -1
+S
+#11736
+A Madly Rushing River~
+   The water has again sped up considerably.  But as you hear the thunder
+coming from the east, you realize that whatever is there is even more 
+astounding than the rapids were.  You shiver to yourself, hoping to never
+have to repeat that experience.  You realize that it would probably be much
+too dangerous to try to take on anything that's even louder than those rapids
+were.
+~
+117 0 6
+D1
+You see the water boiling as it rushes over a huge waterfall.
+~
+~
+0 0 11737
+D3
+The river smooths out and slows almost imperceptibly.
+~
+~
+0 0 11735
+S
+#11737
+Falling over a Huge Waterfall~
+   The madly rushing river reaches its goal and pours over the edge of a 
+huge chasm.  Apparently bravado has overcome brains, because as you die you
+realize no rational person would attempt to ride a waterfall in a craft
+as small as yours.  The ride downwards is pretty exciting, but you think
+then end is anticlimactic as your body is shattered into a million pieces
+at the bottom of the waterfall.
+~
+117 2 6
+D3
+A description here would be pretty silly, wouldn't it?
+~
+~
+0 0 11736
+S
+#11738
+A Beautiful Wood~
+   You are at the corner of a beautiful wood.  The brambles to the north and
+west prevent further passage in either direction.  You hear the gurgling of
+water to the east, and see more trees to the south.  The chirp of birds 
+calms you and slows your steps.  As you look upwards towards the canopy of
+the forest, you see bright flashes of yellow and red as the colorful birds
+flit overhead.  The whole forest seems alive with small creatures.
+~
+117 0 3
+D1
+On the meandering river.~
+~
+0 0 11700
+D2
+The woods continue.~
+~
+0 0 11739
+S
+#11739
+In a Beautiful Wood~
+   The stillness of the woods here permeates your senses, but in a peaceful
+way.  It's as if nothing harmful would even be allowed to exist here.  You
+hear the soft lap of wave from the river to your east, and across the river
+you see more thick forest.  To the south is more of the gentle wood you are
+in.  The flutter of wings above you makes you look up, but the small bird
+was too fast to spot.  
+~
+117 0 3
+D0
+A beautiful wood.~
+~
+0 0 11738
+D1
+Onto a meandering river.~
+~
+0 0 11701
+D2
+The beautiful wood continues.~
+~
+0 0 11740
+S
+#11740
+In a Beautiful Wood~
+   The woods are thick to the north and south, and you can't really tell
+what is in either direction.  The magical nature of these woods dulls your
+senses, confusing you about where you are and where you came from.  To the
+east a lazy river beckons, tempting you to float along its peaceful shores.
+There are signs of life all around you, making you feel at ease and welcome.
+~
+117 0 3
+D0
+The beautiful wood continues.~
+~
+0 0 11739
+D1
+Onto the meandering river.~
+~
+0 0 11702
+D2
+The beautiful wood continues.~
+~
+0 0 11741
+S
+#11741
+In a Beautiful Wood~
+   The peace and quiet of this light forest makes you feel at home.  The
+soft sunlight filtering down through the canopy warms your face and cheers
+your soul.  You hear the soft twitter of birds and the nearby croak of 
+frogs.  The leaves rustle lightly in the breeze, echoing the footfalls of
+small animals through the undergrowth.  To the east, a lazy river flows slowly,
+and the glint of sunlight off the wavelets makes you squint a bit.
+~
+117 0 3
+D0
+The beautiful wood continues.~
+~
+0 0 11740
+D1
+Onto a meandering river.~
+~
+0 0 11703
+D2
+The beautiful wood continues.~
+~
+0 0 11743
+D3
+A path leading out of the forest.
+~
+~
+0 0 11742
+S
+#11742
+A Beautiful Wood~
+   Before you spreads a wonderful forest.  Young trees tickle the sky, and
+the breeze through the boughs creates a harmonious humming sound.  This
+is an utterly peaceful place, where all the creatures seem to be comfortable
+and surprisingly fearless.  You laugh in delight as a chipmunk wanders up to
+sniff you boot, then just as casually wanders off. You hear the distant sound
+of a river, apparently coming from the east.
+~
+117 4 3
+D1
+A beautiful wood lies before you.
+~
+~
+0 0 11741
+D3
+~
+~
+0 0 0
+S
+#11743
+In a Beautiful Wood~
+   The beauty of the wood is getting tiresome.  It's so wonderful you almost
+wish for something mundane and ugly to break it up....almost.  You feel 
+quite at peace wandering through these woods though, so you're glad nothing
+has marred the serenity here.  A ways to the south, you spot a thicket of
+briars, but you think you have some time to explore further that way before
+you run into them.  The peaceful river still flows at your east. and the
+forest thickens to the west.
+~
+117 0 3
+D0
+The beautiful wood continues.~
+~
+0 0 11741
+D1
+Onto the meandering river.~
+~
+0 0 11704
+D2
+The beautiful wood continues.~
+~
+0 0 11744
+S
+#11744
+Inside a Beautiful Wood~
+   The soft golden-green light filtering through the trees casts a warm glow
+over everything, making it seem a bit surreal.  The leaves rustle gently in
+the breeze and birds call to each other softly.  As you turn your face to
+the warmth of the sun, you wonder why you keep wandering through these woods,
+then remember as the peace and sense of belonging wash over you.  To the west,
+the trees thicken, making passage in that direction impossible.  Eastwards,
+you see a wide river heading towards the north and east.  A small sandbar
+has built up on the riverbank, making it easy to wade into the water here.
+~
+117 0 3
+D0
+The beautiful wood continues.~
+~
+0 0 11743
+D1
+The riverbend.~
+~
+0 0 11705
+D2
+The beautiful wood continues.~
+~
+0 0 11745
+S
+#11745
+The Corner of the Beautiful Wood~
+   You have reached a corner of the wood.  The greenish-gray twilight
+is somehow peaceful.  A swallow flits overhead, much too high to catch.
+His delightful song lightens your step and fills your heart with gladness.
+This wood seems so pure, you could imagine yourself living here forever.
+To the south, the thickets have formed a solid wall, with no way through.
+To the north, the wood continues, and to the east, you see more trees, with
+a gently-flowing river beyond.
+~
+117 0 3
+D0
+The beautiful wood continues~
+~
+0 0 11744
+D1
+The beautiful wood continues~
+~
+0 0 11746
+S
+#11746
+In the Forest~
+You are standing inside a dummy room, which should get real.~
+117 0 3
+D1
+You see trees.
+~
+~
+0 0 11747
+D3
+The forest continues.
+~
+~
+0 0 11745
+S
+#11747
+In the Forest~
+You are standing inside a dummy room, which should get real.~
+117 0 3
+D2
+The passage narrows a bit.
+~
+~
+0 0 11748
+D3
+~
+~
+0 0 11746
+S
+#11748
+A Tree-Lined Passage in the Beautiful Woods~
+You are standing inside a dummy room, which should get real.~
+117 0 3
+D0
+You see trees and a river beyond them.
+~
+~
+0 0 11747
+D2
+The woods spread before you.
+~
+~
+0 0 11749
+S
+#11749
+The Forest Thins~
+A temporary description
+~
+117 0 0
+D0
+You see a tree lined passage.
+~
+~
+0 -1 11748
+D2
+You see an open area.
+~
+~
+0 -1 11750
+D3
+You see more beautiful woods stretching in front of you.
+~
+~
+0 -1 11751
+S
+#11750
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11749
+D1
+~
+~
+0 -1 11818
+D2
+~
+~
+0 -1 11761
+D3
+~
+~
+0 -1 11762
+S
+#11751
+A temporary name~
+A temporary description
+~
+117 0 0
+D1
+~
+~
+0 -1 11749
+D2
+~
+~
+0 -1 11762
+D3
+~
+~
+0 -1 11752
+S
+#11752
+A temporary name~
+A temporary description
+~
+117 0 0
+D1
+~
+~
+0 -1 11751
+D2
+~
+~
+0 -1 11753
+S
+#11753
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11752
+D1
+~
+~
+0 -1 11762
+D2
+~
+~
+0 -1 11754
+S
+#11754
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11753
+D1
+~
+~
+0 -1 11761
+D2
+~
+~
+0 -1 11755
+D3
+~
+~
+0 -1 11765
+S
+#11755
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11754
+D1
+~
+~
+0 -1 11760
+D2
+~
+~
+0 -1 11756
+D3
+~
+~
+0 -1 11764
+S
+#11756
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11755
+D1
+~
+~
+0 -1 11759
+D2
+~
+~
+0 -1 11757
+S
+#11757
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11756
+D1
+~
+~
+0 -1 11758
+S
+#11758
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11759
+D1
+~
+~
+0 -1 11834
+D3
+~
+~
+0 -1 11757
+S
+#11759
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11760
+D1
+~
+~
+0 -1 11833
+D2
+~
+~
+0 -1 11758
+D3
+~
+~
+0 0 11756
+S
+#11760
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11761
+D1
+~
+~
+0 -1 11828
+D2
+~
+~
+0 -1 11759
+D3
+~
+~
+0 -1 11755
+S
+#11761
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11762
+D1
+~
+~
+0 -1 11823
+D2
+~
+~
+0 -1 11760
+D3
+~
+~
+0 -1 11754
+S
+#11762
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11751
+D1
+~
+~
+0 -1 11750
+D2
+~
+~
+0 -1 11761
+D3
+~
+~
+0 -1 11753
+S
+#11763
+A Lush Meadow~
+   You are standing at the edge of a lush meadow.  The tall grasses beckon
+you to lie down and become one with nature.  The warm sun rejuvenates your 
+soul.  As you walk, each step kicks up a flurry of butterflies from the grass.
+You hear the rustle of the gentle breeze through the grass, making you feel
+like you are in an ocean of greenery.  As far as they eye can see to the 
+north and west, the meadow continues.  Someone has built a split-rail
+fence to the south, preventing passage in that direction.
+~
+117 0 2
+D0
+The meadow stretches as far as the eye can see.
+~
+~
+0 0 11764
+D3
+The meadow stretches as far as the eye can see.~
+~
+0 0 11767
+S
+#11764
+A Lush Meadow~
+You are standing inside a dummy room, which should get real.~
+117 0 2
+D0
+Tall grasses and wildflowers stretch as far as you can see.
+~
+~
+0 0 11765
+D1
+The trees of the forest.
+~
+~
+0 0 11755
+D2
+You see lots of grass and many flowers.
+~
+~
+0 0 11763
+D3
+The meadow stretches as far as you can see.
+~
+~
+0 0 11768
+S
+#11765
+A Lush Meadow~
+You are standing inside a dummy room, which should get real.~
+117 0 3
+D0
+The meadow continues to the north.
+~
+~
+0 0 11766
+D1
+You see trees.
+~
+~
+0 0 11754
+D2
+The meadow stretches before you.
+~
+~
+0 0 11764
+D3
+The meadow lies before you.
+~
+~
+0 0 11769
+S
+#11766
+A Lush Meadow~
+You are standing inside a dummy room, which should get real.~
+117 0 2
+D2
+The meadow continues.
+~
+~
+0 0 11765
+D3
+The meadow continues.
+~
+~
+0 0 11770
+S
+#11767
+A Lush Meadow~
+You are standing inside a dummy room, which should get real.~
+117 0 2
+D0
+The meadow goes as far as the eye can see.
+~
+~
+0 0 11768
+D1
+The meadow continues.
+~
+~
+0 0 11763
+D3
+The meadow continues.
+~
+~
+0 0 11774
+S
+#11768
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11769
+D1
+~
+~
+0 -1 11764
+D2
+~
+~
+0 -1 11767
+D3
+~
+~
+0 -1 11773
+S
+#11769
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11770
+D1
+~
+~
+0 -1 11765
+D2
+~
+~
+0 -1 11768
+D3
+~
+~
+0 -1 11772
+S
+#11770
+A temporary name~
+A temporary description
+~
+117 0 0
+D1
+~
+~
+0 -1 11766
+D2
+~
+~
+0 -1 11769
+D3
+~
+~
+0 -1 11771
+S
+#11771
+A temporary name~
+A temporary description
+~
+117 0 0
+D1
+~
+~
+0 0 0
+D2
+~
+~
+0 -1 11772
+D3
+~
+~
+0 -1 11778
+S
+#11772
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11771
+D1
+~
+~
+0 -1 11769
+D2
+~
+~
+0 -1 11773
+D3
+~
+~
+0 -1 11777
+S
+#11773
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11772
+D1
+~
+~
+0 -1 11768
+D2
+~
+~
+0 -1 11774
+D3
+~
+~
+0 -1 11775
+S
+#11774
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11773
+D1
+~
+~
+0 -1 11767
+D3
+~
+~
+0 -1 11775
+S
+#11775
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11776
+D1
+~
+~
+0 -1 11774
+S
+#11776
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11777
+D1
+~
+~
+0 -1 11773
+D2
+~
+~
+0 -1 11775
+S
+#11777
+A temporary name~
+A temporary description
+~
+117 0 0
+D0
+~
+~
+0 -1 11778
+D1
+~
+~
+0 -1 11772
+D2
+~
+~
+0 -1 11775
+S
+#11778
+A temporary name~
+A temporary description
+~
+117 0 0
+D1
+~
+~
+0 -1 11771
+D2
+~
+~
+0 -1 11777
+S
+#11779
+In the Northwest Corner of the Cave~
+   You can feel the cold stone to your east and north.  The wall is rough,
+as if hewed rather than naturally formed.  You breath echos in the chilly,
+slightly sour air, hinting at a large empty area.  As you stand quietly,
+you think you hear another breath echoing along with yours.  You try to 
+walk quietly on the cold stone, so whatever you hear breathing doesn't
+know where you are.
+~
+117 9 0
+D1
+The cave continues to the east.
+~
+~
+0 0 11780
+D2
+The cave continues to the south.
+~
+~
+0 0 11784
+S
+#11780
+Along the North Wall of the Cave~
+   The rough stone wall to the north is cool to the touch.  It is too dark
+to see anything, but you hear the minute movements of your clothing and the
+not-so minute movements of something else which you can't identify.  Whatever
+it is, it sure sounds big!
+~
+117 9 0
+D1
+The cave continues.
+~
+~
+0 0 11781
+D2
+The cave continues.
+~
+~
+0 0 11785
+D3
+You think you can faintly see a wall that way.
+~
+~
+0 0 11779
+S
+#11781
+Along the North Wall of the Cave~
+   Standing at the center of the north wall, you feel very small.  Echos
+race around the cavern, bouncing off far away walls.  As you lean against
+the wall to steady yourself, the rough coolness calms you. The walls feel
+like they were hewn with some sort of axe, but you've never seen one that 
+could carve stone at the scale of this cave.
+~
+117 9 0
+D1
+The cave continues
+~
+~
+0 0 11782
+D2
+The cave continues.
+~
+~
+0 0 11786
+D3
+The cave continues.
+~
+~
+0 0 11780
+S
+#11782
+Along the North Wall of the Cave~
+   It's too dark to see anything in here, but you can hear echos from
+every direction.  The air is slightly cool and vaguely sour smelling.
+Whatever causes that smell sure could use a bath!  You footsteps ring
+hollowly on the cold stone floor.
+~
+117 9 0
+D1
+You think you faintly see a wall in that direction.
+~
+~
+0 0 11783
+D2
+The cave continues.
+~
+~
+0 0 11787
+D3
+The cave continues.
+~
+~
+0 0 11781
+S
+#11783
+In the Northeast Corner of the Cave~
+   As your eyes begin to adjust to the dark, you can almost see the walls
+to the north and east of you.  They are hacked and gouged, as if attacked
+with some gigantic weapon.  Looking towards the center of the cave, the
+inky blackness doesn't yield any information.  You think you can almost see
+some sort of movement to your south though.
+~
+117 9 0
+D2
+The cave continues.
+~
+~
+0 0 11788
+D3
+The cave continues.
+~
+~
+0 0 11782
+S
+#11784
+Along the West Wall of the Cave~
+   It's not quite as dark here.  There seems to be a soft light filtering
+from above, but it's a ways east of here.  Your eyes can't penetrate the
+total blackness beyond that light.  To the north and south, you see the
+corners of the cave in the distance.
+~
+117 9 0
+D0
+The cave continues.
+~
+~
+0 0 11779
+D1
+The cave continues.
+~
+~
+0 0 11785
+D2
+The cave continues.
+~
+~
+0 0 11789
+S
+#11785
+In the Middle of the Cave~
+   A dim light filters down from above.  As you look up, you see the
+underside of a large bush.  The cave all around you is dark and cool.
+The air smells of some great unwashed creature, and its foul den.  You
+suspect this cave is not natural, and may even be the lair of some 
+fearsome being.
+~
+117 9 0
+D0
+You see a wall a aways ahead.
+~
+~
+0 0 11780
+D1
+The cave continues.
+~
+~
+0 0 11786
+D2
+The cave continues.
+~
+~
+0 0 11790
+D3
+The cave continues.
+~
+~
+0 0 11784
+D4
+You see sunlight.
+~
+bush~
+8 0 11794
+S
+#11786
+In the Middle of the Cave~
+   You see an old abandoned nest of some sort.  This explains the strong
+smell, but it doesn't explain the muted breathing you still hear.  Perhaps
+whatever built this nest is still nearby...
+~
+117 9 0
+D0
+The cave continues.
+~
+~
+0 0 11781
+D1
+The cave continues.
+~
+~
+0 0 11787
+D2
+The cave continues.
+~
+~
+0 0 11791
+D3
+The cave continues.
+~
+~
+0 0 11785
+S
+#11787
+In the Middle of the Cave~
+   The pungent smell of something very big and totally unaccustomed to
+bathing tickles your nostrils, making you want to sneeze.  You stifle
+the sneezes as you realize that wherever that smell emanates from might
+not be somewhere YOU'D like to be.
+~
+117 9 0
+D0
+The cave continues
+~
+~
+0 0 11782
+D1
+The cave continues.
+~
+~
+0 0 11788
+D2
+The cave continues.
+~
+~
+0 0 11792
+D3
+The cave continues.
+~
+~
+0 0 11786
+S
+#11788
+Along the East Wall of the Cave~
+   The stench of something horrible and dangerous assails your nostrils
+from the south.  In the inky blackness, you can't quite see what's there
+but you see the slightest hint of movement.  You can also hear the quiet
+shufflings of something that sounds very big.  Perhaps going in there
+might not be the wisest choice.
+~
+117 9 0
+D0
+The cave continues.
+~
+~
+0 0 11783
+D2
+The cave continues.
+~
+~
+0 0 11793
+D3
+The cave continues.
+~
+~
+0 0 11787
+S
+#11789
+The Southwest Corner of the Cave~
+   The soft light filtering from the northeast aids in your examination
+of this cave.  From the rough-hewn stones walls, small mineral formations
+glitter merrily.  The cheerfulness is somewhat dimmed when you hear a low
+whuffing from somewhere inside this very cave.  As you turn to locate the
+sound, a distance putrescence reaches you nose, making you gag.
+~
+117 9 0
+D0
+The cave continues.
+~
+~
+0 0 11784
+D1
+The cave continues.
+~
+~
+0 0 11790
+S
+#11790
+Along the South Wall of the Cave~
+   There is a soft light coming from the north, easing the darkness a bit.
+The cool air would be refreshing if it weren't for the stink wafting from
+the east.  As you peer in that direction, you think you see movement, but
+you're not sure.
+~
+117 9 0
+D0
+The cave continues.
+~
+~
+0 0 11785
+D1
+The cave continues.
+~
+~
+0 0 11791
+D3
+The cave continues.
+~
+~
+0 0 11789
+S
+#11791
+Along the South Wall of the Cave~
+   The smell gets stronger as you move eastward.  You lift your arm to
+cover your nose and mouth, hoping to cover the stench somewhat.  There is
+definitely movement in the east, and you wish you could see what it was.
+The one thing you can tell though, is that is it BIG.  Even the light of
+your torch can't penetrate the gloom hanging over this cave.
+~
+117 9 0
+D0
+The cave continues.
+~
+~
+0 0 11786
+D1
+The cave continues.
+~
+~
+0 0 11792
+D3
+The cave continues.
+~
+~
+0 0 11790
+S
+#11792
+Along the South Wall of the Cave~
+   The cool stone walls and floor give you a slight chill...or is that fear?
+Directly to the east, you sense large movements, and hear the echo of deep
+breathing.  The stench is nearly overpowering.  You consider running away,
+but that wouldn't be very adventurous, would it?
+~
+117 9 0
+D0
+The cave continues.
+~
+~
+0 0 11787
+D1
+The cave continues.
+~
+~
+0 0 11793
+D3
+The cave continues.
+~
+~
+0 0 11791
+S
+#11793
+The Southeast Corner of the Cave~
+   This is the obviously well-used nest of an adult male ogre.  The ground
+is littered with bones and scraps of cloth.  Your eyes are watering freely,
+making it hard to examine the contents of the nest too closely.  You cover
+your nose and mouth to mask the odoriferousness of the ogre standing in front
+of you, then you realize... there's an ogre standing RIGHT in FRONT of you.
+Perhaps you had better leave now...
+~
+117 9 0
+D0
+The cave continues.
+~
+~
+0 0 11788
+D3
+The cave continues.
+~
+~
+0 0 11792
+S
+#11794
+The Path Ends~
+   You have reached the end of this slight trail.  The ground is worn and
+heavily tracked up, but the tracks are much larger than any you've seen.
+You put your foot into one of the footprints here, and you begin to fee
+truly insignificant.  The branches of the trees here are mostly broken,
+hanging at odd angles.  There is a profusion of leaves and broken boughs
+on there ground where it looks like they were carelessly broken as something
+large walked through.  At the very end of the path is a huge bush, oddly
+undisturbed.
+~
+117 4 2
+D1
+The path continues.
+~
+~
+0 0 11795
+D5
+It's pretty dark - looks like a cave of some sort.
+~
+bush~
+8 0 11785
+S
+#11795
+Along a Path in the Forest~
+   You're on a nondescript path leading away from the small forest.  You
+don't hear any birds or other wildlife around here though.  Must be something
+travels this path often enough to keep the animals away.  The yellowed 
+grass is smashed flat, trampled too many times to spring back up.  As you
+look closely, you think you see pieces of a squirrel's skeletong trampled
+into the dust at the center of the path, then you realize it is just a pile 
+of sticks.  The curious silence makes you hasten your steps a bit.
+~
+117 4 2
+D1
+The path continues.
+~
+~
+0 0 11796
+D3
+The path continues.
+~
+~
+0 0 11794
+S
+#11796
+Along a Path in the Forest~
+   The flora along the path here looks like it has been sorely abused.
+The grass is trampled and yellow, the flowers lining the path are broken
+off and smashed.  The birds seem to be almost tentative in their calls,
+almost as if not trying to attract too much attention.  The path continues
+to the west and south.
+~
+117 0 2
+D2
+The path continues
+~
+~
+0 0 11797
+D3
+The path continues.
+~
+~
+0 0 11795
+S
+#11797
+Along a Path in the Forest~
+   This looks like a well used path.  You can't make out where it goes
+because of the bend a ways up.  The trees are not so closely growing
+here, and the sunlight beats down brightly, making it almost cheery.
+You hear a few crickets chirping, urging you down the path to its end.
+~
+117 0 2
+D0
+The path continues.
+~
+~
+0 0 11796
+D2
+The path tapers off into the forest.
+~
+~
+0 0 11798
+S
+#11798
+A Path Begins~
+   You have stumbled across what appears to be a path.  The trees have
+thinned a bit, allowing the sun to reach the ground and feed the little
+bit of grass and flowers growing here.  The grass to the north seems to
+be bent and broken, hinting at regular walking on.  You wonder who would
+be using a trail this far away from anything.
+~
+117 0 3
+D0
+A Path leads north.
+~
+~
+0 0 11797
+D2
+You see a small forest.
+~
+~
+0 0 11810
+S
+#0
+$~

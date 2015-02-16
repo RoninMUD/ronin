@@ -1,0 +1,1135 @@
+#8702
+Reaching Lake Texcoco~
+  An enormous lake spreads out to the east, too wide to look across. A broad
+causeway can be seen to the east, reaching far out on this vast lake. Paths
+leading to two additional causeways can be seen to the north and south.
+There are a variety of plants spread around on the ground, nurishing from
+the fresh water of this huge lake.
+~
+87 16 0
+D0
+~
+~
+0 -1 8703
+D1
+~
+~
+0 -1 8713
+D2
+~
+~
+0 -1 8708
+S
+#8703
+By the Lakeside~
+  A small path leads north beside the gigantic lake filling the horizon
+to the east. There is an amazing assortment of plants covering the ground
+in an astonishing variety of colours. Three in total, causeways can be
+seen. One to the north and two to the south.
+~
+87 16 0
+D0
+~
+~
+0 -1 8704
+D2
+~
+~
+0 -1 8702
+S
+#8704
+By the Lakeside~
+  A small path leads east to the causeway which stretches itself out on
+the gigantic lake filling the horizon to the east. There is an amazing
+assortment of plants covering the ground in an astonishing variety of
+colours. A path leads back south where you can see two other causeways.
+~
+87 16 0
+D1
+~
+~
+0 -1 8705
+D2
+~
+~
+0 -1 8703
+S
+#8705
+On a broad Causeway~
+  This broad stone causeway stretches far out on the huge lake. Two
+parallel causeways can be seen to the south. The causeway surface
+is worn but dusty, and it seems to be once heavily used. Though not
+anymore. Evidence of maintainance can be seen, although not lately.
+The ravages of time is taking its toll on this mighty construction.
+~
+87 16 0
+D1
+~
+~
+0 -1 8706
+D3
+~
+~
+0 -1 8704
+S
+#8706
+On a broad Causeway~
+  This broad stone causeway stretches far out on the huge lake. Two
+parallel causeways can be seen to the south. The causeway surface
+is worn but dusty, and it seems to be once heavily used. Though not
+anymore. Evidence of maintainance can be seen, although not lately.
+The ravages of time is taking its toll on this mighty construction.
+~
+87 16 0
+D1
+~
+~
+0 -1 8707
+D3
+~
+~
+0 -1 8705
+S
+#8707
+At the end of the Causeway~
+  You have reached the end of this large stone causeway. You can see
+that the two parallel causeways to the south are also coming to a halt.
+The lake fills the horizon to the east, to the west the causeway leads
+back to the shore. There is a boat lieing in the water on the leeside
+of the causeway, sheltered by a small pier.
+~
+87 16 0
+D3
+~
+~
+0 -1 8706
+S
+#8708
+By the Lakeside~
+  A small path leads south beside the gigantic lake filling the horizon
+to the east. There is an amazing assortement of plants covering the ground
+in an astonishing variety of colours. Three in total, causeways can be
+seen. One to the north and two to the south.
+~
+87 16 0
+D0
+~
+~
+0 -1 8702
+D2
+~
+~
+0 -1 8709
+S
+#8709
+By the Lakeside~
+  A small path leads east to the causeway which stretches itself out on
+the gigantic lake filling the horizon to the east. There is an amazing
+assortement of plants covering the ground in an astonishing variety of
+colours. A path leads back north where you can see two other causeways.
+~
+87 16 0
+D0
+~
+~
+0 -1 8708
+D1
+~
+~
+0 -1 8710
+S
+#8710
+On a broad Causeway~
+  This broad stone causeway stretches far out on the huge lake. Two
+parallel causeways can be seen to the north. The causeway surface
+is worn but dusty, and it seems to be once heavily used. Though not
+anymore. Evidence of maintainance can be seen, although not lately.
+The ravages of time is taking its toll on this mighty construction.
+~
+87 16 0
+D1
+~
+~
+0 -1 8711
+D3
+~
+~
+0 -1 8709
+S
+#8711
+On a broad Causeway~
+  This broad stone causeway stretches far out on the huge lake. Two
+parallel causeways can be seen to the north. The causeway surface
+is worn but dusty, and it seems to be once heavily used. Though not
+anymore. Evidence of maintainance can be seen, although not lately.
+The ravages of time is taking its toll on this mighty construction.
+~
+87 16 0
+D1
+~
+~
+0 -1 8712
+D3
+~
+~
+0 -1 8710
+S
+#8712
+At the end of the Causeway~
+  You have reached the end of this large stone causeway. You can see
+that the two parallel causeways to the north are also coming to a halt.
+The lake fills the horizon to the east, to the west the causeway leads
+back to the shore. There is a boat lieing in the water on the leeside
+of the causeway, sheltered by a small pier.
+~
+87 16 0
+D3
+~
+~
+0 -1 8711
+S
+#8713
+On a broad Causeway~
+  This broad stone causeway stretches far out on the huge lake. Two
+parallel causeways can be seen to the north and south. The causeway
+surface is worn but dusty, and it seems to be once heavily used.
+Though not anymore. Evidence of maintainance can be seen, although
+not lately. The ravages of time is taking its toll on this mighty
+construction.
+~
+87 16 0
+D1
+~
+~
+0 -1 8714
+D3
+~
+~
+0 -1 8702
+S
+#8714
+On a broad Causeway~
+  This broad stone causeway stretches far out on the huge lake. Two
+parallel causeways can be seen to the north and south. The causeway
+surface is worn but dusty, and it seems to be once heavily used.
+Though not anymore. Evidence of maintainance can be seen, although
+not lately. The ravages of time is taking its toll on this mighty
+construction.
+~
+87 16 0
+D1
+~
+~
+0 -1 8715
+D3
+~
+~
+0 -1 8713
+S
+#8715
+At the end of the Causeway~
+  You have reached the end of this large stone causeway. You can see
+that the two parallel causeways to the north and south are also coming
+to a halt. The lake fills the horizon to the east, to the west the
+causeway leads back to the shore. There is a boat lieing in the water
+on the leeside of the causeway, sheltered by a small pier.
+~
+87 16 0
+D3
+~
+~
+0 -1 8714
+S
+#8716
+Near the Chinampas~
+  The boat is drawing nearer to the floating island-like structures.
+It is impossible to see what they are, or what they are made of.
+But canals making a large maze can be seen running between them.
+To the north, south and west the only things that can be seen are
+the birds hunting the large amounts of fish, and the endless
+amounts of water, filling the horizon in these directions.
+~
+87 16 0
+S
+#8717
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8718
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8719
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8720
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8721
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8722
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8723
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8724
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8725
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8726
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8727
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8728
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8729
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8730
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8731
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. There is a dock to the
+east, and a stairway leads up on a tall brick wall.
+~
+87 16 0
+S
+#8732
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8733
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8734
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8735
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8736
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8737
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8738
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8739
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8740
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8741
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8742
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8743
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+
+rdesc 8744
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8744
+Among the Chinampas~
+Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8745
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8746
+Among the Chinampas~
+  Bunched twigs, stacked up with mud float around here like giant fields.
+These floating gardens seems to be for agricultural usage, sowed with
+many different types of vegetables. The warm weather has made the plants
+firm and tall, which partly darkens the canals running through them.
+Navigating through these vast fields must be a demanding task since
+there seems to be no way to find a decent view. The canal continues in
+all horizontal directions and it appears difficult, if not impossible,
+to find any place to land.
+~
+87 16 0
+S
+#8747
+Dock beneath the wall~
+  You are located on a wooden dock beneath a tall brick wall that towers 
+over you to the east. You can see the large chinampas to the west, with
+canals running through them. A handfull of people are maintaining the wall,
+while some others are carrying large baskets of food up a stairway,
+connecting the docks to the large wall.
+~
+87 16 0
+D4
+~
+~
+0 -1 8800
+S
+#8748
+On a boat on Lake Texcoco~
+  You are located on a fairly big boat, floating silently on Lake Texcoco.
+There are four oars on each side of this sturdy vessel, in addition to
+a large rudder at the stern. The Causeway is visible to the west, while
+all you can see in the other directions is water. The water is clear
+and is apparently inhabited by a large quantity of fish.
+~
+87 16 0
+S
+#8749
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8750
+On a boat on Lake Texcoco~
+  You are located on a fairly big boat, floating silently on Lake Texcoco.
+There are four oars on each side of this sturdy vessel, in addition to
+a large rudder at the stern. The Causeway is visible to the west, while
+all you can see in the other directions is water. The water is clear
+and is apparently inhabited by a large quantity of fish.
+~
+87 16 0
+S
+#8751
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8752
+On a boat on Lake Texcoco~
+  You are located on a fairly big boat, floating silently on Lake Texcoco.
+There are four oars on each side of this sturdy vessel, in addition to
+a large rudder at the stern. The Causeway is visible to the west, while
+all you can see in the other directions is water. The water is clear
+and is apparently inhabited by a large quantity of fish.
+~
+87 16 0
+S
+#8753
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8754
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8755
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8756
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8757
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8758
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8759
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8760
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8761
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8762
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8763
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8764
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8765
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8766
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8767
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8768
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8769
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8770
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8771
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8772
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8773
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8774
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8775
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8776
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8777
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8778
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8779
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8780
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+Land is not in view... Just water, all around. Land can't be too far 
+away though, since the sky is filled with birds hunting the vast amounts
+of fish, who in all shapes and sizes can be seen leaping in the air, 
+making the water seethe as the shoals move around.
+~
+87 16 0
+S
+#8781
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+The sky is filled with birds hunting the enormous amounts of fish, who
+in all shapes and sizes can be seen leaping in the air, making the water
+seethe as the shoals move around. To the east it is possible to make out
+something that looks like large floating islands. 
+~
+87 16 0
+S
+#8782
+Lake Texcoco~
+  The boat drifts quietly through the crystal clear water of Lake Texcoco.
+The sky is filled with birds hunting the enormous amounts of fish, who
+in all shapes and sizes can be seen leaping in the air, making the water
+seethe as the shoals move around. To the east it is possible to make out
+something that looks like large floating islands. 
+~
+87 16 0
+S
+#8785
+Inside a House~
+   A tired old woman is working on a piece of clothing while what appears
+to be her daughter is cooking. The house has limited furnishing but is
+very neat and tidy. A doorway in the eastern wall leads back into the street.
+~
+87 16 0
+D1
+~
+~
+0 -1 8858
+S
+#8786
+Inside a House~
+   Shadows dance on these highly decorated walls as the light from a small
+fire lights up this beautiful home. Three people sit in chairs in one of
+the corners and seem to be very comfortable. A small child is playing on
+the floor. A doorway with fine carvings leads back into the city street.
+~
+87 16 0
+D2
+~
+~
+0 -1 8809
+S
+#8787
+Inside a Flower Shop~
+   Flowers are lined up and stacked all over this shop. Some people are
+walking around looking at them, assessing if they are going to buy any.
+An incredibly gorgeous woman is standing in the shade by one of the
+windows, her deep brown eyes are gently looking for customers to buy
+flowers from her. For some reason there are more male customers than
+~
+87 16 0
+D0
+~
+~
+0 -1 8809
+S
+#8788
+Inside a House~
+   Some crafty looking masons are repairing a window frame in the western
+wall. Some other workers are working with something on the eastern wall as
+well. They are making a big mess all over, but the house is currently
+unfurnished. The doorway in the western wall leads back out into the street.
+~
+87 16 0
+D3
+~
+~
+0 -1 8845
+S
+#8789
+Inside a House~
+   A couple of small children are looking eagerly out the window. They are
+barely tall enough to get their heads over the frame though. They seem to
+be looking at some older kids playing a ballgame outside. A tall woman is
+sweeping the floor while an old man sits resting in a chair.
+~
+87 16 0
+D1
+~
+~
+0 -1 8845
+S
+#8790
+Inside a House~
+   This house is rather anonymously furnished, its floor is also dusty.
+Noone is here at the moment but there seems to be many people out in the
+street. The doorway to the west leads back out there.
+~
+87 16 0
+D3
+~
+~
+0 -1 8846
+S
+#8791
+Inside a House~
+   This house is rather crowded right now. Many old men seem to have some
+kind of meeting and everybody is talking non-stop. Noone seems to listen
+to what the others say which isn't very strange since everybody talking
+makes it all just blend together.
+~
+87 16 0
+D1
+~
+~
+0 -1 8846
+S
+#8792
+On the Top of the Mountain~
+   A staggering panorama view opens up in every direction
+when reaching the top. The city of Tenochtitlan can be seen
+spreading out over a gigantic area to the southwest. Several
+pyramidic temples can be seen in the distance, along with
+great architectural buildings and a large castle in the end
+of the southern horizon.
+~
+87 16 0
+D5
+~
+~
+0 -1 8825
+S
+#8793
+The room below the hatch~
+I make this room to be able to have a hatch in the
+room linked to it, Might make some kind of addon here
+in the future.
+~
+87 33304 0
+D4
+~
+hatch~
+1 -1 8810
+S
+#0
+$~

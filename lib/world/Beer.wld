@@ -1,0 +1,1904 @@
+#25800
+In bed~
+    You have crawled into Thyas's bed.  You best hope he doesn't find you here
+(unless your a chick with some kickass hooters) cause he'll kick your ass.
+The sheets are warm, he must be around here somewhere, probably gone to get
+something to eat.  This sure is a comfortable bed, well used no doubt. Best
+be gone before Thyas gets back.
+~
+258 0 0
+S
+#25801
+Entrance to the Catacombs~
+    You are in the entrance to the underground catacombs.  It is very dark
+here and you can not see in either direction.  Horrible sounds drift from the
+south and you can only imagine what terrors lurk in this strange place.
+~
+258 265 0
+D2
+You see only darkness.
+~
+door~
+0 -1 25802
+S
+#25802
+Inside the Catacombs~
+    Now deeper inside the catacombs, it is still very dark and damp.  The 
+screeching sounds coming from inside have gotten louder as they seem to be
+getting closer.  To the south is a passage that you assume leads along the
+main tunnel of the catacomb.  To the east is another passage but it is to
+dark to see where it leads.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25801
+D1
+You see only darkness.
+~
+door~
+0 -1 25831
+D2
+You see only darkness.
+~
+door~
+0 -1 25803
+S
+#25803
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can 
+still hear the horrible screeching noises, but as of yet you can see nothing.
+To the west is another tunnel but it too is pitched black.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25802
+D2
+You see only darkness.
+~
+door~
+0 -1 25804
+D3
+You see only darkness.
+~
+door~
+0 -1 25881
+S
+#25804
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can
+still hear the horrible screeching noises, but as of yet you can see nothing.
+The tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25803
+D2
+You see only darkness.
+~
+door~
+0 -1 25805
+S
+#25805
+Main Tunnel of the Catacombs~
+    You have come to an intersection in the tunnel.  From here the catacombs
+span off in all four directions.  To the south the tunnel continues as it has
+for some time.  To the east and west it branches out into new tunnels.  Back 
+to the north is where you came from.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25804
+D1
+You see only darkness.
+~
+door~
+0 -1 25849
+D2
+You see only darkness.
+~
+door~
+0 -1 25806
+D3
+You see only darkness.
+~
+door~
+0 -1 25894
+S
+#25806
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The 
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25805
+D2
+You see only darkness.
+~
+door~
+0 -1 25807
+S
+#25807
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25806
+D2
+You see only darkness.
+~
+door~
+0 -1 25808
+S
+#25808
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25807
+D1
+You notice that a large stone seems to be pushed back slightly.
+~
+~
+6 -1 25861
+D2
+You see only darkness.
+~
+door~
+0 -1 25809
+S
+#25809
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25808
+D2
+You see only darkness.
+~
+door~
+0 -1 25811
+S
+#25810
+A temporary name~
+A temporary description
+~
+258 265 0
+S
+#25811
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25809
+D2
+You see only darkness.
+~
+door~
+0 -1 25812
+S
+#25812
+Main Tunnel of the Catacombs~
+   The untravveled tunnel continues back to the south and to the east.
+To the north you notice that a large stone in the wall seems to be discolored
+slightly. Perhaps it is the iron in the limestone succunming to the dampness
+and rusting.  Well, none the less, the trail continues and so must you.~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25811
+D2
+You see only darkness.
+~
+door~
+0 -1 25813
+S
+#25813
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25812
+D2
+You see only darkness.
+~
+door~
+0 -1 25814
+S
+#25814
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25813
+D2
+You see only darkness.
+~
+door~
+0 -1 25815
+S
+#25815
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25814
+D2
+You see only darkness.
+~
+door~
+0 -1 25816
+S
+#25816
+Main Tunnel of the Catacombs~
+    You are travelling along the main tunnel of the catacombs.  You can still
+hear the horrible screeching noises, but as of yet you can see nothing.  The
+tunnel continues to the south and back to the north.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25815
+D2
+You see only darkness.
+~
+door~
+0 -1 25817
+S
+#25817
+End of the Main Tunnel~
+    You have come to the end of what you believe to be the main tunnel of the
+catacombs.  From her the tunnel stretches back to the north for many paces.
+The journey to this point has been exhausting, and you hope you have explored
+all options carefully, as things are not always what they seem to be!
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25816
+D1
+A slight discoloration of the rock gives a hint to a secret passage.~
+stone~
+7 -1 25818
+S
+#25818
+Inside a secret tunnel~
+    Moving the small stone outside you have revealed yet another unexplored
+passage way.  The tunnel is dark and damp as were all the rest.  The floor is
+dusty and the air is barely breathable, but you must move on to uncover the
+secrets of these ancient caves.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+6 -1 25819
+D3
+A small stone looks slightly out of place here.
+~
+stone~
+2 -1 25817
+S
+#25819
+Untravelled tunnel~
+    An ancient tunnel, it seems rarely used as the only tracks in here are the
+ones you yourself have made.  Stories of grave robbers flash in your mind as
+you ponder your surroundings.  To be here seems unholy but your past has
+relegated you to the planes of the unholy.  There is nothing to do but continue
+on.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25820
+D3
+You see only darkness.
+~
+door~
+0 -1 25818
+S
+#25820
+Untravelled tunnel~
+    The untravelled tunnel continues back to the south and to the east.  To the
+north you notice that a large stone in the wall seems to be discolored.  Perhaps
+it is the iron in the limestone succumbing to the dampness and rusting.  Well
+none the less the trail here continues and so must you.
+~
+258 265 0
+D0
+A giant stone is here.
+~
+stone~
+1 25812 25821
+D1
+You see only darkness.
+~
+door~
+0 -1 25822
+D2
+You see only darkness.
+~
+door~
+0 -1 25819
+S
+#25821
+Hidden Chamber~
+    Moving the giant stone, you uncover a tiny hidden room.  This room is the
+resting place of the Pecious Beast. 
+~
+258 265 0
+D2
+A giant stone is here.
+~
+stone~
+1 25812 25820
+S
+#25822
+Untravelled tunnel~
+    The tunnel continues on to the east and back to the west.  From here you 
+can no longer hear that terrible screeching sound.  It was probably just the 
+wind anyway, right?
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25823
+D3
+You see only darkness.
+~
+door~
+0 -1 25820
+S
+#25823
+Bend in the tunnel~
+    You have come to a small bend in the tunnel.  From here it continues 
+south into the darkness and back to the west.  Here the air smells very stale,
+a stench of the unknown floats across your nose.
+~
+258 265 0
+D2
+You see only darkness.
+~
+door~
+0 -1 25824
+D3
+You see only darkness.
+~
+door~
+0 -1 25822
+S
+#25824
+Untravelled tunnel~
+    Still on the untravelled path, you can only wonder where it will take you
+and what lies ahead.  From here you can see nothing and hear less.  The only
+sounds are those you yourself make.  The walls and floor are pure limestone
+as is the ceiling.  In the limestone you can see tiny shells of the marine life
+that once inhabited the water that covered these great stones.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25823
+D1
+You see only darkness.
+~
+door~
+0 -1 25825
+S
+#25825
+Untravelled tunnel~
+    Still on the untravelled path, you can only wonder where it will take you
+and what lies ahead.  From here you can see nothing and hear less.  The only
+sounds are those you yourself make.  The walls and floor are pure limestone
+as is the ceiling.  In the limestone you can see tiny shells of the marine life
+that once inhabited the water that covered these great stones.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25826
+D3
+You see only darkness.
+~
+door~
+0 -1 25824
+S
+#25826
+Bend in the tunnel~
+    Yet another bend in the tunnel, this one leads north into the blackness.
+As the stone presses under your feet and the silence fills your ears you
+have no idea what to expect.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25827
+D3
+You see only darkness.
+~
+door~
+0 -1 25825
+S
+#25827
+Untravelled tunnel~
+    Still on the untravelled path, you can only wonder where it will take you
+and what lies ahead.  From here you can see nothing and hear less.  The only
+sounds are those you yourself make.  The walls and floor are pure limestone
+as is the ceiling.  In the limestone you can see tiny shells of the marine life
+that once inhabited the water that covered these great stones.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25828
+D2
+You see only darkness.
+~
+door~
+0 -1 25826
+S
+#25828
+End of the tunnel~
+    Well it seems as if you have come to the end of yet another group of tunnels.
+From here it seems there is nowhere to go but back from where you came.
+~
+258 265 0
+D1
+A large stone sits here.
+~
+door~
+1 25813 25829
+D2
+`
+~
+stone~
+0 -1 25827
+S
+#25829
+First Obsidian Room~
+   You are now standing inside what appears to be a secret chamber.  This room
+is constructed of a stone different than that of the others.  It is a black
+obsidian that looks like glass.  The stone is so shiny that your reflections
+make the room appear as if there are a thousand people in here with you, but
+you know you are alone?
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25830
+D3
+A large stone sits here.
+~
+stone~
+1 25813 25828
+S
+#25830
+Second Obsidian Room~
+    You are now inside the second room of the secret chamber.  As you look back
+into the first room your reflections still fill the room.  It is as if the room
+has captured your very soul!!!
+~
+258 265 0
+D3
+You see only darkness.
+~
+door~
+0 -1 25829
+S
+#25831
+Tunnel of the damned~
+    Here the tunnel spans off from the main tunnel to the east into the 
+darkness.  Ghostly figures seem to dance in front of your eyes but you pass
+it off as just your eyes adjusting to the darkness.  You can't see where the
+tunnel leads as it is much too dark.  You can ,however, hear a terrible screech
+coming out of the tunnel.  It is probably just the wind bellowing through these
+ancient tunnels.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25832
+D3
+You see only darkness.
+~
+door~
+0 -1 25802
+S
+#25832
+Tunnel of the damned~
+    Now further into the tunnel the screeching seems to increase.  The hollow
+lifeless howl bounces of the limestone walls and pierces into your head with
+an intensity that could bust your eardrums.  If you were to remove your hands
+from your ears you are certain your brain would explode.
+~
+258 265 0
+D0
+There is nothing here but a wall.
+~
+wall~
+1 -1 25831
+D1
+You see only darkness.
+~
+door~
+0 -1 25834
+D3
+You see only darkness.
+~
+door~
+0 -1 25831
+S
+#25833
+Tomb of the first Damned Soul~
+    Upon opening the stone you opened the rift into the tomb of the first
+damned soul of this ancient society.  This is the burial place of those beings
+who first spawned their evils into their society.  Their crimes were so hideous
+that they were banished to burial away from other members of their families
+and society.  It was believed that the corruptness they suffered in their mortal
+lives would be carried to the afterlife.  To keep the afterlife pure these 
+souls were sent to an afterlife in the realm of the damned.
+~
+258 265 0
+D2
+There is nothing here but a wall.
+~
+wall~
+1 -1 25832
+S
+#25834
+Tunnel of the damned~
+    Now further into the tunnel the screeching seems to increase.  The hollow
+lifeless howl bounces of the limestone walls and pierces into your head with
+an intensity that could bust your eardrums.  If you were to remove your hands
+from your ears you are certain your brain would explode.
+~
+258 265 0
+D2
+You see only darkness.
+~
+door~
+0 -1 25835
+D3
+You see only darkness.
+~
+door~
+0 -1 25832
+S
+#25835
+Tunnel of the damned~
+     From the initial evil spawned by the first souls of the damned sprung
+many centuries of sin.  As the number of souls banished to the plane of the
+damned increased, so too did the burial space needed to keep them separated
+from the pure souls of the society.  As a result the catacombs have been
+extended into what you are now standing in.  You wonder just how big this
+section of tunnel has become and more importantly what became of it's inhab-
+itants.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25834
+D1
+You see only darkness.
+~
+door~
+0 -1 25836
+S
+#25836
+Tunnel of the damned~
+    From the initial evil spawned by the first souls of the damned sprung
+many centuries of sin.  As the number of souls banished to the plane of the
+damned increased, so too did the burial space needed to keep them separated
+from the pure souls of the society.  As a result the catacombs have been
+extended into what you are now standing in.  You wonder just how big this
+section of tunnel has become and more importantly what became of it's inhab-
+itants.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25837
+D3
+You see only darkness.
+~
+door~
+0 -1 25835
+S
+#25837
+Tunnel of the damned~
+     From the initial evil spawned by the first souls of the damned sprung
+many centuries of sin.  As the number of souls banished to the plane of the
+damned increased, so too did the burial space needed to keep them separated
+from the pure souls of the society.  As a result the catacombs have been
+extended into what you are now standing in.  You wonder just how big this
+section of tunnel has become and more importantly what became of it's inhab-
+itants.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25838
+D3
+You see only darkness.
+~
+door~
+0 -1 25836
+S
+#25838
+Tunnel of the Damned~
+    You have penetrated deep into the tunnel of the damned.  All about you are
+the tombs of those who were so evil in their mortal lives that they were
+banished to this horrible place in their afterlife.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25839
+D2
+You see only darkness.
+~
+door~
+0 -1 25837
+S
+#25839
+Tunnel of the Damned~
+    You have penetrated deep into the tunnel of the damned.  All about you are
+the tombs of those who were so evil in their mortal lives that they were
+banished to this horrible place in their afterlife.  Here the walls to the
+north and west are a different shade then the others surrounding you.
+~
+258 265 0
+D0
+There is nothing here but a wall.
+~
+wall~
+1 -1 25841
+D1
+You see only darkness.
+~
+door~
+0 -1 25842
+D2
+You see only darkness.
+~
+door~
+0 -1 25838
+D3
+There is nothing here but a wall.
+~
+wall~
+1 -1 25840
+S
+#25840
+Tomb of the Ancient Evils~
+    Upon opening the wall you are now into one of the actual tombs of those
+evil souls that were forsaken to this place.  These individuals received no
+elaborate burial rituals as did their "holy" counter parts. Tens perhaps
+hundreds of bodies were piled into each one of these small tombs.  Nothing
+was provided for the journey to the afterlife and all that clutters the floor
+are human bones and large rats.
+~
+258 265 0
+D1
+There is nothing here but a wall.
+~
+wall~
+1 -1 25839
+S
+#25841
+Tomb of the Ancient Evils~
+    Upon opening the wall you are now into one of the actual tombs of those
+evil souls that were forsaken to this place.  These individuals received no
+elaborate burial rituals as did their "holy" counter parts.  Tens perhaps
+hundreds of bodies were piled into each one of these small tombs.  Nothing
+was provided for the journey to the afterlife and all that clutters the floor
+are human bones and large rats.
+~
+258 265 0
+D2
+There is nothing here but a wall.
+~
+wall~
+1 -1 25839
+S
+#25842
+Tunnel of the Damned~
+    You have penetrated deep into the tunnel of the damned.  All about you 
+are the tombs of those who were so evil in their mortal lives that they were
+banished to this horrible place in their afterlife.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25843
+D3
+You see only darkness.
+~
+door~
+0 -1 25839
+S
+#25843
+Tunnel of the Damned~
+    You have penetrated deep into the tunnel of the damned.  All about you 
+are the tombs of those who were so evil in their mortal lives that they were
+banished to this horrible place in their afterlife.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25845
+D3
+You see only darkness.
+~
+door~
+0 -1 25842
+S
+#25844
+Tomb of the Ancient Evils~
+    Upon opening the wall you are now into one of the actual tombs of those
+evil souls that were forsaken to this place.  These individuals received no
+elaborate burial rituals as did their "holy" counter parts.  Tens perhaps
+hundreds of bodies were piled into each one of these small tombs. Nothing
+was provided for the journey to the afterlife and all that clutters the floor
+are human bones and large rats.
+~
+258 265 0
+D2
+There is nothing here but a wall.
+~
+wall~
+1 -1 25845
+S
+#25845
+End of the Tunnel of the Damned~
+    You have come to the end of the tunnels of the damned. From here there
+seems as though there is nowhere to go but back through those terrifying
+tunnels, a journey you do not look forward to.
+~
+258 269 0
+D0
+There is nothing here but a wall.
+~
+wall~
+1 -1 25844
+D2
+There is nothing here but a wall.
+~
+wall~
+1 25811 25846
+D3
+You see only darkness.
+~
+door~
+0 -1 25843
+S
+#25846
+Tomb of Prime Evil ~
+    Upon opening the wall you uncovered the tomb of the ancient Prime Evil.
+Dubbed as Prime Evil by his fellow man thousands of years ago his true name
+has been lost over the centuries.  In here the screeching volume has increased
+tenfold.  What horrible creature could make such an inhumane noise, do you
+really want to know?
+~
+258 265 0
+D0
+There is nothing here but a wall.
+~
+wall~
+1 25811 25845
+D2
+You see only darkness.
+~
+door~
+0 -1 25847
+S
+#25847
+Tomb of Prime Evil~
+    Upon opening the wall you uncovered the tomb of the ancient Prime Evil.
+Dubbed as Prime Evil by his fellow man thousands of years ago his true name
+has been lost over the centuries.  In here the screeching volume has increased
+tenfold. What horrible creature could make such an inhumane noise, do you
+really want to know?
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25846
+D3
+You see only darkness.
+~
+door~
+0 -1 25848
+S
+#25848
+Tomb of Prime Evil~
+    You have entered the resting place of Prime Evil.  The room is dark like
+the rest, but you get the sense that this place is far more terrible.  The 
+walls seem to be coated in dark dried blood and hundreds of bones litter the 
+floor.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25847
+S
+#25849
+A dark tunnel ~
+    You are now standing in a dark damp tunnel.  It is too dark to see where
+the tunnel leads so exploration is the only method to find out what lies beyond
+this point. 
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25850
+D3
+You see only darkness.
+~
+door~
+0 -1 25805
+S
+#25850
+A dark tunnel~
+    You are now standing in a dark damp tunnel.  It is too dark to see where
+the tunnel leads so exploration is the only method to find out what lies beyond
+this point.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25851
+D3
+You see only darkness.
+~
+door~
+0 -1 25849
+S
+#25851
+A dark tunnel~
+    You are now standing in a dark damp tunnel.  It is too dark to see where
+the tunnel leads so exploration is the only method to find out what lies beyond
+this point.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25852
+D2
+There is nothing here but a wall.
+~
+wall~
+1 -1 25857
+D3
+You see only darkness.
+~
+door~
+0 -1 25850
+S
+#25852
+A dark tunnel~
+    You are now standing in a dark damp tunnel.  It is too dark to see where
+the tunnel leads so exploration is the only method to find out what lies beyond
+this point.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25853
+D3
+You see only darkness.
+~
+door~
+0 -1 25851
+S
+#25853
+A dark tunnel~
+    You are now standing in a dark damp tunnel.  It is too dark to see where
+the tunnel leads so exploration is the only method to find out what lies beyond
+this point.
+~
+258 265 0
+D2
+You see only darkness.
+~
+door~
+0 -1 25854
+D3
+You see only darkness.
+~
+door~
+0 -1 25852
+S
+#25854
+A dark tunnel~
+    You are now standing in a dark damp tunnel.  It is too dark to see where
+the tunnel leads so exploration is the only method to find out what lies beyond
+this point.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25853
+D1
+You see only darkness.
+~
+door~
+0 -1 25855
+S
+#25855
+A dark tunnel~
+    You are now standing in a dark damp tunnel.  It is too dark to see where
+the tunnel leads so exploration is the only method to find out what lies beyond
+this point.
+~
+258 265 0
+D1
+There is nothing here but a wall.
+~
+wall~
+1 -1 25856
+D3
+There is nothing here but a wall.
+~
+door~
+0 -1 25854
+S
+#25856
+A dark tunnel~
+   A small hole in the wall, there is barely room to turn around.  Small
+sharp stones litter the floor.  From the ceiling large stalagtites hang
+down everywhere.  A stench of something rotten fills the are, your stomach
+rolls from the smell.
+~
+258 265 0
+D3
+There is nothing here but a wall.
+~
+wall~
+1 -1 25855
+S
+#25857
+Crystal Passage~
+    You have entered into a magnificent crystal tunnel.  The walls, floor, and
+ceiling are all made of pure crystal.  Your light bounces off the walls to
+brilliantly illuminate the whole area.  It is the brightest of all the rooms
+you have seen down here.  Millions of your own reflections bounce back at you
+from the uneven surfaces of the wall.
+~
+258 265 0
+D0
+There is nothing here but a wall.
+~
+wall~
+1 -1 25851
+D2
+You see only darkness.
+~
+door~
+0 -1 25858
+S
+#25858
+Crystal Passage~
+    You have entered into a magnificent crystal tunnel.  The walls, floor and
+ceiling are all made of pure crystal.  Your light bounces off the walls to
+brilliantly illuminate the whole area.  It is the brightest of all the rooms
+you have seen down here.  Millions of your own reflections bounce back at you
+from the uneven surfaces of the wall.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25857
+D2
+You see only darkness.
+~
+door~
+0 -1 25859
+S
+#25859
+Dusty tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+~
+~
+0 -1 25858
+D1
+There is nothing here but a wall.
+~
+wall~
+1 -1 25862
+D3
+You see only darkness.
+~
+door~
+0 -1 25860
+S
+#25860
+Dusty tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25859
+D3
+You see only darkness.
+~
+door~
+0 -1 25861
+S
+#25861
+Dusty tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25860
+D3
+You see only darkness.
+~
+door~
+1 -1 25808
+S
+#25862
+Dusty tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+You see only darkness.
+~
+wall~
+0 -1 25863
+D2
+You see only darkness.
+~
+door~
+0 -1 25866
+D3
+There is nothing here but a wall.
+~
+wall~
+1 -1 25859
+S
+#25863
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25864
+D3
+You see only darkness.
+~
+door~
+0 -1 25862
+S
+#25864
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25865
+D3
+You see only darkness.
+~
+door~
+0 -1 25863
+S
+#25865
+Dusty Tunnel~
+     The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D2
+You see only darkness.
+~
+door~
+0 -1 25872
+D3
+You see only darkness.
+~
+door~
+0 -1 25864
+S
+#25866
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+~
+~
+0 -1 25862
+D2
+~
+~
+0 -1 25867
+S
+#25867
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+~
+~
+0 -1 25866
+D3
+~
+~
+0 -1 25868
+S
+#25868
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+~
+~
+0 -1 25867
+D2
+~
+~
+0 -1 25869
+S
+#25869
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+~
+~
+0 -1 25868
+D2
+~
+~
+0 -1 25870
+S
+#25870
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+~
+~
+0 -1 25869
+D3
+~
+~
+0 -1 25871
+S
+#25871
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+~
+~
+0 -1 25870
+S
+#25872
+Dusty tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25865
+D2
+You see only darkness.
+~
+door~
+0 -1 25873
+S
+#25873
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25872
+D1
+You see only darkness.
+~
+door~
+0 -1 25878
+D2
+You see only darkness.
+~
+door~
+0 -1 25874
+S
+#25874
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25873
+D2
+You see only darkness.
+~
+door~
+0 -1 25875
+S
+#25875
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25874
+D3
+You see only darkness.
+~
+door~
+0 -1 25876
+S
+#25876
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25875
+D3
+You see only darkness.
+~
+door~
+0 -1 25877
+S
+#25877
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25876
+S
+#25878
+Dusty Tunnel~
+    The tunnel here is dry and dusty.  There is no moisture whatsoever in the
+air around you.  It's as if some amazing heat has blown through here and taken
+all the dampness with it.  Dust floats around in the air covering your body
+and hair in a coat of fine sand and makes it difficult to see or breath.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25879
+D3
+You see only darkness.
+~
+door~
+0 -1 25873
+S
+#25879
+Inside a large geode.~
+    Now inside this room you realize that it was once a large geode.
+Formed millions of years ago as crystal deposits formed inside the rock that
+now lines the walls.  It was obviously mined hundreds of years ago, but
+small shards of crystal still hang from the walls and ceilings.  The floor 
+is covered in hard packed clay, as the shards are razor sharp.  Careful
+of where you step, as a touch against the wall would result in serious
+injury.~
+258 265 0
+D2
+You see only darkness.
+~
+door~
+0 -1 25880
+D3
+You see only darkness.
+~
+door~
+0 -1 25878
+S
+#25880
+Inside a large geode.~
+    Now inside this large room you realize that it was once a large geode.
+Formed millions of years ago as crystal deposits formed inside the rock that
+now lines the walls.  It was obviously mined hundreds of years ago, but small
+shards of crystal still hang from the walls and ceilings.  The floor is covered
+in hard packed clay, as the shards of crystal are razor sharp.  Careful of
+where you step, as a touch against the wall would result in serious injury.
+~
+258 265 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25879
+S
+#25881
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of
+the holy.  This is where the individuals who served their gods and society well
+have been laid to rest.  The tunnel is clean and well maintained.  Torches 
+line the walls, illuminating decorative carvings that are thousands of years
+old.
+~
+258 264 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25803
+D3
+You see only darkness.
+~
+door~
+0 -1 25882
+E
+carvings~
+The carvings etched in the wall depict hundreds of ancient stories
+at once.  Althought the artwork is very beautiful, you find the 
+very hard to follow.
+~
+E
+torch~
+A close inspection of the torches reveals that they are made entirely
+of stone.  The fact that they continue to burn amazes you.
+~
+S
+#25882
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 264 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25881
+D3
+You see only darkness.
+~
+door~
+0 -1 25883
+E
+torch~
+A closer inspection of the torches reaveal that they are mad entirely
+of stone.  You are baffled as to how the continue to burn.
+~
+S
+#25883
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 264 0
+D0
+There is nothing here but a wall.
+~
+stone~
+1 25810 25890
+D1
+You see only darkness.
+~
+door~
+0 -1 25882
+D2
+You see only darkness.
+~
+door~
+0 -1 25897
+D3
+You see only darkness.
+~
+door~
+0 -1 25884
+S
+#25884
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 264 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25883
+D3
+You see only darkness.
+~
+door~
+0 -1 25885
+S
+#25885
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 265 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25884
+D3
+You see only darkness.
+~
+door~
+0 -1 25886
+S
+#25886
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 264 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25887
+D1
+You see only darkness.
+~
+door~
+0 -1 25885
+S
+#25887
+Holy Chambers~
+    Still in the holy chambers, the path here continues in a north-south
+direction.  Torches still illuminate the walls, and the cleanliness of these
+tunnels still amaze you.  The air here is filled with goodness, to do anything
+to disturb this place would surely mean death.  Be careful of what you touch
+and even more careful of what you take, for you never know who may be watching
+you.
+~
+258 264 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25888
+D2
+You see only darkness.
+~
+door~
+0 -1 25886
+S
+#25888
+Holy Chambers~
+    Still in the holy chambers, the path here continues in a north south
+direction.  Torches still illuminate the walls, and the cleanliness of these
+tunnels still amaze you.  The air here is filled with goodness, to do anything
+to disturb this place would surely mean death.  Be careful of what you touch
+and even more careful of what you take, for you never know who may be watching
+you.
+~
+258 264 0
+D2
+You see only darkness.
+~
+door~
+0 -1 25887
+D3
+There is nothing here but a wall.
+~
+wall~
+1 25814 25889
+S
+#25889
+A small secret room~
+    Upon opening the stone you have uncovered a small secret room.  From the
+looks of it, it was used by robbers to hide on persuing guards of these tombs.
+Some gold coins litter the ground, but little else has been left here.  You
+wonder when the last time this room was used, probably centuries ago, then
+again you never know !
+~
+258 264 0
+D1
+A large stone blocks the way out.
+~
+stone~
+1 25814 25888
+S
+#25890
+A divine place~
+    Opening the wall, you step into a sacredly divine place.  A set of tombs
+that house the bodies of the holiest of beings from the ancient mortal world.
+These beings have been placed here to balance the power between good and evil
+that fill these ancient catacombs.  They served their world well as mortals 
+and now they continue that tradition of service in the immortal realm.
+~
+258 264 0
+D0
+~
+~
+0 -1 25892
+D2
+There is nothing here but a wall
+~
+stone~
+1 -1 25883
+S
+#25891
+A holy tomb~
+    Here is the tomb of an Ancient Divine, he along with his counter part
+struggle against the powers of evil to keep a balance that will not upset
+the mortal world they left behind ages ago.  If they fail, evil will flourish,
+cross the rift into the mortal world and rule the earth.  Upsetting the
+balance of power could mean terrible things for your world.  Are you prepared
+to be responsible for the erosion of mankind?
+~
+258 264 0
+D1
+~
+~
+0 -1 25892
+S
+#25892
+A divine place~
+    Continuing north you move further along in these holy tombs.  Ancient
+symbols of prayer line the walls, statues of guards stand to the west and to 
+the east guarding two tombs.
+~
+258 264 0
+D1
+~
+~
+0 -1 25893
+D2
+~
+~
+0 -1 25890
+D3
+~
+~
+0 -1 25891
+S
+#25893
+A holy tomb~
+    Here is the tomb of an Ancient Divine, he along with his counter part
+struggle against the powers of evil to keep a balance that will not upset
+the mortal world they left behind ages ago.  If they fail evil will flourish,
+cross the rift into the mortal world and rule the earth.  Upsetting the
+balance of power could mean terrible things for your world. Are you prepared
+to be responsible for the erosion of mankind?
+~
+258 264 0
+D3
+~
+~
+0 -1 25892
+S
+#25894
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 264 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25805
+D3
+You see only darkness.
+~
+door~
+0 -1 25895
+S
+#25895
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 264 0
+D1
+You see only darkness.
+~
+door~
+0 -1 25894
+D3
+You see only darkness.
+~
+door~
+0 -1 25896
+S
+#25896
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 264 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25897
+D1
+You see only darkness.
+~
+door~
+0 -1 25895
+D2
+There is nothing here but a wall.
+~
+wall~
+1 -1 25898
+S
+#25897
+Holy Chambers~
+    Upon exiting the main chamber, you are now standing in the chambers of the
+holy.  This is where the individuals who served their gods and society well have
+been laid to rest.  The tunnel is clean and well maintained.  Torches line the
+walls, illuminating decorative carvings that are thousands of year old.
+~
+258 264 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25883
+D2
+You see only darkness.
+~
+door~
+0 -1 25896
+S
+#25898
+A private chamber~
+    From the looks of things this is a private burial chamber.  Most likely
+purchased by a well to do family.  It is here that all family members were to
+be buried together so that they may continue into the after-life together.
+Obviously an important family, large golden statues are all about the room.
+Torches that have burned for thousands of years send shimmers of light about
+the room casting gigantic shadows on the walls.  The room has been extended to
+the south, probably to make room for other family members.  To touch anything
+here would disturb a place that has not seen a visitor since the last body
+was placed in here.
+~
+258 264 0
+D0
+There is nothing here but a wall.
+~
+wall~
+1 -1 25896
+D2
+You see only darkness.
+~
+door~
+0 -1 25899
+S
+#25899
+Holy Chambers~
+   You are now standing in what appears to be an extension of the first
+room of this private chamber.  It too is filled with golden statues and
+other ancient artifacts that would fetch a bundle in your world, but do
+you dare remove them from this world?
+~
+258 264 0
+D0
+You see only darkness.
+~
+door~
+0 -1 25898
+S
+#0
+$~

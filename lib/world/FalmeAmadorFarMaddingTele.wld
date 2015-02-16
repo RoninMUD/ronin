@@ -1,0 +1,1562 @@
+#18400
+Turaks appartements~
+   The room you enter have a high ceiling and large windows with a great view
+of the harbor and the ships in it. On shelves and in small cabinets around the
+room, items of heartstone are displayed. A really great collection, and it 
+must be worth enough to buy a small kingdom. Doors lead away to a 
+smaller sitting room and a bedroom.
+~
+184 0 0
+D1
+~
+door~
+1 -1 18401
+S
+#18401
+Stairs~
+   The top of the stairway leads into a large hallway lit by candles hanging
+on the walls. Right oposite the stairs to the west, doors lead into Turaks
+appartements.
+~
+184 0 0
+D3
+~
+door~
+1 -1 18400
+D5
+~
+~
+0 -1 18402
+S
+#18402
+Stairs~
+   A large staircase leads to the second floor, and back east you see the main
+hall of the palace. Guards and servants are about the palace, the guards 
+keeping a close eye on you.
+~
+184 0 0
+D1
+~
+~
+0 -1 18403
+D4
+~
+~
+0 -1 18401
+S
+#18403
+Palace~
+   The big palace is taken over by the seanchen after the invasion, and is now
+home to the highlord Turak. Guards walk around with plooms on ther helmets
+making them look like insect heads.
+~
+184 0 0
+D2
+~
+~
+0 -1 18417
+D3
+~
+~
+0 -1 18402
+S
+#18404
+Domani Kennels~
+   This is where the seanchen hold women that can channel prisoner. The 
+women are controled by a'dam, an item that restricts the womens channeling.
+The collar of the a'dam is placed around the womans neck and the sul'dam, 
+the wearer of the leash, can put on  a bracelet connected by a silvery leash
+to the collar, to control the domani, the leashed ones. You see even Aes 
+Sedai collared and beeing controled.
+~
+184 0 0
+D1
+~
+~
+0 -1 18405
+D2
+~
+~
+0 -1 18416
+S
+#18405
+Stairs~
+   The stairs lead up to the domani rooms.
+~
+184 0 0
+D3
+~
+~
+0 -1 18404
+D4
+~
+~
+0 -1 18406
+S
+#18406
+Stairs~
+   The stairs lead back down to the ground floor of the kennels.
+~
+184 0 0
+D1
+~
+~
+0 -1 18407
+D5
+~
+~
+0 -1 18405
+S
+#18407
+Hallway~
+   The hallways in the domani kennels are dark and only a few candles give
+some light. Doors line both sides and you hear sounds of crying.
+~
+184 0 0
+D0
+~
+door~
+1 -1 18410
+D1
+~
+~
+0 -1 18408
+D2
+~
+door~
+1 -1 18415
+D3
+~
+~
+0 -1 18406
+S
+#18408
+Hallway~
+   The hallways in the domani kennels are dark and only a few candles give
+some light. Doors line both sides and you hear sounds of crying.
+~
+184 0 0
+D0
+~
+door~
+1 -1 18411
+D1
+~
+~
+0 -1 18409
+D2
+~
+door~
+1 -1 18414
+D3
+~
+~
+0 -1 18407
+S
+#18409
+Hallway~
+   The hallways in the domani kennels are dark and only a few candles give
+some light. Doors line both sides and you hear sounds of crying.
+~
+184 0 0
+D0
+~
+door~
+1 -1 18412
+D2
+~
+door~
+1 -1 18413
+D3
+~
+~
+0 -1 18408
+S
+#18410
+Domani room~
+   The domani rooms are simple. A small water basin and a pitcher stand on 
+a small table against one wall. Under the window at the far end wall stands
+a narrow bed with a blanket and a hardlooking pillow. Three pegs hang 
+beside the door.
+~
+184 0 0
+D2
+~
+door~
+1 -1 18407
+S
+#18411
+Domani room~
+   The domani rooms are simple. A small water basin and a pitcher stand on 
+a small table against one wall. Under the window at the far end wall stands
+a narrow bed with a blanket and a hardlooking pillow. Three pegs hang 
+beside the door.
+~
+184 0 0
+D2
+~
+door~
+1 -1 18408
+S
+#18412
+Domani room~
+   The domani rooms are simple. A small water basin and a pitcher stand on 
+a small table against one wall. Under the window at the far end wall stands
+a narrow bed with a blanket and a hardlooking pillow. Three pegs hang 
+beside the door.
+~
+184 0 0
+D2
+~
+door~
+1 -1 18409
+S
+#18413
+Domani room~
+   The domani rooms are simple. A small water basin and a pitcher stand on 
+a small table against one wall. Under the window at the far end wall stands
+a narrow bed with a blanket and a hardlooking pillow. Three pegs hang 
+beside the door.
+~
+184 0 0
+D0
+~
+door~
+1 -1 18409
+S
+#18414
+Domani room~
+   The domani rooms are simple. A small water basin and a pitcher stand on 
+a small table against one wall. Under the window at the far end wall stands
+a narrow bed with a blanket and a hardlooking pillow. Three pegs hang 
+beside the door.
+~
+184 0 0
+D0
+~
+door~
+1 -1 18408
+S
+#18415
+Domani room~
+   The domani rooms are simple. A small water basin and a pitcher stand on 
+a small table against one wall. Under the window at the far end wall stands
+a narrow bed with a blanket and a hardlooking pillow. Three pegs hang 
+beside the door.
+~
+184 0 0
+D0
+~
+door~
+1 -1 18407
+S
+#18416
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18404
+D2
+~
+~
+0 -1 18423
+D3
+~
+~
+0 -1 18417
+S
+#18417
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18403
+D1
+~
+~
+0 -1 18416
+D3
+~
+~
+0 -1 18418
+S
+#18418
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D1
+~
+~
+0 -1 18417
+D2
+~
+~
+0 -1 18419
+S
+#18419
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18418
+D2
+~
+~
+0 -1 18420
+S
+#18420
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18419
+D1
+~
+~
+0 -1 18421
+S
+#18421
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D1
+~
+~
+0 -1 18422
+D3
+~
+~
+0 -1 18420
+S
+#18422
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18423
+D2
+~
+~
+0 -1 18429
+D3
+~
+~
+0 -1 18421
+S
+#18423
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18416
+D1
+~
+~
+0 -1 18424
+D2
+~
+~
+0 -1 18422
+S
+#18424
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D1
+~
+~
+0 -1 18425
+D3
+~
+~
+0 -1 18423
+S
+#18425
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D2
+~
+~
+0 -1 18426
+D3
+~
+~
+0 -1 18424
+S
+#18426
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18425
+D1
+~
+~
+0 -1 18434
+D2
+~
+~
+0 -1 18427
+S
+#18427
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18426
+D3
+~
+~
+0 -1 18428
+S
+#18428
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D1
+~
+~
+0 -1 18427
+D2
+~
+~
+0 -1 18430
+D3
+~
+~
+0 -1 18429
+S
+#18429
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18422
+D1
+~
+~
+0 -1 18428
+D2
+~
+~
+0 -1 18431
+S
+#18430
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18428
+D3
+~
+~
+0 -1 18431
+S
+#18431
+Streets of Falme~
+   The streets are beeing patrolled by seanchen soldiers and sul'dam and 
+domani. They keep a close watch for sign of any uproar by the people 
+of the invaded city, but people look like they are carrying on with their
+lives, not bothered too much by the change of owners.
+~
+184 0 1
+D0
+~
+~
+0 -1 18429
+D1
+~
+~
+0 -1 18430
+D2
+~
+~
+0 -1 18432
+S
+#18432
+Docks~
+   The docks are filled with soldiers coming ashore from huge seanchen ships.
+Many more ships await in the bay. The soldiers walk up the docks and into the 
+city.
+~
+184 0 1
+D0
+~
+~
+0 -1 18431
+D2
+~
+~
+0 -1 18433
+S
+#18433
+Docks~
+   The docks are filled with soldiers coming ashore from huge seanchen ships.
+Many more ships await in the bay. The soldiers walk up the docks and into the 
+city.
+~
+184 0 1
+D0
+~
+~
+0 -1 18432
+S
+#18434
+City gates~
+  The gates to Falme stand open and people and soldiers come and go. Most
+of the sodiers are heading out of the city to occupy more land. Archers keep
+watch from towers on each side og the gate. You can enter the contryside to 
+the east.
+~
+184 0 1
+D3
+~
+~
+0 -1 18426
+D4
+~
+contryside~
+12 -1 18704
+S
+#18435
+Gates of the fortress~
+  You stand outside the gates of the fortress of the light, home to the 
+Children of the light. The fortress lies in the city of Amador which spread 
+out around the fortress. If you want to go elsewhere you can enter the 
+contryside by a road to the south.
+~
+184 0 2
+D0
+~
+~
+0 -1 18436
+D4
+~
+contryside~
+12 -1 18715
+S
+#18436
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18437
+D2
+~
+~
+0 -1 18435
+D3
+~
+~
+0 -1 18451
+S
+#18437
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18438
+D3
+~
+~
+0 -1 18436
+S
+#18438
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18455
+D3
+~
+~
+0 -1 18437
+S
+#18439
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D0
+~
+~
+0 -1 18440
+D2
+~
+~
+0 -1 18455
+S
+#18440
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D0
+~
+~
+0 -1 18441
+D1
+~
+~
+0 -1 18464
+D2
+~
+~
+0 -1 18439
+S
+#18441
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D0
+~
+~
+0 -1 18454
+D2
+~
+~
+0 -1 18440
+S
+#18442
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18454
+D3
+~
+~
+0 -1 18443
+S
+#18443
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18442
+D3
+~
+~
+0 -1 18444
+S
+#18444
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18443
+D3
+~
+~
+0 -1 18445
+S
+#18445
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18444
+D3
+~
+~
+0 -1 18446
+S
+#18446
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18445
+D3
+~
+~
+0 -1 18453
+S
+#18447
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D0
+~
+~
+0 -1 18453
+D2
+~
+~
+0 -1 18448
+S
+#18448
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D0
+~
+~
+0 -1 18447
+D2
+~
+~
+0 -1 18449
+D3
+~
+~
+0 -1 18467
+S
+#18449
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D0
+~
+~
+0 -1 18448
+D2
+~
+~
+0 -1 18452
+S
+#18450
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18451
+D3
+~
+~
+0 -1 18452
+S
+#18451
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18436
+D3
+~
+~
+0 -1 18450
+S
+#18452
+Corner in the hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. The hallway comes to a corner here and stairs lead up to a tower.
+~
+184 0 0
+D0
+~
+~
+0 -1 18449
+D1
+~
+~
+0 -1 18450
+D4
+~
+~
+0 -1 18457
+S
+#18453
+Corner in the hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. The hallway comes to a corner here and stairs lead up to a tower.
+~
+184 0 0
+D1
+~
+~
+0 -1 18446
+D2
+~
+~
+0 -1 18447
+D4
+~
+~
+0 -1 18458
+S
+#18454
+Corner in the hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. The hallway comes to a corner here and stairs lead up to a tower.
+~
+184 0 0
+D2
+~
+~
+0 -1 18441
+D3
+~
+~
+0 -1 18442
+D4
+~
+~
+0 -1 18459
+S
+#18455
+Corner in the hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. The hallway comes to a corner here and stairs lead up to a tower.
+~
+184 0 0
+D0
+~
+~
+0 -1 18439
+D3
+~
+~
+0 -1 18438
+D4
+~
+~
+0 -1 18456
+S
+#18456
+Climbing the fortress tower~
+   The wide stone stairs spiral up towards the top of the towers. Openings in 
+the walls hold candles and a small wooden carving beside it. Out of a window 
+you see mountains in the distance and a wide road leading towards it.
+~
+184 0 0
+D4
+~
+~
+0 -1 18461
+D5
+~
+~
+0 -1 18455
+S
+#18457
+Climbing the fortress tower~
+   The wide stone stairs spiral up towards the top of the towers. Openings in 
+the walls hold candles and a small wooden carving beside it. Out of a window 
+you see mountains in the distance and a wide road leading towards it.
+~
+184 0 0
+D4
+~
+~
+0 -1 18462
+D5
+~
+~
+0 -1 18452
+S
+#18458
+Climbing the fortress tower~
+   The wide stone stairs spiral up towards the top of the towers. Openings in 
+the walls hold candles and a small wooden carving beside it. Out of a window 
+you see mountains in the distance and a wide road leading towards it.
+~
+184 0 0
+D4
+~
+~
+0 -1 18463
+D5
+~
+~
+0 -1 18453
+S
+#18459
+Climbing the fortress tower~
+   The wide stone stairs spiral up towards the top of the towers. Openings in 
+the walls hold candles and a small wooden carving beside it. Out of a window 
+you see mountains in the distance and a wide road leading towards it.
+~
+184 0 0
+D4
+~
+~
+0 -1 18460
+D5
+~
+~
+0 -1 18454
+S
+#18460
+Top of the fortress tower~
+   The top of the tower has a great view of the city and its surroundings. Every
+army would be spotted from here in good time to arrange a defence. A small 
+shed stands on the top where the guards can have a seat when on break.
+~
+184 0 2
+D5
+~
+~
+0 -1 18459
+S
+#18461
+Top of the fortress tower~
+   The top of the tower has a great view of the city and its surroundings. Every
+army would be spotted from here in good time to arrange a defence. A small 
+shed stands on the top where the guards can have a seat when on break.
+~
+184 0 2
+D5
+~
+~
+0 -1 18456
+S
+#18462
+Top of the fortress tower~
+   The top of the tower has a great view of the city and its surroundings. Every
+army would be spotted from here in good time to arrange a defence. A small 
+shed stands on the top where the guards can have a seat when on break.
+~
+184 0 2
+D5
+~
+~
+0 -1 18457
+S
+#18463
+Top of the fortress tower~
+   The top of the tower has a great view of the city and its surroundings. Every
+army would be spotted from here in good time to arrange a defence. A small 
+shed stands on the top where the guards can have a seat when on break.
+~
+184 0 2
+D5
+~
+~
+0 -1 18458
+S
+#18464
+Hall of the questioners~
+   This section of the fortress is home to the questioners. They dig for answers
+in the people they take with knives and flames. They say they know the 
+answer and tortures fourth a confession to prove them right.
+~
+184 0 0
+D0
+~
+~
+0 -1 18465
+D1
+~
+~
+0 -1 18466
+D3
+~
+~
+0 -1 18440
+S
+#18465
+Torture chamber~
+   In this small romm a lone chair stands in the center of the room. Knives 
+and other tools for torture hangs on dedicated places on the walls. Dry blood 
+stain the wooden floor.
+~
+184 0 0
+D2
+~
+~
+0 -1 18464
+S
+#18466
+Dome of Truth~
+   Twelve high backed chairs make a half circle all facing a single chair in
+their focus point. This is where the questioners prenounce their 
+sentences and the prosecuted is always found quilty of beeing a darkfriend
+after enough torture.
+~
+184 0 0
+D3
+~
+~
+0 -1 18464
+S
+#18467
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D1
+~
+~
+0 -1 18448
+D3
+~
+~
+0 -1 18468
+S
+#18468
+Fortress hallway~
+   The hallways of the fortress are white as marble and the floor is polished to
+perfection, reflecting where it's not covered with carpets. Paintings of the
+Children in fight and portraits of important historiacal commanders live
+the walls. 
+~
+184 0 0
+D0
+~
+~
+0 -1 18469
+D1
+~
+~
+0 -1 18467
+S
+#18469
+Waiting room~
+   The small hall has chairs along its walls for people to wait before entering 
+the doors to Padrion Nail's office. A desk with a secretary behind it, stand 
+to one side of the door.
+~
+184 0 0
+D0
+~
+door~
+1 -1 18470
+D2
+~
+~
+0 -1 18468
+S
+#18470
+Padrion Nialls office~
+   On the floor of this large office, a huge flaring sun is painted on the 
+marble. Everyone here to meet the captain commander must kneel 
+on the sun beforeadressing him. A large carved wooden desk stand 
+beyond the sun.
+~
+184 0 0
+D2
+~
+door~
+1 -1 18469
+S
+#18471
+City gates~
+   As you enter thruogh the city gates you feel something. Like you have lost 
+something, but you cant say what. All of your posessions are here so what 
+have you lost? The streets to the south are crowded, making you push your 
+way through the crowd as you walk.
+~
+184 0 1
+D2
+~
+~
+0 -1 18472
+D4
+~
+gates~
+12 -1 18733
+S
+#18472
+Crowded streets~
+   You push your way through the crowd and over the heads of the people
+you see a small square to the south where the street joins another street.
+To the north you can see the city gates.
+~
+184 256 1
+D0
+~
+~
+0 -1 18471
+D2
+~
+~
+0 -1 18473
+S
+#18473
+Small square~
+   As you get to the square, the mass of people are so big that if you had not 
+seen the square from up the street you would not know it was one. The street
+continues north, east and west.
+~
+184 256 1
+D0
+~
+~
+0 -1 18472
+D1
+~
+~
+0 -1 18474
+D3
+~
+~
+0 -1 18484
+S
+#18474
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues east and west.
+~
+184 256 1
+D1
+~
+~
+0 -1 18475
+D3
+~
+~
+0 -1 18473
+S
+#18475
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues south and west.
+~
+184 256 1
+D2
+~
+~
+0 -1 18476
+D3
+~
+~
+0 -1 18474
+S
+#18476
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues north, south and east.
+~
+184 256 1
+D0
+~
+~
+0 -1 18475
+D1
+~
+~
+0 -1 18487
+D2
+~
+~
+0 -1 18477
+S
+#18477
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues north and west.
+~
+184 256 1
+D0
+~
+~
+0 -1 18476
+D3
+~
+~
+0 -1 18478
+S
+#18478
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues east and west.
+~
+184 256 1
+D1
+~
+~
+0 -1 18477
+D3
+~
+~
+0 -1 18479
+S
+#18479
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues south, east and west.
+~
+184 256 1
+D1
+~
+~
+0 -1 18478
+D2
+~
+~
+0 -1 18486
+D3
+~
+~
+0 -1 18480
+S
+#18480
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues east and west.
+~
+184 256 1
+D1
+~
+~
+0 -1 18479
+D3
+~
+~
+0 -1 18481
+S
+#18481
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues east and north.
+~
+184 256 1
+D0
+~
+~
+0 -1 18482
+D1
+~
+~
+0 -1 18480
+S
+#18482
+3
+rname 18482
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues north, south and west.
+~
+184 256 1
+D0
+~
+~
+0 -1 18483
+D2
+~
+~
+0 -1 18481
+D3
+~
+~
+0 -1 18485
+S
+#18483
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues east and south.
+~
+184 256 1
+D1
+~
+~
+0 -1 18484
+D2
+~
+~
+0 -1 18482
+S
+#18484
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+street continues east and west.
+~
+184 256 1
+D1
+~
+~
+0 -1 18473
+D3
+~
+~
+0 -1 18483
+S
+#18485
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+streets are too crowded to continue west.
+~
+184 256 1
+D1
+~
+~
+0 -1 18482
+S
+#18486
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+streets are too crowded to continue south.
+~
+184 256 1
+D0
+~
+~
+0 -1 18479
+S
+#18487
+Crowded streets~
+   The streets are packed with people. Most look foreigners like yourself. 
+Mabye a war somwhere has made refugees come to this city. Shops 
+and inns line the streets but its hard to push your way over to one 
+without angry mutters from the poeple you have to push aside. The 
+streets are too crowded to continue north.
+~
+184 256 1
+D3
+~
+~
+0 -1 18476
+S
+#18488
+The Ansaline Gardens~
+   The Ansaline Gardens were a location in the Age of Legends where people 
+could visit and relax. Sylized sculptures of humans and animals by the famed 
+artist Cormalinde Masoon were also displayed there. Only the finest food and 
+drink was served at the Gardens. 
+~
+184 33280 0
+D2
+~
+~
+0 -1 18489
+S
+#18489
+Rose walkway~
+   High walls of rose bushes lead the walkway north into an open area. The 
+walkway is also lit by this strange light beeing everywhere but casting no 
+shadows.
+~
+184 33280 0
+D0
+~
+~
+0 -1 18488
+D1
+~
+~
+0 -1 18490
+S
+#18490
+Teleronrhiad~
+   You stand in a garden covered with flowers. The light here seems to come 
+from nowhere and be everywhere. The sky is filled with stars, but even if its
+night, the garden is as lit as if it were noon. This must surely be a dream.
+~
+184 33280 0
+D3
+~
+~
+0 -1 18489
+S
+#18499
+A temporary name~
+A temporary description
+~
+184 0 0
+S
+#0
+$~

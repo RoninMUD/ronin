@@ -1,0 +1,100 @@
+#21102
+key marble huge chain~
+A Huge Marble Key on a Chain~
+A large key made from marble lies here on the floor.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21103
+tombstone~
+A Tombstone~
+A cracked tombstone stands here.~
+~
+13 0 0
+0 0 0 0
+9999 10 10
+100
+E
+tombstone~
+This rather large tombstone is made of marble and stands erect about five 
+feet.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21108
+shield leaf leaves~
+A giant leaf shield~
+A pile of leaves lies here, forgotten.~
+~
+9 1060864 513
+18 0 0 0
+5 1000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+50 5
+A
+18 2
+#21109
+torch ancient~
+An Ancient Torch~
+An old torch rests here, still burning after many years of use.~
+~
+1 4198400 65537
+0 0 -1 0
+10 10 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#21110
+sword bone chipped~
+A sword made from bone~
+A large, chipped sword made from bone lies here.~
+$r bone sword howls as it enters $V's flesh.~
+5 0 8193
+0 6 5 3
+10 10 25000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+#0
+$~

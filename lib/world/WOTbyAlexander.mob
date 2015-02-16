@@ -1,0 +1,589 @@
+#18700
+merchant~
+a merchant~
+A merchant is traveling here counting his coins.
+~
+  The trader is leading his train of wagons along the road. His fine cloak and 
+fit horses suggest that he has done well in trading his goods.
+~
+8 268435456 -250 Y
+40 -18 -14 10d10+20000 4d4+60
+500000 250000
+8 8 1
+69 0 1d1+300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18702
+explorer hunter~
+A Hunter of the Horn~
+An explorer is searching for the Horn Of Valere
+~
+The hunter of the horn is a powerful warrior, the only breed suitable for 
+this most important task: finding the fabeled Horn Of Valere, which prophecy
+say must be found before the Last Battle against the Dark One.
+~
+136 402653312 0 Y
+48 -18 -15 10d10+7000 5d5+120
+25000 900000
+8 8 1
+4 0 10d10+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18703
+tinker~
+a Tinker~
+A Tinker in colorful clothes is standing here.
+~
+  The Tinker is clothed in the colorful and patched garments.
+~
+10 32768 1000 Y
+20 19 0 10d10+1000 1d1+0
+30 10000
+8 8 1
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18704
+tinker child~
+a Tinker child~
+A Tinker child is playing here.
+~
+  The Tinker child is running around playing with his friends. He wears
+the same bright colored clothes as the adults do.
+~
+10 32768 1000 Y
+10 19 0 10d10+300 1d1+0
+10 3000
+8 8 2
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18705
+seeker~
+the Seeker~
+The Seeker is walking around tending his caravan.
+~
+The Seeker looks friendly, and smiles at you as you walk by.
+~
+8 32768 1000 Y
+30 19 0 10d10+2000 1d1+0
+100 100000
+8 8 1
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18706
+guard queen member~
+a queen's guard~
+A memeber of the queen's guard is watching the gates to the city.
+~
+  Long white collars hang down over his mail and plate, and his cloak 
+and undercoat are red. His conical helmet shines like silver, and thin red 
+streamers flutter beneath the head of his lance. A cage of steel bars 
+mask his face.
+~
+10 402653184 0 Y
+47 -15 -16 2d50+10000 5d5+210
+50000 2220000
+8 8 1
+7 0 4d4+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18707
+city guard~
+a city guard~
+A city guard is standing here, watching for signs of trouble.
+~
+    An armed guard is wearing full armor painted in green and red. He keeps
+control of who enters the city.
+~
+10 402653312 0 Y
+47 -11 -11 10d10+6000 2d20+180
+17500 2220000
+8 8 1
+4 0 3d3+300 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18708
+whitecloak~
+a Whitecloak~
+A Whitecloak is guarding the fortress.
+~
+   The Whitecloak is wearing an armor polished to perfection with the 
+sunburst of the Children of the Light on the breast. A snow white cloak 
+hangs around his shoulders.
+~
+10 134217728 800 Y
+47 -13 -14 10d10+12000 2d20+200
+20000 2220000
+8 8 1
+7 0 4d4+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18709
+city guard~
+a city guard~
+A city guard is standing here, watching for signs of trouble.
+~
+control of who enters the city.
+~
+10 402653184 0 Y
+47 -13 -11 10d10+12000 2d20+200
+17500 2220000
+8 8 1
+4 0 5d5+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18710
+city guard~
+a city guard~
+A city guard is standing here, watching for signs of trouble.
+~
+control of who enters the city.
+~
+10 402653184 0 Y
+47 -13 -11 10d10+12000 2d20+200
+17500 2220000
+8 8 1
+4 0 5d5+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18711
+city guard~
+a city guard~
+A city guard is standing here, watching for signs of trouble.
+~
+control of who enters the city.
+~
+10 402653184 0 Y
+47 -13 -11 10d10+12000 2d20+200
+17500 2220000
+8 8 1
+4 0 5d5+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18712
+city guard~
+a city guard~
+A city guard is standing here, watching for signs of trouble.
+~
+control of who enters the city.
+~
+10 402653184 0 Y
+47 -13 -11 10d10+12000 2d20+200
+17500 2220000
+8 8 1
+4 0 5d5+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18713
+city guard~
+a city guard~
+A city guard is standing here, watching for signs of trouble.
+~
+control of who enters the city.
+~
+10 402653184 0 Y
+47 -13 -11 10d10+12000 2d20+200
+17500 2220000
+8 8 1
+4 0 5d5+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18714
+city guard~
+a city guard~
+A city guard is standing here, watching for signs of trouble.
+~
+control of who enters the city.
+~
+10 402653184 0 Y
+47 -13 -11 10d10+12000 2d20+200
+17500 2220000
+8 8 1
+4 0 5d5+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18715
+city guard~
+a city guard~
+A city guard is standing here, watching for signs of trouble.
+~
+control of who enters the city.
+~
+10 402653184 0 Y
+47 -13 -11 10d10+12000 2d20+200
+17500 2220000
+8 8 1
+4 0 5d5+500 0
+0 0 0 0
+R
+8
+K
+0 18705 0 0 0 0 0
+#18716
+tinker~
+a Tinker~
+A Tinker in colorful clothes is standing here.
+~
+  The Tinker is clothed in the colorful and patched garments.
+~
+10 32768 1000 Y
+20 19 0 10d10+1000 1d1+0
+30 10000
+8 8 1
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18717
+tinker child~
+a Tinker child~
+A Tinker child is playing here.
+~
+  The Tinker child is running around playing with his friends. He wears
+the same bright colored clothes as the adults do.
+~
+10 32768 1000 Y
+10 19 0 10d10+300 1d1+0
+10 3000
+8 8 2
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18718
+seeker~
+the Seeker~
+The Seeker is walking around tending his caravan.
+~
+The Seeker looks friendly, and smiles at you as you walk by.
+~
+8 32768 1000 Y
+30 19 0 10d10+2000 1d1+0
+100 100000
+8 8 1
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18719
+tinker~
+a Tinker~
+A Tinker in colorful clothes is standing here.
+~
+  The Tinker is clothed in the colorful and patched garments.
+~
+10 32768 1000 Y
+20 19 0 10d10+1000 1d1+0
+30 10000
+8 8 1
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18720
+tinker child~
+a Tinker child~
+A Tinker child is playing here.
+~
+  The Tinker child is running around playing with his friends. He wears
+the same bright colored clothes as the adults do.
+~
+10 32768 1000 Y
+10 19 0 10d10+300 1d1+0
+10 3000
+8 8 2
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18721
+seeker~
+the Seeker~
+The Seeker is walking around tending his caravan.
+~
+The Seeker looks friendly, and smiles at you as you walk by.
+~
+8 32768 1000 Y
+30 19 0 10d10+2000 1d1+0
+100 100000
+8 8 1
+69 0 5d5+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18722
+small adrorian army~
+A small andorian army~
+A small andorian army has set up camp here.
+~
+The army has set up camp here, the camp bussing with activity. On a field 
+beside the camp, soldiers are training with swords, pikes and bows. Cooks
+are preparing the evenings food, and officers have gathered in a large tent
+to discuss strategy. It will take a lot of men to beat this army.
+~
+8 268435456 0 Y
+1 19 10 10d10+100000 4d4+190
+2000000 10000000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18723
+andorian army~
+An andorian army~
+An andorian army has set up camp here.
+~
+The army has set up camp here, the camp bussing with activity. On a field 
+beside the camp, soldiers are training with swords, pikes and bows. Cooks
+are preparing the evenings food, and officers have gathered in a large tent
+to discuss strategy. It will take a lot of men to beat this army.
+~
+8 268435456 0 Y
+1 19 10 10d10+200000 4d4+390
+4000000 20000000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18724
+large andorian army~
+A large andorian army~
+A large andorian army has set up camp here.
+~
+The army has set up camp here, the camp bussing with activity. On a field 
+beside the camp, soldiers are training with swords, pikes and bows. Cooks
+are preparing the evenings food, and officers have gathered in a large tent
+to discuss strategy. It will take a lot of men to beat this army.  
+~
+8 268435456 0 Y
+1 19 10 10d10+300000 4d4+690
+5000000 30000000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18725
+small borderlander army~
+A small borderlander army~
+A small borderlander army is camping here.
+~
+The army has set up camp here and is preforming training drills. The army 
+does not have the usual scurry of cooks and servants as the borderlander
+soldiers preform all tasks themselves, from preparing food, to cleaning
+clothes. This army is always prepared for battle and a lot of men will be
+needed to beat them.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18726
+borderlander army~
+A borderlander army~
+A borderlander army is camping here.
+~
+The army has set up camp here and is preforming training drills. The army 
+does not have the usual scurry of cooks and servants as the borderlander
+soldiers preform all tasks themselves, from preparing food, to cleaning
+clothes. This army is always prepared for battle and a lot of men will be
+needed to beat them.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18727
+large borderlander army~
+A large borderlander army~
+A large borderlander army is camping here.
+~
+The army has set up camp here and is preforming training drills. The army 
+does not have the usual scurry of cooks and servants as the borderlander
+soldiers preform all tasks themselves, from preparing food, to cleaning
+clothes. This army is always prepared for battle and a lot of men will be
+needed to beat them.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18728
+small seanchen army~
+A small seanchen army~
+A small seanchen army has set up camp here.
+~
+The seanchen army is very organized and the tents are all lined in rows around 
+the camp, while the officers tents are protected by being in the center. In
+the gap between the soldier tents and the officer tents, soldiers preform
+training exercises, preparing for battle. Only a large party would have any
+chance of defeating this army.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18729
+seanchen army~
+A seanchen army~
+A seanchen army has set up camp here.
+~
+The seanchen army is very organized and the tents are all lined in rows around 
+the camp, while the officers tents are protected by being in the center. In
+the gap between the soldier tents and the officer tents, soldiers preform
+training exercises, preparing for battle. Only a large party would have any
+chance of defeating this army.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18730
+large seanchen army~
+A large seanchen army~
+A large seanchen army has set up cam here.
+~
+The seanchen army is very organized and the tents are all lined in rows around 
+the camp, while the officers tents are protected by being in the center. In
+the gap between the soldier tents and the officer tents, soldiers preform
+training exercises, preparing for battle. Only a large party would have any
+chance of defeating this army.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18731
+small cairhienin army~
+A small cairhienin army~
+A small cairhienin army is camping here.
+~
+The cairhienin army is not very well organized as the soldiers seem to have
+more personal responsibility of their tent and supplies. But watching them
+you realize that is might be an illusory act as the soldiers are very observant
+and would probably respond to an attack as fast as a more organized army would.
+Only a large party could defeat an army like this.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18732
+cairhienin army~
+A cairhienin army~
+A cairhienin army is camping here.
+~
+The cairhienin army is not very well organized as the soldiers seem to have
+more personal responsibility of their tent and supplies. But watching them
+you realize that is might be an illusory act as the soldiers are very observant
+and would probably respond to an attack as fast as a more organized army would.
+Only a large party could defeat an army like this.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18733
+large cairhienin army~
+A large cairhienin army~
+A large cairhienin army is camping here.
+~
+The cairhienin army is not very well organized as the soldiers seem to have
+more personal responsibility of their tent and supplies. But watching them
+you realize that is might be an illusory act as the soldiers are very observant
+and would probably respond to an attack as fast as a more organized army would.
+Only a large party could defeat an army like this.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18799
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

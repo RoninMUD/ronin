@@ -1,0 +1,529 @@
+#18600
+Elaida~
+Elaida, the Amyrlin Seat~
+Elaida, the Amylin Seat is standing here.
+~
+The Amyrlin Seat in all her powers stand before you. Her fiery red hair hangs 
+down on her shoulders. Her dark eyes scowl at you for disturbing her study.
+~
+42 402655232 0 Y
+50 -20 -16 10d10+90000 10d10+600
+2000000 3000000
+8 8 2
+1 402653184 10d10+3500 3
+1 4 20 33
+1 4 10 110
+1 6 20 140
+0 0 0 0
+T
+..... Elaida watches you with a suspicious eye.~
+K
+0 0 0 0 0 0 0
+#18601
+Alviarin~
+Alviarin, the Keeper of the Chronicles~
+Alviarin, the Keeper of the Chronicles reading some notes.
+~
+She has the ageless face of the Aes Sedai, that makes it hard determining her 
+age. The Keeper looks angrily at you for entering her office without permission.
+~
+42 134219776 -100 Y
+50 -19 -15 5d5+56000 10d10+250
+200000 2000000
+8 8 2
+1 402653184 10d10+3500 3
+1 4 10 33
+1 4 5 110
+1 6 10 140
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18602
+novice girl~
+a Novice~
+A girl in a white robe is scurrying about doing her tasks.
+~
+This young girl is clad in white. She walkes carefully, looking over her shoulder 
+in case an Aes Sedai should be present.
+~
+8 0 0 Y
+28 -8 7 2d2+2750 1d5+36
+500 340000
+8 8 2
+1 0 1d1+3500 2
+1 6 25 85
+1 2 35 93
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18603
+accepted girl~
+an Accepted~
+A young girl in grey is standing here.
+~
+The Accepted is a young girl in her twenties. She wears a serpent ring on 
+her finger.
+~
+8 0 300 Y
+32 -12 10 2d2+3500 3d5+50
+1000 440000
+8 8 2
+1 0 1d1+3500 2
+1 2 35 93
+1 6 25 85
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18604
+aes sedai~
+An Aes Sedai of the White Ajah~
+A woman in a white shawl is standing here.
+~
+You see a woman wearing a grey robe with a white shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+1073741832 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 0 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18605
+aes sedai~
+An Aes Sedai of the Yellow Ajah~
+A woman in a yellow shawl is standing here.
+~
+You see a woman wearing a grey robe with a yellow shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+8 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 8 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18606
+aes sedai~
+An Aes Sedai of the Grey Ajah~
+A woman in a grey shawl is standing here.
+~
+You see a woman wearing a grey robe with a grey shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+8 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 8 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18607
+aes sedai~
+An Aes Sedai of the Blue Ajah~
+A woman in a blue shawl is standing here.
+~
+You see a woman wearing a grey robe with a blue shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+8 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 8 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18608
+aes sedai~
+An Aes Sedai of the Red Ajah~
+A woman in a red shawl is standing here.
+~
+You see a woman wearing a grey robe with a red shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+8 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 8 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18609
+aes sedai~
+An Aes Sedai of the Green Ajah~
+A woman in a green shawl is standing here.
+~
+You see a woman wearing a grey robe with a green shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+8 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 8 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18610
+aes sedai~
+An Aes Sedai of the Brown Ajah~
+A woman in a brown shawl is standing here.
+~
+You see a woman wearing a grey robe with a brown shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+8 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 8 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18611
+sitter~
+a Sitter for the White Ajah~
+A Sitter for the White Ajah is standing here.
+~
+The Sitter has the ageless face like the Aes Sedai, but her hair is white
+streaked with grey. She must be very old to have hair like that.
+~
+8 134219776 500 Y
+47 -12 -17 5d5+4000 5d5+60
+20000 765000
+8 8 2
+1 0 1d1+3500 6
+1 6 60 85
+1 2 60 119
+1 2 35 33
+1 2 60 4
+1 1 60 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18612
+sitter~
+a Sitter for the Yellow Ajah~
+A Sitter for the Yellow Ajah is standing here.
+~
+The Sitter has the ageless face like the Aes Sedai, but her hair is white
+streaked with grey. She must be very old to have hair like that.
+~
+8 134219776 500 Y
+47 -12 -17 5d5+4000 5d5+60
+20000 765000
+8 8 2
+1 0 1d1+3500 6
+1 6 60 85
+1 2 60 119
+1 2 35 33
+1 2 60 4
+1 1 60 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18613
+sitter~
+a Sitter for the Grey Ajah~
+A Sitter for the Grey Ajah is standing here.
+~
+The Sitter has the ageless face like the Aes Sedai, but her hair is white
+streaked with grey. She must be very old to have hair like that.
+~
+8 134219776 500 Y
+47 -12 -17 5d5+4000 5d5+60
+20000 765000
+8 8 2
+1 0 1d1+3500 6
+1 6 60 85
+1 2 60 119
+1 2 35 33
+1 2 60 4
+1 1 60 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18614
+sitter~
+a Sitter for the Blue Ajah~
+A Sitter for the Blue Ajah is standing here.
+~
+The Sitter has the ageless face like the Aes Sedai, but her hair is white
+streaked with grey. She must be very old to have hair like that.
+~
+8 134219776 500 Y
+47 -12 -17 5d5+4000 5d5+60
+20000 765000
+8 8 2
+1 0 1d1+3500 6
+1 6 60 85
+1 2 60 119
+1 2 35 33
+1 2 60 4
+1 1 60 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18615
+sitter~
+a Sitter for the Red Ajah~
+A Sitter for the Red Ajah is standing here.
+~
+The Sitter has the ageless face like the Aes Sedai, but her hair is white
+streaked with grey. She must be very old to have hair like that.
+~
+8 134219776 500 Y
+47 -12 -17 5d5+4000 5d5+60
+20000 765000
+8 8 2
+1 0 1d1+3500 6
+1 6 60 85
+1 2 60 119
+1 2 35 33
+1 2 60 4
+1 1 60 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18616
+sitter~
+a Sitter for the Green Ajah~
+A Sitter for the Green Ajah is standing here.
+~
+The Sitter has the ageless face like the Aes Sedai, but her hair is white
+streaked with grey. She must be very old to have hair like that.
+~
+8 134219776 500 Y
+47 -12 -17 5d5+4000 5d5+60
+20000 765000
+8 8 2
+1 0 1d1+3500 6
+1 6 60 85
+1 2 60 119
+1 2 35 33
+1 2 60 4
+1 1 60 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18617
+sitter~
+a Sitter for the Brown Ajah~
+A Sitter for the Brown Ajah is standing here.
+~
+The Sitter has the ageless face like the Aes Sedai, but her hair is white
+streaked with grey. She must be very old to have hair like that.
+~
+8 134219776 500 Y
+47 -12 -17 5d5+4000 5d5+60
+20000 765000
+8 8 2
+1 0 1d1+3500 6
+1 6 60 85
+1 2 60 119
+1 2 35 33
+1 2 60 4
+1 1 60 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18618
+Hammar~
+Hammar, the blademaster~
+Hammar, the blademaster is standing here practicing his sword forms.
+~
+
+  Hammar is the leader of the Warders and is in charge of the training of
+the Warders and those who seek to be Warders. He is tall with wide shoulders
+and face that looks carved from stone. His long dark hair hangs down his back
+and you unwillingly take a step back as you meet his gaze.
+~
+553648138 268697600 0 Y
+60 -25 -25 10d100+30000 10d10+1000
+2500000 7500000
+8 8 1
+4 21380 5d5+500 0
+0 0 1 672
+K
+0 0 0 0 0 0 0
+#18619
+aes sedai~
+an Aes Sedai of the Red Ajah~
+A woman in a red shawl is standing here.
+~
+You see a woman wearing a grey robe with a red shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+8 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 8 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18620
+aes sedai~
+an Aes Sedai of the Red Ajah~
+A woman in a red shawl is standing here.
+~
+You see a woman wearing a grey robe with a red shawl around her shoulders. 
+Her face is ageless and it is impossible to tell how old she is. She wears a 
+ring shaped like a serpent biting its own tail on one of her fingers.
+~
+8 0 250 Y
+40 -12 -15 5d5+3000 5d5+50
+15000 630000
+8 8 2
+1 0 1d1+3500 6
+1 6 50 85
+1 2 50 119
+1 2 25 33
+1 2 50 4
+1 1 50 191
+1 2 100 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18633
+warder~
+a Warder~
+A Warder is standing here aware of all around him.~
+The Warder's cloak makes the warder blend in with the surroundings.
+~
+8 402915328 0 Y
+47 -20 -14 10d10+6000 3d3+80
+20000 1250000
+8 8 1
+4 0 1d1+1 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#18634
+pupil~
+a Warder-pupil~
+A boy is standing here practicing with his sword.
+~
+This boy is practicing to be a Warder, but has still far to go.
+His skills not quite dangerous enough.
+~
+8 268435456 0 Y
+30 -10 -10 2d2+2000 2d4+30
+5000 500000
+8 8 1
+4 0 1d1+1 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#18635
+woman mesaana~
+Mesaana is standing here, tilting her head as she watches you.~
+Mesaana is standing here, tilting her head as she watched you.
+~
+   She appears just short of her middle years and has blue eyes. Her hair
+is black and fall to her shoulders. She wears a white dress with a low 
+neck line.
+~
+42 276824064 -1000 Y
+60 -16 -16 10d10+120000 10d40+700
+8000000 8000000
+8 8 2
+1 402653184 4d4+500 5
+1 2 100 33
+1 2 100 109
+1 2 100 218
+1 2 50 191
+1 2 7 143
+0 0 1 0
+T
+.....Mesaanas gaze sends a chill down your spine.~
+K
+0 18611 0 0 0 0 0
+#18636
+member black council~
+a member of the Supreme Council of the Black Ajah~
+A member of the Supreme Council of the Black Ajah is standing here.~
+   She appears just short of her middle years and has blue eyes. Her hair
+is black and falls to her shoulders. She wears a white dress with a low 
+neckline.
+~
+42 134219776 -900 Y
+55 -16 -16 2d500+7000 2d2+100
+1000000 2000000
+8 8 2
+1 402653184 4d4+500 1
+1 2 33 203
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

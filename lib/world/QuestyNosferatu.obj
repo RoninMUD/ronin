@@ -1,0 +1,1680 @@
+#26100
+token~
+A Mayor's Task Force Token~
+A token that bears the logo of Midgaard's Mayor rests here.~
+~
+8 134742017 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+32
+#26101
+token gold golden~
+A Golden Mayor's Task Force Token~
+A token that looks extremely valuable rests here.~
+~
+8 403177537 16385
+40 50 50 7
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26102
+heart pink~
+A pink heart~
+A pretty pink heart is here as a token of Valentines Day.~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26103
+heart purple~
+A purple heart~
+A deep purple heart sits here, tempting you to take it.~
+~
+8 134742611 16385
+20 12 12 91
+0 8000 2000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26104
+sleeves red santa~
+Santa's Red Sleeves~
+Some bright red sleeves are sittin on the ground.~
+~
+9 403177539 257
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26105
+pants red baggy santa~
+Some huge baggy red pants~
+Some pants that look like a tent sit here.~
+~
+9 403177539 33
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26106
+boots soot santa~
+Santa's soot covered boots~
+Some filthy black boots sit here covered in soot.~
+~
+9 403177539 65
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26107
+gloves red santa~
+Santa's black workgloves~
+Some neato black gloves sit here!~
+~
+9 403177539 129
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26108
+coat red santa~
+Santa's Huge Red Coat~
+An enormous red coat sits here.~
+~
+9 403177539 9
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26109
+belt santa~
+Santa's huge leather belt~
+A long black leather belt rests here.~
+~
+9 403177539 2049
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26110
+cap red santa~
+Santa's bright red cap~
+A lovely red cap rests here.~
+~
+9 403177539 17
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26111
+suspenders santa~
+Santa's stretched suspenders~
+Some stretched and worn out suspenders sit here.~
+~
+9 403177539 1025
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26112
+nose rudolph santa~
+Rudolph's severed red nose~
+A bright glowing nose sits on the ground.~
+~
+1 403177539 65537
+1 1 -1 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26113
+sack red santa~
+Santa's red sack~
+Santa's magical red sack sits here.~
+~
+15 403177539 16385
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26114
+hat pointy~
+A Pointy Hat~
+a pointy hat is lying on the ground.~
+~
+11 524288 131089
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 0
+A
+12 0
+#26115
+carrot golden~
+A Golden Carrot!~
+A shiny Golden Carrots rests here, PICK IT UP!~
+~
+0 403177472 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26116
+robe sith master~
+Robe of the Sith master~
+A robe of ancient dark powers is lying here.~
+invalid~
+9 155191824 1025
+15 0 0 1073749936
+10 10 300000
+10
+E
+This ancient artifact was used by an old Sith Master during the fight against the Jedis.~
+It is woven from a material you never before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.  
+~
+E
+look robe~
+This ancient artifact was used by an old Sith Master during the fight against the Jedis.
+It is woven from a material you never before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.  
+~
+E
+look robe~
+This ancient artifact was used by an old Sith Master during the
+fight against the Jedis.It is woven from a material you never 
+before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.
+~
+X
+~
+0 0 0
+M
+As you wear the robe, your mind becomes corrupted by the dark side.~
+You sense a disturbance in the force, as $n wears $s robe.~
+The dark side of the force looses its grip on you for a moment.~
+Once again the balance of the force has been achieved.~
+A
+19 4
+A
+18 4
+#26120
+clover shamrock~
+A bright green Shamrock.~
+Laying on the ground here you see a lovely green shamrock.~
+~
+18 403177472 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26121
+clover shamrock~
+A bright green Shamrock.~
+Laying on the ground here you see a lovely green shamrock.~
+~
+18 403177472 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26122
+clover shamrock~
+A bright green Shamrock.~
+Laying on the ground here you see a lovely green Shamrock.~
+~
+18 403177472 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26123
+clover shamrock~
+A bright green Shamrock.~
+Laying on the ground here you see a lovely green Shamrock.~
+~
+18 403177472 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26124
+clover shamrock~
+A bright green Shamrock.~
+Laying on the ground here you see a lovely green Shamrock.~
+~
+18 403177472 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26125
+pot~
+A pot of gold~
+A large pot containing unknown treasures rests here.~
+~
+15 403177472 0
+10000 15 26124 0
+1000 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26126
+jacket green~
+A small green Jacket~
+A little green jacket is resting here, neatly folded.~
+~
+9 134217986 9
+26 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -17
+A
+13 30
+#26127
+hat green~
+A small green hat~
+Resting on the ground here is a fine looking green hat.~
+~
+9 134217985 17
+10 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+#26128
+vest turkey skin~
+A Turkey-Skin Vest~
+A vest made of dried turkey skin rests here.~
+~
+9 134742017 9
+13 0 10 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 100
+A
+1 3
+#26129
+helmet turkey feathers~
+A helmet of Turkey Feathers~
+A helmet made from dirty turkey feathers smells badly here.~
+~
+9 134742018 17
+5 1 19 1
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 5
+A
+18 1
+#26130
+foot severed lucky turkey~
+A lucky severed turkey foot~
+The severed foot of a turkey sits here looking lucky.~
+~
+9 134742017 16385
+3 0 10 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+A
+3 1
+#26131
+sandwich mayor~
+The Mayor's Sandwich~
+The Mayor's Sandwich has been dropped?! DEAR GOD!!!
+~
+~
+15 134742016 1
+10000 1 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26132
+head lettuce mayor~
+A head of lettuce~
+A lovely head of lettuce rests here holding many fine green leaves.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26133
+carton tomato mayor~
+A carton of tomatos~
+A carton containing many plump tomatos rests here.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26134
+bag bacon mayor~
+A bag O bacon~
+For some reason the bag resting here is full of.....bacon.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26135
+bag beef mayor~
+A bag O beef~
+For some reason the bag here is full of......beef.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26136
+box ham mayor~
+A box of ham~
+A box containing finely sliced ham rests here.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26137
+sack turkey mayor~
+A sack of turkeyA slice of ham~
+A sack full of turkey breast rests here.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26138
+can olive mayor~
+A can of olives~
+A can full of olives rests here.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26139
+jar mayonaise mayor~
+A jar of mayonaise~
+A jar filled with mayonaise rests here.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26140
+jar mustard mayor~
+A jar of mustard~
+A jar full of the mayor's favorite sweet mustard rests here.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26141
+package cheese mayor~
+A package of gubment cheese~
+A package of gubment cheese rests here.
+~
+~
+15 134742016 0
+10000 1 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26142
+lettuce leaf mayor~
+A leaf of lettuce~
+A leaf of lettuce sits here.~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26143
+tomato mayor~
+A plump tomato~
+A plump tomato rests here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26144
+bacon strip mayor~
+A strip of bacon~
+A strip of bacon rests here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26145
+beef roast slice mayor~
+A slice of roast beef~
+A slice of roast beef sits here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26146
+ham slice mayor~
+A slice of ham~
+A slice of ham sits here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26147
+turkey slice mayor~
+A slice of turkey~
+A slice of turkey rests here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26148
+olive mayor~
+An olive~
+An olive rests here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26149
+mayonaise glob mayor~
+A glob of mayonaise~
+A glob of mayonaise sits here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26150
+mustard glob mayor~
+A glob of mustard~
+A glob of mustard sits here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26151
+cheese slice mayor~
+A slice of cheese~
+A slice of cheese sits here.
+~
+~
+8 134742016 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26152
+token diamond~
+A diamond encrusted TMTF token~
+A token made encrusted with diamonds sits here sparkling.
+~
+~
+8 403177473 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26153
+token super bonus~
+A SUPER BONUS TOKEN!~
+A fabulous chip rests here gloriously.
+~
+~
+8 403177473 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26154
+rainbow egg easter~
+A `bR`ia`ki`jn`lb`mo`fw `qEaster Egg~
+A `bR`ia`ki`jn`lb`mo`fw `qEaster Egg was dropped here.~
+~
+8 268959745 1
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26155
+polkadot egg easter~
+A `mP`no`ml`nk`ma`nd`mo`nt`mt`ne`md `qEaster Egg~
+A `mP`no`ml`nk`ma`nd`mo`nt`mt`ne`md `qEaster Egg is hidden here.~
+~
+8 268959745 1
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26156
+camouflage egg easter~
+A `cC`da`cm`do`cu`df`cl`da`cg`de`q Easter Egg~
+A `cC`da`cm`do`cu`df`cl`da`cg`de`q easter egg hiding in the bushes barely catches your eye.~
+~
+8 268959745 1
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26157
+pink egg easter~
+A `mPink `qEaster Egg~
+A `mPink `qEaster Egg was dropped here.~
+~
+8 268959745 1
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26158
+green egg easter~
+A `jGreen `qEaster Egg~
+A `jGreen `qEaster Egg is hidden in the brush here.~
+~
+8 268959745 1
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26159
+yellow egg easter~
+A `kYellow `qEaster Egg~
+A `kYellow `qEaster Egg is hidden here behind some rocks.~
+~
+8 268959745 1
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26160
+blue egg easter~
+A `lBlue `qEaster Egg~
+A `lBlue `qEaster Egg is cleverly hidden here.~
+~
+8 268959745 1
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26161
+purple egg easter~
+A `fPurple `qEaster Egg~
+A `fPurple `qEaster Egg is mostly covered by a patch of grass here.~
+~
+8 268959745 1
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26162
+pie pumpkin~
+A Pumpkin Pie~
+A Pumpkin Pie was left here!~
+~
+8 403177473 1
+0 0 0 0
+10 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26163
+stuffing~
+A glob of stuffing~
+A glob of stuffing was left here!~
+~
+8 403177472 1
+0 0 0 0
+10 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26164
+sauce cranberry~
+A can-shaped glob of cranberry sauce~
+A can-shaped glob of cranberry sauce was left here.~
+~
+8 403177474 1
+0 0 0 0
+10 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26165
+potatoes mashed~
+A bowl of mashed potatoes~
+A bowl of mashed potatoes was dropped here.~
+~
+8 403177472 1
+0 0 0 0
+10 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26166
+roll dinner~
+A stale dinner roll~
+An odd-smelling pastry was left here.~
+~
+8 403177473 1
+0 0 0 0
+10 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26170
+token blue mayors~
+A blue token~
+A blue token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26171
+token red mayors~
+A red token~
+A red token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26172
+token green mayors~
+A green token~
+A green token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26173
+token brown mayors~
+A brown token~
+A brown token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26174
+token orange mayors~
+An orange token~
+An orange token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26175
+token purple mayors~
+A purple token~
+A purple token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26176
+token yellow mayors~
+A yellow token~
+A yellow token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26177
+token black mayors~
+A black token~
+A black token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26178
+token grey mayors~
+A grey token~
+A grey token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26179
+token pink mayors~
+A pink token~
+A pink token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26180
+token gold golden mayors~
+A golden token~
+A golden token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26181
+token silver mayors~
+A silver token~
+A silver token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26182
+token bronze mayors~
+A bronze token~
+A bronze token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26183
+token rainbow mayors~
+A rainbow token~
+A rainbow token is here~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26184
+heart pink~
+A pink heart~
+A pretty pink heart is here as a token of Valentines Day.~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26185
+heart pink~
+A pink heart~
+A pretty pink heart is here as a token of Valentines Day.~
+~
+8 524289 1
+0 0 0 0
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26186
+pot~
+A pot of gold~
+A large pot containing unknown treasures rests here.~
+~
+15 403177472 0
+10000 15 26123 0
+1000 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26187
+flag green~
+A Green Flag~
+A green flag lies here on the ground, collecting dust.~
+~
+13 536870912 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26188
+flag yellow~
+A Yellow Flag~
+A yellow flag lies on the ground here, collecting dust.~
+~
+13 536870912 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26189
+flag orange~
+An Orange Flag~
+An orange flag lies on the ground here, collecting dust.~
+~
+13 536870912 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26190
+potion gypsys mayorquest~
+the gypsy's potion~
+A potion sits here!~
+~
+10 268435520 16385
+30 28 0 0
+1 400 50
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26191
+potion gypsys mayorquest~
+the gypsy's potion~
+A potion sits here!~
+~
+10 268435520 16385
+31 4 0 0
+1 400 50
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26192
+potion gypsys mayorquest~
+the gypsy's potion~
+A potion sits here!~
+~
+10 268435520 16385
+31 33 0 0
+1 400 50
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26193
+potion gypsys mayorquest~
+the gypsy's potion~
+A potion sits here!~
+~
+10 268435520 16385
+31 17 0 0
+1 400 50
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26194
+shoe teen trendy bloody~
+A trendy teen's trendy bloody shoe~
+A trendy teen's trendy bloody shoe was left here.~
+~
+8 403177472 65
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26195
+mask hockey jason~
+A white plastic hockey mask~
+A white plastic hockey mask was left here.~
+~
+9 403177472 17
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26196
+machete sword jason~
+A Rusty Machete~
+A Rusty Machete was left in the grass here.~
+$r machete plunges into $V's neck, sending up a spray of blood!~
+5 403243264 8193
+0 20 1 3
+20 50000 7500
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 3
+#26197
+egg bloody easter jason~
+A `bBloody `qEaster Egg~
+An easter egg dripping with `bblood `qwas left here.~
+~
+8 268959745 16385
+0 0 0 0
+1 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26198
+basket easter easterquest~
+An Easter Basket~
+An Easter Basket was dropped here.~
+~
+15 134742016 16385
+8000 0 0 0
+5 900 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -5
+#26199
+lightsabre red~
+A Red Lightsabre~
+a piece of metal lies here, it appears to be some sort of weapon.~
+$r lightsabre crackles viciously as $e pulls it from $V's body.~
+5 134283282 8193
+0 100 100 11
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 100
+A
+19 100
+#0
+$~

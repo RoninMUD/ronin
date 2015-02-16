@@ -1,0 +1,959 @@
+#27700
+opal ice~
+An Ice Opal~
+A small ice opal lies on the ground, shining in the light.~
+~
+8 268959745 16385
+0 0 0 0
+1 80000 0
+25
+E
+opal ice~
+Ice opals are a rare and precious stone found only in frozen wastelands and
+buried deep within the earth.  The mostly-white stones are usually small in
+size but naturally round and smooth, almost like a pearl.  Colored flecks of
+material sparkle with a dull metallic glint from beneath the shiny surface.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27701
+crystal sparkling~
+A Sparkling Crystal~
+A crystal sparkles in the light from its many facets.~
+~
+8 268959745 16385
+0 0 0 0
+1 100000 0
+25
+E
+crystal sparkling~
+This shining crystal is almost completely translucent save for a dull
+discoloration at the base where it was once attached to some surface upon which
+it grew.  The crystal is a light aqua-blue color similar to the frozen water
+that makes up the glaciers where they can be found.  The crystal is about six
+centimeters long and one centimeter thick.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27710
+hammer crude stone bone~
+A Crude Stone Hammer~
+A crude looking stone hammer with a bone shaft has been dropped here.~
+~
+5 0 8193
+0 8 3 6
+14 5000 5000
+25
+E
+hammer crude stone bone~
+A very crude but effective hammer has been fashioned from a long shaft of bone
+with a heavy stone tied at one end.  Traces of bloody gore remain upon the head
+of the hammer from previous kills that it produced.  The hammer looks well-used
+by the look of the worn handle and the small fractures along the shaft but
+still seems in good condition.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27711
+shield creature carapace~
+A Carapace Shield~
+The carapace of some creature has been fashioned into a shield.~
+~
+9 402653184 513
+20 0 0 0
+8 48000 40000
+7
+E
+shield creature carapace~
+This shield is really not much more than a piece of hard chitin that has been
+adapted for use as a tool for blocking attacks.  Small veins filled with now-
+dried blood can be seen on the back side of it, as well as the severed
+attachment point where it used to connect to the parent creature.  Though the
+material seems to be decaying slowly, it still radiates some sort of other-
+worldly power which might be harnessed by its wearer.
+~
+X
+~
+258 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+13 20
+A
+18 2
+T
+2880
+B
+32768
+#27712
+blood vial green basilisk potion~
+Basilisk Blood Potion~
+A vial of green blood rolls around the floor.~
+~
+10 134217728 16385
+45 74 75 85
+1 500000 33333
+10
+E
+blood vial green basilisk potion~
+The substance within this bottle is not actually a potion, but the blood of a
+fearsome beast.  Basilisk blood contains properties of protection which it
+normally bestows upon the creature that produces it.  When swallowed by
+another, these same properties can be given to that person, though the effects
+are only temporary and will wear off in time.  It is often wondered if the
+dangers involved in harvesting this rare substance is worth the benefits, and
+yet a select few will risk the endeavor.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27720
+mail suit banded bandit armor~
+Banded Mail of the Bandit~
+A suit of banded mail has been dropped here by some careless person.~
+~
+9 250663936 9
+15 0 0 0
+30 75000 45000
+5
+E
+mail suit banded bandit armor~
+Unlike ordinary banded mail intended to be worn into combat, this suit of armor
+is designed for maximum mobility and stealth.  All metal on the armor is
+covered with a layer of hard black leather that deadens any internal noise it
+produces.  Many straps and pouches adorn the armor, some for holding small
+delicate tools, others for stashing anything that the wearer may want to take
+along on an adventure.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+A
+19 2
+A
+13 15
+B
+524288
+#27721
+wristband black silk silken oriental assassin~
+Wristband of the Assassin~
+A black silken wristband with oriental designs lies here.~
+~
+9 249622596 4097
+2 0 0 0
+1 4444 4444
+10
+E
+wristband black silk silken oriental assassin~
+The wristband is a simple strip of silk that is meant to be worn around the
+wrist.  Hidden within the silk is a strong piece of wire, used as a garrote
+when pulled around a victim's neck.  The band has other uses, such as a
+tourniquet for a bleeding wound or a bandanna on a hot day.  It is black in
+color with oriental writing and designs drawn upon it in dark red.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 5
+A
+18 2
+A
+19 1
+#27722
+talisman sand desert crescent moon~
+Talisman of the Desert Moon~
+A small sand-colored talisman shaped like the crescent moon has been left here.~
+~
+11 248574016 5
+0 0 0 0
+2 88000 24000
+5
+E
+talisman sand desert crescent moon~
+A small sand-colored figure of a crescent moon hangs from a golden chain to
+form a simple but elegant piece of jewelry.  This particular design is unique
+to a tribe of nomads who call the endless Tarion Desert their home.  It is said
+that these talismans bring good luck to the wearer.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 25
+A
+19 1
+A
+17 -8
+B
+32
+#27723
+horn pale conch shell~
+A Conch Shell Horn~
+A pale colored shell that looks like a horn is here, needing a player.~
+~
+24 217116992 16385
+0 0 0 0
+4 200000 90000
+3
+E
+horn pale conch shell~
+Crafted from a large conch shell, this horn is absolutely beautiful.  Swirls of
+color flow about its surface in natural patterns, pleasing to the eye.  Very
+little modification has been done to the shell to make it function as a musical
+instrument--one just blows in the small end and covers any of the natural holes
+to form perfect-toned music that dances in the air.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 4
+A
+51 5
+#27724
+boots pair fine leather polished black~
+A Pair of Fine Leather Boots~
+A pair of fine leather boots, polished and black, sit here.~
+~
+11 250638400 65
+0 0 0 0
+2 130000 100000
+3
+E
+boots pair fine polished black~
+A pair of fine leather boots have been crafted from only the best materials.
+The boots themselves are made from soft black suede leather and are lined on
+the inside with rabbit fur.  Along the top rim of the boots is a ring of
+mysterious and obviously magical runes that swirl and flow together in a slow
+dance.  If a foot is placed inside, the boots automatically resize themselves
+for a perfect fit.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+19 2
+A
+53 1
+B
+32828
+#27725
+mantle black silken silk cloak purple battle mage~
+Mantle of the Battle-Mage~
+A black silken cloak, lined with purple as been dropped here.~
+~
+9 183562308 1025
+10 0 0 0
+8 130000 100000
+5
+E
+mantle black silken silk cloak purple battle mage~
+The cloak is made from a very expensive-looking and thick form of silk, though
+from what creature is unclear.  The outer layer is pitch black in color and
+almost absorbs the light surrounding it, while the inner lining is the dark
+purple of a black sunset.  The neck of the cloak is held together by a dark
+metal clasp upon which a 'Z' has been etched in a bold font.  The cloak
+radiates the kind of power that demands respect from its wearer.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+19 2
+B
+32784
+#27726
+circlet small metal shining platinum devotion~
+The Circlet of Devotion~
+A small metal circlet made of shining platinum rests here unobtrusively.~
+~
+11 250657859 17
+0 0 0 0
+1 100000 40000
+4
+E
+circlet small metal shining platinum devotion~
+The circlet is made from several platinum rings intricately woven together to
+form a simple, but elegant piece of head-wear.  There are no markings upon it
+and there is no obvious beginning or ending of the rings--they simply flow
+around and around in perfect harmony and togetherness.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 20
+#27727
+plates pair red steel leg tactical zyca~
+A Pair of Tactical Zyca Leg Plates~
+A pair of high quality red-steel leg plates have been dropped here.~
+~
+9 250667008 33
+15 0 0 0
+8 80000 60000
+4
+E
+plates pair red steel leg tactical zyca~
+This is a pair of very sturdy-looking leg plates.  Various leather straps allow
+the plates to fit to the wearer's leg to perfection, offering great mobility
+and protection.  The plates are made from red-steel and sport the 'Z' logo of
+Zyca Kingdom on each thigh-plate.  This upgraded piece of equipment is usually
+reserved for persons of high importance or command.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+30 10
+#27728
+frostbrand blade huge cobalt blue steel sword~
+A Huge, Cobalt-Blue Frostbrand~
+A huge blade, crafted from cobalt-blue steel and covered with frost, rests here.~
+$r frostbrand hacks into $V with a tremendous force!~
+26 246473795 8193
+63 11 4 12
+30 500000 100000
+4
+E
+frostbrand blade huge cobalt blue steel sword~
+Crafted from cobalt-blue steel, this enormous blade is a true weapon of war.
+Designed to be wielded with two hands, this meter-long sword looks like it
+could cleave a mountain in half.  The stout blade is broad and thick, with a
+deep blood-channel that runs from tip to hilt.  Frost coats the entire weapon
+which is extremely cold to the touch--woe to any creature of fire to be struck
+with it!  Strange markings adorn the base of the blade in a language too
+complex for any mortal to understand.
+~
+X
+$r frostbrand arcs through the air, leaving a trail of ice crystals in its wake!~
+0 0 0
+M
+You gasp and turn pale as you wield the frostbrand!~
+$n gasps and turns pale as $e wields a frostbrand!~
+You breathe easier as you remove the frostbrand.~
+$n breathes easier as $e removes $s frostbrand.~
+A
+18 6
+A
+19 3
+#27729
+shield sharp blades bladed agony~
+The Bladed Shield of Agony~
+Upon the ground lies a shield fashioned of sharp blades.~
+~
+9 134234624 513
+10 0 0 0
+10 160000 80000
+3
+E
+shield sharp blades bladed agony~
+This shield is really a wicked array of blades that have been forged together
+in an overlapping disc-shaped pattern.  The blades are wrought of blackened
+steel are sharpened with a serrated edge designed to cut through the toughest
+of flesh.  The shield is not overly large and seems intended much more for
+offensive use than as a protective piece of equipment.  It looks as though the
+shield could pose as much of a threat to the wearer as it would to the wearer's
+opponent.
+~
+X
+~
+0 0 0
+M
+You wince in pain as the shield slices your wrist.~
+$n winces in pain as $s shield slices into $s wrist.~
+You cut yourself as you remove the shield.~
+$n cuts $mself trying to remove $s shield.~
+A
+18 2
+A
+19 1
+#27730
+lantern dark smoldering cinders~
+A Lantern of Smoldering Cinders~
+A dark lantern is here, smoldering quietly with an evil glow.~
+~
+1 139485767 65537
+0 0 0 0
+5 240000 160000
+3
+E
+lantern dark smoldering cinders~
+Made from the blackest iron is a lantern of purely evil origin.  This light-
+producing device has been crafted from metal that looks more twisted and warped
+than hammered or cast.  Glowing cinders smolder from within their metal cage,
+burning like a gateway into the deepest parts of hell.  When moved about, a
+small shower of hot sparks and embers is produced, which almost seem to 'try'
+to catch whatever they land on aflame.
+~
+X
+~
+0 0 0
+M
+You scream in agony as you grasp A Lantern of Smoldering Cinders!~
+$n screams in agony as $e grasps A Lantern of Smoldering Cinders!~
+You feel a sense of relief as you cease to use A Lantern of Smoldering Cinders.~
+$n looks relieved as $e ceases to use A Lantern of Smoldering Cinders.~
+A
+18 4
+A
+19 4
+B
+32768
+#27731
+armor large ribcage wings winged demon~
+Winged Armor of the Demon~
+A large ribcage fashioned in the shape of armor with wings rests here.~
+~
+9 208695808 9
+20 0 0 0
+50 400000 120000
+3
+E
+armor large ribcage wings winged demon~
+This armor is a gruesome sight indeed, for it is made from the hollowed out
+chest-cavity of some foul demon.  Hardened black flesh stretches tautly over a
+large ribcage of jagged bone and a pair of large leathery bat-like wings
+protrude from the back of the armor and still seem to be functional.  Perhaps
+the most frightening thing about it is the fact that it is only a part of the
+original host and yet it still seems to be alive in some way as it pulses and
+flexes the remaining muscles in a slow but steady rhythm.
+~
+X
+~
+0 0 0
+M
+You strap on the Winged Armor of the Demon and flex your new set of wings.~
+$n straps on the Winged Armor of the Demon, and flexes $s new wings.~
+You alight upon the ground and remove your Winged Armor of the Demon.~
+$n alights upon the ground and removes $s Winged Armor of the Demon.~
+A
+13 20
+A
+19 2
+B
+16777216
+#27732
+belt thick blood red flesh demon~
+A Belt of Demon Flesh~
+A thick belt crafted from blood-red flesh lies coiled here.~
+~
+9 172016208 2049
+8 0 0 0
+5 333333 140000
+2
+E
+belt thick blood red flesh demon~
+The belt is crafted from the thick blood-red hide of a demon.  Strange symbols
+have been etched into the leather, granting it some internal magical power.  It
+is said that such things grant the wearer a hint of the power that once
+belonged to the creature of the flesh.  The buckle is made from some crude form
+of blackened iron, fashioned into the gaping maw of a Pit Fiend that swallows
+the end of the belt as a fastener.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+19 2
+#27733
+belt thick blood red flesh demon~
+A Belt of Demon Flesh~
+A thick belt crafted from blood-red flesh lies coiled here.~
+~
+9 172016208 2049
+8 0 0 0
+5 333333 140000
+10
+E
+belt thick blood red flesh demon~
+The belt is crafted from the thick blood-red hide of a demon.  Strange symbols
+have been etched into the leather, granting it some internal magical power.  It
+is said that such things grant the wearer a hint of the power that once
+belonged to the creature of the flesh.  The buckle is made from some crude form
+of blackened iron, fashioned into the gaping maw of a Pit Fiend that swallows
+the end of the belt as a fastener.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+19 2
+B
+8388608
+#27740
+lockpicks magical magic set~
+A Set of Magical Lockpicks~
+A set of glowing lockpicks has been dropped here.~
+~
+18 403177537 1
+0 0 0 0
+1 0 0
+100
+E
+lockpicks magical magic set~
+At first glance this set of lockpicks appears perfectly ordinary and mundane.
+However, upon closer inspection small hair-thin runes can be made out near the
+tip and along the tool-grips.  One of the picks is simply a flat piece of metal
+but which is covered completely in the unknown symbols.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27741
+dart assassins assassin~
+Assassin's Dart~
+A small barbed dart crafted of black metal lies here, glistening with poison.~
+invalid~
+12 403177488 16385
+0 0 0 0
+1 10 0
+100
+E
+dart assassins assassin~
+This dart is a small but hefty shaft of metal no more than eight centimeters
+long.  Metal fins protrude from one end of the dart while the other ends in a
+wicked barb.  The barbed tip of the dart glistens with the wet sheen of fresh
+poison which is probably deadly enough to kill even the most powerful of
+creatures.
+~
+X
+invalid~
+0 0 0
+M
+~
+~
+~
+~
+#27742
+axe large two bladed barbarians barbarian rage~
+The Barbarian's Rage~
+A large, two-bladed axe is here, humming with uncontained power.~
+The Barbarian's Rage slams into $V with devastating force!~
+26 403177538 8193
+0 0 0 13
+18 10000 0
+100
+E
+axe large two bladed barbarians barbarian rage~
+This large axe consists of a huge metal blade attached to an ironwood haft
+which is bound in leather.  The axe-head is over half a meter wide and notched
+in several places.  The edge of the weapon is not particularly sharp but the
+sheer weight of it crashing into its intended victim must be devastating
+indeed.  It looks to be recently used in hacking some hard surface, perhaps
+stone or ice.
+~
+X
+The Barbarian's Rage trembles in $r hands, seeking a victim!~
+0 0 0
+M
+You feel the urge to 'break' something!~
+$n looks ready to break something!~
+The urge to 'break' something fades.~
+$n seems to calm down.~
+#27743
+flute small silver glistening tranquility~
+Flute of Tranquility~
+A small silver flute lies upon the ground, glistening with its own light.~
+~
+24 403177536 16385
+0 0 0 0
+2 36000 0
+100
+E
+flute small silver glistening tranquility~
+The flute is small and made from some silver metal which has been polished to a
+mirror-like shine.  Delicate keys line the metallic tube, set in place to
+create different tones when depressed in combination.  The craftsman who
+constructed this instrument was a master indeed.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+300
+#27744
+map ancient scroll abyss~
+An Ancient Map of the Abyss~
+An ancient scroll depicting an unusual map rests here, collecting dust.~
+~
+12 403177472 1
+0 0 0 0
+1 0 0
+100
+E
+map ancient scroll abyss~
+A complex design of faded-color lines swirl about the ancient surface of this
+scroll.  At first the vein-like traces seem to simply be part of some chaotic
+drawing of unknown design, but soon an image begins to form in your mind of a
+distant and frightening place filled with smoke and unspoken things.  A single
+dot in one corner is connected to the rest of the pattern by a thin line,
+almost like a pathway across the plane of the paper.  If used in the correct
+location, this 'map' could aid in finding the final destination.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27745
+locket small tarnished silver battle mage~
+Locket of the Battle-Mage~
+Upon the ground lies a small locket of tarnished silver.~
+~
+11 403177493 5
+0 0 0 0
+1 1000 0
+100
+E
+locket small tarnished silver battle mage~
+Once shiny and new, this locket is now worn and tarnished with age.  A small
+silver disc emblazoned with a 'Z' hangs from a similarly colored chain.  The
+locket is not defiled in anyway, just simply uncared for and perhaps even
+forgotten by its former wearer.  Opening the locket reveals a single picture of
+a harsh looking man wearing a full suit of armor that prominently displays the
+same 'Z' logo found on the locket front.  Whoever it is or was must have meant
+something to the owner of the locket.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27746
+orb crystal ball shining banishment~
+The Orb of Banishment~
+A small orb made from shining crystal has been dropped here.~
+~
+12 403177537 16385
+0 0 0 0
+3 1500 0
+100
+E
+orb crystal ball shining banishment~
+The orb looks to be made of some type of clear-white crystal, almost like
+quartz, except no crystal on this world pulses with an inner power as this one
+does!  The surface is perfectly smooth and round while it is about five
+centimeters in diameter.  Oddly enough the size and heft feels as if it was
+'meant' to be thrown...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27747
+orb crystal ball cracked banishment~
+Cracked Orb of Banishment~
+A small orb made from cracked crystal has been dropped here.~
+~
+12 403177472 1
+0 0 0 0
+3 0 0
+0
+E
+orb crystal ball cracked banishment~
+The once shining crystal is now cracked and lifeless.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27748
+mandate glowing tablet light flecked stone heaven~
+The Mandate of Heaven~
+A glowing tablet of light-flecked stone rests here.~
+~
+12 403177728 1
+0 0 0 0
+1 0 0
+100
+E
+mandate glowing tablet light flecked stone heaven~
+What at first appears to be an ordinary slab of stone turns out to be much more
+than that.  This light-flecked tablet has written upon it a strange but
+precisely ordered and symmetrical language like nothing else in this plane of
+existence.  The 'letters', if they can be called that, pulse and flash with a
+light of their own.  A simple but elegant drawing at the base of the tablet
+depicts what can only be described as a rip in a stone wall leading to a
+chaotic place beyond.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27749
+sliver chaotic dark chaos~
+A Sliver of Chaos~
+A sliver or dark-light seeths upon the ground with an internal fury.~
+~
+12 403177558 1
+0 0 0 0
+30 0 0
+100
+E
+sliver chaotic dark chaos~
+Images of unimaginable things too horrific for the mind to comprehend flash
+into your mind as you gaze upon this sliver of dark-light.  Terrible thoughts
+come to you and a sense of hopelessness fills your thoughts as you realize the
+utter chaos that is the existence you live in.  A voice in your mind speaks of
+the unimaginable power to be had if this relic of the time of creation, this
+shard of destruction, were to be used in the proper place and at the proper
+time--a horde of demons at your command!  As soon as the images come, they are
+gone and begin to fade away.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27750
+wall ice interlocking structures~
+Ice Wall~
+An interlocking wall of ice and stone blocks the path to the north.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+wall ice interlocking structures~
+Interlocking structures of ice and stone form a frozen wall that blocks the way
+north.  Perhaps it could be destroyed or broken down with the right kind of
+tool...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27751
+wall shattered ice rock~
+Ice Wall~
+A shattered wall of ice and rock.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+0
+E
+wall shattered ice rock~
+This is the shattered remains of what once was a thick wall of ice and stone.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27752
+vortex shimmering gate gateway portal~
+Shimmering Vortex~
+A shimmering vortex opens a gateway to another part of the prime material plane.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+vortex shimmering gate gateway portal~
+A shimmering portal of magic forms a one-way gate to another place in the
+world.  Closer inspection of the hazy destination arouses feelings of
+familiarity but the image is just too warped to be sure what you are seeing.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27797
+page organ music discordant~
+a page of organ music~
+A page from a discordant piece of organ music has been left here.~
+~
+32 0 1
+28763 28763 10024 26476
+2 11173 1013
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27798
+page organ music dissonant~
+a page of organ music~
+A page from a dissonant piece of organ music has been left here.~
+~
+32 0 1
+28764 28764 6217 10022
+2 11173 1013
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27799
+shadow plate~
+The Shadow Plate~
+A plate armor made of some black, swirling matter is lying on the ground.~
+~
+9 139586112 9
+0 0 0 0
+10 175000 21500
+95
+E
+plate shadow~
+The Shadow Plate seems to be glowing with a dim light, and it also feels warm
+to the touch.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+16777344
+#0
+$~

@@ -1,0 +1,993 @@
+#26200
+Entrance to the Vaults of the Ancient Lords~
+  Stumbling through a hidden portal you suddenly find yourself in a room of
+strangely symmetrical proportions.  The walls, ceiling, and floor are composed
+of some sort of a glowing, golden substance and the room radiates with a sense
+of incredible antiquity.  Through arched doorways to the east and west you can
+see row-after-row of faintly shimmering vaults.
+~
+262 134250560 0
+D1
+~
+~
+0 -1 26231
+D3
+~
+~
+0 -1 26214
+S
+#26201
+The Northern Passage~
+  You walk through a wide corridor lined with painting of ancient nobles
+and filled with expensive looking pottery.  You think you hear footsteps
+in the distance but grin foolishly as you realize that no one else could
+possibly have uncovered this well-hidden place.
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26227
+D3
+~
+~
+0 -1 26210
+S
+#26202
+The Southern Passage~
+  You walk through a wide corridor lined with painting of ancient nobles
+and filled with expensive looking pottery.  You think you hear footsteps
+in the distance but grin foolishly as you realize that no one else could
+possibly have uncovered this well-hidden place.
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26235
+D3
+~
+~
+0 -1 26218
+S
+#26203
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26204
+D2
+~
+~
+0 -1 26207
+S
+#26204
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26205
+D2
+~
+~
+0 -1 26208
+D3
+~
+~
+0 -1 26203
+S
+#26205
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26206
+D2
+~
+~
+0 -1 26209
+D3
+~
+~
+0 -1 26204
+S
+#26206
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D2
+~
+~
+0 -1 26210
+D3
+~
+~
+0 -1 26205
+S
+#26207
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26203
+D2
+~
+~
+0 -1 26211
+S
+#26208
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26204
+D1
+~
+~
+0 -1 26209
+D2
+~
+~
+0 -1 26212
+S
+#26209
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26205
+D3
+~
+~
+0 -1 26208
+S
+#26210
+Western Section of The Vault~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26206
+D1
+~
+~
+0 -1 26201
+S
+#26211
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26207
+D1
+~
+~
+0 -1 26212
+D2
+~
+~
+0 -1 26215
+S
+#26212
+Ruby Vault of Methros the Ruthless~
+  You skid to a halt as you unexpectedly enter a gigantic room that looks to
+have been almost carved out of an overlarge ruby.  Certainly the walls alone
+could have paid for every bit of property from Midgaard to Zyekia.  At the
+center of the room sits a large ruby-encrusted gauntlet perched on a throne
+made of, well...rubies.  With a start you realize that this must be the Blood
+Gauntlet of Methros the Ruthless, who conquered everything east of the Tribute
+River before being betrayed and killed by his brother Ardyran.
+
+A strange mirror sits here, absboring light instead of reflecting it.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26208
+D2
+~
+~
+0 -1 26216
+D3
+~
+~
+0 -1 26211
+D4
+~
+mirror~
+12 -1 26200
+S
+#26213
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26214
+D2
+~
+~
+0 -1 26217
+S
+#26214
+Western Section of the Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D2
+~
+~
+0 -1 26218
+D3
+~
+~
+0 -1 26213
+S
+#26215
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26211
+D2
+~
+~
+0 -1 26219
+S
+#26216
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26212
+D1
+~
+~
+0 -1 26217
+D2
+~
+~
+0 -1 26220
+S
+#26217
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26213
+D2
+~
+~
+0 -1 26221
+D3
+~
+~
+0 -1 26216
+S
+#26218
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26214
+D1
+~
+~
+0 -1 26202
+D2
+~
+~
+0 -1 26222
+S
+#26219
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26215
+D1
+~
+~
+0 -1 26220
+S
+#26220
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26216
+D1
+~
+~
+0 -1 26221
+D3
+~
+~
+0 -1 26219
+S
+#26221
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26217
+D1
+~
+~
+0 -1 26222
+D3
+~
+~
+0 -1 26220
+S
+#26222
+Western Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26218
+D3
+~
+~
+0 -1 26221
+S
+#26223
+Eastern Section of the Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26224
+D2
+~
+~
+0 -1 26227
+S
+#26224
+Eastern Section of the Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D2
+~
+~
+0 -1 26228
+D3
+~
+~
+0 -1 26223
+S
+#26225
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26226
+D2
+~
+~
+0 -1 26229
+S
+#26226
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D2
+~
+~
+0 -1 26230
+D3
+~
+~
+0 -1 26225
+S
+#26227
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26223
+D2
+~
+~
+0 -1 26231
+D3
+~
+~
+0 -1 26201
+S
+#26228
+Eastern Section of the Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26224
+D1
+~
+~
+0 -1 26229
+D2
+~
+~
+0 -1 26232
+S
+#26229
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26225
+D2
+~
+~
+0 -1 26233
+D3
+~
+~
+0 -1 26228
+S
+#26230
+Eastern Section of The Vaults~
+ This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26226
+D2
+~
+~
+0 -1 26234
+S
+#26231
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26227
+D1
+~
+~
+0 -1 26232
+S
+#26232
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26228
+D2
+~
+~
+0 -1 26236
+D3
+~
+~
+0 -1 26231
+S
+#26233
+Silver Vault of the Lord-Protector Ardyran~
+  You stand agape as you enter an enormous chamber composed of silver
+and diamonds, a shocking contrast to the golden make of the rest of the
+Vaults.  At the center of the room sits a small pedestal with a splendidly
+-crafted crown of silver resting atop it.  This must be the legendary
+private vault of Ardyran, the first Lord-Protector of the lands of Vendra.
+
+A strange mirror sits here, absorbing light instead of reflecting it.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26229
+D1
+~
+~
+0 -1 26234
+D2
+~
+~
+0 -1 26237
+D4
+~
+mirror~
+12 -1 26200
+S
+#26234
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26230
+D2
+~
+~
+0 -1 26238
+D3
+~
+~
+0 -1 26233
+S
+#26235
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D2
+~
+~
+0 -1 26239
+D3
+~
+~
+0 -1 26202
+S
+#26236
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26232
+D1
+~
+~
+0 -1 26237
+D2
+~
+~
+0 -1 26240
+S
+#26237
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26233
+D2
+~
+~
+0 -1 26241
+D3
+~
+~
+0 -1 26236
+S
+#26238
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26234
+D2
+~
+~
+0 -1 26242
+S
+#26239
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26235
+D1
+~
+~
+0 -1 26240
+S
+#26240
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26236
+D1
+~
+~
+0 -1 26241
+D3
+~
+~
+0 -1 26239
+S
+#26241
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26237
+D1
+~
+~
+0 -1 26242
+D3
+~
+~
+0 -1 26240
+S
+#26242
+Eastern Section of The Vaults~
+  This huge room is filled with dozens of rows of vaults made from the same
+strange golden material as the walls, floor, and ceiling.  You've heard a
+few rumors of the priceless treasures of the Vaults, but always dismissed
+them as just mere myths.  Apparently you were wrong.
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26238
+D3
+~
+~
+0 -1 26241
+S
+#26250
+Chaos Starting Room~
+Going 'd' takes you to arena
+
+When I say go, you may enter
+run around and start `iKilling`q
+~
+262 134254625 0
+D5
+~
+~
+0 -1 26251
+S
+#26251
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26252
+D1
+~
+~
+0 -1 26258
+D2
+~
+~
+0 -1 26256
+D3
+~
+~
+0 -1 26254
+S
+#26252
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26259
+D2
+~
+~
+0 -1 26251
+D3
+~
+~
+0 -1 26253
+S
+#26253
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D1
+~
+~
+0 -1 26252
+D2
+~
+~
+0 -1 26254
+S
+#26254
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26253
+D1
+~
+~
+0 -1 26251
+D2
+~
+~
+0 -1 26255
+S
+#26255
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26254
+D1
+~
+~
+0 -1 26256
+S
+#26256
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26251
+D1
+~
+~
+0 -1 26257
+D3
+~
+~
+0 -1 26255
+S
+#26257
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26258
+D3
+~
+~
+0 -1 26256
+S
+#26258
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D0
+~
+~
+0 -1 26259
+D2
+~
+~
+0 -1 26257
+D3
+~
+~
+0 -1 26251
+S
+#26259
+Chaos Arena~
+A temporary description
+~
+262 134254625 0
+D2
+~
+~
+0 -1 26258
+D3
+~
+~
+0 -1 26252
+S
+#0
+$~

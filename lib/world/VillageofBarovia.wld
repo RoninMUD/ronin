@@ -1,0 +1,1204 @@
+#11300
+The road~
+The road loads to the mist to all directions but south. The mist seems so
+thick, that you wonder if you could find you way anywhere in it.
+You see a sign.
+~
+113 133 2
+D0
+~
+~
+0 -1 3505
+D1
+~
+~
+0 -1 11304
+D2
+~
+~
+0 -1 11301
+D3
+~
+~
+0 -1 11306
+E
+mist~
+It's the thickest mist you've ever seen !
+~
+E
+sign~
+Past the mist is the village of Barovia. Feel free to enter, they welcome
+all wanderers, and plead them to stay.
+~
+S
+#11301
+The mist~
+You are totally lost in this mist...you wonder if you'll ever see light
+again.
+~
+113 133 2
+D0
+~
+~
+0 -1 11307
+D1
+~
+~
+0 -1 11307
+D2
+~
+~
+0 -1 11307
+D3
+~
+~
+0 -1 11300
+E
+mist~
+You have never seen so thick mist, it would be pure luck if you could
+find your way to anywhere in it.
+~
+S
+#11302
+The mist~
+You are totally lost in this mist...you wonder if you'll ever see light
+again.
+~
+113 133 2
+D0
+~
+~
+0 -1 11301
+D1
+~
+~
+0 -1 11307
+D2
+~
+~
+0 -1 11307
+D3
+~
+~
+0 -1 11307
+E
+mist~
+You have never seen so thick mist, it would be pure luck if you could
+find your way to anywhere in it.
+~
+S
+#11303
+The mist~
+You are totally lost in this mist...you wonder if you'll ever see light
+again.
+~
+113 133 2
+D0
+~
+~
+0 -1 11307
+D1
+~
+~
+0 -1 11302
+D2
+~
+~
+0 -1 11307
+D3
+~
+~
+0 -1 11307
+E
+mist~
+You have never seen so thick mist, it would be pure luck if you could
+find your way to anywhere in it.
+~
+S
+#11304
+The mist~
+You are totally lost in this mist...you wonder if you'll ever see light
+again.
+~
+113 133 2
+D0
+~
+~
+0 -1 11303
+D1
+~
+~
+0 -1 11307
+D2
+~
+~
+0 -1 11307
+D3
+~
+~
+0 -1 11307
+E
+mist~
+You have never seen so thick mist, it would be pure luck if you could
+find your way to anywhere in it.
+~
+S
+#11305
+The mist~
+You are totally lost in this mist...you wonder if you'll ever see light
+again.
+~
+113 133 2
+D0
+~
+~
+0 -1 11304
+D1
+~
+~
+0 -1 11307
+D2
+~
+~
+0 -1 11307
+D3
+~
+~
+0 -1 11306
+E
+mist~
+You have never seen so thick mist, it would be pure luck if you could
+find your way to anywhere in it.
+~
+S
+#11306
+The mist~
+You are totally lost in this mist...you wonder if you'll ever see light
+again.
+~
+113 133 2
+D0
+~
+~
+0 -1 11307
+D1
+~
+~
+0 -1 11307
+D2
+~
+~
+0 -1 11307
+D3
+~
+~
+0 -1 11305
+E
+mist~
+You have never seen so thick mist, it would be pure luck if you could
+find your way to anywhere in it.
+~
+S
+#11307
+The mist~
+You are in the mist. There seems to be a road to the west. You better go
+that way, you would never find your way in this mist anyway.
+~
+113 133 2
+D0
+~
+~
+0 -1 11306
+D1
+~
+~
+0 -1 11306
+D2
+~
+~
+0 -1 11306
+D3
+~
+~
+0 -1 11308
+E
+mist~
+You have never seen so thick mist, it would be pure luck if you could
+find your way to anywhere in it.
+~
+S
+#11308
+The road to the village~
+This is the road to the village of Barovia. Far in the west, you can see
+a high mountain, and on top of it the castle of Count Strahd Von Zarovich.
+The road continues to the west, and the mist is to the east.
+~
+113 0 2
+D1
+~
+~
+0 -1 11307
+D3
+~
+~
+0 -1 11309
+E
+castle mountain~
+The Castle is in bad shape, but centuries ago, it might have been a beautiful
+place to live, now it looks rather scary. You wonder what fiendish creatures
+dwell in it's darkness. Shivers run through your body.
+~
+S
+#11309
+The Svalich road~
+This is the road to the village of Barovia.
+The road continues to the east and west, and to the north and south is forest.
+~
+113 0 2
+D0
+~
+~
+0 -1 11310
+D1
+~
+~
+0 -1 11308
+D2
+~
+~
+0 -1 11311
+D3
+~
+~
+0 -1 11313
+S
+#11310
+The Svalich woods~
+You are in the Svalich woods. Many small animals run through the
+bushes. Every now and then, you seem to hear something chasing those animals.
+To the south is the road, and this forest continues to the west.
+~
+113 0 3
+D2
+~
+~
+0 -1 11309
+D3
+~
+~
+0 -1 11314
+S
+#11311
+The Svalich woods~
+You are in the Svalich woods. Many small animals run through the
+bushes. You can see plains to the west, and the road is to the north.
+~
+113 0 3
+D0
+~
+~
+0 -1 11309
+D3
+~
+~
+0 -1 11312
+S
+#11312
+The plains~
+You are in the plains of Barovia.
+You can see the village to the west, and Svalich woods to the east. Plains
+continue to the south.
+~
+113 0 2
+D0
+~
+~
+0 -1 11313
+D1
+~
+~
+0 -1 11311
+D2
+~
+~
+0 -1 11316
+D3
+~
+~
+0 -1 11320
+S
+#11313
+The Svalich road~
+This is the road to the village of Barovia.
+The village is to the west. You can see plains in south and the Svalich woods
+in north. The road continues to east and west.
+~
+113 0 2
+D0
+~
+~
+0 -1 11314
+D1
+~
+~
+0 -1 11309
+D2
+~
+~
+0 -1 11312
+D3
+~
+~
+0 -1 11319
+S
+#11314
+The Svalich woods~
+You are in the Svalich woods. Many small animals run through the
+bushes. The village is to the west, the forest continues to the north and
+east. The road is to the south.
+~
+113 0 3
+D0
+~
+~
+0 -1 11315
+D1
+~
+~
+0 -1 11310
+D2
+~
+~
+0 -1 11313
+D3
+~
+~
+0 -1 11318
+S
+#11315
+The Svalich woods~
+You are in the Svalich woods. Many small animals run through the
+bushes. The forest continues to the west and south.
+~
+113 0 3
+D2
+~
+~
+0 -1 11314
+D3
+~
+~
+0 -1 11317
+S
+#11316
+The plains~
+You are in the plains of Barovia. You see large tracks here and there.
+You see more plains to the north and west.
+~
+113 0 2
+D0
+~
+~
+0 -1 11312
+D3
+~
+~
+0 -1 11321
+S
+#11317
+The Svalich woods~
+You are in the Svalich woods. Many small animals run through the
+bushes. The forest continues to the east and west.
+The village is to the south.
+~
+113 0 3
+D1
+~
+~
+0 -1 11315
+D2
+~
+~
+0 -1 11318
+D3
+~
+~
+0 -1 11322
+S
+#11318
+The village of Barovia~
+This is the village of Barovia. People run back and forth, busy in their
+jobs. They frown when they see you approach, and turn their backs.
+Village continues to the south and west. To the north and east are the Svalich
+woods.
+~
+113 0 1
+D0
+~
+~
+0 -1 11317
+D1
+~
+~
+0 -1 11314
+D2
+~
+~
+0 -1 11319
+D3
+~
+~
+0 -1 11323
+S
+#11319
+The village of Barovia~
+This is the village of Barovia. People run back and forth, busy in their
+jobs. They frown when they see you approach, and turn their backs. You wonder
+why they are so unfriendly. Village continues to the north, south and west,
+to the east is the road.
+~
+113 0 1
+D0
+~
+~
+0 -1 11318
+D1
+~
+~
+0 -1 11313
+D2
+~
+~
+0 -1 11320
+D3
+~
+~
+0 -1 11324
+S
+#11320
+The village of Barovia~
+This is the village of Barovia. People run back and forth, busy in their
+jobs. They frown when they see you approach, and turn their backs.
+The village continues to the north and west, and the plains are to the east
+and south.
+~
+113 0 1
+D0
+~
+~
+0 -1 11319
+D1
+~
+~
+0 -1 11312
+D2
+~
+~
+0 -1 11321
+D3
+~
+~
+0 -1 11325
+S
+#11321
+The plains~
+You are in the plains of Barovia. Some large animals have wandered here, you
+can see many tracks. The plains continue to the east and west. The village is
+to the north.
+~
+113 0 2
+D0
+~
+~
+0 -1 11320
+D1
+~
+~
+0 -1 11316
+D3
+~
+~
+0 -1 11326
+S
+#11322
+The Svalich woods~
+   You are in the Svalich woods.  Many small animals run in and 
+out through the bushes, fearful of your approach.  A village lies south 
+of here, a darkened aura surrounding the edges of the border.  A shrieking
+howl breaks the still silence, chilling your bones and urging you to 
+journey on -- however, where can one run in a dark maze of trees?
+A dim light accompanied by a thickened fog lifts through a few branches and
+shrubs from the north -- maybe it's worth taking a quick look at?  
+~
+113 0 3
+D0
+~
+branches~
+8 -1 4400
+D1
+~
+~
+0 -1 11317
+D2
+~
+~
+0 -1 11323
+D3
+~
+~
+0 -1 11327
+E
+branches~
+They look like they can be moved with relative ease, perhaps a good shove may
+do some good?
+~
+S
+#11323
+The village of Barovia~
+This is the village of Barovia. People run back and forth, busy in their
+jobs. They frown when they see you approach, and turn their backs.
+Village continues to the south, west and east. To the north are the Svalich
+woods.
+~
+113 0 1
+D0
+~
+~
+0 -1 11322
+D1
+~
+~
+0 -1 11318
+D2
+~
+~
+0 -1 11324
+D3
+~
+~
+0 -1 11328
+S
+#11324
+The market square~
+This is the market square of the village of Barovia. Many villagers are here
+selling or buying things. When they see you, they turn their backs, and mumble
+something about strangers. Village continues in all directions.
+~
+113 0 1
+D0
+~
+~
+0 -1 11323
+D1
+~
+~
+0 -1 11319
+D2
+~
+~
+0 -1 11325
+D3
+~
+~
+0 -1 11329
+E
+villagers people~
+The seem to be very unfriendly against strangers. You can't buy anything
+from here, they dislike you too much.
+~
+S
+#11325
+The village of Barovia~
+This is the village of Barovia. People run back and forth, busy in their
+jobs. They frown when they see you approach, and turn their backs.
+The village continues to the east and north, the inn is to the west and plains
+to the south.
+~
+113 0 1
+D0
+~
+~
+0 -1 11324
+D1
+~
+~
+0 -1 11320
+D2
+~
+~
+0 -1 11326
+D3
+~
+~
+0 -1 11330
+S
+#11326
+The plains~
+You are in the plains of Barovia. Some large animals have wandered here, you
+can see many tracks. The plains continue to the east and west. The village is
+to the north.
+~
+113 0 2
+D0
+~
+~
+0 -1 11325
+D1
+~
+~
+0 -1 11321
+D3
+~
+~
+0 -1 11331
+S
+#11327
+The Svalich woods~
+You are in the Svalich woods. Many small animals run through the
+bushes. The forest continues to the east and west.
+The village is to the south.
+~
+113 0 3
+D1
+~
+~
+0 -1 11322
+D2
+~
+~
+0 -1 11328
+D3
+~
+~
+0 -1 11322
+S
+#11328
+The village of Barovia~
+This is the village of Barovia. People run back and forth, busy in their
+jobs. They frown when they see you approach, and turn their backs.
+The village continues to the south and east. The Svalich woods are to the
+north and you can see the Church to the west.
+~
+113 0 1
+D0
+~
+~
+0 -1 11327
+D1
+~
+~
+0 -1 11323
+D2
+~
+~
+0 -1 11329
+D3
+~
+~
+0 -1 11333
+S
+#11329
+The village of Barovia~
+This is the village of Barovia. People run back and forth, busy in their
+jobs. They frown when they see you approach, and turn their backs.
+The village continues to the east and north, and the tavern is to the south.
+Road leads out of the village to the west.
+~
+113 0 1
+D0
+~
+~
+0 -1 11328
+D1
+~
+~
+0 -1 11324
+D2
+~
+~
+0 -1 11330
+D3
+~
+~
+0 -1 11334
+S
+#11330
+The tavern of Barovia~
+This is the tavern of Barovia. Many farmers and villagers are here drinking
+beer and chatting merrily. Maybe it's the beer, but they don't seem to be
+so unfriendly here.
+~
+113 8 1
+D0
+~
+~
+0 -1 11329
+D1
+~
+~
+0 -1 11325
+E
+farmers villagers~
+They are enjoying their beer, and chatting with their friends. They seem to
+have a good time here.
+~
+S
+#11331
+The plains~
+You are in the plains of Barovia. Some large animals have wandered here, you
+can see many tracks. The plains continue to the east, west and south.
+~
+113 0 2
+D1
+~
+~
+0 -1 11326
+D2
+~
+~
+0 -1 11331
+D3
+~
+~
+0 -1 11336
+S
+#11333
+The Church~
+This is the Church of Barovia, quite small for a church, but fulfils the
+needs of the barovians. Almost no one visits this place anymore, only a
+romantic couple every now and then, who wish to have wedding in a real church.
+But most of the people have lost faith in the church long time ago.
+~
+113 136 1
+D1
+~
+~
+0 -1 11328
+S
+#11334
+The Svalich road~
+This is the road to the village, and to the Burgonmaster's house.
+The village is to the east, and the road continues to the west. Plains are to
+the south.
+~
+113 0 2
+D1
+~
+~
+0 -1 11329
+D2
+~
+~
+0 -1 11335
+D3
+~
+~
+0 -1 11339
+S
+#11335
+The plains~
+You are in the plains of Barovia. Some large animals have wandered here, you
+can see many tracks. The plains continue to the south, and you can see a road
+to the west.
+~
+113 0 2
+D0
+~
+~
+0 -1 11334
+D2
+~
+~
+0 -1 11336
+D3
+~
+~
+0 -1 11340
+S
+#11336
+The plains~
+You are in the plains of Barovia. Some large animals have wandered here, you
+can see many tracks. The plains continue to the east and north, and you can
+see a road to the north and west.
+~
+113 0 2
+D0
+~
+~
+0 -1 11335
+D1
+~
+~
+0 -1 11331
+D3
+~
+~
+0 -1 11341
+S
+#11337
+The thick forest~
+You are in a very thick forest. It's hopeless to try to find anything from
+here.
+~
+113 1 3
+D0
+~
+~
+0 -1 11337
+D2
+~
+~
+0 -1 11338
+D3
+~
+~
+0 -1 11342
+S
+#11338
+The thick forest~
+You are in a very thick forest. It's hopeless to try to find anything from
+here.
+~
+113 1 3
+D0
+~
+~
+0 -1 11337
+D2
+~
+~
+0 -1 11339
+D3
+~
+~
+0 -1 11343
+S
+#11339
+The Svalich road~
+This is the road to the village, and to the Burgonmaster's house.
+The road continues to the east and south. To the west and north you see a
+thick forest.
+~
+113 0 2
+D0
+~
+~
+0 -1 11338
+D1
+~
+~
+0 -1 11334
+D2
+~
+~
+0 -1 11340
+D3
+~
+~
+0 -1 11344
+S
+#11340
+The Svalich road~
+This is the road to the village. You can see the Burgonmaster's house to the
+south. The road continues to the west and north. To the west you can see the
+plains.
+~
+113 0 2
+D0
+~
+~
+0 -1 11339
+D1
+~
+~
+0 -1 11335
+D2
+~
+~
+0 -1 11341
+D3
+~
+~
+0 -1 11345
+S
+#11341
+The Burgonmaster's front yard~
+You are in the Burgonmaster's front yard. His house is to the south. It
+might be better not to disturb him, it's said that he's quick to anger.
+~
+113 0 2
+D0
+~
+~
+0 -1 11340
+D2
+~
+~
+0 -1 11363
+S
+#11342
+The thick forest~
+You are in a very thick forest. It's hopeless to try to find anything from
+here.
+~
+113 1 3
+D0
+~
+~
+0 -1 11337
+D1
+~
+~
+0 -1 11337
+D2
+~
+~
+0 -1 11343
+D3
+~
+~
+0 -1 11346
+S
+#11343
+The thick forest~
+You are in a very thick forest. It's hopeless to try to find anything from
+here.
+~
+113 1 3
+D0
+~
+~
+0 -1 11342
+D1
+~
+~
+0 -1 11338
+D2
+~
+~
+0 -1 11344
+D3
+~
+~
+0 -1 11338
+S
+#11344
+The thick forest~
+You are in a very thick forest. It's hopeless to try to find anything from
+here.
+~
+113 1 3
+D0
+~
+~
+0 -1 11343
+D1
+~
+~
+0 -1 11339
+D2
+~
+~
+0 -1 11343
+D3
+~
+~
+0 -1 11343
+S
+#11345
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich on the mountain top.
+You can see the castle from here, and it doesn't look inviting. Maybe it's
+better to just turn back, and leave the castle alone.
+The road continues to the east and west.
+~
+113 0 2
+D1
+~
+~
+0 -1 11340
+D3
+~
+~
+0 -1 11349
+E
+castle~
+The castle looks very scary. You wonder if the Strahd is looking at you right
+now from his high tower. Shivers run through your body.
+~
+S
+#11346
+The thick forest~
+You are in a very thick forest. It's hopeless to try to find anything from
+here.
+~
+113 1 3
+D0
+~
+~
+0 -1 11342
+D1
+~
+~
+0 -1 11342
+D2
+~
+~
+0 -1 11347
+D3
+~
+~
+0 -1 11342
+S
+#11347
+The thick forest~
+You are in a very thick forest. It's hopeless to try to find anything from
+here. You hear singing from the west.
+~
+113 1 3
+D0
+~
+~
+0 -1 11346
+D1
+~
+~
+0 -1 11337
+D3
+~
+~
+0 -1 11368
+S
+#11349
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich on the mountain top.
+The road continues to the east and west.
+A warning sign is nailed to a pole here.
+~
+113 0 2
+D1
+~
+~
+0 -1 11345
+D3
+~
+~
+0 -1 11401
+E
+sign~
+Along this road you may find many dangerous monster created by Strahd. If
+you are not confident you can defeat them, turn back before it's too late.
+~
+S
+#11363
+The Burgonmaster's house~
+You are inside the Burgonmaster's house. You are uninvited guest, you wonder
+if he likes you being here...
+To the east is the bedroom, kitchen is to the south, and above is the
+children's room.
+~
+113 0 2
+D0
+~
+~
+0 -1 11341
+D1
+~
+~
+0 -1 11365
+D2
+~
+~
+0 -1 11364
+D4
+~
+~
+0 -1 11366
+S
+#11364
+The Burgonmaster's house~
+You are in the Burgonmaster's kitchen. Many kettles, pots, spoons, forks and
+knives are lying around. A large oven is in the corner, heating the whole
+room.
+~
+113 0 2
+D0
+~
+~
+0 -1 11363
+E
+oven~
+The oven is very large, you look inside, but there is nothing but burning
+wood inside.
+~
+S
+#11365
+The Burgonmaster's house~
+You are in the Burgonmaster's bedroom. Large bed is here, along with table,
+and chair.
+~
+113 0 2
+D3
+~
+~
+0 -1 11363
+E
+table~
+The table is just a simple, ordinary table, without any oddities.
+~
+E
+chair~
+It's a big and strong chair, no other could hold his weight.
+~
+E
+bed~
+The bed looks quite comfortable
+~
+S
+#11366
+The Burgonmaster's house~
+You are in the Burgonmaster's children's room. Many toys are lying around, and
+you wonder how can he even find his children's from this mess !
+~
+113 0 2
+D5
+~
+~
+0 -1 11363
+E
+toys~
+Here are many different kinds of toys, wooden ponies, soft bears etc. The
+Burgonmaster seems to care for his children's very much.
+~
+S
+#11368
+The gypsy camp~
+You have arrived to the gypsy camp. The gypsies are singing and dancing around
+a large camp fire. Their singing and dancing is very beautiful, it brings
+tears to your eyes.
+To the north is the seeresses wagon.
+~
+113 0 3
+D0
+~
+~
+0 -1 11369
+D1
+~
+~
+0 -1 11347
+S
+#11369
+The seeresses wagon~
+You are in the gypsy seeresses wagon. Many maps, paintings and herbs cover
+the walls. This is not a bit wagon, but comfortable enough for the gypsies.
+To the south is the camp fire.
+~
+113 8 3
+D2
+~
+~
+0 -1 11368
+S
+#0
+$~

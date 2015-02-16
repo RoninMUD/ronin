@@ -1,0 +1,27 @@
+#13400
+strip weed piece plant~
+a strip of dried weed~
+A strange-looking piece of dried plant is here.~
+~
+19 0 16385
+1 0 0 1
+1 10 5000
+15
+E
+strip weed~
+The strip of weed has been off the waters of the sea for too long. The dried
+leaves look a bit dusty, but are still holding it together fairly well.~
+#13401
+cloud wispy~
+a wispy cloud~
+A small wispy-looking cloud is floating here.~
+~
+12 134217793 16385
+0 0 0 0
+5 100 10000
+15
+E
+cloud wispy~
+The cloud is floating in mid-air, without anything holding it together.~
+#0
+$~

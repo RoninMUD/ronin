@@ -1,0 +1,117 @@
+#21216~
+-1
+-1
+-1
+21219
+21220
+1.000000
+1.000000
+0
+9
+11
+0
+0
+%s Sorry, I'm not selling anything like that.~
+%s You don't have any such thing to sell!~
+%s I have no use for that!~
+%s Sorry, I can't afford those prices.~
+%s Come back when you get some money!~
+%s Your purchase comes to %d coins.~
+%s Here is %d coins.~
+0
+0
+21216
+0
+21266
+0
+28
+0
+0
+#21202~
+-1
+-1
+-1
+21218
+21225
+1.000000
+1.000000
+0
+3
+4
+10
+2
+%s I don't have that for sale today.~
+%s You don't have that item to sell me.~
+%s I don't want that garbage!~
+%s Your prices are much too high.~
+%s You pathetic fool, come back when you have money.~
+%s That costs you %d coins.~
+%s This will prove useful, Here is %d coins.~
+0
+0
+21202
+0
+21265
+0
+28
+0
+0
+#21215~
+-1
+-1
+-1
+21221
+21222
+1.000000
+1.000000
+0
+5
+6
+7
+0
+%s I don't deal in selling those things.~
+%s You have no such items!~
+%s I have no use for your junk.~
+%s I don't have that kind of money.~
+%s Don't return until you have some money!~
+%s Thats %d coins.~
+%s Here is %d coins, Thanks.~
+0
+0
+21215
+0
+21267
+0
+28
+0
+0
+#21213~
+-1
+-1
+-1
+21223
+21224
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s I only sell Morian baked goods.~
+%s I'm sorry, I'm not interested in buying things.~
+%s I'm sorry, I'm not interested in buying things.~
+%s I'm sorry, I'm not interested in buying things.~
+%s You must have money to buy things here!~
+%s Enjoy your food!~
+%s I'm sorry, I'm not interested in buying things.~
+0
+0
+21213
+0
+21268
+0
+28
+0
+0
+$~

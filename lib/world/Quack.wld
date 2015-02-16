@@ -1,0 +1,1255 @@
+#29800
+Entrance to the Soleki Jungle~
+  You stand at the edge of a vast jungle that stretches out as far as the eyes
+can see.  Tall trees loom above you, teeming with life.  All around you can be
+heard the chirping of small animals.  The jungle floor is covered by rotting
+leaves which serve as cover for all kinds of bugs and insects.  The stench
+of decay is at first nauseating but soon overwhelms your senses and you
+stop noticing it.
+~
+298 0 0
+D2
+~
+~
+0 -1 29801
+S
+#29801
+Soleki Jungle~
+  You push your way through the dense foliage.  Weeds bite at your legs and
+vines cling to your limbs, seemingly trying to make you a part of the jungle.
+In the high branches of a tree far above, you see strange small orange monkeys
+gathering fruits.  To your north the trees seem less numerous and you can
+just barely make out a fading animal trail that leads in that direction.
+~
+298 0 3
+D0
+~
+~
+0 -1 29800
+D1
+~
+~
+0 -1 29803
+D2
+~
+~
+0 -1 29804
+D3
+~
+~
+0 -1 29802
+S
+#29802
+Soleki Jungle~
+  A dead gorilla rots in the heat here.  The stench is overpowering at first
+but being a hardy adventurer you simply shrug it off and continue.  Examining
+the corpse reveals hundreds of tiny stab wounds and blisters that indicate it
+was killed by the large bees buzzing around here and to your south.  The
+trees grow even more dense in that direction.
+~
+298 0 3
+D0
+~
+~
+0 -1 29805
+D1
+~
+~
+0 -1 29801
+D2
+~
+~
+0 -1 29803
+D3
+~
+~
+0 -1 29804
+E
+gorilla~
+By the smell it's been here for days but in the heat here corpses rot
+quickly so there's no easy way to tell.
+~
+S
+#29803
+Soleki Jungle~
+  The trees stand even closer together here and your progress slows down to
+a crawl.  The way west is blocked by brambles whose thorns glint with some
+thick dark substance.  A humming noise can be heard above you.  Looking up
+you notice a rather large hive hanging from a branch.  A swarm of large bees
+buzzes angrily around it.  Apparently something has stirred them recently.
+~
+298 0 3
+D0
+~
+~
+0 -1 29802
+D1
+~
+~
+0 -1 29804
+D2
+~
+~
+0 -1 29806
+E
+hive~
+As you reach for it you hear an angry buzzing and change your mind.
+~
+S
+#29804
+Soleki Jungle~
+  You hack your way through the dense undergrowth that closes up almost
+immediately behind you.  Your arms feel like they're on fire from fatigue
+and you are assaulted by tiny blood-sucking leeches that drop down on you
+from above to feed.  The trees are so thickly packed together they form a
+roof over your head and you cannot make out the sun to orient yourself
+properly.
+
+~
+298 0 3
+D0
+~
+~
+0 -1 29801
+D1
+~
+~
+0 -1 29805
+D2
+~
+~
+0 -1 29807
+D3
+~
+~
+0 -1 29803
+S
+#29805
+Soleki Jungle~
+  The heat in here is almost unbearable and makes you sweat profusely.  You
+see several small furry animals of unknown origin dozing on a low branch just
+out of reach.  A hollow treestump to your left catches your attention.  It
+bears some strange markings that you cannot comprehend.  You wonder if there
+are any intelligent inhabitants that live here.
+~
+298 0 3
+D0
+~
+~
+0 -1 29807
+D1
+~
+~
+0 -1 29808
+D2
+~
+~
+0 -1 29808
+D3
+~
+~
+0 -1 29804
+E
+treestump~
+The symbols on it glow slightly as you touch them and you get a nauseating
+feeling as images of your own horrible, agonizing death fill your mind.
+~
+E
+markings~
+The symbols on it glow slightly as you touch them and you get a nauseating
+feeling as images of your own horrible, agonizing death fill your mind.
+~
+S
+#29806
+Soleki Jungle~
+  You come to a small clearing in the jungle.  The skeletons of several small
+monkeys lie scattered about like pieces of driftwood.  A pile of stones has
+been gathered together and you see pieces of broken bones sticking out
+of it here and there.  A faint humming noise can be heard from the north.
+You suddenly notice that the usual sounds of the jungle have ceased.
+~
+298 0 3
+D0
+~
+~
+0 -1 29803
+D1
+~
+~
+0 -1 29807
+D2
+~
+~
+0 -1 29810
+E
+pile~
+The stones all have chipped edges.  Judging from the tiny bits of skin and
+dried blood on them they've been used to cut the meat away from the bones.
+~
+S
+#29807
+Soleki Jungle~
+  The vines growing here are old and rotten and are cut away without any
+great effort.  A pile of rotting leaves half-conceals the maggot-infested
+corpse of some unfortunate adventurer under the low branches of a dark tree
+to your east.  Occasionally you hear a deep roar coming from your west,
+followed by a faint humming noise.
+~
+298 0 3
+D0
+~
+~
+0 -1 29804
+D1
+~
+~
+0 -1 29808
+D2
+~
+~
+0 -1 29811
+D3
+~
+~
+0 -1 29806
+E
+corpse~
+The armor and equipment have rotted away into uselessness.  You notice the
+entire right leg is missing along with any pieces of armor that covered it.
+~
+S
+#29808
+Soleki Jungle~
+  A large tree here is home to a flock of multicolored parrots.  The
+squawking noise reaches a hysterical pitch as you pass underneath the
+branches of their tree.  Covering your ears, you look up and notice several
+skulls that have been hung from the low branches.  Some of the skulls still
+have bits of putrid flesh clinging to them while others are yellowed with age.
+~
+298 0 3
+D0
+~
+~
+0 -1 29805
+D1
+~
+skulls~
+8 -1 29809
+D2
+~
+~
+0 -1 29812
+D3
+~
+~
+0 -1 29807
+E
+skulls~
+They've been tied to the tree with strips of flesh.  This tree is probably
+used for sacrifices in some unholy pagan ritual.
+~
+E
+tree~
+Upon closer examination you decide you could probably move the tightly-packed
+skulls apart far enough to allow you to force an entrance to the east.  The
+skulls almost seem to mock you with their empty, lifeless stares.
+~
+S
+#29809
+Soleki Jungle~
+ The green inferno gives way to a well-traveled path to your south.  A second
+look at the path reveals it has been covered with some white powder that has
+burned itself into the soil and killed the plantlife around it.  A closer
+inspection of the powder leads you to believe it's possibly bone that's been
+crushed into fine dust.  The path continues to the south while you see a tree
+with hanging skulls to your west.
+~
+298 4 3
+D0
+~
+~
+0 -1 29802
+D1
+~
+~
+0 -1 29804
+D2
+~
+~
+0 -1 29813
+D3
+~
+skulls~
+8 -1 29808
+S
+#29810
+Soleki Jungle~
+  The jungle suddenly seems to take on a menacing aspect as you push your way
+through the brambles and hack away vines.  You feel as if a thousand eyes are
+looking at you behind your back but turning around you find you are alone
+with your fears.  You hear an extremely faint humming coming from underneath
+you and the air seems to be almost charged with electricity.
+~
+298 0 3
+D0
+~
+~
+0 -1 29806
+D2
+~
+~
+0 -1 29814
+D3
+~
+~
+0 -1 29828
+S
+#29811
+Soleki Jungle~
+  A river of thick dark liquid springs forth from the earth to your west and
+flows southwards.  The water is almost warm to the touch and tastes salty.
+You look across the river for a ford or some sort of ferry, but find none.  Any
+passage in that direction is impossible as the current is so strong it would
+topple any small rafts that were to be launched on it.
+~
+298 0 3
+D0
+~
+~
+0 -1 29807
+D1
+~
+~
+0 -1 29816
+D2
+~
+~
+0 -1 29815
+E
+water~
+It looks like fresh blood!!
+~
+S
+#29812
+Soleki Jungle~
+  For the first time in a long while you can make out the sky through the
+treetops. A huge tree towers above the others here.  Strangely enough there
+are no plants growing near it but you can see a few bones near the base of the
+tree. The jungle floor here is covered with dead beetles, leeches and bees
+who all lie bundled together with their legs curled up beneath them.
+~
+298 4 3
+D0
+~
+~
+0 -1 29808
+D2
+~
+~
+0 -1 29816
+D3
+~
+~
+0 -1 29811
+E
+tree~
+It's a tree....Hmm, did it move slightly just now?!!
+~
+S
+#29813
+Jungle Path~
+  You are walking along an ensorcelled bone path that lies beneath your
+feet.  Here and there along the way you can see small dark patches of dried
+blood that seem to be glowing faintly.  The familiar squawking and chirping
+has died away, having been replaced by the ominious moaning sound of your
+boots grinding together crushed bones.  It's almost as if the spirits of the
+dead are trying to warn you of some great evil that lies ahead.
+~
+298 0 3
+D0
+~
+~
+0 -1 29809
+D2
+~
+~
+0 -1 29817
+S
+#29814
+Soleki Jungle~
+  The green inferno continues to tear away at your flesh and spirit, vines
+cling to your legs and razor-sharp leaves cut tiny gashes into your face and
+hands as you try to push deeper into the jungle.  The heat in here causes
+you to sweat profusely and the rank stench of decay rakes at your throat with
+every breath you take.  The sound of running water can be heard to your far
+south-east but your progress in that direction is blocked by an impassable
+wall of thorns.
+~
+298 0 3
+D0
+~
+~
+0 -1 29810
+D3
+~
+~
+0 -1 29828
+S
+#29815
+Soleki Jungle~
+  The dark river turns sharply to the south-east here, blocking your passage
+southwards. Every now and then you see something that looks like a clutching
+hand or a large insect of some sort rise out of the thick, dark liquid only to
+submerge rapidly again with a hollow splash.  Across the riverbank, far to your
+south-west, you can see where the river has formed a small lake.  A tiny island
+in the middle of the lake catches your attention.
+~
+298 0 3
+D0
+~
+~
+0 -1 29811
+D1
+~
+~
+0 -1 29816
+S
+#29816
+Soleki Jungle~
+  The river of blood flowing from the north-west turns to the south here and
+seems to pick up speed as it descends rapidly down to the lake at your
+south-west.  Looking across you spot a tiny overgrown island over which dark
+clouds seem to hover menacingly.  To your east the jungle looks impassable
+due to several thick hedges that block your passage in that direction.
+~
+298 0 3
+D0
+~
+~
+0 -1 29812
+D2
+~
+~
+0 -1 29820
+D3
+~
+~
+0 -1 29815
+S
+#29817
+Jungle Path~
+  You are walking along an ensorcelled bone path that lies beneath your
+feet.  Here and there along the way you can see small dark patches of dried
+blood that seem to be glowing faintly.  The familiar squawking and chirping
+has died away, having been replaced by the ominious moaning sound of your
+boots grinding together crushed bones.  It's almost as if the spirits of the
+dead are trying to warn you of some great evil that lies ahead.  Every now
+and then you catch a glimpse of movement in the shadows outside the path,
+but when you look closer there is nothing there.
+~
+298 0 2
+D0
+~
+~
+0 -1 29813
+D1
+~
+~
+0 -1 29824
+S
+#29818
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you
+afloat.  A low, ominous rumbling can be heard from the depths and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water
+you shudder at the dark shadows lurking there, awaiting you should you make
+the slightest mistake on this journey.
+~
+298 0 7
+D1
+~
+~
+0 -1 29819
+D2
+~
+~
+0 -1 29821
+D3
+~
+~
+0 -1 29848
+S
+#29819
+On the lake of Blood~
+  The dark water laps hungrily at your boots as your vessel plows through it.
+A low, ominous rumbling can be heard from the deep and you have trouble
+keeping your footing due to the unruly waves that slap you back and forth on
+the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting your slightest mistake
+on this journey.
+~
+298 0 7
+D1
+~
+~
+0 -1 29820
+D2
+~
+~
+0 -1 29822
+D3
+~
+~
+0 -1 29818
+S
+#29820
+Soleki Jungle~
+  The river of blood drains away into a small lake here.  Strangely enough
+there doesn't seem to be any way for the water to drain away further south
+but the waterlevel doesn't appear to be rising to any extent.  There must be
+an outlet for the water somewhere below the surface...or perhaps the hungry
+and malicious land is being fed and this is how it gains its nourishment.
+You hear a low rumbling coming from the island every now and then, followed
+by a strangled high-pitched cry.  The thick, dark water laps hungrily at
+your feet as you stand on the shore pondering this.
+~
+298 0 3
+D0
+~
+~
+0 -1 29816
+D2
+~
+~
+0 -1 29823
+D3
+~
+~
+0 -1 29819
+S
+#29821
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 6
+D0
+~
+~
+0 -1 29818
+D1
+~
+~
+0 -1 29822
+D2
+~
+~
+0 -1 29832
+D3
+~
+~
+0 -1 29851
+S
+#29822
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 7
+D0
+~
+~
+0 -1 29819
+D1
+~
+~
+0 -1 29823
+D2
+~
+~
+0 -1 29842
+D3
+~
+~
+0 -1 29821
+S
+#29823
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 7
+D0
+~
+~
+0 -1 29820
+D2
+~
+~
+0 -1 29843
+D3
+~
+~
+0 -1 29822
+S
+#29824
+Jungle Path~
+  You are walking along an ensorcelled bone path that lies beneath your
+feet.  The foliage on either side has acquired a sinister look and almost
+seems to be reaching out for you, only being held at bay by the powerful
+magic keeping the path from being swallowed by the jungle.  The familiar
+squawking and chirping has died away, having been replaced by the ominous
+moaning sound of your boots grinding together crushed bones.  It's almost
+as if the spirits of the dead are trying to warn you of some great evil
+that lies ahead.
+~
+298 0 2
+D0
+~
+~
+0 -1 29825
+D3
+~
+~
+0 -1 29817
+S
+#29825
+Jungle Path~
+  You are walking along an ensorcelled bone path that lies beneath your
+feet.  Here and there along the way you can see small dark patches of dried
+blood that seem to be glowing faintly.  The familiar squawking and chirping
+has died away, having been replaced by the ominous moaning sound of your
+boots grinding together crushed bones.  It's almost as if the spirits of the
+dead are trying to warn you of some great evil that lies ahead.
+~
+298 0 2
+D1
+~
+~
+0 -1 29826
+D2
+~
+~
+0 -1 29824
+S
+#29826
+Jungle Path~
+  You are walking along an ensorcelled bone path that lies beneath your
+feet.  Here and there along the way you can see small dark patches of dried
+blood that seem to be glowing faintly.  The familiar squawking and chirping
+has died away, having been replaced by the ominous moaning sound of your
+boots grinding together crushed bones.  It's almost as if the spirits of the
+dead are trying to warn you of some great evil that lies ahead.  In the far
+distance to the north you can make out a gathering of several straw huts in a
+small clearing.
+~
+298 0 0
+D0
+~
+~
+0 -1 29827
+D3
+~
+~
+0 -1 29825
+S
+#29827
+Jungle Path~
+  You stand at the edge of a small clearing in the jungle.  In front of you
+lie several small straw huts that seem to form a vague semi-circle around a
+similar hut on stilts in the middle.  The size of the huts catches your
+attention, they're roughly half of what you'd expect to be comfortable for a
+fully grown human.  The dried patches of blood that lead to the south from
+here have grown into a large congealed puddle at your feet.
+~
+298 4 0
+D0
+~
+~
+0 -1 29838
+D1
+The passage east is blocked by a large branch.  It looks as if you might be able to
+move it enough to allow you to squeeze through.
+~
+branch~
+8 -1 29834
+D2
+~
+~
+0 -1 29826
+E
+puddle~
+Poking around in the muck you discover nothing of interest.
+~
+S
+#29828
+Soleki Jungle~
+  You wearily force your way through the thick foliage.  Thorny vines grasp at
+you and cling to your clothing and armor, leaving tiny scratches behind as
+you tear yourself from their grasp.  This green hell seems more and more bent
+on consuming you and the fatigue from resisting it's consistant pulling is
+quickly becoming almost unbearable.
+~
+298 0 0
+D1
+~
+~
+0 -1 29810
+D2
+~
+~
+0 -1 29829
+S
+#29829
+Soleki Jungle~
+  Thorny vines grasp at your legs, pulling you slightly downwards into the
+soft soil of the jungle floor.  The smell of rotting leaves and decaying
+bodies fills your already overworked nostrils, leaving you gasping for breath
+and clutching at your throat.  A large hedge with glistening sharp thorns
+blocks your way to the west.  In the distance to your east you can hear water
+running.
+~
+298 128 0
+D0
+~
+~
+0 -1 29828
+D1
+~
+~
+0 -1 29814
+D3
+~
+hedge~
+9 -1 29831
+E
+hedge~
+Looks like you might be able to crawl under it.
+~
+S
+#29830
+Secret Path~
+  The path twists and turns this way and that, leaving you bewildered and
+disoriented.  As you are about to turn back in dejection you come upon a
+wide crevasse that blocks your passage.  Looking down you see nothing but
+darkness.  The path continues on across the crevasse to your north, while
+going east will take you back to the hedge you crawled through to get
+here.  As you look across the crevasse you spot a faint shimmering in the
+air.
+~
+298 0 0
+D0
+~
+crevasse~
+10 -1 29833
+D2
+~
+~
+0 -1 29831
+S
+#29831
+Secret Path~
+    You stumble along a faded trail that's all but disappeared into the   
+undergrowth. Here and there you can see the faded signs of the passing of
+large animals.  The husks of dead trees with tear marks on them indicate 
+the size of the animals once using this trail must have been enormous.
+You can venture to the north or crawl back through the hedge which you came
+through.
+~
+298 0 0
+D0
+~
+~
+0 -1 29830
+D1
+~
+hedge~
+9 -1 29829
+S
+#29832
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you out
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 7
+D0
+~
+~
+0 -1 29821
+D1
+~
+~
+0 -1 29842
+D3
+~
+~
+0 -1 29853
+S
+#29833
+Secret Path~
+  You are standing in front of a wide crevasse that blocks your passage to
+the south.  To your north the path opens up into a wide valley that's
+littered with the bones of some dead animals as far as your eyes can see.
+The crevasse looks too deep and steep to climb down but as far as you can
+tell it should be possible to jump it with only a minimal risk.
+~
+298 0 0
+D0
+~
+~
+0 -1 29841
+D2
+~
+crevasse~
+10 -1 29830
+S
+#29834
+Jungle Path~
+  You are standing outside a small thatched hut at the outskirts of the
+village.  To your north and west you see similar huts.  The tools and other
+items you see around the village seem to be made to fit paws rather than
+hands.  The muted roars of several wyrds arguing can be heard coming from
+inside the hut to your north-west.  A large branch blocks your passage west.
+~
+298 0 2
+D0
+~
+~
+0 -1 29835
+D3
+~
+branch~
+8 -1 29827
+S
+#29835
+Wyrd Village~
+  You carefully make your way through the village of the savage wyrd clan.
+Small thatched straw huts surround you on all sides.  A slightly larger hut
+on stilts can be seen to your north-west.  Coming from inside some of the
+huts you hear muted roars of heated conversations.  The center of the
+village seems to be the strange hut on stilts, all the other huts are
+arranged in a crude semi-circle around it.
+~
+298 0 0
+D0
+~
+~
+0 -1 29836
+D2
+~
+~
+0 -1 29834
+D3
+~
+~
+0 -1 29838
+S
+#29836
+Wyrd Village~
+  You carefully make your way through the village of the savage wyrd
+clan.  Small thatched straw huts surround you on all sides.  A slightly
+larger hut on stilts can be seen to your west.  Coming from inside some
+of the huts you hear muted roars of heated conversations.  The center of
+the village seems to be the strange hut on stilts, all the other huts are
+arranged in a crude semi-circle around it.
+~
+298 0 0
+D2
+~
+~
+0 -1 29835
+D3
+~
+~
+0 -1 29837
+S
+#29837
+Underneath a hut on stilts~
+  You stand under the thatched hut that dominates the rest of the village.
+Looking up you see an open  trap door in the bottom of the hut high above you.
+It's out of reach for anyone without wings.  Looking down you see garbage and
+offal that's presumably been thrown down from the hut.  It's piled up into a
+heap below the trap door, but still not enough so you could reach it.  All
+around you are thatched straw huts arranged in a rough semi-circle around the
+stilt hut.  To your north the inhospitable jungle makes passage impossible.
+~
+298 0 0
+D1
+~
+~
+0 -1 29836
+D2
+~
+~
+0 -1 29838
+D3
+~
+~
+0 -1 29839
+S
+#29838
+Wyrd Village~
+  You carefully make your way through the village of the savage wyrd
+clan.  Small thatched straw huts surround you on all sides.  A slightly
+larger hut on stilts can be seen to your north.  You spy slight movement
+out of the corner of your eye and turn your head to find a blowgun sticking
+out of the side of one of the cottages.  A moment later several darts are
+fired at you.
+~
+298 65540 2
+D0
+~
+~
+0 -1 29837
+D1
+~
+~
+0 -1 29835
+D2
+~
+~
+0 -1 29827
+D3
+~
+~
+0 -1 29840
+S
+#29839
+Wyrd Village~
+  You carefully make your way through the village of the savage wyrd
+clan.  Small thatched straw huts surround you on all sides.  A slightly
+larger hut on stilts can be seen to your east.  Coming from inside some
+of the huts you hear muted roars of heated conversations.  The center of
+the village seems to be the strange hut on stilts, all the other huts are
+arranged in a crude semi-circle around it.
+~
+298 0 0
+D1
+~
+~
+0 -1 29837
+D2
+~
+~
+0 -1 29840
+S
+#29840
+Wyrd Village~
+  You carefully make your way through the village of the savage wyrd
+clan.  Small thatched straw huts surround you on all sides.  A slightly
+larger hut on stilts can be seen to your north-east.  Coming from inside some
+of the huts you hear muted roars of heated conversations.  The center of
+the village seems to be the strange hut on stilts, all the other huts are
+arranged in a crude semi-circle around it.
+~
+298 0 0
+D0
+~
+~
+0 -1 29839
+D1
+~
+~
+0 -1 29838
+S
+#29841
+Elephants' Graveyard~
+  You've stumbled into the legendary place where the largest and wisest
+elephants are rumoured to go to when they feel death approaching.  All
+around you the large clean-picked skeletons of elephants are scattered
+about haphazardly.  The value of the ivory gathered here would make a
+fine ransom for a king but the time required to collect it all together
+and the amount of men needed to carry it back would require a large
+expedition.
+~
+298 0 0
+D2
+~
+~
+0 -1 29833
+S
+#29842
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you out
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 7
+D0
+~
+~
+0 -1 29822
+D1
+~
+~
+0 -1 29843
+D3
+~
+~
+0 -1 29832
+S
+#29843
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you out
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 7
+D0
+~
+~
+0 -1 29823
+D1
+~
+~
+0 -1 29843
+D3
+~
+~
+0 -1 29842
+S
+#29844
+A temporary name~
+A temporary description
+~
+298 0 0
+D0
+~
+~
+0 -1 29843
+D3
+~
+~
+0 -1 29845
+S
+#29845
+A temporary name~
+A temporary description
+~
+298 0 0
+D1
+~
+~
+0 -1 29844
+D2
+~
+~
+0 -1 29846
+S
+#29846
+A temporary name~
+A temporary description
+~
+298 0 0
+D0
+~
+~
+0 -1 29845
+D2
+~
+~
+0 -1 29847
+S
+#29847
+A temporary name~
+A temporary description
+~
+298 0 0
+S
+#29848
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you out
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 7
+D1
+~
+~
+0 -1 29818
+D2
+~
+~
+0 -1 29851
+D3
+~
+~
+0 -1 29850
+S
+#29849
+Island of Skelos~
+  You stand on the sandy shores of the Island of Skelos.  The clouds above
+appear dark and menacing, reflecting the feeling of dread you've had ever
+since stepping on the island.  Skelos the Mad, once archmage of the city of
+Midgaard, now long dead and forgotten by most raised the island from the
+depths with the help of powerful elemental sorcery.  Here also are rumoured
+to be the ruins of the Well of Skelos.  It is said that in ages past Skelos
+imprisoned an extra-planar being within the well, feeding it the corpses of
+his enemies.
+~
+298 0 0
+D1
+~
+~
+0 -1 29848
+D2
+~
+~
+0 -1 29850
+S
+#29850
+Island of Skelos~
+  You stand on a small island in the jungle.  The sandy beach quickly gives
+way to dark and gaunt trees to your south.  Hanging down from those trees
+you notice several nasty thorny vines that tremble slightly in the vague
+breeze from the lake at your back.  Looking down you can just barely make
+out the faint traces of a path that leads southwards into the menacing
+wild growth in front of you.
+~
+298 0 3
+D0
+~
+~
+0 -1 29848
+D1
+~
+~
+0 -1 29851
+D2
+~
+~
+0 -1 29852
+S
+#29851
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 7
+D0
+~
+~
+0 -1 29848
+D1
+~
+~
+0 -1 29821
+D2
+~
+~
+0 -1 29853
+D3
+~
+~
+0 -1 29850
+S
+#29852
+Well of Skelos~
+  You stand in front of a partially-collapsed well that's almost completely
+covered with moss and vines.  The west side has caved in while the others
+tentatively cling to the sides.  A low rumbling noise can be heard coming
+from somewhere far down the well.  The faint path you've been following ends
+here and the vines and trees block any passage further or to either side.
+The eerie stillness, only broken by the low rumbling below, makes you shiver
+ever so slightly.
+~
+298 0 3
+D0
+~
+~
+0 -1 29850
+E
+well~
+You brush aside a few vines and find scrawlings on the well:
+
+A thousand thousand gifts of gold
+will bring you what within I hold
+beware the wrath, becalm the beast
+or find yourself it's midnight feast
+~
+S
+#29853
+On the lake of Blood~
+  The dark waters lap hungrily at your vessel as it just barely keeps you
+afloat.  A low, ominous rumbling can be heard from the deep and you have
+trouble keeping your footing due to the unruly waves that slap you back and
+forth on the surface like a leaf in the wind.  Looking down into the water you
+shudder at the dark shadows lurking there, awaiting you should you make the
+slightest mistake on this journey.
+~
+298 0 6
+D0
+~
+~
+0 -1 29851
+D1
+~
+~
+0 -1 29832
+S
+#29854
+Throne Room~
+  You stand in a vast hall that's completely covered in gold.  At the
+far end you see a large iron throne towering over the floor.  The air in
+here is dank and smelly, it's more than likely that you are the first
+living person to enter for decades.  The faded tapestries on the walls
+depict the exploits of Skelos when he was a young mage, fighting with the
+forces of Midgaard against the Zyca King.  Several chairs have been arranged
+in front of the throne.  On some of them you can see the skeletons of former
+visitors who came to seek their fortunes here.
+~
+298 0 0
+S
+#29855
+Chieftain's Hall~
+  You stand in the hall of the Wyrd Warmaster.  The walls are covered in
+strange, arcane symbols and here and there you can see the skulls of former
+victims that the Warmaster has consumed.  Each of them has a tiny hole in the
+front of the cranium.  A round hole in the floor serves as both waste disposal
+and the only entrance.
+~
+298 8 0
+D5
+~
+hole~
+10 -1 29837
+S
+#29899
+The end of the world~
+  You've come to the end of the world.  Nothing exists anymore.  All life
+has ceased and blahblah, god I hate these kludged rooms.
+~
+298 512 0
+S
+#0
+$~

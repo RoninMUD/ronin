@@ -1,0 +1,352 @@
+#14200
+scythe~
+A black, bloodied scythe~
+A large, black scythe sitting in a pool of blood~
+
+~
+5 65536 8193
+0 99 99 3
+0 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 999
+A
+18 99
+A
+2 18
+B
+964995244
+C
+9
+#14201
+key~
+A large key~
+The key to the first councilor's chamber.~
+~
+18 524288 1
+0 0 0 0
+1 1 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14202
+sleeves~
+Boundary Warden Sleeves~
+A worn pair of sleeves covered in mud~
+invalid~
+9 263168 257
+7 -1 -1 -1
+5 15000 1200
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+2 1
+A
+19 1
+B
+48
+#14203
+knife~
+A Boundary Warden Knife~
+A knife crafted for use by the Boundary Wardens~
+invalid~
+5 263168 1
+0 38 7 3
+15 1400 6000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#14204
+key~
+A large, bent key~
+The Gate Key to Hartland~
+~
+18 524288 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14205
+headband~
+The Councilor's Headband~
+The First Councilor of Hartland's Headband~
+invalid~
+9 1024 17
+5 0 0 0
+10 10 35000
+45
+X
+~
+1024 0 0
+M
+You feel as if you can rule the world, as the headband graces your forehead.~
+$n feels like he can rule the world, as the headband graves $s forehead.~
+~
+~
+A
+17 12
+A
+19 1
+A
+18 2
+#14206
+heart ring land~
+Heart of the Land~
+A heart shaped ring.~
+~
+9 1024 3
+13 0 0 0
+10 10 50000
+34
+X
+~
+0 0 0
+M
+You feel a ray of sunshine upon your face, and feel the warmth~
+$n feels a ray of sunshine on $s face, and seems to feel a little warmer.~
+~
+~
+A
+19 2
+A
+12 30
+A
+53 9
+#14207
+bounty ring land~
+Bounty of the Land~
+A rose shaped ring.~
+~
+9 1024 3
+13 0 0 0
+10 10 50000
+23
+X
+~
+0 0 0
+M
+The ground beneath your feet suddenly turns to grass, and flowers sprout around your ankles.~
+The ground beneath $n's feet turns to grass, and flowers sprout around $s ankles.~
+~
+~
+A
+19 2
+A
+13 30
+A
+52 9
+B
+32768
+#14208
+plate councilors~
+Councilor's Plate~
+A large black piece of Platemail with the Hartland Crest~
+~
+9 1024 9
+38 0 0 0
+10 10 75000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+A
+9 15
+#14209
+pouch small~
+A small concealable pouch~
+A small pouch sits on the ground almost blending into the background~
+null~
+15 0 1
+20 0 0 0
+20 10 4
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14210
+knife~
+A large throwing knife~
+A large knife sits on the ground~
+$V crys out in pain as the knife hits $m~
+7 0 49153
+20 6 -1 -1
+1 70 70
+100
+X
+$n stumbles and drops the knife and $e screams as it impales $m foot~
+0 0 0
+M
+~
+~
+~
+~
+#14211
+mace bladed six~
+A Six Bladed Battle Mace~
+A large, six bladed mace with a oak handle~
+$V screams as the blades embedded themselves in $m head~
+5 181707776 8193
+5 8 6 12
+32 10 89000
+10
+E
+Mace~
+A large mace with six embedded blades
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+13 50
+A
+19 2
+A
+18 2
+B
+32
+#14212
+belt warden~
+Boundary Warden Belt~
+A large belt with many loops and pouches~
+~
+9 0 2049
+18 -1 -1 -1
+10 10 8754
+45
+E
+belt~
+The belt has many loops and pouches full of herbs.
+~
+X
+~
+1024 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+A
+17 5
+B
+32768
+#14213
+pendant rose~
+A Rose Pendant~
+A rose covered pendant~
+~
+1 134348800 65537
+0 0 -1 0
+10 3000 52973
+38
+E
+pendant~
+A large rose colored diamond sits in a cross pendant.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+53 7
+A
+52 7
+A
+19 3
+B
+32768
+#14214
+shawl~
+Emmas Shawl~
+A long elegant shawl made of the finest silk~
+~
+9 134217761 1025
+9 -1 -1 -1
+10 10 28792
+53
+E
+shawl~
+The scarf has "I love you Emma" sewn into it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 30
+A
+13 30
+A
+18 2
+#0
+$~

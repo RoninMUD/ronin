@@ -1,0 +1,107 @@
+#8401
+aldor warlock~
+Aldor~
+The evil Warlock Aldor is here summoning evil.
+~
+Aldor is an evil looking man. Lets not make him angry.
+~
+131083 671088768 -300 S
+30 1 0 50d6+2500 3d6+25
+30000 250000
+8 8 1
+#8402
+wyvern small~
+A Small Wyvern~
+A Small Wyvern is flying here.
+~
+The wyvern is very small, he should not cause you to much trouble.
+~
+72 50331656 0 S
+10 10 0 6d8+80 2d6+2
+300 9000
+8 8 0
+#8403
+spirit edrick guard~
+The Spirit~
+The Spirit of Edrick's Guard is here haunting the Castle.
+~
+        This spirit was once a mighty guard for the great king Edrick, 
+but now it haunts the halls of this old castle.
+~
+232 8 0 S
+30 10 0 1d100+900 3d6+3
+10000 100000
+8 8 0
+#8404
+old cook~
+The Old Cook~
+An Old Cook is standing here.
+~
+        She once cooked for the great Edrick, but now she is the slave 
+for the evil Aldor.
+~
+131144 671088640 300 S
+30 3 0 3d100+9000 6d4+6
+10000 350000
+8 8 2
+#8405
+rat~
+A Rat~
+A rat is here running about the floor.
+~
+The rat is a small brown rodent, kinda cute actually.
+~
+72 0 0 S
+10 10 0 6d8+80 2d6+2
+300 9000
+8 8 0
+#8406
+dragon~
+The Flying Dragon~
+A Flying Dragon is here waiting for is master.
+~
+        This mighty dragon is the pet of the evil Aldor, it is very 
+strong and powerfull.
+~
+74 822083712 1000 S
+30 1 0 7d40+4000 10d6+20
+40000 300000
+8 8 0
+#8407
+knight animated~
+The Animated Knight~
+A Animated Knight is here protecting Aldor.
+~
+        You look at the knight to notice it is an empty suit of armor, 
+Aldor is truely powerfull to create such a beast.
+~
+72 0 -500 S
+30 5 0 3d20+500 2d8+2
+500 65000
+8 8 0
+#8408
+prisoner~
+The Prisoner~
+A Prisoner of Aldor is standing here.
+~
+        This man was once a loyal follower of Edrick, now he is confined 
+to a cell by the evil Aldor.
+~
+74 0 0 S
+10 10 0 10d10+100 2d6+4
+3000 9000
+8 8 1
+#8409
+priestess~
+The Priestess of Aldor~
+A Priestess is here makeing offerings for Aldor.
+~
+        This young girl was once a follower of Edrick, but now Aldor has 
+her makeing offerings to him as payback for her life.
+~
+74 805306496 0 S
+23 3 -32768 9d10+1000 2d6+10
+1000 95000
+8 8 2
+#0
+$~

@@ -1,0 +1,713 @@
+#30000
+Observatory~
+  This small hexagonal chamber contains several mirrors that are placed in 
+various parts of the Labyrinth of Skelos.  Skelos the Mad used it to observe 
+the mayhem caused by his experiments in there.  It was from here also that 
+he sent monsters into the labyrinth to slay the unwary.  A glowing portal in 
+the middle of the room presumably takes you down into the labyrinth. 
+~
+300 544 0
+E
+window~
+30032
+~
+S
+#30001
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D1
+~
+~
+0 -1 30002
+D2
+~
+door~
+1 -1 30006
+S
+#30002
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D1
+~
+door~
+1 -1 30003
+D2
+~
+door~
+1 -1 30007
+D3
+~
+door~
+0 -1 30001
+S
+#30003
+The Labyrinth~
+  You are in a maze of twisting passageways. The walls seem to shift slightly
+around you even as you walk by.  You notice a sturdy iron gate to the north.
+~
+300 41 0
+D0
+~
+gate~
+1 -1 30026
+D1
+~
+door~
+1 -1 30004
+D2
+~
+door~
+1 -1 30008
+D3
+~
+door~
+1 -1 30002
+S
+#30004
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D1
+~
+door~
+1 -1 30005
+D2
+~
+door~
+1 -1 30009
+D3
+~
+door~
+1 -1 30003
+S
+#30005
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D2
+~
+~
+0 -1 30010
+D3
+~
+~
+0 -1 30004
+S
+#30006
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 169 0
+D0
+~
+door~
+1 -1 30001
+D1
+~
+door~
+1 -1 30007
+D2
+~
+door~
+1 -1 30011
+S
+#30007
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30002
+D1
+~
+door~
+1 -1 30008
+D2
+~
+door~
+1 -1 30012
+D3
+~
+door~
+0 -1 30006
+S
+#30008
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30003
+D1
+~
+door~
+1 -1 30009
+D2
+~
+door~
+1 -1 30013
+D3
+~
+door~
+0 -1 30007
+S
+#30009
+The Labyrinth~
+  You are in a maze of twisting passageways.  Around you the walls seem
+to shift slightly even as you look at them.  The walls have no distinguishing
+features and reveal no clue as to where you are.  You see a small tunnel that
+leads down from here.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30004
+D1
+~
+door~
+1 -1 30010
+D2
+~
+door~
+1 -1 30014
+D3
+~
+door~
+1 -1 30008
+D5
+~
+tunnel~
+9 -1 30017
+S
+#30010
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 169 0
+D0
+~
+door~
+1 -1 30005
+D2
+~
+door~
+1 -1 30015
+D3
+~
+door~
+0 -1 30009
+S
+#30011
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30006
+D1
+~
+door~
+1 -1 30012
+D2
+~
+door~
+1 -1 30016
+D3
+~
+door~
+1 -1 30015
+S
+#30012
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30007
+D1
+~
+~
+0 -1 30013
+D2
+~
+door~
+1 -1 30017
+D3
+~
+door~
+0 -1 30011
+S
+#30013
+The White Room~
+  You find yourself in a white room in the middle of the labyrinth. Cramped
+passageways lead in all direction and you hear the magnified echoes of 
+footsteps as you turn your head this way and that.  The walls here are kept
+a shiny white by some magical force which permeates the air in here, you
+feel a bit unsure whether mortal magic could work near such a powerful
+source of theurgy.
+~
+300 41 0
+D0
+~
+~
+0 -1 30008
+D1
+~
+~
+0 -1 30014
+D2
+~
+~
+0 -1 30018
+D3
+~
+~
+0 -1 30012
+S
+#30014
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 169 0
+D0
+~
+door~
+1 -1 30009
+D1
+~
+door~
+1 -1 30015
+D2
+~
+door~
+1 -1 30019
+D3
+~
+~
+0 -1 30013
+S
+#30015
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30010
+D1
+~
+door~
+1 -1 30011
+D2
+~
+door~
+1 -1 30020
+D3
+~
+door~
+0 -1 30014
+S
+#30016
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 169 0
+D0
+~
+door~
+1 -1 30011
+D1
+~
+door~
+1 -1 30017
+D2
+~
+door~
+1 -1 30021
+S
+#30017
+The Labyrinth~
+  You are in a maze of twisting passageways.  Around you the walls seem
+to shift slightly even as you look at them.  The walls have no distinguishing
+features and reveal no clue as to where you are.  You see a small tunnel that
+leads down from here.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30012
+D1
+~
+door~
+1 -1 30018
+D2
+~
+door~
+1 -1 30022
+D3
+~
+door~
+0 -1 30016
+D5
+~
+tunnel~
+9 -1 30009
+S
+#30018
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+~
+0 -1 30013
+D1
+~
+door~
+1 -1 30019
+D2
+~
+door~
+1 -1 30023
+D3
+~
+door~
+0 -1 30017
+S
+#30019
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30014
+D1
+~
+door~
+1 -1 30020
+D2
+~
+door~
+1 -1 30024
+D3
+~
+door~
+0 -1 30018
+S
+#30020
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30015
+D2
+~
+door~
+1 -1 30025
+D3
+~
+door~
+1 -1 30019
+S
+#30021
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30016
+D1
+~
+~
+0 -1 30022
+S
+#30022
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30017
+D1
+~
+door~
+1 -1 30023
+D3
+~
+door~
+0 -1 30021
+S
+#30023
+The Labyrinth~
+  You are in a maze of twisting passageways.  Around you the walls seem to
+shift slightly even as you look at them.  The walls have no distinguishing
+features and reveal no clue as to where you are.  You notice a sturdy iron
+gate to the south.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30018
+D1
+~
+door~
+1 -1 30024
+D2
+~
+gate~
+1 -1 30028
+D3
+~
+door~
+1 -1 30022
+S
+#30024
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30019
+D1
+~
+door~
+1 -1 30025
+D3
+~
+door~
+1 -1 30023
+S
+#30025
+The Labyrinth~
+  You are in a maze of twisting passageways. Around you the walls seem to 
+shift slightly even as you look at them.  The walls have no distinguishing 
+features and reveal no clue as to where you are.
+~
+300 41 0
+D0
+~
+door~
+1 -1 30020
+D3
+~
+door~
+0 -1 30024
+S
+#30026
+Northern entrance of the Labyrinth~
+  You have reached the northern part of the dangerous labyrinth.  Many who
+enter here do not return.  You can smell the musty odor of old bones in here 
+and see some scrawling on the wall next to you.
+~
+300 41 0
+D1
+~
+~
+0 -1 30027
+D2
+~
+gate~
+1 -1 30003
+E
+scrawling~
+Written here are the words 'Bilbo was here'~
+S
+#30027
+The Northern Passage~
+  The passage makes a sharp turn north-west here.  The smell of death
+lingers in the air.  You hear an occasional creak as you step on some old
+bone or other, shattering it.  The strange feeling of the walls moving is
+still with you, they seem to be ushering you towards the west.
+~
+300 41 0
+D2
+~
+~
+0 -1 30030
+D3
+~
+~
+0 -1 30026
+S
+#30028
+Southern entrance of the Labyrinth~
+  You have reached the southern part of the notorious labyrinth.  Many who
+enter here do not return.  You can smell the musty odor of old bones in here
+and see some scrawling on the wall next to you.  Pinned against the 
+southern wall are three skeletons dressed in some faded gaudy body suits that
+have rotted partially away.  Their deaths were most probably caused by the
+rusty spears that stick out of the rib cage of each skeleton.
+~
+300 41 0
+D0
+~
+gate~
+1 -1 30023
+D1
+~
+~
+0 -1 30029
+E
+skeleton~
+There's a note pinned to it!  It reads:
+'Staying alive?'
+~
+S
+#30029
+The Southern Passage~
+  The passage makes a sharp turn south-west here.  The smell of death
+lingers in the air.  You hear an occasional creak as you step on some
+old bone or other, shattering it.  The strange feeling of the walls
+moving is still with you, they seem to be ushering you towards the
+west.
+~
+300 41 0
+D0
+~
+~
+0 -1 30030
+D3
+~
+~
+0 -1 30028
+S
+#30030
+Passage Junction~
+  You stand in a damp and smelly narrow passage.  The walls are painted
+with strange runes that resemble nothing you've ever encountered before.
+A feeling of nausea washes over you as the room seems to shift ever so
+slightly. Your vision must be failing you, the walls of the room look
+as if they're moving whenever you're not looking directly at them.
+~
+300 41 0
+D0
+~
+~
+0 -1 30027
+D1
+~
+~
+0 -1 30031
+D2
+~
+~
+0 -1 30029
+S
+#30031
+Entrance to the Labyrinth of Skelos~
+  You stand in a small chamber that literally reeks with powerful
+magic. Directly ahead of you can be seen a narrow passage that
+leads into the darkness.  Looking around you see several half-burned
+spell books lying about in disarray. 
+~
+300 41 0
+D3
+~
+~
+0 -1 30030
+E
+spellbook~
+You see charred pages half-full of magical incantations.  None of the
+spell books contain a whole spell that could be salvaged.
+~
+S
+#30032
+Shimmering Vortex~
+  You step into a large octagonal chamber.  The walls here are covered
+with runes that glow faintly in the light from your torches.  A shimmering
+blue portal in the middle of the room seems to beckon you to enter it,
+etched into the floor all around it are strange, faintly glowing symbols.
+~
+300 64 0
+D2
+~
+~
+0 -1 3914
+E
+portal~
+It's a shimmering curtain of blue flames that dances back and forth.
+~
+E
+symbols~
+You recognize the arcane writings of the ancient Magi.  A rough translation
+would sound something like 'Beware the fool who fears nothing, let him enter
+the Labyrinth of the mad wizard Skelos and suffer eternal torment.'
+~
+S
+#30099
+Battle station #57~
+  You are in a room.  It's a small room.  Very small.
+In fact it's so small it defies description.  So why am I bothering?
+~
+300 512 0
+S
+#0
+$~

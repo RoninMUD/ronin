@@ -1,0 +1,2522 @@
+#1800
+key chain keychain warden~
+The Warden's Keychain~
+A chain with a bunch of keys on it is here.~
+~
+18 524288 1
+0 0 0 0
+0 1 0
+100
+E
+key chain keychain warden~
+There are seven keys on this keychain, each one with a label on it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1801
+bench~
+Obervon City Bench~
+Obervon City Bench~
+~
+12 134217728 0
+0 0 0 0
+200 10 10
+100
+E
+bench~
+The craftsmanship on this bench is very simplistic, yet very elegant.~
+X
+~
+120 0 0
+M
+~
+~
+~
+~
+#1802
+post light~
+City Light Post~
+Light Post~
+~
+12 134217728 0
+0 0 0 0
+1500 10 10
+100
+E
+light~
+Atop the beautiful metal pole there sits some sort of lantern.  The
+glass on the outside of the lantern is an opaque color.  Although
+it clearly has been cleaned on at least a semi-daily bases, it still
+remains partly stained from years of smoke and fire.~
+E
+post~
+Atop the beautiful metal pole there sits some sort of lantern.  The
+glass on the outside of the lantern is an opaque color.  Although
+it clearly has been cleaned on at least a semi-daily bases, it still
+remains partly stained from years of smoke and fire.~
+X
+~
+120 0 0
+M
+~
+~
+~
+~
+#1803
+garden~
+City Garden~
+City Garden~
+~
+12 134217728 0
+0 0 0 0
+350 10 10
+100
+E
+garden~
+The garden contains a myriad of different flowers and plants of many 
+varying colors, shapes, and sizes.  They appear to be unaffected by
+the seasons, and flourish along with the rest of the town's plant life.~
+X
+~
+120 0 0
+M
+~
+~
+~
+~
+#1804
+pews church~
+Church Pews~
+Church Pews~
+~
+12 134217728 0
+0 0 0 0
+300 10 10
+100
+E
+pews church~
+These straight wooden pews have no real distinguishable features.
+They are slightly warn from years of being sat on, they obviously
+have not been very well kept.~
+X
+~
+120 0 0
+M
+~
+~
+~
+~
+#1805
+altar polo fay~
+Altar of Polo Fay~
+Altar of Polo Fay~
+~
+12 134217728 0
+0 0 0 0
+900 10 10
+100
+E
+altar polo fay~
+The altar consists of several hundred candles.  Many of them are lit,
+however, there does not appear to be any sort of pattern discerning
+their order.  Above the candles there are twenty little figures, all
+of them placed across a giant map of the world.  The figures lie within 
+the town of Obervon, the castle which follows it, a few in the city of
+Ryujin, and finally a few lie deep within the Tarion Desert.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1806
+baros baros's bed~
+Baros's Bed~
+Baros's Bed is standing in the corner.~
+~
+12 134217728 0
+0 0 0 0
+500 10 10
+100
+E
+baros bed~
+This bed is hard as a rock.  Obviously this specific individual either
+demands firmness, or doesn't make enough to afford a decent mattress.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1807
+table wooden~
+A wooden table~
+A wooden table is standing here.~
+~
+12 134217728 0
+0 0 0 0
+40 10 10
+100
+E
+wooden table~
+This is a standard wooden table, the craftsmanship is nothing above
+average, however it is perfectly adequate to perform the job it needs to.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1808
+menu~
+Menu~
+A menu is posted on the wall.~
+~
+12 134217728 0
+0 0 0 0
+5 10 10
+100
+E
+menu~
+*****Welcome to Polo Fay's Restaurant*****
++                                        +
+We have a fine selection of exemplary food
+items prepared for even the pickiest of
+eaters.  We hope you enjoy your meal and
+have an enjoyable evening.
+-                                        -
+      ******************************
+      *         Food Items         *
+      ******************************
++                                        +
+Fish & Chips...............169 coins
+Prime Rib..................212 coins
+Bacon Cheddar Cheeseburger.153 coins
+Chicken & Waffles!.........169 coins
+-                                        -
+Remember, all these meals are designed
+to go perfectly with a................
++                                        +
+Polo Ale....................47 coins
+-                                        -
+Thank you and I hope to see you again.
+Chef Van Micharrd Orelle
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1809
+fish chips~
+Fish & Chips~
+Some delicious fish and chips are here, awaiting consumption!~
+~
+19 134217728 1
+25 0 0 0
+1 169 10
+100
+E
+fish chips~
+These are perfectly fried.  The fish as a crispy, brown exterior.
+The chips are thick cut and are doused with malt vinegar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1810
+rib prime~
+Prime Rib~
+Some tasty looking prime rib is lying here.~
+~
+19 134217728 1
+30 0 0 0
+1 212 10
+100
+E
+rib prime~
+This slice of prime rib is cooked to medium rare.  The center is 
+still perfectly pink, and the seasoning is done to perfection.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1811
+cheeseburger burger cheddar bacon~
+Bacon Cheddar Cheeseburger~
+A bacon and cheddar cheeseburger has been cast aside here.~
+~
+19 134217728 1
+25 0 0 0
+1 153 10
+100
+E
+cheeseburger burger bacon cheddar~
+This mouthwatering burger is extremely juicy.  This burger is
+basic, and simple.  Leaving very little room for error, but
+then again it leaves very little room for improvement as well.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1812
+chicken waffles plate~
+Obervon Royal Robes~
+A plateful of chicken and waffles is here.~
+~
+19 134217728 1
+28 0 0 0
+1 169 10
+100
+E
+chicken waffles~
+The chicken is a crispy golden brown.  The waffles have a nice
+firm feeling, however they are not hard.  This is topped with
+powdered sugar and maple syrup.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1813
+ale polo~
+Polo Ale~
+An ale is lying here, how can it stand resisted?~
+~
+17 134217728 1
+20 20 3 0
+1 47 10
+100
+E
+polo ale~
+This is a mild ale, and has a dark tinted hue to it.  It is famous
+in this region for it's unique malty flavor and nutty after-taste.
+The method for it's brewing are a secret and known only to a select
+few.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1814
+roster guild wall~
+Guild Roster~
+A guild roster is posted on the wall.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+guild roster~
+There are no names on this list, in fact, it obviously is just here
+for show.  Underneath the blank list there is a small note that reads:
+
+"Dear fellow guild members,
+     This roster serves as a reminder of the only real rule of our
+little clan.  Be discreet, we do not know you, and you have no knowledge
+of the details of this organization.  Those of you reading this message
+that are not part of the Mercenary's Guild may disregard all of the above.
+                                                   -Prax and Jabon"
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1815
+locker~
+A Locker~
+A locker is standing here.~
+~
+15 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+locker~
+This locker smells awful.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1816
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Milgram, a brilliant man who was tragically struck down by a bolt
+of lightning.  His death shocked us all."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1817
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Pavlov, one of the world's leading animal tamers.  Ironically he
+was mauled to death by a rabid, stray dog.  May he rest in pieces."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1818
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Watson.  His massive Musophobia and Leukophobia lead to his sudden but
+inevitable death where upon leaving his house he suffered a massive heart attack
+when a white rabbit came across his path.  Hop softly to the afterlife."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1819
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Zimbardo, who finally created his ideal prison.  However, only six days
+after its construction, he was maimed to death during a prison uprising.  We hope you
+don't feel too confined down there."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1820
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Bandura, famous for not only the crafting of several toys, but his fun and
+interactive demonstrations on how to use them.  Unfortunately he was assassinated by his
+assistant, Bobo, who got tired of being the volunteer in Bandura's demonstrations.  At
+least he doesn't have to put up with Bobo's complaining anymore..."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1821
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Asch, who was a nice man.  Until one day he got caught up in the wrong crowd,
+and after a series of bad choices, him and his crew drowned in a tragic boating accident.
+May he go with the flow."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1822
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Harlow, when he went out to gather water one day he fell down the well.  After
+months of isolation he began refusing sustenance, and eventually starved to death.  Burying
+him alone seems both cruel and poetic."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1823
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Rosenhan, a famous escape artist known for his edgy and dangerous attempts.  
+Unfortunately, during his last attempt to escape a high security prison, he not only
+failed to escape...but could not convince the guard's the he was, in fact, not a prisoner.
+Only to late do we now realize who he really was.  May he escape his coffin, but not as a
+zombie or anything weird like that..."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1824
+headstone head stone~
+Headstone~
+A headstone is standing here.~
+~
+12 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+"Here lies Hofling, a great doctor and physician.  Unfortunately he fell deathly ill, and
+in an attempt to treat himself, he ordered his nurse to give him too much medicine and 
+overdosed.  I guess his nurses listen all too well."~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1825
+coffin stone~
+Stone Coffin~
+A stone coffin is lying here.~
+~
+15 134217728 0
+0 0 0 0
+10 10 10
+100
+E
+stone coffin~
+This heavy stone coffin looks like it hasn't been opened in ages.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1826
+helm mithril~
+A Mithril Helm~
+A mithril helm is lying on the ground.~
+~
+9 134217728 17
+10 -1 -1 -1
+8 3000000 10000
+15
+E
+helm mithril~
+The workmanship on this helm is masterful.  No matter much time is spent examining it,
+there is not a single flaw to be found.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+#1827
+heraldric shield~
+A Heraldric Shield~
+A heraldric shield is lying here.~
+~
+9 210821120 513
+20 -1 -1 -1
+16 10000000 25000
+10
+E
+shield heraldric~
+This valuable shield carries two seperate symbols on it.  The first symbol located in the upper
+left corner of the shield is that of the city of Obervon.  The second symbol, located in the
+bottom right corner of the shield is that of the crafter.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+33 10
+#1828
+zweihander valyrian sword~
+Valyrian Zweihander~
+A Valyrian zweihander is lying on the ground here.~
+~
+26 177266688 8193
+0 10 4 3
+7 7500000 15500
+10
+E
+sword valyrian zweihander~
+Although not true Valyrian Steel, this weapon is a stunning replica.  The crafter obviously knew
+exactly what he was doing, and forged this masterpiece with the utmost care and detail.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1829
+katzbalger damantine~
+An Adamantine Katzbalger~
+An adamantine katzbalger is lying here.~
+~
+5 134217728 8193
+0 8 4 14
+8 5000000 12500
+10
+E
+katzbalger adamantine~
+This weapon was designed for well-trained up front combat.  Only the best trained close-quarter
+combatants could wield this weapon effectively.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1830
+kalis orichalum~
+An Orichalum Kalis~
+An orichalum kalis is lying on the floor here.~
+~
+5 242270208 8193
+3 11 3 9
+5 8000000 30000
+10
+E
+kalis orichalum~
+The value on this weapon is beyond that of any other.  This weapon is designed to be used nearly
+any wielder.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1831
+spear winged~
+A Winged Spear~
+A winged spear is sticking out of the ground.~
+~
+26 244375552 8193
+304 18 2 5
+18 9000000 40000
+10
+E
+spear winged~
+This spear is characterized by its broad spear head, in the hands of the right wielder this weapon 
+is both deadly and precise in its striking.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1832
+mace obervon~
+Obervon Mace~
+A mace with the Obervon emblem is cast aside here.~
+null~
+5 177217536 8193
+0 4 4 6
+10 1500 1000
+20
+E
+mace obervon~
+This mace is simplistic in its designed.  The only real distinguishing feature is the Obervon mark
+at the base of the handle.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 8
+#1833
+dagger obervon~
+Obervon Dagger~
+A well crafted dagger bearing the Obervon symbol is lying here.~
+~
+5 207634432 8193
+0 5 4 9
+4 12000 4000
+12
+E
+dagger obervon~
+This weapon is designed to be easily concealed, and quick to be drawn.  The Obervon mark can be at
+the base of the blade.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 7
+A
+18 7
+A
+28 10
+#1834
+longsword obervon~
+Obervon Longsword~
+A longsword of Obervon craftsmanship has been set aside here.~
+~
+5 142663680 8193
+0 5 4 3
+12 17500 4000
+20
+E
+longsword long sword obervon~
+The craftsmanship on this weapon is about average.  The Obervon mark cn be found at the base of the
+blade.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 10
+A
+2 2
+#1835
+platemail plate mail obervon~
+Obervon Platemail~
+A platemail with the Obervon crest is here.~
+~
+9 168861696 9
+14 -1 -1 -1
+25 20000 14500
+25
+E
+platemail plate mail obervon~
+This set of platemail is designed for maximum protection, but in a cost efficient manner.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+5 2
+#1836
+shield obervon~
+Shield of Obervon~
+A shield of Obervon is set aside here.~
+~
+9 134217728 513
+15 -1 -1 -1
+20 10000 5000
+20
+E
+shield obervon~
+This medium sized shield is pretty standard.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+33 10
+A
+2 1
+#1837
+garments fay polo priestly priest~
+Polo Fay's Priestly Garments~
+One of Polo Fay's preist garments is lying here.~
+~
+9 216018944 9
+6 -1 -1 -1
+2 10000 5000
+20
+E
+garments fay polo priestly priest~
+This robes are dyed half purple, and the other half green.  The symbol on it is chaotic and hard to
+make sense of.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 2
+A
+4 2
+A
+12 10
+#1838
+knife broken~
+Broken Knife~
+A broken knife has been discarded here.~
+~
+5 259125248 8193
+0 7 7 9
+10 10 10
+80
+E
+knife broken~
+At one point in time this must have been a beautiful piece of craftsmanship.  If it could only be
+reassembled, it may again be a magnificent piece of work.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 15
+A
+18 15
+#1839
+knife chef master chefs~
+Master Chef's Knife~
+The knife of a master chef is sitting here.~
+~
+5 250662912 8193
+3 12 2 9
+25 250000 90000
+100
+E
+knife chef master chefs~
+This thing is a piece of art.  Whoever came up with its design obviously knew exactly what they were
+doing.~
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+18 5
+A
+45 2
+#1840
+instructions perfect knife~
+Instructions for the perfect knife~
+The instructions for a perfect knife are here.~
+~
+32 134217728 1
+0 0 0 0
+1 500000 1000000
+20
+E
+instructions perfect knife~
+These instructions are very well detailed, although it would take some great craftsmanship and a lot of
+luck to create a perfect knife out of it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1841
+knife cook~
+A cook's knife~
+A cook's knife is lying here.~
+~
+5 207638528 8193
+0 4 4 9
+12 40000 9000
+20
+E
+knife cook~
+This is pretty standard cook's knife.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+2 4
+#1842
+parchment bile soaked bilesoaked scrap~
+A bile-soaked scrap of parchment~
+A bile-soaked scrap of parchment is here, being all moist and such.~
+~
+32 134217728 1
+1845 1844 1844 1844
+2 800000 750000
+20
+E
+parchment scrap bile soaked~
+Ewwwwwwwwww~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1843
+parchment bile soaked bilesoaked scrap~
+A bile-soaked scrap of parchment~
+A bile-soaked scrap of parchment is here, being all moist and such.~
+~
+32 134217728 1
+1846 1844 1844 1844
+2 800000 750000
+20
+E
+parchment scrap bile soaked~
+Ewwwwwwwwww...~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1844
+head syszivexkeya~
+A head from Syszivexkeya~
+A head of some hydra with a ridiculous name has been tossed here.~
+~
+12 134742016 1
+0 0 0 0
+10 10 10
+80
+E
+head hydra syszivexkeya~
+This is an ugly head from one ugly hydra.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1845
+mask syszivexkeya~
+Mask of Syszivexkeya~
+The mask with three heads is lying here.~
+~
+9 265338880 17
+8 -1 -1 -1
+12 2500000 100000
+100
+E
+mask syszivexkeya~
+This is the work of perfect craftsmanship.  The bones from the hydras skull were properly bleached and the
+hide was properly tanned.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+13 10
+A
+52 15
+#1846
+mask syszivexkeya~
+Mask of Syszivexkeya~
+A mask with three heads is lying here.~
+~
+9 265338880 17
+12 -1 -1 -1
+10 3000000 250000
+100
+E
+mask syszivexkeya~
+The bones were not treated correctly, which although provides greater protection, also means they will slowly
+break down.  With no bones to provide a stable backing, the hide will slowly deteriorate.~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+13 20
+A
+52 25
+T
+7500
+#1847
+hide syszivexkeya unnecessarykeyword~
+Hide of Syszivexkeya~
+The awesome hide of some mythical beast is lying here.~
+~
+9 134218049 1065
+21 -1 -1 -1
+40 10000000 100000
+9
+E
+hide syszivexkeya~
+This hide seems to have a wide variety of uses.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+A
+52 20
+#1848
+paw beast fur furry~
+Fur Beast's Paw~
+The paw of some furry animal is lying here.~
+~
+9 168861696 1
+5 -1 -1 -1
+5 900000 10000
+19
+E
+paw beast fur furry~
+These gloves are deadly, strong, and durable.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+2 2
+A
+19 2
+#1849
+manual hair covered~
+A hair covered manual~
+A manual covered in hair is lying here.
+~
+~
+32 134217728 1
+0 0 0 0
+4 2000000 500000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1850
+mane beast ferocious fur~
+Fur Beast's Mane~
+The mane of some ferocious beast is lying here.~
+~
+9 134217792 1025
+26 -1 -1 -1
+27 500000 55000
+100
+E
+mane beast ferocious fur~
+The actual hide and fur from the beast provide quite a bit of protection verse slashing and piercing weapons,
+however it is the salamander skin underneath that provides the majority of the protection against other forms
+of attack.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 2
+A
+13 10
+#1851
+spaulders battleworn battle worn~
+Battle-worn Spaulders~
+Some heavily worn spaulders of battle are sitting here.~
+~
+9 232841280 257
+18 -1 -1 -1
+4 500000 50000
+12
+E
+spaulders battle worn battleworn~
+These spaulders have been tested through countless battles, and wars.  Even so, they are more than capable to
+stay off an attack.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#1852
+manuscript pagoda pagodian warrior~
+Pagodian Manuscript~
+The manuscript of some pagoda warrior is lying here.~
+~
+32 134742016 1
+0 0 0 0
+4 100000 1000
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1853
+yoroi bushido armor battle~
+Yoroi~
+Some battle ready bushido armor is lying here.~
+~
+9 266399744 9
+20 -1 -1 -1
+20 1000000 100000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 5
+A
+52 10
+#1854
+hood cobra exalted sultan~
+A Cobra's Hood~
+The hood from some exalted cobra is gathering dust here.~
+~
+9 233844736 1025
+5 -1 -1 -1
+10 250000 10000
+18
+E
+hood cobra exalted sultan~
+This mantle does not provide much intelligence.  However, it is well fitted, and in some odd way provides
+a sense of warmth, and wisdom.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 5
+A
+53 2
+A
+4 2
+#1855
+list grocery redigested~
+A redigested grocery list~
+A disgusting list of groceries is here.
+~
+~
+32 134217728 1
+0 0 0 0
+10 10 10
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1856
+cobra cobraskin skin belt~
+Cobra-skin Belt~
+A belt made from cobra skin is lying here.~
+~
+9 136376320 2049
+8 -1 -1 -1
+2 800000 80000
+100
+E
+cobra cobraskin skin belt~
+This belt was definitely created for the best of casters, while still offering great protection.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+53 4
+A
+52 5
+#1857
+ink bottle~
+A bottle of ink~
+A bottle filled with ink is lying here.~
+~
+10 134217728 1
+40 140 33 27
+1 10000 100000
+20
+E
+ink bottle~
+This is a basic bottle of black ink for tattoing.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1858
+sketchbook sketch book artist artists~
+An artists sketchbook~
+The sketchbook from some artist is sitting here.
+~
+~
+32 134217728 1
+0 0 0 0
+10 10 10
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1859
+tattoo jalpurian jal purian pur~
+A Jal-Purian Tattoo~
+A tattoo design is lying on the ground here.~
+~
+9 136327238 257
+0 0 0 0
+0 900000 90000
+100
+E
+tattoo jalpurian jal purian pur~
+This tattoo is ancient in design.  Though most importantly, it looks really, really cool.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 15
+#1860
+dome angry~
+The Angry Dome~
+A dome is lying here, covered in blood and vomit.~
+~
+9 267444224 17
+30 -1 -1 -1
+5 750000 50000
+5
+E
+dome angry~
+What is up with this dome?  There are no eye holes, there is no real place to breathe, and worst of
+all the inside is covered in blood and vomit from whoever died in it last.  Gah, sick!~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -20
+A
+18 -20
+A
+52 -75
+B
+536875009
+#1861
+maul war warforged forged~
+A Warforged Maul~
+A maul, created for war, is lying here.~
+~
+26 261136384 8193
+302 8 4 6
+31 1000000 220000
+20
+E
+maul war warforged forged~
+This is maul is an unstoppable force of devastation.~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 7
+A
+18 2
+#1862
+shovel~
+A Shovel~
+A shovel is sticking out of the ground here.~
+~
+26 210821376 8193
+52 5 5 3
+20 50000 25000
+25
+E
+shovel~
+Yep, it's a shovel alright.~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 7
+A
+18 4
+A
+17 -10
+#1863
+cloak gravekeeper grave keeper tattered~
+Gravekeeper's Cloak~
+A long, tattered cloa is collecting dust here.~
+~
+9 134217732 1025
+15 -1 -1 -1
+8 80000 12000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+12 10
+A
+52 5
+#1864
+lantern hooded gravekeeper grave keeper~
+Gravekeeper's Hooded Lantern~
+A rusty lantern is sitting here.~
+~
+1 134217728 65537
+0 0 0 0
+5 25000 2500
+50
+E
+lantern hooded gravekeepers gravekeeper~
+This thing would work as a perfect spotlight.~
+X
+~
+80 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+14 30
+B
+40
+#1865
+mane hamster fur~
+A Hamster's Mane~
+You deduce a miniature giant animal's mane is lying here....yeah that's gotta be it.~
+~
+9 265338880 3
+5 -1 -1 -1
+1 100000 25000
+40
+E
+mane hamster hamsters~
+This is barely large enough to fit on one's finger.~
+X
+~
+68 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 5
+A
+52 5
+T
+10000
+B
+524288
+#1866
+book struggle great polo fay~
+Polo Fay's Great Struggle~
+A great book is lying here, waiting to be read!~
+~
+15 134742016 1
+21 0 0 0
+10 10000000 10
+100
+E
+book polo fay struggle~
+`m*******************I.N.`jD.E.X*********************
+`mI......`jPolo Fay
+`mII.....`jWilfred the Axe
+`mIII....`jOlkar Drawkcab
+`mIV.....`jJabon
+`mV......`jFreya
+`mVI.....`jBaros
+`mVII....`jNyovi
+`mVIII...`jOlof
+`mIX.....`jMaximillian
+`mX......`jAbhoraz
+`mXI.....`jSylus
+`mXII....`jPrax
+`mXIII...`jGalion
+`mXIV....`jRaklo Drawkcab
+`mXV.....`jGensin Nimroy
+`mXVI....`jJobo
+`mXVII...`jAzas Szin
+`mXVIII..`jBo
+`mXIX....`jUrashima Taro
+`mXX.....`jTomoe Gozen
+`mXXI....`j????
+`mXXII...`jThe Beast~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1867
+seal champion champions champion's~
+Champion's Seal~
+The seal of a champion is shining here.~
+~
+9 134217985 16385
+15 -1 -1 -1
+1 5000000 500000
+1
+E
+seal champion champions champion's~
+There are no other insignia quite like the one on this seal.  Its origins
+are unknown, obviously there may only be a few in existence at any given time.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 5
+A
+3 5
+A
+4 5
+#1868
+story baros page~
+Story of Baros~
+A torn page of a great book is lying here.~
+~
+12 134742016 1
+0 0 0 0
+1 10 10
+100
+E
+story baros page~
+..................................................
+................The.Story.of.Baros................
+..................................................
+.                    Summary                     .
+....Baros's story begins with apparently being the
+member of a following known as the "Sunguard's".
+From the looks of it him and his following led
+countless crusades through the eastern lands.  Once
+him and his following deemed the eastern world safe
+against the greater evils of his era, they disbanded.
+Known for his incredible strength as a templar, he
+eventually was recruited by Polo Fay to rid the
+world of an animal that is only named as "The
+Beast".  From the sounds of it Polo Fay, himself,
+and twenty other titans among men banded together
+and banished this "Beast" from the mortal plane of
+existence forever.  Afterwards it would appear each
+of these heroes went their own seperate way.
+..................................................~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1869
+reflection mirror shield svalinn svalinns~
+Svalinn's Reflection~
+A giant mirror is lying here, reflecting a blinding light.~
+~
+9 267432257 513
+25 -1 -1 -1
+15 5000000 200000
+100
+E
+reflection mirror shield svalinn svalinns~
+This ancient, and mystic mirror is meant to be a figurative
+representation of Svalinn, the shield which stands before
+the sun.~
+X
+~
+0 4 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 30
+A
+53 10
+B
+60
+#1870
+sheet metallic golden scribblings~
+A metallic sheet with golden scribblings~
+A metallic sheet with golden scribblings is lying here.~
+~
+32 134742016 1
+0 0 0 0
+1 10 10
+70
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+180
+#1871
+leggings sun guard sunguards sunguard~
+Sunguard's Leggings~
+A pair of leggings, bearing the Sunguard's mark, is lying here.~
+~
+9 267432193 33
+15 -1 -1 -1
+10 1500000 30000
+10
+E
+leggings sun guard sunguards sunguard~
+These leggings are from an ancient group of crusaders who
+called themselves the "Sunguards".~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 5
+A
+3 2
+#1872
+story jabon page~
+Story of Jabon~
+A torn page of a great book is lying here.~
+~
+12 134742016 1
+0 0 0 0
+1 10 10
+100
+E
+story jabon page~
+..................................................
+................The.Story.of.Jabon................
+..................................................
+.                    Summary                     .
+....Jabon's story begins with a childhood of 
+mischief in some unnamed celtic region of the
+world.  Apparently he ran away from home, and
+somewhere along the way learned the arts of the
+bladesinger from the eastern elven city.  Soon, 
+he mastered the art of the sword.  From here it
+tells of him leaving the town, and taking up jobs
+as a sword for hire.  Due to his unique skills and
+expert training he apparently was very successful.
+Somewhere along the way he came into contact with 
+Polo Fay, who sought to assemble a team of 
+adventurers to conquer some indominable animal.  
+After the whole adventure it mentions him and another
+hero known as "Prax" returning to the professional 
+soldier lifestyle.
+..................................................~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1873
+sword singing conaire mor~
+The Singing Sword of Conaire Mor~
+A sword is lying here, its vibrating blade creating a charming melody.~
+~
+5 233894231 8193
+310 10 3 3
+30 3000000 250000
+100
+E
+sword singing conaire mor~
+The celtic symbols across this weapon tell a brief summary
+of the tale of Conair Mor.  This sword continuously vibrates,
+resonating a small tune.~
+X
+~
+0 131072 0
+M
+~
+~
+~
+~
+#1874
+folktale celtic old folk tale~
+An old Celtic tale~
+An old Celtic tale is lying here.~
+~
+32 134742016 1
+0 0 0 0
+1 10 10
+100
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+180
+#1875
+boots dancing~
+Dancing Boots~
+A pair of boots are here, doing the River Dance!~
+~
+9 233893890 65
+12 -1 -1 -1
+2 500000 50000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+39 15
+#1876
+story freya page~
+Story of Freya~
+A torn page of a great book is lying here.~
+~
+12 134742016 1
+0 0 0 0
+1 10 10
+10
+E
+story freya page~
+..................................................
+................The.Story.of.Freya................
+..................................................
+.                    Summary                     .
+....Freya's story begins with her being born into
+slave labor.  In her adolescent years she began an
+underground movement against her master.  By her
+early teenage years she led a small army of slaves
+in a war against her master's many men.  Once her
+task conquered, she traveled the world, igniting 
+several movements against the world's more 
+oppressive rulers.  Known for her ability to inspire 
+others, she was recruited by Polo Fay in his war 
+against some deplorable monster.  Once her task
+complete, she retired as an announcer for Obervon's
+gladiatorial arena.
+...................................................~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1877
+trumpet torricelli torricelli's~
+Torricelli's Trumpet~
+A trumpet with a seemingly infinite surface area within a finite space, is lying here.~
+~
+24 233893952 16385
+0 0 0 0
+5 2500000 250000
+100
+E
+trumpet torricelli torricelli's~
+This object has a seemingly infinite surface area enclosed within it's finite
+space.  It is a replica of some celestial being's instrument.~
+X
+~
+64 65536 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 3
+A
+53 10
+B
+16787516
+#1878
+poem detailed~
+A well detailed poem~
+A well detailed poem is lying here.~
+~
+32 134742016 1
+0 0 0 0
+1 10 10
+70
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+T
+180
+#1879
+cloak vibrant colors~
+Cloak of Vibrant Colors~
+A vibrant cloak is lying on the floor.~
+~
+9 233893953 1025
+16 -1 -1 -1
+10 10 10
+10
+E
+cloak vibrant colors~
+This brightly colored robe is designed to be spacious and roomy for someone with a
+theatrical background.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 25
+A
+53 5
+#1880
+story abhoaraz page~
+Story of Abhoraz~
+A torn page of a great book is lying here.~
+~
+12 134742016 1
+0 0 0 0
+1 10 10
+100
+E
+story abhoraz page~
+..................................................
+...............The.Story.of.Abhoraz...............
+..................................................
+.                    Summary                     .
+....The story begins with some Zycan Diplomat.
+Initially his mission was to make peace with the
+Mystic Monestary, and the Monestary near the swamp.
+Eventually his influence spread out to nearly all 
+temples, monestaries, churches, chapels, mosques, 
+etc. However, within these places he began several
+underground cults. Abhoraz was sacrificing people with
+a special dagger in order to absorb their living
+essence and increase his own strength.  His power 
+grew beyond that of most demons, and it took countless
+crusades against his kindoms to finally defeat him,
+however, because of his immense power, they were only
+able to trap him within a sphere.  Hundreds of years 
+later, Abhoraz was released to fight some awful cur.
+..................................................~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1881
+souldrinker soul drinker dagger~
+Souldrinker~
+An evil looking dagger is lying here, waiting to be plunged into someone's heart!~
+~
+5 259062356 8193
+3 16 2 9
+31 2500000 250000
+100
+E
+souldrinker soul drinker dagger~
+There is an inscription on the blade that reads as follows:
+"`bPlunge `qthe blade into your opponent, to steal their essence.
+If your opponent proves to be too much, `bsiphon `qtheir power, and
+use it as your own.  When the odds are against you, you may bestow a 
+`bpenance `qunto your enemy.~
+X
+~
+0 32768 0
+M
+~
+~
+~
+~
+A
+19 0
+A
+18 10
+A
+28 20
+B
+8945664
+#1882
+handbook hand book defiler defilers defiler's~
+Defiler's handbook~
+A handbook for defiler's is here, waiting to be read!
+~
+~
+32 134742016 1
+0 0 0 0
+5 10 10
+70
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+180
+#1883
+spaulders arch fiend archfiend~
+Archfiend's Spaulders~
+Some demonic spaulders are lying here.~
+~
+9 259062292 257
+15 -1 -1 -1
+12 2000000 200000
+18
+E
+spaulders arch fiend archfiend~
+The spaulders give off an eerie glow.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 10
+A
+53 2
+B
+16777216
+#1884
+story wilfred page~
+Story of Wilfred~
+A torn page of a great book is lying here.~
+~
+12 134742016 1
+0 0 0 0
+1 10 10
+10
+E
+story wilfred page~
+.............................................................................
+.............................The.Story.of.Wilfred............................
+.............................................................................
+.                                  Summary                                  .
+....Wilfred's story begins with his mercenary exploits. He made the majority of 
+his money as a  simple armed bodyguard/escort, and became known for his finesse
+with an axe.  His last job as a mercenary entailed him being a bodyguard for a 
+prince, whilst him and another prince negotiated terms over who got to marry some
+girl. Wilfred, deciding he knew how to resolve the situation, cleaved the woman 
+in half, and offered half of her to each prince.  For his crimes he was punished 
+to death in  the arena, but instead of dying, he thrived in the environment. After
+`a..........................`q*****Read Page2*****
+~
+E
+page2~
+`a.............................`q****Page 2****
+countless victories, he was recruited by Polo Fay fo fight some beast. However, in
+the process of fighting this beast, Wilfred's most prized posession, his axe, 
+shattered against the indestructable animals hide.  After his task was completed,
+he voluntarily returned to the life of a gladiator.
+.............................................................................~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1885
+mask gladiator~
+Gladiator's Mask~
+An intimidating mask is lying here.~
+~
+9 267444288 17
+7 -1 -1 -1
+10 10 10
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+#1886
+wishlist wish list wilfred~
+Wilfred's Wish List~
+A poorly constructed list is lying on the floor.~
+~
+32 134742016 1
+0 0 0 0
+1 10 10
+70
+E
+wishlist wish list wilfred~
+Wilfred has created a list of items he believes could be used to
+recreate an axe exactly like the one he previously owned.~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+180
+#1887
+axe wilfred wilfreds battle battleaxe~
+Wilfred's Axe~
+An extremely well crafted battleaxe is lying on the floor here.~
+~
+5 267444480 8193
+0 8 8 13
+31 2800000 280000
+100
+E
+axe wilfred wilfreds battle battleaxe~
+This axe is of a flawless design.  In the hands of a well trained
+fighter, this weapon is an unstoppable force of devastation.~
+X
+~
+0 64 0
+M
+~
+~
+~
+~
+A
+37 10
+A
+46 10
+A
+18 8
+C
+8
+#1888
+story prax page~
+Story of Prax~
+A torn page of a great book is lying here.~
+~
+12 134742016 1
+0 0 0 0
+1 10 10
+100
+E
+story prax page~
+..................................................
+................The.Story.of.Prax.................
+..................................................
+.                    Summary                     .
+....Prax was born in the Roman empire, and into
+the life of a professional soldier.  He was trained
+in the art of the sword and shield from an early age.
+As his life progressed, he discovered an affinity for
+magic.  His fellow kinsman began spreading rumors that
+he was touched by Pluto, mostly for his unmatched
+combat finess, magic, and temper.  However, soon him
+and his fellow men of war raged countless campaigns
+into the Tarion desert against some god of war.  A
+large portion of his life seems to be missing after
+this point in time.  It does, however, contain details
+of his recruitment by Polo Fay against some ancient
+mythical force of nature.  Once his task completed,
+he moved to the city of Obervon, forever abandoning
+his Roman past.
+..................................................~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1889
+aegis legendary goat skin~
+The Legendary Aegis~
+Some goat skin is lying here, constantly fluctuating in its shape.~
+~
+9 200339777 513
+22 -1 -1 -1
+10 3000000 300000
+100
+E
+aegis legendary goat skin~
+This is a replica of an ancient shield from beyond the Tarion Desert.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 20
+A
+52 12
+#1890
+code mercenary mercenarys mercenary's~
+The mercenary's code~
+The mercenary's code is lying here.~
+~
+32 134742016 1
+0 0 0 0
+1 10 10
+70
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+180
+#1891
+breastplate plate soldier professional champion~
+Professional Soldier's Breastplate~
+A breastplate, engraved with a champion's seal, is lying here.~
+~
+9 198242624 9
+19 -1 -1 -1
+24 1500000 150000
+21
+E
+breastplate plate soldier professional champion~
+This breastplate allows for maximum maneuverability, as well as
+maximum protection.  Clearly a masterpiece of Roman design.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+A
+1 2
+#1892
+weapon ultimate obervon obervons~
+Obervon's Ultimate Weapon~
+Obervon's ultimate weapon is lying here, looking awesome and unwieldy.~
+~
+5 134217728 1
+0 9 3 3
+10 10 10
+10
+E
+ultimate~
+`o................................................
+`o................../|......_______...............
+`o.________/|      //______/ _____ \_____________.
+`o.\_______||XXXXX| |______| _____ |____________/.
+`o........ \|......\\......\_______/..............
+`o..................\|............................
+`o................................................
+~
+E
+weapon~
+`o................................................
+`o................../|......_______...............
+`o.________/|      //______/ _____ \_____________.
+`o.\_______||XXXXX| |______| _____ |____________/.
+`o........ \|......\\......\_______/..............
+`o..................\|............................
+`o................................................
+~
+E
+obervons~
+`o................................................
+`o................../|......_______...............
+`o.________/|      //______/ _____ \_____________.
+`o.\_______||XXXXX| |______| _____ |____________/.
+`o........ \|......\\......\_______/..............
+`o..................\|............................
+`o................................................
+~
+E
+obervon~
+`o................................................
+`o................../|......_______...............
+`o.________/|      //______/ _____ \_____________.
+`o.\_______||XXXXX| |______| _____ |____________/.
+`o........ \|......\\......\_______/..............
+`o..................\|............................
+`o................................................
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+18 8
+A
+47 10
+#1893
+story maximillian page~
+The Story of Maximillian~
+A torn page of a great book is lying here.~
+~
+12 0 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1894
+avenger holy longsword~
+The Holy Avenger~
+There is a very bright longsword lying here, radiating divine strength.~
+~
+5 129006913 8193
+21 10 2 3
+31 3000000 300000
+100
+E
+avenger holy longsword~
+This sword glows with a bright light.  It is razor sharp, extremely
+durable, and the it contains within a divine strength only a paladin
+could wield.~
+X
+~
+0 4096 0
+M
+~
+~
+~
+~
+A
+19 13
+A
+18 7
+A
+47 5
+B
+8196
+#1895
+avenger unholy longsword~
+The Unholy Avenger~
+A longsword lies here, radiating an aura of corruption.~
+~
+5 263256668 8193
+23 10 2 3
+31 0 0
+100
+E
+avenger unholy longsword~
+There is an absence of light around this weapon.  It's unholy strength can
+only be used by the most corrupt of paladins.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 13
+A
+18 7
+A
+47 5
+B
+8388612
+#1896
+heart phoenix stone~
+The Heart of the Phoenix~
+A fiery stone lies here, its flame brightening with each passing moment.~
+~
+1 800128321 65537
+0 -1 -1 -1
+5 300000 150000
+17
+E
+heart phoenix stone~
+Held within this stone is a power only reserved for greater deities.  The power
+within it is slowly but surely destroying the object itself.~
+X
+~
+114 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 4
+A
+9 20
+T
+6000
+B
+16810036
+#1897
+tablet stone~
+A stone tablet~
+There is a rather large stone tablet lying on the floor here.~
+~
+32 524288 1
+0 0 0 0
+12 10 10
+70
+E
+tablet stone~
+This thing looks like a bad prop for a play.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1898
+well~
+A Well~
+A nifty little well is lying here.~
+~
+17 0 0
+100000 100000 15 0
+10 10 10
+100
+E
+well~
+This is a well. You might think that there is something to it... But in fact it is just an ordinary well.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1899
+key monster~
+Key to the Monster Chambers~
+A key has been cast aside here.~
+~
+18 524289 1
+0 -1 -1 -1
+0 1 0
+100
+E
+key monster~
+It would take a genius to figure out which room this leads to...~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

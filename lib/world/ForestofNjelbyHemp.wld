@@ -1,0 +1,1214 @@
+#2200
+A dilapidated pier~
+  An abandoned dock, in a state of disrepair, juts out from a small forested
+island. Rotting wooden planks teeter atop barnacle covered piles as the froth
+of crashing waves slowly wears down what's left. The waters of La Soudure have
+long lapped at the shores of this enchanted isle. The quay's age indicates
+this island's discovery decades before, but its magic had kept visitors at
+bay for some time. Instead of sandy beaches or rocky cliffs, a dense forest
+of whipple trees ends suddenly as if sprouted from the ocean itself.
+~
+22 4 1
+D3
+~
+~
+0 -1 2224
+S
+#2201
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D1
+~
+~
+0 -1 2202
+D2
+~
+~
+0 -1 2207
+S
+#2202
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D2
+~
+~
+0 -1 2208
+D3
+~
+~
+0 -1 2201
+S
+#2203
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2231
+D1
+~
+~
+0 -1 2204
+D3
+~
+~
+0 -1 2202
+S
+#2204
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D1
+~
+~
+0 -1 2205
+D2
+~
+~
+0 -1 2210
+S
+#2205
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D1
+~
+~
+0 -1 2206
+D2
+~
+~
+0 -1 2211
+D3
+~
+~
+0 -1 2204
+S
+#2206
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D3
+~
+~
+0 -1 2205
+S
+#2207
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2201
+D2
+~
+~
+0 -1 2213
+S
+#2208
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2202
+D1
+~
+~
+0 -1 2209
+D3
+~
+~
+0 -1 2207
+S
+#2209
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2203
+D2
+~
+~
+0 -1 2215
+D3
+~
+~
+0 -1 2208
+S
+#2210
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2204
+D1
+~
+~
+0 -1 2211
+D3
+~
+~
+0 -1 2209
+S
+#2211
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D1
+~
+~
+0 -1 2212
+S
+#2212
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2206
+D2
+~
+~
+0 -1 2218
+D3
+~
+~
+0 -1 2211
+S
+#2213
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D2
+~
+~
+0 -1 2219
+S
+#2214
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2208
+D1
+~
+~
+0 -1 2215
+D2
+~
+~
+0 -1 2220
+D3
+~
+~
+0 -1 2213
+S
+#2215
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D1
+~
+~
+0 -1 2216
+D2
+~
+~
+0 -1 2221
+S
+#2216
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2210
+D1
+~
+~
+0 -1 2217
+D3
+~
+~
+0 -1 2215
+S
+#2217
+Forest of Njel~
+[winter]
+  The limbs of the whipple trees droop sadly, weighed down by the piles of snow
+accumulated from the endless winter blizzards. A thin sparkling layer of ice en-
+cases the late fruit and early buds at the fingertips of the bare branches. A
+realm known for its dramatic seasonal differences, Njel has long been a font of
+mystery and fantastic tales surrounding its unusual flora and the castle beyond
+the forest. Gusts of snow and hail flurries surge through the leafless whipple
+trees' slender branches.
+~
+22 0 3
+D0
+~
+~
+0 -1 2211
+D2
+~
+~
+0 -1 2223
+S
+#2218
+Forest of Njel~
+[autumn]
+  A brilliant, firey landscape of yellow, orange and red leaves touches both
+earth and sky. The forest floor is covered with a thin layer of autumn leaves
+fallen from the whipple trees; the air never seems entirely clear, as their is
+always one branch on one tree shedding one colorful leaf that then drifts slowly 
+to the ground. A wandering haze of fog moves sluggishly amidst the white-barked
+whipple trees, obscuring the well-worn paths through this old forest.
+~
+22 0 3
+D2
+~
+~
+0 -1 2224
+D3
+~
+~
+0 -1 2217
+S
+#2219
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2213
+D1
+~
+~
+0 -1 2220
+D2
+~
+~
+0 -1 2225
+S
+#2220
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2214
+D1
+~
+~
+0 -1 2221
+S
+#2221
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2215
+D1
+~
+~
+0 -1 2222
+D2
+~
+~
+0 -1 2227
+S
+#2222
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2216
+D1
+~
+~
+0 -1 2223
+D2
+~
+~
+0 -1 2228
+S
+#2223
+Forest of Njel~
+[spring]
+  The once snowy landscape has been replaced by soft, mossy undergrowth and the
+vibrant colours of spring. A faint mist hangs in the air as if the evaporation
+of the melt-snow has been frozen in time. Rustling of leaves in spring breezes
+and the sounds of small insects pierce through the sullen silence of the trees.
+The whipple buds have survived the winter frost and their once icy shells, now
+they begin to burst forth dotting the scene with specs of colour.
+~
+22 0 3
+D0
+~
+~
+0 -1 2217
+D1
+~
+~
+0 -1 2224
+D2
+~
+~
+0 -1 2229
+S
+#2224
+Forest of Njel~
+[summer]
+  A landscape of white-barked whipple trees opens before you. The distinct four-
+petaled pink and white flowers of the trees are in full bloom. Spring's soft,
+lush forest floor has surprisingly given way to a sandy wasteland, a landscape
+completely at odds with the blooming forest. A menacing heat hangs in the stilt-
+ed air of the once pleasantly cool forest. The enchantments of Njel are at work
+here, only powerful magicks could produce such a stark contrast of climate and
+flora.
+~
+22 0 3
+D0
+~
+~
+0 -1 2218
+D1
+~
+~
+0 -1 2200
+S
+#2225
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2219
+S
+#2226
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2220
+D3
+~
+~
+0 -1 2225
+S
+#2227
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D1
+~
+~
+0 -1 2228
+D3
+~
+~
+0 -1 2226
+S
+#2228
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2222
+D3
+~
+~
+0 -1 2227
+S
+#2229
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2223
+D1
+~
+~
+0 -1 2230
+D3
+~
+~
+0 -1 2228
+S
+#2230
+Forest of Njel~
+A temporary description
+~
+22 0 3
+D0
+~
+~
+0 -1 2224
+D3
+~
+~
+0 -1 2229
+S
+#2231
+Castle Gates~
+  Signs of civilization at last, the forested floor has been replaced by a dark
+charcoal gray gravel drive. The whipple forest has given way to a towering hedge
+wall interrupted only by the tall and broad gateway east to the castle grounds.
+Thick wrought-iron has been forged into elegant loops and spirals in the breath-
+taking artistic gate blocking the way east toward the castle. The weather seems
+more subdued here, unlike the extreme seasonal magic experienced back south in
+the forest. Beyond the gates lies a meticulously maintained lawn within a small
+stone wall.
+~
+22 0 1
+D1
+~
+gates~
+1 -1 2232
+D2
+~
+~
+0 -1 2203
+E
+gates~
+ The wrought-iron gates stretch at least thirty feet into
+the sky, just above the height of the impressive hedges
+surrounding them.
+~
+S
+#2232
+Beyond the Gates~
+  The hedge wall to the north and south channels you toward the pristine grounds
+of the castle courtyard to the east. From here you can tell that there are four
+equal sections of the square lawn each with a stone sculpture of a tree. Beneath
+your feet the charcoal gray gravel pathway ends abruptly as it abuts the perfect
+landscape of the castle grounds.
+~
+22 4112 1
+D1
+~
+~
+0 -1 2233
+D3
+~
+gates~
+1 -1 2231
+S
+#2233
+Castle Courtyard~
+  Enclosed by a stone wall and dwarfed by the hedge beyond the small square lawn
+stands as a beacon of perfection. The grounds are fastidiously maintained, not a
+single blade of grass sticks out above another. The well-manicured grounds are
+dotted with a series of oval marble stepping stones. In the center of this quad-
+rant stands a stone whipple tree, its branches largely bare and flowers withered
+as autumn takes hold. At the base of the vivacious sculpture rests an obsidian
+pot, filled with fertile soil.
+~
+22 4112 1
+D0
+~
+~
+0 -1 2234
+D1
+~
+~
+0 -1 2236
+D3
+~
+~
+0 -1 2232
+S
+#2234
+Castle Courtyard~
+  Enclosed by a stone wall and dwarfed by the hedge beyond the small square lawn
+stands as a beacon of perfection. The grounds are fastidiously maintained, not a
+single blade of grass sticks out above another. The well-manicured grounds are
+dotted with a series of oval marble stepping stones. In the center of this quad-
+rant stands a stone whipple tree, its bare branches and iced over buds a mark of
+its frozen winter existence. At the base of the vivacious sculpture rests an ob-
+sidian pot, filled with fertile soil.
+~
+22 4112 1
+D1
+~
+~
+0 -1 2235
+D2
+~
+~
+0 -1 2233
+S
+#2235
+Castle Courtyard~
+  Enclosed by a stone wall and dwarfed by the hedge beyond the small square lawn
+stands as a beacon of perfection. The grounds are fastidiously maintained, not a
+single blade of grass sticks out above another. The well-manicured grounds are
+dotted with a series of oval marble stepping stones. In the center of this quad-
+rant stands a stone whipple tree, its blooming branches a hallmark of its awak-
+ening in spring. At the base of the vivacious sculpture rests an obsidian pot,
+filled with fertile soil. North of here the stone wall gives way to the enormous
+castle gates.
+~
+22 4112 1
+D0
+~
+~
+0 -1 2264
+D2
+~
+~
+0 -1 2236
+D3
+~
+~
+0 -1 2234
+S
+#2236
+Castle Courtyard~
+  Enclosed by a stone wall and dwarfed by the hedge beyond the small square lawn
+stands as a beacon of perfection. The grounds are fastidiously maintained, not a
+single blade of grass sticks out above another. The well-manicured grounds are
+dotted with a series of oval marble stepping stones. In the center of this quad-
+rant stands a stone whipple tree, its four-petaled flowers in full bloom just as
+in summer. At the base of the vivacious sculpture rests an obsidian pot, filled
+with fertile soil.
+~
+22 4112 1
+D0
+~
+~
+0 -1 2235
+D3
+~
+~
+0 -1 2233
+S
+#2237
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling far overhead. The
+floor is a spotless, mottled white stone buffed to a reflective sheen and inlaid
+with brilliant jade flowers several feet across at irregular intervals. Silver
+sconces encircle the pillars and cast off a dim blue light over the grand hall.
+To the south lies the castle entrance and the outer courtyard.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2241
+D1
+~
+~
+0 -1 2239
+D2
+~
+~
+0 -1 2264
+D3
+~
+~
+0 -1 2238
+S
+#2238
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling far overhead. The
+floor is a spotless, mottled white stone buffed to a reflective sheen and inlaid
+with brilliant jade flowers several feet across at irregular intervals. Silver
+sconces encircle the pillars and cast off a dim blue light over the grand hall.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2240
+D1
+~
+~
+0 -1 2237
+S
+#2239
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling far overhead. The
+floor is a spotless, mottled white stone buffed to a reflective sheen and inlaid
+with brilliant jade flowers several feet across at irregular intervals. Silver
+sconces encircle the pillars and cast off a dim blue light over the grand hall.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2242
+D3
+~
+~
+0 -1 2237
+S
+#2240
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling far overhead. The
+floor is a spotless, mottled white stone buffed to a reflective sheen and inlaid
+with brilliant jade flowers several feet across at irregular intervals. Silver
+sconces encircle the pillars and cast off a dim blue light over the grand hall.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2243
+D1
+~
+~
+0 -1 2241
+D2
+~
+~
+0 -1 2238
+S
+#2241
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling overhead; spaced
+every ten meters they create an optical illusion as the grand hall extends in
+each cardinal direction from here. The symmetry of the hall is disarming, it's
+as if you suddenly have compound eyes and have yet to master their use. Sometime
+in the past this must have been host to some incredible balls and galas, now it
+feels eerily silent and unwelcoming in the dim blue light cast from flickering
+torches set in silver sconces on the columns.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2244
+D1
+~
+~
+0 -1 2242
+D2
+~
+~
+0 -1 2237
+D3
+~
+~
+0 -1 2240
+S
+#2242
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling far overhead. The
+floor is a spotless, mottled white stone buffed to a reflective sheen and inlaid
+with brilliant jade flowers several feet across at irregular intervals. Silver
+sconces encircle the pillars and cast off a dim blue light over the grand hall.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2245
+D2
+~
+~
+0 -1 2239
+D3
+~
+~
+0 -1 2241
+S
+#2243
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling far overhead. The
+floor is a spotless, mottled white stone buffed to a reflective sheen and inlaid
+with brilliant jade flowers several feet across at irregular intervals. Silver
+sconces encircle the pillars and cast off a dim blue light over the grand hall.
+~
+22 1073778712 1
+D1
+~
+~
+0 -1 2244
+D2
+~
+~
+0 -1 2240
+S
+#2244
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling far overhead. The
+floor is a spotless, mottled white stone buffed to a reflective sheen and inlaid
+with brilliant jade flowers several feet across at irregular intervals. Silver
+sconces encircle the pillars and cast off a dim blue light over the grand hall.
+Just north of here, the grand hall ends, the columns are absent, and a hallway
+extends well beyond the range of your vision.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2246
+D1
+~
+~
+0 -1 2245
+D2
+~
+~
+0 -1 2241
+D3
+~
+~
+0 -1 2243
+S
+#2245
+Grand Hall~
+  Tall slender doric columns stretch up to the vaulted ceiling far overhead. The
+floor is a spotless, mottled white stone buffed to a reflective sheen and inlaid
+with brilliant jade flowers several feet across at irregular intervals. Silver
+sconces encircle the pillars and cast off a dim blue light over the grand hall.
+To the east is an open archway leading to the castle library.
+~
+22 1073778712 1
+D1
+~
+~
+0 -1 2250
+D2
+~
+~
+0 -1 2242
+D3
+~
+~
+0 -1 2244
+S
+#2246
+A long hallway~
+  The main path through the castle runs north-south and is flanked by dramatic
+tapestries and ornamental sculptures. Every couple meters perfectly symmetrical 
+cubes of obsidian flank the hall. Light is swallowed by the squat pedestals of
+stone. The ceiling, much like in the grand hall, is still disorientingly tall,
+making you feel small. An eerie sense imposed by the surroundings is compounded
+by a voyeuristic feeling that you're being watched by the castle itself; there
+can be no doubt that a powerful and long undisturbed magic dwells here.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2247
+D2
+~
+~
+0 -1 2244
+E
+pedestal~
+There is a faint depression within the otherwise perfectly hewn stone. 
+Upon closer inspection you spot two large bootprints embedded in the
+stone, as if a weighty giant had over time etched its own stance into 
+the shiny, black rock.
+~
+E
+tapestry~
+Upon the western tapestry is a scene of a roiling sea with ominously
+dark clouds reaching long slender fingers of lightning down toward a
+schooner getting tossed about in the waves. Opposite it is a tapestry 
+that stretches all the way to the floor. A giant glacier looms large
+over an advancing army of armoured knights on horseback headed toward
+a fissure splitting the icy wall.
+~
+S
+#2247
+A long hallway~
+  The main path through the castle runs north-south and is flanked by dramatic
+tapestries and ornamental sculptures. Every couple meters perfectly symmetrical 
+cubes of obsidian flank the hall. Light is swallowed by the squat pedestals of
+stone. A chill draft coming from the north seems to be coming from a doorway
+just ahead. 
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2248
+D2
+~
+~
+0 -1 2246
+E
+pedestal~
+There is a faint depression within the otherwise perfectly hewn stone. 
+Upon closer inspection you spot two large bootprints embedded in the
+stone, as if a weighty giant had over time etched its own stance into 
+the shiny, black rock.
+~
+E
+tapestry~
+The western tapestry depicts a landscape of giant rolling hills with
+flowers, sun shining, and small halfling-like creatures are scattered
+about farming and playing. Across from it is a desert tableau, in the
+distance two riders approach a walled city.
+~
+S
+#2248
+A long hallway~
+  The main path through the castle runs north-south and is flanked by dramatic
+tapestries and ornamental sculptures. Every couple meters perfectly symmetrical 
+cubes of obsidian flank the hall. Light is swallowed by the squat pedestals of
+stone. The hallway appears to have finally come to the end as you approach an 
+open doorway to the north which appears to open into a giant circular room.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2249
+D2
+~
+~
+0 -1 2247
+E
+pedestal~
+There is a faint depression within the otherwise perfectly hewn stone. 
+Upon closer inspection you spot two large bootprints embedded in the
+stone, as if a weighty giant had over time etched its own stance into 
+the shiny, black rock.
+~
+S
+#2249
+Precipice above the oubliette~
+  Dim but unwavering blue light emanates from a series of torches circling the
+room before you. A pile of rubble is all that remains of the base of the stone 
+stairs leading up the north tower. The most alarming feature of this grand room
+is that it lacks a floor, save for a few small ledges spaced evenly along the
+esatern wall. Endless, suffocating darkness extends downward just below you.
+Somehow the pit swallows the torchlight and a windy current from within that 
+black maw pulls at you, urging you to take that foolish leap. As you gaze back
+toward the hallway you notice the stone stairs are still intact part way up the
+western wall.
+~
+22 1073778712 1
+D2
+~
+~
+0 -1 2248
+D3
+~
+pit~
+10 -1 2254
+S
+#2250
+Castle Library~
+ The library, like the rest of the castle, is of magnificent proportions. Wide
+bookcases over forty feet tall run the full length of every wall. Oaken tables
+carved from a single tree and at least as long as the bookcases are tall, are 
+covered in ancient tomes, scrolls, and candles in various states of waxen melt. 
+There are no signs of neglect here, no cobwebs or dust from ages of disuse, yet
+the entire castle feels empty of life.
+~
+22 1073778712 1
+D1
+~
+~
+0 -1 2251
+D3
+~
+~
+0 -1 2245
+S
+#2251
+Castle Library~
+ The library, like the rest of the castle, is of magnificent proportions. Wide
+bookcases over forty feet tall run the full length of every wall. Oaken tables
+carved from a single tree and at least as long as the bookcases are tall, are 
+covered in ancient tomes, scrolls, and candles in various states of waxen melt. 
+An iron-framed stained-glass window fills the eastern wall.
+~
+22 1073778712 1
+D0
+~
+~
+0 -1 2252
+D3
+~
+~
+0 -1 2250
+E
+window~
+There are four main panels to the stained-glass, each one an obvious
+representation of a season: a snowflake, a blooming flower, the sun,
+and a burnt orange leaf.
+~
+S
+#2252
+Castle Library~
+ The library, like the rest of the castle, is of magnificent proportions. Wide
+bookcases over forty feet tall run the full length of every wall. Oaken tables
+carved from a single tree and at least as long as the bookcases are tall, are 
+covered in ancient tomes, scrolls, and candles in various states of waxen melt. 
+Countless leather-bound volumes fill the shelves of the bookcases, except for
+on the eastern wall, where it appears it has been largely picked clean.
+~
+22 1073778712 1
+D1
+~
+bookcase~
+8 -1 2253
+D2
+~
+~
+0 -1 2251
+S
+#2253
+Hidden Laboratory~
+ Here, beyond the bookcases, a different kind of research and thirst for know-
+ledge flourished. Flasks, beakers, potion bottles, distilling apparatuses, and
+cloudy jars fill the crowded benches and shelves throughout the room. Unlike
+elsewhere, the ceiling is of a more modest height. In the middle of the room,
+rests an enormous pock-marked cauldron.
+~
+22 1073778713 1
+D3
+~
+bookcase~
+8 -1 2252
+E
+cauldron~
+The heavy iron cauldron must weigh at least fifty stone. Deep gouges
+on the inside imply some creatures may have found themselves being
+boiled alive.
+~
+S
+#2254
+Stone stairs above the oubliette~
+  The cracked stone stairs beneath your feet seem sturdy enough for the moment,
+but the eerie dark pit below stretching far beyond your vision is disconcerting
+to say the least. It would be unwise to linger here too long. You cannot help
+but wonder why someone would construct a staircase without railings over such a
+yawning maw of nothingness; the staircase continues to wind upwards but the top
+of the tower does not seem too far away now.
+~
+22 1073778712 1
+D1
+~
+~
+0 -1 2262
+D4
+~
+stairs~
+11 -1 2255
+S
+#2255
+Stone stairs above the oubliette~
+  From this vantage point on the narrow stone stairs hugging the circular stone
+wall of the north tower you finally spot a sturdy-looking landing. One last set
+of steep stone stairs separates you from that oasis of solid footing. Daring a
+sideways glance at the jet-black darkness below you feel a strong urge to jump
+and experience the adrenaline rush of flight before common sense overtakes the
+enchanting madness that has been pulling at you since entering the castle. 
+~
+22 1073778712 1
+D2
+~
+~
+0 -1 2262
+D4
+~
+stairs~
+11 -1 2257
+D5
+~
+stairs~
+11 -1 2254
+S
+#2256
+The Oubliette~
+  After the disorienting fall and the sudden painful stop it takes your senses a
+moment to make out the surroundings. You are within a large circular cell, there
+are no doors or windows, it is essentially the base of a giant waterless well.
+No light reaches here from the precipice far above, it's impossible to tell how
+far you fell. The only solace to be found is that there are no bones here, pre-
+sumably others that stumbled into this pit found a way out. Then again, there's
+also the chance that you're the first one to make that mistake...
+~
+22 1074844301 1
+S
+#2257
+Stone landing above the oubliette~
+  The treacherous spiralling stone stairs above the gaping maw of the oubliette
+end here at the top of the tower. A disturbingly cold breeze from the pit below
+gnaws at your flesh as you stand atop the stairs. The air bristles and sizzles 
+with a magical energy unlike anything you've experienced, an unearthly presence
+is near.
+  An ornate wooden double-door fills an arched doorway to the east. The carved
+flowers around the doorway bloom before your eyes, drop their petals - which
+melt to nothingness as they fall - then wilt; seconds later the cycle begins
+anew. Fur, whiskers and eyes of the creatures in the woodland scene carved into
+the frame exhibit the same sort of periodic liveliness as the flowers.
+~
+22 1073778712 1
+D1
+~
+door~
+1 -1 2258
+D3
+~
+~
+0 -1 2262
+D5
+~
+stairs~
+11 -1 2255
+S
+#2258
+On the Ramparts~
+  From this vantage point you can see far across the ocean of La Soudure. To
+the south lies the forest of Njel and beyond it the ferry dock. Other unclear
+spots of land dot the horizon across the sea, somewhere to the northwest lies
+the mainland and Midgaard. At last you have reached the pinnacle of Njel and
+here atop the tower is the domain of the Enchantress, from here she casts her
+powerful magic over the land creating this strange kingdom of walking plants,
+flying books and other bewitched inanimates. The air hums with energy, few
+mortals have tread here, even fewer have survived.
+~
+22 1073778692 1
+D3
+~
+~
+1 -1 2257
+S
+#2259
+Inside the wrought-iron golem~
+  A byzantine labyrinth of bars from the gates has formed a small cage within
+the golem's chest cavity. Brief glimpses of the whipple forest, hedge wall,
+and castle courtyard pass by in flurries of chaotic motion as the golem flails
+around.
+~
+22 1077449357 0
+S
+#2260
+Flying near the tower~
+A temporary description
+~
+22 16 0
+D5
+~
+~
+0 -1 2261
+S
+#2261
+Flying near the tower~
+A temporary description
+~
+22 16 0
+D4
+~
+~
+0 -1 2260
+D5
+~
+~
+0 -1 2299
+S
+#2262
+Falling down the oubliette~
+A temporary description
+~
+22 1074299017 0
+D4
+~
+~
+0 -1 2262
+D5
+~
+~
+0 -1 2262
+S
+#2263
+Betwixt the pages~
+  Pinioned between massive pages of the beastly book it's hard to tell where an
+escape might lie; the horizon is nothing but papyrus covered with runes, glyphs
+and scroll almost too large to make sense of. Strange lumps move beneath layers
+of pages, perhaps another ally unfortunate enough to have been swallowed too,
+other possibilities are too frightening to dwell on.
+~
+22 1077449357 0
+S
+#2264
+Castle Entrance~
+  You stand before an awe-inspiring castle that seems to reach up to the clouds.
+Thick metal spikes from a raised portcullis overhead look like they would impale
+even the largest beasts of the realm; what kind of assaults did the denizens of
+these lands expect to face? There is no moat, simply a regal staircase leading 
+into the cavernous grand hall.
+~
+22 0 0
+D0
+~
+~
+0 -1 2237
+D2
+~
+~
+0 -1 2235
+S
+#2299
+At the base of the tower~
+A temporary description
+~
+22 1216516756 1
+D4
+~
+~
+0 -1 2261
+S
+#0
+$~

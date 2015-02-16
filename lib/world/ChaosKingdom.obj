@@ -1,0 +1,217 @@
+#10801
+shield cshield~
+a chaos shield~
+A chaos shield is lying on the ground.~
+~
+9 514 513
+7 0 0 0
+10 8000 19
+50
+#10802
+sword csword~
+a chaos sword~
+A chaos sword is lying on the ground.~
+~
+5 124784640 8193
+1 5 3 3
+9 9000 23
+50
+A
+18 4
+A
+19 2
+#10803
+trumpet ctrumpet~
+a chaos trumpet~
+A beautiful chaos trumpet is lying on the ground.~
+~
+24 99676672 16385
+0 0 0 0
+10 10000 30
+50
+A
+18 1
+A
+19 1
+#10804
+platemail~
+a chaos platemail suit~
+A chaos suit is lying on the ground.~
+~
+9 514 9
+10 0 0 0
+20 12000 40
+50
+A
+17 -2
+#10805
+axe double~
+a double handed axe~
+A double handed axe is lying on the ground.~
+~
+5 51388930 8193
+1 4 4 3
+16 10000 34
+50
+A
+18 3
+A
+19 3
+#10806
+bell~
+the Lord's Bell~
+A beautiful bell is lying on the ground.~
+~
+5 225456897 8193
+1 5 5 6
+18 20000 980
+10
+A
+18 3
+A
+19 3
+#10807
+plate armour~
+The Plate Armour~
+The Plate armour is lying on the ground.~
+~
+9 514 9
+13 0 0 0
+30 30000 1000
+50
+A
+2 -2
+A
+5 1
+#10808
+mask tmask~
+The Mask of Tzeentch~
+The Mask of Tzeentch is lying on the ground.~
+~
+9 134217730 17
+12 0 0 0
+5 50000 3000
+10
+A
+3 2
+A
+5 2
+#10809
+claw cclaw~
+a chameleon's claw~
+A chameleon's claw is lying on the ground.~
+~
+5 0 8193
+2 2 7 8
+8 3000 9
+50
+#10810
+boots cboots~
+a pair of chaos boots~
+A pair of chaos boots is lying on the ground.~
+~
+9 512 65
+7 0 0 0
+10 8000 80
+50
+#10811
+platemail~
+The Tzeentch's Platemail~
+The Tzeentch's Platemail is lying on the ground.~
+~
+9 134218240 9
+6 0 0 0
+10 5000 1
+10
+#10812
+ring tring~
+The Tzeentch's Ring~
+The Tzeentch's Ring is sitting on the ground.~
+~
+9 134217728 3
+3 0 0 0
+5 4000 3
+10
+A
+23 -5
+A
+24 -5
+#10813
+cloak miracle~
+A Cloak of Miracle~
+A very beautiful blue cloak is lying on the ground.~
+~
+9 134217793 1025
+15 0 0 0
+5 30000 700
+10
+A
+12 20
+#10814
+gauntlets wonder~
+A pair of Gauntlets of Wonder~
+A pair of very beautiful blue gauntlets is lying on the ground.~
+~
+9 1048641 129
+10 0 0 0
+7 30000 1000
+30
+A
+1 5
+#10815
+key pink~
+A pink key~
+A pink key is lying on the ground.~
+~
+18 0 1
+2 0 0 0
+3 80 100000
+50
+#10816
+key rusty~
+A rusty key~
+A rusty key is lying on the ground.~
+~
+18 2 1
+2 0 0 0
+3 80 100000
+50
+#10817
+key golden~
+A golden key~
+A golden key is lying on the ground.~
+~
+18 1 1
+2 0 0 0
+3 1000 100000
+50
+#10818
+key blue~
+A blue key~
+A blue key is lying on the ground.~
+~
+18 0 1
+2 0 0 0
+3 10 100000
+50
+#10819
+black crystal shard chaos~
+Shard of Chaos~
+A totally black crystal shard lies here, its sight twisting your stomach.~
+~
+5 134217792 8193
+1 10 3 11
+18 100000 50000
+20
+E
+black crystal shard~
+You nearly puke at the chaotic sight of this oily crystal shard.
+~
+A
+28 20
+A
+45 20
+B
+16
+#0
+$~

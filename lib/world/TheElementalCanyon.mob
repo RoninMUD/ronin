@@ -1,0 +1,441 @@
+#9401
+mountain climber mountainclimber~
+the mountainclimber~
+A mountain climber is making the same trek that you are.
+~
+He wants to see whats on the other side of the mountain too.
+~
+76 0 500 Y
+3 17 10 10d5+15 1d6+1
+100 500
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#9402
+cyclops~
+The Cyclops~
+A hungry cyclops snarls at you!
+~
+He looks like hes about to have dinner(maybe its you?).
+~
+46 128 -700 Y
+29 -4 -2 1d1+3799 2d4+15
+1000 240000
+8 8 0
+68 0 0d0+0 0
+0 0 0 0
+#9403
+tiny elemental~
+A tiny elemental~
+A tiny elemental form wanders about.
+~
+Rather small for an elemental form, looks like a reject.
+~
+72 0 0 Y
+1 20 9 1d20+0 1d3+1
+11 29
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9404
+elemental guardian~
+The Elemental Guardian~
+The Elemental Guardian of the canyon.
+~
+You can't tell which kind of elemental it is, maybe its a bit o all
+of them?
+~
+14 0 0 Y
+35 -2 5 1d1+5000 5d4+5
+10000 300000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+#9405
+small elemental~
+A small elemental~
+A small, rather non-descript elemental thing wanders about.
+~
+A small elemental, a resident of the canyon.
+~
+74 0 0 Y
+10 16 5 1d1+120 2d4+0
+250 1000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9406
+mediun elemental~
+A medium elemental~
+A medium-sized elemental presence can be felt here.
+~
+A medium elemental, a resident of the canyon
+~
+74 0 10 Y
+15 11 2 1d1+200 2d6+1
+750 9000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9407
+large elemental~
+A large elemental~
+A large elemental power blows by.
+~
+A large elemental, a resident of the canyon.
+~
+74 0 20 Y
+20 6 1 1d1+300 2d8+2
+2000 21000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9408
+earth elemental ruler~
+The Earth Ruler~
+The Ruler of the Earth elementals is blocking earth.
+~
+He looks as old as the earth itself.  He seems to know all the 
+secrets and knowledge of the Earth.  You cant really tell where 
+he begins and the rock wall ends.
+~
+10 128 0 Y
+35 -8 -7 1d1+3800 4d6+15
+20000 300000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+#9409
+fire elemental ruler~
+The Fire Ruler~
+The Ruler of the Fire elementals is standing here.
+~
+As you look at him he seems to blend in with the fire in his throne.
+~
+10 128 0 Y
+35 -8 -8 1d1+4100 4d5+5
+25000 300000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+#9410
+air elemental ruler~
+The Air Ruler~
+The Ruler of the Air elementals.
+~
+As you peer at him you seem to be looking at the sky itself.
+~
+10 128 0 Y
+35 -8 -2 1d1+3900 9d3+9
+30000 300000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+#9411
+lightning elemental ruler~
+The Lightning Ruler~
+The Ruler of the Lightning elementals.
+~
+As you examine him there is a blinding flash of light and a deafening
+boom!  You rub your eyes and look and the ruler is there grinning
+at you. 
+~
+10 128 0 Y
+35 -8 -6 1d1+4200 4d6+15
+19000 300000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+#9412
+water elemental ruler~
+The Water Ruler~
+The Ruler of the Water elementals.
+~
+As you look at him he changes to mist, which swirls around you.  Just
+as you get scared, it reforms in elemental form.
+~
+10 128 0 Y
+35 -8 -2 1d1+3700 7d3+5
+200000 300000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+#9414
+water puddle elemental~
+A puddle~
+A small puddle of water elemental.
+~
+It trickles along the ground and gets your feet wet.
+~
+72 0 0 Y
+8 13 3 10d10+200 2d5+1
+225 4000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9415
+fire flame elemental~
+A flame~
+A small flickering flame elemental is here.
+~
+It smolders along the grass aimlessly
+~
+72 0 0 Y
+4 17 6 5d10+0 2d4+0
+150 500
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9416
+snowflake snow flake ice elemental~
+A small snowflake~
+A frozen snowflake water elemental.
+~
+It looks a little blue.
+~
+72 0 520 Y
+3 19 10 1d5+0 1d5+0
+0 200
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9417
+pebble rock earth stone elemental~
+A small rock~
+A small rock.
+~
+It seems to be a small living pebble!
+~
+72 0 0 Y
+3 18 6 4d10+5 1d6+1
+98 350
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9418
+spark lightning energy elemental~
+A small spark~
+A small spark of electricity fizzles here.
+~
+Zipping from place to place at the speed of light is tough work.
+~
+72 0 0 Y
+4 16 6 10d5+0 1d8+1
+150 500
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9419
+acid blob elemental~
+A small blob of acid~
+A small blob of acid eats away at the stone aimlessly.
+~
+The magical blob of acid is a cross between lightning and water.
+~
+72 0 0 Y
+9 11 4 1d10+120 5d2+2
+1000 7800
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9420
+lava elemental~
+A lava beast~
+A lava beast spews from place to place.
+~
+The magical lava beast is a cross between fire and earth.
+~
+72 0 0 Y
+8 13 3 1d10+100 5d2+2
+313 4000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9421
+mud elemental~
+A mud monster~
+A mud monster slops around.
+~
+The magical mud monster is a cross between water and earth.
+~
+72 0 0 Y
+7 14 4 1d12+86 2d4+1
+400 2300
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9422
+mist elemental~
+An elemental mist~
+The air is magically misty here.
+~
+The magical mist is a cross between water and air.
+~
+72 0 0 Y
+6 16 5 6d10+20 1d8+0
+300 1700
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9423
+particle elemental~
+A particle~
+A sub-atomic particle is too small for you to see.
+~
+The magical manifestation of energy.
+~
+72 0 0 Y
+1 20 9 5d4+0 1d5+0
+10 100
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9424
+dust elemental~
+A dust cloud~
+A dust cloud blowing by makes you sneeze.
+~
+The magical dust cloud is a cross between air and earth.
+~
+72 0 0 Y
+6 15 4 9d9+4 1d8+1
+100 1480
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9425
+eddie elemental~
+An eddie~
+A small eddie current swirls junk around here.
+~
+The magical eddie current is a manifestation of air elemental.
+~
+72 0 0 Y
+2 19 8 5d5+0 1d6+0
+30 150
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9426
+blue flame~
+The Blue Flame~
+The Blue Flame burns mysteriously here.
+~
+As you look you see what seems to be a face and almost a 
+huminoid figure somehow trapped in the fire.
+~
+74 0 -100 Y
+26 -6 -4 1d100+1550 6d3+12
+25000 185000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9427
+magneto~
+The Magneto~
+The Magneto considers zapping you for the heck of it.
+~
+A humanoid figure seems to be trapped in the field of magnetism.
+~
+74 0 -150 Y
+22 -2 -1 3d10+850 3d8+5
+10000 75000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9428
+ice bandit~
+The Ice Bandit~
+The Ice Bandit strikes cold fear in your heart.
+~
+A huminoid figure encased in ice but still apparently alive.
+~
+74 524288 -250 Y
+24 -4 -4 2d10+980 2d8+13
+30000 111111
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9429
+rock monster~
+The Rock Monster~
+The Rock Monster considers you in stoney silence.
+~
+A huminoid figure trapped in stone seems alive.
+~
+74 0 -310 Y
+23 -2 -5 4d10+850 3d8+4
+19000 90900
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9430
+hurricane~
+The Hurricane~
+A Hurricane rages across the sky.
+~
+A huminoid figure seems to be trapped in the rushing wind.
+~
+74 524288 -10 Y
+28 -8 -7 1d1+3700 4d6+6
+41082 350000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9431
+magician~
+An elemental magician~
+An elemental magician seeks magical stones for a spell.
+~
+The elemental magician has come here in search of the fabled
+Stone of Surrender which can be used to render opponents 
+senseless.
+~
+74 2 -50 Y
+17 6 2 1d11+600 3d5+3
+8000 30000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9432
+rainbow warrior~
+A rainbow warrior~
+A warrior of the Rainbow Cult  swears his loyalty.
+~
+The Rainbow Cult has recieved special powers for their service to 
+the elemental forces.
+~
+72 0 150 Y
+33 0 0 1d1+1000 1d30+10
+8000 50000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9433
+illusionist~
+an illusionist~
+The illusionist seeks the aid of the elemental forces.
+~
+He seeks their aid for a powerful new spell of deception.
+~
+74 0 -50 Y
+15 10 3 10d6+150 2d7+0
+1900 13900
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#9434
+alchemist~
+an alchemist~
+An alchemist wanders by in search of magical herbs.
+~
+Rare herbs are rumored to grow only in the canyon.
+~
+72 0 -50 Y
+16 8 2 3d4+200 2d7+1
+1900 15000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#0
+$~

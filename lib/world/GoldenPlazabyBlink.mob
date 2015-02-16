@@ -1,0 +1,371 @@
+#11700
+lotus shadow master ninja~
+Lotus the Master of Shadows~
+A beautiful woman is here kneeling in her garden.
+~
+A beautiful pale-skinned woman is kneeling here with her eyes closed.  She 
+appears to be in deep meditation.  Her silk robes cascade about her, the 
+ribbons in her hair float around her head as if suspended by magic.  She
+slowly opens her eyes as she feels your presence. 
+~
+1097738 134514856 0 Y
+60 -30 -8 70d70+20000 60d35+10
+3000000 2000000
+8 8 2
+69 10292 50d10+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11701
+rhoden guardian ~
+Rhoden the Guardian~
+A man clad in heavy armour stands here gazing at you.
+~
+A fierce looking warrior stands before you preparing to engage
+in combat.  He is clad in heavy armor, and he leers at you from
+below his wooden helm.  You feel a slight shiver as you realize
+you are about to face a master fighter.
+~
+42 134219904 0 Y
+60 -20 -8 50d50+20000 50d20+100
+0 100000
+8 8 1
+5 0 50d50+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11702
+Chun Lui gong~
+Chun Lui~
+Chun Lui stands here next to the gong.
+~
+A short and fat man stands here next to his large gong.  He holds
+a slender mallet in his hands.  He does not seem to notice your
+appearance here.  He is obviously very disciplined, as his only
+movements are the rising and falling of his chest as he breathes.  
+~
+10 402917504 0 Y
+60 -10 -9 50d50+10000 10d20+100
+0 500000
+8 8 1
+5 0 50d10+200 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11703
+dragon fire flame ancient~
+The Ancient Flame Dragon~
+A slender, but huge dragon exhales a pillar of fire at your approach.
+~
+A huge but slender dragon towers high above your head.  His
+large scales appear to be bathed in a magical flame.  The dragon
+has huge green eyes which shows the ancient wisdom all dragons
+possess. However, he does  not seem too happy about your
+approach. He spreads his wings in defiance at you.
+~
+10 402655360 0 Y
+35 -10 -10 100d10+2000 100d10+50
+0 0
+8 8 2
+57 0 100d10+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11704
+yogi trainee~
+A Yogi~
+A Yogi is here practicing some stances.
+~
+A tall dark man stands before you.  He raises his arms and legs
+in some very uncomfortable looking positions.  You can tell by
+looking at this man that he is highly trained, and possibly very
+dangerous. He looks peaceful enough, however he probably
+wouldn't back down from a fight.
+~
+10 0 0 Y
+23 4 -5 50d10+800 3d6+10
+1000 120000
+8 8 1
+5 0 10d10+10 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#11705
+yogi defender~
+A Yogi Defender~
+A dark man stands here in peaceful silence.
+~
+A large muscular man is here stretching his muscles.  He shows
+rem shield signs of emotion on his face, just the devotion he has in
+defending this Pagoda.  His eyes fix on you for just a moment,
+then they focus back to their normal position.  
+~
+10 128 0 Y
+25 8 -4 50d10+900 3d3+10
+10000 145000
+8 8 1
+5 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#11706
+ninja guardian~
+A Ninja Guardian~
+A man in dark robes raises his arms in defense as you approach.
+~
+A man wearing a tight, yet flexible suit of clothes is here standing
+at his guard position.  He eyes you suspiciously as if you are a 
+threat to his current post.  You notice his body twitching ever so
+slightly at each move you make.  He is obviously preparing to
+fight.
+~
+10 128 0 Y
+35 -10 -5 50d10+3300 5d7+18
+25000 475000
+8 8 1
+5 0 50d10+3300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11707
+ninja dark sinister~
+A Dark Ninja~
+A sinister looking ninja is here preparing to fight.
+~
+A strong, agile looking man is here jumping and practicing some
+moves. He appears to be quite a contestant, if you wish to fight
+him. His eyes tell you that you are not wanted here.  You can
+tell by his movements that he is not as experienced as yourself,
+however, you are sure he is a crude fighter.
+~
+42 262144 -275 Y
+33 -10 -5 50d10+3200 5d6+13
+10000 450000
+8 8 1
+5 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#11708
+bushi guard elite~
+An Elite Bushi Guard~
+A powerful looking Bushi is here willing to fight.
+~
+A fat and ugly man stands here with his arms folded.  A strong
+smell of sweat and some other unpleasant odours waft your
+way. You see disgustingly long hairs growing from the Bushi's
+face and shoulders.  He grunts in your general direction.  You
+get the idea that this man don't want you here.
+~
+42 0 0 Y
+46 -13 -7 50d10+7700 5d7+42
+50000 1000000
+8 8 1
+5 0 50d10+100 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#11709
+bushi guard~
+A Bushi Guard~
+A Bushi Guard is here waiting to fight you.
+~
+A long-haired man is lazily moving around here.  If it weren't
+for the fact that he was standing, you might think he was 
+asleep. He emits many strange snorts and grunts as if he is in
+some sort of pain.  He glances up at you, almost too lazy to
+do anything.  However, judging by the muscles in his arms,
+he may be an interesting match.
+~
+46 0 0 Y
+43 -13 -10 5d10+7000 5d6+25
+1 900000
+8 8 1
+5 0 50d10+200 1
+9 3 8 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#11710
+dragon guardian~
+A Dragon Guardian~
+A Dragon Guardian stands here daring you to a fight.
+~
+A hulking brute of a man stands before you.  He wears strong
+looking armor, with the crest of a red dragon on it.  He seems
+very strong and powerful.  He is clean shaven, and very well
+groomed and disciplined.  However, his duty is to protect
+this pagoda, and he is aggravated by your presence. 
+~
+42 402653312 -1000 Y
+52 -30 -3 50d10+6000 5d7+45
+50000 1750000
+8 8 1
+4 0 50d10+400 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11711
+dragon warrior~
+A Dragon Warrior~
+A Dragon Warrior is here gazing at you harshly.
+~
+A large man is here clanking about in some heavy looking
+armor. He bears the crest of a red dragon on it.  He does not
+seem to mind you being here, however, you get the impression
+that he isn't exactly inviting you in either.  You can tell that
+this man is a highly trained warrior, and not someone for the
+average joe to mess around with.
+~
+40 268435584 500 Y
+52 -10 -5 55d5+5555 5d7+35
+25000 1300000
+8 8 1
+4 0 50d10+400 3
+1 2 15 30
+3 7 3 0
+1 2 15 26
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#11712
+master pagoda~
+The Master of the Pagoda~
+A beast of a man in long robes stands here.
+~
+A really huge man strands triumphantly before you.  He
+has a thin moustache that hangs down far past his chin.  He
+wears a long black silk robe that drapes to the ground about him.
+He shows little or no emotion on his face, however, judging
+from the look of this man, you are probably the first 
+contestant that he has seen in quite a while.
+~
+42 402653312 -1000 Y
+60 0 -5 50d10+10000 5d6+100
+500000 1500000
+8 8 1
+4 0 50d10+500 3
+4 1 5 0
+3 2 9 0
+1 3 8 106
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#11713
+tasha weaver~
+Tasha the Weaver~
+Tasha the Weaver is here trying to sell some clothing.
+~
+A dark skinned woman with long black hair sits here with
+here legs crossed.  She is a very maintained woman with
+delicate features.  She wears some fine looking woven
+garments, which she probably made herself judging from
+some of her wares which lie about. 
+~
+10 134219904 0 Y
+60 -25 10 50d50+20000 5d6+100
+500000 1
+8 8 2
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11714
+maia amazon~
+Maia the Amazon~
+Maia the Amazon proudly displays her crafty weapons.
+~
+A tall blonde-haired woman stands before you.  She has
+extremely large muscles and a well defined shape.  She
+is obviously a strong and proud warrior.  Sweat and ash
+runs down her face as she slaves over boiling hot metals
+and pounding out weapons on her anvil.
+~
+10 134219904 0 Y
+60 -25 10 50d50+20000 5d6+100
+500000 1
+8 8 2
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11715
+jaafer jewel merchant~
+Jaafer the Jewel Merchant~
+Jaafer the Jewel Merchant is here showing you some quality rings.
+~
+A short, pot-bellied man is here chatting cheerfully to himself.
+He wears an expensive looking robe and cloak, which clings
+rather tightly to his fat body.  He wears a lot of jewelry, which
+hangs from around his neck, and large gaudy rings on his fingers
+which flash in the flickering candlelight illuminating the store.  
+He looks pleasant enough, but you get the impression he's an
+experienced haggler.
+~
+10 134219904 0 Y
+60 -25 10 50d50+20000 5d6+100
+500000 1
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11716
+morrick enchanter~
+Morrick the Enchanter~
+Morrick the Enchanter is here stirring some strange mixture.
+~
+An extremely old, frail man stands here.  He seems to be
+endlessly picking at some of the magical items he has 
+created, that are now strewn about the shop.  You notice
+he can barely walk, as he slowly limps his way from one
+place to another.  He barely manages to make a smile as
+he notices you glancing at him.
+~
+10 134219904 0 Y
+60 -25 10 50d50+20000 5d6+100
+500000 1
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11717
+woman young lovely~
+A young woman~
+A lovely young woman is here browsing through the plaza.
+~
+You see a young and lively woman.  She has flaming
+red hair, and deep brown eyes.  She smiles happily
+and fixes her long yellow gown.  She is wearing an
+expensive-looking golden necklace and matching
+bracelet. She seems to be enjoying the Plaza.
+~
+8 0 0 Y
+20 15 10 50d10+400 5d7+10
+500 5000
+8 8 2
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11718
+man old proud~
+A proud old man~
+A proud old man is enjoying his day here.
+~
+This old man gazes at you with icy blue eyes.  He has
+perfectly trimmed white hair, and a well groomed 
+beard. His age and wisdom is clearly visible in his
+tanned and weathered face.
+~
+8 0 0 Y
+20 0 10 50d10+500 5d7+10
+500 5000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,469 @@
+#2600
+Mayors Zoo Entrance~
+The generous mayor has donated this zoo to the blood thirsty citizens
+of Midgaard. You can see a petting zoo to the east, there is a path to
+the south, and the nursery is to the west.
+~
+26 4 1
+D0
+Midgaard Park lies to the north of here.~
+~
+0 0 3127
+D1
+~
+~
+0 0 2601
+D2
+~
+~
+0 0 2603
+D3
+~
+~
+0 0 2602
+S
+#2601
+Petting zoo~
+Lots of soft and furry animals live here! You can leave to the west.
+~
+26 8 0
+D3
+~
+~
+0 0 2600
+S
+#2602
+Nursery~
+A nursery for all the little animals! They are so cute! Even the
+dangerous ones are cute!
+~
+26 8 0
+D1
+~
+~
+0 0 2600
+S
+#2603
+Zoo~
+You are on a path in the zoo continuing south. You see a petting zoo to
+the east, there is a path going south, and a nursery to the west.
+~
+26 8 0
+D0
+~
+~
+0 0 2600
+D1
+~
+~
+0 0 2601
+D2
+~
+~
+0 0 2604
+D3
+~
+~
+0 0 2602
+S
+#2604
+Zoo~
+You are on the Mayor's zoo path. You see a canine exhibit to the
+west, an aviary to the east, and the path to the north and south.
+~
+26 8 0
+D0
+~
+~
+0 0 2603
+D1
+~
+~
+0 0 2605
+D2
+~
+~
+0 0 2611
+D3
+~
+~
+0 0 2608
+S
+#2605
+Aviary~
+A large aviary is here, containing birds of all sorts. They can be
+dangerous in groups so be careful!
+~
+26 8 0
+D1
+~
+~
+0 0 2606
+D3
+~
+~
+0 0 2604
+S
+#2606
+Aviary~
+A large aviary is here, containing birds of all sorts. They can be
+dangerous in groups so be careful!
+~
+26 8 0
+D1
+~
+~
+0 0 2607
+D3
+~
+~
+0 0 2605
+S
+#2607
+Aviary~
+You have come to the end of the aviary exhibit. The only exit is to
+the west.
+~
+26 8 0
+D3
+~
+~
+0 0 2606
+S
+#2608
+Canine exhibit~
+This is where the canines are. You can hear their loud barks and 
+howls. You can go east or west.
+~
+26 8 0
+D1
+~
+~
+0 0 2604
+D3
+~
+~
+0 0 2609
+S
+#2609
+Canine exhibit~
+This is where the canines are. You can hear their loud barks and 
+howls. You can go east or west.
+~
+26 8 0
+D1
+~
+~
+0 0 2608
+D3
+~
+~
+0 0 2610
+S
+#2610
+Canine exhibit~
+This is where the canines are. You can hear loud barks coming from everywhere.
+The only exit is to the east.
+~
+26 8 0
+D1
+~
+~
+0 0 2609
+S
+#2611
+New annex path~
+You see more exhibits.  Insects to the east, monkeys to the south and a path
+that continues to the west.
+~
+26 8 0
+D0
+~
+~
+0 0 2604
+D1
+~
+~
+0 0 2612
+D2
+~
+~
+0 0 2615
+D3
+~
+~
+0 0 2618
+S
+#2612
+Insect exhibit~
+This is where the fascinating insect exhibit is. Truly amazing... you
+can go east or west.
+~
+26 8 0
+D1
+~
+~
+0 0 2613
+D3
+~
+~
+0 0 2611
+S
+#2613
+Insect exhibit~
+This is where the fascinating insect exhibit is. Truly amazing... you
+can go east or west.
+~
+26 8 0
+D1
+~
+~
+0 0 2614
+D3
+~
+~
+0 0 2612
+S
+#2614
+Insect exhibit~
+This is where the fascinating insect exhibit is. Truly amazing... you
+can go back to the west.
+~
+26 8 0
+D3
+~
+~
+0 0 2613
+S
+#2615
+Primate exhibit~
+Monkeys, Baboons, Gorillas, a bit of everything. You can go to the north
+and south.
+~
+26 8 0
+D0
+~
+~
+0 0 2611
+D2
+~
+~
+0 0 2616
+S
+#2616
+Primate exhibit~
+Monkeys, Baboons, Gorillas, a bit of everything. You can go to the north
+and south.
+~
+26 8 0
+D0
+~
+~
+0 0 2615
+D2
+~
+~
+0 0 2617
+S
+#2617
+Primate exhibit~
+Monkeys, baboons, and gorillas abound. The only exit is to the north,
+if you make it out alive!
+~
+26 8 0
+D0
+~
+~
+0 0 2616
+S
+#2618
+E-W path~
+A path goes east and west, and to the south is the reptile 
+exhibit. To the north you see the wall of the canine exhibit.
+~
+26 8 0
+D1
+~
+~
+0 0 2611
+D2
+~
+~
+0 0 2619
+D3
+~
+~
+0 0 2622
+S
+#2619
+Mayor's lizard exhibit~
+This is where the mayor's prized lizards are kept. You can go
+either north or south continuing in the exhibit.
+~
+26 8 0
+D0
+~
+~
+0 0 2618
+D2
+~
+~
+0 0 2620
+S
+#2620
+Mayor's lizard exhibit~
+The mayor's prized pythons are some of his favorite pets. There is an
+exit to the north and south.
+~
+26 8 0
+D0
+~
+~
+0 0 2619
+D2
+~
+~
+0 0 2621
+S
+#2621
+Lizard exhibit~
+You have come to the end of the lizard exhibit. The only exit is
+to the north.
+~
+26 8 0
+D0
+~
+~
+0 0 2620
+S
+#2622
+E-W path~
+A path goes east and west, and to the south you see the bear exhibit.
+This section is somewhat less frequented.
+~
+26 8 0
+D1
+~
+~
+0 0 2618
+D2
+~
+~
+0 0 2623
+D3
+~
+~
+0 0 2626
+S
+#2623
+Bear exhibit~
+This is where the bears are. Along the walls are huge claw marks.
+There are exits to the north and south.
+~
+26 8 0
+D0
+~
+~
+0 0 2622
+D2
+~
+~
+0 0 2624
+S
+#2624
+Bear exhibit~
+This is where the bears are. You hear a menacing sound coming from the south.
+There are exits to the south and north.
+~
+26 8 0
+D0
+~
+~
+0 0 2623
+D2
+~
+~
+0 0 2625
+S
+#2625
+Bear exhibit~
+You have reached the end of the exhibit. These grizzlies make you wish
+you were a vegetarian...There is an exit to the north.
+~
+26 8 0
+D0
+~
+~
+0 0 2624
+S
+#2626
+End of the Path~
+The E-W path comes to an abrupt halt here.  To the south you can
+see the feline exhibit.  You can faintly hear a roar in the background!
+~
+26 8 0
+D1
+~
+~
+0 0 2622
+D2
+~
+~
+0 0 2627
+S
+#2627
+Feline exhibit~
+This is where the great cats are. They are fierce and mighty fighters.
+The only exits are to the north and south.
+~
+26 8 0
+D0
+~
+~
+0 0 2626
+D2
+~
+~
+0 0 2628
+S
+#2628
+Feline exhibit~
+This is where the fierce cats are kept. In the corner you see what remains
+of a corpse, but its hard to tell. The only exits are to the north and south.
+~
+26 8 0
+D0
+~
+~
+0 0 2627
+D2
+~
+~
+0 0 2629
+S
+#2629
+Feline exhibit~
+This is where the mayor's prized Bengal tigers are kept. From 
+the looks and sounds of these mighty creatures maybe you'd better
+stick to sightseeing!
+~
+26 8 0
+D0
+~
+~
+0 0 2628
+S
+#2630
+End of path~
+You have come to the western end of the path. The only exit, unfortunately
+is to the east.
+~
+26 8 0
+D1
+~
+~
+0 0 2626
+S
+#0
+$~
+

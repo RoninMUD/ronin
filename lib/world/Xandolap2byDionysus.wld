@@ -1,0 +1,1888 @@
+#19600
+A Ruined Tower~
+This old tower looks as though it were once used as the abode for a person of
+great power.  Perhaps a sorcerer or wizard once made his home in this now 
+crumbling structure.  Cracked wooden tables and basins line the northern wall, and 
+there is still some liquid left in one of the largest basins.  Upon closer 
+examination it appears to be blood, and it seems to still be warm.  Against the 
+west wall lies the remains of a great stone altar.  There seems to be a draft 
+coming from behind the altar.
+~
+196 0 0
+D1
+~
+~
+0 -1 19601
+D3
+~
+~
+0 -1 19599
+S
+#19601
+A Rocky Path~
+This path seems to be continuing towards the great black tower and the two
+ferocious peaks.  To the west there lie the ruins of an ancient tower.  There is
+no longer a roof on this building, and it is far from the most hospitable place
+imaginable.  Nonetheless, there are human tracks leading up to it.
+~
+196 0 0
+D0
+~
+~
+0 -1 19607
+D2
+~
+~
+0 -1 19596
+D3
+~
+~
+0 -1 19600
+S
+#19602
+A Mountain Path~
+This path climbs steeply up into the mountains to the north.  Rocks fall 
+regularly from side to side, and high up the mountain boulders occasionally shift
+ominously.  To the east is a ruined tower, perhaps once an abode for whatever 
+peaceful beings inhabited these mountains.
+~
+196 0 0
+D0
+~
+~
+0 -1 19608
+D1
+~
+~
+0 -1 19603
+D2
+~
+~
+0 -1 19597
+S
+#19603
+A Ruined Tower~
+This tower was once a bastion of original thought in the realm of magic.  One 
+of many mage towers which once dotted these mountains, there is little left to 
+indicate this was ever anything but a crumbling stone structure.  A pentacle, 
+etched into the floor and then filled with molten gold, is all that remains of 
+what must have once been thousands of priceless pieces of magical apparatus.
+~
+196 0 0
+D3
+~
+~
+0 -1 19602
+S
+#19604
+A Dripping Cave~
+At the end of this length of tunnels the rock opens into a large open cave, the 
+constant sound of thick juices dripping from the ceiling echoing throughout.  This
+is a stereotypical lair of a beast, with decaying corpses, picked-clean bones, and
+piles of pungent scat strewn about haphazardly.
+~
+196 0 0
+D2
+~
+~
+0 -1 19598
+S
+#19605
+A Sorcerer's Laboratory~
+Large tomes are strewn about the floor, cryptic symbols scrawled over their 
+pages.  Vials lie about haphazardly, wands and staves lean against dressers and 
+walls.  Plush carpets and pillows make this place appear to be quite the 
+relaxation spot.  Over to one side the carpet is pushed up, and there's a pentacle 
+etched in blood.
+~
+196 0 0
+D0
+~
+~
+0 -1 19610
+D1
+~
+~
+0 -1 19606
+S
+#19606
+The Foyer~
+This room definitely appears to be a foyer, though by definition that's 
+impossible.  An entry room is not something which can exist in a dwelling with no
+entrance.  There's a coat-rack over to one side holding a few long capes and hats, 
+and a plush couch made from the corpse of some enormous and soft beast.
+~
+196 0 0
+D3
+~
+~
+0 -1 19605
+S
+#19607
+A Rocky Path~
+This rocky path continues to the north, leading ever closer to that great black 
+monolith.  The tower seems to throb slightly with darkness.  Above the tower
+clouds roil angrily, and occasionally a bolt of lightning strikes the tower, which
+seems to shimmer with absorbed energy.  The rocks that line the path here are
+sharp and jagged, and made of a glassy black stone. 
+~
+196 0 0
+D0
+~
+~
+0 -1 19612
+D2
+~
+~
+0 -1 19601
+S
+#19608
+A Mountain Path~
+This mountain path curves to the east here, and begins descending towards the
+enormous plain below.  Far off to the north you see a city on a hill, its walls
+impossibly high from this distance.  Moving on the plain below you are massive
+beasts, the size of small towns.  The stones here are round and less jagged than
+in the rocky region to the south.
+~
+196 0 0
+D1
+~
+~
+0 -1 19609
+D2
+~
+~
+0 -1 19602
+S
+#19609
+A Mountain Path~
+This path leads out of the mountains to the north, down through foothills to 
+flatlands.  The flatlands are gentle and rolling, and covered in bright green
+grass that seems out of place in this land of grays and black.  Enormous beasts
+move slowly on the plain, and far in the north a city on a hill can be seen. 
+~
+196 0 0
+D0
+~
+~
+0 -1 19614
+D3
+~
+~
+0 -1 19608
+S
+#19610
+A Clean Prison~
+This is obviously a cell of some sort, as the thick stone walls and barred 
+steel door testify.  But it is a strange cell: comfortable, cushy, and more of a
+retreat than a prison.  A large plush couch sits against one wall, and a rack full
+of spices and dried fruits sits against another.
+~
+196 0 0
+D2
+~
+~
+0 -1 19605
+S
+#19611
+A Rocky Path~
+This rocky path continues to the north, leading ever closer to that great black 
+monolith.  The tower seems to throb slightly with darkness.  Above the tower
+clouds roil angrily, and occasionally a bolt of lightning strikes the tower, which
+seems to shimmer with absorbed energy.  Directly to the north is a narrow pass
+between two tall, terrifying peaks.  
+~
+196 0 0
+D0
+~
+~
+0 -1 19617
+D1
+~
+~
+0 -1 19612
+S
+#19612
+A Rocky Path~
+This rocky path turns to the west here, leading ever closer to that great black 
+monolith.  The tower seems to throb slightly with darkness.  Above the tower
+clouds roil angrily, and occasionally a bolt of lightning strikes the tower, which
+seems to shimmer with absorbed energy.  The rocks that line the path here are
+sharp and jagged, and made of a glassy black stone.  The way north is blocked by
+a monstrous peak rising up abruptly to pierce the sky.   
+~
+196 0 0
+D2
+~
+~
+0 -1 19607
+D3
+~
+~
+0 -1 19611
+S
+#19613
+Foothills~
+These are the foothills of the mountains of Mardok.  Much less dark than the 
+mountains proper, they seem to have resisted some of the taint which has befouled
+the rest of the kingdom.
+~
+196 0 0
+D0
+~
+~
+0 -1 19619
+D1
+~
+~
+0 -1 19614
+S
+#19614
+The Foothills of Mardok~
+These are the foothills of the mountains of Mardok.  Much less dark
+than the mountains proper, they seem like a passable place for a
+picnic.  Excepting the large dark shapes which fly high overhead of
+course.  Further to the north is a large flat plain, with small shapes
+scuttling over it.
+~
+196 0 0
+D0
+~
+~
+0 -1 19620
+D1
+~
+~
+0 -1 19615
+D2
+~
+~
+0 -1 19609
+D3
+~
+~
+0 -1 19613
+S
+#19615
+Foothills~
+These are the foothills of the mountains of Mardok.  Much less dark
+than the mountains proper, they seem like a passable place for a
+picnic.  Excepting the large dark shapes which fly high overhead of
+course.  Further to the north is a large flat plain, with small shapes
+scuttling over it.
+~
+196 0 0
+D0
+~
+~
+0 -1 19621
+D3
+~
+~
+0 -1 19614
+S
+#19616
+The Western Spike~
+This is the western spike of the jaws of death.  Two large jutting
+rocks give the impression of being the maw of a large beast.  The wind
+is ferocious at this height, and you are in constant danger of being
+thrown to your doom.  You have a good view from up here, and can see
+a city far in the distance to the north.
+~
+196 0 0
+D1
+~
+~
+0 -1 19617
+S
+#19617
+In the Jaws of Death~
+Two large rocks jut up on either side of you, creating the
+impression that you are within the maw of a gigantic beast.  To the
+north is a large onyx door, leading into the black tower.  The tower
+is staggeringly high, easily outstripping the highest of the peaks
+in this mountain range.
+
+~
+196 0 0
+D0
+~
+~
+0 -1 19623
+D1
+~
+~
+0 -1 19618
+D2
+~
+~
+0 -1 19611
+D3
+~
+~
+0 -1 19616
+S
+#19618
+The Eastern Spike~
+This is the eastern spike of the jaws of death.  Two large jutting
+rocks give the impression of being the maw of a large beast.  The wind
+is ferocious at this height, and you are in constant danger of being
+thrown to your doom.  You have a good view from up here, and can see
+a city far in the distance to the north.
+~
+196 0 0
+D3
+~
+~
+0 -1 19617
+S
+#19619
+A Flat Plain~
+This large flat plain was most likely formed long ago by a lake
+which collected at the base of the foothills of the mountains of
+Mardok.  Now the water has drained, and green plant matter has grown
+in the rich soil.  The green is a welcome change from the browns,
+blacks and greys which predominate throughout the rest of the land.
+~
+196 0 0
+D0
+~
+~
+0 -1 19625
+D1
+~
+~
+0 -1 19620
+D2
+~
+~
+0 -1 19613
+S
+#19620
+A Flat Plain~
+This large flat plain was most likely formed long ago by a lake
+which collected at the base of the foothills of the mountains of
+Mardok.  Now the water has drained, and green plant matter has grown
+in the rich soil.  The green is a welcome change from the browns,
+blacks and greys which predominate throughout the rest of the land.
+~
+196 0 0
+D0
+~
+~
+0 -1 19626
+D1
+~
+~
+0 -1 19621
+D2
+~
+~
+0 -1 19614
+D3
+~
+~
+0 -1 19619
+S
+#19621
+A Dry Well~
+An old abandoned well sits in the middle of this field.  You can
+see thirty feet down to the bottom, which is dry as a bone.  There are
+a few large skeletons laying at the bottom, and you wonder what
+creature would be idiotic enough to fall down a well.
+~
+196 0 0
+D0
+~
+~
+0 -1 19627
+D2
+~
+~
+0 -1 19615
+D3
+~
+~
+0 -1 19620
+S
+#19622
+The Resting Chamber~
+This cushioned chamber is a place to sit back, relax, and think
+about the horrors which await you within this dark and sinister
+place.  Dark crimson cushions line the floor, and make for a very
+comfortable pit-stop.   
+~
+196 8 0
+D0
+~
+~
+0 -1 19628
+D1
+~
+~
+0 -1 19623
+S
+#19623
+The Entry Chamber~
+You stand within the entry chamber to the dreaded Onyx Citadel.
+Home of dark magic, birthplace for many of the most hideous spells
+and incantations known to the field of wizardry.  The walls shine with
+an almost malignant black gleam, seeming to dare you to wander down
+the twisting corridor to your east.
+~
+196 8 0
+D1
+~
+~
+0 -1 19624
+D2
+~
+~
+0 -1 19617
+D3
+~
+~
+0 -1 19622
+S
+#19624
+An Onyx Passage~
+This slick black passageway radiates evil, a heavy evil which 
+weighs down on your soul.  You can very well imagine losing your mind,
+were you to spend much time within this foul hall.  Far off in the
+distance, echoing off the smooth walls you hear an occasional scream,
+immediately followed by an all too abrupt silence.
+~
+196 8 0
+D0
+~
+~
+0 -1 19630
+D3
+~
+~
+0 -1 19623
+S
+#19625
+A Flat Plain~
+This large flat plain was most likely formed long ago by a lake
+which collected at the base of the foothills of the mountains of
+Mardok.  Now the water has drained, and green plant matter has grown
+in the rich soil.  The green is a welcome change from the browns,
+blacks and greys which predominate throughout the rest of the land.
+~
+196 0 0
+D0
+~
+~
+0 -1 19631
+D1
+~
+~
+0 -1 19626
+D2
+~
+~
+0 -1 19619
+S
+#19626
+A Flat Plain~
+This large flat plain was most likely formed long ago by a lake
+which collected at the base of the foothills of the mountains of
+Mardok.  Now the water has drained, and green plant matter has grown
+in the rich soil.  The green is a welcome change from the browns,
+blacks and greys which predominate throughout the rest of the land.
+~
+196 0 0
+D0
+~
+~
+0 -1 19632
+D1
+~
+~
+0 -1 19627
+D2
+~
+~
+0 -1 19620
+D3
+~
+~
+0 -1 19625
+S
+#19627
+A Flat Plain~
+This large flat plain was most likely formed long ago by a lake
+which collected at the base of the foothills of the mountains of
+Mardok.  Now the water has drained, and green plant matter has grown
+in the rich soil.  The green is a welcome change from the browns,
+blacks and greys which predominate throughout the rest of the land.
+~
+196 0 0
+D2
+~
+~
+0 -1 19621
+D3
+~
+~
+0 -1 19626
+S
+#19628
+A Smoke-Filled Room~
+This room seems to be a laboratory or experimentation room of some
+sort.  It seems whatever the latest experiment was, it went dreadfully
+awry.  The room is filled with a noxious blue smoke, which seems to
+fill your every pore and make you feel wretched through and through.
+~
+196 8 0
+D2
+~
+~
+0 -1 19622
+D5
+~
+~
+0 -1 19634
+S
+#19629
+A Twisting Staircase~
+This wide twisting staircase is directly in the center of the onyx
+citadel.  Situated so that you are walking with your right arm facing
+in towards the wall, you do not fail to notice the advantage this
+would yield a defender, trying to poke down at you from above with a
+sword.  Then again, you have a strange feeling the residents of this
+tower have no need for swords.
+~
+196 8 0
+D0
+~
+~
+0 -1 19635
+D4
+~
+~
+0 -1 19641
+S
+#19630
+An Onyx Passage~
+This slick black passageway radiates evil, a heavy evil which 
+weighs down on your soul.  You can very well imagine losing your mind,
+were you to spend much time within this foul hall.  Far off in the
+distance, echoing off the smooth walls you hear an occasional scream,
+immediately followed by an all too abrupt silence.
+~
+196 8 0
+D0
+~
+~
+0 -1 19636
+D2
+~
+~
+0 -1 19624
+S
+#19631
+A Flat Plain~
+This large flat plain was most likely formed long ago by a lake
+which collected at the base of the foothills of the mountains of
+Mardok.  Now the water has drained, and green plant matter has grown
+in the rich soil.  The green is a welcome change from the browns,
+blacks and greys which predominate throughout the rest of the land.
+~
+196 0 0
+D2
+~
+~
+0 -1 19625
+S
+#19632
+A Salt Plateau~
+This large plateau stands above the flat plain you had been 
+wandering.  Covered in a thick and solid layer of salt, you have
+trouble keeping your footing.  To the north you see a forbidding city
+wall, and a large gate which stands open.  That the inhabitants of this
+city don't fear the creatures dwelling around it enough to keep the
+gate closed sends a shiver down your spine.
+~
+196 0 0
+D0
+~
+~
+0 -1 19702
+D2
+~
+~
+0 -1 19626
+S
+#19633
+A Flat Plain~
+This large flat plain was most likely formed long ago by a lake
+which collected at the base of the foothills of the mountains of
+Mardok.  Now the water has drained, and green plant matter has grown
+in the rich soil.  The green is a welcome change from the browns,
+blacks and greys which predominate throughout the rest of the land.
+~
+196 0 0
+S
+#19634
+A Dank Pit~
+This deep pit has the foul stench of garbage permeating it.  You
+are beginning to try to determine the best way out of this trash pit,
+when suddenly you hear a deep-throated growl come from a darkened
+corner.
+~
+196 8 0
+D4
+~
+~
+0 -1 19628
+S
+#19635
+Outside the Stairwell~
+This small chamber leads into the twisting onyx stairwell which
+will lead you further within the citadel.  The screams and moans are
+louder at this point, and most of them seem to be focused from the top
+level of the tower.
+~
+196 8 0
+D1
+~
+~
+0 -1 19636
+D2
+~
+~
+0 -1 19629
+S
+#19636
+A Turn in the Onyx Passage~
+This slick black passageway radiates evil, a heavy evil which 
+weighs down on your soul.  You can very well imagine losing your mind,
+were you to spend much time within this foul hall.  Far off in the
+distance, echoing off the smooth walls you hear an occasional scream,
+immediately followed by an all too abrupt silence.
+~
+196 8 0
+D2
+~
+~
+0 -1 19630
+D3
+~
+~
+0 -1 19635
+S
+#19637
+A Decompression Chamber~
+As you enter this chamber, the two sealed doors on either side of
+you hiss shut and you feel the air rapidly rush out of the room.
+Strangely, you can still breath, although what you are breathing feels
+rather thick and strangely sweet, compared to the banal taste of
+normal oxygen.
+~
+196 8 0
+D0
+~
+~
+0 -1 19640
+D1
+~
+~
+0 -1 19638
+S
+#19638
+An Ether-Filled Room~
+This room is filled entirely with ether, a heavy, liquid air.
+Strange creatures seem to fade in and out of existence in the room,
+moving rapidly between various planes of being.  You now realize why
+the many magical wards were in place, both to keep the ether from
+flooding the rest of the citadel, and also to keep some of these more
+dangerous creatures from taking their run of the place.
+~
+196 8 0
+D1
+~
+~
+0 -1 19639
+D3
+~
+~
+0 -1 19637
+S
+#19639
+Certain Death~
+I don't think this room name could have been much more obvious.  As
+you step through the door, you find yourself whisked through the ether
+to various other realms.  After catching fleeting glimpses of what can
+only be described as heavenly spheres, you find yourself within a deep
+and empty vacuum.  Your breathing is immediately arrested, and as you
+change from flesh-tone to pink to red to purple to blue, you realize
+what a foolish mistake it was not to have checked the exits before
+blindly stumbling ahead.
+~
+196 10 0
+D3
+~
+~
+0 -1 19638
+S
+#19640
+A Sealed Room~
+This room is totally empty.  The only thing worth commenting on are
+the large magical wards on both the eastern and southern walls,
+serving as both doors and barriers for whatever may lay on the other
+side.
+~
+196 8 0
+D1
+~
+~
+0 -1 19641
+D2
+~
+~
+0 -1 19637
+S
+#19641
+A Twisting Staircase~
+This wide twisting staircase is directly in the center of the onyx
+citadel.  Situated so that you are walking with your right arm facing
+in towards the wall, you do not fail to notice the advantage this
+would yield a defender, trying to poke down at you from above with a
+sword.  Then again, you have a strange feeling the residents of this
+tower have no need for swords.
+~
+196 8 0
+D0
+~
+~
+0 -1 19644
+D1
+~
+~
+0 -1 19642
+D3
+~
+~
+0 -1 19640
+D4
+~
+~
+0 -1 19650
+D5
+~
+~
+0 -1 19629
+S
+#19642
+A Small Ante-Chamber~
+This small room leads to a door.  What lies on the other side of
+that door is a complete mystery, and the room's contents give no
+hints.  A Spartan decor, all that serves as furniture are two wooden
+backed chairs, a low hand-hewn table and a muslin rug.
+~
+196 8 0
+D0
+~
+~
+0 -1 19645
+D3
+~
+~
+0 -1 19641
+S
+#19643
+A Sulfur-Filled Laboratory~
+This laboratory is filled with the noxious scent of rotten eggs.
+Yellow sulfur smoke rises from a boiling beaker on a table to one side
+of the room.  It seems whoever was conducting an experiment here was
+called away too hastily to be able to put away their project, or even
+put the burner out.
+~
+196 8 0
+D1
+~
+~
+0 -1 19644
+S
+#19644
+A Small-Ante Chamber~
+This small room leads to a door.  What lies on the other side of
+that door is a complete mystery, and the room's contents give no
+hints.  A Spartan decor, all that serves as furniture are two wooden
+backed chairs, a low hand-hewn table and a muslin rug.
+~
+196 8 0
+D2
+~
+~
+0 -1 19641
+D3
+~
+~
+0 -1 19643
+S
+#19645
+A Laboratory~
+This laboratory shows signs of a hasty departure.  Beakers still
+full to the brim with strange coloured concoctions, books open to
+random pages, papers strewn about haphazardly, all these things lead
+you to believe that whoever was conduction research in this room was
+called away rather quickly.
+~
+196 8 0
+D2
+~
+~
+0 -1 19642
+S
+#19646
+Autumn~
+A room of ever swirling reds, yellows, and oranges, the smell of
+fallen leaves fills your nostrils.  It is hard to make out the floor
+through the thick layer of leaves, and at times you wonder if there
+is indeed a floor below you, or if you are suspended in a void by
+this dainty layer of fallen life.
+~
+196 8 0
+D0
+~
+~
+0 -1 19649
+S
+#19647
+A Frozen Glade~
+This glade probably carries an abundance of life during the more
+lively months, but right now it is coated in a thick blanket of white
+snow.  The drifts pile high in places, higher than you stand, and in
+the center of the glade stands a large happy snowman, twice the height
+of a normal man, and with a large corncob pipe in his mouth.
+~
+196 8 0
+D0
+~
+~
+0 -1 19650
+D1
+~
+~
+0 -1 19648
+S
+#19648
+Winter~
+Cold.  Freezing.  White.  The flurries of snow pound into your skull,
+driving home the sensation of a complete lack of heat.  Nothing you can
+imagine could be so horrible as this endless, burning cold.  Your body
+begins to feel peaceful, and you know that if you do not leave soon,
+you will fall asleep, never to awaken.
+~
+196 8 0
+D3
+~
+~
+0 -1 19647
+S
+#19649
+An Orange Wood~
+This happy forest is full of the transition of life.  The old leaves
+are being shed, to make way for new green life.  The never-ending circle
+continues in front of your eyes, and you cannot help but be filled
+with a profound sense of right as you gaze into this change.  A
+gargantuan oak, easily three times larger than any you have ever seen,
+stands in the middle of the grove, large burls jutting out, seeming
+to taunt you.
+~
+196 8 0
+D1
+~
+~
+0 -1 19650
+D2
+~
+~
+0 -1 19646
+S
+#19650
+A Twisting Staircase~
+This wide twisting staircase is directly in the center of the onyx
+citadel.  Situated so that you are walking with your right arm facing
+in towards the wall, you do not fail to notice the advantage this
+would yield a defender, trying to poke down at you from above with a
+sword.  Then again, you have a strange feeling the residents of this
+tower have no need for swords.
+~
+196 8 0
+D0
+~
+~
+0 -1 19653
+D1
+~
+~
+0 -1 19651
+D2
+~
+~
+0 -1 19647
+D3
+~
+~
+0 -1 19649
+D4
+~
+~
+0 -1 19659
+D5
+~
+~
+0 -1 19641
+S
+#19651
+A Sunny Field~
+A thick carpet of green covers this landscape, and all that you
+wish to do is to lie down in its comfort and go to sleep for a long,
+long time.  A large hillock rises up to the north, and a thick patch
+of grass covers its southern most side in an odd, rectangular pattern.
+~
+196 8 0
+D0
+~
+~
+0 -1 19654
+D3
+~
+~
+0 -1 19650
+S
+#19652
+Spring~
+Flowers.  Life.  Beauty.  Everything seems to be springing up at once,
+all your hopes rise up within you, straining to be free, to let
+themselves be realized in this new and glorious world.  The chirping
+of birds fills your ears, and you realize that there is no sound quite
+as sweet.
+~
+196 8 0
+D1
+~
+~
+0 -1 19653
+S
+#19653
+A Flowery Garden~
+This garden has almost every flower you can imagine within its
+scope.  Stretching out nearly as far as you can see in every direction,
+the fragrance of these bouquets is nearly enough to knock you off your
+feet.  In the center of the garden is a gigantic sunflower, which seems
+to call to you.
+~
+196 8 0
+D2
+~
+~
+0 -1 19650
+D3
+~
+~
+0 -1 19652
+S
+#19654
+Summer~
+Warmth beats down on you from all directions.  Everything seems at
+peace in this glorious world.  It is as though time is standing still,
+waiting for you to soak in enough joy to take you through the rest of
+your life without any complications.
+~
+196 8 0
+D2
+~
+~
+0 -1 19651
+S
+#19655
+A Laboratory~
+This is one of the only laboratories you have ever seen which does
+not look as though a hurricane had recently made its way through.
+Everything is neatly organized and catalogued, with tiny little runic
+inscriptions describing each vial, book or scrap of parchment.  It 
+seems as though within this tiny room lie all the spell components
+necessary to cast any spell any mage could possibly need.  Quite
+surprising.
+~
+196 520 0
+D0
+~
+~
+0 -1 19658
+D1
+~
+~
+0 -1 19656
+S
+#19656
+Nil's Private Quarters~
+These are the private quarters of Nil, dark sorcerer of Xandolap,
+apprentice to the Dark Lord himself.  It was through Nil's careful
+research that the forces of darkness were able to hold open the portal
+to this world and bring their evil army through.  This citadel, it is
+said, was built in honor of Nil's accomplishment, using onyx mined by
+the previous wizards who dwelt within this mountain range.  It is also
+said that none survived the arduous task of lifting the final blocks
+to the highest levels of the tower.
+~
+196 520 0
+D1
+~
+~
+0 -1 19657
+D3
+~
+~
+0 -1 19655
+S
+#19657
+A Dark Vault~
+This vault is made of a cold metallic substance, which seems
+impervious to both natural weapons and the forces of magic.  It is here
+that Nil keeps his most prized possessions and magical ingredients.
+~
+196 8 0
+D3
+~
+~
+0 -1 19656
+S
+#19658
+A Study~
+This large room consists of nothing more than a gigantic oaken
+table, with a few large scrolls held open on its surface by some
+mysterious force.  A fireplace sits unlit against one wall, and a
+bear rug sits on the floor, warming your feet.
+~
+196 520 0
+D0
+~
+~
+0 -1 19661
+D2
+~
+~
+0 -1 19655
+S
+#19659
+A Twisting Staircase~
+This wide twisting staircase is directly in the center of the onyx
+citadel.  Situated so that you are walking with your right arm facing
+in towards the wall, you do not fail to notice the advantage this
+would yield a defender, trying to poke down at you from above with a
+sword.  Then again, you have a strange feeling the residents of this
+tower have no need for swords.
+~
+196 8 0
+D1
+~
+~
+0 -1 19660
+D5
+~
+~
+0 -1 19650
+S
+#19660
+An Onyx Passageway~
+This slick black passageway radiates evil, a heavy evil which 
+weighs down on your soul.  You can very well imagine losing your mind,
+were you to spend much time within this foul hall.  Far off in the
+distance, echoing off the smooth walls you hear an occasional scream,
+immediately followed by an all too abrupt silence.
+~
+196 8 0
+D0
+~
+~
+0 -1 19663
+D3
+~
+~
+0 -1 19659
+S
+#19661
+A Library~
+The walls in this room are lined with books.  Book after book, with
+cryptic titles in both languages known and unknown to you.  Some are
+bound in paper, some papyrus, some dried human flesh.  Some are long
+and thick, some small and skinny, others are simply rolled scrolls,
+bound with a crimson ribbon.  You feel as though you could get lost
+within this vast repository of knowledge, spending years just trying
+to sort through the many titles.
+~
+196 8 0
+D1
+~
+~
+0 -1 19662
+D2
+~
+~
+0 -1 19658
+S
+#19662
+A Sitting Room~
+Three large plush chairs sit around a warm and cozy fireplace.  A
+table between them holds a large decanter of brandy and three small
+snifters.  This seems to be a room for socializing, though what the
+evil inhabitants of this vile place could possibly discuss within
+these walls is enough to make your skin crawl.
+~
+196 8 0
+D1
+~
+~
+0 -1 19663
+D3
+~
+~
+0 -1 19661
+S
+#19663
+An Onyx Passageway~
+This slick black passageway radiates evil, a heavy evil which 
+weighs down on your soul.  You can very well imagine losing your mind,
+were you to spend much time within this foul hall.  Far off in the
+distance, echoing off the smooth walls you hear an occasional scream,
+immediately followed by an all too abrupt silence.
+~
+196 8 0
+D2
+~
+~
+0 -1 19660
+D3
+~
+~
+0 -1 19662
+S
+#19664
+A Frothing Ocean~
+The sea is rough here, as though some force which may not be named
+were trying to keep you from traveling any further.  In some
+directions the sea is too rough even to imagine traveling to, and it
+is there that the effective border of this strange land would be
+placed, were anyone to foolishly attempt to map the entire region.
+~
+196 4 0
+D0
+~
+~
+0 -1 19670
+D1
+~
+~
+0 -1 19665
+D3
+~
+~
+0 -1 19512
+S
+#19665
+A Frothing Ocean~
+The sea is rough here, as though some force which may not be named
+were trying to keep you from traveling any further.  In some
+directions the sea is too rough even to imagine traveling to, and it
+is there that the effective border of this strange land would be
+placed, were anyone to foolishly attempt to map the entire region.
+~
+196 4 0
+D0
+~
+~
+0 -1 19671
+D1
+~
+~
+0 -1 19666
+D3
+~
+~
+0 -1 19664
+S
+#19666
+The Island of Ignar~
+The thick black loam which covers this island makes a soft
+squishing noise with each step you take.  Their are small groves of
+tall, pale trees all around you, breaking at the shoreline.  Something
+about the trees seems sinister, as though they were watching each move
+you make.
+~
+196 0 0
+D0
+~
+~
+0 -1 19672
+D1
+~
+~
+0 -1 19667
+D3
+~
+~
+0 -1 19665
+S
+#19667
+Dense Undergrowth~
+You find it difficult to move in this dense undergrowth.  Large
+plants unlike any you've ever seen block your way at every turn.  Some
+appear to be standard green vegetation, yet are incredibly thick and
+strong, impervious even to your sword blows.  Others are flowers of
+impossible hues, letting off an odor which can only be described as
+exquisite.  You are about to step closer to sniff one when an unlucky
+boar beats you to it.  The plant quickly opens, releases small tendrils
+and draws the helpless beast into its gaping maw.
+~
+196 0 0
+D0
+~
+~
+0 -1 19673
+D1
+~
+~
+0 -1 19668
+D3
+~
+~
+0 -1 19666
+S
+#19668
+Dense Undergrowth~
+You find it difficult to move in this dense undergrowth.  Large
+plants unlike any you've ever seen block your way at every turn.  Some
+appear to be standard green vegetation, yet are incredibly thick and
+strong, impervious even to your sword blows.  Others are flowers of
+impossible hues, letting off an odor which can only be described as
+exquisite.  You are about to step closer to sniff one when an unlucky
+boar beats you to it.  The plant quickly opens, releases small tendrils
+and draws the helpless beast into its gaping maw.
+~
+196 0 0
+D1
+~
+~
+0 -1 19669
+D3
+~
+~
+0 -1 19667
+S
+#19669
+A Secluded Beach~
+This beach is small, but immensely more peaceful than the rest of
+the island.  The small scurrying creatures are not present here, giving
+you a moment to gather your thoughts and relax.  The sand crunches
+softly beneath your boots, and you are mentally whisked away to
+happier times spent with friends cavorting on the Sea of Love.
+
+~
+196 0 0
+D0
+~
+~
+0 -1 19675
+D3
+~
+~
+0 -1 19668
+S
+#19670
+A Frothing Ocean~
+The sea is rough here, as though some force which may not be named
+were trying to keep you from traveling any further.  In some
+directions the sea is too rough even to imagine traveling to, and it
+is there that the effective border of this strange land would be
+placed, were anyone to foolishly attempt to map the entire region.
+~
+196 4 0
+D0
+~
+~
+0 -1 19676
+D1
+~
+~
+0 -1 19671
+D2
+~
+~
+0 -1 19664
+D3
+~
+~
+0 -1 19518
+S
+#19671
+A Frothing Ocean~
+The sea is rough here, as though some force which may not be named
+were trying to keep you from traveling any further.  In some
+directions the sea is too rough even to imagine traveling to, and it
+is there that the effective border of this strange land would be
+placed, were anyone to foolishly attempt to map the entire region.
+~
+196 4 0
+D0
+~
+~
+0 -1 19677
+D1
+~
+~
+0 -1 19672
+D2
+~
+~
+0 -1 19665
+D3
+~
+~
+0 -1 19670
+S
+#19672
+The Island of Ignar~
+The thick black loam which covers this island makes a soft
+squishing noise with each step you take.  Their are small groves of
+tall, pale trees all around you, breaking at the shoreline.  Something
+about the trees seems sinister, as though they were watching each move
+you make.
+~
+196 0 0
+D0
+~
+~
+0 -1 19678
+D1
+~
+~
+0 -1 19673
+D2
+~
+~
+0 -1 19666
+D3
+~
+~
+0 -1 19671
+S
+#19673
+A Clear Pool~
+This clear forest pool is the only source of fresh water you've
+seen during your journey through this kingdom.  It seems to be fed from
+an underground spring of some sort.  The water is perfectly clear and
+still, and you can see down almost 20 feet before it terminates in a
+solid rock bottom.  Something about this scene is so serene you feel
+as though perhaps you are no longer in a land of darkness.
+~
+196 8260 0
+D2
+~
+~
+0 -1 19667
+D3
+~
+~
+0 -1 19672
+S
+#19674
+The Shaman's Hut~
+This dark hut reeks of sulfur and herbs.  You see a myriad of
+different plants hanging from the rafters to dry, some of which look
+more like monsters than plants.  There are jars with various animal
+parts and pickled remains lining the walls, each labeled in some odd,
+vaguely disturbing script.  There is an ornately woven rug covering
+most of the floor, though it bumps up oddly near the middle.
+~
+196 8 0
+D0
+~
+~
+0 -1 19680
+D5
+~
+~
+0 -1 19699
+S
+#19675
+A Frothing Ocean~
+The sea is rough here, as though some force which may not be named
+were trying to keep you from traveling any further.  In some
+directions the sea is too rough even to imagine traveling to, and it
+is there that the effective border of this strange land would be
+placed, were anyone to foolishly attempt to map the entire region.
+~
+196 4 0
+D0
+~
+~
+0 -1 19681
+D2
+~
+~
+0 -1 19669
+S
+#19676
+A Frothing Ocean~
+The sea is rough here, as though some force which may not be named
+were trying to keep you from traveling any further.  In some
+directions the sea is too rough even to imagine traveling to, and it
+is there that the effective border of this strange land would be
+placed, were anyone to foolishly attempt to map the entire region.
+~
+196 4 0
+D1
+~
+~
+0 -1 19677
+D2
+~
+~
+0 -1 19670
+S
+#19677
+The Island of Ignar~
+The thick black loam which covers this island makes a soft
+squishing noise with each step you take.  Their are small groves of
+tall, pale trees all around you, breaking at the shoreline.  Something
+about the trees seems sinister, as though they were watching each move
+you make.
+~
+196 0 0
+D0
+~
+~
+0 -1 19683
+D1
+~
+~
+0 -1 19678
+D2
+~
+~
+0 -1 19671
+D3
+~
+~
+0 -1 19676
+S
+#19678
+The Island of Ignar~
+The thick black loam which covers this island makes a soft
+squishing noise with each step you take.  Their are small groves of
+tall, pale trees all around you, breaking at the shoreline.  Something
+about the trees seems sinister, as though they were watching each move
+you make.
+~
+196 0 0
+D0
+~
+~
+0 -1 19684
+D2
+~
+~
+0 -1 19672
+D3
+~
+~
+0 -1 19677
+S
+#19679
+A Dwelling Hut~
+This small filthy hut could only be the dwelling place for an
+inhabitant of the village.  There is a refuse heap in one corner,
+letting off a stench as foul as you had ever imagined.  Bones still
+grasping on to their tendonous old friends lie at a heap near your
+feet.
+~
+196 9 0
+D0
+~
+~
+0 -1 19685
+S
+#19680
+A Cleared Path~
+A path has been painstakingly cut through the thick underbrush
+here, leaving bare, hard-packed dirt underneath.  The path leads
+through a village of some sort.  Not a civilized village in the least,
+bones and rotting fruit litter the path, and the dwellings are merely
+bits of sticks propped against one another in a haphazard fashion.
+~
+196 0 0
+D0
+~
+~
+0 -1 19686
+D1
+~
+~
+0 -1 19681
+D2
+~
+~
+0 -1 19674
+S
+#19681
+A Frothing Ocean~
+The sea is rough here, as though some force which may not be named
+were trying to keep you from traveling any further.  In some
+directions the sea is too rough even to imagine traveling to, and it
+is there that the effective border of this strange land would be
+placed, were anyone to foolishly attempt to map the entire region.
+~
+196 4 0
+D2
+~
+~
+0 -1 19675
+D3
+~
+~
+0 -1 19680
+S
+#19682
+A Dense Path~
+The path here once again becomes overgrown, though this time is
+seems less random and natural, and more as though the hand of man (or
+some sort of intelligent humanoid) were involved.  The trees seem to
+almost twist in front of you to impede your progress towards a large,
+thatched building, with smoke rising from a central hole.
+~
+196 0 0
+D0
+~
+~
+0 -1 19687
+D1
+~
+~
+0 -1 19683
+S
+#19683
+A Cleared Path~
+A path has been painstakingly cut through the thick underbrush
+here, leaving bare, hard-packed dirt underneath.  The path leads
+through a village of some sort.  Not a civilized village in the least,
+bones and rotting fruit litter the path, and the dwellings are merely
+bits of sticks propped against one another in a haphazard fashion.
+~
+196 0 0
+D0
+~
+~
+0 -1 19688
+D1
+~
+~
+0 -1 19684
+D2
+~
+~
+0 -1 19677
+D3
+~
+~
+0 -1 19682
+S
+#19684
+A Cleared Path~
+A path has been painstakingly cut through the thick underbrush
+here, leaving bare, hard-packed dirt underneath.  The path leads
+through a village of some sort.  Not a civilized village in the least,
+bones and rotting fruit litter the path, and the dwellings are merely
+bits of sticks propped against one another in a haphazard fashion.
+~
+196 0 0
+D0
+~
+~
+0 -1 19689
+D1
+~
+~
+0 -1 19685
+D2
+~
+~
+0 -1 19678
+D3
+~
+~
+0 -1 19683
+S
+#19685
+A Cleared Path~
+A path has been painstakingly cut through the thick underbrush
+here, leaving bare, hard-packed dirt underneath.  The path leads
+through a village of some sort.  Not a civilized village in the least,
+bones and rotting fruit litter the path, and the dwellings are merely
+bits of sticks propped against one another in a haphazard fashion.
+~
+196 0 0
+D0
+~
+~
+0 -1 19690
+D1
+~
+~
+0 -1 19686
+D2
+~
+~
+0 -1 19679
+D3
+~
+~
+0 -1 19684
+S
+#19686
+The Village Center~
+This is the center of whatever sort of settlement you've stumbled
+into.  There is a large communal fire-pit in the middle of a circle of
+stones, and a makeshift roof of long leaves protects the circle in
+case of unfavorable weather conditions.
+~
+196 0 0
+D2
+~
+~
+0 -1 19680
+D3
+~
+~
+0 -1 19685
+S
+#19687
+The Chieftain's Hut~
+This is the largest structure on the island, and you can only
+assume it is the dwelling place of the most powerful creature on the
+island.  A large dresser sits against one wall, with an old battered
+brass mirror on it.  There is also a plush bed, made from the down of
+some enormous bird.  All in all, it looks like a more comfortable room
+than you would expect in a place such as this.
+~
+196 9 0
+D2
+~
+~
+0 -1 19682
+S
+#19688
+A Dwelling Hut~
+This small filthy hut could only be the dwelling place for an
+inhabitant of the village.  There is a refuse heap in one corner,
+letting off a stench as foul as you had ever imagined.  Bones still
+grasping on to their tendonous old friends lie at a heap near your
+feet.
+~
+196 9 0
+D2
+~
+~
+0 -1 19683
+S
+#19689
+A Holy Clearing~
+This large clearing seems unnatural in the middle of the thick
+bushes, but you see no evidence of any deforestation.  Instead, it
+appears as though some enormous object made contact with the ground
+here, crushing down all vegetation, and eventually killing it, only
+to vanish from whence it came.  A large totem pole sits in the middle
+of the clearing, depicting what you can only imagine are the hideous
+gods of this people.
+~
+196 8708 0
+D2
+~
+~
+0 -1 19684
+D5
+~
+~
+0 -1 19691
+S
+#19690
+A Dwelling Hut~
+This small filthy hut could only be the dwelling place for an
+inhabitant of the village.  There is a refuse heap in one corner,
+letting off a stench as foul as you had ever imagined.  Bones still
+grasping on to their tendonous old friends lie at a heap near your
+feet.
+~
+196 0 0
+D2
+~
+~
+0 -1 19685
+S
+#19691
+Beneath the Clearing~
+You walk down a long staircase, carved into the living rock by some
+force greater than man, and find yourself in a room lit only by a
+phosphorescent moss which lines the walls.  There is a large stone
+archway which leads into a tunnel to the south.
+~
+196 521 0
+D2
+~
+~
+0 -1 19693
+D4
+~
+~
+0 -1 19689
+S
+#19692
+A Dark Network of Tunnels~
+You find it hard to keep your bearings in these tunnels, they all
+look so very similar.  Definitely not naturally occurring, the tunnel
+itself is a perfect cylinder, and carved as it is from a marblesque
+stone, you find it incredibly difficult to keep your balance.
+~
+196 521 0
+D1
+~
+~
+0 -1 19693
+D2
+~
+~
+0 -1 19696
+S
+#19693
+A Dark Network of Tunnels~
+You find it hard to keep your bearings in these tunnels, they all
+look so very similar.  Definitely not naturally occurring, the tunnel
+itself is a perfect cylinder, and carved as it is from a marblesque
+stone, you find it incredibly difficult to keep your balance.
+~
+196 521 0
+D0
+~
+~
+0 -1 19691
+D1
+~
+~
+0 -1 19694
+D3
+~
+~
+0 -1 19692
+S
+#19694
+A Dark Network of Tunnels~
+You find it hard to keep your bearings in these tunnels, they all
+look so very similar.  Definitely not naturally occurring, the tunnel
+itself is a perfect cylinder, and carved as it is from a marblesque
+stone, you find it incredibly difficult to keep your balance.
+~
+196 521 0
+D2
+~
+~
+0 -1 19697
+D3
+~
+~
+0 -1 19693
+S
+#19695
+The Elder's Lair~
+This dark room smells of mildew and copper.  The remnants of some
+sort of odd metal boat lie in one corner of the room.  In the center is
+an enormous amphibious creature, whose gigantic eyes convey the worst
+sort of sentience.  There is no sound in the room except your small
+movements.  Fear grips you.
+~
+196 521 0
+D1
+~
+~
+0 -1 19696
+S
+#19696
+A Torchlit Room~
+This room fills you with a deep sense of regret that you ever made
+the voyage down those stairs.  The walls have all manner of obscene
+runes carved in them, and blood stains the floor and walls with a deep
+crimson hue.  There is an enormous stone altar in the center of the
+room, with heavy chains laying in wait to strap down the next
+sacrifice.
+~
+196 521 0
+D0
+~
+~
+0 -1 19692
+D3
+~
+~
+0 -1 19695
+S
+#19697
+A Dark Network of Tunnels~
+You find it hard to keep your bearings in these tunnels, they all
+look so very similar.  Definitely not naturally occurring, the tunnel
+itself is a perfect cylinder, and carved as it is from a marblesque
+stone, you find it incredibly difficult to keep your balance.
+~
+196 521 0
+D0
+~
+~
+0 -1 19694
+D1
+~
+~
+0 -1 19698
+S
+#19698
+The Room of the Guardian~
+This room is devoid of the glowing mosses which have lit your
+underground journey thus far.  Instead there is a thick layer of what
+appears to be platinum against every wall.  Against the south wall is
+a door of some sort, and standing in front of that door is a large,
+slavering beast.
+~
+196 521 0
+D2
+~
+~
+0 -1 19699
+D3
+~
+~
+0 -1 19697
+S
+#19699
+A Holy Place~
+The holiest of holies for the amphibious Shantak, this room is
+completely empty except for a large pulsating stone in the center.  The
+stone glows with an unearthly light, and the metallic substances
+imbedded within it are unknown to you.  Something about the room seems
+to call to the darkest part of your soul, begging you to let it free,
+to give it reign over your actions entirely and slay those with you
+who fail to see the beauty of the dark.
+~
+196 525 0
+D0
+~
+~
+0 -1 19698
+D4
+~
+~
+0 -1 19674
+S
+#0
+$~

@@ -1,0 +1,1295 @@
+#1000
+Entrance to the land of the Vikings~~
+Covered in snow, this land shows its hostility with its cold and harsh winds,
+its giant mountains covered in snow all year round, and many frozen lakes.
+The only existing clue that there are lifeforms here, are some footprints
+on the ground, soon to be snowed down and covered by mother nature.
+~~
+10 4 3
+D0
+~~
+~~
+0 -1 1001
+E
+mountain mountains~~
+The mountains are big, very big, and the wind blows all year round
+there. No creature can live in such environments.
+~~
+E
+footprints~~
+The footprints look like they've been made by a human, but are only
+barely visible to the human eye, because of the snow rapidly
+covering them.
+~~
+S
+#1001
+Path through the cold mountains~~
+The path is entering a valley, with high mountains on each side, making
+it impossible to travel any other way than nature intended. The valley
+was made millions of years ago, when the ice covered the land. Huge
+boulders are scattered throughout the valley, but a nice path is made
+so that creatures can be able to travel within the realm. The path
+itself is covered in snow, so its easy to find your way.
+~~
+10 0 5
+D0
+~~
+~~
+0 -1 1002
+D2
+~~
+~~
+0 -1 1000
+E
+boulder boulders rock rocks~~
+The rocks are in all shapes and sizes.
+~~
+S
+#1002
+Path through the cold mountains~~
+The snow is not so deep here. There are heavy winds blowing on the peaks, and
+fine powdered snow is blowing down from the cliffsides. The raging wind is
+howling through this desolate landscape.
+~~
+10 0 5
+D0
+~~
+~~
+0 -1 1003
+D2
+~~
+~~
+0 -1 1001
+S
+#1003
+Path through the cold mountains~~
+The snow covers the air as fine white powder is falling from the majestic
+peaks towards the ground. Cold, yes, but one of nature's most enjoyable 
+views when there is time to stop and behold it all. The path is covered with
+more snow, and the footprints are faintly noticable on the ground.
+~~
+10 0 5
+D0
+~~
+~~
+0 -1 1004
+D2
+~~
+~~
+0 -1 1002
+S
+#1004
+Path through the cold mountains ~~
+Snow is still falling down, but the wind is not so harsh. This mainly because
+the cliff to the north is closing in, and the wind is stopped by the mountain
+sides. The footprints are still very dim.
+~~
+10 0 5
+D0
+~~
+~~
+0 -1 1007
+D2
+~~
+~~
+0 -1 1003
+S
+#1005
+On the way to Jotunheimen~~
+Enourmous mountains begin to appear in front of you. There is not much
+to look at, mostly white, white, and even more white snow. The contrast
+against the sky is overwhelming, and the mountains come closer and closer.
+The path leads towards a black spot at the base of the mountain.
+~~
+10 0 5
+D3
+~~
+~~
+0 -1 1014
+E
+spot~~
+Looks like a cave entrance, but it is now blocked by huge rocks.
+~~
+S
+#1006
+Snorre~~
+invalid~~
+10 0 5
+S
+#1007
+Surrounded by mountains~~
+Some footprints are covering the snow. A couple of leftovers have been
+discarded here by some campers a long time ago: Some bones, and soot from
+a fire. A strong rope is hanging down from the summit above. A couple of 
+strong hands, and a light body is prefered to get further. The rope
+stretches for about 30 feet.
+~~
+10 0 0
+D2
+~~
+~~
+0 -1 1004
+D4
+~~
+rope~~
+11 -1 1008
+S
+#1008
+Climbing on the mountain wall~~
+The rope is stretched to its limit. The old rope makes strange
+noises when climbed. A few feet off the ground, and a few
+more feet to the end of the rope.
+~~
+10 0 5
+D4
+~~
+rope~~
+11 -1 1009
+D5
+~~
+rope~~
+11 -1 1007
+S
+#1009
+The end of the rope~~
+Standing on the top of the mountain, a spectacular view of white peaks is covering
+the horizon. A large tree stands tall below a great peak. 
+Down below there are 3 valleys, one is towards the fjord, the other more to the
+west, and the third lays even beyond in the western horizon. What fills the landscape, is 
+mountain, mountain, and even more mountain. But a forest is also present, and
+a river runs by it.
+~~
+10 0 5
+D0
+~~
+~~
+0 -1 1010
+D5
+~~
+rope~~
+11 -1 1008
+S
+#1010
+Following the path~~
+The path starts to get wider, and there's lots of space to walk on. As the
+path goes downwards, the temperature is also starting to rise. The snowbanks
+covering edges of the path, becomes smaller and smaller. Some pools of water
+shows that temperature is above zero.
+~~
+10 0 5
+D0
+~~
+~~
+0 -1 1011
+D2
+~~
+~~
+0 -1 1009
+S
+#1011
+Following the path~~
+The path continues. It is easy to notice where the path leads, with
+lots of human footprints and animal hooves. There are also some 
+burnt marks, and the smell of burnt flesh. The forest starts to 
+surround the path.
+~~
+10 0 9
+D0
+~~
+~~
+0 -1 1012
+D2
+~~
+~~
+0 -1 1010
+S
+#1012
+Path divides~~
+The path divides into two directions. One to the east, and one to 
+the west. The human footprints lead west, and the burnt prints lead
+east. Again there is less snow, and the temperature is starting to
+get comfortable.
+~~
+10 0 9
+D1
+~~
+~~
+0 -1 1014
+D2
+~~
+~~
+0 -1 1011
+D3
+~~
+~~
+0 -1 1013
+S
+#1013
+Following the path westwards~~
+A large body of water starts to show to the north. It looks like a 
+lake, but it could be a part of the fjord which leads to the great
+oceans. A couple of slow-moving ships can be spotted in the horizon.
+The path itself is covered with mud, with occasional dips of water.
+~~
+10 68 9
+D1
+~~
+~~
+0 -1 1012
+D3
+~~
+~~
+0 -1 1015
+S
+#1014
+Following the path~~
+The path has almost melted. This is partly due to the burnt marks on
+the ground, but also because of melted water that pours down from the
+mountain, making a little pool of water. The path eastwards continues
+towards some large mountains.
+~~
+10 0 9
+D1
+~~
+~~
+0 -1 1005
+D3
+~~
+~~
+0 -1 1012
+S
+#1015
+Outside the gates of the village of Grimdur~~
+Again the path divides. To the north, there is a village that looks
+like wooden fort. The village is square, with a large gate in the middle,
+and with a small side-door leading to the harbour. Right outside the gate
+there is a small building that could be where the guards 'do their job'.
+~~
+10 4 9
+D0
+~~
+~~
+0 -1 1016
+D1
+~~
+~~
+0 -1 1013
+D3
+~~
+~~
+0 -1 1059
+S
+#1016
+In front of the gate~~
+At the entrance to Grimdur's village there is a large gate. This is
+normally closed to keep animals and enemies out. Hardly any guards
+are spotted, so this is a quiet time of year. The peace roams the land.
+The gate itself is made of oak, a hard timber, and is a good piece of
+craftmanship.
+~~
+10 0 1
+D0
+~~
+gate~~
+1 -1 1018
+D2
+~~
+~~
+0 -1 1015
+D3
+~~
+~~
+0 -1 1017
+S
+#1017
+Viking guard hut~~
+In the guard hut, the guards are at work. They look after that noone
+that shouldn't be there, is there. The guards have long work-days, 
+so they look a little tired, and are basically bothering noone, as
+long as they're not bothering them.
+~~
+10 9 0
+D1
+~~
+~~
+0 -1 1016
+S
+#1018
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 0 1
+D0
+~~
+gate~~
+1 -1 1021
+D1
+~~
+door~~
+1 -1 1019
+D2
+~~
+gate~~
+1 -1 1016
+D3
+~~
+~~
+0 -1 1020
+S
+#1019
+Shop keeper~~
+A temporary description
+~~
+10 8 1
+D3
+~~
+door~~
+1 -1 1018
+S
+#1020
+Road under construction.~~
+Here they've started timbering for a future road. Several houses
+will buildt here, but first they have to level the ground where the
+road and houses are to be buildt.
+~~
+10 0 1
+D1
+~~
+~~
+0 -1 1018
+S
+#1021
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D1
+~~
+~~
+0 -1 1022
+D2
+~~
+gate~~
+1 -1 1018
+D3
+~~
+~~
+0 -1 1026
+S
+#1022
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D1
+~~
+~~
+0 -1 1023
+D3
+~~
+~~
+0 -1 1021
+S
+#1023
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D0
+~~
+~~
+0 -1 1024
+D3
+~~
+~~
+0 -1 1022
+S
+#1024
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D0
+~~
+~~
+0 -1 1025
+D2
+~~
+~~
+0 -1 1023
+S
+#1025
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D0
+~~
+~~
+0 -1 1032
+D1
+~~
+gate~~
+1 -1 1035
+D2
+~~
+~~
+0 -1 1024
+S
+#1026
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D0
+~~
+~~
+0 -1 1027
+D1
+~~
+~~
+0 -1 1021
+S
+#1027
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D0
+~~
+~~
+0 -1 1028
+D2
+~~
+~~
+0 -1 1026
+S
+#1028
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D0
+~~
+~~
+0 -1 1029
+D2
+~~
+~~
+0 -1 1027
+S
+#1029
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D1
+~~
+~~
+0 -1 1030
+D2
+~~
+~~
+0 -1 1028
+D3
+~~
+~~
+0 -1 1039
+S
+#1030
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D1
+~~
+~~
+0 -1 1031
+D2
+~~
+~~
+0 -1 1033
+D3
+~~
+~~
+0 -1 1029
+S
+#1031
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D1
+~~
+~~
+0 -1 1032
+D3
+~~
+~~
+0 -1 1030
+S
+#1032
+Inside the palisade~~
+Inside the gates, there is a quiet village, where people are walking
+around, doing their work, and don't seem to bother anyone.
+The village itself is surrounded by a palisade of oak trees, with
+much smaller houses in the inner square.
+~~
+10 67108864 1
+D2
+~~
+~~
+0 -1 1025
+D3
+~~
+~~
+0 -1 1031
+S
+#1033
+Outside Grimdur's house~~
+The house of Grimdur, the village chieftain, is larger than the
+other houses. It is located on a beautiful spot a little higher
+in the village, so he can look at the whole village from his 
+windows. The ceiling is made of grass, and some goats are living
+there.
+~~
+10 0 1
+D0
+~~
+~~
+0 -1 1030
+D2
+~~
+door~~
+1 -1 1034
+S
+#1034
+Home of Grimdur, The Viking Village Chief.
+~~
+The house of Grimdur is a poor sight. Dark and unclean, with lots
+of dirty clothes laying all around the place. A typical large hall
+where clansmen gather to party, but noone ever cleans up afterwards.
+~~
+10 32781 1
+D0
+~~
+door~~
+1 -1 1033
+S
+#1035
+The road to the harbour.~~
+This road leads to the harbour of the village. The road is not long,
+it is made of fine wooden steps that lead downwards to the boats.
+The steps are covered with grass on both sides.
+~~
+10 0 2
+D1
+~~
+~~
+0 -1 1036
+D3
+~~
+gate~~
+1 -1 1025
+S
+#1036
+The harbour of Grimdur~~
+The harbour is quite an interesting piece of work. The harbour itself
+is much larger than expected to such a little village. The construction
+itself is made of solid timber, and is supported by several layers of 
+large rocks at the bottom. At least this can take an impact of drunk
+sailors crashing into it.
+~~
+10 0 2
+D0
+~~
+~~
+0 -1 1038
+D2
+~~
+~~
+0 -1 1037
+D3
+~~
+~~
+0 -1 1035
+S
+#1037
+The harbour of Grimdur~~
+The harbour is quite an interesting piece of work. The harbour itself
+is much larger than expected to such a little village. The construction
+itself is made of solid timber, and is supported by several layers of 
+large rocks at the bottom. At least this can take an impact of drunk
+sailors crashing into it.
+~~
+10 0 2
+D0
+~~
+~~
+0 -1 1036
+S
+#1038
+The harbour of Grimdur~~
+The harbour is quite an interesting piece of work. The harbour itself
+is much larger than expected to such a little village. The construction
+itself is made of solid timber, and is supported by several layers of 
+large rocks at the bottom. At least this can take an impact of drunk
+sailors crashing into it.
+~~
+10 0 2
+D2
+~~
+~~
+0 -1 1036
+S
+#1039
+invalid~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 2
+D1
+~~
+~~
+0 -1 1029
+D3
+~~
+~~
+0 -1 1040
+S
+#1040
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 2
+D0
+~~
+~~
+0 -1 1041
+D1
+~~
+~~
+0 -1 1039
+S
+#1041
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 0
+D0
+~~
+~~
+0 -1 1042
+D2
+~~
+~~
+0 -1 1040
+S
+#1042
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 0
+D2
+~~
+~~
+0 -1 1041
+D3
+~~
+~~
+0 -1 1043
+S
+#1043
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 0
+D1
+~~
+~~
+0 -1 1042
+D3
+~~
+~~
+0 -1 1044
+S
+#1044
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds. A river starts to appear to the north.
+~~
+10 0 0
+D1
+~~
+~~
+0 -1 1043
+D2
+~~
+~~
+0 -1 1045
+S
+#1045
+The bridge over the Odda river.~~
+Walking over the old bridge could look a bit dangerous. It makes 
+strange sounds as it's crossed, but it is quite safe. It has survived
+the pass of time, and it's the only road between the villages. The
+river goes under the bridge, and continues southwards.
+~~
+10 0 0
+D0
+~~
+~~
+0 -1 1044
+D2
+~~
+~~
+0 -1 1046
+S
+#1046
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 0
+D0
+~~
+~~
+0 -1 1045
+D3
+~~
+~~
+0 -1 1047
+S
+#1047
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 0
+D1
+~~
+~~
+0 -1 1046
+D2
+~~
+~~
+0 -1 1048
+S
+#1048
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 0
+D0
+~~
+~~
+0 -1 1047
+D3
+~~
+~~
+0 -1 1049
+S
+#1049
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 0
+D0
+~~
+~~
+0 -1 1050
+D1
+~~
+~~
+0 -1 1048
+S
+#1050
+A viking merchant road~~
+The merchant road is basically a normal path with many prints of
+hooves and humans. Kind of wide to be in the center of a forest, but
+it is a highly trafficated road. Large majestic oak-trees wave in the
+wind, making strange sounds.
+~~
+10 0 0
+D2
+~~
+~~
+0 -1 1049
+D3
+~~
+~~
+0 -1 1051
+S
+#1051
+Before the gates of Hagar.~~
+A temporary description
+~~
+10 4 0
+D0
+~~
+~~
+0 -1 1052
+D1
+~~
+~~
+0 -1 1050
+S
+#1052
+Entering Hagar's village.~~
+A temporary description
+~~
+10 0 1
+D1
+~~
+~~
+0 -1 1053
+D2
+~~
+~~
+0 -1 1051
+S
+#1053
+In the village of Hagar~~
+A temporary description
+~~
+10 0 1
+D1
+~~
+~~
+0 -1 1054
+D3
+~~
+~~
+0 -1 1052
+S
+#1054
+In the village of Hagar~~
+A temporary description
+~~
+10 0 1
+D0
+~~
+~~
+0 -1 1055
+D3
+~~
+~~
+0 -1 1053
+S
+#1055
+Outside the village of Snorre~~
+A temporary description
+~~
+10 4 1
+D2
+~~
+~~
+0 -1 1054
+D3
+~~
+~~
+0 -1 1056
+S
+#1056
+Home of Hagar, the viking cheiftain~~
+The home of Hagar is quite pleasant. A large hall where there have
+been numerous parties. and a nice kitchen where you can make food
+for many people. 
+~~
+10 8 1
+D1
+~~
+~~
+0 -1 1055
+D4
+~~
+door~~
+1 -1 1057
+D5
+~~
+door~~
+1 -1 1058
+S
+#1057
+The attic~~
+This attic needs to be cleaned. Lots and lots of dust is on the floor.
+It's very dark as well, even though some light appears from the roof above.
+~~
+10 9 1
+D5
+~~
+door~~
+1 -1 1056
+S
+#1058
+The basement of Hagar, the viking chieftain~~
+The basement of Hagar's house is cold, and dark, like a basement
+should be. Many goods are kept here, since its always cold here.
+A solid foundation keeps the house up. It's made of large rocks
+which are placed in position to each other, so it's a stable construction.
+~~
+10 9 1
+D4
+~~
+door~~
+1 -1 1056
+S
+#1059
+Towards the east~~
+Reisen ostover fortoner seg mer behagelig enn veien hittil har vert.
+Det er ikke saa mye sno her, og smaa dammer av smeltet sno er begynt aa
+danne seg paa marken. Paa selve stien er det ingenting sno igjen, bare 
+litt paa sporadiske hauger rundtomkring i marka.
+~~
+10 0 0
+D1
+~~
+~~
+0 -1 1015
+D3
+~~
+~~
+0 -1 1060
+S
+#1060
+The road to the village of Snorre~~
+Igjen er det tilsynelatende harmoni paa stien. Et par dyr grasser i det
+fjerne, drikker vann fra vannpyttene, og lar livet gaa sin gang. Stien
+bortover leder til en landsby, som begynner aa blir synlig, siden denne ligger
+paa en hoyde.
+~~
+10 0 0
+D0
+~~
+~~
+0 -1 1061
+D1
+~~
+~~
+0 -1 1059
+S
+#1061
+The road to the village of Snorre~~
+Stien er ikke serlig spennede, lite folk, men mer et yrende dyreliv. 
+Saa og si fritt for sno naa, 
+~~
+10 0 0
+D2
+~~
+~~
+0 -1 1060
+D3
+~~
+~~
+0 -1 1063
+S
+#1063
+The road to the village of Snorre~~
+Stien har mer gaatt over til en vei naa. Veien er bredere, og fri for dyrespor.
+Veien begynner aa gaa opp det siste stykket til toppen av knollen, som 
+landsbyen ligger paa. 
+~~
+10 0 0
+D1
+~~
+~~
+0 -1 1061
+D3
+~~
+~~
+0 -1 1064
+S
+#1064
+Close to Snorre's village~~
+Paa toppen av haugen har du utkikk til hele landsbyen. Mange hus er aa se her.
+Mange smaa, men ogsaa et stort ett som dominerer bybildet.
+Til nord ligger brygga, og et stort skip ligger der og venter paa sin last.
+Veien gaar litt ned igjen, for den svinger inn i byen.
+~~
+10 0 0
+D0
+~~
+~~
+0 -1 1065
+D1
+~~
+~~
+0 -1 1063
+S
+#1065
+Outside Snorre's village~~
+Rett utenfor landsbyen til Snorre, ser du hvordan landsbyen er lagd. 
+Fine rette kvaderatiske veier deler veiene som gjor det enkelt aa 
+navigere i byen.
+~~
+10 4 2
+D2
+~~
+~~
+0 -1 1064
+D3
+~~
+~~
+0 -1 1066
+S
+#1066
+In the village of Snorre~~
+Inni byen er det et litt liv, men ikke saa mye som kunne trodd.
+~~
+10 0 1
+D1
+~~
+~~
+0 -1 1065
+D2
+~~
+~~
+0 -1 1067
+S
+#1067
+Entrance to the Viking longhouse~~
+A temporary description
+~~
+10 0 1
+D0
+~~
+~~
+0 -1 1066
+D3
+~~
+~~
+0 -1 1072
+S
+#1069
+A room in the Viking longhall~~
+NOT MADE YET~~
+10 73 1
+D0
+~~
+~~
+0 -1 1072
+S
+#1070
+NOT MADE YET
+~~
+NOT MADE YET~~
+10 73 1
+D0
+~~
+~~
+0 -1 1075
+D2
+~~
+~~
+0 -1 1071
+S
+#1071
+A room in the Viking longhall~~
+Huset til Hagar er enkelt, men effektivt. Det er omgitt av nydelige trer, som
+effektivt skygger solen ute paa varme dager. Huset ligger helt nede med elva, saa
+det er rikelig med vann. Det ser helt uforstyrret ut, men det er akkurat
+som om noe ligger i luften. Og det er heller ikke bare odooren fra vikinene
+som lukter...
+~~
+10 73 1
+D0
+~~
+~~
+0 -1 1070
+S
+#1072
+Inside the Viking longhall~~
+This longhall is obviously used a lot. An enormous table is occupying
+most of the floor-space. Many chairs, some tipped over, some on top of
+the table, and some are even nicely placed along the table.
+The room is kind of dark, with a sleepy atmosphere.
+~~
+10 73 1
+D0
+~~
+~~
+0 -1 1073
+D1
+~~
+~~
+0 -1 1067
+D2
+~~
+~~
+0 -1 1069
+D3
+~~
+~~
+0 -1 1075
+E
+wolfskin~~
+You see a wolfskin laying on the floor, covering dust.
+~~
+E
+floor~~
+The floor is made of wood, and is covered with something that looks like
+wolfskin.. There's a lot of dust on the floor.
+~~
+S
+#1073
+In the village of Snorre~~
+When you enter the room, you almost can't belive what you see. Here is where THE
+party has been. Pieces of the inventory is spread around the whole cottage.
+Chairs, or whatever you can call it now, are mostly not indoors anymore.
+When you look up, you wonder how one of the chairs has gotten up on the roof.
+The people who are to clean up this mess have some hard days work in front
+of them.
+~~
+10 73 1
+D0
+~~
+~~
+0 -1 1074
+D2
+~~
+~~
+0 -1 1072
+S
+#1074
+Eastern part of the docks~~
+This is the eastern part of the docks, and the part that is less
+lively. Only a few birds fly above, making some noises when
+they venture over the ocean, looking for food.
+~~
+10 0 1
+D0
+~~
+~~
+0 -1 1080
+D2
+~~
+~~
+0 -1 1073
+D3
+~~
+~~
+0 -1 1077
+S
+#1075
+Inside the Viking longhall~~
+You are standing outside a village. The village lies in a clearing and
+there are trees all around it. The forest is very thick in all directions
+except to the east where the village is. You can see several houses in
+the village and some people moving around.
+~~
+10 0 1
+D1
+~~
+~~
+0 -1 1072
+D2
+~~
+~~
+0 -1 1070
+S
+#1077
+Western part of the docks~~
+This is the western part of the docks, and mainly where most of the
+activity is. Great ships lay here, ready to sail on the oceans of the
+world. Great possibilities of wealth is what drives these men to sail
+all over the world. A ship lies at the docks, but it can't have great
+values, since there's noone guarding it.
+~~
+10 0 1
+D0
+~~
+boat~~
+12 -1 1078
+D1
+~~
+~~
+0 -1 1074
+S
+#1078
+Baaten Gijante~~
+Du er naa paa baaten Gijante. Det er en middels stor baat, med store
+master, 2 faktisk. Den har roplass til et dusin mann, samt en plass
+til kapteinen bak. Den har ingen fasiliteter som koyeplass til noen
+av manskapet. Her er det bare aa klare seg selv, og holde fast nor
+stormene er over en.
+~~
+10 64 0
+D2
+~~
+boat~~
+10 -1 1077
+S
+#1080
+On the fjord~~
+You are on the fjord. The water is blue, and too cold to swim in.
+~~
+10 0 7
+D2
+~~
+~~
+0 -1 1074
+S
+#0
+$~

@@ -1,0 +1,2135 @@
+#26800
+In front of a large stone church~
+  Walking off the narrow goattrack you enter a somewhat large
+field of weed and tall grass. In front of you there is a half
+beaten down white fense, with a old worn down gate almost
+falling off its rusted hinges. Beyond the white fense you can
+see many old tomb-stones. Some in rotten old wood, others in
+moss-covered stone. The large building in the background
+towers above you, and dominates this entire part of the woods.
+There is a foul smell in the wind. You cannot quite put your
+finger on it... Its something... Rotten. Perhaps an animal
+have died somewhere up there?
+~
+268 0 4
+D3
+~
+~
+0 -1 26801
+S
+#26801
+On the path approaching the church~
+  There are tombstones at both sides of the path, and there 
+is little doubt that this place havent seen any visitors in
+decades.  The grass has grown long, and been flattened by
+the weight of the winter snow, then new grass has grown on
+top of that again, creating layer upon layer with half
+decomposed grass. A haven for weed and wild growing bushes.
+The clouds seems to gather around this seclused area.
+Perhaps it is the surrounding mountains that causes it?
+~
+268 0 4
+D1
+~
+~
+0 -1 26800
+D3
+~
+~
+0 -1 26802
+S
+#26802
+On the path approaching the church~
+  There are tombstones at both sides of the path, and there 
+is little doubt that this place havent seen any visitors in
+decades.  The grass has grown long, and been flattened by
+the weight of the winter snow, then new grass has grown on
+top of that again, creating layer upon layer with half
+decomposed grass. A haven for weed and wild growing bushes.
+The clouds seems to gather around this seclused area.
+The silouette of the church grows larger as you approach it.
+~
+268 0 4
+D1
+~
+~
+0 -1 26801
+D3
+~
+~
+0 -1 26803
+S
+#26803
+In front of the large doors~
+  Standing on the steps of this old church you cannot help but
+admire the workmanship of those who have carved out these
+two huge wooden doors. Although the doors have been worn down
+by the ages, some of the details in the carvings are still
+quite intricate. Much love and labor has been put into this
+house of God. Looking up you can see the bell-tower rising
+towards the dark clouded heaven.
+There are strange sounds coming from behind the doors...
+Perhaps some animals have taken shelter in this obviously 
+abandoned church?
+~
+268 0 4
+D1
+~
+~
+0 -1 26802
+D3
+~
+door~
+1 -1 26804
+S
+#26804
+Inside the narthex of the church~
+  This somewhat small room is dedicated to the reception of
+guests of the Church. To the south there is the weapon-booth
+in which guests have to leave their weapons before entering
+the church. To the north there is a cramped little room for
+leaving outer coats and other cloathing. The carved wooden
+panels in this room are not as elaborate as the carvings on
+the main doors to the east, but they are still elegant, and
+the color has not faded as badly as outside of the church.
+There is a foul stench coming through a crack in the doors
+to the west, and the strange sounds are becoming louder.
+It appears that there are more than one animal residing
+inside...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26806
+D1
+~
+door~
+1 -1 26803
+D2
+~
+~
+0 -1 26805
+D3
+~
+~
+0 -1 26807
+S
+#26805
+Inside the weapon-booth~
+  You would have to look for a long time to find a dustier room
+than this. Cobweb covers most corners, and dust covers all
+surfaces. There is an old wooden desk next to the little 
+opening in the wall, and a wooden chair next to it in just as 
+poor condition. Looking down on the floor there are fresh
+footprints. They appear to be human. You notice an old rotten
+cabinet at the end of the room. Its probably were they kept
+the confiscated weapons back when this place was in business.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26804
+S
+#26806
+Inside the cloakroom~
+  This room is so cramped there's barely enough room for one person.
+The floor is covered in dust and old torn pages from hym books and
+bibles. There are fresh footprints on the floor that appears to be
+of human origin. This place obviously havent been in business for
+a very long time, but strangely enough there are still old dusty
+and rotten clothing hanging on the rack and in the wardrobe. There
+are long coats, cloaks, capes and even a few hats on the hat shelf.
+Whoever left these items here sure left in a hurry.. Or maybe not
+at all?
+~
+268 67141640 0
+D2
+~
+~
+0 -1 26804
+S
+#26807
+Walking down the nave~
+  The rotten smell in this room is so strong it brings you to the 
+point at which you are unsure whether or not you are going to faint
+from the intoxicating fumes, or puke your guts out all over the red
+carpet on the floor. Looking down you notice the many skeletons and
+carcasses of animals in all sizes and shapes in various states of
+decomposition. There are rows upon rows with long wooden benches to
+the left and right continuing down towards the altar. Looking down
+the nave and to the northern and southern aisle of the church you
+notice that there are quite a few churchgoers.. Only they are of
+the dead kind! This entire church is full of chanting zombies!
+There is a narrow stairway leading upstairs.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26812
+D1
+~
+~
+0 -1 26804
+D2
+~
+~
+0 -1 26815
+D3
+~
+~
+0 -1 26808
+D4
+~
+~
+0 -1 26862
+S
+#26808
+Walking down the nave~
+  The rotten smell in this room is so strong it brings you to the
+point at which you are unsure whether or not you are going to faint
+from the intoxicating fumes, or puke your guts out all over the red
+carpet on the floor. Looking down you notice the many skeletons and
+carcasses of animals in all sizes and shapes in various states of
+decomposition. There are rows upon rows with long wooden benches to
+the left and right continuing down towards the altar. Looking down
+the nave and to the northern and southern aisle of the church you
+notice that there are quite a few churchgoers.. Only they are of
+the dead kind! This entire church is full of chanting zombies!
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26818
+D1
+~
+~
+0 -1 26807
+D2
+~
+~
+0 -1 26821
+D3
+~
+~
+0 -1 26809
+S
+#26809
+Walking down the nave~
+  The rotten smell in this room is so strong it brings you to the
+point at which you are unsure whether or not you are going to faint
+from the intoxicating fumes, or puke your guts out all over the red
+carpet on the floor. Looking down you notice the many skeletons and
+carcasses of animals in all sizes and shapes in various states of
+decomposition. There are rows upon rows with long wooden benches to
+the left and right continuing down towards the altar. Looking down
+the nave and to the northern and southern aisle of the church you
+notice that there are quite a few churchgoers.. Only they are of
+the dead kind! This entire church is full of chanting zombies!
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26824
+D1
+~
+~
+0 -1 26808
+D2
+~
+~
+0 -1 26827
+D3
+~
+~
+0 -1 26810
+S
+#26810
+Walking down the nave~
+  The rotten smell in this room is so strong it brings you to the
+point at which you are unsure whether or not you are going to faint
+from the intoxicating fumes, or puke your guts out all over the red
+carpet on the floor. Looking down you notice the many skeletons and
+carcasses of animals in all sizes and shapes in various states of
+decomposition. There are rows upon rows with long wooden benches to
+the left and right continuing down towards the altar. Looking down
+the nave and to the northern and southern aisle of the church you
+notice that there are quite a few churchgoers.. Only they are of
+the dead kind! This entire church is full of chanting zombies!
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26830
+D1
+~
+~
+0 -1 26809
+D2
+~
+~
+0 -1 26833
+D3
+~
+~
+0 -1 26811
+S
+#26811
+In front of the chancel~
+  Standing at the very front of the nave, facing the chancel you
+finally see clearly just how corrupted this church has become.
+What was once a house of God has now detereorated to a sanctuary
+of death and decay. The once golden cross has now been turned up-
+side down, and spattered in the blood of the countless victims that
+have been dragged up onto the altar and violated in unimaginable
+ways... The chancel rail is covered in congealed intestine and
+reeks of rotteness.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26844
+D1
+~
+~
+0 -1 26810
+D2
+~
+~
+0 -1 26843
+D3
+~
+~
+0 -1 26852
+S
+#26812
+At the fourth row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26813
+D2
+~
+~
+0 -1 26807
+S
+#26813
+At the fourth row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26814
+D2
+~
+~
+0 -1 26812
+S
+#26814
+At the fourth row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26851
+D2
+~
+~
+0 -1 26813
+S
+#26815
+At the fourth row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26807
+D2
+~
+~
+0 -1 26816
+S
+#26816
+At the fourth row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26815
+D2
+~
+~
+0 -1 26817
+S
+#26817
+At the fourth row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26816
+D2
+~
+~
+0 -1 26836
+S
+#26818
+At the third row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26819
+D2
+~
+~
+0 -1 26808
+S
+#26819
+At the third row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26820
+D2
+~
+~
+0 -1 26818
+S
+#26820
+At the third row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26850
+D2
+~
+~
+0 -1 26819
+S
+#26821
+At the third row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26808
+D2
+~
+~
+0 -1 26822
+S
+#26822
+At the third row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26821
+D2
+~
+~
+0 -1 26823
+S
+#26823
+At the third row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26822
+D2
+~
+~
+0 -1 26837
+S
+#26824
+At the second row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26825
+D2
+~
+~
+0 -1 26809
+S
+#26825
+At the second row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26826
+D2
+~
+~
+0 -1 26824
+S
+#26826
+At the second row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26849
+D2
+~
+~
+0 -1 26825
+S
+#26827
+At the second row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26809
+D2
+~
+~
+0 -1 26828
+S
+#26828
+At the second row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26827
+D2
+~
+~
+0 -1 26829
+S
+#26829
+At the second row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26828
+D2
+~
+~
+0 -1 26838
+S
+#26830
+At the first row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26831
+D2
+~
+~
+0 -1 26810
+D3
+~
+~
+0 -1 26844
+S
+#26831
+At the first row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26832
+D2
+~
+~
+0 -1 26830
+D3
+~
+~
+0 -1 26845
+S
+#26832
+At the first row at the right side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26848
+D2
+~
+~
+0 -1 26831
+D3
+~
+~
+0 -1 26846
+S
+#26833
+At the first row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26810
+D2
+~
+~
+0 -1 26834
+D3
+~
+~
+0 -1 26843
+S
+#26834
+At the first row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26833
+D2
+~
+~
+0 -1 26835
+D3
+~
+~
+0 -1 26842
+S
+#26835
+At the first row at the left side of the nave~
+  The wooden benches are of the hard type, and there is no padding or
+any sign of the woodworkers prioritizing any level of comfort when
+designing and making these benches. There is little doubt that these
+benches were made with repentance and pain in mind. After all, its
+only through pain and hardship that one can truly get closer to the
+Lord. The congreation doesnt seem to be very actively involved in this
+Unholy Communion, and for most of the time they simply keep staring
+down into their hymn books. The stench is absolutely horrid, as the
+benches are filled with zombie churchgoers; all in different states of
+decomposition. Every once in a while you can hear a grunt, some faint
+mumbling, and even the occasional blood-gurgling roar...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26834
+D2
+~
+~
+0 -1 26839
+D3
+~
+~
+0 -1 26841
+S
+#26836
+Eastern corner of the southern aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the west towards the back of the church.
+Cobweb covers every single corner of the walls and ceiling, and covers
+up many of the beautifully carved sculptures on the posts that support
+the gallery upstairs.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26817
+D3
+~
+~
+0 -1 26837
+S
+#26837
+Along the southern aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the west towards the back of the church, and
+to the east towards the front. Cobweb covers the walls and ceiling, and
+covers up many of the beautifully carved sculptures on the posts that
+support the gallery upstairs.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26823
+D1
+~
+~
+0 -1 26836
+D3
+~
+~
+0 -1 26838
+S
+#26838
+Along the southern aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the west towards the back of the church, and
+to the east towards the front. Cobweb covers the walls and ceiling, and
+covers up many of the beautifully carved sculptures on the posts that
+support the gallery upstairs.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26829
+D1
+~
+~
+0 -1 26837
+D3
+~
+~
+0 -1 26839
+S
+#26839
+Along the southern aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the west towards the back of the church, and
+to the east towards the front. Cobweb covers the walls and ceiling, and
+covers up many of the beautifully carved sculptures on the posts that
+support the gallery upstairs.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26835
+D1
+~
+~
+0 -1 26838
+D3
+~
+~
+0 -1 26840
+S
+#26840
+Western corner of the south aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the north towards the northern isle. Cobweb
+covers every single corner of the walls and ceiling, and covers up many
+of the beautifully carved sculptures on the posts that support the
+gallery upstairs.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26841
+D1
+~
+~
+0 -1 26839
+S
+#26841
+Towards the chancel~
+  The floorboards creak under your feet as you move over them. Its
+quite obvious that there is a cellar of some kind below. From the east
+there is a cold gust of tainted air coming through the huge cracks in
+the wooden door. Fortunatly the various broken windows ensure a good
+continuous draft of fresh air throughout the church. You move through
+pockets of tainted and fresh air as you make your way through all the
+rubble and trash in your way.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26842
+D1
+~
+~
+0 -1 26835
+D2
+~
+~
+0 -1 26840
+S
+#26842
+Towards the chancel~
+  The floorboards creak under your feet as you move over them. Its
+quite obvious that there is a cellar of some kind below. From the east
+there is a cold gust of tainted air coming through the huge cracks in
+the wooden door. Fortunatly the various broken windows ensure a good
+continuous draft of fresh air throughout the church. You move through
+pockets of tainted and fresh air as you make your way through all the
+rubble and trash in your way.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26843
+D1
+~
+~
+0 -1 26834
+D2
+~
+~
+0 -1 26841
+S
+#26843
+Towards the chancel~
+  The floorboards creak under your feet as you move over them. Its
+quite obvious that there is a cellar of some kind below. From the east
+there is a cold gust of tainted air coming through the huge cracks in
+the wooden door. Fortunatly the various broken windows ensure a good
+continuous draft of fresh air throughout the church. You move through
+pockets of tainted and fresh air as you make your way through all the
+rubble and trash in your way.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26811
+D1
+~
+~
+0 -1 26833
+D2
+~
+~
+0 -1 26842
+S
+#26844
+Towards the chancel~
+  The floorboards creak under your feet as you move over them. Its
+quite obvious that there is a cellar of some kind below. From the east
+there is a cold gust of tainted air coming through the huge cracks in
+the wooden door. Fortunatly the various broken windows ensure a good
+continuous draft of fresh air throughout the church. You move through
+pockets of tainted and fresh air as you make your way through all the
+rubble and trash in your way.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26845
+D1
+~
+~
+0 -1 26830
+D2
+~
+~
+0 -1 26811
+S
+#26845
+Towards the chancel ~
+  The floorboards creak under your feet as you move over them. Its
+quite obvious that there is a cellar of some kind below. From the east
+there is a cold gust of tainted air coming through the huge cracks in
+the wooden door. Fortunatly the various broken windows ensure a good
+continuous draft of fresh air throughout the church. You move through
+pockets of tainted and fresh air as you make your way through all the
+rubble and trash in your way.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26846
+D1
+~
+~
+0 -1 26831
+D2
+~
+~
+0 -1 26844
+S
+#26846
+Towards the chancel ~
+  The floorboards creak under your feet as you move over them. Its
+quite obvious that there is a cellar of some kind below. From the east
+there is a cold gust of tainted air coming through the huge cracks in
+the wooden door. Fortunatly the various broken windows ensure a good
+continuous draft of fresh air throughout the church. You move through
+pockets of tainted and fresh air as you make your way through all the
+rubble and trash in your way.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26847
+D1
+~
+~
+0 -1 26832
+D2
+~
+~
+0 -1 26845
+S
+#26847
+Eastern corner of the south aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the north towards the northern isle. Cobweb
+covers every single corner of the walls and ceiling, and covers up many
+of the beautifully carved sculptures on the posts that support the
+gallery upstairs.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26848
+D2
+~
+~
+0 -1 26846
+S
+#26848
+Along the northern aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the west towards the back of the church, and
+to the east towards the front. Cobweb covers the walls and ceiling, and
+covers up many of the beautifully carved sculptures on the posts that
+support the gallery upstairs.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26849
+D2
+~
+~
+0 -1 26832
+D3
+~
+~
+0 -1 26847
+S
+#26849
+Along the northern aisle ~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the west towards the back of the church, and
+to the east towards the front. Cobweb covers the walls and ceiling, and
+covers up many of the beautifully carved sculptures on the posts that
+support the gallery upstairs.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26850
+D2
+~
+~
+0 -1 26826
+D3
+~
+~
+0 -1 26848
+S
+#26850
+Along the northern aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the west towards the back of the church, and
+to the east towards the front. Cobweb covers the walls and ceiling, and
+covers up many of the beautifully carved sculptures on the posts that
+support the gallery upstairs.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26851
+D2
+~
+~
+0 -1 26820
+D3
+~
+~
+0 -1 26849
+S
+#26851
+Eastern corner of the northern aisle~
+  All the once beautiful glass paintings along the wall are but corrupted
+by time and neglect. Once upon a time those windows showered the room
+in beautiful light. That which remains of the windows now only cast
+sinister-looking shadows onto the floor. There is a red carpet on the
+floor here continuing to the west towards the back of the church.
+Cobweb covers every single corner of the walls and ceiling, and covers
+up many of the beautifully carved sculptures on the posts that support
+the gallery upstairs.
+~
+268 67141640 0
+D2
+~
+~
+0 -1 26814
+D3
+~
+~
+0 -1 26850
+S
+#26852
+In front of the altar~
+    The stench of rotten flesh reeks from the chancel rail and really stings
+in one's nostrils. From this altar of death one gets a really good view
+of the true horrors that has taken place in this Godforsaken place. The
+once white altar tablecloth has rotted with age and is now but a tattered
+rag blackened by `bcoagulated `iblood.`q The floor is covered in all kinds of
+bodyparts, in a whole range of different states of decomposition. Some
+appear fresh, others are half rotten, while a bunch are but bones.
+Looking up you notice the inverted cross, its dark wood stained from the
+constant bloodsplatter from the seeminly endless supply of victims whose
+lives have been so viciously extinguished.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26853
+D1
+~
+~
+0 -1 26811
+D2
+~
+~
+0 -1 26857
+S
+#26853
+A small passage leading behind the altar~
+  The air is dusty and stale in this cramped passage, and there is very
+little light illuminating the walls and floor. The walls are covered in
+dust and gossamer, while the dusty carpeting shows signs of recent
+activity. There are strange noices coming from the west, and a whiff of
+some odor you cannot quite put your finger on...
+~
+268 67141644 0
+D2
+~
+~
+0 -1 26852
+D3
+~
+~
+0 -1 26854
+S
+#26854
+A small passage leading behind the altar~
+  The air is dusty and stale in this cramped passage, and there is very
+little light illuminating the walls and floor. The walls are covered in
+dust and gossamer, while the dusty carpeting shows signs of recent
+activity. There are strange noices coming from the south, and a whiff of
+some odor you cannot quite put your finger on...
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26853
+D2
+~
+~
+0 -1 26855
+S
+#26855
+Behind the altar~
+  The air is dusty and stale in this cramped passage, and there is very
+little light illuminating the walls and floor. The walls are covered in
+dust and gossamer, while the dusty carpeting shows signs of recent
+activity. There are strange noices coming from the north, and a whiff of
+some odor you cannot quite put your finger on... There is a narrow
+corridor leading to the west and towards the source of the smell...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26854
+D2
+~
+~
+0 -1 26856
+D3
+~
+~
+0 -1 26858
+S
+#26856
+A small passage leading behind the altar~
+  The air is dusty and stale in this cramped passage, and there is very
+little light illuminating the walls and floor. The walls are covered in
+dust and gossamer, while the dusty carpeting shows signs of recent
+activity. There are strange noices coming from the north, and a whiff of
+some odor you cannot quite put your finger on...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26855
+D1
+~
+~
+0 -1 26857
+S
+#26857
+A small passage leading behind the altar~
+  The air is dusty and stale in this cramped passage, and there is very
+little light illuminating the walls and floor. The walls are covered in
+dust and gossamer, while the dusty carpeting shows signs of recent
+activity. There are strange noices coming from the west, and a whiff of
+some odor you cannot quite put your finger on...
+~
+268 67141644 0
+D0
+~
+~
+0 -1 26852
+D3
+~
+~
+0 -1 26856
+S
+#26858
+Behind the altar~
+  The air is dusty and stale in this cramped passage, and there is very
+little light illuminating the walls and floor. The walls are covered in
+dust and gossamer, while the dusty carpeting shows signs of recent
+activity. There are strange noices coming from the north, and a whiff of
+some odor you cannot quite put your finger on... The narrow corridor
+continues to the west and towards the source of the smell...
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26859
+D1
+~
+~
+0 -1 26855
+D2
+~
+~
+0 -1 26860
+D3
+~
+~
+0 -1 26861
+S
+#26859
+The Vicar's study~
+  A very faint beam of light shines through the broken glass window and
+onto a dustless crackled table. There is an old squeaky chair pushed up
+under the table, and behind it there is a large bookcase full of many
+leatherbound tarnished old books. Many faded old paintings of several
+previous vicars adorns the walls around this room. The old fireplace to
+the east doesnt appear to have seen much action for a very long time,
+although the candlewax covering most surfaces in this room would suggest
+that although seemingly abandoned, this room is obviously used regularly.
+~
+268 67141640 0
+D2
+~
+~
+0 -1 26858
+S
+#26860
+The church kitchen~
+  The dust-laden air in this room and the old worn down stove resting in
+the corner suggests that this room hasnt been used for decades. Old
+kitchenware is spread all over the floor, kitchen table and benches.
+Glassware lies broken on the floor, plates, forks, spoons and knives are
+spread all over as if someone had a sudden burst of rage in here and
+simply pulled the very shelves and cupboards right off the walls.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26858
+S
+#26861
+The very back of the church~
+  The corridor abruptly ends in this room which would appear to be the
+very back of the church. There is a wooden door to the west presumably
+leading out and into the open, but it has been barricated with thick 
+boards and nailed shut. Judging from the condition of the wooden boards
+one can assume that this was done a very long time ago, and judging from
+the unevenness of the positioning of the boards it was nailed shut in
+quite a hurry. A sudden ghust of foul air from the stone staircase
+leading down into the dark below sends a shiver down your spine.
+~
+268 67141644 0
+D1
+~
+~
+0 -1 26858
+D5
+~
+~
+0 -1 27400
+S
+#26862
+The gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step. There is a narrow stairway
+leading downstairs.
+~
+268 67141644 0
+D0
+~
+~
+0 -1 26863
+D2
+~
+~
+0 -1 26885
+D3
+~
+~
+0 -1 26875
+D5
+~
+~
+0 -1 26807
+S
+#26863
+The organ loft~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step. There are some steep
+stairs felled into the wall here leading up to the bell tower.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26864
+D2
+~
+~
+0 -1 26862
+D3
+~
+~
+0 -1 26874
+D4
+~
+~
+0 -1 26886
+S
+#26864
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141644 0
+D0
+~
+~
+0 -1 26865
+D2
+~
+~
+0 -1 26863
+D3
+~
+~
+0 -1 26873
+S
+#26865
+The back row of the gallery ~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D2
+~
+~
+0 -1 26864
+D3
+~
+~
+0 -1 26866
+S
+#26866
+The back row of the gallery ~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26865
+D2
+~
+~
+0 -1 26873
+D3
+~
+~
+0 -1 26867
+S
+#26867
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26866
+D2
+~
+~
+0 -1 26872
+D3
+~
+~
+0 -1 26868
+S
+#26868
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26867
+D2
+~
+~
+0 -1 26871
+D3
+~
+~
+0 -1 26869
+S
+#26869
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26868
+D2
+~
+~
+0 -1 26870
+S
+#26870
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing 
+sound of broken glass is heard with each step. Looking over the rail you
+get a front-row view of the horrors below.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26869
+D1
+~
+~
+0 -1 26871
+S
+#26871
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing 
+sound of broken glass is heard with each step. Looking over the rail you
+get a front-row view of the horrors below.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26868
+D1
+~
+~
+0 -1 26872
+D3
+~
+~
+0 -1 26870
+S
+#26872
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing 
+sound of broken glass is heard with each step. Looking over the rail you
+get a front-row view of the horrors below.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26867
+D1
+~
+~
+0 -1 26873
+D3
+~
+~
+0 -1 26871
+S
+#26873
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing 
+sound of broken glass is heard with each step. Looking over the rail you
+get a front-row view of the horrors below.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26866
+D1
+~
+~
+0 -1 26864
+D2
+~
+~
+0 -1 26874
+D3
+~
+~
+0 -1 26872
+S
+#26874
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. Looking over the rail
+you get a front-row view of the horrors below.
+~
+268 67141644 0
+D0
+~
+~
+0 -1 26873
+D1
+~
+~
+0 -1 26863
+D2
+~
+~
+0 -1 26875
+S
+#26875
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. Looking over the rail
+you get a front-row view of the horrors below.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26874
+D1
+~
+~
+0 -1 26862
+D2
+~
+~
+0 -1 26876
+S
+#26876
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26875
+D1
+~
+~
+0 -1 26885
+D2
+~
+~
+0 -1 26883
+D3
+~
+~
+0 -1 26877
+S
+#26877
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing 
+sound of broken glass is heard with each step. Looking over the rail you
+get a front-row view of the horrors below.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26876
+D2
+~
+~
+0 -1 26882
+D3
+~
+~
+0 -1 26878
+S
+#26878
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing 
+sound of broken glass is heard with each step. Looking over the rail you
+get a front-row view of the horrors below.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26877
+D2
+~
+~
+0 -1 26881
+D3
+~
+~
+0 -1 26879
+S
+#26879
+The front row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing 
+sound of broken glass is heard with each step. Looking over the rail you
+get a front-row view of the horrors below.
+~
+268 67141640 0
+D1
+~
+~
+0 -1 26878
+D2
+~
+~
+0 -1 26880
+S
+#26880
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26879
+D1
+~
+~
+0 -1 26881
+S
+#26881
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26878
+D1
+~
+~
+0 -1 26882
+D3
+~
+~
+0 -1 26880
+S
+#26882
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26877
+D1
+~
+~
+0 -1 26883
+D3
+~
+~
+0 -1 26881
+S
+#26883
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26876
+D1
+~
+~
+0 -1 26884
+D3
+~
+~
+0 -1 26882
+S
+#26884
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26885
+D3
+~
+~
+0 -1 26883
+S
+#26885
+The back row of the gallery~
+  The once white walls have but faded to a cold grey, and the once
+beautiful stained windows are now shattered and the pieces scattered all
+over the floors and benches. Its quite windy up here, and the air feels
+a bit more fresh than the stale stench downstairs. The floorboards creaks
+and squeaks as you move over them, and the sharp jingling and crushing
+sound of broken glass is heard with each step.
+~
+268 67141640 0
+D0
+~
+~
+0 -1 26862
+D2
+~
+~
+0 -1 26884
+D3
+~
+~
+0 -1 26876
+S
+#26886
+The stairs in the bell tower~
+  In spite of being so cramped and confined, these stairs are quite
+windy. The opening at the top of the bell tower is creating a draft that
+makes these stairs act like a wind tunnel. The biting cold wind stings
+your fingertips like ice, and the treacherous rotten wooden planks
+threaten to break under your weight. The wooden boards making up the
+walls in these stairs are crude and rough to the touch. Nails have been
+hammered through from the outside of the tower, and its easy to tear one-
+self on them if not careful. 
+~
+268 67141644 0
+D4
+~
+~
+0 -1 26887
+D5
+~
+~
+0 -1 26863
+S
+#26887
+The stairs in the bell tower~
+  In spite of being so cramped and confined, these stairs are quite
+windy. The opening at the top of the bell tower is creating a draft that
+makes these stairs act like a wind tunnel. The biting cold wind stings
+your fingertips like ice, and the treacherous rotten wooden planks
+threaten to break under your weight. The wooden boards making up the
+walls in these stairs are crude and rough to the touch. Nails have been
+hammered through from the outside of the tower, and its easy to tear one-
+self on them if not careful. 
+~
+268 67141640 0
+D4
+~
+~
+0 -1 26888
+D5
+~
+~
+0 -1 26886
+S
+#26888
+Below the bell~
+  The stairs suddenly ends at this little platform just beneath the bell.
+Looking up through the open hatch in the floor you can see the grey 
+clouded sky and the black mountain tips rising up towards it. The wooden
+boards making up this platform seems to have seen much less moisture than
+the stairs themselves and appear to tolerate the weight applied to them.
+The wooden boards making up the walls in these stairs are crude and rough
+to the touch. Nails have beenhammered through from the outside of the
+tower, and its easy to tear one-self on them if not careful. 
+~
+268 67141640 0
+D4
+~
+~
+0 -1 26889
+D5
+~
+~
+0 -1 26887
+S
+#26889
+The top of the bell tower~
+  The grand view is absolutely breathtaking, and if it werent for the
+black mountains in the background and the dark clouds looming over the
+landscape, one would actually be able to enjoy it. The graveyard below
+looks like a scree with all the tombstones, some tipped over, others
+standing intact. There is no rail protecting anyone from falling out, so
+it might be a good idea to be careful not to misstep. There is a large
+bell hanging in the middle of the room here, all covered in corrosion.
+~
+268 0 5
+D5
+~
+~
+0 -1 26888
+E
+bell~
+The large bell is made from cast brass.
+It emitts an dissonance as you strike
+with your weapon. The bell is completely
+covered in corrosion.
+~
+S
+#26899
+A temporary name~
+A temporary description
+~
+268 0 0
+S
+#0
+$~

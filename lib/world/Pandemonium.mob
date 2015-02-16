@@ -1,0 +1,923 @@
+#21600
+boline master tanner~
+Boline, the master tanner~
+A short fat man stands here wearing a heavily stained apron.
+~
+A short, rotund man stands here wearing a heavily stained apron.
+He smells even worse than his workshop and seems to be missing
+quite a few teeth. He wipes his hands on his apron in a wasted
+effort to try and clean them, as he reaches out to shake your 
+hand.
+~
+14 2176 1000 Y
+50 10 -5 5000d1+500 2d60+50
+50000 750000
+8 8 1
+69 16384 1d1+1 2
+7 1 30 0
+2 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21601
+fyr jotun smith~
+Fyr, the Jotun smith~
+A huge smith looms before you, clenching his hammer and glaring at you.
+~
+A muscle bound Jotun is working here, covered head to toe in soot.  
+He grips a piece of steel in his bare hands and heats it in the 
+forge till it glows white hot, then he begins to pound it with 
+mighty blows from his hammer. He looks up for a moment and glares 
+at you through his bushy red eyebrows and snarls something 
+unintelligible. He then continues his work seeming oblivious to 
+your presence.  If he wasnt over 7 feet tall and so obviously 
+powerful, you might consider giving him a lesson in manners. But 
+you think turning around and leaving with all due haste would be a 
+much better and safer idea.
+~
+14 2176 -1000 Y
+55 10 -8 8000d1+2000 6d50+100
+50000 1800000
+8 8 1
+59 16385 1d1+1 2
+4 2 35 0
+3 1 35 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21602
+dirk drunk halfling~
+Dirk, the drunk halfling~
+A drunken halfling stumbles around the room.
+~
+This short little fellow is obviously very drunk and in his left 
+hand he clutches a mug of ale that is nearly as big as he is. He 
+takes a gulp and waves to you. He shakes his head as if to clear 
+it and rubs his eyes. He starts to say something, but out comes a 
+gargantuan belch. He laughs to himself and stumbles away from you.
+~
+138 128 0 Y
+50 19 -15 500d1+100 20d4+10
+1000 150000
+8 8 1
+70 16384 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21603
+farmer drunk~
+A drunk farmer~
+A farmer is here enjoying the local specialty.
+~
+A mud stained individual is here, enjoying a cold one.
+From the looks of it, he's had a lot more than just one.
+~
+10 0 500 Y
+1 19 10 20d4+10 20d1+5
+100 1500
+8 8 1
+69 16384 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21604
+barmaid maid beauty~
+A pretty barmaid~
+A buxom beauty is here dodging drunk patrons and serving beer.
+~
+A pretty young thing with long blonde hair is serving drinks. She's
+gracefully dodging some of the more drunken patrons. She winks at
+you as she passes by, hoisting 3 giant beer steins in each hand.
+~
+10 0 0 Y
+1 19 -5 100d1+50 10d4+5
+100 1000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21605
+frod ranger~
+Frod, the Ranger~
+A man dressed in wolfskins is here, with longbow in hand.
+~
+A tall lean man dressed head to toe in wolfskins is here, 
+scanning the ground for footprints. He holds a longbow at the 
+ready and looks to be quite an expert.
+~
+140 262272 0 Y
+50 0 -5 2000d3+1000 30d3+30
+1000 60000
+8 8 1
+69 16384 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21606
+Zan pitbull~
+Zan, the pitbull~
+A ferocious looking dog is here growling at you.
+~
+This pitbull is easily as big as a small horse and it seems to be 
+hungry, whatever you do, do NOT try to pet him.
+~
+8 33554560 0 Y
+10 10 -8 50d50+250 3d30+25
+0 150000
+8 8 1
+89 16384 1d1+1 1
+5 1 40 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21607
+skeleton stone~
+Stone Skeleton~
+A petrified skeleton is here seeking to end your life!
+~
+Covered in cobwebs and dust, this skeleton seems to be made of 
+stone! Either a result of some unknown magics or an ancient curse, 
+you may never know, but it seems clear that it would like nothing 
+more than to end your puny existance.
+~
+42 2176 0 Y
+50 5 -10 12000d1+3000 20d20+75
+250000 2400000
+8 8 1
+53 16384 1d1+1 2
+3 1 25 0
+4 2 30 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21608
+wolf timber~
+A Timber Wolf~
+A large grey wolf is here, its eyes burning with hunger.
+~
+A lean grey wolf paces back and forth before you clearly with the 
+intent to fill its belly with your remains.
+~
+40 0 0 Y
+35 15 -5 100d15+1500 10d10+10
+0 300000
+8 8 1
+89 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21609
+bartender fat otto~
+Otto, The bartender~
+A very tall, fat man is here, sipping whiskey and serving drinks.
+~
+Over six feet tall and nearly as wide, Otto the barkeep is standing 
+here, lauging and joking with the customers.  Every few moments he 
+stops and takes a sip from a rather large glass full of whiskey. He 
+smiles at you and waves you over for a drink.
+~
+10 134217856 1000 Y
+55 5 -4 500d3+500 10d10+5
+25000 150000
+8 8 1
+69 0 50d2+10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21620
+cultist robed~
+A Robed Cultist~
+A robed cultist is here, chanting softly.
+~
+A figure dressed head to toe in pitch black robes is here, chanting 
+in a low voice. You cant make out the words, but you get the distinct 
+impression that this is not a very friendly or even sane individual.
+~
+8 0 -1000 Y
+35 18 0 25d100+500 10d8+10
+2000 270000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21621
+cultist rabid~
+A Rabid Cultist~
+A robed man is here, growling and muttering to himself.
+~
+A man in dark robes is here, muttering to himself at a frenzied 
+pace. He suddenly stops and twitches violently and begins growling 
+incoherently. A moment later he stands upright and composes 
+himself, throwing back his hood to reveal the wild eyes of a 
+madman. In the blink of an eye he is rushing at you, his eyes 
+blazing with murderous intent.
+~
+40 0 -1000 Y
+50 5 -2 50d100+500 12d10+18
+1 495000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21622
+dark inquistor ~
+The Dark Inquisitor~
+A large man in black robes is here, awaiting those faithfull to the darkness.
+~
+A large man stands watch over the sacred pool of the serpent. Here 
+in this fetid pool he annoints the cultists and purges their souls 
+of all goodness. When their hearts are as black as the darkness they 
+serve, then they may pass into the temple of the serpent as true 
+brothers and sisters of darkness.
+~
+1048586 128 -1000 Y
+51 5 -5 500d20+3000 3d50+50
+120000 1050000
+8 8 1
+69 0 1d1+1 3
+9 2 40 0
+3 1 40 0
+1 4 40 89
+0 0 0 0
+K
+0 0 0 0 0 0
+#21623
+serpent huge fanged~
+A Huge Fanged Serpent~
+A Huge Serpent is here, angered by your intrusion.
+~
+A huge fanged serpent is swimming here, it quickly turns and prepares 
+to eat its next meal, YOU!
+~
+8 128 0 Y
+35 10 -5 300d10+2000 6d40+14
+100 450000
+8 8 1
+80 0 1d1+1 1
+8 1 35 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21624
+dark priest~
+A Dark Priest~
+A dark priest is here, chanting the unholy matras.
+~
+A dark robed figure is here, lost, for the moment, in thought.  
+Slowly he begings chanting, dark and ominous are the words and 
+though you can only guess its meaning, it is clearly evil.  The 
+very sound of it makes your heart skip a beat and your knuckles 
+clench. Suddenly, the chanting stops, and the priest is glaring 
+at you with hostile intent. A wicked smile crosses his face and 
+he reaches out with arms outstretched as if to embrace you.  As 
+he nears you, his face suddenly changes into a mask of rage and 
+hatred and his black forked tongue hangs out of his mouth as he 
+hisses 'DIE INFIDEL!'
+~
+536870952 8388608 -1000 Y
+51 10 -8 3000d3+500 30d6+10
+20000 1350000
+8 8 1
+69 0 1d1+1 1
+5 3 30 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21625
+minotaur berserker~
+A Minotaur Berzerker~
+A giant ebon-skinned man with the head of a bull is chained to the wall here.
+~
+Standing over 9 feet tall and rippling with muscles, a mighty 
+minotaur warrior stands here grumbling under his breath and pawing 
+at the ground with his cloven feet. About his wrists are thick 
+steel shackles and attached to these are massive steel chains that 
+run up the wall and are connected to two iron rings set into the 
+wall. This creature is clearly a prisoner here, although judging 
+from the spattered blood and fragments of bone scattered about that 
+it has not been idle. Suddenly it cries out in a bestial voice, 
+'COME FOOLS! COME AND DIE! I AM DOOMED, DOOMED TO FIGHT ALL THOSE 
+THAT WOULD STAND AGAINST THE SERPENT! DEATH IS MY ONLY FREEDOM, COME 
+THEN AND FREE ME OR DIE BY MY HAND!'
+~
+10 805570688 0 Y
+51 5 -5 6000d3+1000 30d15+15
+50000 2700000
+8 8 1
+91 0 1d1+1 2
+3 1 20 0
+4 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21626
+balrog~
+A Chained Balrog~
+A mighty Balrog is chained here, its mangled wings beating slowly.
+~
+A huge red-skinned demonic figure stands here, wreathed in smoke and 
+flames.  The room is barely big enough to contain this hell-spawn, 
+and deep scars in the stone walls attest to this beasts fury. A 
+titanic metal chain runs from a set of iron rings in the wall to a 
+huge spiked collar around the demons neck. It snorts and rises to its 
+full height as it senses your presence and belches forth an acrid 
+cloud of burning sulfur. It glares at you with its burning eyes of 
+hellfire and clenches its fists. It slowly circles towards you 
+beating its wings.  It is then you notice that its wings are torn 
+and mangled and uncapable of flight. You cannot help but wonder who 
+or what could possess such power as to imprison and humiliate such 
+a powerful demon of hell. This does not bode well at all.
+~
+10 268699776 -1000 Y
+55 5 -5 20000d1+2000 66d6+6
+50000 2700000
+8 8 1
+63 1 200d3+200 4
+6 3 20 0
+3 1 15 0
+1 3 15 26
+1 4 20 106
+0 0 0 0
+K
+0 0 0 0 0 0
+#21627
+priest war~
+Cho'Kah, the War Priest~
+A Warrior Priest stands here, surrounded by a black aura of power.
+~
+A short bearded man stands here, his hands resting on a massive 
+hammer. He is clad in pitch black armor, with a blood red emblem of 
+the serpent emblazoned upon his breastplate. As you enter the room 
+he holds up his hand for you to stop and begins to speak, 'I am the 
+master of all you see before you, and I alone wield the power of the 
+serpent. My guardians are strong and fierce, but they are as blades 
+of grass when compared unto me. You have fought well, and now, you 
+will die well, for no one comes here unbidden. No Infidel shall enter 
+my house and live to tell of it! YOUR LIFE IS FORFEIT UNTO ME, AND 
+UPON YOUR DEATH I SHALL FEAST UPON YOUR SOUL!'
+~
+10 277088392 -1000 Y
+55 0 -8 6000d5+4000 20d20+100
+500000 3000000
+8 8 1
+69 0 40d50+200 6
+9 2 30 0
+3 1 20 0
+4 3 20 0
+2 5 20 0
+1 6 15 140
+1 4 15 80
+0 0 0 0
+K
+0 0 0 0 0 0
+#21628
+Vysss, the Butcher. ~
+Vysss, the Butcher ~
+Vysss the butcher is here, sharpening his cleaver.
+~
+Vysss the butcher is a tall muscular serpentman warrior, with 
+hugely sadistic tendancies. His job is to butcher the prisoners 
+when fresh meat is needed, or whenever he feels like it. Countless 
+prisoners have suffered and died most horribly at his clawed hands. 
+He hisses sharply as he senses your presense and licks his massive 
+bloody cleaver in sadistic exhilaration at the thought of new 
+victims.
+~
+44 277610632 -1000 Y
+50 -2 -5 400d50+3000 30d3+30
+50 2250000
+8 8 1
+80 0 10d2+5 1
+11 2 30 65
+0 2 0 0
+K
+0 0 0 0 0 0
+#21629
+Red-Eye ~
+Red-Eye, the rabid orc prisoner ~
+Red-Eye, the orcish prisoner stands here gibbering and drooling.
+~
+Red-Eye, once a proud and mighty champion of the orcish legions, 
+is now nothing more than a half-crazed lunatic.  Clearly he has 
+been driven quite insane since his imprisonment here. He glares 
+at you through blood-shot eyes and snarls something unintelligible. 
+Perhaps he is hungry?
+~
+536871432 0 -100 Y
+35 5 -2 5000d1+1000 15d15+15
+20 750000
+8 8 1
+96 0 10d1+0 1
+4 3 30 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21630
+A serpentman jailer ~
+A Serpentman Jailer ~
+A Serpentman Jailer is here, hissing angrily at you.
+~
+A tall humanoid with the head of a serpent patrols this area 
+looking for any intruders or escaped prisoners. He hisses angrily 
+when he notices your intrusion and bares his fangs for the attack!
+~
+8 128 -800 Y
+40 10 -7 50d50+5000 10d10+25
+5000 1200000
+8 8 1
+80 0 10d2+10 1
+5 2 25 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21631
+prisoner ragged~
+A ragged prisoner ~
+A badly disfigured prisoner is huddled here, barely alive.
+~
+A wretched prisoner is here with a totally blank expression
+on his face. He does not acknowledge your presense, nor
+does he seem capable of speaking. Whatever has happened
+to him has left him a shadow of his former self. You pity the
+poor fool, for now his mind does not even know the meaning
+of freedom. He just sits here, awaiting death.
+~
+10 0 1000 Y
+35 18 5 50d50+50 10d10+10
+0 150000
+5 5 1
+80 0 10d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21632
+priest ~
+A High Priest of the Serpent. ~
+A Serpent Priest is here, performing horrfic blood-rites.
+~
+Standing full well over nine feet tall and rippling with muscle,
+this priest of the serpent is clearly a capable warrior as well
+as a high priest of considerable power. He pulls back his hood
+to reveal his hideous serpentine face, and he licks his lips with
+his forked tounge. He slowly hisses, and extends his fangs
+towards you at an almost leisurely pace. Clearly he has no fear
+of your pitiful band, and in the blink of an eye, he is upon you,
+fangs and claws ripping into you, and all the while chanting
+horrible mantras of unspeakable power.
+~
+553648170 276824192 -1000 Y
+50 -5 -8 10000d1+100 60d2+5
+75000 2100000
+8 8 1
+80 0 200d2+100 5
+6 2 20 0
+1 1 20 119
+5 7 20 0
+1 6 20 140
+11 4 100 53
+0 0 0 0
+K
+0 0 0 0 0 0
+#21633
+serpent ~
+A ravenous serpent ~
+A ravenous serpent hisses hungrily at you.
+~
+A huge serpent, well over 20 feet long, lies coiled here.
+It looks a bit thin, and it must be hungry. That would
+explain why it is hissing at you and trying to swallow
+your head.
+~
+42 268435584 0 Y
+50 5 -2 2000d6+5000 10d6+20
+0 1200000
+8 8 1
+80 0 1d1+1 3
+8 5 20 0
+5 2 20 0
+11 5 100 53
+0 0 0 0
+K
+100000 0 0 0 0 0
+#21634
+Khoumiss scourge~
+Khoumiss, the scourge of D'khan. ~
+A huge jet black serpent warrior slowly circles you.
+~
+Over fourteen feet high and jet black, this mighty serpent
+warrior has seen more combat then you ever will. Countless
+numbers of warriors and innocents alike have died at his
+hands, and in his mind there is no difference, all must die.
+Perhaps he was banished to this secluded place for his
+indiscriminate killing, perhaps even the priests could not
+control his bloodlust. Whatever the reasons for his isolation,
+he clearly is enraged by your presense.
+~
+10 268437632 -1000 Y
+55 -5 -8 5000d3+5000 75d2+75
+500000 6000000
+8 8 1
+80 4160 50d5+50 6
+11 3 20 65
+8 4 20 0
+3 1 20 0
+6 2 20 0
+5 2 20 0
+1 6 15 102
+0 0 0 224
+K
+0 0 0 0 0 0
+#21635
+serpentine abomination ~
+A serpentine abomination ~
+A hideous and misshapen creature writhes in agony here.
+~
+This beast appears to be non-sentient, but clearly has a keen
+animal instinct. It has the lower body of a huge serpant, and
+the torso of a man with a serpentine head, but its arms are 
+made up of dozens of smaller serpents, all lashing about
+and biting each other in a fury. This creature is clearly in
+pain, but that does not stop it from wanting to kill and eat
+you, and it lunges for you, with dozens of hissing serpent
+heads biting and lashing at you.
+~
+67108876 128 -500 Y
+50 -5 -5 7000d1+1000 30d5+30
+0 1500000
+8 8 1
+80 16384 50d3+50 3
+3 1 20 0
+1 5 20 105
+5 4 10 0
+0 0 1 0
+K
+50000 0 0 0 0 0
+#21636
+demon fanged~
+A fanged serpent-demon ~
+A huge green-scaled humanoid lurks here, its gaping maw full of razor sharp fangs.
+~
+Standing over ten feet in height and covered in a gleaming
+coat of scales, with a giant maw that is far too big for its
+body. This demonic creation is a thing to be feared. It grins
+in wicked anticipation and you see burning venom drip from
+its six inch fangs. It knows no fear, only hunger, and hatred.
+
+~
+40 16779392 -1000 Y
+51 0 -12 500d20+10000 30d20+30
+0 2400000
+8 8 1
+80 16384 500d3+200 6
+5 2 25 0
+1 4 20 105
+1 2 20 100
+1 1 20 242
+9 2 10 0
+1 1 15 191
+0 0 0 256
+K
+100000 0 0 0 0 0
+#21637
+demon hissing~
+A hissing demon ~
+A massive black serpent coils itself to strike.
+~
+This is the biggest serpent you have ever seen, easily fourty
+feet long from head to tail. The massive head seems too large
+for its body, and it is lined with razor sharp fangs. Despite its
+massive size, it moves with alarming speed, and despite your
+small size, it seems intent on eating you. It rears up to strike
+and lets out a booming 'HISSSSSSSSSSSSSSSS!'
+~
+42 16810112 -1000 Y
+51 0 -5 9000d8+20000 20d5+35
+0 6000000
+8 8 1
+80 16384 10d10+50 3
+5 1 20 0
+10 4 10 0
+8 4 25 0
+0 0 0 0
+K
+1000000 0 0 0 0 0
+#21638
+serpents mass serpent~
+A writhing mass of serpents ~
+A writhing mass of entwined serpents is here.
+~
+A huge mass of serpents, all twisted together and slithering
+about. There are all shapes and sizes of serpent, all entwined
+together like a single living organism.
+~
+536870922 0 0 Y
+50 -10 0 1000d3+1500 20d20+20
+0 450000
+8 8 1
+80 16384 1d1+1 2
+5 2 20 0
+5 1 20 0
+0 0 0 0
+K
+50000 0 0 0 0 0
+#21639
+serpent lord~
+The Serpent Lord ~
+A huge green-scaled humanoid is here, wearing a horned crown.
+~
+Towering a full eighteen feet tall and covered head to toe
+in thick green scales, this mighty ruler fears nothing. With
+a flick of his wrist he could kill a mortal man. He snarls
+and hisses at your intrusion, and prepares to kill you
+for your arrogance. He snarls 'Come and die! Your soul
+and blood shall be MINE!'
+~
+10 402655362 -1000 Y
+55 -10 -10 20000d1+10000 100d5+200
+1000000 9000000
+8 8 1
+80 0 500d3+500 6
+6 2 20 0
+5 2 20 0
+8 4 20 0
+9 5 10 0
+1 4 10 4
+1 5 10 106
+0 0 0 32
+T
+......The Serpent Lord burns with a hellish light!~
+K
+0 0 0 0 0 0
+#21640
+serpent smoke~
+A serpent of smoke ~
+A strange serpentine figure, seemingly formed of smoke lurks here.
+~
+A whispy serpent formed out of smoke drifts about here,
+you can barely make out tiny, glowing red eyes and a gaping 
+mouth with glowing green fangs.
+~
+536870952 419430400 0 Y
+50 5 -10 500d3+200 10d88+100
+0 600000
+8 8 0
+80 268435521 1d1+1 0
+0 0 0 32
+K
+0 0 0 0 0 0
+#21641
+serpent giant smoke~
+A giant serpent of smoke ~
+A Giant floating Coil of smoke seems to float here.
+~
+A giant serpent formed from billowing coils of smoke floats
+here. It hisses faintly and rears its nearly transparent head
+as you approach the portal. It clearly does not want you to
+enter.
+~
+10 402655232 0 Y
+50 0 -10 1000d6+3000 15d88+100
+0 900000
+8 8 0
+80 268439617 1d1+1 0
+0 0 0 32
+K
+0 0 0 0 0 0
+#21642
+Kysss serpent priestess~
+Kysss, the High Serpent Priestess ~
+A tall woman with scaly green skin meditates here.
+~
+Tall and slender, with shimmering green skin, Kysss the
+serpent priestess sits here. Clad only in a loose fitting
+cloak, she barely seems to notice your intrusion, and
+sits here motionless in deep meditation. She wields no
+weapons and wears no armor, perhaps you could
+slit her throat before she notices you are here?
+~
+16394 134219904 -800 Y
+55 0 -6 4000d6+5000 80d6+40
+250000 6000000
+6 8 2
+80 0 500d10+500 5
+1 6 20 252
+1 2 10 203
+1 1 20 136
+1 4 10 106
+1 4 5 142
+0 0 0 0
+K
+0 0 0 0 0 0
+#21643
+blood serpent demon~
+The Blood Serpent ~
+A twisted mass of congealed blood and gore thrashes about here.
+~
+A gigantic, gore covered, serpentine monstrosity rises up
+from the pool of blood. Its body is covered with a thick coat
+of glistening crimson scales. It grins down at you in
+wicked anticipation, as it flexes its massive, clawed
+hands and begins to coil, as if to strike. A powerful voice 
+booms inside your skull, and you fear your head will explode from 
+the sheer power of this demons will.
+
+`iHisssss....Your pitiful mortal forms have only served
+to carry your souls to me. Now I shall devour both, body
+and soul, and your pathetic existance shall be at an end.`q
+~
+10 134219904 -1000 Y
+55 -5 -10 30000d2+10000 60d12+100
+0 15000000
+8 8 1
+80 4096 3000d2+1000 6
+8 4 20 0
+10 4 10 0
+6 2 10 0
+5 2 10 0
+1 4 30 89
+1 1 20 136
+0 0 0 0
+K
+2000000 0 0 0 0 0
+#21644
+green serpent. ~
+A large green serpent ~
+A large green reptile lies coiled here. 
+~
+Over seven feet long with dull green scales, this reptile
+lies coiled here, poised to strike at anyone foolish enough
+to wander close to it.
+~
+40 0 0 Y
+50 19 -5 1000d6+3000 88d1+10
+0 1200000
+8 8 1
+80 0 1d1+1 1
+5 1 10 0
+0 0 0 0
+K
+30000 0 0 0 0 0
+#21645
+skeletal spearman ~
+Skeletal Spearman ~
+A skeletal warrior stands at attention here, guarding this crypt for all eternity.
+~
+A skeletal warrior stands guard here, armed with a spear and clad
+in chainmail of fine quality. A battered shield hangs limply from its
+left arm and upon closer inspection it bears the faded remnants
+of a coat of arms, one that you have never seen. As you ponder
+what this means, the undead warrior seems to come to life, like
+a puppet on a string it shambles towards you.....
+~
+537001998 0 0 Y
+50 10 -5 3000d3+5000 20d10+20
+0 1050000
+8 8 1
+53 0 1d1+1 1
+3 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21646
+skeletal giant ~
+A Six-Armed Skeletal Giant ~
+A towering skeletal figure is here, standing guard for eternity in its undead state. 
+~
+A giant six-armed skeletal warrior stands here, the eternally 
+vigilant guardian of this final resting place. It is clad in a 
+giant suit of chainmail and wields some wicked looking polearms, 
+as well as a massive shield of iron. It begins to move the 
+instant you step foot into the chamber, and it is clear that 
+you are not welcome here. 
+~
+42 268435584 0 Y
+55 5 -5 1000d6+20000 60d10+50
+0 4500000
+8 8 1
+53 0 1d1+1 4
+3 1 20 0
+7 4 10 0
+9 2 10 0
+4 7 10 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#21647
+dark rider ~
+The Dark Rider ~
+A giant warrior clad all in black is here, raising his massive blade in a challenge to your party. 
+~
+A giant humanoid figure, clad in black platemail and wielding 
+a mighty battleblade towers here before you. The armor he wears 
+looks ancient and drawn about it is a tattered black cloak. He 
+hefts his massive blade and prepares to do battle.
+~
+16426 135266432 0 Y
+70 -4 -7 10000d3+25000 100d25+150
+450000 15000000
+8 8 1
+67 4096 100d50+100 3
+2 4 15 0
+4 2 10 0
+3 2 10 0
+0 0 0 448
+K
+0 0 0 0 0 0
+#21648
+dark stallion ~
+A Dark Stallion~
+A pitch-black horse of titanic size is here, flames flaring from its nostrils as it paws the ground.
+~
+The biggest warhorse you have ever seen, rippling with muscle 
+and wearing plate-mail barding of superb craftsmanship. Fire 
+and smoke flare from its nostrils with every breath and it 
+rears up on its hindlegs, lashing out at you in an attempt 
+to crush your head. 
+~
+536887306 402653312 0 Y
+55 5 -10 15000d3+5000 100d3+100
+0 4500000
+8 8 1
+86 0 1d1+1 2
+10 4 10 0
+2 2 10 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#21649
+serpent god ~
+The Serpent God ~
+Sssss'tak'sss'tyl, the Serpentine Lord of Murder and Death towers here before you!
+~
+Sssss'tak'sss'tyl's monolithic form looms before you, and you
+gaze upward in horror as you realize that you are no bigger
+than insects to him. Just one of his mighty clawed hands could
+flatten half of Midgaard. A booming hiss reverberates throughout
+the cavern as Sssss'tak'sss'tyl rears up to his full height and
+flexes his titanic muscles. Gazing down at your puny forms a
+horrible hissing laugh escapes his fanged mouth. You stand
+awestruck before him, trembling uncontrollably, your mind numb
+with fear.
+
+`cMY THANKSSSSSSS PUNY ONESSSS. LONG HAS IT BEEN SINCE I'VE
+TASTED THE FLESH OF MORTALS AND DRANK OF THEIR BLOOD AND FEAR!
+YOU HAVE MY GRATITUTE, AND YOU SHALL HAVE THE SUPREME HONOR OF
+DYING BY THE HANDS OF A GOD! PREPARE YOURSELVES FOR OBLIVION!`q'
+
+What have you done releasing this hell spawned horror upon the world?
+You muster enough sense and courage to draw your weapons and prepare
+to die fighting.
+~
+10 402653312 -1000 Y
+70 -10 -10 1000d50+25000 30d30+500
+0 15000000
+8 8 1
+80 0 1000d6+5000 8
+6 2 10 0
+6 4 10 0
+5 2 10 0
+10 4 10 0
+8 4 10 0
+1 4 10 106
+1 1 10 136
+1 4 10 105
+0 0 0 0
+K
+0 0 0 0 0 0
+#21650
+snake hissing~
+A Hissing Snake~
+A very small and very hostile snake is coiled here.
+~
+A rather small snake is coiled here, hissing. It sure
+looks angry! Dont get too close, or it will surely sink
+its fangs into you.
+~
+8 0 0 Y
+25 -5 0 50d3+10 25d2+5
+0 1500
+8 8 1
+80 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#21701
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

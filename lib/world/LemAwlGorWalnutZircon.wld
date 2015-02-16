@@ -1,0 +1,1602 @@
+#26000
+A trailer outside of Lumall Keep~
+    This small, cramped dump is clustered with pens, pencils, drafting
+paper, blue prints, a large humming computer, and a whip.  (Probably 
+used by Lem to beat his slave Awl.)  As you peer around the room, everything
+seems to be moving before your eyes, nothing is staying in the same place...
+perhaps Lem and Awl are at work again?  Did that shadow move?
+~
+260 8 0
+D4
+A temporary door description.
+~
+door~
+1 -1 1212
+E
+shadow~
+The shadow you saw move a second ago is Gor, hiding out.
+He's quaking in fear that he'll be made to work. Shh!
+~
+S
+#26001
+Awl's Toolshed~
+     This is where Awl entertains his guests, prepares delectible delights,
+slaps people around, and of course, most importantly, throws his kick ass
+parties.  Hanging on the wall there is a life-size poster of a very muscular
+man with a football tucked under his arm looking into the distance.  You can
+also make out a frame next to the large waterbed, it appears to be a
+photograph of a young woman, she is the most beautiful woman you have ever
+layed eyes on.  You notice out of the corner of your vison, a gleaming
+trophy, won by Awl himself.  Laying on the floor you can see the feeding
+dish of Awl's pet, Grimhol.
+~
+260 12808 0
+S
+#26010
+An example room~
+   Small oil lamps spread light to the hard unyielding stone walls that 
+surround you.  To the south a foul odor can be sensed.  A gallery is located
+to the west.
+~
+260 0 0
+E
+playboys~
+As you gaze upon the magazine, you notice a tall blonde with the title Miss July@
+~
+S
+#26043
+Private hallway~
+   Gold and silver worked lamps light the Kings private hallway.  Soft
+cushioned rugs lay about so as not to discomfort the King during his late
+night ventures to his office.  Potted plants and tapestries adorn the walls.
+~
+260 8 0
+D2
+A temporary exit description.
+~
+door~
+0 -1 26057
+D3
+A temporary exit description.
+~
+door~
+0 -1 26044
+E
+lamp~
+Beautifully crafted oil lamps appear in perfect condition.
+~
+E
+rug~
+Soft and very comforatable to the feet.
+~
+E
+plant~
+A newly blossomed plant with petals as soft as silk.
+~
+E
+tapestry~
+A woven depiction of a hunting scene.
+~
+S
+#26044
+Private hallway~
+   Gold and silver worked lamps light the King's private hallway.  Soft
+cushioned rugs lay about so as not to discomfort the King during his late
+night ventures to his office.  Potted plants and tapestries adorn the walls.
+The hallway continues east and west.
+~
+260 8 0
+D1
+A temporary exit description.
+~
+door~
+0 -1 26043
+D3
+A temporary exit description.
+~
+door~
+0 -1 26045
+E
+plant~
+A newly blossomed plant, with petals soft as silk.
+~
+E
+lamp~
+Shimmering from the light offered by itself.
+~
+E
+rug~
+Very soft and colorful.
+~
+E
+tapestry~
+A woven depiction of a large battle.
+~
+S
+#26045
+Private hallway~
+   Gold and silver worked lamps light the King's private hallway.  Soft
+cushioned rugs lay about so as not to discomfort the King during his late
+night ventures to his office.  Potted plants and tapestries adorn the walls.
+~
+260 8 0
+D1
+A temporary exit description.
+~
+door~
+0 -1 26044
+D2
+A temporary exit description.
+~
+door~
+1 -1 26059
+D3
+A temporary exit description.
+~
+door~
+1 -1 26046
+E
+rug~
+Very soft and colorful.
+~
+E
+plant~
+A very pretty magnolia lightens up this hallway.
+~
+E
+lamp~
+Shimmering from the light offered by itself.
+~
+S
+#26046
+Small meeting room~
+   This room radiates with a feeling of power, although the furnishings
+aren't very rich, they still seem to have a peculiar air about them.  Here
+the Kings advisors meet, plan and plot what they velieve to be the best for
+Lumall. Darkness seems to press agianst the light offered by the small
+brass oil lamps placed about the room.
+~
+260 9 0
+D1
+A temporary exit description.
+~
+door~
+1 -1 26045
+D2
+A temporary exit description.
+~
+door~
+0 -1 26060
+E
+lamp~
+A very sturdy beat up lamp, seems centuries old.
+~
+S
+#26047
+A servant's bedroom~
+same vein as 26061 and other servant's bedrooms
+~
+260 9 0
+D3
+A temporary exit description.
+~
+door~
+1 -1 26048
+S
+#26048
+Servant's hallway~
+same vein as 26062
+~
+260 9 0
+D1
+A temporary exit description.
+~
+door~
+1 -1 26047
+D2
+A temporary exit description.
+~
+door~
+0 -1 26062
+D3
+A temporary exit description.
+~
+door~
+1 -1 26049
+S
+#26049
+A servan't bedroom~
+same vein as 26078, 064, 063,076,074,and 061
+~
+260 9 0
+D1
+A temporary exit description.
+~
+door~
+1 -1 26048
+S
+#26050
+Servant's linen closet~
+this is where the linen (bedsheets etc) for the servant's beds is 
+stored.
+~
+260 8 0
+D3
+A temporary exit description.
+~
+door~
+1 -1 26051
+S
+#26051
+Servant's hallway~
+   Lamps light your path through the twisting hallway.  A hand woven rug lays
+here to soften the steps of Lumall's master servants.  Potted plants lay about
+the walls.
+~
+260 8 0
+D1
+A temporary exit description.
+~
+door~
+1 -1 26050
+D2
+A temporary exit description.
+~
+door~
+0 -1 26065
+D3
+A temporary exit description.
+~
+door~
+1 -1 26052
+E
+rug~
+A long rug lays sprawled about the floor.
+~
+E
+plant~
+Withered and old, needs some water.
+~
+S
+#26052
+Sub-Chamberlain's room~
+ok, a chamberlain is a butler, sub-chamberlain is somebody who polishes
+the king's shoes, fetches the king some water if he wants it, etc...
+make the furniture fit the station
+~
+260 9 0
+D1
+A temporary exit description.
+~
+door~
+1 -1 26051
+S
+#26053
+Servant's hallway~
+   Small oil lamps spread light to the hard unyielding stone walls that
+surround you.  To the south a foul odor can be sensed.  A gallery is located
+to the west.
+~
+260 8 0
+D2
+A temporary door description.
+~
+door~
+0 -1 26067
+D3
+A temporary door description.
+~
+door~
+0 -1 26054
+S
+#26054
+The Gallery~
+    White virgin marble paves the floor here.  Flowers whos fragrance you
+cannot place are placed throughout the room.  Chandeliers hang about the
+room, creating a soothing glow filling the gallery.  Suits of armor
+reflect light giving them an illuminating presence.  Padded benches that
+look very comfortable are placed along the walls.  Here the mind can be
+exercised without distraction.  To the south, you see a fountain gushing
+with cool clear water.
+~
+260 72 0
+D1
+A temporary door description.
+~
+door~
+0 -1 26053
+D2
+A temporary door description.
+~
+door~
+0 -1 26068
+S
+#26055
+A wide hallway~
+   Dimly lit, but by far enough to see clearly, this hallway appears very
+comforatable at first glance.  Rugs and tapestries decorate this section.
+Although at a closer look, nothing lies in the center of this hall.  Large
+bricked archways lead west and east.
+~
+260 9 0
+D2
+A temporary door description.
+~
+door~
+1 -1 26069
+E
+rug~
+Very soft for the feet.
+~
+E
+tapestry~
+A woven scene depicting a battle in which the king faught valiantly.
+~
+S
+#26056
+Storage room~
+same as 26070...however 26070 needs a change -- dusty, rolled up rugs
+cannot adorn the walls ... rolled up rugs lie on the floor, piled up:
+they don't hang on the walls :)
+~
+260 9 0
+D2
+A temporary door description.
+~
+door~
+0 -1 26070
+E
+rug~
+Many moths have had they're way with these rugs it seems.
+~
+E
+mop~
+Grungy and grimy it bares a resembleance to Lems hair.
+~
+S
+#26057
+Private hallway~
+   Gold and silver worked lamps light the King's private hallway.  Soft
+cushioned rugs lay about so as not to discomfort the King during his late
+night ventures to his office.  Potted plants and tapestries adorn the walls.
+The hallway continues north and south.
+~
+260 9 0
+D0
+A temporary exit description.
+~
+door~
+0 -1 26043
+D2
+A temporary door description.
+~
+door~
+0 -1 26071
+E
+plant~
+A newly blossomed plant with petals as soft as silk.
+~
+E
+tapestry~
+A woven depiction of a hunting scene.
+~
+E
+rug~
+Soft and very comforatable to the feet.
+~
+E
+lamp~
+Beautifully crafted oil lamps appear in perfect condition.
+~
+S
+#26058
+A small closet~
+   Dusty maps of foriegn lands and kingdoms lay rolled agianst the walls.
+Stacks of blank paper, a few articles of furniture sit around the room.  Some
+liquor and wine lay in crates about the floor.
+~
+260 9 0
+D3
+A temporary door description.
+~
+door~
+0 -1 26059
+E
+map~
+A rolled up map of Lumall.
+~
+E
+paper~
+Its paper, what else can i say?
+~
+E
+liquor~
+It appears to be very fine brandy.
+~
+S
+#26059
+A small closet~
+   Dusty maps of foriegn lands and kingdoms lay rolled agianst the walls.
+Stacks of blank paper, a few articles of furniture sit around the room.  Some
+liquor and wine lay in crates about the floor.
+~
+260 9 0
+D0
+A temporary exit description.
+~
+door~
+1 -1 26045
+D1
+A temporary door description.
+~
+door~
+0 -1 26058
+E
+map~
+A large depiction of the alien land "Midgaard"
+~
+E
+paper~
+Blank paper, perfect for writting on.
+~
+E
+liquor~
+Aged for perfection, or maybe just forgotten.
+~
+S
+#26060
+Small meeting room~
+   This room radiates with a feeling of power, although the furnishings
+aren't very rich, they still seem to have a peculiar air about them.  
+Here the King's advisors meet, and plan and plot what they believe to be
+best for Lumall.  Darkness seems to press agianst the light offered by
+the small brass oil lamps placed about the room.
+~
+260 9 0
+D0
+A temporary exit description.
+~
+door~
+0 -1 26046
+E
+lamp~
+A very sturdy beat up lamp, seems centuries old.
+~
+S
+#26061
+A servant's bedroom~
+   The atmosphere in this room is very spartan.  You see two hooks each 
+by both beds in the room, alongside tiny toilette mirrors. On one hook 
+hangs a pair of breechs.  There is a pocketknife on the washstand.
+~
+260 9 0
+D3
+A temporary door description.
+~
+door~
+1 -1 26062
+E
+knife~
+It is an ordinary, if crude, pocketknife.  You decide to leave it.
+~
+E
+mirror~
+The face in the mirror startles you out of several years growth.
+~
+E
+pocketknife~
+It is an ordinary, if crude, pocketknife.  You decide to leave it.
+~
+E
+washstand~
+A simple table-with-drawers arrangment.
+~
+S
+#26062
+Servant's hallway~
+   You wonder if how people pass each other in this hallway, without 
+getting on very intimate terms.  There is so little room that your 
+shadow blacks out a large region in front of you, as you pass each light.
+~
+260 8 0
+D0
+A temporary exit description.
+~
+door~
+0 -1 26048
+D1
+A temporary door description.
+~
+door~
+1 -1 26061
+D2
+A temporary door description.
+~
+@~
+0 -1 26075
+D3
+A temporary door description.
+~
+door~
+1 -1 26063
+S
+#26063
+A servant's bedroom~
+   The atmosphere in this room is very spartan.  You see two hooks each 
+by both beds in the room, alongside tiny toilette mirrors. You judge the 
+occupants to be ladies, from the skirts hanging from these hooks.
+~
+260 9 0
+D1
+A temporary door description.
+~
+door~
+1 -1 26062
+E
+mirror~
+The face in the mirror startles you out of several years growth.
+~
+E
+skirt~
+Wow, what a narrow waist.  That can't be comfortable! 
+~
+E
+skirts~
+Wow, what a narrow waist.  That can't be comfortable!
+~
+E
+washstand~
+A simple table-with-drawers arrangment.
+~
+S
+#26064
+Bedroom of the Head Chamberlain~
+   This room breaths cleanlyness, not a speck of dust lays anywhere in
+the whole chamber.  Lamps lay beside the bed on a stand, and on the washstand
+in the corner of the room.  A razor lays neatly on the side and a fresh
+pitcher of water sits ready for use.  The owner of these apartments seems
+bent on dusting.
+~
+260 9 0
+D3
+A temporary door description.
+~
+door~
+1 -1 26065
+E
+pitcher~
+A brass pitcher filled to the brim with crystal clear water.
+~
+E
+razor~
+Very sharp, and spotless.
+~
+E
+stand~
+This stand is capable of supporting alot of weight.
+~
+E
+lamp~
+Not a speck of dust has touched this lamp in 50 years.
+~
+S
+#26065
+Servant's hallway~
+   Lamps light your path through the twisting hallway.  A hand woven rug lays
+here to soften the steps of Lumall's master servants.  Potted plants lay about
+the walls.
+~
+260 8 0
+D0
+A temporary exit description.
+~
+door~
+0 -1 26051
+D1
+A temporary door description.
+~
+door~
+1 -1 26064
+D2
+A temporary door description.
+~
+door~
+0 -1 26079
+E
+rug~
+A long rug lays sprawled about the floor.
+~
+E
+plant~
+Withered and old, this plant might be as old as Lem's mom.
+~
+S
+#26066
+Chambers of Mistress of Servants~
+   Old antiques lay on shelves and riquety tables.  To the south you can see
+a very large bed.  Air in these appartments seems stiff, old, and quite 
+stuffy. The rest of the appartment lies to the south, and a door leads west.
+~
+260 9 0
+D2
+A temporary door description.
+~
+door~
+0 -1 26080
+D3
+A temporary door description.
+~
+door~
+1 -1 26067
+E
+shelf~
+Books dating back two and three centuries lay about the shelves.
+~
+E
+table~
+Very unsturdy, it seems it would fall over if any more dust fell on it.
+~
+E
+antique~
+Very old, and priceless to its owner.
+~
+S
+#26067
+Servant's hallway~
+   Small oil lamps spread light to the hard unyielding stone walls that
+surround you.  To the south an unpleasent odor emerges.  Doors block your
+wave south and east.
+~
+260 8 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26053
+D1
+A temporary door description.
+~
+door~
+1 -1 26066
+D2
+A temporary door description.
+~
+door~
+1 -1 26081
+E
+lamp~
+Small but offer surprisingly good light.
+~
+S
+#26068
+The Gallery~
+   White virgin marble paves the floor here.  Flowers whos fragrance you
+cannot place are sitting throughout the room.  Chandeliers hang about,
+creating a soothing glow filling the gallery.  Suits of armor reflect 
+light giving them an illuminating presence.  Padded benches that look
+very comforatable are place along the walls.  A small fountain 
+dominates the room.
+~
+260 72 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26054
+D2
+A temporary door description.
+~
+door~
+0 -1 26082
+E
+fountain~
+A masterfully crafted fountain, it appears fragile, but could easily support
+  a ton of water.
+~
+E
+bench~
+Soft padded benches make the perfect place to snuggle up with someone you
+love.
+~
+E
+armor~
+Steel suits of armor that haven't been used in decades.
+~
+S
+#26069
+A wide hallway~
+   Dimly lit, but by far enough to see clearly, this hallway appears very
+comforatable at first glance.  Rugs and tapestries decorate this section.
+Although at a closer look, nothing lies about in the center of the hall.
+The haughty laughter of guardsmen not on duty, rings in the passageway, 
+music to the King's ears, for he is a mans man in heart.
+~
+260 9 0
+D0
+A temporary door description.
+~
+door~
+1 -1 26055
+D2
+A temporary door description.
+~
+door~
+0 -1 26083
+D3
+A temporary door description.
+~
+door~
+1 -1 26070
+E
+tapestry~
+A woven scene depicting a battle in which the king faught valiantly.
+~
+E
+rug~
+Very soft for the feet.
+~
+S
+#26070
+Storage room~
+   Dusty, rolled up rugs are piled up against the walls.  Mops and other
+cleaning supplies lay about the floor in disarray.
+~
+260 9 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26056
+D1
+A temporary door description.
+~
+door~
+1 -1 26069
+E
+mop~
+Grungy and grimy, it bares a resembleance to Lems hair.
+~
+E
+rug~
+Many moths have had they're way with these rugs it seems.
+~
+S
+#26071
+Private hallway~
+   Gold and silver worked lamps light the King's private hallway.  Soft
+cushioned rugs lay about so as not to discomfort the King during his late
+night ventures to his office.  Potted plants and tapestries adorn the walls.
+Doors to the west and south block your way.
+~
+260 8 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26057
+D2
+A temporary door description.
+~
+door~
+1 -1 26085
+D3
+A temporary door description.
+~
+door~
+1 -1 26072
+E
+rug~
+Soft and very comforatable to the feet.
+~
+E
+tapestry~
+A woven depiction of a hunting scene.
+~
+E
+plant~
+A newly blossomed plant with petals as soft as silk.
+~
+E
+lamp~
+Beautifully crafted oil lamps appear in perfect condition.
+~
+S
+#26072
+The office of the King~
+   Bookshelves adorn the walls, filled with books in every language imaginable.
+A desk sits in the center of the room, with a high backed chair behind it. An
+anti-climatic table lays near the south wall, maps are scattered about it, 
+pencils and compasses are in disarry on the table. This room echos the feeling
+of power.
+~
+260 9 0
+D1
+A temporary door description.
+~
+door~
+1 -1 26071
+D3
+A temporary door description.
+~
+door~
+1 -1 26073
+E
+map~
+It depicts the entire realm of Lumall, and surrounding nations.
+~
+E
+table~
+Long and stable, its a table.
+~
+E
+chair~
+A chair, which shadows even the kings great stature.
+~
+S
+#26073
+A small after-chamber~
+   Here the King of Lumall may relax without the risk of hastling from his
+advisors.  Soft lounge chairs lay about the room, offering the most comfort
+possible to his majesty.  A pipe stand rests next to one of the chairs,
+sprawled about the floor lays a bear rug, killed by the king himself, it was
+quite a beast.  A liqour cabinet sits in the corner where the King may have
+an occasional drink.
+~
+260 9 0
+D1
+A temporary door description.
+~
+door~
+1 -1 26072
+E
+bear~
+This once used to be the fiercest creature in the forrest, now only a decoration.
+~
+E
+cabinet~
+Wine, brandy, Cognac, whiskey, and ale can be seen through its glass doors.
+~
+E
+chair~
+Soft and leather, it appears quite comforatable.
+~
+E
+pipe~
+A wonderfully worked pipe lays here, breathing of the best Tabac in all the land.
+~
+S
+#26074
+A servant's bedroom~
+   The atmosphere in this room is very spartan.  You see two hooks each by
+both beds in the room, alongside tiny toilette mirrors.  Someone has left
+their shaving kit on the stand.
+~
+260 9 0
+D3
+A temporary door description.
+~
+door~
+1 -1 26075
+E
+shaving~
+The blade is sharp and nice and smooth.  Apparently whoever owns
+it has to look his best.
+~
+E
+mirror~
+The face in the mirror startles you out of several years growth.
+~
+E
+washstand~
+A simple table-with-drawers arrangment.
+~
+E
+kit~
+The blade is sharp, nice and smooth.  Apparently whoever owns it has to look
+at his best.
+~
+S
+#26075
+Servant's hallway~
+   As you enter this stretch of hallway, you see it is sparcely lit by the
+torches resting on the walls.  Doors lie to the east and west.
+~
+260 8 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26062
+D1
+A temporary door description.
+~
+door~
+1 -1 26074
+D2
+A temporary exit description.
+~
+door~
+0 -1 26092
+D3
+A temporary door description.
+~
+door~
+1 -1 26076
+E
+torch~
+The torch offers more light than can be hoped for in this deep section of the
+Keep.
+~
+S
+#26076
+A servant's bedroom~
+   The atmosphere in this room is very spartan.  You see two hooks each
+by both beds in the room, alongside tiny toilette mirrors.  For both, 
+from one hook hangs a set of servants clothing.  The occupants must be 
+wearing the other set that could be here.
+~
+260 9 0
+D1
+A temporary door description.
+~
+door~
+1 -1 26075
+E
+mirror~
+The face in the mirror startles you out of several years growth.
+~
+E
+washstand~
+A simple table-with-drawers arrangment.
+~
+E
+mirror~
+Cracked and dirty this mirror has served long and faithfully.
+~
+E
+hook~
+A hook to hang tattered clothing.
+~
+E
+bed~
+It looks very uncomforatable.
+~
+S
+#26078
+Bedroom of the Mistress of Kitchens~
+   A sweet smell of sugar drifts freely in this room, possibly because the
+inhabitant of it has some goodies stashed somewhere about the apartment.  A
+large sort bed dominates the room, while a mirror lays in the corner waiting
+to be looked upon.  A washbasin stands next to an old rickety chest of drawers
+probably decades old.
+~
+260 9 0
+D3
+A temporary door description.
+~
+door~
+1 -1 26079
+E
+bed~
+Large and wooden, yup its a bed.
+~
+E
+mirror~
+You see an image of yourself -- YECH!
+~
+E
+chest~
+This chest appears to be falling apart, but it is surprisingly sturdy.
+~
+E
+washbasin~
+A large bowl at the top allows water to clense in the morning.
+~
+S
+#26079
+Servant's hallway~
+   Lamps light your path through the twisting hallway.  A hand woven rug lays
+here to soften the steps of Lumall's master servants.  Potted plants lay about
+the walls.
+~
+260 8 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26065
+D1
+A temporary door description.
+~
+door~
+1 -1 26078
+D2
+A temporary door description.
+~
+door~
+0 -1 26094
+D3
+A temporary door description.
+~
+door~
+1 -1 26080
+E
+rug~
+A long rug lays sprawled about the floor.
+~
+E
+plant~
+Withered and old, this plant might be as old as the Keep itself.
+~
+S
+#26080
+Chambers of Mistress of Servants~
+     Old antiques and ancient rugs decorate this apartment.  A very large
+bed dominates the room, with a guilded wooden chest at the foot.  The air
+seems stiff, old, and quite stuffy.  A desk and chest of drawers line the
+west and south walls.  A monstrous paddle is hanging above the desk.
+~
+260 9 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26066
+D1
+A temporary door description.
+~
+door~
+1 -1 26079
+E
+bed~
+A crickety old squeaky bed.
+~
+E
+chest~
+A hard oak chest, covered in dust.
+~
+E
+paddle~
+This paddle has sent kings running.
+~
+S
+#26081
+A privy in the Keep~
+   Flowers decorate this rooms perimeter.  Potpourri lines the walls, candles
+sit upon the soft rugs.  Porcelain seats lay about the room, describing the
+true nature of this room.
+~
+260 0 0
+D0
+A temporary door description.
+~
+door~
+1 -1 26067
+D2
+A temporary door description.
+~
+door~
+1 -1 26096
+E
+seat~
+Porcelain seats to sit on make doing your duty easier. Don't forget the paper
+work though. :)
+~
+S
+#26082
+The Gallery~
+   White virgin marble paves the floor here.  Flowers whos fragrance you
+cannot place are placed throughout the room.  Chandeliers hang about the
+room, creating a soothing glow filling the gallery.  Suits of armor
+reflect light giving them an illuminating presence.  Padded benches that
+look very comfortable are place along the walls.  Here the mind can be
+exercised without distraction.
+~
+260 72 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26068
+D2
+A temporary door description.
+~
+door~
+1 -1 26097
+E
+chandelier~
+Crystal chandeliers offering light to read by.
+~
+E
+armor~
+Steel suits of armor havn't been in use for decades.
+~
+E
+bench~
+Soft padded benchs make the perfect place to snuggle up with someone you
+love.
+~
+E
+bench~
+Soft padded benchs make the perfect place to snuggle up with someone you love.
+~
+S
+#26083
+Small antechamber to the Axis~
+     A nicely polished marble floor stretchs to all corners of this room.
+Doors to the north and west block your way.
+~
+260 9 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26069
+D2
+A temporary door description.
+~
+door~
+1 -1 26099
+D3
+A temporary door description.
+~
+door~
+1 -1 26084
+E
+floor~
+Black and white marble make the floor of this antechamber.
+~
+S
+#26084
+The Audience Hall~
+    A colossal jewel encrusted throne is sitting here, raised upon a large
+dais.  Around the room glimering lamps worked in gold are perched on small
+platforms along the hand worked stones that make the walls.  Hundred year
+old tapestries hang, picturing triumphant battles, magnificent kings, and 
+times of glory.  To the west and south more of the hall is exposed.
+~
+260 8 0
+D1
+A temporary door description.
+~
+door~
+1 -1 26083
+D2
+A temporary door description.
+~
+door~
+0 -1 26091
+D3
+A temporary door description.
+~
+door~
+0 -1 26085
+S
+#26085
+The Audience Hall~
+    You have reached the end of this great hall.  Upon a large dias you
+see a colossal throne encrusted with magnificent jewels.  Around the room
+brilliant lamps are perched on small platforms that pertrude from the
+handworked stones that form the walls.  Hundred year old tapestries hang,
+picturing triumphant battles, magnificent kings, and times of glory.
+To the south and east more of the hall is exposed.
+~
+260 8 0
+D0
+A temporary door description.
+~
+oak~
+1 -1 26071
+D1
+A temporary door description.
+~
+door~
+0 -1 26084
+D2
+~
+door~
+0 -1 26090
+E
+portrait~
+Here you see a portrait of this kingdom's most dominating king.
+~
+E
+portraits~
+You see a few portraits of past kings on magnificent thrones.
+~
+E
+portrait~
+Here you see a portrait of this kingdoms most dominating king.
+~
+E
+battles~
+On a few of the tapestries you eye a few battle scenes probably describing
+times of victory and joy.
+~
+E
+battle~
+You see a huge battle scene on this very old yet durable tapestry.
+~
+E
+tapestries~
+Very old tapestries covered with dust.  Through the dust and dirt you can
+make out faint images of battles, portraits, and other memorable times.
+~
+E
+throne~
+A huge throne made of many rare jewels and stones.  You can't see much of the
+throne mainly because of its height.  But what you can see marvels you
+and you just stare completely lost in amazement.
+~
+E
+walls~
+You see brilliantly crafted walls made by some of the most beautiful stones
+you have ever seen.
+~
+E
+wall~
+
+~
+E
+dias~
+You see a large platform supporting the throne.
+~
+E
+lamps~
+You are blinded by such powerful light!  The lamps in this room light every
+pebble.
+~
+E
+wall~
+You look closely at the wall and marvel at the beautiful masonry.
+~
+E
+walls~
+You look closely at the walls and marvel at the beautiful masonry.
+~
+E
+platforms~
+
+~
+E
+platforms~
+Small platforms just big enough to support the brilliant lamps perched above.
+~
+E
+lamp~
+You are blinded by such powerful light!  The lamps in this room light every
+pebble.
+~
+E
+oak~
+This door is crafted from heavy oak.  Unadorned by carvings or gold leaf,
+the oaken door is still beautiful, as wonderfully skilled artisans have
+perfectly brought out the grain of the wood and polished it to a glossy
+finish.
+~
+E
+platform~
+You see a small platform just big enough to support the brilliant lamp
+perched above.
+~
+S
+#26086
+Large meeting room~
+   A long oaken table stretching from the south dominates this room.
+The room is heated by a large stone fireplace, while light eminates from
+polished braziers, which are situated on sturdy stands place throughout
+the chamber.  Maps line the walls, and pencils and compasses lie in
+disarray on the table.
+~
+260 9 0
+D2
+A temporary door description.
+~
+door~
+0 -1 26089
+S
+#26087
+Storage closet~
+     Chairs, rugs, and tables are stored here for the use of Lumall's
+ruling party, when debating in the large meeting room.
+~
+260 9 0
+D2
+A temporary door description.
+~
+door~
+0 -1 26088
+E
+table~
+A long wooden table, very strong.
+~
+E
+rug~
+Thick hand woven rug seemingly older than Lumall itself.
+~
+E
+Chair~
+An old sturdy chain leaning agianst the wall.
+~
+S
+#26088
+Storage closet~
+     Chairs, rugs, and tables are stored here for the use of Lumall's
+ruling party, when debating in the large meeting room.
+~
+260 9 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26087
+E
+table~
+Large thick oaken table used when the rulers have to many people.
+~
+E
+rug~
+Thick hand woven rug, seemed to be older than the keep itself.
+~
+E
+chair~
+A very old sturdy chair leaning agianst the wall.
+~
+S
+#26089
+Large meeting room~
+    A long oaken table dominates this beautifully decorated chamber. 
+Portraits hang upon the walls.  The feeling of power radiates from this 
+room.  Here treaties are made, nations are broken, and lives are decided.
+North and south the table streches the length of the meeting chambers.
+~
+260 9 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26086
+E
+portrait~
+A painting depicting the great leader of Lumall
+~
+E
+table~
+A long, stiff, polished table.
+~
+S
+#26090
+The Audience Hall~
+    Here light falls upon every pebble.  You have the overwelming feeling
+of justice, and tribulation.  Large tapestries adorn the western wall.
+Here lives are decided every day, and not given a second thought.
+~
+260 8 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26085
+D1
+A temporary door description.
+~
+door~
+0 -1 26091
+S
+#26091
+The Audience Hall~
+   The dimensions and ornaments of this hall clutch with fey fingers
+at the meat of your soul.  Light from braziers penetrates into every
+nook and niche, giving the feeling that here every aspect of a man is 
+simply seen, and that nothing here is beyond the King's ken.  Sparsely
+furnished, the only decoration besides the grand trophies lining the walls
+is the great throne to the north, situated in such a way as to occlude
+nothing, and inclue everything.  To the east is the Axis.
+~
+260 8 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26084
+D1
+A temporary door description.
+~
+door~
+1 -1 26099
+D3
+A temporary door description.
+~
+door~
+0 -1 26090
+E
+trophy~
+Gold worked trophies representing the heart of Lumall
+~
+S
+#26092
+Servant's hallway~
+   This close hallway takes a turn northwards as you look to the east.
+To the west, torches dimly light the passageway.  You hear a burst of
+laughter through the wall at the south.
+~
+260 8 0
+D0
+A temporary exit description.
+~
+door~
+0 -1 26075
+D3
+A temporary door description.
+~
+door~
+1 -1 26093
+S
+#26093
+Servant's hallway~
+     A lamp lights your way along this tight passage.  To the south, a small
+door blocks your way.
+~
+260 8 0
+D1
+A temporary door description.
+~
+door~
+1 -1 26092
+D3
+A temporary door description.
+~
+door~
+1 -1 26094
+E
+lamp~
+An oil lamp only half filled still gives pleanty of light.
+~
+S
+#26094
+Servant's hallway~
+awl buddy, ask me about this room...make sure to :)
+~
+260 8 0
+D0
+A temporary door description.
+~
+door~
+0 -1 26079
+D1
+A temporary door description.
+~
+door~
+1 -1 26093
+D3
+A temporary door description.
+~
+door~
+1 -1 26095
+S
+#26095
+Servant's hallway~
+   You stand in a small, cramped passageway used by servants.  Torches
+shed light enough to see clearly.  You glance back, and note that shadows
+form behind you as you passage blocks the light.
+~
+260 8 0
+D1
+A temporary door description.
+~
+door~
+1 -1 26094
+D3
+A temporary door description.
+~
+door~
+0 -1 26096
+E
+oil~
+A brass oil lamp gives you a feeling of security.
+~
+S
+#26096
+Servant's hallway~
+   This is a tightly pressed hallway, with hardly enough room for two
+people to cross abreast.  A sickly-sweet fragance eminates from the 
+north.
+~
+260 8 0
+D0
+A temporary door description.
+~
+door~
+1 -1 26081
+D1
+You see a rather small, common looking hallway.
+~
+door~
+0 -1 26095
+D3
+You see a rather small, common looking hallway.
+~
+door~
+0 -1 26097
+S
+#26097
+Servant's hallway~
+   This small, cramped passageway is lightly illuminated by the torches
+that line the walls.  The fine masonry shows even here, the wonderfully
+crafted stones reflecting the elite craftsmanship of Lumall Keep's grand
+masons. A beautifully gold-worked door blocks the hallway to the west.
+~
+260 8 0
+D0
+The gallery.
+~
+door~
+1 -1 26082
+D1
+You see a small, rather common looking hallway.
+~
+door~
+1 -1 26096
+D3
+You see an elaborate gold covered door.
+~
+door~
+1 -1 26098
+E
+stones~
+Finely worked pieces of hard granite.
+~
+E
+torch~
+A wooden torch burning with a firey essence.
+~
+S
+#26098
+The Axis of Lumall Keep~
+    Here the great warriors of Lumall show their supreme skills to the
+lords and ladies of the land.  Many have ingressed to witness the spectacle
+of might and strength that these men possess; some enter to see the 
+beautifully crafted corridors and walls the famous creators of Lumall Keep
+are known 'round the world for.  Although many penetrate the Keep's walls,
+few live to tell about the Axis.
+~
+260 4104 0
+D1
+You see a small worn out wooden door.
+~
+door~
+1 -1 26097
+D3
+You see a wide plaza ringing with harsh sounds of clashing steel.
+~
+door~
+0 -1 26099
+S
+#26099
+The Axis of Lumall Keep~
+    Here the great warriors of Lumall show their supreme skills to the
+lords and ladies of the land.  Many have ingressed to witness the spectacle
+of might and strength that these men possess; some enter to see the 
+beautifully crafted corridors and walls the famous creators of Lumall Keep
+are known 'round the world for.  Although many penetrate the Keep's walls,
+few live to tell about the Axis.
+~
+260 4104 0
+D0
+You see a solid wooden door.
+~
+door~
+1 -1 26083
+D1
+You see a wide plaza ringing with harsh sounds of clashing steel.
+~
+door~
+0 -1 26098
+D3
+You see a large hall where people sit in solemn reverence.
+~
+door~
+1 -1 26091
+S
+#0
+$~

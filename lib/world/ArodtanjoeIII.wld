@@ -1,0 +1,1010 @@
+#1500
+Entrance to the First Sphere~
+A temporary description
+~
+15 0 0
+D2
+~
+~
+0 -1 1501
+S
+#1501
+The Third Level~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1500
+D2
+~
+~
+0 -1 1502
+S
+#1502
+The Third Level~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1501
+D1
+~
+~
+0 -1 1509
+D2
+~
+Arch~
+1 1460 1503
+S
+#1503
+The Third Level~
+A temporary description
+~
+15 0 0
+D0
+~
+Arch~
+1 -1 1502
+D2
+~
+~
+0 -1 1504
+D3
+~
+~
+0 -1 1516
+S
+#1504
+The Third Level~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1503
+D2
+~
+Rune~
+1 1461 1505
+S
+#1505
+The Third Level~
+A temporary description
+~
+15 0 0
+D0
+~
+Rune~
+1 -1 1504
+D1
+~
+~
+0 -1 1506
+S
+#1506
+The Bringers of Justice~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1507
+D3
+~
+~
+0 -1 1505
+S
+#1507
+The Tenacity of Will~
+A temporary description
+~
+15 0 0
+D2
+~
+~
+0 -1 1508
+D3
+~
+~
+0 -1 1506
+S
+#1508
+Throne of the Thrones~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1507
+D4
+~
+~
+0 -1 1523
+S
+#1509
+The Corporeal Path~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1510
+D3
+~
+~
+0 -1 1502
+S
+#1510
+The Corporeal Path~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1511
+D3
+~
+~
+0 -1 1509
+S
+#1511
+The Corporeal Path~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1512
+D3
+~
+~
+0 -1 1510
+S
+#1512
+The Corporeal Path~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1513
+D2
+~
+~
+0 -1 1511
+S
+#1513
+The Corporeal Path~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1514
+D2
+~
+~
+0 -1 1512
+S
+#1514
+The Corporeal Path~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1515
+D3
+~
+~
+0 -1 1513
+S
+#1515
+Throne of the Erelim~
+A temporary description
+~
+15 0 0
+D2
+~
+~
+0 -1 1514
+S
+#1516
+The Thaumaturgic Path~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1503
+D3
+~
+~
+0 -1 1517
+S
+#1517
+The Thaumaturgic Path~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1516
+D3
+~
+~
+0 -1 1518
+S
+#1518
+The Thaumaturgic Path~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1517
+D2
+~
+~
+0 -1 1519
+S
+#1519
+The Thaumaturgic Path~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1518
+D2
+~
+~
+0 -1 1520
+S
+#1520
+The Thaumaturgic Path~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1519
+D3
+~
+~
+0 -1 1521
+S
+#1521
+The Thaumaturgic Path~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1520
+D2
+~
+~
+0 -1 1522
+S
+#1522
+Throne of the Ophanim~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1521
+S
+#1523
+The Second Level~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1524
+S
+#1524
+The Second Level~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1525
+D2
+~
+~
+0 -1 1523
+S
+#1525
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1536
+D1
+~
+~
+0 -1 1526
+D2
+~
+~
+0 -1 1524
+D3
+~
+~
+0 -1 1537
+S
+#1526
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1527
+D3
+~
+~
+0 -1 1525
+S
+#1527
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1528
+D2
+~
+~
+0 -1 1526
+D3
+~
+~
+0 -1 1536
+S
+#1528
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1530
+D1
+~
+~
+0 -1 1529
+D2
+~
+~
+0 -1 1527
+S
+#1529
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D3
+~
+~
+0 -1 1528
+S
+#1530
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D2
+~
+~
+0 -1 1528
+D3
+~
+~
+0 -1 1531
+S
+#1531
+The Thrill of Harmony~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1538
+D1
+~
+~
+0 -1 1530
+D3
+~
+~
+0 -1 1532
+S
+#1532
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1531
+D2
+~
+~
+0 -1 1533
+S
+#1533
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1532
+D2
+~
+~
+0 -1 1535
+D3
+~
+~
+0 -1 1534
+S
+#1534
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1533
+S
+#1535
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1533
+D1
+~
+~
+0 -1 1536
+D2
+~
+~
+0 -1 1537
+S
+#1536
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1527
+D2
+~
+~
+0 -1 1525
+D3
+~
+~
+0 -1 1535
+S
+#1537
+The Hollowed Ground~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1535
+D1
+~
+~
+0 -1 1525
+S
+#1538
+Throne of the Cherubim~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1539
+D2
+~
+~
+0 -1 1531
+S
+#1539
+Entrance to the Temple of Light~
+A temporary description
+~
+15 0 0
+D1
+~
+Light~
+12 -1 1540
+D2
+~
+~
+0 -1 1538
+S
+#1540
+The Temple of Light~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1541
+S
+#1541
+The Temple of Light~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1542
+D3
+~
+~
+0 -1 1540
+S
+#1542
+The Temple of Light~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1543
+D2
+~
+~
+0 -1 1541
+S
+#1543
+The Temple of Light~
+A temporary description
+~
+15 0 0
+D1
+~
+~
+0 -1 1544
+D2
+~
+~
+0 -1 1542
+S
+#1544
+The Temple of Light~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1545
+D1
+~
+~
+0 -1 1546
+D3
+~
+~
+0 -1 1543
+S
+#1545
+Room of Forgiveness~
+A temporary description
+~
+15 0 0
+D2
+~
+~
+0 -1 1544
+S
+#1546
+The Temple of Light~
+A temporary description
+~
+15 0 0
+D2
+~
+~
+0 -1 1547
+D3
+~
+~
+0 -1 1544
+S
+#1547
+Throne of the Seraphim~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1546
+S
+#1548
+Divinity~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1549
+S
+#1549
+Divinity~
+A temporary description
+~
+15 0 0
+D0
+~
+~
+0 -1 1550
+D2
+~
+~
+0 -1 1548
+S
+#1550
+Throne of The Almighty One~
+A temporary description
+~
+15 0 0
+D2
+~
+~
+0 -1 1549
+S
+#1551
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1552
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1553
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1554
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1555
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1556
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1557
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1558
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1559
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1560
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1561
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1562
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1563
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1564
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1565
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1566
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1567
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1568
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1569
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1570
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1571
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1572
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1573
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1574
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1575
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1576
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1577
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1578
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1579
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1580
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1581
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1582
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1583
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1584
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1585
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1586
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1587
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1588
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1589
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1590
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1591
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1592
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1593
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1594
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1595
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1596
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1597
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1598
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#1599
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#0
+$~

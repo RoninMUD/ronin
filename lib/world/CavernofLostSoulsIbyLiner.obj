@@ -1,0 +1,659 @@
+#16800
+sign~
+A battered sign~
+A battered sign lay askew among the rubble.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+sign~
+This way to paradise.
+                                  That way to damnation.
+
+   Look not to simple conventions, for all directions bend to
+our will.  Upon this, your torture is imminent.
+
+                                   T
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16801
+scrap paper~
+a scrap of paper~
+A scrap of yellowed paper flutters briefly on the ground.~
+~
+13 0 1
+0 0 0 0
+1 10 10
+90
+E
+paper~
+eternal suffering
+        this torrid existence
+    a spinning vortex of nothing
+   directions askew, my mind is blown
+       find this and lose not thine own.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16802
+table~
+A three-legged table~
+A poor excuse for a table leans precariously against the wall here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+table~
+Gouges and scratches marr the worn surface of this table.
+It looks like it's about ready for the scrap-pile.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16803
+desk~
+A stone desk~
+Several stones have been piled together to resemble a desk.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+desk~
+This desk is really just three flat stones stacked together
+in order to hold items above the frozen ground.
+~
+E
+stones~
+This desk is really just three flat stones stacked together
+in order to hold items above the frozen ground.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16804
+bell~
+A brass bell~
+A tiny brass bell sits amidst piles of rubbish on a small desk.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+bell~
+A bright, shining bell reflects the dim light in a golden ray.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16805
+scythe execution blade~
+Scythe of Execution~
+The glinting blade of a blood-stained scythe glimmers in the pale light.~
+$r scythe gleams black as it flies swiftly toward $V.~
+5 530 8193
+0 7 5 14
+19 5000 26780
+8
+E
+scythe~
+A dark, sinister blade socketed on the end of an ash handle, it
+drips with the congealing blood of the last victim.
+~
+E
+blade~
+A dark, sinister blade socketed on the end of an ash handle, it
+drips with the congealing blood of the last victim.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#16806
+lash bladed~
+A Bladed Lash~
+A sinister-looking lash lay coiled here within a hazy mist.~
+$r lash cracks as thousands of tiny blades pierce the air.~
+5 529 8193
+0 7 4 2
+18 5000 25670
+8
+E
+lash~
+A leather-bound whip, the handle is wound tight with black wire
+and the business end separates into hundreds of extensions.
+Upon the tip of each extension, a tiny obsidian blade has been
+attached, truly a weapon of ultimate torture.
+~
+E
+bladed~
+A leather-bound whip, the handle is wound tight with black wire
+and the business end separates into hundreds of extensions.
+Upon the tip of each extension, a tiny obsidian blade has been
+attached, truly a weapon of ultimate torture.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+2 2
+#16807
+shroud tattered~
+a tattered shroud~
+A tattered shroud flutters about in the soft breeze.~
+~
+11 134217792 1025
+0 0 0 0
+8 500 2990
+22
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 21
+A
+18 2
+#16808
+arrowhead obsidian~
+an obsidian arrowhead~
+An arrowhead made from obsidian gleams in the dim light here.~
+~
+7 134217728 49153
+12 15 0 0
+2 750 750
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+38 5
+#16809
+atlatl board~
+an atlatl~
+A throwing board sticks up from the ground here.~
+~
+7 134217728 49153
+16 15 0 0
+15 500 700
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+38 5
+A
+18 2
+#16810
+spear bone rib~
+spear of bone~
+A medium-sized spear fashioned from a large animal's rib is stuck here.~
+$r spear curves gracefully through the air as it plunges forward.~
+5 0 8193
+0 3 7 10
+7 1000 5890
+50
+E
+spear~
+An object of superior craftsmanship, this spear has been fashioned
+from the rib of a huge animal and sharpened to a fine point.
+~
+E
+rib~
+An object of superior craftsmanship, this spear has been fashioned
+from the rib of a huge animal and sharpened to a fine point.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16811
+snowshoes pair shoes rawhide~
+a pair of snowshoes~
+A pair of rawhide-laced snowshoes hang crossed on the wall.~
+~
+11 0 65
+0 0 0 0
+12 400 1800
+85
+E
+snowshoes~
+A valuable pair of rawhide-laced snowshoes, the wood has been
+heated and curved in order to provide maximum traction on snow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 28
+#16812
+kettle~
+an iron kettle~
+A huge, wrought-iron kettle sits steaming away in the corner.~
+~
+17 0 0
+300 300 0 0
+10 10 10
+100
+E
+kettle~
+A black, iron kettle full of hot water.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16813
+sign~
+a wooden sign~
+A dusty, wooden sign stands beneath the gates, half-buried in snow.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+sign~
+
+                Great Northern Outpost
+                -all are welcome within
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16814
+petza stick driftwood~
+a Petza~
+A thick piece of driftwood has been fashioned into a digging stick.~
+~
+12 0 16385
+0 0 0 0
+10 200 250
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16815
+bag sealskin hide~
+a sealskin bag~
+This carefully-tanned seal-hide has been made into a bag.~
+~
+15 0 16385
+150 0 0 0
+5 550 590
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -5
+#16816
+hide polar bear~
+hide of a polar bear~
+A luxuriant polar bear's hide lay spread across the ground.~
+~
+11 0 9
+0 0 0 0
+16 800 1800
+85
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16817
+feather hawk~
+a hawk's tail-feather~
+The fully-plumed feather of a hawk's tail flutters in the wind here.~
+~
+12 0 16385
+0 0 0 0
+1 50 50
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16818
+stone lucky~
+a lucky stone~
+A shiny stone lies alone in a pile of dirt.~
+~
+12 64 16385
+0 0 0 0
+6 150 200
+50
+E
+stone~
+Your reflection peers back in a shade of indigo, bleeding
+along the rounded sides.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 5
+A
+22 5
+#16819
+scarf wool woolen~
+a woolen scarf~
+A scarf made from tightly-knit wool lies here.~
+~
+11 0 5
+0 0 0 0
+2 50 200
+65
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#16820
+pelt rabbit~
+a rabbit pelt~
+The soft pelt of a winter rabbit lay spread on the floor.~
+~
+8 0 16401
+0 0 0 0
+5 1500 2000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16821
+pelt fox~
+a fox pelt~
+The soft pelt of a winter fox lay spread out on the floor.~
+~
+8 0 16401
+0 0 0 0
+5 2000 2500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16822
+blanket burlap~
+a blanket of burlap~
+A blanket made from itchy burlap lies in a pile here.~
+~
+11 0 17409
+0 0 0 0
+7 600 900
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16823
+kayak~
+a hide-bound kayak~
+A superiorly-crafted, hide-bound kayak has been left here.~
+~
+22 0 1
+0 0 0 0
+28 2999 3001
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16824
+jerky strip fish~
+a strip of dried fish jerky~
+A strip of fish jerky lies here, making your mouth water.~
+~
+19 0 1
+10 0 0 0
+1 15 15
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16825
+it object~
+The Mystery Object!~
+A shining object dances and flutters across the room, throwing rays of
+multicolor light and crying out in painful screams of agony.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+object~
+An array of colors assails your eyes, causing you to turn away.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16826
+remains~
+some skeletal remains~
+The scattered remains of a human skeleton lie strewn about here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+75
+E
+remains~
+The decaying bones of a less-fortunate adventurer..
+~
+E
+skeleton~
+The decaying bones of a less-fortunate adventurer..
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16827
+lantern broken~
+a broken lantern~
+A broken lantern lay on its cracked side in the corner.~
+~
+1 0 65537
+0 0 3 0
+3 20 50
+75
+E
+lantern~
+A well-used and ill-taken care of lantern, it's glass sides are
+cracked and damaged.  It still might work, but not for long..
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16828
+sigil speaking demon ring~
+Sigil of the Speaking-Demon~
+A twisted sigil lies before your feet, sapping your energy.~
+~
+11 259060310 3
+0 0 0 0
+3 10500 21200
+8
+E
+inscription~
+
+      Whosoever wears this sigil must feed the Soul within, and
+      always step within the shadows of the shriveled heart.
+~
+E
+sigil~
+
+  It appears to be a large ring of hardening clay.  Speckles of
+blood adorn the band which encircles a ghastly symbol depicting a
+human form nailed to a crosstree.  Shrouds and shackles dangle
+from either side of the large T-shape.  This is the Seal of Tajjo,
+the eater of souls.  A tiny inscription lines the inner circle.
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+A
+17 -12
+T
+14000
+#0
+$~

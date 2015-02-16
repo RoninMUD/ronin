@@ -1,0 +1,126 @@
+#5900
+drider drow spider~
+A Dying Drider~
+A Dying Drider is lying here immobile and helpless.~
+This poor creature seems to have been cursed with bad luck twice over, not
+only was it damned to spent its days trapped in its abominable form, but it 
+seems to have been caught in this passageway during the last cave-in.
+Its legs are hopelessly shattered beneath it, and its thorax split open
+wide, greenish fluids oozing from it, slowly ebbing away the pitiful 
+creature's life. As you raise your blade to end its suffering, it tries
+to rasp out some words with its last breath.....
+~
+16394 49152 -500 Y
+30 -8 0 100d5+5 2d25+5
+15000 5000
+2 2 0
+77 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5901
+drow leader rezik~
+Rezik, Drow Patrol Leader~
+The Leader of this Patrol is standing here, barking out orders.
+~
+Armed with a pair of weapons, this dark figure appears to be leading a drow
+patrol party around the city limits, making sure all is in order.  Apparently,
+he doesn't take your presence here as common and quickly screams out orders
+to his patrol...
+~
+40 268732448 -1000 Y
+54 -11 -4 10d10+7000 15d5+8
+10000 540000
+8 8 1
+99 4096 100d100+100 1
+9 7 25 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5902
+drow patrol cleric priestess~
+A Drow Priestess~
+The patrol's cleric is here, chanting something under her breath.
+~
+Flanking behind the leader of the patrol, this priestess of Dagoor chants
+a few verses and waits for the right moment to unleash her fury.
+~
+42 8685728 -1000 Y
+53 -11 0 10d100+3000 6d6+13
+10000 500100
+8 8 2
+99 4096 100d100+500 8
+1 4 30 28
+1 2 25 27
+1 3 28 93
+1 1 25 100
+1 3 25 114
+1 6 35 140
+1 2 20 96
+1 6 30 108
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5903
+darkmage mage drow wizard~
+A Drow Darkmage~
+The patrol's darkmage stands here, preparing to cast his destructive spells.
+~
+A powerful wizard in drowish sense, but not as important as the female cleric,
+handmaiden of Dagoor -- this dangerous mage waits in silent gesture to
+casts his spells, grabbing at a spell book under his arm.
+~
+16789546 134512664 -1000 Y
+53 -8 -4 10d90+3600 7d6+7
+12000 400000
+8 8 1
+99 4096 10d200+150 9
+1 2 15 33
+1 1 25 10
+1 3 17 137
+1 1 30 136
+1 1 25 105
+1 2 30 104
+1 6 40 98
+1 3 35 80
+1 6 50 108
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5904
+drow patrol soldier~
+A Drow Soldier~
+A Patrol Soldier is here, marching mechanically in single file.
+~
+A dark, shadowy figure lurks around here -- very aware of your presence and
+quickly moves into a well-rehearsed battle stance.
+~
+42 294944 -1000 Y
+53 -8 -1 30d20+3500 12d5+11
+10000 450000
+8 8 1
+99 0 100d100+50 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5950
+green vine~
+a green vine~
+a green vine waits amongst his brothers, seeking to grasp a victim in wake.
+~
+This green vine stretches from within the tunnel walls, trying to grasp you
+with it's fine green handle.  You try to avoid it's hold, but underestimate
+it's strength.  Now this overgrowth has a firm grip on your leg and the other
+grip around your mouth...
+~
+234881066 269484196 1000 Y
+40 -11 0 10d10+500 4d4+20
+69 50000
+8 8 0
+78 0 100d100+1000 1
+1 2 100 37
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

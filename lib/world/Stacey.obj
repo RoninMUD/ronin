@@ -1,0 +1,378 @@
+#27201
+trunk elephant elephant's~
+elephant's trunk~
+A long grey hose has been left here.~
+~
+17 0 17
+1100 0 0 0
+20 10 10
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27202
+statue baron decilon chair stone~
+Statue of a Baron of Decilon~
+Statue of a Baron of Decilon seated in a large stone chair.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27203
+staute baroness decilon chair~
+Statue of a Baroness of Decilon~
+Statue of a Baroness of Decilon seated in a large stone chair.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27204
+statue duke decilon stone chair~
+Statue of a Duke of Decilon~
+Statue of a Duke of Decilon seated in a large stone chair.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27205
+statue duchess decilon stone chair~
+Statue of a Duchess of Decilon~
+Statue of a Duchess of Decilon seated in a large stone chair.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27206
+statue count decilon stone chair~
+Statue of a Count of Decilon~
+Statue of a Count of Decilon seated in a large stone chair.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27207
+statue countess decilon stone chair~
+Statue of a Countess of Decilon~
+Statue of a Countess of Decilon seated on a large stone chair.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27208
+statue prince decilon stone chair~
+Statue of a Prince of Decilon~
+Statue of a Prince of Decilon seated in a large stone chair.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27209
+statue princess decilon stone chair~
+Statue of a Princess of Decilon~
+Statue of a Princess of Decilon seated on a large stone chair.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27210
+ring green luminescent~
+a luminescent green ring~
+A ring glowing bright green has been left here.~
+~
+11 403177537 3
+0 0 0 0
+1 10 1000
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#27211
+ring green luminescent~
+a luminescent yellow ring~
+A ring glowing bright yellow has been left here.~
+~
+11 403177537 3
+10 -1 -1 -1
+1 10 1000
+100
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#27212
+waistcoat coat magician magician's~
+a magician's waistcoat~
+The waistcoat of a magician has been left here in a crumpled heap.~
+~
+9 134217728 9
+2 -1 -1 -1
+2 400000 23
+85
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -7
+#27213
+statue queen decilon chair~
+a Statue of a Queen of Decilon~
+Statue of the Queen of Decilon seated in a huge stone throne.~
+~
+8 0 0
+0 0 0 0
+4500 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27214
+pool clear circular~
+a perfectly circular clear pool~
+A perfectly circular shallow pool, filled with crystal clear water.~
+~
+17 0 0
+100000 100000 0 0
+9999 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27215
+pool circular clear shallow~
+a perfectly circular clear pool~
+A perfectly circular shallow pool, filled with crystal clear water.~
+~
+17 0 0
+100000 100000 0 0
+9999 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27216
+pool circular clear shallow~
+a perfectly circular clear pool~
+A perfectly circular shallow pool, filled with crystal clear water.~
+~
+17 0 0
+100000 100000 0 0
+9999 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27217
+tree apple protection~
+the ancient apple tree of protection~
+The Ancient Apple Tree of Protection stands laden with silvery apples.~
+~
+15 0 0
+0 0 0 0
+9999 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27218
+apple silvery protection silver~
+the silvery apple of protection~
+An apple is here giving off rays of its own light.~
+~
+19 0 1
+0 0 0 0
+1 2 10000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27219
+branch knotted protection~
+the Knotted Branch of Protection~
+An old knotty tree branch has been left here.~
+~
+5 248561664 8193
+0 2 2 6
+28 10 50123
+14
+X
+~
+1 0 0
+M
+Protective energy flows into your body through the branch.~
+Protective energy flows into $n's body has $e wields the
+Knotted Branch of Protection.~
+~
+~
+A
+13 95
+A
+19 -10
+A
+1 3
+B
+8
+#27220
+mane lion robe golden~
+the golden mane of a lion~
+A pile of rumpled golden fur lies here.~
+~
+9 134217728 1025
+1 -1 -1 -1
+11 1750000 500000
+44
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+32 10
+#27221
+bracelet ice queen frozen~
+the frozen bracelet of the ice queen~
+A circular piece of clear crystal lies on the floor.~
+~
+11 134742016 4097
+5 -1 -1 -1
+1 11 1
+35
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+A
+53 9
+#0
+$~

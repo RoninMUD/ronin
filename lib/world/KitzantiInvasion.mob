@@ -1,0 +1,290 @@
+#4600
+Neuron Beast Strands~
+The Neuron Beast~
+The strands come alive and lurch towards you!
+~
+The Neuron Beast looks like the collection of several strands of rope.  It
+twitches continually and generates tremendous amounts of static energy.
+Looking closer, you notice it has no arms or legs, or even a head for
+that matter, just strands.
+~
+536887306 134252712 0 Y
+51 -20 0 5d100+12500 5d25+50
+250 2700000
+8 8 0
+67 2 5d1000+2500 4
+1 3 15 37
+1 3 12 111
+1 3 6 109
+1 3 9 110
+0 2 0 0
+R
+32
+K
+0 0 0 0 0 0 0
+#4601
+Gigantic Eye~
+a gigantic eye~
+A gigantic eye is here, staring blankly at you.
+~
+The rotted, decaying eye peers lifelessly into your soul.  It simply
+looks at you, but then again, what else can an eye really do?
+~
+540682 16777344 0 Y
+40 -15 5 50d100+4000 4d20+30
+60000 1400000
+9 9 0
+66 768 5d50+1000 1
+10 5 5 0
+0 0 0 0
+R
+64
+K
+0 0 0 0 0 0 0
+#4602
+Blob Cell Green~
+a dark green cell~
+A `cdark green blob`q hovers here, looking very diseased.
+~
+This blob of cellular mass hovers around.  It seems to have no life
+force, but moves about aimlessly almost searching for things to
+destroy.  It is a dark green color and reminds you of disease.  It
+quivers and shakes violently every so often and now directs it's
+attention towards you.
+~
+524300 16779304 -350 Y
+45 -10 2 10d10+5500 3d50+25
+7777 855000
+9 9 0
+78 4 5d250+1000 4
+1 1 5 111
+1 3 5 17
+1 3 5 25
+1 3 5 105
+0 0 0 0
+R
+1
+K
+0 0 0 0 0 0 0
+#4603
+Blob Cell Red~
+a dark red cell~
+A `bdark red blob`q hovers here, floating around aimlessly.
+~
+This blob-like mass is dark red and looks as if it is actually
+a container of some sorts.  It is bloated and doesn't move very
+fast, yet it continues to float around, with no real obvious
+purpose.
+~
+540684 128 350 Y
+45 -20 2 10d100+4000 3d75+50
+55555 1000000
+9 9 0
+98 0 2d200+2500 2
+1 6 20 28
+1 2 10 27
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4604
+Flesh Decaying Piece~
+a piece of decaying flesh~
+A piece of flesh pulls away from the wall and attacks!
+~
+This decaying piece of flesh looks like it is slowly in the process
+of transforming from living flesh to that of the undead.  It's rotted
+stench fills the room and you feel sick just looking at it.
+~
+540712 419432488 -500 Y
+45 -13 -5 2d250+10500 5d35+40
+500 1500000
+9 9 0
+98 20548 5d100+250 2
+10 5 5 0
+2 2 5 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#4605
+Worm Heart~
+a massive heart worm~
+A gigantic heart worm is here, eating the decayed heart.
+~
+This massive worm is slowly eating the decayed heart.  It looks
+like a larger version of a worm that has been known to infect
+dogs, but one of this size could be dangerous indeed.  It looks
+very dangerous and you think it would be best to leave it to it's
+business.
+~
+16394 268697640 0 Y
+50 -30 -10 5d1200+11000 12d7+75
+25000 1750000
+8 8 0
+98 20544 100d10+750 4
+5 2 5 0
+7 3 5 0
+1 1 5 105
+1 3 5 33
+0 0 1 0
+T
+......a massive heart worm emits an awful stench!~
+K
+0 0 0 0 0 0 0
+#4606
+Worm Small Heart~
+a small heart worm~
+A small heart worm wriggles around in front of your eyes.
+~
+This small worm must be in the infant stage of development.  It
+is simply wriggling around here.
+~
+266 34 0 Y
+35 -10 10 10d100+200 10d5+25
+500 90000
+8 8 0
+98 4 1d1000+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4607
+Thief Gnome Scared~
+a gnome thief~
+A scared little gnome is trying to hide here.
+~
+This poor little fellow looks scared out of his mind.  He entered this
+place looking for treasure and adventure and all he found was the inside
+of a giant corpse.  He looks like he is ready to attack anything he sees
+and it might be a wise idea to not try to help him escape this awful place.
+~
+16392 524458 -500 Y
+30 -10 -15 5d100+3000 10d10+50
+100000 630000
+8 8 1
+3 0 1d1+1 2
+2 3 5 0
+4 3 5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4608
+Nose Hair~
+a massive nose hair~
+A long strand of hair is attached to the nasal cavity.
+~
+This strand of massive hair sways slightly, but seems ready
+to attack you with a massive whip!
+~
+10 402653184 0 Y
+40 -15 10 5d100+2750 5d20+25
+1 630000
+8 8 0
+87 13172800 1d1000+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4609
+Kitzanti Drone Green~
+a Kitzanti drone~
+A `jlight green`q Kitzanti drone scuttles about.
+~
+This insect-like creature looks like a giant praying mantis.  It scuttles
+about and seems to be doing some sort of manual labor.  It doesn't pay
+much attention to you.  It is light green in color and very fast.
+~
+8 264224 0 Y
+35 -15 0 25d50+4750 25d3+50
+5000 800000
+8 8 0
+76 260 1d1+99 2
+5 3 5 0
+6 3 5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4610
+Kitzanti Warrior Yellow~
+a Kitzanti warrior~
+A `kbright yellow`q Kitzanti warrior is on the patrol.
+~
+This insect looks like it must be some sort of warrior.  It carries
+a large spear and wears some wierd sort of insectoid battle armor.
+Unlike the drones, it is bright yellow in color, rather than light
+green.  Although it doesn't look like a fierce opponent you guess
+that it does not overpower it's enemies by brute force, but rather
+sheer numbers.
+~
+1064968 402915360 0 Y
+40 -15 10 10d200+10000 7d20+25
+25000 1400000
+8 8 0
+76 3145988 1d1+1 2
+6 1 5 0
+10 5 2 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4611
+Kitzanti Corporal Yellow~
+a Kitzanti Corporal~
+A `ddark yellow`q Kitzanti Corporal is here barking out orders.
+~
+This Kitzanti warrior looks to be stronger and fiercer than the normal
+bright yellow type.  It stands a little taller and carries a large
+shield.  The Corporals direclty command the warriors.
+~
+1065098 402915496 -500 Y
+42 -15 -10 5d200+7000 4d50+35
+25000 1600000
+8 8 0
+76 4 5d1000+500 2
+2 1 15 0
+3 3 5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4612
+Kitzanti Captain Dark Purple~
+a Kitzanti Captain~
+A `fdark purple`q Kitzanti Captain is looking for a fight.
+~
+The Captain is about three feet taller than the other Kitzanti.  It
+wears the same armor as the warriors and Corporals and uses a shield,
+but in addition to the spear it is wielding, a brilliant helmet is
+also worn, emitting a dark light.  This dark purple insect doesn't
+need an excuse to kick your ass!
+~
+16426 411306152 -750 Y
+45 -25 -12 50d50+9000 9d10+75
+100000 1750000
+8 8 0
+76 16964 5d500+2000 4
+1 1 5 106
+2 1 5 0
+5 3 10 0
+10 5 3 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4613
+Parasite Deadly~
+a deadly parasite~
+A parasite is here, feeding on the dead tissue.
+~
+This gigantic tick-looking monster is feeding on the dead remains
+of the brain.  It looks very dangerous.  Scales cover it's body and
+it has some large claws and even larger fangs.  When it sees you, it
+decides that living flesh is more tasty than its dead countepart.
+~
+16426 2176 -1000 Y
+45 -10 -10 1d2000+5000 20d5+85
+10101 1100000
+8 8 0
+77 57928 1d1+1 3
+5 1 10 0
+8 5 5 0
+6 3 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

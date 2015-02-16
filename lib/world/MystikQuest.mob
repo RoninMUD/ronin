@@ -1,0 +1,53 @@
+#20000
+scout serpent~
+A Serpent Scout~
+A lithe scaled figure is skulking around here.
+~
+A scaled warrior beaming with pride that his master entrusted
+him with so valuable a dispatch.~
+10 262144 0 X
+1 19 0 1d1+1599 8d6+14
+1 1
+8 8 1
+0 0 1d1+199 1
+1 6 5 28
+#20001
+dragon rider~
+A Dragon Rider~
+A man outfitted with black armor stands here.
+~
+This is a quest, not a permanent mob... give me a break  :p
+~
+147466 262272 0 X
+31 -11 -5 10d10+1320 5d8+10
+1 1
+8 8 1
+0 2048 1d1+1 0
+#20002
+dragon young~
+A young Dragon~
+A large winged serpent is crouched here.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 128 0 X
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+#20099
+skirmisher soldier serpent~
+Serpent Skirmisher~
+A lithe scaled warrior is sneaking around here.
+~
+A lizard warrior who seems to be making maps of the region for his master.
+~
+8 268437632 0 X
+31 -11 -5 10d100+3000 4d10+20
+1 10000
+8 8 1
+0 0 10d100+3000 2
+1 6 30 132
+9 2 30 0
+#0
+$~

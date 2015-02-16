@@ -1,0 +1,631 @@
+#7000
+A Dark Narrow Trail~
+You are along a narrow dark trail through the woods.  To the north you
+feel the ever growing presence of evil.  Maybe you should turn back now!
+There are exits to the north and the south.
+~
+70 1 3
+D0
+~
+~
+0 0 7001
+D2
+A trail through the woods.~
+~
+0 0 7043
+D4
+OSU's humble abode~
+door~
+1 -1 7039
+S
+#7001
+A Dark Path~
+As you continue along the path through the woods you sense a great evil
+ahead.  There is a clearing to the north.  Exits are to the north and
+south.
+~
+70 1 3
+D0
+~
+~
+0 0 7002
+D2
+~
+~
+0 0 7000
+S
+#7002
+A Rocky Clearing~
+As you leave the woods behind, you find yourself in a rocky clearing.  The
+trail continues to the north towards an old outpost.  There is smoke rising
+from somewhere in the fortress.  You remember hearing a brief story about
+an outpost that was overrun by evil creatures, but can not recall the details.
+Some old rusted and ruined weapons and armor are scattered along the trail
+which ascends toward the outpost.
+~
+70 0 5
+D0
+~
+~
+0 0 7003
+D2
+~
+~
+0 0 7001
+S
+#7003
+A Path Leading to An Outpost~
+As you make your way up this rough pass, you think you hear what sounds like
+the screams of people being tortured.  But you can't be sure.  The outpost
+itself has clearly seen better days.  All along the trail and the worn path
+that leads to the fortress, you see the broken and weathered remains of
+skeletons.  Must have been a great battle here once.
+~
+70 4 5
+D0
+outside outpost gates~
+~
+0 0 7004
+D2
+A rocky clearing~
+~
+0 0 7002
+S
+#7004
+Outside the outpost's gate~
+Standing before this evil sanctuary, you get a fleeting feeling of the valor
+of the many men, who held evil at bay here for years.  If you venture forth
+to avenge their deaths, have no mercy.  There is a gate to the north and an
+exit to the south.
+~
+70 0 5
+D0
+Entrance to outpost
+~
+gate~
+0 -1 7005
+D2
+Rocky path
+~
+~
+0 0 7003
+S
+#7005
+At The Entrance to The Outpost~
+As you pass through the gate, you smell the odor of rotted flesh.  The
+floors are covered with a sticky ooze that includes traces of congealed blood.
+You see a main room to the north and doors to the east and west.
+~
+70 1 0
+D0
+Main room~
+~
+0 0 7008
+D1
+Weapons room
+~
+door~
+2 -1 7006
+D2
+outside outpost~
+~
+0 0 7004
+D3
+closet
+~
+door~
+2 -1 7007
+S
+#7006
+A Weapons Room~
+You have entered a weapons storage room.  Strange glyphs have been
+inscribed on the walls in blood.  They look like they are meant to
+prevent the use of magic.
+~
+70 137 0
+D3
+Entrance to outpost~
+door~
+2 -1 7005
+S
+#7007
+An Old Closet~
+You have entered an old closet.  It feels like a safe place.  Maybe you
+should hide here.
+~
+70 76 0
+D1
+Entrance to outpost~
+door~
+2 -1 7005
+S
+#7008
+Main Room~
+You have entered the main hall.  It is a massive room where many orcs
+could gather to plot and scheme.  There are antique instruments of
+torture hanging from the ceiling.  There are exits in all directions.
+~
+70 9 0
+D0
+main floor~
+~
+0 0 7009
+D1
+main floor
+~
+~
+0 0 7010
+D2
+Entrance to outpost~
+~
+0 0 7005
+D3
+main floor
+~
+~
+0 0 7011
+S
+#7009
+Main Room~
+You are standing on the main floor.  On the far wall there is a large
+mural of Ripper, the infamous idol of evil creatures.  There are
+stairways leading up and down.  There are also exits to the east and
+west.  The feeling of being near a source of great evil is stronger
+now.  I would think twice before continuing.!
+~
+70 13 0
+D1
+main floor~
+~
+0 0 7013
+D2
+main floor~
+~
+0 0 7008
+D3
+main floor~
+~
+0 0 7012
+D4
+evil hall~
+~
+0 0 7020
+D5
+dark tunnel~
+~
+0 0 7030
+S
+#7010
+Main Floor~
+You are standing on the main floor.  There are exits to the north
+and west.
+~
+70 9 0
+D0
+main floor~
+~
+0 0 7013
+D3
+main floor
+~
+~
+0 0 7008
+S
+#7011
+Main Hall~
+You are still in the main hall. Along the floor are some moldy
+crumbs and there is a foul stench in the air. There are exits north,
+east, and west.
+~
+70 1 0
+D0
+Main floor~
+~
+0 0 7012
+D1
+main floor
+~
+~
+0 0 7008
+D3
+bedroom
+~
+door~
+1 -1 7019
+S
+#7012
+Main Floor~
+You are standing on the main floor. To the east is a stairway,
+there are exits to the north, south, east, and west.
+~
+70 1 0
+D0
+barracks~
+~
+0 0 7015
+D1
+main floor~
+~
+0 0 7009
+D2
+main hall
+~
+~
+0 0 7011
+D3
+Trophy room~
+~
+0 0 7016
+S
+#7013
+Main Floor~
+You are standing on the main floor.  Watch your step as there are
+rodents and the rotting remains of pizzas all over the floor.  Pizza?
+The orcs must have had a party.  There are exits to the north, south,
+and west.
+~
+70 9 0
+D0
+barracks~
+~
+0 0 7014
+D2
+main floor
+~
+~
+0 0 7010
+D3
+main floor~
+~
+0 0 7009
+S
+#7014
+Barracks~
+You are in a barracks for all the new orc soldiers. The room is
+laden with plain furnishings and is a mess. The only exit is to the
+south.
+~
+70 1 0
+D2
+main floor~
+~
+0 0 7013
+S
+#7015
+Barracks~
+You have entered a barracks for the most noteworthy of orcs. The war
+trunks are laden with gold and this room is surprisingly well kept.
+The only exit is to the south.
+~
+70 9 0
+D2
+main floor
+~
+~
+0 0 7012
+S
+#7016
+Trophy Room~
+This room once held the banners and emblems of the outpost.  Now it
+houses a collection of trophies that glorify its new inhabitants'
+military victories.  Around the room you see hideous paintings and
+works of taxidermy in the form of halfling and elf heads mounted on
+the walls.  Some human hides have been stretched and are in the
+process of curing.  The only exit is to the east.
+~
+70 9 0
+D1
+main floor~
+~
+0 0 7012
+S
+#7019
+Bedroom~
+You have wandered into a bedroom for the orc leaders. There are
+cots lined up along the far wall, where they come to sleep off their
+hangovers after raiding nearby towns. The only exit is to the east.
+~
+70 1 0
+D1
+main hall~
+~
+0 0 7011
+S
+#7020
+Top of the Stairs~
+You now stand at the beginning of a hallway.  There are two abandoned bed-
+rooms to the east and west.  To the north is a door.  You sense an evil
+presence behind the door, a presence that beckons you.  On the walls you
+see portraits of DM, Xenakis, and Conner.  They were all evil prophets.
+Who's word were they spreading?  Venture north and find out, if you
+dare.
+~
+70 9 0
+D0
+~
+door~
+0 -1 7023
+D1
+~
+~
+0 0 7022
+D3
+~
+~
+0 0 7021
+D5
+~
+~
+0 0 7009
+S
+#7021
+Abandoned Bedroom~
+This old bedroom has seen better days.  The beds now serve as homes to
+the many rodents of the outpost.  All that remains of the furniture
+is some charred sticks.  The only exit is to the east.
+~
+70 9 0
+D1
+evil hall~
+~
+0 0 7020
+S
+#7022
+Abandoned Bedroom~
+You are in an old abandoned bedroom.  There is nothing left from when
+it was used as a bedroom, but there are signs of recent traffic.  You
+should be careful!  The only exit is to the west.
+~
+70 9 0
+D3
+evil hall
+~
+~
+0 0 7020
+S
+#7023
+Evil hall~
+This hall leads to the idol of all evil. You may even get to see him, IF
+you make it past his guardian, Stranger. There is rumors that no mortal
+can look the evil master in the eyes, or certain death will follow.
+There are exits to the north and south.
+~
+70 9 0
+D0
+Masters room~
+~
+0 0 7024
+D2
+evil hall~
+~
+0 0 7020
+S
+#7024
+Ripper's Throne~
+You have entered Ripper's throne room.  Oddly enough, Ripper is in the form
+of a statue.  Beware however, this is no ordinary statue.  You also notice
+some very lifelike statues facing Ripper.  They look like adventurers..just
+like you!  Before you can get to Ripper, you have to defeat his champion,
+Stranger!  Stranger is his faithful servant.  He will die trying to protect
+Ripper.  The only exit is to the south.
+~
+70 9 0
+D2
+evil hall
+~
+~
+0 0 7023
+S
+#7030
+Dark tunnel~
+You are standing in a long dark tunnel. There is faint screams in the
+distance, that you can barely make out. The only exits are to the
+north and up.
+~
+70 9 0
+D0
+dark tunnel~
+~
+0 0 7031
+D4
+mail hall~
+~
+0 0 7009
+S
+#7031
+A Dark Tunnel~
+You are standing in a long dark tunnel that continues north.  The floors
+are coated with blood and sewage.  You should move along because the
+odor is making you quite queasy.
+~
+70 265 0
+D0
+Long tunnel~
+~
+0 0 7034
+D1
+Kitchen~
+~
+0 0 7032
+D2
+long tunnel~
+~
+0 0 7030
+D3
+resting area~
+~
+0 0 7033
+S
+#7032
+Gnoll Resting Area~
+This is where the gnolls rest.  Over one of the bunks you see a painting
+of Ripper hanging proudly.  The only exit is to the west.
+~
+70 0 0
+D3
+long tunnel~
+~
+0 0 7031
+S
+#7033
+Kitchen~
+You have entered a eating area where the gnolls enjoy slurping down their
+favorite gorp. In the sink the pans and dishes are piled high and have
+mold growing on them. The only exit is to the east.
+~
+70 8 0
+D1
+long tunnel~
+~
+0 0 7031
+S
+#7034
+A Dark Tunnel~
+As you continue down the tunnel, treading carefully, you hear the echo of
+screams.  They seem to come from the north.
+~
+70 257 0
+D0
+dark tunnel~
+~
+0 0 7035
+D2
+dark tunnel~
+~
+0 0 7031
+S
+#7035
+End of A Dark Tunnel~
+You hear a scream of pain that ends suddenly.  You realize you are too
+late to save the victim.  But you could avenge him!!
+~
+70 257 0
+D1
+torture room
+~
+~
+0 0 7036
+D2
+dark tunnel~
+~
+0 0 7034
+D3
+gnoll chieftains room~
+~
+0 0 7037
+S
+#7036
+Torture Room~
+You are standing in the torture room. This room brings fear to the hearts
+of all mortals. Before you is a pair of blood drenched shackles,
+that were just removed from the corpse of the cityguard. The only exit is
+to the west.
+~
+70 257 0
+D3
+dark tunnel~
+~
+0 0 7035
+S
+#7037
+The Gnoll Chieftain's Room~
+This is the Gnoll Chieftain's room.  It is decorated with hides and scalps
+from all races.  There is a painting on the wall of a god-like figure
+bound to a rock, while a vulture tears his liver out.  It seems the
+Chieftain likes things that depict people in anguish.  Maybe he likes to
+inflict that anguish..   Maybe you should leave..?
+~
+70 9 0
+D1
+dark tunnel~
+~
+0 0 7035
+S
+#7039
+OSU's Humble Abode~
+As you step off the trail for a bit, you find this warm and rustic cabin.
+The master of the house, OSU, has left the door open to anyone who
+wishes to rest and sleep in peace.  When not here OSU is backpacking in
+the wilds, making them safe for newbies.  Ansel Adams' photographs
+decorate the walls.  There is a fire blazing in the fireplace.
+~
+70 588 0
+D5
+~
+~
+1 0 7000
+S
+#7040
+Seldom Used Trail~
+You see what looks like an old trail leading off into the woods.  It does
+not seem to have been used much for some time, but you can tell that it 
+is all that remains of a well traveled road.  Where could it lead to?
+~
+70 4 3
+D1
+~
+~
+0 -1 5319
+D2
+A trail through the woods.~
+~
+0 0 7041
+S
+#7041
+Trail Through The Woods~
+The trail turns southward and the forest gets thicker.  It is hard to follow
+the trail now.  But you get the feeling that it does see some use at times.
+However, whoever (or whatever) uses it makes sure to try and conceal that 
+fact.  The trail continues to the south.
+~
+70 1 3
+D0
+A seldom used trail.~
+~
+0 0 7040
+D2
+A trail through the woods.~
+~
+0 0 7042
+S
+#7042
+Trail Through The Woods~
+The trail turns southward and the forest gets thicker.  It is hard to follow
+the trail now.  But you get the feeling that it does see some use at times.
+However, whoever (or whatever) uses it makes sure to try and conceal that 
+fact.  The trail continues to the south.
+~
+70 1 3
+D0
+A trail through the woods.~
+~
+0 0 7041
+D1
+A trail through the woods.~
+~
+0 0 7043
+S
+#7043
+Trail Through The Woods~
+The trail turns southward and the forest gets thicker.  It is hard to follow
+the trail now.  But you get the feeling that it does see some use at times.
+However, whoever (or whatever) uses it makes sure to try and conceal that 
+fact.  The trail continues to the north, while the forest to the east
+appears penetrable.
+~
+70 1 3
+D0
+A dark narrow trail.~
+~
+0 0 7000
+D1
+~
+~
+0 -1 21301
+D3
+A trail through the woods.~
+~
+0 0 7042
+S
+#0
+$~

@@ -1,0 +1,174 @@
+#19000
+strange rodent~
+strange rodent~
+A strange looking rodent is standing here.
+~
+This little guy has seen better days.  His fur is all matted down and mangy,
+and his mouth is foaming and dirty.  Whatever happened to this rodent surely
+has something to do with the strange feeling this woods gives you, and you
+shudder to think what else may have been affected by this.
+~
+8 262144 0 Y
+30 0 5 1d100+1000 3d10+15
+1000 120000
+8 8 1
+86 0 1d1+1 1
+5 2 33 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#19001
+sick four legged animal~
+A diseased animal~
+A very sick four-legged animal is here.
+~
+This thing appears to be the size of a large wolf.  It's fangs gleam white
+as it snarls at you from a distance.  It would be better not to approach
+this creature unless you are looking for a serious case of rabies, along
+with whatever else is infecting the creatures around here.
+~
+8 268697640 0 Y
+35 0 0 2d150+1800 2d15+25
+5000 210000
+8 8 1
+86 0 1d1+1 1
+5 2 25 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#19002
+lesser cannibal~
+A lesser cannibal~
+A lesser cannibal stands here, chewing on something.
+~
+This man walks around with a half-chewed foot in his hand.  He has
+pieces of it's flesh hanging from his mouth, and he looks as if he's
+just about finished with it.  When he sees you, he looks up, and you
+of his body are missing too, and just as your about to move in for
+can see that his face is partially rotted away.  Various other parts
+of his body are missing too, and just as your about to move in for
+a closer look he throws down the finished foot and lunges toward you!
+~
+40 268435456 0 Y
+35 0 2 2d200+2500 2d15+30
+10000 300000
+8 8 1
+52 0 1d1+1 1
+5 2 25 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#19003
+ravaged feline~
+A ravaged feline~
+A ravaged feline stalks the grounds, looking for prey.
+~
+The moment you make eye contact with this mean looking cat, you
+know you've made a mistake.  It turns to its side, raises it's back
+and lets out a dry sounding hiss that makes your hair stand on end.
+As it does so, pieces of rotting flesh and a few teeth spew from it's
+oddly shaped jaw.  It lunges at you, claws out and ready to fight.
+~
+40 269221928 0 Y
+40 -5 -2 2d200+3000 3d10+40
+20000 450000
+8 8 1
+90 0 1d1+1 1
+6 4 20 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#19004
+decrepit hound~
+A decrepit hound~
+A decrepit hound is here, guarding his pile of bones.
+~
+This hound may once have been a proud hunting dog, but now he's
+just another victim of whatever seems to be plaguing these woods.
+His flesh hangs off in clumps just like the others, and his eyes
+have the same empty glow in them.  As he catches your scent in the
+air, he turns from his pile of bones, most of them human, and
+begins to walk slowly toward you.
+~
+42 268437544 0 Y
+40 -5 0 30d40+7000 3d20+70
+200000 1500000
+8 8 1
+89 0 1d1+1 2
+5 2 20 0
+6 2 20 0
+0 2 0 0
+K
+0 0 0 0 0 0
+#19005
+greater cannibal~
+A Greater Cannibal~
+A Greater Cannibal is here, plotting his next meal.
+~
+This creature looks noticeably more intelligent than his lesser counterparts.
+He is in much better condition, and his movements look calculated rather than
+just randomly jerking about.  As he looks your way, his eyes light up, and
+you can tell that his intentions are every bit the same as the others in this
+nightmarish place, he wants to eat you.  He takes a fighting stance, and
+approaches you with caution.
+~
+44 402653312 0 Y
+45 0 0 10d50+6000 3d20+50
+80000 1350000
+8 8 1
+53 0 3d10+45 4
+7 2 20 0
+4 2 20 0
+9 2 20 0
+1 6 10 102
+0 0 0 0
+K
+0 0 0 0 0 0
+#19006
+ancient indian warrior~
+An Ancient Indian Warrior~
+An Ancient Indian Warrior sits here, looking very tired.
+~
+Looking at this warrior, you immediately notice a difference
+between him and the others you have met so far.  He does not
+seem to be afflicted by whatever it is tormenting these woods
+He smiles faintly when he sees you, but he doesn't seem to be
+very happy that you are here.
+~
+8 402653352 500 Y
+45 -10 -5 100d8+10000 5d10+120
+500000 1800000
+6 6 1
+69 0 1d1+1 2
+2 4 15 0
+4 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#19007
+decaying archmage~
+A Decaying Archmage~
+A Decaying Archmage is here, looking for some "food" to barbecue.
+~
+Traces of roasted flesh are skewed about, and it's no wonder who
+is to blame.  This mage is of great power, and he is definetetly
+controlled by some force other than his own will.  As he begins
+an incantation, you can see his teeth are yellow and stained.
+Whoever this guy was, he has been here for quite some time now,
+and your sure this horrible place has taken quite a toll on his
+mind. You just hope the same is true for his powers.
+~
+524328 402655370 0 Y
+50 -5 10 5d500+12000 4d25+130
+1000000 2700000
+9 9 1
+1 0 10d50+3000 4
+1 2 10 109
+1 2 20 110
+1 1 30 136
+1 4 10 128
+0 2 0 0
+K
+0 0 0 0 0 0
+#0
+$~

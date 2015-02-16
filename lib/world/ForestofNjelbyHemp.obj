@@ -1,0 +1,347 @@
+#2200
+seed snapdragon maji~
+a snapdragon seed~
+A small, barely visible seed rests here, waiting to sprout.~
+~
+12 0 1
+0 0 0 0
+1 1 1
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2201
+seed cactus doombloom~
+a cactus seed~
+A small, barely visible seed rests here, waiting to sprout.~
+~
+12 0 1
+0 0 0 0
+1 1 1
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2202
+seed nightshade barbed~
+a nightshade seed~
+A small, barely visible seed rests here, waiting to sprout.~
+~
+12 0 1
+0 0 0 0
+1 1 1
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2203
+seed juniper kendoka~
+a juniper seed~
+A small, barely visible seed rests here, waiting to sprout.~
+~
+12 0 1
+0 0 0 0
+1 1 1
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2204
+planter obsidian~
+an obsidian planter~
+A squat obsidian planter sits here, filled to the brim with dirt.~
+~
+15 0 0
+52 0 0 0
+200 4 4
+100
+E
+planter~
+ The planter is a perfect cube of shiny jet-black stone.
+Feeling the dirt inside it seems rich and fresh, merely
+waiting for a green-thumbed gardener to sow a seed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2205
+pot obsidian~
+a dead juniper~
+An obsidian pot sits beneath the stone tree, filled with dirt.~
+~
+12 0 0
+17 0 0 0
+4 4 4
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2206
+pot obsidian~
+a dead snapdragon~
+An obsidian pot sits beneath the stone tree, filled with dirt.~
+~
+12 0 0
+17 0 0 0
+4 4 4
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2207
+pot obsidian~
+a dead cactus~
+An obsidian pot sits beneath the stone tree, filled with dirt.~
+~
+12 0 0
+17 0 0 0
+4 4 4
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2208
+nothing~
+a dead nightshade~
+There is a bit of nothing sitting here.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2209
+nothing~
+an opalescent seed~
+There is a bit of nothing sitting here.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2210
+nothing~
+a lump of iron~
+There is a bit of nothing sitting here.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2211
+nothing~
+a wrought-iron ingot~
+There is a bit of nothing sitting here.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2212
+nothing~
+a juniper~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2213
+nothing~
+a snapdragon~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2214
+nothing~
+a cactus~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2215
+nothing~
+a nightshade~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2216
+bookcases~
+enormous bookcases~
+Towering bookcases filled with books rise nearly forty feet in the air.~
+~
+15 0 0
+5000 0 0 0
+1000 500000 50000
+100
+E
+bookcases~
+ There is an exquisite amount of craftsmanship displayed
+in these towering bookshelves. Flowers, trees, animals,
+and patterns are carved into the wood with incredible
+detail. Hundreds of leather-bound volumes fill the tall
+shelves representing history and literature dating back
+at least five centuries.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2217
+lockbox iron~
+a small iron lockbox~
+A small but heavy-looking iron lockbox has been left here.~
+~
+15 0 1
+250 13 7200 0
+20 100000 500
+100
+E
+lockbox~
+ Upon closer inspection the lockbox is actually made of
+a very dark wood which has been reinforced with strong
+bands of iron. The cross-shaped keyhole is a bit unusual
+but beyond that there's nothing remarkable about it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2220
+page journal~
+a page from the iron-smelter's journal~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+3 55 5
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

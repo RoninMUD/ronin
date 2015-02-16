@@ -1,0 +1,30 @@
+#13009~
+13010
+13011
+13012
+13013
+13014
+1.800000
+0.200000
+2
+3
+4
+10
+8
+%s I'm sorry, I don't seem to have anything like that.~
+%s But you don't seem to carry such item ??~
+%s I only deal with the items of my trade. Try somewhere else.~
+%s I'd like to buy your item, but I just don't have the gold.~
+%s But you don't seem to carry enough gold to buy this.~
+%s It'll be %d coins, thank you.~
+%s I'll give you %d coins for that.~
+2
+2
+13009
+0
+13050
+8
+14
+15
+19
+$~

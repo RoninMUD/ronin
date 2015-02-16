@@ -1,0 +1,107 @@
+#8201
+mermaid~
+The Mermaid~
+A Mermaid is swimming here.
+~
+A woman with a fish's tail in place of legs.
+~
+200 524288 1000 Y
+7 13 50 3d6+60 2d4+2
+0 2500
+8 8 2
+84 0 0d0+0 0
+0 0 0 0
+K
+200 0 0 0 0 0
+#8202
+dolphin~
+The Dolphin~
+A dolphin is here happily.
+~
+A lovely sea animal.
+~
+200 0 100 Y
+4 16 80 3d3+35 1d6+1
+0 1000
+8 8 0
+84 0 0d0+0 0
+0 0 0 0
+K
+100 0 0 0 0 0
+#8203
+neptune~
+The Neptune~
+The Neptune is standing here.
+~
+He is the God of the Sea.
+~
+131146 0 1000 Y
+30 -7 -18 10d20+8000 4d6+2
+20000 210000
+8 8 1
+84 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#8204
+seal~
+The Seal~
+A seal is here looking for some small fish.
+~
+A kind of fish-eating sea-animal.
+~
+200 0 500 Y
+4 16 80 3d3+40 1d8+1
+0 1300
+8 8 0
+84 0 0d0+0 0
+0 0 0 0
+K
+100 0 0 0 0 0
+#8205
+sea gull~
+The Sea Gull~
+A sea gull is flying here.
+~
+A large lovely long-winged sea-bird.
+~
+200 0 500 Y
+4 16 80 3d3+30 1d6+2
+0 600
+9 9 0
+86 0 0d0+0 0
+0 0 0 0
+K
+50 0 0 0 0 0
+#8206
+whale~
+The Whale~
+A Whale is here.
+~
+A kind of large sea-animal with a little fount on its head.
+~
+74 0 500 Y
+25 -2 -3 5d50+1300 9d2+1
+0 120000
+8 8 0
+84 0 0d0+0 0
+0 0 0 0
+K
+6000 0 0 0 0 0
+#8207
+captain~
+The Captain~
+A Captain is here selling his boats.
+~
+A very hard working man.
+~
+10 128 900 Y
+26 -2 20 6d10+5000 1d8+12
+20000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,1838 @@
+#2995
+membership fee machine~
+a membership fee machine~
+A membership fee machine is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2996
+pen~
+a pen~
+A small pen is lying on the ground.~
+~
+21 0 1
+0 0 0 0
+1 50 2
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2997
+flower machine~
+a flower machine~
+A flower machine is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2998
+insurance machine~
+an insurance machine~
+An insurance machine is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2999
+teller bank banker~
+a bank teller~
+An Autoteller machine is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+autoteller teller machine~
+'withdraw <amt>/all' -- withdraw some/all of your coins from the bank.
+'deposit <amt>/all' -- deposit some/all of your coins in the bank.
+'balance' -- check your balance in the bank.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3000
+barrel~
+a barrel~
+A beer barrel has been left here.~
+~
+17 0 1
+50 50 1 0
+65 300 300
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3001
+bottle~
+a bottle~
+A beer bottle has been left here.~
+~
+17 0 1
+8 8 1 0
+10 20 8
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3002
+bottle~
+a bottle~
+A dark bottle of ale has been left here.~
+~
+17 0 1
+8 8 3 0
+10 10 3
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3003
+firebreather~
+a firebreather~
+A firebreather has been left here.~
+~
+17 0 1
+8 8 7 0
+10 50 17
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3004
+bottle~
+a bottle~
+A dark bottle has been left here.~
+~
+17 0 1
+8 8 8 0
+10 20 7
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3005
+fangs claws~
+claws and fangs~
+the claws and fangs of a werewolf lie here.~
+~
+5 524288 1
+0 4 9 8
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3006
+lockpick~
+a lockpick~
+A well-oiled lockpick rests here.~
+~
+25 0 18433
+5 5 0 0
+1 25000 200
+100
+E
+lockpick~
+It's a tool used for picking difficult locks.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3007
+rum captain morgan spiced~
+A bottle of Spiced Rum~
+A bottle of Spiced Rum has been left here.~
+Bottle of Rum breaks as it smashes heavily into $V's head!~
+17 0 8193
+40 40 5 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3008
+axe sharp~
+a wicked half-moon axe~
+a wicked looking axe, its half-moon blade glinting, lies on the ground.~
+~
+5 0 8193
+0 3 8 3
+5 100 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 -1
+A
+13 10
+A
+18 1
+#3009
+potion magenta curing~
+a magenta potion of curing~
+a magenta colored potion rests upon the ground here~
+~
+10 0 1
+9 16 16 16
+2 2000 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3010
+bread rye loaf~
+bread~
+A loaf of bread has been left here.~
+~
+19 0 1
+12 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3011
+loaf rye~
+a loaf of rye~
+a crusty loaf of rye bread sits here.~
+~
+19 0 1
+6 0 0 0
+1 5 5
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3012
+map paper~
+Map of Midgaard~
+A rolled up map is lying here.~
+~
+12 268435456 1
+0 0 0 0
+1 200 30
+100
+E
+map paper~
+                       Temple Altar
+                            |  Big Chain (Resting Rooms)
+   N           Donation     | /    NoName's
+ W + E   Morgue---Room---The Temple---Shop
+   S                    of Midgaard       Map Maker   Reception--Vault
+                            |  Post           |      /
+                Cleric      | / Office  Grunting Boar
+                 Guild-Temple Square------Boar Inn----Bar
+           Magic            |  Meta  General Weapon  Musical
+  Jeweler  Shop  Bakery     | / Shop Store   Shop     Shop
+     |------|------|--Market Square----|------|--------|
+  Flower  Mage   Armor      |         Pet  Warrior   Bard
+ Boutique Guild   Shop      |        Store  Guild    Guild
+    Anti-Paladin Ninja      |Auction Nomad Paladin  Commando
+ Wall     Guild  Guild      | / Hall Guild  Guild    Guild
+ Road-------|------|---Common Square---|------|--------|
+  |              Grubby     |        Thief  Levee  Warehouse
+  |               Inn  South Gates   Guild
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3013
+tradebar bar bronze trade~
+a bronze tradebar~
+A small bronze tradebar lies here on the ground.~
+~
+8 402653184 16385
+0 0 0 0
+10 50000 0
+100
+E
+bronze~
+It's a bronze tradebar issued by the Mayor of Midgaard.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3014
+tradebar silver bar trade~
+a silver tradebar~
+A silver tradebar lies on the ground here.~
+~
+8 402653184 16385
+0 0 0 0
+10 100000 0
+100
+E
+silver~
+It's a silver tradebar issued by the Mayor of Midgaard.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3015
+gold tradebar trade bar~
+a gold tradebar~
+A gold tradebar lies here.~
+~
+8 402653184 16385
+0 0 0 0
+10 200000 0
+100
+E
+gold~
+It's a gold tradebar issued by the Mayor of Midgaard.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3016
+platinum tradebar trade bar~
+a platinum tradebar~
+A platinum tradebar lies here.~
+~
+8 402653184 16385
+0 0 0 0
+10 500000 0
+100
+E
+platinum~
+It's a platinum tradebar issued by the Mayor of Midgaard.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3017
+mithril bar trade tradebar~
+a mithril tradebar~
+a mithril tradebar lies here.~
+~
+8 402653184 16385
+0 0 0 0
+10 1000000 0
+100
+E
+mithril~
+It's a mithril tradebar issued by the Mayor of Midgaard.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3018
+diamond trade bar tradebar~
+a large diamond~
+A large diamond lies here on the floor.~
+~
+8 402653184 16385
+0 0 0 0
+6 5000000 0
+100
+E
+diamond~
+It's a large diamond cut to specifications set forth by the Mayor of Midgaard.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3020
+dagger~
+a dagger~
+A dagger with a long thin blade is here.~
+~
+5 0 8193
+0 2 5 11
+1 10 3
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#3021
+sword short shortsword~
+a steel shortsword~
+a short sword forged from high quality steel is stuck in the ground.~
+~
+5 0 8193
+0 2 8 11
+3 500 50
+100
+E
+sword small~
+The small sword seems to have an inscription of some sort.
+~
+E
+inscription~
+It says : May this sword be a good companion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#3022
+mace cleric holy~
+The holy mace of a cleric~
+A plain, well crafted mace lies on the ground, glowing softly with a holy light.~
+~
+5 0 8193
+0 2 7 3
+8 500 50
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#3023
+mace steel flange headed~
+a flange-headed mace~
+a heavy steel mace lies on the ground, its flanged head covered in gore.~
+~
+5 0 8193
+0 1 17 7
+3 2500 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -1
+A
+19 1
+#3024
+warhammer hammer steel~
+a steel warhammer~
+a steel warhammer lies on the ground, its haft worn and notched with use.~
+~
+5 268435456 8193
+0 2 6 7
+6 50 17
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#3025
+knife pointed sharp~
+a sharp, pointed knife~
+a knife, its sharp and gleaming edge is stuck in ground.~
+~
+5 0 24577
+0 8 2 11
+3 4000 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3026
+toy gun~
+a toy gun~
+a toy gun is lying on the ground.~
+~
+6 0 16385
+3026 0 15 2
+10 8000 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3027
+plastic bullets~
+some plastic bullets~
+some plastic bullets are lying on the ground.~
+~
+23 0 1
+0 0 3026 10
+10 6000 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3028
+meat pie~
+a meat pie~
+A meat pie sits here, tantalizing your senses~
+~
+19 0 1
+25 0 0 0
+2 28 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3029
+roggenbrot roll~
+roggenbrot~
+a delicious roll of fresh roggenbrot sits here.~
+~
+19 0 1
+30 0 0 0
+2 92 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3030
+torch light flame~
+a small wooden torch~
+a wooden torch, its haft charred and chipped, lies here unlit.~
+~
+1 0 65537
+0 0 24 0
+1 10 3
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3031
+lantern brass light~
+a small brass lantern~
+a lantern fashioned from brass flickers dimly here.~
+~
+1 0 65537
+0 0 -1 0
+1 50 17
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3032
+bag paper~
+a small paper bag~
+a small paper bag drifts lazily in the wind.~
+~
+15 0 16385
+50 0 0 0
+2 20 7
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3033
+sack leather large~
+a large leather sack~
+a large sack made from the tanned hide of a large animal lies on the ground.~
+~
+15 0 16385
+150 0 0 0
+10 2000 499
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3037
+longsword sword blade midgaard~
+a longsword of Midgaard~
+a long shining blade, the word Midgaard etched upon it, lies on the ground.~
+~
+5 0 8193
+0 3 7 3
+8 5000 400
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+19 2
+#3040
+breastplate breast plate midgaard~
+A Midgaard Breastplate~
+A well made breast plate lays on the ground here.~
+~
+9 0 9
+11 0 0 0
+100 20000 4000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+13 10
+#3041
+chain mail shirt~
+a chain mail shirt~
+A chain mail shirt is lying on the ground.~
+~
+9 0 9
+8 0 0 0
+60 2500 650
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+#3042
+shield midgaard~
+A Midgaard Shield~
+A fancy looking shield rests on the ground here.~
+~
+9 0 513
+9 0 0 0
+15 14000 1500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+13 10
+#3043
+cape magic~
+a magic cape~
+a magic cape lays on the ground here~
+~
+9 0 5
+4 0 0 0
+10 2500 200
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+12 5
+#3044
+jacket studded~
+a studded leather jacket~
+A studded leather jacket is lying on the ground.~
+~
+9 268435456 9
+6 0 0 0
+20 500 75
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#3045
+jacket scale mail~
+a scale mail jacket~
+A scale mail jacket is lying on the ground.~
+~
+9 0 9
+4 0 0 0
+40 1000 300
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3046
+robe mage~
+a mage robe~
+a nondescript robe sits in a pile on the ground here~
+~
+9 0 9
+7 0 0 0
+80 7000 2250
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+4 1
+#3049
+scroll locate object~
+A scroll of locate object~
+A scroll has carelessly been left here.~
+$n waves the scroll around, but nothing happens.~
+2 0 16385
+20 31 -1 -1
+1 4400 200
+10
+X
+$n waves the scroll around, but nothing happens.~
+0 0 0
+M
+~
+~
+~
+~
+#3050
+scroll identify~
+a scroll of identify~
+A scroll has carelessly been left here.~
+~
+2 268435520 16385
+12 71 -1 -1
+1 2000 50
+100
+E
+scroll identify~
+The scroll has a magic formula drawn upon it:
+     ???
+    ?   ?
+       ?
+      ?
+      ?
+      *
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3051
+potion yellow~
+a yellow potion of see invisible~
+A small yellow potion has carelessly been left here.~
+~
+10 268435520 16385
+12 19 -1 -1
+1 400 50
+100
+E
+potion yellow~
+The potion has a small label 'Detect The Invisible'.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3052
+scroll recall~
+a scroll of recall~
+A scroll has carelessly been left here.~
+~
+2 268435520 16385
+12 42 -1 -1
+4 2000 100
+100
+E
+scroll~
+The scroll has written a formulae of 'Word of Recall' upon it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3053
+wand~
+a wand of invisibility~
+A wand has carelessly been left here.~
+~
+3 64 16385
+12 2 2 29
+2 4000 100
+100
+E
+wand~
+The wand is an old dark stick. You notice a small symbol etched at the
+base of the wand. It looks like this:
+
+     \ /
+    - O -
+     / \
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3054
+staff~
+a staff of sleep~
+A staff has carelessly been left here.~
+~
+4 64 16385
+12 1 1 38
+7 5000 100
+100
+E
+staff~
+The staff is made of old oak, and is around five feet long. It fits
+perfectly into your hand. You notice a small symbol etched at the
+base of the staff, it looks like:
+
+  ZZZZZ
+     Z
+    Z
+   Z
+  ZZZZZ  z   z
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3055
+potion brown~
+a brown potion of armor~
+a bottle of brown liquid has carelessly been left here ~
+~
+10 268435520 1
+30 1 0 0
+3 500 500
+100
+E
+potion~
+There is a label on the bottle.
+Label : NoName's Shop Production   -- Armor
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3056
+potion clear~
+a clear potion~
+a bottle of clear liquid has carelessly been left here ~
+~
+10 268435521 1
+30 3 15 36
+3 60000 500
+100
+E
+potion~
+NoName's Shop Production -- Bless Cure-Critic Sanctuary
+~
+E
+clear~
+NoName's Shop Production -- Bless Cure-Critic Sanctuary
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3057
+bottle holy holyliquid~
+a bottle of holy liquid~
+a bottle of holy liquid has carelessly been left here.~
+~
+10 134217792 1
+30 28 28 0
+5 100000 10000
+100
+E
+bottle~
+NoName's Shop Best Production -- ???
+~
+E
+holy~
+NoName's Shop Best Production -- ???
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3058
+potion red~
+a red potion of cure blindness~
+a bottle of red liquid has carelessly been left here ~
+~
+10 268435520 1
+30 14 0 0
+3 500 500
+100
+E
+potion~
+NoName's Shop Production -- Cure Blind
+~
+E
+red~
+NoName's Shop Production -- Cure Blind
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3059
+potion green~
+a green potion of detection~
+a bottle of green liquid has carelessly been left here ~
+~
+10 268435520 1
+30 18 20 21
+3 700 700
+100
+E
+potion~
+NoName's Shop Production -- Detect Evil, Magic and Poison
+~
+E
+green~
+NoName's Shop Production -- Detect Evil, Magic and Poison
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3060
+raft~
+a raft~
+A raft has been left here.~
+~
+22 0 1
+0 0 0 0
+75 400 200
+100
+E
+raft~
+The raft looks very primitive.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3061
+canoe~
+a canoe~
+A canoe has been left here.~
+~
+22 0 1
+0 0 0 0
+32 1000 1000
+100
+E
+canoe~
+The canoe is fairly light.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3062
+potion white~
+a white potion of health~
+a bottle of white liquid has carelessly been left here ~
+~
+10 268435520 1
+30 35 43 44
+3 10000 1000
+100
+E
+potion~
+NoName's Shop Production -- Remove Curse, Remove Posion, Sense Life
+~
+E
+white~
+NoName's Shop Production -- Remove Curse, Remove Posion, Sense Life
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3063
+sign~
+a sign~
+A large sign has been nailed to the wall here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+sign~
+To use the voting machine:
+ Type 'idea' <your idea>
+ Type 'vote' <number> <yes/no>
+ Type 'report' to see ideas in the machine
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3064
+idea board~
+An Idea Board~
+An idea board hovers in mid-air here.~
+~
+27 0 0
+1 1 53 0
+10 10 10
+100
+E
+board~
+ This is a board meant for posting ideas on how to improve the mud or any
+bugs you may discover. Please use the Adventure Board for personal messages
+and the Temple Board for all other messages.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3065
+horn plenty~
+the Horn of Plenty~
+The Horn of Plenty lies here, water gushing out of it.~
+~
+17 0 16385
+10000 10000 0 0
+10 10 10
+100
+E
+horn~
+It must be a gateway to the elemental plane of water for there is much more in
+it than there is room for.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3069
+flute silver~
+a silver flute~
+an expensive looking flute lies on the ground here~
+~
+24 0 16385
+0 0 0 0
+8 10000 1000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+A
+19 1
+#3070
+gauntlets bronze~
+a pair of bronze gauntlets~
+A pair of bronze gauntlets is lying on the ground.~
+~
+9 0 129
+7 0 0 0
+8 1000 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+13 5
+#3071
+gloves leather~
+a pair of leather gloves~
+A pair of leather gloves is lying on the ground.~
+~
+9 0 129
+5 0 0 0
+3 50 25
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#3075
+helmet bronze~
+a bronze helmet~
+A bronze helmet is lying on the ground.~
+~
+9 0 17
+7 0 0 0
+8 600 60
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 5
+#3076
+cap leather~
+a leather cap~
+A leather cap is lying on the ground.~
+~
+9 268435456 17
+6 0 0 0
+3 50 40
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#3077
+uniform serge~
+A Mountie Uniform~
+A scarlet uniform lies here, awaiting a real canuck.~
+~
+9 0 9
+9 0 0 0
+10 10 10
+100
+E
+uniform red serge~
+   This is a brass buttoned, scarlet coat with a low neck collar
+and a "kick me" note stuck to its back.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 -5
+#3078
+rod hoop dogcatcher~
+the dogcatchers hoop~
+A long rod with a hoop on the end lies here.~
+~
+5 0 8193
+2 6 0 0
+10 10 10
+100
+E
+hoop~
+   The hoop is made of strong rope and is attached to a wooden rod.
+~
+E
+rod~
+   This is a long wooden rod with a hoop attached at one end.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 50
+A
+2 2
+#3080
+leggings bronze~
+a pair of bronze leggings~
+A pair of bronze leggings is lying on the ground.~
+~
+9 0 33
+7 0 0 0
+8 1000 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 10
+A
+2 1
+#3081
+pants leather~
+a pair of leather pants~
+A pair of leather pants is lying on the ground.~
+~
+9 0 33
+6 0 0 0
+8 50 50
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#3085
+sleeves bronze~
+a pair of bronze sleeves~
+A pair of bronze sleeves is lying on the ground.~
+~
+9 0 257
+5 0 0 0
+8 1750 550
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3086
+sleeves leather~
+a pair of leather sleeves~
+A pair of leather sleeves is lying on the ground.~
+~
+9 0 257
+5 0 0 0
+4 50 25
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#3087
+toad idol~
+toad idol~
+A golden flog-like creature with beady read eyes lies here, glinting with
+knowledge.~
+~
+27 1 0
+54 54 54 0
+0 0 0
+100
+E
+idol~
+Use "Look AT " to see a listing of the messages. Use "Read
+<message number>" or "Remove <message number>" to read or remove
+a message, respectively.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3088
+sign~
+a large sign~
+A large sign on the wall grabs your attention.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+sign~
+
+  This is the Midgaard Newbie hospital.  The doctor offers a
+wide variety of spells to assist anyone under level 16 - for
+a modest fee of course.
+
+  Type LIST to see what we have available.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3090
+throne grand carved evergreen wood~
+The Grand Throne of Immortalis, Guide of the Fates~
+A grand throne of carved wood occupies the far side of the sanctum.~
+~
+12 0 0
+0 0 0 0
+0 10 10
+100
+E
+throne grand carved evergreen wood~
+The throne is an impressive work of craftsmanship and has stood the test of
+time with ease. It is carved from a single massive block of evergreen wood, its
+natural beauty flawless in every way. The throne is said to have been crafted
+by Odin himself as a gift to Immortalis when the world was forged. As ageless
+as its eternal occupant, the throne will likely outlast the world itself.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3091
+tablet divine golden gold~
+a `kDIVINE GOLDEN TABLET`q~
+A `kDIVINE GOLDEN TABLET`q, sent from the heavens, lies here.~
+The gods decree that change must come to the world.  After many weeks
+of deliberation, the supreme council has effected the following changes:
+
+Healing:
+
+  - The amount healed from spells such as Cure, Lay Hands, and Heal has been 
+    increased, granting the wishes of many pious mortals.
+
+  - Miracle will now have a cap of 2000 hit points, as no mortal's faith is
+    limitless.
+    
+  - Great miracle (and the golden stick) will now affect the whole room.
+  
+  - Divine Intervention will still heal to full, as it is direct divine
+    action, like the name implies.
+    
+  - Spell costs have changed, refer to the help for details.
+
+Skills:
+
+  - Bash and pummel now stack with the victim's current position, allowing
+    for even greater damage on the next attack.
+    
+  - All skills that deal damage will account for the victim's position,
+    potentially multiplying their effectiveness.
+    
+Classes:
+
+  - Bards shall now gain Haste at level 45, and learn the Rejuvenation song
+    at level 50.
+    
+  - Clerics shall now gain the Bash skill at level 35, and gain Haste at 40.
+
+Remorting:
+ 
+  - A new remort system is now in place.  The system is now automated, and
+    will incur a cost depending on your current status.  For more information
+    refer to 'help remort'.
+    
+  - After reincarnation, you will be granted a bonus to experience until
+    you reach your previous status.
+    
+  - The gods have chosen a representative, Immortalis, to perform 
+    reincarnation.  If you wish to follow this path, he sits to the west of 
+    the Temple Altar and Idea board.
+~
+16 3 0
+0 0 0 0
+10 10 10
+100
+X
+~
+368 0 0
+M
+~
+~
+~
+~
+#3092
+notice board deputy~
+A Deputy Board~
+A deputy notice board is pinned up here.~
+~
+27 1 0
+1 1 52 1
+0 0 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3093
+sign~
+a large sign~
+A large sign above the doorway grabs your attention.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+sign~
+Type:
+
+     Buy vault- to buy a new vault for 200000 coins.
+
+     Use vault <vaultname>- to switch the current vault.
+
+     Buy access <player name>- gives access to the current vault to the 
+     specified person- costs 100000 coins. 
+
+     Buy view <player name> - gives view access of the current vault to
+     the specified person - Free
+
+     Store <item>- stores the item in the current vault for 1.5X its rent.
+
+     List- to get a list of the items in current vault.
+
+     Recover <item>- gets the specified item from the current vault.
+
+     List vaults - to see the vaults you have access to
+
+     Remove access <player name> - removes player access
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3094
+board quest~
+A Mortal Quest Board~
+A mortal quest board is hanging here.~
+~
+27 1 0
+1 1 54 0
+0 0 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3095
+newspaper board press printing~
+the newspaper board~
+The printing press of the Mud stands in the corner, clanking away.~
+~
+13 1 0
+0 0 53 0
+0 0 0
+100
+E
+board~
+Use "Look AT board" to see a listing of the messages. Use "Read
+<message number>" or "Remove <message number>" to read or remove
+a message, respectively.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3096
+adventure board bulletin~
+An Adventure board~
+An Adventure bulletin board is mounted on a wall here.~
+~
+27 1 0
+1 1 53 0
+0 0 0
+100
+E
+board~
+Use "Look AT board" to see a listing of the messages. Use "Read
+<message number>" or "Remove <message number>" to read or remove
+a message, respectively.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3097
+god board bulletin~
+A God Bulletin Board~
+A GOD bulletin board is mounted on a wall here.~
+~
+27 134217729 0
+55 55 55 0
+0 0 0
+100
+E
+board~
+Use "Look AT board" to see a listing of the messages. Use "Read
+<message number>" or "Remove <message number>" to read or remove
+a message, respectively.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3098
+immortal board bulletin~
+An Immortal Board~
+An immortal bulletin board is mounted on a wall here.~
+~
+27 1 0
+51 51 54 0
+0 0 0
+100
+E
+board~
+Use "Look AT board" to see a listing of the messages. Use "Read
+<message number>" or "Remove <message number>" to read or remove
+a message, respectively.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3099
+board bulletin~
+A Bulletin Board~
+A large bulletin board is mounted on a wall here.~
+~
+27 0 16384
+1 1 54 0
+0 0 0
+100
+E
+board~
+Use "Look AT board" to see a listing of the messages. Use "Read
+<message number>" or "Remove <message number>" to read or remove
+a message, respectively.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

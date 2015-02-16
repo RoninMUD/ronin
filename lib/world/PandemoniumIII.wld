@@ -1,0 +1,1451 @@
+#21800
+Chamber of Scrolls~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21809
+D2
+~
+~
+0 -1 21767
+D3
+~
+~
+0 -1 21808
+S
+#21801
+Priest Quarters~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21767
+D1
+~
+~
+0 -1 21811
+D3
+~
+~
+0 -1 21810
+S
+#21802
+Chamber of the Wheel~
+A massive mural covers the floor of this room, depicting the
+cycle of life and death, seasons and elements. Near the top
+of the circle are depictions of paradise and nearer the bottom
+are depictions of suffering and torment. You note with some
+interest that demonic looking oni are shown in nearly all of the
+scenes, some carrying people on their backs up to paradise,
+others dragging people away to suffer hellish torment. The
+Great Buddha is shown near the top and nearer the bottom
+is shown a great armor clad figure, a stern look on his face.
+All about the room are closed portals, each marked with
+symbols of the elements.
+~
+218 0 0
+D0
+A large portal stands here, bearing the symbols of Fire.
+~
+portal~
+1 -1 21805
+D1
+A large portal stands here, bearing the symbols of Earth.
+~
+portal~
+1 -1 21804
+D2
+A large portal stands here, bearing the symbols of Water.
+~
+portal~
+1 -1 21806
+D3
+A large portal stands here, bearing the symbols of the Wind.
+~
+portal~
+1 -1 21803
+D4
+A large portal stands here, bearing the symbols of Metal.
+~
+portal~
+1 -1 21807
+D5
+~
+~
+0 -1 21767
+S
+#21803
+Chamber of Wind~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21832
+D1
+~
+~
+0 -1 21802
+S
+#21804
+Chamber of Earth~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21842
+D3
+~
+~
+0 -1 21802
+S
+#21805
+Chamber of Fire~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21802
+D3
+~
+~
+0 -1 21837
+S
+#21806
+Chamber of Water~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21802
+D1
+~
+~
+0 -1 21847
+S
+#21807
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D0
+A massive portal of engraved steel blocks the way North.
+~
+portal~
+8 -1 21824
+D5
+~
+~
+0 -1 21802
+S
+#21808
+Chamber of Scrolls~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21800
+S
+#21809
+Chamber of Scrolls~
+A temporary description
+~
+218 0 0
+D3
+~
+~
+0 -1 21800
+S
+#21810
+Priest Quarters~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21801
+S
+#21811
+Priest Quarters~
+A temporary description
+~
+218 0 0
+D3
+~
+~
+0 -1 21801
+S
+#21812
+Priest Quarters~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21769
+S
+#21813
+Priest Quarters~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21769
+S
+#21814
+Chamber of Healing~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21768
+S
+#21815
+Chamber of Purging~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21768
+S
+#21816
+Monk Quarters~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21764
+S
+#21817
+Monk Quarters~
+A temporary description
+~
+218 0 0
+D3
+~
+~
+0 -1 21764
+S
+#21818
+Monk Quarters~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21765
+S
+#21819
+Monk Quarters~
+A temporary description
+~
+218 0 0
+D3
+~
+~
+0 -1 21765
+S
+#21820
+Chamber of Healing~
+   This austere chamber is dimly lit by several glowing charcoal braziers, the
+faint light they cast barely penetrating the thick smoke of the chamber.
+Faintly decernable through the smokey haze is a small bronze statue of
+Hukulokujyu, the Buddha of long life, and before it rests a fuming bowl of
+incense. Several very small, razor sharp needles are laid out on a length of
+silk before the statue, the purpose of which you can only begin to guess.
+~
+218 0 0
+D2
+~
+~
+0 -1 21766
+E
+statue buddha hukulokujyu~
+
+The bronze statue depicts a short old man, of cheerful countenance, carrying a
+long staff to which there is affixed a scroll of Buddist scriptures. He is the
+symbol of long life and good fortune, and standing next to him, with wings
+outstretched, is his constant companion, a giant crane.
+~
+S
+#21821
+Chamber of Fasting~
+   This chamber is very warm, and the floor is thickly padded with woven mats.
+Several large charcoal braziers give off waves of pleasant heat and provide
+ample light to see. This is where the monks come to meditate and fast,
+sacrificing their desire for food in order to cleanse their minds and bodies,
+and will sometimes stay here for days at a time. After they leave they are
+quite unlikely to ever take food for granted again, as even a simple bowl of
+rice is a feast after such an ordeal.
+~
+218 0 0
+D0
+~
+~
+0 -1 21766
+S
+#21822
+Monk Quarters~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21763
+S
+#21823
+Monk Quarters~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21763
+S
+#21824
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+1 -1 21807
+D3
+~
+~
+0 -1 21825
+S
+#21825
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21824
+D2
+~
+~
+0 -1 21826
+S
+#21826
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21825
+D2
+~
+~
+0 -1 21827
+S
+#21827
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21826
+D1
+~
+~
+0 -1 21828
+S
+#21828
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21829
+D3
+~
+~
+0 -1 21827
+S
+#21829
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21830
+D3
+~
+~
+0 -1 21828
+S
+#21830
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21831
+D2
+~
+~
+0 -1 21829
+S
+#21831
+Chamber of Metal~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21830
+D4
+A stout ladder of bamboo leads upward here.
+~
+ladder~
+11 -1 21852
+S
+#21832
+Chamber of Wind~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21803
+D3
+~
+~
+0 -1 21833
+S
+#21833
+Chamber of Wind~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21832
+D2
+~
+~
+0 -1 21834
+S
+#21834
+Chamber of Wind~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21833
+D2
+~
+~
+0 -1 21835
+S
+#21835
+Chamber of Wind~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21834
+D1
+~
+~
+0 -1 21836
+S
+#21836
+Chamber of Wind~
+A temporary description
+~
+218 0 0
+D3
+~
+~
+0 -1 21835
+S
+#21837
+Chamber of Fire~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21838
+D1
+~
+~
+0 -1 21805
+S
+#21838
+Chamber of Fire~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21839
+D2
+~
+~
+0 -1 21837
+S
+#21839
+Chamber of Fire~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21840
+D3
+~
+~
+0 -1 21838
+S
+#21840
+Chamber of Fire~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21841
+D3
+~
+~
+0 -1 21839
+S
+#21841
+Chamber of Fire~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21840
+S
+#21842
+Chamber of Earth~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21843
+D2
+~
+~
+0 -1 21804
+S
+#21843
+Chamber of Earth~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21844
+D3
+~
+~
+0 -1 21842
+S
+#21844
+Chamber of Earth~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21843
+D2
+~
+~
+0 -1 21845
+S
+#21845
+Chamber of Earth~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21844
+D3
+~
+~
+0 -1 21846
+S
+#21846
+Chamber of Earth~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21845
+S
+#21847
+Chamber of Water~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21848
+D3
+~
+~
+0 -1 21806
+S
+#21848
+Chamber of Water~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21847
+D3
+~
+~
+0 -1 21849
+S
+#21849
+Chamber of Water~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21848
+D3
+~
+~
+0 -1 21850
+S
+#21850
+Chamber of Water~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21851
+D1
+~
+~
+0 -1 21849
+S
+#21851
+Chamber of Water~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21850
+S
+#21852
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21855
+D1
+~
+~
+0 -1 21854
+D2
+~
+~
+0 -1 21856
+D3
+~
+~
+0 -1 21853
+D5
+A stout ladder of bamboo leads down here.
+~
+ladder~
+11 -1 21831
+S
+#21853
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21857
+D1
+~
+~
+0 -1 21852
+D2
+~
+~
+0 -1 21858
+S
+#21854
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21860
+D2
+~
+~
+0 -1 21859
+D3
+~
+~
+0 -1 21852
+S
+#21855
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21860
+D2
+~
+~
+0 -1 21852
+D3
+~
+~
+0 -1 21857
+S
+#21856
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21852
+D1
+~
+~
+0 -1 21859
+D3
+~
+~
+0 -1 21858
+S
+#21857
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21855
+D2
+~
+~
+0 -1 21853
+S
+#21858
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21853
+D1
+~
+~
+0 -1 21856
+S
+#21859
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21854
+D3
+~
+~
+0 -1 21856
+S
+#21860
+Masters Dojo~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21854
+D3
+~
+~
+0 -1 21855
+D4
+~
+~
+0 -1 21861
+S
+#21861
+Chambers of the Five Animals~
+A temporary description
+~
+218 0 0
+D3
+~
+~
+0 -1 21862
+D5
+~
+~
+0 -1 21860
+S
+#21862
+Pathway of The White Crane~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21861
+D3
+~
+~
+0 -1 21863
+S
+#21863
+Pathway of The White Crane~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21862
+D2
+~
+~
+0 -1 21864
+S
+#21864
+Pathway of The White Crane~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21863
+D1
+~
+~
+0 -1 21865
+S
+#21865
+Pathway of The Snake~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21866
+D3
+~
+~
+0 -1 21864
+S
+#21866
+Pathway of The Snake~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21867
+D3
+~
+~
+0 -1 21865
+S
+#21867
+Pathway of The Snake~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21866
+D3
+~
+~
+0 -1 21868
+S
+#21868
+Pathway of the Leopard~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21867
+D3
+~
+~
+0 -1 21869
+S
+#21869
+Pathway of the Leopard~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21868
+D4
+~
+~
+0 -1 21870
+S
+#21870
+Pathway of the Leopard~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21871
+D5
+~
+~
+0 -1 21869
+S
+#21871
+Stalking Ground of The Tiger~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21872
+D3
+~
+~
+0 -1 21870
+S
+#21872
+Stalking Ground of The Tiger~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21873
+D3
+~
+~
+0 -1 21871
+S
+#21873
+Stalking Ground of The Tiger~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21872
+D3
+~
+~
+0 -1 21874
+S
+#21874
+Stalking Ground of The Tiger~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21873
+D3
+~
+~
+0 -1 21875
+S
+#21875
+Domain of the Dragon~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21876
+D1
+~
+~
+0 -1 21874
+S
+#21876
+Domain of the Dragon~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21877
+D2
+~
+~
+0 -1 21875
+S
+#21877
+Domain of the Dragon~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21878
+D3
+~
+~
+0 -1 21876
+S
+#21878
+Domain of the Dragon~
+A temporary description
+~
+218 0 0
+D3
+~
+~
+0 -1 21877
+D4
+~
+~
+0 -1 21879
+S
+#21879
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21881
+D3
+~
+~
+0 -1 21880
+D5
+~
+~
+0 -1 21878
+S
+#21880
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21879
+D2
+~
+~
+0 -1 21883
+D3
+~
+~
+0 -1 21885
+S
+#21881
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21879
+D2
+~
+~
+0 -1 21882
+D3
+~
+~
+0 -1 21883
+S
+#21882
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21881
+D3
+~
+~
+0 -1 21884
+S
+#21883
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21880
+D1
+~
+~
+0 -1 21881
+D2
+~
+~
+0 -1 21884
+D3
+~
+~
+0 -1 21886
+S
+#21884
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21883
+D1
+~
+~
+0 -1 21882
+D3
+~
+~
+0 -1 21887
+S
+#21885
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21880
+D2
+~
+~
+0 -1 21886
+S
+#21886
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21885
+D1
+~
+~
+0 -1 21883
+D2
+~
+~
+0 -1 21887
+S
+#21887
+Chamber of The Beautiful Springtime~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21886
+D1
+~
+~
+0 -1 21884
+D4
+~
+~
+0 -1 21888
+S
+#21888
+Temple of the Great Buddha~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21889
+D1
+~
+~
+0 -1 21890
+D5
+~
+~
+0 -1 21887
+S
+#21889
+Temple of the Great Buddha~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21891
+D2
+~
+~
+0 -1 21888
+S
+#21890
+Temple of the Great Buddha~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21892
+D3
+~
+~
+0 -1 21888
+S
+#21891
+Temple of the Great Buddha~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21893
+D2
+~
+~
+0 -1 21889
+S
+#21892
+Temple of the Great Buddha~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21895
+D3
+~
+~
+0 -1 21890
+S
+#21893
+Temple of the Great Buddha~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21894
+D3
+~
+~
+0 -1 21891
+S
+#21894
+Temple of the Great Buddha~
+A temporary description
+~
+218 0 0
+D2
+~
+~
+0 -1 21895
+D3
+~
+~
+0 -1 21893
+S
+#21895
+Temple of the Great Buddha~
+A temporary description
+~
+218 0 0
+D0
+~
+~
+0 -1 21894
+D2
+~
+~
+0 -1 21892
+D3
+~
+~
+0 -1 21896
+D4
+~
+~
+0 -1 21898
+S
+#21896
+Before the Great Buddha~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21895
+D3
+~
+~
+0 -1 21897
+S
+#21897
+The Great Buddha~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21896
+S
+#21898
+A short ramp leading upwards~
+A temporary description
+~
+218 0 0
+D3
+~
+~
+0 -1 21899
+D5
+~
+~
+0 -1 21895
+S
+#21899
+Top of the Temple~
+A temporary description
+~
+218 0 0
+D1
+~
+~
+0 -1 21898
+S
+#0
+$~

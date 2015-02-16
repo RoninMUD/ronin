@@ -1,0 +1,179 @@
+#28000
+barbarian tribesman~
+A Barbarian Tribesman~
+A barbarian tribesman with colorful tattoos stands here.
+~
+This tribesman is tall and muscular like the rest of his people.
+He does not seem to be devoted to martial combat though, perhaps
+he fulfills a different role in the village.
+~
+8 0 500 Y
+40 -5 0 400d2+5000 12d5+5
+0 725000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+5000 0 0 0 0 0
+#28001
+Barbarian Warrior~
+A Barbarian Warrior~
+A tall, heavily muscled barbarian warrior stands here, glaring at you.
+~
+Before you stands a tall, heavily muscled man.  Scars from many
+battles line his exposed skin.  Tattoos adorn him in many patterns
+and in several places.
+~
+33554440 262148 500 Y
+45 -20 -10 400d5+8000 15d5+10
+0 900000
+8 8 1
+6 0 1d1+0 2
+2 2 10 0
+2 5 1 0
+0 0 0 0
+K
+10000 0 0 0 0 0
+#28002
+barbarian villager woman female~
+A female barbarian~
+A tall female barbarian villager goes about her business here.
+~
+This is a very tall, healthy speciman of womanhood.  She seems every bit as
+capable as her male counterparts here in the village.  She lacks the tattoos
+that the men have but that doesn't really make her any less fearsome.
+~
+8 0 500 Y
+40 -5 0 10d40+5000 12d5+5
+5000 725000
+8 8 2
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#28003
+chief barbarian chieftan ruler warrior~
+The barbarian chief~
+The barbarian chief stands here.
+~
+The barbarian chief stands before you.  He is big, his is muscular he is
+tattooed and he is mean.  He is the best warrior in the village. You
+should be careful of this man.
+~
+8 0 500 Y
+50 -25 -10 440d5+10000 15d5+25
+25000 1200000
+8 8 1
+6 0 1d1+1 2
+3 2 40 0
+2 2 25 0
+0 0 0 0
+K
+25000 0 0 0 0 0
+#28004
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#28005
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#28006
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#28007
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#28008
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#28009
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#28010
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

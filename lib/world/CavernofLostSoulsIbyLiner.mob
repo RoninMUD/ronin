@@ -1,0 +1,291 @@
+#16800
+vine writhing withering~
+A withering vine~
+A writhing vine slips out of the overgrowth and taps you tentatively.
+~
+The languid extension of the surrounding overgrowth dips
+forward to probe its environment.  Ganoid scales like the
+surface of this alien plant, and murderous thorns jut out
+to hold its prey.  Almost with a mind of its own, its tip
+aligns with your eyes and whips forward to attack!
+~
+106 268730376 -500 Y
+40 -8 -3 10d8+3988 7d6+6
+0 395000
+8 8 0
+92 0 1d1+1 0
+0 0 0 0
+K
+500 0 0 0 0 0
+#16801
+Tajjo~
+Tajjo~
+Tajjo, emissary of death, wanders these burrows leaving a trail of
+poisoned earth.
+~
+A silent, human-like form regards you with disdain as you invade
+the recesses of his domain.  He is the bane of existence, a demon
+with only one purpose to serve, and that is death itself.  His face
+breaks into a demented snarl as he saunters forth to claim your
+mortal soul and condemn you to these catacombs for eternity.
+~
+147560 8421544 -1000 Y
+60 -11 -8 10d8+6895 4d6+29
+1000 610000
+8 8 1
+63 939531327 10d8+459 2
+1 1 6 135
+3 1 6 0
+0 0 0 0
+T
+......Tajjo is surrounded by a torrent of black smoke!~
+K
+0 0 0 0 0 0
+#16802
+Tajte~
+Tajte~
+Tajte, emissary of sufferance, writhes in relished agony as her gaze
+falls upon you.
+~
+A silent, human-like form regards you with disdain as you invade
+the recesses of her domain.  She is the epitomy of mortal fear,
+mother of nightmares, squalid mistress of broken dreams.  She
+torments and breaks the stolen souls which reside here.  Her
+glistening hair whips back from a furrowed brow as she impales you
+with her horrible gaze.
+~
+147560 8421544 -1000 Y
+60 -11 -8 10d8+6763 4d6+23
+1000 610000
+8 8 2
+63 939531327 10d8+459 2
+1 1 6 113
+9 1 6 0
+0 0 0 0
+T
+......Tajte is surrounded by a swirling green mist!~
+K
+0 0 0 0 0 0
+#16803
+revenant form~
+A Revenant~
+A blubbering, mewling form envelops you in a cloud of vapor.
+~
+A flowing robe parts slowly within the darkness to reveal a ghastly
+figure within.  Tendrils of sulferous smoke drift elegantly from
+tiny pores within its dull, red skin.  Blotches of black, open oozing
+sores, and tiny red welts pucker and shift over its chest and face as
+it regards you with tremendous anger.  A cloud of vapor erupts around
+you as it raises its arms to cast a spell.
+~
+67108904 295084 -900 Y
+45 -10 -9 10d8+3586 7d8+5
+0 698000
+8 8 0
+62 2104 10d8+578 3
+1 3 15 8
+1 1 6 104
+6 3 15 0
+0 0 0 0
+K
+200000 0 0 0 0 0
+#16804
+hunter arctic man squat~
+The Arctic Hunter~
+A squat man with a scraggly beard bends forward to greet you.
+~
+A well-built man stands wrapped in huge, flowing furs.  His hair
+is shaggy and unkempt, his face cracked and worn by years of harsh
+cold and dangerous excursions.  He regards you with mild curiousity
+then warm greeting as he sees the toils and mark of the adventurer
+in your eyes.  He extends a hand and offers a portion of his latest
+kill, bidding you to stay a while.
+~
+16458 268730368 800 Y
+47 -11 -9 10d8+6898 8d6+37
+150000 723000
+8 8 1
+69 2104 1d1+1 4
+2 2 15 0
+3 2 15 0
+4 3 15 0
+9 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#16805
+dweller cavern imp drooling~
+A cavern-dweller~
+A drooling imp cavorts among the dim recesses of the caverns.
+~
+A squat, impish creature scurries along the cavern floor here,
+gibbering and cackling to itself.  Its luminescent green eyes
+flash to burning orange as it approaches.  A tiny, dark shroud
+engulfs its body and matching boots patter along the bare rock.
+It appears to be a lower minion of the revenant forms, perhaps
+merely an apprentice.
+~
+8 268992512 -500 Y
+35 -9 -5 10d8+3898 7d5+13
+0 440000
+8 8 0
+62 0 10d8+489 2
+1 2 20 93
+1 2 20 30
+0 0 0 0
+K
+30000 0 0 0 0 0
+#16806
+woman elderly inhabitant~
+An elderly woman~
+One of the fort's few inhabitants tends her crop in the harsh cold.
+~
+This weary woman picks incessantly at the dead ground here, trying
+to coax forth plants for her family's barren table.  Her eyes are
+gray and solemn, and a single tear tumbles over the landscape of
+her face as she realizes the futility of her effort.
+~
+74 32768 800 Y
+28 -1 5 10d8+999 4d5+8
+1000 100000
+8 8 2
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#16807
+man elderly ancient inhabitant~
+An elderly man~
+An ancient man lay snoring away in the corner beneath a pile of furs.
+~
+An ancient man slumbers soundly here on a worn cot.  His brow is
+wide and shows evidence of the extent of his years.  Flowing white
+wisps of hair peek out from beneath a hide cap, and his eyelids
+roll as his snores echo within the shelter.
+~
+74 32768 800 Y
+28 -2 5 10d8+1001 4d5+7
+1000 100000
+4 4 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#16808
+boy young~
+A young boy~
+A young boy sits impatiently here, barely glancing in your direction.
+~
+A young boy sits quietly beneath a shaggy mop of red curls.  A
+gentle grin touches his lips as he gestures for you to be quiet
+and turns his rapt attention back to the sleeping form of his
+grandfather.  He brandishes a tiny feather with which he tickles
+the old man's nose.
+~
+74 32768 850 Y
+27 0 6 10d8+950 4d5+6
+1000 90000
+6 6 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#16809
+boy young~
+A young boy~
+A boy wrapped in a bundle of fur screams happily as he makes a snowball.
+~
+A young boy dances happily along the snowdrift path, oblivious
+to you and impervious to the cutting cold.  His face is red
+and full of life, full of youth; his eyes are wide and glittering
+with the purity and joy only children can experience.
+~
+72 32768 900 Y
+27 -1 6 10d8+950 4d5+7
+1000 50000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#16810
+girl young~
+A young girl~
+A young girl rolls playfully in the snowbanks, smiling at the sky.
+~
+A young girl frolicks in the soft plumes of snow, oblivious to you
+and impervious to the cutting cold.  Her face is red and full of life,
+full of youth; her eyes are wide and glittering with the purity and
+joy only children can experience.
+~
+72 32768 900 Y
+27 -1 6 10d8+950 4d5+8
+1000 50000
+8 8 2
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#16811
+Clem tradesman jolly figure~
+Clem, the Northern Tradesman~
+A jolly figure towers over the stacks of baubles, offering a good deal.
+~
+A hardened mountain of a man stands towering over you.  His arms
+extend to assault you with a double-handshake greeting and his
+eyes sparkle with the warmth of friendship and the prospect of
+another sale.  His mouth begins running speedily with the voice
+of a skilled entrepreneur, but his eyes never leave your own as
+he displays his wares.
+~
+74 32768 800 Y
+60 -11 -12 10d8+5340 10d5+20
+300000 50000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#16812
+man gatesman weary~
+A weary gatesman~
+A weary man sits quietly behind his table, waiting to take your money.
+~
+A thin figure sits quietly here, staring at you with mild
+interest.  His winter attire is almost tailored, a fur-lined
+coat and hat made from choice furs and not the ragged scraps
+most inhabitants are forced to purchase.  He rolls a gold
+coin steadily across his deft fingers, waiting for you to
+either purchase a pass or leave.
+~
+74 32768 800 Y
+60 -11 -12 10d8+5260 10d5+19
+50000 50000
+6 6 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#16813
+captain sturdy~
+Captain of the Barge~
+A sturdy captain barks incoherent orders as he pilots the giant barge.
+~
+A lumbering beast of a man stands at the prow of the barge.
+His legs, like the trunks of a tree, are firmly planted on
+either side of the center, perfectly balanced.  His left eye
+is covered by a sinister patch, and a ragged bandanna circles
+his neck.  Scars stand out like thunderbolts on his great
+powerful arms as he steers the craft along.
+~
+16777290 134512768 800 Y
+60 -11 -13 10d8+10234 10d5+25
+50000 100000
+8 8 1
+69 0 1d1+1 1
+3 1 50 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

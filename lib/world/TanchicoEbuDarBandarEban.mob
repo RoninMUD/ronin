@@ -1,0 +1,299 @@
+#18200
+moghedien~
+moghedien~
+Moghedien is standing here.
+~
+   She is a sturdily handsome woman with shoulder-length hair worn loose. 
+She has large, dark eyes and smooth cheeks.
+~
+8 0 -1000 Y
+60 -17 -18 30d30+30000 8d40+600
+3500000 6700000
+8 8 2
+1 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18201
+panarch~
+The Panarch~
+The Panarch is standing here.
+~
+   She has many of the physical characteristics that are common to 
+Taraboner females. She wears her long, dark hair in multiple braids 
+and has large dark eyes. She has a pouty, rosebud mouth with a 
+petulant look to it. She has not yet reached middle age and is 
+quite beautiful.
+~
+8 268435584 100 Y
+50 -16 -15 30d30+12432 5d5+450
+350000 2100000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18202
+citizen~
+A citizen~
+A citizen is walking past you.
+~
+   The citizen has a ragged brown cloak and worn boots. Living conditions 
+are hard in a city and many citizens cant afford spending money on new 
+clothes.
+~
+8 0 150 Y
+10 10 -5 2d50+1200 2d2+20
+2000 40000
+8 8 1
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18203
+merchant~
+A merchant~
+A merchant is traveling past you.
+~
+   The merchant is leading his team of wagons containing his goods past you. With his fine coat and shirt he must be a successful trader in whatever 
+he is trading in. At his belt he is wearing a long knife.
+~
+8 0 150 Y
+15 5 -6 2d50+1500 2d2+30
+20000 90000
+8 8 1
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18204
+thief~
+A thief~
+A hooded man is stalking about.
+~
+   A man in a black cloak with the hood over his head looks back at you.
+His pants and boots are covered with mud from the alleys. In one hand he
+carries a long knife, ready to cut a purse from a belt or a throat if needed.
+~
+8 0 -400 Y
+25 -5 -10 2d50+1800 2d2+36
+15000 600000
+8 8 1
+3 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18205
+city guar~
+A city guard~
+A city guard is walking here, watching for a sign of trouble.
+~
+    A armed guard is wearing armor painted in the colors of the city. He has an 
+open eye watching out for the well being of the citizens.
+~
+8 0 300 Y
+35 -15 -11 2d50+6400 2d2+50
+17500 684523
+8 8 1
+4 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18206
+palace guard~
+A palace guard~
+A palace guard is walking here, keeping the palace safe.
+~
+   A armed guard is wearing armor painted in the colors of the royal house.
+His duty to protect the queen from any attack.
+~
+8 0 400 Y
+40 -18 -13 2d50+7500 4d4+70
+25000 111111
+8 8 1
+4 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18207
+chef~
+A chef~
+A chef is stirring a pot over a fireplace.
+~
+   A large round man is standing here stirring a pot of stew. His white apron
+is stained and only some spots show that it once was all white, He has
+shortblonde hair and a nose too big for his face.
+~
+8 0 700 Y
+30 -10 -4 2d50+4500 4d4+30
+8500 250000
+8 8 1
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18208
+servant~
+A servant~
+A servant is cleaning here.
+~
+   The servant wears a white robe and carries a tray.
+~
+8 0 700 Y
+10 10 -3 2d50+2500 4d2+20
+2500 425000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18209
+fisherman~
+A fisherman~
+A fisherman is fishing off the docks.
+~
+   The fisherman wears a brown cloak and beside him lays his catch 
+for the day, 4 small fishes.
+~
+8 0 700 Y
+20 0 -3 2d50+3300 4d5+20
+12500 525000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18210
+dock master~
+A dock master~
+A dock master is writing in his book of registrations.
+~
+   The dock master looks darkly at you for disturbing 
+his attention of registering all in and out bound ships.
+~
+8 0 500 Y
+50 -18 -6 2d50+6400 4d5+80
+456000 1200000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18211
+shopkeeper~
+A shopkeeper~
+A shopkeeper is standing here.
+~
+   The shopkeeper wears a brown apron and brushes his hands 
+on it preparing to show of his wares. He is an old man with 
+gray in his hair and a limp to his walk.
+~
+8 0 200 Y
+40 -14 -7 2d50+14000 4d5+80
+800000 500000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18212
+innkeeper~
+An innkeeper~
+An innkeeper is here, taking care of the patrons.
+~
+   The innkeeper is a fat man with a white apron around his considerable 
+waist. 
+~
+8 0 200 Y
+40 -15 -7 2d50+11000 4d5+90
+350000 800000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18213
+Alsalam Saeed Almadar~
+Alsalam Saeed Almadar~
+Alsalam Saeed Almadar is standing before you.
+~
+   A large muscular man with dark blue eyes. He wears fine silk clothes 
+under his breastplate with the symbol of his house.
+~
+8 0 500 Y
+55 -17 -18 2d50+17500 2d20+700
+1500000 4000000
+8 8 1
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18214
+Grendeal~
+Grendeal~
+Grendeal is standing here.
+~
+   Grendeal is beautiful but somewhat fleshy with elaborately curled 
+red-gold hair. Her hair hanging down over her shoulders.
+~
+8 128 -1000 Y
+60 -17 -18 2d50+37500 2d40+800
+2554000 4500000
+8 8 2
+4 0 4d4+500 1
+1 4 50 203
+0 0 0 0
+K
+0 0 0 0 0 0
+#18215
+semirhage~
+Semirhage~
+Semirhage is standing here.
+~
+   Semirhage is taller than most men, with a smooth dark face and dark
+eyes. She has long, slender fingers. Her hair is short and wavy.
+~
+8 268435456 -1000 Y
+60 -16 -21 2d50+20000 1d10+700
+5000000 8000000
+8 8 2
+1 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18216
+suroth~
+Suroth~
+Suroth is standing here.
+~
+   The sides of her scalp are shaved so that only a wide crest of 
+black hair remained to fall down her back. The first two nails 
+of each hand are lacquered blue.
+~
+8 268435456 -700 Y
+55 -16 -13 2d50+15000 1d10+600
+1000000 4000000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18217
+man gholam~
+A Gholam~
+A man is standing here.
+~
+   The Gholam looks like an ordinary man at first glance but certainly is not. 
+It moves unnaturally fast and sinuous like it has no bones in its body. 
+Gholams are immune to the One Power and most known weapons.
+~
+8 268435584 -1000 Y
+55 -23 -19 2d50+30000 1d10+600
+8000000 10000000
+8 8 1
+63 0 4d4+500 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#0
+$~

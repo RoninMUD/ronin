@@ -1,0 +1,1578 @@
+#18800
+A dry field~
+  North of Tarwin's gap, the landscape is flat and dry. The vegetation has 
+a pale unnatural color and a closer inspection shows that the flowers and the 
+leaves of the trees have black pulsing spots. You better not touch anything.
+~
+188 0 2
+D0
+~
+~
+0 -1 18801
+S
+#18801
+A dry field~
+  As you get further north of Tarwin's Gap, the air gets warmer. More and more 
+plants have increasingly bigger spots, their color more sickly than the last. 
+There is no sign of wildlife, and you wonder what awaits you to the north as 
+you get closer to the Blight.
+~
+188 0 2
+D0
+~
+~
+0 -1 18802
+D2
+~
+~
+0 -1 18800
+S
+#18802
+Malkier~
+  You pass some burned houses, their occupants long gone after the Blight 
+consumed the lands of Malkier over 40 years ago. The land was once one of the
+borderlands and fought hard to keep the shadow spawn from the lands to the south.
+However, the Blight was too strong and in the end swallowed these lands making the 
+blightborder grow ever southwards. To the east, you see remnants of seven broken
+towers.
+~
+188 0 2
+D0
+~
+~
+0 -1 18805
+D1
+~
+~
+0 -1 18803
+D2
+~
+~
+0 -1 18801
+S
+#18803
+Malkier~
+  The Seven Towers of Malkier are now ruins where they once were a symbol of the
+might of Malkier, and their resolve to keep humankind safe. The area is now a 
+desolate wilderness where only the memories and legends remain. As you walk among the 
+ruins, you feel the sadness of the land once so beautiful - now twisted so horribly 
+by the Shadow. The plants look sick and pale, the trees gnarly and without any 
+leaves and the ground itself looks thirsty and lifeless. Lakes are visible to the 
+north and east.
+~
+188 0 2
+D0
+~
+~
+0 -1 18804
+D3
+~
+~
+0 -1 18802
+S
+#18804
+Malkier~
+  East of Malkier lies the thousand lakes, an expanse of lakes that stretch as
+far as the eye can see. Once they took the breath away from the people who saw
+them, but now the lakes are dark and poisonous. Shadowspawn and other 
+creatures live in them now. The shoreline is not safe to walk as creatures
+in the lakes might catch any unwary prey. The lake no longer gives off 
+reflections of the sky, making the surface look dull and dead.
+~
+188 0 2
+D2
+~
+~
+0 -1 18803
+S
+#18805
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18808
+D2
+~
+~
+0 -1 18802
+S
+#18806
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18819
+D3
+~
+~
+0 -1 18807
+S
+#18807
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18818
+D1
+~
+~
+0 -1 18806
+D3
+~
+~
+0 -1 18808
+S
+#18808
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18817
+D1
+~
+~
+0 -1 18807
+D2
+~
+~
+0 -1 18805
+D3
+~
+~
+0 -1 18809
+S
+#18809
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18816
+D1
+~
+~
+0 -1 18808
+D3
+~
+~
+0 -1 18810
+S
+#18810
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18815
+D1
+~
+~
+0 -1 18809
+D3
+~
+~
+0 -1 18811
+S
+#18811
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18814
+D1
+~
+~
+0 -1 18810
+D3
+~
+~
+0 -1 18812
+S
+#18812
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18813
+D1
+~
+~
+0 -1 18811
+S
+#18813
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18826
+D1
+~
+~
+0 -1 18814
+D2
+~
+~
+0 -1 18812
+S
+#18814
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18825
+D1
+~
+~
+0 -1 18815
+D2
+~
+~
+0 -1 18811
+D3
+~
+~
+0 -1 18813
+S
+#18815
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18824
+D1
+~
+~
+0 -1 18816
+D2
+~
+~
+0 -1 18810
+D3
+~
+~
+0 -1 18814
+S
+#18816
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18823
+D1
+~
+~
+0 -1 18817
+D2
+~
+~
+0 -1 18809
+D3
+~
+~
+0 -1 18815
+S
+#18817
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18822
+D1
+~
+~
+0 -1 18818
+D2
+~
+~
+0 -1 18808
+D3
+~
+~
+0 -1 18816
+S
+#18818
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18821
+D1
+~
+~
+0 -1 18819
+D2
+~
+~
+0 -1 18807
+D3
+~
+~
+0 -1 18817
+S
+#18819
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18820
+D2
+~
+~
+0 -1 18806
+D3
+~
+~
+0 -1 18818
+S
+#18820
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D2
+~
+~
+0 -1 18819
+D3
+~
+~
+0 -1 18821
+S
+#18821
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D1
+~
+~
+0 -1 18820
+D2
+~
+~
+0 -1 18818
+D3
+~
+~
+0 -1 18822
+S
+#18822
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D1
+~
+~
+0 -1 18821
+D2
+~
+~
+0 -1 18817
+D3
+~
+~
+0 -1 18823
+S
+#18823
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D1
+~
+~
+0 -1 18822
+D2
+~
+~
+0 -1 18816
+D3
+~
+~
+0 -1 18824
+S
+#18824
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D1
+~
+~
+0 -1 18823
+D2
+~
+~
+0 -1 18815
+D3
+~
+~
+0 -1 18825
+S
+#18825
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D0
+~
+~
+0 -1 18827
+D1
+~
+~
+0 -1 18824
+D2
+~
+~
+0 -1 18814
+D3
+~
+~
+0 -1 18826
+S
+#18826
+The Blight~
+  Most of the grass has withered away, and what is left looks to be on the 
+brink of final decay, the straws brown almost black with yellow spots. The air 
+is dry and warm, and the smell of decay is strong.
+  You are standing on a plain that reaches all the way to the Mountains of 
+Dhoom in the north and large forests of moving trees to the east and west. The 
+landscape is mostly flat with some small hills and streams, the water flowing 
+like boiling tar, slow and bubbling.
+  The Mountains of Dhoom are looming to the north and past that lie the Blasted
+Lands and Shayol Ghul.
+~
+188 0 2
+D1
+~
+~
+0 -1 18825
+D2
+~
+~
+0 -1 18813
+S
+#18827
+Mountain pass~
+  The pass is a narrow path between large rocks and the steep mountain walls. 
+Several places you have to squeeze through, with barely enough space for one 
+person at a time. You can see the sky above where you don't have to crawl 
+under large rocks and overhangs.
+~
+188 4 5
+D0
+~
+~
+0 -1 18828
+D2
+~
+~
+0 -1 18825
+S
+#18828
+Mountain pass~
+  The pass is a narrow path between large rocks and the steep mountain walls. 
+Several places you have to squeeze through, with barely enough space for one 
+person at a time. You can see the sky above where you don't have to crawl 
+under large rocks and overhangs.
+~
+188 0 5
+D0
+~
+~
+0 -1 18829
+D2
+~
+~
+0 -1 18827
+S
+#18829
+Mountain pass~
+  The pass is a narrow path between large rocks and the steep mountain walls. 
+Several places you have to squeeze through, with barely enough space for one 
+person at a time. You can see the sky above where you don't have to crawl 
+under large rocks and overhangs. The path widens a little to the north as it 
+follows a ledge around and up the mountain wall. Another ledge on the eastside 
+of the pass continues further into the dark crevice.
+~
+188 0 5
+D0
+~
+~
+0 -1 18830
+D1
+Climbing might get you to the ledge above.
+~
+ledge~
+11 -1 18833
+D2
+~
+~
+0 -1 18828
+S
+#18830
+Path up the mountain~
+  The narrow ledge is wide enough for several people, but the drop is far and
+if you fell you would be torn up on the sharp rocks and edges on the way down
+the mountainside. The Blasted lands stretch to the north and you see Shayol Ghul
+to the north-east. The path continues west.
+~
+188 0 5
+D2
+~
+~
+0 -1 18829
+D3
+~
+~
+0 -1 18831
+S
+#18831
+Path up the mountain~
+  The narrow ledge is wide enough for several people, but the drop is far and
+if you fell you would be torn up on the sharp rocks and edges on the way down
+the mountainside. The Blasted lands stretch to the north and you see Shayol Ghul
+to the north-east. The path continues south.
+~
+188 0 5
+D1
+~
+~
+0 -1 18830
+D2
+~
+~
+0 -1 18832
+S
+#18832
+Mountain top~
+  You stand on the top of one of the many mountains in the range. They look
+like a hideous set of teeth, black and pointed with lava coming out of some 
+like drooling blood. The Blasted lands stretch to the north and you see 
+Shayol Ghul to the north-east. The Blight stretches southwards to the 
+borderlands beyond the horizon.
+~
+188 0 5
+D0
+~
+~
+0 -1 18831
+S
+#18833
+Upon a ledge~
+  The ledge starts here and leads along the mountain wall down into a dark 
+crevice to the north. Dark green vines grow out of a large crack on the 
+mountain-side and they shift towards you as you approach, as if they can 
+smell prey. The pass to the west is visible over the ledge.
+~
+188 0 5
+D0
+~
+~
+0 -1 18837
+D1
+Vines grow out of a small crack in the mountain.
+~
+crack~
+9 -1 18834
+D3
+Climbing the ledge will bring you down to the path below.
+~
+ledge~
+11 -1 18829
+S
+#18834
+Cramped tunnel~
+  The crack is just wide enough for one person to crawl through. The vines 
+around you scratch you as you squeeze past. The exit to the west glows
+with a faint light and the tunnel leads eastwards into darkness.
+~
+188 265 5
+D1
+~
+~
+0 -1 18835
+D3
+A small crack in the mountain allow some light to shine through.
+~
+crack~
+9 -1 18833
+S
+#18835
+bend in the cramped tunnel~
+  You come to a bend in the narrow tunnel where it turns south. The walls
+widen a little to the south and it looks like it might open up into a
+cave of some sort. A small stream flows beside you and disappears into a 
+small crack in the tunnel bottom. Upon closer inspection you see that it's
+a stream of blood! Maybe you should crawl back out, before it's too late?
+~
+188 265 5
+D2
+~
+~
+0 -1 18836
+D3
+~
+~
+0 -1 18834
+S
+#18836
+A cave in the mountains~
+  You enter a large cave, its walls, floor and ceiling jagged rocks. Blood
+streams on the floor from a pile of bodies lying along the walls. The stench
+is unbearable and you have a hard time not throwing up, your eyes watering
+with the effort. This must be a lair of a terrible beast. Flee NOW!
+~
+188 1 5
+D0
+~
+~
+0 -1 18835
+S
+#18837
+A dark narrow crevice~
+  The crevice is too narrow to fit more than yourself, and you begin to feel
+claustrophobic as the dark walls seem to squeeze you. You can no longer see the 
+sky above, the mountain-side blocking your view. A breeze flows through the 
+crevice with an overwhelming smell of burned sulphur. You throw up, wipe your
+mouth and hurry on.
+~
+188 257 5
+D0
+~
+~
+0 -1 18838
+D2
+~
+~
+0 -1 18833
+S
+#18838
+A dark narrow crevice~
+  The crevice is too narrow to fit more than yourself, and you begin to feel
+claustrophobic as the dark walls seem to squeeze you. You can no longer see the 
+sky above, the mountain-side blocking your view. A breeze flows through the 
+crevice with an overwhelming smell of burned sulphur. You throw up, wipe your
+mouth and hurry on.
+~
+188 257 5
+D0
+~
+~
+0 -1 18839
+D2
+~
+~
+0 -1 18837
+S
+#18839
+A small hollow~
+  You are out of the crevice to your great relief. The mountain sides widen
+into a small hollow. Rotted plants and small trees cling to the sides of the 
+mountainside where they are rooted in small cracks. The path ahead turns west on
+to an open expanse. A large black gate blocks the path leading eastwards.
+~
+188 4 5
+D1
+~
+gate~
+2 18800 18851
+D2
+~
+~
+0 -1 18838
+D3
+~
+~
+0 -1 18840
+S
+#18840
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18847
+D1
+~
+~
+0 -1 18839
+D3
+~
+~
+0 -1 18841
+S
+#18841
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18846
+D1
+~
+~
+0 -1 18840
+D3
+~
+~
+0 -1 18842
+S
+#18842
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18845
+D1
+~
+~
+0 -1 18841
+D3
+~
+~
+0 -1 18843
+S
+#18843
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18844
+D1
+~
+~
+0 -1 18842
+S
+#18844
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D1
+~
+~
+0 -1 18845
+D2
+~
+~
+0 -1 18843
+S
+#18845
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18850
+D1
+~
+~
+0 -1 18846
+D2
+~
+~
+0 -1 18842
+D3
+~
+~
+0 -1 18844
+S
+#18846
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18849
+D1
+~
+~
+0 -1 18847
+D2
+~
+~
+0 -1 18841
+D3
+~
+~
+0 -1 18845
+S
+#18847
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18848
+D2
+~
+~
+0 -1 18840
+D3
+~
+~
+0 -1 18846
+S
+#18848
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D2
+~
+~
+0 -1 18847
+D3
+~
+~
+0 -1 18849
+S
+#18849
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D1
+~
+~
+0 -1 18848
+D2
+~
+~
+0 -1 18846
+D3
+~
+~
+0 -1 18850
+S
+#18850
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, as no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death rises to the 
+black and purple shrouded sky.
+~
+188 0 2
+D1
+~
+~
+0 -1 18849
+D2
+~
+~
+0 -1 18845
+S
+#18851
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18858
+D1
+~
+~
+0 -1 18852
+D3
+~
+gate~
+2 18800 18839
+S
+#18852
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18857
+D1
+~
+~
+0 -1 18853
+D3
+~
+~
+0 -1 18851
+S
+#18853
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18856
+D1
+~
+~
+0 -1 18854
+D3
+~
+~
+0 -1 18852
+S
+#18854
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18855
+D3
+~
+~
+0 -1 18853
+S
+#18855
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18862
+D2
+~
+~
+0 -1 18854
+D3
+~
+~
+0 -1 18856
+S
+#18856
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18861
+D1
+~
+~
+0 -1 18855
+D2
+~
+~
+0 -1 18853
+D3
+~
+~
+0 -1 18857
+S
+#18857
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18860
+D1
+~
+~
+0 -1 18856
+D2
+~
+~
+0 -1 18852
+D3
+~
+~
+0 -1 18858
+S
+#18858
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18859
+D1
+~
+~
+0 -1 18857
+D2
+~
+~
+0 -1 18851
+S
+#18859
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D1
+~
+~
+0 -1 18860
+D2
+~
+~
+0 -1 18858
+S
+#18860
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D1
+~
+~
+0 -1 18861
+D2
+~
+~
+0 -1 18857
+D3
+~
+~
+0 -1 18859
+S
+#18861
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D0
+~
+~
+0 -1 18863
+D1
+~
+~
+0 -1 18862
+D2
+~
+~
+0 -1 18856
+D3
+~
+~
+0 -1 18860
+S
+#18862
+The Blasted Lands~
+   The ground is cracked and colored dark grey and black, no rain has fallen here
+in years. In every direction but to the south you see nothing but rolling hills and 
+mounds, and no sign of either wildlife or vegetation. To the south roam the 
+Mountains of Dhoom. To the north-east a mountain black as death raise to the 
+black and purple shrouded sky.
+~
+188 0 2
+D2
+~
+~
+0 -1 18855
+D3
+~
+~
+0 -1 18861
+S
+#18863
+The slopes of Shayol Ghul~
+  The path follows the curves of the mountain and looking south you see the 
+Mountains of Dhoom and the Blight beyond. To the north a vast expanse of ice
+and snow covers the land all the way to the horizon. The mountain is dead black
+and only the dirt on the path makes you able to see the contours of the path.
+A misstep and you might fall down into certain death.
+~
+188 8388612 5
+D0
+~
+~
+0 -1 18864
+D2
+~
+~
+0 -1 18861
+S
+#18864
+An opening into the mountain-side~
+   You stand before an opening in the mountain wall, and a path leads down 
+into the mountain. A rumble shakes the mountain and rocks fall down from 
+the slopes above, nearly knocking you off your feet. A small plateau has been 
+carved out of the mountain in front of the opening, rocks of every size laying
+everywhere. The opening into the mountain glows with a red light, and you
+suddenly feel a power coming from within the mountain.
+~
+188 8388608 5
+D1
+~
+~
+0 -1 18865
+D2
+~
+~
+0 -1 18863
+S
+#18865
+Descending into the mountain~
+   The tunnel is cramped, its sides covered with sharp edges. You try to 
+step carefully to avoid as many as you can. As you walk you see the 
+stalactites in the ceiling press down towards you. You'd better hurry up! 
+The tunnel leads down to the east and a fiery red glow comes from deep down.
+~
+188 8388617 5
+D1
+~
+~
+0 -1 18866
+D3
+~
+~
+0 -1 18864
+S
+#18866
+Descending into the mountain~
+   The tunnel is cramped, its sides covered with sharp edges. You try to 
+step carefully to avoid as many as you can. As you walk you see the 
+stalactites in the ceiling press down towards you. You'd better hurry up! 
+The tunnel leads down to the east and a fiery red glow comes from deep down.
+~
+188 8388617 5
+D1
+~
+~
+0 -1 18867
+D3
+~
+~
+0 -1 18865
+S
+#18867
+The Pit of Doom~
+  You walk out on a ledge overlooking a lake of lava. The lava is red hot and 
+bubbling, sending steam raising through a large opening in the mountain and 
+into the night sky. The sky is NOT the same sky as outside the mountain.
+Here' black and purple clouds roll like waves on an ocean. Lightning strikes
+coming from the mountain, streaking up into the clouds and illuminating them 
+from the inside for an instant.
+  This is the Pit of Doom, where the bore was made in the Age of Legends to
+unleash a new kind of power, but where they instead found The Dark One's prison 
+and released him from it. Lews Therin Telamon sealed the bore and now the seven 
+seals are the only thing keeping the seal shut and humankind safe. The fabric 
+of the world is thinner here, being the only place where The Dark One can still 
+have some control and communicate with his minions.
+~
+188 8388616 5
+D3
+~
+~
+0 -1 18866
+S
+#18870
+End of the forest~
+   The forest comes to an abrupt end. To the west you can see out over rolling
+clouds. You take a couple of steps away from the edge to keep from falling off.
+The trees grow all the way to the edge, and roots from the trees along the 
+edges hang down over the edge.
+~
+188 0 3
+D1
+~
+~
+0 -1 18871
+S
+#18871
+A clearing in the forest~
+   You enter a clearing in the beautiful forest. Flowers grow everywhere and 
+some even grow on the trees in colors of white, yellow and blue. The ground 
+is covered with grass to your knees and seem to bend out of your way as 
+you walk. Birds fly by you and some even land on your shoulder, curious
+as to what has entered the clearing.
+~
+188 0 3
+D1
+~
+Archway~
+2 -1 18872
+D2
+~
+~
+0 -1 18873
+D3
+~
+~
+0 -1 18870
+S
+#18872
+Stone steps~
+   You stand atop a huge stairwell, large stone steps taking you down around the 
+wall of the round cave. The steps are three feet wide and you keep close to the 
+wall so you don't fall off into the dark.
+~
+188 0 0
+D3
+~
+Archway~
+2 -1 18871
+D5
+~
+~
+0 -1 18874
+S
+#18873
+A beautiful forest~
+   A beautiful forest grows around you, looking as green as you have ever seen.
+Huge green trees tower all around and along with flowers and other beautiful plants
+you have never seen before, they make this place a tranquil place. Small animals 
+and birds look up as you pass by wondering who and what you are.
+~
+188 0 3
+D0
+~
+~
+0 -1 18871
+S
+#18874
+The Eye of the World~
+   As you reach the bottom of the steps, a large lake lays before you. A
+walkway five feet wide trails the edge all around the lake. The surface has a 
+dull silvery look. You kick a rock over the edge to see what happens, but it 
+makes no ripples at all as it breach the surface. As it sinks, the rock seems
+to expand in size until it covers the whole lake, and with a small flash from
+deep down it disappears.
+~
+188 0 0
+D4
+~
+~
+0 -1 18872
+S
+#18899
+A temporary name~
+A temporary description
+~
+188 0 0
+S
+#0
+$~

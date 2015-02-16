@@ -1,0 +1,627 @@
+#4900
+Edge of a an Underwater Cliff~
+Ignoring the crazy old man in the dinghy, you have dived into the 
+tumultuous waters of the Maelstrom, and have been sucked downwards,
+deep into dark waters. The sun's light still pierces through the depths, 
+revealing fish, coral, seaweed, and other forms of aquatic life. To the
+west, the sunlight is less strong, as the ground itself cuts off, forming
+what seems to be a very steep underwater cliff. The very current that
+brought you here must be feeding directly into it, as you see debris from
+ships flow past you and down, out of your sight.
+~
+49 0 0
+D3
+~
+~
+0 -1 4901
+S
+#4901
+Riding an Underwater Current~
+ Curiosity won out in the end, and as you look back you feel a mild pinge
+of regret as it doesn't look like you'll be able to get out of here the same way
+you came. The current here is quite strong, and barely anything can be seen
+between the debris, the bubbles, and the current moving everything around.
+It doesn't seem like trying to move would accomplish anything, between
+all the debris and the current's pull. The current seems to be moving west.
+~
+49 0 0
+D3
+~
+~
+0 -1 4902
+S
+#4902
+Riding an Underwater Current~
+ The current has washed everything west, without too much harm. Most
+of the bubbles have now cleared, and the surroundings are becoming more
+clear. There is still open water all around, but escaping the whirlpool by
+normal means seems impossible. The debris is also becoming easier
+to identify, but it all seems to be pieces of wood, dead fish and birds, and
+the sporadic anchor. Fighting the current still seems foolish, as it seems
+to continue westwards.
+~
+49 0 0
+D1
+~
+~
+0 -1 4901
+D3
+~
+~
+0 -1 4903
+S
+#4903
+Riding an Underwater Current~
+ The current has once again washed everything west, but a change in 
+direction can be felt, as well as seen. A visible hole in the floor of La 
+Soudure can now be seen, and it seems to be the source of the current.
+As the current's direction shifts, so does the debris, and for a brief moment
+what seems to be a village can be seen, not far west of the hole you seem 
+to be drawn towards. Everything shifts back, blocking your vision, as the
+current now seems to be going downwards.
+~
+49 0 0
+D1
+~
+~
+0 -1 4902
+D5
+~
+~
+0 -1 4904
+S
+#4904
+Riding an Underwater Current~
+ As the current moves everything downwards, the surroundings change 
+quite drastically. There is a cliff face on the west side, and some of the
+debris have stuck to it. Most of the debris are completely destroyed and
+unrecognizable, but they do all seem to have been made. The thought of 
+unknown creatures lurking the water's depths and raiding the surface world
+chills the spine, but there is still no proof of this. The current now seems to
+be moving southwards, along the cliff face.
+~
+49 0 0
+D2
+~
+~
+0 -1 4905
+D4
+~
+~
+0 -1 4903
+S
+#4905
+Riding an Underwater Current~
+ Still unable to fight the current as it carries you to an unknown location
+seemingly with a life of its own, you begin to get accustomed to the amount
+and type of debris. It is almost relaxing, and if you didn't know any better,
+you would be tempted to take a nap. The trail of debris doesn't break off
+ahead, so the current is assumedly continuing south.
+~
+49 0 0
+D0
+~
+~
+0 -1 4904
+D2
+~
+~
+0 -1 4906
+S
+#4906
+Riding an Underwater Current~
+ The feeling of being carried along helplessly by a current is still a little  
+unsettling, but you are feeling more at ease around the debris. Not much
+can be discerned from within the mess of debris, especially since there
+seems to be a build-up at the approaching wall face as the current begins
+to dip a little deeper. You wonder if this is going to hurt.
+~
+49 0 0
+D0
+~
+~
+0 -1 4905
+D5
+~
+~
+0 -1 4907
+S
+#4907
+Riding an Underwater Current~
+ You let out a bubble of relief as the current has managed to move you 
+downwards without a scratch. If it weren't for the fact that you are totally
+submerged, it would feel a lot like floating down a river on a raft. The 
+debris around you has also momentarily cleared your field of vision, 
+due to the earlier build-up. The current is visibly moving you in a different
+direction now, towards what your best educated guess would be: east.
+~
+49 0 0
+D1
+~
+~
+0 -1 4908
+D4
+~
+~
+0 -1 4906
+S
+#4908
+Riding an Underwater Current~
+ You suddenly wish the debris hadn't cleared up a slightest bit, as a rather
+disturbing scene now lies before you: the front half of a schooner protrudes 
+out of the southern cliff, held in place by a few anchors whose chains are
+crudely attached to the cliff face. Upon closer inspection, there seems to be
+coral covering the spots where the chains connect to the cliff. The remaining
+half of the schooner has been nearly demolished - there are holes in the hull
+in a few places, the sails have almost all melted away, and tridents are still 
+firmly planted in a couple places. Any sense of relaxation is now gone, 
+replaced only with waves of paranoia. The current, uncaring, continues east.
+~
+49 0 0
+D1
+~
+~
+0 -1 4909
+D3
+~
+~
+0 -1 4907
+S
+#4909
+Riding an Underwater Current~
+A temporary description
+~
+49 0 0
+D3
+~
+~
+0 -1 4908
+D5
+~
+~
+0 -1 4910
+S
+#4910
+Riding an Underwater Current~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4911
+D4
+~
+~
+0 -1 4909
+S
+#4911
+Riding an Underwater Current~
+A temporary description
+~
+49 0 0
+D2
+~
+~
+0 -1 4910
+D5
+~
+~
+0 -1 4912
+S
+#4912
+Riding an Underwater Current~
+A temporary description
+~
+49 0 0
+D3
+~
+~
+0 -1 4913
+D4
+~
+~
+0 -1 4911
+S
+#4913
+Riding an Underwater Current~
+A temporary description
+~
+49 0 0
+D1
+~
+~
+0 -1 4912
+D5
+~
+~
+0 -1 4914
+S
+#4914
+Riding an Underwater Current~
+A temporary description
+~
+49 0 0
+D2
+~
+~
+0 -1 4915
+D4
+~
+~
+0 -1 4913
+S
+#4915
+Riding an Underwater Current~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4914
+D5
+~
+~
+0 -1 4916
+S
+#4916
+Bottom of the Trench~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4917
+D1
+~
+~
+0 -1 4933
+D3
+~
+~
+0 -1 4926
+D4
+~
+~
+0 -1 4915
+S
+#4917
+Bottom of the Trench~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4918
+D2
+~
+~
+0 -1 4916
+S
+#4918
+Bottom of the Trench~
+A temporary description
+~
+49 0 0
+D2
+~
+~
+0 -1 4917
+D3
+~
+~
+0 -1 4919
+S
+#4919
+Bottom of the Trench~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4920
+D1
+~
+~
+0 -1 4918
+S
+#4920
+Bottom of the Trench~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4921
+D2
+~
+~
+0 -1 4919
+S
+#4921
+Inside a Sunken Ship~
+A temporary description
+~
+49 0 0
+D1
+~
+~
+0 -1 4922
+D2
+~
+~
+0 -1 4920
+S
+#4922
+Galley~
+A temporary description
+~
+49 0 0
+D1
+~
+~
+0 -1 4924
+D3
+~
+~
+0 -1 4921
+D4
+~
+~
+0 -1 4923
+S
+#4923
+Main Deck~
+A temporary description
+~
+49 0 0
+D1
+~
+~
+0 -1 4925
+D5
+~
+~
+0 -1 4922
+S
+#4924
+The Brig~
+A temporary description
+~
+49 0 0
+D3
+~
+~
+0 -1 4922
+S
+#4925
+Captain's Quarters~
+A temporary description
+~
+49 0 0
+D3
+~
+~
+0 -1 4923
+S
+#4926
+Bottom of the Trench~
+A temporary description
+~
+49 0 0
+D1
+~
+~
+0 -1 4916
+D2
+~
+~
+0 -1 4927
+S
+#4927
+Bottom of the Trench~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4926
+D2
+~
+~
+0 -1 4929
+S
+#4928
+Underwater Cavern~
+A temporary description
+~
+49 0 0
+D3
+~
+~
+0 -1 4932
+S
+#4929
+A temporary name~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4927
+D1
+~
+~
+0 -1 4930
+S
+#4930
+A temporary name~
+A temporary description
+~
+49 0 0
+D1
+~
+~
+0 -1 4931
+D3
+~
+~
+0 -1 4929
+S
+#4931
+A temporary name~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4932
+D3
+~
+~
+0 -1 4930
+S
+#4932
+A temporary name~
+A temporary description
+~
+49 0 0
+D0
+~
+~
+0 -1 4933
+D1
+~
+~
+0 -1 4928
+D2
+~
+~
+0 -1 4931
+S
+#4933
+A temporary name~
+A temporary description
+~
+49 0 0
+D2
+~
+~
+0 -1 4932
+D3
+~
+~
+0 -1 4916
+S
+#4934
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4935
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4936
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4937
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4938
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4939
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4940
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4941
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4942
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4943
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4944
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4945
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4946
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4947
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4948
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4949
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#4950
+A temporary name~
+A temporary description
+~
+49 0 0
+S
+#0
+$~

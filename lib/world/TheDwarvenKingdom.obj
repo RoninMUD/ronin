@@ -1,0 +1,399 @@
+#6502
+deep green key~
+a key~
+There is a deep green key laying here.~
+~
+18 0 1
+6502 0 0 0
+1 0 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6503
+bright gold key~
+a bright golden key~
+There is a bright golden key laying here.~
+~
+18 0 1
+6503 0 0 0
+1 900 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6504
+dwarven hammer~
+a hammer~
+There is a dwarven hammer laying here.~
+~
+5 0 8193
+0 2 6 7
+3 5500 175
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6505
+dwarven plate~
+dwarven plate mail~
+There is dwarven plate mail laying here.~
+~
+9 0 9
+5 0 0 0
+4 4500 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6506
+stick~
+long, black stick~
+There is a long, black stick lying here.~
+~
+4 0 16385
+20 5 5 15
+1 100 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6507
+stick~
+long, black stick~
+There is a long, black stick here.~
+~
+1 0 16385
+0 0 0 0
+1 0 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6508
+club~
+dwarven club~
+There is a dwarven club laying here.~
+~
+5 0 8193
+0 2 6 3
+1 3000 400
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6509
+two-handed dwarven axe~
+a two-handed dwarven axe~
+A two-handed Dwarven axe is here.~
+~
+5 0 8193
+0 2 7 3
+5 5000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+#6510
+helmet~
+A dwarven helmet~
+A dwarven helmet is here.~
+~
+9 0 17
+3 0 0 0
+4 2500 300
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6511
+gold ring~
+A golden dwarven ring~
+A golden dwarven ring is lying here.~
+~
+9 0 3
+2 0 0 0
+1 10000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#6512
+gloves~
+Dwarven gloves~
+Thick dwarven gloves lay here.~
+~
+9 0 129
+3 0 0 0
+2 4000 800
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+#6513
+note~
+a note~
+A crumpled note is here.~
+~
+12 0 1
+0 0 0 0
+0 0 0
+50
+E
+note letter letters~
+  This note seems of utmost importance, as it has the stamp of the
+  Queen on it!  It says:
+    To Anyone,
+      I have lost my birth control pills, and I will reward anyone who
+      finds them.  Without them I will have many unwanted children.
+      You should be able to find the keys (YES, KEYS) to the castle,
+      since none of my servants fight for anything anymore, and one
+      of them should be around the store room, where I lost it, so
+      examine the area CAREFULLY since the dust is very thick there.
+      But who cares about fighting?  I'm a lover, not a fighter.
+       The last time I saw the other key was on a barrack dwarf.
+  Signed, The Queen.
+  PS When you find them, tell Depeche, and he will reward your hard
+     work.  You must have all the keys necessary to obtain it, also.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6514
+castle key~
+a castle key~
+There is a key to Strangelove Castle here.~
+~
+18 0 1
+0 0 0 0
+0 10 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6515
+magic boots~
+a pair of magic boots~
+There is a pair of magic boots here.~
+~
+9 64 65
+8 0 0 0
+1 5000 15
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6516
+key mine~
+a mine key~
+There is a key to the mines here.~
+~
+18 0 1
+0 0 0 0
+0 10 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6517
+coal~
+a chunk of coal~
+There is a chunk of coal here.~
+~
+13 0 16385
+0 0 0 0
+100 0 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6518
+pick~
+a mining pick~
+There is a mining pick here.~
+~
+5 256 8193
+0 2 3 11
+1 300 10
+50
+E
+pick~
+It looks almost blessed!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6519
+pills~
+a box of birth control pills~
+There is a box of birth control pills here.~
+~
+19 0 1
+1 0 0 -1
+1 300 15
+50
+E
+birth control pills pill~
+They are in a circular container, and there are numbers corresponding
+to the day that they are to be taken.  You can tell they haven't been
+used for a while.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6520
+poster~
+a poster~
+There is a very large poster here, and you better read it!
+~
+~
+12 0 0
+0 0 0 0
+0 0 0
+50
+E
+sign poster letters~
+The sign says:
+              WELCOME TO THE DWARVEN KINGDOM !!!!!
+   There are some fun things in here, and if you can't figure them out,
+   DO NOT ask a god.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6521
+poster~
+a poster~
+There is a very large poster here, and you better read it!
+~
+~
+12 0 0
+0 0 0 0
+0 0 0
+50
+E
+sign poster letters~
+The sign says:
+              WELCOME TO THE DWARVEN KINGDOM !!!!!
+   There are some fun things in here, and if you can't figure them out,
+   DO NOT ask a god.  There is a quest involved within here, and your
+   first hint is that a dwarf in the barracks is your first clue.  He
+   is not willing to share in the prize, so you may have to kill him
+   for it.  When you complete the quest, you will be richly rewarded!
+   Don't think that it is easy, because it is NOT.  Contact Depeche
+   when you have finished the quest, or leave a message on the board.
+   PS If you find any bugs, please report them.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

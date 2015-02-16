@@ -1,0 +1,1749 @@
+#17600
+Outside the Northern Gate~
+  You are standing just outside a set of massive gates. To the north 
+a cobblestone road extends into the foothills. This place looks to be
+no city that you have ever visited. Once again it seems as though the
+mirrors in Marcus's Tower have once again put you on unfamiliar 
+ground.
+~
+176 0 2
+D0
+~
+~
+0 -1 17601
+D2
+~
+gate~
+1 -1 17543
+S
+#17601
+On a Cobblestone Road~
+  You are standing on a dusty cobblestone road. To the south lies a 
+city , its main gate in sight. The road continues to the north, 
+winding up into the foothills surrounding a single mountain. Ditches 
+run parallel to the road, here, and on the other side of the ditches
+there is nothing to be seen except acres of brambles.
+~
+176 0 2
+D0
+~
+~
+0 -1 17602
+D2
+~
+~
+0 -1 17600
+S
+#17602
+On a Cobblestone Road~
+  You are standing on a dusty cobblestone road. To the south lies a 
+city , its main gate in sight. The road continues to the north, 
+winding up into the foothills surrounding a single mountain. Ditches 
+run parallel to the road, here, and on the other side of the ditches
+there is nothing to be seen except acres of brambles.
+~
+176 0 2
+D0
+~
+~
+0 -1 17603
+D2
+~
+~
+0 -1 17601
+S
+#17603
+On a Cobblestone Road~
+  You are standing on a dusty cobblestone road. In the distance, far 
+to the south, you see what seems to be a city. The road continues to 
+the north, winding up into the foothills surrounding a single 
+mountain. Ditches run parallel to the road, here, and on the other 
+side of the ditches there is nothing to be seen except acres of 
+brambles. The brambles appear to thin a bit on the other side of the 
+west ditch.
+~
+176 0 2
+D0
+~
+~
+0 -1 17604
+D2
+~
+~
+0 -1 17602
+D3
+~
+ditch~
+10 -1 17619
+E
+brambles~
+  The brambles do, indeed, seem much thinner on this side of the 
+road. On closer inspection, you notice the faint markings of a trail 
+on the other side of the ditch. Maybe you can jump the ditch here and
+find out where this hidden trail leads.
+~
+E
+ditch~
+  There seems to be a bare patch of ground on the other side of this
+ditch.
+~
+S
+#17604
+On a Road Leading to the Mountain~
+  You are standing on a dusty cobblestone road. To the south lies a 
+city , its main gate in sight. The road continues to the north, 
+winding up into the foothills surrounding a single mountain. Ditches 
+run parallel to the road, here, and on the other side of the ditches
+there is nothing to be seen except acres of brambles.
+~
+176 0 2
+D0
+~
+~
+0 -1 17605
+D2
+~
+~
+0 -1 17603
+S
+#17605
+Winding though the foothills~
+  The cobblestones have given away to a hard-packed dirt road. Though
+the ditches have long since disappeared, the brambles are still as 
+thick as ever on both sides of the road. The road curves to the  
+west here, slowly winding around the last hill towards the mountain 
+ahead.
+~
+176 0 4
+D2
+~
+~
+0 -1 17604
+D3
+~
+~
+0 -1 17606
+S
+#17606
+At the Bottom of a Steep Trail~
+  You are at the base of a rather large mountain. The road you are on
+extends up a narrow ravine one way and disappears around a hill to 
+the east. The brambles seem to be getting less numerous the further
+you go up the slope.
+~
+176 0 4
+D1
+~
+~
+0 -1 17605
+D4
+~
+~
+0 -1 17607
+S
+#17607
+The Ravine~
+You are on a hard-packed dirt road that is leading up this narrow
+ravine. Further to the north, the road crests the top of the ravine 
+and disappear from sight. The road extends down, out the mouth of the
+ravine and vanishes into the foothills surrounding this mountain.
+~
+176 0 5
+D0
+~
+~
+0 -1 17608
+D5
+~
+~
+0 -1 17606
+S
+#17608
+Climbing the Narrow Trail in the Ravine~
+  You are standing on a trail in a narrow ravine. The walls are sheer
+and entirely too steep to even attempt to ascend. The trail extends 
+north to the top of this narrow gash in the mountain and south 
+towards the foothills far below.
+~
+176 0 5
+D0
+~
+~
+0 -1 17609
+D2
+~
+~
+0 -1 17607
+S
+#17609
+At the Top of the Ravine~
+  You are standing at the top of the narrow ravine. The view up here 
+is much broader than you could have thought possible. Far below you 
+see the city by the sea, almost completely hidden by the haze of 
+distance. The trail extends to the east, winding even further up this
+rocky spire. The road also extends down through the ravine to the 
+foothills far below.
+~
+176 0 5
+D1
+~
+~
+0 -1 17610
+D2
+~
+~
+0 -1 17608
+S
+#17610
+On a Steep Trail~
+  You are standing on a trail leading up the side of this mountain to
+the top. What awaits you there is a mystery that only time will 
+unravel. The trail extends up heading to a narrow point seen in the 
+distance. The trail also extends to the west leading to what seems to
+be the top of a ravine, which probably descends to the foothills far 
+below.
+~
+176 0 5
+D3
+~
+~
+0 -1 17609
+D4
+~
+~
+0 -1 17611
+S
+#17611
+Climbing a Steep Path~
+  You are standing on a steep trail worn into the side of a rocky
+spire extending up out of the foothills for hundreds of feet. To the 
+north you see a very narrow point in the trail. There seems to be a 
+figure standing in the trail at the narrowest point.  The trail also 
+extends down to the foothills far below and onto the city now hidden 
+in the haze of distance.
+~
+176 0 5
+D0
+~
+~
+0 -1 17612
+D5
+~
+~
+0 -1 17610
+S
+#17612
+A Narrow Point in the Trail~
+  You are standing on a very narrow part of the trail. This narrow 
+roadway extends to the south and east from here. To the north and 
+west lies a vertical drop-off that extends all he way to the ground 
+far, far below. Standing in the center of the road is a little old 
+lady who appears to be at least as old as the mountain you are trying
+to ascend.
+~
+176 0 5
+D0
+~
+~
+0 -1 17616
+D1
+~
+~
+0 -1 17613
+D2
+~
+~
+0 -1 17611
+S
+#17613
+Climbing the Steep Path~
+  You are standing at the bottom of a steep rise in the trail. To the
+west is an extremely narrow part of the trail with a cliff on one 
+side and a precipice on the other.  This seems to be where the cynic 
+had visualized when he stated he was between a rock and a hard place.
+Just hope your not going to be between the Devil and the Deep Blue 
+Sea next.
+~
+176 0 5
+D3
+~
+~
+0 -1 17612
+D4
+~
+~
+0 -1 17614
+S
+#17614
+Almost up to the Abbey~
+  You are standing at the top of a steep rise in the trail. To the 
+north is the faint outline of what seems to be a rather large stone 
+wall. Down the steep hill to the south the trail continues to the 
+coast below. The rocks along this trail are too small to use as 
+protection from danger and too large to traverse easily. This would 
+not be a good place to be ambushed.
+~
+176 0 5
+D0
+~
+~
+0 -1 17615
+D5
+~
+~
+0 -1 17613
+S
+#17615
+In Sight of the Abbey's Gate~
+  You are standing on a well-worn mountain path that leads north and 
+south from this point. To the north is the large stone wall of a keep
+or fortress. In the center of the wall you see a large wooden gate.
+Even from this distance the quality of the workmanship is quite
+apparent  To the south the trail extends in winding fashion to the 
+coastal city far below.
+~
+176 0 5
+D0
+~
+~
+0 -1 17500
+D2
+~
+~
+0 -1 17614
+S
+#17616
+Over the Edge of the Ledge~
+  Looking behind you, you see the remaining members of you party. 
+The shocked look on their faces reflect your own confusion as to why 
+you decided to jump off a five hundred foot cliff. You would give 
+your right leg for a pair of wings, or even a parachute, at this 
+moment. Ahh well, seemed like the thing to do at the time, I guess. 
+Besides everyone is should be able to make one mistake, right. 
+Right?
+~
+176 0 0
+D2
+~
+~
+0 -1 17612
+S
+#17617
+A Ledge Halfway to the Bottom of the Cliff~
+  As your body smashes into the ledge, your last thought before 
+darkness is that you hope that your friends don't spread the fact 
+that you were an idiot to the rest of the adventurers in Midgaard.
+~
+176 2 5
+D4
+~
+~
+0 -1 17616
+S
+#17618
+Over the Edge of the Ledge~
+  You hear the old woman's insane cackle as you go flying over the 
+edge of the cliff. You hope you have better luck in the afterlife 
+than you did in this one.
+~
+176 0 0
+D2
+~
+~
+0 -1 17612
+D4
+~
+~
+0 -1 17616
+S
+#17619
+A Winding Path Through the Brambles~
+  You are standing on the other side of the ditch. Before you lies a
+well-concealed trail leading deeper into this tangled and thorny maze
+of spiked bushes. You notice that much effort was placed into making
+this area nearly invisible from the main road. You wonder what lies
+hidden at the other end of this concealed path.
+~
+176 0 2
+D1
+~
+ditch~
+10 -1 17603
+D3
+~
+~
+0 -1 17620
+S
+#17620
+A Winding Path Through the Brambles~
+  You are standing on a hidden path winding amongst the brambles. 
+Before you lies a well-concealed trail leading deeper into this 
+tangled and thorny maze of spiked bushes. You notice that much effort
+was placed into making this area nearly invisible from the main road.
+You wonder what lies hidden at the other end of this concealed path.
+~
+176 0 4
+D1
+~
+~
+0 -1 17619
+D3
+~
+~
+0 -1 17621
+S
+#17621
+A Winding Path Through the Brambles~
+  You are standing on a hidden path winding amongst the brambles. 
+Before you lies a well-concealed trail leading deeper into this 
+tangled and thorny maze of spiked bushes. You notice that much effort
+was placed into making this area nearly invisible from the main road.
+You wonder what lies hidden at the other end of this concealed path.
+~
+176 0 5
+D0
+~
+~
+0 -1 17622
+D1
+~
+~
+0 -1 17620
+S
+#17622
+A Path Through the Brambles~
+  You are standing on a hidden path winding amongst the brambles. 
+Before you lies a well-concealed trail leading deeper into this 
+tangled and thorny maze of spiked bushes. You notice that much effort
+was placed into making this area nearly invisible from the main road.
+You wonder what lies hidden at the other end of this concealed path.
+~
+176 0 5
+D0
+~
+~
+0 -1 17623
+D2
+~
+~
+0 -1 17621
+S
+#17623
+A Path Through the Brambles~
+  You are standing on a hidden path winding amongst the brambles. 
+Before you lies a well-concealed trail leading deeper into this 
+tangled and thorny maze of spiked bushes. You notice that much effort
+was placed into making this area nearly invisible from the main road.
+You wonder what lies hidden at the other end of this concealed path.
+~
+176 0 5
+D0
+~
+~
+0 -1 17624
+D2
+~
+~
+0 -1 17622
+S
+#17624
+A Path up a Bramble Covered Slope~
+  You are standing at the bottom of a small hill in this field of 
+brambles. These thorn bushes are much too high to see what is at the 
+top of the hill. The trail extends up this hill towards the base of 
+the mountain. It also extends south towards the city that is now 
+hidden from sight.
+~
+176 0 5
+D2
+~
+~
+0 -1 17623
+D4
+~
+~
+0 -1 17625
+S
+#17625
+Climbing a Steep Path~
+  You are standing on a narrow, steep path overlooking a veritable
+sea of brambles. To the north lies the opening of a large cave. You 
+can see ragged spires extending from the cliff overhead pointing 
+towards the top of the mountain.
+~
+176 0 5
+D0
+~
+~
+0 -1 17626
+D5
+~
+~
+0 -1 17624
+S
+#17626
+Shok-Kar's Lair~
+  This is a huge naturally formed cavern. It seems to be well hid from
+the road by, literally, acres of brambles.  The walls are dry and the
+dirt on the floor is well-packed. It sort of looks lived in. It looks...
+  OH,NO!!! This cavern is exactly where you don't want to be. Very few
+people deliberately walk into a dragon's lair. Even fewer walk out,
+unfortunately. As if your luck couldn't be much worse, the dragon
+seems to not only be home, but he also looks kind of hungry.
+~
+176 0 0
+D2
+~
+~
+0 -1 17625
+S
+#17627
+Inside the Dark Foyer~
+  You are standing inside a rather dark and gloomy room. The walls 
+and floor seem to be made of obsidian. There are no lights in this 
+room. The only illumination is coming from the wall of fire to the 
+north and the light that is filtering in from the doorway to the 
+south. You can see the pitch black of two other doorways, one to the 
+east and the other to the west.
+~
+176 8 0
+D0
+~
+~
+0 -1 17587
+D1
+~
+~
+0 -1 17628
+D2
+~
+~
+0 -1 17630
+D3
+~
+~
+0 -1 17629
+E
+fire~
+This is where the fire extradesc goes
+~
+S
+#17628
+Golem's Alcove~
+  As your lanterns fill this room with light you notice that it 
+really isn't much of a room at all. In fact, it is actually just a 
+large alcove, barely big enough for you and the rather large statue 
+standing in the middle of it. The only exit is the one you entered 
+through.
+~
+176 8 0
+D3
+~
+~
+0 -1 17627
+S
+#17629
+Golem's Alcove~
+  As your lanterns fill this room with light you notice that it 
+really isn't much of a room at all. In fact, it is actually just a 
+large alcove, barely big enough for you and the rather large statue 
+standing in the middle of it. The only exit is the one you entered 
+through.
+~
+176 8 0
+D1
+~
+~
+0 -1 17627
+S
+#17630
+The Main Room~
+  This circular room seems to be in the middle of this dark stone 
+tower. Directly in the center of this room is a massive stairway 
+formed of white marble that not only ascends to the next level above,
+but also descends into the depths of the cellars. The doorway leading
+to the entrance of this structure is to the north. The doorway to the
+south seems to lead to the kitchen. There is no obvious clue as to 
+where the doors to the east and west lead.  
+~
+176 8 0
+D0
+~
+~
+0 -1 17627
+D1
+~
+~
+0 -1 17631
+D2
+~
+~
+0 -1 17633
+D3
+~
+~
+0 -1 17632
+D4
+~
+~
+0 -1 17636
+D5
+~
+~
+0 -1 17644
+S
+#17631
+The Den~
+  This is a comfortable sitting area complete with comfortable sofas 
+and padded chairs. This is obviously where the Archmage meets with 
+what few friends he has. Murals depicting peaceful countrysides and 
+quiet glades cover the walls. This is obviously a nice place to come 
+and relax with a mug of ale after a hard day in the summoning room.
+~
+176 8 0
+D3
+~
+~
+0 -1 17630
+S
+#17632
+The Dining Hall~
+  This small dining hall is immaculate. The large oaken table could 
+probably sit 10 people comfortably, but only has a place setting on 
+it for one person. One could assume that the owner of the tower 
+eats most of the meals eaten here in the silence that can only be 
+achieved by loneliness. 
+~
+176 8 0
+D1
+~
+~
+0 -1 17630
+S
+#17633
+The Kitchen~
+  This clean cooking area is the center of a bustle of activity. Pots
+are floating through the air, seemingly without any outside help. 
+Ingredients from the pantry to the east seem not able to wait for the
+cook to come get them; they are floating through the air towards the 
+pots. One can feel the heat radiating from the cook stove, though no 
+fire is visible from where you stand. This is definitely a magical 
+place. Just hope that the magic is benign. 
+~
+176 8 0
+D0
+~
+~
+0 -1 17630
+D1
+~
+~
+0 -1 17634
+D3
+~
+~
+0 -1 17635
+S
+#17634
+The Pantry~
+  This pantry is well stocked with non-perishable foodstuff of all 
+types. Shelves line the walls from floor to ceiling. 
+~
+176 8 0
+D3
+~
+~
+0 -1 17633
+S
+#17635
+The Larder~
+  This room is extremely cold. Large hooks hang from the ceiling 
+supporting sides of beef and other types of meat. The only 
+explanation for the lack of heat in this room has to be magic. 
+Sticking around to see if this also affects living creatures might 
+not be advisable.
+~
+176 8 0
+D1
+~
+~
+0 -1 17633
+S
+#17636
+Second Floor Common Area~
+  You seem to be in the center of the second floor of this tower. The
+white marble stairway not only descends to the main floor below, but 
+also ascends to the next level above. This circular room has four 
+doorways. There are no obvious clues as to where any of the doorways 
+lead. Lining the walls between the doorways are shelves of books 
+extending from the floor to the ceiling. Not one inch of bare wall is
+visible in this room. 
+~
+176 8 0
+D0
+~
+~
+0 -1 17637
+D1
+~
+~
+0 -1 17638
+D2
+~
+~
+0 -1 17639
+D3
+~
+~
+0 -1 17640
+D4
+~
+~
+0 -1 17641
+D5
+~
+~
+0 -1 17630
+S
+#17637
+The Study~
+  This plush carpeted room is filled with shelves of books. The only 
+small area free of shelves holds a comfortable reading chair, and 
+oaken reading table, and a Pole with a brightly glowing gem attached 
+to its top to provide illumination for the reader.
+~
+176 8 0
+D2
+~
+~
+0 -1 17636
+S
+#17638
+A Bedroom~
+  This bedroom has one window looking out towards the north. The 
+furnishings in this room, while comfortable, seem a bit plain for the
+wealth that an archmage must have acquired over the years. The bed 
+seems to be almost as old as rumors have the Archmage to be and has 
+that "broken in" look. The single dresser by the bed seems to do 
+double duty as a night stand and liquor cabinet. All of the apparent 
+clothes in this room are hung up in the closet.
+~
+176 8 0
+D3
+~
+~
+0 -1 17636
+S
+#17639
+The Library~
+  This Room has even more books than the Study does. It would seem 
+logical that Mordikai keeps the books that he does not need on a 
+daily basis in this room. There must be three dozen shelves loaded 
+down with books in this room.
+~
+176 8 0
+D0
+~
+~
+0 -1 17636
+S
+#17640
+Summoning Room~
+  This dimly lit room has a pentagram surrounded by runes engraved 
+into the floor. The engravings that make up the Pentagram seem to 
+have been filled with mithril and sprinkled with powdered gemstones. 
+The cost of the materials added to the craftsmanship leads one to 
+believe that this magic-user takes his work very seriously indeed. 
+This is not a bad thing considering the potential for destruction 
+that it holds.
+~
+176 8 0
+D1
+~
+~
+0 -1 17636
+S
+#17641
+Atop the Tower~
+  You are standing on the top of the Archmage's Tower. In the center 
+of this platform is a shimmering portal. Do you wish to step through 
+the portal? Who knows what may await you if you enter this gateway?
+~
+176 0 0
+D5
+~
+~
+0 -1 17636
+S
+#17642
+A Dusty Cellar~
+  This room is full of cages. Looking into the cages you see many 
+poor animals hopelessly waiting their turn. They seem to realize that
+their lives will end and their various body parts will be used as 
+spell components by the compassionless Archmage above. There seems to
+be a draft in this room.
+~
+176 8 0
+D0
+~
+secret~
+1 -1 17683
+D2
+~
+~
+0 -1 17643
+S
+#17643
+A Dusty Cellar~
+  This short hallway ends here. There is a door at the north end of 
+this narrow stone passage. The east and west walls are made of 
+featureless granite. To the south the hallway extends to the 
+staircase. 
+~
+176 8 0
+D0
+~
+~
+0 -1 17642
+D2
+~
+~
+0 -1 17644
+S
+#17644
+At the Bottom of the Stairs~
+  You are standing at the bottom of a stairway constructed of white 
+marble. The stairway ascends to the floor above. This dark hallway 
+seems to extend to the north for a ways. There are doors to the west,
+south, and east.
+~
+176 8 0
+D0
+~
+~
+0 -1 17643
+D1
+~
+~
+0 -1 17647
+D2
+~
+~
+0 -1 17645
+D3
+~
+~
+0 -1 17648
+D4
+~
+~
+0 -1 17630
+S
+#17645
+A Dusty Cellar~
+  This room's walls are lined with shelves. Each shelf has many 
+liquid-filled `bjars`h on it. The floor is made of what looks to be 
+granite and had a shiny coating of some type of sealant on top of it.
+~
+176 8 0
+D0
+~
+~
+0 -1 17644
+S
+#17647
+A Clean Cellar Room~
+  This room is much different from the other rooms in this dungeon, 
+err cellar. This room is well lighted and entirely dust-free. There 
+is a large slab of a `btable`h in the center of this room. There are 
+bloodstains on the floor around the table and a trail of bloodstains \
+leading towards the east wall. 
+~
+176 8 0
+D1
+~
+secret~
+1 -1 17682
+D3
+~
+~
+0 -1 17644
+S
+#17648
+A Dusty Cellar~
+  This seems to be where Mordikai keeps his more humanoid donors 
+before he operates on them to remove the necessary spell components 
+from their bodies. This room looks as if it has seen much use over 
+the years. Hmm, No wonder Sarth doesn't have an overpowering homeless
+problem. 
+~
+176 8 0
+D1
+~
+~
+0 -1 17644
+S
+#17649
+In Front of the Doors~
+  You are standing on the marble steps just in front of the double 
+doors leading into this beautiful home. The doors are worthy of at 
+least a second glance. Each seems to have been carved from a single 
+piece of wood. The doors seem to be locked.
+~
+176 8 0
+D1
+~
+doors~
+1 -1 17650
+D3
+~
+~
+0 -1 17590
+S
+#17650
+The Common Room~
+  This large room seems to be a cross between a meeting room and a 
+dining room. The ornate, polished oak table is large enough to serve 
+both uses easily. The astounding thing about this house is not its 
+size, which is quite small for this part of town, actually. However, 
+the obvious cost of the decorations makes you wonder how a man living
+on a harbormasters salary can afford such opulence.
+  To the north seems to be a bedroom, to the east a kitchen, and to 
+the south a study.
+~
+176 8 0
+D0
+~
+~
+0 -1 17654
+D1
+~
+~
+0 -1 17651
+D2
+~
+~
+0 -1 17655
+D3
+~
+doors~
+1 -1 17649
+S
+#17651
+Kitchen~
+  This looks like... well... a kitchen. The only remarkable thing about 
+it is, unlike most of the kitchens you have frequented (your mothers
+in other words), this doesn't smell of rotted meat. You look around 
+and begin to understand why. The larder is in a sealed room to the 
+east... you know this because the word larder is stenciled on the door.
+To the north is a pantry and to the south is another door.
+~
+176 8 0
+D0
+~
+~
+0 -1 17652
+D1
+~
+door~
+1 17600 17656
+D2
+~
+door~
+1 -1 17653
+D3
+~
+~
+0 -1 17650
+S
+#17652
+Pantry~
+  This pantry is fully stocked, which seems kind of strange when you 
+think about it. There should be open containers where some of the 
+ingredients have been taken out to prepare food. In fact, all of the 
+containers in this room look like they were bought several years ago, 
+if the thick layer of dust over everything means anything.
+~
+176 8 0
+D2
+~
+~
+0 -1 17651
+S
+#17653
+Butler's Quarters~
+  This is a small, but well furnished bedroom. This room is probably 
+for the butler, or would have been for him. The place looks as if it 
+hasn't been opened in years. If the Harbormaster doesn't have a live 
+in butler then who cooks and cleans for him? Interesting...
+~
+176 8 0
+D0
+~
+door~
+1 -1 17651
+S
+#17654
+Master Bedroom~
+  This must be the Harbormaster's bedroom. There is a huge bed 
+covered with a silk canopy in this opulent room. Elegant dressers 
+line the walls... closer examination of this room shows that it has 
+been unused for years. A think layer of dust covers everything in 
+this room, including the bed. Where does the Harbormaster sleep? 
+~
+176 8 0
+D2
+~
+~
+0 -1 17650
+S
+#17655
+Study~
+  This is obviously the reading room of the house. A very plush chair
+with a red velvet covering sits in the middle of this room. There is 
+a porcelain lamp sitting on an oak coffee table beside the chair. 
+Rows of leather-bound books line the mahogany bookshelves that line 
+the walls here. This room is one of the few in this house that has 
+seen recent use. You can't help but wonder where the Harbormaster 
+spends his time when he isn't in his office on the docks.
+~
+176 8 0
+D0
+~
+~
+0 -1 17650
+S
+#17656
+The Larder~
+  The smell in this room makes you nauseous. To your dismay the sight
+is much worse than even the smell. Putrefying, bloated bodies are 
+hung up on rusty meat-hooks. If that weren't enough, various organs 
+lie rotting all over the floor. What kind of monster would dare treat
+corpses this way? There seems to be a trail of crushed organs leading
+to the far wall.
+~
+176 8 0
+D1
+~
+secret~
+1 -1 17657
+D3
+~
+door~
+1 17600 17651
+S
+#17657
+The Hidden Room~
+  This room smells as bad as the Larder, but at least the view is much
+better. This is a bare room, except for the well in the center of it.
+This was, perhaps, made so that the cook wouldn't have to walk as far
+... Perhaps.
+~
+176 8 0
+D3
+~
+secret~
+1 -1 17656
+D5
+~
+~
+0 -1 17658
+E
+well~
+  This well was exquisitely crafted... there are various figures and 
+runes carved into the rim. Looking down the shaft, you notice that
+it seems unnaturally dark... Your light can't penetrate the darkness,
+even at close range. You notice that there seems to be rungs attached
+to the side of this well. If you dared you might be able to climb
+down into that unnatural darkness.
+~
+S
+#17658
+A Dark Mist-filled Tunnel~
+  This dark tunnel looks to be formed directly into the foundation of
+this mansion. The choking mist filling the tunnel burns the lungs 
+with every breath. Hopefully this tunnel will end before you succumb 
+to the noxious fumes. You see a ladder here leading up to the room 
+above.
+~
+176 8 0
+D1
+~
+~
+0 -1 17659
+D4
+~
+~
+0 -1 17657
+S
+#17659
+A Dark Mist-filled Tunnel~
+  This dark tunnel looks to be formed directly into the foundation of
+this mansion. The choking mist filling the tunnel burns the lungs 
+with every breath. Hopefully this tunnel will end before you succumb 
+to the noxious fumes. This deadly tunnel extends to the north and the
+south.
+~
+176 8 0
+D2
+~
+~
+0 -1 17660
+D3
+~
+~
+0 -1 17658
+S
+#17660
+A Dark Mist-filled Tunnel~
+  This dark tunnel looks to be formed directly into the foundation of
+this mansion. The choking mist filling the tunnel burns the lungs 
+with every breath. Hopefully this tunnel will end before you succumb 
+to the noxious fumes. To the south you see a stout wooden door.
+~
+176 8 0
+D0
+~
+~
+0 -1 17659
+D2
+~
+~
+0 -1 17661
+S
+#17661
+A Small Altar Room~
+  This small room seems to be dedicated to the worship of one of the 
+Deities of this world. Though the name of the exact deity escapes 
+you, from the amount of dried blood on the altar and the Larder in 
+the house above it is obvious that it isn't the Deity of Life.
+~
+176 8 0
+D0
+~
+~
+0 -1 17660
+S
+#17662
+A temporary name~
+A temporary description
+~
+176 8 0
+D1
+~
+~
+0 -1 17661
+D5
+~
+~
+0 -1 17663
+S
+#17663
+A temporary name~
+A temporary description
+~
+176 8 0
+D3
+~
+~
+0 -1 17664
+D4
+~
+~
+0 -1 17662
+S
+#17664
+A temporary name~
+A temporary description
+~
+176 8 0
+D1
+~
+~
+0 -1 17663
+S
+#17665
+Inside the Warehouse~
+  You are standing just inside the main doors of Weazel's warehouse. 
+The hole through which you made your entrance is barely visible in 
+the wall beside the door. Looking as far into the dimly lit warehouse
+as the feeble light will allow, gives you the view of stacks of boxes
+and crates. You might be able to make your way through this jumble if
+you are careful. You can hear the faint squeaks of rats that are 
+disturbed by your unannounced visit.
+~
+176 8 0
+D0
+~
+hole~
+9 -1 17581
+D1
+~
+~
+0 -1 17666
+D3
+~
+door~
+1 -1 17581
+S
+#17666
+Winding Among the Crates~
+  You are in a decrepit warehouse. This place is full of boxes 
+stacked up in haphazard rows which make moving through here similar
+to navigating a maze. You can hear the sounds of rodents scuttling
+around in the darkness, reminding you that you are not alone. You
+now realize uneasily that this maze affords a would be attacker
+hundreds of good ambush sites... You begin to rethink the wisdom
+of entering the worrisome place. You can see the main doors to the
+west and the path through the boxes continues to the north.
+~
+176 8 0
+D0
+~
+~
+0 -1 17667
+D3
+~
+~
+0 -1 17665
+S
+#17667
+Winding Among the Crates~
+  You are in a decrepit warehouse. This place is full of boxes 
+stacked up in haphazard rows which make moving through here similar
+to navigating a maze. You can hear the sounds of rodents scuttling
+around in the darkness, reminding you that you are not alone. You
+now realize uneasily that this maze affords a would be attacker
+hundreds of good ambush sites... You begin to rethink the wisdom
+of entering the worrisome place. The path through the boxes 
+continues both to the east and to the south.
+~
+176 8 0
+D1
+~
+~
+0 -1 17668
+D2
+~
+~
+0 -1 17666
+S
+#17668
+Winding Among the Crates~
+  You are in a decrepit warehouse. This place is full of boxes 
+stacked up in haphazard rows which make moving through here similar
+to navigating a maze. You can hear the sounds of rodents scuttling
+around in the darkness, reminding you that you are not alone. You
+now realize uneasily that this maze affords a would be attacker
+hundreds of good ambush sites... You begin to rethink the wisdom
+of entering the worrisome place. The path through the boxes 
+continues both to the east and to the west.
+~
+176 8 0
+D1
+~
+~
+0 -1 17669
+D3
+~
+~
+0 -1 17667
+S
+#17669
+Winding Among the Crates~
+  The sound of rats scuttling through the crates is getting 
+noticeably louder as your trek progresses. You notice that, from
+the amount of noise that these rats are making, they must be quite
+large. The path through the crates continues west and south.
+~
+176 8 0
+D2
+~
+~
+0 -1 17670
+D3
+~
+~
+0 -1 17668
+S
+#17670
+Winding Among the Crates~
+  The squeaks of the rats are coming from all directions and getting 
+louder by the second. How can so many rodents live here without 
+starving? There has to be a scarcity of food in these quarters. The 
+realization that curious travelers might be considered a delicacy 
+here does nothing to ease your mood.
+~
+176 8 0
+D0
+~
+~
+0 -1 17669
+D2
+~
+~
+0 -1 17671
+S
+#17671
+Winding Among the Crates~
+  The sound of rats scuttling through the crates is getting 
+noticeably louder as your trek progresses. You notice that, from
+the amount of noise that these rats are making, they must be quite
+large. The path through the crates continues west and north.
+~
+176 8 0
+D0
+~
+~
+0 -1 17670
+D3
+~
+~
+0 -1 17672
+S
+#17672
+Winding Among the Crates~
+  The squeaking has reached an almost unbearable level. There must be
+a hundred rats hidden in the darkness surrounding you. Looking up you
+see the largest pile of crates and boxes in this cluttered warehouse.
+Do you dare climb this unstable mound? There also seems to be a 
+noxious odor coming from the wall to the west. 
+~
+176 8 0
+D1
+~
+~
+0 -1 17671
+D3
+~
+secret~
+1 -1 17673
+D4
+~
+mound~
+11 -1 17690
+S
+#17673
+An Alcove~
+  Hidden behind the secret wall is a small passage. You see a small 
+alcove to the south wall of this small hiding place. This hiding 
+place looks as if it has been gnawed into the wall. An almost 
+overpowering smell of offal comes from the alcove, luckily a hint of 
+fresher air seems to be coming from the east.
+~
+176 8 0
+D1
+~
+secret~
+1 -1 17672
+D2
+~
+~
+0 -1 17674
+S
+#17674
+A Small Alcove with a Gaping Hole in the Floor~
+  This small alcove seems to have been dug out of the ground by hand or paw. The walls are made of packed earth caked with what seems to be dried dung to hold the dirt in place. There is a large hole dug into the floor. Shining a light into the hole reveals a tunnel partially filled with dark green water. From the amount of dung floating on top, it is safe to assume that it is part of the City's sewer system.
+~
+176 8 0
+D0
+~
+~
+0 -1 17673
+D5
+~
+~
+0 -1 17675
+S
+#17675
+The Sewers~
+  You are standing in what is probably the worst smelling place in 
+Sarth.  These foul-smelling, disease-ridden, rat-infested tunnels 
+smell of rotting sewage. With disgust you realize that after you 
+leave this nightmarish place you will smell just as bad as it does. 
+You also wonder, morosely, how many diseases you will acquire while 
+wading through this waist-deep decaying sludge. You can only hope 
+that the town's priests are capable of curing those diseases. You
+see a ladder leading up to what looks like a dry room. The sewers
+continue to the north.
+~
+176 8 0
+D0
+~
+~
+0 -1 17676
+D4
+~
+~
+0 -1 17674
+S
+#17676
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both west and south.
+~
+176 8 0
+D2
+~
+~
+0 -1 17675
+D3
+~
+~
+0 -1 17677
+S
+#17677
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both west and east.
+~
+176 8 0
+D1
+~
+~
+0 -1 17676
+D3
+~
+~
+0 -1 17678
+S
+#17678
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both south and east.
+~
+176 8 0
+D1
+~
+~
+0 -1 17677
+D2
+~
+~
+0 -1 17679
+S
+#17679
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both south and north.  There seems to be an 
+intersection of some type to the south.
+~
+176 8 0
+D0
+~
+~
+0 -1 17678
+D2
+~
+~
+0 -1 17680
+S
+#17680
+The Intersection in the Sewers~
+  You are at an obvious intersection of sewer tunnels. You can feel 
+the faintest of breezes coming from the tunnel to the west. 
+Unfortunately the water also seems to get deeper in that direction. 
+Exits also extend to the north and the south. As you are sitting here
+deciding which tunnel to try next you feel something in the water 
+brush solidly against your leg.
+~
+176 8 0
+D0
+~
+~
+0 -1 17679
+D2
+~
+~
+0 -1 17681
+D3
+~
+~
+0 -1 17683
+S
+#17681
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both south and north. This tunnel seems to end a 
+little way to the south and there seems to be an intersection of 
+tunnels to the north.
+~
+176 8 0
+D0
+~
+~
+0 -1 17680
+D2
+~
+~
+0 -1 17682
+S
+#17682
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both east and west. This tunnel ends abruptly at a
+solid stone wall. You see a dim shaft of light shining through the 
+wall to the west.
+~
+176 8 0
+D0
+~
+~
+0 -1 17681
+D3
+~
+secret~
+1 -1 17647
+S
+#17683
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both east and west. To the east you see what looks to
+be an intersection of tunnels. You see a dim shaft of light shining 
+through the wall to the south.
+~
+176 8 0
+D1
+~
+~
+0 -1 17680
+D2
+~
+secret~
+1 -1 17642
+D3
+~
+~
+0 -1 17684
+E
+17680~
+invalid~
+S
+#17684
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both east and west.
+~
+176 8 0
+D1
+~
+~
+0 -1 17683
+D3
+~
+~
+0 -1 17685
+S
+#17685
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both east and west.
+~
+176 8 0
+D1
+~
+~
+0 -1 17684
+D3
+~
+~
+0 -1 17686
+S
+#17686
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both east and south.
+~
+176 8 0
+D1
+~
+~
+0 -1 17685
+D2
+~
+~
+0 -1 17687
+S
+#17687
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both north and south.
+~
+176 8 0
+D0
+~
+~
+0 -1 17686
+D2
+~
+~
+0 -1 17688
+S
+#17688
+The Sewers~
+  This foul-smelling, disease-ridden, rat-infested tunnel smells of 
+rotting sewage. With disgust you realize that after you leave this 
+nightmarish place you will smell just as bad as it does. You also 
+wonder, morosely, how many diseases you will acquire while wading 
+through this waist-deep decaying sludge. You can only hope that the 
+town's priests are capable of curing those diseases. This tunnel of
+filth continues both north and south.
+~
+176 8 0
+D0
+~
+~
+0 -1 17687
+D2
+~
+~
+0 -1 17689
+S
+#17689
+Below the Rail~
+  You are standing below one of the thick oaken rails that are used 
+to support ships on the dry-dock, so that they can be repaired 
+easily.  To the north you see a large man-made tunnel that seems to 
+lead into the city's sewer system. Considering the smell coming from 
+that tunnel, it is definitely part of the sewer system.
+~
+176 8 0
+D0
+~
+~
+0 -1 17688
+D4
+~
+rail~
+11 -1 17565
+E
+rail~
+  It looks like you could climb up this oaken rail.
+~
+S
+#17690
+On Top of a Mound of Crates~
+  You have managed to climb to the top of the tallest mound of crates
+in the warehouse. To your surprise it seems to be hollow. You see a 
+hole in the middle of the mound descending to the darkness below. Do 
+you wish to climb down this hole?
+~
+176 8 0
+D5
+~
+mound~
+11 -1 17672
+S
+#17691
+Weazel's Were-Rat Nest~
+  You are standing in the center of the hollowed out mound of Crates.
+Unfortunately you are not alone. 
+~
+176 0 0
+S
+#17692
+A temporary name~
+A temporary description
+~
+176 0 0
+S
+#17693
+A temporary name~
+A temporary description
+~
+176 0 0
+S
+#17694
+A temporary name~
+A temporary description
+~
+176 0 0
+S
+#17695
+A temporary name~
+A temporary description
+~
+176 0 0
+S
+#17696
+A temporary name~
+A temporary description
+~
+176 0 0
+S
+#17697
+A temporary name~
+A temporary description
+~
+176 0 0
+S
+#17698
+A temporary name~
+A temporary description
+~
+176 0 0
+S
+#17699
+Somewhere Beyond You Magical Abilities~
+  You try to extend you magic sight but you can only see your target in a hazy
+gray mist... his surroundings are undetectable with your puny magical abilities.
+~
+176 0 0
+S
+#0
+$~

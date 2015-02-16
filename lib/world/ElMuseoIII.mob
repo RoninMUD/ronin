@@ -1,0 +1,527 @@
+#16503
+locust green hell~
+A Locust from the Green Hell~
+A long, vicious black locust hailing from the Green Hell buzzes angrily at you.
+~
+The body of this fierce insectoid is fully twelve feet long, and armored
+with thick black plates almost impenetrable by normal weapons. Above its
+gigantic, gleaming red eyes stand long, orange, hairy eyebrows only
+found on the mythical Green Hell Locusts. These fierce beasts were
+long ago banished to the few, scattered caverns which were naturally
+strong enough to withstand their massive digging claws.
+~
+44 830777512 -1000 Y
+60 -20 -15 2d20+100 66d66+66
+1 1
+8 8 1
+76 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16507
+ancient wax knight faze~
+ancient wax knight~
+An ancient knight made of wax and wood is standing here.
+~
+The wax knight is a little shorter than most humans today. He is 
+wearing tattered clothing dating from the time of the great battle
+for Vilosia. A nametag on his chest reads "General Maximilion Faze",
+which triggers a twinge of memory from your schooldays... Wasn't he
+the Butcher of....
+~
+16426 536871040 -1000 Y
+35 -15 0 1d3000+4000 7d12+66
+100000 300000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16508
+wax knight bill janitor~
+Bill, the Knight Janitor~
+An old janitor, covered in wax and dressed in a knight's costume, is here.
+~
+This poor old man's eyes gleam with an intense light. It seems that
+he's under some sort of spell. Either that, or something has driven
+him mad. You usually wouldn't be afraid of a mere janitor, but Bill
+looks as though he's seen a fight or two in his lifetime. In fact,
+his lifetime might have been quite long so far...
+~
+16426 536871040 -1000 Y
+34 -14 -1 300d10+9666 4d25+50
+100000 1000000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16513
+proto-horse proto horse wax~
+a waxen proto-horse~
+A wax representation of a half-lizard proto-horse stands here, grunting.
+~
+This proto-horse is half reptile, half mammal. Its pre-hooves are cloven,
+with vestigial claws growing from the horny tips. Its teeth are small and
+pointed, and it is made entirely of wax. It wears a saddle, which is
+obviously that which the smashed figure against the wall here rode before
+the horse got angry.
+~
+42 402653216 -1000 Y
+35 -15 0 30d20+9000 4d10+75
+100000 800000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16515
+gorgo fur beast~
+Gorgo, the Fur Beast~
+A huge ball of fur twitches in the corner, whimpering.
+~
+This poor animal was once a wax figure, as you can tell by the bits of
+wire protruding from its flesh here and there. It is about 8 feet high
+at what looks like a shoulder, and looks almost completely spherical
+due to the huge amounts of dark sable fur covering it. Two bright points
+shine from where you suppose this creature's head to be... they look
+like immense tusks, almost like a boar's. A nametag on a collar about
+its neck reads, "Gorgo, scurge ov the Verjii Caverns"
+~
+10 939786368 -1000 Y
+45 -20 0 50d20+7000 7d25+80
+200000 1500000
+8 8 1
+86 2048 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16526
+jenny consort girl~
+Jenny, the Sorcerer's Consort~
+A girl of about sixteen sits her, obsessively brushing her hair.
+~
+Jenny's face explodes in a fascinating display of nervous tics when you
+look at her. She looks to be about sixteen years old, and has a scar on her
+left breast--revealed by her low-cut nightgown--that looks horribly like a
+brand. Her impossibly long hair swirls about her frail body in great
+auburn waves, and you can almost believe that it has a life of its own.
+~
+10 134479912 1000 Y
+40 -20 -2 30d20+7500 20d20+56
+500000 1500000
+8 8 2
+69 2048 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16527
+hakeem sorcerer~
+Hakeem the Sorcerer~
+A short old sorcerer stands here, his tiny body held up with wax supports.
+~
+Hakeem snarls in irritation as you look at him. Having conquered this museum,
+all he wants to do now is make more of his diabolical "creations" like
+Gorgo and the poor proto-horse. In order to do this, he must remain living,
+and Hakeem long ago sold whatever soul he had left in order to complete
+what he considers his work. After he tells you this, he attacks.
+~
+16426 268437640 -1000 Y
+50 -16 -5 20d100+9000 50d10+20
+500000 1500000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16528
+hakeem wraith~
+the wraith of Hakeem~
+A dark image of the sorcerer Hakeem floats before your eyes.
+~
+No longer blessed with corporeal shape, the wraith of Hakeem is no less
+intimidating than the man for it. His eyes flick over what was once his
+domain and settle upon you, burning resentment evident for having upset
+his plans.
+ 
+At least ghosts can't hurt you... right?
+~
+16777226 294912 -1000 Y
+50 -10 0 -31073d1+999999 1d1+0
+10000 100000
+8 8 0
+95 1006604408 1d1+1 0
+0 0 0 416
+T
+......the wraith of Hakeem glares at you ominously!~
+K
+0 0 0 0 0 0 0
+#16532
+khallaq beast fish ape~
+The mighty Khallaq~
+A strange cross between an ape and a fish lurks in the muck here.
+~
+A pair of luminous fisheyes stare at you out of a massive, fanged
+white ape's face. This strange beast is covered in scars and has
+strange jewelry dangling from every odd protuberance. If this
+beast is truly the mythical Khallaq of Southern Vilosia, then it
+must be thousands of years old. As you ponder the oddity of finding
+a decidedly southern beast here in these more temperate regions,
+the mighty Khallaq shrieks a strange, gurgling howl and swims
+rapidly toward you!
+~
+268435470 278167680 -1000 Y
+45 -18 -10 40d800+26000 20d50+118
+0 3000000
+8 8 1
+84 2112 1d1+1 1
+11 2 15 25
+0 0 0 0
+K
+1000000 16511 0 0 0 0 0
+#16535
+quaratt queen~
+Quaratt, the Panther Queen~
+A slender woman covered in short black fur lazily blinks at you.
+~
+As you gaze at this divine being, your heart feels as if it is
+about to burst from your chest. The raw sensuality of this woman
+assaults everybody, male or female, with an incredible force. Her
+slender, well-muscled body is covered in short black fur, like
+the jungle creatures she rules over. This bestial effect only
+serves to enhance her beauty, as do the vertical-pupiled glowing
+yellow eyes which she gazes at you langourously with. Quaratt, if
+you recall correctly, is a mythical goddess of the ancient tribes
+of Southern Vilosia. What she would be doing so far north of her
+homeland is a mystery.... Rather than pondering that, perhaps
+you should ponder getting away from her... the myths say that her
+beauty is only exceeded by her ferocity.
+~
+1048618 142903336 -1000 Y
+50 -20 -10 42d42+42000 20d100+100
+0 2000000
+8 8 2
+90 6336 1d1+1 0
+0 0 0 0
+K
+1000000 0 0 0 0 0 0
+#16536
+gembal snake~
+a Gembal Snake~
+A long snake with tiny legs murmurs strangely here, blinking.
+~
+This strange, black snake-like creature has white tufts of hair about its
+long, pointed ears. Tiny, clawed legs protrude from four 
+equidistant points on its basically bilateral body. Huge green
+eyes blink at you in opposing rhythm as the Gembal Snake's long
+orange tongue flicks in and out.
+~
+218103818 42237984 -1000 Y
+30 -10 -5 200d30+2000 4d25+40
+200000 6000000
+8 8 1
+80 4224 3d100+200 2
+1 1 15 82
+1 1 15 33
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16538
+panther black~
+A black panther~
+A large black panther hisses menacingly at you.
+~
+This is no ordinary cat, it's a six foot long black panther with
+massive white teeth and large ivory claws. Its muscles ripple
+beneath its short black fur, and it screams a strange roar as
+it leaps to attack you!
+~
+537919498 343965728 -1000 Y
+50 -10 0 20d10+600 2d25+25
+20000 100000
+8 8 1
+90 0 1d1+1 2
+5 1 32 0
+6 1 32 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16542
+tomek fur beast~
+Tomek, the Fur Beast~
+A massive ball of white hair roars ferociously at you.
+~
+This creature is about twice as big as his cousin, Gorgo. Also,
+Tomek is alive and well, not some ensorcelled wax creation. His
+gigantic canines are stained brown with the amount of blood he
+has drunk in his long lifetime, and his pebble-like eyes glint
+at you in mawkish innocence. Tomek has ears at least three feet
+long, their tips quivering at the slightest noise. The Fur Beast
+itself is a good three meters high at the shoulder and about the
+same in length. Tomek has almost pure white fur, save where it
+is stained with blood. Someone has placed a nametag around this
+beast's neck, as well.
+~
+10 411074720 0 Y
+55 -25 -15 66d666+13000 70d10+350
+0 6666666
+8 8 1
+86 192 1d1+1 0
+0 0 0 0
+R
+1
+K
+1000000 16510 0 0 0 0 0
+#16546
+kimagee~
+A Kimagee~
+A small, weasel-like white creature chitters madly at you.
+~
+This Kimagee is a rather small creature, but extremely vicious
+for its size. Pound for pound, this eight ounce creature is the
+most ferocious predator ever to live. What is even more terrible
+is the fact that they usually travel in large packs. Kimagee are
+known to spend up to half of their lives in frigid waters, as they
+subsist mainly on fish, but they are just as capable on land as
+they are agile in the water. Kimagee fur is prized by the upper
+classes for its warmth and its stark white beauty. However, few trappers
+dare to hunt Kimagee, for packs have been known to stay by their
+fallen comrades and fight off scavengers until the bitter end.
+~
+605028360 294912 0 Y
+45 -12 0 2d20+500 30d30+100
+10 1500000
+8 8 1
+77 0 1d1+1 2
+5 1 30 0
+6 1 35 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16547
+kimagee~
+a flayed-alive Kimagee~
+A quivering Kimagee, its hide loosely attached to its body, darts around.
+~
+This Kimagee is a rather small creature, but extremely vicious
+for its size. Pound for pound, this eight ounce creature is the
+most ferocious predator ever to live. What is even more terrible
+is the fact that they usually travel in large packs. Kimagee are
+known to spend up to half of their lives in frigid waters, as they
+subsist mainly on fish, but they are just as capable on land as
+they are agile in the water. Kimagee fur is prized by the upper
+classes for its warmth and its stark white beauty. Indeed, it looks
+like this Kimagee was previously hunted for its hide, which now hangs
+loosely from its body.
+~
+16794248 0 0 Y
+55 -12 10 10d100+500 90d30+100
+50000 150000
+8 8 1
+77 0 1d1+1 2
+5 1 20 0
+6 1 35 0
+0 0 0 0
+K
+0 16570 0 0 0 0 0
+#16551
+naiad ice icy frozen~
+An icy Naiad~
+A naked woman covered in icy rime and dangling icicles stands here.
+~
+This beautiful woman stands with a hand on her hip, smirking with
+bluish-purple lips. A white, frosty rime fails to cover her head-to-
+foot nakedness, as do the various small icicles hanging from the frozen
+ends of her greenish hair, her delicate chin, her small nose, the
+lobes of her blue ears, the tips of her icy fingers, and even the tips
+of her erect nipples. She seems to be what folklore refers to as
+an Ice Naiad: a spirit of a woman murdered by drowning in frigid
+waters. Not a true naiad, the Ice Naiad is more of a vicious ghost.
+Since the only women typically drowned in frigid waters by the more
+northern tribes were witches and murderers themselves, the Ice Naiads
+tend to be evil themselves.
+~
+68157450 268732584 -1000 Y
+51 -16 -5 55d55+11111 2d60+150
+75000 1500000
+8 8 2
+95 4096 1d1+1 2
+11 5 10 107
+11 1 10 141
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#16554
+scratch mama~
+Scratch Mama~
+An ancient black woman hums and sings as she washes dishes here.
+~
+This gentle old creature is bent over at the waist and looks like
+a somewhat chubby jackknife. This woman has seen the passing of
+many seasons, and one wonders how long she has spent in this ice-
+entombed cabin. Her walnut skin is riven with the crevasses and
+canyons of age, but her ice-grey eyes twinkle merrily from under
+her shriveled brow. As she smiles, you realize that she is missing
+most of her teeth, and she wears dentures made of what could only be
+carven Fur Beast tooth. It strikes you then that this cheerful old
+woman is none other than Scratch Mama, legendary wife of Lemouro
+the Tracker. The legends say that she was none other than the dark
+high priestess of Quaratt for the Mujambik tribe of Southern Vilosia.
+Lemouro, the cold-blooded northerner, however, is fabled to have
+turned this sultry, evil priestess into a merry housewife.
+~
+1064970 8421512 1000 Y
+40 -20 -10 20d60+15000 2d50+100
+1000000 4500000
+8 8 2
+69 4224 20d20+600 5
+1 6 30 97
+1 6 5 85
+1 6 15 98
+1 6 15 108
+1 5 5 130
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16555
+timur panther beast child~
+Timur, the Panther Beast~
+A small child with long fangs and short black fur growls at you.
+~
+This poor child must be the offspring of Scratch Mama and Lemouro
+the Tracker. Legends say that Lemouro and Scratch Mama were cursed
+by Quaratt when Scratch Mama conspired to capture the jungle queen,
+and this must be the result. This poor child lives a tortured
+existence, torn between his humanity and his bestial nature. His
+body ripples with muscles not found on small children, and his
+fangs drip with spittle. He glares at you with glowing yellow
+eyes, the madness within them nearly unbearable. Somebody should
+put this poor creature out of its misery.
+~
+1048618 268697600 -500 Y
+55 -27 -20 25d250+42000 25d25+100
+2000000 6000000
+8 8 1
+90 6144 1d1+1 3
+5 3 56 0
+6 3 56 0
+3 3 40 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16557
+lemouro tracker lem ouroboros~
+Lemouro the Tracker~
+Lemouro the Tracker stands here, gruffly scowling at you.
+~
+Lemouro is an ancient, grizzled man, but he still looms erect as
+he ever did, glaring down at you with steel-blue eyes from beneath
+beetling grey brows. His nearly white hair reaches to his waist,
+travelling over the furry expanse of his jacket. Every single
+thread of clothing on this legendary tracker is made of some animal
+hide, and odds are that he killed it himself. It is this man who
+put NAMETAGS on Tomek and Gorgo, the ferocious Fur Beasts. This man
+captured the mighty Khallaq and Quaratt, the Panther Queen. His
+tremendous hands are covered with small scars from skinning beasts
+and from hard-fought battles, and they look as though they could
+easily crush your spine. Lemouro is even more impressive than his
+fearsome legend.
+~
+1048618 277121064 0 Y
+51 -22 -15 66d666+42000 25d30+104
+5000000 3000000
+6 8 1
+69 4288 1d1+1 3
+3 1 35 0
+11 3 10 42
+11 1 10 98
+0 0 9 32
+K
+0 0 0 0 0 0 0
+#16558
+djinn fire elemental~
+The Djinn of Fire~
+A flaming, manlike figure leans against the wall here, grinning.
+~
+This strange, elemental creature is covered in orange flames from
+head to foot. He is taller than a normal man by about a head, and
+his smile is composed of bright red embers, as are his eyes. He
+leaps from place to place like sparks leap from a burning, pitchy
+log. There is no way past this magical creature other than fighting
+him.
+~
+68173834 268730408 -1000 Y
+30 -10 -1 2d200+3000 2d50+40
+200000 100000
+8 8 1
+65 1073715440 1d1+1 1
+11 1 35 26
+0 0 0 480
+K
+0 0 0 0 0 0 0
+#16564
+djinn vapor frozen woman air~
+A Djinn of Frozen Vapor~
+A wispy woman made of frozen grey vapor writhes in the air currents.
+~
+This djinn appears to be composed entirely of grey vapor, shaped
+by small, localized gusts of wind into the form of a tall, slender
+woman. Where this elemental creature's eyes would be, black holes
+encircled by tiny icicles seem to descend to the pits of a lower
+world. As the vaporous djinn opens her mouth to silently scream, you
+see what appear to be tiny people trying to crawl from inside of
+her!
+~
+68157450 402948136 -1000 Y
+31 -11 -7 20d200+5000 2d20+40
+1 300000
+8 8 2
+65 1073713168 1d1+1 2
+9 5 12 0
+11 3 30 82
+0 0 0 416
+K
+0 0 0 0 0 0 0
+#16566
+panther black~
+A Black Panther~
+A sleek black panther blinks at you with bright green eyes here.
+~
+Covered in short, black fur, this small female panther is of a strange,
+magical breed of Southern Vilosian cats bonded to Quaratt, the Panther
+Queen. Who knows how long this being of a magical nature will remain
+on this plane? She could vanish as quickly as she appeared at any
+second!
+~
+536870920 335577088 -1000 Y
+50 -5 0 2d20+500 3d6+20
+1 1
+8 8 2
+90 0 1d1+1 2
+6 1 25 0
+5 1 25 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16569
+curator werner wax waxen~
+A Waxen Curator~
+An old man made of wax stands here, looking decrepit.
+~
+This poor creature was once a man, but some dastard has coated him
+in wax and animated his corpse to stand guard here! A small nametag
+is illegible under the thick wax encrusting this thing's chest.
+Like many curators, the man has the air of being... slightly eccentric.
+As you look into the man's eyes, you seem to read a plea in their inky 
+depths.... he simply wants the nightmare to end.
+~
+10 2176 0 Y
+40 -5 0 200d2+2000 2d9+40
+50000 600000
+8 8 1
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,287 @@
+#27100
+Centurion~
+The Centurion~
+The Centurion of Pompeii is here, studying his maps.
+~
+  The Centurion is the veteran of many campaigns and is a dangerous enemy.  He
+has about him an aura of power that is almost visible to the naked eye.
+~
+74 268705928 500 Y
+46 -11 -23 10d10+5000 5d10+45
+100000 900000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27101
+roman tribune marcus aurelius~
+the Tribune of Pompeii~
+The Tribune of Pompeii is here, granting audience to the citizens.
+~
+The Tribune smiles as you meet his gaze and beckons you closer.  You approach
+and notice something peculiar about him - His eyes glow a crimson red, a clear
+sign of demonic possession.
+~
+74 134480040 -1000 Y
+51 -12 -4 10d100+6500 26d8+100
+600000 990000
+5 5 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27102
+Damoclese the Gladiator~
+a Roman gladiator~
+A roman gladiator is here, displying his skills to a roaring crowd.
+~
+You see before you Damoclese, the most famous gladiator in Pompeii.  He has
+slain countless opponents and has a reputation for showing no mercy in the
+arena. He glares at you and motions for you to approach.
+~
+155722 268699816 0 Y
+51 -13 10 8d100+8000 20d8+100
+0 1500000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27103
+roman citizen~
+a Roman citizen~
+A citizen of the Roman Empire strolls by.
+~
+Clad in flowing white silk garments, the Roman citizen looks haughtily at you
+and dismisses you with a glance, you are not worthy.
+~
+8 0 0 Y
+17 19 90 1d20+400 3d6+2
+3000 33000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27104
+roman soldier~
+A Roman soldier~
+A Roman soldier stands here, guarding the gates of Pompeii.
+~
+A soldier of Imperial Rome, he has served the Emperor faithfully for twenty
+years and will lay down his life for him without hesitation.
+~
+74 0 0 Y
+26 -6 -4 1d100+1450 4d6+4
+4000 225000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27105
+cannibal witchdoctor~
+the Witchdoctor~
+The Cannibal Witchdoctor is here chanting arcane phrases.
+~
+The witchdoctor is wearing a suit made entirely of human bones and carries a
+staff covered with arcane symbols.  He looks up, straight into your eyes and
+chuckles.
+~
+131178 402915464 -1000 Y
+53 -14 -9 10d200+10000 6d20+119
+200000 1200000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27106
+lord bundolo~
+Bundolo~
+Bundolo the king of the jungle is here acting like a gorilla.
+~
+Bundolo is the king of the jungle and a fierce warrior.  He was adopted by a
+gorilla when an infant and as a result his manners are that of a wild animal.
+~
+18632 270272648 750 Y
+50 -13 -6 50d20+6000 10d10+100
+0 900000
+8 8 1
+69 0 0d0+0 2
+5 2 15 0
+9 2 9 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#27107
+brontosaurus bronto~
+Brontosaurus~
+A huge brontosaurus is grazing here.
+~
+A gargantuan dinosaur weighing around 70 tons.  The brontosaurus regards you
+calmly as it munches on some mucky plants from the swamp.  It has about as much
+interest in you as you might have in a small harmless insect buzzing nearby.
+~
+8 268468232 0 Y
+36 -10 5 10d20+4400 4d8+12
+0 400000
+8 8 0
+82 0 0d0+0 1
+2 2 4 0
+0 0 0 0
+K
+10000 1 0 0 0 0 0
+#27108
+juju zombie~
+JuJu-Zombie~
+A JuJu-Zombie stands here, hatred burning in its eyes.
+~
+A shriveled corpse, the JuJu-Zombie is the result of evil magic that prevents
+its soul from departing the body.  As a result it hates life and all living
+things.
+~
+46 262144 -1000 Y
+49 -10 -2 5d100+400 7d8+48
+10000 150000
+8 8 0
+52 0 0d0+0 0
+0 2 0 0
+K
+0 0 0 0 0 0 0
+#27109
+tyrannosaurus rex~
+Tyrannosaurus Rex~
+A giant tyrannosaurus rex snaps its huge jaws at you.
+~
+The Tyrannosaurus Rex is a huge lizard, 40 ft. tall and over 60 ft. from head
+to tail.  This monstrosity weighs over 20tons, and is rushing at you.
+Erm, I said 'rushing at you'...PANIC!!!!!!!
+~
+106 40 0 Y
+50 -14 3 5d40+9000 20d4+80
+0 1500000
+8 8 1
+82 0 0d0+0 0
+0 0 0 0
+K
+20000 1 0 0 0 0 0
+#27110
+shade~
+Shade~
+A shadowy warrior is here, brooding to himself.
+~
+The shade was once a living being but became so bored with life he lost all his
+color. Now his only aim is to cause as much grief as possible.
+~
+10 336855080 800 Y
+52 -14 -2 5d100+11000 30d3+80
+350000 1800000
+8 8 1
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27111
+velociraptor raptor~
+A velociraptor~
+A velociraptor eyes you hungrily and licks its teeth as it attacks.
+~
+The velociraptor is a predatory dinosaur that hunts in packs of 3-4 and uses
+its considerable cunning to ambush unsuspecting prey.
+~
+1085512 786434 0 Y
+51 0 3 1d10+50 2d40+20
+0 18000
+8 8 0
+82 0 0d0+0 0
+0 0 0 0
+K
+7000 1 0 0 0 0 0
+#27112
+quazit~
+Quazit~
+A small Quazit is sneaking about here.
+~
+A tiny impish-looking creature with scaley hide and glowing eyes, the quazit
+stands about 2 feet tall.  It is a common familiar to spellcasters which have
+ties to the infernal powers.
+~
+4104 17303562 0 Y
+51 -11 2 8d8+400 3d10+80
+0 60000
+8 8 1
+62 0 0d0+0 0
+0 0 0 0
+K
+9000 0 0 0 0 0 0
+#27113
+cannibal warrior~
+a cannibal warrior~
+A cannibal warrior stalks his prey here.
+~
+A tall and lean man with no bodily hair.  His entire body is covered with
+tattoos which glow faintly in the twilight of the forest.
+~
+10 1572928 -400 Y
+43 -8 5 1d1000+9500 2d40+20
+50000 360000
+5 5 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27114
+peddler man~
+a peddler~
+A frail-looking man is peddling his goods here.
+~
+He's a gangly and frail-looking man dressed in dirty rags.  His face bear the
+marks of vermin and disease and his right arm has wasted away into useless-
+ness. He smiles a toothless grin when he sees you approaching.
+~
+16394 134217856 300 Y
+52 -12 8 1d8+20000 10d20+100
+300000 0
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27115
+imperial guard roman soldier~
+An Imperial Guard~
+A member of the Roman Imperial Guard stands watch here.
+~
+Only the strongest and most resourceful warriors were admitted into the
+ranks of the Imperial Guards.  They were given the best armour and weapons
+availible and each one took an oath to serve their master for the rest of
+their lives.
+~
+18442 262144 150 Y
+30 -8 -6 1d200+1500 5d6+5
+10000 250000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27199
+cannibal warrior~
+a cannibal warrior~
+A cannibal warrior stalks his prey here.
+~
+A tall and lean man with no body hair, his entire body is covered with
+tattoos which glow faintly in the twilight of the forest.
+~
+10 1572928 -400 Y
+43 -8 5 1d1000+9500 2d40+20
+50000 360000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

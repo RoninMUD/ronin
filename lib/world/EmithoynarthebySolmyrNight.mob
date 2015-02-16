@@ -1,0 +1,258 @@
+#26700
+guard~
+The Guard of the Gates~
+The Guard of the Gates stands here, guarding his master from intruders.
+~
+A giant of a man is in charge of guarding the Great Gates of Emithoynarthe and
+is the personal bodyguard of the King.  He wears a heavy steel helmet upon his
+head and a set of blue-colored chain mail, scared by many battles, over his
+sturdy shoulders.  His boots are solid and well-worn, covered in dust as though
+he has not moved from this spot in a very long time.  He knows no fear and has
+slain countless men that have dared to challenge him.  His sword gleams in the
+light and reflects its newly-sharpened image to any that gaze upon it.  It is
+this man's duty to slay all that get in his way.
+~
+14 411345068 1000 Y
+50 -30 -20 100d10+30000 2d4+501
+2500000 5000000
+8 8 1
+9 16832 100d10+10000 3
+1 2 10 110
+4 2 30 0
+10 4 30 0
+0 0 1 864
+K
+0 26705 0 0 0 0 0
+#26701
+emithoynarthe mighty king ancient~
+The Mighty King of Ancient Emithoynarthe~
+The Mighty King of Ancient Emithoynarthe stands here, lusting for intruders to kill!
+~
+Emithoynarthe, the Ancient King of the Golden Empire stands tall and proud,
+dressed in his battle armor and flowing cape.  He is an enormous man, standing
+over seven feet tall and built entirely of muscle.  His long raven-black hair
+hangs from beneath the golden crown that he wears upon his solemn head.  His
+armor and weapons look dangerous and powerful indeed, but the true measure of
+his might is contained within his eyes.  The dark-green orbs flicker with an
+internal light that seems to be the reflection of some flame that burns within
+him.  He gazes around, surveying all that he owns and controls, making sure to
+seek out and destroy anything that does not belong to him.  The Lord of the
+Land is not a forgiving man.
+~
+42 411412668 1000 Y
+70 -50 -30 100d200+40000 10d10+750
+15000000 20000000
+8 8 1
+9 939550719 10d10+20000 4
+1 2 5 110
+4 2 10 0
+1 3 20 30
+3 1 25 0
+0 2 1 767
+R
+505
+K
+0 0 0 0 0 0 0
+#26702
+ghost prisoner~
+The Ship's Ghost~
+The Ship's Ghost floats about here, encircled by his loyal albatross friends.
+~
+This is the ghost of one of the prisoners that was held in captivity on the old
+ship that it now haunts.  He was captured and wrongly accused of killing an
+albatross, though in actuality he loved the birds dearly.  He died in captivity
+because of mistreatment and lack of food and returned as a ghost to haunt the
+pirate's ship for all eternity.  He killed the entire crew by summoning a storm
+that washed them all to sea and grounded the ship, though did not destroy it.
+The albatross' love him for putting an end to the misdeeds of the captain and
+he now has the power to summon them in times of need.
+~
+42 134217856 1000 Y
+40 -15 -20 20d25+6000 50d5+100
+0 1000000
+8 8 1
+95 138567628 1d1+1 0
+0 0 0 1022
+K
+0 0 0 0 0 0 0
+#26703
+turtle nasty sea~
+A Nasty Sea Turtle~
+A nasty sea turtle walks around here, seeking a suitable place to rest.
+~
+This is a giant sea-dweling turtle and it is quite large and dangerous.  It
+would be unwise to step in its path as it may not like it.  These turtles are
+known to attack full-grown men and devour them when they are hungry or in the
+mood to devour flesh and hear their victims scream in agony.
+~
+328 268435456 -1000 Y
+28 -8 -10 10d10+1400 5d5+30
+10000 320000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26704
+rat mutated deformed ugly~
+A Mutated Rat~
+A mutated Rat crawls around here, looking deformed and ugly.
+~
+This was once a rat, though its lineage is hard to make out now.  A large and
+deformed ear grows on its back and it is entirely lacking regular ears of its
+own.  The creature has large eyes which are located at unusual and misalignment
+parts of its head.  The nose is very over-developed and droops at the tip.
+However its teeth look very sharp and pointy and dangerous indeed.  The beast
+looks hungry and ready to nip at anything that gets too close.
+~
+44 262146 -500 Y
+25 0 -5 5d5+200 2d2+40
+0 70000
+8 8 1
+3 0 1d1+1 1
+5 1 10 0
+0 0 0 0
+K
+15 0 0 0 0 0 0
+#26705
+rat mutated large~
+A Large Mutated Rat~
+A large mutated rat crawls around here, looking mighty dangerous.
+~
+This is a larger and much more developed version of a rat, though the fact that
+it was once ever a rat is hard to discern.  A large and deformed ear grows on
+its back and it is entirely lacking regular ears of its own.  The creature has
+large eyes which are located at unusual and misalignment parts of its head.
+The nose is very over-developed and droops at the tip.  However its teeth look
+very sharp and pointy and dangerous indeed.  The beast looks hungry and ready
+to nip at anything that gets too close.
+~
+40 268468258 -1000 Y
+50 -15 -15 50d12+13500 8d8+104
+0 1500000
+8 8 1
+3 0 1d1+1 3
+5 2 20 0
+6 2 20 0
+8 2 20 0
+0 0 0 0
+K
+15000 0 0 0 0 0 0
+#26706
+creature large hideous mutated rat yeti human~
+A Hideously Mutated Creature~
+A large, hideously mutated creature shambles about, seeking fresh prey.
+~
+Yuck!  This must be one of the most disgusting and deformed creatures that ever
+was.  It appears to be a mix between a large rat, a yeti and a human or some
+other similar being.  It is hard to imagine this thing ever looking like a
+human, except that its eyes seem to be nearly unchanged from those of a man's.
+Is this perhaps a long-lost adventurer that fell into a deep dark place and was
+lost to the world outside?  If such deformity like this could happen to anyone,
+might it be wise to stay away from wherever this thing came from?  The creature
+makes many guttural and disgusting sounds as it moves about in its trundling
+way.
+~
+42 268697602 -1000 Y
+60 -30 -20 80d80+40000 10d10+250
+0 1500000
+8 8 1
+3 0 1d1+1 5
+6 2 20 0
+5 2 20 0
+4 2 20 0
+7 2 30 0
+2 2 50 0
+0 0 0 0
+K
+500000 0 0 0 0 0 0
+#26707
+observer tower mage old man~
+The Tower Observer~
+The Tower Observer moves about, performing his daily tasks.
+~
+The Tower Observer is a very old man that moves about slowly and deliberately
+but with an undeniable grace.  It is his duty to make note of all that goes on
+within the lands of Emithoynarthe and to chronicle the activity in an immense
+tome.  His robes are plain and old-looking, though they are in very good
+condition and show no sign of wear or discoloration.  A stark contrast to the
+drabness of his robes is his bright red cloak that he wears proudly upon his
+stooped shoulders.  His eyes gleam with the magical light and intensity of the
+war-mage that he must have been in his youth.
+~
+33554474 419473580 1000 Y
+50 -20 -18 25d25+25000 50d10+200
+200000 2000000
+8 8 1
+1 0 100d100+10000 6
+1 6 1 85
+1 2 10 82
+1 2 15 95
+1 2 20 139
+1 2 25 248
+1 2 50 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26708
+taraun cute animal~
+A Taraun~
+A cute little taraun moves about, grazing on the abundant vegetation.
+~
+This is a cute little animal that would do nicely as a pet.  Although tarauns
+have quite the temper when angered, they tend to stay to themselves and graze
+quietly unless disturbed.  They move about quickly and quietly and seem to be
+focused on devouring every tasty morsel they can find.
+~
+8 0 0 Y
+37 -13 -15 16d16+2500 5d5+50
+0 375000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+5000 0 0 0 0 0 0
+#26709
+endmed large beast~
+An Endmed~
+An Endmed is here grazing, not seeming to pay any heed to its surroundings.
+~
+Endmeds are large creatures that walk about on four legs and consume everything
+in their path like a living vacuum.  Its mouth spends much of the time almost
+buried into the ground, rooting for the choicest parts of plants to eat as it
+grazes. Its eyes look about lazily, never seeming to be very concerned about
+its surroundings or any possibility of danger.
+~
+8 0 0 Y
+43 -12 -17 120d12+6000 6d6+75
+0 800000
+8 8 1
+86 0 1d1+1 2
+10 1 5 0
+5 2 7 0
+0 0 0 0
+K
+10000 0 0 0 0 0 0
+#26710
+endaredichon large beast~
+An Endaredichon~
+A giant endaredichon is here, stamping its huge legs on the grass.
+~
+This is a very large and ponderous beast not found native to any other land
+outside of Emithoynarthe.  It looks pleasant enough and does not seem to mind
+the presence of other creatures.  However, it looks like it could be very
+dangerous in a fight if it were angered or disturbed in a violent way.
+~
+8 268435456 0 Y
+46 -25 -20 40d40+15000 8d8+140
+0 2100000
+8 8 1
+86 0 1d1+1 3
+8 2 10 0
+10 4 10 0
+2 2 20 0
+0 1 0 0
+K
+20000 0 0 0 0 0 0
+#0
+$~

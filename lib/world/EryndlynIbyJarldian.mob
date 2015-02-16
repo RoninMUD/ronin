@@ -1,0 +1,652 @@
+#5100
+orc slave~
+The Orc Slave~
+An Orc slave is standing here, cringing in fear at your approach.
+~
+This pathetic orc slave screams in horror as you approach him.  He tries to
+scurry away and thinks by hiding behind a rock that he is safe in this drowish
+community. You almost feel sorry for the thing, for slaves of any kind 
+are whipping posts for its master.
+~
+138 0 -450 Y
+20 12 9 10d10+11 4d5+1
+0 10000
+8 8 1
+96 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5101
+drow soldier guard~
+A drow soldier~
+a drow soldier walks around here, making his rounds.
+~
+Peering from above his perched Lizard mount, this drow rider does his
+routine runs about the city.  He is armed with a sharp dirk, and a cowl 
+behind his hooded cloak.  His sight is keen and sharp, and always on the
+lookout for intruders.  He always checks over his shoulders for
+backstabbers and trots slowly with his lizard.
+~
+104 285245448 -1000 Y
+50 -11 -1 50d40+2300 10d6+9
+9000 450000
+8 8 1
+99 0 100d100+600 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5102
+drow noble warrior~
+A Drow Noble~
+With a twirl of his cape, this drow elf reveals his concealed weapons.
+~
+This Drow elf isn't a commoner by any sense.  Raised in a powerful
+ranked house, this drow carries along a class which has importance in
+this city's hierarchy.  I'd beware if I were you, drow nobles are given
+the finest education in butchering 101.
+~
+40 285245448 -1000 Y
+51 -11 -3 50d50+9000 10d6+22
+50000 700000
+8 8 1
+99 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5103
+drow arch-mage mage~
+The Arch-Mage of Tzjar-Fey~
+A Powerful Spellcaster stands here, deep in a trance.
+~
+A black hood draped over his face, this dark elf looks extremely dangerous
+and could very well kill you with a single word.  Levitating in mid air,
+he studies you calmly, trying to figure out how you got into his humble home.
+~
+16777259 553648266 -1000 Y
+55 -11 -1 12d12+9999 15d10+10
+100000 900000
+8 8 1
+99 4096 100d100+1000 5
+1 1 20 141
+1 2 10 110
+1 2 20 93
+1 2 20 5
+1 2 20 8
+0 0 0 0
+K
+0 0 0 0 0 0
+#5104
+drow priestess~
+The Drow Priestess of Dagoor~
+A Drow Priestess is standing here, snarling in rage!
+~
+These dark elves are the daughters of the house's matron mother, and after 
+decades of intensive discipline and training, they attain the ranks of
+priestess and high priestess of Dagoor.  In this matriarchal society,
+it is only the women who has the upper hand and it is they that are the
+more feared gender, for the females attain the more powerful spells under
+Dagoor's omnipotent guidance.
+~
+43 25165832 -1000 Y
+55 -11 -3 50d100+8000 11d5+30
+4000 500000
+8 8 2
+99 4288 100d100+5000 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5105
+drow apprentice~
+Drow apprentice~
+A drow donned in black robes is here, his hands outstretched.
+~
+Eyes closes and hands swirling in the air in silent trance, this drow elf
+is in the mists of casting a powerful spell.  Apparently, his job is to
+recharge the stone pillar in the center of town -- the time clock of the drow
+elves, and is not aware of any dangers surrounding him.  This is a routine
+trip by drow standards and only apprentices embark on this opportunity for
+practice.
+~
+11 25176072 -1000 Y
+51 -4 -1 1d1+3000 10d3+14
+10000 200000
+8 8 1
+99 4296 1d1+3000 1
+1 6 50 36
+0 0 0 0
+K
+0 0 0 0 0 0
+#5106
+drow weaponmaster zarc~
+Zarc Tzjar-Fey, Weaponmaster~
+The Weaponmaster of Tzjar-Fey is here, crouched in a fighting stance.
+~
+Armed with dueling scimitars, this drow elf is extremely dangerous and carries
+the reputation of the best killer in his craft.  Scars and battle wounds
+cover his body, along with a muscular build and sharp eye which makes him
+most feared in the realm of the drow.  Snarling fiercely at you, he charges!
+~
+43 268437512 -1000 Y
+55 -11 -5 12d25+9000 12d9+25
+15000 800000
+8 8 1
+99 0 10d10+5000 2
+1 6 40 36
+1 6 60 102
+0 0 0 0
+K
+0 0 0 0 0 0
+#5107
+drow matron mother lower~
+A Matron Mother~
+A Matron Mother of a lower house is here, screaming out orders.
+~
+Bellowing and screaming in rage, this matron mother does not look happy.  You
+have violated her house and now she will look to end your pitiful existence.
+~
+16777259 41943048 -1000 Y
+55 -11 1 12d50+4800 10d8+40
+40000 600000
+8 8 2
+99 4096 100d100+1000 1
+1 2 30 32
+0 0 0 0
+K
+0 0 0 0 0 0
+#5108
+drow matron mother first~
+Matron Tzjar-Fey~
+A Drow Matron Mother rests here high upon her throne.
+~
+This is the fabled matron mother of the first house of Eryndlyn.  She has
+been here since the dawn of the city's birth and looks as if she can withstand
+another major turn in the city's history.  Matron Tzjar-Fey looks to be
+tired, but strong in her ways of Dagoor.  She is 6 centuries old, but drow
+history records her younger than her actual age.  She sits on her throne, 
+fuming and diabolical, wondering why intruders are in her private chambers.
+~
+16777259 813697152 -1000 Y
+55 -12 -4 100d100+6000 10d10+70
+100000 1000000
+8 8 2
+99 4096 100d100+1000 3
+1 1 20 141
+1 2 50 80
+1 6 25 28
+0 0 0 0
+K
+0 0 0 0 0 0
+#5109
+illithid~
+An Illithid~
+A one-eyed, ten-tentacle monstrosity hovers before you, arms crossed.
+~
+Not much is known about the illithids, however, they are dangerous adversaries
+by reputation for they can easily control the weak-mined and naive.  They are
+known simply as the "mind-flayers" and they can destroy you with one thought.
+They stand about 6 feet tall, with hideous mauve skin that glistens with slime.
+The head is octopus-like with a single eye and ten dangling tentacles.  They
+are also known for their skill in magic and battle tactics.
+~
+43 671121418 -1000 Y
+53 -8 -6 25d5+6000 15d2+30
+60000 760000
+8 8 2
+85 0 100d100+900 3
+1 1 30 136
+1 2 20 4
+1 2 20 111
+0 0 0 0
+K
+0 0 0 0 0 0
+#5110
+goblin slave~
+Goblin Slave~
+A Goblin Slave wails in fear as you make your approach.
+~
+This pathetic goblin screams in horror as you approach him.  He tries to
+scurry away and thinks by hiding behind a rock that he is safe in this drowish
+community. You almost feel sorry for the thing, for slaves of any kind
+are whipping posts for its master.
+~
+138 0 0 Y
+20 12 7 10d10+11 4d5+2
+1 10000
+8 8 1
+96 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5115
+drow patrol soldier~
+A Drow Soldier~
+A Patrol Soldier is here, marching mechanically in single file.
+~
+A dark, shadowy figure lurks around here -- very aware of your presence and
+quickly moves into a well-rehearsed battle stance.
+~
+42 294944 -1000 Y
+51 -8 -1 30d20+3500 12d5+11
+10000 450000
+8 8 1
+99 0 100d100+50 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5116
+drow patrol cleric priestess~
+A Drow Priestess~
+The patrol's cleric is here, chanting something under her breath.
+~
+Flanking behind the leader of the patrol, this priestess of Dagoor chants
+a few verses and waits for the right moment to unleash her fury.
+~
+42 8685728 -1000 Y
+53 -11 0 10d100+3000 6d6+13
+10000 500100
+8 8 2
+99 4096 100d100+500 8
+1 4 30 28
+1 2 25 27
+1 3 28 93
+1 1 25 100
+1 3 25 114
+1 6 35 140
+1 2 20 96
+1 6 30 108
+0 0 0 0
+K
+0 0 0 0 0 0
+#5117
+darkmage mage drow wizard~
+A Drow Darkmage~
+The patrol's darkmage stands here, preparing to cast his destructive spells.
+~
+A powerful wizard in drowish sense, but not as important as the female cleric,
+handmaiden of Dagoor -- this dangerous mage waits in silent gesture to
+casts his spells, grabbing at a spell book under his arm.
+~
+16789546 134512664 -1000 Y
+53 -8 -4 10d90+3600 7d6+7
+12000 400000
+8 8 1
+99 4096 10d200+150 9
+1 2 15 33
+1 1 25 10
+1 3 17 137
+1 1 30 136
+1 1 25 105
+1 2 30 104
+1 6 40 98
+1 3 35 80
+1 6 50 108
+0 0 0 0
+K
+0 0 0 0 0 0
+#5125
+drow matron mother third~
+Matron Yjaarm~
+A Drow Matron Mother rests here high upon her throne.
+~
+You are looking upon the eyes of the third ranked Matron mother of this 
+city.  Yjaarm, old, but a resourceful Matron mother, has been in the ranks
+of third for practically all of her existence.  Her house is well 
+respected and has a nice complement of forces at her command.  However, 
+Yjaarm has lost her fire and desire to fight -- a fault in her trait which
+could lead to her demise.
+~
+16793642 813695104 -1000 Y
+55 -11 0 50d5+9000 10d8+21
+80000 600000
+8 8 2
+99 4096 100d100+1000 1
+1 2 30 82
+0 0 0 0
+K
+0 0 0 0 0 0
+#5126
+drow matron mother fourth~
+Matron Quehvar~
+A Drow Matron Mother rests here high upon her throne.
+~
+You are looking upon the eyes of the fourth ranked Matron mother of this 
+city.  Quehvar, a young matron mother by drow standards, has a hungry 
+desire to move up in rank.  Known for her vicious fire in battle, she is
+also a persistent political figure in the drow ranks.  Most undoubtedly, 
+we can expect high things in the future from this dark elf.
+~
+16793642 813695104 -1000 Y
+55 -11 0 40d4+7500 10d7+19
+80000 600000
+8 8 2
+99 4096 100d100+1000 1
+1 2 30 26
+0 0 0 0
+K
+0 0 0 0 0 0
+#5127
+drow matron mother second~
+Matron Zaboral-Hashal~
+A Drow Matron Mother rests here high upon her throne.
+~
+You are looking upon the eyes of the second ranked Matron mother of this 
+city.  She is wise beyond her years and vast are her powers.  Zaboral-Hashal
+has seen much and will watch for her opportunity to move into the first 
+rank.  Laughing diabolically, she knows her time will come when she will 
+reign at the very top. Chaos rules this society, friendship and peace are 
+irrelevant.
+~
+16793642 813695104 0 Y
+55 -11 0 50d4+9800 9d8+33
+80000 600000
+8 8 1
+99 4096 100d100+1000 1
+1 2 30 95
+0 0 0 0
+K
+0 0 0 0 0 0
+#5132
+drow leader varrn~
+Varrn, Drow Patrol Leader~
+The Leader of this Patrol is standing here, barking out orders.
+~
+Armed with a pair of weapons, this dark figure appears to be leading a drow
+patrol party around the city limits, making sure all is in order.  Apparently,
+he doesn't take your presence here as common and quickly screams out orders
+to his patrol...
+~
+40 268732448 -1000 Y
+54 -11 -4 10d10+7000 15d5+8
+10000 540000
+8 8 1
+99 4096 100d100+100 1
+9 7 25 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5140
+spider sentry first~
+A Spider Sentry~
+A Spider roams around the entrance of this compound, seeking intruders.
+~
+   Crawling around here is the appointed spider of this house.  Endowed with
+sharp fangs, eight legs and a savage attitude -- this spider guard wont
+give up his position of the gate.
+~
+42 268697728 0 Y
+50 -8 3 20d50+9000 10d8+13
+10000 100000
+8 8 2
+77 0 1d1+1 1
+5 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5149
+myrlochar spider~
+Myrlochar~
+a spider crawls along the floor here, pincers seeking blood.
+~
+They are nicknamed "soul spiders" because they are the servants of Dagoor
+summoned from her dark extraplanar domain by rituals of worship and 
+supplication to the Spider Goddess.  They are tireless hunters, often 
+discovering their own gates or portals to other planes.  Vicious and cruel
+in their attacks on weaker creatures, myrlochar act as though they are on
+a perpetual hunting and killing spree -- till they encounter an opponent
+strong enough to slay them.
+~
+268435464 0 0 Y
+45 -4 10 10d6+100 14d5+3
+100 90000
+8 8 1
+77 0 1d1+1 1
+5 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5153
+svirfneblin deep gnome~
+A svirfneblin~
+A deep gnome is standing here happily, mining the stone.
+~
+This deep gnome loves his art, and that art is mining the rock of these 
+caverns. Completely hairless, this short creature of the dark is much 
+in tune with the stone.  It is said that these gnomes have the power to call
+upon the powers of stone elements to aid them battle, especially with the
+drow city not far away from this location.  They are fearless fighters, though 
+you cannot picture them as being violent.
+~
+72 32800 500 Y
+27 -7 10 20d26+1000 3d2+3
+2000 110000
+8 8 1
+70 0 1d1+70 1
+1 6 100 102
+0 0 0 0
+K
+0 0 0 0 0 0
+#5158
+rock elemental~
+A rock elemental~
+A Towering Rock Elemental is here, watching over the gnomes.
+~
+Created from the ashes and rock of the earth, this elemental watches over
+the gnome camp from drow invaders.  Blue flames flashes from his eyes, 
+arms crosses and standing tall -- this guardian looks very intimidating.
+~
+8 268468256 1000 Y
+30 -8 5 1d1+5000 6d7+6
+9000 330000
+8 8 0
+64 0 1d1+69 1
+1 6 100 99
+0 0 0 0
+K
+0 0 0 0 0 0
+#5167
+dwarf duergar merchant caravan~
+Duergar Dwarf~
+A Duergar Dwarf is here with his caravan, ready to move into city limits.
+~
+Before you stands a devious grinning dark dwarf, bring his wares into Eryndlyn
+looking for a market.  He knows that dealing with such a dangerous race is
+hazardous to his health, but worth the riches if he succeeds in selling his
+products.
+~
+16394 294912 -500 Y
+29 -6 0 2d200+1000 4d6+10
+10000 200000
+8 8 1
+71 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5168
+statue spider jade dagoor~
+Statue of Dagoor the Arachnid Queen~
+[1] A Jade Statue of the Arachnid Queen looms here, guarding the city gates.
+~
+These animated stone constructs are guarding the border of their city.
+They might look and seem inanimate, but their sense are keen and can kill
+you if you try to pass through these gates.  They possess sharp-tipped 
+mandibles and their saw-edged legs are studded with a magical treated jade.
+Their eyes look vacant and undisturbed, but in actually, they never stop
+moving, scanning the area for intruders and unwanted guests.
+~
+67108874 813735976 -1000 Y
+51 -8 1 1d1+7000 10d6+15
+1000 300000
+8 8 0
+87 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5169
+lizard huge~
+A Huge lizard~
+A Huge Lizard paces around here, diligently waiting for his master.
+~
+Green scaled and two sharp horns, this fine creature makes for a good riding
+mount in the underground.  He shows signs of intelligence as you into his
+eyes -- almost telling you to watch who you fight, for he seems confident in
+kicking your ass.
+~
+8 33857536 0 Y
+40 2 0 3d20+1000 3d8+9
+1000 30000
+8 8 1
+80 0 1d1+1 1
+8 1 30 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5175
+rogue drow elf~
+A Drow Rogue~
+From the shadows emerges a drow elf, weapons blazing a red hue.
+~
+Hiding his face in the dark, this looming figure marks your every move --
+watching you with his innate ability of infravision.  He seems to be 
+following you for some reason unknown and doing a good job, for you 
+have not detected any trackers tagging behind.  Before completing your
+next thought, this dark elf draws his weapons and greets your with a snarl.
+~
+104 269254664 -1000 Y
+52 -12 -5 40d30+4800 10d6+10
+10000 550000
+8 8 1
+99 0 100d100+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5177
+Dgarzah Drow rogue Leader~
+Dgarzah, leader of Velkyn Velve~
+A figure in the shadows examines you coolly, hands caressing a hidden weapon.
+~
+Hiding in the shadows, this slender drow elf studies you in the corner.
+However, in a short while reveals himself and wields his short-sword.
+Growling and waving his weapon dangerously, you back away.  Maybe you should
+reconsider fighting such a powerful foe.
+~
+10 268470280 -1000 Y
+54 -8 0 50d20+5000 10d6+18
+50000 300000
+8 8 1
+99 8192 0d0+0 3
+2 2 25 0
+1 6 40 36
+1 6 60 102
+0 0 0 0
+K
+0 0 0 0 0 0
+#5184
+spider sentry third~
+A Spider Sentry~
+A Spider roams around the entrance of this compound, seeking intruders.
+~
+   Crawling around here is the appointed spider of this house.  Endowed with
+sharp fangs, eight legs and a savage attitude -- this spider guard wont
+give up his position of the gate.
+~
+42 268697728 0 Y
+50 -8 3 20d50+9000 8d10+12
+10000 100000
+8 8 2
+77 0 1d1+1 1
+5 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5187
+drow wizard yjarrm~
+Drow Wizard of Yjarrm~
+The House Wizard of Yjarrm is sitting here, juggling balls of flame.
+~
+Only a small novice in the art of spellcasting, this so called wizard
+feverishly conducts his experiments, hoping to revolutionize the world...
+~
+16777258 16777352 -500 Y
+51 -8 3 1d1+4000 8d10+34
+50000 400000
+8 8 1
+99 4096 100d100+500 1
+1 2 50 30
+0 0 0 0
+K
+0 0 0 0 0 0
+#5189
+spider sentry fourth~
+A Spider Sentry~
+A Spider roams around the entrance of this compound, seeking intruders.
+~
+   Crawling around here is the appointed spider of this house.  Endowed with
+sharp fangs, eight legs and a savage attitude -- this spider guard wont
+give up his position of the gate.
+~
+42 268697728 0 Y
+50 -8 3 20d50+9000 8d10+12
+100000 100000
+8 8 2
+77 0 1d1+1 1
+5 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5191
+spider sentry second~
+A Spider Sentry~
+A Spider roams around the entrance of this compound, seeking intruders.
+~
+   Crawling around here is the appointed spider of this house.  Endowed with
+sharp fangs, eight legs and a savage attitude -- this spider guard wont
+give up his position of the gate.
+~
+42 268697728 0 Y
+50 -8 3 20d50+9000 8d10+13
+10000 100000
+8 8 2
+77 0 1d1+1 1
+5 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5197
+myconid mushroom~
+Myconid~
+A Huge Mushroom-Stalk shambles around here.
+~
+This mushroom walks around mindlessly and without any indication of
+contentment from life.  They are impressively huge however, towering a good
+10 feet tall.  However, they seem a little green around the edges... 
+~
+16924812 268435456 1000 Y
+45 -11 1 5d5+9600 5d5+20
+10000 300000
+8 8 1
+78 8 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5198
+drow guard elf~
+Drow Guard~
+Stationed here is a slender drow elf, weapons drawn.
+~
+A glint of light flashes from this elfish descendant's eye, grinning at you with
+evil intent.  Once, dark elves were a part of the elven race which roamed the
+world's forests, but their selfish inclinations and fascination with the ways
+of evil caused a civil war amongst the elves.  Eventually, these drow elves
+were forced into the depths of the earth, and since then few have seen a
+dark elf. Hopefully you will live this encounter, for they are a merciless race.
+~
+16426 268697600 -1000 Y
+46 -8 -2 50d40+1500 10d6+7
+6000 350000
+8 8 1
+99 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

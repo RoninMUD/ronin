@@ -1,0 +1,179 @@
+#21100
+stone gargoyle~
+A Stone Gargoyle~
+A Large Stone Structure paces slowly about here.
+~
+   This gargoyle is made from pure marble.  It stands about ten feet tall
+and looks to weigh about five tons.  It slowly walks back and forth in front
+of the gate, blocking any desire of further progression.  It is very smooth
+and is white and black speckled.  It grunts as it passes you, not even
+noticing your presence.
+~
+10 134479872 -1000 Y
+45 -8 -5 200d10+9000 10d2+15
+50000 1000000
+8 8 1
+79 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21101
+centaur large~
+A Large Centaur~
+A large centaur stands here, preparing for battle.
+~
+   Here stands a genetic fluke of nature.  His upper body is that of a man,
+muscles bulging and long, wavy-brown hair blowing in the wind.  His left hand 
+grips a large shield, while his right hand is clutched in a fist as he prepares
+for battle.  The lower portion of his body is that of a horse.  The short, 
+brown fur is nicely groomed and his tail flicks as he coldly gazes at you.
+The muscles in his legs prove that he could easily outrun you over any 
+terrain and his upper bust heaves as he breaths heavily and gallops about.
+~
+104 32768 -1000 Y
+45 -10 -5 500d5+6150 20d4+10
+30000 900000
+8 8 1
+68 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21102
+enormous hobgoblin~
+An Enormous Hobgoblin~
+An enormous hobgoblin is digging in the dirt, searching for food.
+~
+   This large, orange-skinned creature oozes with a sticky mucus.  His talons
+extend almost as long as does your arm.  He stands at a proud three meters
+tall and flexes his muscles while walking towards you.  As he grins you can
+see his razor-sharp teeth and his tongue, which falls out revealing that it
+is just about as long as his claws are.  His bright red eyes send fear into
+the hearts and minds of all mortals.
+~
+40 32768 -1000 Y
+45 -10 -2 100d10+5800 7d5+40
+30000 900000
+8 8 1
+62 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21103
+troll ugly~
+An Ugly Troll~
+An Ugly Troll stands here scratching his head.
+~
+   A large, blue, muscular beast stands here grooming himself.  His long,
+grey, ratty hair is tangled in many knots and his nose sticks out about ten
+centimeters.  His grimace shows he has about three teeth left.  His body is
+covered in warts, and he hides his shame with nothing but a loincloth.  As he
+grooms himself with one hand, he scratches himself with another.  Although he
+is shorter than six feet, he sure looks as if he could tear you apart.
+~
+44 0 -1000 Y
+45 -10 -4 200d5+6350 50d2+0
+30000 1100000
+8 8 1
+75 0 20d20+50 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21104
+unicorn black~
+A Black Unicorn~
+A large, black unicorn wildly gallops around you.
+~
+   This black horse stands about two meters tall at the shoulder and has a
+shiney, black main.  A large horn about a meter long sticks out of the top of
+this wild beast's forehead.  As he prances about you see the muscles in his
+legs flex and can tell he'd put up quite a fight.  He whinnies and leaps over
+tombstones left and right.  As he gets up on his hind legs he towers over you
+as if he were on top of the world.
+~
+40 0 -1000 Y
+45 -10 -4 200d5+6100 10d5+16
+30000 700000
+8 8 1
+86 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21105
+wraith giant~
+A Giant Wraith~
+A very dark wraith quickly darts about here.
+~
+   This newly-born spirit to the underworld is completely black.  You can't
+see any features, it's just a large blob of black resembling the shape of a
+person in tattered robes.  He moves quickly and as you glance at him he runs
+to hide behind something.  He stares at you in complete fear and just as 
+you decide he's harmless he attacks...
+~
+40 0 -1000 Y
+45 -15 -5 200d10+5300 10d7+25
+50000 950000
+8 8 1
+62 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21106
+vampire old~
+A very old vampire~
+A wrinkled vampire stands here, sipping on a martini.
+~
+   As you gaze at this ancient undead being, he seems to smile and starts to
+chuckle to himself in a deep, coarse voice.  His black and red robes are made
+from silk and his two fangs stick out of his mouth slightly, for time has
+withered his once youthful skin.  His blood-stained lips part as he drops his
+martini and opens his mouth widely to emit a loud hissing sound.
+~
+40 0 -1000 Y
+45 -10 -4 100d20+5300 8d10+26
+30000 900000
+8 8 1
+54 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21109
+root tree large~
+A Large Tree Root~
+A large root is sticking up out of the ground here.
+~
+   This enormous root stares back at you with glowing red eyes.  Unfortunately
+for you, you're screwed.  I hope you have someone to get your gear.
+~
+536870954 402720896 -1000 Y
+50 -20 0 200d10+11000 20d2+30
+200000 2500000
+8 8 1
+0 0 1d1+1 1
+10 5 3 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#21110
+skeleton skeletal warrior knight~
+The Skeletal Knight~
+A knight holding only a torch and a sword stands here, ready for battle.
+~
+   Here stands a withered, old knight who has seen more battles than you have
+seen sunsets.  His old, chipped bone sword and his ancient torch are artifacts
+treasured by all.  He is the oldest thing alive, if you consider him to be 
+alive at all.  He's won many battles, and been defeated many times, but how can
+you kill something that's already dead...?
+~
+42 402917504 -1000 Y
+50 -20 -6 200d20+15000 6d5+66
+350000 1200000
+8 8 1
+53 0 50d50+100 3
+1 5 5 82
+1 3 10 136
+1 3 5 143
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#0
+$~

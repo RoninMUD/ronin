@@ -1,0 +1,1325 @@
+#9900
+Entrance to the Frozen Plains~
+  You are now standing on a massive piece of land covered with snow and ice
+which is constantly pouring out from the sky.  You can make out an exit to
+the north through more snow and ice.  Underneath all your garments you have
+a feeling you've never felt in the rest of this world, you feel very cold
+and you begin shivering aggressively.
+~
+99 0 8
+D0
+~
+~
+0 -1 9901
+S
+#9901
+Frozen Plains~
+  You are now standing in the frozen plains which stretch out further to the
+north and east.  You realize you should have packed more accordingly to the
+weather.  You see many animals playing in the snow around you, though they
+are used to the cold much more than you are.
+~
+99 0 8
+D0
+~
+~
+0 -1 9906
+D1
+~
+~
+0 -1 9902
+D2
+~
+~
+0 -1 9900
+S
+#9902
+Frozen Plains~
+  You are now standing in the waist deep snow.  Though it may be cold to the
+touch, it is still warmer than being exposed to the winds which tear at your
+face and upper body.  You can see blurry visions of more snow to the north,
+east, and west.
+~
+99 0 8
+D0
+~
+~
+0 -1 9905
+D1
+~
+~
+0 -1 9903
+D3
+~
+~
+0 -1 9901
+S
+#9903
+Frozen Plains~
+You have moved your way into a snow drift, which nearly conceals your
+whole body.  You peek over the snow to see ahead, and must blink constantly
+so that your eyes don't become glazed with frost and stuck open.  If you
+become blinded you will most likely die here in the snow.  Pale white
+blankets of snow extend to the north and west.
+~
+99 0 8
+D0
+~
+~
+0 -1 9904
+D3
+~
+~
+0 -1 9902
+S
+#9904
+Frozen Plains~
+  You are standing in waist deep snow.  Though it may be cold to the touch,
+it is still warmer than being exposed to the winds which tear at your face
+and upper body.  You can see blurry visions of more snow to the north, west
+and south.
+~
+99 0 8
+D0
+~
+~
+0 -1 9909
+D2
+~
+~
+0 -1 9903
+D3
+~
+~
+0 -1 9905
+S
+#9905
+Frozen Plains~
+  Realizing you are lost, it might be a good idea to scream for help now.  Ba-
+cktracking your footprints will be of no help since they have already been bl-
+own away by the terrential winds.  For all you know you have been going in
+circles.  The plains stretch out in all directions.
+~
+99 0 8
+D0
+~
+~
+0 -1 9908
+D1
+~
+~
+0 -1 9904
+D2
+~
+~
+0 -1 9902
+D3
+~
+~
+0 -1 9906
+S
+#9906
+Frozen Plains~
+  The snow pours down so fast that you must keep moving to
+prevent from being buried alive. There seems to be fresh animal
+prints on the ground, however they are quickly covered up by
+more snow. Your frost glazed eyes can make out exits to the
+north, east, and south.
+~
+99 0 8
+D0
+~
+~
+0 -1 9907
+D1
+~
+~
+0 -1 9905
+D2
+~
+~
+0 -1 9901
+S
+#9907
+Frozen Plains~
+  You are now standing waist deep in snow. Though it may be
+cold to the touch it is still warmer than being exposed to the winds
+which tear at your face and upper body. A ship of some sort seems
+to have crashed into a chunk of ice west of here.
+~
+99 0 8
+D0
+~
+~
+0 -1 9912
+D1
+~
+~
+0 -1 9908
+D2
+~
+~
+0 -1 9906
+D3
+You see a ship that seems to have crashed into an iceberg.
+~
+~
+0 -1 9923
+S
+#9908
+Frozen Plains~
+  You have moved your way into a snow drift, which nearly conceals your whole
+body.  You peek over the snow to see ahead, and must blink constantly so that
+your eyes dont become glazed with frost and stuck open.  If you become blinded
+you will most likely die here in the snow.  The plains stretch out in all di-
+rections.
+~
+99 0 8
+D0
+~
+~
+0 -1 9911
+D1
+~
+~
+0 -1 9909
+D2
+~
+~
+0 -1 9905
+D3
+~
+~
+0 -1 9907
+S
+#9909
+Frozen Plains~
+  The snow pours down so fast that you must keep moving to prevent from being
+buried alive.  There seems to be fresh animal prints on the ground, however
+they are quickly covered up by more snow.  Your frost covered eyes can make
+out exits to the north, south, and east.
+~
+99 0 8
+D0
+~
+~
+0 -1 9910
+D2
+~
+~
+0 -1 9904
+D3
+~
+~
+0 -1 9908
+S
+#9910
+Frozen Plains~
+  You must have lost your feet somewhere behind you, because you sure as
+hell cant feel them anymore.  You need to get out of the wind and snow
+fast so you can thaw out a bit.  A mountain, too steep to climb, rises in
+the east.  Slowly creeping down the mountain is a glacier the size of
+Midgaard, it is slowly concealing what looks like a tunnel.  You can make
+it in if you hurry.  The frozen plains stretch out to the north, south,
+and west.
+~
+99 0 8
+D0
+~
+~
+0 -1 9904
+D1
+You see a large glacier covering an entrance to the mountain.
+~
+glacier~
+1 9908 9913
+D2
+~
+~
+0 -1 9909
+D3
+~
+~
+0 -1 9911
+S
+#9911
+Frozen Plains~
+  Realizing you are lost, it might be a good idea to scream for help now.
+Backstracking your footprints will be of no help since they have already
+been blown away by the terrential winds.  For all you know you have been
+going in circles.  The plains stretch out in all directions.
+~
+99 0 8
+D0
+~
+~
+0 -1 9905
+D1
+~
+~
+0 -1 9910
+D2
+~
+~
+0 -1 9908
+D3
+~
+~
+0 -1 9912
+S
+#9912
+Frozen Plains~
+  You have moved your way into a snow drift, which nearly conceals your
+whole body.  You peek over the snow to see ahead, and must blink constantly
+so that your eyes dont become glazed with frost and stuck open.  If you
+become blinded you will most likely die here in the snow.  The plains
+stretch out to the north, east, and south.
+~
+99 0 8
+D0
+~
+~
+0 -1 9906
+D1
+~
+~
+0 -1 9911
+D2
+~
+~
+0 -1 9907
+S
+#9913
+A Tunnel of Fossils~
+  All around you are ancient fossils which have stuck together over the many
+years they have been here.  The blistering cold wind no longer reaches you
+and you feel a sense of warmth coming over your body.  Looking in the moist
+earth below your feet you notice footprints, and as you look eastward in the
+direction they are pointing you notice an ancient building which has been
+buried by dirt and snow.  To the west is the frozen plains.
+~
+99 13 0
+D1
+~
+~
+0 -1 9915
+D3
+~
+glacier~
+1 -1 9910
+S
+#9914
+A Passage~
+  You are standing in the northern passage through the ancient building.
+All of the walls are made of stone and are carved with detailed designs,
+describing a time very long ago.
+~
+99 9 0
+D1
+~
+door~
+1 9901 9919
+D2
+~
+~
+0 -1 9915
+S
+#9915
+An Ancient Building~
+  To the east you see a large stone wall with very detailed
+carvings that seem to tell a story. There is no noticable
+door, however you would probably find one if you looked
+around. Whatever lives within these cold stone walls is
+probably extremely old.
+~
+99 13 0
+D0
+~
+~
+0 -1 9914
+D3
+~
+~
+0 -1 9913
+E
+carvings~
+A race of nomadic people are shown expressionless in the first
+carving. The second shows an old man hanging his head in shame
+as he walks away from his tribe.  Some have angry looks on their
+faces while others have looks of pity.  In the third and final
+carving you see the same old man delicately crafting stories into
+a stone wall, probably the same one that stands before you.
+~
+S
+#9918
+Tunnel Entrance~
+  The light from the north has faded out, but a new light can
+now be seen to the east. The walls are plain with the exception
+of a few primitive paintings of bears and deer.
+~
+99 0 0
+D0
+~
+~
+0 -1 9919
+D1
+~
+~
+0 -1 9920
+E
+paintings~
+You notice stick figures on the walls of the tunnel.  They are
+painted in black and red colors, but have almost worn off over
+time. You notice these paintings resemble bears and deer, but
+only those who have seen the warmer parts of these lands would
+be able to recognize them.
+~
+S
+#9919
+Inside~
+  You have made your way inside yet to find another tunnel
+leading south. The walls are all made of a light brown stone
+with tiny crystals in them, which reflect what little light is
+coming in from the west.
+~
+99 0 0
+D2
+~
+~
+0 -1 9918
+D3
+~
+door~
+1 9901 9914
+S
+#9920
+Ancient Tunnel~
+  It looks like whoever carved all the carvings outside this place
+has been hard at work in this tunnel.  Carvings of large animals
+pop out of the walls, and some of them seem to have a tint of color.
+Your amazed at how life-like these carvings are considering how
+old they are. You can still hear the wind howl from the west, but
+if anything lives further down this tunnel it is keeping quiet. Maybe
+it knows your coming.
+~
+99 0 0
+D3
+~
+~
+0 -1 9918
+D5
+~
+~
+0 -1 9921
+S
+#9921
+Ancient Tunnel~
+  You are now at the end of the tunnel. A huge stone door
+which leafy decorations have been carved into blocks your
+way east. If you push hard enough you might be able to move
+it open.
+~
+99 0 0
+D1
+~
+stone~
+8 -1 9922
+D4
+~
+~
+0 -1 9920
+S
+#9922
+The House of a Cambrian Hermit~
+  A strange force slams the door shut, leaving you with no way out
+of this cold one roomed house.  As adorned as the outside was, the
+inside is much different. There are no carvings in the walls, just a
+plain tannish rock worn smooth from age. There is also a stone desk
+in the corner, where someone has been writing quite a bit. The only 
+light is coming from a candle on the desk, leaving more to the
+imagination than to your eyes.
+~
+99 0 0
+S
+#9923
+Shipwreck~
+  This ship is so beat up, even if it could be freed from the ice
+surrounding it, it wouldn't be sea-worthy. The ice is so thick
+below your feet that you can barely see the wooden planks that
+hold the ship together. Be careful so you don't slip.
+~
+99 4 8
+D0
+~
+~
+0 -1 9924
+D1
+~
+~
+0 -1 9907
+D2
+~
+~
+0 -1 9925
+S
+#9924
+North End of the Ship~
+This is where most of the damage to the ship has occured.
+The ship has nearly wrapped its front end around a piece of
+ice jutting out of the mainland. Wooden boards and splinters
+covered by a thin sheet of snow cover the deck. The ship
+suddenly shifts throwing you around, you have a sick feeling
+in your stomach.
+~
+99 0 8
+D2
+~
+~
+0 -1 9923
+S
+#9925
+South End of the Ship~
+  This end of the ship is bobbing up and down freely in the water.
+You are jarred from one side of the ship to the other as small pieces
+of ice slam up against the ship from the water. You see stairs that
+go to the cargo deck of the ship, but the sound of water below your
+feet gives you second thoughts about about searching the ship any
+further.
+~
+99 0 8
+D0
+~
+~
+0 -1 9923
+D5
+~
+~
+0 -1 9926
+S
+#9926
+Cargo Deck~
+  You are standing knee deep in freezing water. Wooden crates
+slam up against your body as you wade your way around. If you
+decide to go any further it would be a wise idea to bring some
+others to help you.
+~
+99 9 0
+D0
+~
+~
+0 -1 9927
+D4
+~
+~
+0 -1 9925
+S
+#9927
+Cargo Deck~
+  Ice cold water rushes around the cracks of a door to your north
+and violently slams against your body. You try opening it but it
+seems to be locked. There's such great pressure against the door,
+you'd be better off leaving it alone.
+~
+99 9 0
+D0
+~
+door~
+2 9907 9928
+D2
+~
+~
+0 -1 9926
+S
+#9928
+Storage Room~
+  The water is so high in this room that your head hits the ceiling
+as you bob up and down. Looking below your feet through the
+crystal clear water, you notice a hole in the boat that you might
+be able to squeeze through. Hold your breath...
+~
+99 13 0
+D2
+~
+door~
+1 9907 9927
+D5
+~
+~
+0 -1 9929
+S
+#9929
+Underwater Below the Frozen Plains~
+  Bright sunlight radiates through the ice above you, allowing
+you to see everything. Although all you can see is water, chunks
+of ice, and a seal here and there. The bright light and a tint of
+blue together make a sight you'd only seen in your dreams until now.
+~
+99 0 6
+D1
+~
+~
+0 -1 9930
+D2
+~
+~
+0 -1 9932
+D4
+~
+~
+0 -1 9928
+S
+#9930
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D1
+~
+~
+0 -1 9931
+D3
+~
+~
+0 -1 9929
+S
+#9931
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D1
+~
+~
+0 -1 9932
+D3
+~
+~
+0 -1 9930
+S
+#9932
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9929
+D1
+~
+~
+0 -1 9933
+D2
+~
+~
+0 -1 9935
+D3
+~
+~
+0 -1 9931
+S
+#9933
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9930
+D1
+~
+~
+0 -1 9934
+D2
+~
+~
+0 -1 9936
+D3
+~
+~
+0 -1 9932
+S
+#9934
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9931
+D1
+~
+~
+0 -1 9935
+D2
+~
+~
+0 -1 9937
+D3
+~
+~
+0 -1 9933
+S
+#9935
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9932
+D1
+~
+~
+0 -1 9936
+D2
+~
+~
+0 -1 9938
+D3
+~
+~
+0 -1 9934
+S
+#9936
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9933
+D1
+~
+~
+0 -1 9937
+D2
+~
+~
+0 -1 9939
+D3
+~
+~
+0 -1 9935
+S
+#9937
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9934
+D1
+~
+~
+0 -1 9938
+D2
+~
+~
+0 -1 9940
+D3
+~
+~
+0 -1 9936
+S
+#9938
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9935
+D1
+~
+~
+0 -1 9939
+D2
+~
+~
+0 -1 9941
+D3
+~
+~
+0 -1 9937
+S
+#9939
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9936
+D1
+~
+~
+0 -1 9940
+D2
+~
+~
+0 -1 9942
+D3
+~
+~
+0 -1 9938
+S
+#9940
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9937
+D1
+~
+~
+0 -1 9941
+D2
+~
+~
+0 -1 9943
+D3
+~
+~
+0 -1 9939
+S
+#9941
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9938
+D1
+~
+~
+0 -1 9942
+D2
+~
+~
+0 -1 9944
+D3
+~
+~
+0 -1 9940
+S
+#9942
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9939
+D1
+~
+~
+0 -1 9943
+D2
+~
+~
+0 -1 9945
+D3
+~
+~
+0 -1 9941
+S
+#9943
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9940
+D1
+~
+~
+0 -1 9944
+D2
+~
+~
+0 -1 9946
+D3
+~
+~
+0 -1 9942
+S
+#9944
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9941
+D1
+~
+~
+0 -1 9945
+D2
+~
+~
+0 -1 9947
+D3
+~
+~
+0 -1 9943
+S
+#9945
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9942
+D1
+~
+~
+0 -1 9946
+D2
+~
+~
+0 -1 9948
+D3
+~
+~
+0 -1 9944
+S
+#9946
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9943
+D1
+~
+~
+0 -1 9947
+D2
+~
+~
+0 -1 9949
+D3
+~
+~
+0 -1 9945
+S
+#9947
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9944
+D1
+~
+~
+0 -1 9948
+D2
+~
+~
+0 -1 9950
+D3
+~
+~
+0 -1 9946
+S
+#9948
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9945
+D1
+~
+~
+0 -1 9949
+D2
+~
+~
+0 -1 9951
+D3
+~
+~
+0 -1 9947
+S
+#9949
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9946
+D1
+~
+~
+0 -1 9950
+D2
+~
+~
+0 -1 9952
+D3
+~
+~
+0 -1 9948
+S
+#9950
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9947
+D1
+~
+~
+0 -1 9951
+D2
+~
+~
+0 -1 9932
+D3
+~
+~
+0 -1 9949
+S
+#9951
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. You have no
+idea where you are or where you're going, but you had better get
+there fast!
+~
+99 0 6
+D0
+~
+~
+0 -1 9948
+D1
+~
+~
+0 -1 9952
+D2
+~
+~
+0 -1 9933
+D3
+~
+~
+0 -1 9950
+S
+#9952
+In the Freezing Water~
+  You can still see the brown mass behind you, which is the ship
+you came out of. Every so often you must float to the surface of
+the ice to catch your breath out of the air pockets. A landmass
+made of ice rises at a slant below your feet and meets the layer
+of ice above you to the east. Under thin parts of the ice you can
+see what looks like motherpearl.
+~
+99 0 6
+D0
+~
+~
+0 -1 9949
+D2
+~
+~
+0 -1 9934
+D3
+~
+~
+0 -1 9951
+D5
+You see a chunk of ice blocking your way.
+~
+ice~
+1 0 9953
+S
+#9953
+Entrance to a Gigantic Shell~
+  You are standing in the entrance of a massive spiral shell.  The
+walls are made of mother pearl, so shinny it nearly blinds you.  The
+ceiling is at least fifty feet above your head, whatever animal once
+lived here was big, and you don't want it coming back anytime soon.
+Above you, past the shell, you see shadows swimming about in the fr-
+eezing water, and to your east you see a tiny passage into the first
+segment of the shell.
+~
+99 8 0
+D1
+~
+~
+0 -1 9954
+D4
+~
+~
+0 -1 9952
+S
+#9954
+First Segment of a Giant Shell~
+  You are now standing in the first part of the giant shell.  As
+you look east you see more segments of the shell, and to your west
+you see the entrance to the shell.  There are small puddles of wa-
+ter on the ground that have come from the water outside.  You not-
+ice that your boots have become very heavy as the water freezes on
+your feet.  It is light right here but as you look further in the
+shell you notice it gets darker.
+~
+99 8 0
+D1
+~
+~
+0 -1 9955
+D3
+~
+~
+0 -1 9953
+S
+#9955
+Second Segment of a Giant Shell~
+  You have moved your way into the second segment of this giant
+shell.  Lucky for you you brought a light, without one you would
+be blind and unaware that your friends were being mauled to death.
+Large clumps of fecal matter the size of your head are clumped
+around the room, meaning a large animal must roam these parts of
+the shell.
+~
+99 9 0
+D2
+~
+~
+0 -1 9956
+D3
+~
+~
+0 -1 9954
+S
+#9956
+Third Segment of a Giant Shell~
+  The light you brought with you seems to be playing tricks on your
+eyes now. You see what looks like human footprints in the snow, but
+for all you know they may be your own. Looking around you think you
+see shadows of someone or something running about then stopping
+to watch your next move. If you sit really quietly you can hear
+something breathing very heavily, and it isn't you.
+~
+99 9 0
+D0
+~
+~
+0 -1 9955
+D2
+~
+~
+0 -1 9957
+S
+#9957
+Fourth Segment of a Giant Shell~
+  There is strange magic going on in this segment. Snow falls from
+the ceiling onto the ground, and even seems to be going sideways
+from one side of this segment to the other side. A strange wind blows
+from further down the shell, a wind that sends a chill down your back.
+~
+99 9 0
+D0
+~
+~
+0 -1 9956
+D3
+~
+~
+0 -1 9958
+S
+#9958
+Fifth Segment of a Giant Shell~
+  You have ventured into a very dangerous part of the shell. You
+can smell fear radiating off of your body. Although you are out of
+the fierce winds from outside and above the water, you still tremble.
+A strange wind comes from the west, almost trying to force you to
+leave.
+~
+99 9 0
+D1
+~
+~
+0 -1 9957
+D3
+~
+~
+0 -1 9959
+S
+#9959
+Sixth Segment of a Giant Shell~
+  The snow in this room has ripples and waves in it, as though an
+animal of some sort with no legs has been living here. In a few spots
+you fall deep into the snow because of some apparent tunnels within
+it. Bits and pieces of shedded snake skin litter the snow. By looking
+at them you can tell the snake that left them must be about your size
+around but probably three to four times as long. A howling wind is
+coming from the north.
+~
+99 9 0
+D0
+~
+~
+0 -1 9960
+D1
+~
+~
+0 -1 9958
+S
+#9960
+Seventh Segment of a Giant Shell~
+  Large footprints in the snow litter the bottom of this segment,
+meaning something large is probably dwelling around here somewhere.
+A large iglou structure sits in the middle of your path. Maybe
+whatever it is that lives here is civilized enough to talk instead of
+fight. A strange wind from the east slams you against the sides of
+the shell.
+~
+99 9 0
+D1
+~
+~
+0 -1 9961
+D2
+~
+~
+0 -1 9959
+S
+#9961
+End of a Giant Shell~
+  A thick layer of ice and frost covers the whole room. Icicles
+hang from the top of the shell clear down to the bottom, making
+it hard to move around. This segment is quite a bit smaller than
+the others you have been in, and its sides slant inwards far in
+front of you to make a dead end. The passage you just came from
+is probably too small to get back through... you're trapped.
+~
+99 9 0
+S
+#9999
+A temporary name~
+A temporary description
+~
+99 0 0
+S
+#0
+$~

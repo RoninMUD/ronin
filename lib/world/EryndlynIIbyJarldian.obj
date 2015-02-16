@@ -1,0 +1,417 @@
+#5545
+key rock~
+a rock key~
+a piece of rock lies here.~
+~
+18 524288 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5546
+whip spiked long~
+Long Spiked Whip~
+a long whip lies here, curled up in a ball.~
+$r whip drools with anticipation as it stings $V.~
+5 134217730 8193
+2 10 3 4
+10 10000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+12 15
+#5551
+spider head~
+A head of a spider~
+A huge head is rolling around here.~
+~
+18 524288 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5567
+altar grand dagoor~
+The Grand Altar of Dagoor~
+The Grand Altar of Dagoor rests here, awaiting your tribute and worship.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+altar~
+Made from marbled stone, this magnificent altar rests here alluring and
+almost urging you to pay tribute to the Spider Goddess of Dagoor.  Getting
+a closer examination, you see caved in spots where you can place items.
+Eight long and thin spots along with a huge circular one.  What does this
+mean?
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5578
+caldron of blood~
+Cauldron of Blood~
+A Caldron is here, filled with tribute in blood.~
+~
+17 0 0
+999999 999999 13 0
+10 10 10
+100
+E
+blood~
+Swirling and swirling around is the blood collected from the high drow 
+hierarchy. Apparently, the queen periodically hungers for it and booms out 
+a demand, pushing the matrons and priestesses into order.~
+E
+caldron~
+Here lies a caldron filled with blood from the faithful drow elves that
+worship their Queen.  Matron mothers, high priestesses all come here to
+offer a tribute....in BLOOD.  They all slit their wrists and allow the blood
+to drain into the caldron, as a sign of favoritism.  Usually required, however
+unusual requests from the queen can only be answered with additional blood.~
+E
+cauldron~
+Here lies a caldron filled with blood from the faithful drow elves that 
+worship their Queen.  Matron mothers, high priestesses all come here to
+offer a tribute....in BLOOD.  They all slit their wrists and allow the blood
+to drain into the caldron, as a sign of favoritism.  Usually required, however
+unusual requests from the queen can only be answered with additional blood.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5579
+throne bones~
+Throne of Bones~
+High upon the steps of the chapel is a throne of bones.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+bones~
+You are looking about the grand throne of the Spider Queen, made from the
+very bones of the drow elves, and others that have displeased her.
+~
+E
+throne~
+You are looking about the grand throne of the Spider Queen, made from the 
+very bones of the drow elves, and others that have displeased her.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5580
+scorched abdomen~
+Scorched Abdomen~
+a black shell is lying here, glowing fiercely.~
+~
+9 135267905 513
+15 0 0 0
+10 50000 40000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#5581
+cartilage fine elastic~
+Some Fine Elastic Cartilage~
+Some pieces of fine cartilage bounces around here.~
+~
+9 183558209 65
+5 0 0 0
+10 9000 3000
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 35
+A
+18 5
+#5582
+silken cloak~
+a silken cloak~
+a long silken cloak rests here, flowing gently in the still breeze.~
+~
+9 217101313 5
+6 0 0 0
+10 5000 9000
+11
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 20
+#5583
+scorched exoskeleton armor~
+Scorched Exoskeleton~
+a scorched exoskeleton is lying here in a pile of rubble.~
+~
+9 212907329 9
+0 0 0 0
+200 10000 80000
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+B
+32768
+#5584
+belt of spider powers~
+Belt of Spider Powers~
+a powerful belt lies here, draining the light from the air.~
+~
+9 67108867 2049
+4 0 0 0
+10 120000 84444
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 -50
+#5585
+spider skin sleeves scorched~
+Scorched spider skin sleeves~
+a pair of dark sleeves lie crumpled on the ground here.~
+~
+9 0 257
+8 0 0 0
+10 10000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#5586
+spider skin leggings scorched~
+Scorched spider skin leggings~
+a pair of dark leggings lie here, crumpled and out of sight.~
+~
+9 0 33
+8 0 0 0
+10 10000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+4 2
+#5587
+terrakar relic ancient drow~
+An ancient drow relic~
+a brittle looking object lies here.~
+~
+5 137371714 8193
+0 1 1 14
+10 100000 30000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5588
+scimitar spider terrakar demonic darksteel~
+A huge, demonic darksteel Scimitar~
+a spider hilted blade is resting here.~
+$r scimitar fuses intensely in $s hands with hellfire.~
+5 137374289 8193
+23 5 8 14
+10 100000 30000
+10
+E
+arachnid~
+This weapon is made from a material unknown to the face of the mortal plane.
+It is a magical item, powers to aid evil causes, and thirsts for blood.
+There is a head of a spider on the hilt of the scimitar, it's head probing
+and seeming alive~
+E
+scimitar~
+This weapon is made from a material unknown to the face of the mortal plane.
+It is a magical item, powers to aid evil causes, and thirsts for blood.
+There is a head of a spider on the hilt of the scimitar, it's head probing
+and seeming alive~
+E
+terrakar~
+This weapon is made from a material unknown to the face of the mortal plane. 
+It is a magical item, powers to aid evil causes, and thirsts for blood. 
+There is a head of a spider on the hilt of the scimitar, it's head probing
+and seeming alive~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#5589
+scythe huge diamond bladed hilted terrakar~
+A huge, diamond bladed Scythe~
+a unicorn hilted blade rests here.~
+$r scythe becomes engulfed with a bright white light of protection.~
+5 137374785 8193
+21 5 8 3
+10 100000 30000
+10
+E
+unicorn~
+This weapon is made from a material unknown to the face of the mortal plane.
+It is a magical item, powers to aid goodly causes, and hungers for dispel evil.
+There is a head of a unicorn on the hilt of this longsword, it's head probing
+and seeming alive~
+E
+sword~
+This weapon is made from a material unknown to the face of the mortal plane. 
+It is a magical item, powers to aid goodly causes, and hungers for dispel evil.
+There is a head of a unicorn on the hilt of this longsword, it's head probing 
+and seeming alive~
+E
+terrakar~
+This weapon is made from a material unknown to the face of the mortal plane. 
+It is a magical item, powers to aid goodly causes, and hungers for dispel evil.
+There is a head of a unicorn on the hilt of this longsword, it's head probing
+and seeming alive~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#5590
+dirk ornately carved greysteel terrakar~
+Ornately-Carved greysteel Dirk~
+an eagle hilted blade rests here.~
+$r dirk grows into a huge battle-weapon.~
+5 137373249 8193
+6 5 8 9
+10 100000 30000
+10
+E
+eagle~
+This weapon is made from a material unknown to the face of the mortal plane. 
+It is a magical item, powers to aid the wielder and strengthen his will. 
+It has no substance in the ways of evil or good, and will thirst for either.
+The head of the eagle probes up and down and seems to be reading your mind.~
+E
+sword~
+This weapon is made from a material unknown to the face of the mortal plane.
+It is a magical item, powers to aid the wielder and strengthen his will. 
+It has no substance in the ways of evil or good, and will thirst for either.
+The head of the eagle probes up and down and seems to be reading your mind.
+~
+E
+terrakar~
+This weapon is made from a material unknown to the face of the mortal plane.
+It is a magical item, powers to aid the wielder and strengthen his will. 
+It has no substance in the ways of evil or good, and will thirst for either.
+The head of the eagle probes up and down and seems to be reading your mind.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+#0
+$~

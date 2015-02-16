@@ -1,0 +1,249 @@
+#18300
+third seal~
+Third seal on the dark ones prison~
+A black and white disk is lying here.~
+~
+8 0 1
+0 0 0 0
+3 25000 2000000
+50
+E
+seal third~
+   A flat disk, the size of your palm half white, half
+black, the colors separated by a sinuous line. 
+The disk is made of cuendiar, and is one of the
+seven seals on the dark ones prison. If all seven 
+are broken, The Dark One will break free of his
+prison.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18301
+sixth seal~
+Sixth seal on the dark ones prison~
+A black and white disk is lying here.~
+~
+8 0 1
+0 0 0 0
+3 25000 2000000
+50
+E
+seal sixth~
+   A flat disk, the size of your palm half white, half
+black, the colors separated by a sinuous line. 
+The disk is made of cuendiar, and is one of the
+seven seals on the dark ones prison. If all seven 
+are broken, The Dark One will break free of his
+prison.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18302
+book trade~
+a book of trade~
+A book is lying here gathering dust.~
+~
+13 0 1
+0 0 0 0
+2 1000 1000
+5
+E
+book trade~
+The book contains notes of the merchants last trips and profits.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18303
+breastplate~
+a dull breastplate~
+a dull breastplate is lying here.~
+~
+9 0 9
+24 -1 -1 -1
+10 10000 10000
+12
+E
+breastplate~
+The breastplate looks worn and dull. It cant have been polished for months.
+~
+X
+~
+0 0 0
+M
+You wear the dull breastplate.~
+You remove the dull breastplate.~
+$n wears a dull breastplate.~
+$n removes a dull breastplate.~
+A
+19 1
+A
+18 1
+A
+13 3
+#18304
+sword~
+a shining sword~
+A sword is lying here shining in the light.~
+$n swing the sword at $V, and do heavy damage.~
+5 0 8193
+0 3 3 3
+9 100000 30000
+12
+E
+sword~
+You see nothing special...
+~
+X
+$n you swing your sword at noone.~
+0 0 0
+M
+You wield the shining sword.~
+You remove the shining sword.~
+$n wields a shining sword.~
+$n removes a shining sword.~
+A
+19 15
+A
+18 2
+#18305
+key~
+a key~
+A key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 2000 1000
+100
+E
+key~
+A sturdy key.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18306
+cloak black~
+a black cloak~
+A black cloak is lying here.~
+~
+9 0 1025
+3 -1 -1 -1
+5 20000 8000
+15
+E
+cloak black~
+   The cloak is black as pitch and has a silver sword and a silver 
+dragon attached to it.
+~
+X
+~
+0 0 0
+M
+You throw the black cloak around you shoulders.~
+You remove the black cloak.~
+$n throws a black cloak around $s shoulders.~
+$n removes a black cloak.~
+A
+18 2
+A
+13 4
+#18307
+armor plate~
+plate armor~
+A plate armor is lying here.~
+~
+9 0 9
+20 -1 -1 -1
+9 20000 10000
+20
+E
+armor plate~
+A shinning plate armor.
+~
+X
+~
+0 0 0
+M
+You wear the armor.~
+You remove the armor.~
+$n straps on a plate armor.~
+$n removes a plate armor.~
+A
+18 3
+A
+13 9
+A
+52 2
+#18308
+crown roses rose~
+a crown of roses~
+A crown of twined roses is lying here.~
+~
+9 0 17
+6 -1 -1 -1
+4 200000 10000
+20
+X
+~
+0 0 0
+M
+You wear the crown on your head.~
+You remove the crown.~
+$n wears a rose crown.~
+$n removes a rose crown.~
+A
+19 2
+A
+18 -4
+A
+12 3
+#18309
+wooden pole~
+a wooden pole~
+A wooden pole is lying here.~
+~
+4 0 16385
+1 -1 -1 -1
+4 6000 1000
+30
+E
+pole wooden~
+You see nothing special...
+~
+X
+~
+0 0 0
+M
+You grab the wooden pole.~
+You let go of the wooden pole.~
+$n grabs a wooden pole.~
+$n lets go of a wooden pole.~
+A
+19 2
+A
+18 6
+#0
+$~

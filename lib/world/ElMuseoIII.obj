@@ -1,0 +1,1627 @@
+#16500
+parchment blood stained~
+a blood-stained parchment~
+A piece of blood-splattered parchment is here, attracting flies.~
+~
+32 524308 1
+16501 16516 2720 17021
+3 115249 11
+17
+E
+parchment~
+
+ Beneath the blood stains you can barely make out a crude
+drawing of a giant toothy maw. Several drawn arrows point
+at different teeth. Hakeem must have been conjuring some
+nefarious plan. There are also a series of strange chemical
+formulas and equations scrawled below the drawing.
+~
+X
+~
+258 0 0
+M
+~
+~
+~
+~
+T
+109
+#16501
+molar gorgo~
+Gorgo's Molar~
+An enormous blood-stained molar from a titanic beast.~
+$n smashes $V into a bloody pulp with $s Gorgo's Molar.~
+5 265336324 8193
+92 9 3 6
+31 2097593 66047
+0
+E
+molar~
+
+ Judging by the size of this molar the beast it came from
+must be at least three meters tall and several thousand
+kilograms. The unwieldy tooth looks ideal for crushing plant
+material but the blood-stained surface intimates the beast
+was hardly an herbivore.
+~
+X
+$n slam$z Gorgo's Molar into the ground, leaving a distinct toothmark.~
+5 0 0
+M
+~
+~
+~
+~
+A
+19 9
+A
+4 -2
+A
+18 1
+T
+28813
+#16502
+skirt ebony black~
+A black lacquered ebony skirt~
+A pile of lacquered ebony lies here.~
+~
+9 779235840 33
+14 0 0 0
+20 30000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+3 2
+A
+53 2
+#16503
+dagger segretto~
+the Dagger of Segretto~
+A very long dagger creeps towards you here.~
+Dagger of Segretto shrieks in glee as $n thrust$z at $N!~
+5 250640897 8193
+9 3 6 11
+0 30000 30000
+5
+X
+The dagger shrieks angrily for a new victim!~
+0 2 0
+M
+~
+~
+~
+~
+A
+19 7
+A
+12 30
+#16504
+claw snake gembal black~
+a Gembal Snake's Claw~
+A tiny black claw lies on the ground here, dripping ichor.~
+~
+5 250622466 16385
+0 2 2 8
+13 20000 20000
+10
+X
+~
+3072 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+12 37
+A
+53 2
+#16505
+icicle fragment~
+fragment of icicle~
+A broken off fragment of icicle lies here.~
+~
+18 524288 16385
+0 0 0 0
+3 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16506
+key red wax~
+a red key~
+A red key lies here, wax drippings all over it.~
+~
+18 0 1
+0 0 0 0
+6 1 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16507
+staff bloody torch~
+a bloody staff~
+A bloody staff is lying on the floor.~
+~
+1 65 65537
+0 0 -1 0
+20 10 4000
+35
+E
+torch~
+Runes cover the surface of this wooden staff... runes inlaid with 
+dried blood...
+~
+E
+staff~
+Runes cover the surface of this wooden staff... runes inlaid with
+dried blood...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+19 1
+#16508
+sash muslin emerald~
+An emerald muslin sash~
+A pile of emerald muslin lies crumpled in the corner here.~
+~
+11 510687744 2049
+0 0 0 0
+10 300000 300000
+43
+E
+emerald~
+You see strange black runes crawling along the fabric of this
+beautiful sash.
+~
+E
+muslin~
+You see strange black runes crawling along the fabric of this
+beautiful sash.
+~
+E
+sash~
+You see strange black runes crawling along the fabric of this
+beautiful sash.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+21 -10
+#16509
+helm black green hell locust~
+The helm of the Green Hell Locust~
+A black, chitonous helm lies here, clicking.~
+~
+9 403180032 17
+10 0 0 0
+20 3000000 10
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+20 30
+#16510
+nametag tomek tag goldtag~
+Tomek's Gold-plated Nametag~
+A burnished golden plate lies here, a name inscribed in it...~
+~
+9 107004928 5
+11 -1 -1 -1
+62 250000 23000
+5
+E
+tomek nametag tag name~
+The inscription reads: "TOMEK".
+~
+X
+~
+1024 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+13 51
+A
+2 -1
+#16511
+a Fish-Ape's Scaly Hide~
+a Fish-Ape's Scaly Hide~
+The scaly hide of a creature from the southern regions of Vilosia is here.~
+~
+9 48288768 9
+31 -1 -1 -1
+36 10 45000
+7
+E
+hide~
+The hide before you is deceptively weak-looking.  Hundreds of years
+of use has gi ven it a translucent quality that belies its powers.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 44
+A
+1 -2
+T
+50000
+#16512
+bucket rusted~
+A Rusted Bucket~
+A Rusted Bucket lies turned on its side here, hardened wax on the handle.
+~
+~
+9 135268673 17
+10 0 0 0
+8 30000 3000
+15
+E
+helmet~
+This bucket has wax filling much of the interior, making it a snug fit.~
+E
+rusted~
+This bucket has wax filling much of the interior, making it a snug fit.~
+E
+bucket~
+This bucket has wax filling much of the interior, making it a snug fit.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 10
+#16513
+bridle rotting~
+A rotting bridle~
+An ancient, rotting bridle is lying on the floor.
+~
+~
+9 170979392 2049
+10 0 0 0
+8 10000 900
+15
+E
+rotting~
+A leather bridle which has bits of hardened wax beaded up all over it.
+~
+E
+bridle~
+A leather bridle which has bits of hardened wax beaded up all over it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 20
+A
+13 20
+#16514
+plate breast hardened wax~
+A hardened wax breast plate~
+A breast plate made of hardened wax lies here.
+~
+~
+9 134219841 9
+5 0 0 0
+12 30000 3000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 5
+#16515
+key black wax~
+a black wax key~
+A black key, made of hardened wax, lies here.~
+~
+18 524288 1
+0 0 0 0
+10 2 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16516
+canine tooth gorgo~
+Gorgo's Canine~
+A huge bloody tooth is lying on the ground here.~
+Gorgo's Canine plunges into the victim with a shower of blood!
+~
+5 5274112 8193
+0 5 5 3
+23 200000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 11
+A
+18 -2
+#16518
+cauldron~
+a cauldron filled with bubbling wax~
+A cauldron, filled to overflowing with molten wax, bubbles here.~
+~
+12 0 0
+0 0 0 0
+50000 10 10
+100
+E
+cauldron~
+The cauldron looks as ancient as the rest of the museum, but it could still
+easily accomodate two or three fair-sized creatures. Although there is no
+obvious flame near the cauldron, the wax looks very hot and viscous. It is
+probably best not to get any on you...
+~
+X
+~
+120 0 0
+M
+~
+~
+~
+~
+#16519
+pot wax~
+a small pot of rapidly cooling wax~
+A small pot of wax is quickly hardening here.~
+~
+8 234881024 16385
+100 -1 -1 -1
+4 80 10000000
+100
+E
+pot wax~
+Deceptively small looking, this pot still looks like it could cause
+some woe if it was spilled on someone's valuables.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16520
+pot wax~
+a small pot of rapidly-cooling wax~
+A small pot of wax is quickly hardening here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+120 0 0
+M
+~
+~
+~
+~
+#16521
+cloak~
+a traveller's cloak~
+A sturdy cloak made of heavy wool is draped across the ground.~
+~
+9 8406016 1025
+0 0 0 0
+1 250000 950000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -30
+#16522
+robe~
+a La Soudure wanderer's robe~
+A salt-soaked robe rests on the ground here.~
+~
+9 79754240 1025
+15 -1 -1 -1
+10 150000 300000
+100
+E
+robe~
+Caked in a crust of sea-salt, this robe is one of the few items in this
+world that can claim to have seen the eye of the maelstrom and come out
+the other side. It is rumoured that the captain of the pirates himself
+gave this robe to Lemouro after he drank him under the table one night.
+At least, that's what Lemouro keeps saying...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+#16523
+cloak cthorr~
+the acid-washed cloak of Cthorr~
+Ewww! A foul stench emanates from a cloak with many tears and holes.~
+~
+9 112247808 1025
+11 -1 -1 -1
+10 150000 300000
+100
+E
+cloak cthorr~
+A sour smell of acid invades your nostrils as you regard this cloak.
+Singed holes signify parts of the cloak that have met their demise due
+to the acidic environment of their master.  The people of Cthorr aren't
+known for their hospitality, leaving you wondering how Lem laid his
+hands on this valuable cloak.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+23 -30
+A
+52 19
+#16524
+cape cornelius~
+a sienna-coloured cape from Cornelius~
+Flickering in and out of existence is a deep sienna cape.~
+~
+9 48264192 1025
+5 -1 -1 -1
+10 150000 300000
+100
+E
+cape cornelius~
+You are warmed just looking at the thick fabric of this deep sienna-
+coloured cape. It looks to have endured the test of time, as it
+is stitched with runes that you had thought to have been lost to the
+sands of time.
+ 
+Wait, where did it go?
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+53 7
+#16525
+birch trunk~
+a birch trunk~
+A rough-hewn trunk made from young birchwood is here.~
+~
+15 0 0
+0 0 0 0
+1000 10 10
+100
+E
+birch trunk~
+Gnarled branches are fastened together with rotting vines into a
+makeshift storage trunk.  Clearly, it's maker valued function over
+form.
+~
+X
+~
+104 0 0
+M
+~
+~
+~
+~
+#16526
+shield bone large dark wax~
+A large, wax-covered shield made of dark bone~
+A dark shield made out of bones and covered in wax is lying on the ground.~
+~
+9 0 513
+11 -1 -1 -1
+20 75000 20000
+10
+E
+large bone dark shield wax~
+This large bone shield is covered entirely in wax.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 25
+A
+19 1
+#16527
+shield wire copper~
+Wire Shield~
+A pile of copper wire lies collecting dust here.
+~
+~
+9 134220865 513
+10 0 0 0
+20 100000 20000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 -22
+#16528
+apron stained~
+A Stained Apron~
+A filthy, stained pile of off-white cloth lies crumpled here.
+~
+~
+9 204501572 9
+9 0 0 0
+10 10000 100
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 40
+A
+22 -2
+B
+16
+#16529
+ring wax~
+Wax Ring~
+A small circle of clear wax lies on the floor here.
+~
+~
+11 134238721 3
+0 0 0 0
+3 200000 100000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+12 25
+#16530
+slippers filthy~
+Filthy Slippers~
+A pair of slippers, covered in wax and filth, sit here.
+~
+~
+9 134234688 65
+2 0 0 0
+20 300000 100000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 -100
+A
+12 33
+#16531
+shawl human skin~
+A wrinkled shawl of human skin~
+A wrinkled pile of what looks to be human skin leaks a red mist here.~
+~
+11 103954496 1025
+0 0 0 0
+5 10000 20000
+12
+E
+skin~
+You feel a bit sick as you look at this unholy creation... it
+seems as if its creator skinned a human being for this shawl.
+In fact, judging by the small size of the shawl, it looks as if
+the creator skinned a child! A strange red mist comes from this
+pile of inhumanity, staining whatever it touches.
+~
+E
+shawl~
+You feel a bit sick as you look at this unholy creation... it
+seems as if its creator skinned a human being for this shawl.
+In fact, judging by the small size of the shawl, it looks as if
+the creator skinned a child! A strange red mist comes from this
+pile of inhumanity, staining whatever it touches.
+~
+X
+~
+1026 0 0
+M
+~
+~
+~
+~
+A
+9 56
+A
+19 3
+T
+20000
+#16533
+nametag tag gorgo~
+Gorgo's Nametag~
+A shiny disk of brass lies here, a name scratched into it...~
+~
+9 48289344 5
+3 0 0 0
+20 250000 45000
+3
+E
+name~
+There is a name scratched into this brass disk. Yes there is. In
+fact, the name is "Gorgo".
+~
+E
+gorgo~
+Yes... it does say Gorgo on it. Perhaps this means you ought
+to return it to the owner... alone.
+~
+E
+tag~
+You gaze at this small brass disk in awe... you have finally
+gotten the nametag of Gorgo, the Fur Beast! If only half of the
+legends are true, you could soon be the ruler of the entire
+world! Or at least the ruler of the Ettin Village.
+~
+E
+nametag~
+You gaze at this small brass disk in awe... you have finally
+gotten the nametag of Gorgo, the Fur Beast! If only half of the
+legends are true, you could soon be the ruler of the entire
+world! Or at least the ruler of the Ettin Village.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+1 1
+A
+52 8
+#16534
+chain belly children bones~
+A belly chain of children's bones~
+A large chain of children's bones lies strung together here.~
+~
+8 140538368 2049
+0 0 0 0
+10 10000 67342
+5
+X
+~
+2048 0 0
+M
+~
+~
+~
+~
+A
+37 10
+A
+49 10
+A
+19 0
+B
+32
+#16535
+vine twisted bit~
+A bit of twisted, blackened vine~
+What looks like a black twig lies in the dust here.~
+~
+18 0 1
+0 0 0 0
+3 10000 10000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16536
+necklace claws panther~
+Necklace of Panther Claws~
+A strange necklace of panther claws lies here.~
+~
+5 150090240 8197
+0 11 3 8
+4 20000 20000
+7
+X
+~
+3072 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 36
+A
+53 4
+B
+8388608
+#16537
+tomtom drum skin human tom~
+a Tomtom made of human skin~
+A small pair of drums lies in the dust here.~
+~
+24 217248768 16385
+0 0 0 0
+19 30000 21092
+30
+X
+~
+1024 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 1
+A
+53 4
+B
+32768
+#16538
+recipe slab~
+a recipe scribed in paraffin~
+A slab of paraffin wax is covered in sigils and runes.~
+~
+32 0 1
+16539 16529 30012 5581
+10 10 10
+10
+E
+recipe~
+The slab of wax is unfathomable.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16539
+keychain chain~
+a keychain, cobbled together from bits of wax~
+The remnants of many wax creatures have been fashioned into an ugly looking keychain.~
+~
+15 0 16385
+0 0 0 0
+10 1000000 35000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+48 -20
+A
+28 -20
+A
+45 -20
+#16540
+ram pillar~
+a battering ram made of wax~
+An enormous pillar, made of cloudy wax, is sinking into the ground here.~
+~
+11 524288 16385
+0 0 0 0
+31 10 10
+0
+E
+ram pillar~
+A battering ram two feet in diameter and with conveniently sculpted
+handholds for ten people sits before your eyes.  The wax is a cloudy
+grey, and you think you can make out some disturbingly humanoid
+bones embedded within.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16542
+canine tooth tomek~
+Tomek's Canine~
+A huge bloody tooth is lying on the ground here.~
+Tomek's Canine plunges deep into the throat of the victim!~
+5 13691392 8193
+68 6 6 12
+34 1629375 175666
+6
+X
+~
+1024 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+18 -2
+A
+1 1
+#16543
+key~
+a red and yellow key~
+A wooden key painted in lively colours of red and yellow sits here.~
+~
+18 2624 5
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16545
+mukluks white fur~
+White Fur Mukluks~
+A pair of white fur mukluks lie on the floor here.~
+~
+9 743634944 65
+3 0 0 0
+5 20000 23212
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 150
+A
+19 2
+#16551
+staff icy~
+an Icy Staff~
+An icy rime-covered staff lies frozen to the ground here.~
+~
+4 145898560 16385
+50 3 2 140
+10 10000 20000
+45
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -10
+A
+18 -10
+#16554
+kerchief checkered~
+a checkered kerchief~
+A small piece of checkered cloth lies here.~
+~
+11 217199616 17
+0 0 0 0
+3 45000 10000
+24
+X
+~
+2560 0 0
+M
+~
+~
+~
+~
+A
+12 35
+A
+3 3
+A
+53 4
+B
+32768
+#16555
+blouse yellow cotton~
+a yellow cotton blouse~
+A yellow blouse lies in the dust here.~
+~
+11 217199616 9
+0 0 0 0
+8 25432 12543
+13
+X
+~
+3072 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 26
+A
+53 9
+#16556
+stick sharp wooden ga~
+a Ga Stick~
+A painted, sharpened wooden stick floats a few inches off the ground.~
+Ga Stick shrieks an unholy tune as it is swung through the air!~
+5 235985920 24577
+1 6 3 11
+18 20320 20320
+17
+E
+stick~
+This stick is the traditional weapon of the warriors of the House
+of Rimmon, and this one in particular looks like it was decorated
+by Rimmonite hands. Lemouro must have stolen it from a temple on
+one of his many raids in Southern Vilosia.
+~
+E
+ga~
+The Ga Stick is a four foot long stick painted black with small
+red Rimmonite runes carved into it. It is said to possess the soul
+of whomever it kills, growing stronger with each kill.
+~
+X
+~
+1024 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 2
+A
+28 3
+#16557
+book memoirs journal lemouro tracker~
+Lemouro the Tracker's Memoirs~
+A large book lies half open on the bench here.~
+~
+12 134742016 1
+0 0 0 0
+14 500 10
+100
+E
+book~
+These look like Lemouro's memoirs. He has written most of the book
+in some strange tongue, but page57, page58, and page59 seem to
+be written in a more local language.
+~
+E
+memoirs~
+These look like Lemouro's memoirs. He has written most of the book
+in some strange tongue, but page57, page58, and page59 seem to
+be written in a more local language.
+~
+E
+journal~
+These look like Lemouro's memoirs. He has written most of the book
+in some strange tongue, but page57, page58, and page59 seem to
+be written in a more local language.
+~
+E
+journal~
+These look like Lemouro's memoirs. He has written most of the book
+in some strange tongue, but page57, page58, and page59 seem to
+be written in a more local language.
+~
+E
+page57~
+When Timur was born, I flew into a rage. How could we have been
+so foolish as to dismiss the evil witch Quaratt's curses as mere
+foolishness? Especially Scratch Mama! She was a priestess to the 
+dark panther goddess! We should have known better.
+   After I calmed down, I began to scheme. Eighty years of being
+the best tracker and trapper in the known world are not achieved
+by brute strength and a thick head, no. I realized the thing Quaratt
+feared the most was captivity, so I knew what I had to do. I left
+Scratch Mama and Timur here at home and went south with Tomek. Oh,
+I knew where to look. The cat-bitch had moved to another part of
+the jungle, but nobody has ever escaped Lemouro, no. Not even a
+goddess could escape my talents.
+   The bitch put up a hell of a fight, but Tomek held her minions
+off long enough for me to net Quaratt. I placed her in the hold
+of Kiri-Khan's ship and went back to the jungle with Tomek.
+~
+E
+page58~
+   I had heard on my last journey to Southern Vilosia of another
+local god. One thing about those southern tribes, they don't worship
+fables. I knew this monster had to exist somewhere, and the Illiki
+Tribe would know where.
+   I came to them asking about the white ape. I suppose my memory
+has gotten a bit rusty in fifty years, but they eventually told me
+that I was a crazy old man and that there was no white ape, only
+Khallaq, the Fish Ape. I accepted that with difficulty and a few
+Illiki corpses. Nobody tells me I'm a senile old man.
+   The chief finally calmed me down enough to tell me where the
+mighty Khallaq's altar was. Altars in the jungles tend to be close
+to the gods, as they are generally too lazy to travel far for their
+meat. This was no exception.
+  I set traps around the small pool where the primitive altar was,
+and had Tomek guard me from downwind, I didn't want this ape beast
+just hiding out for years. It hid for only four days. The battle
+~
+E
+page59~
+was great, but Khallaq was a prize worth keeping. I couldn't bear
+to skin such a magnificent beast, so I placed him also in Kiri-
+Khan's hold.
+   Tomek had caught a few new scents in the jungle, so I captured
+a few more creatures to bring back with me, for the wife.
+  When I finally got home with my prizes, our shack in the woods
+had been destroyed by my fledgeling son. Seeking a place where
+we could raise our poor child in peace, I found a massive underground
+tunnel system near a glacier. I built cages for my prizes and
+a small cabin for my family. There were a few problems with a local
+sorcerer called Hakeem, but I showed him my knowledge of the fearsome
+Warek Beasts, which he called Fur Beasts, and he was grateful enough
+to not bother me. It seems, however, that he has ensorcelled the
+entrance to my home. I hope he does not think to hold Lemouro the
+Tracker at bay, for I am much older and wiser than he.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16558
+wristband band tracker leather white~
+a white leather tracker's wristband~
+A white leather wristband lies on the floor here.~
+~
+11 211827712 4097
+7 0 0 0
+5 35000 35000
+100
+X
+~
+3072 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 -59
+A
+12 41
+B
+2
+#16559
+wristband band tracker leather black~
+a black leather tracker's wristband~
+A large wristband made of black leather lies in the dust here.~
+~
+9 717288448 4097
+8 -1 -1 -1
+11 76000 88000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+13 33
+A
+2 1
+B
+1048576
+#16560
+leggings black fur~
+Black Fur Leggings~
+A pair of black fur leggings lie casually thrown on the ground.~
+~
+9 174384128 33
+6 0 0 0
+24 34000 35000
+100
+X
+~
+2048 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+46 10
+A
+13 31
+#16561
+spear leaf bladed~
+a Leaf-Bladed Spear~
+A long, leaf-bladed spear lies stuck in the ground here.~
+Leaf-Bladed Spear whistles through the air as it swings to attack!~
+26 718334976 8193
+2 8 6 14
+32 734734 30000
+100
+X
+~
+512 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+48 20
+A
+19 4
+#16562
+bridle rotting~
+A rotting bridle~
+An ancient, rotting bridle is lying on the floor.
+~
+~
+0 524288 2049
+0 0 0 0
+10 100000 500000
+0
+X
+~
+2 1045311 0
+M
+~
+~
+~
+~
+A
+13 -500
+T
+2400
+#16563
+sting~
+a shattered sting~
+A shattered sting, formerly from the Marikith's Hive Queen, lies here in pieces.~
+~
+13 0 1
+0 0 0 0
+6 10 10
+100
+E
+sting~
+What was once a formidable weapon now lies in several pieces before you.
+Presumably, the power of the Marikiths does not penetrate into the
+depths beyond the Museum's main floor.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16564
+boots shattered~
+a shattered pair of iron boots~
+The shattered remains of a pair of iron-clad boots rest here, useless.~
+~
+13 0 1
+0 0 0 0
+10 10 10
+100
+E
+shattered boots~
+These boots, once a formidable tool in a warrior's arsenal, were exposed
+to some otherworldly influence that has caused them to crack and
+shatter.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16565
+boots slag melted~
+a lump of molten slag~
+A steaming pile of molten slag gives off waves of heat.~
+~
+13 0 1
+0 0 0 0
+10 10 10
+100
+E
+slag molten boots~
+Peering into the molten remains, you think you can make out
+the vague outline of a pair of boots.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16566
+skull elar~
+the skull of an impudent minstrel~
+Staring sightlessly back at you is an overturned skull.~
+~
+1 15741952 65537
+2 3 -1 -1
+7 5 57234
+100
+E
+skull elar~
+The skull is rather small for a fully-grown adult.  It is filled
+with animal tallow and, truth be told, gives off a rather dim
+light.  If the stories are to be believed, the skull once
+belonged to a minstrel whose tongue ended up being the only
+thing quick about him.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 1
+A
+53 4
+B
+32
+#16567
+antlers caribou~
+a massive set of caribou antlers~
+Spanning at least three feet, an imposing set of antlers have been left here.~
+~
+9 45138944 513
+3 -1 -1 -1
+237 672345 23742
+100
+E
+antlers caribou~
+Curving bone ending in several sharp points looks like it would work equally
+well offensively and defensively.  It looks like the owner of these antlers
+did not give them up easily.
+~
+X
+~
+2048 64 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 -2
+A
+13 41
+#16568
+mittens panther fur~
+a cosy pair of mittens woven from panther fur~
+Warm and cosy looking, these mittens are the handiwork of Scratch Mama herself!~
+~
+11 69270528 129
+0 0 0 0
+5 7343 4573
+100
+E
+mittens panther fur~
+Sure, they look ridiculous, but would YOU taunt their owner?
+~
+X
+~
+2048 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+53 2
+A
+12 23
+B
+4
+#16569
+hide kimagee~
+the flayed hide of a Kimagee~
+Brilliant white Kimagee fur snuggles into the ground.~
+~
+9 35716096 257
+4 -1 -1 -1
+3 73553 257000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+47 3
+A
+18 -1
+B
+32
+#16570
+hide kimagee~
+the flayed hide of a Kimagee~
+Brilliant white Kimagee fur snuggles into the ground.~
+~
+9 35716096 257
+4 -1 -1 -1
+3 73553 257000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+47 3
+A
+18 -1
+B
+32
+#16590
+figure wax~
+A wax figure of a wyvern~
+A figure of a wyvern is standing here.~
+~
+0 0 1
+0 0 0 0
+10 500 500
+40
+E
+figure wax~
+A small figure of the wyvern in all its might. The figure is
+made of wax and is about one foot high.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16599
+goggles red eparchos builder building~
+Eparchos' Red Goggles of Building~
+A pair of small red disks strung together with twine lie here.~
+~
+11 266465282 17
+0 0 0 0
+25 2 0
+0
+E
+goggles~
+These huge red disks are strung together on long, rough twine. Perhaps
+they are goggles for a massive red disk with six arms.... Nah.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+22 30
+A
+41 20
+B
+32768
+#0
+$~

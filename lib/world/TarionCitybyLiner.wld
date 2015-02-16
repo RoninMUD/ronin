@@ -1,0 +1,2049 @@
+#12800
+Along a Snowy Road~
+  Traversing the Northernmost landscape, you encounter a large
+drift of snow blocking the path.  The dead silence of the forest
+surrounding seems only to mock you while you attempt to regain
+your bearings.  A great adventure lies just on the other side
+of the barrier, but for now, the only apparent path is the road
+to the south.
+~
+128 0 9
+D0
+Northward lies a huge embankment of snow, blocking any further
+passage, unless it could somehow be circumvented..
+~
+BLORFbah~
+9 -1 12800
+D2
+The snowy road continues south within the trees.
+~
+~
+0 -1 16899
+E
+drift~
+A huge barrier of packed snow, built up from ages of relentless
+snowstorms and the furious cold here in the North.
+~
+S
+#12801
+Entrance to the Tarion City~
+  Within the tarnished gates, a desolation expands across an
+area where once stood the exalted Jewel of the North.  Tarion
+has apparently been ransacked, left to desiccate in the blazing
+sun.  The heat rises from foundations and broken cornices ahead,
+while a singular sandstone wall follows the southern boundary.
+Round footprints dimple the sandy boulevard, a fresh sign of life
+in this barren place.
+~
+128 0 1
+D1
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12802
+D2
+The southern entrance-way stands with only a gate between you
+and the infinite Tarion Desert beyond.
+~
+gate~
+2 12820 10541
+D3
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12808
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands.  It was built many centuries ago to hold
+out against the powerful desert winds.
+~
+E
+footprints~
+A set of flat, rounded prints in the sand before you.  Each is
+roughly half the size of your own, and lead fairly regularly to
+both the east and west.
+~
+E
+gate~
+One of the only structures left standing here, this gate is
+made of iron and heavy sandalwood, built strong to keep out
+any undesirables.
+~
+S
+#12802
+Beside a Sandstone Wall~
+  At the southern border of the debilitated city, a giant monolithic
+wall blocks the sandstorms which might otherwise flatten the remains
+of these ruins.  Footprints run to and fro along the drifts of
+sand on the cobbled thoroughfare.  To the west, a gate stands at
+the city entrance, while the walkway continues east beside the wall.
+~
+128 0 1
+D1
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12803
+D3
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12801
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands. It was built many centuries ago to hold
+out against the powerful desert winds.
+~
+E
+footprints~
+A set of flat, rounded prints in the sand before you.  Each is
+roughly half the size of your own, and leads fairly regularly to
+both the east and west.
+~
+S
+#12803
+Beside a Sandstone Wall~
+  At the southern border of the debilitated city, a giant monolithic
+wall blocks the sandstorms which might otherwise flatten the remains
+of these ruins.  Footprints run to and fro along the drifts of
+sand on the cobbled thoroughfare.  Far to the north, a half-
+demolished building sits in the center of the ruins.
+~
+128 0 1
+D1
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12804
+D3
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12802
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands. It was built many centuries ago to hold
+out against the powerful desert winds.
+~
+E
+footprints~
+A set of flat, rounded prints in the sand before you.  Each is
+roughly half the size of your own, and leads fairly regularly to
+both the east and west.
+~
+S
+#12804
+Beside a Sandstone Wall~
+  At the southern border of the debilitated city, a giant monolithic
+wall blocks the sandstorms which might otherwise flatten the remains
+of these ruins.  Footprints run to and fro along the drifts of
+sand on the cobbled thoroughfare.  Sun-bleached skeletons of long-
+dead citizens line the wall, sentinels over the ruined city.
+~
+128 0 1
+D0
+A strange withered garden appears just to the north, near the central
+building.
+~
+~
+0 -1 12807
+D1
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12805
+D3
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12803
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands.  It was build many centuries ago to hold
+out against the powerful desert winds.
+~
+E
+footprints~
+A set of flat, rounded prints in the sand before you.  Each is
+roughly half the size of your own, and leads fairly regularly to
+both the east and west.
+~
+S
+#12805
+Beside a Sandstone Wall~
+  At the southern border of the debilitated city, a giant monolithic
+wall blocks the sandstorms which might otherwise flatten the remains
+of these ruins.  Footprints run to and fro along the drifts of
+sand on the cobbled thoroughfare.  Sun-bleached skeletons of long-
+dead citizens line the wall, sentinels over the ruined city.  The
+wall turns north here, leading toward a large garden-commons.
+~
+128 0 1
+D0
+A strange withered garden appears just to the north, near the central
+building.
+~
+~
+0 -1 12806
+D3
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12804
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands.  It was build many centuries ago to hold
+out against the powerful desert winds.
+~
+E
+footprints~
+A set of flat, rounded prints in the sand before you.  Each is
+roughly half the size of your own, and leads fairly regularly to
+both the north and west.
+~
+S
+#12806
+A Withered Garden~
+  A patch of decaying leaves and stems carpet the scorched
+area of earth here, perhaps a common growing site for the entire
+city.  Rusted tools and seed scraps lie strewn about in a
+haphazard manner, signifying a hasty departure of the owners.
+To the northwest, the central building looms closer, wisps of
+sand spilling from its eaves on a warm breeze.
+~
+128 0 1
+D2
+A sandstone wall runs solidly south, carrying a small pathway beside it.
+~
+~
+0 -1 12805
+D3
+The garden continues to spread out to the west.
+~
+~
+0 -1 12807
+E
+tools~
+A bunch of broken and wearing-out implements which once
+held the power to cultivate sustenance for an entire city.
+~
+S
+#12807
+A Withered Garden~
+  A patch of decaying leaves and stems carpet the scorched
+area of earth here, perhaps a common growing site for the entire
+city.  Rusted tools and seed scraps lie strewn about in a
+haphazard manner, signifying a hasty departure of the owners.
+To the northwest, the central building looms closer, wisps of
+sand spilling from its eaves on a warm breeze.
+~
+128 0 1
+D1
+The garden continues to spread out to the east.
+~
+~
+0 -1 12806
+D2
+To the south, a pathway runs along a sandstone wall at the southern
+boundary.
+~
+~
+0 -1 12804
+E
+tools~
+A bunch of broken and wearing-out implements which once
+held the power to cultivate sustenance for an entire city.
+~
+S
+#12808
+Across the sandy ruins of Tarion~
+  At the southern border of the debilitated city, a giant monolithic
+wall blocks the sandstorms which might otherwise flatten the remains
+of these ruins.  Footprints run to and fro along the drifts of sand
+on the cobbled thoroughfare.  The edge of the Desert encroaches
+over a crumbled border to the west.  Great blotches of crimson have
+been spilled in a fan on the inner wall leading north.
+~
+128 0 8
+D0
+A larger road leads north alongside an inner wall.
+~
+~
+0 -1 12809
+D1
+A narrow hardpan roadway leads along the sandstone wall.
+~
+~
+0 -1 12801
+D3
+The desert extends out down into some sand dunes.
+~
+~
+0 -1 12850
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands.  It was build many centuries ago to hold
+out against the powerful desert winds.
+~
+E
+footprints~
+A set of flat, rounded prints in the sand before you.  Each is
+roughly half the size of your own, and leads fairly regularly to
+both the east and north.
+~
+E
+blotches~
+This appears to be the mark of death, blood stained on the inner wall.
+~
+S
+#12809
+Across the sandy ruins of Tarion~
+  Moving deeper into the ruins, the lack of color begins to
+dull your senses and gives testament to the power of the sun
+above.  Tiny streamers made of silk drift in the wind, tattered
+and hanging from hooks on wooden beams above.  An inner wall
+drifts upward, blocking your view east, while the edge of the
+desert meets the pathway west.
+~
+128 0 8
+D0
+The sandy road continues north along the perimeter of Tarion.
+~
+~
+0 -1 12810
+D2
+The sandy road continues south toward a sandstone wall.
+~
+~
+0 -1 12808
+D3
+The desert extends out down into some sand dunes.
+~
+~
+0 -1 12850
+E
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
+~
+E
+beams~
+A few large wooden beams criss-cross between the inner wall
+and the remains of the supports which lined the westward outer
+wall.
+~
+E
+wall~
+A dull sandstone wall, just high enough to block any view east.
+~
+S
+#12810
+Across the sandy ruins of Tarion~
+  Moving deeper into the ruins, the lack of color begins to
+dull your senses and gives testament to the power of the sun
+above.  Tiny streamers made of silk drift in the wind, tattered
+and hanging from hooks on wooden beams above.  An inner wall
+drifts upward, blocking your view east, while a flat hardpan
+commons meets the road in the west.
+~
+128 0 1
+D0
+The sandy road continues north along the perimeter of Tarion.
+~
+~
+0 -1 12813
+D2
+The sandy road continues south along the perimeter of Tarion.
+~
+~
+0 -1 12809
+D3
+The remains of a large guardpost lay to the west.
+~
+~
+0 -1 12811
+E
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
+~
+E
+beams~
+A few large wooden beams criss-cross between the inner wall
+and the remains of the supports which lined the westward outer
+wall.
+~
+E
+wall~
+A dull sandstone wall, just high enough to block any view east.
+~
+S
+#12811
+A deserted Guardpost~
+  Upon this hardpan square dug out of the surrounding sand dunes,
+the remains of a western guardpost exhibit the total destruction
+exacted here.  Splinters of wood, battered metal without the
+slightest indication of shape, and torn Tarion sigils lay half-
+buried in drifts of sand.  It seems that not even the elite
+Tarion Guard survived whatever catastrophe befell this place.
+The desert shows no mercy to the west.
+~
+128 0 8
+D0
+The guardpost continues northward, allowing for increased surveillance.
+~
+~
+0 -1 12812
+D1
+To the east, a small path drifts beside a lower inner wall next
+to the center of Tarion.
+~
+~
+0 -1 12810
+D2
+To the south, the guardpost suddenly gives way to desert.
+~
+~
+0 -1 12850
+D3
+The desert extends down a slight hill into some sand dunes.
+~
+~
+0 -1 12850
+E
+sigils~
+Faded cloth patches with the insignia of a great bronze eagle,
+worn only by the famed Tarion Guard.
+~
+S
+#12812
+A deserted Guardpost~
+  Upon this hardpan square dug out of the surrounding sand dunes,
+the remains of a western guardpost exhibit the total destruction
+exacted here.  Splinters of wood, battered metal without the
+slightest indication of shape, and torn Tarion sigils lay half-
+buried in drifts of sand.  It seems that not even the elite
+Tarion Guard survived whatever catastrophe befell this place.
+The desert shows no mercy to the west.
+~
+128 0 8
+D0
+To the north, the guardpost suddenly gives way to desert.
+~
+~
+0 -1 12850
+D1
+To the east, a small path drifts beside a lower inner wall next
+to the center of Tarion.
+~
+~
+0 -1 12813
+D2
+The guardpost continues northward, allowing for increased surveillance.
+~
+~
+0 -1 12811
+D3
+The desert extends down a slight hill into some sand dunes.
+~
+~
+0 -1 12850
+E
+sigils~
+Faded cloth patches with the insignia of a great bronze eagle,
+worn only by the famed Tarion Guard.
+~
+S
+#12813
+Across the sandy ruins of Tarion~
+  Moving deeper into the ruins, the lack of color begins to
+dull your senses and gives testament to the power of the sun
+above.  Tiny streamers made of silk drift in the wind, tattered
+and hanging from hooks on wooden beams above.  The inner wall
+falls abruptly to reveal a once-grand corridor and door leading
+within the central Tarion City Hall.
+~
+128 0 1
+D0
+The sandy road continues north along the perimeter of Tarion.
+~
+~
+0 -1 12814
+D1
+A corridor leads between two inner walls into the grand foyer
+of Tarion City Hall, where all of the citizens once came to meet
+and have fellowship.
+~
+door~
+1 -1 12826
+D2
+The sandy road continues south along the perimeter of Tarion.
+~
+~
+0 -1 12810
+D3
+The remains of a large guardpost lay to the west.
+~
+~
+0 -1 12812
+E
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
+~
+E
+beams~
+A few large wooden beams criss-cross between the inner wall
+and the remains of the supports which lined the westward outer
+wall.
+~
+E
+wall~
+A dull sandstone wall, just high enough to block any view east.
+~
+E
+door~
+A non-descript door leading into the ruins of the Tarion Hall.
+~
+S
+#12814
+Across the sandy ruins of Tarion~
+  Moving deeper into the ruins, the lack of color begins to
+dull your senses and gives testament to the power of the sun
+above.  Tiny streamers made of silk drift in the wind, tattered
+and hanging from hooks on wooden beams above.  An inner wall
+drifts upward, blocking your view east, while the edge of the
+desert meets the pathway west.  Not a human soul can be found
+here in this desolation.
+~
+128 0 8
+D0
+The sandy road continues north along the perimeter of Tarion.
+~
+~
+0 -1 12815
+D2
+The sandy road continues south along the perimeter of Tarion.
+~
+~
+0 -1 12813
+D3
+The desert extends out down into some sand dunes.
+~
+~
+0 -1 12850
+E
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
+~
+E
+beams~
+A few large wooden beams criss-cross between the inner wall
+and the remains of the supports which lined the westward outer
+wall.
+~
+E
+wall~
+A dull sandstone wall, just high enough to block any view east.
+~
+S
+#12815
+Across the sandy ruins of Tarion~
+  Moving deeper into the ruins, the lack of color begins to
+dull your senses and gives testament to the power of the sun
+above.  Tiny streamers made of silk drift in the wind, tattered
+and hanging from hooks on wooden beams above.  An inner wall
+drifts upward, blocking your view east, while the edge of the
+desert meets the pathway west.  Not a human soul can be found
+here in this desolation.
+~
+128 0 8
+D0
+The sandy road continues north along the perimeter of Tarion.
+~
+~
+0 -1 12816
+D2
+The sandy road continues south along the perimeter of Tarion.
+~
+~
+0 -1 12814
+D3
+The desert extends out down into some sand dunes.
+~
+~
+0 -1 12850
+E
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
+~
+E
+beams~
+A few large wooden beams criss-cross between the inner wall
+and the remains of the supports which lined the westward outer
+wall.
+~
+E
+wall~
+A dull sandstone wall, just high enough to block any view east.
+~
+S
+#12816
+Across the sandy ruins of Tarion~
+  At the northwesternmost corner of Tarion, the blinding sun
+depicts no end to your isolation.  Bits of pottery and a second
+dismantled stone wall loom along the pathway north and east,
+giving no comfort that anything good could have happened here.
+No visible creature, snake nor scorpion, chooses to inhabit the
+outer reaches of this deserted city.  But the footprints
+continue to trouble your peace of mind.
+~
+128 0 8
+D0
+A dropoff ends below in the rolling dunes of the desert.
+~
+~
+0 -1 12850
+D1
+The northern passage leads straight east along the front of Tarion.
+~
+~
+0 -1 12818
+D2
+The sandy road continues sound along the perimeter of Tarion.
+~
+~
+0 -1 12815
+D3
+The desert extends out down into some sand dunes.
+~
+~
+0 -1 12850
+D5
+A stairway leads down into a large meeting place below the street.
+~
+~
+0 -1 12817
+E
+pottery~
+Piles of broken pots and containers have been stashed against the
+walls on either side of the street, either blown there or put there
+by someone to leave a path..
+~
+E
+footprints~
+The round footprints lead in another path disappearing in the east.
+~
+S
+#12817
+Headquarters of the Tarion Guard~
+  In a dug-out room away from the adamant heat, this place below
+the street once held the greatest warriors the Desert birthed.  The
+Tarion Guard was composed of only those warriors with the power to
+keep the shadow at bay.  Tarion had always been a mecca to nomadic
+tribes of the Good, refuge and spite to those Evil forces throughout
+the world.  This very room radiates a pale-yellow glow still from
+within the cracked walls.  Only a more powerful force using the
+guise of Good could possibly have destroyed the life here.
+~
+128 9 0
+D4
+The heat of the desert filters down with the light and dust.
+~
+~
+0 -1 12816
+E
+walls~
+The walls are fairly glowing with an ancient light still
+emanating from this place.  A credo has been chiseled into
+one, listing the virtues of the Tarion Guard.
+~
+E
+credo~
+
+   - The forces of Good hail all here in our heart of Tarion -
+
+  Embrace and Trust all that is Good, within and without.
+    ...1000 years hence we have lived, and 1000 to come,
+       we will still endure.
+
+~
+S
+#12818
+Across the sandy ruins of Tarion~
+  Adjacent to the disintegrating northern limit of Tarion, the
+road strives east and west.  The inner wall south drops lower
+so as to grant a view of the grand city hall beyond it.  Bones
+and bits of refuse roll along here, full of sand and sorrow.
+And a proliferation of circular tracks still litters your path,
+leading in all directions.
+~
+128 0 1
+D0
+The remains of the northern entrance to Tarion lie to the north.
+~
+~
+0 -1 12849
+D1
+The sandy roadway continues east along the city's inner wall.
+~
+~
+0 -1 12819
+D3
+The sandy roadway continues west along the city's inner wall.
+~
+~
+0 -1 12816
+E
+bones~
+A dismantled drying corpse has been tossed by the wind and elements
+here, wearing only a tattered cloth.
+~
+E
+tracks~
+The footprints jumble up a bit as they spread along the corridor.
+~
+E
+wall~
+A sandstone inner wall stands shielding the city to the south.
+~
+S
+#12819
+Beside a Crumbling Wall~
+  Adjacent to the disintegrating northern limit of Tarion, the
+road strives east and west beside the forboding desert.  The inner
+wall south drops lower so as to grant a view of the grand city hall
+beyond it.  Bones and bits of refuse roll along here, full of sand
+and sorrow.  And a proliferation of circular tracks still litters
+your path, leading in all directions.
+~
+128 0 8
+D0
+The remains of the northern wall have been broken down to
+a mere pile of rubble leading into the desert.
+~
+~
+0 -1 12850
+D1
+The sandy roadway continues east along the city's inner wall.
+~
+~
+0 -1 12820
+D3
+The sandy roadway continues west along the city's inner wall.
+~
+~
+0 -1 12818
+E
+bones~
+A dismantled drying corpse has been tossed by the wind and elements
+here, wearing only a tattered cloth.
+~
+E
+tracks~
+The footprints jumble up a bit as they spread along the corridor.
+~
+E
+wall~
+A sandstone inner wall stands shielding the city to the south.
+~
+S
+#12820
+Beside a Crumbling Wall~
+  Adjacent to the disintegrating northern limit of Tarion, the
+road strives east and west beside the forboding desert.  The inner
+wall south drops lower so as to grant a view of the grand city hall
+beyond it.  Bones and bits of refuse roll along here, full of sand
+and sorrow.  And a proliferation of circular tracks still litters
+your path, leading in all directions.
+~
+128 0 8
+D0
+The remains of the northern wall have been broken down to
+a mere pile of rubble leading into the desert.
+~
+~
+0 -1 12850
+D1
+The sandy roadway continues east along the city's inner wall.
+~
+~
+0 -1 12821
+D3
+The sandy roadway continues west along the city's inner wall.
+~
+~
+0 -1 12819
+E
+bones~
+A dismantled drying corpse has been tossed by the wind and elements
+here, wearing only a tattered cloth.
+~
+E
+tracks~
+The footprints jumble up a bit as they spread along the corridor.
+~
+E
+wall~
+A sandstone inner wall stands shielding the city to the south.
+~
+S
+#12821
+Across the sandy ruins of Tarion~
+  Adjacent to the disintegrating northern limit of Tarion, the
+road strives east and west beside the forboding desert.  The inner
+wall south disappears in favor of a barren garden, extending toward
+another common area.  Bones and bits of refuse roll along here, full
+of sand and sorrow.  And a proliferation of circular tracks still
+litters your path, leading in all directions.
+~
+128 0 8
+D0
+A dropoff ends below in the rolling dunes of the desert.
+~
+~
+0 -1 12850
+D1
+The road ends beneath a shaded housing area, now broken-down.
+~
+~
+0 -1 12822
+D2
+The pathway leads south with tracks bearing into a garden.
+~
+~
+0 -1 12823
+D3
+The sandy roadway continues west along the city's inner wall.
+~
+~
+0 -1 12820
+E
+bones~
+A dismantled drying corpse has been tossed by the wind and elements
+here, wearing only a tattered cloth.
+~
+E
+tracks~
+The footprints jumble up a bit as they spread along the corridor.
+~
+S
+#12822
+A barren shadehouse~
+  A corner appears here at the northeast reach of the city where
+the walls on both the north and east remain intact.  A torn shade-
+cloth dangles from both walls, remnant of the resting area this
+had once been beneath the harsh sun.  Glyphs and scratchings are
+etched all along the barrier, showing various depictions of the
+final survivors who battled here.  A great number of tracks move
+along these walls, defining an interest their makers must have
+had in these pictures.
+~
+128 0 1
+D2
+The pathway leads south into a roadway below a tower.
+~
+~
+0 -1 12824
+D3
+A roadway leads west through the sandy area toward a broken wall.
+~
+~
+0 -1 12821
+E
+walls~
+The walls close in to the northeast, providing momentary comfort
+in the shade.
+~
+E
+glyphs~
+  Strange pictures drawn in blood and cut into the soft sandstone
+here show the citizens being greeted with happiness beneath the sun
+on one side.  On the other, darkness has fallen with the moon
+shining brightly and small purple beings seem to be hauling someone
+from their home.  In the next picture, a great feast has been
+prepared, steam rising from the fresh corpse of the citizen as the
+centerpiece.
+~
+E
+scratchings~
+  Strange pictures drawn in blood and cut into the soft sandstone
+here show the citizens being greeted with happiness beneath the sun
+on one side.  On the other, darkness has fallen with the moon
+shining brightly and small purple beings seem to be hauling someone
+from their home.  In the next picture, a great feast has been
+prepared, steam rising from the fresh corpse of the citizen as the
+centerpiece.
+~
+E
+tracks~
+Tiny trails spin about in the sand, showing no discernable direction.
+~
+S
+#12823
+A Withered Garden~
+  This garden seems to be in slightly better condition than its
+southern component, but still bears no semblance of fruit.  Rusted
+tools and seed scraps lie strewn about in a haphazard manner,
+signifying a hasty departure of the owners.  To the southwest, the
+central building looms closer, wisps of sand spilling from its
+eaves on a warm breeze.
+~
+128 0 1
+D0
+A pathway leads north away from the garden and toward a broken wall.
+~
+~
+0 -1 12821
+D1
+A road ends just to the east of the garden, beneath a lookout tower.
+~
+~
+0 -1 12824
+E
+tools~
+A bunch of broken and wearing-out implements which once
+held the power to cultivate sustenance for an entire city.
+~
+S
+#12824
+Below a lookout Tower~
+  Another flattened hardpan bit of earth adorns the floor as you
+encounter a ladder leading up to an ancient watchtower.  A huge
+splotch of red cascades down the eastern wall, and tiny eddies of
+sand twirl around your feet toward its base.  Wagon-tracks from a
+garden to the west lead down the abandoned road, still yet to be
+swallowed into the desert.
+~
+128 0 1
+D0
+The road ends beneath a shaded housing area in the northeast corner.
+~
+~
+0 -1 12822
+D3
+The earth spreads out into a mound which had once been a garden.
+~
+~
+0 -1 12823
+D4
+Above you, a ladder attached to the wall reaches up toward a
+platform.
+~
+ladder~
+11 -1 12825
+E
+ladder~
+A rickety ladder built here to provide access to the Northeast
+watchtower, still standing after all these years of disuse.
+~
+E
+tracks~
+The pathway with the round footprints lead directly toward
+the ladder's base, ending there.
+~
+E
+splotch~
+This appears to be the mark of death, blood stained on the outer wall.
+~
+S
+#12825
+A makeshift sacrificial Altar~
+  Normalcy ends here as you encounter what seems to be a sacrificial
+altar atop the sandstone outcropping.  Where the Tarion Guard once
+stood watch over the fortress of Good, a newly-placed stone table
+stands stark, its surface still shining with blood.  Utensils have
+been set carefully around its perimeter, adding to the strangeness
+of this setting.  Looking closely, an inscription has been cut into
+the stone table.
+~
+128 5 1
+D5
+Below the platform, a ladder drifts down the sandstone wall.
+~
+ladder~
+11 -1 12824
+E
+inscription~
+
+  "Urph tzyae misaestz wah sakmnivikae tzyaewsaepfaes vumn tzyae
+    vmn'aetuw uv tzyaeimn kirtmnaet."
+
+                            *Sakmnivikae*
+
+~
+E
+altar~
+A gigantic granite surface, carved and worn by the ages,
+drenched in the blood of the sacrifice.
+~
+E
+table~
+A gigantic granite surface, carved and worn by the ages,
+drenched in the blood of the sacrifice.
+~
+E
+utensils~
+Tiny knives and forks fashioned of gold sit carefully-placed at
+settings numbering perhaps 40, as if for dinner.
+~
+S
+#12826
+Foyer of the Tarion City Hall~
+  The doors of time unfold gracefully before you as you encounter
+the greeting room here in the once-paramount Tarion City Hall.
+Antique furniture and precious decorations, the remnants of their
+perfect age, show barely a shred of their former glory tossed about
+the periphery of the room.  Dust and insect trails score all
+surfaces, and the hollow space within this home can only be left to
+ponder.  This is the common dwelling of all the harbingers of Good,
+and the pioneers who once deemed our world worth saving lived here
+forever.  The foyer splits into several corridors surrounding a
+giant exhibit to the East, a statue lifting high into the reaches
+of a dome above.
+~
+128 8 0
+D0
+The hallway leads north into a smaller antechamber.
+~
+~
+0 -1 12827
+D1
+A giant statue stands gaping across the center of the building.
+~
+CHARP~
+9 -1 12837
+D2
+The hallway leads south into a smaller antechamber.
+~
+~
+0 -1 12831
+D3
+The doorway leads gracefully out into the blazing sun.
+~
+door~
+1 -1 12813
+E
+door~
+A non-descript door leads out into the desert surrounding the hall.
+~
+E
+furniture~
+Some truly rare and beautiful pieces, mostly chairs and side-
+table sets, splintered and dulled by the passage of time.
+~
+E
+decorations~
+A few decorative pictures have been discarded all about the floor.
+~
+E
+pictures~
+One is of the former glory of the city, Tarion by night,
+lights blazing in a tiny area below a giant dark sky.
+~
+E
+trails~
+Tiny lines cross each other, winding along every surface.
+~
+E
+statue~
+This is a full-body statue of the first Mayor of Tarion,
+the founder, Elliot Tarion.  He stands proud in a dressy
+uniform, staring blindly at an unknown horizon.
+~
+E
+dome~
+A gargantuan dome, painted cobalt blue with darkening shades
+along the lower reaches.  Its surface is dotted with tiny
+marks to represent the stars, perhaps a scene from a summer
+evening.
+~
+S
+#12827
+The Northern Corridor~
+  Away from the staggering emptiness in the main foyer, this cozy
+passage leads curving between high polished-granite walls.  Doors
+occur all along them, but only a large oak one on the north side
+captures your attention.  Its wall surrounding collapsed all
+around it, showing a dark and chaotic jumble of broken rock and
+wood.  A sign lay askew beside the bent doorframe.
+~
+128 8 0
+D0
+A broken door leans in a pile of rubble, what once was an office.
+~
+CHARP~
+9 -1 12837
+D1
+A smaller hallway drifts east.
+~
+~
+0 -1 12828
+D2
+The hallway widens to meet the Hall's entrance chamber.
+~
+~
+0 -1 12826
+E
+sign~
+            `eTreasury`h
+~
+E
+walls~
+Very impressive, these walls seem to be carved from granite
+and polished to a high-gloss.  Although half of them have
+fallen, the rest appear to be almost new.
+~
+E
+door~
+It appears to be an oak door, jammed in by the surrounding rubble.
+~
+S
+#12828
+The Northern Corridor~
+  Away from the staggering emptiness in the main foyer, this cozy
+passage leads curving between high polished-granite walls.  A
+singular exit to the north again strikes your curiousity, an oak
+door intact and leading further into the Hall's office areas.
+More offices to the east have collapsed, by pure disuse and
+advanced age, perhaps.
+~
+128 8 0
+D0
+A tiny oak door pushes on to the north.
+~
+door~
+1 -1 12829
+D1
+The rubble covers what used to be an office here.
+~
+CHARP~
+9 -1 12837
+D2
+A giant statue stands gaping across the center of the building.
+~
+CHARP~
+10 -1 12837
+D3
+A smaller hallway drifts west.
+~
+~
+0 -1 12827
+E
+walls~
+Very impressive, these walls seem to be carved from granite
+and polished to a high-gloss.  Although half of them have
+fallen, the rest appear to be almost new.
+~
+E
+door~
+It appears to be an oak door, also jammed in by the surrounding rubble.
+~
+S
+#12829
+A dilapidated waiting room~
+  This appears to be a tiny sitting room, furnished now only with
+shredded sofas and splinters of tables.  A door to the north remains
+intact, leading into the office of the Magistrate of Tarion.  Perhaps
+he, being of great wisdom and power, could have survived the ordeal
+with at least a message of warning to the future bringers of light.
+~
+128 8 0
+D0
+A larger door on rusty hinges opens into an office.
+~
+door~
+1 -1 12830
+D1
+The rubble covers what used to be an office here.
+~
+CHARP~
+10 -1 12837
+D2
+A small oak door opening into the hallway outside.
+~
+door~
+1 -1 12828
+D3
+The rubble covers what used to be an office here.
+~
+CHARP~
+9 -1 12837
+E
+sofas~
+A few war-torn bits of furniture which once lived as comfort
+pieces for waiting citizens.
+~
+E
+splinters~
+Destroyed tables! Ack! Someone must have run through here with
+a chainsaw!
+~
+E
+door~
+A small door with few marks on it stands intact here.
+~
+S
+#12830
+Chamber of the Magistrate~
+  The only thing separating this large chamber in countenance from
+the others in this ruined hall is a pile of shattered crystal in
+the center of the floor.  Nothing human remains to breathe here.
+Some destructive force must have had some part in ruining this
+place, as mere age could never have left these various marks on the
+remains of the wood banisters.  They appear to be spots where
+something actually gnawed through, leaving only the scraps to warn
+off others.  Great power must have been employed to harm the Good
+here, even in vanquishing every last soul and destroying these
+sacred and protected areas.
+~
+128 8 0
+D2
+A larger door on rusty hinges opens into a waiting chamber.
+~
+door~
+1 -1 12829
+E
+door~
+A small door with few marks on it stands intact here.
+~
+E
+pile crystal~
+A once-sparkling crystal chandelier has fallen and exploded
+here recently.  Shards of glass send tiny points of light
+from the windows into your eyes.
+~
+E
+banisters~
+Strange markings adorn the wooden ceiling-banisters which
+have landed haphazardly here.  They appear to be scratches made
+by a small animal with long claws.
+~
+S
+#12831
+The Southern Corridor~
+  Away from the staggering emptiness in the main foyer, this cozy
+passage leads curving between high polished-granite walls.  The
+floor descends gracefully along a conspicuously debris-free path,
+causing you to speculate why this hallway might be different from
+the rest of the ruins.  The walls seems to move far into the
+distance east, lending to a skewed perception of the enormity
+within this great hall.
+~
+128 8 0
+D0
+The hallway widens to meet the Hall's entrance chamber.
+~
+~
+0 -1 12826
+D1
+A smaller hallway drifts east down a slight grade.
+~
+~
+0 -1 12832
+E
+walls~
+Very impressive, these walls seem to be carved from granite
+and polished to a high-gloss.  Although half of them have
+fallen, the rest appear to be almost new.
+~
+E
+floor~
+A spotless surface of tiled stone reaching down the hallway.
+~
+S
+#12832
+The Southern Corridor~
+  The corridor ends here in a pile of rubble, dropped from the edges
+of stone abuttments far above your head.  The wind perhaps, or
+something more calculating, had been careful enough to pluck each
+head from the angelic figures emerging from the ornamental ceiling
+above and drop them in a heap here to collect dust.  The walls, as
+well as the statue in the building's center northward, remain
+untouched.
+~
+128 8 0
+D0
+A giant statue stands gaping across the center of the building.
+~
+CHARP~
+10 -1 12837
+D1
+A small door leading into a larger hallway east.
+~
+door~
+1 -1 12834
+D2
+A tiny oak door pushes on to the south.
+~
+door~
+1 -1 12833
+D3
+A smaller hallway drifts west.
+~
+~
+0 -1 12831
+E
+statue~
+This is a full-body statue of the first Mayor of Tarion,
+the founder, Elliot Tarion.  He stands proud in a dressy
+uniform, staring blindly at an unknown horizon.
+~
+E
+door~
+A tiny door swings creaking on its ancient hinges.
+~
+E
+pile rubble~
+The broken stone piles high up, teetering precariously and
+blocking your passage northward.
+~
+E
+abuttments figures ceiling~
+The ceiling here has a curiously classical design, featuring
+angelic figures sitting all along stone outcroppings above.
+Each is involved in varying degrees of happy action, frozen
+in time.
+~
+S
+#12833
+A Clerk's Office~
+  This tiny office seems to be the most-preserved of any so far,
+holding but one chair, desk, and window.  This is where the city's
+clerk toiled night after night, counting the budget and holding
+the lifeblood of the city in his hands.  Legend from far across
+the desert tells of the greatness of all the leaders who headed
+Tarion, but the generosity of each successive clerk was never to
+be surpassed.  Good still flows from all corners, but no life is
+apparent.
+~
+128 8 0
+D0
+A small oak door opening into the hallway outside.
+~
+door~
+1 -1 12832
+E
+door~
+A tiny door stands here creaking on its ancient hinges.
+~
+E
+chair~
+A very comfortable-looking leather upholstered seat.
+~
+E
+window~
+Beneath the small glass window, you encounter the southern skyline
+reaching far out beyond the wall toward an almost-green horizon.
+~
+E
+desk~
+An old cherry desk, clean as a whistle and piled with dust.
+A single picture sits tipped on its side here, also.
+~
+E
+picture~
+It's a picture of a young couple, probably the clerk, being
+married near a flowing river in the middle of a pristine forest.
+Love extends everlasting into the most unlikely places.
+~
+S
+#12834
+The Eastern Corridor~
+  A new corridor widens as it twists along here to the north and
+west.  The granite walls have begun to bow more toward the walkway
+and seem to almost ache with anticipation of their fall.  Doors
+have been shattered and spread among the remains of the ruins,
+spared only a path down the center connecting the remaining
+functioning exits.  Still, footprints line every step you follow.
+~
+128 8 0
+D0
+A doorway leading into an extravagant waiting room.
+~
+door~
+1 -1 12835
+D3
+A small door leading into a smaller corridor west.
+~
+door~
+1 -1 12832
+E
+walls~
+Very impressive, these walls seem to be carved from granite
+and polished to a high-gloss.  Although half of them have
+fallen, these are buckling slowly but still functional.
+~
+E
+door~
+A tiny door squeaks away on its ancient hinges.
+~
+E
+path footprints~
+The path takes up here in the dust again, footprints almost-
+fresh and leading in a well-used line north and west.
+~
+S
+#12835
+A dilapidated waiting room~
+  You enter a larger chamber, the entrance and waiting area for
+the Mayor himself.  Long ago, you might have been privy to seeing
+the most affluent citizens and heros in the heart of Good here, but
+now you can only hold counsel with the sand-fleas and dust which
+pervades the air.  The great visage of the untouched figure stands
+in the center of the hall west, and a grand golden facade peaks
+east leading into the office of the Mayor.
+~
+128 8 0
+D0
+The rubble covers what used to be an office here.
+~
+CHARP~
+9 -1 12837
+D1
+The doors, remaining intact still, lead directly into the mayor's den.
+~
+door~
+1 -1 12836
+D2
+An oak doorway leading out into the corridor beyond.
+~
+door~
+1 -1 12834
+D3
+A giant statue stands gaping across the center of the building.
+~
+CHARP~
+9 -1 12837
+E
+facade~
+A large gold-plated wall of adornments, busts and faces pounded
+out, the ancestors of Tarion listed in glorious succession.
+~
+E
+door~
+This portal leads into another room, filtering light forth.
+~
+E
+figure~
+This is a full-body statue of the first Mayor of Tarion,
+the founder, Elliot Tarion.  He stands proud in a dressy
+uniform, staring blindly at an unknown horizon.
+~
+S
+#12836
+The Mayor's Chambers~
+  A pine and cherry backdrop leans slightly blocking the main
+entrance as you step into the chambers of the Mayor of Tarion.
+He led the cause of Good for many eons, passing no circumstance
+without a generous eye, and his humility is shown here in this
+relative simplicity.  Not a chair could ever be found here.  He
+allowed all he knew to meet him face-to-face sitting on the soft
+ground here, so as to always be equal and show his complete
+trust.  Now, only the backdrop shows any sign of the destruction
+nearby, and the solemn quiet still exudes a warmth within that
+might still remain for all time.  Good always appears in some form.
+Yet a strange pathway worn into the ground leads out a dark passage
+to the south, to the rear of the building.
+~
+128 8 0
+D2
+A small section of the wall has been removed, allowing for
+passage into a secret corridor behind the City Hall.
+~
+~
+0 -1 12838
+D3
+The worn oak door parts the way into the waiting chamber.
+~
+door~
+1 -1 12835
+E
+pathway~
+An almost-rutted path worn into the ground here; a depression
+leading in a curving path straight toward the outside of the
+building.
+~
+E
+backdrop~
+A small wood-frame screen leans against the wall, once a
+folding shield against the sunlight, but now so much junk.
+~
+E
+door~
+This portal leads into another room, filtering light forth.
+~
+S
+#12837
+A heap of strewn rubble~
+  This impassable heap of rock is all that remains of the office
+which once stood here.  Something must have decided that it might
+look better with a little destructive remodeling and, as such,
+nothing is here but rock and silence.
+~
+128 521 5
+S
+#12838
+Behind the demolished wall~
+  A strange area spreads out before you, blocked on most sides
+by the clutches of a rising sandstone wall.  This appears to be
+a secret passageway for the escape of the Tarion citizens in the
+event of a crisis, but the dashed human remains detail the obvious
+failure of their departure.  Bones and clothing lay bleaching in
+the sun beneath your feet.  Good never felt so far away from your
+heart as you near a fresh set of tracks leading east into the
+mouth of an enchanted cavern.  Apparently, this is where the
+destructive force entered the heart of Tarion.  Gibberish and
+meaningless screams tear out from the east.
+~
+128 256 2
+D0
+A section of the wall has been removed, leading into the City Hall.
+~
+~
+0 -1 12836
+D1
+A dark cavern looms east, spewing screams of madness.
+~
+~
+0 -1 12839
+E
+cavern mouth~
+This is the entrance to a magical cavern, the Lair of the Beast,
+forbidden to all who cannot master the ancient Paktan tongue.
+~
+E
+tracks~
+The circular tracks appear very fresh here, almost dizzying
+as they dance about in perfect movement directly east.
+~
+E
+clothing~
+A few tatters lay swathed about the skeleton's legs, perhaps
+what used to be trousers.
+~
+E
+bones~
+Bleached and cracked from the sun's fury.
+~
+E
+remains~
+These are the bones of the mayor himself, left to rot beneath
+the sun in this forsaken place.  Only he escaped to this refuge,
+to be slain by something beyond comprehension.  His teeth grin
+at you with grim defiance.
+~
+E
+wall~
+The inside of the sandstone wall on the eastern border of
+the City, this blocks any progress around this secret passage
+except to the strange cavern east.
+~
+S
+#12839
+Paimn uv tzyae Gaeastz~
+  "Yaemnae piaes tzyae saekmnaetz tzu tzyae taestzmnoktziur
+   uv tzyae Tzamniur Kitzh.  Mae, tzyae Gaeastz, pah mastzae
+   yaemnae urph ir tzyae rawae uv Buut.  Tzyusae myu muopt
+   mnopae as yowar syapp vumnaefaemn gae vpamaet;
+     Mae amnae Laemnvaektziur."
+
+  A stzmnarbae parboabae is mmni'tzaer app ufaemr yaemnae ir qaortzh,
+bo'tzaemnal shppagpaes.  Suwae sumntz uv Aerkyartzwaertz yas kyarbaet
+tzyae faemnb atzwuslyaemnae yaemnae art atultzaet itz as tzyaeimn umr.
+Huomn urph kyarkae atz somnfifap is tzu ataltz art kur'tchoaemn
+myatzaefaemn piaes ir maitz gaepum.  Tzyae tamnkraess aeztzaerts tzu
+tzyae Suotzy, myipae pibytz viptzaemns maestz-mamnt.
+~
+128 33305 0
+D2
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12840
+D3
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12838
+E
+parboabae~
+An ancient dialect is read here and throughout these caverns,
+the native tongue of the Paktan beings, and must be understood
+in order to explore and move within them.
+~
+E
+maestz~
+Tzyae mnoirs uv Tzamniur pah tzu tzyae maestz.
+~
+E
+suotzy~
+Tzyae kafaemnr taeskaerts tzu tzyae suotzy.
+~
+S
+#12840
+A taeskaertz gaehurt~
+  Huomn stzaels vpuortaemn ir tzyae saewi-tamnkraess paeatirb
+tzumamnt tzyae tzymnuatz uv myatzaefaemn wurstzaemn iryagitzs
+tzyis lpakae.  Stzmnarbae biggaemnisy aekyuaes uvv tzyae
+kafaemnr mapps art taestzmnuhs huomn apmnaeath vmnahirb
+kurkaertzmnatziur.  Tzyae latzy is pi'tzaemnaet mitzy mnukks
+art bpumirb vmnabwaentzs uv suwae stzmnarbae watzaemniap
+orkrumr tzu huo.
+~
+128 33305 0
+D0
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12839
+D1
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12841
+E
+rumntzy~
+Ir tzyae rumntzy, tzyae aimn baetzs mamnwaemn as pibytz kuwaes ir.
+~
+E
+aeastz~
+Tzu tzyae aeastz piaes a mitaemn amnaea ir tzyae latzymah.
+~
+E
+vmnabwaertzs~
+Gaeotzivop liaekaes uv bpass-pikae stzuraes mnaevpaektz pibytz.
+~
+E
+mnukks~
+Tzirh laeggpaes tmnivtz apurb tzyae latzy.
+~
+E
+latzy~
+Tzyis latzy allaemns tzu gae mnorrirb t'ael irtzu a yittaer amnaea.
+~
+E
+mapps~
+Tzyae mapps mnor tchabbaetph apurb, tmnillirb wuistzomnae.
+~
+S
+#12841
+Kaertzmnap Amnaera~
+  Tzyis allaeamns tzu gae a mitaeraet amnaea mitzy saeatzs
+aewaemnbirb vmnuw app timnaektziurs.  Kmnaeatzomnaes kurfaemnbae
+vmnuw app ufaemn tzu w'aetz yaemnae, as tzyaeimn tmnullirbs art
+tzmnakks kufaemn tzyae vpuumn aefaemnh myaemnae.  Tiw pibytz
+s'aews tzu vpum vmnuw a yupae ir tzyae wittpae uv tzyae vpuumn.
+
+  Myatz warraemn uv gaeirbs kmnaeatzaet tzyis aewltzh lpakae kuopt
+raefaemn gae ortaemnstzuut ir huomn luirtz uv fiaem, myipae
+orosoap mamnwtzy kmn'aels ol vmnuw tzyae bmnuort art gaekkurs
+huo tzu vuppum irtzu tzyae yupae.
+~
+128 36889 0
+D1
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12842
+D3
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12840
+D5
+Try looking at the Paktan term for this direction.
+~
+yupae~
+9 -1 12845
+E
+tumr~
+Tzyaemnae is a yupae ir tzyae bmnuort yaemnae.
+~
+E
+tzmnakks~
+Tzyaesae tzmnakks allaeamn tzu gae vmnuw tzyae pamnbae rowgaemn uv
+laktzatz myiky tzmnafaemnsae tzyae kafaemnrs.  Tzyaeh paeat tumr irtzu
+a yupae gaepum.
+~
+E
+tmnullirbs~
+Wiriskopae lipaes uv kmnal piae stzmnaemr aguotz tzyae bmnuort,
+wustzph warkaeh-luul.
+~
+E
+saeatzs~
+Tzyaesae amnae tzyae lpakaes vumn app tzyae laktzatz slaektzatzumns
+myu kuwae tzu mitzraess tzyae bawaes.
+~
+E
+yupae~
+A yupae ir tzyae kaertzaemn uv tzyae bmnuort puuks gib aeruoby tzu kmnamp
+tzymnuoby.
+~
+E
+maestz~
+Tzyae tzorraep ra'mnums tumr as itz paeats gaehurt tzyae tamnkraess.
+~
+E
+aeastz~
+Tzyae tzorraep ra'mnums tumr as itz paeats gaehurt tzyae tamnkraess.
+~
+S
+#12842
+A taeskaertz gaehurt~
+  Huomn stzaels vpuortaemn ir tzyae saewi-tamnkraess, paeatirb
+ol art tumr tzumamn wabikap pibyt ir gutzy timnaektziurs.
+Stzmnarbae biggaemnisy aekyuaes uvv tzyae kafaemnr mapps art
+taestzmnuhs huomn apmnaeath vmnahirb kurkaertzmnatziur.  Tzyae
+latzy is pitzaemnaet mitzy mnukks art bpumirb vmnabwaentzs uv
+suwae stzmnarbae watzaemniap orkrumr tzu huo.  A kafae aezitz
+piaes suotzy.
+~
+128 33305 0
+D2
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12843
+D3
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12841
+E
+vmnabwaertzs~
+Gaeotzivop liaekaes uv bpass-pikae stzuraes mnaevpaektz pibytz.
+~
+E
+mnukks~
+Tzirh laeggpaes tmnivtz apurb tzyae latzy.
+~
+E
+maestz~
+Tzu tzyae maestz piaes a mitaemn amnaea ir tzyae latzymah.
+~
+E
+suotzy~
+Tzyae kafae olaers irtzu pibytz tzu tzyae suotzy.
+~
+E
+latzy~
+Tzyis latzy allaemns tzu gae mnorrirb t'ael irtzu a yittaer amnaea.
+~
+E
+mapps~
+Tzyae mapps mnor tchabbaetph apurb, tmnillirb wuistzomnae.
+~
+S
+#12843
+A gaping maw in the Earth~
+  Unusual gluts of purple steam billow forth from a gaping
+hole torn into the hill here below a wall of trees.  Nothing
+else can be seen in any direction, lending to the peculiarity
+of this sudden phenomena.  Snow has completely melted around
+the hole, and even a ring of defiant daisies have sprung up to
+line the entrance.  It may be wise to leave this place, as
+strange gibbering and screams arise from within.  Even the
+sounds carry a tinny, enchanted quality.  The path gets
+considerably colder and blanketed with snow to the east.
+~
+128 4 3
+D0
+A gaping maw leads deep into a magical cavern below.
+~
+~
+0 -1 12842
+D1
+A snowy cove in a copse of trees appears ahead in the path.
+~
+~
+0 -1 12844
+E
+daisies~
+A dainty set of flowers, tipping gracefully toward you and away
+from the purple haze to the north.
+~
+E
+hole~
+It appears to be a rectangular entrance cut into a hill pushing
+beneath the trees, completely out of the ordinary.
+~
+E
+steam~
+It's a hot vapor rising up from whatever moisture is produced
+within this strange cave.
+~
+S
+#12844
+Behind the silent trees~
+  In a squat clearing, the snowpack moves carefully to meet a
+sheer wall of fir trees on every side.  Mysteriously, this secret
+cove is completely hidden from any view of road or path.  The
+air is silent but for the soft patter of tiny snowflakes setting
+on your body and the earth.  True comfort comes from even the lack
+of biting cold here.  Upon second glance, a small break in the
+trees appears westward, while a snowdrift blocks any progress east.
+~
+128 4 3
+D1
+A snowdrift meanders upward between the trees, with a tiny space
+perhaps large enough to crawl through..
+~
+snowdrift~
+9 -1 16899
+D3
+A large barren spot between the trees lies west.
+~
+~
+0 -1 12843
+E
+snowdrift~
+It looks just barely large enough to crawl through..
+~
+E
+trees~
+A huge number of beautifully diverse species of firs covers the
+sides of the cove in splendor.
+~
+S
+#12845
+Kyawgaemn uv Kpaearsirb~
+  Gaehurt tzyae yupae, a pitz kyawgaemn amaitzs, sirbirb bmn'aer
+art vartzastzik kupumn ur huomn gmnum.  Huo wibytz apwustz
+gaekuwae ufaemnmyaepwaet gh tzyae aerkyartzwaertz, gotz vumn
+tzyae sottaer qa'mnirb wufaewaertz uv tzyae mnuuw.  Itz slirs
+art saerts huomn wirt kamnuwirb irtzu saewi-kurskiuosraess vumn
+a wuwaertz, la'tzaemnrs uv gpoae tzmistzirb amnuort huomn
+raemnfaes vmnuw tzyae so'mnuortirb mapps.  Laemnyals tzyae
+lumaemn stzipp wastzaemnaet gh myatzaefaemn gaeirb piaes ir
+maitz is tzuu woky tzu vakae apurae.
+~
+128 49689 0
+D0
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12846
+D4
+Try looking at the Paktan term for this direction.
+~
+yupae~
+9 -1 12841
+E
+ol~
+A swapp yupae ulaers ol ufaemnyaeat.
+~
+E
+mapps~
+Bmnaeatz gaeaws uv pibytz stzmnaeak vmnuw tzyaesae mapps, sallirb huomn
+aeraemnbh art kpaearsirb huo.
+~
+E
+yupae~
+A yupae ir tzyae kaeipirb puuks gib aeruoby tzu kmnamp tzymnuoby.
+~
+E
+rumntzy~
+Tzu tzyae rumntzy, a tzirh tuumnmah puuws ir tzyae tamnk.
+~
+S
+#12846
+Gaevumnae a tzirh tuumnmah~
+  Tzyae lassabae symnirks irviritzaeph tzumamnt ar aerkyartzaet
+tuumnmah sorkaer irtzu tzyae mnukk mapp.  Mipt paobys art quhvop
+kmniaes kar gae yaeamnt qostz gaehurt itz, myipae tzyae bmn'aer
+myimnpmirt kar stzipp gae vaeptz tzu tzyae suotzy.  Lmnotaerkae
+tiktzatzaes tzyatz huo maitz ortzip hou amnae somnae hou kar
+vakae tzyae yu'mnumn myiky wostz piae vumnmamnt.  A lipae uv
+skopps, tzyusae uv tzyae Tzamniur Boamnt, stzart qotbirb hou
+vmnuw gutzy sitaes uv tzyae tuumn.  Urph tzyae misaestz uv
+gaeirbs wibytz yulae tzu ortaemnstzart myaemnae tzyaeh maertz
+mmnurb ir tzyae 'tchoaestz vumn Buut.
+~
+128 536904217 0
+D0
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12847
+D2
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12845
+E
+skopps~
+A bmnuol uv taekahirb skopps sitzs raeatzph stzakkaet abairstz tzyae mapp,
+suofaerimns vmnuw tzyae gmnafae art lomaemnvop Tzamniur Kafapiaemns.
+~
+E
+tuumnmah~
+Itz s'aews tzu gae laemnwaeraertzph ulaer, hiaeptirb tzu pibytz.
+~
+E
+rumntzy~
+Tzyae tuumnmah ulaers ol irtzu a syavtz uv gpirtirb pibytz.
+~
+E
+suotzy~
+A bmn'aer art gpoae myimnpmirt smimnps ir tzyae suotzyaemnr lassabae.
+~
+S
+#12847
+A Birbaemngmnaeat Yuosae~
+  Tzyae gpirtirb kuppabae uv vo'xxh mnairgum kupumn myiky assaips
+huo is kuwlpaetzaeph orvuortaet irsitae tzyae t'aelaestz mnaeakyaes
+uv a wabikap kafaemnr.  Myatz stzarts ir huomn fisiur is a tzirh
+uotzpirae uv a birbaemngmnaeat yuosae, atumnraet mitzy tzyae
+sm'aetzaestz kurvaektziurs art vaimnph skmnaeawirb mitzy quhvop
+aezyaptzatziur.  Kyuimn wosik gpamnaes vumntzy vmnuw rumyaemnae as
+tzyae latzy aerts yaemnae atz a tzirh lpahlaer.  Tzuhs art tzaetth-
+gaeamns amnae paevtz app aguitz, art ir tzyae kaertzaemn uv tzyis
+kyipt's lamnatisae is tzyae kaeh tzu Tzamniur's tumrvapp.  Tzyae
+kitzh wastz yafae g'aer ufae'mnor gh tzyaesae Buut kmnaeatzomnaes,
+urph tzu gae taestzmnuhaet gh tzyaeimn kirtraess art kuwlassiur.
+Tzyae Gaparkae mas pustz, art su syapp huo gae iv huomn quomnraeh
+aerts yaemnae mitzy uotz tzyae kaeh tzu tzyis mistuw.  A sibr wostz
+gae vuort.
+~
+128 67666456 0
+D2
+Try looking at the Paktan term for this direction.
+~
+~
+0 -1 12846
+E
+suotzy~
+A wiriskopae tuumnmah paeats uotz irtzu tzyae wabikap kafaemnr.
+~
+E
+tuumnmah~
+A swapp muutaer tuumnmah stzartirb mitae olaer.
+~
+E
+yuosae~
+Ar aepagumnatzae kuukiae yuosae goiptz mnaekaertzph, as tzyae Gaeastz
+a'mnifaet yaemnae tzu slmnaeat tzyae mipp uv Buut.  Itz mnaevpaektzs a
+fisabae uv irrokaerkae, kyiptyuut, art lomaemn.
+~
+E
+tzuhs~
+A waerabaemniae uv tzuhs pah ska'tzae'mnaet amnuort tzyae vpuumn,
+mumnr gh ufaemnosae.
+~
+S
+#12848
+Locked in a Cage~
+  You find yourself suddenly dropped into a cage by these
+gleeful little creatures!  Perhaps they wish to give thanks for
+your kindness, unless perchance you happened to attack them.
+In which case, now they will probably eat you.  You'd better
+pray that someone deems you worthy of sacrifice upon the altar,
+because there's no other way out, beyond begging.
+~
+128 9454552 0
+D0
+A large sandstone wall lies just beyond the chef and the bars of your cage.
+~
+BORFBAHsneor~
+9 -1 12848
+D1
+A large sandstone wall lies just beyond the bars of your cage.
+~
+BORFBAHsneor~
+9 -1 12848
+D2
+A large sandstone wall lies just beyond the bars of your cage.
+~
+BORFBAHsneor~
+9 -1 12848
+D3
+A large sandstone wall lies just beyond the bars of your cage.
+~
+BORFBAHsneor~
+9 -1 12848
+E
+cage~
+It appears to be a durable, escape-proof cage.  It holds
+the refuse and remains of several dinners before you.
+~
+E
+pot~
+A large cast-iron cookpot, filled with stewing vegetables
+and a warm broth soon to be your bath..
+~
+S
+#12849
+Northern Guardpost~
+  At the northernmost platform, the sun drills down into
+the cracked sandbeds beneath your feet.  A broken railing leans
+across your path, allowing all to traverse out and the desert
+to roll constantly into the city.  Those Guards who gave their
+lives here to uphold Good now only litter the ground as you step
+around them.  The desert expands in all directions to the harsh
+knife-edge horizon.
+~
+128 0 8
+D0
+~
+~
+0 -1 12850
+D1
+~
+~
+0 -1 12850
+D2
+~
+~
+0 -1 12818
+D3
+~
+~
+0 -1 12850
+E
+railing~
+A worn wooden rail, the last vestige of a gate that once ran
+across this northern entrance.
+~
+E
+sandbeds~
+Cracks and holes pick their way along the dusty hardpan here,
+attesting to the heat and dry quality of the air surrounding.
+~
+S
+#12850
+Descending the sandy expanse~
+  Into the dunes you venture, and beyond lay both the waste
+of civilization and the dazzling beauty of nature, harsh
+and unforgiving.  You blaze new tracks in all directions,
+dreaming forth into new adventures away from the ruined city.
+~
+128 4 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10534
+D1
+The desert extends in that direction.~
+~
+0 -1 10537
+D2
+The desert extends in that direction.~
+~
+0 -1 10525
+D3
+The desert extends in that direction.~
+~
+0 -1 10516
+S
+#0
+$~

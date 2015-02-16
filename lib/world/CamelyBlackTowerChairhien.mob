@@ -1,0 +1,157 @@
+#18300
+Demandred~
+Demandred~
+Demandred is standing here.
+~
+  A high dark and handsome man is standing before you. Over his 
+hooked nose, dark eyes fix you gaze with hate. He is clothed all 
+in black except for silver threading on his coat.
+~
+8 268435456 -1000 Y
+60 -21 -19 2d50+29000 4d5+1200
+5000000 8000000
+8 8 1
+1 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18301
+Mazrim Taim~
+Mazrim Taim~
+Mazrim Taim is standing here.
+~
+   He has black hair, with a dark face, and the tilted eyes, hooked 
+nose and high cheekbones of a Saldaean. He looks like he is in 
+his thirties.
+~
+8 0 -1000 Y
+60 -17 -16 2d50+22000 4d5+800
+3000000 5000000
+8 8 1
+1 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18302
+asha'man~
+an asha'man~
+A man in a black coat is standing here.
+~
+The asha'man has a long black coat hanging to his knees. Under the 
+coat he  wears a black shirt with two pins, one on each side. One with 
+a sword and the other with a dragon in silver.
+~
+8 0 200 Y
+50 -17 -9 2d50+7500 2d3+70
+35600 1500000
+8 8 1
+1 0 4d4+500 3
+1 6 30 102
+1 4 40 218
+1 6 30 36
+0 0 0 0
+K
+0 0 0 0 0 0
+#18303
+librarian~
+A librarian~
+A blank of primal clay stands here, waiting to be shaped
+~
+   The librarian wears a brown robe covering her from neck to feet. 
+In her hand she holds an old manuscript.
+~
+8 0 600 Y
+40 0 0 2d50+6400 4d1+30
+40000 3000000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18304
+rioter~
+A rioter~
+A rioter is looking around for fight.
+~
+    The rioter has a frenzied look, looking around for something to 
+pillage or burn. His clothes are worn and torn in several places 
+showing several bloody wounds.
+~
+8 0 -300 Y
+38 -8 -10 2d50+5400 2d2+50
+12500 923000
+8 8 2
+69 0 4d4+500 1
+1 6 20 102
+0 0 0 0
+K
+0 0 0 0 0 0
+#18305
+morgase~
+Morgase~
+Morgase, Queen of Andor, is standing here.
+~
+   Morgase Trakand is beautiful, matured and ripened. Her face and figure, 
+her presence, fill the room like a light. She has a rich, warm voice. She 
+has blue eyes and long red-gold curls.
+~
+8 0 0 Y
+55 -10 -13 2d50+20000 10d10+480
+3500000 2000000
+8 8 2
+69 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18306
+rahvin~
+Rahvin~
+Rahvin is standing here.
+~
+   Rahvin is tall and large. He is dark and very handsome. He is youthful 
+except for the white streaks at his temples. His eyes are almost black.
+~
+8 268435584 -1000 Y
+60 -19 -18 2d50+20000 10d10+1000
+5500000 8000000
+8 8 1
+1 0 4d4+500 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#18307
+guard queen member~
+A queens guard~
+A member of the queens guard is protecting the castle.
+~
+  Long white collars hung down over his mail and plate, and his cloak 
+and undercoat is red. His conical helmet shines like silver. Thin red 
+streamers flutter beneath the head of his lance. A cage of steel bars 
+mask his face.
+~
+8 0 500 Y
+45 -15 -16 2d50+10000 1d10+80
+50000 1200000
+8 8 1
+7 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#18308
+tallanvor~
+Tallanvor~
+Tallanvor is standing here.
+~
+   He is tall and good looking, young with dark eyes that watches you 
+carefully. His only duty it to protect his queen.
+~
+8 268435456 900 Y
+50 -16 -21 2d50+30000 1d10+750
+500000 3000000
+8 8 1
+7 0 4d4+500 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

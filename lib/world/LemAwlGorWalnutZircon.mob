@@ -1,0 +1,31 @@
+#26000
+G-man gman agent~
+G-man~
+A G-man is here keeping watch over the area.
+~
+  This fellow looks like he could easily fade into a crowd, in his plain 
+grey suit and dark sunglasses...he is keeping an eye out for anyone who
+might steal one of Lem or Awl's secrets.
+~
+8 0 0 Y
+60 20 0 20d100+0 100d3+0
+3000000 20000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#26011
+Grimhol~
+Grimhol~
+Grimhol is here, pacing the room in search of his next meal.
+~
+Awl's pet panther, Grimhol, is a lean, strong, fierce beast.  Much like Awl
+himself.  Grimhol enjoys toying with his prey before devouring it whole.
+~
+8 873234432 -666 Y
+31 -11 0 5000d10+200 100d40+50
+666 666
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#0
+$~

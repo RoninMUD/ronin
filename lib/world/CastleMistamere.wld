@@ -1,0 +1,1019 @@
+#19200
+The rolling hills~
+You are amidst hills that seem to never stop.. to the northwest off in
+the distance you see a huge castle. A huge, aged, blackened castle.. no
+sound can be heard in its direction.. only the screaming wind around your
+shoulders.. there seems to be a path of some sort to the west.
+~
+192 0 4
+D1
+The hills continue in a confused pattern..~
+~
+0 -1 4002
+D3
+The hills continue in a confused pattern..~
+~
+0 -1 19201
+S
+#19201
+The rolling hills~
+You are amidst a darkened mass of hills that seem to shift and relocate
+before your very eyes.. To the northwest you see Castle Mistamere, its
+looming towers calling out to darkness.. dwelling on it. You get the
+urge to turn back to town and forget about this whole expedition.
+~
+192 0 4
+D1
+~
+~
+0 -1 19200
+D3
+~
+~
+0 -1 19202
+S
+#19202
+The rolling hills~
+You are amidst rolling hills that seem to stretch eastwards for ages..
+Eastward the hills wind and merge to create a gigantic maze.. To the
+north is the Castle Mistamere.. brought down by forces unknown some time
+ago.. There is a slope leading up to a set of huge reinforced iron double
+doors.
+~
+192 0 4
+D0
+To the north is a slowly inclining slope towards the castle..~
+~
+0 -1 19203
+D1
+The hills continue eastwards for some time..~
+~
+0 -1 19201
+S
+#19203
+On the entrance slope to Castle Mistamere~
+You are standing on a large slope that leads to the double doors in front
+of you that hold the wonders of the fallen Mistamere. There are many
+runes etched upon the door's surface, but they are in a language you can't
+comprehend. To the south you can see the shadow hills that lead you back
+to the crossroads.
+~
+192 0 1
+D0
+The doors are made of iron and seem to have undergone a large amount of beating~
+doors double iron reinforced~
+0 -1 19204
+D1
+~
+~
+0 -1 12960
+D2
+~
+~
+0 -1 19202
+S
+#19204
+A large hallway~
+You are in a large hallway which leads north, and south to a pair of
+double doors. The walls and floor are made of stone, and has moss growing
+upon it. There is just enough light being let in by a skylight far above
+you to suit your needs. There are heavy oak doors on both the east and
+west walls.
+~
+192 8 0
+D0
+~
+~
+0 -1 19207
+D1
+~
+door heavy oak~
+0 -1 19206
+D2
+The doors of the castle are stained with blood and have large nicks in them~
+doors double iron reinforced~
+0 -1 19203
+D3
+~
+door oak heavy~
+0 -1 19205
+S
+#19205
+An abandoned dining room~
+This room appears to have once been used as a dining room. There are
+tables and benches scattered throughout the room, many turned on their
+sides or upside down. Everything is covered with cobwebs.
+~
+192 8 0
+D1
+~
+door oak heavy~
+0 -1 19204
+S
+#19206
+A guardroom~
+You have entered what used to be a guardroom for the castle.. there are
+empty weapons racks on the walls and battered shields and armor laying on
+the ground, all useless.
+~
+192 8 0
+D3
+~
+door oak heavy~
+0 -1 19204
+S
+#19207
+A hallway~
+You are in a hallway leading east, west, and south.. there is a door to
+the north. Light is streaming in above from a small skylight in the roof.
+~
+192 8 0
+D0
+~
+door heavy oak~
+0 -1 19209
+D1
+~
+~
+0 -1 19208
+D2
+~
+~
+0 -1 19204
+D3
+~
+~
+0 -1 19210
+S
+#19208
+A hallway~
+You are in a hallway with a stone floor and walls.. It continues east and
+west, and there is a door north.
+Light streams in from a small skylight above.
+~
+192 8 0
+D0
+~
+door oak heavy~
+0 -1 19219
+D1
+~
+~
+0 -1 19211
+D3
+~
+~
+0 -1 19207
+S
+#19209
+A bedroom~
+You have entered a small bedroom. There is a door at the north end of the
+room, and also at the south. On either side of the northern door are
+windows above your reach.
+~
+192 8 0
+D0
+~
+door oak heavy~
+0 -1 19215
+D2
+~
+door oak heavy~
+0 -1 19207
+S
+#19210
+A hallway~
+You are in a long hallway which extends east and west.. to the north
+is a heavy oak door. The walls and floor are made of stone. A small
+stream of light peeks in from a half covered skylight above.
+~
+192 8 0
+D0
+~
+door oak heavy~
+0 -1 19220
+D1
+~
+~
+0 -1 19207
+D3
+~
+~
+0 -1 19212
+S
+#19211
+A hallway~
+The hallway turns here, leading north and west.. There is a passage
+leading south into the southeastern tower. Light is being let in by
+an old skylight far above your head.
+~
+192 8 0
+D0
+The hallway continues north..
+~
+~
+0 -1 19226
+D1
+~
+door oak heavy~
+0 -1 19225
+D2
+~
+~
+0 -1 19213
+D3
+The hallway continues west..
+~
+~
+0 -1 19208
+S
+#19212
+A hallway~
+The hallway comes to a bend here, leading north, and east.. There is also
+a heavy oaken door west. There are cobwebs all over the walls here, it
+seems this passage hasn't been used for a while. The southwestern tower
+lies south. A beam of light peeks through the skylight.
+~
+192 8 0
+D0
+The hallway continues north..
+~
+~
+0 -1 19223
+D1
+The hallway continues east..
+~
+~
+0 -1 19210
+D2
+The southwestern tower lies south..
+~
+~
+0 -1 19214
+D3
+You see a large oaken door..
+~
+door oak large oaken~
+0 -1 19221
+S
+#19213
+The southeastern tower~
+You see a circular room, about 40 feet in diameter, with eight openings
+spaced evenly about the outside wall. The windows extend from about
+waist height to about head height for a normal human. These are obviously
+ ports through which arrows can be fired. The room appears to be empty.
+~
+192 8 0
+D0
+You see the hallway..
+~
+~
+0 -1 19211
+S
+#19214
+The southwestern tower~
+You see a circular room, about 40 feet in diameter, with eight openings
+spaced evenly about the outside wall. The windows extend from about
+waist height to about head height for a normal human. A tree limb has
+grown through one of the windows. These are obviously ports through which
+arrows can be fired. The room appears to be empty.
+~
+192 8 0
+D0
+You see the hallway..
+~
+secret~
+0 -1 19212
+S
+#19215
+The courtyard~
+You are in a grassy courtyard open to the sky. Three doors, including
+the one by which you entered, line the walls. The courtyard continues
+north.
+~
+192 0 2
+D0
+The courtyard continues north..
+~
+~
+0 -1 19216
+D1
+You see a large oak door..
+~
+door oak large oaken heavy~
+0 -1 19239
+D2
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19209
+D3
+You see a heavy oak door..
+~
+door heavy oak~
+0 -1 19242
+S
+#19216
+The courtyard~
+You see a grassy courtyard open to the sky. Three doors, including the
+one by which you entered, line the walls. The courtyard continues south.
+There is a large oak tree growing here.
+~
+192 0 2
+D0
+You see a large oak door..
+~
+door oak large~
+0 -1 19217
+D1
+You see a large oak door
+~
+door oak large~
+0 -1 19238
+D2
+The courtyard continues south..
+~
+~
+0 -1 19215
+D3
+You see a large oak door..
+~
+door oak large~
+0 -1 19240
+S
+#19217
+A bedroom~
+You have entered a small bedroom which appears to be sanctioning a few
+rather dirty creatures, by the looks of the beds and cloth thrown about
+the room. There are doors on the north and south walls. the south door
+is flanked by two windows.
+~
+192 8 0
+D0
+You see a heavy oaken door..
+~
+door oak heavy~
+0 -1 19218
+D2
+You see the courtyard through the windows..
+~
+door heavy oak~
+0 -1 19216
+S
+#19218
+The hallway~
+You are in a long hallway extending east and west. There are heavy oak
+doors on both the north and south walls. The walls and floor are made of
+stone and have moss growing on them. A small ray of light streams in
+from above.
+~
+192 8 0
+D0
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19253
+D1
+The hallway continues east..
+~
+~
+0 -1 19236
+D2
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19217
+D3
+The hallway continues west..
+~
+~
+0 -1 19251
+S
+#19219
+A bedroom~
+You have entered a small bedroom of some sort. The only door out of this
+room is the one which you came in by. There is a bed in the northern end
+of the room, which looks recently used. There is a skylight here similar
+to the ones in other rooms.
+~
+192 8 0
+D2
+You see the hallway..
+~
+door oak heavy~
+0 -1 19208
+S
+#19220
+A bedroom~
+You have entered a small bedroom that looks recently used. On the south
+wall is a door, leading back into the hallway. The walls and floor of
+this room are of stone. A small beam of light hits your eyes from above.
+~
+192 8 0
+D2
+You see a heavy oak door leading back into the hallway..
+~
+door heavy oak~
+0 -1 19210
+S
+#19221
+The kitchen~
+The west wall of this room has a ledge about seven feet from the floor, 
+with two small windows above the ledge. The room seems to be a kitchen.
+It contains four tables, a pump, and an old stove.
+~
+192 8 0
+D1
+You see the hallway..
+~
+door oak heavy~
+0 -1 19212
+S
+#19222
+The pantry~
+The west wall of this room has a ledge about seven feet from the floor, 
+with two small windows above the ledge. Cabinets and shelves line the wall.
+In the middle of the floor lies the body of a goblin with a horribly
+swollen arm. Trash and old sacks are scattered about the floor.
+~
+192 8 0
+D1
+You see the hallway..
+~
+door oak heavy~
+0 -1 19223
+E
+goblin corpse halfway decayed~
+There seems to be a large snakebite on the swollen arm.
+ 
+~
+S
+#19223
+The hallway~
+You are in a long hallway that stretches out north and south. There is a
+skylight high above you letting light in this desolate place. To the west
+is a door.
+~
+192 8 0
+D0
+The hallway continues..
+~
+~
+0 -1 19224
+D2
+The hallway continues..
+~
+~
+0 -1 19212
+D3
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19222
+S
+#19224
+The hallway~
+You are in a long hallway leading north and south. A beam of light hits
+the floor in front of you from a halfway covered skylight in the roof. To
+the east of you on a huge stone wall grows a patch of moss. There is a
+door west of you.
+~
+192 8 0
+D0
+The hallway continues..
+~
+~
+0 -1 19245
+D2
+The hallway continues..
+~
+~
+0 -1 19223
+D3
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19244
+E
+moss~
+It it timeless, now one with the castle.. 
+~
+S
+#19225
+A utility room~
+The east wall of this room has a ledge about seven feet from the floor, 
+with two small windows above the ledge. The room appears to be empty.
+~
+192 8 0
+D3
+You see a heavy oak door..
+~
+door oak heavy oaken~
+0 -1 19211
+S
+#19226
+The hallway~
+You are in a long hallway which extends north and south. There is a door
+to the east. A ray of sunlight catches your eye through the roof above.
+The walls and floor are made of aging stone here, some corners covered
+in moss.
+~
+192 8 0
+D0
+The hallway continues..
+~
+~
+0 -1 19229
+D1
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19227
+D2
+The hallway continues..
+~
+~
+0 -1 19211
+S
+#19227
+A storeroom~
+The east wall of this room has a ledge about seven feet from the floor.
+There are two small windows above the ledge. Except for some trash on
+the floor, the room appears to be empty.
+~
+192 8 0
+D3
+The hallway lies west..
+~
+door oak heavy~
+0 -1 19226
+S
+#19228
+A storeroom~
+The east wall of this room has a ledge about seven feet from the floor.
+There are two small windows above the ledge. Except for some trash on the
+floor, the room appears to be empty.
+~
+192 8 0
+D3
+The hallway lies west..
+~
+door oak heavy~
+0 -1 19229
+S
+#19229
+The hallway~
+You are in a long hallway which extends to the north and south. To the
+east is a door. The walls and floor are made of stone and have moss growing
+in the cracks. A beam of light hits the floor in front of you from the
+roof.
+~
+192 8 0
+D0
+The hallway continues..
+~
+~
+0 -1 19230
+D1
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19228
+D2
+The hallway continues..
+~
+~
+0 -1 19226
+S
+#19230
+The hallway~
+You are in a hallway that stretches north and south. To the east is a heavy
+oaken door. The walls and floor are made of stone, and have moss growing
+in the cracks. You hear a flock of crows pass above the castle through
+the open skylight, and the room goes dark for a second.
+~
+192 8 0
+D0
+The hallway continues north..
+~
+~
+0 -1 19232
+D1
+You see a heavy oak door..
+~
+door oak heavy oaken~
+0 -1 19231
+D2
+The hallway continues south..
+~
+~
+0 -1 19229
+S
+#19231
+A storeroom~
+The east wall of this room has a ledge about seven feet from the floor.
+There are two small windows above the ledge. Except for two long tables
+along the south wall, the room appears to be empty. As you enter the room,
+you hear the sound of small wings.
+~
+192 8 0
+D3
+The hallway lies west..
+~
+door oak heavy~
+0 -1 19230
+E
+nest ledge~
+The stirges have made a nest upon the ledge.
+ 
+~
+S
+#19232
+The hallway~
+You are in a long hallway which stretches north and south. To the east is
+a door. The walls and floor are made of stone, and have moss growing upon
+them in the cracks. A ray of light hits the floor in front of you from a 
+skylight in the roof.
+~
+192 8 0
+D0
+The hallway continues north..
+~
+~
+0 -1 19234
+D1
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19233
+D2
+The hallway continues south..
+~
+~
+0 -1 19230
+S
+#19233
+The chapel~
+The east wall of this room has a ledge about seven feet from the floor,
+with two small windows above the ledge. There is a small altar on the
+diagonal northwest wall. There are several long benches in the room. Two
+of them have been pushed together in the southeast corner to form a rude
+bed.
+~
+192 8 0
+D3
+The hallway lies to the west..
+~
+door oak heavy~
+0 -1 19232
+S
+#19234
+The hallway~
+You are in a long hallway that has come to a bend, now leading west and
+south. There is a passage north to the northeastern tower. The walls and
+floor are made of stone and have moss growing in the cracks. There is
+rubble on the floor and the room is being flooded by daylight, the skylight
+opened by an unknown force.
+~
+192 0 0
+D0
+The northeastern tower lies north..
+~
+~
+0 -1 19235
+D2
+The hallway continues south..
+~
+~
+0 -1 19232
+D3
+The hallway continues west..
+~
+~
+0 -1 19236
+S
+#19235
+The northeastern tower~
+You are in a circular room, about 40 feet in diameter, with eight openings
+spaced evenly and from about waist height to about head height for a
+normal human. These are obviously ports through which arrows can be fired.
+The floor of the room is covered with rubbish.
+~
+192 8 0
+D2
+The hallway lies south..
+~
+~
+0 -1 19234
+S
+#19236
+The hallway~
+You are in a long hallway extending east and west. On the north and south
+walls are doors. The walls and floor are made of stone, and has moss
+growing between the cracks. A ray of light hits your eye from the skylight
+above.
+~
+192 8 0
+D0
+You see a heavy oak door..
+~
+door oak heavuy~
+0 -1 19243
+D1
+The hallway continues east..
+~
+~
+0 -1 19234
+D2
+You see a heavy oaken door..
+~
+door oak heavy~
+0 -1 19237
+D3
+The hallway continues west..
+~
+~
+0 -1 19218
+S
+#19237
+A bedroom~
+You are in a small bedroom, which seems to be empty except for the
+unoccupied bed in the eastern side of the room. The room is lit by a small
+skylight in the southwest corner of the room, letting in light but not
+rain. The only exit out seems to be the door north.
+~
+192 8 0
+D0
+The hallway lies north..
+~
+door oak heavy~
+0 -1 19236
+S
+#19238
+A bedroom~
+This trash filled room contains an empty bed with all its slats removed.
+The room appears to be otherwise empty. A door on the east wall is flanked
+by two small windows about seven feet from the floor.
+~
+192 8 0
+D3
+the courtyard lies west..
+~
+door oak heavy~
+0 -1 19216
+S
+#19239
+A bedroom~
+This trash filled room contains an empty bed. There are scorch marks on
+the wall. The room appears to be otherwise empty. A door on the west wall
+is flanked by two small windows about seven feet from the floor.
+~
+192 8 0
+D3
+The courtyard lies west..
+~
+door oak heavy~
+0 -1 19215
+S
+#19240
+A bedroom~
+This trash filled room contains an empty bed. There is a chest next to the
+bed. Otherwise, the room appears to be empty. A door on the west wall is
+flanked by two small windows about seven feet from the floor.
+~
+192 8 0
+D1
+The courtyard lies east..
+~
+door oak heavy~
+0 -1 19216
+S
+#19241
+A bedroom~
+You are in a small bedroom, the room seems to be empty except for an
+unoccupied bed. The room is lit by a skylight in the southeast corner that
+lets in the light, but not the rain.
+~
+192 9 0
+D0
+You see a heavy oaken door..
+~
+door oak heavy~
+0 -1 19251
+S
+#19242
+A bedroom~
+This trash filled room contains an empty bed. The bed clothes are rotten
+and decayed. The room appears to be otherwise empty. A door on the east
+wall is flanked by two small windows about seven feet from the floor.
+~
+192 8 0
+D1
+The courtyard lies east..
+~
+door oak heavy~
+0 -1 19215
+S
+#19243
+A utility room~
+The north wall of this room has a ledge about seven feet from the floor,
+with two small windows above the ledge. The room appears to be empty
+except for the cobwebs clinging all over the walls.
+~
+192 8 0
+D2
+The hallway lies south..
+~
+door oak heavy~
+0 -1 19236
+S
+#19244
+A library~
+The west wall of this room has a ledge about seven feet from the floor,
+with two small windows above the ledge. Bookshelves line the north and
+south walls; a few motheaten books remain on them. There is a large, dusty
+carpet in the middle of the room.
+~
+192 8 0
+D1
+The hallway lies east..
+~
+door oak heavy~
+0 -1 19224
+S
+#19245
+The hallway~
+You are in a long hallway extending north and south. The walls and floor
+are made of stone, and have moss growing upon them. There is a oaken door
+west. A ray of light hits the floor just in front of your feet from a
+skylight above.
+~
+192 8 0
+D0
+The hallway continues..
+~
+~
+0 -1 19248
+D2
+The hallway continues south..
+~
+~
+0 -1 19224
+D3
+You see a heavy oaken door..
+~
+door oak heavy~
+0 -1 19246
+S
+#19246
+A storeroom~
+The west wall of this room has a ledge about seven feet from the floor,
+with two small windows above the ledge. Except for some trash on the
+floor, the room appears to be empty.
+~
+192 8 0
+D1
+The hallway lies east..
+~
+door oak heavy~
+0 -1 19245
+S
+#19247
+A utility room~
+The west wall of this room has a ledge about seven feet from the floor,
+with two small bricked up windows above the ledge. There is a large
+trapdoor in the middle of the floor.
+~
+192 8 0
+D1
+The hallway lies east..
+~
+door oak heavy~
+2 19211 19248
+S
+#19248
+The hallway~
+You are in a long hallway extending north and south. The walls and floor
+are made of stone and have moss growing upon the cracks. There is a door
+west. A beam of light hits your eye from above, blinding you for a second.
+~
+192 8 0
+D0
+The hallway lies north..
+~
+~
+0 -1 19249
+D2
+The hallway continues south..
+~
+~
+0 -1 19245
+D3
+You see a heavy oaken door..
+~
+door oak oaken heavy~
+2 19211 19247
+S
+#19249
+The hallway~
+You are in a long hallway which has come to a bend, now leading east and
+south. The walls and floor are made of stone, and have moss growing upon
+the cracks. A ray of light hits the floor in front of you from the roof
+above. A passge north of you leads to one of the four towers of the castle.
+~
+192 8 0
+D0
+The northwestern tower lies to the north..
+~
+~
+0 -1 19250
+D1
+The hallway continues east..
+~
+~
+0 -1 19251
+D2
+The hallway continues south..
+~
+~
+0 -1 19248
+S
+#19250
+The northwestern tower~
+You see a circular room, about 40 feet in diameter, with eight openings
+spaced evenly about the outside wall. The windows extend from about waist
+height to about head height for a normal human. These are obviously ports
+through which arrows can be fired. The room appears to be empty except for
+the remains of a skeleton on the floor.
+~
+192 8 0
+D2
+The hallway lies south..
+~
+~
+0 -1 19249
+E
+skeleton~
+It has been there for many years. It was once a defender of this castle.
+ 
+~
+S
+#19251
+The hallway~
+You are in a long hallway which extends east and west. The walls and floor
+are made of stone, and have moss growing in the cracks. Doors lie both
+north and south. A ray of sunlight hits the wall next to you, highlighting
+its age.
+~
+192 8 0
+D0
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19252
+D1
+The hallway continues east..
+~
+~
+0 -1 19218
+D2
+You see a heavy oak door..
+~
+door oak heavy~
+0 -1 19241
+D3
+The hallway continues west..
+~
+~
+0 -1 19249
+S
+#19252
+A guardroom~
+The north wall of this room has a ledge about seven feet from the floor,
+with small windows above the ledge. The room looks as if it might have
+been a guard post. there are a few beds, some pegs on the walls for
+clothing, a rack to hold weapons,  and a long table with a drawer that
+might have once served as a desk. there are moth eaten clothes on the bed,
+but the room appears to be otherwise empty.
+~
+192 8 0
+D2
+~
+door oak heavy~
+0 -1 19251
+S
+#19253
+A storeroom~
+The north wall of this room has a ledge about seven feet from the floor,
+with two small windows above the ledge. The room appears to contain a lot
+of what seems to be personal gear and equipment.
+~
+192 8 0
+D2
+The hallway lies south..
+~
+door oak heavy~
+0 -1 19218
+S
+#0
+$~

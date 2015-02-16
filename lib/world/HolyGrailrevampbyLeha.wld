@@ -1,0 +1,2042 @@
+#8600
+The Entrance to The Quest of the Holy Grail~
+   You are standing at the entrance to The Quest of the Holy Grail. There
+are some lonely trees standing around here. To the west the road continues
+across a big field and to the east you can see the city Sonicity. There is
+a big stake sticking out of the ground with a sign on it.
+~
+86 4 2
+D1
+~
+~
+0 -1 8024
+D3
+~
+~
+0 -1 8601
+E
+sign~
+
+                                `d  /`q
+                                `d /Z`q
+                                `d/ZZ`q
+`d        +-----------------------+++--------------------------+`q
+`d        |                                                    |`q
+`d        |`q In Ye Quest for the Holiest of all Grails, be `d |`q
+`d        |`q very wary of all travelers, residents and most`d |`q
+`d        |`q importantly, any WOMEN ye may cross. No one is`d |`q
+`d        |`q to be trusted in this fractured land!!        `d |`q
+`d        |                                                    |`q
+`d        +-----------------------+++--------------------------+`q
+                                `dZZZ`q
+                                `dZZZ`q
+                                `dZZZ`q
+                                `dZZZ`q
+                               `m*`dZZZ`m*`q
+                               `jv`dZZZ`jv`q
+                             `j/////////`q
+
+~
+S
+#8601
+A Road Leading Across a Field~
+   You are standing on a road that leads across a big field. Large, crooked
+trees decorate the sides of the road. Here and there, you can see flowers
+and shrubs near the base of these hideous trees. To the north, you can see
+an intersection in the road, and to the east, you can see the entrance to
+The Quest of the Holy Grail.
+~
+86 4 2
+D0
+An intersection gives travelers a choice of directions to go.
+~
+~
+0 -1 8602
+D1
+The main entrance to the Holy Grail gleams oddly.
+~
+~
+0 -1 8600
+S
+#8602
+An Intersection in the Road~
+   You are standing in an intersection through a big field. On each of the
+four corners of this intersection, you see huge, overgrown tufts of grass.
+They seem oddly tall for grass, but then, it would appear that everything
+in the area has that of an oddity. In all directions, the roads continue.
+It would appear that all of them have a pretty easy terrain to cover. Far
+away, you can see a big forest, which could lead to some trouble down the
+line.
+~
+86 0 3
+D0
+A well worn road ambles along in your view.
+~
+~
+0 -1 8620
+D1
+A well worn road ambles along in your view.
+~
+~
+0 -1 8630
+D2
+A well worn road ambles along in your view.
+~
+~
+0 -1 8601
+D3
+A well worn road ambles along in your view.
+~
+~
+0 -1 8603
+S
+#8603
+A Road Leading Across a Field~
+   You are standing on a road leading across a field. The road is well
+kept, with very few rocks to get in your footings way. Along the side of
+the road, small shrubs and bushes bubble up under the few trees that
+cascade over the road. As you look closer into the foliage, you see one
+tiny little tree struggling to keep its place among the others.
+~
+86 0 2
+D1
+An intersection gives travelers a choice of directions to go.
+~
+~
+0 -1 8602
+D3
+A well worn road ambles along in your view.
+~
+~
+0 -1 8604
+E
+nest~
+Bits and pieces of coconut shells litter the nest. Broken shells lie
+in pieces on the outer edge of the tree. You can't see any baby swallows,
+but best to get away from the nest before an angry parent returns.
+~
+E
+tree~
+This itsy bitsy tree appeared to be young, but upon closer inspection,
+you see that it must be years and years older then any of the other
+trees in your vision. It's short stature seems to get more and more
+confusing each moment. In the top of the tree you can see a swallows
+nest.
+~
+S
+#8604
+A Road Leading Across a Field~
+   You are standing on a road leading across a huge field. Wild life of
+all sorts make their noises and chirps. Above, you spot a group of swallows
+flying from tree to tree. To the north, you can see a big forest, with the
+road then turning into a path. To the east, the road continues over the
+field.
+~
+86 0 2
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8605
+D1
+A well worn road ambles along in your view.
+~
+~
+0 -1 8603
+S
+#8605
+A Path Through a Forest~
+   You are standing on a path which leads through the forest. The foliage
+has become quite dense, making things a bit darker. Pine needles and
+leaves from other trees, scatter the ground. To the south, you can see a
+huge field with a well worn road expanding across it. To the west, the
+path continues into the forest.
+~
+86 0 3
+D2
+A well worn road ambles along in your view.
+~
+~
+0 -1 8604
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8606
+S
+#8606
+A Path Through a Forest~
+   You are standing on a path which leads through the forest. All around
+you, big trees grow towards the sky, their crowns forming a roof over the
+path. Dense foliage grows on the forest floor, making the path you walk
+very clear. I wouldn't wander off the path though, rumour has it that there
+is a lot of poison ivy growing in this forest.
+~
+86 0 3
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8605
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8607
+S
+#8607
+A Path Through a Forest~
+   You are standing on a path which leads through the forest. Noises of
+animals skittering in fright caught your attention. Towards the north-west
+edge of the path, you can hear the sounds of a fight. The path continues
+on to the east and west, deeper into this intriguing forest.
+~
+86 0 3
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8606
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8608
+S
+#8608
+A Path Through a Forest~
+   You are standing on a path which leads through the forest. In the
+distance, you can hear the hoot of an owl. Far into the forest, but not
+too far from the path, you can see a bush rustling about. Perhaps some
+animal has found its way into a thorn bush. Above, the sun sprinkles onto
+the path through the crowns of the trees overhead. North of here, you can
+see a glade in the forest. To the east, the path ambles along.
+~
+86 0 3
+D0
+A glade appears into the view of the lovely path you walk along.
+~
+~
+0 -1 8609
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8607
+S
+#8609
+A Glade in the Forest~
+   You are in a glade in the forest. Here and there on the ground, you
+see some blood. It would appear that in the recent past, a battle of some
+type had been fought here. Near one of the trees, on the ground, you see
+one leaf so covered with blood that there is no green on the leaf at all.
+North of here you can see a small wooden bridge. To the south, a path leads
+into the forest.
+~
+86 0 3
+D0
+A wooden bridge creaks and rattles to the north.
+~
+~
+0 -1 8610
+D2
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8608
+S
+#8610
+A Path Over a Small Wooden Bridge~
+   You are standing on a small wooden bridge. It spans over a small river
+which flows beneath. In all kinds of different places, you can see where
+water has caused the wood to become frail. It's a wonder that this bridge
+can still hold weight of any kind. South of here, you can see a glade. To
+the north the path continues through the forest.
+~
+86 0 3
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8611
+D2
+A glade appears into the view of the lovely path you walk along.
+~
+~
+0 -1 8609
+S
+#8611
+A Path Through a Forest~
+   You are standing on a path which leads through the forest. A few
+saplings have begun to grow along the path nearby. Leaves and pine needles
+have fallen onto the forest floor, covering it in a blanket of foliage. The
+path seems to get a bit wider west of here, then turning into a road. A
+small wooden bridge sways in the breeze south of here.
+~
+86 0 3
+D2
+A wooden bridge creaks and rattles to the south.
+~
+~
+0 -1 8610
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8612
+S
+#8612
+A Path Through a Forest~
+   You are standing on a path which leads through the forest. Tall, green
+trees span into the sky, providing cover from the sun above. Blue and yellow
+flowers bloom up from small patches here and there along the path. A small
+village rests to the north of here, while the path itself continues on through
+the forest.
+~
+86 0 3
+D0
+The path opens up to show small huts with people milling around them.
+~
+~
+0 -1 8613
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8611
+S
+#8613
+The Southern Entrance to an Extremely Small Village~
+   You are standing at the south entrance to a small village. Within the
+village, you can see all sorts of people milling about. The majority of them
+are wearing clothing that would almost be considered rags. Muddied children
+run after eachother shouting obscenities, which make you wonder where these
+children's parents could be. The village center leads off to the north and you
+can hear upset voices and yelling coming from there. The forest lies to the
+south.
+~
+86 0 1
+D0
+The center of this small village seems to be right there.
+~
+~
+0 -1 8614
+D2
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8612
+S
+#8614
+The Village Center~
+   You are standing in the center of this small village. As you take in the
+surroundings, you realize that everything that is to be seen in this village
+can be seen from where you stand. Carts with vegetables, clothes and other
+assorted goods, line the dirt filled streets. For a small village, there sure
+does seem to be a multitude of people around. In the middle of the village
+square, you can see a huge balance. The exits here are north and south.
+~
+86 0 1
+D0
+The path opens up to show small huts with people milling around them.
+~
+~
+0 -1 8615
+D2
+The path opens up to show small huts with people milling around them.
+~
+~
+0 -1 8613
+E
+balance~
+The wood of this balance looks to be a bit rotted. As the crown surrounds it,
+and people begin to climb onto it, you can see small wooden chips shaking
+loose. The ropes which hold the two sides in balance have knotted, frayed
+edges. If asked to show the strength and sturdiness of this balance, you
+would most likely feel the desire to decline.
+~
+S
+#8615
+The Northern Entrance to an Extremely Small Village~
+   You are standing at the northern entrance to a small village. A rickety
+fence surrounds the village, although massive amounts of boards have rotted
+away, leaving not much of a fence to be seen. There is an old gate hanging on
+one hinge. It rocks back and forth, squeeking with each small breeze. At your
+feet you see a small newt dancing around wildly. The village center lies to
+the south. North, you can see a few stray hills.
+~
+86 0 1
+D0
+A curly road twists along the hills on the horizon.
+~
+~
+0 -1 8616
+D2
+The path opens up to show small huts with people milling around them.
+~
+~
+0 -1 8614
+E
+newt~
+When you look at the newt more closely, you realize that this must be a poor
+adventurer that has been transformed. It is well known that these parts of the
+woods have no known newts in it. As the desire to perhaps help this poor guy
+out comes over you, he has flown the scene, far too fast for you to catch.
+~
+S
+#8616
+A Road Leading Over a Few Hills~
+   The road you are on twists and turns over and around these few hills on the
+horizon. The grass on these hills is short and well pruned, almost as if
+someone came and mowed it daily. A well cared for circle of flowers crests the
+top of each hill, with a fruit bearing tree in the center. South of here, you
+can see a small village, with its hustle and bustle. The road continues on to
+the east. A small game path leads west.
+~
+86 0 4
+D1
+A curly road twists along the hills on the horizon.
+~
+~
+0 -1 8617
+D2
+A rickety gate surrounding an absurdly small village gleans in the distance.
+~
+~
+0 -1 8615
+D3
+A game trail leads into what appears to be a wall of fog.
+~
+~
+0 -1 27195
+S
+#8617
+A Road Leading Over a Few Hills~
+   The road you are on twists and turns over and around these few hills
+on the horizon. The grass on these hills is short and well pruned, almost
+as if someone came and daily mowed it. A well cared for circle of flowers
+crests the top of each hill, with a fruit baring tree in the center. The
+road continues over the surrounding hills to the west. A huge fortress
+blooms up into view to the north.
+~
+86 0 4
+D0
+A huge grey fortress stands tall, almost touching the sky.
+~
+~
+0 -1 8618
+D3
+A curly road twists along the hills on the horizon.
+~
+~
+0 -1 8616
+S
+#8618
+In Front of a Huge Fortress~
+  You are standing in front of a very big fortress. It is impossible to get
+into the fortress since the drawbridge is up. To the south a road goes over a
+few small hills and to the east you can see the entrance to a forest.
+~
+86 0 2
+D1
+A path begins leading into the forest.
+~
+~
+0 -1 8619
+D2
+A curly road twists along the hills on the horizon.
+~
+~
+0 -1 8617
+E
+fortress~
+Before you stands a huge fortress of exceedingly dull design. The grey brick
+pattern rises high into the sky. A French flag flies tall on the corner, where
+you can see a few french men mulling about. As you raise your hand in an
+attempt to get their attention, a cow comes flying over the walls, crashing
+into a tree directly behind you.
+~
+S
+#8619
+Near an Entrance to the Forest~
+   You are standing near an entrance to what appears to be a large forest.
+Trees of all varieties loom above you in the distance. A designated path
+narrows into the forest, disappearing into the growth and shrubs. A large,
+French fortress shadows the sky to the west, as this apparent path through
+the forest continues on to the east.
+~
+86 0 3
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8629
+D3
+A huge grey fortress stands tall, almost touching the sky.
+~
+~
+0 -1 8618
+S
+#8620
+A Road Leading Across a Field~
+   You are standing in a field, upon a road leading through it. The
+tracks of the road seem to be well used, as very little grass grows
+here. All along the edge however, the grass is firm and deep. North
+of here, you see the beginnings of a forest. An intersection in the
+road is to the south of here.
+~
+86 0 2
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8621
+D2
+An intersection gives travelers a choice of directions to go.
+~
+~
+0 -1 8602
+S
+#8621
+In Front of a Huge Forest~
+   The path has finally lead you to this huge, dark forest. Ahead, every
+inch of the forest appears to be dark and gloomy. Dark, sinister shadows
+creep across the path which disappears into the density of the forest to
+the north. A road rolls across a field to the south of here.
+~
+86 0 2
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8622
+D2
+A well worn road ambles along in your view.
+~
+~
+0 -1 8620
+S
+#8622
+A Path Through a Dense Forest~
+   You are standing in a very big, very dense forest. As breezes
+flow along the path, you can hear it whistle and whip the branches
+above. In the distance, you hear the squak of a native bird. The
+forest continues on towards the east. The last glimpse of the edge
+of the forest, disappears to the south.
+~
+86 0 3
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8623
+D2
+A well worn path ambles along out of the forest and towards a field.
+~
+~
+0 -1 8621
+S
+#8623
+A Path Through a Dense Forest~
+   You are standing in a very big, very dense forest. It has become very
+quiet here and you start to feel a bit uncomfortable. You also notice that
+the sounds of animals that you heard earlier have now vanished. There are
+three dead knights hanging on a tree here with a lance piercing through all
+three of them. East of here you see a glade in the forest. The forest lingers
+on west of here.
+~
+86 0 3
+D1
+A glade appears into the view of the lovely path you walk along.
+~
+~
+0 -1 8624
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8622
+E
+knights~
+Blood and guts protrude from all the places on the bodies of these poor
+souls. Although they appear to have been wearing full armor protection,
+the size, as well as strength of the person they met up with, is definately
+that of a person you wouldn't want to meet up with.
+~
+S
+#8624
+A Glade in the Forest~
+   You are standing in a small glade, deep in the forest. The ground has no
+grass, as it would appear many a battle has happened here. The trees above
+have practically withered away, as if fleeing some enemy. Your stomach begins
+to turn with nausea as you realize that this also looks like the home of some
+one, or thing, very dangerous. The forest path continues on to the north, as
+well as the west.
+~
+86 0 3
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8625
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8623
+S
+#8625
+A Path Through a Forest~
+   You are standing on a path leading through this strange forest.
+A few bushes waver and rattle off the path, keeping your senses alert.
+You almost have the feeling of being watched, as you search through
+the forest, looking for any sign of peaceful life. A huge glade
+shimmers to the south, while the path continues on towards the north.
+~
+86 0 3
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8626
+D2
+A glade appears into the view of the lovely path you walk along.
+~
+~
+0 -1 8624
+S
+#8626
+A Path Through a Dense Forest~
+   You are standing in a very big, very dense forest. Every sound you
+make seems to echo a thousand times through the woods. A screech, which
+could be that of an animal, or a human, sounds off in the distance. You
+smell a most delicious scent wafting through the forest, but have yet to
+determine where it's coming from. The path through the forest continues
+on to the south, while an intersection lies to the north.
+~
+86 0 3
+D0
+An intersection in the path gives travelers a choice of directions to go.
+~
+~
+0 -1 8627
+D1
+The bushes look a bit thin as you peer more closely at them.
+~
+bushes~
+8 -1 8664
+D2
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8625
+S
+#8627
+An Intersection in the Forest~
+   This intersection goes in all the directions possible, giving you many
+a choice, but little a clue as to what or where your next adventure might
+be. A crooked larch grows in the middle of the crossing, with long, thorny
+branches pointing in all directions. It appears you are surrounded by the
+forest, and into the forest is your only choice of direction.
+~
+86 0 3
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8642
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8641
+D2
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8626
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8628
+S
+#8628
+A Path Through a Forest~
+   You are standing within a forest of great magnitude. The trees all
+tower above your head, having most likely been growing for years upon
+years. Brush and other foliage grows here and there between the trees
+trunks, making the forest seem extremely dense. An intersection appears
+to be to your east, while to the west, the forest continues on.
+~
+86 0 3
+D1
+An intersection in the path gives travelers a choice of directions to go.
+~
+~
+0 -1 8627
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8629
+S
+#8629
+A Path Through a Forest~
+   You are standing within a forest of great magnitude. With each
+breeze, the soft scent of the wilderness floats through the air.
+Light drips through the trees overhead, adding a bit of ambiance
+to the allure of the forest. The path continues both east and west
+through the forest.
+~
+86 0 3
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8628
+D3
+A well worn path ambles along towards the forest.
+~
+~
+0 -1 8619
+S
+#8630
+A Road Leading Across a Field~
+   You are standing on a road leading across a huge field. Wild life of
+all sorts make their noises and chirps. Above, you spot a group of swallows
+flying from tree to tree. To the north, you can see that the road continues
+through the field. An intersection in the road is to the west.
+~
+86 0 2
+D0
+A well worn road ambles along in your view.
+~
+~
+0 -1 8631
+D3
+An intersection gives travelers a choice of directions to go.
+~
+~
+0 -1 8602
+S
+#8631
+A Road Leading Across a Field~
+   You are standing in a field, upon a road leading through it. The
+tracks of the road seem to be well used, as very little grass grows
+here. All along the edge however, the grass is firm and deep. The
+road continues on both to the north and to the south of here.
+~
+86 0 2
+D0
+A well worn road ambles along in your view.
+~
+~
+0 -1 8632
+D2
+A well worn road ambles along in your view.
+~
+~
+0 -1 8630
+S
+#8632
+A Road Leading Across a Field~
+   You are standing in a large, abundant field, upon which, a road lies.
+Shoots of tall grass spring up all over this grassy field. You can see
+purples, blues, yellows and oranges interspurced through the field. North
+of here, you can see a large castle. The road continues on to the south.
+~
+86 0 2
+D0
+A beautiful castle towers in the sky above.
+~
+~
+0 -1 8633
+D2
+A well worn road ambles along in your view.
+~
+~
+0 -1 8631
+S
+#8633
+In Front of a Castle~
+   You are standing in front of a castle. The many flags and flowers around
+the castle tells you that there is a wedding going on here. You can hear the
+chatter of voices from within the castle, as well as the sounds of music
+pouring through the open windows. The entrance to this beautiful castle lies
+to the north. A road leading through the fields runs west, as well as south
+from here.
+~
+86 4 2
+D0
+A hallway glitters into your view.
+~
+~
+0 -1 8634
+D2
+A well worn road ambles along in your view.
+~
+~
+0 -1 8632
+D3
+A well worn road ambles along in your view.
+~
+~
+0 -1 8639
+S
+#8634
+A Hallway in the Castle~
+   You are standing in the hallway of the castle. You can see lots of flowers
+and gifts around here. The walls are filled with paintings and the people here
+are very happy. To the north you can see a grand staircase, to the west lies a
+ballroom and to the south lies the entrance to the castle.
+~
+86 8 0
+D0
+A staircase leading up towards to heights of the castle.
+~
+~
+0 -1 8636
+D2
+The entrance of the castle peers out into the fields.
+~
+~
+0 -1 8633
+D3
+A large ballroom hums with music and laughter.
+~
+~
+0 -1 8635
+E
+flowers~
+Flowers of all sizes and shape have been arranged in pots, vases and cauldrons
+of all size. From the delicate  whites, to seething reds, these flowers add a
+bright light to the gathering of people around.
+~
+E
+gifts~
+Gifts of all shapes and sizes sit stacked in small piles. White cloth seems
+to be the fashionable item to wraps gifts of this nature in, seeing how a
+wedding is supposed to be held in white, showing the purity of the bride.
+Although, in this case, the bride doesn't appear to have been given the
+chance of being unpure.
+~
+E
+paintings~
+All along the upper reaches of the walls, hang beautiful paintings. Long
+pieces of silk adorn their edges with soft colors. As people pass on the
+stairs below, the gentle breeze of them walking, drifts up to the silks,
+making them billow and twirl daintily.
+~
+S
+#8635
+In the Castle Ballroom~
+   You are standing in the castle's ballroom. It is very large and it appears
+to be the perfect place for dancing. There is a table with foods set out upon
+it, as well as drinks and goblets filled with the best wines the castle has to
+offer. Above you, there hangs a dazzling chandelier. The main hallway of the
+castle is to the east.
+~
+86 8 0
+D1
+A hallway glitters into your view.
+~
+~
+0 -1 8634
+E
+table food~
+A rack of beef ribs, turkey and chicken legs, and even a full pig, roasted
+to perfection, sits in the middle of this long table. Bowls filled with the
+finest fruits, nuts and salads decorate the areas between the huge array of
+meat products. Near one end of the table, shiny silver goblets filled to the
+brim with fine wines, invite anyone to come and have a taste.
+~
+E
+chandelier~
+In the center of the room hangs the most exquistite glass chandelier.
+Within it, candles have been delicately placed in their seperate holders.
+Visions of rescuing the princess and flying over the room runs through
+your head, until you actually catch site of the princess.
+~
+S
+#8636
+In Front of a Staircase~
+   You are standing in front of the castle's main staircase. The staircase
+is made of stone and it looks very old. A few torches hang on the wall,
+sending an array of lights upon the gathering below. Hand painted portraits
+adorn the walls, climbing up to the top with the stairs. You can go up the
+stairs, or south, back into the hallway.
+~
+86 8 0
+D2
+A hallway glitters into your view.
+~
+~
+0 -1 8634
+D4
+The top of the staircase shimmers in the torch lights.
+~
+~
+0 -1 8637
+E
+torches~
+Torches light up the staircase, sending a dazzling display of light
+across the walls, and up onto the rafters. They hang high up on the
+wall, making it impossible to reach them without a ladder, or help
+from someone else.
+~
+S
+#8637
+At the Top of the Staircase~
+   You are standing at the top of the castle staircase. A few torches
+hang on the wall, lighting the area all around you. The stones of the
+steps are brushed clean of any dirt, making it appear quite surely that
+the castle was throughly cleaned before the gatherers arrived. A door
+leading into the Prince's chambers is to the north, or you can go back
+down the staircase.
+~
+86 8 0
+D0
+A room fit for a prince shines through the doorway.
+~
+~
+0 -1 8638
+D5
+A staircase leading down towards the common rooms of the castle.
+~
+~
+0 -1 8636
+S
+#8638
+In the Prince's Waiting Room~
+   The room is decorated with things only a prince could appreciate. A large
+redwood desk sits in on corner, with a chair to match. A small bed, lies on
+the floor, showing that there is only enough room for one person to sleep
+upon it. Papers, quills and pencils of all sorts lie scattered across both
+the desk, as well as the floor. The room seems almost sad, lonely you could
+say, for some unseen reason. The doorway leads back to the top of the
+staircase.
+~
+86 8 0
+D2
+The top of the staircase shimmers in the torch lights.
+~
+~
+0 -1 8637
+S
+#8639
+A Road Leading Across a Field~
+   You are upon a road which stretches out across the fields and
+plains. Trees spring up into the air here and there along the road,
+adding a bit of shade to what would seem to be a very long stretch
+of dry area. One particular tree reaches into the sky right next to
+the road. A large castle lies to the south of here, while to the
+north, the trees get thicker, becoming a forest.
+~
+86 0 2
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8640
+D1
+A beautiful castle towers in the sky above.
+~
+~
+0 -1 8633
+E
+nest~
+Above, on a high branch, you can see a large nest. Within it, there are small
+baby swallows. By the looks of things, they appear to be european swallows.
+The white crest of feathers upon their head looks wet, as if they have just
+recently been hatched. With that being the case, it most probably isn't a
+good idea to get much closer, or risk loosing an eye in the process.
+~
+E
+tree~
+This huge tree seems to be an oak. Its long branches rustle and sway as a
+gentle breeze passes by. A few leaves fall to the ground around you as a
+twitter from above catches your attention.
+~
+S
+#8640
+A Path Through a Dense Forest~
+   You are standing on a path which leads through the forest. A few
+saplings have begun to grow along the path nearby. Leaves and pine needles
+have fallen onto the forest floor, covering it in a blanket of foliage. A
+road stretches across the fields to the south, while to the north, you can
+see a path leading into the depths of the forest.
+~
+86 0 2
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8641
+D2
+A well worn road ambles along in your view.
+~
+~
+0 -1 8639
+S
+#8641
+A Path Through a Dense Forest~
+   You are standing within a forest of great magnitude. With each
+breeze, the soft scent of the wilderness floats through the air.
+Light drips through the trees overhead, adding a bit of ombiance
+to the allure of the forest. An intersection in the path appears to
+be to the west of here, while the path continues on deep into the
+forest to the south.
+~
+86 0 3
+D2
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8640
+D3
+An intersection in the path gives travelers a choice of directions to go.
+~
+~
+0 -1 8627
+S
+#8642
+A Path Through a Dense Forest~
+   You are standing on a path going through this dense forest. The
+forest is very beautiful, with lights filtering through from above,
+adding a quiet, peacefulness around the place. A bit of fog has
+begun to invade the forest, making the land a bit mysterious. You
+can see an intersection in the forest to the south, while the
+northern path continues on into the forest.
+~
+86 0 3
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8643
+D2
+An intersection in the path gives travelers a choice of directions to go.
+~
+~
+0 -1 8627
+S
+#8643
+A Path Through a Dense Forest~
+   You are standing within a forest of great magnitude. With each
+breeze, the soft scent of the wilderness floats through the air.
+Light drips through the trees overhead, adding a bit of ambiance
+to the allure of the forest. A ripple runs down your spine as the
+feeling of someone watching you tickles down your back. The forest
+continues on to the south, as well as the west.
+~
+86 0 3
+D2
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8642
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8644
+S
+#8644
+A Path Through a Dense Forest~
+   You are standing on a path going through this dense forest. The
+forest is very beautiful, with lights filtering through from above,
+adding a quiet, peacefulness about the place. A bit of fog has
+begun to invade the forest, making the land a bit mysterious. The
+path continues on into the fog, as well as the forest, to both
+the north as well as the east.
+~
+86 0 3
+D0
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8645
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8643
+S
+#8645
+A Path Through a Dense Forest~
+   You are standing on a path going through this dense forest. The
+forest is very beautiful, with lights filtering through from above,
+adding a quiet, peacefulness about the place. A bit of fog has
+begun to invade the forest, making the land a bit mysterious. You
+can see a brighter speck of light on the eastern path, while the
+southern path continues on into the fog, as well as the forest.
+~
+86 0 3
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8646
+D2
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8644
+S
+#8646
+A Path Through a Dense Forest~
+   An owls hoot echoes through the forest, giving it quite an eerie sound.
+Light tumbles onto the path from the entrance to the east of here, as well
+as from the waving tree tops. Deeper in the forest, you can hear animals
+mulling around, and you can see that the path continues on into its depths.
+~
+86 0 3
+D1
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8647
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8645
+S
+#8647
+At an Entrance to the Forest~
+   On one side of you, a huge mountain towers into the sky, while to the
+other side, a dark, dense forest blooms. Tall, almost ancient trees cover
+almost every inch of land in this forest. Here and there, a bush seems to
+be able to sprout and bring life to the area. Birds and other animals make
+their common noises in the distance. Your choices are simple; enter the
+forest or begin your hike up the mountain.
+~
+86 0 3
+D0
+The base of a large mountain comes into your view.
+~
+~
+0 -1 8648
+D3
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8646
+S
+#8648
+At the Foot of a Mountain~
+   A huge mountain towers over you as you stand in it's shadow. Gravel,
+mostly gray in color, scatters all across the ground. Here and there,
+inbetween the slates of rock, you can see little plants attempting to make
+their way towards the sun. A dark, dense forest is to the south of here,
+while a path leading up the mountain looks a bit more inviting.
+~
+86 0 5
+D0
+A path of gravel and dirt leads up the mountain.
+~
+~
+0 -1 8649
+D2
+A well worn path ambles along through the forest.
+~
+~
+0 -1 8647
+S
+#8649
+A Path Going up the Mountain~
+   You are standing on a path going up a big mountain. From the top of the
+mountain you can hear big explosions. With each explosion, bits of gravel
+come flying over the edges, nearly hitting you. A deep ravine in the mountain
+lies to the west, a path continues up the mountain further, to the north and
+to the south, you can see the bottom of the mountain.
+~
+86 0 5
+D0
+A path of gravel and dirt leads up the mountain.
+~
+~
+0 -1 8650
+D2
+A path of gravel and dirt leads down the mountain.
+~
+~
+0 -1 8648
+S
+#8650
+A Path Going up the Mountain~
+   You are standing upon a gravel path which leads up towards the top of the
+mountain. Huge chunks of gravel and rock are on the verge of pouring down the
+side of the mountain with each hideous noise that comes from above. It sounds
+as if a war of types is hapenning right at the top of this very mountain. A
+large ravine twists and curls to the west of here, as the path both up and
+down the mountain continues on.
+~
+86 0 5
+D1
+The tip of the mountain gleams in the distance.
+~
+~
+0 -1 8651
+D2
+A path of gravel and dirt leads down the mountain.
+~
+~
+0 -1 8649
+S
+#8651
+At the Top of the Mountain~
+   You are standing at the top of this mountain. Gravel, dirt and bits of
+desolate foliage cover the ground you walk upon. The rock face of the
+mountain gives it an almost authoritative being. A large ravine is north
+of here, with another monsterous mountain on the other side. A road leads
+down the mountain, as well as further up the mountain here.
+~
+86 0 5
+D1
+The tip of the mountain gleams in the distance.
+~
+~
+0 -1 8652
+D3
+A path of gravel and dirt leads down the mountain.
+~
+~
+0 -1 8650
+S
+#8652
+At the Top of the Mountain~
+   You are standing at the top of this mountain. It has become extremely
+quiet, giving the air an edgy feeling. As if you could smell the danger, the
+northern area seems to be extremely dangerous. The path continues on both to
+the north, as well as to the south.
+~
+86 0 5
+D0
+A large, dark cave lingers to the north.
+~
+~
+0 -1 8653
+D3
+A path of gravel and dirt leads down the mountain.
+~
+~
+0 -1 8651
+S
+#8653
+At an Entrance to a Huge Cave~
+   Standing at the entrance to this huge cave, you notice that there is very
+little vegetation in the area. Before you, bits of gravel have dispersed,
+becoming a dusty, dirty path. Ahead, there is a path into the depths of the
+cave, while the path down and around the mountain leads back to the south.
+~
+86 0 5
+D0
+All of a sudden something small and white moved in there.
+~
+~
+0 -1 8654
+D2
+A path of gravel and dirt leads down the mountain.
+~
+~
+0 -1 8652
+S
+#8654
+Inside a Huge Cave~
+   You are standing inside of a huge cave. An uncomfortable feeling stirs the
+air in here. Dirt and dust swirls around your feet with each step, as if water
+hasn't been in this area for many moons. Bones of all types of animals, as
+well as human bones, rest against the eves of the cave. A dusty path leads
+deeper into the depths of the cave, or you can head south over the top of
+the mountain and back down to safety.
+~
+86 1 5
+D2
+A gravel path leading down the mountain appears outside the entrance to the
+cave.
+~
+~
+0 -1 8653
+D3
+It is extremely dark in here, and smells of feces.
+~
+~
+0 -1 8655
+S
+#8655
+Inside a Huge Cave~
+   You are standing inside of a huge cave. You have the feeling that there was
+supposed to be a terrible monster here but that the designer of this area
+never finished it. To the east and to the north a path continues through
+the cave.
+~
+86 1 5
+D0
+The cave continues to get darker and darker the further in you go.
+~
+~
+0 -1 8656
+D1
+A dull light pervades the darkness of the cave.
+~
+~
+0 -1 8654
+S
+#8656
+Inside a Huge Cave~
+   You are standing inside of a huge cave. Sections of the cave seem to be
+more lit then others. On one of the walls, you can see something carved into
+it. Grit and dust fly through the air with each motion you make. The path
+through this cave appears to continue to both the north and the south.
+~
+86 1 5
+D0
+The cave continues to get darker and darker the further in you go.
+~
+~
+0 -1 8657
+D2
+A dull light pervades the darkness of the cave.
+~
+~
+0 -1 8655
+E
+wall~
+With what little light you have, you can see that carved into the wall
+is the following:
+
+`iHere may be found the last words of Joseph of Arimathea. He who is
+valiant and pure of spirit may find the holy grail in the castle of..
+of.. AAAAAAARRRRRRRGGGGGGHHHHH...`q
+~
+S
+#8657
+Inside a Huge Cave~
+   You are standing inside of a huge cave. Very little light filters in
+from the world outside. As you shuffle your feet around, attempting to
+find your way, they knock into something hollow. Just touching it with your
+foot, you realize it feels like an old bone. The feeling of this place
+becomes very uncomfortable. You can see one of the entrances to the cave
+west of here and to the south a path continues through the cave.
+~
+86 1 5
+D2
+A dull light pervades the darkness of the cave.
+~
+~
+0 -1 8656
+D3
+The cave continues to get darker and darker the further in you go.
+~
+~
+0 -1 8658
+S
+#8658
+At the Entrance to a Huge Cave~
+   You are standing at the entrance to a very big cave. You feel very
+uncomfortable here. To the west you can see the river of death floating very
+very far down. To the east a path goes into the cave and to the north a
+narrow path goes next to the river of death.
+~
+86 0 5
+D0
+A small, narrow path angles along.
+~
+~
+0 -1 8659
+D1
+A dull light pervades the darkness of the cave.
+~
+~
+0 -1 8657
+S
+#8659
+A Narrow Path~
+   You are standing on a narrow path. Bits of grass and gravel have become
+interspurced with eachother here. To the south, you can see the tip of a
+tall mountain. The river of death floats down to the west of you. It's waters
+rock and churn with dangerous ferocity. The path follows the river to the
+north of here.
+~
+86 0 5
+D0
+A small, narrow path angles along.
+~
+~
+0 -1 8661
+D2
+A dark cave gets darker and darker the further in you go.
+~
+~
+0 -1 8658
+D3
+If you carry on your journey that way, you may fall down againist the river
+of death and DIE!
+~
+~
+0 -1 8660
+S
+#8660
+Down Into the River of Death~
+   You fall.. fall.. fall.. down against the river of death. When you hit
+the river you can feel the cold water enveloping you and it sucks you down..
+down.. down.. into its depths.
+~
+86 2 5
+D1
+You're either dead, or a god, so this exit description doesn't really matter.
+~
+~
+0 -1 8659
+S
+#8661
+A Narrow Path~
+   You are standing on a narrow path. Bits of grass and gravel have become
+interspurced with eachother here. In the distance, you can see the tip of a
+tall mountain. The river of death floats down to the west of you. It's waters
+rock and churn with dangerous ferocity. The path follows the river to the
+south of here. A rickety bridge runs over the waters below. It doesn't look
+all that safe.
+~
+86 0 5
+D0
+An extremely rickety bridge rocks over the river of death.
+~
+~
+0 -1 8662
+D2
+A small, narrow path angles along.
+~
+~
+0 -1 8659
+S
+#8662
+In Front of a Bridge~
+   You are standing in front of a bridge that leads over the river of death.
+The bridge looks very old and it appears to be very weak. Here and there on
+the bridge walkway, you can see where rotted boards have begun to
+disintegrate. To the south, a path leads back along the river.
+~
+86 0 5
+D2
+A small, narrow path angles along.
+~
+~
+0 -1 8661
+D3
+The bridge doesn't look strong enough to support your weight! If you carry on
+your journey that way, you may fall down againist the river of death and DIE!
+~
+~
+0 -1 8663
+S
+#8663
+Down Into the River of Death~
+   The bridge breaks apart under you and you fall.. fall.. fall down into the
+River of Death. As you hit the river, you can feel the cold water enveloping
+around you and it sucks you down.. down.. down..
+~
+86 2 5
+D1
+You're either dead, or a god, so this exit description doesn't really matter.
+~
+~
+0 -1 8662
+S
+#8664
+A Grassy Path~
+   This path splits away from the forest path, into a bright, grass filled
+land. Trees sprout up here and there along the path, adding a bit of shade to
+the hot day. All along the sides, you can see beautiful flowers. A large bush
+sits in the direction of the forest, while the path continues on to the north.
+~
+86 0 2
+D0
+A cheerful path of grass continues on.
+~
+~
+0 -1 8665
+D3
+A well worn path ambles along through the forest.
+~
+bushes~
+8 1 8626
+S
+#8665
+A Grassy Path~
+   Bits of pollen float through the air, destined for their new home. The
+grass twirls around your feet with each step. The path is definitely well
+preserved, although it doesn't look as though people actually use it often.
+To both the east and to the south, the path continues on.
+~
+86 0 2
+D1
+A cheerful path of grass continues on.
+~
+~
+0 -1 8666
+D2
+A cheerful path of grass continues on.
+~
+~
+0 -1 8664
+S
+#8666
+A Grassy Path Leading Towards a Castle~
+   The path you have been following seems to be leading you towards a castle
+in the distance. It rises quite high into the air, showing that it must be
+atleast two stories tall. Birds chatter and sing all around the path. The
+path continues on towards the castle, as well as back towards the forest.
+~
+86 0 2
+D0
+A cheerful path of grass continues on towards the castle.
+~
+~
+0 -1 8667
+D3
+A cheerful path of grass continues on.
+~
+~
+0 -1 8665
+S
+#8667
+On a Path Approaching Castle Anthrax~
+   You have wandered onto this path which is steadily approaching the castle
+in the distance. The tall building looks secure and well built. Plump trees
+surround the castle on all sides, as well as line the path towards the
+entrance to the castle. The path continues on, past the castle, as well as
+towards the castle's entrance.
+~
+86 0 2
+D0
+A cheerful path of grass continues on.
+~
+~
+0 -1 8668
+D1
+The entrance to the castle shines and glitters in the distance.
+~
+~
+0 -1 8669
+D2
+A cheerful path of grass continues on.
+~
+~
+0 -1 8666
+S
+#8668
+On a Grassy Path Near a Castle~
+   You are walking along a grassy path, near a castle. The area seems bright
+and cheerful, as if nothing bad, or unkind could possibly be in these parts.
+A loud bang in the distance gives you a jump, but who knows, perhaps it was
+just a tree falling in the middle of the forest. The path continues on to
+the south, as well as the east.
+~
+86 0 2
+D1
+A path approaching castle Anthrax glimmers into view.
+~
+~
+0 -1 8670
+D2
+A cheerful path of grass continues on.
+~
+~
+0 -1 8667
+S
+#8669
+Standing at the Doors of Castle Anthrax~
+   You are standing before the huge wooden doors of castle Anthrax. The
+knocker on the door is that of a gargoyle, and as you go to pick it up to
+knock, the mouth opens up and attempts to bite your hand. With angry red
+eyes, it spits and hisses at you. This leads you to quite a problem.
+If you can't knock to gain entry, however will you see what lies inside?
+~
+86 0 1
+D0
+Two huge wooden doors delicately carved from fine wood.
+~
+doors~
+2 8617 8671
+D3
+A cheerful path of grass continues on.
+~
+~
+0 -1 8667
+S
+#8670
+On a Grassy Path~
+   You are walking along a grassy path. Ahead, the path seems to end abruptly.
+A huge wall of bushes has just risen up into the sky, blocking off what path
+might have continued on here. Perhaps someday the gods will strike down this
+evil bush and let the beauty of the path continue on. The path however, does
+lead back towards the castle.
+~
+86 0 2
+D3
+A cheerful path of grass continues on.
+~
+~
+0 -1 8668
+S
+#8671
+Within the Castle Foyer~
+   The gray stone almost looks drab in comparison to the rest of the area.
+Although the drab color has been covered with different shades of silken
+cloth, it still gives the corridor a cold feeling. The stairwell lies to
+the west, while the corridor continues to the east. The huge oak door
+through which the outside world lies, is to the south.
+~
+86 0 0
+D1
+A stone hallway leads through the castle.
+~
+~
+0 -1 8672
+D2
+~
+doors~
+2 8617 8669
+D3
+A stone hallway leads through the castle.
+~
+~
+0 -1 8678
+S
+#8672
+A Stone Hallway Within the Castle~
+   The gray stone almost looks drab in comparison to the rest of the area. All
+above, you can glimpse bits of colored silk hanging from the rafters. Although
+it gives a bit of color to the area, it doesn't quite mask the dull gray which
+permeates the room.
+~
+86 0 0
+D0
+A stone hallway leads through the castle.
+~
+~
+0 -1 8673
+D3
+A stone hallway leads through the castle.
+~
+~
+0 -1 8671
+S
+#8673
+A Stone Hallway Within the Castle~
+   The gray stone almost looks drab in comparison to the rest of the area.
+Bits and pieces of flower petals, colored silks and other colorful objects,
+have been set out in attempt to lift the cold, hollow feeling from the walls.
+A locked, wooden door is to your east. The hallway continues on to the north
+and south.
+~
+86 0 0
+D0
+A stone hallway leads through the castle.
+~
+~
+0 -1 8674
+D1
+A wooden door, which appears to be made of oak, stands strong.
+~
+door~
+2 8619 8680
+D2
+A stone hallway leads through the castle.
+~
+~
+0 -1 8672
+S
+#8674
+A Stone Hallway Within the Castle~
+   The gray stone almost looks drab in comparison to the rest of the area. A
+table sits in the corner of the hallway, holding upon it a huge vase filled
+to the brim with red roses. The scent of the roses drifts under your nose,
+putting out the most beautiful scent. You hallway continues to the south and
+the west.
+~
+86 0 0
+D2
+A stone hallway leads through the castle.
+~
+~
+0 -1 8673
+D3
+A stone hallway leads through the castle.
+~
+~
+0 -1 8675
+S
+#8675
+A Stone Hallway Within the Castle~
+   The gray stone almost looks drab in comparison to the rest of the area. A
+large banner hangs over the entryway to what appears to be the doctors office,
+or atleast the room where the doctors do their 'work'. A purple velvet rug
+lies directly infront of the doorway. The hallway leads both east and
+west of here.
+~
+86 0 0
+D0
+A very sterile room, with a plush examination bed.
+~
+~
+0 -1 8679
+D1
+A stone hallway leads through the castle.
+~
+~
+0 -1 8674
+D3
+A stone hallway leads through the castle.
+~
+~
+0 -1 8676
+S
+#8676
+A Stone Hallway Within the Castle~
+   The gray stone almost looks drab in comparison to the rest of the area. Up
+above you, in the corner of the ceiling, you can see pink strings woven
+together. They seem to form something along the lines of a hand-made
+spiderweb. What an odd thing for a human being to do. The hallway leads
+both east and south here.
+~
+86 0 0
+D1
+A stone hallway leads through the castle.
+~
+~
+0 -1 8675
+D2
+A stone hallway leads through the castle.
+~
+~
+0 -1 8677
+S
+#8677
+A Stone Hallway Within the Castle~
+   The gray stone almost looks drab in comparison to the rest of the area. To
+the west, a door made of redwood seems to pulse. You place your hand on it,
+and it feels warm to the touch, as well as almost slightly moist. For the
+first time since entering the castle, you hear a slight him vibrating
+from all around. Both north and south, the hallway leads on.
+~
+86 0 0
+D0
+A stone hallway leads through the castle.
+~
+~
+0 -1 8676
+D2
+A stone hallway leads through the castle.
+~
+~
+0 -1 8678
+D3
+A redwood door pulses and hums lightly.
+~
+door~
+2 8618 8681
+S
+#8678
+A Staircase in the Castle~
+   A wrought iron staircase leads up towards the second level of the castle.
+Colorful ribbons have been tied to the banister, attempting to add color to
+the dullness of the castle. Above, you hear something bubbling, as well as
+deep laughter. The foyer is to the east, and a hallway through the castle's
+lower parts leads north.
+~
+86 0 0
+D0
+A stone hallway leads through the castle.
+~
+~
+0 -1 8677
+D1
+A bright foyer glows in the torch light.
+~
+~
+0 -1 8671
+D4
+A spiral staircase leads up into the second story of the castle.
+~
+~
+0 -1 8682
+S
+#8679
+The Doctor's Office~
+   Two very soft, very warm examination tables sit in the middle of the room.
+Upon each, there are silken sheets, which seem quite odd for a doctors office.
+Tables with many instruments lie on either side of the room. Near the back of
+the office, two desks sit side by side. The castle hallway is south of here.
+~
+86 0 0
+D2
+A stone hallway leads through the castle.
+~
+~
+0 -1 8675
+S
+#8680
+Zoot's Bedroom of Fun~
+   Pink scarves swing from the rafters of this exquisitely designed bedroom.
+A chest sits at the end of the four-poster bed which is dominating the room.
+Beside the bed, a small night stand sits. On top of the nightstand, you see
+a bottle of some type of liquid. The castles hallway is west of here.
+~
+86 0 0
+D3
+A wooden door, which appears to be made of oak, stands strong.
+~
+door~
+2 8619 8673
+E
+bottle~
+As you look closer at the bottle on Zoot's side table, you see that the label
+clearly states, 'Motion Lotion'.
+~
+S
+#8681
+Dingo's Den of Desire~
+   The first thing you notice when you enter the room, is the handcuffs which
+seem to be bolted to the wall. In the middle of the room, a rope hangs from
+the ceiling, with a huge clasp at the end. It looks like a piece of leather
+has been stretched between a metal circular beam, forming something of a
+trampoline, although, the pillows and lambskin blanket definately make it
+look more like a designer bed.
+~
+86 0 0
+D1
+A redwood door pulses and hums lightly.
+~
+door~
+2 8618 8677
+S
+#8682
+A Staircase in the Castle~
+   You are standing at the top of this wrought iron staircase. The ribbons of
+silk tied all around, give this part of the castle a warm, cozy look. To the
+north, a warmth radiates, and upon closer inspection, you can see all types of
+animal skins spread across the floor. Although the lights are dim to the east,
+you can see all types of colorful pillows scattered across the floor.
+~
+86 0 0
+D0
+All around are animal carpets, with a bright fire burning in a huge fireplace.
+~
+~
+0 -1 8685
+D1
+A room filled with fluffy pillows delights your vision.
+~
+~
+0 -1 8683
+D5
+A spiral staircase leads down into the first story of the castle.
+~
+~
+0 -1 8678
+S
+#8683
+A Room Containing Massive Amounts of Fluffy Pillows~
+   Blues, Greens, Pinks, Purples, Reds; Every color seems to exist in all its
+possible forms. Big pillows, little pillows, feather pillows, cotton pillows;
+Every imaginable type seems to exist. The room is dimly lit, with candles
+burning on high risen pedestals. A spiral staircase is to the west, a room
+full of bubbling mud is to the east and a large swimming pool is to the north.
+~
+86 0 0
+D0
+A large, steaming pool of clear water awaits entry.
+~
+~
+0 -1 8686
+D1
+Large bubbles of mud blurp and shimmer.
+~
+~
+0 -1 8684
+D3
+A spiral staircase leading to the lower levels of the castle.
+~
+~
+0 -1 8682
+S
+#8684
+A Room Containing A Warm, Mudbath~
+   Brown bubbles blurp and boil in the shallow muds of this room. As if the
+floor was completely carved out, the mud is about three feet in depth. All
+through the mud, you can see beautiful, naked women soaking in the bath,
+ready to invite you in to join them. A room full of pillows glows to the west,
+while a room which appears to be raining red is to the north.
+~
+86 0 0
+D0
+Tiny rose petals seem to fall from the sky in a beautiful rain.
+~
+~
+0 -1 8687
+D3
+A room filled with fluffy pillows delights your vision.
+~
+~
+0 -1 8683
+S
+#8685
+A Room Containing Animal Carpets, with a Large Fireplace~
+   Plush animal skins lie spread all around the floor. A huge fireplace
+burns along the western wall, warming the room to a comfortable temperature.
+The only light in the room is that which comes from the fireplace. Women of
+all shapes and sizes adorn rugs here and there, beckoning to you for your
+attention. A spiral staircase is to the south of here, a huge swimming pool
+glistens to the east, and a pool of sparkling white wine decorates the room
+to the north.
+~
+86 0 0
+D0
+A huge fountain of white wine glitters and bubbles.
+~
+~
+0 -1 8688
+D1
+A large, steaming pool of clear water awaits entry.
+~
+~
+0 -1 8686
+D2
+A spiral staircase leading to the lower levels of the castle.
+~
+~
+0 -1 8682
+S
+#8686
+A Bubbling Swiming Pool~
+   Clear, warm bubbles rise from the depths of this indoor swimming pool. It
+would seem that the ladies of this castle live quite the good life. All along
+the walls, towels hang for the use of those who feel the desire to dry off.
+In the middle of the pool, a tall statue of a beautiful woman spouts water
+from both of her nipples. North of here, is a room that seems to have been
+transformed into a huge bed. A room with a huge fireplace is to the west,
+while a room with bits of color raining from the ceiling is to the east.
+South of here, there is a room filled with colorful pillows.
+~
+86 0 0
+D0
+A huge four-poster bed fills the entire room.
+~
+~
+0 -1 8689
+D1
+Tiny rose petals seem to fall from the sky in a beautiful rain.
+~
+~
+0 -1 8687
+D2
+A room filled with fluffy pillows delights your vision.
+~
+~
+0 -1 8683
+D3
+All around are animal carpets, with a bright fire burning in a huge fireplace.
+~
+~
+0 -1 8685
+S
+#8687
+A Room Raining Rose Petals~
+   Dozens upon dozens of petals fall from the ceiling like rain. Beneath you,
+the floor is covered with their softness. Women dance and gyrate through the
+room to the soft hum of music that emits from what feels like everywhere. You
+see a room filled to the brim with whipped cream to the north, while to the
+south, a large mud bath bubbles away. A large, indoor swimming pool is to the
+west.
+~
+86 0 0
+D0
+Puffs and puffs of whipped cream ooze from the walls.
+~
+~
+0 -1 8690
+D2
+Large bubbles of mud blurp and shimmer.
+~
+~
+0 -1 8684
+D3
+A large, steaming pool of clear water awaits entry.
+~
+~
+0 -1 8686
+S
+#8688
+A Room with a Fountain of Sparkling White Wine~
+   A round, porcelain fountain decorates the middle of the room. On the edges
+of the fountain sit iron mugs, used to dip into the fountain. The wine
+shimmers and gurgles as it drops down to the bottom, then is sucked up to
+pour through the top. You can see a room filled with animal skin rugs to
+the south, and a huge, poster bed appears to take up the whole room
+to the east.
+~
+86 0 0
+D1
+A huge four-poster bed fills the entire room.
+~
+~
+0 -1 8689
+D2
+All around are animal carpets, with a bright fire burning in a huge fireplace.
+~
+~
+0 -1 8685
+S
+#8689
+A Room Filled by a Huge Four-Poster Bed~
+   The very edges of the room are about 2 feet wide, giving you barely
+enough room to manuver around the bed. Silk sheets stretch over the
+bed, with personal size sheets thrown and  tossed all over. Women,
+wearing all types of apparel, linger on the bed with looks of longing
+on their faces. A room overflowing with whipped cream is to the
+east, a huge swimming pool is to the south, and a room with a fountain
+of bubbling white wine is to the west.
+~
+86 0 0
+D1
+Puffs and puffs of whipped cream ooze from the walls.
+~
+~
+0 -1 8690
+D2
+A large, steaming pool of clear water awaits entry.
+~
+~
+0 -1 8686
+D3
+A huge fountain of white wine glitters and bubbles.
+~
+~
+0 -1 8688
+S
+#8690
+A Pool Filled with Whipped Cream~
+   Cool globs of whipped cream ooze from the walls, filling the room with
+sweet tasting, squishy delight. Laughter fills the room as everyone swims
+in this white dream. Your main concern at this point seems to be whether or
+not your weapon will rust. Red petals flicker and fall to the south of
+here. A room filled with a huge bed is to the west.
+~
+86 0 0
+D2
+Tiny rose petals seem to fall from the sky in a beautiful rain.
+~
+~
+0 -1 8687
+D3
+A huge four-poster bed fills the entire room.
+~
+~
+0 -1 8689
+S
+#0
+$~

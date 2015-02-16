@@ -1,0 +1,101 @@
+#9501
+wolf~
+A wolf~
+A wolf is standing in front of you.
+~
+You see a big blue wolf in front of you. This fierce wolf has a
+pair of fiery red eyes which are staring at you!
+~
+45 32768 -300 Y
+12 8 0 1d40+100 2d7+2
+0 12998
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+K
+600 1 0 0 0 0
+#9502
+wolf guard~
+A Wolf Guard~
+A wolf guard is here protecting the other wolves.
+~
+The wolf guards are the bravest warriors. Each has distinguished
+himself with some truly exceptional feat of bravery or martial prowess,
+and each would give his life to protect the life or honour of the Wolf
+Lord.
+~
+47 268730376 -500 Y
+20 0 -3 10d4+400 3d7+5
+0 58000
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+K
+5000 1 0 0 0 0
+#9503
+wolf lord~
+The Wolf Lord~
+The Wolf Lord is standing here.
+~
+Bravest of the Brave, mighiest of the mighty, the Wolf Lord leads the
+Wolf Guard. Each Wolf Lord has proven himself again and again in battle.
+He is selected from the ranks of the Wolf Guard on the death of the
+previous Wolf Lord.
+~
+43 268730376 -700 Y
+30 -8 -6 10d10+2000 6d4+10
+0 300000
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+K
+30000 1 0 0 0 0
+#9504
+wolf king~
+The King of the Wolves~
+The King of the wolves is standing in front of you.
+~
+He is the King, the strongest and toughest wolf.
+~
+43 268730504 -1000 Y
+33 -11 -8 50d4+3000 8d5+20
+0 340000
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+K
+60000 1 0 0 0 0
+#9505
+wolf queen~
+The Queen of the Wolves~
+The Queen of the Wolves is standing here.
+~
+~
+43 294920 -1000 Y
+31 -8 -10 50d4+2000 6d4+10
+0 250000
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+K
+50000 1 0 0 0 0
+#9506
+wolf priest~
+The Wolf Priest~
+The Wolf Priest is standing here.
+~
+They recruit new brothers, oversee their training and minister to their
+spiritual needs. In battle they perform heroic feats of field medicine,
+swiftly patching up wounded comrades and sending them back into the fray
+with words of encoragement.
+~
+43 268730504 -700 Y
+28 -6 -10 10d20+1400 9d2+4
+0 160000
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+K
+20000 3009 3059 0 0 0
+#0
+$~

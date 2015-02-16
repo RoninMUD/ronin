@@ -1,0 +1,1440 @@
+#16500
+Marble Steps~
+  The wall lies in rubble to your south, while a large, crumbling
+marble staircase rises above you. A brass sign with the green patina
+of great age is fastened onto one of the short pedestals here. It looks
+as though whatever statues once stood on these short marble pillars
+have long since been weathered into dust. Either that or they got up
+and walked away.
+~
+165 4100 0
+D2
+You see the Park Road.
+~
+~
+0 -1 10051
+D4
+Crumbling marble steps rise above you.
+~
+~
+0 -1 16501
+E
+sign~
+Meedgaarde Museom of Waxen Figures
+           est. 203 A.V.
+~
+S
+#16501
+The Grand Entrance~
+   Tall, rotting mahogany doors lie hanging from their ancient
+hinges before you. They are tall enough to admit two people, one
+standing on the other's shoulders, and wide enough for two fat men
+to walk in abreast. 
+~
+165 0 0
+D0
+Creaking, rotten doors hang from their hinges.
+~
+~
+0 -1 16502
+D5
+Crumbling marble steps go down here.
+~
+~
+0 -1 16500
+S
+#16502
+The Reception to the Wax Museum~
+  A huge desk lies thrown against the north wall here, its old
+wood almost destroyed by dry rot, and broken as well by whatever
+tremendous force wrenched it from its familiar moorings, upright.
+A grand hall leads east and west to the exhibits here. What once
+passed for a map to the building hangs from the wall over the 
+desk.
+~
+165 8 0
+D1
+A tall archway.
+~
+~
+0 -1 16522
+D2
+Creaking, rotten doors hang from their hinges.
+~
+~
+0 -1 16501
+D3
+A tall archway.
+~
+~
+0 -1 16504
+E
+map~
+The map is far too stained by mildew and age to read.
+~
+S
+#16503
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+165 584 0
+S
+#16504
+Decrepit Hallway~
+  This hallway is hung with tattered tapestries which are so
+victimized by their many years hanging from the walls of the
+untended museum that they are completely covered in a fine, pale
+brown veneer of dust and mold. A sign on the northern wall here 
+reads "Ye Weste Winge"
+~
+165 8 0
+D1
+A tall archway.
+~
+~
+0 -1 16502
+D3
+The hallway continues.
+~
+~
+0 -1 16505
+S
+#16505
+A Bend in the Hallway~
+   The walls here have large black streaks burned into them, as
+well as large chunks gouged out of them, seemingly by a monstrous
+ball and chain. The hallway continues to the north, where the west
+wing proper begins.
+~
+165 8 0
+D0
+The hallway continues.
+~
+~
+0 -1 16506
+D1
+The hallway continues.
+~
+~
+0 -1 16504
+S
+#16506
+The West Wing~
+  This is the once-grand west wing of the Midgaard Wax Museum. A
+sign over the eastern archway reads "Heestorikal Warrs". The hall
+continues north and south.
+~
+165 8 0
+D0
+~
+~
+0 -1 16509
+D1
+A grand archway.
+~
+~
+0 -1 16507
+D2
+A bend in the hallway.
+~
+~
+0 -1 16505
+S
+#16507
+First Exhibit: The Hall of Warlords~
+   The walls here were once painted in bright, cheery colors, but 
+now the paint is blistered, cracked, and peeling- as if from a 
+combination of great age and heat. The exhibit was once closed off
+by ropes, but they dangle from their short poles now, rotting and
+broken.
+~
+165 8 0
+D0
+~
+door ~
+1 16506 16508
+D3
+A grand archway.
+~
+~
+0 -1 16506
+S
+#16508
+Maintenance Closet for the First Exhibit~
+  Once upon a time this room was filled with cleaning supplies and 
+sundries for changing the exhibit and cleaning the rooms. Now, all the
+mops and brooms are rotted, and the soap has long since deteriorated
+into very clean dust. Cobwebs cover the walls, and it looks as though
+this room hasn't been disturbed in centuries.
+~
+165 8 0
+D2
+~
+door~
+1 16506 16507
+S
+#16509
+The West Wing~
+  This is the once-grand west wing of the Midgaard Wax Museum. The
+floor here has a dark brown crunchy substance covering it. At first
+you think it might be dried blood, but on closer inspection you
+realize that it is just dark red wax, bubbled up as if some great
+heat came from below here.
+~
+165 8 0
+D0
+~
+~
+0 -1 16510
+D2
+~
+~
+0 -1 16506
+S
+#16510
+A bend in the Hallway~
+  The wax on the floor here is a pale yellow in color, almost an ivory.
+The West Wing lies to your south, and the hallway bends east here.
+The walls are covered in ancient, rotting tapestries.
+~
+165 8 0
+D1
+You see nothing special.
+~
+~
+0 -1 16511
+D2
+~
+~
+0 -1 16509
+S
+#16511
+The North Wing~
+  A sign on the wall here reads "Thee Northe Winge". Wax on the
+floor crackles beneath your feet as you walk along here.
+~
+165 8 0
+D1
+You see nothing special.
+~
+~
+0 -1 16512
+D3
+You see nothing special.
+~
+~
+0 -1 16510
+S
+#16512
+The North Wing~
+  Tattered tapestries hang from rusted nails in the walls here. The
+wax on the floor is crenellated and bubbled, and it seems that you
+can see clawed footprints in it. A sign on the south wall reads, "Forin
+Barbars," and a carved wooden archway leads to an exhibit to the south.
+~
+165 8 0
+D1
+You see nothing special.
+~
+~
+0 -1 16514
+D2
+You see nothing special.
+~
+~
+0 -1 16513
+D3
+You see nothing special.
+~
+~
+0 -1 16511
+S
+#16513
+The Barbar Exhibit~
+  The tattered remnants of a wax figure lie shattered against a wall.
+A name tag on its chest reads, "Vezergorth Eenvader". It looks as though 
+something very powerful smashed this figure with a huge clawed, hoof-shaped
+paw.
+~
+165 8 0
+D0
+~
+~
+0 -1 16512
+S
+#16514
+The North Wing~
+  You tenderly avoid the huge rend in the floor here. A reek of
+rot and must rises from the gouge, and the tapestries here are
+stained a dark, uniform brown-yellow. A huge door lies to the south,
+remarkably well-preserved compared to the rest of this building.
+~
+165 8 0
+D1
+~
+~
+0 -1 16518
+D2
+~
+door~
+1 16515 16515
+D3
+~
+~
+0 -1 16512
+S
+#16515
+The Exhibit of Mythical Beasts~
+  This room stinks of something acrid, almost a cross between sulphur
+and urine. The floors and walls have deep gouges torn into them, as
+if some huge beast went berserk here. The southern wall has what appears
+to be a tunnel carved into it. But how would a tunnel be dug through air,
+as you are on the second floor?
+~
+165 8 0
+D0
+~
+door~
+1 16515 16514
+D2
+~
+~
+0 -1 16516
+S
+#16516
+Wax Tunnel~
+   The curving walls here are made entirely of a semi-clear wax, and huge
+claw-marks are marked in them. The floor has footprints in it.... as though
+the wax was melted at one time.
+~
+165 8 0
+D0
+~
+~
+0 -1 16515
+D3
+~
+~
+0 -1 16517
+S
+#16517
+Wax Tunnel~
+  The curving walls here are made entirely of a semi-clear wax, and huge
+claw-marks are marked in them. The footprints cover the floor here, and 
+scratches and scrapes surround a circular metal hatch with odd runes
+carved into it.
+~
+165 8 0
+D1
+~
+~
+0 -1 16516
+D5
+~
+~
+0 -1 16523
+S
+#16518
+A Bend in the Hallway~
+  The hallway here turns to the west. Wax is bubbled in a 
+crunchy patina on the floor, the color of a fine curry powder.
+Tapestries on the walls are covered in a dark, smoky dust,
+with the small black leavings of flies all over them.
+~
+165 8 0
+D2
+~
+~
+0 -1 16519
+D3
+~
+~
+0 -1 16514
+S
+#16519
+The East Wing~
+  This hallway is as run-down as the rest of the building,
+although it looks as though you might be able to make out
+something of what the tapestries here depict...
+~
+165 8 0
+D0
+~
+~
+0 -1 16518
+D2
+~
+~
+0 -1 16520
+E
+tapestry~
+The pictures on this tapestry show some sort of an official
+ceremony, with what appears to be the frontage of this 
+museum in the background, and an important-looking fellow
+cutting a ribbon tied to statues at the steps.
+~
+S
+#16520
+The East Wing~
+  The floor here has many small crevices and jagged cracks
+in it, as though the ground itself moved underneath it. The
+tapestries that you assume once hung on the walls here have
+been reduced to charred strips of ancient cloth dangling
+miserably from a few nails in the wall.
+~
+165 8 0
+D0
+~
+~
+0 -1 16519
+D2
+~
+~
+0 -1 16521
+S
+#16521
+A Bend in the Hallway~
+  The hall here turns to the north, a large chunk of the
+inside corner of the turn missing, while ragged hunks of
+marble lie scattered about the floor.
+~
+165 8 0
+D0
+~
+~
+0 -1 16520
+D3
+~
+~
+0 -1 16522
+S
+#16522
+Decrepit Hallway~
+  The ceiling here is lumped and sagging from a combination
+of age and humidity, and the wall-hangings are covered in dark
+mildew. It looks as though a tremendous amount of water was once
+splashed about here.
+~
+165 8 0
+D1
+~
+~
+0 -1 16521
+D3
+~
+~
+0 -1 16502
+S
+#16523
+Exhibit Storage~
+  This section of the museum was once used as a storage facility for
+maintenance equipment. The walls are now covered in a thin layer of dark
+brown wax, and the ceiling glows with a strange sort of green, luminescent
+fungus.
+~
+165 8 0
+D1
+~
+~
+0 -1 16524
+D4
+~
+~
+0 -1 16517
+S
+#16524
+A Cramped Hallway~
+  Janitorial equipment lies scattered about the floor of this small
+hallway, and the walls are covered with a rust brown wax. The air is
+exceptionally humid and hot. You seem to smell a slight hint of sulphur
+here.
+~
+165 8 0
+D1
+~
+~
+0 -1 16525
+D3
+~
+~
+0 -1 16523
+S
+#16525
+A Cramped Hallway~
+  The scent of sulphur is stronger here, and it appears to be rising
+from small cracks in the floor in this room. A small trapdoor is set into
+the ground here, and a large ornate door stands to your east.
+~
+165 8 0
+D1
+A huge ornate door with many engravings in it.
+~
+door~
+1 -1 16526
+D3
+~
+~
+0 -1 16524
+D5
+~
+trapdoor~
+1 -1 16527
+S
+#16526
+The Consort's Boudoir~
+  A tremendous odor of some kind of nasty perfume overpowers you as you
+enter this room. Fancy rugs lie strewn about in an almost casual manner,
+although closer inspection reveals that this affect is really very artfully
+done. The huge four-poster brass bed in the corner is hung with diaphanous
+veils of lilac and pink, with an extremely comfortable-looking quilt
+covering the pink silk sheets beneath. A full sized mirror stands against
+the south wall, and various beauty aids are neatly arranged on a small
+ivory table next to it.
+~
+165 8 0
+D3
+The inside of a large, ornate door with many carvings on it.
+~
+door~
+1 -1 16525
+S
+#16527
+The Sorcerer's Workshop~
+  This room has been hollowed out entirely from a huge ball of red wax,
+with a small trapdoor set in the ceiling. Tables and benches support vast
+arrays of crucibles, beakers, and other alchemical devices, all bubbling
+merrily away. A large pentagram is etched into the floor, and sulphurous
+smoke rises from the cracks to form a miasma of putrid gases, almost
+choking you.
+~
+165 8 0
+D4
+~
+trapdoor~
+1 -1 16525
+S
+#16528
+Under the Wax Museum~
+   Somehow, it doesn't look as if the evil sorcerer Hakeem had
+anything to do with this "Wing" of the Museum. There is no trace
+of his telltale wax here, simply rough-hewn red flagstones and
+a strange reddish wood panelling on the walls. A hallway leads
+to your west, and a thick wooden door reinforced with supernatural
+wax stands to your north.
+~
+165 36873 0
+D0
+~
+door~
+2 16532 16527
+D3
+~
+~
+0 -1 16558
+S
+#16529
+A red hallway~
+  The flagstones here are made of a rough-hewn dark red stone,
+and the walls are panelled in a deep crimson hardwood that is
+warm to the touch. A strange energy crackles through every hair
+on your body as you walk through this hallway, and a strange red
+mist covers the floor, seemingly seeping in from the west,
+where the hallway continues.
+~
+165 36873 0
+D1
+~
+~
+0 -1 16558
+D3
+~
+~
+0 -1 16530
+S
+#16530
+A red hallway~
+  The flagstones here are buckled and are riven with huge cracks
+here and there. The wood panelling on the walls seems to be
+very much intact, however. The red mist is thicker here, and
+seems to be emanating from under a massive ebony door to your
+south. Strange protective magical symbols seem to be carved
+all around the ebony door, as if to seal it off from intruders.
+The other option is too horrible to contemplate. The hallway
+continues to your north and to your south.
+~
+165 36873 0
+D0
+~
+~
+0 -1 16531
+D1
+~
+~
+0 -1 16529
+D2
+~
+door~
+1 16517 16532
+E
+symbols~
+The symbols carved around the door here appear to have bits of
+wax in their various deeper crevices.... It seems Hakeem has
+been at work here.
+~
+S
+#16531
+A red hallway~
+   The walls here are made of a dark red hardwood, and the
+floor consists of tremendous flagstones carved out of some
+deep red granite. A strange red mist hovers gently over
+the floor, dissipating to the north. There is a circular
+pattern engraved in a central flagstone here, strange sigils
+and runes carved around the edges of it.
+~
+165 36873 0
+D0
+~
+~
+0 -1 16559
+D2
+~
+~
+0 -1 16530
+D5
+As you look closely at the circular pattern, you notice that
+it seems to be edged in a deep, matte black. Strangely, it
+looks as if the blackness is moving...
+~
+~
+2 -1 16536
+E
+pattern~
+As you look closely at the circular pattern, you notice that
+it seems to be edged in a deep, matte black. Strangely, it
+looks as if the blackness is moving...
+~
+E
+sigil~
+The sigils seem to have a deep black molten wax puddled in their
+deeper crevices. It looks as if the wax is moving of its own
+volition...
+~
+E
+sigils~
+The sigils seem to have a deep black molten wax puddled in their
+deeper crevices. It looks as if the wax is moving of its own
+volition...
+~
+E
+rune~
+These strange runes look to be carved in a different hand than
+the protective sigils. Most, however, look to have been scratched
+at in an attempt to break whatever powers they contain...
+~
+E
+runes~
+These strange runes look to be carved in a different hand than
+the protective sigils. Most, however, look to have been scratched
+at in an attempt to break whatever powers they contain...
+~
+E
+circle~
+As you look closely at the circular pattern, you notice that
+it seems to be edged in a deep, matte black. Strangely, it
+looks as if the blackness is moving...
+~
+S
+#16532
+A Room of Mist~
+  As you enter this room, you immediately lose your bearings.
+A strange, impenetrable red mist fills this entire room, making 
+it very much impossible for you to see anything beyond a foot
+in front of your eyes. You hear strange crunching sounds and
+a slight splash. As you wander further into this room, you notice
+that you are descending into a pool of warm liquid. Strands of
+some clinging weed brush your shins, and it seems as if something
+large and slimy keeps brushing past your legs.
+~
+165 32768 0
+D0
+~
+door~
+1 16517 16530
+S
+#16533
+A dark corner~
+   You stand at a strange, dark corner in the bending hallway
+underneath the Wax Museum. The walls here are panelled in
+a dark indigo hardwood of some kind. The floor is checkered with
+tremendous flagstones alternatively a dark red stone and a
+lighter violet stone. To your south, you can see a thin red
+mist and a continuing hallway, while the hallway to your west
+appears to be almost filled with a purple mist, and is much
+darker and, somehow, more threatening.
+~
+165 36873 0
+D2
+~
+~
+0 -1 16559
+D3
+~
+~
+0 -1 16560
+S
+#16534
+A purple corridor~
+  The massive flagstones here are made from a pale violet stone,
+appearing almost grey in the strangely flickering light of your
+light source. The walls are panelled with a short-grained
+hardwood a deep indigo in color. A massive door, seemingly made
+of blackened vines twisted together and sealed with an almost
+fluid black substance, looms to your south. Strange runes,
+similar to those carved around the ebony door, edge this strange
+door. It almost looks as if the door is... writhing. The hallway
+continues to your east and bends sharply north. The strange
+purple mist is incredibly thick here, the "canopy" of it being
+about one and a half meters above the floor.
+~
+165 36873 0
+D0
+~
+~
+0 -1 16538
+D1
+~
+~
+0 -1 16561
+D2
+The black, twisted door seems to lunge out of its frame at you 
+as you examine it!
+~
+door~
+1 16535 16535
+S
+#16535
+A room of black lianas and vines~
+   As you enter this room, the sheer mass of vegetation stuns 
+your senses. Dark indigo creepers cover the ground and, rooted
+amongst their stems, slender lianas feed on ebon vines which
+dangle luxuriantly from far above your head. The silence here
+is oppressive, as is the heat and the humidity... you can taste
+the air. The only noises you hear are the occasional nearly
+sub-auditory rumble or faint rustling from deep within the
+black foliage. A thick purple mist lazily swirls about the
+vegetation as the slight air currents caused by your movements
+disturb it. As you penetrate deeper into the foliage, you begin
+to hear what sounds like a whispered song...
+~
+165 36873 0
+D0
+~
+door~
+1 16535 16534
+S
+#16536
+A room of blackness~
+   All around you, a palpable blackness swirls and flows. Air
+is difficult for you to acquire in this room, as you feel the
+warm blackness ooze down your throat, clogging your lungs. It
+would probably be a good idea to leave as soon as possible. You
+can see a circular hatch above your head, but it doesn't look
+possible to break your way through.
+~
+165 37129 0
+D4
+~
+~
+2 -1 16531
+S
+#16537
+A dome of rusted equipment~
+   You tumble headlong into a room with no apparent exits! The
+spherical walls here consist entirely of rusted and broken 
+equipment and the bones of what must be former adventurers. A
+massive altar dominates the center of this room, squatting like a
+golden god amidst the heaps of equipment. You can hear the shrieks
+and clashes of battle all around you. Something tells you that,
+once the sounds cease, so will your life! You'd better figure a
+way out of here quickly....
+~
+165 1085577 0
+S
+#16538
+A rough-hewn grey corridor~
+   The flagstones and walls here are made of a rough-hewn grey
+stone, a bit darker in color than the pale grey tendrils of
+mist which trickle in from the east, intermingling with the purple
+mist which encroaches from the south. The hardwood panelling 
+which you have grown accustomed to is absent here, the walls
+and floor completely bare of any decoration whatsoever.
+~
+165 36873 0
+D1
+~
+~
+0 -1 16562
+D2
+~
+~
+0 -1 16534
+S
+#16539
+A grey stone corridor~
+   A thin grey mist covers the rough-hewn grey flagstones here.
+The walls are made of large grey blocks of rough granite. This
+corridor is rather chilly, and you can see a delicate
+hoarfrost on the walls and ceiling. Luckily, the floor is clear
+of ice. The corridor continues to your north and to your west.
+~
+165 36873 0
+D0
+~
+~
+0 -1 16540
+D3
+~
+~
+0 -1 16562
+S
+#16540
+An icy grey corridor~
+  The rough-hewn grey flagstones are covered with a thin layer of
+ice here, and small icicles cover the granite walls like an old
+man's beard. You can hear a faint crunching sound as you move
+along the icy floor, and your frozen breath mixes quickly with
+the thick grey mist which half fills this hallway. The corridor
+continues to your north and to your south.
+~
+165 36873 0
+D0
+~
+~
+0 -1 16563
+D2
+~
+~
+0 -1 16539
+S
+#16541
+A frozen grey corridor~
+   It is incredibly cold in this hallway, as if it were the dead
+of winter in the frozen steppes of the far north. The floors are
+dangerously icy, and the tips of icicles brush the top of your
+head from above. A massive door, apparently fashioned from pure
+ice, looms to your east. From the door itself oozes the thick 
+grey mist which reaches to your chin in this corridor. The 
+temptation to lick this icy door is almost unbearable, but you
+know very well not to do such a thing if you wish to leave this
+place in the near future.
+~
+165 36873 0
+D1
+~
+door~
+2 16505 16542
+D2
+~
+~
+0 -1 16564
+S
+#16542
+An Icy Cavern~
+   The brilliance of the whites, blues, and greys here is 
+startling. How could ice be so beautiful, you wonder. A small,
+frozen tarn in the center of this cavern reflects the light
+cast by your torches and illumines the entire cavern. Massive
+stalactites of ice hang from the roof and walls of this
+cavern, giving it a distinctly toothy appearance. A massive, mostly
+frozen waterfall empties itself beneath the surface of the frozen
+tarn from the east. The gleaming white floor of this cavern is
+clear of all icy protuberences. This is, however, more than made up
+for by an amazing proliferation of bone piles and half-eaten
+carcasses. Obviously some beast lives in this cavern, and whatever
+it is, it must be quite ferocious.
+~
+165 36873 0
+D1
+You see a frozen waterfall, which looks climbable.
+~
+waterfall~
+11 -1 16543
+D3
+~
+door~
+2 16505 16541
+E
+waterfall~
+A frozen waterfall lies to the east, and it looks climbable!~
+S
+#16543
+A river through the ice~
+   A small river flows fairly rapidly through the ice here, 
+leading to a frozen tarn in a large cavern to the west. The river
+continues to the north, your torchlight gleaming off of the whites
+and brilliant blues of the icy ceiling. The water is amazingly 
+frigid, and it would be fairly dangerous to swim here. You see
+small caves lining the icy walls to your east and south. You
+also see what looks like a glittering diamond under the river's
+surface here!
+~
+165 36873 6
+D0
+The freezing river passes through a much smaller vein to the
+north.
+~
+~
+0 -1 16548
+D1
+A plume of scalding yellow steam emanates from this cave.
+~
+~
+0 -1 16545
+D2
+You see gleaming red eyes looking at you from within this dark
+cave, and the sounds of many chittering, squalling creatures.
+~
+~
+0 -1 16547
+D3
+You see a frozen waterfall, which looks climbable.
+~
+waterfall~
+11 -1 16542
+D5
+A tremendously huge clear crystalline structure gleams prettily
+from below the churning, freezing grey waters!
+~
+~
+0 -1 16544
+S
+#16544
+Bobbing Gently in Sub-Zero Waters surrounded by Ice~
+   Ever notice how similar diamonds and big hunks of ice look
+when viewed from above swiftly-moving glacial rivers? Well, as
+this amazing coincidence crosses your mind, you and the large hunk
+of ice you clutch to your chest slowly drift to the bottom of the
+river. Soon, the freezing cold changes to a blissful numbness as
+you slip into unconsciousness and your lifeless body drifts down
+to join the rest of the large hunks of ice which lie still below
+the rushing current above.
+~
+165 36875 0
+D4
+~
+~
+0 -1 16543
+S
+#16545
+An underground Geyser~
+   You enter this room hoping to warm yourself up in the sulphurous
+gases and skin-blistering steam of this small geyser. However, this
+cave is far too small to contain both you and a magma-fed spout
+of boiling water and noxious gases. In short order you are forced
+to change your job description to "Stew".
+~
+165 36875 0
+D3
+~
+~
+0 -1 16543
+S
+#16546
+CRUNCH!~
+  You crash through the thin icy ledge and immediately plunge deep
+into the depths of the freezing river, going unconscious almost
+instantly. While slowly freezing to death, your unconscious mind
+berates you soundly for being such a moron.
+~
+165 36875 0
+D2
+~
+~
+0 -1 16549
+S
+#16547
+A Kimagee Nest~
+  Kimagees are well known as the most vicious pack-animals alive
+in the world today. With their razor-sharp teeth and ripping claws,
+a pack of small Kimagees can reduce a large yak to bones in less
+than three seconds. Being as these furry little predators nest
+in large groups of about fifty, and being that this is one of
+their larger winter nests, it was really nice knowing you.
+Goodbye.
+~
+165 36875 0
+D0
+~
+~
+0 -1 16543
+S
+#16548
+A river through glacial ice~
+   The freezing river whirls through a narrow tunnel in the
+glacial ice here, huge chunks of ice zooming to the south. The
+tunnel seems to be a large vein in this cadaver of ice, the walls
+and ceiling the most amazing variety of whites, blues, and blacks
+that you have ever seen. Sulphurous emanations from under the
+earth have tinted large patches of ice amazingly bright mineral
+colors, as wide-ranging as a firey orange next to a brilliant
+carmine. Strange, hardy lichens also color parts of the ice here
+with bright greens and reds.
+~
+165 36873 6
+D0
+The river churns through a narrow tunnel from the north.
+~
+~
+0 -1 16566
+D2
+The river opens up into a wider channel to the south.
+~
+~
+0 -1 16543
+S
+#16549
+A whirling rapid in the glacial vein~
+   The glacial vein widens a bit here, where the river bends.
+A large shelf of ice extends into these frigid waters to the north,
+while the river proper whirls around from the east to a southward
+channel. Massive icicles dangle from the ceiling, strange lichens
+staining their surfaces muddy brown and green. You can see bright
+red garnets in the walls here, and it looks as though there might
+be a human corpse glaring out of the icy wall by the protruding
+shelf.
+~
+165 36873 6
+D0
+The large shelf looks pretty thin, and it projects out over
+churning grey, freezing waters. It probably isn't too safe.
+~
+~
+0 -1 16546
+D1
+The river seems to begin to your east, churning out of a large
+hole in the vein's floor.
+~
+~
+0 -1 16550
+D2
+The river passes through a much smaller vein to the south.
+~
+~
+0 -1 16565
+E
+corpse~
+You grab on to a large hunk of ice which juts from the frozen
+wall and gaze at this horrible spectacle. A primitive human has
+been frozen into the ice here, and her wide eyes, open mouth, and
+swirled hair do not imply that it was a very pleasant death.
+~
+E
+shelf~
+The shelf doesn't look very safe, and you probably oughtn't
+try to climb onto it.
+~
+S
+#16550
+At the headwaters of the freezing glacial vein~
+   To your north, the river waters plume out of a massive hole 
+in the floor of the glacial vein. It looks as if you could easily
+get around these churning headwaters via a small path around the
+spouting hole. To your west, the icy river flows rapidly. As you
+look beyond the headwaters, you think you can see a lighter, more open
+area.
+~
+165 36873 6
+D0
+A small path leads around the headwaters to your north.
+~
+~
+0 -1 16551
+D3
+The river bends southwards to your west.
+~
+~
+0 -1 16549
+S
+#16551
+A Glacial Vein~
+  This vein seems to be somehow... maintained. The patterns in the
+walls seem cruder and more tool-derived than the subtler, more
+flowing geological patterns you have grown accustomed to in this
+strange, lifeless world of ice. A river plumes southwards out of
+a massive hole to your south, and this tunnel continues to the
+north.
+~
+165 36873 0
+D0
+The vein continues to your north. It seems a bit more light in
+that direction.
+~
+~
+0 -1 16552
+D2
+A massive hole in the ground acts as the headwaters to a glacial
+river to your south.
+~
+~
+0 -1 16550
+S
+#16552
+The end of the Glacial Vein~
+  The glacial vein ends abruptly here, the northern wall obviously
+carved out by human tools. The northern wall has strange lichens
+growing in what appear to be cultivated patterns on it. As if
+someone were gardening these miniscule organisms for the purposes
+of entertainment, as an old woman cultivates a flower bed! The
+door to your west is decorated more simply with yellow and red
+paints. The only thing missing is a welcome mat on the ice at the
+foor of the door.
+~
+165 36877 0
+D1
+A massive wooden door painted in pretty yellow and red paint stands
+here.
+~
+door~
+1 16543 16553
+D2
+~
+~
+0 -1 16551
+S
+#16553
+In a small living room~
+   As you enter this small cabin under the glacier, you are boggled
+by the warm air and cosy atmosphere. The walls here are made of
+raw-cut logs and have many decorations on them, most of them along 
+the lines of dead animal heads, weapons, and animal traps. A few
+bunches of dried flowers and embroidered portraits hang amidst
+the otherwise very manly decorations. A large table in the center
+of this room is set for three, one of the plates being smaller
+and more colorful than the rest. The floor of this little cabin/
+cave is covered by a large hand-woven rug, which extends to the
+large fireplace, which has the immense pelt of a white bear lying
+dangerously close to the dying embers. You can hear humming and
+the soft sounds of singing coming from through a small door to
+your north. Stairs lead down here, and a very small door leads
+to the east.
+~
+165 36872 0
+D0
+~
+~
+0 -1 16554
+D1
+~
+door~
+1 -1 16555
+D3
+~
+door~
+1 16543 16552
+D5
+~
+~
+0 -1 16556
+S
+#16554
+A cosy kitchen~
+   As you enter this small kitchen from the rather ferociously
+decorated living room, you feel as if you have entered a wonderful
+world of warmth and kindness! The walls are painted a bright yellow,
+and the many large spice racks are made with care and love, all
+of them hand-carved and decorated with small pebbles and varnished
+with a homemade lichen stain. The ceiling of this kitchen is dark
+brown with years of cooking smoke, and the kitchen is kept very
+warm by a huge oven which seems to never cool. The smell of recent
+meals warms your heart, making you think of mothers and of every
+perfect childhood you ever dreamed up for yourself. It takes an
+almost physical wrench of thought to remind yourself that you are
+many meters below the surface of the earth in what could easily
+be considered an icy tomb.
+~
+165 36872 0
+D2
+~
+~
+0 -1 16553
+S
+#16555
+A small bedroom~
+   This small bedroom looks as if a tornado has swept through it
+very recently. Misshapen clothing lies strewn all over the floor,
+and toys lie intermingled with gnawed bones all over the place.
+A small four-poster bed sags in the southeastern corner, the
+bedclothes rumpled and torn. The walls bear claw-marks and childish
+drawings. There is a strange odor here, a cross between the tang
+of stale urine and the musk of a large beast.
+~
+165 36872 0
+D3
+~
+door~
+1 -1 16553
+S
+#16556
+A Tracker's Workshop~
+   In a civilized man's home, this would be the room referred to
+as the "Study" or, even, the Library. Instead, you stand in what
+can only be termed a Workshop. Traps and animal-calling devices
+hang from the walls, and a large bench covered with awls, leather
+punches, pliers, and other, less identifiable tools stands against
+the northern wall. Racks with animal hides stretched on them clutter
+the room, in various stages of the curing process. The most civilized
+thing about the room is a book lying half-open on the bench. A
+sturdy door stands to the south.
+~
+165 36872 0
+D2
+~
+door~
+1 -1 16557
+D4
+~
+~
+0 -1 16553
+S
+#16557
+Lemouro the Tracker's Room~
+  A massive bed stands against the southern wall here, the skins
+of strange beasts thrown over it as bedcovers. A small desk and
+chair sit against the eastern wall, and various weapons and tools
+from the Workshop seem to have spilled over into this room. This
+must be where Lemouro and his wife retire every night, and it
+probably wouldn't be a good idea to be caught snooping around here.
+~
+165 38920 0
+D0
+~
+door~
+1 -1 16556
+S
+#16558
+A red hallway~
+  The flagstones here are fashioned of a rough-hewn dark red 
+stone. A thick red mist covers the floor here, and it seems to
+get even thicker to the west. The walls are panelled with a strange
+red hardwood, and small scratches in the surface reveal the presence
+of some clawed beast. A small area against the southern wall is
+a bit darker than the rest of the panelling, as if something very
+hot has been leaning against it.
+~
+165 36873 0
+D1
+~
+~
+0 -1 16528
+D3
+~
+~
+0 -1 16529
+S
+#16559
+A purple corridor~
+  The panelling here shifts rather quickly from the red hardwood
+you are used to to a dark indigo short-grained hardwood, while the
+flagstones shortly become a pale violet color. A purple mist inter-
+mingles with the red mist here, creating a surreal carpet. You sight
+a corner to your north, while the hallway turns red to your south.
+~
+165 36873 0
+D0
+~
+~
+0 -1 16533
+D2
+~
+~
+0 -1 16531
+S
+#16560
+A purple hallway~
+   The purple mist is thick here, and gets even thicker as you travel
+west. You can barely see the pale violet flagstones you are walking
+on, and it seems almost as if something keeps brushing past your
+legs here. Large chunks of the dark indigo hardwood wall panelling
+have been torn out here, and the bits that remain seem to have been
+eaten away in small circular patterns, almost as if somebody had
+set many coasterless drinks upon the wall and let them sit.
+~
+165 36873 0
+D1
+~
+~
+0 -1 16533
+D3
+~
+~
+0 -1 16561
+S
+#16561
+A purple hallway~
+   The purple mist here is so thick and deep that you feel like
+you're wading through four-foot deep water. Strangely, the mist
+apparently has a very low vaporization temperature, as no liquid
+has formed on any of your clothing. You can't even see the floor
+through the mist, but if you got down on your hands and knees you
+could see that it is made of the same pale violet stone as in the
+rest of this hallway. The walls are panelled with a deep indigo
+hardwood, almost black in the flickering torchlight. The hallway
+continues to your west and to your east.
+~
+165 36873 0
+D1
+~
+~
+0 -1 16560
+D3
+~
+~
+0 -1 16534
+S
+#16562
+An ice grey corridor~
+  The flagstones and walls here are made of a rough-hewn grey
+stone, darker than the pale grey mist which lies an inch deep over
+the stones. The walls are made of the same grey stone, and a bit
+of frost covers them. The mist grows thicker to your east, while
+it seems to mix with the violet mist to the west.
+~
+165 36873 0
+D1
+~
+~
+0 -1 16539
+D3
+~
+~
+0 -1 16538
+S
+#16563
+An icy grey corridor~
+  The floor consists of rough-hewn grey flagstones covered by a 
+thin rime of ice. Small icicles dangle from the ceiling and the
+walls here. A thick grey mist reaches your chest here, and everything
+you touch seems cold and dead. Your breath stands out a stark white
+against a basically grey vista, and the only sounds are the small
+crunching noises your boots make while walking along the frosty
+floor. The corridor continues to your north and to your south.
+~
+165 36873 0
+D0
+~
+~
+0 -1 16564
+D2
+~
+~
+0 -1 16540
+S
+#16564
+An ice grey corridor~
+   The bone-chilling cold numbs you as you hurry through the corridor.
+The mist is so thick that you find it difficult to breathe, and
+you find it hard to avoid stumbling into the icicle-covered walls
+here. That would be dangerous, considering that your relatively
+warm clothing would probably stick to the wall, exposing you to the
+intense cold here for perhaps a bit too long. If it isn't your
+just your imagination, there is quite a bit of air movement in the
+thick grey mist which rises to your chest here.
+~
+165 36873 0
+D0
+~
+~
+0 -1 16541
+D2
+~
+~
+0 -1 16563
+S
+#16565
+A whirling turn in a glacial river tunnel~
+   The river is a bit slower here, as the vein has widened out by
+about two feet. Still, you dodge massive chunks of ice as you travel
+along this icy river. The river flows from the north, and turns to
+your west here, where the tunnel is narrower. The walls and ceiling
+are particolored with various glacial lichens, most of them a pale
+reddish-pink here.
+~
+165 36873 6
+D0
+The river opens up into a much larger part of the glacial vein to
+the north.
+~
+~
+0 -1 16549
+D3
+The river passes through a narrower tunnel to your west.
+~
+~
+0 -1 16567
+S
+#16566
+A river through glacial ice~
+   The freezing water rushes amazingly quickly through this small
+vain in the glacial ice. Lichens stain the walls and ceiling brilliant
+colors ranging from bright orange to lime-green. Stalactites hang
+from the ceiling, making you nervous enough to duck as you pass
+under them. Massive chunks of ice whirl from the north to the south
+here, in which directions the river whirls through the glacial
+vein.
+~
+165 36873 6
+D0
+The river seems to rush around a turn in the glacial vein to the north. 
+~
+~
+0 -1 16567
+D2
+The river whirls through a narrow tunnel in the glacial vein to the south.
+~
+~
+0 -1 16548
+S
+#16567
+A whirling turn in a glacial river tunnel~
+  The narrow vein in the glacial ice turns a rapid ninety degrees
+from east to south here, slamming large chunks of ice against the
+northwestern wall, which is clean of any lichen discoloration. The
+massive stalactites are fewer in number here, as most are broken
+off by the taller chunks of ice.
+~
+165 36873 6
+D1
+It looks as if you are up against another turn in the river to the east.
+~
+~
+0 -1 16565
+D2
+The river hurtles through a small tunnel to the south.
+~
+~
+0 -1 16566
+S
+#16599
+Ye Grande Hall of Kludgi and Locusti~
+   Bits of wax, string, specks of blood, and powdered Tang are
+strewn about the floor here, all surrounding a huge neon orange
+sign in the center of the room:
+               Do NOT Touch ANYTHING!
+               ON THREAT OF SUMMONING
+              OUR DARK LORD VERGIGORM
+             TO EAT YOUR ENTRAILS!!!
+Kludged by Zorak, 12/1/95
+~
+165 512 0
+S
+#0
+$~

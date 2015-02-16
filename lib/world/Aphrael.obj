@@ -1,0 +1,203 @@
+#11700
+bowl milk~
+A bowl of milk~
+A small wooden bowl half full of milk sits here.~
+~
+17 64 1
+5 3 10 0
+5 10000 5
+5
+E
+bowl milk~
+This is a small handmade bowl that someone has thoughtfully filled with milk.
+It is said that brownies are especially fond of fresh milk...
+~
+#11701
+toadstool~
+A Toadstool~
+A toadstool from a faerie ring lies here.~
+~
+19 64 1
+10 0 0 1
+1 100 1
+1
+E
+toadstool~
+This appears to be a toadstool from a faerie ring.  Perhaps you should
+return it to its rightful owners.
+~
+#11702
+chocolate chocolates box~
+A Box of Chocolates~
+A heart-shaped box has been abandoned here.~
+~
+12 134217792 1
+0 0 0 0
+5 5000 5000
+136
+E
+box chocolate chocolates~
+It is said that dryads are suckers for sweets...
+~
+#11703
+shell seashell~
+A Seashell~
+A polished shell lies here.~
+~
+12 64 1
+0 0 0 0
+3 50 10
+10
+E
+shell seashell~
+A highly polished shell that came from the sea.  You wonder how far it
+got this far inland, and realize it would be a perfect gift for one who
+has never seen anything from beyond her river landscape.
+~
+#11704
+daisies crown~
+A Crown of Daisies~
+A handmade loop of daisies lies here.~
+~
+11 64 17
+0 0 0 0
+5 300 1
+1
+E
+daisies crown~
+Too big for you, this crown looks like it was made for a friend.  Exuding
+purity, it seems like only the most innocent creature in the land would
+enjoy something such as this.
+~
+#11705
+bone old~
+An Old Bone~
+A dirty old bone lies here in the dirt.~
+~
+13 64 1
+0 0 0 0
+20 50 1
+1
+E
+bone~
+A nasty old bone.  Perhaps it would be enough to distract an ogre long
+enough to talk to him, though.
+~
+#11706
+herbs pouch~
+A Pouch full of Herbs~
+A small bag full of rare spices and herbs assaults your nostrils.~
+~
+15 1088 1
+20 0 -1 0
+10 30000 5000
+136
+E
+pouch herb bag herbs~
+While you don't find much use for rare spices and herbs, you might be
+able to find someone that would appreciate such a gift.
+~
+#11707
+dust faerie~
+Some Faerie Dust~
+Some shimmering powder is sprinkled on the ground.~
+As you blow the dust from the palm of your hand, it twinkles merrily in the s
+uunlight.
+~
+4 134742112 16385
+10 5 5 -1
+2 20000 1
+1
+E
+dust faerie~
+Twinkling gaily in the sunlight, just looking at this stuff makes you
+feel happy.
+~
+B
+16777216
+#11708
+acorn nut~
+An Acorn~
+A small brown nut lies here on the ground.~
+~
+19 524352 1
+48 0 0 0
+4 100000 1
+1
+#11709
+ring air~
+A Ring of Air~
+A transparent ring lies here, barely visible.~
+~
+22 134217824 16387
+0 0 0 0
+3 5000 200
+200
+A
+5 2
+A
+14 15
+#11710
+youth cloak~
+A Cloak of Youth~
+A shimmering cloak lies here.~
+~
+11 134217792 1025
+0 0 0 0
+15 30000 5000
+136
+E
+cloak youth~
+As with things truly beautiful, this fades with age.
+~
+A
+9 -20
+A
+10 -10
+#11711
+root mandrake~
+A Mandrake Root~
+An ugly root is growing here.~
+The staff reaches out, filling the room with a warm feeling.
+~
+4 173031424 16385
+40 3 3 -1
+20 100000 50000
+80
+A
+3 3
+A
+14 10
+B
+1056768
+#11712
+pebble stone rock glittering~
+A Glittering Pebble~
+A pebble, polished by the river, lies here.~
+~
+8 134217984 16385
+0 0 0 0
+10 5000 2500
+196
+E
+stone pebble rock~
+Lying in the river for eons has polished this stone to a beautiful
+satiny finish.  Minerals embedded in the stone provide a merry glitter
+as the sunlight bounces off it.  It looks like it may have some value,
+but you can't be sure.
+~
+#11713
+treasure sort~
+A Treasure of Another Sort~
+An aura hovers here, waiting to be harnessed.~
+~
+11 134217824 17
+0 0 0 0
+5 10000 500
+244
+A
+4 10
+B
+32824
+#0
+$~

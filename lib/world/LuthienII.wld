@@ -1,0 +1,875 @@
+#27400
+The cellar entrance~
+  The environment down here is quite cold and humid. The rough granite
+walls feel moist to the touch, and pretty much all wooden and fabric
+objects down here are covered in mould growth. Water leaks in through
+the cracked foundation wall, and the sounds of scurrying mice can be
+heard from the depths of the darkness. It would appear that this cellar
+was once used for storage of the church's commodities, both consumables
+as well as furniture and other necessities. A strange odor seems to reek
+from the southeast.
+~
+274 32781 0
+D1
+~
+~
+0 -1 27401
+D4
+~
+~
+0 -1 26861
+S
+#27401
+The church cellar~
+  The environment down here is quite cold and humid. The rough granite
+walls feel moist to the touch, and pretty much all wooden and fabric
+objects down here are covered in mould growth. Water leaks in through
+the cracked foundation wall, and the sounds of scurrying mice can be
+heard from the depths of the darkness. It would appear that this cellar
+was once used for storage of the church's commodities, both consumables
+as well as furniture and other necessities. A strange odor seems to reek
+from the south.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27404
+D1
+~
+~
+0 -1 27402
+D2
+~
+~
+0 -1 27403
+D3
+~
+~
+0 -1 27400
+S
+#27402
+The church cellar~
+  The environment down here is quite cold and humid. The rough granite
+walls feel moist to the touch, and pretty much all wooden and fabric
+objects down here are covered in mould growth. Water leaks in through
+the cracked foundation wall, and the sounds of scurrying mice can be
+heard from the depths of the darkness. It would appear that this cellar
+was once used for storage of the church's commodities, both consumables
+as well as furniture and other necessities. A strange odor seems to reek
+from the southwest.
+~
+274 32781 0
+D1
+~
+~
+0 -1 27405
+D3
+~
+~
+0 -1 27401
+S
+#27403
+The wine cellar~
+  Several wine racks are set up against the walls here, and the opened 
+and broken bottles on the floor are emitting a funky odor of sweet and
+rotten at the same time. Some of the bottles seem intact. The cold
+environment down here has quite likely kept the content in some of them
+from going bad. The rough granite walls feel moist to the touch, and
+pretty much all wooden and fabric objects down here are covered in mould
+growth. Water leaks in through the cracked foundation wall, and the
+sounds of scurrying mice can be heard in the distance.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27401
+S
+#27404
+The food storage room~
+  Many shelves fill this room, all filled with wooden boxes and hermetic
+cans. Empty and broken boxes are scattered across the floor, and a thick
+layer of dust covering every single shelf, can and box in this room makes
+it pretty obvious that this room havent seen visitors in years and years.
+The cold environment down here has quite likely kept the content in some
+of the cans from going bad. The sound of scurrying mice can be heard from
+the depths of the cellar.
+~
+274 32777 0
+D2
+~
+~
+0 -1 27401
+S
+#27405
+Down the middle of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27410
+D1
+~
+~
+0 -1 27406
+D2
+~
+~
+0 -1 27415
+D3
+~
+~
+0 -1 27402
+S
+#27406
+Down the middle of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27411
+D1
+~
+~
+0 -1 27407
+D2
+~
+~
+0 -1 27416
+D3
+~
+~
+0 -1 27405
+S
+#27407
+Down the middle of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27412
+D1
+~
+~
+0 -1 27408
+D2
+~
+~
+0 -1 27417
+D3
+~
+~
+0 -1 27406
+S
+#27408
+Down the middle of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27413
+D1
+~
+~
+0 -1 27409
+D2
+~
+~
+0 -1 27418
+D3
+~
+~
+0 -1 27407
+S
+#27409
+Down the middle of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32781 0
+D0
+~
+~
+0 -1 27414
+D1
+A large dark hardwood door blocks the exit to the east.
+A forged iron sign is placed above the door:
+                   |THE MORTUARY|
+~
+door~
+1 27400 27430
+D2
+~
+~
+0 -1 27419
+D3
+~
+~
+0 -1 27408
+S
+#27410
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27420
+D1
+~
+~
+0 -1 27411
+D2
+~
+~
+0 -1 27405
+S
+#27411
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27421
+D1
+~
+~
+0 -1 27412
+D2
+~
+~
+0 -1 27406
+D3
+~
+~
+0 -1 27410
+S
+#27412
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27422
+D1
+~
+~
+0 -1 27413
+D2
+~
+~
+0 -1 27407
+D3
+~
+~
+0 -1 27411
+S
+#27413
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27423
+D1
+~
+~
+0 -1 27414
+D2
+~
+~
+0 -1 27408
+D3
+~
+~
+0 -1 27412
+S
+#27414
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27424
+D2
+~
+~
+0 -1 27409
+D3
+~
+~
+0 -1 27413
+S
+#27415
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27405
+D1
+~
+~
+0 -1 27416
+D2
+~
+~
+0 -1 27425
+S
+#27416
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27406
+D1
+~
+~
+0 -1 27417
+D2
+~
+~
+0 -1 27426
+D3
+~
+~
+0 -1 27415
+S
+#27417
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27407
+D1
+~
+~
+0 -1 27418
+D2
+~
+~
+0 -1 27427
+D3
+~
+~
+0 -1 27416
+S
+#27418
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27408
+D1
+~
+~
+0 -1 27419
+D2
+~
+~
+0 -1 27428
+D3
+~
+~
+0 -1 27417
+S
+#27419
+Between the pillars in the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Among the many objects stored down here,
+your attention is drawn to the many coffins filling the entire area. There
+are a few broken ones, but the majority of the coffins seems to be in
+quite good condition.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27409
+D2
+~
+~
+0 -1 27429
+D3
+~
+~
+0 -1 27418
+S
+#27420
+The north-western corner of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D1
+~
+~
+0 -1 27421
+D2
+~
+~
+0 -1 27410
+S
+#27421
+The northern wall of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D1
+~
+~
+0 -1 27422
+D2
+~
+~
+0 -1 27411
+D3
+~
+~
+0 -1 27420
+S
+#27422
+The northern wall of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D1
+~
+~
+0 -1 27423
+D2
+~
+~
+0 -1 27412
+D3
+~
+~
+0 -1 27421
+S
+#27423
+the northern wall of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D1
+~
+~
+0 -1 27424
+D2
+~
+~
+0 -1 27413
+D3
+~
+~
+0 -1 27422
+S
+#27424
+The north-eastern corner of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D2
+~
+~
+0 -1 27414
+D3
+~
+~
+0 -1 27423
+S
+#27425
+The south-western corner of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27415
+D1
+~
+~
+0 -1 27426
+S
+#27426
+The southern wall of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27416
+D1
+~
+~
+0 -1 27427
+D3
+~
+~
+0 -1 27425
+S
+#27427
+The southern wall of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27417
+D1
+~
+~
+0 -1 27428
+D3
+~
+~
+0 -1 27426
+S
+#27428
+The southern wall of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27418
+D1
+~
+~
+0 -1 27429
+D3
+~
+~
+0 -1 27427
+S
+#27429
+The south-eastern corner of the cellar~
+  Many tracks in the dust on the floor indicate that there has been quite
+a bit of recent activity in this area. The floor is cracked in many areas
+and muck and filth fills in the gaps. Puddles of dirty water are scattered
+across the floor, and the rot on the pillars supporting the ceiling is
+quite obvious. The constant noise from the mice and rats scavenging in the
+darkness is almost deafening. Slushy water pours in through large cracks
+in the foundation wall.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27419
+D3
+~
+~
+0 -1 27428
+S
+#27430
+The Mortuary~
+  This appears to be the room in which they cleansed and prepared the
+departed for burying. Old dusty coffins are lined up against the eastern
+wall, and some blank tombstones are stacked in a corner of the room. From
+further study this room was also used for interrogation and examination
+of women suspected of witchcraft. There is a tray next to the table
+with a wide selection of exotic torture instruments, as well as a very
+worn copy of a book entitled: "`oMalleus Maleficarum`q".
+~
+274 32777 0
+D0
+~
+~
+0 -1 27432
+D2
+~
+~
+0 -1 27431
+D3
+~
+door~
+1 1 27409
+E
+book~
+.--------------------------------.
+|&&&&%%%%%%%%%%-OO-%%%%%%%%%%&&&&|
+|&&.--------------------------.&&|
+|&&|0************************0|&&|
+|%%|****MALLEUS*MALEFICARUM***|%%|
+|%%|**************************|%%|
+|%%|maleficas*&*earum*haeresim|%%|
+|%%|**************************|%%|
+|%%|*ut*phramea*potentissima**|%%|
+|OO|**************************|OO|
+|OO|********conterens.********|OO|
+|%%|********.-------.*********|%%|
+|%%|********|   |   |*********|%%|
+|%%|********|   |   |*********|%%|
+|%%|********| __|__ |*********|%%|
+|%%|********|   |   |*********|%%|
+|%%|********|   |   |*********|%%|
+|%%|********._______.*********|%%|
+|&&|0************************0|&&|
+|&&.--------------------------.&&|
+|&&&&%%%%%%%%%%-OO-%%%%%%%%%%&&&&|
+.--------------------------------.
+~
+S
+#27431
+The detention cell~
+  The rough granite walls feel moist to the touch, and the bunk is
+completely infected with mould. The prison bars are so rusted the door
+almost falls of its own hinges. The air feels extremely damp, and the
+stone floor glistens from the moisture. The room is very cramped, and
+there are several writings on the walls, both scratched into the stone
+as well as written in what would appear to be blood. The atmosphere in
+this room is really quite sickening.
+~
+274 32777 0
+D0
+~
+~
+0 -1 27430
+S
+#27432
+A cramped passageway~
+  An old trolley is parked up against the wall here. This old passageway
+was obviously used to transport the deceased inside for preparation as 
+well as outside for burial. It would also be an ideal entrance for
+dragging in screaming people for interrogation without disturbing the
+rest of the church.
+~
+274 32781 0
+D0
+~
+~
+0 -1 27433
+D2
+~
+~
+0 -1 27430
+S
+#27433
+A cramped passageway~
+  An old trolley is parked up against the wall here. This old passageway
+was obviously used to transport the deceased inside for preparation as 
+well as outside for burial. It would also be an ideal entrance for
+dragging in screaming people for interrogation without disturbing the
+rest of the church. The passageway appears to lead out from the cellar
+and back to the very entrance of the church just south-east of here...
+~
+274 32781 0
+D1
+~
+~
+0 -1 26803
+D2
+~
+~
+0 -1 27432
+S
+#27499
+A temporary name~
+A temporary description
+~
+274 0 0
+S
+#0
+$~

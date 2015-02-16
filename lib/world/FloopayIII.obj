@@ -1,0 +1,1902 @@
+#7801
+bed obervon royal king~
+King Obervon's Royal Bed~
+King Obervon's Royal Bed is lying here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+88 0 0
+M
+~
+~
+~
+~
+#7802
+stove wood~
+A Wood Stove~
+A Wood Stove~
+~
+15 0 0
+2 0 0 0
+1000 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7803
+altar polo fay~
+Altar of Polo Fay~
+Altar of Polo Fay~
+~
+15 0 0
+2 0 0 0
+1000 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7804
+bookshelves book shelves large~
+A large set of bookshelves~
+A large set of bookshelves is here.~
+~
+15 0 0
+2 0 0 0
+1000 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7805
+scroll protection arcane~
+Scroll of Arcane Protection~
+A dusty scroll has been cast aside.~
+~
+2 0 1
+30 1 103 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7806
+throne royal king obervon~
+King Obervon's Throne~
+King Obervon's Throne~
+~
+8 0 0
+0 0 0 0
+1000 10 10
+100
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#7807
+sword royal obervon~
+Obervon Royal Sword~
+A sword of Obervon royalty is lying here.~
+~
+5 0 8193
+0 5 7 3
+10 20000 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 4
+A
+37 5
+#7808
+dagger royal obervon~
+Obervon Royal Dagger~
+A dagger from the Obervon Castle is lying here.~
+~
+5 0 8193
+0 4 8 11
+18 200000 20000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+A
+28 10
+#7809
+mace royal obervon~
+Obervon Royal Mace~
+A mace from Obervon's royal guard is lying here.~
+~
+5 0 8193
+0 5 8 6
+19 400000 40000
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+17 -10
+#7810
+platemail plate mail royal obervon~
+Obervon Royal Platemail~
+A full set of platemail from Obervon royalty is here.~
+~
+9 0 9
+14 -1 -1 -1
+40 100000 20000
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+13 15
+A
+18 2
+#7811
+helmet helm obervon royal~
+Obervon Royal Helmet~
+A helmet from Obervon's royal guard is lying here.~
+~
+9 0 9
+6 -1 -1 -1
+10 10 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 2
+A
+13 15
+A
+52 5
+#7812
+robes royal obervon~
+Obervon Royal Robes~
+A set of robes from Obervon royalty is lying here.~
+~
+9 0 9
+10 -1 -1 -1
+12 80000 20000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+13 20
+A
+12 10
+#7813
+key castle gate~
+Castle Gate Key~
+There is a bit of nothing sitting here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7814
+game ultimate~
+The Ultimate Game~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7815
+story bo page~
+Story of Bo~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7816
+buckler ironwood iron wood~
+Ironwood Buckler~
+An Ironwood Bucker is lying here, waiting to protect someone!~
+~
+9 114356224 513
+22 -1 -1 -1
+15 2000000 200000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 40
+A
+50 5
+B
+8396800
+#7817
+platemail plate mail mount~
+Mount Platemail~
+A set of mount platemail is lying here.~
+~
+9 65536 9
+12 -1 -1 -1
+20 150000 15000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+18 3
+#7818
+horseshoe shoe horse titanium~
+Titanium Horseshoe~
+A titanium horseshoe is lying here.~
+~
+9 65536 65
+10 -1 -1 -1
+1 100000 10000
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+52 10
+A
+18 5
+#7819
+scale dragon black~
+Black Dragon Scale~
+A black dragon scale has been cast aside here.~
+~
+9 516 5
+14 -1 -1 -1
+4 750000 75000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 10
+A
+12 10
+#7820
+rules mounted combat~
+Rules of Mounted Combat~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7821
+handguards blessed hand guards~
+Blessed Handgrips~
+Some blessed handguards are lying on the ground here.~
+~
+9 112259329 129
+10 -1 -1 -1
+4 500000 50000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+A
+47 4
+#7822
+story maximillian page~
+Story of Maximillian~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7823
+guide dragonhandler dragon handler dragonhandlers~
+Dragonhandler's Guide~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7824
+gloves caretaker caretakers care taker takers~
+Caretaker's Gloves~
+A very nice set of gloves is here.~
+~
+0 0 129
+6 -1 -1 -1
+2 20000 5000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 10
+A
+1 2
+#7825
+boots caretaker taker care takers caretakers~
+Caretaker's Boots~
+A nice set of boots is lying here.~
+~
+9 0 65
+8 -1 -1 -1
+4 250000 25000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 10
+A
+2 2
+B
+524288
+#7826
+volume hell earth vol1 volume~
+Hell on Earth vol. 1~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7827
+robe magi fluffypancakes~
+Robe of the Magi~
+A robe of deep arcane power is lying here.~
+~
+9 116420673 9
+10 -1 -1 -1
+12 1500000 175000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 40
+A
+53 5
+B
+16777276
+#7828
+story nimroy page~
+Story of Nimroy~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7829
+ring divinity holy~
+Ring of Divinity~
+A ring of divine power has been cast aside here.~
+~
+9 76590337 3
+0 0 0 0
+1 750000 25000
+20
+X
+~
+1024 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+12 5
+#7830
+beads prayer~
+Prayer Beads~
+A set of prayer beads are here.~
+~
+9 70266880 4485
+4 -1 -1 -1
+1 500000 50000
+20
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+13 10
+A
+53 2
+#7831
+sword biezle archangel arch angel~
+Sword of Biezle~
+An Arch Angels sword is sticking out of the ground here.~
+~
+5 112258305 8193
+21 5 6 14
+31 10000000 150000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+18 2
+A
+36 5
+#7832
+mantle celestial heavenly~
+Celestial Mantle~
+A heavenly mantle is lying here, waiting to be worn.~
+~
+9 112241921 1025
+25 -1 -1 -1
+12 2250000 80000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+52 20
+#7833
+contract devil devils~
+Devil's Contract~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7834
+boots demon demonskin skin~
+Demonskin Boots~
+Some shameful adventurer has discarded a very evil looking set of boots here.~
+~
+9 108064836 65
+15 -1 -1 -1
+2 1250000 200000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+12 25
+#7835
+story sylus page~
+Story of Sylus~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 2000000 250000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7836
+knife feathered throwing~
+Feathered Throwing Knife~
+A feathered throwing knife is on the ground here.~
+~
+7 81838080 16385
+4 4 -1 -1
+1 2000 200
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+38 20
+A
+19 4
+A
+18 4
+#7837
+wand electric electricity~
+Wand of Electricity~
+A wand is lying here, attracting a lot of metal objects.~
+~
+3 82899008 16385
+40 1 1 110
+1 200000 50000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+12 40
+A
+53 1
+#7838
+wand fire flame~
+Wand of Fire~
+A burning wand is lying here.~
+~
+3 82899008 16385
+40 1 1 134
+1 200000 50000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 40
+A
+53 1
+#7839
+gauntlets heavy iron~
+Heavy Iron Gauntlets~
+Some heavy duty plate gauntlets are lying here.~
+~
+9 43032576 129
+15 -1 -1 -1
+10 200000 40500
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+18 3
+#7840
+mastery spellsword spell sword~
+Spellsword Mastery~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+10 10 10
+80
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7841
+wristbands wrist bands commando commandos~
+Commando's Wristbands~
+Some very nice looking wristbands are lying here.~
+~
+9 49344576 4097
+11 -1 -1 -1
+6 750000 85000
+4
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 10
+A
+53 2
+#7842
+story galion page~
+Story of Galion~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7843
+tales north~
+Tales from the North~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7844
+detail eternal king kings~
+Eternal King's Detail~
+A belt belonging to a seemingly immortal king is lying here...~
+~
+9 116449600 2049
+12 -1 -1 -1
+10 800000 50000
+4
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 40
+A
+37 5
+B
+8429584
+#7845
+story faelynx page~
+Story of Faelynx~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7846
+knife well detailed welldetailed~
+A Well Detailed Knife~
+A very well detailed knife is lying here.~
+~
+5 49152 8193
+0 4 7 11
+4 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 7
+A
+18 7
+A
+41 5
+#7847
+jacket chef chefs~
+Chef's Jacket~
+A stainless chef's jacket is on the floor here.~
+~
+9 0 9
+3 -1 -1 -1
+5 250000 30000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+24 2
+A
+41 15
+#7848
+skullcap cap skull cook cooks~
+Cook's Skullcap~
+A cloth skullcap is lying on the ground here.~
+~
+9 0 17
+1 -1 -1 -1
+0 100000 10000
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+41 15
+A
+39 3
+#7849
+crown king kings~
+King's Crown~
+A crown, engraved with the Obervon insignia, is lying here.~
+~
+9 49408 17
+5 -1 -1 -1
+2 1500000 90000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 10
+A
+5 2
+#7850
+sceptre obervon~
+Obervon Sceptre~
+A sceptre of immense value is lying here.~
+~
+1 114344192 65537
+0 0 -1 -1
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+52 17
+A
+17 -15
+#7851
+story polo fay page polofay~
+Story of Polo Fay~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7852
+tiara jewel encrusted~
+Jewel Encrusted Tiara~
+There is a bit of nothing sitting here.~
+~
+9 116551744 17
+2 -1 -1 -1
+1 2500000 15000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+A
+12 30
+A
+14 100
+B
+32780
+#7853
+rings trinity platinum~
+Platinum Trinity Rings~
+Three intertwined rings are lying here.~
+~
+9 116551744 3
+2 -1 -1 -1
+0 4000000 100000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 40
+A
+53 5
+A
+13 20
+#7854
+chaos piece~
+A Piece of Chaos~
+A glinting and shifting piece of the Realm of Chaos is lying here.~
+~
+8 536870912 16385
+0 0 0 0
+5 100 1000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 5
+A
+23 5
+A
+21 5
+#7855
+loop chaos~
+Loop of Chaos~
+There is a bit of nothing sitting here.~
+~
+9 642777088 7
+10 -1 -1 -1
+0 1000000 100000
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+13 100
+A
+52 100
+#7856
+eye enlightened enlighten~
+Eye of the Enlightened~
+An Eye of the Enlightened is lying here.~
+~
+9 108015872 3
+0 0 0 0
+1 2000000 200000
+100
+X
+~
+2560 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+12 40
+A
+53 2
+#7857
+eye stalwart~
+Eye of the Stalwart~
+An Eye of the Stalwart is lying here.~
+~
+9 114344192 3
+4 -1 -1 -1
+1 2000000 200000
+100
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+17 -2
+#7858
+talisman annihilation~
+Talisman of Annihilation~
+A talisman for those who wish to cause destruction, is lying here.~
+~
+9 106975236 5
+12 -1 -1 -1
+1 2000000 200000
+100
+X
+~
+512 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 30
+A
+28 5
+#7859
+talisman salvation~
+Tasliman of Salvation~
+A talisman for those who deserve protection, is lying here.~
+~
+9 114336000 1
+12 -1 -1 -1
+1 2000000 200000
+100
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+A
+13 30
+#7860
+blanket chaos~
+Blanket of Chaos~
+An ever shifting blanket of chaos is lying here.~
+~
+9 578822144 1033
+30 -1 -1 -1
+10 10 10
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 600
+A
+52 200
+A
+18 10
+#7861
+cloak valiant~
+Cloak of the Valiant~
+A cloak of valiant power is lying here.~
+~
+9 41954560 1025
+16 -1 -1 -1
+5 4000000 350000
+100
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+A
+13 50
+#7862
+Cloak of the Villainous~
+Cloak of the Vile~
+A cloak of vile power is lying here.~
+~
+9 41953796 1025
+16 -1 -1 -1
+5 4000000 350000
+100
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+A
+52 15
+#7863
+body indestructible~
+Body of the Indestructible~
+An indestructible body suit is lying here.~
+~
+9 47243264 9
+19 -1 -1 -1
+40 6000000 520000
+100
+X
+~
+3072 0 0
+M
+~
+~
+~
+~
+A
+13 100
+A
+18 3
+A
+52 30
+#7864
+suit unstoppable~
+Suit of the Unstoppable~
+A suit of unstoppable power is lying here.~
+~
+9 111177732 9
+8 -1 -1 -1
+12 5000000 450000
+100
+X
+~
+3072 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+53 1
+#7865
+robe miraculous~
+Robe of the Miraculous~
+A robe of miraculous power is lying here.~
+~
+9 116437248 9
+12 -1 -1 -1
+10 5000000 500000
+100
+X
+~
+2560 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 40
+A
+53 10
+#7866
+cast chaos~
+Cast of Chaos~
+An ever changing cast is lying here.~
+~
+9 606114116 289
+25 -1 -1 -1
+0 800000 800000
+60
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+18 8
+A
+13 100
+#7867
+bracers supremacy~
+Bracers of Supremacy~
+Some bracers of supreme power are lying here.~
+~
+9 73453636 257
+13 -1 -1 -1
+10 10 10
+100
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 -2
+A
+39 5
+#7868
+bracers conservation~
+Bracers of Conservation~
+A very humble set of bracers is lying here.~
+~
+9 112243008 257
+13 -1 -1 -1
+2 3000000 250000
+100
+X
+~
+2048 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 20
+A
+53 4
+#7869
+trousers luxury~
+Trousers of Luxury~
+A set of luxurious trousers are lying here.~
+~
+9 748745024 33
+12 -1 -1 -1
+6 2500000 225000
+100
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 3
+A
+53 2
+#7870
+pants diligence~
+Pants of Diligence~
+Some very nice pants are lying here.~
+~
+9 644911424 33
+14 -1 -1 -1
+6 2500000 235000
+100
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+A
+13 10
+B
+16
+#7871
+Creation creation sword longsword long~
+Creation~
+A longsword is stuck in the ground, emitting a wonderful aura.~
+~
+5 671154531 8193
+0 1 200 14
+30 5000000 400000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -50
+A
+52 200
+A
+13 500
+B
+142878848
+#7872
+Destruction destruction axe~
+Destruction~
+There is an axe stuck in the ground here, emitting an aura of disaster and mayhem.~
+~
+5 671154551 8193
+8 1 400 13
+30 5000000 400000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 10
+A
+18 10
+A
+47 20
+B
+805306368
+C
+9
+#7873
+hide tarrasque tarrasques~
+Tarrasque's Hide~
+The indestructible hide of the Tarrasque is here.~
+~
+9 114343936 9
+22 -1 -1 -1
+45 5000000 500000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 25
+A
+52 10
+#7874
+flesh pile amorphous~
+Amorphous Pile of Flesh~
+A pile of flesh is here, rotting away.~
+~
+9 134742352 8185
+30 -1 -1 -1
+15 0 0
+100
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+13 30
+A
+52 15
+A
+14 100
+T
+200
+#7875
+eye tarrasque~
+Eye of the Tarrasque~
+A grotesque eyeball lies on the ground here.~
+~
+9 205570384 16389
+11 -1 -1 -1
+4 8000000 237000
+70
+X
+~
+516 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+13 40
+A
+52 17
+T
+1440
+#7876
+tooth tarrasque~
+Tooth of the Tarrasque~
+A giant tooth of some abomination is lying here.~
+~
+5 205570388 8193
+69 9 4 10
+30 2000000 320000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 4
+A
+17 -10
+#7877
+corpse adventurer unfortunate~
+The corpse of some unfortunate adventurer~
+The corpse of some unfortunate adventurer is lying here.~
+~
+15 0 0
+10 0 0 1
+89 0 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7878
+recipe disaster~
+A recipe for disaster~
+There is a bit of nothing sitting here.~
+~
+32 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7879
+Scarillious scarillious descendant~
+Descendant of Scarillious~
+A miniature giant hamster is scurrying about here.~
+~
+9 250667266 16385
+5 -1 -1 -1
+1 1800000 250000
+100
+X
+~
+0 1024 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 4
+A
+50 6
+B
+1081376
+#7880
+bridle divine retribution~
+Bridle of Divine Retribution~
+A bridle of divine and unmatched strength has been cast aside here.~
+~
+9 246477057 2049
+12 -1 -1 -1
+8 1500000 200000
+100
+X
+~
+0 8192 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+47 4
+A
+53 8
+#7881
+crown undead kings~
+Crown of Undead Kings~
+A crown of ancient, and mysterious power lies here.~
+~
+9 250638417 17
+10 -1 -1 -1
+2 1250000 250000
+100
+X
+~
+0 1 0
+M
+~
+~
+~
+~
+A
+19 0
+A
+53 0
+A
+12 0
+#7882
+wings demon lord~
+Wings of the Demon Lord~
+A bloody pair of wings, torn from the back of some poor adventurer, lie here.~
+~
+9 242282580 257
+14 -1 -1 -1
+1 900000 175000
+100
+X
+~
+0 16384 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+53 2
+B
+25198612
+#7883
+cape grand legionnaire~
+Grand Cape of the Legionnaire~
+A cape of magnificent design has been lain here.~
+~
+9 183562304 5
+20 -1 -1 -1
+35 600000 200000
+100
+X
+~
+0 524288 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 2
+A
+53 3
+B
+16777256
+#7884
+spear gae bolg~
+The Gae Bolg~
+A spear of legend lies here.~
+~
+26 250667331 8193
+304 8 6 5
+30 10000000 125000
+100
+X
+~
+0 128 0
+M
+~
+~
+~
+~
+A
+36 10
+A
+18 8
+A
+19 8
+B
+8396800
+C
+9
+#7885
+shell piece tarrasque cracked~
+Cracked Tarrasques Shell~
+A cracked piece of shell is lying on the floor here.~
+~
+9 177266775 513
+22 -1 -1 -1
+35 9000000 400000
+40
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+13 50
+A
+52 25
+A
+24 4
+#7886
+fibrocyte large piece reptilian~
+Fibrocyte Handwraps~
+A large piece of reptilian fibrocyte is lying here.~
+~
+9 239108436 129
+9 -1 -1 -1
+4 1500000 150000
+20
+X
+~
+2048 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 2
+A
+13 32
+#7887
+vial tarrasques tarrasque blood~
+A vial of the Tarrasque's blood~
+A vial of thick red liquid is lying here.~
+~
+10 0 1
+50 242 216 39
+2 500000 20000
+80
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7888
+shroud deathless indominable~
+Deathless Shroud~
+A shroud made for the indominable is lying here.~
+~
+9 168837462 1033
+21 -1 -1 -1
+15 3000000 400000
+100
+X
+~
+0 434178 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 3
+A
+13 30
+#0
+$~

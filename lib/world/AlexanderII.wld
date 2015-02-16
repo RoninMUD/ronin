@@ -1,0 +1,993 @@
+#1500
+Inside the Terror Toad~
+  You have been swallowed by the toad and find yourself inside it. Green slime
+stick to the inside of the rib cage and a rib sticks out of the wall of flesh
+to attack you!
+~
+15 9 0
+S
+#1501
+The narrow trail through the Decaying forest~
+  The trees here have less leaves, and the ones still on the branches are getting             
+thinner and darker as you move further along the path. A large tower rise over               
+the tree tops in the east. You feel movement around you in the forest.
+~
+15 0 3
+D1
+~
+~
+0 -1 1502
+S
+#1502
+The narrow trail through the Decaying forest~
+  Only a few leaves cling to the branches and long thorns have replaced the 
+fallen ones. The path is overgrown and you have to duck every now and then to 
+avoid the sharp pointed branches. Above you can see nothing but a dark sky. 
+As you look into the deep forest you see movement and hear rustle in the trees.
+~
+15 0 3
+D1
+~
+~
+0 -1 1503
+D3
+~
+~
+0 -1 1501
+S
+#1503
+End of the path through the Decaying forest~
+  The path is so narrow here that there is only room for you. You have to crawl 
+on your knees to keep away from the branches, and the soil have an untasteful 
+smell. Only small openings in the wall of branches look able to crawl through.
+~
+15 0 3
+D0
+~
+branches~
+9 -1 1508
+D1
+~
+branches~
+9 -1 1504
+D3
+~
+~
+0 -1 1502
+S
+#1504
+Before The Midnight Tower~
+  You crawl through the branches and emerge into a clearing in the forest. Before
+you a tower black as night raise hundreds of feet into the air. Stairs lead up
+to enormous gates. As you look at the stairs it looks at if they are made of 
+different shapes, but can't make out what they are. The clearing continues to 
+the south along the wall of the tower.
+~
+15 0 2
+D1
+~
+~
+0 -1 1507
+D2
+~
+~
+0 -1 1505
+D3
+~
+branches~
+9 -1 1503
+S
+#1505
+Outside the tower~
+  The forest makes a wall around the clearing and leads right up to the wall of 
+the tower that are covered with thorn-filled vines. You can see no way to 
+continue and the only exit is back to the north.
+~
+15 0 2
+D0
+~
+~
+0 -1 1504
+D1
+~
+vines~
+8 -1 1506
+S
+#1506
+In the vines~
+  This small opening behind the vines is just big enough for one person to be 
+in. Vines cover everything but a small section of the tower wall. You can hear
+sounds from the other side of the stone.
+~
+15 257 3
+D0
+~
+wall~
+8 -1 1515
+D3
+~
+vines~
+8 -1 1505
+S
+#1507
+The tower steps~
+  Looking down at the steps you see that they are made of human sculptures, 
+of bodied twisted in pain and agony. You hope these bodies and sculpted of
+stone and not of petrified humans. They look almost too realistic to be hand 
+made. The big gates are too big for any human to push open. You'd better find
+another way into the tower, or even better, leave this place.
+~
+15 0 2
+D3
+~
+~
+0 -1 1504
+S
+#1508
+The decaying forest~
+  There is almost no room to move here. All around you branches threaten to
+brush you with the sharp thorns. The only exits are small openings in the 
+branches to the north and the south.
+~
+15 2305 3
+D0
+~
+branches~
+9 -1 1509
+D2
+~
+branches~
+9 -1 1503
+S
+#1509
+Quicksand~
+  Your feet get stuck in the quicksand and you pull your boots off while 
+struggling to keep from sinking. There is quicksand everywhere, and all around 
+the quicksand, the decaying forest makes an impenetrable wall trapping you here.
+~
+15 131072 3
+D0
+~
+~
+0 -1 1513
+D1
+~
+~
+0 -1 1510
+D2
+~
+branches~
+9 -1 1508
+D3
+~
+~
+0 -1 1511
+S
+#1510
+Quicksand~
+  Your feet get stuck in the quicksand and you pull your boots off while 
+struggling to keep from sinking. There is quicksand everywhere, and all around 
+the quicksand, the decaying forest makes an impenetrable wall trapping you here.
+~
+15 131072 3
+D0
+~
+~
+0 -1 1514
+D3
+~
+~
+0 -1 1509
+S
+#1511
+Quicksand~
+  Your feet get stuck in the quicksand and you pull your boots off while 
+struggling to keep from sinking. There is quicksand everywhere, and all around 
+the quicksand, the decaying forest makes an impenetrable wall trapping you here.
+~
+15 131072 3
+D0
+~
+~
+0 -1 1512
+D1
+~
+~
+0 -1 1509
+S
+#1512
+Quicksand~
+  Your feet get stuck in the quicksand and you pull your boots off while 
+struggling to keep from sinking. There is quicksand everywhere, and all around 
+the quicksand, the decaying forest makes an impenetrable wall trapping you here.
+~
+15 131072 3
+D1
+~
+~
+0 -1 1513
+D2
+~
+~
+0 -1 1511
+S
+#1513
+Buried in quicksand~
+  Your struggles can keep you up no longer. You scream in terror as you sink 
+into the belly of the mound. After a few moments you drop into a pocket of air.
+Somehow this pocket is inside the quicksand and does not get filled with sand.
+The air is fresh but you can see no way to escape this place.
+~
+15 1074823308 8
+S
+#1514
+Quicksand~
+  Your feet get stuck in the quicksand and you pull your boots off while 
+struggling to keep from sinking. There is quicksand everywhere, and all around 
+the quicksand, the decaying forest makes an impenetrable wall trapping you here.
+~
+15 131072 3
+D2
+~
+~
+0 -1 1510
+D3
+~
+~
+0 -1 1513
+S
+#1515
+Inside the tower~
+  You are in a large entrance chamber. The massive gates to the tower are to the 
+east, blood and claw marks staining the wooden panels. Someone must have used 
+their nail to try to claw their way out of here. As you look to the floor in
+front of the gates you see that many have tried this unsuccessfully. 
+  In the ceiling a huge dragon is painted in thick white stripes, making it look
+like its made from bones. A passageway leads to the east.
+~
+15 0 0
+D1
+~
+~
+0 -1 1516
+D2
+~
+wall~
+8 -1 1506
+S
+#1516
+A passageway~
+  The passageway leads form the entrance hall to the west to a smaller chamber 
+to the east. The passage is dimly lit, but grows lighter as you approach the end.
+The walls arches up painted with white stripes joined by a wide white stripe 
+going from chamber to chamber, making the passage look like the inside of a 
+ribcage.
+~
+15 0 0
+D1
+~
+~
+0 -1 1517
+D3
+~
+~
+0 -1 1515
+S
+#1517
+The room of shadows~
+  Four large statues stand in each corner of the chamber with torches burning
+with a white flickering flame behind each one. The long shadows from the statues
+stretch towards each other and meets at the center of the floor. You see human 
+bones in the shadows and you feel an itch between your shoulder blades as if 
+someone watching you.
+  At the end of the chamber a bone staircase lead up to the floor above.
+~
+15 1073774592 0
+D3
+~
+~
+0 -1 1516
+D4
+~
+~
+0 -1 1518
+S
+#1518
+Dead forest~
+  The staircase leads up in to a forest of dead trees. All signs of the tower 
+is gone. The forest stretches on without end. The sky above is dark with 
+thunderclouds, trees are all around you and there is no sign of the tower wall 
+anywhere. The forest floor is covered with dead leaves and patches of dying
+flowers.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1519
+D1
+~
+~
+0 -1 1520
+D2
+~
+~
+0 -1 1521
+D3
+~
+~
+0 -1 1522
+D5
+~
+~
+0 -1 1517
+S
+#1519
+Dead forest~
+  The forest stretches on without end. The sky above is dark with thunderclouds, 
+trees are all around you and there is no sign of the tower wall anywhere. The 
+forest floor is covered with dead leaves and patches of dying flowers.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1521
+D1
+~
+~
+0 -1 1523
+D2
+~
+~
+0 -1 1518
+D3
+~
+~
+0 -1 1520
+S
+#1520
+Dead forest~
+  The forest stretches on without end. The sky above is dark with thunderclouds, 
+trees are all around you and there is no sign of the tower wall anywhere. The 
+forest floor is covered with dead leaves and patches of dying flowers.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1523
+D1
+~
+~
+0 -1 1521
+D2
+~
+~
+0 -1 1522
+D3
+~
+~
+0 -1 1518
+S
+#1521
+Dead forest~
+  The forest stretches on without end. The sky above is dark with thunderclouds, 
+trees are all around you and there is no sign of the tower wall anywhere. The 
+forest floor is covered with dead leaves and patches of dying flowers.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1518
+D1
+~
+~
+0 -1 1522
+D2
+~
+~
+0 -1 1519
+D3
+~
+~
+0 -1 1522
+S
+#1522
+Dead forest~
+  The forest stretches on without end. The sky above is dark with thunderclouds, 
+trees are all around you and there is no sign of the tower wall anywhere. The 
+forest floor is covered with dead leaves and patches of dying flowers.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1520
+D1
+~
+~
+0 -1 1518
+D2
+~
+~
+0 -1 1521
+D3
+~
+~
+0 -1 1520
+S
+#1523
+Dead forest~
+  The forest stretches on without end. The sky above is dark with thunderclouds, 
+trees are all around you and there is no sign of the tower wall anywhere. The 
+forest floor is covered with dead leaves and patches of dying flowers.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1519
+D1
+~
+~
+0 -1 1522
+D2
+~
+~
+0 -1 1524
+D3
+~
+~
+0 -1 1519
+S
+#1524
+Dead forest~
+  The forest stretches on without end. The sky above is dark with thunderclouds, 
+trees are all around you and there is no sign of the tower wall anywhere. The 
+forest floor is covered with dead leaves and patches of dying flowers.
+~
+15 0 0
+D1
+~
+~
+0 -1 1525
+S
+#1525
+Clearing in the dead forest~
+  You enter a clearing in the dead forest. Knee-high yellow and brown grass 
+cover the ground and in the middle of the clearing a huge dead oak loom, its
+branches gnarled and old. On the other side of the clearing an opening in the
+forest opens up to a cave. Could all this be inside the tower?
+~
+15 1073774592 0
+D1
+~
+~
+0 -1 1526
+D3
+~
+~
+0 -1 1524
+S
+#1526
+Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1527
+D3
+~
+~
+0 -1 1525
+S
+#1527
+Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+~
+15 1073774592 0
+D1
+~
+~
+0 -1 1528
+D2
+~
+~
+0 -1 1526
+S
+#1528
+Intersection in the Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+  The cave splits off in all directions and each cave looks the same.
+~
+15 512 0
+D0
+~
+~
+0 -1 1529
+D1
+~
+~
+0 -1 1533
+D2
+~
+~
+0 -1 1531
+D3
+~
+~
+0 -1 1527
+S
+#1529
+Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1530
+D2
+~
+~
+0 -1 1528
+S
+#1530
+Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1535
+D2
+~
+~
+0 -1 1529
+S
+#1531
+Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1528
+D2
+~
+~
+0 -1 1532
+S
+#1532
+Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1531
+D1
+~
+~
+0 -1 1537
+S
+#1533
+Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+~
+15 1073774592 0
+D1
+~
+~
+0 -1 1534
+D3
+~
+~
+0 -1 1528
+S
+#1534
+Skull cave~
+  The cave is dark and full of damp air. The walls are made of skulls of all
+kinds animals, and you even see human skulls among them. Greenish fumes pour out
+of the some skulls nostrils covering the floor completely. You'd better
+watch where you put your feet.
+~
+15 1073774592 0
+D1
+~
+~
+0 -1 1536
+D3
+~
+~
+0 -1 1533
+S
+#1535
+Wet room~
+  The cave opens up to a large dome, still covered with skulls. The air here is 
+so damp that you find it hard to breathe. A round pond covers most of the floor,
+with skulls lining the edge. Gigantic rotted Lilly pads float in the dark green 
+water. Something moves in the pond leaving ripples on the water surface.
+~
+15 1073774592 0
+D2
+~
+~
+0 -1 1530
+S
+#1536
+Vipers nest~
+  The cave opens up to a large dome, still covered with skulls. A high pile of 
+dry bones is lying in the center of the room and you can hear hissing sounds
+from within. Around the pile dosens of stone statues stand with arms held high
+in protection of who knows what.
+~
+15 1073774592 0
+D3
+~
+~
+0 -1 1534
+S
+#1537
+Carpenters Workshop~
+  You enter a room fully covered in dark wooden boards. Corpses hang from 
+leg-sized spikes on the wall, dried blood in pools on the floor. The 
+blood-splatter on the walls indicate that the victims were alive when they
+were put there. On a table in the center of the room, human bodies are strapped
+to the tabletop.
+~
+15 1073774592 0
+D2
+~
+~
+0 -1 1538
+D3
+~
+~
+0 -1 1532
+S
+#1538
+Icy cave~
+  The cave leading out of the horrors in the workshop is a bit chilly
+and a draft is coming from the cave ahead. The cave walls are covered with
+a thick layer of ice. The cave floor is slippery and ahead the cave slopes
+downwards.
+~
+15 512 0
+D0
+~
+~
+0 -1 1537
+D2
+~
+~
+0 -1 1539
+S
+#1539
+Icy cave~
+  The cave sloped heavily downwards and you loose your foothold, sliding down
+do the base of the slope. There is no way to get back where you came from. The 
+only way to proceed is the opening into an immense cave to the east.
+~
+15 1073774592 0
+D1
+~
+~
+0 -1 1540
+S
+#1540
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1541
+D1
+~
+~
+0 -1 1543
+D2
+~
+~
+0 -1 1546
+D3
+~
+~
+0 -1 1539
+S
+#1541
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D1
+~
+~
+0 -1 1542
+D2
+~
+~
+0 -1 1540
+S
+#1542
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D1
+~
+~
+0 -1 1544
+D2
+~
+~
+0 -1 1543
+D3
+~
+~
+0 -1 1541
+S
+#1543
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1542
+D1
+~
+~
+0 -1 1545
+D2
+~
+~
+0 -1 1547
+D3
+~
+~
+0 -1 1540
+S
+#1544
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D1
+~
+ice~
+2 -1 1549
+D2
+~
+~
+0 -1 1545
+D3
+~
+~
+0 -1 1542
+S
+#1545
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1544
+D2
+~
+~
+0 -1 1548
+D3
+~
+~
+0 -1 1543
+S
+#1546
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1540
+D1
+~
+~
+0 -1 1547
+S
+#1547
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1543
+D1
+~
+~
+0 -1 1548
+D3
+~
+~
+0 -1 1546
+S
+#1548
+Frozen cavern~
+  The cavern looks like the inside of an igloo, with snow white walls and a 
+dome above. Icicles hang down from the ceiling threateningly. The ice seems 
+to be of different thickness. Somewhere you see humans and animals frozen
+in the ice, and other places the ice crack menacingly under your feet. You 
+don't feel safe here.
+~
+15 1073774592 0
+D0
+~
+~
+0 -1 1545
+D3
+~
+~
+0 -1 1547
+S
+#1549
+Bottom of the shaft~
+  You are at the base of an enormous shaft reaching up into the blackness above.
+The walls around you are made of piled bones and there is no other exits than 
+the way you entered and a rope hanging down from the darkness.
+~
+15 512 0
+D3
+~
+ice~
+2 -1 1544
+D4
+~
+~
+0 -1 1550
+S
+#1550
+Hanging in the rope~
+  You hang from the rope in complete darkness. Your light illuminates the bone 
+walls and a little of the rope under and above you.
+~
+15 1073774592 0
+D4
+~
+~
+0 -1 1551
+D5
+~
+~
+0 -1 1549
+S
+#1551
+Hanging in the rope~
+  You hang from the rope in complete darkness. Your light illuminates the bone 
+walls and a little of the rope under and above you.
+~
+15 1073774592 0
+D4
+~
+~
+0 -1 1552
+D5
+~
+~
+0 -1 1550
+S
+#1552
+Bone Chamber~
+  You climb up the rest of the way and enter through trapdoor which snaps shut 
+after you let go of it. You can se no handle to open it from this side. As you 
+realize you can't go back you take in your surroundings and terror fills you.
+  You have entered the lair of the Bone Dragon. It's nest, a pile of bones in 
+the center of the grand hall. Or is it the roof? You can see no walls or 
+ceiling, but no stars of clouds either. Just endless blackness all around. 
+There is no place to hide and or flee to. You prepare yourself to fight 
+your terror.
+~
+15 32768 0
+S
+#1553
+Hole in the ice~
+  You fall down in a hole in the ice hurting yourself on the sharp edges. You
+lie stunned for a while before you're able to get to your feet. It seems 
+possible to climb out of here, but you will cut your hands while doing it.
+~
+15 1073741824 0
+D4
+~
+ice~
+11 -1 1541
+S
+#1554
+On the table~
+  You find yourself straped down to the workbanch, unable to move. The Carpenter 
+was in a hurry tying you down and with time you should be able to get loose.
+You'd better do it before his hammer crushes your limbs as well.
+~
+15 1074823168 0
+D5
+~
+~
+0 -1 1537
+S
+#1599
+A temporary name~
+A temporary description
+~
+15 512 0
+S
+#0
+$~

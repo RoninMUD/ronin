@@ -1,0 +1,762 @@
+#28400
+Path in a dense forest.~
+You are in the forest, surrounded by tall trees and heavy undergrowth.
+The trees cover almost the whole area above you, blocking nearly all 
+the light to the ground level.  As you examine the area more carefully 
+you notice that an old path continues south.
+~
+284 0 0
+D2
+~
+~
+0 -1 28401
+S
+#28401
+Path in a dense forest.~
+You are in the forest, surrounded by tall trees and heavy undergrowth.
+The trees cover almost the whole area above you, blocking nearly all 
+the light to the ground level.  The path extends to the north and in the
+south you notice a faint light. 
+~
+284 0 0
+D0
+~
+~
+0 -1 28400
+D2
+~
+~
+0 -1 28402
+S
+#28402
+Foot of the mountain.~
+The faint trail ends abruptly and an enormous wall of rock prevents movement 
+further south.  The side of the mountain is cold to the touch and is full of 
+tiny cracks a few inches deep. You begin to wonder why the trail has led you 
+to this dead-end where the only way to go is to return.  As you look up the 
+mountain you realize that a strong person might be able to climb up the wall,
+but how far? The mountain rises up beyond your view and the thought of 
+climbing sends a chill up your spine.
+~
+284 0 0
+D0
+~
+~
+0 -1 28401
+D4
+~
+mountain~
+11 -1 28403
+S
+#28403
+Climbing a mountain.~
+The winds buffet you as you climb up the face of the mountain. Below you lies 
+the forest you wish you would still be in, extending far to the north.  The 
+muscle ache slowly builds up to an agonising pain as you hold on to whatever
+is at your reach.  Looking down you realize that an attempt to descend would 
+be nothing less than suicide and the anguish caused by the muscle pain forces
+you to concentrate on the top of the mountain, which still seems too far for
+comfort.
+~
+284 0 0
+D4
+~
+mountain~
+11 -1 28404
+S
+#28404
+A small ledge.~
+You thank the gods for this heavenly resting place where you can ease your
+inflamed muscles. The view from this place is magnificent and the 
+fresh mountain air fills your lungs.  Looking up you can see what looks
+like another ledge or perhaps the top of the mountain, but from this angle
+you cannot be sure.
+~
+284 0 0
+D4
+~
+mountain~
+11 -1 28405
+S
+#28405
+A ledge.~
+You are standing on the edge of the mountain bewildered by the fantastic view
+you have over the lands far below. The barren landscape does not allow for any
+cover from the high winds that buffet you constantly and an occasional gust
+of wind gets you off balance. The walls rise even higher from this point, but 
+you cannot find any place where you could grip the smooth surface. The piercing cry of the wind between the mountain peaks deafens your hearing.  A path leads 
+to the south.
+~
+284 0 0
+D2
+~
+~
+0 -1 28406
+S
+#28406
+Path in the mountain.~
+You are walking between bands of white rock exposed from the earth by wind,
+rain and time.  The glacier begins here from between the rock walls of the 
+mountain.  You have to use almost all of your concentration in order to
+keep your balance on the smooth ice surface, whice extends to the south as 
+far as you can see.  A tight passage leads north.
+~
+284 0 0
+D0
+~
+~
+0 -1 28405
+D2
+~
+~
+0 -1 28407
+S
+#28407
+`oThe Glacier.~
+The glacier widens up here extending to the east and west as well as to the 
+south, but you are unable to see what lies ahead due to the intense brightness
+of the light reflected by the crystalline surface.  A strong southernly wind 
+howels between the mountains and occasionally gets you off your balance and
+the cold air begins to numben your limbs as you look around.
+~
+284 0 0
+D0
+~
+~
+0 -1 28406
+D1
+~
+~
+0 -1 28408
+D2
+~
+~
+0 -1 28413
+D3
+~
+~
+0 -1 28409
+S
+#28408
+`oThe Glacier.~
+This is the north-eastern corner of the glacier.  The high mountain range
+blocks all movement to the north and east.  The glacier slopes gently to
+the south.  You are unable to see what lies ahead due to the intense brightness
+of the light reflected by the crystalline surface.  A strong southernly wind
+howels between the mountains and occasionally gets you off your balance and
+the cold air begins to numben your limbs as you look around.
+~
+284 0 0
+D2
+~
+~
+0 -1 28414
+D3
+~
+~
+0 -1 28407
+S
+#28409
+`oThe Glacier.~
+Small cracks on the surface of the glacier grap your attention as you look 
+around, too small for a man to fall into, but you cannot help but wonder
+if there are deep crevices hidden by the occasional snow carpets.  The 
+glacier continues east, south and west. The mountains block movement to 
+the north.  A strong southernly wind howels between the mountains and 
+occasionally gets you off your balance and the cold air begins to numben
+your limbs.
+~
+284 0 0
+D1
+~
+~
+0 -1 28407
+D2
+~
+~
+0 -1 28412
+D3
+~
+~
+0 -1 28410
+S
+#28410
+`oThe Glacier~
+You have reached the north-western corner of the glacier. The glacier slopes 
+gently to the south. The mountains block movement to the north and west.
+Small cracks on the surface of the glacier grap your attention as you look 
+around, too small for a man to fall into, but you cannot help but wonder
+if there are deep crevices hidden by the occasional snow carpets.  Apart from 
+the wind you can hear nothing and you begin to wish that you were in a warmer
+climate.
+~
+284 0 0
+D1
+~
+~
+0 -1 28409
+D2
+~
+~
+0 -1 28411
+S
+#28411
+`oThe Glacier.~
+Here the glacier is covered by a thin sheet of snow drifting on the surface,
+builidng small snowdrifts from place to place.  The glacier extends to the 
+north, east and south from here, but the reflection of bright light off the 
+ice prevents you from seeing very far.  You must constantly keep moving to
+keep warm.
+~
+284 0 0
+D0
+~
+~
+0 -1 28410
+D1
+~
+~
+0 -1 28412
+D2
+~
+~
+0 -1 28418
+S
+#28412
+`oThe Glacier.~
+As you look around you notice a few remains of a corpse half-frozen into 
+the glacier with what looks like a human hand frozen near the surface of 
+the ice.  The wind is shifting the snow around the surface, building an 
+unpassable snow bankment to the south. Apart from the wind you hear nothing
+and the driving cold penetrates every last inch of your body forcing you to
+move constantly.
+~
+284 0 0
+D0
+~
+~
+0 -1 28409
+D1
+~
+~
+0 -1 28413
+D3
+~
+~
+0 -1 28411
+S
+#28413
+`oThe Glacier.~
+The cold, dark grey surface of the glacier continues east, west and north
+from here. In the distance further east and west you can see the snow-capped 
+peaks of the surrounding mountains. The wind is shifting the snow around the 
+surface, building an unpassable snow bankment to the south. Apart from the 
+wind you hear nothing and the driving cold penetrates every last inch of your 
+body forcing you to move constantly.
+~
+284 0 0
+D0
+~
+~
+0 -1 28407
+D1
+~
+~
+0 -1 28414
+D3
+~
+~
+0 -1 28412
+S
+#28414
+`oThe Glacier.~
+Here the glacier is covered by a thin sheet of snow drifting on the surface,
+builidng small snowdrifts from place to place.  The glacier extends to the 
+north, west and south from here, but the reflection of bright light off the 
+ice prevents you from seeing very far.  You must constantly keep moving to
+keep warm.
+~
+284 0 0
+D0
+~
+~
+0 -1 28408
+D2
+~
+~
+0 -1 28415
+D3
+~
+~
+0 -1 28413
+S
+#28415
+`oThe Glacier.~
+The coldness chills you down to your bones as you stand on the glacier. the 
+icy surface continues to the north, west and south from here. To the east
+you notice a small opening into a cave.  Maeby you should seek cover from the 
+blowing gail and regain your energy inside the cave.
+~
+284 0 0
+D0
+~
+~
+0 -1 28414
+D1
+~
+~
+0 -1 28423
+D2
+~
+~
+0 -1 28422
+D3
+~
+~
+0 -1 28416
+S
+#28416
+`oThe Glacier.~
+The cold, dark grey surface of the glacier continues east, west and south
+from here. In the distance further east and west you can see the snow-capped 
+peaks of the surrounding mountains. The wind is shifting the snow around the 
+surface, building an unpassable snow bankment to the north. Apart from the 
+wind you hear nothing and the driving cold penetrates every last inch of your 
+body forcing you to move constantly.
+~
+284 0 0
+D1
+~
+~
+0 -1 28415
+D2
+~
+~
+0 -1 28421
+D3
+~
+~
+0 -1 28417
+S
+#28417
+`oThe Glacier.~
+The cold, dark grey surface of the glacier continues east, west and south
+from here. The wind is shifting the snow around the surface, building an 
+unpassable snow bankment to the north. Apart from the wind you hear nothing 
+and the driving cold penetrates every last inch of your body forcing you to
+move constantly.
+~
+284 0 0
+D1
+~
+~
+0 -1 28416
+D2
+~
+~
+0 -1 28420
+D3
+~
+~
+0 -1 28418
+S
+#28418
+`oThe Glacier.~
+Here the glacier is covered by a thin sheet of snow drifting on the surface,
+builidng small snowdrifts from place to place.  The glacier extends to the 
+north, east and south from here, but the reflection of bright light off the 
+ice prevents you from seeing very far.  You must constantly keep moving to
+keep warm.
+~
+284 0 0
+D0
+~
+~
+0 -1 28411
+D1
+~
+~
+0 -1 28417
+D2
+~
+~
+0 -1 28419
+S
+#28419
+`oThe Glacier.~
+The glacier continues further on to the south on the other
+side of a deep ravine.  Your movement causes some snow to 
+fall off the edge and the slippey surface makes you struggle
+for grip, which is not helped by the growing winds that batter
+you.  Attempting to jump over the ravine over to the other 
+side would almost certanly cause you to plummet into the
+depths.  The edge of the ravine continues to the east and the
+mountain range covers the west.
+~
+284 0 0
+D0
+~
+~
+0 -1 28418
+D1
+~
+~
+0 -1 28420
+D5
+~
+nothing~
+10 -1 28427
+S
+#28420
+`oThe Glacier.~
+The glacier extends far into the north, east and west here. 
+To the south, however, lies a deep ravine.  On the surface, 
+very close to the edge are faint long scratches almost covered
+by the drifting snow. The glacier seems to extend further 
+south behind the ravine, but no bridge of any kind is in sight.  
+The strong southern wind brushes your back, pushing you forward
+towards the edge.
+~
+284 0 0
+D0
+~
+~
+0 -1 28417
+D1
+~
+~
+0 -1 28421
+D2
+~
+~
+0 -1 28428
+D3
+~
+~
+0 -1 28419
+E
+scratches~
+Wiping away the covering snow reveals eight parallel scratches on
+the ice surface. The long scratches get deeper towards the edge
+and as you look closer you can see what looks like frozen blood in 
+the grooves.
+~
+E
+scratches~
+Wiping away the covering snow reveals eight parallel 
+scratches on the ice surface. The long scratches get deeper
+towards the edge and as you look closer you can see what 
+looks like frozen blood in the grooves.
+~
+S
+#28421
+`oThe Glacier.~
+The glacier continues further on to the south on the other
+side of a deep ravine.  Your movement causes some snow to 
+fall off the edge and the slippey surface makes you struggle
+for grip, which is not helped by the growing winds that batter
+you.  Attempting to jump over the ravine over to the other 
+side would almost certanly cause you to plummet into the
+depths.  The edge of the ravine continues to the east and 
+west.
+~
+284 0 0
+D0
+~
+~
+0 -1 28416
+D1
+~
+~
+0 -1 28422
+D3
+~
+~
+0 -1 28420
+D5
+~
+~
+0 -1 28427
+S
+#28422
+`oThe Glacier.~
+The eastern edge of the glacier ends suddenly. A high ragged 
+mountain rises to the east and a deep ravine is to the south.
+Your movement causes some snow to fall off the edge and the
+slippey surface makes you struggle for grip, which is not helped
+by the growing winds that batter you constantly.  Only a suicidal
+human would attempt to jump across the ravine. 
+The edge of the ravine continues to the west and the bulk of the 
+glacier lies to the north.
+~
+284 0 0
+D0
+~
+~
+0 -1 28415
+D3
+~
+~
+0 -1 28421
+D5
+~
+~
+0 -1 28427
+S
+#28423
+A Dark Cavern.~
+You stand within the cavern entrance. The rough floor is 
+covered by a layer of snow that is blown in from the glacier
+to the west. The sharp whistling of the wind echoing 
+throughout the cave fills your ears as you look around. The 
+cold cavern walls lean inward increasingly as they rise, 
+forming a vault.The light draws away to the east into the 
+depths of the cave.
+~
+284 0 0
+D1
+~
+~
+0 -1 28424
+D3
+~
+~
+0 -1 28415
+S
+#28424
+A turn in the Cavern.~
+The cave turns north here and slopes gently downwards.  To the
+east you can see the entrance of the cavern.  A soft shaft of
+light in the centre of the cavern lights the cave slightly,
+forming large blurred shadows on the walls. The sound of the
+wind from outside grows softer now and is getting replaced by
+the sound of dripping water. 
+~
+284 0 0
+D0
+~
+~
+0 -1 28425
+D3
+~
+~
+0 -1 28423
+S
+#28425
+A turn in the Cavern.~
+You can hear a small stream of water running down the northern
+wall, but the darkness prevents you from getting a better look.
+The cavern slopes slightly upwards to the south here the other 
+end continuing east.  The floor is covered by a thin layer of 
+filth and a smell of burnt flesh drifts in from the east. Faint
+outlines of feet, large and small, can be made out on the dirty
+floor.
+~
+284 0 0
+D1
+~
+~
+0 -1 28426
+D2
+~
+~
+0 -1 28424
+S
+#28426
+The end of the cavern.~
+The cavern ends abruptly, the dome shaped roof rising higher.
+Someone has definitely been living here, bones lying is a small
+heap on the northern side of the cave and dried pieces of burnt
+meat scattered around the murky floor. A dying campfire in the 
+centre of the cave emits a soft glow revealing a primitive 
+painting drawn in what looks like blood is on the eastern wall.
+In one corner, cut into the cave wall, is a cramped area clean 
+of debris where some ratty fur blankets have been stored.
+~
+284 0 0
+D3
+~
+~
+0 -1 28425
+D5
+~
+hatch~
+1 28400 28431
+E
+painting~
+          
+         
+                                    X
+                            \oo/    |
+                            o  o    |
+                             oo     |
+                      O     -<>-   { }
+                      ||||||    |||||
+                     /|\    \  /
+                      |      ()
+       O         O   / \    //\\
+      \|/       \|/        //  \\
+      _|        _|       <<<    >>>
+       
+       
+~
+E
+painting~
+                                    X
+                            \oo/    |
+                            o  o    |
+                             oo     |
+                      O     -<>-   { }
+                      ||||||    |||||
+                     /|\    \  /
+                      |      ()
+       O         O   / \    //\\
+      \|/       \|/        //  \\
+      _|_|       <<<    >>>
+~
+E
+painting~
+                                    X
+                            \oo/    |
+                            o  o    |
+                             oo     |
+                      O     -<>-   { }
+                      ||||||    |||||
+                     /|\    \  /
+                      |      ()
+       O         O   / \    //\\
+      \|/       \|/        //  \\
+      _|_|       <<<    >>>
+~
+E
+painting~
+                                    X
+                            \oo/    |
+                            o  o    |
+                             oo     |
+                      O     -<>-   { }
+                      ||||||    |||||
+                     /|\    \  /
+                      |      ()
+       O         O   / \    //\\
+      \|/       \|/        //  \\
+      _|        _|       <<<    >>>
+~
+E
+painting~
+                                      X
+                            \oo/    |
+                            o  o    |
+                             oo     |
+                      O     -<>-   { }
+                      ||||||    |||||
+                     /|\    \  /
+                      |      ()
+       O         O   / \    //\\
+      \|/       \|/        //  \\
+      _|        _|       <<<    >>>
+~
+E
+painting~
+                                     
+                            \oo/    |
+                            o  o    |
+                             oo     |
+                      O     -<>-   { }
+                      ||||||    |||||
+                     /|\    \  /
+                      |      ()
+       O         O   / \    //\\
+      \|/       \|/        //  \\
+      _|        _|       <<<    >>>
+~
+S
+#28427
+Bottom of the ravine.~
+AAAAAAARGH!!! 
+You failed to reach the other side of the galcier and fall down 
+to the bottom of the ravine causing a loud thump as you hit the 
+bottom.  The ravine continues to the east and west, but is too 
+tight for moving.  The walls around you are almost too smooth to
+get any grip, let alone for climbing them.
+~
+284 65536 0
+D4
+~
+~
+0 -1 28428
+S
+#28428
+`o The southern Glacier.~
+This side of the glacier is completely covered by a thick 
+blanket of snow making it difficoult to move.  High snow 
+bankments lie to the east and west of here. The other side 
+of the glacier is to the north, behind the ravine.  Between 
+the snowbanks, leads a passage in the snow to the south. The 
+wind moves the snow around your feet, covering your tracks
+effectively as you move around.
+~
+284 0 0
+D0
+~
+~
+0 -1 28420
+D2
+~
+~
+0 -1 28429
+S
+#28429
+Passage in the snow.~
+The blanket of snow is already past knee depth making movement
+even more strenous. A light southern breeze blows the powdery  
+snow around you causing it to cover every inch of your body.
+For a second, the sound of howling is heard in the distance. 
+The passage in between the bankments appears to continue to the 
+north and south, but you cannot be certain as the absolute
+whiteness around you is confusing.
+~
+284 0 0
+D0
+~
+~
+0 -1 28428
+D2
+~
+~
+0 -1 28430
+S
+#28430
+At a geysir.~
+You arrive at a large geysir surrounded by ragged rock walls.
+The warm steam lingering in the air has molten most of the 
+snow around the geysir leaving the slippery survace of the 
+ice glistening in the light that gets through. The warm 
+moisture in the air sticks to you, and you find a rosy colour
+coming back to your lips as you begin to warm up again. 
+A snowy passage extends to the north. 
+~
+284 0 0
+D0
+~
+~
+0 -1 28429
+S
+#28431
+A temporary name~
+A temporary description
+~
+284 0 0
+D4
+~
+hatch~
+1 28400 28426
+S
+#28499
+A temporary name~
+A temporary description
+~
+284 0 0
+S
+#0
+$~

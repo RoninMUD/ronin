@@ -1,0 +1,1619 @@
+#18600
+Before the White Tower~
+  You stand in front of the world's highest tower and home of the Aes Sedai.
+All Aes Sedai are women now, after the Breaking of the World, over three 
+thousand years ago, where all male Aes Sedai went mad and almost tore the world
+apart. Now the White Tower is the center of power in this world, even if they
+don't have a nation for themselves. Even kings and queens regard the advice 
+of the White Tower.
+  The Tower shines of white marble blocks joined together using the One Power,
+and only the One Power can destroy it. All around you see the vast expanse of
+the grand city and people running errands in and out of the tower. The massive
+gates to the White Tower stands open, welcoming all visitors.
+~
+186 0 1
+D0
+~
+~
+0 -1 18601
+D4
+~
+gates~
+12 -1 18766
+S
+#18601
+The reception~
+  You stand in the entrance hall of the white tower. Hundreds of people are 
+standing or sitting waiting for clerks to help them. The clerks standing behind 
+the counter in the northern part of the hall write down the attendants' names 
+and errand and give the note to a novices who run to whoever need to be
+contacted.
+  A doorway to the east leads to a great spiral staircase and a hallway 
+stretches to the west.
+~
+186 0 0
+D1
+You see a large staircase.
+~
+~
+0 -1 18602
+D2
+A large gate leads out of the tower.
+~
+~
+0 -1 18600
+D3
+A hallway leads to the west.
+~
+~
+0 -1 18605
+S
+#18602
+Base of the tower~
+  You stand in a huge room. As you look up you can't even see the ceiling, the 
+room must go all the way to the top of the tower. Doors to the north and the 
+south lead to other parts of the tower.
+  The stairs and hallways are full of busy people going about their business. An
+Aes Sedai is standing next to the door to the south.
+~
+186 0 0
+D0
+On the northern wall you see a wide door.
+~
+door~
+1 -1 18603
+D2
+On the southern wall you see a small door.
+~
+door~
+2 18606 18695
+D3
+You see a reception.
+~
+~
+0 -1 18601
+D4
+~
+~
+0 -1 18607
+S
+#18603
+The canteen~
+  In this huge room tables and chairs cover most of the floor space, many of 
+which are occupied by novices, Accepted and some Aes Sedai. Servants scurry 
+out of the kitchen to the west and exit into the hall to the south carrying 
+food and drink to the Aes Sedai who want their meal in their apartments. 
+Large paintings and weavings cover the walls. Large lamps along the walls and 
+beside the tables light up this room which has no windows.
+~
+186 0 0
+D2
+A door is set in the wall to the south.
+~
+door~
+1 -1 18602
+D3
+You hear sounds from a kitchen behind the door.
+~
+door~
+1 -1 18604
+S
+#18604
+The kitchen~
+  This kitchen is the biggest, maybe you have ever seen. About 200 people work 
+in this huge hall, stirring pots, turning spits, baking bread and every other 
+chore needed to do around the kitchen. The smell is unbelievable and you feel 
+your stomach growl as you pass the delicious food that is being prepared. As 
+you look around the room a servant walks over to you and gives you a small 
+cookie from her silver plate. It tastes wonderful.
+~
+186 0 0
+D1
+The door leads to a canteen.
+~
+door~
+1 -1 18603
+D2
+A door leads out into a hallway.
+~
+door~
+1 -1 18605
+S
+#18605
+Hallway~
+  A wide hallway goes from the reception to the east, to two large doors in 
+the end of the hallway to the west. Candles and paintings cover the stone wall.
+The themes of the paintings are the siege of the Tower by Artur Hawkwing over 
+1000 years ago. A door to the north leads to the kitchen and fumes from the 
+cooking reach you whenever the doors are opened and closed.
+~
+186 0 0
+D0
+You hear sounds from a kitchen behind the door.
+~
+door~
+1 -1 18604
+D1
+You see a reception.
+~
+~
+0 -1 18601
+D3
+The hallway ends to the west.
+~
+~
+0 -1 18606
+S
+#18606
+End of a hallway~
+  The hallway ends here in two large doors leading out to the training grounds, 
+where you can hear wooden training swords clatter in rapid successions. 
+Candles and paintings cover the stone wall. The theme of the paintings are the 
+siege of the Tower by Arhur Hawkwing over 1000 years ago. The reception lies 
+in the end of the hallway to the east.
+~
+186 0 0
+D1
+The hallway continues.
+~
+~
+0 -1 18605
+D3
+Two doors lead out of the tower.
+~
+door~
+1 -1 18691
+S
+#18607
+A huge spiral staircase~
+  The spiral staircase follows the walls around the circular room. On each 
+floor doors lead into apartments, classrooms, offices or other facilities. 
+Stand lamps and artwork cover the whole length of the stairs. The whole 
+staircase is made of marble and you can not see any joins. It looks like it's 
+made of one huge marble block, even though that is not possible.
+  A doorway leads to the novice quarters, and a gate blocks further movement
+up the staircase.
+~
+186 0 0
+D0
+The Novice Quarters are located to the north.
+~
+~
+0 -1 18608
+D4
+A gate blocks your way.
+~
+gate~
+1 18619 18619
+D5
+The staircase leads down to the base of the tower.
+~
+~
+0 -1 18602
+S
+#18608
+Entrance to the novice quarters~
+  This is the novice quarters, home of the newest pupils in the White Tower.
+Many of the girls are very young, maybe as young as 12 or 13. Some girls seem
+proud of being here but others seem afraid and unsure of their new life. Life 
+as a novice is not easy, and only hard work and discipline will give them a 
+chance of being raised to Accepted.
+  You see doors to the novices sleeping chambers line the walls through large
+archways to the east and west. The room is lit by lanterns on the wall and two
+lamps each standing on a small table beside an archway. A novice in white is 
+cleaning the white tiles on the floor.
+~
+186 0 0
+D1
+A hallway leads to the east.
+~
+~
+0 -1 18611
+D2
+You see a large staircase.
+~
+~
+0 -1 18607
+D3
+A hallway leads to the west.
+~
+~
+0 -1 18609
+S
+#18609
+Novice quarters~
+  The hallway is brightly lit by lanterns and candles. The walls are as white as
+the floor and look like polished marble. A few wooden benches and tables stand
+by the walls. There the novices can spend their little time while off chores. 
+The hallway continues to the east and south.
+~
+186 0 0
+D1
+The entrance to the novice quarters lays to the east.
+~
+~
+0 -1 18608
+D2
+The hallway continues south.
+~
+~
+0 -1 18610
+S
+#18610
+Novice quarters~
+  The hallway ends here in a wall with two large doors leading to classrooms
+where Accepted and Aes Sedai teach the novices. Beside each of the two iron
+doors, a beautiful painting decorates the wall with scenes of the city of Tar
+Valon.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18609
+S
+#18611
+Novice quarters~
+  The hallway is brightly lit by lanterns and candles. The walls are as white as
+the floor and look like polished marble. A few wooden benches and tables stand
+by the walls. There the novices can spend their little time while off chores. 
+The hallway continues to the west and south.
+~
+186 0 0
+D2
+The hallway continues south.
+~
+~
+0 -1 18612
+D3
+The entrance to the novice quarters lays to the west.
+~
+~
+0 -1 18608
+S
+#18612
+Novice quarters~
+  The hallway ends here in a large balcony with marble railings. The view
+looks out over the tower grounds and gardens. Warders training their students,
+gardeners cultivating the gardens and Aes Sedai walking and talking are just a
+few of the many things going on the grounds.
+  There are not many novices in this hall, reflecting the declining numbers
+of novices in the tower over the last hundred of years.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18611
+S
+#18616
+Top of a huge spiral staircase~
+  The spiral staircase follows the walls around the circular room. Stand 
+lamps and artwork cover the whole length of the stairs. The whole staircase is 
+made of marble and you can not see any joins. It looks like it's made of one 
+huge marble block, even though that is not be possible.  
+  The stairway ends at a door to the north. It leads to the Amylrin's study and 
+two novices sit on eithter side of the door, ready to leap if the Amyrlin 
+needs anything.
+~
+186 4 0
+D0
+A door with a staff carved on it blocks your way.
+~
+door~
+1 -1 18617
+D5
+The staircase continues down.
+~
+gate~
+1 -1 18619
+S
+#18617
+The office of the Keeper of the Chronicles~
+  The Keeper is the second most powerful woman in the Tower. She also acts like 
+a secretary for the Amyrlin. The office is simple yet elegant. A desk stands in 
+the western part of the room next to a window. On the desk there are many 
+papers and reports. An ink jar and a feather pen is standing next to a carving 
+of a wooden horse. Beside the desk a bookshelf contains books on topics ranging 
+from the War of Power to the making of carts. To the east a door leads to the 
+Amyrlin's office.
+~
+186 0 0
+D1
+A door leads into the office of the Amyrin Seat.
+~
+door~
+1 18624 18618
+D2
+A door leads back out to the staricase.
+~
+door~
+1 -1 18616
+S
+#18618
+The study of the Amyrlin Seat~
+  You stand in the room called the Amyrlin's study. The Amyrlin Seat is the 
+leader of all Aes Sedai, and even kings and queens listen to her word with 
+respect. An oak chair stands behind an ornately carved desk. There are no other 
+chairs in the room, so her attendants must stand when summoned. Over a lit 
+fireplace hangs a huge painting of what looks like a man fighting a shadow of a 
+man with eyes like roaring furnaces. On the floor there is a painting of a 
+circle divided with a sinuous line, half white, half black. This is the ancient 
+symbol of the Aes Sedai from the Age of Legends.
+~
+186 0 0
+D3
+A door leads back out to the Keepers office.
+~
+door~
+1 -1 18617
+S
+#18619
+Entrance to the Accepted quarters~
+  After years of study and training as novices, some take the test to become 
+Accepted. Many of the novices fail the test, either because they lack the skill,
+or simply because they are not strong enough in the Power. The novices that
+fail or that are not strong enough are sent out of the tower when they are
+trusted not to hurt themselves or others with their skill.
+  The hallways have the same white marble stone and walls as the novice quarters,
+but there are more decorations like plants and paintings depicting historical
+scenes and battles. The hallway continues through archways to the east and west,
+and a large gate is blocking your way to the north.
+~
+186 0 0
+D0
+A gate blocks your way.
+~
+gate~
+1 18612 18623
+D1
+A hallway streches to the east.
+~
+~
+0 -1 18622
+D3
+A hallway streches to the west.
+~
+~
+0 -1 18620
+D4
+The staircase continues behind the gate.
+~
+gate~
+1 18622 18616
+D5
+A staircase leads down to the novice quarters.
+~
+gate~
+1 18619 18607
+S
+#18620
+Accepted quarters~
+  A group of Accepted is sitting around a wooden table talking and laughing. 
+As you walk they begin talking in hushed voices and starts giggling. Their 
+words are barely audible, but you hear a couple of words: bonding and
+warders. The entrance to the accepted quarters lies east and the hallway
+continues south.
+~
+186 0 0
+D1
+The entrance to the Accepted quarters.
+~
+~
+0 -1 18619
+D2
+The hallway continues south.
+~
+~
+0 -1 18621
+S
+#18621
+Accepted quarters~
+  The hallways are deserted as there are not enough Accepted in the tower to
+fill this part of the floor. Still, the hallway looks spotless as novices keep
+the area clean in case it once again is needed. You can hear voices from
+the hallway to the north.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18620
+S
+#18622
+Accepted quarters~
+  Groups of Accepted are walking the hallways to and from classes and studies,
+several carrying books and papers. The library of the White Tower is said by 
+most to be the largest in the world.
+~
+186 0 0
+D3
+The entrance to the Accepted quarters.
+~
+~
+0 -1 18619
+S
+#18623
+Gray Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and gray streak 
+through the quarters and into the hallways beyond.
+  On pillars along the walls plants grow, and the vines hang down over the edge
+almost all the way down to the floor. The hallway is lit by lanterns hanging 
+from the ceiling. The hallway continues to the north, east and west. A gate to
+the south leads back to the Accepted quarters.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18626
+D1
+The hallway continues east.
+~
+~
+0 -1 18625
+D2
+A door leads back to the Accepted quarters.
+~
+gate~
+1 18612 18619
+D3
+The hallway continues west.
+~
+~
+0 -1 18624
+S
+#18624
+Gray Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and gray streak 
+through the quarters and into the hallways beyond.
+  On pillars along the walls plants grow, and the vines hang down over the edge
+almost all the way down to the floor. The hallway is lit by lanterns hanging 
+from the ceiling. The hallway continues to the east, and to the west a large
+door prevents you from going further into the tower.
+~
+186 0 0
+D1
+The hallway continues east.
+~
+~
+0 -1 18623
+D3
+A door blocks your way.
+~
+door~
+1 18613 18627
+S
+#18625
+Gray Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and gray streak 
+through the quarters and into the hallways beyond.
+  On pillars along the walls plants grow, and the vines hang down over the edge
+almost all the way down to the floor. The hallway is lit by lanterns hanging 
+from the ceiling. The hallway continues to the west, and to the east a large
+door prevents you from going further into the tower.
+~
+186 0 0
+D1
+A door blocks your way.
+~
+door~
+1 18614 18631
+D3
+The hallway continues west.
+~
+~
+0 -1 18623
+S
+#18626
+Gray Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and gray streak 
+through the quarters and into the hallways beyond.
+  On pillars along the walls plants grow, and the vines hang down over the edge
+almost all the way down to the floor. The hallway is lit by lanterns hanging 
+from the ceiling. The hallway continues to the south, and to the north a large
+door prevents you from going further into the tower. 
+~
+186 0 0
+D0
+A door blocks your way.
+~
+door~
+1 18617 18640
+D2
+The hallway continues south.
+~
+~
+0 -1 18623
+S
+#18627
+Yellow Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and yellow streak 
+through the quarters and into the hallways beyond.
+  The Yellow Ajah consists of the Aes Sedai who have the best talents for 
+healing. People from all over the world come to the tower to have their loved
+ones healed, if they dare ask. In some countries the power of the Aes Sedai 
+is feared and is said to be the power of the Dark One. 
+~
+186 0 0
+D1
+A door leads back to the Gray Quarters.
+~
+door~
+1 18613 18624
+D3
+The hallway continues west.
+~
+~
+0 -1 18628
+S
+#18628
+Yellow Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and yellow streak 
+through the quarters and into the hallways beyond.
+  You have come to a bend in the hallway and in the corner a statue of dark
+stone looks down on all who pass. She was probably an Aes Sedai of the past.
+In the Age of Legends over three thousand years ago, Aes Sedai were able to
+heal any who had any spark of life left in their bodies, but over the millennia
+the talent for healing as well as other talents have dwindled and weakened. 
+~
+186 0 0
+D1
+The hallway continues east.
+~
+~
+0 -1 18627
+D2
+The hallway continues south.
+~
+~
+0 -1 18629
+S
+#18629
+Yellow Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower
+is the Ogier stonemasons' greatest work. 
+  Along the center of the hallway a woven carpet in black and yellow streak 
+through the quarters and into the hallways beyond.
+  You have come to a bend in the hallway and hallway continues west. In the 
+corner of the hallway a group of benches are placed around tables for Sisters
+to sit and discuss their trade and interests. Several Sisters are talking to
+what looks like group of travelers in their dusty travel cloaks, but you are too
+far away to hear the words. 
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18628
+D3
+The hallway continues west.
+~
+~
+0 -1 18630
+S
+#18630
+Yellow Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and yellow streak 
+through the quarters and into the hallways beyond.
+  You have reached the end of the Yellow Ajah quarters and through a large
+mosaic window on the western wall you see out over the city of Tar Valon and 
+the hills beyond. People scurry by you in their work and give you little notice.
+~
+186 0 0
+D1
+The hallway continues east.
+~
+~
+0 -1 18629
+S
+#18631
+Blue Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and blue streak 
+through the quarters and into the hallways beyond.
+  The Blue Ajah is dedicated to righteous causes and justice. Over the 
+millennia the Amerlyn Seat, the leader of the Aes Sedai, has most often been
+raised from the Blue Ajah. Each Ajah have eyes end ears all over the world
+gathering news and information to send back to the tower by pigeon. The Blue
+network is believed to be the biggest of them all.
+~
+186 0 0
+D1
+The hallway continues east.
+~
+~
+0 -1 18632
+D3
+The gray quarters are to the west.
+~
+door~
+1 18614 18625
+S
+#18632
+Blue Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and blue streak 
+through the quarters and into the hallways beyond.
+  You have come to a bend in the hallway and hallway continues north. In the 
+corner a large door leads out to a huge platform where hundreds of pigeon
+cages stand, waiting for messages to be sent. Aes Sedai are standing in 
+attendance all day and night in case important messages arrive.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18633
+D3
+The hallway continues west.
+~
+~
+0 -1 18631
+S
+#18633
+Blue Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and blue streak 
+through the quarters and into the hallways beyond.
+  You have reached the end of the hallway and through a window you see a 
+giant mountain, Dragonmount, where the prophecy say that the Dragon will be 
+reborn in man's darkest hour to save the worlds from the Shadow.
+~
+186 0 0
+D1
+There is something odd about that part of the wall.
+~
+wall~
+1 18621 18634
+D2
+The hallway continues south.
+~
+~
+0 -1 18632
+S
+#18634
+Secret tunnel~
+  The small secret tunnel is dimly lit by lanterns on the wall. It's so small 
+that only one person can go through at a time. Water drips down through small
+cracks in the ceiling making the floor slippery. You'd better walk carefully 
+so you don't fall.
+  To the west you can go back into the blue ajah quarters, and the tunnel 
+continues north.
+~
+186 256 0
+D0
+The tunnel continues north.
+~
+~
+0 -1 18635
+D3
+The wall got hinges on the inside and can be opened.
+~
+wall~
+1 -1 18633
+S
+#18635
+Secret tunnel~
+  The small secret tunnel is dimly lit by lanterns on the wall. It's so small 
+that only one person can go through at a time. Water drips down through small
+cracks in the ceiling making the floor slippery. You'd better walk carefully 
+so you don't fall.
+  The tunnel continues to the north and south.
+~
+186 256 0
+D0
+The tunnel continues north.
+~
+~
+0 -1 18636
+D2
+The tunnel continues south.
+~
+~
+0 -1 18634
+S
+#18636
+Secret tunnel~
+  The small secret tunnel is dimly lit by lanterns on the wall. It's so small 
+that only one person can go through at a time. Water drips down through small
+cracks in the ceiling making the floor slippery. You'd better walk carefully 
+so you don't fall.
+  The tunnel continues to the south. To the east the tunnel widens into an
+opening with space for several people.
+~
+186 256 0
+D1
+The tunnel widens to the east.
+~
+~
+0 -1 18637
+D2
+The tunnel continues south.
+~
+~
+0 -1 18635
+S
+#18637
+An opening in the secret tunnel~
+  The tunnel opens up into a small cave inside the tower walls. Here there are 
+no leaks and the water from the tunnel flows down a small hole in the corner.
+In the northern part of the cave you see a door with ornate carvings and gold
+ornamentations.
+~
+186 0 0
+D0
+An ornate door is blocking your way.
+~
+door~
+1 18623 18638
+D3
+The tunnel continues west.
+~
+~
+0 -1 18636
+S
+#18638
+The hidden libraries~
+  You stand inside a small hidden part of the tower library. It's not connected 
+to the main library and is only accessible through the narrow tunnel by which you 
+entered. The books here must hold dangerous knowledge to be kept apart from
+the rest of the library, and probably only a few of the tower sisters know
+about it.
+~
+186 0 0
+D1
+The hidden library continues east.
+~
+~
+0 -1 18639
+D2
+You see a door in the southern wall.
+~
+door~
+1 -1 18637
+S
+#18639
+The hidden libraries~
+  The bookcases here hold books an a range of topics and several you see are 
+translations of the prophecy of the Dragon, and even one on dark prophecy.
+Maybe you can find some valuable information in here?
+~
+186 0 0
+D3
+The hidden library continues west.
+~
+~
+0 -1 18638
+S
+#18640
+Green Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and green streak 
+through the quarters and into the hallways beyond.
+  The Green Ajah is the battle-ajah and stand ready for the Tarmon Gai'don, the 
+last battle, where they shall face the Dreadlords of the Shadow. Green Sisters
+are the only sisters that bond more than one Warder, and some even marry one
+of them. The bond involves the Power and makes the two persons aware of the 
+others emotions and sensations.
+~
+186 0 0
+D1
+The hallway continues east.
+~
+~
+0 -1 18641
+D2
+The gray quarters are to the south.
+~
+door~
+1 18617 18626
+S
+#18641
+Green Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and green streak 
+through the quarters and into the hallways beyond.
+  Since Green Sisters often take more than one Warder, you see more Warders
+about than in the rest of the tower, except maybe the training grounds. The 
+Warders' purpose is to keep their Aes Sedai safe. Even though few would stand
+up to a lone Aes Sedai, all it would take is an arrow in the back to kill her.
+That is why Warders usually are about almost everywhere their Aes Sedai ventures,
+even here in the White Tower, where the hidden Black Ajah, the ajah that
+serves the Dark One, lurk.
+  You have reached an intersection in the hallway. It branches of to the north,
+east and tot the west. To the east a door leads further into the tower.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18642
+D1
+A door blocks your way.
+~
+door~
+1 18618 18653
+D3
+The hallway continues west.
+~
+~
+0 -1 18640
+S
+#18642
+Green Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and green streak 
+through the quarters and into the hallways beyond.
+  Large paintings of famous Aes Sedai and battles hang on the walls, and one
+you see a battle raging outside the White Tower itself. To this date no army
+have ever come into the city. The last man who tried was Arthur Hawkwing, who
+besieged Tar Valon for twenty years without success. The fact that Tar Valon 
+lies on an island in the middle of a river makes it hard to stop river crafts
+from supplying the city.
+~
+186 0 0
+D2
+The hallway continues south.
+~
+~
+0 -1 18641
+D3
+The hallway continues west.
+~
+~
+0 -1 18643
+S
+#18643
+Green Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and green streak 
+through the quarters and into the hallways beyond.
+  On a table along the wall stands a set of carved figures. The figures look
+like monsters from a tale, large beasts of that look to be a mix of human and 
+animals. Some with human feet, some with hooves, some have a furry body like a
+bear and others have beaks where their noses should be. These must be
+carvings of Trollocs, who infest the Blight, the land north of Tarwins' Gap.
+These beasts often raid down into the Borderlands in the north and bring back 
+to the Blight what they can, be it food, weapon or people.
+~
+186 0 0
+D0
+A door blocks your way.
+~
+door~
+1 18616 18649
+D1
+The hallway continues east.
+~
+~
+0 -1 18642
+D3
+The hallway continues west.
+~
+~
+0 -1 18644
+S
+#18644
+Green Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and green streak 
+through the quarters and into the hallways beyond.
+  You have reached the end of the Green Ajah quarters and a door blocks your 
+way to the west. Seeing Aes Sedai with red shawls entering through the door,
+you figure that the Red Ajah quarters must lay beyond the door.
+~
+186 0 0
+D1
+The hallway continues east.
+~
+~
+0 -1 18643
+D3
+A door blocks your way.
+~
+door~
+1 18615 18645
+S
+#18645
+Red Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and red streak 
+through the quarters and into the hallways beyond.
+  The Red Ajah has the major responsibility of locating men who can channel
+and bringing them to the tower to be gentled, taking their ability to use
+the power ever again. Men who can channel are a threat as the male half of the
+Power is tainted by the Dark One. In the Age of Legends male and female Aes 
+Sedai worked side by side, but now male channelers are in some places put down
+as rabid dogs.
+~
+186 0 0
+D1
+Beyond the door is the green ajah quarters.
+~
+door~
+1 18615 18644
+D3
+The hallway continues west.
+~
+~
+0 -1 18646
+S
+#18646
+Red Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and red streak 
+through the quarters and into the hallways beyond.
+  After men who can channel are gentled, they often lose the will to live
+and die as they can't find anything to fill the void left by the Power.
+As a result of their work, Red Sisters grow a hatred for all men and Reds
+do not take Warders at all.
+  The hallway splits and continues to the north, south and east.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18647
+D1
+The hallway continues east.
+~
+~
+0 -1 18645
+D2
+The hallway continues south.
+~
+~
+0 -1 18648
+S
+#18647
+Red Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and red streak 
+through the quarters and into the hallways beyond.
+  The hallway ends here in a balcony with a breathtaking view over the city.
+Down in the streets people mill about in their daily business, but all the way 
+up here, the sounds from the city are almost inaudible, making the Sisters
+able to work undisturbed.
+~
+186 0 0
+D2
+~
+~
+0 -1 18646
+S
+#18648
+Red Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and red streak 
+through the quarters and into the hallways beyond.
+  The hallway ends here in a stone wall with an enormous painting of an 
+Amyrlin Seat radiating power. It must be Bonwhin, the last Amyrlin Seat
+raised from the Red Ajah, who almost led the tower to ruin and is the reason
+no Red has been chosen in over a millennium.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18646
+S
+#18649
+White Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and white streak 
+through the quarters and into the hallways beyond.
+  The White Ajah is dedicated to logic, philosophy and truth. Since they seldom
+venture outside the tower, few care to bond a warder. They are often seen as 
+unemotional and cold, as they don't really care for social causes. All is
+understood through logic in their eyes.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18652
+D1
+The hallway continues east.
+~
+~
+0 -1 18650
+D2
+A door leads back to the green quarters.
+~
+door~
+1 18616 18643
+S
+#18650
+White Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and white streak 
+through the quarters and into the hallways beyond.
+  You walk past a group of White Sisters standing in beside a window arguing 
+about the logic of a falling apple. After listening for a while you decide
+that they all must be crazy. How can anyone argue that the apple falls because 
+it wants to fall?
+  The hallway leads on to the north and west.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18651
+D3
+The hallway continues west.
+~
+~
+0 -1 18649
+S
+#18651
+White Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and white streak 
+through the quarters and into the hallways beyond.
+  On the wall beside a window a large painting of a starry sky hangs, and an Aes
+Sedai stands beside it with a group of novices teaching about celestial bodies
+and their movement.
+  The hallway continues west and south.
+~
+186 0 0
+D2
+The hallway continues south.
+~
+~
+0 -1 18650
+D3
+The hallway continues west.
+~
+~
+0 -1 18652
+S
+#18652
+White Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and white streak 
+through the quarters and into the hallways beyond.
+  Walking through the hallway you see several White Sisters walking with 
+inward gazes, clearly deep in thought. You'd better not disturb them, or they 
+might get angry.
+  The hallway continues east and south.
+~
+186 0 0
+D1
+The hallway continues east.
+~
+~
+0 -1 18651
+D2
+The hallway continues south.
+~
+~
+0 -1 18649
+S
+#18653
+Brown Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and brown streak 
+through the quarters and into the hallways beyond.
+  The Brown Ajah spend their time studying history and gathering knowledge.
+They can travel all over the world for a rumor about a piece of new 
+information, and they discuss at length old manuscripts and their translations.
+Brown Sisters are often viewed as distant and not aware of their surroundings
+as they always work on books of the past.
+  The hallway continues north and east, and a door to the west lead back to the
+Green Ajah quarters.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18654
+D1
+The hallway continues east.
+~
+~
+0 -1 18655
+D3
+A door leads back to the green ajah quarters.
+~
+door~
+1 18618 18641
+S
+#18654
+Brown Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and brown streak 
+through the quarters and into the hallways beyond.
+  The hallway ends in a large bookcase filled with old books. Reading stands and
+comfortable chairs are at disposal for Sisters wanting to study the tomes, 
+although most of them bring the tomes back to their room for study.
+  The hallway continues south.
+~
+186 0 0
+D2
+The hallway continues south.
+~
+~
+0 -1 18653
+S
+#18655
+Brown Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and brown streak 
+through the quarters and into the hallways beyond.
+  Tables along the walls are filled with stacks of books, both opened and 
+closed, with groups of Brown Sisters discussing their contents. The hallway is
+brightly lit by lanterns for good reading light.
+  The hallway continues north and west.
+~
+186 0 0
+D0
+The hallway continues north.
+~
+~
+0 -1 18656
+D3
+The hallway continues west.
+~
+~
+0 -1 18653
+S
+#18656
+Brown Ajah Quarters~
+  The hallways in the White Tower seems carved inside a huge block of white 
+marble. No cracks or joints are visible, and it's said that the White Tower 
+is the Ogier stonemasons' greatest work.
+  Along the center of the hallway a woven carpet in black and brown streak 
+through the quarters and into the hallways beyond.
+  The Brown Ajah quarters end here and a large door to the west leads further 
+into the tower. Beside the door guards are standing watch. This must be a part 
+of the tower with restricted access.
+~
+186 0 0
+D1
+A large door blocks your way.
+~
+door~
+1 18620 18657
+D2
+The hallway continues south.
+~
+~
+0 -1 18655
+S
+#18657
+The Tower Library~
+  You have entered the tower library, the biggest library in the world. The 
+rows of bookcases go on and on. Fresh air blow in through the windows along on 
+wall, but are shut if the air get too moist as to not destroy the books.
+The library is dimly lit and only reading stands and sections dedicated to read
+and study are properly lit. Beside the door to the west you see a receptionist
+sit behind her desk, her nose buried in an old book.
+~
+186 0 0
+D1
+The main aisle of the library.
+~
+~
+0 -1 18658
+D3
+A door leads out to the brown ajah quarters.
+~
+door~
+1 -1 18656
+S
+#18658
+Main aisle of the library~
+  You walk along the southern wall of the library with countless aisles going 
+north between the huge bookcases. There are no plaques on the ends of the 
+bookcases indicating what topics are covered in each bookcase. This library 
+seems dedicated to the Brown Sisters and you might need help finding what you 
+are looking for. The main aisle is quite monotonous and continues to the east.
+~
+186 0 0
+D0
+Book, books and more books.
+~
+~
+0 -1 18661
+D1
+The main aisle of the library.
+~
+~
+0 -1 18659
+D3
+You see a desk and a woman sitting behind it.
+~
+~
+0 -1 18657
+S
+#18659
+Main aisle of the library~
+  You walk along the southern wall of the library with countless aisles going 
+north between the huge bookcases. There are no plaques on the ends of the 
+bookcases indicating what topics are covered in each bookcase. This library 
+seems dedicated to the Brown Sisters and you might need help finding what you 
+are looking for. The main aisle is quite monotonous and continues to the east
+and west.
+~
+186 0 0
+D0
+Book, books and more books.
+~
+~
+0 -1 18663
+D1
+The main aisle of the library.
+~
+~
+0 -1 18660
+D3
+The main aisle of the library.
+~
+~
+0 -1 18658
+S
+#18660
+Main aisle of the library~
+  You walk along the southern wall of the library with countless aisles going 
+north between the huge bookcases. There are no plaques on the ends of the 
+bookcases indicating what topics are covered in each bookcase. This library 
+seems dedicated to the Brown Sisters and you might need help finding what you 
+are looking for. The main aisle is quite monotonous and continues to the west.
+~
+186 0 0
+D0
+Book, books and more books.
+~
+~
+0 -1 18665
+D3
+The main aisle of the library.
+~
+~
+0 -1 18659
+S
+#18661
+Among the library bookcases~
+  The bookcases are tall and wide and there are no lights here due to the
+firehazard. You need to bring your own lantern to light your way. There is 
+nothing here besides the endless volumes of books, some of them far out of your 
+reach. The bookcases continue to the north.
+~
+186 0 0
+D0
+Book, books and more books.
+~
+~
+0 -1 18662
+D2
+The main aisle of the library.
+~
+~
+0 -1 18658
+S
+#18662
+Among the library bookcases~
+  The bookcases are tall and wide and there are no lights here due to the
+firehazard. You need to bring your own lantern to light your way. There is 
+nothing here besides the endless volumes of books, some of them far out of your 
+reach. The bookcases continue to the south.
+~
+186 0 0
+D2
+Book, books and more books.
+~
+~
+0 -1 18661
+S
+#18663
+Among the library bookcases~
+  The bookcases are tall and wide and there are no lights here due to the
+firehazard. You need to bring your own lantern to light your way. There is 
+nothing here besides the endless volumes of books, some of them far out of your 
+reach. The bookcases continue to the north.
+~
+186 0 0
+D0
+Book, books and more books.
+~
+~
+0 -1 18664
+D2
+The main aisle of the library.
+~
+~
+0 -1 18659
+S
+#18664
+Among the library bookcases~
+  The bookcases are tall and wide and there are no lights here due to the
+firehazard. You need to bring your own lantern to light your way. There is 
+nothing here besides the endless volumes of books, some of them far out of your 
+reach. The bookcases continue to the south.
+~
+186 0 0
+D2
+Book, books and more books.
+~
+~
+0 -1 18663
+S
+#18665
+Among the library bookcases~
+  The bookcases are tall and wide and there are no lights here due to the
+firehazard. You need to bring your own lantern to light your way. There is 
+nothing here besides the endless volumes of books, some of them far out of your 
+reach. The bookcases continue to the north.
+~
+186 0 0
+D0
+Book, books and more books.
+~
+~
+0 -1 18666
+D2
+The main aisle of the library.
+~
+~
+0 -1 18660
+S
+#18666
+Among the library bookcases~
+  The bookcases are tall and wide and there are no lights here due to the
+firehazard. You need to bring your own lantern to light your way. There is 
+nothing here besides the endless volumes of books, some of them far out of your 
+reach. The bookcases continue to the south.
+~
+186 0 0
+D2
+Book, books and more books.
+~
+~
+0 -1 18665
+S
+#18691
+The training grounds~
+  This is where young boys train to be Warders. All around the grounds, Warders 
+and students practice with wooden swords and quarterstaffs. Eager novices and 
+Accepted watch from the parks around the grounds. Even some Aes Sedai have come 
+to watch the fighting, as they look for good Warder candidates.
+~
+186 0 2
+D1
+Two doors lead back into the tower.
+~
+~
+1 -1 18606
+D2
+The training grounds.
+~
+~
+0 -1 18692
+D3
+The training grounds.
+~
+~
+0 -1 18694
+S
+#18692
+The training grounds~
+  This is where young boys train to be Warders. All around the grounds, Warders 
+and students practice with wooden swords and quarterstaffs. Eager novices and 
+Accepted watch from the parks around the grounds. Even some Aes Sedai have come 
+to watch the fighting, as they look for good Warder candidates.
+~
+186 0 2
+D0
+The training grounds.
+~
+~
+0 -1 18691
+D3
+The training grounds.
+~
+~
+0 -1 18693
+S
+#18693
+The training grounds~
+  This is where young boys train to be Warders. All around the grounds, Warders 
+and students practice with wooden swords and quarterstaffs. Eager novices and 
+Accepted watch from the parks around the grounds. Even some Aes Sedai have come 
+to watch the fighting, as they look for good Warder candidates.
+~
+186 0 2
+D0
+The training grounds.
+~
+~
+0 -1 18694
+D1
+The training grounds.
+~
+~
+0 -1 18692
+S
+#18694
+The training grounds~
+  This is where young boys train to be Warders. All around the grounds, Warders 
+and students practice with wooden swords and quarterstaffs. Eager novices and 
+Accepted watch from the parks around the grounds. Even some Aes Sedai have come 
+to watch the fighting, as they look for good Warder candidates.
+~
+186 0 2
+D1
+The training grounds.
+~
+~
+0 -1 18691
+D2
+The training grounds.
+~
+~
+0 -1 18693
+S
+#18695
+Stairway to the tower dungeons~
+  You stand on a dark cold platform. Stone stairs lead down into the darkness
+below. This hall doesn't get much fresh air and the air is moist and smells bad.
+A door leads out to the base of the tower. In the silence you think you hear 
+faint voices from below.
+~
+186 0 0
+D0
+A door leads out to the staircase.
+~
+door~
+2 -1 18602
+D5
+The staris continue down into darkness.
+~
+~
+0 -1 18696
+S
+#18696
+Stairway to the tower dungeons~
+  The hall is dark and moist. Doors to storage rooms line the walls on each 
+side of the hall but the locks are rusted and will not budge.
+  To the south a hallway leads into the dark, and the stairs will lead you 
+back up to the main halls of the tower. You hear voices from the south.
+~
+186 0 0
+D2
+A hallway leads south.
+~
+~
+0 -1 18697
+D4
+The staris continue up into darkness.
+~
+~
+0 -1 18695
+S
+#18697
+Dungeon hallway~
+  The hallway is dark and only your light source give enough light to see. There
+is not much to see here as the hallway goes on into the darkness. You feel no 
+need to explore the hallways further. Through a door on the eastern wall you 
+hear voices.
+~
+186 0 0
+D0
+A hallway leads north.
+~
+~
+0 -1 18696
+D1
+You see a door set in the wall.
+~
+door~
+2 18606 18698
+S
+#18698
+Outer chamber~
+  The room brightly lit and thirteen chairs stand in a circle. Behind the chairs
+thirteen women clad all in black are arguing. They look much the same in the 
+black dresses and only the faces separate them. On the wall behind them a door
+leads to the next room.
+~
+186 0 0
+D1
+A door leads into a small chamber beyond.
+~
+door~
+2 18606 18699
+D3
+A door leads back out into the hallway.
+~
+door~
+2 -1 18697
+S
+#18699
+Inner chamber~
+  This must be and old storeroom. Wooden crates are scattered all over the 
+dusty floor, and what looks like a doorframe stands in between some boxes. The
+doorway is shaped.... strangely. Twisted in some way. You eyes can not follow 
+the edges without getting dizzy.
+~
+186 0 0
+D3
+A door leads out to the outer chamber.
+~
+door~
+2 -1 18698
+S
+#0
+$~

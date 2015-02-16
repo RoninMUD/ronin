@@ -1,0 +1,127 @@
+#12600
+king kombat~
+The Kombat King~
+The Kombat King welcomes you to his domain with a wicked attack!
+~
+The Kombat King is unhappy with your poor judgment in entering his room.
+From here he watches the kombatants, and keeps the ones who stray in line.
+Unfortunately, you fall into the category of stray, and now it's time you
+were kept in line...*comf*
+~
+16777256 939788456 0 Y
+40 -20 -66 30000d1+100 100d100+100
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12601
+creature kombat~
+A Kombat Creature~
+A Kombat Creature wanders aimlessly about the halls of battle.
+~
+This creature is forever trapped in this battle arena. How or when he became
+trapped here is impossible to know, as it seems to lack the capacity to
+speak. It merely wanders pitifully over this premisis for eternity.
+~
+16777224 786432 0 Y
+34 -9 4 200d1+100 3d3+5
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12602
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12603
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12604
+red~
+The Red Guardian~
+The Red Guardian stands here and looks at you expectantly.
+~
+The Guardian dressed in red robes waits patiently for some tokens.
+~
+16777224 939788456 0 Y
+40 -20 -66 30000d1+100 100d100+100
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12605
+blue~
+The Blue Guardian~
+The Blue Guardian stands here and looks at you expectantly.
+~
+The guardian dressed in blue robes waits patiently for some tokens.
+~
+16777224 939788456 0 Y
+40 -20 -66 30000d1+100 100d100+100
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12606
+green~
+The Green Guardian~
+The Green Guardian stands here and looks at you expectantly.
+~
+The guardian dressed in green robes waits patiently for some tokens.
+~
+16777224 939788456 0 Y
+40 -20 -66 30000d1+100 100d100+100
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12607
+king kombat kking~
+The King~
+The King is here counting his gold coins.
+~
+An ugly greedy king. He will do anything to earn money.
+~
+16793739 2184 0 Y
+60 -6 -6 1d50+1700 10d2+20
+0 0
+8 8 1
+69 939555712 0d0+0 0
+0 0 0 321
+K
+0 0 0 0 0 0
+#0
+$~

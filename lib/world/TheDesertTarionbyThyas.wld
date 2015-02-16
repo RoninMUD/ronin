@@ -1,0 +1,1103 @@
+#10500
+Just a big Kludge~
+   You are standing in a big Kludge.
+~
+105 512 0
+S
+#10501
+Tarion Desert~
+    You are now standing on the edge of a massive desert.  Golden sand
+stretches as far as you can see.  The skeletons of many tiny animals
+scatter the sand, evidence of the harsh environment which greet all the
+deserts inhabitants.  
+~
+105 4 8
+D1
+The desert extends in that direction.~
+~
+0 -1 10505
+D2
+The desert extends in that direction.~
+~
+0 1 10501
+D3
+~
+~
+0 -1 10502
+S
+#10502
+Tarion Desert~
+    You are now standing on the edge of a massive desert.  Golden sand
+stretches as far as you can see.  The skeletons of many tiny animals
+scatter the sand, evidence of the harsh environment which greet all the
+deserts inhabitants.  
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10502
+D1
+The desert extends in that direction.~
+~
+0 -1 10501
+D2
+The desert extends in that direction.~
+~
+0 -1 10502
+D3
+The desert extends in that direction.~
+~
+0 -1 10503
+S
+#10503
+Tarion Desert~
+    You are now standing on the edge of a massive desert.  Golden sand
+stretches as far as you can see.  The skeletons of many tiny animals
+scatter the sand, evidence of the harsh environment which greet all the
+deserts inhabitants.  
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10503
+D1
+The desert extends in that direction.~
+~
+0 -1 10502
+D2
+The desert extends in that direction.~
+~
+0 -1 10509
+D3
+The desert extends in that direction.~
+~
+0 -1 10504
+S
+#10504
+Tarion Desert~
+    You are now standing on the edge of a massive desert.  Golden sand
+stretches as far as you can see.  The skeletons of many tiny animals
+scatter the sand, evidence of the harsh environment which greet all the
+deserts inhabitants.  
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10504
+D1
+The desert extends in that direction.~
+~
+0 -1 10503
+D2
+The desert extends in that direction.~
+~
+0 -1 10504
+D3
+~
+~
+0 -1 2128
+S
+#10505
+Tarion Desert~
+    You are now standing on the edge of a massive desert.  Golden sand
+stretches as far as you can see.  The skeletons of many tiny animals
+scatter the sand, evidence of the harsh environment which greet all the
+deserts inhabitants.  
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10505
+D1
+The desert extends in that direction.~
+~
+0 -1 10506
+D2
+The desert extends in that direction.~
+~
+0 0 10505
+D3
+The desert extends in that direction.~
+~
+0 -1 10501
+S
+#10506
+Tarion Desert~
+    You are now standing on the edge of a massive desert.  Golden sand
+stretches as far as you can see.  The skeletons of many tiny animals
+scatter the sand, evidence of the harsh environment which greet all the
+deserts inhabitants.  
+~
+105 0 8
+D0
+~
+~
+0 -1 10506
+D1
+The desert extends in that direction.~
+~
+0 -1 10507
+D2
+The desert extends in that direction.~
+~
+0 -1 10508
+D3
+The desert extends in that direction.~
+~
+0 -1 10505
+S
+#10507
+Tarion Desert~
+    You are now standing on the edge of a massive desert.  Golden sand
+stretches as far as you can see.  The skeletons of many tiny animals
+scatter the sand, evidence of the harsh environment which greet all the
+deserts inhabitants.  
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10507
+D1
+The desert extends in that direction.~
+~
+0 -1 10507
+D2
+The desert extends in that direction.~
+~
+0 -1 10507
+D3
+The desert extends in that direction.~
+~
+0 -1 10506
+S
+#10508
+Tarion Desert~
+    Moving on you are now totally surrounded by golden sand.  The heat
+has become nearly unbearable.  The landscape is very desolate, no trees 
+water or any other defining objects that would give a clue as to your
+current position, just rolling hills of golden sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10506
+D1
+~
+~
+0 -1 10508
+D2
+The desert extends in that direction.~
+~
+0 -1 10515
+D3
+~
+~
+0 -1 10508
+S
+#10509
+Tarion Desert~
+    Moving on you are now totally surrounded by golden sand.  The heat
+has become nearly unbearable.  The landscape is very desolate, no trees 
+water or any other defining objects that would give a clue as to your
+current position, just rolling hills of golden sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10503
+D1
+The desert extends in that direction.~
+~
+0 -1 10509
+D2
+The desert extends in that direction.~
+~
+0 -1 10511
+D3
+The desert extends in that direction.~
+~
+0 -1 10509
+S
+#10510
+Tarion Desert~
+    Penetrating even further into the desert, sand blows about your face.
+Buffeted by the sandy breeze, your vision is severely limited.  Under your
+feet the golden sand burns through your footwear blistering your skin.  From
+here all you can see are endless dunes of sand. The desert extends out in
+all directions.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10510
+D1
+The desert extends in that direction.~
+~
+0 -1 10511
+D2
+The desert continues in that direction.~
+~
+0 0 10510
+D3
+The desert extends in that direction.~
+~
+0 -1 10510
+S
+#10511
+Tarion Desert~
+    Penetrating even further into the desert, sand blows about your face.
+Buffeted by the sandy breeze, your vision is severely limited.  Under your
+feet the golden sand burns through your footwear blistering your skin.  From
+here all you can see are endless dunes of sand. The desert extends out 
+in all directions.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10509
+D1
+The desert extends in that direction~
+~
+0 0 10512
+D2
+The desert continues in that direction.~
+~
+0 0 10511
+D3
+The desert extends in that direction.~
+~
+0 -1 10510
+S
+#10512
+Tarion Desert~
+    Penetrating even further into the desert, sand blows about your face.
+Buffeted by the sandy breeze, your vision is severely limited.  Under your
+feet the golden sand burns through your footwear blistering your skin.  From
+here all you can see are endless dunes of sand. The desert extends out in 
+all directions.
+~
+105 0 8
+D0
+~
+~
+0 -1 10512
+D1
+The desert extends in that direction.~
+~
+0 -1 10513
+D2
+The desert extends in that direction.~
+~
+0 -1 10517
+D3
+The desert extends in that direction.~
+~
+0 -1 10511
+S
+#10513
+Tarion Desert~
+    Penetrating even further into the desert, sand blows about your face.
+Buffeted by the sandy breeze, your vision is severely limited.  Under your
+feet the golden sand burns through your footwear blistering your skin.  From
+here all you can see are endless dunes of sand. The desert extends out in
+all directions.
+~
+105 0 8
+D0
+~
+~
+0 -1 10513
+D1
+The desert extends in that direction.~
+~
+0 -1 10514
+D2
+~
+~
+0 -1 10513
+D3
+The desert extends in that direction.~
+~
+0 -1 10512
+S
+#10514
+Tarion Desert~
+    Penetrating even further into the desert, sand blows about your face.
+Buffeted by the sandy breeze, your vision is severely limited.  Under your 
+feet the golden sand burns through your footwear blistering your skin.  From
+here all you can see are endless dunes of sand. The desert extends out in 
+all directions.
+~
+105 0 8
+D0
+~
+~
+0 -1 10514
+D1
+The desert extends in that direction.~
+~
+0 -1 10515
+D2
+~
+~
+0 -1 10514
+D3
+The desert extends in that direction.~
+~
+0 -1 10513
+S
+#10515
+Tarion Desert~
+    Penetrating even further into the desert, sand blows about your face.  
+Buffeted by the sandy breeze, your vision is severely limited.  Under your
+feet the golden sand burns through your footwear blistering your skin.  From
+here all you can see are endless dunes of sand. The desert extends out in 
+all directions.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10508
+D1
+~
+~
+0 0 10516
+D2
+~
+~
+0 -1 10515
+D3
+The desert extends in that direction.~
+~
+0 -1 10514
+S
+#10516
+Tarion Desert~
+    Penetrating even further into the desert, sand blows about your face.
+Buffeted by the sandy breeze, your vision is severely limited.  Under your
+feet the golden sand burns through your footwear blistering your skin.  From
+here all you can see are endless dunes of sand. The desert extends out in 
+all directions.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10516
+D1
+The desert continues in that direction.~
+~
+0 0 10516
+D2
+~
+~
+0 -1 10516
+D3
+The desert extends in that direction.~
+~
+0 -1 10515
+S
+#10517
+Tarion Desert~
+    Here the sand seems to be a little cooler and you notice that there
+are some small tracks on the ground.  A cool breeze buffets you from the 
+south, it is a welcome change from the scorching heat.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10512
+D1
+~
+~
+0 -1 10517
+D2
+The desert extends in that direction.~
+~
+0 -1 10518
+D3
+~
+~
+0 -1 10517
+S
+#10518
+Tarion Desert~
+    The tracks in the sand continue here.  It seems you have found a path
+in this maze of a desert.  You are amazed that the tracks remain in the sand.
+They must be very new as all traces of life are quickly swallowed up by the
+scorching sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10517
+D1
+The desert extends in that direction.~
+~
+0 -1 10520
+D2
+~
+~
+0 -1 10518
+D3
+The desert extends in that direction.~
+~
+0 -1 10519
+S
+#10519
+Tarion Desert~
+    Penetrating even further into the desert, sand blows about your face.
+Buffeted by the sandy breeze, your vision is severely limited.  Under your
+feet the golden sand burns through your footwear blistering your skin. From
+here all you can see are endless dunes of sand. The desert extends out in 
+all directions.
+~
+105 4 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10519
+D1
+The desert extends in that direction.~
+~
+0 -1 10518
+D2
+The desert continues in that direction.~
+~
+0 0 10519
+D3
+The desert extends in that direction.~
+~
+0 -1 10519
+S
+#10520
+Tarion Desert~
+    Here the tracks continue, although they are not as fresh as they were 
+a ways back.  The sun once again is playing havoc on your directional
+perception.  You best be careful, to get confused here could mean your death.
+~
+105 0 8
+D0
+~
+~
+0 -1 10520
+D1
+The desert extends in that direction.~
+~
+0 -1 10521
+D2
+~
+~
+0 -1 10520
+D3
+The desert extends in that direction.~
+~
+0 -1 10518
+S
+#10521
+Tarion Desert~
+    Here the tracks continue, although they are not as fresh as they were
+a ways back.  The sun once again is playing havoc on you directional
+perception.  You best be careful, to get confused here could mean your death.
+~
+105 0 8
+D0
+~
+~
+0 -1 10521
+D1
+~
+~
+0 -1 10521
+D2
+The desert extends in that direction.~
+~
+0 -1 10522
+D3
+The desert extends in that direction.~
+~
+0 -1 10520
+S
+#10522
+Tarion Desert~
+    Here the sand changes slightly in color.  It is a darker gold and you
+notice small fragments of some unknown material stick out of the sand.  You
+wonder what they are but you do not have the time to waste on an investigation
+so you decide to move on.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10521
+D1
+~
+~
+0 -1 10522
+D2
+The desert extends in that direction.~
+~
+0 -1 10523
+D3
+~
+~
+0 -1 10522
+S
+#10523
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are going.
+There are no dunes to block your view of the path that lay ahead.  Your 
+progress here should be much better than in the dune covered portion of
+this great desert. 
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10522
+D1
+The desert continues in that direction.~
+~
+0 0 10523
+D2
+The desert extends in that direction.~
+~
+0 -1 10530
+D3
+The desert extends in that direction.~
+~
+0 -1 10524
+S
+#10524
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are going.
+There are no dunes to block your view of the path that lay ahead.  Your 
+progress here should be much better than in the dune covered portion of
+this great desert.
+~
+105 0 8
+D1
+The desert extends in that direction.~
+~
+0 -1 10523
+D2
+The desert extends in that direction.~
+~
+0 -1 10529
+D3
+The desert extends in that direction.~
+~
+0 -1 10525
+S
+#10525
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are going.
+There are no dunes to block your view of the path that lay ahead.  Your
+progress here should be much better than in the dune covered portion of
+this great desert. 
+~
+105 0 8
+D1
+The desert extends in that direction.~
+~
+0 -1 10524
+D2
+The desert extends in that direction.~
+~
+0 -1 10528
+D3
+The desert extends in that direction.~
+~
+0 -1 10526
+S
+#10526
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are going.
+There are no dunes to block your view of the path that lay ahead.  Your
+progress here should be much better than in the dune covered portion of this
+great desert.  To the west there lies the ruins of an ancient Sphinx.
+~
+105 0 8
+D1
+The desert extends in that direction.~
+~
+0 -1 10525
+D2
+The desert extends in that direction.~
+~
+0 -1 10527
+D3
+~
+~
+0 -1 800
+S
+#10527
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are going.
+There are no dunes to block your view of the path that lay ahead.  Your
+progress here should be much better than in the dune covered portion of
+this great desert.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10526
+D1
+The desert extends in that direction.~
+~
+0 -1 10528
+D2
+The desert extends in that direction.~
+~
+0 -1 10534
+S
+#10528
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are going.
+There are no dunes to block your view of the path that lay ahead.  Your 
+progress here should be much better than in the dune covered portion of
+this great desert. 
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10525
+D1
+The desert extends in that direction.~
+~
+0 -1 10529
+D2
+The desert extends in that direction.~
+~
+0 -1 10533
+D3
+The desert extends in that direction.~
+~
+0 -1 10527
+S
+#10529
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are going.
+There are no dunes to block your view of the path that lay ahead.  Your
+progress here should be much better than in the dune covered portion of
+this great desert.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10524
+D1
+The desert extends in that direction.~
+~
+0 -1 10530
+D2
+The desert extends in that direction.~
+~
+0 -1 10532
+D3
+The desert extends in that direction.~
+~
+0 -1 10528
+S
+#10530
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are
+going.  There are no dunes to block your view of the path that lay ahead.
+Your progress here should be much better than in the dune covered portion 
+of this great desert.  
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10523
+D2
+The desert extends in that direction.~
+~
+0 -1 10531
+D3
+The desert extends in that direction.~
+ ~
+0 -1 10529
+S
+#10531
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are
+going.  There are no dunes to block your view of the path that lay ahead.
+Your progress here should be much better than in the dune covered portion 
+of this great desert. 
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10530
+D3
+The desert extends in that direction.~
+~
+0 -1 10532
+D4
+~
+~
+0 -1 5700
+S
+#10532
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are
+going.  There are no dunes to block your view of the path that lay ahead.
+Your progress here should be much better than in the dune covered portion 
+of this great desert.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10529
+D1
+The desert extends in that direction.~
+~
+0 -1 10531
+D3
+The desert extends in that direction.~
+~
+0 -1 10533
+S
+#10533
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are
+going.  There are no dunes to block your view of the path that lay ahead.
+Your progress here should be much better than in the dune covered portion 
+of this great desert.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10528
+D1
+The desert extends in that direction.~
+~
+0 -1 10532
+D2
+The desert extends in that direction.~
+~
+0 -1 10535
+D3
+The desert extends in that direction.~
+~
+0 -1 10534
+S
+#10534
+Tarion Desert~
+    A vast expanse of desert, here you can clearly see where you are
+going.  There are no dunes to block your view of the path that lay ahead.
+Your progress here should be much better than in the dune covered portion 
+of this great desert.
+~
+105 0 8
+D0
+~
+~
+0 -1 10527
+D1
+~
+~
+0 -1 10533
+S
+#10535
+Tarion Desert~
+    You are now near the edge of the desert.  To the south there extends a 
+small ridge of sand and then a more solid footing awaits you.  The sun has
+taken its toll on you, you are weak and weary.  Your journey is nearly 
+complete but the sun takes no mercy.  It beams from the sky with an intensity 
+equal to that of its hottest day.  You are lucky to be alive.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10533
+D2
+The desert extends in that direction.~
+~
+0 -1 10536
+S
+#10536
+Tarion Desert~
+    You are now near the edge of the desert.  To the south there extends a 
+small ridge of sand and then a more solid footing awaits you.  The sun has
+taken its toll on you, you are weak and weary.  Your journey is nearly 
+complete but the sun takes no mercy.  It beams from the sky with an intensity 
+equal to that of its hottest day.  You are lucky to be alive.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10535
+D1
+The desert extends in that direction.~
+~
+0 -1 10539
+D2
+The desert extends in that direction.~
+~
+0 -1 10545
+D3
+The desert extends in that direction.~
+~
+0 -1 10537
+S
+#10537
+Tarion Desert~
+    You are now near the edge of the desert.  To the south there extends 
+a small ridge of sand and then a more solid footing awaits you.  The sun has
+taken its toll on you, you are weak and weary.  Your journey is nearly 
+complete but the sun takes no mercy.  It beams from the sky with an intensity 
+equal to that of its hottest day.  You are lucky to be alive.
+~
+105 0 8
+D1
+The desert extends in that direction.~
+~
+0 -1 10536
+D2
+The desert extends in that direction.~
+~
+0 -1 10546
+D3
+The desert extends in that direction.~
+~
+0 -1 10538
+S
+#10538
+Tarion Desert~
+    You are now near the edge of the desert.  To the south there extends 
+a small ridge of sand and then a more solid footing awaits you.  The sun has
+taken its toll on you, you are weak and weary.  Your journey is nearly 
+complete but the sun takes no mercy.  It beams from the sky with an intensity 
+equal to that of its hottest day.  You are lucky to be alive.
+~
+105 0 8
+D1
+The desert extends in that direction.~
+~
+0 -1 10537
+D2
+The desert extends in that direction.~
+~
+0 -1 10547
+S
+#10539
+Tarion Desert~
+    You are now near the edge of the desert.  To the south there extends a
+small ridge of sand and then a more solid footing awaits you.  The sun has
+taken its toll on you, you are weak and weary.  Your journey is nearly 
+complete but the sun takes no mercy.  It beams from the sky with an intensity 
+equal to that of its hottest day.  You are lucky to be alive.
+~
+105 0 8
+D1
+The desert extends in that direction.~
+~
+0 -1 10540
+D2
+The desert extends in that direction.~
+~
+0 -1 10544
+D3
+The desert extends in that direction.~
+~
+0 -1 10536
+S
+#10540
+Tarion Desert~
+    You are now near the edge of the desert.  To the south there extends 
+a small ridge of sand and then a more solid footing awaits you.  The sun has
+taken its toll on you, you are weak and weary.  Your journey is nearly 
+complete but the sun takes no mercy.  It beams from the sky with an intensity 
+equal to that of its hottest day.  You are lucky to be alive.
+~
+105 0 8
+D1
+The desert extends in that direction.~
+~
+0 -1 10541
+D2
+The desert extends in that direction.~
+~
+0 -1 10543
+D3
+The desert extends in that direction.~
+~
+0 -1 10539
+S
+#10541
+Tarion Desert~
+    You are now near the edge of the desert.  To the south there extends 
+a small ridge of sand and then a more solid footing awaits you.  The sun has
+taken its toll on you, you are weak and weary.  Your journey is nearly 
+complete but the sun takes no mercy.  It beams from the sky with an intensity 
+equal to that of its hottest day.  You are lucky to be alive.
+~
+105 0 8
+D0
+A lone gate stands guarding the entrance to the Tarion City.
+~
+gate~
+2 12820 12801
+D2
+The desert extends in that direction.~
+~
+0 -1 10542
+D3
+The desert extends in that direction.~
+~
+0 -1 10540
+E
+gate~
+A peculiar gate is left standing here along a sandstone wall.
+It is made of iron and heavy sandalwood, built strong to keep out
+any undesirables.
+~
+S
+#10542
+Tarion Desert~
+    You are now atop a small ridge of sand that separates the desert from 
+the rest of the land.  It is as if this ridge is a bowl, keeping the desert
+in place.  If this ridge should fail it seems that the desert would spill
+over filling the rest of the world with sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10541
+D3
+The desert extends in that direction.~
+~
+0 -1 10543
+S
+#10543
+Tarion Desert~
+    You are now atop a small ridge of sand that separates the desert from
+the rest of the land.  It is as if this ridge is a bowl, keeping the desert
+in place.  If this ridge should fail it seems that the desert would spill
+over filling the rest of the world with sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10540
+D1
+The desert extends in that direction.~
+~
+0 -1 10542
+D3
+The desert extends in that direction.~
+~
+0 -1 10544
+S
+#10544
+Tarion Desert~
+    You are now atop a small ridge of sand that separates the desert from
+the rest of the land.  It is as if this ridge is a bowl, keeping the desert
+in place.  If this ridge should fail it seems that the desert would spill
+over filling the rest of the world with sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10539
+D1
+The desert extends in that direction.~
+~
+0 -1 10543
+D3
+The desert extends in that direction.~
+~
+0 -1 10545
+S
+#10545
+Tarion Desert~
+    You are now atop a small ridge of sand that separates the desert from
+the rest of the land.  It is as if this ridge is a bowl, keeping the desert
+in place.  If this ridge should fail it seems that the desert would spill
+over filling the rest of the world with sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10536
+D1
+The desert extends in that direction.~
+~
+0 -1 10544
+D3
+The desert extends in that direction.~
+~
+0 -1 10546
+S
+#10546
+Tarion Desert~
+    You are now atop a small ridge of sand that separates the desert from 
+he rest of the land.  It is as if this ridge is a bowl, keeping the desert
+in place.  If this ridge should fail it seems that the desert would spill
+over filling the rest of the world with sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10537
+D1
+The desert extends in that direction.~
+~
+0 -1 10545
+D3
+The desert extends in that direction.~
+~
+0 -1 10547
+S
+#10547
+Tarion Desert~
+    You are now atop a small ridge of sand that separates the desert from
+the rest of the land.  It is as if this ridge is a bowl, keeping the desert
+in place.  If this ridge should fail it seems that the desert would spill
+over filling the rest of the world with sand.
+~
+105 0 8
+D0
+The desert extends in that direction.~
+~
+0 -1 10538
+D1
+The desert extends in that direction.~
+~
+0 -1 10546
+S
+#10599
+Yet another big Kludge~
+You are standing inside a dummy room, which should get real.~
+105 512 0
+S
+#0
+$~

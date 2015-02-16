@@ -1,0 +1,64 @@
+#3200
+statue peace immense guard jailmaster master jail~
+The Statue of Peace~
+The immense Statue of Peace guards the Temple of Midgaard.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+10 134219904 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+R
+0
+#3201
+ordeus healer~
+Ordeus the Midgaard Healer~
+Ordeus, the famous Healer of Midgaard awaits a casualty here.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+10 2176 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+R
+0
+#3202
+primal clay blank~
+A Receptionist~
+A Receptionist is here tapping her long fingernails on her desk.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+10 128 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+R
+0
+#3203
+primal clay blank~
+The Vault Guard~
+The Vault Guard stands here silently.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+10 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+R
+0
+T
+.....The Vault Guard is shrouded in powerful magic!~
+#0
+$~

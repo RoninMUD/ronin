@@ -1,0 +1,3070 @@
+#1800
+Flying in the sky.~
+   This area is directly above the Halfling Village.  Below, the
+various shopkeepers are selling their fine halfling goods,
+and a meat pie sounds rather appetizing at the moment.  Birds fly by
+every so often, chirping their songs and occasionally circle about.
+Looking far above, there appears to be a cloud which seems to stick
+out and seems very unnatural.
+~
+18 67371008 1
+D4
+~
+~
+0 -1 1801
+D5
+~
+~
+0 -1 3014
+E
+birds~
+They are of varying types and circle around you every so often.
+~
+E
+goods~
+The usual halfling garb is for sale, nothing terrible interesting.
+~
+E
+cloud~
+It is very high up and looks almost solid.
+~
+E
+clouds~
+The clouds look as if you could almost reach out and touch them!
+~
+E
+statue~
+The statue of the worm stretches around the Palace of Midgaard.
+~
+E
+figures~
+People can be seen below doing their daily activities.
+~
+E
+shopkeepers~
+They don't seem to notice you, their focus is on selling their goods.
+~
+E
+village~
+The village looks like a minature doll house.  The halflings size,
+combined with your height above them, makes them look like dolls
+living in little doll houses.
+~
+S
+#1801
+Flying in the sky.~
+   Continuing upward, the air begins to take a slight dip in temperature.
+Far below, the Bright and Grey Wizard colleges can be seen and the
+halflings look like tiny ants scuttling around. Despite the great height,
+a certain curiosity fills the air as the ever present cloud above gets
+closer and closer.
+~
+18 67371008 1
+D4
+~
+~
+0 -1 1802
+D5
+~
+~
+0 -1 1800
+E
+ants~
+They are actually halflings!
+~
+E
+colleges~
+The colleges are where aspiring wizards go to learn their trade.
+~
+E
+cloud~
+The cloud looks almost solid, as if it could support your weight.
+~
+E
+halflings~
+Little ants wandering about.  You chuckle as you imagine stomping them
+down, but then realize it probably wouldn't be a good idea to try.
+~
+E
+halflings~
+Little ants wandering about.  You chuckle as you imagine stomping
+them down.
+~
+E
+halflings~
+They look like little ants wandering about.  You chuckle as
+you imagine stomping them down.
+~
+S
+#1802
+Flying in the sky.~
+   The air is becoming thinner and it is getting harder and harder to
+breathe.  The cloud once thought to be getting closer and closer seems
+to be eluding all efforts to reach it.  From here, the dark recesses
+of the swamp as well as the arena in Pompeii can be seen.  The world
+seems so little this high up and there seems to be no limit to continuing
+flight upward.
+~
+18 67371008 1
+D0
+~
+~
+0 -1 1815
+D1
+~
+~
+0 -1 1815
+D2
+~
+~
+0 -1 1815
+D3
+~
+~
+0 -1 1815
+D4
+~
+~
+0 -1 1803
+D5
+~
+~
+0 -1 1801
+E
+pompeii~
+The city looks so small and unimpressive from here.
+~
+E
+cloud~
+The cloud is still a long way away.
+~
+E
+swamp~
+The swamp looks as deadly from up here as it does in person.
+~
+E
+arena~
+To be in the arena fighting for the crowds, what joy!
+~
+S
+#1803
+Flying high in the sky.~
+   This newly obtained height is unknown to most.  Few have
+ever dared to travel this high.  The winds here continually strive
+to blow travellers off course and even the birds do not fly this high.
+It would probably be a bad idea to look below, because of the great
+distance between this area and the ground.  The air continues to grow
+colder and thinner, but it somehow seems that proceeding with caution,
+one could lead to an area even higher.
+~
+18 67371008 1
+D4
+~
+~
+0 -1 1804
+D5
+~
+~
+0 -1 1802
+E
+below~
+As you look down the ground seems to be getting closer and closer?
+You suddenly realize you are falling uncontrollably!!! AHHHHH!!!!!
+Wait - it's just your mind playing tricks on you.....or so you hope.
+~
+S
+#1804
+Flying high in the sky.~
+   Exhausted due to the thin air and coldness, a momentarily pause is 
+needed for all to catch their breath.  All around the sky stretches out,
+only to meet with the land below on the far horizon.  This upward journey
+is almost complete, there are only two options now,  either die of
+exhaustion or reach the cloud above.  However, either option doesn't
+really sound that bad as each brings the reward of solid ground.
+~
+18 67371008 1
+D4
+~
+~
+0 -1 1805
+D5
+~
+~
+0 -1 1803
+E
+horizon~
+The land meets the sky.
+~
+E
+cloud~
+It looks rather close, but you don't really trust your senses at the
+moment.
+~
+S
+#1805
+Flying very high in the sky.~
+   This area is at a truly frightening height.  Looking down, Cantlin Castle
+can be seen to the far west and a tiny golden spec on the east horizon can
+also be seen, which is probably the golden pagoda.  The air is very thin here
+and it is getting quite cold.  In fact, it is so thin that any living being
+would lack the breath to speak at all.  Looking up, there appears
+to be a massive cloud floating in the air.  It appears to be almost
+solid, unlike any cloud known to exist.
+~
+18 68435972 1
+D4
+~
+~
+0 -1 1806
+D5
+~
+~
+0 -1 1804
+E
+cloud~
+The cloud is finally within reach!
+~
+E
+castle~
+The castle looks more like a rock from up here.
+~
+E
+pagoda~
+It looks like a single golden coin, waiting for you to pick it up.
+~
+S
+#1806
+Standing on a massive Cloud.~
+   Finally arriving at the cloud which loomed above for so long, the air is
+no longer thin and cold, but very breathable.  Inhaling a deep breath, it is
+discovered that the misty cloud can easily support your weight, albeit you
+have no idea how this is possible.  Off in the distance a gate lines the
+horizon and looking past the gate a series of clouds, each rising higher
+and higher, fill the sky.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1807
+D5
+~
+~
+0 -1 1805
+E
+clouds~
+The clouds appear to be platforms, rising far above.
+~
+E
+gate~
+Its golden appearance shines brightly.
+~
+S
+#1807
+Standing on a massive Cloud.~
+   The white mists of the cloud move and swirl constantly.  The fine vapors
+seem to penetrate your very existance as you breathe them in.  It feels almost
+like walking on solid ground, but when glancing down, all that can be seen is
+the cloudy mist.  To the north, a golden gate appears behind what looks to be a
+floating platform made of some sort of rock.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1808
+D1
+~
+~
+0 -1 1812
+D2
+~
+~
+0 -1 1806
+D3
+~
+~
+0 -1 1811
+E
+platform~
+It looks like it's made of rock.
+~
+E
+mist~
+It swirls and complete surrounds you, from the knees down.
+~
+E
+vapors~
+The vapors have no form and are constantly changing.
+~
+E
+gate~
+It's golden shine makes you think about golden coins.
+~
+S
+#1808
+Approaching the lower Gate to Heaven.~
+   The mists of the cloud have been replaced with a marble floor tile.
+This tile extends directly north to the golden gate and then abruptly stops.
+To the left and right, the mists slowly creep onto the tile, but for some
+reason cannot overcome its entirety.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1809
+D1
+~
+~
+0 -1 1814
+D2
+~
+~
+0 -1 1807
+D3
+~
+~
+0 -1 1813
+E
+gate~
+The gate looks very elaborate, perhaps you should get closer?
+~
+E
+mists~
+They twist and swirl, trying to overtake the tiles.
+~
+E
+tile~
+The tiles are made from marble.
+~
+E
+platform~
+It is comprised of several tiles.
+~
+S
+#1809
+Standing before the lower Gate to Heaven.~
+   The lower Gate to Heaven stands here.  Despite it's name, this gate is
+still very decorative and elaborate.  It's golden bars are decorated with
+many small gems which give the gate an almost holy glow.  The gates appear
+to go off forever in either direction, hinting that this is the only entrance
+to the lower levels of Heaven.  Looking through the gates, what appears to
+be a splendid and magnificant landscape can be seen, which looks very inviting
+indeed.
+~
+18 67108864 1
+D0
+~
+gate~
+1 -1 1810
+D2
+~
+~
+0 -1 1808
+S
+#1810
+Lower levels of Heaven.~
+   Here begins the lower levels of Heaven.  The golden gate lies directly
+behind and the cloud continues it's ascent up.  This is the only way
+leading to the actual glorious landscape which was previously seen through
+the lower gate to Heaven.  Clouds compose the floor here once again and
+there is a layer of mist floating directly above.
+~
+18 67108868 1
+D2
+~
+gate~
+1 -1 1809
+D4
+~
+~
+0 -1 1816
+S
+#1811
+Standing on a massive Cloud.~
+   The white mists of the cloud move and swirl constantly here.  The fine
+vapors seem to penetrate your very existance as you breathe them in.  It
+feels almost like walking on solid ground, but glancing below all that can
+be seen is the cloudy mist.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1813
+D1
+~
+~
+0 -1 1807
+E
+mist~
+It swirls and complete surrounds you, from the knees down.
+~
+E
+vapors~
+The vapors have no form and are constantly changing.
+~
+S
+#1812
+Standing on a massive Cloud.~
+   The white mists of the cloud move and swirl constantly here.  The fine
+vapors seem to penetrate your very existance as you breathe them in.  It
+feels almost like walking on solid ground, but glancing below all that can
+be seen is the cloudy mist.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1814
+D3
+~
+~
+0 -1 1807
+E
+mist~
+It swirls and complete surrounds you, from the knees down.
+~
+E
+vapors~
+The vapors have no form and are constantly changing.
+~
+S
+#1813
+Standing on a massive Cloud.~
+      The white mists of the cloud move and swirl constantly.  East of here,
+there appears to be a large solid object floating in the mists.  It is
+made from some sort of rock, but may not be.  Forward progress north is
+impossible, due to the large golden bars which are directly north.  It would
+seem that these are part of the golden gate.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1808
+D2
+~
+~
+0 -1 1811
+E
+object~
+It looks like a platform made of rock.
+~
+E
+mists~
+They look no different than any other mists in thie area.
+~
+E
+bars~
+They are very beautiful and shine like the sun.
+~
+S
+#1814
+Standing on a massive Cloud.~
+      The white mists of the cloud move and swirl constantly.  West of here,
+there appears to be a large solid object floating in the mists.  It is
+made from some sort of rock, but may not be.  Forward progress north is
+impossible, due to the large golden bars which are directly north.  It would
+seem that these are part of the golden gate.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1812
+D3
+~
+~
+0 -1 1808
+E
+object~
+It looks like a platform made of rock.
+~
+E
+bars~
+They are very beautiful and shine like the sun.
+~
+E
+mists~
+They look no different than any other mists in thie area.
+~
+E
+mists~
+They look no different than any other mists in thie area.
+~
+S
+#1815
+Flying in the sky.~
+   Heading off in all directions, the sky looks the same.  The
+views above and below look all too familiar and obviously the
+confusing nature of this area would make anyone lose their bearings.
+A light breeze is blowing seemingly from all directions at the same time.
+~
+18 67371008 1
+D0
+~
+~
+0 -1 1851
+D1
+~
+~
+0 -1 1851
+D2
+~
+~
+0 -1 1851
+D3
+~
+~
+0 -1 1851
+D4
+~
+~
+0 -1 1802
+D5
+~
+~
+0 -1 1851
+S
+#1816
+Lower levels of Heaven.~
+   Ascending the cloud, while passing through a layer of mist, leads to
+this splendid area.  Wildlife can be seen flying around and you swear you
+just saw what looks like a chipmunk scuttling around out of a corner of
+your eye.  This place spans off in every direction as far as the eye can
+see, but somehow in your mind, you know you are on a path going to the east
+and west.  But why, and how, do you know this?
+~
+18 67108868 1
+D1
+~
+~
+0 -1 1818
+D3
+~
+~
+0 -1 1817
+D5
+~
+~
+0 -1 1810
+E
+chipmunk~
+You can no longer see what you thought you just saw.
+~
+E
+wildlife~
+Birds and butterflies fly about, looking content.
+~
+S
+#1817
+Lower levels of Heaven.~
+  The west path has arrived at a fork.  It continues on to the west and
+north.  To the north, a small altar can be seen in the distance, while
+the west section seems to lead to where the path ends.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1819
+D1
+~
+~
+0 -1 1816
+D3
+~
+~
+0 -1 1831
+S
+#1818
+Crossroads at the lower levels of Heaven.~
+   The path continues in all directions.  This is what would be
+considered the crossroads within the lower levels.  There is no visible
+path, but again, the path somehow can be visualized within your mind.
+To the southeast, there seems to be some sort of disturbance and looking
+north, the cloud that comprises the floor can be seen to extend off in
+all directions.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1820
+D1
+~
+~
+0 -1 1825
+D2
+~
+~
+0 -1 1827
+D3
+~
+~
+0 -1 1816
+E
+cloud~
+It seems to extend infinitely.
+~
+E
+disturbance~
+A gray cloud can be seen off in the distance.
+~
+E
+crossroads~
+You can travel in any direction from this place.
+~
+E
+path~
+You cannot see it, but you are certain it is there.
+~
+S
+#1819
+Lower levels of Heaven.~
+   The path continues north, moving closer and closer to the small altar.
+The sound of birds chirping fills this area and you are beginning to feel
+more and more relaxed in this new environment.  The clouds seem to stretch
+out infinitely and to the southeast, there is a lone, small gray cloud
+which seems very out of place.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1821
+D2
+~
+~
+0 -1 1817
+E
+cloud~
+It's gray and looks very odd.
+~
+E
+birds~
+You can hear them chirping, but cannot pinpoint their exact location.
+~
+E
+altar~
+Yep.  It's still an altar.
+~
+S
+#1820
+Lower levels of Heaven.~
+   The northern path turns east here.  Looking north, the endless mass of
+cloud discourages any thought of traveling any further in that direction.
+The wind has picked up slightly here and this marks one of the corners of
+the lower levels.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1823
+D2
+~
+~
+0 -1 1818
+E
+cloud~
+It's vastness is fascinating.
+~
+E
+path~
+It turns east.
+~
+S
+#1821
+Approaching an altar.~
+   Approaching the altar, which appeared small before, now seems even
+smaller from this close.  There seems to be no reason for this altar
+to be constructed where it is and it's true purpose remains undiscovered.
+Looking above, another cloud hovers near by.  It looks like it is
+reachable, but probably not from this area.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1819
+D4
+~
+~
+0 -1 1822
+E
+cloud~
+It looks white and misty, but somehow solid.
+~
+E
+altar~
+It looks small and made out of some sort of stone.
+~
+S
+#1822
+At a minor altar.~
+   A small altar stands in the room.  It is a simple stone slab raised up
+on two smaller slabs.  There is no decoration at all, save for a cross
+which is etched on the front.  The stone is dark gray in color and is
+slightly cold to the touch.  You would guess that this place has been
+abandoned for some time, but this place must have a purpose.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1850
+D5
+~
+~
+0 -1 1821
+E
+cross~
+A simple cross, etched into the front of the altar.
+~
+E
+stone~
+It's gray in color and slightly cold to the touch.
+~
+E
+altar~
+It's small and made of some sort of stone.
+~
+S
+#1823
+Lower levels of Heaven.~
+   From this point, it is possible to either continue travel south or
+east.  Looking to the north, there is an endless sea of clouds and it
+would probably be unwise to travel in that direction.  The wind has died
+down a little here.  Staring off to the southeast, a gray cloud looms in
+the sky.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1824
+D2
+~
+~
+0 -1 1825
+D3
+~
+~
+0 -1 1820
+E
+cloud~
+It's gray.
+~
+S
+#1824
+Lower levels of Heaven.~
+   This is the most northeastern corner of the Lower levels of Heaven.
+This place looks pretty much like the rest of the Lower levels - quite
+unimpressive.  The vastness of space and clouds is the main feature here,
+but for some reason, it produces an aura which radiates a feeling of peace.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1826
+D3
+~
+~
+0 -1 1823
+E
+clouds~
+They're vast.
+~
+E
+space~
+It's vast.
+~
+S
+#1825
+Center of the lower levels of Heaven.~
+   This seems to be the center of the lower levels of Heaven.  The
+reality of the lower levels is that they are simply a huge cloud.
+Looking around, the white mists of the cloud extend off in all directions.
+To this point,  Heaven has been quite disappointing, given the high
+expectations of mortals, but looking far above a tiny golden object
+reflects in the light.  Perhaps the upper levels will be more splendid.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1823
+D1
+~
+~
+0 -1 1826
+D2
+~
+~
+0 -1 1828
+D3
+~
+~
+0 -1 1818
+E
+object~
+You get a crink in your neck looking at it.
+~
+E
+mists~
+They are translucent and constantly moving.
+~
+E
+cloud~
+The cloud is everywhere!
+~
+S
+#1826
+Lower levels of Heaven.~
+   From here, what appears to be the edge of the cloud which you stand on 
+can be seen to the east.  Peering over, the land looks very far below.  What
+appears to be a castle sits to the north of what looks like a tiny golden hut.
+Further south, there seems to be some sort of disturbance and it may be as
+a result of the looming gray cloud directly to the southeast.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1824
+D2
+~
+~
+0 -1 1829
+D3
+~
+~
+0 -1 1825
+E
+castle~
+It looks small enough to fit in your palm.
+~
+E
+hut~
+It's golden and reminds you of a minature pagoda.
+~
+E
+edge~
+As you peer at the edge, you suddenly are pushed over!
+You are FALLING!  ARGH!!!!!!!!
+Oh wait, it's just your imagination.
+~
+S
+#1827
+Lower levels of Heaven.~
+   The southern path curves to the east here.  To the south, the cloud
+ends and peeking over the edge, the lower cloud below can be seen.
+Looking west, the lower gate can be seen in all it's glory and far to
+the east there is a dark gray mass swirling around.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1818
+D1
+~
+~
+0 -1 1828
+E
+gate~
+It shines with a bright golden light.
+~
+E
+edge~
+You can see the lower gate from here.
+~
+E
+mass~
+It's dark and gray and resembles mist.
+~
+S
+#1828
+Lower levels of Heaven.~
+   This area seems almost overshadowed by the area directly to the east.
+There appears to be a section of a cloud which is not connected to the
+main cloud.  This seems rather odd, given the current position in the lower
+levels of Heaven.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1825
+D1
+~
+~
+0 -1 1829
+D3
+~
+~
+0 -1 1827
+E
+cloud~
+It's gray and not attached to the main cloud.
+~
+S
+#1829
+Lower levels of Heaven.~
+   This place seems a little different than the surrounding area. The peace
+here is slightly disturbed, but there is no apparent reason why.  There is a
+small, dark gray cloud to the east which may be the cause of the disturbance,
+however, there is no direct path to get there.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1826
+D1
+The cloud is as gray as it is forboding.  It lies about 10 feet
+to the east and you think it may be possible to jump to it.
+~
+cloud~
+10 -1 1830
+D3
+~
+~
+0 -1 1828
+E
+cloud~
+The cloud is as gray as it is forboding.  It lies about 10 feet
+to the east and you think it may be possible to jump to it.
+~
+S
+#1830
+A dark gray cloud.~
+   This cloud, for some reason, was detached from the main cloud.  It may
+be because of it's gray color, but it seems that the cloud itself is somehow
+trying to reattach itself, but is being held back by some unknown force.
+There is no peacefulness here.  The cloud is constantly swirling and churning,
+giving the impression that something is wrong.
+~
+18 33554432 1
+D3
+~
+cloud~
+10 -1 1829
+S
+#1831
+Lower levels of Heaven.~
+   The west path seems to encourage travelling on it.  The wildlife here
+is particularly active, and for an instant, a butterfly actually lands on
+your hand, before fluttering off about its business.  To the northeast,
+there is a small altar, probably the same altar that could be seen to the
+east, and it looks like there is a definite end to this path to the west.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1817
+D3
+~
+~
+0 -1 1832
+E
+wildlife~
+Birds chirp and fly around in circles.
+~
+E
+butterfly~
+It is bright orange and black and flutters around gracefully.
+~
+E
+altar~
+Yep.  It's an altar.
+~
+E
+cloud~
+It looks very high up from your current position.
+~
+S
+#1832
+Ascending further into the Heavens.~
+   The lower levels of Heaven end here.  Looking around, the vast sky and
+many other clouds are the dominating feature.  Far above, another cloud,
+very similar to the one you were on below can be made out.  Gazing at this
+newly discovered cloud, you suddenly are reminded of how high up you really are
+as the clouds to your right clear up for an instant and you realize that the
+blueness you see below, which looks like a lake, is actually the Sea of Love.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1831
+D4
+~
+~
+0 -1 1833
+E
+lake~
+It's the Sea of Love!
+~
+S
+#1833
+Ascending further into the Heavens.~
+   Ignoring your gut feeling to stop ascending, you continue your climb
+into the heavens.  Surprisingly, the air here is normal, not thin or
+cold.  Ascending higner and higher into the Heavens, peacefulness begins
+to penetrate the air.  There is also the thought that evil is not tolerated
+in such a place.
+~
+18 67371008 1
+D4
+~
+~
+0 -1 1834
+D5
+~
+~
+0 -1 1832
+S
+#1834
+Ascending further into the Heavens~
+   The cloud which once loomed above is now within reach. There is what 
+appears to be a path on it.  The path has spheres on either side of it
+which keeps it brightly lit and is made of golden bricks.  Nothing more
+can be made out without actually travelling on the path.
+~
+18 67371012 1
+D4
+~
+~
+0 -1 1835
+D5
+~
+~
+0 -1 1833
+S
+#1835
+On the holy path.~
+   Now standing on what appears to be a path made of golden bricks, strange
+spheres can be seen which line this path that emit a faint light.  The clouds
+which engulf the path from time to time look a little less solid here and
+it wouldn't be a good idea to step off the path.  Far ahead, what looks to
+be a gigantic staircase leading even further up into the heavens dominates
+the landscape.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1836
+D5
+~
+~
+0 -1 1834
+E
+staircase~
+It must be of considerable size, since you can see it from here.
+~
+E
+spheres~
+They emit a faint light, almost magically.
+~
+E
+clouds~
+They cover the path from time to time.
+~
+E
+bricks~
+They are golden and shine faintly.
+~
+S
+#1836
+On the holy path.~
+   The path forks off to the north and to the east here.  The staircase
+looms off in the distance to the north and to the east it looks as if the
+path simply heads off into the vastness of the clouds.  The bricks seem
+to be slightly worn here, and this must be a heavily traveled place.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1837
+D1
+~
+~
+0 -1 1839
+D2
+~
+~
+0 -1 1835
+E
+staircase~
+It looks even closer from here.
+~
+E
+staircase~
+It looks even close from here.
+~
+E
+bricks~
+They are golden, but a little more dull than the rest.
+~
+E
+path~
+It forks east and north.
+~
+S
+#1837
+Near the great staircase.~
+   The great staircase lies directly ahead.  Upon closer inspection, it
+seems to span off infinitely to the east and west.  The spheres which lined
+the path up to this point are no longer present, perhaps indicating some
+boundary was just crossed.  Above, clouds pass by and the occasional
+cloud pushes the mists against your face.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1838
+D2
+~
+~
+0 -1 1836
+E
+clouds~
+They happily float by, if that is possible.
+~
+E
+spheres~
+There are none here!
+~
+S
+#1838
+The great staircase.~
+   A great staircase towers here.  The stairs are pure white and stretch off
+in either direction as far the eye can see.  They ascend further into the
+Heavens, and an almost magical presence makes them glow softly.  The stairs
+are not very steep and even though there is no banister to be seen, it wouldn't
+be any problem to climb the staircase to the levels above.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1837
+D4
+The staircase leads upward into the heavens, but one would have to
+climb it to be sure.
+~
+staircase~
+11 -1 1843
+E
+staircase~
+It leads up.
+~
+E
+stairs~
+The stairs are pure white and ascend up into heaven.
+~
+S
+#1839
+On the holy path.~
+   The path leads out into the vastness of the coulds.  It seems
+like there is no end to this path, but ahead it does switch directions,
+so maybe it does lead to someplace.  The bricks here seem to be losing
+their shine, and farther down the path, this appears to be happening more
+and more.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1840
+D3
+~
+~
+0 -1 1836
+E
+someplace~
+It is better than no place!
+~
+E
+path~
+Yep, it's a path.
+~
+E
+clouds~
+They are vast indeed.
+~
+E
+bricks~
+They are not as well kept as the previous ones.
+~
+S
+#1840
+On the holy path.~
+   The path abruptly turns south here.  As you look in that direction,
+it appears that the path itself ends, or is being swallowed by the
+clouds themselves.  Looking in any other direction, all that can be
+seen is clouds, save for the path which lies below.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1841
+D3
+~
+~
+0 -1 1839
+E
+clouds~
+They are everywhere!
+~
+E
+path~
+It turns south.
+~
+S
+#1841
+End of the holy path.~
+   The holy path ends abruptly here.  There is no warning or no sign, the
+path simply ends.  Looking around, one could probably stray from the path,
+but the vastness of the surrounding area makes it seem like an unwise
+decision.  The bricks here are not as golden as the rest.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1840
+D5
+There are bricks on the floor below.  What looks like a large crack
+can be seen in the middle of the bricks.
+~
+crack~
+9 -1 1842
+E
+crack~
+The crack is rather large and you think you may be able to crawl
+through, but you have no idea what lies on the other side.
+~
+E
+bricks~
+The bricks are a dull golden color.  There appears to be a crack in
+the middle of the path where it ends.
+~
+S
+#1842
+Below the holy path.~
+   Managing to wriggle through the crack in the holy path, you are now
+viewing a very small room within the cloud which supported the holy path.
+It is dark and damp here and the cloud keeps churning, making it hard
+to concentrate.  Every so often what appears to be a figure moves in and
+out of the  misty cloud.  Perhaps, your imagination is dreaming this up, at
+least you hope so.
+~
+18 33587201 1
+D4
+~
+crack~
+9 -1 1841
+S
+#1843
+Atop the great staircase.~
+   The top of the great staircase opens up to a massive cloud.  The climb up
+was not that difficult, but it has made you slightly out of breath.  A massive
+white cloud, even bigger than the one below now spans off in all directions.
+This cloud is different because it has columns to decorate it.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1844
+D5
+The staircase leads downward into the lower levels, but one would have
+to climb it to be sure.
+~
+staircase~
+11 -1 1838
+E
+staircase~
+It leads down.
+~
+S
+#1844
+A huge white cloud.~
+   Stepping onto the massive cloud which seemed to span off infinitely
+in every direction, the white mists of the cloud swirl on the ground.
+These mists engulf your feet and sometimes rise as high as your knees,
+but somehow the cloud seems solid walking around.  There are columns on
+this cloud which appear to be for decorative purposes only because they
+support only the air above them.  To the north, a descending staircase
+leads to the lower levels.
+~
+18 67108868 1
+D0
+~
+~
+0 -1 1843
+D2
+~
+~
+0 -1 1845
+D3
+~
+~
+0 -1 1846
+E
+staircase~
+It is enormous and glows softly.
+~
+E
+mists~
+They swirl and twist as if alive.
+~
+E
+columns~
+They are made of marble and have a dull finish.
+~
+S
+#1845
+A huge white cloud.~
+   This area still stands on the massive cloud.  No matter which
+direction travelled, the cloud seems to never end.  The decorative
+columns fill the landscape here as well.  The mists of the cloud
+are ever present and you are beginning to long to walk upon solid
+ground. A pavillion can be seen to the west.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1844
+D3
+~
+~
+0 -1 1848
+E
+mists~
+They swirl and twist at your every move.
+~
+E
+pavillion~
+It looks rather out of place.
+~
+E
+columns~
+They are made of marble and have a dull finish.
+~
+S
+#1846
+A huge white cloud.~
+   This area is in the middle of a massive cloud.  To the south of here,
+there is a small pavillion.  In either of the other directions, all that
+can be seen is the cloud.  Columns are placed about to provide some
+direction and the ever present swirling mists seem to engulf your very soul.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1844
+D2
+~
+~
+0 -1 1848
+D3
+~
+~
+0 -1 1847
+E
+columns~
+They are made of marble and have a dull finish.
+~
+E
+pavillion~
+It is small and to the south.
+~
+E
+cloud~
+It is white and misty and expands out in all directions.
+~
+S
+#1847
+At the edge of a huge white cloud.~
+   Walking westward, and not really paying attention, you suddenly
+arrive at the edge of the massive cloud.  Luckily, you did not fall
+over the edge because it looks like a long, long way down.  Columns
+line the edge of the cloud and perhaps serve as a warning for those
+unfortunate souls who do not pay attention while walking around.
+Peering over the edge, you can see a dark landscape which you
+would guess to be the infamous swamp.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1846
+D2
+~
+~
+0 -1 1849
+E
+columns~
+They form a sort of guard rail to prevent people from falling over
+the edge.
+~
+E
+edge~
+It's an edge alright!
+~
+E
+swamp~
+It is dark and looks deadly, even from here.
+~
+S
+#1848
+A huge white cloud.~
+   This is what appears to be the center of the massive cloud.  The
+columns are no longer used solely for decorative purposes here, they form
+a support basis for the small pavillion which is here.  The cloud continues
+to fill the landscape in each direction and does not seem to end. Far to
+the northeast the top of a staircase sticks out of the clouds.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1846
+D1
+~
+~
+0 -1 1845
+D2
+~
+~
+0 -1 1853
+D3
+~
+~
+0 -1 1849
+E
+staircase~
+Perhaps you should go close to get a better look?
+~
+E
+pavillion~
+It is supported by six columns and has a golden color.
+~
+E
+columns~
+They support the pavillion here and have a dull golden color.
+~
+S
+#1849
+At the edge of a huge white cloud.~
+   The cloud has finally come to an end here.  There are columns along
+the edge of the cloud and peering over a rather large body of water is
+below.  The cloud continues to the east and north, but it appears to end
+to the south as well, however, the swirling mists make it difficult to tell.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1847
+D1
+~
+~
+0 -1 1848
+D2
+The mists twist and swirl and look semi-transparent, almost like one
+could jump through them.
+~
+mist~
+10 -1 1897
+E
+cloud~
+It's massive and ends to the west.
+~
+E
+columns~
+They line the edge of the cloud to prevent people from falling
+over!
+~
+E
+water~
+It's the Sea of Love!  How lovely!
+~
+E
+mists~
+The mists twist and swirl and look semi-transparent, almost like one
+could jump through them.
+~
+S
+#1850
+Behind the altar.~
+   Standing behind the altar, it looks almost identical to the front
+side, except there is no cross etched on the back.  On the stone slab, 
+there is what appears to be a pressure plate.  It is about 5 inches
+square, the perfect size for a hand to push it in.  Looking around,
+there is no one watching, but it would still be a bad idea to mess
+around with the altar.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1822
+D5
+~
+plate~
+8 -1 1852
+E
+stone~
+It's still gray and cold to the touch on this side.
+~
+E
+plate~
+You could push this.
+~
+E
+plate~
+You could push this in.
+~
+S
+#1851
+Flying in the sky.~
+   Heading off in all directions, the sky looks the same.  The
+views above and below look all too familiar and obviously the
+confusing nature of this area would make anyone lose their bearings.
+A light breeze is blowing seemingly from all directions at the same time.
+~
+18 67371008 1
+D0
+~
+~
+0 -1 1815
+D1
+~
+~
+0 -1 1815
+D2
+~
+~
+0 -1 1815
+D3
+~
+~
+0 -1 1815
+D4
+~
+~
+0 -1 1815
+D5
+~
+~
+0 -1 1801
+S
+#1852
+Below the altar.~
+   Below the altar gives the sense that this place was not meant to be
+disturbed.  The entire area is surrounded by mist and it swirls around
+with a mesmerizing pattern and you cannot seem to get the motions out of
+your head.
+~
+18 536871040 1
+D4
+~
+~
+1 -1 1850
+E
+pattern~
+It looks like nothing you have seen before.
+~
+E
+mist~
+It swirls and swirls and swirls.
+~
+S
+#1853
+Approaching the middle gate.~
+   The endlessness of the massive cloud has finally come to a close.  From
+here, another gate to the south can be seen, but there doesn't seem to be a
+reason why there would be a gate up here.  At this moment, any sight is welcome
+to break up the monotany of the clouds.  There are no columns in this area.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1848
+D2
+~
+~
+0 -1 1854
+E
+gate~
+It is south of your present location.
+~
+S
+#1854
+Standing before the middle Gate to Heaven.~
+   The middle Gate to Heaven is unlike any other gate in existence.  It opens
+vertically, rather than horizontally and seems to defy the laws of physics,
+yet somehow it does exist.  The bars are completely golden and shine very, very
+brightly.  At what would be the top of the gate, there are large gems of
+various types atop the individual bars and pillars made of pure ivory decorate
+the gate every so often.  This is truly a magnificent sight.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1853
+D4
+~
+gate~
+1 -1 1855
+E
+pillars~
+These ivory structures rival the Ivory Tower itself.
+~
+E
+gate~
+It is the middle Gate to Heaven.
+~
+E
+gems~
+The could be well worth 1,000,000 coins each.
+~
+E
+bars~
+They are golden and shine brightly.
+~
+S
+#1855
+The middle levels of Heaven.~
+   These areas are known as the middle levels of Heaven.  No longer is the
+floor here a cloud, but the ground here seems actually solid and to the east
+walls begin to materialize from the air.  Below, the middle Gate to Heaven
+shines brightly and the massive cloud looming beneath it can be seen.
+~
+18 67108868 1
+D1
+~
+~
+0 -1 1856
+D5
+~
+gate~
+1 -1 1854
+E
+gate~
+The middle gate to Heaven looks just as splendid from this side.
+~
+E
+walls~
+They seem to form out of the air itself!
+~
+E
+cloud~
+It is massive and looks a little smaller from up here.
+~
+S
+#1856
+Halls of Heaven.~
+   Entering this room, the air directly to the left and right slowly
+forms into a solid wall.  Looking ahead, it appears to ultimately turn
+into a hallway.  The hallway forks here, with one hall running to the
+north and one continuing eastward.  The walls appear to be made of some
+sort of marble, and are slightly warm to the touch.  Looking above, the
+ceiling shines slightly to provide light in this mystical place.
+~
+18 67108872 1
+D0
+~
+~
+0 -1 1857
+D1
+~
+~
+0 -1 1860
+D3
+~
+~
+0 -1 1855
+E
+wall~
+It is featureless and slightly warm to the touch.
+~
+E
+ceiling~
+It glows, but you are unsure how this is possible.
+~
+S
+#1857
+Halls of Heaven.~
+   Continuing down the northern hallway, the walls continue onward, and
+there is a visible dead end up ahead.  There are no visible decorations
+in this section of the hallway, but there is a small stand on the west
+wall.
+~
+18 67108872 1
+D0
+~
+~
+0 -1 1858
+D2
+~
+~
+0 -1 1856
+E
+stand~
+It looks wooden and there is a vase on the top.
+~
+E
+vase~
+There is a floral pattern on it and there are some flowers in it.
+~
+E
+walls~
+They are still featureless and warm to the touch.
+~
+E
+flowers~
+They smell very nice and you think you had better leave them alone.
+~
+S
+#1858
+Halls of Heaven.~
+   The northern hallway suddenly ends here.  There are three doors here, one
+in each direction, except for south.  Not being sure what is behind these
+doors, a good guess would be that it is something or someone important, due
+to the decorations on them.  The western door is made of wood and has an
+intricate carving of a book on it.  The northern door is made of marble and
+carved into the center is a giant container of some sort, with what appears
+to be liquid in it.  The final door to the east is made of solid gold and a
+painting of a treasure hoard decorates it.
+~
+18 67108872 1
+D0
+~
+door~
+2 1818 1859
+D1
+~
+door~
+2 1818 1866
+D2
+~
+~
+0 -1 1857
+D3
+~
+door~
+2 1818 1865
+E
+carving~
+It looks like a giant book with a lot of pages in it.
+~
+E
+container~
+It appears to be transparent and you can see something inside it.
+~
+E
+painting~
+*FAINT* If you had that much money you could retire now!
+~
+S
+#1859
+A Heavenly Research Room.~
+   This appears to be some sort of alchemy research room.  There is a single
+table in the center of this place with several strange-looking glass
+containers on it.  Inside each, there are many different colored liquids,
+some bubbling, some stable.  Occasionally, some mist floats around, emitted
+from one of the many containers.  There are some papers on the floor.  This
+place is quite messy.
+~
+18 67108872 1
+D2
+~
+door~
+2 1818 1858
+E
+papers~
+Formula for fury potion .... and two ...das...e eq. ...as ... adamantium indeed!
+~
+E
+containers~
+They are glass and contain liquids.
+~
+E
+mist~
+You think it a bad idea to try and touch the mist.
+~
+S
+#1860
+Halls of Heaven.~
+   The hallway leads eastward and seems to open up ahead.  This section
+is exactly the same as the previous, except that there is no northern
+passage.  Looking ahead, there appears to be a huge room at the end of
+this hallway.  There is a slight breeze coming from the east and it
+appears that it originates from the room ahead.
+~
+18 67108872 1
+D1
+~
+~
+0 -1 1861
+D3
+~
+~
+0 -1 1856
+E
+breeze~
+It looks like air.
+~
+E
+room~
+It looks very big from here, perhaps you should enter it?
+~
+S
+#1861
+Before a Great Room.~
+   The once dull hallway suddenly opens up to a large room that is highly
+decorated.  The walls are lined with gems of many different colors and
+themselves are made of pure ivory.  The floor is made of polished marble
+and is sectioned of into square tiles.  A light mist floats around the room
+and the ceiling looks to be made of a cloud.  Staring deeper into the cloud,
+occasional images form and them dissapate.  There is a feeling of true peace
+about this place.
+~
+18 67108872 1
+D1
+~
+~
+0 -1 1862
+D2
+~
+~
+0 -1 1863
+D3
+~
+~
+0 -1 1860
+S
+#1862
+A Great Room.~
+   The northeastern corner of this room houses a large pillar which ascends
+into the cloudlike ceiling.  The walls are still decorated with various gems,
+but the pillar has several extermely large diamonds embedded within it's mass.
+Looking south, the hallway seems to resume, but your attention is drawn once
+again to the large diamonds.
+~
+18 67108872 1
+D2
+~
+~
+0 -1 1864
+D3
+~
+~
+0 -1 1861
+E
+pillar~
+It seems to have no structural purpose, but exists for decoration only.
+~
+E
+diamonds~
+They are huge and look very valuable.
+~
+E
+mist~
+It swirls in a random sort of way.
+~
+E
+tiles~
+They are about 2 feet square.
+~
+E
+gems~
+They look valuable and unstealable.
+~
+S
+#1863
+A Great Room.~
+    In the southwestern corner of the room, there is a gigantic statue of
+what appears to be an angel fighting a devil which is chained to a stone.
+The angel wields a gigantic sword which is surrounded by some sort of aura
+and it is striking the devil in the chest.  Below the statue, there is a golden
+plaque with lettering etched into it.
+~
+18 67108872 1
+D0
+~
+~
+0 -1 1861
+D1
+~
+~
+0 -1 1864
+E
+statue~
+It is made of gold and depicts an angel slaying a devil.
+~
+E
+plaque~
+"The Archangel Alexander slaying the Archdevil Cesteus"
+~
+S
+#1864
+A Great Room.~
+   The room seems to end at this point.  To the south the hallway resumes,
+and  a statue to the west can be seen as well as a large pillar to the
+north.  The walls here are decorated with gems, and looking above a golden
+rope hanging from the cloudlike ceiling is noticed.  It swings gently
+directly in front of your face.
+~
+18 67108872 1
+D0
+~
+~
+0 -1 1862
+D2
+~
+~
+0 -1 1875
+D3
+~
+~
+0 -1 1863
+D4
+A golden rope hangs down from above and looks like you could
+climb it.
+~
+rope~
+11 -1 1867
+E
+pillar~
+There are some very shiny items lodged in the pillar.
+~
+E
+statue~
+It looks like two figures fighting.
+~
+E
+rope~
+It is made of golden threads and looks like you could climb it.
+~
+S
+#1865
+A Heavenly Library.~
+   This is one of the libraries of Heaven.  Due to it's small size, it can
+be safely assumed that there must be many more such places in Heaven.  There
+are shelves on every wall each lined with hundreds of texts.  Glancing at some
+of the shelves, titles such as, "Holy combat tactics" and "Granting Mortals
+Miracles" are present.  In one corner, there is a small desk with a lamp on it
+which is probably used for studying the many texts in this room.
+~
+18 67108872 1
+D1
+~
+door~
+2 1818 1858
+E
+texts~
+The texts are scattered about and make little sense, except an exerpt
+from a golden book which tells of forging seven points of a star to
+gain access to Heaven Proper.
+~
+E
+shelves~
+They are packed with books and scrolls.
+~
+E
+books~
+You notice one entitled, "10 Traits of Effective Holy Blessers".
+~
+E
+desk~
+It is small and in the corner in an out of the way place.
+~
+E
+lamp~
+It glows softly with a mystical light.
+~
+S
+#1866
+A Heavenly treasure room.~
+   This place is a good find indeed!  There are, what would be estimated
+as, millions of coins all over.  Scattered about the floor, they form huge
+piles of pure richness.  Following human instinct, you dive in to try
+to grab as many as you could possibly carry, but to your surprise, your
+hands go right through the coins.
+~
+18 67108872 1
+D3
+~
+door~
+2 1818 1858
+E
+coins~
+You cannot seem to grab any!  What trickery is this?!?
+~
+S
+#1867
+Above a Great Room.~
+   The floor of this area is the cloud which was the ceiling of the
+Great Room below.  Looking around, this cloud seems only to serve as
+the ceiling of the room, but to the north, there seems to be several
+pillars rising as far up as the eye can see.  The rope used to climb
+up on, simply levitates in the air and does not move or seem to be
+attached to anything.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1868
+D5
+~
+rope~
+11 -1 1864
+E
+cloud~
+Yep, it's a cloud!
+~
+E
+pillars~
+They look quite massive and rise farther up into the heavens.
+~
+E
+rope~
+Hmm knowing that it was not attached to anything, you wonder
+if you would have climbed it in the first place.....
+~
+S
+#1868
+Among the Pillars of Heaven.~
+   Pillars line a walking space on this cloud.  Far to the north a bright
+light can be seen and it does not resemble anything familiar.  The pillars
+themselves are gigantic and attempting to look at the top of any of them would
+surely cause a sore neck.  To the east, there are two pillars with some
+strange writing on them and it looks like there is a path between them to
+another area.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1869
+D1
+~
+~
+0 -1 1892
+D2
+~
+~
+0 -1 1867
+E
+top~
+You now have a sore neck!!!!!
+~
+E
+cloud~
+The could serves as the floor, much like the lower levels.
+~
+E
+pillars~
+They are very large and made of some sort of stone.
+~
+E
+writing~
+"Whoso ever travel this path, shall encounter hardships of
+the most fearful kind.  Know that only the true shall ever
+return once entering, so it has been written, so it shall
+be done"
+~
+S
+#1869
+Among the Pillars of Heaven.~
+   The long walk down the line of pillars seems to last forever.  To the
+left and right the ever present pillars dominate the landscape and the once
+distant shining object now appears within reach.  One of the pillars to
+the left has some small indentations on it, unlike any of the others.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1870
+D2
+~
+~
+0 -1 1868
+D4
+One of the pillars has many indentations all over it which a skilled
+climber could probably use to scale it.
+~
+pillar~
+11 -1 1871
+E
+pillar~
+There are indentations all over it.
+~
+E
+indentations~
+A skillful climber could probably scale the pillar using these
+indentations.
+~
+E
+object~
+It looks like a gigantic altar.
+~
+S
+#1870
+A Holy Altar.~
+   The line of pillars has finally come to an end at what appears to be
+some sort of praying area.  There is a massive stone slab set upon two
+small golden pillars.  The slab has several writings on the front and
+a gigantic carved cross is on the top.  Banners of some magical material
+levitate behind the altar and are embroidered with some pictures.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1869
+E
+banners~
+One has a picture of a forest, and the other a picture of
+a lightning bolt striking a demon.
+~
+E
+slab~
+It is warm to the touch.
+~
+E
+pictures~
+One is a demon getting hit by an energy bolt, the other looks
+like an overgrown forest.
+~
+E
+pillars~
+They are about 2 feet high and support the stone slab.
+~
+S
+#1871
+Climbing a Pillar.~
+   Scaling the gigantic pillar now seems like a bad idea.  Looking
+up, it seems to rise forever.  Far above, a misty cloud surrounds it.
+The one thing that does seem favorable is that there are several small
+indentations within the pillar which were designed to help someone
+climb the pillar.  Looking down, the great room can be seen and far
+off in the distance, some beasts can be seen flying about.
+~
+18 67108864 1
+D4
+You could probably continue your climb up the pillar.
+~
+pillar~
+11 -1 1872
+D5
+You could probably continue your climb down the pillar.
+~
+pillar~
+11 -1 1869
+E
+room~
+It's the great room from which you just came.
+~
+E
+cloud~
+The cloud looks like any other cloud, except it appears to swallow
+the pillar entirely.
+~
+E
+beasts~
+Every so often they sparkle in the light like a golden coin.
+~
+E
+mist~
+The mist swirls slightly.
+~
+E
+indentations~
+Perfect for getting a grip on the massive pillar.
+~
+E
+pillar~
+You could probably continue your climb up.
+~
+S
+#1872
+Nearing the top of the Pillar.~
+   The pillar has penetrated a thick layer of mist and the area surrounding
+the pillar looks like another of the levels of Heaven.  The mist below, once
+only vapor, now looks very stable and safe to walk on.  In fact, the area
+below cannot be seen through it from here.  Looking up, the pillar continues
+it's ascent higher and higher into the sky.  
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1873
+D4
+You could probably continue your climb up the pillar.
+~
+pillar~
+11 -1 1890
+D5
+You could probably continue your climb down the pillar.
+~
+pillar~
+11 -1 1871
+E
+cloud~
+It looks solid enough to stand on.
+~
+E
+pillar~
+It contiunes upward, the indentations still present to aid your climb up.
+~
+S
+#1873
+Upper Level of Heaven.~
+   The surrounding area is what Heaven has always been pictured to be.  It is
+bright like the day and even during the night, the sun shines from above.
+Tiny cherubs flutter about carrying flower petals and drop them happily here
+and there while a faint breeze gently disturbs the velvet banners which
+adorn the small columns which dot the landscape.  Worries seem to disappear
+and this happy place makes all who enter smile at the magnificent wonder of
+Heaven.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1874
+D3
+~
+~
+0 -1 1872
+E
+cherubs~
+They fly overhead and drop the occasional flower petal on your head.
+~
+E
+banners~
+They blow slightly in the breeze, and depict acts of goodness.
+~
+E
+columns~
+They are about 12 inches in diameter and stand about 10 meters
+tall.  They have banners hanging from them.
+~
+S
+#1874
+Upper Level of Heaven.~
+   The columns begin to form an aisle and their random placement now seems not
+so random afterall.  Cherubs still flutter about and to the far north, what
+appears to be yet another gate can be seen.  This gate, however, looks quite
+different, it is not bright and shiny, but rather white in color.  At any rate,
+it looks like it is very far from your current location.  The aisle begins to
+look more like a path with the columns guidance and it continues east.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1879
+D3
+~
+~
+0 -1 1873
+E
+cherubs~
+They flutter about.
+~
+E
+gate~
+It looks very far away indeed.
+~
+E
+columns~
+They now form an aisle.
+~
+E
+aisle~
+It heads off to the east.
+~
+S
+#1875
+Halls of Heaven.~
+   The hallway now turns eastward and continues in that direction. This
+portion is as dull as the rest and it is impossible to resist the urge to
+look back to the room to the north because the aura of peace has left this
+area.  The floor here seems to be getting worn, very similar to the way it
+did on the holy path.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1864
+D1
+~
+~
+0 -1 1876
+E
+floor~
+It is getting more worn as you progress.
+~
+S
+#1876
+Halls of Heaven.~
+   The hall continues on eastward.  The floor here is getting very
+worn and there are some scratches on the walls.  Looking ahead, it
+looks like the hallway suddenly ends.  The walls here are made of
+marble like the rest of the halls, but the color seems slightly
+different, a darker shade, perhaps.  The light the ceiling used to
+provide is getting dimmer and dimmer.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1877
+D3
+~
+~
+0 -1 1875
+S
+#1877
+Dead end in the Halls of Heaven.~
+   This is a dead end.  The hallway, for some unknown reason stops here.
+The walls have some claw marks very similar to the ones in the previous
+rooms, but in greater number.  The floor is very worn and seems to
+disentigrate into what looks like a cloud.  The cloud looks very thin and
+occasionally the world below can be seen.
+~
+18 0 1
+D3
+~
+~
+0 -1 1876
+D5
+The mists swirl and you reach down to feel the moisture on
+your fingertims, but you feel none.  For some reason the
+mists do not seem to be made of water vapor?  Wierd.
+~
+illusion~
+9 -1 1878
+E
+floor~
+The floor slowly turns into a cloud.
+~
+E
+marks~
+They are several such marks around and they look like they were
+made by a powerful being indeed.
+~
+E
+cloud~
+The mists swirl and you reach down to feel the moisture on
+your fingertims, but you feel none.  For some reason the
+mists do not seem to be made of water vapor?  Wierd.
+~
+E
+mists~
+The mists swirl and yet you cannot seem to verify they actually
+exist.  Actually, you stick your foot in the mists and your foot
+vanishes!  Perhaps this is some sort of illusion?
+~
+E
+illusion~
+What a tricky illusion!  It looks like you would fall if you
+tried to crawl down through the cloud, but there seems to be
+something below.
+~
+S
+#1878
+A secret room.~
+   This place looks like it was hidden for a reason.  There are chains all
+along the wall and what looks like some archaic runes written on the floor.
+Although this place looks like a dungeon, the feeling of holiness still
+penetrates the immediate area, as if this place was used for some good purpose.
+Peering above, the illusion looms, but it is possible to see right through
+it to the hallway above.
+~
+18 67141632 1
+D4
+The illusion is not so tricky to see throught when you know it's
+there.  You could probably crawl through it to get out of this
+room.
+~
+illusion~
+9 -1 1877
+D5
+~
+runes~
+2 1806 1899
+E
+illusion~
+Not so tricky when you know it's there, eh?
+~
+E
+hallway~
+You could probably crawl back up there.
+~
+E
+runes~
+You have no idea what they say or mean.
+~
+E
+chains~
+They are broken and some links are spread around the room.
+~
+E
+floor~
+There are runes on the floor.
+~
+S
+#1879
+Upper Level of Heaven.~
+   The path forks here, continuing to the east and also splitting north.
+Looking down the northern path, a large gate can be seen far off in the
+distance, while to the east the path seems to just head off into the
+horizon.  The columns here also form a fork and continue to outline the
+path in either direction.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1882
+D1
+~
+~
+0 -1 1880
+D3
+~
+~
+0 -1 1874
+E
+gate~
+It is far away, perhaps you should get a closer look?
+~
+E
+path~
+It's the area between the columns.
+~
+E
+columns~
+They outline the paths north and east.
+~
+S
+#1880
+Nearing a Great Throne.~
+   Continuing down the seemingly endless eastward path, which at one time
+seemed to lead nowhere, suddenly seems like it does have a purpose after
+all.  It continues off eastward indefintely, but there is a small opening in
+the columns to the south here that leads to a massive throne.  Judging by the
+vastness of the area to the east, it is probably not prudent to continue in
+that direction.
+~
+18 67108864 1
+D2
+~
+~
+0 -1 1881
+D3
+~
+~
+0 -1 1879
+E
+columns~
+The ever present pillars line the path.
+~
+E
+eastward~
+You do NOT want to go in that direction.
+~
+E
+throne~
+It looks very beautiful and ornamented.
+~
+S
+#1881
+A Great Throne.~
+   This room is completely filled with a massive throne, the back of
+which stands over one hundred feet tall.  It is made entirely of
+solid marble and there are gems which adorn it on all sides.  It is
+padded with a deep red velvet lining, which compliments it very nicely.
+The arms of the throne are wide and there are papers resting on the
+rests.  However magnificent this looks, it is probably used more for show
+than a place for a king to sit.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1880
+E
+gems~
+They sparkle brightly and look very valuable.
+~
+E
+velvet~
+It is very soft to the touch and would probably make the throne
+very comfortable indeed.
+~
+E
+throne~
+It is unlike any throne you have seen before!
+~
+E
+papers~
+You cannot make out the writing on the papers.
+~
+S
+#1882
+Upper Level of Heaven.~
+   The columns continue to outline a makeshift north-south path.  To
+the east and west, a line of columns is present and looking past it,
+the floor simply ceases to exist.  Peering over the edge, it looks like
+a painfully long way back down to the earth.  Far to the north, a giant
+white gate can be seen.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1883
+D2
+~
+~
+0 -1 1879
+E
+columns~
+They line the path.
+~
+E
+cloud~
+The floor stops about five feet outside the columns.
+~
+S
+#1883
+Upper Level of Heaven.~
+   The columns still continue to line the north-south path, guarding the
+still, very dangerous looking edge, however, there is a small break in the
+line which opens a pathway to the west.  Looking ahead, the white gate can now
+be seen clearly.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1885
+D2
+~
+~
+0 -1 1882
+D3
+~
+~
+0 -1 1884
+E
+gate~
+It is getting closer!
+~
+E
+columns~
+They continue to line the path.
+~
+S
+#1884
+Heavenly Forge.~
+   This area looks specifically designed as a blacksmiths work area.
+There is a huge stone oven to the left, which generates an extreme
+amount of heat.  Several barrels of water are scattered about the room
+as are racks of weapons and armor.  The distinguishing feature, however,
+is the huge anvil in the center of the room.  It appears to be magical
+in some sort of wierd way, glowing softly and emitting a faint hum.
+~
+18 67108864 1
+D1
+~
+~
+0 -1 1883
+E
+anvil~
+It humms softly and emits a faint glowing light.
+~
+E
+stove~
+Made of stone and the inside is red hot!
+~
+E
+racks~
+Several beautiful weapons and armor are contained within.
+~
+S
+#1885
+Upper Level of Heaven.~
+   The edge of the clouds now seems to give way to the widening
+path.  Although, the path doesn't widen by much, it still looks
+like it will up ahead.  Columns decorate this area as well, but
+up ahead you can see that they begin to widen along with the
+path.  Farther ahead, the white gate can be seen and it is
+difficult to see anything behind it, but what looks like a
+circle of statues can be faintly seen.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1887
+D2
+~
+~
+0 -1 1883
+E
+path~
+It is beginning to widen out here.
+~
+E
+clouds~
+They suddenly end at the dangerous edge.
+~
+E
+edge~
+Looks very dangerous if you step over it!
+~
+E
+gate~
+It is white and almost within reach.
+~
+E
+circle~
+The statues are too far away to make out.
+~
+E
+cloumns~
+They line the path and begin to widen.
+~
+S
+#1886
+The Holiest place you have ever been.~
+   This area is directly in the middle of a circle of rocks.  Upon close
+inspection, the rocks are actually statues, each of a different hero of
+heaven.  A mystical light shines from above causing a feeling of being judged
+at this very moment, however, this causes no fear.  There is a great aura of
+holiness radiating from the statues as well as the ground.  This must be a
+holy place indeed.
+~
+18 67149824 1
+D2
+~
+~
+0 -1 1889
+E
+outline~
+The outline seems as if something needs to be put in it, as if it is
+somehow uncomplete.
+~
+E
+stone~
+It has some unrecognizable writing and an outline of a seven point star.
+~
+E
+slab~
+It has some unrecognizable writing and an outline of a seven point star.
+~
+E
+arm~
+It is pointing to a small stone slab directly in the center of the circle.
+~
+E
+light~
+It shines from above and gently warms you.
+~
+E
+ground~
+It is covered with grass.
+~
+E
+statues~
+Each depicts one of heavens finest heroes.  The arm on the northmost statue seems a
+little worn out compared with the rest of the statue.
+~
+S
+#1887
+Approaching a gigantic gate.~
+   The pearly white gate now dominates the view of the column-lined
+path.  It looks to stand very high, but despite it's reputation, it
+does not appear to be very decorative.  The line of columns now begin
+to span off on either side, widening the path as it approaches the
+gate.
+~
+18 67108864 1
+D0
+~
+~
+0 -1 1888
+D2
+~
+~
+0 -1 1885
+E
+columns~
+They no longer line a path, but begin to span off to the east and
+west.
+~
+E
+gate~
+It's pearly white color shines faintly.
+~
+S
+#1888
+Pearly White Gates.~
+   This area is directly before the famous Pearly White Gates of Heaven.
+The bars are made of pearl and have gold rings decorating them.  Every
+few seconds, the light hits the rings just right making them sparkle and
+shine like the stars of the night.  The height of the gate seems to be
+very tall, almost fifty feet and beyond the gate, the clouds which served
+as the floor are replaced by a grassy landscape.  Such a plesant place
+beckons to be entered.
+~
+18 67108864 1
+D0
+~
+gate~
+2 1801 1889
+D2
+~
+~
+0 -1 1887
+E
+rings~
+They are gold and polished nicely.
+~
+E
+bars~
+They are a dull white.
+~
+E
+landscape~
+It is covered with grass and looks very inviting.
+~
+S
+#1889
+Beyond the Pearly White Gate.~
+   Beyond the Pearly White Gate the ground is covered with lush, green
+grass and the temperature is perfect.  The sky is clear and a gentle
+breeze can be felt.  Birds chirp and flutter about happily.  Directly north,
+a gigantic circle of stone has been placed on the grass.  This place is
+Heaven Proper and very few mortals have ever witnessed its glory.
+~
+18 67141632 1
+D0
+~
+~
+0 -1 1886
+D2
+~
+gate~
+2 1801 1888
+E
+circle~
+It is to the north.
+~
+E
+grass~
+It is very soft to the touch.
+~
+E
+birds~
+They fly around without a care in the world.
+~
+S
+#1890
+Continuing up the Pillar.~
+   The ever present pillar continues upward, even from this height.  The
+climb has seemed to last forever, in fact, from this height, no clouds can
+be seen above, only the sky and the heavens.  The wind blows strongly here,
+and it would probably be a good idea to hold on for dear life because looking
+down, the world below can barely be seen, even the mountains which once
+looked so tall and mighty now look like grains of sand.
+~
+18 67108864 1
+D4
+You could probably continue your climb up the pillar.
+~
+pillar~
+11 -1 1891
+D5
+You could probably continue your climb down the pillar.
+~
+pillar~
+11 -1 1872
+E
+pillar~
+The top is in sight!  Keep climbing!
+~
+E
+mountains~
+They look like a small scratch on the floor.
+~
+E
+clouds~
+There are no cloudes here.
+~
+E
+clouds~
+There are none here!
+~
+E
+sky~
+It looks like it is filled with air.
+~
+S
+#1891
+Atop the mighty Pillar.~
+   Wearily continuing the climb upward, the top of the mighty pillar has
+finally been reached.  The diameter of the circular area is about twenty
+five yards.  There is some debris scattered about and near the southern
+edge, a bunch of dried up plant matter is gathered together, resembling a
+giant nest of some sort.  Upon closer inspection, claw marks on one edge
+can be seen, as if it was used for a perch of some sort.
+~
+18 67108864 0
+D5
+You could probably continue your climb down the pillar.
+~
+pillar~
+11 -1 1890
+E
+nest~
+Whatever lives here must be huge!
+~
+E
+marks~
+They are about as big as your leg!
+~
+E
+debris~
+The debris contains bones, dust, and scales.
+~
+E
+pillar~
+You have finally reached the top!  Now if you could
+only climb back down safely.
+~
+S
+#1892
+First Trial of Heaven.~
+   This room resembles a small arena.  There is a gigantic circle on the
+floor and several candles lining the circle. A light from above illuminates
+the circle on the floor and it seems that a powerful force must be keeping
+a eye on this place.  Outside of the circle, various weapons and armor are
+scattered about as well as the occasional skeleton, indicating that death is
+not shy in this room.  How could such a place exist in heaven?
+~
+18 67141632 1
+D1
+~
+~
+0 -1 1893
+D3
+~
+~
+0 -1 1868
+E
+circle~
+It is about 40 feet in diameter.
+~
+E
+candles~
+They provide only minimal light in this room.
+~
+E
+armor~
+It looks rusty and broken.
+~
+E
+weapons~
+They look totally worthless.
+~
+S
+#1893
+Second Trial of Heaven.~
+   This room is completely filled with a thick mist that seems to be pulling
+at your soul.  The floor below cannot even be seen, let alone what else may be
+in this dreary room.  It seems incredibly silent, almost too silent, and you
+long to hear a noise.....any noise.
+~
+18 5292161 1
+D0
+~
+~
+0 -1 1894
+D3
+~
+~
+0 -1 1892
+E
+mist~
+It is think and you cannot see through it.
+~
+S
+#1894
+Third Trial of Heaven.~
+   Escaping the awful mists of the previous room has led to this
+very cramped room.  Barely being able to move, it seems like a good
+time to start that diet and lay off the pipeweed bread. The walls
+are made of some sort of rock and seem to squeeze shut so only one
+person may pass at any given time.  In fact, the squeeze is so tight
+that anyone caught within would have a hard time concentrating on
+anything other than getting out alive.
+~
+18 100696064 1
+D2
+~
+~
+0 -1 1893
+D3
+~
+~
+0 -1 1895
+E
+rocks~
+They seem to move on their own and you cannot budge them.
+~
+S
+#1895
+Fourth Trial of Heaven.~
+   This room is filled with the sense of madness.  It is completely
+featureless.  The walls are white and the ground is not the cloud which
+is the usual floor, but white sand.  Music fills the air, almost initiating
+a rage within your soul to lash out at those you would call friends.  This
+urge can easily be resisted, at least for now.
+~
+18 67145728 1
+D1
+~
+~
+0 -1 1894
+D4
+~
+~
+0 -1 1896
+E
+sand~
+It is white and very fine.
+~
+S
+#1896
+Final Trial of Heaven.~
+   This area is actually on a levitating platform made entirely of polished
+marble.  A gigantic cylendrical mirror surrounds the circular platform.
+You cannot help but look at the mirror, and as you glance at yourself, you
+get a sense of horror as you realize that you are not yourself, in fact, the
+image looks like you, but seems the complete opposite.  Your initial reaction
+is to run in terror, but the longer you gaze at your opposite, the more you
+begin to embrace it.
+~
+18 67141632 1
+D5
+~
+~
+0 -1 1895
+E
+platform~
+It is round in shape and very big.
+~
+E
+mirror~
+It shines slightly and you can see yourself in it.
+~
+S
+#1897
+At the very edge of a huge white cloud.~
+   A large swirling mass of mist completely engulfs this area.   It can't
+be a too good of an idea to wander around here, because there is no
+indication of where the edge of the cloud is and the fall off would
+probably be quite fatal.  The mists are very thick here and it is nearly
+impossible to see the hand in front of your face.  This place is very
+uncomfortable and it might be wise to jump back to a safer place.
+~
+18 67108864 1
+D0
+The mist is everywhere!  You might be able to jump it to get back to
+the massive cloud.
+~
+mist~
+10 -1 1849
+E
+mist~
+It is everywhere!  You might be able to jump it to get back to the
+massive cloud.
+~
+S
+#1898
+A magical tunnel through time and space.~
+   This place is like nothing in the mortal realm.  There is no floor,
+no ceiling, no walls, and no matter.  Looking above, a faint outline of
+the room above can bee seen, but other than that, all that is visible is
+a series of bright lights, sometimes moving about.  The lights look as
+if something was trying to tunnel through this place, perhaps to escape this
+holy area.
+~
+18 32768 1
+D4
+A tunnel seems magically sealed directly above this area.
+~
+tunnel~
+2 1802 1899
+S
+#1899
+Within the Rune.~
+   The runes seem to twist and come to life in this place.  Instead of
+runes only written on the floor, this entire area is covered with them.
+The room is entirely cubical in shape and openings are present up and
+down.  Closer inspection reveals that the runes are constantly
+changing and often seem to light up as if alive.  Some strong magic is
+at work here, in fact, looking above, it looks as if some magic circle
+was penetrated which drew all your magical energy from you.  There is
+an evil aura radiating from below.
+~
+18 537034764 1
+D4
+~
+runes~
+2 1806 1878
+D5
+A tunnel seems magically sealed directly below this area.
+~
+tunnel~
+2 1802 1898
+E
+runes~
+They are everywhere and seem to change and light up at random.
+~
+E
+circle~
+It has reformed, for the next victim to cross on his way down.
+~
+S
+#0
+$~

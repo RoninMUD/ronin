@@ -1,0 +1,335 @@
+#5900
+ichor foul talisman~
+Foul Ichor of Y'Zarr~
+A spider shaped talisman filled with strange scarlet fluid lies on the ground.~
+~
+15 134217792 16389
+5 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+20481
+#5901
+saliva wyrm deep~
+saliva of a deep wyrm~
+A puddle of foul smelling saliva has collected in a crack in the floor.~
+~
+19 0 1
+0 0 0 1
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5902
+flesh piece rotten~
+A piece of rotten undead crocodile flesh~
+A mottled piece of rotting greenish flesh lies on the ground, making a nasty stink.~
+~
+19 0 1
+0 0 0 1
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5910
+pile of corpses~
+a pile of corpses~
+Piles of corpses are here, limbs and fingers spread all over the ground.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+pile~
+You have come upon a pile of corpses resembling gnomes.  The seemed to be
+deliberately stacked up for some reason, however, you can see no purpose of it
+other than to mock.  Blood is all over the place, smeared on the walls, and
+all over the cavern ground.  Fingers and limbs are spread on the floor, with
+one noticeable decapitated head.  The stench here is unbearable and you just
+wonder who would ever commit such a cruel act and show no mercy.
+~
+E
+corpses~
+You have come upon a pile of corpses resembling gnomes.  The seemed to be 
+deliberately stacked up for some reason, however, you can see no purpose of it
+other than to mock.  Blood is all over the place, smeared on the walls, and 
+all over the cavern ground.  Fingers and limbs are spread on the floor, with
+one noticeable decapitated head.  The stench here is unbearable and you just
+wonder who would ever commit such a cruel act and show no mercy. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5911
+bracers adamanite~
+A pair of adamanite bracers~
+a pair of nicely shaped bracers is sitting here.~
+~
+9 0 257
+1 0 0 0
+10 100000 2000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 17
+A
+9 -20
+#5920
+myconid blood~
+Myconid blood~
+A solid form of some blood is here.~
+~
+10 0 1
+30 28 103 0
+10 1000 3000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5946
+tree ancient~
+An Ancient Tree~
+An enormous tree stands here, blooming in growth.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+10
+E
+tree~
+This ancient tree has been growing for centuries, and it does not appear
+to show signs of wear.  It must stand to be about 45 feet high in the air and
+has a fine layer of bark that has protected the tree for so long.  This tree
+is the silent watcher of all that happens here, neither doing nor acting in
+favor in any side.  It has witnessed much and will do so for many more 
+centuries to come.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5953
+pond water~
+a small pond of water~
+a small pond of water stretches the area here.~
+~
+17 0 0
+66666 66666 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5958
+blood gnome~
+a trail of blood~
+A trail of fresh blood leads into the east.~
+~
+17 0 0
+10 10 13 0
+10 10 10
+100
+E
+blood~
+a trail of red blood leads into the east cavern, the source unknown.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5959
+pool of blood~
+a pool of blood~
+A pool of blood collects here, then another trail leads away.~
+~
+17 0 0
+10 10 13 0
+10 10 10
+100
+E
+blood~
+a pool of blood is collected in a ditch here, then a fresh trail starts
+away, leading east.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5960
+gnome corpse~
+a corpse of a svirfneblin~
+A corpse of a gnome lies here on his face, submerged in a pool of blood.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+corpse~
+a corpse of a svirfneblin is here, lying faced down in a pool of his own blood.
+On his back, neck and legs are several cuts from what appears to be fine weapons.
+~
+E
+gnome~
+a corpse of a svirfneblin is here, lying faced down in a pool of his own blood.
+On his back, neck and legs are several cuts from what appears to be fine weapons.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5961
+gnome corpse~
+a corpse of a gnome~
+Propped up against the wall is a gnome, his face white and throat slashed.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+gnome~
+The expression on this svirfneblin's face is of absolute terror.  His throat
+is ripped open, blood pouring out onto the ground, and his skin -- cold to the
+touch. Multiple cuts are all over his body, suggesting a powerful foe 
+may be in the area...
+~
+E
+corpse~
+The expression on this svirfneblin's face is of absolute terror.  His throat
+is ripped open, blood pouring out onto the ground, and his skin -- cold to the
+touch. Multiple cuts are all over his body, suggesting a powerful foe 
+may be in the area...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5965
+wagon gnome~
+a wagon~
+a small wagon is here, parked off to the side of the cavern.~
+~
+15 0 0
+1000 0 0 0
+10 10 10
+100
+E
+wagon~
+Here is a wagon that seems forgotten and abandoned strangely.  It seems in
+pretty good condition and you wonder why anyone would leave behind this
+fine instrument on wheels.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5974
+stairs set~
+a set of descending stairs~
+a set of stairs are here, leading downward into darkness.~
+~
+13 0 0
+0 0 0 0
+50000 10 10
+100
+E
+stairs~
+These stairs are old, brittle and broken.  They look to be well used -- as if
+an army has marched through here... Peering from the top of the steps, you
+cannot see much of anything, all you can make out is darkness..
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5999
+blue portal~
+a blue portal~
+A blue portal hovers in the air here, energy blazing all about.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

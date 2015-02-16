@@ -1,0 +1,570 @@
+#27500
+Charlie dove~
+Charlie the dove~
+Charlie, a rushing dove sits on the guitar.
+~
+Charlie is a redeyed dove grinding its teeth tuning Doobie's guitar. As you look
+at him, he offers you a big fat reefer.
+~
+10 16777216 0 Y
+31 -11 -8 20000d1+1 1d30+35
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27501
+gargoyle marble~
+A Marble Gargoyle~
+[1] A large marble gargoyle statue is perched atop a glistening fountain here.
+~
+You see an enormous animated marble gargoyle, its massive arms ending in
+extremely sharp claws that could easily rend the finest armor in the land.
+Its eyes shine with an unearthly glow and it makes absolutely no sound when it moves.
+~
+17317962 268697632 0 Y
+40 -20 -20 30000d1+1 1d50+10
+1 1
+8 8 0
+0 7935 30000d1+1 1
+11 6 75 85
+0 0 0 0
+K
+0 0 0 0 0 0
+#27502
+master arms guard~
+Master at Arms~
+The Master at Arms is here, diligently guarding the Armory's stores.
+~
+Standing in front of the door to the clan's vault is a behemoth of a man
+standing easily three heads taller then you and wearing on his hip an
+enormous two-handed sword which it looks like he would wield as deftly as 
+a dagger given his extraordinary size. He nods at you slightly and 
+stands aside, recognizing you as one of the people he's not supposed to kill.
+~
+16777226 268445824 0 Y
+40 -20 -25 30000d1+1 15d45+100
+1 1
+8 8 1
+0 0 30000d1+1 4
+1 6 15 102
+1 2 35 137
+1 2 45 141
+4 2 30 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27503
+beholder barkeep gruumsh bartender~
+Gruumsh, the Beholder Bartender~
+Gruumsh, the bartender floats near the bar looking for just the right drink.
+~
+You see a rather rotund beholder, a doubly unusual sight in that beholders
+are supposed to hate humans with a passion. Word has it that many years
+ago, Gruumsh was rescued from a magical trap set by an archmage seeking to
+unlock the secrets of the magic of beholder eyes by the ancestral founders
+of the clan, and has remained unwaveringly loyal to it ever since.
+~
+16777226 268699776 250 Y
+38 -18 -20 30000d1+1 25d50+75
+1 1
+8 8 1
+1 0 30000d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27505
+guardian portal receptionist jarlsucks~
+Guardian of the Portal~
+A man stands here, head hidden behind his black hood.
+~
+Within the shadows on the room, this man stands there, head hidden behind
+his black hood.  He senses your presence and knows of your desires.
+Lifting his arms, he motions those in need of rest and holds back those
+who are not.  He is known only as the hooded man, a receptionist that
+guards the flaming gateway to Diabolik Sanctuary.  Though he may seem
+frail, he is not helpless.  He will destroy any one person, who does
+not belong or tries to force themselves into the gate.  
+~
+8 2048 -666 Y
+35 3 0 100d10+100 0d0+0
+666 666
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27506
+training dummy chained man~
+A training dummy~
+A chained up man is here, whimpering in fear.
+~
+Chained and shackled by the ankles, this helpless soul whimpers backwards
+at your approach.  Judging from his torn armor and other equipment
+accessories, he used to be a frequent mudder that has made a wrong turn
+for the worst.  Evidently, he was purged for crimes committed on this
+plane, and has to spend his entire existence as a Diabolik training dummy.
+He talks frequently to himself, and screams horrifically when recounting
+the incidents up to and upon his day of judgement -- over and over again.
+~
+10 0 0 Y
+30 2 10 1d1+9000 1d1+1
+6 10
+8 8 1
+2 0 1d1+1000 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27510
+ugly guardian guard~
+Ugly the Not So~
+Ugly is casually lounging about here, looking quite ... beautiful, in fact.
+~
+   Whoever named this drop-dead gorgeous demon had a strange sense of humor -
+Ugly has to be one of the most delectable creatures known to all womanhood!
+His firm body and soft, bedroom eyes can make any female jump through the
+gates of hell!  There probably have already been a few...
+~
+524299 16779264 0 Y
+35 -11 0 100d10+100 0d0+0
+0 0
+9 9 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27512
+demoness receptionist~
+a lovely demoness~
+A lovely demoness waits here, offering her "services" to all.
+~
+   This lovely demoness is the perfect realization of all of those dreams you
+wouldn't dream of telling to your mother.  From the looks of the way she's
+coyly smiling at you, it seems as if she can read your mind like an open
+book...  She doesn't look as if she minds in the slightest, the vixen...
+~
+8 0 0 Y
+51 9 0 100d10+100 0d0+0
+0 0
+11 11 2
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27513
+tantalus vault guard~
+Tantalus~
+Tantalus stands in a pool of dirty water, looking extremely bored.
+~
+  Though his robes appear to be somewhat bedraggled and worn, they appear to
+be more like an old, favorite bathrobe than tattered rags.  Equally, though
+Tantalus appears a bit slimmer than most men of his age, he's not exactly a 
+starving soul who hasn't had a bite to eat in eons...  His present job is to
+store items away in the vaults of these caverns, which are cleverly hidden
+by the long, wavering shadows cast by the flickering torches.  It doesn't 
+seem too bad a profession -- locking valuables up and wetting your feet once
+in a while...
+~
+524299 150997128 0 Y
+1 20 0 100d10+100 0d0+0
+0 0
+0 0 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27514
+Lilith succubi~
+Lilith~
+Lilith grins evilly, serving up grails of blood and paladin steaks.
+~
+   A succulent vixen, this demon princess openly flaunts her well-formed
+body, taking great pleasure in the reactions she elicits from every male who
+just _happens_ to glance her way.  Lilith takes especial pleasure in teasing
+the normally chaste and upright paladins who futilely try to resist their
+darker, bestial animal passions.  She winks at you, offering a rusty fork...
+~
+10 8388736 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 2
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27515
+paladin gaunt figure Agrivar~
+a pathetic, snivelling paladin~
+A thin, gaunt figure twitches uncontrollably, his paladin garb in tatters.
+~
+   Once an aspiring and hopeful paladin, this snivelling beast is no more
+than a pathetic ensemble of feces, dirty rags, and endless tears.  It took
+less than a full hour to reduce this shining example of the paladin class to
+a quivering, self-defecating slug...  Perhaps it would be merciful to
+put him out of his misery...  then again, it is quite amusing watching him
+just _twitch_ every now and then.
+~
+10 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27516
+ducky rubber mrquack~
+A smiling rubber ducky~
+A rubber ducky floats happily amidst the suds and bubbles.
+~
+Yellow and cheery, the rubber ducky floats happily through these
+warm waters everyday as they are constantly refilled and heated.
+Despite that he smells rather fowl from spending too much time
+in the bath tub.  However, he greets bathers with his warm smile
+and squeaky personality.
+~
+8 128 555 Y
+51 19 10 20d20+4000 20d20+100
+0 0
+8 8 1
+86 0 20d20+100 0
+0 0 0 0
+T
+......A rubber ducky paddles through the bubbles quacking happily.~
+K
+0 0 0 0 0 0
+#27517
+mond wolf receptionist moon lobo
+~
+Mond, the Guardian of Blood Moon~
+Mond rests on his haunches faithfully awaiting the return of his masters.
+~
+Mond the lupine guardian eyes you carefully and steadily.  His hair
+is fading from pitch black to light grey in some areas, but he's agile
+and ferocious as ever.  For years he has guarded this hall diligently
+and each night his howl can be heard across the land as the moon creeps
+into the night sky.  His eyes illuminate the room with their incredible
+flourescence. Mond faithfully helps the followers of the Blood Moon
+maintain their chambers and is always here upon their arrival.  Despite
+his old age and apparently inactivity he's in perfect fighting condition
+should the situation require such action.
+~
+74 262312 1000 Y
+32 -12 -10 20d20+5000 20d20+50
+666 3
+8 8 1
+89 0 69d69+1 0
+0 0 0 0
+T
+......Mond's sparkling emerald eyes glisten in the darkness.~
+T
+......Mond, the Guardian of Blood Moon radiates a mystical aura.~
+K
+0 0 0 0 0 0
+#27518
+luna vault vampire seductress moon~
+Luna, the Vampiric Seductress~
+Luna, the temptress of the Moon waits patiently for fresh blood.
+~
+Luna's tall figure radiates as you enter the small room she has made her
+boudoir and personal fun center.  Long luscious brown-red hair layers over
+her firm shoulders and back.  As you peer into her glowing forest green
+eyes she smiles back exposing blood-stained fangs.  This devilish vamp
+has welcomed many visitors but few leave as they came.  This is truly one
+temptress that should not be toyed with.  As you look away and gaze around
+the rest of the room she smiles evilly and examines your pitiful figure.
+It almost seems as if she's analyzing her prey...
+It's clear that ~
+74 262312 -600 Y
+51 -13 -10 20d20+5000 20d20+50
+666 3
+8 8 2
+55 0 20d20+100 0
+0 0 0 0
+T
+......Luna radiates sensuality as she moves stealthily upon her bed.~
+T
+......Luna playfully moves her tongue over her blood moistened fangs.~
+K
+0 0 0 0 0 0
+#27519
+greedle witch shop keep shopkeeper~
+Greedle the Witch~
+Greedle the Witch is here stirring a strange mixture.
+~
+   You see an very old woman slowly stirring a huge spoon into her black
+cauldron. She has long white hair draping down her back and partially
+covering her face.  This is Greedle, the witch.  Greedle was once a
+wandering gypsy until she found the Dark Legion, where she retired her
+nomadic roots and became a practitioner of more dark spells.  Using her
+ancient knowledge as a gypsy and the power of the Legion, Greedle has
+become one of the most powerful people in the Legion.  Though, her 
+century old age keeps her from fighting, she still proves herself 
+useful in many ways.
+~
+74 134219816 -350 Y
+40 -8 10 20d20+5000 20d20+5
+10 10
+8 8 2
+0 0 2d2+50 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27520
+holo demon dark protector~
+Holo the Dark Demon~
+Holo the Demon-Protector swoops above your head here.
+~
+   Before you stands a tremendous demon.  His eyes blaze the colour
+of scarlet, they watch you intsenly from above as he swoops just
+about your head.  His flesh is black and red, and his huge wings
+stretch out from his back in a large span.  He has a very muscular
+build and his claws and fangs are incredibly sharp and long.  He
+has two huge horns jutting from his head, they glow with magical
+power. Holo, the Dark Demon is a gift from the Gods of Dark 
+Legion. The gods gave Holo to the Legion for extra protection 
+against anyone, or thing that may dared challenge the Legion.
+For centuries Holo has served, sacrificing the blood of many
+for his creators and for his clan.
+~
+10 553650304 -350 Y
+40 -20 10 20d20+5000 5d6+70
+1 10
+8 8 1
+0 0 2d2+50 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27521
+veim chamber protector~
+Veim the Chamber Protector~
+Veim is here guarding the private chambers.
+~
+   You see a rather young man wielding a curved sabre standing 
+before you.  Though he doesn't look all that harmless, he is
+actually one of the greatest fighters the Legion has ever seen.
+Like Greedle, Veim is one of the oldest surviving members of
+the Legion.  Though Veim appears to be young he is actually very
+ancient, his dark magic transforms him.  Veim is now incapable
+of continuing his fighting career, so he has decided to aid the
+Legion by taking care of the castle.  He says he will stay until
+the Legion dominates the world, then he will pass his time and
+enter his long awaited peace.
+~
+10 134217856 -350 Y
+40 1 10 20d20+5000 20d20+50
+10 10
+8 8 1
+0 0 2d2+50 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27523
+raven vault guard protector~
+Raven the Vault Guard~
+Raven is here protecting the Dark Legion vaults.
+~
+   You gaze into the eyes of the most viscious warrior the Legion
+has ever come across.  Raven the Tempest has served the Legion
+faithfully for decades, though her cruel, and torturous ways
+were not always smiled upon.  Raven has been known for toying
+with her victims.  She has a flair for fighting, and enjoys every
+second she gets to make her enemy suffer.  Her ways were so cruel
+and evil that the Legion had to keep her in the castle, where she
+was not such a threat.  She was then only used when it was very
+neccesary that the Legion needed a strong fighter.  Now, she is in
+charge of making sure the castle vaults are safe and in order.  She
+also gets a chance at the Catherine Wheel, when a punishment is due
+to an enemy.  Be careful what you do to her, or you may be her next
+victim.
+~
+10 2176 -350 Y
+40 1 10 20d20+5000 20d20+50
+10 10
+8 8 2
+0 0 2d2+50 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27524
+grunthor vigilant~
+Grunthor the Vigilant~
+Grunthor the Vigilant stands before you barring the way.
+~
+  Barring your way into the inner halls of the Newbitorium stands
+the immense figure of Grunthor the Vigilant. Captured as a young
+boy in the Bolg lands far South of the Maelstrom, Grunthor has
+grown to be over 7 feet tall. With the width of 3 men, Grunthor
+could crush you with a single look of his metallic blue eyes.
+~
+10 687900840 -350 Y
+50 -20 10 20d20+5000 5d6+70
+1 10
+8 9 1
+0 20999 2d2+50 0
+0 1 0 352
+K
+0 0 0 0 0 0
+#27525
+achmed vault guard being~
+Achmed the Vault Guard~
+Achmed the Vault Guard is standing here.
+~
+  At the edge of your vision you see a diminutive figure, robed
+in black silk, standing in the corner. Shadows cast by the
+flickering torches seem to wrap around Achmed the Vault Guard and
+cloak him in darkness. You can feel the subtle waves of violence
+that roll over you when Achmed returns your look.
+~
+10 134514872 0 Y
+50 19 10 20d20+5000 5d6+70
+1 1
+8 8 1
+0 1073741823 1d1+1 0
+0 0 1 511
+R
+511
+K
+0 0 0 0 0 0
+#27526
+tiger statue~
+The Saber-Tooth Tiger~
+The grand marble statue of the Saber-Tooth Tiger stands guard here.
+~
+   A grand marble Saber-Toothed Tiger, who was famed to have saved this
+quaint town, stands guard here.  
+~
+16777290 134219904 0 Y
+1 19 -200 1d1+1 5d5+475
+1 1
+8 8 0
+0 16384 1d1+1 0
+0 0 0 0
+R
+473
+K
+0 0 0 0 0 0
+#27527
+wizard aging~
+An aging wizard~
+An aging wizard stands here, slowly stirring his cauldron.
+~
+An aging wizard stands before you, slowly stirring his potion mixture
+in the large stone cauldron.  The wizard is dressed in a long blue
+robe laiden with sparkling gems depicting a starry night sky.
+You wonder, could this be the traveling mage who created the
+Saber-Tooth Tiger that protects this town?
+~
+74 134219904 1000 Y
+30 19 5 10d10+10 1d1+1
+10 1
+8 8 1
+0 16384 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27528
+azura vault guard amazon~
+Azura the Amazon Guard~
+Azura the Amazon vault guard is standing here.
+~
+The guard stands what looks to you to be at least 10 feet tall.
+Shadows of the passing day flicker and move across his unblinking
+face. Could anything get past this guy?
+~
+74 134219904 1000 Y
+30 0 10 1d1+1 1d1+1
+1 1
+8 8 2
+0 16384 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27529
+innkeeper jolly~
+A jolly innkeeper~
+A jolly innkeeper stands here, waiting to cater to your every need.
+~
+A plump innkeeper stands before you with a big smile, listening
+to your every problem and hoping for the next drink order and
+a big tip!  How about another round of ale for everyone?!?
+~
+10 134219904 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 16384 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27530
+cat~
+Cat~
+A little black cat is standing here, waiting to serve her mistress.
+~
+You notice the small black cat slink in and out of the shadows of
+the room silently as if she weren't a real part of this world.
+~
+8 32768 1000 Y
+30 -10 -35 1000d1+10000 12d1+500
+0 0
+8 8 2
+0 49160 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#27531
+Deyshall the Chief Instructor~
+Deyshall the Chief Instructor~
+Deyshall the Chief Instructor stands here with an air of deadly competence.
+~
+He is a noble looking man in his late thirties who has been using a sword
+since before he could walk.
+~
+16908298 134514860 1000 Y
+50 -10 -30 10000d1+500 50d1+200
+0 5000000
+8 8 1
+7 0 1000d1+500 0
+0 3 1 0
+K
+0 0 0 0 0 0
+#27532
+Sharak~
+The stocky clerk~
+Sharak grins widely as he sees you approach, seems he gets few visitors.
+~
+Sharak is a stocky dwarf haliling from the strong and proud
+peoples of the Helventia Mountains.  Unusually friendly for
+a dwarf he greets you with a jovial wink and strong nudge
+in the side.  You can tell that he takes great pride in his
+wears and this shop of his.
+~
+10 32768 1000 Y
+40 0 -20 5d100+3000 20d8+60
+0 0
+8 8 1
+71 0 1d1+1 0
+0 0 0 0
+T
+...the shopkeeper eyes you curiously as you browse his shelves.~
+K
+0 0 0 0 0 0
+#27540
+joseph panda grizzly~
+Joseph the Giant Grizzly Panda~
+Joseph the Giant Grizzly Panda is squatting here eating some leaves.
+~
+A Giant Grizzly Panda is squatting here.
+~
+10 128 900 Y
+51 -9 2 6d10+8390 1d8+12
+20000 80000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

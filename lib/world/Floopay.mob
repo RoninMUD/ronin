@@ -1,0 +1,289 @@
+#3801
+Goblin Servant~
+A Goblin Servant~
+A very large goblin is here.
+~
+Although a pretty big goblin, he does seem pretty docile.  He
+does not fear you, you question how much you can trust him.
+~
+72 0 -200 Y
+50 -20 -2 4000d2+400 10d5+70
+15000 1000000
+8 8 1
+62 0 5d20+100 2
+4 1 15 0
+5 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3802
+huge stone gargoyle~
+A Huge Stone Gargoyle~
+A huge stone gargoyle is standing here!
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+17301546 150996992 -1000 Y
+50 -10 -7 400d20+10000 10d5+25
+50000 1200000
+8 8 0
+100 0 75d3+50 0
+0 0 0 0
+R
+35
+K
+0 0 0 0 0 0 0
+#3803
+giant verbeeg~
+A Verbeeg~
+A giant of immense proportions is standing here.
+~
+This nine foot giant towers above you, weighting to crush you like a bug!
+~
+131114 402653312 -1000 Y
+55 -25 -10 100d100+20000 10d4+200
+500000 4500000
+8 8 1
+59 0 1d1+100 3
+4 1 10 0
+3 2 10 0
+9 5 5 0
+0 0 0 512
+R
+65
+K
+0 0 0 0 0 0 0
+#3804
+giant mother dragon beetle~
+A Giant Mother Dragon Beetle~
+A large red and purple beetle is here, hissing at you!
+~
+This is one huge beetle!  It is covered in various reds and purples
+and hisses at you as you near her.  Although she seems pretty docile,
+she will protect her young at any cost!
+~
+10 134228096 750 Y
+55 -30 -12 100d50+19000 100d2+50
+0 1000000
+8 8 2
+76 0 100d2+1000 1
+1 2 15 26
+0 0 0 0
+K
+600000 3806 0 0 0 0 0
+#3805
+small dragon beetle~
+A baby dragon beetle~
+A small red and purple beetle is here, skittering about.
+~
+This red and purple beetle is about the size of a small dog
+and does not reveal much interest in you. The only thing it
+appears to be interested in is chewing its boxes.
+~
+10 0 0 Y
+30 -10 -5 50d20+500 10d10+20
+0 30000
+8 8 0
+76 0 100d1+0 0
+0 0 0 0
+K
+10000 0 0 0 0 0 0
+#3806
+massive spider~
+A Massive Spider~
+A Massive Spider is standing here.
+~
+This spider is not only giant, but it is massive!
+~
+42 402653312 0 Y
+60 -40 10 500d4+19000 100d4+200
+0 3000000
+8 8 1
+77 0 1d1+1 1
+5 2 40 0
+0 0 0 0
+K
+200000 0 0 0 0 0 0
+#3807
+giant spider~
+A Giant Spider~
+A Giant Spider is standing here.
+~
+Although you may not describe it as massive.  It is, however, giant!
+~
+42 0 0 Y
+55 -35 10 100d10+8000 30d5+90
+0 1500000
+8 8 1
+77 0 1d1+1 1
+5 2 15 0
+0 0 0 0
+K
+75000 0 0 0 0 0 0
+#3808
+max knavy~
+Max Knavy~
+A monstrous abomination is here, screaming in agony!
+~
+Before you is an abomination to all mankind.  Whatever it is, it appears to have stitched
+random bits of flesh onto its body.  His one eye is wide open, as he has used pins to keep
+it that way.  He is constantly screaming in agony, almost completely oblivious of the fact 
+that he is the only one here.  Whatever has happened to this place you can be almost certain
+he is the cause of it.  Standing just shy of seven feet tall, he glares down at you, waiting to
+add your flesh to his already deformed body.
+~
+131114 402915456 -1000 Y
+65 -45 -30 1000d2+26000 20d5+350
+1 5000000
+8 8 1
+69 0 1d1+1 2
+4 3 20 0
+3 3 20 0
+0 0 9 0
+K
+0 0 0 0 0 0 0
+#3809
+halfling dorful littlestump~
+Dorful Littlestump~
+A golden statue of a halfing is crouching here, ready to annihilate his target!
+~
+This short golden statue of a halfling stands here, holding his flintlock and dagger.
+Just as you begin to observe him his hands seem to disappear, along with some 
+of your stuff!
+~
+131082 679749760 0 Y
+50 -30 -20 50d6+5000 10d10+300
+1000000 4000000
+8 8 1
+3 0 1d1+100 1
+11 2 100 65
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#3810
+gnome cervanix vortex~
+Cervanix Vortex~
+A wooden statue of a gnome stands here, muttering to himself.
+~
+You see a wooden statue of a short, fat gnome.  He bahs at you and looks
+rather annoyed that you are even here.  There is something strange about
+his mannerisms.
+~
+131082 209717376 100 Y
+50 -30 -10 50d4+5000 10d4+100
+1000000 4000000
+8 8 1
+1 0 50d4+5000 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#3811
+dwarf barmihelm fleshguard~
+Barmihelm Fleshguard~
+A giant adamantine statue of a dwarf stands here, ready to defend his comrades!
+~
+This short adamantine statue of a disgruntled dwarf stares back at you with his diamond eyes
+He is obviously the meat shield of this rag tag group of tiny heroes.  Holding his halberd 
+tightly, a grin comes across his face as his gaze meets yours.
+~
+131082 402925696 500 Y
+50 -30 -40 50d12+9000 20d5+350
+1000000 4000000
+8 8 1
+6 0 1d1+100 0
+0 1 0 0
+R
+511
+K
+0 0 0 0 0 0 0
+#3812
+dwarf torgul bluntfoot~
+Torgul Bluntfoot~
+A mithril statue of a dwarf stand here, ready to pound his enemies into submission.
+~
+The mithril statue stands tall, an aura of righteousness flowing around him, you watch 
+as he holds his hammer and contemplates your next move. 
+~
+10 402663552 1000 Y
+50 -30 -35 50d8+6000 20d4+300
+1000000 4000000
+8 8 1
+2 0 50d4+5000 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#3813
+spider wolf~
+A Wolf Spider~
+A wolf sized spider is standing here.
+~
+This spider is approximately the same size as your average wolf!
+~
+536870984 268435456 0 Y
+47 -25 10 3000d2+900 10d5+70
+0 900000
+8 8 1
+77 0 1d1+1 1
+5 1 25 0
+0 1 0 0
+K
+30000 0 0 0 0 0 0
+#3814
+wolf dire~
+A Dire Wolf~
+A giant wolf is chained here.~
+This wolf is about half the size of your average grizzly bear!
+~
+42 262144 0 Y
+49 -22 -10 40d40+9000 5d5+80
+0 1500000
+8 8 1
+89 0 1d1+1 1
+5 1 20 0
+0 0 0 0
+K
+60000 0 0 0 0 0 0
+#3815
+otyugh~
+The Otyugh~
+A giant pile of organic junk is lying here.~
+This monster looks as if it is completely composed of garbage, it has
+undoubtedly survived off whatever food scraps have been thrown it's way.
+For the most part it seems pretty docile.
+~
+10 268468276 0 Y
+50 -30 -20 50d50+9000 10d6+80
+0 1750000
+8 8 0
+78 0 10d10+350 7
+1 5 5 105
+1 5 5 104
+1 2 15 111
+1 2 15 33
+1 2 15 4
+1 2 15 38
+1 2 15 90
+0 3 9 0
+K
+100000 3809 0 0 0 0 0
+#3816
+jucko chef~
+Jucko, the lazy chef~
+A lazy looking chef is sitting here, tired from cooking meals.
+~
+This is a poor and overworked chef.  He spends most of his day around
+the kitchen, because someone actually pays him for it.  He looks tired 
+and could use some rest, but if that happened, - Who would cook in this 
+mansion?  Dressed in a floppy hat and holding a dirty kitchen knife, this 
+chef is extremely worn out.
+~
+16458 268435456 200 Y
+40 -20 -5 40d40+7000 5d5+80
+10000 1200000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

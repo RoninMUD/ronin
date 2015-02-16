@@ -1,0 +1,2297 @@
+#11900
+Upon a Calm Underground Lake~
+A temporary description
+~
+119 520 6
+D0
+~
+~
+0 -1 11999
+D2
+~
+~
+0 -1 11801
+S
+#11901
+The Treacherous Chute of an Underground Waterfall~
+   A vigorous stream of water torrents through a small opening at the top of
+this chute, crashing through the narrow width of jagged stone with intense
+velocity. The waters path is haphazard and inconsistent and the jutting rocks
+range in shape from deadly-sharp serrated edges to smooth slimy dull lumps. The 
+echo of water pounding into a large cavern below resonates up and down the 
+narrow walls of the chute.
+~
+119 66057 6
+D5
+~
+~
+0 -1 11902
+S
+#11902
+A Musty Pool Under a Waterfall~
+   Dirty brown water crashes into the dark cavern from above, splashing into a
+cloudy pool of thick, murky, green and brown water. The thunderous crash of the
+water bellows throughout the vast cavern and echoes with persistent cacophony.
+The sludge in this pool clumps into balls of mud, excrement, and unknown fluids
+that clearly come from a very unkempt beast. This pool is about three feet deep,
+and extends in all directions.
+~
+119 521 6
+D0
+~
+~
+0 -1 11903
+D1
+~
+~
+0 -1 11905
+D2
+~
+~
+0 -1 11907
+D3
+~
+~
+0 -1 11909
+S
+#11903
+A Shallow Underground Pool~
+   A foul odor permeates the dank air of this musty cavern, no doubt arising
+from the murky pool and the beastly fluids floating in it. The roar of water
+crashing into the cavern to the south thunders in and echoes off the high cavern
+walls. The pool is relatively shallow here, only about a foot and a half deep.
+A slimy rock cavern wall towers tall to the north, leading up towards a high 
+ceiling which is obscured by darkness. The pool continues in all other 
+directions.
+~
+119 9 5
+D1
+~
+~
+0 -1 11904
+D2
+~
+~
+0 -1 11902
+D3
+~
+~
+0 -1 11910
+S
+#11904
+A Musty Underground Pool~
+   The floor lowers here, increasing the depth of the pool, which is also
+more stagnant, and the putrid stench is unbelievably fouler here than other
+areas of the pool. Wet green and brown mosses line the cavern wall, which
+towers in the northeast high into the darkness. The bellow of water crashing
+in the southwest echoes incessently off the tall cavern wall. This is not a
+pleasant place. The pool continues to the south and west.
+~
+119 9 6
+D2
+~
+~
+0 -1 11905
+D3
+~
+~
+0 -1 11903
+S
+#11905
+A Shallow Underground Pool~
+   The floor of this foul pool rises steadily east, making the pool more and
+more shallow. Eventually, the cavern floor rises above the water level, and a
+small nook to the east is damp but not submerged in the putrid water of this
+pool of filth. The monotonous pounding of water crashing into the pool to the
+west resonates about the cavern, and a weak current caused by the water stirs
+the unpleasant floating bits in the murky pool. The pool continues in all
+directions but east.
+~
+119 9 5
+D0
+~
+~
+0 -1 11904
+D1
+~
+~
+0 -1 11911
+D2
+~
+~
+0 -1 11906
+D3
+~
+~
+0 -1 11902
+S
+#11906
+A Musty Underground Pool~
+   The floor lowers here, increasing the depth of the pool, which is also
+more stagnant, and the putrid stench is unbelievably fouler here than other
+areas of the pool. Wet green and brown mosses line the cavern wall, which
+towers in the southeast high into the darkness. The bellow of water crashing
+in the northwest echoes incessently off the tall cavern wall. This is not a
+pleasant place. The pool continues to the north and west.
+~
+119 9 6
+D0
+~
+~
+0 -1 11905
+D3
+~
+~
+0 -1 11907
+S
+#11907
+A Shallow Underground Pool~
+   A foul odor permeates the dank air of this musty cavern, no doubt arising
+from the murky pool and the beastly fluids floating in it. The roar of water
+crashing into the cavern to the north thunders in and echoes off the high cavern
+walls. The pool is relatively shallow here, only about a foot and a half deep.
+A slimy rock cavern wall towers tall to the south, leading up towards a high 
+ceiling which is obscured by darkness. The pool continues in all other 
+directions.
+~
+119 9 5
+D0
+~
+~
+0 -1 11902
+D1
+~
+~
+0 -1 11906
+D3
+~
+~
+0 -1 11908
+S
+#11908
+A Musty Underground Pool~
+   The floor lowers here, increasing the depth of the pool, which is also
+more stagnant, and the putrid stench is unbelievably fouler here than other
+areas of the pool. Wet green and brown mosses line the cavern wall, which
+towers in the southwest high into the darkness. The bellow of water crashing
+in the northeast echoes incessently off the tall cavern wall. This is not a
+pleasant place. The pool continues to the north and east.
+~
+119 9 6
+D0
+~
+~
+0 -1 11909
+D1
+~
+~
+0 -1 11907
+S
+#11909
+A Shallow Underground Pool~
+   A foul odor permeates the dank air of this musty cavern, no doubt arising
+from the murky pool and the beastly fluids floating in it. The roar of water
+crashing into the cavern to the east thunders in and echoes off the high cavern
+walls. The pool is relatively shallow here, only about a foot and a half deep.
+A slimy rock cavern wall towers tall to the west, leading up towards a high 
+ceiling which is obscured by darkness. The pool continues in all other 
+directions.
+~
+119 9 5
+D0
+~
+~
+0 -1 11910
+D1
+~
+~
+0 -1 11902
+D2
+~
+~
+0 -1 11908
+S
+#11910
+A Musty Underground Pool~
+   The floor lowers here, increasing the depth of the pool, which is also
+more stagnant, and the putrid stench is unbelievably fouler here than other
+areas of the pool. Wet green and brown mosses line the cavern wall, which
+towers in the northwest high into the darkness. The bellow of water crashing
+to the southeast echoes incessently off the tall cavern wall. This is not a
+pleasant place. The pool continues to the south and east.
+~
+119 9 6
+D1
+~
+~
+0 -1 11903
+D2
+~
+~
+0 -1 11909
+S
+#11911
+A Nook in a Wet Underground Cavern~
+   This damp nook is a welcome respite from the filth of the pool to the west.
+Thick green and yellow mosses cover the walls and the floor. Underneath the 
+moss, a faint magical aura emenates from a smooth magical ward which serves as
+the floor of this nook, and possibly a barrier guarding something that lies
+beneath. The echoes of water crashing to the west resonate all about. A large
+murky cavernous pool lies to the west.
+~
+119 521 5
+D3
+~
+~
+0 -1 11905
+D5
+~
+ward~
+2 11901 11912
+E
+ward~
+The ward has a faint orange glow, except for a small area in the center: a
+perfect circle of deep, cerulean blue.
+~
+S
+#11912
+A Steep Jagged Waterway~
+   Water trickles down the slick jagged walls on all sides, splashing into the
+flowing underground waterway in droplets, creating a sound akin to rain but with
+a hollow, harrowing echo. While the rock outcroppings on the side of this
+waterway are slippery and sharp, the waterway flowing down the center seems
+equally treacherous, its slow flow moving with massive momentum, pulling
+eastward.
+~
+119 521 0
+D1
+~
+~
+0 -1 11913
+D4
+~
+ward~
+2 11901 11911
+S
+#11913
+A Steep Winding Waterway~
+   The slippery, jagged waterway takes I steep turn downward here, but the
+waters flow does not seem to accelerate, it simply pulls harder, like a hungry
+beast. Or perhaps it is a beast pulling. A beast within the water. Or beneath
+it. The walls, slick and pointed, the suffocating darkness, and the relentless 
+momentum of the water itself, all pull in one direction. Down.
+~
+119 521 0
+D3
+~
+~
+0 -1 11912
+D5
+~
+~
+0 -1 11914
+S
+#11914
+A Steep Winding Waterway~
+   The darkness and perfect consistency of flat water beside slick rock obscure
+the true path of this descending waterway, but it seems to twist, or perhaps
+spiral, though definitely at the very least turn, as it weaves down into the
+depths of cold dark rock. Water continues to trickle down the walls causing
+rain-like splashes in the waterway, perhaps coming from the cavern pool above, 
+or perhaps from the dreadful treacherous swamp above that. As the bottom of the
+steep descent, the waterway continues at steady pace to the west.
+~
+119 521 0
+D3
+~
+~
+0 -1 11915
+D4
+~
+~
+0 -1 11913
+S
+#11915
+A Steep Jagged Waterway~
+   A clear deviance from the monotony of darkness and flat slick rock lies on
+the southern wall of this underground waterway. Behind the thin sheet of water
+that trickles down its smooth surface, the wall glows with a faint yellow aura
+and upon close examination it appears to not be rock at all, but some sort of
+magical force that repels with increasing intensity as it is approached. The
+waterway continues both east and west into darkness.
+~
+119 521 0
+D1
+~
+~
+0 -1 11914
+D2
+~
+ward~
+2 11902 11917
+D3
+~
+~
+0 -1 11916
+E
+ward~
+The ward has a faint yellow glow, except for a small area in the center: a
+perfect circle of deep, empty black.
+~
+S
+#11916
+A Deep Pool at the End of an Underground Waterway~
+   The waterway stops here in a small circular alcove. The strong pull of the
+waters flow seems to cease entirely, without explanation. There is barely a
+ripple on the water's surface, but the pool has no bottom that can be reached
+by any reasonable means. The immeasurable depth of this pool could explain how
+water continues to flow in while the surface never rises, but in these eerie
+unnatural depths, rational explanations seem to hold little bearing. The water
+way flows in from the east, where the faintest of yellow light is clearly
+visible in the otherwise blanket darkness.
+~
+119 521 6
+D1
+~
+~
+0 -1 11915
+S
+#11917
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The tunnel continues eastward, and to the
+north, there is a strange yellow magical aura keeping out the flow of water
+from an underground stream.
+~
+119 13 0
+D0
+~
+ward~
+2 11902 11915
+D1
+~
+~
+0 -1 11918
+S
+#11918
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The sleek tunnel turns sharply here, at an
+even ninety degree angle, and leads south and west.
+~
+119 521 0
+D2
+~
+~
+0 -1 11919
+D3
+~
+~
+0 -1 11917
+S
+#11919
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The sleek tunnel turns sharply here, at an
+even ninety degree angle, and leads north and east.
+~
+119 521 0
+D0
+~
+~
+0 -1 11918
+D1
+~
+~
+0 -1 11920
+S
+#11920
+An Underground Passage Crossing~
+   This crisp, flat black rectangular corridor reaches a T-shaped crossing, 
+continuing east, west and south. A neat, even-stepped staircase leads down
+into dark silence. The perfectly-angled walls and ceiling are a glassy stone
+that is cut so smoothly it almost feels wet to the touch. The air is still,
+silent, and cold. Although the ceilings are low, the openness of the many
+corridors gives an empty feeling to this black, lightless intersection.
+~
+119 521 0
+D1
+~
+~
+0 -1 11936
+D2
+~
+~
+0 -1 11921
+D3
+~
+~
+0 -1 11919
+D5
+~
+~
+0 -1 11937
+S
+#11921
+A Smooth Passageway~
+   This long rectangular cube of a passageway leads straight north and south.
+The walls and ceiling are made of perfectly-smooth glassy rock. The floor
+appears to be carved of the same rock, but the surface is grooved, and much
+rougher than the slick walls, making walking a simple task. The grooves on
+the floor run evenly north and south along the direction of the corridor. The
+exact nature of every edge and surface in this corridor is certainly
+impressive, if not a little unsettling.
+~
+119 521 0
+D0
+~
+~
+0 -1 11920
+D2
+~
+~
+0 -1 11922
+S
+#11922
+An Underground Passage Crossing~
+   This crisp, flat black rectangular corridor reaches a T-shaped crossing, 
+continuing east, west and north. A neat, even-stepped staircase leads down
+into dark silence. The perfectly-angled walls and ceiling are a glassy stone
+that is cut so smoothly it almost feels wet to the touch. The air is still,
+silent, and cold. Although the ceilings are low, the openness of the many
+corridors gives an empty feeling to this black, lightless intersection.
+~
+119 521 0
+D0
+~
+~
+0 -1 11921
+D1
+~
+~
+0 -1 11926
+D3
+~
+~
+0 -1 11923
+D5
+~
+~
+0 -1 11939
+S
+#11923
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The sleek tunnel turns sharply here, at an
+even ninety degree angle, and leads east and south.
+~
+119 521 0
+D1
+~
+~
+0 -1 11922
+D2
+~
+~
+0 -1 11924
+S
+#11924
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The sleek tunnel turns sharply here, at an
+even ninety degree angle, and leads north and west.
+~
+119 521 0
+D0
+~
+~
+0 -1 11923
+D3
+~
+~
+0 -1 11925
+S
+#11925
+A Smooth Passageway~
+   This sleek, black, glassy stone corridor leads squarely into a sleek, black
+glassy stone, and certainly square, wall. The sheen of these smooth walls
+gives an almost mirrored appearence, which is all the more apparent in this
+room with three walls, all emitting or reflecting darkness to give the room
+a much smaller appearance then is accurate. The corridor stops here, but
+continues back to the east.
+~
+119 521 0
+D1
+~
+~
+0 -1 11924
+S
+#11926
+A Smooth Passageway~
+   This long rectangular cube of a passageway leads straight east and west.
+The walls and ceiling are made of perfectly-smooth glassy rock. The floor
+appears to be carved of the same rock, but the surface is grooved, and much
+rougher than the slick walls, making walking a simple task. The grooves on
+the floor run evenly east and west along the direction of the corridor. The
+exact nature of every edge and surface in this corridor is certainly
+impressive, if not a little unsettling.
+~
+119 521 0
+D1
+~
+~
+0 -1 11927
+D3
+~
+~
+0 -1 11922
+S
+#11927
+An Underground Passage Crossing~
+   This crisp, flat black rectangular corridor reaches a T-shaped crossing, 
+continuing east, west and north. A neat, even-stepped staircase leads down
+into dark silence. The perfectly-angled walls and ceiling are a glassy stone
+that is cut so smoothly it almost feels wet to the touch. The air is still,
+silent, and cold. Although the ceilings are low, the openness of the many
+corridors gives an empty feeling to this black, lightless intersection. The
+corridor continues straight to the north and west, but turns sharply ahead
+to the east.
+~
+119 521 0
+D0
+~
+~
+0 -1 11931
+D1
+~
+~
+0 -1 11928
+D3
+~
+~
+0 -1 11926
+D5
+~
+~
+0 -1 11941
+S
+#11928
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The sleek tunnel turns sharply here, at an
+even ninety degree angle, and leads west and south.
+~
+119 521 0
+D2
+~
+~
+0 -1 11929
+D3
+~
+~
+0 -1 11927
+S
+#11929
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The sleek tunnel turns sharply here, at an
+even ninety degree angle, and leads north and east.
+~
+119 521 0
+D0
+~
+~
+0 -1 11928
+D1
+~
+~
+0 -1 11930
+S
+#11930
+A Smooth Passageway~
+   The corridor reaches a shiny flat square wall dead ahead to the east. The
+sleek black glassy rock surfaces shine and reflect just slightly, except for
+one. The wall to the south is a deep matte black which seems to even absorb
+darkness when it lacks light to consume. It's dense blackness is nearly as
+appealing as it is frightning. One almost wants to touch it. The corridor
+continues back to the west.
+~
+119 521 0
+D2
+Scorpion excrement is neatly piled against the south wall of the tunnel.
+~
+excrement crap~
+8 -1 11946
+D3
+~
+~
+0 -1 11929
+S
+#11931
+A Smooth Passageway~
+   This long rectangular cube of a passageway leads straight north and south.
+The walls and ceiling are made of perfectly-smooth glassy rock. The floor
+appears to be carved of the same rock, but the surface is grooved, and much
+rougher than the slick walls, making walking a simple task. The grooves on
+the floor run evenly north and south along the direction of the corridor. The
+exact nature of every edge and surface in this corridor is certainly
+impressive, if not a little unsettling.
+~
+119 521 0
+D0
+~
+~
+0 -1 11932
+D2
+~
+~
+0 -1 11927
+S
+#11932
+An Underground Passage Crossing~
+   This crisp, flat black rectangular corridor reaches a T-shaped crossing, 
+continuing east, west and south. A neat, even-stepped staircase leads down
+into dark silence. The perfectly-angled walls and ceiling are a glassy stone
+that is cut so smoothly it almost feels wet to the touch. The air is still,
+silent, and cold. Although the ceilings are low, the openness of the many
+corridors gives an empty feeling to this black, lightless intersection. The
+corridor continues straight to the south and west, but turns sharply ahead
+to the east.
+~
+119 521 0
+D1
+~
+~
+0 -1 11933
+D2
+~
+~
+0 -1 11931
+D3
+~
+~
+0 -1 11936
+D5
+~
+~
+0 -1 11943
+S
+#11933
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The sleek tunnel turns sharply here, at an
+even ninety degree angle, and leads west and north.
+~
+119 521 0
+D0
+~
+~
+0 -1 11934
+D3
+~
+~
+0 -1 11932
+S
+#11934
+A Smooth Passageway~
+   The walls of this passageway are sleek, cut from smooth black, glassy rock
+into neat exact rectangular edges. Although it is cut from smooth rock, the
+floor is precisely grooved, and the traction is more than adequate. This
+tunnel would seem out of place far below the earth's surface, if it weren't 
+for the fact that there is nowhere that it would actually seem in place. The
+air is still and silent, except for an occasional cascade of faint, barely
+discernable clitters and clatters. The sleek tunnel turns sharply here, at an
+even ninety degree angle, and leads south and east.
+~
+119 521 0
+D1
+~
+~
+0 -1 11935
+D2
+~
+~
+0 -1 11933
+S
+#11935
+A Smooth Passageway~
+   This sleek, black, glassy stone corridor leads squarely into a sleek, black
+glassy stone wall, with a large hole in the middle. Dark dirt spills onto the
+floor through the hole, blocking access to anything that might lay behind it.
+The sheen of these smooth walls gives an almost mirrored appearence, which is
+all the more apparent in this room with three walls. The corridor stops here, 
+but continues back to the west. NOTE: LINK TO ROOM 5577
+~
+119 521 0
+D3
+~
+~
+0 -1 11934
+S
+#11936
+A Smooth Passageway~
+   This long rectangular cube of a passageway leads straight east and west.
+The walls and ceiling are made of perfectly-smooth glassy rock. The floor
+appears to be carved of the same rock, but the surface is grooved, and much
+rougher than the slick walls, making walking a simple task. The grooves on
+the floor run evenly east and west along the direction of the corridor. The
+exact nature of every edge and surface in this corridor is certainly
+impressive, if not a little unsettling.
+~
+119 521 0
+D1
+~
+~
+0 -1 11932
+D3
+~
+~
+0 -1 11920
+S
+#11937
+A Rectangular Tunnel Crossing~
+   Two cubic tunnels meet squarely here at a perect right angle. The walls of
+these wide tunnels are carved from a clean smooth glasslike rock with a rich 
+glossy black surface that absorbs light with a voracious appetite. The straight
+grooves on the floor of the two tunnels meet here, forming a neat straight line
+between inner corner of this crossing and the outer one. The two tunnels lead
+south and east.
+~
+119 525 0
+D1
+~
+~
+0 -1 11944
+D2
+~
+~
+0 -1 11938
+D4
+~
+~
+0 -1 11920
+S
+#11938
+A Smooth T-Shaped Tunnel~
+   This wide rectangular tunnel leads a very straight path north and south. The
+tunnel has a sparse, vacant calm to it, and an unnatural silence fills the air, 
+as if a wave of absense were rising from the east, quelling the aural landscape
+with the repetitive dilligence of an ocean. A narrow tunnel leads eastward 
+into the vacant darkness, while the sleek black paths to the north and south 
+lead to a banal, much less daunting darkness.
+~
+119 521 0
+D0
+~
+~
+0 -1 11937
+D1
+~
+~
+0 -1 11945
+D2
+~
+~
+0 -1 11939
+S
+#11939
+A Rectangular Tunnel Crossing~
+   Two cubic tunnels meet squarely here at a perect right angle. The walls of
+these wide tunnels are carved from a clean smooth glasslike rock with a rich 
+glossy black surface that absorbs light with a voracious appetite. The straight
+grooves on the floor of the two tunnels meet here, forming a neat straight line
+between inner corner of this crossing and the outer one. The two tunnels lead
+north and east.
+~
+119 525 0
+D0
+~
+~
+0 -1 11938
+D1
+~
+~
+0 -1 11940
+D4
+~
+~
+0 -1 11922
+S
+#11940
+A Smooth T-Shaped Tunnel~
+   This wide rectangular tunnel leads a very straight path east and west. The
+tunnel has a sparse, vacant calm to it, and an unnatural silence fills the air, 
+as if a wave of absense were rising from the north, quelling the aural landscape
+with the repetitive dilligence of an ocean. A narrow tunnel leads northward 
+into the vacant darkness, while the sleek black paths to the east and west lead 
+to a banal, much less daunting darkness.
+~
+119 521 0
+D0
+~
+~
+0 -1 11945
+D1
+~
+~
+0 -1 11941
+D3
+~
+~
+0 -1 11939
+S
+#11941
+A Rectangular Tunnel Crossing~
+   Two cubic tunnels meet squarely here at a perect right angle. The walls of
+these wide tunnels are carved from a clean smooth glasslike rock with a rich 
+glossy black surface that absorbs light with a voracious appetite. The straight
+grooves on the floor of the two tunnels meet here, forming a neat straight line
+between inner corner of this crossing and the outer one. The two tunnels lead
+north and west.
+~
+119 525 0
+D0
+~
+~
+0 -1 11942
+D3
+~
+~
+0 -1 11940
+D4
+~
+~
+0 -1 11927
+S
+#11942
+A Smooth T-Shaped Tunnel~
+   This wide rectangular tunnel leads a very straight path north and south. The
+tunnel has a sparse, vacant calm to it, and an unnatural silence fills the air, 
+as if a wave of absense were rising from the west, quelling the aural landscape
+with the repetitive dilligence of an ocean. A narrow tunnel leads westward 
+into the vacant darkness, while the sleek black paths to the north and south
+lead to a banal, much less daunting darkness.
+~
+119 521 0
+D0
+~
+~
+0 -1 11943
+D2
+~
+~
+0 -1 11941
+D3
+~
+~
+0 -1 11945
+S
+#11943
+A Rectangular Tunnel Crossing~
+   Two cubic tunnels meet squarely here at a perect right angle. The walls of
+these wide tunnels are carved from a clean smooth glasslike rock with a rich 
+glossy black surface that absorbs light with a voracious appetite. The straight
+grooves on the floor of the two tunnels meet here, forming a neat straight line
+between inner corner of this crossing and the outer one. The two tunnels lead
+north and east.
+~
+119 525 0
+D2
+~
+~
+0 -1 11942
+D3
+~
+~
+0 -1 11944
+D4
+~
+~
+0 -1 11932
+S
+#11944
+A Smooth T-Shaped Tunnel~
+   This wide rectangular tunnel leads a very straight path east and west. The
+tunnel has a sparse, vacant calm to it, and an unnatural silence fills the air, 
+as if a wave of absense were rising from the south, quelling the aural landscape
+with the repetitive dilligence of an ocean. A narrow tunnel leads southward, 
+into the vacant darkness, while the sleek black paths to the east and west lead 
+to a banal, much less daunting darkness.
+~
+119 521 0
+D1
+~
+~
+0 -1 11943
+D2
+~
+~
+0 -1 11945
+D3
+~
+~
+0 -1 11937
+S
+#11945
+A Cross-Section of Smooth Rectangular Tunnels~
+   Four smooth black tunnels meet here, forming a neat square tunnel crossing.
+The room is cold, dark, and absolutely silent. As a sound begings to form, the
+vibrating air calms back to its serene equilibrium, and the sound dissipates as
+soon as it begins. The deep black tunnels lead north east south and west, each
+into its own lonely darkness. The floor of this room is amazingly spotless. If
+any beasts reside here, there excrement must be disposed of elsewhere.
+~
+119 525 0
+D0
+~
+~
+0 -1 11944
+D1
+~
+~
+0 -1 11942
+D2
+~
+~
+0 -1 11940
+D3
+~
+~
+0 -1 11938
+S
+#11946
+Before a Polished Marble Altar~
+   A pure white rectangular room opens here, opening southward from the dark 
+black tunnel to the north. The white stone walls are smooth and flat. They 
+reflect light and diffuse it into a soft warm glow. In the southeast corner, 
+a large altar of the same white stone stands tall against the wall. A 
+masterful work of art, the altar depicts the form of an elven woman rising from 
+two creatures below.  The creature to the left appears to be a beautifully obese
+bear, while the beauty to the right could perhaps be some sort of immobilized 
+sloth with elephantitis of the body. Two talon-ish claws rise from between the 
+woman and the creatures, and it is unclear what they might signify. At the base 
+of this altar is a wide circular pool, large enough for a person to enter, even 
+if a number of large objects had already been dropped inside.
+~
+119 525 0
+D0
+~
+crap excrement~
+8 -1 11930
+S
+#11947
+The Tranquil Descent to a Floating Island~
+   An impressive panorama can be seen from this vantage point high above the
+island below. The southern half of the island is covered with enormous flowers
+that must be as tall as trees. The center of the island is covered by a blanket
+of short grass, leading up to a thick jungle of foliage on the northern half of
+the island. A calm underground lake surrounds the island, lapping its soft
+waves against a rock wall which is painted to resemble a impressively convincing
+skyline. This entire enormous underground cavern is lit by a small hot ball of
+light, floating in the air near the cavern's painted ceiling.
+~
+119 67109384 0
+S
+#11948
+The Tranquil Descent to a Floating Island~
+   An impressive panorama can be seen from this vantage point high above the
+island below. The southern half of the island is covered with enormous flowers
+that must be as tall as trees. The center of the island is covered by a blanket
+of short grass, leading up to a thick jungle of foliage on the northern half of
+the island. A calm underground lake surrounds the island, lapping its soft
+waves against a rock wall which is painted to resemble a impressively convincing
+skyline. This entire enormous underground cavern is lit by a small hot ball of
+light, floating in the air near the cavern's painted ceiling. As the island
+grows nearer, it is clear that it is not only populated by diverse flora but
+also by enormous fauna: patches of fur are occasionally visible through the
+dense jungle foliage and tulips bend and bow under the weight of colossal
+pollenators.
+~
+119 67109384 0
+S
+#11949
+The Tranquil Descent to a Floating Island~
+   At this point in the air just above a floating island, it is no longer
+possible to see the whole expanse of this island. All that is visible is a
+grassy plain below and the tops of jungle foliage to the north and tulips to
+the south towering high above the island. Directly below this point, a curious
+pedestal stands upon the otherwise wild landscape.
+~
+119 67109384 0
+S
+#11950
+Before a Stone Pedastal~
+   A large white stone pedestal stands about 3 feet tall in the middle of a
+lightly-grassed plain. The pedestal bears the image of a sun facing in each of
+the four directions. The top of the pedestal, although it feels as hard as stone
+has a blurry ephemeral look to it. To the west, the plain drops quickly into a
+jagged cliff, leading to a large underground lake that seems to be supporting
+the massive weight of the island merely by bouyant force. The plain extends south
+towards a field of enormous flowers and to the north towards dense jungle 
+foliage.
+~
+119 67109388 0
+D0
+~
+~
+0 -1 11951
+D1
+~
+~
+0 -1 11970
+D2
+~
+~
+0 -1 11969
+D4
+~
+~
+0 -1 11987
+S
+#11951
+Thickening Bush~
+   Green grass grows taller here than it did to the south, along with wider 
+variety of foliage. Expansive ferns drip droplets of fresh dew from their 
+serrated leaves, and blackberry brambles weave and wrap through the other 
+plants, its tangled thorns waiting passively to prick any unprepared passerbys. 
+A thick bed of a moss-like plant covers most of the ground, its green fur 
+overrun with tiny red flowers forming a festive mosaic of verdant delight. The
+thick bush continues eastward and opens into a light plain to the south. A 
+thicker jungle can be seen to the north.
+~
+119 67109384 3
+D1
+~
+~
+0 -1 11952
+D2
+~
+~
+0 -1 11950
+D4
+~
+~
+0 -1 11987
+S
+#11952
+Thickening Bush~
+   Green grass grows taller here than it did to the south, along with wider 
+variety of foliage. Expansive ferns drip droplets of fresh dew from their 
+serrated leaves, and blackberry brambles weave and wrap through the other 
+plants, its tangled thorns waiting passively to prick any unprepared passerbys. 
+A thick bed of a moss-like plant covers most of the ground, its green fur 
+overrun with tiny red flowers forming a festive mosaic of verdant delight. The
+thick bush continues east and west and opens into a light plain to the south. 
+A thicker jungle can be seen to the north.
+~
+119 67109384 3
+D1
+~
+~
+0 -1 11953
+D2
+~
+~
+0 -1 11970
+D3
+~
+~
+0 -1 11951
+D4
+~
+~
+0 -1 11987
+S
+#11953
+Thickening Bush~
+   Green grass grows taller here than it did to the south, along with wider 
+variety of foliage. Expansive ferns drip droplets of fresh dew from their 
+serrated leaves, and blackberry brambles weave and wrap through the other 
+plants, its tangled thorns waiting passively to prick any unprepared passerbys. 
+A thick bed of a moss-like plant covers most of the ground, its green fur 
+overrun with tiny red flowers forming a festive mosaic of verdant delight. The 
+thick bush continues east and west and opens into a light plain to the south. 
+To the north, a narrow overgrown path barely allows passage towards a thick 
+jungle.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11956
+D1
+~
+~
+0 -1 11954
+D2
+~
+~
+0 -1 11971
+D3
+~
+~
+0 -1 11952
+D4
+~
+~
+0 -1 11987
+S
+#11954
+Thickening Bush~
+   Green grass grows taller here than it did to the south, along with wider 
+variety of foliage. Expansive ferns drip droplets of fresh dew from their 
+serrated leaves, and blackberry brambles weave and wrap through the other 
+plants, its tangled thorns waiting passively to prick any unprepared passerbys. 
+A thick bed of a moss-like plant covers most of the ground, its green fur 
+overrun with tiny red flowers forming a festive mosaic of verdant delight. The
+thick bush continues east and west and opens into a light plain to the south. 
+A thicker jungle can be seen to the north.
+~
+119 67109384 3
+D1
+~
+~
+0 -1 11955
+D2
+~
+~
+0 -1 11972
+D3
+~
+~
+0 -1 11953
+D4
+~
+~
+0 -1 11989
+S
+#11955
+Thickening Bush~
+   Green grass grows taller here than it did to the south, along with wider 
+variety of foliage. Expansive ferns drip droplets of fresh dew from their 
+serrated leaves, and blackberry brambles weave and wrap through the other 
+plants, its tangled thorns waiting passively to prick any unprepared passerbys. 
+A thick bed of a moss-like plant covers most of the ground, its green fur 
+overrun with tiny red flowers forming a festive mosaic of verdant delight. The 
+thick bush continues westward and opens into a light plain to the south. A 
+thicker jungle can be seen to the north.
+~
+119 67109384 3
+D2
+~
+~
+0 -1 11973
+D3
+~
+~
+0 -1 11954
+D4
+~
+~
+0 -1 11989
+S
+#11956
+An Overgrown Jungle Path~
+   Wild flora grows rampant here, greatly limiting any prospects of travel
+deeper into the jungle. Brilliant green vines ranging in colors from olive to
+hunter to kelly to even lime wrap and wind and creep and entwine all around and
+up and down. Thin jungle trees reach up to a wide canopy of thick woven branches
+full of copious healthy green leaves. Tall flowering bushes and moist ferns add
+exponentially to the density of this overcrowded "path" and it is clear that any
+travel northward would require hacking through the immense density of foliage,
+a task that would certainly take time and effort. A much more inviting grassy
+plain is visible to the south, leading towards a beautiful field of oversized
+flowers.
+~
+119 67109388 3
+D0
+~
+~
+0 -1 11958
+D2
+~
+~
+0 -1 11953
+S
+#11957
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the west and south the
+jungle is too thick to even cut a path through.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11961
+D1
+~
+~
+0 -1 11958
+S
+#11958
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the south the jungle
+begins to open up towards a less dense plain.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11962
+D1
+~
+~
+0 -1 11959
+D2
+~
+~
+0 -1 11956
+D3
+~
+~
+0 -1 11957
+S
+#11959
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the south the
+jungle is too thick to even cut a path through.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11963
+D1
+~
+~
+0 -1 11960
+D3
+~
+~
+0 -1 11958
+S
+#11960
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the east and south the
+jungle is too thick to even cut a path through.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11964
+D3
+~
+~
+0 -1 11959
+S
+#11961
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the west the jungle is 
+too thick to even cut a path through.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11965
+D1
+~
+~
+0 -1 11962
+D2
+~
+~
+0 -1 11957
+S
+#11962
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To travel in any direction
+it would be necessary to cut one's own path.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11966
+D1
+~
+~
+0 -1 11963
+D2
+~
+~
+0 -1 11958
+D3
+~
+~
+0 -1 11961
+S
+#11963
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To travel in any direction
+it would be necessary to cut one's own path.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11967
+D1
+~
+~
+0 -1 11964
+D2
+~
+~
+0 -1 11959
+D3
+~
+~
+0 -1 11962
+S
+#11964
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the east the jungle is 
+too thick to even cut a path through.
+~
+119 67109384 3
+D0
+~
+~
+0 -1 11968
+D2
+~
+~
+0 -1 11960
+D3
+~
+~
+0 -1 11963
+S
+#11965
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the west the jungle is 
+too thick to even cut a path through, and to the north the jungle leads abruptly
+to a steep cliff, barely visible through the dense foliage.
+~
+119 67109384 3
+D1
+~
+~
+0 -1 11966
+D2
+~
+~
+0 -1 11961
+S
+#11966
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the north the jungle 
+leads abruptly to a steep cliff, barely visible through the dense foliage.
+~
+119 67109384 3
+D1
+~
+~
+0 -1 11967
+D2
+~
+~
+0 -1 11962
+D3
+~
+~
+0 -1 11965
+S
+#11967
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the north the jungle 
+leads abruptly to a steep cliff, barely visible through the dense foliage.
+~
+119 67109384 3
+D1
+~
+~
+0 -1 11968
+D2
+~
+~
+0 -1 11963
+D3
+~
+~
+0 -1 11966
+S
+#11968
+A Rough Self-Cut Jungle Path~
+   Thick, suffocating, and brilliantly beautiful foliage grows from every inch
+of soil here. Frightning ferns and thick threatening thistles grow amongst
+bulbous bushes and virulent vines which tangle and sway and seem to be
+constantly growing. Tall trees loom above, their dense canopy blocking all but
+the sporadic streak of sunlight. The incredible floral palette includes cyan
+snapdragons with spiral leaves and sweet scented asymmetrical petals, purple
+peonies with plenty of pretty petals, and rare red ranunculus with radial petals
+which lay upon layers of lavish low-growing lavendar. To the east the jungle is 
+too thick to even cut a path through, and to the north the jungle leads abruptly
+to a steep cliff, barely visible through the dense foliage.
+~
+119 67109384 3
+D2
+~
+~
+0 -1 11964
+D3
+~
+~
+0 -1 11967
+S
+#11969
+A Lightly-Grassed Plain~
+   Tall stringy green and yellow grass casually sways in the mellow breeze. A
+few tall sunflowers grow scattered about, their enormous yellow and orange
+petals cast playful shadows on the grass. Warmth radiates up from the ground
+almost as readily as it comes down from above. Every once in a while a four
+leaf clover pops out of the ground, growing its leaves in a matter of seconds. A
+tall field of tulips towers to the south, and a dense jungle is visible to the
+north and a cliff leads down to a waterway close to the west. 
+~
+119 67109388 2
+D0
+~
+~
+0 -1 11950
+D1
+~
+~
+0 -1 11976
+D2
+~
+~
+0 -1 11980
+D4
+~
+~
+0 -1 11987
+S
+#11970
+A Lightly-Grassed Plain~
+   Tall stringy green and yellow grass casually sways in the mellow breeze. A
+few tall sunflowers grow scattered about, their enormous yellow and orange
+petals cast playful shadows on the grass. Warmth radiates up from the ground
+almost as readily as it comes down from above. Every once in a while a four
+leaf clover pops out of the ground, growing its leaves in a matter of seconds. A
+tall field of tulips towers to the south, and a dense jungle is visible to the
+north and a strange pedestal stands tall and alone to the west. 
+~
+119 67109388 2
+D0
+~
+~
+0 -1 11952
+D1
+~
+~
+0 -1 11971
+D2
+~
+~
+0 -1 11976
+D3
+~
+~
+0 -1 11950
+D4
+~
+~
+0 -1 11987
+S
+#11971
+A Lightly-Grassed Plain~
+   Tall stringy green and yellow grass casually sways in the mellow breeze. A
+few tall sunflowers grow scattered about, their enormous yellow and orange
+petals cast playful shadows on the grass. Warmth radiates up from the ground
+almost as readily as it comes down from above. Every once in a while a four
+leaf clover pops out of the ground, growing its leaves in a matter of seconds. A
+tall field of tulips towers to the south, and a dense jungle is visible to the
+north and a strange pedestal stands tall and alone far to the west. 
+~
+119 67109388 2
+D0
+~
+~
+0 -1 11953
+D1
+~
+~
+0 -1 11972
+D2
+~
+~
+0 -1 11977
+D3
+~
+~
+0 -1 11970
+D4
+~
+~
+0 -1 11987
+S
+#11972
+A Lightly-Grassed Plain~
+   Tall stringy green and yellow grass casually sways in the mellow breeze. A
+few tall sunflowers grow scattered about, their enormous yellow and orange
+petals cast playful shadows on the grass. Warmth radiates up from the ground
+almost as readily as it comes down from above. Every once in a while a four
+leaf clover pops out of the ground, growing its leaves in a matter of seconds. A
+tall field of tulips towers to the south, and a dense jungle is visible to the
+north and an enormous boulder stands tall and alone far to the east. 
+~
+119 67109388 2
+D0
+~
+~
+0 -1 11954
+D1
+~
+~
+0 -1 11973
+D2
+~
+~
+0 -1 11978
+D3
+~
+~
+0 -1 11971
+D4
+~
+~
+0 -1 11989
+S
+#11973
+A Lightly-Grassed Plain~
+   Tall stringy green and yellow grass casually sways in the mellow breeze. A
+few tall sunflowers grow scattered about, their enormous yellow and orange
+petals cast playful shadows on the grass. Warmth radiates up from the ground
+almost as readily as it comes down from above. Every once in a while a four
+leaf clover pops out of the ground, growing its leaves in a matter of seconds. A
+tall field of tulips towers to the south, and a dense jungle is visible to the
+north and an enormous boulder stands tall and alone close to the east. 
+~
+119 67109388 2
+D0
+~
+~
+0 -1 11955
+D1
+~
+~
+0 -1 11974
+D2
+~
+~
+0 -1 11979
+D3
+~
+~
+0 -1 11972
+D4
+~
+~
+0 -1 11989
+S
+#11974
+Before a Brilliant Bulbous Boulder~
+   An incredibly massive boulder teeters at the edge of a cliff on the eastern
+end of the plains here. It seems the whole floating island is tilted downward
+towards this boulder, suggesting that even with it's immense size, the boulder
+must be denser than it appears. One can only imagine the incredible volume of
+water that must be displaced to create a buoyant force strong enough to support
+the incredible weight of this structure. The island's edge leads quickly down
+into the lake and it seems the boulder is primed to be knocked into the water
+with just a little bit of coercion.
+~
+119 67109384 2
+D1
+~
+~
+0 -1 11993
+D3
+~
+~
+0 -1 11973
+D4
+~
+~
+0 -1 11989
+S
+#11975
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues to
+the north, while cliffs to the east west and south lead steeply down towards
+the underground lake supporting this island.
+~
+119 67108876 2
+D0
+~
+~
+0 -1 11985
+D4
+~
+~
+0 -1 11990
+S
+#11976
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues to
+the south and east, while the titanic plants seem considerbly scarcer to the
+north and west, which appears to be more of a tame plain.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11970
+D1
+~
+~
+0 -1 11977
+D2
+~
+~
+0 -1 11981
+D3
+~
+~
+0 -1 11969
+D4
+~
+~
+0 -1 11987
+S
+#11977
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues in
+all directions but north, where the titanic plants seem considerbly scarcer 
+leading towards more of a tame plain. Even further north, there seems to be
+an overgrown entrance to a small jungle.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11971
+D1
+~
+~
+0 -1 11978
+D2
+~
+~
+0 -1 11982
+D3
+~
+~
+0 -1 11976
+D4
+~
+~
+0 -1 11987
+S
+#11978
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues in
+all directions but north, where the titanic plants seem considerbly scarcer 
+leading towards more of a tame plain.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11972
+D1
+~
+~
+0 -1 11979
+D2
+~
+~
+0 -1 11983
+D3
+~
+~
+0 -1 11977
+D4
+~
+~
+0 -1 11989
+S
+#11979
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues to
+the north and west, while cliffs to the east and south lead steeply down 
+towards the underground lake supporting this island.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11973
+D3
+~
+~
+0 -1 11978
+D4
+~
+~
+0 -1 11989
+S
+#11980
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues to
+the east north and south, while cliffs to the west lead steeply down towards 
+the underground lake supporting this island.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11969
+D1
+~
+~
+0 -1 11981
+D2
+~
+~
+0 -1 11984
+D4
+~
+~
+0 -1 11990
+S
+#11981
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues in
+all directions except the northwest, where lies a comfortable, serene grassed
+plain.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11976
+D1
+~
+~
+0 -1 11982
+D2
+~
+~
+0 -1 11985
+D3
+~
+~
+0 -1 11980
+D4
+~
+~
+0 -1 11990
+S
+#11982
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues in
+all directions.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11977
+D1
+~
+~
+0 -1 11983
+D2
+~
+~
+0 -1 11986
+D3
+~
+~
+0 -1 11981
+D4
+~
+~
+0 -1 11988
+S
+#11983
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues to
+the north and west, while cliffs to the east and south lead steeply down 
+towards the underground lake supporting this island.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11978
+D3
+~
+~
+0 -1 11982
+D4
+~
+~
+0 -1 11988
+S
+#11984
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues to
+the north and east, while cliffs to the west and south lead steeply down 
+towards the underground lake supporting this island.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11980
+D1
+~
+~
+0 -1 11985
+D4
+~
+~
+0 -1 11990
+S
+#11985
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues in
+all directions.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11981
+D1
+~
+~
+0 -1 11986
+D2
+~
+~
+0 -1 11975
+D3
+~
+~
+0 -1 11984
+D4
+~
+~
+0 -1 11990
+S
+#11986
+A Terrific Field of Titanic Tulips~
+   Terrific tulips stand tall here, towering their titanic form to heighs
+even taller than the tips of treetops. Between these big beautiful tulips, the
+field is filled with a veritible floracopia of flowers from fuscia to freesia
+to the occassional fully-formed ficus. Gigantic green grass rises up towards
+a serene cerulean blue sky lit with soft silver hues. The field continues to
+the north and west, while cliffs to the east and south lead steeply down 
+towards the underground lake supporting this island.
+~
+119 67108872 2
+D0
+~
+~
+0 -1 11982
+D3
+~
+~
+0 -1 11985
+D4
+~
+~
+0 -1 11988
+S
+#11987
+Mid-Air Above a Floating Island~
+A temporary description
+~
+119 67371532 0
+D1
+~
+~
+0 -1 11989
+D2
+~
+~
+0 -1 11990
+D4
+~
+~
+0 -1 11991
+D5
+~
+~
+0 -1 11976
+S
+#11988
+Mid-Air Above a Floating Island~
+A temporary description
+~
+119 67371532 0
+D0
+~
+~
+0 -1 11989
+D3
+~
+~
+0 -1 11990
+D4
+~
+~
+0 -1 11991
+D5
+~
+~
+0 -1 11983
+S
+#11989
+Mid-Air Above a Floating Island~
+A temporary description
+~
+119 67371532 0
+D2
+~
+~
+0 -1 11988
+D3
+~
+~
+0 -1 11987
+D4
+~
+~
+0 -1 11991
+D5
+~
+~
+0 -1 11972
+S
+#11990
+Mid-Air Above a Floating Island~
+A temporary description
+~
+119 67371532 0
+D0
+~
+~
+0 -1 11987
+D1
+~
+~
+0 -1 11988
+D4
+~
+~
+0 -1 11991
+D5
+~
+~
+0 -1 11980
+S
+#11991
+Flying Towards a Blazing Beacon~
+A temporary description
+~
+119 67371532 0
+D4
+~
+~
+0 -1 11992
+D5
+~
+~
+0 -1 11989
+S
+#11992
+The Dazzling Locus of Shimmering Underground Sunbeams~
+A temporary description
+~
+119 67109384 0
+D5
+~
+~
+0 -1 11991
+S
+#11993
+Upon a Calm Underground Lake~
+A temporary description
+~
+119 67109384 6
+D0
+~
+~
+0 -1 11994
+D2
+~
+~
+0 -1 11808
+D3
+~
+~
+0 -1 11974
+S
+#11994
+Upon a Calm Underground Lake~
+A temporary description
+~
+119 67109384 6
+D0
+~
+~
+0 -1 11995
+D2
+~
+~
+0 -1 11993
+S
+#11995
+Upon a Calm Underground Lake~
+A temporary description
+~
+119 67109384 6
+D2
+~
+~
+0 -1 11994
+D3
+~
+~
+0 -1 11996
+S
+#11996
+Upon a Calm Underground Lake~
+A temporary description
+~
+119 67109384 6
+D1
+~
+~
+0 -1 11995
+D3
+~
+~
+0 -1 11997
+S
+#11997
+Upon a Calm Underground Lake~
+A temporary description
+~
+119 67109384 6
+D1
+~
+~
+0 -1 11996
+D3
+~
+~
+0 -1 11998
+S
+#11998
+Upon a Calm Underground Lake~
+A temporary description
+~
+119 67109384 6
+D1
+~
+~
+0 -1 11997
+D3
+~
+~
+0 -1 11999
+S
+#11999
+Upon a Calm Underground Lake~
+A temporary description
+~
+119 67109384 6
+D1
+~
+~
+0 -1 11998
+D2
+~
+~
+0 -1 11900
+S
+#0
+$~

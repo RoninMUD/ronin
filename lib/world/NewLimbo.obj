@@ -1,0 +1,649 @@
+#1
+steak~
+a steak~
+A steak arouses your hunger.~
+~
+19 0 1
+24 0 0 0
+2 13 2
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2
+rose flower~
+a beautiful rose~
+a beautiful `brose `qis lying on the ground.~
+~
+9 0 16401
+5 0 0 0
+0 500 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3
+postcard~
+a postcard~
+a postcard is lying on the ground.~
+~
+16 0 1
+0 0 0 0
+1 300 5
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4
+package~
+a small package~
+Someone's left a small package here.~
+~
+15 0 1
+100 0 0 0
+6 500 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5
+token~
+a subclass token~
+There is a shiny subclass token laying here.~
+~
+29 0 1
+1 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6
+silvery colt~
+a silvery colt.45~
+a silvery colt.45 is lying on the ground.~
+~
+6 134283365 16385
+6 0 300 2
+15 0 0
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7
+silvery bullets~
+some silvery bullets~
+some silvery bullets is lying on the ground.~
+~
+23 134217729 1
+0 0 6 6
+5 0 0
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8
+newspaper paper news~
+the paper~
+The town newspaper lies folded neatly here, waiting to be read.~
+~
+16 0 1
+0 0 0 0
+1 50 5
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9
+statue peace~
+Statue of Peace~
+A Statue of Peace is standing here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+10
+E
+peace~
+This statue appears to be keeping the surrounding area
+quiet and peaceful.
+~
+E
+statue~
+This statue appears to be keeping the surrounding area
+quiet and peaceful.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10
+ring wedding band~
+A gold wedding band~
+There is a simple gold band lying here.~
+~
+11 0 3
+0 0 0 0
+1 1000000 0
+10
+E
+ring~
+This simple gold band symbolizes the eternal love and committment of its 
+wearer.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11
+bracelet magic~
+The magic bracelet~
+A beautiful magic bracelet is lying on the ground.~
+~
+9 134218369 4097
+5 0 0 0
+10 0 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 35
+A
+18 -2
+#12
+necklace winner~
+a Winner's necklace~
+a Winner's necklace is lying on the ground.~
+~
+9 134217984 5
+15 0 0 0
+10 0 0
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 50
+A
+18 5
+#13
+guitar~
+a guitar~
+a guitar is lying on the ground.~
+~
+24 0 16385
+0 0 0 0
+8 500 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14
+boots kicker~
+a pair of kicker boots~
+There is a pair of boots on the ground.~
+~
+9 1 65
+5 0 0 0
+10 10000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+25 20
+A
+30 20
+#15
+voting machine banana~
+The Voting Machine~
+The Voting Machine is here, oozing with the essence of democracy.~
+~
+12 135 0
+0 0 0 0
+1 1 1
+100
+E
+machine voting banana~
+Blah Blah...Nifty description etc...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16
+corpse~
+corpse~
+There is a corpse lying here.~
+~
+15 0 1
+30000 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17
+lottery ticket~
+lottery ticket~
+There is a tiny lottery ticket lying here.~
+~
+28 0 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18
+lottery machine~
+Lottery Machine~
+There is a huge lottery machine sitting here just begging to be looked at.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19
+legs~
+a pair of someones legs~
+a pair of severed legs are here~
+~
+5 134807552 8193
+0 10 10 6
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20
+ring wedding~
+a silvery wedding ring~
+a glinting silver ring has been left here.~
+~
+9 0 16385
+1 10 2 0
+1 100000 0
+50
+E
+ring~
+this is an intrigate silvery wedding ring, with a tiger eye center stone
+surrounded by four small onyx, and one piece of jade.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21
+cake piece~
+a piece of a wedding cake~
+a delicious looking piece of wedding cake has been left here.~
+~
+19 0 1
+4 0 0 0
+1 15 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#22
+champagne glass~
+a champagne glass~
+a champagne glass has been left here.~
+~
+17 0 1
+3 3 2 0
+4 10 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#23
+bottle champagne~
+a champagne bottle~
+a champagne bottle has been left here.~
+~
+17 0 1
+30 30 2 0
+33 250 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#24
+crown protection~
+crown of protection~
+A crown surrounded by a powerful sphere lies here.~
+~
+9 134217728 17
+0 0 0 0
+5 30000 10000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+128
+#25
+girdle ogre power~
+girdle of ogre powers~
+A heavy, iron-bound girdle has been left here.~
+~
+9 134217728 2049
+0 0 0 0
+10 30000 5000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+1 3
+#26
+hammer crushing pound ouch~
+hammer of crushing~
+A powerful hammer floats in the air.~
+~
+5 134217728 8193
+0 6 5 8
+17 32000 10000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+#27
+sleeves healing~
+sleeves of healing~
+A pair of pulsating sleeves lie here.~
+~
+9 134217728 257
+0 0 0 0
+4 30000 7000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+18 2
+#28
+bracelet wooden~
+wooden bracelet~
+An ornate wooden bracelet rests on the ground.~
+~
+9 134217728 4097
+5 0 0 0
+10 30000 10000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 25
+#29
+ring endurance~
+ring of endurance~
+Here lies a pewter elephant-shaped ring.~
+~
+9 134217728 3
+0 0 0 0
+15 10000 20000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 35
+A
+14 20
+#30
+war cloak~
+cloak of war~
+A brown and green cloak, lies menacingly on the ground.~
+~
+9 134217728 1025
+5 0 0 0
+10 20000 5000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+36 20
+A
+31 20
+#31
+burlap leggings hose~
+burlap leggings~
+A pair of filthy burlap leggings have been discarded here.~
+~
+9 134217728 33
+0 0 0 0
+0 20000 5000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#32
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#33
+coin gold~
+gold coins~
+A pile of gold coins.~
+~
+20 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#34
+wall thorns~
+Wall of Thorns~
+A wall of thorns blocks all exits.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+10
+E
+wall thorns~
+The wall of thorns surrounds the area with thick sharp
+points.  Nothing can enter or leave through the tangle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

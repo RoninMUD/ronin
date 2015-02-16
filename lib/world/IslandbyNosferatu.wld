@@ -1,0 +1,1850 @@
+#28300
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28301
+D2
+~
+~
+0 -1 28304
+S
+#28301
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28302
+D2
+~
+~
+0 -1 28306
+D3
+~
+~
+0 -1 28300
+S
+#28302
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28303
+D2
+~
+~
+0 -1 28307
+D3
+~
+~
+0 -1 28301
+S
+#28303
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D2
+~
+~
+0 -1 28308
+D3
+~
+~
+0 -1 28302
+S
+#28304
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28300
+D1
+~
+~
+0 -1 28306
+D3
+~
+~
+0 -1 28305
+S
+#28305
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28304
+S
+#28306
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28301
+D1
+~
+~
+0 -1 28307
+D2
+~
+~
+0 -1 28314
+D3
+~
+~
+0 -1 28304
+S
+#28307
+Rolling Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28302
+D1
+~
+~
+0 -1 28308
+D2
+~
+~
+0 -1 28313
+D3
+~
+~
+0 -1 28306
+S
+#28308
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28303
+D1
+~
+~
+0 -1 28309
+D2
+~
+~
+0 -1 28312
+D3
+~
+~
+0 -1 28307
+S
+#28309
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28310
+D2
+~
+~
+0 -1 28311
+D3
+~
+~
+0 -1 28308
+S
+#28310
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D3
+~
+~
+0 -1 28309
+S
+#28311
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28309
+D3
+~
+~
+0 -1 28312
+S
+#28312
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28308
+D1
+~
+~
+0 -1 28311
+D2
+~
+~
+0 -1 28320
+D3
+~
+~
+0 -1 28313
+S
+#28313
+Rolling Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28307
+D1
+~
+~
+0 -1 28312
+D2
+~
+~
+0 -1 28319
+D3
+~
+~
+0 -1 28314
+S
+#28314
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28306
+D1
+~
+~
+0 -1 28313
+D2
+~
+~
+0 -1 28315
+S
+#28315
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28314
+D1
+~
+~
+0 -1 28319
+D2
+~
+~
+0 -1 28322
+D3
+~
+~
+0 -1 28316
+S
+#28316
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28315
+D2
+~
+~
+0 -1 28323
+D3
+~
+~
+0 -1 28317
+S
+#28317
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28316
+D2
+~
+~
+0 -1 28324
+D3
+~
+~
+0 -1 28318
+S
+#28318
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28317
+D2
+~
+~
+0 -1 28325
+S
+#28319
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28313
+D1
+~
+~
+0 -1 28320
+D2
+~
+~
+0 -1 28321
+D3
+~
+~
+0 -1 28315
+S
+#28320
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28312
+D3
+~
+~
+0 -1 28319
+S
+#28321
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28319
+D2
+~
+~
+0 -1 28332
+D3
+~
+~
+0 -1 28322
+S
+#28322
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28315
+D1
+~
+~
+0 -1 28321
+D2
+~
+~
+0 -1 28331
+D3
+~
+~
+0 -1 28323
+S
+#28323
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28316
+D1
+~
+~
+0 -1 28322
+D2
+~
+~
+0 -1 28330
+D3
+~
+~
+0 -1 28324
+S
+#28324
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28317
+D1
+~
+~
+0 -1 28323
+D2
+~
+~
+0 -1 28329
+D3
+~
+~
+0 -1 28325
+S
+#28325
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28318
+D1
+~
+~
+0 -1 28324
+D2
+~
+~
+0 -1 28328
+D3
+~
+~
+0 -1 28326
+S
+#28326
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D1
+~
+~
+0 -1 28325
+D2
+~
+~
+0 -1 28327
+S
+#28327
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28326
+D1
+~
+~
+0 -1 28328
+D2
+~
+~
+0 -1 28341
+S
+#28328
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28325
+D1
+~
+~
+0 -1 28329
+D2
+~
+~
+0 -1 28340
+D3
+~
+~
+0 -1 28327
+S
+#28329
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28324
+D1
+~
+~
+0 -1 28330
+D2
+~
+~
+0 -1 28339
+D3
+~
+~
+0 -1 28328
+S
+#28330
+A Small Pool~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28323
+D1
+~
+~
+0 -1 28331
+D2
+~
+~
+0 -1 28338
+D3
+~
+~
+0 -1 28329
+D5
+~
+~
+0 -1 28389
+S
+#28331
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28322
+D1
+~
+~
+0 -1 28332
+D2
+~
+~
+0 -1 28337
+D3
+~
+~
+0 -1 28330
+S
+#28332
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28321
+D1
+~
+~
+0 -1 28333
+D2
+~
+~
+0 -1 28336
+D3
+~
+~
+0 -1 28331
+S
+#28333
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D2
+~
+~
+0 -1 28334
+D3
+~
+~
+0 -1 28332
+S
+#28334
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28333
+D1
+~
+~
+0 -1 28335
+D2
+~
+~
+0 -1 28347
+D3
+~
+~
+0 -1 28336
+S
+#28335
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D2
+~
+~
+0 -1 28348
+D3
+~
+~
+0 -1 28334
+S
+#28336
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28332
+D1
+~
+~
+0 -1 28334
+D2
+~
+~
+0 -1 28346
+D3
+~
+~
+0 -1 28337
+S
+#28337
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28331
+D1
+~
+~
+0 -1 28336
+D2
+~
+~
+0 -1 28345
+D3
+~
+~
+0 -1 28338
+S
+#28338
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28330
+D1
+~
+~
+0 -1 28337
+D2
+~
+~
+0 -1 28344
+D3
+~
+~
+0 -1 28339
+S
+#28339
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28329
+D1
+~
+~
+0 -1 28338
+D2
+~
+~
+0 -1 28343
+D3
+~
+~
+0 -1 28340
+S
+#28340
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28328
+D1
+~
+~
+0 -1 28339
+D2
+~
+~
+0 -1 28342
+D3
+~
+~
+0 -1 28341
+S
+#28341
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28327
+D1
+~
+~
+0 -1 28340
+S
+#28342
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28340
+D1
+~
+~
+0 -1 28343
+S
+#28343
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28339
+D1
+~
+~
+0 -1 28344
+D2
+~
+~
+0 -1 28355
+D3
+~
+~
+0 -1 28342
+S
+#28344
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28338
+D1
+~
+~
+0 -1 28345
+D2
+~
+~
+0 -1 28354
+D3
+~
+~
+0 -1 28343
+S
+#28345
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28337
+D1
+~
+~
+0 -1 28346
+D2
+~
+~
+0 -1 28353
+D3
+~
+~
+0 -1 28344
+S
+#28346
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28336
+D1
+~
+~
+0 -1 28347
+D2
+~
+~
+0 -1 28352
+D3
+~
+~
+0 -1 28345
+S
+#28347
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28334
+D1
+~
+~
+0 -1 28348
+D2
+~
+~
+0 -1 28351
+D3
+~
+~
+0 -1 28346
+S
+#28348
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28335
+D2
+~
+~
+0 -1 28349
+D3
+~
+~
+0 -1 28347
+S
+#28349
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28348
+D1
+~
+~
+0 -1 28350
+D2
+~
+~
+0 -1 28360
+D3
+~
+~
+0 -1 28351
+S
+#28350
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D2
+~
+~
+0 -1 28361
+D3
+~
+~
+0 -1 28349
+S
+#28351
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28347
+D1
+~
+~
+0 -1 28349
+D2
+~
+~
+0 -1 28359
+D3
+~
+~
+0 -1 28352
+S
+#28352
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28346
+D1
+~
+~
+0 -1 28351
+D2
+~
+~
+0 -1 28358
+D3
+~
+~
+0 -1 28353
+S
+#28353
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28345
+D1
+~
+~
+0 -1 28352
+D2
+~
+~
+0 -1 28357
+D3
+~
+~
+0 -1 28354
+S
+#28354
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28344
+D1
+~
+~
+0 -1 28353
+D2
+~
+~
+0 -1 28356
+D3
+~
+~
+0 -1 28355
+S
+#28355
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28343
+D1
+~
+~
+0 -1 28354
+S
+#28356
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28354
+D1
+~
+~
+0 -1 28357
+S
+#28357
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28353
+D1
+~
+~
+0 -1 28358
+D2
+~
+~
+0 -1 28368
+D3
+~
+~
+0 -1 28356
+S
+#28358
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28352
+D1
+~
+~
+0 -1 28359
+D2
+~
+~
+0 -1 28367
+D3
+~
+~
+0 -1 28357
+S
+#28359
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28351
+D1
+~
+~
+0 -1 28360
+D2
+~
+~
+0 -1 28366
+D3
+~
+~
+0 -1 28358
+S
+#28360
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28349
+D1
+~
+~
+0 -1 28361
+D2
+~
+~
+0 -1 28365
+D3
+~
+~
+0 -1 28359
+S
+#28361
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28350
+D1
+~
+~
+0 -1 28362
+D2
+~
+~
+0 -1 28364
+D3
+~
+~
+0 -1 28360
+S
+#28362
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D2
+~
+~
+0 -1 28363
+D3
+~
+~
+0 -1 28361
+S
+#28363
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28362
+D2
+~
+~
+0 -1 28373
+D3
+~
+~
+0 -1 28364
+S
+#28364
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28361
+D1
+~
+~
+0 -1 28363
+D2
+~
+~
+0 -1 28372
+D3
+~
+~
+0 -1 28365
+S
+#28365
+Dense Bushes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28360
+D1
+~
+~
+0 -1 28364
+D2
+~
+~
+0 -1 28371
+D3
+~
+~
+0 -1 28366
+D5
+~
+~
+0 -1 28377
+S
+#28366
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28359
+D1
+~
+~
+0 -1 28365
+D2
+~
+~
+0 -1 28370
+D3
+~
+~
+0 -1 28367
+S
+#28367
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28358
+D1
+~
+~
+0 -1 28366
+D2
+~
+~
+0 -1 28369
+D3
+~
+~
+0 -1 28368
+S
+#28368
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28357
+D1
+~
+~
+0 -1 28367
+S
+#28369
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28367
+D1
+~
+~
+0 -1 28370
+S
+#28370
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28366
+D1
+~
+~
+0 -1 28371
+D2
+~
+~
+0 -1 28376
+D3
+~
+~
+0 -1 28369
+S
+#28371
+Grass-Covered Dunes~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28365
+D1
+~
+~
+0 -1 28372
+D2
+~
+~
+0 -1 28375
+D3
+~
+~
+0 -1 28370
+S
+#28372
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28364
+D1
+~
+~
+0 -1 28373
+D2
+~
+~
+0 -1 28374
+D3
+~
+~
+0 -1 28371
+S
+#28373
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28363
+D3
+~
+~
+0 -1 28372
+S
+#28374
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28372
+D3
+~
+~
+0 -1 28375
+S
+#28375
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28371
+D1
+~
+~
+0 -1 28374
+D3
+~
+~
+0 -1 28376
+S
+#28376
+On an Island Beach~
+A temporary description
+~
+283 0 2
+D0
+~
+~
+0 -1 28370
+D1
+~
+~
+0 -1 28375
+S
+#28377
+An Ancient Tunnel~
+A temporary description
+~
+283 265 0
+D3
+~
+~
+0 -1 28378
+D4
+~
+~
+0 -1 28365
+S
+#28378
+An Ancient Tunnel~
+A temporary description
+~
+283 265 0
+D0
+~
+~
+0 -1 28379
+D1
+~
+~
+0 -1 28377
+S
+#28379
+An Ancient Tunnel~
+A temporary description
+~
+283 265 0
+D0
+~
+~
+0 -1 28380
+D2
+~
+~
+0 -1 28378
+S
+#28380
+An Ancient Underground Cavern~
+A temporary description
+~
+283 9 0
+D0
+~
+~
+0 -1 28382
+D2
+~
+~
+0 -1 28379
+D3
+~
+~
+0 -1 28381
+S
+#28381
+An Ancient Underground Cavern~
+A temporary description
+~
+283 9 0
+D0
+~
+~
+0 -1 28383
+D1
+~
+~
+0 -1 28380
+D3
+~
+~
+0 -1 28384
+S
+#28382
+An Ancient Underground Cavern~
+A temporary description
+~
+283 9 0
+D0
+~
+~
+0 -1 28391
+D2
+~
+~
+0 -1 28380
+D3
+~
+~
+0 -1 28383
+S
+#28383
+An Ancient Underground Cavern~
+A temporary description
+~
+283 9 0
+D0
+~
+~
+0 -1 28390
+D1
+~
+~
+0 -1 28382
+D2
+~
+~
+0 -1 28381
+D3
+~
+~
+0 -1 28385
+S
+#28384
+An Ancient Underground Cavern~
+A temporary description
+~
+283 9 0
+D0
+~
+~
+0 -1 28385
+D1
+~
+~
+0 -1 28381
+S
+#28385
+An Ancient Underground Cavern~
+A temporary description
+~
+283 9 0
+D0
+~
+~
+0 -1 28386
+D1
+~
+~
+0 -1 28383
+D2
+~
+~
+0 -1 28384
+D3
+~
+~
+0 -1 28387
+S
+#28386
+An Ancient Underground Cavern~
+A temporary description
+~
+283 9 0
+D0
+~
+~
+0 -1 28394
+D1
+~
+~
+0 -1 28390
+D2
+~
+~
+0 -1 28385
+S
+#28387
+An Ancient Tunnel~
+A temporary description
+~
+283 265 0
+D0
+~
+~
+0 -1 28388
+D1
+~
+~
+0 -1 28385
+S
+#28388
+An Ancient Tunnel~
+A temporary description
+~
+283 265 0
+D0
+~
+~
+0 -1 28389
+D2
+~
+~
+0 -1 28387
+S
+#28389
+An Ancient Tunnel~
+A temporary description
+~
+283 265 0
+D2
+~
+~
+0 -1 28388
+D4
+~
+~
+0 -1 28330
+S
+#28390
+An Underground Lake~
+A temporary description
+~
+283 9 6
+D0
+~
+~
+0 -1 28393
+D1
+~
+~
+0 -1 28391
+D2
+~
+~
+0 -1 28383
+D3
+~
+~
+0 -1 28386
+S
+#28391
+An Underground Lake~
+A temporary description
+~
+283 9 6
+D0
+~
+~
+0 -1 28392
+D2
+~
+~
+0 -1 28382
+D3
+~
+~
+0 -1 28390
+S
+#28392
+An Underground Lake~
+A temporary description
+~
+283 9 6
+D2
+~
+~
+0 -1 28391
+D3
+~
+~
+0 -1 28393
+D5
+~
+~
+0 -1 28395
+S
+#28393
+An Underground Lake~
+A temporary description
+~
+283 9 6
+D1
+~
+~
+0 -1 28392
+D2
+~
+~
+0 -1 28390
+D3
+~
+~
+0 -1 28394
+S
+#28394
+An Ancient Underground Cavern~
+A temporary description
+~
+283 9 0
+D1
+~
+~
+0 -1 28393
+D2
+~
+~
+0 -1 28386
+S
+#28395
+A Deep Underground River~
+A temporary description
+~
+283 13 6
+D3
+~
+~
+0 -1 28396
+D4
+~
+~
+0 -1 28392
+S
+#28396
+A Deep Underground River~
+A temporary description
+~
+283 13 6
+D1
+~
+~
+0 -1 28395
+D3
+~
+~
+0 -1 28397
+S
+#28397
+A Deep Underground River~
+A temporary description
+~
+283 13 6
+D1
+~
+~
+0 -1 28396
+D3
+~
+~
+0 -1 28398
+S
+#28398
+A Deep Underground River~
+A temporary description
+~
+283 13 6
+D1
+~
+~
+0 -1 28397
+D3
+~
+~
+0 -1 28399
+S
+#28399
+A Deep Underground River~
+A temporary description
+~
+283 13 6
+D1
+~
+~
+0 -1 28398
+S
+#0
+$~

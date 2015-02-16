@@ -1,0 +1,410 @@
+#14100
+Mellow Hills Asylum for the Criminally Insane~
+  The mistcovered landscape before your feet is like a mirror image
+of the grey clouded skies above you. The landscape in all its shades
+of grey is as monotone as the mind of an apathic. A crisp sound can be
+heard as the brown straws of dead grass breaks and crumbles beneath
+your feet. The gates which once held the habitants inside are now
+hanging bent and broken off their rusted hinges. Something awful has
+happened here, and recently. You hear faint yelling and screams from
+the building. Dark figures rappidly pass by the windows upstairs,
+followed by more desperate... Mad... Screams...
+~
+141 0 0
+D0
+~
+~
+0 -1 14101
+S
+#14101
+The Main Vestibule of Mellow Hills Asylum~
+  The information desk is one hell of a mess. Bloodstained papers all
+over the desk and floor. The dark green archive cabined has been
+flipped over, and the confidential `ofiles `qof the inhabitants covers
+the marble tiled floor. The little cabinet on the wall behind the
+counter in which the guards would keep the keys has been torn down,
+and the few still remaining keys are spread all over... As you look
+around you notice that most of the doors are busted open, and it would
+appear that whoever was once locked in tight; are now in all likelyhood
+roaming free...
+~
+141 0 0
+D0
+~
+~
+0 -1 14115
+D1
+~
+~
+0 -1 14114
+D2
+~
+~
+0 -1 14100
+D3
+~
+~
+0 -1 14102
+S
+#14102
+Western hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste down your nostrils and into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute.
+~
+141 0 0
+D1
+~
+~
+0 -1 14101
+D3
+~
+~
+0 -1 14103
+S
+#14103
+South Western corner of the hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+~
+141 0 0
+D0
+~
+~
+0 -1 14104
+D1
+~
+~
+0 -1 14102
+S
+#14104
+Western hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+There are doors on both sides going all the way down the hallway.
+~
+141 0 0
+D0
+~
+~
+0 -1 14105
+D1
+~
+door~
+1 -1 14117
+D2
+~
+~
+0 -1 14103
+D3
+~
+door~
+1 -1 14116
+S
+#14105
+Western hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+There are doors on both sides going all the way down the hallway.
+~
+141 0 0
+D0
+~
+~
+0 -1 14106
+D2
+~
+~
+0 -1 14104
+S
+#14106
+North Western corner of the hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+~
+141 0 0
+D1
+~
+~
+0 -1 14107
+D2
+~
+~
+0 -1 14105
+S
+#14107
+Northern hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+There are doors on both sides going all the way down the hallway.
+~
+141 0 0
+D1
+~
+~
+0 -1 14108
+D3
+~
+~
+0 -1 14106
+S
+#14108
+Northern hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+There are doors on both sides going all the way down the hallway.
+~
+141 0 0
+D1
+~
+~
+0 -1 14109
+D3
+~
+~
+0 -1 14107
+S
+#14109
+Northern hallway of Mellow Hills Asylum ~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+There are doors on both sides going all the way down the hallway.
+~
+141 0 0
+D1
+~
+~
+0 -1 14110
+D3
+~
+~
+0 -1 14108
+S
+#14110
+North Eastern corner of the hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+~
+141 0 0
+D2
+~
+~
+0 -1 14111
+D3
+~
+~
+0 -1 14109
+S
+#14111
+Eastern hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+There are doors on both sides going all the way down the hallway.
+~
+141 0 0
+D0
+~
+~
+0 -1 14110
+D2
+~
+~
+0 -1 14112
+S
+#14112
+Eastern hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+There are doors on both sides going all the way down the hallway.
+~
+141 0 0
+D0
+~
+~
+0 -1 14111
+D2
+~
+~
+0 -1 14113
+S
+#14113
+South Eastern corner of the hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste up your nostrils and down into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute. From here the hallway seems to go on forever. A light
+above your head keeps your closest surroundings lit, but looking down
+the hallway, judging from the constant yelling and screaming; it seems
+like an endless shaft running straight into a dark hole of madness.
+~
+141 0 0
+D0
+~
+~
+0 -1 14112
+D3
+~
+~
+0 -1 14114
+S
+#14114
+Eastern hallway of Mellow Hills Asylum~
+  The checker-patterened floor is heavily stained by bloody footprints
+and dragmarks. The walls were once white, but now they are rather
+brown and yellow. A red handprint can be found every here and there,
+and the profound smell of the quite recent bloodspill sends a sweet
+metallic taste down your nostrils and into the back of your mouth.
+The lights in the hallway blinks irregularily, and threatens to go out
+any minute.
+~
+141 0 0
+D1
+~
+~
+0 -1 14113
+D3
+~
+~
+0 -1 14101
+S
+#14115
+Recreational room of Mellow Hills Asylum~
+A temporary description
+~
+141 0 0
+D2
+~
+~
+0 -1 14101
+S
+#14116
+Cell number 01~
+  The walls are smeared in shit, and a disgusting whiff of old piss 
+fills your nostrils as you inhale the putrid air. There is an old
+metal bed in the upper left corner of the room fitted with a simple
+rubber sheeted mattress, leather restrains, stained bedwear and pillow.
+An aluminum tray has been left on the floor here along with a plastic
+spork, an aluminum bucket still containing what appears to be water
+and another larger bucket made out of good old fashion wood which
+smells  of fecies. The tiny iron barred window high up on the western
+wall lets in what little light fills the room.
+~
+141 0 0
+D1
+~
+door~
+1 -1 14104
+S
+#14117
+Cell number 02~
+  The walls are covered in crosses and `owritings `qfrom several different
+religious texts written in what appears to be charcoal as well as blood.
+There are many passages from the bible, as well as the Kuhran. It would
+appear that the inhabitant of this room was trying to keep something out...
+Or perhaps from GETTING out. There is an old metal bed in the upper left
+corner of the room with a simple rubber sheeted mattress, leather restrains,
+stained bedwear and pillow. There are some pieces of charcoal left on the
+floor here, along with some `opapers`q containing the writings of a truly
+disturbed mind.
+~
+141 0 0
+D3
+~
+door~
+1 -1 14104
+S
+#14199
+A temporary name~
+A temporary description
+~
+141 0 0
+S
+#0
+$~

@@ -1,0 +1,95 @@
+#5301
+griffon~
+The Griffon~
+A large griffon stands before you.
+~
+A large creature, part lion, part eagle, it has a wingspan of ten feet or 
+more.
+~
+232 0 -500 Y
+7 12 6 3d7+60 2d5+5
+0 6500
+8 8 0
+83 0 0d0+0 0
+0 0 0 0
+K
+300 0 0 0 0 0
+#5302
+large rat~
+A large rat~
+A large rat is here scurring about the ground.
+~
+A large rat glares at you through yellow eyes.
+~
+200 0 500 Y
+5 15 9 2d10+20 1d5+2
+0 2400
+8 8 0
+93 0 0d0+0 0
+0 0 0 0
+K
+100 0 0 0 0 0
+#5303
+captain griffon~
+The Griffon Captain~
+The Griffon Captain towers over you.
+~
+A griffon even larger than the others with a stare to freeze you in your
+tracks. He wears his field armor, prepared for battle at all times.
+~
+106 0 -1000 Y
+15 8 3 5d5+300 5d2+8
+0 53000
+8 8 0
+83 0 0d0+0 0
+0 0 0 0
+K
+6000 1 0 0 0 0
+#5305
+griffon lion eagle~
+A large griffon~
+A gigantic griffon stands before you.
+~
+This creature has the body of a lion and the wings and head of an
+eagle. Its gigantic body towers over you.
+~
+8 0 500 Y
+9 12 6 4d25+180 2d5+5
+0 1
+8 8 1
+83 0 1d1+1 0
+0 0 0 0
+K
+6000 0 0 0 0 0
+#5306
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5307
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

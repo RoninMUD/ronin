@@ -1,0 +1,348 @@
+#16610
+Crystal Sword~
+The Crystal Sword~
+A transparent crystalline sword floats here.~
+~
+5 321 8193
+1 2 10 3
+10 20000 50
+50
+E
+sword crystal~
+You see a crystaline sword floating before you.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#16615
+Talisman medallion amulet~
+Talisman d'Berbalang~
+A small round shiny medallion lies here.~
+~
+11 1 5
+0 0 0 0
+1 30000 90
+50
+E
+Talisman medallion amulet~
+You see a round medallion, covered in runic script. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 -2
+A
+19 1
+#16620
+whip flaming flail~
+a flaming whip~
+Berbalang's flaming whip sizzles here.~
+~
+5 0 8193
+0 5 4 2
+10 50000 450
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16625
+key~
+The elven key~
+A ancient key lies partially buried in the dirt.~
+~
+18 0 1
+2 0 0 0
+3 5000 1
+50
+E
+Key~
+You see a finely crafted silver key, you wonder what it opens.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16630
+wand firestone fireball stick~
+A magical wand~
+A small stick of firestone is laying on the ground.~
+~
+3 3424 16385
+3 2 2 26
+1 2500 1000
+50
+E
+wand firestone fireball stick~
+You see a small reddish stick made out of firestone, be careful, it's hot!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16635
+potion black bottle pitch vile jar~
+A pitch black potion~
+A small and delicate pitch black bottle is sitting here on the ground.~
+~
+10 96 1
+20 27 17 36
+1 1500 300
+50
+E
+potion black bottle pitch vile jar~
+You see a small pitch-black potion. It has a label which reads: "Drink me!"
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16636
+scepter demon claw~
+Scepter with a demon's claw~
+There is a scepter with a demon's claw here.~
+~
+12 1024 16385
+0 0 0 0
+10 50000 1100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -5
+A
+18 2
+#16637
+cloak berbalang~
+Berbalang's cloak~
+A vile-looking cloak lies here.~
+~
+9 4196353 1025
+0 -1 1008759905 1953722144
+4 50000 1500
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+#16643
+bauble strange key~
+A strange Bauble~
+A conspicuous bauble has been dropped here, forgotten for ages.~
+~
+18 524288 16385
+0 0 0 0
+1 10 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16650
+ring sky~
+Sky Ring~
+There is a blue ring lying on the ground.~
+~
+12 1024 3
+0 0 0 0
+6 35000 4000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+5 2
+#16651
+potion green~
+a green potion~
+There is a green potion here.~
+~
+10 134217792 16385
+30 -1 28 28
+1 50000 200
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16660
+hammer stone huge~
+A huge stone hammer~
+There is a very big stone hammer lying on the ground.~
+$r hammer made a little earthquake when it hit on the ground.~
+5 1048578 8193
+0 10 2 7
+18 28000 1800
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 -3
+A
+19 5
+#16661
+ring earth~
+Earth Ring~
+There is a stone ring lying on the ground.~
+~
+12 1024 3
+0 0 0 0
+6 30000 4000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 2
+A
+4 2
+#16670
+torch flaming~
+A Flaming Torch~
+There is a flaming torch here.~
+~
+1 1025 65537
+0 0 -1 0
+8 20000 3000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 4
+#16671
+cape fire~
+A flickering cape~
+There is a flickering cape here, burning brightly on the ground.~
+~
+9 1025 5
+7 0 0 0
+4 10000 800
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 2
+A
+19 1
+#16680
+cloak waterfall~
+A Waterfall Cloak~
+A blue cloak is lying on the ground.~
+~
+9 1 1025
+8 0 0 0
+5 30000 2000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 -5
+#16681
+boots waterwalking~
+Boots of Water Walking~
+A pair of blue boots is lying on the ground.~
+~
+22 1026 65
+0 0 0 0
+6 25000 870
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 30
+A
+17 -7
+#0
+$~

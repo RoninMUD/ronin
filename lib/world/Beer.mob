@@ -1,0 +1,129 @@
+#25801
+evil prime demon~
+prime evil~
+Before you stands the manifestation of all that is evil.
+~
+Centuries of evil have spawned the evil being that stands before you.
+Its eyes are little more then a glimmering flame that offer you no
+idea of what lurkes within the evil beast.  From inside its mouth
+you see a twisted mangle of teeth.  Tattered rags cover a body that
+must be a thousand years old.
+~
+67108936 268699776 -1000 Y
+34 -14 -100 3d1000+6000 80d6+50
+1000000 3000000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#25802
+robber grave~
+a grave robber~
+A grave robber shifts in and out of the shadows here.
+~
+Barely visible to you, a grave robber has become adept at hiding
+in the shadows of these dark tunnels.  Like you he searches
+these tunnels for treasures and riches.
+~
+67108876 1835008 -1000 Y
+32 -11 10 3d50+1600 8d5+10
+20000 100000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#25803
+holy devine ancient~
+an ancient divine~
+Levitating here is an individual of great divinity.
+~
+The individual that stands before you is here for one reason and
+one reason only.  It is he that provides the balance between good
+and evil.  Without out him every ounce of sin and evil in these
+tunnels would be set forth to reak havoc on the world.
+~
+10 264320 1000 Y
+34 -14 -100 1d4000+10000 20d5+99
+100000 3000000
+9 9 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#25804
+spirit~
+a demonic spirit~
+A demonic spirit manifests itself before you.
+~
+    As in the lifetime before this one, the demonic spirit lives to do the
+bidding of the dark side.  The spirit is a creture of undefinable shape and 
+color.  It's eyes however glint with that certain evil you have seen
+in many of the dark creatures.
+~
+104 17039360 -1000 Y
+29 -8 10 100d4+3400 5d5+25
+30000 100000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#25805
+dead corpse animated ~
+an animated corpse~
+An animated corpse towers before you.
+~
+Returned to life by an ancient magician, the animated corpse has been
+forsaken to these ancient tombs to live out an uneventful existence
+until the end of time.
+~
+536870924 268435456 0 Y
+32 -3 10 50d2+2000 6d6+6
+5000 70000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#25806
+apparition spirit ghost~
+an unearthly apparition~
+Floating a few feet in front of you is an unearthly apparition.
+~
+The ghostly creture that floats before you is not of this realm.
+It's unwrapped body is a translucent mixture of dust and slime.  Two
+small appendages project forword from its upper torso.  No legs can be
+seen, as it appears never to touch the ground.
+~
+16394 268437634 -999 Y
+34 -14 -50 100d5+5000 5d5+40
+50000 1500000
+9 9 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#25807
+beast pecious~
+the pecious beast~
+Here in the shadows, the pecious beast awaits you next move.
+~
+A compact creature, the pecious beast has a skin covered in
+a thick slime.  Supported by powerful hind legs, the beast could spring
+forward at any time.  Extending from its long mouth are two six inch
+fangs. Filling the gap between these fangs are short razor like teeth.
+It is hard to distinguish the point where the beast's head stops and
+body starts.  
+~
+16398 264192 -800 Y
+34 -1 7 10d300+9000 25d7+40
+200000 1200000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

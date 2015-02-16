@@ -1,0 +1,47 @@
+#13500
+oglozt lesser~
+A Lesser Oglozt~
+A Lesser Oglozt is reaching out with it's 4 clawed forefeet at you.
+~
+The huge lizard man has warts and scars all over it's slimy body. The
+seemingly bottomless ravenous jaw is clasping shut with anger. It flails
+it's arms and charges towards you eyes glowing hellish red. Ominous
+silence seems to surround it.
+~
+105 295050 -1000 Y
+48 -13 -5 20d40+4300 2d8+50
+5000 200000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+#13501
+oglozt greater~
+The Greater Oglozt~
+The Greater Oglozt is pointing at you with it's hand and muttering.
+~
+The gigantic lizard man is shoving you back and raises it's huge fist
+to pound you to slimy pulp. It's eyes are glowing hellishly, in red.
+~
+131177 805339272 -1000 Y
+51 -15 -10 30d20+10000 2d8+84
+12500 520000
+8 8 0
+63 4096 0d0+0 0
+0 0 0 0
+#13502
+demon reptilian reptile~
+The Reptilian Demon~
+The huge reptilian Demon is slashing around with its tail.
+~
+Lying atop a huge podium of marble, there is an enormous horned lizard
+with huge, blood-dripping fangs. It's gigantic paws are also dripping blood.
+Just hope it won't be your blood next time.
+~
+43 805339272 -1000 Y
+55 -20 -20 100d12+18000 6d8+110
+500000 2500000
+8 8 0
+80 4096 0d0+0 0
+0 0 0 0
+#0
+$~

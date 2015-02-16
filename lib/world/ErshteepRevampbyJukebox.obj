@@ -1,0 +1,740 @@
+#10000
+pelt fur~
+Pelt of Matted Fur~
+A hideous pelt of matted fur and dirt lies here, smelling rank.~
+'(null)'~
+9 142656512 1025
+5 -1 -1 -1
+11 21169 5039
+11
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+18 3
+A
+13 13
+#10001
+fountain~
+a simple fountain~
+An old fountain rests here, slightly cracked and weathered.~
+~
+17 0 0
+10093 10093 0 0
+3469 0 0
+100
+E
+fountain~
+
+ This fountain has been a monument of sorts within Orshingal
+since its humble beginnings.  Although once located in the
+central plaza north of here, it was moved later to be nearer
+the residential districts to provide an easily accessible
+water source.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10002
+pastry enfan delectable~
+a delectable enfan pastry~
+A mouthwatering pastry rests here, begging to be eaten.~
+~
+19 0 1
+29 -1 -1 0
+2 11 2
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10003
+bread banana bananaboots~
+a thick slice of banana bread~
+The arousing smell of banana bread tickles your nose.~
+~
+19 0 65
+13 -1 -1 0
+2 37 2
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+#10004
+potion greenish blue~
+a greenish-blue potion~
+A strongly odiferous greenish-blue potion is here.~
+~
+10 0 1
+25 28 35 0
+2 18181 769
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10005
+potion cloudy~
+a cloudy potion~
+A tiny vial of cloudy liquid rests, abandoned, on the ground.~
+~
+10 0 1
+20 72 72 72
+3 10093 1453
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10006
+pike enfan~
+iron-tipped pike~
+A sturdy looking pike of iron and wood rests gently on the ground.~
+~
+5 142663680 8193
+86 6 3 9
+5 12289 3469
+5
+E
+pike~
+
+ The sturdy pike flexes slightly as you brandish it. The design
+has elements of both elven and halfling weaponry; it has been
+crafted with smaller hands in mind than a full-grown human's.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+A
+2 1
+#10007
+emblem enfan~
+Ancient Emblem of the Enfans~
+An emblem of an ancient civilization rests peacefully on the ground.~
+~
+1 136360960 65537
+3 5 -1 -1
+17 47629 5167
+7
+E
+emblem~
+
+ This archaic emblem is a relic of the ancient enfan culture.
+Enchanted with a firey essence this emblem shines eternally,
+guiding enfans for centuries through the dark forest to the
+safety of Orshingal's walls.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 2
+A
+13 17
+A
+12 11
+#10008
+crest silvery silver enfan~
+a silver crest~
+Neglected and forgotten, a silvery crest rests here collecting dust.~
+~
+9 180358208 5
+7 -1 -1 -1
+3 76801 3169
+13
+E
+crest~
+
+ Etched with primitive runes, this ancient crest passes from
+one mayor to the next since the dawn of the enfan civilization.
+~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 -1
+A
+13 7
+A
+3 1
+B
+4
+#10009
+deposit opal mineral~
+a small deposit of opal~
+A small deposit of a translucent blue mineral is here.~
+~
+8 0 0
+0 0 0 0
+101 9901 433
+17
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10010
+key golden tiny~
+tiny golden key~
+A tiny golden key rests on the ground.~
+~
+18 0 1
+1000 -1 -1 -1
+2 769 41
+11
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10011
+heels sexy high mayorssecret~
+a pair of sexy high heels~
+A pair of tantalizingly sexy high heels lie here, tossed aside.~
+~
+9 143665153 65
+5 -1 -1 -1
+7 47629 2437
+11
+E
+heels~
+
+ The enfan mayor apparently has quite the steamy secret. Fluffy
+pink tassles adorn the toe of each stiletto. It's possible that
+he simply wished to appear taller. There is still the chance 
+that they belong to someone else...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+11 17
+A
+51 5
+A
+18 2
+#10012
+organ church~
+a magnificent organ~
+An old off-pitch organ sits here forgotten, waiting to be played.~
+~
+24 268435456 16384
+0 0 0 0
+5167 112909 28813
+100
+E
+organ~
+
+ The organ has wooden inlay of such beauty that one struggles
+to comprehend the skill of the craftsmen that made it. Tall,
+silvery pipes creep far into the rafters above. Keys of a
+bright, heavenly white ivory and jet-black obsidian grant the
+instrument an aura of divine majesty.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#10013
+band wedding gold enfan fyona jarve~
+gold wedding band~
+A simple gold band rests here, quietly forgotten by its owner.~
+~
+11 140562433 3
+0 0 0 0
+2 37633 4219
+11
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 0
+A
+12 5
+A
+52 2
+#10014
+mug ale dwarven~
+mug of dwarven ale~
+A sudsy mug of ale awaits a thirsty passerby.~
+~
+17 169123840 16385
+79 53 4 0
+7 13873 547
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+19 2
+A
+17 -7
+#10015
+sash ethereal~
+an Ethereal Sash~
+A wispy sash lies here, fading in and out of transparency.~
+~
+11 205537376 2049
+0 0 0 0
+0 18253 1657
+3
+E
+sash~
+
+ The transparent fabric of this old worn sash threatens to
+flicker out of existence at any moment. Made from a material
+unlike anything seen in the mortal realm this is clearly a
+garment which has made its way back from the underworld.
+~
+X
+~
+262 0 0
+M
+~
+~
+~
+~
+A
+2 1
+A
+18 2
+A
+17 -17
+T
+15840
+B
+2
+#10016
+key skeleton~
+a skeleton key~
+A chipped skeleton key rests here.~
+~
+18 0 1
+0 -1 -1 -1
+3 2083 457
+89
+E
+key~
+
+ The metal appears to be decomposing, just like flesh, and
+with an odor equally as foul. A insignia engraved at the
+base has become too faded from wear to read.
+~
+X
+~
+6 0 0
+M
+~
+~
+~
+~
+T
+307
+#10017
+basket wicker enfan~
+wicker basket~
+A finely crafted wicker basket of enfan origins rests here.~
+~
+15 0 1
+211 0 0 0
+13 3571 991
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10018
+jerkin lime green~
+lime-green jerkin~
+A lime-green jerkin lies here, faded and frayed from wear.~
+~
+9 167822400 9
+13 -1 -1 -1
+11 47629 8233
+3
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+2 2
+A
+9 -5
+#10019
+sword short elven elf~
+Elven Short Sword~
+A short sword lies here, marked with elven runes.~
+~
+5 135275521 8193
+21 7 3 14
+17 76801 6211
+7
+E
+sword~
+
+ The hilt has been wrapped in a smooth white silk and the base
+of the blade is marked by several stanzas of elvish. The blade
+itself is slightly curved with elegant balance and feel as it
+cuts through the air.
+~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+48 5
+A
+19 5
+A
+18 2
+#10020
+tail mouse mutant severed~
+a Mutant Mouse's Severed Tail~
+The severed tail of an enormous rodent lies here, twitching.~
+$n whips $V across the belly with $s Mutant Mouse's Tail.~
+5 217100864 8193
+90 5 7 2
+17 263167 13681
+7
+X
+$n whips the ground with $s Mutant Mouse's Tail.~
+5 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+12 13
+A
+18 3
+T
+14851
+#10021
+wreath fire flame~
+Wreath of Fire~
+A firey halo burns brightly here, its white flames flickering in the wind.~
+~
+9 153227328 17
+7 -1 -1 -1
+17 514229 28657
+13
+X
+~
+4 0 0
+M
+As you place the magically flaming wreath atop your head you feel its heat
+coursing through your veins.~
+$n places the white-flame wreath atop $s head.~
+You're left feeling cold as you remove the firey halo.~
+$n seems chilled having removed $s firey wreath.~
+A
+19 1
+A
+14 151
+A
+5 3
+T
+13681
+#10022
+ring obsidian~
+Obsidian Ring~
+A jet-black ring sits here, reflecting the world on its glassy surface.~
+~
+9 141603393 3
+3 -1 -1 -1
+37 426389 7351
+5
+E
+ring~
+
+ The surface of this ring has an eerie look to it. A seemingly
+infinite pitch-black darkness swallows all light, yet reflects
+your image. No hint of sun-flare touches the surface of the
+ring, only faces are reflected by the haunting blackness. But
+you notice that your features are oddly warped by the ring;
+your eyes gleam with a deep blood red hue.
+~
+X
+~
+40 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 23
+A
+3 1
+#10023
+sceptre summoning scepter summon~
+Summoning Sceptre~
+A pulsating purple orb atop a black staff is stuck in the ground.~
+~
+11 492843605 16385
+0 0 0 0
+29 131071 6949
+7
+E
+sceptre~
+
+ The staff of this wicked device appears to be hewn from the
+petrified arm of an imp. Wrapped in its grotesque claw of a
+hand is a purple orb, filled with a swirling smoky cloud.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 31
+A
+4 1
+A
+19 2
+#10024
+kazoo~
+a Kazoo~
+A shiny metal kazoo lies on the ground.~
+~
+24 99677184 16385
+0 0 0 0
+3 23833 3889
+7
+E
+kazoo~
+
+ A family heirloom of Jarve's, he can be heard trumpeting its
+goosish call on particularly busy nights in his restaurant.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+51 7
+A
+19 2
+A
+12 23
+#10025
+potion aqua marine aquamarine~
+an aquamarine potion~
+An aquamarine potion glistens within a glass beaker on the ground.~
+~
+10 268959744 1
+40 36 103 224
+11 52489 3889
+91
+E
+potion~
+
+ The glass vial holding the potion has numerous cracks running
+down the sides. Although the potion is corked, the cork itself
+looks like it could turn to dust at any moment. As with most of
+Elago's demented work, this potion's origin and probable vola-
+tility should be considered before quaffed.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+11
+#10026
+vial recipe~
+a recipe in a corked vial~
+A small glass vial containing a rolled up note.~
+~
+32 0 1
+10027 12931 2805 104
+2 1471 71
+11
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10027
+circlet glass cloudy~
+cloudy glass circlet~
+A delicate, cloudy glass circlet has been left here.~
+~
+11 233844864 4097
+0 0 0 0
+11 42589 3121
+0
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+53 5
+A
+12 17
+A
+3 1
+#10028
+cane hickory~
+a worn hickory cane~
+A old, worn hickory cane has been left here.~
+$n swing$z $s hickory cane into $V's head with a satisfying 'THWACK!'~
+5 148910592 24577
+302 2 13 7
+7 9283 547
+11
+X
+$n swing$z $s hickory cane around wildly and scream$z, "Get off my lawn!"~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+9 31
+A
+12 23
+#10029
+desk drawer~
+desk made of cherry wood~
+A desk made from beautiful cherry with intricately carved drawers.~
+~
+15 0 0
+1801 2 10010 0
+3469 21169 433
+100
+E
+drawer~
+
+ The cherry drawer has an elegant golden handle. A tiny keyhole
+protects the secret contents of the drawer, known only to the
+mayor himself.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#0
+$~

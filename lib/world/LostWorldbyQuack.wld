@@ -1,0 +1,989 @@
+#27100
+Duck Heaven~
+  You are in a vast audience hall.  Portraits of famous ducks line the walls;
+Donald Duck, Daffy Duck, Howard the Duck and many others who you cannot
+immediately recognize.  There is an enormous throne at the west end of the
+hall, on it sits a large, humanoid duck wearing a golden crown.
+~
+271 512 0
+D0
+~
+~
+0 -1 3072
+D5
+~
+door~
+1 -1 3001
+S
+#27101
+Shimmering Vortex~
+  You are in a dusty tomb, though an odd tomb it is...looking around, you
+notice that there are no burial trappings in sight and you faintly detect the 
+smell of fresh grass in the air.  Last, but not least, you see a shimmering 
+curtain of blue flame in the middle of the room.  Etched into the floor all 
+around the flame are strange, faintly glowing symbols.
+~
+271 0 0
+D2
+~
+curtain~
+1 0 27102
+E
+symbols~
+There are four symbols: To the north is an hourglass, to the east is a skull,
+a large arachnoid to the west and a pyramid to the north.
+~
+S
+#27102
+Entrance to the Lost World~
+  You find yourself in a forest with wildlife that looks like it should have
+gone extinct millennia ago.  Glancing around, you notice several dark forms
+skulking in the shadows around you.
+~
+271 0 3
+D1
+~
+~
+0 -1 27198
+D2
+~
+~
+0 -1 27103
+S
+#27103
+A prehistoric forest~
+  You are walking through an ancient forest.  The plants all around you appear
+unfamiliar and strange. Hearing an eerie screech above, you look up.  Far
+above you, you can make out the shape of some large flying creature, much 
+larger than any bird you have ever seen.  A small but well-trodden path 
+leads west. 
+~
+271 4 3
+D0
+~
+~
+0 -1 27102
+D1
+~
+~
+0 -1 27105
+D2
+~
+~
+0 -1 27104
+D3
+~
+~
+0 -1 27128
+S
+#27104
+A prehistoric forest~
+  A fallen tree of immense size lies across the path here.  By the size of 
+it, it must have been thousands of years old when it fell.  Huge claw 
+marks mar one side of the tree -- probably from the monster who pushed it 
+over. The size and weight of the gargantuan who could do this is 
+mind-boggling. 
+~
+271 0 3
+D0
+~
+~
+0 -1 27103
+D1
+~
+~
+0 -1 27106
+D2
+~
+~
+0 -1 27105
+D3
+~
+~
+0 -1 27103
+S
+#27105
+A prehistoric forest~
+  The dense foliage reluctantly parts before you as you force your way 
+through.  Here and there you can see tracks of clawed feet, recent by the 
+looks of them.  A small lizard scuttles through the underbrush near you 
+and is gone. 
+~
+271 0 3
+D0
+~
+~
+0 -1 27104
+D1
+~
+~
+0 -1 27103
+D2
+~
+~
+0 -1 27106
+D3
+~
+~
+0 -1 27107
+D5
+A fan of dense foliage barely hides a tiny opening below.
+~
+foliage~
+9 -1 16877
+E
+foliage~
+A dense wall of plants covers the forest floor.
+~
+S
+#27106
+A prehistoric forest~
+  You suddenly come upon a group of small lizards foraging. They become 
+startled by your approach and scatter into the underbrush.  One of them 
+lingers just long enough for you to get a good look at it, it is about 4 
+feet tall and walks on two powerful hind legs which are supported by 2 
+smaller forelegs. The reptile cocks its head and stares at you with one 
+baleful eye and then scuttles away.
+~
+271 0 3
+D0
+~
+~
+0 -1 27105
+D1
+~
+~
+0 -1 27104
+D2
+~
+~
+0 -1 27104
+D3
+~
+~
+0 -1 27108
+S
+#27107
+A prehistoric forest~
+  The forest comes to an abrupt end here, as if it had been cleared away by
+someone.  You become aware of the absence of animal noises after awhile and
+glance around. The ground here is bereft of animal tracks but littered with
+footprints seemingly made by sandals.  The tracks all lead west, in the 
+direction of a small city which you can barely make out in the distance.
+~
+271 4 3
+D0
+~
+~
+0 -1 27104
+D1
+~
+~
+0 -1 27105
+D2
+~
+~
+0 -1 27108
+D3
+~
+~
+0 -1 27126
+S
+#27108
+A prehistoric forest~
+  The trees here seem to close in on you as if trying to trap you here for all
+eternity. You shake off a feeling of nausea and realize it must be the air in
+here clouding your judgement.  A sweet yet sickening smell of rose petals can
+be detected here and a small brush with strange flowers is growing near the 
+base of a huge tree to your left.
+~
+271 4 3
+D0
+~
+~
+0 -1 27107
+D1
+~
+~
+0 -1 27106
+D2
+~
+~
+0 -1 27111
+D3
+~
+~
+0 -1 27109
+E
+bush~
+The flowers on the bush look similar to the flowers of a black lotus.
+~
+S
+#27109
+A prehistoric forest~
+  You scratch your cheeks as you trudge on through the wild growth here. Small
+insects flee in panic from the unfamiliar sounds, and you comfort 
+yourself with the thought that at least you've not encountered any signs 
+of giant insects so far. A drum suddenly starts to beat somewhere in the 
+distance, too far away for you to make out the direction from whence it 
+comes. 
+~
+271 0 3
+D0
+~
+~
+0 -1 27106
+D1
+~
+~
+0 -1 27108
+D2
+~
+~
+0 -1 27110
+D3
+~
+~
+0 -1 27105
+S
+#27110
+Clearing in the prehistoric forest~
+  You come upon a small clearing in the forest.  There is a large cauldron
+sitting here in the middle of a camp, which looks like it was abandoned in a
+hurry. You notice the half-eaten remains of animals casually strewn about
+the area.  You step closer and suddenly you realize that the remains are not
+of animals, but of humans!  You think you can see movement in the shadows at
+the edge of the clearing.
+~
+271 4 0
+D0
+~
+~
+0 -1 27109
+D1
+~
+~
+0 -1 27111
+D2
+~
+~
+0 -1 27106
+D3
+~
+~
+0 -1 27105
+S
+#27111
+A prehistoric forest on the edge of a swamp~
+  You come to the edge of the prehistoric forest where it borders the ancient
+swamp. You feel the  tremors of gigantic footsteps coming from the direction 
+of the foggy swamp to the east.
+~
+271 0 3
+D0
+~
+~
+0 -1 27108
+D1
+~
+~
+0 -1 27112
+D2
+~
+~
+0 -1 27120
+D3
+~
+~
+0 -1 27110
+S
+#27112
+The foggy swamp~
+  You wade through the muck, occasionally stepping on something soft that 
+slithers out from beneath your feet.  You can see hulking shapes of some 
+enormous beasts through the mist, accompanied by a small earthquake now 
+and then as they move their large bulks.
+~
+271 0 0
+D1
+~
+~
+0 -1 27113
+D2
+~
+~
+0 -1 27115
+D3
+~
+~
+0 -1 27111
+S
+#27113
+The foggy swamp~
+  You trudge on through the swamp, the mud clings to every part of your body
+now and you look more like a mud-monster than a human.  You can still make
+out dark shapes in the fog, but the tremors have now lessened somewhat.
+~
+271 0 0
+D0
+~
+~
+0 -1 27113
+D1
+~
+~
+0 -1 27114
+D2
+~
+~
+0 -1 27116
+D3
+~
+~
+0 -1 27112
+S
+#27114
+Dry patch in the foggy swamp~
+  You climb up onto a patch of dry ground in the middle of the swamp.  The
+place shows signs of recent habitation; you are clearly not the first to seek
+sanctuary here.  The tremors have now decreased to the point where they are 
+almost unnoticeable.
+~
+271 0 0
+D0
+~
+~
+0 -1 27116
+D1
+~
+~
+0 -1 27116
+D2
+~
+~
+0 -1 27116
+D3
+~
+~
+0 -1 27113
+S
+#27115
+The foggy swamp~
+  You are wading through knee-deep water in the foggy swamp. Occasionally you
+feel something slimy touch your legs briefly, as if delicately probing for 
+signs of life. Through the fog you can make out huge, hulking shapes 
+moving around in the distance.
+~
+271 0 0
+D0
+~
+~
+0 -1 27112
+D1
+~
+~
+0 -1 27116
+D2
+~
+~
+0 -1 27116
+D3
+~
+~
+0 -1 27120
+S
+#27116
+The foggy swamp~
+  You trundle through the bog and find yourself being sucked up by the mud.
+Just as you are about to give up all hope of getting out, the swamp releases 
+its grip on you.
+~
+271 0 0
+D0
+~
+~
+0 -1 27113
+D1
+~
+~
+0 -1 27117
+D2
+~
+~
+0 -1 27118
+D3
+~
+~
+0 -1 27115
+S
+#27117
+The foggy swamp~
+  You come upon the rotting carcass of a Brontosaurus.  Its head has been
+bitten clean off and is nowhere to be seen.  You shudder to think  of the 
+sort of monster who could have done this.  In the mud you can see large 
+clawed tracks leading south.
+ ~
+271 0 0
+D0
+~
+~
+0 -1 27113
+D2
+~
+~
+0 -1 27119
+D3
+~
+~
+0 -1 27116
+E
+carcass~
+Judging from the smell it has been dead for several days.
+~
+E
+tracks~
+They look like they were made by a huge lizard, say 40-50 feet long and about 
+20-25 tons.
+~
+S
+#27118
+The foggy swamp~
+  You slog through muck which becomes ever shallower with each step. Far 
+to the east, across the swamp, you can make out some sort of a huge mound.
+~
+271 0 0
+D0
+~
+~
+0 -1 27116
+D1
+~
+~
+0 -1 27119
+S
+#27119
+Large dreadful swamp~
+  You suddenly feel the swamp give way beneath you and you sink up to your
+neck in sludge.  You let out a scream and panic....until you realize that your
+feet are in fact touching the bottom.  To the east you can make out a huge
+mound of sorts.
+~
+271 0 6
+D0
+~
+~
+0 -1 27117
+D1
+~
+mound~
+1 -1 27137
+D3
+~
+mound~
+0 -1 27118
+D5
+~
+bottom~
+1 -1 27139
+E
+mound~
+It appears there might be some small opening there.
+~
+E
+tracks~
+They look like the tracks of a HUGE lizard.
+~
+S
+#27120
+Entrance to the village of the cannibals~
+  You've come to a pile of human bones at the edge of the forest.  Far to the
+south you can see the straw huts of the cannibal village.  To the east 
+you see the foggy swamp spread out.  You feel tremors from large feet 
+coming from the east.
+~
+271 4 0
+D0
+~
+~
+0 -1 27111
+D1
+~
+~
+0 -1 27115
+D2
+~
+~
+0 -1 27121
+E
+bones~
+The bones appear gnawed and charred.
+~
+S
+#27121
+In the village of the cannibals~
+  You have entered the village of the cannibals. All around you can be seen
+signs of the cruelty of these people.  Propped against a hut to your left is
+the rotting corpse of a roman soldier with its legs missing.
+~
+271 0 0
+D0
+~
+~
+0 -1 27120
+D2
+~
+~
+0 -1 27123
+D3
+~
+~
+0 -1 27122
+E
+corpse~
+It contains nothing of value, and has been here for some days.
+~
+S
+#27122
+In the village of the cannibals~
+  The hut here has been torn apart, as if some savage beast had rent it
+asunder with powerful claws. There is blood all over the interior and you 
+notice paw marks in the caked dirt on the floor.  You hear the faint
+sound of drums coming from the south.
+~
+271 0 0
+D1
+~
+~
+0 -1 27121
+D2
+~
+~
+0 -1 27124
+E
+marks~
+They look like they were made by a feline predator of immense size.
+~
+S
+#27123
+In the village of the cannibals~
+  The huts here seem hastily abandoned, as if the inhabitants had just been
+here minutes ago. Cooking fires are still burning merrily.  You peer into one
+hut and realize they have nothing whatsoever worth taking.  You hear the faint
+beat of drums to the west.
+~
+271 0 0
+D0
+~
+~
+0 -1 27121
+D3
+~
+~
+0 -1 27124
+S
+#27124
+Outside the Witch doctor's's hut~
+  You are outside the hut of the cannibal Witch doctor's, a loud rhythmic 
+pounding comes from within and you almost fall prey to its hypnotic quality.
+You shake off the feeling and ponder your next move.
+~
+271 0 0
+D0
+~
+~
+0 -1 27122
+D1
+~
+~
+0 -1 27123
+D3
+~
+door~
+2 27115 27125
+E
+hut~
+It is made of straw but strengthened with magic so as to repel intruders.
+~
+E
+27123~
+edit r 27124 n add 27122
+~
+E
+27123~
+edit r 27124 e add 27122
+~
+S
+#27125
+Inside the Witch doctor's's hut~
+  You are inside the hut of the cannibal Witch doctor's. All around you are 
+totems, fetishes and components of mystic origin and unspeakably vile 
+nature.  The stench of death in here is overpowering and you notice 
+several corpses hanging on the walls in various stages of decomposition.
+~
+271 8 0
+D1
+~
+door~
+2 -1 27124
+D3
+~
+~
+0 -1 27140
+S
+#27126
+Pompeii's southern gate~
+  This is the southern gate of Pompeii.  You see soldiers patrolling on top of
+the battlements and some more inside the gate.  There are signs of a recent
+battle here, you see broken weapons and dead bodies strewn about in front of
+the gate.  Some of the losers have been crucified here outside the gates and
+are dying a slow and painful death in the blistering heat.
+~
+271 0 0
+D0
+~
+~
+0 -1 27129
+D1
+~
+~
+0 -1 27107
+S
+#27127
+Streets of Pompeii~
+  The houses here are burned-down ruins, as if a great fire had raged here
+recently.  All about can be seen signs of a recent fight, a broken dagger
+half-buried here, dried bloodstains on a wall there.  The area is deserted,
+save for a few dogs scrounging for food.
+~
+271 0 0
+D0
+~
+~
+0 -1 27128
+D3
+~
+~
+0 -1 27129
+S
+#27128
+Pompeii's eastern gate~
+  You stand before the massive eastern gate of Pompeii, a Roman city lost in
+time.  On top of the battlements several soldiers can be seen patrolling and
+through the open gates you see people going about their daily business. The 
+gate is guarded by a couple of stalwart soldiers who eye you suspiciously.
+~
+271 0 0
+D1
+~
+~
+0 -1 27103
+D2
+~
+~
+0 -1 27127
+D3
+~
+~
+0 -1 27130
+S
+#27129
+Streets of Pompeii~
+  You stroll through the busy streets of Pompeii. People eye you suspiciously
+but each time you turn to confront them they avert their eyes.  The marble
+buildings here seem to be the homes of Pompeii's richer population and to the
+west you see sturdy iron gates leading to a magnificent palace.  The gates
+are open and you can see people milling about inside.
+~
+271 0 0
+D0
+~
+~
+0 -1 27130
+D1
+~
+~
+0 -1 27127
+D2
+~
+~
+0 -1 27126
+D3
+~
+~
+0 -1 27134
+S
+#27130
+Streets of Pompeii~
+  You walk through the streets of Pompeii, taking in all the sights.  The 
+marble houses here are cracked and chipped: clearly the people living here
+have fallen on hard times lately.  Beggars accost you and street urchins eye
+you hungrily.  To the north can be seen many tents forming a rough circle and
+loud calls can be heard from that direction: merchants touting their wares
+from the sound of it.
+~
+271 0 0
+D0
+~
+~
+0 -1 27131
+D1
+~
+~
+0 -1 27128
+D2
+~
+~
+0 -1 27129
+D3
+~
+~
+0 -1 27133
+S
+#27131
+The Roman Market~
+  You enter a busy marketplace. All around you are merchants screaming at the
+top of their lungs to draw attention. The noise is deafening and you are hard
+pressed not to turn around and leave immediately.  You casually glance around
+the square but find no booth that interests you, the items sold here being 
+mostly of a domestic and sanitary nature.
+~
+271 8 0
+D2
+~
+~
+0 -1 27130
+S
+#27132
+Colosseum~
+  You step into a vast arena through a side entrance. Tall walls loom 
+overhead, and above them can be seen crowded benches.  At the far end of 
+the blood-covered sand floor of the arena can be seen a throne raised 
+above the rest of the stands, currently an empty throne. As you take all 
+this in you hear a grating noise behind you and turn around just in time 
+to see the gates through which you entered  slide down, leaving you 
+trapped in here. 
+~
+271 4096 0
+D2
+~
+gate~
+1 0 27133
+S
+#27133
+Entrance to the Arena~
+  You stand before the grand entrance to the Colosseum. A long line of 
+people is waiting at the gates but you spot a smaller entrance just to 
+the side through which you could slip unseen.  You hear wild  cheers 
+coming from within the arena and the distinct clamor of weapons. Clearly 
+a fight is going on. 
+~
+271 4 0
+D0
+~
+~
+1 -1 27132
+D1
+~
+~
+0 -1 27130
+D3
+~
+~
+0 -1 27136
+S
+#27134
+Reception hall~
+  You are in the Tribune's reception hall. All who wish to speak with him
+must make an appointment first.  The Centurion of Pompeii has been delegated
+to serve as a clerk for the Tribune. Needless to say he's not very happy at
+the moment.  You look around and see maps and drawings sprawled in disarray
+on a marble table in a corner of the room.
+~
+271 8 0
+D1
+~
+~
+0 -1 27129
+D3
+~
+door~
+1 -1 27135
+E
+drawings~
+They are mostly drawings of various military formations.
+~
+E
+maps~
+They are maps of the world as it was in 40 B.C.
+~
+S
+#27135
+Tribune's audience hall~
+  You stand in a vast audience hall where Marcus Aurelius, the Tribune, is
+conferring with his advisors.  The hall is lined with many trophies from his
+early campaigns, before he fell into disgrace with Caesar and had to resign
+his command.
+~
+271 8 0
+D1
+~
+door~
+1 -1 27134
+S
+#27136
+At the foot of the volcano~
+  You stand at the foot of the volcano Vesuvius. Smoke pours out of the
+crater on its top and you can hear an ominous rumbling coming from deep
+within.  But don't worry: the Oracle says Vesuvius won't erupt for another
+hundred years at least.  An obscure ladder leads down into the depths of
+a cavern at its base.
+~
+271 0 0
+D1
+~
+~
+0 -1 27133
+D5
+A ladder leads down a cavern wall into the depths of a cave.
+~
+ladder~
+11 -1 17098
+S
+#27137
+The bone-strewn lair of Tyrannosaurus Rex~
+  You stand in front of a large cave. Bones have accumulated in huge 
+piles here throughout the years.  As you wonder over this you hear a 
+blood-curdling roar coming from behind you!
+~
+271 0 0
+D0
+~
+bones~
+1 -1 27138
+D3
+~
+mound~
+1 -1 27119
+S
+#27138
+A large cave~
+  You are in the place where the Tyrannosaurus sleeps, past meals litter the
+floor around you.
+~
+271 4 0
+D2
+~
+bones~
+1 -1 27137
+S
+#27139
+Bottom of the swamp~
+  You sink to the bottom of the swamp, visibility here is non-existent.  You
+grope around in the muck but find nothing of interest.
+~
+271 129 0
+D4
+~
+~
+0 -1 27119
+S
+#27140
+Quazit nest~
+  You have managed to squeeze yourself into a cramped hole.  All around you
+are rotting remains of meat and half-chewed bone.  Scattered around are
+various pieces of shiny metal and glass, evidently the quazits have a weakness
+for glittering things.
+~
+271 0 0
+D1
+~
+~
+0 -1 27125
+S
+#27195
+A foggy trail~
+  You stand on a small game-trail leading west. Normally, you would expect
+some signs of life such as chirping birds or rustling underbrush, but it
+is strangely silent here. A small sign is nailed to a tree, perhaps you
+should read it.
+~
+271 0 0
+D1
+~
+~
+0 -1 8616
+D3
+~
+~
+0 -1 27196
+E
+sign~
+Warning! Great Dragons haunt the swamp! Proceed with extreme caution!
+-The Villagers
+~
+S
+#27196
+A foggy trail~
+  This small track through the woods is getting cramped, as bushes on either
+side of the trail crowd in on your legs. There are tracks of some large,
+clawed feet in the ground here. The forest is getting darker, and you feel
+uneasy. A smaller trail leads south into the bushes.
+~
+271 0 0
+D1
+~
+~
+0 -1 27195
+D2
+~
+~
+0 -1 27601
+D3
+~
+~
+0 -1 27197
+S
+#27197
+A foggy trail~
+  You stand on a small game-trail leading west.  Normally, you would expect
+some signs of life such as chirping birds or rustling underbrush, but it
+is strangely silent here.
+~
+271 0 0
+D1
+~
+~
+0 -1 27196
+D3
+~
+~
+0 -1 27198
+S
+#27198
+The end of a foggy trail~
+  The trail leads west to open up into a clearing. The fog is very thick
+here, and you are sweating from the heat. You can feel a rumbling
+in the ground, as if a giant were pounding the earth nearby with a
+gargantuan hammer.
+~
+271 0 0
+D1
+~
+~
+0 -1 27197
+D3
+~
+~
+0 -1 27102
+S
+#27199
+A mud-filled room~
+ This room is filled with hot, bubbling mud. Strange things float around 
+here.... womanly things. It seems someone has left many blow-up dolls 
+here. Someone who possibly is a sick bastard, because some of the dolls 
+are shaped like... like..... well, bugs.
+~~
+271 0 0
+S
+#0
+$~

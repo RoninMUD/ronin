@@ -1,0 +1,85 @@
+#7700
+crocodile salt large reptile~
+The salt water crocodile~
+A large salt water crocodile swims here, waiting for its next meal.
+~
+   The old crocodile is very strong.  It must be at least one
+hundred years old.  The mighty crocodile has spent many hard
+years at sea.  It is very content to live out the rest of its
+life in this moat waiting for its next meal.
+~
+16490 268435456 -500 Y
+50 -20 10 30d50+4000 5d10+20
+0 500000
+11 11 1
+80 0 1d1+1 2
+5 2 5 0
+8 2 5 0
+0 0 0 0
+K
+60000 0 0 0 0 0 0
+#7701
+apprentice lizard reptile~
+An apprentice lizard~
+A large lizard with humanoid features is swimming here.
+~
+   The large lizard has many humanoid features.  Its front
+legs are as much like arms as they are legs.  The claws on
+the front legs are very much like fingers.  The forked tounge
+slithering in and out of its mouth sounds like it is saying
+something. You also notice a necklace around its neck that
+appears to be made from crocodile teeth.
+~
+16456 268437504 1000 Y
+55 -20 -8 50d55+8000 1d5+43
+0 980000
+8 8 1
+80 0 1d1+1 3
+5 2 5 0
+8 2 5 0
+11 3 20 128
+0 1 0 0
+K
+30000 0 0 0 0 0 0
+#7702
+red bellied piranha fish~
+A vicious red-bellied piranha~
+A small red-bellied fish swims here.
+~
+   The fish is small with a red belly.  At first glance it appears to be
+quite harmless. Then you notice its razor sharp teeth and quickly realize
+that the cute red-bellied fish is a vicious piranha!
+~
+536870922 268435456 -500 Y
+50 -10 10 1d50+50 1d100+100
+0 60000
+11 11 1
+84 0 1d1+1 1
+5 3 60 0
+0 0 1 0
+K
+1500 0 0 0 0 0 0
+#7703
+typik lizard shaman reptile~
+Typik, the lizard shaman~
+A large lizard stands here wrapped in crocodile skins.
+~
+   Typik towers over you.  He is covered in crocodile skins from
+head to toe.  Around his neck are heavy necklaces made from bones
+and crocodile teeth.  The humanoid features he possesses are very
+unsettling. It sounds like he is chanting something under his
+stale breath.
+~
+10 940050620 1000 Y
+55 -15 0 1000d3+9000 2d50+75
+0 2500000
+8 8 1
+80 0 1d1+1 3
+5 2 5 0
+8 2 5 0
+11 3 70 128
+0 0 0 0
+K
+600000 7700 7703 0 0 0 0
+#0
+$~

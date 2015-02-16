@@ -1,0 +1,142 @@
+#29100
+reindeer~
+A reindeer~
+A reindeer is standing here, gazing at you intently.
+~
+This is a reindeer who isn't on Santa's sled team yet but hopes to make
+it next year.
+~
+8 16777216 0 Y
+45 -15 10 2d50+1500 4d6+3
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#29101
+reindeer rabid~
+A rabid reindeer~
+This reindeer staggers and looks unhealthy.
+~
+This reindeer staggers and foams from the mouth.
+~
+536870920 0 0 Y
+45 -15 10 2d50+400 50d50+100
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#29102
+elf~
+An elf~
+An elf is here, working merrily.
+~
+This elf is a happy little man making wooden toys.
+~
+8 0 0 Y
+45 -15 10 2d50+1500 4d6+3
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#29103
+elf crack~
+An elf on crack~
+This elf appears to be playing with a pipe...
+~
+This elf has bloodshot eyes. He smiles at you and he appears to be missing
+many teeth.
+~
+536870920 0 0 Y
+45 -15 10 2d50+400 50d50+100
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#29104
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867816 0 Y
+31 2 10 1d100+900 3d6+3
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#29105
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867816 0 Y
+31 -7 10 2d50+1500 4d6+3
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#29106
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867784 0 Y
+31 -11 10 20d50+4000 4d7+12
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#29107
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867784 0 Y
+31 -11 10 30d20+6000 4d10+45
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#29108
+snowman snow man~
+A Snowman~
+A man made of snow is standing here.
+~
+This snowman isn't especially well made. Crude arms jut from
+his midsection and bits of coal and carrot make up his
+facial features.
+~
+16777225 268730376 0 Y
+50 -7 -4 2d50+1500 4d6+3
+0 0
+8 8 1
+69 29636 0d0+0 1
+11 2 50 82
+0 0 0 33
+K
+0 0 0 0 0 0
+#0
+$~

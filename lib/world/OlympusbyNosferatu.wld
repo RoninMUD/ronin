@@ -1,0 +1,2103 @@
+#28800
+A wide path~
+    You are on a wide dirt path with grass and rolling hills extending
+far into the distance to the East and West. To the South is the gate to
+the village of the Immortals. You can see the golden silky tents that make
+their beautiful city flapping in the breeze from here. To the North  is
+an unimaginable hulk of rock that could only be Mount Olympus. It almost
+completely fills your view when you look forward. It starts a bit ahead
+with some smooth grassy rolling hills and leads up to jagged, forbidding 
+cliffs and a snow covered peek mostly hidden by some sort of mist. The
+majesty of this vision is nearly overwhelming. You cant help but wonder
+how such an immense mountain and all this surrounding countryside could
+exist on the tops of the clouds.
+~
+288 32768 5
+D0
+The massive rock that is Mount Olympus looms ahead.
+~
+~
+0 -1 28801
+D2
+~
+~
+0 -1 28770
+S
+#28801
+A wide path~
+    The immense mountain continues to grow in your field
+of vision the closer you get to it. The gate and city are
+growing smaller to the South as you leave them behind. You
+have heard stories that this place is filled with deadly
+passes and treacherous cliffs, but from this point all you
+can see is the beauty and the size of the place.
+~
+288 32768 5
+D0
+The massive rock that is Mount Olympus looms ahead.
+~
+~
+0 -1 28802
+D2
+The beauty and safety of the Immortal Village calls from the South.
+~
+~
+0 -1 28800
+S
+#28802
+A wide path~
+    The hills continue to grow steeper as you proceed
+toward the great mountain. You can begin to see more clearly
+ahead where the hills meet the rock, and it appears this
+path forks and goes in multiple directions. A cold wind
+blows in your face from the North.
+~
+288 32768 5
+D0
+The massive rock that is Mount Olympus looms ahead.
+~
+~
+0 -1 28803
+D2
+The beauty and safety of the Immortal Village calls from the South.
+~
+~
+0 -1 28801
+S
+#28803
+A wide path~
+   The mountain is now much too large to be taken in with a
+single look. It fills your field of vision to the North
+completely. The rolling hills to the East and West are beginning
+to fall behind you and the trail is beginning to slope more
+severely as you continue. From somewhere above and far away,
+you hear an animal's dying scream.
+~
+288 32768 5
+D0
+The massive rock that is Mount Olympus looms ahead.
+~
+~
+0 -1 28804
+D2
+The beauty and safety of the Immortal Village calls from the South.
+~
+~
+0 -1 28802
+S
+#28804
+A wide path~
+    This pleasant, hilly path is nearing its end, you
+can now see. It looks like it forks ahead into seperate
+trails going up this mountain in varying levels of climbing
+difficulty. None of the trails look particularly easy.
+You can turn back to the Village of the Immortals to
+the South, or continue on to Mount Olympus to the
+North.
+~
+288 32768 5
+D0
+The massive rock that is Mount Olympus looms ahead.
+~
+~
+0 -1 28805
+D2
+The beauty and safety of the Immortal Village calls from the South.
+~
+~
+0 -1 28803
+S
+#28805
+Approaching Mount Olympus~
+    You have reached the base of the foothills of Mount Olympus. The
+ground rises quickly as you proceed but the travel is still quite
+easy. To the East and West are endless rolling hills covered in tall,
+gently swaying grass. The path to the South leads back to the Immortal
+Village and Mount Olympus lies ahead.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28806
+D2
+~
+~
+0 -1 28804
+S
+#28806
+In the rolling hills~
+    The path forks here into three different possible routes. Whoever
+has been here in the past hasn't left any sort of a sign as to which
+direction is best so you will have to hazard a guess. As far as you can
+tell they all seem to wind up the mountain, but from here there is
+certainly a lot that you can't yet see.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28807
+D1
+~
+~
+0 -1 28808
+D2
+~
+~
+0 -1 28805
+D3
+~
+~
+0 -1 28809
+S
+#28807
+A path through the hills~
+    This path seems to proceed fairly straight and even. The elevation
+rises at a fast and steady pace. The uphill walk is deceptively draining
+on your energy but it sure beats cliff jumping. The path continues to the
+North and the fork that led you here is just to the South.
+~
+288 32772 5
+D0
+~
+~
+0 -1 28826
+D2
+~
+~
+0 -1 28806
+S
+#28808
+A path through the hills~
+    The Eastern path climbs slowly up a grassy hill that turns into a
+rocky trail up the mountain. You can't tell from here how high up the
+amazing mountain it will take you, but it seems as good a trail as any.
+It appears to proceed straight for a good while before turning up ahead.
+The turn looks to be at a pretty serious cliff, but that is a good
+distance off so worrying about it now won't do any good. The grass
+here sways pleasingly and you take the time to enjoy it since there 
+won't be any grass where you are headed. The trail continues to the East
+or returns to the West.
+~
+288 32772 5
+D1
+~
+~
+0 -1 28825
+D3
+~
+~
+0 -1 28806
+S
+#28809
+A path through the hills~
+    The Western path seems more to the point, almost immediately turning
+to the North to begin ascending the mountain. Following the path ahead
+with your eyes, you can't tell if this trail will lead you to the peak
+of this rock or not. You can't see exactly where it ends, only that it
+heads in the right general direction. Without anything better then that,
+any trail is as good as the next. This one proceeds to the West or it
+returns to the fork in the path to the East.
+~
+288 32772 5
+D1
+~
+~
+0 -1 28806
+D3
+~
+~
+0 -1 28810
+S
+#28810
+Approaching a steep path~
+    Tha path turns to the North now, beginning the steep and rocky
+climb up the mountain. All is quiet here, the scraping of rock under
+your step is the only audible sound. Looking up toward the peak, Mount
+Olympus still seems an impossibly large quest from this spot. Some great 
+person once said to take everything one step at a time and that is what
+you tell yourself now, although you seriously doubt that that great
+person ever stood where you now stand.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28811
+D1
+~
+~
+0 -1 28809
+S
+#28811
+Starting a steep and rocky trail~
+    The grass gets more sparse as you proceed to the barren, rocky
+ground of the mountain itself. Something that never occured to you
+while you surveyed this mystical place suddenly becomes apparent.
+There are no animals. In this place which seems to be the very
+center of all that is called nature, there is no sign of any kind
+of deer or goat. Even the skies remain empty of all flying creatures.
+Unable to think up a good excuse to soothe your anxiety, you must
+instead put that thought aside and proceed on your journey.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28812
+D2
+~
+~
+0 -1 28810
+S
+#28812
+A bend in the steep trail~
+    This path twists and turns steeply up the mountain. It turns to
+the West here but dosen't appear to head in that direction for long
+before another turn. The path itself is quite steep and covered with loose
+rocks that threaten to slide from under your step if you arent careful.
+The path continues to the West or returns to the South.
+~
+288 32768 5
+D2
+~
+~
+0 -1 28811
+D3
+~
+~
+0 -1 28813
+S
+#28813
+Nearing a high ledge~
+    The path turns toward Northward again here. Slightly ahead you see
+a pretty serious obstacle in your path. It seems from here to be an
+insurmountable ledge, hanging jaggedly from the mountain far above your
+own head level. It isn't too far ahead so better to check it out before
+turning around.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28814
+D1
+~
+~
+0 -1 28812
+S
+#28814
+At a high ledge~
+    As you get closer to the ledge, it doesn't seem as impossible
+as obstacle as it did from further away. The jutting rocks from
+the cliff face offer solid hand and foot holds to climb to the top
+and continue your journey. You can't tell yet what lies beyond the ledge,
+but how much could it possibly differ from the rest of this place?
+~
+288 32768 5
+D2
+~
+~
+0 -1 28813
+D4
+A high ledge overhead that you must climb to continue.
+~
+ledge~
+11 -1 28815
+S
+#28815
+On a steep and treacherous path~
+    This path can hardly even be called a path here. The trail to the
+North is extremely steep, almost a climb more then a walk. Rocks jutt
+up in and on both sides of the path with dangerously sharp points. The
+'path' seems to end abruptly up ahead. You can't hide your relief at that,
+it would be nice to turn around.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28816
+D5
+A ledge you must scale to get back down the mountain.
+~
+ledge~
+11 -1 28814
+S
+#28816
+On the treacherous cliffs~
+    This steep path is blocked here by an enourmous boulder. There isn't
+any moss on it, and the ground dosen't seem molded to its shape. This
+seems to indicate that it hasn't been here for too extremely long.
+Although it blocks the trail quite well, you think that by using the
+rock wall next to it for leverage, you could just squeeze over the top
+of the obstacle.
+~
+288 32768 5
+D2
+~
+~
+0 -1 28815
+D4
+A large boulder blocks the path up the mountain here.
+~
+boulder~
+11 -1 28817
+S
+#28817
+On a tiny ledge~
+    After climbing the boulder you find not a trail at all, but a
+tiny ledge jutting from a massive rock wall. You can't see the top
+of the wall, and it definitely is not climbable. The ledge that you
+are perched precariously on is about wide enough that with your heels
+up against the wall, your toes hang over the edge. You find that there
+is room to shuffle on this ledge to the West, or the boulder is still
+within climbing range below you.
+~
+288 32768 5
+D3
+~
+~
+0 -1 28818
+D5
+A large boulder blocks the path down the mountain.
+~
+boulder~
+11 -1 28816
+S
+#28818
+On a tiny ledge~
+    Your scant footing is made much worse by a thin layer of ice
+which has formed on this tiny ledge. The harsh wind gusts in your face,
+leaving you feeling frost-bitten and betrayed by Mother Nature. The
+wind threatens to pick you right off of this edge, but before it can
+you notice the tiny entrance to some kind of underground cavern which
+opens up into the side of this cliff wall.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28817
+D5
+A small tunnel opens up into a very dark cave.
+~
+tunnel~
+9 -1 28819
+S
+#28819
+The dark and quiet cave~
+    This cave is extremely dark and cold. Rocks jut from all sides,
+threatening to impale any clumsy adventurers. The floor is extremely
+rocky and uneven. Ice hides in the cracks between jutting rocks to add
+to the danger of walking here. If you were to slip on that ice, the
+rocks on the floor would be more then willing to cushion your fall.
+A very faint light comes around a corner somewhere ahead.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28820
+D4
+The small tunnel opening leading back to the tiny ledge.
+~
+tunnel~
+9 -1 28818
+S
+#28820
+The dark and quiet cave~
+    You continue deeper into this dark and forbidding tunnel.
+There is no sound here except the scraping of loose rock under your
+feet. Even with your light raised you can't tell how deep this
+tunnel goes. You have to duck and dodge to miss the rocks jutting down
+from the ceiling. The cave continues to the North.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28821
+D2
+~
+~
+0 -1 28819
+S
+#28821
+A bend in the tunnel~
+    The tunnel turns sharply to the East here. The wall that marks the
+end of the Northward portion of the tunnel is covered with razor-sharp
+rocks jutting out like spears. In front of that wall you notice a huge patch
+of ice. It looks very much like a deliberate trap, and possibly a very
+effective one. By walking carefully you can avoid the ice and continue
+to the East, or return to the South.
+~
+288 32769 0
+D1
+~
+~
+0 -1 28822
+D2
+~
+~
+0 -1 28820
+S
+#28822
+Approaching a lighted room~
+    The tunnel continues to the East, and a light coming around a
+corner up ahead becomes more pronounced as you proceed. The walking has
+become steadily easier after the turn and the trap. The cave is becoming
+noticably warmer as you proceed also. You can no longer see your breath
+as it puffs out of your mouth. Curiosity draws you to the East.
+~
+288 32769 0
+D1
+~
+~
+0 -1 28823
+D3
+~
+~
+0 -1 28821
+S
+#28823
+Peeking into a lighted room~
+    The light from the room to the North of you shines out into the cave
+here. The warmth of that room radiates here as well. The tunnel you have
+been walking in has grown perfectly flat and smooth here, and no sharp
+rocks jut from the walls. The room to the North baffles you, if it is what
+it looks like. It just dosen't seem to fit or make sense...
+~
+288 32769 0
+D0
+~
+~
+0 -1 28824
+D3
+~
+~
+0 -1 28822
+S
+#28824
+Hera's Study~
+    A fire roars comfortably in a brick fireplace on the Eastern
+wall. Unimaginably tall shelves lined with what must be millions of books
+are against the other walls. You can't see a ceiling in this place.
+A desk sits in the middle of the room, with a very soft-looking chair
+on one side and a long couch on the other. An electric lamp glows brightly
+on the desk over an open book.The floor is covered with some sort of
+velvety padded carpeting. This is an extremely comfortable room at the
+end of an extremely forbidding cave. How can this be?
+~
+288 32768 0
+D2
+~
+~
+0 -1 28823
+S
+#28825
+The steepening path through the hills~
+    The grass gets more sparse as you proceed to the barren, rocky
+ground of the mountain itself. Something that never occured to you
+while you surveyed this mystical place suddenly becomes apparent.
+There are no animals. In this place which seems to be the very
+center of all that is called nature, there is no sign of any kind
+of deer or goat. Even the skies remain empty of all flying creatures.
+Unable to think up a good excuse to soothe your anxiety, you must
+instead put that thought aside and proceed on your journey.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28853
+D3
+~
+~
+0 -1 28808
+S
+#28826
+Rising Elevation~
+    The path becomes continually steeper until it nears impossible
+to walk upright. You can't see very far ahead with the hill this steep but
+it seems like there is a turn ahead. The small rocks underfoot threaten
+to send you for a tumble if one step is mistaken. You can proceed to the
+North or head for safety to the South.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28827
+D2
+~
+~
+0 -1 28807
+S
+#28827
+A turn in the path~
+    The path turns slightly here to avoid an enormous boulder. It
+still continues to steepen and you have to lean forward and almost
+use your hands on the ground to keep your balance. There are no trees
+on this part of the mountain, only barren rock. The air seems to get
+colder around you as your elevation increases. You can proceed on this
+path to the East or return to the South.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28828
+D2
+~
+~
+0 -1 28826
+S
+#28828
+Continuing up the mountain~
+   After clearing the boulder the path turns back to the North. You
+now have to strain your neck in order to see the peak. The path gets
+so steep here that you have to walk on all fours to keep from falling
+backward and rolling down the mountain. The path seems to reach a nasty
+cliff ahead.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28829
+D3
+~
+~
+0 -1 28827
+S
+#28829
+At a very steep cliff~
+    You have reached your first real problem on this path that seemed
+like a relatively easy route. A jagged cliff blocks the path and must be
+climbed if your journey is to continue. The handholds seem sturdy and
+the height is not insurmountable, but it would only take one small
+mishap here to finish you.
+~
+288 32768 5
+D2
+~
+~
+0 -1 28828
+D4
+A very steep cliff that must be climbed.
+~
+cliff~
+11 -1 28830
+S
+#28830
+A flat plateau~
+    You have reached a flat space of rock jutting from the mountain. All
+around you is jagged drop-offs that fall a good distance to sharp rock
+below. This spot is even and seems a good place to take a rest. You notice
+the first bits of snow dotting the ground here, and you realize for the
+first time that you can see your breath as you exhale. The cold has been
+coming on you with deceptive speed as you climbed. Best be wary of it.
+You can continue on the path to the East.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28831
+D5
+You see the steep cliff leading back down the mountain.
+~
+cliff~
+11 -1 28829
+S
+#28831
+At a larger cliff~
+    The flat spot ends here in front of a much larger cliff. It will
+be a very difficult climb but the alternative is turning back. The rocks
+are jagged and sharp. It looks as if grabbing for the wrong handhold
+could cost you a finger or a hand. Best to get started before such
+thoughts end your quest prematurely.
+~
+288 32768 5
+D3
+~
+~
+0 -1 28830
+D4
+This cliff is much larger then the last.
+~
+cliff~
+11 -1 28832
+S
+#28832
+A steep path~
+    You are back on a steep path up the mountain. Snow mostly covers
+the ground. Although it is shallow now, you have a feeling it will become
+a problem all too soon. You can see a bend in the path up ahead of you
+and the wicked drop-off of a cliff below you.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28833
+D5
+A very large dropoff down the mountain.
+~
+cliff~
+11 -1 28831
+S
+#28833
+A bend in the steep path~
+    The path turns West here, blocked by a perfectly flat cliff face.
+As you turn the corner, it appears that the path ends ahead. Snow covers
+the rocks around you, hiding their deadly sharpness. The path continues on
+steeply to the West and back to the South.
+~
+288 32768 5
+D2
+~
+~
+0 -1 28832
+D3
+~
+~
+0 -1 28834
+S
+#28834
+At an impasse~
+    The path ends abruptly here. A flat and incredibly high cliff face
+blocks you to the North and West, and a deadly drop-off keeps you from
+wandering to the South. As you walk around examining the walls for
+non-existant handholds, you notice the mostly-hidden entrance to a small
+cave underfoot. It might not be safe, but it beats turning around.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28833
+D5
+A small cave leads down into darkness.
+~
+cave~
+9 -1 28835
+S
+#28835
+The ice cave~
+    You have found your way into a beautiful underground cave that
+was somehow naturally molded from ice. You have to walk slowly to keep
+your footing on the slick surface. The ceiling isn't quite high enough
+for you to stand perfectly straight up as you walk. A constant dripping
+sound echos from somewhere in the cave. The drip and your echoing
+foot-falls are the only sounds.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28836
+D4
+A small cave leads back up to the trail.
+~
+cave~
+9 -1 28834
+S
+#28836
+The ice cave~
+    You continue walking carefully into the beautiful ice cave.
+Your light source shines brilliant reflections off of the
+mirror-like walls of the cave. The floor is very slick and
+rocks jut from the ice in places, threatening to harm you
+if you lose your footing.
+~
+288 32769 0
+D1
+~
+~
+0 -1 28837
+D2
+~
+~
+0 -1 28835
+S
+#28837
+The ice cave~
+    You continue deeper into the natural ice cave. The end
+of the cave appears to be coming toward you from around the
+next corner. While beautiful, this cave is very treacherous
+and you will be happy to leave it safely behind you.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28838
+D3
+~
+~
+0 -1 28836
+S
+#28838
+The ice cave~
+    You are in a beautiful cave molded naturally from the
+ice on the side of this great mountain. The cave is an
+amazing sight to behold, but if you don't spend most
+of your time watching your footing you could certainly
+die in it. An exit appears above you which will allow
+you to continue your trek up the mountain, or you can
+go back through this cave to the South.
+~
+288 32769 0
+D2
+~
+~
+0 -1 28837
+D4
+The cave ascends upward back to the outside.
+~
+cave~
+9 -1 28839
+S
+#28839
+Nearing a split in the trail~
+    The intense brightness of this place makes you squint. The sun
+glares off the snow, making it painful to survey the surroundings. The snow
+is about knee-depth here and it crunches loudly as you tromp onward. The
+path seems to split at an intersection ahead.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28840
+D5
+A cave opens up into darkness.
+~
+cave~
+9 -1 28838
+S
+#28840
+A split in the trail~
+    Decision time has come. The path splits into two very different
+looking trails here. The path to the East seems steep and treacherous
+while the path to the West seems relatively flat and easy. Does the
+easier path lead to a more desirable place? Is this some sort of a test?
+You can't help but wonder if the gods are watching and judging you based
+on this decision. Choose wisely.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28841
+D2
+~
+~
+0 -1 28839
+D3
+~
+~
+0 -1 28842
+S
+#28841
+The treacherous path~
+    This path is extremely steep and rocky. You have to use your hands
+on the ground in front of you to keep from tumbling backward and down
+the side of this substantial mountain. Looking to the East you see a
+jagged end to the path. You can't see what is below this cliff but it looks
+like a substantial fall. The trail turns to the North instead, but it hardly
+looks like a real trail at all. It appears to end up ahead.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28843
+D1
+~
+~
+0 -1 28882
+D3
+~
+~
+0 -1 28840
+S
+#28842
+The flat and easy path~
+    As advertised, this trail hardly even qualifies as exercise. After
+climbing deadly steep cliffs, this trail is a great breather. It is wide
+and smooth and at a very slight incline. The snow dosen't seem to impede
+your progress like it did on the other trails. This path continues to the
+West or returns to the East.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28840
+D3
+~
+~
+0 -1 28869
+S
+#28843
+At some dangerous rocks~
+    A rock slide has stopped up this path pretty well here. The slide
+appears to have happened recently. The rocks are very jagged, and very
+loose. It might be physically possible to climb them, but it looks like
+a pretty serious health risk. You can slide your way to the South and
+back to a more reasonable trail, and live to tell about it.
+~
+288 32768 5
+D2
+~
+~
+0 -1 28841
+D4
+The rocks are large and jagged and loose here.
+~
+rocks~
+11 -1 28844
+S
+#28844
+On a steep and snow-covered path~
+    The path here is covered with snow that crunches pleasantly
+under each step. The path is steep and looks to make another turn
+up ahead. The air is getting thinner as you rise in elevation and
+you can feel yourself becoming more short of breath. It might be
+a good idea to settle down and take the climb a little slower. This
+path continues on to the East, and there is a pile of jagged loose
+rock below you leading back.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28845
+D5
+Back down the loose rocks to the previous trail.
+~
+rocks~
+11 -1 28843
+S
+#28845
+On a steep and snow-covered path~
+    This steep and snow covered path continues to wind its way
+up the mountain, heading Northward here. Your limbs tingle with
+numbness as you proceed in the extremely cold temperature. You
+have heard that cold can kill a man without him realizing that
+anything is wrong. Keeping this in mind would probably be a good
+idea as you proceed toward a steep cliff to the North.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28846
+D3
+~
+~
+0 -1 28844
+S
+#28846
+A cliff in the steep and snow-covered path~
+    You have reached a very high cliff that blocks the trail. The
+hand holds seem small and few. There appears to be ice embedded on
+them, just for added excitement. The snow is getting deeper as you
+proceed. It approached shin depth here. The cliff looks like a real
+gamble, but you've come this far. If you choose to turn back you
+can do so to the South.
+~
+288 32768 5
+D2
+~
+~
+0 -1 28845
+D4
+A cliff about twice your height with few hand-holds.
+~
+cliff~
+11 -1 28847
+S
+#28847
+Into the blinding snowfall~
+    After scaling that enormous cliff you find yourself about
+thigh-deep in snow, with large amounts falling from the sky. When
+you look up there appear to be clouds that the snow is coming from,
+which is strange considering you are above the clouds that you
+have known for your entire life. As you proceed the snowfall gets
+more intense and the wind picks up, making it harder to navigate.
+You can go East or West here, its hard to tell which is right.
+~
+288 32768 9
+D1
+~
+~
+0 -1 28882
+D3
+~
+~
+0 -1 28848
+D5
+A cliff drops off with no noticable hand-holds.
+~
+cliff~
+11 -1 28846
+S
+#28848
+In the blinding snowfall~
+    The snowfall is blinding now, the large flakes blowing around
+quickly in the intense winds. The snow stings your face and makes
+you lower your head to try and avoid the pain. The path appears to
+continue to the West, but at this point you can't really tell for
+sure. It amazes you how quickly the snowfall went from scant to
+blizzard conditions. Almost as if someone meant to stop you...
+~
+288 32768 9
+D1
+~
+~
+0 -1 28847
+D3
+~
+~
+0 -1 28884
+D4
+In the blinding snowfall you can barely make out the jagged rocks ahead.
+~
+rocks~
+11 -1 28888
+D5
+You can barely make out a mound in the snow that looks like a cave.
+~
+mound~
+9 -1 28878
+S
+#28849
+The base of a series of cliffs~
+    The snowfall breaks somewhat as you somehow manage to pull
+yourself up some rocks and out of the blizzard. Your body aches
+with cold and exhaustion. The climb ahead is treacherous, but
+it seems like you are near the peak of this monsterous rock. A cliff
+above you seems the best way to proceed. The only other option is
+going back down the rocks and into the nightmare you just left.
+~
+288 32768 5
+D4
+A treacherous cliff leads straight up.
+~
+cliff~
+11 -1 28850
+D5
+The blinding snowfall makes the jagged rocks leading down nearly invisible.
+~
+rocks~
+11 -1 28898
+S
+#28850
+The overwhelmingly rocky path~
+     You are on a ledge nearing the very peak of Mount Olympus. The
+sky is clear here, the clouds are all below you. Looking up all you
+see is bright blue sky. This place is barren of everything. There is
+no snow, no plant or animal life of any kind. All that exists here is
+solid rock. Jagged peaks leading to the ultimate pinnacle of the world.
+What place could exist higher then the very top of all the heavens? 
+Some dangerous jutting rocks block your path to the peak, but at this
+point turning back is no longer an option.
+~
+288 32768 5
+D4
+Some jutting rocks partly blocking the path up.
+~
+rocks~
+11 -1 28851
+D5
+A treacherous cliff leads straight down.
+~
+cliff~
+11 -1 28849
+S
+#28851
+Another huge cliff~
+    You can feel your prize getting closer now. The peak is not
+far off from here. Your quest is nearly complete. The air is so
+thin here that breathing requires a tremendous amount of effort
+and you feel light headed and dizzy. You can only brush that aside
+and will yourself not to faint, because there just isn't any
+stopping now. Not when you are so close to the spot that so few
+have ever stood. This is the ultimate goal of all adventurers
+and you now stand on the threshold. A final cliff stands in your way
+of reaching the very peak of the place of the gods, the summit of
+the legendary Mount Olympus.
+~
+288 32768 5
+D4
+Another steep cliff leading up the mountain.
+~
+cliff~
+11 -1 28852
+D5
+Some jutting rocks semi-blocking the way back down.
+~
+rocks~
+11 -1 28850
+S
+#28852
+The Summit of Mount Olympus~
+    Here you stand, at the very top of this and of all worlds. The
+summit of the mountain that defines all mountains, Olympus. The trail
+here has been grueling and difficult, but you are rewarded with a view
+that very few mortal men will ever behold. You can make out the walled
+city you grew up in in the distance, Midgaard. You can see the ocean
+and islands beyond. You can see the peaks of the Heleventia Mountains
+far off on the horizon. You can make out the swamp and the other great
+kingdoms that go along the same well known road that originates in
+Midgaard. You can see all these things in amazingly clear detail
+considering your immeasurable elevation. You can only gaze at these
+things in wonder and prepare for your next great test, the greatest
+of all tests. The only item in this holy place is a tall marble altar
+set for those who wish to sacrifice to the king of all gods, Zeus.
+~
+288 32768 5
+D5
+A steep cliff leading back down the mountain.
+~
+cliff~
+11 -1 28851
+S
+#28853
+A steepening path~
+    The path turns to the North now, begining the steep and rocky
+climb up the mountain. All is quiet here, the scraping of rock under
+your step is the only audible sound. Looking up toward the peak, Mount
+Olympus still seems an impossibly large quest from this spot. Some great 
+person once said to take everything one step at a time and that is what
+you tell yourself now, although you seriously doubt that that great
+person ever stood where you now stand.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28854
+D3
+~
+~
+0 -1 28825
+S
+#28854
+A steepening path~
+    The path winds its way up the mountain and meets up with its
+first real obstacle just up ahead. As you gain in elevation it begins
+to get noticably colder. You can't see your breath just yet but you
+figure that it is only a matter of time. The path turns again to the
+East and heads toward a tall and perfectly flat rock wall. A more sane
+decision might lead you toward safety to the South.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28855
+D2
+~
+~
+0 -1 28853
+S
+#28855
+At a rocky ledge~
+    The trail ends here at an unclimbable rock wall. Above your head you
+notice an overhanging ledge jutting out from above. You can't tell from here
+if climbing it will lead to a climbable trail or not, but it beats turning
+around and heading back. Dosen't it?
+~
+288 32768 5
+D3
+~
+~
+0 -1 28854
+D4
+A rocky ledge overhangs above your head.
+~
+ledge~
+11 -1 28856
+S
+#28856
+A flat path~
+    Climbing the ledge has brought you to a very flat and pleasant
+path along the side of the mountain. Patches of ice dot the side of the
+trail, which looks to turn up ahead. The sky is bright blue overhead
+except for a swirling patch of cloud and mist over and around the
+very peak.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28857
+D5
+There is a ledge below overhanging the path down the mountain.
+~
+ledge~
+11 -1 28855
+S
+#28857
+A flat path~
+    This path continues fairly easily up the side of this massive
+mountain. You continue to climb in elevation, but at a slow and
+steady pace. There are small patches of snow on the sides of the path.
+You can see your breath as it puffs from your mouth. The air is crisp
+and refreshing. The path turns slightly to the North here.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28858
+D3
+~
+~
+0 -1 28856
+S
+#28858
+A flat path~
+    This flat path turns to the East here. There is a light dusting
+of snow on the ground now, all across the path. Your elevation continues
+to climb steadily, and the slow rise is deceptively draining on your energy.
+The path appears to end up ahead. Wouldn't that just be your luck?
+~
+288 32768 5
+D1
+~
+~
+0 -1 28859
+D2
+~
+~
+0 -1 28857
+S
+#28859
+The path ends~
+    The path ends abruptly here as the path seems to have crumbled
+apart, leaving a jagged drop-off and a very long fall. At the bottom
+of the fall is alarge patch of jagged rocks that look like spears. Just
+as you are about to turn back you notice a partially hidden hole that
+leads down into the dark depths of the mountain.
+~
+288 32768 5
+D3
+~
+~
+0 -1 28858
+D5
+There is a fair sized hole leading into the darkness.
+~
+hole~
+9 -1 28860
+S
+#28860
+The start of a long cave~
+    This cave is lined with sparkling rocks. You can't tell for sure
+what the rocks are, but they look like a cross between diamonds and
+rubies. There are millions of them and they sparkle brilliantly in
+the glow of your light source. The effect is dazzling, almost magical.
+This amazing cave continues to the North.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28861
+D4
+A fair sized hole leads back into the daylight.
+~
+hole~
+9 -1 28859
+S
+#28861
+Deeper in the long cave~
+    The path in this sparkling cave heads down a steep ramp-like
+rock and grows much wider. The sparkling rocks continue to glow
+brilliantly and draw your eyes off the path. Their magical brilliance
+is unsurpassed by any beauty you can ever remember beholding before.
+~
+288 32769 0
+D2
+~
+~
+0 -1 28860
+D5
+~
+~
+0 -1 28862
+S
+#28862
+Deeper in the long cave~
+    The cave continues Northward. It grows larger as you get deeper into
+the mountain. Your foot-falls echo from far off, sounding as though a
+large cavern opens up somewhere ahead. The walls continue to sparkle
+brilliantly with the light playing off the inset gems. You can return
+up the ramp and back toward the outside or go further to the North.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28863
+D4
+~
+~
+0 -1 28861
+S
+#28863
+Deeper in the long cave~
+    The tunnel makes a sharp turn to the East here. The gems in the
+walls of the cave continue to glow lusterously in theshine of your
+light source. A large crack in the floor here seems to open up into
+some sort of a cavern. You can't see the floor down below it. What
+might exist down there? The path returns to the South.
+~
+288 32769 0
+D1
+~
+~
+0 -1 28864
+D2
+~
+~
+0 -1 28862
+D5
+~
+~
+0 -1 28883
+S
+#28864
+Deeper in the long cave~
+    The tunnel makes another sharp turn, this time returning to
+the North. The gems in the walls continue to shine magically
+in the cave walls. Your steps echo from far off ahead, indicating a wide
+cavernous space. The path seems to be partially blocked ahead. You can
+return to the West or check it out to the North.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28865
+D3
+~
+~
+0 -1 28863
+S
+#28865
+A sudden rocky blockage~
+    The path is stopped up here by a pile of rock. If you are careful
+you should be able to climb over the pile. The walls here are inlaid
+with multi-colored gems that sparkle brilliantly in the glow of your
+light. You can return back to the South.
+~
+288 32769 0
+D2
+~
+~
+0 -1 28864
+D4
+A pile of loose rocks stands in your path.
+~
+rocks~
+11 -1 28866
+S
+#28866
+Nearing the Underground Waterfall~
+    A booming rushing sound that could only be a waterfall comes to
+you from up ahead. You can't imagine how you didn't notice that sound
+sooner. The only reason you can think of is that the gems held you in
+some sort of a spell. The tunnel has opened up here into a wide cavern,
+the trail running in the middle almost like a bridge. The sparkle of the
+gems still reaches your eyes from the far off sides of the cavern.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28867
+D5
+A pile of loose rocks blocks the way back.
+~
+rocks~
+11 -1 28865
+S
+#28867
+The Underground Waterfall~
+    The waterfall comes down here from a large hole in the ceiling
+of this cavern. The perfectly clear water falls down over the middle of
+the path and down onto a spot of jagged rocks below. It then flows
+as an underground river through an unseen cave and to the outside
+somewhere. The reflection of the waterfall coupled with the glow
+of the gems makes an overwhelming, mystical sight. The gems seem
+to sparkle more brilliantly here then they did in the rest of the
+tunnel. There is definitely some power at work here.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28868
+D2
+~
+~
+0 -1 28866
+S
+#28868
+The misty haze behind the waterfall~
+    You enter an amazing alcove hidden behind the waterfall. To get
+here you had to walk through the water, which was as cold as ice.
+The walls in this small room sparkle brilliantly, and the effect is
+enhanced both by the shimmer of the waterfall behind you and by the
+mist coming from it. There is nothing else here, and no one else
+here either. All the same you have a sudden feeling that you aren't
+alone, that someone is watching your every move.
+~
+288 32769 0
+D2
+~
+~
+0 -1 28867
+S
+#28869
+The flat and easy path~
+    The easy road continues to treat you nicely. Even the glare of the
+sun off the snow seems less harsh here. The cold seems to bite less and
+you are begining to feel as if this quest might not end in your death
+after all. With your spirits up, you can only continue marching along
+this path to the West.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28842
+D3
+~
+~
+0 -1 28870
+S
+#28870
+A bend in the path~
+    The easy path bends Northward here. You continue to enjoy the
+flat and easy route, and the calm and peaceful surroundings. Looking
+up you can see the white of clouds sending snow down on you lightly.
+When you consider this closely it seems like a paradox... aren't you
+already above the clouds? I guess the gods can do it how they want to.
+When you look down you notice a very large drop-off. If you could find
+a handhold down there you could possibly see where it leads.. The path
+continues to the North.
+~
+288 32768 5
+D0
+~
+~
+0 -1 28871
+D1
+~
+~
+0 -1 28869
+D5
+~
+~
+0 -1 28883
+S
+#28871
+The flat and easy path~
+    This path takes yet another turn here, this time leading you to
+the West. Walking here continues to be a pleasant experience. The snow
+crunches loudly under your steps and the cold seems refreshing rather
+then numbing. The path also returns to the South.
+~
+288 32768 5
+D2
+~
+~
+0 -1 28870
+D3
+~
+~
+0 -1 28872
+S
+#28872
+The path ends~
+    Your luck ends here, as does your new favorite trail. An abrupt
+cliff face ends your trip in this direction. There seems to be a very
+small cave opening in the snow underfoot. If you dig a little it's
+possible you could crawl through and check it out. The other option
+is taking the easy path back to the East.
+~
+288 32768 5
+D1
+~
+~
+0 -1 28871
+D5
+The entrance to a very dark cave.
+~
+cave~
+9 -1 28873
+S
+#28873
+The start of a very dark tunnel~
+    The tunnel you have found is quite damp and cold. Sharp rock juts
+from the ceiling and floor forbidingly. There are patches of ice
+on the floor near the walls. A steady drip echos in the distance. A
+light shines from around a corner somewhere ahead.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28874
+D4
+Out of the cave and back to the easy trail.
+~
+cave~
+9 -1 28872
+S
+#28874
+The dark tunnel~
+    Your light source makes errie shadows on the cave walls. The
+shadows of the stalagtites and stalagmites together look eerily like
+large sets of sharp teeth. The light up ahead gets steadily brighter
+as you proceed, and you wonder what type of light could shine in a
+tunnel like this one.
+~
+288 32769 0
+D2
+~
+~
+0 -1 28873
+D3
+~
+~
+0 -1 28875
+S
+#28875
+The dark tunnel~
+    You continue into the tunnel and the light ahead grows
+brighter. There seems to be a corner just up ahead where the
+light is originating from. The constant drip of melting ice
+continues to echo around you. When you strain your ears you
+can almost hear something else...
+~
+288 32769 0
+D1
+~
+~
+0 -1 28874
+D3
+~
+~
+0 -1 28876
+S
+#28876
+The end of the tunnel~
+    The tunnel takes a final turn to the North here which reveals
+the origin of the strange tunnel light. To the North you behold
+one of the strangest things you've ever seen. It isn't the thing
+itself which is strange, as much as the location of it. All you
+can think of to do is pick up your jaw from the ground and
+head North to check it out.
+~
+288 32769 0
+D0
+~
+~
+0 -1 28877
+D1
+~
+~
+0 -1 28875
+S
+#28877
+A lush and well furnished room~
+    At the end of this dark, damp, scary cave you have found something
+rather bizzare. It appears to be a plush living room. There are some
+soft, stuffed velvet chairs, an oak table with a deck of cards
+strewn out on it, and a fireplace with a fire blazing pleasantly within.
+The floor is covered with soft, velvety red carpet. There is a well-stocked
+bar on the far wall and the walls appear to be carved from marble. The light
+is coming both from the fire and from an amazing electric light hanging
+from the ceiling in a crystal chandelier. This would be a beautiful room
+in any palace, but at the end of this cave it is an oasis.
+~
+288 32768 0
+D2
+~
+~
+0 -1 28876
+S
+#28878
+A very warm cottage~
+    You have entered a warm and cozy cottage that somehow exists near
+the top of the barren and harsh Mount Olympus. This place seems like it
+should be sitting on a calm meadow instead of here. It is unbelievably
+warm here, and as you start to lose your numbness you feel that it is
+not only warm but quite hot. The sound of a fire blazing comes from
+further in the place. This room is carved into the mountains rock. The
+floor is covered by a very nice looking rug with crossed swords depicted
+on it. The cottage continues to the North.
+~
+288 32768 0
+D0
+~
+~
+0 -1 28879
+D4
+You can crawl out the mound and back into the awful weather.
+~
+mound~
+9 -1 28848
+S
+#28879
+A cozy living room~
+    The center of this cottage perched high on the peaks of Mount
+Olympus is a very warm and comfortable living room. There are two
+couches and a large square table made of solid marble resting on a large
+rug in the center of the room. A large electric light hangs from the
+ceiling. An empty fireplace sits against the far wall with a pile of
+wood next to it. How does this place stay so hot with no fire blazing?
+There are more rooms to the West and East.
+~
+288 32768 0
+D1
+~
+~
+0 -1 28880
+D2
+~
+~
+0 -1 28878
+D3
+~
+~
+0 -1 28881
+S
+#28880
+A dirty and well used forge~
+    This seems to be the origin of the tremendous heat in this
+place. There is a large fire blazing near the far wall. A huge
+steel anvil sits on the floor next to it, with a monsterous hammer
+resting on top of it. There is a small pool of water next to that.
+On the walls are racks that hold up some amazingly finely crafted
+blades and axes. This can only be the workshop of Hephaestus, the
+artisan of the gods of Mount Olympus. The quality of his work is
+legendary among all the worlds blacksmiths. A favorite saying of
+theirs has for ages been 'This blade rivals those of Hephaestus
+himself!' The amazing works on the walls makes it clear why they
+wish to near his quality.
+~
+288 32768 0
+D3
+~
+~
+0 -1 28879
+S
+#28881
+A well kept kitchen~
+    This room appears to be a kitchen where lots of food is prepared.
+There is a counter made of solid granite and a set of drawers below.
+A sink is inset in the counter and it appears to be made of solid gold.
+There is a large white box humming quietly on the other wall, like
+nothing you have ever seen before. It seems to be radiating cold. There
+is a small cabinet above the sink that contains spectacular gold plates
+with the symbols of the different gods inscribed on them. The floor is
+covered with connected marble squares. The only exit is to the East.
+~
+288 32768 0
+D1
+~
+~
+0 -1 28879
+S
+#28882
+Falling off a huge cliff~
+    You find out a little too late that the path stopped a step
+back. You fall off a very high cliff, feeling the cruel hand of
+gravity pulling you relentlessly toward a patch of jutting rocks
+below. Even if the spot you hit was perfectly flat and covered
+in snow it wouldn't save you from this height, but the jutting,
+spear-like rocks seem like insult to injury.
+~
+288 32770 5
+D0
+~
+~
+0 -1 28800
+S
+#28883
+Falling into the bottomless crevasse~
+    You lose your footing and begin to fall, expecting to hit
+a rock floor and bracing for the impact. As you continue falling
+you begin to lose hope of living through that impact. When several
+seconds have passed and you still haven't hit, you start to wonder
+if you aren't already dead. You look around and it appears that you
+are still falling, and there dosent seem to be a floor below you to
+hit. This fall can't be bottomless can it? Can it?!
+~
+288 32770 5
+D0
+~
+~
+0 -1 28800
+S
+#28884
+In the blinding snowfall~
+    The snow continues to come down in sheets and the wind blows it
+harshly into your face. It is very difficult to proceed in these
+conditions, and next to impossible to see where you are proceeding to.
+You can't really tell if the path continues to the West or not, but
+you don't see any sort of blockage keeping you from going there.
+~
+288 32768 9
+D1
+~
+~
+0 -1 28848
+D3
+~
+~
+0 -1 28882
+D5
+A rocky ledge covers the entrance to a small cave.
+~
+ledge~
+11 -1 28885
+S
+#28885
+In a stone hallway~
+    This is a short hallway that seems to be perfectly square.
+The floor, ceiling, and walls are all solid, perfectly flat,
+perfectly even rock. How could such a perfect hallway be carved
+into this mountain? The air is very chilly here, your breath
+visibly puffing out in front of you. You can proceed to the
+North or go back up the ledge.
+~
+288 32768 0
+D0
+~
+~
+0 -1 28886
+D4
+A rocky ledge overhangs the entrance to this cave.
+~
+ledge~
+11 -1 28884
+S
+#28886
+In a stone hallway~
+    The hallway continues into the mountain but seems to end just
+ahead. The end looks like a lighted room of some sort, very out
+of place on these barren peaks. The tunnel gets slightly warmer
+as you proceed, as if some kind of heat source was up ahead.
+You can proceed and check it out to the North or return to the
+South and the comfort of the intense blizzard outside.
+~
+288 32768 0
+D0
+~
+~
+0 -1 28887
+D2
+~
+~
+0 -1 28885
+S
+#28887
+Ares' War Room~
+    This large chamber appears to be some sort of a trophy
+room. There are heads of many different types of animals mounted
+on the walls. Some of them look to have come from enormous,
+unimaginably viscious beasts with razor sharp teeth. Some of
+them have multiple heads. All wear frightening snarls on their
+dead faces. Some of the heads appear to be human. There is a
+large marble altar in front of the room.
+~
+288 32768 0
+D2
+~
+~
+0 -1 28886
+S
+#28888
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you nearly
+blind and freezing. The world has turned into a white nightmare. All
+directions look the same. As you trudge along, leaning hard against the
+wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28889
+D1
+~
+~
+0 -1 28899
+D2
+~
+~
+0 -1 28882
+D3
+~
+~
+0 -1 28899
+D5
+In the blinding snowfall you can barely make out the jagged rocks below.
+~
+rocks~
+11 -1 28848
+S
+#28889
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28899
+D1
+~
+~
+0 -1 28890
+D2
+~
+~
+0 -1 28899
+D3
+~
+~
+0 -1 28899
+S
+#28890
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28899
+D1
+~
+~
+0 -1 28882
+D2
+~
+~
+0 -1 28899
+D3
+~
+~
+0 -1 28891
+S
+#28891
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28892
+D1
+~
+~
+0 -1 28899
+D2
+~
+~
+0 -1 28899
+D3
+~
+~
+0 -1 28883
+S
+#28892
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28883
+D1
+~
+~
+0 -1 28899
+D2
+~
+~
+0 -1 28899
+D3
+~
+~
+0 -1 28893
+S
+#28893
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28899
+D1
+~
+~
+0 -1 28899
+D2
+~
+~
+0 -1 28894
+D3
+~
+~
+0 -1 28899
+S
+#28894
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28899
+D1
+~
+~
+0 -1 28899
+D2
+~
+~
+0 -1 28883
+D3
+~
+~
+0 -1 28895
+S
+#28895
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28896
+D1
+~
+~
+0 -1 28883
+D2
+~
+~
+0 -1 28899
+D3
+~
+~
+0 -1 28899
+S
+#28896
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28899
+D1
+~
+~
+0 -1 28899
+D2
+~
+~
+0 -1 28897
+D3
+~
+~
+0 -1 28882
+S
+#28897
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28899
+D1
+~
+~
+0 -1 28898
+D2
+~
+~
+0 -1 28899
+D3
+~
+~
+0 -1 28899
+S
+#28898
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 8946176 9
+D0
+~
+~
+0 -1 28882
+D1
+~
+~
+0 -1 28899
+D2
+~
+~
+0 -1 28899
+D3
+~
+~
+0 -1 28899
+D4
+You can barely make out some jagged rocks leading upward.
+~
+rocks~
+11 -1 28849
+S
+#28899
+In a Massive Blizzard~
+    Harsh wind drives the snow into your face in sheets leaving you 
+nearly blind and freezing. The world has turned into a white nightmare.
+All directions look the same. As you trudge along, leaning hard against
+the wind, your path behind you is covered immediately by the falling snow.
+Every time you try to survey your surroundings the wind and the snow
+pick up a notch and render your vision useless. To make matters worse the
+high elevation seems to steal your breath and makes it next to impossible
+to concentrate on the direction you are trying to go. Are you walking
+in circles? How could you know? Will you see your hometown again?
+~
+288 9077248 9
+D0
+~
+~
+0 -1 28888
+D1
+~
+~
+0 -1 28888
+D2
+~
+~
+0 -1 28888
+D3
+~
+~
+0 -1 28888
+S
+#0
+$~

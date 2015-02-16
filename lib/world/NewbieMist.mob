@@ -1,0 +1,52 @@
+#6600
+Ghert the Chief Instructor of the Academy~
+Ghert~
+Ghert the Chief Instructor of the Academy stands here looking impatient.
+~
+She is a stern looking woman in her late sixties who has been the
+Chief Instructor of the Academy for many years.  
+~
+74 0 0 Y
+3 17 9 5d3+10 1d2+0
+7000 300
+8 8 2
+0 16384 1d1+1 0
+0 1 0 512
+T
+......Ghert sits at her desk, waiting to test Newbies.~
+K
+0 0 0 0 0 0 0
+#6601
+Gremdor the Secretary~
+Gremdor the Secretary~
+Gremdor the Secretary stands here barring entry through the door.
+~
+He doesn't take kindly to unannounced visits, I hope you have
+a good reason for being here.
+~
+74 0 0 Y
+1 19 10 10d1+5 1d1+0
+100 100
+8 8 1
+0 16384 1d1+1 0
+0 1 0 512
+K
+0 0 0 0 0 0 0
+#6602
+training dummy~
+A training dummy~
+A training dummy sits here waiting for a newbie.
+~
+This is a training dummy created to help give you some
+practice in fighting mobs.  Go ahead and try it out!
+~
+10 0 0 Y
+30 20 10 60d1+0 1d1+0
+20000 10
+8 8 1
+2 16384 1d1+1000 0
+0 1 0 512
+K
+0 0 0 0 0 0 0
+#0
+$~

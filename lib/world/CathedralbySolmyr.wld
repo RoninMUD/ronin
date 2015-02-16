@@ -1,0 +1,1254 @@
+#6700
+In Front of the Cathedral~
+  The huge cathedral's two towers rise more than one hundred and fifty
+meters in the air.  The main entrance consists of two heavy metal double
+doors inside a series of pointed arches.  There are four large, white
+statues on each side of the two doors and one statue between them.  The
+statue in the middle is of a crowned woman with young crowned boy on her
+arm.  There is a horde of smaller statues in the arches over the door.
+~
+67 32768 4
+D1
+The two metal doors are seperated by a statue of Virgin Mary and Jesus Christ.
+~
+double doors~
+1 -1 6701
+D2
+~
+~
+0 -1 6771
+S
+#6701
+The Entrance of the Cathedral~
+  A wrought iron fence surrounds the entrance of the cathedral.  There
+are doors in the northern and southern part of the fence, allowing
+passage into the cathedral.  Two large double doors lead west, out of
+the cathedral.
+~
+67 151027720 0
+D0
+There's a door in the wrought iron fence.
+~
+door fence~
+1 -1 6702
+D2
+There's a door in the wrought iron fence.
+~
+door fence~
+1 -1 6704
+D3
+Two large doors lead out of the cathedral.
+~
+double doors~
+1 -1 6700
+S
+#6702
+The Northwest Arcade of the Cathedral~
+  You are in the norwestern corner of the cathedral, north of the main
+entrance, which is fenced in by a wrought iron fence.  As there aren't
+many windows here, this part of the cathedral is rather dark. Stone
+columns hold up the ceiling.  Each column has a statue in front, facing
+west.
+~
+67 151027724 0
+D1
+The arcade runs east.
+~
+~
+0 -1 6703
+D2
+~
+door fence~
+1 -1 6701
+S
+#6703
+The Northwest Arcade of the Cathedral~
+  Stone columns with statues in front of them hold up the ceiling,
+which is about fifteen meters over your head.  A sturdy fence made
+of dark wood seperates this part of the church from the aisle.  The
+cathedral's nave starts south of here and runs almost one hundred
+meters east, all the way to the choir.
+~
+67 151027720 0
+D2
+The tall, vaulted nave starts south of here and leads east.
+~
+~
+0 -1 6706
+D3
+The arcade leads west towards the entrance.
+~
+~
+0 -1 6702
+S
+#6704
+The Southwest Arcade of the Cathedral~
+  You are in the southwestern corner of the cathedral, south of the
+main entrance, which is fenced in by a wrought iron fence.  As there
+aren't many windows here, this part of the cathedral is rather dark.
+Stone columns hold up the ceiling.  Each column has a statue in
+front, facing west.
+~
+67 151027724 0
+D0
+~
+door fence~
+1 -1 6701
+D1
+The arcade runs east.
+~
+~
+0 -1 6705
+S
+#6705
+The Southwest Arcade of the Cathedral~
+  Stone columns with statues in front of them hold up the ceiling,
+which is about fifteen meters over your head.  A sturdy fence made
+of dark wood seperates this part of the church from the aisle.  The
+cathedral's nave starts north of here and runs almost one hundred
+meters east, all the way to the choir.
+~
+67 151027720 0
+D0
+The tall, vaulted nave starts north from here and leads east.
+~
+~
+0 -1 6711
+D3
+The arcade leads west towards the entrance.
+~
+~
+0 -1 6704
+S
+#6706
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D0
+To the north there is an arcade that leads out of the cathedral.
+~
+~
+0 -1 6703
+D1
+The tall, vaulted nave runs east towards the eastern apse.
+~
+~
+0 -1 6707
+D2
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6711
+S
+#6707
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D0
+An aisle runs between the pews and the northern wall, providing a
+walkway for the congregants and clergy.
+~
+~
+0 -1 6716
+D1
+The tall, vaulted nave runs east towards the eastern apse.
+~
+~
+0 -1 6708
+D2
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6712
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6706
+S
+#6708
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D1
+The tall, vaulted nave runs east towards the eastern apse.
+~
+~
+0 -1 6709
+D2
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6713
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6707
+S
+#6709
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D1
+The tall, vaulted nave runs east towards the eastern apse.
+~
+~
+0 -1 6710
+D2
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6714
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6708
+S
+#6710
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D1
+A large mosaic spreads out in the east, decorating the floor in front
+of the choir.
+~
+~
+0 -1 6728
+D2
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6715
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6709
+S
+#6711
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D0
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6706
+D1
+The tall, vaulted nave runs east towards the eastern apse.
+~
+~
+0 -1 6712
+D2
+To the south there is an arcade that leads out of the cathedral.
+~
+~
+0 -1 6705
+S
+#6712
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D0
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6707
+D1
+The tall, vaulted nave runs east towards the eastern apse.
+~
+~
+0 -1 6713
+D2
+An aisle runs between the pews and the southern wall, providing a
+walkway for the congregants and clergy.
+~
+~
+0 -1 6720
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6711
+S
+#6713
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D0
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6708
+D1
+The tall, vaulted nave runs east towards the eastern apse.
+~
+~
+0 -1 6714
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6712
+S
+#6714
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D0
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6709
+D1
+The tall, vaulted nave runs east towards the eastern apse.
+~
+~
+0 -1 6715
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6713
+S
+#6715
+The Nave~
+  With a length of over one hundred meters, a width of fifteen and
+a height of over fourty the nave of the cathedral is an awesome sight
+to behold.  The tall ceiling is white and pure.  The stone columns
+holding up the vault are made of vulcanic bricks and are adorned with
+statues.  Aisles run on both sides of the nave.  Over the aisles,
+twenty meters up, there are triforium galleries running the whole
+length of the nave.  An enormous organ hangs on the wall and nearly
+touches the vault ceiling. Stained glass windows in the clerestory
+illuminate the nave.  Row upon row of pews stretch almost the entire
+length of the nave and could potentially seat thousands of congregants.
+~
+67 151027720 0
+D0
+The nave is consistently about fifteen meters wide.
+~
+~
+0 -1 6710
+D1
+A large mosaic spreads out in the east, decorating the floor in front
+of the choir.
+~
+~
+0 -1 6726
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6714
+S
+#6716
+The Northern Aisle of the Cathedral~
+  Row upon row of pews seperate the aisle from the nave.  Stained
+glass windows depicting scenes from the bible allow a limited amount
+of light to enter the aisle.  Stone columns support the triforium
+galleries and the tall vault ceiling of the nave.  A wooden fence
+blocks the way between the aisle and the entrance to the west.
+~
+67 151027720 0
+D1
+The aisle runs east between the pews and the northern wall.
+~
+~
+0 -1 6717
+D2
+The tall, vaulted nave south of here runs east-west for nearly
+the whole length of the cathedral.
+~
+~
+0 -1 6707
+S
+#6717
+The Northern Aisle of the Cathedral~
+  Row upon row of pews seperate the aisle from the nave.  Stained
+glass windows depicting scenes from the bible allow a limited amount
+of light to enter the aisle.  Stone columns support the triforium
+galleries and the tall vault ceiling of the nave.
+~
+67 151027720 0
+D1
+The aisle runs east between the pews and the northern wall.
+~
+~
+0 -1 6718
+D3
+The aisle runs west between the pews and the northern wall.
+~
+~
+0 -1 6716
+S
+#6718
+The Northern Aisle of the Cathedral~
+  Row upon row of pews seperate the aisle from the nave.  Stained
+glass windows depicting scenes from the bible allow a limited amount
+of light to enter the aisle.  Stone columns support the triforium
+galleries and the tall vault ceiling of the nave.
+~
+67 151027720 0
+D1
+The aisle runs east between the pews and the northern wall.
+~
+~
+0 -1 6719
+D3
+The aisle runs west between the pews and the northern wall.
+~
+~
+0 -1 6717
+S
+#6719
+The Northern Aisle of the Cathedral~
+Row upon row of pews seperate the aisle from the nave.  Stained
+glass windows depicting scenes from the bible allow a limited amount
+of light to enter the aisle.  Stone columns support the triforium
+galleries and the tall vault ceiling of the nave.  There's a stone
+altar at the wall, adorned with a richly decorated, winged, wooden
+altar-piece.
+~
+67 151027720 0
+D1
+The northern entrance to the cathedral is due east.
+~
+~
+0 -1 6730
+D3
+The aisle runs west between the pews and the northern wall.
+~
+~
+0 -1 6718
+E
+altar stone~
+A richly decorated altar-piece stands on top of a stone altar.
+~
+S
+#6720
+The Southern Aisle of the Cathedral~
+  Row upon row of pews seperate the aisle from the nave.  Stained
+glass windows depicting scenes from the bible allow a limited amount
+of light to enter the aisle.  Stone columns support the triforium
+galleries and the tall vault ceiling of the nave.  A wooden fence
+blocks the way between the aisle and the entrance to the west.
+~
+67 151027720 0
+D0
+The tall, vaulted nave north of here runs east-west for nearly the
+whole length of the cathedral.
+~
+~
+0 -1 6712
+D1
+The aisle runs east between the pews and the southern wall.
+~
+~
+0 -1 6721
+S
+#6721
+The Southern Aisle of the Cathedral~
+  Row upon row of pews seperate the aisle from the nave.  Stained
+glass windows depicting scenes from the bible allow a limited amount
+of light to enter the aisle.  Stone columns support the triforium
+galleries and the tall vault ceiling of the nave.
+~
+67 151027720 0
+D1
+The aisle runs east between the pews and the southern wall.
+~
+~
+0 -1 6722
+D3
+The aisle runs west between the pews and the southern wall.
+~
+~
+0 -1 6720
+S
+#6722
+The Southern Aisle of the Cathedral~
+  Row upon row of pews seperate the aisle from the nave.  Stained
+glass windows depicting scenes from the bible allow a limited amount
+of light to enter the aisle.  Stone columns support the triforium
+galleries and the tall vault ceiling of the nave.
+~
+67 151027720 0
+D1
+The aisle runs east between the pews and the southern wall.
+~
+~
+0 -1 6723
+D3
+The aisle runs west between the pews and the southern wall.
+~
+~
+0 -1 6721
+S
+#6723
+The Southern Aisle of the Cathedral~
+  Row upon row of pews seperate the aisle from the nave.  Stained
+glass windows depicting scenes from the bible allow a limited amount
+of light to enter the aisle.  Stone columns support the triforium
+galleries and the tall vault ceiling of the nave.
+~
+67 151027720 0
+D1
+The southern entrance of the cathedral is due east.
+~
+~
+0 -1 6724
+D3
+The aisle runs west between the pews and the southern wall.
+~
+~
+0 -1 6722
+S
+#6724
+At the Southern Entrance to the Cathedral~
+  The cathedral is shaped like a roman cross and has entrances in the
+northern and southern arm as well as the main entrance in the western
+wall.  The double iron doors that make up the southern entrance are
+locked.  An aisle runs west between the outer wall of the cathedral
+and the rows of pews where the congregation sits at mass.  Stained
+glass windows allow for some light to illuminate the aisle.  The clean
+stone floor runs north past the choir to the northern entrance.
+~
+67 151027720 0
+D0
+North of here is the southern entrance to the ambulatory.
+~
+~
+0 -1 6725
+D3
+An aisle runs west between the pews and the southern wall.
+~
+~
+0 -1 6723
+E
+doors double entrance~
+The double doors are locked, preventing anyone from leaving the
+cathedral this way.
+~
+S
+#6725
+The Southern Entrance of the Ambulatory~
+  The clean stone floor runs north and south, leading past the choir
+to the side entrances of the cathedral.  Row upon row of pews fill
+the floor to the west the whole length of the nave.  The ambulatory
+runs east from here and takes a turn around the choir and sanctuary
+and leads back out to the main floor on the other side of the choir.
+~
+67 151027720 0
+D0
+A large, beautiful mosaic adorns the floor in front of the choir.
+~
+~
+0 -1 6726
+D1
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6731
+D2
+There is the southern entrance to the cathedral.
+~
+~
+0 -1 6724
+S
+#6726
+On the Southern End of the Mosaic~
+  The clean stone floor runs north and south between the northern and
+southern entrance to the cathedral.  The enormous main nave runs west
+towards the main entrance in the distance, with row upon row of pews
+where the congregation sits at mass.  Between the four stone columns
+that support the nave vault, the floor is a large, beautiful mosaic.
+Just north of here is the entrance to the choir and sanctuary, which
+is surrounded by an ambulatory.
+~
+67 151027720 0
+D0
+North of here is the entrance to the choir.
+~
+~
+0 -1 6727
+D2
+South of here is the southern entrance to the ambulatory.
+~
+~
+0 -1 6725
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6715
+S
+#6727
+On the Mosaic in Front of the Choir~
+  A large square mosaic spans between the four stone columns that hold
+up the nave vault at the crossing.  The nave runs west towards the
+main entrance and has row upon row of pews where the congregation sits
+at mass.  The cathedral is shaped like a roman cross and has entrances
+in the northern and southern wall as well.  Two steps seperate the nave
+from the choir and sanctuary east of here, which is surrounded by an
+ambulatory.
+~
+67 151027720 0
+D0
+The clean, stone floor leads towards the northern entrance in the distance.
+~
+~
+0 -1 6728
+D1
+A few wooden steps lead up to the choir.
+~
+~
+0 -1 6738
+D2
+The clean, stone floor leads towards the southern entrance in the distance.
+~
+~
+0 -1 6726
+E
+mosaic~
+The sun is depicted at the centre of the mosaic and is surrounded
+by personifications of the times of day, portrayals of the phases
+of the moon, and a ring of zodiac signs in small round medallions.
+Personifications of the four cardinal directions and their
+corresponding winds, as well as four expressive faces depicting
+the four humours can be seen in the corners of the square area at
+the centre of the mosaic.  The four elements (fire, water, earth,
+and air) are also featured - as crowned youths in small squares.
+~
+S
+#6728
+On the Northern End of the Mosaic~
+  The clean stone floor runs north and south between the northern and
+southern entrance to the cathedral.  The enormous main nave runs west
+towards the main entrance in the distance, with row upon row of pews
+where the congregation sits at mass.  Between the four stone columns
+that support the nave vault, the floor is a large, beautiful mosaic.
+Just south of here is the entrance to the choir and sanctuary, which
+is surrounded by an ambulatory.
+~
+67 151027720 0
+D0
+North of here is the northern entrance to the ambulatory.
+~
+~
+0 -1 6729
+D2
+South of here is the entrance to the choir.
+~
+~
+0 -1 6727
+D3
+The tall, vaulted nave runs west towards the arcade surrounding the
+main entrance to the cathedral.
+~
+~
+0 -1 6710
+S
+#6729
+The Northern Entrance of the Ambulatory~
+  The clean stone floor runs north and south, leading past the choir
+to the side entrances of the cathedral.  Row upon row of pews fill
+the floor to the west the whole length of the nave.  The ambulatory
+runs east from here and takes a turn around the choir and sanctuary
+and leads back out to the main floor on the other side of the choir.
+~
+67 151027720 0
+D0
+There is the northern entrance to the cathedral.
+~
+~
+0 -1 6730
+D1
+~
+~
+0 -1 6737
+D2
+A large, beautiful mosaic adorns the floor in front of the choir.
+~
+~
+0 -1 6728
+S
+#6730
+At the Northern Entrance to the Cathedral~
+  The cathedral is shaped like a roman cross and has entrances in the
+northern and southern arm as well as the main entrance in the western
+wall.  The double iron doors that make up the northern entrance are
+locked.  An aisle runs west between the outer wall of the cathedral
+and the rows of pews where the congregation sits at mass.  Stained
+glass windows allow for some light to illuminate the aisle.  the clean
+stone floor runs south past the choir to the northern entrance.
+~
+67 151027720 0
+D2
+South of here is the northern entrance to the ambulatory.
+~
+~
+0 -1 6729
+D3
+An aisle runs west between the pews and the northern wall.
+~
+~
+0 -1 6719
+E
+doors double entrance~
+The double doors are locked, preventing anyone from leaving the
+cathedral this way.
+~
+S
+#6731
+The Ambulatory~
+  The ambulatory runs around the cathedral's choir and sanctuary,
+but is seperated by wrought iron fences placed between the stone
+columns. There are chapels in the outer wall, each dedicated to
+certain characters or events in the holy bible.  Through the iron
+fence you can see the choir stalls and the ambulatory on the opposite
+side.
+~
+67 151027720 0
+D1
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6732
+D3
+There's a clean stone floor between you and the congregant's pews.
+~
+~
+0 -1 6725
+S
+#6732
+At the Lady Chapel~
+  The ambulatory runs around the cathedral's choir and sanctuary,
+but is seperated from them by wrought iron fences placed between the
+stone columns.  There are chapels in the outer wall, each dedicated to
+certain characters or events in the holy bible.  The chapel to the
+south is dedicated to Virgin Mary and contains a statue of a beautiful
+woman, wearing a long, colourful dress.  She is carrying a young
+crowned boy on her left arm.  In her right hand she holds a sceptre
+and her head is adorned with a crown.  A halo of stars runs around
+her head to show the holiness of her being.  The ambulatory passage
+leads west towards the nave and east where it turns to follow the
+outer apse wall.
+~
+67 151027720 0
+D1
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6733
+D3
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6731
+S
+#6733
+The Ambulatory~
+  The ambulatory runs around the cathedral's choir and sanctuary,
+but is seperated from them by wrought iron fences placed between the
+stone columns.  There are chapels in the outer wall, each dedicated
+to certain characters or events in the holy bible.  The ambulatory
+takes a turn here, following the outer wall of the apse.  You can
+see the high altar through the iron fence, where a very large, golden
+sarcophagus is placed in a heightened position.
+~
+67 151027720 0
+D0
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6734
+D3
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6732
+S
+#6734
+Behind the High Altar~
+  The ambulatory runs around the cathedral's choir and sanctuary,
+but is seperated from them by wrought iron fences placed between the
+stone columns.  A large sarcophagus made of gold is on the high altar
+behind the fence.  There are chapels in the outer wall of the apse,
+each dedicated to certain characters or events in the holy bible.
+The passage leads north and south from here, where it on both sides
+turns west to follow the outer apse wall.
+~
+67 151027720 0
+D0
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6735
+D2
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6733
+S
+#6735
+The Ambulatory~
+  The ambulatory runs around the cathedral's choir and sanctuary,
+but is seperated from them by wrought iron fences placed between the
+stone columns.  There are chapels in the outer wall, each dedicated
+to certain characters or events in the holy bible.  The ambulatory
+takes a turn here, following the outer wall of the apse.  You can
+see the high altar through the iron fence, where a very large, golden
+sarcophagus is placed in a heightened position.
+~
+67 151027720 0
+D2
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6734
+D3
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6736
+S
+#6736
+The Gero Crucifix~
+  The ambulatory runs around the cathedral's choir and sanctuary,
+but is seperated from them by wrought iron fences placed between the
+stone columns.  There are chapels in the outer wall, each dedicated
+to certain characters or events in the holy bible.  An altar at the
+wall here has a representation of Jesus Christ hanging on the cross.
+The crucifix and corpus are overlaid with gold, as is a large,
+radiant sun behind the crucifix.  Two black, stone columns that are
+adorned with small sculptures and latin wording stand on each side
+of the crucifix, and the marble backboard is painted in bright blue.
+The ambulatory passage leads west towards the nave and east where it
+turns to follow the outer apse wall.
+~
+67 151027720 0
+D1
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6735
+D3
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6737
+S
+#6737
+The Ambulatory~
+  The ambulatory runs around the cathedral's choir and sanctuary,
+but is seperated by wrought iron fences placed between the stone
+columns. There are chapels in the outer wall, each dedicated to
+certain characters or events in the holy bible.  Through the iron
+fence you can see the choir stalls and the ambulatory on the opposite
+side.
+~
+67 151027720 0
+D1
+The ambulatory runs around the eastern apse.
+~
+~
+0 -1 6736
+D3
+There's a clean stone floor between you and the congregant's pews.
+~
+~
+0 -1 6729
+S
+#6738
+The Choir~
+  The choir stalls are handcarved out of oak, and at each seat there
+is a misericord.  The misericords are carved into depictions of
+biblical characters or occurences and serve the purpose of giving
+support the members of the choir.  There is a red carpet on the
+mosaic floor that leads up the steps to the high altar, where sits a
+large golden sarchophagus.
+~
+67 151027720 0
+D1
+A couple of wooden steps lead up to the high altar.
+~
+~
+0 -1 6739
+D3
+A few wooden steps lead down to a beautiful mosaic floor.
+~
+~
+0 -1 6727
+S
+#6739
+At the High Altar~
+  The high altar is dominated by a large, golden sarcophagus.  This
+epic reliquary is ornamented with gilded figures in gold and silver
+and filigree panels set with precious stones.  Scenes from the bible
+are depicted on all sides of the shrine.  The detail and craftmanship
+exhibited in the making of the sarcophagus is simply astonishing.
+~
+67 151027720 0
+D3
+A couple of wooden steps lead down to the choir.
+~
+~
+0 -1 6738
+S
+#6740
+Holiness~
+The Holiness of God shines bright over the blues skies of Heaven.
+~
+67 33344 0
+S
+#6761
+A Clearing~
+  A copse of trees block the view to the south, while the landscape
+opens up in the north.  The furtile soil nourishes a wide array of
+plants and trees and the grass that grows here is tall and strong.
+~
+67 4 4
+D0
+~
+~
+0 -1 6762
+D2
+~
+~
+0 -1 6239
+S
+#6762
+Rolling Hills~
+  The hilly landscape spreading out in front of you is covered in
+green, healthy grass, interrupted only by sporadic thickets of brush
+and oak trees.  There is a dense forest in the south.
+~
+67 4 4
+D0
+~
+~
+0 -1 6763
+D1
+~
+~
+0 -1 6766
+D2
+~
+~
+0 -1 6761
+D3
+~
+~
+0 -1 6768
+S
+#6763
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far distance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.  A path
+leads north across the rolling hills.
+~
+67 4 4
+D0
+~
+~
+0 -1 6764
+D1
+~
+~
+0 -1 6767
+D2
+~
+~
+0 -1 6762
+D3
+~
+~
+0 -1 6769
+S
+#6764
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far distance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.  A path
+leads east across the rolling hills.
+~
+67 4 4
+D1
+~
+~
+0 -1 6765
+D2
+~
+~
+0 -1 6763
+D3
+~
+~
+0 -1 6772
+S
+#6765
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far distance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.  A path
+leads east across the rolling hills.
+~
+67 4 4
+D1
+~
+~
+0 -1 6770
+D2
+~
+~
+0 -1 6767
+D3
+~
+~
+0 -1 6764
+S
+#6766
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far dinstance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.
+~
+67 4 4
+D0
+~
+~
+0 -1 6767
+D3
+~
+~
+0 -1 6762
+S
+#6767
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far dinstance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.
+~
+67 4 4
+D0
+~
+~
+0 -1 6765
+D2
+~
+~
+0 -1 6766
+D3
+~
+~
+0 -1 6763
+S
+#6768
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far dinstance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.
+~
+67 4 4
+D0
+~
+~
+0 -1 6769
+D1
+~
+~
+0 -1 6762
+S
+#6769
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far dinstance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.
+~
+67 4 4
+D0
+~
+~
+0 -1 6772
+D1
+~
+~
+0 -1 6763
+D2
+~
+~
+0 -1 6768
+S
+#6770
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far distance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.  A path
+leads north across the rolling hills.  A tall structure with two towers
+stands on top of a hill in the distance.
+~
+67 4 4
+D0
+~
+~
+0 -1 6771
+D3
+~
+~
+0 -1 6765
+S
+#6771
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far distance
+to the east, tall mountains reach for the skies, while the terrain in
+the west continues as long as it is possible to see.  A path leads to
+a large, gothic cathedral standing on the hill to the north - its two,
+dominant towers peaking towards the skies.
+~
+67 4 4
+D0
+~
+~
+0 -1 6700
+D2
+~
+~
+0 -1 6770
+S
+#6772
+Rolling Hills~
+  The hilly landscape is covered in green, healthy grass, interrupted
+only by sporadic thickets of brush and oak trees.  In the far dinstance
+to the east, tall mountains reach for the skies, while the terrain in
+the west and north continues as long as it is possible to see.
+~
+67 4 4
+D1
+~
+~
+0 -1 6764
+D2
+~
+~
+0 -1 6769
+S
+#6799
+Zone ranges can lick my ass~
+yes, really!
+~
+67 33348 7
+S
+#0
+$~

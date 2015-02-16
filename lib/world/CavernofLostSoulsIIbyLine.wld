@@ -1,0 +1,2535 @@
+#16900
+Below a Sheer Cliff~
+     As you meander along the thin edge of the ice lake, you can't
+help but savor the crisp, cool air around you.  In the stillness,
+the only sound is the soft crackling of the ice thawing below and
+the crunch of frozen gravel beneath your feet.  The path ends here
+at the base of a towering cliff, marking the boundary of the
+Helventia Mountains.
+~
+169 0 4
+D2
+The lake edge continues toward an intersection.
+~
+~
+0 -1 5607
+D5
+An entrance to a mysterious cavern lies below.
+~
+~
+0 0 16901
+E
+lake~
+The flat surface of the frozen lake crackles and groans under the
+light breeze.  Dusty snow whispers across the ice, creating gentle
+patterns in the winter wind.
+~
+E
+path~
+A spray of gravel and tiny pebbles have been leveled out to form
+this path along the perimeter of the lake.
+~
+E
+cliff~
+A steep cliff marks the edge of the first mountain in the Helventia
+range.  Brush and tiny outcroppings form shadows across the ground
+before you in the cloudy sunlight.
+~
+S
+#16901
+Cleft of Divergence~
+     You emerge within a perfectly circular chamber set below
+the cliffs.  The walls appear to be formed from the granite
+surrounding in a display of superior craftsmanship only nature
+could accomplish.  The air is cool and light, ending in darkness
+in all directions but up.  This appears to be the hub of some sort
+of maze, left by the ancients long ago.
+~
+169 524 0
+D0
+Darkness extends to the north.
+~
+~
+0 -1 16902
+D1
+Darkness extends to the east.
+~
+~
+0 -1 16905
+D2
+Darkness extends to the south.
+~
+~
+0 -1 16904
+D3
+Darkness extends to the west.
+~
+~
+0 -1 16903
+D4
+A path leads up and out into the frigid air.
+~
+~
+0 -1 16900
+E
+walls~
+The granite innards of the mountains have been carved carefully
+to form these intricate tunnels.  The walls are smooth and well-
+preserved, completely flawless and unmarked.
+~
+S
+#16902
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the south seems to fade slowly
+away.  Great care should be taken in not getting lost in here..
+~
+169 520 0
+D1
+The tunnel curves within the darkness.
+~
+~
+0 -1 16906
+D2
+A lit chamber expands to the south.
+~
+~
+0 -1 16901
+S
+#16903
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the east seems to slowly be
+consumed by the darkness.  Great care should be taken in not
+getting lost in here..
+~
+169 520 0
+D0
+The tunnel curves within the darkness.
+~
+~
+0 -1 16907
+D1
+A lit chamber expands to the east.
+~
+~
+0 -1 16901
+S
+#16904
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the north seems to fade slowly
+away.  Great care should be taken in not getting lost in here..
+~
+169 520 0
+D0
+A lit chamber expands to the north.
+~
+~
+0 -1 16901
+D3
+The tunnel curves within the darkness.
+~
+~
+0 -1 16908
+S
+#16905
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the west seems to slowly be
+consumed by the darkness.  Great care should be taken in not
+getting lost in here..
+~
+169 520 0
+D2
+The tunnel curves within the darkness.
+~
+~
+0 -1 16909
+D3
+A lit chamber expands to the west.
+~
+~
+0 -1 16901
+S
+#16906
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D1
+The passage narrows down to the east.
+~
+~
+0 -1 16919
+D3
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16902
+S
+#16907
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D0
+The passage narrows down to the north.
+~
+~
+0 -1 16916
+D2
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16903
+S
+#16908
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D1
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16904
+D3
+The passage narrows down to the west.
+~
+~
+0 -1 16913
+S
+#16909
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D0
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16905
+D2
+The passage narrows down to the south.
+~
+~
+0 -1 16910
+S
+#16910
+A Subterranean Walkway~
+     The monotonous trek continues far into the maze of shadows.
+You realize that you may have been here before, but aren't quite
+sure.  The walls seem to have shifted position, leaving only a
+passage leading west.  The darkness and silence mock your very
+existence as you turn to continue in vain.
+~
+169 9 0
+D3
+A passage leads deeper into the maze.
+~
+~
+0 -1 16911
+E
+walls~
+They seem to mock you as they shimmer and shift in the darkness.
+~
+S
+#16911
+A Subterranean Walkway~
+     The walls begin to expand away from you as you walk along.
+Small rock formations jut out from all directions, and the floor
+is littered with a light sprinkle of pebbles and mineral dust.
+A warm breeze drifts in from the east.
+~
+169 9 0
+D1
+A passage leads deeper into the maze.
+~
+~
+0 -1 16910
+D3
+A passage leads deeper into the maze.
+~
+~
+0 -1 16912
+E
+rock formations~
+Jutting knobs of stone along the rock walls slow your progress.
+~
+S
+#16912
+A Well-Worn Trail~
+     You continue along a seemingly straight path in the dark
+bowels of the maze, grasping for any signs of progress.  The tunnel
+here is much wider and the floor seems to be a uniform layer of
+dust, undisturbed for centuries.  This path seems to have been
+almost completely worn away by whatever used it long ago.
+~
+169 9 3
+D1
+A passage leads deeper into the maze.
+~
+~
+0 -1 16911
+D3
+The path widens into a trail to the west.
+~
+~
+0 -1 16865
+S
+#16913
+A Subterranean Walkway~
+     The monotonous trek continues far into the maze of shadows.
+You realize that you may have been here before, but aren't quite
+sure.  The walls seem to have shifted position, leaving only a
+passage leading east and north.  The darkness and silence mock
+your very existence as you turn to continue in vain.
+~
+169 9 0
+D0
+A passage leads deeper into the maze.
+~
+~
+0 -1 16914
+D1
+The tunnel widens to the east.
+~
+~
+0 -1 16950
+E
+walls~
+They seem to mock you as they shimmer and shift in the darkness.
+~
+S
+#16914
+A Subterranean Walkway~
+     The walls begin to expand away from you as you walk along.
+Small rock formations jut out from all directions, and the floor
+is littered with a light sprinkle of pebbles and mineral dust.
+A blast of frigid air seems to be coming from the north and a dim
+visage of light filters into view.
+~
+169 9 0
+D0
+A bright light and frigid wind drift from the north.
+~
+~
+0 -1 16915
+D2
+A passage leads deeper into the maze.
+~
+~
+0 -1 16913
+E
+rock formations~
+Jutting knobs of stone along the rock walls slow your progress.
+~
+S
+#16915
+Below a Giant Glacier~
+     A bright light encircles your body as you step forth out of
+the mazes below.  Fresh air assails your nostrils and the passion
+of life seems to have returned to your very being, but something
+is missing.  A chill races down your spine when the first arctic
+gale threatens to push you over into the knee-deep snow.  A giant
+shadow looms to the north just beyond view.
+~
+169 0 9
+D0
+A mountainous glacier looms in the north, a small cave at its base.
+~
+~
+0 -1 16884
+D2
+A passage leads into a dark subterranean maze.
+~
+~
+0 -1 16914
+S
+#16916
+A Subterranean Walkway~
+     The monotonous trek continues far into the maze of shadows.
+You realize that you may have been here before, but aren't quite
+sure.  The walls seem to have shifted position, leaving only a
+passage leading east.  The darkness and silence mock your very
+existence as you turn to continue in vain.
+~
+169 9 0
+D1
+A passage leads deeper into the maze.
+~
+~
+0 -1 16917
+E
+walls~
+They seem to mock you as they shimmer and shift in the darkness.
+~
+S
+#16917
+A Subterranean Walkway~
+     The walls begin to expand away from you as you walk along.
+Small rock formations jut out from all directions, and the floor
+is littered with a light sprinkle of pebbles and mineral dust.
+A plume of dust and stale air drifts in from the east.
+~
+169 9 0
+D1
+The passage widens and slopes up a rocky trail to the east.
+~
+~
+0 -1 16918
+D3
+A passage leads deeper into the maze.
+~
+~
+0 -1 16916
+E
+rock formations~
+Jutting knobs of stone along the rock walls slow your progress.
+~
+S
+#16918
+A Rocky Incline~
+     The tunnel here leads up a long, steep incline among jagged
+rocks and hidden holes.  This section of the cavern seems almost
+unfinished and completely unused.  The walls have been chipped
+and eroded from deep layers of stone within the mountains.  As you
+scramble to find stable footholds, small rocks tumble down on
+either side of you.
+~
+169 9 5
+D3
+The trail narrows to enter a subterranean passage.
+~
+~
+0 -1 16917
+D4
+~
+~
+0 -1 16968
+E
+rocks~
+Jagged rocks jut threateningly from all around.
+~
+E
+walls holes~
+Thousands of pockets and holes dot the walls on either side of you.
+~
+S
+#16919
+A Subterranean Walkway~
+     The monotonous trek continues far into the maze of shadows.
+You realize that you may have been here before, but aren't quite
+sure.  The walls seem to have shifted position, leaving only a
+passage leading west and south.  The darkness and silence mock
+your very existence as you turn to continue in vain.
+~
+169 9 0
+D2
+A passage leads deeper into the maze.
+~
+~
+0 -1 16920
+D3
+The tunnel widens to the west.
+~
+~
+0 -1 16906
+E
+walls~
+They seem to mock you as they shimmer and shift in the darkness.
+~
+S
+#16920
+A Subterranean Walkway~
+     The walls begin to expand away from you as you walk along.
+Small rock formations jut out from all directions, and the floor
+is littered with a light sprinkle of pebbles and mineral dust.
+A cool wind drifts in from the south.
+~
+169 9 0
+D0
+A passage leads deeper into the maze.
+~
+~
+0 -1 16919
+D2
+A passage leads deeper into the maze.
+~
+~
+0 -1 16921
+E
+rock formations~
+Jutting knobs of stone along the rock walls slow your progress.
+~
+S
+#16921
+Descending into the Darkness~
+     The passage here leads further down into a dark and long-
+forgotten network of tunnels.  The walls have been eroded away
+completely and replaced with rough, crumbling soil, leading you
+to speculate about your current depth.  A mild sick-sweet stench
+of decay and rot seems to be coming from below.
+~
+169 9 4
+D0
+A passage leads deeper into the maze.
+~
+~
+0 -1 16920
+D5
+A tunnel through the soil leads down into the unknown darkness.
+~
+~
+0 -1 16985
+E
+walls soil~
+The crumbling walls consist of a damp, black carpet of soil.
+~
+S
+#16922
+Cleft of Divergence~
+     You emerge within a perfectly circular chamber set below
+the cliffs.  The walls appear to be formed from the granite
+surrounding in a display of superior craftsmanship only nature
+could accomplish.  The air is cool and light, ending in darkness
+in all directions but up.  This appears to be the hub of some sort
+of maze, left by the ancients long ago.
+~
+169 524 0
+D0
+Darkness extends to the north.
+~
+~
+0 -1 16923
+D1
+Darkness extends to the east.
+~
+~
+0 -1 16926
+D2
+Darkness extends to the south.
+~
+~
+0 -1 16925
+D3
+Darkness extends to the west.
+~
+~
+0 -1 16924
+D4
+A path leads up and out into the frigid air.
+~
+~
+0 -1 16900
+E
+walls~
+The granite innards of the mountains have been carved carefully
+to form these intricate tunnels.  The walls are smooth and well-
+preserved, completely flawless and unmarked.
+~
+S
+#16923
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the south seems to fade slowly
+away.  Great care should be taken in not getting lost in here..
+~
+169 520 0
+D2
+A lit chamber expands to the south.
+~
+~
+0 -1 16922
+D3
+The tunnel curves within the darkness.
+~
+~
+0 -1 16928
+S
+#16924
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the east seems to slowly be
+consumed by the darkness.  Great care should be taken in not
+getting lost in here..
+~
+169 520 0
+D1
+A lit chamber expands to the east.
+~
+~
+0 -1 16922
+D2
+The tunnel curves within the darkness.
+~
+~
+0 -1 16929
+S
+#16925
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the north seems to fade slowly
+away.  Great care should be taken in not getting lost in here..
+~
+169 520 0
+D0
+A lit chamber expands to the north.
+~
+~
+0 -1 16922
+D1
+The tunnel curves within the darkness.
+~
+~
+0 -1 16930
+S
+#16926
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the west seems to slowly be
+consumed by the darkness.  Great care should be taken in not
+getting lost in here..
+~
+169 520 0
+D0
+The tunnel curves within the darkness.
+~
+~
+0 -1 16927
+D3
+A lit chamber expands to the west.
+~
+~
+0 -1 16922
+S
+#16927
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D0
+The passage narrows down to the north.
+~
+~
+0 -1 16934
+D2
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16926
+S
+#16928
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D1
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16923
+D3
+The passage narrows down to the west.
+~
+~
+0 -1 16937
+S
+#16929
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D0
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16924
+D2
+The passage narrows down to the south.
+~
+~
+0 -1 16940
+S
+#16930
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D1
+The passage narrows down to the east.
+~
+~
+0 -1 16931
+D3
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16925
+S
+#16931
+A Subterranean Walkway~
+     The monotonous trek continues far into the maze of shadows.
+You realize that you may have been here before, but aren't quite
+sure.  The walls seem to have shifted position, leaving only a
+passage leading north.  The darkness and silence mock your very
+existence as you turn to continue in vain.
+~
+169 9 0
+D0
+A passage leads deeper into the maze.
+~
+~
+0 -1 16932
+E
+walls~
+They seem to mock you as they shimmer and shift in the darkness.
+~
+S
+#16932
+A Subterranean Walkway~
+     The walls begin to expand away from you as you walk along.
+Small rock formations jut out from all directions, and the floor
+is littered with a light sprinkle of pebbles and mineral dust.
+A plume of dust and stale air drifts in from the north.
+~
+169 9 0
+D0
+The passage widens and slopes up a rocky trail to the north.
+~
+~
+0 -1 16933
+D2
+A passage leads deeper into the maze.
+~
+~
+0 -1 16931
+E
+rock formations~
+Jutting knobs of stone along the rock walls slow your progress.
+~
+S
+#16933
+A Rocky Incline~
+     The tunnel here leads up a long, steep incline among jagged
+rocks and hidden holes.  This section of the cavern seems almost
+unfinished and completely unused.  The walls have been chipped
+and eroded from deep layers of stone within the mountains.  As you
+scramble to find stable footholds, small rocks tumble down on
+either side of you.
+~
+169 9 5
+D0
+The trail continues up a rocky slope to the north.
+~
+~
+0 0 16961
+D2
+The trail narrows to enter a subterranean passage.
+~
+~
+0 -1 16932
+E
+rocks~
+Jagged rocks jut threateningly from all around.
+~
+E
+walls holes~
+Thousands of tiny pockets and holes dot the walls around you.
+~
+S
+#16934
+A Subterranean Walkway~
+     The monotonous trek continues far into the maze of shadows.
+You realize that you may have been here before, but aren't quite
+sure.  The walls seem to have shifted position, leaving only a
+passage leading west and south.  The darkness and silence mock
+your very existence as you turn to continue in vain.
+~
+169 9 0
+D2
+The tunnel widens to the south.
+~
+~
+0 -1 16927
+D3
+A passage leads deeper into the maze.
+~
+~
+0 -1 16935
+E
+walls~
+They seem to mock you as they shimmer and shift in the darkness.
+~
+S
+#16935
+A Subterranean Walkway~
+     The walls begin to expand away from you as you walk along.
+Small rock formations jut out from all directions, and the floor
+is littered with a light sprinkle of pebbles and mineral dust.
+A blast of frigid air seems to be coming from the west and a dim
+visage of light filters into view.
+~
+169 9 0
+D1
+A passage leads deeper into the maze.
+~
+~
+0 -1 16934
+D3
+A bright light and frigid breeze drift in from the west.
+~
+~
+0 -1 16936
+E
+rock formations~
+Jutting knobs of stone along the rock walls slow your progress.
+~
+S
+#16936
+A Granite Pathway~
+     A bright light encircles your body as you step forth out of
+the mazes below.  Fresh air assails your nostrils and the passion
+of life seems to have returned to your very being, but something
+is missing.  The merciless arctic wind rips through your hair and
+pelts the bare path with invisible blows.  Not a weed is evident
+within your immediate surroundings.
+~
+169 0 9
+D0
+The pathway winds north between the piles of snow.
+~
+~
+0 -1 16885
+D1
+A passage leads into a dark subterranean maze.
+~
+~
+0 -1 16935
+S
+#16937
+A Subterranean Walkway~
+     The monotonous trek continues far into the maze of shadows.
+You realize that you may have been here before, but aren't quite
+sure.  The walls seem to have shifted position, leaving only a
+passage leading south.  The darkness and silence mock your very
+existence as you turn to continue in vain.
+~
+169 9 0
+D2
+A passage leads deeper into the maze.
+~
+~
+0 -1 16938
+E
+walls~
+They seem to mock you as they shimmer and shift in the darkness.
+~
+S
+#16938
+A Subterranean Walkway~
+     The walls begin to expand away from you as you walk along.
+Small rock formations jut out from all directions, and the floor
+is littered with a light sprinkle of pebbles and mineral dust.
+A warm breeze drifts in from the south.
+~
+169 9 0
+D0
+A passage leads deeper into the maze.
+~
+~
+0 -1 16937
+D2
+The passage winds along a crooked path to the south.
+~
+~
+0 -1 16939
+E
+rock formations~
+Jutting knobs of stone along the rock walls slow your progress.
+~
+S
+#16939
+A Worn and Crooked Path~
+     As you stumble along in the increasing darkness, going deeper
+into the underground mazes, your feet fall into the steps of the
+ancient race that used these very tunnels long ago to escape their
+enemies.  This path leads through an expanding cavern, weaving back
+and forth among boulders and sparse vegetation.
+~
+169 9 3
+D0
+A passage leads into a subterranean maze.
+~
+~
+0 -1 16938
+D3
+The path continues to wind westward.
+~
+~
+0 -1 16843
+E
+boulders~
+They are large masses of granite covered in a carpet of fine moss.
+~
+E
+vegetation~
+A dense wall of foliage creeps along the walls here.
+~
+S
+#16940
+A Subterranean Walkway~
+     The monotonous trek continues far into the maze of shadows.
+You realize that you may have been here before, but aren't quite
+sure.  The walls seem to have shifted position, leaving only a
+passage leading east.  The darkness and silence mock your very
+existence as you turn to continue in vain.
+~
+169 9 0
+D1
+A passage leads deeper into the maze.
+~
+~
+0 -1 16941
+E
+walls~
+They seem to mock you as they shimmer and shift in the darkness.
+~
+S
+#16941
+A Subterranean Walkway~
+     The walls begin to expand away from you as you walk along.
+Small rock formations jut out from all directions, and the floor
+is littered with a light sprinkle of pebbles and mineral dust.
+A cool wind drifts in from the east.
+~
+169 9 0
+D1
+A breeze buffets forth from the east.
+~
+~
+0 -1 16942
+D3
+A passage leads deeper into the maze.
+~
+~
+0 -1 16940
+E
+rock formations~
+Jutting knobs of stone along the rock walls slow your progress.
+~
+S
+#16942
+A Breezy Tunnel~
+     The passage here leads straight through the darkness ahead.
+As you walk along, the breeze picks up and begins carrying dust
+and frost back and forth through the air.  Your steps begin to
+crunch through frost-covered gravel as you approach a colder
+section in the east.
+~
+169 9 4
+D1
+The passage continues east along a narrow corridor.
+~
+~
+0 -1 16800
+D3
+A passage leads into a subterranean maze.
+~
+~
+0 -1 16941
+E
+gravel floor~
+An untouched gravel path sprays out ahead of you into the cold.
+~
+S
+#16943
+Cleft of Divergence~
+     You emerge within a perfectly circular chamber set below
+the cliffs.  The walls appear to be formed from the granite
+surrounding in a display of superior craftsmanship only nature
+could accomplish.  The air is cool and light, ending in darkness
+in all directions but up.  This appears to be the hub of some sort
+of maze, left by the ancients long ago.
+~
+169 524 0
+D0
+Darkness extends to the north.
+~
+~
+0 -1 16944
+D1
+Darkness extends to the east.
+~
+~
+0 -1 16947
+D2
+Darkness extends to the south.
+~
+~
+0 -1 16946
+D3
+Darkness extends to the west.
+~
+~
+0 -1 16945
+D4
+A path leads up and out into the frigid air.
+~
+~
+0 -1 16900
+E
+walls~
+The granite innards of the mountains have been carved carefully
+to form these intricate tunnels.  The walls are smooth and well-
+preserved, completely flawless and unmarked.
+~
+S
+#16944
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the south seems to fade slowly
+away.  Great care should be taken in not getting lost in here..
+~
+169 520 0
+D2
+A lit chamber expands to the south.
+~
+~
+0 -1 16943
+D3
+The tunnel curves within the darkness.
+~
+~
+0 -1 16949
+S
+#16945
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the east seems to slowly be
+consumed by the darkness.  Great care should be taken in not
+getting lost in here..
+~
+169 520 0
+D1
+A lit chamber expands to the east.
+~
+~
+0 -1 16943
+D2
+The tunnel curves within the darkness.
+~
+~
+0 -1 16950
+S
+#16946
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the north seems to fade slowly
+away.  Great care should be taken in not getting lost in here..
+~
+169 520 0
+D0
+A lit chamber expands to the north.
+~
+~
+0 -1 16943
+D1
+The tunnel curves within the darkness.
+~
+~
+0 -1 16951
+S
+#16947
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the west seems to slowly be
+consumed by the darkness.  Great care should be taken in not
+getting lost in here..
+~
+169 520 0
+D0
+The tunnel curves within the darkness.
+~
+~
+0 -1 16948
+D3
+A lit chamber expands to the west.
+~
+~
+0 -1 16943
+S
+#16948
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D1
+The tunnel narrows down to the east.
+~
+~
+0 -1 16919
+D2
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16947
+S
+#16949
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D0
+The tunnel narrows down to the north.
+~
+~
+0 -1 16916
+D1
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16944
+S
+#16950
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D0
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16945
+D3
+The tunnel narrows down to the west.
+~
+~
+0 -1 16913
+S
+#16951
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D2
+The tunnel narrows down to the south.
+~
+~
+0 -1 16910
+D3
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16946
+S
+#16952
+Cleft of Divergence~
+     You emerge within a perfectly circular chamber set below
+the cliffs.  The walls appear to be formed from the granite
+surrounding in a display of superior craftsmanship only nature
+could accomplish.  The air is cool and light, ending in darkness
+in all directions but up.  This appears to be the hub of some sort
+of maze, left by the ancients long ago.
+~
+169 524 0
+D0
+Darkness extends to the north.
+~
+~
+0 -1 16953
+D1
+Darkness extends to the east.
+~
+~
+0 -1 16956
+D2
+Darkness extends to the south.
+~
+~
+0 -1 16955
+D3
+Darkness extends to the west.
+~
+~
+0 -1 16954
+D4
+A path leads up and out into the frigid air.
+~
+~
+0 -1 16900
+E
+walls~
+The granite innards of the mountains have been carved carefully
+to form these intricate tunnels.  The walls are smooth and well-
+preserved, completely flawless and unmarked.
+~
+S
+#16953
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the south seems to fade slowly
+away.  Great care should be taken in not getting lost in here..
+~
+169 520 0
+D1
+The tunnel curves within the darkness.
+~
+~
+0 -1 16957
+D2
+A lit chamber expands to the south.
+~
+~
+0 -1 16952
+S
+#16954
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the east seems to slowly be
+consumed by the darkness.  Great care should be taken in not
+getting lost in here..
+~
+169 520 0
+D0
+The tunnel curves within the darkness.
+~
+~
+0 -1 16958
+D1
+A lit chamber expands to the east.
+~
+~
+0 -1 16952
+S
+#16955
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the north seems to fade slowly
+away.  Great care should be taken in not getting lost in here..
+~
+169 520 0
+D0
+A lit chamber expands to the north.
+~
+~
+0 -1 16952
+D3
+The tunnel curves within the darkness.
+~
+~
+0 -1 16959
+S
+#16956
+A Subterranean Walkway~
+     You venture into the unknown darkness of the subterranean
+passages.  The tunnel is perfectly circular without dust or debris
+of any kind.  The only evidence of life is the sinister echo of
+your own footsteps.  A dim light to the west seems to slowly be
+consumed by the darkness.  Great care should be taken in not
+getting lost in here..
+~
+169 520 0
+D2
+The tunnel curves within the darkness.
+~
+~
+0 -1 16960
+D3
+A lit chamber expands to the west.
+~
+~
+0 -1 16952
+S
+#16957
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D0
+The tunnel narrows down to the north.
+~
+~
+0 -1 16934
+D3
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16953
+S
+#16958
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D2
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16954
+D3
+The tunnel narrows down to the west.
+~
+~
+0 -1 16937
+S
+#16959
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D1
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16955
+D2
+The tunnel narrows down to the south.
+~
+~
+0 -1 16940
+S
+#16960
+A Subterranean Walkway~
+     Further beneath the mountains, even the echo of your footsteps
+has become dull and muted.  The smooth, cold walls seem to be
+almost constricting down upon you, a trick of perspective perhaps.
+Your heartbeat thuds resoundingly in your ears as you strain to
+listen for anything up ahead.  Great care should be taken in not
+getting lost in here..
+~
+169 521 0
+D0
+The tunnel curves on through the darkness.
+~
+~
+0 -1 16956
+D1
+The tunnel narrows down to the east.
+~
+~
+0 -1 16931
+S
+#16961
+A Gravel Path~
+     The path here begins to level out as it reaches a small
+plateau within the underground labyrinth.  The ceiling seems to
+have been excavated rather than left to the haphazard processes
+of nature.  A fine layer of gravel has been carefully poured along
+the path in order to provide traction for someone or something's
+passage..
+~
+169 9 4
+D1
+The path continues up a rocky slope to the east.
+~
+~
+0 -1 16962
+D2
+The trail continues down a rocky slope to the south.
+~
+~
+0 -1 16933
+S
+#16962
+A Gravel Path~
+     As you continue down the expanding gravel trail, an echo
+begins to take residence within your head.  A horrid, buzzing
+whine pierces your mind and threatens to tear it apart with mere
+presence.  Perhaps it would be wise to return the way you came..
+A fetid stench billows down from a cavern above.
+~
+169 9 4
+D3
+The path continues down a rocky slope to the west.
+~
+~
+0 -1 16961
+D4
+The rocky path leads up into a narrow cavern above.
+~
+~
+0 -1 16963
+S
+#16963
+Among the Rubble~
+     You arrive in a narrow corner of an ominous chamber deep
+within the mountains.  A torn path careens forth into the shadows,
+dodging between teetering piles of rubble.  This appears to be the
+remains of some sort of mining operation, long ago sealed and
+forgotten.  Behind the rocks, tiny outlines of figures seem to be
+clinging to the darkness.
+~
+169 9 5
+D0
+A narrow path leads through the rubble to the north.
+~
+~
+0 -1 16964
+D1
+A narrow path leads through the boulders to the east.
+~
+~
+0 -1 16967
+D5
+A rocky path leads down a narrow slope below the cavern.
+~
+~
+0 -1 16962
+E
+piles rocks rubble~
+Giant piles of layered sandstone and granite stand teetering within
+this vast cavern.
+~
+S
+#16964
+Among the Rubble~
+     Exploring deeper into the mining chamber, you encounter the
+shattered remains of something human-like.  The path splits here,
+leading seemingly in a wide circle around the toppled stone
+fragments.  A throaty growl erupts behind you, urging a quick
+decision.
+~
+169 9 5
+D1
+A narrow path winds through the boulders to the east.
+~
+~
+0 -1 16966
+D2
+A narrow path winds through the rubble to the south.
+~
+~
+0 -1 16963
+D3
+A narrow path leads west into a dead end.
+~
+~
+0 -1 16965
+D4
+A rocky ledge juts out over the cavern, leading into unknown chambers above.
+~
+~
+0 -1 16972
+E
+stone fragments~
+A pile of chipped and eroded stone lay strewn about in the center of
+the cavern.
+~
+S
+#16965
+Among the Rubble~
+     The jagged rock columns converge here into a narrow crevice
+which appears to be too small to crawl through.  Cobwebs and a
+strange, foreign slime drip from the lip of the crevice, sending
+a horrid smell and imaginative picture of whatever created it
+caroming through your brain.  A quick departure would be advisable.
+~
+169 9 5
+D1
+A narrow path winds between the boulders to the east.
+~
+~
+0 -1 16964
+D3
+A thin crevice breaks along the western wall, oozing black ichor and death.
+~
+linerocks~
+9 -1 16965
+E
+slime~
+The residual trail of some insectile creature bubbles and oozes across
+the floor here.
+~
+E
+cobwebs~
+A sheer curtain of insect webs parts silently as you walk through.
+~
+E
+crevice~
+A tiny opening in the wall oozes ichor and the stench of death.  The
+high scuttering sound of legs emits from within.
+~
+E
+columns~
+Giant rock columns touch the ceiling gently as they rise from the floor.
+~
+S
+#16966
+Alongside the Tracks~
+     Within an adjoining chamber, you find yourself following a
+strange trail of unknown metal and wooden stakes woven together.
+The metal is worn down and a dull gray, twisted to follow the
+cavern's length.  Cobwebs and a strange ichor-like substance coat
+the walls and trail here.
+~
+169 9 5
+D0
+The metal tracks plunge into the darkness of the north.
+~
+~
+0 -1 16970
+D2
+The metal tracks plunge into the darkness of the south.
+~
+~
+0 -1 16967
+D3
+A narrow path winds through the boulders to the west.
+~
+~
+0 -1 16964
+E
+trail~
+A foreign metal trail consisting of two parallel beams woven
+together with wooden planks.
+~
+S
+#16967
+Alongside the Tracks~
+     Walking beside a deep crevasse, you find yourself following a
+strange trail of unknown metal and wooden stakes woven together.
+The metal is worn down and a dull gray, burrowing beneath a stack
+of boulders to the south.  Cobwebs and a strange ichor-like
+substance coat the walls and trail here.
+~
+169 9 5
+D0
+The metal tracks plunge into the darkness of the north.
+~
+~
+0 -1 16966
+D1
+A deepening crevasse extends along the tracks, a lonely ledge looms
+on the other side.
+~
+crevasse~
+10 -1 16969
+D2
+The metal tracks end here in a giant avalanche of boulders.
+~
+linerocks~
+9 -1 16967
+D3
+A narrow path winds through the boulders to the west.
+~
+~
+0 -1 16963
+E
+crevasse~
+A deep, jagged crack runs along the eastern end of the cavern,
+reaching beneath the mountains.
+~
+E
+stack boulders~
+A stack of boulders blocks the rest of the cavern to the south,
+while pinpoints of light filter through between them.
+~
+E
+trail~
+A foreign metal trail consisting of two parallel beams woven
+together with wooden planks.
+~
+S
+#16968
+A Cramped Tunnel~
+     The tunnel walls begin to constrict down to a nearly
+impassable width.  The outcroppings continually threaten to stop
+your passage completely, but are carefully dodged.  A broken and
+trembling whine appears to be coming from up ahead.  Perhaps it
+would be wise to return the way you came.
+~
+169 265 5
+D0
+The tunnel continues into the cramped darkness.
+~
+~
+0 -1 16969
+D5
+~
+~
+0 -1 16918
+E
+outcroppings~
+Smooth rocks bulge out of the walls intermittently, almost blocking
+the entire passage.
+~
+S
+#16969
+A Cramped Tunnel~
+     You arrive at the edge of a thin crevasse reaching west into
+a darkened, but larger, chamber.  A fetid stench now drifts across
+the opening toward you and threatens to ruin your resolve if you
+don't reach fresh air soon.  The constricted tunnel behind you
+seems all the more inviting.
+~
+169 265 5
+D2
+The tunnel continues into the cramped darkness.
+~
+~
+0 -1 16968
+D3
+A thin but deep crevasse extends to the west through a rubble-strewn
+cavern. A lonely ledge looms on the other side, just close enough
+to jump to.
+~
+crevasse~
+10 -1 16967
+E
+crevasse~
+A deep, jagged crack runs along the western end of the cavern,
+reaching beneath the mountains.
+~
+S
+#16970
+Alongside the Tracks~
+     You seem to have reached the extent of the strange metallic
+path and sighted a much-more familiar occurrence upward.  A rickety
+wooden ladder clings precariously to the rock wall, leading to the
+unknown chambers above.  A grotesque gurgling echoes throughout the
+cavern behind you, urging you on.
+~
+169 9 5
+D2
+The metal tracks plunge into the darkness of the south.
+~
+~
+0 -1 16966
+D4
+A ladder leads up to a rocky ledge.
+~
+ladder~
+11 -1 16971
+E
+ladder~
+A rust-eaten ladder has been fastened loosely to the wall here.
+~
+E
+path~
+A foreign metal trail consisting of two parallel beams woven
+together with wooden planks.
+~
+S
+#16971
+Upper Mining Chambers~
+     At the top of a rickety ladder, you peer down into the lower
+mining chambers and glimpse the outlines of several creatures
+following an unknown trail, perhaps your own.  The platform beneath
+you sways and creaks with age.  A breath of warm air flows from the
+darker cavern to the west, parting a curtain of cobwebs.
+~
+169 9 5
+D1
+There is a small hole in the wall that looks big enough to crawl through.
+~
+hole~
+9 -1 971
+D3
+An expanse of darkened chambers lie to the west.
+~
+~
+0 -1 16973
+D5
+A ladder leads down into a wide cavern stretching into the darkness.
+~
+ladder~
+11 -1 16970
+E
+curtain cobwebs~
+A veil of insect webbing drifts and parts in the soft breeze.
+~
+E
+platform~
+A wooden platform extending over the dark space within the cavern.
+~
+E
+ladder~
+A rust-eaten ladder has been fastened loosely to the rocks here.
+~
+S
+#16972
+Upper Mining Chambers~
+     At the top of a web-strewn path, you peer down into the lower
+mining chambers and glimpse the outlines of several creatures
+following an unknown trail, perhaps your own.  A breath of warm air
+flows from the darker cavern to the north, parting a curtain of
+cobwebs.
+~
+169 9 5
+D0
+An expanse of darkened chambers lie to the north.
+~
+~
+0 -1 16973
+D5
+A wide cavern stretches into the darkness below the ledge.
+~
+~
+0 -1 16964
+E
+curtain cobwebs~
+A veil of insect webbing drifts and parts in the soft breeze.
+~
+S
+#16973
+Wandering in the Darkness~
+     You find yourself wandering aimlessly in the upper chambers of
+an ancient abandoned mine, mindless of the dangers which lie in
+patient wait around each corner.  The air here is thick and heavy
+with moisture, the odor of some unimaginable horror permeating
+every short breath.  You begin to stumble on unknown obstacles in
+a frantic search for an exit.
+~
+169 9 4
+D1
+The chambers end in a splash of light on a rock platform.
+~
+~
+0 -1 16971
+D2
+The chambers end in a splash of light on a rock ledge.
+~
+~
+0 -1 16972
+D3
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16974
+S
+#16974
+Wandering in the Darkness~
+     You find yourself wandering aimlessly in the upper chambers of
+an ancient abandoned mine, mindless of the dangers which lie in
+patient wait around each corner.  The air here is thick and heavy
+with moisture, the odor of some unimaginable horror permeating
+every short breath.  You begin to stumble on unknown obstacles in
+a frantic search for an exit.
+~
+169 9 4
+D0
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16975
+D1
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16973
+D3
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16976
+S
+#16975
+Wandering in the Darkness~
+     You find yourself wandering aimlessly in the upper chambers of
+an ancient abandoned mine, mindless of the dangers which lie in
+patient wait around each corner.  The air here is thick and heavy
+with moisture, the odor of some unimaginable horror permeating
+every short breath.  You begin to stumble on unknown obstacles in
+a frantic search for an exit.
+~
+169 9 4
+D1
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16977
+D2
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16974
+S
+#16976
+Wandering in the Darkness~
+     You find yourself wandering aimlessly in the upper chambers of
+an ancient abandoned mine, mindless of the dangers which lie in
+patient wait around each corner.  The air here is super-heated and
+unimaginably dry, every short breath becoming excruciatingly
+painful.  You begin to stumble on unknown obstacles in a frantic
+search for an exit.
+~
+169 13 8
+D1
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16974
+D4
+A pencil of light filters down through the warm, sand-packed ceiling above.
+~
+sand~
+9 0 26401
+E
+sand ceiling~
+A loose-sandy surface, bathed in warmth, spans the ceiling above.  It
+looks almost loose enough to crawl through.
+~
+S
+#16977
+Wandering in the Darkness~
+     You find yourself wandering aimlessly in the upper chambers of
+an ancient abandoned mine, mindless of the dangers which lie in
+patient wait around each corner.  The air here is thick and heavy
+with moisture, the odor of some unimaginable horror permeating
+every short breath.  You begin to stumble on unknown obstacles in
+a frantic search for an exit.
+~
+169 9 4
+D0
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16978
+D3
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16975
+S
+#16978
+Wandering in the Darkness~
+     You find yourself wandering aimlessly in the upper chambers of
+an ancient abandoned mine, mindless of the dangers which lie in
+patient wait around each corner.  The air here is thick and heavy
+with moisture, the odor of some unimaginable horror permeating
+every short breath.  You begin to stumble on unknown obstacles in
+a frantic search for an exit.
+~
+169 9 4
+D1
+A narrow corner in the solid rock wall conceals a passage to the east.
+~
+passage~
+9 -1 16979
+D2
+The darkness flows further into the narrow distance.
+~
+~
+0 -1 16977
+E
+passage~
+A tiny passage just large enough to crawl through.
+~
+S
+#16979
+A Glittering Chamber~
+     A blinding flash of light assails your eyes as you enter this
+glowing cavern.  This appears to be the goal of the ancient miners,
+a veritable cache of gold, silver, and other precious minerals all
+ripe for the taking.  If only you had brought your mining gear...
+The glorious chamber extends to the east.
+~
+169 8 4
+D1
+The glittering path meanders east into a small intersection.
+~
+~
+0 -1 16980
+D3
+A tiny passage opens up in the western wall of the chamber.
+~
+passage~
+9 -1 16978
+E
+minerals~
+Glittering golds, greens, and reds permeate the cavern as
+the phosphorescent light is thrown from within them.
+~
+E
+passage~
+A tiny passage just large enough to crawl through.
+~
+S
+#16980
+A Glittering Chamber~
+     The blinding light continues to limit your vision as you move
+deeper within the cavern, but the gold has lost its initial luster
+as you bend to the task at hand: finding a way out.  Billows of golden
+dust spray up from your heels as you follow the trail which splits
+here in three directions.
+~
+169 8 4
+D1
+The glittering path extends to the eastern section of the chamber.
+~
+~
+0 -1 16982
+D2
+A thin opening leads south to what seems like a dead-end.
+~
+~
+0 -1 16981
+D3
+The glittering path extends to the western section of the chamber.
+~
+~
+0 -1 16979
+S
+#16981
+A Narrow End~
+     The stone walls bend down around you, threatening to crush you
+beneath their tremendous weight.  This tunnel is dark once more
+with the lack of lustrous minerals, and it seems to lead down
+toward a cramped orifice below.  A plume of cold air flows from
+within the hole.
+~
+169 265 4
+D0
+The chamber expands into a glittering intersection to the north.
+~
+~
+0 -1 16980
+D5
+A tiny orifice leads down into the unknown darkness below.
+~
+orifice~
+9 -1 16984
+E
+orifice~
+A thin hole opens up in the floor here, lined with smooth rock.
+~
+S
+#16982
+A Glittering Chamber~
+     The blinding light continues to limit your vision as you move
+deeper within the cavern, but the gold has lost its initial luster
+as you bend to the task at hand: finding a way out.  Billows of golden
+dust spray up from your heels as you follow the trail which bends
+around a corner here.
+~
+169 8 4
+D0
+A thin opening leads north to what seems like a dead-end.
+~
+~
+0 -1 16983
+D3
+The glittering path meanders west toward a small intersection.
+~
+~
+0 -1 16980
+S
+#16983
+A Narrow End~
+     The stone walls bend down around you, threatening to crush you
+beneath their tremendous weight.  This tunnel is dark once more
+with the lack of lustrous minerals.  A sudden wall of vegetation
+seems almost to have sprouted here before your eyes, and a slight
+breeze rustles the frail vines.
+~
+169 265 4
+D2
+The chamber expands into a glittering path to the south.
+~
+~
+0 -1 16982
+D4
+A dim light appears between the hanging vines, drifting down from
+an unknown exit.
+~
+vines~
+11 -1 2143
+E
+wall vegetation vines~
+A dense wall of languid vines dangle down from a bright light above.
+The vines look strong enough to climb on.
+~
+S
+#16984
+A Jagged Pit~
+     As you emerge from the tiny orifice within the stone, you
+careen headfirst into the darkness of an abysmal pit.  Jagged
+rocks line the floor far below like rotting teeth.  A pitiful
+whimper escapes your lips as the rocks rush up to meet you.
+~
+169 11 5
+D4
+A slope of jagged rocks leads back to the upper chambers.
+~
+rocks~
+11 -1 16981
+E
+death_text~
+You bounce and crunch on the floor below, breaking most everything
+in your body.. You can't live much longer.
+~
+E
+orifice~
+A small hole opens up in the ceiling above, lined with smooth rock.
+~
+E
+rocks~
+A step-like pile of rocks lead up toward the orifice above.
+~
+S
+#16985
+An Earthen Tunnel~
+     The decaying smell becomes stronger as you venture down within
+the tunnels.  The walls crumble away as you pass beside them, the
+loose soil tumbling to rest on the uneven dirt floor.  Roots and
+skeletons of rotting leaves dangle from above and touch the tips
+of your ears as you duck to avoid them.
+~
+169 265 4
+D1
+The narrow tunnel leads east between the ragged roots.
+~
+~
+0 -1 16986
+D3
+The narrow tunnel leads west between the ragged roots.
+~
+~
+0 -1 16987
+D4
+A tunnel leads up through the soil into unknown darkness.
+~
+~
+0 -1 16921
+E
+floor~
+The dirt floor rolls along the underground tunnels.
+~
+E
+roots leaves~
+The rotting and knotted masses of leaves and roots dangle about
+from the soil walls.
+~
+S
+#16986
+An Earthen Tunnel~
+     As you enter this section of tunnels, a small avalanche of
+soft earth falls to block any further passage.  Exposed roots and
+rotting corpses of leaves flutter helplessly in the wake, having
+lost their place in the earthen walls.  A striking howl arises from
+behind the blocked passage, urging a quick retreat.
+~
+169 265 4
+D1
+An expanse of damp earth and rotting leaves block any further progress.
+~
+linerocks~
+9 -1 16986
+D3
+The narrow tunnel drifts west within the hanging roots.
+~
+~
+0 -1 16985
+E
+roots leaves~
+The rotting and knotted masses of leaves and roots dangle about
+from the soil walls.
+~
+S
+#16987
+An Earthen Tunnel~
+     As you enter this section of the tunnels, the stench of decay
+gains strength.  The walls crumble away as you pass beside them,
+the loose soil tumbling to rest on the uneven dirt floor.  Roots
+and skeletons of rotting leaves dangle from above and touch the
+tips of your ears as you duck to avoid them.
+~
+169 265 4
+D1
+The narrow tunnel drifts east within the hanging roots.
+~
+~
+0 -1 16985
+D2
+The narrow tunnel expands within a square chamber to the south.
+~
+~
+0 -1 16988
+E
+floor~
+The dirt floor rolls along the underground tunnels.
+~
+E
+roots leaves~
+The rotting and knotted masses of leaves and roots dangle about
+from the soil walls.
+~
+S
+#16988
+Within a Shallow Grave~
+     The tunnel narrows perceptibly here into a familiar and
+haunting shape.  The walls are perfectly smooth, packed into
+sharp corners and forming a freshly-dug grave.  Roots of the
+grass growing above dangle down in your face and the wet, rotting
+stench drifts from a coffin lying against the southern wall.
+~
+169 9 4
+D0
+A narrow tunnel drifts north into the squalid darkness.
+~
+~
+0 -1 16987
+D2
+An open-ended coffin lay askew against the southern wall.  A swift
+breeze coughs ancient dust from within..  The mouth of the casket
+appears to be just wide enought to crawl through.
+~
+coffin~
+9 -1 16990
+D3
+A path leads west beneath a stone crypt.
+~
+~
+0 -1 16989
+E
+coffin~
+A battered ebony casket stands askew against the soil wall.
+~
+E
+roots~
+A gnarled network of roots dangle down, extensions of the strange
+vegetation growing on the ground above.
+~
+S
+#16989
+Beneath a Marble Crypt~
+     The tunnel ends suddenly as the dirt floor slopes upward to
+meet the outer edge of a marble slab.  This appears to be a tunnel
+below a graveyard crypt, perhaps a passage for the supernatural
+beings which reside in this place of the damned.  A chill reaches
+across the back of your neck as your imagination begins to whirl,
+not a ghost but only a breeze from somewhere below.
+~
+169 9 4
+D1
+A path leads east into a square underground chamber.
+~
+~
+0 -1 16988
+D4
+Some of the dirt ceiling has fallen away from the marble, but no
+signs of an exit can be discerned above.
+~
+linerocks~
+9 -1 16989
+E
+marble slab~
+The edge of a marble slab, the floor of the crypt above, angles
+down into this open chamber.  Chips and cracks flaw the surface.
+~
+S
+#16990
+A Crumbling Path~
+     You emerge from the other end of the thin passage to find a
+second dirt path.  The cavern here is much wider, and a damp mist
+floats silently across your feet and down a slope to the southwest.
+The faint trickle of flowing water can be heard further down the
+slope.  The path appears to extend eastward within the mist.
+~
+169 9 4
+D0
+The other end of an ebony coffin sticks out of the packed soil
+wall to the north.
+~
+coffin~
+9 -1 16988
+D1
+The path continues along the embankment to the east.
+~
+~
+0 -1 16997
+D2
+A dirt path leads down a slope between some stunted bushes.
+~
+~
+0 -1 16995
+D3
+A dirt path leads down a slope between stunted bushes.
+~
+~
+0 -1 16991
+E
+coffin~
+The battered end of an ebony coffin sticks out of the soil wall here.
+~
+S
+#16991
+On a Steep Embankment~
+     The slope drops off suddenly and falls down this embankment.
+The sound of trickling water grows louder as you continue further
+down.  Pebbles and small rounded rocks slow your progress, while
+bushes and embedded roots provide the necessary footholds.  A path
+wanders along the upper boundary of the bank to the northeast.
+~
+169 9 5
+D1
+A dirt path leads up a slope between some stunted bushes.
+~
+~
+0 -1 16990
+D5
+The path drops suddenly to a sandy riverbank below.
+~
+~
+0 -1 16992
+E
+bushes roots~
+They erupt from the narrow slope, providing embedded handholds as you
+traverse here.
+~
+E
+pebbles rocks~
+The river-worn pebbles are multi-colored and line the path along this
+embankment.
+~
+S
+#16992
+Along the River~
+     As you set down on a relatively flat rock plateau, you
+discover a fast-flowing river beneath the blanket of mist it is
+producing.  It rushes south into the dark distance from an unknown
+origin north.  A rock cliff extends to the river, making further
+investigation to the north impossible.
+~
+169 9 4
+D2
+The riverbank extends south onto a sandy ledge.
+~
+~
+0 -1 16993
+D4
+A path meanders up a steep embankment.
+~
+~
+0 -1 16991
+E
+cliff~
+A steep rock face blocks any further passage along the riverbank.
+~
+E
+mist~
+A sultry mist rises from the surface of the black river, drifting
+in currents around your ankles.
+~
+E
+river~
+A winding blackness drifts across the cavern to the west and onward
+into the distance.  It appears to be too swift and deep to traverse.
+~
+S
+#16993
+A Sandy Ledge~
+     The rock beneath your feet quickly gives way to sand and
+pebbles as you near the vast presence of the underground river.
+The water is black and uninviting, smelling of rot and decay.
+This appears to be the narrowest point in its travel, but as the
+current is rapid and unpredictable, surely no mere human has ever
+crossed it and lived.  The river widens and continues to the
+southeast into the depths of the unknown caverns.
+~
+169 9 4
+D0
+The riverbank rolls gently to the north along the swift river.
+~
+~
+0 -1 16992
+D1
+The riverbank rolls gently to the east along the swift river.
+~
+~
+0 -1 16994
+D3
+The river appears to be too wide and deep to navigate.  On the far
+side, a narrow trail leads along the outer curve of the river.
+~
+linerocks~
+9 -1 16993
+E
+sand pebbles~
+A soft shelf of sand and tiny pebbles contours the riverbank here.
+~
+E
+river water~
+A winding blackness drifts across the cavern to the west and onward
+into the distance.  It appears to be too swift and deep to traverse.
+~
+S
+#16994
+Along the River~
+     As you set down on a relatively flat rock plateau, you
+discover a fast-flowing river beneath the blanket of mist it is
+producing.  It rushes south into the dark distance from an unknown
+origin north.  A rock cliff extends to the river, making further
+investigation to the south impossible.
+~
+169 9 4
+D3
+The riverbank extends west onto a sandy ledge.
+~
+~
+0 -1 16993
+D4
+A path meanders up a steep embankment.
+~
+~
+0 -1 16995
+E
+cliff~
+A steep rock face blocks any further passage along the riverbank.
+~
+E
+mist~
+A sultry mist rises from the surface of the black river, drifting
+in currents around your ankles.
+~
+E
+river~
+A winding blackness drifts across the cavern to the west and onward
+into the distance.  It appears to be too swift and deep to traverse.
+~
+S
+#16995
+On a Steep Embankment~
+     The slope drops off suddenly and falls down this embankment.
+The sound of trickling water grows louder as you continue further
+down.  Pebbles and small rounded rocks slow your progress, while
+bushes and embedded roots provide the necessary footholds.  A path
+wanders along the upper boundary of the bank to the northeast.
+~
+169 9 5
+D0
+A dirt path leads up a slope between stunted bushes.
+~
+~
+0 -1 16990
+D1
+The path continues along the embankment to the east.
+~
+~
+0 -1 16996
+D5
+The path drops suddenly to a sandy riverbank below.
+~
+~
+0 -1 16994
+E
+bushes roots~
+They erupt from the narrow slope, providing embedded handholds as you
+traverse here.
+~
+E
+pebbles rocks~
+The river-worn pebbles are multi-colored and line the path along this
+embankment.
+~
+S
+#16996
+A Crumbling Path~
+     The cavern here is much wider, and a damp mist floats silently
+across your feet and down a slope to the southwest.  The faint
+trickle of flowing water can be heard further down the slope.  A
+broken scream resonates through the unknown darkness and your skin
+begins to crawl.  The path appears to extend north within the mist,
+while a separate path climbs up a small mound of soil.
+~
+169 9 4
+D0
+The path continues along the embankment to the north.
+~
+~
+0 -1 16997
+D3
+The path continues along the embankment to the west.
+~
+~
+0 -1 16995
+D4
+The path leads up a brief slope toward a cobblestone road.
+~
+~
+0 -1 16998
+S
+#16997
+A Crumbling Path~
+     The cavern here is much wider, and a damp mist floats silently
+across your feet and down a slope to the southwest.  The faint
+trickle of flowing water can be heard further down the slope.  A
+broken scream resonates through the unknown darkness and your skin
+begins to crawl.  The path appears to extend west and south within
+the mist.
+~
+169 9 4
+D2
+The path continues along the embankment to the south.
+~
+~
+0 -1 16996
+D3
+The path continues along the embankment toward an intersection.
+~
+~
+0 -1 16990
+S
+#16998
+A Worn, Cobbled Road~
+     Atop the soft hill of dirt, an array of broken and eroded
+cobblestones come together to form the beginnings of a rough,
+underground road.  The sound of the river echoes far below while
+a new sound, a guttural orchestra of growls and howling, begins
+to drift from the east.
+~
+169 8 1
+D1
+The cobblestone road bleeds rot and refuse as it continues east.
+~
+~
+0 -1 16999
+D5
+A dirt path leads down a brief slope along a weedy embankment.
+~
+~
+0 -1 16996
+E
+cobblestones~
+Rounded stones made from dull gray rock lay strewn about the ground.
+~
+S
+#16999
+Trail of Gore~
+     Along the cobbled road, you pick up a dark-red stained trail
+of blood and rotting sinew.  Blotches of pawprints dance to and fro
+in your vision as you imagine the feeding frenzy which took place
+along this quiet path.  The horrid stench of death seems to be
+drifting from the east as another inhuman snarl issues forth.
+~
+169 8 1
+D1
+The road ends here at a skeletal gate into a wolves' playground.
+~
+gate~
+1 -1 9522
+D3
+The cobblestone road fades away to a crumbling path to the west.
+~
+~
+0 -1 16998
+E
+gate~
+A tiny gate made from human femur bones stands guarding the entrance
+to a playground.
+~
+E
+trail pawprints~
+A scattered array of bloody prints lead to and fro along the road,
+converging on a gate in the east.
+~
+S
+#0
+$~

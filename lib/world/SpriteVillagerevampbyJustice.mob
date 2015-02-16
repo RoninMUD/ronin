@@ -1,0 +1,175 @@
+#101
+doorman~
+The doorman~
+A sprite doorman holds the door open for you.
+~
+   This doorman has to be the smallest you've ever seen.  He stands
+proudly holding the door open for you.  His bright red uniform would
+stand out in any situation.  
+~
+200 0 0 Y
+10 15 3 2d10+2 1d2+1
+10000 400
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#102
+sprite farmer~
+a farmer~
+A sprite is here, picking mushrooms.
+~
+A small sprite is quietly picking mushrooms.  He seems to hardly notice you.
+~
+138 0 100 Y
+1 19 8 2d10+2 1d2+1
+20 200
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#103
+banker sprite~
+the banker~
+The banker is here, counting his money.
+~
+  The banker is a small little sprite, his little hands sure can hold a lot 
+money. He is wearing an odd pair of glasses.
+~
+200 0 100 Y
+3 18 -2 3d10+1 1d4+1
+1000 300
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#104
+repairman sprite~
+the repairman~
+The repairman is here fixing something.
+~
+  The repairman seems to know how to fix everything, make no wounder the 
+village is running so smoothly.
+~
+200 0 100 Y
+3 18 -2 3d15+1 1d4+4
+30 700
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#105
+baker sprite~
+the baker~
+The baker is here makeing tasty delights.
+~
+  The baker is a small sprite, his face is covered in flower, and a small
+apron covers his body.
+~
+200 0 100 Y
+3 18 -2 3d10+1 1d4+1
+100 500
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#106
+blacksmith sprite~
+the blachsmith~
+The blacksmith is here pounding on some iron.
+~
+  The blacksmith is a hefty looking sprite, his forearms are huge. He is one
+of the more powerfull sprites you have encountered.
+~
+200 0 100 Y
+3 18 -2 3d10+1 1d5+9
+50 900
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#107
+hunter great sprite~
+the great hunter~
+A great sprite is here covered in furs.
+~
+  This great hunter has never feared anything in his life, so what makes you
+think you can handle him? You better run while you have a chance.
+~
+200 0 100 Y
+3 18 -2 3d10+20 2d4+10
+20 1000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#108
+toymaker sprite~
+the toymaker~
+An old sprite is here carveing a piece of wood.
+~
+  This old sprite gets great pleasure from makeing others happy, he has been
+around for a while and his work is outstanding.
+~
+200 0 100 Y
+3 18 -2 3d10+8 1d4+4
+70 375
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#109
+nurse sprite~
+the nurse~
+A cute little nurse is here trying to heal the sick.
+~
+  This cute little number makes sure all of the sprites are healthy. If
+I were a sprite I think I'd be glad to have a nurse of such beauty at my
+bedside.
+~
+200 0 100 Y
+3 18 -2 3d10+1 1d4+1
+30 300
+8 8 2
+68 0 0d0+0 0
+0 0 0 0
+#110
+chief sprite~
+the chief of the sprites~
+The sprite chief is here suffering from an ailment.
+~
+  The chief of the sprites is an old fella, he looks realy sick at the 
+moment. The nurse is trying her best to save him, but it looks like he
+hasn't much time left. Lets hope you have your sprite shot.
+~
+200 0 100 Y
+4 17 -4 4d10+25 2d2+7
+500 900
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#111
+wizard sprite~
+the wizard~
+There is a great sprite here surrounded by smoke.
+~
+  The great wizard is not a very big troll, but from the searing look of
+his eyes you know you should fear him. He must have been baished from the
+village for some reason or another, I guess thats why the chief had him
+under lock and key.
+~
+138 0 -100 Y
+4 17 -4 4d10+50 2d4+8
+50 1100
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#112
+trained spider~
+the trained spider~
+A spider is here following the wizard.
+~
+  The spider is nothing to be scared of, yes it is a big spider, but you
+are still bigger than it. It's the wizard you should worry about, and not
+his followers.
+~
+138 33554432 -100 Y
+2 19 0 2d10+1 1d2+1
+20 200
+8 8 1
+77 0 0d0+0 0
+0 0 0 0
+#0
+$~

@@ -1,0 +1,197 @@
+#5700
+golem iron~
+The iron golem~
+A large iron golem stands here.
+~
+He is large, and metallic.
+~
+10 0 0 Y
+20 1 0 12d10+500 6d4+5
+1000 63000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5701
+golem clay~
+The clay golem~
+A clay golem stands here.
+~
+He is large, and ceramic.
+~
+10 0 0 Y
+20 1 0 100d2+500 3d6+8
+1000 63000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5702
+golem stone~
+The stone golem~
+A stone golem stands here
+~
+He looks large and granite.
+~
+10 0 0 Y
+20 1 0 12d10+500 6d4+5
+1150 64010
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5703
+spectre~
+The spectre~
+A spectre stands here, reaching out for you.
+~
+He looks sad.
+~
+74 0 0 Y
+26 -1 -3 10d10+1500 4d4+10
+50 88000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5704
+mummy akinra~
+The mummy~
+A mummy gasps in astonishment at your success thus far.
+~
+He looks like he wants to change your luck.
+~
+106 268435456 0 Y
+26 -1 6 30d6+1000 4d4+12
+200 123000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5705
+golem statue stone akinra~
+The statue~
+A statue of Akinra stands here, and blocks your path.
+~
+He looks really mean.
+~
+10 0 0 Y
+30 -7 -5 1d12+12500 5d8+6
+125000 360000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5706
+anubis~
+Anubis~
+Anubis sits in his throne, wearing a glowing key.
+~
+He has the body of a man, and the head of a jackal.
+~
+106 128 0 Y
+23 0 -2 80d3+600 3d6+4
+500 70000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5707
+mimic chest~
+The mimic~
+An ornate chest sits in the corner.
+~
+It looks well made.
+~
+10 0 0 Y
+8 12 6 16d2+70 2d5+5
+75 6000
+8 8 0
+85 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5708
+rust monster~
+A rust monster~
+A rust monster squats here, eagerly eyeing your armor and weapons.
+~
+It looks hungry.
+~
+105 0 0 Y
+6 14 3 25d3+10 2d3+1
+200 7000
+8 8 0
+86 16384 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5709
+pudding black~
+A black pudding~
+A black pudding oozes towards you.
+~
+It is gelantinous and gooey.
+~
+74 0 0 Y
+9 11 4 12d3+60 8d3+2
+20 7000
+8 8 0
+87 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5710
+crocodile nile~
+The nile crocodile~
+The nile crocodile swallows the last of his rat appetizer.
+~
+I bet you're next!
+~
+104 0 0 Y
+10 10 5 30d2+70 1d10+9
+0 9000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5711
+naga guardian~
+The guardian naga~
+The guardian naga slithers toward you to protect her lair.
+~
+You are intruders, and you must die.
+~
+74 0 0 Y
+13 8 3 13d3+100 3d3+3
+700 12000
+8 8 2
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#5712
+rat~
+The rabid rat~
+The rabid rat scurries towards you.  Its eyes glowing deep red.
+~
+They scurry into the shadows and attack en-masse.
+~
+104 0 0 Y
+1 19 9 1d2+10 1d3+1
+2 150
+8 8 0
+93 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,759 @@
+#26600
+Before the Gates of the North Pole~
+   Cold air drives snowflakes through the air like tiny daggers,
+each flurry cutting through the air like a barrage of blades, each
+slicing a little deeper then the last. Two massive gates, made of 
+ancient ironwood rise up to the north. Intricate carvings and patterns
+cover both gates, while an almost other worldly glow eminates from
+deep inside the wood. Massive walls loom to the east and west, cold
+dark stone a stark contrast to the warmth of the gates. Icicles hang
+like massive daggers from the edges, threatening to break and fall with
+every gust of wind. Massive drifts of snow have piled up against the
+foot of the walls and gate, while little rivers of red spill down their
+face.Tiny elf heads, mouths grinning crazily, pointed ears streaked
+with blood, are lined up in a neat row on top of the drifts, no evidence
+of bodies or weapons their eyes seem unnaturally focused despite
+decapitation.
+~
+266 40964 9
+D0
+The massive gates of Santa's Winter Wonderland lay directly ahead of you,
+locked and barred against intruders, they rarely open except in cases of
+dire emergency, is this such a time?
+~
+Gates~
+1 26399 26601
+D5
+~
+~
+0 -1 26631
+S
+#26601
+Santa Drive~
+   The snow drifts lining the street are stained with
+blood and ash. Chunks of burned and smoking flesh lay
+in piles smelling slightly of roast chicken and sage.
+The crackle of flames and the distant scream as the 
+elves find another helpless soul hiding in vain, fill
+the crisp cold evening with an invigorating air.
+   To the east the side of the building has collapsed
+inwards exposing an elfin bar, to the west the door
+is cracked open while a soft giggle floats into the
+air every few seconds. North and South the road continues
+amidst the debris.
+~
+266 32772 9
+D0
+~
+~
+0 -1 26604
+D1
+~
+~
+0 -1 26603
+D2
+~
+door~
+1 26399 26600
+D3
+~
+~
+0 -1 26602
+S
+#26602
+An Elfs dwelling~
+   There is a metallic tang to the air, its the harsh scent of
+blood and feces. Crusted blood forms patterns and swirls on the
+walls, at least the ones still standing. The stairs at the back
+of the room have collapsed in a pile of rubble, broken boards
+blunted under the mattresses that have fallen from the upper
+floor. A hand twitches under a cupboard that has fallen over
+while the remains of a reindeer hang from the ceiling dripping
+blood from a half hearted attempt to skin it. A small record
+player plays christmas carols in the corner. 
+~
+266 32768 0
+D1
+~
+~
+0 -1 26601
+S
+#26603
+The Empty Pint~
+   The shards and fragments of pint glasses and earthenware jugs have
+been scattered around the wreckage of the tables and chairs. Flames
+smolder under the wreckage of the bar, the wood saturated with blood,
+not fully igniting. The half naked body of an elf lies in the center of
+the room, a pint glass embedded firmly in his forhead, one hand twitching
+faintly as if the body is still trying to remove the deadly glass. A cask
+behind the bar lies in ruins, a pair of legs draped over the shattered
+bung, while from the tap blood drips into an ever expanding pool on the
+floor. A table in the corner features three madly grinning elf heads on
+a serving tray, while their bodies have been propped upright in the seats
+nearby. 
+~
+266 32768 0
+D3
+~
+~
+0 -1 26601
+S
+#26604
+Santa Drive~
+   Splintered wood and masonry have been driven through
+the corpses of a few reindeer foolish enough to wander 
+across the path of maurading elves. Christmas lights have
+strung up the corpses of a few of Santa's personal body
+guard. The amount of destruction wrought upon the nearby
+buildings seem to indicate a large amount of explosive
+has been detonated nearby.
+   To the east the roadway heads off towards the snow
+drifts, flickering flames seem to indicate the stables
+are on fire. North and South the road seems to continue
+amid the debris.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26616
+D1
+~
+~
+0 -1 26606
+D2
+~
+~
+0 -1 26601
+D3
+~
+~
+0 -1 26605
+S
+#26605
+The Yearly Fruitcake~
+   A stale fruitcake is embedded in the middle of an elf, nearly severing
+his torso from his hips. The legs of a reindeer are burning merrily in
+the fireplace while the trunk of the beast has been hollowed out to create
+a bench. The soft, ruined corpse of another elf lies tossed in a corner
+where someone or something left him after using his body to reduce the 
+furniture in the room to kindling. Food and drink have been flung all over
+the floor and walls, smears and streaks of intestine and blood mixing with
+pudding and pasta to form a cocktail of refuse producing a horrible odor.
+The stone work over the door to the kitchen has collapsed, causing the
+second story to sag low, freezing air swirling in amongst the cracks in
+the walls. 
+~
+266 32768 0
+D1
+~
+~
+0 -1 26604
+S
+#26606
+Stable Lane~
+   Tiny hoofprints in the snow have filled with blood, now long frozen over.
+The air is very still, snow flakes falling straight down, uninterrupted by
+even the faintest whisper of a breeze. Wisps of straw lay strewn about the
+frozen street, some dyed red with blood, others matted solid with urine and
+snow. Stars glisten over head, sharp and clear between the rooftops, casting
+light in the darker corners of the street.
+~
+266 32768 9
+D1
+~
+~
+0 -1 26607
+D3
+~
+~
+0 -1 26604
+S
+#26607
+Stable Lane~
+   The head of a reindeer lies severed deep in a snow drift, the corpse
+seperated into pieces, legs stacked neatly against the wall, skin removed
+and folded into a neat square, meat frozen in the snow. Numerous steel
+jawed bear traps have been covered in a light dusting of snow, the severed
+legs of several elfs stuck in the midst of the sprung traps, torsos nowhere
+to be seen. 
+   To the north the ruins of the flight control tower rise up into the air,
+the top having erupted into the cold air. To the east the stables loom up
+across Buildit row, embers smoldering in the thatched roof.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26608
+D1
+~
+~
+0 -1 26609
+D3
+~
+~
+0 -1 26606
+S
+#26608
+Flight Operations Center~
+   Brick and mortar have collapsed in a heap, blocking all access to
+the curved stairway up. High above the floor has caved in, a mass of 
+electrical and control wires barely holding the ruins together. Cold
+air swirls through the shattered windows, fanning the flames of small
+electrical fires flickering dimly under overturned communcations
+equipment. The remains of an elf hang down limply between the floor
+joists, one arm tangled in the wiring, another yanked out by the shoulder
+appears stuck in a paper shredder. Damp, warm blood drips down onto the
+rubble below. 
+~
+266 32768 0
+D2
+~
+~
+0 -1 26607
+S
+#26609
+Stable Lane and Buildit Row~
+   Cobblestones peek through the frozen layer in places, as the wind has pushed
+most of the snow into the corners of the square. Shattered glass and bricks lay
+strewn about the north west side where it appears something large collided with
+the side of the flight control tower. A long red smear of blood, along with chunks
+of flesh and tufts of skin mark the descent of a once living creature along the
+side of the tower. Parallel marks on the ground leave bloody smears across the
+corpse of an elf, streaking read lines off to the west.
+   To the west the doors to the stable hang off their hinges, smoke leaking out
+and rising up into the night air. Under the thatched roof, the glowing embers
+of a smoldering fire can be seen just waiting to burst into flame. To the north
+and south Buildit row continues.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26614
+D1
+~
+~
+0 -1 26610
+D2
+~
+~
+0 -1 26611
+D3
+~
+~
+0 -1 26607
+S
+#26610
+The Stables~
+   Packed dirt clearly shows the imprints of hundreds of tiny hooves leading to
+and from the entrance to the stables. A bloody smear in the ground indicates a
+heavy, leaking, animal or elf being dragged behind the sleigh or reindeer. 
+Stalls line one wall, many standing open and empty, a few giving off an aroma
+that indicates it being occupied by some form of decomposing object. Feces and
+straw are piled high all around the room, no one in sight to clean up behind
+the reindeer. One tiny elf, impaled on the tines of a pitchfork, looks to be
+the victim of a horrible accident. 
+   To the south a door stands open to the sleigh storage room, the christmas
+sleigh stands ready, its back filled with presents.
+~
+266 32768 0
+D2
+~
+~
+0 -1 26613
+D3
+~
+~
+0 -1 26609
+S
+#26611
+Buildit Row~
+   Piles of snow have drifted up against the walls at the end of the street,
+all the refuse, blood, bones and tufts of skin and hair lay piled in the drifts.
+The streetlamps are cold and dark, movement flickers in the shadow shrouded
+corners, shapes not quite discernable in the darkness. A cloud of thick smoke
+swirls against the end of the street, blowing down from the roof of the stables.
+   To the east the sleigh storage warehouse stands, no noises coming from
+within while to the west the small, dilapadated hut of an elf stands wide open.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26609
+D1
+~
+~
+0 -1 26613
+D3
+~
+~
+0 -1 26612
+S
+#26612
+An Elfs Hut~
+   Mold has begun growing in the corners of the roof, damp and cold creeping in
+between every crack and crevice. The fireplace seems to have vomited soot and
+ash all over the floor, the rotting and decayed corpse of an elf having been
+tossed into the cold hearth. The dark patina of rotting wood covers the floor
+and chairs, blood and ice have mixed to form dark stains in the corners of the
+room. The smell of decayed flesh and fungus mix a nauseating scent that fills
+the room. 
+~
+266 32768 0
+D1
+~
+~
+0 -1 26611
+S
+#26613
+Sleigh Storage~
+   Santa's christmas sleigh stands in the middle of the wide open hangar. A red
+streak leading from the stables underneath one of the sleigh runners, ends at
+the corpse of an unfortunate elf that appears to have been impaled during the
+last flight. Most of his side and back have been left in the street and stables
+during the last few minutes of travel, his wide eyes staring at nothing. An
+enormous door faces south, a clearly marked runway strip leading straight to it.
+A small box is mounted next to the door, a key hanging inside, a small red and
+white lable clearly affixed to the front. Two stacks of presents are piled along
+one wall, One seems ready for immediate loading into the sleigh, the other sags
+and tilts as the soggy bottoms of each package appears to be leaking blood.
+   To the west the door is open to the street, while to the north the sight and
+smell of the stables is very clear. The massive landing and take off doors are
+closed and locked to the south.
+~
+266 32768 0
+D0
+~
+~
+0 -1 26610
+D2
+A huge rolling door is closed and locked. Red and white striped tape marks
+the edge of the landing strip. The key to the door is hanging in a box on
+the wall, a large white and red striped sign clearly visible on the face.
+~
+rolling door~
+1 26398 26630
+D3
+~
+~
+0 -1 26611
+S
+#26614
+Buildit Row~
+   Snow and mud have been mixed into a brown slush by the passing of countless
+tiny feet. Some footprints have clear outlines but most just blend into the 
+brown mess on the ground. Two elves, frozen solid up to the armpits in a mass
+of their own congealed blood, have been set as if to guard the bottom of a set
+of ice covered stairs. The stairs, slick with red ice lead up to the entrance 
+of the workshop. The dome high above caving in under the weight of several dead
+reindeer that appear to have plummted to their deaths.
+   To the west a small shed stands open, a small red rivulet flowing out into
+the slush filled street. To the south the road continues past the smoldering
+stables into the quiet cold night.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26627
+D1
+~
+~
+0 -1 26615
+D2
+~
+~
+0 -1 26609
+S
+#26615
+Workshop Tool Storage~
+   A pool of blood grows ever larger in one end of the shed. Tiny rivers
+of blood trickle through the dirt coming from the mound of reindeer corpses
+stacked in the center of the room. Lines of tiny holes in the sides and heads
+of these animals seem to indicate they were bludgeoned to death with the rake
+lying on the ground, pointed tines rising upwards. Tools of all sorts line the
+walls, on one side replacement tools for toy makers are stacked in bins, drills
+hammers, tiny saws and sanders everything the workshop might need. On the other
+side tools for the general maintenance of the north pole are hung on the wall.
+Rakes and shovels, wheelbarrows and other things have their own individual pegs.
+~
+266 32768 0
+D3
+~
+~
+0 -1 26614
+S
+#26616
+Santa Drive~
+   High snowbanks have drifted up against the eastern
+buildings, seemingly blocking all the entrances. A
+trickle of red flows down the mound of snow filling a 
+hole in the snow with a shining pool of blood. The head
+of Rudolph floats serenly in the middle of the pool, 
+strangely missing his signature nose. In place someone 
+has stuck a carrot in a cruel parody of a snowman. 
+   From the east the ruins of the North Pole print shop lie
+exposed to the snow, a flickering light coming from the
+print room and a faint clanking sound give evidence that
+its not completely abandoned. To the west a small hut that
+is home to an elf teeters on exposed posts, as if the wind
+could blow it right over. To the north and south the
+road continues amongst the debris.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26619
+D1
+~
+~
+0 -1 26618
+D2
+~
+~
+0 -1 26604
+D3
+~
+~
+0 -1 26617
+S
+#26617
+Print Shop~
+   A solitary printing press clanks away in the middle of the room,
+the printed documents falling loosely to the floor in a pile of red
+inked leaflets. There doesn't appear to be any text, just the outline
+of a tiny head. The half shredded corpse of an elf is hanging over
+the edge of the printing mechanism twitching every time the plates
+clang closed. The haunches of a reindeer are stuck in the spokes
+of a chandelier hanging from the ceiling, while the other half of
+the corpse seems to have left a streak of gore across the floor.
+Cold air swirls soft flakes of snow in through a hole in the roof
+caused by the reindeers abrupt departure from this world.
+~
+266 32768 0
+D1
+~
+~
+0 -1 26616
+S
+#26618
+An Elf Hut~
+   A small fire burns cheerily in the fireplace, warmth radiating out
+and filling the room. A small table and chair are set upon a hand
+made rug, a steaming cup of cocoa waiting for its owner. Lace curtains
+hang over windows shuttered tight against the cold. A christmas tree
+stands in the corner, presents surrounding it waiting for the big
+night. Stairs lead up along the far wall, bannister decorated with
+a pine branch garland interspersed with tiny holly sprigs.
+~
+266 32768 0
+D3
+~
+~
+0 -1 26616
+S
+#26619
+Workshop Boulevard~
+   Bricks and broken glass lay scattered across the bloody
+snow, spraying out in a circular pattern from the hospital
+to the north. Frozen lines in the snow appear to be entrails
+of horribly butchered elves, while small drifts have formed
+against various limbs and chunks of frozen meat. Only the 
+pointy ears give away the fact that once these were breating
+creatures of the north.
+   Flickering lights and the sounds of sawing come from inside
+the ruins of the hospital to the north. Workshop boulevard
+seems to continue to the east and west, weaving amongst the
+ruins of various buildings scattered limbs of various elves.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26622
+D1
+~
+~
+0 -1 26623
+D2
+~
+~
+0 -1 26616
+D3
+~
+~
+0 -1 26620
+S
+#26620
+Workshop Boulevard~
+   Piles of corpses are stacked against the wall to the west,
+some of the bodies in there are still twitching. Hoofprints
+showing clearly on the the exposed flesh of some of the more
+intact torsos. A frozen layer of blood coats the snow, large
+bootprints clearly defined by the white snow peeking through
+the bloody crust. Drifting through the cold air comes the
+faint meaty sound of flesh encountering something solid.
+   To the north a large building looks to be a normal sized
+dwelling, a well decorated house except for the smears of
+blood along the walls and shattered glass. The head of an
+Elf appears to be impaled on a window pane that hasn't yet
+fallen out. To the east the destruction continues down the
+boulevard.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26621
+D1
+~
+~
+0 -1 26619
+S
+#26621
+Santa's Normal Sized House~
+   The second floor has exploded upwards in a shower of wood
+insulation and nails. The western wall has collapsed under the
+pressure of some massive force, dents in the wall and floor are
+showered in chunks of bone and meat, puddles of blood pooling
+amongst the wreckage. Shards of glass from a broken window impale
+the twisted corpse of an elf to the north wall, the front half of
+a reindeer lays beneath him missing its head. A table and two chairs
+is set up in the far corner, plates, silverware and cups set out
+as if waiting for a regular meal. A steaming roast is prepared and
+waiting in the center, a little larger then a normal pig with pointed
+ears and two legs, the scent of crispy flesh and spices wafts amongst
+the dust and blood.
+~
+266 32768 0
+D2
+~
+~
+0 -1 26620
+S
+#26622
+The Ruins of a Hospital~
+   Snow drifts lazily in from the missing wall to the south, piling
+up against the surgical and examination tables now exposed to the
+elements. A candle flickers lazily in the wind, the guttering light
+exposing the ruins of an elf corpse on one of the tables. Ribs cracked
+open, intestines hanging from the ceiling in an awful parody of
+christmas garlands and decorations, this elf has had its nose and
+mouth replaced with the snout of a reindeer, beady little elf eyes
+staring blankly towards the remains of the ceiling above. In a corner
+stacks of reindeer and elf limbs appear to have been torn from their
+respective torsos, readily available for the next experiment. 
+~
+266 32768 0
+D2
+~
+~
+0 -1 26619
+S
+#26623
+Workshop Boulevard~
+   Debris litters the road, the face of the building to the north
+has been entirely demolished. Chunks of wallboard and window pane
+littering the snow. The walls to the south are spotted with pink,
+blood, froth, snow all mixed together to create a frosty masterpiece.
+Fingers, toes, and the frozen eye of an elf stares skyward from the
+midst of the rubble. Four legs stand upright frozen in the middle of
+the street, the rest of the reindeer seems to have been sprayed against
+the sides of the surrounding buildings, antlers embedded deep in the
+forehead of an unlucky elf. 
+   To the north the half demolished home of an elf lies open to the 
+street. To the east the debris filled boulevard continues towards
+the workshop. To the west buildings and rubble fill the street,
+making it difficult to see whats lies that direction.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26624
+D1
+~
+~
+0 -1 26625
+D3
+~
+~
+0 -1 26619
+S
+#26624
+An Elf Hut~
+   A table has been flattened into the floor by the force of a massive
+explosion. An elf has been seared into the ceiling by an intense heat,
+small hands flung outwards as if in surprise. The entire room has been
+charred black by flame and explosives, the only surviving remanants are
+the remains of a christmas tree and a small kitchen oven out of which
+the smells of roast reindeer are wafting. The rubble to the south lies
+strewn out into the street, a few boards shifting slightly as an elf
+tries to seperate the boards embedded in his body from his limbs which
+no longer respond to his commands.
+~
+266 32768 0
+D2
+~
+~
+0 -1 26623
+S
+#26625
+Workshop Boulevard~
+   Elf corpses hang limply from the decorative spikes on top of the lamp
+posts lining the street. Tiny red icicles have formed on the bottoms of
+the steel lantern housings, gleaming wetly in the flickering light. Steps
+lead up to the entrance of a large structure, doors hanging off their hinges
+flapping back and forth in the breeze. Garlands and tinsel decorate the eaves,
+tiny corpses strung in amongst the holly berries, eyes staring wildly out
+into the night. Snow has piled up at the top of the steps, a few pink irregular
+mounds the only evidence of anything beneath it. 
+   Flickering light is evident through the doors to the east, the faint smell
+of smoke and chicken drifts through the broken doors. Down the stairs to the
+west the road continues amidst the debris.
+~
+266 32768 9
+D0
+~
+~
+0 -1 26626
+D1
+~
+~
+0 -1 26627
+D3
+~
+~
+0 -1 26623
+S
+#26626
+Elfbucks Cafe~
+   Bright candles and decorative garlands line the ceiling, windows and bar. 
+Rows of high top tables lie strewn about the floor, spilled drinks and ripped
+sugar packets mix with splinters of wood, mud and snow that has blown in
+through the shattered front window. Behind the bar a small espresso machine is
+running, its wand submerged in a metal pitcher filled with the blood and fecal
+matter of a small elf colon. A string of intestine and brain tissue are lumped
+in a blender just waiting for the button to be pushed, while on a side table
+three red and white frozen and blended drinks stand ready to be picked up. The
+drained and flaccid body of an elf is laying draped over the edge of the waste
+bin, all his bones apparently removed.
+~
+266 32768 0
+D2
+~
+~
+0 -1 26625
+S
+#26627
+Overlooking the Workshop Floor~
+   Massive chandeliers hang from the ceiling, candles guttering in the cold air
+that swirls through the open doors to the west and south. A walkway dominates
+the central chamber, revealing a wide open main floor filled with work benches
+and tools. An elf lies with his head crushed in a vice, feet still twitching as
+if trying to break free. A row of half made dolls are lined up on a table, each
+with the head of an elf sewn on in place of the normal cloth one. A stack of
+reindeer corpses lie in a corner, meat exposed to the air, the skins used to
+make drums for the toy soldiers lined up in a row. Half wrapped presents are
+piled in a corner, bottoms sticky and wet, dripping red into an ever growing
+puddle on the floor. 
+   To the north an open door reveals an overturned desk and chairs, small flames
+licking at a curtain in the far corner. To the east a mound of tiny elf corpses
+and severed reindeer parts rises upwards, reaching high towards the ceiling.
+~
+266 32768 0
+D0
+~
+~
+0 -1 26628
+D1
+The faint smell of cinnamon and cookies comes from the stack of corpses,
+a small shaft of light pierces the group of limbs, it might be possible to crawl through
+them.
+~
+corpses~
+9 -1 26629
+D2
+~
+~
+0 -1 26614
+D3
+~
+~
+0 -1 26625
+S
+#26628
+Workshop Control Office~
+    Papers have been scattered around the room, bloody footprints clearly
+outlined on the strewn notes. Smoldering flames lick at the bottom of the
+curtains, smoke billowing up into the air. Loud rattling shakes the cabinet
+in the corner, a single jagged antler stabs through the door. A typewriter
+sits in the corner, an elfs fingers stuck amongst the keys, roots bleeding
+out onto the paper. The heavey oaken desk has been overturned, the booted
+feet of an elf sticking out from one of the edges.
+~
+266 32768 0
+D2
+~
+~
+0 -1 26627
+S
+#26629
+Santa's Sanctuary~
+   A warm breeze lifts away the scent of blood and feces. Serenity holds sway
+in every corner of the room, bright candles burning strong. Corpses bleed out
+slowly in every corner, limbs and torsos intertwined with each other, rising
+higher and higher, little rivers flowing ceaselessly downwards. The scent
+of pine trees and cinnamon waft around the room, while a stack of colorfully
+wrapped presents rises high against the south wall. 
+~
+266 32768 0
+D3
+A small shaft of light pierces the stack of bodies and limbs, it might be
+small enough to crawl through.
+~
+corpses~
+9 -1 26627
+S
+#26630
+Just past the edge of a cliff~
+   Cold air rushes past your face as the open rolling door to the landing bay
+recedes rapidly behind you. Massive white drifts rapidly approach as you
+realize that reindeer can fly. Are there rocks and trees under those drifts,
+or is there enough snow to keep you safe?
+~
+266 98304 9
+S
+#26631
+Climbing Deep into a Winter Storm~
+   The snow falls thick and fast, obstructing the view ahead. Deep drifts
+pile up all around, the cold giving a snap to the air. The ground seems to
+shift and move, seeming to travel at its own pace. Drifting on the cold air
+currents is the faintest whiff of warmth and cinnamon, a small bright spot
+in a cold and frozen land.
+~
+266 0 9
+D3
+~
+~
+0 -1 26331
+D4
+~
+~
+0 -1 26600
+S
+#26699
+Hall of Kludges~
+Don't mess with anything!
+
+This means you!
+
+~
+266 512 0
+S
+#0
+$~

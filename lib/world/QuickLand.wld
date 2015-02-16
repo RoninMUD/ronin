@@ -1,0 +1,439 @@
+#10401
+The sinister forest path~
+	You feel a strange difference in the forest.  You have left the friendly
+forest of rabbits behind.  Ahead you sense the presence of malicious and cruel
+monsters ahead, reflected in the way the plants have twisted into spiky bizarre
+growths you don't recognize.  You can continue down the path to the east or 
+retreat back to the west.  There is a wooden sign here.
+~
+104 4 3
+D1
+You see the a sinister grove to the east.
+~
+~
+0 -1 10402
+D3
+You see the forest near John's cabin.
+~
+~
+0 -1 6015
+E
+sign~
+		                   Warning!
+       
+	 You are about to enter the lands of the quicklings.  They don't take
+kindly to visitors.  Be very careful around the quickling raiders, for they
+are trained soldiers.
+                                               -John the Lumberjack
+~
+S
+#10402
+The sinister grove~
+	You are in a grove surrounded by twisted vine-like plants with pointy
+needles covering them.  You feel uncomfortable in the revealing grove, as if 
+somebody was watching you.  You can continue east down the path or go along a
+path to the south.  The vines appear to be thick to the north but, you might 
+be able to push your way through.
+~
+104 0 3
+D0
+The vines hanging from the trees are impossible to see through, you might be 
+able to push through though.
+~
+~
+0 -1 10403
+D1
+To the east, you see widening path.
+~
+~
+0 -1 10407
+D2
+You see a sinister looking path to the south.
+~
+~
+0 -1 10412
+D3
+You see a sinister looking path to the east.
+~
+~
+0 -1 10401
+E
+vine~
+The vines here are covered with pointy spikes, don't touch!
+~
+E
+vines~
+The vines here are covered with pointy spikes, don't touch!
+~
+S
+#10403
+Thick vines~
+	The vines are very thick here, you think you can mange to push your way
+north again though.
+~
+104 0 3
+D0
+The vines are very thick, it is impossible to see what is north of you.
+~
+~
+0 -1 10404
+D2
+You see the sinister grove to the south.
+~
+~
+0 -1 10402
+S
+#10404
+More thick vines~
+	You manage to shove your way through more vines only to find more vines!
+You can continue north, go back, or push your way to the east.  
+~
+104 0 3
+D0
+The foliage is so thick that you can't see what is north of here.
+~
+~
+0 -1 10405
+D1
+The vines are so thick here that you can't see what is east of here.
+~
+~
+0 -1 10406
+D2
+Through the vines you can catch glimpses of the grove.
+~
+~
+0 -1 10402
+E
+vine~
+The vines are covered with pointy spikes, don't touch!
+~
+E
+vines~
+The vines are covered with pointy spikes, don't touch!
+~~
+E
+folliage~
+The foliage (mostly vines) is very thick.
+~
+S
+#10405
+The grove of the baby Quicklings~
+	You push through the dense foliage to find a carefully grown grove of
+trees.  The trees surround the grove perfectly in a neat circle.  In the grove 
+you see several small rapidly moving baby quicklings speeding around.  There 
+are several corpses of young human children littered about the room in various
+states of decomposition.  One says in a high pitched voice, "Ohboy!Bigpeople 
+havecometoplaywithus!"  They start poking you with their toys (knives)!
+~
+104 0 3
+D2
+To the south you see dense foliage.
+~
+~
+0 -1 10404
+E
+corpse~
+The human corpses look like they have been play things for the young quick-
+lings.
+~
+E
+corpses~
+The human corpses look like they have been play things for the young quick-
+lings.
+~
+S
+#10406
+The Queen Quickling's Grove~
+	The Queen Quickling blurs about the room ignoring you as she gives 
+orders to quickling servants.  "Givetheyoungmorehumanstokill," says the Queen.
+The servant says, "Yesmyqueen."  Everybody just ignores you as they blur about
+talking about how to train the proper evilness into the young.
+~
+104 0 3
+D3
+To the west you see dense foliage.
+~
+~
+0 -1 10404
+S
+#10407
+The widening path~
+ 	The path widens here with a branch going north along with it 
+continuing to the east.  Quickling commoners blur along the path, not paying 
+any attention to you.  They move so quickly you wouldn't have a chance to
+attack them if you wanted to.
+~
+104 0 3
+D1
+You see many quicklings moving around to the east.
+~
+~
+0 -1 10408
+D2
+You see a twisting path to the south.
+~
+~
+0 -1 10417
+D3
+You see a sinister grove to the east.
+~
+~
+0 -1 10402
+S
+#10408
+The Busy Intersection~
+	Everywhere you look you see quicklings speeding around, going north,
+east, west, or up a rope ladder to the tops of the trees.  The quicklings 
+climb the ladder so quickly it looks like they fly straight up!  
+~
+104 0 3
+D0
+To the north you see a well trodden path that has been covered with beautiful
+red stones.
+~
+~
+0 -1 10410
+D1
+To the east you see a sheltered grove that looks like some sort of barracks.
+~
+~
+0 -1 10409
+D3
+To the west you see a widening path.
+~
+~
+0 -1 10407
+D4
+You can't see anything up the tree through the dense leaves.
+~
+~
+0 -1 10421
+E
+ladder~
+The latter looks a little small but, it appears to be made out of a strong
+material.  It looks fairly safe.
+~
+S
+#10409
+The Quickling Raiders' Barrack~
+	This is where the Raiders talk about all the great things they have
+stolen from nearby towns.  There is a chart on the wall with the names of
+different quicklings on it, along with how much they have stolen from Midgaard.
+The captain of the guard shouts out in a high voice, "Hey!Youpeopleshouldnotbe
+here!Preparetodie!"
+~
+104 0 3
+D3
+To the west you see a busy intersection.  
+~
+~
+0 -1 10408
+E
+chart~
+The chart shows a ranking of all the quicklings that go on raids.  At the top
+is the King of the Quicklings, Tephanis.
+~
+S
+#10410
+The red stone path~
+	This path has been set with beautiful red stones.  It feels like this
+path is good enough for royalty to walk on.  The path bends off to the east.
+You can see a small sign tacked to a tree nearby.
+~
+104 0 1
+D1
+To the east you see a fantastic clearing with a ornate oaken throne.
+~
+~
+0 -1 10411
+D2
+South you see a busy intersection.
+~
+~
+0 -1 10408
+E
+sign~
+                                  Warning!
+                     Bother Tephanis on pain of death!
+~
+S
+#10411
+Tephanis's Clearing~
+	You have entered a splendid clearing with a ornate oaken throne in
+the middle.  Tephanis looks at you angrily from his throne and says, "Soyou
+havedecidedtoentermyclearing..DIE!"  He rushes you so quickly it is awe-
+inspiring.
+~
+104 0 1
+D3
+To the west you see a red stone path.
+~
+~
+0 -1 10410
+E
+throne~
+The throne is a beautiful piece of work that was probably stolen by the quick-
+lings, it's unlikely that they could make something so beautiful.
+~
+S
+#10412
+A sinister path~
+	You are on a sinister path running north and south.
+~
+104 0 3
+D0
+You see a sinister path to the north.
+~
+~
+0 -1 10412
+D1
+You see a sinister path to the east.
+~
+~
+0 -1 10414
+S
+#10414
+A sinister path~
+	You are on a sinister path running east/west.
+~
+104 0 3
+D1
+To the east you see a sinister path.
+~
+~
+0 -1 10415
+S
+#10415
+A sinister path~
+	You are walking along a sinister path running east/west.
+~
+104 0 3
+D1
+You see a sinister path to the east.
+~
+~
+0 -1 10416
+D3
+You see a sinister path to the west.
+~
+~
+0 -1 10414
+S
+#10416
+A sinister path~
+	To the north you see a twisting path, to the south there is a dark
+road.  You can also head along the sinister path to the west.
+~
+104 0 3
+D0
+To the north you see a twisting path.
+~
+~
+0 -1 10419
+D1
+To the east you see a sinister path.
+~
+~
+0 -1 10415
+D2
+To the south you see a dark road.
+~
+~
+0 -1 10420
+S
+#10417
+A twisting path~
+	You are walking on a twisting path that goes north and east.
+~
+104 0 3
+D0
+To the north you see a widening path.
+~
+~
+0 -1 10407
+D1
+The twisting path continues to the east.
+~
+~
+0 -1 10418
+S
+#10418
+A twisting path~
+	You are on a twisting path running east/west.
+~
+104 0 3
+D1
+To the east you see a twisting path.
+~
+~
+0 -1 10419
+D3
+To the west you see a twisting path.
+~
+~
+0 -1 10417
+S
+#10419
+A twisting path~
+	You are on a twisting path that goes to the south and west.
+~
+104 0 3
+D2
+To the south you see a sinister path.
+~
+~
+0 -1 10416
+D3
+To the west you see a twisting path.
+~
+~
+0 -1 10418
+S
+#10420
+A dark road~
+	You are on a dark road, the road continues to the south.  You feel very
+uncomfortable on this road, as if there was a great evil at its end.
+~
+104 4 1
+D0
+To the north is a sinister path.
+~
+~
+0 -1 10419
+D2
+The dark road continues to the south.
+~
+~
+0 -1 10422
+S
+#10421
+The lookout tree~
+	You climb up to a platform hidden in the leaves.  You can see a great
+distance from so high up.  To the east you can see the town of Midgaard, to 
+the west you see high trees with silky strands between them, to the south all
+you can see is a dark area, it makes you shiver.
+~
+104 0 3
+D5
+You can't see anything when you look down, the leaves are very dense.
+~
+~
+0 -1 10408
+S
+#10422
+The shore of the dark river~
+   You are standing on a road at the northern shore of the dark river.  The
+road leads northwards, and the river flows just south of here.  It looks 
+like there was a bridge crossing the river at the point, but the bridge
+is long gone, perhaps a victim of a flood sometime in the past.
+~
+104 9 1
+D0
+~
+~
+0 -1 10420
+S
+#0
+$~
+

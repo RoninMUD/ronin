@@ -1,0 +1,223 @@
+#18800
+trolloc~
+a Trolloc~
+A Trolloc is on your trail, hunting you!
+~
+  The trolloc is half again as high and wide as a man, with broad shoulders. Its 
+head is covered with fur like a wolf, but with human eyes. Its strong arms wield 
+an axe twice the size of any axe you have seen before. The trolloc is running on 
+goat legs with sharp hooves.. This horrid blend of human and animal sickens 
+your stomach.
+~
+42 0 -1000 Y
+47 -18 -16 5d5+25000 5d5+390
+0 6750000
+8 8 1
+62 0 5d5+500 1
+2 2 25 0
+0 0 0 0
+T
+.....A Trolloc howls with bloodlust!~
+K
+200000 0 0 0 0 0 0
+#18801
+myrdraal~
+a Myrdraal~
+A Myrdraal leads his fist of Trollocs.
+~
+  The Myrdraal has the shape of a man but is far from it. Its dark hair frame
+a face with white skin, and where its eyes should have been, it has sockets with the 
+same pale skin as on the rest of its body. In the borderlands they have a saying:
+The look of the eyeless is fear, and whenever that gaze reaches you, you feel
+a sudden terror in your bones. The Myrdraal's cloak hangs undisturbed in the wind.
+~
+40 0 -1000 Y
+48 -22 -20 5d5+30000 5d5+490
+0 8100000
+8 8 1
+63 0 5d5+500 2
+2 2 25 0
+3 2 25 0
+0 0 0 0
+T
+.....A Myrdraal charges to attack!~
+K
+300000 0 0 0 0 0 0
+#18802
+darkhound~
+a Darkhound~
+A Darkhound searches for your trail.
+~
+  The Darkhound has the stature of a small horse and has thick dark fur. It looks
+back at you with dark red eyes and growls, drool dripping from its mouth. It
+has long claws on its paws that will inflict great damage to its prey.
+~
+40 0 -1000 Y
+48 -16 -10 5d5+15000 5d5+380
+0 3375000
+8 8 1
+86 0 5d5+500 1
+6 2 33 0
+0 0 0 0
+T
+.....a Darkhound gives off a smell of burned sulphur!~
+K
+450000 0 0 0 0 0 0
+#18803
+grey man~
+a Grey Man~
+                                             .
+~
+Something keeps your eyes from looking to closely at the man. But what you 
+see is a very ordinary man that you don't think you would have noticed in a 
+group of four.
+~
+536870920 524288 -1000 Y
+49 -15 10 5d5+1000 5d5+490
+300000 900000
+8 8 1
+53 0 5d5+500 1
+11 2 30 65
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18804
+shadar haran~
+Shadar Haran~
+Shadar Haran is here guarding the entrance to the mountain.
+~
+  Shadar Haran has the same white skin and eyeless face as a Myrdraal, but there 
+the resemblance ends. He is much taller, and he can smile where Myrdraal cannot.
+He has long dark hair and wears an armor made of dark leather sewen with blue
+thread. Every time that eyeless gaze finds you, you feel a sudden terror and
+a difficulty of moving and thinking straight. In the Old Tongue, Shadar Haran 
+is translated to: Hand Of The Dark.
+~
+42 0 -1000 Y
+70 -18 10 5d5+750000 5d5+2500
+0 31500000
+8 8 1
+63 0 5d5+5000 4
+1 2 33 203
+1 2 33 110
+1 2 33 104
+1 6 5 180
+0 0 0 0
+T
+.....Shadar Haran fixes you with his eyeless gaze!~
+K
+20000000 18803 0 0 0 0 0
+#18805
+worm jumara queen~
+The Jumara Queen~
+A long worm is feeding from a pile of human bodies.
+~
+  The Jumara is a long worm with scales in dark green and black covering its
+entire body. Its tail has a long sharp sting, dripping with poison. Its mouth 
+almost smiles when it looks at you, blood dripping from its fangs.
+~
+42 268435456 -1000 Y
+60 -19 -18 5d5+200000 5d5+1300
+0 10000000
+8 8 1
+80 134217729 5d5+500 3
+8 2 33 0
+5 2 33 0
+6 2 33 0
+0 0 0 512
+K
+2000000 2 0 0 0 0 0
+#18806
+jumara newborn~
+a newborn jumara~
+a small jumara is crawling here.
+~
+  The newborn jumara is just a couple of feet long. It has dark green scales
+over the length of its body. The small fangs looks like they easily will tear
+skin and draw blood.
+~
+8 134219778 0 Y
+46 -20 -13 1d1+999 2d2+175
+0 350000
+8 8 1
+80 0 1d1+999 0
+0 0 0 0
+T
+.....the newborn jumara is looking for some prey.~
+K
+65000 0 0 0 0 0 0
+#18807
+jumara grown~
+a grown jumara~
+A grown jumara is searching for food.
+~
+  The grown jumara is ten feet long. It has dark green scales 
+over the length of its body. The large fangs looks like they 
+easily will tear skin and draw blood. Alot of it.
+~
+8 134219778 0 Y
+48 -20 -13 1d1+1499 2d2+220
+0 625000
+8 8 1
+80 0 1d1+999 0
+0 0 0 0
+T
+.....the grown jumara hisses angrily at you.~
+K
+65000 0 0 0 0 0 0
+#18808
+someshta~
+Someshta, the last of the Nym~
+Someshta, the last of the Nym is rooted in the ground.
+~
+  Someshta is a Nym, a race which look more like trees than humans. He reaches
+twenty feet over the ground and his whole body is covered with branches and
+leaves, his skin like old brown bark. Two gentle hazel eyes protrude from the 
+crown of leaves that makes up his head.
+~
+10 0 0 Y
+60 -25 -15 10d1000+250000 100d15+1500
+1 27000000
+8 8 1
+75 0 2d2+5000 0
+0 0 0 0
+K
+12000000 0 0 0 0 0 0
+#18809
+aginor~
+Aginor~
+A man aged beyond belief is standing here grinning at you.
+~
+  Aginor, one of the Forsaken, is standing before you. His captivity close to 
+the edge of the Dark One's prison have had him age normally for over three
+millennia, making him look more like a corpse than a man.
+~
+10 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18810
+balthamel~
+Balthamel~
+A man shrouded in a black cloak is standing here.
+~
+  Balthamel, one of the Forsaken, is standing before you. His captivity close to 
+the edge of the Dark On'es prison have had him age normally for over three
+millennia, making him look more like a corpse than a man He was even worse off
+than Aginor and shrouds himself in a black cloak, his face covered with a 
+grinning mask.
+~
+10 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

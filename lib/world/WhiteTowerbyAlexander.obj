@@ -1,0 +1,1497 @@
+#18600
+warder cloak~
+a Warder's cloak~
+An almost invisible cloak is lying here.~
+~
+9 524288 1025
+0 0 0 0
+2 30000 12000
+10
+E
+cloak~
+The texture makes the wearer invisible.
+~
+X
+~
+5 0 0
+M
+You wrap the cloak around your shoulders.~
+As $n wraps a Warder's cloak around $s shoulders, $e completely disappear.~
+You remove the cloak from you shoulders.~
+$n appears as $e removes $s cloak.~
+A
+19 2
+A
+18 2
+T
+120
+B
+67108864
+#18601
+oath rod~
+an Oath Rod~
+a white rod is laying here.~
+~
+1 2109440 16385
+0 0 0 0
+3 25000 25000
+20
+E
+rod~
+   The rod is thick and about a foot long. On end the number 3 is carved. 
+Its completely smooth and exept from the number, not a single scratch 
+can be seen.
+~
+X
+~
+5 0 0
+M
+You grab the Oath Rod.~
+$n grabs the Oath Rod.~
+You release the Oath Rod.~
+$n releases the Oath Rod.~
+A
+19 4
+A
+18 4
+A
+53 6
+T
+600
+#18602
+stole~
+The Amyrlins stole~
+A banded cloth of with the colors of the seven Ajahs are lying here.~
+~
+9 131072 5
+0 0 0 0
+5 50000 20000
+20
+E
+stole~
+The stole is made of silk and has the seven colors of the ajahs.
+~
+X
+~
+1 0 0
+M
+You wear the Amyrlin's stole around your neck.~
+$n wears the Amyrlin's stole around $s neck.~
+You remove the Amyrlin's stole from your neck.~
+$n removes the Amyrlin's stole from $s neck.~
+A
+19 1
+A
+18 1
+A
+53 3
+#18603
+serpent ring~
+a serpent ring~
+A serpent ring is laying on the ground.~
+~
+11 0 3
+0 0 0 0
+5 40000 10000
+2
+E
+ring serpent~
+The ring is formed like a serpent twisting and eating its own tale.
+Its the symbol of eternity.
+~
+X
+~
+1 0 0
+M
+You put the serpent ring on your finger.~
+$n wears a serpent ring on $s finger.~
+You remove the serpent ring from your finger.~
+$n removes a serpent ringfrom $s finger.~
+A
+19 1
+A
+12 10
+A
+53 1
+#18604
+keepers staff~
+The Keepers staff~
+A long staff is laying here.~
+~
+4 0 65537
+0 0 0 0
+10 30000 30000
+33
+E
+staff~
+An ornately carved and guilded staff with a shining orb at the end.
+~
+X
+~
+5 0 0
+M
+You grab The Keepers staff.~
+$n grabs The Keepers staff.~
+You remove The Keepers staff.~
+$n removes The Keepers staff.~
+A
+18 1
+A
+19 3
+T
+180
+#18605
+silver bracelet~
+a Silver Bracelet~
+A silver bracelet is lying on the ground giving off a feint glow.~
+~
+9 82851840 4097
+5 -1 -1 -1
+3 50000 30000
+33
+E
+bracelet mesaana silver~
+The bracelet is made og silver and glows with a feint blue light.~
+X
+~
+1024 0 0
+M
+Your magic grows as you put the angreal on your wrist.~
+$n wears an angreal on $s wrist.~
+Your magic grows less as you remove the angreal from your wrist.~
+$n removes an angreal from $s wrist.~
+A
+19 2
+A
+53 5
+A
+12 -50
+#18606
+key gold~
+a gold key~
+A heavy gold key is lying here, carved with the ancient symbol of the Aes Sedai.~
+~
+18 0 1
+0 0 0 0
+1 5000 200
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18607
+dragon banner~
+the Dragon Banner~
+The banner of Lews Therin is lying on the ground.~
+~
+11 111161344 1025
+0 0 0 0
+20 50000 50000
+10
+E
+banner dragon~
+The banner is long and white with a figure like a serpent scaled in gold.
+Its legs also scaled, and the feet have five golden claws on each. The banner
+seems of a piece, neither wowen, nor dyed, nor painted.
+~
+X
+~
+5 0 0
+M
+You wear the banner around your shoulders.~
+$n wears the banner on $s shoulders.~
+You remove the banner from your shoulders.~
+$n remove the banner from $s shoulders.~
+A
+19 3
+A
+18 1
+A
+53 7
+T
+14000
+#18608
+page~
+A torn page~
+A torn page lays on the ground.~
+~
+32 524288 1
+18607 5805 25301 12211
+1 350 10
+8
+E
+torn page~
+The page is torn from a book, and seems to be a list of materials needed to
+make the Dragon Banner. Exactly what that is, is unknown as the page is torn
+right below the list.
+The title of the book is written in the upper right corner and reads:
+"Survivings from the Age of Legends".
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18611
+angreal bracelet~
+an Angreal~
+A silver bracelet is lying on the ground giving off a feint glow.~
+~
+9 116406272 4097
+5 -1 -1 -1
+3 50000 30000
+20
+E
+bracelet mesaana silver~
+The bracelet is made og silver and glows with a feint blue light.~
+X
+~
+1028 0 0
+M
+Your magic grows as you put the Angreal on your wrist.~
+$n puts an Angreal on $s wrist.~
+Your magic grows less as you remove the Angreal from your wrist.~
+$n removes an Angreal from $s wrist.~
+A
+19 3
+A
+53 5
+A
+12 -50
+T
+10000
+B
+268435456
+#18612
+gray key~
+a gray tower key~
+a long iron key with a gray gemstone is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+gray key~
+  The key is long and made of iron, its handle shaped like the symbol of
+the Aes Sedai, a circle in black and white divided by a sinuous line. In the 
+center a gemstone in gray is set with gold trimming.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18613
+yellow key~
+a yellow tower key~
+a long iron key with a yellow gemstone is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+yellow key~
+  The key is long and made of iron, its handle shaped like the symbol of
+the Aes Sedai, a circle in black and white divided by a sinuous line. In the 
+center a gemstone in yellow is set with gold trimming.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18614
+blue key~
+a blue tower key~
+a long iron key with a blue gemstone is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+blue key~
+  The key is long and made of iron, its handle shaped like the symbol of
+the Aes Sedai, a circle in black and white divided by a sinuous line. In the 
+center a gemstone in blue is set with gold trimming.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18615
+red key~
+a red tower key~
+a long iron key with a red gemstone is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+red key~
+  The key is long and made of iron, its handle shaped like the symbol of
+the Aes Sedai, a circle in black and white divided by a sinuous line. In the 
+center a gemstone in red is set with gold trimming.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18616
+white key~
+a white tower key~
+a long iron key with a white gemstone is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+white key~
+  The key is long and made of iron, its handle shaped like the symbol of
+the Aes Sedai, a circle in black and white divided by a sinuous line. In the 
+center a gemstone in white is set with gold trimming.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18617
+green key~
+a green tower key~
+a long iron key with a green gemstone is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+green key~
+  The key is long and made of iron, its handle shaped like the symbol of
+the Aes Sedai, a circle in black and green divided by a sinuous line. In the 
+center a gemstone in green is set with gold trimming.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18618
+brown key~
+a brown tower key~
+a long iron key with a brown gemstone is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+brown key~
+  The key is long and made of iron, its handle shaped like the symbol of
+the Aes Sedai, a circle in black and white divided by a sinuous line. In the 
+center a gemstone in brown is set with gold trimming.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18619
+key~
+a tower key~
+a long iron key is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+key~
+  The key is long and made of iron, its handle shaped like the symbol of
+the Aes Sedai, a circle in black and brown divided by a sinuous line.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18620
+library key~
+a library key~
+an iron keychain with a key and a small book is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+5
+E
+key library~
+  The keychain is made of iron and has a small iron key and a carved book
+made of wood on in.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18621
+wooden key~
+a small wooden key~
+a small wooden key is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+5
+E
+key wooden~
+  The small key is carved from wood and appears to be very old.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18622
+small iron key~
+a small iron key~
+a small iron key is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+3
+E
+key iron~
+  The small key is made of iron and is formed like a small staff.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18623
+key~
+a golden key~
+edit o 18623 long
+A golden key is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+E
+key golden~
+  The key shines like gold, but scratches reveal an iron core.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18624
+key~
+a key banded with the colors of the seven Ajahs~
+A key banded with different colors is lying here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+E
+key goldens~
+  The key is banded with the colors of the seven ajahs between the handle
+and the part that fits in the lock.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18625
+wooden stick~
+a short wooden stick~
+A short wooden stick is lying here.~
+~
+13 0 1
+0 0 0 0
+10 10 10
+10
+E
+wooden stick~
+  A short stick from a tree.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18626
+wooden pile~
+a pile of short wooden sticks~
+A pile of short wooden sticks is lying here.~
+~
+13 0 1
+0 0 0 0
+10 10 10
+10
+E
+wooden sticks pile~
+A pile of short sticks.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18627
+long wooden stick~
+a long wooden stick~
+A long wooden stick is lying here.~
+~
+13 0 1
+0 0 0 0
+10 10 10
+10
+E
+wooden stick long~
+A long stick from a tree.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18628
+wooden ladder~
+a ladder made from wooden sticks~
+A ladder is lying here, able to help you reach new heights.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+10
+E
+wooden ladder~
+  A long wooden ladder made of sticks.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18629
+drawing~
+a drawing of a ladder~
+A drawing is left here.~
+~
+32 0 1
+18628 18627 18627 18626
+10 10 10
+10
+E
+drawing~
+  The drawing show how to build a ladder from wooden sticks.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18630
+drawing~
+a drawing of a pile of sticks~
+A drawing is left here.~
+~
+32 0 1
+18626 18625 18625 18625
+10 10 10
+10
+E
+drawing~
+  It shows how to combine several sticks into a sorted pile.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18631
+a'dam~
+an a'dam~
+A silvery collar and bracelet connected with a silver chain is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+a'dam bracelet collar~
+  The a'dam is made up of a collar and bracelet made of a silvery metal. The 
+two pieces are connected by a long linked leash in the same silvery material.
+You can see no clasps on the collar. Its seems of a piece. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18632
+bookcase~
+a bookcase~
+A large bookcase stands in front of you reaching almost to the ceiling.~
+~
+15 0 1
+0 0 0 0
+10 10 10
+100
+E
+bookcase~
+  The bookcase is old and masterfully made of oak. You can't see the parts
+the bookcase are made of, so it look as if the bookcase is grown this way 
+although that is impossible.
+  The shelves are filled with books on all kinds of topics, and some places
+loose sheets of paper lay by themselves, probably the rest of the books have not 
+survived. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18633
+ornate bookcase~
+an ornate bookcase~
+An ornate bookcase stands in front of you reaching almost to the ceiling.~
+~
+15 0 1
+0 0 0 0
+10 10 10
+100
+E
+bookcase~
+  The bookcase is old and masterfully made of oak. You can't see the parts
+the bookcase are made of, so it look as if the bookcase is grown this way 
+although that is impossible. The shelves are decorated with golden lines and
+beautiful carvings.
+  Old books, some missing their cover, fill most of the shelves. There are also 
+some items lying here. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18634
+black robe~
+a well tailored black robe~
+A robe of black cloth is lying here.~
+~
+9 111292416 9
+7 -1 -1 -1
+10 50000 40000
+25
+E
+black robe~
+  The robe is beautifully tailored with silver embroidery on the breast and 
+on the cuffs. Patterns in gold and red thread go down from the back, around 
+the sides and join in the in front with the silver embroidery on the breast.
+~
+X
+~
+2048 0 0
+M
+You wear the robe on your body.~
+$n wears a black robe.~
+You remove the robe.~
+$n removes $s black robe.~
+A
+19 3
+A
+12 40
+A
+53 2
+#18635
+book~
+The Travels of Jain Farstraider~
+A book with a dark green cover is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  The book describes the travels of the famous Jain Farstraider as he wandered~
+the world.
+This is not the information you are looking for... 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18636
+book~
+A journey in the Aiel Waste~
+A dusty old book is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  The waste is a hot and desolate place. This book gives insight in the ~
+dealings with the Aiel and their savage nature. 
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18637
+book~
+Riverboats~
+A white book with a drawing of a riverboat is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  The book contains drawings of the most common rivercraft that trade up~
+and down the world's major rivers.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18638
+book~
+The secrets of trade~
+A red book with golden patterns is laying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book~
+  How would you like to be as rich as the nobles? Follow these steps to
+ensure your furure wealth...
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18639
+book~
+Politics in Andor~
+A red book with a silver script is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book~
+  The political history of Andor is one of the most interesting through 
+the ages...
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18640
+book~
+The Seafolk~
+A blue book with waves drawn on the cover is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book~
+  The book gives insight in the mysterious Seafolk, the traders of the high seas.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18641
+book~
+Millitary tactics~
+A book with a green cover is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book~
+  How to defeat your foes with minimum losses.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18642
+book~
+Siege engines~
+A book with a brown cover is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  How to bring down your enemies' city walls.~
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18643
+book~
+The royal line of Cairhien~
+A worn book with blue cover is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  The book explains the rise and fall of the royalty of Cairhien.~
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18644
+book~
+The importance of good roads~
+A dusty book with brown cover is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book~
+  The book contains information on how to build good roads and why good roads 
+are so important to merchants and the military.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18645
+book~
+Iron works~
+An old gray book is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book~
+  How were the armors of old made, and what materials were used.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18646
+book~
+Wood works~
+An old brown book is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book~
+  All you need to know about woodworking.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18647
+book~
+Dealings with the kings of the world~
+A dusty red book is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  The book tells about the Tower's secret dealings with kings around the world.~
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18648
+book~
+The failures of the Tower~
+An old brown book is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  The book tells about the pitfalls the Amyrlin Seats have encountered through ~
+the history.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18649
+book~
+The economics of the Tower~
+An old red book is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book~
+  The book gives insight in how the Tower has spent its gold.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18650
+book~
+Objects of the Power~
+A dark brown book with white patterns is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  The book tells about what objects of the Power the White Tower keeps in ~
+its storage. 
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18651
+book~
+The age of legends~
+A very old book with a golden cover is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+book  Gathered in this book is all known information about the Age of Legends,~
+and the people who lived at that time. Sadly only fragments remain.
+This is not the information you are looking for...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18652
+book~
+Notes on the Seanchan~
+A pile of notes is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+notes~
+  These notes give information about the seanchen and the horrible way they use
+the a'dam to control women who can channel to do their bidding. The author of
+the notes write with that the a'dam has been reported to be used on sisters
+to force them to reveal secrets and do horrible deeds.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18653
+book~
+Notes on the Black Ajah~
+A pile of notes is lying here.~
+~
+8 0 1
+0 0 0 0
+10 10 10
+100
+E
+notes~
+  These notes give information about the existence of the Black Ajah, an ajah
+who serves the Dark One and that hides among the others. It also states the 
+difficulty about revealing them, but one thing that give them away is lies.
+A true Aes Sedai can't lie. A Black Sister can.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18654
+spiked circlet~
+a spiked circlet~
+A circlet with spikes along its rim is left here.~
+~
+9 111292416 17
+5 -1 -1 -1
+10 35000 25000
+30
+E
+spiked circlet~
+  The circlet is made of a dull black metal. All along the rims, short spikes
+point both inwards and outwards. It can not be pleasant to wear. A blue gemstone
+is set in the front just over the wearers' brow. The gemstone pulses with energy.
+~
+X
+~
+2048 0 0
+M
+You struggle not to scream while the spikes dig into your head as you wear the circlet.~
+$n makes a sharp intake of air as $s wears the spiked circlet.~
+You sigh in relief as you remove the circlet.~
+$n sighs in relief as $s removes the circlet.~
+A
+19 3
+A
+1 1
+A
+53 2
+#18655
+wristband~
+blademaster's wristband~
+A leather wristband is lying here.~
+~
+9 38821888 4097
+15 -1 -1 -1
+10 75000 50000
+30
+E
+wristband~
+  The wristband is a made of hard leather and is fastened with laces on the
+inside of the arm. On the outside, a circle divided by a sinuous line, half 
+white, half black is imprinted in the leather. The symbol is the ancient symbol
+of the aes sedai from the age of legends.
+ 
+~
+X
+~
+1536 0 0
+M
+You wear the blademaster's wristband on your wrist.~
+$n wears a blademaster's wristband on $s wrist.~
+You remove the blademaster's wristband from your wrist.~
+$n removes a blademaster's wristband from $s wrist.~
+A
+19 1
+A
+18 1
+#18656
+elixir healing lesser~
+a lesser elixir of healing~
+A murky red elixir is standing here.~
+~
+10 0 1
+0 0 0 0
+1 20000 2000
+5
+E
+elixir healing lesser~
+  The vial is filled with a murky red substance.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18657
+elixir mana lesser~
+a lesser elixir of mana~
+A murky blue elixir is standing here.~
+~
+10 0 1
+0 0 0 0
+1 20000 2000
+5
+E
+elixir mana lesser~
+  The vial is filled with a murky blur substance.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18658
+elixir healing~
+an elixir of healing~
+A red elixir is standing here.~
+~
+10 0 1
+0 0 0 0
+1 20000 2000
+5
+E
+elixir healing~
+The vial is filled with a clear red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18659
+elixir mana~
+an elixir of mana~
+A blue elixir is standing here.~
+~
+10 0 1
+0 0 0 0
+1 20000 2000
+5
+E
+elixir mana~
+The vial is filled with a clear blue liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18660
+elixir healing powerful~
+a powerful elixir of healing~
+A radiant red elixir is standing here.~
+~
+10 0 1
+0 0 0 0
+1 20000 2000
+100
+E
+elixir healing powerful~
+The vial is filled with a glowing red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18661
+elixir mana powerful~
+a powerful elixir of mana~
+A radiant blue elixir is standing here.~
+~
+10 0 1
+0 0 0 0
+1 20000 2000
+100
+E
+elixir mana powerful~
+The vial is filled with a glowing blue liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18695
+ring~
+a ring~
+a ring is here.~
+~
+9 0 3
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 85
+A
+18 50
+#18696
+whip~
+a whip~
+a whip is laying here.~
+~
+5 0 8193
+0 1 1 5
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18697
+club~
+a club~
+a club is laying here.~
+~
+5 0 8193
+0 1 1 7
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 77
+A
+18 45
+#18698
+flashlight~
+a flashlight~
+a flashlight is here.~
+~
+1 0 65537
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18699
+knife~
+a knife~
+a knife is here~
+~
+5 0 8193
+0 1 1 11
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 84
+A
+18 45
+#0
+$~

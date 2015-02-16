@@ -1,0 +1,59 @@
+#5605~
+-1
+-1
+-1
+-1
+5602
+1.500000
+0.100000
+19
+0
+0
+0
+0
+%s Haven't got that on storage - try list!~
+%s What's that?~
+%s I am not interested on it!~
+%s I can't afford it!~
+%s If you have no money, you'll have to go!~
+%s That'll be %d coins, do you need the changes back?~
+%s Here you have %d coins for that, can I have some spare changes?~
+1
+1
+5605
+0
+5621
+6
+22
+6
+22
+#5606~
+-1
+-1
+5606
+5604
+5605
+1.200000
+0.400000
+2
+3
+4
+10
+24
+%s Haven't got that on storage - try list!~
+%s What?~
+%s Sorry, it is not a magic item!~
+%s Sorry, I can't afford it!~
+%s Choose some cheaper items please!~
+%s That'll be %d coins, enjoy it!~
+%s Here you have %d coins for that, what to buy something here?~
+1
+1
+5606
+0
+5622
+5
+12
+13
+20
+$~

@@ -1,0 +1,962 @@
+#1801
+pearly white key~
+A pearly white key.~
+A fragile pearl-white object softly glows here.~
+invalid~
+18 134742016 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1802
+demonic key~
+a pitch black demonic looking key~
+a small twisted piece of a devil lies here, shaped like a key~
+invalid~
+18 134742022 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1805
+Demon Claw Xalith'kragtar'kruk~
+The Claw of Xalith'kragtar'kruk~
+Pure evil ratiates from a claw on the ground.~
+invalid~
+9 134220310 129
+15 0 0 0
+10 100000 50000
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+50 10
+A
+19 3
+#1806
+Demon Crest~
+A Demon's Crest~
+Part of a Demon floats here, looking rather evil.~
+invalid~
+18 134742022 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1807
+Devil Wings Xalith'kragtar'kruk~
+The Gigantic Wings of Xalith'kragtar'kruk~
+A pair of gigantic, pitch-black wings hover above the ground.~
+~
+9 138414614 1025
+10 0 0 0
+25 125000 100000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+24 5
+A
+18 2
+B
+16777216
+#1808
+Devil Horns Xalith'kragtar'kruk~
+The Demonic Horns of Xalith'kragtar'kruk~
+A pair of demonic horns lies here, covered in blood.~
+~
+9 173341270 17
+7 1 14 15
+10 75000 65000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 15
+A
+52 5
+B
+8388608
+#1809
+Devil Rage Xalith'kragtar'kruk~
+The tremendous Rage of Xalith'kragtar'kruk~
+A swirling mass of pure rage floats here.~
+~
+8 134220374 16385
+0 0 0 0
+10 250000 2500000
+9
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+19 15
+A
+17 50
+T
+12
+B
+1
+#1810
+Devil Flesh Torn Torso Xalith'kragtar'kruk~
+The torn fleshy torso of Xalith'kragtar'kruk~
+Some burned looking flesh shaped like a torso is burning here.~
+~
+9 248572434 9
+18 0 0 0
+100 10 10
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 75
+A
+19 -7
+A
+36 5
+#1811
+Devil Eye Xalith'kragtar'kruk~
+An Eye from the Archdevil Xalith'kragtar'kruk~
+A demonic blood covered eye is here, rotting away.~
+~
+8 134220310 65537
+0 0 0 0
+10 50000 75000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 45
+A
+13 -25
+A
+19 2
+B
+60
+#1812
+Devil Bone Xalith'kragtar'kruk~
+A Bone extracted from Xalith'kragtar'kruk~
+A massive evil looking bone is stuck in the ground.~
+$n tries to smash $V into oblivion with $s bone-like club!~
+5 114354708 8193
+23 5 10 7
+10 10 10
+7
+X
+invalid~
+4 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+33 5
+T
+480
+B
+8389632
+#1813
+Golden Halo~
+a Golden Halo~
+A golden circle hovers here, looking very fragile.~
+~
+11 134221121 17
+0 0 0 0
+10 10 10
+3
+X
+~
+6 0 0
+M
+~
+~
+~
+~
+A
+19 -15
+A
+17 25
+T
+24
+B
+134219904
+#1814
+Scale Golden Wyrm~
+a scale from a golden wyrm~
+A golden looking dragon scale is shining on the ground.~
+~
+9 147868737 513
+12 0 0 0
+10 27500 50000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 5
+A
+23 5
+A
+21 5
+#1815
+Bracer Awesome Power~
+a Bracer of Awesome power~
+A small bracer shines brightly, begging you to pick it up.~
+~
+11 134217728 4097
+0 0 0 0
+10 50000 125000
+5
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#1816
+Holy Sphere Pulses~
+a Holy sphere emitting pulses of pure energy~
+A perfect sphere hovers here, emitting pulses of pure energy.~
+~
+8 148913409 16385
+0 0 0 0
+15 100000 2000000
+9
+X
+~
+6 0 0
+M
+~
+~
+~
+~
+A
+53 500
+A
+19 -20
+T
+18
+B
+2048
+#1817
+Anvil~
+The anvil from the Heavenly Forge~
+The anvil of the Heavenly Forge glows slightly.~
+~
+15 0 0
+2500 0 0 0
+2000 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+T
+2500
+#1818
+Key Upper~
+the key to the upper levels~
+A very unimpressive key was left here.~
+~
+18 134742016 1
+0 0 0 0
+10 5000 5000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1819
+Book~
+a book from the library of heaven~
+A small book has been left here.~
+~
+16 134742016 1
+0 0 0 0
+10 25 10
+75
+E
+book~
+There are 3 chapters.....
+   Chapter_1 : The fight against the Demon
+   Chapter_2 : The demonic remains
+   Chapter_3 : Redemption
+~
+E
+book~
+The book is titled, "The battle with the ArchDevil"
+There are 3 chapters.....
+   Chapter_1 : The fight against the Devil
+   Chapter_2 : The demonic remains
+   Chapter_3 : Redemption
+~
+E
+chapter_1~
+I saw the devil from afar.  He was standing about thirty yards from
+my location slaying countless angels.  His power was great indeed.
+My soldiers and I charged him from the left side, but our attempt
+was futile.  He turned and began tossing magical energies at us and
+many of my comrades fell.  The battle raged on for hours, but the
+tides turned when Gabriel descended from the heavens to aid us.  He
+heroically confronted the devil head on, and as the fiend turned
+to direct his attention to Gabriel, Alexander, with Charles's help,
+had enough time to imprison the devil in a very powerful magical
+prison.  His soul was torn from his body and it slumped lifeless
+onto the battlefield.  But the devil survived in his prison, slowly
+regaining his strength.....
+~
+E
+chapter_2~
+The corpse was torn to shreds.  In fact, as we tore it to pieces,
+it seemed to regenerate from time to time.  When it was all over,
+we had collected claws, wings, horns, a piece of the beasts torso,
+an eye, and a bone.  We separted these remains and took them back
+with us to Heaven for proper disposal in the anvil in the Heavenly
+Forge.
+~
+E
+book~
+The book is titled, "The battle with the ArchDevil"
+There are 3 chapters.....
+   Chapter_1 : The fight against the Devil
+   Chapter_2 : The demonic remains
+   Chapter_3 : Redemption
+   Chapter_4 : The spoils of war
+~
+E
+chapter_4~
+Each of the main contributors earned a heavenly reward that day.
+Alexander, Kathryn, Kevin, Mark, Jessica, and Gabriel each placed
+different parts within the anvil and earned a reward.  Alexander
+kept the hammer as a symbol of his prestidge in heaven.  Each kept
+guarded the secret of what exactly they put in the anvil, but
+occasionally, each has been seen carrying a scroll, with what
+they sacrificed written on it.
+~
+E
+chapter_3~
+As we destroyed the remains with the the Hammer of Heavenly
+Might by using it on the shriveled body parts which were in
+the anvil, a holy light entered the room from above which
+blinded us all.  We thought we had angered God, but to our
+surprise, inside the anvil the parts no longer existed, but
+was replaced by a holy relic as a reward for our heroic deed.
+Each survivor received such a gift, something different from
+any other, but then again, we all put different combinations
+of the remains in to destroy.....
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1820
+Hammer Heavenly Might~
+the Hammer of Heavenly Might~
+A massive hammer is here, pulsing with a heavenly aura.~
+$s hammer flashes with heavenly might as it smashes into $V!!~
+5 244366339 8193
+21 3 12 7
+30 500000 40000
+12
+E
+hammer~
+It is the legendary hammer of heaven that created the relics at the
+anvil at the heaven forge.
+~
+X
+$s hammer flashes with heavenly might as it smashes into $V!!~
+0 0 0
+M
+You wield the Hammer of Heavenly Might.~
+~
+~
+~
+A
+19 4
+A
+18 4
+#1821
+Scroll Personal Alexander~
+a personal scroll belonging to Alexander~
+A scroll lies here, looking very rare indeed.~
+~
+16 134742080 1
+0 0 0 0
+10 10 10
+5
+E
+scroll~
+I placed two of the eyes of an archdevil along with a portion of the
+torso.  The reward I received was a helmet of extraordinary magnitude.
+It was a holy relic indeed and I dare not even wear it, but rather
+keep it in a very safe place.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+6
+#1822
+Scroll Personal Gabriel~
+a personal scroll belonging to Gabriel~
+A scroll lies here, looking very rare indeed.~
+~
+16 134742080 1
+0 0 0 0
+10 10 10
+5
+E
+scroll~
+That day I had personally slain a great archdevil.  I salvaged all 4
+claws and a bone, but the remains regenerated.  With help, I slayed
+the foul beast another time, this time taking the rage which was
+contained in the lifeless corpse.  All these items I did put in
+the anvil and after I used the hammer on them, I was rewarded with
+an awesome sword that helped me in my proclamations of the greatness
+of heaven.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+6
+#1823
+Scroll Personal Kathryn~
+a personal scroll belonging to Kathryn~
+A scroll lies here, looking very rare indeed.~
+~
+16 249098306 1
+0 0 0 0
+10 10 10
+5
+E
+scroll~
+The great devil had caused a great wound within me.  As I lay there
+dying, Alexander came to my aid to save me.  I did manage to salvage
+some horns, a claw, and some wings from the beasts corpse.  Returning
+to heaven forge, I sacrificed these items to receive a powerful cloak
+unlike any I have seen before.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+6
+#1824
+Scroll Personal Kevin~
+a personal scroll belonging to Kevin~
+A scroll lies here, looking very rare indeed.~
+~
+16 134742080 1
+0 0 0 0
+10 10 10
+5
+E
+scroll~
+Plundering the battlefields of a great battle, I did discover the remains of
+many dead archdevils.  From some I took pieces of the dead beast as a trophy,
+but the others instructed me to destroy them at the anvil.  I did end up
+doing so and for my efforts I was awarded a holy axe!  I have come to
+realize the power of this axe, but I do miss my trophies : 2 bones, a
+pair of wings, 2 eyes, and the rage.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+6
+#1825
+Scroll Personal Mark~
+a personal scroll belonging to Mark~
+A scroll lies here, looking very rare indeed.~
+~
+16 134742080 1
+0 0 0 0
+10 10 10
+5
+E
+scroll~
+I witnessed an archangel prepare the demonic remails of an
+archdevil many years ago.  He put in a torn torso, some evil
+looking horns, and a large pair of wings the anvil.  To my
+surprise, he destroyed these items with Alexander's hammer.
+A holy light filled the room and when it disappeared, all that
+was left of the remains was a necklace with some heavenly power
+that I could not comprehend.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+6
+#1826
+Scroll Personal Jessica~
+a personal scroll belonging to Jessica~
+A scroll lies here, looking very rare indeed.~
+~
+16 134742080 1
+0 0 0 0
+10 10 10
+5
+E
+scroll~
+From the archdevil Xalith'kragtar'kruk I scavenged all the remains,
+a claw, an eye, a torso, some wings, a pair of horns, a bone, and
+the dying rage of the beast.  Sacrificing these items, I was rewarded
+with an awesome piece of armor!!!!!
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+6
+#1827
+Potion Holy Goodness~
+a potion of Holy goodness~
+A potion with holy powers was left here.~
+~
+10 134217728 1
+50 88 88 88
+10 25000 7500
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1828
+Lightning Dart~
+a dart shaped like a lightning bolt~
+A dart crackling with electrical energy has been left here.~
+~
+7 258 1
+5 100 0 0
+40 15000 75000
+17
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1829
+Helmet Holy Defense~
+the Holy Helmet of Defense~
+A powerful helmet has been left here, probably made for defense.~
+~
+9 142609729 17
+15 0 0 0
+10 100000 25000
+0
+X
+~
+0 0 0
+M
+You don your helmet and are protected by a Holy Power!~
+$n dons $s helmet and is protected by a Holy Power!~
+You remove your helmet and are no longer protected by a Holy Power!~
+$n removes $s helmet and is no longer protected by a Holy Power!~
+A
+19 2
+A
+52 5
+A
+18 1
+B
+8192
+#1830
+Cloak Holy Kathryn~
+The Holy Cloak of Saint Kathryn~
+A cloak from the heavens has been foolishly dropped here.~
+~
+11 138546434 1025
+0 0 0 0
+10 250000 10000
+0
+X
+~
+0 0 0
+M
+You can feel the wisdom of Saint Kathryn flow through you!~
+~
+Saint Kathryn's presence is no longer with you.~
+~
+A
+19 2
+A
+18 2
+A
+4 5
+#1831
+Axe Gods~
+the Axe of the Gods~
+The Gods are angered because someone has lost their axe.~
+Thunder rumbles as a bolt of Lightning strikes $s axe!~
+26 244378688 8193
+0 2 25 12
+32 10 10
+0
+X
+Thunder rumbles as a bolt of Lightning strikes $s axe!~
+0 0 0
+M
+The Gods themselves now seem to favor you!~
+~
+You no longer possess the favor of the Gods!~
+~
+A
+18 6
+A
+19 5
+A
+17 -10
+#1832
+Charm Heavenly~
+a Heavenly Charm~
+A magical charm glows faintly.~
+~
+9 181468161 5
+12 0 0 0
+10 75000 65000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 25
+#1833
+Holy Force Protective~
+a Holy Protective Force~
+A force field can faintly be seen here radiating holy energy.~
+~
+9 147860736 9
+25 0 0 0
+10 50000 500
+0
+X
+~
+0 0 0
+M
+A holy aura begins to swirl around your body!~
+A holy aura begins to swirl around $n's body!~
+The holy aura no longer swirls around your body.~
+The holy aura no longer swirls around $n's body.~
+A
+19 1
+A
+52 7
+#1834
+Singing Sword~
+the Singing Sword~
+A sword lies here, singing a happy tune.~
+The Singing Sword begins to sing a battle hymn!~
+5 82902016 8193
+310 5 8 3
+10 100000 100000
+0
+X
+The Singing Sword begins to sing a battle hymn!~
+0 0 0
+M
+You wield the Singing Sword and it begins to sing uncontrollably!~
+$n wields the Singing Sword and it begins to sing uncontrollably!~
+You sheath the Singing Sword and it stops singing.~
+$n sheaths the Singing Sword and it stops singing.~
+A
+18 5
+A
+19 5
+A
+12 25
+#1835
+Star First~
+the first point of a seven point star~
+a golden point gently floats in the air~
+~
+8 1 1
+0 0 0 0
+10 1000000 500000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1836
+Star Second~
+the second point of a seven point star~
+a golden point gently floats in the air~
+~
+8 1 1
+0 0 0 0
+10 1000000 500000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1837
+Star Third~
+the third point of a seven point star~
+a golden point gently floats in the air~
+~
+8 1 1
+0 0 0 0
+10 1000000 500000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1838
+Star Fourth~
+the fourth point of a seven point star~
+a golden point gently floats in the air~
+~
+8 1 1
+0 0 0 0
+10 1000000 500000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1839
+Star Fifth~
+the fifth point of a seven point star~
+a golden point gently floats in the air~
+~
+8 1 1
+0 0 0 0
+10 1000000 500000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1840
+Star Sixth~
+the sixth point of a seven point star~
+a golden point gently floats in the air~
+~
+8 1 1
+0 0 0 0
+10 1000000 500000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1841
+Star Seventh~
+the seventh point of a seven point star~
+a golden point gently floats in the air~
+~
+8 1 1
+0 0 0 0
+10 1000000 500000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1842
+Star~
+a brilliant seven point star~
+a seven point golden star gently floats in the air~
+~
+8 1 1
+0 0 0 0
+10 1000000 500000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1843
+Book Heaven~
+a golden Book from the Library of Heaven~
+a golden book lies here~
+~
+16 2 1
+0 0 0 0
+20 500000 500000
+25
+E
+book~
+.....Heaven Proper can only.....through...........the upper......
+of.........by.....locating.............seven...........points....
+using........anvil and........Heavenly.......use the Hammer......
+....to form.........point star......drop.........Alexander.......
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+24
+#0
+$~

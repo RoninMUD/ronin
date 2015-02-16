@@ -1,0 +1,388 @@
+#30100
+The Entrance to the Dark Spyre~
+     A colossal tower rises up out of the foliage to the east. Its dirty
+blackened brick reflects the evil it contains. Off to the west a humble
+mango garden is visible. Depending on which direction you are facing, the
+air smells of sweet fruit or a run down overused privy.
+~
+301 0 0
+D1
+~
+~
+0 -1 30101
+D2
+~
+~
+0 -1 30113
+D3
+~
+~
+0 -1 0
+S
+#30101
+Inside The Dark Spyre~
+  You can still see from the light coming from outside the Spyre, but
+above you is complete blackness. An odor of decay and fresh dung pervades
+this room, and you can hear rustlings from all corners. The walls here are
+stained with a brown patina of dust and filth, and the floor is dirt.
+A large chain lies connected to the wall by a huge circle of metal, the
+other end a broken link, sadly limp on the ground.
+~
+301 4104 0
+D3
+~
+~
+0 -1 30100
+D4
+~
+~
+0 -1 30102
+D5
+~
+~
+0 -1 30150
+S
+#30102
+The Second Floor of the Dark Spyre~
+  You hear loud squeaks in this room, and green eyes peer out at you
+from the almost complete blackness near the walls. Strange symbols are
+painted on the wall with blood, they look similar to primitive cave-
+paintings. A small pile of old meat lies in the middle of the floor here,
+maggots squirming around in it and rats crawling all over it, fighting
+each other for better position.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30103
+D5
+~
+~
+0 -1 30101
+S
+#30103
+The Third Floor of the Dark Spyre~
+  The sound of cracking shells is heard as you enter this chamber. The whole
+room seems alive, as millions of insects roam the floor and walls. It smells
+of rotting leaves, and you become sick to your stomach. Several insect 
+covered forms appear to have been furniture long since fallen into disuse.
+A large sofa in the corner of the room seems more popular with the present
+inhabitants, as they crawl in and out of its cushions.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30104
+D5
+~
+~
+0 -1 30102
+S
+#30104
+The Fourth Floor of the Dark Spyre~
+  This room is shrouded in mist, and you can hardly see your hand at the
+end of your outstretched arm. Keening wails pierce your ears every time
+you make a motion, and you can hardly make head or tail of your own
+equipment, let alone the exits. A shadowy figure seems to be flitting
+around you, screeching.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30105
+D5
+~
+~
+0 -1 30103
+S
+#30105
+The Fifth Floor of the Dark Spyre~
+  A large number of bricked up windows fill the walls of this once beautiful
+atrium. Decayed and rotting plants fill the many sturdy granite planters
+around the chamber. An ornate fountain occupies the center of the atrium.
+Gorgon heads once spewed forth water, or some other liquid into its vast
+basin. Now, only a black foul smelling liquid fills the basin.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30106
+D5
+~
+~
+0 -1 30104
+S
+#30106
+The Sixth Floor of the Dark Spyre~
+  You stand knee-deep in mucky, greenish water. Lily pads and tiny
+green disc-plants cover the surface, so that there is not even a ripple
+to be seen. The walls are covered in varicolored algae which give off
+a luminescent glow, lighting this room in an eerie, dusklike way. You can
+feel small fish brushing against your legs, and the bottom of the pool
+is covered with what feel like broken bones.
+~
+301 4104 0
+D4
+~
+~
+0 -1 30107
+D5
+~
+~
+0 -1 30105
+S
+#30107
+The Seventh Floor of the Dark Spyre~
+  The world spins as you enter this room! When you regain your bearings, you
+notice that the way down is no longer there! There is now no going back,
+you are trapped inside the Dark Spyre.
+  As you ponder your options, you hear a high-pitched giggle from behind
+you. As you turn to see what the source was, you hear another laugh. Soon,
+the entire room is a raucous symphony of cackling, and it doesn't seem
+to be a pleasant sort of laughter.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30108
+S
+#30108
+The Eighth Floor of the Dark Spyre~
+  A thick plush red carpet covers the floor of what appears to be a museum.
+A plethora of weapons and armor fill the walls and display cases about the
+room. A huge sword stands in a glass case in the center of the museum. The
+huge sword seems to glow a faint pink. You feel eyes watching you, the evil
+warriors that used these devices of war must still haunt them.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30109
+D5
+~
+~
+0 -1 30107
+E
+sword~
+The huge bastard sword in this glass case looks as if it ended the lives of
+thousands of warriors. From its sterling silver gold filigree hilt to its
+adamantite blade, this sword was crafted to perfection. Near the hilt on the
+blade is etched the name: Gideon. The blade glows a sullen pink and emits a
+faint hum, obviously there is more than simple physical power at work.
+~
+S
+#30109
+The Ninth Floor of the Dark Spyre~
+  The walls here are completely clear, as if they were made of glass!
+Far to your west, you can see the smoke which floats over Midgaard,
+making you homesick. To your south, you see the Golden Pagoda, and a
+large castle can be seen to your north. It seems safe to rest here.
+~
+301 92 0
+D4
+~
+~
+0 -1 30110
+D5
+~
+~
+0 -1 30108
+S
+#30110
+The Tenth Floor of the Dark Spyre~
+  The walls here are covered with beautiful paintings, and the floor is
+heaped with treasure. Strangely, no thieves have yet managed to steal
+anything, from the looks of it.
+  The stairs have completely crumbled behind you, and you are now stuck
+in this room. As you curse your stupidity, you notice a large form
+quivering in the corner. It whimpers as you turn your gaze on it, and you
+barely catch a glimpse of its huge form as it scurries up a ladder away
+from you.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30111
+S
+#30111
+The Eleventh Floor~
+  The beast you saw scurry up the stairs to here lies huddled in a heap
+of sable fur in the middle of a large, glowing circle engraved in the floor.
+As you watch, he stands up very slowly, seemingly in great pain. The beast
+shrieks in torment as his pelt shifts around his body, and his fur recedes
+into his body. After his transformation is complete, he appears as half-man,
+half-beast.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30112
+D5
+~
+~
+0 -1 30110
+S
+#30112
+The Top Floor~
+A temporary description
+~
+301 4105 0
+S
+#30113
+A planked path~
+  You are walking along a path paved with large wooden planks sunk
+into a red, hardened mud. Telltale lines of wear show you that there is
+a fair amount of cart traffic along this little road. Directly northeast
+of here stands a tall, black spire. And, farther away to your east, a
+shorter tower made of wood rises.
+~
+301 0 0
+D0
+~
+~
+0 -1 30100
+D1
+~
+~
+0 -1 30114
+S
+#30114
+A planked path~
+  You fearfully skirt the southern wall of a tremendous black spire which
+rises directly to your north. A stink of sewage informs you that you stand
+to the leeward side of the sanitary system of that tower. The planked
+path continues to your east, and another tower seems to stand at the
+path's eastern end.
+~
+301 0 0
+D1
+~
+~
+0 -1 30115
+D3
+~
+~
+0 -1 30113
+S
+#30115
+A small bridge~
+  A small creek runs below you, and an appropriate bridge has been built
+over it, upon which you are now standing. The Dark Spyre rises to your
+northwest, and a shorter, wooden tower stands nearby to your east. You can
+hear an animal growling and grunting under this bridge, and it looks like
+you can get underneath through a small trap door on the western end of the
+wooden bridge.
+~
+301 0 0
+D1
+~
+~
+0 -1 30117
+D3
+~
+~
+0 -1 30114
+D5
+A small wooden trap door has been built into the bridge here.
+~
+trap~
+1 -1 30116
+S
+#30116
+Underneath the Bridge~
+  A small landing juts out from the western bank of the brook, underneath
+the bridge. The landing, which you would expect to be dirty and cluttered
+from neglect, is surprisingly clean and neat. In fact, the entire under-
+side of the bridge is clear of cobwebs, dust, and pests, almost as though
+there is a regular caretaker. But then, who would bother to take care
+of the UNDERSIDE of a bridge?
+~
+301 0 0
+D4
+The underside of a wooden trap door.
+~
+trap~
+1 -1 30115
+S
+#30117
+Near the Wooden Tower~
+  A tall, ramshackle wooden tower rises to your east. It has been painted
+a demure ocean grey recently, and you can see small slits going up
+the side, one for each level, obviously used for sending arrows out at
+attackers. A large crest of a gauntleted hand grasping a bag of gold on
+a field of red with a utilitarian  sword above it is visible on a huge
+wooden circle on the western wall of the tower.
+~
+301 0 0
+D1
+~
+~
+0 -1 30118
+D3
+~
+~
+0 -1 30115
+S
+#30118
+A temporary name~
+A temporary description
+~
+301 0 0
+D3
+~
+~
+0 -1 30117
+S
+#30150
+The Basement Privy of the Dark Spyre~
+  This foul smelling room is the epitome of filth and disease. You quickly
+become sick to your stomach as the sight of insects and excrement fill your
+vision. Several troughs for urination, as well as one large pit are the 
+main attractions of this chamber. The fecal pit seems to empty into another
+room below.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30101
+D5
+~
+~
+0 -1 30151
+E
+pit~
+ This circular pit reeks of fecal matter. The brownish and blackish remains
+dont look very wholesome. As you peer into the pit you notice something shiny
+in the chamber below. You wonder to yourself if any treasure could be worth
+wading into raw sewage for.
+~
+S
+#30151
+The Bottom of the Sewage Pit~
+  You reluctanly hop into the sewage which rises up to your chin. The smell
+is absolutely horrid. As you peer through the fumes you spot a shiny gold coin
+resting on a floating chunk near you. You quickly snatch the coin only to 
+hear a load cackling from above. As you look up you catch a glimpse of an
+ogre lowering a large granite plug into the pit opening. With no escape, the
+fumes finally cause you to pass out. Death overcomes you as sewage fills your
+lungs and the leeches drain your blood.
+~
+301 2187 0
+S
+#30199
+A temporary name~
+A temporary description
+~
+301 0 0
+S
+#0
+$~

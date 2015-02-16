@@ -1,0 +1,1820 @@
+#18200
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D1
+~
+~
+0 -1 18201
+D2
+~
+~
+0 -1 18205
+S
+#18201
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D1
+~
+~
+0 -1 18202
+D2
+~
+~
+0 -1 18204
+D3
+~
+~
+0 -1 18200
+S
+#18202
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D2
+~
+~
+0 -1 18203
+D3
+~
+~
+0 -1 18201
+S
+#18203
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D0
+~
+~
+0 -1 18202
+D2
+~
+~
+0 -1 18208
+D3
+~
+~
+0 -1 18204
+S
+#18204
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D0
+~
+~
+0 -1 18201
+D1
+~
+~
+0 -1 18203
+D2
+~
+~
+0 -1 18207
+D3
+~
+~
+0 -1 18205
+S
+#18205
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D0
+~
+~
+0 -1 18200
+D1
+~
+~
+0 -1 18204
+D2
+~
+~
+0 -1 18206
+S
+#18206
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D0
+~
+~
+0 -1 18205
+D1
+~
+~
+0 -1 18207
+S
+#18207
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D0
+~
+~
+0 -1 18204
+D1
+~
+~
+0 -1 18208
+D2
+~
+~
+0 -1 18209
+D3
+~
+~
+0 -1 18206
+S
+#18208
+Panarcs Exibition Hall~
+   You stand in the panarchs exhibitions hall. Ancient reclics stand on shelves
+or on pedistals. Some are to big for eighter and stand on the floor, like the 
+skeleton of a huge animal with large tusks and sharp teeth. It must be over 
+ten feet high and 20 feet long. Golden ropes around the artifacts hinder people 
+from touching them. A purple carpet with golden fringes run between the 
+pedistals and shelves.
+~
+182 0 0
+D0
+~
+~
+0 -1 18203
+D3
+~
+~
+0 -1 18207
+S
+#18209
+Palace hallway~
+   A wide hallway leads through the palace. White marble coloumns run down 
+the side of the hallway with lamps, paintings and other decorations between 
+them.A thick carpet run down the center of the hallway on the marble floor. The 
+carpet is woven with fine patterns of ships and flowers. To the north the hallway
+leads into the exhibition hall.
+~
+182 0 0
+D0
+~
+~
+0 -1 18207
+D3
+~
+~
+0 -1 18210
+S
+#18210
+Palace hallway~
+   A wide hallway leads through the palace. White marble coloumns run down 
+the side of the hallway with lamps, paintings and other decorations between 
+them.A thick carpet run down the center of the hallway on the marble floor. The 
+carpet is woven with fine patterns of ships and flowers.
+~
+182 0 0
+D1
+~
+~
+0 -1 18209
+D2
+~
+~
+0 -1 18211
+S
+#18211
+Palace hallway~
+   A wide hallway leads through the palace. White marble coloumns run down 
+the side of the hallway with lamps, paintings and other decorations between 
+them.A thick carpet run down the center of the hallway on the marble floor. The 
+carpet is woven with fine patterns of ships and flowers.
+~
+182 0 0
+D0
+~
+~
+0 -1 18210
+D1
+~
+~
+0 -1 18213
+D2
+~
+~
+0 -1 18212
+D3
+~
+~
+0 -1 18218
+S
+#18212
+Palace hallway~
+   A wide hallway leads through the palace. White marble coloumns run down 
+the side of the hallway with lamps, paintings and other decorations between 
+them.A thick carpet run down the center of the hallway on the marble floor. The 
+carpet is woven with fine patterns of ships and flowers.
+~
+182 0 0
+D0
+~
+~
+0 -1 18211
+S
+#18213
+Palace entrance hall~
+   The entrance hall are grand luxurious. White marble coloumns run down into 
+the hallway to the west. Light comes down from small holes along the ceiling,
+where oil lamps have been placed. Serving women walk about cleaning and 
+runing earrands for the panarch. 
+~
+182 0 0
+D1
+~
+~
+0 -1 18214
+D2
+~
+~
+0 -1 18215
+D3
+~
+~
+0 -1 18211
+S
+#18214
+Stairs to the palace~
+   Wide marble steps lead up to the panarchs palace from the streets. Armed 
+soldiers watch you carefully as you walk by. Along the stairs flowerbeds 
+decorate the small slope up to tha palace walls.
+~
+182 0 0
+D1
+~
+~
+0 -1 18219
+D3
+~
+~
+0 -1 18213
+S
+#18215
+Dining room~
+   You step in to a huge dining hall. It must be big enough to hold a thousand 
+guests. Tables run up and down the length of the hall, ready if the panarch
+ have a feast. Smells of cooking comes trough a door on the western wall.
+~
+182 0 0
+D0
+~
+~
+0 -1 18213
+D2
+~
+~
+0 -1 18217
+D3
+~
+~
+0 -1 18216
+S
+#18216
+Kitchen~
+   The kitchen of the panarchs palace is enourmus. There must be nearly a 
+hundred people working here stiring pots or turning spits. There must be a big 
+feast tonight. Several cooks look at you with eyes wondering what you are
+doing there.
+~
+182 0 0
+D1
+~
+~
+0 -1 18215
+S
+#18217
+Storage room~
+   The storage room is a small room with shelves covering the walls. Wooden 
+boxes fill most of the shelves all the way to the roof. The floor boards squeek 
+under you feet.
+~
+182 0 0
+D0
+~
+~
+0 -1 18215
+S
+#18218
+The panarchs throne~
+   The hallway lead into a large room with a throne at the end. The throne is 
+carved from one single piece of marble and its back stand 10 feet tall.
+Behind the throne a large wallhanging cover the entire wall, picturing the view
+out over the sea from the palace. The room is nearly empty, but some 
+servants run around.
+~
+182 0 0
+D1
+~
+~
+0 -1 18211
+S
+#18219
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads north and south, and to the west you see 
+Panarchs palace.
+~
+182 0 1
+D0
+~
+~
+0 -1 18220
+D2
+~
+~
+0 -1 18228
+D3
+~
+~
+0 -1 18214
+S
+#18220
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads south and east.
+~
+182 0 1
+D1
+~
+~
+0 -1 18221
+D2
+~
+~
+0 -1 18219
+S
+#18221
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads east and west.
+~
+182 0 1
+D0
+~
+~
+0 -1 18233
+D1
+~
+~
+0 -1 18222
+D3
+~
+~
+0 -1 18220
+S
+#18222
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads east and west.
+~
+182 0 1
+D1
+~
+~
+0 -1 18223
+D3
+~
+~
+0 -1 18221
+S
+#18223
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads east and south.
+~
+182 0 1
+D0
+~
+~
+0 -1 18238
+D2
+~
+~
+0 -1 18224
+D3
+~
+~
+0 -1 18222
+S
+#18224
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads north and south.
+~
+182 0 1
+D0
+~
+~
+0 -1 18223
+D1
+~
+~
+0 -1 18229
+D2
+~
+~
+0 -1 18225
+S
+#18225
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads west and north.
+~
+182 0 1
+D0
+~
+~
+0 -1 18224
+D3
+~
+~
+0 -1 18226
+S
+#18226
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads east and west.
+~
+182 0 1
+D1
+~
+~
+0 -1 18225
+D2
+~
+~
+0 -1 18234
+D3
+~
+~
+0 -1 18227
+S
+#18227
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads east and west.
+~
+182 0 1
+D1
+~
+~
+0 -1 18226
+D3
+~
+~
+0 -1 18228
+S
+#18228
+Street of Tanchico~
+  The streets are wide and crowded by people of every sort, from wealthy 
+merchants and nobels to poor commoners and beggars. Along the streets
+You see countless small shops and several inns with signs with their 
+names hanging over the doors. The shops show goods from all parts of 
+the world, from the Spine of the world in the east to the Aryth Ocean 
+in the west. The strees leads north and east.
+~
+182 0 1
+D0
+~
+~
+0 -1 18219
+D1
+~
+~
+0 -1 18227
+S
+#18229
+The road to the docks~
+   A wide street goes from the main streets of of Tanchico down to the docks.
+Carts are beeing drawn by horses to and from ships along the docks. The 
+smell of seawater is strong in the air. And lots of seagulls fky over the docks,
+looking for food. The road to the docks continue to the east. The main 
+streets are up the hill to the west.
+~
+182 0 1
+D1
+~
+~
+0 -1 18230
+D3
+~
+~
+0 -1 18224
+S
+#18230
+The docks~
+   A wide street goes from the main streets of of Tanchico down to the docks.
+Carts are beeing drawn by horses to and from ships along the docks. The 
+smell of seawater is strong in the air. And lots of seagulls fky over the docks,
+looking for food. To the north ships are loaded and unloaded along the docks.
+~
+182 0 1
+D0
+~
+~
+0 -1 18231
+D3
+~
+~
+0 -1 18229
+S
+#18231
+The docks~
+   The docks are lined with ships from near and far loading and unloadong their
+goods. A clerk come out of an office building and boards a ship to list its 
+goods and collect toll. Boys stand by the ships fishing and are eagerly
+watched by the seagulls overhead. The docks go on to the north.
+~
+182 0 1
+D0
+~
+~
+0 -1 18232
+D2
+~
+~
+0 -1 18230
+S
+#18232
+The docks~
+   The docks are lined with ships from near and far loading and unloadong their
+goods. A clerk come out of an office building and boards a ship to list its 
+goods and collect toll. Boys stand by the ships fishing and are eagerly
+watched by the seagulls overhead. The docks go on to the south.
+~
+182 0 1
+D2
+~
+~
+0 -1 18231
+S
+#18233
+An inn~
+   Inside the common room people occupy most of the tables and serving 
+girls run in and out of the kitchen with food and drinks for their patrons. 
+Some of the guests try to fondle the serving girls, but after a shout from 
+one of the inns guards by the door, they let it go. An entertainer stand 
+on a stage juggeling, playing music and telling stories. The innkeeper, 
+a short and round man with a greasy apron, looks at you as you enter 
+and says:What can i get for you today, traveler?
+~
+182 0 0
+D0
+~
+~
+0 -1 18235
+D2
+~
+~
+0 -1 18221
+S
+#18234
+A shop~
+   The shop you have entered sell rings and gems. All goods are kept locked
+away and fourd armed guards stand by the door to keep thieves and 
+troublemakers away. The shopkeeper also makes rings on demand if 
+you can supply a ring, gem or both.
+~
+182 0 0
+D0
+~
+~
+0 -1 18226
+S
+#18235
+Inns kitchen~
+  In the kitchen cooks and serving girls buzz around making food and preparing
+dishes for the customers. Large cettles hang over fires and spits with roasted
+pork and lamb fill the room with room with a delicious odor. A door door leads 
+out in the back of the kitchen.
+~
+182 0 0
+D1
+~
+~
+0 -1 18236
+D2
+~
+~
+0 -1 18233
+S
+#18236
+Inns backyard~
+   Behind the inn you enter a small yard with a few benches for the cooks and
+serving girls to take a short break. The yard is surrounded by neighbouring 
+houses exept from a narrow alley to the east.
+~
+182 0 0
+D1
+~
+~
+0 -1 18237
+D3
+~
+~
+0 -1 18235
+S
+#18237
+Dark alley~
+   A dark and narrow alley run between the houses. Windows facing the alley 
+are bared to keep theives and other low-lives from entering. Some barrels 
+stand against the walls and you have to squeeze past them. The alley 
+continues to the south.
+~
+182 0 1
+D2
+~
+~
+0 -1 18238
+D3
+~
+~
+0 -1 18236
+S
+#18238
+Dark alley~
+   A dark and narrow alley run between the houses. Windows facing the alley 
+are bared to keep theives and other low-lives from entering. Some barrels 
+stand against the walls and you have to squeeze past them. Barrels bar 
+you way into the streets to the south.
+~
+182 0 1
+D0
+~
+~
+0 -1 18237
+D2
+~
+~
+0 -1 18223
+S
+#18239
+Hallway~
+   The walls are covered with wooden panels and at the far end a window
+overlooks the street below. Some of the floor boards squeek as you walk
+on them. Doors line the walls on both sides.
+~
+182 0 0
+D1
+~
+~
+0 -1 18240
+S
+#18240
+Top of the stairs~
+   You climb up the stairs and a hallway streches to the east.
+~
+182 0 0
+D3
+~
+~
+0 -1 18239
+D5
+~
+~
+0 -1 18241
+S
+#18241
+Bottomn of the stairs~
+   The stairs lead up to the next floor, to the north you can see down the 
+hallway and the door leading out into the street.
+~
+182 0 0
+D0
+~
+~
+0 -1 18242
+D4
+~
+~
+0 -1 18240
+S
+#18242
+Empty hallway~
+   The house is old and abanoned. There is nothing in the hallway other
+that dust and dear rats. You see some stairs to the south.
+~
+182 0 0
+D2
+~
+~
+0 -1 18241
+D3
+~
+~
+0 -1 18243
+S
+#18243
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18244
+D1
+~
+~
+0 -1 18242
+D2
+~
+~
+0 -1 18255
+D3
+~
+~
+0 -1 18256
+S
+#18244
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18254
+D1
+~
+~
+0 -1 18256
+D2
+~
+~
+0 -1 18243
+D3
+~
+~
+0 -1 18245
+S
+#18245
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18256
+D1
+~
+~
+0 -1 18244
+D2
+~
+~
+0 -1 18246
+D3
+~
+~
+0 -1 18253
+S
+#18246
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18245
+D1
+~
+~
+0 -1 18256
+D2
+~
+~
+0 -1 18255
+D3
+~
+~
+0 -1 18247
+S
+#18247
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18255
+D1
+~
+~
+0 -1 18246
+D2
+~
+~
+0 -1 18248
+D3
+~
+~
+0 -1 18254
+S
+#18248
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18247
+D1
+~
+~
+0 -1 18255
+D2
+~
+~
+0 -1 18249
+D3
+~
+~
+0 -1 18255
+S
+#18249
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18248
+D1
+~
+~
+0 -1 18254
+D2
+~
+~
+0 -1 18256
+D3
+~
+~
+0 -1 18250
+S
+#18250
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18251
+D1
+~
+~
+0 -1 18249
+D2
+~
+~
+0 -1 18255
+D3
+~
+~
+0 -1 18253
+S
+#18251
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18256
+D1
+~
+~
+0 -1 18254
+D2
+~
+~
+0 -1 18250
+D3
+~
+~
+0 -1 18252
+S
+#18252
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18256
+D1
+~
+~
+0 -1 18251
+D2
+~
+~
+0 -1 18254
+D3
+~
+~
+0 -1 18253
+S
+#18253
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18254
+D1
+~
+~
+0 -1 18252
+D2
+~
+~
+0 -1 18255
+D3
+~
+~
+0 -1 18255
+S
+#18254
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18255
+D1
+~
+~
+0 -1 18256
+D2
+~
+~
+0 -1 18253
+D3
+~
+~
+0 -1 18255
+S
+#18255
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18256
+D1
+~
+~
+0 -1 18254
+D2
+~
+~
+0 -1 18256
+D3
+~
+~
+0 -1 18256
+S
+#18256
+The Rahad~
+   The rahad is a vast area with wooden houses running up and down the 
+streets. Nothing stands out here, making it hard to navigate without loosing 
+your direction. The dirt street have ponds of mud where the last rain have 
+not dried. 
+~
+182 0 1
+D0
+~
+~
+0 -1 18255
+D1
+~
+~
+0 -1 18256
+D2
+~
+~
+0 -1 18256
+D3
+~
+~
+0 -1 18257
+S
+#18257
+The Rahad docks~
+   A small wooden dock is just big enough for the ferry. As it arrives people 
+get off and walk into the Rahad to the east.
+~
+182 0 1
+D1
+~
+~
+0 -1 18256
+D3
+~
+ferry~
+12 -1 18258
+S
+#18258
+Ferry dock~
+   A small ferry dock lies on the side of the river. Small ferries take people
+over the river to the Rahad. The part of the city where the lower class live. 
+As there is no guards in the Rahad, it is pretty lawless, and the streets are 
+not very safe.
+~
+182 0 1
+D1
+~
+ferry~
+12 -1 18257
+D3
+~
+~
+0 -1 18267
+S
+#18259
+Docks~
+   The busy docks are filled with ships loading and unloading. The invasion
+have reashed ebu dar, and large seanchen ships are packed with soldiers
+waiting to get ashore.
+~
+182 0 1
+D0
+~
+~
+0 -1 18260
+S
+#18260
+Road to the docks~
+   The road down to the docks are paved with grey stone, and lanterns hang 
+on long wooden poles along the road. Heavy carts, full of goods from the 
+ships on the docks, head up the road in into the city.
+~
+182 0 1
+D0
+~
+~
+0 -1 18261
+D2
+~
+~
+0 -1 18259
+S
+#18261
+Road to the docks~
+   The road down to the docks are paved with grey stone, and lanterns hang 
+on long wooden poles along the road. Heavy carts, full of goods from the 
+ships on the docks, head up the road in into the city.
+~
+182 0 1
+D0
+~
+~
+0 -1 18269
+D2
+~
+~
+0 -1 18260
+S
+#18262
+Gates of Ebu Dar~
+   Guards with strange insectlike helmets guard the city gates. Two women, 
+one with a bracelet with a silvery chain running from her wrist to a collar 
+around the other womans neck, stand beside the guards. The woman with 
+the collar stearing silently in the ground.
+~
+182 0 1
+D2
+~
+~
+0 -1 18263
+S
+#18263
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D0
+~
+~
+0 -1 18262
+D2
+~
+~
+0 -1 18264
+S
+#18264
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D0
+~
+~
+0 -1 18263
+D2
+~
+~
+0 -1 18265
+S
+#18265
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D0
+~
+~
+0 -1 18264
+D1
+~
+~
+0 -1 18266
+D3
+~
+~
+0 -1 18274
+S
+#18266
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D2
+~
+~
+0 -1 18267
+D3
+~
+~
+0 -1 18265
+S
+#18267
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D0
+~
+~
+0 -1 18266
+D1
+~
+~
+0 -1 18258
+D2
+~
+~
+0 -1 18268
+S
+#18268
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D0
+~
+~
+0 -1 18267
+D3
+~
+~
+0 -1 18269
+S
+#18269
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D1
+~
+~
+0 -1 18268
+D2
+~
+~
+0 -1 18261
+D3
+~
+~
+0 -1 18270
+S
+#18270
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D1
+~
+~
+0 -1 18269
+D3
+~
+~
+0 -1 18271
+S
+#18271
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D0
+~
+~
+0 -1 18272
+D1
+~
+~
+0 -1 18270
+S
+#18272
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets. The royal palace 
+lays to the west.
+~
+182 0 1
+D0
+~
+~
+0 -1 18273
+D2
+~
+~
+0 -1 18271
+D3
+~
+~
+0 -1 18275
+S
+#18273
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D1
+~
+~
+0 -1 18274
+D2
+~
+~
+0 -1 18272
+S
+#18274
+Streets of Ebu Dar~
+   People have gotten used to their new seanchen masters, and have returned 
+to their normal lives. They walk around the streets doing their buesniss and 
+stand clear of the seanchen patrols guarding the streets.
+~
+182 0 1
+D1
+~
+~
+0 -1 18265
+D3
+~
+~
+0 -1 18273
+S
+#18275
+Inside the palace~
+  A large hallway lead through the palace towards the throneroom. The halls 
+are filled with art the seanchen have brought from their lands across the sea.
+Servants come out of a door along one of the walls, and tasty smells drift 
+your way.
+~
+182 0 0
+D1
+~
+~
+0 -1 18272
+D3
+~
+~
+0 -1 18276
+S
+#18276
+Inside the palace~
+  A large hallway lead through the palace towards the throneroom. The halls 
+are filled with art the seanchen have brought from their lands across the sea.
+The hallway bends north and lead up to the throne room.
+~
+182 0 0
+D0
+~
+~
+0 -1 18277
+D1
+~
+~
+0 -1 18275
+S
+#18277
+Throneroom~
+   The throne has been removed after the seanchen took control over the 
+palace, and a large carved wooden chair stand on a block of marble giving 
+the seatedan elevation to stare down at whoever is standing before the 
+chair. A servants door stand on the eastern wall beside the chair.
+~
+182 0 0
+D1
+~
+curtain~
+8 -1 18278
+D2
+~
+~
+0 -1 18276
+S
+#18278
+Secret Office~
+   This is no room used by servants. This room has two padded chairs made 
+for comfort. A small table stands between them with two warm cups of tea.
+Around the room beautiful paintings and old artifacts decorate the room.
+~
+182 0 0
+D3
+~
+curtain~
+8 -1 18277
+S
+#18279
+Entrance to Bandar Eban~
+   Bandar Eban is the capital of Arad Doman and it lays by the Aryth Ocean
+and you can see plenty of ships at the docks. The gates to the city stand 
+wide open, letting people enter and leave as they will.
+~
+182 0 1
+D2
+~
+~
+0 -1 18280
+S
+#18280
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D0
+~
+~
+0 -1 18279
+D2
+~
+~
+0 -1 18281
+S
+#18281
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D0
+~
+~
+0 -1 18280
+D1
+~
+~
+0 -1 18288
+D2
+~
+~
+0 -1 18282
+D3
+~
+~
+0 -1 18289
+S
+#18282
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D0
+~
+~
+0 -1 18281
+D2
+~
+~
+0 -1 18283
+S
+#18283
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D0
+~
+~
+0 -1 18282
+D1
+~
+~
+0 -1 18284
+S
+#18284
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D1
+~
+~
+0 -1 18285
+D3
+~
+~
+0 -1 18283
+S
+#18285
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D0
+~
+~
+0 -1 18286
+D3
+~
+~
+0 -1 18284
+S
+#18286
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D0
+~
+~
+0 -1 18287
+D2
+~
+~
+0 -1 18285
+S
+#18287
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D1
+~
+~
+0 -1 18292
+D2
+~
+~
+0 -1 18286
+D3
+~
+~
+0 -1 18288
+S
+#18288
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D1
+~
+~
+0 -1 18287
+D3
+~
+~
+0 -1 18281
+S
+#18289
+City street~
+   The main streets of the city are paved with yellow stone. Among the yellow
+pavestones, red and black stones make a pattern down the street. A citys 
+usual sounds fill your hear. Sometimes people bump into each other and
+start fighting, but the city guards soon have the parts seperated, usually 
+before anyone gets hurt. The streets lead through the city with the royal 
+palace to the east and the docks to the west.
+~
+182 0 1
+D1
+~
+~
+0 -1 18281
+D3
+~
+~
+0 -1 18290
+S
+#18290
+Docks~
+   The docks are full of trading vessels and some ships with soldiers bound
+west where the Seanchen have invaded these lands. The docks continue to 
+the north.
+~
+182 0 1
+D0
+~
+~
+0 -1 18291
+D1
+~
+~
+0 -1 18289
+S
+#18291
+Docks~
+   The docks are full of trading vessels and some ships with soldiers bound
+west where the Seanchen have invaded these lands. The docks continue to 
+the south.
+~
+182 0 1
+D2
+~
+~
+0 -1 18290
+S
+#18292
+Entrance to the palace~
+   The entrance to the palace is heavely guarded by soldiers in armor.
+Only people with a letter of invitation can pass. The guards look at you and
+tell you to be on your way.
+~
+182 0 1
+D1
+~
+~
+0 -1 18293
+D3
+~
+~
+0 -1 18287
+S
+#18293
+Palace hallway~
+   The hallway is beautefully decorated in gold, silver and silk hangings on 
+the walls. A beautifylly woven carpet run down the hallway leading to two 
+doors. One to the hall of the king, and the other to his bedroom.
+~
+182 0 0
+D0
+~
+door~
+2 -1 18295
+D2
+~
+~
+0 -1 18294
+D3
+~
+~
+0 -1 18292
+S
+#18294
+The hall of the king~
+   The hall has large tables in front of the kings throne towering above the 
+tables, making whoever sitting at the tables raise their gazes to look at 
+the king. The huge throne is made of marble and is white as snow.
+~
+182 0 0
+D0
+~
+~
+0 -1 18293
+S
+#18295
+Bed chamber~
+   A big soft bed stand in the center of the room, with two dressers, one on 
+each side, covering the whole back wall. Silk hangings hang down from the 
+ceiling making a partly transparent veil in front of the bed.
+~
+182 0 0
+D2
+~
+door~
+2 -1 18293
+S
+#18299
+A temporary name~
+A temporary description
+~
+182 0 0
+S
+#0
+$~

@@ -1,0 +1,137 @@
+#11700
+brownie~
+A Brownie~
+A Brownie flits around here, almost too small to see.
+~
+Dressed in all greens and browns, this small creature blends into the forest
+to near invisibility.  At first glance, she seems friendly enough, but
+then you remember that brownies are infamous for creating mischief.
+~
+16623 1835024 0 X
+5 15 -5 2d200+100 2d20+5
+200 30000
+8 8 2
+0 0 0d0+0 0
+#11701
+brownie~
+A Brownie~
+A Brownie flits around here, almost too small to see.
+~
+Dressed in all greens and browns, this small creature blends into the forest
+to near invisibility.  At first glance, she seems friendly enough, but
+then you remember that brownies are infamous for creating mischief.
+~
+16623 1835024 0 X
+5 15 -5 2d200+100 2d20+5
+200 30000
+8 8 1
+0 0 0d0+0 0
+#11702
+faerie~
+A Faerie~
+A Faerie flutters nearby.
+~
+With her transluscent wings and golden skin, she seems unimaginably beautiful.
+But as she grins at you, you notice her sharp little teeth, and wonder about
+just how friendly she is, and exactly what faeries like to eat...
+~
+16619 17039416 -10 X
+7 13 0 2d500+20 2d50+5
+500 50000
+9 9 2
+0 0 0d0+0 0
+#11703
+faerie~
+A Faerie~
+A Faerie flutters nearby.
+~
+With her transluscent wings and golden skin, she seems unimaginably beautiful.
+But as she grins at you, you notice her sharp little teeth, and wonder about
+just how friendly she is, and exactly what faeries like to eat...
+~
+16619 17039416 -10 X
+7 13 0 2d500+20 2d50+5
+500 50000
+9 9 1
+0 0 0d0+0 0
+#11704
+dryad~
+A Dryad~
+A Dryad is peeking from behind a tree.
+~
+A beautiful young woman peeks shyly back at you.  She is forever bound to
+her tree, and separation from it would mean her death.  Her tree tells
+her of things going on above the canopy of the forest, so this young nymph
+seems unusually wise.
+~
+16459 819220 40 X
+10 10 -10 2d750+20 2d75+5
+1000 75000
+8 8 2
+0 0 0d0+0 0
+#11705
+nyad~
+A Nyad~
+A Nyad is swimming peacefully here.
+~
+This beautiful woman is swimming here joyfully, at one with the water.
+As you catch a rare glimpse of her, she swims over with a powerful kick,
+hoping to find out exactly what you are.
+~
+16463 270380 50 X
+15 5 -5 2d1000+20 2d100+15
+1500 100000
+11 11 2
+0 0 0d0+0 0
+#11706
+unicorn~
+A Unicorn~
+A Unicorn is here, pawing the ground and stamping nervously.
+~
+More beautiful than anything you've ever seen.  He is a magnificent white
+horse with a magical aura, and a single, wickedly sharp horn.  He seems
+at once innocent and ancient, and the wisdom of the ages shines through
+his dark flashing eyes.
+~
+16457 269787324 1000 X
+25 1 -10 4d250+100 3d100+10
+5000 500000
+8 8 1
+0 0 0d0+0 0
+#11707
+ogre~
+An Ogre~
+An Ogre lumbers towards you, filling your heart with fear.
+~
+This is the nastiest, smelliest creature you've ever had the displeasure
+to meet.  From his hairy toes to his pointy, wart-covered nose, there is
+nothing to relieve the ugliness you bear witness to.  As he begins to speak,
+you gag at the foul stench of his breath.  Just as you are recovering from
+the shock of repulsion, you remember that ogres eat PEOPLE!  Perhaps you 
+should get a little farther away...
+~
+79 805371936 -20 X
+30 1 -10 4d500+100 3d-56+10
+10000 750000
+8 8 1
+0 0 0d0+0 0
+#11708
+woman herb old~
+An Old Herb Woman~
+A harmless old woman peers up at you.
+~
+Her skin bears so many wrinkles, you judge her to be centuries old.  Lined
+and worn, her skin resembles the trees of the forest around you.  She is
+stooped over and totters along slowly, carefully planning each step before
+she takes it.  As you watch her, you realize she is gathering herbs and
+flowers, probably to make medicines from.  She looks up at your face, and
+as she speaks, you are entranced.  Her voice carries all the power and 
+wisdom of hundreds of years of learning.
+~
+16473 8252 1000 X
+20 1 -20 1d1+1 1d1+1
+15 20
+8 8 2
+0 0 0d0+0 0
+#0
+$~

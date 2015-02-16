@@ -1,0 +1,93 @@
+#600
+figure twitching~
+A Twitching Figure~
+A Twitching Figure stands here impatiently scanning the room for a target.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 -1000 Y
+1 19 10 1d1+1 1d1+1
+1 600000
+8 8 1
+0 0 1d1+1 1
+1 2 10 110
+0 0 0 0
+K
+0 0 0 0 0 0
+#601
+figure grotesque~
+Grotesque Figure~
+A Grotesque Figure is sitting in the shadows murmuring jibberish.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#602
+guardian~
+The Guardian of The Gates~
+The Guardian of The Gates stands here vigilant awaiting to judge those who wish to pass.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+74 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 500000000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#603
+bartender~
+A stocky bartender~
+A stocky bartender resides behind the bar glaring at you with his black eyes.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+74 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#604
+mason manager~
+House Manager Mason~
+a dark assailant waits patiently in the dark shadows of the room.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#605
+walter law disfigured person~
+The Late Walter Law~
+a disfigured person mutilating his face is standing here shivering with insanity.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+10 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,2038 @@
+#1801
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1802
+S
+#1802
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1803
+D3
+~
+~
+0 -1 1801
+S
+#1803
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1804
+D3
+~
+~
+0 -1 1802
+S
+#1804
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  To the north is the Mercenary's Guild, and
+to the south is the local Blacksmith.  Other than that,
+the path continues normally to the east and west.
+~
+18 0 1
+D0
+~
+~
+0 -1 1818
+D1
+~
+~
+0 -1 1805
+D2
+~
+~
+0 -1 1830
+D3
+~
+~
+0 -1 1803
+S
+#1805
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1806
+D3
+~
+~
+0 -1 1804
+S
+#1806
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1807
+D3
+~
+~
+0 -1 1805
+S
+#1807
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  To the south is the town's only restaurant.
+The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1808
+D2
+~
+~
+0 -1 1832
+D3
+~
+~
+0 -1 1806
+S
+#1808
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  There is a large doorway to the north, leading
+to the Grand Temple of Polo Fay.  The path continues east
+and west.
+~
+18 0 1
+D0
+~
+door~
+1 -1 1838
+D1
+~
+~
+0 -1 1809
+D3
+~
+~
+0 -1 1807
+S
+#1809
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1810
+D3
+~
+~
+0 -1 1808
+S
+#1810
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1811
+D3
+~
+~
+0 -1 1809
+S
+#1811
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  To the south is the Hall of Champions. The
+path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1812
+D2
+~
+gate~
+1 -1 1868
+D3
+~
+~
+0 -1 1810
+S
+#1812
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  There is a large set of gates to the north.
+The path continues east and west.
+~
+18 0 1
+D0
+~
+gates~
+1 -1 1859
+D1
+~
+~
+0 -1 1813
+D3
+~
+~
+0 -1 1811
+S
+#1813
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1814
+D3
+~
+~
+0 -1 1812
+S
+#1814
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1815
+D3
+~
+~
+0 -1 1813
+S
+#1815
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D1
+~
+~
+0 -1 1816
+D3
+~
+~
+0 -1 1814
+S
+#1816
+Obervon Main Street~
+    Foot prints tread everywhere up and down this busy
+street.  Other than that this footpath is well kept, and
+well decorated.  The city echoes of wildlife and local
+gossip.  In the distance there is an outline of a large
+barracks.  The path continues east and west.
+~
+18 0 1
+D3
+~
+~
+0 -1 1815
+S
+#1817
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  The
+guild hall extends north and east.
+~
+18 0 0
+D0
+~
+~
+0 -1 1820
+D1
+~
+~
+0 -1 1818
+S
+#1818
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  To
+the south is Obervon's Main Street.  The guild hall extends in all
+other directions.
+~
+18 4 0
+D0
+~
+~
+0 -1 1821
+D1
+~
+~
+0 -1 1819
+D2
+~
+~
+0 -1 1804
+D3
+~
+~
+0 -1 1817
+S
+#1819
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  The
+guild hall extends north and east.
+~
+18 0 0
+D0
+~
+~
+0 -1 1822
+D3
+~
+~
+0 -1 1818
+S
+#1820
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  The
+guild hall extends to the north, east, and south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1823
+D1
+~
+~
+0 -1 1821
+D2
+~
+~
+0 -1 1817
+S
+#1821
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  The
+guild hall extends in all directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1824
+D1
+~
+~
+0 -1 1822
+D2
+~
+~
+0 -1 1818
+D3
+~
+~
+0 -1 1820
+S
+#1822
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  The
+guild hall extends north, south, and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1825
+D2
+~
+~
+0 -1 1819
+D3
+~
+~
+0 -1 1821
+S
+#1823
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  The
+guild hall extends east and south.
+~
+18 0 0
+D1
+~
+~
+0 -1 1824
+D2
+~
+~
+0 -1 1820
+S
+#1824
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  The
+Back Room is to the north, and the guild hall extends in all other
+directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1826
+D1
+~
+~
+0 -1 1825
+D2
+~
+~
+0 -1 1821
+D3
+~
+~
+0 -1 1823
+S
+#1825
+Mercenary's Guild~
+   This room is large, and filled with various bits of furniture.
+The walls are strewn with bits of paper for local jobs, some more
+legal than others.  The wooden floors are dirty, and not very well
+kept.  There are so many conversations going on at once that it is
+nearly impossible to make out any one of them individually.  The
+guild hall extends south and west.
+~
+18 0 0
+D2
+~
+~
+0 -1 1822
+D3
+~
+~
+0 -1 1824
+S
+#1826
+Mercenary's Guild~
+   This portion of the Guild Hall is reserved for important personel
+only.  The room is organized, clean, and without disorder.  The walls
+have a few short stories with titles such as "The Fall of Miscreation",
+"The World's Heroes vs the Insurmountable Beast", and "Guargantua-
+Defeated".  The backroom continues north, and the Mercenary's Guild was
+to the south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1828
+D2
+~
+~
+0 -1 1824
+S
+#1827
+The Back Room~
+   This portion of the Guild Hall is reserved for Prax only.  The walls
+are decorated with various stories of malice.  Stories of individuals
+gone missing, or murdered, entire buildings and towns burned to the 
+ground.  Clearly he measures his self worth in his ability to cause
+devastation.  The backroom continues to the east.
+~
+18 0 0
+D1
+~
+~
+0 -1 1828
+S
+#1828
+The Back Room~
+   This portion of the Guild Hall is reserved for important personel
+only.  The room is organized, clean, and without disorder.  The walls
+have a few short stories with titles such as "The Fall of Miscreation",
+"The World's Heroes vs the Insurmountable Beast", and "Guargantua-
+Defeated".  The backroom continues east and west.
+~
+18 0 0
+D1
+~
+~
+0 -1 1829
+D2
+~
+~
+0 -1 1826
+D3
+~
+~
+0 -1 1827
+S
+#1829
+The Back Room~
+   This portion of the Guild Hall is reserved for Jabon only.  There
+are scripts across the room, as well as stories, poems, and songs.
+Judging by their tellings, it is clear that the protagonist in all
+of them are either him, or at the very least modeled after him.  The
+backroom continues to the west.
+~
+18 0 0
+D3
+~
+~
+0 -1 1828
+S
+#1830
+Obervon's Artisan Blacksmith Shop~
+    The blacksmith's office is kept to perfection.  The walls
+are decorated with various exotic metal bars, woods, leathers,
+and etcetera.  A faint bit of heat radiates from the local
+forge.  The room echoes with the constant clang of hammer
+and anvil.  The only exit from here is to the north, back into
+Obervon's Main Street.
+~
+18 0 0
+D0
+~
+~
+0 -1 1804
+S
+#1831
+Restaurant of Polo Fay~
+    This house is famous for its high quality pub food.  However, what
+really makes this place famous is its "Polo Ale".  The environment is
+friendly, clean, and filled with laughter.  The wooden floors creak,
+the walls are a little stained, the tables are worn, and ceiling looks
+like it may leak during a rain storm.  However, despite all these facts,
+the smell wafting in from the kitchen is nothing short of divine.  The
+dining room extends east and south.
+~
+18 0 0
+D1
+~
+~
+0 -1 1832
+D2
+~
+~
+0 -1 1833
+S
+#1832
+Restaurant of Polo Fay~
+    This house is famous for its high quality pub food.  However, what
+really makes this place famous is its "Polo Ale".  The environment is
+friendly, clean, and filled with laughter.  The wooden floors creak,
+the walls are a little stained, the tables are worn, and ceiling looks
+like it may leak during a rain storm.  However, despite all these facts,
+the smell wafting in from the kitchen is nothing short of divine. To the
+north is Obervon's Main Street.  The dining room extends south and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1807
+D2
+~
+~
+0 -1 1834
+D3
+~
+~
+0 -1 1831
+S
+#1833
+Restaurant of Polo Fay~
+    This house is famous for its high quality pub food.  However, what
+really makes this place famous is its "Polo Ale".  The environment is
+friendly, clean, and filled with laughter.  The wooden floors creak,
+the walls are a little stained, the tables are worn, and ceiling looks
+like it may leak during a rain storm.  However, despite all these facts,
+the smell wafting in from the kitchen is nothing short of divine.  The
+dining room extends north and east.
+~
+18 0 0
+D0
+~
+~
+0 -1 1831
+D1
+~
+~
+0 -1 1834
+S
+#1834
+Restaurant of Polo Fay~
+    This house is famous for its high quality pub food.  However, what
+really makes this place famous is its "Polo Ale".  The environment is
+friendly, clean, and filled with laughter.  The wooden floors creak,
+the walls are a little stained, the tables are worn, and ceiling looks
+like it may leak during a rain storm.  However, despite all these facts,
+the smell wafting in from the kitchen is nothing short of divine.  To the
+south is the kitchen.  The dining room extends north and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1832
+D2
+~
+~
+0 -1 1835
+D3
+~
+~
+0 -1 1833
+S
+#1835
+The Back Kitchen of Polo Fay's Restaurant~
+    This area is kept relatively clean.  There are pots and pans,
+everywhere, there is a sink here piled with dirty dishes.  There is a 
+brick oven, a grill, and a large pot filled with duck fat, which is on 
+the verge of its smoke point.  The room is filled with echoes of 
+conversation from the dining room.  The only exit is to the north.
+~
+18 0 0
+D0
+~
+~
+0 -1 1834
+S
+#1836
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends north and
+east.
+~
+18 0 0
+D0
+~
+~
+0 -1 1841
+D1
+~
+~
+0 -1 1837
+S
+#1837
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends north,
+east, and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1842
+D1
+~
+~
+0 -1 1838
+D3
+~
+~
+0 -1 1836
+S
+#1838
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  To the south is Obervon's
+Main Street.  The room extends in all other directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1843
+D1
+~
+~
+0 -1 1839
+D2
+~
+door~
+1 -1 1808
+D3
+~
+~
+0 -1 1837
+S
+#1839
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends north,
+east, and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1844
+D1
+~
+~
+0 -1 1840
+D3
+~
+~
+0 -1 1838
+S
+#1840
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends north, and
+west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1845
+D3
+~
+~
+0 -1 1839
+S
+#1841
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends north,
+east, and south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1846
+D1
+~
+~
+0 -1 1842
+D2
+~
+~
+0 -1 1836
+S
+#1842
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends in all
+directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1847
+D1
+~
+~
+0 -1 1843
+D2
+~
+~
+0 -1 1837
+D3
+~
+~
+0 -1 1841
+S
+#1843
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends in all
+directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1848
+D1
+~
+~
+0 -1 1844
+D2
+~
+~
+0 -1 1838
+D3
+~
+~
+0 -1 1842
+S
+#1844
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends in all
+directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1849
+D1
+~
+~
+0 -1 1845
+D2
+~
+~
+0 -1 1839
+D3
+~
+~
+0 -1 1843
+S
+#1845
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends north,
+south, and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1850
+D2
+~
+~
+0 -1 1840
+D3
+~
+~
+0 -1 1844
+S
+#1846
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends north,
+east, and south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1851
+D1
+~
+~
+0 -1 1847
+D2
+~
+~
+0 -1 1841
+S
+#1847
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends in all
+directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1852
+D1
+~
+~
+0 -1 1848
+D2
+~
+~
+0 -1 1842
+D3
+~
+~
+0 -1 1846
+S
+#1848
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends in all
+directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1853
+D1
+~
+~
+0 -1 1849
+D2
+~
+~
+0 -1 1843
+D3
+~
+~
+0 -1 1847
+S
+#1849
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends in all
+directions.
+~
+18 0 0
+D0
+~
+~
+0 -1 1854
+D1
+~
+~
+0 -1 1850
+D2
+~
+~
+0 -1 1844
+D3
+~
+~
+0 -1 1848
+S
+#1850
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends north,
+south, and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1855
+D2
+~
+~
+0 -1 1845
+D3
+~
+~
+0 -1 1849
+S
+#1851
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends east, and
+south.
+~
+18 0 0
+D1
+~
+~
+0 -1 1852
+D2
+~
+~
+0 -1 1846
+S
+#1852
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  To the east is the main
+altar.  The room extends south and west.
+~
+18 0 0
+D1
+~
+~
+0 -1 1853
+D2
+~
+~
+0 -1 1847
+D3
+~
+~
+0 -1 1851
+S
+#1853
+The Grand Altar of Polo Fay~
+    The Altar is dedicated to the town hero "Polo Fay".  From here
+you can look up and view the top of the room in its entirety. The
+ceiling depicts an illustration of his ventures.  The first end of
+the ceiling shows a great civilization somewhere across the Tarion
+Desert.  Soon after it depicts a great reptillian beast appearing
+from beneath their city.  Countless armies and heroes confront it,
+but in the end the beast devastates their entire civilization.  The
+beast then begins to travel across the desert.  The other end of the
+ceiling depicts a great adventurer, traveling from beyond the reaches
+of Daimyo all the way across the world, collecting heroes.  During
+his travels he is shown carrying a book with many pages documenting
+the campaign.  Finally it shows him reaching the city of Obervon,
+placing his book upon an altar of sorts within its castle.  Finally
+the two stories converge within the center and convey a great battle.
+The story spirals towards the center, where it shows Polo Fay, the 
+beast, the book, and the altar creating some sort of portal or vortex.
+There are no more pictures after this.  You may exit to the east, south,
+or west.
+~
+18 0 0
+D1
+~
+~
+0 -1 1854
+D2
+~
+~
+0 -1 1848
+D3
+~
+~
+0 -1 1852
+S
+#1854
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  The room extends to the
+east, south, and west.
+~
+18 0 0
+D1
+~
+~
+0 -1 1855
+D2
+~
+~
+0 -1 1849
+D3
+~
+~
+0 -1 1853
+S
+#1855
+The Grand Temple of Polo Fay~
+    This mighty institution was constructed in memory of the God of
+Chaos.  There is an illustration of some sort on the ceiling, but
+from this position it is not entirely clear as to what it is supposed
+to be.  The floor is covered with some form of art, though there is
+no discernible pattern to be found.  Although the rest of this
+cathedral is well organized and kept well, the basic concept of change,
+disorder, and randomness all come to mind.  To the north is Baros'
+Chamber.  The room extends south and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1856
+D2
+~
+~
+0 -1 1850
+D3
+~
+~
+0 -1 1854
+S
+#1856
+The Templar's Private Chamber~
+    There are two large canvases on the walls here.  The first is of
+a giant shield gua#rding the sun.  The second is of a single being
+standing in the center of a vortex, holding a book.  Bordering the
+vortex are twenty individuals standing in the center of a rectangle.
+Beyond this there is a bible chained to a bed here, sharing the same
+symbol as the first canvas.  The only exit is to the south.
+~
+18 0 0
+D2
+~
+~
+0 -1 1855
+S
+#1858
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  The yard continues to
+the north and east.
+~
+18 0 1
+D0
+~
+~
+0 -1 1861
+D1
+~
+~
+0 -1 1859
+S
+#1859
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  To the south is Obervon's
+Main Street.  The yard continues north, east, and west.
+~
+18 4 1
+D0
+~
+~
+0 -1 1862
+D1
+~
+~
+0 -1 1860
+D2
+~
+gates~
+1 -1 1812
+D3
+~
+~
+0 -1 1858
+S
+#1860
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  The yard continues north,
+and west.
+~
+18 0 1
+D0
+~
+~
+0 -1 1863
+D3
+~
+~
+0 -1 1859
+S
+#1861
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  The yard continues north,
+east, and south.
+~
+18 0 1
+D0
+~
+~
+0 -1 1864
+D1
+~
+~
+0 -1 1862
+D2
+~
+~
+0 -1 1858
+S
+#1862
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  The yard continues in 
+all directions.
+~
+18 0 1
+D0
+~
+~
+0 -1 1865
+D1
+~
+~
+0 -1 1863
+D2
+~
+~
+0 -1 1859
+D3
+~
+~
+0 -1 1861
+S
+#1863
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  The yard continues north,
+south, and west.
+~
+18 0 1
+D0
+~
+~
+0 -1 1866
+D2
+~
+~
+0 -1 1860
+D3
+~
+~
+0 -1 1862
+S
+#1864
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  The yard continues east
+and south.
+~
+18 0 1
+D1
+~
+~
+0 -1 1865
+D2
+~
+~
+0 -1 1861
+S
+#1865
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  There is a small stone
+crypt to the north.  The yard continues east, south, and west.
+~
+18 0 1
+D0
+~
+door~
+1 -1 1867
+D1
+~
+~
+0 -1 1866
+D2
+~
+~
+0 -1 1862
+D3
+~
+~
+0 -1 1864
+S
+#1866
+Obervon Graveyard~
+    This area is well kept, for a graveyard that is.  A cool breezes 
+moves the grass, and there are many headstones that decorate this plain.
+The yard continues in all directions, however there is little activity 
+beyond the movement of certain small animals.  The yard continues south
+and west.
+~
+18 0 1
+D2
+~
+~
+0 -1 1863
+D3
+~
+~
+0 -1 1865
+S
+#1867
+Obervon Crypt~
+    Several holy runes decorate this chamber, which act as a ward to keep
+some specific evil being out...or perhaps even prevent one from leaving.  
+The room shows no recent signs of activity.  The entire place is made of 
+some heavy gray stone.  There is an insignia across the back wall, which 
+may belong to a clergyman or paladin of some sort.  The only exit is to 
+the south.
+~
+18 0 0
+D2
+~
+door~
+1 -1 1865
+S
+#1868
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  The hallway continues south.
+~
+18 0 0
+D0
+~
+gate~
+1 -1 1811
+D2
+~
+~
+0 -1 1870
+S
+#1869
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  The hallway continues east and
+south.
+~
+18 0 0
+D1
+~
+~
+0 -1 1870
+D2
+~
+~
+0 -1 1872
+S
+#1870
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  To the south is the main Arena.
+The hallway continues east and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1868
+D1
+~
+~
+0 -1 1871
+D2
+~
+gate~
+1 -1 1878
+D3
+~
+~
+0 -1 1869
+S
+#1871
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  The hallway continues south and
+west.
+~
+18 0 0
+D2
+~
+~
+0 -1 1873
+D3
+~
+~
+0 -1 1870
+S
+#1872
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  The hallway continues north
+and south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1869
+D2
+~
+~
+0 -1 1874
+S
+#1873
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  The hallway continues north
+and south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1871
+D2
+~
+~
+0 -1 1876
+S
+#1874
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  The hallway continues north
+and east.
+~
+18 0 0
+D0
+~
+~
+0 -1 1872
+D1
+~
+~
+0 -1 1875
+S
+#1875
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  To the south is the Announcer's
+Chamber.  The hallway continues east and west.
+~
+18 0 0
+D1
+~
+~
+0 -1 1876
+D2
+~
+door~
+7 1899 1877
+D3
+~
+~
+0 -1 1874
+S
+#1876
+The Hall of Champions~
+    The hallways are decorated with pictures and names of former champions.  
+This place was once little more than a way to dispatch prisoners and entertain 
+the locals.  However, as time progressed it has become a place for adventurers 
+to test their prowess against real champions.  The hallway continues north 
+and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1873
+D3
+~
+~
+0 -1 1875
+S
+#1877
+The Announcer's Chambers~
+    This room is very well kept.  There is a ruby red carpet on the floor, a 
+chandelier hangs from the ceiling.  On one wall there is a long horn loudspeaker, 
+undoubtedly used to provide commentary on the games.  The furniture here is exquisite, 
+and the walls are decorated with various scraps of poetry.  The most obvious exit is 
+out the direction you came in.
+~
+18 4 0
+D0
+~
+door~
+1 -1 1875
+D5
+~
+~
+0 -1 1879
+S
+#1878
+The Arena~
+    The sand shifts beneath your feet, and provides excellent footing.  In the 
+center of the arena, there is a wooden trap door.  On the south wall, there is a 
+large wooden grate, which can only be opened from the other side.  You can smell 
+the violent deaths of previous battles.  Hundreds, maybe thousands of victims have
+fallen here.  The only obvious exit is to the north.
+~
+18 0 0
+D0
+~
+gate~
+1 -1 1870
+D5
+~
+~
+0 -1 1898
+S
+#1879
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  Above you is the Announcer's Chamber.  The hall
+continues north.
+~
+18 0 0
+D0
+~
+~
+0 -1 1881
+D4
+~
+~
+0 -1 1877
+S
+#1880
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  The hall continues north and east.
+~
+18 0 0
+D0
+~
+~
+0 -1 1883
+D1
+~
+~
+0 -1 1881
+S
+#1881
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  On the north wall there is a lever of sorts, but
+it has a large "Out of Order" sign on it.  The ceiling looks like it could
+be lowered, like an elevator, however all signs suggest that it is not
+working, and has not worked for some time.  Clearly there is no hope in even
+attempting to fix it.  The hall continues east, south, and west.
+~
+18 0 0
+D1
+~
+~
+0 -1 1882
+D2
+~
+~
+0 -1 1879
+D3
+~
+~
+0 -1 1880
+S
+#1882
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  The hallway continues north and west.
+~
+18 0 0
+D0
+~
+~
+0 -1 1884
+D3
+~
+~
+0 -1 1881
+S
+#1883
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber. On the western wall, beside a reinforced door, there
+is a sign posted with the title "Ettin Berserker".  The hall continues north,
+and south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1885
+D2
+~
+~
+0 -1 1880
+D3
+~
+door~
+1 1800 1891
+S
+#1884
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  On the eastern wall, beside a wooden door, there
+is a sign posted with the title "Fur Beast".  The hall continues north and
+south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1886
+D1
+~
+~
+0 -1 1892
+D2
+~
+~
+0 -1 1882
+S
+#1885
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  On the western wall, beside a wooden door, there
+is a sign posted with the title "Ethereal Guard".  The hall continues north
+and south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1887
+D2
+~
+~
+0 -1 1883
+D3
+~
+door~
+1 1800 1893
+S
+#1886
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  On the eastern wall, beside a wooden door, there
+is a sign posted with the title "Pagodian Warrior".  The hall continues
+north and south.
+~
+18 0 0
+D0
+~
+~
+0 -1 1889
+D1
+~
+door~
+1 1800 1894
+D2
+~
+~
+0 -1 1884
+S
+#1887
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  On the western wall, beside a wooden door, there
+is a sign posted with the title "Forgotten Shopkeeper".  The hall continues
+east and south.
+~
+18 0 0
+D1
+~
+~
+0 -1 1888
+D2
+~
+~
+0 -1 1885
+D3
+~
+door~
+1 1800 1895
+S
+#1888
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  To the south is the Warden's Office.  The hall
+continues east and west.
+~
+18 0 0
+D1
+~
+~
+0 -1 1889
+D2
+~
+~
+0 -1 1890
+D3
+~
+~
+0 -1 1887
+S
+#1889
+Beneath the Halls~
+    These dark and gloomy halls are the bowels of the Hall of Champions.
+The floor is wet, the walls are covered with mold, and the air smells just
+about as good as the this place looks.  All sounds are nearly indecipherable,
+between the echoing noises from all directions, and the fact that this place
+acts as an echo chamber.  On the eastern wall, beside a wooden door, there
+is a sign posted with the title "Sultan Cobra".  The hall continues south
+and west.
+~
+18 0 0
+D1
+~
+door~
+1 1800 1896
+D2
+~
+~
+0 -1 1886
+D3
+~
+~
+0 -1 1888
+S
+#1890
+Above the Grand Cell~
+    This chamber is also known as 'The Warden's Office'.  This special room
+acts as a barrier between here, and the Hall of Champion's prize monster.  
+The Warden's Office is the nexus to which all information passes in these
+halls.  Any monster must be approved to either be moved in or out of its
+chambers through this office.  On the southern wall there is a sign on the
+wall labeled "Beware!: Syszivexkeya".  North of here is the prison hall.
+On the floor, there is a large metal trapdoor.
+~
+18 0 0
+D0
+~
+~
+0 -1 1888
+D5
+~
+~
+0 -1 1897
+S
+#1891
+A Monster's Cell~
+    The cell looks like it has been repaired several times.  All the walls, as
+well as the door, have been reinforced.  Everything within the room has been
+destroyed, and all that remains is scrap.  Plates from previous meals have been
+tossed against the wall.  The only exit is to the east.
+~
+18 0 0
+D1
+~
+door~
+1 1800 1883
+S
+#1892
+A Monster's Cell~
+    There is hair everywhere.  Strands of hair, balls of hair, clumps of fur,
+and what looks like vomited hair balls.  Anything in the room that has a corner
+has been chewed on.  The only exit is to the west.
+~
+18 0 0
+D3
+~
+door~
+1 1800 1884
+S
+#1893
+A Monster's Cell~
+    This cell is empty.  It is completely odorless, and shows no signs of 
+inhabitance.  The only exit is east.
+~
+18 0 0
+D1
+~
+door~
+1 1800 1885
+S
+#1894
+A Monster's Cell~
+    There is a makeshift training dummy here.  The hand on it has been nearly
+destroyed, it looks almost as if someone has been kicking items out of it
+during practice for some time now.  The only exit is to the west.
+~
+18 0 0
+D3
+~
+door~
+1 1800 1886
+S
+#1895
+A Monster's Cell~
+    The room is decorated with scraps of paper.  Some of which contain detailed
+tattoo designs, others contain various sales pitches.  This room smells of sweat,
+and body odor.  Someone has obvious done a lot of exercising in this room.  The
+only exit is east.
+~
+18 0 0
+D1
+~
+door~
+1 1800 1887
+S
+#1896
+A Monster's Cell~
+   The cell is sticky and awful.  There are several regurgitated items around the
+room, none of which could be used anymore.  There is a pile of decomposing scales
+in the corner, and there are bones lying around the room.  The only exit is to
+the west.
+~
+18 0 0
+D3
+~
+door~
+1 1800 1889
+S
+#1897
+Syszivixkeya's Grand Chamber~
+    This camber belongs to the legendary hydra 'Syszivexkeya'.  The bodies of
+several competitors are thrown around the room, as they could not be removed
+from the beast's mouth before it was escorted back here.  The chamber is both
+expansive, and reinforced.  Whoever built this chamber, wanted to make sure
+that Syszivexkeya would never be able to leave by its own accord.  Be wary,
+the only exit is up.
+~
+18 0 0
+D4
+~
+~
+0 -1 1890
+S
+#1898
+Wilfred's Locker Room~
+    The walls of this room have drawings of axes on them.  The rest of the room
+is filled with various bits of exercising equipment.  Despite the sketches across
+the wall, this locker room is well kept.  
+~
+18 0 0
+D4
+~
+~
+0 -1 1878
+S
+#1899
+A temporary name~
+A temporary description
+~
+18 512 0
+S
+#0
+$~

@@ -1,0 +1,2154 @@
+#400
+Wide rolling plains~
+   Tall grass marches slowly up the gentle slope climbing upwards from the 
+narrow valley riddled with streams and the occasional drooping willow tree. 
+A soft puff of wind stirs the colorful patches of wildflowers as it races 
+onwards up the hill, swirling over the crest before plunging onwards.
+   To the north the vast open sky stretches over the fields reaching towards 
+the distant horizon. To the south a waterway laps its gentle current against
+the soft grass-covered bank.~
+4 4 4
+D0
+~
+~
+0 0 401
+D2
+~
+~
+0 0 449
+S
+#401
+Wide rolling plains~
+   An ancient tree bends its supple branches towards the wild flowers that
+cover the soft ground below. The dried husk of an ancient log provides a small
+place to sit, the grassy plains stretching out before the ancient tree, bowing
+and dancing in the breeze like a vast army waiting only the orders of its
+general before setting out for conquest.
+   The rolling sea of grass spreads out to the north, the faint gurgle of 
+trickling water echoing up the hills to the south.
+~
+4 0 4
+D0
+~
+~
+0 0 402
+D2
+~
+~
+0 0 400
+S
+#402
+Wide rolling plains~
+   Chunks of granite rock force the dirt aside as they push free of the ground's
+embrace. Tall leaning spires rest against each other small nets of lichen and
+fern clinging precariously to the cracked and pitted sides. A solitary pine 
+spreads its thin roots across the peak of the rock, grasping and reaching for
+a stronghold on the impervious surface.
+   To the north a breeze pushes across the open plains, dancing and swirling
+amid patches of colorful wildflowers. To the south a tall tree looms over the
+grassy hills.
+~
+4 0 4
+D0
+~
+~
+0 0 403
+D2
+~
+~
+0 0 401
+S
+#403
+Wide rolling plains~
+   A gentle crest in the ground pushes upwards towards the vast, looming sky.
+Tall grasses and blooming brush march their way inexorably across the rolling 
+landscape. Small thorny bushes reach out from the dusty ground, scraping and
+grasping at everything their branches touch.
+   The gentle undulation of the plains stretches out in all directions.
+~
+4 4 0
+D0
+~
+~
+0 0 409
+D1
+~
+~
+0 0 411
+D2
+~
+~
+0 0 402
+D3
+~
+~
+0 0 406
+S
+#404
+A dank mineshaft~
+   Wet dirt presses downward, small grasping roots hanging loosely overhead. 
+Chunks of rock marred with the scars and cracks of picks and shovels lie 
+scattered about the loose gravel floor. Small holes in the walls are filled
+with loose gravel and stained with the blackened soot of small explosives.
+   The shaft leads deeper beneath the mountain below while above a small 
+trickle of light bleeds down from the mineshaft entrance.
+~
+4 0 5
+D3
+~
+~
+0 0 404
+D4
+~
+~
+0 0 418
+S
+#405
+A damp mineshaft~
+   Stagnant water wells up from the gravel floor. A thick skim of moss and 
+fungus grows around the edges of the pond, grasping and reaching up the thick
+rock wall. Blast and pick marks scar the wall, small tufts of damp moss growing
+from the old cracks in the ancient walls. 
+   The shaft slopes upwards towards a faint glimmer of light twinkling from the
+shaft opening.  
+~
+4 0 5
+D1
+~
+~
+0 0 404
+S
+#406
+Wide rolling plains~
+   Scraggy brush fights for space amongst the thick choking grass. Thin dry
+branches reach and claw upwards towards the sky. Bent grass and broken branchs
+form small tunnels and trails, marking the paths of various animals crossing 
+the wide expanse of grass.
+   The rolling expanse of grass spreads out in all directions.
+~
+4 0 2
+D0
+~
+~
+0 0 407
+D1
+~
+~
+0 0 403
+S
+#407
+Wide rolling plains~
+   Small mounds of dark soil mark the entrances to a network of underground
+tunnels darting back and forth beneath the dirt. The buzzing drone of bees
+drifts along the breeze as they dart from bush to bush seeking blossoms and
+swarm underneath new nests. 
+   The rolling expanse of grass spreads out in all directions.
+~
+4 0 2
+D0
+~
+~
+0 0 408
+D1
+~
+~
+0 0 409
+D2
+~
+~
+0 0 406
+S
+#408
+Wide rolling plains~
+   Flocks of small birds burst from the grass. Startled into sudden flight they
+wheel and dart overhead, indignant cries filling the air with a clashing 
+harmony of noise. A few small trees lift their branches over the plains, thin 
+leaves offering a modicum of shade in the sea of grass.
+   The wide expanse of grass rolls away in all directions.
+~
+4 0 2
+D1
+~
+~
+0 0 410
+D2
+~
+~
+0 0 407
+S
+#409
+Wide rolling plains~
+   The dry and stout trunks of old trees protrude from the ground like silent
+sentinels watching over the grassy plains. Bereft of branches, the tall pillars
+are riddled with the holes and nests of enterprising animals and birds seeking
+shelter from the weather.
+   The rolling expanse of grass extends in all directions.
+~
+4 0 2
+D0
+~
+~
+0 0 410
+D1
+~
+~
+0 0 412
+D2
+~
+~
+0 0 403
+D3
+~
+~
+0 0 407
+S
+#410
+Wide rolling plains~
+   Whipping wind flies across the open plains, forcing the grass and shrubs
+to bend before its swift fury. A cluster of wildflowers forges a bright spot of
+color amidst the monotone backdrop of green and gold grasses. Small bees and 
+hummingbirds flit from flower to flower searching for nectars and pollen to 
+sustain themselves.
+   The rolling expanse of grass and flowers stretches out in all directions.
+~
+4 0 2
+D0
+~
+~
+0 0 414
+D1
+~
+~
+0 0 413
+D2
+~
+~
+0 0 409
+D3
+~
+~
+0 0 408
+S
+#411
+Wide rolling plains~
+   The vast sea of grass begins to climb upwards into a series of small hills.
+Chunks of rock and loose gravel litter the ground beneath the scrub grass and
+small bushes fighting for space here. A few rotten stumps slowly give way to
+the ferns and fungus growing on them, a few small caverns beneath their roots
+sheltering chipmonks and other wild animals.
+   The hills lead upwards to the north, while the grass marches onwards out
+over the plains to the west.
+~
+4 0 2
+D0
+~
+~
+0 0 412
+D3
+~
+~
+0 0 403
+S
+#412
+Gently swelling hills~
+   A few deciduous trees stand tall and proud, waving their leafy arms over the
+rounded peaks of the hills as they climb higher. Outcroppings of rock and shale
+sprout tufts of grass and small shrubs while jagged scars expose white rock 
+where landslides have marred the landscape. 
+   The hills rise higher to the north, the dim outline of vast mountains visible
+on the horizon. To the west the plains stretch out in a vast sea of grass while
+south the hills dip gently into the grasslands below. 
+~
+4 0 2
+D0
+~
+~
+0 0 413
+D2
+~
+~
+0 0 411
+D3
+~
+~
+0 0 409
+S
+#413
+Gently swelling hills~
+   Loose chunks of shale trickle down amongst the scrub grass and thorny brush.
+A few trees cling tenaciously to exposed outcroppings, leaning precariously 
+outwards their thin roots crawling desperately towards the soil. Fallen trees
+lie bleached and rotted in the open, fungus and small bushes growing from their
+sides. 
+   The hills rise in the distance, looming over the plains. To the south and
+west the ground slopes away towards the grassy meadows below.
+~
+4 0 2
+D2
+~
+~
+0 0 412
+D3
+~
+~
+0 0 410
+S
+#414
+Rising foothills~
+   Collapsing piles of rock and shale cover the brush and grass while wrapping
+around the trunks of a few spindly trees in their mad dash downhill. Tufts of
+grass and small brush cling tenaciously to the patchy soil, trying vainly to
+establish a foothold. 
+   The looming maw of a mineshaft rears its open mouth to the north while to 
+the south the ground slopes away towards the grassy plains below.
+~
+4 4 4
+D0
+~
+~
+0 0 419
+D2
+~
+~
+0 0 410
+S
+#415
+A crudely carved cavern~
+   Chunks of fragmented rock and shale litter the floor, broken and crumbling 
+from the pock marked wall. Pick and shovel scars rend jagged lines across the 
+ancient rock, digging deep for minerals and ore.
+   The cavern opens back onto a mine shaft to the east.
+~
+4 1 0
+D1
+~
+~
+0 0 419
+S
+#416
+A crudely carved cavern~
+   Giant chunks of granite lie on the ground, the massive holes in the wall 
+silently bleeding small trickles of dirt onto the floor of the cavern. Small
+drops of water rain down from the low ceiling turning the new dirt on the floor
+into a muddy slurry of dirt and crushed rock. A small iron cart stands nearby
+waiting to haul any debris away.
+   The cavern opens back onto a mine shaft to the east
+~
+4 1 0
+D1
+~
+~
+0 0 420
+S
+#417
+A crudely carved cavern~
+   The shallow walls of the cavern are covered in small holes stuffed with a
+black powder. Thick wormlike fuses trail from the holes out across the gravel
+piles covering the ground. Small barrels of powder are stacked in a neat pile
+at the base of the wall to help blast the rubble into more manageable chunks of
+rock. 
+   The mineshaft to the east provides adequate cover against the coming blast.
+~
+4 1 0
+D1
+~
+~
+0 0 421
+S
+#418
+A crudely carved cavern~
+   Chunks of rock lie scattered about the cavern. Lichen and a variety of fungi
+grow out of small pools of water gathered in the divots and cracks of the
+boulders. Mounds of fresh dirt and gravel are piled high against the wall 
+waiting to be carted off and sorted through for rare ores. 
+   A small shaft continues down into the darkness, fresh earth trickling from
+its walls.
+~
+4 1 0
+D1
+~
+~
+0 0 422
+D5
+~
+~
+0 0 404
+S
+#419
+The gaping entrance to a mine shaft.~
+   Soot and soil stain the exposed granite face surrounding the mine opening.
+Small trees and tufts of grass cling to the rock face while gravel and dirt
+spew from the open tunnel. The occasional flicker of a candle can be seen 
+in the heavy gloom while the occasional wisp of stagnant air floats out of the
+depths of the shaft.
+   The mine tunnel leads north into the gloom, while to the south the rubble
+slides away towards the grassy plains below. A small cavern is visible just 
+inside the opening to the west.
+~
+4 4 2
+D0
+~
+~
+0 0 420
+D2
+~
+~
+0 0 414
+D3
+~
+~
+0 0 415
+S
+#420
+A tunnel crossing~
+   Flickering candlelight, casts deformed shadows across the high rock ceiling,
+trails of smoke rising up to stain the dark rock face with soot. Rusted rails
+are embedded in the gravel floor running through the center of the tunnel. 
+Small stacks of rope and various crates are tucked near the base of the wall,
+holding various mining equipment and supplies.
+   The tunnel network continues in all directions, leading deeper into the mine.
+~
+4 0 0
+D0
+~
+~
+0 0 421
+D1
+~
+~
+0 0 425
+D2
+~
+~
+0 0 419
+D3
+~
+~
+0 0 416
+S
+#421
+Inside an ancient mineshaft~
+   A rusting ore cart straddles old railroad tracks laid carefully in the
+gravel packed floor. Dirt, rock and ore is piled high inside, ready to be pushed
+to a wash where the minerals and ores will be separated from the rock. The
+tunnel walls curve up overhead, occasionally dropping a pebble or small chunk of
+rock down as the tunnel trembles from blasts deeper inside the mine.
+   The tunnel continues north with small caverns branching off to the west.
+~
+4 0 0
+D0
+~
+~
+0 0 422
+D2
+~
+~
+0 0 420
+D3
+~
+~
+0 0 417
+S
+#422
+Inside an ancient mineshaft~
+   Jagged, unshapen rocks jut from the walls of the tunnel. Pick and shovel
+marks make clean jagged scars where work is still being done to widen and shape
+the rough walls. Large chunks of granite lie in the tunnel waiting to be broken
+down and carted off, while a mound of smaller gravel and rock waits to be
+smoothed out over the damp floor.
+   The tunnel breaks into smaller caverns to the north and west. To the south
+the cavern walls widen and rise into a higher traffic area of the mine.
+~
+4 0 0
+D0
+~
+~
+0 0 423
+D2
+~
+~
+0 0 421
+D3
+~
+~
+0 0 418
+S
+#423
+A newly carved cavern~
+   Piles of loose ore fill the cavern, naturally rough walls looming into a 
+high arch overhead. The points of ancient stalactites reach downwards, the soft
+drip drip of the water falling from their tips. A few shovels, blades rusted
+in the moisture, stand against the wall waiting for the carts to return.
+   The natural cavern leads south to the mine tunnel being dug back towards
+the entrance.
+~
+4 1 0
+D2
+~
+~
+0 0 422
+S
+#424
+Inside an ancient mineshaft~
+   Bright flecks of copper ore sparkle in the dancing light of a few small
+candles melted onto outcroppings of granite jutting from the scarred and pitted
+walls. Piles of ore collapse in heaps on the ground waiting to be carted off
+and sorted from the dirt and rock that accompany it.
+   The cavern opens up onto a mine tunnel to the east.
+~
+4 1 0
+D1
+~
+~
+0 0 429
+S
+#425
+A mineshaft tunnel~
+   Carts mounded high with dirt and ore rest on small rusted rail tracks
+waiting to be pushed out of the mine and hauled away. Flickering candle light
+casts shadows that leap and jump around the smoothly fashioned walls of the
+tunnel. Thick beams of heavy wood sprout from the ground supporting the walls
+and ceiling, dry timber creaking ominously with the blast vibrations in the
+floor.
+   The smooth tunnel continues to the east, west and north, flickering light
+dancing down the walls.
+~
+4 0 0
+D0
+~
+~
+0 0 426
+D1
+~
+~
+0 0 430
+D3
+~
+~
+0 0 420
+S
+#426
+A freshly carved cavern~
+   The tunnel walls sag and fall into the center of the cavern floor. Fresh,
+loose dirt spills from cracks in the granite surface. Mounds of gravel and 
+soft dirt pile high against the walls, the timbers and joists that supported
+the ceiling lie cracked and broken under a pile of loose rock poured from a 
+large crater in the roof. 
+   The collapsed cavern opens up to the mine tunnel to the south.
+~
+4 1 0
+D2
+~
+~
+0 0 425
+S
+#427
+A minecar siding~
+   Rusty mining cart rails branch off from a small switching track filling the
+chamber with a plethora of storage sidings. Mine carts line the various tracks,
+some filled with ore and rock waiting to be dumped while others are lined up 
+empty waiting to be pushed to new excavation chambers. A few rusting wheels and
+steel axles lie against the granite walls to be used as spare parts.
+   The siding rails lead to the main tracks to the east.
+~
+4 1 0
+D1
+~
+~
+0 0 432
+S
+#428
+An ore dump~
+   A vast naturally formed open cavern looms high above. Mine cart rails run
+straight through the center of the cave. Mounds of ore, rock, dirt and minerals
+are piled high between wooden walls made of thick sturdy beams. Sluicing
+channels slosh through piles of dirt and rock, washing away everything but
+the bright glint of ore. A deep pond occupies the far end of the cavern, waste
+water pouring into it.
+   The mine cart tracks run north into the mine tunnels.
+~
+4 1 0
+D0
+~
+~
+0 0 429
+S
+#429
+Along a minecart track~
+   Loose gravel covers the broad floor of the tunnel. Thick iron rails run the
+length of the tunnel, tops rubbed shiny from the constant wear of the mine cart
+wheels. Chunks of rock and loose dirt are cluttered near the walls where they
+have fallen from the fully loaded carts bumping down the tracks.
+   The mine shafts continue in all directions, opening into small caverns or
+disappearing around a corner.
+~
+4 0 0
+D0
+~
+~
+0 0 430
+D1
+~
+~
+0 0 433
+D2
+~
+~
+0 0 425
+D3
+~
+~
+0 0 424
+S
+#430
+Along a minecart track~
+   Twin steel rails run down the center of the wide tunnel. Loose gravel and
+dark dirt have been packed hard to make an even tunnel floor. The granite walls
+rise up overhead, scars from countless picks and shovels faded with the patina
+of age. Flickering candles gutter and wave with the passing of each mine cart 
+loaded with dirt and ore from the deep shafts being sunk farther inside the mine.
+   The tunnel continues to the north, south and west.
+~
+4 0 0
+D0
+~
+~
+0 0 431
+D2
+~
+~
+0 0 429
+D3
+~
+~
+0 0 425
+S
+#431
+Along a minecart track~
+   The tunnel floor slopes gently downwards, as the mine cart rails lead deeper
+into the mountain side. Small candles gutter in the the breeze as the mountain
+seems to exhale from the deep mineshafts at its core. The smell of wet dirt and
+broken rock fills the tunnel as it curves deeper towards new excavations.
+   The rails lead deeper to the north and east and back up the gentle slope to
+the south.
+~
+4 0 0
+D0
+~
+~
+0 0 432
+D1
+~
+~
+0 0 435
+D2
+~
+~
+0 0 430
+S
+#432
+Along a minecart track~
+   Fresh scars mark the walls and ceilings as the tunnel slopes deeper under
+the mountain. A few small mining carts sit on side rails waiting to transfer
+their loads of rock and ore into the bigger carts to be transported up to the
+storage cavern. A few chunks of rock litter the floor, debris left behind
+during various cart transfers.
+   The mining tunnel turns east and delves its way deeper into the mountain,
+while the main tracks lead south, sloping gently upwards. To the west a small
+cavern has been excavated.
+~
+4 0 0
+D1
+~
+~
+0 0 436
+D2
+~
+~
+0 0 431
+D3
+~
+~
+0 0 427
+S
+#433
+A small storage cavern~
+   A small trickle of water leaves a green phosphorescent smear down the back
+wall of the chamber. A small pool spreads its edges near the chamber walls, 
+draining out underneath the rock. Crates and barrels are stacked high along 
+with sacks of powder and bundles of fuses. Shovels and picks lie in neat piles
+near the entrance. A few candles cast shadows around the room, carefully
+sheltered behind glass shrouds.
+   The cavern opens back into the main cart tunnel to the west.
+~
+4 1 0
+D3
+~
+~
+0 0 429
+S
+#434
+Mining office~
+   Blast marks and the scars of picks and shovels mar the small caverns walls.
+Loose gravel and a few chunks of scattered rock litter the floor. A small desk
+occupies the center of the room, a roll of maps and plans strewn across it. A 
+small table holds a lantern and helmet. A notepad and small journal tucked into 
+a shelf below.
+   A thick steel door leads north to the mine cart tunnel.
+~
+4 1 0
+D0
+~
+door~
+1 0 435
+S
+#435
+A mineshaft crossing~
+   Broken chunks of granite hang loosely from the ceiling, a few thick timbers
+straining bravely to hold them in place. Blast marks scar the rough hewn walls,
+widening corners and smoothing the floor for the mine cart rails that pass
+through. A large wooden frame holds back mounds of rock and dirt waiting to be
+transfered to another cart headed towards the upper levels. 
+   The tracks lead north and west while a thick steel door bars the way south.
+~
+4 0 0
+D0
+~
+~
+1 0 436
+D2
+~
+door~
+1 0 434
+D3
+~
+~
+0 0 431
+S
+#436
+A minecart track junction~
+   A stack of new rails lies against the wall waiting to be placed in line
+with the end of the track. The jagged granite floor has piles of gravel dumped
+nearby waiting to be smoothed into all the cracks and holes pockmarking the
+rough surface. A few candles fight back against the oppressive dark in the
+tunnel.
+   The rails disappear to the west and south, while newly blasted tunnels leads
+deeper into the mountain to the east.
+~
+4 0 0
+D1
+~
+~
+0 0 439
+D2
+~
+~
+0 0 435
+D3
+~
+~
+0 0 432
+S
+#437
+A cracked cavern~
+   Deep rifts and cracks cover the walls and ceiling of the cavern. A few faint
+wisps of steam rise from a large crack in the floor. Dirt and rock lie in
+collapsed piles at the base of the fractured walls, large holes gaping where
+the rubble has fallen down.
+   The cavern opens north to a small mineshaft tunnel.
+~
+4 0 0
+D0
+~
+~
+0 0 438
+S
+#438
+A small tunnel~
+   Warm air rushes along the eerily smooth walls of the tunnel. Gravel and dirt
+have been burned into the floor. The tunnel glistens wetly as small rivulets of
+water drip down the curve of the walls. Small pockets of ore leave rough 
+craters in the smooth surface where picks have chipped away at it. 
+   The tunnel leads north to a rough hewn mineshaft while a smooth hole
+leading down belches occasional clouds of steam into the passageway. 
+~
+4 0 0
+D0
+~
+~
+0 0 439
+D2
+~
+~
+0 0 437
+D5
+~
+~
+0 0 440
+S
+#439
+A minecart junction~
+   The rock walls of the tunnel curve in an unnatural fashion. The ceiling and
+floor have been leveled out, the marks and scars of the picks fresh and white
+against the dark stone. Piles of gravel wait to be smoothed into the newly 
+widened hallway.
+   A small circular tunnel leads south while to the east and west the rough
+hewn tunnel continues into the darkness.
+~
+4 0 0
+D1
+~
+~
+0 0 442
+D2
+~
+~
+0 0 438
+D3
+~
+~
+0 0 436
+S
+#440
+A smooth, narrow tunnel~
+   Bursts of steam rush up the narrow chamber, the walls dripping condensation
+back down the center of the shaft. Smooth walls glisten and glint where once
+molten rock has hardened into a swirling pattern of shapes and colors. A few
+divots and scrapes in the rock give evidence to exploratory miners searching
+for new veins, but the curved rock face resists the attempts to dig deeper.
+   The smooth shaft curves down while a small cavern opens to the east.
+~
+4 1 0
+D1
+~
+~
+0 0 443
+D4
+~
+~
+0 0 438
+D5
+~
+~
+0 0 441
+S
+#441
+A smooth, narrow tunnel~
+   The dark rock glistens beneath beads of condensation formed from the gusts
+of steam and smoke rising through the tunnel. Tiny rivulets of water drip down
+from the ceiling making a narrow stream down the center of the curved shop. Wet
+moss carpets the walls of the tunnel, growing warmer as the steam rushes by.
+   The tunnel grows warmer as it descends into the bowels of the mountain,
+while the steam continues to rise upwards towards the mining tunnels above.
+~
+4 1 0
+D4
+~
+~
+0 0 440
+D5
+~
+~
+0 -1 444
+S
+#442
+A rough hewn cavern~
+   Spots of moss and small fields of fungi grow on mounded dirt filling the
+floor of the cavern. Soot stains the granite walls where candles have sputtered
+and flickered against the darkness. A few rusted tools lie scattered around the
+edges of the room, left behind when the cavern was abandoned.
+   The old cavern opens back onto the mine shaft to the west.
+~
+4 1 0
+D3
+~
+~
+0 0 439
+S
+#443
+A smooth walled cavern~
+   The dark, smooth walls of the cavern curve gracefully upwards, seamlessly
+transitioning into the polished roof overhead. Heat radiates from the black 
+rock, pulsing low waves of heat in swirling small circles across the stone 
+floor.
+   A perfect circle pierces the smooth cavern wall leading into a polished 
+stone tunnel.
+~
+4 0 0
+D3
+~
+~
+0 0 440
+S
+#444
+A smooth, narrow tunnel~
+   Small pulses of radiant red heat swirl into the black polished stone wall.
+Bursts of steam rise through the tunnel, flowing rapidly upwards seeking a way
+out. Moss drips condensation down the smooth, spherical tunnel, the tiny river
+making its way down the hot floor of the tunnel.
+   The tunnel levels off to the east, the smooth circular shaft leading deeper
+beneath the mountain towards the depths of the earth. The puffs of steam race
+up the tunnel shaft above, leading upwards towards the mine shafts.
+~
+4 0 0
+D1
+~
+~
+0 0 300
+D4
+~
+~
+0 0 441
+S
+#445
+A swiftly moving waterway~
+   Tree boughs bend low over the swirling current, leaves and twigs brushing
+the surface and leaving small trails of bubbles and froth as the water slides 
+by. Trees push their roots down the muddy banks and into the current, catching
+leaves and grass racing along the surface. 
+   The current flows swiftly east, while the soft bank leads to the west
+winding between the trees.
+~
+4 5 6
+D1
+~
+~
+0 0 446
+D3
+~
+~
+0 0 212
+S
+#446
+A swiftly moving waterway~
+   Cold black water swirls swiftly between the steep muddy banks. Tree roots
+mesh together trapping silt and sand into small islands, forcing the water to
+split into smaller channels winding their way through the jungle. The dark 
+green of the canopy casts dappled shadows across the rippling water, small
+clouds of gnats swarming and dancing in the cool shade. 
+   The waterway branches off in all directions amongst the jungle trees.
+~
+4 1 6
+D0
+~
+~
+0 0 454
+D1
+~
+~
+0 0 447
+D2
+~
+~
+0 0 451
+D3
+~
+~
+0 0 445
+S
+#447
+A swiftly moving waterway~
+   Large boulders scattered across the stream force the current into narrow
+rapids. Foam and rushing water crash their way into the small openings between
+the rock. Small chunks of rotted logs bob their way through the openings, 
+surfing the wave crests like tiny boats tossed in a storm.
+   The water rushes onwards through the rapids to the east, and wends its way
+through the jungle trunks westward.
+~
+4 1 6
+D1
+~
+~
+0 0 448
+D2
+~
+~
+0 0 462
+D3
+~
+~
+0 0 446
+S
+#448
+A swiftly moving waterway~
+   Sediment chokes the river current, brown brackish water sluicing through an
+abundance of reeds and grass choking the river bed. Steep muddy banks drop off
+sharply into the deep running current, a few roots and branchs dipping into the
+current offer shelter for a school of fish from the fast moving swirl of water.
+   The crash and gurgle of rapids comes from the west while to the north and
+east the river slows into a wider, deeper drift.
+~
+4 1 6
+D0
+~
+~
+0 0 457
+D1
+~
+~
+0 0 449
+D3
+~
+~
+0 0 447
+S
+#449
+A stagnant pool~
+   Reeds and rushes choke the current, slow moving water swirls against the low
+banks as bugs and gnats skitter across the top of the brown and brackish water.
+Schools of fish and small snakes dart about between the reeds, the sucking pull
+of deep mud trapping anything that touches the river bottom. Low hanging tree
+branches rot slowly as they push their way beneath the surface.
+   A muddy trail leads up the bank to the north, small trees and tufts of grass
+pushing their way through the muck. The stream swirls east through the choking
+dam of reeds and grass, while to the west the current moves a little faster.
+~
+4 5 6
+D0
+~
+~
+0 0 400
+D1
+~
+~
+0 0 450
+D3
+~
+~
+0 0 448
+S
+#450
+A slow moving channel~
+   Dead trees drown their rotting trunks in the murky water. Dead and saturated
+branches raking their long fingers through the muck floating on the surface. A
+few reeds twist in the current providing shelter for fish and the occasional
+river otter looking for a meal.
+   The channel swirls slowly to the north while to the west reeds and grass
+choke the river, stagnant water moving slowly.
+~
+4 1 6
+D0
+~
+~
+0 0 473
+D3
+~
+~
+0 0 449
+S
+#451
+A swiftly moving waterway~
+   Chunks of granite and tall rocks sprout from the center of the stream, steep
+banks funneling the rushing water rapidly downstream. Chunks of rotten logs
+break their backs against the indomitable granite spears lancing up through the
+stream, splinters bobbing rapidly as they are whisked through the rapids. 
+   The swift current continues moving downstream to the south, while to the north
+the trunks of the jungle split the stream into a fragmented collection of small
+waterways.
+~
+4 1 6
+D0
+~
+~
+0 0 446
+D2
+~
+~
+0 0 452
+S
+#452
+A rapidly moving channel~
+   Wide and shallow, the stream gurgles over boulders and gravel lining the
+bottom of the channel. Jagged rock and debris from fallen trees push the
+current from side to side as it maneuvers its way around the obstacles.
+  The current's rushing water twists from the north south amongst the trees.
+~
+4 1 6
+D2
+~
+~
+0 0 453
+S
+#453
+A rapidly moving channel~
+   Trees stick their roots deep into the muddy bank as the stream crashes 
+through the narrow turn in the river bed. The river bank is sharply undercut,
+roots and vines thrusting their way through the shelf as the drag of the water
+cuts away at the moist soil underneath. 
+   The rapids flood westward into the endless sea as they race from the 
+waterways to the north.
+~
+4 5 6
+D3
+~
+~
+0 -1 477
+S
+#454
+A swiftly moving channel~
+   Brush and ferns create small grooves in the glassy surface of the water as
+it glides swiftly beneath their trailing fronds. Small clouds of gnats expand
+and glide across the top of the water, small fish leaping through causing small
+ripples on the water. 
+   The channel moves swiftly from the north on southwards into the jungle.
+~
+4 1 6
+D0
+~
+~
+0 0 455
+D2
+~
+~
+0 0 446
+S
+#455
+A swiftly moving channel~
+   The river current swirls around a fallen tree lodged in the muddy bottom.
+Trailing branches grasp at the various grasses and reeds swirling downriver,
+collecting piles of detritus that rot and mold in the small eddys formed by the
+wet boughs.
+   Steep muddy banks force the river through a deep channel south while a small
+slow moving fork leads east among the trees.
+~
+4 1 6
+D0
+~
+~
+0 0 458
+D1
+~
+~
+0 0 456
+D2
+~
+~
+0 0 454
+S
+#456
+A slow moving fork in the stream~
+   Lillies and reeds grow in the shallows along the soft muddy banks. Small
+flowers blossom on top of the green pads floating on the surface. Toads
+hop from pad to pad searching for thick swarms of mosquitos and gnats that
+hover above the soggy ground.
+   The slow moving water pushes through the reeds and grass to the east, while
+to the west the gurgle of a fast moving current can be heard above the drone
+of mosquitos.
+~
+4 1 6
+D1
+~
+~
+0 0 457
+D3
+~
+~
+0 0 455
+S
+#457
+A slow moving fork in the stream~
+   Blossoming trees bend over the still waters, hummingbirds flitting from
+bloom to bloom looking for nectar, the buzz of their wings competing with the
+heavy drone of bumble bees. Schools of fish meander their way between the thick
+reeds and carpet of lily pads, occasionally breaking the surface to snap at a
+fly or gnat searching for a drop of water.
+   The slow eddy of water slips southwards into a faster moving current, pushed
+slowly by the sedate influx of stagnant water from the west.
+~
+4 1 6
+D2
+~
+~
+0 0 448
+D3
+~
+~
+0 0 456
+S
+#458
+A swift channel~
+   Steep granite banks push inwards against the swift moving water. Small
+ferns and tufts of grass push outwards from clefts in the rock, reaching upward
+towards the light, basking in the slight spray as the water swirls against the
+jagged rock. A small tree clings tightly to a small ledge in the rock, reaching
+upwards to spread its canopy over the small channel.
+   The channel turns south rushing into the jungle as it flows down from the
+west.
+~
+4 1 6
+D2
+~
+~
+0 0 455
+D3
+~
+~
+0 0 459
+S
+#459
+A swift channel~
+   The channel rushes out through a cleft in the rock, tumbling downwards
+across boulders and fallen logs as it races into the widening river bed. Shrubs
+and small trees hang over the edge, their bright green leaves shiny in the 
+chaotic mist rising from the water. 
+   The water rushes into a larger channel to the east, while to the west the
+rock cleft opens up into a large still pool.
+~
+4 1 6
+D1
+~
+~
+0 0 458
+D3
+~
+~
+0 0 460
+S
+#460
+A deep pool~
+   Thick brush grows wild and tangled along the banks of the pond. The glassy
+surface reflects the branches and leaves of the trees as they hang over the
+edge of the still, dark waters. Dark green lily pads dot the shore, wide fronds
+alive with small frogs and bugs darting to and fro. Large chunks of granite
+line the eastern edge, a natural barrier rising up from the soft ground.
+   A small break in the foliage leads out of the muddy water up into the trees
+to the west, while a cleft in the rock to the east lets the water tumble out 
+into a small channel amongst the trees.
+~
+4 5 6
+D1
+~
+~
+0 0 459
+D3
+~
+boulder~
+8 0 213
+S
+#461
+A narrow stream~
+   Long slender branches reach over the narrow stream, scraping at the surface
+with their spiny fingers. Dead leaves, grass and long narrow reeds float
+sedately on the surface, winding their way between the narrow islands and long
+roots on the shore. 
+   The stream continues to flow south from the larger channel to the north.
+~
+4 1 6
+D0
+~
+~
+0 0 462
+D2
+~
+~
+0 0 463
+S
+#462
+A narrow stream~
+   Low hanging branches sweep the top of  the small stream, grass and reeds
+growing thick around the muddy bank. Small fish dart between the lily pads that
+grow in the shallow current, jumping through swarms of gnats and mosquitos in
+search of a bite to eat. 
+   The shallow stream continues to the south, branching off from the main 
+channel to the north.
+~
+4 1 6
+D0
+~
+~
+0 0 447
+D2
+~
+~
+0 0 461
+S
+#463
+A narrow bend in the stream~
+   Thick underbrush chokes the side of the stream. Dark, saturated roots plunge
+beneath the surface into the thick mud bottom. A solid wall of lichen covered
+granite rise to the south, the slow stream churning against its base. Swarms of
+gnats and flies hover in clouds above the murky water, the occasional frog or
+fish interrupting their ceaseless buzzing.
+   The stream turns east against the rock, winding its way farther into the
+jungle, while upstream to the north the stagnant water teems with life.
+~
+4 1 6
+D0
+~
+~
+0 0 461
+D1
+~
+~
+0 0 464
+S
+#464
+A slow moving current~
+   Wide banks allow the stream to move sedately along, no trace of rapids or
+waves stirring the glassy surface. A few small ripples radiate out from where
+a fish has leaped through a small cloud of gnats, ever widening circles moving
+slowly down the stream.
+   The river slides slowly east, as a small stream cuts away from the channel
+to the north. A small bend in the river is visible to the west.
+~
+4 1 6
+D0
+~
+~
+0 0 465
+D1
+~
+~
+0 0 468
+D3
+~
+~
+0 0 463
+S
+#465
+A slow, root choked stream~
+   Tall trees plunge their roots into the stream from the steep banks. Long
+limbs thrust their way beneath the still, stagnant surface. Clouds of flies
+and gnats choke the air, buzzing and weaving their way above the muddy surface.
+   The stream opens back up to a wider channel to the south while the channel
+north looks to be clogged with more roots and reeds.
+~
+4 1 6
+D0
+~
+~
+0 0 466
+D2
+~
+~
+0 0 464
+S
+#466
+A slow, root choked stream~
+   Piles of algae float between the reeds and grass choking the muddy banks.
+Roots and branches spear the surface of the water, reaching downwards towards
+the murky bottom. Small fish shelter beneath the hanging boughs, gills pulsing
+as they eye the gnats swirling beneath the leaves overhead.
+   The oozing water swirls to the east and south between the thick roots and
+grass growing from the silty bottom.
+~
+4 1 6
+D1
+~
+~
+0 0 467
+D2
+~
+~
+0 0 465
+S
+#467
+A small pool choked with roots and reeds~
+   Thick clouds of gnats and mosquitos buzz hungrily through the heavy, warm
+air. Thick shrubs sprout between the tree trunks lining the shore, spiny arms
+poking downwards through the glassy surface. Long trails of lichen hang from
+the trees, trailing edges skimming the surface of the water.
+   Heavy roots push downwards along the muddy bank, knots and turns twisting
+about each other as they search for the silty bottom beneath the water. To the
+west the pool stretches into a small stream filtering through the reeds and 
+lily pads.
+~
+4 0 6
+D1
+~
+~
+0 0 238
+D3
+~
+~
+0 0 466
+S
+#468
+A slow moving current~
+   The tree canopy falls back from the slow moving river, the sky coming into
+view for just a short while. Tall granite rock rises high on each side of the
+current pressing the stream onwards. A few ferns dot the cliff face, bright
+spots of green on a start grey palette. 
+   The river meanders its way from west to east, flowing between the towering
+cliffs back into the jungle.
+~
+4 1 6
+D1
+~
+~
+0 0 469
+D3
+~
+~
+0 0 464
+S
+#469
+A slow moving current~
+   Tall granite cliffs fall away into the encroaching jungle. Trees and brush
+struggle for footholds on the lichen and fern covered surfaces fighting to cover
+the monotonous grey in a field of patchwork greens. A tall willow bends its
+thin branches into the slow stream, leaving a small trail of bubbles as the
+current carries the water farther on.
+   The river curves south into the jungle while to the west tall cliffs loom
+over the meandering waterway.
+~
+4 1 6
+D2
+~
+~
+0 0 470
+D3
+~
+~
+0 0 468
+S
+#470
+A slow moving current~
+   Thick leafy boughs block the sky as the slow water passes by underneath. The
+trill of birdsong floats through the air as bright flashes of color swoop and
+dive in search of small fish or grubs in the muddy riverbank. Clouds of bugs
+swell and buzz in the shade of the tree roots, above clusters of tall reeds
+that bob and dance in the shifting current.
+   The river flows sedately from north to south past a small muddy path leading
+east from the saturated bank.
+~
+4 5 6
+D0
+~
+~
+0 0 469
+D1
+~
+~
+0 0 214
+D2
+~
+~
+0 0 471
+S
+#471
+A widening river~
+   The river banks widen as the current rushes onwards. Tall brambles and vines
+twist their way among the small trees fencing in the steep banks on each side.
+A rotten tree has smashed through the choking vines, stretching its broken
+limbs into the river causing ripples to dance and spray a fine mist into the
+air as the current rushes downstream.
+   The river flows runs from north to south, picking up speed as it approaches
+a bend.
+~
+4 1 6
+D0
+~
+~
+0 0 470
+D2
+~
+~
+0 0 472
+S
+#472
+A bend in the river~
+   Foaming water gushes across newly formed river banks as a cluster of fallen
+tree trunks and large boulders choke the old riverbed to the south. Mud and
+rock splash heavily down as the water cuts away at the soft soil, roots and
+grass bobbing on the dashing waves as they are carried away. A loud roaring
+sound echoes up the river, noise jumping from rock and tree in a steady
+cacophony of crashing water. 
+   The new river bank sweeps around the corner from the north, heading eastwards
+disappearing in a spray of white foam and crashing rock.
+~
+4 1 6
+D0
+~
+~
+0 0 471
+D1
+~
+~
+0 0 474
+S
+#473
+A sluggish channel~
+   Grass and mud chokes the stream as murky water pushes its way through from
+the river. Clouds of flies dart and dance over the reeds and lillies as small
+frogs try desperately to catch a quick meal. Small snakes and fish dart about
+in the still water, seeking the shadows of small trees and shrubs. 
+   The slow current pushes through the choking reeds to the east, while to the
+south the main current wends its way slowly west.
+~
+4 1 6
+D1
+~
+~
+0 0 475
+D2
+~
+~
+0 0 450
+S
+#474
+A gushing waterfall~
+   Tall granite chunks stand high in the water as dirt, rock and grass swirl
+past and disappear in a crash of white water over the edge of the cliff. The
+echo of water fountaining into the endless sea below echos up the sides of the
+cliff, as the wind whips a soft spray back up the waterfall as tons of water
+pour into the ocean in ceaseless repetition. A log succumbs to the pounding 
+current and vanishes in a spray of splinters into the ocean below, bobbing and
+diving again as it escapes into the sea.
+~
+4 5 6
+D3
+~
+~
+0 0 472
+S
+#475
+A sluggish current~
+   Thick mud sucks at the brush and shrubs that try to grow along the edges of
+the marsh. Rivulets of water push through the reeds and grass that choke the
+channel, saturating the ground and attracting swarms of bugs. Tall trees push
+their roots into the soft ground pushing their canopies high overhead. Small
+green lilypads stretch out across the still, stagnant water, bobbing as toads
+leap from pad to pad.
+   The stream vanishes into the marshy ground here, the ground too swampy and
+soft to travel on. To the west the channel deepens among the roots and reeds.
+~
+4 1 6
+D3
+~
+~
+0 0 473
+S
+#476
+Amidst the cresting waves~
+   Thunderous waves crest and crash upon each other, tumbling in long rows of
+grey and green. Tossing spray across the deep troughs in an endless game, 
+flecks of foam dancing upon the glassy surface of each watery mountain.
+   The rows of white tipped sea-green mountains stretches inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 479
+D1
+~
+~
+0 0 480
+D2
+~
+~
+0 0 499
+D3
+~
+~
+0 0 493
+S
+#477
+Amidst the cresting waves~
+   Strong currents rush out to sea as the rushing river pours out of the
+estuary amid the jungle trees. Crashing surf thunders downward as the undertow
+pulls dirt, logs and chunks of grass out into the towering waves. Sharp coral
+stabs upwards as the troughs between waves tears its way across a small reef.
+   The heavy current rushes west into the surf.
+~
+4 2097152 6
+D0
+~
+~
+0 -1 482
+D2
+~
+~
+0 -1 489
+D3
+~
+~
+0 0 497
+S
+#478
+Amidst the cresting waves~
+   White foam races up the back of the rolling breakers, hovering just a moment
+before plunging deep into the the black depths below. Row of cresting waves 
+march indomitably onwards as the wind whips the peaks into a frenzy of white
+water. Tons of water heave and undulate as the swirling currents tug downwards
+into the black, cold depths.
+   The rows of white tipped sea-green mountains stretches inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 499
+D1
+~
+~
+0 0 482
+D2
+~
+~
+0 0 479
+D3
+~
+~
+0 0 496
+S
+#479
+Amidst the cresting waves~
+   Heaving swells toss and churn the foaming water as the steel grey waves
+crash and rise in endless succession. Bits of froth scatter in the wind as it
+swirls through the troughs between the breakers. Bits of driftwood ride the
+back of the waves as they build, then crash down into the steel grey water,
+bobbing and dancing as the current pushes it farther and farther out to sea.
+  The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 478
+D1
+~
+~
+0 0 483
+D2
+~
+~
+0 0 476
+D3
+~
+~
+0 0 498
+S
+#480
+Amidst the cresting waves~
+   White foam races up the back of the rolling breakers, hovering just a moment
+before plunging deep into the the black depths below. Rows of cresting waves 
+march indomitably onwards as the wind whips the peaks into a frenzy of white
+water. Tons of water heave and undulate as the swirling currents tug downwards
+into the black, cold depths.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 483
+D1
+~
+~
+0 0 484
+D2
+~
+~
+0 0 481
+D3
+~
+~
+0 0 476
+S
+#481
+Amidst the cresting waves~
+   Heaving swells toss and churn the foaming water as the steel grey waves
+crash and rise in endless succession. Bits of froth scatter in the wind as it
+swirls through the troughs between the breakers. Bits of driftwood ride the
+back of the waves as they build, then crash down into the steel grey water,
+bobbing and dancing as the current pushes it farther and farther out to sea.
+  The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 480
+D1
+~
+~
+0 0 485
+D2
+~
+~
+0 0 482
+S
+#482
+Amidst the cresting waves~
+   Thunderous waves crest and crash upon each other, tumbling in long rows of
+grey and green. Tossing spray across the deep troughs in an endless game, 
+flecks of foam dancing upon the glassy surface of each watery mountain.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 481
+D1
+~
+~
+0 0 486
+D2
+~
+~
+0 0 483
+D3
+~
+~
+0 0 478
+S
+#483
+Amidst the cresting waves~
+   White foam races up the back of the rolling breakers, hovering just a moment
+before plunging deep into the the black depths below. Rows of cresting waves 
+march indomitably onwards as the wind whips the peaks into a frenzy of white
+water. Tons of water heave and undulate as the swirling currents tug downwards
+into the black, cold depths.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 482
+D1
+~
+~
+0 0 487
+D2
+~
+~
+0 0 480
+D3
+~
+~
+0 0 479
+S
+#484
+Amidst the cresting waves~
+   Heaving swells toss and churn the foaming water as the steel grey waves
+crash and rise in endless succession. Bits of froth scatter in the wind as it
+swirls through the troughs between the breakers. Bits of driftwood ride the
+back of the waves as they build, then crash down into the steel grey water,
+bobbing and dancing as the current pushes it farther and farther out to sea.
+  The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 487
+D1
+~
+~
+0 0 488
+D2
+~
+~
+0 0 485
+D3
+~
+~
+0 0 480
+S
+#485
+Amidst the cresting waves~
+   Thunderous waves crest and crash upon each other, tumbling in long rows of
+grey and green. Tossing spray across the deep troughs in an endless game, 
+flecks of foam dancing upon the glassy surface of each watery mountain.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 484
+D1
+~
+~
+0 0 489
+D2
+~
+~
+0 0 486
+D3
+~
+~
+0 0 481
+S
+#486
+Amidst the cresting waves~
+   Heaving swells toss and churn the foaming water as the steel grey waves
+crash and rise in endless succession. Bits of froth scatter in the wind as it
+swirls through the troughs between the breakers. Bits of driftwood ride the
+back of the waves as they build, then crash down into the steel grey water,
+bobbing and dancing as the current pushes it farther and farther out to sea.
+  The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 485
+D1
+~
+~
+0 0 490
+D2
+~
+~
+0 0 487
+D3
+~
+~
+0 0 482
+S
+#487
+Amidst the cresting waves~
+   Thunderous waves crest and crash upon each other, tumbling in long rows of
+grey and green. Tossing spray across the deep troughs in an endless game, 
+flecks of foam dancing upon the glassy surface of each watery mountain.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 486
+D1
+~
+~
+0 0 491
+D2
+~
+~
+0 0 484
+D3
+~
+~
+0 0 483
+S
+#488
+Amidst the cresting waves~
+   White foam races up the back of the rolling breakers, hovering just a moment
+before plunging deep into the the black depths below. Rows of cresting waves 
+march indomitably onwards as the wind whips the peaks into a frenzy of white
+water. Tons of water heave and undulate as the swirling currents tug downwards
+into the black, cold depths.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 491
+D1
+~
+~
+0 0 492
+D2
+~
+~
+0 0 489
+D3
+~
+~
+0 0 484
+S
+#489
+Amidst the cresting waves~
+   Thunderous waves crest and crash upon each other, tumbling in long rows of
+grey and green. Tossing spray across the deep troughs in an endless game, 
+flecks of foam dancing upon the glassy surface of each watery mountain.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 488
+D2
+~
+~
+0 0 490
+D3
+~
+~
+0 0 485
+S
+#490
+Amidst the cresting waves~
+   White foam races up the back of the rolling breakers, hovering just a moment
+before plunging deep into the the black depths below. Rows of cresting waves 
+march indomitably onwards as the wind whips the peaks into a frenzy of white
+water. Tons of water heave and undulate as the swirling currents tug downwards
+into the black, cold depths.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 489
+D1
+~
+~
+0 0 495
+D2
+~
+~
+0 0 491
+D3
+~
+~
+0 0 486
+S
+#491
+Amidst the cresting waves~
+   Heaving swells toss and churn the foaming water as the steel grey waves
+crash and rise in endless succession. Bits of froth scatter in the wind as it
+swirls through the troughs between the breakers. Bits of driftwood ride the
+back of the waves as they build, then crash down into the steel grey water,
+bobbing and dancing as the current pushes it farther and farther out to sea.
+  The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 490
+D1
+~
+~
+0 0 497
+D2
+~
+~
+0 0 488
+D3
+~
+~
+0 0 487
+S
+#492
+Amidst the cresting waves~
+   Thunderous waves crest and crash upon each other, tumbling in long rows of
+grey and green. Tossing spray across the deep troughs in an endless game, 
+flecks of foam dancing upon the glassy surface of each watery mountain.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 497
+D1
+~
+~
+0 0 493
+D3
+~
+~
+0 0 488
+S
+#493
+Amidst the cresting waves~
+   Heaving swells toss and churn the foaming water as the steel grey waves
+crash and rise in endless succession. Bits of froth scatter in the wind as it
+swirls through the troughs between the breakers. Bits of driftwood ride the
+back of the waves as they build, then crash down into the steel grey water,
+bobbing and dancing as the current pushes it farther and farther out to sea.
+  The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 498
+D1
+~
+~
+0 0 476
+D2
+~
+~
+0 0 494
+D3
+~
+~
+0 0 492
+S
+#494
+Amidst the cresting waves~
+   White foam races up the back of the rolling breakers, hovering just a moment
+before plunging deep into the the black depths below. Rows of cresting waves 
+march indomitably onwards as the wind whips the peaks into a frenzy of white
+water. Tons of water heave and undulate as the swirling currents tug downwards
+into the black, cold depths.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 493
+D1
+~
+~
+0 0 499
+D2
+~
+~
+0 0 496
+S
+#495
+Against a rocky shore~
+   Steel grey waves crash upon the rocky shore of a small island. White foam 
+explodes outwards as the crushing water searches for a way to break the high
+granite barrier ringing the lush jungle. Splintered driftwood litters the shore
+crushed by the relentless surf and rising tides. 
+   A small break in the rock is visible to the north, thick green trees
+clinging desperately to the rock face over the pounding surf. Salt spray 
+glistening brightly on the lush foliage. Rows of white tipped sea-green 
+mountains stretch inexorably towards the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 200
+D1
+~
+~
+0 0 496
+D2
+~
+~
+0 0 497
+D3
+~
+~
+0 0 490
+S
+#496
+Amidst the cresting waves~
+   Heaving swells toss and churn the foaming water as the steel grey waves
+crash and rise in endless succession. Bits of froth scatter in the wind as it
+swirls through the troughs between the breakers. Bits of driftwood ride the
+back of the waves as they build, then crash down into the steel grey water,
+bobbing and dancing as the current pushes it farther and farther out to sea.
+  The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 494
+D1
+~
+~
+0 0 478
+D2
+~
+~
+0 0 498
+D3
+~
+~
+0 0 495
+S
+#497
+Amidst the cresting waves~
+   White foam races up the back of the rolling breakers, hovering just a moment
+before plunging deep into the the black depths below. Rows of cresting waves 
+march indomitably onwards as the wind whips the peaks into a frenzy of white
+water. Tons of water heave and undulate as the swirling currents tug downwards
+into the black, cold depths.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 495
+D1
+~
+~
+0 0 477
+D2
+~
+~
+0 0 492
+D3
+~
+~
+0 0 491
+S
+#498
+Amidst the cresting waves~
+   Thunderous waves crest and crash upon each other, tumbling in long rows of
+grey and green. Tossing spray across the deep troughs in an endless game, 
+flecks of foam dancing upon the glassy surface of each watery mountain.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 496
+D1
+~
+~
+0 0 479
+D2
+~
+~
+0 0 493
+S
+#499
+Amidst the cresting waves~
+   Thunderous waves crest and crash upon each other, tumbling in long rows of
+grey and green. Tossing spray across the deep troughs in an endless game, 
+flecks of foam dancing upon the glassy surface of each watery mountain.
+   The rows of white tipped sea-green mountains stretch inexorably towards
+the horizon in all directions.
+~
+4 2097152 6
+D0
+~
+~
+0 0 476
+D1
+~
+~
+0 0 481
+D2
+~
+~
+0 0 478
+D3
+~
+~
+0 -1 3058
+S
+#0
+$~

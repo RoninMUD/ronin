@@ -1,0 +1,1806 @@
+#28900
+Grassy Path, Nearing a Town~
+    You finally emerge from your long forest trek into an open
+meadow. A stream runs along the grass-covered path that leads you
+to a fair-sized but unfamiliar town ahead.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28901
+S
+#28901
+At The Village Gate~
+    You stand before a small wooden gate. Beyond it you can see
+clusters of buildings and a path leading between them.
+~
+289 33296 1
+D0
+A small gate stands here, coated with flaking white paint.
+~
+Gate~
+1 -1 28902
+D2
+~
+~
+0 -1 28900
+S
+#28902
+Market Street South~
+   This is a narrow, cobbled avanue. A sign posted overhead marks it
+as Market Street South. There are many empty stalls where prosperous
+businesses once stood.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28903
+D2
+A small gate stands here, coated with flaking white paint.
+~
+Gate~
+1 -1 28901
+S
+#28903
+Market Street South~
+    The cobbled avanue marked as Market Street South continues on.
+To the West you notice one of the now-defunct businesses. Damn, should
+have made an appearence sooner.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28904
+D2
+~
+~
+0 -1 28902
+D3
+Devastation keeps you from enter this shop.. better find a key.
+~
+Devestation~
+1 28911 28990
+S
+#28904
+Market Street South~
+    Boarded up shops line Market Street South here and the rest of the
+way leading to the main square. The signs of these shops have been
+torn down and you can't tell what they used to be.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28905
+D2
+~
+~
+0 -1 28903
+S
+#28905
+Market Street South~
+    Market Street South continues toward the main square with closed
+shops lining the narrow cobbled path. You can't see anyone around but
+you can tell the town isn't completely deserted.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28906
+D1
+Rubble blocks the entrance to this shop..but it seems to have a keyhole.
+~
+Rubble~
+1 28911 28991
+D2
+~
+~
+0 -1 28904
+S
+#28906
+Market Street South~
+    More boarded up shops line Market Street South here. The narrow
+cobbled avanue merges into the larger Market Square to the North.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28907
+D2
+~
+~
+0 -1 28905
+S
+#28907
+The Market Square of Ospenpri~
+   This once busy hub of local activity and trading now stand empty.
+empty husks of what used to be businesses stand periodically around
+the square. Loose cobbles jut up from the street below. This must have
+once been a very fine town. Market streets lead in all directions.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28908
+D1
+~
+~
+0 -1 28909
+D2
+~
+~
+0 -1 28906
+D3
+~
+~
+0 -1 28918
+S
+#28908
+Market Street North~
+    This is the Northern portion of Market Street, as is proclaimed by
+the sign posted high on a lamp post here. The evenue is narrow and
+cobbled. Empty shops stand on both sides, boarded up to prevent
+trespassing. A large house appears at the end of this lane.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28914
+D2
+~
+~
+0 -1 28907
+S
+#28909
+Market Street East~
+    This is the Eastern section of Market Street. It looks
+very similar to the other streets of this town. It is narrow and
+loosely cobbled. The businesses which still stand on the sides
+of the street are boarded up.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28910
+D3
+~
+~
+0 -1 28907
+S
+#28910
+Market Street East~
+    This is the Eastern section of Market Street. It looks
+very similar to the other streets of this town. It is narrow and
+loosely cobbled. The businesses which still stand on the sides
+of the street are boarded up.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28911
+D2
+A door leading to an abandoned shop.
+~
+door~
+1 28911 28996
+D3
+~
+~
+0 -1 28909
+S
+#28911
+Market Street East~
+    This is the Eastern section of Market Street. It looks
+very similar to the other streets of this town. It is narrow and
+loosely cobbled. The businesses which still stand on the sides
+of the street are boarded up.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28912
+D3
+~
+~
+0 -1 28910
+D5
+Its a bird! Its a plane! No! Its...
+~
+whapwhapwhap~
+10 -1 28998
+S
+#28912
+Market Street East~
+    This is the Eastern section of Market Street. It looks
+very similar to the other streets of this town. It is narrow and
+loosely cobbled. The businesses which still stand on the sides
+of the street are boarded up.
+~
+289 33296 1
+D0
+The door of an abandoned shop.
+~
+door~
+1 28911 28997
+D1
+~
+~
+0 -1 28913
+D3
+~
+~
+0 -1 28911
+S
+#28913
+Market Street East~
+    This is the Eastern section of Market Street. It looks
+very similar to the other streets of this town. It is narrow and
+loosely cobbled. The businesses which still stand on the sides
+of the street are boarded up.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28948
+D3
+~
+~
+0 -1 28912
+S
+#28914
+Market Street North~
+    This is the Northern portion of Market Street, as is proclaimed by
+the sign posted high on a lamp post here. The evenue is narrow and
+cobbled. Empty shops stand on both sides, boarded up to prevent
+trespassing. A large house appears at the end of this lane.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28915
+D2
+~
+~
+0 -1 28908
+D3
+The door to an abandoned shop.
+~
+door~
+1 28911 28992
+S
+#28915
+Market Street North~
+    This is the Northern portion of Market Street, as is proclaimed by
+the sign posted high on a lamp post here. The evenue is narrow and
+cobbled. Empty shops stand on both sides, boarded up to prevent
+trespassing. A large house appears at the end of this lane.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28916
+D2
+~
+~
+0 -1 28914
+S
+#28916
+Market Street North~
+    This is the Northern portion of Market Street, as is proclaimed by
+the sign posted high on a lamp post here. The evenue is narrow and
+cobbled. Empty shops stand on both sides, boarded up to prevent
+trespassing. A large house appears at the end of this lane.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28917
+D1
+The door of an abandoned shop.
+~
+door~
+1 28911 28993
+D2
+~
+~
+0 -1 28915
+S
+#28917
+Market Street North~
+    This is the Northern portion of Market Street, as is proclaimed by
+the sign posted high on a lamp post here. The evenue is narrow and
+cobbled. Empty shops stand on both sides, boarded up to prevent
+trespassing. A large house appears at the end of this lane.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28972
+D2
+~
+~
+0 -1 28916
+S
+#28918
+Market Street West~
+    This is the Western section of the once profitable
+Market area of Ospenpri. Since the great wizard fell
+ill the town has been surrounded by a great curse, which
+cause all the businesses to take a hike. The once fine
+cobblestone road slowly and silently degenerates along
+with the empty husks of buildings.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28907
+D3
+~
+~
+0 -1 28919
+S
+#28919
+Market Street West~
+    This is the Western section of the once profitable
+Market area of Ospenpri. Since the great wizard fell
+ill the town has been surrounded by a great curse, which
+cause all the businesses to take a hike. The once fine
+cobblestone road slowly and silently degenerates along
+with the empty husks of buildings.
+~
+289 33296 1
+D0
+The locked door of a closed shop.
+~
+door~
+1 28911 28994
+D1
+~
+~
+0 -1 28918
+D3
+~
+~
+0 -1 28920
+S
+#28920
+Market Street West~
+    This is the Western section of the once profitable
+Market area of Ospenpri. Since the great wizard fell
+ill the town has been surrounded by a great curse, which
+cause all the businesses to take a hike. The once fine
+cobblestone road slowly and silently degenerates along
+with the empty husks of buildings.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28919
+D3
+~
+~
+0 -1 28921
+S
+#28921
+Market Street West~
+    This is the Western section of the once profitable
+Market area of Ospenpri. Since the great wizard fell
+ill the town has been surrounded by a great curse, which
+cause all the businesses to take a hike. The once fine
+cobblestone road slowly and silently degenerates along
+with the empty husks of buildings.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28920
+D2
+A door, nearly off its hinges, blocks a shop to the South.
+~
+door~
+1 28911 28995
+D3
+~
+~
+0 -1 28922
+S
+#28922
+Market Street West~
+    This is the Western section of the once profitable
+Market area of Ospenpri. Since the great wizard fell
+ill the town has been surrounded by a great curse, which
+cause all the businesses to take a hike. The once fine
+cobblestone road slowly and silently degenerates along
+with the empty husks of buildings.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28921
+D3
+~
+~
+0 -1 28923
+S
+#28923
+Path to the Outskirts of Town~
+    The cobblestone road degenerates to packed dirt
+as it leaves the downtown area and heads toward the
+residential areas where the towns folk live.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28922
+D3
+~
+~
+0 -1 28924
+S
+#28924
+Path to the Outskirts of Town~
+    The cobblestone road degenerates to packed dirt
+as it leaves the downtown area and heads toward the
+residential areas where the towns folk live.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28923
+D3
+~
+~
+0 -1 28925
+S
+#28925
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28926
+D1
+~
+~
+0 -1 28924
+D2
+~
+~
+0 -1 28938
+S
+#28926
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28930
+D2
+~
+~
+0 -1 28925
+D3
+A cottage front door is here, bearing proudly the engraving of a giant ass.
+~
+door~
+1 28902 28927
+S
+#28927
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D1
+The front door leads out onto the street in front.
+~
+door~
+1 28902 28926
+D3
+A small, concealed door in part of the far wall.
+~
+door~
+1 28910 28929
+D4
+A small square in the ceiling indicates a trapdoor over a bookcase.
+~
+bookcase~
+11 -1 28928
+S
+#28928
+The Attic of a Residency~
+    The attic of this residency is dark and dusty. Ancient looking
+boxes are piled in all the corners, collecting dust. A musty smell
+eminates from all over the room, almost overwhelming you. Who
+knows what secret ancient treasures could reside in any of these
+long forgotten packages.
+~
+289 33296 0
+D5
+Back down the bookcase and into the residency below.
+~
+bookcase~
+11 -1 28927
+S
+#28929
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D1
+A small, hidden door leads back into the house.
+~
+door~
+1 28910 28927
+S
+#28930
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 0
+D0
+~
+~
+0 -1 28934
+D1
+The front door here has no distinguishing features whatsoever.
+~
+door~
+1 28901 28931
+D2
+~
+~
+0 -1 28926
+S
+#28931
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D1
+A small, concealed door is part of the back wall.
+~
+door~
+1 28910 28933
+D3
+The front door leads back to the street.
+~
+door~
+1 28901 28930
+D5
+Some loose floorboards creak loudly underfoot.
+~
+floorboard~
+9 -1 28932
+S
+#28932
+The Cellar of a Residency~
+    The basement is dark and dank. Old crates of various
+supplies are stacked haphazardly around the place. The
+moisture which dominates this underground room is begining
+the slow process of rotting the crates and everything else,
+making an overpowering stench.
+~
+289 33296 0
+D4
+Some loose floorboards let alot of light filter down from the main room.
+~
+floorboard~
+9 -1 28931
+S
+#28933
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D3
+A small door leads back into the house.
+~
+door~
+1 28910 28931
+S
+#28934
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 0
+D2
+~
+~
+0 -1 28930
+D3
+The front door here is carved with strange, magical runes.
+~
+door~
+1 28900 28935
+S
+#28935
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D1
+The front door leads back onto the street.
+~
+door~
+1 28900 28934
+D3
+A small, concealed door is on the far wall.
+~
+door~
+1 28910 28937
+D4
+The outline of a trapdoor is over a large chair.
+~
+chair~
+11 -1 28936
+S
+#28936
+The Attic of a Residency~
+    The attic of this residency is dark and dusty. Ancient looking
+boxes are piled in all the corners, collecting dust. A musty smell
+eminates from all over the room, almost overwhelming you. Who
+knows what secret ancient treasures could reside in any of these
+long forgotten packages.
+~
+289 33296 0
+D5
+The trapdoor that leads back into the main room.
+~
+chair~
+11 -1 28935
+S
+#28937
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D1
+A small back door leading back into the house.
+~
+door~
+1 28910 28935
+S
+#28938
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28925
+D3
+~
+~
+0 -1 28939
+S
+#28939
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28938
+D2
+~
+~
+0 -1 28940
+D3
+~
+~
+0 -1 28947
+S
+#28940
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28939
+D2
+The front door of this cottage is engraved with a mighty, proud Lion.
+~
+door~
+1 28904 28944
+D3
+This door has a large turnip on it.
+~
+door~
+1 28903 28941
+S
+#28941
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D1
+The front door, leading back to the street.
+~
+door~
+1 28910 28940
+D2
+A small, concealed door is part of the far wall.
+~
+door~
+1 28910 28943
+D5
+A fairly large hole in the corner appears to lead to a room below.
+~
+hole~
+9 -1 28942
+S
+#28942
+The Cellar of a Residency~
+    The basement is dark and dank. Old crates of various
+supplies are stacked haphazardly around the place. The
+moisture which dominates this underground room is begining
+the slow process of rotting the crates and everything else,
+making an overpowering stench.
+~
+289 33296 0
+D4
+A hole in the ceiling lets in light from the house above.
+~
+hole~
+9 -1 28941
+S
+#28943
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D0
+A small door leading back into the house.
+~
+door~
+1 28910 28941
+D2
+You see nothing special. Or do you... ?
+~
+glarampel~
+10 -1 28999
+S
+#28944
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D0
+The front door leading back to the street.
+~
+door~
+1 28904 28940
+D1
+A small, concealed door is part of the far wall.
+~
+door~
+1 28910 28946
+D4
+Strangely, a rope is hanging from a hole in the ceiling.
+~
+rope~
+11 -1 28945
+S
+#28945
+The Attic of a Residency~
+    The attic of this residency is dark and dusty. Ancient looking
+boxes are piled in all the corners, collecting dust. A musty smell
+eminates from all over the room, almost overwhelming you. Who
+knows what secret ancient treasures could reside in any of these
+long forgotten packages.
+~
+289 33296 0
+D5
+A rope leads back into the main room.
+~
+rope~
+11 -1 28944
+S
+#28946
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D3
+A small door leads back into the house.
+~
+door~
+1 28910 28944
+S
+#28947
+A Path into the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D1
+~
+~
+0 -1 28939
+D3
+~
+~
+0 -1 28980
+S
+#28948
+Path to the Outskirts of Town~
+    The cobblestone road degenerates to packed dirt
+as it leaves the downtown area and heads toward the
+residential areas where the towns folk live.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28949
+D3
+~
+~
+0 -1 28913
+S
+#28949
+Path to the Outskirts of Town~
+    The cobblestone road degenerates to packed dirt
+as it leaves the downtown area and heads toward the
+residential areas where the towns folk live.
+~
+289 33296 1
+D1
+~
+~
+0 -1 28950
+D3
+~
+~
+0 -1 28948
+S
+#28950
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28951
+D2
+~
+~
+0 -1 28963
+D3
+~
+~
+0 -1 28949
+S
+#28951
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28955
+D1
+This residencys door is covered with a disgusting slime mold!
+~
+door~
+1 28907 28952
+D2
+~
+~
+0 -1 28950
+S
+#28952
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D1
+A small, concealed door is part of the far wall.
+~
+door~
+1 28910 28953
+D3
+The front door leads back to the street.
+~
+door~
+1 28907 28951
+D4
+Hanging from the ceiling is a variety of lights and crystals.. god what are those called? hrm.. starts with a C... Ch..
+~
+chandelier~
+11 -1 28954
+S
+#28953
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D3
+A small door leads back into the house.
+~
+door~
+1 28910 28952
+S
+#28954
+The Attic of a Residency~
+    The attic of this residency is dark and dusty. Ancient looking
+boxes are piled in all the corners, collecting dust. A musty smell
+eminates from all over the room, almost overwhelming you. Who
+knows what secret ancient treasures could reside in any of these
+long forgotten packages.
+~
+289 33296 0
+D5
+Good job! Chandelier it is.
+~
+chandelier~
+11 -1 28952
+S
+#28955
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28956
+D2
+~
+~
+0 -1 28951
+D3
+It is a residency's door- engraved with a likeness of the Fungus King.
+~
+door~
+1 28906 28957
+S
+#28956
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D1
+The front door of a small residency.. it is the bright yellow color of bananas.
+~
+door~
+1 28905 28960
+D2
+~
+~
+0 -1 28955
+S
+#28957
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D1
+The front door leads back to the street.
+~
+door~
+1 28906 28955
+D2
+A small, concealed door is part of the far wall.
+~
+door~
+1 28910 28959
+D5
+There is a wide crack between two floorboards.
+~
+crack~
+9 -1 28958
+S
+#28958
+The Cellar of a Residency~
+    The basement is dark and dank. Old crates of various
+supplies are stacked haphazardly around the place. The
+moisture which dominates this underground room is begining
+the slow process of rotting the crates and everything else,
+making an overpowering stench.
+~
+289 33296 0
+D4
+Oooooooo... crack...
+~
+crack~
+9 -1 28957
+S
+#28959
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D0
+A small door leads back into the house.
+~
+door~
+1 28910 28957
+S
+#28960
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D0
+A small, concealed door is part of the far wall.
+~
+door~
+1 28910 28961
+D3
+The front door leading back to the street.
+~
+door~
+1 28905 28956
+D4
+A small ladder is against the side wall.
+~
+ladder~
+11 -1 28962
+S
+#28961
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D2
+A small door leads back into the house.
+~
+door~
+1 28910 28960
+S
+#28962
+The Attic of a Residency~
+    The attic of this residency is dark and dusty. Ancient looking
+boxes are piled in all the corners, collecting dust. A musty smell
+eminates from all over the room, almost overwhelming you. Who
+knows what secret ancient treasures could reside in any of these
+long forgotten packages.
+~
+289 33296 0
+D5
+A ladder leading back into the main room.
+~
+ladder~
+11 -1 28960
+S
+#28963
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D0
+~
+~
+0 -1 28950
+D1
+~
+~
+0 -1 28964
+S
+#28964
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 1
+D2
+~
+~
+0 -1 28965
+D3
+~
+~
+0 -1 28963
+S
+#28965
+A Residential Area~
+    This is a rural, dusty road that winds around on the
+outskirts of Ospenpri. Small houses appear periodically
+along the roads length. The houses are all very similar
+in size and appearence. All are a faded whitish color with
+tall brick chimneys and slightly out of repair tile roofs.
+~
+289 33296 0
+D0
+~
+~
+0 -1 28964
+D1
+A residencys door is engraved with what appears to be a giant sweat sock.
+~
+door~
+1 28908 28967
+D2
+The front door of a small cottage- It is engraved with a large squirrel.
+~
+door~
+1 28909 28966
+S
+#28966
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D0
+The front door leading back onto the street.
+~
+door~
+1 28909 28965
+D2
+A small, concealed door is part of the far wall.
+~
+door~
+1 28910 28969
+D5
+There appears to be a hole in the floor covered by a strange.. television.
+~
+television~
+9 -1 28968
+S
+#28967
+A Residency~
+    It is a small, quaint residency. It appears well kept and
+well lived in. A small fireplace sits empty in the corner, and
+aging but comfortable looking furniture is spread about the
+place. Pictures of long lost relatives and long ago times
+line the walls.
+~
+289 33296 0
+D1
+A small, concealed door is part of the far wall.
+~
+door~
+1 28910 28970
+D3
+The front door leading back to the street.
+~
+door~
+1 28908 28965
+D5
+The broken off butt end of a massive rifle is mostly covering a hole in the floor.
+~
+butt~
+9 -1 28971
+S
+#28968
+The Cellar of a Residency~
+    The basement is dark and dank. Old crates of various
+supplies are stacked haphazardly around the place. The
+moisture which dominates this underground room is begining
+the slow process of rotting the crates and everything else,
+making an overpowering stench.
+~
+289 33296 0
+D4
+A hollowed out television covers a hole in the floor of the room above.
+~
+television~
+9 -1 28966
+S
+#28969
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D0
+A small door leads back into the house.
+~
+door~
+1 28910 28966
+S
+#28970
+The Garden Behind a Residency~
+    A small but very well kept garden is found hidden
+behind this residency. It looks to be full of a nice variety
+of vegetables and strange herbs. The rows are neatly tilled
+and seperated. The shade from the house appears to be
+perfect for keeping the plants safe from the burning summer
+sun. 
+~
+289 33296 0
+D3
+A small door leads back into the house.
+~
+door~
+1 28910 28967
+S
+#28971
+The Cellar of a Residency~
+    The basement is dark and dank. Old crates of various
+supplies are stacked haphazardly around the place. The
+moisture which dominates this underground room is begining
+the slow process of rotting the crates and everything else,
+making an overpowering stench.
+~
+289 33296 0
+D4
+You can see the hole in the floor above covered by the massive gun butt.
+~
+butt~
+9 -1 28967
+S
+#28972
+Path to the Elder's House~
+    The path here grows wider and better kept as it leads to the house
+of the elder wizard and high protector of Ospenpri's home. A large building
+looms just ahead.
+~
+289 33296 0
+D0
+~
+~
+0 -1 28973
+D2
+~
+~
+0 -1 28917
+S
+#28973
+In Front of the Elder's House~
+A temporary description
+~
+289 33296 0
+D0
+A large ornate front door in this large building.
+~
+door~
+1 -1 28974
+D2
+~
+~
+0 -1 28972
+S
+#28974
+The Elder's Entrance Hall~
+    This is a very grand entrance hall. Banners and weapons and scrolls
+covered in unintelligible runic writing adorn the walls. Exits to the rooms
+of Rolmnedar's fortress lie in all directions.
+~
+289 33296 0
+D0
+~
+~
+0 -1 28975
+D1
+~
+~
+0 -1 28976
+D2
+The large front door leads back to the street.
+~
+door~
+1 -1 28973
+D3
+~
+~
+0 -1 28977
+D4
+~
+~
+0 -1 28978
+D5
+~
+~
+0 -1 28979
+S
+#28975
+The Elder's Meeting Room~
+    This is a long room with a very long table stretching across it. Chairs
+spread across the room on both sides of it. Three large, ornate chandeliers
+hang from the ceiling high above.
+~
+289 33296 0
+D2
+~
+~
+0 -1 28974
+S
+#28976
+The Elder's Sleeping Chambers~
+    This is a much smaller and less impressive room. It is dark and quiet
+and cozy. A small fireplace is on the far wall with a fire burning steadily.
+A small cot is standing near it.
+~
+289 33296 0
+D3
+~
+~
+0 -1 28974
+S
+#28977
+The Elder's Casting Chambers~
+    This is a very simple looking room. No windows or furniture. The door
+stands open now but appears to be very reinforced. A large circle is painted
+in the middle of the floor and it is full of strange runes and symbols.
+~
+289 33296 0
+D1
+~
+~
+0 -1 28974
+S
+#28978
+The Elder's Storage Attic~
+    The attic of this residency is dark and dusty. Ancient looking
+boxes are piled in all the corners, collecting dust. A musty smell
+eminates from all over the room, almost overwhelming you. Who
+knows what secret ancient treasures could reside in any of these
+long forgotten packages.
+~
+289 33296 0
+D5
+~
+~
+0 -1 28974
+S
+#28979
+The Elder's Potion Storage Cellar~
+    The basement is dark and dank. Old crates of various
+supplies are stacked haphazardly around the place. The
+moisture which dominates this underground room is begining
+the slow process of rotting the crates and everything else,
+making an overpowering stench.
+~
+289 33296 0
+D4
+~
+~
+0 -1 28974
+S
+#28980
+In the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D0
+~
+~
+0 -1 28981
+D1
+~
+~
+0 -1 28947
+D3
+~
+~
+0 -1 28983
+S
+#28981
+In the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D2
+~
+~
+0 -1 28980
+D3
+~
+~
+0 -1 28982
+S
+#28982
+In the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D0
+~
+~
+0 -1 28984
+D1
+~
+~
+0 -1 28981
+D2
+~
+~
+0 -1 28983
+S
+#28983
+In the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D0
+~
+~
+0 -1 28982
+D1
+~
+~
+0 -1 28980
+S
+#28984
+In the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D2
+~
+~
+0 -1 28982
+D3
+~
+~
+0 -1 28985
+S
+#28985
+In the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D0
+~
+~
+0 -1 28987
+D1
+~
+~
+0 -1 28984
+D4
+A tree overhangs the path, bearing a strange colorful fruit.
+~
+tree~
+11 -1 28986
+S
+#28986
+Up in a Tree~
+    This tree has well spaced limbs, making it perfect for climbing. It gives
+off a sweet smell and is covered in strange purple fruit that looks to you
+like a cross between a grape and a banana.
+~
+289 33296 3
+D5
+Back down the tree to the ground below.
+~
+tree~
+11 -1 28985
+S
+#28987
+In the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D2
+~
+~
+0 -1 28985
+D3
+~
+~
+0 -1 28988
+S
+#28988
+In the Forest~
+    The path here is narrow, hard packed dirt. Dust kicks up
+behind your heels as you walk. Dense brush and trees line
+the path on both sides, holding your course true.
+~
+289 33296 3
+D1
+~
+~
+0 -1 28987
+D5
+A hole has been dug into the ground here.
+~
+hole~
+9 -1 28989
+S
+#28989
+At the Bottom of a Freshly Dug Hole~
+    Yep, it's a hole alright. You are surrounded by dirt.
+There is a hole overhead if you decide to leave...
+~
+289 33296 3
+D4
+Light filters through the hole into the... hole.
+~
+hole~
+9 -1 28988
+S
+#28990
+Steve's House of Stings~
+    The walls are covered with hooks where inventory once stood.
+One wall is covered with gashes where customers tested the finest
+of weapons before purchase.
+~
+289 33296 0
+D1
+Utter devestation between you and the street.
+~
+Devestation~
+1 28911 28903
+S
+#28991
+Mitch's Fine Meats~
+    A rancid smell fills this ex-butcher shop. Maybe all of
+the product wasn't removed in a timely enough manner. Blood
+stains cover the walls.
+~
+289 33296 0
+D3
+The rubble leading back to the street.
+~
+Rubble~
+1 28911 28905
+S
+#28992
+Roger's Shrubberys~
+    A few dead leaves spot the floor of what was once the most prosperous
+shop in the whole market district.
+~
+289 33296 0
+D1
+The door leading back to the street.
+~
+door~
+1 28911 28914
+S
+#28993
+Rexlar's Quest Gear Emporium~
+    Where once the most powerful quest gear in the world was hung and sold,
+now hangs only bare hooks and wires. Such a shame.
+~
+289 33296 0
+D3
+The door leading back to the street.
+~
+door~
+1 28911 28916
+S
+#28994
+Magical Herb Clearance~
+    Shelves once stocked with every kind of herb imaginable are
+now empty and covered with a thick layer of dust.
+~
+289 33296 0
+D2
+The door leading back to the street.
+~
+door~
+1 28911 28919
+S
+#28995
+Kenny's House of Adult Entertainment~
+    What can you say about Kenny?
+He loves his porn! Thats a fact!
+~
+289 33296 0
+D0
+The door out of the shop to the street.
+~
+door~
+1 28911 28921
+S
+#28996
+Paper Unlimited~
+    A once prosperous paper shop is reduced to a filthy broken mess.
+Dusty debris covers the floor.
+~
+289 33296 0
+D0
+The door back to the street.
+~
+door~
+1 28911 28910
+S
+#28997
+Calvin's Candies~
+    The lingering smell of candies of various types is the only thing
+pleasant about this decimated shop. The shelves are toppled all over the
+floor.
+~
+289 33296 0
+D2
+The door back to the street.
+~
+door~
+1 28911 28912
+S
+#28998
+SECRET ROOM!!~
+Are
+   You
+      Good
+          OR
+            What?
+~
+289 33296 0
+D4
+~
+~
+0 -1 28911
+S
+#28999
+SECRET ROOM!!~
+    WOO HOO! Bonus points! Who would have thunk it!
+~
+289 33296 0
+D0
+~
+~
+0 -1 28943
+S
+#0
+$~

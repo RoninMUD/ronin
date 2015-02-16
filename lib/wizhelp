@@ -1,0 +1,1146 @@
+AREA AREAS
+
+The following help entries are available.  They range
+from area standards to rewards for area creation and
+reviewing.
+
+"AREA STANDARDS"
+"AREA WRITING"
+"AREA SPECS"
+"AREA REVIEW"
+"AREA POINTS"
+
+#
+"AREA POINTS"
+
+Area points only exist on gods and can be redeemed
+for extra stats on a mortals equipment.
+
+50  area points - 1 damroll + 1 hitroll
+75  area points - 1 damroll + 2 hitroll
+100 area points - 2 damroll + 2 hitroll
+
+Hit/damroll would be placed on gear that is less than 2
+hit/damroll above the loading value.  Basically that
+means an onyx ring could at best be 5/5 after stat addition.
+The hitroll/damroll cannot be split among items and are
+non-transferable.
+
+Enchanted items like claws are excluded since they start at 0/0.
+Due to code and player structure restrictions, the additions
+can not be placed in the 3rd apply location.
+
+See Also: AREAS
+
+#
+"AREA REVIEW"
+
+Any area reviewer gets a base amount of 25 area points.
+If the review is easy and it doens't need to be re-reviwed,
+that would be it.  However, if changes had to be reviewed,
+additional area points will be given.
+
+All areas are subject to a final review by a senior admin, 
+and if the initial review wasn't done correctly, area points
+can be recalled from the initial reviewer.  A normal final review
+is supposed to be a rubber stamp of approval and will give an
+award of 10 area points.  
+
+A person doing both initial and final review would only get
+the award for the initial review.
+
+See Also: AREAS
+
+#
+"AREA SPECS"
+
+The coder writing area specs for an area will be awarded with
+up to 25 area points.  The award is proportional depending on
+the number/type of specs and if the specs have to be fixed/cleaned
+up, some of the points will be reallocated.
+
+See Also: AREAS
+
+#
+"AREA STANDARDS"
+
+The minimum room description length isn't 5 lines.
+If you can say what you need to in 3 lines, its acceptable.
+Of course having an entire area with only 3 line rooms
+isn't what we want.  Just put the words where they
+are most useful.
+
+Cloned rooms while not desired can be accepted in
+certain circumstances.  This includes rooms which are
+part of a maze or describe something thats pretty
+static for 2-3 rooms.  Whats not acceptable is a 100
+room area with 7-8 different room descriptions.
+
+All areas will be broken up into a maximum of 50 room
+sections. That means if you're planning a 100 room
+area, you need to think of a way to split it in two 
+and get part 1 installed before even starting on part 
+2.  This will prevent writer burnout and if you never 
+start part 2, we'll at least have part 1.
+
+See Also: AREAS
+#
+"AREA WRITING"
+
+Area writers will earn area points depending on the complexity
+of the area.  A good rule of thumb is that the creator will
+be awarded with an area point for each room in the area.
+There is however a minimum of 50 rooms and there must obviously
+be mobs and objects.  A maze in an area is less work for
+descriptions, so a 100 room area with 50 rooms of a maze would
+probably get a reward near that of 75 rooms.
+
+New areas that are seen to be of outstanding quality could
+gain the area creator some bonus area points.
+
+Area revamps which involve rewriting a good percentage of the
+area descripts will be awarded at a rate of 1 area point for
+every 2 rooms.
+
+Area updates which will mostly require some stat changing and 
+maybe an extra piece of gear will be awarded minimal area points 
+and only be considered if there is some amount of work involved.
+
+See Also: AREAS
+
+#
+QUESTS
+
+Post your quests that you've done to the quest board west
+and to an appropriate log board.
+
+If you can't give a prize, post a message on the ToDo board to
+the north.  Keep the subject line informative.
+
+If too many quest prizes for a particular quest runner
+keep piling up, that player will not be permitted to run
+quests until the prizes are awarded.
+
+#
+DRINKTYPES
+
+ Level: IMP
+
+  sos <drink container> value2 <num>
+
+  0  -- water
+  1  -- beer
+  2  -- wine
+  3  -- ale
+  4  -- dark ale
+  5  -- whisky
+  6  -- lemonade
+  7  -- firebreather
+  8  -- local speciality
+  9  -- slime mold juice
+  10 -- milk
+  11 -- tea
+  12 -- coffee
+  13 -- blood
+  14 -- salt water
+  15 -- coca cola
+  16 -- stout
+  17 -- vodka
+  18 -- rum
+  19 -- liquer
+  20 -- champagne
+  21 -- bourbon
+  22 -- tequila
+  23 -- hard cider
+  24 -- urine
+  25 -- gin
+  26 -- merlot
+  27 -- schnapps
+  28 -- moonshine
+  29 -- pus
+  30 -- sherbet
+  31 -- cognac
+  32 -- brandy
+  33 -- scotch
+  34 -- kefir 
+  35 -- ouzo
+  36 -- saki
+  37 -- lager
+
+See also: FLAGS VALUES DRINKTYPES
+#
+DOAS
+
+ Level: IMP
+
+ Usage: doas <victim> <command>
+
+ This command makes the victim do the indicated command.  Some commands
+ are blocked for security reasons and the victim must normally be able
+ to do the command.  The victim is not given any indication they have
+ been forced to do a command as the results of the command are sent to
+ the god.
+
+#
+REINDEX
+
+ Level: IMP
+
+ Usage: reindex <file>
+
+ This command is for reindexing and reloading various files
+ after they have been editted.
+
+#
+PLOCK
+
+ Level: ETE+
+ 
+ Usage: plock <player name>
+ 
+ This command puts a random password on a player effectively
+ locking that player.  Only a god with the password ability
+ can unlock the player.
+
+#
+DLIST
+
+ Level: TEM+
+ 
+ Usage: dlist <name death#>
+    or: dlist <#> for last # of deaths
+  
+ Dlist will list the original stats and equipment a player had
+ when they died. 
+    
+ Temporals require a JUDGE flag to use this command.
+
+#
+REIMB
+
+ Level: ETE+
+ 
+ Usage: reimb <name death#>
+ 
+ This command loads all the gear, including any quest gear stats
+ that were on a player at death#.  Use dlist to find the correct
+ death to reimburse.
+ 
+ See Also: DLIST
+
+#
+ECHO
+
+ Level: IMM+
+
+ Usage: echo <message>
+ This command sends the message followed by the command to every player
+ in the game. Notice that if you are level 51 people will also get a message
+ saying that you are the originator of the following echo.
+
+See Also: LECHO
+#
+WARN
+
+ Level: IMM+
+
+ Usage: warn <player> message
+ This command enters a warning into a database for the given player.
+ Higher level gods can type warn <player> to get a list of all
+ warnings entered by or against <player>.
+
+#
+FORCE
+ 
+ Level: WIZ+
+
+ Usage: force <player> <action>
+ This command forces the player it is used on to perform the action wanted.
+ You can also force all <action> whereby all the players in game who are
+ equal to or less than, your level will perform the action.
+ Notice that the victim of the command will know who has forced him to
+ do what.
+
+ Typing force #.name will always search for a mob first.  Typing
+ force name will always search for a player first.  There is one
+ exception.  If the mob/player is in the same room as you, that
+ mob/player will be forced first.
+
+ force tim burp - finds tim the player if he's on.
+ force 1.tim burp - finds the first mob named tim.
+
+#
+TRANSFER
+
+ Level: DEI+
+
+ Usage: transfer <player>
+ The command will transport the victim of the command to the location
+ of the immortal.
+
+#
+GOTO
+
+ Level: IMM+
+
+ Usage: goto <character> or goto <room number>
+ This command transports the immortal to the location specified (either
+ a character or a room number).
+
+#
+STAT
+
+ Level: IMM+
+
+ Usage: stat <obj | char | room | zone> <name> (any number for room/zone)
+ The command yields information about the specified field, much like an
+ Identify scroll, except that it works for fields other than objects as
+ well.
+
+#
+LOAD
+
+ Level: DEI+
+
+ Usage: load <obj | char> number
+ This command creates a new object or monster. The number required by
+ the command is the V-number that can be gotten with the "stat" command
+ or in case of items, with the "where" command.
+
+#
+PURGE
+
+ Level: DEI+
+
+ Usage: purge <name>
+ The command destroys the item or character specified. If no field is
+ specified the command destroys all mobiles and objects in the same room
+ as the immortal. Purging a player has the same effect as if that person
+ had typed "quit" i.e. he will drop all his equipment and gets kicked out
+ of the game.
+
+#
+"AT - Command"
+
+ Level: IMM+
+
+ Usage: at <char | room number> <action>
+ This command allows the immortal to perform an action in a different
+ room than the one he is occupying. This command in fact moves the immortal
+ to the desired destination, for the duration of the action, thus
+ someone might see an immortal reading the board at 3054 without the
+ imortal ever "leaving" his room.
+
+#
+SNOOP
+
+ Level: IMM+
+
+ Usage: snoop <player>
+ The use of this command allows the immortal to see exactly what his
+ target is seeing. What the target sees is preceded by the character %.
+ To stop snooping, simply snoop <your name>.
+ Note that if you are level 51, the target of the snoop receives a warning
+ that he is being snooped by you.
+
+#
+ADVANCE
+
+ Level: SUP+
+
+ Usage: advance <player> <level>
+ This command is used to raise the level of the target to the level
+ desired by the immortal (max of 56). The target must be in the same
+ room as the immortal.
+
+#
+REROLL
+
+ Level: ETE+
+
+ Usage: reroll <character>
+ This command rerolls the stats (str, dex etc.) of the intended target.
+ The normal cutoff for a reroll is around 55 and the game will
+ automatically give a new player at least that much in total stats.
+
+#
+RESTORE
+
+ Level: WIZ+
+
+ Usage: restore <character>
+ This command restores the target back to his full hp, mana and movement
+ points. On an IMM+ various values will be reset to their proper values.
+
+#
+USERS
+
+ Level: IMM+
+
+ Usage: users
+ This command displays all the players currently connected to the game,
+ as well as their socket descriptor, level, class, where they are in the
+ game, and from what site they are connecting from.
+
+#
+NOSHOUT
+
+ Level: DEI+
+
+ Usage: noshout <character>
+ Removes the targets ability to shout/yell/gossip/auction/quest and the ability
+ to hear shouts and yells as well.
+
+#
+WIZHELP
+
+ Level: IMM+
+
+ Usage: wizhelp <text>/<level>
+ By itself this displays the commands available to the immortal at this time.
+
+#
+GAMEMODE
+
+Level: DEI+
+
+ Usage: gamemode wizlock/lock/check/chaos
+
+ game wizlock
+   Wizlock prevents the creation of new characters while it is turned on.
+
+ game lock
+   Lock prevents any character of less than level 51 from entering the
+   game, while it is turned on.
+
+ game check
+   This command forces newly created characters to wait for an immortal
+   to "allowin" before being able to enter the game.
+
+ game chaos
+   This command is IMP only and will put the whole game in chaos mode.
+   It was designed for the yearly Chaos Night quest.
+
+#
+LECHO
+
+ Level: IMM+
+
+ Usage: lecho <message>
+ This command broadcasts the message following it to everyone in the
+ same room as the immortal. Note that if you are level 51 the people
+ receiving the message are told who the message originates from.
+
+#
+WIZNET
+
+ Level: IMM+
+
+ Usage: wiznet (<level>) <message>
+ Wiznet is the communication channel of the immortals. Unless a level of
+ wiznet is specified, every immortal in game receives the message.
+ If a level is specified, e.g. wiznet 53 then no-one under level 53
+ will receive the message broadcasted.
+
+ Typing wiznet with no arguments toggles the channel on and off.
+
+#
+ROOMLOCK
+
+ Level: DEI+
+
+ Usage: roomlock
+ This command locks the room currently occupied by the immortal, preventing
+ all sorts of entrance by anyone less than level 57.
+ Notice that when a room is locked you cannot transfer anyone into the room
+ either, nor is it advisable to use the at command while inside a locked
+ room, as you will lock yourself out of that room by doing so.
+
+#
+DEMOTE
+
+ Level: SUP+
+
+ Usage: demote <character> <level>
+ Demote is the opposite to advance, it bring down the level of the target
+ to the specified number (min. 0). The target must be in the same room
+ as the immortal.
+
+#
+SETSTAT
+
+ Level: SUP+
+
+ Usage: setstat <character> <field> <value> <password>
+ This command is used to alter a certain field, or stat of a character
+ to the desired amount.  Type setstat by itself to get field options.
+
+#
+SESSIONS
+
+ Level: SUP+
+
+ Usage: session <character> <amount>
+ This command gives a specified amount of practice sessions to the
+ target, who must be in the same room as the immortal.
+
+#
+WIZINVIS
+
+ Level: IMM+
+
+ Usage: wizinvis <level>
+ This command makes the immortal invisible to all people of less level
+ than the specified value, which cannot be higher than your own level.
+
+ If just wizinvis is typed, the invisiblity level is toggled on and off
+ from maximum to minimum.
+
+#
+PUNISH
+
+ Level: WIZ+
+
+ Usage: punish <character>
+ This command sets the victims mana, movement, and hps to 1.
+
+ Players below SUP need a judge flag to use this command.
+#
+NOGOLD
+
+ Level: WIZ+
+
+ Usage: nogold <character>
+ This command sets the victims carried coins to 1000 and bank to 0.
+
+ Players below SUP need a judge flag to use this command.
+#
+ALLOWIN
+
+ Level: IMM+
+
+ Usage: allowin <character>
+ This command allows a new character to enter the game incase the game
+ is under the effect of "gamecheck".
+
+#
+WAITLIST
+
+ Level: IMM+
+
+ Usage: waitlist
+ Waitlist displays the characters currently waiting to be "allowin"'ed
+ by an immortal, incase the game is under the effect of "gamecheck"
+
+#
+BAMFIN BAMFOUT
+
+ Level: IMM+
+
+ Usage: bamfin/bamfout <message> (args)
+ This command sets the teleport message displayed when an immortal uses
+ "goto". Bamfin is the message for when the immortal enters the room and
+ Bamfout for when the immortal leaves the room.
+
+ The arguments can be "def" for setting default bamfin/out and
+ "show" for showing the current text. (Example: bamfin show)
+
+ The Bamf message does not contain the name of the immortal unless it is
+ specified by ~N which inserts the name of the immortal in the desired
+ place on the bamf-string, ~H inserts his/her depending on the sex of the
+ immortal.
+
+ Of course you can skip the ~N and ~H and just enter your name in the
+ text.
+
+#
+RELEASE
+
+ Level: TEM+
+
+ Usage: release <character name/descriptor>
+ This command cuts the socket descriptor of a player making him link-dead.
+ The command "users" displays the socket numbers associated with different
+ players.
+
+#
+HANDBOOK
+
+ Level: IMM+
+
+ Usage: handbook <level>
+ This command lists the rules of conduct for the level 51 and 52 immortals.
+ All immortals are expected to know and follow these rules.
+
+#
+UPTIME
+
+ Level: IMM+
+
+ Usage: uptime
+ Uptime displays the amount of time that the game has been up for, i.e.
+ the time since the latest crash/shutdown.
+
+#
+SYSTEM
+
+ Level: IMM+
+
+ Usage: system
+ This command displays whether there are currently any locks acting on
+ the game, as well as the number of connected players, the number of
+ mobiles currently in game, and the number of objects currently in game.
+
+#
+ALERT
+
+ Level: DEI+
+
+ Usage: alert <character>
+ This command rings the terminal bell of the target.
+ Notice that this command does not work for certain terminals, neither
+ does it work on immortals that are invisible to you.
+
+#
+GETHOSTS
+
+ Level: SUP+
+
+ Usage: gethosts
+ This command is mostly redundant.  It use to toggle the getting of the
+ host name of connecting players.
+
+ However, the current system is designed to show connecting host
+ regardless of gethost being on or off.
+#
+STRING
+
+ Level: TEM+
+
+ For changing the text-strings associated with objects and characters. The
+ format is:
+
+ Usage: string <type> <name> <field> [<string> | <keyword>]
+
+ Type is either 'obj' or 'char'.
+ Field is one of the following:
+ Name                  (the keyword of an obj/char)
+ Short                 (for inventory lists (obj's) and actions (char's))
+ Long                  (for when obj/character is seen in room)
+ Title                 (for players)
+ Description           (For look at. For obj's, must be followed by a keyword)
+ Delete-description    (only for obj's. Must be followed by keyword)
+
+ Where a string is expected as the last argument, a newline will make you enter
+ string mode and the game will prompt you for new lines to the string until
+ you exceed the maximum length for the string or you end a line with a '@'.
+ 
+#
+SHUTDOWN
+
+ Level: IMP
+
+ Usage: shutdown <full/reboot>
+
+ full:   total shutdown of the game (no restart)
+ reboot: the game will reboot.
+ 
+#
+WF
+
+ Level: IMM+
+
+ Usage: wf <action>
+
+ This is just like typing a social action except the action occurs on the
+ wizard social channel.  Only IMM+ see the action.
+#WEMOTE
+
+ Level: IMM+
+
+ Usage: wemote <text>
+
+ This is just like typing an emote action except the action occurs on the
+ wizard social channel.  Only IMM+ see the emote.
+#
+KILLER
+
+ Level: WIZ +
+
+ Usage: killer <char>
+
+ This toggles the target characters killer flag on/off.
+
+ Players below level SUP need a judge flag to use this command.
+#
+THIEF
+
+ Level: WIZ +
+
+ Usage: thief <char>
+
+ This toggles the target characters thief flag on/off.
+
+ Players below level SUP need a judge flag to use this command.
+#
+WIZLOG
+
+ Level: IMM+
+
+ Usage: wizlog <1/2/3/4/5>
+
+ This turns on specific logs so the IMM+ can see players connecting,
+ dying, renting, etc.  Will only work if "wizinfo" is on as well.
+#
+WIZINFO
+
+ Level: IMM+
+
+ Usage: wizinfo
+
+ This turns on the IMM+ info channel, so the IMM+ can get game
+ messages.  This needs some "wizlog" channels on to work.
+ This is always turned on when you log in.
+#
+EDIT
+
+ Level: WIZ+
+
+ Usage: edit <r/o/m/z> <lots of options>
+
+ This allows a player to edit objects, mobs, rooms and zones.  The
+ player needs a CREATE flag to use this command.  Using edit should
+ only be done with express permission of a SUP or IMP.
+#
+CREATE
+
+ Level: IMP
+
+ Usage: create <r/m/o/z> <number>
+
+ Used to create things.  To have the items save through a reboot, the
+ zone stuff was created in needs to be saved and the zone files in
+ the main world directory updated.
+#
+WORLD
+
+ Level: ETE+
+
+ Usage: world <basic/zones>
+
+ An information command to see how many rooms/mobs/items etc are loaded.
+ Zones lists all zones loaded.
+#
+CLASS
+
+ Level: IMP
+
+ Usage: class <char> <class #>
+
+ Will set the class of the victim to the desired class and lower the victims
+ level to one.
+
+ Classes are:
+             1 - Magic User          7 - Paladin
+             2 - Cleric              8 - Anti-Paladin
+             3 - Thief               9 - Avatar
+             4 - Warrior            10 - Bard
+             5 - Ninja              11 - Commando
+             6 - Nomad
+#
+MOBSWITCH
+
+ Level: DEI+
+
+ Usage: mobswitch <mob>
+
+ This puts the DEI+ in the body of the mob and allows the DEI+ to control
+ the mobs actions.  A quest flag is needed to use this command.
+ To leave the mob's body simply type return.
+
+ Warning!  The use of this command to spam mortals involved in combat or
+ the use of this command which directly results in the death of a mortal
+ will be severely punished!
+#
+OSTAT
+
+ Level: WIZ+
+
+ Usage: ostat <text>/<options>/<number>
+
+ ostat <text> will display all objects with the name <text> available.
+ ostat <number> will display the stats of the object with that number.
+ ostat by itself will list available options
+#
+MSTAT
+
+ Level: WIZ+
+
+ Usage: mstat <text>/<options>/<number>
+
+ mstat <text> will display all mobs with the name <text> available.
+ mstat <number> will display the stats of the mob with that number.
+ mstat by itself will list available options
+#
+RSHOW
+
+ Level: SUP+
+
+ Usage: rshow <text>
+
+ This will list all rooms with the <text> in the name.
+#
+ZSHOW
+
+ Level: SUP+
+
+ Usage: zshow <zone #> <r/o/m>
+
+ This lists all rooms/objects/mobs in the specified zone number.
+#
+QFUNCTION
+
+ Level: IMM+
+
+ Usage: qf <lots of options>
+
+ Type qf by itself to get a list of commands.  The player needs a 
+ quest flag to use this command.
+#
+SETFLAG
+
+ Level: SUP+
+
+ Usage: setflag <char> <flag>
+
+ This toggles the flag of the IMM+ character on/off.
+
+ Current flags are: trust        quest   
+                    create 
+                    load         judge
+                    nonet        active
+#
+FREEZE
+
+ Level: WIZ+
+
+ Usage: freeze <victim>
+
+ This toggles the freeze flag of a player on/off.
+
+ When a mortal is frozen, they can't do anything, not even type quit!
+ When a god is frozen, they can't do many of the god commands.
+
+#
+CLUB
+
+ Level: SUP+
+
+ Usage: club <character> <number>
+
+ Changes the club membership of a player.
+
+ Clubs are: 0 = No club
+            1 = NoName's Club
+            2 = Caster's Club
+            3 = Azoun's Club
+            4 = DeathAdder's Club
+#
+SETSKILL
+
+ Level: IMP
+
+ Usage: setskill <char> <skill num> <skill value> password
+
+ Sets the skills/spells of the target character.
+
+ Skills are:
+ 	SKILL_SNEAK                  45 
+ 	SKILL_HIDE                   46 
+ 	SKILL_STEAL                  47 
+ 	SKILL_BACKSTAB               48 
+ 	SKILL_PICK_LOCK              49
+	SKILL_KICK                   50 
+	SKILL_BASH                   51 
+	SKILL_RESCUE                 52 
+	SKILL_BLOCK                  53
+	SKILL_KNOCK		     54
+	SKILL_PUNCH		     55
+	SKILL_PARRY                  56 
+	SKILL_DUAL                   57
+	SKILL_THROW		     58
+	SKILL_DODGE                  59 
+	SKILL_PEEK		     60
+	SKILL_BUTCHER		     61
+	SKILL_TRAP		     62
+	SKILL_DISARM		     63
+	SKILL_SUBDUE		     64
+	SKILL_CIRCLE		     65
+	SKILL_TRIPLE		     66
+	SKILL_AMBUSH		     67
+	SKILL_SPIN_KICK		     68
+	SKILL_ASSAULT		     69
+	SKILL_HURL		     70
+
+ For spell numbers type WIZHELP SPELLS
+#
+SPELLS
+
+ Here are the spell numbers for use in SETSKILL
+
+	armor				1
+	teleport			2
+	bless				3
+	blindness			4
+	burning_hands			5
+	call_lightning			6
+	charm_person			7
+	chill_touch			8
+	clone				9
+	colour_spray			10
+	control_weather			11
+	create_food			12
+	create_water			13
+	cure_blind			14
+	cure_critic			15
+	cure_light			16
+	curse				17
+	detect_alignment		18
+	detect_invisibility		19
+	detect_magic			20
+	detect_poison			21
+	dispel_evil			22
+	earthquake			23
+	enchant_weapon			24
+	energy_drain			25
+	fireball			26
+	harm				27
+	heal				28
+	invisibility			29
+	lightning_bolt			30
+	locate_object			31
+	magic_missile			32
+	poison				33
+	protection_from_evil		34
+	remove_curse			35
+	sanctuary			36
+	shocking_grasp			37
+	sleep				38
+	strength			39
+	summon				40
+	ventriloquate			41
+	word_of_recall			42
+	remove_poison			43
+	sense_life			44
+	identify			71
+	cure_serious			72
+	infravision			73
+	regeneration			74
+	vitality			75
+	cure_light_spray		76
+	cure_serious_spray		77
+	cure_critic_spray		78
+	heal_spray			79
+	death_spray			80
+	holy_word			81
+	iceball				82
+	total_recall			83
+	recharge			84
+	miracle				85
+	levitate			86
+	mana_transfer			87
+	holy_bless			88
+	evil_bless			89
+	satiate				90
+	animate_dead			91
+	great_miracle			92
+	flamestrike			93
+	spirit_levy			94
+	lethal_fire			95
+	hold				96
+	sphere				97
+	imp_invisibility		98
+	invulnerability			99
+	fear				100
+	forget				101
+	fury				102
+	endure				103
+	blindness_dust			104
+	poison_smoke			105
+	hell_fire			106
+	hypnotize			107
+	recover_mana			108
+	thunderball			109
+	electric_shock			110
+	paralyze			111
+	remove_paralysis		112
+	dispel_good			113
+	evil_word			114
+	reappear			115
+	reveal				116
+	relocation			117
+	locate_character		118
+	super_harm			119
+	power_word_kill			128
+	dispel_magic			129
+	conflagration			130
+	mass_invisibility		131
+	convergence			132
+	enchant_armour			133
+	disintegrate			134
+	confusion			135
+	vampiric_touch		        136
+	searing_orb			137
+	clairvoyance	        	138
+	firebreath			139
+	layhands			140
+#
+SOS SETOBJSTAT
+
+ Level: IMP
+
+ Usage: sos <object> <opt 1> <opt 2> <opt 3>
+
+ This command changes the stats of the target object.  There are
+ many options to this command and it can get a little complicated.
+
+ Option 1 - can be numeric (1-12) or be a specific affect.
+
+ Option 2 - always the value.
+
+ Option 3 - is only used when option 1 is a specific affect.  Option 3
+            can be 0 or 1.  0 indicates the affect is the first affect
+            on the object, 1 indicates it is the second affect.
+
+ Option 1
+    1 - (type) type flag
+    2 - (extra) extra flags (ex: sos item 2 LIMITED) WIZHELP FLAGS (or bitnum)
+    3 - (wear) wear flags  (ex: sos item 3 HEAD)    WIZHELP FLAGS (or bitnum)
+    4 - (value0) value 0     (values depend on type flag)
+    5 - (value1) value 1     (WIZHELP VALUES to see a chart)
+    6 - (value2) value 2
+    7 - (value3) value 3
+    8 - (weight) weight
+    9 - (cost) cost
+   10 - (cost_day) cost/day
+   11 - (affected)
+         affected_bits (ex: sos item 11 FURY) WIZHELP FLAGS (or bitnum)
+   12 - (owner)
+
+   For 2, 3 and 11, the bit is added if it isn't on the object
+   and removed if it is.
+   
+   Other examples:
+     sos <item> wear head
+     sos <item> extra limited
+     sos <item> cost_day 1000
+
+   Apply types max of 2/object postions 0 and 1 (option 3)
+
+    str             height
+    dex             weight
+    int             hp
+    wis             mana  
+    con             hit
+    age             dam
+    move            ac
+    hp_regen        mana_regen   
+ 
+See also: FLAGS VALUES DRINKTYPES
+#
+"FLAGS" "EXTRA FLAGS" "WEAR FLAGS" "AFFECTED FLAGS"
+
+ EXTRA (2)                 WEAR (3)             AFFECTED (11)              
+                                                                           
+ GLOW            1         TAKE         1       BLIND            1         
+ HUM             2         FINGER       2       INVISIBLE        2         
+ DARK            4         NECK         4       DETECT-ALIGNMENT 4         
+ CLONE           8         BODY         8       DETECT-INVISIBLE 8         
+ EVIL            16        HEAD         16      DETECT-MAGIC     16        
+ INVISIBLE       32        LEGS         32      SENSE-LIFE       32        
+ MAGIC           64        FEET         64      SANCTUARY        128       
+ NODROP          128       HANDS        128     CURSE            1024      
+ BLESS           256       ARMS         256     SPHERE           2048      
+ ANTI_GOOD       512       SHIELD       512     POISON           4096      
+ ANTI_EVIL       1024      ABOUT        1024    PROTECT-EVIL     8192      
+ ANTI_NEUTRAL    2048      WAISTE       2048    PARALYSIS        16384     
+ ANTI_WARRIOR    4096      WRIST        4096    INFRAVISION      32768     
+ ANTI_THIEF      8192      WIELD        8192    DODGE            262144    
+ ANTI_CLERIC     16384     HOLD         16384   SNEAK            524288    
+ ANTI_MAGIC_USER 32768     THROW        32768   HIDE             1048576   
+ ANTI_MORTAL     65536     LIGHT-SOURCE 65536   FLY              16777216  
+ ANTI_MALE       131072    NO_REMOVE    131072  IMINV            67108864  
+ ANTI_FEMALE     262144    NO_SCAVENGE  262144  INVUL            134217728 
+ ANTI_RENT       524288    QUESTWEAR    524288  DUAL             268435456 
+ ANTI_NINJA      1048576                        FURY             536870912 
+ ANTI_NOMAD      2097152                                             
+ ANTI_PALADIN    4194304                                             
+ ANTI_ANTIPALADIN8388608                                             
+ ANTI_AVATAR     16777216                                            
+ ANTI_BARD       33554432                                            
+ ANTI_COMMANDO   67108864                                            
+ LIMITED         134217728                                           
+ ANTI-AUCTION    268435456                                           
+ CHAOTIC         536870912                                           
+ RANDOM 
+ ALL_DECAY  
+ EQ_DECAY 
+ NO_GIVE 
+ NO_GIVE_MOB  
+ NO_PUT 
+ NO_TAKE_MOB 
+
+#
+"SUBCLASS RESTRICTIONS"
+
+ ANTI_ENCHANTER      1   
+ ANTI_ARCHMAGE       2   
+ ANTI_DRUID          4   
+ ANTI_TEMPLAR        8   
+ ANTI_ROGUE          16  
+ ANTI_BANDIT         32  
+ ANTI_WARLORD        64  
+ ANTI_GLADIATOR      128 
+ ANTI_RONIN          256 
+ ANTI_MYSTIC         512 
+ ANTI_RANGER         1024
+ ANTI_TRAPPER        2048
+ ANTI_CAVALIER       4096
+ ANTI_CRUSADER       8192
+ ANTI_DEFILER        16384 
+ ANTI_INFIDEL        32768 
+ ANTI_BLADESINGER    65536 
+ ANTI_CHANTER        131072
+ ANTI_LEGIONNAIRE    262144
+ ANTI_MERCENARY      524288
+
+#
+"VALUES"
+
+ Type Flag      (4) Value 0     (5) Value 1     (6) Value 2     (7) Value 3
+------------------------------------------------------------------------------
+ 1 LIGHT           colour          type            hours   
+ 2 SCROLL          spell 1         spell 2         spell 3         spell 4 
+ 3 WAND            spell           mana            charges         spell (for text)
+ 4 STAFF           spell           mana
+ 5 WEAPON          tohit           #          D    #               type
+ 6 FIREWEAPON      license         # bullets       #         D     #
+ 7 MISSILE         #         D     #
+ 8 TREASURE
+ 9 ARMOR           ac apply  
+10 POTION          spell 1         spell 2         spell 3         spell 4  
+11 WORN      
+12 OTHER     
+13 TRASH     
+14 TRAP            spell           hps  
+15 CONTAINER       max             lock                            corpse
+16 NOTE            touge
+17 DRINKCON        max             contains        poision         liquid
+18 KEY             key type
+19 FOOD            makes full      poisoned
+20 MONEY     
+21 PEN       
+22 BOAT      
+23 BULLET          license #
+24 MUSICAL   
+#~ 

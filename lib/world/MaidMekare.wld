@@ -1,0 +1,900 @@
+#3700
+A Well Kept Path~
+You are standing on a meticulously made cobblestone path.  The path continues
+north and south while to the east you see the servant's quarters.
+~
+37 4 2
+D0
+A Well Tended Path
+~
+~
+0 0 3701
+D1
+The Manor Grounds
+~
+~
+0 0 3703
+D2
+The edge of the big forest
+~
+~
+0 0 6001
+D3
+The Manor Grounds
+~
+~
+0 0 3702
+S
+#3701
+A Well Kept Path~
+You are standing on a meticulously made cobblestone path.  The path continues
+north and south while to the east you see the servant's quarters.
+~
+37 4 2
+D0
+A Well Tended Path
+~
+~
+0 0 3704
+D1
+In Front of Servants Quarters
+~
+~
+0 0 3705
+D2
+A Well Tended Path ~
+~
+0 0 3700
+D3
+The Manor Grounds
+~
+~
+0 0 3707
+S
+#3702
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 3
+D0
+The Manor Grounds
+~
+~
+0 0 3707
+D1
+A Well Tended Path
+~
+~
+0 0 3700
+D3
+The Manor Grounds
+~
+~
+0 0 3726
+S
+#3703
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 3
+D0
+In Front of the Servant's Quarters
+~
+~
+0 0 3705
+D1
+The Manor Grounds
+~
+~
+0 0 3720
+D3
+A Well Tended Path
+~
+~
+0 0 3700
+S
+#3704
+A Well Kept Path~
+You are standing on a meticulously made cobblestone path.  The path continues
+north and south while to the east and west you can see the manor grounds.
+~
+37 4 2
+D0
+In Front of the Manor
+~
+~
+0 0 3708
+D1
+The Manor Grounds
+~
+~
+0 0 3710
+D2
+A Well Tended Path
+~
+~
+0 0 3701
+D3
+The Manor Grounds
+~
+~
+0 0 3709
+S
+#3705
+In Front of the Servants Quarters~
+You are standing on a meticulously made cobblestone path.  To the east
+you see the entrance to a small, shabby looking cottage.
+~
+37 4 0
+D0
+Manor Grounds
+~
+~
+0 0 3710
+D1
+Servant's Kitchen
+~
+~
+0 0 3717
+D2
+Manor Grounds
+~
+~
+0 0 3703
+D3
+A Well Tended Path
+~
+~
+0 0 3701
+S
+#3707
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 3
+D0
+The Manor Grounds
+~
+~
+0 0 3709
+D1
+A Well Tended Path
+~
+~
+0 0 3701
+D2
+The Manor Grounds
+~
+~
+0 0 3702
+D3
+The Manor Grounds
+~
+~
+0 0 3725
+S
+#3708
+In Front of the Manor~
+You are standing in front of the summer house of the Mayor's sister.
+There is a large oak door to your north supported on either side by
+~
+37 4 2
+D0
+The Foyer of the Manor
+~
+oak~
+0 0 3713
+D1
+The Manor Grounds
+~
+~
+0 0 3712
+D2
+A Well Tended Path
+~
+~
+0 0 3704
+D3
+The Manor Grounds
+~
+~
+0 0 3711
+S
+#3709
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 3
+D0
+The Manor Grounds
+~
+~
+0 0 3711
+D1
+A Well Tended Path
+~
+~
+0 0 3704
+D2
+The Manor Grounds
+~
+~
+0 0 3707
+D3
+The Manor Grounds
+~
+~
+0 0 3724
+S
+#3710
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 3
+D0
+The Manor Grounds
+~
+~
+0 0 3712
+D1
+The Manor Grounds
+~
+~
+0 0 3721
+D2
+In Front of the Servant's Quarters
+~
+~
+0 0 3705
+D3
+A Well Tended Path
+~
+~
+0 0 3704
+S
+#3711
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D1
+In Front of the Manor
+~
+~
+0 0 3708
+D2
+The Manor Grounds
+~
+~
+0 0 3709
+D3
+The Manor Grounds
+~
+~
+0 0 3723
+S
+#3712
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D1
+The Manor Grounds
+~
+~
+0 0 3722
+D2
+The Manor Grounds
+~
+~
+0 0 3710
+D3
+In Front of the Manor
+~
+~
+0 0 3708
+S
+#3713
+The Foyer of the Manor~
+You are standing inside the foyer of the manor.  You are astounded by the
+brilliantly colored tapestries, exotic carpets, and the fact that everything
+is gold plated.  This room reeks of both extreme wealth and horrible taste.
+There is an open door to the east which leads to the living room and another
+to the west which leads to the sitting room.
+~
+37 0 0
+D0
+~
+~
+0 -1 3744
+D1
+The Living Room
+~
+~
+0 0 3714
+D2
+In Front of the Manor
+~
+oak~
+0 0 3708
+D3
+The Sitting Room
+~
+~
+0 0 3715
+S
+#3714
+The Living Room~
+You find yourself in the living room of the manor.  The same garish
+furnishings you witnessed in the foyer coat the walls and floors here.
+There is a large stone fireplace filled with ashes and a dust covered
+yet comfortable looking couch in the corner of the room.
+~
+37 4 0
+D3
+The Foyer of the Manor
+~
+~
+0 0 3713
+S
+#3715
+The Sitting Room~
+You have entered the sitting room of the manor.  There is a large window
+to the west which affords a panoramic view of the manor grounds.  Scattered
+about the room are a large number of cheesy romance novels.  There is a small
+statue of Elvis on the coffee table.  There is a door to the north and an exit
+to the east.
+~
+37 0 0
+D0
+The Mayor's Sister's Bedroom
+~
+door~
+2 3702 3716
+D1
+The Foyer of the Manor
+~
+~
+0 0 3713
+S
+#3716
+The Mayor's Sister's Bedroom~
+This is the bedroom of the owner of the manor.  The room is dominated by a
+large four poster bed that stands in the center of the room.  The air is stale
+with the smell of cheap perfume.  Against the far wall is a make-up table so
+large you can barely see the wall behind it....which makes you wonder what's
+back there......
+~
+37 8 0
+D0
+~
+table~
+8 -1 3727
+D2
+~
+~
+0 -1 3715
+S
+#3717
+The Servant's Kitchen~
+You are standing in the servant's kitchen.  There is a table with settings
+for 15 people.  Evidently the servants are a promiscuous bunch.
+~
+37 0 0
+D0
+The Pantry
+~
+~
+0 0 3718
+D2
+The Common Room
+~
+~
+0 0 3719
+D3
+In Front of the Servant's Quarters
+~
+~
+0 0 3705
+S
+#3718
+The Pantry~
+You have entered the pantry.  The room is stocked with Ramen Noodles
+and peanut butter.  The servants must not be payed very well.
+~
+37 0 0
+D2
+The Servant's Kitchen
+~
+~
+0 0 3717
+S
+#3719
+The Living Room~
+You are standing in the living room.  The furniture here looks old and
+worn down.  There are piles of broken toys everywhere.  The servants'
+children must be an obnoxious, rowdy bunch.
+~
+37 0 0
+D0
+The Servant's Kitchen
+~
+~
+0 0 3717
+D1
+~
+~
+0 -1 3745
+S
+#3720
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D3
+The Manor Grounds
+~
+~
+0 0 3703
+S
+#3721
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3722
+D3
+The Manor Grounds
+~
+~
+0 0 3710
+S
+#3722
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D2
+The Manor Grounds
+~
+~
+0 0 3721
+D3
+The Manor Grounds
+~
+~
+0 0 3712
+S
+#3723
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D1
+The Manor Grounds
+~
+~
+0 0 3711
+D2
+The Manor Grounds
+~
+~
+0 0 3724
+S
+#3724
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun with weeds and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3723
+D1
+The Manor Grounds
+~
+~
+0 0 3709
+D2
+The Manor Grounds
+~
+~
+0 0 3725
+S
+#3725
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3724
+D1
+The Manor Grounds
+~
+~
+0 0 3707
+D2
+The Manor Grounds
+~
+~
+0 0 3726
+S
+#3726
+The Manor Grounds~
+You are standing on the manor grounds.  The once beautifully manicured
+lawn is now overrun and dotted with flaming piles of sulfur.
+You don't want to be around when whatever left these piles returns.
+~
+37 0 0
+D0
+The Manor Grounds
+~
+~
+0 0 3725
+D1
+The Manor Grounds
+~
+~
+0 0 3702
+S
+#3727
+Entrance to the Staircase~
+From what you can make out this is the top of a very long flight of stairs
+leading down.  The walls are slimy and green, you don't think this place 
+had had and ventilation in a while.  You also notice a slightly acidic smell
+in the air.
+~
+37 9 0
+D2
+~
+door~
+1 -1 3716
+D5
+~
+~
+0 -1 3728
+S
+#3728
+More Stairs~
+As you travel down more stairs, they seem to go on forever.  You are
+really starting to wonder where, or from what that smell is coming from.
+~
+37 9 0
+D4
+~
+~
+0 -1 3727
+D5
+~
+~
+0 -1 3729
+S
+#3729
+Entrance to the Pit~
+Finally reaching the end of the staircase, you come to a very large door.  It
+appears to be made of steel and you know it's going to be extremely heavy.
+There is a strange looking lock on the door that is about the size of your head.
+~
+37 9 0
+D1
+~
+huge door~
+5 -1 3730
+D4
+~
+~
+0 -1 3728
+S
+#3730
+Inside the Pit~
+Once inside the Pit you can hardly keep yourself from retching.
+It smells as if something died in here, and why is it so dark???
+~
+37 9 0
+D0
+~
+~
+0 -1 3731
+D3
+~
+~
+0 -1 3729
+S
+#3731
+NorthWest Edge Of The Pit~
+From this ledge you can see the pit down below you.  That must be where 
+the smell is coming from.  I wonder what's down there, don't you?
+~
+37 9 0
+D1
+~
+~
+0 -1 3732
+D2
+~
+~
+0 -1 3730
+S
+#3732
+North Edge Of The Pit~
+From here you can see that down below you is a large pit.  On this
+side though there is slide that will take you down to the pit.  The
+slide is covered in rotting food and slime.  It looks like it has
+not been cleaned, ever.  But yet it is still wet, like somone just 
+poured somthing down it.  You also notice that in the wall there is
+a small door, just wide enough for you to fit through.
+~
+37 9 0
+D0
+~
+~
+0 -1 3736
+D1
+~
+~
+0 -1 3733
+D3
+~
+~
+0 -1 3731
+D5
+~
+~
+0 -1 3735
+S
+#3733
+NorthEast Edge Of The Pit~
+From here you can see that down below you is a large pit.  As you neel
+down to get a better look in to the pit you notice that there is a very
+thick layer of untouched dust here, and you see nothing from the pit.
+~
+37 9 0
+D2
+~
+~
+0 -1 3734
+D3
+~
+~
+0 -1 3732
+S
+#3734
+East Edge Of The Pit~
+From here you can see more of the pit below you.  The walls are slimy and 
+have many years of fungus growth on them.  You're beginning to wonder if 
+the Fungus King is around here somewhere.  This looks to be the end of the
+line, dead end.
+~
+37 9 0
+D0
+~
+~
+0 -1 3733
+S
+#3735
+In The Pit~
+The Pit is filled with discarded bones and chunks of rotting meat.  In the
+corner there is a pile of rags and straw.  In the center of the room there is
+a large ring set in the cold stone floor with a long length of chain
+attached to it.  The chain ends in a shadowy corner on the opposite side of
+the pit.  You shudder to think of what you will find attached to the end
+of that chain.
+~
+37 9 0
+D4
+~
+~
+0 -1 3732
+S
+#3736
+Inside The Shaft~
+You find yourself in the bottom of a dumbwaiter shaft.  From the looks
+of the wall this shaft is well used.  You can see light coming from
+above, but very dimly.  You can also hear muffled voices from overhead.
+What a great place to test out your climbing skills!
+~
+37 8 0
+D2
+~
+~
+0 -1 3732
+D4
+~
+shaft~
+11 -1 3742
+S
+#3737
+Top Of The Shaft~
+As luck would have it this shaft is very old and most of the mortar has 
+worn away.  But with your tremendous skill you managed to make it the 25
+feet to the top of the shaft!  Here you find a sliding door into a well lit
+room, and for a pleasant change, this room doesn't smell funny.
+~
+37 8 0
+D2
+~
+sliding door~
+1 -1 3738
+D5
+~
+~
+0 -1 3742
+S
+#3738
+The Kitchen~
+You enter the largest kitchen you have ever seen.  Everything is made of
+stainless steel and appears to be spotless.  The walk-in freezer looks
+large enough to hold several bodies.  Strange cooking implements and knives
+cover the walls.  You feel strangely ill at ease as you pass through.
+~
+37 0 0
+D0
+~
+door~
+1 -1 3737
+D3
+~
+~
+0 -1 3739
+S
+#3739
+The Kitchen~
+You continue to make your way through the kitchen on your tip-toes, hoping
+that you don't leave any footprints on the gleaming floor.  You'd hate to
+anger the chef that cleans this place....he looks kinda scary!
+~
+37 0 0
+D1
+~
+~
+0 -1 3738
+D3
+~
+~
+0 -1 3740
+S
+#3740
+The Main Pantry~
+You have entered the Main Pantry.  The room is filled with all kinds of exotic
+foods. The sight makes your mouth start to water......and yet you wonder.....
+what exactly IS in that pate??
+~
+37 0 0
+D1
+~
+~
+0 -1 3739
+D2
+~
+~
+0 -1 3743
+D5
+~
+~
+0 -1 3741
+S
+#3741
+The Wine Cellar~
+Row after row of vintage bottles of wine fill this room.  You can only imagine
+what it all cost as you consider sneaking a bottle out with you.
+~
+37 0 0
+D4
+~
+~
+0 -1 3740
+S
+#3742
+The Middle of the Shaft~
+You've made it to the middle of the shaft!  That weird screeching noise
+is starting to worry you though.....you should probably climb a little
+faster.
+~
+37 0 0
+D4
+~
+shaft~
+11 -1 3737
+D5
+~
+~
+0 -1 3736
+S
+#3743
+The Dining Hall~
+You have entered a magnificant dining room.  The walls are paneled in oak and
+an ornate chandelier hangs from the ceiling.  In the center of the hall is a
+long, shiny table of dark cherry wood.  It would be beautiful if it wasn't
+covered in the remains of a huge meal.  There are enough leftovers here to feed
+an army.  Be glad you don't have to clean it up!
+~
+37 0 0
+D0
+~
+~
+0 -1 3740
+D2
+~
+~
+0 -1 3744
+S
+#3744
+The Dining Hall~
+You have entered a magnificant dining room.  The walls are paneled in oak and
+an ornate chandelier hangs from the ceiling.  In the center of the hall is a
+long, shiny table of dark cherry wood.  It would be beautiful if it wasn't 
+covered in the remains of a huge meal.  There are enough leftovers here to feed
+an army.  Be glad you don't have to clean it up!
+~
+37 0 0
+D0
+~
+~
+0 -1 3743
+D2
+~
+~
+0 -1 3713
+S
+#3745
+The Kids' Bedroom~
+The room is crammed full of unmade beds and still more broken toys. The walls
+are covered with posters of Barney and Winnie the Pooh.
+~
+37 0 0
+D3
+~
+~
+0 -1 3719
+S
+#3799
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+37 576 0
+S
+#0
+$~

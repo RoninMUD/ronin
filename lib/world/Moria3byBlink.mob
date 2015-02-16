@@ -1,0 +1,411 @@
+#21200
+grim gurry small~
+A small furry Grim~
+A small furry grim sniffs at your feet here.
+~
+A furry little creature stares up at you with wide black
+eyes. You think you can recognize this creature as a Grim.
+He seems to be friendly enough.  He seems interested in your
+presence here, but be careful.  Grims like to collect things 
+they may "find".  It may be a bit of a challenge to get something
+back from this little guy, as his teeth as very long and sharp.
+You should probably keep your distance, just to be safe.
+~
+16524 262272 1000 Y
+12 8 -3 200d2+10 20d2+5
+1000 3000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21201
+cave ogre monster~
+A Cave Ogre~
+A Cave Ogre roams about the tunnels here.
+~
+You gaze up at an extremely ugly ogre.  He seems to be an old ogre, and 
+is very hunched over.  His beard is long and stringy.  He flashes a 
+toothless grin as he realises you could be his next meal.  It would be
+a good idea to get out of here as soon as possible, instead of risking
+dealing with this old, fierce monster.
+~
+44 268435584 -1000 Y
+30 -10 -4 40d40+1500 2d22+50
+100100 300000
+8 8 0
+68 0 6d10+50 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21202
+magician morian wizard~
+The Morian Magician~
+The Morian Magician is standing here behind a counter.
+~
+A pale and frail looking Morian stands before you.  He has pale blue 
+eyes and very white skin.  He has a long white beard that lies near the
+bottom of his grey tunic.  Though you imagine that he is very 
+intelligent, he looks a little "out to lunch" as he talks to one of his
+invisible "friends" that visit him from time to time.  The Magician
+seems to run a good shop here however, so it probably is a good place
+to buy something.
+~
+10 134482064 1000 Y
+60 -20 -4 200d200+500 35d35+50
+200000 1
+8 8 1
+69 0 60d60+100 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21203
+king morian moria ruler mandrial~
+Mandrial, the Morian King~
+Mandriel, the Morian King
+~
+Before you is the king of Moria.  Though he is actually rather young, his
+face is lined with signs of stress.  He has high cheekbones and a very long
+chin. From what you know, he treats his people very kindly, but still manages
+to rule his kingdom with an iron fist.  His pale eyes loom at you calmly.  He
+shows little expression towards you, except what appears to be a permanent
+frown. You get the impression that something is bothering him.
+~
+16522 134219904 0 Y
+40 -20 -5 20d60+17000 9d9+56
+250000 3000000
+5 8 1
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21204
+adrel sage magic~
+Adrel the Sage~
+Adrel the Sage stands here gazing at you angrily.
+~
+A tall and striking woman towers over you here.  She glares at you with an
+evil grin as you approach.  She has long black hair curling down her back, 
+tied in many dark coloured ribbons.  She has coal black eyes that seem to
+gaze right through your soul.  She wears long a long silk robe that drapes
+to the floor.  You get the idea that this woman means business, its probably
+a good idea to get out of her way.
+~
+16394 134219904 -1000 Y
+40 -20 10 50d40+21000 5d20+75
+900100 1500000
+8 8 2
+69 0 20d20+300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21205
+ulric advisor~
+Ulric the Advisor~
+Ulric the Advisor glares up from his papers at you.
+~
+A tall and slender man stand before you.  He has long black hair that curls
+down his back and coal black eyes.  He appears to be a very intelligent man
+but still a force to be reckoned with.  He gazes up at you with an angry
+look. You do not belong here, and it seems as if he is ready to throw you 
+out.
+~
+16426 134219904 -1000 Y
+40 -20 10 40d50+19000 5d9+60
+400100 1800000
+8 8 1
+69 0 10d10+300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21206
+griselda morian queen moria~
+Griselda the Tyrannical Queen~
+Griselda the Tyrannical Queen of Moria is chained up in shackles here.
+~
+A small and ghastly figure is before you coiled up in chains.  She
+has a long tangled mess of hair and her clothes are made of dirty
+rags. Her skin has turned to a greenish hue and she moans and crys
+in a dream like state.  This is the imprisoned Queen of Moria.  After
+plundering her people, they rebelled and placed her in this dark
+prison to rot.  They then placed her younger brother, Mandrial on the
+throne to become a just leader of Moria.
+~
+10 268501120 -1000 Y
+40 -20 -6 20d100+13000 30d20+100
+1000000 2500000
+8 8 2
+51 0 20d20+1000 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21207
+aldrene bard lady singer~
+Aldrene the Bard~
+Aldrene the Bard stands here admiring her instruments.
+~
+A fat and jolly woman stand here singing away.  She smiles at you and
+beckons you to join in her singing.  She is a short, round woman with
+curly white hair that is in a mass on the top of her head.  Like the
+rest of the Morians, she has pale skin, and blue eyes.  She utterly 
+glows with pleasure.  Her presence makes you feel comfortable.
+~
+4210698 402655360 0 Y
+35 -6 -4 20d50+6000 9d9+118
+200000 450000
+8 8 1
+69 0 20d20+100 2
+1 6 40 121
+1 6 40 102
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21208
+rupert weapon weapons master warrior~
+Rupert the Weapon Master~
+Rupert the Weapon Master is here cleaning some swords.
+~
+A funny looking man strand proudly before you.  He holds his nose
+high in the air.  Rupert has short cut white hair and a finely
+trimmed white moustache.  He looks a bit goofy, though he is known
+in Moria for his expertise ability to forge and wield his weapons.
+He is now working in the castle, as the Kings very own weapon master.
+
+~
+16860170 134219904 0 Y
+35 -15 -6 40d40+5000 9d9+40
+50000 600000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21209
+terral castle guard~
+Terral the Castle Guard~
+Terral the Castle Guard is here protecting the gates.
+~
+A husky brute of a man looms before you.  Terral is one of the 
+Castles best of guards, and he makes sure no one does the wrong
+thing. He appears to have much more braun than brains, but he 
+gets the job done.  It would be a good idea to make sure you
+don't conduct anything to piss off this guy, it might turn out
+to be a big mistake.
+~
+16394 128 0 Y
+30 -2 -3 20d20+4000 9d9+60
+50000 50000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21210
+priest high dark man~
+The High Priest of Mykras~
+A Dark Priest stands here with his head bowed.
+~
+You gaze at a large man covered in masses of dark robes and godly
+coverings. His eyes glow a with a yellow tint.  He is the High
+Priest of Mykras, the Morian God.  He is the Gods mortal servant
+and bows to its every whim.  He appears to not welcome the presence
+of outsides, as he slowly raises his dagger, and apparently it 
+seems aimed towards you.
+~
+20522 134219904 -1000 Y
+50 -20 -6 20d100+15000 20d20+120
+1000 1400000
+8 8 1
+69 0 20d20+1000 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21211
+mykras demon god demon-god~
+Mykras the Demon-God~
+Mykras spreads his wings and prepares to attack.
+~
+A massive demon spreads its giant wings as you look at it.  Its long 
+sharp blood covered teeth protude from the sides of its jaw.  Huge 
+glowing red eyes burn with fierce anger that you have entered its 
+domain. It grips its huge fists and screeches a war cry as it
+prepares to make you its lunch.
+~
+8 286523394 -1000 Y
+40 -20 -7 25d42+20000 30d30+40
+1 1999345
+8 8 1
+63 134184960 10d10+100 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21212
+morian commoner people person~
+A Morian Commoner~
+A Morian Commoner is here roaming about the city.
+~
+A Morian commoner is busy roaming the streets, carying out his busy
+tasks. He looks like the rest of the Morians, he has pale blue eyes
+and snow white hair. He does not seem to notice you as he roams the
+busy city streets.  Perhaps these Morians prefer to be left alone.
+~
+8 0 -349 Y
+45 -18 -2 20d10+4300 4d7+28
+10000 375000
+8 8 1
+68 0 10d10+300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21213
+morian grocer shopkeeper~
+The Morian Grocer~
+The Morian Grocer stands here waiting for some business.
+~
+A pretty looking thin girl stands behind the counter.  She smiles at you
+as you enter.  She is very tall with long braided hair that cascades down
+her shoulders and back.  Her blue eyes sparkle at you.  Maybe you should
+buy something and make her happy.
+~
+16793610 134219776 0 Y
+40 -18 10 20d100+15000 9d9+100
+200000 1
+8 8 2
+69 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21214
+morian postman post man mail~
+The Morian Postman~
+The Morian Postman is here sorting out some mail.
+~
+A man wearing big rimmed glasses peers up at you from his work station.
+He is a funny looking man, short and fat, with curly white hair and dark
+blue eyes.  Though he seems nice enough. He smiles politely and tips his
+hat at you.
+~
+16394 134219776 0 Y
+40 -18 10 20d100+14000 9d9+100
+200000 1
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21215
+Weapon Keeper shopkeeper morian~
+The Morian Weapons Keeper~
+The Morian Weapons Keeper stands here with her arms folded.
+~
+A brute of a man stands before you with his arms folded.  He has a 
+shiny bald head and a long white beard.  The muscles in his arms
+ripple every few minutes.  He gazes at you without showing any kind
+of expression on his face.  He may be good with weapons, but he
+definitely isn't a good shopkeeper.
+~
+16394 134219776 0 Y
+40 -18 10 20d100+14000 9d9+100
+200000 1
+8 8 1
+69 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21216
+morian blacksmith smith~
+The Morian Blacksmith~
+The Morian Blacksmith is here pounding on some iron.
+~
+An old fat man is here pounding on some iron.  There is sweat pouring
+down his face and cheeks as he works at the intense flame.  He has 
+burns and welts covering his body, no doubt from the time has has spent
+at this work.  He gazes up at you and nods as you approach.  You should
+try and make this quick, as he is a very busy man.
+~
+16394 134219776 0 Y
+40 -18 10 20d100+14000 9d9+100
+200000 1
+8 8 1
+69 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#21217
+jeweler jewel morian~
+The Morian Jeweler~
+The Morian Jeweler stands here admiring his stones.
+~
+A jolly fat man is here admiring his crafts.  He is tall and chubby, with
+short, curly white hair.  For some reason he has a bit of colour in his
+cheeks unlike the rest of the Morians around here.  He is dressed in fine
+linen robes and wears masses of expensive looking chains, rings, and
+pendants. You guess that he must make a fine living off of this shop,
+as he lives what seems to be a very lavish life.
+~
+16394 134219776 0 Y
+40 -18 10 20d100+14000 9d9+100
+200000 1
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21218
+grydon guard gates castle~
+Grydon the Guardian of the Gates~
+Grydon stands here guarding the city gates.
+~
+Grydon is a very tall and slender man.  He shows no expression on his 
+face, he just keeps attending to his duty as the Guardian of the Gates.
+You notice fierce looking scars on his arms and shoulders.  You guess
+that he is an experienced warrior, afterall, would the King put someone
+who isn't in charge of the gates?
+~
+16522 134217856 0 Y
+35 8 10 10d10+4000 5d6+30
+41000 300000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21219
+dragon stone rock huge~
+A Huge Stone Dragon~
+A Huge Stone Dragon rises up from the rocks here.
+~
+A massive stone dragon towers before you.  It lets out a tremendous
+roar that sounds like thunder.  You cower mecifully before it.  It
+has huge glowing red eyes and long dagger-like teeth.  You gawk
+in sheer terror and amazement.  Then your senses kick in and you
+realise its probably a good idea to get the hell out of here.
+~
+606218 134219904 0 Y
+50 -18 -2 10d126+11111 50d20+100
+100000 2999000
+8 8 1
+57 125173760 10d10+50 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#21223
+thief morian thug~
+A Morian Thug~
+A mean looking thug prepares to jump you.
+~
+A scarred faced thug glares at you from behind his icy blue eyes.  His
+lip curls up in an un friendly snarl.  He has long white hair, that 
+hasn't been cut in ages, it hangs down his back in an ugly mass.  This
+man looks brutual.  He raises his hands to fight.
+~
+536870922 335806592 -1000 Y
+40 -20 10 30d10+4500 5d7+50
+100100 691221
+8 8 1
+68 0 4d5+300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

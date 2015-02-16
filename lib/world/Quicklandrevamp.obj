@@ -1,0 +1,311 @@
+#10401
+quickling bracers~
+Quickling Bracers~
+Someone, in their haste, has forgotten to pick up the bracers lying here.~
+~
+9 268435521 257
+3 0 0 0
+5 4000 20
+60
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+A
+5 1
+#10402
+quickling knife~
+a Quickling Knife~
+A quickling knife has fallen to the ground here.~
+~
+5 268435520 8193
+0 4 5 11
+4 3000 15
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#10403
+quickling saber~
+a Quickling Saber~
+A quickling saber has fallen to the ground here.~
+$r Quickling Saber flashes back and forth with remarkable speed.~
+5 268435520 8193
+0 6 3 3
+8 3000 10
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#10404
+short sword speed~
+a Short sword of Speed~
+A sword looking as if it is very speedy lies here.~
+~
+5 268435521 8193
+0 4 6 14
+6 9000 4000
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 4
+A
+18 4
+#10405
+eyeglass~
+a Magical Eyeglass~
+An eyeglass lies here, shining with a magical glint.~
+~
+11 64 16385
+0 0 0 0
+5 6000 360
+65
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 2
+A
+13 20
+B
+32768
+#10406
+bow quickling short shortbow~
+a Quickling Shortbow~
+A bow that seems a bit too short, lies on the ground here.~
+~
+5 402653184 8193
+0 6 4 7
+14 100000 10000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+1 1
+#10407
+key genschling tooth were crocodile~
+Tooth of the Were-Crocodile King~
+A strange looking crocodile tooth is laying on the ground.~
+~
+18 524288 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10408
+case display antique~
+an Antique Case~
+A display case is here, showing a multitude of antiques.~
+~
+15 0 0
+500 15 10415 0
+500 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10409
+colossal claw greater lycanthrope~
+Colossal Claw of the Greater Lycanthrope~
+A large claw lies on the ground here.~
+$r claw hunts its prey with the prowess of the Were-Crocodile.~
+5 248516610 8193
+23 5 5 3
+19 10000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+50 5
+B
+32768
+#10410
+belt class hero~
+Belt of the Class Hero~
+A large black leather belt lies on the ground here.~
+~
+9 134217731 2049
+7 0 0 0
+5 1000 100
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 3
+A
+5 2
+#10411
+wand protection armor~
+Wand of Protection~
+A sparkling green wand lies on the ground here.~
+~
+3 268435488 16385
+30 20 20 1
+4 10000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10412
+large amethyst flat~
+A Large Flat Amethyst~
+A large flat amethyst sparkles on the ground here.~
+~
+9 104857600 513
+2 0 0 0
+15 100000 10000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 5
+A
+13 20
+B
+33792
+#10413
+gold coins~
+a bit of gold~
+A pile of gold coins trembles with the desire to be taken.~
+~
+20 0 1
+50000 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10414
+note page letter piece paper~
+The Note~
+A half torn piece of paper lies on the ground here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+E
+note page letter~
+All of my efforts to get money to the starving
+workers at the midgaard mob factory have failed
+so far, but I have one final option. I have
+located a pack of were-crocodiles who have
+tunnels leading to the midgaard sewers, I will
+attempt to buy the use of these tunnels to
+deliver the money myself. Wish me luck.
+
+-Relaidan
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#10415
+key display~
+a Key to the Display Case~
+A large silver key lies on the ground here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

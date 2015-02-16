@@ -1,0 +1,853 @@
+#9500
+Hall of Kludges~
+   Scattered everywhere, willy-nilly, are lots of strange gadgets that
+apparently do nothing.  A sign on the wall catches your attention.
+
+                           IMPORTANT:
+ 
+                          DON'T TOUCH
+                           ANYTHING!
+
+~
+95 576 0
+S
+#9501
+Hall of Kludges~
+   Scattered everywhere, willy-nilly, are lots of strange gadgets that
+apparently do nothing.  A sign on the wall catches your attention.
+
+                          IMPORTANT:
+
+                         DON'T TOUCH
+                          ANYTHING!
+
+~
+95 580 7
+D3
+~
+~
+0 -1 16605
+E
+eyes eye~
+You see a few pair of fiery red eyes, they don't look friendly at all!!!
+~
+S
+#9502
+Inside a Small Cave~
+   You are now inside a small cave. Although the cave is not too dirty,
+it is an extremely smelly cave. You see a tunnel at your east which leads
+upwards. There is a river at your west.
+~
+95 12 2
+D1
+You tried to look, but your current position is not good enough for you
+to see clearly.
+~
+~
+0 -1 9503
+D3
+You see a river over there.
+~
+~
+0 -1 16670
+E
+cave~
+It is a small cave. Although it is not too dirty, the smell here still make you puke.
+~
+S
+#9503
+The Tunnel~
+   This is a dark cave passage between the civilized and the uncivilized.
+As you move closer to the other side of the passage, you see a lot of human
+bones on the ground. The atmosphere make you shiver and want to leave as soon 
+as possible. The tunnel leads to west and east, but you better have second 
+thoughts about it before going in.
+~
+95 9 2
+D1
+The tunnel leads to that direction.
+~
+~
+0 -1 9504
+D3
+The entrance of the cave is just there.
+~
+~
+0 -1 9502
+E
+human bones~
+You picked up a bone and examined it carefully but you see nothing special
+about that dirty done, so you put it down.
+~
+E
+cave~
+It is a small cave. Although it is not too dirty, the smell here still make you puke.
+~
+S
+#9504
+The Tunnel~
+   This is a dark cave passage between the civilized and the uncivilized.
+As you move closer to the other side of the passage, you see a lot of human
+bones on the ground. The atmosphere make you shiver and want to leave as soon 
+as possible. The tunnel leads to west and south, but you better have second 
+thoughts about it before going in.
+~
+95 9 2
+D2
+The tunnel leads to that direction.
+~
+~
+0 -1 9505
+D3
+The tunnel leads to that direction.
+~
+~
+0 -1 9503
+E
+human bones~
+You picked up a bone and examined it carefully but you see nothing special
+about that dirty done, so you put it down.
+~
+E
+cave~
+It is a small cave. Although it is not too dirty, the smell here still make you puke.
+~
+S
+#9505
+The Tunnel~
+   This is a dark cave passage between the civilized and the uncivilized.
+As you move closer to the other side of the passage, you see a lot of human
+bones on the ground. The atmosphere make you shiver and want to leave as soon 
+as possible. The tunnel leads to north and south, but you better have second 
+thoughts about it before going in.
+~
+95 9 2
+D0
+The tunnel leads to that direction.
+~
+~
+0 -1 9504
+D2
+The tunnel leads to that direction.
+~
+~
+0 -1 9506
+E
+human bones~
+You picked up a bone and examined it carefully but you see nothing special
+about that dirty done, so you put it down.
+~
+E
+cave~
+It is a small cave. Although it is not too dirty, the smell here still make you puke.
+~
+S
+#9506
+The Tunnel~
+   This is a dark cave passage between the civilized and the uncivilized.
+As you move closer to the other side of the passage, you see a lot of human
+bones on the ground. The atmosphere make you shiver and want to leave as soon 
+as possible. The tunnel leads to north and east, but you better have second 
+thoughts about it before going in. There is a room at your south, you can hear
+some animal growling in there.
+~
+95 9 2
+D0
+The tunnel leads to that direction.
+~
+~
+0 -1 9505
+D1
+The tunnel leads to that direction.
+~
+~
+0 -1 9507
+D2
+You looked at that direction carefully and discovered that there was the
+Wolf Guard Outpost.
+~
+~
+0 -1 9529
+E
+room~
+You looked at the room carefully and discovered that there was the Wolf
+Guard Outpost.
+~
+E
+human bones~
+You picked up a bone and examined it carefully but you see nothing special
+about that dirty done, so you put it down.
+~
+E
+cave~
+It is a small cave. Although it is not too dirty, the smell here still make you puke.
+~
+S
+#9507
+The Tunnel~
+   This is a dark cave passage between the civilized and the uncivilized.
+As you move closer to the other side of the passage, you see a lot of human
+bones on the ground. The atmosphere make you shiver and want to leave as soon 
+as possible. The tunnel leads to west and south, but you better have second 
+thoughts about it before going in.
+~
+95 9 2
+D2
+The tunnel leads to that direction.
+~
+~
+0 -1 9508
+D3
+The tunnel leads to that direction, it seems to be the end of the tunnel.
+~
+~
+0 -1 9506
+E
+human bones~
+You picked up a bone and examined it carefully but you see nothing special
+about that dirty done, so you put it down.
+~
+E
+cave~
+It is a small cave. Although it is not too dirty, the smell here still make you puke.
+~
+S
+#9508
+The End of Tunnel~
+   This is a dark cave passage between the civilized and the uncivilized.
+As you move closer to the other side of the passage, you see a lot of human
+bones on the ground. The atmosphere make you shiver and want to leave as soon 
+as possible. The tunnel leads to north only, but you better have second 
+thoughts about it before going in. There is a plaza at your south. To your
+west, there is a small room. To your east, there is also a small room.
+~
+95 8 2
+D0
+The tunnel leads to that direction.
+~
+~
+0 -1 9507
+D1
+You can't see clearly but you can hear some growling from that direction.
+~
+~
+0 -1 9510
+D2
+You see a plaza over there.
+~
+~
+0 -1 9511
+D3
+You can't see clearly but you can hear some growling from that direction.
+~
+~
+0 -1 9509
+E
+human bones~
+You picked up a bone and examined it carefully but you see nothing special
+about that dirty done, so you put it down.
+~
+E
+cave~
+It is a small cave. Although it is not too dirty, the smell here still make you puke.
+~
+S
+#9509
+Guard Outpost~
+   The guard outpost of the Wolf Kingdom. This room is not too big but
+it can still contain a lot of guards. There is a big table at the middle
+of the room. You can see many bones lying on the table. There are still
+some meats sticking on the bones. It is an extremely smelly room.
+~
+95 9 2
+D1
+The tunnel is over there.
+~
+~
+0 -1 9508
+E
+room~
+The room is not too big, the walls here seem to be painted by blood!!!!!
+~
+E
+table~
+There are many bones lying on the table.
+~
+E
+meats bones~
+Oh... There are still some meats sticking on the bones. *SCREAM*
+Some of the meats are still alive!!!!!!!!! *PUKE*
+~
+S
+#9510
+Guard Outpost~
+   The guard outpost of the Wolf Kingdom. This room is not too big but
+it can still contain a lot of guards. There is a big table at the middle
+of the room. You can see many bones lying on the table. There are still
+some meats sticking on the bones. It is an extremely smelly room.
+~
+95 9 2
+D3
+The tunnel is over there.
+~
+~
+0 -1 9508
+E
+room~
+The room is not too big, the walls here seem to be painted by blood!!!!!
+~
+E
+table~
+There are many bones lying on the table.
+~
+E
+meats bones~
+Oh... There are still some meats sticking on the bones. *SCREAM*
+Some of the meats are still alive!!!!!!!!! *PUKE*
+~
+S
+#9511
+The Small Plaza~
+   You are now standing in the center of the kingdom. Along the plaza,
+there are playgrounds, kitchens, banquet rooms, nursery, and a temple.
+There is a tunnel at your north.
+~
+95 8 1
+D0
+There is a tunnel over there.
+~
+~
+0 -1 9508
+D1
+The other part of the plaza. It is closed to the kitchens.
+~
+~
+0 -1 9515
+D2
+The other part of the plaza. It is closed to the playgrounds.
+~
+~
+0 -1 9512
+D3
+The other part of the plaza. It is closed to the nursery.
+~
+~
+0 -1 9513
+E
+playgrounds kitchens rooms nursery~
+There are some playgrounds, kitchens, banquet rooms and nursery along the plaza.
+You are still far away from any of them, so you can see what's in there.
+~
+E
+temple~
+It is an ancient temple.
+~
+E
+plaza~
+You can see some blood on the ground.
+~
+E
+blood~
+It is human blood!!!!!!
+~
+S
+#9512
+The Small Plaza~
+   You are now standing in the center of the kingdom. There is a playground at
+your south.
+~
+95 8 1
+D0
+The other part of the plaza. It is closed to the tunnel.
+~
+~
+0 -1 9511
+D1
+The other part of the plaza. It is closed to the banquet rooms and a large house.
+~
+~
+0 -1 9516
+D2
+The playground is there. You can see many corpses lying on the ground.
+~
+~
+0 -1 9522
+D3
+The other part of the plaza. It is closed to the ancient temple.
+~
+~
+0 -1 9514
+E
+plaza~
+You can see some blood on the ground.
+~
+E
+blood~
+It is human blood!!!!!!
+~
+S
+#9513
+The Small Plaza~
+   You are now standing in the center of the kingdom. There is a nursery at
+your west.
+~
+95 8 1
+D1
+The other part of the plaza. It is closed to the tunnel.
+~
+~
+0 -1 9511
+D2
+The other part of the plaza. It is closed to the ancient temple.
+~
+~
+0 -1 9514
+D3
+You see many dead human bodies over there. There are many baby wolves surrounding
+those bodies and sucking blood from them.
+~
+~
+0 -1 9519
+E
+plaza~
+You can see some blood on the ground.
+~
+E
+blood~
+It is human blood!!!!!!
+~
+S
+#9514
+The Small Plaza~
+   You are standing in the center of the Kingdom. There is an ancient temple
+at your west.
+~
+95 8 1
+D0
+The other part of the plaza. It is closed to the nursery.
+~
+~
+0 -1 9513
+D1
+The other part of the plaza. It is closed to the playgrounds.
+~
+~
+0 -1 9512
+D3
+You see an ancient temple over there. This temple seems to be very old and
+dirty, you can see some cracks on its walls.
+~
+~
+0 -1 9517
+E
+plaza~
+You can see some blood on the ground.
+~
+E
+blood~
+It is human blood!!!!!!
+~
+S
+#9515
+The Small Plaza~
+   You are standing in the center of the Kingdom. There is a kitchen at your
+east.
+~
+95 8 1
+D1
+You see a kitchen over there. There is some blood flowing out from that kitchen.
+~
+~
+0 -1 9520
+D2
+The other part of the plaza. It is closed to the banquet rooms.
+~
+~
+0 -1 9516
+D3
+The other part of the plaza. It is closed to the tunnel.
+~
+~
+0 -1 9511
+E
+plaza~
+You can see some blood on the ground.
+~
+E
+blood~
+It is human blood!!!!!!
+~
+S
+#9516
+The Small Plaza~
+   You are standing in the center of the Kingdom. There is a banquet room at
+your east and a large house at your south.
+~
+95 8 1
+D0
+The other part of the plaza. It is closed to the kitchens.
+~
+~
+0 -1 9515
+D1
+The banquet room is over there. You can see some wolves in that room
+celebrating their killing now.
+~
+~
+0 -1 9521
+D2
+You see a large house over there.
+~
+~
+0 -1 9523
+D3
+The other part of the plaza. It is closed to the playgrounds.
+~
+~
+0 -1 9512
+E
+plaza~
+You can see some blood on the ground.
+~
+E
+blood~
+It is human blood!!!!!!
+~
+S
+#9517
+Temple of Eternal~
+   It was a very beautiful temple very long time ago, but now it is covered
+with dust and spider webs. There are some spiders and cockroaches climbing up
+your legs. There is a very big coffin at the middle of the temple.
+~
+95 8 2
+D1
+The small plaza is over there. It is the only way you can leave this dirty
+temple.
+~
+~
+0 -1 9514
+D5
+It is too dark down there, you can't see anything!
+~
+coffin~
+2 9517 9518
+E
+temple~
+It was a very beautiful temple very long time ago, but now it is covered with dust
+and spider webs.
+~
+E
+dust webs~
+They are very dirty and may be poisonous, so better not to touch them.
+~
+E
+spiders cockroaches~
+If you thinks that they are lonely, then you must be crazy!
+~
+E
+coffin~
+It is a very big coffin, there is a locked on the coffin......
+This coffin can be opened with a proper key!
+~
+S
+#9518
+The Den~
+   This little secret resort is used to store the wolves' treasures. There are
+numerous treasure boxes loaded with gold and jewelry here. The glittering 
+treasure makes your eyes tingle. If you attempt to take any of these, the 
+wolves will definitely give you a little revenge!!!
+~
+95 9 1
+D4
+The ancient temple is up there.
+~
+coffin~
+2 9517 9517
+E
+treasure boxes box gold jewelry~
+Wow!!!!!!!
+~
+S
+#9519
+The Nursery~
+   This is a nursery for the baby wolves. All members of the wolves kingdom have
+to be taught here. The most important skill taught here is how is suck a 
+human's blood dry. You see a lot of dead human bodies on the ground, they have 
+all been used for experiments by the baby wolves.
+~
+95 8 1
+D1
+The plaza is over there.
+~
+~
+0 -1 9513
+E
+bodies human dead~
+Your corpse will lie here too if you don't leave now!
+~
+S
+#9520
+The Kitchen~
+   This is where the wolves cook. You can see pots and pots of blood being 
+warmed up. Never have you smelled something so horrible before in your life,
+you begin to feel sick. You better leave before the wolves invite you to 
+dinner!
+~
+95 8 1
+D3
+The plaza is out there.
+~
+~
+0 -1 9515
+E
+pots blood~
+The blood is boiling!!!
+~
+S
+#9521
+The Banquet Room~
+   This is an elegant room filled with priceless paintings and antiques. There 
+is a very long dining table in the middle of the room loaded with food and 
+drinks. The wolves always celebrate their killings here. Would you like to 
+join them?
+~
+95 8 1
+D3
+The plaza is out there.
+~
+~
+0 -1 9516
+E
+table food drinks~
+There are many dead corpses lying on the table. Their blood is the drinks, and
+their bodies are the foods.
+~
+S
+#9522
+The Playground~
+   This used to be a playground for the wolves, but it has became a place for 
+executing humans. The smell of stale blood and decayed corpses make you puke.
+Definitely not a nice place to be at!
+~
+95 5004 1
+D0
+Your only way out!
+~
+~
+0 -1 9512
+D3
+A gate opens onto a bloody cobblestone road.
+~
+gate~
+1 -1 16999
+E
+gate~
+A tiny gate made from human femur bones stands guarding the head
+of a cobblestone road.
+~
+E
+playground~
+It is the place for the wolves to execute the humans.
+~
+E
+corpses~
+The decayed corpses are so horrible here, so you do want to touch them.
+~
+S
+#9523
+Inside a Small House~
+   You are now standing inside a small house. This house is built inside
+a cave. So there must be a passage in this house which can go into the cave.
+The small plaza is at the north, which is also the only exit out this house.
+~
+95 8 1
+D0
+The plaza is out there.
+~
+~
+0 -1 9516
+D2
+There is a cupboard over there. You may be able to move this cupboard.
+~
+cupboard~
+2 9518 9524
+E
+house~
+There is a big cupboard in the house.
+~
+S
+#9524
+The Passage~
+   You are now standing in a dark and wet passage. There are lots of faces of 
+wolves engraved on the walls. 
+~
+95 9 3
+D0
+You see the cupboard's back.
+~
+cupboard back~
+2 -1 9523
+D1
+The passage leads to that direction.
+~
+~
+0 -1 9525
+E
+faces wolves walls wall~
+There are a lot of ugly faces engraved on the walls, they all looked very painful!
+~
+E
+passage~
+The passage is dark and wet, you can feel that you are now standing on some bones.
+~
+S
+#9525
+The Passage~
+   You are now standing in a dark and wet passage. There are lots of faces of 
+wolves engraved on the walls. There is a very large cave at your east.
+~
+95 9 3
+D1
+There is a very large cave over there. You can see some bright lights coming from
+that direction. The light flashes frequently which means that there are someone
+over there.
+~
+~
+0 -1 9526
+D3
+The passage leads to that direction.
+~
+~
+0 -1 9524
+E
+faces wolves walls wall~
+There are a lot of ugly faces engraved on the walls, they all looked very painful!
+~
+E
+passage~
+The passage is dark and wet, you can feel that you are now standing on some bones.
+~
+S
+#9526
+A very large cave~
+   You are in an extremely large cave. The floor slopes steeply from
+West down to East, doesn't seem to be a good place for battle. There is
+a faint glow from below, and a rather brighter light from above.
+~
+95 8 3
+D2
+There is a passage over there.
+~
+~
+0 -1 9527
+D3
+There is a passage over there.
+~
+~
+0 -1 9525
+E
+light above~
+There are some lights coming from above.
+~
+E
+floor~
+The floor slopes steeply from west down to east.
+~
+S
+#9527
+The Passage~
+   You are now standing in a dark and wet passage. There are lots of faces of 
+wolves engraved on the walls. There is a very large cave at your north and a
+main chamber at your south.
+~
+95 9 3
+D0
+You see a very large cave.
+~
+~
+0 -1 9526
+D2
+Finally, you reach the end of the passage, it is also the end of the cave.
+There is a main chamber over there. You can see many dead bodies lying on the
+ground. You must be well prepared before you go that direction.
+~
+~
+0 -1 9528
+E
+faces wolves walls wall~
+There are a lot of ugly faces engraved on the walls, they all looked very painful!
+~
+E
+passage~
+The passage is dark and wet, you can feel that you are now standing on some bones.
+~
+S
+#9528
+Main Chamber~
+   This chamber is built inside the cave. This is an extremely smelly cave
+because there are many dead bodies lying on the ground and they are partly
+decomposed already. You can see some maggots moving on the dead bodies. There
+is a gap on the ceiling of the chamber. There are some lights coming through
+the gap and light the Chamber.
+~
+95 8 3
+D0
+Your only way out!
+~
+~
+0 -1 9526
+E
+lights gap~
+There is a big gap at the ceiling of the chamber, some lights coming through
+this gap and light the Chamber. This gap is too high for you to reach.
+~
+E
+bodies maggots dead~
+There are many partly decomposed bodies lying on the ground. You can still see
+some maggots surrounding them. It is not a good idea to touch the corpses.
+~
+S
+#9529
+Guard Outpost~
+   The guard outpost of the Wolf Kingdom. This room is not too big but
+it can still contain a lot of guards. There is a big table at the middle
+of the room. You can see many bones lying on the table. There are still
+some meats sticking on the bones. It is an extremely smelly room.
+~
+95 9 2
+D0
+The tunnel is over there.
+~
+~
+0 -1 9506
+E
+room~
+The room is not too big, the walls here seem to be painted by blood!!!!!
+~
+E
+table~
+There are many bones lying on the table.
+~
+E
+meats bones~
+Oh... There are still some meats sticking on the bones. *SCREAM*
+Some of the meats are still alive!!!!!!!!! *PUKE*
+~
+S
+#9599
+Hall of Kludges~
+   Scattered everywhere, willy-nilly, are lots of strange gadgets that
+apparently do nothing.  A sign on the wall catches your attention.
+
+                          IMPORTANT:
+
+                         DON'T TOUCH
+                          ANYTHING!
+
+~
+95 576 0
+S
+#0
+$~
+

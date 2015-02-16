@@ -1,0 +1,167 @@
+#10700
+Drake~
+A drake~
+A drake is here chanting and dancing.
+~
+The drake is dressed in a beige colored robe and beads.  He looks like he's
+a little drunk but is still rather large.
+~
+8 32768 1000 Y
+16 10 7 1d100+600 1d30+1
+5000 45000
+8 8 1
+0 0 1d100+100 0
+0 0 0 0
+#10701
+priest~
+The High Priest~
+The High Priest is here chanting and praying.
+~
+     This man is dressed in white and red.  He is an older man that seems to
+have found peace until you walked in and disturbed him.  Although his age
+shows through his white hair and bald spot, you can still see the wisdom and
+strength from his deeply cut eyes and large strong hands.
+~
+10 268730368 1000 Y
+22 3 0 2d600+400 3d6+6
+20000 100000
+8 8 1
+0 0 1d100+100 0
+0 0 0 0
+#10702
+guru~
+The Guru~
+The Guru is sitting here reading a book.
+~
+     The Guru glows as though he were made out of the same stone as the house
+and temple are.  He is very learned in everything including the skills of
+fighting.
+~
+10 268468352 1000 Y
+22 8 0 1d100+4500 2d3+25
+10500 350000
+6 8 1
+0 0 1d100+100 1
+1 2 15 100
+0 0 0 0
+#10703
+Dragon Golden San JuanPablo~
+A Golden Dragon~
+The Golden Dragon of JuanPablo is standing here.
+~
+     Before you stands a giant golden dragon.  Stories of this dragon say
+that San JuanPablo rode this dragon to victory over a vampire clan somewhere
+nearby.  That was supposed to be just stories.
+~
+10 268468352 1000 Y
+30 -3 0 1d100+4000 2d3+40
+25000 350000
+8 8 0
+0 0 1d100+200 2
+8 1 10 0
+9 1 5 0
+0 0 0 0
+#10704
+ogre~
+A huge ugly Ogre~
+A huge ugly Ogre stands here waiting for someone to fall from the bridge.
+~
+     The Ogre is wading waist deep in the river.  He has bits of fish flesh
+and bone hanging from his teeth.  You look like something that might taste
+a little better than a trout.
+~
+536887310 297130 1000 Y
+30 -6 0 1d100+3000 1d50+20
+75000 300000
+8 8 1
+0 0 1d100+200 1
+4 1 20 0
+0 0 0 0
+#10705
+vampire young~
+young vampire~
+A young vampire stands here.
+~
+     The vampire's skin is very pale.  He glares at you with his dark purple
+eyes that almost appear black.  He grins evilly at you and you catch a glance
+at the sparkle from his long white teeth.  He still has a little tint to his
+skin and is a little clumsy at using his vampire skills.  He apparently
+hasn't been a vampire for very long.
+~
+40 32768 -1000 Y
+16 10 0 1d100+850 3d4+15
+15000 50000
+8 8 1
+0 0 1d100+100 0
+0 0 0 0
+#10706
+vampire ancient~
+An ancient vampire~
+An ancient vampire stands here, ecstatic to see you.
+~
+     This vampire is very pale and moves at speeds which you can not even see.
+He is very old but looks as though he is still in the prime of his life.
+He appears as though he is floating toward you and then disappears into the
+darkness.
+~
+44 268468226 -1000 Y
+30 2 0 1d100+2000 4d5+25
+10000 250000
+8 8 1
+0 0 1d100+100 1
+5 1 5 0
+0 0 0 0
+#10707
+vampiress~
+The Vampiress~
+The Vampiress turns to meet your terrified stare.
+~
+     The Vampiress is very beautiful despite her pale complextion.  Something
+about her enchants you.  Her long black hair compliments her icy blue eyes.
+Her long white teeth glimer as you stare at her.
+~
+42 268468352 -1000 Y
+30 -3 0 1d100+3750 2d3+40
+20000 350000
+8 8 2
+0 0 1d100+200 0
+0 0 0 0
+#10708
+vampire prisoner~
+A Starving Vampire~
+A Vampire is held prisoner here.  He looks awful hungry.
+~
+     This vampire looks as though he hasn't fed in a while.  He is all
+shriveled and turning a waxy white colour.  He is much more pale than any of
+the other vampires that you have seen.  You can see that his eyes are bulging
+and large blue veins protrude from his skin.  You take a moment to wonder
+what he might have done to be put here, but then again these are vampires
+and who has the time to think.  Especially when you are face to face with one
+that hasn't fed in a while.
+~
+42 268468352 -1000 Y
+30 0 0 1d100+3000 2d3+25
+10000 300000
+8 8 1
+0 0 1d100+100 1
+5 2 5 0
+0 0 0 0
+#10709
+Azul~
+Azul~
+Azul stands here performing a sacret ritual.
+~
+     You are looking at the oldest known vampire alive.  He is the vampire's
+god of gods.  He looks at you with cold, aged eyes.  He appears to be about
+thirty years old, but the few lines that he has in his face are too deep to
+be that of a thirty year old.  He is very pale and looks very wise.
+~
+42 268470400 -1000 Y
+32 -8 -4 1d100+12500 4d5+35
+20000 450000
+8 8 1
+0 0 1d100+300 1
+5 2 10 0
+0 0 0 0
+#0
+$~

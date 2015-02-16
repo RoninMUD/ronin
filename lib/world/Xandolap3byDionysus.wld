@@ -1,0 +1,703 @@
+#19700
+The Barracks~
+These are the guard chambers for the defenders of the city of
+Hlanith.  The Formless Minions spend their time wandering the streets,
+looking for intruders such as yourself.  Though they have no physical
+need for rest, on occasion they will take breaks from their monotonous
+labor to meditate on the meaning of their existence.   
+~
+197 8 0
+D1
+~
+~
+0 -1 19701
+S
+#19701
+The Barracks~
+These are the guard chambers for the defenders of the city of
+Hlanith.  The Formless Minions spend their time wandering the streets,
+looking for intruders such as yourself.  Though they have no physical
+need for rest, on occasion they will take breaks from their monotonous
+labor to meditate on the meaning of their existence.   
+~
+197 8 0
+D1
+~
+~
+0 -1 19702
+D3
+~
+~
+0 -1 19700
+S
+#19702
+The Gate~
+This gigantic hewn oak gate is one of the few things which has
+survived intact from the old kingdom.  It is somehow quite poignant
+that the very gate meant to keep evil invaders from ransacking the
+city now protects them from those who would destroy them.
+~
+197 4 0
+D0
+~
+~
+0 -1 19707
+D1
+~
+~
+0 -1 19703
+D2
+~
+~
+0 -1 19632
+D3
+~
+~
+0 -1 19701
+S
+#19703
+The Barracks~
+These are the guard chambers for the defenders of the city of
+Hlanith.  The Formless Minions spend their time wandering the streets,
+looking for intruders such as yourself.  Though they have no physical
+need for rest, on occasion they will take breaks from their monotonous
+labor to meditate on the meaning of their existence.  
+~
+197 8 0
+D1
+~
+~
+0 -1 19704
+D3
+~
+~
+0 -1 19702
+S
+#19704
+The Barracks~
+These are the guard chambers for the defenders of the city of
+Hlanith.  The Formless Minions spend their time wandering the streets,
+looking for intruders such as yourself.  Though they have no physical
+need for rest, on occasion they will take breaks from their monotonous
+labor to meditate on the meaning of their existence.  
+~
+197 8 0
+D1
+~
+~
+0 -1 19705
+D3
+~
+~
+0 -1 19703
+S
+#19705
+The Captain's Chambers~
+This is where the captain of the guard comes to rest and ponder the
+deeper questions of existence.  While the other Minions are merely
+non-corporeal spirits, summoned from the Abyss to serve their master,
+the Captain is a harnessed soul of one of the greatest fighters to
+walk the earth.
+~
+197 9 0
+D3
+~
+~
+0 -1 19704
+S
+#19706
+An Old House~
+This was the residence of an aristocrat during the old regime.  Now
+it has fallen into disrepair, and serves as domicile to no one but the
+Formless Minions which wander aimlessly through the city serving the
+interests of their Dark Lord.
+~
+197 8 0
+D1
+~
+~
+0 -1 19707
+S
+#19707
+A Cobblestone Road~
+The stone which paves this road must have once been a sight to see,
+even now, after all these years of being neglected, light still shines
+off the finely polished cobble.  A thick layer of dust covers the
+street, evidence that no corporeal body has passed this way in a long,
+long time.
+~
+197 0 0
+D0
+~
+~
+0 -1 19711
+D1
+~
+~
+0 -1 19708
+D2
+~
+~
+0 -1 19702
+D3
+~
+~
+0 -1 19706
+S
+#19708
+An Old Smithy~
+A large rusted anvil sits in one corner of what used to be the
+greatest smithy this side of Midgaard.  In the days of yore, so it was
+rumored, the master smiths working here day and night could turn out
+weapons rivaled only by those from the Time of Wonders.  Now, alas,
+these smiths are long dead, or have fled to distant realms, safe from
+the terror of the Dark.
+~
+197 0 0
+D3
+~
+~
+0 -1 19707
+S
+#19709
+A Storage Room~
+This was once a storage room for the shop to the east, now it lies
+empty, long since looted of anything which could serve a use to the
+forces of Darkness which swept over the land.
+~
+197 8 0
+S
+#19710
+A Burned Out Shop~
+It seems that someone set a torch to this shop, either before or
+after the invaders took the city.  Perhaps it was a last ditch effort
+by the owner to keep anything of value from falling into the hands of
+his murderers.  Then again, perhaps it was merely a mindless act of
+violence by the attackers themselves.
+~
+197 8 0
+D1
+~
+~
+0 -1 19711
+S
+#19711
+A Cobblestone Road~
+The stone which paves this road must have once been a sight to see,
+even now, after all these years of being neglected, light still shines
+off the finely polished cobble.  A thick layer of dust covers the
+street, evidence that no corporeal body has passed this way in a long,
+long time.
+~
+197 0 0
+D0
+~
+~
+0 -1 19713
+D1
+~
+~
+0 -1 19712
+D2
+~
+~
+0 -1 19707
+D3
+~
+~
+0 -1 19710
+S
+#19712
+An Old Stables~
+Once a great stables, surrogate home to the equines of dignitaries
+from the surrounding realms, this building has now fallen into severe
+disrepair.  You pity the poor fool who chooses to lodge his animal
+within these crumbling stone walls.
+~
+197 8 0
+D3
+~
+~
+0 -1 19711
+S
+#19713
+Great Hall~
+A large spacious room, this serves as the great hall for the palace
+of the Dark Lord himself.  It is one of the few buildings you've seen
+in this land still in good repair, and the effect is especially
+noticeable after your walk through the city.  Tapestries adorn the
+walls, portraying hideous acts being committed on the nicest of people.
+There is nothing pleasant about the room, except for the fact that it
+isn't the room to the north.  Nothing you have ever known could
+possibly prepare you for the sheer, unadulterated evil lurking on that
+throne.
+~
+197 8 0
+D0
+~
+~
+0 -1 19717
+D1
+~
+~
+0 -1 19714
+D2
+~
+~
+0 -1 19711
+S
+#19714
+A Hallway~
+Not a terribly exciting or particularly Gothic hallway in any
+respect.  It's just a hallway, two walls, a small passageway leading
+to an inevitable end.  Doors spurring off at various points, a nice
+plush carpet.  You've seen the type before.
+~
+197 8 0
+D0
+~
+~
+0 -1 19718
+D1
+~
+~
+0 -1 19715
+D3
+~
+~
+0 -1 19713
+S
+#19715
+The Library~
+Shelves reaching to the ceiling take up the north and south walls
+of this room.  At first glance, it appears to be an average library,
+full of texts, with large central tables for browsing the book of your
+choosing.  Upon closer examination however, you notice the books are
+made of a strange substance... human flesh!  It takes a moment for you
+to get your gag-reflex in check, and even once you do, the urge to
+leave this room is overwhelming.  The amount of human lives necessary
+to create this many sheets is absolutely staggering.
+~
+197 12 0
+D1
+~
+~
+0 -1 19716
+D3
+~
+~
+0 -1 19714
+S
+#19716
+The Library~
+Shelves reaching to the ceiling take up the north, south and east
+walls of this room.  At first glance, it appears to be an average 
+library, full of texts, with large central tables for browsing the 
+book of your choosing.  Upon closer examination however, you notice 
+the books are made of a strange substance... human flesh!  It takes a 
+moment for you to get your gag-reflex in check, and even once you do, 
+the urge to leave this room is overwhelming.  The amount of human 
+lives necessary to create this many sheets is absolutely staggering.
+~
+197 8 0
+D3
+~
+~
+0 -1 19715
+S
+#19717
+The Throne Room~
+A monument to the Dark Lord himself, Xandolap the Cruel, this
+throne room fairly radiates evil.  The walls are lined with "trophies"
+of his past victories, the heads of many creatures of good, including
+various rulers you remember from your history lessons.  A collection
+of gauntlets with the hands of knights still attached serves as
+testament to the Dark Lord's skill with a sword.  The scent of death
+and decay fills the air, and the throne in the center of the room is
+made of the bones of land lizards, tied together with griffin sinew.
+~
+197 520 0
+D2
+~
+~
+0 -1 19713
+S
+#19718
+A Hallway~
+Not a terribly exciting or particularly Gothic hallway in any
+respect.  It's just a hallway, two walls, a small passageway leading
+to an inevitable end.  Doors spurring off at various points, a nice
+plush carpet.  You've seen the type before.
+~
+197 8 0
+D0
+~
+~
+0 -1 19724
+D2
+~
+~
+0 -1 19714
+S
+#19719
+Servant's Quarters~
+This is where the "servants" of the palace take their repose.  For
+the most part these servants are members of the old ruling class who
+were deemed safe to keep around.  They are subjected to humiliating
+and incredibly painful abuse, but they stay alive in hopes that
+someday the evil forces of the Dark will be driven from their land.
+~
+197 8 0
+D0
+~
+~
+0 -1 19725
+S
+#19720
+A Shimmering Portal~
+This portal is used by the Dark Lord Xandolap to bring in
+assistance when he requires it.  It connects to his various allies
+throughout the realm.  Through the shifting portal you catch glimpses
+of a dark wood, a high balcony, a small bedroom, and somewhere in the
+outer planes.
+~
+197 8 0
+D0
+~
+~
+0 -1 19721
+S
+#19721
+A Trapped Room~
+This entire room is a great big death trap.  Fire sears you and
+heats your armor to almost intolerable temperatures, acid rains from
+the ceiling, burning your face, spikes jut up from the floor and
+impale your feet.  You think it would perhaps be a good idea to leave
+this room as soon as possible.
+~
+197 8 0
+D1
+~
+~
+0 -1 19722
+D2
+~
+~
+0 -1 19720
+S
+#19722
+A Well-Guarded Room~
+The large iron door set in the west wall must open to something
+very valuable to warrant such a heavy guard.  Other than the many
+guards, the room is empty.  Just a large stone box, with a wooden door
+to the east and an iron door to the west.
+~
+197 8 0
+D1
+~
+~
+0 -1 19723
+D3
+~
+~
+0 -1 19721
+S
+#19723
+A Hallway~
+Not a terribly exciting or particularly Gothic hallway in any
+respect.  It's just a hallway, two walls, a small passageway leading
+to an inevitable end.  Doors spurring off at various points, a nice
+plush carpet.  You've seen the type before.  Of particular interest
+however is the large locked wooden door to the west.
+~
+197 8 0
+D0
+~
+~
+0 -1 19727
+D1
+~
+~
+0 -1 19724
+D3
+~
+~
+0 -1 19722
+S
+#19724
+A Hallway~
+Not a terribly exciting or particularly Gothic hallway in any
+respect.  It's just a hallway, two walls, a small passageway leading
+to an inevitable end.  Doors spurring off at various points, a nice
+plush carpet.  You've seen the type before.
+~
+197 8 0
+D0
+~
+~
+0 -1 19728
+D1
+~
+~
+0 -1 19725
+D2
+~
+~
+0 -1 19718
+D3
+~
+~
+0 -1 19723
+S
+#19725
+A Hallway~
+Not a terribly exciting or particularly Gothic hallway in any
+respect.  It's just a hallway, two walls, a small passageway leading
+to an inevitable end.  Doors spurring off at various points, a nice
+plush carpet.  You've seen the type before.
+~
+197 8 0
+D0
+~
+~
+0 -1 19729
+D1
+~
+~
+0 -1 19726
+D2
+~
+~
+0 -1 19719
+D3
+~
+~
+0 -1 19724
+S
+#19726
+A Bedroom~
+This bedroom is reserved for visiting dignitaries of evil.  Many
+famous high-lords of Darkness have inhabited this chamber.  Right
+now this room appears to be empty, which you consider a very lucky
+turn of events.
+~
+197 8 0
+D3
+~
+~
+0 -1 19725
+S
+#19727
+A Banquet Hall~
+This large hall is mostly occupied by a large table made from a
+single piece of wood which must stretch at least 300 feet.  You can't
+recognize what sort of tree it must have came from, but one thing's
+for certain:  It would have been an impressive sight while still
+standing.  No one is currently eating at the table, and you're not
+sure you'd like to see what exactly the inhabitants of this palace
+feast on.
+~
+197 8 0
+D0
+~
+~
+0 -1 19731
+D2
+~
+~
+0 -1 19723
+S
+#19728
+The Music Room~
+A well-decorated room, this is where the various Lords of the land
+entertain their guests.  A huge pipe-organ, made solely from human
+bones, sits in one corner, seeming to dare you to touch its 
+magnificent ivory keys.
+~
+197 8 0
+D2
+~
+~
+0 -1 19724
+S
+#19729
+A Hallway~
+Not a terribly exciting or particularly Gothic hallway in any
+respect.  It's just a hallway, two walls, a small passageway leading
+to an inevitable end.  Doors spurring off at various points, a nice
+plush carpet.  You've seen the type before.
+~
+197 8 0
+D0
+~
+~
+0 -1 19732
+D1
+~
+~
+0 -1 19730
+D2
+~
+~
+0 -1 19725
+S
+#19730
+A Bedroom~
+This bedroom is reserved for visiting dignitaries of evil.  Many
+famous high-lords of Darkness have inhabited this chamber.  When you
+see who happens to be occupying the room currently, you decide in the
+future you'll remember to knock first.
+~
+197 8 0
+D3
+~
+~
+0 -1 19729
+S
+#19731
+A Banquet Hall~
+This large hall is mostly occupied by a large table made from a
+single piece of wood which must stretch at least 300 feet.  You can't
+recognize what sort of tree it must have came from, but one thing's
+for certain:  It would have been an impressive sight while still
+standing.  No one is currently eating at the table, and you're not
+sure you'd like to see what exactly the inhabitants of this palace
+feast on.
+~
+197 8 0
+D2
+~
+~
+0 -1 19727
+S
+#19732
+A Hallway~
+Not a terribly exciting or particularly Gothic hallway in any
+respect.  It's just a hallway, two walls, a small passageway leading
+to an inevitable end.  Doors spurring off at various points, a nice
+plush carpet.  You've seen the type before.
+~
+197 8 0
+D1
+~
+~
+0 -1 19733
+D2
+~
+~
+0 -1 19729
+S
+#19733
+The Master Bedroom~
+This is where the Dark Lord ostensibly comes to rest.  In truth he
+has no need for sleep, at least, not in the sense that normal mortals
+require it.  His sleep takes place on another plane, far away from the
+modicum of danger posed by insignificant insects such as yourself.
+Instead, this room serves more as a passageway to the underground
+sacrificial pit of Chatundah the Unspeakable.  It is from this essence
+of pure evil that the Dark Lord draws much of his unholy power, and
+having a resting chamber so near the center of the force which feeds
+him aids in his meditations to regenerate his energy.
+~
+197 8 0
+D3
+~
+~
+0 -1 19732
+D5
+~
+~
+0 -1 19734
+S
+#19734
+A Sacrificial Pit~
+There is only one reason any living creature goes into this pit,
+and that is to feed the insatiable appetite of the All-Mighty
+Sickness, Chatundah the Unspeakable.  Ordinarily the sacrifices are
+his own High Priests, who devote a large portion of their four years 
+of service to draining the souls of other life-forms, that these may
+in turn be transferred to the All-Mighty himself.  Be that as it may,
+you can sure Chatundah will not mind a change in his diet.
+~
+197 525 0
+D0
+~
+~
+0 -1 19736
+D1
+~
+~
+0 -1 19735
+D4
+~
+~
+0 -1 19733
+S
+#19735
+A Sacrificial Pit~
+There is only one reason any living creature goes into this pit,
+and that is to feed the insatiable appetite of the All-Mighty
+Sickness, Chatundah the Unspeakable.  Ordinarily the sacrifices are
+his own High Priests, who devote a large portion of their four years 
+of service to draining the souls of other life-forms, that these may
+in turn be transferred to the All-Mighty himself.  Be that as it may,
+you can sure Chatundah will not mind a change in his diet.
+~
+197 521 0
+D0
+~
+~
+0 -1 19737
+D3
+~
+~
+0 -1 19734
+S
+#19736
+A Sacrificial Pit~
+There is only one reason any living creature goes into this pit,
+and that is to feed the insatiable appetite of the All-Mighty
+Sickness, Chatundah the Unspeakable.  Ordinarily the sacrifices are
+his own High Priests, who devote a large portion of their four years 
+of service to draining the souls of other life-forms, that these may
+in turn be transferred to the All-Mighty himself.  Be that as it may,
+you can sure Chatundah will not mind a change in his diet.
+~
+197 521 0
+D1
+~
+~
+0 -1 19737
+D2
+~
+~
+0 -1 19734
+S
+#19737
+A Sacrificial Pit~
+There is only one reason any living creature goes into this pit,
+and that is to feed the insatiable appetite of the All-Mighty
+Sickness, Chatundah the Unspeakable.  Ordinarily the sacrifices are
+his own High Priests, who devote a large portion of their four years 
+of service to draining the souls of other life-forms, that these may
+in turn be transferred to the All-Mighty himself.  Be that as it may,
+you can be sure that Chatundah will not mind a change in his diet.
+~
+197 521 0
+D2
+~
+~
+0 -1 19735
+D3
+~
+~
+0 -1 19736
+S
+#19799
+A temporary name~
+A temporary description
+~
+197 0 0
+S
+#0
+$~

@@ -1,0 +1,99 @@
+#24900
+Dark Druid Guardian~
+The Dark Druid Guardian~
+The Dark Druid Guardian is here, protecting his home.
+~
+Shadows cover most of his face, but what you can make out seems to be a
+hard man.  Unblinking, he attacks you with the fierceness of a panther.
+~
+58 671383682 -500 Y
+59 -19 4 10d300+7000 5d15+51
+400000 75100
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#24901
+Dark Wolf~
+a Dark Wolf~
+A Dark Wolf stalks the woods in search of prey.
+~
+As you look into his eyes, you can see the souls of lost travelers that
+have been devoured by this monster.
+~
+104 1835008 -501 Y
+47 -9 7 2d10+950 5d19+15
+40000 250000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#24902
+Druid~
+the Druid of the Forest~
+The Druid searches for intruders while casually strolling the forest.
+~
+He lives for the sole purpose of protecting the forest.  Try to harm 
+him and you'd best be prepared to pay the Reaper.
+~
+147560 268707976 0 Y
+56 -20 5 10d200+5050 5d13+54
+500000 1000000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#24903
+druid protector~
+The Druid Protector~
+The Druid Protector is here, on watch against intruders.
+~
+Icy blue eyes stare back at you, unblinking.  The druid warrior has never
+known defeat, and will not any time soon.  You shiver as you see cables
+of blood-engorged veins and muscles running down his gargantuan arms.
+~
+167978 671121536 0 Y
+60 -20 6 10d250+9000 10d5+80
+1000000 1870000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#24904
+Dark Wolf~
+a Dark Wolf~
+A Dark Wolf stalks the woods in search of prey.
+~
+As you look into his eyes, you can see the souls of lost travelers that
+have been devoured by this monster.
+~
+104 1835008 -501 Y
+47 -9 7 2d10+950 5d19+15
+40000 250000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#24936
+devil locust~
+A Devil Locust~
+A black insect, fully three feet long, shrieks at you with devilish fury!
+~
+This gigantic locust shrieks as you turn your eyes to it. It's carapace
+is obsidian, and its multifaceted eyes glow red.
+~
+40 285245484 0 Y
+52 -12 -22 1000d1+3000 10d50+100
+0 30
+8 8 0
+76 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

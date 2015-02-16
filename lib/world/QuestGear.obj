@@ -1,0 +1,2371 @@
+#6900
+badge sheriff midgaard~
+Midgaard Sheriff's Badge~
+The shiny badge of the Sheriff of Midgaard lies on the ground.~
+~
+9 134217729 513
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+19 1
+B
+32
+#6901
+jacket green~
+A small green jacket~
+A small green jacket is resting here on the ground, neatly folded.~
+~
+9 134217986 9
+26 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -17
+A
+13 30
+#6902
+hat cap green~
+A small green hat~
+A little green hat is resting on the ground here.~
+~
+9 134217985 17
+10 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 1
+#6903
+paws pink~
+A pair of fuzzy pink rabbit paws~
+A pair of paws once belonging to the Easter Bunny rest here.~
+~
+9 134217794 129
+13 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+#6904
+ears pink~
+A pair of fuzzy pink rabbit ears~
+A long set of pink rabbit ears, once worn by the Easter Rabbit, rest here.~
+~
+9 134217793 17
+6 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+A
+13 38
+#6905
+shield spiked war heavy ~
+Spiked Heater Shield~
+A large spiked shield is resting against the wall, here. ~
+~
+9 134217728 513
+20 0 0 0
+18 100000 50000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+B
+32768
+#6906
+bracers militant war mage~
+Militant Bracers~
+A set of beautiful glowing bracers lies on the ground.~
+~
+11 250638400 257
+5 0 0 0
+4 1000000 50000
+3
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+B
+16777216
+#6907
+leggings pathfinder hide~
+Pathfinders Leggings~
+Some leggings made from really tough hides lie on the ground.~
+~
+9 134217794 33
+5 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 20
+#6908
+shield highlord dragon black~
+Dragon High Lord's Shield~
+A beautiful, black shield is lying here, discarded.~
+~
+9 134217728 513
+10 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 5
+#6909
+dragon horn light sceptre~
+Dragon Horn~
+A glowing, blood-covered, reddish horn is lying on the ground here.~
+~
+1 134217793 65537
+0 0 -1 0
+15 500000 75000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+12 15
+#6910
+shield kombat~
+The Shield of Kombat~
+A shield of unimaginable power awaits a worthy owner here.~
+~
+9 134217730 513
+13 0 0 0
+15 666 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#6911
+suit feathers bird kingfisher~
+Feathers of the Kingfisher~
+A lovely suit of bird's feathers is lying on the ground.~
+~
+9 321 9
+14 0 0 0
+3 30000 5000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 4
+A
+19 2
+#6912
+trough heathen dung~
+heathen feeding trough~
+A large trough filled with locust guano and bits of little children lies here.~
+$r trough makes a dull THUNK as it crashes into $V, sending dung and kiddie bits flying!~
+5 134217728 8193
+0 2 20 7
+17 32000 10000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#6913
+thorax zorak~
+Zorak's Thorax~
+A huge, glowing insectoid Thorax lies on the ground loudly here.~
+~
+9 134217730 2049
+20 0 0 0
+12 1000000 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 30
+#6914
+vest skin turkey~
+A Turkey-Skin Vest~
+A vest made of wrinkled old turkey skin sits here.~
+~
+9 134217729 9
+10 1 14 20
+10 10 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 20
+B
+32768
+#6915
+helmet feathers turkey~
+A helmet made of Turkey Feathers~
+A helmet made from the dirty feathers of a turkey rests here.~
+~
+9 134217730 17
+10 1 10 2
+10 10 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+1 2
+B
+16777216
+#6916
+gloves grouch skin~
+Grouch-Skin Gloves~
+A pair of green, fuzzy gloves lie on the ground here.~
+~
+9 402653186 129
+15 0 0 0
+40 0 300
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+47 30
+A
+13 50
+B
+1581058
+#6917
+garbage can lid~
+a Bloody Garbage Can Lid~
+A dented garbage can lies here, dripping with blood.~
+$r Bloody Garbage Can Lid makes a neato WHANG sound as it beats $V repeatedly over the head, blood splatters everywhere!~
+5 402653184 8193
+23 5 6 7
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+36 20
+A
+19 4
+#6918
+feet big bird~
+a Pair of Big Bird Feet~
+A pair of yellow Bird feet stand here, bugs crawling all over them.~
+~
+11 402653184 65
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+51 30
+A
+19 1
+#6919
+bat kombat mortal~
+The Mortal KomBAT~
+A bat fashioned from some powerful and magical wood awaits a worthy owner here.~
+$r bat swings mightily at the head of $V.~
+5 134234370 8193
+0 7 7 6
+15 10 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+17 5
+B
+32
+#6920
+boots kombat~
+a pair of Kombat Boots~
+A pair of boots that have seen many bloody battles await a brave owner here.~
+~
+9 134217729 65
+11 1 14 18
+10 10 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 18
+B
+8
+#6921
+cloak kombat~
+The Cloak of Kombat~
+An ancient cloak with a bloody history rests here.
+~
+~
+9 134217729 1025
+1 11 10 -1
+10 10 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+9 100
+B
+524288
+#6922
+coat red huge santa~
+Santa's huge red Coat~
+A huge red coat sits here, looking more like a tent.~
+~
+9 134217729 9
+28 0 0 0
+10 1000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+A
+18 3
+B
+32800
+#6923
+boots sooty santa~
+Some soot covered Boots~
+Some boots rest here, covered in filth and soot.~
+~
+9 134217730 65
+8 0 0 0
+10 100000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 23
+A
+12 23
+B
+8
+#6924
+gloves boxing~
+A pair of boxing gloves~
+Some worn out boxing gloves are lying on the ground here.~
+~
+9 134217792 129
+0 0 0 0
+10 15000 5000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+35 10
+A
+19 2
+#6925
+right bunny ear~
+The right ear of the Easter Bunny~
+The right ear of the Easter Bunny~
+~
+9 134217729 5
+6 0 0 0
+10 50000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 25
+A
+19 2
+#6926
+heart box~
+A heart-shaped box~
+A heart-shaped box sits here with no owner in sight....~
+~
+8 134217730 16385
+0 0 0 0
+1 999999 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 30
+B
+4
+#6927
+banner task force~
+The Task Force War Banner~
+A banner that bears the crest of The Mayor's Task Force rests here.~
+~
+1 134217728 65537
+0 0 -1 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+B
+8396800
+#6928
+armor battle task force~
+The Task Force Battle Armor~
+Some battle armor that bears the crest of The Mayor's Task Force rests here.~
+~
+9 134217728 9
+35 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+18 5
+B
+134217728
+#6929
+helm war task force~
+The Task Force War Helm~
+A war helmet that bears the crest of The Mayor's Task Force rests here.~
+~
+9 134217728 17
+0 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+13 18
+B
+128
+#6930
+leggings task force~
+Some Task Force Battle Leggings~
+Some battle leggings that bear the crest of The Mayor's Task Force rest here.~
+~
+9 134217728 33
+5 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+1 2
+B
+524288
+#6931
+boots task force~
+The Elite Boots of the Task Force~
+Some boots that bear the crest of The Mayor's Task Force rest here.~
+~
+9 134217728 65
+1 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+B
+20
+#6932
+gauntlets task force~
+The War Gauntlets of the Task Force~
+Some gauntlets that bear the crest of The Mayor's Task Force rest here.~
+~
+9 134217728 129
+8 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+13 15
+B
+16777216
+#6933
+sleeves task force~
+Some Task Force Battle Sleeves~
+Some sleeves that bear the crest of The Mayor's Task Force rest here.~
+~
+9 134217728 257
+9 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+9 -31
+B
+34
+#6934
+shield task force~
+The Task Force Combat Shield~
+A shield that bears the crest of The Mayor's Task Force rests here.~
+~
+9 134217728 513
+15 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 20
+B
+32768
+#6935
+cloak task force~
+The Elite Cloak of the Task Force~
+A cloak that bears the crest of The Mayor's Task Force rests here.~
+~
+9 134217728 1025
+13 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+2 3
+B
+4
+#6936
+belt task force~
+The Armored Belt of the Task Force~
+A belt that bears the crest of The Mayor's Task Force rests here.~
+~
+9 134217728 2049
+12 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 40
+B
+32
+#6937
+flaming flame fire hair brush hairbrush antioch~
+The Flaming Hairbrush of Antioch~
+A nondescript look hairbrush is resting here, yet it feels powerful. ~
+~
+1 134217793 65537
+0 0 -1 0
+20 200000 1000
+10
+E
+hairbrush~
+This hairbrush looks boring and non-descrpit until you grasp
+it in your hand, and it flames to life, illuminating the room.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 2
+B
+8
+#6938
+hat mountie canada canadian~
+An Official Canadian Mountie hat~
+Some forgetfull Mountie left his hat here.~
+~
+11 134217729 17
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 26
+#6939
+wreath holly~
+A Wreath of Holly~
+A beautifully crafted wreath is here on the ground.~
+~
+9 134217728 17
+5 0 0 0
+10 666 50000
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+1 -1
+#6940
+leggings bright red~
+A pair of bright red leggings~
+A pair of red leggings lies on the ground here.~
+~
+9 134217728 33
+5 0 0 0
+10 30000 3000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#6941
+shield knowledge~
+The Shield of Knowledge~
+A dusty old shield was left here.~
+~
+9 134217728 513
+12 0 0 0
+30 12000 3000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+3 2
+#6942
+pants turkey skin stretch qprize~
+Some Turkey-Skin Stretch Pants~
+Some pants made of the stretched, greasy skin of a turkey are in a bundle here.~
+~
+9 134217728 33
+1 0 0 0
+1 5000000 666
+10
+E
+pants~
+These pants are made of the thin, stretchy skin of a turkey. They have a greasy
+feel to them and fit very, very snugly.
+~
+X
+~
+0 0 0
+M
+The pants make some strange squishing sounds as you struggle to get them on.~
+$n's pants make a sick squishing sound as $e squeezes into them.~
+The pants slide off with a snap, leaving a greasy residue on your legs.~
+$n's pants come off with a snap, grease flies in your direction.~
+A
+19 3
+A
+13 7
+A
+14 69
+B
+524288
+#6943
+shield turkey feathers qprize~
+A shield made of turkey feathers~
+A shield made of suprisingly strong turkey feathers was left here.~
+~
+9 134217729 513
+25 0 0 0
+1 5000000 666
+10
+E
+shield~
+This shield was made of extremely strong feathers from a turkey. The
+feathers were coated with some sort of a magical protection which
+glows dimly and gives the shield its power.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+18 4
+A
+52 10
+B
+32768
+#6944
+paws bloody severed easter stikine~
+Bloody Severed Rabbit Paws~
+Some severed rabbit paws stream blood on the ground here.~
+~
+9 134217793 129
+8 0 0 0
+10 1000000 25000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+A
+12 20
+B
+4
+#6945
+boots melnibonean warboots elric~
+`eMelnibonean War-Boots`q~
+A pair of steel-shod boots are lying here.~
+~
+9 134217729 65
+12 0 0 0
+10 10 666
+0
+X
+~
+0 0 0
+M
+You slide into a pair of `eMelnibonean War-Boots`q.~
+$n dons a pair of `eMelnibonean War-Boots`q and prepares for combat.~
+You kick off a pair of `eMelnibonean War-Boots`q.~
+$n kicks off a pair of `eMelnibonean War-Boots`q.~
+A
+19 2
+A
+18 4
+A
+13 30
+B
+524296
+#6946
+belt thick green leather~
+Thick green leather belt~
+a huge, green belt made of leather covers the floor~
+invalid~
+9 150994944 2049
+15 2 0 1073749936
+10 10 100000
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#6947
+robe sith master~
+Robe of the Sith master~
+A robe of ancient dark powers is lying here.~
+invalid~
+9 155191824 1025
+15 0 0 1073749936
+10 10 300000
+10
+E
+look robe~
+This ancient artifact was used by an old Sith Master during the
+fight against the Jedis.It is woven from a material you never 
+before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.
+~
+E
+look robe~
+This ancient artifact was used by an old Sith Master during the fight against the Jedis.
+It is woven from a material you never before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.  
+~
+E
+This ancient artifact was used by an old Sith Master during the fight against the Jedis.~
+It is woven from a material you never before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.  
+~
+X
+~
+0 0 0
+M
+As you wear the robe, your mind becomes corrupted by the dark side.~
+You sense a disturbance in the force, as $n wears $s robe.~
+The dark side of the force looses its grip on you for a moment.~
+Once again the balance of the force has been achieved.~
+A
+19 4
+A
+18 4
+#6948
+armored bunny slippers~
+Armored Bunny Slippers~
+A pair of heavily armored Bunny Slippers rest here.~
+~
+9 131133504 65
+40 136880289 -1073759968 135718356
+8 5000 90
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 2
+B
+9183232
+#6949
+demon trumpet~
+Demon Trumpet~
+A gnarled and weathered Trumpet lies here.~
+~
+24 99676160 16385
+0 0 0 0
+8 500 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+53 20
+B
+32792
+#6950
+armet platinum mask makena~
+a battered platinum armet~
+Makena left her armets here return it for a HUGE reward!~
+~
+9 134217729 17
+12 0 0 0
+10 666666666 6666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 25
+B
+32800
+#6951
+machete rusty jason~
+Jason's Rusty Machete~
+A rusty machete was left behind here.~
+$r machete hacks $V into an unrecognizable puddle of broken flesh and bone.~
+5 142663682 8193
+6 7 5 13
+16 6666666 6666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 3
+#6952
+shield kombat~
+The Shield of Kombat~
+A shield of legend has been forgotten here.~
+~
+9 134217793 513
+15 0 0 0
+10 1000000 25000
+10
+E
+shield~
+This shield bears the bloody cross swords symbol of the sacred
+Mortal Kombat quest series. The holder must be either a legendary
+warrior or a very lucky person to have such an item.
+~
+E
+shield~
+This shield has seen a great many bloody battles but
+remains sturdy and true. It bears the proud symbol of
+the Mortal Kombat Quest series which took place in
+this land at some time in the past according to legend.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+B
+16
+#6953
+greaves kombat~
+The Greaves of Kombat~
+The legendary greaves of kombat were left behind here.~
+~
+9 134217793 33
+10 0 0 0
+10 1000000 25000
+10
+E
+greaves~
+These greaves bear the legendary symbol of the Mortal Kombat
+quests. The bloody crossed swords stick out proudly from the
+finely crafted armor. Just looking at it fills you with pride.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+B
+8
+#6954
+bracers kombat~
+The Bracers of Kombat~
+The bracers of kombat were accidently left here by some brave warrior.~
+~
+9 134217793 257
+12 0 0 0
+10 1000000 25000
+10
+E
+bracers~
+These bracers bear the legendary crossed and bloody swords. This
+symbol is known far and wide to signify the Mortal Kombat quests
+that once took place in this land. Passing people tremble at the
+mere sight of such a mythical item.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+B
+32
+#6955
+helm kombat~
+The Helm of Kombat~
+The helm of kombat rests here, forgotten by its rightful owner.~
+~
+9 134217793 17
+12 0 0 0
+10 1000000 25000
+10
+E
+helm~
+This helm bears the proud and mythical insignia of the
+Mortal Kombat Quests. The symbol, two crossed bloody swords,
+stands out proudly and draws stares from passers by.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+B
+32768
+#6956
+gloves kombat~
+The Gloves of Kombat~
+The gloves of kombat were forgotten here for some reason.~
+~
+9 134217793 129
+8 0 0 0
+10 1000000 25000
+10
+E
+gloves~
+These gloves have seen a great deal of battle action
+but remain in good shape. They bear the proud symbol of 
+the Mortal Kombat Quests which were said to have taken
+place in this land in the past.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+B
+4
+#6957
+cloak kombat~
+The Cloak of Kombat~
+The cloak of kombat was left here by its forgetful master.~
+~
+9 134217793 1025
+14 0 0 0
+10 1000000 25000
+10
+E
+cloak~
+This cloak has stayed intact through a great many
+battles and still looks to be in good shape. It bears
+the proud symbol of the Mortal Kombat Quests which are
+said to have taken place in these lands at some point
+in the past.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+B
+16777216
+#6958
+coat ugly hideous hideously striped fur~
+A Hideously Ugly Fur Coat~
+A hideously ugly fur coat sits here, even the vermin run from it.~
+~
+9 134218049 9
+24 0 0 0
+18 150000 69
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -16
+A
+18 2
+B
+20
+#6959
+belt tacky ugly gold golden~
+A Hideously Tacky Gold Belt~
+A hideously tacky gold belt lies on the ground here.~
+~
+9 134217793 2049
+10 -1 13 11
+10 500000 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 11
+B
+32768
+#6960
+hat hideous purple feather feathered plumage~
+A Bright Purple Plumed Hat~
+A bright purple hat rests here, a feather sticking out of it.~
+~
+9 134218048 17
+10 6 5 2
+19 50000 12000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+4 2
+B
+32
+#6961
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6962
+amulet heart~
+a heart-shaped amulet~
+A heart-shaped amulet is here, glowing in soft reddish light.~
+~
+9 134217793 5
+4 0 0 0
+2 14500 7500
+20
+E
+amulet heart~
+The amulet ... well ... is a heart-shaped amulet !!~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#6963
+heart box~
+A heart-shaped box~
+A heart-shaped box sits here with no owner in sight....~
+~
+8 134217730 16385
+0 0 0 0
+1 999999 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 40
+B
+4
+#6964
+hat helmet festive holiday spirit~
+The Festive Hat of Holiday Spirit~
+A festive-looking hat rests on the ground here.~
+~
+9 134218051 17
+11 0 0 0
+12 100000 6900
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+47 4
+#6965
+cloak festive holiday joy~
+The Festive Cloak of Holiday Joy~
+A festive-looking cloaks floats mysteriously in the air here.~
+~
+9 134217793 1025
+13 0 0 0
+15 100000 80000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+B
+16777216
+#6966
+beanie baby sumo blarg~
+An Official Sumo Beanie Baby(TM)~
+A cute stuffed effigy of Sumo lies on the ground, a bright aura surrounding it.~
+~
+9 134217729 17
+15 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+B
+276832256
+#6967
+ring festive holiday glory~
+The Festive Ring of Holiday Glory~
+A festive-looking ring shines under the sun as it rests on the ground.~
+~
+9 134218049 3
+5 0 0 0
+5 80000 50000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+13 25
+B
+8
+#6968
+purple velvet handcuff handcuffs quest~
+Purple Velvet Handcuffs~
+A pair of velvet handcuffs lies on the ground here.~
+~
+9 134218753 129
+10 0 0 0
+3 150000 15000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 3
+B
+8192
+#6969
+purple velvet handcuff handcuffs quest~
+Purple Velvet Handcuffs~
+A pair of velvet handcuffs lies on the ground here.~
+~
+9 134218240 129
+10 0 0 0
+3 150000 15000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 3
+B
+8388608
+#6970
+token random chance quest~
+a Token of Random Chance~
+A tiny token glows on the ground at your feet.~
+~
+11 136327169 16385
+0 0 0 0
+4 150000 15000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+12 30
+#6971
+certificate commando comical~
+Couragous Comically Commanded Commando Certificate~
+A certificate lies here!~
+~
+12 134217728 16385
+0 0 0 0
+3 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+13 20
+#6972
+sphere demonic trapped souls~
+The Demonic Sphere of Trapped Souls~
+A dark sphere with moaning faces in it lies here on the ground.~
+$r Demonic Sphere of Trapped Souls moans as it strikes $V.~
+5 267431936 8193
+63 7 5 6
+15 1000000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+#6973
+helmet tarion guard qprize~
+A Tarion Helmet of the First Guard~
+A beaten blue and gold helmet lies dull and half-covered in sand here.~
+~
+9 134218818 17
+11 0 0 0
+11 5000000 29950
+0
+E
+helmet~
+Scratches and nicks can be seen throughout the dull finish on this
+once-golden and blue steel helmet.  The seal of an eagle adorns the
+front, with one wing having been broken off and lost somewhere along
+the way.  This headpiece has seen the toils of many exotic lands.
+~
+X
+~
+0 0 0
+M
+You are engulfed in a dark blue protective aura beneath the helmet.~
+$n is engulfed in a dark blue aura as $e places $s helmet on.~
+Your dark blue aura dissipates as you remove the cavalier's helmet.~
+$n loses $s dark blue aura as $e removes the cavalier's helmet.~
+A
+19 3
+A
+20 3
+A
+52 40
+#6975
+innards guts fallen flaming~
+The Flaming Innards of the Fallen~
+The guts of the many fallen gladiators are collected here, burning with their memories.~
+invalid~
+1 134217728 65537
+0 0 -1 0
+10 100000 25000
+0
+E
+innards~
+You are handling the guts and insides of those who you have defeated in combat.
+Remembering their efforts to kill you, you squeeze a little harder, hoping to
+inflict more pain to the dead.
+~
+E
+guts~
+You are handling the guts and insides of those who you have defeated in combat.
+Remembering their efforts to kill you, you squeeze a little harder, hoping to
+inflict more pain to the dead.
+~
+E
+flaming~
+You are handling the guts and insides of those who you have defeated in combat.
+Remembering their efforts to kill you, you squeeze a little harder, hoping to
+inflict more pain to the dead.
+~
+E
+fallen~
+You are handling the guts and insides of those who you have defeated in combat.
+Remembering their efforts to kill you, you squeeze a little harder, hoping to
+inflict more pain to the dead.
+~
+X
+~
+0 0 0
+M
+You start to use the flaming mass of blood and guts as a source of light.~
+$n grabs a big pile of flaming guts and starts using it as a source of light.~
+You stop using the bloody mass as a light and the room now smells a bit better.~
+$n comes to $s senses and stops using the flaming mass of blood and guts as a lightsource.~
+A
+19 3
+A
+53 3
+A
+52 3
+#6976
+Mark Greatness Tattoo~
+The Mark of Greatness~
+The Mark of Greatness lies here, begging you to pick it up.~
+~
+11 134217729 4097
+7 0 0 0
+5 60000 5000
+0
+E
+mark~
+The tattoo depicts a lone warrior, facing tremendous odds, fending off
+several enemies at the same time.  In an instant, it changes to reveal
+that same warrior standing victorious among the dead bodies of the slain
+enemies. Upon closer inspection, you realize that the warrior depicted
+is actually you.
+~
+E
+tattoo~
+The tattoo depicts a lone warrior, facing tremendous odds, fending off
+several enemies at the same time.  In an instant, it changes to reveal
+that same warrior standing victorious among the dead bodies of the slain
+enemies. Upon closer inspection, you realize that the warrior depicted
+is actually you.
+~
+E
+greatness~
+The tattoo depicts a lone warrior, facing tremendous odds, fending off
+several enemies at the same time.  In an instant, it changes to reveal
+that same warrior standing victorious among the dead bodies of the slain
+enemies. Upon closer inspection, you realize that the warrior depicted
+is actually you.
+~
+X
+~
+0 0 0
+M
+The Mark of Greatness binds to your skin with a brilliant flash!~
+In a brilliant flash, The Mark of Greatness binds to $n's skin!~
+You wince in pain as you rip The Mark of Greatness from your flesh!~
+$n winces in pain as $e removes The Mark of Greatness from $s flesh!~
+A
+13 35
+A
+12 35
+A
+19 1
+#6977
+Belt Glutton~
+Belt of the Glutton~
+The huge belt of a fat man lies here.~
+~
+9 134217985 2049
+5 0 0 0
+10 45000 20000
+0
+E
+belt~
+This belt looks very big, in fact, you think it is definitely
+too big to fit you!  There are food crumbs and stains all over
+it's leathery composition and the buckle seems to be made of
+some sort of edible material, which it looks like the previous
+owner has taken a good sized bite out of.
+~
+E
+glutton~
+This belt looks very big, in fact, you think it is definitely
+too big to fit you!  There are food crumbs and stains all over
+it's leathery composition and the buckle seems to be made of
+some sort of edible material, which it looks like the previous
+owner has taken a good sized bite out of.
+~
+X
+~
+0 0 0
+M
+You put on the belt and seem to double in mass.~
+$n puts on the belt and suddenly appears to gain 200 pounds!~
+You remove the belt and feel like your normal self again.~
+$n removes $s belt and seems to have lost a lot of weight.~
+A
+12 -100
+A
+13 100
+A
+13 100
+#6978
+Shield Riot~
+A Riot Shield~
+Some riot gear is here, looking particularly usefull for fending of a mob!~
+~
+9 134217730 513
+15 0 0 0
+10 10 50000
+0
+E
+shield~
+This shield is made of a hard metallic substance and is entirely black.
+There is a small clear portion embedded in the center that you can look
+through while using this as a shield, and you guess it would help your
+vision in combat.
+~
+E
+riot~
+This shield is made of a hard metallic substance and is entirely black.
+There is a small clear portion embedded in the center that you can look
+through while using this as a shield, and you guess it would help your
+vision in combat.
+~
+X
+~
+0 0 0
+M
+As you don the Riot Shield, you get the feeling that people will respect your Authori-TAH!~
+As $n dons $s Riot Shield, you have the sudden urge to respect $s Authori-TAH!~
+You remove your Riot Shield and feel like you have lost the respect of your peers.~
+$n removes $s Riot Shield and you lose some of your respect for $m.~
+A
+19 2
+A
+18 2
+B
+32768
+#6979
+thor belt strength earendil~
+Thor's Belt of Strength~
+A worn old brass-plated belt has been carelessly left on the ground here.~
+~
+9 134217728 2049
+10 0 0 0
+5 50000 25000
+0
+E
+thor belt strength~
+By no doubt Old.. Most certainly Magical! Leather plated in brass..
+Mystical Runes covering its entire surface... You can see the faint
+outlines of what was once deeply engraved runes on the buckle...
+
+-<V|A|N|D|R|-|S|T|Y|R|K|R|>-
+~
+X
+~
+0 0 0
+M
+The Divine Strength of Thor flows through your body as you gird the Belt of Strength!~
+The Divine Strength of Thor flows through $n's body as $e girds the Belt of Strength!~
+You feel heavily burdened as you ungird Thor's Belt of Strength.~
+$n appears heavily burdened as $e ungirds Thor's Belt of Strength.~
+A
+19 3
+A
+18 1
+#6980
+Gloves Love~
+a pair of touchy, feely, Love Gloves~
+pure love eminates from this pair of gloves.~
+~
+9 134217792 129
+8 0 0 0
+10 75000 20000
+0
+E
+gloves~
+They seem to be normal silk gloves, but upon closer inspection, the
+pattern of a heart is woven in them.  A faint inscription is also
+sewn in the fabric, reading "Love solves all."  You chuckle a little
+as you think, "Try telling that to Dagoor!"
+~
+X
+~
+0 0 0
+M
+As you slide the Love Gloves on, you have the urge to hug someone!~
+As $n slides the Love Gloves on, $e has the urge to hug someone!~
+Taking off the Love Gloves, you seem to have lost that loving feeling.~
+Taking off the Love Gloves, $e seems to have lost that loving feeling.~
+A
+19 3
+A
+17 -10
+#6981
+ski goggle head~
+Ski Goggles~
+a small pair of goggle type glass are here~
+~
+11 134217728 17
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#6982
+head ewok helmet~
+A Head of an Ewok~
+the head of a smaller furry creater is here~
+~
+11 134217728 17
+0 0 0 0
+1 10 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 3
+A
+17 3
+#6983
+stormtrooper helmet~
+StormTroopers Helmet~
+a white helmet with black eye holes is here~
+~
+0 134217728 17
+0 0 0 0
+1 10 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 2
+A
+17 8
+#6984
+nightstick stick deputy~
+A Deputy's Nightstick~
+A valiant Deputy's Nightstick lies here.~
+(null)
+(null)~
+12 134217728 16385
+0 0 0 0
+12 30000 10
+10
+X
+~
+0 0 0
+M
+You sense trouble is near.~
+$n commands, "You must respect my Authoritai!!"~
+You put your nightstick away as you sense the danger has passed.~
+Sweeeeeeeet!!!~
+#6985
+brain strategory whapper~
+Blade's Brain of Strategory~
+A twitching brain lies on the ground, permanently stained by fish-sauce.~
+~
+9 134217985 17
+0 0 0 0
+12 75000 36000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+#6986
+cloak missing links~
+a Cloak of Missing Links~
+On the ground lies a pile of missing links.~
+~
+9 134218820 1025
+0 0 0 0
+10 10 100000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#6987
+whapmaster board ankh~
+the Legendary Whapmaster~
+A board lies here made especially for whapping.~
+$r board whaps $V over the head!~
+5 206573634 8193
+0 2 12 7
+18 5000000 100000
+10
+X
+$r board is swung about $s head!~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+19 5
+#6988
+sleeves bunnyskin~
+A pair of bunnyskin sleeves~
+A soft and furry pair of bunnyskin sleeves are here, not looking too lively...~
+~
+9 469772288 257
+10 0 0 0
+5 500 1000
+0
+E
+sleeves bunny skin ~
+This pair of sleeves is made from the skin of a beautiful 
+rabbit. Who knows where that rabbit came from, or what its
+purpose was, but it does make one fine pair of sleeves!!
+~
+X
+~
+0 0 0
+M
+You sigh in relief as these warm sleeves slip onto your arms.~
+$n sighs in contentment as $e slips $s bunnyskin sleeves on $s arms.~
+You feel a loss of comfort as you remove your snazzy bunnyskin sleeves.~
+$n begins to pout as $e removes $s bunnyskin sleeves.~
+A
+13 10
+A
+19 3
+#6989
+rabbit belt hair~
+A belt of woven rabbit hair~
+A belt intricately woven from rabbit hair rests here, making you think of a giant hairball.~
+~
+9 471885824 2049
+5 0 10 5
+10 10 1000
+10
+E
+belt hair rabbit~
+This belt was woven by possibly the finest weavers ever known.
+To be able to create a strong and beautiful belt from the short
+hairs of a rabbit takes an enormous amount of talent. Good thing 
+that some people still have that.
+~
+X
+~
+0 0 0
+M
+You feel a soft and fuzzy feeling inside as you strap the belt across your waist... naughty naughty.~
+$n begins to smile in an eerily pleasured way, as $e wears the belt of rabbit hair about $s waist.~
+You feel less satisfied with life as you remove the rabbit hair belt from your waist.~
+$n has a slightly frustrated look as $e removes the rabbit hair belt from its snug position about $s waist.~
+A
+19 2
+A
+53 5
+#6990
+belt leprechaun quest~
+`cA Leprechaun's Belt`h~
+A small `cgreen`h belt lies here, coiled up neatly.~
+~
+9 134217793 2049
+8 0 0 0
+10 10000 10000
+0
+E
+belt leprechaun quest~
+`pNight was here.`h
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+17 -5
+A
+13 20
+#6991
+vest waste time bright green quest mickey~
+`jA Bright Green Waste of Time`q~
+A `jbright green `qwaste of time has been dropped here and is getting dirty.~
+~
+9 134217792 9
+12 0 0 0
+10 75000 25000
+0
+E
+vest bright green quest~
+`pNight was here.`h
+~
+X
+~
+0 0 0
+M
+You can feel your time slipping by as you waste time wearing the vest.~
+$n wastes an immense amount of time putting on the `jbright green `qvest.~
+You gain some of your lost time as you remove the vest.~
+$n gains some of $s lost time as $e removes the `jbright green `qvest.~
+A
+19 2
+A
+18 1
+A
+12 10
+#6992
+kunzite ring tyler~
+a brilliant Kunzite ring~
+This ring shines SO birghtly you don't know how Tyler could have lost it.~
+~
+11 134217728 3
+0 0 0 0
+1 16000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+#6993
+star diopside ring tyler~
+a black star diopside ring~
+Tyler has dropped his ring here, you better bring it back to him.~
+~
+11 134217728 3
+0 0 0 0
+1 16000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+#6994
+forged cataclysm ring newyork~
+Forged Cataclysm~
+NewYork dropped his Cataclysm here!~
+~
+11 134217728 3
+0 0 0 0
+1 16000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+#6995
+left bunny ear~
+The left ear of the Easter Bunny~
+A long, white, fuzzy ear has fallen here.~
+~
+9 134217728 5
+15 0 0 0
+1 16000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+#6996
+axe crescent battle huge~
+A Huge Crescent Battle Axe~
+A fierce looking axe appears to be stuck in the ground.~
+$r huge Crescent Battle Axe brings hell on earth as it flashes through the air.~
+26 135282688 8193
+0 4 12 13
+18 30000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+19 5
+B
+8
+#6997
+belt holding~
+A belt of holding~
+A leather belt is lying on the ground.~
+~
+15 0 2049
+8000 0 0 0
+5 900 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -5
+#6998
+beanie baby sumo blarg~
+An Official Sumo Beanie Baby(TM)~
+A cute stuffed effigy of Sumo lies on the ground, a bright aura surrounding it.~
+~
+9 134217729 17
+15 0 0 0
+1 5000000 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+B
+276834304
+#6999
+scotch crown bottle~
+A 25 year old bottle of Crown Royal~
+An oddly shaped bottle containing brownish liquid and bearing a crown emblem lies on the ground.~
+~
+17 0 16385
+40 40 5 0
+10 10 10
+10
+E
+bottle~
+bottle of scotch glows brightly with an unusual light!~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

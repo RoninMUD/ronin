@@ -1,0 +1,207 @@
+#1500
+shadow~
+A dead black shadow~
+A long shadow streches over the floor in front of you.
+~
+The shadow has no visible features other that a manlike outline.
+~
+25166858 8390696 -300 Y
+60 -20 -15 10d10+10000 10d10+2300
+0 10000000
+8 8 1
+95 28672 5d5+500 0
+0 0 0 320
+K
+0 0 0 0 0 0 0
+#1501
+shadow~
+A dead black shadow~
+A long shadow streches over the floor in front of you.
+~
+The shadow has no visible features other that a manlike outline.
+~
+20973578 8390696 -300 Y
+60 -20 -15 10d10+10000 10d10+2300
+0 10000000
+8 8 1
+95 28672 5d5+500 0
+0 0 0 320
+K
+0 0 0 0 0 0 0
+#1502
+shadow~
+A dead black shadow~
+A long shadow streches over the floor in front of you.
+~
+The shadow has no visible features other that a manlike outline.
+~
+17858570 8390696 -300 Y
+60 -20 -15 10d10+10000 10d10+2300
+0 10000000
+8 8 1
+95 28672 5d5+500 0
+0 0 0 320
+K
+0 0 0 0 0 0 0
+#1503
+shadow~
+A dead black shadow~
+A long shadow streches over the floor in front of you.
+~
+The shadow has no visible features other that a manlike outline.
+~
+18882570 8390696 -303 Y
+60 -20 -15 10d10+10000 10d10+2300
+0 10000000
+8 8 1
+95 28672 5d5+500 0
+0 0 0 320
+K
+0 0 0 0 0 0 0
+#1504
+black stallion horse~
+The black stallion~
+A large powerful black horse is blowing fumes from its nostrils.
+~
+The black stallion is massive and twice the size of a regular horse. Its powerful
+legs and hooves will deal fierceful damamge to whomever gets in its way. 
+~
+16777258 8390696 -500 Y
+60 -20 -17 10d10+40000 10d10+2800
+0 13000000
+8 8 1
+86 28672 5d5+500 3
+2 2 100 0
+2 2 100 0
+2 2 100 0
+0 0 0 320
+K
+7500000 0 0 0 0 0 0
+#1505
+tentacle~
+A fungus-covered tentacle~
+A long fungus-covered tentacle is writhing on the ground.
+~
+The tentacle has a sicky green color and it stinks of death. Its fungus pores
+give off grey smoke and leaves the room in a thin grey mist. 
+~
+16793642 8390696 0 Y
+60 -18 -10 10d10+10000 10d10+1000
+0 750000
+8 8 1
+78 28672 5d5+500 2
+8 2 25 0
+1 5 35 33
+0 0 0 320
+K
+1000000 0 0 0 0 0 0
+#1506
+toad terror~
+The Terror Toad~
+A gigantic toad is lurking in a corner.
+~
+The toad is huge and with its big mouth, it could easily eat a man whole. With
+its sharp teeth, it would no be a plesant experience. The skin looks though
+and not easy to penetrate. 
+~
+16793642 8390696 0 Y
+65 -18 -30 10d10+1000000 10d10+3000
+0 13000000
+8 8 2
+81 28672 5d5+500 2
+4 2 35 0
+1 2 25 100
+0 0 0 320
+K
+20000000 0 0 0 0 0 0
+#1507
+toad rib~
+A Rib~
+A large rib is sticking out of the inside of the toad.
+~
+Destroying the rib, might be painful to the toad. 
+~
+16793642 8390696 0 Y
+50 -10 0 10d10+2500 1d10+100
+0 1000000
+8 8 1
+81 28672 5d5+500 0
+0 0 0 320
+K
+0 0 0 0 0 0 0
+#1508
+viper snake~
+Three headed Viper~
+A golden scaled viper is slithering around the hall.
+~
+With golden scales the viper looks as if it's made of gold. Deep red eyes
+looks at you hungrily, its fangs dripping poison ready to tear. 
+~
+16793642 8390696 0 Y
+70 -23 -20 10d10+130000 10d10+2300
+0 23000000
+8 8 1
+80 28672 5d5+500 3
+8 4 35 0
+1 2 25 33
+1 2 10 143
+0 0 0 320
+K
+20000000 0 0 0 0 0 0
+#1509
+demon carpenter~
+The Demon Carpenter~
+The Demon Carpenter is standing at a table smiling with glee.
+~
+The demon is larger that any ogre and has dark red skin. In his right hand he 
+holds his mighty hammer. Two large wings strech out from his back casting 
+looming shadows on the walls.
+~
+16777258 276826152 -1000 Y
+70 -21 -20 10d10+200000 10d10+2000
+0 35000000
+8 8 1
+63 28672 5d5+500 0
+0 0 0 320
+K
+9999999 0 0 0 0 0 0
+#1516
+horror frozen~
+The frozen horror~
+A beast covered with thick white fur and icy scales look around the cavern in search of food.
+~
+The monster has thick white fur and white icy scales cover its belly. The long head
+is basicly a huge mouth set with sharp point fangs of what looks like ice. The dead
+black eyes glare back at you.
+~
+16777258 8390696 0 Y
+70 -20 -22 10d10+220000 2d2+5000
+0 25000000
+8 8 1
+80 28672 5d5+500 2
+1 2 80 248
+8 4 15 0
+0 0 0 320
+K
+0 0 0 0 0 0 0
+#1517
+bone dragon~
+The Bone Dragon~
+The Bone Dragon is standing in a nest of bones.
+~
+The dragon is made of shiny white bone and even if its wings are only bone, it
+can still fly. On the long tail a long sharp bone spike quivers with a desire 
+to kill.
+~
+16777258 276826152 0 Y
+70 -20 -23 10d10+600000 2d2+3500
+50000000 100000000
+8 8 1
+53 28672 5d5+500 2
+1 2 80 248
+8 4 15 0
+0 0 0 320
+K
+0 0 0 0 0 0 0
+#0
+$~

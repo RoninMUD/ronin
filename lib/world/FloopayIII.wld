@@ -1,0 +1,1518 @@
+#7800
+A temporary name~
+A temporary description
+~
+78 0 0
+S
+#7801
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7802
+D2
+~
+~
+0 -1 7806
+S
+#7802
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7803
+D2
+~
+~
+0 -1 7807
+D3
+~
+~
+0 -1 7801
+S
+#7803
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7804
+D2
+~
+~
+0 -1 7808
+D3
+~
+~
+0 -1 7802
+S
+#7804
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7805
+D2
+~
+~
+0 -1 7809
+D3
+~
+~
+0 -1 7803
+S
+#7805
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D2
+~
+~
+0 -1 7810
+D3
+~
+~
+0 -1 7804
+S
+#7806
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7801
+D1
+~
+~
+0 -1 7807
+D2
+~
+~
+0 -1 7811
+S
+#7807
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7802
+D1
+~
+~
+0 -1 7808
+D2
+~
+~
+0 -1 7812
+D3
+~
+~
+0 -1 7806
+S
+#7808
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7803
+D1
+~
+~
+0 -1 7809
+D2
+~
+~
+0 -1 7813
+D3
+~
+~
+0 -1 7807
+S
+#7809
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7804
+D1
+~
+~
+0 -1 7810
+D2
+~
+~
+0 -1 7814
+D3
+~
+~
+0 -1 7808
+S
+#7810
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7805
+D2
+~
+~
+0 -1 7815
+D3
+~
+~
+0 -1 7809
+S
+#7811
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7806
+D1
+~
+~
+0 -1 7812
+D2
+~
+~
+0 -1 7816
+S
+#7812
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7807
+D1
+~
+~
+0 -1 7813
+D2
+~
+~
+0 -1 7817
+D3
+~
+~
+0 -1 7811
+S
+#7813
+Throne of Polo Fay~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7808
+D1
+~
+~
+0 -1 7814
+D2
+~
+~
+0 -1 7818
+D3
+~
+~
+0 -1 7812
+S
+#7814
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7809
+D1
+~
+~
+0 -1 7815
+D2
+~
+~
+0 -1 7819
+D3
+~
+~
+0 -1 7813
+S
+#7815
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7810
+D2
+~
+~
+0 -1 7820
+D3
+~
+~
+0 -1 7814
+S
+#7816
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7811
+D1
+~
+~
+0 -1 7817
+D2
+~
+~
+0 -1 7821
+S
+#7817
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7812
+D1
+~
+~
+0 -1 7818
+D2
+~
+~
+0 -1 7822
+D3
+~
+~
+0 -1 7816
+S
+#7818
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7813
+D1
+~
+~
+0 -1 7819
+D2
+~
+~
+0 -1 7823
+D3
+~
+~
+0 -1 7817
+S
+#7819
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7814
+D1
+~
+~
+0 -1 7820
+D2
+~
+~
+0 -1 7824
+D3
+~
+~
+0 -1 7818
+S
+#7820
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7815
+D2
+~
+~
+0 -1 7825
+D3
+~
+~
+0 -1 7819
+S
+#7821
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7816
+D1
+~
+~
+0 -1 7822
+S
+#7822
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7817
+D1
+~
+~
+0 -1 7823
+D3
+~
+~
+0 -1 7821
+S
+#7823
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7818
+D1
+~
+~
+0 -1 7824
+D3
+~
+~
+0 -1 7822
+S
+#7824
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7819
+D1
+~
+~
+0 -1 7825
+D3
+~
+~
+0 -1 7823
+S
+#7825
+Realm of Chaos~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7820
+D3
+~
+~
+0 -1 7824
+S
+#7826
+Road to the Castle~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7827
+D3
+~
+~
+0 -1 1816
+S
+#7827
+Gates to Castle Obervon~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7831
+D3
+~
+~
+0 -1 7826
+S
+#7828
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7829
+D2
+~
+~
+0 -1 7831
+S
+#7829
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7830
+D2
+~
+~
+0 -1 7832
+D3
+~
+~
+0 -1 7828
+D5
+~
+~
+0 -1 7837
+S
+#7830
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D2
+~
+~
+0 -1 7833
+D3
+~
+~
+0 -1 7829
+S
+#7831
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7828
+D1
+~
+~
+0 -1 7832
+D2
+~
+~
+0 -1 7834
+D3
+~
+~
+0 -1 7827
+S
+#7832
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7829
+D1
+~
+~
+0 -1 7833
+D2
+~
+~
+0 -1 7835
+D3
+~
+~
+0 -1 7831
+S
+#7833
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7830
+D2
+~
+~
+0 -1 7836
+D3
+~
+~
+0 -1 7832
+D4
+~
+~
+0 -1 7865
+S
+#7834
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7831
+D1
+~
+~
+0 -1 7835
+S
+#7835
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7832
+D1
+~
+~
+0 -1 7836
+D3
+~
+~
+0 -1 7834
+D5
+~
+~
+0 -1 7852
+S
+#7836
+Castle Main Room~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7833
+D3
+~
+~
+0 -1 7835
+S
+#7837
+Trapper's Chamber~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7844
+D4
+~
+~
+0 -1 7829
+S
+#7838
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7839
+D2
+~
+~
+0 -1 7841
+S
+#7839
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7840
+D2
+~
+~
+0 -1 7842
+D3
+~
+~
+0 -1 7838
+S
+#7840
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7850
+D2
+~
+~
+0 -1 7843
+D3
+~
+~
+0 -1 7839
+S
+#7841
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7838
+D1
+~
+~
+0 -1 7842
+D2
+~
+~
+0 -1 7844
+S
+#7842
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7839
+D1
+~
+~
+0 -1 7843
+D2
+~
+~
+0 -1 7845
+D3
+~
+~
+0 -1 7841
+S
+#7843
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7840
+D2
+~
+~
+0 -1 7846
+D3
+~
+~
+0 -1 7842
+S
+#7844
+Field within the Castle~
+A temporary description
+~
+78 64 0
+D0
+~
+~
+0 -1 7841
+D1
+~
+~
+0 -1 7845
+D2
+~
+~
+0 -1 7847
+D3
+~
+~
+0 -1 7837
+S
+#7845
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7842
+D1
+~
+~
+0 -1 7846
+D2
+~
+~
+0 -1 7848
+D3
+~
+~
+0 -1 7844
+S
+#7846
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7843
+D2
+~
+~
+0 -1 7849
+D3
+~
+~
+0 -1 7845
+S
+#7847
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7844
+D1
+~
+~
+0 -1 7848
+S
+#7848
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7845
+D1
+~
+~
+0 -1 7849
+D2
+~
+~
+0 -1 7851
+D3
+~
+~
+0 -1 7847
+S
+#7849
+Field within the Castle~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7846
+D3
+~
+~
+0 -1 7848
+S
+#7850
+Elephant's Pen~
+A temporary description
+~
+78 0 0
+D3
+~
+~
+0 -1 7840
+S
+#7851
+Black Dragon's Chamber~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7848
+S
+#7852
+Empty Room within the Castle~
+A temporary description
+~
+78 64 0
+D4
+~
+~
+0 -1 7835
+D5
+~
+~
+0 -1 7854
+S
+#7853
+Main Library~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7854
+D2
+~
+~
+0 -1 7856
+S
+#7854
+Main Library~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7855
+D2
+~
+~
+0 -1 7857
+D3
+~
+~
+0 -1 7853
+D4
+~
+~
+0 -1 7852
+S
+#7855
+Main Library~
+A temporary description
+~
+78 0 0
+D2
+~
+~
+0 -1 7858
+D3
+~
+~
+0 -1 7854
+S
+#7856
+Main Library~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7853
+D1
+~
+~
+0 -1 7857
+D2
+~
+~
+0 -1 7859
+S
+#7857
+Main Library~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7854
+D1
+~
+~
+0 -1 7858
+D2
+~
+~
+0 -1 7860
+D3
+~
+~
+0 -1 7856
+S
+#7858
+Main Library~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7855
+D2
+~
+~
+0 -1 7861
+D3
+~
+~
+0 -1 7857
+S
+#7859
+Main Library~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7856
+D1
+~
+~
+0 -1 7860
+S
+#7860
+Main Library~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7857
+D1
+~
+~
+0 -1 7861
+D3
+~
+~
+0 -1 7859
+S
+#7861
+Main Library~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7858
+D3
+~
+~
+0 -1 7860
+S
+#7862
+Secondary Divine Barrier~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7863
+S
+#7863
+Primary Divine Barrier~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7864
+D3
+~
+~
+0 -1 7862
+S
+#7864
+Prison of Sylus~
+A temporary description
+~
+78 0 0
+D3
+~
+~
+0 -1 7863
+S
+#7865
+Royal Hallway~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7866
+D5
+~
+~
+0 -1 7833
+S
+#7866
+Royal Hallway~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7867
+D3
+~
+~
+0 -1 7865
+S
+#7867
+Royal Hallway~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7870
+D3
+~
+~
+0 -1 7866
+D5
+~
+~
+0 -1 7873
+S
+#7868
+Royal Chamber~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7869
+D2
+~
+~
+0 -1 7870
+S
+#7869
+Royal Chamber~
+A temporary description
+~
+78 0 0
+D2
+~
+~
+0 -1 7871
+D3
+~
+~
+0 -1 7868
+D4
+~
+~
+0 -1 7885
+S
+#7870
+Royal Chamber~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7868
+D1
+~
+~
+0 -1 7871
+D3
+~
+~
+0 -1 7867
+S
+#7871
+Royal Chamber~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7869
+D3
+~
+~
+0 -1 7870
+S
+#7872
+Castle Cafeteria~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7873
+D2
+~
+~
+0 -1 7875
+S
+#7873
+Castle Cafeteria~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7874
+D2
+~
+~
+0 -1 7876
+D3
+~
+~
+0 -1 7872
+D4
+~
+~
+0 -1 7867
+S
+#7874
+Castle Cafeteria~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7881
+D2
+~
+~
+0 -1 7877
+D3
+~
+~
+0 -1 7873
+S
+#7875
+Caslte Cafeteria~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7872
+D1
+~
+~
+0 -1 7876
+D2
+~
+~
+0 -1 7878
+S
+#7876
+Castle Cafeteria~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7873
+D1
+~
+~
+0 -1 7877
+D2
+~
+~
+0 -1 7879
+D3
+~
+~
+0 -1 7875
+S
+#7877
+Castle Cafeteria~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7874
+D2
+~
+~
+0 -1 7880
+D3
+~
+~
+0 -1 7876
+S
+#7878
+Castle Cafeteria~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7875
+D1
+~
+~
+0 -1 7879
+S
+#7879
+Castle Cafeteria~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7876
+D1
+~
+~
+0 -1 7880
+D3
+~
+~
+0 -1 7878
+S
+#7880
+Castle Cafeteria~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7877
+D3
+~
+~
+0 -1 7879
+S
+#7881
+Royal Kitchen~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7882
+D2
+~
+~
+0 -1 7883
+D3
+~
+~
+0 -1 7874
+S
+#7882
+Royal Kitchen~
+A temporary description
+~
+78 0 0
+D2
+~
+~
+0 -1 7884
+D3
+~
+~
+0 -1 7881
+S
+#7883
+Royal Kitchen~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7881
+D1
+~
+~
+0 -1 7884
+S
+#7884
+Royal Kitchen~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7882
+D3
+~
+~
+0 -1 7883
+S
+#7885
+Obervon Throne Room~
+A temporary description
+~
+78 0 0
+D1
+~
+~
+0 -1 7886
+D2
+~
+~
+0 -1 7887
+D5
+~
+~
+0 -1 7869
+S
+#7886
+Altar of Polo Fay~
+A temporary description
+~
+78 0 0
+D3
+~
+~
+0 -1 7885
+S
+#7887
+Royal Bedroom~
+A temporary description
+~
+78 0 0
+D0
+~
+~
+0 -1 7885
+S
+#7888
+The Tarrasque's Prison~
+A temporary description
+~
+78 0 0
+S
+#7889
+The Tarrasque's Stomache~
+A temporary description
+~
+78 0 0
+S
+#7890
+A temporary name~
+A temporary description
+~
+78 0 0
+S
+#7899
+A temporary name~
+A temporary description
+~
+78 0 0
+S
+#0
+$~

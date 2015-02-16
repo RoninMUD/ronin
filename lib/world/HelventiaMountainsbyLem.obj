@@ -1,0 +1,507 @@
+#6200
+gloves workgloves work~
+heavy work gloves~
+A pair of heavy leather gloves is lying here.~
+~
+9 64 129
+8 0 0 0
+10 15000 5000
+15
+E
+GLOVES~
+Sticked with deer sinew and made from heavy leather, these gloves
+can take a beating as well as dish one out.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#6201
+pants ragged filthy~
+a pair of ragged pants~
+A pair of ragged pants has been left here.~
+~
+9 2048 33
+5 0 0 0
+10 10000 15000
+20
+E
+pants~
+Ragged and filthy, these pants have seen some hard nights out
+in the open.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 12
+#6202
+vest trapper hide~
+a trapper's vest~
+A patchwork vest of animal skin has been left here.~
+~
+9 0 9
+8 0 0 0
+15 20000 15000
+30
+E
+vest~
+Sewn from a patchwork of hides, this vest is fringed with doe
+intestine to keep off the rain.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+41 20
+#6203
+cloak woodsman~
+a woodsman's cloak~
+A muddy cloak has been left here.~
+~
+15 2576 1025
+100 0 0 0
+15 25000 50000
+20
+E
+cloak~
+The cloak is covered with leaves and dried mud.  As you look
+closer, you notice a number of bugs crawling about.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 40
+A
+17 3
+#6204
+head badger~
+a badger's head~
+A badger's head is sitting on the ground here.~
+~
+9 66 17
+4 0 0 0
+10 10000 2000
+35
+E
+head~
+The badger's head looks like you could fit your own puny braincase
+inside it...go ahead, try it on.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+#6205
+waterskin~
+a waterskin~
+a waterskin is lying on the ground.~
+~
+17 0 1
+80 0 0 0
+50 75 70
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6206
+bracelet hair badger~
+a badger-hair bracelet~
+A finely woven bracelet has been left here.~
+~
+11 64 4097
+0 0 0 218771060
+10 2000 1000
+25
+E
+bracelet~
+This bracelet has been woven out of badger's hide, and looks
+light but very strong.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+18 1
+#6207
+Mandible Chitonous~
+Chitonous Mandible~
+Some careless individual has left his weapon here.~
+$r Mandible trembles violently, seeking to quell its bloodlust.~
+5 259054144 8193
+0 5 8 11
+20 50000 100000
+7
+E
+mandible~
+Dripping with slimy and oil, this sharp chitonous mandible
+comes from one of the sneakiest, deadliest creatures in
+the world -- and it can smack nearly anything, HARD.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+28 20
+#6208
+exoskeleton~
+a chitonous exoskeleton~
+An oily black exoskeleton lies on the ground here.~
+~
+9 133347920 9
+6 0 0 0
+10 30000 20000
+10
+E
+exoskeleton~
+This shiny, dark exoskeleton is the most hideous thing you've ever
+seen. It looks as though it were ripped right off the back of
+a corpse, with almost no care for aesthetics...like some sort of
+bondage device.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 30
+A
+18 4
+#6209
+vestments robes~
+unholy vestments~
+Some flowing dark robes have been left here.~
+~
+9 134251072 9
+0 0 0 0
+10 30000 15000
+10
+E
+vestments~
+Flowing dark robes flutter up towards your face...these are the
+garments of an unholy sermonist.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 40
+A
+13 -8
+#6210
+skirt~
+a priest's skirt~
+A dark-colored skirt has been left here.~
+~
+9 242268736 33
+0 0 0 0
+10 70000 10000
+10
+E
+skirt~
+The skirt is made of a coarse, dark material...heavy waves of magic
+eminating from the garment set your armhairs on end.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 20
+A
+13 -20
+#6211
+leggings black cotton~
+a pair of black leggings~
+Someone has left a pair of black cotton leggings here.~
+~
+9 250657280 33
+0 0 0 0
+10 30000 7000
+13
+E
+leggings~
+You see a pair of black cotton leggings, with a dark metal fiber 
+woven into the cloth.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+#6213
+paws bear gloves~
+a pair of bear's paws~
+Some furry gloves have been left on the ground here.~
+~
+9 4194304 129
+0 0 0 0
+15 20000 15000
+10
+E
+paws~
+You see a pair of furry bear's paws which have been fasioned 
+into gloves.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 4
+#6214
+vest bear hide~
+a bear's hide vest~
+A vest made of bear's hide has been left on the ground here.~
+~
+9 134217728 9
+5 0 0 0
+25 100000 15000
+10
+E
+vest~
+This vest is made of bear's hide, stitched together with sinew.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+#6215
+sleeves bearskin~
+a pair of bearskin sleeves~
+A pair of bearskin sleeves has been left here.~
+~
+9 138428480 257
+0 0 0 0
+15 15000 5000
+10
+E
+sleeves~
+These sleeves look as though they were only cleaned haphazardly.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+#6216
+hide cloak~
+bear's hide~
+A bear's hide has been left here.~
+~
+9 138430528 1025
+0 0 0 0
+20 30000 20000
+10
+E
+hide~
+You see an unsewn, uncured bear hide --  looks like it'd make a 
+good wrap.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+1 2
+#6217
+flute bone~
+a flute made of bone~
+A bone flute has been left here.~
+~
+24 233896464 16385
+0 0 0 0
+10 10000 2000
+8
+E
+flute~
+You see a finely carved bone flute, highly polished around the
+finger holes.
+~
+E
+bone~
+You see a finely carved bone flute, highly polished around the
+finger holes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+5 1
+#6218
+bear claw~
+a bear's claw~
+A black, filthy-looking bear's claw is lying here.~
+~
+5 134217728 24577
+0 5 1 11
+20 10000 10000
+10
+E
+claw~
+Black with dried blood, and crunchy with scraps of flesh still hanging, this
+claw is disgusting, and you would drop it...if it were not obviously an item
+of tremendous talismanic power...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6219
+ring seal~
+the Seal of Ouroboros~
+Someone has left a seal-ring here.~
+~
+11 134217792 3
+0 0 0 0
+5 10000 3500
+10
+E
+seal~
+The ring you see before you is oddly engraved with an image of
+a snake eating its own tail, the world-snake, The Worm Ouroboros.~
+E
+ring~
+The ring you see before you is oddly engraved with an image of
+a snake eating its own tail, the world-snake, The Worm Ouroboros.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 2
+A
+19 2
+#6220
+key tiny frog~
+a tiny key covered in frog guts~
+The ravaged guts of a small animal conceal most of a very tiny key.~
+~
+18 0 1
+0 0 0 0
+1 15 5
+90
+E
+key~
+Well, this was certainly an unexpected find, but perhaps the metal key's
+presence in the frog's belly explains why the poor fellow doesn't appear
+to have hopped in days.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6273
+kaboodle board~
+kaboodle~
+There is a kaboodle sitting here.~
+~
+27 1 0
+56 56 56 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

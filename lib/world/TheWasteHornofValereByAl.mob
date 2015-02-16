@@ -1,0 +1,188 @@
+#18100
+Asmodean~
+Asmodean~
+Asmodean is standing here awaiting your arrival.
+~
+   He is a man in his middle years and has dark hair. He is handsome and 
+tall with dark, deep-set eyes. He has an odd way of holding his head 
+cocked sideways when looking at you.
+~
+8 268435584 -1000 Y
+60 19 10 20d100+45000 30d3+1000
+3333333 5000000
+8 8 1
+1 0 5d5+4000 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18101
+aiel~
+a blackweiled aial~
+Your sight detects movement, but at as you look closer you see nothing.
+~
+   The aiel is almost invisible when standing still, clothes blending in with
+the rocks and sand in this dry place. All clothes are made to stay hidden 
+until the attackers are right on top of them. The aiel has grey eyes and 
+reddish hair and a piece of cloth over his mouth and nose. Weiled and
+ready to kill.
+~
+8 201326592 400 Y
+47 -20 -17 2d50+6000 5d5+200
+2500 1300000
+8 8 1
+4 0 2d2+300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18102
+clan chief~
+a clan chief~
+Your sight detects movement, but at as you look closer you see nothing.
+~
+   He is a tall and handsome man with a strong, square face and a good 
+smile. His dark red hair is graying. He has broad shoulders and blue 
+eyes.
+~
+8 201326592 600 Y
+50 -20 -25 20d50+8000 5d5+250
+10000 1500000
+8 8 1
+4 0 2d2+400 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18103
+maiden of the spear~
+a Maiden of the Spear~
+Your sight detects movement, but at as you look closer you see nothing.
+~
+   She is a tall and lovely woman with blue-green eyes. Her reddish hair is 
+short with a tail in the back. She wears her spears and buckler as they 
+where a part of her.
+~
+8 201326592 400 Y
+47 -20 -20 20d20+5000 5d5+220
+3000 1400000
+8 8 2
+4 0 2d2+400 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18104
+wise one~
+a wise one~
+A wise one is standing here.
+~
+   The wise one is garbed shirt and skirt all in brown in different hues to blend 
+in with the ground. She looks at you with hard eyes and says: "No 
+wetlander is allowed here. Go back with you!"
+~
+8 67110912 500 Y
+47 -10 -5 2d50+5000 1d1+1
+3000 1000000
+8 8 2
+2 0 2d2+500 1
+1 4 20 119
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18105
+guide~
+the guide~
+An aiel is guiding some merchants through the lands.
+~
+   The aiel is almost invisible when standing still, clothes blending in with
+the rocks and sand in this dry place. All clothes are made to stay hidden 
+until the attackers are right on top of them. The aiel has grey eyes and 
+reddish hair and a piece of cloth hangs down his shoulders.
+~
+8 262144 400 Y
+50 -20 -20 20d50+7500 5d5+100
+2500 1100000
+8 8 1
+4 0 2d2+400 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18106
+dust guardian~
+the dust guardian~
+The wind picks up and  the dust forms a shape guarding the gate.
+~
+   The dust has settled to the shape of a huge giant guard. Its features 
+constantly change as wind ripples its form.
+~
+10 262272 -750 Y
+55 -15 -8 10d10+15000 10d10+400
+0 2000000
+9 9 1
+64 0 2d2+400 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18107
+Artur Hawkwing~
+Artur Hawkwing~
+Arthur Hawkwing is standing here.
+~
+   He is tall and hook-nosed with dark, deep-set eyes and a deep voice.
+~
+8 0 800 Y
+60 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+7 0 2d2+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18108
+Birgitte Silverbow~
+Birgitte Silverbow~
+Birgitte Silverbow is standing here ready to knock an arrow to her bow.
+~
+   Birgitte has long golden hair intricately braided. She is tall and wears 
+her golden hair in a waist-long braid. She has blue eyes, and carries 
+her silver bow with which she never miss.
+~
+8 0 800 Y
+60 19 10 1d1+1 1d1+1
+1 1
+8 8 2
+4 0 2d2+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18109
+Gaidal Cane~
+Gaidal Cane~
+Gaidal Cane is standing here.
+~
+   He is swarthy. He is dark and strongly muscled. His face is wide and flat. 
+His heavy nose is too big and his mouth is a too broad gash. He is a 
+short man and he speaks with a harsh voice.
+~
+8 0 800 Y
+60 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+7 0 2d2+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#18110
+Rogosh Eagle-eye~
+Rogosh Eagle-eye~
+Rogosh Eagle-eye is standing here.
+~
+   He is fatherly looking with white hair and very sharp eyes.
+~
+8 0 800 Y
+60 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+7 0 2d2+500 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

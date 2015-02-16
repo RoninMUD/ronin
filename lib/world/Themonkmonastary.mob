@@ -1,0 +1,303 @@
+#10301
+monk human mentor~
+the human monk~
+A human monk is quietly resting here.
+~
+   A closer look reveals that this monk is obviously somewhat skilled though
+not quite a master in unarmed combat.
+~
+78 262144 200 Y
+12 11 6 5d3+80 2d4+1
+250 7000
+5 5 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10302
+monk human mentor librarian~
+the human monk~
+A human monk is sitting here, copying some manuscripts.
+~
+   This chap spends almost all of the time that he is not improving his
+skills in unarmed combat by copying fading manuscripts and books.
+~
+78 262144 200 Y
+12 11 6 5d3+80 2d4+1
+250 7000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10303
+monk dwarf dwarven mentor~
+the dwarven monk~
+A dwarven monk is quietly resting here.
+~
+   A closer look reveals that this monk is obviously somewhat skilled though
+not quite a master in unarmed combat.
+~
+78 262144 100 Y
+12 8 7 5d2+80 2d5+0
+250 7100
+5 5 1
+71 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10304
+monk human female superior master~
+the female monk~
+A human female monk is sitting here praying and humming.
+~
+   A quite attractive female, however, from the callouses on her hands and
+feet, it would be advisable for you not to try anything on her that might
+get her upset.
+~
+78 262144 300 Y
+17 7 2 3d10+313 4d4+0
+1000 36000
+6 6 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10305
+monk human layman~
+the human monk~
+A human monk is here going about his daily duties.
+~
+   From the way that this monk walks and carries himself you can tell that
+he is fairly new to being a monk as he seems too much like a normal person
+(excpet for the monk robes he is wearing).
+~
+206 262144 0 Y
+4 18 9 2d5+10 1d6+0
+75 1000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10306
+monk human layman praying~
+the human monk~
+A human monk is sitting here praying and humming.
+~
+   You think that this young man is probably fairly new to being a monk as
+occasionally he slightly stumbles over a difficult phrase in his prayers.
+~
+206 262144 0 Y
+4 18 9 2d5+10 1d6+0
+75 1000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10307
+monk human layman resting~
+the human monk~
+A human monk is resting here.
+~
+   This poor fellow has spent the day training, cleaning, praying, and
+eating few small meals. All he really wants to do is just stay here and
+rest for a week.
+~
+206 262144 0 Y
+4 18 9 2d5+10 1d6+0
+75 1000
+5 5 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10308
+monk human layman librarian~
+the human monk~
+A human monk is here maintaining the library.
+~
+   This lucky chap has the easy job for this week as he gets to give his
+tired body a rest while he goes through the books - sorting and dusting as
+he goes around.
+~
+204 0 0 Y
+4 18 9 2d5+20 1d6+0
+75 1000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10309
+monk human layman janitor~
+the human monk~
+A human monk is here cleaning up the monastary.
+~
+   This poor guy gets the unenvied job of cleaning the monastary. Not only
+does he have to clean the floors and walls, but he has to pick all of the
+loose trash and stuff that the occasional adventurer leaves lying around.
+~
+204 0 0 Y
+4 18 9 2d1+20 1d6+0
+75 1000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10310
+monk human female layman~
+the female monk~
+A human female monk is resting here.
+~
+   A few human females just get fed up with the troubles that men cause them
+so they come to the monastary to find out how to defend themselves. This
+one is probably no exception to the majority.
+~
+74 0 0 Y
+4 18 9 2d2+20 1d6+0
+75 1000
+5 5 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10311
+monk dwarf dwarven immaculate~
+the dwarven monk~
+A dwarven monk is here going about his daily duties.
+~
+   From the way that this monk walks and acts, you can tell that he is
+still fairly new as he grumbles as much as most dwarves when looked at.
+~
+72 32768 0 Y
+5 17 9 5d2+20 1d6+1
+85 1300
+8 8 1
+71 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10312
+monk dwarf dwarven immaculate sleeping~
+the dwarven monk~
+A dwarven monk is here snoring loudly.
+~
+   This tough little guy is all tuckered out from a full day of being a
+monk. Though noone could probably sleep through his snores, it would not
+be a good idea to wake him and tell him about it.
+~
+74 32768 0 Y
+5 17 9 5d2+20 1d6+1
+85 1300
+4 4 1
+71 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10313
+monk human master~
+the human monk~
+A human monk is here going about his daily duties.
+~
+   From the way that this monk walks and acts, you get the impression that
+this guy is quite confident in his abilities to handle any problems that
+might come his way.
+~
+72 262144 100 Y
+13 9 5 15d2+200 2d4+4
+500 12000
+8 8 1
+71 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10314
+monk human master librarian~
+the human monk~
+A human monk is sitting here going over new aquisitions and making notes.
+~
+   Though very skilled in the arts of unarmed combat, this quiet fellow
+likes to spend a lot of his time taking care of the library and trying to
+increase the contents of the library.
+~
+72 262144 100 Y
+13 10 5 15d2+200 2d4+4
+500 12000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10315
+monk human master praying~
+the human monk~
+A human monk is sitting here praying and humming.
+~
+   This monk has some noticeable callouses built up on his hands and feet
+and you get the impression that a lot of time went into getting them that
+way.
+~
+74 262144 100 Y
+13 10 5 15d2+200 2d4+4
+500 12000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10316
+monk human dorek~
+Dorek the monk~
+Dorek the human monk is walking around looking big and strong.
+~
+   This monk is quite strong looking and if he wasn't a monk, you would
+probably find this guy working as a bouncer at a bar.
+~
+72 262144 0 Y
+12 8 6 50d4+20 2d3+6
+750 11900
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10317
+monk human ron~
+Ron the monk~
+Ron the monk is sitting here drinking some beer and telling army stories.
+~
+   This paticular fellow has close cropped hair that came from when he was
+serving in Midg17rd's Cityguards. He also seems to be able put down a good
+amount of beer as he is often draining his mug.
+~
+74 268435456 0 Y
+20 2 4 40d2+600 3d3+3
+500 55000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#10318
+monk grand master human~
+the Grand Master of Monks~
+You see a human causually chopping up a few logs with.... HIS HANDS!
+~
+   He calmly looks you over with a very impassive face. You also realize
+that this guy could easily rip you apart with his bare hands from the way
+that he can chop those logs. He also carries around a pouch with the money
+of the monastary (after all, can you think of a safer place?).
+~
+74 268435456 0 Y
+30 -8 -5 90d10+5000 8d4+0
+50000 270000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

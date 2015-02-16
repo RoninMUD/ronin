@@ -1,0 +1,408 @@
+#2901
+horns~
+A set of goat horns~
+A set of horns lies here.~
+~
+5 1048576 8193
+1 3 6 11
+2 10 3
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+19 4
+#2902
+bladder milk~
+A Goat's Milk Bladder~
+A milk bladder lies here.~
+~
+17 0 1
+20 20 10 0
+1 2 2
+15
+E
+bladder~
+This bladder has many holes from which you may drink.  It originally had milk
+in it but you may put whatever you desire into it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2903
+ball peen hammer~
+A ball peen hammer~
+A ball pean hammer lies here.~
+~
+5 0 8193
+0 3 6 7
+2 10 3
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+#2904
+short sword~
+A Short Sword~
+A short sword lies here.~
+~
+5 0 8193
+0 3 6 11
+3 30 3
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+#2905
+hatchet~
+A Small Hatchet~
+A Small Hatchet lies here.~
+~
+5 0 8193
+0 3 6 3
+3 30 3
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+#2906
+chainmail mail newt fire~
+Fire Newt Chainmail~
+A chainmail shirt lies here.~
+~
+9 0 9
+9 28 0 0
+10 1000 10
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+18 1
+#2907
+pick axe pickaxe~
+A Small Pickaxe~
+A Small Pickaxe lies here.~
+~
+5 0 8193
+0 3 6 11
+2 1000 10
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+#2911
+axe broad~
+A Large Broadaxe~
+A broad axe lies here.~
+~
+5 0 8193
+0 7 3 3
+15 600 100
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 2
+#2912
+suit leather brown~
+A Suit Made from Brown Leather~
+A leather suit lies here.~
+~
+9 65 9
+9 3 6 11
+3 1000 100
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+1 1
+#2913
+mace large spiked chain chainmace~
+A Large Spiked Chain Mace~
+A large mace lies on the ground.~
+~
+5 66 8193
+0 8 3 6
+10 300 20
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#2914
+potion blood lizard~
+potion of lizard blood~
+A potion of lizard blood lies here.~
+~
+10 268435520 1
+30 28 0 0
+1 100 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2915
+egg newt~
+a newt egg~
+A newt egg lies here.~
+~
+19 0 1
+10 0 0 0
+1 1 1
+100
+E
+egg~
+This egg is large and white with purple spots all over it.  It is covered in
+a yellow mucus and stinks very badly.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2916
+suit armor skin lizard~
+A Suit of Armor Made from Scales~
+A suit of lizard skin lies here.~
+~
+9 0 9
+11 0 0 0
+20 10000 3500
+15
+E
+suit~
+This is a very nicely created suit of armor.  It is made of the toughest of
+the scales of a lizard and is green with black highlights.  A valuable piece
+of equipment like this should be handles with care.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 3
+A
+18 2
+#2917
+key~
+A Flaming Key~
+A key lies burning on the ground.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2918
+Helm Phoenix~
+The Helm of the Phoenix~
+A helm with a large phoenix carved into the side lies here~
+~
+11 0 17
+0 0 0 0
+20 20000 10000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 2
+A
+5 2
+#2995
+membership fee machine~
+a membership fee machine~
+A membership fee machine is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2996
+pen~
+a pen~
+A small pen is lying on the ground.~
+~
+21 0 1
+0 0 0 0
+1 50 2
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2997
+flower machine~
+a flower machine~
+A flower machine is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2998
+insurance machine~
+an insurance machine~
+An insurance machine is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2999
+teller bank banker~
+a bank teller~
+An Autoteller machine is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+autoteller teller machine~
+'withdraw <amt>/all' -- withdraw some/all of your coins from the bank.
+'deposit <amt>/all' -- deposit some/all of your coins in the bank.
+'balance' -- check your balance in the bank.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

@@ -1,0 +1,1965 @@
+#19500
+A temporary name~
+A temporary description
+~
+195 0 0
+S
+#19501
+A Dry Riverbed~
+   At one time a river flowed into the mountainside from this valley.  Now, 
+however, the river is gone, and all that is left is a dry, sandy riverbed, 
+home to nothing.  The route of the river can be traced back to its source 
+in the north, through the abyssal plain.  Small, calcified remains of creatures
+long since extinct are buried in the sand, their beautiful forms forever etched
+in this memory of earth.  
+~
+195 0 0
+D0
+~
+~
+0 -1 19507
+D1
+~
+~
+0 -1 19502
+S
+#19502
+A Dry Riverbed~
+At one time a river flowed through this valley, rich and green. Now, however
+the river is gone, and all that is left is a dry, sandy riverbed, home to 
+nothing.  The route of the river back to its source in the east, through the abyssal plain.
+~
+195 0 0
+D0
+~
+~
+0 -1 19508
+D3
+~
+~
+0 -1 19501
+S
+#19503
+A Cold Plateau~
+   This frigid plateau looks down over a scene of absolute and utter desolation.
+At one time this may have been a glorious vista, but those days are obviously 
+long since past.  The sun has vanished from the sky, leaving it bleak and grey. 
+The wind whips wildly about, gusts trying with almost sentient will to scatter
+any living thing to the hard ground below, and certain death.  Some small steps
+are carved into the mountainside, leading down to the abyssal plain.
+~
+195 0 0
+D5
+~
+~
+0 -1 19509
+S
+#19504
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+~
+195 0 0
+D0
+~
+~
+0 -1 19510
+D1
+~
+~
+0 -1 19505
+S
+#19505
+A Gnarled Tree~
+   This tree is an enormous example of its species.  Standing some four-hundred
+feet tall, it seems almost infinite in relation to the utter flatness of the 
+plain from which it springs forth.  It has been hit by some sort of blight, and 
+is now blackened and twisted into a deformed shape, but a bit of its majesty
+still shines through.  The high-water marks on it imply that this entire plain
+must have once been deeply submerged under water for many, many years.
+~
+195 0 0
+D0
+~
+~
+0 -1 19511
+D3
+~
+~
+0 -1 19504
+S
+#19506
+A Chilling Pit~
+   Blasting cold air rushes through this room, seeming to emanate from small
+holes in the pit's surface.  The rock itself is as frigid as ice, bare and black
+and creaking slightly.  The pit itself seems to be some sort of an impact crater,
+and the stone is glazed like glass from an enormous heat.  A shuffling noise 
+comes occasionally from behind a rock, indicating that some small bit of life has
+managed to make a home in this nearly completely inhospitable environment.
+~
+195 9 0
+D4
+~
+~
+0 -1 19512
+S
+#19507
+A Dry Riverbed~
+   This appears to be directly south of the source of what was once a beautiful
+river.  All around is the abyssal plain, and the many bumps and curves which
+exist in the riverbed are a happy relief from the never-ending flatness of the
+plain itself.
+~
+195 0 0
+D0
+~
+~
+0 -1 19513
+D1
+~
+~
+0 -1 19508
+D2
+~
+~
+0 -1 19501
+S
+#19508
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.  In
+the far east you see what appears to be an ocean of some sort.
+~
+195 0 0
+D0
+~
+~
+0 -1 19514
+D1
+~
+~
+0 -1 19509
+D2
+~
+~
+0 -1 19502
+D3
+~
+~
+0 -1 19507
+S
+#19509
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+A strange booming sound can be heard echoing from the distant north.
+~
+195 0 0
+D0
+~
+~
+0 -1 19515
+D1
+~
+~
+0 -1 19510
+D3
+~
+~
+0 -1 19508
+D4
+~
+~
+0 -1 19503
+S
+#19510
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+To the northwest you see a towering plateau rising up out of the plain.
+~
+195 0 0
+D1
+~
+~
+0 -1 19511
+D2
+~
+~
+0 -1 19504
+D3
+~
+~
+0 -1 19509
+S
+#19511
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+The sand here seems even finer than on the rest of the plain.
+~
+195 0 0
+D0
+~
+~
+0 -1 19517
+D2
+~
+~
+0 -1 19505
+D3
+~
+~
+0 -1 19510
+S
+#19512
+Scorched Earth~
+   It appears as though some large fiery object made impact on this small patch
+of soil.  The earth itself is burned almost beyond  recognition.  The small 
+particles of sand have fused together into glass, and it is difficult to stay 
+standing on such a slippery substance.  There is a hole in the glass, most likely 
+left by whatever scorched the earth.
+~
+195 0 0
+D0
+~
+~
+0 -1 19518
+D1
+~
+~
+0 -1 19664
+D5
+~
+~
+0 -1 19506
+S
+#19513
+A Dry Spring~
+   This is the spring which once fed the river through these lands.  Now it is a
+simple crack in the ground, dry and barren as the rest of the plain. The riverbed
+follows a path to the south, towards the hills.  To the north can be sees some 
+large stone gates, leading to a city which appears to be a mass of stony trees.
+~
+195 0 0
+D0
+~
+~
+0 -1 19519
+D1
+~
+~
+0 -1 19514
+D2
+~
+~
+0 -1 19507
+S
+#19514
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+To the west can be seen the remnants of an ancient spring.
+~
+195 0 0
+D0
+~
+~
+0 -1 19520
+D1
+~
+~
+0 -1 19515
+D2
+~
+~
+0 -1 19508
+D3
+~
+~
+0 -1 19513
+S
+#19515
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen a plateau overlooking the plain.
+~
+195 0 0
+D2
+~
+~
+0 -1 19509
+D3
+~
+~
+0 -1 19514
+S
+#19516
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+~
+195 0 0
+D0
+~
+~
+0 -1 19522
+D1
+~
+~
+0 -1 19517
+S
+#19517
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+To the north-east the sand appears to be made of coarser grain.
+~
+195 4 0
+D0
+~
+~
+0 -1 19523
+D1
+~
+~
+0 -1 19518
+D2
+~
+~
+0 -1 19511
+D3
+~
+~
+0 -1 19516
+S
+#19518
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south the earth is scorched black and shines like glass.  To the east an
+utterly dark ocean froths miserably.
+~
+195 0 0
+D1
+~
+~
+0 -1 19670
+D2
+~
+~
+0 -1 19512
+D3
+~
+~
+0 -1 19517
+S
+#19519
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  To the north may be seen a towering city on a hill, comprised of
+thousands of what appear to be solid stone trees, twisted into odd shapes.  To
+the south lies the broken remnants of a spring.
+~
+195 0 0
+D0
+~
+~
+0 -1 19525
+D1
+~
+~
+0 -1 19520
+D2
+~
+~
+0 -1 19513
+S
+#19520
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  Far to the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+To the north-west you see a towering city on a hill, looming over the plain.
+~
+195 0 0
+D2
+~
+~
+0 -1 19514
+D3
+~
+~
+0 -1 19519
+S
+#19521
+An Abyssal Plateau~
+   This plateau leads into the mountains from the abyssal plain.  The mountains
+are a sight for sore eyes after the monotony of the plain, but their dark and
+jagged shapes do not lend themselves to happy thoughts.  A sinister evil seems to
+lurk in the very rocks which make up the mountains, and far to the north can be
+seen an enormous tower, piercing the sky with an almost malevolent sharpness.
+~
+195 0 0
+D0
+~
+~
+0 -1 19526
+D1
+~
+~
+0 -1 19522
+S
+#19522
+Abyssal Plain~
+   This seemingly-endless plain is completely level, without any movement.  No
+wind touches its surface to disturb the fine, bone-white sand.  In all directions
+lies nothing but the same absolute uniformity of height.  There is a madness in
+utter stability, in that order that comes from the theft of the inherent beauty
+of life.  To the north can be seen jagged black mountain peaks, rising high
+into the sky, and as void of vegetation or the signs of life as this plain.  To
+the south may be seen small rolling hills, bits of scrub growing in the soil.
+The land slopes upwards to the west, leading to a plateau of some sort.
+~
+195 0 0
+D2
+~
+~
+0 -1 19516
+D3
+~
+~
+0 -1 19521
+S
+#19523
+The Salted Plain~
+   At first glance this appears to be just another abyssal plain.  On closer
+examination, however, it becomes apparent that the fine white powder that coats
+the rest of the plain has here been replaced by coarse salt.  Whether this salt
+accumulated over time from the nearby sea, or whether it was left here for some
+other purpose entirely, it is impossible to tell.  It crunches beneath the feet,
+and the air seems somehow even more arid than in the plain to the south.
+~
+195 0 0
+D0
+~
+~
+0 -1 19528
+D1
+~
+~
+0 -1 19524
+D2
+~
+~
+0 -1 19517
+S
+#19524
+The Salted Plain~
+   At first glance this appears to be just another abyssal plain.  On closer
+examination, however, it becomes apparent that the fine white powder that coats
+the rest of the plain has here been replaced by coarse salt.  Whether this salt
+accumulated over time from the nearby sea, or whether it was left here for some
+other purpose entirely, it is impossible to tell.  It crunches beneath the feet,
+and the air seems somehow even more arid than in the nearby plain.
+~
+195 0 0
+D0
+~
+~
+0 -1 19529
+D3
+~
+~
+0 -1 19523
+S
+#19525
+Outside the Gates~
+   To the east is an enormous gated arch, leading into this strange stone city.
+The entire city appears to be covered in a canopy of basalt trees, and an
+occasional scream can be heard echoing through the gates.  To the south is the
+abyssal plain, silent and still.
+~
+195 0 0
+D1
+~
+~
+0 -1 19531
+D2
+~
+~
+0 -1 19519
+S
+#19526
+A Mountain Path~
+This path leads away from the abyssal plain, and into the towering mountains.
+The rock here is razor sharp where it is broken, reaching out to slice at flesh
+left uncovered.  Far to the east can be a seen a towering black spire, piercing
+the sky.  Mountains bar the view to the north and west.
+~
+195 4 0
+D1
+~
+~
+0 -1 19527
+D2
+~
+~
+0 -1 19521
+S
+#19527
+A Mountain Path~
+This path leads away from the abyssal plain, and into the towering mountains. 
+The rock here is razor sharp where it is broken, reaching out to slice at flesh
+left uncovered.  Far to the east can be a seen a towering black spire, piercing
+the sky.  To the north there is a fork in the path, and just east of that you
+can see a strange outpost.
+~
+195 0 0
+D0
+~
+~
+0 -1 19586
+D3
+~
+~
+0 -1 19526
+S
+#19528
+The Salted Plain~
+   At first glance this appears to be just another abyssal plain.  On closer
+examination, however, it becomes apparent that the fine white powder that coats
+the rest of the plain has here been replaced by coarse salt.  Whether this salt
+accumulated over time from the nearby sea, or whether it was left here for some
+other purpose entirely, it is impossible to tell.  It crunches beneath the feet,
+and the air seems somehow even more arid than in the plain far to the south.
+~
+195 0 0
+D1
+~
+~
+0 -1 19529
+D2
+~
+~
+0 -1 19523
+S
+#19529
+The Salted Plain~
+      At first glance this appears to be just another abyssal plain.  On closer
+examination, however, it becomes apparent that the fine white powder that coats
+the rest of the plain has here been replaced by coarse salt.  Whether this salt
+accumulated over time from the nearby sea, or whether it was left here for some
+other purpose entirely, it is impossible to tell.  It crunches beneath the feet,
+and the air seems somehow even more arid than in the plain to the south.  To the
+east can be heard the crashing of waves against the shore, but large mounds of
+salt bar the way.
+~
+195 0 0
+D2
+~
+~
+0 -1 19524
+D3
+~
+~
+0 -1 19528
+S
+#19530
+A temporary name~
+A temporary description
+~
+195 0 0
+S
+#19531
+Gateway of Basalt~
+   This enormous arch of basalt is formed in the shape of two massive entwined
+trees.  These solid basalt forms seem to radiate an aura of darkness.  Within the
+city can be seen nothing but shadow, an oddity, as there appears to be no sun in
+the dull grey sky above.  A strange silence lurks within this city, punctuated
+only by an occasional single, piercing scream, which reverberates off of the
+basalt walls and terraces.
+~
+195 4 0
+D1
+~
+~
+0 -1 19532
+D3
+~
+~
+0 -1 19525
+S
+#19532
+A Dark Street~
+   This street is cloaked in perpetual shadow, shapes flickering into existence 
+against ruined benches, and then suddenly vanishing into the darkness.  To the 
+east can be seen the remnants of an old cobblestone walkway, leading into a 
+blackness so absolute it seems impossible.  Further north the street continues, 
+and there can be heard the constant crashing sound of a blade striking stone.
+~
+195 1 0
+D0
+~
+~
+0 -1 19538
+D1
+~
+~
+0 -1 19533
+D3
+~
+~
+0 -1 19531
+S
+#19533
+A Crumbling Path~
+   This path has surely seen better days.  Crushed marble, basalt and onyx make 
+up what was once a glorious foot-path.  Now, sadly, it sees no happy children 
+skipping along, no moonstruck couples walking in the moonlight, it sees only the 
+eternal pale which is cast over the land, and the occasional marching of unnamed,
+unseen soldiers.
+~
+195 0 0
+D1
+~
+~
+0 -1 19534
+D3
+~
+~
+0 -1 19532
+S
+#19534
+A Crumbling Path~
+   This path has surely seen better days.  Crushed marble, basalt and onyx make 
+up what was once a glorious foot-path.  Now sadly, it sees no happy children 
+skipping along, no moonstruck couples walking in the moonlight, it sees only the 
+eternal pale which is cast over the land, and the occasional marching of unnamed,
+unseen soldiers.  To the east can be seen a patch of completely parched earth, 
+cracking and dry, being broken apart from below by the scorching heat which 
+emanates from the ground.  Further east can be seen only a dark body of water.
+~
+195 0 0
+D1
+~
+~
+0 -1 19535
+D3
+~
+~
+0 -1 19533
+S
+#19535
+Parched Earth~
+   This patch of earth is the very antithesis of life.  Nothing within it stirs, 
+nothing breathes, and there is no life-force to speak of.  An intense heat rises 
+from below, creating fine cracks across the ground.  Imagining what this earth 
+once was, in better, bygone days, is a futile exercise.  To the side of this 
+scene of desolation lies a pool of black water, utterly still, without a ripple 
+or splash.  There is a terror implicit in the empty water.  Nothing can be
+gleaned from its dark surface, no estimate made as to its depth, and yet there
+is of a certainty an evil lurking within.
+~
+195 4 0
+D1
+~
+~
+0 -1 19536
+D3
+~
+~
+0 -1 19534
+S
+#19536
+A Black Pool~
+   This pool is the color of darkest night, a reflection of the soul of the 
+creator of this realm.  The water is cold beyond imagining, and although it
+appeared still from a distance, from up close small eddies and currents can be
+seen.  Echoes of the invisible creatures that churn beneath its surface.  The
+shore to the east, north, and south is covered in jagged onyx blades so sharp
+that setting foot there is unthinkable.
+~
+195 1 0
+D3
+~
+~
+0 -1 19535
+S
+#19537
+A Rocky Path~
+   Something about this path holds less menace than the rest of this stone city.
+The rocks appear natural, and without a trace of the bane which seems to have 
+gripped every other inch of the land.  To the north is an overhang, protecting 
+a cave which disappears into darkness.
+~
+195 0 0
+D0
+~
+~
+0 -1 19543
+D1
+~
+~
+0 -1 19538
+S
+#19538
+A Dark Street~
+   This street seems to be stuck in perpetual shadow, shapes flickering into 
+existence against crumbling walls, and then suddenly vanishing into the darkness.  
+To the west is a rocky path, leading towards a cave, and far to the north the
+incessant sound of iron striking stone grows louder.
+~
+195 1 0
+D1
+~
+~
+0 -1 19539
+D2
+~
+~
+0 -1 19532
+D3
+~
+~
+0 -1 19537
+S
+#19539
+A Dark Street~
+The main street through this decaying city continues to the north, moans and 
+screams echoing in from all directions.  The stone lattice of what must once have
+been mighty trees is thick here, and even the grey sky cannot be seen.  The
+street itself is crumbling, the basalt weak and brittle.
+~
+195 1 0
+D0
+~
+~
+0 -1 19545
+D3
+~
+~
+0 -1 19538
+S
+#19540
+An Empty Chamber~
+   This building looks as though it were once an official headquarters of some 
+sort.  A rotting desk sits in one corner, and on one wall is a tapestry depicting 
+what was perhaps once this city.  A glorious panorama of green, a splendor which 
+seems entirely out of place in these dismal surroundings.  A door to the east has
+long since fallen off its hinges, and through the doorway can be seen another 
+broken room.
+~
+195 9 0
+D0
+~
+~
+0 -1 19546
+D1
+~
+~
+0 -1 19541
+S
+#19541
+Ruined Barracks~
+Broken tables and chairs litter the room.  A small pit is carved into the 
+stone floor, most likely for the casting of bones, or some other form of
+gambling.  Those days of fun, however, are long since past.  This building now 
+sees only the ruckus of war, and the clatter of human bones.  A strong iron door
+lies to the east.
+~
+195 9 0
+D1
+An enormous iron door bars the way here, surely keeping you out for your own good.
+~
+door~
+1 -1 19542
+D3
+~
+~
+0 -1 19540
+S
+#19542
+An Abandoned Armory~
+   This is where the weapons for the fighting force of the city were kept in the 
+days of yore.  Now all that remain are a few rusted swords, shields and helmets.
+The majority of armor is gone, a homage to the courage of those remaining few who
+defended their land from the scourge which came upon it.  Something about this
+room provokes an incredible terror, begging those who enter to retreat and think
+through their course of action, lest they regret it immensely.
+~
+195 1048713 0
+D3
+An enormous iron door is here.
+~
+door~
+1 -1 19541
+S
+#19543
+An Eroding Overhang~
+   This eroding overhang protects the entrance to a long cavern, disappearing
+into darkness to the north.  Bits of rock occasionally come clattering down off
+the basaltic dome above, yet another sign of the eternal decay which seems to
+plague this land.  The ground here is strewn with viscera.  Half-eaten organs,
+pools of blood, and bones cracked open and robbed of their marrow lie in mounds
+surrounding now tarnished weapons and armor.
+~
+195 4 0
+D0
+~
+~
+0 -1 19549
+D2
+~
+~
+0 -1 19537
+S
+#19544
+The High Priest's Quarters~
+   This small room is adorned lavishly.  The walls are covered in silks of many
+different colors and textures, the bed is plush and full, and the wooden carvings
+of different monsters are, while incredibly hideous, at the same time strangely 
+alluring.
+~
+195 9 0
+D0
+A heavy wooden door blocks the way here.
+~
+door~
+1 -1 19550
+S
+#19545
+A Dark Street~
+   The main street through this decaying city continues to the east, moans and 
+screams echoing from all directions.  The basalt forms above are almost beautiful
+in their stillness, as though a once mighty forest grove was frozen in an instant
+to retain its beauty for eternity.  The illusion is broken by the strange shadow
+the forms seem to cast, even in the absence of light.
+~
+195 1 0
+D1
+~
+~
+0 -1 19546
+D2
+~
+~
+0 -1 19539
+S
+#19546
+A Dark Street~
+   The main street through this decaying city continues to the east, moans and 
+screams echoing from all directions.  The basalt forms above are almost beautiful
+in their stillness, as though a once mighty forest grove was frozen in an instant
+to retain its beauty for eternity.  The illusion is broken by the strange shadow
+the forms seem to cast, even in the absence of light.  The remnants of a tavern
+can be seen to the east, and some sort of barracks lies to the south.
+~
+195 1 0
+D0
+~
+~
+0 -1 19552
+D1
+~
+~
+0 -1 19547
+D2
+~
+~
+0 -1 19540
+D3
+~
+~
+0 -1 19545
+S
+#19547
+An Empty Tavern~
+   Broken tables and chairs litter this room, and dried blood cakes the walls.  
+It is nonetheless easy to imagine that this was once a glorious tavern, with many
+an adventurer crowded around its tables, telling tall tales of creatures 
+vanquished. These voices have long since fallen silent, with the only sound a 
+quiet shuffling from behind the eastern wall.
+~
+195 9 0
+D1
+A section of the wall seems as though it could be shifted.
+~
+wall~
+8 -1 19548
+D3
+~
+~
+0 -1 19546
+S
+#19548
+A Filthy Room~
+   Perhaps this was once the barkeeper's room, but now some darker creature has 
+made this its home.  Rotting corpses lie strewn about, covered in some sort of
+green filth, reminiscent of algae.  Armor and weapons, covered in the same slime,
+lie testament to a deadly presence.
+~
+195 9 0
+D3
+A section of the wall seems as though it could be shifted.
+~
+wall~
+8 -1 19547
+S
+#19549
+A Cave of Basalt~
+   This cave is completely smoothed out, not a bump anywhere on the purely 
+basaltic surface.  A heavyset iron door is in the northern side of the cave, and 
+there are odd runes carved around the door.  The runes give off an eerie glow, 
+throbbing in the darkness, almost hypnotic in their insistence to gaze upon them.
+~
+195 9 0
+D0
+The glowing runes seem to become brighter as you look at them.
+~
+door~
+2 -1 19555
+D2
+You see the cave open out into the air here.
+~
+~
+0 -1 19543
+E
+runes~
+The glowing runes seem to become brighter as you look at them.
+~
+S
+#19550
+The Altar of Night~
+   This is the high altar of the Eternal Darkness itself, the creature of 
+absolute night, Chatundah the Unspeakable.  A simple stone slab, with three
+notches cut into its surface as channels for the life-fluids the dark one
+demands.  The blood of sacrifice is still fresh upon the altar, and disgusting 
+runes are carved around the room.  An unholy darkness seems to radiate from the 
+altar, but at the same time there is a draw to spill blood, to feed the horror, 
+and to know the perfect peace that comes from death.
+~
+195 9 0
+D0
+A heavy iron cell door is here.
+~
+cell~
+7 -1 19556
+D1
+~
+~
+0 -1 19551
+D2
+A heavy wooden door blocks the way here.
+~
+door~
+1 -1 19544
+S
+#19551
+A Temple of the Dark~
+   This room is darker than night itself.  Light seems to have a difficult time
+even penetrating the magical blackness, casting only a few short inches before 
+being lost in the utter void which engulfs the room.  Mumbling prayers rise from
+the west, in a language so foul it is unthinkable, its words seemingly without
+meaning.  A sort of babbling madness that fits this place well.
+~
+195 137 0
+D1
+~
+~
+0 -1 19552
+D3
+~
+~
+0 -1 19550
+S
+#19552
+A Dark Street~
+   The main street through this decaying city continues to the east, moans and 
+screams echoing from all directions.  The basalt forms above are almost beautiful
+in their stillness, as though a once mighty forest grove was frozen in an instant
+to retain its beauty for eternity.  The illusion is broken by the strange shadow
+the forms seem to cast, even in the absence of light.  To the west is a room that
+seems to suck in all light, and to the east is a collapsing building.
+~
+195 1 0
+D0
+~
+~
+0 -1 19558
+D1
+~
+~
+0 -1 19553
+D2
+~
+~
+0 -1 19546
+D3
+~
+~
+0 -1 19551
+S
+#19553
+A Ruined Building~
+   What this building once was is no longer evident, all it is now is another 
+victim of the blight which has settled upon the land.  Pillars are toppled, and 
+the roof seems to be caving in.  A particularly ornate pillar is fallen against 
+the eastern wall, and there is a flickering light behind it.
+~
+195 9 0
+D1
+It appears as though you could move this pillar if you tried.
+~
+pillar~
+8 -1 19554
+D3
+~
+~
+0 -1 19552
+S
+#19554
+A Candlelit Room~
+   This lived-in room looks to be a refuge for someone who has fled from the evil 
+powers of the land.  The candlelight is warm and welcoming, and small touches of
+comfort are spread around the room.  A pot of warm water for tea, colored scarves
+hanging from the ceilings, and soft pillows have made this a habitable place in
+the midst of unspeakable darkness.  That someone could have survived in this city
+is astonishing, that they could survive in one small room is even more so.  Rat
+bones, pieces of insects and small birds lay testament to the scarce diet whoever
+lives here has been sustained on.
+~
+195 8 0
+D3
+It appears as though you could move this pillar if you tried.
+~
+pillar~
+8 -1 19553
+S
+#19555
+A Limestone Tunnel~
+   This tunnel is different from the rest of the city, in that it is carved from 
+an entirely different rock.  The limestone itself emits a low green light, 
+and it is charming in its own way.  The floor, however, is incredibly disturbing,
+slowly pulsating up and down, in a steady, heaving manner.
+~
+195 8 0
+D0
+~
+~
+0 -1 19561
+D2
+A heavy iron door blocks the way here.
+~
+door~
+1 -1 19549
+S
+#19556
+A Cell~
+   This is the cell where the future sacrifices are kept.  Chains adorn the 
+walls, and human bones, picked at by human fingers show that it is not the god 
+himself who devours the sacrifices after they are dead.  Heavy stones litter
+the floor, some covered in blood stains that serve as testament to those slaves
+who end their own lives before they can be sacrificed.
+~
+195 0 0
+D2
+A heavy iron cell door is here.
+~
+cell~
+7 -1 19550
+S
+#19557
+A Ruined Building~
+   This building was perhaps once a place of law.  A large podium stands in the 
+center of the room, with rows of benches in front.  A calcified gavel is stuck
+to the floor, and there are shattered bits of marble strewn about.  The dark
+street can be seen through a collapsing doorway to the east.
+~
+195 0 0
+D1
+~
+~
+0 -1 19558
+S
+#19558
+A Dark Street~
+   The main street through this decaying city continues to the east, moans and 
+screams echoing from all directions.  The basalt forms above are almost beautiful
+in their stillness, as though a once mighty forest grove was frozen in an instant
+to retain its beauty for eternity.  The illusion is broken by the strange shadow
+the forms seem to cast, even in the absence of light. To both the east and the
+west are collapsing buildings.
+~
+195 1 0
+D0
+~
+~
+0 -1 19564
+D1
+~
+~
+0 -1 19559
+D2
+~
+~
+0 -1 19552
+D3
+~
+~
+0 -1 19557
+S
+#19559
+A Deserted Building~
+   This building is in relatively good repair, with only a few decaying cages to 
+show the passage of time.  It appears to have been an exhibition of animals at 
+some time, perhaps even a store of sorts.  A large iron cage door blocks a 
+smaller room to the east, from which can be heard the constant padding of feet.
+~
+195 9 0
+D1
+A heavy iron cage is here, the lock virtually rusted shut.
+~
+cage~
+7 -1 19560
+D3
+~
+~
+0 -1 19558
+S
+#19560
+A Cage~
+   This cage reeks of feline urine, and perhaps once housed a creature exhibited 
+by the store.  The bones of small voles litter the ground, and there is a coating
+of strangely-colored feline hair on everything.  The cage seems quite sturdy, and
+the metal seems to glow softly with some sort of magical power.
+~
+195 9 0
+D3
+A heavy iron cage is here, the lock virtually rusted shut.
+~
+cage~
+7 -1 19559
+S
+#19561
+A Limestone Tunnel~
+   This tunnel is different from the rest of the city, in that it is carved from 
+an entirely different rock.  The limestone itself emits a low green light.  The 
+floor here is pulsating wildly, and its up-and-down churning is as violent as
+a rough sea during a storm.
+~
+195 8 0
+D0
+~
+~
+0 -1 19567
+D2
+~
+~
+0 -1 19555
+S
+#19562
+A Road of Basalt~
+   This road leads to a large basalt dome, from which can be heard a constant
+maniacal laughter reverberating.  The road itself is made of one enormous slab
+of basalt, an impossibility in the natural world.  In the basalt you see embedded
+small woodland creatures, frozen in mid-stride as though caught in some sudden
+cataclysm.
+~
+195 0 0
+D0
+~
+~
+0 -1 19568
+D1
+~
+~
+0 -1 19563
+S
+#19563
+A Road of Basalt~
+   This road leads to a large basalt dome, from which can be heard a constant
+maniacal laughter reverberating.  The road itself is made of one enormous slab
+of basalt, an impossibility in the natural world.  In the basalt you see embedded
+small woodland creatures, frozen in mid-stride as though caught in some sudden
+cataclysm.  There is a soft shuddering that can be felt rumbling beneath the
+ground here.
+~
+195 0 0
+D1
+~
+~
+0 -1 19564
+D3
+~
+~
+0 -1 19562
+S
+#19564
+Outside a Rusted Gate~
+   You stand outside what was once a gargantuan gate, easily large enough to 
+accommodate a dragon.  To the north appears to be what was once a park, although 
+the grasses are scorched almost beyond recognition.  To the east can be seen a 
+peaceful enclosure, an oddity in this forgotten land.  To the west is a road of 
+basalt, which leads to a large dome, from which can be heard a distant laughter.
+~
+195 4 0
+D0
+~
+~
+0 -1 19570
+D1
+~
+~
+0 -1 19565
+D2
+~
+~
+0 -1 19558
+D3
+~
+~
+0 -1 19563
+S
+#19565
+A Holy Shrine~
+   This shrine appears to be the only place in the realm which is untouched by 
+the darkness.  A holy light radiates in the room, and a feeling of calm and ease
+permeates the air.  For some reason this space seems untouched by the evil that
+has taken this entire city hostage.  Pillows lie about, offering a respite.  A
+curtain covers a doorway to the east.
+~
+195 92 0
+D1
+~
+~
+0 -1 19566
+D3
+~
+~
+0 -1 19564
+S
+#19566
+A Plush Alcove~
+   This alcove is where the priests of the gods of the old land once rested 
+between services.  Now it is empty, but it retains a feeling of spiritual grace 
+in its walls.  The religious artifacts kept in small alcoves throughout the room
+embody joy, and the tapestries on the walls are incredible feats of craft.  They
+tell the story of a religion aeons old, a religion of grace and beauty, which has 
+struggled with darkness since the dawn of time, always finding final victory.
+~
+195 8284 0
+D3
+~
+~
+0 -1 19565
+S
+#19567
+A Limestone Tunnel~
+   This tunnel is different from the rest of the city, carved from limestone
+rather than basalt.  The limestone itself emits a low green light, up to the
+large iron door that bars the way to the north.  The door is covered in strange
+runes, and there is no keyhole.  The floor here is surging so wildly it is as
+though a giant were shaking the entire world.
+~
+195 8 0
+D0
+This door throbs with strange runes.
+~
+door~
+2 -1 19573
+D2
+The tunnel continues to the south, towards the open air.
+~
+~
+0 -1 19561
+S
+#19568
+Beneath a Basalt Dome~
+   The dome of basalt rises up some two-hundred feet.  The dome appears to have
+once been an immense canopy of trees, but now has been frozen into cold stone.
+Although the sky is completely blocked here, the dome itself seems to radiate a
+dull gray light.  The ground is littered with fallen chunks of basalt, and an
+occasional bone or skull.  Throughout the dome echoes a constant, haunting 
+laughter, growing more and more shrill.
+~
+195 9 0
+D0
+~
+~
+0 -1 19574
+D1
+~
+~
+0 -1 19569
+D2
+~
+~
+0 -1 19562
+S
+#19569
+Beneath a Basalt Dome~
+   The dome of basalt rises up some two-hundred feet.  The dome appears to have
+once been an immense canopy of trees, but now has been frozen into cold stone.
+Although the sky is completely blocked here, the dome itself seems to radiate a
+dull gray light.  The ground is littered with fallen chunks of basalt, and an
+occasional bone or skull.  Throughout the dome echoes a constant, haunting 
+laughter, growing more and more shrill.  A small bit of vegetation peeks out from
+behind a stone here.
+~
+195 9 0
+D0
+~
+~
+0 -1 19575
+D3
+~
+~
+0 -1 19568
+S
+#19570
+A Charred Square~
+   This square was once some sort of glorious park, but the vegetation has been 
+scorched, perhaps in a great battle, perhaps by mere negligence.  The marble
+paving stones are scratched and shattered, and small statuary have been dashed
+to pieces all around the park.  In the center of the square there is a large 
+statue which has fallen to the ground.
+~
+195 0 0
+D0
+~
+~
+0 -1 19576
+D1
+~
+~
+0 -1 19571
+D2
+~
+~
+0 -1 19564
+S
+#19571
+A Charred Square~
+   This square was once some sort of glorious park, but the vegetation has been 
+scorched, perhaps in a great battle, perhaps by mere negligence.  The marble
+paving stones are scratched and shattered, and small statuary have been dashed
+to pieces all around the park.  In the center of the square there is a large 
+statue which has fallen to the ground.  A small child's skeleton is here as well,
+crushed beneath the weight of a broken bench.
+~
+195 0 0
+D0
+~
+~
+0 -1 19577
+D1
+~
+~
+0 -1 19572
+D3
+~
+~
+0 -1 19570
+S
+#19572
+A Charred Square~
+  This square was once some sort of glorious park, but the vegetation has been 
+scorched, perhaps in a great battle, perhaps by mere negligence.  The marble
+paving stones are scratched and shattered, and small statuary have been dashed
+to pieces all around the park.  In the center of the square there is a large 
+statue which has fallen to the ground.  A distant melody can be heard here,
+chiming in from the north.
+~
+195 0 0
+D0
+~
+~
+0 -1 19578
+D3
+~
+~
+0 -1 19571
+S
+#19573
+A Dim Study~
+   This study is what the many doors and runes were protecting.  A small, cramped
+room, taken up primarily with voluminous tomes and many vials.  In the center of 
+the room is a large desk, with scrolls and books strewn about.  This room is
+obviously the product of an obsessive mind, as everything is placed in neat rows,
+and every object has a small label on it, written in some unknown tongue.
+~
+195 4104 0
+D2
+A large iron door bars the way here.
+~
+door~
+1 -1 19567
+S
+#19574
+Beneath a Basalt Dome~
+   The dome of basalt rises up some two-hundred feet.  The dome appears to have
+once been an immense canopy of trees, but now has been frozen into cold stone.
+Although the sky is completely blocked here, the dome itself seems to radiate a
+dull gray light.  The ground is littered with fallen chunks of basalt, and an
+occasional bone or skull.  Throughout the dome echoes a constant, haunting 
+laughter, growing more and more shrill.  The laughter seems to come from the
+north, and that way can be seen a Colossal throne, towering above the earth.
+~
+195 9 0
+D0
+~
+~
+0 -1 19580
+D1
+~
+~
+0 -1 19575
+D2
+~
+~
+0 -1 19568
+S
+#19575
+Beneath a Basalt Dome~
+   The dome of basalt rises up some two-hundred feet.  The dome appears to have
+once been an immense canopy of trees, but now has been frozen into cold stone.
+Although the sky is completely blocked here, the dome itself seems to radiate a
+dull gray light.  The ground is littered with fallen chunks of basalt, and an
+occasional bone or skull.  Throughout the dome echoes a constant, haunting 
+laughter, growing more and more shrill.  A bit of slimy water is pooled on the
+ground here.
+~
+195 9 0
+D0
+~
+~
+0 -1 19581
+D2
+~
+~
+0 -1 19569
+D3
+~
+~
+0 -1 19574
+S
+#19576
+A Charred Square~
+  This square was once some sort of glorious park, but the vegetation has been 
+scorched, perhaps in a great battle, perhaps by mere negligence.  The marble
+paving stones are scratched and shattered, and small statuary have been dashed
+to pieces all around the park.  To the east, in the center of the square, there 
+is a large statue which has fallen to the ground.
+~
+195 0 0
+D0
+~
+~
+0 -1 19582
+D1
+~
+~
+0 -1 19577
+D2
+~
+~
+0 -1 19570
+S
+#19577
+A Fallen Statue~
+   Within the center of the charred park is an enormous empty fountain, with a
+huge statue fallen on its side.  The statue is in the figure of a man, full of 
+grace and beauty, adorned with robe, crown and scepter.  Likely a depiction of 
+the man who was king of this now fallen land.  The statue itself is unharmed, 
+except for its dramatic change in position.  The fountain however is nearly 
+shattered, and there is a large hole in the base.
+~
+195 641 0
+D0
+~
+~
+0 -1 19583
+D1
+~
+~
+0 -1 19578
+D2
+~
+~
+0 -1 19571
+D3
+~
+~
+0 -1 19576
+S
+#19578
+A Charred Square~
+   This square was once some sort of glorious park, but the vegetation has been 
+scorched, perhaps in a great battle, perhaps by mere negligence.  The marble
+paving stones are scratched and shattered, and small statuary have been dashed
+to pieces all around the park.  To the west, in the center of the square, there
+is a large statue which has fallen to the ground.  A haunting melody rises up
+from beneath the paving stones here.
+~
+195 0 0
+D0
+~
+~
+0 -1 19584
+D2
+~
+~
+0 -1 19572
+D3
+~
+~
+0 -1 19577
+S
+#19579
+A Dark Recess Behind the Throne~
+   This dank pit smells of the foulest beasts on earth.  Decaying human heads are
+tacked to the walls by what could only be their owner's swords.  This disgusting
+lair could only house a creature of total madness.  Objects are strewn about
+haphazardly, some seeming to hang from the very air.  There is a chaos throbbing
+in the ether here, taking with it rules of conduct and many elementary rules of
+nature.
+~
+195 4105 0
+D1
+It appears you can move the enormous throne.
+~
+throne~
+8 -1 19580
+S
+#19580
+The Throne of Chorlach-Togna~
+This is the throne of the lord of this city, the throne of Chorlach-Togna.
+The throne is carved from a single piece of onyx, and rises nearly thirty-five
+feet.  It seems to throb with a life-force of its own.  It is here the echoing
+laughter was originating from, although it is now strangely absent.
+~
+195 9 0
+D1
+~
+~
+0 -1 19581
+D2
+~
+~
+0 -1 19574
+D3
+There is a small keyhole inset on the side of the throne.
+~
+throne~
+2 19524 19579
+S
+#19581
+Beneath a Basalt Dome~
+   The dome of basalt rises up some two-hundred feet.  The dome appears to have
+once been an immense canopy of trees, but now has been frozen into cold stone.
+Although the sky is completely blocked here, the dome itself seems to radiate a
+dull gray light.  The ground is littered with fallen chunks of basalt, and an
+occasional bone or skull.  Throughout the dome echoes a constant, haunting 
+laughter, growing more and more shrill.  There appears to have once been a small
+stand of fruit trees here, but they have now been transformed into pure basalt.
+~
+195 9 0
+D2
+~
+~
+0 -1 19575
+D3
+~
+~
+0 -1 19580
+S
+#19582
+A Charred Square~
+   This square was once some sort of glorious park, but the vegetation has been 
+scorched, perhaps in a great battle, perhaps by mere negligence.  The marble
+paving stones are scratched and shattered, and small statuary have been dashed
+to pieces all around the park.  To the west, in the center of the square, there
+is a large statue which has fallen to the ground.  Some small bit of foliage
+seems to have survived whatever scorched this place, and a small blue-flowered
+plant rises up from the earth.
+~
+195 0 0
+D1
+~
+~
+0 -1 19583
+D2
+~
+~
+0 -1 19576
+S
+#19583
+A Charred Square~
+   This square was once some sort of glorious park, but the vegetation has been 
+scorched, perhaps in a great battle, perhaps by mere negligence.  The marble
+paving stones are scratched and shattered, and small statuary have been dashed
+to pieces all around the park.  To the west, in the center of the square, there
+is a large statue which has fallen to the ground.  Some small bit of foliage
+seems to have survived whatever scorched this place, and a small fragrant lily
+rises up from the earth.
+~
+195 0 0
+D1
+~
+~
+0 -1 19584
+D2
+~
+~
+0 -1 19577
+D3
+~
+~
+0 -1 19582
+S
+#19584
+A Charred Square~
+   This square was once some sort of glorious park, but the vegetation has been 
+scorched, perhaps in a great battle, perhaps by mere negligence.  The marble
+paving stones are scratched and shattered, and small statuary have been dashed
+to pieces all around the park.  To the west, in the center of the square, there
+is a large statue which has fallen to the ground.  Some small bit of foliage
+seems to have survived whatever scorched this place, and a large bush has made
+its way through the stones here.
+~
+195 0 0
+D2
+~
+~
+0 -1 19578
+D3
+~
+~
+0 -1 19583
+S
+#19585
+A Steep Mountain Path~
+   This path climbs steeply up the mountain to the north.  Rocks fall regularly
+from side to side, and high up the mountain boulders occasionally shift
+ominously.  To the south can be seen much of the abyssal plain, and the altitude
+does nothing to detract from its sheer desolation.
+~
+195 0 0
+D0
+~
+~
+0 -1 19591
+D1
+~
+~
+0 -1 19586
+S
+#19586
+A Mountain Fork~
+   The path forks here, to both the east and west.  There is little to 
+differentiate the two paths, although the path to the east is definitely darker.
+Far off to the east can be seen the barest tip of a mighty black spire, while
+the path to the east appears to climb higher and higher into the mountains.
+~
+195 0 0
+D1
+~
+~
+0 -1 19587
+D2
+~
+~
+0 -1 19527
+D3
+~
+~
+0 -1 19585
+S
+#19587
+A Dark Path~
+   To the east is an abandoned structure of some sort, most likely a remnant from
+whatever kingdom inhabited this foul earth in centuries bygone.  A crevice in the
+mountain to the north emits a hideous stench, and a massive pile of skulls and
+tailbones is mounded up at its entrance.
+~
+195 0 0
+D0
+~
+~
+0 -1 19593
+D1
+~
+~
+0 -1 19588
+D3
+~
+~
+0 -1 19586
+S
+#19588
+A Toll-Booth~
+   This is an old toll-booth, with the age of scores of centuries evident in its
+wear.  In the time of the old kingdom it perhaps served as a bulwark against evil
+creatures who may have invaded the lands.  Now it has become a habitat for those 
+very beasts it once guarded against.  The fact that this structure has lasted for 
+so long speaks to the advanced nature of the previous denizens of this land.
+~
+195 0 0
+D1
+~
+~
+0 -1 19589
+D3
+~
+~
+0 -1 19587
+S
+#19589
+A Steep Mountain Path~
+   This path climbs steeply up the mountain to the east.  Rocks fall regularly
+from side to side, and high up the mountain boulders occasionally shift
+ominously.  To the south can be seen much of the abyssal plain, and the altitude
+does nothing to detract from its sheer desolation.
+~
+195 0 0
+D1
+~
+~
+0 -1 19590
+D3
+~
+~
+0 -1 19588
+S
+#19590
+A Steep Incline~
+   This incline heads up towards a new set of mountains, and far off in the 
+distance to the north you see a jutting tower of total black.  To the north a
+plateau forms, and the rocks here have become larger and larger.  The sky has 
+is a dark crimson, and the wind whips ferociously, as if trying to tear flesh
+from bones.
+~
+195 0 0
+D0
+~
+~
+0 -1 19596
+D3
+~
+~
+0 -1 19589
+S
+#19591
+Up a Mountain Path~
+   This path leads further into the mountains to the north.  The altitude allows
+a glimpse of an enormous plain to the north, with large shapes that could be
+boulders settled on its surface.  To the east is the entrance to a dark cave, and
+from it comes the sound of a thousand tiny feet scuttling about.
+~
+195 0 0
+D0
+~
+~
+0 -1 19597
+D1
+~
+~
+0 -1 19592
+D2
+~
+~
+0 -1 19585
+S
+#19592
+A Dark Cave~
+   This cave appears as though it was once a dwelling place for a more civilized 
+person.  Colored etchings still show vaguely on the walls, and it appears as 
+though some attempt had been made to straighten out the rough rock into something 
+more livable.  It has been uninhabited by any sentient being for many centuries,
+however, and the years and weather have taken their toll.
+~
+195 0 0
+D3
+~
+~
+0 -1 19591
+S
+#19593
+A Damp Crevice~
+   This crevice leads further into the mountain to the north.  Slime coats the
+floor in thick sheets, and liquid drips down regularly with a disgusting sound.
+The scent in here is that of decaying vegetable matter, mixed with the fetid
+aroma of corpses that have not yet been picked clean.
+~
+195 0 0
+D0
+~
+~
+0 -1 19598
+D2
+~
+~
+0 -1 19587
+S
+#19594
+A Horrible Den~
+   Bones, feathers and rotting flesh are littered around this den haphazardly.
+The sheer quantity of old meat makes it apparent that whatever lives here kills
+not simply for food, but for sport.  Beasts of all shapes and sizes lie dead
+and decaying, and the scent is nearly overpowering.  The largest corpses are 
+perhaps twenty feet across, and many appear to be monstrous beasts themselves.
+~
+195 0 0
+D0
+~
+~
+0 -1 19599
+S
+#19595
+A Precarious Peak~
+   From this height the surrounding land is easily visible.  Far to the north-
+east can be seen a jutting black tower, with clouds surrounding its summit and 
+lightning crashing down around it at regular intervals. To the far north-west can
+be seen an open plain, and farther north lies the vague outline of a city.  Back 
+to the south lies the abyssal plain, and beyond that the forests of a gentler 
+kingdom.  
+~
+195 0 0
+D5
+~
+~
+0 -1 19596
+S
+#19596
+A Deserted Plateau~
+   This plateau is free from life, as well as the undead.  Wind whips about
+wildly, however, making it difficult to stay standing.  The path through the
+mountains continues to the north, where two jutting peaks are just visible,
+bearing a frightening resemblance to the incisors of a horrible monster.  There 
+is a small path which leads upwards to a very precarious looking bit of rock.
+~
+195 0 0
+D0
+~
+~
+0 -1 19601
+D2
+~
+~
+0 -1 19590
+D4
+~
+~
+0 -1 19595
+S
+#19597
+A Mountain Path~
+   This path continues into the mountains to the north, and descends to the
+south.  The stones here are a dull greyish-black, and jagged on nearly every
+edge, as though wrought by some demonic knapper intent on creating billions of
+arrowheads for some endless war.
+~
+195 0 0
+D0
+~
+~
+0 -1 19602
+D2
+~
+~
+0 -1 19591
+S
+#19598
+A Damp Crevice~
+   This crevice leads further into the mountain to the north.  Slime coats the
+floor in thick sheets, and liquid drips down regularly with a disgusting sound.
+The scent in here is that of decaying vegetable matter, mixed with the fetid
+aroma of corpses that have not yet been picked clean.  On the ground here sit
+two humanoid skeletons, their flesh still hanging freely from their bones.
+~
+195 0 0
+D0
+~
+~
+0 -1 19604
+D2
+~
+~
+0 -1 19593
+S
+#19599
+Into the Mountain~
+   A dark passageway leads from the old tower down into the heart of the 
+mountain.  Quiet whispers and heartbeats make themselves heard, seeming to come
+from nowhere, making this place seem a kind of madness.  The noises grow louder
+to the south.
+~
+195 0 0
+D1
+~
+~
+0 -1 19600
+D2
+~
+~
+0 -1 19594
+S
+#0
+$~

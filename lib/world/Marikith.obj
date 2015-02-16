@@ -1,0 +1,505 @@
+#2700
+shirt cotton ragged~
+a ragged cotton shirt~
+A dirty and ragged shirt made of cotton is lying on the ground.~
+~
+9 64 9
+2 0 0 0
+2 100 100
+50
+E
+shirt cotton ragged~
+The shirt smells filthy, and looks as if it hadn't been washed for weeks.
+Even the smell of it makes you feel sick.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 -4
+#2701
+pants black long~
+a pair of long, black pants~
+A worn-out pair of long, black pants have been dropped here.~
+~
+9 0 33
+2 0 0 0
+2 100 100
+50
+E
+pants black long~
+The pants have worn-out spots on knees, and the dust of times lies heavily
+on them.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2702
+knife sharp small~
+a small sharp knife~
+A small knife with a sharp point is lying on the floor.~
+$r knife's sharp point glimmers brightly.~
+5 134218049 8193
+0 2 5 11
+8 1500 1500
+30
+E
+knife sharp small~
+The handle of the knife is made of bone, and there are some strange carvings
+on it. You are not exactly sure what they mean, but they look disturbing.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+37 10
+#2703
+barrel huge~
+a huge barrel~
+A huge barrel is standing in the corner.~
+~
+15 0 0
+1000 0 -1 0
+300 1000 1000
+100
+E
+barrel huge~
+The barrel is old and the wooden sides have twisted a bit, but not too much
+for the water to leak out. There is a funny smell is coming from the barrel.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2704
+bar long iron~
+a long iron bar~
+A long iron bar is leaning against the wall in the corner.~
+~
+5 134217728 8193
+0 3 7 6
+18 100 100
+50
+E
+bar long iron~
+The bar looks like a tool of some kind. It sure is strong enough for use
+as a lever of sorts.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2705
+key large metal~
+a large metal key~
+A large metal key is lying on the ground.~
+~
+18 0 16385
+2705 0 0 0
+1 100 100
+100
+E
+key large metal~
+The key is bulky and worn, but still looks very strong.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2706
+stone block huge onhatch~
+a huge stone block~
+A huge block of stone is lying on the floor, partially covering the hatch.~
+~
+12 0 0
+0 0 0 0
+1000 10 10
+100
+E
+stone block huge~
+The block of stone is huge, and hardly movable by you. Strange enough, you
+see some marks on the floor beside the stone, like the stone had been
+sliding back and forth.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2707
+cupboard large wooden~
+a large wooden cupboard~
+A large wooden cupboard is standing on the eastern wall.~
+~
+15 0 0
+1000 5 -1 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2709
+halberd steel long~
+a steel-tipped halberd~
+A long halberd with a gleaming steel-tip is leaning against the wall.~
+~
+5 256 8193
+0 3 6 3
+17 7500 1500
+33
+E
+halberd steel~
+This eight feet long, convex-headed axe has an almost foot long spear point
+as the tip of the axe head. The shaft is made of black teak, and feels quite
+heavy.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -2
+A
+19 2
+#2710
+shield wooden reinforced~
+a reinforced wooden shield~
+A large wooden shield is lying in the corner.~
+~
+9 268435521 513
+10 0 0 0
+10 500 1000
+20
+E
+shield wooden reinforced~
+The shield has been reinforced with strips of metal nailed to its front,
+all along the rim.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#2711
+stove black metal dirty~
+a black and dirty metal stove~
+A black metal stove is standing in the corner, covered by dust.~
+~
+15 0 0
+1000 5 -1 0
+1000 0 0
+100
+E
+stove black metal dirty~
+This stove was propably once used to make food for all the people living in
+this house, but for the past few years, it has been untouched by the hand of
+workers. Cobwebs, dust and dark spots all over it are as proof of this.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2712
+stone block huge offhatch~
+a huge stone block~
+A huge block of stone is lying on the floor beside the hatch.~
+~
+12 0 0
+0 0 0 0
+1000 10 10
+0
+E
+stone block huge~
+The block of stone is huge, and hardly movable by you. Strange enough, you
+see some marks on the floor beside the stone, like the stone had been
+moved back and forth.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2713
+pod strange egg~
+a strange pod~
+A strange, leathery pod is floating around the cavern floor, in the ooze.~
+~
+19 2 0
+3 0 0 0
+1 0 0
+0
+E
+strange pod~
+The pod is about 10" in diameter and a bit slimy on the outside. The leathery
+surface seems to be trembling steadily with a fairly rapid rhythm.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2714
+chest large wooden~
+a large wooden chest~
+A large wooden chest is sitting on the ground, half-buried in the ooze.~
+~
+15 0 0
+500 15 2717 0
+350 1000 100
+85
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2715
+pile coins silver~
+a pile of silver coins~
+A large pile of silver coins has been spread all over the floor.~
+~
+20 0 1
+37500 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2716
+sting queen slimy black~
+The black sting of the Queen~
+A slimy, black sting of the Hive Queen is lying on the ground.~
+$r Sting squirts black poison from its tip.~
+5 134217793 8193
+0 5 7 11
+13 75000 25000
+10
+E
+sting queen black~
+The sting has a slightly curved tip, and the thicker part of it is made of
+tougher, almost bonelike tissue, which makes it an excellent weapon, even
+without	any alterations.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+#2717
+key small black~
+a small black key~
+You can see the tip of something small and black sticking out from the mud.~
+~
+18 0 16385
+2717 0 0 0
+1 100 100
+100
+E
+key small black~
+The small key is dripping with slime, and seems to be a bit corroded.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2718
+key huge steel~
+a huge steel key~
+A huge steel key is lying on the floor.~
+~
+18 0 16385
+2718 0 0 0
+1 100 100
+100
+E
+key huge steel~
+The key glows dimly, and feels warm to the touch.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2719
+feather flaming phoenix~
+the flaming feather of the Phoenix~
+A flaming feather is floating in the air.~
+~
+12 419431489 16385
+0 0 0 0
+1 25000 15000
+100
+E
+feather flaming phoenix~
+The feather is made of bright, lively flames that, strange enough, do not
+burn your hand as you examine it.
+~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+19 6
+#2720
+shield bone large dark~
+A large shield made of dark bone~
+A dark shield made out of bones is lying on the ground.~
+~
+9 150995521 513
+11 0 0 0
+20 75000 20000
+6
+E
+shield bone large dark~
+This large bone shield in almost jet black in color, and you feel strange
+trembles from it occasionally.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 25
+A
+19 1
+#2721
+bone band wrist glowing~
+A glowing wristband made of bone~
+A single bone wristband is lying on the ground.~
+~
+11 150995457 4097
+7 0 0 0
+4 15000 10000
+20
+E
+bone band wrist glowing~
+This thin wristband seems to be a bit oversized for your arm, but as you 
+put it on, it shrinks to fit exactly to your wrist.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+37 10
+#2722
+honey globule giant~
+a giant globule of honey~
+A giant, viscous globule of honey seems oddly out of place here.~
+~
+19 0 1
+101 -1 -1 0
+3 1087423 11
+83
+E
+honey~
+
+ Judging by color and viscosity, this is the purest honey
+in the land. Many chefs would pay handsomely for such a
+sweet specimen. According to scholars, some artisans in the
+east have used a blend of queen's honey and woodchips as a
+soft malleable putty which hardens after baking in the sun.
+~
+X
+~
+258 0 0
+M
+~
+~
+~
+~
+T
+101
+#0
+$~

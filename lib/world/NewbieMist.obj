@@ -1,0 +1,528 @@
+#6600
+Newbie Board~
+A large Newbie drafting board~
+A large white Newbie drafting board~
+invalid~
+27 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6601
+mace light~
+a light mace~
+A mace for beginners lies here.~
+~
+5 401649664 8193
+0 2 5 6
+6 50 17
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#6602
+katana plain~
+a plain katana~
+A thin-bladed katana with no sheath lies here.~
+~
+5 400617472 8193
+0 2 6 14
+5 50 17
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#6603
+knife thin~
+a thin knife~
+A very small knife lies here.~
+~
+5 393269248 8193
+0 3 4 11
+4 50 17
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#6604
+dagger small~
+a small dagger~
+A small dagger lies here.~
+~
+5 401629184 8193
+0 3 3 11
+4 50 17
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#6605
+sword regular~
+a regular sword~
+A standard, common sword lies here.~
+~
+5 361816064 8193
+0 2 7 3
+7 50 17
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#6606
+helmet metal~
+a metal helmet~
+a simple metal helmet lies here.~
+~
+9 395370496 17
+8 29 10 1073749936
+5 50 40
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#6607
+hat rim wide~
+a wide-rimmed hat~
+A plumed wide-rimmed hat lies here.~
+~
+9 368111616 17
+6 5 10 1073749936
+3 50 40
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#6608
+cap leather~
+a leather cap~
+A leather cap lies here.~
+~
+9 401616896 17
+5 5 10 1073749936
+10 50 40
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#6609
+hood black~
+a black hood~
+A black hood lies here.~
+~
+9 400617472 17
+6 3 1073749936 135194928
+2 50 40
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#6610
+headband cloth~
+a cloth headband~
+A headband made of cloth lies here.~
+~
+9 326160384 17
+6 1 10 1073749936
+2 50 40
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#6611
+chainmail small~
+a small suit of chainmail~
+A small suit of chainmail lies here.~
+~
+9 395370496 9
+8 4 10 1073749936
+25 500 75
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#6612
+robe cotton~
+a cotton robe~
+A robe made from cotton lies here.~
+~
+9 401616896 9
+5 4 10 1073749936
+10 500 75
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#6613
+uniform martial arts~
+a martials arts uniform~
+A uniform for martial arts lies here.~
+~
+9 400617472 9
+7 4 10 1073749936
+15 500 75
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#6614
+armor leather studded~
+a suit of studded leather armor~
+A suit of studded leather armor lies here.~
+~
+9 292605952 9
+6 4 10 1073749936
+18 500 75
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#6615
+boots leather~
+a pair of comfortable leather boots~
+Two leather boots with wool lining stand in a corner here.~
+~
+9 268435456 65
+6 1 15 1073749936
+10 8000 15
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 30
+#6616
+buckler wooden~
+a wooden buckler~
+A small, wooden shield lies here.~
+~
+9 268435521 513
+10 1 19 2
+10 500 1000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#6617
+sleeves wool~
+a pair of wool sleeves~
+A pair of warm-looking wool sleeves lie here.~
+~
+9 268435456 257
+5 6 0 1073749936
+4 3000 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6618
+pants working~
+a pair of working pants~
+Some pants made for working lie here.~
+~
+9 268435456 33
+5 6 10 1073749936
+4 3000 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6619
+sword bastard~
+a bastard sword~
+A sword with a long blade lies here.~
+~
+5 397471744 8193
+0 3 5 3
+8 50 17
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#6620
+gladius short~
+a short gladius~
+A weapon made for sparring lies here.~
+~
+5 401661952 8193
+0 3 4 5
+6 50 17
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#6621
+cookie newbie sugar~
+A Newbie Sugar Cookie~
+A delicious looking cookie sits here.~
+~
+19 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6622
+Newbie Fountain of Lemonade~
+Newbie Fountain of Lemonade~
+Newbie Fountain of Lemonade~
+~
+17 0 0
+32000 32000 6 0
+10000 1 1
+100
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+T
+1
+#6623
+featureless key~
+A featureless key~
+A featureless key sits here waiting to be picked up.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6624
+diploma newbie light~
+Newbie Diploma~
+A diploma of newbie excellence lies here, ready to impart knowledge.~
+~
+1 268435458 65537
+0 0 -1 0
+10 10 10
+10
+E
+diploma newbie~
+ Read... 'help newbie' ...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 2
+A
+4 2
+A
+5 2
+#6625
+scimitar edged~
+an edged scimitar~
+A scimitar with an edged blade lies here.~
+~
+5 334557184 8193
+0 2 8 3
+8 50 17
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+#6626
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#6699
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 500
+10
+X
+$n swings the Ultimate Weapon at nothing~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

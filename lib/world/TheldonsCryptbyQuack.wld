@@ -1,0 +1,276 @@
+#29700
+Crypt Entrance~
+  The marble steps in front of you lead down into the darkness.  The light
+penetrates only about 15 feet down and from what you see it seems like you are
+the first living being to dare disturb this sacred place in centuries.  The
+steps are entirely covered with a thick layer of dust that's gathered over the
+years.  As your eyes grow more accustomed to the darkness you make out the
+prone form of someone lying just beyond the edge of the light
+below.
+~
+297 8 0
+D1
+~
+~
+0 -1 3004
+D5
+~
+~
+0 0 29701
+S
+#29701
+Marble Stairway~
+  The steps here seem to make a slow but gradual turn towards the north.  The
+hollow echo of your boots hitting stone reverberates through the dimly lit
+stairway being magnified out of all proportion into sounding like the trumpets
+of doom.  The dust silently blows about your feet and into your face, causing
+tears and a choking feeling.  The prone skeleton of a full-grown humanoid lies
+here, face down on the stairs.  Near its outstretched hand that seems to reach
+towards the entrance you find the broken holy symbol of Odin, the All-Father.
+Evidently this poor creature was a cleric while alive.
+~
+297 8 0
+D0
+~
+~
+0 -1 29702
+D4
+~
+~
+0 -1 29700
+E
+skeleton~
+The skeleton is dressed in tattered rags that would ages ago have been
+considered luxurious.  Its armor and weapons have rusted away beyond all hope
+of repair but look to have been the finest of their day.
+~
+E
+symbol~
+It's broken and rusted beyond all repair. Out of respect for the dead cleric
+you decide not to take it with you.
+~
+S
+#29702
+Marble Stairway~
+  The steps here seem to make a slow but gradual turn towards the east.  The
+dust of aeons covers everything in here and your passage has twirled up so much
+of it the light from your torches is dulled and your visibility greatly
+impaired.  You stumble over a few bones lying against one side of the stairway.
+The rotting remains of a leather armor and a few broken lockpicks are scattered
+about the stairs here.
+~
+297 8 0
+D1
+~
+~
+0 -1 29703
+D2
+~
+~
+0 -1 29701
+E
+bones~
+Most of the bones seem to have been crushed by some heavy blow but you find
+deep claw marks on some of the larger ones.
+~
+E
+armor~
+The leather armor has long since rotted away into a few pieces of crumpled
+useless skin.
+~
+E
+lockpicks~
+The lockpicks show heavy wear and tear from frequent use.
+~
+S
+#29703
+Marble Stairway~
+  You're at the foot of a marble stairway that leads up to the entrance of
+the Clerics' guild.  The walls are covered in cobweb and the dust of the ages
+has gathered into small piles on the floor.  You hear a faint scratching noise
+coming from the south.  It sounds like someone scraping bone against stone.
+~
+297 8 0
+D2
+~
+~
+0 -1 29704
+D3
+~
+~
+0 -1 29702
+S
+#29704
+In front of a marble door.~
+  The massive marble doors in front of you bear the symbols of the order of
+the Boar.  Two stone gargoyles stand guard on either side, scowling in your
+direction.  A faint red glow emanates from their eyes, giving you an
+uncomfortable feeling.  A few broken bones lie in a heap in the western corner
+of the chamber.  A marble stairway leads back up to the north.
+~
+297 8 0
+D0
+~
+~
+0 -1 29703
+D2
+~
+doors~
+6 0 29705
+S
+#29705
+Marble Crypt~
+  You stand in front of a large circular pit that fills out the
+entire room.  Looking down you see nothing but darkness.  A low
+humming sound can be heard coming down from below and the occasional
+muted cry followed by a low growl.  The pit is about 6 feet across,
+it looks safe to jump across it.
+~
+297 8 0
+D0
+~
+doors~
+1 -1 29704
+D2
+You see a dark pit in the middle of the room.  It can probably be
+jumped without risk.
+~
+pit~
+10 -1 29706
+D5
+~
+~
+0 -1 29710
+S
+#29706
+Marble Crypt~
+  You stand in front of three large marble slabs that cover the
+entrances to the crypts.  The southern slab bears several strange
+carvings, with your limited understanding of the old ways and their
+runic language you can only make out a few of them.  They seem to be
+some sort of a warding against entrance and a curse for those who
+violate the sanctity of the place.  The slabs to the west and east
+have been pushed aside, you can crawl through a narrow opening in 
+both of these directions.
+~
+297 8 0
+D0
+You see a dark pit in the middle of the room, it could probably
+be jumped without risk.
+~
+pit~
+10 -1 29705
+D1
+~
+opening~
+9 -1 29708
+D2
+~
+slab~
+8 -1 29707
+D3
+~
+opening~
+9 -1 29709
+E
+carvings~
+They're written in the ancient runic language of the Norse.  A rough
+translation seems to indicate 'death and eternal damnation falls upon 
+those who dare violate the final resting place of Theldon Wolfsbane 
+the Grim' followed by some prayers to Odin the All-Father.
+~
+E
+runes~
+They're written in the ancient runic language of the Norse.  A rough
+translation seems to indicate 'death and eternal damnation falls upon
+those who dare violate the final resting place of Theldon Wolfsbane
+the Grim' followed by some prayers to Odin the All-Father.
+~
+S
+#29707
+Theldon's Crypt~
+  You stand in a small chamber that's been cut out of the granite.  On
+the walls are great murals depicting a huge, bearded man with blonde,
+flowing hair fighting various monsters.  The air in here is thick and
+the dust stirred up at your entrance forces its way past your already 
+dry throat.  Some runes have been chiseled on the wall at the far side
+of the crypt.
+~
+297 264 0
+D0
+~
+slab~
+8 -1 29706
+S
+#29708
+Warrior's Crypt~
+  This was the final resting place of the brave warriors who died
+with Theldon in his final battle with the Orcs.  None of the caskets
+in here contain any valuables or anything worth robbing and so have
+been left mostly intact by the grave robbers of the centuries.  A few
+broken spearheads rest in one corner of the room while the rotten remains
+of some leather armor pieces have been piled together against the far
+wall.
+~
+297 8 0
+D3
+~
+opening~
+9 -1 29706
+E
+caskets~
+You search through the caskets but find nothing of interest.~
+E
+casket~
+The caskets are all plain, containing only the remains of the dead
+and some rotten, worthless clothing and armor.
+~
+S
+#29709
+Champion's Crypt~
+  The overturned and broken casket lying on the floor in front
+of you is evidence that not all who have come here have done so
+to pay their respects to the dead.  Broken pieces of armor and
+weapons lie strewn about, bones and bone shards litter the place.
+~
+297 8 0
+D1
+~
+opening~
+9 -1 29706
+S
+#29710
+Bottom of the Pit~
+  You stand in the bottom of an old pit trap.  The unfortunate
+victims who fell here in the past all died a horrible and
+instant death, impaled on the sharp spikes that met them at
+the end of their descent.  The rusted remains of those spikes
+can be seen littering the pit now, and while they aren't exactly
+comfortable to walk on they pose no real threat to your safety
+anymore. You see steps that have been carved out into the walls
+of the pit that lead upwards.  You'll have to jump to reach the
+lowest of them.
+~
+297 8 0
+D4
+~
+pit~
+10 -1 29705
+S
+#29799
+The End~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+297 512 0
+S
+#0
+$~
+

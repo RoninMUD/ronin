@@ -1,0 +1,192 @@
+#9600
+dirk platinum~
+A platinum dirk~
+A very sharp dirk, made of pure platinum, is stuck in the ground here.~
+~
+5 3072 8193
+0 3 5 11
+9 10000 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+12 -20
+#9610
+horn~
+the horn of a unicorn~
+The horn of a unicorn is glowing on the ground.~
+~
+4 2113 16385
+15 8 8 2
+2 3000 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9620
+vial holy~
+A vial of Holy Water~
+A vial of clear liquid rests on the ground.~
+~
+10 0 1
+22 35 20 18
+1 12000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9630
+wings~
+The wings of a griffin~
+A pair of large griffin wings have been discarded here.~
+~
+9 0 1025
+5 0 0 0
+6 8000 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 30
+#9632
+key platinum~
+A platinum key~
+A huge key made of pure platinum gleems brightly here.~
+~
+18 0 16385
+2 0 0 0
+1 10 10000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9640
+stick walking~
+A walking stick~
+A stick that would make a good companion for walking was left here.~
+~
+8 65 16385
+0 0 0 0
+3 7000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 10
+A
+17 -2
+#9650
+sash white~
+A white sash~
+A sash made of white silk lies rumpled in the dirt.~
+~
+9 3136 2049
+3 0 0 0
+5 10000 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 5
+#9652
+altar skull bloody horror~
+An altar made of skulls.~
+A hideous altar, formed from a beastly, blood stained skull sits here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+E
+altar beast skull demon~
+ `b                             ,-.
+       ___`b,---.__          /'|`\          __,---,_`o__
+  `o  ,-'    \`b`    `-.____,-'  |  `-.____,-'    /`o/   `-.
+`o  ,'        |`b            '\     /`            `o|        `.
+`o /      ___/`b/              `. ,'          ,  , `o\ ___      \
+`o|    ,-'   `b`-.__   _         |        ,    __,-' `o  `-.    |
+`o|   /        `b  /\_  `   .    |    ,      _/\        `o   \   |
+`o\  |         `b  \ \`-.___ \   |   / ___,-'/ /         `o  |  /
+`o \  \        `b   | `._   `\\  |  //'   _,' |           `o/  /
+`o  `-.\       `b  /'  _ `---'' , . ``---' _  `\         `o/,-'
+`o     ``      `b /     \    ,='/ \`=.    /     \       `o''
+             `b |__   /`b|\_,--.,-.--,--._/|\   `o__`b|
+             `o/  `./  `b\\`\ |  |  | /,//'`o \,'  \
+            `o/   /     `b||--+--|--+-/-|    `o \   \
+           `o|   |     `b/'\_\_\ | /_/_/`\   `o  |   |
+            `o\   \__, `b\_     ` '     _/ `o.__/   /
+             `o`-._,-'   `b`-._______,-'   `o`-._,-'
+~
+X
+~
+320 0 0
+M
+~
+~
+~
+~
+#9677
+wine barrel winerack barrels~
+An ancient ironwood wine barrel.
+~
+(null)~
+~
+15 4 0
+10 5 -1 0
+10000 0 0
+50
+E
+rat'hcor rathcor~
+  AH HA! a hidden compartment!!!!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

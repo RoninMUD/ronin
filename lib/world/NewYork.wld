@@ -1,0 +1,776 @@
+#600
+Before The Manor~
+   A little way ahead stands a house that envelops the sky line with
+its mass. The peak of the structure is as high as the sun sits in the
+sky. There doesn't seem to be any light illuminating from the windows,
+or any signs that there is life inside. Whiel extraordinary, the
+house has a very dark and gothic style of architecture that sticks out.
+To the north you can get a closer look at the house.
+~
+6 0 2
+D0
+~
+~
+0 -1 601
+S
+#601
+A Beautiful Mansion~
+   Towering in front of you stands this beautiful mansion that seems
+fit for nobility. All along the yard there are statues littered about
+everywhere for decoration. Large concrete sculptures of gargoyles
+and other evil creatures are all staring at you. The house is covered
+in dead ivory on all sides. The remainder of the house rests in the
+shade of magnificent trees. The courtyard in front of the house is 
+circled around an exotic sanctuary for fish, some of which look to
+be from another world. To the north of you stand the two enormous
+wooden door that allow entrance into the mansion.
+~
+6 0 0
+D0
+~
+door~
+1 -1 602
+D2
+~
+~
+0 -1 600
+S
+#602
+The Grand Reception Hall~
+   No doubt, a room of sheer magnificence, this grand reception hall
+was made to be inspiring. The large family insignia sticks out in front
+on the far wall. The floor seems to be made of marble that shines
+like rich white ivory. Multiple chained kerosene lamps hang from the
+ceiling glowing as if they were just filled and lit.
+   Something is suspicious though. To the left, a blatant trail of
+blood stripes the floor as if a battered corpse was dragged around.
+ The trails lead behind a wooden door to your left. There is also
+a large enclosed desk area which looks to have been a spot to check
+in, but now is empty from what you can see. Nothing in the room has
+been altered, looking like a normal day, but there is blood everywhere.
+Suddenly to the left feint screams can be heard coming from behind the
+wooden door.
+~
+6 0 0
+D1
+~
+~
+0 -1 610
+D2
+~
+door~
+1 -1 601
+D3
+~
+~
+0 -1 603
+S
+#603
+The Grand Reception Hall~
+   Behind the large wooden door to the west something can be heard
+rustling around and the feint sound of laughter is also apparent. 
+Shadows of something pacing from left to right can be seen from 
+the crack between the ground and the door. The hinges that the door 
+hangs on seem to have been almost busted out of place by whatever 
+is behind the door. Rust covers the door handle and looks like it 
+has been locked shut for a long time. 
+~
+6 0 0
+D0
+~
+~
+0 -1 604
+D1
+~
+~
+0 -1 602
+D3
+~
+door~
+1 -1 640
+S
+#604
+The Grand Reception Hall~
+   To the left a hallway that branches off from the main reception 
+area that leads to some closed off rooms. A whiff of an awful 
+stench streams from the far end of the hall. The smell is debilitating. 
+Some kind of scratch marks scar the walls all down the hallway. 
+There is also something else on the wall which is hard to 
+discern from afar. 
+~
+6 0 0
+D0
+~
+~
+0 -1 605
+D2
+~
+~
+0 -1 603
+D3
+~
+~
+0 -1 611
+S
+#605
+The Grand Reception Hall~
+   Approaching the back of the room, two grand staircases leading
+upstairs stand before you under the family insignia. The beautiful
+grand staircases made of well aged wood must have been crafted by
+the greatest craftsmen on this side of the world. The wall that
+the stairs climb have carved depictions of angels and demons in
+the great battle between good and evil which took place parallel
+to the birth of consciousness. Between the two sets of stairs is
+an illuminated gem, large, and reflecting a spectrum of beautiful
+red shades. The cost of this room reflects the true wealth of the owner.
+~
+6 0 0
+D1
+~
+~
+0 -1 606
+D2
+~
+~
+0 -1 604
+S
+#606
+Before The Stairs~
+   Behind the desk, standing between the two sets of stairs, you
+are under the family insignia. The crest reads "Dieu Et Les Dames".
+Illustrated on the insignia appear two lions holding the crest mounted
+by a helmet and axe. Behind the crest there seems to be rotational
+machinery attached to the fixture holding the insignia. Aside the gem
+there is a key hole you discover which was too small to see from a distance.
+This has to be to operate the rotation of the insignia. To your east and west
+both staircases lead up above to the next level.
+~
+6 0 0
+D1
+~
+~
+0 -1 608
+D2
+~
+~
+0 -1 607
+D3
+~
+~
+0 -1 605
+D4
+~
+~
+0 -1 630
+S
+#607
+Reception Desk~
+   Papers are shuffled about under one of the desks, and the guestbook
+sitting on top of the desk has papers torn out. The bell on the counter
+appears to be out of order. By the looks of it, this hotel has not been 
+getting many visitors recently. The mail that should be in the boxes
+is instead scattered on the floor indicating someone was hunting for
+a specfic item. All of the keys that should be on their hooks are gone.
+One piece of paper seems to have been overlooked though, the only unopened
+piece on the floor.
+~
+6 0 0
+D0
+~
+~
+0 -1 606
+S
+#608
+The Grand Reception Hall~
+   Approaching the back of the room, two grand staircases leading
+upstairs stand before you under the family insignia. The beautiful
+grand staircases made of well aged wood must have been crafted by
+the greatest craftsmen on this side of the world. The wall that
+the stairs climb have carved depictions of angels and demons in
+the great battle between good and evil which took place parallel
+to the birth of consciousness. Between the two sets of stairs is
+an illuminated gem, large, and reflecting a spectrum of beautiful
+red shades. The cost of this room reflects the true wealth of the owner.
+~
+6 0 0
+D2
+~
+~
+0 -1 609
+D3
+~
+~
+0 -1 606
+S
+#609
+The Grand Reception Hall~
+   As you continue to walk around the room, you pick your feet up
+step to step causing sounds similar to paper ripping. All of the
+blood on the floor is making the room very unpleasant to stand in.
+On this side of the hall is an awful stench that makes you want to flee.
+Beside you on the right wall there is a large grandfather clock
+which is encrusted will beautiful gleaming jewels. The hands on
+the face of the clock look to be pure gold. A glimmer of light
+is escaping from behind the face which may hint to a hiding spot.
+~
+6 0 0
+D0
+~
+~
+0 -1 608
+D2
+~
+~
+0 -1 610
+S
+#610
+Corner of The Reception Hall~
+   Standing near a fireplace, this corner seems to be the only comforting
+aspect about this place. A very exotic plant sits beside you. Its 
+Beautiful large lime green leaves are interesting and calming.
+Peering down, the sight of a hude spider on the ground sticks out.
+There is more than just one though you find out after a closer
+look. They are all converging on a live rat. Thats adds to the hostile
+environment.....
+~
+6 0 0
+D0
+~
+~
+0 -1 609
+D3
+~
+~
+0 -1 602
+S
+#611
+A Long Corridor~
+   The candles in the hallway are twitching uncontrollably as if there
+was a current of wind. The lighting conditions are very poor and not
+just because of the flickering candles. There are three visible doorways
+that stem off from the hallway. In the distance music can be heard
+playing in one of the rooms. This area is dramatically different from
+the rest of the manor. It looks to be very blank which is unique to
+the everything else. To the north is a rusted metal door that has
+a sign on it. Westward the hallway ends with another door, and back
+east in the reception hall.
+~
+6 0 0
+D0
+~
+door~
+1 -1 615
+D1
+~
+~
+0 -1 604
+D3
+~
+~
+0 -1 612
+S
+#612
+A Long Corridor~
+   Continuing down the hallway, the flickering of the candles makes it
+hard to navigate forward. Only every other step can be seen between the
+darkness and light. A disgusting green liquid coats the floor. There are
+particles and globs of dirt all over the floor. A bucket is spilled 
+at the end of the hallway, some of the first indications that people
+were in a rush to get out. Paint chips are falling from the walls.
+Behind the chipped paint some red paint can be seen. It looks as if
+there is some writing that can be seen. To the west there is another
+doorway that has been busted in.
+~
+6 0 0
+D1
+~
+~
+0 -1 611
+D3
+~
+~
+0 -1 613
+S
+#613
+A Long Corridor~
+   Standing parallel to the door, a beam of light escapes from the
+break in the door sill and covers everything in a disturbing shade
+of red. The light coming from behind the door is no constant though,
+something keeps obstructing the source every few seconds. The weak
+noise of something moving catches your attention but it doesn't 
+sound as if there is lively movement in the room. The door appears
+to be blocked somewhat on the other end, but a gentle shoulder
+through the door should fix that.....
+~
+6 0 0
+D0
+~
+~
+0 -1 619
+D1
+~
+~
+0 -1 612
+D3
+~
+~
+0 -1 614
+S
+#614
+Before The Grand Ballroom~
+   With the door wide open, you can see into the elegant ballroom
+through the door. A whiff of clean air escapes from the room and
+restores a feeling of comfort to the room. The tables have been set
+and the chairs have been placed. This might be a safe haven to rest in.
+~
+6 0 0
+D1
+~
+~
+0 -1 613
+D3
+~
+~
+0 -1 621
+S
+#615
+The Lounge~
+   Disregarding the large metal rusted door that hides this
+room, it seems to be extravagantly furnished and has a comfortable
+feeling to it. Towards the back of the room is a pearl white
+grand piano which is complimented by the royal red carpet.
+Along the wall there are portraits of guests who have previously
+stayed at the manor. The one portrait that sticks out is 
+the only one that is roped off. There are two couches accompanied
+by many leather chairs and tables, a place to sit and drink.
+~
+6 0 0
+D0
+~
+~
+0 -1 616
+D2
+~
+door~
+1 -1 611
+D3
+~
+~
+0 -1 618
+S
+#616
+The Lounge~
+   Standing closer to the roped off painting, a blinding glare
+reflecting off of the glass is eliminating the entire room. 
+The light source seems to be coming from a small hole in the 
+ceiling. Facing the door of the room, a large poster of the owner 
+is pinned up against the wall. The face of the owner has claw marks 
+through it as if someone scratched the face off with their bare 
+hands. Obviously this man had many enemies which wanted him gone. 
+Down in the corner of the portrait is what appears to be the name of 
+the owner, Walter Law.
+~
+6 0 0
+D2
+~
+~
+0 -1 615
+D3
+~
+~
+0 -1 617
+S
+#617
+The Lounge~
+   The Grand Piano is another piece that truly shows the
+wealth invested in Briarcliff Manor. The keys appear to 
+be made out of ivory, something that comes at an incredible 
+expense. The shine coming off the pure white paint coat 
+of the piano is magnificent. It becomes more and more apparent 
+why this house would be targeted by evil people, they could 
+walk away with a fortune.  Fingerprints imprinted in blood on 
+certain keys are the only thing that really sticks out....It
+is hard not to believe there is any significance to this.
+~
+6 0 0
+D1
+~
+~
+0 -1 616
+D2
+~
+~
+0 -1 618
+S
+#618
+The Lounge~
+   Disregarding the large rusted metal door that hides this room, 
+it seems to be extravagantly furnished and has a very comfortable 
+feeling to it. Towards the back of the room is a pearl white 
+grand piano which is complimented by the royal red carpet. Along 
+the wall there are portraits of guests who have previously stayed 
+at the manor. The one portrait that sticks out is the only one 
+that is encased in glassed and roped off. There are two couches 
+accompanied by many leather chairs and tables to set a drink down on.
+It makes you wonder about the fickleness of this place. Some things 
+are extremely nice and some things are extremely junky.
+~
+6 0 0
+D0
+~
+~
+0 -1 617
+D1
+~
+~
+0 -1 615
+S
+#619
+A Crowded Closet~
+   BAM! Instead of being subtle about clearing through the door, 
+you decided to obliterate the door with a full on charge.
+ Immediately the blood stained walls are a distraction from 
+anything else in the room. There are more markings on the wall 
+like the ones in the hallway. After surveying the rest of what 
+look to be a normal servant closet, it can be concluded there 
+is nothing that needs to be rendered lifeless. A tag of some 
+sorts hanging from an air vent aside from the candles appears 
+to be what was disrupting the light. The Air vent that the tag 
+is tied to seems to be loose and looks as if someone had been up 
+there. Bracketed along the wall are what appear to be some 
+stalwart looking shelves that would hold your weight.
+~
+6 0 0
+D2
+~
+~
+0 -1 613
+D4
+~
+~
+0 -1 620
+S
+#620
+A Secret Compartment~
+   The room reeks of dead rodents that have crawled through 
+the floorboards and gotten stuck. It is blatant that someone 
+has discovered this room recently because of the abstractly 
+large footprints left in the dust. You start to get the feeling 
+that you are not alone. Fragments of moldy food are piled in 
+one of the corners. Your senses quickly alert you to the movement 
+in the shadows. Taking a battle stance, you await the confrontation 
+that is inevitable.
+~
+6 0 0
+D5
+~
+~
+0 -1 619
+S
+#621
+The Grand Ballroom~
+   Everything seems to be in meticulous condition as if the 
+staff were just setting up for a party. The only thing that 
+appears to be out of place is the huge vibrant red colored 
+tree that forcefully grew threw the floorboards, adding even 
+more beauty to the room. Its quite odd how nothing else in the 
+room is out of place, or even the slightest bit dusty.
+~
+6 0 0
+D0
+~
+~
+0 -1 622
+D1
+~
+~
+0 -1 614
+D2
+~
+~
+0 -1 623
+S
+#622
+In Front of The Bar~
+   A bar with this kind of selection would entice almost 
+anyone to take a breather aside a nice glass of rum. 
+Some drunken rambling can be heard.  About the whispers, 
+you hear spirits howling over a group of brave soldiers 
+who ascended into the very pits of hell to battle he himself. 
+That unguis was mine! echos through the room. A half 
+empty bottle of Everclear B.C. is sitting atop the bar. Hmmm. 
+There is something inscribed on the bar.
+~
+6 0 0
+D2
+~
+~
+0 -1 621
+D3
+~
+~
+0 -1 628
+S
+#623
+A Beautifully Set Table~
+   Everything on the tables seems to be set in a precise manner.
+The silverware, plates, and even the glasses all form a 
+point which is directed at the center of the table. In the 
+middle of the table there is a decorative Christmas tree which 
+is kind of suspect. There are other things of considerable 
+interest though, not just the tiny tree. There is a crumbled 
+napkin laying on one of the chairs.
+~
+6 0 0
+D0
+~
+~
+0 -1 621
+D3
+~
+~
+0 -1 624
+S
+#624
+On The Dance Floor~
+   Most of the wooden tiles laid down have been disturbed by
+roots extending out from the tree in the center of the floor. 
+What used to be a dance floor is now nothing more than a 
+pile of wooden tiles covering the dirt foundation under them. 
+There are no weeds or any other plants growing, just a 
+network of tree roots. No spot on this floor has been untouched.
+   From here you can get a closer look at the tree. The bark 
+appears to be crawling as if its alive. The hint of red that 
+could be seen from the entrance to the ballroom now seems to 
+beblood running down the tree. The terrain before the tree is 
+very unlevel, making it somewhat difficult to get closer, 
+but not impossible. 
+~
+6 0 0
+D0
+~
+~
+0 -1 629
+D1
+~
+~
+0 -1 623
+D3
+~
+~
+0 -1 625
+S
+#625
+On The Dance Floor~
+   Most of the wooden tiles laid down have been disturbed by
+roots extending out from the tree in the center of the floor. 
+What used to be a dance floor is now nothing more than a 
+pile of wooden tiles covering the dirt foundation under them. 
+There are no weeds or any other plants growing, just a 
+network of tree roots. No spot on this floor has been untouched.
+~
+6 0 0
+D0
+~
+~
+0 -1 626
+D1
+~
+~
+0 -1 624
+S
+#626
+On The Dance Floor~
+   Most of the wooden tiles laid down have been disturbed by
+roots extending out from the tree in the center of the floor. 
+What used to be a dance floor is now nothing more than a 
+pile of wooden tiles covering the dirt foundation under them. 
+There are no weeds or any other plants growing, just a 
+network of tree roots. No spot on this floor has been untouched.
+~
+6 0 0
+D0
+~
+~
+0 -1 627
+D2
+~
+~
+0 -1 625
+S
+#627
+On The Dance Floor~
+   Most of the wooden tiles laid down have been disturbed by
+roots extending out from the tree in the center of the floor. 
+What used to be a dance floor is now nothing more than a 
+pile of wooden tiles covering the dirt foundation under them. 
+There are no weeds or any other plants growing, just a 
+network of tree roots. No spot on this floor has been untouched.
+~
+6 0 0
+D1
+~
+~
+0 -1 628
+D2
+~
+~
+0 -1 626
+S
+#628
+On The Dance Floor~
+   Most of the wooden tiles laid down have been disturbed by
+roots extending out from the tree in the center of the floor. 
+What used to be a dance floor is now nothing more than a 
+pile of wooden tiles covering the dirt foundation under them. 
+There are no weeds or any other plants growing, just a 
+network of tree roots. No spot on this floor has been untouched.
+~
+6 0 0
+D1
+~
+~
+0 -1 622
+D3
+~
+~
+0 -1 627
+S
+#629
+Before The Tree of Passage~
+   Standing aside the tree, you can feel some kind of supernatural 
+power pulsating from it. Etched into the bark is a passage
+of some sorts. It appears to be a cipher which requires a 
+key phrase to make out the message. Above the passage are two 
+carvings of angels wielding swords. 
+   The Floor and ceiling have become transparent suddenly. A 
+brilliant light shines through the clouds into the room highlighting 
+all around the tree. Beneath you, dark brownish red clouds can be 
+seen and nothing more. 
+~
+6 0 0
+D2
+~
+~
+0 -1 624
+S
+#630
+Atop The Stairs~
+ At the entrance to the second floor is a split leading east and west. 
+Each direction seems to bend in the same direction inward. On the wall 
+parallel to the banister is another portrait of Walter Law. Under 
+the portrait is something very strange, a fresh bouquet of red roses. 
+It is much colder up here unlike downstairs where it was very humid.
+~
+6 0 0
+D1
+~
+~
+0 -1 631
+D3
+~
+~
+0 -1 631
+D5
+~
+~
+0 -1 606
+S
+#631
+A Lavish Hallway~
+ Exotic paintings and art sculptures cover the plain while 
+walls. A lot of this art is themed around God and his army of 
+angels.  Again, more fresh roses are lying on the tables outlining 
+the hallway. A strong glimmer of light bends around the corner 
+from the room ahead of you, and there is a potent smell of incense 
+in the air. The crackling of a fire can be heard in the distance.
+~
+6 0 0
+D0
+~
+~
+0 -1 632
+D1
+~
+~
+0 -1 630
+D3
+~
+~
+0 -1 630
+S
+#632
+A temporary name~
+A temporary description
+~
+6 0 0
+D2
+~
+~
+0 -1 631
+S
+#633
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#634
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#635
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#636
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#637
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#638
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#639
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#640
+Walter's Study~
+   A terrible smell lingers in the room. Trash and rotten food litters
+the floor everywhere. All of the furniture except the desk and a 
+chair near the fireplace has been turned upside down. The wall has 
+been damaged with multiple punch holes. Multiple books lay on the 
+ground with their pages ripped out. There are no windows in the room, 
+so all the light is coming from what escapes from the reception hall.
+~
+6 0 0
+D1
+~
+door~
+1 -1 603
+S
+#699
+A temporary name~
+A temporary description
+~
+6 0 0
+S
+#0
+$~

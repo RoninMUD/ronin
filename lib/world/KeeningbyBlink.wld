@@ -1,0 +1,2074 @@
+#14500
+In the Crook of Sheer Cliffs~
+   Two huge mountains poke up on either side of this small entryway.  A
+lush, beautiful meadow dawns just slightly ahead.  A thick and heavy mist
+hangs burdensomely in the air to the south, its magical essence a menace to
+anyone who dares to enter its binding hold.  The large mountains to either
+side have been weathered down to form this small crook, and an entryway
+to a lovely and captivating meadow-valley.  A strange and magical feeling
+hangs loosely in the air.  The overwhelming presence of raw nature assures
+that this place has not been disturbed by man in quite a while.
+~
+145 0 5
+D0
+~
+~
+0 -1 14501
+D2
+~
+~
+0 -1 14593
+S
+#14501
+A Rocky Slope~
+   This rocky slope falls from the high crook in the mountains above.  
+Many large boulders and stones have made their way from high in the
+mountains to this dirty pathway.  Dust hangs in the air from a recent 
+rock-slide and the dirt on the path is very loose, making it easy to lose
+one's footing.  Ahead, a beautiful meadow is visible in the heart of the 
+valley. It looks to be a very comforting site compared to this steep and 
+dangerous old mountain.
+~
+145 0 3
+D0
+~
+~
+0 -1 14502
+D2
+~
+~
+0 -1 14500
+S
+#14502
+Entrance to a Lush Meadow~
+   This is the entrance to a lush and beautiful meadow.  Tall and handsome 
+trees grow on either side of the path here, and thick, colourful grasses 
+grow all over the land. The pathway is also grass, but it is quite low compared
+to the tall grasses that grow around it.  Colourful and ravishing flowers grow 
+in specific plots, adding rich colours and scents to the location.   All the
+plants and bushes are pruned perfectly, and grow in meticulous order.  Oddly, 
+this does not seem to be the work of a person, but  rather by some higher 
+power, possibly even godly.
+~
+145 0 3
+D0
+~
+~
+0 -1 14507
+D1
+~
+~
+0 -1 14505
+D2
+~
+~
+0 -1 14501
+D3
+~
+~
+0 -1 14503
+S
+#14503
+A Rock-filled Meadow~
+   The southern end of the valley is very strange, as there are quite a
+few rocks that have fallen from the high mountains.  Perhaps it has 
+something to do with the way the wind blows, or maybe the bulk of
+the rocks have settled here by chance.  Regardless, the rocks just add
+to the obvious beauty here.  Flowers grow throughout this part of the 
+valley, dotting the thick grasses with a variety of colours and shapes.
+~
+145 0 3
+D0
+~
+~
+0 -1 14512
+D1
+~
+~
+0 -1 14502
+D3
+~
+~
+0 -1 14504
+S
+#14504
+A Rock-filled Meadow~
+   This is the southwestern end of the valley.  The place is enclosed by
+a half-circle of rock.  The expansive mountains sweep high above.  
+Tumbling rock slides down the sheer face of the mountain.  Much of
+the rock that has tumbled from the mountain has landed in these parts 
+of the southern meadow.  Big stones and rocks fleck the whole place, 
+adding some sort of essence to the whole meadow.
+~
+145 0 3
+D0
+~
+~
+0 -1 14513
+D1
+~
+~
+0 -1 14503
+S
+#14505
+A Rock-filled Meadow~
+   This is the southern end of the valley.  The meadow stretches out to
+the north, and to the west.  The very large and ominous mountains block
+any type of passage to the south.  Large rocks and stones cover the ground,
+making the grassy floor of the meadow their home. Some flowers grow in 
+patches throughout the grass making the place a mosaic of grasses, rocks, 
+and beautiful-looking  flowers.  The gentle breeze blows warm air,
+creating a relaxing sensation.
+~
+145 0 3
+D0
+~
+~
+0 -1 14508
+D1
+~
+~
+0 -1 14506
+D3
+~
+~
+0 -1 14502
+S
+#14506
+A Rock-filled Meadow~
+   This is the southeastern corner of the meadow-valley.  The large
+mountains partially encase this place, and soar high into the clouds, their 
+tops invisible.  Huge boulders and rocks surround this place.  They have
+obviously fallen from the heights above.  They form a variety of odd 
+shapes and sizes and some even offer a place to sit and relax for a moment
+or two.  
+~
+145 0 3
+D0
+~
+~
+0 -1 14514
+D3
+~
+~
+0 -1 14505
+S
+#14507
+A Grassy Pathway~
+   The grass here grows shorter than the rest of the visible meadow.  It forms
+some sort of pathway, although the grass is growing quite wildly, and seems
+undisturbed for the most part.  Beautiful trees grow all around, but none in 
+thick clusters.  The entire meadow is very beautiful and serene.  The faint
+sound of animals scurrying about somewhere in the tall grass is evident here.  
+However, none of these animals can be seen.
+~
+145 0 3
+D0
+~
+~
+0 -1 14521
+D1
+~
+~
+0 -1 14508
+D2
+~
+~
+0 -1 14502
+D3
+~
+~
+0 -1 14512
+S
+#14508
+A Grassy Pathway~
+   The grassy pathway bends to the north, and to the east here. A large tree
+grows at the very corner, surrounded by wild grasses. The peaceful sound 
+of a nightingale singing from her perch echos throughout this entrancing 
+spot. Some gladiola flowers grow just off the path, reaching spectacular
+heights. A gentle breeze blows the warm air, creating a soothing effect.  
+This entire meadow radiates a welcoming, peaceful feeling.
+~
+145 0 3
+D0
+~
+~
+0 -1 14509
+D1
+~
+~
+0 -1 14514
+D2
+~
+~
+0 -1 14505
+D3
+~
+~
+0 -1 14507
+S
+#14509
+A Grassy Pathway~
+   The pathway stretches a fairly long distance both to the north and the 
+south. This part of the meadow is fairly open, and the  wind seems to 
+pick up a bit. Nonetheless, the warm gusts are very welcoming.  More 
+beautiful flowers grow all about the place, scattered in between the 
+varying heights of grass.  Their sweet smell is very invigorating, and 
+stimulates the very soul. A small tipped over log sits nearby the path,
+and offers a comfortable place to rest and enjoy the beauty here.
+~
+145 0 3
+D0
+~
+~
+0 -1 14510
+D1
+~
+~
+0 -1 14515
+D2
+~
+~
+0 -1 14508
+D3
+~
+~
+0 -1 14521
+E
+log~
+This is a small log that has somehow been tipped over.
+~
+S
+#14510
+A Grassy Pathway~
+   The grassy pathway begins to narrow here, as it reaches it's northern 
+end. In the distance looms a strange and  foreboding forest.  This place 
+is a little more quiet than most other parts of the meadow.  The constant
+movement of the animals, lost in the high grass seems to cease, and the
+birds are no longer singing their  endless tunes.  A slight mist hangs over
+the path here, and the breeze is slightly cool.  Some kind of dark magic
+is definitely at work close by.
+~
+145 0 3
+D0
+~
+~
+0 -1 14511
+D1
+~
+~
+0 -1 14516
+D2
+~
+~
+0 -1 14509
+D3
+~
+~
+0 -1 14517
+S
+#14511
+Entrance to the Forest of Keening~
+   A great, dark forest looms ahead, the path murky and obscure.  The 
+huge trees tower high into the sky, and the canopy overhead lets very
+little light filter through.  The dirt path is narrow, and beaten down. 
+It leads into inky darkness.  No flowers grow here, just thick weeds
+and ugly grasses.  Faint sounds of animals from within the forest drift by. 
+There is the strong sense of magic emanating from the forests' depths.
+~
+145 4 3
+D0
+~
+~
+0 -1 14523
+D1
+~
+~
+0 -1 14520
+D2
+~
+~
+0 -1 14510
+D3
+~
+~
+0 -1 14519
+S
+#14512
+The Rolling Meadows~
+   This part of the meadow is very cool and quiet.  Bunches of large
+trees grow together and form a huge canopy over most of this place.  
+Small pools of water cover parts of the ground, and apparently, a small
+trickle of a stream is flowing in from the west.  The grass here is short 
+and soft, and is a  welcoming place to rest.  Again, many  bunches of 
+flowers cover parts of the ground.
+~
+145 0 3
+D0
+~
+~
+0 -1 14522
+D1
+~
+~
+0 -1 14507
+D2
+~
+~
+0 -1 14503
+D3
+~
+~
+0 -1 14513
+S
+#14513
+The Rolling Meadows~
+   This is the western end of the valley.  A narrow, yet still very
+beautiful waterfall falls from the mountainous peaks high above.  A 
+lovely pond has formed under the falls, and growing from the pond are 
+beautiful lily pads and aquatic grasses.  Many fish of beautiful colours
+swim frantically about the pond, giving the water a colourful hue.  
+Some trees grow about the area, providing some shade.  A feeling of 
+calmness and relaxation saturates the area.
+~
+145 0 3
+D1
+~
+~
+0 -1 14512
+D2
+~
+~
+0 -1 14504
+S
+#14514
+The Rolling Meadows~
+   Most of the meadow is visible from this point.  A large mound of grass
+gives some height to the whole place.  The view from here is spectacular.
+The huge snowy mountains surround this part of the meadow, and to the
+north a darkened forest grows.  Off in the far northwest there is some sort 
+of rocky circle in the mountainside.  The warm wind blows fairly strong
+from this point, though the breeze is still very comforting. 
+~
+145 0 3
+D0
+~
+~
+0 -1 14515
+D2
+~
+~
+0 -1 14506
+D3
+~
+~
+0 -1 14508
+S
+#14515
+The Rolling Meadows~
+The wild grass grows very tall and thick here, making a wide range
+of movements extremely hard. A few trees poke their long trunks out
+high above the grass, however, other than that there is very little growth.  
+The tall grass prevents any flowers or small shrubs from growing here.  
+This is probably a paradise to some of the smaller animals scurrying 
+about somewhere in the deep grasses.  The wind here causes the grass
+to lash about in a fury.
+~
+145 0 3
+D0
+~
+~
+0 -1 14516
+D2
+~
+~
+0 -1 14514
+D3
+~
+~
+0 -1 14509
+S
+#14516
+The Rolling Meadows~
+   This part of the lovely meadow-valley is partially surrounded by thick 
+grasses and bushes.  A few stumped trees grow from the ground, however, 
+they are too short to make a very good living place for most birds.  The
+breeze is very warm and gentle here.  This place seems to be quite lower 
+than the rest of the valley.  A dark forest grows to the north, and to the east 
+some sort of grassy pathway is visible.
+~
+145 0 3
+D0
+~
+~
+0 -1 14520
+D2
+~
+~
+0 -1 14515
+D3
+~
+~
+0 -1 14510
+S
+#14517
+The Rolling Meadows~
+   This is one of the few parts of the meadow that seem to have been 
+recently visited by man.  The ground here has recently been walked on 
+by someone.  A small wooden bench has been placed near a very large, 
+and ancient tree.  It's thick leaves offering shade to any possible guest.
+A large rock sits just beside the tree and the stool, and carved on the top
+is a hole where some water has collected.  The birds fly in numbers close
+by, singing happily. This seems to be a place frequently visited  by someone,  
+probably to relax and enjoy the meadow.
+~
+145 0 3
+D0
+~
+~
+0 -1 14519
+D1
+~
+~
+0 -1 14510
+D3
+~
+~
+0 -1 14518
+E
+bench~
+This bench offers shade from the hot sun.
+~
+E
+stool~
+A small stool rests beside the tree.
+~
+S
+#14518
+The Arak Stones~
+   This small inlet is surrounded by peaking, snow-covered mountains.
+The grasses are a lush green, thick and moist with dew.  This place
+feels rather comfortable and safe.  Beautiful golden flowers sprout
+up from the ground, radiating with life.  Large, ancient stones are
+mysteriously resting in a circle at the centre of the inlet.  They glow 
+with a soft white light, and radiate with a powerful magic.  The stones 
+are quite huge, and they do not seem natural to the area.  They were
+obviously placed here by someone.  This is definitely a sacred place.
+~
+145 4 3
+D1
+~
+~
+0 -1 14517
+S
+#14519
+The Meadow Meets a Dense Forest~
+   The lovely meadow slowly rolls along to meet with a very dark, dense
+forest. The lush flowers of the meadow no longer grow here.  The foul 
+roots and weeds that grow from the forest must have choked them all. 
+This place seems rather gloomy, unlike the lavish feel of the rest of
+the meadow, the forest deprives this place of any real sense of beauty
+or feeling.
+~
+145 0 3
+D1
+~
+~
+0 -1 14511
+D2
+~
+~
+0 -1 14517
+S
+#14520
+The Meadow Meets a Dense Forest~
+   The meadow now meets a dark, and dense forest.  The lovely, colourful 
+grasses no longer grow so lush and rich, instead the dark roots from large
+and ancient trees creep their way from their dark abode, choking most of 
+the life in this part of the meadow.  An old dead tree hangs halfway out
+of the dense foliage of the forest, giving off the awful smell of decay.  
+Old leaves blow in the cool breeze.  This place does not have the same 
+welcoming feeling as the rest of the meadow.
+~
+145 0 3
+D2
+~
+~
+0 -1 14516
+D3
+~
+~
+0 -1 14511
+S
+#14521
+The Rolling Meadows~
+   A group of tall trees grow in a big cluster here, the soft sound of various
+animals high within their branches echo down from high above.  Many 
+different types of flowers spring from the ground here.  Multitudes of 
+shapes, colours, and scents.  The grass here is fairly short, and the ground 
+is very soft, making this place a very nice spot to unwind for a little while.
+~
+145 0 3
+D1
+~
+~
+0 -1 14509
+D2
+~
+~
+0 -1 14507
+D3
+~
+~
+0 -1 14522
+S
+#14522
+The Rolling Meadows~
+   This is the western end of the valley.  The tall mountains slope upwards,
+making any further travelling west impossible.  Unlike the southern end 
+of the valley, there are no massive stones that have  fallen from the
+mountains. Instead the lush grass  grows partially up the mountainside.  
+The soft sound  of birds chirping in the distance, combined with the warm
+wind makes this place very soothing.
+~
+145 0 3
+D1
+~
+~
+0 -1 14521
+D2
+~
+~
+0 -1 14512
+S
+#14523
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14524
+D1
+~
+~
+0 -1 14524
+D2
+~
+~
+0 -1 14511
+D3
+~
+~
+0 -1 14523
+S
+#14524
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14524
+D1
+~
+~
+0 -1 14525
+D2
+~
+~
+0 -1 14523
+D3
+~
+~
+0 -1 14523
+S
+#14525
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14523
+D1
+~
+~
+0 -1 14523
+D2
+~
+~
+0 -1 14526
+D3
+~
+~
+0 -1 14524
+S
+#14526
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14525
+D1
+~
+~
+0 -1 14527
+D2
+~
+~
+0 -1 14524
+D3
+~
+~
+0 -1 14523
+S
+#14527
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14528
+D1
+~
+~
+0 -1 14523
+D2
+~
+~
+0 -1 14523
+D3
+~
+~
+0 -1 14526
+S
+#14528
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14523
+D1
+~
+~
+0 -1 14524
+D2
+~
+~
+0 -1 14527
+D3
+~
+~
+0 -1 14529
+S
+#14529
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14530
+D1
+~
+~
+0 -1 14528
+D2
+~
+~
+0 -1 14524
+D3
+~
+~
+0 -1 14524
+S
+#14530
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14531
+D1
+~
+~
+0 -1 14523
+D2
+~
+~
+0 -1 14529
+D3
+~
+~
+0 -1 14523
+S
+#14531
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16385 3
+D0
+~
+~
+0 -1 14523
+D1
+~
+~
+0 -1 14532
+D2
+~
+~
+0 -1 14530
+D3
+~
+~
+0 -1 14524
+S
+#14532
+The Forest of Keening~
+   This is a huge dark forest, with black-barked trees soaring high
+into the air.  Bleak rays of light filter down through the thick mass
+of leaves which hang overhead.  The path is dirty and covered in
+dead and decaying leaves.  It is also very narrow making it small 
+and confusing.  The forest is seemingly unchangeable no matter  
+which route is picked. Eerie noises permeate the dense trees,  
+possibly of some strange animals which inhabit the land.  Long 
+black vines are blowing in the wind, giving the illusion of slithering
+snakes. This forest is obviously engulfed with evil.
+~
+145 16389 3
+D0
+~
+~
+0 -1 14533
+D1
+~
+~
+0 -1 14524
+D2
+~
+~
+0 -1 14524
+D3
+~
+~
+0 -1 14531
+S
+#14533
+Entrance to the Glen of Arak~
+   Beautiful green vines, with coloured flowers form a very beautiful arbour 
+here. It is very fascinating that such a thing could form naturally.  A very 
+god-like feeling permeates the area.  The beautiful scent of fresh flowers
+wafts through the air, and a feeling of pure comfort permeates the area.  
+Long thick grasses lead out of the arbour into a very beautiful and 
+wondrous-looking glen.  
+~
+145 0 3
+D0
+~
+~
+0 -1 14534
+D2
+~
+~
+0 -1 14532
+S
+#14534
+The Glen of Arak~
+   This is the Glen of Arak.  A truly magical place where it is said the 
+god Arak was born.  The path here is fairly wide, and is surrounded 
+by thick, lush grasses. They grow very high, and are so dense that
+navigating through them would be quite impossible.  Sweet scents 
+from childhood memories, and of beautiful flowers float through the 
+air, and a gentle breeze blows through the grass, carrying soft,
+warm air with it.  The magic of this place is unbelievable.
+~
+145 0 3
+D0
+~
+~
+0 -1 14535
+D2
+~
+~
+0 -1 14533
+S
+#14535
+The Glen of Arak~
+   The narrow Glen opens up a little here, giving the beautiful plant
+life more room to expand.  Faint music falls from the sky, created 
+by some godly power above. The magical lullaby is soothing and gentle 
+to the ear. Beautiful rows of flowers grow here, as if planted and tended
+to by  some unseen gardener.  The sweet breeze continues to blow gently
+from atop the mountains surrounding the glen.  
+~
+145 0 3
+D0
+~
+~
+0 -1 14536
+D1
+~
+~
+0 -1 14544
+D2
+~
+~
+0 -1 14534
+D3
+~
+~
+0 -1 14542
+S
+#14536
+The Glen of Arak~
+   A small trail has been cut in the grass here, forming a large circle 
+around a towering tree.  The tree soars high into the air, and has sprouted 
+many delicious-looking fruit.  Unfortunately, the tree is so high, reaching 
+the fruit would be near-impossible.  A beautiful wooden bench has been
+built just below the tree, and offers a comfortable resting spot in the shade.
+Many flowers grow up all around the tree and the bench, adding to the very
+serene and comfortable aura.
+~
+145 0 3
+D0
+~
+~
+0 -1 14537
+D1
+~
+~
+0 -1 14546
+D2
+~
+~
+0 -1 14535
+D3
+~
+~
+0 -1 14547
+E
+bench~
+This small wooden bench would serve as a nice place to sit.
+~
+E
+tree~
+This tree is very large, and prominent.
+~
+S
+#14537
+A Treacherous Pathway~
+   The beautiful Glen of Arak suddenly begins to slope off here.  The 
+grassy fields and large stones have now been replaced with sheer cliffs
+and jagged rocks.  There is a pathway down the cliff, though it looks 
+pretty dangerous.  The land has given in to many rock slides, and at the
+bottom lies the many remnants of these fallen stones.  Though obviously 
+very dangerous, if one took careful steps down the cliff, it shouldn't be 
+too hard to climb down.
+~
+145 0 3
+D2
+~
+~
+0 -1 14536
+D5
+This is a steep cliff, but it looks climbable.
+~
+cliff~
+11 -1 14548
+S
+#14542
+The Glen of Arak~
+   This is a small corner of the Glen.  The huge mountains soar high into the 
+clouds. Scaling their steep walls is impossible.  A small stream trickles down 
+from between the rocks in the mountains.  The soft sound of the gurgling water
+is very tranquil and settling.  The flowers here are all grown in patches, they 
+grow very evenly, and are composed very beautifully.  There is obviously
+magic at work here,  to cause the flowers to grow so perfectly in the wild.
+~
+145 0 3
+D0
+~
+~
+0 -1 14547
+D1
+~
+~
+0 -1 14535
+E
+stream~
+This small stream trickles between the rocks in the mountains.
+~
+S
+#14544
+The Glen of Arak~
+   This part of the glen is almost totally surrounded by the huge 
+mountains. An outcrop of rock from the mountain creates a small 
+semicircle here.  The soft grass grows very thick, and tall vines and
+flowers grow partially up the rocky wall of the mountain.  Some run
+off of melted snow slowly trickles its way to the floor of the glen, and
+has formed a small pool of water.  Soft music can be heard somewhere 
+from the sky above.
+~
+145 0 3
+D0
+~
+~
+0 -1 14546
+D3
+~
+~
+0 -1 14535
+S
+#14546
+The Glen of Arak~
+   This is surly the Glen in all of its splendour and glory.  A beautiful 
+waterfall flows from the heavens above.  A small rainbow has formed
+just above the flowing waters.  The grass here grows very tall, and is
+covered with slick spray from the falls.  A small pool has been formed just
+below the waterfall, and it sparkles with magic.  Many flowers grow along
+the pools edges, filling the air with a marvellous fragrance.
+~
+145 0 3
+D2
+~
+~
+0 -1 14544
+D3
+~
+~
+0 -1 14536
+S
+#14547
+The Glen of Arak~
+   This part of the Glen is somewhat covered by the large mountains 
+soaring above.  A big jut of rock a little higher on the mountain partially 
+blocks some of the sunlight, and offers a great deal of shade.  Despite the 
+apparent lack of sunlight, this does not hinder the growth of the lovely 
+flowers and small shrubs, they are just as plentiful here as in any other part
+of the glen.  An oddly shaped tree has also grown close to the mountain wall
+here, its misfit shape is quite peculiar. 
+~
+145 0 3
+D1
+~
+~
+0 -1 14536
+D2
+~
+~
+0 -1 14542
+E
+tree~
+This tree has grown in a very odd shape.
+~
+S
+#14548
+A Treacherous Pathway~
+   The cliffs here are very steep and dangerous, one false move could
+send someone tumbling to their unfortunate death.  The rocks here are
+very loose and could easily slide down the rest of the cliff.  The pathway 
+is very hard to follow, and the cliffs that lead up are very steep, one could 
+make it to either the top or the bottom without hurting themselves too
+badly. At the bottom of the trail, a large stone wall is visible.
+~
+145 0 3
+D0
+~
+~
+0 -1 14549
+D4
+This is a steep cliff, but it looks climable.
+~
+cliff~
+11 -1 14537
+S
+#14549
+A Rocky Path~
+   The pathway here is very rocky.  The steep grade is not evident, but 
+as the path continues up the cliff it becomes more and more dangerous.
+Many rocks have all been scattered about here, they vary in size. Some
+are quite huge, and others have been ground to small pieces.  Most have
+undoubtedly landed here from sliding down the rocky cliffs above.  To 
+the west, what appears to be a town wall is visible.
+~
+145 4 3
+D2
+~
+~
+0 -1 14548
+D3
+~
+~
+0 -1 14550
+S
+#14550
+Outside the Village Walls~
+   The town wall rests tall and silently to the west, it's  thick stone walls
+offering endless protection to the town.  The dirt pathway here seems to
+be used quite often.  Long and thick green grasses grow all around the 
+path. Combined with the quietness of the setting, the long grass and 
+the lush flowers add to create a very beautiful and serene setting.  A recent
+rainfall has left small puddles of water on the ground, and the flowers and 
+grasses lay covered in dew.
+~
+145 0 3
+D1
+~
+~
+0 -1 14549
+D2
+~
+~
+0 -1 14551
+S
+#14551
+The Village Gates~
+   Two very momentous oaken gates stand in the pathway into town.  The stone 
+walls here are very thick and offer a great deal of protection from any type of 
+invasion. A large walkway above the gate serves as a possible lookout, but 
+probably cannot offer an excellent view because of the  large mountains which 
+encase the town.  The path here is beaten down and worn, however, lush green
+grasses grow all around the path, as well as beautiful, sweet-smelling flowers.
+A thick dew has laden the grass and flowers.
+~
+145 4 1
+D0
+~
+~
+0 -1 14550
+D3
+Two large wooden gates lead the way into the town.
+~
+gates~
+1 -1 14552
+S
+#14552
+The Village of Ludendorf~
+   This village is reminiscent of ancient times.  The wooden houses are set in 
+rows, tutor-style, and are plastered with various tope and darker colours.  
+The streets are paved in cobblestone, and are rather clean.  Each house has
+its own small plot of land, where the residents planted some colourful flowers
+and trees to brighten the gloomy atmosphere.  Two large oak gates lead out of 
+town, to the east.
+~
+145 0 1
+D0
+~
+~
+0 -1 14559
+D1
+Two large wooden gates lead the way out of town.
+~
+gates~
+1 -1 14551
+D2
+~
+~
+0 -1 14557
+D3
+~
+~
+0 -1 14553
+S
+#14553
+The Village of Ludendorf~
+   The street here is quite narrow, and the place is kept up quite nicely.  
+There are birds and other animals chirping away happily in their hidden
+homes, somewhere in the trees.  Various noises from the town drift by,
+and the signs of life are very prominent here.  The quaint little houses with
+their small gardens add to create a very peculiar setting.  The road continues
+east and west.
+~
+145 0 1
+D1
+~
+~
+0 -1 14552
+D3
+~
+~
+0 -1 14554
+S
+#14554
+The Market Square~
+   This is the lively market square.  Stray chickens cluck mindlessly as they 
+flutter about the, lost from their owners.  Old barter stands are here still 
+set up, yet there seems to be no one around to tend to them.  A lovely pearl 
+fountain stands in the very centre of the square, the beautiful centrepiece of
+the whole place.  Large and colourful flags blow in the wind, standing proud
+on their tall flagpoles.  The delicious smell of baked goods streams up from
+the south.  
+~
+145 0 1
+D0
+~
+~
+0 -1 14555
+D1
+~
+~
+0 -1 14553
+D2
+~
+~
+0 -1 14556
+D3
+~
+~
+0 -1 14561
+S
+#14555
+The General Store~
+   This is the village General Store.  It smells of freshly cut wood, mingled 
+with the smoke rising from the fireplace on the east wall.  Large wooden 
+cabinets are found on either side of the room, and a beautifully finished 
+mahogany counter has been placed in the centre of the room.  A 
+comfortable-looking couch has been set out near the fireplace, a welcoming 
+sight to someone who has been working all day.
+~
+145 12 1
+D2
+~
+~
+0 -1 14554
+S
+#14556
+The Food Store~
+   This is the local food store.  Various types of exotic food  line the many
+shelves of the room.  A large stone oven  is set in the southern wall.  
+Many tables and chairs have been placed about, in case a patron decides to
+eat-in. Wonderful smells rise from behind the large wooden counter.  It is
+quite welcoming here, and the heat coming from the oven in the back adds
+to the warm and comfortable setting.
+~
+145 12 1
+D0
+~
+~
+0 -1 14554
+S
+#14557
+The Village of Ludendorf~
+   This is the older part of the village, and the place is pretty dirty.  The
+houses here look aged, and could use some fixing-up.  A towering old 
+oak tree grows in the dead centre of the street.  It is fenced in with an old, 
+rotting wooden fence.  Some flowers grow at the base of the ancient tree. 
+Somewhere in the dense leaves of the tree some birds sing happily.
+~
+145 0 1
+D0
+~
+~
+0 -1 14552
+D3
+~
+~
+0 -1 14558
+S
+#14558
+The Village of Ludendorf~
+   The street here comes to a dead end.  A couple old street lamps light the
+place. Huge trees tower high into the air, and block most of the light that
+could filter through.  The old homes here aren't kept up very well, and the
+gardens in front of them seem to be growing weeds out of control.  This 
+isn't a very nice part of town, its really quite dreary and aged.
+~
+145 0 1
+D1
+~
+~
+0 -1 14557
+E
+lamps~
+A pair of old street lamps give off a dull light.
+~
+S
+#14559
+The Village of Ludendorf~
+   This is a small corner of town, and there seems to be little activity taking
+place here.  The streets are dusty and need to be swept.  Dead leaves and 
+garbage blow about the corner.  The row houses line the western side of the
+street, and a tall iron lamp provides some added light .  The cobblestone road
+continues to the west and to the south of here.
+~
+145 0 1
+D2
+~
+~
+0 -1 14552
+D3
+~
+~
+0 -1 14560
+E
+lamp~
+This tall iron lamp provides ample light to the place.
+~
+S
+#14560
+The Village of Ludendorf~
+   The road here comes to a dead end.  A barred up old stable lies at the end 
+of the road.  This part of the village seems fairly old and unkempt.  The
+houses also seem to be abandoned, their windows and doors boarded up with
+thick blocks of wood.  Dirt and soot covers the road, and old mounds of 
+garbage have piled up in the northeastern corner.  Many flies and insects 
+seem to have made this place their home when the villagers moved out.
+~
+145 0 1
+D1
+~
+~
+0 -1 14559
+E
+garbage~
+These grotesque piles of garbage have been
+collecting waste for quite some time.
+~
+S
+#14561
+The Village of Ludendorf~
+   This appears to be a newer part of town.  The houses are no longer joined
+together, but each has been built on its own piece of land.  The houses are 
+small, yet cheery, painted in many bright colours.  Each house has it's own 
+little garden, specifically for the growing of vegetables and other edibles.  
+A beautifully set garden has been made in the very centre of the road here, 
+containing many attractive flowers.
+~
+145 0 1
+D1
+~
+~
+0 -1 14554
+D3
+~
+~
+0 -1 14562
+S
+#14562
+The Village of Ludendorf~
+   This is the western end of town.  The large stone walls create a tall 
+archway, allowing passage further west, though it appears to lead out of town. 
+There are a few tiny houses lining the north and south part of the cobblestone 
+road. Large trees have been planted close by the stone walls, they are very big
+and must be quite old.  There is no wind and the village is very quiet and
+peaceful here.
+~
+145 0 1
+D1
+~
+~
+0 -1 14561
+D3
+~
+~
+0 -1 14563
+S
+#14563
+The Marrow Gates~
+   A monstrous gate looms slightly ahead.  Grotesquely made from the rib 
+cage of some utterly gigantic animal, it serves the purpose of blocking
+anyone not permitted to enter.  The stench of rotting flesh emanates from
+the bone.  The dirt  ground here is slightly scuffed, and huge pools of blood 
+can be found on either side of the gate.  Nothing living is visible from here,
+all the plant life is dead and decaying. Some strange, and evil magic is 
+obviously at work here.
+~
+145 4 1
+D1
+~
+~
+0 -1 14562
+D3
+These gates are made from the rib bones of some huge animal.
+~
+gates~
+1 -1 14564
+E
+gate~
+These huge gates were made from the ribs of some huge animal.
+~
+E
+gates~
+These huge gates were made from the ribs of some huge animal.
+~
+S
+#14564
+The Path of Weeping~
+   This is a strange and magical pathway.  The sky is strangely abnormal, 
+and is a mass of swirling matter.  Deep blues and dark violets swirl 
+together, forming strange patterns, and ethereal clouds.  Faces, which 
+look almost like masks barely form in the cloud, their faces distorted into
+looks of agony. Screaming and wailing permeates the air, in a horrifically
+harmonious concerto.  Evil magic, and the dark presence of death is very
+evident here.
+~
+145 0 3
+D1
+These gates are made from the rib bones of some huge animal.
+~
+gates~
+1 -1 14563
+D3
+~
+~
+0 -1 14565
+E
+gates~
+Two huge gates constructed from marrow and bone block the path.
+~
+S
+#14565
+A Fork in the Path~
+   This demonic pathway branches off to the north, east, and west from here.
+The dark soil seems to be moving, as if some kind unseen of power is 
+purposely moving it, swirling in various patterns and shapes.  There is no
+wind here, but the atmosphere is anything but calm.  The chaotic presence
+in the room is very perceivable.  The dank, dark atmosphere is very 
+unnerving. Whatever kind of magical power is at work here, it is obviously 
+of a very dark origin.
+~
+145 0 3
+D0
+~
+~
+0 -1 14568
+D1
+~
+~
+0 -1 14564
+D3
+~
+~
+0 -1 14566
+S
+#14566
+Before a Tiny House~
+   This small path lacks the same evil presence of the  pathway which led 
+here. The sky is dark, but there does not seem to be any kind of unworldly 
+demeanor. A tiny  house lies at the end of this small and narrow dirt path.  
+Small puffs of smoke slowly drift out of the chimney.  The garden of the 
+house is old and rotting, and has obviously not been tended to in ages. 
+The fact that such a small house would be located so close to the chaotic 
+Path of Weeping is very odd.
+~
+145 0 3
+D1
+~
+~
+0 -1 14565
+D3
+~
+~
+0 -1 14567
+S
+#14567
+The Magistrate's Home~
+= This is a tiny home, darting off from the depressing Path of Weeping.
+This small, but comfortable home has a thatched roof and dark clay walls.
+A stone fireplace gives off ample heat for the small building.  A large
+bear rug and two  comfortable-looking leather chairs have been placed in
+front of the fire.  Each chair has its own resting table, and foot stool.  A
+double bed covered in warm and colourful quilts is in the northeastern 
+corner. A small kitchen has been built on the north wall as well.  
+A wooden table and chair set has been placed close by, on it is a small vase
+full of dead flowers.
+~
+145 8 0
+D1
+~
+~
+0 -1 14566
+S
+#14568
+The Path of Weeping~
+= The wicked Path of Weeping continues to the north and south of here.  
+The tortured souls that reside somewhere in it's void continue their 
+endless wailing.  A faint breeze blows in from the east, carrying with it
+the smell of rotten flesh.  Images of ghosts and spirits float around the path, 
+haunting this solemn passage.  The anguish and horror of this place is very
+prominent. It appears to be a type of Hell on Earth, frightening and filled
+with death.
+~
+145 0 3
+D0
+~
+~
+0 -1 14569
+D2
+~
+~
+0 -1 14565
+S
+#14569
+The Path of Weeping~
+   A strange mist hovers about this part of the Path.  It  blocks view to all
+sides but the north, where an immense  and despairing castle has been 
+built atop a large slope.   Small black roots grow from the ground here, and 
+the dirt  path has been replaced with blackened stones.  An iron fence encases 
+the pathway, conveniently blocking anyone foolish enough to stray from the
+path, and into the ever-waiting arms of death itself.
+~
+145 0 3
+D0
+~
+~
+0 -1 14570
+D2
+~
+~
+0 -1 14568
+S
+#14570
+Before the Castle of Keening~
+   An immense castle looms ahead.  The treacherous pathway of 
+weeping lies to the south.  The dreaded sounds of lost souls and 
+screaming victims is audible from the south.  The castle ahead casts
+a dark shadow about the whole place.  Dead, and  half-rotted trees jut
+out of the ground, and dead leaves blow across the path.  Rusted-shut
+iron gates once lead to a garden to the east and west, but now the thick 
+weeds make it impossible to penetrate.  The sky above is dark and some
+kind of dark  magical cloud flows in a giant circle above the towering 
+castle. An evil aura hangs about the entire place.
+~
+145 4 3
+D0
+~
+~
+0 -1 14571
+D2
+~
+~
+0 -1 14569
+E
+cloud~
+This strange cloud forms a huge circle, swirling in a
+ring above the castle.
+~
+S
+#14571
+The Reception Hall~
+   This is a grand and luxurious reception hall.  Large golden pillars
+tower towards the ceiling, very high above.  A beautiful blue dome is
+set in the centre of the ceiling, making visible the dark clouds that hover
+overhead. Beautiful marble steps lead up from the large double 
+entryway, and many golden coloured couches and chairs have been placed
+about. Large rugs, embroidered with silver and golden threads have been 
+placed on the cold floor for added warmth and comfort.
+~
+145 8 0
+D0
+~
+~
+0 -1 14576
+D1
+~
+~
+0 -1 14573
+D2
+~
+~
+0 -1 14570
+D3
+~
+~
+0 -1 14572
+E
+dome~
+This dome allows view of the dark clouds that circle the castle from above.
+~
+S
+#14572
+The Double Parlour~
+   This is a very extravagant double parlour.  The floor is made of
+black and white checkered marble, and there are many strange-
+looking pieces of artwork lying about.  Large white pillows 
+and fluffy fur rugs decorate the floor, and on either side of the 
+room is a large fireplace, with a blazing fire roaring in it.  The
+room is very warm and comfortable.  Various paintings hang on
+the walls.  They appear very odd, and depict strange devastated
+lands. A large bust of a beautiful-looking woman stands out in
+the western corner of the room.  The eyes of the bust seem to move.
+~
+145 8 0
+D0
+~
+~
+0 -1 14575
+D1
+~
+~
+0 -1 14571
+S
+#14573
+The Dining Hall~
+   This is a huge dining hall.  The massive table is extremely long,
+and it could seat up to about two hundred people.  It has already
+been set for some divine supper.  A fireplace on the eastern wall
+rages, giving off supreme warmth and adding comfort to the room.
+A small stage in the southeastern corner of the room has been set
+up, and abandoned instruments have been left there, all are ready
+to play.  Delicious scents waft down from the north.  There
+is obviously something very delectable cooking up there.
+~
+145 8 0
+D0
+~
+~
+0 -1 14574
+D3
+~
+~
+0 -1 14571
+S
+#14574
+A Huge Kitchen~
+   This is a very large, and very well equipped kitchen.  Everything a
+person could possibly need has been strewn about.  This place is a huge
+mess, huge pots and pans, large boilers, various utensils unheard of in
+many places - all have been left out on the floor and on some of the 
+many tables in the room.  Large amounts of flour have been caked on
+the ceramic tiles on the floor, and the air is clouded with smoke and 
+steam. A huge stove, with large metal pipes steaming from the top is
+on the northern wall.  Despite the unattractive mess, something smells 
+really good.
+~
+145 8 0
+D2
+~
+~
+0 -1 14573
+S
+#14575
+The Double Parlour~
+   The northern end of the double parlour is much like the other half.  
+The floor is checkered marble, and there is plenty of  artwork scattered
+about the room.  A big white orb floats near the northern wall, giving 
+off a great deal of illumination.  A fireplace, also on the north wall,
+gives off a hearty glow from its dying fire.  A huge gargoyle is attached
+to the mantle place, it's disgusting face in a position of pure agony.  It
+also has its huge claws extended as if to portray some kind of warning.  
+The other half of this huge parlour is to the south.
+~
+145 8 0
+D2
+~
+~
+0 -1 14572
+S
+#14576
+The Victorian Staircase~
+   This mammoth staircase is so large is blends itself with the floors of the 
+reception hall.  Two hideous gargoyles rest on black onyx pedestals on 
+either side of the staircase.  Their eyes glow  with red light, and they seem
+to be guarding the staircase.  The  staircase reaches its summit, on the next  
+floors, which seems eternities away.  A large, and soft-looking mat leads 
+its way to  the top.  The mat, oddly enough seems to resemble blood.  It 
+has a dark, and rich colour, and at times, seems to rustle. 
+~
+145 8 0
+D2
+~
+~
+0 -1 14571
+D4
+~
+~
+0 -1 14577
+E
+gargoyle~
+Two hideous gargoyles stand guarding the staircase.
+~
+E
+gargoyles~
+Two hideous gargoyles stand guarding the staircase.
+~
+S
+#14577
+A Victorian Balcony~
+   This astonishing balcony protrudes out from the second  floor.
+Ravishing statues adorn the stone railing.  They seem to  move ever so
+slightly with the creaks and groans of the castle.  The balcony is carpeted
+with rich and soft mats.  A couple stone benches have been placed near
+the railing to accommodate the lovely view of the reception hall below. 
+The balcony is accented  by a handsome staircase, that leads to the first 
+floor. The immense staircase seems somewhat forlorn, its only decoration,
+the dark mat that covers its stairs.
+~
+145 8 0
+D0
+~
+~
+0 -1 14578
+D1
+~
+~
+0 -1 14585
+D3
+~
+~
+0 -1 14580
+D5
+~
+~
+0 -1 14576
+S
+#14578
+The Mistress' Chambers~
+   This massive bedroom is very extravagant.  The panelled  walls are
+bordered with beautifully-carved solid gold  mouldings and frames.
+Magnificent draperies hang from the ceiling, and are embroidered 
+with lace and silver threads.  The stained glass windows tower high
+into the room, giving the room a cathedral-like feel.  A tremendous 
+poster bed  rests to one side of the room.  It is covered with beautiful
+quilts, and is draped in lace and satin.  This room is definitely a 
+place of pure luxury. 
+~
+145 8 0
+D0
+~
+~
+0 -1 14589
+D1
+~
+~
+0 -1 14579
+D2
+~
+~
+0 -1 14577
+S
+#14579
+The Baths~
+   This room is very large and smells softly of flowers.  A huge glass
+dome is used as the ceiling.  The dome is painted with pictures of 
+gods and goddesses in ultimate splendour. The sky seems dark from 
+this vantage point.  Lightning  crashes from overhead.  A gargantuan 
+pool with sparkling blue waters adorns the centre of the room.  Ivory 
+steps lead down to the water.  Even the floor here is made from ivory.
+Large statues and beautiful ferns decorate the room.  Steam rises from 
+the warm waters in this majestic place.
+~
+145 8 0
+D3
+~
+~
+0 -1 14578
+E
+pool~
+This is a tremendous pool, its blue water sparkles in the faint light.
+~
+S
+#14580
+A Dark Hallway~
+   This hallway is painted in a deep red tone, and soft black carpet has been
+laid on the floor.  On either side of the wall is a wrought iron couch, 
+covered in black-velvet upholstery. Large paintings adorn the walls, some 
+of ancient lords and ladies, who have undoubtedly long passed.  Magical 
+candelabras have also been placed at various intervals on the wall.  They 
+flicker with an ugly black flame, casting a strange glow about the hall.
+~
+145 8 0
+D1
+~
+~
+0 -1 14577
+D3
+~
+~
+0 -1 14581
+S
+#14581
+A Dark Hallway~
+   This is the corner of the long upstairs hallway of the castle. The most
+noticeable thing here is the huge armoire that adorns the western wall.  
+It is very large, and outstanding.  Strangely, there are many scratch marks 
+on the wall close by, and the carpet on the floor is partially torn.  There is
+definitely something strange about it.  The candelabras on this end of the
+hall are doubted, making it very dark, and even more solemn.  A huge
+door leads to the north.
+~
+145 8 0
+D0
+~
+door~
+1 -1 14584
+D1
+~
+~
+0 -1 14580
+D5
+A huge armoire hides some kind of passageway here.
+~
+armoire~
+8 -1 14582
+E
+armoire~
+This is an antique armoire, its very large, and old.  There is something strange about it.
+~
+S
+#14582
+A Stone Stairwell~
+   This is a very small and cramped stairwell.  The thick stone
+walls give off the cold aura of death.  The air is very thick
+and moist here.  A pungent reek wafts up from below, it
+smells like burning human flesh.  Dark stains cover the wide
+stone stairs.  It looks like dried up blood.  A magical torch
+is the only bit of light here, and its flickering black flame
+rises and falls with the draft coming from up above.
+~
+145 8 0
+D4
+A huge armoire hides the hallway.
+~
+armoire~
+8 -1 14581
+D5
+~
+~
+0 -1 14583
+S
+#14583
+The Torture Chamber~
+   Terror.  Everything about this room gives off the sheer aura of evil,
+and hatred.  Demons and spirits fly about the room in dark glee and
+the mutilated bodies of people, barely alive, are strewn and hung about
+the room.  The grotesque smell of burning flesh fills the room, as a spit 
+with a human body slowly rotates over the fire pit in the centre of the 
+room. Racks of stretched human skin are strewn about, as well as many
+torture devices such as iron maidens and the dreaded catherine wheel.  
+This place is a root of pure evil.
+~
+145 8 0
+D4
+~
+~
+0 -1 14582
+E
+iron~
+These are large metallic iron maidens.~
+E
+maiden~
+These are large metallic iron maidens.~
+E
+demons~
+These ethereal spirits and demons cast shades of darkness
+throughout the room.~
+E
+spirit~
+These ethereal spirits and demons cast shades of darkness
+throughout the room.~
+E
+spirits~
+These ethereal spirits and demons cast shades of darkness
+throughout the room.~
+E
+demon~
+These ethereal spirits and demons cast shades of darkness
+throught the room.~
+E
+pit~
+This is a large fire pit.~
+E
+fire~
+This is a large fire pit.~
+E
+spit~
+This large wooden spit rotates a human body slowly over the fire pit.~
+E
+racks~
+There are large wooden frames, with grotesque skin stretched on them.~
+E
+rack~
+There are large wooden frames, with grotesque skin stretched on them.~
+E
+catherine~
+A huge torture rack, with a large wheel and leather straps is here.~
+E
+wheel~
+A huge torture rack, with a large wheel and leather straps is here.~
+S
+#14584
+A Huge Guest Room~
+   This is a sprawling guest room, fit for a king.  Soft draperies and 
+carpets hang from walls, and decorate the floor.  A large bed is in 
+the centre of the room, it is very high, and covered in beautiful quilts 
+and pillows.  A large chandelier hangs from the ceiling, adding to the
+overall grace of the room.  There is also an unusual amount of 
+windows. They northern and eastern wall are covered in them, though
+they are stained black, and no light soaks through.
+~
+145 8 0
+D2
+~
+door~
+1 -1 14581
+S
+#14585
+A Dark Hallway~
+   This hallway is painted in a deep red tone, and soft black carpet has been 
+laid on the floor.  On either side of the wall is a wrought iron couch, covered
+in black-velvet upholstery. Large paintings adorn the walls, some of ancient
+lords and ladies, who have undoubtedly long passed.  Magical candelabras 
+have also been placed at various intervals on the wall.  They flicker with an
+ugly black flame, casting a strange glow about the hall.
+~
+145 8 0
+D1
+~
+~
+0 -1 14586
+D3
+~
+~
+0 -1 14577
+S
+#14586
+A Dark Hallway~
+   The hallway here is quite dark.  The blood-red walls are ugly and 
+foreboding. The magical luminescence from the ugly candelabras makes the
+place seem even more dreary, and somewhat deadly.  A very strange-looking
+chair is at the end of the hallway.  It is hard, and leathery, and seems to be 
+made from some kind of skin.  A large door leads off to the north.
+~
+145 8 0
+D0
+~
+~
+0 -1 14587
+D3
+~
+~
+0 -1 14585
+E
+chair~
+This chair appears to be made from stretched skin.
+~
+S
+#14587
+A Beautiful Ballroom~
+   This is a lavish ballroom, styled with many beautiful
+artifacts, and antique-looking furniture.  Many charming
+couches and chairs line the room, providing comfortable
+places to sit and relax.  Large bars stand at each of the
+four corners of the room as well.  The large oak cabinets
+behind them are stocked with liquor.  The floor in the centre
+of the room is designed from marble and is polished 
+to perfection.  A grand stage also occupies the eastern 
+wall, providing entertainment to any guests which may
+be staying at the castle.
+~
+145 8 0
+D0
+~
+~
+0 -1 14588
+D2
+~
+~
+0 -1 14586
+S
+#14588
+The Music Room~
+   The music room is a very eloquent place.  There are very large windows 
+on three of the walls, they soar almost to the ceiling.  Elaborate draperies 
+hang from each window, encasing them.  Beautiful furniture is also placed 
+about the room, adding a very royal air to the place.  Many musical 
+instruments are placed neatly away in their cases and stands.  There are more
+types of instruments here than is imaginable, this is surely a musicians paradise.
+~
+145 8 0
+D2
+~
+~
+0 -1 14587
+S
+#14589
+A Small Closet~
+   This is a large and open closet.  Huge shelves soar high into the
+room. They are neatly packed with beautiful and ornate items from
+all around the world.  Expensive-looking jewels are hanging from
+hooks, and gently placed in opened cases.  Long rods have been
+placed from one end of the room to the other.  Hanging from them
+are beautiful robes and dresses covered in ornate stitches.  A winding
+iron staircase is at the north of  the room, leading to, what appears to
+be the roof.
+~
+145 12 0
+D2
+~
+~
+0 -1 14578
+D4
+A trapdoor atop the staircase blocks access to the roof.
+~
+trapdoor~
+1 -1 14590
+S
+#14590
+The Widow's Walk~
+   This is the widow's walk that adorns the roof of this massive castle.
+The wooden floor and railing has been meticulously been carved 
+with gothic figures and patterns.  Four pedestals adorn the four
+corners of the squared walk.  Magical balls of fire hover over each
+pedestal, casting an eerie glow across the place.  The view here is
+magnificent. The meadows and forests of Keening are visible, as
+well as the glorious-looking glen.  Off in the far distance, a rolling
+sea is visible.  An empty feeling permeates the area.
+~
+145 0 3
+D5
+A trapdoor leads to the floor below.
+~
+trapdoor~
+1 -1 14589
+E
+balls~
+These magical balls of fire provide a great deal of
+light to this otherwise dark walkway.
+~
+S
+#14591
+A misty trail~
+   A thick mist hangs heavily in the air here.  Everything is dead 
+silence, there is no wind, and no other obvious movement. The ground
+here is very moist and there is no grass.  An apparent trail leads to
+the west of here.  The trail is very muddy, and has probably been used
+quite a bit.  Nothing else is visible through the dense mist.
+~
+145 0 0
+D1
+~
+tree~
+8 -1 12027
+D3
+~
+~
+0 -1 14592
+S
+#14592
+A misty trail~
+   There is a dense mist in the air here.  A muddy trail here leads to
+the north and east.  There are no plants or other wildlife growing here,
+everything feels lifeless.  Very little light filters through the mist,
+making it cold and dark.  A bitterly cold breeze blows down from the north,
+adding an eerie effect to the area.
+~
+145 0 0
+D0
+~
+~
+0 -1 14593
+D1
+~
+~
+0 -1 14591
+S
+#14593
+A misty trail~
+   A fairly dense mist hangs loose in the air here.  In the
+not-so-disant north, two huge mountain peaks shoot up from amidst the
+dense fog.  A bitterly cold wind blows from high above.  A muddy trail
+here leads to the north and south. Small patches of grass grow away 
+from the path, on more solid ground.  There is an odd mixture of 
+powerful magic permeating the area.
+~
+145 0 0
+D0
+~
+~
+0 -1 14500
+D2
+~
+~
+0 -1 14592
+S
+#0
+$~

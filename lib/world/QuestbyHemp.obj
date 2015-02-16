@@ -1,0 +1,1412 @@
+#26200
+sack hemp hempquest~
+sack made from hemp~
+A quester's sack, made from hemp, the finest fiber in the land.~
+~
+15 1 1
+10000 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26201
+belt eagle feathers hempquestprize decay~
+a belt of eagle feathers~
+A belt made from eagle feathers has been left here, smelling of ale.~
+~
+9 134217792 2049
+19 0 0 0
+11 2097593 28813
+0
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+52 11
+T
+16651
+B
+16777216
+#26202
+cloak goose down hempquestprize decay~
+a goose down traveling cloak~
+A warm traveling cloak made from goose down radiates a pale green aura.~
+~
+9 134217792 1025
+23 0 0 0
+11 2097593 28813
+0
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+13 47
+T
+16651
+B
+16777216
+#26203
+sleeves moose hide hempquestprize decay~
+a pair of moose-hide sleeves~
+A pair of sleeves crafted from the thick hide of a giant moose.~
+~
+9 134217792 257
+17 0 0 0
+11 2097593 28813
+0
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+53 3
+T
+16651
+B
+8
+#26204
+flaming flame fire hair brush hairbrush antioch~
+The Flaming Hairbrush of Antioch~
+A nondescript look hairbrush is resting here, yet it feels powerful. ~
+~
+1 134217793 65537
+0 0 -1 0
+20 200000 1000
+10
+E
+hairbrush~
+This hairbrush looks boring and non-descrpit until you grasp
+it in your hand, and it flames to life, illuminating the room.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 2
+B
+8
+#26215
+coat ugly hideous hideously striped fur~
+A Hideously Ugly Fur Coat~
+A hideously ugly fur coat sits here, even the vermin run from it.~
+~
+9 134218049 9
+24 0 0 0
+18 150000 69
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -16
+A
+18 2
+B
+20
+#26216
+belt tacky ugly gold golden~
+A Hideously Tacky Gold Belt~
+A hideously tacky gold belt lies on the ground here.~
+~
+9 134217793 2049
+10 -1 13 11
+10 500000 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 11
+B
+32768
+#26217
+hat hideous purple feather feathered plumage~
+A Bright Purple Plumed Hat~
+A bright purple hat rests here, a feather sticking out of it.~
+~
+9 134218048 17
+10 6 5 2
+19 50000 12000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+4 2
+B
+32
+#26220
+card thank you color colorful~
+A red thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26221
+card thank you color colorful~
+An orange thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26222
+card thank you color colorful~
+A yellow thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26223
+card thank you color colorful~
+A green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26224
+card thank you color colorful~
+A blue thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26225
+card thank you color colorful~
+A purple thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26226
+card thank you color colorful~
+A violet thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26227
+card thank you color colorful~
+An indigo thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26228
+card thank you color colorful~
+A magenta thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26229
+card thank you color colorful~
+A gray thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26230
+card thank you color colorful~
+A black thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26231
+card thank you color colorful~
+A white thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26232
+card thank you color colorful~
+A pink thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26233
+card thank you color colorful~
+A maroon thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26234
+card thank you color colorful~
+A royal blue thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26235
+card thank you color colorful~
+A navy blue thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26236
+card thank you color colorful~
+A periwinkle thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26237
+card thank you color colorful~
+A baby blue thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26238
+card thank you color colorful~
+A sky blue thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26239
+card thank you color colorful~
+An aqua thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26240
+card thank you color colorful~
+A gold thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26241
+card thank you color colorful~
+A silver thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26242
+card thank you color colorful~
+A bronze thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26243
+card thank you color colorful~
+A platinum thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26244
+card thank you color colorful~
+A fuscia thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26245
+card thank you color colorful~
+An off-white thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26246
+card thank you color colorful~
+An eggshell white thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26247
+card thank you color colorful~
+A yellow-green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26248
+card thank you color colorful~
+A blue-green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26249
+card thank you color colorful~
+A sea green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26250
+card thank you color colorful~
+A sepia thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26251
+card thank you color colorful~
+A lime green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26252
+card thank you color colorful~
+A yellow-orange thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26253
+card thank you color colorful~
+A thistle thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26254
+card thank you color colorful~
+An olive green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26255
+card thank you color colorful~
+A wintergreen thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26256
+card thank you color colorful~
+A copper thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26257
+card thank you color colorful~
+A spring green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26258
+card thank you color colorful~
+A goldenrod thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26259
+card thank you color colorful~
+A peach thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26260
+card thank you color colorful~
+An apricot thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26261
+card thank you color colorful~
+A neon green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26262
+card thank you color colorful~
+An electric yellow thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26263
+card thank you color colorful~
+A bright red thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26264
+card thank you color colorful~
+A brick red thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26265
+card thank you color colorful~
+A brown thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26266
+card thank you color colorful~
+A puke green thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26267
+card thank you color colorful~
+A clear thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26268
+card thank you color colorful~
+A tan thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26269
+card thank you color colorful~
+A khaki thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26270
+card thank you color colorful~
+A carnation pink thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26271
+card thank you color colorful~
+A plum thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26272
+card thank you color colorful~
+A mulberry thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26273
+card thank you color colorful~
+A strawberry thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26274
+card thank you color colorful~
+A cherry thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26275
+card thank you color colorful~
+A lavender thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26276
+card thank you color colorful~
+A bittersweet thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26277
+card thank you color colorful~
+A burgundy thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26278
+card thank you color colorful~
+A chartreuse thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26279
+card thank you color colorful~
+A puce thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26280
+card thank you color colorful~
+An amber thank you card~
+A thank you card lies on the ground.  If you don't deserve, don't take!~
+~
+0 524288 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26286
+giblet turkey mystical hempquest~
+a giblet from a mystical turkey~
+A giblet scoured from a mystical uber turkey is here.~
+~
+8 134742016 1
+0 0 0 0
+1 112510 1125
+0
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26287
+wishbone turkey mystical hempquest~
+a wishbone from a mystical turkey~
+A wishbone wrenched from a mystical uber turkey is here.~
+~
+8 134742016 1
+0 0 0 0
+1 112510 1125
+0
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26288
+drumstick turkey mystical hempquest~
+a drumstick from a mystical turkey~
+A drumstick torn from a mystical uber turkey is here.~
+~
+8 134742016 1
+0 0 0 0
+1 112510 1125
+0
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#26289
+shamrock hempquest~
+a lucky shamrock~
+A green shamrock is here, lost by some unlucky fellow.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26290
+shamrock hempquest~
+a lucky shamrock~
+A green shamrock is here, lost by some unlucky fellow.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26291
+shamrock hempquest~
+a lucky shamrock~
+A green shamrock is here, lost by some unlucky fellow.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26292
+pot potofgold hempquest~
+a pot of gold~
+A pot full of leprechaun gold is here, bathed in a faint rainbow halo.~
+~
+15 0 1
+10000 15 26289 0
+10000 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26293
+pot potoffoolsgold hempquest~
+a pot of fool's gold~
+A pot full of gold is here, yet where's the rainbow?~
+~
+15 0 1
+10000 15 26290 0
+10000 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26298
+dagger hemp testonly~
+Hemp's Testing Dagger~
+A dagger for tester's has been left here, DO NOT USE!~
+~
+5 134217728 8193
+0 2 30 11
+10 10 10
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26299
+helmet hemp testonly~
+Hemp's Testing Helmet~
+A helmet for tester's has been left here, DO NOT USE!~
+~
+9 134217728 17
+300 -1 -1 -1
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 65
+A
+18 15
+A
+53 30
+B
+16810120
+#0
+$~

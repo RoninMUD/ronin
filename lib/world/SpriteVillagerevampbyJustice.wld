@@ -1,0 +1,537 @@
+#100
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+1 576 0
+S
+#101
+Dimly lit alley~
+   This alley smells as bad as it looks.  Piles of garbage line the
+brick walls on either side of you.  North of you is the end of the alley.
+The path to the south leads back to the forest.  
+~
+1 68 1
+D0
+The end of the alley.
+~
+dimly lit alley~
+0 -1 102
+D2
+a path back toward the forest.
+~
+~
+0 -1 6000
+S
+#102
+End of a dark alley~
+   The abrupt end of the alley looms ahead.  Brick walls tower over you 
+leaving little spots of sunlight filtering from above.  A large straw mat
+lies in front of the solid brick wall.  To the south lies the path back to
+the forest.
+~
+1 68 1
+D0
+As you look at the monsterous brick wall you see a faint outline of a door.
+~
+door~
+1 -1 103
+D2
+Dimly lit alley
+~
+End of the alley~
+0 -1 101
+D4
+The brick wall isn't exactly the smoothest wall you've seen, almost climbable.
+~
+wall~
+11 -1 107
+D5
+~
+mat~
+9 -1 106
+E
+wall~
+A tall brick wall towers above your head
+~
+E
+mat~
+A large straw mat@
+color colors
+~
+E
+mat~
+A large straw mat with the words `bDANGER`h covers a broken wooden porch
+~
+E
+door~
+Well hidden on the face of the wall you see a door made of bricks
+~
+S
+#103
+Dimly lit path~
+  This section of the road is badly worn and frequently traversed.
+The voices are getting stronger to the north.  The road back to 
+the forest lies to the south.
+~
+1 0 3
+D0
+the entrance to a small village.
+~
+~
+0 -1 104
+D2
+a dimly lit path.
+~
+~
+1 -1 102
+S
+#104
+Entrance to a small village~
+  You stand at the entrance to a tiny village.  You can see across the whole
+village easily. Small creatures scamper about this tiny village like ants at
+a picnic.
+~
+1 0 2
+D0
+a small stone road
+~
+~
+0 -1 105
+D2
+dimly lit path
+~
+~
+0 -1 103
+S
+#105
+Small stone road~
+  You are way to big to be using this road. The sprites of this tiny place 
+can't do much to stop you, so what do you care.The stone road continues to 
+the north, west, and east.There is still time to turn back and go south.
+~
+1 0 1
+D1
+a small stone road
+~
+~
+0 -1 110
+D2
+an entrance to a small village
+~
+~
+0 -1 104
+S
+#106
+Small stone road~
+  You continue to travel down the stone road. Boy is this place ever small,
+but then again so are the sprites, The stone road continues to the north,
+west, and south. A small repair shop lies to the east.
+~
+1 0 1
+D1
+a small repair shop
+~
+~
+0 -1 120
+D3
+a small stone road
+~
+~
+0 -1 112
+D4
+~
+mat~
+9 -1 102
+S
+#107
+Edge of the roof~
+   From this vantage point, you can see all that make these lands great.
+Villages and cities can be seen for miles in every direction. A beautiful
+sea rests to the west while a gigantic ocean rages to the east.  The roof
+you stand on feels like it was made to withstand many fierce storms and 
+animal attacks.  As you examine the rest of the roof you see to the north
+a rather large nest.  What could have made a nest THAT large?
+~
+1 0 1
+D0
+On the roof
+~
+~
+0 -1 108
+D5
+~
+wall~
+11 -1 102
+S
+#108
+On the roof~
+   You look down to the roads below and thankfully you haven't fallen 
+yet.  The roof continues on to the north toward the large nest.  To the
+south is the edge of the roof.  Large white spots cover the roof in 
+circular patterns.  You begin to hope the owner of the building was
+begining to paint.  YUCK!
+~
+1 0 1
+D0
+A large nest
+~
+~
+0 -1 109
+D2
+The edge of the roof
+~
+~
+0 -1 107
+S
+#109
+A large nest~
+   You stand before an enormous nest made of tree branches and what look
+like animal bones.  The intertwined branches seem to be illuminating an
+unidentified green energy.  The smell of rotting animal flesh comes wafting
+from the large nest.  To the east you see a small ledge.  Back to the south is the other end of the roof.
+~
+1 0 1
+D1
+a small ledge
+~
+ledge~
+9 -1 116
+D2
+On the roof
+~
+~
+0 -1 108
+E
+small well~
+  A small well is here.  Just the right size if your a sprite. But big
+enough for you to get some water from.  I'm sure the sprites wont mind,
+and if they do, what can they do about it.
+~
+S
+#110
+Small stone road~
+  You are standing at the corner of this tiny road. The dense forest to
+the east and south prevents exploration in those directions. A small, 
+but very strong buiding can be seen to the north, the stone road leads 
+to the west.
+~
+1 0 1
+D0
+a strong looking building
+~
+~
+0 -1 119
+D3
+a small stone road
+~
+~
+0 -1 105
+S
+#111
+Small stone road~
+   You are at a corner in this tiny road, the sprites scamper about your feet
+hopeing that you donot crush them. The road continues north and east, to the
+south is the village blacksmith.
+~
+1 0 1
+D0
+a small stone road
+~
+~
+0 -1 112
+D2
+the smithy
+~
+~
+0 -1 121
+S
+#112
+Small stone road~
+  The stone road has many corners are you find yourself it yet another one 
+of them. Your nose catchs a plesent smell, as you notice a small barkery
+to the west. The stone road continues to the south and east.
+~
+1 0 1
+D1
+a small stone road
+~
+~
+0 -1 106
+D2
+a small stone road
+~
+~
+0 -1 111
+D3
+the bakery
+~
+~
+0 -1 122
+S
+#113
+Stone Path~
+ You are walking along a cute little stone path. To the south lies a small
+house with a quarantine sign on the door. I wounder what is wrong with the
+poor owner of that house, lets hope the nurse can help him. To the west is
+a small hut, and the road lies to the east.
+~
+1 0 1
+D2
+a house in quarantine
+~
+door~
+2 107 125
+D3
+a small hut
+~
+~
+0 -1 123
+S
+#114
+Small stone road~
+  Its yet another part of the stone road. If you go west its the last
+section of the stone road. You can also go back to the small well to 
+the east.
+~
+1 0 1
+D3
+a small stone road
+~
+~
+0 -1 115
+S
+#115
+Small stone road~
+   The last piece of the stone road. You can go back to the stone road to the 
+east. A small little shop can be seen to the south. In the distance to the 
+north you can see a castle.
+~
+1 0 1
+D0
+a path to the castle
+~
+~
+0 -1 126
+D1
+a small stone road
+~
+~
+0 -1 114
+D2
+a small shop
+~
+~
+0 -1 124
+S
+#116
+Mushroom field~
+   Delicious mushrooms are grown here. You are not a fan of mushrooms 
+yourself but it seems to be the staple of thier diet. The stone road is
+west and another field is to the north.
+~
+1 0 1
+D0
+a field of mushrooms
+~
+~
+0 -1 117
+D3
+~
+~
+0 -1 109
+S
+#117
+Mushroom field~
+   Delicious mushrooms are grown here. You are not a fan of mushrooms 
+yourself but it seems to be the staple of thier diet. The stone road is
+west and fields lie to the north and south.
+~
+1 0 1
+D0
+a field of mushrooms
+~
+~
+0 -1 118
+D2
+a field of mushrooms
+~
+~
+0 -1 116
+S
+#118
+Mushroom field~
+   Delicious mushrooms are grown here. You are not a fan of mushrooms 
+yourself but it seems to be the staple of thier diet. The stone road is
+west and another field is to the south.
+~
+1 0 1
+D2
+a field of mushrooms
+~
+~
+0 -1 117
+S
+#119
+Inside the bank~
+   You are inside a tiny bank, the walls of this tiny building are much 
+thicker than any walls you have seen in this village. The bank looks as   
+if it is impossible for a sprite to rob, but it could quite easily be
+emptyed by you. The stone road is back to the south.
+~
+1 0 1
+D2
+a small stone road
+~
+~
+0 -1 110
+S
+#120
+Inside the repair shop~
+   This little shop has tools are all over the place, most of then to small 
+for you to use. From the look of the items on the wall this litte sprite
+can fix anything. The stone road lies is back to the west.
+~
+1 0 1
+D3
+a small stone road
+~
+~
+0 -1 106
+S
+#121
+The smithy~
+   This tiny smithy has all the tools of a normal smithy. A small anvil 
+sits in the middle of the room, and a small set of bellows provide the
+air to a tiny hearth. The stone road is back to the north.
+~
+1 0 1
+D0
+a small stone road
+~
+~
+0 -1 111
+S
+#122
+Inside the bakery~
+   Much to your surprise, you suddenly realize that the sprites are a much
+more efficient race then you imagined. This bakery is very impressive, it
+has all the yummy  goodies that any sprite would desire. The stone road lies 
+back to the east.
+~
+1 0 1
+D1
+a small stone road
+~
+~
+0 -1 112
+S
+#123
+The hut of a great hunter~
+   This is the hut of a great hunter, it is easy to tell from all the 
+animal skins covering the walls that this sprite is a fearless hunter.
+I hope he dosn't mind visitors. The stone road to the east is your 
+only exit.
+~
+1 0 1
+D1
+a small stone road
+~
+~
+0 -1 113
+S
+#124
+Toy maker~
+   You standing inside a toy makers shop, yes a toy maker, I guess sprites 
+have kids too. The stone road is to the north.
+~
+1 0 1
+D0
+a small stone road
+~
+~
+0 -1 115
+S
+#125
+Inside a small house~
+   Its the leader of the sprites home. This old sprite looks in very hard 
+shape, he seems to be suffering of some terrible disease, I hope its not 
+contagious. The nurse must have had the key to his house for emergencies.
+A stone path lies to the north.
+~
+1 0 1
+D0
+a stone path
+~
+door~
+2 107 113
+S
+#126
+Path to a castle~
+   You are walking along a path to an old castle. The castle is visible to
+the north. The stone road lies to the south.
+~
+1 0 1
+D0
+outside the castle
+~
+~
+0 -1 127
+D2
+a small stone road
+~
+~
+0 -1 115
+S
+#127
+Outside an old castle~
+  You are standing outside an old castle. You can hear screaming comeing 
+from inside. The castle is to the north while the path back to the sprite 
+village is to the south.
+~
+1 0 1
+D0
+an old castle
+~
+door~
+2 109 128
+D2
+path back to the village
+~
+~
+0 -1 126
+S
+#128
+Inside the castle~
+  You are inside an old castle, I wounder if this is the home of a great 
+sprite leader, or just a wealthy one. All of a sudden in a blinding cloud
+of smoke a sprite appears in the middle of the room with a trained spider
+by his side. You better get out of here, the only exit is the door to the
+south.
+~
+1 0 1
+D2
+outside the castle
+~
+door~
+2 109 127
+S
+#129
+A tiny hospitial~
+   This tiny building serves as the hospital for this small village. This
+small hospitial dosn't seem to have a doctor, just a cute little nurse,
+and from the way she is comeing and going I'd say she makes house calls.
+The only exit is to the east.
+~
+1 0 1
+S
+#0
+$~

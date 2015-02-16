@@ -1,0 +1,322 @@
+#17100
+thorn creature~
+The Thorn Creature~
+A creature made from thorns is standing here.
+~
+A strange creature made entirely from thorns twitching and twirling
+as it approaches you.
+~
+40 268697600 0 Y
+45 -15 -4 4d40+2000 1d20+50
+20000 450000
+8 8 1
+64 0 0d0+0 0
+0 1 0 0
+R
+8
+#17101
+black dragon~
+The Huge Black Dragon~
+A huge black dragon is here gnawing on some old bones.
+~
+This is a fierce dragon standing upright on two powerful hind legs. Its
+huge body covered entirely in black scales. A huge tails wings back and 
+fourth creating a hissing sound. Two huge reptilian eyes gaze almost 
+satisfactory down at you.
+~
+147470 939786368 -1000 Y
+60 -10 -5 5d1000+25000 20d20+75
+500000 2000000
+8 8 1
+57 0 0d0+0 3
+2 1 15 0
+5 3 10 0
+8 3 8 0
+0 0 0 0
+R
+0
+#17102
+green dragon~
+The Huge Green Dragon~
+A huge green dragon is standing here steaming from it's nostrils.
+~
+This creature is recognizable as one of the greatest green dragons alive.
+It's entire body stretches out an enormous 150 feet. Slender yet powerful    
+legs support the body while sharp claws prepare to attack. A huge tail
+thomps the ground in a horrible rythm.  
+~
+147498 939786368 -1000 Y
+60 5 -10 5d1000+18000 20d10+50
+500000 2000000
+8 8 2
+57 0 0d0+0 0
+0 0 0 0
+R
+0
+#17103
+silver dragon~
+The Huge Silver Dragon~
+A huge silver dragon spreads her wings in defiance at you.
+~
+This creature you immediately recognize as a huge silver dragon. It's
+scales flash in the light and it's muscles bulge beneath a scaled
+hide. Large powerful legs support the awsome body and powerful claws
+prepare for attack. Behind a tails swoops up and down.
+~
+524334 553910400 -1000 Y
+60 -15 -5 5d1000+20000 20d20+100
+500000 2000000
+8 8 2
+57 0 0d0+0 0
+0 0 0 0
+R
+0
+#17104
+dragon blue huge~
+The Huge Blue Dragon~
+A huge blue dragon is here spanning its wings.
+~
+A large creature with the lower body of the lion and the upper
+body of a bird. It's fur is slightly ragged and razor sharp
+claws grows on its paws.
+~
+42 402655360 1000 Y
+30 -10 0 50d50+20000 20d20+65
+100000 500000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+R
+0
+#17105
+steed~
+A River Steed~
+A River Steed is swimming here.
+~
+This strange creature looks like a seaworm with fins. A large set 
+of teeth shine as the river steed opens its huge mouth. Drooling 
+a slimy green substance it approaches you.
+~
+75599912 262144 0 Y
+40 -12 10 10d10+2000 5d20+30
+15000 300000
+11 8 1
+0 0 0d0+0 0
+0 1 0 0
+R
+0
+#17106
+sailor dragonkine~
+A Dragonkine Sailor~
+A Dragonkine Sailor is strolling along the ship.
+~
+A large dragonlike cerature standing upright on two legs. He measures
+nearly seven feet in height and another five feet extends into a heavy
+looking tail. The reptilian creature wear a combination of beautiful and
+majestic clothing colors matching to perfection. A glinting silver sabre
+dangles from a belt at his side. He wears a red scarf with a dragonlike
+skull on his head.
+~
+16392 268468232 0 Y
+55 -11 -6 5d50+7000 10d2+20
+20000 900000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+R
+0
+#17107
+admiral dragonkine~
+The Dragonkine Admiral~
+The Dragonkine Admiral sits here studying a large map.
+~
+This dragonlike creature is even taller than the others on this vessel.
+She measures a massive ten feet in height and her tail prolongs her body
+with another seven feet. She wears a beautiful shirt in the most exotic
+colors and baggy purple pants. Dangling on her right side is a thin   
+rapier while a pair of daggers decorate her left side. Around her neck  
+she wears a elegantly crafted torc made from black obsidian.
+~
+16394 671352970 1000 Y
+59 -20 -2 50d50+15000 20d10+60
+200000 3000000
+6 8 2
+57 0 0d0+0 -1
+0 0 0 0
+R
+0
+#17108
+dragonkine necromancer~
+A Dragonkine Necromancer~
+A Dragonkine Necromancer is here pondering his dark art.
+~
+This reptillian creature walks upright on two powerful legs. Its arms are
+also powerful and a tail stretches out five feet to enlargen the whole 
+creature. This creature wears filthy ragged black robes and a dark hood 
+conceals most of its face. It husks slightly as it walks towards you
+seemingly unaware of you and indeed the whole world.
+~
+8 536871042 0 Y
+50 -13 -3 20d10+2500 5d20+10
+30000 1100000
+8 8 1
+56 0 20d20+100 0
+0 0 0 0
+R
+0
+#17109
+dragonkine wizard~
+A Dragonkine Wizard~
+A Dragonkine Wizard saunters about in deep thought.
+~
+This reptillian creature is a mere six feet tall. It walks upright but
+has rather slim and weak looking arms. A thin and long tail grows out the  
+back of the reptile. It wears large blue robes filled with strange arcane  
+symbols woven with a golden thread. On its head it wears a large pointy    
+hat, this one too is filled with the same arcane symbols. It holds a
+large wooden staff, carved with the stranges runes and wards, in its
+right hand. A pair of sandals peek out from beneath the robe revealing a   
+scaled foot.   
+~
+12 268470410 0 Y
+50 -13 0 10d10+4000 5d25+10
+30000 1200000
+8 8 1
+56 0 0d0+0 0
+0 0 0 0
+R
+0
+#17110
+elementalist dragonkine~
+A Dragonkine Elementalist~
+A Dragonkine Elementalist is here comtemplating the sky.
+~
+This reptilian creature rises seven feet above the ground and has
+extremely powerful legs and arms. A heavy tail thumps rythmically on the
+cround creating a horrible and distracting drumming noise. The creature   
+is draped in thick brown robes and on its head it wears a large leather 
+coif. A pair of black leather boots protect its feet. As you watch
+closely you realize this creature has no scales. It's skin consists of a
+hard rocklike material making for good protection.
+~
+12 268959874 0 Y
+50 -10 0 20d10+4500 5d20+25
+30000 1200000
+8 8 1
+56 0 0d0+0 0
+0 0 0 0
+R
+0
+#17111
+Saulot dragonkine arch mage archmage~
+Saulot the Grand Arch-Mage~
+Saulot the Dragonkine Arch-Mage is pacing back and forth the room.
+~
+This huge reptilian creature stands over 30 feet tall. Covering it's
+shoulders is a robe made from black scales. It's entire silver body is
+covered with scales reflecting a burning light. Powerful arms flex and
+prepare for battle, while the  creature holds a dagger the size of a
+shortsword in his right hand and a huge and dusty grimoire firmly graped   
+in the left. The creature flashes its razorsharp teeth and slowly wags it's 
+spiked tail back and forth.
+~
+42 671350920 -1000 Y
+50 -30 -10 5d1000+20000 20d20+100
+3000000 4000000
+8 8 1
+57 0 10d100+2000 0
+0 0 0 0
+R
+0
+#17113
+elemental water edion~
+Edion the Water Elemental~
+A huge water elemental is here swirling like a whirlpool.
+~
+This creature resembles a large flying stingray. The outer side is
+black while its underside is gray. A large crystalline stinger swoops
+back and fourth at the end of its tail. A large mouth lined with
+rows of tiny razorsharp teeth gapes at you.
+~
+16426 671352960 -1000 Y
+60 -15 -5 1d4000+11555 5d10+100
+0 1200000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+R
+0
+#17114
+heral rock earth elemental~
+Heral the Earth Elemental~
+Heral the Earth Elemental is here creating small earthquakes.
+~
+This creature looks like a huge unfinished rock sculpture. Large feet
+pop out below the large boulder and six powerful arms line the sides of
+it. The whole rock body seems to bulge here and there. Somethimes you
+think you can see the features of a humanoid face on the large rock
+surface but it only appears for a moment and is then gone.
+~
+16394 671090816 1000 Y
+60 4 -10 2d400+12211 5d8+95
+0 1200000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+R
+0
+#17115
+feru fire elemental~
+Feru the Fire Elemental~
+A searing hot flame is darting across the floor here.
+~
+This creature has humanoid shape but is made entirely from lava. It
+stands upright on what would be legs and has powerful arms on its side.
+The creature is surrounded by an everburning flame combusting anything
+flammable when it comes to close. Now and then a pseudopod of lava is
+spouted out in any direction, fizzling and burning until it hardens and
+turns too rock.
+~
+16426 671352960 -1000 Y
+60 -15 -5 4d500+13245 7d10+100
+0 1200000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+R
+0
+#17116
+sekru air elemental~
+Sekru the Air Elemental~
+A huge whirlwind thunders across the room.
+~
+At first it looks like an ordinary whirlwind, but as you look closer    
+you see a person inside the whirlwind. He wears ragged torn clothes and
+grins strangely as he spins around creating the tornado. In his hands he
+holds a huge flail sparkling with electricity.   
+~
+147498 956565632 0 Y
+60 -15 -10 2d1000+14567 1d10+110
+0 1200000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+R
+0
+#17118
+thorn creature monster tremendous~
+A Tremendous Thorn Monster~
+A tremendous thorn creature is here twitching in the wind.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 134219904 0 Y
+60 5 -4 200d100+2000 20d20+100
+100000 2500000
+8 8 1
+0 0 50d10+100 0
+0 0 0 0
+R
+0
+#0
+$~

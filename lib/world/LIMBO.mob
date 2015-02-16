@@ -1,0 +1,199 @@
+#1
+Puff~
+Puff~
+Puff the Fractal Dragon is here, contemplating a higher reality.
+~
+~
+9 0 1000 Y
+26 -3 -1 5d10+550 4d6+3
+10000 155000
+8 8 2
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2
+corpse~
+corpse~
+A corpse is lying here.
+~
+~
+8 0 0 Y
+1 19 0 1d1+1 1d1+1
+0 0
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3
+paperboy crier boy~
+The newspaper boy~
+The town paperboy stands here, hawking papers.
+~
+The town crier is a short lizard-boy with a toothy grin.  He wanders the
+town, hawking his newspapers with a hoarse voice.
+~
+16393 268738600 0 Y
+20 8 0 50d100+10000 8d8+8
+100 300000
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5
+Mimir well shopkeeper~
+Mimir the shopkeeper~
+Mimir, bent and stooped with age and wisdom, carefully cleans his shelves.
+~
+   Stooped and bent with countless years of wisdom, Mimir is bound to eternally
+serve Odin and the gods with sage advice and understanding. Though his head has
+been restored to him, he still remains indentured to Odin and bound to offer
+his wisdom and advice any time he requests it. Time has offered him the chance
+to pursue an interest in the mixing and brewing of potions which offers to
+Midgaards travelers and brave adventurers.
+~
+11 134217856 1000 Y
+30 -7 0 20d20+25000 12d2+30
+1000 200000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#6
+adventurer~
+Adventurer~
+An Adventurer is standing here.
+~
+~
+28 128 1000 Y
+35 -11 -4 5000d1+23000 50d3+46
+200000 400000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7
+hlin protector midgaard figure jail~
+Hlin, the protector of Midgaard~
+The strong figure of Hlin, the protector of Midgaard is standing here.
+~
+   Silent and strong, Hlin stands watch over the city of Midgaard. Carefully
+protecting its citizens and the multitudes of adventurers that visit, she
+is beautifully armored and radiates a calm aura of strength and peace as she
+watches over her charges.
+~
+75 2184 1000 Y
+35 -11 3107 10d10+28000 6d2+3
+20 100
+8 8 2
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8
+teacher~
+A teacher~
+A teacher is standing here.
+~
+~
+75 136 1000 Y
+30 -8 3107 10d10+28000 50d2+50
+20 100
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9
+ink monkey paste~
+the ink monkey~
+The ink monkey runs around making papers.
+~
+Less than a foot tall, and black as ink, this monkey is a hard working
+guy.  His eyes are full of fear of the clanking press, and dart from moving
+part to moving part trying to avoid becoming an entry in the obituaries.
+~
+141 0 0 Y
+1 19 1696 10d10+10 4d4+4
+15 500
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10
+postman~
+The Postman~
+A Postman is here collecting the mail.
+~
+He is a very hard working guy. No matter what day it is,
+he will be here waiting to serve you.  Watch out though,
+occasionally he goes bonkers and starts shooting.
+~
+75 128 1000 Y
+26 -3 3107 5d10+1050 4d6+3
+1000 125000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11
+rashgugh~
+Rashgugh~
+Rashgugh is standing here, taunting you with a token.
+~
+Rashgugh is Shargugh the forest brownie's older brother.
+His thick matted fur gives him great protection
+from physical attack and his forest living has
+made him fearless.
+~
+16394 262144 0 Y
+40 -10 0 10d20+2000 5d6+50
+20000 30000
+8 8 1
+68 28864 4d15+500 2
+2 1 10 0
+1 1 10 26
+0 0 0 1
+K
+0 0 0 0 0 0 0
+#12
+metaphysician meta physician tsing~
+Tsing the Metaphysician~
+A bent old man, squinting eyes and steady hands, trims a tiny tree.
+~
+   Lean hard muscle stands out firm against boney wrists and thin, grasping 
+fingers. Thin wisps of grey hair poke out wildly from beneath his round cap.
+Bright blue eyes stab out from beneath thick eyebrows, their keen gaze fixed
+intently on his work.
+~
+11 128 1000 Y
+31 -10 3107 5d2+21000 6d6+9
+5 300000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#13
+rashgugh evil clone~
+Rashgugh's Evil Clone~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+16394 0 -1000 Y
+55 -22 -15 1d1+1 1d1+1
+0 3000000
+8 8 1
+68 28864 1d1+1 0
+0 0 0 1
+K
+0 0 0 0 0 0 0
+#0
+$~

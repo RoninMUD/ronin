@@ -1,0 +1,1090 @@
+#26800
+Along an Icy River~
+A temporary description
+~
+268 4 9
+D3
+~
+~
+0 -1 26801
+S
+#26801
+Entering the Frozen Marsh~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26800
+D2
+~
+~
+0 -1 26802
+S
+#26802
+The Frozen Marsh~
+A temporary description
+~
+268 0 3
+D0
+~
+~
+0 -1 26801
+D3
+~
+~
+0 -1 26803
+S
+#26803
+The Frozen Marsh~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26802
+D2
+~
+~
+0 -1 26804
+S
+#26804
+The Frozen Marsh~
+A temporary description
+~
+268 0 3
+D0
+~
+~
+0 -1 26803
+D2
+~
+~
+0 -1 26805
+D3
+~
+~
+0 -1 26807
+S
+#26805
+Near a Dark Gully~
+A temporary description
+~
+268 0 3
+D0
+~
+~
+0 -1 26804
+D1
+~
+~
+0 -1 26806
+S
+#26806
+A Dark Gully~
+A temporary description
+~
+268 1 5
+D3
+~
+~
+0 -1 26805
+S
+#26807
+A Trail Junction in the Marsh~
+A temporary description
+~
+268 0 2
+D0
+~
+~
+0 -1 26808
+D1
+~
+~
+0 -1 26804
+D2
+~
+~
+0 -1 26874
+S
+#26808
+A Rickety Old Bridge~
+A temporary description
+~
+268 0 1
+D0
+~
+~
+0 -1 26810
+D2
+~
+~
+0 -1 26807
+D5
+~
+~
+0 -1 26809
+S
+#26809
+Beneath the Bridge~
+A temporary description
+~
+268 131077 6
+D4
+~
+~
+0 -1 26808
+S
+#26810
+A Worn Trail Through the Marsh~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26811
+D2
+~
+~
+0 -1 26808
+D3
+~
+~
+0 -1 26815
+S
+#26811
+A Misty Trail Through the Marsh~
+A temporary description
+~
+268 0 3
+D0
+~
+~
+0 -1 26812
+D3
+~
+~
+0 -1 26810
+S
+#26812
+A Misty Trail Through the Marsh~
+A temporary description
+~
+268 0 3
+D2
+~
+~
+0 -1 26811
+D3
+~
+~
+0 -1 26813
+S
+#26813
+A Misty Trail Through the Marsh~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26812
+D3
+~
+~
+0 -1 26814
+S
+#26814
+A Worn Split in the Path~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26813
+D2
+~
+~
+0 -1 26815
+D3
+~
+~
+0 -1 26816
+S
+#26815
+A Worn Trail Through the Marsh~
+A temporary description
+~
+268 0 3
+D0
+~
+~
+0 -1 26814
+D1
+~
+~
+0 -1 26810
+S
+#26816
+An Intersection of Dismal Paths~
+A temporary description
+~
+268 0 3
+D0
+~
+~
+0 -1 26817
+D1
+~
+~
+0 -1 26814
+D3
+~
+~
+0 -1 26825
+S
+#26817
+A Gloomy Trail Through the Marsh~
+A temporary description
+~
+268 524289 3
+D2
+~
+~
+0 -1 26816
+D3
+~
+~
+0 -1 26818
+S
+#26818
+A Gloomy Trail Through the Marsh~
+A temporary description
+~
+268 524289 3
+D1
+~
+~
+0 -1 26817
+D3
+~
+~
+0 -1 26819
+S
+#26819
+A Gloomy Intersection in the Marsh~
+A temporary description
+~
+268 524289 3
+D0
+~
+~
+0 -1 26820
+D1
+~
+~
+0 -1 26818
+D3
+~
+~
+0 -1 26822
+S
+#26820
+A Gloomy Trail Through the Marsh~
+A temporary description
+~
+268 524289 3
+D2
+~
+~
+0 -1 26819
+D3
+~
+~
+0 -1 26821
+S
+#26821
+The End of the Gloomy Trail~
+A temporary description
+~
+268 524289 3
+D1
+~
+~
+0 -1 26820
+S
+#26822
+Next to a Huge Boulder~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26819
+D2
+~
+~
+0 -1 26823
+D3
+~
+~
+0 -1 26828
+S
+#26823
+A Crossing of Worn Paths~
+A temporary description
+~
+268 4 2
+D0
+~
+~
+0 -1 26822
+D1
+~
+~
+0 -1 26824
+D2
+~
+~
+0 -1 26826
+S
+#26824
+A Dismal Path Through the Marsh~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26825
+D3
+~
+~
+0 -1 26823
+S
+#26825
+A Dismal Path Through the Marsh~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26816
+D3
+~
+~
+0 -1 26824
+S
+#26826
+Near a Spooky, Twisted Tree~
+A temporary description
+~
+268 170917888 2
+D0
+~
+~
+0 -1 26823
+D5
+~
+~
+0 -1 26827
+S
+#26827
+A Murky Trail of Mud~
+A temporary description
+~
+268 237010953 0
+D4
+~
+~
+0 -1 26826
+S
+#26828
+Behind a Huge Boulder~
+A temporary description
+~
+268 0 4
+D1
+~
+~
+0 -1 26822
+D3
+~
+~
+0 -1 26829
+S
+#26829
+Next to a Huge Boulder~
+A temporary description
+~
+268 0 4
+D1
+~
+~
+0 -1 26828
+D2
+~
+~
+0 -1 26830
+S
+#26830
+A Lake-Side Path~
+A temporary description
+~
+268 0 2
+D0
+~
+~
+0 -1 26829
+D3
+~
+~
+0 -1 26831
+S
+#26831
+A Lake-Side Path~
+A temporary description
+~
+268 0 2
+D1
+~
+~
+0 -1 26830
+D3
+~
+~
+0 -1 26832
+S
+#26832
+Approaching a Ruined Castle~
+A temporary description
+~
+268 0 2
+D1
+~
+~
+0 -1 26831
+D2
+~
+~
+0 -1 26833
+S
+#26833
+A Murky Junction~
+A temporary description
+~
+268 0 2
+D0
+~
+~
+0 -1 26832
+D2
+~
+~
+0 -1 26837
+D3
+~
+~
+0 -1 26834
+S
+#26834
+Before the Ruined Gates~
+A temporary description
+~
+268 67108864 1
+D0
+~
+~
+0 -1 26835
+D1
+~
+~
+0 -1 26833
+D2
+~
+~
+0 -1 26836
+S
+#26835
+A Crumbling Guardhouse~
+A temporary description
+~
+268 9 0
+D2
+~
+~
+0 -1 26834
+S
+#26836
+Near the Eastern Castle Wall~
+A temporary description
+~
+268 0 2
+D0
+~
+~
+0 -1 26834
+D1
+~
+~
+0 -1 26837
+D2
+~
+~
+0 -1 26838
+S
+#26837
+A Murky Trail~
+A temporary description
+~
+268 131072 6
+D0
+~
+~
+0 -1 26833
+D3
+~
+~
+0 -1 26836
+S
+#26838
+A Worn Path to a Ruined Castle~
+A temporary description
+~
+268 0 2
+D0
+~
+~
+0 -1 26836
+D2
+~
+~
+0 -1 26839
+S
+#26839
+The Western Gates of the Graveyard~
+A temporary description
+~
+268 0 1
+D0
+~
+~
+0 -1 26838
+D1
+~
+gate gates iron~
+1 -1 26840
+S
+#26840
+Inside the Western Gates~
+A temporary description
+~
+268 4194304 1
+D1
+~
+~
+0 -1 26841
+D3
+~
+~
+0 -1 26839
+S
+#26841
+A Path Through the Graveyard~
+A temporary description
+~
+268 4194304 1
+D2
+~
+~
+0 -1 26842
+D3
+~
+~
+0 -1 26840
+S
+#26842
+A Split in the Graveyard Path~
+A temporary description
+~
+268 4194304 1
+D0
+~
+~
+0 -1 26841
+D1
+~
+~
+0 -1 26844
+D2
+~
+~
+0 -1 26843
+S
+#26843
+An Ancient Avalanche~
+A temporary description
+~
+268 4194304 5
+D0
+~
+~
+0 -1 26842
+S
+#26844
+A Path Through the Graveyard~
+A temporary description
+~
+268 4194304 1
+D0
+~
+~
+0 -1 26845
+D1
+~
+~
+0 -1 26849
+D3
+~
+~
+0 -1 26842
+S
+#26845
+A Sunken Path Through the Graveyard~
+A temporary description
+~
+268 0 6
+D0
+~
+~
+0 -1 26846
+D2
+~
+~
+0 -1 26844
+S
+#26846
+Above a Sunken Tomb~
+A temporary description
+~
+268 0 6
+D2
+~
+~
+0 -1 26845
+D3
+~
+~
+0 -1 26848
+D5
+~
+slab stone tomb broken~
+1 -1 26847
+S
+#26847
+Within a Sunken Tomb~
+A temporary description
+~
+268 5357965 6
+D4
+~
+~
+1 -1 26846
+S
+#26848
+A Sunken Path Through the Graveyard~
+A temporary description
+~
+268 0 6
+D1
+~
+~
+0 -1 26846
+S
+#26849
+A Path Through the Graveyard~
+A temporary description
+~
+268 4194304 1
+D0
+~
+~
+0 -1 26850
+D3
+~
+~
+0 -1 26844
+S
+#26850
+Inside the Eastern Gates~
+A temporary description
+~
+268 4194304 1
+D0
+~
+~
+0 -1 26851
+D1
+~
+~
+0 -1 26855
+D2
+~
+~
+0 -1 26849
+S
+#26851
+An Old Noble's Tomb~
+A temporary description
+~
+268 0 1
+D2
+~
+~
+0 -1 26850
+D5
+~
+slab stone tomb~
+1 -1 26852
+S
+#26852
+The Keldon Brother's Tomb~
+A temporary description
+~
+268 6291469 0
+D0
+~
+door stone~
+1 -1 26853
+D2
+~
+door stone~
+1 -1 26854
+D4
+~
+~
+1 -1 26851
+S
+#26853
+Ilgesh's Tomb~
+A temporary description
+~
+268 6291469 0
+D2
+~
+~
+0 -1 26852
+S
+#26854
+Rendmar's Tomb~
+A temporary description
+~
+268 6291469 0
+D0
+~
+~
+0 -1 26852
+S
+#26855
+The Eastern Gates of the Graveyard~
+A temporary description
+~
+268 0 2
+D1
+~
+~
+0 -1 26856
+D3
+~
+gate gates iron~
+1 -1 26850
+S
+#26856
+Approaching an Ancient Graveyard~
+A temporary description
+~
+268 0 3
+D0
+~
+~
+0 -1 26857
+D3
+~
+~
+0 -1 26855
+S
+#26857
+An Intersection of Trails~
+A temporary description
+~
+268 0 2
+D0
+~
+~
+0 -1 26858
+D1
+~
+~
+0 -1 26869
+D2
+~
+~
+0 -1 26856
+S
+#26858
+A Seldom-Used Trail to the Lake~
+A temporary description
+~
+268 0 2
+D0
+~
+~
+0 -1 26859
+D2
+~
+~
+0 -1 26857
+S
+#26859
+Mirkmire Lake~
+A temporary description
+~
+268 4 7
+D2
+~
+~
+0 -1 26858
+D3
+~
+~
+0 -1 26860
+S
+#26860
+Mirkmire Lake~
+A temporary description
+~
+268 4 7
+D1
+~
+~
+0 -1 26859
+D3
+~
+~
+0 -1 26861
+S
+#26861
+Mirkmire Lake~
+A temporary description
+~
+268 4 7
+D0
+~
+~
+0 -1 26862
+D1
+~
+~
+0 -1 26860
+S
+#26862
+Ztxilshyrakc's Isle~
+A temporary description
+~
+268 0 3
+D2
+~
+~
+0 -1 26861
+D5
+~
+~
+0 -1 26863
+S
+#26863
+A Deep, Dark Cavern~
+A temporary description
+~
+268 33289 0
+D3
+~
+~
+0 -1 26864
+D4
+~
+~
+0 -1 26862
+S
+#26864
+A Deep, Dark Cavern~
+A temporary description
+~
+268 33289 0
+D0
+~
+~
+0 -1 26865
+D1
+~
+~
+0 -1 26863
+S
+#26865
+A Deep, Dark Cavern~
+A temporary description
+~
+268 33289 0
+D1
+~
+~
+0 -1 26866
+D2
+~
+~
+0 -1 26864
+S
+#26866
+A Deep, Dark Cavern~
+A temporary description
+~
+268 33289 0
+D0
+~
+~
+0 -1 26867
+D3
+~
+~
+0 -1 26865
+S
+#26867
+Above the Lair~
+A temporary description
+~
+268 33289 0
+D2
+~
+~
+0 -1 26866
+D5
+~
+~
+0 -1 26868
+S
+#26868
+Ztxilshyrakc's Lair~
+A temporary description
+~
+268 557577 0
+D4
+~
+~
+0 -1 26867
+S
+#26869
+A Lonely Trail~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26870
+D3
+~
+~
+0 -1 26857
+S
+#26870
+A Lonely Trail~
+A temporary description
+~
+268 0 3
+D1
+~
+~
+0 -1 26871
+D3
+~
+~
+0 -1 26869
+S
+#26871
+A Lonely Intersection~
+A temporary description
+~
+268 0 2
+D0
+~
+~
+0 -1 26872
+D1
+~
+~
+0 -1 26874
+D2
+~
+~
+0 -1 26873
+D3
+~
+~
+0 -1 26870
+S
+#26872
+Waterlogged Docks~
+A temporary description
+~
+268 0 6
+D2
+~
+~
+0 -1 26871
+S
+#26873
+A Jagged Cliff Wall~
+A temporary description
+~
+268 0 4
+D0
+~
+~
+0 -1 26871
+S
+#26874
+A Lonely Trail~
+A temporary description
+~
+268 0 3
+D0
+~
+~
+0 -1 26807
+D3
+~
+~
+0 -1 26871
+S
+#26899
+Kludgified Room~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+268 0 0
+S
+#0
+$~

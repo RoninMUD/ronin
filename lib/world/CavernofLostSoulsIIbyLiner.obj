@@ -1,0 +1,141 @@
+#16900
+candelabra silver~
+A silver candelabra~
+A silver candelabra stands in a corner, flickering dim rays of light.~
+~
+8 64 0
+0 0 0 0
+10 10 10
+100
+E
+silver~
+This token of wrought-silver has been placed here long ago to
+mark the entrance to the lower caverns.  Intricate patterns
+and designs have been carved into the shiny stand, and 6 tallow
+candles emit a flat, greasy glow.
+~
+E
+candelabra~
+This token of wrought-silver has been placed here long ago to
+mark the entrance to the lower caverns.  Intricate patterns
+and designs have been carved into the shiny stand, and 6 tallow
+candles emit a flat, greasy glow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16901
+shovel ancient~
+A miner's shovel~
+An ancient miner's shovel stands haft-deep in the ground here.~
+shovel connects with $V's head in a resounding thud.~
+5 32 8193
+0 3 5 7
+8 500 1500
+20
+E
+shovel~
+This ancient shovel was used by the mining slaves in these tunnels
+long ago.  Dirt and grime streak the handle and the head is a
+uniform gray with wear.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#16902
+shield web~
+A Web-strewn Shield~
+A dull-metallic shield lay in a pile of gossamer webbing here.~
+~
+9 134217761 513
+20 0 0 0
+12 2500 7500
+7
+E
+shield~
+The metallic surface of this shield is faceted with four separate
+engravings, the spirits of the four winds, four directions
+within the subterranean province.  Dried blood stains the outside
+beneath a carpet of cobwebs.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 13
+A
+18 2
+#16903
+plate armor web metal~
+A Web-strewn Plate~
+A metal plate of armor sits moldering in a carpet of spiderwebs.~
+~
+9 134217760 9
+18 0 0 0
+18 2000 6100
+8
+E
+armor~
+A metal suit of fullplate, rusty and pitted, this armor was worn
+by the home guard which once patrolled through these walls.
+A dusty carpet of webbing drapes across the outside and within,
+now the home for a colony of spiders.
+~
+E
+plate~
+A metal suit of fullplate, rusty and pitted, this armor was worn
+by the home guard which once patrolled through these walls.
+A dusty carpet of webbing drapes across the outside and within,
+now the home for a colony of spiders.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 16
+#16904
+headstone~
+A shattered headstone~
+The shattered remains of a headstone lay strewn about the ground.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+headstone~
+Death is but a new beginning,
+release from sorrow and pain.
+We hope he has a peaceful rest,
+this man without a name.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

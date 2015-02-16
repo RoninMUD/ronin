@@ -1,0 +1,1914 @@
+#900
+A forest path~
+   The forest here is extremely thick, although the trees are rather
+short. The undergrowth is rampant and colorful, bursting with reds,
+browns, and, of course, many shades of green. A large opening in
+the trees south of here reveals a field, while the path you are
+on continues north.
+~
+9 4 3
+D0
+~
+~
+0 -1 901
+D2
+~
+~
+0 -1 10009
+S
+#901
+A forest path~
+   The trees here are barely twelve feet tall, but grow very close
+together, undergrowth almost half the distance up the tallest trunk.
+There is no chance of you wandering from this small path, and it
+doesn't seem wise to do so in any case.
+~
+9 0 3
+D0
+~
+~
+0 -1 902
+D2
+~
+~
+0 -1 900
+S
+#902
+A forest path~
+   The undergrowth is very thick here, and the trees verdant in
+evergreen glory. The path is covered in a fine layer of red, brown,
+and yellow needles almost soft enough to lie down and sleep on
+comfortably. The path continues to the north and to the south.
+~
+9 0 3
+D0
+~
+~
+0 -1 903
+D2
+~
+~
+0 -1 901
+S
+#903
+A path through the forest~
+  You pause to scratch your neck as a needle falls down your shirt.
+The light here is filtered and slow as it passes through heavy pollen,
+and the trees here are only a few feet taller than you, but thick brush
+prevents any movement than along this north-south path.
+~
+9 0 3
+D0
+~
+~
+0 -1 904
+D2
+~
+~
+0 -1 902
+S
+#904
+A path through the stunted forest~
+  The trees here, almost all gymnosperms, are short and stunted, and
+the wind howls only a few feet above your head. Her, just under the
+tops of the trees, everything is very peaceful. The path continues
+to the north.
+~
+9 0 3
+D0
+~
+~
+0 -1 905
+D2
+~
+~
+0 -1 903
+S
+#905
+On the path, by the grove~
+  A grove of tall, dark green trees lies to your west, much taller
+than the stunted trees which surround you now. The path continues
+to the north, while a small track leads off into the grove to the
+west.
+~
+9 0 3
+D0
+~
+~
+0 -1 918
+D2
+~
+~
+0 -1 904
+D3
+~
+~
+0 -1 935
+S
+#906
+In the Grove~
+  A small path can be seen to the south, while the grove continues to
+the north and west. There is a thick haze of pollen and dust in the air
+here, glowing golden from the few shafts of sunlight which penetrate
+this far.  Thick brambles prevent movement to your east.
+~
+9 0 3
+D0
+~
+~
+0 -1 908
+D2
+~
+~
+0 -1 935
+D3
+~
+~
+0 -1 911
+S
+#907
+The Grove~
+  Long creepers and vines dangle out of the haze here, smacking you
+in the face as you walk along through the deep mulch. Tree trunks loom
+out of the darkness in paleolithic splendour, and the odor of musty,
+almost-rotting humous rises from the forest floor. Thick brambles
+prevent movement east, while the grove continues in all other directions.
+~
+9 0 3
+D0
+~
+~
+0 -1 915
+D2
+~
+~
+0 -1 908
+D3
+~
+~
+0 -1 909
+S
+#908
+In the Grove~
+  The trees are massive here, girdled by fungus and moss. If the thick
+haze of pollen and dust were not present, you could maybe see the lowest
+of their branches. Not even the sun can penetrate all the way to the
+forest floor here, only a dim glow in the haze above you. Thick brambles
+prevent movement east.
+~
+9 0 3
+D0
+~
+~
+0 -1 907
+D2
+~
+~
+0 -1 906
+D3
+~
+~
+0 -1 910
+S
+#909
+In the Grove~
+  Vines dangle from the huge trees here, and the ground is almost
+completely clear of undergrowth. There is a puddle of strange ooze
+beneath your feet, stinking of rotting vegetables and humous. You
+hear a loud belching sound and a small creature climbs out from
+under a rotting log, grumbling.
+~
+9 0 3
+D0
+~
+~
+0 -1 916
+D1
+~
+~
+0 -1 907
+D2
+~
+~
+0 -1 910
+D3
+~
+~
+0 -1 914
+S
+#910
+In the heart of the Grove~
+  The trees here are too tall for you to see even the lowest of their
+branches. The effect of immensity is enhanced by the clouds of dust and
+pollen floating in the air. The humous is deep, and you sink to above
+the tops of your boots as you walk along. Soft chirpings and rustlings
+can be heard as the diurnal animals go about their business in the
+scant undergrowth, which is composed mostly of salal and other plants
+which require little light. What sun reaches the forest floor here is
+brought by sharply delineated beams traveling through the thick haze.
+A small, delicate ring of mushrooms grows about the roots of one of
+the more majestic trees.
+~
+9 0 3
+D0
+~
+~
+0 -1 909
+D1
+~
+~
+0 -1 908
+D2
+~
+~
+0 -1 911
+D3
+~
+~
+0 -1 913
+S
+#911
+In the Grove~
+  A haze of pollen and mist rises from the forest floor here, huge trees
+rising through the shroud like primitive leviathans' legs. Quiet rustlings
+and cheepings can be heard from the undergrowth as you walk ankle-deep in
+the humous. A small path can be seen to the south, and the grove gets denser
+to your north.
+~
+9 0 3
+D0
+~
+~
+0 -1 910
+D1
+~
+~
+0 -1 906
+D2
+~
+~
+0 -1 934
+D3
+~
+~
+0 -1 912
+S
+#912
+In the grove by a fence~
+  A small worm-eaten wooden picket fence sags desultorily to your west.
+The trees here moan quietly as the wind passes through the upper branches,
+far above your head. A small stone path can be seen to your south, and
+in all other directions save west the grove continues.
+~
+9 0 3
+D0
+~
+~
+0 -1 913
+D1
+~
+~
+0 -1 911
+D2
+~
+~
+0 -1 933
+S
+#913
+In the grove by a fence~
+  A small worm-eaten wooden picket fence sags desultorily to your west.
+The grove is shrouded in darkness here, small spears of sunlight stabbing
+to the mulch under your feet after passing through a thick cloud of dust
+and pollen in the air about you. Long vines and thick kudzu hang from and
+in the canopy above your head.
+~
+9 0 3
+D0
+~
+~
+0 -1 914
+D1
+~
+~
+0 -1 910
+D2
+~
+~
+0 -1 912
+S
+#914
+In the grove~
+  The small fence you have been following along turns to the west here
+through an impenetrable wall of vines and brambles. Small eyes peer at you
+from the thicket and from the trees here, and you could swear you heard
+a low mutter of tiny voices talking a few seconds ago. The words almost
+made sense, tickling the edge of your hearing. You shake your head to
+clear the sense of fog enshrouding it.
+~
+9 0 3
+D0
+~
+~
+0 -1 917
+D1
+~
+~
+0 -1 909
+D2
+~
+~
+0 -1 913
+S
+#915
+The Grove~
+  Massive tree-trunks rise to obscurity through the pollen and dust here.
+Small insects and softer creatures scuttle away from your tramping feet,
+all but completely hidden from view by the thick, deep humous. Thick
+brambles block you from moving north or west, while the grove continues
+to your south and to your west.
+~
+9 0 3
+D2
+~
+~
+0 -1 907
+D3
+~
+~
+0 -1 916
+S
+#916
+The Grove~
+  Tremendous trees rise about you on all sides, partially obscured by
+thick pollen and dust in the air. Shafts of sunlight strike the mulchy
+ground here, like a small breath of clarity into the almost stifling
+abundance of life. Thick brambles prevent movement to your north.
+~
+9 0 3
+D1
+~
+~
+0 -1 915
+D2
+~
+~
+0 -1 909
+D3
+~
+~
+0 -1 917
+S
+#917
+Below a gigantic tree in the grove~
+  A huge tree rises above you here, entwined with vines and kudzu. A
+series of fungal growths lead up and around the tree, almost like a
+ladder of sorts. You hear a small "eep!" and see a furry head whip
+into hiding as you peer into the branches above you. It appears as if
+this tree is exuding a cloud of dust and pollen, the same cloud which
+obfuscates the entire of the grove. Thick brambles prevent movement
+to the north and west here.
+~
+9 4 3
+D1
+~
+~
+0 -1 916
+D2
+~
+~
+0 -1 914
+D4
+~
+~
+0 -1 19800
+S
+#918
+A bend in the forest path~
+  The stunted trees around you seem to cling to life in the harsh wind
+and sun here only by the most tenuous of threads, and many small dead
+snags lie half-supported by other trees. The path curves to the east
+and south here.
+~
+9 0 3
+D1
+~
+~
+0 -1 919
+D2
+~
+~
+0 -1 905
+S
+#919
+A path through a stunted forest~
+  The trees here are twisted and stunted, the tallest being
+only about six feet tall. A dry wind howls above the trees,
+chapping your skin and stinging your eyes. This wind seems
+to be coming from the north. You can see a large grove of
+trees a ways to your west, while the path continues to your
+east.
+~
+9 0 3
+D1
+~
+~
+0 -1 920
+D3
+~
+~
+0 -1 918
+S
+#920
+A path through a stunted forest~
+   A hot, dry wind blows from the north here, stinging your
+eyes and making your skin itch. The tiny, twisted trees which
+grow along either side of this path are strong as oaks, but
+would make terrible cabinet wood due to their gnarly grain.
+You can see a grove of taller trees far to your west, while the
+path continues to your east.
+~
+9 0 3
+D1
+~
+~
+0 -1 961
+D3
+~
+~
+0 -1 919
+S
+#921
+The Master Bedroom~
+   You have a sneezing fit as soon as you enter this room. Your eyes
+watering, you can make out a room that was once beautifully decorated
+with antique furniture, luxurious rugs, fine works of art, and many such
+sundries like silk drapes and things of their ilk. A massive, curtained-off
+bed stands to your north. 
+   It seems, however, that all of these fineries have been reduced almost
+to garbage over the passing years. Mold, dryrot, and the presence of
+a number of large animals are all factors that rear their ugly heads when
+it's time for decay. All of these factors seem to have had a grand ball
+together in this room. One of the more annoying aspects of this filth is
+the stench of urea which assaults your delicate olfactory cells. You
+could probably get used to it, but would you really want to?
+~
+9 8 0
+D0
+~
+bed~
+11 -1 922
+D1
+~
+door~
+1 901 965
+S
+#922
+In a Huge Bed~
+   You climb into this huge, soft, four-poster bed. You are surrounded 
+on all sides by delicate gauze curtains, and the mattress itself is 
+incredibly soft, even after about a hundred years of neglect and Mog 
+claws and fur. Huge pillows lie about all around you, and the sheets and
+quilts have been bunched up near the bedstead. It looks as though this
+bed is usually occupied by something with very long hair and big, sharp
+claws.
+~
+9 8 0
+D2
+~
+bed~
+11 -1 921
+S
+#923
+The Torched Closet~
+   This room had to be a closet at one point, it is so small. But now the
+walls, ceiling, and floor are covered in soot. Where you CAN see wood, it
+is completely charred. Small, blackened skeletons of mice and other small
+animals lie about the floor here. It looks as if they just couldn't take the
+heat.
+~
+9 8 0
+D2
+~
+door~
+1 902 967
+S
+#924
+A small path through the stunted forest~
+   Three-foot-tall evergreens are the order of the day here, where
+the weather is too hot and dry for any other large plants to survive.
+Around you for many square miles you see only the tops of these
+small, primitive trees. A hot, dusty wind blows incessantly from
+the north, and this small path through the middle of this strange
+forest continues in that direction and back to civilization to the
+south.
+~
+9 0 3
+D0
+~
+~
+0 -1 925
+D2
+~
+~
+0 -1 961
+S
+#925
+A small path through a stunted forest~
+  On either side of the small, sandy path here extends as far as the
+eye can see a forest of dwarf evergreens, all about three feet high.
+A hot, dry, dusty wind blows in tremendous gusts from the north.
+This path continues to the north and back to civilization to your
+south.
+~
+9 0 3
+D0
+~
+~
+0 -1 926
+D2
+~
+~
+0 -1 924
+S
+#926
+A small path through a stunted forest~
+   A forest of tiny juniper trees extends for a great distance to your
+east and west. Large amounts of dust in the air here make the horizon
+hazy and blurred, and you can't tell exactly how far into the distance
+this twisted wood continues. The small, dusty path continues to your
+north and to your south.
+~
+9 0 3
+D0
+~
+~
+0 -1 927
+D2
+~
+~
+0 -1 925
+S
+#927
+A small path through a stunted forest~
+   Small puffs of dust rise with each step you take along this narrow
+path. On either side of the trail grows a forest of dwarf evergreen
+trees, extending to the misted horizon. A harsh, dry wind blows from
+the north in tremendous, short gusts. The path continues to your
+north and to your south.
+~
+9 0 3
+D0
+~
+~
+0 -1 928
+D2
+~
+~
+0 -1 926
+S
+#928
+A small path through a stunted forest~
+   The small, dusty path turns sharply to the east here. Still the
+tiny evergreen trees grow to a height of about three feet in a forest
+which extends as far as the eye can see. The eastward branch of this
+path seems more well-traveled than the tiny track which leads to
+the south.
+~
+9 0 3
+D1
+~
+~
+0 -1 929
+D2
+~
+~
+0 -1 927
+S
+#929
+A path through a stunted forest~
+   The path here turns to the north, but a small track leads east.
+There is a hand-painted sign nailed to the trunk of a dead tree here,
+just about belly-level. The gusty, dry winds from the north have
+knocked the sign a bit askew, but it is still readable. All around
+you, for miles on end, stretches a forest of dwarfed, twisted evergreens.
+~
+9 4 3
+D0
+~
+~
+0 -1 930
+D1
+~
+~
+0 -1 931
+D3
+~
+~
+0 -1 928
+E
+sign~
+               Ye who travel north, only the empty wastes greets...
+               For those who are southward-bound, Midgaard awaits...
+               The traders and the adventurers among ye, travel east.
+                       -The Blacksmith Samuel-
+~
+S
+#930
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 944
+D2
+~
+~
+0 -1 929
+S
+#931
+A well-kept path~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 932
+D3
+~
+~
+0 -1 929
+S
+#932
+A well-kept path~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 936
+D3
+~
+~
+0 -1 931
+S
+#933
+Outside a picket gate~
+  The stone path goes under a decrepit picket gate here. The gate itself
+is hanging by one hinge and a leather and peg "lock" of the old world
+type. Moss and lichens grow all over the gate, and it would be a struggle
+to move the gate through the clumps of weeds growing around its base. A
+large house looms to the west, behind the gate, while the fence continues
+through the grove to your north.
+~
+9 0 3
+D0
+~
+~
+0 -1 912
+D1
+~
+~
+0 -1 934
+D3
+A small gate stands here, it looks like you could force it open.
+~
+gate~
+1 -1 947
+S
+#934
+An overgrown stone path~
+  Woodland sounds of chirping birds and rustling brush comfort you
+as you stroll along this quaint path. You can dimly spot a large house
+to the west, and the warm darkness of the grove lies to your north.
+~
+9 0 3
+D0
+~
+~
+0 -1 911
+D1
+~
+~
+0 -1 935
+D3
+~
+~
+0 -1 933
+S
+#935
+An overgrown stone path~
+  What at first seemed like just a small track reveals itself as
+what was once a tidy stone path. Now the stones are cracked and
+weeds grow through the crevices. The path leads west, and you can
+get under the tall trees to the north.
+~
+9 0 3
+D0
+~
+~
+0 -1 906
+D1
+~
+~
+0 -1 905
+D3
+~
+~
+0 -1 934
+S
+#936
+A well-kept path~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 937
+D3
+~
+~
+0 -1 932
+S
+#937
+The river path~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 938
+D3
+~
+~
+0 -1 936
+S
+#938
+The river path~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 939
+D2
+~
+~
+0 -1 937
+S
+#939
+The river path~
+A temporary description
+~
+9 0 0
+D1
+~
+~
+0 0 940
+D3
+~
+~
+0 -1 938
+S
+#940
+The river path~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 941
+D3
+~
+~
+0 -1 939
+S
+#941
+The river path~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 942
+D3
+~
+~
+0 -1 940
+S
+#942
+Outside a small shop~
+A temporary description
+~
+9 0 3
+D2
+~
+~
+0 -1 943
+D3
+~
+~
+0 -1 941
+S
+#943
+Samuel's Supply Shop~
+A temporary description
+~
+9 1048776 0
+D0
+~
+~
+0 -1 942
+S
+#944
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 945
+D2
+~
+~
+0 -1 930
+S
+#945
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 946
+D2
+~
+~
+0 -1 944
+S
+#946
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 969
+D2
+~
+~
+0 -1 945
+S
+#947
+An overgrown yard~
+  A large, decrepit house stands -- or rather sags -- to your west, while
+the gate you entered from still stands to your east, supported by clumps of
+grass and moss. This yard was once grand, but now years of neglect have
+taken their toll. The small fishpond is almost a marsh, and the grass is
+as high as your waist. A little orchard of apple and cherry trees stand
+twisted by age, fruits eaten by birds and insects, of which there is 
+quite an abundance in this yard.
+~
+9 0 0
+D1
+A small gate stands here, it looks like you could force it open.
+~
+gate~
+1 -1 933
+D3
+A worm-eaten door barely hangs on its hinges here.
+~
+door~
+1 -1 948
+S
+#948
+Inside the House~
+     You stand in a room which was once a pretty big coatroom, but is now
+just a miserable, mildewy dump. The fine oak panelling which must have once
+made this room very handsome is hanging from rusty nails, mold and dryrot
+having rendered it valueless and ugly. The front door hangs from its hinges
+to your east, while a hallway opens out to your west.
+~
+9 8 0
+D1
+A worm-eaten door stands here.
+~
+door~
+1 -1 947
+D3
+~
+~
+0 -1 949
+S
+#949
+A Decrepit Hallway~
+  The walls here are made of what was once fine mahogany panels, which have
+now decayed to the point at which strips of worm-eaten wood dangle from
+small rusted nails. There was once a fine carpet covering the floor here, but
+it is now merely strands of grey yarn hooked on small tacks. A musty smell
+makes you sneeze, disturbing a great cloud of dust. East of here is the
+entrance to this house, and the  hallway continues at your west.
+~
+9 8 0
+D1
+~
+~
+0 -1 948
+D3
+~
+~
+0 -1 950
+S
+#950
+A Decrepit Hallway~
+  The walls here are made of what was once fine mahogany panels, which have
+now decayed to the point at which strips of worm-eaten wood dangle from
+small rusted nails. There was once a fine carpet covering the floor here, but
+it is now merely strands of grey yarn hooked on small tacks. The hall
+continues to your east and opens up into a larger room at your west.
+~
+9 8 0
+D1
+~
+~
+0 -1 949
+D3
+~
+~
+0 -1 951
+S
+#951
+A Fine Dining Room~
+  This was once a grand dining room. The hardwood floors are buckled and
+warped now, and a crystal chandelier lies smashed and shattered amidst
+the dusty remains of a large oak table, now mostly sawdust and wormwood.
+The only furniture that remains upright here are a few scattered straight-
+backed chairs and an umbrella stand that seems to have been kicked here
+from the hallway to your east. A small door stands at your north, and a
+pair of leaded-glass doors in remarkably good condition stand ajar to
+your south. A large arch is to your west, and you can see stairs rising
+just beyond them.
+~
+9 8 0
+D0
+A small wooden door stands here, its lacquer in good condition.
+~
+door~
+1 -1 952
+D1
+~
+~
+0 -1 950
+D2
+A very tall pair of leaded glass doors stand here, the metal of their
+brass hinges bent and warped with age.
+~
+doors~
+1 -1 953
+D3
+A large arch made of once-fine oak looms over this exit.
+~
+~
+0 -1 955
+E
+chandelier~
+This remarkable work must have once been worth a lot of gold.
+~
+E
+umbrella~
+Sorry, there's nothing but lint inside.
+~
+E
+stand~
+Sorry, there's nothing but lint inside.
+~
+E
+w~
+A large arch made of once-fine oak looms over this exit.
+~
+E
+arch~
+A large arch made of once-fine oak looms over this exit.
+~
+S
+#952
+A Large Kitchen~
+  Sparkling white marble-topped counters, a brilliant steel stove, and
+dozens of large pots, pans and utensils are now decayed to the point
+where you can barely recognize their original function. The stove
+is rusted into one huge lump, and most of the pans and sundry have
+fallen from their hooks and lay about the floor here, making a dull
+clatter or falling to dust as you walk through them. Whatever food
+was once here has long since decayed, leaving only vague mossy
+imprints on the counters. A small door leads to your north, and
+the dining room lies to your south.
+~
+9 8 0
+D0
+A small yellow door stands here, its padlock broken.
+~
+door~
+1 -1 954
+D2
+A small wooden door stands here, its lacquer in good condition.
+~
+door~
+1 -1 951
+S
+#953
+A decrepit Library~
+  Tall oak bookcases lean haphazardly against ancient tapestries, nails
+sticking out at random angles from dry-rotted wood. Most of the books
+are mere piles of yellowed dust between cracked leather covers, but
+a few might be salvageable. This room looks like it would have been
+very comfy about a hundred years ago. A huge fireplace in the south
+wall faces a large table which only has one leg left. Several large,
+overstuffed chairs with torn and faded upholstery quietly fall apart
+here, springs pricking your bottom if you try to sit down. A pair
+of large, leaded-glass doors stand to your north.
+~
+9 8 0
+D0
+A very tall pair of leaded glass doors stand here, the metal of their
+brass hinges bent and warped with age.
+~
+doors~
+1 -1 951
+S
+#954
+A dusty pantry~
+  This room hasn't been used in many many years. Warped and rotten
+wooden shelves line the walls, making it very cramped in here. Cobwebs
+cover every surface which isn't covered by dust, and mog-hair floats
+next to dust motes in the air. You can hardly breathe due to the dust.
+But you get the sense that you aren't alone in here. Perhaps it's the
+hot air being breathed ferociously on your ankle....
+~
+9 9 0
+D2
+The small door is blackened with soot, as if it had been burned.
+~
+door~
+1 -1 952
+S
+#955
+The Former Stairs~
+  You are standing amidst the rubble of what was a flight of stairs
+just a moment ago. It seems that your weight has caused the whole 
+ancient structure to collapse. It looks as though you could climb
+up several beams which stick out of the western wall, though...
+~
+9 8 0
+D1
+This side of the arch seems a bit less decrepit than the eastern
+side, but it still looks on the verge of collapse.
+~
+~
+0 -1 951
+D4
+Through the thick cloud of dust in the air, you think you see
+another floor above you....
+~
+~
+0 -1 956
+E
+rubble~
+The inherent structure of the stairs is now almost unidentifiable,
+rather what you see seems more to be a scrap-heap of miscellaneous
+rotten boards and rusted nails.
+~
+S
+#956
+Above a Gaping Hole in the Floor~
+  Below you lie the collapsed remains of a grand staircase. The
+floor here seems to be in much better repair than on the first
+storey, although the wood is still quite scraped and dusty. You
+have less fear of stuff falling on you, though I wouldn't be so
+sure that you won't fall through the floor. A small door stands
+to your west, and you can see a hallway on the eastern side
+of this gaping hole in the floor.
+~
+9 8 0
+D1
+~
+~
+0 -1 958
+D3
+A small, warped door stands here, red paint peeling off of it in
+long, waxy strips.
+~
+door~
+1 -1 957
+D5
+Through the settling dust you can see some pointy rubble about
+twelve feet below you.
+~
+~
+0 -1 955
+S
+#957
+The Mogling Nursery~
+  This room was once a finely decorated bedroom, but now it is in
+complete disorder and ruin. Once-fine silks lie faded and in shreds
+all about the room, and the stench of ammonia is almost unbearable.
+A few tangled-up balls of string, shredded curtains, and a lump of
+linen and feathers that must have once been a mattress lead you
+to believe that some crazed beast made up of nothing but teeth
+and claws rampaged through this room. Either that or these cute
+little furry bastards crawling all over the place have something
+to do with it...
+~
+9 8 0
+D1
+A small, brightly painted red door stand here. The base seems
+a bit stained...
+~
+door~
+1 -1 956
+S
+#958
+East of a Gaping Hole~
+  West of you is a gaping hole in the floor. To your north stands a
+small door, while to your south a large pair of crumbling double
+doors stand. To your east, the hall continues.
+~
+9 8 0
+D0
+A small oak door leans on its jamb here, yellow paint peeling from
+it.
+~
+door~
+1 -1 959
+D2
+A large pair of wooden doors stands here, looking as if they are about
+to fall off of their hinges.
+~
+doors~
+1 -1 960
+D3
+~
+~
+0 -1 956
+S
+#959
+A Back Hallway~
+ This is the north arm of the Back Hallway. The carpet here is in remarkably
+good shape, only a bit faded. The walls are buckled and warped as if from
+great heat and dryness. In fact, you notice rather quickly that this
+hallway is exceedingly warm. 
+~
+9 8 0
+D2
+A small oak door leans on its jamb here, yellow paint peeling from
+it.
+~
+door~
+1 -1 958
+D3
+~
+~
+0 -1 968
+S
+#960
+A Back Hallway~
+  This smaller hallway, leading off of the main second floor hall,
+is in much better shape. This probably has something to do with less
+moisture, less exposure to air, and other fancy things that carpenters
+know about. In any case, the portraits on the walls here - most of them
+oil paintings of Mogs - are much less faded than everything else
+you've seen in this house. The floor even has a full carpet
+which is only threadbare by the wainscoting where old, rusty tacks
+hold it down. There is a door to your north, and the back hallway
+continues to your west.
+~
+9 8 0
+D0
+A large pair of wooden doors stands here, looking as if it is
+about to fall off of its hinges.
+~
+door~
+1 -1 958
+D3
+~
+~
+0 -1 962
+D5
+This carpet must have once been a rather vile shade of orange shag,
+but time has faded it to an appealing pale brown color.
+~
+~
+0 0 0
+E
+wainscoting~
+The wainscoting appears to be made out of fine strips of cedar,
+stained with a dark russet stain. Time has faded the wood, but
+apparently wood stain makers one hundred years ago really knew
+how to make a stain!
+~
+E
+d~
+This carpet must have once been a rather vile shade of orange shag,
+but time has faded it to an appealing pale brown color.
+~
+E
+carpet~
+This carpet must have once been a rather vile shade of orange shag,
+but time has faded it to an appealing pale brown color.
+~
+E
+portrait~
+You pick the least faded of all the portraits and look at it. It
+seems to depict an old crone in a rocking chair surrounded by
+Mogs, included several rather huge ones.
+~
+E
+painting~
+You pick the least faded of all the paintings and look at it. It
+seems to depict an old crone in a rocking chair surrounded by
+Mogs, included several rather huge ones.
+~
+S
+#961
+A path through a twisted forest~
+  The trees on either side of this path barely live up to their
+names. More like tall bushes, really. The tiny, black cones on
+each branch of every tree around you are hard as stones, and the
+needles brittle and sharp as pins. A hot wind howls from the
+north here, where the path seems to be leading.
+~
+9 0 3
+D0
+~
+~
+0 -1 924
+D3
+~
+~
+0 -1 920
+S
+#962
+A Back Hallway~
+  This hallway seems to be in pretty good shape compared to the
+rest of this house. The carpet is torn in places, and the walls
+have a musty black fungus on them near the ceiling, but the walls
+don't seem like they're about to fall in on you and you don't
+seem to be in any immediate danger of crashing through the floor.
+The air is getting hotter as you travel west down this hallway,
+and a strange musty ammonia smell is getting stronger. Back
+to your east, the hallway continues.
+~
+9 9 0
+D1
+~
+~
+0 -1 960
+D3
+~
+~
+0 -1 963
+D5
+This carpet must have once been a rather vile shade of orange shag,
+but time has faded it to an appealing pale brown color. Long scratches
+in it reveal the wooden floor.
+~
+~
+0 -1 0
+E
+wainscoting~
+The wainscoting appears to be made out of fine strips of cedar,
+stained with a dark russet stain. Time has faded the wood, but
+apparently wood stain makers one hundred years ago really knew
+how to make a stain!
+~
+E
+carpet~
+ This carpet must have once been a rather vile shade of orange shag,
+ but time has faded it to an appealing pale brown color. Long scratches
+in it reveal the wooden floor.
+~
+E
+fungus~
+This black fungus is slimy and wet, like a fresh liver.
+~
+S
+#963
+A Back Hallway~
+  The northeast corner of this room has a large hole in it down
+by the wainscoting. Through it you can see the gaping hole in the
+floor leading down to the first storey. The rest of this room
+seems to be in fairly good shape, save for the black fungus
+which nearly covers the whole of the ceiling and walls here.
+Also, the rank stench of ammonia is almost unbearable. Luckily
+the hold in the northeast corner provides some measure of
+ventilation, otherwise you fear you might suffocate. The
+hall continues to your east and west.
+~
+9 9 0
+D1
+~
+~
+0 -1 962
+D3
+~
+~
+0 -1 964
+D5
+This carpet must have once been a rather vile shade of orange shag,
+but time has faded it to an appealing pale brown color. Long scratches
+in it reveal the wooden floor.
+~
+~
+0 -1 0
+E
+wainscoting~
+The wainscoting appears to be made out of fine strips of cedar,
+stained with a dark russet stain. Time has faded the wood, but
+apparently wood stain makers one hundred years ago really knew 
+how to make a stain! The wainscoting is buckled and torn near
+the northeast corner where a large hole is.~
+E
+carpet~
+This carpet must have once been a rather vile shade of orange shag,
+but time has faded it to an appealing pale brown color. Long scratches
+in it reveal the wooden floor.
+~
+E
+corner~
+It looks as though one of the main supports for the former
+staircase was once attached to a stud in the northeast corner
+of this room, and that it has been torn out, along with most
+of the wall in a two-by-two foot section, in your clumsy attempt
+to mount the stairs.
+~
+E
+hole~
+It looks as though one of the main supports for the former
+staircase was once attached to a stud in the northeast corner
+of this room, and that it has been torn out, along with most
+of the wall in a two-by-two foot section, in your clumsy attempt
+to mount the stairs.
+~
+S
+#964
+A Bend in the Back Hallway~
+  The black fungus here looks like a carpet on the ceiling.
+The walls are stained with brown water-stains, and the wain-
+scoting is drenched in fresh urine. The carpet is utterly
+revolting, and the stench of ammonia is unbearable! To
+your east, the Back Hallway continues, and there is a lighted
+room to your north.
+~
+9 9 0
+D0
+~
+~
+0 -1 965
+D1
+~
+~
+0 -1 963
+D5
+The carpet is torn, stained, and drenched in urine. You
+make a squishing sound with every step.~
+~
+0 -1 0
+E
+wainscoting~
+The cedar wainscoting here is warped and cracked, and also
+happens to be damp to the touch with urine.~
+E
+carpet~
+The carpet is torn, stained, and drenched in urine. You
+make a squishing sound with every step.~
+E
+fungus~
+The fungus is glistening from moisture, which it seems to 
+exude from its plastic surface.~
+E
+carpet~
+This carpet must have once been a rather vile shade of orange shag,
+but time has faded it to an appealing pale brown color. Long scratches
+in it reveal the wooden floor.
+~
+S
+#965
+The Back Hallway~
+   This hallway looks even more decrepit lit than when dark. A hole in
+the ceiling here lets in fresh air and what natural light is going on 
+in the world outside. Plus, there is a strange luminescent glow coming
+from the dark fungus which grows on the walls and the remains of the 
+ceiling here. A large door stands to your west, and there is a very old
+portrait hanging on the wall to your east. The hallway continues to 
+your north and to your south.
+~
+9 8 0
+D0
+~
+~
+0 -1 966
+D2
+~
+~
+0 -1 964
+D3
+~
+door~
+1 901 921
+S
+#966
+A Bend in the Back Hallway~
+   This, the northern wing of the Back Hallway, seems to be in somewhat
+better repair than the southern and western wings. The mold problem
+that persists in other parts of the hallway does not seem to be at all
+prevalent here. In fact, there seems to be almost no decay whatsoever,
+as if someone were maintaining this area on a regular basis. The hallway
+continues to your south and to your east.
+~
+9 9 0
+D1
+~
+~
+0 -1 967
+D2
+~
+~
+0 -1 965
+S
+#967
+The Back Hallway~
+   The air is hot and muggy in this part of the hallway. A blast of hot air
+seems to be coming from under a small, warped door in the north wall.
+The walls here are warped from the heat, and the pictures whose frames
+still hang on the walls here are completely blackened. In fact, they could
+almost be called some kind of existentialist art poignantly depicting the
+emptiness which is being a thoughtful man. However, that would only
+be a conclusion reached by a thoughtful man. The hallway continues to
+your east and to your west.
+~
+9 9 0
+D0
+~
+door~
+1 902 923
+D1
+~
+~
+0 -1 968
+D3
+~
+~
+0 -1 966
+S
+#968
+The Back Hallway~
+   It is hotter in this part of the Back Hallway than it is in the southern
+and western wings. The walls here, in fact, have been warped by the
+heat and the low humidity. The carpet is only dusty, not torn up like
+the carpet in the southern and western arms of the hallway. There is
+no mold here, and the wainscoting is in an admirable shape.
+~
+9 9 0
+D1
+~
+~
+0 -1 959
+D3
+~
+~
+0 -1 967
+S
+#969
+A temporary name~
+A temporary description
+~
+9 0 3
+D2
+~
+~
+0 -1 946
+D3
+~
+~
+0 -1 970
+S
+#970
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 969
+D3
+~
+~
+0 -1 971
+S
+#971
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 983
+D1
+~
+~
+0 -1 970
+D3
+~
+~
+0 -1 972
+S
+#972
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 971
+D3
+~
+~
+0 -1 973
+S
+#973
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 972
+D3
+~
+~
+0 -1 974
+S
+#974
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 973
+D3
+~
+~
+0 -1 975
+S
+#975
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 974
+D3
+~
+~
+0 -1 976
+S
+#976
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 975
+D3
+~
+~
+0 -1 977
+S
+#977
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 978
+D1
+~
+~
+0 -1 976
+S
+#978
+A temporary name~
+A temporary description
+~
+9 0 3
+D2
+~
+~
+0 -1 977
+D3
+~
+~
+0 -1 979
+S
+#979
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 978
+D3
+~
+~
+0 -1 980
+S
+#980
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 979
+D3
+~
+w~
+11 -1 981
+S
+#981
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 982
+D1
+~
+e~
+11 -1 980
+S
+#982
+A temporary name~
+A temporary description
+~
+9 0 3
+D2
+~
+~
+0 -1 981
+S
+#983
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 984
+D2
+~
+~
+0 -1 971
+S
+#984
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 985
+D2
+~
+~
+0 -1 983
+S
+#985
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 986
+D2
+~
+~
+0 -1 984
+S
+#986
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 987
+D2
+~
+~
+0 -1 985
+S
+#987
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 0 988
+D2
+~
+~
+0 -1 986
+S
+#988
+A temporary name~
+A temporary description
+~
+9 0 3
+D2
+~
+~
+0 -1 987
+D3
+~
+~
+0 -1 989
+S
+#989
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 990
+D1
+~
+~
+0 -1 988
+S
+#990
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 991
+D2
+~
+~
+0 -1 989
+S
+#991
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 992
+D2
+~
+~
+0 -1 990
+S
+#992
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 993
+D2
+~
+~
+0 -1 991
+S
+#993
+A temporary name~
+A temporary description
+~
+9 0 3
+D1
+~
+~
+0 -1 994
+D3
+~
+~
+0 -1 992
+S
+#994
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 995
+D3
+~
+~
+0 -1 993
+S
+#995
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 996
+D2
+~
+~
+0 -1 994
+S
+#996
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 997
+D2
+~
+~
+0 -1 995
+S
+#997
+A temporary name~
+A temporary description
+~
+9 0 3
+D0
+~
+~
+0 -1 998
+D2
+~
+~
+0 -1 996
+S
+#998
+A temporary name~
+A temporary description
+~
+9 0 3
+D2
+~
+~
+0 -1 997
+S
+#999
+A temporary name~
+A temporary description
+~
+9 0 0
+S
+#0
+$~

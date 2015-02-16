@@ -1,0 +1,176 @@
+#20802
+Fungus~
+A Fungus~
+A Fungus is standing here.
+~
+This pathetic piece of Fungus roams around on his belly, oblivious to the 
+world.
+~
+72 0 0 Y
+14 6 10 25d25+20 2d3+2
+0 20000
+8 8 1
+78 0 0d0+0 0
+0 0 0 0
+K
+6000 0 0 0 0 0
+#20803
+Large Fungus~
+A Large Fungus~
+A Large Fungus is standing here.
+~
+This is a pretty large fungus for fungus standards, but its a sorry sight to
+see.  Look at him bounce off the walls!
+~
+72 0 0 Y
+24 1 10 35d35+40 3d4+3
+0 58000
+8 8 1
+78 0 0d0+0 0
+0 0 0 0
+K
+10000 0 0 0 0 0
+#20805
+Osquip~
+An Osquip~
+A strange looking Osquip is bouncing around here.
+~
+Bouncing onto your lap is a very happy multi-legged rodent the size of a dog.
+It is completely hairless, and you can see his huge buck teeth protruding from
+his huge head. Although always friendly, the Osquip will attack if provoked.
+~
+16456 2 0 Y
+16 4 2 30d30+60 3d5+5
+0 30300
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+10000 0 0 0 0 0
+#20811
+Repairman Jocko~
+Jocko the sewer repairman~
+A lazy looking sewer repairman is sitting here dozing off.
+~
+This is a poor and overworked repairman. He spends most of his time down here
+cleaning the sewers, because someone actually pays him for it. He looks tired
+and could use some rest, but if that happened,  - Who would clean these sewers?
+Dressed in a floppy raincoat and holding a grungy mop, this repairman looks
+extremely worn out.
+~
+14 0 500 Y
+29 4 -1 2d50+1400 3d4+15
+10000 211000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20821
+Fungus King~
+The Fungus King~
+The Fungus King is sitting here looking bored.
+~
+This huge behemoth of a fungus looks bored out of his skull. He eats
+everything in sight and belches rudely at your entrance.  Glancing in your
+direction, the huge fungnoid quivers and shakes in utmost laughter.  Maybe he
+had too much to drink?  Or maybe not impressed by your appearance.  Why
+don't you be a nice guy and teach him some respect? 
+~
+131086 2048 0 Y
+30 -4 10 1d1+2500 3d7+7
+0 350000
+8 8 1
+78 0 0d0+0 0
+0 0 0 0
+K
+100000 0 0 0 0 0
+#20822
+Mutant Slug Large Radioactive~
+A Mutant Slug~
+A Large Radioactive Slug slithers before you!
+~
+This poor creature looks like an experiment gone totally wrong. Sparks fly from
+his 30 ton body and each step makes it scream out in obvious pain. You can see
+his burnt flesh and almost feel sorry for the poor thing. He stares at you with
+no expression whatsoever, but it's as if he's telling you to end his misery.
+~
+72 0 0 Y
+29 -1 -1 50d40+875 3d6+10
+0 120000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+8000 0 0 0 0 0
+#20840
+Cloaker Lord~
+The Cloaker Lord~
+A Cloaker Lord isn't very happy to see you is standing here.
+~
+Legends said that these monsters had vanished off the face of the earth.  You
+have just proven them wrong. Endowed with sharp fangs and a lethal tail, this
+Cloaker Lord proves a formidable foe. Say your prayers cause coming here was a
+big mistake, he doesn't like visitors.
+~
+16426 268730528 -1000 Y
+50 -12 -10 10d30+2500 5d10+80
+0 700000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+K
+100000 0 0 0 0 0
+#20853
+insurance salesman bob~
+Bob the insurance salesman~
+Bob the insurance salesman is standing here trying to sell you insurance!
+~
+Persistant is the word to describe this sleezy guy. He wears a pink suit and a 
+toupe to match. He rubs his hands fiendishly and grins to himself, thinking of
+the many ways to steal your money.
+~
+204 0 0 Y
+29 -8 -5 50d60+300 5d4+20
+80000 200000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#20857
+Supreme Slug~
+The Supreme Slug~
+The Supreme Slug is sitting here laughing at you!
+~
+Waddling in his tub of slime, this huge slug laughs and giggles at your 
+entrance. Althought he seems harmless, you have a funny feeling that he can
+kick your ass.
+~
+16394 805306538 0 Y
+30 -8 -3 50d2+1500 3d9+6
+0 180000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+150000 0 0 0 0 0
+#20860
+water weird worm~
+A Water Weird~
+A Water Weird is swiming here looking at you with interest.
+~
+   This wormlike monster swims around and glares at you with intensity. He 
+doesnt seem dangerous or rather friendly in that matter. Hopefully you won't 
+wind up being his dinner for tonight.
+~
+10 128 -500 Y
+30 -9 -3 1d1+3100 2d10+10
+0 300000
+8 8 0
+98 0 0d0+0 0
+0 0 0 0
+K
+100000 0 0 0 0 0
+#0
+$~

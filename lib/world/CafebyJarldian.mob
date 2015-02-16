@@ -1,0 +1,65 @@
+#3610
+Bouncer~
+a Bouncer~
+A huge bear of a man stands here with arms crossed, blocking your way.
+~
+A huge burly man stands tall before you, eyes gazing down trying to make you
+feel meek.  He is the bouncer of this luxurious establishment, guarding these
+doors making sure the right people go in and the wrong ones don't.  So don't
+mess with him, he looks like he has had a very bad day.
+~
+74 536905888 1000 Y
+32 -12 -10 1d1+30000 10d50+90
+10000 10
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#3612
+Restaurant Attendant~
+A Restaurant Attendant~
+A Restaurant Attendant sits here diligently waiting on your next order.
+~
+Dressed in a nicely pressed suit, this elegant looking attendant sits here
+casually blowing bubble gum.  She waits here impatiently for you to order 
+something, but doesn't seen to care much because she gets paid whether or
+not you receive your food.
+~
+10 34848 1000 Y
+35 -11 -10 4d4+10000 1d1+40
+100 1
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+#3613
+donald waiter~
+Donald the Waiter~
+A waiter is here, making sure that you are enjoying your stay.
+~
+A full suit and a pair of thick glasses droop slightly over his nose, this 
+clean-shaven man nods as if annoyed as he swiftly walks over and cleans 
+the tables.  He works long, hard hours -- an expression of boredom is 
+visible on his face, making you wonder if he deserves your tip or not.
+~
+72 0 1000 Y
+31 -8 0 1d2+1000 5d1+10
+1000 1000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#3614
+beatrice waitress~
+Beatrice the Waitress~
+A waitress is standing here smiling broadly.
+~
+A bright smile beams on her cute face as she trips over her own feet.  
+Giggling at her own bad luck, Beatrice straightens out her formal dress 
+attire and proceeds to clean tables.
+~
+72 0 1000 Y
+31 -8 0 1d2+1000 5d1+10
+1000 1000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+#0
+$~

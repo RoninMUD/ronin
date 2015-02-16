@@ -1,0 +1,834 @@
+#2600
+rabbit~
+A cute rabbit~
+A cute rabbit is here.
+~
+This small fuzzy bunny is just a little critter.  These
+rabbits wander around the zoo as they please, looking for
+little kids to pet them.
+~
+72 0 500 Y
+2 20 10 14d1+2 1d3+1
+0 200
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+10 0 0 0 0 0
+#2601
+llama baby~
+A baby llama~
+A baby llama is here, nibbling on grass.
+~
+This llama can barely walk on its own.  It
+stumbles about the nursery, nibbling on grass and
+trying to stay away from the crocodiles.
+~
+10 0 500 Y
+4 20 10 29d1+1 1d4+0
+0 500
+8 8 2
+91 0 0d0+0 0
+0 0 0 0
+K
+50 0 0 0 0 0
+#2603
+crocodile baby~
+A baby crocodile~
+A baby crocodile is here, looking for ducks to eat.
+~
+This crocodile might be little, but its teeth don't look
+so little.  Lucky for you, it doesn't seem to have
+developed a mean streak yet, it justs sits in a pool
+of water.
+~
+10 0 0 Y
+5 20 10 32d1+2 1d6+0
+0 750
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+K
+200 0 0 0 0 0
+#2604
+brontosaurus bronto baby~
+A baby brontosaurus~
+A baby brontosaurus is here, looking green and cute.
+~
+Baby dinosaurs are still dinosaurs.  This bronto is about
+eight feet tall, and makes this nursery look small.
+You wonder where the adult brontos end up.
+~
+10 0 200 Y
+6 20 10 37d1+2 1d6+1
+0 1250
+8 8 2
+80 0 0d0+0 0
+0 0 0 0
+K
+200 0 0 0 0 0
+#2605
+parrot black~
+A norwegian black parrot~
+A norwegian black parrot is flying around here.
+~
+Caw... Caw!!
+~
+10 0 250 Y
+4 20 10 24d1+0 1d4+0
+0 350
+9 9 0
+83 0 0d0+0 0
+0 0 0 0
+K
+50 0 0 0 0 0
+#2606
+mutt fido scruffy~
+A scruffy mutt~
+A scruffy mutt is here, digging for bones.
+~
+This little mutt is extremely playful.  He runs around, nipping
+at people and looking for hands to pet him.  Whenver you go near
+one of the holes, he eyes you carefully and growls, telling you
+that the bones are his.
+~
+42 0 500 Y
+3 20 9 20d1+0 1d3+1
+0 250
+8 8 1
+89 0 0d0+0 0
+0 0 0 0
+K
+50 0 0 0 0 0
+#2607
+dog fido frothing~
+A frothing dog~
+A frothing dog is here, acting rabid.
+~
+An outbreak of rabies seems to have hit this part of the canine
+exhibit. This dog froths at the mouth and madly attacks anything
+that it sees.
+~
+42 0 -100 Y
+5 20 9 34d1+0 1d5+0
+0 950
+8 8 1
+89 0 0d0+0 0
+0 0 0 0
+K
+100 0 0 0 0 0
+#2608
+coyote~
+A starving coyote~
+A starving coyote is here, gnawing on a root.
+~
+This coyote runs around, wildly looking for something to eat.
+Even the tree roots lacing through the ground in this part
+of the exhibit have been gnawed down to almost nothing.  Are
+you going to be his dinner?
+~
+10 0 20 Y
+7 20 9 68d1+0 1d8+0
+0 1600
+8 8 2
+89 0 0d0+0 0
+0 0 0 0
+K
+150 0 0 0 0 0
+#2609
+hyena~
+A laughing hyena~
+A laughing hyena is here, grinning and resting.
+~
+Hyenas are scavenger animals and are known as laughing hyenas
+because they tend to follow wounded animals and torment them or
+laugh. In large groups, hyenas can be vicious creatures, so
+the zoo keepers have purposely kept their number down.  When
+hyenas get extremely hungry, they've been known to attack
+healthy animals and people, so you hope that this hyena has
+been fed recently.
+~
+10 0 20 Y
+7 20 9 45d1+5 1d8+0
+0 1450
+8 8 1
+89 0 0d0+0 0
+0 0 0 0
+K
+150 0 0 0 0 0
+#2610
+parrot red~
+A norwegian red parrot~
+A norwegian red parrot is here.
+~
+Norwegian parrots are an endangered species, and Midgaard's
+collection is one of the most extensive in the world.  The
+birds are known for their beautiful plumage.  The Norwegian
+red has especially beautiful feathers that lore says are
+filled with magical power that will grant luck to any who
+possess a feather of the bird.
+~
+10 0 200 Y
+6 20 9 42d1+0 1d5+0
+0 1100
+9 9 0
+83 0 0d0+0 0
+0 0 0 0
+K
+100 2603 0 0 0 0
+#2611
+parrot giant green~
+A giant green parrot~
+A giant parrot is here, guarding its nest from predators.
+~
+While the various breeds of Norwegian parrots are endangered
+species, the giant green is the rarest of the rare.  The bird
+is easily susceptible to predators because the eggs that it
+lays are so big that the nests must be on the ground, where
+wild animals can easily steal or eat the eggs.  Here, in the
+zoo, the birds can lay their eggs on the ground where the other
+animals can't get to them.  The zoo keepers warn patrons not
+to touch the eggs, because the birds are extremely protective
+and will attack those that try to take the eggs.
+~
+10 0 -100 Y
+8 20 9 76d1+0 2d5+0
+0 4000
+9 9 0
+83 0 0d0+0 0
+0 0 0 0
+K
+700 0 0 0 0 0
+#2612
+beetle black~
+A black fire beetle~
+A black fire beetle is here.
+~
+This small black beetle is not even two inches long, and
+it wanders around this part of the exhibit, doing nothing
+exciting or entertaining.  Somebody must have named it a
+fire beetle for some reason, but that reason eludes you
+at the moment.
+~
+10 0 -100 Y
+4 20 9 24d1+0 1d4+0
+0 350
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+K
+50 0 0 0 0 0
+#2613
+spider~
+A large spider~
+A large spider is here.
+~
+If you're the type of person that detests spiders, than this
+large spider makes you scream in terror.  The spider is almost
+twelve inches from the end of one leg to another.  It stands
+stationary on its web, waiting for something to eat.  If this
+spider were to bite you, you'd probably get a pretty bad
+wound from it, especially since the spider might be poisonous.
+~
+10 0 -100 Y
+5 20 8 43d1+0 1d4+0
+0 950
+8 8 0
+77 0 0d0+0 0
+0 0 0 0
+K
+50 0 0 0 0 0
+#2614
+scorpion~
+A nasty scorpion~
+A nasty scorpion is here.
+~
+This poisonous scorpion is the favorite of those patrons that
+like bugs.  While scorpions aren't insects (and neither are
+spiders), they're still in the insect exhibit.  The head zoo
+keeper was never known for his taxonomy, but he seems to have
+imported some big and nasty looking scorpions.  That stinger
+could leave you with a huge welt if you tried to attack the
+scorpion.
+~
+10 0 -100 Y
+7 20 9 79d1+0 2d5+0
+0 5000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+400 0 0 0 0 0
+#2615
+monkey~
+A spider monkey~
+A spider monkey is here, acting silly.
+~
+The spider monkey is a small breed of monkey, known
+for its acrobatics and stunts.  They're happy to play around
+for the amusement of the crowd.
+~
+10 0 250 Y
+5 20 9 43d1+0 1d4+0
+0 950
+8 8 1
+88 0 0d0+0 0
+0 0 0 0
+K
+50 0 0 0 0 0
+#2616
+chimpanzee chimp~
+A chimpanzee~
+A chimpanzee is here, looking for food.
+~
+Chimps, known for their great feats of acrobatics, are also
+known to be incredibly hungry creatures.  They'll do
+almost anything for food, but they also hate to be dissapointed,
+and if somebody gives them something they can't eat, they get
+mad.
+~
+10 0 250 Y
+9 20 8 79d1+0 1d8+0
+0 4350
+8 8 1
+88 0 0d0+0 0
+0 0 0 0
+K
+500 0 0 0 0 0
+#2617
+gorilla~
+A big gorilla~
+A giant gorilla is here, looking for arms to tear out.
+~
+Gorillas, some of the strongest animals on the planet are
+known for their ferocity and strength.  The particular
+gorillas in this exhibit have also been known to
+develop the habit of ripping people's arms out of their
+sockets.
+~
+10 0 250 Y
+11 20 8 126d1+0 2d6+0
+0 10000
+8 8 2
+88 0 0d0+0 0
+0 0 0 0
+K
+500 0 0 0 0 0
+#2618
+lizard~
+A horned lizard~
+A horned lizard is here.
+~
+These lizards are almost two feet long and have a horn
+similar to that of a triceratops.  Perhaps,it's a relative of
+the dinosaur, but no matter the relationship,the horn still
+looks sharp, it might be best to avoid it.
+~
+10 0 250 Y
+5 20 9 39d1+0 1d4+0
+0 850
+8 8 0
+80 0 0d0+0 0
+0 0 0 0
+K
+100 0 0 0 0 0
+#2619
+python monty~
+A monty python~
+A monty python is here, dressed up as an old lady.
+~
+The monty pythons are a troup of painstakingly trained snakes
+that have learned numerous comic routines at great cost to the
+mayor of the city. However he loves the pythons and he can't get
+enough of their jokes, so he finds them to be worth the costs.
+Currently, the pythons are busy entertaining the crowd by
+dressing up as old ladies and telling jokes.
+~
+10 0 250 Y
+9 20 8 79d1+0 1d8+0
+0 4350
+8 8 0
+80 0 0d0+0 0
+0 0 0 0
+K
+500 0 0 0 0 0
+#2620
+monster gila huge~
+A huge gila monster~
+A huge gila monster is here, beware of its poison!
+~
+This lizard is one of the biggest creatures you have ever seen.  It's
+well over ten feet long and buggles with giant muscles.  Its hard
+scales also look like formidable armor again other animals.
+Its giant maw looks as though it's formidable at eating other animals.
+~
+10 0 250 Y
+11 20 7 109d1+0 2d6+0
+0 9000
+8 8 0
+80 0 0d0+0 0
+0 0 0 0
+K
+600 0 0 0 0 0
+#2621
+bear brown~
+A brown bear~
+A brown bear is here.
+~
+The brown bear is known as the baby of the bear family, but this bear
+still looks extremely dangerous.  He has large claws that drag across
+the ground, and when he grins, you can see a set of very sharp-looking
+and very big-looking teeth.
+~
+74 0 250 Y
+7 20 8 65d1+0 2d4+0
+0 3500
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+400 0 0 0 0 0
+#2622
+bear black~
+A black bear~
+A black bear is here, hiding in the shadow of the trees.
+~
+This black bear easily blends into the shadows of the trees, and is
+only seen by you because he wants to be seen.  He watches you
+carefully, discerning your business.
+~
+74 0 250 Y
+10 20 7 110d1+0 2d6+0
+0 7500
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+400 0 0 0 0 0
+#2623
+bear grizzly~
+A grizzly bear~
+A large grizzly bear is here.
+~
+This giant bear towers over your head, wondering as to what the
+meaning of the sign, "Don't feed the bears." might mean.  You reflect
+on what it would feel like to have your head crushed by the gaping maw
+of this grizzly bear, and you're left with a feeling of awe for this
+tremendous beast.  He would be a powerful foe to fight with, be careful.
+~
+74 0 0 Y
+14 20 6 240d1+0 2d8+1
+0 16000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+750 0 0 0 0 0
+#2624
+bobcat bob cat~
+A bobcat~
+A bobcat is here.
+~
+This bobcat is slightly larger than a big house cat and
+has a yellowly pelt like that of a lion, except with
+some black splotches.  It's doesn't look extremely
+dangerous, but it's still a feline and can get angry
+and violent when cornered.
+~
+10 0 250 Y
+5 20 8 55d1+0 1d6+0
+0 2000
+8 8 2
+90 0 0d0+0 0
+0 0 0 0
+K
+300 0 0 0 0 0
+#2625
+lion young~
+A young lion~
+A young lion is here.
+~
+The lion, the king of the jungle, the mightiest of all the beasts.  While
+this lion may be but a babe, it can still be a viscious killing machine, so
+be careful and try not to anger it.
+~
+10 0 250 Y
+11 20 6 119d1+0 2d7+0
+0 8000
+8 8 2
+90 0 0d0+0 0
+0 0 0 0
+K
+400 0 0 0 0 0
+#2626
+tiger bengal~
+A bengal tiger~
+A bengal tiger is here, roaring!
+~
+The bengal tigers are the head zoo keepers favorite animals, and one of
+the mayor's prized exhibit.  The tigers are both majestic and deadly.  While
+the tigers may not be as big as a grizzly bear, they make up for it in
+speed and ferocity.  Tigers have a tremendous leaping pounce that can
+knock any man off his feet, leaving him pinned beneath a tiger with dealy
+claws and a mean temper.  You might not want to get too close.
+~
+10 0 0 Y
+16 18 5 390d1+0 3d6+0
+0 30000
+8 8 1
+90 0 0d0+0 0
+0 0 0 0
+K
+2500 0 0 0 0 0
+#2627
+zoo keeper~
+A zoo keeper~
+The zoo keeper is here, carrying bales and buckets.
+~
+The zoo keepers perform a variety of jobs, that run the gamut
+from tediously mundane to incredibly dangerous.  They may be
+the butt of jokes of the patrons and gain little respect, and
+they smell horrible of carrying animal food around all day,
+but they do get a great life insurance plan...  Unfortunately
+for them, it oftens takes affect much earlier than they may
+had hoped.  Sometimes an animal does them in, sometimes a
+drunk patron, get's a little to trigger happy and does in a
+zoo keeper instead of an animal, but the zoo keepers have a
+horrible habit of short lives.  Maybe you could help?
+~
+16584 0 500 Y
+12 15 5 260d1+0 2d5+0
+1000 5250
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2628
+llama ugly smelly~
+A llama~
+A smelly llama grazes in the grass here.
+~
+This llama has a strange smell to it, it makes your nose curl just to be
+near it.  The llama also appear to be ugly and makes weird chewing noises
+as it looks at you.
+~
+842 0 0 Y
+5 20 9 10d2+25 1d6+0
+0 700
+8 8 1
+91 0 5d10+10 0
+0 0 0 0
+K
+60 0 0 0 0 0
+#2629
+goat pygmy mean~
+A pygmy goat~
+A pygmy goat is here, making weird noises.
+~
+  This little pygmy goat has a mean streak.  He is heatbutting all of
+the other goats and making goat noises at them.
+~
+10 0 0 Y
+6 20 9 7d1+30 1d6+1
+0 850
+8 8 1
+91 0 1d1+1 0
+0 0 0 0
+K
+75 0 0 0 0 0
+#2630
+treanti treeman tree~
+The Treanti~
+A giant tree is here, looking for zoo patrons to eat.
+~
+Normally a giant tree wouldn't be all that frightening.  This tree, however,
+breaks that rule.  The giant treanti towers above you and looks awfully angry.
+It waves it's limbs around viciously and crawls around looking for zoo patrons
+to eat.
+~
+16458 268435464 -500 Y
+21 8 -1 500d1+0 2d5+9
+0 90000
+8 8 1
+58 0 1d1+1 0
+0 0 0 0
+K
+6000 0 0 0 0 0
+#2631
+squirrel~
+A squirrel~
+A squirrel sits in a tree here, eyeing you suspiciously.
+~
+This small brown squirrel scampers about in the trees, collecting nuts in its
+mouth. It hops from tree to tree, its bushy tail following behind it.  As you
+approach, it peers at you, making sure you don't try and steal any of its nuts.
+~
+2062 0 -100 Y
+15 18 3 200d1+50 3d3+5
+0 20000
+8 8 1
+86 0 1d1+1 1
+5 1 20 0
+0 0 0 0
+K
+1500 0 0 0 0 0
+#2632
+bat giant ugly fang poisonous poison~
+A giant bat~
+A giant bat is hanging from a rafter here.
+~
+This giant bat lives in the dark storeroom where it feeds upon zoo keepers
+and other unfortunate travelers.  Poison dribbles from its fangs and it
+lungest at you, trying to feed on your blood.  He's obviously not the sort
+of animal that can be lured away with a dog biscuit, you're going to have
+to run or fight him.
+~
+524330 42 -500 Y
+14 15 3 119d1+1 3d3+2
+0 15000
+8 8 1
+54 0 14d10+1 0
+0 0 0 0
+K
+1000 0 0 0 0 0
+#2633
+zoo keeper~
+A zoo keeper~
+A zoo keeper is here, studying a chart on the wall.
+~
+You see the zoo inkeeper, he apparently is overworked but paid well
+by the mayor.
+~
+16586 0 500 Y
+12 15 5 260d1+0 2d5+0
+1000 5250
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2634
+zoo keeper zookeeper head~
+The Head Zoo Keeper~
+The head zookeeper is here, filling out a paper.
+~
+You see the zoo inkeeper, he apparently is overworked but paid well
+by the mayor.
+~
+2115786 0 300 Y
+20 11 2 400d1+0 4d5+5
+16000 35000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2635
+ant tiny little fire red~
+A fire ant~
+A tiny fire ant crawls across the sands here.
+~
+This tiny ant is only a centimeter long, and is of a bright red
+color. It crawls across the sand in a great rush, as though
+it has some place important to visit.  The ants are of
+a very communal nature, so they travel in large groups and usually
+defend themselves if attacked.
+~
+10 268435456 250 Y
+5 15 7 43d2+10 1d4+0
+0 950
+8 8 0
+76 0 10d10+1 0
+0 0 0 0
+K
+75 0 0 0 0 0
+#2636
+penguin~
+A penguin~
+A penguin plays in the snow here, at home in the frigid air.
+~
+  This strange looking bird stand straight up on two small feet.
+It's black with a white belly, and a small amount of orange and
+yellow around the neck.  It waddles around on the land, looking
+pitiful, but in the water, it "flies" around, making fish look
+foreign to the watery depths.
+~
+8 0 250 Y
+8 20 7 119d1+0 2d7+0
+0 8000
+8 8 2
+83 0 0d0+0 0
+0 0 0 0
+K
+450 0 0 0 0 0
+#2637
+otter river sea~
+An otter~
+An otter stands here, a playful look in his eyes, and a mischevious grin.
+~
+  This otter is about four feet long and crawls along the ground on four feet.
+Its body is close to the ground, but it still has remarkable speed.  It appears
+to be an incredibly playful animal.  It constantly harasses the penguins,
+but it doesn't eat them because the zoo keepers keep him well fed to avoid a
+drop in the penguin population.
+~
+10 0 250 Y
+17 10 6 400d1+0 3d6+0
+0 32000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+2500 0 0 0 0 0
+#2638
+bear polar~
+A polar bear~
+A polar bear stands here, his eyes sizing you up.
+~
+This large white bear is at home in the cold, it's thick layer of fur
+protecting it from the arctic winds.  The bear is the largest bear
+of its kind that you have ever seen.  The polar bear doesn't look
+very kind either.
+~
+74 0 -250 Y
+18 15 5 120d3+30 2d8+3
+0 16000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+1000 0 0 0 0 0
+#2639
+yak smelly~
+A smelly yak~
+A smelly yak snorts at you, and stomps its hooves on the ground.
+~
+This yak smells horrible.  Small pieces of victims cling to it's
+long fur, and rot slowly.  He's not a very friendly fellow,
+and he likes his personal space, so you might want to leave
+him alone.
+~
+10 0 -400 Y
+11 19 6 119d1+0 2d7+0
+0 8500
+8 8 1
+91 0 0d0+0 0
+0 0 0 0
+K
+1 0 0 0 0 0
+#2640
+elk mighty~
+A mighty elk~
+A mighty elk grazes in the tall grass, unafraid of the other animals.
+~
+This mighty elk stands high in the grass, proud of his majestic
+antlers, and without fear of the other grazing animals.  His pelt
+is of short brown hair, and he has a mane of slightly longer,
+darker hair around the neck.
+~
+8 0 250 Y
+12 19 6 119d1+0 2d6+2
+0 8500
+8 8 1
+91 0 0d0+0 0
+0 0 0 0
+K
+400 0 0 0 0 0
+#2641
+deer small~
+A small deer~
+A small deer hides in the grass, afraid that predators might be nearby.
+~
+This small deer barely reaches up to your waist.  She must be a young deer.
+She appears timid and is easily frightened when zoo patrons attempt to get
+close to her.
+~
+136 0 250 Y
+5 20 8 55d1+0 1d6+0
+0 2200
+8 8 2
+91 0 0d0+0 0
+0 0 0 0
+K
+400 0 0 0 0 0
+#2642
+gazelle mysterious strange foreign~
+A gazelle~
+A mysterious-looking gazelle prances through the grass here.
+~
+This gazelle is from another realm.  You've never seen a creature
+like it near Midgaard.  It's colored similarly to the small deer
+you see around here, but it's larger, has a pointed head, and a
+pair of wicked-looking horns that are shaped like the horns of a
+unicorn.
+~
+72 0 250 Y
+11 18 7 110d1+0 2d6+0
+0 7700
+8 8 1
+91 0 0d0+0 0
+0 0 0 0
+K
+600 0 0 0 0 0
+#2643
+mosquito tiny~
+A tiny mosquito~
+A tiny mosquito buzzes about, looking for people to bite.
+~
+This tiny mosquito is barely visible at it buzzes around in the air.
+The mosquito may be incredibly tiny, but it's the common annoyance to
+all swamp travelers and natives.  It makes no discretion on who it bites,
+and it can land and bite without warning, spreading disease and causing
+itchy swelling.
+~
+8 0 250 Y
+10 17 4 24d1+0 1d20+0
+0 1000
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#2644
+beast sand reptile reptilian~
+The Sand Beast~
+A giant reptilian beast wanders through the sand, looking for dinner.
+~
+This large reptile is about twenty feet long from head to
+tail and has it has a very large mouth, inside which you can see
+a number of very pointy-looking teeth.  It's home is inside the
+sand, and it comes up the surface when it gets hungry.  The beast
+is quite the embarassment to the zoo staff, as it prefers to eat
+zoo keepers over what the zoo keepers would wish to feed it.
+Unfortunately for you, you happen to be a lot more similar to
+a zoo keeper than a carcass of some dead animal.  It might also
+be embarrassing to you if you were eaten whole.
+~
+10 1048576 -800 Y
+20 11 2 230d3+40 4d5+3
+0 80000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+K
+8000 2605 0 0 0 0
+#2645
+alligator gator crocodile creature swamp~
+An alligator~
+An alligator floats in the water here, biding it's time.
+~
+Alligators are known as the patient hunter.  They'll wait, floating
+in the water until they see a weakness in their victim.  Then,
+they pounce on their victim, a giant reptilian maw gaping.
+~
+8 1572864 -400 Y
+17 16 3 450d1+0 2d13+0
+0 50000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+K
+5000 2606 0 0 0 0
+#0
+$~

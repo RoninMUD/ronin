@@ -1,0 +1,128 @@
+#26200
+gauntlet Bloody ruby~
+Blood Gauntlet~
+A ruby-encrusted gauntlet sits here.~
+null
+~
+8 805306368 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26201
+crown Silver~
+Silver Crown~
+A splendidly-crafted silver crown sits here.~
+~
+8 805306368 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26202
+token Team West~
+A Team West token~
+A token of the west lies here, shimmering softly.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26203
+token Team East~
+A Team East token~
+A token from the east lies here, shimmering softly.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26204
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26205
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26250
+shield quest badge~
+Quest Runners Badge~
+A small badge of a Quest Runner is lying here.~
+(null)
+~
+9 134217728 16897
+15 0 1078082560 135414906
+10 1000 1000
+10
+E
+The Badge of the Quest Runner.~
+A small Badge that shows this person
+runs Quests for RoninMUD.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

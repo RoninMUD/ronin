@@ -1,0 +1,623 @@
+#1500
+workbench~
+a workbench~
+A large workbench is standing here, with human bodies straped down on it.~
+~
+0 16 0
+0 0 0 0
+50 500 500
+100
+E
+workbench~
+  The large workbench is a grusom sight. Humans are straped down to the table 
+with leather straps. Limbs crushed by the carpenters hammer.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#1501
+bonespike~
+a bonespike~
+A sturdy bonespike is standing here, able to protect you from a powerful strike.~
+~
+0 524288 1
+0 0 0 0
+15 500 500
+100
+E
+bonespike~
+  The bonespike is a long bone able to stand erect without support. Its thickness
+will stop a powerful blow, but might break in the prosess.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#1502
+bone helm skull~
+The Dragon Skull~
+The bone dragons skull is lying here.~
+~
+9 48295936 17
+12 -1 -1 -1
+31 200000 75000
+35
+E
+helm bone~
+  The Bone Dragons skull is large, but still semms like it would fit a hunam head.
+It has large horns on the sides, and the sturdy bone give excelent protection.
+~
+E
+skull~
+  The Bone Dragons skull is large, but still semms like it would fit a hunam head.
+It has large horns on the sides, and the sturdy bone give excelent protection.
+~
+X
+~
+0 0 0
+M
+You put the skull of the Bone Dragon on your head.~
+$n puts the Dragon Skull on $s head.~
+You remove the skull of the Bone Dragon from your head.~
+$n removes the Dragon Skull from $s head.~
+A
+19 3
+A
+1 2
+A
+49 10
+#1503
+tail~
+The tail of the Bone Dragon~
+A long tail made of bone is lying here with a large spike on its end.~
+~
+5 0 8193
+69 6 6 -1
+10 10 10
+10
+E
+tail bone~
+  The Bone Dragons tail is a large tail made of bone. Its flexible joints makes
+it possible to wield it like a whip. A large spike at the end will deal great 
+dammage to your enemies.
+~
+X
+~
+0 0 0
+M
+You wield the Bone Dragons tail.~
+$n wields the Bone Dragons tail.~
+You stop using the Bone Dragons tail.~
+$n stops using the Bone Dragons tail as a weapon.~
+#1504
+test potion~
+test~
+test test~
+~
+10 0 1
+50 192 180 102
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1550
+weak red glowing potion~
+a weak red glowing potion~
+A weak red glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak red glowing potion~
+The potion is filled with a thick red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1551
+red glowing potion~
+a red glowing potion~
+A red glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+red glowing potion~
+The potion is filled with a thick red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1552
+powerful red glowing potion~
+a powerful red glowing potion~
+A powerful red glowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful red glowing potion~
+The potion is filled with a thick red liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1553
+weak blueglowing potion~
+a weak blueglowing potion~
+A weak blueglowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak blueglowing potion~
+The potion is filled with a thick blue liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1554
+blueglowing potion~
+a blueglowing potion~
+A blueglowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+blueglowing potion~
+The potion is filled with a thick blue liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1555
+powerful blueglowing potion~
+a powerful blueglowing potion~
+A powerful blueglowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful blueglowing potion~
+The potion is filled with a thick blue liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1556
+weak piercingglowing potion~
+a weak piercingglowing potion~
+A weak piercingglowing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak piercingglowing potion~
+The potion is filled with a thick brown liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1557
+piercing potion~
+a piercing potion~
+A piercing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+piercing potion~
+The potion is filled with a thick brown liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1558
+powerful piercing potion~
+a powerful piercing potion~
+A powerful piercing potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful piercing potion~
+The potion is filled with a thick brown liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1559
+weak defensive potion~
+a weak defensive potion~
+A weak defensive potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak defensive potion~
+The potion is filled with a white glowing liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1560
+defensive potion~
+a defensive potion~
+A defensive potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+defensive potion~
+The potion is filled with a white glowing liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1561
+powerful defensive potion~
+a powerful defensive potion~
+A powerful defensive potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful defensive potion~
+The potion is filled with a white glowing liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1562
+weak protective potion~
+a weak protective potion~
+A weak protective potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak protective potion~
+The potion is filled with a yellow glowing liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1563
+protective potion~
+a protective potion~
+A protective potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+protective potion~
+The potion is filled with a yellow glowing liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1564
+powerful protective potion~
+a powerful protective potion~
+A powerful protective potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful protective potion~
+The potion is filled with a yellow glowing liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1565
+weak roaring potion~
+a weak roaring potion~
+A weak roaring potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak roaring potion~
+A roar is coming from the mist inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1566
+roaring potion~
+a roaring potion~
+A roaring potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+roaring potion~
+A roar is coming from the mist inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1567
+powerful roaring potion~
+a powerful roaring potion~
+A powerful roaring potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful roaring potion~
+A roar is coming from the mist inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1568
+weak shadowy potion~
+a weak shadowy potion~
+A weak shadowy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak shadowy potion~
+A tiny shadow of a man is trapped inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1569
+shadowy potion~
+a shadowy potion~
+A shadowy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+shadowy potion~
+A tiny shadow of a man is trapped inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1570
+powerful shadowy potion~
+a powerful shadowy potion~
+A powerful shadowy potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful shadowy potion~
+A tiny shadow of a man is trapped inside the potion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1571
+weak divine potion~
+a weak divine potion~
+A weak divine potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+weak divine potion~
+Inside this potion lays a miracle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1572
+divine potion~
+a divine potion~
+A divine potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+divine potion~
+Inside this potion lays a miracle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1573
+powerful divine potion~
+a powerful divine potion~
+A powerful divine potion is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+E
+powerful divine potion~
+Inside this potion lays a miracle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

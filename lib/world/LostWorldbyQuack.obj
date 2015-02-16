@@ -1,0 +1,550 @@
+#27100
+Helmet of the Centurion~
+a Centurion's helmet~
+The helmet of a roman centurion lies here on the ground.~
+~
+9 65 17
+3 0 0 0
+10 10000 8000
+13
+E
+roman~
+roman~
+E
+centurion~
+centurion~
+E
+helmet~
+helmet~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+13 20
+#27101
+axe battleaxe huge bloody~
+A huge bloody axe~
+A huge bloody axe has been dropped here.~
+$r huge bloody axe chops $V into tiny bits.~
+5 0 8193
+0 6 4 3
+14 10 8000
+28
+E
+axe~
+It's so sharp it cuts the air in half!!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 5
+#27102
+mace bone~
+A bone mace~
+A human skull and a thighbone from some large animal have been tied together
+and lie here abandoned.~
+$r eyes burn brightly with the lust of battle.~
+5 242235920 8193
+0 6 5 6
+24 100000 25000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27103
+Toga~
+A white toga~
+A finely made white toga lies here on the ground.~
+~
+9 0 1025
+1 0 0 0
+10 10 20000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 20
+A
+4 1
+#27104
+cestus gauntlet~
+Cestus~
+A spiked gauntlet lies here.~
+$r spiked gauntlet bursts into flames as it is raised into the air.~
+5 100704256 8705
+0 2 8 7
+4 8000 25000
+23
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+2 -4
+#27105
+gladiator mask~
+Gladiator's Mask~
+The fishhead-like mask of a roman gladiator lies here.~
+~
+9 67108928 17
+3 0 0 0
+12 10 8000
+39
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+B
+1
+#27106
+Gladius~
+Gladius~
+an extremely sharp shortsword lies here.~
+$r razor-sharp shortsword glints wickedly as it strikes.~
+5 64 8193
+0 7 4 3
+9 20000 3000
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+2 2
+#27107
+bones armor~
+armor made of human bones~
+a pile of bones is here in disarray.~
+~
+9 240124483 9
+3 0 0 0
+20 50000 7000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 20
+A
+19 2
+B
+1024
+#27108
+staff magi~
+a Staff of the Magi~
+A staff carved with arcane runes lies here.~
+~
+1 250638403 65537
+0 0 -1 0
+4 10 4000
+78
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 2
+A
+19 1
+B
+16777224
+#27109
+lionskin loincloth~
+loincloth~
+the moldy old skin of a lion lies here.~
+~
+9 134225920 2049
+2 0 0 0
+10 10 8000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#27110
+hunting knife~
+a hunting knife~
+an old hunting knife is stuck into the ground here.~
+~
+5 0 8193
+0 4 4 11
+10 10 10
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+19 6
+#27111
+corpse~
+half-eaten corpse of a Roman soldier.~
+The half-eaten corpse of a roman soldier lies here rotting.~
+~
+15 0 1
+0 0 0 0
+25 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27112
+maggots~
+a writhing mass of maggots~
+A mass of white maggots writhes here on the ground.~
+~
+19 0 16385
+1 0 0 0
+10 10 1500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27113
+dinosaur hide~
+the thick hide of a dinosaur~
+pieces of a dinosaurs hide are strewn about here.~
+~
+9 0 257
+6 0 0 0
+5 10 1000
+23
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+18 1
+#27114
+taloned gloves~
+Taloned Gloves~
+A pair of thick leather gloves with attached talons lie here.~
+~
+9 146821120 129
+9 0 0 0
+2 10 800
+10
+E
+gloves~
+They are made from the skin of some dinosaur.  Several razor-sharp claws
+have been attached to the fingers.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+19 1
+#27115
+zombie key~
+a zombie key~
+a zombie key lies here, rotting flesh still clinging to the bones.~
+~
+18 0 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27116
+shadow blade~
+The Shadowblade~
+a sword made of shadow lies here.~
+$r shadowy blade radiates darkness is it cuts through the air.~
+5 224451139 8193
+0 4 6 3
+1 50000 20000
+32
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 2
+#27117
+shadow bracer~
+shadow bracer~
+a bracer made of solid shadow lies here, seemingly abandoned.~
+~
+11 576 4097
+3 0 0 0
+2 4000 1200
+74
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+13 10
+#27118
+cauldron black~
+a black cauldron~
+A black cauldron sits here.~
+~
+15 0 1
+600 0 0 0
+80 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27119
+head bloated rotting~
+A bloated rotting head~
+Someone has dropped a bloated rotting head here.~
+~
+19 0 1
+30 0 0 30
+4 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27120
+boots army~
+Army Boots~
+A pair of thick soled leather boots lies here.~
+~
+9 134217728 65
+15 0 0 0
+6 200000 2000
+10
+E
+boots~
+The look like they're good for stomping things in.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+A
+19 3
+#27121
+wine bottle~
+a bottle of Roman wine.~
+A bottle of Roman wine lies here.~
+~
+10 0 1
+30 101 103 140
+1 100000 25000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27122
+jar ointment salve~
+an ointment jar~
+A small jar full of some foul-smelling salve lies here.~
+~
+10 0 1
+20 14 35 43
+1 20000 2000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27123
+laurel wreath~
+a wreath of true laurel~
+A bunch of leaves have been made into a laurel that lies here.~
+~
+9 262145 17
+11 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+B
+8
+#27124
+ring flesh tattered~
+A ring of tattered flesh~
+A ring with a truly putrid odor is lying here, next to a weed.~
+~
+11 267440720 3
+0 0 0 0
+2 10000 26400
+5
+E
+ring~
+
+  This is one of the most revolting items you have ever seen.  It is the
+bone of some now unrecognizable creature that the Witchdoctor has carved
+into some semblance of a ring.  There are still small strips of flesh
+hanging from the bone, and it is stained with blood.  The smell coming from
+it seems to be a mixture of rotting flesh and vomit, and the mixture of the
+two creates a horrid scent.  However, the Witchdoctor seemed to gain
+something from wearing it, and you figure it is probably worth the effort
+as well.
+
+~
+E
+ring flesh~
+
+  This is one of the most revolting items you have ever seen.  It is the
+bone of some now unrecognizable creature that the Witchdoctor has carved
+into some semblance of a ring.  There are still small strips of flesh
+hanging from the bone, and it is stained with blood.  The smell coming from
+it seems to be a mixture of rotting flesh and vomit, and the mixture of the
+two creates a horrid scent.  However, the Witchdoctor seemed to gain
+something from wearing it, and you figure it is probably worth the effort
+as well.
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+45 5
+T
+14000
+#0
+$~

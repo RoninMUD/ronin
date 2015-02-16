@@ -1,0 +1,1593 @@
+#17300
+Entry Hall~
+  This short but heavily decorated hallway takes your breath away with
+its beauty. The pulsing crystal walls are etched with realistically carved 
+relief of Heroes, Dragons, and other fantastic creatures locked in titanic 
+battles with one another. In the center of this room stands a statue of a 
+warrior, made out of what seems to be one solid block of pulsing blue 
+crystal.
+~
+173 8 0
+D0
+~
+~
+0 -1 17301
+D2
+~
+door~
+1 -1 17311
+S
+#17301
+Central Chamber~
+  This is a large, unfurnished room with exits leading in all directions. 
+The floor is covered with a shaggy rug made from the fur of some unfortunate, 
+if not helpless, beast. The smell of food comes from the northern exit.
+~
+173 8 0
+D0
+~
+~
+0 -1 17304
+D1
+~
+~
+0 -1 17303
+D2
+~
+~
+0 -1 17300
+D3
+~
+~
+0 -1 17302
+D4
+~
+~
+0 -1 17305
+S
+#17302
+Dining Chamber~
+  This elegant dining room, which could comfortably seat twenty people, 
+is virtually bare. The only furnishings are a small, beautifully carved 
+crystalline table and a single chair. On the floor are two large crystal 
+bowls, with the name "Phasteus" on each.
+~
+173 8 0
+D1
+~
+~
+0 -1 17301
+S
+#17303
+Den~
+  This may have once been a beautifully decorated sitting area, but 
+now it is literally the den for Marcus' familiar, Phasteus. The 
+furniture has been torn apart by the clawing of this tiger. Whoever 
+said that familiars were small helpless animals was obviously either 
+smoking something very strong, or not acquainted with this variety. As 
+you enter, you wake the poor little pussycat. He doesn't look pleased by
+the interruption.
+~
+173 8 0
+D3
+~
+~
+0 -1 17301
+S
+#17304
+Kitchen~
+  This kitchen defies all logic and comprehension. You quit trying to
+make sense of the room as a whole and focus on individual objects.  That 
+white box kind of looks like a stove, but where is the place for the logs 
+for fuel? That puddle on the floor might be a sink, but what kind of creature 
+could be comfortable washing dishes there?  There are spice racks and 
+storage containers strung out in a chaotic array that would send any chef 
+you know into hysterics. The path around all the gadgets and containers isn't 
+big enough for a sprite to move around comfortably. You do observe, however, 
+that even though the place looks kind of like the results of an explosion 
+in a toy factory, there is not a spot of dust or garbage to be found in 
+the entire room. 
+~
+173 8 0
+D2
+~
+~
+0 -1 17301
+S
+#17305
+Library~
+  Rows upon rows of magical tomes line these crystal shelves. You estimate 
+the cost to be more gold than you will ever see in a lifetime. As you 
+reach for a book, you hit your hand against an invisible barrier. There 
+is a muffled roar coming from the room to the west, and a soft muttering 
+from the room to the north.
+~
+173 8 0
+D0
+~
+~
+0 -1 17308
+D1
+~
+~
+0 -1 17307
+D2
+~
+~
+0 -1 17309
+D3
+~
+~
+0 -1 17306
+D4
+~
+door~
+2 17303 17310
+D5
+~
+~
+0 -1 17301
+S
+#17306
+Summoning Circle~
+  As you step through the doorway, you notice it is covered by strange 
+arcane runes. You try to duck back out the door, but you find yourself 
+already in the clutches of the magical trap. There is a barrier, invisible 
+from the outside and opaque from the inside, keeping you trapped within 
+the room. The room's other resident doesn't look happy about being here... 
+and he seems to be rather annoyed by your presence.
+~
+173 4617 0
+S
+#17307
+Bed Chamber~
+  This bed chamber, while beautiful, seems to have been decorated as an 
+afterthought. Whoever the master of this tower is, he obviously enjoys 
+art... and battle... but gives scant attention to the pleasures of the flesh. 
+A hard man by any definition.
+~
+173 8 0
+D3
+~
+~
+0 -1 17305
+S
+#17308
+Study~
+  This room is decorated in a decidedly pleasing fashion. There are pictures 
+of wondrous landscapes hanging on the walls. Each painting has a name at the 
+bottom. The one to the north has the name "Kiri-Torin's `bRealm`h", the one 
+to the south has the name  "The Ishapian Abbey at `bSarth`h", the one to the 
+west bears the name "`bMurkwood`h", and the one to the east "`bWinterhaven`h". 
+These paintings are painted to look as realistic as possible. In fact, they 
+almost seem real.  The man standing by the table looks displeased by the 
+intrusion.
+~
+173 8 0
+D2
+~
+~
+0 -1 17305
+E
+winterhaven~
+  The scene depicted in this painting is of the main square in what looks 
+to be a frontier town. There is a copious amount of snow on the ground,
+suggesting that this scene is in the far north. In the foreground of this 
+painting is an unlikely trio. They are a dwarf, an elf, and what looks to 
+be a Gnoll, all dressed in armor, covered by furs.  The dwarf seems to be 
+old, even by his race's standards. However, that has not seemed to have 
+affected the way he carries that notched battle-ax he is holding. He is 
+wearing a well crafted suit of dwarven chainmail and carrying a shield that 
+has seen much use.  The elf is definitely an oddity. He seems to be wearing 
+a suit of elven chain, complete with chain leggings to go with it. The 
+unusual thing is his weapons. He has two kopesh in scabbards on his hips. 
+He doesn't look strong enough to hold two of those unwieldy weapons, let 
+alone fight with them. His shoulders are covered by a cloak that would do 
+any thief justice its camouflage coloring.  The gnoll is wearing platemail 
+on his body. His weapon is a halberd that is taller than even his seven 
+foot height. His dog-like face is marred by scars that could only have 
+come from a vicious fight. He looks like the type to prefer the subtleties 
+of a bloody brawl over the intricacies of a diplomatic remark.
+~
+E
+murkwood~
+  This picture is almost unremarkable. It seem to be a scene in the depths
+of a forest, but for some reason you feel uneasy when looking at it. After 
+studying it for a few minutes, you realize that you can barely see two 
+glowing eyes in the bushes. As you look at them, your feeling of unease 
+increases. You quickly decide that the other pictures warrant more of your 
+time.
+~
+E
+Sarth~
+  This picture seems to be set in front of a large stone structure. 
+Standing in front of entrance are four of the most impressive figures you 
+can remember seeing. They all seem to radiate holiness. The one that seems 
+to be the leader of the group is an imposing man dressed in a shiny set of 
+full plate armed with a two handed sword. His hair is completely silver, 
+giving him an aura of age, even if no wrinkles are evident on his countenance. 
+He seems not to be frail, either, being bulky in the way that only can be 
+attained through a hard life filled with constant toil. 
+  The man standing next to him is also dressed in full plate. His features 
+are covered by a full helm. The heater shield he is carrying is emblazoned 
+with a golden dragon on the front. The longsword in his hands seems to almost 
+glow with a holy light. Unbelievably, he seems to be even stronger than the 
+leader of this righteous group.
+  The third member of the group is an old man with a long flowing gray 
+beard. Though he looks frail, having to lean onto the ornate staff he is 
+holding, he seems to have an inner strength held by few men of any rank in 
+their lives. He is wearing a suit of light chain on his wizened frame.
+  The last member of this holy foursome is a young man, the youngest of
+the group, with long, black hair hanging past his shoulders. He is 
+wearing a suit of silvery platemail that seems to almost shimmer in the 
+air. On his left arm is a medium war shield emblazoned the same as the 
+second man's shield. In his right hand is a beautifully crafted mace that
+must have cost a fortune.~
+E
+realm~
+  In this painting you see a set of huge gates. Standing before the gates 
+is an enormous dragon being ridden by a wiry man dressed in black. The
+man looks sleazy, even in this painting. You conclude that the painter 
+was either exceptionally gifted, or exceptionally biased. The figure has 
+an ornate black shield on his left arm.~
+S
+#17309
+Laboratory~
+  This laboratory has seen much use, as can be seen by the acid burns
+on the floor. The whole room smells of noxious fumes created by countless 
+unknown magical experiments. The lab equipment, however, seems to be in 
+excellent condition.
+~
+173 8 0
+D0
+~
+~
+0 -1 17305
+S
+#17310
+Room of Worlds~
+  A large mirror covers each wall here. The mirror to the north shimmers 
+like a reflective curtain. It is almost as if you could enter into that 
+reflective surface.
+~
+173 8 0
+D5
+~
+~
+1 -1 17305
+S
+#17311
+Outside the Tower~
+  You stand outside a tower that is made of a strange glowing crystal. 
+As you touch it, you realize that it is slightly warm to the touch. There is
+a rectangular part of the tower that is glowing more brightly than the 
+rest of the edifice. You realize that you are probably looking at the 
+entrance into this wondrous building. There is a sign standing by the 
+glowing blue door. To the east is the small crevice you crawled through to 
+get here.
+~
+173 0 5
+D0
+~
+door~
+1 -1 17300
+D1
+~
+crevice~
+9 -1 12960
+S
+#17312
+On the Drawbridge~
+  You are standing on a drawbridge in front of a HUGE fortress.  There is 
+an open portcullis to the south. The opening that the portcullis guards 
+is enormous, fully seventy feet high. To the east and west lies the 
+moat... A moat like you have never seen.  Considering that the fortress 
+is made in the middle of an active volcano, you would assume the moat 
+to be lava. This is not the case. The moat seems to be made of an inky 
+black mist. Whatever the mist is formed of, it doesn't look inviting. To 
+the north is a winding path of cooled lava. The path seems to be 
+constantly shifting as rock melts, and is replaced by cooling magma.
+~
+173 4 1
+D0
+~
+~
+0 -1 17356
+D1
+~
+~
+0 -1 17355
+D2
+~
+~
+0 -1 17313
+D3
+~
+~
+0 -1 17355
+S
+#17313
+Through the Entry~
+  You are in the tunnel leading into the fortress. The wall you are 
+passing through is over fifty feet thick and seemingly made of a single 
+piece of granite. You have never seen architecture of this magnitude. 
+Your footfalls echo softly as you slowly make your way into the heart 
+of the ominous structure.
+~
+173 0 0
+D0
+~
+~
+0 -1 17312
+D2
+~
+~
+0 -1 17314
+S
+#17314
+Inner Courtyard~
+  You step out into the open. The sight before you sends chills down 
+your spine, in spite of the oppressive heat from the volcano. It is not 
+that the spectacle is ugly. It is, in fact, quite beautiful, but it is a cold 
+passionless beauty that is foreign to mere mortals. South of you are the 
+doors to the castle proper. East lies a sparkling flower garden. From the 
+west comes the unmistakable odor of stables.
+~
+173 0 1
+D0
+~
+~
+0 -1 17313
+D1
+~
+~
+0 -1 17331
+D2
+~
+~
+0 -1 17315
+D3
+~
+~
+0 -1 17340
+S
+#17315
+In Front of the Doors~
+  You stand in front of a massive set of metal doors. They are locked, of 
+course, but even if they weren't, it would be unlikely that you could 
+open them, anyway. They must weigh over a ton each. It looks like you 
+must discover another, perhaps less physically challenging entrance 
+into this edifice of evil.
+~
+173 0 1
+D0
+~
+~
+0 -1 17314
+D2
+~
+massive~
+2 -1 17316
+S
+#17316
+Foyer~
+  This is the welcome area for the Fortress. It is designed to make a 
+visitor feel at ease. For instance, look at those large black manacles 
+attached to the western wall. What's that brown flaky stuff on them? 
+Could it be dried blood? Perhaps the owner of this castle is slightly 
+picky about his idea of guests.
+~
+173 8 0
+D0
+~
+door~
+1 -1 17315
+D1
+~
+vault~
+2 17316 17339
+D2
+~
+~
+0 -1 17317
+D3
+~
+door~
+1 -1 17338
+S
+#17317
+The Hall of Conquests~
+  This is the northern end of a great hall. Tapestries cover the walls. 
+Each tapestry was completed in intricate detail, and each depicts a scene
+of rape, murder, devastation, and/or pillaging. The sign here is written 
+in an unknown language. But considering the tapestries, you need no 
+translation... "Hall of Conquests".
+~
+173 8 0
+D0
+~
+~
+0 -1 17316
+D1
+~
+~
+0 -1 17327
+D2
+~
+~
+0 -1 17318
+D3
+~
+~
+0 -1 17328
+S
+#17318
+The Hall of Conquests~
+  The southern end of this hall is no less artistically decorated, and no 
+less horrifying, than the northern end. There are stairways leading up, 
+both to the east and west. To the south you see a platinum throne.
+~
+173 8 0
+D0
+~
+~
+0 -1 17317
+D1
+~
+~
+0 -1 17325
+D2
+~
+~
+0 -1 17319
+D3
+~
+~
+0 -1 17326
+S
+#17319
+Throne Room~
+  Here is the seat of power for the lord of this fortress. The `bthrone`h 
+before you almost visibly radiates power. Who knows what would happen to 
+the mortal who dared to sit upon that artifact of power.  The tapestries 
+here are black, with the designs on them colored in varying shades of gray. 
+Ominous colors woven into even more ominous pictures leave little doubt 
+as to the fate of the victims of the High Lord's wrath.
+~
+173 8 2
+D0
+~
+~
+0 -1 17318
+D2
+~
+throne~
+8 -1 17320
+E
+throne~
+  Filled with curiosity, you look take a closer look at the throne.  You 
+notice that it seems to be set on well oiled tracks... it is almost as if 
+you could move it to reveal what is behind it.
+~
+S
+#17320
+Study~
+  This room has a large table in the center. On one wall is a shelf full of 
+pieces of rolled parchment. Closer examination shows the parchments to 
+actually be maps. Another wall has a shelf full of books. Though they 
+are written in an unknown language, each book seems to have the name 
+of a person and a title on the cover. On the first page of each book is a 
+sketch of a person, probably the subject of the book. These tomes look 
+like nothing so much as intelligence reports on individuals... Maybe 
+leaders of future conquests... HEY!! That looks like the Mayor!!!!!
+~
+173 8 0
+D0
+~
+throne~
+8 -1 17319
+D1
+~
+~
+0 -1 17324
+D2
+~
+~
+0 -1 17321
+D3
+~
+~
+0 -1 17323
+S
+#17321
+Bedchamber~
+  Now this is a bedchamber! The bed looks to be able to hold six 
+comfortably. The ceiling is mirrored. The ornately carved headboard and
+foot posts have Iron rings attached to them. You touch the bed and, to 
+your surprise, a wave moves the covers up as it heads to the other side, 
+almost as if the bed was full of water.  What kind of magic can create a 
+bed formed of water? This High Lord must be almost godlike in his 
+powers.
+~
+173 8 0
+D0
+~
+~
+0 -1 17320
+D1
+~
+~
+0 -1 17322
+S
+#17322
+Meditation Room~
+  Your are in a strange sitting room. In contrast to the rest of the fortress, 
+this room is completely white and unadorned. In fact, the only furnishings 
+this room can boast is a hard white stool and a small table with a basin on 
+it. The stool is quite strange. It is made of porcelain and has a hole in the 
+middle of the seat. The hole is half full of water... this is very weird. This 
+room must be some strange type of meditation chamber.
+~
+173 8 0
+D3
+~
+~
+0 -1 17321
+S
+#17323
+Auditorium~
+  This small Auditorium is worth at least a king's ransom. The chairs are 
+made of ivory covered with silk cushions, the stage seems to be made 
+completely of obsidian, and the harp seems to be formed of solid 
+emerald. On the stage is a young elven maiden, chained to the harp.
+~
+173 8 0
+D1
+~
+~
+0 -1 17320
+S
+#17324
+Library~
+  At first glance this library looks like any other. On closer examination, 
+however, you see that this library was never made for study. It seems 
+more like a trophy room. There aren't two books in the whole library 
+written in the same language. One in Common... one in Zycan... Elven...
+Dwarven... and many more you can't identify.
+~
+173 8 0
+D3
+~
+~
+0 -1 17320
+S
+#17325
+Stairwell~
+  A set of stairs going up. There is a Great Hall to the west.
+~
+173 8 0
+D3
+~
+~
+0 -1 17318
+D4
+~
+~
+0 -1 17344
+S
+#17326
+Stairwell~
+  A set of stairs going up. There is a Great Hall to the east.
+~
+173 8 0
+D1
+~
+~
+0 -1 17318
+D4
+~
+~
+0 -1 17343
+S
+#17327
+Hall of Vanquished Foes~
+  This hall is lined on each side with glass cases. Above each case is a 
+plaque with a name on it. In each case is a head. The High Lord's enemies, 
+perhaps? Or, maybe, just his friends.
+~
+173 12 0
+D1
+~
+~
+0 -1 17336
+D3
+~
+~
+0 -1 17317
+S
+#17328
+Guards' Mess Hall~
+  This is a rather plain room, especially when compared to the rest of the 
+fortress. Several tables are in rows here. There are no chairs and the 
+tables are widely spaced. There is probably enough room for Serpent 
+Guards to stand around each table and eat without getting their tails 
+stepped on.
+~
+173 12 0
+D1
+~
+~
+0 -1 17317
+D3
+~
+~
+0 -1 17329
+S
+#17329
+Guard's Kitchen~
+  This gray, dirty room must be the kitchen. The smell of three-day old 
+meat gives it away. Working at the stove, while picking his nose and 
+shooing away flies, is the ugliest smelliest troll that has ever been your 
+displeasure to encounter.
+~
+173 8 0
+D1
+~
+~
+0 -1 17328
+D3
+~
+~
+0 -1 17342
+S
+#17330
+Smithy~
+  A burly dwarf is here, chained to a stake. The chain that is attached to 
+his leg glows faintly and seems to be just long enough to reach the 
+anvil, bellows and trough set nearby. The High Lord gets skilled 
+craftsmen the easy way... He captures them.
+~
+173 0 0
+D0
+~
+~
+0 -1 17342
+S
+#17331
+Crystal Garden~
+  As you enter the garden you realize two things - it is the only thing 
+you've seen so far that is truly beautiful by mortal standards, and it isn't 
+real.  All of the flowers are really carved out of crystal. This must be a 
+gift from Marcus. The flowers seem to be completely untouched by 
+volcanic ash.
+~
+173 0 1
+D1
+~
+~
+0 -1 17332
+D3
+~
+~
+0 -1 17314
+S
+#17332
+Training Ground~
+  This is where the Serpent Guards and Slayers practice.  From the 
+amount of bloodstains on the ground, one can assume that some, if not
+all, of the practice dummies were probably living.
+~
+173 0 0
+D1
+~
+~
+0 -1 17333
+D3
+~
+~
+0 -1 17331
+S
+#17333
+North East Barracks~
+  The only thing of even remote interest in these barracks are the beds. 
+Rows of mud pits might not be considered comfortable by most races, 
+but Serpent Guards kind of like them.
+~
+173 0 0
+D2
+~
+~
+0 -1 17337
+D3
+~
+~
+0 -1 17332
+S
+#17334
+Memorial of Statues~
+  The statues here are probably not for decoration. Some look defiant, 
+some fearful, and some resigned, but all look like unarmed slaves. It can 
+probably be assumed that mistakes aren't looked kindly upon by the 
+master of this place.
+~
+173 0 1
+D1
+~
+~
+0 -1 17340
+D3
+~
+~
+0 -1 17335
+S
+#17335
+North West Barracks~
+  The only thing even remotely interesting in these barracks is the beds. 
+Rows of mud pits might not be considered comfortable by most races, 
+but Serpent Guards kind of like them.
+~
+173 0 0
+D1
+~
+~
+0 -1 17334
+D2
+~
+~
+0 -1 17341
+S
+#17336
+Arena~
+This looks like a smaller version of the Colosseum in Pompeii. There is 
+only one chair in the stands. This is probably the High Lord's idea of 
+outdoor recreation.
+~
+173 0 1
+D0
+~
+~
+0 -1 17337
+D3
+~
+~
+0 -1 17327
+S
+#17337
+Monster Kennel~
+  The Kennel has room for dozens of monsters, but for some reason it is 
+empty. Maybe the High Lord is tired of all the senseless killing. 
+However, it is more likely that he has decided that one on one combat 
+wasn't bloody enough.
+~
+173 0 0
+D0
+~
+~
+0 -1 17333
+D2
+~
+~
+0 -1 17336
+S
+#17338
+Waiting Room~
+  This room is where people wait for an audience with the High Lord. 
+From the solidness of the door and size of the lock, you assume that 
+maybe some of the former occupants were not necessarily willing 
+guests.
+~
+173 0 0
+D1
+~
+door~
+1 -1 17316
+S
+#17339
+Castle Vault~
+  This room is large enough to hold half the gold in the kingdom. Lying 
+scattered about is anything that the high lord thinks that might be the 
+least bit valuable. Some of this equipment looks very familiar, maybe you
+should check your equipment, just to be safe. 
+~
+173 9 0
+D3
+~
+door~
+2 -1 17316
+S
+#17340
+Stables~
+  This hardly looks like the Stables of Midgaard. And the mounts seem 
+to look upon you as food rather than possible riders. It seems that giant 
+alligators prefer Serpent Guards as riders... unless, of course, it is 
+feeding time.
+~
+173 0 0
+D1
+~
+~
+0 -1 17314
+D3
+~
+~
+0 -1 17334
+S
+#17341
+Storage Building~
+  A storage area for foodstuffs. At least you assume it is food, though it 
+resembles no rations you have ever seen.
+~
+173 0 0
+D0
+~
+~
+0 -1 17335
+D2
+~
+~
+0 -1 17342
+S
+#17342
+Archery Range~
+  This practice area has recently seen use, if the pin cushioned bodies 
+tied to the targets are any indication. Considering all the arrows in non-
+vital areas on the victims, the archer must be very poor shots, or very 
+cruel.
+~
+173 0 1
+D0
+~
+~
+0 -1 17341
+D1
+~
+~
+0 -1 17329
+D2
+~
+~
+0 -1 17330
+S
+#17343
+Stairwell~
+  There are stairs leading down, here. The stairs, themselves, are made of 
+what looks to be obsidian. The walls are formed of unadorned granite. 
+There are doors north, south, and west. Also to the east is a large hall.
+~
+173 0 0
+D0
+~
+~
+0 -1 17347
+D1
+~
+~
+0 -1 17345
+D2
+~
+~
+0 -1 17349
+D3
+~
+~
+0 -1 17348
+D5
+~
+~
+0 -1 17326
+S
+#17344
+Stairwell~
+  There are stairs leading down, here. The stairs, themselves, are made of 
+what looks to be obsidian. The walls are formed of unadorned granite. 
+There are doors north, south, and east. Also to the west is a large hall.
+~
+173 0 0
+D0
+~
+~
+0 -1 17350
+D1
+~
+~
+0 -1 17351
+D2
+~
+~
+0 -1 17352
+D3
+~
+~
+0 -1 17345
+D5
+~
+~
+0 -1 17325
+S
+#17345
+Hall of Champions~
+  This hall could be more aptly described as a hall of defeated 
+champions. There must be a hundred little alcoves recessed into the 
+walls here. Most of the alcoves are occupied by solitary statues. There 
+are a few empty alcoves also. Each alcove, whether full or empty, has a 
+name engraved above it. Most of the full alcoves have names that you 
+have heard only in legends. The most interesting part of this room, 
+however, is the names above the yet to be filled alcoves. They are Tad, 
+Brutus, Borys, Anarchyintheuk, Piggy, Buttmunch, Chintio, and Mark. 
+These names, for some reason, have a familiar ring to them. Perhaps the
+High Lord is wise to respect the champions who dare brave the dangers
+of the wild without the benefit of trusted comrades to guard their backs.
+~
+173 0 0
+D0
+~
+~
+0 -1 17346
+D1
+~
+~
+0 -1 17344
+D2
+~
+~
+0 -1 17353
+D3
+~
+~
+0 -1 17343
+S
+#17346
+Landing~
+  This is a large flat portion of the roof of the first level of the fortress. 
+The only remarkable thing here is claw marks gouged into solid granite. 
+Maybe, just maybe, the title "Dragon High Lord" has some basis in fact. 
+~
+173 0 1
+D2
+~
+~
+0 -1 17345
+S
+#17347
+Torture Chamber~
+ This chamber is full of just about every device known, and some that 
+have yet to be heard of, to be used to cause a being exquisite pain. The 
+only thing this rooms seems to be lacking, though, is a torturer. Could 
+it be that the High Lord prefers to conduct these "interviews" 
+personally? That thought may be something to think about, but not 
+just before bedtime.
+~
+173 0 0
+D2
+~
+~
+0 -1 17343
+S
+#17348
+Cell~
+  A simple, unadorned cell with a straw mat in the far corner. The cell 
+looks unused for quite some time.
+~
+173 0 0
+D1
+~
+~
+0 -1 17343
+S
+#17349
+Cell~
+  A simple, unadorned cell with a straw mat in the far corner. The cell 
+looks unused for quite some time.
+~
+173 0 0
+D0
+~
+~
+0 -1 17343
+S
+#17350
+Cell~
+  A simple, unadorned cell with a straw mat in the far corner. The cell 
+looks unused for quite some time.
+~
+173 0 0
+D2
+~
+~
+0 -1 17344
+S
+#17351
+Cell~
+  A simple, unadorned cell with a straw mat in the far corner. The cell 
+looks unused for quite some time.
+~
+173 0 0
+D3
+~
+~
+0 -1 17344
+S
+#17352
+Cell~
+  A simple, unadorned cell with a straw mat in the far corner. The cell 
+looks unused for quite some time.
+~
+173 0 0
+D0
+~
+~
+0 -1 17344
+S
+#17353
+Dining Hall~
+  This must be the High Lord's private dining chamber. The table seems 
+to be formed from a single piece of marble. The chairs are made of some 
+type of wood unfamiliar to you.  The walls are covered by silk tapestries
+depicting some of the most hideous scenes of torture imaginable. The 
+thought of a person who can look at these pictures and enjoy a meal 
+must sends shivers racing down your spine.
+~
+173 0 0
+D0
+~
+~
+0 -1 17345
+D2
+~
+~
+0 -1 17354
+S
+#17354
+Kitchen~
+  Strangely enough, this kitchen resembles the one in Marcus' tower. 
+In fact, it not only resembles it, but also seems to be an exact copy... 
+interesting.
+~
+173 0 0
+D0
+~
+~
+0 -1 17353
+S
+#17355
+Moat~
+  You are slowly being swallowed by the inky blackness into which you have 
+fallen.
+You desperately try to make it back to the Drawbridge. Can you? CAN YOU?!?!
+~
+173 65536 0
+D4
+~
+~
+0 -1 17312
+S
+#17356
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17357
+D1
+~
+~
+0 -1 17372
+D2
+~
+~
+0 -1 17312
+D3
+~
+~
+0 -1 17372
+S
+#17357
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17372
+D1
+~
+~
+0 -1 17359
+D2
+~
+~
+0 -1 17356
+D3
+~
+~
+0 -1 17358
+S
+#17358
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17372
+D1
+~
+~
+0 -1 17357
+D2
+~
+~
+0 -1 17372
+D3
+~
+~
+0 -1 17359
+S
+#17359
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17360
+D1
+~
+~
+0 -1 17358
+D2
+~
+~
+0 -1 17372
+D3
+~
+~
+0 -1 17360
+S
+#17360
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17361
+D1
+~
+~
+0 -1 17359
+D2
+~
+~
+0 -1 17359
+D3
+~
+~
+0 -1 17372
+S
+#17361
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17360
+D1
+~
+~
+0 -1 17372
+D2
+~
+~
+0 -1 17360
+D3
+~
+~
+0 -1 17362
+S
+#17362
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17363
+D1
+~
+~
+0 -1 17361
+D2
+~
+~
+0 -1 17372
+D3
+~
+~
+0 -1 17372
+S
+#17363
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17372
+D1
+~
+~
+0 -1 17364
+D2
+~
+~
+0 -1 17362
+D3
+~
+~
+0 -1 17361
+S
+#17364
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17372
+D1
+~
+~
+0 -1 17365
+D2
+~
+~
+0 -1 17361
+D3
+~
+~
+0 -1 17363
+S
+#17365
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17361
+D1
+~
+~
+0 -1 17372
+D2
+~
+~
+0 -1 17366
+D3
+~
+~
+0 -1 17364
+S
+#17366
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17365
+D1
+~
+~
+0 -1 17367
+D2
+~
+~
+0 -1 17360
+D3
+~
+~
+0 -1 17372
+S
+#17367
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17368
+D1
+~
+~
+0 -1 17361
+D2
+~
+~
+0 -1 17372
+D3
+~
+~
+0 -1 17366
+S
+#17368
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17369
+D1
+~
+~
+0 -1 17372
+D2
+~
+~
+0 -1 17367
+D3
+~
+~
+0 -1 17361
+S
+#17369
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 4624 5
+D0
+~
+~
+0 -1 17356
+D1
+~
+~
+0 -1 17370
+D2
+~
+~
+0 -1 17368
+D3
+~
+~
+0 -1 17356
+S
+#17370
+In Front of a Large Cave~
+  You have finally reached the side of the volcano, only to taste the 
+bittersweetness of disappointment. The side of the volcano is much too 
+steep for you to possibly climb. However, you just might reach that large 
+opening in the face of the cliff. Perhaps that cave will lead out of this 
+desolate place. 
+~
+173 4624 5
+D0
+~
+~
+0 -1 17371
+D1
+~
+~
+0 -1 17372
+D2
+~
+~
+0 -1 17372
+D3
+~
+~
+0 -1 17369
+S
+#17371
+Red Dragon's Lair~
+  Oops!! You come to the realization that today just isn't your day. As 
+the reality of the situation batters your consciousness, the huge red 
+dragon in front of you seems to be, literally, jumping for joy, to see you.
+Then you notice that he does look a bit hungry...
+~
+173 0 0
+D2
+~
+~
+0 -1 17370
+S
+#17372
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano. 
+~
+173 4628 5
+D0
+~
+~
+0 -1 17375
+D1
+~
+~
+0 -1 17374
+D2
+~
+~
+0 -1 17373
+D3
+~
+~
+0 -1 17376
+S
+#17373
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano.
+~
+173 16 5
+D0
+~
+~
+0 -1 17312
+D1
+~
+~
+0 -1 17312
+D2
+~
+~
+0 -1 17312
+D3
+~
+~
+0 -1 17312
+S
+#17374
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano. 
+~
+173 16 5
+D0
+~
+~
+0 -1 17312
+D1
+~
+~
+0 -1 17312
+D2
+~
+~
+0 -1 17312
+D3
+~
+~
+0 -1 17312
+S
+#17375
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano. 
+~
+173 16 5
+D0
+~
+~
+0 -1 17312
+D1
+~
+~
+0 -1 17312
+D2
+~
+~
+0 -1 17312
+D3
+~
+~
+0 -1 17312
+S
+#17376
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano. 
+~
+173 16 5
+D0
+~
+~
+0 -1 17312
+D1
+~
+~
+0 -1 17312
+D2
+~
+~
+0 -1 17312
+D3
+~
+~
+0 -1 17312
+S
+#17377
+Winding Through the Volcano~
+  You are hopping from outcropping to outcropping, trying to reach the 
+side of the volcano 
+~
+173 0 0
+S
+#17378
+Hall of Kludges~
+
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+173 512 0
+S
+#17379
+Hall of Kludges~
+
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+173 576 0
+S
+#17399
+Hall of Kludges~
+
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+173 576 0
+S
+#0
+$~

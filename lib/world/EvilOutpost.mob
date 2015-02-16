@@ -1,0 +1,286 @@
+#7000
+orc~
+An orc~
+An evil orc stands here, grinning at you.
+~
+An evil orc is grinning at you.  There are flecks of foam around his mouth.
+Maybe he is rabid.  Now isn't that a cheerful thought.  Running is always
+an option.
+~
+108 0 -1000 Y
+9 11 20 3d4+110 3d4+1
+250 4000
+8 8 1
+96 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7001
+evil merchant~
+An evil merchant~
+An evil merchant is here ready for battle.
+~
+This is not your usual merchant.  This merchant is large, strong and looks
+like he has had to fight for a profit more than once.
+~
+46 8 -650 Y
+12 10 0 2d10+210 3d5+1
+750 12000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7002
+ripper statue~
+Ripper~
+Ripper, a huge statue, towers over you.
+~
+Ripper's eyes glow as you look at it.  It is truly the epitome of evil.
+And its face...  Just looking at it makes you rigid with fear.  Wait a
+second you are getting rigid but it is not from fear...  Maybe looking
+at Riper was not such a good idea.
+~
+10 65672 -1000 Y
+30 -10 -24 5d6+3700 5d10+3
+200000 325000
+8 8 0
+79 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7003
+orc leader~
+The orc leader~
+A large Orc stands here, he has many battle scars.
+~
+This orc has seen lots of battles.  The number of his scars and the fact
+that he is here means he won lots of battles too.  Yep, he definately 
+looks tough.
+~
+108 0 -1000 Y
+13 10 -10 3d6+190 3d5+1
+750 12500
+8 8 1
+96 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7004
+huge rat~
+A huge rat~
+A huge rat is here gnawing on old pizza crusts.
+~
+Ok.  It is a really big rat.  It is about the size of a saint-barnard!
+~
+16456 0 -250 Y
+13 10 40 3d6+145 2d8+1
+25 8000
+8 8 2
+93 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7005
+bushboogie~
+A bushboogie~
+A fiery bushboogie is here plotting your death!
+~
+ARGH!!  You can not really see it closely, but you know it is composed of
+fire.  And you know it is fast.
+~
+16428 262144 -500 Y
+15 10 0 3d6+290 2d8+2
+500 22000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7006
+rat~
+A rat~
+A rat is here getting crumbs off the floor.
+~
+Hey, it is a rat ok?  You know, small, black, little red eyes...
+~
+108 0 0 Y
+4 20 40 1d6+38 1d6+1
+50 200
+8 8 1
+93 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7007
+stranger~
+Stranger~
+Stranger, the guardian of Ripper, has arrived and attacks!
+~
+Stranger is dressed in dark robes and a mask and hood.  You can not really
+make out his features.  But his sword looks deadly!  Have you considered
+leaving?
+~
+131118 0 -1000 Y
+20 8 0 4d6+420 3d6+1
+25000 25000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7008
+gnoll~
+A gnoll~
+A huge gnoll stands here picking his teeth.
+~
+Yep this is a gnoll.  You can tell because it looks like a humaniod jackel.
+Smells like one too.  Still, he looks pretty tough.
+~
+44 0 -750 Y
+20 6 1 4d6+640 3d6+1
+2000 55000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7009
+gnoll chieftain~
+The Gnoll Chieftain~
+The gnoll chieftain is here, howling with rage!!
+~
+This is the toughest looking gnoll you have ever seen.  He is huge.  
+And his weapon's belt is loaded with scalps.  He must be favored by his
+evil gods.
+~
+108 0 -1000 Y
+25 5 -10 4d8+1040 6d4+1
+80000 195000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7010
+chr-eff'n chr~
+the evil chr-eff'n~
+The chr-eff'n are crawling here, looking around with it's yellow eyes.
+~
+The head and torso of a chr-eff'n is copper-covered, with yellow
+,glowing eyes. The lower body is in an orange shading.
+~
+140 524296 -830 Y
+12 9 2 2d26+448 2d7+1
+1500 13000
+8 8 0
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7011
+morkoth~
+the shadowy morkoth~
+The morkoth are standing here, waiting for someone to KILL!
+~
+It's a five feet tall, shadow monster. This has the shape between
+a human and a rat. It breaths very heavely, while it stares at you.
+~
+168 0 -900 Y
+10 12 3 1d20+120 2d6+0
+1 9000
+8 8 0
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7012
+esther madam~
+Madam Esther~
+Madam Esther is standing here, trying to sell dust.
+~
+She is very big standing here, smiling to you. She looks like the
+mother of the town, sometimes playing with the children, sometimes 
+helping the old people, with their daily work. All this in spite of
+her own hard work.
+~
+8 0 1000 Y
+2 19 7 1d2+23 1d6+1
+6 150
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7040
+red dragon~
+The red dragon~
+The Red fierce-looking dragon stares at you angrily
+~
+The red dragon stares at you, angrilly, as it wakes when you
+arrives.  It says 'Oh, human YOU woke me up...Hsssss', while
+it moves closer ,'Can one NEVER sleep in peace..Hssss'.
+~
+42 8 -1000 Y
+19 2 0 5d4+830 3d6+3
+10000 35100
+8 8 0
+56 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7041
+sea hag~
+The sea hag~
+The Sea Hag is swimming around here
+~
+The sea hag is so ghastly looking that you fell's the deepest
+fear: Big yellow eyes and sharp teeths. Its ears are very big,
+and it have small sharp horns. This type of monsters are one of
+the greatest haters of beauty (Next after Medusa).
+~
+40 0 -800 Y
+14 7 1 1d8+172 2d8+1
+0 18000
+8 8 2
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7042
+guardian naga~
+The guardian naga~
+The Guardian Naga looks kindly at you.
+~
+The naga are a snake-liked creature. She is covered in green-gold
+scale with silvery triangles along her back. Her eyes are golden.
+She notice that you look at her, and she says: 'Watch out. This way
+leads to some evil creatures'.
+~
+10 0 700 Y
+12 9 2 1d18+148 2d7+1
+100 13500
+8 8 2
+84 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#7043
+scaled basilisk~
+The scaled basilisk~
+The scaled Basilisk crawls towards you slowly.
+~
+The basilisk is a reptilian monster. It has eight legs, and a strong
+toothy jaws. It is dull brown with yellowish underbell. It's eyes are
+glowing pale green.
+~
+12 8 -250 Y
+13 11 0 1d12+160 2d7+2
+350 16000
+8 8 0
+80 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

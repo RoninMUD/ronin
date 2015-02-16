@@ -1,0 +1,286 @@
+#12900
+mystic initiate~
+The Initiate Mystic~
+The initiate mystic is sitting here in meditation, waiting to pass the pit.
+~
+A young boy anxiously wanting to expand his mind beyond that of an average
+person. He is meditating here to gain enough courage to try and walk past
+through the ropes and poles of the Pit. he believes that through devotion
+and concentration, anything can be achieved.
+~
+138 269221888 0 Y
+9 12 3 1d12+110 1d8+2
+13 6000
+5 5 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12901
+mystic brother~
+The Mystic Brother~
+The Mystic Brother is walking the hallways and corridors.
+~
+The Mystic Brother is looking at you in anticipation. He is obviously waiting
+for you to greet him or be on your way. He is wearing the simple robe of a
+mystic. As a brother, he has shaved his head to show the proper stoic attitude.
+~
+16456 269230080 0 Y
+15 6 1 1d12+185 1d8+5
+47 21000
+8 8 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12902
+wind whirlwind huge~
+The Huge Whirlwind~
+The Huge Whirlwind is storming its way to you.
+~
+Summoned from its own plane by the Mystical Powers, The Whirlwind isn't
+enjoying the stay here. And since the only thing preventing it from leaving
+is its mental bonding to you, you must be prepared to suffer its wrath.
+~
+16426 939786280 0 Y
+31 -8 -10 10d100+2000 2d8+50
+0 100000
+9 9 0
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12904
+mystic ultimate~
+The Ultimate Mystic~
+The Ultimate Mystic is resting here, trying to understand the universe.
+~
+The Ultimate Mystic has retreated from all things material and has devoted
+himself to attaining new and developing the existing level of his of mental
+powers. The world as a place of the greedy and loathsome has almost ceased to
+exist for him. Nevertheless, He is still a mighty opponent, when he utilizes
+his talent for martial arts and the mental powers.
+~
+16793611 269262856 0 Y
+60 -13 -17 10d100+19000 6d8+120
+0 1650000
+8 5 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12905
+mystic great~
+The Great Mystic~
+The Great Mystic is here, studying the ancient records of history.
+~
+Chosen by the members of the brotherhood, the Great Mystic has devoted his
+time to running the day-to-day things for all of them. But as his title
+implies, he isn't just a desk clerk, but a master of fearful and unknown
+powers.
+~
+11 269230216 0 Y
+30 -10 -5 10d100+2750 4d8+80
+96 750000
+8 5 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12906
+apparition~
+The Apparition~
+The wailing Apparition emerges from the sarcophagus, and attacks you.
+~
+Flowing through the air, the Apparition reaches out with its incorporeal hands
+that resemble bony claws at you with the intent to drain the life from you.
+Some shreds of clothes remain clinging to its hazy form, but they are nearly
+decayed beyond being anything but dust.
+~
+16426 786570 -1000 Y
+19 1 0 10d100+1500 2d6+25
+0 250000
+8 8 0
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12907
+maiden sacred~
+The Maiden~
+The Sacred Maiden is here, meditating to purify her surroundings.
+~
+The Maiden isn't the most beautiful of fair ladies that you have seen, but she
+has an aura of purity and innocence that makes you reconsider your ways. Her
+clothes are clean white, tied from the waist with a blood red belt.
+She turns on you and smiles at you with so much emotion and joy, that all you
+want to do is to stay by her side.
+~
+139 135006344 0 Y
+30 -8 0 10d100+1950 2d4+16
+0 150000
+4 5 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12908
+haze dazzling~
+The Dazzling Haze~
+The Dazzling Haze appears to protect the maiden.
+~
+Formed of pure light, the Haze will sacrifice its existence to save the
+innocent and the worthy. This form of energy is widely known for its
+relentless pursuit of combat.
+~
+42 806092808 0 Y
+30 -10 -10 10d100+2000 2d50+30
+0 375000
+8 8 0
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12910
+daemon crystal~
+The Crystal Daemon~
+The Crystal Daemon is here, sitting in the corner and gazing at you.
+~
+What a strange life form. A bipedal humanoid made completely of crystalline
+shards that pulse with life. It's eyes resemble small rubies, but also they
+twinkle with the light of life energy.
+~
+147468 303112 0 Y
+51 -20 -18 1d1050+2699 5d19+57
+10000 300000
+8 8 0
+68 0 0d0+0 1
+9 3 35 0
+0 0 0 0
+R
+2
+K
+0 0 0 0 0 0
+#12911
+kansatsu mystic brother elder~
+Brother Kansatsu~
+Brother Kansatsu is here, meditating to find inner peace.
+~
+Brother Kansatsu has been disturbed by violent nightmares of Death and
+Destruction. That is the reason why he has spend the past few days in
+constant meditation. His bald head trickles with sweat.
+~
+147466 269265064 0 Y
+32 -12 -5 10d100+6000 2d8+80
+0 1000000
+8 5 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12912
+senjin mystic brother elder~
+Brother Senjin~
+Brother Senjin is here, sleeping without any fear.
+~
+Brother Senjin looks very tired and worn-out. His breath is shallow and
+very weak. The extreme physical training has taken its toll. There is no
+strength at all left in his impressive frame.
+~
+147466 269265064 0 Y
+32 -12 -5 10d100+6000 2d8+80
+0 1000000
+8 5 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12913
+kenji mystic brother elder master~
+Brother Kenji~
+Brother Kenji is here, practising his martial arts techniques.
+~
+Brother Kenji is going through a very complicated and taxing series of
+maneuvers to hone them to the level of perfection. His punches and kicks
+are executed like as brilliantly as his stature implies. Definitively a 
+master of both martial arts and armed combat.
+~
+147464 806133928 0 Y
+51 -12 -5 10d100+14500 7d9+110
+0 1000000
+8 8 1
+5 20608 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12914
+genshi mystic brother elder~
+Brother Genshi~
+Brother Genshi is here, enjoying the food with great enthusiasm.
+~
+Brother Genshi has a well formed body, a fair amount of overweight, though.
+His table manners suggest that the food is of utmost importance to him. So
+hastily he stuffs all edible down his gob.
+~
+147466 269265064 0 Y
+32 -12 -5 10d100+6000 2d8+80
+0 1000000
+8 5 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12915
+kyoki mystic brother elder~
+Brother Kyoki~
+Brother Kyoki is here, in meditative seance.
+~
+Brother Kyoki have engaged in meditative seance to explore the distant
+reaches of the Astral plane. His attention is not here, but somewhere
+over the rainbow. His bald head hints of devotion and dedication to the
+faith.
+~
+147466 269265064 0 Y
+32 -12 -5 10d100+6000 2d8+80
+0 1000000
+8 5 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12916
+yagyu mystic brother elder~
+Brother Yagyu~
+Brother Yagyu is here, waiting for new initiates to arrive.
+~
+Brother Yagyu is standing and waiting. The permanent sneer on his face isn't
+because of his dislike for this world, but of a snapped tendon on his facial
+muscles. His bold head gleams from sweat in this light.
+~
+147466 269265064 0 Y
+32 -12 -5 10d100+6000 2d8+80
+0 1000000
+8 5 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#12920
+stalker invisible~
+The invisible stalker~
+You see a faint, mansized figure standing in the middle of the room.
+~
+As you try to see the incredibly fast-moving figure in front of you, you
+hear a slight hissing sound emanating from the vision. 'Go awayy..', it says
+and charges towards you...
+~
+16426 270270506 0 Y
+20 0 -5 10d100+1250 2d8+30
+0 75000
+8 8 0
+3 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

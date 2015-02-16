@@ -1,0 +1,300 @@
+#18100
+fifth seal~
+Fifth seal on the dark ones prison~
+A black and white disk is lying here.~
+~
+8 0 1
+0 0 0 0
+3 25000 2000000
+50
+E
+seal fifth~
+   A flat disk, the size of your palm half white, half
+black, the colors separated by a sinuous line. 
+The disk is made of cuendiar, and is one of the
+seven seals on the dark ones prison. If all seven 
+are broken, The Dark One will break free of his
+prison.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18101
+spear~
+a short spear~
+A short spear is lying here.~
+$n stab $V with your spear.~
+9 100727808 8193
+0 2 2 3
+4 10000 1000
+30
+E
+spear~
+The spear has a foot of steel, able to go straight through a man.
+~
+X
+$n raise $r spear, but there is noone to strike at.~
+0 0 0
+M
+You wield the spear.~
+You remove the spear.~
+$n wields a spear.~
+$n stops using a spear.~
+A
+19 15
+A
+18 3
+A
+52 3
+#18102
+hide buckler~
+a hide buckler~
+A hide buckler is lying here.~
+~
+9 0 513
+15 -1 -1 -1
+5 12500 10000
+20
+E
+hide buckler~
+The buckler is made of layers of cured bull hide.
+~
+X
+~
+0 0 0
+M
+You wear the hide buckler.~
+You remove the hide buckler.~
+$n wears a hide buckler.~
+$n removes a hide buckler.~
+A
+19 1
+A
+13 10
+A
+52 4
+#18103
+brown clothing caddinsor~
+caddinsor~
+A piece of brown clothing lays here.~
+~
+9 0 9
+5 -1 -1 -1
+5 25000 10000
+20
+E
+brown clothing caddinsor~
+   Loose breeches tucked into soft, laced, knee-high boots, again in shades 
+of brown, gray and green to blend into the surroundings.
+~
+X
+~
+0 0 0
+M
+You wear the caddinsor.~
+You remove the caddinsor.~
+$n wears a caddinsor.~
+$n removes the caddinsor.~
+A
+19 1
+A
+12 7
+A
+52 4
+#18104
+robe~
+a robe~
+A robe is lying here.~
+~
+9 0 9
+8 -1 -1 -1
+5 25000 10000
+20
+E
+robe~
+A simple brown robe.
+~
+X
+~
+0 0 0
+M
+You wear the robe.~
+You remove the robe.~
+$n wears a robe on $s body.~
+$n removes a robe.~
+A
+19 1
+A
+18 1
+A
+52 2
+#18105
+headband~
+a headband~
+A headband is lying here.~
+~
+9 0 17
+2 -1 -1 -1
+2 5000 1000
+25
+E
+headband~
+A headband of brown cloth.
+~
+X
+~
+0 0 0
+M
+You knot the headband around your head.~
+You unknot and remove the headband.~
+$n knots a headband around $s head.~
+$n unknots and removes a headband.~
+A
+18 3
+A
+13 7
+#18106
+key dust~
+a dust key~
+a pile of dust is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 1
+30
+E
+crown roses rose~
+   The crown are a master smith work. Long stems of roses make up the 
+crown with thorns peeking out between the blossoms.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18107
+access key choedan kal~
+An access key to the Choedan Kal~
+A small figurine of a woman holding a sphere in her hand is standing on the ground.~
+~
+12 2240512 16385
+0 0 0 0
+10 35000 50000
+33
+E
+access key choedan kal~
+  The access key is linked to a statue, granting immense power to
+its wielder. The access key is formed like a small figurine of a 
+woman holding a sphere in her right hand. A faint white glow
+emanates from the sphere.
+~
+X
+~
+5 0 0
+M
+A surge of power runs through you as you grab the access key.~
+$n breathes sharply in ecstasy as $e grabs an access key to the Choedan Kal.~
+The surge of power leaves you as you let go of the the access key.~
+$n lets out a mournful sound as $e lets go of an access key to the Choedan Kal.~
+A
+19 4
+A
+18 4
+A
+53 4
+T
+10000
+#18108
+access key choedan kal~
+An access key to the Choedan Kal~
+A small figurine of a man holding a sphere in her hand is standing on the ground.~
+~
+12 2371584 16385
+0 0 0 0
+10 35000 50000
+33
+E
+access key choedan kal~
+  The access key is linked to a statue, granting immense power to
+its wielder. The access key is formed like a small figurine of a 
+man holding a sphere in his left hand. A faint white glow emanates
+from the sphere.
+~
+X
+~
+5 0 0
+M
+A surge of power runs through you as you grab the access key.~
+$n breathes sharply in ecstasy as $e grabs an access key to the Choedan Kal.~
+The surge of power leaves you as you let go of the the access key.~
+$n lets out a mournful sound as $e lets go of an access key to the Choedan Kal.~
+A
+19 4
+A
+18 4
+A
+53 4
+T
+10000
+#18109
+boots fur~
+a pair of fur-lined boots~
+A pair of fur-lined boots is standing here.
+~
+~
+0 100727808 1
+3 -1 -1 -1
+10 45000 30000
+30
+E
+boots fur~
+  The boots are made of dark leather and have white fur along its rim.
+~
+X
+~
+512 0 0
+M
+You wear the boots on your feet.~
+$n wears a pair of fur-lined boots.~
+You remove the boots.~
+$n removes a pair of fur-lined boots.~
+A
+19 1
+A
+18 1
+#18110
+bracelet steel~
+a polished steel bracelet~
+A polished steel bracelet is left here.
+~
+~
+9 105965568 1
+12 -1 -1 -1
+10 55000 40000
+30
+E
+steel bracelet~
+  The bracelet is polished to perfection and fits perfectly on your wrist.
+~
+X
+~
+0 0 0
+M
+You wear bracelet on your wrist.~
+$n wears polished steel bracelet.~
+You remove the bracelet from you wrist.~
+$n removes polished steel bracelet.~
+A
+19 2
+A
+52 16
+#0
+$~

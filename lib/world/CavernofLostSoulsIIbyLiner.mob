@@ -1,0 +1,129 @@
+#16900
+mantis preying creature insect~
+A preying mantis~
+An insectile creature scuttles quickly to meet you, ample jaws spreading wide.
+~
+A towering, brown insect extends its grasping appendages toward
+you as its ample mandibles snap back and forth in the air,
+oozing saliva.  These creatures have taken over the ancient
+mines as their own, and you have happened upon their nest.
+Its tenuous gaze flicks over your body as it rapidly approaches.
+~
+104 32808 -500 Y
+35 -7 -7 10d8+3187 5d7+15
+25000 300000
+8 8 2
+76 0 1d1+1 1
+5 2 25 0
+0 0 0 0
+#16901
+soul wayfarer vision~
+The soul of a wayfarer~
+The sorrowful vision of a lost soul passes quickly before you.
+~
+A lonely apparition glides effortlessly along the subterranean
+breeze. It appears to be the soul of a would-be adventurer,
+one of the many who became lost or met with some unnatural death
+in these endless caverns.  It gently caresses your shoulder and
+conveys the deep sorrow buried within its translucent eyes.
+~
+524296 201621504 0 Y
+33 -6 0 10d8+2978 6d5+12
+20000 240000
+9 9 0
+95 0 1d1+1 0
+0 0 0 0
+#16902
+soul image miner slave~
+The soul of a mining slave~
+A wispy image of a miner flashes briefly across the wall.
+~
+The departed soul of an ancient mining slave floats neatly along
+the ground as if walking.  It carries a pickaxe and a dim candle
+in its wispy hands.  A ghostly echo of a whistle drifts to your
+ears as it returns to whatever spectral work it was consumed with
+before you arrived.
+~
+524360 67141632 0 Y
+33 -7 -1 10d8+3011 6d5+15
+20000 250000
+9 9 0
+95 0 1d1+1 0
+0 0 0 0
+#16903
+soul wayfarer vision~
+The soul of a wayfarer~
+The sorrowful vision of a lost soul passes quickly before you.
+~
+A lonely apparition glides effortlessly along the subterranean
+breeze. It appears to be the soul of a would-be adventurer,
+one of the many who became lost or met with some unnatural death
+in these endless caverns.  It gently caresses your shoulder and
+conveys the deep sorrow buried within its translucent eyes.
+~
+524296 135561216 0 Y
+33 -6 0 10d8+2978 6d5+12
+20000 240000
+9 9 0
+95 0 1d1+1 0
+0 0 0 0
+#16904
+spectre spirit trembling~
+A trembling spectre~
+A broken spirit trembles like a leaf in the soft breeze.
+~
+A disembodied figure floats briefly into your field of vision.
+Cowering away, it tucks its tattered shape of a head under its
+arm and begins such an unearthly whimper that your ears fairly
+ring. It appears to be larger than the other spiritual
+inhabitants of these caves and in such torment that no man
+could ever endure.
+~
+524424 303106 200 Y
+37 -9 -5 10d8+4357 8d5+17
+30000 430000
+9 9 0
+53 939524155 10d8+490 1
+1 1 9 141
+0 0 0 0
+T
+......A trembling spectre is surrounded by a shroud of white!~
+#16905
+spectre spirit ravenous~
+A ravenous spectre~
+The raging spirit of an ancient horror turns to slay you in its gaze.
+~
+A blood-spackled spectre unfurls its tenebrous shrouds as you
+approach. Its form is long and sleek, eyes blazing deep
+scarlet and teeth elongating to the likeness of needles.
+Its anger is apparent as it rushes to dispatch of you.
+~
+67633192 545292294 -800 Y
+37 -7 -6 10d8+4576 4d6+12
+30000 435000
+9 9 0
+53 939524155 10d8+398 1
+1 1 10 100
+0 0 0 0
+T
+......A ravenous spectre is surrounded by an angry red mist!~
+#16906
+mantis preying creature insect~
+A preying mantis~
+An insectile creature scuttles quickly to meet you, ample jaws spreading wide.
+~
+A towering, brown insect extends its grasping appendages toward
+you as its ample mandibles snap back and forth in the air,
+oozing saliva.  These creatures have taken over the ancient
+mines as their own, and you have happened upon their nest.
+Its tenuous gaze flicks over your body as it rapidly approaches.
+~
+262410 32828 -500 Y
+35 -4 -1 10d8+478 6d5+7
+1000 1000
+8 8 2
+76 0 1d1+1 1
+5 1 10 0
+0 0 0 0
+#0
+$~

@@ -1,0 +1,220 @@
+#17400
+ring spirit ~
+A spirit ring ~
+A spirit ring is lying here.
+~
+~~
+9 0 3
+0 0 0 0
+1 1 5
+100
+A
+13 3
+#17401
+boots spirit ~
+Some spirit boots ~
+Some spirit boots are lying here.
+~
+~~
+9 0 65
+5 0 0 0
+1 1 5
+100
+A
+14 30
+#17402
+spirit shield ~
+A spirit shield ~
+A spirit shield is lying here.
+~
+~~
+9 0 513
+5 0 0 0
+1 1 5
+100
+A
+18 1
+#17403
+spirit plate breastplate ~
+A spirit breastplate ~
+A spirit breastplate is lying here.
+~
+~~
+9 0 9
+5 0 0 0
+1 0 5
+100
+A
+1 1
+#17404
+spirit cape ~
+A spirit cape ~
+A spirit cape is lying here.
+~
+~~
+9 0 5
+2 0 0 0
+1 0 5
+100
+#17405
+spirit cap ~
+A spirit cap ~
+A spirit cap is lying here.
+~
+~~
+9 0 17
+3 0 0 0
+1 0 5
+100
+#17406
+spirit gauntlets ~
+A pair of spirit gauntlets ~
+A pair of spirit gauntlets is lying here.
+~
+~~
+9 0 129
+3 0 0 0
+1 0 5
+100
+#17407
+spirit greaves ~
+Spirit greaves ~
+Some spirit greaves are lying here.
+~
+~~
+9 0 33
+3 0 0 0
+1 0 5
+100
+#17408
+spirit cloak ~
+A spirit cloak ~
+A spirit cloak is lying here.
+~
+~~
+9 0 1025
+4 0 0 0
+1 0 5
+100
+#17409
+spirit bracelet ~
+A spirit bracelet ~
+A spirit bracelet is lying here.
+~
+~~
+11 0 4097
+0 0 0 0
+1 0 5
+100
+A
+18 1
+#17410
+spirit hammer warhammer ~
+A spirit warhammer ~
+A spirit warhammer is lying here.
+~
+~~
+5 0 8193
+0 2 5 7
+1 0 5
+100
+A
+18 2
+#17411
+bread ~
+a bread ~
+A loaf of bread has been left here.
+~
+~~
+19 524288 1
+12 0 0 0
+1 10 10
+100
+#17412
+waterskin ~
+a waterskin ~
+a waterskin is lying here. 
+~
+~~
+17 0 1
+80 0 0 0
+10 75 70
+100
+#17413
+lantern brass ~
+a hooded brass lantern ~
+A hooded brass lantern has been left here.
+~
+~~
+1 0 65537
+0 0 100 0
+4 60 20
+100
+#17414
+token ~
+a magical token ~
+A magical token has been left here.
+~
+~~
+12 0 16385
+0 0 0 0
+1 0 20
+100
+A
+4 1
+A
+5 1
+#17415
+key ~
+a very important key ~
+A very important key is lying on the ground.
+~
+~~
+18 524289 1
+0 0 0 0
+1 0 1
+100
+E
+key~~
+This key looks very important. ~~
+#17420
+staff mighty hades ~
+The Mighty Staff of Hades ~
+The mighty staff of hades has been left here.
+~
+~~
+5 134217809 8193
+23 10 3 7
+18 1 35000
+10
+A
+19 3
+A
+18 3
+B
+32768
+#17421
+ancient token~
+An ancient token of Loftwick
+~
+A strange looking coin is lying here.
+~
+~
+8 524288 1
+0 0 0 0
+1 1 1
+10
+#17430
+ring
+~~
+a bit of nothing~~
+There is a bit of nothing sitting here.~~
+~~
+0 0 3
+0 0 0 0
+10 10 10
+10
+A
+19 30
+#0
+$~

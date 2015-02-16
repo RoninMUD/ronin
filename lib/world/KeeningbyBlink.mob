@@ -1,0 +1,407 @@
+#14500
+keira drow elf~
+Keira the Drow Elf~
+A beautiful drow elf stands here.
+~
+A beautiful drow elf hovers in the air before you.  She gazes
+off into oblivion with cold brown eyes.  Her hair is long and white
+and cascades down her back.  Her finger nails are long and black,
+and she wears henna on each hand.  She wears expensive-looking
+robes and various jewels adorn her body.  On the centre of her
+forehead is a softly glowing emerald.
+~
+42 16777344 -1000 Y
+70 -30 -7 50d50+10000 10d20+35
+0 0
+8 8 2
+99 0 50d50+4000 4
+1 3 3 110
+1 2 4 30
+1 2 5 23
+4 1 2 0
+0 0 0 0
+T
+......Keira the Drow Elf is cloaked in a dark mist!~
+T
+......Keira the Drow Elf glows with arcane power!~
+K
+0 0 0 0 0 0
+#14501
+keira banshee ghost~
+Keira the Banshee~
+The Banshee of a beautiful drow elf haunts the widow's walk.
+~
+An apparition of a beautiful drow elf faints in and out of reality
+here. Though solid, it appears as though the banshee can be 
+penetrated like thin air.  Her face twists with agony, as if the
+forces of the dead side and the living side are pulling her 
+apart. Long drawn out moans emit from the creature.  Her 
+eyes burn like the fires from hell as she slowly focuses her
+gaze upon you.
+~
+10 285212800 -1000 Y
+70 -45 -7 40d60+20000 10d50+120
+1000000 356890
+8 8 2
+53 0 20d10+100 1
+1 3 10 110
+0 0 0 0
+T
+......Keira the Banshee is shrouded in darkness!~
+T
+......Keira the Banshee crackles with powerful magic!~
+K
+0 0 0 0 0 0
+#14502
+Yorla sayer truth hag old wretched~
+Yorla the Truth Sayer~
+A wretched old hag is looming about this area.
+~
+A wretched old hag wobbles about here.  Her ancient, 
+leathered face looks like it has seen many a century.  Her
+bones crack with each step she takes.  She squints her eyes
+as if to see something in the distance.  She is constantly 
+mumbling indiscernible words.  Her dress is old and
+ragged. Her worn leather shoes poke out from under the
+old rags.
+~
+8 134219904 0 Y
+50 -30 -3 50d50+3500 10d10+100
+500000 1200000
+8 8 2
+1 0 50d10+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14503
+ardaan inquisitor warrior~
+Ardaan the Inquisitor~
+An evil looking man gazes at you from under his dark cloak.
+~
+A huge man stands here cracking his knuckles.  He wears
+a long, hooded black cloak that touches the floor.  His coal
+black eyes peer out from under his hood.  An aura of evil
+radiates around this man.  His large frame is clearly visible
+beneath his clothes.  Long stains of blood cover his chest
+and cloak.
+~
+10 268435584 -1000 Y
+70 -15 -10 50d100+27000 20d20+100
+300000 233444
+8 8 1
+4 0 1d1+1 2
+4 2 5 0
+5 2 4 0
+0 0 1 0
+T
+......Ardaan the Inquisitor is boiling with hatred and anger!~
+T
+......Ardaan the Inquisitor burns with Hellish Fire!~
+K
+0 0 0 0 0 0
+#14504
+lyeer maid house~
+Lyeer the House Maid~
+A tall, blonde haired woman is cleaning here.
+~
+A beautiful and fragile-looking lady is scurrying about
+cleaning. She has long blonde hair tied back with a
+simple ribbon.  She wears a very tight maids outfit, and is
+equipt with a large box filled with various cleaning tools.
+She has clear, and crisp eyes that are in continuous 
+motion as she hurriedly cleans and dusts. 
+~
+12 134219904 -40 Y
+50 5 -10 40d40+2000 5d7+40
+50000 60000
+8 8 2
+69 0 10d10+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14505
+henri chef~
+Henri the Chef~
+A fat man is here leaning over his stove.
+~
+A red-faced fat man is here slaving over a hot stove.
+His hair is long and greasy, and pinned back in a 
+pony-tail. He wears a red kerchief and a white suit
+reminiscent of a professional cook.  Beads of sweat
+roll down the mans face and unto his collar.  He
+seems to enjoy his job however, as there is small
+pieces of food stuck in his beard. 
+~
+14 134217856 0 Y
+50 5 -6 50d50+10000 5d10+60
+300000 500000
+8 8 1
+69 0 10d10+1000 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14506
+jerne butler~
+Jerne the Butler~
+A stout-looking man is here watching you.
+~
+A tall and stern-looking man stands here.  He is fairly
+lean, yet obviously quite powerful.  His hands are very
+large, and his arms and legs are both extremely long.  
+He carries a silver tray on his arm, and a small towel
+on his other.  He seems to be aimlessly wandering 
+about the castle.
+~
+8 134217856 -100 Y
+50 0 -5 50d50+2000 5d9+40
+35000 75000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14507
+eduard magistrate rat~
+Eduard the Magistrate~
+A man with rat-like features is here calmly gazing at you.
+~
+Eduard is a very tall man, with strange looking features.
+His eyes are coal black, and slitted, and his hair is 
+coarse-looking and greasy.  He has a pencil moustache,
+and his eye brows are so long they seem to jut off his
+head. He grins while smoking his pipe, showing his
+gnarled, yet sharp-looking teeth.
+~
+10 134219904 -1000 Y
+50 5 -1 50d50+5000 10d10+40
+0 0
+8 8 1
+61 0 10d10+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14508
+eduard magistrate wererat grotesque rat~
+Eduard the Wererat~
+A grotesque wererat is here snarling at you.
+~
+A hunched-over wererat is here, growling.  This evil
+creatures eyes glow bright yellow with arcane power.
+Its arms are short, yet muscular.  It resembles a human
+in this form, however, its rat-like features are prominent.
+Spit froths at the mouth, and around the long teeth of the
+wererat. Evil radiates from its entire body.
+~
+10 402655360 -1000 Y
+50 -15 -5 50d50+14000 10d10+75
+500000 2500000
+8 8 1
+61 0 50d50+10 1
+6 2 3 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#14509
+priest arak~
+The Arak Priest~
+A tall man adorned in beautiful white robes stands here.
+~
+An ancient cleric stands on a large stone here in deep
+prayer. His arms are raised to the sky as if this would
+some how make him closer to his god.  He wears long
+white robes embroidered with silver thread.  A large
+symbol hangs around his neck, it glows with pale light.
+~
+10 134219904 1000 Y
+50 -30 -10 50d50+10000 20d10+100
+0 1000
+8 8 1
+2 0 40d10+2000 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14510
+girl phantom ghost apparition young~
+The phantom of a young girl~
+A ghostly apparition fades in and out of reality here.
+~
+An apparition of a beautiful drow elf fades in and out of reality
+here. Though solid, it appears as though the banshee can be 
+penetrated like thin air.  Her face twists with agony, as if the
+forces of the dead side and the living side are pulling her 
+apart. Long drawn out moans emit from the creature.  Her 
+eyes burn like the fires from hell as she slowly focuses her
+gaze upon you.
+~
+17301512 150997120 1000 Y
+25 10 -10 10d10+10 5d15+11
+0 0
+8 8 2
+95 134137469 10d10+10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14511
+clerk general store~
+The Clerk~
+The General Store Clerk is pacing about here.
+~
+A tall, skinny man stands here.  He has a thin moustache
+and long dark hair.  He is a well-dressed man, donning
+a long black jacket with expensive-looking trousers.  He
+is also wearing ruby cufflinks and a top hat.  He peers
+out from under has dark shaded glasses with round 
+dark eyes.
+~
+10 134217856 0 Y
+70 -30 -20 50d50+20000 6d10+50
+25000 0
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14512
+baker store food~
+The Baker~
+The Baker stands here, his face covered in flour.
+~
+A large man is here pounding some dough.  He wears
+the typical baker attire - a very large and baggy suit,
+with a big white apron.  His face and apron are 
+covered with flour and pieces of dough.  He smiles
+happily as he takes a deep whiff of the aroma of his
+freshly baking goods.
+~
+10 134217856 0 Y
+70 -30 -20 50d50+20000 7d15+50
+25000 0
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14513
+young man~
+A Young Man~
+A handsome young man slowly walks about the village.
+~
+A handsome young man slow walks around here.  He 
+appears somewhat nervous as he continuously glances 
+behind his shoulder, then proceeds to scan the area.  He 
+appears to be quite young - perhaps twenty or so.  His
+skin is quite pale, but he is a very well groomed person.
+
+~
+8 134217728 0 Y
+50 -20 -10 5d5+825 20d20+20
+30000 180000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14514
+lady beautiful~
+A Beautiful Lady~
+A beautiful young lady is walking about here.
+~
+A beautiful young lady gracefully prances about here.
+Her long dark curls cascade down her back, and 
+crowd her face.  She has deep, black eyes that seem
+somewhat haunting.  Her skin is dark, like that of a
+gypsy. She seems deep in thought, though she smiles
+and giggles to herself from time to time.  Though
+she is pleasant to look at, there is definitely something
+strange about this girl.
+~
+8 134217728 0 Y
+50 -30 -10 5d5+825 20d20+20
+32000 180000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14515
+fat strange man~
+A strange-looking fat man~
+An strange-looking fat man is hobbling about here.
+~
+An extremely fat man hobbles around here.  He has
+dark, course hair that is puffed up on the top of his
+head. Hair covers most of his face and neck, as well
+it pokes out from under his poorly pressed shirt.  He
+continually grunts and groans as he seemingly wanders
+about aimlessly.
+~
+8 134217728 0 Y
+50 -30 -10 10d5+830 20d20+20
+20000 180000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14516
+bum beggar dirty old man~
+A dirty old beggar~
+A dirty old man is begging here.
+~
+A dirty old beggar sits up against the village wall here.
+He has a scruffy, mean looking face, however he 
+has pale blue eyes that seem innocent enough.  He
+looks very weak, and sick and seems to only be
+half-conscious. He mumbles to himself as he barely
+manages to shake his empty cup.
+~
+10 134217728 0 Y
+50 -26 -3 1d5+850 20d20+0
+6 0
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14517
+woman elderly lanky~
+A lanky elderly woman~
+A lanky elderly woman looms about the village.
+~
+An elderly woman looms about here.  She has long
+gray hair, that was once tied up in a bun, but has
+since came undone.  Her clothes are pieces of rags
+woven together to form a shanty version of a dress.
+Her old leather shoes have long since worn out their
+soles. Her frail body seems to quiver as she breathes.
+~
+8 134217728 0 Y
+50 -20 -7 10d10+500 20d20+30
+50000 80000
+8 8 2
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14518
+pixie glittering dust~
+a Pixie~
+A tiny Pixie is here, spreading magic throughout the Glen.
+~
+A tiny pixie is here fluttering about.  As it flies through
+the air, it leaves a trail of very fine dust.  The pixie is
+very small, and fragile, yet they are known to be quite
+good magicians.  It has small eyes, and a delicate face.
+It makes a gentle smile as it sniffs some flowers which
+it has picked.  It appears to be a happy little creature.
+~
+8 0 0 Y
+26 0 -7 10d20+1200 5d7+6
+15000 70000
+8 8 0
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

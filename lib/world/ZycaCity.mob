@@ -1,0 +1,212 @@
+#10901
+prince~
+The Prince~
+The Prince is here sighing loudly.
+~
+This handsome prince is very unhappy at the moment, because
+his father has forced him to marry the ugly Princess of the
+Darkness Kingdom.
+~
+11 0 1000 Y
+20 0 -2 10d50+700 3d7+5
+7000 64500
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10902
+queen~
+The Queen~
+The Queen is here thinking something very deeply.
+~
+She was a very beautiful lady 20 years ago. When you look at
+her face, you notice that she is quite worried about her son.
+~
+11 128 1000 Y
+27 -5 -7 10d50+1500 7d2+8
+10600 197200
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10903
+king~
+The King~
+The King is here counting his gold coins.
+~
+An ugly greedy king. He will do anything to earn money.
+~
+43 136 -700 Y
+29 -6 -6 1d50+1700 10d2+20
+300000 400000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10904
+guard~
+A Guard~
+A guard is here protecting his city.
+~
+A very strong guard is smiling at you!
+~
+72 0 1000 Y
+21 3 -1 5d20+900 2d5+10
+10000 54000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10905
+bodyguard guard~
+A Body Guard~
+A Body Guard is here protecting his King.
+~
+The King has paid a great deal of gold to employ this guard.  He is
+a very tough adversary and he will do anything to protect the King. So be
+careful if you want to kill the king.
+~
+11 0 0 Y
+24 -4 4 5d20+1000 10d2+10
+50000 120000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10906
+commoner~
+A Commoner~
+A Zyca City Commoner is standing here.
+~
+All his gold goes to pay the King's extreme taxes so he never has any 
+coins left to buy bread for his starving family.
+~
+76 0 1000 Y
+8 15 8 1d10+70 1d7+1
+0 4000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10907
+zyca~
+A Zyca~
+A mage of Zyca wanders about, draped in dirty black robes.
+~
+ The King has always considered the Zyca mages to be one of his most trusted
+advisors and leal subjects.  The bowels of the castle have long since been set
+aside for their lodging and as a place for them to practice and study the dark
+arts that make them so valuable to the kingdom.
+ Long flowing robes of black, sullied with dust and months between washings,
+drape the frame of an unimposing human. But the eyes, there is something dark
+and powerful lurking behind those eyes...
+~
+105 402688136 -400 Y
+46 -17 -10 2d500+4242 2d40+20
+5555 1555555
+8 8 1
+1 0 200d2+300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10908
+cook~
+A cook~
+A cook is here making food for the King.
+~
+This fat man makes very good food.
+~
+10 0 500 Y
+12 9 5 2d10+150 2d7+3
+3000 9980
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10909
+cleaner~
+A cleaner~
+A cleaner is here cleaning the castle.
+~
+He is a very hard working cleaner.
+~
+72 0 500 Y
+6 14 8 3d2+50 1d6+3
+200 2400
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10910
+wolf~
+A trained wolf~
+A trained wolf is here guarding the castle.
+~
+It is a very big wolf. Its long sharp teeth make you
+feel uncomfortable.
+~
+105 33554432 500 Y
+10 10 3 5d4+120 6d2+2
+0 6000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10911
+kitten~
+A kitten~
+A white kitten is here playing with a wool ball.
+~
+A lovely little kitten.  Meooooww!
+~
+72 0 700 Y
+3 17 9 1d2+20 1d3+1
+0 890
+8 8 0
+90 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10912
+guard leader~
+The Leader~
+The Leader of the Guards is here shouting at the guards.
+~
+He shouts 'I don't like any lazy guard!!!!'.
+~
+138 524288 200 Y
+22 5 -2 5d2+1200 4d6+3
+20000 64000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10999
+giant ant~
+A Giant Ant~
+A gigantic, ugly ant lurches forward to DESTROY YOU!!!
+~
+Black as the darkest night, this ant looks as though it's been 
+waiting for you for a long time...its mandibles scrape together as it
+approaches, making a high-pitched, keening noise.
+~
+40 268730368 0 Y
+32 -12 10 30d100+2000 10d30+100
+1 1
+8 8 1
+76 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

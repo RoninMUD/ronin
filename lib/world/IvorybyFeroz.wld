@@ -1,0 +1,1745 @@
+#2800
+Atop A Pink Pebbled Bluff~
+  From atop this high bluff you can easily see in all directions.  To
+your north is the Laughing Sea and you your west are the pink pebbled
+beaches. Far to your south you see a jungle or some sort.  Although all
+of these sites are impressive, none compare to the amazing view to your
+east. On the bottom of the bluff you stand, are large walls of solid
+ivory, and beyond those walls is a large city of ivory.  This large city
+extends all the way to the Gray Sea and the whole city is made of ivory.
+A large tower juts up from the center of the city and casts a long shadow
+over much of the city.  The trail continues to the west and east, and to
+your east is a gate in the wall of ivory.
+~
+28 4 2
+D1
+~
+~
+0 -1 2801
+E
+2801~
+invalid~
+S
+#2801
+Outside the West Gate~
+  Walls of solid ivory reach far above your head.  The must be close
+to twenty feet high.  The ivory is cool to the touch, despite the warm
+sun and the salty ocean breeze.  A large gate opens up into the city
+here and you can see a guard post inside the gate where the cityguards
+can keep the riffraff out of the city.  A well kept, but seemingly not
+well used path extends up a bluff to your west, and sharp cliffs to the
+north and south prevent you from travelling in those directions.
+~
+28 0 1
+D1
+~
+~
+0 -1 2802
+D3
+~
+~
+0 -1 2800
+S
+#2802
+The West Entrance~
+  This is the western entrance to the Ivory City.  To the east is
+a gleaming city of wealth and prosperity.  The giant arch that rises
+above your head marks the barrier between the lives of those inside
+the city and those out.  From this gate, guards can carefully watch
+those who wish to enter and leave the city.  You can see a path
+leaving into the hills to the west, and you see a sturdy wooden door
+in the northern end of the gate.  The hustle and bustle of the main
+plaza of the city is to the east.
+~
+28 4 1
+D0
+~
+~
+0 -1 2803
+D1
+~
+~
+0 -1 2804
+D3
+~
+~
+0 -1 2801
+S
+#2803
+The Guard House~
+  This small room offers the cityguards a place of relaxtion and
+rest from their work.  A small table sits in the center of the
+sparsly decorated room, and a few chairs surround the table.
+Depending on the time of the day, this room may either be empty
+or filled with guards in deep conversation.  The western gate of
+the city is through the door to the south.
+~
+28 8 1
+D2
+~
+~
+0 -1 2802
+S
+#2804
+The Plaza~
+A temporary description hooray!
+~
+28 0 1
+D0
+~
+~
+0 -1 2805
+D1
+~
+~
+0 -1 2811
+D2
+~
+~
+0 -1 2807
+D3
+~
+~
+0 -1 2802
+S
+#2805
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2806
+D1
+~
+~
+0 -1 2812
+D2
+~
+~
+0 -1 2804
+S
+#2806
+The Plaza~
+A temporary description
+~
+28 0 1
+D1
+~
+~
+0 -1 2813
+D2
+~
+~
+0 -1 2805
+S
+#2807
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2804
+D1
+~
+~
+0 -1 2810
+D2
+~
+~
+0 -1 2808
+S
+#2808
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2807
+D1
+~
+~
+0 -1 2809
+S
+#2809
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2810
+D1
+~
+~
+0 -1 2814
+D3
+~
+~
+0 -1 2808
+S
+#2810
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2811
+D1
+~
+~
+0 -1 2815
+D2
+~
+~
+0 -1 2809
+D3
+~
+~
+0 -1 2807
+S
+#2811
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2812
+D1
+~
+~
+0 -1 2816
+D2
+~
+~
+0 -1 2810
+D3
+~
+~
+0 -1 2804
+S
+#2812
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2813
+D1
+~
+~
+0 -1 2817
+D2
+~
+~
+0 -1 2811
+D3
+~
+~
+0 -1 2805
+S
+#2813
+The Plaza~
+A temporary description
+~
+28 0 1
+D1
+~
+~
+0 -1 2818
+D2
+~
+~
+0 -1 2812
+D3
+~
+~
+0 -1 2806
+S
+#2814
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2815
+D1
+~
+~
+0 -1 2819
+D2
+~
+~
+0 -1 2829
+D3
+~
+~
+0 -1 2809
+S
+#2815
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2816
+D1
+~
+~
+0 -1 2820
+D2
+~
+~
+0 -1 2814
+D3
+~
+~
+0 -1 2810
+S
+#2816
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2817
+D1
+~
+~
+0 -1 2821
+D2
+~
+~
+0 -1 2815
+D3
+~
+~
+0 -1 2811
+S
+#2817
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2818
+D1
+~
+~
+0 -1 2822
+D2
+~
+~
+0 -1 2816
+D3
+~
+~
+0 -1 2812
+S
+#2818
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2836
+D1
+~
+~
+0 -1 2823
+D2
+~
+~
+0 -1 2817
+D3
+~
+~
+0 -1 2813
+S
+#2819
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2820
+D1
+~
+~
+0 -1 2824
+D3
+~
+~
+0 -1 2814
+S
+#2820
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2821
+D1
+~
+~
+0 -1 2825
+D2
+~
+~
+0 -1 2819
+D3
+~
+~
+0 -1 2815
+S
+#2821
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2822
+D1
+~
+~
+0 -1 2826
+D2
+~
+~
+0 -1 2820
+D3
+~
+~
+0 -1 2816
+S
+#2822
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2823
+D1
+~
+~
+0 -1 2827
+D2
+~
+~
+0 -1 2821
+D3
+~
+~
+0 -1 2817
+S
+#2823
+The Plaza~
+A temporary description
+~
+28 0 1
+D1
+~
+~
+0 -1 2828
+D2
+~
+~
+0 -1 2822
+D3
+~
+~
+0 -1 2818
+S
+#2824
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2825
+D3
+~
+~
+0 -1 2819
+S
+#2825
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2826
+D2
+~
+~
+0 -1 2824
+D3
+~
+~
+0 -1 2820
+S
+#2826
+The Plaza~
+  Filled with countless people talking, trading, drinking, and
+laughing the Plaza thrives on the tourism and prosperity of the
+Ivory City.  There is a break in the tall ivory wall to the east
+and a cliff overlooking the violent gray sea.  The ivory plaza
+extends to the north, south, and west filled with tables, chairs
+and small businesses forced off the main thoroughways by over-
+powering competitors.  To the northwest the Ivory Tower stands
+above all the other buildings and complexes in the city.
+~
+28 0 1
+D0
+~
+~
+0 -1 2827
+D1
+~
+~
+0 -1 2832
+D2
+~
+~
+0 -1 2825
+D3
+~
+~
+0 -1 2821
+S
+#2827
+The Plaza~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2828
+D2
+~
+~
+0 -1 2826
+D3
+~
+~
+0 -1 2822
+S
+#2828
+The Plaza~
+A temporary description
+~
+28 0 1
+D2
+~
+~
+0 -1 2827
+D3
+~
+~
+0 -1 2823
+S
+#2829
+The South Entrance~
+  This is the southern entrance to the Ivory City.  To the north is
+a gleaming city of wealth and prosperity.  The giant arch that rises
+above your head marks the barrier between the lives of those inside
+and those outside.  When the gate is open, the city guards can carefully
+watch all those who enter and leave the city.  At this moment, the
+large iron gate is closed and locked, blocking access to the world
+beyond. There is a door in the western wall and the city's main plaza
+is to the north.
+~
+28 4 1
+D0
+~
+~
+0 -1 2814
+D3
+~
+~
+0 -1 2830
+S
+#2830
+The Guard House~
+  This small room offers the cityguards a place of relaxtion and
+rest from their work.  A small table sits in the center of the
+sparsly decorated room, and a few chairs surround the table.
+Depending on the time of the day, this room may either be empty
+or filled with guards in deep conversation.  The southern gate of
+the city is through the door to the east.
+~
+28 8 1
+D1
+~
+~
+0 -1 2829
+S
+#2831
+Outside the South Gate~
+  To your south, the world seems to end as though some god was
+designing the world and got bored and just stopped
+where you stand now.  maybe he'll come back later and finish.
+~
+28 0 1
+D0
+~
+~
+0 -1 2829
+S
+#2832
+The Cliffside Staircase~
+  You stand at the edge of a steep cliff.  A wall extends to
+your north and south from this point protecting the city, which
+lies to the west.  To your east, as far as you can is, is the
+gray sea.  Waves crash onto the rocks below you and you can
+taste salt in the air.  The corrosiveness of the air has made
+the ivory here cracked and uneven despite the city's best
+efforts to keep it in good shape.  Should you wish to visit
+the wharf, a staircase descends down the cliff.
+~
+28 4 1
+D3
+~
+~
+0 -1 2826
+D5
+~
+~
+0 -1 2833
+E
+wall~
+Bits of lose ivory fall from the wall as you touch it upon
+examination. Despite all the prosperity and wealth of the
+ivory city, the forces of nature have depleted its beauty
+here.
+~
+S
+#2833
+The Cliffside Staircase~
+  The cliffface glistens from the spray of the water.  It caked
+with a thin layer of salt.  The staircase zigzags back and forth
+both up and down from your current location.  Below you is the
+citie's wharf and above the grand city itself.  The steps are
+slippery, so watch your step.  There is a railing, but it's not
+always best to trust one's life to a metal bar.
+~
+28 0 1
+D4
+~
+~
+0 -1 2832
+D5
+~
+~
+0 -1 2834
+S
+#2834
+The Cliffside Staircase~
+  The salt is think in the air from the crashing waves below you on
+the cliff.  A path extends from here out onto a wooden wharf to your
+east. The staircase you now stand on continues up the cliff
+where you can find the Ivory City.  The staircase is carved from
+the sheer rock and is made up of numerous setbacks.  The staircase seems
+to have no support structure other than the cliff itself, it
+seems like quite the marvel of engineering.  You notice that there
+is some water on the steps, so it'd be best to step carefully.
+~
+28 0 1
+D1
+~
+~
+0 -1 2835
+D4
+~
+~
+0 -1 2833
+S
+#2835
+The Wharf~
+  This room pending descs based on availability of a ferry and
+the type (pay or loop) that Ronin will have by the time this area
+is installed.
+~
+28 0 1
+D3
+~
+~
+0 -1 2834
+S
+#2836
+Ivory Way~
+A temporary description
+~
+28 4 1
+D0
+~
+~
+0 -1 2837
+D2
+~
+~
+0 -1 2818
+S
+#2837
+Intersection of Ivory Way and Main Street~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2852
+D1
+~
+~
+0 -1 2840
+D2
+~
+~
+0 -1 2836
+D3
+~
+~
+0 -1 2838
+S
+#2838
+Main Street~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2847
+D1
+~
+~
+0 -1 2837
+D2
+~
+~
+0 -1 2848
+D3
+~
+~
+0 -1 2839
+S
+#2839
+Main Street~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2846
+D1
+~
+~
+0 -1 2838
+D2
+~
+~
+0 -1 2849
+S
+#2840
+Main Street~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2851
+D1
+~
+~
+0 -1 2841
+D3
+~
+~
+0 -1 2837
+S
+#2841
+Main Street~
+A temporary description
+~
+28 0 1
+D0
+~
+~
+0 -1 2850
+D2
+~
+~
+0 -1 2842
+D3
+~
+~
+0 -1 2840
+S
+#2842
+The Ivory Inn~
+A temporary description
+~
+28 8 1
+D0
+~
+~
+0 -1 2841
+D3
+~
+~
+0 -1 2843
+D4
+~
+~
+0 -1 2844
+S
+#2843
+The Ivory Inn~
+A temporary description
+~
+28 8 1
+D1
+~
+~
+0 -1 2842
+S
+#2844
+The Reception~
+A temporary description
+~
+28 8 1
+D3
+~
+~
+0 -1 2845
+D5
+~
+~
+0 -1 2842
+S
+#2845
+The Vault~
+  Covering virtually every wall of the room are expansive vaults
+signifying great riches and prosperity of the city's frequenters.
+Upon the ivory floor a mural appears out of slight variations in
+color. The beauty of even the vault in this city rivals that of
+anywhere else in the world.  Clearly, time and effort has been put
+into making this land as beautiful as it can be.  A busy reception
+back to the east invites visitors to stay the night in their quite
+comfortable accomodations and rest before continuing on their weary
+travels. Resting in the corner is a wooden rocking chair for the
+guard of the gorgeous ivory vault.
+~
+28 8 1
+D1
+~
+~
+0 -1 2844
+E
+chair~
+Worn slightly with age, the carved rocking chair looks relaxing
+and commanding.  Inlaid upon its back is a miniature ivory tower.
+~
+E
+mural~
+A depiction of the magnificent Ivory Tower piercing the clouds
+high in the sky over Ivory City is created out of tiny pieces
+of varied ivory, clearly the work of a skilled craftsmen.
+~
+S
+#2846
+The Teacher's House~
+A temporary description
+~
+28 12 1
+D2
+~
+~
+0 -1 2839
+S
+#2847
+The Magic Shop~
+  Potions, cauldrons, and numerous scrolls fill the ivory shelves
+behind the counter of the clean magic shop.  The well established
+business thrives off the throngs of people that move through Ivory
+City everyday.  Trade routes, caravans, rich dignitaries all frequent
+this glorious city bringing prosperity to the marketplace and even
+more to shops like this one.  The busy Main Street back to the south
+fills the room with noise and gossip.
+~
+28 8 1
+D2
+~
+~
+0 -1 2838
+S
+#2848
+The Music Shop~
+A temporary description
+~
+28 8 1
+D0
+~
+~
+0 -1 2838
+S
+#2849
+The Home of the Retired Knight~
+A temporary description
+~
+28 12 1
+D0
+~
+~
+0 -1 2839
+S
+#2850
+The Home of the Crazy Hermit~
+A temporary description
+~
+28 8 1
+D2
+~
+~
+0 -1 2841
+D4
+~
+~
+0 -1 2860
+D5
+~
+~
+0 -1 2855
+S
+#2851
+The Doctor's Office~
+A temporary description
+~
+28 8 1
+D2
+~
+~
+0 -1 2840
+S
+#2852
+Ivory Way~
+  Ivory blocks, laid out like bricks to create this highway
+for foot traffic stretches out to the edges of the street and
+to the base of the marvelous staircase ahead to the north.
+All around people are wheeling and dealing, making profits,
+or raising their prices as a swarm of new travellers make their
+way through the marketplace.  Main Street and Ivory Way intersect
+just to the south, and Ivory Way continues south into the quaint
+plaza.
+~
+28 0 1
+D0
+~
+~
+0 -1 2853
+D2
+~
+~
+0 -1 2837
+S
+#2853
+The Ivory Staircase~
+  Carefully carved into the solid ivory is a tall staircase,
+dwarfed only by the massive Ivory Tower that pierces the sky
+to the north of here.  This is the end of Ivory Way and the
+beginning of the city's most prized feature.  Ivarian's 
+residence and the famous Ivory Club are both to the north,
+resting on the first floor of the tower.  Whilst the market-
+place is anything but calm, the noise seems to deplete into
+nothingness in the tower.
+~
+28 0 1
+D0
+~
+~
+0 -1 2854
+D2
+~
+~
+0 -1 2852
+S
+#2854
+The Ivory Staircase~
+  Extending from the end of the prominent Ivory Way, this stairway
+leads up to the entrance of the beautiful Ivory Tower.  The ivory
+steps are extremely well managed, and in gorgeous condition, as
+they shimmer and reflect the images of those that walk upon them.
+The numerous shops and food stands that cover both sides of the
+main thoroughways completely ignore this staircase, perhaps out of
+respect for the great tower.  Back to the south lies the bustling
+street of business and commerce.
+~
+28 0 1
+D0
+~
+~
+0 -1 2861
+D2
+~
+~
+0 -1 2853
+S
+#2855
+The Basement~
+A temporary description
+~
+28 8 1
+D2
+~
+~
+0 -1 2856
+D4
+~
+~
+0 -1 2850
+S
+#2856
+The Monster Cage~
+A temporary description
+~
+28 8 1
+D0
+~
+~
+0 -1 2855
+D3
+~
+~
+0 -1 2857
+S
+#2857
+The Forgotten Sewer~
+A temporary description
+~
+28 8 1
+D1
+~
+~
+0 -1 2856
+D3
+~
+~
+0 -1 2858
+S
+#2858
+The Forgotten Sewer~
+A temporary description
+~
+28 8 1
+D1
+~
+~
+0 -1 2857
+D3
+~
+~
+0 -1 2859
+S
+#2859
+The Forgotten Sewer~
+A temporary description
+~
+28 8 1
+D1
+~
+~
+0 -1 2858
+S
+#2860
+The Home of the Crazy Hermit~
+A temporary description
+~
+28 8 1
+D5
+~
+~
+0 -1 2850
+S
+#2861
+The Entrance to the Ivory Tower~
+  Atop the Ivory staircase the glorious Ivory Tower rises high
+into the sky above.  Just to the north lies the main floor of
+the tower, which houses the front door to the great Ivarian's
+home. The Ivory Club welcomes visitors well to the north and
+the city prison is also housed below the great tower.  Quite
+a change from the hurried lifestyle of the marketplace, the
+Ivory Tower radiates serenity and relaxation.  Ivory way turns
+into the staircase back to the south, but extends far into the
+twists and turns of this majestic city.  The great jungle is
+barely visible over the ivoy wall far to the south.
+~
+28 12 1
+D0
+~
+~
+0 -1 2862
+D2
+~
+~
+0 -1 2854
+S
+#2862
+The Main Chamber~
+  The spacious base of the Ivory Tower extends to many fine
+establishments. Well-furnished and welcoming accomodations to
+the north include the Ivory Club.  A magnificent archway leads
+into its welcoming warmth and relaxation.  The guard barracks
+and city prison demonstrate the control of riff-raff and crime
+that Ivarian demands of the city.  Ivarian's gorgeous grand
+hall sparkles with wealth to the west of here.  Heavy trade
+and commerce fill the streets to the south in the marketplace.
+A small carving of an Ivory City stamp indicates the presence
+of their Postoffice nearby.  Salty air from the Sea of Love to
+the north billows into the room, adding to the serenity of the
+city.
+~
+28 8 1
+D0
+~
+~
+0 -1 2863
+D1
+~
+~
+0 -1 2865
+D2
+~
+~
+0 -1 2861
+D3
+~
+~
+0 -1 2877
+D4
+~
+~
+0 -1 2884
+S
+#2863
+The Entrance to the Ivory Club~
+  You stand at the entrance to the Ivory Tower's exclusive club,
+the aptly named Ivory Club.  Being a center for commerce, rich
+merchants, diplomats, and explorers all gather in the club to
+exchange information, rest their feet, and dine.  But to join
+them inside, you'll have to pay the exorbitant membership fee.
+Of course, not only does the fee help pay to furnish the beautiful
+club, it's also the members' way of keep out the rifraff that may
+have made it into the city.
+~
+28 8 1
+D0
+~
+~
+0 -1 2864
+D2
+~
+~
+0 -1 2862
+S
+#2864
+The Ivory Club~
+  Soft sounds of music come from the small band in the corner.  A
+number of wealthy looking individuals talk in small groups, or lounge
+in chairs.  There are even a number of large couches in the dark
+corner of the room.  The north wall is mostly open and presents a
+beautiful view of the Sea of Love and the cliffs below.
+~
+28 8200 1
+D2
+~
+~
+0 -1 2863
+E
+couches~
+Fluffy, comfortable couches hug the walls of the room and provide
+nice resting places for weary travellers.
+~
+S
+#2865
+The Entrance to the Guard's Barracks~
+  The Ivory Tower is filled with throngs of people coming and
+going for both business and pleasure, and from the locals who
+come here to trade gossip, but this end of the tower is much more
+quiet. A large guarded door to the east is the entrance to the
+guard's barracks.  In order to maintain peace and prosperity in this
+busy city, the city guards are well trained and numerous, but even
+the greatest of warriors need sleep.  It's also presumed that the
+guards have a jail underneath the barracks, but normal citizens are
+not allowed in the area so rumors are unconfirmed.
+~
+28 8 1
+D1
+~
+~
+0 -1 2866
+D3
+~
+~
+0 -1 2862
+S
+#2866
+The Barracks~
+  Within the walls of these barracks guards rest, train, and chat.
+Seemingly separated from the lifestyles of other citizens or the
+mass of people entering and leaving the city everyday, these guards
+are relegated to these barracks.  The ivory floor here is not kept
+shiny and glossy as it is in the rest of the city.  The barracks
+opens more in every direction, back to the west is the entrance, and
+beyond that, the base of the Ivory Tower.
+~
+28 8 1
+D0
+~
+~
+0 -1 2867
+D1
+~
+~
+0 -1 2869
+D2
+~
+~
+0 -1 2870
+D3
+~
+~
+0 -1 2865
+S
+#2867
+The Barracks~
+  Bunked cots line the north wall, indicating this is the place
+where the well-trained guards of this city rest.  Many pieces of
+clothing and shoes strewn across the floor show the only signs of
+imperfection within this city's ivory walls.  Within these barracks
+guards are trained to maintain order and peace in the busy city.
+More cots and training areas can be found to the south and east.
+~
+28 8 1
+D1
+~
+~
+0 -1 2868
+D2
+~
+~
+0 -1 2866
+S
+#2868
+The Barracks~
+A temporary description
+~
+28 8 1
+D2
+~
+~
+0 -1 2869
+D3
+~
+~
+0 -1 2867
+S
+#2869
+The Barracks~
+A temporary description
+~
+28 8 1
+D0
+~
+~
+0 -1 2868
+D3
+~
+~
+0 -1 2866
+S
+#2870
+The Barracks~
+A temporary description
+~
+28 8 1
+D0
+~
+~
+0 -1 2866
+D5
+~
+~
+0 -1 2871
+S
+#2871
+The Prison~
+A temporary description
+~
+28 8 1
+D0
+~
+~
+0 -1 2874
+D1
+~
+~
+0 -1 2872
+D3
+~
+~
+0 -1 2873
+D4
+~
+~
+0 -1 2870
+S
+#2872
+A Prison Cell~
+A temporary description
+~
+28 8 1
+D3
+~
+~
+0 -1 2871
+S
+#2873
+A Prison Cell~
+A temporary description
+~
+28 8 1
+D1
+~
+~
+0 -1 2871
+S
+#2874
+The Prison~
+A temporary description
+~
+28 8 1
+D1
+~
+~
+0 -1 2875
+D2
+~
+~
+0 -1 2871
+D3
+~
+~
+0 -1 2876
+S
+#2875
+A Prison Cell~
+A temporary description
+~
+28 8 1
+D3
+~
+~
+0 -1 2874
+S
+#2876
+A Prison Cell~
+A temporary description
+~
+28 8 1
+D1
+~
+~
+0 -1 2874
+S
+#2877
+The Entrance to the Ivarian's Personal Quarters~
+  For as long as history goes back, the wealthy and prosperous
+Ivory City has been ruled by a single royal family, of whom the
+current leader is called the Ivarian.  Much of the city's past
+prosperity has been due to a very wise and intelligent royal family
+To your west is the personal estate of the Ivarian and his family,
+attached to the Ivory Tower itself through the hallway in which
+you now stand.  You can hear sounds of business coming from both
+the tower to your east and the Ivarian's estate to the west.
+~
+28 8 1
+D1
+~
+~
+0 -1 2862
+D3
+~
+door~
+2 -1 2878
+S
+#2878
+The Ivarian's Grand Hall~
+  You stand in a hall much smaller than that of the tower's, but
+one much more luxurious and one while filled with people, doesn't
+seem quite as hectic as the tower.  You're stand the Ivarian's
+personal estate.  There are several guards wandering about, and that
+are here speaking are all well dressed individuals, assumably members
+of the family, or wealthy visitors from this city or other more exotic
+lands. The private chambers are a staircase along the outer wall and
+the dining room is north from here.
+~
+28 8 1
+D0
+~
+~
+1 -1 2879
+D1
+~
+door~
+2 -1 2877
+D3
+~
+~
+0 -1 2881
+D4
+~
+~
+0 -1 2882
+S
+#2879
+The Dining Hall~
+  This room is a smaller attachment to the Grand Hall.  It's still
+full of people, but not quite as full as the Grand Hall.  A number of
+tables sit in the room, covered with beautiful, shiny look silverware
+and with a fancy looking chair next to each setting.  You can return to
+the Grand Hall to the south, or the Kitchen lies to the east, where
+you can here some noise from those inside hard at work.
+~
+28 8 1
+D2
+~
+~
+0 -1 2878
+D3
+~
+~
+0 -1 2880
+S
+#2880
+The Kitchen~
+  This very large kitchen is used to prepare all of the banquets that
+Ivarian so loves to hold.  There's plenty of room for all of the servants
+to be here, preparing food.  A large fireplace on the west wall causes
+the room to be very hot, so the windows are open along the north wall.
+A door to the south leads to the Servant's Quarters, and the Dining Room
+is to the east.  You can hear the echoes of the loud party that always seems
+to be going on in that direction.
+~
+28 8 1
+D1
+~
+~
+0 -1 2879
+D2
+~
+~
+0 -1 2881
+S
+#2881
+The Servant's Quarters~
+  This small room is moderately furbished by Midgaardian standards, but
+doesn't compare to the rest of the lavish estate of the Ivarian.  It
+appears that the servants eat, sleep, and pass much of their free time
+in this room by the the beds, kitchen area, and personal items in the
+room, although for the most part, the servants keep this room clean, as
+it is a large part of their job to keep the rest of the estate clean.
+You can exit either through the door to the east into the Grand Hall or
+the path that the servants usually travel, to the north into the Kitchen.
+~
+28 8 1
+D0
+~
+~
+0 -1 2880
+D1
+~
+~
+0 -1 2878
+S
+#2882
+The Ivarian's Balcony~
+  A staircase along the southern wall from the Grand Hall gives
+access to this balcony that circles around the entire hall.  From
+here you can see everything happening in the Grand Hall from above.
+A beautiful ornate railing circles around the entire balcony preventing
+drunken party-goers from falling down into the hall below.  The
+Ivarian's personal quarters are through a door to the north of here.
+~
+28 8 1
+D0
+~
+~
+0 -1 2883
+D5
+~
+~
+0 -1 2878
+S
+#2883
+The Ivarian's Bed Chambers~
+  This huge bed chamber is the sleeping place of the the leader
+of the Ivory City's ruler, the Ivarian.  A huge bed on the north wall
+looks plush and inviting.  Next to the bed are ornamental tables
+and on the east wall is a chair with a mirror and wash basin.  In
+the eastern side of the room is a small table and several chairs.
+There is a stack of papers and a pen on the table, leading you to
+believe that the current Ivarian likes to do a lot of his work in his
+bedroom. The rest of the estate is to the south.
+~
+28 8 1
+D2
+~
+~
+0 -1 2882
+S
+#2884
+The Second Floor~
+  The ivory tower narrows to only a staircase leading up from here
+and a noisy postoffice to the south.  A welcoming golden railing starts
+at the floor and follows the staircase upwards, passing beautiful view-
+points along the way.  Down on the first floor are the entrances to
+wonderful Ivory City establishments.  A window on the north-side of this
+room allow the salty air of the Sea of Love to billow in, filling the
+air with the smells of the ocean.  The beautiful Main Street and Ivory
+Way are a flurry with commerce and traffic of citizens and newcomers
+visiting this gorgeous city for the first time.
+~
+28 8 1
+D2
+~
+~
+0 -1 2885
+D4
+~
+~
+0 -1 2886
+D5
+~
+~
+0 -1 2862
+S
+#2885
+The Ivory City Post Office~
+  Numerous colored bins for sorting mail, get wheeled around the room
+by busy post-people.  A chute on the western wall continually drops
+mail from an unknown place into bins and sometimes onto the shiny ivory
+floor. Behind an ivory counter at the southern end of the room the
+postoffice extends back further, but only invities presence of employees.
+Sitting on the counter is a small bell with a tiny note reading:
+
+              Please ring for service.
+                               -Ivory Postal Service
+
+  The hustle and bustle of handling all the mail from such a commercial
+city give them plenty to do and no one seems to take note of anything
+happening around themselves, as they focus only on the task of sorting,
+stamping, and mailing.  The spiraling ivory staircase to the north leads
+further up the tower.
+~
+28 8 1
+D0
+~
+~
+0 -1 2884
+S
+#2886
+The Staircase~
+  The golden railing covers windows and the edge of the staircase
+to prevent any catastrophes in such a beautiful spot.  A window on
+the western curved wall echoes with the sound of the marketplace
+below. Despite the heavy traffic that frequents this tower, the
+stairs and railing are in wonderful condition, waxed and shined to
+perfection. The main chamber and second floor are only a little
+ways back down the staircase, and the top of the tower is up more
+of this pretty stairwell.
+~
+28 8 1
+D4
+~
+~
+0 -1 2887
+D5
+~
+~
+0 -1 2884
+S
+#2887
+The Staircase~
+  As the staircase spirals around the windows move to accomodate
+travellers, allowing them to view the expansive city as they walk
+up to the top of the tower.  Framing the landscape, a window on
+the northern wall portrays the beauty of the ivory city's wall
+against the backdrop of the Sea of Love.  From up here the city
+is beginning to look awfully small, as ant-sized people roam
+around the ivory streets far below.  Far up this staircase lies
+the top of the magnificent Ivory Tower.
+~
+28 8 1
+D4
+~
+~
+0 -1 2888
+D5
+~
+~
+0 -1 2886
+S
+#2888
+The Staircase~
+  Continuing its spiral that hugs the walls of the Ivory Tower, the
+staircase leads further into the sky.  The window has been placed
+again to accomodate the traveller that ventures up into the tower.  A
+different ocean with rippling waves is off far to east.  Clearly the
+Ivory City is the most prestigious landmark around as there seem to
+be no other sizable cities within view, or even on the horizon. The
+smooth golden railing and ivory steps lead higher in the tower.
+~
+28 8 1
+D4
+~
+~
+0 -1 2889
+D5
+~
+~
+0 -1 2887
+S
+#2889
+The Staircase~
+  The staircase finally seems to be nearing the top of the Ivory Tower.
+An open-air window on the southern wall is partially fenced off with a
+golden railing.  Through the window, the aroma of a dense jungle drifts
+in to mix with the salty air of two great oceans.  Far below on the
+streets of Ivory City small pin-points of color wander around and carry
+on with their day in the marketplace.  The once seemingly tall walls of
+Ivory City stop well below the height of this window as this tower seems
+to reach into the heavens.
+~
+28 8 1
+D4
+~
+~
+0 -1 2890
+D5
+~
+~
+0 -1 2888
+S
+#2890
+The Top of the Tower~
+  A gusty breeze blows in from the sea, making it cooler than in the 
+busy city below.  You stand at the top of the tower, with only finely 
+decorated golden railings guarding you from plummeting to your death.  
+From your point high above the city, you can easily spy on the world 
+below. For a map of the city, just type "look down".  Beyond the walls 
+of the city, you can make out a variety of terrain.  The harsh ocean 
+spans beyond the horizon, and the Sea of Love extends to your north.  
+From here, you can just barely make out the far coast.  To the west are 
+the majestic pink bluffs, and far beyond them the sandy shore.  To your 
+south is a dense jungle, which appears impassable from your high perch.
+~
+28 0 1
+D5
+~
+~
+0 -1 2889
+S
+#2891
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#2892
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#2893
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#2894
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#2895
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#2896
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#2897
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#2898
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#2899
+A temporary name~
+A temporary description
+~
+28 0 1
+S
+#0
+$~

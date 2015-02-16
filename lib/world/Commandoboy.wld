@@ -1,0 +1,1016 @@
+#23001
+Beginning of a Tunnel Burrowed Through the Glacier~
+   A cold hollow tunnel begins here, leading from an icy cavern towards
+the frozen heart of the glacier. The tunnel appears to taper as it crawls
+forward into the sufficating darkness and harsh cold of the stale air. 
+Scaly grooves on the walls and ceiling of this tunnel suggest that it was 
+burrowed by a tremendous beast. The tunnel leads north, fading into the cold 
+white glacier.
+~
+230 268 0
+D0
+The icy tunnel continues north.
+~
+~
+0 0 23002
+S
+#23002
+Tunnel Burrowed Through the Glacier~
+   A cold narrow tunnel turns here. It is difficult to discern what type of 
+creature burrowed this tunnel, because no semblence of claw markings can be 
+found. The ice on the bottom is much harder than the ice on the sides or top 
+of the tunnel, indicating that quite a bit of ice melted during the 
+burrowing process, then refroze. The tunnel leads east and south.
+~
+230 265 0
+D1
+The icy tunnel continues east.
+~
+~
+0 0 23003
+D2
+The icy tunnel leads to a hole at the bottom of the glacier.
+~
+~
+0 0 23001
+S
+#23003
+Tunnel Burrowed Through the Glacier~
+   The air in this frozen tunnel is heavy and cold and its narrow walls
+draw ever closer together as the tunnel turns.  The lack of traction on the 
+hardened ice floor combines with the entirely uninviting chill of the walls
+to make any journey down this tunnel a slow one. In either direction this 
+tunnel leads to cold and darkness.
+~
+230 264 0
+D2
+The icy tunnel continues west.
+~
+~
+0 0 23004
+D3
+The icy tunnel continues south.
+~
+~
+0 0 23002
+S
+#23004
+Tunnel Burrowed Through the Glacier~
+   This tunnel makes a steep incline leading up towards what could be a tunnel 
+crossing. The total darkness of the tunnel to the north is broken here by a
+soft illumination that resembles moonlight. To the north the tunnel corners 
+westward. Although The frozen walls and slippery floor are hardly welcoming,
+the soft glow of the walls increases above.
+~
+230 264 0
+D0
+The icy tunnel continues north.
+~
+~
+0 0 23003
+D4
+The icy tunnel leads upwards.
+~
+~
+0 0 23005
+S
+#23005
+Crossing of Glaciel Tunnels~
+   This crossing is like a small island amidst a sea of tunnels leading out in 
+every direction. The crossing, like everything else in the glacier, consists 
+entirely of ice. Light cascades out of a spectacular opening to a steep tunnel 
+above and illuminates the crossing with ricocheting sparkles in the ice. While 
+this illumination is a welcome respite from the darkness, it does little to 
+alleviate the bitter aching cold of this hearthless glacier.
+~
+230 264 0
+D0
+An icy tunnel leads off from the crossing.
+~
+~
+0 0 23006
+D1
+An icy tunnel leads off from the crossing.
+~
+~
+0 0 23029
+D2
+An icy tunnel leads off from the crossing.
+~
+~
+0 0 23042
+D3
+An icy tunnel leads off from the crossing.
+~
+~
+0 0 23059
+D4
+An icy tunnel leads up, with light cascading down it.
+~
+~
+0 0 23076
+D5
+An icy tunnel leads down.
+~
+~
+0 0 23004
+S
+#23006
+Tunnel Burrowed Through the Glacier~
+   This tunnel leads north from a large illuminated crossing of similar tunnels.
+The light from the south creeps softly into this tunnel, providing the walls 
+with a faint glow. Although the entire tunnel is made of ice, the ice on the 
+bottom of the tunnel is slightly harder and slicker than the ice on the sides. 
+The tunnel leads north and south.
+~
+230 264 0
+D0
+The icy tunnel continues north.
+~
+~
+0 0 23007
+D2
+The icy tunnel leads to a tunnel crossing.
+~
+~
+0 0 23005
+S
+#23007
+Tunnel Burrowed Through the Glacier~
+   This icy tunnel leads through ice, to ice. At the icy tunnel's icy end, a 
+rocky tunnel leads east into the just as cold, but slightly less wet, frozen 
+rock. The word "icy" comes to mind immediately upon entering this tunnel, in 
+part because of the icy temperature of the dry air, but mostly because of the 
+impressive amount of ice that surrounds this tunnel on all sides. The ice 
+parade continues south into the glacier. A faint ripe aroma wafts in from the 
+east, but the air here is dry and terribly cold.
+~
+230 264 0
+D1
+~
+~
+0 -1 23015
+D2
+The icy tunnel continues south.
+~
+~
+0 0 23006
+S
+#23008
+Above a Tunnel in the Glacier.~
+   This tunnel leads south into an immense glacier. The bottom of the tunnel 
+drops out here, leading down into what appears to be a network of similar 
+tunnels. The ice on the tunnel floor leading south is hard and slippery. 
+Frozen droplets of ice are molded into the ceiling. A peculiar draft wisps 
+in from the south, for a moment breaking through the overwhelming stagnant 
+lifelessness in the glacier.
+~
+230 265 0
+D2
+~
+~
+0 -1 23009
+D5
+~
+~
+0 -1 23043
+S
+#23009
+A Sparkling Glaciel Tunnel~
+   The walls of this tunnel seem both delicate and rough: the smooth ice is 
+covered with fragile bumps that ignite with sparkle and glisten. The air here 
+flows about constantly and slowly, rocking back and forth, back and forth, 
+back and forth. It is difficult to concentrate on anything but the shine of 
+the walls and the sway of the air.
+~
+230 33554697 0
+D0
+~
+~
+0 -1 23008
+D1
+~
+~
+0 -1 23010
+S
+#23010
+A Sparkling Glaciel Tunnel~
+   This still tunnel is surrounded with soothing, cool ice. The air is light,
+and slowly whirls within itself. Soft illumination sparkles and glows off of
+the walls, lighting the tunnel gently. The serene tunnel turns here, leading
+west and south.
+~
+230 33554697 0
+D2
+~
+~
+0 -1 23011
+D3
+~
+~
+0 -1 23009
+S
+#23011
+A Sparkling Glaciel Tunnel~
+   In this wide ice tunnel, the silence of the glacier seems to have a
+rhythm. It is a silence breathing through the tunnel, towards it, and
+away from it. The wift of the air has the sweet subtlety of a fresh
+frozen spring.
+~
+230 33554697 0
+D0
+~
+~
+0 -1 23010
+D2
+~
+~
+0 -1 23012
+S
+#23012
+A Sparkling Glaciel Tunnel~
+   The tunnel ends into a dome, the only exit north. Light reflects about
+the ice with a pallid sparkle, and the air is smooth and full. There seems
+to be a movement to this sphere--a constant, soothing rotation--but
+the opening remains in the same place.
+~
+230 268435721 0
+D0
+~
+~
+0 -1 23011
+S
+#23015
+Rocky Tunnel Under the Glacier~
+   Here the tunnel leads east from the glacier into frozen granite. The granite
+tunnel widens from the thinner ice tunnel leading into the glacier and has jagged
+edges where the glaciel edges were smooth. This tunnel carries a unique aroma
+quite different from the stale air of the glacier, it is a pungent fruity smell
+that carries significant traces of the scent of fresh manuer. Although it is
+quite hard and cold, the frozen floor is also slippery as it is scattered with
+pools of slush presumably tracked in from the glacier. The walls of this tunnel 
+glisten with subtle beauty.
+~
+230 264 0
+D1
+The rocky tunnel leads east.
+~
+~
+0 0 23016
+D3
+~
+~
+0 -1 23007
+S
+#23016
+Rocky Tunnel Under the Glacier~
+   This tunnel leads east and west through frozen granite. The floor is hard
+and cold but has a much dryer and firmer surface than the tunnel to the west.
+A thick layer of frost clings firm to the frozen rock. The heavy air hangs as
+a tight, dry blanket of cold over the still tunnel.
+~
+230 264 0
+D1
+The rocky tunnel continues east.
+~
+~
+0 0 23017
+D3
+The rocky tunnel continues west where it leads into an icy tunnel.
+~
+~
+0 0 23015
+S
+#23017
+Rocky Tunnel Under the Glacier~
+   This tunnel is carved into hard frozen rock. The jagged edges of the rock
+suggest this tunnel may have been dug and chipped to its shape with tools. This 
+tunnel corners here, leading north and west. The sides of the tunnel are
+covered with jagged icy rock, spiking in towards the walkway. The air is bare 
+and dry.
+~
+230 264 0
+D0
+The rocky tunnel continues north towards a rocky cavern.
+~
+~
+0 0 23018
+D3
+The rocky tunnel continues east, towards a glacier.
+~
+~
+0 0 23016
+S
+#23018
+Rocky Tunnel Under the Glacier~
+   A firm, impassable mass of frozen rock blocks the northern end of this
+tunnel, and the only exit leads south into the bitter icy rock. The weight
+of the frozen granite looms over this tunnel from all sides, making the
+already suffocating cold and darkness nigh-unbearable.
+~
+230 264 0
+D2
+The rocking tunnel continues south, where it turns to the west.
+~
+~
+0 0 23017
+S
+#23019
+A Narrow Frozen Tunnel~
+   A narrow tunnel rises from the wider glacial tunnel below. The ice here
+is slushy and seems to be warmer than in the rest of the glacier. The narrow
+space prevents any dramatic movement. The tunnel continues to the west.
+~
+230 265 0
+D3
+~
+~
+0 -1 23020
+D5
+~
+~
+0 -1 23060
+S
+#23020
+A Narrow Frozen Tunnel~
+   This narrow tunnel is burrowed thin through the glacier. Loose slush
+drips down the walls and pools on the bottom. The narrow circle is a
+small, suffocating and cold enclosure. The tunnel continues east and
+south.
+~
+230 265 0
+D1
+~
+~
+0 -1 23019
+D2
+~
+~
+0 -1 23021
+S
+#23021
+A Narrow Frozen Tunnel~
+   This narrow tunnel is burrowed thin through the glacier. Some lines
+or tracks of some sort run through the slush-covered walls. This tunnel
+is a small, suffocating and cold enclosure. The tunnel continues north
+and west.
+~
+230 265 0
+D0
+~
+~
+0 -1 23020
+D3
+~
+~
+0 -1 23022
+S
+#23022
+A Narrow Frozen Tunnel~
+   This tunnel leads east and south through an enormous glacier. It seems
+to be somehow burrowed haphazardly: the tunnel's path is crooked and
+icicles jut out from its ceiling and walls. The air is wet, but warmer
+than in most of the glacier.
+~
+230 265 0
+D1
+~
+~
+0 -1 23021
+D2
+~
+~
+0 -1 23023
+S
+#23023
+A Narrow Frozen Tunnel~
+   A thick sludge covers the floor of this tunnel. It seems to be glacial ice
+that never gets time to completely cool. The ice walls are not smooth but
+full of jagged icicles and protrusions. The tunnel leads north and south.
+~
+230 265 0
+D0
+~
+~
+0 -1 23022
+D2
+~
+~
+0 -1 23024
+S
+#23024
+A Narrow Frozen Tunnel~
+   The icy tunnel is carved into the bowels of an enormous glacier. The air
+is damp and carries a juicy, musty scent. Sludge covers the floor and the
+walls are jagged with rough ice. The tunnel leads north, and west to its end.
+~
+230 265 0
+D0
+~
+~
+0 -1 23023
+D3
+~
+~
+0 -1 23025
+S
+#23025
+A Narrow Frozen Tunnel~
+   A narrow glacial tunnel narrows to its end here. Stalagtites hang from the 
+low ceiling and haphazard icicles jut out from the walls, making this cramped 
+space all-the-less inviting. A thick wet sludge covers the floor and the warm 
+damp air here suggests this tunnel is melted more often here than anywhere else 
+in the glacier. The only exit is east.
+~
+230 265 0
+D1
+~
+~
+0 -1 23024
+S
+#23029
+Tunnel Burrowed Through the Glacier~
+   Cold, dark, and colder. This tunnel leads east from a large crossing of 
+tunnels. The tunnel sides are smooth and round. The floor is flat, as if water 
+had beed added to what was a perfect circle, and settled on the bottom.
+~
+230 264 0
+D1
+The icy tunnel continues east.
+~
+~
+0 0 23030
+D3
+The tunnel leads to a crossing where many other tunnels lead off.
+~
+~
+0 0 23005
+S
+#23030
+Tunnel Burrowed Through the Glacier~
+   This tunnel leads east and west through an icy glacier. The floor and
+walls of the tunnel are smooth and consistent. The south wall has a plate of
+ice which seems flatter than the rest. A corner in the tunnel lies to the 
+east.
+~
+230 268 0
+D1
+The icy tunnel continues east.
+~
+~
+0 0 23031
+D2
+A smooth flat plate on the wall seems to be mobile.
+~
+plate~
+8 -1 23032
+D3
+The icy tunnel continues west, towards a tunnel crossing.
+~
+~
+0 0 23029
+S
+#23031
+Tunnel Burrowed Through the Glacier~
+   The chill air stirs silently in this frozen tunnel, which banks here,
+leading north and west. The narrow walls of this tunnel creep slowly wider
+as it heads north into the glacier and clamp even tighter as it leads
+west.
+~
+230 264 0
+D0
+~
+~
+0 -1 23040
+D3
+The icy tunnel continues west.
+~
+~
+0 0 23030
+S
+#23032
+A Neatly-Chiseled Glacial Tunnel~
+   The walls of this tunnel are much smoother than anywhere else in the
+glacier, and the walls meet the floor and ceiling at right angles, making
+the tunnel square. The tunnel leads east and west, and a cruder tunnel
+lies past an ice plate to the north.
+~
+230 265 0
+D0
+A smooth flat plate on the wall seems to be mobile.
+~
+plate~
+8 -1 23030
+D1
+~
+~
+0 -1 23033
+D3
+~
+~
+0 -1 23037
+S
+#23033
+Northeast Corner of a Neatly-Chiseled Glacial Tunnel~
+   This tunnel is a clean square hall through the enormous glacier. The air
+smells foul of sweat and the molded remnants of meat. The ice on the
+floor is slightly rough, giving it better traction than a smooth floor would
+have. The tunnel leads west and south.
+~
+230 265 0
+D2
+~
+~
+0 -1 23034
+D3
+~
+~
+0 -1 23032
+S
+#23034
+Southeast Corner of a Neatly-Chiseled Glacial Tunnel~
+   This clean, square tunnel corners here, leading north and west. Although
+the floor and walls are clean, the air seems to have a murky feel and a
+dank scent. The moist, rancid smell of the air provides a bit of warmth in this
+freezing glacier.
+~
+230 265 0
+D0
+~
+~
+0 -1 23033
+D3
+~
+~
+0 -1 23035
+S
+#23035
+A Neatly Chiseled Glacial Tunnel~
+   This neat, square tunnel leads east and west. There is an opening to the
+south, where a soft flame flickers bringing small light into the room. A
+fresh stench of meat oozes from this opening, wafting through the tunnel
+and back to its source.
+~
+230 265 0
+D1
+~
+~
+0 -1 23034
+D2
+~
+~
+0 -1 23038
+D3
+~
+~
+0 -1 23036
+S
+#23036
+Southwest Corner of a Neatly-Chiseled Glacial Tunnel~
+   This neat, clean tunnel corners here, leading north and east. The musty
+air carries a heavy scent of flesh: a fresh juicy aroma from the east
+overpowering the older rotten stench that permeates the damp air.
+~
+230 265 0
+D0
+~
+~
+0 -1 23037
+D1
+~
+~
+0 -1 23035
+S
+#23037
+Northwest Corner of a Neatly-Chiseled Glacial Tunnel~
+   This tunnel is a clean square cutting through an enormous glacier. The
+walls are smooth and the ceiling is flat, without any icicles or stalactites
+hanging down. The tunnel leads both east and south.
+~
+230 265 0
+D1
+~
+~
+0 -1 23032
+D2
+~
+~
+0 -1 23036
+S
+#23038
+A Frozen Feasting Hole~
+   This room is softly lit by a pink, flickering fire pit in the center. Above
+the pit are racks stuffed with various corpses and remnants of bodies. The
+leg of an ice troll sticks out from one of the racks, as well as the fur of an
+ice burrower. Abandoned bones lie strewn about near the pit, and some sit
+still cooking on the racks. The fire does not emit much heat, and seems
+very unnatural. To the north there is a neatly-chiseled hallway.
+~
+230 8 0
+D0
+~
+~
+0 -1 23035
+D5
+The fire pit flickers softly, there seems to be an opening beneath it.
+~
+fire~
+10 -1 23039
+E
+fire~
+The fire pit flickers softly, there seems to be an opening beneath it.
+~
+S
+#23039
+A Pristine Ice Chamber~
+   This room is a perfect globe of ice. A faint light breathes in from the fire
+above, but the room is otherwise dark and cold. The air is dry and
+motionless, and nothing decorates the sides or the floor. It might be
+possible to climb the ice up through the fire, but otherwise there is no
+exit from this barren orb.
+~
+230 9 0
+D4
+It appears it would be possible to climb up the ice and through the magical fire.
+~
+ice~
+11 -1 23038
+S
+#23040
+Tunnel Burrowed Through the Glacier~
+   To the north, this icy tunnel opens into a frozen cavern. To the south, it
+continues to narrow before bending into the darkness. To say this tunnel is
+cold would be a gross understatement. Would you like some cheese with your
+chilly?
+~
+230 264 0
+D0
+You see a large frozen cavern.
+~
+~
+0 0 23041
+D2
+~
+~
+0 -1 23031
+S
+#23041
+Frost Covered Cavern~
+   This is a large cavern in the rock under an enormous glacier. The
+walls, ceiling, and floor are covered in frost, and mittens seem more appealing
+than ever. Some preternatural force sends fear running like a cheetah through 
+the veins of any who enter.
+~
+230 8 0
+D2
+An icy tunnel leads south.
+~
+~
+0 0 23040
+S
+#23042
+Tunnel Burrowed Through the Glacier~
+   The walls of this narrow tunnel are smooth and without markings. 
+The floor is covered in a thick slush of partially melted ice, and 
+icicles hang down from the ceiling. It appears this ice has been 
+melted fairly recently.
+~
+230 264 0
+D0
+The tunnel leads to a tunnel crossing with many tunnels leading out of it.
+~
+~
+0 0 23005
+D2
+The icy tunnel continues south.
+~
+~
+0 0 23043
+S
+#23043
+Tunnel Burrowed Through the Glacier~
+   The tunnel ends here, but two small tunnels lead off to the east and west.
+The one leading west seems to end almost immediately, while the one to the east
+opens up into some sort of lair. A hole leads up above this tunnel, and it 
+appears the ice would be possible to climb. There is quite a bit of slush on the
+floor.
+~
+230 264 0
+D0
+The icy tunnel leads north, towards a tunnel crossing.
+~
+~
+0 0 23042
+D1
+~
+~
+0 -1 23058
+D3
+~
+~
+0 -1 23049
+D4
+The ice is rough here, and it appears it could be climbed.
+~
+ice~
+11 -1 23008
+S
+#23049
+Above a Large Hole in the Ice~
+   This tunnel is covered with very slushy ice. Behind the slush, the ice is 
+rock hard, and it seems this tunnel is melted on a regular basis. The tunnel
+descends here, forming a chute leading almost straight down. It would be 
+possible to slide down the chute, but there is no guaranteed way back
+up. To the east there is some sort of tunnel crossing.
+~
+230 264 0
+D1
+~
+~
+0 -1 23043
+D5
+There is a long hole leading to some sort of lair.
+~
+~
+0 0 23050
+E
+hole tunnel~
+The hole looks like it was burrowed by the same creature as the tunnel, but it
+leads straight down towards an unknown cavern.
+~
+S
+#23050
+Melted Lair at the Bottom of the Glacier~
+   This lair is a sort of ice lake under the glacier. The lair is long and 
+narrow and about half-full of half-melted slush. The frosty pool is about 
+eighty feet long and only twenty feet wide. Icicles cover the unsubmerged 
+surface area of this cavern, and a wide tunnel lies above the cavern floor, 
+far out of reach.
+~
+230 776 6
+E
+hole tunnel~
+The tunnel leads straight up, there is no way you can climb back.
+~
+S
+#23058
+Lair at the End of the Tunnel~
+   This lair is surprisingly clean. It is burrowed out of ice, and nothing
+but ice clutters it. It would appear to be uninhabited except for one hole in 
+the northeast corner, which reeks of what could be promising fertilizer. While 
+the ice walls are smooth and appear untouched, the floor is littered with tiny 
+claw holes and scratch marks. These thin, deep claw marks provide only the 
+slightest bit of traction on an otherwise slippery ice floor.
+~
+230 264 0
+D3
+~
+~
+0 -1 23043
+S
+#23059
+Tunnel Burrowed Through the Glacier~
+   This tunnel leads west from a large illuminated tunnel crossing. Although 
+soft light trickles in from the east, to the west the tunnels' path is quickly 
+lost to a deep darkness. The tunnel sides are smooth and even. The tunnel floor 
+is a soft slush not too difficult to walk across, resembling snow as much as it 
+does ice. The tunnel leads east and west.
+~
+230 264 0
+D1
+The tunnel leads to a crossing with many tunnels leading away from it.
+~
+~
+0 0 23005
+D3
+The icy tunnel continues west.
+~
+~
+0 0 23060
+S
+#23060
+Tunnel Burrowed Through the Glacier~
+  This icy tunnel was burrowed through the glacier. The tunnel is simply
+a long hole in the ice. It is very cold here. The tunnel leads east and west
+and opens up towards the north. A narrow tunnel leads up above this larger
+one, and it appears that the ice could be climbed up into it.
+~
+230 264 0
+D0
+~
+~
+0 -1 23066
+D1
+The icy tunnel continues east.
+~
+~
+0 0 23059
+D3
+~
+~
+0 -1 23063
+D4
+It looks possible to climb the rough ice here.
+~
+ice~
+11 -1 23019
+S
+#23063
+Lair of the Cryohydra~
+   A tremendous chill dominates any sensory experience of this lair. Cold seems 
+to grow here, to spring from some unknown source and then move out and back to 
+its source again to make this lair the coldest part of this entire glacier. The 
+walls and floor are smooth and there seems to be little activity here, but the 
+lair is larger than the tunnels around it and could easily function as a habitat
+if there were such a frost-blooded beast to thrive in this climate.
+~
+230 264 0
+D1
+~
+~
+0 -1 23060
+S
+#23066
+Tunnel Burrowed Through the Glacier~
+   This is a most exciting point in this monotonous tunnel network. Here, this 
+icy, freezing tunnel through a glacier collides with a snowy, freezing tunnel 
+through a snowbank. The glacial tunnel leads south; the snowbank tunnel leads 
+west.
+~
+230 264 0
+D2
+~
+~
+0 -1 23060
+D3
+The icy tunnel leads into a snowbank.
+~
+~
+0 0 23068
+S
+#23068
+Tunnel Leading Through a Snowbank~
+   Two tunnels merge here: a cold icy tunnel carved into the glacier, and a cold
+snowy tunnel carved into a bank. Soft snowflakes ease down to the ice, and a
+light wind blows the barren air to life. Amidst the gray clouds the sky holds an
+occasional bright blue flash, and patches of snow reflect sunlight with a 
+refreshing brightness.
+~
+230 256 5
+D1
+The tunnel leads into an icy tunnel.
+~
+~
+0 0 23066
+D3
+The tunnel leads deeper into the snowbank.
+~
+~
+0 0 23069
+S
+#23069
+Tunnel Leading Through a Snowbank~
+   A smooth, snowy tunnel leads through this snowbank. To the east, a gigantic
+glacier looms its slow massive body over this tiny bank, and there is an icy 
+tunnel leading in. Scattered snowflakes fall from a partially-clouded sky that 
+despite the snow provides a tremendous amount of light which is only amplified 
+by the snows white shine. The tunnel continues west further into the snowbank.
+~
+230 256 5
+D1
+The tunnel leads east towards an icy tunnel.
+~
+~
+0 0 23068
+D3
+The tunnel leads deeper into the snowbank.
+~
+~
+0 0 23070
+S
+#23070
+Tunnel Leading Through a Snowbank~
+   The tunnel comes to an end here, and snowflakes lightly float down to the
+piles of snow surrounding it. The clean-white snow rests softly on the floor
+of this tunnel and its walls. The tunnel continues only east, towards an 
+immense glacier.
+~
+230 256 5
+D1
+The tunnel leads east towards an icy tunnel.
+~
+~
+0 0 23069
+S
+#23076
+Tunnel of Cascading Light~
+   Light and ice combine to make a brilliant dance of colors and dazzling
+light. The ice sparkles, and light bounces around playfully. The incredible
+cold of the glacier is dwarfed by the incredible majesty of this light show,
+and the luminous dance is less overwhelming than strangely satiating. The 
+air seems to shift and swirl in a slow rhythm that is not chilling but rather 
+soothing to the skin.
+~
+230 270600 5
+D4
+~
+~
+0 -1 23078
+D5
+The tunnel leads down towards a crossing, with many tunnels leading off from it.~
+~
+0 0 23005
+S
+#23078
+Top of a Tunnel Leading Down into the Glacier~
+   A glacial tunnel begins to open up here, and the top of the glacier is 
+clearly visible to the north. A bright blue sky is narrowly visible through 
+the wider opening to the north, and it is clear that all of the light in the 
+tunnel below is an extension of the brightness outside. The light coming into 
+this tunnel bounces around the icy walls and then cascades down into the 
+glacier. The tunnel is very steep below here, being more a sheer drop than 
+anything walkable. Just to the north this tunnel opens into a wide cave 
+leading out to the surface.
+~
+230 264 5
+D0
+~
+~
+0 -1 23079
+D5
+~
+~
+0 -1 23076
+S
+#23079
+Cave of the Glacial Polar Bear~
+   This cave is an entrance to the tunnel network in the glacier. To the
+north, the top of the glacier reflects its brilliant white through and about
+the cave and then down into the glacier. Being in hibernation, this cave's 
+inhabitant has left it fairly tidy.
+~
+230 8 5
+D0
+You see the top of the glacier.
+~
+~
+0 0 23080
+D2
+~
+~
+0 -1 23078
+S
+#23080
+On Top of the Glacier~
+   The surface of the glacier extends as far as the eye can see in every
+direction. The surface' glassy sheen reflects light with blinding intensity.
+It seems safe to walk east or west across the glacier, or south into the
+cave.
+~
+230 0 0
+D1
+It appears it would be safe to walk across the glacier to the east.
+~
+~
+0 0 23081
+D2
+You see a large cave in the snow.
+~
+~
+0 0 23079
+D3
+It appears it would be safe to walk across the glacier to the west.
+~
+~
+0 0 23082
+S
+#23081
+On Top of the Glacier~
+   Small, spherical droppings are scattered about the top of this enormous
+glacier. One particular pile slightly resembles a duck or perhaps a goose.
+Aside from a large cave to the southeast, the glacial expanse extends as far
+as one can see in any direction.
+~
+230 0 0
+D3
+It appears it would be safe to walk across the glacier to the west.
+~
+~
+0 0 23080
+S
+#23082
+On Top of the Glacier~
+   This seems to be some type of lair for a group of small glacial creatures.
+Their scat dirties the frozen ground in a remarkably orderly and aesthetically
+tasteful pattern. These creatures must get lonely because there is nothing other
+than glacier to be seen.
+~
+230 0 0
+D1
+It appears it would be safe to walk across the glacier to the east.
+~
+~
+0 0 23080
+S
+#0
+$~

@@ -1,0 +1,1547 @@
+#18300
+Throne room~
+   The throne of Andor is a carved like a lion, so that the one seated will sit 
+on the lions back. Portraits of the earlier queens of Andor hang on the walls.
+A thick red carpet is leading over to the throne.
+~
+183 0 0
+D1
+~
+~
+0 -1 18302
+S
+#18301
+Queens sleeping chamber~
+   A huge bed stand in the middle of the room with closets lining one wall, and 
+tables and a small desk one of the others. Out the windows you see the 
+gardens and the city beyond.
+~
+183 0 0
+D0
+~
+~
+0 -1 18302
+S
+#18302
+Palace hallway~
+   The palace hallway is brightly lit by standlamps, and light are beeing 
+reflected of the polished walls. Banners hang down the walls showing 
+the lion of Andor.
+~
+183 0 0
+D1
+~
+~
+0 -1 18303
+D2
+~
+~
+0 -1 18301
+D3
+~
+~
+0 -1 18300
+S
+#18303
+Palace hallway~
+   The palace hallway is brightly lit by standlamps, and light are beeing 
+reflected of the polished walls. Banners hang down the walls showing 
+the lion of Andor.
+~
+183 0 0
+D1
+~
+~
+0 -1 18304
+D3
+~
+~
+0 -1 18302
+S
+#18304
+Palace hallway~
+   The palace hallway is brightly lit by standlamps, and light are beeing 
+reflected of the polished walls. Banners hang down the walls showing 
+the lion of Andor.
+~
+183 0 0
+D1
+~
+~
+0 -1 18305
+D3
+~
+~
+0 -1 18303
+S
+#18305
+Palace garden~
+   A large tree in blossom stand before you and a smell of flowers hang in
+the air. To the north the garden goes on with rose flowerbeds and walkways.
+To teh east you can enter the palace hallways.
+~
+183 0 1
+D0
+~
+~
+0 -1 18306
+D3
+~
+~
+0 -1 18304
+S
+#18306
+Palace garden~
+   Beautiful roses grow in the quiet gardens of the palace. Paved walkways 
+between the rosebeds make a grid pattern throughout the garden. 
+~
+183 0 1
+D0
+~
+wall~
+11 -1 18307
+D2
+~
+~
+0 -1 18305
+S
+#18307
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D1
+~
+~
+0 -1 18320
+D2
+~
+wall~
+11 -1 18306
+D3
+~
+~
+0 -1 18308
+S
+#18308
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D1
+~
+~
+0 -1 18307
+D3
+~
+~
+0 -1 18309
+S
+#18309
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D1
+~
+~
+0 -1 18308
+D3
+~
+~
+0 -1 18310
+S
+#18310
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D1
+~
+~
+0 -1 18309
+D2
+~
+~
+0 -1 18311
+S
+#18311
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D0
+~
+~
+0 -1 18310
+D2
+~
+~
+0 -1 18312
+S
+#18312
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D0
+~
+~
+0 -1 18311
+D2
+~
+~
+0 -1 18313
+S
+#18313
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D0
+~
+~
+0 -1 18312
+D1
+~
+~
+0 -1 18314
+S
+#18314
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D1
+~
+~
+0 -1 18315
+D3
+~
+~
+0 -1 18313
+S
+#18315
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D1
+~
+~
+0 -1 18316
+D2
+~
+~
+0 -1 18321
+D3
+~
+~
+0 -1 18314
+S
+#18316
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D1
+~
+~
+0 -1 18317
+D3
+~
+~
+0 -1 18315
+S
+#18317
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D0
+~
+~
+0 -1 18318
+D3
+~
+~
+0 -1 18316
+S
+#18318
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D0
+~
+~
+0 -1 18319
+D2
+~
+~
+0 -1 18317
+S
+#18319
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D0
+~
+~
+0 -1 18320
+D2
+~
+~
+0 -1 18318
+S
+#18320
+Streets of the inner city~
+   The streets along the inner city follow the nature curve of the land around 
+the Royal castle. A wall around the palace keeps people oft of the palace 
+gardens. The queens guard patrol the streets.
+~
+183 0 1
+D2
+~
+~
+0 -1 18319
+D3
+~
+~
+0 -1 18307
+S
+#18321
+Gate to the inner city~
+   The gates to the inner city are closely watched. Only nobels, lords and 
+ladies are welcome here, and the guards keep any commoner to enter.
+~
+183 0 1
+D0
+~
+~
+0 -1 18315
+D2
+~
+~
+0 -1 18322
+S
+#18322
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18321
+D1
+~
+~
+0 -1 18323
+D2
+~
+~
+0 -1 18338
+D3
+~
+~
+0 -1 18337
+S
+#18323
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D1
+~
+~
+0 -1 18324
+D3
+~
+~
+0 -1 18322
+S
+#18324
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D2
+~
+~
+0 -1 18325
+D3
+~
+~
+0 -1 18323
+S
+#18325
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18324
+D2
+~
+~
+0 -1 18326
+S
+#18326
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18325
+D2
+~
+~
+0 -1 18327
+D3
+~
+~
+0 -1 18341
+S
+#18327
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18326
+D2
+~
+~
+0 -1 18328
+S
+#18328
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18327
+D3
+~
+~
+0 -1 18329
+S
+#18329
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D1
+~
+~
+0 -1 18328
+D3
+~
+~
+0 -1 18330
+S
+#18330
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18340
+D1
+~
+~
+0 -1 18329
+D2
+~
+~
+0 -1 18343
+D3
+~
+~
+0 -1 18331
+S
+#18331
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D1
+~
+~
+0 -1 18330
+D3
+~
+~
+0 -1 18332
+S
+#18332
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18333
+D1
+~
+~
+0 -1 18331
+S
+#18333
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18334
+D2
+~
+~
+0 -1 18332
+S
+#18334
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18335
+D1
+~
+~
+0 -1 18342
+D2
+~
+~
+0 -1 18333
+S
+#18335
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18336
+D2
+~
+~
+0 -1 18334
+S
+#18336
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D1
+~
+~
+0 -1 18337
+D2
+~
+~
+0 -1 18335
+S
+#18337
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D1
+~
+~
+0 -1 18322
+D3
+~
+~
+0 -1 18336
+S
+#18338
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18322
+D2
+~
+~
+0 -1 18339
+S
+#18339
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18338
+D1
+~
+~
+0 -1 18341
+D2
+~
+~
+0 -1 18340
+D3
+~
+~
+0 -1 18342
+S
+#18340
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D0
+~
+~
+0 -1 18339
+D2
+~
+~
+0 -1 18330
+S
+#18341
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D1
+~
+~
+0 -1 18326
+D3
+~
+~
+0 -1 18339
+S
+#18342
+Streets of Camelyn~
+   The streets of Camelys are much like streets in other cities. People and 
+traders fill the streets together with carts, groups of soldiers and on some
+corners, musicians play for whatever coins are thrown their way. Camelyn 
+is a wealthy city and it shows in how the city is kept and the streets kept 
+safe. Not many thieves wander these streets. 
+~
+183 0 1
+D1
+~
+~
+0 -1 18339
+D3
+~
+~
+0 -1 18334
+S
+#18343
+The Camelyn gate~
+   The gates to the city stand open and people are streaming in and out of this 
+huge city. It is said that this city is the most beautiful city in the world, only 
+beaten by Tar Valon. A road leads south over flat lands to what looks like a 
+wooden palisade.
+~
+183 0 1
+D0
+~
+~
+0 -1 18330
+S
+#18344
+Before the Black Tower~
+   Before you stands the Black tower. Its not actually a towere, but the name
+is chosen to counterpart the White Tower where women Aes Sedai live and
+train. The Black tower is for male channelers and wakes fear and horror all 
+over the world. Before the black tower, a man saying he could channel would 
+be struck down where he stood, even by his own family. A male channeler, 
+a man domed to go mad and destroy all around him. Even the ones he love.
+The male channelers are now called Ashaman and this is where they train.
+~
+183 0 0
+D1
+~
+~
+0 -1 18345
+S
+#18345
+Log pallisade~
+   Around the Black Tower a log pallisady 25 feet high make the gate the only 
+entrance. Guards stand to each side of the gate ready to close the gate at
+any sign of an attack.
+~
+183 0 0
+D1
+~
+~
+0 -1 18346
+D3
+~
+~
+0 -1 18344
+S
+#18346
+Dirt street~
+  A dirt street goes straight through the grounds leading from the gate to the 
+west, to a large house, almost a palace to the east. Ashaman work all over 
+the grounds, building new houses and other buildings. To the south you see 
+a training ground.
+~
+183 0 0
+D1
+~
+~
+0 -1 18347
+D2
+~
+~
+0 -1 18351
+D3
+~
+~
+0 -1 18345
+S
+#18347
+Dirt street~
+  A dirt street goes straight through the grounds leading from the gate to the 
+west, to a large house, almost a palace to the east. Ashaman work all over 
+the grounds, building new houses and other buildings. To the south you see 
+a training ground. To the north a guarded house stand to itself.
+~
+183 0 0
+D0
+~
+~
+0 -1 18355
+D1
+~
+~
+0 -1 18348
+D2
+~
+~
+0 -1 18354
+D3
+~
+~
+0 -1 18346
+S
+#18348
+Dirt street~
+  A dirt street goes straight through the grounds leading from the gate to the 
+west, to a large house, almost a palace to the east. Ashaman work all over 
+the grounds, building new houses and other buildings. 
+~
+183 0 0
+D1
+~
+~
+0 -1 18349
+D3
+~
+~
+0 -1 18347
+S
+#18349
+Dirt street~
+  A dirt street goes straight through the grounds leading from the gate to the 
+west, to a large house, almost a palace to the east. Ashaman work all over 
+the grounds, building new houses and other buildings. 
+~
+183 0 0
+D1
+~
+~
+0 -1 18350
+D3
+~
+~
+0 -1 18348
+S
+#18350
+Dirt street~
+  A dirt street goes straight through the grounds leading from the gate to the 
+west, to a large house, almost a palace to the east. Ashaman work all over 
+the grounds, building new houses and other buildings. To the north, stairs 
+lead up to a large building with a banner showing a serpent creature waving
+in the wind.
+~
+183 0 0
+D0
+~
+~
+0 -1 18356
+D2
+~
+~
+0 -1 18359
+D3
+~
+~
+0 -1 18349
+S
+#18351
+Training ground~
+   This section of the training grounds are used for sword practice. Two and two
+practice together with wooden swords. Ranks at the edges watch and a dark
+bearded man is shouting advise to the ones fighting.
+~
+183 0 0
+D0
+~
+~
+0 -1 18346
+D1
+~
+~
+0 -1 18354
+D2
+~
+~
+0 -1 18352
+S
+#18352
+Training ground~
+   On benches along the palisade to the south lay different items and fruits.
+A line of black cloaked men stand and looks intently at their targets. All
+of a sudden every item and fruit explode, chunks of fruit and small metal 
+pieces fly almost to your feet.
+~
+183 0 0
+D0
+~
+~
+0 -1 18351
+D1
+~
+~
+0 -1 18353
+S
+#18353
+Training ground~
+   At a corner of the grounds a group of black cloaked men are chopping wood,
+and are stacking it along the palisade. They are not using axes or touching
+the wood. Everything is done with the Power.
+~
+183 0 0
+D0
+~
+~
+0 -1 18354
+D3
+~
+~
+0 -1 18352
+S
+#18354
+Training ground~
+   Lagre balls of hay stand to one side of the grounds, arrows standing into 
+most of them. Oposite them men are drawing bows and aiming. You better 
+not get in the line of fire.
+~
+183 0 0
+D0
+~
+~
+0 -1 18347
+D2
+~
+~
+0 -1 18353
+D3
+~
+~
+0 -1 18351
+S
+#18355
+Weapons depot~
+   Weapon racks use most of the floor and wall space. Swords and daggers 
+mainy, but also bows and quivers hang on one of the walls. The weapons look
+new and of good quality.
+~
+183 0 0
+D2
+~
+~
+0 -1 18347
+S
+#18356
+Wooden stairs~
+   Large wooden stairs lead up to a large door. The stairs and the palace look
+as they both are not finished yet. Workers can be seen working all over the 
+grounds. The leader of these Ashaman must be in this building.
+~
+183 0 0
+D0
+~
+~
+0 -1 18357
+D2
+~
+~
+0 -1 18350
+S
+#18357
+Hall~
+   The hall is not completed, and the inner walls are still beeing built. Doors 
+to the east and west lead into rooms that are blocked by construction. To 
+the north carved doors stand open leading into a larger hall.
+~
+183 0 0
+D0
+~
+~
+0 -1 18358
+D2
+~
+~
+0 -1 18356
+S
+#18358
+The me'hales throne~
+   Work is in progress here as well. No part of the palace is yet complete. On 
+the northern wall and ornarely carved throne dominate the hall. It looks as 
+it has been carved from one piece of wood, but surely not tree can be that
+big? It has a high back and two standing serpentlike creatures, with legs
+bearing claws, as armrests. One of the creatures are missing a claw.
+~
+183 0 0
+D0
+~
+~
+0 -1 18360
+D2
+~
+~
+0 -1 18357
+S
+#18359
+Guardhouse~
+   The small guardhouse must be for an officer, as it only rooms a dark wooden
+desk and chair, along with a bookshelf and a small table with a basin of water.
+Books and papers stand in piles on the desk.
+~
+183 0 0
+D0
+~
+~
+0 -1 18350
+S
+#18360
+Secret room~
+   You stand in a small room behind the throne. A small table in the center of 
+the room hold books, maps and documents. Wooden pieces stand on on map,
+and must be battle plans. A map of the world is hanging on one of the walls.
+~
+183 0 0
+D2
+~
+~
+0 -1 18358
+S
+#18361
+Bruning gates~
+  Before you lay the great city of Cairhien. Its palaces and library almost 
+matches the ones in Tar Valon for grandiour. Jagged tower reach fro the 
+sky, not yet fisiched after they were burned 20 years ago. The gates
+to the city are burning!
+~
+183 0 1
+D0
+~
+~
+0 -1 18362
+S
+#18362
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe. The street to the north and to the west are blocked
+where burning houses have fallen into the street and people try to rouse
+the fires.
+~
+183 0 1
+D1
+~
+~
+0 -1 18363
+D2
+~
+~
+0 -1 18361
+S
+#18363
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D1
+~
+~
+0 -1 18364
+D3
+~
+~
+0 -1 18362
+S
+#18364
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D0
+~
+~
+0 -1 18365
+D3
+~
+~
+0 -1 18363
+S
+#18365
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D0
+~
+~
+0 -1 18366
+D2
+~
+~
+0 -1 18364
+S
+#18366
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D2
+~
+~
+0 -1 18365
+D3
+~
+~
+0 -1 18367
+S
+#18367
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D1
+~
+~
+0 -1 18366
+D3
+~
+~
+0 -1 18368
+S
+#18368
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D0
+~
+~
+0 -1 18371
+D1
+~
+~
+0 -1 18367
+D3
+~
+~
+0 -1 18369
+S
+#18369
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D1
+~
+~
+0 -1 18368
+D3
+~
+~
+0 -1 18370
+S
+#18370
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe. A throng of rioteers to the west bar the street.
+~
+183 0 1
+D1
+~
+~
+0 -1 18369
+S
+#18371
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D0
+~
+~
+0 -1 18372
+D2
+~
+~
+0 -1 18368
+S
+#18372
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D0
+~
+~
+0 -1 18375
+D1
+~
+~
+0 -1 18373
+D2
+~
+~
+0 -1 18371
+D3
+~
+~
+0 -1 18374
+S
+#18373
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe. A fallen house blocks the street in front of you.
+~
+183 0 1
+D3
+~
+~
+0 -1 18372
+S
+#18374
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe. A fallen house blocks the street in front of you.
+~
+183 0 1
+D1
+~
+~
+0 -1 18372
+S
+#18375
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D0
+~
+~
+0 -1 18376
+D2
+~
+~
+0 -1 18372
+S
+#18376
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D0
+~
+~
+0 -1 18377
+D1
+~
+~
+0 -1 18380
+D2
+~
+~
+0 -1 18375
+S
+#18377
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D2
+~
+~
+0 -1 18376
+D3
+~
+~
+0 -1 18378
+S
+#18378
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D1
+~
+~
+0 -1 18377
+S
+#18379
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe. A huge fight bar the street to the north.
+~
+183 0 1
+S
+#18380
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D1
+~
+~
+0 -1 18381
+D3
+~
+~
+0 -1 18376
+S
+#18381
+Streets in riot~
+   The streets of Cairhien are in turmoil. After the kings assassination the 
+houses contending fort the throne went wild. Blood lust in their eyes they
+attacked the other houses and it all resulted in a city, and a land, where
+noone reigns. The streets are home to rioteers and pillagers, roaming the 
+city for easy money. Several places you see houses and palaces burning 
+and people fighting and beeing killed for the rags on their bodies. These
+streets are not safe.
+~
+183 0 1
+D0
+~
+~
+0 -1 18382
+D3
+~
+~
+0 -1 18380
+S
+#18382
+Library~
+   The library of Cairhien is the second bigges library in the world, only beaten
+by the one in Tar Valon. Row on row of bookshelves fill the great library. The 
+center of the library is dediceted for reading and studying, and tables, desks
+and chairs are placed in a big square.
+~
+183 0 0
+D1
+~
+~
+0 -1 18383
+D2
+~
+~
+0 -1 18381
+S
+#18383
+Library~
+   The library of Cairhien is the second bigges library in the world, only beaten
+by the one in Tar Valon. Row on row of bookshelves fill the great library. The 
+center of the library is dediceted for reading and studying, and tables, desks
+and chairs are placed in a big square.
+~
+183 0 0
+D1
+~
+~
+0 -1 18384
+D3
+~
+~
+0 -1 18382
+S
+#18384
+Library~
+   The library of Cairhien is the second bigges library in the world, only beaten
+by the one in Tar Valon. Row on row of bookshelves fill the great library. The 
+center of the library is dediceted for reading and studying, and tables, desks
+and chairs are placed in a big square.
+~
+183 0 0
+D0
+~
+~
+0 -1 18385
+D3
+~
+~
+0 -1 18383
+S
+#18385
+Library~
+   The library of Cairhien is the second bigges library in the world, only beaten
+by the one in Tar Valon. Row on row of bookshelves fill the great library. The 
+center of the library is dediceted for reading and studying, and tables, desks
+and chairs are placed in a big square.
+~
+183 0 0
+D2
+~
+~
+0 -1 18384
+S
+#18399
+A temporary name~
+A temporary description
+~
+183 0 0
+S
+#0
+$~

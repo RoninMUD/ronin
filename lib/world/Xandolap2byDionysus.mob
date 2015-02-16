@@ -1,0 +1,440 @@
+#19601
+night gaunt night-gaunt dark~
+Night-Gaunt~
+A Night-Gaunt hovers here, absorbing the light into itself.
+~
+The pure incarnation of evil, this flying beast is nothing which
+would be seen in the light of day.  A monster conjured up only by the
+sickest of Necromancer imaginations, its talons stretch almost three
+feet long, its teeth drip with deadly poison, and its rough black hide
+appears as impenetrable as the greatest suit of full plate.
+~
+24746 689700906 -1000 Y
+51 -24 -13 50d50+20000 7d7+70
+0 3300000
+8 8 1
+0 0 10d10+600 3
+1 2 5 25
+5 1 5 0
+6 2 5 0
+0 0 0 0
+K
+250000 0 0 0 0 0 0
+#19602
+atlag creature~
+an Atlag~
+A dark, mishapen creature shambles towards you.
+~
+Years of being kept in this cold pit have made the Atlag a creature to
+be reckoned with.  As it makes its way towards you, shambling over 
+bits of its previous prey, you get a sinking feeling in your stomach.
+What appeared at first glance to be a large mass of rusty swords
+sitting in a corner seems in fact to be its teeth, and as it swings 
+its maw about to face you, you are struck full force with the odor
+of it, and nearly faint dead away.
+~
+106 0 -1000 Y
+60 -24 10 20d20+18000 10d10+300
+0 6000000
+8 8 1
+0 0 10d10+600 0
+0 0 0 0
+K
+1000000 0 0 0 0 0 0
+#19603
+spoldovian ether fish~
+Spoldovian Ether Fish~
+A Spoldovian Fish is here, swimming aimlessly through the ether.
+~
+This transparent fish appears to be swimming in some sort of
+liquid which is invisible to your untrained eye.  Its gills pulsate as
+it absorbs energy from the ether surrounding it, and occasionally it
+freezes as though studying some non-existant prey, then quickly darts
+ahead and perfectly mimes the movements of a creature devouring some
+hapless victim.
+~
+10 402950272 0 Y
+70 -50 -20 10d2000+15000 30d30+200
+0 0
+8 8 1
+0 0 10d10+600 2
+1 1 20 191
+1 2 10 128
+0 0 0 0
+K
+6000000 0 0 0 0 0 0
+#19604
+sulfur elemental element~
+A Sulfur Elemental~
+A cloud of yellow-powder coalesces into a vaguely human form.
+~
+The scent of rotton eggs emenates from this strange form.  One of the 
+lesser beings from the elemental plane, this creature is nonetheless
+quite formidable.  The yellow vapor which makes up its essence begins
+forming into long tendrils, and you have a feeling it harbors some
+sort of ill feelings towards your kind.
+~
+4138 18090112 -200 Y
+48 -17 -30 50d50+8000 20d20+40
+0 2200000
+8 8 1
+0 0 10d10+600 4
+1 2 20 236
+1 2 20 182
+1 5 20 105
+1 5 20 236
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19605
+songbird bird~
+a Songbird~
+A small songbird chirps cheerfully here.
+~
+This bird seems quite out of place in the Kingdom of Darkness.  
+Something about its happy song makes you fearful.  How could something
+be so sure of itself?  It must be backed by powers from far below.  It
+must be a demon bird!  Kill it!  Kill it!
+~
+10 0 500 Y
+6 14 6 8d12+400 2d4+8
+0 12000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+4000 0 0 0 0 0 0
+#19606
+doe deer~
+a Doe~
+a Doe grazes on the grass here.
+~
+You know the sort.  A doe, that is to say, a deer.  Or more precisely,
+a female deer.  Bathed in golden rays from the sun.  If you ask me,
+it's out of place in a place such as this, so far from where you'd
+expect it to be.  So be careful, or you may find yourself a late
+adventurer.  This deer epitomizes to a T what a doe is. 
+~
+138 0 290 Y
+12 8 3 8d20+300 2d12+4
+0 28000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+21000 0 0 0 0 0 0
+#19607
+polar bear~
+a Polar Bear~
+A large white bear seems to blend into the snow here.
+~
+This large white bear would be more at home on an Artic coast or an
+ice flow.  Nonetheless, it is white, and it does make its home in the
+snow.  While it appears large and cumbersome, you have heard it can
+easily outrun a reindeer on land, so running is probably not a wise
+idea.  On the other hand, it also feeds chiefly on seals and fish, so
+you shouldn't be in too much danger.
+~
+10 268435584 0 Y
+24 -4 -2 20d10+400 2d8+34
+0 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+48000 0 0 0 0 0 0
+#19608
+leaf elemental ele~
+a Leaf Elemental~
+A large pile of leaves rises up in the form of an ogre.
+~
+An elemental on the bottom of the hierarchy of creatures from the
+elemental plane, it nonetheless makes a moderately challenging
+opponent.  While you're not sure exactly how it plans on damaging you
+with leaves, you're sure it has some way of defending itself.  And the
+telekinesis through which it shapes its body could prove a challenging
+weapon.
+~
+8268 295060 -40 Y
+34 -2 2 8d30+2600 8d8+60
+0 1500000
+8 8 1
+0 0 8d8+300 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19609
+familiar cat black~
+a Familiar~
+A very intelligent looking black cat lounges peacefully on a couch.
+~
+A feline of the first degree, this cat dispels all doubt you ever held
+about the superiority of the species.  Its eyes seem to hold more
+wisdom than any mortal you've ever met, and the grace with which it
+moves casually about rivals that of the greatest dancers.  You are,
+unfortunately, on your way to slay its soulmate and master, and it does
+not seem to regard this as one of the better things you could be doing.
+~
+74 402917512 -1000 Y
+57 19 -18 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19610
+nil sorcerer dark mage wizard archmage enchanter~
+Nil~
+Nil, the High-Sorcerer of Darkness is here, casting his evil invocations.
+~
+Veiled in robes of utter darkness, Nil looks you over cooly.  His pale
+blue eyes make you shiver involuntarily, and the thin wisp of a smile
+he flashes at you makes you feel sick.  He utters no word, makes not
+the slightest hand gesture, but you find yourself faced with an
+uncontrolable compulsion to sit.  You obviously came here with the idea
+of fighting, but the more you think about it, the worse this idea
+seems.  Perhaps if you left now, he would forget this entire encounter
+ever happened, forget you slew his guards, his companions, his 
+familiar...  but no, it is far too late for that.  You will die now,
+the least you can do it stand up and take it with honor.
+~
+24618 10376 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19611
+bandersnatch xandian bander snatch~
+Xandian Bandersnatch~
+The Xandian Bandersnatch is here, rooting through the grass.
+~
+About seven feet long and covered with a thin layer of black hair,
+this creature is obviously not in possession of any sort of
+intelligence.  It spends its life rooting for food, thinking of nothing
+but the next meal.  Its snout pulsates as small matter is sucked into
+it to be digested.
+~
+16526 270336 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19612
+behemoth big gigantic gargantuan huge enormous~
+A Behemoth~
+A Gargantuan creature towers above you menacingly.
+~
+Over 60 feet tall, the behemoth is one of the largest and most
+solid creatures in the world.  The earth shakes at the smallest step
+taken by this monster, and you can easily imagine yourself crushed
+beneath those enormous feet.  Luckily for you, its head seems to be
+so high up that it doesn't notice your passing.  Perhaps you should
+leave while you still have the option.
+~
+4106 264324 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19613
+zartug wild~
+a Wild Zartug~
+A small boarish creature is rooting around in the underbrush here.
+~
+Zartugs once ran free on this island, but with the coming of the dark,
+the entire ecosystem was launched into chaos, disrupting their mating
+habits catastrophically.  Now only a handful exist, and these are being
+hunted to extinction by the Shantak villagers who share this island
+home.  Though once the hunting merely weeded out a small portion of the
+population, with the lowered birth rates this last food source is
+growing scarce.
+~
+16556 268697620 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19614
+shaman shantak~
+the Shantak Shaman~
+The Shaman for the Shantak village is here, rattling bones and spreading mojo.
+~
+Standing nearly nine feet tall at the spikes, and holding himself with
+dignity, the Shantak shaman is a creature to be respected.  Reminding
+you of nothing more than a righteous lizard, you wonder what exactly it 
+is a shaman does that differs from a priest.  While at one point he
+specialized in rituals of healing, and led the village towards
+spiritual betterment, now the darkness which has taken over the land
+has driven him towards insanity.  He hasn't fallen into the pits of
+evil, as have some lords and holy-men of the realm, but he has lost his
+faith in those around him, and as such, has lost all sense of ethical
+law.
+~
+4106 172 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19615
+warrior shantak~
+a Shantak Warrior~
+A warrior-villager is here, keeping an eye on his town.
+~
+A large lizard-like being, standing eight feet tall, and covered in a
+thick reptilian hide, the Shantak is not your average humanoid.  Though
+technically a "warrior," this Shantak is an average representation of
+the race as a whole.  There are no non-warriors in this tribe, each
+member is taught to use his or her natural defenses and weapons at a
+very young age, and use them well.  While this might lead you to 
+percieve the Shantak as another of the evil races inhabiting this land,
+you would be mistaken in doing so.  They have fought the Dark Lord
+since he arrived, although a tenuous aliance has existed at times
+between them.
+~
+40 537403450 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19616
+chief shantak female~
+the Chief of the Shantak People~
+The chief of the Shantak is here, fuming over the state of affairs in the land.
+~
+At first this female Shantak seems wholely unimpressive to you.  Then
+you notice the subtle hints in her movements which indicate a complete
+assurence in her prowess.  The way her muscles glide beneath her scales
+assure you that she could, indeed, slay you if she so choose.  But so
+far at least, she seems to greet you with veiled hope.  What exactly
+she wants of you, you can't be sure, but you think you should wait to
+hear her offer before mindlessly attacking her.
+~
+202 272520 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19617
+rat vorn large~
+a large Vorn Rat~
+A large, feline-rat scurries about the tunnels.
+~
+A twisted mixture of a cat and a rat, this vermin preys in these lower
+caves on lesser mice.  With the sickly disproportioned body of a rat,
+the perky, extra-sensitive ears of a cat, the thin whip-tail of a rat,
+and the skillful cunning of a cat, this beast is something that even
+you, as a seasoned adventurer, feel deserves some respect.
+~
+16428 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19618
+guardian~
+the Guardian~
+A large etheral creature protects the holiest of holies from the likes of you.
+~
+Impossible to describe, this ineffible creature is older than anything
+mortal man can concieve of.  From the time of the Great Old Ones, the
+time when Void spawned Chaos and Order, the time of the Great 
+Coalescence, the Guardian is the protector of the holiest of holies.
+~
+42 135528576 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19619
+elder one~
+an Elder One~
+A dark being, spawned at the inception of the universe sits here, waiting.
+~
+This is the being responsible for the race of Shantak, for the Guardian
+which lurks nearby, and even for the island beneath which you now find
+yourself.  A daughter of Order, she was chosen to protect the holiest
+of holies, and given the according power.  Now she sits, awaiting the
+day when once more Chaos and Order come into alignment, the day when
+the beings which have lain dormant since the dawn of Time arise and
+take their place in the pinnacle of heaven.
+~
+10 268435592 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19620
+darkness shadowy shadow~
+a Shadowy Darkness~
+A shadow moves across your field of vision.
+~
+Darkness.  That's all you can make out, no matter how hard you look,
+all you see is a black splotch in your vision.  It's as though a tear
+in the fabric of space were manifesting before you.  Something about it
+sets your mind ill at ease.
+~
+108 203161600 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19621
+warrior shantak summoned~
+a Shantak Warrior~
+A warrior-villager is here, protecting his divine creator.
+~
+A large lizard-like being, standing eight feet tall, and covered in a
+thick reptilian hide, the Shantak is not your average humanoid.  Though
+technically a "warrior," this Shantak is an average representation of
+the race as a whole.  There are no non-warriors in this tribe, each
+member is taught to use his or her natural defenses and weapons at a
+very young age, and use them well.  While this might lead you to
+percieve the Shantak as another of the evil races inhabiting this land,
+you would be mistaken in doing so.  They have fought the Dark Lord
+since he arrived, although a tenuous aliance has existed at times
+between them.
+~
+40 537403450 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

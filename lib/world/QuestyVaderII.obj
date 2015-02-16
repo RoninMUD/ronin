@@ -1,0 +1,128 @@
+#26200
+flag empire~
+The Flag of the Empire~
+The Flag of the Empire is here.~
+null
+~
+8 805306368 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26201
+flag rebel alliance~
+The Flag of the Rebel Alliance~
+The Flag of the Rebel Alliance is here.~
+~
+8 805306368 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26202
+empire token~
+A token of the Empire~
+A token of the Empire lies here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26203
+rebel token~
+A token of the Rebellion~
+A token of the Rebellion lies here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26204
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26205
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26250
+shield quest badge~
+Quest Runners Badge~
+A small badge of a Quest Runner is lying here.~
+(null)
+~
+9 134217728 16897
+15 0 1078082560 135414906
+10 1000 1000
+10
+E
+The Badge of the Quest Runner.~
+A small Badge that shows this person
+runs Quests for RoninMUD.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

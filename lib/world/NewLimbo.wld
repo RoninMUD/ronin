@@ -1,0 +1,76 @@
+#0
+The Void~
+  You don't think that you are not floating in nothing.
+~
+0 76 1
+D4
+void~
+~
+0 -1 3001
+S
+#1
+Limbo~
+   You are floating in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light, which fades into the relative
+darkness around you without any trace of edges or shadow.
+   There is a "No Tipping" notice pinned to the darkness.
+~
+0 8 1
+S
+#3
+Sonic's Genisis Video Game System~
+        You see the Mega video game Sonic's The Hedgehog in front of you.
+Also many other arcade beside you.  But the speed of light couldn't resist you.
+Sonic's is reaching out for your destiny and wonder why life has to be so tough.
+~
+0 8 1
+D0
+void~
+~
+0 -1 1
+S
+#4
+A Small Chapel~
+   This beautiful chapel is perfect for small services.  The rich carpeting
+on the floor is soft and elegant, and the chairs are soft and comfortable.
+Tall windows line the walls, flooding the room with soft light.  A small
+altar stands at the front of the room, and the soft flicker of candlelight
+shines from many recesses in the walls.  Overall, this is a very solemn but
+peaceful place to be.
+~
+0 72 0
+S
+#6
+Limbo 2~
+   You are floating in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light, which fades into the relative
+darkness around you without any trace of edges or shadow.
+   There is a "No Tipping" notice pinned to the darkness.
+~
+0 8 1
+S
+#10
+Prison~
+  You are in the prison. You better think about how many bad things you have done.
+No one can get out of this prison. What you can do here is wait.
+~
+0 136 0
+S
+#99
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+
+~
+0 576 0
+S
+#0
+$~

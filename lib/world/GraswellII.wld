@@ -1,0 +1,614 @@
+#1400
+Before a Gate in the Dunes~
+  A wall of scrap metal stands to the south.  Large squares of random
+pieces of metal make up the wall, making it look quite strange.  Some
+of the squares are coated in rust, making it look as though some areas
+would be less protected than others.  On top of the wall the silhouette
+of a sentry silently paces back and forth.  In the middle of the wall
+a gate stands as a way through.  To the north the path leads out back 
+into the dunes.
+~
+14 0 0
+D2
+~
+~
+0 -1 1401
+S
+#1401
+Inside the Gates~
+  A large brown town unfurls before your eyes.  It appears to all be
+made out of metal, although rust coats almost everything.  Every once
+in a while a small patch of shiny iron shines through on the walls of
+the buildings.  A solid looking wooden ladder leads upward to a small
+platform above.  To the east and west small side streets circumvent
+the town right next to the wall, and to the south a large street
+leads directly through the center of town.  In the center a small
+pool lies with a cobbled circular road around it.  Buildings lie
+on either side of the pool but the streets are surprisingly quiet.
+~
+14 0 0
+D0
+~
+~
+0 -1 1400
+D1
+~
+~
+0 -1 1403
+D2
+~
+~
+0 -1 1415
+D3
+~
+~
+0 -1 1412
+D4
+A solid looking wooden ladder leads up to a small
+sentry platform above the gate.
+~
+ladder~
+11 -1 1402
+E
+ladder~
+The ladder unassumingly leans against the wall, begging
+for someone to use it.
+~
+S
+#1402
+The Sentry Post~
+  The sentry post is simply a platform built outward from the wall.
+There are no railings or guards to prevent someone from falling off
+of the platform, making a rather dangerous situation near the ledge.
+Close to the wall a small stool sits for the sentries to take their
+breaks.
+~
+14 0 0
+D5
+A wooden ladder leads down from the platform back into
+the city.
+~
+ladder~
+11 -1 1401
+S
+#1403
+A Small Side Street~
+  This small street leads around the town just inside the wall.  Dirt
+and debris fly around the street from small gusts of wind, while rats
+anxiously dart around looking for something to eat.  The roofs of most
+the shacks can be seen from here, reflecting odd lights with their
+metallic shine.
+~
+14 0 0
+D2
+~
+~
+0 -1 1404
+D3
+~
+~
+0 -1 1401
+S
+#1404
+Atop a Metal Platform~
+  A large platform meets a dirty side street here.  A small set of
+rusted scrap metal stairs lead onto the platform from the street.  A
+small door is positioned in the floor, leading into some undoubtably
+dark, dank hole.  To the west the platform raises giving acces to a 
+pair of buildings that overlook the town.  To the north a side street
+leads towards the entrance of town, keeping near the wall.  To the 
+south there is a small alley, awkwardly sandwiched between a large
+building and the city wall.
+~
+14 0 0
+D0
+~
+~
+0 -1 1403
+D2
+~
+~
+0 -1 1406
+D3
+~
+~
+0 -1 1414
+D5
+In the floor of this platform a small door is positioned,
+keeping people from falling into the hole beneath it.
+~
+door~
+1 -1 1405
+S
+#1405
+A Dark Abode~
+  Small candles flicker in this room, giving a very faint light.
+Shadows dance and sway to an unknown beat around the walls.  Huge
+metal shelves line the walls of this abode, covered in a large
+assortment of unknown junk.  In the corner of the room a small
+tub sits, with water flowing into it out of the wall.  Small rodents
+scurry across the floor, giving rise to even more chaotic movement.
+The only way out of here is a small door positioned atop a ladder
+in the center of the room.
+~
+14 0 0
+D4
+~
+door~
+1 -1 1404
+S
+#1406
+A Tiny Alley~
+  Between the city wall and a building to the northwest this small
+alley just barely fits here.  The ground is composed of a thick,
+brown muck that clings to everything.  From here large metal pipes
+can be seen wrapping around the back of this building, with small
+spouts of water shooting out of random spots.  The alley leads to
+the west and onto a platform to the north.
+~
+14 0 0
+D0
+~
+~
+0 -1 1404
+D3
+~
+~
+0 -1 1407
+S
+#1407
+A Barren Courtyard~
+  A small courtyard opens up here.  The street is simply made of
+packed earth so dust is relatively easy to kick up.  In the center
+of the courtyard a large piece of intricrately woven scrap metal 
+stands reaching for the sky.  There is absolutely nothing growing
+around here.  Everything is either coated in dust or rust, giving
+a faint sense of decay.  The courtyard is blocked on the south 
+and north by huge rusty walls leaving only a small alleyway to 
+the east or a road to the west.
+~
+14 0 0
+D1
+~
+~
+0 -1 1406
+D3
+~
+~
+0 -1 1408
+D4
+  The top of the metal statue looks almost alive.  Things
+are moving around very quickly and it is hard to tell if
+it is being moved by some creature or by random gusts of
+wind.
+~
+metal statue~
+11 -1 1420
+E
+metal statue~
+  The stature is a large metal effigy of what must be some sort of
+battle that happened for the town.  Tangled bodies of metal are
+intricately placed together to give a sense of struggle and actual
+motion occuring while you stare at the statue.  The statue is coated
+in rust, looking almost like it will collapse in on itself.  After
+careful inspection it looks as though there is a way specifically
+built to climb up.
+~
+S
+#1408
+An Alley~
+  This road is sandwiched between a building and the city wall, but
+has plenty of space to walk in.  The building to the north is
+elevated slightly above the ground by metal supports holding it up.
+Underneath the building a sharp hill runs down towards the center
+of town, blocked by a large amount of pipes and support beams.  A
+small door leads into the building to the north, with a large metal
+padlock on it.  To the east the road opens up into a small
+courtyard, while to the west it continues to circle the city.
+~
+14 0 0
+D0
+  The door to the north is a small metallic door with a
+large padlock on it.
+~
+door~
+6 -1 1424
+D1
+~
+~
+0 -1 1407
+D3
+~
+~
+0 -1 1409
+S
+#1409
+A Road by the Wall~
+  The road is made of solidly packed earth, from the footprints 
+of a thousand or more people walking over it.  The large metal 
+wall blocks off travel to the south or west.  To the north the 
+road leads down onto a metal platform, and to the east it leads
+behind a large building.
+~
+14 0 0
+D0
+~
+~
+0 -1 1410
+D1
+~
+~
+0 -1 1408
+S
+#1410
+Outside Muura's~
+  Atop this metal platform the entirety of the town is clear.  To the
+north a set of stairs leads up to another metal platform in front of 
+a small, noisy building.  To the east another set of stairs leads up
+to a different platform with an entrance to a large building.  To the
+northeast the center of town can be viewed, a large pool in the center
+of this rusty depression in the dunes.  Pipe systems run about the
+entire town appearing almost like vines draining the life out of some
+host plant.  The building to the east has a large outcropping reaching
+over the center pool, with a room made almost entirely out of glass 
+hanging almost directly over the pool.  To the west a door leads into
+a building labelled "Muurra's Fine Goods".
+~
+14 0 0
+D0
+~
+~
+0 -1 1411
+D1
+  A small metal bridge leads over to the large building
+towards the center of town.
+~
+~
+0 -1 1417
+D2
+~
+~
+0 -1 1409
+D3
+  A small door leads into the dark shop.
+~
+door~
+1 -1 1418
+D5
+  A rusty ramp leads down to an alley in town.
+~
+~
+0 -1 1416
+S
+#1411
+On a Metal Platform~
+  From this vantage point most of the town is visible.  Large metal
+structures jut out of the earth that look as though they are reaching
+out to the sky.  Almost no growth can be seen around the entire town,
+which adds to the desolation that this town gives.  To the west a door
+leads into a very loud building.  Large pipes emanate from the noisy
+building to the west, spewing streams of black liquid randomly as they
+twist and tangle their way through the town. A small path leads east 
+toward the entrance of town.
+~
+14 0 0
+D1
+~
+~
+0 -1 1412
+D2
+~
+~
+0 -1 1410
+D3
+~
+door~
+1 -1 1419
+S
+#1412
+A Small Side Street~
+This small street leads around the town just inside the wall.  Dirt
+and debris fly around the street from small gusts of wind, while rats
+anxiously dart around looking for something to eat.  A small hut lies
+to the south, which is really just three walls with a roof over the 
+inside of it.
+~
+14 0 0
+D1
+~
+~
+0 -1 1401
+D2
+~
+~
+0 -1 1413
+D3
+~
+~
+0 -1 1411
+S
+#1413
+Inside a Small Hut~
+  The inside of the hut is covered in debris.  Piles of junk are strewn
+all about, leaving just a small path through them.  Almost everything
+in this room is coated in rust, and looks as though it would crumble
+from the lightest of touches.  The only way out is to the north.
+~
+14 0 0
+D0
+~
+~
+0 -1 1412
+S
+#1414
+A Metal Platform~
+  This platform sits just above the center of town.  Two buildings
+flank it to the north and south with doors facing onto the platform.
+Huge squeaks sound throughout the platform as small gusts of wind put
+added stress on the old supports.  To the west a small ramp leads into
+the center of town.
+~
+14 0 0
+D0
+A small door made of rust is set squarely in the buildings
+large facade.
+~
+door~
+1 -1 1421
+D1
+~
+~
+0 -1 1404
+D2
+  A small door leads into the tiny building to the south.
+~
+door~
+1 -1 1422
+D3
+~
+~
+0 -1 1415
+S
+#1415
+The Center of Town~
+  Surrounding the center of town rusty buildings stand a silent watch
+over the pool.  A cobbled stone road circles the pool, with glints
+of color slightly shining through.  Straight above the pool a huge sphere
+of glass is suspended off a metallic tube coming from the south.  The
+sphere and tube are about the only things in this entire town not thickly
+coated in grime and rust.  To the east a ramp leads up to platforms on
+that side of town.  To the west a small alley runs between two rusty
+buildings.  The entrance of town is to the north, while to the south a
+set of double doors lead into the tall building.
+~
+14 0 0
+D0
+~
+~
+0 -1 1401
+D1
+~
+~
+0 -1 1414
+D2
+~
+~
+0 -1 1423
+D3
+~
+~
+0 -1 1416
+E
+pool~
+  Upon further inspection the pool is not actually filled with water,
+but rather with a thick black fluid that tends to stick to your fingers
+as you touch it.  It leaves a rather unpleasant smell in your nostrils
+and a thin film on your fingers.
+~
+S
+#1416
+A Cramped Alley~
+  This small alley is quite cramped.  Dirt is solidly caked onto the
+walls surrounding the alley.  Rats scurry to and fro, picking over
+the bones of some small, unidentifiable animals that were unfortunate
+enough to skewer themselves on some scrap metal.  A squeaky ramp leads
+upwards to a metal platform above here, while to the east lies the 
+center of town.
+~
+14 0 0
+D1
+~
+~
+0 -1 1415
+D4
+~
+~
+0 -1 1410
+S
+#1417
+On a Rusty Metal Bridge~
+  This small metal bridge leads to a door in what would appear to be the
+main building in town.  A small door lies to the east, with a small
+picture of gears on the front of it.  To the west is a metal platform.
+~
+14 0 0
+D1
+  A door lies directly in front of the metal bridge, with
+small markings drawn on the outside of it.
+~
+door~
+1 -1 1424
+D3
+~
+~
+0 -1 1410
+S
+#1418
+Muurra's Fine Goods~
+  The inside of Muurra's differs greatly from the impression on the sign
+outside.  Mountains of junk are piled high all over.  The room seems to
+sparkle because of the light reflected off of the piles of junk.  Rust
+free metal can be seen within the piles, although they are mostly made up
+of scrap that is twisted and deformed to a completely useless state.  A 
+small counter sits on the north side of the room, strange mechanical 
+clicks can be heard coming from it.
+~
+14 0 0
+D1
+  A small door leads back outside to the rust filled town.
+~
+door~
+1 -1 1410
+S
+#1419
+The Generator Room~
+  Huge machines churn inside here, making an awful noise.  Large metal
+beams thrust back and forth, driving some mechanical pump.  What can 
+only be described as a conflagration burns immensely on the western 
+side of the room, raising the temperature to a very uncomfortable level.
+As the orange lights dances and the machines churn a powerful shadow
+battle rages on the eastern wall.  A thick black goo can be seen slowly
+being added to the fire, igniting into a bright inferno almost as soon
+as it leaves the pipe it flows out of.  A door leads back into the 
+town on the eastern wall.
+~
+14 0 0
+D1
+  Tucked away in the corner of the room a small door sits
+leading outside.
+~
+door~
+1 -1 1411
+S
+#1420
+Atop a Rusty Statue~
+  The footing here is treacherous, to say the least.  The statue is made
+out of intertwined metal bodies that are coated in rust.  Small pieces of
+the statue flake off randomly, leaving less footholds than there were
+before.  Huge pieces of rusty metal sway precariously in the breeze
+nearly striking you as they blow by.  From this height vast tracks of 
+land can be seen, including a large castle in the south.  The building 
+to the north blocks most of your view in that direction though.
+~
+14 0 0
+D5
+A dangerous looking set of footholds lead down the side
+of the statue.
+~
+metal statue~
+11 -1 1407
+S
+#1421
+Inside a Rusty Building~
+  Rusty metal walls enclose this entire space, with absolutely no light
+working its way through.  Several humanoid looking machines lie in pieces
+on the floor, as if someone had been making them but just never finished.
+Rows of shelves line the walls, full of empty bottles and small trinkets.
+In the corner a small flow of black liquid is pouring out of a little
+faucet, seemingly running forever.  The only exits is out the door to the
+south.
+~
+14 0 0
+D2
+A small door leads back into town.
+~
+door~
+1 -1 1414
+S
+#1422
+Inside a Tiny Little Room~
+The sound of trickling water can be heard very clearly in here.  Streams
+of water pour down the sides of the room, leading to the growth of huge
+pockets of mold.  The rancid stench of the mold fills the entire room
+giving a sort of hazy feel to the room.  The entire southern wall is unable
+to be seen because of the thick coating of mold on it.  The only way out of
+here is the small door to the north.
+~
+14 0 0
+D0
+  A small door leads north into the open.  For some
+reason it is the only thing in here that is not
+covered in mold.
+~
+door~
+1 -1 1414
+S
+#1423
+A Grand Entrance to City Hall~
+  A double stairway leads upwards into the office level of city hall.  One
+stairway hugging each wall.  Directly in front of the door a small table is
+set up with a small sign in sheet on it.  The walls are meticulously
+polished, which is in stark contrast to the rest of the town.  Small
+pillars add support to a floor above this level, adorned slightly with
+simple tapestries.  To the north a set of double doors lead into the town
+center.
+~
+14 0 0
+D0
+~
+~
+0 -1 1415
+D4
+~
+~
+0 -1 1424
+S
+#1424
+The Office Level of City Hall~
+  A large circle is cut into the floor, giving way to see the lower level
+of city hall.  Everything here is made out of polished metal, and all of
+it is in good repair.  Large dividers are lined up in the southern section
+of this room making smaller rooms with individual desks in them.  To the
+north a small hallway leads into a room that is largely glass.  On the
+eastern wall a strange map is drawn with odd symbols on a blue background.
+To the west there is a small door on the wall, rather awkwardly placed.  
+At the south end of the offices there is a small back door.
+~
+14 0 0
+D0
+~
+~
+0 -1 1425
+D2
+~
+door~
+6 -1 1408
+D3
+~
+door~
+1 -1 1417
+D5
+~
+~
+0 -1 1423
+E
+map~
+    O--------------------O
+    |   O-          .=-  |
+    |    |         O''   |
+    |   O-               |
+    |                    |
+    |   H-H       O  O   |
+    |    V        |--|   |
+    |                    |
+    O--------------------O
+~
+S
+#1425
+Inside an Enormous Glass Sphere~
+A temporary description
+~
+14 0 0
+D2
+~
+~
+0 -1 1424
+S
+#1499
+A temporary name~
+A temporary description
+~
+14 0 0
+S
+#0
+$~

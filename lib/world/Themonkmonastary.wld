@@ -1,0 +1,882 @@
+#10300
+Path through the Forest~
+   A rather boring path really... It's hard to make out, but it seems that
+the trail leads off towards the monastery.
+~
+103 0 3
+D0
+~
+~
+0 0 10301
+D2
+~
+~
+0 0 6100
+S
+#10301
+A Forest Path~
+   The trail goes deeper into the forest, but you can make out the outline
+of the Monk's Monastery further down the path.
+~
+103 0 3
+D0
+~
+~
+0 0 10302
+D2
+~
+~
+0 0 10300
+S
+#10302
+Further Down the Path~
+   You can now definitely make out the Monk's Monastery since you are almost
+outside the entranceway now.
+~
+103 0 3
+D0
+~
+~
+0 0 10303
+D2
+~
+~
+0 0 10301
+S
+#10303
+Outside the Monastery~
+   This has got to be a religious building from all the chanting and humming
+that you hear coming from within. You think you can hear some sounds of unarmed
+battle coming from towards the back which is straight ahead.
+~
+103 0 3
+D1
+~
+~
+0 0 10304
+D2
+~
+~
+0 0 10302
+S
+#10304
+Entranceway to the Monastery~
+   To the East, a hallway leads into the rest of the monastery and the
+Practice Grounds in the back. From the South you hear some chanting and
+the low hum of monks in prayer.
+~
+103 8 0
+D1
+~
+~
+0 0 10305
+D2
+Looking south, you see the sanctum of the monastery where the monks come
+to pray and meditate. In fact, there are a few there now creating all of
+that wonderful chanting and humming!
+~
+~
+0 0 10324
+D3
+You can see outside the monastery
+~
+~
+0 -1 10303
+S
+#10305
+Western End of Main Hallway~
+   The hallway continues East towards the training grounds though a smaller
+hallway is to the North. You see a Dining Hall to the South of here.
+~
+103 8 0
+D0
+~
+~
+0 0 10308
+D1
+~
+~
+0 0 10306
+D2
+~
+~
+0 0 10326
+D3
+~
+~
+0 0 10304
+S
+#10306
+Middle of the Main Hallway~
+   The main hallway continues to the East towards the Training Grounds and
+to the West towards the Monastery's Entrance.
+~
+103 8 0
+D1
+~
+~
+0 0 10307
+D3
+~
+~
+0 0 10305
+S
+#10307
+Eastern End of Main Hallway~
+   This East-West hallway goes East towards the Training Grounds and West
+towards the Monastery Entrance. You hear the sounds of unarmed combat to
+the East and hear some faint humming coming back from the West.
+~
+103 8 0
+D1
+~
+~
+0 0 10325
+D3
+~
+~
+0 0 10306
+S
+#10308
+Outside the Library~
+   You are in a small hallway outside of the Library which is to the West.
+To the South is the Main Hallway, to the North is a monk's cell, and the
+small corridor to the East is lined with monk cells on both sides.
+~
+103 8 0
+D0
+~
+curtain north n~
+1 0 10313
+D1
+~
+~
+0 0 10309
+D2
+~
+~
+0 0 10305
+D3
+~
+~
+0 0 10321
+S
+#10309
+A Small Hallway~
+   This smallish hallway runs East-West and is lined with monk cells on both
+sides. The cells each have a heavy curtain to provide the monks with a little
+bit of privacy when they are in their rooms.
+~
+103 8 0
+D0
+~
+curtain north n~
+1 0 10314
+D1
+~
+~
+0 0 10310
+D2
+~
+curtain south s~
+1 0 10317
+D3
+~
+~
+0 0 10308
+S
+#10310
+A Small Hallway~
+   This smallish hallway runs East-West and is lined with monk cells on both
+sides. The cells each have a heavy curtain to provide the monks with a little
+bit of privacy when they are in their rooms.
+~
+103 8 0
+D0
+~
+curtain north n~
+1 0 10315
+D1
+~
+~
+0 0 10311
+D2
+~
+curtain south s~
+1 0 10318
+D3
+~
+~
+0 0 10309
+S
+#10311
+Turn in the Small Hallway~
+   The small hallway turns West down the corridor and South towards the
+Training Grounds. Monk cells are to the North and East; and you faintly hear
+to sounds of unarmed combat towards the South.
+~
+103 8 0
+D0
+~
+curtain north n~
+1 0 10316
+D1
+~
+curtain east e~
+1 0 10319
+D2
+~
+~
+0 0 10312
+D3
+~
+~
+0 0 10310
+S
+#10312
+End of a Small Hallway~
+   A curtain covers the entrance to a monk's cell to the East of here, a small
+corridor goes North to some more monk cells, and to the South is the Entrance
+to the Training Grounds.
+~
+103 8 0
+D0
+~
+~
+0 0 10311
+D1
+~
+curtain east e~
+1 0 10320
+D2
+~
+~
+0 0 10325
+S
+#10313
+A Monk's Cell~
+   A monk's private living quarters is often referred to as a cell and from
+the sparseness of the furnishings and comforts of home; you can probably
+guess why. In fact, the only real piece of furniture in here is a small cot
+upon which the monk sleeps.
+~
+103 8 0
+D2
+~
+curtain south s~
+1 0 10308
+S
+#10314
+A Monk's Cell~
+   A monk's private living quarters is often referred to as a cell and from
+the sparseness of the furnishings and comforts of home; you can probably 
+guess why. In fact, the only real piece of furniture in here is a small cot
+upon which the monk sleeps.
+~
+103 8 0
+D2
+~
+curtain south s~
+1 0 10309
+S
+#10315
+A Monk's Cell~
+   A monk's private living quarters is often referred to as a cell and from
+the sparseness of the furnishings and comforts of home; you can probably
+guess why. In fact, the only real piece of furniture in here is a small cot
+upon which the monk sleeps.
+~
+103 8 0
+D2
+~
+curtain south s~
+1 0 10310
+S
+#10316
+A Monk's Cell~
+   A monk's private living quarters is often referred to as a cell and from
+the sparseness of the furnishings and comforts of home; you can probably
+guess why. In fact, the only real piece of furniture in here is a small cot
+upon which the monk sleeps.
+~
+103 8 0
+D2
+~
+curtain south s~
+1 0 10311
+S
+#10317
+A Monk's Cell~
+   A monk's private living quarters is often referred to as a cell and from
+the sparseness of the furnishings and comforts of home; you can probably
+guess why. In fact, the only real piece or furniture in here is a small cot
+upon which the monk sleeps.
+~
+103 8 0
+D0
+~
+curtain north n~
+1 0 10309
+S
+#10318
+A Monk's Cell~
+   A monk's private living quarters is often referred to as a cell and from
+the sparseness of the furnishings and comforts of home; you can probably
+guess why. In fact, the only real piece of furniture in here is a small cot
+upon which the monk sleeps.
+~
+103 8 0
+D0
+~
+curtain north n~
+1 0 10310
+S
+#10319
+A Monk's Cell~
+   A monk's private living quarters is often referred to as a cell and from
+the sparseness of the furnishings and comforts of home; you can probably
+guess why. In fact, the only real piece of furniture in here is a small cot
+upon which the monk sleeps.
+~
+103 8 0
+D3
+~
+curtain west w~
+1 0 10311
+S
+#10320
+A Monk's Cell~
+   A monk's private living quarters is often referred to as a cell and from
+the sparseness of the furnishings and comforts of home; you can probably
+guess why. In fact, the only real piece of furniture in here is a small cot
+upon which the monk sleeps.
+~
+103 8 0
+D3
+~
+curtain west w~
+1 0 10312
+S
+#10321
+Working Section of Library~
+   This Library is either very well stocked or these busy monks have been
+copying a few texts and scrolls very industriously! Bookshelves are to the
+North and South and the only exit is to the East. Several tables and chairs
+are about this section and a desk in on the far wall.
+~
+103 8 0
+D0
+~
+~
+0 0 10322
+D1
+~
+~
+0 0 10308
+D2
+~
+~
+0 0 10323
+E
+table tables~
+   The tables are stained with ink and covered with some blank paper. You
+decide that the paper would be far to heavy if you were to take any for
+sale back in town. (Besides, do you really want to make the monks upset?)
+~
+E
+book shelf shelves bookshelves bookshelf~
+   Though you can obviously tell the shelves are quite full, you would have
+to actually go into the section to tell what was on them.
+~
+S
+#10322
+Northern Bookshelves~
+   The bookshelves are filled with various scrolls, texts, manuals, tomes,
+books, and other groupings of literature. You would have to examine the
+various shelves individually to see if there was anything of interest.
+~
+103 8 0
+D2
+~
+~
+0 0 10321
+S
+#10323
+Southern Bookshelves~
+   The bookshelves are filled with various scrolls, texts, manuals, tomes,
+books and other groupings of literature. You would have to examine the
+various shelves individually to see it there was anything of interest.
+~
+103 8 0
+D0
+~
+~
+0 0 10321
+S
+#10324
+Sanctum of the Monastery~
+   The monks gather here to pray to the gods at various times of the day,
+though at any given time there is almost guaranteed to be a few monks here
+chanting, praying, or humming. The Monastery Entrance is to the North and to
+the East seems to be the Dining Hall were the monks eat.
+~
+103 8 0
+D0
+~
+~
+0 0 10304
+D1
+~
+~
+0 0 10326
+S
+#10325
+Entrance to the Training Grounds~
+   You see and hear unarmed combat between monks going on behind the
+Master though you get the impression that you couldn't get by him unless
+he thought you were worthy of testing yourself.
+~
+103 8 0
+D0
+~
+~
+0 0 10312
+D3
+~
+~
+0 0 10307
+S
+#10326
+Dining Hall~
+   A long Table fills the room and you get the impression that it probably could
+seat the entire monastery at one time. Not that they would probably all eat
+at the same time since someone always seems to be training or praying.
+~
+103 8 0
+D0
+~
+~
+0 0 10305
+D1
+~
+~
+0 0 10327
+D3
+~
+~
+0 0 10324
+S
+#10327
+The Kitchen~
+   The cook prepares most of the monastary's food here, despite the odd hours
+that certain monks keep.  You see various cooking utensils, a fire pit, and
+a trapdoor that leads down to the cellar.  You also notice a sign on the
+trapdoor that catches your eye.
+~
+103 0 0
+D3
+~
+~
+0 0 10326
+D5
+~
+trapdoor door trap cellar~
+1 0 10328
+E
+sign~
+               BOLD ADVENTURERS!!
+
+   Recently, it seems that some nasty little monsters made a hole in our wall
+downstairs in the Cellar. We soundly trashed them and none of them have enough
+courage to enter the Cellar again, however, the Monastery would appreciate it
+if you would help us keep their numbers down and fear in their hearts.
+   Though the Monastery could easily purge the menace, we just don't feel like
+taking the time away from our prayers and training to do this. Any assistance
+you provide would be appreciated and you may keep anything you find down
+there as a reward for your help.
+~
+S
+#10328
+Cellar Under the Monastery~
+   There is a Hole in the South wall that seems to lead to a tunnel. The
+Cellar is lit up with some magical lights but the tunnel seems to be lit by
+some sort of green light. The only other exit is through the trapdoor up
+to the Kitchen.
+~
+103 12 0
+D2
+~
+~
+0 0 10329
+D4
+~
+trapdoor door trap kitchen~
+1 0 10327
+S
+#10329
+At the Hole in the Wall~
+   Apparently, someone or something made this hole in the wall into the
+Monastery. Unfortunately, they didn't think things through and they were
+completely stomped by the monks. The tunnel seems to be lit by some sort of
+luminescent fungi with an erie green glow.
+~
+103 8 0
+D0
+~
+~
+0 0 10328
+D2
+~
+~
+0 0 10330
+S
+#10330
+Green Glowing Intersection~
+   This part of the tunnel is brightly lit by some sort of green, glowing
+fungi. The tunnel goes to the North, East, and South.
+~
+103 8 0
+D0
+~
+~
+0 0 10329
+D1
+~
+~
+0 0 10331
+D2
+~
+~
+0 0 10339
+S
+#10331
+Green Glowing Tunnel~
+   This tunnel is also brightly lit by the same green, glowing fungi that
+is fairly prevalent in the chamber to the East.
+~
+103 8 0
+D1
+~
+~
+0 0 10332
+D3
+~
+~
+0 0 10330
+S
+#10332
+The Glowing Green Chamber~
+   You can hardly believe the amount of green fungi growing on the walls
+in this largish chamber. Not only is the fungi abundant, it also gives off a
+decent light source-- probably enough to read by comfortably!
+~
+103 8 0
+D0
+~
+~
+0 0 10333
+D1
+~
+~
+0 0 10335
+D3
+~
+~
+0 0 10331
+S
+#10333
+The Glowing Green Chamber~
+   You can hardly believe the amount of green fungi growing on the walls in
+this largish chamber. Not only is the fungi abundant, it also gives off a
+decent light source-- probably enough to read by comfortably!
+~
+103 8 0
+D1
+~
+~
+0 0 10334
+D2
+~
+~
+0 0 10332
+S
+#10334
+The Glowing Green Chamber~
+   You can hardly believe the amount of green fungi growing on the walls in
+this largish chamber. Not only is the fungi abundant, it also gives off a
+decent light source-- probably enough to read by comfortably!
+~
+103 8 0
+D2
+~
+~
+0 0 10335
+D3
+~
+~
+0 0 10333
+S
+#10335
+The Glowing Green Chamber~
+   You can hardly believe the amount of green fungi growing on the walls in
+this largish chamber. Not only is the fungi abundant, it also gives off a
+decent light source-- probably enough to read by comfortably!
+~
+103 8 0
+D0
+~
+~
+0 0 10334
+D2
+~
+~
+0 0 10336
+D3
+~
+~
+0 0 10332
+S
+#10336
+Glowing Green Passage~
+   This passage is as brightly lit as the Glowing Chamber to the North of
+here. The light seems to be coming from a strange, green fungus that covers
+the walls and ceiling of the passage.
+~
+103 8 0
+D0
+~
+~
+0 0 10335
+D2
+~
+~
+0 0 10337
+S
+#10337
+A Strangely Lit Passage~
+   This passage is illuminated in the most unusual color because there seems
+to be a bright, Green glow coming from the North and a not-quite as bright
+Red glow coming from the West. There seems to be a small passage going to
+the East of here.
+~
+103 8 0
+D0
+~
+~
+0 0 10336
+D1
+~
+~
+0 0 10349
+D3
+~
+~
+0 0 10338
+S
+#10338
+Red Glowing Passage~
+   This passage is fairly well lit by what seems to be some sort of strange
+fungus. This particular strain of fungi emits a bright Red glow. You can see a
+chamber to the South that seems to be covered in this fungus.
+~
+103 8 0
+D1
+~
+~
+0 0 10337
+D2
+~
+~
+0 0 10347
+S
+#10339
+A Dimly Lit Intersection~
+   You can hardly believe the amount of Red glowing fungus growing on the
+walls of this rather large chamber. In fact, the Fungus is so abundant, you
+could probably read by the light it gives off.
+~
+103 8 0
+D0
+~
+~
+0 0 10330
+D2
+~
+~
+0 0 10344
+D3
+~
+~
+0 0 10340
+S
+#10340
+A Dark Tunnel~
+   A rather boring tunnel really that leads East and West. To the East, you
+notice that there is some strangely colored light while to the West is
+nothing but blackness.
+~
+103 9 0
+D1
+~
+~
+0 0 10339
+D3
+~
+~
+0 0 10341
+S
+#10341
+Edge of a Deep, Dark Pit~
+   The tunnel ends abruptly at the steep side of a Deep, Dark Pit. You think
+to yourself, "This has GOT to be where all of the monsters are coming from!"
+~
+103 9 0
+D1
+~
+~
+0 0 10340
+D5
+Looking down, you feel that you should probably go down there and see if
+you can clear out the monster infestation.... then again, maybe someone else
+will do it for the monastery.
+~
+~
+0 0 10342
+S
+#10342
+You change you mind and go back!~
+   As you start down, you hear some strange growls and snorts from below and
+you suddenly think, "What if there is something down there that is MUCH
+tougher than the things that are up here?  What if the things up here are
+actually trying to get away from something down there?"
+   You suddenly remember that you were supposed to be somewhere (well, 
+anywhere besides here would do nicely) and decide to go back.
+~
+103 9 0
+D4
+~
+~
+0 0 10341
+S
+#10343
+The Glowing Red Chamber~
+   You can hardly believe the amount of Red glowing fungus growing on the
+walls of this rather large chamber. In fact, the Fungus is so abundant, you
+could probably read by the light it gives off.
+~
+103 8 0
+D0
+~
+~
+0 0 10346
+D1
+~
+~
+0 0 10348
+S
+#10344
+A Glowing Red Tunnel~
+   This tunnel would be a rather unremarkable North-East tunnel if it wasn't
+for the very unusual fungus growing all over the ceiling and walls. This
+fungus emits a bright Red glow that enables you to see quite well.
+~
+103 8 0
+D0
+~
+~
+0 0 10339
+D1
+~
+~
+0 0 10345
+S
+#10345
+Bend in the Red Glowing Tunnel~
+   The tunnel bends to the West and South here. As before, the walls and
+ceilings of the tunnel are covered with an unusual fungus that emits a bright
+red light that enables you to see.
+~
+103 8 0
+D2
+~
+~
+0 0 10346
+D3
+~
+~
+0 0 10344
+S
+#10346
+The Glowing Red Chamber~
+   You can hardly believe the amount of Red glowing fungus growing on the
+walls of this rather large chamber. In fact, the Fungus is so abundant, you
+could probably read by the light it gives off.
+~
+103 8 0
+D0
+~
+~
+0 0 10345
+D1
+~
+~
+0 0 10347
+D2
+~
+~
+0 0 10343
+S
+#10347
+The Glowing Red Chamber~
+   You can hardly believe the amount of Red glowing fungus growing on the
+walls of this rather large chamber. In fact, the Fungus is so abundant, you
+could probably read by the light it gives off.
+~
+103 8 0
+D0
+~
+~
+0 0 10338
+D2
+~
+~
+0 0 10348
+D3
+~
+~
+0 0 10346
+S
+#10348
+The Glowing Red Chamber~
+   You can hardly believe the amount of Red glowing fungus growing on the
+walls of this rather large chamber. In fact, the Fungus is so abundant, you
+could probably read by the light it gives off.
+~
+103 8 0
+D0
+~
+~
+0 0 10347
+D3
+~
+~
+0 0 10343
+S
+#10349
+A Small Passage~
+  This seems to be a recently dug passage that seems to have broken through
+the wall to the South. You are not sure, but you think that you can smell
+the wonderful odor of baking Pipeweed Bread coming from the hole to the South.
+~
+103 13 0
+D2
+~
+~
+0 0 1147
+D3
+~
+~
+0 0 10337
+S
+#0
+$~

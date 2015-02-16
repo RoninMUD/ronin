@@ -1,0 +1,460 @@
+#26000
+BG~
+Lumall Keep BG, Vol. I~
+Lumall Keep BG is lying here.  Use BG1 for short.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+10
+E
+bg1~
+Lumall Keep Builder's Guide, Vol I
+May 12, 1995 Gregorian
+
+     This Guide stems from the fact that there are four people all 
+working on the keep right now.  As with any project to be completed
+over the Internet, some guidelines need to be established, or the Lumall
+crew will fall into one of the worst pitfalls of MUD: building a non-
+cohesive world.
+
+     The way it works:  Lem slaps down the world iteself, putting notes
+into a new rooms desc filed so that the writers will have a general idea of
+what that particular room or section of an area should look like.  The next
+step is for the writers to polish those notes up into a desc and make the 
+room interesting or exciting.  Next, Lem looks it over, because he's 
+neurotic...then the proofreader checks it, as does everybody else :)
+
+Next Volume
+~
+E
+BG~
+Lumall Keep Builder's Guide, Vol. I
+May 12, 1995 Gregorian 
+
+     This Guide stems from the fact that there are currently 4 people 
+all working on the Keep, who hopefully will continue working on the 
+entire world surrounding the keep.  As with any project to be completed
+over the Internet, some guidelines need to be established, or the Lumall
+crew will fall into the worst pitfalls of MUD:  building a non-cohesive
+world.
+
+     The way it works:  Lem slaps down the world itself, putting notes
+into a new room's desc field so that the writers will have a general idea
+of what that particular room or section of an area should look like.  The
+next step is for the writers to polish the notes up into a description
+instead of a long string of words and half-phrases and make the room 
+interesting or exciting.  Next step:  (usually) is Lem looks at the room
+because he's neurotic and makes sure that nothing is amiss, and that most
+of his specs have been basically met or exceeded...read the next section
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26001
+BGII notebook book BG2~
+Lumall Keep BG, Vol II~
+Lumall Keep BG Vol. II is lying here.  Use BG2 for short.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+10
+E
+BG2~
+Lumall Keep Builder's Guide, Vol. II
+May 13, 1995 Gregorian
+
+Rules
+
+     Ok, the main rule on this job is don't step on anybody's toes.
+People are writing here, being creative -- you may have a great idea
+or suggestion, but deciding that somebody's room description isn't
+cool enough or anything of that nature isn't for you to do.  What you
+_should_ do is discuss it with the writer, or with Lem.  That way, your
+objection or suggestion gets heard, but doesn't bruise any of our
+delicate egos.  The only time you should edit somebody else's work 
+without clearing it with the writer or with Lem is when you see a typo
+or a grammatical error -- but keep as many words from the original desc
+as possible :)  Basically edit out the mistakes, but change ONLY the
+mistakes.
+
+  -- Don't edit the zone, this will screw Lem up beyond all belief.  The
+Keep has about 40 rooms so far, 45 reset commands, and that's without
+mobs or objects.  Anything that needs to be fixed, just tell Lem about it.
+
+Next Volume
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26002
+BGIII notebook book BG3~
+Lumall Keep BG, Vol III~
+Lumall Keep BG Vol. III is lying here.  Use BG3 for short.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+10
+E
+BG3~
+Lumall Keep Builder's Guide, Vol. III
+May 13, 1995 Gregorian
+
+Rules (cont'd)
+
+  -- Don't chat up the area, give details on the area, etc.  Our goal
+is to drop about 800 rooms into the mud as a finished project, with 
+no-one but ourselves (the keep crew) knowing what to expect.  Coupled
+with the new class system and most likely ongoing changes in the class
+or classless system, as well as some old areas being rewritten, ronin
+should boom like a mining town when we drop the area into place.  
+There's a reason for the G-man being the first mob in the zone, even if
+it is a sick one :)
+
+  -- Don't change exits or make exits.  This will also screw Lem up
+completely, as well as making him foam at the mouth.  Feel free to change
+door names and door descs, but make sure there isn't one already there :)
+
+  -- Use your common sense.  Don't do anything foolish :)
+
+Next Volume
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26003
+BGIV notebook book BG4~
+Lumall Keep BG, Vol IV~
+Lumall Keep BG Vol. IV is lying here.  Use BG4 for short.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+10
+E
+BG4~
+Lumall Keep Builder's Guide, Vol IV
+May 13, 1995 Gregorian
+
+Guidelines
+
+     Ok, there need to be some kind of standards set so that the material
+in this world is somewhat similar to the rest of it.  
+
+  -- If you mention something in a desc that would be an item were the room
+real, make it into an extra-desc for the room.  It's tiresome to see in a
+room desc, "There is a grand-looking throne in the center of the room." and
+then when the player types, "look throne" he gets back "You do not see that
+here.  What?  i thought there was a grand-looking throne in the center of
+the room...Easy to do this extra-desc.  Say there is a table.  "A long
+maple wood table dominates the main area of the hall."  "l table"  "You
+glance at the table, and sense in it the beauty of craftsmanship."  or even
+l table : "You see a long maple wood table."  ANYTHING vaguely related
+will do, so long as it's not, "You do not see that here."
+
+  -- Unimportant rooms don't need to have alot of time spent on their 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26004
+BGV notebook book BG5~
+Lumall Keep BG, Vol V~
+Lumall Keep BG Vol. V is lying here.  Use BG5 for short.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+10
+E
+BG5~
+Lumall Keep Builder's Guide, Vol V
+May 13, 1995 Gregorian
+
+Guidelines (cont'd)
+
+  -- Unimportant rooms don't need to have alot of time spent on their
+desc's. For instance, you should spend more time on the king's office
+than on the broomcloset in the servant's wing.
+
+  -- Try to keep in mind that this is a huge castle, it's all indoors,
+and there is no electricity -- if a hallway is lit, mention a lamp or
+torch every few moves...lamps for the richer hallways, torches for servant's
+quarters, etc.
+
+  -- Keep in mind that hundreds of people live in this keep.  Phrases 
+many years have passed since last this room was entered should be saved
+for use on rooms in the furthest reaches of the dungeons, not for the door
+to the main kitchen :)
+
+  -- Don't ever use the word "guilded."  Ask Lem about this if you don't
+understand.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26005
+BGVI notebook book BG6~
+Lumall Keep BG, Vol VI~
+Lumall Keep BG Vol. VI is lying here.  Use BG6 for short.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+10
+E
+BG6~
+Lumall Keep Builder's Guide, Vol VI
+May 13, 1995 Gregorian
+
+Guidelines (cont'd)
+
+  -- All rooms long descriptions' first line should be indented 3 spaces.
+to do this, start the new line with a backslash...otherwise, no spaces at
+the newline.  This indentation is necessary to break up the room desc from
+the room name.
+
+
+  -- Try not to use the phrases, "You feel"   "You sense"  "You see"
+...instead, use "this room"  "off to the west..."   ...etc.
+
+
+Addendum to the Rules Section:  Never edit a room name.
+
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26007
+BGVII notebook book BG7~
+Lumall Keep BG, Vol VII~
+Lumall Keep BG, The Unabridged Volume.  Read contents or bg7 for more.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+bg7~
+
+Read contents for a look at what this book covers.
+~
+E
+contents~
+Table of contents
+
+Lumall Keep Builder's Guide, Vol I  . . . . . . . . . chap1
+Lumall Keep Builder's Guide, Vol II   . . . . . . . . chap2
+Lumall Keep Builder's Guide, Vol III  . . . . . . . . chap3
+Lumall Keep Builder's Guide, Vol IV . . . . . . . . . chap4
+Lumall Keep Builder's Guide, Vol V  . . . . . . . . . chap5
+Lumall Keep Builder's Guide, Vol VI   . . . . . . . . chap6
+
+~
+E
+chap1~
+Lumall Keep Builder's Guide, Vol I
+May 12, 1995 Gregorian
+  
+    This Guide stems from the fact that there are four people all 
+working on the keep right now.  As with any project to be completed 
+over the Internet, some guidelines need to be established, or the 
+Lumall crew will fall into one of the worst pitfalls of MUD: 
+building a non- cohesive world.
+  
+     The way it works:  Lem slaps down the world iteself, putting 
+notes into a new rooms desc filed so that the writers will have a 
+general idea of what that particular room or section of an area 
+should look like.  The next step is for the writers to polish those 
+notes up into a desc and make the room interesting or exciting.  
+Next, Lem looks it over, because he's neurotic...then the 
+proofreader checks it, as does everybody else :)
+   
+Next Volume 
+  
+~
+E
+chap4~
+Lumall Keep Builder's Guide, Vol IV May 13, 1995 
+Gregorian 
+  
+  
+Guidelines 
+  
+      Ok, there need to be some kind of standards set so that the 
+material in this world is somewhat similar to the rest of it.  
+  
+   -- If you mention something in a desc that would be an item were the 
+room real, make it into an extra-desc for the room.  It's tiresome to 
+see in a room desc, "There is a grand-looking throne in the center of 
+the room." and then when the player types, "look throne" he gets back 
+"You do not see that here.  What?  i thought there was a grand-looking 
+throne in the center of the room...Easy to do this extra-desc.  Say 
+there is a table.  "A long maple wood table dominates the main area of 
+the hall."  "l table"  "You glance at the table, and sense in it the 
+beauty of craftsmanship."  or even l table : "You see a long maple wood 
+table."  ANYTHING vaguely related will do, so long as it's not, "You do 
+not see that here." 
+  
+~
+E
+chap5~
+Lumall Keep Builder's Guide, Vol V 
+May 13, 1995 Gregorian 
+  
+  
+Guidelines (cont'd) 
+  
+   -- Unimportant rooms don't need to have alot of time spent on their 
+desc's. For instance, you should spend more time on the king's office 
+than on the broomcloset in the servant's wing. 
+  
+   -- Try to keep in mind that this is a huge castle, it's all indoors, 
+and there is no electricity -- if a hallway is lit, mention a lamp or 
+torch every few moves...lamps for the richer hallways, torches for 
+servant's quarters, etc. 
+  
+   -- Keep in mind that hundreds of people live in this keep.  Phrases 
+many years have passed since last this room was entered should be saved 
+for use on rooms in the furthest reaches of the dungeons, not for the 
+door to the main kitchen :) 
+  
+   -- Don't ever use the word "guilded."  Ask Lem about this if you 
+don't understand. 
+  
+~
+E
+chap6~
+Lumall Keep Builder's Guide, Vol VI May 13, 1995 Gregorian 
+  
+  
+Guidelines (cont'd) 
+  
+   -- All rooms long descriptions' first line should be indented 3 
+spaces. to do this, start the new line with a backslash...otherwise, no 
+spaces at the newline.  This indentation is necessary to break up the 
+room desc from the room name. 
+  
+   -- Try not to use the phrases, "You feel"   "You sense"  "You see" 
+...instead, use "this room"  "off to the west..."   ...etc. 
+ 
+Addendum to the Rules Section:  Never edit a room name. 
+  
+  
+  
+  
+~
+E
+chap2~
+Lumall Keep Builder's Guide, Vol. II
+May 13, 1995 Gregorian
+ 
+Rules
+ 
+     Ok, the main rule on this job is don't step on anybody's toes. 
+People are writing here, being creative--you may have a great idea or 
+suggestion, but deciding that somebody's room description isn't cool 
+enough or anything of that nature isn't for you to do.  What you 
+_should_ do is discuss it with the writer, or with Lem.  That way, your 
+objection or suggestion gets heard, but doesn't bruise any of our 
+delicate egos.  The only time you should edit somebody else's work 
+without clearing it with the writer or with Lem is when you see a typo 
+or a grammatical error -- but keep as many words from the original desc 
+as possible :)  Basically edit out the mistakes, but change ONLY the 
+mistakes. 
+ 
+  -- Don't edit the zone, this will screw Lem up beyond all belief.  The 
+Keep has about 40 rooms so far, 45 reset commands, and that's without 
+mobs or objects.  Anything that needs to be fixed, just tell Lem about 
+it. 
+~
+E
+chap3~
+Lumall Keep Builder's Guide, Vol. III May 13, 1995 Gregorian 
+  
+Rules (cont'd) 
+  
+  -- Don't chat up the area, give details on the area, etc.  Our goal is 
+to drop about 800 rooms into the mud as a finished project, with no-one 
+but ourselves (the keep crew) knowing what to expect.  Coupled with the 
+new class system and most likely ongoing changes in the class or 
+classless system, as well as some old areas being rewritten, ronin 
+should boom like a mining town when we drop the area into place.  
+There's a reason for the G-man being the first mob in the zone, even if 
+it is a sick one :) 
+ 
+  -- Don't change exits or make exits.  This will also screw Lem up 
+completely, as well as making him foam at the mouth.  Feel free to 
+change door names and door descs, but make sure there isn't one already 
+there :) 
+ 
+   -- Use your common sense.  Don't do anything foolish :) 
+ 
+ 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26050
+hook holy cargo hook~
+a holy cargo hook~
+A holy cargo hook is here -- Lem's probably looking for it.~
+~
+5 0 8193
+0 5 5 11
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+19 8
+B
+806387840
+#0
+$~

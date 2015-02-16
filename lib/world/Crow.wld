@@ -1,0 +1,413 @@
+#1500
+Entrance to the Shaolin Temple.
+~
+You are standing before a great temple. The wind is playing gently with your
+hair as you look around. On each side of the grey path, there are long 
+fields with green grass, and colourfulness flowers. The sun is high on the
+sky, and the weather is hot. There isn't a shadow anywhere, except inside the
+temple walls. The only thing that cools you off now and then, is the fresh
+breeze from the mountains to the north-west. Behind you there are some brown
+peaks, and to the south-east there is a plane with low bushes and plants.
+And to the north is the anchient Shaolin temple. Rising up, like a majestic
+mountain...
+~
+15 0 0
+D0
+~
+~
+0 -1 1501
+S
+#1501
+At the gate to Shaolin Temple.
+~
+You are now standing outside the gateway leading into the temple of Shaolin.
+There are two giant door-casings made from solid oak, which are holding the
+who gigantic wooden doors made from birch. There are a sign over your head,
+with chinese letters carved into it. There are figures of animals carved into
+the wooden doors, and the round door-casings. There is a figure of a snake,
+coiling around each of the door-casings. On both the birch doors, there is
+the figure of a dragon, a leopard, a phoenix, a crane, and a tiger.
+The ingravings are so beautiful, you remain standing in front of them,
+admiring them for a while...
+~
+15 0 0
+D0
+~
+~
+0 -1 1502
+D2
+~
+~
+0 -1 1500
+S
+#1502
+At the training ground.
+~
+As you walk trough the huge gateway, you end up at a big open area, which is
+probably where the monks practises their martial art. There are green trees
+in pots, surrounding the open area. The ground here is tiled with many small,
+white bricks. There are several weapon racks to the west and east, with
+broadswords, staffs, daggers and chain-whips. There are no other exits than
+to the south and to the north. To the north you see some tables and benches...
+~
+15 0 0
+D0
+~
+~
+0 -1 1503
+D1
+~
+~
+0 -1 1515
+D2
+~
+~
+0 -1 1501
+D3
+~
+~
+0 -1 1518
+S
+#1503
+Where the monks eat.
+~
+You are now standing where to monks eat their rice three times a day. There
+are two rows of tables and benches to the right and left. There are some
+mats made from straw, rolled out on the floor, making a long carpet leading
+north, to the table where the senior monks eat their meals. The roof made
+from some kind of dark brown wood, keeps the monks cool in the shadows while
+they eat their rice. There is a warm breeze coming from the north-west.
+The only exits is to the south, and to the north.
+~
+15 0 0
+D0
+~
+~
+0 -1 1504
+D2
+~
+~
+0 -1 1502
+S
+#1504
+At the senior monks table.
+~
+You are standing in front of a fairly large square table. There are four
+bowls of rice on it. In the middle of the table there is a stick of incense,
+filling the room with a sweet smell. There is a large opening in the roof here,
+letting the sun shine trough a grid of straw, beaming faint rays of sunrays
+down from the ceiling and onto the table and floor. You just realize that this
+must be the most peaceful place in the entire world... You could stay here for
+ever... The only exits are to the south and to the north, leading further into
+the temple.
+~
+15 0 0
+D0
+~
+~
+0 -1 1506
+D1
+~
+~
+0 -1 1505
+D2
+~
+~
+0 -1 1503
+S
+#1505
+In the kitchen.
+~
+This is where the meals are prepared. There is a fireplace in the middle of the
+room where the cook grills the rice and vegetables. To the north there is a
+table which the food chopped and prepared, to the south there is a closet which
+contains sacks with rice. There are many knifes hanging from the wall beside the
+table. The air is filled with the smell of grilled rice, and fresh vegetables...
+~
+15 0 0
+D3
+~
+~
+0 -1 1504
+S
+#1506
+In the hallway.
+~
+You are in the hallway. To the north you will find the garden where the monks
+meditate, and seek knowledge trough Tao. The walls here are made from a brown
+sort of wood, making the hallway dark and cool. There are long mats of straw
+rolled out on the floor, leading furhter to the north. To the west you find the
+bedroom where the junior monks sleep, and to the east you find the bedroom where
+the senior monks sleep. It is wery peaceful here, you feel like laying down a
+bit, to rest your painful body...
+~
+15 0 0
+D0
+~
+~
+0 -1 1509
+D1
+~
+~
+0 -1 1507
+D2
+~
+~
+0 -1 1504
+D3
+~
+~
+0 -1 1508
+S
+#1507
+In the junior monks bedroom.
+~
+This is where the junior monks sleep. There are several beds lined up by the
+wall, at each side of the room. The roof is low here, you almost have to crutch
+in order to walk trough the room without hitting your head in the roof. There
+is a small window on the western wall, which lets a little bit of light into the
+room. It is pretty gloomy and chill in here. This is a nice place to sleep.
+~
+15 0 0
+D3
+~
+~
+0 -1 1506
+S
+#1508
+In the Senior monks bedroom.
+~
+This is where the senior monks sleep. There are several beds lined up by the
+wall, at each side of the room. The roof is low here, you almost have to crutch
+in order to walk trough the room without hitting your head in the roof. There is
+a small window on the western wall, which lets a little bit of light into the
+room. It is pretty gloomy and chill in here. This is a nice place to sleep.
+~
+15 0 0
+D1
+~
+~
+0 -1 1506
+S
+#1509
+In the hallway.
+~
+You are in the hallway. As you look to the north you see the garden where the
+monks meditate, and seek knowledge trough Tao. The walls here are made from a
+brown sort of wood, making the hallway dark and cool. There are long mats of
+straw rolled out on the floor, leading furhter to the north. It is wery peaceful
+here, you feel like laying down a bit, to rest your painful body...
+~
+15 0 0
+D0
+~
+~
+0 -1 1510
+D2
+~
+~
+0 -1 1506
+S
+#1510
+At the field of the Tortoise.~
+This is what is called "field of the tortoise". There is a small pond here, with
+clear water. Before the pond, there is a small grass hill. When you think about
+it, the hill is wery much alike a tortoise. There is only grass and flowers
+around you, and the smell of sweet flowers fill the air. Only exits are to the
+North, towards another field, and to the south, into te hallway in the temple...
+~
+15 0 0
+D0
+~
+~
+0 -1 1511
+D2
+~
+~
+0 -1 1509
+S
+#1511
+At the field of the Snake.~
+You are now standing at the field of the snake. This is a big open area, with 
+sand, and only sand. The sand os brown and dry, almost like in a desert.
+To the west, you see some high trees, with green leaves. The wind plays with
+the leaves, as it strokes the treetops. To the north you see a big open field,
+and to the east you see some low bushes and plants. The wind gently plays with
+your hair as you look around. What a beautiful place.
+~
+15 0 0
+D0
+~
+~
+0 -1 1514
+D1
+~
+~
+0 -1 1512
+D2
+~
+~
+0 -1 1510
+D3
+~
+~
+0 -1 1513
+S
+#1512
+At the field of the Tiger.~
+This is the field of the Tiger. There are many small bushes and other plants
+all over this little field. They reach as high as to you knees. The sun is
+still high on the sky, and you feel wery warm. The leaves on the bushes are
+green and fresh, and the flowers growing between the bushes are colorful...
+To the west you see a large open field...
+~
+15 0 0
+D3
+~
+~
+0 -1 1511
+S
+#1513
+In the area of the Dragon.~
+Standing in the area of the dragon, you are surrounded by high and thich
+trees. When you look up you see the sun beaming rays of sunlight trough
+tle leafy roof in the forrest. You feel that this is a place of great
+power. There are many brown leaves on the ground here, creating a nice
+contrast to the green and fresh leaves in the trees. To the east you see
+a large open field...
+~
+15 0 0
+D1
+~
+~
+0 -1 1511
+S
+#1514
+At the field of the Phoenix.~
+You anore now standing on a little field, with an enormous view. You can
+look as far as the eye can see here... The grass is green, and there are
+some wery small bushes growing at the end of the field to the north.
+You feel like sitting down a little, just fer a minute or two...
+To the north you see as far as it is possible for the human eye, and to
+the south you see a large open field...
+~
+15 0 0
+D2
+~
+~
+0 -1 1511
+S
+#1515
+In a small hallway.~
+You are now standing inside a small hallway. The walls are made of wood,
+and the floor is made from stone tiles. There is not much light in here,
+but there is some light coming from the east. It is nice and cool in
+here. To the west you see an open area where the monks practise, and to
+the east you see some light coming trough a crack in a wooden door...
+~
+15 0 0
+D1
+~
+~
+0 -1 1516
+D3
+~
+~
+0 -1 1502
+S
+#1516
+Inside the Library.~
+There are many big shelves which reaches from the floor to the roof in
+here. They are all filled with books of all sorts. There are also some
+banners with figures of tigers and cranes, dragons, snakes, and 
+tortoises hanging on the walls here. There isn't too much light in 
+here, just as much that you can read. There is a large bookcase to the
+south, and There is a large square table in the middle of the room.
+There are some wooden benches lined up at each side of it. Only exits
+are to the west, leading into a small hallway...
+~
+15 0 0
+D2
+~
+~
+0 -1 1517
+D3
+~
+~
+0 -1 1515
+S
+#1517
+In a secret room behind the large bookcase.~
+This is the masters secret room, where he studys the secret part of
+the Shaolin fist. There are no bookshelves, no boochases no nothing
+in here. The ground is made from dry clay, and there is no window.
+There is a small table standing against the east wall, and a little
+wooden stool standing in front of it. There are two white candles
+standing on the table, making it possible to read the anchient
+letters in an old chinese scroll made from bamboo, which is lying
+on the table... The bookcase closes behind you with a little click,
+there are no exits now...
+~
+15 0 0
+S
+#1518
+In a small hallway.~
+You are now standing inside a small hallway. The walls are made of wood,
+and the floor is made from stone tiles. There is not much light in here,
+but there is some light coming from the east. It is nice and cool in
+here. To the east you see an open area where the monks practise, and to
+the west the hallway continues. To tne north there is a small wooden
+door leading into the masters bedroom. You better not disturb him...
+~
+15 0 0
+D0
+~
+~
+0 -1 1519
+D1
+~
+~
+0 -1 1502
+D3
+~
+~
+0 -1 1520
+S
+#1519
+In the masters bedroom.~
+This is the masters bedroom. Simple but comfortable. There is a bed 
+standing in the corner, and a little bench and a table in the other
+end of the room. There is a small window on the western wall, which
+lets in some light from outside. The floor is made from tiled rock,
+and seems to make a sort of pattern... You better get out of here
+quick, the master don't like to be bothered by anyone when he is
+trying to spend some time alone, meditating...
+~
+15 0 0
+D2
+~
+~
+0 -1 1518
+S
+#1520
+In a small hallway.~
+You are now standing inside a small hallway. The walls are made of wood,
+and the floor is made from stone tiles. There is not much light in here,
+but there is some light coming from the east. It is nice and cool in
+here. It seems like the hallway ends here. There is only a large brick 
+wall to the west. The hallway continues to the east...
+~
+15 0 0
+D1
+~
+~
+0 -1 1518
+S
+#1599
+A temporary name~
+A temporary description
+~
+15 0 0
+S
+#0
+$~

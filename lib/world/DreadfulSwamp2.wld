@@ -1,0 +1,515 @@
+#12100
+The Old Trap.~
+You are in the old trap.
+~
+121 1 3
+D2
+~
+~
+0 -1 12001
+D4
+~
+trapdoor~
+1 -1 12028
+S
+#12101
+The Treasury Room.~
+You are in the Treasury Room. The Spider King keeps his fortune here.
+~
+121 1 3
+D3
+~
+door~
+1 -1 12094
+D4
+~
+~
+0 -1 3001
+S
+#12102
+The end of the alley.~
+You are at the end of the allay. Old wall in the north is emitting cold.
+~
+121 0 3
+D2
+~
+~
+0 -1 12073
+D5
+~
+ladder~
+1 -1 12109
+S
+#12103
+The back alley.~
+You are on the back alley. You dislike it's depressing atmosphere.
+~
+121 1 3
+D0
+~
+~
+0 -1 12075
+D3
+~
+~
+0 -1 12104
+S
+#12104
+The back alley.~
+You are on the back alley. You dislike it's depressing atmosphere.
+~
+121 1 3
+D1
+~
+~
+0 -1 12103
+D3
+~
+~
+0 -1 12105
+S
+#12105
+The back alley.~
+You are on the back alley. You dislike it's depressing atmosphere.
+~
+121 1 3
+D0
+~
+~
+0 -1 12071
+D1
+~
+~
+0 -1 12104
+D3
+~
+~
+0 -1 12106
+S
+#12106
+The back alley.~
+You are on the back alley. You dislike it's depressing atmosphere.
+~
+121 1 3
+D1
+~
+~
+0 -1 12105
+D3
+~
+~
+0 -1 12107
+S
+#12107
+The back alley.~
+You are on the back alley. You dislike it's depressing atmosphere.
+~
+121 1 3
+D0
+~
+~
+0 -1 12067
+D1
+~
+~
+0 -1 12106
+S
+#12108
+The Chief's secret room.~
+You are in the Chief's secret room. This room is Chief's private office
+where he spends lot of his expensive time. You can't be noticing the
+rows of books in the southern wall.  The Chief must be very civilized man.
+~
+121 0 1
+D3
+~
+door~
+2 12014 12076
+D4
+~
+~
+0 -1 3001
+S
+#12109
+The entrance to ettin graveyeard.~
+You are by the entrance to ettin graveyeard. The walls and roof are groaning
+green and gray moss. Slimy water is pouring down from the roof making the
+ground slippery.
+~
+121 1 3
+D2
+Graveyeard.
+~
+~
+0 -1 12110
+D4
+~
+ladder~
+1 -1 12102
+S
+#12110
+The ettin graveyeard.~
+You are on the ettin graveyeard. Some of the graves are very old and you can`t
+understand what is said in memorial tablets. The dark shining from the graves
+confirms your belief in ghosts.
+~
+121 1 3
+D0
+~
+~
+1 -1 12109
+S
+#12111
+The house of the ettin Wizard.~
+You are in the house of the ettin Wizard. You can see the equipments of
+an alchemist here, but the smell is like the Wizard is having an illicit
+still.
+~
+121 1 0
+D3
+~
+door~
+1 -1 12071
+S
+#12112
+A secret cave behind the King Cobra.~
+You are in the secret cave behind the King Cobra. This cave is so secret
+that the king himself doesn't know about it's existence.
+~
+121 9 3
+D0
+~
+mud~
+1 -1 12051
+S
+#12113
+Secret Passage.~
+   You can see large holes on the ground. Dirty Tunnel seems to have forgotten
+for many years. Some water is dropping the ceilings and the roof. 
+~
+121 9 3
+D2
+~
+~
+0 -1 12114
+S
+#12114
+Secret Passage.~
+  You can see very large hole on the ground. And there is some water on the 
+ground too. You hear strange noises from the west and below. Something must be below you...
+~
+121 9 3
+D0
+~
+~
+0 -1 12113
+D3
+~
+~
+0 -1 12115
+D5
+~
+trapdoor~
+1 -1 12116
+S
+#12115
+Secret Passage~
+  Tunnel raises to the west and becomes dryer and wider. You can see some
+spider web on the ceilings.
+~
+121 9 3
+D1
+~
+~
+0 -1 12114
+D3
+~
+~
+0 -1 12117
+S
+#12116
+Pit under the Secret Passage~
+  The pit has been closed with trapdoor. Huge Purple Worm has been trapped 
+in here for long time. The trapdoor seems impossible to open from this side.
+~
+121 9 3
+D4
+~
+trapdoor~
+1 -1 12114
+S
+#12117
+Small cave~
+  The passage turns into a small cave. The floor is dry and this looks like a 
+good resting place. You notice large cracks on the ceilings.
+~
+121 13 3
+D1
+~
+~
+0 -1 12115
+D2
+~
+crack~
+1 -1 12120
+D3
+~
+~
+0 -1 12118
+S
+#12118
+Secret Passage~
+  You see a lot of spider web on the ceilings nobody has been in here for a 
+while. The passage continues to the west and in the east is the small cave.
+~
+121 9 3
+D1
+~
+~
+0 -1 12117
+D3
+~
+~
+0 -1 12119
+S
+#12119
+The end of the Secret Passage~
+  The passage ends here. You can see small cracks on the roof. You hear strange
+noises coming above.
+~
+121 9 3
+D1
+~
+~
+0 -1 12118
+D4
+~
+floor~
+1 -1 12062
+S
+#12120
+Wet Tunnel Under Swamp~
+  The tunnel starts in here. It goes down to south. The water on the floor 
+makes it hard to walk and also very slippery.
+~
+121 9 3
+D0
+~
+crack~
+1 -1 12117
+D2
+~
+~
+0 -1 12121
+S
+#12121
+Wet Tunnel Under Swamp~
+  The tunnel makes a turn to the east and is very slippery to walk.
+~
+121 9 3
+D0
+~
+~
+0 -1 12120
+D1
+~
+~
+0 -1 12122
+S
+#12122
+Turn in the Wet Tunnel~
+  The tunnel makes a sharp turn in here. The roof has fallen from long way in 
+here, so its hard to walk to the south.
+~
+121 9 3
+D2
+~
+~
+0 -1 12123
+D3
+~
+~
+0 -1 12121
+D4
+~
+floor~
+1 -1 12058
+S
+#12123
+Wet Tunnel Under Swamp~
+  The tunnel is very slippery to walk. You better watch your step when walking
+in here.
+~
+121 9 3
+D0
+~
+~
+0 -1 12122
+D2
+~
+~
+0 -1 12124
+S
+#12124
+Wet Tunnel Under Swamp~
+  The tunnel is very slippery to walk. You better watch your step when walking
+in here.
+~
+121 9 3
+D0
+~
+~
+0 -1 12123
+D2
+~
+door~
+1 -1 12125
+D4
+~
+floor~
+1 -1 12061
+S
+#12125
+End of the Wet Tunnel~
+  The wet tunnel suddenly ends here. You hear sound of dropping water from the
+south.
+~
+121 9 3
+D0
+~
+door~
+1 -1 12124
+D2
+~
+secret~
+1 -1 12126
+S
+#12126
+Small Underground Lake~
+  Suddenly you are standing in the shallow water. This looks like a small 
+underground lake. Water comes from the holes on western ceiling and is 
+clear and cold. You see a small river to the east.
+~
+121 13 6
+D0
+~
+secret~
+1 -1 12125
+D1
+~
+~
+0 -1 12127
+S
+#12127
+The Underground River~
+  The River starts running slow into east. The River is so wide that you can 
+hardly see the northern riverbank. Water is clear in the middle of the river
+but the mud from the southern riverbank makes the water dirty in here.
+~
+121 13 6
+D1
+~
+~
+0 -1 12128
+D3
+~
+~
+0 -1 12126
+S
+#12128
+The Underground River~
+  You drift near to northern riverbank when the river makes slight turn to the
+south. The riverbanks come closer making a small gate. Water runs fast trough 
+the gate making a small waterfall. 
+~
+121 13 6
+D1
+~
+~
+0 -1 12129
+D3
+~
+~
+0 -1 12127
+S
+#12129
+The Underground River~
+  The river runs suddenly faster. And you have to work hard not to hit the 
+stones in the river and the high riverbanks.
+~
+121 13 6
+D1
+~
+~
+0 -1 12130
+D3
+~
+~
+0 -1 12128
+S
+#12130
+Above the Waterfall in Underground River~
+  The River makes a sharp turn in here and in the south river disappears into 
+large waterfall.
+~
+121 13 6
+D1
+~
+riverbank mud~
+1 -1 12131
+D3
+~
+~
+0 -1 12129
+S
+#12131
+On the Riverbank of the Underground River~
+  The Riverbank lies high above the river. River makes a turn south in here and
+disappears into large waterfall. Suddenly the river seems to have more power 
+than it had few minutes ago. Water raises in the river and part of the 
+riverbank drops into water. The Riverbank seems now too steep to climb back up
+and you decide to move away to east from the roaming River. 
+You notice though that strange sound that comes when you walk on the muddy 
+riverbank. Seems like there must be a hole under your feet.
+~
+121 9 3
+D1
+~
+~
+0 -1 12132
+D5
+~
+mud~
+1 -1 12133
+S
+#12132
+Small Cave near Riverbank~
+  This small Cave is dry and looks like a perfect place to make a camp. 
+Some light comes trough the small holes in the roof. Small circle of round 
+stones in the middle of the room make a good fireplace and the smoke goes out
+from the holes in roof.  
+~
+121 12 3
+D3
+~
+~
+0 -1 12131
+D4
+~
+floor~
+1 -1 12112
+S
+#12133
+Large Hole in the Mud~
+The River has made large hole into riverbank long time ago. There is some muddy
+water on the bottom of the hole. Something seems to be moving under the water 
+surface. That Something makes big whirls into water... 
+~
+121 9 3
+D4
+~
+mud~
+1 -1 12131
+S
+#0
+$~

@@ -1,0 +1,383 @@
+#4501
+snarak parasite~
+A Snarak~
+A snarak is hiding here, waiting for its next meal.
+~
+The snarak is a type of parasite commonly associated with goblins.  Every tribe
+always has a group of snaraks that live in tandem with them, feeding off of
+their waste.  In return the goblins can hunt and eat the snaraks as tasty
+snacks, thus perpetuating the cycle of life.
+~
+72 32768 0 Y
+8 12 0 1d1+200 3d3+4
+2000 27000
+8 8 0
+76 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4502
+goblin female peasant~
+A Female Goblin Peasant~
+A female goblin peasant is going about her daily chores here.
+~
+This peasant has lived a happy and ignorant life as a female goblin.  Seldom
+allowed out of her home cave, this brief treat to see the tunnels that the rest
+of the tribe lives and works in could be a once in a lifetime experience for
+her.
+~
+76 0 -500 Y
+10 12 0 1d1+250 2d2+2
+3500 33000
+8 8 2
+68 0 0d0+0 1
+5 1 15 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#4503
+goblin male peasant~
+A Male Goblin Peasant~
+A male goblin peasant is going about his work here.
+~
+This peasant appears to be rather content and at peace, if that is possible for
+a goblin.  He toils along at his duties day-in and day-out for the greater good
+of his clan.
+~
+76 0 -500 Y
+12 12 -2 1d1+280 2d4+2
+3500 35000
+8 8 1
+68 0 0d0+0 1
+5 1 15 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#4504
+goblin miner~
+A Goblin Miner~
+A goblin miner stands here, chipping away at the walls.
+~
+This miner is still under the illusion that some extraordinary gems or precious
+metals might still be found in these walls.  The saddening truth is that
+dwarven miners are not known to leave anything of value behind, even when being
+chased out of their caves. This poor fellow has a long and pointless existence
+ahead of him.
+~
+10 0 -450 Y
+11 14 -2 1d1+380 3d3+6
+1753 45000
+8 8 1
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4505
+goblin kraznor sentry~
+A Kraznor Clan Sentry~
+A goblin sentry is standing about here, lazily performing his duties.
+~
+The sentry looks bored out of his mind as he stands at his post.  His shoulders
+are slumped and he seems to have trouble staying awake.  Besides earning a
+lukewarm meal and a hole to live in, this goblin has little to look forward to
+as rewards for his lifelong job.
+~
+106 0 -500 Y
+16 10 -4 1d1+450 4d5+2
+8200 51000
+8 8 1
+68 0 0d0+0 1
+5 1 15 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4506
+goblin elite guard kraznor~
+An Elite Goblin Guard~
+An elite goblin guard stands here, keeping watch over his clan's caves.
+~
+This is one of Clan Kraznor's elite goblin guards.  These are the best-trained
+and heavily-equipped fighters in all of the clan.  This particular guard is
+wearing mismatched pieces of studded leather armor that appear to have once
+been decent gear, but now have begun to rot, even as the goblin wears it.
+~
+104 0 -600 Y
+20 7 -5 1d1+700 6d5+20
+10000 63000
+8 8 1
+68 0 0d0+0 1
+5 1 15 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4507
+keeper gate gatekeeper goblin~
+The Keeper of the Gate~
+The keeper of the gate stands here, barring your way.
+~
+The Keeper of the Gate is a truly ominous figure.  He towers over the other
+goblins of his clan at over a meter and a half tall and is as wide as a
+moderately-sized barrel.  With a snarl perpetually on his lips, he stands here
+performing his duty with un-goblin-like zeal.
+~
+10 0 -800 Y
+19 5 -5 20d10+1000 6d5+5
+10000 90000
+8 8 1
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4508
+quareen high priestess kraznor goblin~
+Quareen, High Priestess of the Kraznor Clan~
+Quareen, high priestess of the Kraznor Clan, stands here muttering to herself.
+~
+The high priestess Quareen smiles knowingly to herself.  Apparently this is
+where the real power of the tribe rests. Utterly ruthless and evil, this
+priestess kills on a whim and prefers her meals raw and bleeding.
+~
+42 0 -800 Y
+22 3 -5 1d1+1020 4d4+6
+12000 81000
+8 8 2
+68 0 0d0+0 1
+1 1 12 32
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4509
+druxlor chief goblin~
+Chief Druxlor~
+Chief Druxlor is here, asleep on his throne.
+~
+Druxlor the goblin chief is quite a figure.  Standing no more than three and a
+half feet tall and being nearly as wide, one brings to mind the question of how
+he became the leader of these smelly creatures.  However, the gleam in his eye
+and the way he strokes his axe could give some clues...
+~
+43 0 -1000 Y
+25 -3 -6 20d10+1270 6d6+10
+15000 100000
+4 4 1
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4510
+mold amorphous mass green ooze~
+A Creeping Green Mold~
+An amorphous mass of green mold oozes about, scouring the floor for food.
+~
+What can only be described as a mass of dark green mold shuffles about here,
+sweeping across the floor in its flattened disc-like shape.  The entire surface
+of its body undulates in a steady pulse, almost as if it were breathing.  A
+thin trail of spores is left behind in its wake as it moves about from place to
+place.
+~
+76 32800 0 Y
+25 0 0 10d10+745 5d2+5
+0 100000
+8 8 0
+94 134220748 1d1+1 0
+0 0 0 352
+R
+384
+K
+1000 4510 0 0 0 0 0
+#4511
+pudding creature yellow-orange yellow orange~
+An Ochre Pudding~
+A creature composed entirely of sickly yellow-orange pudding meanders about.
+~
+This foul creature is a sickening conglomeration of some type of yellow-orange
+pudding-like substance.  Pustules of oozing fluid pop and smear across the
+gelatinous surface of the thing, leaking out a putrid slew of disgusting
+matter.  It has no identifiable features, but seems to creep along keeping its
+body oriented in the same position as much as possible.
+~
+108 268468256 0 Y
+28 -2 -2 5d20+950 4d4+2
+0 120000
+8 8 0
+94 134220750 1d1+1 0
+0 0 0 354
+K
+1500 0 0 0 0 0 0
+#4512
+muckdweller humanoid creature mud clay muck~
+A Muckdweller~
+A small humanoid creature made from mud and clay is here, holding a stone club.
+~
+This creature, known as a muckdweller, is a short, tough-looking fellow made of
+mud and clay.  The surface of its 'skin' undulates and flows about its body, as
+the murky substance it is made from flows about its form.  The creature stands
+at slightly less than one meter high; however, its solidity and the fact that
+it is carrying a large staff made of a single shaft of rock makes it look
+imposing nonetheless.
+~
+16586 32768 0 Y
+30 -7 -5 15d5+2000 7d5+7
+5283 200000
+8 8 1
+79 4 1d1+1 1
+7 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4513
+goblin grug pale creature~
+Grug the Crazed~
+A horridly smelly goblin squats in the filth, muttering to himself.
+~
+This is Grug, the infamous goblin weapons inventor of the powerful Kraznor
+Clan.  The poor insane fellow was forced to flee his home caves, though not
+because his inventions nearly always backfired on their users, killing the lot
+of them, for that is the goblin way.  Instead, he was forced into exile because
+he refused to wear proper goblin-issue rags, opting to wear nothing but a
+loincloth and his very long beard (even goblins have fashion standards).  In
+lonely desperation, Grug now lives in the filthy caverns below his old home,
+hiding from the other monsters in the caves and frantically spends his time
+building new inventions that might one day win back the trust of his
+clan-mates, and possibly acceptance for his partial-nudity.
+~
+206 819200 -175 Y
+30 0 0 30d5+2000 3d3+9
+4093 20100
+8 8 1
+68 0 1d1+169 4
+2 1 3 0
+5 1 3 0
+6 2 3 0
+1 2 3 5
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4514
+crab giant pale-white pale white subterranean~
+A Giant Subterranean Crab~
+A giant crab with a pale-white carapace scuttles about, clacking its pincers.
+~
+This is a type of giant crab not found anywhere else in the world.  Countless
+ages of dwelling underground has transformed these creatures, encouraging
+adaptation to the harsh environment in order to survive.  The thick armored
+shell that it wears is ghostly white, disrupted only by thin blue vein-like
+structures that thread their way along its surface in a myriad of random
+shapes.  The crab has no visible eye-stalks, instead having two large
+membranous holes that pulsate and serve some unknown function.  As unusual as
+this creature is, the general shape of the critter is similar to that of its
+smaller surface cousins, down to the general design and purpose of its two
+massive pincers.
+~
+360 268468224 0 Y
+33 -7 -7 20d20+3000 6d6+6
+0 225000
+8 8 0
+86 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4515
+troll large crab herder~
+The Crab Herder~
+A large troll is here, diligently tending to his herd of giant crabs.
+~
+The old crab herder is a large but hunched-over and weary-looking troll who has
+become a hermit after being cast out of his tribe for a long-forgotten crime.
+Banished to the underdark, he has taken to herding the giant crabs that dwell
+there in order to survive.  His great regenerative powers allow him to survive
+the various nips and bites the crabs often times inflict.  He can often be seen
+grumbling to himself and singing in a sing-song voice about crabs and the
+drinking of heavy malt liquor...  Perhaps his mind is not what it used to be.
+~
+16460 294912 -350 Y
+35 -5 -7 50d10+2500 4d4+8
+75978 300000
+8 8 1
+75 0 1d1+1 1
+6 2 5 0
+0 0 0 0
+R
+4
+K
+0 0 0 0 0 0 0
+#4516
+toxic young black dragon~
+Toxic~
+A young black dragon lies curled here, resting in a half-sleep.
+~
+This is a young dragon by all appearances, yet its youth and inexperience do
+little to diminish the aura of power and strength that it projects.  Its
+glistening black scales sparkle with a light that seems almost of their own.
+Unlike older dragons of its kind, this particular one seems more alert and less
+lethargic, a product of the creatures youth and desire to grow and conquer.
+Huge corded muscles ripple beneath the serpentine surface of its body, causing
+its wings and claws to flex in response.  Though small compared to an adult
+wyrm, its body is over a dozen meters long and looks to weigh an equal amount
+in metric tons.
+~
+16490 276824124 -900 Y
+38 -10 -12 100d10+7000 8d8+18
+0 400000
+5 5 1
+56 16512 1d1+1 3
+5 1 3 0
+6 1 3 0
+8 2 3 0
+0 0 0 56
+R
+1
+K
+57834 4512 0 0 0 0 0
+#4517
+tilik small pixie~
+Tilik the Pixie~
+A small pixie is here, flitting about on his iridescent wings.
+~
+Tilik is a rather mean-spirited prankster, even for one of his own kind.  After
+stealing the rings off of his pixie prince's fingers and cutting him on each
+cheek because "blood is funny", Tilik was surprised to find that all of a
+sudden everyone wanted him locked up or dead.  After countless minutes of
+teleportative fleeing, lazy Tilik grew bored of that game.  But, curiosity
+brutally murdered the fairy, as pixies like to say, and he found himself lured
+into the deep underground caverns below a goblin den.  There he found a nice
+muddy hole to live in and plenty of shiny trinkets to steal from the treasure
+piles of nearby denizens of the dark.
+~
+16478 17072284 -750 Y
+33 -10 -10 25d5+1750 2d8+2
+83478 350000
+9 9 1
+68 192 1d1+249 5
+1 2 3 26
+1 2 3 30
+1 2 5 32
+1 2 5 38
+9 2 7 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#4518
+zombie corpse shambling dwarven dwarf~
+A Shambling Dwarven Zombie~
+The ghastly corpse of a long-dead dwarf shambles about, moaning to itself.
+~
+The putrid half-decayed form of a dwarven warrior shambles about aimlessly,
+moaning incomprehensible sounds to the ever-listening dark.  Puss and various
+types of insects and worms leak out of huge gaping sores that cover this
+being's taut flesh.  Bits of tattered clothing and armor still cling to their
+owner, seemingly reluctant to completely fall away even in the face of its
+death.  Dim crimson light glows from the empty sockets of the zombie's face,
+their evil intent the only hint of purpose that the ghastly form portrays.
+~
+106 32800 -500 Y
+23 5 2 10d5+500 6d4+2
+328 66666
+8 8 0
+52 134221774 1d1+1 1
+6 1 3 0
+0 0 0 354
+K
+0 0 0 0 0 0 0
+#0
+$~

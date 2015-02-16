@@ -1,0 +1,105 @@
+#26101
+zyca skyknight knight~
+a Zyca Skyknight~
+A noble Zyca Skyknight is here
+~
+The Skyknights wear beatufully plumed steel helmets and golden capes.  They
+are the elite of the regular Zyca Army, chosen from the best cavalry officers.
+Their steel-tipped lances are much feared throughout the realm
+and they are noted for showing no mercy in battle.
+~
+10 262144 -400 Y
+26 -6 -5 1d200+2000 4d5+2
+25000 180000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#26102
+zyca skyknight captain~
+the Captain of the Zyca Skyknights~
+The Captain of the Zyca Skyknights is here
+~
+The Captain of the Skyknights must be a member of the Royal family and
+must show outstanding skill with weapons to be chosen.  He wears a crown
+that indicates his noble heritage.
+~
+10 294912 -400 Y
+28 -8 -8 2d50+3000 20d2+8
+35000 300000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#26103
+zyca skyknight commander~
+the Commander of the Zyca Skyknights~
+The Commander of the Zyca Skyknights is here
+~
+The Commander of the Skyknights is chosen from one of the King's
+sons. He carries a sceptre of power and wears the finest steel armor
+enchanted to ward him against blows.
+~
+10 402948224 0 Y
+31 -11 10 1d200+16000 3d30+40
+100000 900000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#26104
+prince urlich zyca~
+Prince Ulrich~
+Prince Ulrich, The Emperor's Heir stands here.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+The Necromancer's are the Zyca King's latest recruits.  Their unholy ties with the infernal
+powers grants them the power to raise the dead to serve their master.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#26105
+necromancer zyca necron~
+the Zyca Necromancer~
+The dark form of a Zyca Necromancer lurks here.
+~
+invalid~
+16777354 67405992 -1000 Y
+30 -10 10 1d200+8000 1d6+18
+60000 270000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#26106
+Nice Cupid~
+a nice little cupid~
+a nice little cupid is here, smiling happily!
+~
+This little fellow is waiting happily for someone to give him a
+valentine!
+~
+524428 134482088 350 Y
+50 -5 10 5d2000+5000 10d25+100
+100 3000
+8 8 1
+0 8192 1d1+1 1
+9 3 50 0
+0 0 0 0
+#26107
+Cupid Nasty~
+a nasty little cupid~
+a nasty little cupid is here, making faces at you!
+~
+This little fellow is not spreading love or romance, but making fun of
+you and taunting you with his undelivered gifts.
+~
+524428 134482088 -350 Y
+50 -5 10 5d100+500 5d7+25
+100 3000
+8 8 1
+0 8192 1d1+1 1
+9 3 50 0
+0 0 0 0
+#0
+$~

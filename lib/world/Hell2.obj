@@ -1,0 +1,689 @@
+#25400
+tail minos club~
+Tail of Minos~
+A long spiked club, the remnants of Minos' Tail, is lying on the ground.~
+$r Tail swings out into the room, blindly searching for $V's midsection.~
+5 134217728 8193
+1 10 3 7
+13 20000 70000
+2
+E
+tail~
+
+  This is the bloodied remains of Minos, Judge of the First Circle of Hell.
+Its surface is tacky and lumped with the congealed blood of the former
+ruler, and it is just big enough to pack a wallop against any enemy.
+
+~
+X
+$r Tail swings out into the room, blindly searching for its next target.~
+4 0 0
+M
+You heft a huge demonic tail with a spiked ball in your hands.~
+$n hefts a huge demonic tail with a spiked ball in $s hands.~
+You allow the gigantic spiked tail to fall from your hands.~
+$n allows the gigantic spiked tail to fall from $s hands.~
+T
+6666
+B
+268435456
+#25401
+cloak flame flames~
+Cloak of Flame~
+A burning cloak of shadowed flames smolders in the corner here.~
+~
+9 155191876 1025
+-10 0 0 0
+5 20000 100000
+1
+E
+cloak~
+
+  This is the cloak of the Ruler of Dis, Second Circle of Hell.
+Charybdis is said to have spun this cloak over many eons, using the
+burned sinews of his victims' souls.  It smells, of course, of warm
+fetid meat.
+
+~
+X
+~
+4 0 0
+M
+A Cloak of Flame envelops you with white heat.~
+A Cloak of Flame envelops $n with white heat.~
+A Cloak of Flame dissipates from your body.~
+A Cloak of Flame dissipates from $n's body.~
+A
+13 15
+A
+19 4
+T
+6666
+#25402
+boots iron~
+Boots of Iron~
+A set of heavy iron boots are sunken partially into the floor here.~
+~
+9 199277124 65
+10 0 0 0
+35 20000 100000
+1
+E
+boots~
+
+  These are Charybdis' powerful iron boots, useful in protecting the
+surrounding area from his molten legs.  They carry great weight as well
+as untold power for the wearer.
+
+~
+X
+~
+4 0 0
+M
+You struggle to wear a giant pair of Iron Boots.~
+$n struggles to wear a giant pair of Iron Boots.~
+You kick off a heavy set of Iron Boots.~
+$n kicks off a heavy set of Iron Boots.~
+A
+14 -50
+A
+19 3
+A
+18 3
+T
+6666
+#25406
+horn geryon~
+Horn of Geryon~
+A grit-covered battle horn, that of Geryon himself, lies here.~
+~
+24 233896516 16385
+0 0 0 0
+5 100000 200000
+1
+E
+horn~
+
+  The horn is strangely hollowed-out, a musical instrument of sorts.
+Spatters of blood and flesh spew from the bell as you attempt to blow on
+it.
+
+~
+X
+~
+4 0 0
+M
+The Horn of Geryon sounds a death-cry as you hold it to your lips.~
+The Horn of Geryon sounds a death-cry as $n holds it to $s lips.~
+The Horn of Geryon turns black as you lower it to your side.~
+The Horn of Geryon turns black as $n lowers it to $s side.~
+A
+19 6
+A
+18 6
+A
+53 6
+T
+6666
+#25408
+unguis fingernail fayn~
+the Daemonic Unguis of Lord Fayn~
+A slender fingernail curves its razored edge along the floor, white and stark.~
+$r Daemonic Unguis seeks to splinter the flesh of $V.~
+5 259021383 8193
+0 2 5 11
+31 500000 166000
+1
+E
+fingernail unguis~
+
+  A gigantic weapon of deadly purpose.  This is the fingernail of the
+Daemon-Lord Fayn, his main blade used for dispatching particularly
+annoying souls in the Pit of Dismemberment.  It glows with a depth of
+mystery and undisclosed powers.
+
+~
+X
+$r Daemonic Unguis seeks an opponent's flesh to splinter.~
+5 0 0
+M
+The Daemonic Unguis quivers with hatred as you place it in your hand.~
+The Daemonic Unguis quivers with hatred as $n places it in $s hand.~
+The Daemonic Unguis goes dormant as you lower it to your side.~
+The Daemonic Unguis goes dormant as $n lowers it to $s side.~
+A
+19 24
+A
+52 20
+A
+28 25
+T
+6666
+#25409
+ring accursed~
+The Ring of the Accursed~
+A translucent ring floats above the ground, feeding off light in the room.~
+~
+9 156287556 3
+3 0 0 0
+5 500000 175000
+1
+E
+ring~
+
+  A small translucent ring drawing power from the life around it, including
+yourself.  This was once the trinket of Lord Fayn.  It carries the dust and
+ash of the deepest pits of Hell in its cracks.
+
+~
+X
+~
+4 0 0
+M
+A great pressure crushes your finger as you wear the Ring of the Accursed.~
+A great pressure crushes $n's finger as $e wears the Ring of the Accursed.~
+You are left in agonizing pain as you remove the Ring of the Accursed.~
+$n is left in agonizing pain as $e removes the Ring of the Accursed.~
+A
+19 5
+A
+18 5
+T
+6666
+#25410
+bracelet filthy flesh~
+A filthy bracelet~
+A revolting bracelet pieced together from human flesh lies here in blood.~
+~
+9 156293700 4097
+0 0 0 0
+7 500000 228000
+1
+E
+bracelet~
+
+  This is a horrible piece indeed, bearing a stink so great that your
+eyes water at the sight of it.  An aura of evil surrounds the edges;
+the pain and anguish of its owner are almost tangible as you are moved
+to wear the bracelet.
+ 
+~
+X
+~
+4 0 0
+M
+You slide a greasy piece of decaying flesh around your wrist.~
+$n slides a greasy piece of decaying flesh around $s wrist.~
+You slide a greasy piece of decaying flesh off of your wrist.~
+$n slides a greasy piece of decaying flesh off of $s wrist.~
+A
+19 5
+A
+17 -5
+T
+6666
+#25411
+gauntlets doom steel~
+The Gauntlets of Doom~
+A pair of sheet-steel gauntlets reek of evil and impending doom.~
+~
+9 189844053 129
+9 0 0 0
+30 1000000 200000
+1
+E
+gauntlets~
+
+  These are the handwear of the Devil himself, lending to the power
+inherent in their mechanical form.  The metal joints scream as they
+twist with a mind of their own, beckoning you to don them with care..
+
+~
+X
+~
+4 0 0
+M
+Your hands become like cold steel as you don the Gauntlets of Doom.~
+$n's hands become like cold steel as $e dons the Gauntlets of Doom.~
+Your hands lose their cold steel shell as you remove the Gauntlets of Doom.~
+$n's hands lose their cold steel shell as $e removes the Gauntlets of Doom.~
+A
+19 5
+A
+13 50
+T
+6666
+#25412
+sword night~
+The Sword of Night~
+A sword hewn from Death's scythe lies here devouring the light.~
+~
+26 156237909 8193
+1 2 19 3
+31 1000000 250000
+10
+E
+sword~
+
+  The hilt of this awesome weapon is made from some unknown metal, dark and
+sinister.  No reflection can be seen in the blade; sharp for ages, it carries
+the weight of countless souls within it.  This is the tip of Death's own
+scythe used to cut short the valueless numbers of mortals above and bring
+them to justice here in Hell.  Lucifer's dreadful power lies barely dormant
+within it, only to unleash with the height of the moon.
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 14
+A
+18 3
+T
+6666
+#25413
+leggings blackened goatskin~
+blackened leggings~
+A pair of black goatskin leggings lie smoking on the ground.~
+~
+9 155191892 33
+18 0 0 0
+15 1000000 155000
+1
+E
+leggings~
+
+  A perfect accessory for any Lord of Evil, these stylish goatskin
+leggings are so hot they're smoking as they sit here.  Satan would be
+very upset to see that they are no longer in his closet..
+
+~
+X
+~
+4 0 0
+M
+You prance around the room in your blackened leggings of goatskin.~
+$n prances around the room in $s blackened leggings of goatskin.~
+You peel off the blackened leggings from your smoking legs.~
+$n peels off the blackened leggings from $s smoking legs.~
+A
+19 3
+A
+13 50
+T
+6666
+#25414
+ring despair stone~
+Ring of Despair~
+A chipped stone ring lies here on the ground in a pool of tears.~
+~
+9 265341525 3
+4 0 0 0
+10 1000000 175000
+1
+E
+ring~
+
+  Lucifer's sadness and that of every soul buried here forever in Hell
+has been condensed here into this token, a ring for all to understand
+the loss of the ways of Happiness.  Inside it, the tears of the Old Man
+of Crete flow forever round, lending great power to those who wish to
+change their ways.
+
+~
+X
+~
+4 0 0
+M
+An overwhelming feeling of sadness drifts over you.~
+An overwhelming feeling of sadness drifts over $n.~
+The sadness leaves you as you remove the Ring of Despair.~
+The sadness leaves $n as $e removes the Ring of Despair.~
+A
+18 5
+A
+13 55
+A
+19 5
+T
+6666
+#25415
+hooves satan~
+Hooves of Satan~
+A mangled set of gigantic Hooves lay uneasily on the ground before you.~
+~
+9 155191893 65
+15 0 0 0
+5 1000000 250000
+1
+E
+hooves~
+
+  The cloven feet of Lord Satan, these hellish talismans carry deadly
+power that no mortal could hope to bear.
+
+~
+X
+~
+4 0 0
+M
+You place the Hooves of Satan on your feet, wincing in pain.~
+$n places the Hooves of Satan on $s feet, wincing in pain.~
+You sigh in relief as you remove the Hooves of Satan.~
+$n sighs in relief as $e removes the Hooves of Satan.~
+A
+18 4
+A
+19 4
+A
+1 4
+T
+6666
+#25416
+ring agony~
+Ring of Agony~
+A spiked ring drenched in sweat has been left here on the ground.~
+~
+9 155191893 3
+-30 0 0 0
+4 1000000 500000
+1
+E
+ring~
+
+  A small token of Lucifer's far-reaching strength, this ring he bears
+on his left hand.  It carries the power to induce true pain on any soul
+forever, beyond their darkest fears.
+
+~
+X
+~
+5 0 0
+M
+The Ring of Agony sears itself to your flesh as you wear it.~
+The Ring of Agony sears itself to $n's flesh as $e wears it.~
+You shriek as you rip the Ring of Agony and a chunk of flesh from your finger.~
+$n shrieks as $e rips the Ring of Agony and a chunk of flesh from $s finger.~
+A
+18 5
+A
+19 7
+A
+13 -50
+T
+6666
+#25423
+gem achromatic hole~
+an achromatic gem~
+A strange hole on the ground appears to have no form before your feet.~
+~
+8 423627348 16385
+0 0 0 0
+33 999999999 999999
+10
+E
+gem~
+
+  You see nothing.  A trickle of blood runs from your nose as you stare
+intently at nothing.  What could this be?
+
+~
+X
+~
+117 0 0
+M
+A jet of blood sprays from your nose as you place your hands on a strange gem.~
+A jet of blood sprays from $n's nose as $e places $s hands on a strange gem.~
+You recover slowly as the colors around you drain back into your body.~
+$n recovers slowly as the colors around $m drain back into $s body.~
+A
+53 15
+A
+19 10
+A
+18 10
+T
+13333
+B
+8388608
+#25425
+tail winged serpent~
+a Winged Serpent's Tail~
+The dried-up tail section of a winged serpent is coiled up here.~
+~
+9 155191894 5
+10 0 0 0
+20 1500000 150000
+1
+E
+tail~
+
+  This is the dried remains of Satan's pet serpent's corpse.  It holds
+still only a tiny fraction of the evil power of Hell in its corroded flesh.
+
+~
+X
+~
+4 0 0
+M
+The Winged Serpent's Tail constricts tightly around your neck.~
+The Winged Serpent's Tail constricts tightly around $n's neck.~
+You pull the Winged Serpent's Tail away from your neck.~
+$n pulls the Winged Serpent's Tail away from $s neck.~
+A
+53 5
+A
+19 4
+A
+12 10
+T
+6666
+#25426
+horns set blazing~
+a Blazing Set of Horns~
+A pair of horns once-belonging to the almighty Devil himself now lay here.~
+~
+9 155192022 17
+9 0 0 0
+16 888888 175001
+1
+E
+horns~
+
+  These are but the gory horns which once sat atop Lucifer's brow.  The
+stains of ages yellow from the tips down to the ebony base of each.  Someone
+must have been very lucky to have obtained such a prize as this.
+
+~
+X
+~
+4 0 0
+M
+You struggle to keep your head upright as you don a Blazing Set of Horns.~
+$n struggles to keep $s head upright as $e dons a Blazing Set of Horns.~
+The Blazing Set of Horns fall immediately from your head.~
+The Blazing Set of Horns fall immediately from $n's head.~
+A
+53 10
+A
+19 4
+A
+18 4
+T
+6666
+#25427
+wings lucifer~
+the Wings of Lucifer~
+A pair of dirty black-feathered wings tower over your head.~
+~
+9 155191892 257
+7 0 0 0
+25 2000000 165000
+1
+E
+wings~
+
+  Lucifer, once an angel, owned these precious wings long ago.  But as God
+banished him to the pits of Hell, they burned and fell to be replaced by bat-
+like, gargantuan leather wings.  Still held, Satan would never let these go
+without a fight.
+
+~
+X
+~
+4 0 0
+M
+A dark shadow covers you as you wear the Wings of Lucifer on your arms.~
+A dark shadow covers $n as $e wears the Wings of Lucifer on $s arms.~
+You emerge in light as you remove the Wings of Lucifer.~
+$n emerges in light as $e removes the Wings of Lucifer.~
+A
+1 1
+A
+52 22
+A
+19 5
+T
+6666
+#25428
+seal cross stone ribbon~
+Seal of the Inverted Cross~
+An ebon-engraved stone on a small ribbon sits glowing on the floor.~
+~
+9 158349892 3
+4 0 0 0
+14 3000000 300000
+1
+E
+seal~
+
+  This is one of the rarest rings held by Satan himself.  It is his Seal,
+the symbol by which all importance is held by him.  A tendril of dark smoke
+twirls ever-so-lightly around the ribbon as you gaze upon it.
+
+~
+X
+~
+4 0 0
+M
+You feel the power of Lucifer permeate through your fingers.~
+$n feels the power of Lucifer permeate through $s fingers.~
+Lucifer's spirit evacuates your body as you remove the Seal.~
+Lucifer's spirit evacuates $n's body as $e removes the Seal.~
+A
+53 15
+A
+18 5
+A
+19 5
+T
+6666
+#25429
+barrier daemonic entanglement bones~
+An Enchanted Daemonic Barrier~
+A strange entanglement of bones, hair, and skin adorns the ground here.~
+~
+9 155192022 513
+15 0 0 0
+19 1900000 159000
+2
+E
+barrier~
+
+  As you admire the craftsmanship put into this unique shield, the magical
+force of evil within it awakens.  A crimson eye opens between the bones and
+skin of daemons that the Sorceress flayed to create it.  The eye gazes
+upon your mortal soul with rapt interest.
+  
+~
+X
+~
+5 0 0
+M
+A piercing daemonic scream issues from the center of your shield as you wear it.~
+A piercing daemonic scream issues from the center of $n's shield as $e wears it.~
+The Daemonic Barrier feigns sleep instantly as you drop it to your side.~
+The Daemonic Barrier feigns sleep instantly as $n drops it to $s side.~
+A
+52 7
+A
+53 10
+A
+19 3
+T
+6666
+#25430
+shadow harvest moon~
+Shadow of the Harvest Moon~
+The Woodland Sorceress' shadow remains emblazoned on the floor here.~
+~
+9 155192020 1025
+16 0 0 0
+1 3450000 201000
+10
+E
+shadow~
+
+  The magical power of the Sorceress of Hell is boundless, as proves this,
+her very shadow now taking form as a cloak.  It is tinged a blood-red,
+similar to the moon over a blaze in the October night sky.
+
+~
+X
+~
+4 0 0
+M
+The Woodland Sorceress' spirit engorges you with an invincible power.~
+The Woodland Sorceress' spirit engorges $n with an invincible power.~
+You step from beneath the Shadow of the Woodland Sorceress.~
+$n steps from beneath the Shadow of the Woodland Sorceress.~
+A
+53 4
+A
+12 40
+A
+19 4
+T
+6666
+#25431
+circlet crescent moon~
+a Crescent Circlet~
+A circlet in the shape of a waning crescent moon cuts into the ground.~
+~
+9 155192022 4097
+5 0 0 0
+8 4888888 135000
+1
+E
+circlet~
+
+  A strange bauble, this is a bladed crescent bracelet worn only by the
+Woodland Sorceress.  She transmogrified much of her power from that of
+the moon, and this is one of her most precious magical possessions
+containing a portion of that power.
+
+~
+X
+~
+5 0 0
+M
+You gash your wrists as you try to place the Crescent Circlet around them.~
+$n gashes $s wrists as $e tries to place the Crescent Circlet around them.~
+You shred your flesh as you tear the Circlet from your wrist.~
+$n shreds $s flesh as $e tears the Circlet from $s wrist.~
+A
+53 30
+A
+12 60
+A
+13 60
+T
+1666
+#0
+$~

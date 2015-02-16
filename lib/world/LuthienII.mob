@@ -1,0 +1,53 @@
+#27400
+vampir vampire unholy creature~
+A Shrieking Vampir~
+`pan Unholy Creature is crouched here, veiled by Shadows!
+~
+Satan's lackey, this cursed creature,
+its wretched body, a loathsome feature.
+Long sharp fingernails, razor claws,
+jagged teeth, adorns its jaws.
+Souless eyes, like bottomless pits,
+mezmerizing gaze, freezes your wits.
+~
+16777260 268469282 -1000 Y
+49 -14 -6 1d1+6665 1d1+1331
+75000 4050000
+8 8 1
+55 20608 1d1+665 5
+5 2 25 0
+1 3 25 250
+1 3 20 203
+1 3 10 181
+6 2 25 0
+0 1 0 800
+R
+12
+T
+`p......a Shrieking `hVampir`p's eyes burns with `bBloodlust`p!~
+K
+0 0 0 0 0 0 0
+#27401
+drekavac~
+`bDrekavac the Butcher`q~
+`pa Hideously Deformed creature stands here, Chopping up corpses...`q
+~
+  The unbaptised dead, this creature created,
+  the death of a child, the demon has catered.
+    Its body elongated, as thin as spindle,
+   A burning hate, this creature will kindle.
+    One second a monster, the other a child,
+your imagination must really, be running quite wild.
+~
+67125290 402917378 0 Y
+50 -20 10 1d1+9999 1d1+1331
+150000 5994000
+8 8 1
+63 20480 1d1+6665 0
+0 1 9 544
+T
+`p......`bDrekavac the Butcher `pscreams with a soulshattering voice!`q~
+K
+1000000 0 0 0 0 0 0
+#0
+$~

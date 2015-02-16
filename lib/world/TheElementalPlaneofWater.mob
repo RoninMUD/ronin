@@ -1,0 +1,30 @@
+#13200
+elemental small water~
+The Small Water Elemental~
+The Small Water Elemental stands here, guarding something.
+~
+A small humanoid-shaped creature of made of pure elemental water is standing
+in front of you. It looks very threatening.
+~
+42 134217728 0 Y
+15 5 4 1d12+350 1d8+8
+0 2350
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+#13201
+elemental great water~
+The Great Water Elemental~
+The Great Water Elemental stands guarding the altar.
+~
+A huge creature made of the most blue and clear water is looming ahead of you.
+Its towering shape and the huge fists look very dangerous. 
+~
+42 1048706 0 Y
+28 -8 -5 1d12+2980 2d8+37
+10000 43000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+#0
+$~

@@ -1,0 +1,1140 @@
+#9100
+Forests surrounding Mount Olympus~
+invalid~
+91 8 0
+D0
+~
+~
+0 -1 9101
+S
+#9101
+Valley leading into Mount Olympus~
+invalid~
+91 8 0
+D0
+~
+~
+0 -1 9102
+D2
+~
+~
+0 -1 9100
+S
+#9102
+Southern Base of Mount Olympus~
+invalid~
+91 8 0
+D0
+~
+~
+0 -1 9123
+D1
+~
+~
+0 -1 9103
+D2
+~
+~
+0 -1 9101
+S
+#9103
+Circling the Southern Edge of Mount Olympus~
+invalid~
+91 8 0
+D1
+~
+~
+0 -1 9104
+D3
+~
+~
+0 -1 9102
+S
+#9104
+Southeastern Cliff Wall~
+invalid~
+91 0 0
+D0
+~
+~
+0 -1 9105
+D3
+~
+~
+0 -1 9103
+S
+#9105
+Climbing into the Eastern Mountain Range~
+invalid~
+91 0 0
+D1
+~
+~
+0 -1 9106
+D2
+~
+~
+0 -1 9104
+S
+#9106
+Lush Valley in the Eastern Mountains~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9107
+D3
+~
+~
+0 -1 9105
+S
+#9107
+Rounding the Southeastern Peaks of Mount Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9108
+D3
+~
+~
+0 -1 9106
+S
+#9108
+Climbing the Eastern Cliff Wall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9109
+D2
+~
+~
+0 -1 9107
+S
+#9109
+Nearing the Highest Peak in the Eastern Mountains~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9110
+D1
+~
+cliff~
+11 -1 9124
+D2
+~
+~
+0 -1 9108
+S
+#9110
+Crevice Snaking into the Northern Mountains~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9109
+D3
+~
+~
+0 -1 9111
+S
+#9111
+Split Path Leading into Northern Mount Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9112
+D1
+~
+~
+0 -1 9110
+D3
+~
+path~
+11 -1 9140
+S
+#9112
+Scaling Rocky Mountain Cliffs in the North~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9111
+D3
+~
+~
+0 -1 9113
+S
+#9113
+Treacherous Northern Mountain Range~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9114
+D1
+~
+~
+0 -1 9112
+S
+#9114
+Nearing the Northern Edge of Mount Olympus~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9113
+D3
+~
+~
+0 -1 9115
+S
+#9115
+Scaling the Northern Cliff Walls~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9126
+D1
+~
+~
+0 -1 9114
+D3
+~
+~
+0 -1 9116
+S
+#9116
+Rocky Range in the Northwestern Mountains~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9115
+D2
+~
+~
+0 -1 9117
+S
+#9117
+Mountains Descend into a Vast Forest~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9116
+D1
+~
+path~
+12 -1 9138
+D2
+~
+~
+0 -1 9118
+S
+#9118
+Northern Forest Range of Mount Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9117
+D3
+~
+~
+0 -1 9119
+S
+#9119
+Forests at the Base of a Tall Cliff~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9118
+D2
+~
+~
+0 -1 9120
+S
+#9120
+Scaling the Western Peaks of Mount Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9119
+D2
+~
+~
+0 -1 9121
+D3
+~
+~
+0 -1 9129
+S
+#9121
+Lushly Forested Mountain Range~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9120
+D1
+~
+~
+0 -1 9122
+S
+#9122
+Scaling a Snow-Capped Mountain Peak~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9134
+D2
+~
+~
+0 -1 9123
+D3
+~
+~
+0 -1 9121
+S
+#9123
+Climbing Over a Rocky Mountain Range~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9122
+D2
+~
+~
+0 -1 9102
+S
+#9124
+Scaling the Eastern Precipice of Mount Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9125
+D3
+~
+cliff~
+11 -1 9109
+S
+#9125
+Precipice of the Eastern Mountains~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9124
+S
+#9126
+Traveling a Steep Path in the Northern Mountains~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9127
+D2
+~
+~
+0 -1 9115
+S
+#9127
+Towering Peak in the Northern Mountains~
+A temporary description
+~
+91 0 0
+D3
+~
+~
+0 -1 9126
+D4
+~
+~
+0 -1 9128
+S
+#9128
+Flying Above the Northern Face of Mount Olympus~
+A temporary description
+~
+91 262144 0
+D5
+~
+~
+0 -1 9127
+S
+#9129
+Broken Path Leading into Western Mount Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9130
+D1
+~
+~
+0 -1 9120
+S
+#9130
+Outcropping of Jagged Rocks~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9131
+D2
+~
+~
+0 -1 9129
+S
+#9131
+Enormous Cliff Wall in the Western Mountains~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9130
+D4
+~
+~
+0 -1 9132
+S
+#9132
+Path Leading up the Western Precipice of Mount Olympus~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9133
+D5
+~
+~
+0 -1 9131
+S
+#9133
+Towering Precipice of the Western Mountains~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9132
+S
+#9134
+Southern Cliff Wall of Mount Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9135
+D3
+~
+~
+0 -1 9122
+S
+#9135
+Rocky Cliffs in the Southern Mountains~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9136
+D2
+~
+~
+0 -1 9134
+S
+#9136
+Traversing the Southern Peaks of Mount Olympus~
+A temporary description
+~
+91 0 0
+D3
+~
+~
+0 -1 9135
+D4
+~
+~
+0 -1 9137
+S
+#9137
+Flying Above the Southern Face of Mount Olympus~
+A temporary description
+~
+91 262144 0
+D5
+~
+~
+0 -1 9136
+S
+#9138
+Hidden Path in the Northern Mountains~
+A temporary description
+~
+91 0 0
+D2
+~
+path~
+11 -1 9139
+D3
+~
+~
+0 -1 9117
+S
+#9139
+Hidden Path Leading High into the Mountains~
+A temporary description
+~
+91 0 0
+D0
+~
+path~
+11 -1 9138
+D1
+~
+~
+0 -1 9140
+D2
+~
+~
+0 -1 9141
+S
+#9140
+Hidden Path in the Northeastern Mountains~
+A temporary description
+~
+91 0 0
+D1
+~
+path~
+11 -1 9111
+D3
+~
+~
+0 -1 9139
+S
+#9141
+Altar at the Peak of Mount Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9139
+S
+#9142
+The Great Gate of Clouds~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9143
+S
+#9143
+Inside the Golden Gates of the Olympian Palace~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9144
+D2
+~
+~
+0 -1 9142
+S
+#9144
+The Celestial Courtyard of Olympus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9145
+D2
+~
+~
+0 -1 9143
+S
+#9145
+Entrance to the Celestial Quarters~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9144
+S
+#9146
+Grand Quarters of Olympian Royalty~
+A temporary description
+~
+91 0 0
+S
+#9147
+Hearth House of the Sacred Flame~
+A temporary description
+~
+91 0 0
+S
+#9148
+Tranquil Vineyard of Decadence~
+A temporary description
+~
+91 0 0
+S
+#9149
+The Spring of Acidalia~
+A temporary description
+~
+91 0 0
+S
+#9150
+A temporary name~
+A temporary description
+~
+91 0 0
+S
+#9151
+Tranquil Grove of Oak Trees~
+A temporary description
+~
+91 0 0
+S
+#9152
+A temporary name~
+A temporary description
+~
+91 0 0
+S
+#9153
+The Celestial Armory of Olympus~
+A temporary description
+~
+91 0 0
+S
+#9154
+A temporary name~
+A temporary description
+~
+91 0 0
+S
+#9155
+Crossroads of the Many-Worlds~
+A temporary description
+~
+91 0 0
+S
+#9156
+A temporary name~
+A temporary description
+~
+91 0 0
+S
+#9157
+A Vast, Unmarked Wilderness~
+A temporary description
+~
+91 0 0
+S
+#9158
+Southern Archway of the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9168
+S
+#9159
+Eastern Passage into the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D3
+~
+~
+0 -1 9176
+S
+#9160
+Northern Doors of the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9180
+D2
+~
+~
+0 -1 9173
+S
+#9161
+Western Passage into the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9164
+S
+#9162
+Throne of Hera~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9163
+D1
+~
+~
+0 -1 9168
+S
+#9163
+Throne of Demeter~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9164
+D1
+~
+~
+0 -1 9169
+D2
+~
+~
+0 -1 9162
+S
+#9164
+Throne of Athena~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9165
+D1
+~
+~
+0 -1 9170
+D2
+~
+~
+0 -1 9163
+D3
+~
+~
+0 -1 9161
+S
+#9165
+Throne of Aphrodite~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9166
+D1
+~
+~
+0 -1 9171
+D2
+~
+~
+0 -1 9164
+S
+#9166
+Throne of Artemis~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9167
+D1
+~
+~
+0 -1 9172
+D2
+~
+~
+0 -1 9165
+S
+#9167
+Throne of Dionysus~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9173
+D2
+~
+~
+0 -1 9166
+S
+#9168
+Central Span of the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9169
+D1
+~
+~
+0 -1 9174
+D2
+~
+~
+0 -1 9158
+D3
+~
+~
+0 -1 9162
+S
+#9169
+Central Span of the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9170
+D1
+~
+~
+0 -1 9175
+D2
+~
+~
+0 -1 9168
+D3
+~
+~
+0 -1 9163
+S
+#9170
+Central Span of the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9171
+D1
+~
+~
+0 -1 9176
+D2
+~
+~
+0 -1 9169
+D3
+~
+~
+0 -1 9164
+S
+#9171
+Central Span of the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9172
+D1
+~
+~
+0 -1 9177
+D2
+~
+~
+0 -1 9170
+D3
+~
+~
+0 -1 9165
+S
+#9172
+Central Span of the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9173
+D1
+~
+~
+0 -1 9178
+D2
+~
+~
+0 -1 9171
+D3
+~
+~
+0 -1 9166
+S
+#9173
+Central Span of the Grand Council Hall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9160
+D1
+~
+~
+0 -1 9179
+D2
+~
+~
+0 -1 9172
+D3
+~
+~
+0 -1 9167
+S
+#9174
+Throne of Zeus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9175
+D3
+~
+~
+0 -1 9168
+S
+#9175
+Throne of Poseidon~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9176
+D2
+~
+~
+0 -1 9174
+D3
+~
+~
+0 -1 9169
+S
+#9176
+Throne of Hephaestus~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9177
+D1
+~
+~
+0 -1 9159
+D2
+~
+~
+0 -1 9175
+D3
+~
+~
+0 -1 9170
+S
+#9177
+Throne of Ares~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9178
+D2
+~
+~
+0 -1 9176
+D3
+~
+~
+0 -1 9171
+S
+#9178
+Throne of Apollo~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9179
+D2
+~
+~
+0 -1 9177
+D3
+~
+~
+0 -1 9172
+S
+#9179
+Throne of Hermes~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9178
+D3
+~
+~
+0 -1 9173
+S
+#9180
+Northern Passage in the Council Hall~
+A temporary description
+~
+91 0 0
+D1
+~
+~
+0 -1 9181
+D3
+~
+~
+0 -1 9160
+S
+#9181
+Northern Passage in the Council Hall~
+A temporary description
+~
+91 0 0
+D0
+~
+~
+0 -1 9182
+D3
+~
+~
+0 -1 9180
+S
+#9182
+Celestial Forge of Olympus~
+A temporary description
+~
+91 0 0
+D2
+~
+~
+0 -1 9181
+S
+#9199
+A temporary name~
+A temporary description
+~
+91 0 0
+S
+#0
+$~
