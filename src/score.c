@@ -445,7 +445,7 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
       CHCLR(ch, 7), ENDCHCLR(ch), GET_REMORT_EXP(ch));
     break;
   case SCQ_REMORT_MULT:
-    sprintf(buf, "%sRemort Mult:%s %d",
+    sprintf(buf, "%sRemort Multiplier:%s %d",
       CHCLR(ch, 7), ENDCHCLR(ch), rv2_calc_remort_mult(ch));
     break;
   case SCQ_DEATH_EXP:
@@ -750,7 +750,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       else if (is_abbrev(arg, "experience") || is_abbrev(arg, "xp")) query = SCQ_EXP;
       else if (is_abbrev(arg, "exp_to_level") || is_abbrev(arg, "xp_to_level")) query = SCQ_EXP_TO_LEVEL;
       else if (is_abbrev(arg, "remort_exp") || is_abbrev(arg, "remort_xp")) query = SCQ_REMORT_EXP;
-      else if (is_abbrev(arg, "remort_mult")) query = SCQ_REMORT_MULT;
+      else if (is_abbrev(arg, "remort_multiplier")) query = SCQ_REMORT_MULT;
       else if (is_abbrev(arg, "death_exp") || is_abbrev(arg, "death_xp")) query = SCQ_DEATH_EXP;
       else if (is_abbrev(arg, "gold")) query = SCQ_GOLD;
       else if (is_abbrev(arg, "bank_gold")) query = SCQ_BANK;
