@@ -33,3 +33,5 @@ lib/reboot_time
 lib/plrlog
 lib/slave.pid
 lib/names-*
+lib/wizlist
+lib/wizlist_inact
