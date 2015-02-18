@@ -1,11 +1,19 @@
 #9301
 Entrance to the lost city of Loftwick~
-This is the entrance to the lost city of Loftwick.  The once beautiful 
-architecture has long since been destroyed.  Parts of the ceiling here
-has caved in and rubble lines the streets.  There appears to be footprints
-in the dust on the ground here.  Fresh ones......
+This is the entrance to the lost city of Loftwick.  The once beautiful
+architecture has long since been destroyed. Parts of the ceiling here
+has caved in and rubble lines the nearby streets.  There appear to be
+footprints in the dust on the ground here, fresh ones....  The thicket
+of heavy brush back to the north leads to the strange path that brought
+you here.
 ~
 93 13 3
+D0
+A thick wall of brush obscures your path and your vision, but it
+does seem passable.
+~
+brush~
+9 -1 28567
 D1
 ~
 ~

@@ -900,7 +900,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     printf_to_char(ch, " %sWimpy Limit:%s %-13d       ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_WIMPY(ch));
-    printf_to_char(ch, "%sDeath XP:%s %lu\n\r",
+    printf_to_char(ch, "%sDeath XP:%s %lu (2x)\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch));
 
     printf_to_char(ch, " %sBleed Limit:%s %-13d   ",
@@ -1141,7 +1141,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     if (GET_DEATH_EXP(ch))
     {
-      printf_to_char(ch, "You have %lu death experience to re-earn.\n\r", GET_DEATH_EXP(ch));
+      printf_to_char(ch, "You have %lu death experience to re-earn at a 2x multiplier.\n\r", GET_DEATH_EXP(ch));
     }
 
     printf_to_char(ch, "You have %d class placement points.\n\r", GET_RANKING(ch));

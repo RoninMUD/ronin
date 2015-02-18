@@ -6,6 +6,10 @@ gust of wind blows by you into the deserted, and seemingly destroyed,
 city.
 ~
 52 0 1
+D1
+~
+~
+0 -1 10547
 D3
 You see devastation everywhere. Houses lie in ruin and skeletons litter
 the streets. You see strange beasts stalking the shadows.~
@@ -866,11 +870,16 @@ A small side street runs past the house.~
 S
 #5245
 On the second floor~
-     The minute you step off onto this floor you realize it was a mistake.
-The old rotted floorboards suddenly give way and you fall down, impaling
-yourself on jagged boards below.
+     The floor creaks as you set foot on it, threatening to cave-in, but
+a combination of dust and good fortune hold the rickety floor together.
+The windows are covered in grime and impossible to see out of, the room
+has nothing but spider webs and broken pieces of furniture.
 ~
-52 2 1
+52 8 1
+D5
+~
+~
+0 -1 5237
 E
 death_text~
 A nail protruding from the boards slits your throat, leaving you to perish.
@@ -910,21 +919,9 @@ long.
 ~
 52 0 1
 D5
-A broken ladder.~
 ~
-0 0 5249
-S
-#5249
-Under a watchtower~
-    As you descend the ladder, the rotted rungs break sending you quickly
-to your demise far below on the city street. Splat.
 ~
-52 2 1
-E
-death_text~
-The concussion from your fall leaves you with serious brain damage
-and likely death.
-~
+0 -1 5241
 S
 #5250
 The Temple of Thalos~
@@ -990,9 +987,14 @@ S
 #5253
 A small clearing~
   You are standing in a small clearing.  A path leads upwards into the
-mountains.  To the west lies the entrance to a huge, gloomy looking tower.
+mountains.  To the north lies the entrance to a huge, gloomy-looking
+tower.
 ~
 52 0 2
+D0
+~
+~
+0 -1 17311
 D4
 The path on the mountain~
 ~

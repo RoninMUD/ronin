@@ -12,7 +12,7 @@ A tiny creature, the snake is of little threat to you.
 80 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #10501
 scorpion tiny~
 a scorpion~
@@ -27,7 +27,7 @@ Although its a miniscule creature, its sting can be very deadly!
 86 0 0d0+5 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #10502
 tarion cavalier~
 A Tarion Cavalier~
@@ -54,7 +54,7 @@ him alone, as he moves to continue along the endless dunes.
 T
 ......A Tarion Cavalier exudes an abnormally strong presence!~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #10503
 horse warhorse tarion charger~
 A Tarion War-Charger~
@@ -78,6 +78,6 @@ to follow the commands of its master.
 10 1 15 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #0
 $~
