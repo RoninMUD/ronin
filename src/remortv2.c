@@ -183,10 +183,10 @@ int rv2_calc_remort_mult(CHAR *ch) {
     step = 250;
   }
 
-  adjust = MAX(0, GET_MAX_HIT(ch) - min) / step;
+  adjust = MAX(0, GET_NAT_HIT(ch) - min) / step;
   if (adjust > 0) result += (1 << (adjust - 1));
 
-  adjust = MAX(0, GET_MAX_MANA(ch) - min) / step;
+  adjust = MAX(0, GET_NAT_MANA(ch) - min) / step;
   if (adjust > 0) result += (1 << (adjust - 1));
 
   return MIN(result, 24);

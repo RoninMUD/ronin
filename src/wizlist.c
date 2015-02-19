@@ -126,7 +126,7 @@ insert_wizlist_name (char *name, const char *filename) {
   FILE *fl;
 
   remove_wizlist_name (name);
-  fl = fopen (filename, "r+");
+  fl = fopen (filename, "w+");
   fseek (fl, 0L, SEEK_END);
   fprintf (fl, "%s\n", name);
   fclose (fl);
@@ -180,7 +180,7 @@ create_wizlist (FILE *wizlist) {
     sprintf(tmp_name," ");
     log_f("   Read wizlist source files...");
     if (!(name_fl = fopen (wizfiles[13 - ind*2], "r")))
-      return (-1);
+      continue;
 
     fprintf (wizlist, "%s", wiznames[13 - ind*2]);
 
@@ -236,7 +236,7 @@ create_inactive_wizlist (FILE *wizlist) {
     sprintf(tmp_name," ");
     log_f("   Read wizlist source files...");
     if (!(name_fl = fopen (wizfiles[12 - ind*2], "r")))
-      return (-1);
+      continue;
 
     fprintf (wizlist, "%s", wiznames[12 - ind*2]);
 
