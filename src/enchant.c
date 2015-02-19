@@ -413,8 +413,10 @@ int red_death(struct enchantment_type_5 *ench, CHAR *ench_ch, CHAR *ch, int cmd,
 int lizard_bite(struct enchantment_type_5 *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg);
 int greasy_palms(struct enchantment_type_5 *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg);
 
+#ifdef TEST_SITE
 /* Hemp - adding Digsite enchantment calls */
 int toxic_fumes_ench(struct enchantment_type_5 *ench, CHAR *ench_ch, CHAR *char_in_room, int cmd, char*arg);
+#endif
 
 /* Red Dragons enchantment - Solmyr */
 int frightful_presence(struct enchantment_type_5 *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg);
@@ -1579,7 +1581,9 @@ void assign_enchantments(void)
   ENCHANTO("Red Death"                      ,ENCHANT_REDDEATH     , 30 , 0  ,0                    ,0,0,red_death);
   ENCHANTO("Lizard Lycanthropy"             ,ENCHANT_LIZARD       , 30 , 0  ,0                    ,0,0,lizard_bite);
 
+#ifdef TEST_SITE
   ENCHANTO("Toxic Fumes"                    ,ENCHANT_TOXICFUMES   , -1 , 0  ,0                    ,0,0,toxic_fumes_ench);
+#endif
   ENCHANTO("Frightful Presence"             ,ENCHANT_FRIGHTFUL    , 10 , -5 ,APPLY_HITROLL        ,0,0,frightful_presence);
   ENCHANTO("The Curse of the Lich"          ,ENCHANT_LICH         , 5  , -5 ,APPLY_HITROLL        ,0,0,lich_curse);
 /* These 3 were added by Quack for trial in Early 1997
