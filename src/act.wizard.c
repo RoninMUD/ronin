@@ -3849,9 +3849,10 @@ void do_mobswitch(struct char_data *ch, char *argument, int cmd)
        return;
         }
       }
-      if (victim->desc || !IS_IMPLEMENTOR(ch)) {
-     send_to_char(
-               "You can't do that, the body is already in use!\n\r",ch);
+      if (victim->desc) {
+        send_to_char("You can't do that, the body is already in use!\n\r",ch);
+      } else if ((!IS_NPC(victim) && !IS_IMPLEMENTOR(ch))) {
+        send_to_char("You can't do that to a player.\n\r", ch);
       } else {
      send_to_char("Ok.\n\r", ch);
      sprintf (buf,"WIZINFO: %s switched to %s", GET_NAME(ch), GET_NAME(victim));

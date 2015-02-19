@@ -385,9 +385,6 @@ int distribute_token(void)
 
     if(rzone != -1 &&
         zone != 0 && /*LIMBO*/
-        zone != 2 && /*Red Wall*/
-        zone != 3 && /*Salamandastron*/
-        zone != 4 && /*Salamandastron2*/
         zone != 10 && /*Quest Gear II*/
         zone != 12 && /*Immortal Rooms*/
         zone != 30 && /*Northern Midgaard Update*/
@@ -395,11 +392,9 @@ int distribute_token(void)
         zone != 35 && /*Training, by Nosferatu*/
         zone != 36 && /*Cafe, by Jarldian*/
         zone != 39 && /*Stables, by Ranger and Quack*/
-        zone != 52 && /*The City of Thalos*/
         zone != 58 && /*HSM Topknot*/
         zone != 66 && /*NewbieMist*/
         zone != 69 && /*Quest Gear*/
-        zone != 93 && /*Loftwick*/
         zone != 123 && /*Boards*/
         zone != 253 && /*Hell1*/
         zone != 254 && /*Hell2*/
