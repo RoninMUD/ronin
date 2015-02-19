@@ -1698,6 +1698,16 @@ Smirk away Sam, they're not here.
 You smirk to yourself.
 $n smirks to $mself, $e must be up to no good again.
 
+smoke 0 5
+You light up a smoke and take a deep drag in satisfaction.
+$n lights up a smoke and takes a deep drag in satisfaction.
+You try to burn $N's eye out with the ember of your cigarette.
+$n tries to burn $N's eye out with the ember of $s cigarette.
+$n jabs you in the eye with the burning ember of $s cigarette!
+You flick your cigarette into the air, that person isn't here.
+You try furiously to put out your lit cigarette in your own eye!
+$n dangles $s lit cigarette above $s open eye, trying to put it out..
+
 snap 1 0
 PRONTO!  You snap your fingers.
 $n snaps $s fingers.
@@ -1718,16 +1728,6 @@ Eh?  Who?  Not here, my friend.
 You snarl at yourself, obviously suffering from schizophrenia.
 $n snarls at $mself, and suddenly looks very frightened.
 
-sneeze 0 0
-Gesundheit!
-$n sneezes.
-You sneeze all over $N.
-$n sneezes on $N's face!
-$n sneezes right on your face! Make sure you wash with soap!
-Your sneeze misses its target!
-Well maybe if you sneeze straight up...
-$n sneezes and makes a mess of $s fine clothes!
-
 sneer 0 0
 You sneer derisively.
 $n sneers derisively.
@@ -1737,6 +1737,16 @@ $n sneers mockingly at you, making you want to cry.
 You should be beaten with a wet noodle for that!
 You sneer at yourself, and your own cruelty makes you cry.
 $n sneers at $mself and then begins to weep.
+
+sneeze 0 0
+Gesundheit!
+$n sneezes.
+You sneeze all over $N.
+$n sneezes on $N's face!
+$n sneezes right on your face! Make sure you wash with soap!
+Your sneeze misses its target!
+Well maybe if you sneeze straight up...
+$n sneezes and makes a mess of $s fine clothes!
 
 sneor 0 0
 You feign sleep, uttering a mocking sneor.
@@ -2128,6 +2138,16 @@ You sadist! They're not even here!
 You torture yourself for being so stupid.
 $n tortures $mself, $e must be into that S+M....
 
+tremble 0 0
+You tremble in fear for no apparent reason at all.
+$n trembles in fear at the ghosts in $s head.
+Thinking of $N makes you tremble in your tiny boots.
+$n trembles in fear at the horrifying appearance of $N.
+$n looks at you and unexpectedly begins to tremble in fear.
+You tremble in fear at the thought of someone who just left.
+Thinking of yourself causes you to tremble in abject fear.
+$n trembles in fear while muttering $s own name.
+
 tripsoc 0 0
 Who would you like to trip?
 $n looks for a chump to trip.
@@ -2307,25 +2327,5 @@ $n starts yodeling right in your ear, a shrill ring ensues.
 You can't yodel at them!
 What? can you repeat that please? I don't think I heard you right.
 $n yodels right in $s own ear!
-
-smoke 0 5
-You light up a smoke and take a deep drag in satisfaction.
-$n lights up a smoke and takes a deep drag in satisfaction.
-You try to burn $N's eye out with the ember of your cigarette.
-$n tries to burn $N's eye out with the ember of $s cigarette.
-$n jabs you in the eye with the burning ember of $s cigarette!
-You flick your cigarette into the air, that person isn't here.
-You try furiously to put out your lit cigarette in your own eye!
-$n dangles $s lit cigarette above $s open eye, trying to put it out..
-
-tremble 0 0
-You tremble in fear for no apparent reason at all.
-$n trembles in fear at the ghosts in $s head.
-Thinking of $N makes you tremble in your tiny boots.
-$n trembles in fear at the horrifying appearance of $N.
-$n looks at you and unexpectedly begins to tremble in fear.
-You tremble in fear at the thought of someone who just left.
-Thinking of yourself causes you to tremble in abject fear.
-$n trembles in fear while muttering $s own name.
 
 -1
