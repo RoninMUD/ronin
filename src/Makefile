@@ -2,6 +2,7 @@ CC = gcc
 CFLAGS = -g -Wall -m32 -Og -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
 LFLAGS = -lm -lcrypt -ldmalloc
 OBJDIR = ../obj
+BINDIR = ../bin
 TYPE ?= $(shell basename $$(dirname $$PWD))
 
 $(info Making ${TYPE}...)
@@ -28,6 +29,8 @@ $(OBJDIR)/%.o: %.c
 $(OBJDIR) : 
 	@mkdir -p $(OBJDIR)
 
+$(BINDIR) :
+	@mkdir -p $(BINDIR)
 
 #
 # Slave
@@ -35,7 +38,7 @@ $(OBJDIR) :
 
 OBJS_SLAVE = $(OBJDIR)/slave.o
 
-$(OBJS_SLAVE) :| $(OBJDIR)
+$(OBJS_SLAVE) :| $(OBJDIR) $(BINDIR)
 $(OBJS_SLAVE) : slave.h
 
 .PHONY: roninslave
@@ -128,7 +131,6 @@ OBJS_RONIN_SPEC = \
 	spec.keening.o \
 	spec.labyrinth.o \
 	spec.lost.o \
-        spec.luthienIV.o \
 	spec.mapmaker.o \
 	spec.marikith.o \
 	spec.midgaard.o \
@@ -161,8 +163,6 @@ OBJS_RONIN_SPEC = \
 	spec.vermillion.o \
 	spec.welmar.o \
 	spec.wolf.o \
-        spec.workbench.o \
-        spec.WOT.o \
 	spec.wsewer.o \
 	spec.wyvern.o \
 	spec.zankingdom.o \
@@ -172,6 +172,15 @@ OBJS_RONIN_SPEC = \
 	subclass.o \
 	subclass.spells.o \
 	subclass.skills.o
+
+OBJS_RONIN_SPEC_TEST = \
+	spec.luthienIV.o \
+	spec.workbench.o \
+	spec.WOT.o
+
+ifeq ($(TYPE), test)
+	OBJS_RONIN_SPEC += OBJS_RONIN_SPEC_TEST
+endif
 
 OBJS_RONIN_BASE := $(patsubst %, $(OBJDIR)/%, $(OBJS_RONIN_BASE))
 OBJS_RONIN_SPEC := $(patsubst %, $(OBJDIR)/%, $(OBJS_RONIN_SPEC))
@@ -205,7 +214,7 @@ $(OBJDIR)/subclass.skills.o : subclass.h
 
 OBJS_RONIN := $(OBJS_RONIN_BASE) $(OBJS_RONIN_SPEC)
 
-$(OBJS_RONIN) :| $(OBJDIR)
+$(OBJS_RONIN) :| $(OBJDIR) $(BINDIR)
 
 .PHONY : ronin
 ronin : $(OBJDIR)/ronin
