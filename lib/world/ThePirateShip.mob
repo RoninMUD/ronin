@@ -1,0 +1,129 @@
+#7500
+pirate captain~
+The Pirate Captain~
+The Pirate Captain is sitting by the table and swearing loudly.
+~
+Captain is a really tall and strong man. Years on the sea have made him 
+really tough and vicious killer. He seems to be very angry about something
+and is muttering something about thieves.
+~
+131083 805601320 -250 Y
+52 -13 -22 10d100+16000 3d10+100
+10000 1000000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7501
+pirate first mate~
+The First Mate~
+The First Mate is standing by the helm, taking care of his ship.
+~
+First mate is a really mean guy. He's afraid of nothing, except maybe the
+captain, and will tolerate no resistance from you. He takes a good care of
+the ship and the ship takes good care of him.
+~
+11 268697600 0 Y
+49 -10 -10 10d100+9500 2d10+80
+5000 500000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7502
+pirate~
+The Pirate~
+A Pirate is standing here, maintaining the ship.
+~
+He is a really mean sailor. He's a really greedy man, and will do almost
+anything for gold. He seems to be afraid of the captain.
+~
+77 268697600 0 Y
+45 -7 -7 10d50+2500 2d10+30
+1000 701011
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7503
+pirate observer~
+The Observer~
+The Observer is sitting here, keeping a look-out to the ocean.
+~
+The observer is looking out to the ocean. He looks to be quite bored.
+~
+11 0 0 Y
+45 -4 -4 10d100+2000 2d10+20
+500 650432
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7504
+pelican~
+The Pelican~
+A pelican is here, chewing on half of a fish.
+~
+The Pelican seems to have its mouth full of something.
+~
+10 262144 0 Y
+20 0 -4 10d50+1800 2d10+15
+0 200000
+9 9 0
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7505
+scorpion huge~
+A Scorpion~
+A huge scorpion has appeared from the sands.
+~
+The huge scorpion looks really dangerous. It's sting is dripping with venom.
+~
+43 268435456 0 Y
+40 -8 -9 10d100+7500 3d10+55
+0 350000
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7506
+skeleton~
+The Skeleton~
+There is a skeleton here, standing and guarding the pirate treasure.
+~
+The Skeleton seems to have a big bullet hole in his head. It is reaching with
+his hands towards you.
+~
+42 128 -350 Y
+50 -12 -10 10d100+14000 4d10+100
+0 600000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#7507
+cook old chinese~
+The Chinese Cook~
+A Chinese man wearing an almost white apron is standing here, opening a crate.
+~
+The cook is a big and strong man. He is grinning evilly at you.
+He looks really weird. Maybe he is not playing with full deck.
+~
+131114 268697600 0 Y
+50 -10 -2 10d100+9500 1d70+81
+5000 550000
+8 8 1
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,1972 @@
+#500
+The Docks~
+  You have arrived at what appears to be the dock for a small seagoing
+community. Many different boats and large ships are moored here, each bearing
+the same blood red hull markings and flying the same flag. Wisps of fog hover
+inches above the water and all around, giving this place a rather eerie and
+mysterious quality.
+~
+5 0 0
+D1
+The dock continues further down that way and seems to be the way to a path
+up the hill to the north.
+~
+~
+0 -1 501
+D3
+~
+~
+0 -1 0
+S
+#501
+The Docks~
+   You still aren't quite sure of your exact location, but based on the
+design of these ships and those unusual markings that are on them, your 
+experience (along with a good guess) tells you that this must be one of
+the dozens of city state islands that dot the eastern seas.  You notice a 
+path winding up a small hill to the north, leaving a scar in the landscape
+which can only be from years of constant use.
+~
+5 0 0
+D0
+~
+~
+0 -1 502
+D3
+~
+~
+0 -1 500
+S
+#502
+A Well-Used Path~
+  The path continues to meander up the hillside, however most of the 
+surrounding landscape is still cloaked in the thick misty fog you encountered
+near the sea, making the journey up the hill that much more tricky.
+~
+5 0 0
+D0
+~
+~
+0 -1 503
+D2
+~
+~
+0 -1 501
+S
+#503
+Atop the Mist Cloaked Hill~
+  Now that you've reached the top of the hill, the contours of the land become
+more visible and allow you to see a small field to the east you surely would
+have missed were the sun not burning off the cursed fog. Also to the north
+you can see the vague outlines of a town or village and can hear the sounds
+of people and animals.
+~
+5 0 0
+D0
+~
+~
+0 -1 507
+D1
+~
+~
+0 -1 504
+D2
+~
+~
+0 -1 502
+S
+#504
+A Wet Field~
+  You travel along a muddy path through a rice field.  The thick mud makes a 
+loud sucking sound each time you pull your feet up out of it,  seeming almost
+reluctant to release its grip on you.  The rice paddies on either side of you
+are in full bloom and you can see a few women and young boys working in the 
+fields.  They carry large bales on their backs which they are harvesting rice 
+into.  A few glance warily your way but turn back to their work after a 
+moment's contemplation.
+~
+5 0 5
+D2
+~
+~
+0 -1 505
+D3
+~
+~
+0 -1 503
+S
+#505
+A Wet Field~
+  You travel along a muddy path through a rice field.  The thick mud makes a 
+loud sucking sound each time you pull your feet up out of it,  seeming almost
+reluctant to release its grip on you.  The rice paddies on either side of you
+are in full bloom and you can see a few women and young boys working in the 
+fields.  They carry large bales on their backs which they are harvesting rice 
+into.  A few glance warily your way but turn back to their work after a 
+moment's contemplation.
+~
+5 0 5
+D0
+~
+~
+0 -1 504
+D1
+~
+~
+0 -1 506
+S
+#506
+A Muddy Field~
+  You have reached the end of the field, where a large berm has been 
+constructed to contain the water that nourishes the crops.  At the top of 
+the berm, you see a man standing somewhat nervously atop a raised pile of 
+stones on the berm. 
+~
+5 0 5
+D3
+~
+~
+0 -1 505
+D5
+~
+trapdoor~
+7 506 509
+E
+stones~
+Through the pile of stone you spy a heavy trapdoor.
+~
+E
+trapdoor~
+You see a well-camouflaged but not quite perfect trapdoor that leads below.
+~
+S
+#507
+Outside a Small Village~
+  The fog is almost totally gone, save for the smallest wisps which 
+stubbornly cling to the ground. This truly is a beautiful place, such exotic
+plants and animals you can never recall seeing before. Far to the north, a 
+large castle stands guard over the peaceful village. To the east you spy a
+small teahouse made from bamboo.
+~
+5 0 0
+D0
+~
+~
+0 -1 518
+D1
+~
+~
+0 -1 508
+D2
+~
+~
+0 -1 503
+S
+#508
+Bamboo Teahouse~
+  You are inside a rather cozy teahouse made of bamboo. In the corners you
+can see tea leaves being dried to be made ready for use, many porcelain
+pots and cups, and small straw mats to sit on.
+~
+5 8 0
+D3
+~
+~
+0 -1 507
+S
+#509
+A Small, Dark Tunnel~
+  The well-hidden trapdoor has led you here, a small, cramped tunnel that
+appears to be reasonably new in construction.  You see small niches in the 
+walls every now and then, apparently to allow for someone to be able to make
+a surprise attack against anyone who isn't wanted down here.
+~
+5 9 0
+D3
+~
+~
+0 -1 510
+D4
+~
+Trapdoor~
+7 506 506
+S
+#510
+Damp Tunnel~
+  You notice the occasional footprint and scuff mark along the ground, it
+has to have been recent since the chunks of mud left behind in the track
+are still damp and soft.  The sound of feet padding softly on the stone floor
+in the distance echoes through the tunnel, snapping you into a heightened
+state of awareness.
+~
+5 9 0
+D1
+~
+~
+0 -1 509
+D3
+~
+~
+0 -1 511
+S
+#511
+A Turn in the Tunnel~
+  More signs alert you to the presence of man or beast, strange marks like
+those of a cloven-hoofed animal being dragged are present in the dirt covered
+floor. Also, you notice very dark stains on the floor that seem to be blood
+that has congealed into a crusty mass over a period of many days.
+~
+5 9 0
+D1
+~
+~
+0 -1 510
+D2
+~
+~
+0 -1 512
+S
+#512
+Damp Tunnel~
+  Here the tunnel seems a little drier, as well as the temperature being much
+warmer. The blood trail you saw before continues to the south, except that it
+has soaked into the floor and become a shiny black mass.  The majority of it
+seems to have run down the steep slope to the south.
+~
+5 9 0
+D0
+~
+~
+0 -1 511
+D2
+~
+~
+0 -1 513
+S
+#513
+Damp Tunnel~
+  This part of the tunnel is extremely dry compared to where you came from,
+it seems that the walls are also much more solid than before. It's also
+much warmer here, quite a bit more habitable than the rest of the tunnels.
+~
+5 9 0
+D0
+~
+~
+0 -1 512
+D1
+~
+~
+0 -1 514
+S
+#514
+A Dark Tunnel~
+   You see even more evidence to make you think someone's here, on a sharp
+outcropping of rock you see a torn piece of cloth with nearly-dried blood
+on it. Perhaps it would be a good idea to go back the way you came?
+~
+5 9 0
+D1
+~
+~
+0 -1 515
+D3
+~
+~
+0 -1 513
+S
+#515
+A Dark Tunnel~
+  The tunnel twists and turns and finally snakes its way to the north here,
+you note fresher looking blood droplets on the ground, although they are
+much less abundant then further back the way you came.  As you look around for
+other clues, you see a blood-stained handprint on the west wall, right in
+front of a craggy piece of rock on the ground that appears to have been tripped
+over.
+~
+5 9 0
+D0
+~
+~
+0 -1 516
+D3
+~
+~
+0 -1 514
+S
+#516
+A Dark Tunnel~
+  The tunnel seems to end here, as does the blood trail you noticed earlier.
+However, strange scrape marks on the stone to the west catch your eye.
+~
+5 9 0
+D2
+~
+~
+0 -1 515
+D3
+~
+Stone~
+8 -1 517
+S
+#517
+Hidden Alcove~
+  You have stumbled into what appears to be someone's hiding place, a small
+alcove which has been ingeniously adapted to suit their purpose.  It appears
+as though the occupant was here recently, because the fire in the corner of the
+room is still smoldering, and a freshly-skinned deer hide has been stretched
+out to dry in a large wooden frame.
+~
+5 4105 0
+D1
+~
+Stone~
+8 -1 516
+E
+deer~
+You see a large wooden frame, to which has been lashed a tightly stretched
+deer hide.  The manner in which it has been skinned suggests the use of
+an extremely sharp blade used by a very skilled hunter.
+~
+E
+hide~
+You see a large wooden frame, to which has been lashed a tightly stretched
+deer hide.  The manner in which it has been skinned suggests the use of
+an extremely sharp blade used by a very skilled hunter.
+~
+E
+firepit~
+Looking at the firepit, you see a small ring of stones built around a hollow
+in the floor, glowing embers still radiating a lot of heat.  A mesh of woven 
+bamboo strips holds a piece of venison just the right distance above the fire,
+the smell of the frying meat causes your stomach to growl at you.
+~
+S
+#518
+Village Square~
+  Even though this is a relatively small village, it is the center of trade
+for all the surrounding countryside. You see farmers taking their crops to
+be sold, cattle and sheep waiting for new owners, and some women peddling
+their goods. A few ronin are strolling around the marketplace and waiting
+for a new master to serve. A couple of guards overlook the proceedings but
+they have little to do since the eastern people are famed for their 
+impeccable manners and politeness.
+~
+5 0 1
+D0
+~
+~
+0 -1 544
+D1
+~
+~
+0 -1 519
+D2
+~
+~
+0 -1 507
+D3
+~
+~
+0 -1 526
+S
+#519
+Main Street~
+  You are on the main road of the town which meanders its way around the
+periphery of shops and homes.  The narrow roadway is covered with small
+cobblestones which have been rendered rather slippery by a combination of
+mud and water, raised up by a recent downpour.  The road continues north,
+and opens up to a large marketplace to the west.
+~
+5 0 1
+D0
+~
+~
+0 -1 520
+D3
+~
+~
+0 -1 518
+S
+#520
+Main Street~
+  You are on the main road of the town which meanders its way around the
+periphery of shops and homes.  The narrow roadway is covered with small
+cobblestones which have been rendered rather slippery by a combination of
+mud and water, raised up by a recent downpour.  The road continues to
+the east and south.
+~
+5 0 1
+D1
+~
+~
+0 -1 521
+D2
+~
+~
+0 -1 519
+S
+#521
+Main Street~
+  You are on the main road of the town which meanders its way around the
+periphery of shops and homes.  The narrow roadway is covered with small
+cobblestones which have been rendered rather slippery by a combination of
+mud and water, raised up by a recent downpour.  The road continues to
+the west and north.
+~
+5 0 1
+D0
+~
+~
+0 -1 522
+D3
+~
+~
+0 -1 520
+S
+#522
+Main Street~
+  You are on the main road of the town which meanders its way around the
+periphery of shops and homes.  The narrow roadway is covered with small
+cobblestones which have been rendered rather slippery by a combination of
+mud and water, raised up by a recent downpour.  The road continues to
+the south and north.  To the east you can spy the beginning of a rugged
+path up a huge snow-capped mountain.
+~
+5 0 1
+D0
+~
+~
+0 -1 523
+D1
+~
+~
+0 -1 589
+D2
+~
+~
+0 -1 521
+S
+#523
+A Narrow Side-Street~
+  You are on a narrow, bumpy side street, people move away from you as you
+pass by and look at you strangely.  You feel eyes looking at you from all
+directions, but when you look at anyone directly, they quickly avert their
+gaze. The street meanders south and opens up to a much wider road to the west.
+~
+5 0 1
+D2
+~
+~
+0 -1 522
+D3
+~
+~
+0 -1 524
+S
+#524
+A Narrow Side-Street~
+  You are on a dark and narrow side street.  People avoid you as you pass
+by them.  Loud pounding noises can be heard coming from the large smithy to
+your south.  A sign above the door there reads 'Kinshu's Finest Weapons'. The
+street continues to the east and west.
+~
+5 0 1
+D1
+~
+~
+0 -1 523
+D2
+~
+~
+0 -1 525
+D3
+~
+~
+0 -1 546
+S
+#525
+Kinshu's Finest Weapons~
+  You are in the tidy shop of the famous weaponsmith Kinshu.  All around you
+on the walls are racks that contain weapons the likes of which you have never
+seen before.  Most of them are the weapons of choice for the samurai class:
+A katana and a wakizashi, but there are some fine daggers and a few naginatas
+here as well.  A small note has been left pinned to a table in the middle of
+the room.
+~
+5 136 1
+D0
+~
+~
+0 -1 524
+D3
+~
+~
+0 -1 545
+E
+note~
+Our weapons are of the finest quality and are very reasonably priced:
+ A katana forged and tempered with my own hands - 2000000
+ A wakizashi that I've spent years working on   - 3500000
+ A naginata that will never fail you in battle  - 1750000
+~
+S
+#526
+Main street~
+  You are on the main road of the town which meanders its way around the
+periphery of shops and homes.  The narrow roadway is covered with small
+cobblestones which have been rendered rather slippery by a combination of
+mud and water, raised up by a recent downpour.  The road continues to the
+north and east.
+~
+5 0 1
+D0
+~
+~
+0 -1 527
+D1
+~
+~
+0 -1 518
+S
+#527
+Main Street~
+  You are on the main road of the village. To the north you see a shop with 
+a sign reading 'Yoshi's Noodle Shop' above the door.  Glancing in through the
+pearl curtain you see a few men eating noodles and drinking sake.  Some of
+them appear quite intoxicated.  The road continues to the west and south.
+~
+5 0 1
+D0
+~
+~
+0 -1 528
+D2
+~
+~
+0 -1 526
+D3
+~
+~
+0 -1 529
+S
+#528
+Yoshi's Noodle Shop~
+  You are in a very crowded restaurant. Many people are ordering, eating,
+and celebrating. Yoshimitsu (Yoshi to his friends) is hurriedly preparing meals
+for his hungry customers.
+~
+5 136 1
+D1
+~
+~
+0 -1 545
+D2
+~
+~
+0 -1 527
+S
+#529
+Main Street~
+  You are on the main road of the town which meanders its way around the
+periphery of shops and homes.  The narrow roadway is covered with small
+cobblestones which have been rendered rather slippery by a combination of
+mud and water, raised up by a recent downpour.  The road continues to the
+north and east.
+~
+5 0 1
+D0
+~
+~
+0 -1 530
+D1
+~
+~
+0 -1 527
+S
+#530
+Main Street~
+  You are on the main road of the town which meanders its way around the
+periphery of shops and homes.  The narrow roadway is covered with small
+cobblestones which have been rendered rather slippery by a combination of
+mud and water, raised up by a recent downpour.  The road continues to
+the south and narrows to a darkened alleyway to the north.  A large wooden
+building can bee seen across a bridge to the west.
+~
+5 0 1
+D0
+~
+~
+0 -1 531
+D2
+~
+~
+0 -1 529
+D3
+~
+~
+0 -1 533
+S
+#531
+A Dark Alley~
+  The road narrows to a scant tunnel here, making passage rather difficult.
+The way the buildings cover the passage here is unusual, but a good use of
+the available space. Seedy looking individuals skulk about in the shadows,
+seemingly ignoring you, but you'd still best be careful around here.
+~
+5 0 1
+D1
+~
+~
+0 -1 532
+D2
+~
+~
+0 -1 530
+S
+#532
+A Dark Alley~
+  You are on one of the dingy back streets of the village, beggars plea for
+food and money to ease their poverty, while other less friendly types lie 
+hidden from sight looking to rob you of your gold and maybe your life if you
+aren't ready. You'd best keep a tight grip on your purse and a ready hand on 
+your sword if you care to live another day.
+~
+5 0 1
+D0
+~
+door~
+1 -1 599
+D1
+~
+~
+0 -1 546
+D3
+~
+~
+0 -1 531
+S
+#533
+A Small Wooden Bridge~
+  You stand upon a small wooden bridge with railings along either side.
+It crosses a shallow pond whose crystal clear waters are home to several
+tiny rainbow-coloured fish that dart under the shadows beneath the bridge as
+you step onto it.  On the far side of the pond to your west you notice that
+someone has scattered a large amount of lotus petals into the waters.  A few
+neatly-trimmed bushes surround the pond.  A distant gong can be heard every
+now and then to the west.
+~
+5 0 3
+D1
+~
+~
+0 -1 530
+D3
+~
+~
+0 -1 534
+S
+#534
+Entrance Hall~
+  You stand inside the entrance hall to the Kimura sumo school, this is the
+building where the wrestlers train and live, as well as the place where they
+fight for the people. Along the walls have been built many small shelves to
+hold the numerous trophies and awards the school has received during the
+many years since it was founded. It is rumored that the Kimura wrestlers are
+the strongest and most agile of all the sumo of this area.
+~
+5 8 0
+D0
+~
+~
+0 -1 535
+D1
+~
+~
+0 -1 533
+D2
+~
+~
+0 -1 541
+S
+#535
+Hallway to the Arena~
+  You are in the hallway of the renowned Kimura school, a short distance
+to the west you hear the loud yells of sumo wrestling each other for the
+prize money of the day.  Nearby to the west is a series of short benches
+for you to relax while the competitors try to throw each other out of the
+ring.
+~
+5 8 0
+D2
+~
+~
+0 -1 534
+D3
+~
+~
+0 -1 536
+S
+#536
+Hallway near the Arena~
+  This is one of the many sets of benches that have been arranged around the
+sumo ring so that spectators may come to watch the day's events, and perhaps
+place a wager or two.  There is seating for perhaps twenty or so people here,
+you just hope that they all behave themselves while you are here.
+~
+5 8 0
+D1
+~
+~
+0 -1 535
+D2
+~
+~
+0 -1 543
+D3
+~
+~
+0 -1 537
+S
+#537
+Hallway to the Arena~
+  You are in the hallway of the renowned Kimura school, a short distance
+to the southeast you hear the loud yells of sumo wrestling each other for
+the prize money of the day.  Nearby to the south and east is a series of
+short benches for you to relax while the competitors try to throw each other 
+out of the ring.
+~
+5 8 0
+D1
+~
+~
+0 -1 536
+D2
+~
+~
+0 -1 538
+S
+#538
+Hallway near the Arena~
+  This is one of the many sets of benches that have been arranged around the
+sumo ring so that spectators may come to watch the day's events, and perhaps
+place a wager or two.  There is seating for perhaps twenty or so people here,
+you just hope that they all behave themselves while you are here.
+~
+5 8 0
+D0
+~
+~
+0 -1 537
+D1
+~
+~
+0 -1 543
+D2
+~
+~
+0 -1 539
+S
+#539
+Hallway to the Arena~
+  You are in the hallway of the renowned Kimura school, a short distance
+to the northeast you hear the loud yells of sumo wrestling each other for
+the prize money of the day.  Nearby to the north and east is a series of
+short benches for you to relax while the competitors try to throw each other 
+out of the ring.
+~
+5 8 0
+D0
+~
+~
+0 -1 538
+D1
+~
+~
+0 -1 540
+S
+#540
+Hallway near the Arena~
+  This is one of the many sets of benches that have been arranged around the
+sumo ring so that spectators may come to watch the day's events, and perhaps
+place a wager or two.  There is seating for perhaps twenty or so people here,
+you just hope that they all behave themselves while you are here.
+~
+5 8 0
+D0
+~
+~
+0 -1 543
+D1
+~
+~
+0 -1 541
+D3
+~
+~
+0 -1 539
+S
+#541
+Hallway to the Arena~
+  You are in the hallway of the renowned Kimura school, a short distance
+to the west you hear the loud yells of sumo wrestling each other for the
+prize money of the day.  Nearby to the west is a series of short benches
+for you to relax while the competitors try to throw each other out of the
+ring.
+~
+5 8 0
+D0
+~
+~
+0 -1 534
+D3
+~
+~
+0 -1 540
+S
+#542
+Inside the Hollow Tree~
+  You are inside the huge tree, it almost reminds you of a cavern, it's just
+that big!  You wonder to yourself how it could be hollow like this, since no
+marks are visible from the kind of cutting tools that would be needed to 
+accomplish this. On the north wall you notice a rather peculiar ladder, which
+seems to have GROWN out of the wall as you approach it!  You again wonder what
+manner of tree can do something like this at will, and find yourself wondering
+if it's a good idea to go up the ladder and explore.
+~
+5 9 3
+D1
+~
+bark~
+8 -1 549
+D4
+~
+ladder wood~
+11 -1 550
+E
+bark~
+The bark-made door seems much more alive on this side than it did outside,
+instead of the dry, lifeless bark that is hard as a rock, inside here it has
+a lovely whitish-brown color and feels quite damp.  When you press your hand
+against it, it holds the shape for a moment before resuming its old shape.
+~
+E
+ladder~
+It is about the same shape and size as a normal ladder, except that even though
+it is made from wood, it has the texture of something that was molded from clay.
+Every surface of it is rounded and smooth, adding greatly to the organic
+quality of this place.
+~
+S
+#543
+Sumo Arena~
+  You stand on a raised platform in the middle of the building.  The ground
+has been covered with sand and encircled with several smoothly polished stone
+making an oval ring that is about twenty feet across.  A pair of lines run down
+the exact middle of the ring, splitting it in half.  At each end you can see a 
+small bowl filled with a white powdery substance.  On a table beside each bowl
+can be seen bottles of sake and several small beakers. A large gong has been 
+placed just outside the ring.  Peering into the shadows surrounding the 
+brightly lit arena you see several empty benches.
+~
+5 36873 0
+D0
+~
+~
+0 -1 536
+D2
+~
+~
+0 -1 540
+D3
+~
+~
+0 -1 538
+E
+bottle~
+It is a stout porcelain bottle, bright white in color and decorated with a 
+forest motif in a brilliant shade of blue. It is half full of sweet smelling 
+sake.
+~
+E
+gong~
+You see a small metal gong about the same size and shape as a small buckler,
+suspended from a heavy frame, which is used to signal the wrestlers to begin
+and stop fighting.
+~
+S
+#544
+Road to the Shogun's Castle~
+  You are on a wide stone road which has been clearly marked by the Shogun's
+men as the route to his stronghold.  To your south the typical noises from a
+busy village square can be heard while the road continues northwards.  The
+stones in the road here have all been painted bright red and each bears a
+strange mark on them.
+~
+5 0 1
+D0
+~
+~
+0 -1 545
+D2
+~
+~
+0 -1 518
+S
+#545
+Road to the Shogun's Castle~
+  You are on a wide stone road which has been clearly marked by the Shogun's
+men as the route to his stronghold visible in the distance to your north.  If
+you peer your eyes you are able to make out a few sentries patrolling the
+battlements and a few villagers passing through the open gates.  The road 
+continues to the north and south.  To the east lies a large smithy with a sign
+that reads 'Kinshu's Finest Weapons' above the entrance.
+~
+5 0 1
+D0
+~
+~
+0 -1 546
+D1
+~
+~
+0 -1 525
+D2
+~
+~
+0 -1 544
+D3
+~
+~
+0 -1 528
+S
+#546
+Road to the Shogun's Castle~
+  You are on a wide stone road which has been clearly marked by the Shogun's
+men as the route to his stronghold. To your south the faint sounds of a 
+village can be heard, while northwards a large castle looms ominously before
+you. The stones in the road here have been painted bright red and each bears
+a strange mark on them.
+~
+5 0 1
+D0
+~
+~
+0 -1 547
+D1
+~
+~
+0 -1 524
+D2
+~
+~
+0 -1 545
+D3
+~
+~
+0 -1 532
+S
+#547
+Road to the Shogun's Castle~
+  You are on a wide stone road which has been clearly marked by the Shogun's
+men as the route to his stronghold. To your south the faint sounds of a 
+village can be heard, while northwards a large castle looms ominously before
+you. The stones in the road here have been painted bright red and each bears
+a strange mark on them.
+~
+5 0 0
+D0
+~
+~
+0 -1 548
+D2
+~
+~
+0 -1 546
+S
+#548
+Road to the Shogun's Castle~
+  You are on a wide stone road which has been clearly marked by the Shogun's
+men as the route to his stronghold. To your south you can still hear faint
+sounds of the village, while north the castle seems much larger than it
+first seemed. The bright red stones in the road are becoming a familiar
+sight.
+~
+5 4 0
+D0
+~
+~
+0 -1 551
+D2
+~
+~
+0 -1 547
+S
+#549
+At the Base of the Huge Tree~
+  A tree of enormous proportions stands just to your west, you find yourself
+amazed at the sheer size and strength of this behemoth.  You guess that it
+must be nine or ten centuries old, since it is nearly as round as a house and
+reaches so far into the sky that you cant see the top of it.  Looking around,
+you notice extremely large roots that plunge deep into the earth to bring forth
+the tree's lifeblood.  They tangle all about the tree, making a rather unusual
+formation that reminds you of a plate of noodles, but on a much grander scale.
+~
+5 0 0
+D1
+~
+~
+0 -1 575
+D3
+~
+bark~
+8 -1 542
+E
+bark~
+You notice that the cracked, greyish bark seems to be hard as steel, yet there
+seems to be a small line that you trace from the base of the tree that forms 
+a rectangle roughly the size of a door.
+~
+S
+#550
+Inside the Hollow Tree~
+  Climbing off the ladder you came up, you can see that this is another level
+of the tree, which seemingly formed just as you set foot on it.  You are still
+totally baffled as to how this tree could or even would grow like it does,
+unless perhaps it has been helped along by magical forces of some sort. 
+A strange portal forms in the mass of tree above you just as you step to the
+center of the room, it appears to lead to another of the unusual living
+caverns in here.
+~
+5 0 0
+D4
+~
+portal~
+11 -1 552
+D5
+~
+ladder wood~
+11 -1 542
+E
+portal~
+Right before your eyes, the wood in the ceiling melts away revealing yet
+another small room above.
+~
+S
+#551
+By the Castle Gates~
+  You are outside the massive castle built by the first shogun of the land
+hundreds of years ago. It has resisted many attempts by invaders to overthrow
+it's occupants yet has withstood the test of time and is a testament to the
+iron will of the first shogun and his descendants.
+~
+5 0 0
+D0
+~
+~
+0 -1 588
+D2
+~
+~
+0 -1 548
+S
+#552
+The Living Chamber~
+  Standing here, you feel as if you are in the very heart of the tree, a
+great sense of empathy towards it comes over you as you touch the soft,
+pulsing walls.  You can feel the life-force emanating from all around you, but
+you feel the strongest emanations coming from an ancient tengu sitting in the
+center of the room in a chair that is molded to his body from the same strange
+wood-like material that is all around.
+~
+5 0 0
+D5
+~
+portal~
+11 -1 550
+S
+#553
+Guardpost~
+   This is the weakest part of the castle, since it is here that the walls
+are at their lowest. Which probably accounts for the three heavily armed 
+samurai standing here, waiting to die on a moment's notice for their lord.
+~
+5 0 0
+D1
+~
+~
+0 -1 588
+S
+#554
+A Dark Passageway~
+  Blood flows freely down the sides of the walls and has collected in
+a shallow pool here, a truly revolting sight that makes you sick to your
+stomach. The person who died here appears to be an employee of the Shogun,
+it looks as if something must have dragged him down here and slaughtered 
+him.
+~
+5 8 0
+D0
+~
+~
+0 -1 555
+D4
+~
+floorboard~
+1 516 20196
+S
+#555
+A Dark Passageway~
+  As you enter this room you notice a strange glistening on the floor. Upon
+further examination it appears to be a huge, bloody three toed footprint. You
+suddenly snap into battle readiness as you realize there must be more of
+those oni creatures down here somewhere.
+~
+5 9 0
+D1
+~
+~
+0 -1 556
+D2
+~
+~
+0 -1 554
+S
+#556
+A Dark Passageway~
+  You are in a dark passageway of indeterminate age, a dank musty smell is
+present accompanied by a much more powerful smell of rotting flesh. You see 
+more of the footprints all around, but what you cannot figure out is from 
+what source all the blood that you see splattered around the floor and walls 
+came from. There is enough blood to account for a whole patrol of Bushi.
+~
+5 9 0
+D1
+~
+~
+0 -1 559
+D2
+~
+~
+0 -1 557
+D3
+~
+~
+0 -1 555
+S
+#557
+A Dark Passageway~
+  Upon entering this room, you put your foot down and find it suddenly ankle
+deep in a warm liquid.  Strange, you think, since the air and walls are so cold
+down here.  You dip your finger into the pool and hold it up to the torchlight.
+Seems you're standing in someone's blood.
+~
+5 9 0
+D0
+~
+~
+0 -1 556
+D2
+~
+~
+0 -1 558
+S
+#558
+A Dark Passageway~
+  You have come to a dead end, only to discover that you are not the first
+to get here. The remains of your predecessors are strewn about the room in a
+haphazard fashion. They may have gotten here first, but you may be the first
+to leave.
+~
+5 9 0
+D0
+~
+~
+0 -1 557
+S
+#559
+A Dark Passageway~
+  You are in a dark passageway of indeterminate age, a dank musty smell is
+present accompanied by a much more powerful smell of rotting flesh.  The
+blood from the pool flows freely here, a wide red trickle that flows swiftly
+down the corridor to the east.  An almost morbid curiosity grips you, its
+almost as if you have to see where the blood leads you.
+~
+5 9 0
+D1
+~
+~
+0 -1 560
+D3
+~
+~
+0 -1 556
+S
+#560
+A Dark Passageway~
+   Walking along this murky passageway, you can't help but notice a distinct
+heavy odor of death.  This horrid smell fills your nostrils and seemingly
+slows down all movement as you try to hold the walls for support.  Taking
+another step, you notice the adhesive surfaces that cover these grounds.
+Closer inspection shows a recent trail of warm liquid...
+~
+5 9 0
+D2
+~
+~
+0 -1 561
+D3
+~
+~
+0 -1 559
+S
+#561
+A Dark Passageway~
+  Walking along this murky passageway, you can't help but notice a distinct
+heavy odor of death.  This horrid smell fills your nostrils and seemingly
+slows down all movement as you try to hold the walls for support.  Taking
+another step, you notice the adhesive surfaces that cover these grounds.
+Closer inspection shows a recent trail of warm liquid...
+~
+5 9 0
+D0
+~
+~
+0 -1 560
+D1
+~
+~
+0 -1 562
+S
+#562
+A Dark Passageway~
+  Walking along this murky passageway, you can't help but notice a distinct
+heavy odor of death.  This horrid smell fills your nostrils and seemingly
+slows down all movement as you try to hold the walls for support.  Taking
+another step, you notice the adhesive surfaces that cover these grounds.
+Closer inspection shows a recent trail of warm liquid...
+~
+5 9 0
+D2
+~
+~
+0 -1 563
+D3
+~
+~
+0 -1 561
+S
+#563
+A Dark Passageway~
+  Walking along this murky passageway, you can't help but notice a distinct
+heavy odor of death.  This horrid smell fills your nostrils and seemingly
+slows down all movement as you try to hold the walls for support.  Taking
+another step, you notice the adhesive surfaces that cover these grounds.
+Closer inspection shows a recent trail of warm liquid...
+~
+5 9 0
+D0
+~
+~
+0 -1 562
+D3
+~
+~
+0 -1 564
+S
+#564
+A Hole in the Floor~
+  This appears to be a rock chimney, a natural formation resembling a
+vertically dug tunnel. Listening carefully, you hear the water from an
+overhanging stalactite dripping and hitting the ground somewhere very far
+below you in the darkness.
+~
+5 265 0
+D1
+~
+~
+0 -1 563
+D5
+~
+~
+0 -1 565
+S
+#565
+An Ancient Tunnel~
+  This tunnel appears to be centuries older than the passageways above and
+appears to have only been broken through to the tunnel above recently, as
+is indicated by piles of smashed rock which litter the alcoves surrounding
+the pool.  The blood flows swiftly southward down a gentle slope that follows
+the tunnel south.  The large stalagmite growing in the center of the pool 
+would make a fall from above quite painful.
+~
+5 9 0
+D2
+~
+~
+0 -1 566
+D4
+~
+~
+0 -1 564
+S
+#566
+An Ancient Tunnel~
+  Towering walls of glassy black rock stare down upon you like a vulture
+awaiting its next meal.  These corridors are somewhat intimidating and seem
+to give off an aura of cold, while at the same time the warm blood rolling
+along the floor steams slightly, making a strange sight.  It's a very good 
+idea to walk a little faster right about now, as you can hear the grinding of 
+rock upon rock as it shifts to stalk your journey.
+~
+5 9 0
+D0
+~
+~
+0 -1 565
+D3
+~
+~
+0 -1 567
+S
+#567
+An Ancient Tunnel~
+  Towering walls of glassy black rock stare down upon you like a vulture
+awaiting its next meal.  These corridors are somewhat intimidating and seem
+to give off an aura of cold, while at the same time the warm blood rolling
+along the floor steams slightly, making a strange sight.  It's a very good 
+idea to walk a little faster right about now, as you can hear the grinding 
+of rock upon rock as it shifts to stalk your journey.
+~
+5 9 0
+D0
+~
+~
+0 -1 568
+D1
+~
+~
+0 -1 566
+S
+#568
+An Ancient Tunnel~
+  Towering walls of glassy black rock stare down upon you like a vulture
+awaiting its next meal.  These corridors are somewhat intimidating and seem
+to give off an aura of cold, while at the same time the warm blood rolling
+along the floor steams slightly, making a strange sight.  It's a very good 
+idea to walk a little faster right about now, as you can hear the grinding 
+of rock upon rock as it shifts to stalk your journey.
+~
+5 9 0
+D2
+~
+~
+0 -1 567
+D3
+~
+~
+0 -1 569
+S
+#569
+Dead End~
+  The tunnel stops abruptly here, although the rivulets of blood you have
+followed for so long gurgle and ebb underneath an enormous boulder which 
+seems permanently embedded in the north wall.  
+~
+5 9 0
+D0
+~
+boulder~
+8 -1 570
+D1
+~
+~
+0 -1 568
+S
+#570
+A Dark Antechamber~
+  You are in a rather cavernous room which appears to have been carved from
+the stone millennia ago. As you examine the room, you notice that deep gouges
+resembling claw marks cover nearly every inch of the wall's surface. A strange
+wheezing noise is heard to the north.
+~
+5 32777 0
+D0
+~
+~
+0 -1 571
+D2
+~
+boulder~
+8 -1 569
+S
+#571
+Lair of the Oni Crone~
+  The room reaches far off into the darkness around you, making you wonder
+what other surprises await you here.  The crone is standing in the far end
+of the room, seemingly unconcerned by your presence.  You see many potion
+bottles, some empty and full, lined up on various shelves about the room.
+On a bench against the east wall, you see a small pot with a steaming mixture
+billowing from it, as well as many strange roots and herbs.
+~
+5 32777 0
+D2
+~
+~
+0 -1 570
+S
+#572
+The Path of Knowledge~
+  The path is still fairly wide here, although another vertical climb awaits
+you. An ancient rope hangs down, supposedly to make the trek up the wall of
+granite easier.  Footing is tenuous at best, so you'd best be careful.
+~
+5 0 5
+D3
+~
+~
+0 -1 594
+D4
+~
+rope ancient~
+11 -1 573
+S
+#573
+The Path of Knowledge~
+  The path narrows to nothing more than a goat path here, until finally it
+ends at a rickety old rope bridge strung across a deep river gorge that 
+plummets some five hundred feet to the raging waters below.  Looking across 
+the bridge, you notice a huge old oak tree standing on the western side of 
+the path and a strange glow coming from the highest part of the mountain.
+~
+5 0 5
+D0
+~
+~
+0 -1 574
+D5
+~
+rope ancient~
+11 -1 572
+S
+#574
+An Ancient Rope Bridge~
+  You are standing on an ancient rope bridge which has been strung across a
+deep river gorge that plummets some five hundred feet to the raging waters 
+below.  From this vantage point, you can see that the bridge sags down
+several dozen feet.  Strange creaking sounds can be heard as you step on
+the cracked old wood on the bottom of the bridge.  Far on the other side
+of the gorge, You can see even more clearly the gigantic oak tree.
+~
+5 0 5
+D0
+~
+~
+0 -1 575
+D2
+~
+~
+0 -1 573
+S
+#575
+Far Side of the Gorge~
+  You stand at the northern end of a rickety rope bridge that swings back
+and forth to your south.  The barren landscape here contains little growth
+except for a huge tree that grows to your west.  Several hundred feet
+below in the gorge a wild, raging river flows westwards.  You see a narrow
+stone path the leads eastwards along the side of the gorge.
+~
+5 0 5
+D1
+~
+~
+0 -1 576
+D2
+~
+~
+0 -1 574
+D3
+~
+~
+0 -1 549
+S
+#576
+The Path of Knowledge~
+  The narrow stone path comes to an abrupt halt here.  Looking up you can 
+just barely make out a narrow ledge several feet above you.  A rough hemp 
+rope hangs over the ledge down towards the path.  The walls of the gorge 
+have been polished smooth by the passing of the river over the ages and 
+there's no foothold to speak of.  The only way up is to climb the rope.  
+The raging waters below are a chilling reminder of what fate awaits you 
+should you fall.
+~
+5 0 5
+D3
+~
+~
+0 -1 575
+D4
+~
+rope~
+11 -1 577
+S
+#577
+A Narrow Ledge~
+  You are standing on a narrow rock ledge no more that two feet wide halfway 
+up a near-vertical rock face.  The path you walked to get here seems like
+nothing more than a grey strip, and you can see a tiny dot that is the village
+far below you to the west.  A ragged and weather-beaten rope hangs limply 
+down over the ledge, while a much newer and strong wooden ladder extends 
+further up the rock face.
+~
+5 0 5
+D4
+~
+ladder~
+11 -1 578
+D5
+~
+rope~
+11 -1 576
+S
+#578
+End of the Path of Knowledge~
+You've reached the top of the gorge.  The path ends here on a small
+plateau overlooking a large, mist-covered valley below.  The drop must be 
+about a thousand feet or more, you can't even make out the bottom of the 
+valley. The ladder to the south is the only visible way down.  A large,
+shimmering gate hangs seemingly in mid-air to the north, you'll have to 
+jump across the jagged chasm in front of you in order to reach it.  
+Considering the drop down to the floor of the valley below if you 
+miscalculate, it might not be such a good idea.
+~
+5 0 5
+D0
+~
+chasm~
+10 -1 20108
+D5
+~
+ladder~
+11 -1 577
+S
+#579
+Hidden Passageway~
+  You've stumbled onto a very ancient tunnel whose existence was almost
+perfectly hidden by the priest's prayer rug above you.  The tunnel seems
+to run a fair distance below the temple and has a purpose for which you
+haven't quite figured out yet, although the great amounts of dust which
+coat the floor and everything else tend you tell you that nobody has been
+down here for a very long time.
+~
+5 264 0
+D5
+~
+~
+0 -1 580
+S
+#580
+A Torchlit Stairway~
+  You stand in a narrow, perfectly square stone tunnel perhaps eight or so 
+feet across.  As you walk down the stairwell, old ironwork torchholders 
+bearing rather useless looking torches suddenly catch fire and bask the 
+stairway in a warm but somehow eerie glow.
+~
+5 264 0
+D0
+~
+~
+0 -1 581
+D4
+~
+~
+0 -1 579
+S
+#581
+A Shadowy Stone Tunnel~
+  You are even deeper in the tunnel now, and more of the same torchholders
+spring to life as you get within close proximity to them.  The muffled sound 
+of something being smashed is barely audible, but serves well enough to make
+the hairs on the back of your neck stand on end and cause your hand to move
+instinctively to your weapon.
+~
+5 264 0
+D2
+~
+~
+0 -1 580
+D3
+~
+~
+0 -1 582
+S
+#582
+A Shadowy Stone Tunnel~
+  Strange shadows play about the walls and floor of the tunnel here, you find
+yourself looking around nervously for the source only to find that they are
+your own shadows being warped and distorted by the bright torchlight from
+behind you.
+~
+5 264 0
+D1
+~
+~
+0 -1 581
+D2
+~
+~
+0 -1 583
+S
+#583
+A Shadowy Stone Tunnel~
+  The tunnel snakes around yet again, this time leading back to the west
+where a bright glow from a large brazier of burning coals lights up the room.
+Even with all this light present around you, more of the strange malevolent
+looking shadows are cast against the walls, looking as if they could reach
+out and grab you.
+~
+5 264 0
+D0
+~
+~
+0 -1 582
+D3
+~
+~
+0 -1 584
+S
+#584
+End Of the Tunnel~
+  You have come to what appears to be a dead end in the tunnel, A small
+stone shelf has been erected against the west wall, where you notice that
+the wall is covered be rather peculiar looking glowing runes that are
+indecipherable to you. Resting on the shelf is a small bamboo tube with
+numerous burning incense sticks inside it.
+~
+5 8 0
+D1
+~
+~
+0 -1 583
+D3
+~
+~
+0 -1 0
+E
+incense~
+You see several sweet smelling incense sticks burning here. They appear to
+have been lit just recently, although there are no signs whatsoever of someone
+having come here before you.
+~
+E
+wall~
+Massive immovable blocks of stone make up this large section of wall, most
+however seem to be far to large to have been brought down through the
+tunnel.  Chiseled flawlessly into the surface of the stone are many
+unusual glowing runes which shine even brighter when you bring your hand
+near them.
+~
+E
+stone~
+Massive immovable blocks of stone make up this large section of wall, most
+however seem to be far to large to have been brought down through the
+tunnel.  Chiseled flawlessly into the surface of the stone are many
+unusual glowing runes which shine even brighter when you bring your hand
+near them.
+~
+E
+runes~
+Imbedded in the surface of the wall's stone are many intricately carved
+runes, each with a unique glow of its own.  From the unusual aura they
+give off, there must be some powerful and ancient magic at work here.
+~
+E
+shelf~
+Resting upon the shelf is a short bamboo tube filled with several sweet
+smelling incense sticks burning silently.  They appear to have been lit 
+just recently, although there are no signs whatsoever of someone having 
+come here before you.
+~
+S
+#585
+The Demon's Chamber~
+  For many centuries this has been the demon's prison. The only thing it has 
+thought about in all this time is the destruction it would bring about when 
+some foolish person finally set him free. Well, the time has come, and now 
+only you stand in his way.
+~
+5 36873 0
+D0
+~
+~
+0 -1 0
+D1
+~
+~
+0 -1 0
+S
+#586
+The Inky Blackness~
+  You find yourself floating in nothingness, greyish shadows surround all you
+see, but you notice even darker masses of tentacles reaching towards you, 
+seeking to pull you into oblivion.  In your mind you see dark visions of 
+demonic creatures similar to the one you just faced, except they're as
+common here as humans are on your plane of existence. Pray for a miracle.
+~
+5 1082004 0
+D2
+~
+~
+0 -1 0
+S
+#587
+Guardpost~
+   This is the weakest part of the castle, since it is here that the walls
+are at their lowest. Which probably accounts for the three heavily armed 
+samurai standing here, waiting to die on a moment's notice for their lord.
+~
+5 0 0
+D3
+~
+~
+0 -1 588
+S
+#588
+Massive Iron Gates~
+  These are among the largest gates you've ever seen. Each is made from a 
+single solid piece of iron that has taken a brownish patina with exposure
+to the elements. You guess that they stand nearly three times your height and
+are surely wide enough to allow two large wagons to pass with room to spare.
+~
+5 0 1
+D0
+~
+Gate~
+2 588 20151
+D1
+~
+~
+0 -1 587
+D2
+~
+~
+0 -1 551
+D3
+~
+~
+0 -1 553
+E
+Gate~
+   The lock appears to be too much for you to handle, it would be much easier 
+to just get the key. Perhaps one of the guards has it?
+~
+S
+#589
+Path to Sacred Mountain~
+  You slowly ascend a steep and narrow mountain trail that leads eastward to
+the top.  The trail is only about 3 feet wide here and littered with fallen
+rocks that make passage treacherous at best.  Even though you're just outside 
+the village there is a sharp drop into a valley that lies perhaps a hundred 
+feet below you.  
+~
+5 0 4
+D1
+~
+~
+0 -1 590
+D3
+~
+~
+0 -1 522
+S
+#590
+Path to Sacred Mountain~
+  You slowly ascend a steep and narrow mountain trail that leads eastward to
+the top.  The trail is only about 3 feet wide here and littered with fallen
+rocks that make passage treacherous at best.  Even though you're just outside 
+the village there is a sharp drop into a valley that lies perhaps a hundred 
+feet below you.
+~
+5 0 4
+D1
+~
+~
+0 -1 591
+D3
+~
+~
+0 -1 589
+S
+#591
+Path to Sacred Mountain~
+  You slowly ascend a steep and narrow mountain trail that leads eastward to
+the top.  The trail is only about 3 feet wide here and littered with fallen
+rocks that make passage treacherous at best.  Off a fair ways to the west the 
+village is still plainly visible, although it appears much smaller.  The only
+way for you to go appears to be up.  Someone has chiseled rough hand and 
+footholds into the granite of the mountain wall, making it a little bit easier
+to ascend its inhospitable peak.
+~
+5 0 4
+D3
+~
+~
+0 -1 590
+D4
+~
+wall~
+11 -1 592
+S
+#592
+Path to Sacred Mountain~
+  You slowly ascend a steep and narrow mountain trail that leads eastward 
+to the top.  The trail is only about three feet wide here and littered with 
+fallen rocks that make passage treacherous at best.  You look over the edge, 
+down into the valley below, and see a sharp drop for several hundred feet.  
+A sudden gust of wind jolts you forward, making you stumble for a few steps 
+but you manage to regain your footing in just in time.  One false step now 
+would surely result in a painful but quick death.
+~
+5 0 4
+D1
+~
+~
+0 -1 593
+D5
+~
+wall~
+11 -1 591
+S
+#593
+Path to Sacred Mountain~
+  You slowly ascend a steep and narrow mountain trail that leads eastward to 
+the top.  The trail is only about 3 feet wide here and littered with fallen 
+rocks that make passage treacherous at best.  You look over the edge, down 
+into the valley below, and see a sharp drop for several hundred feet.  
+Kicking some of the loose rocks over the edge, you hear them clatter 
+repeatedly against the rock face before eventually smashing into bits on 
+the ground far below.
+~
+5 0 4
+D1
+~
+~
+0 -1 594
+D3
+~
+~
+0 -1 592
+S
+#594
+A Split in the Path~
+  The narrow mountain path splits off here, one branch leading north to a
+very ancient looking temple of some sort, the other leading east up the
+mountain looking unsafe for even the most surefooted mountain goat.
+~
+5 0 0
+D0
+~
+~
+0 -1 595
+D1
+~
+~
+0 -1 572
+D3
+~
+~
+0 -1 593
+S
+#595
+Entrance to a Small Temple~
+  You are outside the entrance to a small temple. It is seemingly deserted
+but the repeated banging of a gong leads you to believe that someone is
+still here. A wooden arch marks the entrance to the grounds of the temple.
+~
+5 8 0
+D0
+~
+~
+0 -1 596
+D2
+~
+~
+0 -1 594
+S
+#596
+Small Temple to the Gods~
+   This temple is not the largest or even the nicest you've seen, but it
+serves the purpose intended for it by its occupants, a small band of monk
+priests.
+~
+5 8 0
+D1
+~
+~
+0 -1 598
+D2
+~
+~
+0 -1 595
+D3
+~
+~
+0 -1 597
+S
+#597
+High Priests' Sleeping Quarters~
+   Even though these are the quarters of the high priest of the temple,
+there are very few material possessions, and the room is very sparse in
+appearance. You then remember someone in town saying that the priests have
+taken a vow of poverty.
+~
+5 8 0
+D1
+~
+~
+0 -1 596
+S
+#598
+Priest's Prayer Room~
+  This is the sacred place where the shukenja come to meditate, pray and 
+offer tribute to the gods.  Prayers in the symbolic writing of the easterners 
+cover the north, east and south walls.  In each corner stands a brass pot with 
+glowing coals that provide the lighting for this room.  The faint smell of 
+incense draws your attention to a neatly tied bouquet of lotus blossoms that 
+has been laid on the floor.  Several burning sticks of incense have been 
+tucked among the stalks, but strange as it may seem the flowers seem unaffected
+by the glowing embers. Perhaps the harmony of the place is preventing the fire 
+from harming anything in here.
+~
+5 8 0
+D3
+~
+~
+0 -1 596
+D5
+~
+stone~
+2 597 579
+E
+stone~
+Looking more closely at the floor, you notice an ingeniously crafted secret
+door, which when covered by the rice straw matting on the floor is perfectly
+hidden from view. You notice a small hole off to one side of the huge stone
+tile, and realize that this is really a lock that requires some oddly shaped
+key.
+~
+S
+#599
+Village Apothecary~
+  You stand inside a cramped little building with shelves containing all sorts
+of elixirs and herbal potions.  This is the residence of the apothecary, one
+of the few people skilled in the art of potion making and healing.
+~
+5 128 0
+D2
+~
+door~
+1 -1 532
+S
+#0
+$~

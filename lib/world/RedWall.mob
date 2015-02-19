@@ -1,0 +1,237 @@
+#200
+badger urthwyte~
+Urthwyte~
+A large white badger is here chopping wood single-handedly.
+~
+	This large badger is covered with white fur...looking more like a ghost
+then a badger.  From the looks of the size of his sinews and muscles he could
+lift an ancient oak with one arm.
+~
+16410 268435456 0 X
+27 -7 -82 3187d1+21 6d4+4
+3000 300000
+8 8 1
+0 0 0d0+0 0
+#201
+badger loambudd~
+Loambudd~
+An old female badger stands here attending to the house.
+~
+	Loambudd is and old bager, grandmother to Urthwyte.  Though old you
+can tell she still remembers how to fight, and she has a lot of weapons to
+choose from here in her house.
+~
+16410 268435456 0 X
+27 -7 -30 2532d1+98 5d4+2
+100000 245900
+8 8 2
+0 0 0d0+0 0
+#202
+squirrel Ashnin~
+Ashnin~
+An ancient squirrel jumps out of the trees shooting cherry stones at you.
+~
+	This ancient squirrel has a lot of grey fur mixed with her natural
+rusty red.  But age has been kind as you notice with a twinkle in her eye
+and a cherry in the face.
+~
+42 0 400 X
+28 -8 -49 2458d1+87 4d4+4
+15 115000
+8 8 2
+0 0 0d0+0 0
+#203
+shrew guosssomer~
+Guosssomer Shrew~
+A small mouselike animal hurries around.
+~
+	This small mouselike animal stands before you with whiskers shaking.
+Your guess that this town is a fishing village is confirmed by the fishing
+pole and tackle.
+~
+12 262144 0 X
+25 -5 -26 923d1+23 3d5+3
+2000 70000
+8 8 0
+0 0 0d0+0 0
+#204
+shrew nordo~
+Nordo Shrew~
+A small mouselike animal hurries around.
+~
+	A little larger then a normal shrew, Nordo stands before you with the
+air of a leader.  His whiskers move, but not in fear like the others, his move
+because of the challenge that issues forth from his mouth.
+~
+40 262144 0 X
+27 -7 -56 1153d1+23 3d5+3
+30000 90000
+8 8 1
+0 0 0d0+0 0
+#205
+woodvole furgle hermit~
+Furgle the Hermit~
+An ancient woodvole stands here resting on a staff.
+~
+	This old woodvole has lived countless seasons.  A full white beard,
+looking like a cloud or ball of cotton grows from his chin to his chest.  You
+ask his name and in a voice that sounds more like a small childs then an old
+woodvole's he replies 'Furgle'.
+~
+16408 268435456 0 X
+27 -7 -43 3241d1+72 8d3+2
+3000 300000
+8 8 1
+0 0 0d0+0 0
+#206
+mole burrley farmer~
+Burrley Mole~
+A small mole wearing over-alls and covered with dirt stands here.
+~
+	Burrley is a small mole and head farmer for Redwall.  His small
+wrinked button nose and small black eyes is all you can see of his face.
+Covered in dirt and sweat he smells more like a dump then a mole.
+~
+12 0 650 X
+25 -5 -31 956d1+25 3d5+3
+2000 99000
+8 8 1
+0 0 0d0+0 0
+#207
+duck~
+a duck~
+A small mallard duck swims peacefully here.
+~
+	This small duck, a mallard from the green feathers on his head,
+lazes around the pond.  Every now and then it ducks it's head under water
+to catch some food.
+~
+10 0 0 X
+25 -5 -34 923d1+23 3d5+3
+2000 70000
+8 8 1
+0 0 0d0+0 0
+#208
+dormouse bumble mouse~
+Bumble~
+A tiny dormouse stands here squeaking at you.
+~
+	Bumble might be the smallest of the Redwallers physically, but
+when people hear his tiny voice they stop and listen.
+~
+8 262144 650 X
+25 -5 -45 923d1+23 3d5+3
+2000 70000
+8 8 1
+0 0 0d0+0 0
+#209
+otter thrugg~
+Thrugg~
+A lithe muscular otter, gracefully moves around the room.
+~
+	Thrugg is the devoted companion and friend of Bumble.  Helping the
+little dormouse when ever possible.
+~
+8 262144 700 X
+27 -7 -64 1153d1+23 3d7+5
+30000 90000
+8 8 1
+0 0 0d0+0 0
+#210
+badger mara guardian~
+Mara~
+A large female badger sits in the chair contemplating.
+~
+	Mara is the adopted daughter of Urthstripe and the guardian badger of
+Redwall Abbey.  Though strong physically, it's her mind and ability to make
+friends that she uses most when it comes to protecting the livelyhood of all
+living in the Abbey.
+~
+16410 268435456 850 X
+27 -7 -68 2891d1+37 5d5+4
+10000 210000
+8 8 2
+0 0 0d0+0 0
+#211
+mouse friar bellows cook~
+Friar Bellows~
+A small heavy set mouse hurries around preparing food for dinner.
+~
+	From the looks of him, Friar Bellows takes a personal intrest in the
+food... probably taking taste tests to insure its quality.
+~
+24 134217728 0 X
+25 -5 -38 1223d1+42 3d5+3
+2000 103200
+8 8 1
+0 0 0d0+0 0
+#212
+squirrel sampkin~
+Sampkin~
+A young red squirrel tests his bow and arrows.
+~
+	With a wild twinkle in his eye Sampkin goes about doing whatever he
+pleases.  Right now what he pleases to do is dream about being a hero like
+the great Martin.
+~
+147464 262272 800 X
+27 -7 -73 2136d1+87 6d4+3
+30000 110000
+8 8 1
+0 0 0d0+0 0
+#213
+mouse brother hollyberry doctor~
+Brother Hollyberry~
+An old mouse sits quietly in his chair.
+~
+	Old he may be, but Brother Hollyberry's eyes give off a twinkle to 
+match Sampkin's.  You easily tell that though he may be sitting now, it's
+just to admire the sky, not because it's hard for him to move around.
+~
+24 0 600 X
+25 -5 -53 1223d1+42 3d5+3
+2000 75000
+8 8 1
+0 0 0d0+0 0
+#214
+mole arula child~
+Arula~
+A young little mole is standing here staring intently at you.
+~
+	Arula is the best friend of Sampkin.  She too has a twinkle in her
+eye to match those of the stars in the night sky.
+~
+8 0 650 X
+28 -8 -69 2458d1+87 4d4+4
+15 20000
+8 8 2
+0 0 0d0+0 0
+#215
+hawk bird~
+Hawk~
+A large flying bird dives at you.
+~
+	You are looking at a natural born predator... a hawk.  It's talons
+are razor sharp and unfortunately coming right toward you.
+~
+16424 262144 0 X
+25 -5 -33 923d1+23 3d5+3
+2000 100000
+8 8 0
+0 0 0d0+0 0
+#216
+shopkeeper shrew logalog log-a-log~
+Log-a-Log~
+An old shrew watches the counter of the shop protectively.
+~
+	Log-a-Log is the leader of the shrews, and the owner of the shop.
+He sits here watching you to make sure you don't steal while carving a new
+logboat.
+~
+16394 939786400 0 X
+40 -20 -100 32000d1+89 100d100+100
+5000000 1000000
+8 8 1
+0 0 0d0+0 0
+#0
+$~

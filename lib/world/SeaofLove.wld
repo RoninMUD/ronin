@@ -1,0 +1,1203 @@
+#8201
+Wharf~
+	To the South is the Sea of Love (a very beautiful sea).
+There is a staircase here. It leads to the Sonicity. You can go
+up or south here.
+~
+82 0 1
+D2
+Sea of Love
+~
+~
+0 -1 8202
+D3
+~
+~
+0 -1 9885
+D4
+Cop's Tower.
+~
+~
+0 -1 8018
+S
+#8202
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here. The wharf is to the north.
+~
+82 4 7
+D0
+~
+~
+0 -1 8201
+D1
+~
+~
+0 -1 8210
+D2
+~
+~
+0 -1 8209
+D3
+~
+~
+0 -1 8203
+S
+#8203
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go
+west, east and south here.
+~
+82 0 7
+D1
+~
+~
+0 -1 8202
+D2
+~
+~
+0 -1 8208
+D3
+~
+~
+0 -1 8204
+S
+#8204
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go
+west, east and south here.
+~
+82 0 7
+D1
+~
+~
+0 -1 8203
+D2
+~
+~
+0 -1 8207
+D3
+~
+~
+0 -1 8205
+S
+#8205
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go
+west, east and south here.
+~
+82 0 7
+D1
+~
+~
+0 -1 8204
+D2
+~
+~
+0 -1 8206
+D3
+~
+~
+0 -1 8205
+S
+#8206
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8205
+D1
+~
+~
+0 -1 8207
+D2
+~
+~
+0 -1 8218
+D3
+~
+~
+0 -1 8213
+S
+#8207
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8204
+D1
+~
+~
+0 -1 8208
+D2
+~
+~
+0 -1 8219
+D3
+~
+~
+0 -1 8206
+S
+#8208
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8203
+D1
+~
+~
+0 -1 8209
+D2
+~
+~
+0 -1 8220
+D3
+~
+~
+0 -1 8207
+S
+#8209
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8202
+D1
+~
+~
+0 -1 8217
+D2
+~
+~
+0 -1 8221
+D3
+~
+~
+0 -1 8208
+S
+#8210
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go
+west, east and south here.
+~
+82 0 7
+D1
+~
+~
+0 -1 8211
+D2
+~
+~
+0 -1 8217
+D3
+~
+~
+0 -1 8202
+S
+#8211
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go
+west, east and south here.
+~
+82 0 7
+D1
+~
+~
+0 -1 8212
+D2
+~
+~
+0 -1 8216
+D3
+~
+~
+0 -1 8210
+S
+#8212
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go
+west, east and south here.
+~
+82 0 7
+D1
+~
+~
+0 -1 8213
+D2
+~
+~
+0 -1 8215
+D3
+~
+~
+0 -1 8211
+S
+#8213
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go
+west, east and south here.
+~
+82 0 7
+D2
+~
+~
+0 -1 8214
+D3
+~
+~
+0 -1 8212
+S
+#8214
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8213
+D2
+~
+~
+0 -1 8225
+D3
+~
+~
+0 -1 8215
+S
+#8215
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8212
+D1
+~
+~
+0 -1 8214
+D2
+~
+~
+0 -1 8224
+D3
+~
+~
+0 -1 8216
+S
+#8216
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8211
+D1
+~
+~
+0 -1 8215
+D2
+~
+~
+0 -1 8223
+D3
+~
+~
+0 -1 8217
+S
+#8217
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8210
+D1
+~
+~
+0 -1 8216
+D2
+~
+~
+0 -1 8222
+D3
+~
+~
+0 -1 8209
+S
+#8218
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8206
+D1
+~
+~
+0 -1 8219
+D2
+~
+~
+0 -1 8226
+D3
+~
+~
+0 -1 8225
+S
+#8219
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8207
+D1
+~
+~
+0 -1 8220
+D2
+~
+~
+0 -1 8228
+D3
+~
+~
+0 -1 8218
+S
+#8220
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8208
+D1
+~
+~
+0 -1 8221
+D2
+~
+~
+0 -1 8229
+D3
+~
+~
+0 -1 8219
+S
+#8221
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8209
+D1
+~
+~
+0 -1 8222
+D2
+~
+~
+0 -1 8231
+D3
+~
+~
+0 -1 8220
+S
+#8222
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8217
+D1
+~
+~
+0 -1 8223
+D2
+~
+~
+0 -1 8232
+D3
+~
+~
+0 -1 8221
+S
+#8223
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8216
+D1
+~
+~
+0 -1 8224
+D2
+~
+~
+0 -1 8233
+D3
+~
+~
+0 -1 8222
+S
+#8224
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8215
+D1
+~
+~
+0 -1 8225
+D2
+~
+~
+0 -1 8234
+D3
+~
+~
+0 -1 8223
+S
+#8225
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8214
+D1
+~
+~
+0 -1 8218
+D2
+~
+~
+0 -1 8235
+D3
+~
+~
+0 -1 8224
+S
+#8226
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8218
+D1
+~
+~
+0 -1 8228
+D2
+~
+~
+0 -1 8227
+D3
+~
+~
+0 -1 8235
+S
+#8227
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8226
+D1
+~
+~
+0 -1 8230
+D2
+~
+~
+0 -1 8242
+D3
+~
+~
+0 -1 8241
+S
+#8228
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8219
+D1
+~
+~
+0 -1 8229
+D2
+~
+~
+0 -1 8230
+D3
+~
+~
+0 -1 8226
+S
+#8229
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8220
+D1
+~
+~
+0 -1 8231
+D2
+~
+~
+0 -1 8236
+D3
+~
+~
+0 -1 8228
+S
+#8230
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8228
+D1
+~
+~
+0 -1 8236
+D2
+~
+~
+0 -1 8243
+D3
+~
+~
+0 -1 8227
+S
+#8231
+Sea Of Love~
+	You are far away from the wharf now. It is a very big and beautiful sea.
+There is some sea breeze blowing on your face. You feel very comfortable. You can
+go north, west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8221
+D1
+~
+~
+0 -1 8232
+D2
+~
+~
+0 -1 8237
+D3
+~
+~
+0 -1 8229
+S
+#8232
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8222
+D1
+~
+~
+0 -1 8233
+D2
+~
+~
+0 -1 8238
+D3
+~
+~
+0 -1 8231
+S
+#8233
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8223
+D1
+~
+~
+0 -1 8234
+D2
+~
+~
+0 -1 8239
+D3
+~
+~
+0 -1 8232
+S
+#8234
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8224
+D1
+~
+~
+0 -1 8235
+D2
+~
+~
+0 -1 8240
+D3
+~
+~
+0 -1 8233
+S
+#8235
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8225
+D1
+~
+~
+0 -1 8226
+D2
+~
+~
+0 -1 8241
+D3
+~
+~
+0 -1 8234
+S
+#8236
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8229
+D1
+~
+~
+0 -1 8237
+D2
+~
+~
+0 -1 8244
+D3
+~
+~
+0 -1 8230
+S
+#8237
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8231
+D1
+~
+~
+0 -1 8238
+D2
+~
+~
+0 -1 8245
+D3
+~
+~
+0 -1 8236
+S
+#8238
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8232
+D1
+~
+~
+0 -1 8239
+D2
+~
+~
+0 -1 8246
+D3
+~
+~
+0 -1 8237
+S
+#8239
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8233
+D1
+~
+~
+0 -1 8240
+D2
+~
+~
+0 -1 8247
+D3
+~
+~
+0 -1 8238
+S
+#8240
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8234
+D1
+~
+~
+0 -1 8241
+D2
+~
+~
+0 -1 8248
+D3
+~
+~
+0 -1 8239
+S
+#8241
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8235
+D1
+~
+~
+0 -1 8227
+D2
+~
+~
+0 -1 8249
+D3
+~
+~
+0 -1 8240
+S
+#8242
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8227
+D1
+~
+~
+0 -1 8243
+D2
+~
+~
+0 -1 8242
+D3
+~
+~
+0 -1 8249
+S
+#8243
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8230
+D1
+~
+~
+0 -1 8244
+D2
+~
+~
+0 -1 8250
+D3
+~
+~
+0 -1 8242
+S
+#8244
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8236
+D1
+~
+~
+0 -1 8245
+D2
+~
+~
+0 -1 8244
+D3
+~
+~
+0 -1 8243
+S
+#8245
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8237
+D1
+~
+~
+0 -1 8246
+D2
+~
+~
+0 -1 8245
+D3
+~
+~
+0 -1 8244
+S
+#8246
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8238
+D1
+~
+~
+0 -1 8247
+D2
+~
+~
+0 -1 8246
+D3
+~
+~
+0 -1 8245
+S
+#8247
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8239
+D1
+~
+~
+0 -1 8248
+D2
+~
+~
+0 -1 8247
+D3
+~
+~
+0 -1 8246
+S
+#8248
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8240
+D1
+~
+~
+0 -1 8249
+D2
+~
+~
+0 -1 8248
+D3
+~
+~
+0 -1 8247
+S
+#8249
+Sea Of Love~
+	A very big and beautiful sea. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north,
+west, east and south here.
+~
+82 0 7
+D0
+~
+~
+0 -1 8241
+D1
+~
+~
+0 -1 8242
+D2
+~
+~
+0 -1 8249
+D3
+~
+~
+0 -1 8248
+S
+#8250
+Sea Of Love~
+	There is a big island at your south. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north, west,
+south  and east here. 
+~
+82 0 7
+D0
+~
+~
+0 -1 8243
+D1
+~
+~
+0 -1 8244
+D2
+~
+~
+0 -1 8251
+D3
+~
+~
+0 -1 8242
+S
+#8251
+Sea Of Love~
+	The big island is to the south. There is some sea breeze
+blowing on your face. You feel very comfortable. You can go north, west,
+south  and east here. 
+~
+82 0 7
+D0
+~
+~
+0 -1 8250
+D1
+~
+~
+0 -1 8244
+D2
+~
+~
+0 -1 8252
+D3
+~
+~
+0 -1 8242
+S
+#8252
+Near the seashore~
+	To your south is the seashore of the big island.
+~
+82 0 7
+D0
+~
+~
+0 -1 8251
+D2
+~
+~
+0 -1 8302
+S
+#0
+$~
+

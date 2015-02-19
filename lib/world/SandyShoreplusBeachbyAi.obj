@@ -1,0 +1,245 @@
+#8501
+staff dirty~
+A dirty staff~
+A dirty staff is lying on the ground.~
+~
+4 64 16385
+30 10000 10000 12
+5 8000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8502
+wand dirty~
+A dirty wand~
+A dirty wand is lying on the ground.~
+~
+3 64 16385
+30 10000 10000 13
+5 8000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8503
+suit feathers bird kingfisher~
+Feathers of the Kingfisher~
+A lovely suit of bird's feathers is lying on the ground.~
+~
+9 321 9
+14 0 0 0
+3 30000 5000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 4
+A
+18 1
+#8504
+shield skin wormskin worm~
+The Wormskin Shield~
+The skin of the Sand Worm is lying on the ground.~
+~
+9 128 513
+8 0 0 0
+5 16000 4000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 1
+A
+13 20
+#8505
+boots snake snakeskin~
+Snakeskin boots~
+A pair of snakeskin boots is lying on the ground.~
+~
+9 49152 65
+4 0 0 0
+8 3000 300
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+#8506
+gun viper tongue~
+A Viper's Tongue~
+A deadly looking Viper's tongue is lying here.~
+~
+6 128 16385
+8506 6 20 5
+5 20000 600
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8507
+spittle viper bullets~
+Viper's spittle~
+Some Viper's spittle is lying here.~
+~
+23 0 16385
+0 0 8506 6
+2 10000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8508
+fang viper knife~
+Viper's Fang~
+A deadly Viper's fang is lying on the ground.~
+~
+5 0 8193
+0 3 5 11
+7 4800 600
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#8509
+fin white shark hat~
+A white shark's fin~
+A white shark's fin is lying on the ground.~
+~
+9 0 17
+4 0 0 0
+3 2000 400
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+#8510
+sleeves arm ragged~
+Ragged Sleeves~
+A pair of ragged sleeves are lying on the ground.~
+~
+9 0 257
+5 0 0 0
+4 3000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8511
+shorts leg ragged~
+Ragged Shorts~
+A pair of ragged shorts are lying on the ground.~
+~
+9 0 33
+5 0 0 0
+4 3000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8512
+tail rat~
+Rat's Tail~
+A looped rat's tail is lying on the ground.~
+~
+9 64 5
+6 0 0 0
+3 8000 800
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+#8513
+line fishing~
+Fishing Line~
+A long piece of twisted fishing line is lying on the ground.~
+~
+9 1 2049
+10 0 0 0
+11 30000 9000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 2
+A
+18 1
+#0
+$~

@@ -1,0 +1,1156 @@
+#2001
+Inside a tavern~
+You are inside a dimly-lit room. The atmosphere makes you feel uncomfortable. 
+In front of you stands a mysterious looking gypsy.
+She whispered 'Your fate and destiny lie beyond this world.'
+You are still wondering what she means when you suddenly notice 
+the crystal ball...It glows fiercely and displays the Universe!
+~
+20 8 0
+D0
+~
+~
+0 -1 2002
+D2
+~
+~
+0 -1 2078
+S
+#2002
+Inside the crystal ball~
+You have touched the crystal ball and find that you have gone inside it: 
+a world of stars and wonders! 
+As you look back you figure out there is no choice but to go forward.
+~~
+20 0 2
+D0
+~
+~
+0 -1 2003
+S
+#2003
+Inside the galaxy~
+You are now inside the galaxy, around you, you see stars and nebulae smiling 
+at your presence, and comets and meteors wandering around you. You realize that 
+this world may not be the true galaxy after all, but just another fantasy zone. 
+Exits lie virtually in all directions.
+~
+20 0 1
+D0
+~
+~
+0 -1 2004
+D1
+~
+~
+0 -1 2008
+D2
+~
+~
+0 -1 2002
+D3
+~
+~
+0 -1 2021
+S
+#2004
+On a Intergalactic Walkway~
+You are on a well-paved path which seems that it was made 
+deliberately for visitors like you. 
+The walkway continues north and a small exit lies west.
+~
+20 0 1
+D0
+~
+~
+0 -1 2005
+D2
+~
+~
+0 -1 2003
+D3
+~
+~
+0 -1 2022
+S
+#2005
+End of the Intergalactic walkway~
+You notice the walkway has come to an abrupt end and you wonder why. You see 
+that there is still a small path which leads north and one to the west. 
+To the east lies a bridge.
+~
+20 0 1
+D0
+~
+~
+0 -1 2006
+D1
+~
+~
+0 -1 2009
+D2
+~
+~
+0 -1 2004
+D3
+~
+~
+0 -1 2023
+S
+#2006
+At the undeveloped part of the Galaxy~
+This place looks deserted, covered with space debris. Not a sign of life is around.
+~
+20 0 1
+D0
+~
+~
+0 -1 2006
+D2
+~
+~
+0 -1 2024
+D3
+~
+~
+0 -1 2023
+S
+#2008
+On the Bridge of Stars~
+This bridge has been made by the stars to honor their ancestors. The bridge itself shines brightly 
+and makes you feel that you are walking on a path of light. An entrance to an ancient building lies 
+north and to the east lies the Milky Way.
+~
+20 0 1
+D0
+~
+~
+0 -1 2031
+D1
+~
+~
+0 -1 2012
+D3
+~
+~
+0 -1 2003
+S
+#2009
+On the Bridge of Nebulae~
+This bridge, like the other, was made as a memorial. The nebulae had to make one just to show 
+that they are as capable as the stars. North lies a throne room.
+~
+20 1 1
+D0
+~
+~
+0 -1 2010
+D1
+~
+~
+0 -1 2014
+D3
+~
+~
+0 -1 2005
+S
+#2010
+The throne room of the Nebula King~
+You can only faintly make out that it is a throne room as it is too dark in here. In the middle is an 
+empty throne. You wonder where the King has gone, maybe he is hiding from you?
+~
+20 9 0
+D2
+~
+~
+0 -1 2009
+S
+#2012
+At the start of the Milky Way~
+It is here that the famous old Milky Way starts flowing. You are surrounded by streams of mist the 
+moment you tread on it. You can't see well in here...Luckily you haven't fallen yet!
+~
+20 0 4
+D0
+~
+~
+0 -1 2013
+D3
+~
+~
+0 -1 2008
+S
+#2013
+Along the Milky Way~
+You are still traveling inside this path of mist. You notice a small opening lies to the east.
+~
+20 0 4
+D0
+~
+~
+0 -1 2014
+D1
+~
+~
+0 -1 2017
+D2
+~
+~
+0 -1 2012
+S
+#2014
+At the end of the Milky Way~
+Just as you started enjoying this journey inside the mist you have come to the end of it. West leads 
+to a bridge and east leads to somewhere else.
+~
+20 0 4
+D1
+~
+~
+0 -1 2018
+D2
+~
+~
+0 -1 2013
+D3
+~
+~
+0 -1 2009
+S
+#2017
+A small clearing~
+You are inside a small clearing. You can see that there are signs of a living creature nearby.
+~
+20 0 2
+D0
+~
+~
+0 -1 2018
+D3
+~
+~
+0 -1 2013
+S
+#2018
+An edge of the galaxy~
+You are on the very edge of the galaxy. Nothing is here except that there is a path which leads 
+down.
+~
+20 0 1
+D2
+~
+~
+0 -1 2017
+D3
+~
+~
+0 -1 2014
+D5
+~
+~
+0 -1 2019
+S
+#2019
+Very near to a gigantic star~
+You are very near to a gigantic red star. While you are still fascinated by its beauty, the star keeps 
+on growing...Suddenly you realize that you'd better leave.
+~
+20 0 1
+D0
+~
+~
+0 -1 2020
+D1
+~
+~
+0 -1 2020
+D2
+~
+~
+0 -1 2020
+D3
+~
+~
+0 -1 2020
+S
+#2020
+Too bright to tell~
+Indeed it is too bright to tell. Because what you are witnessing is the rare event of a Supernova, 
+how a star explodes itself into galactic dust. You may find yourself lucky to witness this rare event 
+but even luckier, you have finally got out of this galaxy as your body turns into dust. That really 
+HURTS!  
+~
+20 6 0
+E
+death_text~
+A kaleidascope of light pierces your being, mortally damaging your fragile mind.
+~
+S
+#2021
+The star cluster~
+You are inside the home of the stars. All you can see around you are stars and nothing else. You 
+eyes become pretty hurt as you look at them.
+~
+20 8 1
+D0
+~
+~
+0 -1 2022
+D1
+~
+~
+0 -1 2003
+S
+#2022
+Another edge of the galaxy~
+This is another uninhabited place. Exit lies north, east and south.
+~
+20 0 2
+D0
+~
+~
+0 -1 2023
+D1
+~
+~
+0 -1 2004
+D2
+~
+~
+0 -1 2021
+S
+#2023
+Corner of the galaxy~
+You wonder why the galaxy is limited. All you have done in Astronomy courses now prove 
+worthless. Well who told you to take one at the start?  
+~
+20 0 1
+D0
+~
+~
+0 -1 2024
+D1
+~
+~
+0 -1 2005
+D2
+~
+~
+0 -1 2023
+D3
+~
+~
+0 -1 2024
+S
+#2024
+Lost in space~
+You are now lost in space. Compasses don't work here, sorry. What's more you can sense darkness 
+engulfing you. You'd better get out quick.
+~
+20 1 2
+D0
+~
+~
+0 -1 2025
+D1
+~
+~
+0 -1 2006
+D2
+~
+~
+0 -1 2023
+D3
+~
+~
+0 -1 2023
+S
+#2025
+Black hole~
+Well you have chosen the wrong path, Sorry. Nothing can escape from this monster, not even 
+light. PANIC! You can't escape!
+~
+20 2 0
+D2
+~
+~
+0 -1 2024
+E
+death_text~
+The crushing gravitational forces choke every bit of life from your body.
+~
+S
+#2026
+The Homes of the Pleiades~
+This is where the famous Seven Sisters live. You 'd better not disturb them.
+~
+20 0 1
+D1
+~
+~
+0 -1 2029
+D2
+~
+~
+0 -1 2027
+S
+#2027
+Western side of the Temple~
+You are still wandering around this temple. You notice exits lie in all directions except west.
+~
+20 0 1
+D0
+~
+~
+0 -1 2026
+D1
+~
+~
+0 -1 2030
+D2
+~
+~
+0 -1 2028
+S
+#2028
+Orion's hunting lodge~
+This is dedicated to the Great Hunter of all times-Orion.  Scattered on the floor is the famous 
+hunting equipment used by him.
+~
+20 0 1
+D0
+~
+~
+0 -1 2027
+D1
+~
+~
+0 -1 2031
+S
+#2029
+Northern side of the Temple~
+You are still wandering around this temple. You notice exits lie in all directions except north.
+~
+20 0 1
+D1
+~
+~
+0 -1 2032
+D2
+~
+~
+0 -1 2030
+D3
+~
+~
+0 -1 2026
+S
+#2030
+The Offering Chamber~
+This is the sacred offering chamber in which sacrifices are made. Strangely you see a young girl 
+here, chained to the wall, as if she is waiting for execution. You look up and realize the chains are 
+sent down directly from above. Below you recognize the temple of Midgaard.
+~
+20 0 1
+D0
+~
+~
+0 -1 2029
+D1
+~
+~
+0 -1 2033
+D2
+~
+~
+0 -1 2031
+D3
+~
+~
+0 -1 2027
+D4
+~
+~
+0 -1 2039
+D5
+~
+~
+0 -1 3001
+S
+#2031
+The Entrance of the ancient Temple~
+You have entered into this old temple, which was built originally for the gods in Mount Olympia, 
+but it is now deserted as someone took over this part of the Universe.
+~
+20 0 1
+D0
+~
+~
+0 -1 2030
+D1
+~
+~
+0 -1 2034
+D2
+~
+~
+0 -1 2008
+D3
+~
+~
+0 -1 2028
+S
+#2032
+Hercules' mighty throne~
+You stand before the throne of a long-forgotten hero. It is full of bounty that he got from the Ten 
+Labors.
+~
+20 0 1
+D2
+~
+~
+0 -1 2033
+D3
+~
+~
+0 -1 2029
+S
+#2033
+Eastern side of the Temple~
+You are still wandering around this temple. You notice exits lie in all directions except east.
+~
+20 0 1
+D0
+~
+~
+0 -1 2032
+D2
+~
+~
+0 -1 2034
+D3
+~
+~
+0 -1 2030
+S
+#2034
+Perseus' Chamber~
+It is the chamber of the prince, Perseus. However, he seems not to be here. Maybe he has gone to 
+get Pegasus to save Andromeda?
+~
+20 0 1
+D0
+~
+~
+0 -1 2033
+D3
+~
+~
+0 -1 2031
+S
+#2039
+On the mystic chains~
+You are dangling on the chains. You notice exits lie in all directions. Up above you see the chains 
+continue upwards. But a force field prevents you from going further upwards.
+~
+20 0 5
+D0
+~
+~
+0 -1 2048
+D1
+~
+~
+0 -1 2051
+D2
+~
+~
+0 -1 2042
+D3
+~
+~
+0 -1 2045
+D4
+You see the force field of Spring~
+force field~
+2 2024 2054
+D5
+~
+~
+0 -1 2030
+S
+#2042
+On a hill~
+Suddenly you find yourself on a hillside. As you look around you, you notice that Spring has 
+descended upon you.
+~
+20 0 4
+D0
+~
+~
+0 -1 2039
+D1
+~
+~
+0 -1 2053
+D3
+~
+~
+0 -1 2043
+S
+#2043
+Inside a Spanish Bull-Ring~
+You are inside what used to be a ground for bull fighting. But you notice there are no Matadors 
+around. Maybe they are all dead?
+~
+20 0 2
+D1
+~
+~
+0 -1 2042
+D3
+~
+~
+0 -1 2044
+S
+#2044
+Inside a study~
+This is a strange study. Besides the desks and chairs you also see a large mirror in the middle. So, 
+you wonder, is this how you make a Gemini into 2 Gemini?
+~
+20 0 0
+D1
+~
+~
+0 -1 2043
+D3
+~
+~
+0 -1 2045
+S
+#2045
+Along the seashore~
+You start to feel the heat of Summer. Amongst the rocky beach you notice hidden forms which 
+could be camouflaged crabs. 
+~
+20 0 2
+D0
+~
+~
+0 -1 2039
+D1
+~
+~
+0 -1 2044
+D3
+~
+~
+0 -1 2046
+S
+#2046
+Within the deep jungle~
+Nearby you can hear the roar of an animal. Peering through the dense overgrowth you think you 
+glimpse a pair of menacing eyes.
+~
+20 0 3
+D1
+~
+~
+0 -1 2045
+D3
+~
+~
+0 -1 2047
+S
+#2047
+Inside a luxurious bedroom~
+A peaceful feeling overtakes you. You see a magnificent four-poster bed, (It's a double bed and 
+there is only room for one more!) Well, what now...?
+~
+20 8 1
+D1
+~
+~
+0 -1 2046
+D3
+~
+~
+0 -1 2048
+S
+#2048
+The supreme court~
+You are standing inside the dock of a court. You feel an overwhelming sense of guilt and you want 
+to protest your innocence! You fear retribution and feel yourself exposed, just like the trees in 
+Autumn.
+~
+20 8 1
+D0
+~
+~
+0 -1 2039
+D1
+~
+~
+0 -1 2047
+D3
+~
+~
+0 -1 2049
+S
+#2049
+In the dry desert~
+You are confused by the shifting sands around you. Through the shimmering heat you see the 
+hazy outline of a giant scorpion...Is this a mirage?
+~
+20 0 2
+D1
+~
+~
+0 -1 2048
+D3
+~
+~
+0 -1 2050
+S
+#2050
+In the woods~
+You find yourself in the center of a Centaurion hunting party. You'd better hide yourself before 
+you become the 'center attraction'!
+~
+20 0 3
+D1
+~
+~
+0 -1 2049
+D3
+~
+~
+0 -1 2051
+S
+#2051
+On a mountain peak~
+You are on the highest peak of the Universe. You look around and notice clouds below you. One 
+of the clouds resembles a goat-like form.
+~
+20 0 5
+D0
+~
+~
+0 -1 2039
+D1
+~
+~
+0 -1 2050
+D3
+~
+~
+0 -1 2052
+S
+#2052
+Inside a waterfall~
+The noise is deafening. You are about to take a drink when you realize that the water is being 
+poured out of a vessel of mind-boggling proportions!
+~
+20 0 5
+D1
+~
+~
+0 -1 2051
+D3
+~
+~
+0 -1 2053
+S
+#2053
+Inside a gigantic clam~
+You feel uneasy here as if some evil magic is being cast on you. You suspect something fishy is 
+going on in here.
+~
+20 0 5
+D1
+~
+~
+0 -1 2052
+D3
+~
+~
+0 -1 2042
+S
+#2054
+End of the mystic chains~
+You have reached the end of the mystic chains. Looking up, you notice a small landing on which 
+you can climb. However there seems to be another force field blocking your way.  
+~
+20 0 5
+D4
+force field~
+You see the force field of Summer.~
+2 2025 2055
+D5
+~
+~
+2 2024 2039
+S
+#2055
+On the Draco~
+You realize you are standing on scaly ground. As you wonder what the ground is made of, you 
+feel the ground move.
+~
+20 1 4
+D0
+~
+~
+0 -1 2056
+D5
+~
+~
+2 2025 2054
+S
+#2056
+Tail of the Draco~
+At last you realize that you are on a giant snake-like dragon called the Draco, the guardian of the 
+inner galaxy. You realize that the Draco is actually flying now! 
+~
+20 1 4
+D2
+~
+~
+0 -1 2055
+D3
+~
+~
+0 -1 2057
+S
+#2057
+Path of the Draco~
+As you struggle along this scaly creature you realize that the only way you can reach to the inner 
+galaxy is by going all the way to the head.
+~
+20 1 4
+D0
+~
+~
+0 -1 2058
+D1
+~
+~
+0 -1 2056
+S
+#2058
+Near the legs of Draco~
+You are approaching the leg part of this creature. You look around and see that the surrounding is 
+all dark except for some faint lights from the distant stars.
+~
+20 1 4
+D0
+~
+~
+0 -1 2059
+D2
+~
+~
+0 -1 2057
+S
+#2059
+On the back of Draco~
+At last you are half way through this long, weary journey. You can see the wings are to the east 
+but it seems that another force field is in the way.
+~
+20 1 4
+D1
+force field~
+You see the force field of Autumn~~
+2 2026 2060
+D2
+~
+~
+0 -1 2058
+S
+#2060
+Between the Wings of Draco~
+You hear some giant flapping sounds nearby. You desperately try to get hold of something as the 
+forceful gusts sweep you away.
+~
+20 1 4
+D1
+~
+~
+0 -1 2061
+D3
+~
+~
+2 2026 2059
+S
+#2061
+Near the arms of Draco~
+From above you can faintly make out the gigantic arms which extend far beyond into the darkness.
+~
+20 1 4
+D2
+~
+~
+0 -1 2062
+D3
+~
+~
+0 -1 2060
+S
+#2062
+On the neck of Draco~
+Your journey is now approaching the end. However, this neck seems to be endless.
+~
+20 1 4
+D0
+~
+~
+0 -1 2061
+D3
+~
+~
+0 -1 2063
+S
+#2063
+Approaching the Head of Draco~
+You have come to the end of Draco, but you can't find the head! You see a force field to the 
+south, some distance away, beyond reach. If only the head was here...   
+~
+20 1 4
+D1
+~
+~
+0 -1 2062
+D2
+force field~
+You see the force field of Winter~
+2 2027 2064
+S
+#2064
+At the entrance of the Great Dipper~
+Now you are in the innermost part of the galaxy. What you are walking on now is the path of the 
+Great Dipper or the Plough. You notice that there are seven rooms in this zone, representing the 
+seven stars of the Dipper.
+~
+20 0 1
+D0
+~
+~
+2 2027 2063
+D2
+~
+~
+0 -1 2065
+D3
+~
+~
+0 -1 2066
+S
+#2065
+Cassiopeia's Throne~
+This is the Throne room of the Queen of the Universe. From here you can see every star and 
+constellation in the Universe. 
+~
+20 0 1
+D0
+~
+~
+0 -1 2064
+D3
+~
+~
+0 -1 2067
+S
+#2066
+Along the path of the Dipper~
+You see stars around you but nothing of special interest.
+~
+20 0 1
+D1
+~
+~
+0 -1 2064
+D2
+~
+~
+0 -1 2067
+S
+#2067
+Cepheus' Throne~
+This is the Throne room of the King of the Universe. From here you can see every star and 
+constellation in the Universe. 
+~
+20 0 1
+D0
+~
+~
+0 -1 2066
+D1
+~
+~
+0 -1 2065
+D2
+~
+~
+0 -1 2068
+S
+#2068
+Along the path of the Dipper~
+You see stars around you but nothing of special interest.
+~
+20 0 1
+D0
+~
+~
+0 -1 2067
+D3
+~
+~
+0 -1 2069
+S
+#2069
+Along the path of the Dipper~
+You see stars around you but nothing of special interest.
+~
+20 0 1
+D1
+~
+~
+0 -1 2068
+D2
+~
+~
+0 -1 2070
+S
+#2070
+End of the Dipper~
+You have finished the path of the Dipper. Here, the most prominent feature is a set of claw-marks. 
+You also notice a room to the south, it looks as if Polaris could lie here. 
+~
+20 0 1
+D0
+~
+~
+0 -1 2069
+D2
+~
+~
+0 -1 2071
+S
+#2071
+The Polar Star~
+You have entered the private chamber of Polaris. This is a room of great significance. You can see 
+a powerful telescope pointing down towards the Universe(SNOOPING!). It is from here that 
+Polaris commands the Universe. You feel you have come to end of your search in this galaxy...
+~
+20 0 1
+D0
+~
+~
+0 0 2070
+S
+#2072
+A long stair~
+   You are standing on a very long staircase, it continues up into the sky, 
+probably leads you into the galaxy.
+~
+20 12 1
+D4
+~
+~
+0 0 2073
+D5
+~
+~
+0 -1 16600
+S
+#2073
+A long stair~
+   The stair continues upwards.
+~
+20 12 1
+D4
+~
+~
+0 0 2074
+D5
+~
+~
+0 0 2072
+S
+#2074
+A long stair~
+   The stair continues upwards.
+~
+20 12 1
+D4
+~
+~
+0 0 2075
+D5
+~
+~
+0 0 2073
+S
+#2075
+A long stair~
+   The stair continues upwards. To the north is a lot of cloud.
+The exits here are north, up and down.
+~
+20 12 1
+D4
+~
+~
+0 0 2076
+D5
+~
+~
+0 0 2074
+S
+#2076
+A long stair~
+   The stair continues upwards.
+~
+20 12 1
+D4
+~
+~
+0 0 2077
+D5
+~
+~
+0 0 2075
+S
+#2077
+A long stair~
+   The stair continues upwards.
+~
+20 12 1
+D4
+~
+~
+0 0 2078
+D5
+~
+~
+0 0 2076
+S
+#2078
+The End of the stair~
+   You are now in the space. At the north is the entrance to galaxy.
+There is a sign here.
+~
+20 12 1
+D0
+~
+~
+0 0 2001
+D5
+~
+~
+0 0 2077
+E
+sign~
+    Galaxy is a very mystery place, so take care there may be a lot of Death Traps here.
+~
+S
+#0
+$~

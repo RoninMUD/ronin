@@ -1,0 +1,123 @@
+#5601
+bearskin~
+a bearskin~
+A bearskin is lying on the ground.~
+~
+9 128 1025
+7 0 0 0
+8 1800 236
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5602
+noodles cup~
+a cup of noodles~
+a cup of noodles is lying on the ground.~
+~
+19 0 1
+20 0 0 0
+2 30 3
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5603
+potion orange~
+an orange potion~
+an orange potion lies here.~
+~
+10 268435520 1
+20 -1 75 103
+2 9000 160
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5604
+potion reddish brown~
+a reddish brown potion~
+a reddish brown potion lies here.~
+~
+10 268435520 1
+20 73 -1 -1
+2 1500 120
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5605
+potion blue~
+a pale blue potion~
+a pale blue potion lies here.~
+~
+10 268435520 1
+20 86 -1 -1
+2 1200 80
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5606
+potion orange brown orangebrown~
+an orange-brown potion~
+A slightly cloudy glass beaker is here, containing an orange-brown liquid.~
+~
+10 268435520 1
+45 28 75 103
+1 200000 160
+60
+E
+potion~
+ Recent spikes in the cost of ferrous ores have driven up the cost of
+ingredients to alchemists across the world, especially the rusty-hued
+potable familiar to most adventurers: the orange potion. Coupled with
+this rise in ingredient cost, the City of Cornelius, facing possible
+bankruptcy, has been forced to increase rent costs for shop space.
+ Facing a lose-lose scenario where he must either relocate and lose his
+client base, or file for bankruptcy himself the wizard had to reinvent
+his business plan.
+ Enter the new jewel of his alchemy trade: the orange-brown potion. At
+first glance yes, it's verging on price gouging, however if one takes
+time to recognize all the economic and supply-chain factors at work, it
+makes perfect sense.
+ The wizard is not all about profits, he was also kind enough to add a
+bit of healing to this potion as well, making it more versatile while
+still offering the vitality and endurance boosts that made its ancestor
+so popular.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

@@ -1,0 +1,854 @@
+#12900
+key silver small~
+a silver key~
+A small silver key has been dropped here.~
+~
+18 0 16385
+12900 0 0 0
+1 1 100000
+100
+E
+key silver~
+The small silver key looks new, and shines brightly as you hold it in your
+hands.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12901
+dagger fung-tai~
+the Fung-Tai dagger~
+A strange, twin bladed dagger has been left here.~
+$r dagger's twin blades glow in bright golden light.~
+5 134217792 8193
+0 4 7 11
+14 65000 12000
+8
+E
+dagger fung-tai~
+The twin-bladed dagger is made of aurum, the metal of the gods. Its edges
+are sharper than those of the razor. The two blades of the dagger are
+strangely curved. 
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+39 20
+#12902
+morning star exaltation~
+The morning star of Exaltation~
+An impressive looking morning star is lying here.~
+$r morning star's spiked ball crushes on $V.~
+5 134219329 8193
+0 8 5 6
+24 150000 26000
+18
+E
+morning star exaltation~
+Absolutely the mightiest morning star you have ever seen. The aurum spikes of
+this smooth metal ball are as sharp as a dagger's point.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -4
+A
+36 20
+#12903
+box metal~
+a small metal box~
+A small metal box in on the floor.~
+~
+15 64 1
+50 15 12904 0
+150 100 5000
+100
+E
+box metal~
+The metal box has been made to keep things inside, and to keep greedy 
+fingers of common thieves outside.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12904
+rod metal~
+a short metal rod~
+A strange looking rod made of metal is here.~
+~
+18 97 1
+0 0 0 0
+10 100 5000
+50
+E
+rod metal~
+There are some strange runes on the rod.
+~
+E
+runes~
+The runes say 'Griout ah walqud'
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12905
+ring small crystal~
+a small crystal ring~
+A small ring with a glowing crystal has been dropped here.~
+~
+9 65 3
+0 0 0 0
+1 75000 10000
+10
+E
+ring crystal small~
+The small crystal ring looks very valuable and the delicate engravings on 
+the silver band of the ring are very fine work.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+#12906
+shard vulcanite yellow~
+a shard of yellow vulcanite~
+A small piece of a yellow rock has been dropped here.~
+~
+8 65 16385
+0 0 0 0
+5 10000 7200
+20
+E
+shard vulcanite~
+The shard is glowing with a soft yellowish light, but yet not enough to use
+as light. The small piece of yellow crystal is pulsing periodically with 
+warm and soft light. There are some cracks on it's sides, but it seems to be
+solid enough.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 5
+A
+13 20
+#12907
+naginata barbed~
+a barbed naginata~
+A gruesome looking naginata with a barbed blade is lying here.~
+~
+5 0 8193
+0 3 6 11
+12 5000 4750
+29
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#12908
+ring star gemini~
+The Prismatic Star of Gemini~
+A crystalline ring has been left here, shining with its luminous power.~
+~
+11 267433027 3
+0 0 0 0
+4 25000 31000
+2
+E
+ring gemini~
+
+  As you gaze into the many facets of this lustrous ring, reflections
+and stabbing veins of light assail your eyes.  It seems to soak in
+the surrounding energy and magnify it many times on its own.  This
+is a piece of the enigma that is the Crystal Daemon, a shard of pure
+innocence.  The band is encrusted with crushed rubies the same as
+the Daemon's very eyes.
+
+~
+E
+star~
+
+  The shape of a star, the sigil of Gemini, radiates twin beams of
+light from either side of its points to signify the duality behind
+its creation.  Bestowed upon the Daemon, the light is magnified to
+the infinite.. Good and Evil bestowed in one power.
+
+~
+X
+~
+4 0 0
+M
+Beams of dancing light shift as you wear the Star on your finger.~
+Beams of light dance across $n's face as $e wears the Prismatic Star.~
+A blinding after-image is left on your eyes as you remove the Star.~
+A blinding after-image is left on your eyes as $n removes the Star.~
+A
+19 3
+A
+18 4
+A
+53 15
+T
+14000
+#12909
+ring band holy spirits~
+a band of holy spirits~
+A glowing band of spiritual powers lies here, waiting to be worshipped.~
+~
+9 263255361 3
+4 0 0 0
+4 27500 32500
+5
+E
+inscription~
+
+     Only those with true understanding of existence and purity
+      of heart can purge the desire for material wealth.  Wear
+       this, and you will never know enlightenment.
+
+~
+E
+ring band holy spirits~
+
+  Within the blue metallic band, swirls of creamy ivory permeate
+the surface.  Strips of inlaid gold adorn the circular seal,
+a flat and etched representation of a cross in the center.  This
+is the insignia of one of the highest mystical beings, carried
+only to supplement his power and signify his completion of the
+training.  An inscription has been carved carefully into the
+inner surface of the band.
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+52 5
+T
+14000
+#12910
+sandals rope~
+pair of rope sandals~
+A pair of rope sandals are here.~
+~
+9 64 65
+3 0 0 0
+4 17500 8750
+30
+E
+sandals rope~
+The sandals don't look very comfortable, but some people do wear things like
+this.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+#12911
+shirt blue silk~
+a blue silk shirt~
+A fine blue silk shirt is here.~
+~
+9 64 9
+9 0 0 0
+4 75000 5000
+50
+E
+shirt blue silk~
+The silk shirt looks very comfortable and expensive, but obviously the
+monks like to wear nice clothes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+39 5
+A
+43 10
+#12912
+gloves blue silk~
+a pair of blue silk gloves~
+A pair of blue silk gloves has been dropped on the ground.~
+~
+9 64 129
+0 0 0 0
+4 25000 10500
+15
+E
+gloves blue silk~
+As you touch these fine silk gloves, you feel a strange sensation tingling
+through your fingers...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#12913
+pants blue silk~
+a pair of blue silk pants~
+A pair of blue silk pants are here.~
+~
+9 64 33
+8 0 0 0
+4 25000 8500
+25
+E
+pants blue silk~
+These fine blue silk pants are flowing in the faint breeze...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+#12914
+mask blue silk~
+a blue silk mask~
+A strange blue mask with eye holes made of finest silk is here.~
+~
+9 64 17
+8 0 0 0
+4 25000 8500
+18
+E
+mask blue silk~
+The silk mask is made to cover the whole face, attached with a string
+tied behind the head.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 -4
+A
+13 10
+#12915
+garb blue silk~
+a blue silk garb~
+A blue silk garb is lying on the ground.~
+~
+9 64 1025
+8 0 0 0
+4 50000 15000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 3
+#12916
+headband aurum~
+an aurum headband~
+A headband made of golden metal is lying here.~
+~
+9 65 17
+5 0 0 0
+4 10000 4500
+20
+E
+headband aurum~
+The headband is studded with small red stones that seem to pulse under your
+scrutiny. The feeling isn't exhilarating!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+23 -5
+A
+24 -5
+#12917
+bundle cloth~
+a bundle of cloth~
+A dirty looking bundle of cloth has been dropped here.~
+~
+9 0 9
+1 0 0 0
+10 20 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12918
+flute wooden~
+a wooden flute~
+A small flute made of wood is here.~
+~
+24 64 16385
+0 0 0 0
+4 15750 2750
+30
+E
+flute wooden~
+The flute is of excellent quality and plays only the finest of tunes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+18 2
+B
+28
+#12919
+pudding rice~
+a rice pudding~
+A delicious looking rice pudding is here.~
+~
+19 0 1
+4 0 0 0
+1 100 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12920
+pot copper large~
+a large copper pot~
+A large copper pot is here.~
+~
+15 0 16385
+100 0 -1 0
+75 1500 250
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12921
+staff light~
+a Staff of Light~
+A bright staff is lying here.~
+~
+4 97 16385
+30 2 2 36
+25 25000 8000
+20
+E
+staff light~
+The staff is glowing with a bright aura...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12922
+potion ice~
+a potion of ice~
+A potion is here, radiating cold.~
+~
+10 97 1
+30 39 39 3
+10 3500 1500
+30
+E
+potion ice~
+The potion is freezing cold, and your fingers are getting very itchy when
+you touch it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12923
+staff darkness~
+a Staff of Darkness~
+A black staff is lying here.~
+~
+4 97 16385
+30 4 4 6
+25 12000 6000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12924
+desk~
+a desk~
+The Great Mystic's private desk is here.~
+~
+15 0 0
+100 5 -1 0
+1 1 1
+100
+E
+desk~
+The desk has two drawers closed with simple bands of Aurum.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12925
+quill~
+a fine feather quill~
+An ostrich feather quill is here, carefully wrapped in fine cloth.~
+~
+21 320 16385
+0 0 0 0
+1 450 150
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12926
+paper piece~
+a piece of paper~
+A torn piece of paper has been dropped to the floor.~
+~
+16 0 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12927
+kettle huge~
+a huge kettle~
+A kettle is here, filled with steaming cookings.~
+~
+17 0 16385
+100 100 8 0
+120 1500 250
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12928
+katana silver~
+a silver katana~
+A finely crafted katana is lying here.~
+$r silver blade slices through the air into $V.~
+5 176219969 8193
+2 7 5 3
+12 25000 16500
+8
+E
+katana silver~
+The slightly curved fine sword is as sharp as a razor's edge. The silvery
+glow in the blade is almost blinding bright, and you can feel the power
+of its war-like singing.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 1
+B
+8232
+#12929
+hood silk black~
+a black silk hood~
+A piece of black silk is lying here.~
+~
+9 320 17
+9 0 0 0
+1 15000 6500
+20
+E
+black silk hood~
+A black hood made of silk without any holes for the eyes. It will be hard
+to see through this one.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+1
+#12930
+coins~
+a pile of coins.~
+Some coins are lying here.~
+~
+20 0 1
+15000 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12931
+amulet glass~
+a glass amulet~
+A fragile amulet made out of glass is lying here.~
+~
+9 96 5
+5 0 0 0
+3 16000 4500
+19
+E
+amulet glass~
+The amulet has a drawing carved on it. It is a picture of a very old man and
+an eagle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 25
+A
+4 -2
+#12932
+skull human chain~
+a human skull on a chain~
+A badly shriveled skull on a fine chain is here.~
+~
+9 64 18437
+0 0 0 0
+10 16000 4500
+18
+E
+skull human~
+The skull has still some shreds of flesh and skin on it. Flies are buzzing
+and worms squirming all over it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 45
+A
+13 -24
+#12933
+statue dragon~
+a dragon statue~
+A statue of a mighty Oriental Dragon is standing here.~
+~
+12 1 0
+0 0 0 0
+0 1 1
+50
+E
+writing~
+A word of warning. !! The Vulcanite is a very dangerous stone, very unstable
+and in the brink of explosion. Be careful.
+~
+E
+scales pearl pearls~
+There is something written on the scales on the dragon's right wing. You have
+never seen so many pearls in same place.
+~
+E
+statue dragon~
+The Statue is of a mighty dragon, holding a puny, wretched human in its
+clawed feet. The scales of the dragon are made of pearls and glow with inner
+warmth. The statue seems to be watching you.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#12934
+band moonstone glittering ring~
+a glittering moonstone band~
+A ring with mystical qualities awaits a worthy owner.~
+~
+11 233895169 3
+0 0 0 0
+1 20000 26000
+7
+E
+band moonstone ring~
+
+This is a ring created with outstanding craftsmanship and detailed
+care.  It is made purely of pale blue moonstone which glitters
+brilliantly in the sunlight and is said to carry the protection of the gods.
+Engraved on the outside of the band are a mace and a dragon. The inside is
+engraved with an ancient slogan: "Pain is a resident of the mind, while
+courage is a resident of the soul."
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+A
+53 8
+T
+14000
+#0
+$~

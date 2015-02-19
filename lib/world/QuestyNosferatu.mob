@@ -1,0 +1,625 @@
+#26100
+mayor~
+The Mayor~
+The Mayor of Midgaard stands here surveying his surroundings proudly.
+~
+This stunt double of the mayor is a nearly flawless likeness.
+Only upon close inspection can you notice that the facial hair is glued on..
+~
+17301512 17074216 0 Y
+10 10 -5 12d34+1000 3d5+0
+1 1
+8 8 1
+0 4096 1d1+1 2
+2 2 20 0
+7 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26101
+mayor~
+The Mayor~
+The Mayor of Midgaard stands here proudly surveying his surroundings.~
+This stunt double of the mayor is a newrly perfect likeness.
+Only upon close inspection can you see the glue under the facial hair..
+~
+8 17074176 0 Y
+35 -15 -5 12d34+1000 3d5+0
+1 1
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26102
+gypsy wandering mayorquest~
+A wandering gypsy~
+A wandering gypsy is here offering up some helpful(?) potions.
+~
+This aging nomadic gypsy looks just kind enough to be helpful to you...
+and at the same time just clever enough to rip you off.
+~
+17301512 151029760 0 Y
+33 -13 -2 2d50+1250 4d6+3
+1 75000
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26103
+cupid evil~
+An Evil Cupid~
+A devious looking cupid seems to be plotting your demise.
+~
+This cupid looks like the normal ones but is somehow...darker..
+~
+8 151029760 -1000 Y
+35 -15 -2 2d50+2600 4d6+5
+1 120000
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26104
+guardian food~
+The Guardian of the Food~
+The Guardian of the Food stands here alertly.
+~
+The Guardian of the Food loke EXTREMELY buff.. I would recomend NOT
+messing with him.
+~
+10 939821224 0 Y
+35 -15 -15 50d50+15000 30d30+100
+1 1
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26105
+holder red~
+The red flag holder~
+The red flag holder waves his flag in the air proudly.
+~
+He waves his flag and laughs in your face!
+~
+16777226 264192 0 Y
+35 -15 10 2d50+1500 6d5+0
+1 1
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26106
+holder blue~
+The blue flag holder~
+The blue flag holder waves his flag in the air proudly.
+~
+He waves his flag and laughs in your face!
+~
+16777226 264192 0 Y
+35 -15 10 2d50+1500 6d5+0
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26107
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26108
+leprechaun~
+The Leprechaun~
+A strange little man all dressed in green stands here glaring at you.
+~
+This little man looks incredibly old, but more insane then wise. He gets an evil glint in his eyes when he sees you approaching and you can sense he is up to some develish trickery...
+~
+17302028 134514696 -600 Y
+51 -11 -5 1d20+800 5d2+10
+0 0
+8 8 1
+0 939587560 1d1+1 8
+2 2 10 0
+3 2 10 0
+4 2 10 0
+5 2 10 0
+6 2 10 0
+7 2 10 0
+9 2 10 0
+10 2 10 0
+0 0 0 1
+K
+0 0 0 0 0 0 0
+#26109
+turkey~
+An angry turkey~
+An angry turkey is hiding in the bushes here, about to attack.
+~
+This turkey means business.
+You can tell he is angry at men for wanting him for their dinner, and now
+he is gonna kick some ass. Better beware!
+~
+541196 268992552 0 Y
+50 -8 -4 2d40+1250 3d3+3
+0 0
+8 8 1
+0 939556860 1d1+1 9
+2 2 5 0
+3 2 5 0
+4 2 5 0
+5 2 5 0
+6 2 5 0
+8 2 5 0
+9 2 5 0
+10 2 5 0
+7 2 5 0
+0 0 1 1
+T
+......An Angry Turkey's beak is foaming in rage!~
+T
+......An Angry Turkey gobbles menacingly!~
+K
+0 0 0 0 0 0 0
+#26110
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867816 0 Y
+31 2 10 1d100+900 3d6+3
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26111
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867816 0 Y
+31 -7 10 2d50+1500 4d6+3
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26112
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867784 0 Y
+31 -11 10 20d50+4000 4d7+12
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26113
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867784 0 Y
+31 -11 10 30d20+6000 4d10+45
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26114
+santa clause~
+Santa~
+Santa Clause is hiding in the shadows here.
+~
+Santa is cowering in the corner from the questers who mean to harm him.
+~
+8 1867784 0 Y
+31 -11 10 10d300+7000 5d15+75
+666 666
+8 8 1
+0 4256 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26115
+janitor~
+The Janitor~
+A janitor is walking around, cleaning up.
+~
+You see nothing special about him.
+Although he does seem to glance around him nervously...
+~
+12 0 0 Y
+31 -8 5 2d50+2500 2d30+10
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26116
+mercenary~
+the Mercenary~
+A Mercenary waiting for a job.
+~
+He looks pretty mean.
+A little more mean then the average mercenary in fact...
+~
+8 0 0 Y
+31 -8 5 2d50+2500 2d30+10
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26117
+drunk~
+The Drunk~
+A singing, happy Drunk.
+~
+A drunk who seems to be too happy, and to carry too much money.
+In between his hiccups he glances around himself knowingly.
+~
+8 0 0 Y
+31 -8 5 2d50+2500 2d30+10
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26118
+cityguard guard~
+The Cityguard~
+A cityguard stands here.
+~
+A big, strong, helpful, trustworthy guard.
+or so it would appear...
+~
+8 0 0 Y
+31 -8 5 2d50+2500 2d30+10
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26119
+cityguard guard~
+the Cityguard~
+A cityguard is here, guarding the gate.
+~
+A big, strong, helpful, trustworthy guard.
+But you catch a slight gleam in his eye...
+~
+8 0 0 Y
+31 -8 5 2d50+2500 2d30+10
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26120
+cityguard guard~
+The Cityguard~
+A cityguard stands here, protecting the innocent.
+~
+A very big, strong, helpful, trustworthy guard.
+Something about him seems less trustworthy then the others tho...
+~
+8 0 0 Y
+31 -8 5 2d50+2500 2d30+10
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26121
+beggar~
+the Beggar~
+A beggar is here, asking for a few coins.
+~
+The beggar looks like she is fed up with life.
+Is that really a she? Hmmm...
+~
+8 0 0 Y
+31 -8 5 2d50+2500 2d30+10
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26122
+guard cityguard mayorquest~
+A scared Cityguard~
+A cityguard of Midgaard is cowering in absolute terror here.
+~
+He screams like a woman as you tap him on the shoulder.
+~
+17301512 805603456 1000 Y
+35 -15 -10 50d50+15000 30d30+80
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26123
+spy mayorquest~
+A villainous spy~
+An evil spy is hiding in the shadows here.
+~
+He snarls at you as you find his hiding place.
+~
+17301512 958171264 -1000 Y
+35 -15 -10 50d50+15000 30d30+80
+1 1
+8 8 1
+0 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26124
+holder green~
+The green flag holder~
+The green flag holder waves his flag in the air proudly.
+~
+He waves his flag and laughs in your face!
+~
+16777226 264192 0 Y
+35 -15 10 2d50+1500 6d5+0
+1 1
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26125
+holder yellow~
+The yellow flag holder~
+The yellow flag holder waves his flag in the air proudly.
+~
+He waves his flag and laughs in your face!
+~
+16777226 264192 0 Y
+35 -15 10 2d50+1500 6d5+0
+1 1
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26126
+holder red~
+The red flag holder~
+The red flag holder waves his flag in the air proudly.
+~
+He waves his flag and laughs in your face!
+~
+16777226 264192 0 Y
+35 -15 10 2d50+1500 6d5+0
+1 1
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26127
+teen scared~
+A scared teen~
+A teen who has seen Jason nearby runs in frenzied panic.
+~
+This teen is wearing very trendy clothes and appears to have been at some
+sort of party when Jason struck. They don't even register your prescence,
+just continue running in circles screaming bloody murder.
+~
+9 32776 -500 Y
+31 -7 -4 2d50+1500 4d6+3
+0 0
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26128
+jason~
+Jason~
+Jason is walking slowly after you, gripping his machete coldly.
+~
+Jason is wearing a lovely plastic white hockey mask with maggots squirming
+underneath and a trendy dirty coverall. To compliment his outfit he
+accessorizes with a rusty machete.
+~
+8 32776 -500 Y
+32 -11 -4 2d50+3000 20d2+10
+0 0
+8 8 1
+0 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26129
+jason~
+Jason~
+Jason is walking slowly after you, gripping his machete coldly.
+~
+Jason is wearing a lovely plastic white hockey mask with maggots squirming
+underneath and a trendy dirty coverall. To compliment his outfit he
+accessorizes with a rusty machete.
+~
+17302028 32776 -500 Y
+50 -11 -4 2d50+3000 20d1+5
+0 0
+8 8 1
+0 939556856 0d0+0 0
+0 0 0 1
+T
+......Maggots squirm in Jason's eye sockets!~
+K
+0 0 0 0 0 0 0
+#26130
+turkey~
+An angry turkey~
+An angry turkey is hiding in the bushes here, about to attack.
+~
+This turkey means business.
+You can tell he is angry at men for wanting him for their dinner, and now
+he is gonna kick some ass. Better beware!
+~
+540684 268992552 0 Y
+50 -8 -4 2d40+100 3d3+3
+0 0
+8 8 1
+0 939556860 1d1+1 9
+2 2 5 0
+3 2 5 0
+4 2 5 0
+5 2 5 0
+6 2 5 0
+8 2 5 0
+9 2 5 0
+10 2 5 0
+7 2 5 0
+0 0 1 1
+T
+......An Angry Turkey gobbles menacingly!~
+T
+......An Angry Turkey's beak is foaming in rage!~
+K
+0 0 0 0 0 0 0
+#26131
+king turkey kombat tking~
+The Turkey King~
+The Turkey King reigns from his throne with an iron claw.
+~
+An ugly greedy king. He will do anything to earn money.
+~
+16793611 2184 0 Y
+60 -6 -6 1d50+1700 2d2+2
+0 0
+8 8 1
+69 939555712 0d0+0 0
+0 0 0 321
+K
+0 0 0 0 0 0 0
+#26150
+King Knight Man Soldier~
+The King's Knight~
+The King's Knight is here, serving his king.
+~
+The King's Knight is a loyal servant of the king.  He will serve his
+Liege until death.  The King does not want Humpty Dumpty back together
+again and if you intend to try, you must go through this brave knight.
+~
+8 262272 700 Y
+31 11 -8 40d60+4000 9d9+9
+10 621
+8 8 1
+0 12288 1d1+1 4
+3 2 15 0
+9 2 15 0
+4 1 30 0
+7 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26151
+King Footman Man Soldier~
+The King's Man~
+The King's Man is here, serving his king.
+~
+This is one of the King's Men.  He has vowed to serve his king in
+anyway he can.  He is strong and powerful.  If you want a piece of
+Humpty Dumpty, you will have to go through him.
+~
+8 262144 500 Y
+31 -8 -6 61d61+5000 8d7+11
+10 621
+8 8 1
+0 12288 1d1+1 3
+9 2 35 0
+3 1 25 0
+4 2 30 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26197
+ugly big monster~
+Big Ugly Monster~
+A ugly monster is sniffing around here.
+~
+This monster is so ugly that you eyes hurts!!!!!
+~
+536870920 524288 -1000 Y
+70 19 -20 10d50+7000 10d3+140
+1000000 1
+8 8 1
+63 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26198
+Ugly Creature~
+Ugly Creature~
+Ugly creature is walking around!!
+~
+This monster is so ugly that you eyes hurts!!!!!
+~
+536870920 524288 -1000 Y
+70 19 -20 10d50+7000 5d5+100
+1000000 1
+8 8 1
+63 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26199
+Enormous ugly monster~
+Enormous big and Ugly monster~
+Something big and ugly is walking around here!!~
+This monster is so ugly that you eyes hurts!!!!!
+~
+536870920 524288 -1000 Y
+70 19 -20 10d50+7000 10d3+140
+1000000 1
+8 8 1
+63 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

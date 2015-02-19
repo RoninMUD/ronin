@@ -1,0 +1,2043 @@
+#200
+A sheltered cove~
+   Gentle swells move underneath the tall canopy of trees, a slight breeze
+gently rustling the upper branches. Dappled light plays across the breakers
+as they lap gently around the pilings of a rickety wooden dock and crash 
+against a pebbled beach. Kelp and seaweed are in the water, the calm waters 
+providing a safe habitat for an abundance of sea creatures.
+~
+2 4 3
+D0
+~
+~
+0 0 201
+D2
+~
+~
+0 0 495
+S
+#201
+A drifwood covered shore~
+   Small pebbles cover the shoreline and stretching east and west piles of
+driftwood lay scattered about, stranded after summer storms churn the sea to a 
+chaotic froth. Crabs scuttle for their holes while the high trill of birds
+drifts across the whispering breeze that finds its way between the trees. 
+   A rickety pier to the east creaks and groans as it bobs against a small
+schooner with each cresting wave. 
+~
+2 0 3
+D1
+~
+~
+0 0 202
+D2
+~
+~
+0 0 200
+D3
+~
+~
+0 0 209
+S
+#202
+A driftwood covered shore~
+   Broken seashells and loose sand form swirling patterns on the shore. Chunks
+of driftwood and the occasional clear mound of dead jellyfish cause breaks in
+the clean lines of shore stretching to the east and west. Mounds of kelp and
+seaweed drift lazily up and down the beach as the incoming waves lap softly
+against them. 
+   To the east a small brig bumps against a rickety pier floating lazily in the 
+surf, while north the tree trunks part around a small trail leading deeper 
+inland.
+~
+2 0 3
+D0
+~
+~
+0 0 211
+D1
+~
+~
+0 0 203
+D3
+~
+~
+0 0 201
+S
+#203
+A driftwood covered shore~
+   Deep footprints churn up the sand and rock along the beach, while splinters 
+of wood and chunks of steel litter the beach. Discarded barrels and burlap 
+sacks are stacked in a haphazard fashion near the rickety pier to the south. 
+The chaotic scents of shipboard smells mingle with the fresh sea breeze floating in
+from the open sea. 
+   The rotting pier leads south towards a thick wooden loading ramp, while the
+beach stretches east towards the trees and back west along the smooth curve of
+the shore.
+~
+2 0 3
+D1
+~
+~
+0 0 212
+D2
+~
+~
+0 0 204
+D3
+~
+~
+0 0 202
+S
+#204
+A rickety wooden pier~
+   Slow ocean swells push the pier up against the side of a small brig. Cracked
+and warped boards, silver-grey with age and salt, creak and squeal as they 
+succumb to the stresses of the waves. Rotted pilings rear their bird stained 
+heads into the air, the smell of droppings and rot hanging heavy in the air. 
+Splashes of sea spray mist through the gaping holes between the badly patched 
+decking, covering the wooden planks with a slippery film. 
+   To the west a loading ramp leads up to the deck of a small brig, its
+gunports closed tight against the sea spray. The pier leads north back to the
+driftwood covered shoreline, its pebbled beach leading up to the sparse
+treeline.
+~
+2 0 3
+D0
+~
+~
+0 0 203
+D3
+~
+~
+0 0 205
+S
+#205
+On board a small brig~
+   Clean scrubbed boards stretch fore and aft of the main mast. Furled sails
+strain against thick knotted ropes, ends lashed tightly to the rails. Thick
+coils of hempen rope are stacked at the base of the mast, the fore and aft
+hatches standing wide open, the thick smell of sweat and gunpowder wafting up
+from the lower decks. 
+   Stairs lead up to the poop deck and the ships wheel is lashed tightly in 
+place, securing the tiller from the crashing waves below. The hatch behind the 
+main mast leads down to the gun deck below.
+~
+2 0 0
+D1
+~
+~
+0 0 204
+D2
+~
+~
+0 0 206
+D5
+~
+~
+0 0 207
+S
+#206
+On the poop deck~
+   Clean and polished rails surround the raised poop deck and brass lanterns hang
+from cleanly painted figures standing guard on the stern. The massive ship's
+wheel is carefully lashed to the deck, its spokes and handles gleaming dully
+from a careful polishing. A gleaming telescope and sextant are mounted by the
+rail. Two small ten pound guns tied down in their storage positions, fittings
+polished and shining.
+   Stairs lead down to the deck and pier to the north, while the view of the
+island stretches out beyond the bow.
+~
+2 0 0
+D0
+~
+~
+0 0 205
+S
+#207
+The gun deck~
+   The thick scent of gunpowder permeates everything. Soot and grease cover
+every surface, footprints and smears of grease leaving their indelible tracks
+upon wooden gun carriages and the thick curve of the hull. Cannon rest on heavy
+wooden trunnions, tightly secured to the deck so they won't roll with the pitch
+and heave of the sea. The thick trunk of the mast pierces the center of the low
+slung roof. Barrels of gunpowder are slung in heavy nets tight against the 
+hull, tall stacks of cannonball and iron chain carefully positioned near each
+firing position.
+   The open hatch leads up to the main deck, while a small set of stairs at the
+stern lead down to the bilge and pumps below.
+~
+2 0 0
+D4
+~
+~
+0 0 206
+D5
+~
+~
+0 0 208
+S
+#208
+The bilge~
+   Thick scummy water swirls around the deep recesses of the bilge. Heavy steel
+ingots lay stacked and rusting along the center of the keel as ballast. The 
+faint scratching of tiny claws whisper around the gloom, shadows flickering in
+the reaches of this cesspool of human filth and mildew covered sea water. Tall
+wooden pumps stand ready to expell tons of water overboard should the hull
+be breached during combat. Extra lengths of timber, hammers and nails are
+stacked in wet piles near the stairs for emergency repairs.
+   Small stairs lead up to the gun deck above, slime and rot rendering the
+steps slick and treacherous.
+~
+2 0 0
+D4
+~
+~
+0 0 207
+S
+#209
+A driftwood covered shore~
+   Thick scrub and low hanging boughs dip slowly into the dashing waves. Tall 
+boulders,  thick with moss and the patina of age rise sharply out of the sandy
+beach. Tall trees grow thickly together, shrubs and bushes creating a leafy
+barrier dancing slowly in the breeze. Drifts of sand pile themselves into the
+cracks and crevices forming small tide pools filled with anenmones and reddish
+brown sea stars. 
+   Sand and small pebbles push their way among the bushes to the north, forming
+a small path amongst the trees.
+~
+2 0 3
+D0
+~
+~
+0 0 210
+D1
+~
+~
+0 0 201
+S
+#210
+Along the treeline~
+   Tree trunks loom high into the sky, swaying and swinging with the wind
+as it pushes through the thick, green canopy. Stout branches reach between the
+trunks, intertwining into thick verdant barriers. Soft, cool sand mounds
+against the wall of forest forming shifting mounds of pebbles and debris.
+   Huge green boughs and spiney grass form impenetrable barriers into the
+forest. The distant babble of running water drifts between the trees over the
+crash of breakers from the south.
+~
+2 4 3
+D2
+~
+~
+0 0 209
+S
+#211
+Among the trees~
+   Thin whisps of a breeze push their way through the thick jungle canopy.
+Tall tree trunks reach upwards through the branches, sending sprawling roots
+crawling across a thick carpet of dense vegatation. The gurgle of water 
+reflects off the trunks, mixing and mingling with the sounds of woodpeckers
+and the occasional songbird.
+   The ground slopes gently down to the west, chunks of granite defining a
+path between the forest brush. Sand mixes with the dirt to the south, the tree
+trunks framing the sparkling ocean waves as they lap the pebble covered shore.
+~
+2 0 3
+D1
+~
+~
+0 0 213
+D2
+~
+~
+0 0 202
+S
+#212
+Among the trees~
+   Scattered trees march along down the shoreline, thick scrub grass poking its
+spiny leaves up through the sand. Small bushes sway as the breeze from the
+ocean works its way in through the cove and up the beach. Tiny pebbles roll 
+towards the water as crabs and small creatures scuttle towards their shelters.
+   The beach undulates its way to the west, pebbles and sand forming intricate
+swirls as the waves push them up the beach. To the east a snaking waterway is
+barely visible between the trunks of the trees.
+~
+2 4 3
+D1
+~
+~
+0 0 445
+D3
+~
+~
+0 0 203
+S
+#213
+Among the trees~
+   Chunks of granite lean inwards along the slight slope of the path. Sand and
+dirt gathering in crevices and cracks provide small shelters for ferns and
+other small leafy plants to grow. Roots wind their way up from the quickly
+fading path, twisting and reaching into the sandy hillside. A swiftly running
+stream is visible just beyond the rocky barrier, the gurgle of water drifting
+up between the plants. 
+   Tall rocks lean precariously out across the path, the rocks to the east
+looking a little less stable as they reach towards the stream.
+~
+2 0 3
+D1
+~
+boulder~
+8 0 460
+D3
+~
+~
+0 0 211
+S
+#214
+Entrance to a small fortified village~
+   Trimmed and sharpened logs march around the outer edges of a small village
+in a stout row. A small arched gate provides access onto the beaten dirt road
+winding its way between small wooden dwellings. Small trees and bushes climb
+the wooden walls, while thick swatches of green, musty moss grow on leaning
+rooftops and around rough stone chimneys.
+   Dust blows along the path into the village to the east, while the sounds of
+swiftly running water drift up between the trees to the west.
+~
+2 4 1
+D1
+~
+~
+0 0 215
+D3
+~
+~
+0 0 470
+S
+#215
+Inside a small village~
+   Long tendrils of smoke curl down from the small stone chimneys peeking over
+the rooftops of the surrounding huts. Tall grass grows unchecked between fence
+rails and cracked wooden boards. Wild flowers dance in clusters along the side
+of the road, bright patches of color against dreary, smoke stained buildings.
+   Small patches of grass and flowers line the road to the east leading into 
+the village, while to the west the forest canopy dips downwards, the sounds of
+rushing water faintly drifting over the breeze.
+~
+2 0 1
+D1
+~
+~
+0 0 216
+D3
+~
+~
+0 0 214
+S
+#216
+Along a well kept road~
+   Thick packed dirt piles in small ridges where wheel tracks and large
+footprints mingle together in a storyline of travel and activity. Small
+wooden fences line the sides of the road, various bleats and mooing disturbing
+the air as small farm animals graze contentedly behind their barricades. 
+   Whisps of smoke drift down from the surrounding rooftops as the road pushes
+between the houses to the east. To the west the forest trees can be seen
+between the leaning arches and open gates.
+~
+2 0 1
+D1
+~
+~
+0 0 217
+D3
+~
+~
+0 0 215
+S
+#217
+Along a well kept road~
+   Dust and dried leaves swirl through the center of the road as a light breeze
+pushes its way up from the south between small huts and pastures full of 
+grazing farm animals. The smell of smoke and barnyard refuse floats through the
+air mingling with the scent of wildflowers and freshly harvested grass. The 
+clang of steel and pleasant thunk of an axe echo between the walls of the huts.
+   The dirt road continues north and south into the village, while the door to
+a small log hut stands to the west.
+~
+2 0 1
+D0
+~
+~
+0 0 229
+D1
+~
+~
+0 0 218
+D2
+~
+~
+0 0 220
+D3
+~
+~
+0 0 216
+S
+#218
+Inside a log hut~
+   Smoke tendrils creep around the walls of the room from a small fireplace on
+the hearth. Small dusty glass windows direct faded beams of sunlight into the
+gloom of the hut's interior. A small reed mat covers the rough hewn floor, a
+small table and chairs sits near a sink and small wooden counter top. A narrow
+sleeping chamber is visible behind a thick canvas curtain near the warm hearth.
+   The thin door leads east to the road out of the village.
+~
+2 0 0
+D3
+~
+~
+0 0 217
+S
+#219
+Inside a log hut~
+   Dusty light filters through dim glass lighting up the interior of this small
+hut. Dirty dishes and broken cups lay strewn about the floor, small clumps of
+rotted food collecting small armies of scurrying creatures in the corner. A 
+pile of overturned furniture and shredded blankets settle quietly against the 
+wall, silent witness to a whirlwind of anger. 
+   The door to the east hangs askew from its frame, the dusty southern road of
+the village evident beyond.
+~
+2 0 0
+D1
+~
+~
+0 0 220
+S
+#220
+Southern road~
+   Small huts surround the end of the road, drooping faces leaning sadly in
+towards the road. Grass grows in thick, tall clumps around rotting fences and
+sagging door steps. Small piles of newly cut firewood are stacked against the
+faded walls, and small farm animals chomp at the tall grass. Gardens of 
+vegetables and small orchards are visible stretching towards the forest, the
+smell of fresh baked bread mixing in with the scents of farm life.
+   To the west a thin door hangs askew on the dilapidated hut, while to the
+east and south thick wooden doors are shut tight against the weather and
+outside world.
+~
+2 0 1
+D0
+~
+~
+0 0 217
+D1
+~
+~
+0 0 221
+D2
+~
+~
+0 0 222
+D3
+~
+~
+0 0 219
+S
+#221
+Inside a log hut~
+   Dust floats through the dim light above a clean swept floor, rush mats
+covering up the few rough spots in the well split logs. Mud is daubed into the
+chinks and cracks between the logs in the wall, sealing out the wind and 
+creatures that crawl inside searching for scraps of food. A small sleeping nook
+is dominated by a soft bed of fresh rushes, clean pillows and blankets waiting
+to be used again.
+   A thick wooden door leads west onto the southern road.
+~
+2 0 0
+D3
+~
+~
+0 0 220
+S
+#222
+Inside a tiny log hut~
+   Rough wooden planks form the floor, warped and splintered boards winding
+their way across the room. Cracks amongst the boards form an odd shaped square
+near one corner of the hearth. Thick dust coats the two small windows, the 
+gardens and orchards visible through the grime stretching towards the tall
+trees of the forest. A small overturned table and chair lay cracked and broken
+in the corner. Faint outlines of footprints disturb the layer of dust on the
+floor, which lead towards the corner of the hearth before disappearing.
+~
+2 0 0
+D0
+~
+~
+0 -1 220
+D5
+~
+trapdoor~
+1 0 223
+S
+#223
+A secret tunnel~
+   Dirt and mold tumble down the walls creating small piles of fresh dirt on
+the sloping floors of the tunnels. Ancient rotted beams sag heavily as they
+support the roof of the tunnel, various roots twisting and reaching their way
+around the beams to dangle in the tunnel. The crumbling walls press in
+tightly overhead.
+   The walls grow tighter to the east, the crumbling piles of dirt making
+the tunnel close in tight.
+~
+2 4 0
+D1
+~
+~
+0 -1 224
+S
+#224
+A secret tunnel~
+   Dry chunks of timber crack under the sagging weight of the narrow tunnel
+roof. Thick roots wind their way across the tunnel walls, pushing in against
+the tight walkway. Crumbling dirt piles fill the floor, fungi and dry smelling
+rot home to countless insects scurrying around the crevices.
+   The walls pinch tighter to the east, dirt and roots making passage more and
+more difficult.
+~
+2 0 0
+D1
+~
+~
+0 0 225
+S
+#225
+A secret tunnel~
+   Moss and thick clusters of roots brush down from the wet dirt ceiling. Small
+stones roll down the leaning dirt wall, piling into loose, slippery hills on 
+the tunnel floor. Broken supports lean at oblique angles as dirt crushes
+downwards.
+   The tunnel turns south into a tight, dark hole reeking of composted dirt and
+rotted refuse. 
+~
+2 0 0
+D2
+~
+~
+0 0 226
+S
+#226
+A secret tunnel~
+   Dank, moist dirt presses close against itself, as barely more then a crack
+still exists separating the two walls. Thick wooden beams lay rotted and
+splintered on the ground, half buried in the collapsing dirt wall. Thick roots
+choke the ceiling, small pebbles dropping in rapid succession onto small piles
+on the floor.
+   The tunnel skews crazily to the south, chunks of dirt falling free from the
+ceiling, beams groaning loudly under the weight of the ceiling pressing down, 
+a few broken boards once warned travelers to stay out of this area as it may
+soon collapse. To the east a faint wisp of fresh air squeezes through the 
+narrow tunnel.
+~
+2 0 0
+D1
+~
+~
+0 0 227
+D2
+The broken boards to the south once barred the cave to the south,
+the roots and dirt falling quickly as the roof threatens to collapse.
+~
+~
+0 0 293
+S
+#227
+A secret tunnel~
+   Damp dirt presses close, support beams buried beneath the loose soil. The
+smell of refuse permeates the dank darkness with its musky rot. Roots grasp
+downwards, and outwards from all sides reaching and snaking around anything they
+can find. 
+   A faint breeze whispers in from the west, faint sounds of footsteps and
+conversation barely audible in the stagnant dark.
+~
+2 0 0
+D1
+~
+~
+0 0 228
+S
+#228
+A secret tunnel~
+   Wide walls slump slowly to the ground in tall piles of dirt, sturdy wooden
+beams shore up the sides of the chamber. Dank, damp earth spills betwen small
+cracks and crevices where the wood has rotted away. A few rusted metal digging
+tools peek from under the collapsing dirt, handles long turned to mulch. Soft
+whispers of clean air swirl down from the roof of the chamber, snaking quietly
+between the cobblestone street above.
+   Rotted stairs lead upwards to a seam in the street above, while to the west
+a small dark opening is visible in the collapsed wall, rotten beams straining
+against the slumping dirt.
+~
+2 4 0
+D4
+~
+~
+0 0 3001
+S
+#229
+Northern road~
+   Smoke and dust swirl through the air, carrying with them the scent of sweat
+and barnyard animals. Tall grass bows in the wind as it marches towards the 
+edge of the forest surrounding the village. Small split rail fences line the
+road, their wood a faded silver grey. Birdsong and the sound of ducks fill the
+air with their voices, small ducklings splashing in a small pond near the trees.
+   The road turns to the east, packed dirt leading farther amongst the huts
+and farmyards. A knocking sound echos down the road from a loose screen door
+to the north flapping in the breeze, while a hut to the west has a stout 
+wooden door, closed tight against the world.
+~
+2 0 1
+D0
+~
+~
+0 0 231
+D1
+~
+~
+0 0 232
+D2
+~
+~
+0 0 217
+D3
+~
+~
+0 0 230
+S
+#230
+Inside a log hut~
+   Stacks of faded and worn books lie on a small table and chair. Mounds of 
+texts gather dust beside the cold stone hearth. Candle stubs are melted to
+almost every flat surface in the room, wicks drooping slowly into the wax as
+the body burns down. Rolls of parchment and ink lay scattered around and under
+the copious stacks of books, while tucked away in a small corner stands a small
+cot, thin blankets heaped haphazardly in the middle. 
+   A small clear space wends its way between fallen stacks of books and out the
+thick wooden door to the east.
+~
+2 0 0
+D1
+~
+~
+0 0 229
+S
+#231
+Inside a log hut~
+   Rafters lean crazily into the center of the room as the roof slowly pushes
+downwards. Broken roof tiles and chunks of wood litter the floor, covering the
+mats and furniture that was clustered around the small stone hearth. Glass from
+the windows has exploded upon the floor, tiny fragments of glass embeded into 
+the soft wood. 
+   To the south the door provides the only solid object remaining in the hut as
+it leads out to the Northern Road.
+~
+2 0 0
+D2
+~
+~
+0 0 229
+S
+#232
+Northern road~
+   Small tufts of grass poke up through loosely packed dirt road. Small ruts
+from a wheelbarrow or small cart leave dusty ridges as they wend their way
+between the buildings. The chatter of barnyard animals can be heard from behind
+many of the huts to the north and south, while the tops of the forest trees
+sway gently in the distance.
+   The dusty road travels east and west, winding its way between the small
+dilapidated buildings and moving towards the forest wall. Small wooden doors
+are tightly closed in small huts to the north and south.
+~
+2 0 1
+D0
+~
+~
+0 0 233
+D1
+~
+~
+0 0 235
+D2
+~
+~
+0 0 234
+D3
+~
+~
+0 0 229
+S
+#233
+Inside a log hut~
+   A small fire dances merrily on the clean swept stone hearth. A cluster of
+simple chairs surround it, small pillows providing a comfortable resting spot.
+A plain table is set with simple clay vessels and crude eating utensils, while
+some sort of meal bubbles in an iron pot near the fire. Two small rush filled
+mattresses are visible just behind a small curtain near the back of the room.
+   To the south a plain door opens onto the Northern Road.
+~
+2 0 0
+D2
+~
+~
+0 0 232
+S
+#234
+Inside a log hut~
+   The head of a small goat glares balefully through a small, splintered hole
+in the wall of the hut. Mold and rot have eaten away at the siding, the window
+sill and frame canted heavily inwards. Puddles of stagnant water collect mold
+and dirt in the corners, slowly rotting away the floor. The smell of the 
+barnyard permeates the entire room, dung, grass and sweat mixing with the sweet
+aroma of rot.
+  The thin door to the south barely latches as it leads out to the northern 
+road.
+~
+2 0 0
+D0
+~
+~
+0 0 232
+S
+#235
+Northern road~
+   Grass grows thickly in the dirt road, wheel ruts and heavy footprints
+mixing with the tall tufts of grass blowing in the wind. Small wooden fencing
+lines the road, keeping a variety of animals from wandering willy nilly around
+the village. Smoke curls down between the small huts lining the street, pushing
+aside small branches and twigs from the thickly growing bushes.
+   The road ends here. A small hut stands to the east, while to the south, the
+leftover pieces of a small local shop displays its wares in a grimy, soot
+stained window.
+~
+2 0 1
+D1
+~
+~
+0 0 236
+D2
+~
+~
+0 0 237
+D3
+~
+~
+0 0 232
+S
+#236
+Inside a log hut~
+   Bare rafters, stained dark with smoke and soot, support a sagging roof while
+fresh cuts of meat hang down below. Blood stains the floor where the cuts of 
+meat have dripped while the smoke and heat cure the meat into winter
+provisions. A thick wooden table stained a dark brown stands in the middle
+of the room, a collection of knives arranged carefully on its surface. Two 
+wooden barrels stand nearby, flies buzzing around the collection of offal
+rotting inside.
+   A thick wooden door to the west leads out to the end of the Northern
+Road.
+~
+2 0 0
+D3
+~
+~
+0 0 235
+S
+#237
+A quaint local shop~
+   Musty bales of hay and small rotted barrels are piled against the walls. 
+Long wooden tables hold a variety of iron trinkets, rusted and pitted, some
+broken and worn with age. Simple wooden chairs hang from the rafters while in
+a small corner a long wooden canoe takes shape from the center of a small log.
+A thin wooden counter runs along the far wall, cracked and broken display
+windows holding a few shiny curiosities.
+  The faded and hanging door to the north leads out to the northern road.
+~
+2 0 0
+D0
+~
+~
+0 0 235
+S
+#238
+A small eddy~
+   Calm waters swirl gently amongst low hanging branches. Small piles of leaves
+twist slowly amongst the reeds and drift against the muddy bank. Clouds of 
+gnats form small clouds, then collapse in a symphony of confusion. Thick roots
+reach down from tall trees lining the pool, shoots and tendrils reaching
+hungrily for the water.
+  Roots and knots reach into the water to the east, climbing up the muddy river
+bank. To the west the waterway rushes past on its way inexorably towards the 
+sea.
+~
+2 4 6
+D1
+A cluster of roots and vines climb up the muddy
+bank to the east.
+~
+roots vines~
+11 0 239
+D3
+~
+~
+0 0 467
+S
+#239
+Along a small forest path~
+   The wet smell of damp soil and decaying pine needles fills the air with its
+thick scent. A calm quiet permeates the forest, the occasional twitter of a 
+bird or rapping of a woodpecker breaking the stillness. Gentle wisps of wind
+reach their weak arms down between the trees causing a few leaves to rustle 
+faintly.
+   To the west thick roots push their way down a muddy bank towards the gurgle
+of water below. A small path winds its way through the trees to the east.
+~
+2 4 3
+D1
+~
+~
+0 0 240
+D3
+A cluster of roots and vines twist their way down the bank into the small
+pool below.
+~
+roots vines ~
+11 0 238
+S
+#240
+Along a small forest path~
+   A light breeze pushes through the tops of the tall trees. The scent of musky
+pine and damp soil filter through the bushes and branches. A soft carpet of
+leaves and pine needles blankets the forest floor, broken branches and bent
+brush hinting at the movement of forest animals.
+   A small animal path pushes its way between the undergrowth to the north and
+west. 
+~
+2 0 3
+D0
+~
+~
+0 0 241
+D3
+~
+~
+0 0 239
+S
+#241
+Along a small forest path~
+   Thick heavy boughs hang down into the small openings between the shrubs,
+dropping thick layers of pine needles and small cones onto the floor of the
+forest. Small heaps of droppings attract swarms of flies as they mark the
+territory of small woodland creatures. Tracks and marks around the base of tree
+trunks outline small animal shelters, the occasional scent of musk rising into
+the air where a male has been courting.
+   A small hole in the shrubs shows an animal path leading north and south into
+the forest.
+~
+2 0 3
+D0
+~
+~
+0 0 242
+D2
+~
+~
+0 0 240
+S
+#242
+Along a small forest path~
+   Cool air rushes down from the canopy as the trees thin out amongst the scrub
+branches waving in a silent dance. Tall grasses and thick shrubs gather tight
+beneath the tree trunks, small tunnels and holes threading amongst the twigs.
+White wood and crystallized sap mark the boundaries of a small creature's 
+territory. Tufts of white and brown fur stick out on strong twigs near the
+ground.
+   Branches and tufts of grass have been brushed aside to the north, west and
+south, a small trail visible leading into the undergrowth.
+~
+2 0 3
+D0
+~
+~
+0 0 248
+D2
+~
+~
+0 0 241
+D3
+~
+~
+0 0 243
+S
+#243
+Along a small forest path~
+   An ominous stillness hangs heavy in the air. Leaves hange motionless, 
+waiting for a wisp of air to set them in motion. Branches drip sap in long slow
+strands along their thick limbs. Thick layers of pine needles coat the forest
+floor, the thick roots of nearby trees erupting through the ground to reach 
+grasping tendrils across the soil before diving back underground.
+   To the north a small forest path can be seen wending its way amidst the tall
+tree trunks while to the east the slight trill of songbirds can be heard 
+amongst the branches.
+~
+2 0 3
+D0
+~
+~
+0 0 244
+D1
+~
+~
+0 0 242
+S
+#244
+Along a small forest path~
+   Bird calls carry across the still air, bright flashes of color darting from
+branch to branch amongst the thick green canopy. Small twigs and bits of moss
+clatter down between the branches as nests form under the careful guidance of
+the fluttering avians. Small boulders jut out of the dark loam, thick
+carpets of moss and fungus growing densely on their sides. 
+   The boulders and tree trunks outline a small path to the north, the branches
+and leaves of the shrubs to the east show the outline of a small animal track 
+wending its way into the forest.
+~
+2 0 3
+D0
+~
+~
+0 0 245
+D2
+~
+~
+0 0 243
+S
+#245
+Along a small forest path~
+   Chipmunks chase squirrels up and around the tall, moss covered boulders
+pushing up between the trees. The still air carries the crack of breaking twigs
+and rustle of tree branches echoing against the tree trunks. The faint smell of
+fresh, damp soil drifts up from small gopher holes and the new dens of small
+animalls tucked between the roots and trunks of the ancient trees.
+   A muddy collection of paw and footprints pushes its way through the damp
+undergrowth to the east, while to the south the boulders force a clear pathway
+into the forest.
+~
+2 0 3
+D1
+~
+~
+0 0 246
+D2
+~
+~
+0 0 244
+D3
+~
+~
+0 0 5
+S
+#246
+Along a small forest path~
+   Thick underbrush chokes the roots and trunks of the trees pushing upwards
+towards the sky. Heavy creepers climb the ancient trunks, pulling downwards
+upon low hanging branches as if the forest is trying to reclaim the tree for
+itself. Cobwebs dangle thickly across the creeping forest vines, clinging and
+sticking to anything that flutters into them. Small creatures and an abundance
+of insects are wrapped up tight inside the thick webbing.
+   Copious mounds of cobweb drape the dim path to the south, while to the west
+and north thick moss and rock push the forest aside allowing a glimpse at the
+dim forest interior it reveals.
+~
+2 0 3
+D0
+~
+~
+0 0 267
+D2
+~
+~
+0 0 247
+D3
+~
+~
+0 0 245
+S
+#247
+Along a small forest path~
+   Thick cobwebs choke at the creeping vines and thick grass carpeting the
+forest floor. The air is very still, the song of birds fades amongst the soft
+rustle of branches as the wind pushes at the high leafy canopy. Pine needles
+and dead leaves litter the cobweb mat slowly molding into the dank musty soil.
+   Cobwebs lead north amongst the trees while to the west and south the trees
+and branches push themselves out of the heavy webs and reassert their control
+of the forest.
+~
+2 0 3
+D0
+~
+~
+0 0 246
+D1
+~
+~
+0 0 249
+D2
+~
+~
+0 0 248
+S
+#248
+Along a small forest path~
+   A few wispy cobwebs hang from the draping moss, dangling from branches and
+weaving between the tops of the ferns and grass covering the forest floor.
+Small mounds of fresh dirt push the fragrant scent of fresh dirt and damp earth
+into the air, the tracks of small creatures wending their way carefully between
+the roots and trunks of the small shrubs.
+   Cobwebs coat the path to the north, while small shrubs form a tight tunnel
+to the south and a small creature path is visible snaking into the forest.
+~
+2 0 3
+D0
+~
+~
+0 0 247
+D2
+~
+~
+0 0 242
+S
+#249
+A small clearing~
+   The wind pushes down into the tall grass, whipping between the scattered
+tree trunks unchecked by the sparse canopy surrounding the clearing. A few 
+bushes poke their flowering heads above the stretch of grass bowing in the 
+wind, petals holding tight to their buds. The buzz of bees and the gentle
+flap of wings are clearly audible as they wind their erratic way across the
+clearing.
+   The grass waves and blows off to the east, while the forest barrier stands
+quiet and dark, brooding over the clearing to the west.
+~
+2 0 2
+D1
+~
+~
+0 0 250
+D3
+~
+~
+0 0 247
+S
+#250
+A small clearing~
+   The sky looms overhead, clear and open as it fights against the dark gloom 
+of the forest surrounding the open grass. Small indentations in the tall grass 
+keep a short history of the movement of a few animals, small circles showing
+where they rested before moving on, back to the shelter of the forest.
+   The tall grass spreads out in all directions, waving and bending beneath the
+wind as it marches towards the forest boundary.
+~
+2 0 2
+D0
+~
+~
+0 0 260
+D1
+~
+~
+0 0 258
+D2
+~
+~
+0 0 251
+D3
+~
+~
+0 0 249
+S
+#251
+A small Clearing~
+   A few thin shrubs fight against the overwhelming multitude of grass choking
+their roots and branches. Tiny birds flit between thin branches, searching for
+small insects and berries. A few weak trees spread their canopy high over
+the grass braving the sea of waving stalks as they escape the anonimity of the
+forest.
+   The tall stalks bow their heads to the shadowy might of the forest
+to the south. North it marches on across the clearing, waving and weaving as
+small animals push it aside in their quest for food.
+~
+2 0 2
+D0
+~
+~
+0 0 250
+D2
+~
+~
+0 0 252
+S
+#252
+Along a small forest path~
+   A few clumps of grass push in between the trunks of the trees, fighting for
+space amongst the dense undergrowth. Thick moss hangs in long strands from the
+thick branches layering the forest canopy above, moving in silent tribute to
+the slight breeze. Ancient forests of mushrooms stand in silent circles amongst
+the ferns and damp soil.
+   To the north the forest thins into a wide open clearing, tall grasses waving
+in the open air. A small forest path wends its way amongst the trunks into the
+heavy gloom of the thick forest canopy.
+~
+2 0 3
+D0
+~
+~
+0 0 251
+D1
+~
+~
+0 0 253
+S
+#253
+Along a small forest path~
+   The heavy groan of branches rubbing amongst the tall trees disturbs the
+tjocl silence in the dead air. The scent of churned soil and rotting wood
+permeates the air and hangs thickly between the trees. Occasionally a dead pine
+cone bounces off the soft forest floor, rolling to rest between some scrub,
+waiting for a squirrel or chimpmunk to carry it off. Small holes beneath the
+roots of the trees form an underground network of tunnels for furry creatures.
+   Thick hanging boughs push downwards into the path and gloom filled forest to
+the east. To the west a small animal track wanders its way carelessly amongst
+the trees.
+~
+2 0 3
+D1
+~
+~
+0 0 254
+D3
+~
+~
+0 0 252
+S
+#254
+Deep within the forest~
+   Heavy stillness hangs quiet in the thick stagnant air. The musky smell of
+rotted wood and ancient lichen dangles undisturbed like branches on the trees.
+Dark, jagged rocks push their way up from beneath the soft damp soil like 
+behemoths rising from the waves. Moss and lichen crawl up the damp surface of
+the rock growing thick and undisturbed as nearby ferns drip small droplets of
+water from their tall fronds.
+   A thick tangle of roots rises high into the air to the east, a small opening
+visible between them. To the north and west the darkness of the forest
+stretches between the thick tree trunks.
+~
+2 0 3
+D0
+~
+~
+0 0 255
+D1
+~
+~
+0 0 259
+D3
+~
+~
+0 0 253
+S
+#255
+Deep within the forest~
+   A thick blanket of moss covers the forest floor, soft and spongy as it 
+swallows up all traces of animal or humanoid passage. Thick ferns push 
+their fronds over the cracks and crevices between the crawling roots and 
+branches of the ancient trees. Tall forests of mushrooms grow thick in the damp
+earth, spreading their soft canopies over the pine needle covered ground. 
+   A small trail of moss pushes north amongst the trees while to the south the
+soft dirt winds its way through and over the tall granite rocks.
+~
+2 0 3
+D0
+~
+~
+0 0 256
+D2
+~
+~
+0 0 254
+S
+#256
+Deep within the forest~
+   Water fountains out between a small cleft in the granite, trickling and
+gurgling down the lichen covered face of the rock it turns the soft dirt forest
+floor into a swampy mess of mud and rotted wood. Trickling out of the muddy
+pool, a small rivulet pushes between the thick carpet of moss and grasping 
+roots. 
+   The rotting trunk of a fallen tree bridges the soupy mess of water and mud
+pushing north amongst the trees. To the south the thick carpet of moss extends
+amongst the boulders and trees.
+~
+2 0 3
+D0
+~
+~
+0 0 257
+D2
+~
+~
+0 0 255
+S
+#257
+Deep within the forest~
+   Light granite boulders push up from the moss covered floor, thick roots 
+crawling across their faces as the trees wage an ageless struggle for control
+of the forest depths. Small ferns grow in dirt filled crevices, waving their
+fronds in the gentle breeze cheering on the competition. A gentle breeze works
+its way through the high forest canopy carrying the gentle trill of songbird
+floating through the trees.
+   To the west the forest opens into a wide clearing, tall grass dancing like
+the crashing waves of the ocean. The forest to the south is shrouded in gloom,
+a damp musky smell drifting out between the trunks.
+~
+2 0 3
+D2
+~
+~
+0 0 256
+D3
+~
+~
+0 0 258
+S
+#258
+A small clearing~
+   Tall grasses fight the ferns and mosses from the forest for space amongst
+the thin trees. A light breeze whips between the sparse branches carrying the
+swooping birds from tree to tree looking for small twigs and mosses for their
+nests. A few sparse trees venture out amongst the grass, desperately trying to
+block out the sky with their thin, windswept branches.
+   To the east the forest gloom pushes against the edge of the clearing, while
+to the west the grasses march on triumphantly waving in the wind.
+~
+2 0 2
+D1
+~
+~
+0 0 257
+D3
+~
+~
+0 0 250
+S
+#259
+A cavern of roots~
+   Thick roots push aside into dank walls of dirt and crumbling granite. Moss
+grows thick and full across the floor, tiny ferns shooting their bushy fronds
+up amongst the sponge. Small insects burrow thin tunnels into the soft dirt
+wall, tiny piles of loam trickling down into tiny mounds near the floor. The
+thick trunk of an ancient tree looms high overhead, damp tap root growing 
+thick and strong along the wall.
+   The hanging roots to the south shift with the breeze outside, the deep 
+forest visible through them.
+~
+2 0 0
+D3
+~
+~
+0 0 254
+S
+#260
+A small clearing~
+   Tall stalks of grass dance with the stiff breeze whistling across the open
+clearing. A few trees try and push their branches farther out from the safety
+of the forest boundary, reaching upwards to block out the sky. A few trails
+wind their way across the grass as small animals search for food or shelter.
+   To the north the forest looms over the clearing, silent and brooding, while
+south the grass dances and weaves across the glade.
+~
+2 0 3
+D0
+~
+~
+0 0 261
+D2
+~
+~
+0 0 250
+S
+#261
+Along a small forest path~
+   Dry pine needles carpet the faded pathway amongst the trees. Fallen logs rot
+amid the dense undergrowth, small hollows and nests formed between the 
+broken branches and root filled holes. Small branches sway and rub high up in
+the forest canopy filling the air with the low groans of fatigued wood. 
+   The faint forest path winds its way north through the trees, while to the
+south it opens up into a wide field of grass.
+~
+2 0 3
+D0
+~
+~
+0 0 262
+D2
+~
+~
+0 0 260
+S
+#262
+Along a small forest path~
+   Thin patches of underbrush have been cleared and stacked in neat bundles 
+beneath the trees. A few newly cut tree stumps dot the forest, crushed branches
+and ferns marking the path of the fallen tree. Thick pine needles cover the
+forest floor, small mushrooms and plants uprooted and crushed in a seemingly
+chaotic pattern. A few small tracks wander their way through the confusion
+poking into and around various plants.
+   A well cleared path establishes itself to the east, the faint sounds of
+civilization drifting through the woods. To the north and south the forest 
+quickly swallows up any traces of outside disturbances.
+~
+2 0 3
+D0
+~
+~
+0 0 263
+D1
+~
+~
+0 0 268
+D2
+~
+~
+0 0 261
+S
+#263
+Along a small forest path~
+   Heaps of dried, rotten logs lay strewn about, cracked branches jutting
+upwards at odd angles. Small burrows and dens have been carved beneath the
+fallen logs, small paths tracing their way through the scattered debris. A few
+small green shoots tentatively push their way through the scattered dust and
+wooden shards, reaching upwards, trying to regain control of the forest floor.
+   To the south the trees and scrub thin out, a few white nubbed stumps visible
+through the thin trunks. The forest gloom stretches darker to the west, tall
+ferns waving their wide fronds in a gentle dance.
+~
+2 0 3
+D2
+~
+~
+0 0 262
+D3
+~
+~
+0 0 264
+S
+#264
+Along a small forest path~
+   Towering ancient oaks stand close, their heavy, hanging boughs looming over
+to the ground. Thick trunks spread their crawling roots across the ground, 
+small caves and dwellings housing a variety of forest creatures. Heavy mounds
+of dense moss grow in abundance in the deep shadowy gloom of the trees, small
+mushroom forests mimicking the spread and symmetry of the natural forest above.
+   To the west and east small animal trails wend their way delicately among the
+heavy tree trunks above.
+~
+2 0 3
+D1
+~
+~
+0 0 263
+D3
+~
+~
+0 0 265
+S
+#265
+Along a small forest path~
+   Tall granite boulders push back against the heavy forest trees, their
+disruption letting a tiny sliver of the sky push its way through the thick
+green canopy. Roots snake their way up the granite faces, desperately trying
+to pull them back into the soft dark earth. Small ferns and thin, weak trees
+perch high atop the boulders, reaching upwards, trying to push their way into
+the high, thick canopy above.
+   The small forest path pushes its way between the rocks and moss to the east,
+while south a few loose stones tumble down a narrow crevice leading deeper
+among the trees.
+~
+2 0 3
+D1
+~
+~
+0 0 264
+D2
+~
+~
+0 0 266
+S
+#266
+Along a small forest path~
+   Loose pebbles bounce and tumble along a thin granite ledge looking out
+amongst the forest layer. Thick growing underbrush and a multitude of fallen
+logs create a chaotic landscape beneath the tall trees and shady canopy of the
+forest. The smell of rotting wood and damp soil drifts between the trees,
+floating along the lazy breeze swirling down between the leaves.
+   The granite ledge leads north amongst a few boulders, disappearing amongst
+the trees. To the south the ledge tapers downwards and ends in a small jump 
+down amongst the bush on the forest floor.
+~
+2 0 3
+D0
+~
+~
+0 0 265
+D2
+The path ends here with a small jump from the ledge.
+~
+ledge forest floor~
+10 0 267
+S
+#267
+Along a small forest path~
+   Dark soil spills down from a slight rise, erosion pushing the granite rock
+out amongst the tree trunks. Trees reach their grasping roots out wide across
+the uneven ground as their trunks tilt wildly. The gaping maw of exposed root
+balls pock the forest floor where trees have given up their grasp of the ground
+crashing down amongst the brush.
+   To the north a small granite ledge pushes up along the edge of the landslide
+while south the forest stretches far beyond the dense underbrush.
+~
+2 0 3
+D0
+A small rock ledge protrudes from the hillside offering a way farther
+into the forest.
+~
+ledge rock~
+10 0 266
+D2
+~
+~
+0 0 246
+S
+#268
+Outside a patched wooden wall~
+   Stumps and branches of cut and trimmed trees push the forest boundary back
+from the rotting timber wall. New timber logs are crudely lashed against cracks
+and rotted openings along the wall, fresh sap sticky on the unweathered bark.
+A rough hewn log gate sags heavily on its hinges under a small rotting walkway,
+a small rampart of misshapen logs providing some cover against attack.
+   The sagging gate to the east provides a splintered view of a rough fort and
+encampment beyond. The thin edges of the forest cast a somber gloom to the west.
+~
+2 4 3
+D1
+~
+~
+0 0 272
+D3
+~
+~
+0 0 262
+S
+#269
+A dilapadated hut~
+   Thin walls and warped boards let smoke and cold seep in from the outside, a
+weak fire on the hearth flickering feebly as the cold makes it cower on the
+logs. Rough furniture is scattered about the corners of the hut, splinters worn
+smooth by use. A small ladder in the corner leads up to a small sleeping loft
+above the main floor, a thin straw mattress poking its end off the ledge.
+   The rickety door to the south opens into a small courtyard inside the
+rotting walls of the compound.
+~
+2 0 0
+D2
+~
+~
+0 0 272
+S
+#270
+Next to a small pond~
+   Muddy grass lines the shore of a small murky pond. Tall reeds bend in the
+slight breeze, the small ripples of a family of ducks lapping against their 
+stalks. The occasional splash as a fish jumps to catch a gnat or water skitter
+is the only disturbance in the deep, still water. 
+   The shore leads back south among the huts and buildings inside the walls
+of the compound.
+~
+2 0 1
+D2
+~
+~
+0 0 273
+S
+#271
+A ramshackle hut~
+   Fresh flowers fill the air with their fragrance, almost covering the sharp
+tang of ash and smoke from the fireplace. A grimy window looks out near the
+dilapidated wall, small circles rubbed in the dirt giving small pretense to
+cleanliness. A reed stuffed cushion sits on a rough log bench facing the fire,
+a small table barely supporting a few well thumbed books nearby.
+   A carefully patched door manages to hang square on the wall to the south
+leading outside and behind the looming fortress walls.
+~
+2 0 0
+D2
+~
+~
+0 0 274
+S
+#272
+Inside the rotting walls~
+   Thin grass pokes up amongst the raked dirt ground spreading out inside the
+rotten and patched wooden wall. Scrawny mutts run about between the huts and
+ramshackle buildings scattered inside the walls. Thin smoke and the scent of
+the latrines mix and swirl as a breeze brushes across the grounds, the endless
+scent of cooking adding a pungent taste to the eclectic mix of smells.
+   A small hut with a heavily canted door stands to the north, while the thick
+smell of human waste comes from the latrine pits dug to the south.
+~
+2 0 1
+D0
+~
+~
+0 0 269
+D1
+~
+~
+0 0 273
+D2
+~
+~
+0 0 275
+D3
+~
+~
+0 0 268
+S
+#273
+Among the huts~
+   Smoke from various fireplaces leaks from the cracks and rot in the
+ramshackle walls of the surrounding buildings. Broken glass lies strewn about
+the base of a few huts, frames fallen and rotten in disrepair. Scrubby grass
+sprouts from the base of the ill fitted walls, trying desperately to find
+purchase in the dry, packed dirt.
+   The collection of buildings extends to the west and to the east behind the
+tall wooden walls of the fort. To the south the looming opening to the fort is
+visible standing open to the grounds while to the north a small pond etches out
+its borders near the crumbling fence.
+~
+2 0 1
+D0
+~
+~
+0 0 270
+D1
+~
+~
+0 0 274
+D2
+~
+~
+0 0 276
+D3
+~
+~
+0 0 272
+S
+#274
+Behind the fort~
+   High wooden walls cast long shadows and a dark gloom between the fort and
+the surrounding fence. Freshly cut wooden logs are fitted tightly together, mud
+and wattle daubed into the cracks keeping the breeze and weather outside. A few
+stray barnyard animals wander along the rotting timbers that form the exterior
+wall, nibbling carefully at the weak grasses growing near the base of the
+fence.
+   A small door to the north leads into a ramshackle hut, while leaning and
+run-down dwellings spread out to the west. 
+~
+2 0 1
+D0
+~
+~
+0 0 271
+D3
+~
+~
+0 0 273
+S
+#275
+The latrine pits~
+   Deep pits scar the earth beneath a series of splintered wooden benches. A
+small trickle of water sluices some of the refuse and waste away, while pushing
+the more solid waste into mounds and small dams along its path. The trunks of
+dead orchard trees hold up the walls of the pits, piles of rotting fruit
+crumbling into the waste below. 
+   The grounds spread north before the molding gates and rotting walls.
+~
+2 0 1
+D0
+~
+~
+0 0 272
+S
+#276
+Entrance to the fort~
+   Freshly cut logs frame the open doorway to the tower fortress. Sticky sap
+drips from the scars of missed axe blows, forming little rivulets that ooze 
+their way towards the ground. A small opening in the walkway overhead provides
+a convenient murder hole in the event of attack. The ground is hard packed dirt
+kept relatively free of grass and weeds except for around the base of the stout
+looking walls.
+   The hall extends to the east towards a winding, broken set of stairs, while
+to the south the fort opens into a common area.
+~
+2 0 0
+D0
+~
+~
+0 0 273
+D1
+~
+~
+0 0 290
+D2
+~
+~
+0 0 277
+S
+#277
+The common room~
+   Tall stone hearths stand at opposite ends of the room, fires blazing merrily
+in an attempt to warm the room. Long trestle tables occupy the center of the
+room, crude wooden benches lining the sides. Broken crockery and clay mugs lie
+strewn across the sod, littering the ground with sharp fragments. Chunks of 
+decaying food lie in a heap near the wall, the clean white bones covered in 
+with teeth marks from the ugly curs that sleep nearby.
+   The fort expands to the east down a narrow hallway, while to the south a
+small, reasonably furnished room is visible behind a thick curtain.
+~
+2 0 0
+D0
+~
+~
+0 0 276
+D1
+~
+~
+0 0 283
+D2
+~
+curtain~
+8 0 278
+S
+#278
+A private study~
+   A few splintered shelves line the log walls, a number of worn maps and 
+decaying books lining the shelves. A small hearth blazes merrily between a 
+clean window, smoke rising up a small chimney into the cool outside air. A 
+small table is covered with a map of the surrounding countryside and a small
+pen and inkwell. A wide wooden seat supports a thick reed filled cushion, a 
+heavy blanket draped nearby.
+  To the north the curtain blocks the noise of the wide common room.
+~
+2 0 0
+D0
+~
+curtain~
+8 0 277
+S
+#279
+A dank hallway~
+   Soft, black dirt covers the narrow hallway. The timbers supporting the
+short walls show signs of rot near the ground, tiny fungi tracing their way up
+the cracked, wet boards. The heavy ceiling sags low in the middle of the hall,
+warped boards trying to push their way free of the constrictive servitude they
+were forced into.
+   To the north the hallway reaches a junction with another small hall near the
+entrance to the fort, while to the south a guardroom blocks the passageway to
+the kitchens.
+~
+2 0 0
+D0
+~
+~
+0 0 283
+D2
+~
+~
+0 0 280
+S
+#280
+A small guardroom~
+   Rickety bunk beds line one wall, threadbare covers draped across thin reed
+mattresses. Stretched between pillars and along the walls, a dozen hammocks
+woven from thick hempen rope are hung one over the other. A few sea chests dot
+the floor, the occasional trouser leg or cuff of a tunic peeking out from
+beneath the iron bound lid. 
+   To the west a small room contains dozens of weapons in various stages of
+decay, while down a short corridor to the east the kitchen is visible, a few
+pungent aromas drifting through the open door.
+~
+2 0 0
+D0
+~
+~
+0 0 279
+D1
+~
+~
+0 0 281
+D3
+~
+~
+0 0 282
+S
+#281
+A cockroach littered kitchen~
+   Chunks of rotten and decayed food litter the soggy damp ground, the various
+droppings of different rodents mixing with the trimmings and slop from the
+kitchen counters. Stacks of greasy pans, food baked and burned onto their sides
+are mounded in lopsided piles in various corners of the countertop, dirty 
+spoons and knives waiting to be used again resting on small wooden holders.
+   To the south the larder door stands open, grains and flour spilling out of
+ripped and shredded bags.
+~
+2 0 0
+D2
+~
+~
+0 0 289
+D3
+~
+~
+0 0 280
+S
+#282
+A rust filled armory~
+   Rotten racks filled with rusting swords and daggers of various sizes and
+shapes fill the center of the room. Various pole arms line the walls, spear
+tips and halberd heads chipped and pitted with years of rust. Rotten leather
+tunics and helms lay piled on the dirt ground, tooth marks and cobwebs the only
+visible signs of use on them.
+   The door leads east to the guards room and the kitchens of the fort.
+~
+2 0 0
+D1
+~
+~
+0 0 280
+S
+#283
+A dirt covered hallway~
+   A small candle gutters in a tin holder hanging from a crooked nail in the
+warped wall boards. The low ceiling drips a foul smelling liquid into the
+swampy ground. A few weak mushrooms grow along the rotten and chipped boards
+at the base of the wall.
+   To the west the hallway leads to tall, open entrance to the fort while to
+the south a small sagging hall leads towards an open guardroom. A narrow set
+of rickety stairs lead upwards and out of sight.
+~
+2 0 0
+D2
+~
+~
+0 0 279
+D3
+~
+~
+0 0 277
+D4
+~
+~
+0 0 284
+S
+#284
+At the top of the stairs~
+   Narrow floorboards twist and warp against the constraints of the weak nails
+holding them down. A few dusty windows look out across the haphazard encampment,
+dirty plumes of smoke occasionaly brushing by. Cracked boards in the ceiling
+let slivers of sky peer in from outside, a faint trickle of a breeze whispering
+in amongst the weakened wood. 
+   A small winding staircase leads down to the entrance hall below, while to
+the south the hallway leans precariously.
+~
+2 0 0
+D2
+~
+~
+0 0 285
+D5
+~
+~
+0 0 283
+S
+#285
+A cracked and leaning hall~
+   Rotten boards sag under the weight of the walls and doors nearby. Soft and
+cracked boards drop chunks of wood and sawdust through the floor. Splintered
+boards form rough walls fighting vainly to keep the wind and weather outside
+the fort. The fresh droppings of tiny rodents litter the canted floor, small
+openings in the rotten wood providing ample hiding spots.
+   To the north a small set of stairs climb up from the lower level. A small
+door to the south is cracked open exposing a small sleeping chamber, while to
+the west a foul scent wafts under the badly fit doorway.
+~
+2 0 0
+D0
+~
+~
+0 0 284
+D2
+~
+~
+0 0 288
+D3
+~
+~
+0 0 286
+S
+#286
+A filthy sitting room~
+   A wide open room stretches across the upper floor. Thin mats and piles of
+loose dirt clutter the warped and rotten floorboards. A cluster of ancient
+furniture gathers around a small stone fireplace, the splintered remains of a
+few ancient wooden chests stacked inside. Tall, grime coated windows look out 
+over the rotten wooden wall surrounding the compound towards the tall trees
+of the forest beyond.
+   To the east the cracked door leads out into a tilted hallway, while to the
+south a small sleeping chamber is visible through a small doorway.
+~
+2 0 0
+D1
+~
+~
+0 0 285
+D2
+~
+~
+0 0 287
+S
+#287
+A pungent sleeping chamber~
+   A small bed occupies the center of the narrow, dank room. Rotten and molding
+bed clothes lay strewn about the thin reed mattress. The wood paneling on the
+headboard is cracked and peeling with age. A small window looks out onto the 
+compound, a splintered chair sitting in a nearby corner. A small shelf holds
+several worm eaten books and a small candle holder, wax candle drooping sadly,
+tears of wax forming long streaks down its sagging sides.
+   A small door opens north into an open sitting chamber.
+~
+2 0 0
+D0
+~
+~
+0 0 286
+S
+#288
+A small sleeping chamber~
+   Rough canvas drapes hang heavily over clean window panes, a fresh straw filled
+mattress lies on a newly made split log bed. Heavy woolen blankets and sheep
+skin pillows lie jumbled on the side. A heavy wooden sea chest, locked tight
+with a heavy iron hasp, stands at the foot of the bed, the splintered wooden
+floor patched with new boards below. 
+   To the north the door opens to a tilted, rotten hallway leading towards a 
+small set of stairs to the fortress floor below.
+~
+2 0 0
+D0
+~
+~
+0 0 285
+S
+#289
+A molding larder~
+   Piles of grain spill across the dank dirt floor, split woven sacks bulging
+with spoiled rice and wheat. Tiny droppings from nameless creatures mix with
+the spilled grains ground into the dirt. Rotten shelves lean heavily under the
+weight of small wooden barrels, bags of salt and last years smoked beef.
+   The door to the larder is completely seized up to the north, its hinges 
+caked with rust and the boards in the door sagging heavily against the ground.
+~
+2 0 0
+D0
+~
+~
+0 -1 281
+S
+#290
+The base of a creaking staircase~
+   Warped walls lean in heavily, sagging low under the oppressive weight of the
+fortress. Damp rotten wood sags heavily overhead, dripping foul smelling water
+onto the dank dirt floor.
+   Soft, molding stairs lead upwards curving out of sight. To the west the
+hallway leads towards the entrance of the fort.
+~
+2 0 0
+D3
+~
+~
+0 -1 276
+D4
+~
+~
+0 -1 291
+S
+#291
+A creaking staircase~
+   Cracked and warped boards twist their way free of the walls. A stiff breeze
+rips and tugs at the walls, swirling up and down the narrow stair. Soft, rotten
+wood sags on each step, holes and cracks showing the teeth and claw marks of 
+small rodents.
+   The staircase creaks and winds its way upwards, the bottom of the stair just
+visible around the corner below.
+~
+2 1 0
+D4
+~
+~
+0 0 292
+D5
+~
+~
+0 0 290
+S
+#292
+Higher up a creaking staircase~
+   Chunks of rotten wood drop through the rotten stair into the black depths
+below. A thin warped railing leans down, cracked under the weight of rotten
+wood. A small window hangs in place with a rusted nail, a few of the dirty
+glass panes broken on the ground.
+   The stairs reach a small landing above, while the bottom is lost around a
+corner below.
+~
+2 1 0
+D4
+~
+~
+0 0 294
+D5
+~
+~
+0 0 291
+S
+#293
+Under a crushing pile of dirt~
+   A loud cracking sound echos wetly as a timber gives way and a crushing pile
+of dirt, roots and rock crushes down obliterating everything in its way. A dark
+suffocating cloud of dirt chokes the last remnants of air as the tunnel fills
+with dirt.
+~
+2 2 0
+S
+#294
+A rotted landing~
+   Rotten floorboards have given way in the middle of the room, a whistle of
+pungent air rushing out from below. A small window looks upwards, showing
+nothing but the dirt covered glass and the sky beyond. A few rusty nails poke
+their way out from the floorboards reaching and tearing at anything that moves.
+   To the north a crooked doorway leads to a small platform, its railing lying
+in cracked and shattered pieces, while the decking barely clings to the side of
+the building by two rusty nails. The stairs reach upwards, while the damp, 
+slick wood treads disappear around a bend below.
+~
+2 0 0
+D0
+The floor of the landing seems to rotten to bear any weight.
+~
+~
+0 0 295
+D4
+~
+~
+0 0 296
+D5
+~
+~
+0 0 292
+S
+#295
+A completely rotten viewing platform~
+   A loud groan echoes through the air as the platform tears away from the side
+of the tower. Tilting heavily, it pulls its rusting nails free of their walls,
+bouncing and spinning as it rushes towards the ground below.
+~
+2 65536 0
+S
+#296
+High up a creaking staircase~
+   Thin gusts of wind tear and rage against the cracked walls surrounding the
+tower. Rusted nails lie strewn on the soggy, sagging stairs, having worked 
+their way free from their prisons and letting nature work its course against 
+the loose boards. 
+   The rickety stairs creak their way up to a small landing above, the rotting
+wood steps lead downwards, disappearing in a twist of the building.
+~
+2 1 0
+D4
+~
+~
+0 0 297
+D5
+~
+~
+0 0 294
+S
+#297
+The top of a creaking staircase~
+   A wide open platform sways in the stiff breeze, broken glass lying strewn
+across the splintered and warped floor leaving broken gaps in the wall where
+windows once blocked the weather. A cracked and rusted bell, frayed and broken
+hemp rope torn loose from the beams above, is jammed sideways into the rotten 
+floor. 
+   To the east and south a small balcony juts out over the open compound
+offering wide views of the forest and sparkling sea in the distance.
+~
+2 0 0
+D1
+~
+~
+0 0 299
+D2
+~
+~
+0 0 298
+D5
+~
+~
+0 0 296
+S
+#298
+A small balcony~
+   Small splintered boards sag precipitously under the canted weight of the
+platform. A new wooden railing lines the edge, the forest canopy stretching
+far out beyond the compound, the winding waterways glinting beneath the leafy
+canopy.
+   The top of the tower stairs are visible just inside to the north.
+~
+2 0 0
+D0
+~
+~
+0 0 297
+S
+#299
+A small lookout platform~
+   Freshly split logs form a new solid floor for this platform. The wreckage of
+the old platform is visible splintered across the peak of the hall far below. 
+The compound can be seen inside the circling, rotted wall vainly trying to hold
+the encroaching forest at bay. Far to the south the waves of the endless sea flash
+their foam caps as they pound against the shores of a small island.
+   To the west the platform enters a small room at the top of the tower
+stairs.
+~
+2 0 0
+D3
+~
+~
+0 0 297
+S
+#0
+$~

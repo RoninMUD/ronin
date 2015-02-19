@@ -1,0 +1,1334 @@
+#4000
+A Path Through The Hills~
+   You are on a narrow path surrounded by steep, cold hills.  There is not
+much wildlife around here.  The only trees that stick out from the hills
+are mainly dead or fallen over.  A cold breeze blows across your shoulders
+making you shiver.  In the far off north you see a dark mountain jutting out
+from the hills.  You feel the forces of evil approach you from the north.
+~
+40 4 4
+D0
+~
+~
+0 0 4001
+D1
+~
+~
+0 -1 9600
+D2
+~
+~
+0 0 3500
+S
+#4001
+A Path Through The Hills~
+   You are on a steep path through some cold hills.  You are surrounded by
+a cold, threatening feeling.  You can see a dark mountain in the
+nearby north.  You see dark clouds around the peak of the mountain, and
+various streams that run along the sides.  A strange feeling sweeps over
+you as you gaze to the north.
+~
+40 4 4
+D0
+~
+~
+0 0 4002
+D2
+~
+~
+0 0 4000
+D3
+~
+~
+0 0 2501
+E
+stream~
+A couple of small streams that run down from the mountain flow here.
+~
+S
+#4002
+Before A Dark Mountain~
+   The narrow path opens up a little at this point.  To the north you glimpse
+at the huge foreboding mountain.  You can see dark shadows looming around at
+the peaks.  The sense of evil is very apparent here.  You wonder what dark
+things are going on with this mountain.  A cave leading deep inside the
+mountain lies just north of here.  In the far northwest you see a huge
+castle, and to the east there is a lovely oaken forest.  A large sign juts
+from the ground here.
+~
+40 4 4
+D0
+~
+~
+0 0 4010
+D1
+~
+~
+0 0 11601
+D2
+~
+~
+0 0 4001
+D3
+~
+~
+0 0 12960
+E
+sign~
+The sign says:
+***********************************************************************
+*                                                                     *
+* ******************************************************************* *
+* *                                                                 * *
+* *                    The Mines of Moria                           * *
+* *                                                                 * *
+* *                  Enter at your own risk.                        * *
+* *                                                                 * *
+* *     Welcome to the mines of Moria.. At present there are only   * *
+* *           3 levels. Later the plan is to build 20...            * *
+* *                                                                 * *
+* *     Are you below level 3 Don't enter..                         * *
+* *     Are you below level 8 Don't enter alone..                   * *
+* *                                                                 * *
+* ******************************************************************* *
+*                                                                     *
+***********************************************************************
+~
+S
+#4005
+A Deep Hole~
+   You find yourself down in a deep hole.  There are rotting corpses piled
+up down here.  The smell is overcoming.  You look up and realize there 
+is no way you can get back out of this hole.  Unless you can recall, 
+it looks like your doomed down here like the rest of the corpses. 
+~
+40 5 0
+S
+#4010
+A Damp Cave~
+   You are standing in a damp eerie cave.  There is fungus and slime mold
+growing on the walls here.  The smell in here makes you feel sick.  
+The cave is very cramped and wet, water leaks from the walls and the floor
+is very slippery.  Fresh air and light wafts in from the south.  To the
+north a small tunnel leads on into the mountain.
+~
+40 9 2
+D0
+~
+~
+0 0 4011
+D2
+~
+~
+0 0 4002
+S
+#4011
+A Narrow Tunnel~
+   You force your way through a very small and narrow tunnel.  As you try your
+best to make your way through, your hands slip on the slimy goo on the wall.
+There is smelly fungus and mold growing all over the place here.  You find it
+hard to breathe in such a small tunnel.  To the south there is a cave.  To the
+north it appears as if the tunnel continues on.
+~
+40 9 3
+D0
+~
+~
+0 0 4014
+D2
+~
+~
+0 0 4010
+S
+#4012
+A Small Tunnel~
+   You force your way through a very small and narrow tunnel.  As you try your
+best to make your way through, your hands slip on the slimy goo on the wall.
+There is smelly fungus and mold growing all over the place here.  You find it
+hard to breathe in such a small tunnel. There is a cave to the north of here,
+to the east there are more tunnels.
+~
+40 9 3
+D0
+~
+~
+0 0 4016
+D1
+~
+~
+0 0 4013
+S
+#4013
+A Dusty Tunnel~
+   You are standing in a dry and dusty tunnel.  The air here is very dry and
+it causes you to cough.  There is dust and dirt covering the floor.  A few
+footprints of unknown origin are set in the dust.  You wonder what is 
+inhabiting this mountain that would leave such strange footprints?
+The tunnel continues to your east, and west.
+~
+40 9 3
+D1
+~
+~
+0 0 4014
+D3
+~
+~
+0 0 4012
+E
+footprints~
+The footprints here are impressed in the loose dust.  They are big prints.
+~
+S
+#4014
+A Wet Tunnel~
+   You are standing in a small wet tunnel.  There is water leaking from the
+walls of the tunnel, causing deep puddles on the muddy floor.  You find
+your feet sinking in rather deep in certain places.  There is an awful
+stench coming from the caves to the north.  The tunnel also continues
+south, and west.
+~
+40 9 3
+D0
+~
+~
+0 0 4018
+D2
+~
+~
+0 0 4011
+D3
+~
+~
+0 0 4013
+S
+#4015
+A Small Tunnel~
+   You are in another cramped tunnel.  You find it hard to move around here.
+The walls and floor here are stained with blood.  As you walk you find
+yourself slipping on pools of strange liquid.  You hear grunting sounds
+echoing off the walls.  There are tunnels leading north and west of here.
+~
+40 9 3
+D0
+~
+~
+0 0 4019
+D3
+~
+~
+0 0 4014
+S
+#4016
+A Large Cavern~
+   You are standing in a large cavern.  You gaze around at this tremendous
+place. There is water running down from cracks in the ceiling and walls.
+You hear the sound of the water echo throughout this place.  You can also
+hear echos of chanting, grunts, and screams.  You wonder what is going on
+in this place. The cavern continues east and west.  To your south is a 
+small tunnel.
+~
+40 9 2
+D1
+~
+~
+0 0 4017
+D2
+~
+~
+0 0 4012
+D3
+~
+~
+0 0 4023
+S
+#4017
+A Large Cavern~
+    You are standing in the eastern part of this  large cavern.  You gaze 
+around at this tremendous place.  There is water running down from 
+cracks in the ceiling and walls.  You hear the sound of the water 
+echo throughout this place.  You can also hear echos of chanting, 
+grunts, and screams.  You wonder what is going on in this place.
+To the west is another part of this large cavern.
+~
+40 9 2
+D3
+~
+~
+0 0 4016
+S
+#4018
+A Small Cave~
+   You are standing in a small cave.  There is fresh blood running down the 
+walls, and dripping from the ceiling.  There must have been a ferocious 
+attack in this room.  You find yourself walking in puddles of clotting
+blood. It sticks to the bottom of your boots.  In the corner here you
+notice a mangled corpse.  You cannot tell what kind of corpse this is,
+perhaps it may be an adventurer like yourself?  There are tunnels 
+leading north and south of here.
+~
+40 9 2
+D0
+~
+~
+0 0 4025
+D2
+~
+~
+0 0 4014
+E
+pile bones~
+Well you better watch out - some of the bones are human !
+~
+E
+corpse~
+A mangled corpse is here, you see blood dried around what is left of its eyes
+and there are maggots crawling around the old flesh.
+~
+E
+walls~
+Fresh blood streams down the wall here.  Someone must be really sick!
+~
+S
+#4019
+A Narrow Tunnel~
+   You are in another cramped tunnel.  You find it hard to move around here.
+The walls and floor here are stained with blood.  As you walk you find
+yourself slipping on pools of strange liquid.  You hear grunting sounds
+echoing off the walls.  There is an intersection of tunnels to your north
+and to the south there are more tunnels.
+~
+40 9 3
+D0
+~
+~
+0 0 4026
+D2
+~
+~
+0 0 4015
+S
+#4020
+A Hole in the Floor~
+   You are standing in an open tunnel.  There is a large hole cut into
+the floor here, exposing a small tunnel below here.  You be careful
+not to accidentally slip and fall into the hole.  There is a ladder
+that leads down into the tunnel below.  There are also more tunnels
+to the north of here.
+~
+40 13 3
+D0
+~
+~
+0 0 4027
+D5
+~
+~
+0 0 4064
+S
+#4021
+The Moria Escape~
+   You are standing in a very magical place.  You sense the peace here.  You
+look around and see the signs of the real Morians that once inhabited
+these caves.  This is where they escaped the deadly wrath of the Orcs.  You
+see a glow coming from a hole on the west wall.  You get the feeling this is
+where they escaped these vile caves.  Below here is the hole where the
+Morians left their beloved mines and rich caves.  There is a tunnel 
+leading back east.
+~
+40 13 3
+D1
+~
+~
+0 0 4022
+D3
+~
+hole~
+9 -1 4031
+D5
+~
+~
+0 0 4115
+E
+hole~
+A small hole has been cut into the rock here, most likely as an escape purpose.
+A second hole lies below you, it has been cut deep into the floor.
+~
+S
+#4022
+A Damp Tunnel~
+   You are standing in a small wet tunnel.  There is water leaking from the
+walls of the tunnel, causing deep puddles on the muddy floor.  You find
+your feet sinking in rather deep in certain places.  To the west you see
+a large hole in the floor.  There is a cavern to the east of here.
+~
+40 9 3
+D0
+~
+~
+0 0 4024
+D1
+~
+~
+0 0 4023
+D3
+~
+~
+0 0 4021
+S
+#4023
+A Large Cavern~
+   You are standing in the western part of this  large cavern.  You gaze 
+around at this tremendous place.  There is water running down from 
+cracks in the ceiling and walls.  You hear the sound of the water 
+echo throughout this place.  You can also hear echos of chanting, 
+grunts, and screams.  You wonder what is going on in this place.
+There is a tunnel leading west, and to the east is another part of
+this cavern.
+~
+40 9 2
+D1
+~
+~
+0 0 4016
+D3
+~
+~
+0 0 4022
+S
+#4024
+A Damp Tunnel~
+   You are standing in a small wet tunnel.  There is water leaking from the
+walls of the tunnel, causing deep puddles on the muddy floor.  You find
+your feet sinking in rather deep in certain places.  There is fungus on
+the walls here, and everything is covered in gross slime.  The tunnels
+continue on to the south, and west.
+~
+40 9 3
+D2
+~
+~
+0 0 4022
+D3
+~
+~
+0 0 4059
+S
+#4025
+A Small Tunnel~
+   You are in another cramped tunnel.  You find it hard to move around here.
+The walls and floor here are stained with blood.  As you walk you find
+yourself slipping on pools of strange liquid.  You hear grunting sounds
+echoing off the walls.  There is a small cave to the south, and to the
+east you see more tunnels.
+~
+40 9 2
+D1
+~
+~
+0 0 4026
+D2
+~
+~
+0 0 4018
+S
+#4026
+An Intersection of Tunnels~
+   You find yourself in an intersection of tunnels.  There are many small
+tunnels branching off in all directions.  In the sand you see that
+this place must get a lot of use, there are footprints of a dozen or 
+so animals that must have recently passed this way.  There are sounds
+coming from all directions, you find it hard to distinguish between
+them. A strong odor comes down from the north.  To the east, south,
+and west, there are more tunnels.
+~
+40 9 3
+D0
+~
+~
+0 0 4028
+D1
+~
+~
+0 0 4027
+D2
+~
+~
+0 0 4019
+D3
+~
+~
+0 0 4025
+S
+#4027
+A Small Tunnel~
+   You are in another cramped tunnel.  You find it hard to move around here.
+The walls and floor here are stained with blood.  As you walk you find
+yourself slipping on pools of strange liquid.  You hear grunting sounds
+echoing off the walls.  To the north you detect some fresh air.  There is
+a tunnel west.  To the south you see a strange opening.
+~
+40 9 3
+D0
+~
+~
+0 0 4029
+D2
+~
+~
+0 0 4020
+D3
+~
+~
+0 0 4026
+S
+#4028
+A Smelly Tunnel~
+   You stand in a smelly old tunnel.  The stench of rot and decay comes down
+from the north.  You also see a light emitting from the north.  You wonder
+what is going on up there.  The sounds of chanting echos on the walls here.
+The tunnel opens up to the north and south.
+~
+40 9 3
+D0
+~
+~
+0 0 4030
+D2
+~
+~
+0 0 4026
+S
+#4029
+A Cave~
+   You are in a wide open cave that is filled with fresh air.  A strong wind 
+blows from the north.  This cave is rather light, since there is plenty of
+sunlight flowing in from the north.  To the south you see the darkness from
+inside caves of the mountain.  To the north you see a beautiful valley.
+~
+40 9 2
+D0
+~
+~
+0 0 4031
+D2
+~
+~
+0 0 4027
+S
+#4030
+An Evil Cave~
+   You are standing in a lit cave.  There are ancient symbols engraved in the
+walls. You gaze up at a hole in the ceiling.  You can see the sky through
+this hole, as it spills light into these dark caves.  There is a large
+sacrificial table in the center of the cave, on the table is a badly
+rotted corpse.  Also, there are other corpses on the floor here.  The
+stench is almost unbearable here.  You feel very sick.  The only exit
+from here is back to the south.
+~
+40 0 2
+D2
+~
+~
+0 0 4028
+E
+corpse corpses~
+IT STINKS!
+~
+E
+symbols~
+Arcane symbols are engraved within the walls here.  They look magical.
+~
+E
+hole~
+You gaze up at a hole in the ceiling, it allows the sun to pierce through here.
+~
+E
+table~
+This is an old sacrificial table with a rotting corpse on it.
+~
+S
+#4031
+The Valley~
+   You are standing in a beautiful valley.  A fresh crisp wind fills you with
+a refreshing feeling.  A small stream runs fresh waters by here, you feel
+very relaxed here.  You are surrounded by hills, and to your south is a 
+cave that leads within the dark mountain.  A gravel road leads north of
+here.
+~
+40 0 2
+D0
+~
+~
+0 -1 5601
+D2
+~
+~
+0 0 4029
+S
+#4050
+The Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+There are burned out torches and candles on the walls here.  The
+tunnels continue east and south.
+~
+40 9 3
+D1
+~
+~
+0 0 4051
+D2
+~
+~
+0 0 4053
+E
+candles~
+These torches and candles have long burned out.
+~
+E
+torches~
+These torches and candles have long burned out.
+~
+S
+#4051
+The Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  The tunnels continue east and west.
+~
+40 9 3
+D1
+~
+~
+0 0 4052
+D3
+~
+~
+0 0 4050
+E
+footprints~
+There are some unknown footprints here.
+~
+S
+#4052
+A Room in the Tunnels~
+   You are at an opening in the maze of tunnels.  There are plenty of
+torches on the walls here, lighting the room.  There is fungus and
+slime coating the walls.  On the floor you see a trapdoor.  You wonder
+what lurks below here.  Do you dare explore further down here?
+There is also more tunnels to the west.
+~
+40 8 3
+D1
+~
+~
+0 0 4100
+D3
+~
+~
+0 0 4051
+D5
+~
+trapdoor~
+1 -1 4075
+E
+trapdoor~
+There is a trapdoor leading down here.  It is covered in moss and dust.
+~
+S
+#4053
+A Turn in the Maze~
+   You are at a turn in the maze of dirty old tunnels.  Fungus and slime
+cover the walls and floor, emitting a sickening smell.  There is mold
+hanging from the ceiling and odd stains marking the walls.  There are
+some footprints in the dirt here.  These tunnels look like they get a 
+lot of use.  You also see tiny insects scurrying about in the dirt.
+There is a cave to the east of here, and more tunnels lead north.
+~
+40 9 3
+D0
+~
+~
+0 0 4050
+D1
+~
+~
+0 0 4054
+S
+#4054
+A Large Cave~
+   You are standing in a large cave.  There is a fire blazing in the center
+of the cave that warms you.  The room is smoked up from the fire.  There
+are many footprints around the cave.  There is definitely some activity 
+along here.  Perhaps you should be careful where you go.  There is
+a tunnel leading west, and to the east you see some movement.
+~
+40 8 2
+D1
+~
+~
+0 0 4055
+D2
+~
+~
+0 0 4056
+D3
+~
+~
+0 0 4053
+E
+fire~
+A fire blazes here, making a lot of smoke.
+~
+S
+#4055
+A Dirty Guard Shack~
+   You are standing in a small cave that now serves the purpose of a guard
+shack. There are wooden planks on the floor, and a small table in the
+middle of the room.  There are some torches lighting the room, and there
+is a small fireplace on the north wall.  You notice some small broken
+weapons scattered about the floor.  It is probably best if you leave
+this place, there is an exit to your west.
+~
+40 9 3
+D3
+~
+~
+0 0 4054
+E
+fireplace~
+A small fireplace is on the north wall.
+~
+E
+weapons~
+Various broken weapons are scattered about the floor.
+~
+E
+table~
+A small wooden table with some cards on it is here.
+~
+S
+#4056
+A Large Cave~
+   You are standing in a large cave.  There is a fire blazing in the
+room north of here.  There are many footprints around the cave.  
+There is definitely some activity  along here.  Perhaps you should
+be careful where you go.  
+~
+40 8 2
+D0
+~
+~
+0 0 4054
+D2
+~
+~
+0 0 4061
+E
+fire~
+Well, hrm - It looks somehow quite warm..!
+~
+S
+#4057
+A Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+The maze continues on north and south.
+~
+40 9 3
+D0
+~
+~
+0 0 4055
+D2
+~
+~
+0 0 4062
+D4
+~
+~
+0 0 0
+S
+#4058
+A Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+The maze continues on south and west.
+~
+40 9 3
+D2
+~
+~
+0 0 4063
+D3
+~
+~
+0 0 4057
+S
+#4059
+A Crumbled Room~
+   You are standing in a crumbled tunnel.  The rocks have crumbled from
+the walls here.  This tunnel is extremely damp and beaten up.  Jagged
+rocks jut out from the floor and wall.  You should be careful not to
+lose your footing here, you might hurt yourself.  There are traces of
+blood on some of the rocks here.  You move one large boulder exposing
+the half eaten corpse of a human covered in maggots.  You quickly
+move the boulder back from the shocking site.  You feel like this
+part of the tunnel dips slightly down.  The tunnel continues back
+east.
+~
+40 13 3
+D1
+~
+~
+0 0 4060
+D5
+~
+rocks~
+8 -1 4052
+E
+corpse~
+Its a half eaten human corpse, with maggots crawling through it.
+~
+E
+boulder~
+This boulder seems to be covering up something.
+~
+E
+rocks~
+There rocks are rather loose.  There seems to be something under them.
+~
+S
+#4060
+A Maze of Tunnels~
+   You are standing in a small wet tunnel.  There is water leaking from the
+walls of the tunnel, causing deep puddles on the muddy floor.  You find
+your feet sinking in rather deep in certain places.  There is fungus on
+the walls here, and everything is covered in gross slime.  The tunnels
+continue on to the east, and west.
+~
+40 9 3
+D1
+~
+~
+0 0 4061
+D3
+~
+~
+0 0 4059
+S
+#4061
+A Damp Tunnel~
+   You are standing in a small wet tunnel.  There is water leaking from the
+walls of the tunnel, causing deep puddles on the muddy floor.  You find
+your feet sinking in rather deep in certain places.  There is fungus on
+the walls here, and everything is covered in gross slime.  The tunnels
+continue on to the west, north, and south.
+~
+40 8 2
+D0
+~
+~
+0 0 4056
+D2
+~
+~
+0 0 4065
+D3
+~
+~
+0 0 4060
+S
+#4062
+A Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+The maze continues on east and west.
+~
+40 9 3
+D1
+~
+~
+0 0 4063
+D3
+~
+~
+0 0 4061
+S
+#4063
+A Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+You also see tiny insects scurrying about in the dirt.  You see a cave
+to the north, and to the east there are more tunnels.
+~
+40 9 3
+D0
+~
+~
+0 0 4054
+D1
+~
+~
+0 0 4064
+S
+#4064
+A Hole in the Ceiling~
+   You are standing in a small tunnel.  In the ceiling here there has been
+a large hole cut to access the tunnels above.  There is a lot of strange
+fungus growing down here.  There is also a lot of slime coating the walls
+and floor.  More tunnels lie west, and there is a ladder leading up.
+~
+40 9 3
+D3
+~
+~
+0 0 4063
+D4
+~
+~
+0 0 4020
+E
+ladder~
+An old wooden ladder leads up from here.
+~
+S
+#4065
+The Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+There is a cave north of here, and the maze of tunnels continues on
+to the east.
+~
+40 9 3
+D0
+~
+~
+0 0 4061
+D1
+~
+~
+0 0 4066
+S
+#4066
+A Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+There is a cave south of here, and the maze of tunnels continues on
+to the north and east.
+~
+40 9 3
+D0
+~
+~
+0 0 4062
+D1
+~
+~
+0 0 4067
+D2
+~
+~
+0 0 4069
+S
+#4067
+A Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+The maze continues on north and west.
+~
+40 9 3
+D0
+~
+~
+0 0 4063
+D3
+~
+~
+0 0 4066
+S
+#4068
+Northwest Corner of the Cave~
+   You are standing in the northwest corner of a very large cave.  You
+ever seen so much growth of fungus before.  The walls are covered in
+mushrooms and other forms of fungus.  There are insects and small 
+animals crawling through the fungus feeding on it.  The ground is
+moist here, and there are various impressions on the floor. 
+~
+40 9 2
+D1
+~
+~
+0 0 4069
+D2
+~
+~
+0 0 4070
+S
+#4069
+Northeast Corner of the Cave~
+   You are standing in the northeast corner of a very large cave.  You
+never seen so much growth of fungus before.  The walls are covered in
+mushrooms and other forms of fungus.  There are insects and small 
+animals crawling through the fungus feeding on it.  The ground is
+moist here, and there are various impressions on the floor.  To
+the north is a small tunnel.  The cave continues on to your south
+and west.
+~
+40 9 2
+D0
+~
+~
+0 0 4066
+D2
+~
+~
+0 0 4071
+D3
+~
+~
+0 0 4068
+S
+#4070
+Southwest Corner of the Cave~
+   You are standing in the southeast corner of a very large cave.  You
+never seen so much growth of fungus before.  The walls are covered in
+mushrooms and other forms of fungus.  There are insects and small 
+animals crawling through the fungus feeding on it.  The ground is
+moist here, and there are various impressions on the floor.
+~
+40 9 2
+D0
+~
+~
+0 0 4068
+D1
+~
+~
+0 0 4071
+E
+impressions~
+These impressions on the moist floor look like footprints.
+~
+S
+#4071
+The Southeast Corner of the Cave~
+   You are standing in the southeast corner of a very large cave.  You
+never seen so much growth of fungus before.  The walls are covered in
+mushrooms and other forms of fungus.  There are insects and small 
+animals crawling through the fungus feeding on it.  The ground is
+moist here, and there are various impressions on the floor.
+~
+40 9 2
+D0
+~
+~
+0 0 4069
+D1
+~
+~
+0 0 4072
+D3
+~
+~
+0 0 4070
+E
+mushrooms~
+Some big mushrooms are growing here.
+~
+E
+fungus~
+This fungus seems to grow everywhere down here.
+~
+E
+impressions~
+Some dents into the moist earth is made here.  Maybe it is footprints?
+~
+S
+#4072
+A Maze of Tunnels~
+   You are in a maze of dirty old tunnels.  Fungus and slime cover the walls
+and floor, emitting a sickening smell.  There is mold hanging from the
+ceiling and odd stains marking the walls.  There are some footprints
+in the dirt here.  These tunnels look like they get a lot of use.
+There is a cave to the west, and you see a hole south of here.
+~
+40 9 3
+D1
+~
+~
+0 0 4073
+D2
+~
+~
+0 0 4074
+D3
+~
+~
+0 0 4071
+S
+#4073
+End of the Tunnels~
+   You are at a dead end in the maze of dirty old tunnels.  Fungus
+and slime cover the walls and floor, emitting a sickening smell.
+There is mold hanging from the ceiling and odd stains marking the
+walls. There are some footprints in the dirt here.  These tunnels 
+look like they get a lot of use. The only exit is from the way
+in which you came in.
+~
+40 9 3
+D3
+~
+~
+0 0 4072
+S
+#4074
+The Hole~
+   You enter into a small room with a hole dug into the floor.  You
+sense danger near here.  An odd smell rises up from this hole.  
+You shudder at the thought of what may be down there.  Should you
+dare check out what lurks beneath?
+~
+40 9 3
+D0
+~
+~
+0 0 4072
+D5
+~
+~
+0 0 4005
+S
+#4075
+The Orcish Outpost~
+   You are standing in the Orcish outpost of the mountain.  The entire 
+room is made of gold and silver.  You are amazed that the Orcs 
+wasted so much of these minerals in building this place.  Fresh
+blood and gore covers the floor, the Orcs are a very dirty, yet 
+dangerous race.  This is the place where the Orcs plan out their 
+evil plot for their next brutal takeover.  You sense evil magic at
+work around here.  This place is probably crawling with Orcs, its 
+best to be careful around here.  The outpost continues east, and
+west of here.  There is a hallway leading north.  A trapdoor
+is above you.
+~
+40 8 0
+D0
+~
+~
+0 -1 4080
+D1
+~
+~
+0 -1 4078
+D3
+~
+~
+0 -1 4076
+D4
+~
+trapdoor~
+1 -1 4052
+S
+#4076
+The Orcish Outpost~
+   You are standing in the Orcish outpost of the mountain.  The entire 
+room is made of gold and silver.  You are amazed that the Orcs 
+wasted so much of these minerals in building this place.  Fresh
+blood and gore covers the floor, the Orcs are a very dirty, yet 
+dangerous race.  This is the place where the Orcs plan out their 
+evil plot for their next brutal takeover.  You sense evil magic at
+work around here.  This place is probably crawling with Orcs, its 
+best to be careful around here.  There are exits north and east
+of here.
+~
+40 8 0
+D0
+~
+~
+0 -1 4077
+D1
+~
+~
+0 -1 4075
+S
+#4077
+The Orcish Outpost~
+   You are standing in the Orcish outpost of the mountain.  The entire 
+room is made of gold and silver.  You are amazed that the Orcs 
+wasted so much of these minerals in building this place.  Fresh
+blood and gore covers the floor, the Orcs are a very dirty, yet 
+dangerous race.  This is the place where the Orcs plan out their 
+evil plot for their next brutal takeover.  You sense evil magic at
+work around here.  This place is probably crawling with Orcs, its 
+best to be careful around here.  There are exits leading south and
+east of here.
+~
+40 8 0
+D1
+~
+~
+0 -1 4080
+D2
+~
+~
+0 -1 4076
+S
+#4078
+The Orcish Outpost~
+   You are standing in the Orcish outpost of the mountain.  The entire 
+room is made of gold and silver.  You are amazed that the Orcs 
+wasted so much of these minerals in building this place.  Fresh
+blood and gore covers the floor, the Orcs are a very dirty, yet 
+dangerous race.  This is the place where the Orcs plan out their 
+evil plot for their next brutal takeover.  You sense evil magic at
+work around here.  This place is probably crawling with Orcs, its 
+best to be careful around here.  There are exits north and west
+from here.
+~
+40 8 0
+D0
+~
+~
+0 -1 4079
+D3
+~
+~
+0 -1 4075
+S
+#4079
+The Orcish Outpost~
+   You are standing in the Orcish outpost of the mountain.  The entire 
+room is made of gold and silver.  You are amazed that the Orcs 
+wasted so much of these minerals in building this place.  Fresh
+blood and gore covers the floor, the Orcs are a very dirty, yet 
+dangerous race.  This is the place where the Orcs plan out their 
+evil plot for their next brutal takeover.  You sense evil magic at
+work around here.  This place is probably crawling with Orcs, its 
+best to be careful around here.  There are exits south, and west
+from here.
+~
+40 8 0
+D2
+~
+~
+0 -1 4077
+D3
+~
+~
+0 -1 4080
+S
+#4080
+A Stone Hallway~
+   You are walking along an old stone hallway.  The floor is slippery with
+fresh blood.  You hear the sounds of many Orcs echo trough the hallway
+Your weapons clang as they hit the stone walls.  You feel that you are
+getting closer to the center of evil in this mountain.  You keep your
+hand close to your weapon, you know that soon there will be a great 
+battle at hand.  The Hallway continues north.  The outpost is to your
+south, east, and west.
+~
+40 9 0
+D0
+~
+~
+0 -1 4081
+D1
+~
+~
+0 -1 4079
+D2
+~
+~
+0 -1 4075
+D3
+~
+~
+0 -1 4077
+S
+#4081
+A Stone Hallway~
+   You are walking along an old stone hallway.  The floor is slippery with
+fresh blood.  You hear the sounds of many Orcs echo trough the hallway
+Your weapons clang as they hit the stone walls.  You feel that you are
+getting closer to the center of evil in this mountain.  You keep your
+hand close to your weapon, you know that soon there will be a great 
+battle at hand.  There is a slab of stone blocking your exit north.
+The stone hallway leads south.
+~
+40 8 0
+D0
+~
+stone~
+8 -1 4082
+D2
+~
+~
+0 -1 4080
+E
+slab~
+A heavy looking slab of stone blocks your way north.
+~
+E
+stone~
+A heavy looking slab of stone blocks your way north.
+~
+E
+steps~
+Stone steps lead up the Captain's chair.
+~
+S
+#4082
+The Captain's Room~
+   You find yourself inside a highly decorated room.  There is blood red
+carpet on the floor, leading up stone steps to a large chair made from
+human bones.  This is where the Orcish Captain resides.  Fear strikes
+your heart as a huge slab of stone seals the place you entered through.
+You are trapped in this deadly room.  You pray to your gods that you
+can survive this encounter with the root of evil in the mountain.
+~
+40 9 0
+E
+chair~
+A chair made from various bones adorns the north wall.
+~
+E
+carpet~
+This thick, lush carpet is the color of blood.
+~
+S
+#4099
+Ye Hall o Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+40 512 0
+S
+#0
+$~
+

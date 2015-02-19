@@ -1,0 +1,215 @@
+#19000
+farmer hunchback bonde~
+A hunchbacked farmer~
+A farmer is walking around here, his back so crooked that his forehead almost touches the ground.
+~
+  You see an old farmer who has worked every single day, all day,
+since he was 5 years old.  After decade upon decade of hard work,
+his back is very crooked.  His clothing is made of wool and he is
+carrying a rusty shovel.
+~
+16394 0 1000 Y
+25 0 4 5d20+3000 3d4+10
+37 500000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#19001
+fox rev~
+a red fox~
+A red fox is wandering around shyly in the background.
+~
+  You see a healthy red fox with an amazingly thick tail.
+The fox is a shy animal, so he tries to keep out of your way.
+~
+76 524288 -200 Y
+10 10 6 5d5+250 2d2+3
+0 32333
+8 8 1
+89 0 1d1+1 0
+0 0 0 0
+K
+3000 0 0 0 0 0
+#19002
+moose elg~
+a large moose~
+A large moose is wandering about.
+~
+  A large, brown coated animal, the moose wanders carelessly
+about the forest.  This, the biggest of all the animals in
+this land, has no natural enemies because it can seriously
+injure or kill any big predator that tries to take it on.
+~
+72 0 400 Y
+21 7 2 10d10+1700 1d12+7
+0 235000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+16000 0 0 0 0 0
+#19003
+wolf ulv~
+A silvery wolf~
+A silvery wolf prones behind some rocks to surprise his dinner for the evening.
+~
+  Under a thick, silvery fur coat, a vicious predator resides.
+This is a lone, male wolf that has left his old pack behind.
+The wolf is a young adult, and therefore slender, but also very
+powerful.
+~
+8 0 -350 Y
+19 6 -2 10d12+1100 2d2+17
+0 160000
+8 8 1
+89 0 1d1+1 0
+0 0 0 0
+K
+12000 0 0 0 0 0
+#19004
+lynx gaupe~
+A lynx~
+A lynx is sneaking around in the shadows.
+~
+  The lynx is a ferocious animal.  It is a very shy animal and is
+a very skilled hunter.  It will sneak up on its unsuspecting
+prey and lunge at them at a terrific pace.  Its large paws allow
+it to walk on snow with ease.  Lynx are easily distinguishable
+by their short, stubby tail and characteristic tufts of black
+hair on their ears.
+~
+8 0 0 Y
+19 4 -2 8d8+920 3d3+18
+0 140000
+8 8 1
+90 0 1d1+1 0
+0 0 0 0
+K
+6000 0 0 0 0 0
+#19005
+reindeer reinsdyr~
+a reindeer~
+A reindeer with impressive antlers walks about eating birch leaves.
+~
+  This animal is brown except on its chest, where it is white.
+His antlers are impressive considering the modest size of the
+animal.  The reindeer is plucking birch leaves off a tree,
+seemingly enjoying every bite.
+~
+8 0 400 Y
+17 11 1 6d8+1000 2d2+10
+0 120000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+10000 0 0 0 0 0
+#19006
+roedeer deer roe raadyr~
+a roe deer~
+A roe deer grazes here.
+~
+  This small species of deer is very graceful.  Its hide is golden
+red and it grazes on grass and leaves.  The roe deer stays very
+wary of its surroundings since there are many predators around.
+~
+8 0 500 Y
+12 13 4 5d5+500 2d2+4
+0 50000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+4000 0 0 0 0 0
+#19007
+bear brown bjoern~
+a brown bear~
+A brown bear trods around in the background.
+~
+  This is a large bear with reddish-brown fur.  This powerful
+animal is not always carnivorous or aggressive, but when it
+does hunt for meat it is an awesome sight.
+~
+8 0 100 Y
+23 7 0 12d15+2500 3d2+25
+0 350000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+25000 0 0 0 0 0
+#19008
+lemming lemen~
+a lemming~
+A small rodent skips about, hissing at everyone.
+~
+  This tiny rodent runs around madly, hissing at any other creature
+crossing its path.  Its soft fur is very colourful but ends in only
+a very short tail.
+~
+8 0 -700 Y
+5 16 2 3d3+50 1d6+1
+0 11000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#19009
+adder viper huggorm~
+An adder~
+A viper writhes around, looking for prey.
+~
+  This viper is reddish grey with distinct black markings along
+the whole length of its back.  The adder's broad head contains a
+large mouth with long, hollow fangs.  At the back of the head
+there is a characteristic V-shaped marking: V for Viper.
+~
+8 0 -200 Y
+14 12 6 9d13+400 2d2+8
+0 60000
+8 8 1
+80 0 1d1+1 0
+0 0 0 0
+K
+8000 0 0 0 0 0
+#19010
+wolverine jerv~
+A wolverine~
+A stocky wolverine pads around clumsily.
+~
+  The wolverine makes up for its relatively modest size by its
+incredibly powerful build and its bone-crushing bite.  Its fur
+is very dense to shield the animal from the harsh temperatures
+of winter.
+~
+8 0 -430 Y
+19 6 0 10d15+1500 2d3+18
+0 220000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+14000 0 0 0 0 0
+#19011
+man-eater bear slagbjoern~
+a man-eater~
+A large bear with dark brown fur hides behind a tree.
+~
+  This is a large, male bear.  It weighs at least 400 kilos and
+looks very annoyed indeed, which is unusual for brown bears
+other than mothers with cubs.  The bear is dark brown and very
+muscular and its paws must be two feet wide.
+~
+10 269484032 -1000 Y
+28 3 -4 25d45+4000 6d6+14
+0 800000
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+70000 908 0 0 0 0
+#0
+$~

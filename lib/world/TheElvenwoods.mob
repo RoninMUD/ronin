@@ -1,0 +1,193 @@
+#9001
+Elf Guardian Elven~
+The Elven guardian~
+An Elven Guardian is standing here guarding the portal.
+~
+This is a robust built elf in his best years and as far as you can tell
+in prime physical condition.  Indeed, he can fight.
+~
+10 8 1000 Y
+40 -7 -6 3d340+1500 9d15+0
+1000 281873
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9002
+Elf Soldier guard elven~
+The Elven soldier~
+An Elven Soldier is standing here guarding the path.
+~
+He is a young, yet powerful elf. He was sent by the chief of the village to
+guard the path from any intruder.
+~
+10 8 1000 Y
+36 -8 -4 1d1+1600 1d1+26
+654 195910
+8 8 1
+72 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#9003
+Elf Soldier guard elven~
+The Elven guard~
+An Elven Guard is walking around, protecting the villagers.
+~
+This pretty young elf stands guard along the path, watching for intruders. She
+allows the peaceful to pass, but will defend her land with her life.
+~
+8 8 1000 Y
+36 -6 -4 4d250+1000 2d40+0
+654 190482
+8 8 2
+72 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#9004
+Elf weaponsmith smith elven~
+The Elven weaponsmith~
+A Large Elven weaponsmith is walking behind the counter.
+~
+You notice a tired look on his face.
+~
+10 134217856 900 Y
+51 0 2 6d10+1600 1d8+12
+10000 80000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9005
+Elf armoursmith smith elven~
+The Elven armoursmith~
+A Large Elven armoursmith is walking around behind the counter.
+~
+You notice a tired look on his face.
+~
+10 134217856 900 Y
+51 0 2 6d10+1600 1d8+12
+10000 80000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9006
+Elf mage elven~
+The Elven mage~
+A Tiny Elven mage is floating behind the counter.
+~
+You notice a tired look on his face.
+~
+10 134217856 900 Y
+51 0 2 6d10+1600 1d8+12
+10000 80000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9007
+Elf Quintor grocer~
+The Elf named Quintor~
+An Elf named Quintor is here counting money behind the counter.
+~
+You notice a tired look on his face.
+~
+10 134217856 900 Y
+51 0 2 6d10+1600 1d8+12
+10000 80000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9008
+elf bartender elven~
+The Elven bartender~
+A fat Elf is standing behind the bar taking orders.
+~
+You notice a tired look on his face.
+~
+10 134217856 900 Y
+51 0 2 6d10+890 1d8+12
+2000 80000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9009
+elf receptionist elven~
+The Elven receptionist~
+A nice-looking Elf is standing in the reception.
+~
+You notice a tired look on her face.
+~
+11 134217856 900 Y
+51 0 2 6d10+1600 1d8+12
+2000 80000
+8 8 2
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9010
+elf chief elven guard~
+The Chief of the elven guard~
+A lazy-looking Elf lies on his bed snoring loudly.
+~
+This elf looks somehow more experienced than any guard in the village guard.
+By the look of the uniform he is probably the chief of the village guard.
+You notice some scars on the hands and one on the neck of the elf. He has
+obviously been in battle in his days.
+~
+9 268435592 1000 Y
+48 -4 -6 10d100+1600 6d8+15
+500 320432
+4 4 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9011
+Elf Soldier guard elven~
+The Elven guard~
+An Elven Guard is playing cards at the table.
+~
+This elf is a younger guard. Judging by the way he handles his weapon, he's
+rather new to this whole guarding thing. Until he learns more, he will not
+be much of a match for any fighter.
+~
+10 8 1000 Y
+36 -4 -4 4d250+700 2d30+0
+654 148973
+6 6 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#9012
+elf elven champion master~
+The Champion~
+An elven Champion is standing here looking at the trophies.
+~
+You first notice his bulging muscles beneath the clothing intended to be loose
+fitting. You then notice his size, he does not appear to be any normal elf.  He
+towers over all other elves you have ever seen.  It is easy to see why this
+is the champion Warrior.
+~
+14 402696328 1000 Y
+60 -10 -18 1d4000+4128 1d6+13
+50000 300000
+8 8 0
+4 16512 0d0+0 0
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#0
+$~

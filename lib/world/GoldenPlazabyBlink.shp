@@ -1,0 +1,117 @@
+#11714~
+-1
+-1
+-1
+11706
+11713
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s I don't have anything like that!~
+%s You don't have any such thing!.~
+%s I don't buy things, I sell them.~
+%s I'm not interested in that now.~
+%s And how will you pay for it?~
+%s That will be %d coins.~
+%s Here is %d coins.~
+0
+0
+11714
+0
+11723
+0
+28
+0
+0
+#11713~
+-1
+-1
+-1
+11714
+11715
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s I'm sorry, but I don't carry that.~
+%s You don't have anything like that.~
+%s I'm not interested in those things.~
+%s I'm sorry, but I can't afford that now.~
+%s I'm sorry, but you don't have enough money.~
+%s Thank you, thats %d coins.~
+%s Here is your %d coins.~
+0
+0
+11713
+0
+11724
+0
+28
+0
+28
+#11716~
+-1
+-1
+11716
+3052
+3056
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s I don't have that.~
+%s You don't have that.~
+%s I don't want to buy your petty things.~
+%s I don't want to buy your petty things.~
+%s You have no money, pathetic fool.~
+%s That costs %d coins.~
+%s Here is your %d coins.~
+0
+0
+11716
+0
+11725
+0
+28
+0
+28
+#11715~
+-1
+-1
+-1
+11717
+11718
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s Oh, I don't have that right now.~
+%s You don't have any of those right now.~
+%s I don't buy things like that.~
+%s I'm not interested now.~
+%s You don't have any money for that!~
+%s Thats %d coins, here you go.~
+%s Here is your %d coins.~
+0
+0
+11715
+0
+11726
+0
+28
+0
+28
+$~

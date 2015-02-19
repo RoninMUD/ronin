@@ -1,0 +1,2101 @@
+#8300
+A Pink-Pebbled Beach~
+   The remarkable pink color of the pebbles on this beach is startling,
+to say the least. The sun shines warmly in the sky, and an overwhelming
+sense of peace pervades all around you. A small trail leads through
+the sand dunes to your south, while a larger trail leads to the east.
+The beach continues to your north and to your west.
+~
+83 0 2
+D0
+~
+~
+0 -1 8301
+D1
+~
+~
+0 -1 8318
+D2
+~
+~
+0 -1 8339
+D3
+~
+~
+0 -1 8311
+S
+#8301
+Pink-Pebbled Beach~
+  The sun shines brightly down on the pink pebbles of the beach here.
+To your north you can hear the soothing roll and crash of breakers
+on the seashore. Odd footprints are scattered through the pebbles
+here. A ragged sign stands at an angle here. You can continue along
+the beach in all directions.
+~
+83 0 2
+D0
+~
+~
+0 -1 8302
+D1
+~
+~
+0 -1 8319
+D2
+~
+~
+0 -1 8300
+D3
+~
+~
+0 -1 8307
+E
+sign~
+   Theez ees Awr Beech, gow awaay!
+~
+E
+footprints~
+Smaller and narrower than a dwarf's, these footprints are probably
+from something very child-like.
+~
+S
+#8302
+By the Sea~
+  You stand by the edge of a large sea here. Far off to your north,
+across the crashing breakers, you think you can spot a tower. To your
+south is a beach, beyond which you can see a reddish castle to your
+southwest, a tall tower of ivory to your southeast across some pinkish
+bluffs close by, and a tall red tower on top of a granite point to
+your east. The pebbles of this beach are some kind of pinkish-red
+granite, although here they are covered by a thick layer of seaweed
+which has dried in the sun, sand fleas jumping all about. The beach
+seems to be cleaner to your south.
+~
+83 0 2
+D0
+~
+~
+0 -1 8252
+D1
+~
+~
+0 -1 8320
+D2
+~
+~
+0 -1 8301
+D3
+~
+~
+0 -1 8304
+S
+#8303
+By the Sea~
+  The crunching sound of your footsteps as they travel through the
+dried seaweed here would be unbearable if it weren't for the cries
+of seagulls and skuas as they circle above, sometimes diving into
+the sea and coming up with a beak full of flopping, struggling fish.
+The beach seems cleaner to the south, and you can continue walking
+along the shoreline to your west and to your east.
+~
+83 0 2
+D1
+~
+~
+0 -1 8304
+D2
+~
+~
+0 -1 8308
+D3
+~
+~
+0 -1 8305
+S
+#8304
+By the Sea~
+   Your footsteps crunch on the dried mat of seaweed as you walk
+along the seashore here. You can see a small reef out in the sea
+to your north. The beach seems clear of flotsam to your south, and
+the pink pebbles shine brilliantly there.
+~
+83 0 2
+D1
+~
+~
+0 -1 8302
+D2
+~
+~
+0 -1 8307
+D3
+~
+~
+0 -1 8303
+S
+#8305
+By the Sea~
+  Every step here crushes a footprint into the mat of dried seaweed
+which covers the pink pebbles of this beach here. You can see a rocky
+point to your west, and the beach seems to get clear of the flotsam
+and seaweed to your south. You can continue walking along the shoreline
+to your east and to your west.
+~
+83 0 2
+D1
+~
+~
+0 -1 8303
+D2
+~
+~
+0 -1 8309
+D3
+~
+~
+0 -1 8306
+S
+#8306
+By the Sea~
+  The sea crashes against the rocky point here, which consists of
+a reddish-pink granite, the same as the pebbles of this beach. However,
+the thick mat of dried seaweed your feet are traveling through makes
+it difficult to see the pebbles. It looks like you can make it
+around the point to your west, while the beach proper begins to your
+south.
+~
+83 0 2
+D1
+~
+~
+0 -1 8305
+D2
+~
+~
+0 -1 8310
+D3
+~
+~
+0 -1 8363
+S
+#8307
+Pink-Pebbled Beach~
+  The beach is clear of seaweed and flotsam here, so you can see the
+startling pink of the rounded pebbles which compose the beach very
+clearly. Scattered feathers and brown splotches of dried blood indicate
+that some poor seabird met a gruesome end here. The beach continues
+in all directions, and you can hear the sea to your north.
+~
+83 0 2
+D0
+~
+~
+0 -1 8304
+D1
+~
+~
+0 -1 8301
+D2
+~
+~
+0 -1 8311
+D3
+~
+~
+0 -1 8308
+S
+#8308
+Pink-Pebbled Beach~
+  The sun is warm and the smell of the sea is soothing. This beach is nice.
+Odd footprints are scattered throughout the pebbles here.
+~
+83 0 2
+D0
+~
+~
+0 -1 8303
+D1
+~
+~
+0 -1 8307
+D2
+~
+~
+0 -1 8312
+D3
+~
+~
+0 -1 8309
+S
+#8309
+Pink-Pebbled Beach~
+   You walk along the beach here, in a blissful state of idyll. You
+can hear the soothing white noise of the sea to your north, and the
+sun glows warmly above you. Skuas and seagulls wheel overhead, their
+lilting cries adding to the sublimity of this scene. The beach continues
+in all directions here.
+~
+83 0 2
+D0
+~
+~
+0 -1 8305
+D1
+~
+~
+0 -1 8308
+D2
+~
+~
+0 -1 8313
+D3
+~
+~
+0 -1 8310
+S
+#8310
+Pink-Pebbled Beach~
+   The sound of the breakers to your north is very soothing. A tall
+wall of reddish granite rises to your west, preventing movement there.
+The pink pebbles of this beach seem to have their origins in that same
+granite, but somehow they seem sun-bleached and faded. The beach continues
+to your east, your south, and to your north.
+~
+83 0 2
+D0
+~
+~
+0 -1 8306
+D1
+~
+~
+0 -1 8309
+D2
+~
+~
+0 -1 8314
+S
+#8311
+A Pink-Pebbled Beach~
+  A small hut made of driftwood stands to your south here, looking
+quite abandoned. The sun glows warmly in the sky above, and the reflected
+heat off of the pebbles makes it almost uncomfortable this far from
+the cool sea-breeze. The beach continues to the east, the west,
+and to your north.
+~
+83 0 2
+D0
+~
+~
+0 -1 8307
+D1
+~
+~
+0 -1 8300
+D2
+~
+~
+0 -1 8316
+D3
+~
+~
+0 -1 8312
+S
+#8312
+A Pink-Pebbled Beach~
+  The reddish-pink pebbles of this beach crunch underfoot as you
+walk blissfully along. The sun seems to be always shining in this
+beautiful place, and it would seem to be a peaceful and happy life
+which the lost denizens of this beach live. However, a gigantic
+skull-and-crossbones motif is painted on the large driftwood hut
+to your south, and you can hear the sounds of some kind of brawl
+going on within. The beach continues in all other directions.
+~
+83 0 2
+D0
+~
+~
+0 -1 8308
+D1
+~
+~
+0 -1 8311
+D2
+~
+~
+0 -1 8317
+D3
+~
+~
+0 -1 8313
+S
+#8313
+A Pink-Pebbled Beach~
+   The pebbles on this beach crunch underfoot as you walk along,
+basking in the warm rays of the sun. Tall, broken red granite rocks
+block movement to your south, but the beach continues in all other
+directions. You see that a small trail has been worn into the pebbles
+here, heading in an east-west direction.
+~
+83 0 2
+D0
+~
+~
+0 -1 8309
+D1
+~
+~
+0 -1 8312
+D3
+~
+~
+0 -1 8314
+S
+#8314
+Corner of a Pink-Pebbled Beach~
+   A tall granite point rises to your west, the stone made of some
+reddish granite. However, you espy a small hole in the rock which you
+could probably squeeze through. Strange runes have been carved in the
+rock around the hole, possibly some kind of warning. The beach continues
+to your north and to your east.
+~
+83 0 2
+D0
+~
+~
+0 -1 8310
+D1
+~
+~
+0 -1 8313
+D3
+~
+~
+0 -1 8315
+S
+#8315
+A Hole in the Granite~
+  You have to crouch as you enter this small cave. From the scraps of
+food and clothing lying around, it appears to you that someone lives
+here. However, for anybody to remain comfortable in these cramped
+quarters, they must be fairly small.... 
+~
+83 8 0
+D1
+~
+~
+0 -1 8314
+S
+#8316
+Driftwood Hut~
+  The walls here are covered in some kind of seaweed paste, and the floor
+consists of the very pebbles of this beach. It seems that somebody lives here.
+~
+83 8 0
+D0
+~
+~
+0 -1 8311
+S
+#8317
+The Entrance to the Grand Driftwood Hut~
+  You stand in the foyer of a grand hut. You can hear raucous laughter
+and shouts coming from a room to your south. The walls here are
+decorated with once-fine flags and rich cloths now tattered and
+disheveled. The floor is the same pink pebbles which line the beach,
+only dirtier. The beach lies to your north, while the hut continues
+to your south.
+~
+83 8 0
+D0
+~
+~
+0 -1 8312
+D2
+~
+~
+0 -1 8345
+S
+#8318
+A Pink-Pebbled Path~
+  Rising above the bluffs to your east is a tall, white tower. This path
+seems to lead you towards it.
+~
+83 0 2
+D0
+~
+~
+0 -1 8319
+D1
+~
+~
+0 -1 8336
+D3
+~
+~
+0 -1 8300
+S
+#8319
+Pink Bluffs~
+   To your east, large pink bluffs rise. The grass on them is a yellowish-
+pink itself. It's all very beautiful and calm. The sea lies to your north.
+~
+83 0 2
+D0
+~
+~
+0 -1 8320
+D2
+~
+~
+0 -1 8318
+D3
+~
+~
+0 -1 8301
+S
+#8320
+By the Sea~
+   Your feet crunch the dried seaweed as you walk along the seashore here.
+The beach seems cleaner to your south, while the sea is at your north. 
+Pink bluffs rise to your southeast, but it seems that you can get around
+them along the seashore.
+~
+83 0 2
+D1
+~
+~
+0 -1 8321
+D2
+~
+~
+0 -1 8319
+D3
+~
+~
+0 -1 8302
+S
+#8321
+Between the Sea and the Pink Bluffs~
+  To your north lie the shining waters of the Sea of Love, while to your
+south stands the beautiful, waving pink grass on the bluffs. The ground
+here is more sandy than at your west, but the color is still a strangely
+beautiful pink.
+~
+83 4 2
+D1
+~
+~
+0 -1 8322
+D3
+~
+~
+0 -1 8320
+S
+#8322
+The Other Side of the Bluffs~
+  The odd footprints you noticed in the pebbles to the west are even more
+prevalent here, in the soft pink sand. The bluffs rise to your south, but
+it looks like you can climb up into them from here.
+~
+83 0 2
+D1
+~
+~
+0 -1 8323
+D2
+~
+~
+0 -1 8324
+D3
+~
+~
+0 -1 8321
+S
+#8323
+By The Sea~
+  Reddish pink rocks rise to your east, and the bluffs rise steeply
+to your south. The beach continues to your west, and you can follow
+a small, rickety wooden boardwalk to your east around the rocky 
+point.
+~
+83 0 2
+D1
+~
+~
+0 -1 8347
+D3
+~
+~
+0 -1 8322
+S
+#8324
+The Rising Bluffs~
+  Your feet sink into the sand as you climb up through a dip in the bluffs.
+Small tufts of dry crab-grass sprout from the infertile land all around you.
+The strange footprints almost make a trail through here.
+~
+83 0 4
+D0
+~
+~
+0 -1 8322
+D2
+~
+~
+0 -1 8325
+S
+#8325
+On the Pink Bluffs~
+   You stand almost at the highest point of the bluffs now. The land
+spreads out in all directions here, pinkish grasses swaying in the
+gentle sea breeze. A small column of smoke, as if from a fire,
+rises to the sky from a point to your south, and you can see a glint
+of ivory far off to your southeast.
+~
+83 0 4
+D0
+~
+~
+0 -1 8324
+D2
+~
+~
+0 -1 8326
+S
+#8326
+On the Pink Bluffs~
+  You are standing at the highest elevation on the bluffs now. To your
+south you can see a column of smoke. Off to your west you can see the
+pink-pebbled beach, and to your east rises a tall tower on top of
+red granite bluffs. The bluffs continue in all directions.
+~
+83 0 4
+D0
+~
+~
+0 -1 8325
+D1
+~
+~
+0 -1 8328
+D2
+~
+~
+0 -1 8327
+D3
+~
+~
+0 -1 8333
+S
+#8327
+A Small Camp~
+  It looks as though a bonfire is regularly built here, judging from
+the large circle of stones surrounding blackened ashes. A small hut stands
+to your south, decorations of seashells and flotsam tied to it in
+a pathetic attempt to make it look grand. The grass of the bluffs
+has been flattened and killed all around here from a lot of foot
+traffic, and the result is small clouds of dust every time you take
+a step. The bluffs continue to your north, west, and to your east
+from here.
+~
+83 0 4
+D0
+~
+~
+0 -1 8326
+D1
+~
+~
+0 -1 8331
+D2
+~
+~
+0 -1 8335
+D3
+~
+~
+0 -1 8334
+S
+#8328
+On the Pink Bluffs~
+  You walk along the pink bluffs here, the ground about as level as
+a boiling pot of water. Tall grasses whistle in the wind, but a strange
+keening wail can be heard faintly to your east. The bluffs continue
+in all directions.
+~
+83 0 4
+D0
+~
+~
+0 -1 8329
+D1
+~
+~
+0 -1 8330
+D2
+~
+~
+0 -1 8331
+D3
+~
+~
+0 -1 8326
+S
+#8329
+An Outcrop on the Bluffs~
+  The bluffs drop off sharply in all directions except for the south
+here. You can see a small strip of beach below you to the north, the
+waves crashing upon it. A tall tower can be seen on top of the large
+red granite point to your east.
+~
+83 0 4
+D2
+~
+~
+0 -1 8328
+S
+#8330
+Hemmed in by Rocks~
+  Red rocks rise to your east, a large cavern entrance carved out of
+the stone itself. The pinkish sand here swirls to a deep red, then
+a scarlet as dark as midnight near the entrance. The bluffs drop off
+steeply to your north, and you can continue along the bluffs to your
+south and to your west. You hear what sound like faint moans and
+keening coming from within the cavern to your east.
+~
+83 0 4
+D1
+~
+~
+0 -1 6801
+D2
+~
+~
+0 -1 8332
+D3
+~
+~
+0 -1 8328
+S
+#8331
+On The Bluffs~
+  You walk along the pink bluffs, the altitude never staying the
+same for more than two meters. The tall grasses here make whistling
+noises as a breeze flits through them. You can see a small column of
+smoke rising to your west, and the bluffs drop off steeply to your
+south.
+~
+83 0 4
+D0
+~
+~
+0 -1 8328
+D1
+~
+~
+0 -1 8332
+D3
+~
+~
+0 -1 8327
+S
+#8332
+Hemmed in by Rocks~
+  A giant wall of red granite rises to your east, while the bluffs
+drop off steeply to your south. You hear a strange keening wail from
+the north, somehow different from the sound of the wind. A small column
+of smoke rises a ways to your west.
+~
+83 0 4
+D0
+~
+~
+0 -1 8330
+D3
+~
+~
+0 -1 8331
+S
+#8333
+On the Pink Bluffs~
+  The bluffs fall away steeply to your north and to your west, descending
+to the pink-pebbled beach below. You have a spectacular view of the
+reddish castle to your southwest over the sand dunes. The bluffs have
+been stripped of all vegetation here except for a few small scrubs,
+probably a result of the persistent wind from the sea to your north.
+~
+83 0 4
+D1
+~
+~
+0 -1 8326
+D2
+~
+~
+0 -1 8334
+S
+#8334
+On the Bluffs~
+  The bluffs drop off to the pink-pebbled beach to your south and west
+here, the angle too steep to descend safely. A small column of smoke
+rises to your east, where you think you can see a small hut. You can
+see the outlines of a red castle over the dunes far to your southwest.
+~
+83 0 4
+D0
+~
+~
+0 -1 8333
+D1
+~
+~
+0 -1 8327
+S
+#8335
+The Grand Poobah's Hut~
+   The walls of this tiny hut are hung with all kinds of leaves and
+shells picked up off of the beach in a pitiful attempt to cheer 
+up this dreary place. The owner of this hut thinks greatly of himself,
+for there are things scrawled on the walls such as "I Am Thee Rewler
+Ov Thee World!" In any other circumstance, somebody who had the
+wherewithal to eke out a relatively rich existence in such surroundings
+might actually BE the Ruler of the World, but all indications show
+that this person is just a lost little boy.
+~
+83 8 0
+D0
+~
+~
+0 -1 8327
+S
+#8336
+A Pink-Pebbled Path~
+  Tall bluffs rise to your north, while this path leads back to the beach
+and also onward, to the humongous tower at your east.
+~
+83 0 2
+D1
+~
+~
+0 -1 8337
+D3
+~
+~
+0 -1 8318
+S
+#8337
+A Pink-Pebbled Path~
+  As you crane your neck skyward, you can see a thin column of smoke
+rising on top of the bluffs to your north. The Ivory Tower lies at your
+east.
+~
+83 0 2
+D1
+~
+~
+0 -1 8338
+D3
+~
+~
+0 -1 8336
+S
+#8338
+Near the Ivory Tower~
+  The Ivory Tower looms above you to your east, and the pink pebbles of
+this path fan out to nothingness as you approach it. You almost wish
+that you were back on that beautiful beach, with the sun's rays beaming
+down on you.
+~
+83 0 2
+D1
+~
+~
+0 -1 2801
+D3
+~
+~
+0 -1 8337
+S
+#8339
+Near the Dunes~
+   The beach is to your north, while reddish-pink sand dunes rise to your
+south. A small path seems to be at your east.
+~
+83 0 2
+D0
+~
+~
+0 -1 8300
+D1
+~
+~
+0 -1 8340
+S
+#8340
+On a Path Through the Dunes~
+  This path is cobbled with red stones. Dunes rise around you, their red
+sand becomes darker the further you progress along the path.
+~
+83 0 8
+D2
+~
+~
+0 -1 8341
+D3
+~
+~
+0 -1 8339
+S
+#8341
+On a Path Through the Dunes~
+  This path is cobbled with red stones. Dunes rise around you, their red
+sand becomes darker the further you progress along the path.
+~
+83 0 8
+D0
+~
+~
+0 -1 8340
+D3
+~
+~
+0 -1 8342
+S
+#8342
+On a Path Through the Dunes~
+  This path is cobbled with red stones. Dunes rise around you, their red
+sand becomes darker the further you progress along the path. You can see
+ramparts rising to your southwest.
+~
+83 0 8
+D1
+~
+~
+0 -1 8341
+D2
+~
+~
+0 -1 8343
+S
+#8343
+On a Path Through the Dunes~
+  This path is cobbled with red stones. Dunes rise around you, their red
+sand becomes darker the further you progress along the path. You can see
+ramparts rising to your southwest.
+~
+83 0 8
+D0
+~
+~
+0 -1 8342
+D3
+~
+~
+0 -1 8344
+S
+#8344
+On a Path Through the Dunes~
+      This path is cobbled with red stones. It looks like the dunes
+go away to the south, and there is a road there.
+~
+83 0 8
+D1
+~
+~
+0 -1 8343
+D2
+~
+~
+0 -1 8401
+S
+#8345
+The Long Hall~
+   The hut is larger than it looks from the beach, and here you stand
+in a long hall with a grand table in the center of it. What looks like
+a makeshift bar stands against the eastern wall, many bottles lined
+up on the counter. There are two long benches running the length
+of the table here, many dirty cups and mugs scattered about them.
+The walls are decorated with piratical knick-knacks such as cutlasses,
+daggers, and various odd bits of booty. A small door stands to the
+south, and the exit lies to your north.
+~
+83 8 0
+D0
+~
+~
+0 -1 8317
+D2
+~
+door~
+1 -1 8346
+E
+bottle~
+These bottles appear to have no labels. This is probably because they
+are all scavenged off of the beach.
+~
+S
+#8346
+The Captain's Quarters~
+   This room is in complete chaos. Various odd artifacts lie scattered
+about the floor, while the walls are decorated in paintings hung
+askew, flags ripped and torn, and various odd broken things. The small
+bed in the northwest corner is missing a leg and appears to be made
+of wood. Whoever lives here must be either very clumsy or very mad.
+~
+83 8 0
+D0
+~
+door~
+1 -1 8345
+S
+#8347
+On the Boardwalk~
+   The boardwalk here leads at a steep incline obliquely up the face
+of the reddish granite. Waves crash against the rocks below you, and
+the boards here are slippery with sea-spume. Many birds have made
+their homes in the cliff-face above you, and part of the danger here
+is caused by falling "objects". The boardwalk rises to your north
+and declines to your west.
+~
+83 0 4
+D0
+~
+~
+0 -1 8348
+D3
+~
+~
+0 -1 8323
+S
+#8348
+On the Boardwalk~
+  The boardwalk here rounds the most northward-jutting point of
+the rocky cliffs here, and breakers crash very close to the bottom
+of the rickety structure. A few meters out in the water you can see
+the remains of a ship which met its end on the rocks here, a tattered
+Jolly Roger waving from the top of its mast. The boardwalk continues
+to your east and to your south.
+~
+83 0 4
+D1
+~
+~
+0 -1 8349
+D2
+~
+~
+0 -1 8347
+S
+#8349
+The End of the Boardwalk~
+  The boardwalk runs into a face of the red cliffs to your east here.
+It appears, however, that somebody has built a rope ladder up to the
+top of the point, which you could probably climb. Waves crash against
+the red rocks far below you, so hard that nary a barnacle can be sighted
+on them.
+~
+83 0 4
+D3
+~
+~
+0 -1 8348
+D4
+A rope ladder dangles from above, you could probably climb it.
+~
+ladder~
+11 -1 8350
+S
+#8350
+On top of the Rocky Point~
+  The view from here is breathtaking. To your north, the sea extends
+as far as your eye can see. To your west you can see the beautiful
+cove of the pink-pebbled beach. Far off to your southwest, you can
+see a red stone castle rising, while a gigantic tree is almost
+invisible even farther in that direction. To your southeast can be
+seen a tall, ivory tower. Most interesting to you now, though, is
+the strange, weird tower made of red granite which rises to your
+east.
+~
+83 0 4
+D1
+~
+~
+0 -1 8351
+D5
+A boardwalk can be seen far below you. A rope ladder dangles from here,
+which you could probably climb down.
+~
+ladder~
+11 -1 8349
+S
+#8351
+Outside of the Red Granite Tower~
+  You stand on top of a point which juts out into the sea to your
+north. Here, at the highest altitude, stands a massive tower made
+of red granite. Strange symbols are carved on the arch over the
+entrance to your east, while a sign written in modern language is
+stuck into the ground here.
+~
+83 0 4
+D1
+~
+~
+0 -1 8352
+D3
+~
+~
+0 -1 8350
+S
+#8352
+The Ground Floor~
+   You stand in a large room, the walls of which are made entirely
+of rough-hewn red granite. The only light here is that which enters
+through the large archway to your west. A ring is attached to one of
+the largest stones in the wall, and a long, thick chain runs through
+the room and disappears behind a pile of human bones and rusted
+metalware such as armor and weapons. A spiral staircase leads up, and
+a small, stinking hole has been dug in the southwest corner.
+~
+83 8 0
+D3
+~
+~
+0 -1 8351
+D4
+~
+~
+0 -1 8353
+D5
+A small hole has been dug in the floor for sewage, it looks as though
+you could probably crawl down into it.
+~
+hole~
+9 -1 8362
+E
+hole~
+A small hole has been dug in the floor for sewage, it looks as though
+you could probably crawl down into it.
+~
+S
+#8353
+The Second Floor~
+   The central spiral staircase dominates this granite-walled room.
+A large oven in the corner here seems to be kept going all the time,
+judging by the warped metal of the metal grating. Because of this,
+this room is excessively hot. Large lanterns hang all over the wall,
+burning some noxious fuel to keep them extremely bright. All around
+the staircase are various growing boxes for plants, some of which 
+are even larger than a human. If you aren't mistaken, you could
+swear that you just saw one of the larger plants move....
+~
+83 8 0
+D4
+~
+~
+0 -1 8354
+D5
+~
+~
+0 -1 8352
+S
+#8354
+The Third Floor~
+   The walls here are smeared with white streaks, as if somebody has
+splashed whitewash over them. However, a very nasty stench reminiscent
+of fish and feces tells you that this is most definitely not whitewash.
+A large perch dangles from one of the supports of the spiral staircase
+here, and a massive pile of white bird guano lies beneath it.
+~
+83 8 0
+D4
+~
+~
+0 -1 8355
+D5
+~
+~
+0 -1 8353
+S
+#8355
+The Fourth Floor~
+   You nearly slip and fall as you walk in this room. The floors are
+covered with some kind of noxious green goo, and the walls are alight
+with a strange fungal glow. The musty smell of decay here is almost
+enough to make you ill, and the piles of corpses covered in fuzzy
+fungal growth don't help. The spiral staircase continues up here.
+~
+83 0 0
+D4
+~
+~
+0 -1 8356
+D5
+~
+~
+0 -1 8354
+S
+#8356
+The Fifth Floor~
+  After the previous filthy levels of this tower, this floor comes
+as a welcome relief to your nostrils. Sparkling clean and well-kept,
+you can only wonder who does such a job. The walls here are lined
+with various museum artifacts such as suits of armor and replica
+weapons. The spiral staircase continues up and down from here.
+~
+83 8 0
+D4
+~
+~
+0 -1 8357
+D5
+~
+~
+0 -1 8355
+S
+#8357
+The Sixth Floor~
+   The floor here is slick with frost, and the walls are covered
+with icicles. Somehow, this level of the tower is kept cold. There
+is even a snowdrift, or what appears to be one, in the northwest corner.
+The spiral staircase, while slippery, is still climbable and leads
+to exits up and down from here.
+~
+83 8 0
+D4
+~
+~
+0 -1 8358
+D5
+~
+~
+0 -1 8356
+S
+#8358
+The Seventh Floor~
+   The humidity and heat in this room are stifling. It looks as though
+some madman decided to create a jungle in here. Lianas and creepers
+fill the room, and a large pond has been built in the northern half
+of this floor. The spiral staircase winds through vegetation to exit
+up and down from here.
+~
+83 8 0
+D4
+~
+~
+0 -1 8359
+D5
+~
+~
+0 -1 8357
+S
+#8359
+The Eighth Floor~
+   For some reason, the floor in this room has been covered with a
+fine yellow sand. Small cacti have been planted here and there, and
+the room is kept very hot. You can hear small rasping sounds from
+behind a large, thorny bush near the south wall. The spiral 
+staircase continues up and down here.
+~
+83 8 0
+D4
+~
+~
+0 -1 8360
+D5
+~
+~
+0 -1 8358
+S
+#8360
+The Mad Alchemist's Laboratory~
+   The walls here are lined with shelves, upon which stand thousands
+of glass bottles, most of which contain something disgusting suspended
+in liquid. A large bench stands in the center of the room, upon which
+is spread a plethora of odd things from the plant, animal, and mineral
+kingdoms. This must be the laboratory of the madman who has created
+all of the strange beasts in this tower. The spiral staircase leads
+down, and it looks like you could climb the shelves to reach a small
+open trapdoor in the ceiling.
+~
+83 8 0
+D4
+The shelves reach up to the ceiling here, where a small trapdoor
+lies open. It looks as though you could climb the shelves to reach
+it.
+~
+shelves~
+11 -1 8361
+D5
+~
+~
+0 -1 8359
+E
+trapdoor~
+The shelves reach up to the ceiling here, where a small trapdoor
+lies open. It looks as though you could climb the shelves to reach
+it.
+~
+E
+shelves~
+The shelves reach up to the ceiling here, where a small trapdoor
+lies open. It looks as though you could climb the shelves to reach
+it.
+~
+S
+#8361
+The Top Floor~
+   There is no ceiling to this room, and the wind howls above your 
+head, strong as a hurricane. Piles of blown debris are scattered
+about the floor here, and a large metal cistern stands in the
+northeast corner, gigantic dents in its side. The trapdoor below
+you slams shut in the wind, and you hear an ominous click as some
+lock falls into place.
+~
+83 0 0
+S
+#8362
+The Sewage Hole~
+   You stand knee-deep in a viscous, filthy liquid. The stench here
+is almost unbearable. Luckily, somebody tied a rope to the hole above
+you, which you could probably climb. As if standing in a small room
+filled with biological waste wasn't bad enough, you can feel something
+moving in the liquid below you.
+~
+83 9 0
+D4
+A slimy rope dangles from a hole in the ceiling. Perhaps you should
+climb it.
+~
+rope~
+11 -1 8352
+E
+rope~
+A slimy rope dangles from a hole in the ceiling. Perhaps you should
+climb it.
+~
+S
+#8363
+The Sandy Beach~
+   You round the point and find yourself on a wonderfully sandy beach!
+dive above you. It looks as if the beach continues to your west and
+to your south. There is a large, red granite point to your east, but
+it looks like you can go around it by the sea here.
+~
+83 0 2
+D1
+~
+~
+0 -1 8306
+D2
+~
+~
+0 -1 8375
+D3
+~
+~
+0 -1 8364
+S
+#8364
+By the Shore~
+  You walk along the shoreline here, the gentle waves of the sea
+lapping the white sand of this beach to your north. You can see the
+tracks of otters, birds, and insects on this beach. The beach continues
+to your west, east, and to your south.
+~
+83 0 2
+D1
+~
+~
+0 -1 8363
+D2
+~
+~
+0 -1 8376
+D3
+~
+~
+0 -1 8365
+S
+#8365
+By the Shore of the Sandy Beach~
+   The azure blue of the gentle sea to your north mirrors the nearly
+cloudless sky above, and is set well with the crystal white of the
+sand on this beach and the rocky red granite point to your east. The
+beach continues to your south, and you can walk along the shoreline
+to your east and west.
+~
+83 0 2
+D1
+~
+~
+0 -1 8364
+D2
+~
+~
+0 -1 8377
+D3
+~
+~
+0 -1 8366
+S
+#8366
+The Sandy Shoreline~
+   You can see a small reef jutting pinkish coral just above the
+otherwise glassy surface of the still, gentle sea to your north. The
+light blue waves create small breakers out on the reef, but lap the
+shore delicately here. The beach continues to your south, and the
+shoreline continues to your east and west.
+~
+83 0 2
+D1
+~
+~
+0 -1 8365
+D2
+~
+~
+0 -1 8378
+D3
+~
+~
+0 -1 8367
+S
+#8367
+The White Sand Shoreline~
+   The sand here is pure white, glaring like snow in the sun. If it
+weren't for the warmth here, you could swear you were walking along
+a glacier in the far north. The sea laps the shore to your north, and
+the shoreline continues  to your east and to your west. You can get
+away from any possible high tide by going south along the beach.
+~
+83 0 8
+D1
+~
+~
+0 -1 8366
+D2
+~
+~
+0 -1 8379
+D3
+~
+~
+0 -1 8368
+S
+#8368
+The White Sand Shoreline~
+   The gentle waves of the azure sea to your north lap the shore
+delicately here. Seabirds such as seagulls and skuas fly overhead,
+making great wheels in the sky as they circle for food over the
+clear waters. The beach continues to your south, and the shoreline
+continues to your east and to your west.
+~
+83 0 8
+D1
+~
+~
+0 -1 8367
+D2
+~
+~
+0 -1 8380
+D3
+~
+~
+0 -1 8369
+S
+#8369
+The White Sand Shoreline~
+   You walk blissfully along this lovely shoreline, the gentle azure
+waves slamming against the shore to your north. You think you
+espy an albatross circling overhead, as the skuas and seagulls give
+the large bird in the sky a wide berth. You can continue walking along
+the shoreline to your east and to your west, while the beach proper
+begins to your south.
+~
+83 0 8
+D1
+~
+~
+0 -1 8368
+D2
+~
+~
+0 -1 8381
+D3
+~
+~
+0 -1 8370
+S
+#8370
+The White Sand Shoreline~
+  You walk along the lovely seashore here, the sublime view of the
+gentle azure sea to your north causing you to respire in joy! The
+beach here is composed of snow white sand, and the sky above is a
+gorgeous shade of cerulean blue. You can continue walking along the
+shoreline to your east and to your west, or get away from all of
+this preponderous verbiage to your south.
+~
+83 0 8
+D1
+~
+~
+0 -1 8369
+D2
+~
+~
+0 -1 8382
+D3
+~
+~
+0 -1 8371
+S
+#8371
+The White Sand Shoreline~
+  You walk along this white, sandy beach. If you don't look at the
+sea and you pretend that it's cold, you would swear that you were
+walking in the middle of winter in the far north, the sand here so
+pure a white and the sky so clear a blue. The waves lap the shore
+delicately to your north, and you can continue along the shoreline
+to your east and west. You also have the option of getting away from
+the gentle whisperings of the sea by traveling up the beach to your
+south.
+~
+83 0 8
+D1
+~
+~
+0 -1 8370
+D2
+~
+~
+0 -1 8383
+D3
+~
+~
+0 -1 8372
+S
+#8372
+The White Sand Shoreline~
+   You walk along the shore of this white sand beach. The waves lap
+the shore here, reminding you of the famous haiku by Jubei the
+Magnificent:   The Waves Lap
+              Whispering Gently
+              Fear Not
+You can continue along the shoreline to your east and to your west,
+while the beach continues to your south.
+~
+83 0 8
+D1
+~
+~
+0 -1 8371
+D2
+~
+~
+0 -1 8384
+D3
+~
+~
+0 -1 8373
+S
+#8373
+The White Sand Shoreline~
+   You walk along the white sand here, the waves whispering against
+the shoreline like a thousand fairy wings in dense underbrush. You see
+a rocky red granite point to your west, and the sand seems a bit
+pink-tinted there. You can continue along the shoreline to your 
+east and west, or travel up the beach to your south.
+~
+83 0 8
+D1
+~
+~
+0 -1 8372
+D2
+~
+~
+0 -1 8385
+D3
+~
+~
+0 -1 8374
+S
+#8374
+The White Sand Shoreline~
+    The sea is rougher here as it meets the tall, red granite cliffs
+to your west. The sand here is a bit pinkish in color from detritus
+thrown off the rocks, but it looks like you can get around the cliffs
+to your west.
+~
+83 0 8
+D1
+~
+~
+0 -1 8373
+D2
+~
+~
+0 -1 8386
+D3
+~
+~
+0 -1 8501
+S
+#8375
+By the Granite Point~
+  A tall, red granite point rises to your east and continues in a
+north-south direction. This small corner of the sandy beach is very
+cosy, and it would be idyllic if only it weren't for the sun-dried
+seal corpse laying on the ground. The beach continues to your west,
+and you can see the sea to your north.
+~
+83 0 2
+D0
+~
+~
+0 -1 8363
+D3
+~
+~
+0 -1 8376
+S
+#8376
+On the Sandy Beach~
+   You walk along this sunny, wonderful beach of white sand. Small
+gusts of wind off of the sea to your north stir up tiny dust-devils
+which quickly die away. The beach continues in all directions, and you
+can see the gentle sea lapping the shore a ways to your north.
+~
+83 0 2
+D0
+~
+~
+0 -1 8364
+D1
+~
+~
+0 -1 8375
+D2
+~
+~
+0 -1 8387
+D3
+~
+~
+0 -1 8377
+S
+#8377
+The Sandy Beach~
+  You walk along with great strides, afraid of no obstacle tripping
+you up on this gorgeous, peaceful beach. Off to your east rises a tall,
+red granite point, while the sea meets the shoreline in happy greeting
+to your north. The beach continues in all directions here.
+~
+83 0 2
+D0
+~
+~
+0 -1 8365
+D1
+~
+~
+0 -1 8376
+D2
+~
+~
+0 -1 8388
+D3
+~
+~
+0 -1 8378
+S
+#8378
+The White Sand Beach~
+  You walk along a beautiful beach of pristine white sand, your
+footprints filling with sand immediately after you raise your feet.
+You can hear the sea murmuring to your north, and you see tall red
+granite rocks rising far off to your east. You can move in all directions
+here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8366
+D1
+~
+~
+0 -1 8377
+D2
+~
+~
+0 -1 8389
+D3
+~
+~
+0 -1 8379
+S
+#8379
+The White Sand Beach~
+   You walk along a white, sandy beach. The sky above you is a
+fantastic cerulean blue, with tiny wisps of clouds scudding through
+the jet stream far above you. You can hear the sea whispering against
+the shore to your north. You can move in all directions from here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8367
+D1
+~
+~
+0 -1 8378
+D2
+~
+~
+0 -1 8390
+D3
+~
+~
+0 -1 8380
+S
+#8380
+The White Sand Beach~
+   The sea air here smells delicious, as of gently frying fish and
+salt air. Little gusts from the sea create tiny dust devils in the
+sand here, frolicking about like elves in heat. You can move in all
+directions from here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8368
+D1
+~
+~
+0 -1 8379
+D2
+~
+~
+0 -1 8391
+D3
+~
+~
+0 -1 8381
+S
+#8381
+The White Sand Beach~
+   You stride along this flat white beach, noticing that your footprints
+fill in almost immediately with pure white sand, leaving your passage
+almost unmarked. You can hear the sea lapping the shore to your north,
+and you can move in all directions here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8369
+D1
+~
+~
+0 -1 8380
+D2
+~
+~
+0 -1 8392
+D3
+~
+~
+0 -1 8382
+S
+#8382
+The White Sand Beach~
+  You walk along with gargantuan strides here, as there are no 
+obstacles whatsoever to your movement, not even a small rock. The
+sand here is pure white, and the tiny little warm gusts of air from
+the murmuring sea to your north stir up wee little dust devils in
+the white sand. You can move in all directions here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8370
+D1
+~
+~
+0 -1 8381
+D2
+~
+~
+0 -1 8393
+D3
+~
+~
+0 -1 8383
+S
+#8383
+The White Sand Beach~
+  This would be a wonderful place to make a home, as the whole concept
+of a terrible weather event or any strife whatsoever strikes you
+as ridiculous. The sand here is utterly white and the sky a gentle
+cerulean blue. You can move in all directions here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8371
+D1
+~
+~
+0 -1 8382
+D2
+~
+~
+0 -1 8394
+D3
+~
+~
+0 -1 8384
+S
+#8384
+The White Sand Beach~
+  You walk along this white sand beach in utter bliss, the sun gently
+shining on your pate and the murmur of the sea to your north soothing
+your damaged adventurous nerves. Off to your west, you see tall red
+cliffs rising, while great white sand dunes rise off to your south.
+You can move in all directions here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8372
+D1
+~
+~
+0 -1 8383
+D2
+~
+~
+0 -1 8395
+D3
+~
+~
+0 -1 8385
+S
+#8385
+Nearing the Red Granite Cliffs~
+   You walk along the peaceful white sand beach here, the sun shining
+gently down through a slight opacity created by the damp sea air.
+Close by to your west you see tall red cliffs rising from the beach
+to form a natural barrier. The sea laps the shore to your north, and
+you can move in all directions here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8373
+D1
+~
+~
+0 -1 8384
+D2
+~
+~
+0 -1 8396
+D3
+~
+~
+0 -1 8386
+S
+#8386
+Beside the Red Granite Cliffs~
+   Tall, sheer cliffs formed of red granite rise to your west here,
+blocking movement in that direction. These cliffs form a point which
+extends to the north, where the sea meets the shore of this white
+beach. You can continue along the cliffs to your south and north here,
+while the beach extends magnificently to the east.
+~
+83 0 8
+D0
+~
+~
+0 -1 8374
+D1
+~
+~
+0 -1 8385
+D2
+~
+~
+0 -1 8397
+S
+#8387
+At a Corner of the White Sand Beach~
+  To your east stands a tall ridge of red granite which forms a point
+extending to the shoreline at the north. Tall sand dunes rise to your
+south, preventing movement in that direction. The sand here is
+crystalline in its purity, except for near the granite where some
+detritus from the point has fallen down and discolored the sand
+over the inexorable course of geology. You can go west or north
+from here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8376
+D3
+~
+~
+0 -1 8388
+S
+#8388
+Nearing the Granite Point~
+  Off to your east you see the rise of a red granite point as you
+approach. To your south stand tall sand dunes, with what appears to
+be a small path through them. The beach continues to your east, west,
+and north here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8377
+D1
+~
+~
+0 -1 8387
+D2
+~
+~
+0 -1 8574
+D3
+~
+~
+0 -1 8389
+S
+#8389
+On the White Sand Beach by the Dunes~
+  You walk along a white sand beach here, the same white sand forming
+gigantic dunes which rise to your south and block passage there. You
+can hear the sea to your north. You can move east, west, and north
+here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8378
+D1
+~
+~
+0 -1 8388
+D3
+~
+~
+0 -1 8390
+S
+#8390
+On the White Sand Beach by the Dunes~
+   You see tall sand dunes rising to your south, and it appears that
+some seabirds have made their rookery at the peak of the dune nearest
+this white sand beach. This simply enhances the whiteness of the
+sand on the dunes, and they are still just as impassable. You can
+go east, west, or north here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8379
+D1
+~
+~
+0 -1 8389
+D3
+~
+~
+0 -1 8391
+S
+#8391
+On the White Sand Beach by the Dunes~
+   Tall sand dunes rise to your south here, blocking your movement
+in that direction. However, the seashore lies a ways to your north
+and you can still move east or west.
+~
+83 0 8
+D0
+~
+~
+0 -1 8380
+D1
+~
+~
+0 -1 8390
+D3
+~
+~
+0 -1 8392
+S
+#8392
+On the White Sand Beach by the Dunes~
+   You hear the cries of skuas as they circle overhead here, apparently
+some scavenging seabird convention in progress. Impassable sand dunes
+composed of pure white sand rise to your south, but you can move
+east, west, or north from here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8381
+D1
+~
+~
+0 -1 8391
+D3
+~
+~
+0 -1 8393
+S
+#8393
+On the White Sand Beach by the Dunes~
+   You duck in instinctual monkey reflexes as a gigantic albatross
+dive-bombs you here. Apparently, however, it decided that you weren't
+just a large, bipedal fish, and your scalp is free from scratches.
+Impassable white sand dunes rise to your south, but you can move
+to the north, east, or to the west from here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8382
+D1
+~
+~
+0 -1 8392
+D3
+~
+~
+0 -1 8394
+S
+#8394
+On the White Sand Beach by the Dunes~
+   You see signs of some recent animal-struggle on the beach here.
+The normally white sand is tinted brownish-red, and there are many
+white and grey feathers scattered in a large circle here. It seems
+that a poor seagull met a hungry animal here, and lost. Gigantic
+white sand dunes rise to your south here, but you can continue to
+the east, west, or north.
+~
+83 0 8
+D0
+~
+~
+0 -1 8383
+D1
+~
+~
+0 -1 8393
+D3
+~
+~
+0 -1 8395
+S
+#8395
+On the White Sand Beach by the Dunes~
+  You see a bald, scratched-up seagull scrambling up the impassable
+sand dunes to your south, apparently having recently had a narrow
+escape. Off to your west you can see tall red granite cliffs rising
+high above the white sand beach. You can move to the west, east, and
+north here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8384
+D1
+~
+~
+0 -1 8394
+D3
+~
+~
+0 -1 8396
+S
+#8396
+On the White Beach by the Dunes~
+   Tall, rolling sand dunes of a white sand rise to your south. You
+could probably climb up into them if they weren't so impassable. The
+sea sounds off to your north, and you can see tall red cliffs
+off to your west. The beach continues to your north, west, and east
+here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8385
+D1
+~
+~
+0 -1 8395
+D3
+~
+~
+0 -1 8397
+S
+#8397
+The corner of the White Sand Beach~
+   To your west rise gigantic cliffs of red granite, while pinkish-
+white sand dunes rise to your south, both impassable. The sand of this
+beach is a pure white, and you can hear the murmur of the sea off
+to your north. You can go north or east here.
+~
+83 0 8
+D0
+~
+~
+0 -1 8386
+D1
+~
+~
+0 -1 8396
+S
+#8398
+A dirt cavern~
+   You have somehow ended up in a gigantic cavern somewhere deep in
+the earth. Around you lie heaps of dirt, pools of mud, and clay walls
+which look like they are easy to dig through. Judging by the glinting,
+insectoid eyes in the darkness, that would be a good process to 
+begin....
+~
+83 9 0
+S
+#8399
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+83 576 0
+S
+#0
+$~

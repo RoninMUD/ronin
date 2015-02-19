@@ -1,0 +1,2582 @@
+#17001
+Lava Cavern~
+  Shadows surround you as you move deeper into the cave, leaving the
+comfort of the light of day far behind.  What lies ahead is hidden by
+jutting rocks and boulders.  As you stumble along, you feel a warm wind
+flowing past, perhaps a sign that the exit is near.  The only sounds are
+your heartbeat and the footfalls of otherworldly creatures scrambling to
+avoid your steps.  To the south is the entrance to this cave, and to the
+north you can just make out a narrowing tunnel beyond.
+~
+170 265 0
+D0
+The cave continues to get smaller up ahead.
+~
+~
+0 -1 17002
+D2
+A faint light filters down from somewhere to the south.
+~
+~
+0 -1 17098
+S
+#17002
+Lava Cavern~
+  You venture further in the darkness, uttering a silent prayer that
+you will not end up staying long in this place.  The air has become
+decidedly lighter and you begin to have trouble finding enough oxygen
+in it to breathe comfortably.  You find yourself lucky that you are not
+claustrophobic at this moment.  The walls become narrower and shorter
+until you are reduced to a crawl over the gravel surface.  As you
+approach what you figure to be a dead end, a shaft of light appears
+ahead.
+~
+170 265 0
+D0
+A hazy light up ahead.
+~
+~
+0 -1 17003
+D2
+Back into the darkness of the cavern.
+~
+~
+0 -1 17001
+S
+#17003
+Cavern's End~
+  You burst out of the cramped tunnel into a glorious chamber of
+obsidian.  The walls are glassy and smooth, clearly the work of volcanic
+nature and beauty.  The wind is blowing heavily from the entrance and
+brings the fresh, sweet smell of flowers and oxygen intermixing in the
+atmosphere.  To the south is the tiny orifice which you so recently
+popped out of, and to the east lies a splendor of light which could only
+be one thing...
+~
+170 8 0
+D1
+The entrance to the cave.
+~
+~
+0 -1 17004
+D2
+Back into the darkness of the cavern.
+~
+~
+0 -1 17002
+E
+orifice~
+A tiny opening in the rock wall to the south leads further into the cave.
+~
+S
+#17004
+Entrance to a Field of Roses~
+  When you step cautiously out of the dim cave, you suddenly find
+yourself bathed in warmth, light, and color.  Towering overgrowth
+surrounds you on all sides except one.  Such a sight is welcome after
+the lengthy crawl inside the cavern.  The sky shines a bright unnatural
+pink-orange hue and wispy clouds dot the horizon.  The only noticeable
+exits are the mouth of the cave, and an almost nonexistent path to the
+north.  A sweet, warm floral scent drifts from the path and permeates
+the otherwise pure air.  The path to the north seems to lead to a field
+of bright red luminescence.  You feel like you could stay here forever
+happily, but your powerful sense of adventure and curiosity at what lies
+ahead pushes you to move further down the mysterious path.
+~
+170 0 2
+D0
+A path through a field of Roses.
+~
+~
+0 -1 17005
+D3
+A looming cavern made from a volcano.
+~
+~
+0 -1 17003
+S
+#17005
+`bField of Roses`h~
+  Such splendor and beauty you have never begun to imagine.  Fragrant
+roses, growing wild and in infinite number, surround you completely.
+Roses appear as far as the human eye can see.  Endless rolling hills lie
+in all directions.  Even the path which brought you to this heavenly
+delight has been obscured as more roses have sprung up behind you.  The
+cave far behind, you can't begin to imagine where to go.  The wind has
+picked up, and it caresses the billions upon billions of flowers.  The
+sun is hovering on the western horizon in the throes of a colorful
+splendor.  The red waves meet the orange sun and pink sky in such a
+magnificent display that no living thing has ever experienced.  Standing
+in a stupor and breathing deeply of the color and scents, you realize
+that this is your destination.  In the distance and standing out
+defiantly and impossibly, is the dark Tower for which you have come so
+far.  As evil and corrupt as the field surrounding is light and
+beautiful, the Tower reaches to the uppermost Plane of the Universes.
+Your goal in sight, your soul is renewed with vigor and you begin to
+traverse the rolling waves of roses.
+~
+170 0 2
+D1
+Further into the Rose Field.
+~
+~
+0 -1 17006
+D2
+A path leading to a cavern.
+~
+~
+0 -1 17004
+D3
+Further into the Rose Field.
+~
+~
+0 -1 17007
+S
+#17006
+`bField of Roses`h~
+  You walk eastward through the endless sea of roses, stopping to admire
+them every chance you can get.  They seem to be brighter than most
+ordinary roses in existence, giving them an ethereal quality suggesting
+you are no longer in your normal plane of reality.  This is not to
+mention the complimentary pink-hued atmosphere.  Another fact that has
+been brought to your attention is that every one of the flowers are
+identical in size, shape, height, and color.  Each seems to be the
+spitting-image of its counterpart.  How could such a perfect place exist
+in reality?  You realize that you had better ignore the scenery and get
+back to the task at hand, which is to get through this vast expanse and
+find a way into the Tower.  To the east, you can see a hill standing out
+like a sore thumb.  Curiosity draws you toward it.
+~
+170 0 2
+D1
+A bare mound in the distance.
+~
+~
+0 -1 17011
+D3
+An intersection in the field.
+~
+~
+0 -1 17005
+S
+#17007
+`bField of Roses`h~
+  Walking toward the dynamic figure of the Tower, you begin to feel the
+power of the darkness emanating from within it.  You turn to the sky for
+comfort, only to find more evidence of the forces coming from the Tower.
+The air around you circumvents the Tower perfectly, and the dotted wisps
+of clouds take a spiral course as they approach the building.  Lines of
+force all seem to point in the same direction.  Even the wind and light
+bend to its whim.  As you get closer and closer, your sense of direction
+becomes muddled.  You feel lost, yet you can still see the inevitable,
+dark shape looming ahead.
+~
+170 0 2
+D1
+An intersection in the field.
+~
+~
+0 -1 17005
+D2
+Further into the Rose Field.
+~
+~
+0 -1 17008
+D3
+Further into the Rose Field.
+~
+~
+0 -1 17006
+S
+#17008
+`bField of Roses`h~
+  This rosy plain seems to stretch on forever.  As you walk on, sure
+that you are moving in the right direction, the Tower seems to be moving
+further away instead of closer.  Frustration is beginning to set in, and
+the maddening floral scent isn't helping any.  You notice that there are
+no other forms of life around you, even though such ground that could
+support this number of plants surely would have insects and other plants
+around.  Another idea also occurs as you traverse these seemingly
+endless fields: There is no evidence of food or water...  You quicken
+your pace.
+~
+170 0 2
+D0
+Further into the Rose Field.
+~
+~
+0 -1 17006
+D3
+Toward the looming Tower.
+~
+~
+0 -1 17009
+S
+#17009
+Below the Tower~
+  You seem to have found your way to the base of the Tower.  The walls
+are a black, marble-like rock.  Dull light seeps from the age-old stone.
+The Tower seems to have been carved from one gigantic rock, because
+there are no seams to indicate blocks.  Such a feat of architecture is
+nowhere to be found in any plane of reality.  The round sides disappear
+to your right and left, and the base flows solidly into the ground.  You
+crane your neck backward and strain your eyes to their limit, yet you
+cannot see an end to its vertical ascent.  Relying on ancient tomes of
+knowledge collected from your world, you still know very little about
+this place and understand less, but you feel in your heart that there
+must be an end.  The hub of all universes, worlds, and beings, there
+must be a top.  You move forward to enter the great Tower.
+~
+170 0 1
+D0
+A courtyard in front of the Tower.
+~
+~
+0 -1 17010
+D1
+Back into the Rose Field.
+~
+~
+0 -1 17008
+D2
+Back into the Rose Field.
+~
+~
+0 -1 17005
+S
+#17010
+Tower Courtyard~
+  This courtyard is formed of an unknown rock.  The cobbled stones seem
+to move and breathe, causing a queer sensation to run through your legs
+and feet as you walk along here.  There are no signs of age, no dust, no
+dirt.  You can feel the power this place commands.  To the north is a
+glowing, red gate, and to the south is the rose field from which you so
+recently entered.
+~
+170 0 0
+D0
+A huge, flaming gate stands in your way.
+~
+Gate~
+1 17010 17012
+D2
+The entrance to the courtyard.
+~
+~
+0 -1 17009
+E
+Gate~
+A towering wrought-iron gate, glowing red hot.
+~
+S
+#17011
+A Bare Patch~
+  Standing above the rosy plains, this hill contrasts completely with
+its surroundings.  Bare, dry dirt makes up the mound in a way that could
+only be magical.  Years upon years have weathered this hill, yet with
+all the vegetation on all sides, it is queerly devoid of life.  A
+singular spot at the apex of the hill seems to draw all attention
+where small furrows have mysteriously appeared and converged on the
+center of the hill.  You can't help but be drawn toward it.
+~
+170 0 4
+D0
+Down into the field again.
+~
+~
+0 -1 17006
+D1
+Down into the field again.
+~
+~
+0 -1 17006
+D2
+Down into the field again.
+~
+~
+0 -1 17006
+D3
+Down into the field again.
+~
+~
+0 -1 17006
+S
+#17012
+Hallway Inside the Tower~
+  Here you are at last, within the great Tower.  The walls are coal-
+black, just as on the outside.  A feeling overcomes you before you can
+recognize it, fear.  This place is dark and bare, not a breath of life
+lingers in the air, yet..  To the west, such a menagerie of unspeakable
+sounds assails your ears that the hair on your neck begins to stand on
+end.  The corridor bends in that direction, and seems to be the only way.
+~
+170 12 0
+D2
+A flaming gate which leads out of the Tower.
+~
+Gate~
+4 17010 17010
+D3
+Deeper into the Tower.
+~
+~
+0 -1 17013
+E
+Gate~
+A towering gate, glowing like embers.
+~
+S
+#17013
+A Lighted Corner~
+  Several small, flawless windows filter the outside light into the
+darkness.  The dim light is welcome to you because you can find your
+way easier, but now you can see the cause of the strange sounds which
+had previously been unknown.  Perhaps darkness isn't so bad after all.
+Creatures seem to be darting from shadow to shadow all around you.
+~
+170 8 0
+D0
+Deeper into the Tower.
+~
+~
+0 -1 17014
+D1
+A glow seems to be coming from the east.
+~
+~
+0 -1 17012
+S
+#17014
+A Widening Corridor~
+  You creep further into the bowels of the Tower, carefully avoiding
+the gossamer cobwebs draped from the ceiling all around you.  Creatures
+of unimaginable countenance roam these halls and passageways, each of
+them bent on disposing of you.  A creaking groan drifts down from the
+ceiling above as if it might collapse at any moment, causing you to
+quicken your pace.  The corridor widens to the north and bends eastward
+to the south.
+~
+170 8 0
+D0
+An intersecting corridor up ahead.
+~
+~
+0 -1 17015
+D2
+A light up ahead...
+~
+~
+0 -1 17013
+S
+#17015
+An Intersection in the Corridor~
+  As the corridor widens, light begins to pour in from the west.  A
+large, bright chamber seems to be in that direction.  You can now
+appreciate the work that must go on in order to clean this place.  The
+stones making up the floor you walk on are a completely dry, immaculate,
+and flawless black.  Each as shiny and perfectly shaped as the next, the
+rocks must be impossible to keep in such a shape.  To the north is
+another corner, bending to the east.
+~
+170 8 0
+D0
+A bend in the corridor up ahead...
+~
+~
+0 -1 17017
+D2
+A corridor leading out of the Tower.
+~
+~
+0 -1 17014
+D3
+A light-filled chamber.
+~
+~
+0 -1 17016
+S
+#17016
+A Lighted Chamber~
+  This chamber is filled with light coming from several gargantuan
+windows, all open to the fresh air beyond.  The walls around you
+seem to exude energy as you take in the glorious atmosphere.  Out the
+window, you can see the exaggerated expanse of roses.  The horizon
+extends beyond your capability to see.  Do not become distracted too
+long.  Your journey has only just begun.  A whimpering howl somewhere
+above you seems to punctuate the moment as you move on.
+~
+170 12 0
+D1
+An intersection to the east.
+~
+~
+0 -1 17015
+S
+#17017
+A Lighted Corner~
+  Light, as well as the fresh smell of the creatures roaming these
+halls, pours into the room.  More windows, these thinner and taller in
+comparison to those in the previous chamber, have been cut in the cold,
+stone walls.  More creatures also seem to be appearing, even though you
+have not yet found the source of their entry.  To the east lies a second
+intersection.
+~
+170 8 0
+D1
+Another intersection to the east.
+~
+~
+0 -1 17018
+D2
+An intersection of corridors.
+~
+~
+0 -1 17015
+S
+#17018
+A Second Intersection~
+  As you move deeper into the Tower, more creatures seem to be appearing.
+The bothersome brutes just won't leave you alone!  This room is another
+similar to the first intersection you encountered.  To the north is a
+bright chamber, and to the east, the corridor stretches to the far
+north-east corner of the first floor.
+~
+170 8 0
+D0
+Light cascades toward you...
+~
+~
+0 -1 17019
+D1
+The northeast corner appears to be in that direction.
+~
+~
+0 -1 17027
+D3
+The northwest corner appears to be in that direction.
+~
+~
+0 -1 17017
+S
+#17019
+A Second Chamber~
+  As you walk in the light of this chamber, you feel the power being
+drained from your body.  A large drift of sweet-smelling hay lays
+sprawling in the corner.  Perhaps just a little nap wouldn't hurt...
+The light and the smell of the roses wafting in on the warm breeze
+seems to be acting almost as a depressant.  The keen wailing of more
+monsters awaits you to the south.  Something catches your attention
+below you.  Perhaps it's a second exit.
+~
+170 8 0
+D2
+An intersection of corridors to the south.
+~
+~
+0 -1 17018
+D5
+A strange depression in the stone underneath you.
+~
+trapdoor~
+1 -1 17020
+E
+trapdoor~
+There is a trapdoor set here in the ground.
+~
+S
+#17020
+Below the Chamber~
+  As you step down a rickety stairway, the air thickens with the stench
+of your sweat and whatever things may be lurking down here.  The light
+filtering through the doorway far above dissipates into the heavy air
+around you, leaving your mind screaming for the comforting exposure of
+sunlight.  A slightly stale breeze seems to be flowing from the southern
+direction, leaving you only two choices:  return to the screaming
+creatures above, or continue to possible imminent destruction.  A faint
+dragging of footsteps from above seem to encourage a quick decision.
+~
+170 13 0
+D2
+To the south lies darkness.
+~
+~
+0 -1 17021
+D4
+Light filters down through some cracks in what might be a trapdoor above.
+~
+trapdoor~
+1 -1 17019
+E
+trapdoor~
+Through the cobwebs on the ceiling, you can barely see the outline of a
+strange door.
+~
+S
+#17021
+Tunnel Below the Chamber~
+  Muck and sludge flow steadily eastward from an unknown origin in the
+shadows.  All around, sounds begin to echo and bounce off the rock
+walls.  What was that behind you?!  You slowly feel your way along the
+tunnel, pulling clumps of slime from the slick sides of the cavern.
+Chunks of mud, rock, and other unknown material seem to be dropping
+into the water around you.  To the east, the tunnel stretches onward.
+A thin light pierces the darkness to the north.
+~
+170 9 0
+D0
+A finger of light points out of the darkness.
+~
+~
+0 -1 17020
+D1
+Further into the tunnel.
+~
+~
+0 -1 17022
+S
+#17022
+Tunnel Below the Chamber~
+  The river of waste turns suddenly south, flowing deeper in the bowels 
+of the Tower.  A stink rises from the river and fills your nose, and
+your very soul, with fear and disgust.  Droplets fall from the ceiling
+above, forming from the fog which surrounds you, and mix with the sweat
+beading on your brow.  It seems to be getting warmer as you proceed.
+You slosh deeper into the flowing ordure.
+~
+170 9 0
+D2
+Deeper into the river of waste.
+~
+~
+0 -1 17023
+D3
+Further into the tunnel.
+~
+~
+0 -1 17021
+E
+river~
+A river of flowing sludge, apparently draining from the floors above,
+meanders about through this dank tunnel.
+~
+S
+#17023
+Tunnel Below the Chamber~
+  A new sound reaches your ears as you continue further through the
+tunnel.  The constant splashing of the river seems to be growing in
+intensity up ahead, and a shrill laugh pierces the previous menagerie of
+murmurs and bodily noises issuing from creatures passing by.  You are
+definitely not alone in here.  A cool rush of almost fresh air passes by
+your face from the south, giving you renewed energy to move on in hopes
+of discovering an exit to this horrid place.
+~
+170 9 0
+D0
+A bend in the river of waste lies ahead.
+~
+~
+0 -1 17022
+D2
+A bend in the river of waste lies ahead.  Cool air and a crashing
+sound of water hit your ears simultaneously, promising freedom.
+~
+~
+0 -1 17024
+E
+river~
+  A river flowing steadily southward.  A horrible green fog rises from
+its surface, and burns your nose with its acrid stench.  Chunks of
+something in the river pass by and cling to your legs from time to time.
+~
+S
+#17024
+A Bend in the Tunnel~
+  The tunnel bears to the west as you push on.  A wave of mist rolls
+toward you as you stare in wonderment at the source of the loud crashing
+sounds.  An abyss lies dead ahead, swallowing the river deep into its
+gargantuan throat.  The river echoes thunder at the bottom of the deep
+chasm, and sends the mist coughing back up into the tunnel.  Across the
+way, a red glow reflects on the mist, moving like firelight.  The chasm
+isn't extremely far across, but there is no bridge in sight.  Do you
+dare jump across?
+~
+170 9 0
+D0
+Further into the tunnel, away from the chasm.
+~
+~
+0 -1 17023
+D3
+An abyssal chasm spans the entire cavern to the west.  Across the
+chasm, a firelight is barely discernible through the mist.
+~
+chasm~
+10 -1 17025
+E
+chasm~
+  An infinitely deep hole spans the tunnel floor here.  As you gaze into
+its depths, you can almost imagine your reflection in the mist rising
+from the bowels.  An overwhelming instinct to jump into it sweeps over
+you.
+~
+S
+#17025
+Ledge Over the Chasm~
+  A dying fire burns in a corner of this small cave, sending bits of
+ashes and embers tottering lazily through the air.  The heat of the fire
+is welcome after the cold stench of the river.  This place is built on a
+ledge overhanging the chasm to the east, and has a distinct air of
+antiquity.  Crooked shelves line the smooth rock walls.  Strewn about on
+these shelves, as well as the floor, are various items and objects, some
+of which you have never seen before.  They appear to be personal items
+of jewelry or clothing, and are piled in a random fashion.  The
+firelight dances and sways across the piles of treasure, causing a
+sparkling spectacle of light to reflect on the mist issuing from the
+chasm below.  A shadow creeps up the western wall.
+~
+170 9 0
+D1
+You can see the chasm you just bravely vaulted over.  It looks even
+bigger from this vantage point.
+~
+chasm~
+10 -1 17024
+D5
+Beneath a mound of clothes and other knickknacks piled in the corner,
+you notice the edge of a small burrow.
+~
+burrow~
+9 -1 17026
+E
+burrow~
+  An inconspicuous hole lying beneath a pile of junk.  It looks just big 
+enough to crawl through.
+~
+S
+#17026
+A Sandy Burrow~
+  Crawling deeper into the soft earth below the ledge, you emerge into
+a warm burrow.  Your light throws shadows to and fro, revealing small
+hills and dunes of sand.  Shattered bones and old weapons litter the
+dusty ground.  Beneath you, the ground begins to move and shimmy. It's
+almost as if the sand were alive.  You stumble to the bottom of the
+sandpile and take a moment to collect your thoughts.  There seems to be
+no other exit other than the hole you entered in, and that is far above
+you, atop the quivering sandpile.  This place would be perfect for a trap.
+~
+170 9 0
+D4
+The entrance to the burrow lies high above you, atop an enormous sandpile.
+One side looks packed enough to climb up.
+~
+sandpile~
+11 -1 17025
+E
+sandpile~
+  In the corner of the room lies a towering pile of sand, the home of
+the Sand Beast.  One side of the pile isn't too steep, and leads to a
+hole above.
+~
+S
+#17027
+A Dimly-Lit Corner~
+  The light seems to be dimming as you move downward around this corner.
+The corridor appears to be moving toward a dead end, or another turn.
+The ebony walls seem to close in on you, and a vision of being trapped
+in here, suffocating to death, flashes through your mind.  More creatures
+appear to the west, as if they were following you.  To the south, the
+corridor steepens downward into dim, lifeless light.
+~
+170 8 0
+D2
+The corridor continues downward to the south, narrowing to an apparent
+dead-end.
+~
+~
+0 -1 17028
+D3
+You see an intersection with sunlight filtering from a room to the north.
+~
+~
+0 -1 17018
+S
+#17028
+A Descending Corridor~
+  As you walk further, the corridor continues to descend and get
+narrower still.  Soon, your shoulders will be rubbing the walls.  You
+can almost feel the power emanating from your surroundings as you move
+farther from the light of reality outside.  The Tower is slowly working
+its magic on you, but you must resist.  To the north, the corridor
+widens and ascends to a brighter corner.  A shadowy end appears in the
+south.
+~
+170 8 0
+D0
+A turn in the corridor lies to the north, bearing to the west.
+~
+~
+0 -1 17027
+D2
+The corridor continues down and narrows to an end.
+~
+~
+0 -1 17029
+S
+#17029
+A Descending Corridor~
+  The walls begin to squeeze further in on you, threatening to hold you
+here forever.  The black stones of the ceiling glare icily at you and
+seem to be getting closer as well.  There must be some sort of life-
+force in these walls.  The hair raises on the back of your neck as you
+dart your eyes back and forth, trying to catch the hidden eyes of
+whatever thing is stalking you.  To the east, a small red speck jumps
+out among the constant dark rock.  The only obvious way out is either
+to turn and vacate this horrible place, or to tread south into the
+clutches of an unknown end.
+~
+170 8 0
+D0
+The corridor widens and ascends to the light in the north.
+~
+~
+0 -1 17028
+D1
+A minuscule red hole is set here in the eastern wall.
+~
+wall~
+2 17029 17031
+D2
+The walls begin to close in on the corridor, leaving a dead end in the
+south.
+~
+~
+0 -1 17030
+E
+wall~
+There seems to be a strange keyhole set into this cold, black stone...
+The inside of the hole is covered with a red, dusty residue.
+~
+E
+hole~
+It seems to be a concealed keyhole in the massive wall.  A dusty, red
+residue is visible within the hole.
+~
+S
+#17030
+A Narrow End~
+  The corridor tapers off to the south, ending in a blunt rock wall.
+The tunnel has become far too small to continue.  Holding your light
+forward, the rock surrounding the end shows not a single flaw or sign of
+exit.  The stones seem to sneer at you in triumph.  Perhaps there was
+something you missed.
+~
+170 264 0
+D0
+The corridor widens and ascends to the north.
+~
+~
+0 -1 17029
+S
+#17031
+Lesser Guard Room~
+  A cramped, almost closet-sized room unfolds before you.  This is the
+only entrance to the upper floors.  A rickety, wooden staircase is on
+the far wall, taking up half the space in the room.  The other half is
+occupied by a large desk, covered in various papers and notes.  One
+lonely window looks off into the pink horizon beyond.  A weapons rack
+stands empty beneath the stairs.
+~
+170 13 0
+D3
+A doorhandle sticks out of the wall here, with a small keyhole
+underneath.
+~
+wall~
+2 17029 17029
+D4
+A splintered set of stairs is bolted loosely to the wall here, leading
+upward.
+~
+stairs~
+11 -1 17032
+E
+stairway~
+This stairway looks like it may have been built ages ago.  Cobwebs trail
+from the splintered banister.
+~
+E
+stairs~
+This stairway looks like it may have been built ages ago.  Cobwebs trail
+from the splintered banister.
+~
+E
+wall~
+There seems to be a strange keyhole set into this cold, black stone...
+The inside of the hole is covered with a red, dusty residue.
+~
+S
+#17032
+Second-floor Hallway~
+  You emerge at one end of a gaping hallway.  Blood-red carpet lines the
+floor before you, leading off to the west.  Statues and figurines
+depicting various people in fighting stances face you on either side.
+Even the black stones of the walls have been polished to a high gloss
+and reflect your countenance at every step.  A wooden stairway leads
+downward, while the hallway continues west.
+~
+170 8 0
+D3
+The hallway to the west looks much brighter.
+~
+~
+0 -1 17033
+D5
+A not-so-sturdy set of stairs lead down into a small, lit room.
+~
+stairs~
+11 -1 17031
+E
+stairway~
+This stairway looks like it may have been built ages ago.  Cobwebs trail
+off of the splintered banister into the dim light below.
+~
+E
+stairs~
+This stairway looks like it may have been built ages ago.  Cobwebs trail
+off of the splintered banister into the dim light below.
+~
+E
+carpet~
+A scarlet cloth lining the cold, stone floor.  It's edges are threaded
+with gold and silver strands.
+~
+E
+statues~
+These waist-high figures appear to have been carved from the same rock
+as the Tower.
+~
+E
+stones~
+Eek! Your reflection winks at you!
+~
+S
+#17033
+Second-floor Hallway~
+  The hallway turns southward, following the contours of the Tower.
+Gothic mirrors and tapestries hang from either wall.  The small, sparse
+windows admit little light, but rows of candles have appeared to show
+you the way.  To the east, the hallway ends.  The hallway continues to
+stretch forever to the south, with no end in sight.
+~
+170 8 0
+D1
+The hallway ends in the east.
+~
+~
+0 -1 17032
+D2
+The hallway continues to the south indefinitely.
+~
+~
+0 -1 17034
+E
+mirror~
+Your horrible image reflects upon you, freezing you in place!
+~
+S
+#17034
+Second-floor Hallway~
+  The corridor stretches onward to the south, with no visible end in
+sight.  All theories and laws of metaphysics are bent to the will of the
+Tower.  This hall has been magically enlarged even though the thin
+appearance of the Tower remains intact.  With such powerful magic within,
+who could control it?  The hallway meanders south and north, with no
+visible end in either direction.
+~
+170 8 0
+D0
+An endless hallway extends to the north.
+~
+~
+0 -1 17033
+D2
+An endless hallway extends to the south.
+~
+~
+0 -1 17035
+S
+#17035
+Second-floor Hallway~
+  The corridor suddenly ends here, turning to the west.  A huge window
+in the eastern wall looks out over the courtyard far below.  Across the
+courtyard, you can see the eastern wing of the Tower, and your eyes
+catch a glimpse of quick movement in one of the opposite windows.  The
+Tower extends up out of sight.  To the north lies an impossibly long
+hallway.  In the west, a second bend appears in the path.
+~
+170 8 0
+D0
+The hall extends far into the dimness, hiding any possible end.
+~
+~
+0 -1 17034
+D3
+A bend in the path appears to be up ahead to the west.
+~
+~
+0 -1 17036
+E
+window~
+  Through the window you can see the courtyard far below.  The cobbled
+stones seem to move and breathe below you, almost quivering in waves.
+A glowing, red gate lies at the northern end of the courtyard.
+~
+S
+#17036
+Second-floor Hallway~
+  The hallway ends here.  An empty chair leans against the wall in the
+corner with a conspicuous pile of dust beneath it.  To the east, the
+corridor bends.  A doorway looms to the south, emitting the high squeal
+of wind.  A stench of decay wafts from the room.
+~
+170 8 0
+D1
+A bend in the hallway extends to the east.
+~
+~
+0 -1 17035
+D2
+A heavy, stone door stands at the south, exhaling a cool breeze.
+~
+door~
+1 -1 17037
+E
+chair~
+A dusty, wooden chair leans against the wall here.
+~
+E
+dust~
+A large pile of black dust, almost like soot, lays here beneath a chair.
+~
+S
+#17037
+A Windy Chamber~
+  As you step inside, a blast of wind rocks you off balance.  A great
+hole gapes in the roof of this room, and a pile of rubble stands against
+the east wall.  Shattered chairs and tattered cloth are strewn about the
+floor here, remnants of some unknown fury which must have blown through. 
+Pools of congealed blood have collected at the far end where the floor
+dips unnaturally southward.  You can barely discern one pair of bloody
+footprints leading up the pile of rocks.
+~
+170 8 0
+D0
+A stone door stands here, opening out into the hallway beyond.
+~
+door~
+1 -1 17036
+D4
+A pile of rocks stands against the wall here, with a bloody trail
+leading up to a hole in the roof above.
+~
+rocks~
+11 -1 17038
+E
+footprints~
+A bloody trail leads up the pile of rocks above you.
+~
+E
+pile~
+A heap of rocks, perfect for climbing, leads up the wall to a hole above.
+~
+E
+rocks~
+A heap of rocks, perfect for climbing, leads up the wall to a hole above.
+~
+E
+blood~
+Pools of congealing, rotten blood splatter as droplets of water from
+above drip into them.  It appears to be human blood, and a lot of it.
+~
+S
+#17038
+A Rocky Ledge~
+  You are standing on a very thin ledge looking out over the fields far
+below.  The wind gusts every so often, making it difficult to keep
+your tentative hold on the Tower's wall.  The ground looks much farther
+down from this vantage point that it should be.  To the east lies the
+promising safety of the eastern ledge.  An outcropping to the west
+crumbles into a ruin.
+~
+170 0 0
+D1
+To the east, the ledge extends down into the eastern wing of the Tower.
+~
+~
+0 -1 17039
+D5
+A hole in the wall here leads down into a dim room.  Cool, damp wind
+blasts out from its depths, and a pile of rocks lay just beneath the
+hole where you can reach.
+~
+rocks~
+11 -1 17037
+S
+#17039
+The Eastern Balcony~
+  You find yourself on a stone balcony built solidly onto the eastern
+wing of the Tower.  From here, you gaze out beyond the fields, far across
+the great forests and deserts to your homeland.  The wind dies down to
+a breeze, and the fresh air invigorates you.  Craning your neck upward,
+the Tower thins down to a singular point barely out of sight.  A path
+leads down into the east wing, and a very thin ledge lies to the west.
+~
+170 0 0
+D3
+The stones in the wall overlap here to form a thin ledge, just barely
+wide enough to walk on.
+~
+~
+0 -1 17038
+D5
+The path leads downward into the dim halls of the east wing.
+~
+~
+0 -1 17040
+S
+#17040
+A Dim Hallway~
+  Dying candles adorn the walls along this dim path downward.  Bone
+fragments and the bodies of rats are strewn about.  This must be the
+deserted side of the Tower.  The only signs of life are the candles and
+the fresh, bloody footprints leading along the corridor.  An exit to the
+north has been reduced to a ruin and is completely impassable.  To the
+east, the corridor grows somewhat brighter.
+~
+170 8 0
+D1
+The corridor widens and grows brighter.
+~
+~
+0 -1 17041
+D4
+A balcony overlooking the horizon.
+~
+~
+0 -1 17039
+E
+bodies~
+Rotting rat corpses!  Maggots and entrails stream from the steaming
+flesh on the ground before you.
+~
+E
+footprints~
+A bloody trail leading around a corner and into the darkness of the east.
+~
+S
+#17041
+A Corner of the Hallway~
+  The hallway turns at an abrupt angle here.  A large wooden chair,
+still intact, stands empty before you.  As you sit to rest, you can feel
+the seat is still somewhat warm.  The guard at the post must have had
+something better to do.  A pile of animal bones lies decaying in the
+corner, the remains of the guard's meal.  To the south is another corner
+in the hallway.  The hall runs straight into the darkness in the west.
+~
+170 8 0
+D2
+The hallway turns at another angle up ahead.
+~
+~
+0 -1 17042
+D3
+The hallway extends westward into the dark.
+~
+~
+0 -1 17040
+E
+chair~
+A dusty, wooden chair leans against the wall here.
+~
+E
+bones~
+A small heap of animal bones, the remains of an absent guard's meal perhaps.
+~
+S
+#17042
+A Corner of the Hallway~
+  The hallway turns suddenly as you walk along.  A slight odor of
+mildew and decay drifts to your nose.  The stones of the walls and path
+have been neglected on this side of the Tower, it seems.  Chunks and
+pieces have crumbled off, leaving small holes for rats and other vermin
+to live in.  One lonely candle stands flickering in the dim surroundings. 
+Another corner appears in the north, while the hallway extends into the
+west.
+~
+170 8 0
+D0
+The hallway bends up ahead.
+~
+~
+0 -1 17041
+D3
+The corridor continues into the darkness.
+~
+~
+0 -1 17043
+E
+candle~
+A lone flame burning here for eternity.  Its light dances across the dim
+walls of black stone.
+~
+S
+#17043
+End of the Eastern Hallway~
+  The hallway ends here in a great flight of stairs.  Jagged holes and
+broken steps are evidence to the disuse of this area.  Giant spider webs
+and a thick layer of dust coat the room.  Up above, you can hear a
+shuffling sound, and the bright light of potential life glows ahead.  A
+hallway leads east into a dark corner of the Tower.
+~
+170 8 0
+D1
+The hallway leads east through piles of rubble and refuse.
+~
+~
+0 -1 17042
+D4
+A huge, broken-down stairway leads to the upper chambers of the Tower.
+~
+~
+0 -1 17044
+E
+stairs~
+A long flight of decrepit stairs leads up into the unknown light above.
+~
+E
+webs~
+A network of natural twine spreads out before you, courtesy of the
+resident arachnid population.
+~
+S
+#17044
+Gallery of Mid-World~
+  Stepping forth into this huge hall, you are overwhelmed by the display
+of light and color.  Crystal chandeliers and candelabras create a festive
+and elite atmosphere.  This is the entrance to Mid-World, far above the
+filth of the lower planes and dungeons, and below the splendor of the
+Upper Universe which resides at the top of the Tower.  Fine silks and
+linen tablecloths cover the furniture, and large colorful tapestries
+show within the history of the universe and great battles which took
+place long ago.  The Hall continues to the north.  At the southern end
+lies a broken down stairway which sticks out like a sore thumb.
+~
+170 8 0
+D0
+The Great Hall continues to the north.
+~
+~
+0 -1 17045
+D5
+A large stairway plummets down into the depths of the east wing.
+~
+~
+0 -1 17043
+E
+stairway~
+A long flight of decrepit stairs leads down into the unknown darkness below.
+~
+E
+tapestry~
+This tapestry appears to document the last battle of Mid-World as the
+armies of Vermilion crushed the Tower's final defenders and claimed
+it as their own.  Shaded corpses litter an endless landscape, one for
+each rose, and a single entity stands surveying the destruction.
+~
+S
+#17045
+Gallery of Mid-World~
+  Before you lies a glorious stage and seating for upwards of 500 people.
+This hall is a veritable coliseum.  Paintings and murals line the walls,
+and a large mosaic depicting the crowning of the first Emperor of the
+Upper Universe in bright pieces of cut glass and stone is shown on the
+western wall.  The light in here is almost blindingly white, reflecting
+all the color from each decoration and assailing you with their beauty
+and texture.  The air even smells clean.  To the east, a white hallway
+leads away from the Hall.
+~
+170 8 0
+D1
+A bright, white hallway ascends eastward.
+~
+~
+0 -1 17046
+D2
+The Great Hall continues to the south.
+~
+~
+0 -1 17044
+D3
+A large tile mosaic is cut into the wall.
+~
+mosaic~
+5 17045 17050
+E
+wall~
+A glittering, colorful mosaic bears closer inspection on the western wall.
+~
+E
+mosaic~
+  This mosaic depicts a room full of precious gems and gold, a veritable
+room of wealth.  A creature swathed in scarlet garments stands over the
+scene, and an air of darkness and evil is evident by his presence.  You
+cringe in fear at the thought of the possible existence of such a being.
+At a closer examination, there seems to be something missing from the
+mural.  A space in the wall where a gem may have previously been
+perhaps...
+~
+S
+#17046
+A White Passageway~
+  The walls of this winding passage are made of solid marble.  They seem
+to glow almost phosphorescently bright, lighting up the entire hall.  No
+flaws or lines can be found in them.  A perfect curve carries the path
+to the north and west, where a wide gallery can be glimpsed.
+~
+170 8 0
+D0
+The passage continues to the north, winding gracefully.
+~
+~
+0 -1 17047
+D3
+The passage widens into a bright gallery of color.
+~
+~
+0 -1 17045
+S
+#17047
+A White Passageway~
+  The immaculate passage winds silently onward.  A strange antiseptic
+odor permeates the air, and you begin to feel lightheaded.  The air
+seems more recycled than fresh.  This place is completely devoid of life.
+The passage continues east and south.
+~
+170 8 0
+D1
+The passage continues to the east.
+~
+~
+0 -1 17048
+D2
+The passage extends southward.
+~
+~
+0 -1 17046
+S
+#17048
+A White Passageway~
+  The passage ends here in a spherical chamber.  The only flaw in the
+smooth marble surface is the faint outline of a door to the north.  A
+faint voice drifts from within.  The cold, harsh light emanating from
+the walls is beginning to affect your nerves perhaps.  The passageway
+meanders westward.
+~
+170 8 0
+D0
+A faint outline of a door is imprinted on the curved wall.
+~
+door~
+1 -1 17049
+D3
+The passage continues curving to the west.
+~
+~
+0 -1 17047
+E
+door~
+An inconspicuous opening in the wall.
+~
+S
+#17049
+A Spotless Storage Room~
+  As you enter the gray, drab existence of this room, a wave of sadness
+overcomes your very soul.  The light within is much dimmer than the
+previous hall.  Neat stacks of papers lay about on the floor, and
+shelves are covered in various weapons and items of interest.  Most of
+these items you recognize as being from Mid-World.  However, not a speck
+of dust or dirt can be found.  In the center of everything is a cleared
+area, conspicuously devoid of items.
+~
+170 8 0
+D2
+A white door is sunken into the wall.
+~
+door~
+1 -1 17048
+E
+bubble~
+  As you gaze mesmerized into the bubble's surface, you notice a
+glinting object inside.  If it weren't for the tiny beam of light
+reflected by the strange treasure, you never would have noticed the
+bubble's presence at all.  A magical aura surrounds the object inside
+the bubble.
+~
+E
+door~
+An inconspicuous opening in the wall.
+~
+S
+#17050
+A Narrow Corridor~
+  The walls of the corridor appear to glow alternating hues of green and
+blue.  Fresh air is seeping in from somewhere, and a comforting heat
+surrounds you.  This place reminds you of home.  It has all the
+characteristics of Mid-World, even the floor is packed soil reeking with
+life.  To the north, the walls expand into a lighted room.  A large
+mosaic takes up most of the eastern wall.
+~
+170 8 0
+D0
+The hall widens into a blue light to the north.
+~
+~
+0 -1 17051
+D1
+A large tile mosaic is cut into the wall.
+~
+mosaic~
+5 17045 17045
+E
+wall~
+A glittering, colorful mosaic bears closer inspection on the eastern wall.
+~
+E
+mosaic~
+  This mosaic shows a room full of precious gems and gold, a veritable
+vault of wealth.  A creature swathed in scarlet garments stands over the
+scene, and an air of darkness and evil is evident by his presence.  You
+cringe in fear at the thought of the possible existence of such a being.
+At a closer examination, there seems to be something missing from the
+mural.  A space in the wall where a gem had previously been perhaps...
+~
+S
+#17051
+The Central Keep~
+  A rather large room spreads open before you.  Plants and small
+creatures flourish impossibly within.  The walls here appear to be
+painted with a precise depiction of a Mid-World landscape, until you
+notice a flock of small birds flying to and fro among the trees of the
+background.  A powerful magic is certainly at hand.  Two corridors
+appear out of the scenery moving north and west.
+~
+170 8 0
+D0
+A narrow corridor leads north into dim, yellow light.
+~
+chest~
+8 -1 17055
+D2
+The hall narrows down to the south, leading into a greenish-blue light.
+~
+~
+0 -1 17050
+D3
+A narrow corridor leads west into dim, green light.
+~
+~
+0 -1 17052
+S
+#17052
+A Narrow Corridor~
+  This green corridor bends sharply north.  The light begins to fade as
+you move away from the spectacular vision of the keep.  The dirt floor
+turns stony and the walls dingy as you move along.  A stale wind drifts
+in from the north.
+~
+170 8 0
+D0
+The corridor widens into a dimly-lit room.
+~
+~
+0 -1 17053
+D1
+The corridor widens into a blue-hued room.
+~
+~
+0 -1 17051
+S
+#17053
+A Makeshift Guardpost~
+  This room appears to be another guardpost set up by the evil factions
+in control of the Tower.  A crude, wooden table and chair have been
+hastily set up here against the dark wall.  A small lantern provides the
+dim light and plays dancing shadows all about.  To the west lies a stone
+door with bars set in a tiny window and a sign hung above it.
+~
+170 8 0
+D2
+To the south, the corridor narrows and curves in a pale, green light.
+~
+~
+0 -1 17052
+D3
+A large, stone door.
+A sign is hanging on it.
+~
+door~
+5 17053 17054
+E
+sign~
+`bENTER AT YOUR OWN RISK!`o
+~
+S
+#17054
+A Holding Cell~
+  You have entered a cell where the meanest brutes of Vermilion's
+legions have been stored.  Apparently, they have either been placed here
+in punishment, or in readiness to spread evil into the realm of Mid-
+World.  A filthy bed of straw is piled in the corner.  To the east lies
+the stone entrance to the tiny cell.
+~
+170 8 0
+D1
+A large, stone door.
+~
+door~
+5 17053 17053
+E
+straw~
+A pile of dingy straw that the creatures apparently utilize as a bed.
+~
+S
+#17055
+A Narrow Corridor~
+  The corridor bends eastward, opening into another wide space.  The
+light brightens even more in that direction.  The floor suddenly changes
+from packed earth to a warm, yellow stone path.  As the hall widens and
+curves, a light melody seems to be reaching your ears, soothing your
+very soul.
+~
+170 8 0
+D1
+The corridor explodes into a marble-domed chamber to the east.
+~
+~
+0 -1 17056
+D2
+The corridor curves and widens into a bright, blue room.
+~
+chest~
+8 -1 17051
+S
+#17056
+Beneath a Marble Dome~
+  You have entered a glorious chapel at the very heart of the Tower.
+This sacred room serves as the gateway from the lower planes to the
+Upper Reality.  People from every part of the Universe use this place as
+a shrine to the twelve Great Guardians, beckoning the Lords of Light to
+protect them from evil.  A towering pipe organ fitted with tiers and
+tiers of keyboards encircles the southern portion of the domed enclosure.
+The roof is a solid, blue marble dome, swirling with magical life.  A
+blue portal forms the northern barrier of the room.  From the corner of
+your eye, you barely notice a swaying scaffold built upward to a small
+exit in the ceiling.
+~
+170 8 0
+D0
+A shimmering portal leading deeper into the Tower.
+~
+Portal~
+2 -1 17056
+D3
+A narrow corridor leads west over a yellow path.
+~
+~
+0 -1 17055
+D4
+You notice a strange scaffold leading up out of the dome.
+~
+scaffold~
+11 -1 17057
+E
+portal~
+  A blue glowing portal stands here before you.  In this portal, you can
+see yourself from behind...  A feeling that you are being watched
+suddenly comes over you.  The portal seems to be magically sealed by
+some unknown power and impenetrable.
+~
+E
+scaffold~
+It appears to be a wooden platform built as a temporary detour around
+the Portal.  It extends to a hole leading out of the dome.
+~
+S
+#17057
+On the Ruined Battlements~
+  A decrepit, stone wall encircles the inner portion of the Tower here,
+far above the courtyard.  A minuscule, red flame appears to be the
+entrance gate infinitely far below.  The Tower seems to have magically
+extended upward.  This wall has been overused and neglected, as parts of
+it crumble away as you walk along it.  A scaffold slopes down from the
+wall into a large dome.  To the north, the wall curves around the Tower.
+~
+170 0 0
+D0
+The battlements curve northward around the inner surface of the Tower.
+~
+~
+0 -1 17058
+D5
+You see a strange scaffold sloping down into a large, marble dome.
+~
+scaffold~
+11 -1 17056
+E
+scaffold~
+It appears to be a wooden platform built as a temporary detour around
+the Portal.  It extends down from the hole into a marble dome.
+~
+S
+#17058
+On the Ruined Battlements~
+  These battlements were used to defend the Tower eons ago when Evil
+first attacked.  The Lords of Light bravely sacrificed their lives to
+defend the Upper Planes from this vantage point.  All that is left is
+the ruined stone upon which you tread.  The wall continues to curve east
+and south from here.
+~
+170 0 0
+D1
+The battlements curve eastward around the inner surface of the Tower.
+~
+~
+0 -1 17059
+D2
+The battlements curve southward around the inner surface of the Tower.
+~
+~
+0 -1 17057
+S
+#17059
+On the Ruined Battlements~
+  Cannons and large, cast-iron kettles line the openings of the wall
+here.  Most are in a sad condition, carrying the scars of countless
+incursions.  Curiously, none seems to have fallen from the jagged edges
+of the walls. A plume of dust rises on the current of wind exhaling from
+the center of the Tower.  The battlements curve onward.
+~
+170 0 0
+D1
+The battlements continue to the east.
+~
+~
+0 -1 17060
+D3
+The battlements continue to the west.
+~
+~
+0 -1 17058
+E
+cannon~
+A huge, iron beast of a weapon.  Thick clouds of spent powder puff out
+of its gaping mouth as you peer down the endless bore.
+~
+S
+#17060
+On the Ruined Battlements~
+  The crumbling inner wall suddenly curves northward here.  Thin windows
+peer into the void within these walls.  The wind continues to howl
+upward, gaining speed in its perilous ascent.  To the west, the wall
+continues around the central cavity of the Tower.  The walkway drops
+downward to the north.
+~
+170 0 0
+D0
+The battlements curve northward around the inner surface of the Tower.
+~
+~
+0 -1 17061
+D3
+The battlements curve westward around the inner surface of the Tower.
+~
+~
+0 -1 17059
+S
+#17061
+On the Ruined Battlements~
+  The wall slopes down and abruptly ends here in a set of stairs carved
+into the stone.  They lead down to a beautiful terrace surrounding
+the northern end of the Tower.  High above you, the Tower appears to be
+tapering even more.  A wall curves around to the south.
+~
+170 0 0
+D2
+The battlements curve southward around the inner surface of the Tower.
+~
+~
+0 -1 17060
+D5
+A stairway leads down to a central terrace.
+~
+~
+0 -1 17062
+E
+stairway~
+Steps have been carefully cut here from the surrounding stone.
+~
+S
+#17062
+The Central Terrace~
+  A lush garden is thriving here embedded in the jade-colored stone
+terrace.  The magical liveliness of this place is enough to heighten
+your spirits as you saunter among the blooming snapdragons.  The western
+end of the terrace appears to be enclosed in the same marble as the
+central dome.  A stairway set in the stone leads up from here to some
+ruined battlements.
+~
+170 0 0
+D3
+The terrace extends to the west, under the cover of a marble dome.
+~
+~
+0 -1 17063
+D4
+A stairway leads up to a some stone battlements.
+~
+~
+0 -1 17061
+E
+garden~
+A breathtaking spectacle of natural delight.  In the center of all the
+floral catastrophe stand two white roses, defiant against all.
+~
+E
+stairway~
+Steps have been carefully cut here from the surrounding stone.
+~
+S
+#17063
+The Central Terrace~
+  This room appears to be the other side of the domed chapel.  The roof
+swirls with the same blue vigor.  Another garden lies here, within the
+absence of direct sunlight.  Large mushrooms and mosses cling to the
+trees and walls in defiance of all natural laws.  The other end of the
+blue portal makes up the southern section of the room.  A thin hallway
+leads north to another room.
+~
+170 8 0
+D0
+A thin hallway leads north into a brightly-lit room.
+~
+~
+0 -1 17064
+D1
+The terrace continues east into a blooming garden.
+~
+~
+0 -1 17062
+D2
+A shimmering portal leading out of the Tower.
+~
+Portal~
+2 -1 17063
+E
+portal~
+  A blue glowing portal stands here before you.  It seems to lead to
+another part of the Tower, but it is magically sealed and cannot be
+penetrated.
+~
+E
+mushrooms~
+Gigantic fungi cling to the sides of the trees here in the moist air.
+~
+E
+moss~
+A fuzzy carpet of moss drapes over the walls and trees.
+~
+S
+#17064
+Entrance to the Upper Planes~
+  You enter a shaft of brilliantly white light.  The walls here are
+still black, but reflect a glare so powerful, you are temporarily
+blinded.  This is the end of Mid-World, and you solemnly bid farewell to
+all previous realities as you climb toward the Upper Planes and your
+possible demise.  The air within is completely motionless and void.
+~
+170 8 0
+D2
+A narrow hallway leads south into a marble dome.
+~
+~
+0 -1 17063
+D4
+A blinding, white light leads up to a higher plane of reality.
+~
+~
+0 -1 17065
+S
+#17065
+Ascending the Tower~
+  Climbing up and up, higher and higher, you begin to feel light-headed.
+Stopping to glance down and check your progress, you notice that there
+is nothing visible supporting you.  You seem to be climbing on air.
+~
+170 8 0
+D4
+A blinding, white light leads up to a higher plane of reality.
+~
+~
+0 -1 17066
+D5
+A blinding, white light leads down to a lower plane of reality.
+~
+~
+0 -1 17064
+S
+#17066
+Ascending the Tower~
+  You climb still higher, losing all sense of time and space.  The
+circular walls reflecting the dense, white light seem to be spinning
+round and round about uncontrollably.  Everything begins to resemble a
+white, meaningless blur, and it consumes all your stamina and will-power
+to continue despite the sensory overload.  A hole becomes visible within
+reach above you, if you can just climb up to it.
+~
+170 8 0
+D4
+A hole just above your head reaches into a higher plane of reality.
+~
+~
+0 -1 17067
+D5
+A blinding, white light leads down to a lower plane of reality.
+~
+~
+0 -1 17065
+E
+hole~
+A tiny hole in the space above you seems to grow as you approach it.
+~
+S
+#17067
+Greater Hall of the Lords of Light~
+  Warm light spills forth from all directions as you enter a magnificent,
+golden hall.  This was once the meeting place for the legendary Lords
+of Light, who defended the Tower from evil.  A gargantuan, oak table
+top floats silently before you carrying settings for twelve.  Freshly
+lit candles appear all along the worn surface of the table.  A flowing
+tapestry lines the northern wall, and countless bookshelves filled with
+ancient tomes occupy places on the other walls.  Stained-glass windows
+of every shape and brilliant color stare out upon the sunset-lit
+landscape, and small statues guard archways leading east, south, and
+west.
+~
+170 12 0
+D0
+A flowing tapestry is draped across the entire northern wall.
+~
+door~
+2 17067 17080
+D1
+A stone archway spans the wall, opening onto a terrace.
+~
+~
+0 -1 17076
+D2
+A stone archway spans the wall, opening onto a terrace.
+~
+~
+0 -1 17068
+D3
+A stone archway spans the wall, opening onto a terrace.
+~
+~
+0 -1 17072
+D5
+A bright, white light dissipates from a small hole in reality below.
+~
+~
+0 -1 17066
+E
+table~
+  A giant table, set for twelve.  The elegant oak seems to flow like
+honey beneath the immaculate cloth settings.
+~
+S
+#17068
+Southern Terrace of the Upper Universe~
+  As you pass through the archway, you can't help but notice the lack of
+sound which assails you.  Although the wisps of clouds surrounding the
+Tower this high swirl around it in a frenzy, not a sound issues forth.
+A glorious mountain range extends to the south far past the rosy field.
+A set of stone stairs lead upward.
+~
+170 8 0
+D0
+A stone archway spans the wall, opening into a great hall.
+~
+~
+0 -1 17067
+D4
+A stairway leads up the terrace toward a shining spire.
+~
+~
+0 -1 17069
+S
+#17069
+Southern Terrace of the Upper Universe~
+  This thin terrace seems almost to rise on its own.  As the sun sets
+under the beautiful pink sky, stars and galaxies begin to appear.  They
+look almost close enough to touch from here.  The change to this higher
+plane of reality has left you somewhat in a stupor.  You notice that
+your hands have become almost transparent as you ascend to the Upper
+Universe.  A stairway leads down from here and the terrace continues
+south.
+~
+170 8 0
+D2
+The terrace continues toward the spire.
+~
+~
+0 -1 17070
+D5
+A stairway leads down the terrace toward a great hall.
+~
+~
+0 -1 17068
+S
+#17070
+Below the Southern Spire~
+  You have arrived at an ivory staircase leading up into a white turret.
+As you follow the path with your eyes, nothing can be seen above the
+spire but empty space.  It appears you have reached an end.  A flame-red
+spire blazes to the north reaching out of your vision, while two other
+turrets appear to the western and eastern ends of the Tower.  A thick
+dampness filters down from above and the fragrance of tulips drifts on
+the air.  Who knows what may lurk above?
+~
+170 8 0
+D0
+The terrace stretches out across nothingness toward a great hall.
+~
+~
+0 -1 17069
+D4
+An ivory staircase leads up into an ivory spire.
+~
+~
+0 -1 17071
+E
+staircase~
+A brilliant, ivory stairway leads upward into a white spire.
+~
+E
+turret~
+A glowing, white spire at the southern end of the Tower.
+~
+S
+#17071
+Southern Spire of the Upper Universe~
+  You stumble up onto a grand stone platform.  Only four short walls
+encircling the platform protect you from a treacherous fall.  A diamond-
+studded column stands at each corner of the platform, and the starlight
+is condensed and reflected by these pillars into a central circle of
+magical stones.  The air is again still, and the floral scent grows
+still stronger.  The focal point of the circle seems to be vibrating and
+humming a powerful monotone, and the pillars begin to shake alarmingly.
+You have disturbed the spirit which resides here.  Your future must be
+told.
+~
+170 0 0
+D5
+An ivory staircase leads down to a narrow terrace.
+~
+~
+0 -1 17070
+S
+#17072
+Western Terrace of the Upper Universe~
+  As you pass through the archway, you can't help but notice the lack of
+sound which assails you.  Although the wisps of clouds surrounding the
+Tower this high swirl around it in a frenzy, not a sound issues forth.
+A vast, open sea extends to the west far past the rosy field.  A set of
+stone stairs lead upward.
+~
+170 8 0
+D1
+A stone archway spans across the wall, leading into a great hall.
+~
+~
+0 -1 17067
+D4
+A stone stairway leads up toward a black spire.
+~
+~
+0 -1 17073
+S
+#17073
+Western Terrace of the Upper Universe~
+  This thin terrace seems almost to rise on its own.  As the sun sets
+under the beautiful pink sky, stars and galaxies begin to appear.  They
+look almost close enough to touch from here.  The change to this higher
+plane of reality has left you somewhat in a stupor.  You notice that
+your hands have become almost transparent as you ascend to the Upper
+Universe.  A stairway leads down from here and the terrace continues
+west.
+~
+170 8 0
+D3
+The terrace continues west toward a black spire.
+~
+~
+0 -1 17074
+D5
+A stairway leads down the terrace toward a great hall.
+~
+~
+0 -1 17072
+S
+#17074
+Below the Western Spire~
+  You have arrived at an ebony staircase leading up into a coal-black
+turret.  As you follow the path with your eyes, nothing can be seen
+above the spire but empty space.  It appears you have reached an end.
+A flame-red spire blazes to the north reaching out of your vision, while
+two other turrets appear to the southern and eastern ends of the Tower.
+A shiver runs down your spine as the temperature seems to have dropped
+suddenly.  Who knows what may lurk above?
+~
+170 8 0
+D1
+The terrace stretches east toward a great hall.
+~
+~
+0 -1 17073
+D4
+A dark stairway leads up into a black spire.
+~
+~
+0 -1 17075
+E
+staircase~
+A set of flowing, ebony stairs seem to push you upward into a black spire.
+~
+E
+turret~
+A dim, almost nonexistant spire at the western end of the Tower.
+~
+S
+#17075
+Western Spire of the Upper Universe~
+  This platform is wide and the floor slopes around into the form of a
+large bowl.  Large, spherical and cubical stones lay randomly about,
+defying gravity and concealing shrouds of darkness behind them.  The
+starlit sky provides the only light.  As you study the dim surroundings,
+a giant granite sphere narrowly misses crushing your body from behind
+and rolls up the opposite wall to return.  All of the rocks begin
+tumbling and careening about, missing you always by inches as if
+deliberately.  A deep magic is at work in this place.  It might be wise
+to leave while you are still able.
+~
+170 0 0
+D5
+An onyx stairway leads down toward a narrow terrace.
+~
+~
+0 -1 17074
+S
+#17076
+Eastern Terrace of the Upper Universe~
+  As you pass through the archway, you can't help but notice the lack of
+sound which assails you.  Although the wisps of clouds surrounding the
+Tower this high swirl around it in a frenzy, not a sound issues forth.
+A wide, grassy plain stretches eastward from the end of the rosy field.
+On the horizon, a vast jungle appears to creep along the rolling hills.
+A set of stone stairs lead upward.
+~
+170 8 0
+D3
+A stone archway spans across the wall, leading into a great hall.
+~
+~
+0 -1 17067
+D4
+A stairway leads up toward a gray spire.
+~
+~
+0 -1 17077
+S
+#17077
+Eastern Terrace of the Upper Universe~
+  This thin terrace seems almost to rise on its own.  As the sun sets
+under the beautiful pink sky, stars and galaxies begin to appear.  They
+look almost close enough to touch from here.  The change to this higher
+plane of reality has left you somewhat in a stupor.  You notice that
+your hands have become almost transparent as you ascend to the Upper
+Universe.  A stairway leads down from here and the terrace continues
+east.
+~
+170 8 0
+D1
+The terrace continues east toward the gray spire.
+~
+~
+0 -1 17078
+D5
+A stairway leads down the terrace toward a great hall.
+~
+~
+0 -1 17076
+S
+#17078
+Below the Eastern Spire~
+  You have arrived at a mottled-gray staircase leading up into a gray
+turret.  As you follow the path with your eyes, nothing can be seen
+above the spire but empty space.  It appears you have reached an end.
+A flame-red spire blazes to the north reaching out of your vision, while
+two other turrets appear to the southern and western ends of the Tower.
+A cool breeze floats down from above, carrying a pungent odor of ozone
+and dust.  Who knows what may lurk above?
+~
+170 8 0
+D3
+The terrace stretches west toward a great hall.
+~
+~
+0 -1 17077
+D4
+A gray staircase climbs upward to a gray spire.
+~
+~
+0 -1 17079
+E
+staircase~
+A mottled-gray staircase cut into the rock leads up into the turret.
+~
+E
+turret~
+A cloud-obscured, gray spire lying at the eastern end of the Tower.
+~
+S
+#17079
+Eastern Spire of the Upper Universe~
+  A gloomy chamber unfolds before you as you step slowly away from the
+staircase.  Plumes of dust billow around your body, retreating upward
+into the sky.  High, metallic shelves filled with dusty books surround
+the perimeter of this easternmost platform, and scores of lightning rods
+extend from the shiny surfaces.  The odor of ozone again attacks your
+nostrils as a blue mist forms in the center of the room.  Crackles and
+tiny explosions of electricity issue from the cloud, and fear strikes
+your heart.  The time has come to remember the past and succumb to the
+inevitable circle of existence.
+~
+170 0 0
+D5
+A gray staircase descends to a narrow terrace below.
+~
+~
+0 -1 17078
+E
+staircase~
+A misty, gray staircase leads down toward a large building.
+~
+E
+shelves~
+These strange, tin-like shelves begin to creak and sway as a slight
+breeze picks up.  Hundreds and hundreds of manuals and books make
+their full weight known by the extreme bowing of the metal beneath
+them.  It seems like they should surely buckle under the pressure.
+~
+S
+#17080
+A Weapons-Storage Room~
+  This chamber is dimly-lit by a single glowing sphere.  Rows of cubby-
+holes have been dug into the rock walls, each holding a weapon.  Long-
+barreled pistols with smooth, sandlewood handles appear to be the weapon
+of choice, but each hole is covered by a transparent field allowing only
+the owner's hand to enter.  More powerful magic is at work.  Flakes of
+stone and dust fall noiselessly from small cracks in the ceiling.
+~
+170 9 0
+D2
+A flowing tapestry is draped across the entire southern wall.
+~
+door~
+2 17067 17067
+D4
+Thin cracks radiate about the ceiling, and a thin outline appears.
+~
+ceiling~
+1 17080 17081
+E
+tapestry~
+  Made of several tough cloth and silk patterned sections, this
+giant tapestry has been attached here long ago to pay homage to
+the twelve Great Guardians of Existence.  Each one is represented
+in colorful detail, standing high and circling the thirteenth portal:
+the Tower itself.  The Tower stands high within the center, the hub
+of a circle of eternity, the nexus of all space, time, and matter.
+~
+E
+ceiling~
+A tiny square outline appears in the ceiling above your head.
+~
+S
+#17081
+Northern Terrace of the Upper Universe~
+  You arrive on a thin terrace which seems almost to rise on its own.
+As the sun sets under the beautiful pink sky, stars and galaxies begin
+to appear.  They look almost close enough to touch from here.  The
+change to this higher plane of reality has left you somewhat in a stupor.
+You notice that your hands have become almost transparent as you ascend
+to the Upper Universe.  A hole in the floor leads down, and the terrace
+continues north.
+~
+170 9 0
+D0
+The narrow terrace continues north toward a spiral staircase.
+~
+~
+0 -1 17082
+D5
+Small cracks in the floor here outline a hole leading down.
+~
+floor~
+1 17080 17080
+E
+floor~
+A small hole appears to be in the floor here.
+~
+S
+#17082
+Northern Terrace of the Upper Universe~
+  As you continue along the terrace, you can't help but notice the
+sudden lack of sound which assails you.  Although the wisps of clouds
+surrounding the Tower this high swirl around it in a magnificent torrent,
+not a sound issues forth.  A towering, flame-red staircase materializes
+above you, blocked by a large stone.
+~
+170 9 0
+D2
+The narrow terrace continues south toward a great hall.
+~
+~
+0 -1 17081
+D4
+A large stone blocks the entrance to a flaming, spiral staircase above.
+~
+stone~
+2 17082 17083
+E
+stone~
+This stone hovers magically above you, blocking your way.
+A small keyhole is set in its smooth surface.
+~
+E
+staircase~
+A stairway seemingly rising on a plume of fire extends before you.
+~
+S
+#17083
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the east, and a stone terrace lies below.
+~
+170 9 0
+D1
+The stairs spiral upward to the east.
+~
+~
+0 -1 17084
+D5
+A large stone blocks the passage down to a narrow terrace.
+~
+stone~
+2 17082 17082
+E
+stone~
+This stone hovers magically below you, blocking your way.
+A small keyhole is set in its otherwise unmarked surface.
+~
+S
+#17084
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the north and down to the west from here.
+~
+170 9 0
+D0
+The stairs spiral upward to the north.
+~
+~
+0 -1 17085
+D3
+The stairs spiral downward to the west.
+~
+~
+0 -1 17083
+S
+#17085
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the west and down to the south from here.
+~
+170 9 0
+D2
+The stairs spiral downward to the south.
+~
+~
+0 -1 17084
+D3
+The stairs spiral upward to the west.
+~
+~
+0 -1 17086
+S
+#17086
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the south and down to the east from here.
+~
+170 9 0
+D1
+The stairs spiral downward to the east.
+~
+~
+0 -1 17085
+D2
+The stairs spiral upward to the south.
+~
+~
+0 -1 17087
+S
+#17087
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the east and down to the north from here.
+~
+170 9 0
+D0
+The stairs spiral downward to the north.
+~
+~
+0 -1 17086
+D1
+The stairs spiral upward to the east.
+~
+~
+0 -1 17088
+S
+#17088
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the north and down to the west from here.
+~
+170 9 0
+D0
+The stairs spiral upward to the north.
+~
+~
+0 -1 17089
+D3
+The stairs spiral downward to the west.
+~
+~
+0 -1 17087
+S
+#17089
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the west and down to the south from here.
+~
+170 9 0
+D2
+The stairs spiral downward to the south.
+~
+~
+0 -1 17088
+D3
+The stairs spiral upward to the west.
+~
+~
+0 -1 17090
+S
+#17090
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the south and down to the east from here.
+~
+170 9 0
+D1
+The stairs spiral downward to the east.
+~
+~
+0 -1 17089
+D2
+The stairs spiral upward to the south.
+~
+~
+0 -1 17091
+S
+#17091
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the east and down to the north from here.
+~
+170 9 0
+D0
+The stairs spiral downward to the north.
+~
+~
+0 -1 17090
+D1
+The stairs spiral upward to the east.
+~
+~
+0 -1 17092
+S
+#17092
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the north and down to the west from here.
+~
+170 9 0
+D0
+The stairs spiral upward to the north.
+~
+~
+0 -1 17093
+D3
+The stairs spiral downward to the west.
+~
+~
+0 -1 17091
+S
+#17093
+A Spiral Staircase~
+  A grandiose, spiral staircase erupts high into the sky, penetrating
+through several planes of reality.  This is the final leg of your ascent
+to the highest point in the Universe, and many dangers may lie in wait
+around the next bend.  The flimsy railing and molten steps glow with a
+ferocious red glare, yet no heat or flame is produced.  The stairs lead
+up to the west and down to the south from here.
+~
+170 9 0
+D2
+The stairs spiral downward to the south.
+~
+~
+0 -1 17092
+D3
+The stairs spiral upward to the west, ending in a red staircase.
+~
+~
+0 -1 17094
+S
+#17094
+Below the Northern Spire~
+  You have arrived before a sparkling, ruby stairway leading up to a
+small, red door.  Beyond the door lies a gothic structure which may be
+a shrine of some sort.  It appears you have nearly reached an end.
+Peering down over the edge, the rest of the Tower seems to taper to a
+nonexistent end into the dark beyond.  There can be no turning back.  A
+sizzling sound comes from beneath the door, and the stench of burning
+death is all you know.
+~
+170 9 0
+D1
+The stairs spiral downward to the east.
+~
+~
+0 -1 17093
+D4
+A small, red door appears at the top of the ruby stairway, leading up.
+~
+door~
+2 17094 17095
+E
+door~
+A tiny door, barely large enough to squeeze through, leads up.
+~
+S
+#17095
+Northern Spire of the Upper Universe~
+  As you step tentatively forward into the confines of the northernmost
+spire of the Upper Universe, a cloud of heat blasts forward and consumes
+you.  The temperature has climbed to an unbearable level all of a sudden,
+and a sheen of sweat begins to cool your skin.  A burning trail of coals
+leads east out of this stifling chamber, compelling you to rush and meet
+the cool touch of the night air outside.
+~
+170 8 0
+D1
+A trail of burning coals leads out of the spire and to the east.
+~
+~
+0 -1 17096
+D5
+A small, red door appears below you, leading down into the bowels of the
+Tower.
+~
+door~
+2 17094 17094
+E
+door~
+This tiny door leads down into the cool depths of the Tower.
+~
+E
+trail~
+A path of burning embers leads out of the spire to the east.
+~
+S
+#17096
+Pinnacle of the Dark Tower~
+  The air grows mysteriously thick and heavy as you ascend the sacred
+Guardian's shrine.  You have finally attained your goal and reached
+the highest Plane of the Universe any mortal can hope to bear.  Your
+body screams in pain and, in an attempt to compensate for the strain
+of the surroundings, it blinks in and out of existence at an alarming
+rate.  The golden shrine begins to pulse, and a sudden surge of power
+reaches out from it and ignites your soul.  The power of all the
+Guardians, Lords, and spirits of beings who sought the Tower and failed
+before you now courses through your veins.  You have come to save the
+Tower from the grasp of Evil, and you are not alone in your endeavor.
+A crimson glow streams out from a building to the south.
+~
+170 0 0
+D2
+A blinding, crimson glow streams out from the south, striking terror
+into your heart.
+~
+~
+0 -1 17097
+D3
+A burning trail of coals leads west, into a red spire.
+~
+~
+0 -1 17095
+E
+shrine~
+  A shrine of gold built ages past by the Great Old Ones in remembrance
+of the twelve Guardians.  It is the only part of the Tower left
+untouched by Vermilion.  A source of immense power, the shrine instills
+within you a renewed hope for the future, and a faith in the past.
+~
+S
+#17097
+The Court of the Crimson King~
+  A gothic chamber with a vaulted ceiling which spans eternity envelops
+you in a shroud of Evil.  You have arrived at the gate to End-World, that
+which lies beyond, and have entered the court of Vermilion.  Glowing
+embers spew forth from the molten walls and pelt your body painfully.
+A macabre statue of the King towers over all in the room, drooling lava
+upon the bubbling floor.  All around you, paintings and murals exist
+within these unreal conditions, all carrying the horrible countenance
+of his Majesty, the corrupter of the Tower.  Within glass cases, rubies
+and other scarlet gems reflect a glare such that no being has ever
+beheld.  Your ears begin to bleed and melt in the heat as a shrill scream
+pierces through the smoky air.  Despite your agony, you determine to keep
+your wits about you.  It is time to fight or burn completely out of
+existence.
+~
+170 8 0
+D0
+An archway can barely be defined from the haze of smoke and heat.
+~
+~
+0 -1 17096
+E
+statue~
+  A molten statue of Vermilion, supreme ruler of the Tower.  He stands
+victorious over the destruction which he wrought upon the Universe,
+watching with apparent glee at the agonizing screams of his innocent
+victims.  His reign has been unchallenged for eons.
+~
+S
+#17098
+Entrance to a Lava Cavern~
+  As you descend into the depths of an ancient cavern, the light begins
+to fade, and the air seems to grow heavy with moisture.  The black,
+obsidian walls emanate a faint heat from within.  The cavern extends
+far to the north below the base of the volcano.  A gaping hole above
+appears to be the mouth of the cavern, leading to the safety of
+sunlight and civilization.
+~
+170 8 0
+D0
+The tunnel narrows into the dimly-lit distance.
+~
+~
+0 -1 17001
+D4
+A ladder leads up the cavern wall to the foot of a large volcano.
+~
+ladder~
+11 -1 27136
+E
+hole~
+A wide opening above you leads out into the welcome daylight.
+~
+E
+ladder~
+A makeshift ladder leads up out of the darkness.
+~
+S
+#17099
+Ye Olde Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+
+~
+170 0 0
+S
+#0
+$~

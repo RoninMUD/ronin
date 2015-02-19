@@ -1,0 +1,1011 @@
+#13000
+On The Rope Bridge~
+You are standing on a rope bridge leading across the river. The bridge
+is shaking as your walk across it. The both banks are very forested
+and peaceful.
+~
+130 0 4
+D0
+You can see the northern bank of the river.
+~
+~
+0 -1 6123
+D2
+You can see a path leading in to the woods.
+~
+~
+0 -1 13001
+S
+#13001
+On The Path~
+You are walking in a natural archway formed from the surrounding 
+trees. Birds are singing and all seems to be at ease. Some sunlight
+manages to penetrate the tree cover and reaches you, making the air 
+pleasantly warm. The path leads south continuing deeper into the 
+forest. The rope bridge is north from here.
+~
+130 0 3
+D0
+You can see the rope bridge crossing the river.
+~
+~
+0 -1 13000
+D2
+You can see a path leading in to the woods.
+~
+~
+0 -1 13002
+D4
+You can see a small nest-like structure among the branches.
+~
+~
+0 -1 13020
+S
+#13002
+On The Path~
+You are walking in a natural archway formed from the surrounding 
+trees. Birds are singing and all seems to be at ease. Some sunlight 
+manages to penetrate the tree cover and reaches you, making the air
+pleasantly warm. The path leads north and south in the forest. 
+~
+130 0 3
+D0
+You can see a path leading in to the woods.
+~
+~
+0 -1 13001
+D1
+You can see a path leading in to the woods.
+~
+~
+0 -1 13003
+D2
+You can the path pulling up to a huge wooden gate.
+~
+~
+0 -1 13030
+D3
+You can see a shadowy trail leading deeper into the woods.
+~
+~
+0 -1 13010
+S
+#13003
+On The Path~
+You are walking in a natural archway formed from the surrounding 
+trees. Birds are singing and all seems to be at ease. Some sunlight 
+manages to penetrate the tree cover and reaches you, making the air 
+pleasantly warm. The path leads east and west in the forest. 
+~
+130 4 3
+D1
+You can see a path leading in to the woods.
+~
+~
+0 -1 13004
+D3
+You can see a path leading in to the woods.
+~
+~
+0 -1 13002
+S
+#13004
+On The Path~
+You are walking in a natural archway formed from the surrounding 
+trees. Birds are singing and all seems to be at ease. Some sunlight 
+manages to penetrate the tree cover and reaches you, making the air 
+pleasantly warm. The path leads west and south in the forest. 
+~
+130 0 3
+D2
+You can see a path leading in to the woods.
+~
+~
+0 -1 13005
+D3
+You can see a path leading in to the woods.
+~
+~
+0 -1 13003
+S
+#13005
+On The Path~
+You are walking in a natural archway formed from the surrounding 
+trees. Birds are singing and all seems to be at ease. Some sunlight 
+manages to penetrate the tree cover and reaches you, making the air 
+pleasantly warm. The path leads north and south in the forest. 
+~
+130 0 3
+D0
+You can see a path leading in to the woods.
+~
+~
+0 -1 13004
+D2
+You can see a small gate in the wooden wall.
+~
+~
+0 -1 13006
+S
+#13006
+Outside The Small Gate~
+You are standing in front of a small gate in the wooden wall surrounding 
+the village. The gate has some reinforcements and a huge padlock, but 
+it's not locked right now. The path leads north.
+~
+130 0 3
+D0
+You can see a path leading in to the woods.
+~
+~
+0 -1 13005
+D1
+You can see a path leading in to the woods.
+~
+~
+0 -1 13007
+D3
+You can see the wooden palisade with a small gate in it.
+~
+gate small
+~
+1 -1 13040
+S
+#13007
+On The Path~
+You are walking in a natural archway formed from the surrounding
+trees. Birds are singing and all seems to be at ease. Some sunlight 
+manages to penetrate the tree cover and reaches you, making the air 
+pleasantly warm. The path leads east and west in the forest. 
+~
+130 0 3
+D1
+You can see an clearing with stones arranged in the middle of it.
+~
+~
+0 -1 13008
+D3
+You can see the path coming to a small gate.
+~
+~
+0 -1 13006
+S
+#13008
+The Druidic Grove~
+You are standing in a small semicircle of stone formations. The stones
+are arranged into various formations and are radiating powerfully. At
+the bases of these stones there is thick undergrowth, like the earth
+itself was holding on to them. There is a small cottage with a green 
+door to the north of here.
+~
+130 0 3
+D0
+You can see a small wooden cottage with a green door in front of you.
+~
+door green~
+1 -1 13009
+D1
+~
+~
+0 -1 13099
+D3
+You can see a path leading in to the woods away from the grove.
+~
+~
+0 -1 13007
+S
+#13009
+The Archdruid's Cottage~
+The first thing the you notice, is the huge number of different kind 
+of jars and pot lining the walls on simple wooden shelves. The cottage itself 
+is not completely dark, but gloomy in the little light filtering from the 
+front window. A small wooden table is in the middle of the single room.
+~
+130 8 0
+D2
+The door blocks your way.
+~
+door green~
+1 -1 13008
+S
+#13010
+A Shadowy Trail~
+The thick foliage shadows the trail almost completely, leaving only
+occasional streaks of warming sunlight. The green wall surrounds you from both 
+sides of the trail. The trail leads east and west.
+~
+130 0 3
+D1
+You can see a crossing in the path in the woods.
+~
+~
+0 -1 13002
+D3
+You can see a shadowy trail leading deeper into the forest.
+~
+~
+0 -1 13011
+S
+#13011
+A Shadowy Trail~
+The thick foliage shadows the trail almost completely, leaving only 
+occasional streaks of warming sunlight. The green wall surrounds you from both 
+sides of the trail. The trail leads east, west and south.
+~
+130 0 3
+D1
+You can see a shadowy trail leading into the forest.
+~
+~
+0 -1 13010
+D2
+You can see a shadowy trail leading deeper into the forest.
+~
+~
+0 -1 13012
+D3
+You can see a shadowy trail leading deeper into the forest.
+~
+~
+0 -1 13013
+S
+#13012
+A Shadowy Trail~
+The thick foliage shadows the trail almost completely, leaving only 
+occasional streaks of warming sunlight. The green wall surrounds you from both
+sides of the trail. The trail leads north and west.
+~
+130 4 3
+D0
+You can see a shadowy trail leading deeper into the forest.
+~
+~
+0 -1 13011
+D3
+You can see a small pool of crystal clear water.
+~
+~
+0 -1 13014
+S
+#13013
+A Shadowy Trail~
+The thick foliage shadows the trail almost completely, leaving only
+occasional streaks of warming sunlight. The green wall surrounds you
+from both sides of the trail. The trail leads east and west.
+~
+130 0 3
+D1
+You can see a shadowy trail leading deeper into the forest.
+~
+~
+0 -1 13011
+D3
+You can see a clearing among the trees.
+~
+~
+0 -1 13015
+S
+#13014
+A Small Pool~
+In the shadow of a huge elm there is a small pond of crystal clear water.
+Small ripples go through the water's surface from time to time. The pond
+must be occupied. Lovely, tasteful fishes!!*grin* The trail leads back to
+the forest, to east.
+~
+130 0 6
+D1
+You can see a shadowy trail leading deeper into the forest.
+~
+~
+0 -1 13012
+D5
+You can see a water filled passage leading downwards.
+~
+~
+0 -1 13500
+S
+#13015
+Forest Glade~
+You are standing in a small opening in the woods, with blossoming flowers
+and luscious, green trees. The green cover made of the leaves shades the
+glade nicely. You feel really at peace with the nature here. The trail
+leads away to the east.
+~
+130 0 3
+D1
+You can see a shadowy trail leading into the forest.
+~
+~
+0 -1 13013
+S
+#13020
+Up In The Tree~
+You are standing in a small nest-like structure made to help the observation
+of the forest below. Through the branches and leaves, you can make out the
+twisting path on the ground. The wind whistles happily through the forest.
+~
+130 0 3
+D5
+You can see a path in the forest below.
+~
+~
+0 -1 13001
+S
+#13030
+Outside The Ironwood Gate~
+You are standing in front of a huge gate, made of ironwood. Small wooden
+towers flank the gate, with a low palisade linking the together. You can
+see tips of spears and bows from behind the palisade, only hinting of the
+guardians of the place behind the gate. The path leads away to north.
+~
+130 0 3
+D0
+You can see a path leading northwards.
+~
+~
+0 -1 13002
+D2
+You can see a huge gate made of iron wood, the hardest there is.
+~
+gate ironwood~
+1 -1 13031
+E
+palisade towers~
+The towers and the joining palisade is made to protect the guards up
+on the cat-walk from archers and other attackers. And if I'm allowed
+to say, it does a very effective job at it.
+~
+S
+#13031
+Inside The Ironwood Gate~
+You are standing inside a huge gate made of ironwood. The small path
+leads south, to a small village. Small huts and cottages are bundled
+up within the walls to protect them and their inhabitants.
+~
+130 0 3
+D0
+You can see a huge gate made of iron wood, the hardest there is.
+~
+gate ironwood~
+1 -1 13030
+D2
+You can see a path in the village.
+~
+~
+0 -1 13032
+S
+#13032
+Village Path~
+You are standing in a well used path among the small huts in the village.
+You can see the huge gate in the north. The air and the feeling here tell
+you of peace and tranquillity, but also hidden powers.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D0
+You can see a huge wooden gate looming ahead.
+~
+~
+0 -1 13031
+D2
+You can see a path in the village.
+~
+~
+0 -1 13033
+S
+#13033
+Village Path~
+You are standing in a well used path among the small huts in the village.
+You can see the huge gate in the north. The air and the feeling here tell
+you of peace and tranquillity, but also hidden powers.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D0
+You can see a path in the village.
+~
+~
+0 -1 13032
+D2
+You can see the market.
+~
+~
+0 -1 13034
+D3
+You can see an official looking building.
+~
+~
+0 -1 13070
+S
+#13034
+Artisan's Market~
+You are standing in a well used path among the small huts in the village.
+You can see the small market in the south. The air and the feeling here
+tell you of peace and tranquillity, but also hidden powers.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D0
+You can see a path in the village.
+~
+~
+0 -1 13033
+D1
+You can see a path in the village.
+~
+~
+0 -1 13039
+D2
+You can see a path in the village.
+~
+~
+0 -1 13035
+D3
+You can see a path in the village.
+~
+~
+0 -1 13037
+S
+#13035
+Village Path~
+You are standing in a well used path among the small huts in the village.
+You can see the small market in the north. The air and the feeling here
+tell you of peace and tranquillity, but also hidden powers. To the east,
+there is the hut of the village alchemist. He might have something
+interesting for you.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D0
+You can see the market.
+~
+~
+0 -1 13034
+D1
+You can see the alchemist's hut.
+~
+~
+0 -1 13050
+D2
+You can see a path in the village. There is a small well ahead.
+~
+~
+0 -1 13036
+S
+#13036
+By The Well~
+You are standing in a well used path among the small huts in the village.
+You can see the small in the north. The air and the feeling here tell you
+of peace and tranquillity, but also hidden powers.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D0
+You can see a path in the village.
+~
+~
+0 -1 13035
+D3
+You can see a path in the village.
+~
+~
+0 -1 13051
+S
+#13037
+Village Path~
+You are standing in a well used path among the small huts in the village.
+You can see the small market in the east. The air and the feeling here
+tell you of peace and tranquillity, but also hidden powers.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D1
+You can see the market.
+~
+~
+0 -1 13034
+D3
+You can see a path in the village.
+~
+~
+0 -1 13038
+S
+#13038
+Village Path~
+You are standing in a well used path among the small huts in the village.
+You can see the small huts surrounding the path full of life as children
+play everywhere. The air and the feeling here tell you of peace and
+tranquillity, but also hidden powers.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D0
+~
+~
+0 -1 13062
+D1
+You can see a path in the village.
+~
+~
+0 -1 13037
+S
+#13039
+Village Path~
+You are standing in a well used path among the small huts in the village.
+You can see a huge house in the north, the house of the beastmaster. The
+air and the feeling here tell you of peace and tranquillity, but also hidden
+powers.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D0
+You can see the house of the Beastmaster, a master hunter.
+~
+~
+0 -1 13055
+D1
+You can see a path in the village.
+~
+~
+0 -1 13040
+D2
+You can see a small hut, with a sign saying 'The House of Tomes'.
+~
+~
+0 -1 13054
+D3
+You can see the market.
+~
+~
+0 -1 13034
+S
+#13040
+Village Path~
+You are standing in a well used path among the small huts in the village.
+You can see the small market in the west. The air and the feeling here
+tell you of peace and tranquillity, but also hidden powers.
+There is a small gate to the east of here.
+Small tuft of grass is growing beside the path.
+~
+130 0 2
+D1
+You can see a small gate.
+~
+gate small~
+1 -1 13006
+D3
+You can see a path in the village.
+~
+~
+0 -1 13039
+S
+#13050
+The Alchemist's Hut~
+Small potions and bottles line the walls and shelves, spewing forth
+mysterious fumes and vapors. There is a sign on the wall.
+~
+130 12 0
+D3
+You can see a path in the village.
+~
+~
+0 -1 13035
+E
+shelves~
+They are filled with stranger and stranger bottles and alchemical
+equipment.
+~
+E
+sign~
+                  The sign says:    Buy  :  to buy items
+                                    Sell :  to sell items
+                                    Value:  to value an item
+                                    List :  to find out items for sale
+~
+S
+#13051
+Village Path~
+You are standing in a well used path among the small huts in the village.
+You can see the village well in the east. The air and the feeling here
+tell you of peace and tranquillity, but also hidden powers.
+Small tuft of grass is growing beside the path.
+~
+130 0 3
+D0
+You can see the backyard of one of the huts.
+~
+~
+0 -1 13052
+D1
+You can see a path in the village. There is a small well ahead.
+~
+~
+0 -1 13036
+S
+#13052
+Backyard of A Hut~
+When entering the backyard of one of the huts, you don't encounter the
+usual sight. The yard is clean and growing with thick, green grass. Some
+wooden toys are on the ground, all around.
+~
+130 0 2
+D2
+You can see a path in the village.
+~
+~
+0 -1 13051
+S
+#13054
+House of Tomes~
+This large hut is filled with all kind of books, scrolls and tomes.
+They are tightly tucked away to the numerous cupboards lining the
+walls. Ancient, musky odor lingers in the air. There is a small
+golden globe hanging from the ceiling. On the southern wall, there
+is a small silken tapestry.
+There is a small book stand in the middle of the floor.
+~
+130 8 0
+D0
+You can see a path in the village.
+~
+~
+0 -1 13039
+E
+tapestry~
+The tapestry pictures an epic battle between a group of elves from all
+walks of life and a gigantic lizard man. The lizards eventually ends up
+being locked behind a pair of golden doors.
+~
+E
+globe~
+The globe is glowing softly with a milky light.
+~
+E
+books~
+The books are ancient, from times when man couldn't even mouth the
+simplest words. You really shouldn't touch them, for they will crumble
+from the first touch.
+~
+S
+#13055
+The Beastmaster's Chamber~
+The house of a master hunter. The obvious difference from a normal
+hunter is that there are no animal heads lining the walls, but sketches
+and drawings of many animals. On the northern wall there is a wooden
+door with a petrified snake as a handle.
+~
+130 0 0
+D0
+The door blocks your sight.
+~
+door wooden~
+1 -1 13056
+D2
+You can see a path in the village.
+~
+~
+0 -1 13039
+E
+drawings sketches~
+The drawings picture several mysterious creatures, the most strange
+perhaps being a huge bear-like creature with an owl's beak and a huge
+mound of black jelly. Both the drawings are marked with a small skull
+on the bottom of the page.
+~
+S
+#13056
+The Storage Room~
+This room contains the side of a hunters' life that he doesn't want
+everyone to see. Huge racks for weapons and armor fill the room.
+One special rack bears a symbol of a sun on it, and has a frame for
+a huge hammer. There is a ladder leading down, to a dark room.
+~
+130 8 0
+D2
+The door blocks your sight.
+~
+door wooden~
+1 -1 13055
+D5
+You can see stairs leading down to an empty room.
+~
+~
+0 -1 13057
+S
+#13057
+The Prison Nexus~
+This small room has a light-weight ladder in the middle of it, leading
+up. On all four walls, there are doorways with iron bars across them for
+strength. Strange noises can be heard from within the rooms.
+~
+130 8 0
+D0
+You can see a small oddly looking cell.
+~
+~
+0 -1 13059
+D1
+You can see a small oddly looking cell.
+~
+~
+0 -1 13061
+D2
+You can see a small oddly looking cell.
+~
+~
+0 -1 13058
+D3
+You can see a small oddly looking cell.
+~
+~
+0 -1 13060
+D4
+You can see stairs leading up.
+~
+~
+0 -1 13056
+S
+#13058
+An Odd Cell~
+A small dusty room with only one exit, through a strong iron door. For
+the occupants of this cell, life must have been like hell.
+~
+130 0 3
+D0
+You can see an empty room.
+~
+~
+0 -1 13057
+S
+#13059
+An Odd Cell~
+A small dusty room with only one exit, through a strong iron door. For
+the occupants of this cell, life must have been like hell.
+~
+130 0 3
+D2
+You can see an empty room.
+~
+~
+0 -1 13057
+S
+#13060
+An Odd Cell~
+A small dusty room with only one exit, through a strong iron door. For
+the occupants of this cell, life must have been like hell.
+~
+130 0 3
+D1
+You can see an empty room.
+~
+~
+0 -1 13057
+S
+#13061
+An Odd Cell~
+A small dusty room with only one exit, through a strong iron door. For
+the occupants of this cell, life must have been like hell.
+~
+130 0 3
+D3
+You can see an empty room.
+~
+~
+0 -1 13057
+S
+#13062
+Garden Entrance~
+Under a beautiful marble archway, the path leads to a well-kept garden.
+The smell of flowers and fruits reaches your nose.
+~
+130 0 3
+D0
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13063
+D2
+You can see the village path.
+~
+~
+0 -1 13038
+S
+#13063
+Garden Path~
+On a small path among the flower-beds and green, luscious trees bearing
+the most wonderful fruits, you can almost forget the violent and cruel
+world outside.
+You can hear the birds singing as you walk along the path.
+~
+130 0 3
+D0
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13068
+D1
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13064
+D2
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13062
+S
+#13064
+Garden Path~
+On a small path among the flower-beds and green, luscious trees bearing
+the most wonderful fruits, you can almost forget the violent and cruel
+world outside.
+You can hear the birds singing as you walk along the path.
+~
+130 0 3
+D1
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13065
+D3
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13063
+S
+#13065
+Garden Path~
+On a small path among the flower-beds and green, luscious trees bearing
+the most wonderful fruits, you can almost forget the violent and cruel
+world outside.
+You can hear the birds singing as you walk along the path.
+~
+130 0 3
+D0
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13066
+D3
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13064
+S
+#13066
+Garden Path~
+On a small path among the flower-beds and green, luscious trees bearing
+the most wonderful fruits, you can almost forget the violent and cruel
+world outside.
+You can hear the birds singing as you walk along the path.
+~
+130 0 3
+D2
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13065
+D3
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13067
+S
+#13067
+Garden Path~
+On a small path among the flower-beds and green, luscious trees bearing
+the most wonderful fruits, you can almost forget the violent and cruel
+world outside. There is a small shack to the south of here. It has a
+small wooden door.
+You can hear the birds singing as you walk along the path.
+~
+130 0 3
+D1
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13066
+D2
+You can see a small shack, where garden tools are kept.
+~
+door small~
+1 -1 13069
+D3
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13068
+S
+#13068
+Garden Path~
+On a small path among the flower-beds and green, luscious trees bearing
+the most wonderful fruits, you can almost forget the violent and cruel
+world outside.
+You can hear the birds singing as you walk along the path.
+~
+130 0 3
+D1
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13067
+D2
+You can see a path leading through the well-kept garden.
+~
+~
+0 -1 13063
+S
+#13069
+The Shack~
+You are standing in a small shack filled with the smell of the earth. This
+place is used as a storage space for garden tools. They must be in use
+right now.
+~
+130 8 0
+D0
+You can see a small door.
+~
+door small~
+1 -1 13067
+S
+#13070
+The Hall of Meeting~
+Huge wooden heraldic symbols and coats-of-arms from days long forgotten
+are hanging on the walls of this huge structure. Part wood and part wood,
+this house defies all your previous perceptions of architecture. The
+miniature towers and walls seem to almost hang in mid-air. The open-air
+central yard is filled with small bushes and flowers. You can leave
+through a low entry-way to east, where you can see the path.
+~
+130 8 0
+D1
+You can see the village path.
+~
+~
+0 -1 13033
+S
+#13099
+The Elemental Circle~
+The Stone circle you are standing is truly massive. It is a miracle
+that you couldn't completely see it from the grove. The massive stone
+blocks are arranged into a semi-circle facing east, to the rising sun.
+A small pond in the middle of the opening completes the elements,
+bringing them all together. The Sun, earth, air, water and fire. Between
+the pond and the stone circle, there is a small round stone plate in the
+ground.
+Lots of small plants are growing on the ground.
+~
+130 516 3
+D3
+You see the Druidic grove to the west.
+~
+~
+0 -1 13008
+E
+plate~
+There are symbols in the plate :               ù
+
+                                               ∫
+                                          Ï < ÕŒÕ > ‡
+                                               ∫
+                                               
+                                               ë
+~
+E
+sky~
+The sky looks dimmer than normal in here. Maybe the great powers do
+that occasionally.
+~
+E
+plants~
+The plants and flowers look strange here. You haven't seen these kind
+of plants anywhere before.
+~
+E
+stones circle~
+These huge stone look so massive and powerful, that they must be out
+of this world. Maybe even from the elemental plane of earth itself.
+~
+S
+#0
+$~

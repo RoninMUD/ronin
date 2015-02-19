@@ -1,0 +1,227 @@
+#4001
+serpent snake~
+A Serpent~
+A serpent slithers in the sand here.
+~
+A magestical serpent slithers in the sand here.  You gaze into its black eyes
+and find yourself entranced by them.  An echo sounds in your head, in between
+the hissing you make out the words "BEWARE".  You should be careful around this
+snake, it may be poisonous.
+~
+11 0 -100 Y
+7 13 4 3d10+30 2d6+1
+0 2500
+8 8 0
+98 0 0d0+0 0
+0 0 0 0
+#4005
+orc guard huge mean~
+An Orcish Guard~
+An Orc is here guarding the caves.
+~
+He looks dreadful.
+~
+76 0 -500 Y
+20 11 2 2d20+200 3d6+10
+200 50000
+8 8 1
+96 0 0d0+0 0
+0 0 0 0
+#4006
+troll old dirty~
+A dirty old troll~
+A fat and lazy troll wanders about here.
+~
+As you stare into the trolls eyes he flashes you a big grin.  Looks like lunch
+time has finally come for him!
+~
+46 0 -800 Y
+18 8 1 5d50+600 2d22+15
+20000 80000
+8 8 1
+75 0 0d0+0 0
+0 0 0 0
+#4007
+snake guardian black lizard~
+A guardian snake~
+A black snake is coiled here in the dirt.
+~
+   A snake sits here in the dirt, seemingly unmoved by its
+magical sorroundings.  The snake is rather large, and has
+long fangs.  Perhaps you should beware of this snake.
+~
+47 0 -700 Y
+20 8 5 2d30+400 5d6+10
+0 30000
+8 8 1
+98 0 0d0+0 0
+0 0 0 0
+#4008
+centipede brown dirty bug~
+A brown centipede~
+A harmless looking centipede squirms in the soft ground.
+~
+Well it doesn't seem to pay any attention towards you.
+~
+42 0 300 Y
+6 15 4 10d4+50 4d6+5
+0 15000
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+#4009
+warrior lost man war~
+the Warrior~
+A lost warrior wanders aimlessly through the caves.
+~
+   A hard looking warrior stands in front of you.  He has long
+lost his mind, and now wanders these mines looking for someone
+to kill.  His face is contorted into a look of severe mental
+anguish.
+~
+108 268697600 -300 Y
+17 11 3 3d40+400 9d4+20
+1000 50000
+8 8 1
+68 0 0d0+0 0
+0 0 0 0
+#4010
+kobold dark one demon~
+A kobold~
+A Kobold is here trying to practice her magic.
+~
+   This Kobold looks as if she has weathered a thousand storms.  Her face
+is withered and frail.  A film of slime seems to cover her entire body. 
+What is left of her eyes seem to have sank back into her head.  She 
+seems harmless enough, but you do sense a powerful magic.
+~
+108 268435456 -100 Y
+19 14 4 5d10+25 1d10+0
+20 3000
+8 8 2
+96 0 0d0+0 0
+0 0 0 0
+#4051
+warrior proud fighter~
+A Proud Warrior~
+A Proud Warrior stands tall here.
+~
+   A tall and proud warrior stands tall in defiance here.  His
+flesh is wrinkled and aged from years of battle.  Despite 
+his old age he is still a notable opponent.
+~
+108 0 -400 Y
+7 13 5 2d20+200 5d6+1
+5000 50000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+#4052
+hobgoblin goblin small~
+A Small Hobgoblin~
+A Small Hobgoblin stands here lost.
+~
+The hobgoblin looks quite lost.
+~
+76 0 -300 Y
+18 14 2 5d6+370 3d6+4
+1000 59000
+8 8 1
+96 0 0d0+0 0
+0 0 0 0
+#4055
+hobgoblin goblin ugly~
+An Ugly Hobgoblin~
+An Ugly Hobgoblin is here muttering to itself.
+~
+The hobgoblin looks quite dangerous.
+~
+76 0 -500 Y
+20 9 2 5d50+400 3d6+10
+15000 79000
+8 8 1
+96 0 10d100+10 0
+0 0 0 0
+#4056
+orc frothing hungry~
+A Frothing Orc~
+A Frothing Orc is here looking for someone to eat.
+~
+An ugly Frothing orc stands before you.
+~
+108 0 -800 Y
+20 11 2 3d10+100 6d3+5
+150 75000
+8 8 1
+96 0 5d50+5 0
+0 0 0 0
+#4057
+cleric orc orcish evil~
+An Orcish Cleric~
+An Orcish Cleric towers over you here.
+~
+You gaze into the eyes of an evil old orc.  He grins evilly and utters some
+unknown words.  You wonder if he is channeling the power of his gods.
+You had better be very careful around this orc.  He is very dangerous 
+and powerful.
+~
+10 134217728 0 Y
+25 -1 1 5d7+260 6d5+1
+25000 46789
+8 8 1
+96 0 5d7+1 1
+1 6 10 28
+0 0 0 0
+#4058
+guard orc orcish~
+An Orcish Guard~
+An Orcish Guard is standing here.
+~
+You look upon an Orcish Guard.  He grins at you bearing his yellow teeth.
+There is blood stained on his lip.  You shiver as he emits a loud grunt.
+You had better run, unless you want to become this guys meal!
+~
+42 0 -1000 Y
+23 -2 0 2d50+720 3d6+9
+10000 98000
+8 8 1
+96 0 2d50+200 1
+4 2 5 0
+0 0 0 0
+#4059
+sorcerer orc orcish mage~
+An Orcish Sorcerer~
+An Orcish Sorcerer stands here.
+~
+You gaze into the eyes of an ugly Orcish Sorcerer.  Her teeth are
+all crooked and blood stained, and her eyes glow red.  Her hair
+is long and straw-like.  She utters a few enchantments and 
+prepares herself to destroy you!
+~
+10 0 -1000 Y
+22 -2 -5 5d50+450 2d22+10
+30000 110000
+8 8 2
+96 0 5d50+400 1
+1 2 15 26
+0 0 0 0
+#4060
+captain orc orcish~
+The Orcish Captain~
+The Orchish Captain stands here, arms folded.
+~
+Before you stands the Orcish Captain.  He has been assigned as Captain of 
+this mountain, and has command over almost all the Orcs in it.  He is a
+master of battle, you had better run, unless you want to be the next one
+the captain decides to mutilate.
+~
+8 134219776 -1000 Y
+35 -15 1 20d67+6000 5d7+20
+50000 320232
+8 8 1
+96 0 2d2+50 2
+5 2 20 0
+2 2 20 0
+0 0 0 0
+#0
+$~

@@ -1,0 +1,349 @@
+#11050
+rabit bat~
+the Rabid Bat~
+A nasty-looking, Rabid Bat stands here, ready to spread its disease.
+~
+The bat is about three feet tall, with sharp, pointy fangs.  As it
+turns to look at you, blood drips from its fangs and your ears ring
+with a high screeeeeech!
+~  ~
+104 8 -400 Y
+7 13 30 200d1+85 3d3+2
+200 3500
+8 8 0
+54 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11052
+large bat~
+the Large Bat~
+A large bat is here looking very protective.
+~
+The bat appears to be nesting...nursing her young.  She seems happy
+that the food has come to her this time.
+~
+74 0 300 Y
+13 7 0 6d10+100 2d8+2
+500 18000
+8 8 2
+54 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11054
+red small demon~
+the Small Demon~
+A small, red demon grins evilly at you.
+~
+The demon, while only two feet tall, looks incredibly ferocious.  He
+glows red and nad sharp claws, nearly as long as his entire body.  His
+feet, also, are long and pointy, and he large, powerful legs.
+~
+67109004 0 -800 Y
+5 15 5 5d4+60 2d5+0
+100 1000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11056
+huge slug~
+the Huge Slug~
+A large, white slug oozes before you, blocking your path.
+~
+The slug is about 12 feet in diameter and must weigh over fifty tons.
+It's body pulsates, and it sort of just rolls as it moves.  Aparrently
+it doesn't want you to continue down this path.
+~
+106 8 0 Y
+14 6 -10 2700d1+50 3d7+10
+30000 180000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11058
+leech~
+the Small Leech~
+A leech crawls along towards you and creeps up your leg.
+~
+The leech is one of the smaller leeches you'll find here, only about
+two feet long.  It looks thirsty.
+~
+106 0 -250 Y
+3 17 70 300d1+50 2d6+8
+20000 10000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11060
+nasty leech~
+the Nasty Leech~
+The large, nasty-looking leech pokes his razor sharp tongue at you.
+~
+The leech is much larger than the others, maybe 4 feet long and a one
+foot in diameter.  It is a murky reddish-brown.  It could probably
+suck you dry withine minutes.
+~
+106 8 -500 Y
+9 12 30 555d1+120 3d8+4
+5000 75000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11062
+hell hound~
+The Hell Hound~
+A snarling hell hound prepares to lunge at you.
+~
+The hell hound looks like a cross-breed between a rottweiler and a
+wolverine.  It has round, muscular legs and a broad chest.  It lips
+are pulled back in a permanant snarl and its fur it matted with blood.
+~
+104 262144 -200 Y
+12 8 20 555d1+120 2d8+4
+3000 55000
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11064
+muskelounge fish musky~
+the muskelounge~
+A muskelounge swims aimlessly here.
+~
+The large fish appears rather harmless.
+~
+74 0 500 Y
+8 13 30 555d1+120 3d3+0
+8000 75000
+8 8 0
+84 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11066
+earth worm~
+the EarthWorm~
+An earthworm slowly slides along the ground at your feet.
+~
+The worm appears harmless and rather friendly.
+~
+76 0 800 Y
+5 15 60 2d5+60 2d4+0
+100 1000
+8 8 0
+98 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11068
+huge guardian bat~
+the Huge Guardian Bat~
+A huge bat stands here guarding the entrance.
+~
+The bat is very large.  He also looks very powerful.  He seem to
+tighten up as he sees you, but appears as though he is not going to
+make the first move.
+~
+74 128 0 Y
+30 -8 -14 2000d1+50 4d8+5
+50000 185000
+8 8 0
+55 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11070
+huge warrior bat~
+the Huge Warrior Bat~
+A huge warrior bat is here, ready to fight.
+~
+The bat is scarred from many battles, but he is always ready for a
+good fight.  His wings spread out almost four feet on each side, and
+they have lethally sharp claws on the ends of them.
+~
+106 262152 -1000 Y
+25 -4 -4 4d25+1000 5d6+10
+35000 150000
+8 8 0
+55 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11072
+warrior bat large~
+the Large Warrior Bat~
+A large bat, scarred from many battles, prepares to attack.
+~
+The bat is REALLY quite large, and he looks pissed!
+~
+106 268435464 -500 Y
+20 0 0 835d1+100 4d6+7
+5000 120000
+8 8 0
+55 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11074
+warrior bat~
+the Warrior Bat~
+A warrior bat wanders aimlessly about.
+~
+The warrior looks tired from hours of training.  He stands about six
+feet tall, but will be absolutely huge when fully grown.  He scowls at
+you when he notices you, and you feel faint.
+~
+76 262144 -1000 Y
+17 8 10 555d1+120 2d8+4
+3000 75000
+8 8 0
+54 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11076
+mosquito bug inscect~
+the Mosquito~
+A large mosquito buzzes around your head.
+~
+The mosquite has a long pointed sucker in the middle of his face.
+~
+92 0 -1000 Y
+1 20 90 2d7+8 1d5+0
+100 25
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11078
+fly insect~
+the Fly~
+A fly dashes back and forth aimlessly.
+~
+The fly seems to be in search of food.
+~
+72 0 0 Y
+2 19 80 5d4+15 1d6+0
+5 250
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11080
+bee~
+the Bee~
+A dangerous-looking bee heads right for you.
+~
+The bee has a long sharp stinger, pointed right at YOU!
+~
+72 0 0 Y
+3 17 90 3d5+30 1d7+0
+66 350
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11082
+scorpat~
+the Scorpat~
+A ferocious Scorpat spins his tail towards you.
+~
+The Scorpat was an attempt at a guardian, by the Dark Knight.  The
+experiment failed...what you see before you is the result...a mix
+between a scorpian and a bat...it has small sharp fangs and a thin,
+whispy tail with a stinger on the end.
+~
+104 0 -500 Y
+1 19 100 12d75+150 3d6+10
+10000 45000
+8 8 0
+88 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11090
+firedrake drake~
+the firedrake~
+A firedrake eyes you carefully, smoke building in his lungs.
+~
+The drake is cousin to the dragon, and as such, looks like a smaller
+version of a dragon.  While smaller, they can be just as dangerous.
+~
+108 262152 -1000 Y
+19 1 0 4d5+230 3d5+2
+2000 35000
+8 8 0
+56 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11092
+moredhel~
+the moredhel~
+A moredhel, evil cousin to the dwarf, is here.
+~
+The moredhel is a fierce fighter.  It looks nearly identicle to a
+dwarve, except for the darker skin, but unlike a dwarf, its first
+instinct upon seeing you is to destroy you.
+~
+109 262152 -1000 Y
+22 -2 -20 10d5+650 2d12+4
+30000 70000
+8 8 0
+71 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11094
+borgh~
+the borgh~
+A borgh is here, getting ready to tear you to shreds.
+~
+The borgh is an ugly creature.  It walks on all fours, but will
+sometimes rear up on its hind legs in order to fight better.  It has
+massive, piercing claws and a thick protective hide.  Horns protrude
+from the side if it's jaw, curving forward along its snout.
+~
+108 262152 -1000 Y
+22 -2 -20 10d5+750 3d8+4
+30000 60000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11096
+dark knight master~
+the Dark Knight~
+The Dark Knight is standing here, eyeing you carefully.
+~
+The Dark Knight seems to be shrouded in a cloak of darkness, or perhaps he just
+draws all the surrounding light into his being, leaving an empty void. The
+only truely remarkable thing you can seem to focus on are his eyes. His eyes
+leave you feeling as though he has looked into your soul and found the 
+darkness that you are hiding even from yourself. As if from a trance, you 
+start back to reality just in time to see the Dark Knight descend apon you.
+~
+134217738 262272 0 Y
+60 -4 -10 2350d1+120 5d5+20
+200000 225000
+8 8 1
+8 16512 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

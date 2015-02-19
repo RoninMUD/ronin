@@ -1,0 +1,2048 @@
+#20100
+Strange Room~
+Well, it's a strange room all right, but how did you get here?!?!
+~
+201 0 0
+S
+#20101
+Huge Black Thundercloud~
+  For some reason this cloud seems to support your weight, as opposed to
+letting you fall to the ground below, if there is any. Everything looks 
+rather strange, the only scenery being the dark mass of cloud billowing 
+around you set against a sky of crimson. Brilliant flashes of lightning 
+combined with deafening peals of thunder make it seem like you're going 
+in circles.
+~
+201 1 0
+D1
+~
+~
+0 -1 20103
+D2
+~
+~
+0 -1 20117
+D3
+~
+~
+0 -1 20101
+D4
+~
+~
+0 -1 20102
+S
+#20102
+Huge Black Thundercloud~
+  For some reason this cloud seems to support your weight, as opposed to
+letting you fall to the ground below, if there is any in this strange place.
+Everything looks rather unusual, the only scenery being the dark mass of
+cloud billowing around you set against a sky of crimson. Brilliant flashes
+of lightning combined with deafening peals of thunder make it seem as if
+you're going around in circles.
+~
+201 1 0
+D0
+~
+~
+0 -1 20104
+D1
+~
+~
+0 -1 20102
+D2
+~
+~
+0 -1 20103
+D3
+~
+~
+0 -1 20101
+D5
+~
+~
+0 -1 20101
+S
+#20103
+Huge Black Thundercloud~
+  For some reason this cloud seems to support your weight, as opposed to
+letting you fall to the ground below, if there is any in this strange place.
+Everything looks rather unusual, the only scenery being the dark mass of
+cloud billowing around you set against a sky of crimson. Brilliant flashes
+of lightning combined with deafening peals of thunder make it seem as if
+you're going around in circles.
+~
+201 129 0
+D0
+~
+~
+0 -1 20103
+D1
+~
+~
+0 -1 20101
+D2
+~
+~
+0 -1 20102
+D3
+~
+~
+0 -1 20117
+D4
+~
+~
+0 -1 20102
+D5
+~
+~
+0 -1 20104
+S
+#20104
+Huge Black Thundercloud~
+  For some reason this cloud seems to support your weight, as opposed to
+letting you fall to the ground below, if there is any. Everything looks rather
+strange, the only scenery being the dark mass of cloud billowing around you
+set against a sky of crimson. Brilliant flashes of lightning combined with
+deafening peals of thunder make it seem like you're going in circles.
+~
+201 1 0
+D0
+~
+~
+0 -1 20102
+D1
+~
+~
+0 -1 20101
+D2
+~
+~
+0 -1 20105
+D3
+~
+~
+0 -1 20103
+D4
+~
+~
+0 -1 20104
+D5
+~
+~
+0 -1 20101
+S
+#20105
+Huge Black Thundercloud~
+  For some reason this cloud seems to support your weight, as opposed to
+letting you fall to the ground below, if there is any. Everything looks rather
+strange, the only scenery being the dark mass of cloud billowing around you
+set against a sky of crimson. Brilliant flashes of lightning combined with
+deafening peals of thunder make it seem like you're going in circles.
+~
+201 1 0
+D2
+~
+~
+0 -1 20104
+D3
+~
+~
+0 -1 20103
+D4
+~
+~
+0 -1 20106
+D5
+~
+~
+0 -1 20101
+S
+#20106
+Gaping Rift in Reality~
+  You have reached a pitch black, seemingly endless expanse of darkness.
+The only thing breaking the monotony of the darkness is a large gash above
+you, acting like a swirling vortex pulling you closer and closer to your
+doom.  From the strange feelings you get from it, you think it may push
+through into some other plane of existence.
+~
+201 129 0
+D4
+~
+rift~
+6 502 20107
+E
+maelstrom~
+20107
+~
+S
+#20107
+Maelstrom~
+   You appear to be in some vast swirling pool of chaotic energy, definitely
+not on the same plane of existence you came from. Many strange creatures and
+objects are also caught in the pool's irresistible pull, drawing you closer
+and closer to the center of it.
+~
+201 513 0
+S
+#20108
+A Shimmering Gate~
+   You stand outside a large gate, seemingly made from pure sunlight, its
+bars nearly blinding you with their brilliance. What could be on the other
+side of such a wondrous creation? Your heart pounds in anticipation as you
+consider the possibilities.
+~
+201 33280 0
+D0
+~
+Gate~
+1 20108 20109
+D2
+~
+chasm~
+10 -1 578
+S
+#20109
+Inside the Shimmering Gate~
+   You feel a sense of peace as you hear the gate close behind you, realizing
+that the gods themselves protect this place obsessively, since it is among
+the holiest places devoted to them.
+~
+201 0 0
+D0
+~
+~
+0 -1 20110
+D2
+~
+Gate~
+2 20108 20108
+S
+#20110
+Hall of the Gods~
+  You stand inside a strange rectangular building of sorts, its slanted walls
+tapering to a point far, far above you.  The walls themselves seem to be 
+transparent, yet solid enough to keep you from passing through them. Looking
+outside, the view is breathtaking- you can see for many hundreds of miles in
+any direction, and the wispy clouds drifting lazily by inches in front of your 
+face enhance your feelings of absolute joy at the thought of being able to see 
+such a wondrous place.
+~
+201 8 0
+D0
+~
+~
+0 -1 20116
+D1
+~
+~
+0 -1 20121
+D2
+~
+~
+0 -1 20109
+D3
+~
+~
+0 -1 20111
+S
+#20111
+Hall of the Gods~
+  Standing here, you see a large streaked marble statue bearing the likeness
+of the war god Hachiman.  It appears to be some sort of warning to any
+person who has no proper reason to be here.  
+~
+201 8 0
+D0
+~
+~
+0 -1 20115
+D1
+~
+~
+0 -1 20110
+D2
+~
+~
+0 -1 20112
+D3
+~
+~
+0 -1 20113
+E
+statue~
+The statue glows with an unearthly light, making you wonder whether it was
+created by a god, or an extremely talented mortal craftsman.
+~
+S
+#20112
+A Steaming Hole in the Ground.~
+  There is a large and rather jagged hole in the floor here, almost as if
+a large explosion from below has caused it to give way.  Steam or mist rises
+from the surface of a strange two-dimensional portal that occupies the void 
+space of the hole.  It seems to lead far below you, but you can't quite tell 
+how far because of the large amounts of dense mist that hang in the air there.
+~
+201 12 0
+D0
+~
+~
+0 -1 20111
+D5
+~
+~
+0 -1 20123
+S
+#20113
+Hall of the Gods~
+  You are in the westernmost corner of the structure, far to the west and 
+south and very far below you can make out the village you came from, as well
+as the large castle north of it.  Both appear as nothing more than tiny specks
+on the ground from your lofty position among the heavens, and you find yourself
+wondering if anybody down there can see you way up here.
+~
+201 8 0
+D0
+~
+~
+0 -1 20114
+D1
+~
+~
+0 -1 20111
+S
+#20114
+Hall of the Gods~
+  You stand in amazement as you realize that you are in one of the few places 
+that no mortals have been, the Hall of the Gods. All of the walls and floor
+have a surrealistic look to them, as if you could pass through if you were
+holy enough. Looking around, you see many kami here to do the bidding of
+their patron god.
+~
+201 8 0
+D1
+~
+~
+0 -1 20115
+D2
+~
+~
+0 -1 20113
+S
+#20115
+Hall of the Gods~
+  You are still astounded by the beauty of this place. You can sense but 
+not quite see the spirits of the dead floating about all around you, making
+you wonder if this is where you will go when you die.
+~
+201 8 0
+D1
+~
+~
+0 -1 20116
+D2
+~
+~
+0 -1 20111
+D3
+~
+~
+0 -1 20114
+S
+#20116
+Hall of the Gods~
+  You are still astounded by the beauty of this place. You can sense but 
+not quite see the spirits of the dead floating about all around you, making
+you wonder if this is where you will go when you die.
+~
+201 8 0
+D0
+~
+~
+0 -1 20117
+D1
+~
+~
+0 -1 20118
+D2
+~
+~
+0 -1 20110
+D3
+~
+~
+0 -1 20115
+S
+#20117
+A Dark Portal~
+  An enormous portal lies to the north- what it is made of or where it leads
+is unclear. When you touch it, ripples move outward as if you've thrown a 
+stone into a pond, then it quickly becomes glass-smooth again. Looking beyond 
+the portal, you notice that it seems as everything on the other side is one
+gigantic thundercloud.
+~
+201 8 0
+D0
+~
+~
+0 -1 20101
+D2
+~
+~
+0 -1 20116
+S
+#20118
+Hall of the Gods~
+  You are still astounded by the beauty of this place. You can sense but 
+not quite see the spirits of the dead floating about all around you, making
+you wonder if this is where you will go when you die.
+~
+201 8 0
+D1
+~
+~
+0 -1 20119
+D2
+~
+~
+0 -1 20121
+D3
+~
+~
+0 -1 20116
+S
+#20119
+Hall of the Gods~
+  This is the northeastern most corner of the structure. Scanning the horizon
+reveals little, save for a great expanse of rugged blue ocean and a tiny 
+jungle island that you can see far off to the east.
+~
+201 8 0
+D3
+~
+~
+0 -1 20118
+S
+#20120
+HarHar~
+     A large rock falls on Jarldian's head as he enters the room!
+~
+201 520 0
+S
+#20121
+Hall of the Gods~
+  You stand in amazement as you realize that you are in one of the few places 
+that no mortals have been, the Hall of the Gods. All of the walls and floor
+have a surrealistic look to them, as if you could pass through if you were
+holy enough. Looking around, you see many kami here to do the bidding of
+their patron god.
+~
+201 8 0
+D0
+~
+~
+0 -1 20118
+D3
+~
+~
+0 -1 20110
+S
+#20122
+Hall of Kludges~
+  Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+201 512 0
+S
+#20123
+A Misty Haze~
+  The fog grows solid here to the point of becoming tangible and limits
+your vision to only a few feet.  All around you can hear the subdued 
+ghostly echoes of a furious melee.  Shouts of triumph are intermingled 
+with the cries of the wounded and dying.  Occasionally you see the vague
+forms of shadowy warriors charging through the mist on spectral horses.
+At other times the fog clears just enough to show hundreds of transparent
+figures marching towards each other in orderly ranks.  The sickening
+smell of rotting flesh lingers in the air.  Looking down you realize you
+are in fact walking on the decomposing bodies of the fallen.
+~
+201 4 0
+D1
+~
+~
+0 -1 20124
+D4
+~
+~
+0 -1 20112
+S
+#20124
+A Mist Covered Landscape~
+  The fog grows solid here to the point of becoming tangible and limits
+your vision to only a few feet.  All around you can hear the subdued 
+ghostly echoes of a furious melee.  Shouts of triumph are intermingled 
+with the cries of the wounded and dying.  Occasionally you see the vague
+forms of shadowy warriors charging through the mist on spectral horses.
+At other times the fog clears just enough to show hundreds of transparent
+figures marching towards each other in orderly ranks.  The sickening
+smell of rotting flesh lingers in the air.  Looking down you realize you
+are in fact walking on the decomposing bodies of the fallen.
+~
+201 0 0
+D0
+~
+~
+0 -1 20125
+D1
+~
+~
+0 -1 20131
+D3
+~
+~
+0 -1 20123
+S
+#20125
+A Mist Covered Landscape~
+  The fog grows solid here to the point of becoming tangible and limits
+your vision to only a few feet.  All around you can hear the subdued 
+ghostly echoes of a furious melee.  Shouts of triumph are intermingled 
+with the cries of the wounded and dying.  Occasionally you see the vague
+forms of shadowy warriors charging through the mist on spectral horses.
+At other times the fog clears just enough to show hundreds of transparent
+figures marching towards each other in orderly ranks.  The sickening
+smell of rotting flesh lingers in the air.  Looking down you realize you
+are in fact walking on the decomposing bodies of the fallen.
+~
+201 0 0
+D0
+~
+~
+0 -1 20126
+D1
+~
+~
+0 -1 20132
+D2
+~
+~
+0 -1 20124
+S
+#20126
+A Mist Covered Landscape~
+  The fog grows solid here to the point of becoming tangible and limits
+your vision to only a few feet.  All around you can hear the subdued 
+ghostly echoes of a furious melee.  Shouts of triumph are intermingled 
+with the cries of the wounded and dying.  Occasionally you see the vague
+forms of shadowy warriors charging through the mist on spectral horses.
+At other times the fog clears just enough to show hundreds of transparent
+figures marching towards each other in orderly ranks.  The sickening
+smell of rotting flesh lingers in the air.  Looking down you realize you
+are in fact walking on the decomposing bodies of the fallen.
+~
+201 0 0
+D1
+~
+~
+0 -1 20127
+D2
+~
+~
+0 -1 20125
+S
+#20127
+A Mist Covered Landscape~
+  The fog grows solid here to the point of becoming tangible and limits
+your vision to only a few feet.  All around you can hear the subdued 
+ghostly echoes of a furious melee.  Shouts of triumph are intermingled 
+with the cries of the wounded and dying.  Occasionally you see the vague
+forms of shadowy warriors charging through the mist on spectral horses.
+At other times the fog clears just enough to show hundreds of transparent
+figures marching towards each other in orderly ranks.  The sickening
+smell of rotting flesh lingers in the air.  Looking down you realize you
+are in fact walking on the decomposing bodies of the fallen.
+~
+201 0 0
+D1
+~
+~
+0 -1 20128
+D2
+~
+~
+0 -1 20132
+D3
+~
+~
+0 -1 20126
+S
+#20128
+A Mist Covered Landscape~
+  This place looks exactly like a real battlefield, except for the fact that
+all the combatants are ghosts of some sort. Ghostly swords, ghostly corpses,
+everything appears to be part of the spirit world.
+~
+201 0 0
+D2
+~
+~
+0 -1 20129
+D3
+~
+~
+0 -1 20127
+S
+#20129
+A Mist Covered Landscape~
+  The fog grows solid here to the point of becoming tangible and limits
+your vision to only a few feet.  All around you can hear the subdued 
+ghostly echoes of a furious melee.  Shouts of triumph are intermingled 
+with the cries of the wounded and dying.  Occasionally you see the vague
+forms of shadowy warriors charging through the mist on spectral horses.
+At other times the fog clears just enough to show hundreds of transparent
+figures marching towards each other in orderly ranks.  The sickening
+smell of rotting flesh lingers in the air.  Looking down you realize you
+are in fact walking on the decomposing bodies of the fallen.
+~
+201 0 0
+D0
+~
+~
+0 -1 20128
+D2
+~
+~
+0 -1 20130
+D3
+~
+~
+0 -1 20132
+S
+#20130
+A Mist Covered Landscape~
+  The fog grows solid here to the point of becoming tangible and limits
+your vision to only a few feet.  All around you can hear the subdued 
+ghostly echoes of a furious melee.  Shouts of triumph are intermingled 
+with the cries of the wounded and dying.  Occasionally you see the vague
+forms of shadowy warriors charging through the mist on spectral horses.
+At other times the fog clears just enough to show hundreds of transparent
+figures marching towards each other in orderly ranks.  The sickening
+smell of rotting flesh lingers in the air.  Looking down you realize you
+are in fact walking on the decomposing bodies of the fallen.
+~
+201 0 0
+D0
+~
+~
+0 -1 20129
+D3
+~
+~
+0 -1 20131
+S
+#20131
+A Mist Covered Landscape~
+  The fog grows solid here to the point of becoming tangible and limits
+your vision to only a few feet.  All around you can hear the subdued 
+ghostly echoes of a furious melee.  Shouts of triumph are intermingled 
+with the cries of the wounded and dying.  Occasionally you see the vague
+forms of shadowy warriors charging through the mist on spectral horses.
+At other times the fog clears just enough to show hundreds of transparent
+figures marching towards each other in orderly ranks.  The sickening
+smell of rotting flesh lingers in the air.  Looking down you realize you
+are in fact walking on the decomposing bodies of the fallen.
+~
+201 0 0
+D0
+~
+~
+0 -1 20132
+D1
+~
+~
+0 -1 20130
+D3
+~
+~
+0 -1 20124
+S
+#20132
+A Mist Covered Landscape~
+  You've climbed atop a small hill.  This seems to be the heart of the raging
+battle.  The melee is even more violent and savage here.  Corpses litter the
+battlefield and blood flows in small creeks down the hillside.  The spectral
+warriors are fighting for the control of this hill it seems.  The muted sound
+of clanging swords drowns out all others save for the occasional echo of a
+death cry.  You sense that the source of all this chaos is close at hand.  A 
+strong force can be felt emanating from the sky.
+~
+201 0 0
+D0
+~
+~
+0 -1 20127
+D1
+~
+~
+0 -1 20129
+D2
+~
+~
+0 -1 20131
+D3
+~
+~
+0 -1 20125
+S
+#20133
+Hachiman's Throne Room~
+  You are inside the spartan throne room of the war god Hachiman.  You gather
+that you are alone since all you can see is the huge throne against the west
+wall and strange runes that adorn much of the blood-red walls.  The floor
+appears to be made of the bones of many different creatures, all co-mingling
+to form a solid floor.  You suddenly have a sensation like that of a warm
+breath on the back of your neck, but when you turn around there is nobody
+there.
+~
+201 33288 0
+D5
+~
+trapdoor~
+1 20112 20134
+E
+runes~
+The runes are quite indecipherable, although something not quite right about
+the way they look tells you that their purpose is very lethal.
+~
+S
+#20134
+A Bone-Strewn Pit~
+  You are inside an unusual octagonally shaped room, bones of dead creatures
+of all kinds pile up knee deep here.  As you crunch around trying to find
+an exit, the vile stench of rotting flesh and congealing blood tells you
+that whatever slaughtered all these creatures quite possibly is still here.
+~
+201 512 0
+S
+#20135
+On a Rocky Hillside~
+  It seems as though the secret exit you took was indeed very cleverly made,
+as it has brought you here, to a well concealed path that leads east for a
+short distance then seems to disappear.  All around you can see the jagged
+rock that makes up the large mountain which makes up the northern defensive
+wall of the castle.  It stretches out for many miles in every direction, 
+but to the northeast appears to be the fastest route to the sea.
+~
+201 0 0
+D1
+~
+~
+0 -1 20148
+S
+#20136
+A Very Badly Cracked Roof~
+  This part of the roof is even more damaged than the other parts, there is 
+a large crack here, which you just might be able to squeeze through. you can 
+see the vague outline of a darkened room below you.
+~
+201 0 0
+D0
+~
+~
+0 -1 20146
+D5
+~
+crack~
+1 -1 20137
+S
+#20137
+An Empty Storage Room~
+  It is apparent the this room hasn't been used for quite some time, as there
+is a thick layer of dust covering everything, and cobwebs far too numerous
+to count.
+~
+201 9 0
+D2
+~
+~
+0 -1 20138
+S
+#20138
+A Dark Room~
+  You are inside a dark, damp limestone tunnel, the walls are as smooth as
+they are in the vertical section, showing that great care was taken to 
+construct it.  Chiseled into the wall two feet or so above the ground is a 
+series of intricate symbols that vaguely appear to be instructions on 
+disarming traps.
+~
+201 1 0
+D0
+~
+~
+0 -1 20137
+D1
+~
+sliding~
+1 20197 20141
+D2
+~
+~
+0 -1 20139
+D3
+~
+~
+0 -1 20199
+S
+#20139
+A Dark Room~
+  You are in a dark hollow carved out of the main tunnel, a seemingly
+empty room that has no apparent purpose other than perhaps storage.  On
+the southern wall, you notice a small pinprick of light and when you look
+through, you see the main courtyard of the castle.
+~
+201 1 0
+D0
+~
+~
+0 -1 20138
+E
+peephole~
+20173
+~
+E
+light~
+20173
+~
+S
+#20140
+The Shogun's Bedroom~
+  You stand in the small room which serves as the Shogun's room for those
+rare occasions when he has to take refuge from an invading force or when he 
+just wants to be alone.  The furnishings here are sparse but of the highest 
+quality.  Hung on the walls in many places are many different katana of very 
+rare beauty, trophies gleaned from the many battles which he has won throughout
+his life.  Looking at a rack on the north wall, you notice what seems like a 
+wall which would serve as an emergency exit if hostile forces ever made it up 
+here.
+~
+201 0 0
+D0
+~
+rack~
+8 -1 20141
+D1
+~
+~
+0 -1 20145
+S
+#20141
+A Dirty Stone Tunnel~
+  You stand in the middle of another tunnel carved from the limestone of
+the mountain, however this one seems much more hastily and less skillfully
+constructed than the entrance tunnel.  To the west is a sliding wall of
+stone, and to the north you spy a faint, flickering light.
+~
+201 8 0
+D0
+~
+~
+0 -1 20142
+D3
+~
+sliding~
+8 20196 20138
+S
+#20142
+A Dirty Stone Tunnel~
+  You stand in the middle of another tunnel carved from the limestone of
+the mountain, however this one seems much more hastily and less skillfully
+constructed than the entrance tunnel.  The source of the light is now
+apparent, that being the nearly expended torch hanging on the wall.
+~
+201 8 0
+D1
+~
+~
+0 -1 20143
+D2
+~
+~
+0 -1 20141
+S
+#20143
+A Dirty Stone Tunnel~
+  You stand in the middle of another tunnel carved from the limestone of
+the mountain, however this one seems much more hastily and less skillfully
+constructed than the entrance tunnel.  A small crevice is barely visible
+to the east, and the tunnel seems much brighter to the south.
+~
+201 8 0
+D1
+~
+crevice secret~
+9 -1 20135
+D2
+~
+~
+0 -1 20144
+D3
+~
+~
+0 -1 20142
+S
+#20144
+A Dirty Stone Tunnel~
+  You stand in the middle of another tunnel carved from the limestone of
+the mountain, however this one seems much more hastily and less skillfully
+constructed than the entrance tunnel.  The tunnel is quite brightly lit
+and much warmer here. It opens up to a very large room to the south.
+~
+201 8 0
+D0
+~
+~
+0 -1 20143
+D2
+~
+~
+0 -1 20145
+S
+#20145
+War Room~
+  You stand in a large square room whose rough-hewn walls have been covered 
+in lovely paintings depicting scenes of great battles against demonic creatures
+of the underworld.  From the somewhat chaotic organization you see here, it
+looks like this place is a hurriedly constructed hideout for the Shogun and
+his advisors.  Spread out on the large mahogany table in the center of the 
+room are many hand-drawn topographical maps of the surrounding countryside
+with small red and black figurines representing the Shogun's and enemy's
+forces.
+~
+201 520 0
+D0
+~
+~
+0 -1 20144
+D3
+~
+~
+0 -1 20140
+S
+#20146
+On the Roof~
+  You appear to be on the roof of a castle or other large building.
+You must have beamed here since that's the only way to get here ;)
+~
+201 0 0
+D2
+~
+~
+0 -1 20136
+S
+#20147
+A Very Dark Room~
+  Even though it's pitch black in here, you get the distinct impression that
+you're being watched by someone or maybe even something. The hairs on the 
+back of your neck stand on end as an eerie chill passes through you.
+~
+201 8 0
+D3
+~
+Door~
+1 -1 20145
+S
+#20148
+An Unstable Rock Face~
+  The path drops off sharply here, continuing some fifty feet below you.
+Staying balanced here is rather difficult due to the small rockslides you
+seem to be creating with every step.
+~
+201 0 0
+D3
+~
+~
+0 -1 20135
+D5
+~
+~
+0 -1 20149
+S
+#20149
+At the Bottom of the Rock Face~
+  Luckily, you've survived the fall without any injuries, save for the odd
+bump and bruise.  Now that the initial shock of the fall has worn off, you
+examine your surroundings and notice that a skinny goat path that snakes off
+towards the beach which is still quite a ways off to the northeast.
+~
+201 0 0
+D0
+~
+~
+0 -1 20164
+S
+#20150
+Interrogation Room~
+  You are in a featureless room with black walls and only a metal table in
+the center of the room.  A lone light bulb hangs from a wire and casts its
+blinding glare in your face no matter where you seem to move.  On the floor
+far away from your reach, you notice a telephone book, thick rubber hose and 
+a stretched out coat hanger have been placed there.
+~
+201 4808 0
+S
+#20151
+Inside the Castle Walls~
+  You stand just inside the huge gates of the castle which stand directly to
+the south.  Looking around, you suddenly realize that this is a much larger
+place that you first imagined it to be.  Instead of one large structure, 
+there are many smaller buildings built inside this massive compound which
+abuts a jagged stone cliff to the north.  Guards armed with razor sharp
+weapons eye you cautiously, making sure that you know that any wrongdoing
+here will be punished instantly by death.
+~
+201 8 0
+D0
+~
+~
+0 -1 20154
+D1
+~
+door~
+1 -1 20152
+D2
+~
+Gate~
+2 588 588
+S
+#20152
+Guard's Quarters~
+  You stand inside the guardhouse, a spartan one-room building that contains
+no furniture or decorations of any kind save for the bedrolls of the guards
+rolled up and neatly placed against the walls.  There are a few scrolls,
+mostly warrants for the execution of various criminal elements that have
+broken the laws set down by the shogun.
+~
+201 0 0
+D0
+~
+door~
+1 -1 20153
+D3
+~
+door~
+1 -1 20151
+E
+scroll~
+By imperial edict, the death of the ninja criminal Hanzo Hattori has been
+ordained. Any persons bringing proof of the death of this vicious outlaw 
+(the severed head of the criminal is preferred) shall be looked favorably 
+upon by our ruler.
+~
+E
+warrant~
+By imperial edict, the death of the ninja criminal Hanzo Hattori has been
+ordained. Any persons bringing proof of the death of this vicious outlaw 
+(the severed head of the criminal is preferred) shall be looked favorably 
+upon by our ruler.
+~
+S
+#20153
+A Path of Stones~
+  A short stone wall has been built here extending around the guardhouse, 
+apparently to make it more defensible should a hostile force attempt to enter
+here.
+~
+201 0 0
+D0
+~
+~
+0 -1 20174
+D2
+~
+door~
+1 -1 20152
+D3
+~
+~
+0 -1 20154
+S
+#20154
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and has been deliberately layered.  One particular stone stands out, its 
+jagged features don't quite fit in with the other pebbles lining this
+road.  Birds chirp from a nearby tree, giving a sense of freedom and warmth.
+You feel at ease here and could probably stay here forever.
+~
+201 0 0
+D0
+~
+~
+0 -1 20173
+D1
+~
+~
+0 -1 20153
+D2
+~
+~
+0 -1 20151
+D3
+~
+~
+0 -1 20155
+E
+rock~
+Hmm, an unsightly jagged rock seems to have gotten here. Deciding that it
+doesn't belong here, you pick it up and throw it over the castle wall.
+~
+S
+#20155
+The Garden Path~
+  You walk on the smoothly polished stones that make up the garden path.  The 
+grass on either side has been neatly trimmed recently and seems to have been
+coated with some transparent substance that makes it smell like the lotus 
+blossom.  A large stone with symbolic writings on it stands near the edge of 
+the path.  To the west the garden path continues, while eastward lies a 
+spartan path of stone.
+~
+201 0 0
+D1
+~
+~
+0 -1 20154
+D3
+~
+~
+0 -1 20156
+S
+#20156
+The Garden Path~
+  You walk on the smoothly polished stones that make up the garden path.  The 
+grass on either side has been neatly trimmed recently and seems to have been
+coated with some transparent substance that makes it smell like the lotus 
+blossom.  A large stone with symbolic writings on it stands near the edge of 
+the path.  The path stretches out both to the east and west.
+~
+201 0 0
+D1
+~
+~
+0 -1 20155
+D3
+~
+~
+0 -1 20157
+S
+#20157
+The Garden Path~
+  You walk on the smoothly polished stones that make up the garden path.  The 
+grass on either side has been neatly trimmed recently and seems to have been
+coated with some transparent substance that makes it smell like the lotus 
+blossom.  A large stone with symbolic writings on it stands near the edge of 
+the path.  To the west the path continues, and to the north you spot a large
+flower garden of some sort.
+~
+201 0 0
+D0
+~
+~
+0 -1 20158
+D1
+~
+~
+0 -1 20156
+S
+#20158
+Garden~
+  You are in the most beautiful flower garden that you've ever seen, many 
+different types of flowers and trees grow here, most of which you are sure 
+you have never seen the likes of before.  Numerous tiny, twisted trees grow 
+from large stone terraces that have been built to either side of the path, 
+along with beautiful white lilies and a strange variety of lotus that is black 
+in color. The polished stones that make up the walkway here interlock 
+perfectly, adding to the aura of beauty and perfection that surrounds this 
+place.
+~
+201 0 0
+D0
+~
+~
+0 -1 20161
+D1
+~
+~
+0 -1 20171
+D2
+~
+~
+0 -1 20157
+D3
+~
+~
+0 -1 20159
+S
+#20159
+Garden~
+  You are in the most beautiful flower garden that you've ever seen, many 
+different types of flowers and trees grow here, most of which you are sure 
+you have never seen the likes of before.  Numerous tiny, twisted trees grow 
+from large stone terraces that have been built to either side of the path, 
+along with beautiful white lilies and a strange variety of lotus that is black 
+in color. The polished stones that make up the walkway here interlock 
+perfectly, adding to the aura of beauty and perfection that surrounds this 
+place.
+~
+201 0 0
+D0
+~
+~
+0 -1 20160
+D1
+~
+~
+0 -1 20158
+S
+#20160
+Garden~
+  You are in the most beautiful flower garden that you've ever seen, many 
+different types of flowers and trees grow here, most of which you are sure 
+you have never seen the likes of before.  Numerous tiny, twisted trees 
+grow from large stone terraces that have been built to either side of the 
+path, along with beautiful white lilies and a strange variety of lotus that 
+is black in color. The polished stones that make up the walkway here interlock 
+perfectly, adding to the aura of beauty and perfection that surrounds this 
+place.
+~
+201 0 0
+D0
+~
+~
+0 -1 20162
+D1
+~
+~
+0 -1 20161
+D2
+~
+~
+0 -1 20159
+S
+#20161
+Garden~
+  You are in the most beautiful flower garden that you've ever seen, many 
+different types of flowers and trees grow here, most of which you are sure 
+you have never seen the likes of before.  Numerous tiny, twisted trees 
+grow from large stone terraces that have been built to either side of the 
+path, along with beautiful white lilies and a strange variety of lotus that 
+is black in color. The polished stones that make up the walkway here interlock 
+perfectly, adding to the aura of beauty and perfection that surrounds this 
+place.
+~
+201 0 0
+D2
+~
+~
+0 -1 20158
+D3
+~
+~
+0 -1 20160
+S
+#20162
+Outside a Small Shrine~
+  You stand just outside the entrance of a small shrine, amazed at the care 
+taken in its construction.  All along the eaves of the sharply peaked roof
+you see small golden disks bearing the shogun's family crest glimmering 
+brightly in the sun.  Wooden rails lacquered gold in color direct you to 
+the ornately carved entrance.
+~
+201 8 0
+D1
+~
+~
+0 -1 20166
+D2
+~
+~
+0 -1 20160
+D3
+~
+~
+0 -1 20163
+E
+crest~
+You see a small disk with a relief-carved dove with its wings outstretched.
+~
+S
+#20163
+Family Shrine~
+  You stand in the sacred shrine of the Takemori clan.  The weapons and armor
+of their greatest ancestor stand in the middle of the room surrounded by lit
+candles.  On each side of the battered armor two long papyrus scrolls have 
+been nailed onto a bamboo rack which is fastened to the domed roof.  Both 
+scrolls have been covered with writings, all in the symbolic language of the 
+easterners.  A small wooden chair sits on a red cloth in front of the armor
+You also notice a bowl of rice and a beaker of sake that have been placed on 
+the floor just in front of the armor.
+~
+201 8 0
+D1
+~
+~
+0 -1 20162
+S
+#20164
+Path Through the Trees~
+  As you hack and force your way through the dense brush, you notice that
+you are in fact following a well-trodden path that has been worn into the
+jungle floor by animals of all kinds for a very long time.  It also
+becomes fairly apparent that even though the tunnel that brought you here
+was manmade, this place is very much still wild.
+~
+201 0 0
+D0
+~
+~
+0 -1 20165
+D2
+~
+~
+0 -1 20149
+S
+#20165
+At the Edge of the Shoreline~
+  You are nearing the edge of the beach, which is almost visible through
+the thick bamboo trees and brush which is so prevalent everywhere around
+here.  Strange animal tracks perhaps two to three days old make you pay
+much closer attention to your surroundings.
+~
+201 0 0
+D1
+~
+~
+0 -1 20167
+D2
+~
+~
+0 -1 20164
+E
+pit~
+Carefully concealed amongst the thick canopy of bushes and plants, you spy
+a deep pit, apparently meant for catching tigers.
+~
+E
+tracks~
+The dirt in which the tracks are found is just starting to become hard, so
+whatever large animal made these could still be around here.
+~
+S
+#20166
+The Garden Path~
+  You walk on the smoothly polished stones that make up the garden path.  The 
+grass on either side has been neatly trimmed recently and seems to have been
+coated with some transparent substance that makes it smell like the lotus 
+blossom.  A large stone with symbolic writings on it stands near the edge of 
+the path.
+~
+201 8 0
+D1
+~
+~
+0 -1 20169
+D3
+~
+~
+0 -1 20162
+S
+#20167
+At the Ocean's Edge~
+  At long last you've reached the ocean, a poorly camouflaged boat can be seen
+amongst the shrubs and other tropical plants.  It now seems that you have a
+way off this island, however a large hole in the bottom of the boat makes you
+rethink your options.
+~
+201 0 0
+D0
+~
+~
+0 -1 7217
+D3
+~
+~
+0 -1 20165
+S
+#20168
+End of the Stone Path~
+  The path comes to a gentle stop here, the stones ending in a half-circle
+and the sand becoming a round pool with large round rocks surrounding a
+lotus flower plant in the center.  Far off to the west is yet another much
+larger cryptomeria, that looms over you as a silent guardian of this place.
+The path gradually narrows to a small set of three short steps that leads
+into the main building.
+~
+201 0 0
+D1
+~
+~
+0 -1 20195
+D2
+~
+~
+0 -1 20169
+S
+#20169
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.
+~
+201 0 0
+D0
+~
+~
+0 -1 20168
+D2
+~
+~
+0 -1 20170
+D3
+~
+~
+0 -1 20166
+S
+#20170
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.
+~
+201 0 0
+D0
+~
+~
+0 -1 20169
+D2
+~
+~
+0 -1 20171
+S
+#20171
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.
+~
+201 0 0
+D0
+~
+~
+0 -1 20170
+D1
+~
+~
+0 -1 20172
+D3
+~
+~
+0 -1 20158
+S
+#20172
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.
+~
+201 0 0
+D1
+~
+~
+0 -1 20173
+D3
+~
+~
+0 -1 20171
+S
+#20173
+A Large Courtyard~
+  You are in the central courtyard of the castle, the nexus where all of
+the paths to the different parts of the castle meet.  The courtyard is
+highlighted by a huge cryptomeria tree growing in the very center of it, 
+surrounded by a perfectly circular ring of grass.  To the north lies a
+rather large building, the residence of the Shogun.
+~
+201 0 0
+D0
+~
+~
+0 -1 20189
+D1
+~
+~
+0 -1 20174
+D2
+~
+~
+0 -1 20154
+D3
+~
+~
+0 -1 20172
+S
+#20174
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.
+~
+201 0 0
+D1
+~
+~
+0 -1 20175
+D2
+~
+~
+0 -1 20153
+D3
+~
+~
+0 -1 20173
+S
+#20175
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.
+~
+201 0 0
+D0
+~
+~
+0 -1 20188
+D3
+~
+~
+0 -1 20174
+S
+#20176
+Kitchen~
+  You are in the middle of a large, well laid out room filled with all
+sorts of cooking devices.  In the center is a thick wooden table, no doubt
+for butchering animal carcasses prior to cooking.  A large oven burning
+seemingly out of control in the southwest corner counteracts the chilly
+air coming from the east wall.
+~
+201 8 0
+D0
+~
+~
+0 -1 20179
+D1
+~
+~
+0 -1 20177
+D2
+~
+~
+0 -1 20178
+E
+oven~
+You see a large stone-and-mortar oven, roughly three feet square and giving
+off a tremendous amount of heat.
+~
+S
+#20177
+Cold Room~
+  The temperature in this room seems to be well below freezing, and it
+stands to reason since there are many large blocks of ice stacked against
+the walls to keep the fine beef and pig carcasses hung up on strong metal
+hooks from rotting.  
+~
+201 8 0
+D3
+~
+~
+0 -1 20176
+E
+carcass~
+Hmm, fine marbly texture, very lean... looks like a meal fit for a king..
+(or Shogun!)
+~
+S
+#20178
+Storeroom~
+  You are inside a dry and dusty storeroom piled high with sacks of rice
+and other grains.  On a rack on the wall are many different cooking
+implements such as the various knives and other cutlery.  A wooden shelf
+in the corner contains the many different porcelain plates and bowls used
+by the Shogun.
+~
+201 8 0
+D0
+~
+~
+0 -1 20176
+S
+#20179
+A Path of Stones~
+  You note that this part of the path isn't as well groomed and seems more
+utilitarian in nature.  There are many jagged stones and rocks here and the
+strip of sand you saw so beautifully sculpted before bears many inconsiderate
+footprints about it.  The path ends here at a large wooden building to the
+south that is giving off the most delicious smelling aromas.
+~
+201 0 0
+D0
+~
+~
+0 -1 20180
+D2
+~
+~
+0 -1 20176
+S
+#20180
+A Path of Stones~
+  The path seems to be almost completely ruined here, the stones have all
+been kicked into the sand area, and footprints and broken tree limbs are
+scattered about everywhere.  The yelling appears to be coming from the east,
+as well as the loud cracking noise of wood on wood.
+~
+201 4 0
+D0
+~
+~
+0 -1 20185
+D1
+~
+~
+0 -1 20181
+D2
+~
+~
+0 -1 20179
+S
+#20181
+Dojo~
+  You stand in the center of a large room with a fairly low ceiling, all the
+walls and flooring are made from thick cedar boards, obviously to resist the
+bodies being thrown about here.  Neatly arranged on the walls in wooden racks
+are various weapons, from sticks to spears to swords, there is virtually every
+conceivable killing implement one could want to have.  This is the dojo, the
+place where every member of the Shogun's family as well as his samurai train
+in the arts passed down through the generations from their ancestors.
+~
+201 8 0
+D0
+~
+~
+0 -1 20182
+D1
+~
+~
+0 -1 20183
+D2
+~
+~
+0 -1 20184
+D3
+~
+~
+0 -1 20180
+S
+#20182
+Dojo~
+  This room appears to be the storage room for all the various non-lethal
+weapons for training purposes.  Mounted on racks and stacked in the corners
+are wood and bamboo copies of all the main weapons of the samurai such as
+swords, spears, polearms and even small wooden knives.
+~
+201 8 0
+D2
+~
+~
+0 -1 20181
+S
+#20183
+Master's Room~
+  You are in the small room that the Ryo calls his home.  He sleeps, 
+meditates and prays here.  In the corner you see a small mat rolled up 
+tightly that serves as a bed, and on a short rack you spy a pair of beautiful 
+matching swords.
+~
+201 8 0
+D3
+~
+~
+0 -1 20181
+S
+#20184
+Dojo~
+  This is a small side-room of the dojo, it appears to be the main storage
+area for some of the more exotic weapons as well as the equipment used to
+repair and maintain them.  You see many strange and unusual implements such
+as nunchaku, long chains with heavy rods on the ends, and an enormous 
+battlefield-sized sword that could only be lifted, let alone wielded by the
+strongest of warriors.
+~
+201 8 0
+D0
+~
+~
+0 -1 20181
+S
+#20185
+A Path of Stones~
+  You note that this part of the path isn't as well groomed and seems more
+utilitarian in nature.  There are many jagged stones and rocks here and the
+strip of sand you saw so beautifully sculpted before bears many inconsiderate
+footprints about it.  There seems to be yelling and other loud noises coming
+from a small all wooden building to the south.
+~
+201 0 0
+D2
+~
+~
+0 -1 20180
+D3
+~
+~
+0 -1 20186
+S
+#20186
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.  Short steps lead up to the raised platform of the castle's main
+building to the west, and the stone path continues east and south.
+~
+201 0 0
+D1
+~
+~
+0 -1 20185
+D2
+~
+~
+0 -1 20187
+D3
+~
+~
+0 -1 20197
+S
+#20187
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.
+~
+201 0 0
+D0
+~
+~
+0 -1 20186
+D2
+~
+~
+0 -1 20188
+S
+#20188
+A Path of Stones~
+  Pebbles and small pieces of rock cover this path.  It looks well groomed
+and looks deliberately layered.  To either side of the path, you see that
+there is a strip of sand that has been sculpted with lines that run perfectly  
+parallel to the path.  Every twenty or so feet small cryptomeria trees have
+been planted and provide small bits of shade from the sweltering heat of the
+sun.
+~
+201 0 0
+D0
+~
+~
+0 -1 20187
+D2
+~
+~
+0 -1 20175
+S
+#20189
+Inside the Entrance~
+  You are inside a very elegantly decorated building, with richly lacquered
+wooden walls and very delicate doors made from light wooden frames and
+covered with paper.  Just a few feet to the south is a large wonderfully
+carved archway, covered in gold dust lacquer and sporting three large
+gold and silver crests of the Shogun's clan. 
+~
+201 8 0
+D0
+~
+~
+0 -1 20193
+D1
+~
+~
+0 -1 20191
+D2
+~
+~
+0 -1 20173
+D3
+~
+~
+0 -1 20190
+S
+#20190
+Shogun's House~
+  You are inside a very elegantly decorated building, with richly lacquered
+wooden walls and very delicate doors made from light wooden frames and
+covered with paper.  Ornately carved beams run along the ceiling, and
+beautiful wooden furniture is everywhere, further showing what an opulent life 
+the Shogun leads.
+~
+201 8 0
+D0
+~
+~
+0 -1 20194
+D1
+~
+~
+0 -1 20189
+S
+#20191
+Shogun's House~
+  You are inside a very elegantly decorated building, with richly lacquered
+wooden walls and very delicate doors made from light wooden frames and
+covered with paper.  Ornately carved beams run along the ceiling, and
+beautiful wooden furniture is everywhere, further showing what an opulent life 
+the Shogun leads.
+~
+201 8 0
+D0
+~
+~
+0 -1 20192
+D3
+~
+~
+0 -1 20189
+S
+#20192
+Shogun's House~
+  You are inside a very elegantly decorated building, with richly lacquered
+wooden walls and very delicate doors made from light wooden frames and
+covered with paper.  Ornately carved beams run along the ceiling, and on
+the walls are lovely ink paintings of famous battles, apparently painted
+by the Shogun himself.
+~
+201 8 0
+D0
+~
+~
+0 -1 20197
+D2
+~
+~
+0 -1 20191
+D3
+~
+~
+0 -1 20193
+S
+#20193
+Audience Room~
+  You stand inside a very simply but still elegantly decorated room. It
+is a bare, sparsely furnished open area with exposed wooden flooring and
+a rice straw mat in the center of the floor for the Shogun's guests to
+kneel on when they approach him.  A short distance to the north is the
+Shogun's throne.
+~
+201 8 0
+D0
+~
+~
+0 -1 20196
+D1
+~
+~
+0 -1 20192
+D2
+~
+~
+0 -1 20189
+D3
+~
+~
+0 -1 20194
+S
+#20194
+The Room of Waiting~
+  It is inside this room that guests wait prior to an audience with the 
+Shogun. There is a short table with a steaming bowl of tea, and right beside
+it on a wooden tray is a small bottle of sake with a pair of tiny cups.  On
+a shelf there are many beautiful scrolls written in a firm hand.  Among some
+of the titles that you can translate are The Art of War, and The Book of Five
+Rings, as well as many Zen scrolls and other religious texts.
+~
+201 8 0
+D0
+~
+~
+0 -1 20195
+D1
+~
+~
+0 -1 20193
+D2
+~
+~
+0 -1 20190
+S
+#20195
+Western Entrance~
+  You stand inside a very simply but still elegantly decorated room. It
+serves as the western entrance that offers access to the temple and garden
+a short distance to the west.  Sturdy wooden planks make up the floor and
+make no sound even from the heavy footsteps of your boots on them.  A chill
+breeze blows through the open door and causes goosebumps to form on your
+arms.
+~
+201 8 0
+D2
+~
+~
+0 -1 20194
+D3
+~
+~
+0 -1 20168
+S
+#20196
+Shogun's Throne~
+  From the general appearance of things, it looks like a savage battle took
+place here, blood and claw marks abound on the floor and walls making you
+wonder what exactly happened here. On the floor, a ring lies in the midst of
+a small pool of blood.
+~
+201 8 0
+D0
+~
+wall~
+8 20196 20198
+D2
+~
+~
+0 -1 20193
+D5
+~
+floorboard~
+2 516 554
+E
+floor~
+The pool of blood from some unknown person seems to be draining into a seam
+in the floor, however you notice that the blood abruptly stops on the other
+side of the seam, very strange.
+~
+E
+blood~
+The pool of blood from some unknown person seems to be draining into a seam
+in the floor, however you notice that the blood abruptly stops on the other
+side of the seam, very strange.
+~
+S
+#20197
+Eastern Entrance~
+  You stand inside a very simply but still elegantly decorated room. It
+serves as the eastern entrance that offers access to the dojo a short ways 
+to the southwest.  Bare wooden flooring leads eastward and ends at a set
+of stairs.
+~
+201 8 0
+D1
+~
+~
+0 -1 20186
+D2
+~
+~
+0 -1 20192
+S
+#20198
+A Dark Chamber~
+  You are inside a dark, circular shaped room that appears to have been cut
+into the same brittle limestone found in the paths that wind about the
+grounds of the castle.  A frail-looking bamboo ladder rests against the
+northern side of the chamber, attached to some sort of device near the top
+to allow it to be raised rapidly.
+~
+201 9 0
+D2
+~
+wall stone~
+8 -1 20196
+D4
+~
+ladder bamboo~
+11 -1 20199
+E
+ladder~
+You see an old, well-used bamboo ladder that looks ready to fall apart if you
+aren't careful.
+~
+S
+#20199
+A Dark Room~
+  You are inside a dark, damp limestone tunnel, it intersects another shaft
+at a near perfect ninety degree angle.  The walls of the vertical shaft have 
+been purposely polished smooth and covered by a very greasy and slippery 
+substance so as to prevent unwanted people from scaling their way up to
+here.  A narrow, old-looking bamboo ladder leads downward into the darkness.
+~
+201 9 0
+D1
+~
+~
+0 -1 20138
+D5
+~
+ladder bamboo~
+11 -1 20198
+E
+ladder~
+You see an old, well-used bamboo ladder that looks ready to fall apart if you
+aren't careful.
+~
+S
+#0
+$~

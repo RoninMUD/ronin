@@ -1,0 +1,356 @@
+#901
+cloak large~
+A large cloak~
+A large dark cloak is here, lying in a heap on the floor~
+~
+9 0 1025
+9 -1 -1 -1
+3 4000 2000
+4
+E
+large cloak~
+This is a large heap of woolen cloth, clumsily fashioned
+into a cloak.
+~
+X
+(null)
+~
+0 0 0
+M
+You cover yourself in a large black cloak.~
+$n covers $mself in a large black cloak.~
+~
+~
+#902
+band shadow~
+The Shadow Band~
+A dark band lies here, shadows forming around it.~
+invalid~
+9 138431024 17
+5 -1 -1 -1
+3 450000 30000
+10
+E
+band shadow~
+The Shadow Band is a dark strip of unknown elastic material.
+It seems to shimmer slightly even though the area around it
+is almost devoid of light.
+~
+X
+invalid~
+0 0 0
+M
+You feel stealthier as you put the band on your head.~
+As $n puts on The Shadow Band $e gets a faint red glow in $s eyes.~
+As you pull The Shadow Band off you suddenly feel a little drained.~
+As $n pulls of The Shadow Band $e looks a little weaker.~
+A
+19 1
+A
+39 5
+A
+17 -5
+#903
+chainmail chain mail goofy set~
+A Set of Chainmail with extra arms~
+A Goofy Set of Chainmail lies here, with too many arms for you to use it right.~
+(null)
+~
+9 0 9
+14 -1 -1 -1
+19 40000 12000
+13
+E
+chainamil chain mail goofy set~
+This set of chainmail is made for some creature with more pairs
+of arms than yourself.  It looks as though it would be very
+protective but would be hard to move around in.
+~
+X
+~
+0 0 0
+M
+As you put the chainmail on the extra arms droop sadly at your sides.~
+As $n puts the chainmail on $e blushes a little as the extra arms hang at $s sides.~
+~
+~
+A
+2 -2
+A
+18 -2
+#904
+boots black~
+A Black Pair of Boots~
+There is a pair of black boots in the corner here, forgotten.~
+~
+9 138461204 65
+4 -1 -1 -1
+5 36000 7000
+80
+E
+boots black~
+This pair of black boots have strange runes carved into them that can only
+be seen when you look very close.
+~
+X
+~
+0 0 0
+M
+You pull a black pair of boots onto your feet and feel stronger.~
+As $n pulls on a pair of black boots $e looks a bit stronger.~
+You tug and tug at your boots, and finally get them off.~
+You laugh a bit at $n while $e struggles to remove $s boots.~
+A
+1 1
+A
+14 -20
+A
+18 2
+#905
+dagger bone ritual~
+A Darkened Bone Ritual Dagger~
+There is a Curved Bone Dagger lying on the ground, covered in fresh blood.~
+$n lunge$z forward mercilessly and plunge$z $s dagger into $V.~
+5 108032576 8193
+0 2 15 10
+10 30000 4000
+5
+E
+dagger bone ritual~
+This sharpened bone has a large ornamented handle with
+strange runes carved into the sides of it.  Fresh
+blood seems to be constantly dripping down its
+razor-sharp edge.
+~
+X
+$n stabs the air menacingly.~
+0 0 0
+M
+You grab a Dark Bone Dagger and get ready kill.~
+As $n wields a Bone Ritual Dagger $e fills with bloodlust.~
+As you let go of the dagger you calm down a lot.~
+$n lets go of $s dagger and calms down.~
+A
+19 1
+A
+24 -3
+#906
+Wand Stick~
+A Small Stick~
+A Small Stick is lying on a workbench here, long forgotten.~
+~
+3 0 16385
+30 5 2 91
+1 150000 15000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#907
+bangles golden set~
+A Set of Golden Bangles~
+A Set of Golden Bangles lies here, looking rather tempting.~
+~
+11 44044288 4101
+0 0 0 0
+4 250000 25000
+40
+E
+bangles golden set~
+This set of bangles glitter magnificently in the light,
+they are probably worth quite a fortune.
+~
+X
+~
+0 0 0
+M
+You feel fancier as you don a Set of Golden Bangles.~
+As $n puts on a Set of Golden Bangles $e looks a little fancier.~
+As you take of a Set of Golden Bangles you feel less fancy.~
+You watch as $n takes of $s Set of Golden Bangles.~
+A
+24 -3
+A
+3 1
+#908
+cape blood red~
+A Blood Red Cape~
+A Blood Red Cape is crumpled on the floor here.~
+~
+9 71303760 5
+8 -1 -1 -1
+8 80000 8000
+60
+E
+cape blood red~
+This blood red cape was once worth by the Queen of the Zans.
+It moves in such a way to make its wearer's shadow extra
+large and intimidating.
+~
+X
+~
+0 0 0
+M
+You drape a Blood Red Cape around your shoulders.~
+$n drapes a large Blood Red Cape around $s shoulders.  Spooky.~
+You feel less intimidating as you remove the cape.~
+As $n removes $s cape you feel like you can breath easier.~
+A
+20 -4
+A
+18 3
+B
+4
+#909
+junk pile~
+A Pile of Junk~
+A huge pile of junk lies here.~
+~
+15 0 0
+10 0 0 0
+10 10 10
+100
+E
+pile junk~
+A large pile of random things lies here, all looking like
+they are completely useless.  It seems the Zans have already
+sorted through these items.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#910
+breastplate plate rebel~
+The Rebel's Breastplate~
+A breastplate lies here, with a long forgotten symbol on it.~
+~
+9 0 9
+14 -1 -1 -1
+22 37000 3700
+17
+E
+breastplate plate rebel~
+This breastplate bears the mark of the Zan rebels.  The huge
+insignia is right on the center of the plate, making sure
+everyone knows who it belongs to.
+~
+X
+~
+0 0 0
+M
+As you wear the breastplate you start to question your rulers.~
+$n gets ready to fight $s oppressors as $e puts on $s armor.~
+As you remove your armor you feel less rebellious.~
+$n removes $s armor and blends back into the general populus.~
+A
+12 -20
+A
+13 30
+A
+2 -1
+#911
+whip oppression~
+The Whip of Oppression~
+A whip lies on the ground here, blackened from dried blood.~
+$n strikes out with $s whip to put $V back in line.~
+5 46139904 24577
+0 6 3 1
+12 50000 5000
+75
+E
+whip oppression~
+This whip is a woven leather whip with dry blood caking its outside.
+It has definitely seen its share of violence.
+~
+X
+$r whip cracks furiously, warning everyone nearby.~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+4 -2
+#912
+key golden~
+A Golden Key~
+A Golden Key is here, waiting to unlock an unknown door.~
+~
+18 524288 1
+1 -1 -1 -1
+1 500 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#913
+key runic~
+A Runic Key~
+A Runic Key lies here, long forgotten.~
+~
+18 524288 1
+1 -1 -1 -1
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#914
+bracers rusty~
+A Rusty Pair of Bracers~
+A pair of bracers lie here, rusty from years of neglect.~
+~
+9 4195424 257
+3 -1 -1 -1
+6 3400 7000
+5
+E
+bracers rusty~
+This pair of bracers looks like it has definitely seen better days.
+It has huge spots of rust and seems as though it will fall apart
+at any moment.  These look like they will be very hard to move
+in but could offer slight protection.
+~
+X
+~
+2 0 0
+M
+You slide a Rusty Pair of Bracers on your arms, cringing slightly from the feeling.~
+$n cringes slightly as $e pulls on a Rusty Pair of Bracers.~
+Your arms feel nasty after wearing the Rusty Pair of Bracers.~
+$n pulls off $s rusty bracers and looks a bit disgusted.~
+A
+19 2
+A
+2 -4
+A
+18 -4
+T
+800
+#0
+$~

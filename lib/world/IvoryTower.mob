@@ -1,0 +1,185 @@
+#2801
+wiseman~
+The Wiseman~
+The Wiseman is standing here reading his book.
+~
+He is the owner of the Ivory Tower.
+He is very clever and very good at fighting.
+~
+10 2048 1000 Y
+33 -10 -8 20d20+5000 1d10+35
+30000 360000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2802
+oldman~
+The OldMan~
+An OldMan is standing here talking to himself.
+~
+He is a very old man. Once upon a time, he was a very brave fighter.
+~
+72 0 1000 Y
+15 5 0 3d30+500 3d6+1
+2000 20000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2803
+retired knight master~
+The Retire Knight~
+A Retire Knight is standing here.
+~
+Before you stands a great knight.  His quests are known far and wide.  His arms
+are thick and strong, his hands leathery from gripping a sword.  He still wears
+the armor of his guild, for he is the most pious of the Paladin.
+~
+11 0 1000 Y
+60 -7 -6 9d100+4200 6d4+60
+20000 300000
+8 8 1
+7 16512 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#2804
+street sweeper~
+The Street Sweeper~
+A Street Sweeper is here cleaning the floor.
+~
+He is a very hard working people. He wants to keep his place clean.
+~
+72 0 700 Y
+20 3 0 3d30+1000 4d4+3
+2000 60000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2805
+old physicist~
+The Old Physicist~
+An Old Physicist is standing here.
+~
+He is very good at physic.
+~
+72 0 500 Y
+18 4 -3 3d50+700 2d12+0
+2000 47000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2806
+old philosopher~
+The Old Philosopher~
+An Old Philosopher is standing here.
+~
+~
+72 0 500 Y
+22 1 -4 9d20+1100 3d6+4
+5000 70000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2807
+negress~
+The Negress~
+The Negress is standing here.
+~
+A black skinned African woman. She was living in south of the
+Sahara long time ago.
+~
+72 0 500 Y
+25 -2 0 10d3+1300 9d2+7
+10000 180000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2808
+roe~
+The Roe~
+A Roe is standing here.
+~
+A small Lovely Asiatic deer.
+~
+72 0 700 Y
+10 10 5 20d2+100 2d6+3
+100 9000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2809
+doctor~
+The Doctor~
+A Doctor is standing here.
+~
+He is a very good doctor.
+~
+74 128 1000 Y
+30 -7 -10 1000d3+20000 10d10+20
+100 600000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2810
+general shopkeeper~
+The Food ShopKeeper~
+The Food ShopKeeper smiles and patiently waits for you to buy something.
+~
+He will fight like a madman to protect his store from riff raff like you.
+~
+74 134217856 600 Y
+24 -3 -7 90d10+4000 4d8+0
+500 100000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#2811
+general shopkeeper~
+The general ShopKeeper~
+The General ShopKeeper smiles and patiently waits for you to buy something.
+~
+He will fight like a madman to protect his store from riff raff like you.
+~
+74 134217856 600 Y
+24 -3 -7 90d10+4000 4d8+0
+500 100000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#2812
+wizard~
+The Wizard~
+The Wizard is standing here talking to himself.
+~
+He is a very tough man.
+~
+74 134217856 600 Y
+24 -3 -7 90d10+4000 4d8+0
+50000 100000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

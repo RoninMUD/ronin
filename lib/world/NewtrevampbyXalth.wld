@@ -1,0 +1,1002 @@
+#2900
+Obsidian hills~
+   The ground here is very slippery. A large black and extremely shiny plate
+gives a blinding reflection of the sunlight. This is a desolate hill. With no
+natural water source in sight, the climate here doesn't show much signs of life.
+You can go down the hill to the west, to a mountain path to the north, or
+continue up the hill to the south.
+~
+29 4 4
+D0
+~
+~
+0 0 9401
+D2
+You see some more hills.  They continue south.
+~
+~
+0 0 2901
+D3
+You see a path leading back towards the Turning Point.
+~
+~
+0 0 3505
+E
+hills~
+The hills are a very shiny black color.
+~
+E
+plate~
+This large plate of glass on which you stand is very slippery.  It reflects
+the bright sun and it hurts to watch.  It looks as though it could break if
+you weren't careful.
+~
+S
+#2901
+Obsidian hills~
+   You're on a hill made from black glass. It's very hot up here and an odd
+odor, smelling like sulfur, fills the air. The hill is steep, and shards of
+black pointy glass lie sprawled all around. The hill slopes downwards to the
+north, while the path continues further to the south.
+~
+29 4 4
+D0
+You see some hills to the north.
+~
+~
+0 0 2900
+D2
+You see some more hills to the south.
+~
+~
+0 0 2902
+E
+hills~
+The hills are a very shiny black color.
+~
+E
+shards~
+There are shards of obsidian displayed all about here.  They are sharp and 
+could be potentially dangerous.
+~
+S
+#2902
+Obsidian hills~
+   A very large landscape containing many hills, shines brilliantly, and is
+made out of glossy black glass. The heat is torturing, and no plants or animals
+can be seen. There is a rough path made in the glass here, which decreases the
+risk of falling considerably. Having been bleached by the sun, many bones lie
+here cracked and broken. Only two femur bones lie unbroken and were obviously
+placed in an X-shape. On top of the X lies a fractured skull. The path
+continues east towards the mountain. or north on the black glassy hills.
+~
+29 4 4
+D0
+You see some hills to the north.
+~
+~
+0 0 2901
+D1
+You see the side of the mountain to the east.
+~
+~
+0 0 2903
+D3
+~
+~
+0 -1 0
+E
+hills~
+They are a very shiny black color.
+~
+S
+#2903
+Mountain side~
+  Finally you are out of the obsidian and this atmosphere is much more pleasant
+than was your previous journey through the hills.  Dirt is an excellent change
+after walking on glass for the last few miles.  Animals all over graze and fill
+the air with their songs and calls.  The temperature is still warm but not
+nearly as hot as the reflected heat from the glass.  A really strong odor is
+present and seems to be coming from the mountain to the south.  The path
+continues to that mountain.
+~
+29 0 5
+D2
+The mountain continues.
+~
+~
+0 0 2904
+D3
+You see some hills to the west.
+~
+~
+0 0 2902
+E
+mountain~
+The mountain looks like it was formed from something sliding down and stopping.
+~
+S
+#2904
+Mountain side~
+   The mountainside has many folds in it.  All around are volcanic bombs
+which must have been created and thrown from the volcano.  Goats and other
+animals try to graze here even though there isn't much to eat.  A path has
+been nicely trailblazed for you so that you can easily travel south towards
+the high mountain.
+~
+29 0 5
+D0
+You see mountains to the north.
+~
+~
+0 0 2903
+D2
+The mountain continues.
+~
+~
+0 0 2905
+E
+smoke~
+The smoke is grey and puffs out of the top of the mountain.
+~
+S
+#2905
+Mountain top~
+   You have reached the top of the mountain.  An overpowering odor fills the 
+air.  Smoke accumulates from the active volcano to the south.  Scattered all
+over are rocks and bones.  Many bones lie under large boulders crushed by the
+massive weight.  Broken pieces of weapons and armor which would be useless to
+you lie around collecting dirt and will soon either be covered in soil or 
+burned.  You hear some scuffling about but there happens to be nothing visible
+around here.  To the south is the volcano.
+~
+29 4 5
+D0
+You see the side of the mountain to the north.
+~
+~
+0 0 2904
+D2
+You see a hole to the south. It looks like an entrance.
+~
+~
+0 0 2906
+E
+top of mountain~
+The top of the mountain is a large area with a hole in the middle.
+~
+E
+smoke~
+The smoke is grey and is coming from the hole.
+~
+E
+rocks~
+Thrown upon the ground are massive piles of rocks, and minerals.
+~
+E
+bones~
+There are a few bones that lie on the ground bleaching in the sun.  A skull
+sitting behind a small stone seems to be grinning at you.
+~
+S
+#2906
+Entrance to the mountain~
+   A very large cloud of smoke engulfs you.  Sulfuric fumes enter
+your nostrils and it is impossible to see much of anything.  Yellow and black
+dust concentrates the air here.  You can go east, west, or south on the
+volcano, or you can attempt the deep climb down into it.
+~
+29 4 5
+D0
+You see the top of the mountain to the north.
+~
+~
+0 0 2905
+D1
+You see the top of the mountain to the east.
+~
+~
+0 0 2907
+D2
+You see the top of the mountain to the south.
+~
+~
+0 0 2909
+D3
+You see the top of the mountain to the west.
+~
+~
+0 0 2908
+D5
+You can see down inside the mountain.
+~
+~
+0 0 2910
+E
+smoke~
+The smoke hurts your eyes and you try to cover them up.  Tears run down your
+armor as the smoke is too irritating to withstand.
+~
+S
+#2907
+Mountain top~
+   You are standing on the eastern flank of the top of the volcano.  Molten
+lava has blazed a trail down the side of this enormous mountain.  Smoke and
+sulfuric fumes enter your nose.  It is extremely hot up here.  The only exit is
+west to the gateway of the volcano.
+~
+29 4 5
+D3
+You see the entrance to the mountain to the west.
+~
+~
+0 0 2906
+S
+#2908
+Mountain top~
+   This is the west side of the volcano.  Dark, black smoke and sulfuric fumes
+enter the room.  It is the edge of a cliff and it looks as if it could fall
+off at any minute.  Paths which lava has created run all the way down the side
+of the mountain creating a ridge all the way down on each side of the paths.
+There isn't any wildlife visible here.  You may only exit to the east where
+the top of the volcano sits.
+~
+29 4 5
+D1
+You see the entrance to the mountain to the north.
+~
+~
+0 0 2906
+E
+smoke~
+Dark, black smoke combines with sulfuric fumes to create a very nauseating
+smell combined with eye-watering vapors.
+~
+E
+paths~
+These paths have been created by lava flows.  They are deep and cause the
+mountain look striped from a distance.
+~
+S
+#2909
+Mountain top~
+   This face is the southern end of the volcano.  Paths have been inserted by
+lava into the side of the mountain.  They dig deep into the side creating a
+rippled texture on the ground.  Sulfuric fumes and smoke float all around up
+here.  They really do stink but make a very nice sunset from a distance.  No
+wildlife is able to be seen for it may have all been killed or scared off by 
+the last eruption.  Many femur and skull bones lie about waiting to be picked 
+up.  Bones on the ground indicate that something other than a lava flow has
+killed animals up here... The only exit is north from where you can enter
+the volcano.
+~
+29 4 5
+D0
+You see the entrance to the mountain to the north.
+~
+~
+0 0 2906
+E
+smoke~
+Blinding smoke rises from the volcano and hurts your eyes.
+~
+E
+bones~
+Many broken bones lie on the ground; not many of which are whole.  In fact,
+you can't find a whole bone up here!  Something must have happened...
+~
+E
+paths~
+These are paths that have been cleared out from previous lava flows.  Some
+are shallow and some are deep.  You should keep away from them.
+~
+S
+#2910
+Inside the mountain~
+   You are standing in a somewhat small room that appears to have four exits.
+Many dirty and oily rags lie spread about this room.  There are a lot of 
+broken bones strewn about as well.  To the west and east runs a lava tube which
+you can enter if desired.  You can also go up to get out of this room.  Down 
+goes farther into the earth from where the sulfuric fumes and smoke seem to be
+arriving.
+~
+29 9 0
+D1
+You see guard barracks.
+~
+~
+0 0 2911
+D3
+You see guard barracks.
+~
+~
+0 0 2912
+D4
+Entrance to the mountain.
+~
+~
+0 0 2906
+D5
+The shaft continues down.
+~
+~
+0 0 2913
+E
+rags~
+These rags must have been brought from outsiders for nothing down here could
+have created them... right?
+~
+E
+bones~
+Broken rib cages and cracked skulls are all over the floor here.
+~
+S
+#2911
+Guard room~
+   You have entered the fire newt guard room.  Many tapestries are draped over 
+the furniture here and there is a big and stained carpet in the middle of the 
+floor.  This isn't a very safe room in which to be; it looks as if it could 
+collapse any minute.  Better head back west from where you can go another
+direction.
+~
+29 9 0
+D3
+You see the dark tunnel shaft.
+~
+~
+0 0 2910
+E
+beds~
+The beds are made of metal and rock.
+~
+E
+chairs~
+The chairs are made of stone and look very heavy.
+~
+E
+tables~
+The tables are long and wide.  They are made of stone and obviously too heavy
+to move.
+~
+E
+tapestries~
+These tapestries are hand-woven and have pictures of dragons on them.
+~
+E
+carpet~
+This carpet is stained blood red and is cinged on all sides.
+~
+S
+#2912
+Guard room~
+   Many constructions from fire newts are placed here.  This is a fire newt
+guard room.  It is identical to the one to the west of here.  Many burnt logs
+and black rocks are scattered about on the ground.  These would make nice
+weapons for newts if they got mad...
+~
+29 9 0
+D1
+You see the shaft in the mountain.
+~
+~
+0 0 2910
+E
+beds~
+The beds are made of metal and rock.
+~
+E
+chairs~
+The chairs are made of stone and look very heavy.
+~
+E
+tables~
+The tables are long and wide.  They are made of stone and are obviously to
+heavy to move.
+~
+E
+logs~
+Many black and brown logs are placed carefully in stacks surrounded by piles
+of rocks.
+~
+E
+rocks~
+Many piles of rocks surround a few pieces of stacked wood.
+~
+S
+#2913
+Inside the mountain~
+   Inside the volcano you can smell sulfur quite strongly.  Ash lies all
+around on the ground and all over the fire newts.  There are both fire newt
+workers and fire newt guards here.  To your surprise they aren't working nor are
+they guarding.  They seem to not notice you, which is probably a good thing.
+You can leave up to the higher floor or down to see what awaits.  You may also
+leave north to what looks like a very dark room or south which looks as though
+it has beds in it.
+~
+29 9 0
+D0
+You see a large storage room.
+~
+~
+0 0 2914
+D2
+You see workers' quarters.
+~
+~
+0 0 2915
+D4
+You see the dark mountain shaft.
+~
+~
+0 0 2910
+D5
+The shaft continues down.
+~
+~
+0 0 2916
+S
+#2914
+Store room~
+   Trash is piled up everywhere in this dump.  This looks more like a landfill
+rather than a storage room.  Boxes are piled up all over the room and you see
+a few squished fire newts under some garbage.  This is probably more of a party
+room than a storage room; at least it probably used to be.
+~
+29 9 0
+D2
+You see the dark mountain shaft.
+~
+~
+0 0 2913
+E
+boxes~
+Pizza boxes and just ordinary brown boxes are piled up very high here.
+~
+S
+#2915
+Workers' quarters~
+   Fire newts not only work, they also love to play!  This room is proof of
+that statement.  You see bread crusts on the ground.  Cake is stuck to the
+walls and tomato sauce is spilled on the floor.  Nothing is moving.  Most of
+the fire newts who come here come to sleep or pass out.  You can leave back
+north to where you may exit or go down deeper into the volcano.
+~
+29 9 0
+D0
+You see the dark mountain shaft.
+~
+~
+0 0 2913
+E
+walls~
+The walls are covered in ashes and food.
+~
+E
+food~
+Cake and bread smothered in tomato sauce along with pasta and many other foods
+are stuck to the floor and walls here.
+~
+S
+#2916
+Bottom of the mountain~
+   It is extremely hot in here.  Not only is the temperature bothersome but
+the fumes also make it hard to smell and taste.  Hopefully you won't lose your
+senses for good.  It might be wise to leave before a fire newt finds you here.
+You should either leave back up the mountain or you could explore some more by
+going north.
+~
+29 9 0
+D0
+You see the dark tunnel.
+~
+~
+0 0 2917
+D4
+You see the mountain shaft.
+~
+~
+0 0 2913
+S
+#2917
+The tunnel~
+   This dark, dry tunnel is covered in ash.  You can hear your footsteps echo
+through the tunnel and they seem to go on forever.  It is very dark in here
+even with a light.  The tunnel is very large and the ceiling is too far up to 
+see from here.  From here you can either go back towards the exit of the 
+volcano or you could try to venture north.
+~
+29 9 0
+D0
+You see a bend in the tunnel.
+~
+~
+0 0 2918
+D2
+You see the bottom of the shaft.
+~
+~           ~
+0 0 2916
+S
+#2918
+Bend in the tunnel~
+   You enter a bend in the tunnel.  It is extremely hot in here and you see
+yellow and green traces of sulfuric acid on the ground.  You'd better hope that
+you don't run into any more.  Furthermore, you'd better hope this volcano 
+doesn't erupt.  Small fire newts crawl about and laugh at you for no apparent
+reason.  They don't seem to mind the heat or the sulfuric smell.  From here
+you may journey east or back south to the tunnel's beginning.
+~
+29 9 0
+D1
+The tunnel continues into the dark.
+~
+~
+0 0 2919
+D2
+You see that the tunnel leads back.
+~
+~
+0 0 2917
+E
+acid~
+Yellow and green acid drips from the ceiling and lands on the floor here. 
+Soon there may be no floor left if this keeps up.
+~
+S
+#2919
+The tunnel~
+   You come to a fork in the tunnel.  It continues to the north, which you can't
+see much of as of now.  All you see is darkness in that direction.  To the 
+east is a very small house.  It might not even be considered a house.  More
+like a garage.  Fire comes out of the windows and door yet the wood does not
+seem to be at all charred.  You may enter the house if desired, take the path
+north, or go back west.
+~
+29 9 0
+D0
+The tunnel continues into the dark.
+~
+~
+0 0 2921
+D1
+You see a small fire newt house.
+~
+~
+0 0 2920
+D3
+You see a bend in the tunnel.
+~
+~
+0 0 2918
+E
+house~
+  Flames burst from the windows and door.  Fire newts are happily running all 
+about in there.
+~
+S
+#2920
+Fire Newt House~
+   You enter the shack and find a nice and cozy spot to spawn a family.
+Pictures on the wall and a bed in the corner show signs of civilization.  The
+floor boards creak as you walk on them and feel as if they could break at any
+time.  The windows have no glass in them, they're just holes in the side of 
+the building.  Perhaps you should depart back west... intruding is a very
+serious crime amongst fire newts.
+~
+29 9 0
+D3
+You see the dark tunnel.
+~
+~
+0 0 2919
+E
+picture~
+This is a picture of The Beautiful Lost Lenore.  Beside it is a picture of
+The Beautiful Annabel Lee.
+~
+S
+#2921
+The tunnel~
+   You are standing in another tunnel.  There are many cracks and crevices in
+the walls.  A very large crack is to your west which runs all the way up the
+tunnel.  Through the crack you see another shack.  This one is also on fire and
+as before it is not charred.  The floor is very rough here.  You may either
+follow the tunnel north, flee back south, or investigate the house to the west.
+~
+29 9 0
+D0
+The tunnel continues on.
+~
+~
+0 0 2923
+D2
+The dark tunnel.
+~
+~
+0 0 2919
+D3
+You see a fire newt house.
+~
+~
+0 0 2922
+E
+house~
+Through the crack you see an inflamed house.  Screams and laughter come from
+within.
+~
+E
+crack~
+A very large crack in the wall gives view to a house off in the distance.
+~
+S
+#2922
+Fire Newt House~
+   This is another fire newt house.  It is completely submerged in flames and
+is very hot.  This inferno seems to have no affect on the house nor does it
+have any on the inhabitants.  The nearly-immolated fire newts who live here
+must have some resistance to this heat, or at least have grown accustomed to
+it.  You may leave back east, or stay in the house a bit longer if you so 
+desire.
+~
+29 9 0
+D1
+You see the dark tunnel.
+~
+~
+0 0 2921
+S
+#2923
+The tunnel~
+   You walk through the tunnel to another lava tube.  To the west of the
+lave tube lies a very dark passage with yellowish-greenish smoke levitating
+above the floor.  To the east you see what looks to be the entrance of an
+ancient temple.  You could either enter one of these or you could leave
+this place by going back south.
+~
+29 9 0
+D1
+You see a fire newt temple.
+~
+~
+0 0 2927
+D2
+You see the dark tunnel.
+~
+~
+0 0 2921
+D3
+You see the entrance to the town hall.
+~
+~
+0 0 2924
+S
+#2924
+Entrance to the town hall~
+   You are standing in the entrance to the town hall.  The room is large and
+quite finely decorated.  There are engravings on the wall of famous fire newt
+battles with larger beasts.  Steam and sulfuric acid are apparent on the
+blackened ceiling.  Scratch marks are deeply taken into the hard, rock wall.
+You may leave back to the tunnel or west to the waiting room.
+~
+29 9 0
+D1
+You see the dark tunnel.
+~
+~
+0 0 2923
+D3
+You see a waiting room. 
+~
+~
+0 0 2925
+E
+engravings~
+Many engravings on the walls depict fire newt battles.  The fire newts take
+great pride in every battle which has been won no matter how big or small.
+~
+E
+ceiling~
+This blackened ceiling is charred and burned.  Steam and sulfuric acid traces 
+are stained on it.
+~
+S
+#2925
+The Waiting Room~
+   The waiting room of the town office is extremely dull.  There are more
+engravings on the walls but these ones seem to be of fire newt sacrifices.
+There are some symbols that are of the fire newt language under a very large
+picture of a fire newt and some smaller ones to the right of him.  The whole
+area is abandoned and you can hear echoes of dripping liquid in the distance
+are apparent.  It is extremely hot and stinks very badly.  You are able to go
+back to the town hall from here.
+~
+29 9 0
+D1
+You see the entrance to the town hall.
+~
+~
+0 0 2924
+D3
+You see a large office.
+~
+door~
+1 0 2926
+E
+engravings~
+Many engravings of fire newts and symbols that look like hieroglyphics are
+inscribed on the wall here.
+~
+S
+#2926
+The Leader's Office~
+   You are in the fire newt leader's office.  There are bloodstains all over
+this room.  Many shrunken heads with long hair and wrinkled green skin lie
+both on the floor and impaled on metal spikes which are posted on the walls.
+This room is hotter than hell itself.  It may behoove you to leave back east
+before it's too late.
+~
+29 9 0
+D1
+You see the waiting room.
+~
+door~
+1 0 2925
+E
+spikes~
+Large metal spikes are mounted on the walls.  Mounted upon them are many small
+heads which were received in battle.
+~
+E
+stains~
+Many bloody stains are permanently bonded to the walls.
+~
+E
+heads~
+Many small heads are posted upon the spikes here and most of them have been
+shrunken down to the size of a baseball.
+~
+S
+#2927
+Outside the temple~
+   You are standing just outside the fire newt temple.  Many engravings of
+lizards and hooded men are drawn all over the walls here.  Enormous stalactites
+and stalagmites create a massive temple to the east.  This temple dwarves all
+which surrounds it.  Smoke steams out from the windows on the top floor.  The
+pressure is extremely high all the way down here.  It is truly a magnificent
+geological structure.  You can either leave back west or enter the temple to 
+the east... if you feel worthy.
+~
+29 9 0
+D1
+You see the entrance to the fire newt temple.
+~
+~
+0 0 2928
+D3
+You see the dark tunnel.
+~
+~
+0 0 2923
+E
+stalagmites~
+Large stalagmites point towards the ceiling from the ground and could be
+hazardous if you fell upon them.
+~
+E
+stalactites~
+Large stalactites point towards the ground from the ceiling as water slowly
+drips from their tips.
+~
+E
+engravings~
+These are pictures of gargantuous lizards in battle with men wearing hooded
+robes. The men seem to have books in their hands and are using some sort of
+magic. The scenario seems to nearly come to life.
+~
+S
+#2928
+Entrance to the temple~
+   Many marvelous structures are all around you as you enter the temple.  
+Beams that hold the building up have many engravings and famous scenes from 
+fire newt victories on them.  It is so very hot and dense in here.  Fire and
+smoke blaze and swirl all around you.  This is a very sacred structure and
+you should treat it with the respect which it deserves.  It appears that the
+only exit is to the west.
+~
+29 9 0
+D1
+You see the door that leads to the inside of the temple.
+~
+door~
+1 -1 2929
+D3
+You see the outside of the temple.
+~
+~
+0 0 2927
+E
+door~
+This enormous door is made from iron.  It looks extremely heavy for it is 
+about 20 feet tall and probably several feet thick.
+~
+E
+engravings~
+More engravings cover this wall as well.  These ones aren't of the battles
+themselves but rather of after the battles while the fire newts dragged their
+dead victims behind their chariots of fire.
+~
+E
+beams~
+The beams hold up the entire temple.  Without the beams the temple and most
+likely the whole mountain would collapse.
+~
+S
+#2929
+Inside the Temple~
+   You are inside a very dark temple.  There are a few torches burning very
+brightly around you but other than that it's pitch black.  It is dead silent.
+The rustling of fire newts has seized and the dripping of acid earlier in the
+mountain has vanished.  Some sort of magnetic force seems to be pushing you
+away from here.  Maybe it's telling you something?  It may be a good idea to
+turn back now.
+~
+29 9 0
+D3
+You see the door that leads to the temple entrance.
+~
+door~
+1 -1 2928
+D5
+You see a large trap door.
+~
+~
+0 0 2930
+E
+door~
+The door to the east through which you just entered creaks on its hinges and
+sends a draft into the room.  It looks very sturdy.
+~
+E
+torches~
+A few torches are burning here leaving you with a little light with which to
+see. They are dim yet somewhat effective.
+~
+S
+#2930
+The room before the doors~
+   You stand before a pair of huge decorated doors.  They are made from iron
+and look to be extremely heavy.  They are about ten feet tall and have a metal
+handle which may be used to open them.  Keep in mind to enter might be a bit
+foolish.  This is a small room just large enough to hold you, a few others,
+and maybe... some monsters!  This is a perfect habitat for fire lizards which
+could be the parents of the brigade of fire newts which you faced to get this 
+far.  You should either leave back up or venture through the large doors to
+the east.
+~
+29 9 0
+D1
+You see two large doors.
+~
+doors~
+1 2917 2931
+D4
+You see the inside of the temple.
+~
+~
+0 0 2929
+E
+doors~
+This set of doors is the same as the last but with a lot more ornate
+decorations. It is inscribed with something that looks like a man drowning
+in a body of water.
+~
+S
+#2931
+The Egg Room~
+   Many dozens of eggs lie all over the floor.  Some are cracked, some are
+broken shells, and some are still whole.  This must be the nest of the fire
+lizards.  Many newts too small to kill run about down here.  They seem to be
+heading for a small hole in the northern wall.  Wind whistles in and out of
+the hole and a very strong odor comes from it as well.  A large roaring 
+arrives from the north.  You probably shouldn't stay here long for the lizards
+may be coming back any minute to check on their young.  You would be in a very
+bad position if they walked in while you were standing here.
+~
+29 13 0
+D0
+Nothing but a hole lies there.
+~
+hole~
+9 -1 2932
+D3
+You see two large doors.
+~
+doors~
+1 2917 2930
+E
+hole~
+The hole to the north is just small enough through which to crawl.  You could
+take a chance if you so desired.
+~
+E
+doors~
+The ornate doors are very large and sturdy.  They are very finely built and
+wouldn't fall apart in a thousand centuries.
+~
+S
+#2932
+The Sulfur Pool~
+   This room has a large pool of sulfur around a small island in the middle.
+There is a small path that leads from the door to an island in the middle of
+the pool.  The pool isn't very large, it's more like a mote around the island.
+Burning brightly, a small fire is apparent in the middle of the island.  As
+the fire snaps and sparks engravings are illuminated on the walls and ceiling.
+This is a very dangerous place.
+~
+29 9 0
+D2
+You see through a small hole a pile of egg shells.
+~
+hole~
+9 -1 2931
+D5
+~
+door~
+1 -1 2933
+E
+fire~
+The fire in the center of the island glows bright white.  It's so hot fusion 
+must be occurring within.  However you still seem to be able to stand and 
+watch it somehow...
+~
+E
+pool~
+This pool is made from sulfuric acid and the scent is just about killing you.
+You perish the though of falling in...
+~
+E
+path~
+A small path leads to the middle of the pool where the island sits.  Dancing
+in the middle of that island is a fire.  The path is made of sand and dirt.
+~
+E
+island~
+A small island in the center of the room seems to call your name.  A small
+fire burns in the middle of it.
+~
+E
+hole~
+The hole to the south is still small enough through which to crawl.  You may
+leave back if you'd like, and that might not be such a bad idea.
+~
+S
+#2933
+Under the Sulfur Pool~
+   This room is very large and dark.  The floor seems to be pulsing with a
+red-hot glow.  The outline of an enormous bird is charred into the ground.  It
+is hotter in here than the rest of the volcano.  The pressure is very intense.
+The floor slowly moves up and down as if it were breathing.  Dirt rolls around
+in clumps on the floor softly.  A small noise is present and coming from the
+corner is a very low-pitched hum.  A diamond chandelier sways gently from the
+ceiling creating a light jingling noise.  This room is definitely the worst
+yet.
+~
+29 1 0
+D4
+~
+door~
+1 -1 2932
+E
+chandelier~
+This is a diamond chandelier that would be worth a fortune if you could reach
+it. It is very pretty.
+~
+S
+#2999
+A temporary name~
+A temporary description
+~
+29 512 0
+S
+#0
+$~

@@ -1,0 +1,1410 @@
+#26400
+The Jal Desert~
+  You find yourself following in the footprints of a caravan which has
+just passed through this way. The harsh sun starts to take its toll on your
+stamina, as you journey onwards, and leave all civilization behind you. From
+where you stand, the famed never-ending desert of Jal-Pur seems to go
+on forever in every direction.
+~
+264 64 8
+D0
+~
+~
+0 -1 2172
+D1
+~
+~
+0 -1 26400
+D2
+You see the never-ending desert of Jal-Pur.
+~
+~
+0 -1 26401
+D3
+~
+~
+0 -1 26400
+E
+N~
+~
+S
+#26401
+The Jal Desert~
+  As you proceed into the heart of the desert, you find that your food and
+water resources have dwindled down alarmingly. The only thing which breaks
+the monotony of the continuous sand dunes is the occasional cactus tree
+which seems to be unaffected by this inclement weather. In the horizon you
+can see a few vultures picking of the last bits of flesh off the skeletons of
+some unfortunate travelers.
+~
+264 0 8
+D0
+~
+~
+0 -1 26400
+D1
+~
+~
+0 -1 26400
+D2
+~
+~
+0 -1 26401
+D3
+You can see the never-ending desert of Jal-Pur.
+~
+~
+0 -1 26402
+D5
+A hole has been partially dug in the sand here.
+~
+sand~
+9 -1 16976
+E
+sand~
+A loose-sand surface, bathed in warmth, surrounds a tiny hole here,
+almost big enough to crawl through.
+~
+E
+hole~
+A hole in the sand, it looks almost big enough to crawl through.
+~
+S
+#26402
+The Jal Desert~
+  The barren desert continues unto the horizon in all directions. There are
+the ruins of a dried up well here. To your astonishment you feel a cool and
+gentle breeze blowing here and welcome the change after spending so many days
+in the hot and blistering sun.
+~
+264 0 8
+D0
+~
+~
+0 -1 26400
+D1
+~
+~
+0 -1 26402
+D2
+~
+~
+0 -1 26401
+D3
+You see an oasis.
+~
+~
+0 -1 26403
+E
+well~
+You see the crumbling walls of an old dried up well.
+~
+S
+#26403
+An Oasis in the middle of the desert~
+  Paradise!! The small oasis seems like a heaven sent boon. There are palm
+trees growing, with dates on them, and the small pond in the middle beckons
+you to dive into it. It appears that all the caravans traveling through
+this desert have made a silent pact to keep this oasis flourishing for
+all passers-by to use on their trek across the desert.
+~
+264 0 8
+D0
+You can see the never-ending desert of Jal-Pur.
+~
+~
+0 -1 26401
+D1
+You can see the never-ending desert of Jal-Pur.
+~
+~
+0 -1 26401
+D2
+You see the footprints of a caravan leading this way.
+~
+~
+0 -1 26404
+D3
+You can see the never-ending desert of Jal-Pur.
+~
+~
+0 -1 26401
+E
+pond~
+A small and refreshing pond invites you to jump in and relax for awhile.
+~
+S
+#26404
+The Caravan Route~
+  The desert finally starts to thin out as you hit the caravan road. The
+sandy path has trees growing on each side, providing cool shade from the
+harsh relentless sun. The thirst in your throat starts taking its toll on
+you and you find yourself seeing a mirage of something that looks like a huge
+city in the distance.
+~
+264 0 8
+D0
+You can see a small oasis.
+~
+~
+0 -1 26403
+D1
+~
+~
+0 -1 26400
+D2
+You can see the footprints of a caravan leading this way.
+~
+~
+0 -1 26405
+D3
+~
+~
+0 -1 26401
+S
+#26405
+The Caravan Route~
+  There are a lot of tents pitched on both sides of the road. Caravans
+have stopped here waiting for their requests for entry into the city to
+be verified. A few people walk around with cane baskets on their heads
+selling fruits.
+~
+264 0 8
+D0
+You can see a small oasis.
+~
+~
+0 -1 26403
+D1
+~
+~
+0 -1 26401
+D2
+You can barely make out the outer walls of some huge city.
+~
+~
+0 -1 26406
+D3
+~
+~
+0 -1 26401
+E
+tent~
+You see a huge lambskin tent with the flaps blowing in the wind.
+~
+S
+#26406
+The Outskirts of the Sultanate of Jal-Pur~
+  Standing outside the reddish sandstone walls of the Sultanate, you
+realize why the locals refer to it as the pink city.  A shallow
+dip in the center of the road has been worn away from where endless
+hordes of people have waited doggedly in line, waiting for their
+papers to enter the Sultanate.
+~
+264 212 8
+D0
+You can see the never ending desert of Jal-Pur.
+~
+~
+0 -1 26401
+D2
+The grand gate to the sultanate of Jal-Pur.
+~
+~
+0 -1 26407
+S
+#26407
+Entrance to the Sultanate of Jal-Pur~
+  You stand in awe underneath the 50 feet high gate made out of one single
+stone. The gate is decorated with exquisite carvings in praise of the
+Caliph of Jal-Pur. Huge pieces of ice on either side of the gate provide all
+visitors with a refreshingly cool breeze.
+~
+264 0 1
+D0
+You can see the huge city walls of the sultanate.
+~
+~
+0 -1 26406
+D2
+The Tradesmen's Square is bustling with life.
+~
+~
+0 -1 26408
+E
+gate~
+The ornately carved gates have the word 'JAL' carved into the center. 
+~
+S
+#26408
+The Tradesmen's Square~
+  The square is bustling with life and you realize that this is the hub
+of all activities in the city. People from all walks of life throng here
+for their own personal reasons. To the north you can make out the gates of
+Jal-Pur. To the south you can see the central square of the sultanate. On
+either side lies the outer bazaar, more frequented by commoners.
+~
+264 0 1
+D0
+~
+~
+0 -1 26407
+D1
+~
+~
+0 -1 26410
+D2
+~
+~
+0 -1 26427
+D3
+~
+~
+0 -1 26409
+S
+#26409
+Outer Bazaar Street~
+  You find yourself on the outer bazaar street. The bazaar extends westwards.
+To the north you can see Ali's carpet shop, and to the south is Casim's
+sandals repair shop. The Tradesmen's Square lies just to the east.
+~
+264 0 1
+D0
+~
+~
+0 -1 26415
+D1
+~
+~
+0 -1 26408
+D2
+~
+~
+0 -1 26417
+D3
+~
+~
+0 -1 26411
+S
+#26410
+Outer Bazaar Street~
+  You find yourself on the outer bazaar street. The bazaar extends eastwards.
+To the north is Tarek's implements shop and to the south is Abdul's hut.
+The Tradesmen's Square is just to the west from here.
+~
+264 0 1
+D0
+~
+~
+0 -1 26416
+D1
+~
+~
+0 -1 26412
+D2
+~
+~
+0 -1 26418
+D3
+~
+~
+0 -1 26408
+S
+#26411
+Outer Bazaar Street~
+  You find yourself on the outer bazaar street. The bazaar extends both
+eastwards and westwards from here. To the north you can see the flaps of
+Fatima's tent and to the south lies the Inn of the Slaughtered Lamb.
+~
+264 0 1
+D0
+~
+~
+0 -1 26419
+D1
+~
+~
+0 -1 26409
+D2
+~
+~
+0 -1 26421
+D3
+~
+~
+0 -1 26413
+S
+#26412
+Outer Bazaar Street~
+  You find yourself on the outer bazaar street. The bazaar extends to
+either side of the street. To the north is Jabal's jewel shop and to the
+south you can see the cheese shop.
+~
+264 0 1
+D0
+~
+~
+0 -1 26420
+D1
+~
+~
+0 -1 26414
+D2
+~
+~
+0 -1 26422
+D3
+~
+~
+0 -1 26410
+S
+#26413
+Outer Bazaar Street~
+  You find yourself on the outer bazaar street. The bazaar extends eastwards
+and to the west you can see the majestic city walls of Jal-Pur. To the north
+lies the famed massage parlor of Nisha and to the south lies Bassoun's
+salon.
+~
+264 0 1
+D0
+~
+~
+0 -1 26423
+D1
+~
+~
+0 -1 26411
+D2
+~
+~
+0 -1 26425
+S
+#26414
+Outer Bazaar Street~
+  You find yourself on the outer bazaar street. The bazaar extends westwards
+and to the east you see the huge city walls. To the north is Suleyman's
+corner, and to the south you see Hassan's horse shop.
+~
+264 0 1
+D0
+~
+~
+0 -1 26424
+D2
+~
+~
+0 -1 26426
+D3
+~
+~
+0 -1 26412
+S
+#26415
+Ali's Carpets~
+  This is Ali's reputed carpet shop. There's a carpet here for every house.
+Size and color are no problem, and if there is an empty space in your house,
+Ali can find a carpet to fit the spot. And if you know the right names to
+drop or have the right price to offer, you can ask Ali to show you his
+special carpets - the flying kind.
+~
+264 8 0
+D2
+~
+~
+0 -1 26409
+S
+#26416
+Tarek's Implements~
+  You find yourself in a small shop full of odds and ends piled up to the
+ceiling. This is the place where Tarek the Tinker fixes things for all the
+citizens of the Sultanate. There are some fancy candelabras on the walls,
+illuminating the shop, and a huge grandfather clock which has stopped working
+rests in the corner.
+~
+264 8 0
+D2
+~
+~
+0 -1 26410
+E
+clock~
+The huge grandfather clock is broken with the hands always showing closing 
+time.
+~
+E
+clock~
+The huge grandfather clock is broken with the hands always showing closing time.
+~
+S
+#26417
+Casim's Sandal Repairs~
+  Traveler from foreign parts, rest your sore feet here, and have Casim take
+a look at your sandals or boots. He's the expert cobbler and will have your
+footwear in desert-worthy condition in no time. There is a small rack on the
+side, where Casim stores his used and repaired sandals, which are for sale
+at a very cheap price.
+~
+264 8 0
+D0
+~
+~
+0 -1 26409
+S
+#26418
+Abdul's Answers~
+  All the walls, including the ceiling, have been covered completely with
+strange tapestries showing the stars and planets and the constellations they
+fall under. This is where Abdul will divulge to you the secret of your stars
+and also try and guess what the stars tell him about your love, marriage,
+business and sex life. The going rate for an astrological reading isn't a lot
+but then again, Abdul has never been known to be accurate.
+~
+264 8 0
+D0
+~
+~
+0 -1 26410
+S
+#26419
+Fatima's Tent~
+  You really have to bend to fit into this small tent. Fatima the fortune
+teller is sitting in front of her customer, looking into her crystal ball
+in an effort to delve into the secrets hidden from mere mortals. There is
+a magical harp that's been put on a side table playing some really weird
+music here.
+~
+264 8 0
+D2
+~
+~
+0 -1 26411
+S
+#26420
+Jabal's Jewels~
+  You have come into the esteemed shop of the finest jeweler in Jal-Pur. The
+counters are strewn with precious stones of every imaginable color. In the
+display cases you see exquisite jewelry and ornaments fit for a prince and
+his princess. And the word around Jal-Pur is you can trust the quality of
+Jabal's gold and gems without any qualms, after all, the nobles shop here too!
+~
+264 8 0
+D2
+~
+~
+0 -1 26412
+E
+display~
+The display case is full of jewels and ornaments scattered about.
+~
+S
+#26421
+Inn of the Slaughtered Lamb~
+  A rowdy bunch of people are sitting here with pitchers of ale flowing. There
+is a large mahogany bar stocked with spirits from all over the world on your
+left. Das the bartender runs this joint with a lot of pride and you can see
+some of his satisfied customers slumped in a drunken stupor against the wall.
+~
+264 8 0
+D0
+~
+~
+0 -1 26411
+E
+bar~
+It is a huge well polished bar with tall stools and a brass railing to rest
+your feet on.
+~
+S
+#26422
+The Cheese Shop~
+  You almost pass out as the smell of the different cheeses hit your nose. 
+Here you can find every kind of goat cheese made on this side of the desert.
+And if there is some special variety that you prefer, Magan will be happy to
+have it imported for you with the next incoming caravan.
+~
+264 8 0
+D0
+~
+~
+0 -1 26412
+S
+#26423
+Nisha's Massage Parlor~
+  The house has a dozen small rooms in which Nisha and her masseuses attend
+to the pleasures of customers like yourself. The whole atmosphere is filled with
+different smells of oils and herbs. Steam escapes out of a door which has
+been left ajar in the sauna room. It is the perfect spot to come to when
+you have finished a long journey and have a lot of money to spend.
+~
+264 8 0
+D2
+~
+~
+0 -1 26413
+S
+#26424
+Suleyman's Corner~
+  A dark smoke-filled room with candles flickering in the wind. Through the
+haze you can make out the outlines of a small mattress laid out on the side.
+There is a small fire burning in the fireplace. This is Suleyman's corner,
+and the best place in town to get a soothsaying or augury told, especially
+before going out on long adventures. So step right up and find out if all
+bodes well for you in the near future.
+~
+264 9 0
+D2
+~
+~
+0 -1 26414
+S
+#26425
+Bassoun's Salon~
+  There is a huge mirror on the wall here and 2 chairs have been set down
+in front of it. This is Bassoun's hair cutting and styling salon. There is
+a stack of magazines lying on the counter to read while you enjoy your
+haircut or shave perhaps. You notice some hair sticking out from below the
+carpet and wonder who the cleaner around here is.
+~
+264 8 0
+D0
+~
+~
+0 -1 26413
+S
+#26426
+Hassan's Horses~
+  You nearly fall down as a couple of horses shift into the exact spot you
+were standing in!! As you regain your composure you notice the various
+stalls containing horses of different varieties with small boards over each
+stall showing the price range for that particular lot. From the corner of
+your eye you see a steed which will suit your needs well and take a step
+forward to inspect the animal.
+~
+264 8 0
+D0
+~
+~
+0 -1 26414
+S
+#26427
+Central Square~
+  This is a huge square paved with the reddest marble you have ever seen.
+It is the central square of the city and the meeting place for all the
+citizens to watch the Caliph's procession enter the palace every evening.
+The square is flanked by the inner bazaar on either side.
+~
+264 0 0
+D0
+~
+~
+0 -1 26408
+D1
+~
+~
+0 -1 26428
+D2
+~
+~
+0 -1 26446
+D3
+~
+~
+0 -1 26429
+S
+#26428
+Inner Bazaar Street~
+  You are on the inner bazaar street of Jal-Pur. The bazaar continues
+eastwards. The central square lies to the west from here. There is a chariot
+shop to the north and Fahad's falafel shop to the south from here.
+~
+264 0 1
+D0
+~
+~
+0 -1 26434
+D1
+~
+~
+0 -1 26430
+D2
+~
+~
+0 -1 26436
+D3
+~
+~
+0 -1 26427
+S
+#26429
+Inner Bazaar Street~
+  You are on the inner bazaar street of Jal-Pur. The bazaar continues
+westwards. The central square lies to the east from here. Zegna's boutique
+lies to the north and Hakkan's house lies south from here.
+~
+264 0 1
+D0
+~
+~
+0 -1 26435
+D1
+~
+~
+0 -1 26427
+D2
+~
+~
+0 -1 26437
+D3
+~
+~
+0 -1 26431
+S
+#26430
+Inner Bazaar Street~
+  You are on the inner bazaar street of Jal-Pur. The bazaar continues
+both eastwards and westwards from here. Benu's House of ill-fame lies north
+and Omar's hangout lies to the south from here.
+~
+264 0 1
+D0
+~
+~
+0 -1 26438
+D1
+~
+~
+0 -1 26432
+D2
+~
+~
+0 -1 26440
+D3
+~
+~
+0 -1 26428
+S
+#26431
+Inner Bazaar Street~
+  You are on the inner bazaar street of Jal-Pur. The bazaar continues both
+eastwards and westwards from here. You can see the door of Mustafa's Den to
+the north and Peshtoon's gallery to the south.
+~
+264 0 1
+D0
+~
+~
+0 -1 26439
+D1
+~
+~
+0 -1 26429
+D2
+~
+~
+0 -1 26441
+D3
+~
+~
+0 -1 26433
+S
+#26432
+Inner Bazaar Street~
+  You are on the inner bazaar street of Jal-Pur. You can see the red walls
+of the city to the east and the bazaar to the west. Hama's tobacco shop
+lies to the north from here and the famed silk emporium lies south.
+~
+264 0 1
+D0
+~
+~
+0 -1 26442
+D2
+~
+~
+0 -1 26444
+D3
+~
+~
+0 -1 26430
+S
+#26433
+Inner Bazaar Street~
+  You are on the inner bazaar street of Jal-Pur. You can see the red walls
+of the city to the west and the bazaar to the east. Damar's date shop lies to
+the north from here and Fawaz's Health shop lies to the south from here.
+~
+264 0 1
+D0
+~
+~
+0 -1 26443
+D1
+~
+~
+0 -1 26431
+D2
+~
+~
+0 -1 26445
+S
+#26434
+The Used Chariot Shop~
+  There is a huge clamor of banging and hammering as Kamal the charioteer's
+slaves fix a wheel onto a chariot. There is a display showing all the used
+chariots which are ready for new ownership. At the far end of the shop there
+is a small section out of which Kamal sells spares for chariots. Be careful
+kind sir, Kamal has been known to swindle his customers out of good money by
+selling them real lemons.
+~
+264 8 0
+D2
+~
+~
+0 -1 26428
+S
+#26435
+Zegna's Boutique~
+  This is a small boutique for the commoners of Jal-Pur. The shop is divided
+into two sections, one each for men and women. In the partitioned section for
+ladies you see a row of long black robes which could cover the women from
+head to toe. In the men's section you see an array of flowing white robes
+which are worn by the males when they travel through the desert. There is
+a small display in the center with a variety of veils and other headgear.
+~
+264 8 0
+D2
+~
+~
+0 -1 26429
+S
+#26436
+Fahad's Falafels~
+  You have just walked into Jal-Pur's finest eatery. There are small tables
+and as you grab a chair, you are served with some complimentary tea. Fahad's
+falafels are a delicacy and appreciated by one and all but his kebabs are
+altogether divine. Out of the corner of your eye you see a small tray 
+carrying some baklava and you notice that you have become ravenously hungry
+all of a sudden.
+~
+264 8 0
+D0
+~
+~
+0 -1 26428
+S
+#26437
+Hakkan's Help Service~
+  This open air house is full of different kinds of men. There is a round
+podium in the center. A gentleman dressed in orange robes stand there
+offering all passers-by a view of a slave's white teeth. You have entered
+Hakkan the slaver's house. It is possible to buy any kind of slave one may
+require provided you outbid all other interested parties in the nightly
+auction. In the back you can see a slave oiling up another slaves muscles.
+~
+264 8 0
+D0
+~
+~
+0 -1 26429
+S
+#26438
+Benu's House of Delights~
+  You are accosted with soft music as a pair of hands usher you into the 
+hall and show you to a seat on the mattress. A goblet of wine is placed in
+front of you to help you relax. As the dimmed lights slowly begin to light
+up, an exquisite belly dancer enters the room and starts to dance in broad
+fluid stroking movements. This is the house of delights which is run by Benu
+the belly dancer. It is open only at nights and only to friends who are known
+to her.
+~
+264 9 0
+D2
+~
+~
+0 -1 26430
+S
+#26439
+Mustafa's Dice Den~
+  This is a shady joint with a backdoor entrance. The front door has been
+nailed shut permanently. It is a dark and dinghy place with small tables
+all over the place. There is a small bar to the left. This is Mustafa's Dice
+Den, the recreational refuge of all compulsive gamblers in Jal-Pur. You see
+a cordoned off area in the corner where Mustafa sits below a sign which says
+'cash and chips counter'.
+~
+264 9 0
+D2
+~
+~
+0 -1 26431
+S
+#26440
+Omar's Hangout~
+  This is the place where the dregs of society come to spend their hard 
+earned money. Omar the opium dealer can deliver any kind of intoxication
+you might prefer, as long as you have the money to pay for it first. There
+is a cheap mirror ball hung from the ceiling which turns around slowly. All
+around you can see people lying down with their eyes closed.
+~
+264 9 0
+D0
+~
+~
+0 -1 26430
+E
+mirror ball~
+On closer examination you notice that the ball is coated with pieces of cheap
+aluminum foil and not mirror at all.
+~
+S
+#26441
+Peshtoon's Portrait Gallery~
+  As you enter into this quaint little shop you notice the shabby appearance
+of a small man painting in the corner. As you turn your gaze you see a
+series of paintings hung on the walls, each one worse than the next. It is
+said that only the brave of heart should venture forth to get their portrait
+painted by Peshtoon. The shop is in a total mess with used brushes and
+color tubes lying all around on the floor.
+~
+264 8 0
+D0
+~
+~
+0 -1 26431
+S
+#26442
+Hama's Hookahs~
+  You find yourself in a small compact shop stocked with an extensive variety
+of tobaccos, cigarettes, cigars, beedis, pipes, and hookahs. The shop has
+been looked after by Hama's forefathers for generations. There is even a
+special service provided to regular customers. Hama will deliver to your
+humble abode your exact blend of tobacco if you have been able to get onto
+his list of important customers. There is a small box on the table which 
+offers visitors some extraordinary blends of tobacco as a trial.
+~
+264 8 0
+D2
+~
+~
+0 -1 26432
+S
+#26443
+Damar's Dates~
+  This is a small stall with a parasol stuck into the ground which provides
+shade to the salesman and his customers. On the solitary table in front of
+you can be seen stacks of fresh dates, coconuts and sweet sugarcane pieces.
+There are other fruits stacked behind these which seem to be from some far
+away land, the kind of which you have never seen before in your life.
+~
+264 8 0
+D2
+~
+~
+0 -1 26433
+S
+#26444
+The Silk Emporium~
+  There is a throng of veiled ladies haggling with the salesmen here and
+another bunch of ladies shouting at the salesmen to show them some garments.
+Kesh, the caftan weaver runs this shop to cater to the noble ladies of the
+Sultanate. Here you can find the finest silks available throughout the land,
+especially the reserved variety for those special customers which are
+braided in real gold foil.
+~
+264 8 0
+D0
+~
+~
+0 -1 26432
+S
+#26445
+Fawaz's Health Shop~
+  You step into the barren abode of Fawaz the phrenologist. The room is
+completely empty except a small cupboard and a mattress rolled up into the
+corner. For a fee, you could get the advise of old Fawaz relating to your
+health and constitution.
+~
+264 8 0
+D0
+~
+~
+0 -1 26433
+S
+#26446
+The Altar of the Jal-God~
+  The carved steps have lead you up to the shrine of Al-Shaitan, the
+Demon-God of Jal. There is a large statue in the center of the altar made from
+red alabaster and studded with sapphires and rubies. There are some fruits
+which have been left here as offerings to the Jal-God on the floor. A few
+garlands and candles have also been left here at the feet of the statue
+in solemn homage to the greatness of the Demon-God.
+~
+264 8 0
+D0
+~
+~
+0 -1 26427
+D5
+~
+sandstone~
+2 26400 26447
+S
+#26447
+The Oracle of Arbaz~
+  The secret exit has ended in a small room carved out of solid rock. There
+are torches on the stone walls shedding light onto the strange inhabitants
+of this room. This hidden chamber is the location of the current oracle
+of the deserts, the direct descendant of the almighty Arbaz. Only the most
+fortuitous of men are granted audience to this secret. The Oracle will
+answer any question put to her as long as it does not directly involve her
+fate.
+~
+264 12 0
+D2
+~
+~
+0 -1 26448
+S
+#26448
+Entrance to the Minaret~
+  You find yourself outside a tall and thin minaret. The huge door made
+of bronze has tarnished over the ages and turned green in color. From the
+top you can hear sound of girls giggling. This is the residence of the
+nobles of the Sultanate and any intruders will be put to instant death.
+~
+264 76 0
+D4
+~
+~
+0 -1 26449
+D5
+~
+rune~
+2 26410 26455
+S
+#26449
+The Winding Stairs~
+  You can barely move or breathe in this narrow and twisting staircase. 
+The advisers to the Caliph have had this special staircase built so that
+everyone who enters the minaret is forced to climb up in a single file. It
+is one of the many precautions taken to oversee the safety of the nobles.
+~
+264 76 0
+D4
+~
+~
+0 -1 26450
+D5
+~
+~
+0 -1 26448
+S
+#26450
+The Divan-e-Khas~
+  You find yourself in a huge waiting chamber filled with all the lavish
+comforts one could imagine. There are deep leather couches running all the
+way around the four walls of the room. Beautiful paintings adorn the
+walls which have gold trimmings. The richness of the surroundings is totally
+overwhelming. On the far wall you see a pair of golden scimitars nailed
+together in a cross.
+~
+264 8 0
+D0
+~
+mahogany~
+2 26401 26451
+D5
+~
+~
+0 -1 26449
+S
+#26451
+The Vizier's Inner Sanctum~
+  The room seems pretty small compared to the waiting room outside. This is
+the inner sanctum of the Vizier of Jal-Pur. The room is simply decorated
+with a few tapestries and of course, the flag of the sultanate. There is a
+small door leading northwards here. There is also a small table on the side
+with a book on it here, which the Vizier uses to keep track of the Emir's
+visitors.
+~
+264 8 0
+D0
+~
+balsa~
+2 -1 26452
+D2
+~
+mahogany~
+2 26401 26450
+S
+#26452
+The Grand Chamber of the Emir~
+  Upon entering into this grand chamber the first thing you notice are the
+two long tables on either side of the entrance holding countless varieties of
+scrumptious food. As you look ahead you see the room set aglow by twelve
+oil lamps. Soft music emanates from somewhere within. There is a huge
+love-chaise in the middle of the room. Gold coins and gems are strewn all
+over the floor here.
+~
+264 8 0
+D2
+~
+balsa~
+1 -1 26451
+S
+#26453
+The Harem~
+A temporary description
+~
+264 8 0
+S
+#26454
+The Royal Resting Room~
+A temporary description
+~
+264 8 0
+S
+#26455
+The Tyrant's Torture Chamber~
+  There is a rancid smell of burning flesh and acid in the room. In the dim
+light you can make out various items hung onto the walls which are used to
+interrogate spies and other undesirables. In the center of the room stands
+a wooden table with rack and pinion levers attached to each side and chains
+with hooks around it. There is a rack with a lot of potions lined up neatly.
+On closer examination, the floor reveals blood stains and patches of vomit.
+A light breeze blows from the small dark tunnel carved into the north wall.
+~
+264 9 0
+D0
+~
+tunnel small dark~
+9 -1 26446
+E
+rack~
+The huge wooden rack is stacked with acids, potions, vials of strange serums
+and assorted poisons, all labeled in some strange language.
+~
+S
+#26466
+A Dark Gully ~
+  You find yourself in a dark, smelly gully flanked by open sewers on both
+sides. The gully is totally deserted, since the thugs have started to
+operate in this area. Silence prevails, excepting the sounds of the huge
+sewer rats scampering to and fro.
+  A small sign has been posted here.
+~
+264 73 0
+D0
+You see the king's road.
+~
+~
+0 -1 8903
+D1
+A narrow and dark gully.
+~
+~
+0 -1 26467
+E
+sign~
+  We, the cult of the Thuggee, warn all travelers to surrender all their
+belongings to us, unless they wish to meet their maker before their time.
+Give us what we ask and we shall provide safe passage through this quarter.
+You have been warned!!
+~
+S
+#26467
+A Dark Gully ~
+  As you continue down the gully, you notice the open manholes under your
+feet. A foul stench and dark steam rises up from the open holes, making you
+sick. From the corner of your eyes you notice the long shadows of men with
+hooded cloaks and garottes shifting through the few small, dingy huts here.
+~
+264 73 0
+D2
+A slightly lighted gully.
+~
+~
+0 -1 26468
+D3
+A narrow and dark gully.
+~
+~
+0 -1 26466
+S
+#26468
+A Lighted Gully~
+  You breathe a sigh of relief as you come into the light. The narrow gully
+has simple two-storied huts on either side here. Prostitutes with bright red
+lipstick smeared over their lips jeer at you from the open windows, inviting
+you to spend some time with them. Beggars roam around with small bowls,
+begging for a handout.
+~
+264 8 0
+D0
+A dark and narrow gully.
+~
+~
+0 -1 26467
+D1
+You see the flea market.
+~
+~
+0 -1 26469
+S
+#26469
+The Flea Market ~
+  The place is overwhelmingly crowded, as you are squashed between
+hawkers shouting out their wares and customers who are haggling away. This
+is the place where any object can be bought or sold, for the right price.
+There is a shop to the left, boasting accurate palm readings and exact
+astrological divinations, for those who wish to know their future.
+~
+264 4104 0
+D3
+You see a slightly lighted gully.
+~
+~
+0 -1 26468
+D5
+You can barely make out a dark stairway leading down.
+~
+~
+0 -1 26470
+S
+#26470
+A Dark Stairway ~
+  You nearly slip on the stairs in this dark place. The walls and the steps
+are wet and slimy, covered with creepers and fungus. The iron gate is rusted
+open from years of neglect.
+~
+264 0 0
+D2
+An iron gate stands rusted open here.
+~
+~
+0 -1 26471
+D4
+You see a dark stairway leading up.
+~
+~
+0 -1 26469
+S
+#26471
+Entrance to the Deserted Orchard ~
+  The orchard has been under the care of a few monks who live nearby. All
+the plants, trees, and shrubs have been cut to perfection. You suddenly feel
+energized as you breathe in the fresh air and look onto the pleasing garden.
+There are small benches for travelers to rest themselves here.
+~
+264 0 2
+D0
+An iron gate stands rusted open here.
+~
+~
+0 -1 26470
+D2
+You see an exotic orchard.
+~
+~
+0 -1 26472
+S
+#26472
+The Orchard ~
+  As you proceed into the orchard, you come to a section with exotic
+bonsai plants. Fruits unknown to man are growing here, ripe for the
+picking. A slight breeze flows in through the trees, bringing the sweet
+smell of mangoes to your nose.
+~
+264 0 2
+D0
+The entrance to the orchard.
+~
+~
+0 -1 26471
+D2
+The mango grove invites you to sample its delights.
+~
+~
+0 -1 26473
+S
+#26473
+The Mango Grove ~
+   Mangoes! Every shape and color you could imagine. The trees are thick
+and endlessly intertwined. In the center you see a small pool with
+beautiful lotus flowers in bloom, floating on the water. Monkeys jump from
+the trees as their curiosity is aroused by the strangers who have entered
+their lush playground.
+~
+264 0 2
+D0
+You see an exotic orchard.
+~
+~
+0 -1 26472
+D2
+You see the entrance to the Jade Garden.
+~
+~
+0 -1 26474
+S
+#26474
+Pathway to the Jade Garden ~
+  There is an entrance of sorts shaped from the hedged shrubbery here.
+The grass looks like a sheet of green glass laid out on the floor, almost
+flawless. It appears someone has taken great pains to keep this place clean
+and proper. Thick foliage surrounds the entrance, and it is impossible to
+see through it.
+  There is a small stone on the side with an inscription carved into it.
+~
+264 0 1
+D0
+The mango grove invites you to sample its delights.
+~
+~
+0 -1 26473
+D2
+You see a beautiful jade garden.
+~
+~
+0 -1 26475
+E
+stone~
+  This is the sanctum of the monks of the clan of Vasmakhai. We do not wish
+to be disturbed, nor do we wish to be involved with worldly matters. It is our
+humble request to you to leave this place and proceed no further.
+~
+S
+#26475
+The Jade Garden ~
+  You find yourself in a beautiful garden, with exotic orchids in full bloom
+all around. It feels as if you have invaded someone's privacy by wandering in
+this serene place. You can make out the outlines of a majestic pagoda on the
+southern horizon.
+~
+264 4096 2
+D0
+You see a path in the jade garden.
+~
+~
+0 -1 26474
+D2
+You see the entrance to the Golden Pagoda.
+~
+~
+0 -1 26476
+S
+#26476
+The Golden Pagoda ~
+  There is an eerie hum which throbs in the golden walls of this pagoda. It
+is as if a multitude of voices are praying at the same time and the noise
+keeps on getting louder and louder. You are not welcome here. Leave this
+house of prayer, or suffer the consequences !
+~
+264 4104 0
+D0
+You see the beautiful jade garden. 
+~
+~
+0 -1 26475
+D4
+You see the prayer hall of the devotees.
+~
+~
+0 -1 26477
+S
+#26477
+The Hall of Prayers ~
+  You find yourself in a large bare hall. The floor is strewn with small
+cane mats, and small wooden tables in front of them. The walls are covered
+with simple paper tapestries decorated with arcane symbols. A feeling of
+great power and peace suddenly lifts your tired soul, as you bow your head
+in a silent prayer to your own gods.
+~
+264 4104 0
+D4
+You see an austere chamber.
+~
+~
+0 -1 26478
+D5
+You see the golden pagoda below you.
+~
+~
+0 -1 26476
+S
+#26478
+The Chamber of Austerity ~
+  This is the chamber where the more advanced disciples come to meditate.
+The chamber is surrounded by walls of cold stone, and is totally bereft of
+any objects which might cause distraction to the adepts of this shrine.
+~
+264 4104 0
+D4
+You see the spa above you.
+~
+~
+0 -1 26479
+D5
+You see a hall of prayers down below.
+~
+~
+0 -1 26477
+S
+#26479
+The Healer's Sanctum ~
+  This is the spa, where the monks heal their bodies and minds and souls.
+You see a few of them sitting in the lotus position, their eyes closed, in
+a deep yoga trance. Others are practicing the secret arts of the Massage of
+Healing, while others still carry out various acupuncture rituals. The
+subtle fragrance of herbs mixed with the aroma of incense fills your tired
+body with vigor.
+~
+264 4104 0
+D4
+You see the chamber of fasting.
+~
+~
+0 -1 26480
+D5
+You see an austere chamber below.
+~
+~
+0 -1 26478
+S
+#26480
+The Room of Fasting ~
+  You find yourself in the midst of yogis fasting to isolate their bodies
+from their minds. The body is just a temporary husk which houses the 
+eternal soul ! The yogis utter arcane mantras in their efforts to gain
+the secret of enlightenment. The room is a small cozy place with a few 
+dimly lit lanterns hung from the ceiling.
+~
+264 4104 0
+D4
+The resting place of the great guru.
+~
+~
+0 -1 26581
+D5
+You see the spa down below.
+~
+~
+0 -1 26479
+S
+#26499
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+264 576 0
+S
+#0
+$~

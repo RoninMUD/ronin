@@ -1,0 +1,531 @@
+#27800
+rune ISA glowing~
+A Glowing ISA Rune~
+A rune emblazoned with the symbol of ISA lies on the ground here~
+~
+18 134217729 1
+1 0 0 0
+1 3000 10
+100
+E
+rune ISA glowing symbol~
+Forged by a joining of the powers of the clan, this rune 
+is the key to the clan hall, as well as a talisman of
+incredible power. With the ability to recall the user to
+the clans reception area. The rune is a symbol of status
+and rank in the ISA clan.
+~
+X
+~
+320 0 0
+M
+~
+~
+~
+~
+#27801
+barrel bottomless wooden~
+A Bottomless Barrel~
+A short wooden barrel sits here, being a barrel.~
+~
+15 0 1
+9000 0 0 0
+10 3000 10
+100
+E
+barrel wooden short~
+Peering into this barrel there is no way to determine where
+the bottom is... or if it even has a bottom, you cannot tell
+if there is anything in it or not. Hmm whose bright idea was 
+this?
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+invalid~
+#27802
+flask silver isadrink~
+A Silver Flask~
+A silver flask emblazoned with the logo of the ISA clan.~
+~
+17 0 1
+200 200 5 0
+10 3000 10
+100
+E
+flask silver isadrink ~
+Forged in silver, and stamped with the symbol of the ISA clan
+these special flask are reminiscent of the small flasks 
+used to store alcoholic drinks... ISA members aren't alcoholics
+are they? Either way, conviniently small and thin these flasks
+are perfect for the traveling adventurer, easily concealable 
+and carrying any liquid one might choose.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27810
+steak nerf piece~
+a nerf steak~
+A juicy steak sits here collecting worms and mold... tasty eh?~
+~
+19 0 1
+24 0 0 0
+10 60 10
+100
+E
+meat juicy nerf steak~
+A giant piece of meat dripping with grease and an especially
+tasty looking greenis goo. Mmmmm if only all meat was this thick
+and juicy, there would be no meat shortages again!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27811
+pie blackberry warm~
+a large slice of pie~
+A steaming hot slice of blackberry pie rests here, looking delicious~
+~
+19 0 1
+24 0 0 1073749936
+10 60 10
+100
+E
+hot~
+A giant slice of warm blackberry pie, dripping with syrup
+and berries. This pie is a masterpiece creation, only
+the finest cook could make such a diverse piece of pie.
+~
+E
+pie blackberry steaming warm~
+Filled to bursting with blackberries and sugar, this piece of 
+pie looks stunningly delicious. Praise be to god for such 
+food.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27812
+chunk chocolate hot frozen~
+a chunk of frozen hot chocolate~
+A rather frozen chunk of hot cocoa sits here, being frozen... or something.~
+~
+19 0 1
+24 0 0 0
+10 60 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27813
+liquorice root rope black oil candy~
+A piece of liquorice root~
+a long, black rope of liquorice, lies here smelling faintly of oil.~
+invalid~
+19 0 1
+24 0 0 0
+1 60 10
+100
+E
+liquorice root rope candy black~
+A long thin rope of liquorice root, this piece of candy seems
+to be covered in a sweet smelling oily film. Known to be filling
+and sweet, its a very popular treat amongst the lower classes.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27814
+ale irish stout beer frosty glass bottle tall~
+An irish stout ale~
+A bottle of ale sits in a tall, frosty glass bottle.~
+invalid~
+17 0 1
+50 50 16 0
+1 60 10
+100
+E
+ale irish stout beer frosty bottle~
+This tall bottle of frosty Irish Stout Ale, was mass produced
+in a beer factory in Lorien. There small, under paid elvish
+children are forced to work long hours brewing 'Irish' beer
+for sale exclusively at the town of Fortress. A few years 
+back an adventurer named Stanach came across a small brewing
+operation in the hills and discovered the the brew wasn't 
+half bad. After buying out the company he moved it to Lorien
+where, after striking a deal with Galadriel he began
+mass producing the ale. Each beer has its own special, secret
+ingredient added to give it just the right flavor. 
+That ingredient is known only to the members of ISA.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27820
+exultation potion green blue vial~
+a potion of exultation~
+A small potion, greenish blue in color, wisps of smoke drifting from the top.~
+~
+10 0 1
+30 15 15 0
+10 60000 10
+100
+E
+smoke~
+Rising from the top of the potion, this smoke is slightly green and gives
+off the faint odor of almonds... Almonds, hmm what else tastes faintly of
+almonds... Oh well, it should be just fine.
+~
+E
+potion green blue vial~
+This potion was originally created by Podo himself as a healing potion
+to help in the heat of battle. Part hardy ale, and part mystical herbs
+from far to the north, it is a handy thing for all adventurers.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27821
+potion heavenly blessing glowing holy light~
+a potion of heavenly blessing~
+A small potion, glowing with a holy light sits here.~
+~
+10 0 1
+40 36 0 0
+10 100000 10
+100
+E
+potion small glowing holy light~
+A small potion, it is none the less extremely potent in its own way.
+granting protection from the deities of each adventurer. The person
+who discovered the ingredients for creating it is long dead. The
+potion however continues to grant its blessing to each user.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27822
+ancients potion grey deep~
+a potion of the ancients~
+A deep grey potion sits here, vibrating with its own potency.~
+~
+10 0 1
+30 1 0 0
+10 30000 10
+100
+E
+ancients grey potion deep~
+Years ago, a wandering adventurer came across a fountain of water high
+in the southern mountains. After drinking of the liquid he noticed
+that he was more protected, monsteres shied away from attacking
+it was as if someone was protecting him. After an earthquake
+sundered the mountains the fountain was thought lost forever,
+however shortly after the building of the city of Fortress
+the fountain was discovered, hundreds of miles north of its
+first sighting point. Who knows who brought it here, or why
+but its properties remain the same.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27823
+brew grulgs special pint~
+Grulgs special brew~
+A pint of Grulgs special brew sits here, boiling madly.~
+~
+10 0 1
+30 103 0 0
+10 50000 10
+100
+E
+brew grulgs pint special~
+Brewed by Grulg in the depths of the ISA Castle, this dark brown
+brew has properties that allow the adventurer to tolerate
+an immense amount of pain after quaffing. No one knows how
+Grulg convinced Podo to sell his brew, but once it hit the
+shelves, Grulg has barely managed to keep up with the demand.
+All the members of ISA know is that late at night, muffled
+explosions and loud crashes come from the depths of the
+castle dungeons.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27824
+potion slyater silver red deep color~
+a potion of pure slyater~
+A potion sits here, flickering between a burgundy and silver color.~
+~
+10 0 1
+30 73 0 0
+10 30000 10
+100
+E
+silver red potion color slyater~
+Made from the juice of the slyater, this potion changes color depending
+on its own mood. As far as anyone can tell that is as far as
+its conscience goes, but who knows what other awareness' it has.
+Granting those brave enough to quaff it the ability to see into 
+the infra spectrum, this potion is quite rare and very handy.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27830
+iceberry fruit food berry ice~
+an iceberry~
+A small berry, pure white in color lies here, sparkling with a frosty light.~
+~
+19 0 1
+1 0 0 0
+10 10 10
+100
+E
+iceberry berry ice frost food fruit~
+These small berries are very rare in the wild, the ones growing in the ISA
+garden are the only known plants known to most of mankind. Originally growing
+high on the tops of the olympic mountains, these plants have been found in 
+some of the most remote corners of the world.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27831
+snowfruit snow fruit white apple~
+a snowfruit~
+A round fruit, glimmering with a white hue, sparkles in the frosty air.~
+~
+19 0 1
+1 0 0 0
+10 10 10
+100
+E
+snowfruit round fruit snow glimmering white~
+This fruit grows on trees found deep below ground, near the drow cities.
+The lack of sunlight and outside air causes the fruit to be pure white,
+so dazzling in the outside air here, it can startle the eyes. The few
+trees here in the Permafrost Gardens are kept alive by the magic of the
+ISA Clan wizards for the enjoyment of all who visit.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27832
+apple ghost translucent fruit~
+ghost apple~
+An apple, with its seeds visible throught the translucent seeds and meat, lies here.~
+~
+19 0 1
+1 0 0 0
+10 10 10
+100
+E
+apple ghost fruit translucent~
+Found by a wandering minstrel in a swamp west of midgaard, this fruit
+falls from a tree with silver bark. While out wandering, in search of
+an audience, the minstrel stumbled into a grove of these trees. 
+Caring nothing for their value, and obvious magical properties she
+ate of the fruit and pocketed the seeds until such time as she would
+have a place to plant them once again. Years later, when she heard of
+the wizards gathering plants and trees for these gardens, she was 
+reminded of the seeds and traveled through the Eternal Blizzard to 
+make a gift of them to the wizards who cared for the gardens.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27833
+poppy azure flower~
+an azure poppy~
+A flower, the color a deeper blue then the clearest summer day, rests here.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+100
+E
+flower blue poppy azure~
+These flowers were brought forth with the skill an patience of
+many generations of wizards caring for the gardens. Crossbreeding
+species of flowers has been a hobby passed down through the 
+generations coming at last to the flower here before you.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27834
+dragonflower dragon flower red burgundy~
+a dragonflower~
+A deep burgundy colored flower, giving off a natural warmth, lies here melting the snow.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+100
+E
+dragonflower dragon flower burgundy~
+These flowers grow exclusively in dragon lairs. The magical properties
+that dragons exude, cause these flowers to flourish and bloom with
+remarkable tenacity. Over the years some of the properties inherent in
+dragons have come to imbue themselves in the flower, such as its natural
+warmth, and unusually deep burgundy color. Kept alive through the magic
+of the gardens, these flowers are an astonishing contrast to the frost 
+and snow.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27835
+thistle razor flower thing~
+a razor thistle~
+A thistle, covered with spines sharper than that of any razor, is stuck in the ground.~
+~
+12 0 1
+0 0 0 0
+10 10 10
+100
+E
+thistle razor flower~
+Created many years ago to guard his private tower, this thistle
+tends to react violently towards any who harbor evil thoughts 
+within the recesses of their minds. When the wizard finally 
+retired to a distant plane, he a speciman of his plant, albeit
+a less voracious speciman, to the gardens, and the wizards who
+spend their time here.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27840
+Mirror~
+A large Mirror~
+A very large, ornate Mirror.~
+~
+12 0 0
+0 0 0 0
+10000 10 10
+100
+E
+mirror gilt large~
+This mirror is surrounded by a great, carved and gilded frame,
+surrounding an absolutely crystal clean mirror. As one looks into
+the mirror it seems almost like you are becoming lost in its depths,
+and wonders... Is there something beyond?
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27841
+board info isa wall~
+ISA Info Board~
+A board covered with the notes of various clan members, hangs on the wall.~
+~
+27 0 0
+10 10 10 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

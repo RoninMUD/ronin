@@ -1,0 +1,29 @@
+#13100
+The Podium of Fire~
+You are standing on a small podium surrounded by a fiery pool of fire,
+with the flames licking your body. Fiery ladders lead upwards, to the
+reddish sky.
+~
+131 32768 3
+D4
+You can see a ladder leading up. Watch it, they are made of solid flames.
+~
+~
+0 -1 13103
+S
+#13103
+The Flame Altar~
+A huge block of black stone is just floating in the flames, with fiery
+and toxic fumes searing your skin. In the middle of the block, there
+is a huge, black altar. The Altar of Flame.
+~
+131 32768 3
+D5
+You can see a ladder leading down. Watch it, they are made of pure fire.
+~
+~
+0 -1 13100
+S
+#0
+$~
+

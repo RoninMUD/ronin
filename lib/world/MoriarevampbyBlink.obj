@@ -1,0 +1,134 @@
+#4000
+ring yellow green~
+A Yellow Ring~
+A ring, with yellow and green ornamentation. It looks very old.~
+~
+9 1 16387
+0 0 0 0
+20 50 10
+30
+E
+ring~
+Its a bright yellow ring.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 -2
+#4001
+corpse~
+a corpse~
+A half-eaten corpse of a goblin lay here.~
+~
+15 0 1
+1 0 -1 0
+10 0 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4050
+potion purple~
+a purple potion~
+A purple potion is here.~
+~
+10 268435456 16385
+17 14 36 0
+1 500 200
+50
+E
+potion purple~
+It looks rather strange!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4051
+helmet metal~
+a metal helmet~
+A metal helmet in here.~
+~
+9 0 17
+0 0 0 0
+4 3000 1000
+35
+E
+helmet metal~
+It looks somehow magical!.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+18 2
+#4052
+mushroom~
+A Mushroom~
+A small mushroom is here.~
+~
+19 0 16385
+2 0 0 1
+1 9 3
+100
+E
+mushroom~
+Let's put it this way - I wouldn't eat it !
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4053
+whip orcish~
+An Orcish Whip~
+A long whip is on the ground here.~
+$r whip snaps loudly!~
+5 1 8193
+2 6 4 4
+10 150000 12345
+20
+E
+whip~
+Its a long leather whip.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+3 1
+#0
+$~

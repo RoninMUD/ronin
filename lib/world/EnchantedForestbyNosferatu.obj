@@ -1,0 +1,197 @@
+#28500
+token valor~
+A token of Valor~
+A symbol of some sort has been left here.~
+~
+12 403177472 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28501
+token truth~
+A token of Truth~
+A symbol of some sort has been left here.~
+~
+12 403177472 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28502
+token courage~
+A token of Courage~
+A symbol of some sort has been left here.~
+~
+12 403177472 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28503
+flute pan~
+Pan's Flute~
+A beautiful wooden flute is lying here forgotten.~
+~
+24 233894145 16385
+0 0 0 0
+5 675000 11725
+15
+E
+flute~
+It is a made up of 4 hollow bamboo tubes tied together with
+some rope that looks like twine. It isn't terribly flashy but
+it makes very beautiful music.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -13
+A
+13 40
+#28504
+branch stick~
+A long broken branch~
+A fallen branch lying here looks like it could make a decent torch.~
+~
+1 403177472 65537
+1 1 -1 0
+5 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28505
+vine thorns~
+A long, thorn-covered vine~
+A long vine covered with razor-sharp thorns is best left untouched here.~
+$r thorn-covered vine tears the hide from $V with a wicked ripping sound.~
+5 403177472 8193
+2 4 4 2
+12 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#28506
+tiara jeweled~
+A Jeweled Tiara~
+A sparkling tiara has been left behind here.~
+~
+9 403177760 17
+0 0 0 0
+1 10 10
+60
+E
+tiara~
+It is a very small, fragile glass crown. It is crafted beautifully and said
+to have once adorned the head of Hera herself.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 20
+A
+19 -5
+B
+18350080
+#28507
+mushroom~
+A wild mushroom~
+A wild mushroom is growing in the path here.~
+~
+19 0 1
+12 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28508
+berries red wild~
+A cluster of wild red berries~
+A cluster of ripe red berries has fallen to the ground here.~
+~
+19 0 1
+24 0 0 0
+3 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28509
+fern wild~
+A wild fern~
+A wild fern is growing near the path here.~
+~
+19 0 1
+5 0 0 1
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

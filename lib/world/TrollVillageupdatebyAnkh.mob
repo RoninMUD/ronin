@@ -1,0 +1,320 @@
+#700
+sakdul large troll gypsy~
+Sakdul, the troll gypsy~
+A Very Large Troll is waiting here to tell your fortune!
+~
+   Sakdul is sitting behind an old table forseeing the future.  He has to
+be the largest troll you have ever seen, this guy must be twice the size
+of a normal troll. I'd bet hes a freak in his society. He looks up at you
+with a stare that seems to see deep into your very soul and says "I knew you
+were coming."  Lets hope that his cards didn't see you as a threat or you
+could find yourself in some very serious danger....
+~
+10 402688168 -1000 Y
+55 -15 0 1000d3+9500 10d17+107
+700000 2500000
+6 6 1
+75 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#701
+racti troll hermit~
+Racti, the troll hermit~
+A withered old troll is here hiding from the world!
+~
+   This old troll has seen better days, he hides in the corner and speaks to
+himself about something terrible that lives under the fountain. You can't
+understand a lot of what he is saying, but from what you understand you know
+that there is something big out there, and it has really scared him.
+~
+16394 672432288 -1000 Y
+50 -15 0 2d1000+4500 20d2+80
+100000 750000
+8 8 1
+75 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#702
+small fairy~
+The small fairy~
+A small fairy is flying here!
+~
+   The fairy is very small and looks very out of place in this dirty tunnel.
+How did she get here? This is a very dangerous tunnel for somebody of your
+size, let alone a tiny fairy.  This place is truly magical.
+~
+10 134250624 0 Y
+36 -15 0 10d100+9000 1d25+25
+50000 500000
+8 8 2
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#703
+neyuv lizard assassin reptile~
+Neyuv, the lizard assassin~
+A strange lizard sneaks in and out of the shadows.
+~
+   Neyuv is hissing loudly, he must have been what you heard coming
+through the tunnels. He looks very strong, and not very friendly. His
+tail must be about 8 feet long, and he is about 7 feet tall.  He could
+make quick work of you.
+~
+10 671711274 1000 Y
+52 -15 0 3d700+11000 10d10+100
+0 1500000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+K
+647000 0 0 0 0 0 0
+#704
+big leach~
+The big leach~
+A very big leach is swimming here in the dirty water.
+~
+ This ugly creature is much larger than a normal leach, it must be at least 
+three feet long. It looks more like a snake then a leach, but from the way
+it bites into your neck, it is real easy to tell it is a leach.
+~
+44 32776 0 Y
+50 -11 0 20d100+4000 3d20+60
+0 400000
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+K
+18 0 0 0 0 0 0
+#705
+troll worker~
+the troll worker~
+A very hefty troll is busily working here.
+~
+   This troll looks like he wants to work, better get out of his way. He is
+very strong looking and looks peaceful enough, but I would not get in his way.
+~
+16392 32768 0 Y
+45 -9 0 120d50+5000 10d7+10
+1000 800000
+8 8 1
+75 0 10d10+3000 2
+11 6 20 102
+9 3 5 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#706
+juktoa troll foreman~
+Juktoa, the troll foreman~
+Juktoa is here looking over blueprints.
+~
+   Juktoa is an old hefty looking troll.  His large calloused
+hands have seen many years of hard labour, he is well deserveing
+of his current position.  He is head over all the worker trolls
+and anwsers to nobody except the king himself.
+~
+16394 805341312 0 Y
+48 -10 0 30d50+6000 10d10+100
+330000 1250000
+8 8 1
+75 0 0d0+0 3
+7 3 2 0
+3 1 3 0
+3 2 3 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#707
+troll bum~
+a dirty bum~
+A dirty troll is here begging for money.
+~
+ The bum looks up at you and says 'Can you spare a coin for a poor old soul?'.
+You feel bad and let him have some of your fortune, he thanks you and hurrys
+off to get a meal.
+~
+12 294920 0 Y
+46 -5 0 55d55+4000 6d7+58
+10 600000
+8 8 1
+75 0 0d0+0 2
+4 7 3 0
+4 1 1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#708
+troll child~
+the troll child~
+A small troll is here playing on the ground.
+~
+   The troll is very small, but kinda cute(for a troll that is). It is easy
+to tell that trolls care greatly for their children.
+~
+136 268435456 1000 Y
+46 0 0 1d3000+4000 6d5+37
+15000 650000
+8 8 1
+75 0 0d0+0 1
+5 2 5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#709
+brat troll~
+a bratty troll~
+A saucy little troll is here planning something evil.
+~
+   This little troll is an evil little creature, the other children were much
+more lovable than this beast from hell. His parents must hate him.
+~
+168 268435456 -1000 Y
+46 -5 0 1d3000+4000 6d5+37
+32000 700000
+8 8 1
+75 0 0d0+0 2
+6 2 4 0
+5 2 4 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#710
+stopkt peddler~
+Stopkt, the peddler~
+A peddler is standing here selling his wares.
+~
+   It is hard to get a good look at this peddler because he is wearing a
+cloak that completely covers his face, he looks realy tough and very protective
+of his belongings.  A human businessman in these parts, he is lucky the
+trolls are a friendly race.
+~
+10 939559080 0 Y
+51 -15 0 1000d10+10000 90d90+100
+1000000 1
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#711
+luthi troll bartender~
+Luthi, the troll bartender~
+An overweight troll is here selling his poisons.
+~
+   Luthi looks very friendly, as do most of the trolls in this village.  He
+is a very large troll that has thrown more than one drunken troll into the
+street in the past, and he very easily could do the same to you.
+~
+16394 939526272 0 Y
+51 -15 0 100d100+10000 90d90+100
+1 1
+8 8 1
+75 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#712
+black bat~
+a black bat~
+A small bat hangs from the ceiling.
+~
+   The bat is very small but still has the potential to be very dangerous,
+I mean haven't you ever heard of rabies?
+~
+16424 32776 -1000 Y
+40 -5 0 10d100+2000 7d8+20
+0 230000
+8 8 1
+83 0 0d0+0 0
+0 0 0 0
+K
+2000 0 0 0 0 0 0
+#713
+noaki troll mother~
+Noaki, the troll mother~
+Noaki is here mending clothes.
+~
+   This poor old troll is a typical mother, she is overworked and
+unappreciated. She is busy at work now too, she must never stop.
+She is mending clothes with one hand and cooking with the other. She
+sure looks tired.
+~
+16394 536903808 0 Y
+47 -8 0 120d35+6100 7d3+30
+10000 800000
+8 8 2
+75 0 10d10+3000 3
+7 3 2 0
+3 1 3 0
+3 2 3 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#714
+sunca troll mother~
+Sunca, the troll mother~
+Sunca is here cooking.
+~
+   This poor old troll is a typical mother, she is overworked and
+unappreciated. She is busy at work now too, she must never stop.
+She is mending clothes with one hand and cooking with the other. She
+sure looks tired.
+~
+16394 536903808 0 Y
+47 -7 0 120d30+6900 7d3+30
+10000 850000
+8 8 2
+75 0 10d10+3000 3
+7 3 2 0
+3 1 3 0
+3 2 3 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#715
+phie troll mother~
+Phie, the troll mother~
+Phie is here mending clothes.
+~
+   This poor old troll is a typical mother, she is overworked and
+unappreciated. She is busy at work now too, she must never stop.
+She is mending clothes with one hand and cooking with the other. She
+sure looks tired.
+~
+16394 536903808 0 Y
+47 -8 0 120d25+7500 7d3+30
+10000 850000
+8 8 2
+75 0 10d10+3000 3
+7 3 2 0
+3 1 3 0
+3 2 3 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#716
+cotka troll mother~
+Cotka, the troll mother~
+Cotka is here knitting.
+~
+   This poor old troll is a typical mother, she is overworked and
+unappreciated. She is busy at work now too, she must never stop.
+She is mending clothes with one hand and cooking with the other. She
+sure looks tired.
+~
+16394 536903808 0 Y
+47 -8 0 120d25+7500 7d3+30
+10000 850000
+8 8 2
+75 0 10d10+3000 3
+7 3 2 0
+3 1 3 0
+3 2 3 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

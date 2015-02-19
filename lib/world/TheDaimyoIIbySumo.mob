@@ -1,0 +1,311 @@
+#20104
+guard castle bushi~
+A castle guard~
+A castle guard armed with a yari charges at you screaming!
+~
+Upon seeing you, the guard grips his spear tightly, lets out a loud scream
+and charges right at you!! Perhaps you should have asked before coming up 
+here?
+~
+553664522 128 325 Y
+50 -10 -2 1d2500+2000 1d35+65
+25000 300000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20107
+Raiden~
+Raiden~
+Raiden, the God of Thunder, stands ready to barrage you with thunderbolts.
+~
+A very large bearded man with rough, scaly skin the color of burnt leather
+and hands ending in razor-sharp talons stands here, ready to put an end
+to your pitiful mortal existence.
+~
+66698 553912448 -1000 Y
+52 -12 -4 20d100+2000 50d8+120
+65000 750000
+8 8 1
+67 2 100d5+75 4
+2 2 45 0
+4 1 55 0
+1 4 40 6
+1 5 55 30
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20108
+Miyamoto Musashi~
+Musashi~
+Miyamoto Musashi, the deadliest swordsman ever blocks your way.
+~
+You see a samurai whose movements remind you of a panther, strong yet graceful.
+He has a fire in his eye that lets you know he isn't afraid to die, but if
+you attack you surely will. You also notice that he is wielding two identical
+katana, and you suddenly realize that this is the renowned swordsman Musashi.
+~
+131082 268445868 1000 Y
+51 -12 -12 100d100+2500 9d12+75
+225000 475000
+8 8 1
+9 6159 0d0+0 6
+3 2 35 0
+4 1 20 0
+7 2 15 0
+2 4 25 0
+3 7 10 0
+9 2 45 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20129
+Spectral Warlord~
+a Spectral Warlord~
+A spectral warlord is here, pondering strategy for the battle.
+~
+He appears to have been a very high ranking samurai, a general or some other
+highly respected officer.  His earthly position means nothing here, as he now
+serves the war god Hachiman.
+~
+16456 285476992 0 Y
+50 -8 -7 7d2000+2750 11d10+50
+100000 800000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20130
+warhorse skeletal~
+a Skeletal Warhorse~
+A large warhorse is here, its transparent mane billowing in the wind.
+~
+You see a horse.. A very large horse with transparent skin which allows you 
+to see the barely visible skeleton beneath.
+~
+524298 262148 350 Y
+46 5 5 5d1500+1500 6d4+20
+35000 300000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20131
+samurai spirit~
+a Samurai Spirit~
+A ragged-looking samurai stands here, almost ghostly in appearance.
+~
+He is a ghostlike apparition, apparently caught between the land of the living
+and the realm of the dead.
+~
+12 285474948 1000 Y
+43 3 -5 50d200+50 7d10+25
+30000 550000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20133
+Hachiman~
+Hachiman~
+The mighty god of war Hachiman prepares to strike you dead.
+~
+You see before you a large and rather unusual looking samurai, wearing
+bright red armor and wielding a deadly dragon handled tanto.
+He grins wickedly at you, knowing full well that your soul will be his when
+you die.
+~
+10 403998888 0 Y
+70 -18 -15 15d1000+13750 30d6+80
+1000000 3250000
+6 6 1
+67 15 1d2550+75 3
+4 1 10 0
+3 1 5 0
+9 3 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20134
+dragon skeletal~
+The Skeletal Dragon~
+An immense jade dragon skeleton prepares to smite you!
+~
+The huge beast turns its head to face you and bellows out a huge roar! 
+Obviously furious at you, it readies its huge bulk to crush you like the 
+insect that you are. Its massive body of jade 'bones' seems to be held 
+together by the same powerful magical forces that held the throne together 
+just a few seconds earlier. It slithers its body around to strike, not 
+enough time to do anything but run or fight!
+~
+16426 402688008 -350 Y
+65 -12 -5 100d20+3500 3d127+75
+1 825000
+8 8 1
+51 0 7d50+100 7
+5 3 45 0
+8 1 65 0
+1 2 15 136
+1 6 10 132
+11 6 17 108
+1 6 20 34
+1 3 7 128
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20139
+assassin~
+The Assassin~
+A darkly-clothed assassin is here, waiting to bring your life to an end.
+~
+He coolly examines you, searching for your weaknesses, A wicked smile crosses
+his lips, then he attacks!
+~
+536870954 335552512 -1000 Y
+51 -14 -15 2d2000+850 3d30+40
+87500 265000
+8 8 1
+5 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20145
+Shogun Warlord Samurai~
+The Shogun~
+The Shogun stands here, angered that you have disturbed him.
+~
+He is a samurai of very noble birth, and from looking at him you believe
+the tales told of his honor and prowess as a warrior. It is painfully
+apparent that you have angered him by your intrusion, and now he just seems
+intent on killing you.
+~
+16991370 536872960 500 Y
+53 -11 -1 100d50+14000 3d10+110
+500000 975000
+8 8 1
+4 0 0d0+0 5
+3 1 25 0
+2 2 35 0
+4 3 20 0
+7 2 15 0
+2 4 25 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20147
+Ninja Assassin~
+a Ninja Assassin~
+A black garbed ninja stands ready to attack!
+~
+Standing before you is one of the Shogun's personal assassins, one of the most
+lethal and skilled ninja that money can buy. He wears entirely black clothing,
+including the hood typical of ninja garb. In addition, you notice a dark
+leather strap, which holds his Ninja-to diagonally across his back. A dull
+looking silver buckle holds the two ends of the strap together and you
+can make out the faintly engraved crest of the Shogun upon it.
+~
+16793642 268959754 -250 Y
+48 -10 -17 10d50+3000 1d60+75
+10000 97500
+8 8 1
+5 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20163
+priest zen~
+a Zen Priest~
+A priest dressed in fine silks kneels here in meditation.
+~
+You see a middle-aged man, forty to fifty years of age, wearing a finely
+embroidered white silk kimono and a tall, pointed hat. He is absolutely 
+motionless, seeking nothing more than enlightenment.
+~
+16777226 268435584 750 Y
+50 -10 4 9d1000+1750 2d30+50
+200 387500
+8 8 1
+2 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20165
+panther black~
+A sleek black panther~
+A large, shadowy panther prepares to pounce on you!
+~
+A large, black panther stalks about here silently.
+Just as you get the feeling that you've gone unnoticed, its
+rock hard leg muscles tamp down as it prepares to pounce!
+~
+104 270008320 0 Y
+52 -12 -10 15d250+750 1d75+37
+1 300000
+8 8 1
+90 0 1d1+1 2
+6 2 15 0
+5 1 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20181
+Kempo student~
+Kempo~
+Kempo, novice student of the way stands here with a yari in hand.
+~
+Kempo stands before you , wielding a razor-edged yari.  Even though he is
+the Shogun's younger son and therefore lacks the prestige of his brother, you
+can tell that he is a much better warrior than Seijuro.
+~
+8 264192 750 Y
+50 -8 10 25d100+7500 5d15+50
+1 275000
+8 8 1
+11 288 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20182
+Seijuro student~
+Seijuro~
+Seijuro, first student of the One True Way is here, practicing yari techniques.
+~
+Seijuro, the oldest son of the Shogun stands here, seemingly bored with the
+lessons that ryo is trying to teach.  He has no use for the warrior arts,
+preferring to spend his time lounging about in geisha houses drinking
+sake.
+~
+138 268435456 0 Y
+51 -11 -5 20d100+5000 2d25+25
+5000 187500
+8 8 1
+6 16 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#20183
+Sensei Ryo~
+Sensei Ryo~
+Sensei Ryo, master of this dojo stands here, teaching his students the way.
+~
+You see before you a very strong and lithe man, his muscles toned to 
+perfection from years of hard training.  Even though he is a great deal 
+shorter than you, he would still make a formidable opponent.
+~
+16908298 268697632 1000 Y
+60 -13 -7 100d100+7500 7d15+50
+25000 387500
+8 8 1
+5 792 0d0+0 3
+2 7 25 0
+4 2 45 0
+9 3 20 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,228 @@
+#200
+Rapier sword weapon~
+A curved rapier~
+A long slender blade, slightly curved, lays in its sheath.~
+~
+5 0 8193
+0 5 6 10
+8 9000 500
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 2
+A
+12 25
+A
+13 25
+#201
+cudgel trunk club~
+A thick cudgel~
+The stump of a thick tree trunk lays on the ground here, one end wrapped in leather.~
+~
+5 0 8193
+0 6 5 7
+22 3500 900
+58
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+52 5
+A
+14 25
+#202
+apron cook cooking~
+a cooking apron~
+A clean apron lies crumpled on the ground.~
+~
+9 131072 1025
+40 0 0 0
+3 12000 7000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#203
+cutlass sword weapon~
+A heavy cutlass~
+A heavy curved blade, nicked with rust and dents, is stuck in the ground.~
+~
+5 512 8193
+0 6 8 9
+14 22000 1000
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+31 5
+A
+2 2
+A
+36 10
+#204
+spyglass looking glass spy glass~
+A gleaming spyglass~
+A burnished gleam winks from a long cylindrical object on the ground.~
+~
+5 0 16385
+0 0 0 0
+6 10000 63990
+7
+E
+spyglass brass tube spy glass~
+   Cracked and worn leather is bound tightly around the end of the shining
+brass tube. Sparkling lenses refract the light off their polished lenses, a
+dazzling array of rainbows dancing in its gleam. A small, flowing inscription
+reading "With all my love" winds its way up the shaft.
+~
+X
+~
+64 0 0
+M
+You stand a little taller as you clap a gleaming spyglass to your eye~
+$n stands a little straighter as $e claps a gleaming spyglass to $s eye~
+Your shoulders fall a little as you remove the spyglass, the world fading in the distance~
+$n's shoulders slump a little as $e removes the spyglass from $s eye, the world falling away before $m~
+#205
+shirt bark barkskin heap~
+an old barkskin shirt~
+A heap of bark sewn togther lies in a crumpled mass on the ground.~
+~
+9 1090 9
+24 0 0 0
+15 80000 414
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -14
+A
+24 -3
+#206
+lid pot pan shield~
+A large pot lid~
+A large pot lid is on the ground.~
+~
+9 134217792 513
+13 0 0 0
+14 4030 23
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+17 -3
+#207
+martin sword martins~
+Martin's sword~
+A long bright bladed sword has been carefully placed on the ground.~
+~
+5 134217729 8193
+0 4 5 3
+18 60000 14000
+50
+E
+sword martin martin's~
+Looking at the blade you begin to see a faint image of Martin himself.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+36 15
+A
+19 3
+#208
+pale robe white~
+a Pale White Robe~
+A magical robe hangs mysteriously in the air.~
+~
+9 134283585 9
+40 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+18 8
+B
+150994944
+#211
+barkskin bark shirt~
+A barkskin shirt~
+A crumpled mass of bark, pieces stiched together, lays in a heap.~
+~
+9 1098754 9
+28 -1 -1 -1
+15 80000 414
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+52 10
+A
+18 3
+A
+9 -15
+#0
+$~
+

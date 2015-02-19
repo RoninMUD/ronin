@@ -1,0 +1,1684 @@
+#4501
+A Path Through the Forest~
+   The forest path narrows a bit here as it turns away from the east-west road
+to the south and heads to the north.  Tree branches overhang the trail in a
+thin canopy of green and brown that breaks up the light and produces a mottled
+pattern on the ground.  Several types of thick, leafy plants grow along the
+side of the path.  Most are green but one species has a strange reddish hue to
+its veins, giving it a rather sinister look.  The path appears to be used
+fairly frequently as the dirt is well-packed and very few clumps of grass and
+weeds grow along the middle of it.  A few strange noises come from farther up
+the path.
+~
+45 0 3
+D0
+~
+~
+0 -1 4502
+D2
+~
+~
+0 -1 6103
+E
+plant reddish red~
+This plant has broad, thick green leaves and look fairly normal but for the
+blood-red veins that course through them.  This simple feature gives the plant
+a sinister demeanor.
+~
+S
+#4502
+A Path to a Dark Cave~
+   The forest path continues to travel northwards, making few turns as it
+wanders along a fairly straight route.  In the near distance lies a small mound
+of built-up earth that rises several meters above the forest floor.  To the
+north, centered with the trail, is the opening of a rather ugly-looking cave.
+Few birds or other animals make sounds here, lending an uneasy quietness to the
+surroundings.  Strangely enough, the path seems to head directly towards the
+cave and into it, even though it would be easy to simply bypass it.
+~
+45 0 3
+D0
+~
+~
+0 -1 4503
+D2
+~
+~
+0 -1 4501
+S
+#4503
+In Front of a Dark Cave~
+   The entrance to a very dark cave seems to swallow the path here as it
+passes beneath the earthy threshold.  Trees grow along, around and above the
+cave opening, their long-reaching roots protruding from the ground, walls and
+the ceiling of the dark tunnel.  The cave is not huge, but it is large enough
+for even the tallest human to stand inside without much problem.  It is not
+apparent why the path travels into the cave.  Perhaps, long ago, the cave was
+not so spooky of a place.  Several strange noises emanate from deeper inside,
+sounding both unfriendly and unnatural.
+~
+45 0 3
+D0
+~
+~
+0 -1 4504
+D2
+~
+~
+0 -1 4502
+S
+#4504
+Inside the Dark Cave~
+   The interior of the cave is even more uninviting than the entrance makes it
+appear.  Several small bones are scattered across the ground, not all of them
+completely picked clean of flesh.  A rather foul odor wafts up from a dark hole
+in the ground, accompanied by a disturbing stream of guttural noises and
+strange half-screams.  A stark contrast to this den of death is the
+continuation of the path out the other side of the earthen mound.  The trail
+leaves the darkness and opens into a beautiful path that approaches a river
+just visible in the distant north.
+~
+45 13 0
+D0
+~
+~
+0 -1 10900
+D2
+~
+~
+0 -1 4503
+D5
+The dark hole seems to open up into a large cavern below.
+~
+~
+0 -1 4505
+E
+bones ground~
+The bones on the ground are covered in spots of still-rotting flesh and several
+types of bugs.
+~
+S
+#4505
+The Huge Cavern~
+   The hole from above opens into a huge natural cavern of dull grey rock.
+Several cracks and openings in the ceiling allow just enough light to filter
+in to make the shapes of stalactites just visible in the gloom.  The central
+portion of this cavern drops away into a dark pit that passes out of sight.
+One false move here could be a deadly mistake.  A small ledge winds along the
+cavern wall to the north in a fairly steep but manageable decent deeper into
+the earth.
+~
+45 1 5
+D0
+~
+~
+0 -1 4506
+D4
+The hole opens into some sort of cave near the surface.
+~
+~
+0 -1 4504
+S
+#4506
+A Dark Tunnel~
+   The cavern ledge from the south leads into a dark tunnel of stone and earth
+that appears to have been unnaturally widened and straightened in places.  The
+tunnel runs east-west in a fairly direct manner and seems to have many side-
+ranches along its length.  The tunnel walls are close together, apparently
+designed for the use of creatures smaller than the average human. The sharp,
+hard, stoney angles that make up this tunnel amplify every sound, making it
+very difficult to move about in silence.
+~
+45 9 5
+D1
+~
+~
+0 -1 4507
+D2
+~
+~
+0 -1 4505
+D3
+~
+~
+0 -1 4514
+S
+#4507
+A Dark Tunnel~
+   The tunnel branches here in a three-way split.  The section that continues
+to the east seems to pass into the depths of a small cavern, the opposite end
+of which can't be seen from here.  The northern path opens almost immediately
+into an enormous cavern that glows softly with its own light.  The sound of
+dripping and flowing water echos from that direction, filling the cave complex
+with its gentle music.  The tunnel to the west is dark and narrow and continues
+on that way for some distance.
+~
+45 9 5
+D0
+An huge cavern filled with an underground lake can be seen to the north.
+~
+~
+0 -1 4509
+D1
+~
+~
+0 -1 4508
+D3
+~
+~
+0 -1 4506
+S
+#4508
+A Small Cavern~
+   This small cavern is completely devoid of any natural light.  The floor is
+made primarily of packed, slightly moist dirt and chunks of small but sharp
+rock.  The entire area is filled with the foul smell of death and decay.
+Closer inspection of this filthy den reveals several piles of bones and rotten
+meat, covered in flies, maggots and worse.  The bones appear to be that of a
+human or some other unfortunate humanoid creature.  The only exit is the
+entrance to the west.
+~
+45 9 0
+D3
+~
+~
+0 -1 4507
+E
+bones piles~
+Most of these bones are completely unidentifiable.  They have been chewed and
+gnawed upon until they are just splinters of bone material.
+~
+S
+#4509
+The Cavern of Wonders~
+   This tremendously large cavern is the site of a large underground lake that
+fills much of its center.  A wide, natural skylight in the ceiling allows the
+outside light to fill the cavern with a gentle glow.  Veins and flecks of
+minerals in the walls refract and reflect the light in a dazzling display of
+colors.  The dark waters of the lake are crystal clear and appear to be teaming
+with pale white fish and a type of small blue crab that skitter along the moss-
+covered bottom.  Droplets of water drip from the thousands of stalactites that
+line the ceiling, filling the cavern with faint watery echoes.  The lake shore
+serves as a path around the water, connecting the four tunnels that lead away
+from this cavern in each of the cardinal directions.
+~
+45 1 0
+D0
+A small chamber containing some sort of deep pit lies to the north.
+~
+~
+0 -1 4511
+D1
+~
+~
+0 -1 4512
+D2
+~
+~
+0 -1 4507
+D3
+A short tunnel ends a few meters to the west.
+~
+~
+0 -1 4510
+E
+minerals walls~
+A few thin veins of dull-colored metal can be seen running between several
+cracks in the wall.  The metal seems to be of a low-grade type like iron.
+~
+E
+lake water waters fish crab moss~
+The crystal-clear waters of this underground lake sparkle in the light that
+reflects off of its surface.  It is home to a surprising number of different
+types of fish, crustaceans and other invertebrates, as well as a thick-growing
+species of dark green moss.
+~
+S
+#4510
+An Abandoned Alcove~
+   The tunnel here looks to have once been the beginnings of a passage through
+the stone.  It appears to have been abandoned for that purpose and instead has
+been quarried for some of the granite that it is made up of.  Other than a few
+chunks of stone and rock-dust scattered around the floor, nothing else makes
+this section of the cave very interesting at all.
+~
+45 9 5
+D1
+An huge cavern filled with an underground lake can be seen to the east.
+~
+~
+0 -1 4509
+S
+#4511
+Above an Abandoned Mine Shaft~
+   This room is roughly circular in shape with only the southern entrance
+marring its geometric appearance.  Other than a partly-collapsed mine shaft set
+in the center of the floor, this room is essentially devoid of anything
+interesting.  Nothing but the marks of picks and hammers and a few thin veins
+of crystal running along the walls breaks up the monotony of dull grey stone.
+~
+45 9 5
+D2
+An huge cavern filled with an underground lake can be seen to the south.
+~
+~
+0 -1 4509
+D5
+An old neglected mine shaft descends into the ground here, its rotting wooden
+beams looking barely able to keep it from collapsing in on itself.  It looks
+like it has enough foot and hand-holds to be climbable.
+~
+shaft mine~
+11 -1 4530
+S
+#4512
+The Goblin War Gallery~
+   A medium-sized stone chamber has been reserved to display (or possibly
+store) various pictures, loot and, most notably: goblin war inventions.  A
+large picture has been painted directly on the wall in garish colors, seemingly
+to represent the successes of the Kraznor Clan.  Most of the loot found in here
+is glittery, but essentially worthless to any that find "shiny stuff" less than
+appealing.  The goblin war inventions speak for themselves, being a cross
+between classical military genius and nonsensical goblin ingenuity.  A small,
+but empty-looking guard room lies through a door to the east.
+~
+45 9 0
+D1
+A rickety old door swings loosely on its hinges.
+~
+door~
+1 -1 4513
+D3
+An huge cavern filled with an underground lake can be seen to the west.
+~
+~
+0 -1 4509
+E
+loot glittery shiny stuff~
+The goblin "loot" is little more than a menagerie of shiny trinkets, most of
+which are crafted from broken or bent pieces of metal that were discarded by
+their previous owners.  Little if anything has any real practical value.
+~
+E
+picture pictures~
+Most of these pictures are very crudely drawn and hard to figure out, even
+after considerable speculation time.  The largest of these is a sort mural
+depicting the successes of the Kraznor Clan in its battles.  The most important
+of these appears to be the invasion and capture of these caves from a mining
+expedition of dwarves.  Through sheer numbers the goblins were able to fight
+off the dwarves down a long tunnel somewhere deeper in the earth.  The tunnel
+now appears to be blocked off on the other end by a thick steel door.
+~
+S
+#4513
+A Small Guard Room~
+   This is a rather empty and cramped room.  A single dilapidated wooden table
+with a broken leg occupies most of the room, surrounded by three chairs that
+have seen better days.  It seems this room was originally intended to be a
+guard room to protect the war gallery, but that the notion must have been
+forgotten long ago.  It now looks seldom-used and full of dust and trash, some
+of which is unidentifiable due to its decomposition and rather suspicious
+origins.
+~
+45 9 0
+D3
+A rickety old door swings loosely on its hinges.
+~
+door~
+1 -1 4512
+E
+trash~
+Most of the waxy, smelly trash is completely unidentifiable.  Whatever it used
+to be its nothing but trash now.
+~
+S
+#4514
+A Passage Crossing~
+   Two roughly perpendicular passages cross here, forming a four-way
+intersection of sorts.  Both tunnels have similar characteristics, neither
+appearing in design to be more interesting than the other.  A faint and
+rhythmic, metal-on-stone clinking noise can be heard from the northern passage.
+From the trash that lines this intersection it is fairly apparent that this
+place serves as a living space for off-duty goblins.
+~
+45 9 5
+D0
+~
+~
+0 -1 4517
+D1
+~
+~
+0 -1 4506
+D2
+~
+~
+0 -1 4518
+D3
+~
+~
+0 -1 4515
+E
+trash~
+Several discarded sleeping rags have been piled against the walls, gathering
+dust and grime as they are trodden-on by their owners.
+~
+S
+#4515
+A Dark Tunnel~
+   The tunnel from the east ends here and turns northwards at a fairly abrupt
+and obviously unnatural curve in the carved stone.  A few strange noises come
+periodically from somewhere to the north, sounding neither happy nor healthy.
+Small piles of rubble and dust line the tunnel walls, probably swept aside by
+passing feet more than any sort of active cleaning.
+~
+45 9 5
+D0
+~
+~
+0 -1 4516
+D1
+~
+~
+0 -1 4514
+S
+#4516
+A Dark Tunnel~
+   This is yet another dark section of the tunnel complex that has been carved
+out of the surrounding stone.  Little here is different than elsewhere in these
+dark passages, the dull gray rock undifferentiated and bland.  The faint smell
+of rock-powder floats in from the east, accompanied by the sound of metal
+chipping away at stone.  This L-shaped corner of the tunnel travels east and
+south.
+~
+45 9 5
+D1
+~
+~
+0 -1 4517
+D2
+~
+~
+0 -1 4515
+S
+#4517
+A Dark Tunnel~
+   It is immediately obvious upon entry to this section of the tunnel that it
+is currently under construction.  A meter-deep depression in the stone to the
+north indicates fresh work on a new tunnel in that direction.  A haze of rock
+dust floats about the air, making breathing a painful process.  Most of the
+fallen material from the excavation lies scattered across the floor, making
+travel through this part of the tunnel difficult.  The tunnel bends from the
+south, continuing westward into the darkness.
+~
+45 9 5
+D2
+~
+~
+0 -1 4514
+D3
+~
+~
+0 -1 4516
+S
+#4518
+A Rough-Hewn Passage~
+   This section of the tunnels has obviously been cut very recently from the
+surrounding stone.  The edges of the walls are still jagged and not yet worn
+with time.  It is quite apparent that the construction crew knew little about
+what they were doing.  The passage turns to the west and continues, traveling
+beneath the rather unstable-looking ceiling.  While a cave-in does not look to
+be imminent, it looks like any minor earthquake could cause this whole section
+to collapse.
+~
+45 9 5
+D0
+~
+~
+0 -1 4514
+D3
+~
+~
+0 -1 4519
+S
+#4519
+A Rough-Hewn Passage~
+   The passage continues its east-west journey through the stone in a very
+linear fashion, narrowing in places where the stone seems to be particularly
+tough.  The tunnel is fairly large on the whole and roughly circular in shape,
+more like a rocky tube than a stone hall.  The stonework appears to have been
+done by some sort of crude metal chisels or picks and it is obvious that little
+care was taken.  Whoever constructed this passage took a quick and dirty
+approach to things.
+~
+45 9 5
+D1
+~
+~
+0 -1 4518
+D3
+~
+~
+0 -1 4520
+S
+#4520
+Before a Large Iron Gate~
+   The tunnel makes an abrupt turn to the north here as it comes from the east.
+Blocking off further passage is an immense arched gateway that belies the
+surrounding crudely-hacked stone.  The arch itself is made from blocks of pure
+onyx, black as coal and cold as death.  Bold, dirt-encrusted writing has been
+etched onto the surface of the arch in some strange language.  Spanning the
+arch is a formidable but crudely built gate of black iron.  Though it does not
+look to be of the highest quality, it is thick and massive enough to prevent
+anyone from breaking it down.  The locking mechanism, however, leaves much to
+be desired.
+~
+45 9 5
+D0
+A thick iron gate is mounted to two onyx pillars here.
+~
+gate thick iron~
+3 4505 4521
+D1
+~
+~
+0 -1 4519
+E
+writing arch long-forgotten forgotten language~
+The writing reads:
+  Lruldrak ikshae Dvordok
+~
+S
+#4521
+A Rough-Hewn Passage~
+   The passage beyond the gate narrows and begins to slope upward as it travels
+along to the north.  The darkness ahead is very deep and foreboding, an
+unwelcome place for all but the hardiest of adventurers.  The stone walls and
+ceiling here are a cold, dark and unchanging shade of slate-grey that seems to
+deaden whatever light is cast upon it.  Whatever lies in the caves beyond seems
+to value its privacy.
+~
+45 9 5
+D0
+~
+~
+0 -1 4522
+D2
+A thick iron gate is mounted to two onyx pillars here.
+~
+gate thick iron~
+3 4505 4520
+S
+#4522
+A Rough-Hewn Passage~
+   The tunnel narrows even more here but the ground seems to level off for a
+ways.  Farther to the north the passage narrows even more as the dark, cold
+walls press in ever-closer.  It looks as if the tunnel might simply come to an
+end somewhere up ahead.  The only way to find out is to press on deeper into
+the earth.
+~
+45 9 5
+D0
+The tunnel narrows considerably to the north, leaving room for only a single
+person at a time to get through.
+~
+~
+0 -1 4523
+D2
+~
+~
+0 -1 4521
+S
+#4523
+A Tight Corner~
+   The passage becomes even more compressed here, forcing any that travel
+through to go single-file.  The tight nature of the tunnel appears to be on
+purpose, a sort of defensive measure to prevent a horde of beings to passing
+through in a rush.  Almost immediately after it narrows the passage turns to
+the east around a blind corner.  It isn't the most pleasant situation, but it
+appears to be unavoidable in order to continue deeper into the caves.
+~
+45 265 5
+D1
+Its a blind corner until the very last instant, impossible to see around from
+here.
+~
+~
+0 -1 4524
+D2
+~
+~
+0 -1 4522
+S
+#4524
+The Bottom of the Stairs~
+   The passageway ends abruptly at the base of a narrow set of curving stone
+stairs.  As with much of this section of tunnel, the stairs appear to be a
+recent addition to the barren features of this area.  Several shades of slime
+and mold grow in the cracks at the base of nearly every step.  The uneven
+stairs wind away into a dank and dreary darkness above.
+~
+45 9 0
+D3
+A narrow tunnel just wide enough for a single person can be seen to the west.
+~
+~
+0 -1 4523
+D4
+The staircase twists up and out of sight into the darkness above.
+~
+~
+0 -1 4525
+S
+#4525
+The Resting Point~
+   A large flat landing has been carved out somewhere around the middle of the
+staircase.  Strangely, this place seems to reflect a sense of peace and quiet
+not found anywhere else in this underground complex of caverns and tunnels.
+It's not quite clear whether this is an unnatural phenomenon or if it is simply
+a byproduct of the seemingly seldom used staircase.  Whatever the cause,
+this seems to be a good place to stop and rest before continuing on up the
+stairs.
+~
+45 77 0
+D4
+The staircase twists up and out of sight into the darkness above.
+~
+~
+0 -1 4526
+D5
+The stairs descend into the darkness below.
+~
+~
+0 -1 4524
+S
+#4526
+The Top of the Stairs~
+   The stairs open out into a rather wide hallway that is not nearly as dark as
+those found in the lower chambers.  Like much of the cave complex, this end of
+the hall is rather nondescript, seeming to have been constructed relatively
+recently by unskilled hands.  The passage leads away to the east and out of
+sight into the shadowy darkness beyond.
+~
+45 9 0
+D1
+~
+~
+0 -1 4527
+D5
+A set of stairs descends into the deeper tunnels below.
+~
+~
+0 -1 4525
+S
+#4527
+A Hewn Stone Hall~
+   This passage seems quite different from those found in the lower caves.
+Paintings have been drawn on the walls and a number of rugs are scattered
+across the floor in an ugly pattern of washed-out colors.  The whole area looks
+like somebody is trying hard to be impressive, but is failing badly.  The top
+of some stone stairs lies to the west while the passage continues to the east.
+~
+45 9 5
+D1
+~
+~
+0 -1 4528
+D3
+~
+~
+0 -1 4526
+E
+paintings~
+Most of these paintings are crude and all seem to be focused around some goblin
+beating the life out of an overwhelmed (or sometimes obviously dead) victim.
+~
+S
+#4528
+A Hewn Stone Hall~
+   The upper hall comes to an end here at a single metal-bound door set in the
+wall to the south.  Several ugly paintings line the wall, all drawn
+directly on the stone with crude pigments and brushes.  A mottled pattern of
+dirty and extremely worn rugs line the floor at this end of the hall, adding to
+the surrounding repulsiveness.  To top all of this off is a hideous statue
+chipped from a large chunk of granite that has been placed in the center of the
+hall, facing the door.  The lifelike depiction of a fat and ugly goblin
+wielding a wicked-looking axe is a ghastly sight to behold.  Its eyes seem to
+be watching every movement with sinister interest.
+~
+45 9 5
+D2
+A wood and metal door has been set in the wall to keep out intruders.
+~
+door wood metal~
+2 4504 4529
+D3
+~
+~
+0 -1 4527
+E
+statue~
+Even though this statue is poorly made from chipped stone and gaudy semi-
+precious stones it still radiates a menacing aura of wickedness.
+~
+E
+paintings~
+Most of these paintings are crude and all seem to be focused around some goblin
+beating the life out of an overwhelmed (or sometimes obviously dead) victim.
+~
+S
+#4529
+The Throne Room~
+   This is the throne room of the Druxlor, the Kraznor Clan chief.  On a badly-
+tilted dais sits the ugliest throne imaginable.  It is made of poorly-cut
+granite and is decorated with skins, old bones and the skulls of several
+unfortunate victims.  Little else adorns this moderately-sized room.  An ugly
+and very tattered rug covers part of the floor in front of the king.  A large
+hole has been cut into the center of it to allow the building of a fire to warm
+the room.  Much of the carpet is charred, and the stone floor and ceiling are
+covered in black soot from years of billowing smoke.
+~
+45 9 0
+D0
+A wood and metal door has been set in the wall to keep out intruders.
+~
+door wood metal~
+1 4504 4528
+E
+throne~
+This big stone throne has been designed to seat an occupant three times smaller
+than it actually could.  A huge number of furs, soggy cushions and smelly trash
+has been packed around the seat area to make the fit more snug for its fat
+goblin owner.
+~
+S
+#4530
+Beneath an Abandoned Mine Shaft~
+   The bottom of the mine shaft is a jumbled mess of scattered stone and broken
+wood beams.  Several types of discarded and rust-corroded mining tools lie in
+various places, dropped in haste or neglect by their previous owners.  A broken
+ore bucket lies turned on its side and half-buried in the mud near the southern
+wall of this stony alcove, a broken steel chain still dangling from its top.
+Rocky walls enclose the base of the shaft on three sides, leaving only a jagged
+opening to the north.  A thin mist and the smell of moist organic decay floats
+in from that direction, coating the walls and the floor with a slick wetness.
+~
+45 9 0
+D0
+~
+~
+0 -1 4531
+D4
+An old neglected mine shaft leads upwards through the solid stone here, its
+rotting wooden beams looking barely able to keep it from collapsing in on
+itself.  It looks like it has enough foot and hand-holds to be climbable.
+~
+shaft mine~
+11 -1 4511
+E
+bucket ore~
+The bucket is in poor condition and is obviously unusable, serving now only as
+a reminder of its former purpose.
+~
+E
+tools rust mining~
+The wooden shafts of the tools have long-since decayed, leaving only the rust-
+encrusted tips of broken picks and bent shovels.
+~
+S
+#4531
+Marsh Cave~
+   The scent of decay is thick in the dank mist that hangs in the air of this
+cave.  The floor here is moist and spongy, made up of a mixture of moss and the
+muddy water that flows within it.  This is not the only peculiarity to be found
+here, for unlike most underground tunnels, this seems more of an enclosed
+version of a swamp found on the surface.  Various sorts of fungi and moss grow
+from the ground and along the walls and ceiling.  Dark green tendrils of
+hanging algae drip from the cave roof, beads of water gathering and falling
+from their tips.  The tunnel branches in three directions here.  To the north a
+large cavern can be seen extending into the distance, while the eastern branch
+narrows slightly and continues as a small tunnel.  The base of a mine shaft is
+just visible through an opening in the southern wall.
+~
+45 9 5
+D0
+~
+~
+0 -1 4534
+D1
+~
+~
+0 -1 4532
+D2
+~
+~
+0 -1 4530
+S
+#4532
+A Marshy Conflux~
+   The ground here is saturated with water in a sort of large puddle that
+occupies the center of a tunnel junction.  The source of the water appears to
+flow slowly in from the south, mixing in muddy-brown swirls with soil that
+lines the cavern floor before escaping slowly into the east and west branches
+of the tunnel.  The ground becomes more solid to the west as the soil deepens
+and the water is absorbed by the moss and grassy plants that sprout from it.
+The eastern tunnel continues into the darkness beyond, a small dirty stream
+flowing lazily along the center of the passage.
+~
+45 9 5
+D1
+~
+~
+0 -1 4563
+D2
+~
+~
+0 -1 4533
+D3
+~
+~
+0 -1 4531
+S
+#4533
+A Filthy Spring of Foul Water~
+   A small crack in the southern rock wall appears to be the source of the
+water in this section of the tunnels.  A continuous flow of muddy water pours
+out of the crevice and into the tunnel where it pools in a murky basin before
+trickling down the passage to the north.  A thin layer of sparkling dust
+nearly coats a large flat rock that occupies the center of the basin and
+several opalescent flecks lie in a pile outside of a small hole that leads into
+the rock itself.  It almost looks like the home of some sort of small creature.
+~
+45 9 6
+D0
+~
+~
+0 -1 4532
+E
+hole rock~
+Closer inspection of the hole in the rock reveals that some type of creature
+has indeed been living inside.  The entire stone seems to be nearly-hollow,
+carved out by whatever calls it home.
+~
+S
+#4534
+Marsh Cave~
+   The cave opens up into an immense underground cavern of swampy ground and
+unusual plants.  The floor of the cavern is relatively level and covered in a
+marshy carpet of thick moss and tufts of stringy grass.  Small pools of water
+gather in places where depressions in the rock allow it to gather and stand. A
+small and comparatively dry stone tunnel leads into the dull grey rock to the
+east.  The source of the water in this cavern appears to be somewhere deeper
+and to the northwest.  Two narrow paths of semi-solid ground make their way
+deeper into the marsh to the north and the west.
+~
+45 9 5
+D0
+~
+~
+0 -1 4561
+D1
+~
+~
+0 -1 4535
+D2
+~
+~
+0 -1 4531
+D3
+~
+~
+0 -1 4562
+S
+#4535
+A Stone Tunnel~
+   In stark contrast to the damp and spongy cavern outside the tunnel entrance
+to the west, this passage is dry and desolate.  Several large fractures run the
+length of the stone walls and across the barren ceiling, but there is no
+visible evidence of any past or present organic life here.  As unusual as it
+might be, the rough gray rock that encases this narrow path through the earth
+seems to have formed in its roughly tubular shape naturally.  This anomaly is
+almost certainly due to countless geological factors that conspired together in
+this strange underground realm.  The passage continues around a bend to the
+north, where the steady splash of water on stone can be heard.
+~
+45 9 0
+D0
+~
+~
+0 -1 4536
+D3
+~
+~
+0 -1 4534
+S
+#4536
+A Stone Tunnel~
+   The jagged rock that makes up the eastern wall of this corridor falls away
+here, opening abruptly into a mid-sized chamber that has been carved out of the
+stone.  The sound of water cascading over rock fills the air, its source hidden
+somewhere through the opening, just out of sight.  A thin cloud of mist hangs
+in the air and clings to the surface of the walls and floor, making their
+surfaces slick.  The tunnel wanders away to the south and then around a bend to
+the west.
+~
+45 9 0
+D1
+~
+~
+0 -1 4537
+D2
+~
+~
+0 -1 4535
+S
+#4537
+A Pool of Silty Water~
+   The entire floor of this chamber is flooded with a roiling pool of dirty
+silt-laden water that comes to about waist level.  The filthy liquid spills
+over the edge of a short waterfall along the northern section of this area,
+which continues in that direction and out of sight.  The muddy substance drains
+away here as quickly as it comes splashing in--its drainage somewhere below the
+cloudy surface.  A large stoney ledge protrudes several tens of centimeters
+from the eastern wall about two meters above the water's surface.  A few sparse
+hand and foot-holds present themselves along the surface of the rock face--just
+enough to enable a strong individual to climb up.  A dark stone tunnel travels
+into the rock and out of sight to the west.
+~
+45 13 6
+D0
+A small waterfall of muddy water cascades down the rocks to the north, filling
+this pool as quickly as it drains.
+~
+~
+0 -1 4543
+D3
+~
+~
+0 -1 4536
+D4
+A stone ledge is situated about two meters above the water's surface.  The wall
+appears to have just enough hand and foot-holds to make climbing possible.
+~
+wall ledge~
+11 -1 4538
+S
+#4538
+A Rocky Ledge~
+   The rock outcropping that makes up this ledge is really an extension of the
+floor of a hollow stone tube that has been cut into the earth.  After opening
+into the eastern wall for a depth of a few meters, the tunnel makes a sharp
+turn to the south and disappears out of sight.  The sound of rushing water can
+be heard from below and a look over the edge shows a river of brown muddy water
+flowing from somewhere to the north.  Little else of interest can be seen from
+this vantage point.  A series of small but sturdy-looking hand and foot-holds
+can be seen along the wall directly beneath the ledge, offering the possibility
+of climbing down to the water below.
+~
+45 9 0
+D2
+~
+~
+0 -1 4539
+D5
+Several hand and foot-holds protrude from the wall, offering a way to climb
+down to the muddy pool below.
+~
+wall ledge~
+11 -1 4537
+S
+#4539
+Upper Chambers of the Cave~
+   The sound of flowing water to the north echoes across the stone here and
+away into the black depths of the corridor around a bend to the east.  The
+drab gray walls reflect very little light, their relatively smooth features
+devoid of any flecks of crystal or metallic substances.  The air here is
+stuffy and warm, tinged with the acrid smell of something indescribable
+burning or smoldering.
+~
+45 9 0
+D0
+~
+~
+0 -1 4538
+D1
+~
+~
+0 -1 4540
+S
+#4540
+Upper Chambers of the Cave~
+   The passage continues a ways to the east, widening a bit every few meters at
+regular intervals.  Scuff marks and unnatural-looking gashes in the stone
+surfaces can be seen and small flakes of what look to be black serpentine
+scales litter the floor.  As the tunnel turns once again to the south a sense
+of foreboding floods the area.  A greater depth of darkness opens up in the
+distance as the ever-widening stone tube connects with some much larger
+chamber just out of sight.
+~
+45 9 0
+D2
+A large open space presents itself to the south.  It looks like a lair of some
+sort, perhaps still inhabited.
+~
+~
+0 -1 4541
+D3
+~
+~
+0 -1 4539
+S
+#4541
+Toxic's Lair~
+   The tunnel from the north deposits itself into this moderately-sized stone
+chamber.  It is immediately apparent that this cave is not a natural
+phenomenon, due greatly to the heavily rippled and uneven surface of the floor,
+walls and ceiling.  The almost glassy texture of the rock here hints at some
+force that must have melted or blasted the stone away.  Tales tell of mighty
+creatures that create and live in lairs such as this, and most of them
+invariably involve dragons.  A small side-chamber has been carved out of the
+eastern wall and looks to be used as a storage area.
+~
+45 13 0
+D0
+~
+~
+0 -1 4540
+D1
+A small alcove has been carved into the eastern wall.  It seems to be some sort
+of storage room.
+~
+~
+0 -1 4542
+S
+#4542
+A Small Treasure Horde~
+   A small antechamber has been carved into the eastern stone wall of the
+larger cave outside, and the walls display the same disturbingly artificial
+melted architecture.  It seems that this room serves as a storage area of sorts
+for the lair's occupant--a place to keep treasure and valuables of various
+kinds.  The alcove itself isn't terribly large, being perhaps three meters in
+diameter and roughly spherical in design.  Whatever keeps its treasure here is
+certainly rich, but not overwhelmingly so.
+~
+45 9 0
+D3
+A large stone chamber occupies the space to the west.  It looks like something
+has been using it as a lair.
+~
+~
+0 -1 4541
+S
+#4543
+A Silty Passage~
+   The accumulated flow of water here is quite impressive.  The muddy-brown
+stream flowing from the north spills over a small waterfall here and into a
+large basin to the south.  The tunnel itself becomes wider and taller here,
+most likely carved out by the relentless erosion of tumbling rocks and
+abrasive sandy water.  The end of the passage can be seen on the far side of
+the pool that has formed to the south.
+~
+45 9 6
+D0
+~
+~
+0 -1 4544
+D2
+A small waterfall marks the edge of a large murky pool to the south, its depths
+fed by this silty river.
+~
+~
+0 -1 4537
+S
+#4544
+A Silty Passage~
+   The water-bearing channel turns yet another corner here and flows away in a
+relatively straight line to the south.  The passage seems to broaden here as
+the heavy flow of dirty liquid that formed it cuts away at the walls with brute
+force.  The narrow ledge that follows along the edge of the western wall tapers
+away and finally disappears about a dozen meters farther along the tunnel,
+having apparently served its purpose.  Splatters of mud cover its surface, as
+though dripped there by something that traveled along it.
+~
+45 9 6
+D2
+~
+~
+0 -1 4543
+D3
+~
+~
+0 -1 4545
+S
+#4545
+A Silty Passage~
+   As the tunnel turns a bend here to the east the flow of water increases
+suddenly as it is fed by a new source along the northern wall.  A large but
+narrow fissure has split the wall in a jagged cut from floor to ceiling and
+from its depths a flood of clear water spills into the channel in the floor
+and away to the west.  Strangely, a narrow shelf about half a meter wide has
+been cut into the southern rock wall that follows the length of the passage.
+Whatever carved it seems to have wanted a way to follow the murky river
+without having to be submerged in it.
+~
+45 9 6
+D1
+~
+~
+0 -1 4544
+D3
+~
+~
+0 -1 4546
+S
+#4546
+A Silty Passage~
+   A network of thick black roots can be seen dangling from the roof of the
+tunnel here.  From the looks of it, the water-seeking tendrils forced a small
+collapse of the stone that forms the ceiling, causing them to be exposed.  The
+rock and dirt that fell has long-since been washed away by the steady stream of
+water that flows along the floor of this passage.  The flow from the south
+turns to the east here where it seems to pick up even more speed, as evidenced
+by the sudden increase of splashing sounds in that direction.
+~
+45 9 6
+D1
+~
+~
+0 -1 4545
+D2
+~
+~
+0 -1 4547
+S
+#4547
+A Silty Passage~
+   The flow of water from the west turns a bend here to the north.  Long earth-
+colored stalactites begin to appear along the ceiling, each dripping a steady
+stream of drops into the stream below.  The ground is slick and muddy, its
+porous nature easily saturated and dissolved by the moisture that seeps into
+it.  Strange markings can be seen along the walls, looking like small primitive
+pictures of indecipherable nature.
+~
+45 9 6
+D0
+~
+~
+0 -1 4546
+D3
+~
+~
+0 -1 4548
+E
+markings walls primitive pictures~
+The pictures that have been etched into the wall are very unusual.  They seem
+to depict strange nonsensical scenes involving mud and stone.  Little meaning
+can be gleaned from them.
+~
+S
+#4548
+A Silty Passage~
+   The constant flow of water from the south has eroded a narrow channel in the
+softer stone of the floor here.  The color of the surrounding stone has become
+more of a reddish-brown than the cold gray that makes up the rest of the
+caverns and tunnels elsewhere in this underground complex.  The tube-shaped
+passage carved by the stream winds away to the east lazily, following the
+weaker areas of the rock.  The silty liquid picks up even more coloration and
+cloudiness as it passes over the floor and walls.  Though the muddy river picks
+up speed as the ground slopes downward a bit, it maintains a shallow and
+easily-traversable depth as far as can be seen.
+~
+45 9 6
+D1
+~
+~
+0 -1 4547
+D2
+~
+~
+0 -1 4551
+S
+#4549
+A Putrid-Smelling Cave of Mushrooms and Filth~
+   The stench here is unbearable.  The floor, walls and even ceiling are
+covered in a rank layer of slime and mold, splotched with putrid colors painted
+by strange fungus growths of various sorts.  Piles of discarded animal parts,
+bits of half-decayed vegetation and balls of wire and twine litter the ground.
+A small nook along the back wall contains an assorted variety of crude tools
+mixed randomly with bits of uneaten food and shreds of ineffective-looking
+clothing.  Whoever or whatever makes this den its home must be blind and have
+no sense of smell whatsoever to be able to live in this filth.  A very strange
+drawing of surprising complexity has been etched into the grime that covers the
+western wall.  A small hole through a wall of twigs and mud leads out of this
+place and to undoubtedly fresher air.
+~
+45 9 0
+D2
+A small hole leads out of the mass of rubbish that make up this structure.  It
+looks large enough to crawl through.
+~
+hole opening~
+9 -1 4550
+E
+drawing strange grime wall~
+The scene seems to involve some sort of horribly complicated device built from
+wood, stone and ropes wound about and through hundreds of pulleys.  What looks
+at first to be a small smudge high above the contraption, flying away rapidly,
+proves to be the limp body of a goblin being flung at high velocities.
+~
+S
+#4550
+A Sandy Passage~
+   The water-swept sands from the passages twisting away to the south fan out
+onto the stone floor in a small delta that reaches into a large cavern to the
+east.  Strangely out of place is a mass of root-like wooden branches, stones
+and half-rotten giant mushroom stalks piled along the wall to the north.  A
+thick bank of black-green moss grows along the base of this structure, seeming
+to hold the base of the propped objects in place and keep the water out at the
+same time.  A small opening in the arranged twigs leads into a dark and putrid-
+smelling cave that seems to extend beneath the northern wall.
+~
+45 9 0
+D0
+A small hole leads into the mass of rubbish that make up the structure to the
+north.  It looks large enough to crawl through.
+~
+hole opening~
+9 -1 4549
+D1
+~
+~
+0 -1 4551
+D2
+~
+~
+0 -1 4553
+S
+#4551
+Marsh Cave~
+   A steady flow of water spills over the rock floor here, flowing down a small
+incline to the north and into a muddy channel.  The source of the stream lies
+around a bend to the west and somewhere to the south.  The northern wall tapers
+down into a narrow passage that immediately turns to the east and disappears
+into darkness.  To the south lies a vast underground cavern, filled with
+strange organic shapes and a thin hazy cloud of mist.  The ground is composed
+of solid gray rock, swept clean by the constant scouring of water, but the
+walls and ceiling are dappled with black-green slime and fungi growths that
+thrive in the moist lightless environment.
+~
+45 9 5
+D0
+A muddy channel of water flows away to the north and out of sight as it turns
+to the east.
+~
+~
+0 -1 4548
+D2
+~
+~
+0 -1 4552
+D3
+~
+~
+0 -1 4550
+S
+#4552
+Marsh Cave~
+   The boggy ground hardens a little here as it approaches an enormous mushroom
+stalk that grows in this section of the cavern.  The skin of the fungus is
+slick and moist, mottled in varying hues of brown.  The stalk itself is perhaps
+two meters in length, topped by a broad cap that is twice the length in
+diameter.  Thin tendrils hang from the underside of the giant organism, several
+of which are coated with a thin layer of fine spores.  A small oval-shaped hole
+in the western wall has formed, seemingly due to a weak spot in the stone.  It
+looks large enough to crawl through.  The path branches in three directions,
+leading to the southern and eastern parts of the cavern, as well as to the north
+past the mushroom and into a tunnel entrance.
+~
+45 9 5
+D0
+~
+~
+0 -1 4551
+D1
+~
+~
+0 -1 4561
+D2
+~
+~
+0 -1 4562
+D3
+A small oval-shaped hole in the sandstone wall has formed here, providing a
+small but crawlable passage through about a meter of the stone.  It appears to
+open up into a small sandy passage.  The trickling sound of flowing water can
+be heard on the other side.
+~
+hole wall oval crack~
+9 -1 4553
+S
+#4553
+A Sandy Passage~
+   The walls are close together and the ceiling low, lending a claustrophobic
+feel to the tunnel.  An oval-shaped hole has formed about halfway up the
+eastern wall, penetrating the stone for about a meter before it appears to open
+up on the other side into a vast and dark cavern.  The stream of water that
+flows from the west and fills this sandy corridor to a depth of several dozen
+centimeters drifts away slowly but steadily to the north.
+~
+45 9 0
+D0
+~
+~
+0 -1 4550
+D1
+A small oval-shaped hole in the sandstone wall has formed here, providing a
+small but crawlable passage through about a meter of the stone.  It appears to
+open up into a large cavern that smells of damp fungi and stagnant water.
+~
+hole wall oval crack~
+9 -1 4552
+D3
+~
+~
+0 -1 4554
+S
+#4554
+A Sandy Passage~
+   A gentle stream of water flows through this passage from the north and away
+to the east.  The water fills the entire floor of this tunnel between the
+close-set sandstone walls to a depth of about half a meter.  The slow-flowing
+crystal-clear liquid is chill but nowhere near freezing.  Small pebbles can be
+seen rolling and tumbling along the bottom of the stream.  Each one digs a tiny
+rift in the sand with its impact, which in turn is filled in by the motion of
+the flowing water.  A small beach at the edge of an underground lake can be
+seen to the north, while the east is a continuation of this passage.
+~
+45 9 0
+D0
+~
+~
+0 -1 4555
+D1
+~
+~
+0 -1 4553
+S
+#4555
+The Pebbly Shore of an Underground Lake~
+   The water-carved tunnel ends at the edge of a dark underground lake, the
+destination of the slow flow of water that etched away the stone here.  The
+clear water laps across the pebbly shore in a gentle rhythm, the source of the
+turbulence unknown and far away.  Several small critters scamper across the
+stones, insect-like crustaceans gathering food and building materials that wash
+up in the shallows.  The water slowly drains away down the southern tunnel and
+around the bend there, hinting at an unseen inlet that feeds this lake.  A
+small island can just be seen near the approximate center of the lake, most of
+its surface forested in a dense fungus grove.
+~
+45 9 0
+D2
+~
+~
+0 -1 4554
+D3
+An underground lake fills the distance to the west.  A small island near its
+center can be seen from here.
+~
+~
+0 -1 4556
+S
+#4556
+An Underground Lake~
+   The surface of the underground lake does little to reflect any light cast
+upon it, instead seeming to absorb and swallow it into its depths.  Every now
+and then a subtle rippling can be seen just beneath the surface, its source an
+uncomfortable mystery.  The enormous cavern that contains the lake is quiet but
+for the rhythmic splashes of dripping water falling from the distant ceiling.
+A moderately sized island occupies the center of the lake to the west, its
+terrain forested in a grove of mushrooms and other fungi.  To the east, a small
+beach can be seen at the mouth of the tunnel that serves as an outlet for the
+lake waters.
+~
+45 9 7
+D1
+A small opening in the rock wall to the east presents a pebbly shore and an
+outlet for the lake's water.
+~
+~
+0 -1 4555
+D3
+A small island occupies the center of the lake to the west.
+~
+~
+0 -1 4557
+S
+#4557
+A Small Mushroom-Covered Island~
+   The rocky shore of the island drops off rapidly into the dark depths beneath
+the lake just a few meters beyond the waterline.  Broken bits of bleached-white
+shell litter the ground near the water, the remains of some other creature's
+meal.  From the amount of debris scattered about this section of the beach, it
+looks to be a regular dining spot for some type of creature.  The surface of
+the island seems to be comprised mostly of fist-sized blocks of stone with
+smaller gravel in between.  It is likely that an ancient partial-collapse of
+the ceiling of this vast cavern is the source of these rocks and the creative
+force of this island.  The gray-brown edge of a giant mushroom forest begins
+about twenty meters to the west.  A small opening, evidence of a path that
+leads into the grove, can just be seen from here.
+~
+45 9 3
+D1
+A darker spot along the black stone walls to the east hints at a tunnel that
+leads away from the lake--an outlet of some sort for the cool water.
+~
+~
+0 -1 4556
+D3
+A small path leads into the mushroom grove to the west.
+~
+~
+0 -1 4558
+S
+#4558
+A Small Mushroom-Covered Island~
+   As the twisting path through the mushroom grove reaches the middle-portion
+of the island it opens up into a small clearing made up of mostly bare rock and
+gravel.  Curiously, a small hut-like structure has been built here,
+constructed primarily of large boulders and packed mud.  What can only be
+described as a large mat has been laid out in front of the dark entrance into
+the hut.  The mat itself seems to be made of some type of woven brown fibrous
+material.  Though there are a few mushroom stumps near the edge of the
+clearing, the center is devoid of any hints at recent growth.  Piled near one
+of the sides of the stone dwelling is a collection of discarded shell-like
+animal parts, such as pincers and leg segments.
+~
+45 9 3
+D0
+~
+~
+0 -1 4559
+D1
+~
+~
+0 -1 4557
+E
+hut dwelling structure~
+The hut is little more than a permanent stone and mud tent, just barely large
+enough for a single humanoid to sleep in.
+~
+S
+#4559
+A Small Mushroom-Covered Island~
+   A dense grove of giant mushrooms covers this section of the subterranean
+island.  The ground here seems richer and more soil-like than the eastern part
+of the island, perhaps due to some source of nutrients nearby.  A wide path
+leading from the south to the west has been hacked through the patch of fungi
+in a wandering fashion.  The stalks of the mushrooms that grow along the path's
+edge appear to have been snipped at and chomped upon by some sort of large
+creature.
+~
+45 9 3
+D2
+~
+~
+0 -1 4558
+D3
+~
+~
+0 -1 4560
+S
+#4560
+A Small Mushroom-Covered Island~
+   The western end of the island has been stripped clear of vegetation and
+every other living thing.  The ground is composed of coarse sand and giant crab
+dung that cakes the surface several inches deep.  The powdery white substance
+has a faint odor, much like the scent of a decaying mushroom, that is less than
+pleasant but not putrid either.  The surrounding lake fades away into the
+darkness past the edge of the island, its western walls unseen from here.  A
+small path to the east leads back into the fungus forest that covers the rest
+of the island.
+~
+45 9 2
+D1
+~
+~
+0 -1 4559
+S
+#4561
+Marsh Cave~
+   The stone walls along the north and the east side of this cavern are
+practically vertical and have a smooth, almost polished texture.  Several
+enormous cracks have formed in the roof of the cave, through which grow dozens
+of what look to be thick wooden branches.  Smaller growths extend from the
+central trunks, each of which is covered with hundreds of broad and colorless
+leaves.  It looks like a small forest of literally upside-down trees has grown
+here, their leaves serving not to gather light, but rather the water vapor that
+hangs in the air as mist radiating from the swampy floor.  A narrow path of
+thick grass connects the southern and western parts of the cavern as it passes
+beneath the trees here.
+~
+45 9 5
+D2
+~
+~
+0 -1 4534
+D3
+~
+~
+0 -1 4552
+S
+#4562
+Marsh Cave~
+   A moderately-sized but shallow pond occupies this section of the cavern, its
+murky bottom visible a few inches beneath the surface.  A water lily-like plant
+floats on top of the water, its broad central leaf nearly translucent in color.
+Unlike its surface cousin, this plant attaches itself to the pond bottom by
+hundreds of thin tendrils that grow from the underside of the main leaf.  The
+pond itself is surrounded by a thick patch of dull-colored reeds that grow from
+the moist, marshy ground.  A few trails of firm, relatively dry ground wind
+their way through the cave, connecting this part of it to the northern and the
+eastern sections.
+~
+45 9 5
+D0
+~
+~
+0 -1 4552
+D1
+~
+~
+0 -1 4534
+E
+pond~
+Several types of unidentifiable bug-like organisms swim about in the murky
+depths.
+~
+S
+#4563
+A Muddy Earthen Tunnel~
+   The muddy channel of water flowing from the west gets deeper here as it
+follows the carved tunnel of stone around a bend to the south.  The walls are
+smoother here, seemingly hacked and chopped from the surrounding stone by
+precision tools and diligent effort.  A few wooden support beams still line the
+tunnel walls, holding the ceiling in place, though many of these have begun to
+rot and turn spongy after years of water damage and neglect.  The passage opens
+up into a muddy three-way junction to the west while it continues into the
+darkness to the south.
+~
+45 9 5
+D2
+~
+~
+0 -1 4564
+D3
+~
+~
+0 -1 4532
+S
+#4564
+A Muddy Earthen Tunnel~
+   The silt-laden water flowing from the north slows here as it turns to the
+east, continuing its path along the floor of the tunnel.  A heap of mud-brown
+sludge has piled up along the southern wall, deposited by the decelerating
+water as its movement becomes too slow to suspend as much heavy material.  To
+the north, the tunnel turns west after several meters of upstream travel.  The
+eastern segment of the underground passage continues off into the distance and
+out of sight, the walls cut perfectly straight and unvarying in width and
+height.
+~
+45 9 5
+D0
+~
+~
+0 -1 4563
+D1
+~
+~
+0 -1 4565
+S
+#4565
+A Muddy Earthen Tunnel~
+   The stone floor is quite slick here, its surface coated in a slimy layer of
+mud deposited by the slow-flowing stream that runs along its center.  The air
+is cold and stale, there being no wind in the subterranean tunnels to blow it
+about or bring in fresh air.  The passage through the stone is long and
+unchanging, the only variation in its appearance caused by the rivulet of water
+that flows its length.  The tunnel continues both to the east and the west.
+~
+45 9 5
+D1
+~
+~
+0 -1 4566
+D3
+~
+~
+0 -1 4564
+S
+#4566
+A Fractured Stone Tunnel~
+   The echo of cascading water fills the stone tunnel here as a steady stream
+of it spills over the side of several large fractures in the floor.  The cloudy
+liquid flows from an unseen source somewhere down the western section of the
+tunnel.  The large cracks in the floor appear to be a geological phenomenon
+that occurred sometime after this underground passage was constructed.  Several
+of the fissures extend across the floor and into the side walls before
+traveling deeper into the earth.  The breaks in the stone are not very wide,
+the largest measuring a few tens of centimeters, and are easily stepped over.
+The tunnel turns to the north here and then a few meters later turns back to
+the east.
+~
+45 9 5
+D0
+~
+~
+0 -1 4567
+D3
+~
+~
+0 -1 4565
+S
+#4567
+A Dry Earthen Tunnel~
+   The tunnel is quite dry here, its walls, floor and ceiling composed of cold,
+smooth stone that still looks fairly fresh-cut.  The sound of water filtering
+through a drain comes from the south where several large fissures in the ground
+can just barely be made out near another curve in the tunnel.  The dry part of
+the passage continues to the east and out of sight, traveling in a direct line
+for some distance.
+~
+45 9 0
+D1
+~
+~
+0 -1 4568
+D2
+~
+~
+0 -1 4566
+S
+#4568
+A Dry Earthen Tunnel~
+   The low ceiling of the tunnel serves as an uncomfortable reminder of the
+several thousand tons of earth and rock that lie above.  The stone walls do
+little to reflect any light cast upon them, instead seeming to absorb it into
+shadow.  The faint sound of flowing water echoes in the distance somewhere out
+of sight to the west while to the east there is but eerie silence.
+~
+45 9 0
+D1
+~
+~
+0 -1 4569
+D3
+~
+~
+0 -1 4567
+S
+#4569
+Before a Massive Steel Door~
+   An immense door of pure steel occupies the entire eastern wall, designed to
+block further passage through this tunnel.  The door is crafted from a single
+slab of forged steel and is mounted to the north wall by a set of three massive
+hinges that hold it in place.  The door bears no other interesting or
+discernable features save for a single dwarven rune that has been etched into
+the center of it.  Just in front of the steel door lies another doorway set in
+the northern wall.  This door is much simpler and less sturdy, though it is
+still made from thick wood bound by iron bands.
+~
+45 9 0
+D0
+~
+door wooden metal broken~
+1 -1 4570
+D1
+~
+door massive steel~
+7 4515 6542
+D3
+~
+~
+0 -1 4568
+S
+#4570
+An Abandoned Guard Room~
+   The smell of rust and rotting leather is heavy in this room, the source of
+the odor immediately identifiable.  The ground is littered with old suits of
+half-decayed armor and bent and broken weapons that have dulled and lost their
+edge over time.  Motes of dust float about the room, making the air in here
+hazy and difficult to breath.  A large table lies upturned, its legs are all
+broken off, and three of them are missing entirely from the room.  More chunks
+of wood scattered about appear to have once made up a set of chairs and a
+swathe of torn fabric lies heaped in a corner, probably once part of an old
+sleeping cot.  The bones of three complete skeletons occupies the center of the
+room, one of which wears the armor of a dwarven guard.
+~
+45 13 0
+D2
+~
+door wooden metal broken~
+1 -1 4569
+E
+bones skeletons~
+The victims of a fierce battle lie piled together in death.  Two of the
+skeletons are smaller than the third which is obviously that of a dwarf.  The
+others appear to be the remains of goblins.
+~
+S
+#4599
+Kludgified Room~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+45 33280 0
+S
+#0
+$~

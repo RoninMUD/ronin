@@ -1,0 +1,138 @@
+#26100
+Odin~
+Odin, the God of Vikings~
+
+Odin, the God of Vikings, sits on his throne.
+~
+Odin, sitting on his throne, this one-eyed God, the God over vikings is
+prepearing himself for the final battle. His destiny is to be killed
+by the Fenris-Wolf, swallowing him at Ragnarok.
+~
+8 0 0 Y
+70 19 10 500d500+50000 1d1+1
+1 1
+6 8 1
+0 1073741823 1d1+1 0
+0 0 0 1073741823
+T
+.......Munin, Odin's raven, circles over Odin's head.~
+T
+.......Hugin, Odin's raven, circles over Odin's head.~
+T
+.......Odin is surrounded by a powerful black sphere!~
+K
+0 0 0 0 0 0
+#26110
+Berserker~
+A Berserker~
+A Berserker is looking for victims to slay.
+~
+A Berserker has arrived to fight against the gods, its not a pretty
+sight.
+~
+553664748 536870912 0 Y
+50 0 -1 50d50+3000 10d25+1
+333333 44444
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26111
+Fire Giant~
+A Fire Giant~
+A Fire Giant is looking for someone to crisp.
+~
+To lazy to write full desc, kill it dang-it!!
+~
+12 0 0 Y
+40 -3 -2 10d10+2500 12d4+4
+111111 44444
+8 8 1
+0 1040154624 10d10+2500 1
+1 1 3 109
+0 0 0 0
+K
+0 0 0 0 0 0
+#26112
+undead~
+An undead~
+An undead is looking for his leader, Surt.
+~
+The undead is looking for its leader, Surt.
+~
+553648268 67108866 0 Y
+40 -20 -9 10d10+400 50d50+1300
+1 10000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#26120
+fenris wolf~
+The Fenris Wolf~
+The Fenris Wolf bites a victim in two.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+536870926 268437504 0 Y
+60 -40 -6 13d13+8888 50d50+50
+1 1
+8 8 1
+0 5572 10d10+5000 1
+5 5 20 0
+0 0 1 0
+R
+1073741823
+T
+......The Fenris Wolf is tied down with a leash.~
+K
+0 26130 0 0 0 0
+#26121
+Surt~
+Surt~
+Surt, leader of the undead army is leading his army.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+172 276856832 0 Y
+60 -40 -5 10d10+8888 20d20+20
+15000 45454
+8 8 1
+0 0 1d1+1 0
+0 0 1 0
+K
+0 0 0 0 0 0
+#26150
+Valentine babe~
+valentine babe~
+A valentine babe is waiting for her date.
+~
+Wont you give me a kiss?
+~
+24 0 0 Y
+10 19 10 400d400+400 1d1+1
+1 1
+8 8 2
+0 24576 1d1+1 0
+0 0 0 1
+K
+0 0 0 0 0 0
+#26151
+valentine male date~
+A handsome male~
+A handsome man is awaiting his pickup.
+~
+Wont you give me a kiss?
+~
+8 0 0 Y
+10 19 10 400d400+400 1d1+1
+1 1
+8 8 1
+0 24576 1d1+1 0
+0 0 0 1
+K
+0 0 0 0 0 0
+#0
+$~

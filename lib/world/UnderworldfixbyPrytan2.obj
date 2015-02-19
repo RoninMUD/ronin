@@ -1,0 +1,76 @@
+#11142
+key silver~
+A silver key~
+A silver key lies here, glinting in the light.~
+~
+18 0 16385
+0 0 0 0
+3 10 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11143
+treasure pile~
+a huge treasure~
+A huge pile of coins lies here.~
+~
+20 32 1
+20000 0 0 0
+4 0 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11144
+stiletto~
+a stiletto~
+A shiny stiletto sticks out of the ground in front of you.~
+$r Stiletto sinks deep into $V.~
+5 2048 8193
+0 4 5 11
+6 100 300
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+#11145
+battle axe ax~
+a Huge Battle Axe~
+a Huge Battle Axe has been left here.~
+~
+5 2048 8193
+0 3 6 3
+15 10000 350
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#0
+$~

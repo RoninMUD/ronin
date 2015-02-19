@@ -1,0 +1,487 @@
+#6600
+Newbie Builder Base Camp~
+   Below the mountain side stretches a vast plains as far as you can see.
+The wind swirls and picks up around you, kicking dust and errant tree
+branches.  Many small tents are pitched in a tight circle forming the 
+base camp you are in.  In the center of the circle is a blazing firepit
+that burns day and night for the workers to gather around and discuss 
+how they want to create an area that will shape the newbies of tommorrow.
+This area is is empty and in need of a creative force.  As you look off to
+the north you see.. erm.. nothing.  To the east... um.. nothing there 
+either...
+~
+66 0 0
+S
+#6601
+The grand entrance to the RoninMUD Newbie Academy~
+  Welcome.  This is the RoninMUD Newbie Academy.  This Academy is designed
+to help new players learn the basic commands of the MUD. Follow the room
+descriptions and the directions of the instructors, and we hope you will
+come out of the Academy with valuable knowledge of Ronin. Know that
+you can type the 'HELP <topic>' command at any time for help. Enjoy
+yourself and have a great experience here at RoninMUD.
+~
+66 67141632 0
+D3
+You see the "Inventory" room.
+~
+~
+0 -1 6602
+S
+#6602
+Inventory~
+  Thank you for joining us here at RoninMud.  Your first lesson here will
+be your "Inventory".  If you type 'Inventory' (or 'i' for short) in your
+command line, you will see what your character is carrying. Typing 'get
+<object>' will pick something up, while 'drop <object>' drops it. Proceed
+North when you are done, to continue with your learning.
+~
+66 67141700 0
+D0
+You see the "Equipment" room.
+~
+~
+0 -1 6603
+D1
+You see the entrance to the Academy.
+~
+~
+0 -1 6601
+S
+#6603
+Equipment~
+  While you adventure through the world of RoninMud, the equipment you
+have to wear is very important.  Each piece of equipment (or gear) helps
+you out differently, with each different piece giving different statistics,
+or special affects. If you type 'equipment' ('eq' for short) in the command
+line, you will see thirteen slots in which you can wear pieces of equipment.
+Remember to GET everything here, and then continue North, young traveller.
+~
+66 67141700 0
+D0
+You see the "Wear and Remove" room.
+~
+~
+0 -1 6604
+D2
+You see the "Inventory" room.
+~
+~
+0 -1 6602
+S
+#6604
+Wear and Remove~
+  As you gain better equipment in RoninMud, you will want to know how to
+use this gear. 'Wear' and 'remove' (or 'rem' for short) are the commands
+to wear and remove equipment. To wear something, you type the following in
+your command line: 'wear <object> <location>', and to remove it, you type
+'remove <object>' (example: 'wear sleeves arms', 'remove sleeves'). Also,
+you do not have to type out the entire name of the piece of equipment to
+wear it - you can find a single keyword to specify each item. Once you know
+how to pick each item individually, it can ease how much typing you have to
+do. Take some time to practice wearing and removing the items you got in
+the last room, and find some easier keywords if you want. When you are
+ready, continue Northwards for more knowledge.
+~
+66 67141700 0
+D0
+You see the "Wield and Hold" room.
+~
+~
+0 -1 6605
+D2
+You see the "Equipment" room.
+~
+~
+0 -1 6603
+S
+#6605
+Wield and Hold~
+  There are many types of weapons and held items in RoninMud. Weapons
+increase your hitting ability and power, while held items can have 
+various affects, such as increasing your maximum mana, granting you
+more damage, or a special ability. To wield a weapon, type 'wield 
+<object>', and to hold an item, type 'hold <object>'. Once again, using
+keywords can help you wield or hold easier. Proceed North to continue
+your quest for knowledge.
+~
+66 67141700 0
+D0
+You see the "Directions" room.
+~
+~
+0 -1 6606
+D2
+You see the "Wear and Remove" room.
+~
+~
+0 -1 6604
+S
+#6606
+Directions~
+  Directions are an essential part of the MUD. They allow you to move
+from room to room, and gain access to the wide world of Ronin. There
+are six primary directions in which you can move: North, South, East,
+West, Up, and Down. You can get a list of obvious exits by using the
+'Look' command, while the 'Exits' command will also give potential exits,
+that might not be reachable by the standard move directions. Read room
+descriptions carefully, since some rooms don't have as obvious exits
+as this one does. Travel north to find out about some other room exit
+types, or put your newly acquired knowledge to use, and try moving in
+the other directions, and find out what is there.
+~
+66 67141700 0
+D0
+~
+door~
+1 -1 6612
+D1
+You see a room labeled "East".
+~
+~
+0 -1 6608
+D2
+You see a room labeled "South".
+~
+~
+0 -1 6607
+D3
+You see a room labeled "West".
+~
+~
+0 -1 6609
+D4
+You see a room labeled "Up".
+~
+~
+0 -1 6611
+D5
+You see a room labeled "Down".
+~
+~
+0 -1 6610
+S
+#6607
+South~
+  Excellent! Now go north and try the other directions.
+~
+66 67141700 0
+D0
+You see the "Directions" room.
+~
+~
+0 -1 6606
+S
+#6608
+East~
+  Good job! Now head back west, and try the other directions.
+~
+66 67141700 0
+D3
+You see the "Directions" room.
+~
+~
+0 -1 6606
+S
+#6609
+West~
+  Great work! Now head east, and try the other directions.
+~
+66 67141700 0
+D1
+You see the "Directions" room.
+~
+~
+0 -1 6606
+S
+#6610
+Down~
+  Splendid!  Now move up, and try the other directions.
+~
+66 67141700 0
+D4
+You see the "Directions" room.
+~
+~
+0 -1 6606
+S
+#6611
+Up~
+  Nice! Now head down, and try the other directions.
+~
+66 67141700 0
+D5
+You see the "Directions" room.
+~
+~
+0 -1 6606
+S
+#6612
+Room Exit Types~
+  These are similar to normal movement, except that you first need to
+figure out certain keywords, often hinted at in the room's description. 
+Typing things such as jump river, open door (the direction of door is 
+sometimes required in the case of multiple doors, ex: open door south),
+crawl hole, climb ladder, and move <object> (such as block, vines, etc.)
+are examples of some of the many different types of room exits. Try a
+few of them to get the hang of it, or you can continue north along your
+quest for knowledge.
+~
+66 67141700 0
+D0
+You see a room labeled "Combat Training Room".
+~
+~
+0 -1 6617
+D1
+You see a small river flowing off into the horizon.
+~
+river~
+10 -1 6613
+D2
+~
+door~
+1 -1 6606
+D3
+You see a doorway built into the rocks. It seems attached to the big block of stone.
+~
+block~
+8 -1 6615
+D4
+You see a rope ladder leading up into a fantastic looking tree house.
+~
+ladder~
+11 -1 6616
+D5
+You peer into a dark hole.
+~
+hole~
+9 -1 6614
+E
+ladder~
+The ladder has been nailed helter-skelter to this tree, but it looks solid enough.
+~
+E
+ladder~
+The ladder has been nailed helter-skelter on this tree, but it looks solid enough.
+~
+E
+block~
+You see a big block of stone that looks like it could be moved.
+~
+E
+river~
+A small river flows here, and it seems you can jump it to reach someplace.
+~
+E
+block ladder river door~
+invalid~
+E
+block~
+A large block covers the doorway to the west.  It looks like
+it can be moved.~
+E
+ladder~
+A knotted rope ladder is hanging from the short roof above. 
+It looks like you could climb it with very little effort.
+~
+E
+river~
+A smal river blocks your advance toward the east.  One could
+easily jump over the shallow end.
+~
+E
+river~
+A small river blocks your advance toward the east. One could
+easily jump over the shallow end.
+~
+S
+#6613
+Across the River~
+  Good job! Now type jump river again, and try the other exit types.
+~
+66 67141700 0
+D3
+A small river runs to the west.
+~
+river~
+10 -1 6612
+E
+river~
+The river you jumped over runs to your west.
+~
+S
+#6614
+Hole in the ground~
+  Nice work! Now crawl out and try the other exit types!
+~
+66 67141696 0
+D4
+~
+hole~
+9 -1 6612
+E
+hole~
+Gazing up and out of the hole you crawled into, you can see the Sun's rays.
+~
+S
+#6615
+Inside a Cave~
+  Keep up the good work! Now head back east, and try out the other exit types.
+~
+66 67141700 0
+D1
+You see a doorway built into the rocks. It seems attached to the big block of stone.
+~
+block~
+8 -1 6612
+E
+block~
+You see a big block of stone that looks like it could be moved.
+~
+S
+#6616
+The Newbie Tree House~
+  Gee whiz! This has got to be about the coolest tree house you've ever
+seen! Looking around, you notice an enormous sheet of sugar cookies
+on a table in the corner, and a lemonade fountain in the center of the
+room. Get the cookies and type 'eat cookie' if you're hungry. Type 'fill
+cup fountain' if you've got room in your drink container, and type 'drink
+cup' if you're thirsty. Climb the ladder back down when you feel you are
+ready to move on with your quest for knowledge.
+~
+66 67141700 0
+D5
+A bit of vertigo hits you, as you realize you have to climb down that ladder.
+~
+ladder~
+11 -1 6612
+E
+ladder~
+A hole in the floor has a rickety ladder hanging from it. 
+That must be how you exit from this cramped clubhouse!
+~
+E
+ladder~
+A hole in the floor has a rope ladder hanging from it.  That 
+must be how you exit from this cramped clubhouse!
+~
+E
+donos~
+Donos
+~
+S
+#6617
+Combat Training Room~
+  During your journey in RoninMUD, you will come across computer-
+controlled mobile monsters termed "mobs" for short. To fight any of
+these creatures you simply type 'kill <mob name>' and you will initiate
+combat. You can also do abbreviate 'kill' with simply 'k'. Note: be sure
+and look at the 'help flee' and 'help consider' commands before trying
+combat for the first time. Go ahead and use your new knowledge to
+practice on this training dummy, then proceed onward to the next room
+for an actual moving target.
+~
+66 67141636 0
+D0
+You see a room labeled "Fight Time!".
+~
+~
+0 -1 6618
+D2
+You see the "Room Exit Types" room.
+~
+~
+0 -1 6612
+S
+#6618
+Fight Time!~
+  You stand in an almost featureless room.  On the opposite side of
+the room stands a large, fierce-looking man blocking a massive ornate
+door. Take care of him and then try typing 'get all corpse' to loot his
+corpse and see if he left any goodies for you.
+~
+66 67141632 0
+D0
+You see a massive, ornate door just waiting to be used.
+~
+door~
+7 6623 6619
+D2
+You see the "Combat Training Room".
+~
+~
+0 -1 6617
+E
+door~
+An imposing door stands between you and the continuation of your learning.
+~
+E
+door~
+This imposing door stands between you and the continuation of your learning.
+~
+S
+#6619
+Graduation Room~
+  My, how kids grow up so fast these days! Congratulations, you have
+just completed the RoninMUD Newbie Training Course! You can feel
+your heart beat faster as you realize how close you are to the world
+of Ronin, and you see the last obstacle standing between you and it.
+Ghert, the Chief Instructor of the Academy, is at her desk, and seems
+to eagerly await the opportunity to test your new-found skills. Now, all
+you need to do is convince her that you are ready to graduate...
+~
+66 67141632 0
+D2
+You see the "Fight Time!" room.
+~
+door~
+7 6623 6618
+D5
+There seems to be a concealed passage under the desk, and you're 
+almost sure you can hear the sounds of a city from beyond it.
+~
+desk~
+8 -1 3001
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
+~
+E
+floor~
+Looking down at the floor where the desk is, you could swear it's covering some passage.
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could move it aside easily enough.
+~
+S
+#6699
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing.  A sign on the wall catches your attention.
+
+             /----------------/
+             [  IMPORTANT:    ]
+             [                ]
+             [  DON'T TOUCH   ]
+             [   ANYTHING!    ]
+             [                ]
+             [----------------]/
+~
+66 588 0
+S
+#0
+$~

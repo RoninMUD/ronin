@@ -1,0 +1,146 @@
+#9004~
+9001
+3020
+3021
+3023
+9006
+1.300000
+0.400000
+5
+6
+7
+0
+0
+%s Sorry, I don't have that weapon.~
+%s Sorry, you don't seem to have that...~
+%s I don't buy such an item, try some other shop.~
+%s Sorry, that's a too expensive weapon for me, try in Midgaard or Duur-halla.~
+%s Get some money if you wanna buy something...~
+%s Ok, I'll charge you %d coins for it.~
+%s Here you are, I'll give you %d coins for it.~
+2
+0
+9004
+0
+9011
+0
+28
+0
+0
+#9005~
+-1
+3042
+3086
+3076
+9002
+1.000000
+0.500000
+9
+0
+0
+0
+0
+%s Sorry, I don't have that armor.~
+%s Sorry, you don't seem to have that.~
+%s I don't buy such a item, try some other shop.~
+%s Sorry, that's a too expensive armor for me, try in Midgaard or Duur-halla.~
+%s Get some money if you like to buy something...~
+%s Ok, that'll be %d coins, please.~
+%s Here you are, I'll give you %d coins for it.~
+0
+0
+9005
+0
+9010
+0
+28
+0
+0
+#9006~
+-1
+3050
+3051
+9009
+9011
+1.050000
+0.150000
+2
+3
+4
+10
+0
+%s Too bad, I don't seem to have that item.~
+%s Sorry, I don't buy something you don't have.~
+%s Sorry that's not my part of business...~
+%s Sorry, that's a too expensive item for me, try in Midgaard or Duur-halla.~
+%s Get lost punk! You don't have that much money.~
+%s That'll be %d coins!~
+%s I'll give you about %d coins for it.~
+0
+0
+9006
+0
+9014
+0
+28
+0
+0
+#9007~
+9013
+9014
+9015
+9016
+9017
+1.500000
+0.400000
+1
+15
+16
+21
+8
+%s Sorry, I'm unfortunately out of that for the moment.~
+%s You don't seem to be a honest man, maybe I should call the guards?~
+%s I don't trade in that kind of objects.~
+%s Sorry, I'm out of cash, try in Midgaard, or give it to me. :-)~
+%s You seem to have been robbed if you thought you had that kind of money? ~
+%s That'll be %d coins, please...~
+%s I'll give you about %d coins for it, here you go...~
+0
+0
+9007
+0
+9013
+0
+28
+0
+0
+#9008~
+-1
+3102
+9018
+9019
+9020
+1.000000
+0.900000
+17
+19
+0
+0
+0
+%s It's very noisy in here, what did you say you wanted to buy?~
+%s You don't seem to be a honest man, maybe I should call the guards?~
+%s I don't trade in that kind of objects.~
+%s Sorry, I'm out of cash, try in Midgaard, or give it to me for free...:-)~
+%s Are you drunk or what ??? - NO CREDIT!~
+%s That'll be - say %d coins.~
+%s I'll give you about %d coins for it, here you go...~
+0
+0
+9008
+0
+9016
+0
+28
+0
+0
+$~

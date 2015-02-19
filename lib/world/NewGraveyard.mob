@@ -1,0 +1,160 @@
+#2501
+phantom~
+Phantom~
+A Phantom is floating in front of you.
+~
+You see a ghastly looking thing floating in the air.
+~
+10 0 -200 Y
+10 14 3 3d8+100 2d6+3
+500 12000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+#2502
+mummy~
+Mummy~
+A Mummy is standing here.
+~
+You see a pair of evil's eye looking at you.
+~
+10 0 -200 Y
+9 14 3 3d8+100 2d6+1
+500 12000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+#2503
+skeleton~
+Skeleton~
+A Skeleton is here waiting for a fight.
+~
+You see a bony framework of a body staring at you, waiting for a fight.
+~
+42 10 -600 Y
+9 14 3 3d8+100 2d6+2
+500 12000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+#2504
+ghost~
+Ghost~
+A ghost is floating here.
+~
+You notice an evil look in its eyes, get away from it.
+~
+42 0 -600 Y
+9 14 3 3d8+100 2d6+2
+500 12000
+8 8 0
+95 0 0d0+0 0
+0 0 0 0
+#2505
+owl~
+horned-owl~
+A Horned-Owl is flying in front of you.
+~
+A night-flying bird. OOOWWWWOOOOO
+~
+10 0 100 Y
+5 20 8 5d4+10 2d4+1
+100 2000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+#2506
+glowworm~
+giant glowworm~
+A Giant Glowworm is flying in front of you.
+~
+It looks like a glowing lantern floating in the dark.
+~
+42 0 -400 Y
+5 20 8 5d4+10 2d4+1
+100 2000
+8 8 0
+98 0 0d0+0 0
+0 0 0 0
+#2507
+ghoul~
+Ghoul~
+A Ghoul is standing here.
+~
+It will robe your grave and eat your corpse.
+~
+42 0 -800 Y
+11 14 3 3d8+130 2d6+4
+700 16000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+#2508
+dog~
+Evil dog~
+An Evil dog is standing here.
+~
+You notice a very evil look in its eyes, and its teeth are so sharp that it maske u shiver.
+~
+42 33554442 -1000 Y
+15 5 1 2d8+400 2d9+2
+1500 21000
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+#2509
+pyrver~
+Pyrver~
+Pyrver is standing beside his bed.
+~
+He is a man without a soul and he is thinking of something very hard.
+He says "I am warning you, don't go into my lab".
+~
+10 0 50 Y
+23 2 3 3d8+1400 5d4+2
+2000 60000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#2510
+rabbit~
+cute rabbit~
+A cute rabbit is standing here.
+~
+Watch out, it can drive a nail into your coffin.
+~
+42 136 -999 Y
+30 -6 3 1d10+3000 1d15+65
+30000 450000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+#2511
+guard~
+evil guard~
+A Guard of the Evil Palace is standing here, protecting his city.
+~
+A very strong and tough guard is standing here to protect his palace.
+~
+26 8 -400 Y
+25 -1 4 4d8+1500 10d2+5
+5000 60000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+#2512
+caretaker~
+caretaker~
+A caretaker is sitting here.
+~
+Once upon a time, he was a very brave fighter, but now
+you can notice that he is out of wits.
+~
+154 0 300 Y
+18 4 4 3d8+950 6d2+6
+4000 30000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+#0
+$~

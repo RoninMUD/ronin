@@ -1,0 +1,1204 @@
+#9400
+At the foot of the mountain~
+  This is a well-traveled rocky path which gradually ascends the mountain
+ahead of you.  The top is barely visible as it is shrouded by mist.  Every
+now and then lightning flashes across the sky and a great thunder booms
+out accompanied by an ominous rumble from the bowels of the earth.
+~
+94 0 0
+D1
+~
+~
+0 -1 9401
+D3
+~
+~
+0 -1 2900
+S
+#9401
+A Mountain Path~
+  You are on a mountain path which ascends a steep mountainside.
+The trail curves around the mountain so that you cannot really see
+what lies ahead.  You do sense great power though coming from the area 
+behind the mountain. To your west is the Second Turning Point.
+~
+94 0 5
+D0
+~
+~
+0 -1 7301
+D3
+~
+~
+0 -1 9400
+D4
+~
+~
+0 -1 9402
+S
+#9402
+A Mountain Path~
+	You are on a rocky mountain path leading up and around a step
+mountainside.  You sense a glow from the area beyond the mountain, which
+you cannot see yet.
+~
+94 0 5
+D4
+~
+~
+0 -1 9403
+D5
+~
+~
+0 -1 9401
+S
+#9403
+Mountainside Tombs~
+	There are a few stone heaps here and there, the tombs of those
+who did not last the arduous journey up the mountain.  Curiously you 
+notice a few uncovered bodies which don't seem to have died of ex-
+haustion.  The path curves east around the mountain.
+~
+94 0 5
+D4
+~
+~
+0 -1 9404
+D5
+~
+~
+0 -1 9402
+E
+heaps stones tombs~
+You are sure glad the YOU aren't under one of those piles!~
+E
+bodies body dead~
+They look as if their necks have been broken and their flesh, chewed.~
+S
+#9404
+A Blind Curve on the Mountain Path.~
+	This looks like a normal mountain path, but it is NOT!  This
+section of the path is lived in by a huge (and of course, man-eating)
+Cyclops.  The path makes its final ascent to an overlook.
+~
+94 0 5
+D4
+~
+~
+0 -1 9405
+D5
+~
+~
+0 -1 9403
+S
+#9405
+Vista~
+	This is a stunning vista overlooking a canyon.  There is a sign
+here that says : "BEHOLD -- ELEMENTAL CANYON".
+	Fire leaps up from firepits in the western part of the canyon.
+The sky looks funny, and the air seems hazy to the northwest.  Elec-
+tricity sparks intermittently in the northeast.  To the east you see a
+strong, magic-looking river flowing through the canyon.  Also to the
+east you spy a cave entrance leading into the canyon wall.  The path
+descends to the north to another overlook.
+Out of the corner of your eye you notice a hint. . . 
+~
+94 0 5
+D0
+~
+~
+0 -1 9406
+D5
+~
+~
+0 -1 9404
+E
+hint~
+The hint reads: "Be sure to 'consider' everything before you kill it.
+there have been many changes and new stuff added."~
+S
+#9406
+The Overlook~
+	You see various elemental servants wandering around the canyon.
+The noise of humming coming from the canyon gets louder.  The path make
+a steep descent into the canyon here.
+~
+94 4 5
+D2
+~
+~
+0 -1 9405
+D5
+~
+~
+0 -1 9407
+S
+#9407
+Entrance to The Elemental Canyon~
+  You are awed by the sounds and sights of great powers at works
+here.  Elemental servants bustle back and forth doing the bidding of
+the elemental rulers.  You see some sort of cross roads to the north,
+and you can climb up to the overlook here.
+~
+94 0 3
+D0
+~
+~
+0 -1 9409
+D4
+~
+~
+0 -1 9406
+S
+#9408
+The Floor of the Canyon~
+  Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on.  The canyon continues north and east.
+~
+94 0 3
+D0
+~
+~
+0 -1 9411
+D1
+~
+~
+0 -1 9409
+S
+#9409
+Elemental Gateway~
+  To the west a path dips and winds among some flowing firepits.
+To the northeast a path goes toward the river.  Beyond that towards the
+northeast and northwest are rocky outcroppings which rise up from the 
+canyon floor.  To the east there is a cave mouth which leads into the 
+canyon wall.  And to the south the path leads up, away, and out of the 
+canyon.  Various pure and cross-breeds of elemental forms wander the 
+canyon floor which extends in a wide swath northwards.
+~
+94 0 3
+D0
+~
+~
+0 -1 9412
+D1
+~
+~
+0 -1 9410
+D2
+~
+~
+0 -1 9407
+D3
+~
+~
+0 -1 9408
+S
+#9410
+The Floor of the Canyon~
+Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on about.  
+The canyon floor extends north and west.  There is a cave mouth into the canyon 
+wall to the east.
+~
+94 0 3
+D0
+~
+~
+0 -1 9413
+D1
+~
+~
+0 -1 9420
+D3
+~
+~
+0 -1 9409
+S
+#9411
+The Floor of the Canyon~
+  Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on.  The canyon continues north, east and south.
+~
+94 0 3
+D0
+~
+~
+0 -1 9414
+D1
+~
+~
+0 -1 9412
+D2
+~
+~
+0 -1 9408
+S
+#9412
+The Floor of the Canyon~
+Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on. The canyon floor extends in all directions.
+~
+94 0 3
+D0
+~
+~
+0 -1 9415
+D1
+~
+~
+0 -1 9413
+D2
+~
+~
+0 -1 9409
+D3
+~
+~
+0 -1 9411
+S
+#9413
+The Floor of the Canyon~
+Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on about.
+The canyon floor extends north, south, and west.  A Path follows a
+stream to the east.
+~
+94 0 3
+D0
+~
+~
+0 -1 9416
+D1
+~
+~
+0 -1 9428
+D2
+~
+~
+0 -1 9410
+D3
+~
+~
+0 -1 9412
+S
+#9414
+The Floor of the Canyon~
+  Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on.  The canyon floor extends north, east, and south.  To the
+west a garden is on fire.
+~
+94 0 3
+D0
+~
+~
+0 -1 9417
+D1
+~
+~
+0 -1 9415
+D2
+~
+~
+0 -1 9411
+D3
+~
+~
+0 -1 9437
+S
+#9415
+The Floor of the Canyon~
+Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on. The canyon floor extends in all directions.
+~
+94 0 3
+D0
+~
+~
+0 -1 9418
+D1
+~
+~
+0 -1 9416
+D2
+~
+~
+0 -1 9412
+D3
+~
+~
+0 -1 9414
+S
+#9416
+The Floor of the Canyon~
+Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always an incessant buzz of
+things going on about.  The Canyon floor extends north, south and west.
+~
+94 0 3
+D0
+~
+~
+0 -1 9419
+D2
+~
+~
+0 -1 9413
+D3
+~
+~
+0 -1 9415
+S
+#9417
+The Floor of the Canyon~
+  Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on.  The canyon floor extends east and south.  You can climb
+a rise in the canyon floor to the north.
+~
+94 0 3
+D0
+~
+~
+0 -1 9453
+D1
+~
+~
+0 -1 9418
+D2
+~
+~
+0 -1 9414
+S
+#9418
+The Floor of the Canyon~
+  Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always a incessant buzz of
+things going on. The canyon floor extends east, south and west.
+~
+94 0 3
+D1
+~
+~
+0 -1 9419
+D2
+~
+~
+0 -1 9415
+D3
+~
+~
+0 -1 9417
+S
+#9419
+The Floor of the Canyon~
+  Various elemental forms wander the floor of the canyon.  Some seem to be
+going about their business, while others seem to have no business at
+all.  In general, it is calm, yet there is always an incessant buzz of
+things going on. The canyon floor extends south and west.  You can climb a
+rise in the canyon floor to the north.
+~
+94 0 3
+D0
+~
+~
+0 -1 9454
+D2
+~
+~
+0 -1 9416
+D3
+~
+~
+0 -1 9418
+S
+#9420
+Dark Cave~
+	You notice a path winding east among some huge boulders.  You 
+feel a powerful source of energy from that direction.
+~
+94 9 3
+D1
+~
+~
+0 -1 9421
+D3
+~
+~
+0 -1 9410
+S
+#9421
+Darker Caves~
+	You can barely see your way even with a light source.  The 
+rocks of the cave are even darker than the darkness.  You hear a
+powerful humming all around you.  Cave paths go south and east
+roughly, its hard to tell exactly when you can't see where you are
+going.
+~
+94 9 3
+D1
+~
+~
+0 -1 9422
+D2
+~
+~
+0 -1 9423
+D3
+~
+~
+0 -1 9420
+S
+#9422
+Darker Caves~
+	You can barely see your way even with a light source.  The 
+rocks of the cave are even darker than the darkness.  You hear a
+powerful humming all around you.  Cave paths go south and west
+roughly, its hard to tell exactly when you can't see where you are
+going.
+~
+94 9 3
+D2
+~
+~
+0 -1 9424
+D3
+~
+~
+0 -1 9421
+S
+#9423
+Darker Caves~
+	You can barely see your way even with a light source.  The 
+rocks of the cave are even darker than the darkness.  You hear a
+powerful humming all around you.  Cave paths go north, south and east
+roughly, its hard to tell exactly when you can't see where you are
+going.
+~
+94 9 3
+D0
+~
+~
+0 -1 9421
+D1
+~
+~
+0 -1 9424
+D2
+~
+~
+0 -1 9425
+S
+#9424
+Darker Caves~
+	You can barely see your way even with a light source.  The 
+rocks of the cave are even darker than the darkness.  You hear a
+powerful humming all around you.  Cave paths go north, south and west
+roughly, its hard to tell exactly when you can't see where you are
+going.
+~
+94 9 3
+D0
+~
+~
+0 -1 9422
+D2
+~
+~
+0 -1 9426
+D3
+~
+~
+0 -1 9423
+S
+#9425
+Darkest Caves~
+	Your light doesn't even seem to work here.  Even magical
+light sources seem only to illuminate about a foot ahead of you.
+You suddenly realize that the path has descended quite a bit but you 
+didn't notice before because of the darkness.  You sense a great presence
+off to the east a ways.
+~
+94 9 3
+D0
+~
+~
+0 -1 9423
+D1
+~
+~
+0 -1 9426
+S
+#9426
+Darkest Caves~
+	Your light doesn't even seem to work here.  Even magical
+light sources seem only to illuminate about a foot ahead of you.
+You suddenly realize that the path has descended quite a bit but you 
+didn't notice before because of the darkness.  You sense a great presence
+directly to the east.
+~
+94 9 3
+D0
+~
+~
+0 -1 9424
+D1
+~
+~
+0 -1 9427
+D3
+~
+~
+0 -1 9425
+S
+#9427
+Earth Chamber~
+	This is the abode of the Earth Ruler.  He decides about earth-
+quakes, landslides, and avalanches.  The Earth Ruler sits upon a huge
+marble throne carved into the wall.
+~
+94 9 3
+D3
+~
+~
+0 -1 9426
+E
+marble throne~
+The ruler notices your stare, and doesn't like it one bit!  The whole
+earth seems to shake with his emotion.
+~
+S
+#9428
+By the River~
+	The water in the river seems to bubble and froth with magic.
+though it splashes playfully on you, it does not seem wet.  The path
+leads north closer to the water. To the west you see a T-intersection.
+~
+94 0 3
+D0
+~
+~
+0 -1 9429
+D3
+~
+~
+0 -1 9413
+S
+#9429
+In the River~
+	To continue you had to walk right in the river.  Though you walk
+along in water up to your knees, you do not seem to get wet.  A bay
+stretches out to the north and the river goes south.
+~
+94 0 6
+D0
+~
+~
+0 -1 9430
+D2
+~
+~
+0 -1 9428
+S
+#9430
+Elemental Bay~
+	The water is crystal clear here and you can see the bottom of
+the bay 30 feet below you.  Then you realize you are walking on the 
+water itself.  Truly magical water indeed.  Though you splash through
+the bay you do not get wet.
+The bay extends north and east from here.  There is also a river which
+runs south from here.
+~
+94 0 6
+D0
+~
+~
+0 -1 9433
+D1
+~
+~
+0 -1 9431
+D2
+~
+~
+0 -1 9429
+S
+#9431
+Elemental Bay~
+	The water is crystal clear here and you can see the bottom of
+the bay 30 feet below you.  Then you realize you are walking on the 
+water itself.  Truly magical water indeed.  Though you splash through
+the bay you do not get wet.
+The bay extends north, east and west from here.
+~
+94 0 6
+D0
+~
+~
+0 -1 9434
+D1
+~
+~
+0 -1 9432
+D3
+~
+~
+0 -1 9430
+S
+#9432
+Elemental Bay~
+	The water is crystal clear here and you can see the bottom of
+the bay 30 feet below you.  Then you realize you are walking on the 
+water itself.  Truly magical water indeed.  Though you splash through
+the bay you do not get wet.
+From here, the bay continues north and west.
+~
+94 0 6
+D0
+~
+~
+0 -1 9435
+D3
+~
+~
+0 -1 9431
+S
+#9433
+Elemental Bay~
+	The water is crystal clear here and you can see the bottom of
+the bay 30 feet below you.  Then you realize you are walking on the 
+water itself.  Truly magical water indeed.  Though you splash through
+the bay you do not get wet.
+Far to the east the bay stretches out.  Also you think you see a river 
+exiting the bay to the south a ways.
+~
+94 0 6
+D1
+~
+~
+0 -1 9434
+D2
+~
+~
+0 -1 9430
+S
+#9434
+Elemental Bay~
+	The water is crystal clear here and you can see the bottom of
+the bay 30 feet below you.  Then you realize you are walking on the 
+water itself.  Truly magical water indeed.  Though you splash through
+the bay you do not get wet.
+You can walk in the bay east, south, or west.
+~
+94 0 6
+D1
+~
+~
+0 -1 9435
+D2
+~
+~
+0 -1 9431
+D3
+~
+~
+0 -1 9433
+S
+#9435
+Elemental Bay~
+	The water is crystal clear here and you can see the bottom of
+the bay 30 feet below you.  Then you realize you are walking on the 
+water itself.  Truly magical water indeed.  Though you splash through
+the bay you do not get wet.
+Below you is some sort of chamber.  You sense that if you were to
+plunge down there, you would somehow be able to breath normally.
+The bay also extends south and west.
+~
+94 0 6
+D2
+~
+~
+0 -1 9432
+D3
+~
+~
+0 -1 9434
+D5
+~
+~
+0 -1 9436
+S
+#9436
+Water Chamber~
+	This chamber was magically created here on the floor of the bay
+It looks like its been here for a long, long time.  Though you are
+"under water" there is no difficulty breathing normally, and oddly 
+you do not feel the pressure of the water above you.
+~
+94 8 6
+D4
+~
+~
+0 -1 9435
+S
+#9437
+A Fiery Pathway~
+	You tread carefully along a path which dips and turns among 
+geysers of fire. Miniature volcanoes spew lava in rivers.  The fire 
+is hot but not altogether dangerous.  The path extends east and
+south.
+~
+94 0 5
+D1
+~
+~
+0 -1 9414
+D2
+~
+~
+0 -1 9438
+S
+#9438
+A Fiery Pathway~
+	You tread carefully along a path which dips and turns among 
+pits of fire and beds of coals.  A garden to the west glows with an
+everlasting fire.
+~
+94 0 5
+D0
+~
+~
+0 -1 9437
+D3
+~
+~
+0 -1 9442
+S
+#9439
+The Burning Gardens~
+	Everywhere around you the landscape is afire; the rocks, the
+shrubs and even the air seems to be aflame.  Curiously, the magical
+fire does not seem to consume its hosts.  The gardens continue north,
+south, and west.  A path leads east among some fire pits.
+~
+94 0 5
+D0
+~
+~
+0 -1 9441
+D1
+~
+~
+0 -1 9440
+S
+#9440
+The Burning Gardens~
+	Everywhere around you the landscape is afire; the rocks, the
+shrubs and even the air seems to be aflame.  Curiously, the magical
+fire does not seem to consume its hosts.  The gardens continue north,
+south, and west.  A path leads east among some fire pits.
+~
+94 0 5
+D0
+~
+~
+0 -1 9442
+D3
+~
+~
+0 -1 9439
+S
+#9441
+The Burning Gardens~
+	Everywhere around you the landscape is afire; the rocks, the
+shrubs and even the air seems to be aflame.  Curiously, the magical
+fire does not seem to consume its hosts.  The gardens continue north,
+south, and west.  A path leads east among some fire pits.
+~
+94 0 5
+D0
+~
+~
+0 -1 9443
+D1
+~
+~
+0 -1 9442
+D2
+~
+~
+0 -1 9439
+D3
+~
+~
+0 -1 9445
+S
+#9442
+The Burning Gardens~
+	Everywhere around you the landscape is afire; the rocks, the
+shrubs and even the air seems to be aflame.  Curiously, the magical
+fire does not seem to consume its hosts.  The gardens continue north,
+south, and west.  A path leads east among some fire pits.
+~
+94 0 5
+D0
+~
+~
+0 -1 9444
+D1
+~
+~
+0 -1 9438
+D2
+~
+~
+0 -1 9440
+D3
+~
+~
+0 -1 9441
+S
+#9443
+The Burning Gardens~
+	Everywhere around you the landscape is afire; the rocks, the
+shrubs and even the air seems to be aflame.  Curiously, the magical
+fire does not seem to consume its hosts.  The gardens continue north,
+south, and west.  A path leads east among some fire pits.
+~
+94 0 5
+D1
+~
+~
+0 -1 9444
+D2
+~
+~
+0 -1 9441
+S
+#9444
+The Burning Gardens~
+	Everywhere around you the landscape is afire; the rocks, the
+shrubs and even the air seems to be aflame.  Curiously, the magical
+fire does not seem to consume its hosts.  The gardens continue north,
+south, and west.  A path leads east among some fire pits.
+~
+94 0 5
+D2
+~
+~
+0 -1 9442
+D3
+~
+~
+0 -1 9443
+S
+#9445
+The Fire Chamber~
+	The fire ruler sits upon a throne made of blue flame.  Little
+flickers of flame dance to and fro for the entertainment of the ruler.
+~
+94 0 3
+D1
+~
+~
+0 -1 9441
+S
+#9446
+Electric Pathway~
+	The pathway glows and hums because of the electricity pulsing
+through it.  It seems almost soothing to your weary feet.  To the north
+there is a sunken in area. a path leads east also.
+~
+94 0 3
+D0
+~
+~
+0 -1 9448
+D1
+~
+~
+0 -1 9453
+S
+#9447
+The Electric Playground~
+Though there is a seemingly carefree atmosphere here, you sense that
+something much more important takes place near by.
+The electric playground extends north and east.
+~
+94 0 4
+D0
+~
+~
+0 -1 9449
+D1
+~
+~
+0 -1 9448
+S
+#9448
+The Electric Playground~
+Though there is a seemingly carefree atmosphere here, you sense that
+something much more important takes place near by.
+There is an electric path heading away south.  The playground
+extends north and west.
+~
+94 0 4
+D0
+~
+~
+0 -1 9450
+D2
+~
+~
+0 -1 9446
+D3
+~
+~
+0 -1 9447
+S
+#9449
+The Electric Playground~
+Though there is a seemingly carefree atmosphere here, you sense that
+something much more important takes place near by.
+The playground continues south and east.
+~
+94 0 4
+D1
+~
+~
+0 -1 9450
+D2
+~
+~
+0 -1 9447
+S
+#9450
+The Electric Playground~
+	Though there is a seemingly carefree atmosphere here, you sense that
+something much more important takes place near by.
+The playground is south and west.  Something more important catches
+your eye to the east.
+~
+94 0 4
+D1
+~
+~
+0 -1 9451
+D2
+~
+~
+0 -1 9448
+D3
+~
+~
+0 -1 9449
+S
+#9451
+Lightning Causeway~
+Up a set of stairs carved into the hill you see periodical flashes
+of lightning.  A continuous humming noise also comes from that direction.
+To the west it the electric playground.
+~
+94 0 4
+D3
+~
+~
+0 -1 9450
+D4
+~
+~
+0 -1 9452
+S
+#9452
+Lightning Chamber~
+	There is some sort of control panel here. Apparently the 
+Lightning Ruler observes and controls electric forces from here.
+A set of steps carved into the hill lead down to a causeway.
+~
+94 8 6
+D5
+~
+~
+0 -1 9451
+S
+#9453
+Mesa West~
+	An electric path starts to the west.  The mesa continues to the
+east.  Or you can climb down to the canyon floor to the south.
+~
+94 0 4
+D1
+~
+~
+0 -1 9454
+D2
+~
+~
+0 -1 9417
+D3
+~
+~
+0 -1 9446
+S
+#9454
+Mesa East~
+	An path starts to the north.  The mesa continues to the west.
+Or you can climb down to the canyon floor to the south.
+~
+94 0 4
+D0
+~
+~
+0 -1 9455
+D2
+~
+~
+0 -1 9419
+D3
+~
+~
+0 -1 9453
+S
+#9455
+Floating in Air~
+	Last you knew you were walking on the mesa.  The abruptly the
+path dropped from beneath your feet much to quick for you to recover.
+Instead of plunging to your death, you seemingly miss the ground and
+begin walking on air. 
+The space to the north and east seems just thin air, but you can
+walk there.  The pathway you came from is to the south.
+~
+94 0 4
+D0
+~
+~
+0 -1 9457
+D1
+~
+~
+0 -1 9456
+D2
+~
+~
+0 -1 9454
+S
+#9456
+Floating in Air~
+	You look down and see the ground 100 feet below you.  The wind
+whispering in your ear seems to reassure you that this is fine.  To the
+north a ways you spy a portal of sorts.  To the west is more thin air.
+~
+94 0 4
+D0
+~
+~
+0 -1 9458
+D3
+~
+~
+0 -1 9455
+S
+#9457
+Floating in Air~
+	You look down and see the ground 100 feet below you.  The wind
+whispering in your ear seems to reassure you that this is fine.  To the
+east a ways you spy a portal of sorts.  To the south is more thin air.
+~
+94 0 4
+D1
+~
+~
+0 -1 9458
+D2
+~
+~
+0 -1 9455
+S
+#9458
+Floating in Air~
+  You look down and see the ground a hundred feet below you.  The wind
+whispering in your ear seems to reassure you that this is fine. There is
+a portal hanging in midair here to the east.  The only other obvious way
+you can leave is back to the south. 
+~
+94 0 4
+D1
+~
+~
+0 -1 9459
+D2
+~
+~
+0 -1 9455
+E
+portal~
+Through the portal you see a tunnel.
+~
+S
+#9459
+Windy Tunnel~
+	A tunnel leads east.  To the west you can enter a portal. The
+wind in this tunnel is quite fierce, it seems as if its forced.  
+~
+94 0 4
+D1
+~
+~
+0 -1 9460
+D3
+~
+~
+0 -1 9458
+E
+portal~
+Through the portal you see nothing but sky.
+~
+S
+#9460
+Air Chamber~
+	Tiny tornadoes come and go and dance along the ground here.  At
+the back of the chamber you notice a huge throne made of swirling
+clouds.  A tunnel leads west.
+~
+94 8 6
+D3
+~
+~
+0 -1 9459
+E
+throne clouds~
+The cloud throne appears solid to sit on, I wouldn't try it if I were
+you!~
+S
+#9499
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+94 576 0
+S
+#0
+$~

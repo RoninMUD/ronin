@@ -1,0 +1,125 @@
+#1601
+parrot~
+A parrot~
+A parrot is here talking to itself.
+~
+A colorful looking parrot is perched on the branch in front of you.  It
+doesn't look like much but look out for those razor-sharp claws!
+~
+14 32776 0 Y
+25 -3 0 50d10+500 4d6+5
+0 100000
+8 8 0
+83 0 0d0+0 0
+0 0 0 0
+K
+20000 0 0 0 0 0
+#1602
+turtle giant sea~
+A giant sea turtle~
+A giant sea turtle is here laying her eggs in the sand.
+~
+You have never seen anything like it before --
+this turtle must be a hundred years old.  The turtle's shell is dull,
+and covered in barnicles.  You are lucky that the turtle is old, or
+you would have a huge battle ahead of you.
+~
+16462 32904 0 Y
+30 -6 0 10d200+1000 10d5+100
+0 58356
+8 8 2
+80 0 0d0+0 0
+0 0 0 0
+K
+1000 0 0 0 0 0
+#1603
+monkey spider~
+A spider monkey~
+A small spider monkey is here hanging from a tree.
+~
+The monkey is very small and agile.  Don't would not take its size for
+granted, though. Its claws are very sharp, and could make quick work of your
+pretty little face.
+~
+42 32776 0 Y
+30 2 0 10d10+90 3d10+4
+0 6000
+8 8 0
+88 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1604
+chimp chmipanzee~
+A large chimpanzee~
+A large chimpanzee is standing here guarding passage downward.
+~
+The chimpanzee is larger than other chimpanzee you have ever seen.  It 
+appears to be almost human.  Its arms are huge, and it is at least a foot
+taller than you.  You have your work cut out for you if you want to see 
+what it is protecting.
+~
+42 32776 0 Y
+30 -6 0 5d4+1430 10d6+3
+0 85100
+8 8 0
+88 0 0d0+0 0
+0 0 0 0
+K
+10000 0 0 0 0 0
+#1605
+ape giant~
+The giant ape~
+The giant ape stands before you forbidding entrance to the temple.
+~
+This ape is huge!  What are they feeding these guys?  Lets hope
+its a vegeterian diet, or you could find yourself ape food.  Wait a minute,
+what are you scared of, you have killed larger monsters in your sleep.  I
+still would not count your eggs before they hatch.  The ape has a strange  
+look in his eye.  He must know something you don't.
+~
+16490 65536 0 Y
+40 3 0 1d12+1060 5d7+2
+0 58000
+8 8 0
+88 0 0d0+0 0
+0 0 0 0
+K
+350 1 0 0 0 0
+#1606
+monk~
+A monk~
+An old monk is here practicing the monkey style of kung-fu.
+~
+The monk is getting up in years, but his mastery of this lethal
+form of kung-fu is unquestionable.  Lets hope that in his age he
+has lost a step or two.
+~
+147464 34824 0 Y
+36 -7 0 5d20+4000 15d3+10
+10680 372000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#1607
+priest high~
+The high priest~
+The high priest stands before you practicing kung-fu.
+~
+The priest is an old man.  He is very small, and appears
+to be blind in one eye.  Surely an experienced fighter like yourself
+is a match for a feeble old man like this -- or are you in for the
+surprise of your life.
+~
+16394 34952 0 Y
+30 -10 0 2d200+2400 10d10+60
+1000 180000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 3009 0 0 0 0
+#0
+$~

@@ -1,0 +1,177 @@
+#4100
+evil warlock orc orcish mage~
+The orcish warlock~
+A short orcish mage experiments with his spells here.
+~
+   This small but dangerous little orc glares at you in pure 
+contempt. Looks like his magic might be powerful.  Perhaps
+its a good idea to leave before he hurts you.
+~
+47 268435584 -100 Y
+20 8 2 3d20+400 5d7+20
+1500 17000
+8 8 1
+96 0 0d0+0 0
+0 0 0 0
+#4101
+troll old dirty~
+A dirty old troll~
+A fat and lazy troll wanders about here.
+~
+As you stare into the trolls eyes he flashes you a big grin.  Looks like
+lunch time has finally come for him!
+~
+46 0 -800 Y
+18 8 1 5d50+600 2d22+15
+20000 80000
+8 8 1
+75 0 0d0+0 0
+0 0 0 0
+#4102
+snake guardian black lizard~
+A guardian snake~
+A black snake is coiled here in the dirt.
+~
+   A snake sits here in the dirt, seemingly unmoved by its
+magical sorroundings.  The snake is rather large, and has
+long fangs.  Perhaps you should beware of this snake.
+~
+47 0 -700 Y
+20 8 5 2d30+400 5d6+10
+0 30000
+8 8 1
+98 0 0d0+0 0
+0 0 0 0
+#4103
+thief~
+the Thief~
+A thief hides here in the shadows.
+~
+   You see a sneaky little man standing here grinning at you.
+He seems to be eyeing your purse.  Perhaps you should stay
+away from this man, he might do something you don't want him
+to do.
+~
+77 524288 100 Y
+8 13 3 3d33+450 4d9+25
+10000 65000
+8 8 1
+3 0 0d0+0 0
+0 0 0 0
+#4104
+man old afraid~
+An old man~
+An old man cowers in the shadows here.
+~
+An old man is here cowering in the shadows.  He fears you being here.  Maybe
+you should just leave this poor old soul alone?
+~
+10 0 0 Y
+10 19 1 2d22+100 5d7+32
+1000 150000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+#4105
+centipede brown dirty bug~
+A brown centipede~
+A harmless looking centipede squirms in the soft ground.
+~
+Well it doesn't seem to pay any attention towards you.
+~
+42 0 300 Y
+6 15 4 10d4+50 4d6+5
+0 15000
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+#4106
+warrior lost man war~
+the Warrior~
+A lost warrior wanders aimlessly through the caves.
+~
+   A hard looking warrior stands in front of you.  He has long
+lost his mind, and now wanders these mines looking for someone
+to kill.  His face is contorted into a look of severe mental
+anguish.
+~
+108 268697600 -300 Y
+17 11 3 3d40+400 9d4+20
+1000 50000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+#4107
+kobold dark one demon~
+A kobold~
+A Kobold is here trying to practice her magic.
+~
+   This Kobold looks as if she has weathered a thousand storms.  Her face
+is withered and frail.  A film of slime seems to cover her entire body. 
+What is left of her eyes seem to have sank back into her head.  She 
+seems harmless enough, but you do sense a powerful magic.
+~
+108 268435456 -100 Y
+19 14 4 5d10+25 1d10+0
+20 3000
+8 8 2
+96 0 0d0+0 0
+0 0 0 0
+#4108
+mage orc arch orcish wizard~
+The Orcish Archmage~
+The Orcish Archmage is here anticipating your arrival.
+~
+   A huge orcish mage stands before you.  He looks up at you and
+his eyes glow an eerie red.  He utters a strange mantra, then 
+grins evilly.  He is definatly NOT someone to mess with.  Run,
+if you still can.
+~
+537395210 268435584 0 Y
+31 2 -5 6d9+900 2d22+22
+50000 420000
+9 9 1
+96 0 0d0+0 2
+1 2 15 136
+1 2 15 38
+0 0 0 0
+#4109
+nim orc orcish statue~
+The Statue of Nim~
+The Ancient Statue of the Orcish Ruler Nim stands here.
+~
+A huge statue is here before you.  It is the great Orc, Nim.
+He is one of the orcs most powerful leaders.  This statue is
+controlled by magic, you should be careful around it, because
+if Nim's magic is involved, it is definitely dangerous.
+~
+16490 268765184 -1000 Y
+31 2 0 50d50+5000 5d7+15
+200000 418000
+9 9 1
+96 0 0d0+0 2
+4 1 25 0
+1 2 10 37
+0 0 0 0
+#4110
+morian protector guard guardian~
+The Morian Protector~
+The Morian Protector is standing here.
+~
+   A tall, well built man stands here in the onyx cave.  His skin
+is a very pale white colour and his eyes are a light grey.  He
+has very large hands that could probably crush you in seconds,
+however he looks very friendly towards you and smiles in your
+general direction.  He looks rather lonely, but as a warrior he
+is used to do what he is assigned to.  
+~
+131082 268705922 350 Y
+40 -18 0 50d50+7000 22d2+30
+300000 460000
+8 8 1
+4 4096 5d50+50 2
+3 2 20 0
+2 7 15 0
+0 0 0 0
+#0
+$~

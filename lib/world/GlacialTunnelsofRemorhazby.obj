@@ -1,0 +1,203 @@
+#23001
+ice helm solid~
+a helm of solid ice~
+Ice in the shape of a helmet lies here.~
+~
+9 134742016 17
+20 0 0 0
+10 0 0
+9
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+53 3
+A
+19 4
+T
+79
+#23002
+ice bracers solid~
+bracers of solid ice~
+Ice in the shape of bracers lies here.~
+~
+9 134742016 257
+20 0 0 0
+10 0 0
+9
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+52 100
+A
+19 4
+T
+79
+#23003
+gauntlets solid ice~
+gauntlets of solid ice~
+Ice in the shape of a pair of gauntlets lies here.~
+~
+9 142094336 129
+20 0 0 0
+10 10 10
+9
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+19 5
+A
+53 20
+T
+79
+#23004
+girdle solid ice~
+a girdle of solid ice~
+Ice in the shape of girdle lies here.~
+~
+9 134791168 2049
+20 0 0 0
+10 10 10
+9
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+T
+79
+#23005
+bracelet solid ice~
+a bracelet of solid ice~
+A band of ice lies here.~
+~
+11 134791168 4097
+0 0 0 0
+10 10 10
+13
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+17 -20
+A
+52 50
+T
+79
+#23006
+tooth razor sharp remorhaz~
+a Razor-Sharp Tooth from the Remorhaz~
+A sharp tooth glistens on the ground here.~
+~
+7 2 49153
+30 5 0 0
+1 100000 1
+20
+X
+invalid~
+0 0 0
+M
+~
+~
+~
+~
+A
+38 9
+#23007
+scale remorhaz shining~
+a Shining Scale of the Remorhaz~
+a shining scale lies here.~
+~
+9 134744064 513
+23 0 0 0
+35 100000 50000
+50
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 1
+T
+180
+#23008
+pelt glacial polar bear~
+Pelt of the Glacial Polar Bear~
+a white pelt lies here.~
+invalid~
+9 134479872 1025
+28 0 0 0
+30 10000 10000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 13
+A
+12 13
+#23009
+tooth razor sharp remorhaz~
+a Razor-Sharp Tooth from the Remorhaz~
+A sharp tooth glistens on the ground here.~
+~
+7 2 49153
+10 28 0 0
+1 100000 1
+5
+X
+invalid~
+0 0 0
+M
+~
+~
+~
+~
+A
+38 9
+#0
+$~

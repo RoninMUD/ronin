@@ -1,0 +1,439 @@
+#11601
+slender sword~
+a slender sword~
+a slender sword has found its way to the ground.~
+~
+5 1089 8193
+0 5 3 3
+14 10000 800
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#11602
+mithril broadsword broad sword~
+a mithril broadsword~
+a mithril broadsword has been left on the ground.~
+~
+5 0 8193
+0 3 6 3
+16 15000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+37 20
+#11603
+training sword~
+an elven training sword~
+an elven training sword has been left on the ground.~
+~
+5 0 8193
+0 4 3 3
+10 100 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#11604
+knife craftsmen craftsman~
+a craftsman's knife~
+an excellent knife is has been left unwatched on the ground~
+~
+5 1091 8193
+0 4 4 11
+10 40000 1000
+50
+E
+knife~
+You got to be careful with this knife! The edge is EXTREMELY sharp.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+28 20
+A
+18 3
+#11605
+sewing belt~
+a sewing belt~
+a sewing belt has been left here.~
+~
+15 1089 2049
+5 0 -1 0
+1 1000 300
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -8
+A
+18 1
+#11606
+working sleeves~
+a pair of working sleeves~
+a pair of working sleeves has been left on the ground.~~
+~
+9 1 257
+7 0 0 0
+7 40000 800
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#11607
+scarf~
+a scarf~
+a scarf is lying on the ground~
+~
+9 0 5
+7 0 0 0
+2 15000 600
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 -3
+A
+12 15
+#11608
+branch golden~
+a golden branch~
+a golden branch has been left on the ground.~
+~
+9 65 16385
+3 0 0 0
+5 10000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 25
+#11609
+hammer forger~
+a forgers hammer~
+a forgers hammer is almost completely covered by dust.~
+~
+5 1 8193
+0 6 4 7
+16 20000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#11610
+fighting staff~
+an elven fighting staff~
+a silvery wooden staff has been left here.~
+~
+5 0 8193
+0 8 3 7
+10 10000 300
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+33 10
+#11611
+javelin~
+a javelin~
+a javelin has been pierced to the ground here.~
+~
+7 0 49153
+10 2 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+38 20
+#11612
+cloak mist~
+the cloak of mist~
+Mist covers a part of the floor.~
+~
+9 1088 1025
+5 0 0 0
+6 30000 700
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+4 2
+#11613
+pale white cloak~
+a pale white cloak~
+A pale white cloak is gathering dust on the ground.~
+~
+9 0 1025
+6 0 0 0
+3 20000 300
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11614
+spade silvery~
+a silvery spade~
+a silvery spade is dug down deep in the ground.~
+~
+9 1 16385
+1 0 0 0
+10 5000 300
+50
+E
+spade silvery~
+It is a very wellshaped spade, made of a silvery sort of material.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+#11615
+ithilnaur sword~
+the ithilnaur sword~
+A sword of superb quality has been carelesly left here~
+~
+5 1089 8193
+0 6 3 3
+15 40000 1000
+50
+E
+sword ithilnaur~
+The sword is made of Ithilnaur, an alloy of Mithril. It looks very hard and
+sharp~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+#11616
+galvorn plate~
+a galvorn plate~
+a shining plate has been left on the ground.~
+~
+9 1 9
+13 0 0 0
+8 40000 5000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 -2
+#11617
+nenya ring adamant~
+The adamant ring~
+Nenya, the adamant ring is lying on the ground~
+~
+11 1025 3
+4 0 0 0
+1 30000 4000
+50
+E
+ring adamant nenya~
+As you look at the ring you realize that its powers are far to big for you,
+you just dont know how to use them to their fully potential.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 2
+A
+18 3
+#11618
+robe aman~
+The robe of Aman~
+A robe is gathering dust on the ground~
+~
+9 1121 1025
+7 0 0 0
+5 10000 1000
+10
+E
+robe aman~
+The robe seems to be silvery-white in color but changes colors as you look at
+it from different angles~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#11619
+tracker boots~
+a pair of tracker boots~
+a pair of tracker boots has been left on the ground.~
+~
+9 0 65
+5 0 0 0
+3 3000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 20
+A
+43 20
+#11620
+key mithril~
+a mithril key~
+a small thing lies on the ground here.~
+~
+18 524289 16385
+1 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11621
+guide greenthumb gardening~
+a green-thumb's guide~
+A dirty, well-used book has been left here, covered by a thin layer of moss.~
+~
+32 524288 1
+7704 7704 16535 3605
+5 10 10
+22
+E
+guide~
+The only page you can make out through the caked-on filth has something to
+do with kudzu and how to keep it young and resilient.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

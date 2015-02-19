@@ -1,0 +1,278 @@
+#13001
+elf elven archdruid~
+The Archdruid~
+The Elven Archdruid is walking back and forth and tending to the plants.
+~
+The Archdruid looks old, which is uncommon for elves. Wisdom unattainable for
+us shortlived humans is visible in her eyes. Her main concern seems to be the
+surrounding nature's welfare.
+~
+11 262272 1000 Y
+55 -15 -3 100d12+3250 2d8+52
+1000 200000
+8 8 2
+72 0 0d0+0 0
+0 0 0 0
+#13002
+elf elven druid~
+The Elven Druid~
+The Elven Druid is here, gathering seeds from a strange plant.
+~
+The Druid is busy with preparing to tonight's ceremony by gathering the seeds
+of several different plants.
+~
+200 262272 1000 Y
+15 5 5 10d12+250 1d8+8
+50 13500
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+#13003
+elf elven druid~
+The Elven Druid~
+The Elven Druid is sitting on a large wooden bench and grinding something.
+~
+The Druid is grinding many kind of seeds with a grinding stone. The
+dust has all the colors you can find in a forest.
+~
+200 262272 1000 Y
+10 11 5 10d12+250 1d8+8
+50 13500
+8 8 2
+72 0 0d0+0 0
+0 0 0 0
+#13005
+elf elven guard~
+The Elven Guard~
+The village guard is standing here, looking alert.
+~
+The elven guard is here just as a precaution, not to persecute you or
+slay you for the tiniest offence. Regardless of that, mind your manners.
+~
+73 268705920 1000 Y
+20 0 -2 10d12+900 1d8+24
+0 28000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+#13006
+elf elven sage~
+The Elven Sage~
+The Elven Sage is here, browsing through some ancient tomes.
+~
+Absolutely the oldest elf you have ever seen. Browsing through the huge 
+tomes and scrolls with vigor and enthusiasm like there would be no
+tomorrow, and thus doesn't notice you at first.
+~
+139 134217728 0 Y
+20 0 -5 10d12+497 1d8+16
+250 17500
+5 5 2
+72 0 0d0+0 0
+0 0 0 0
+#13007
+elf elven keeper gardenkeeper~
+The Elven Garden Keeper~
+The Elven Gardenkeeper is tending to her flowers.
+~
+A beautiful young elven lady is looking after the flowers in the garden.
+She whispers something to them, and they immediately grow stronger.
+~
+200 262144 1000 Y
+20 0 3 1d12+560 1d8+14
+25 15000
+8 8 2
+72 0 0d0+0 0
+0 0 0 0
+#13008
+elf elven keeper gardenkeeper~
+The Elven Garden Keeper~
+The Elven Gardenkeeper is digging a hole to plant yet another tree.
+~
+A young elf, looking fairly strong and able-bodied, is putting his shovel
+to the best possible use by digging hole for the sapling lying near-by.
+~
+200 262144 1000 Y
+20 0 3 1d12+560 1d8+15
+25 18000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+#13009
+elf elven alchemist~
+The Elven Alchemist~
+The Elven Alchemist is here, selling his potions and scrolls.
+~
+The elven alchemist is looking very powerful. He points at the sign at
+the wall and says : 'Take a look at that.' Then he peek under the counter
+and picks up some potions and puts them on the shelf.
+~
+10 939794560 1000 Y
+60 -20 -20 1d10+30000 80d8+110
+100000 100
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+#13010
+panther black~
+The Black Panther~
+The sleek and beautiful black panther is pacing back and forth.
+~
+Never before have you seen such a wonderful beast. Truly, the cat's sleek
+muscles and graceful movements define it as a silent hunter of the night.
+~
+72 269254656 0 Y
+15 5 -1 1d12+297 2d4+16
+0 16000
+8 8 0
+90 0 0d0+0 0
+0 0 0 0
+#13011
+owlbear~
+The Owlbear~
+The huge owlbear is snapping it's beak at you menacingly.
+~
+The huge owlbear is standing in front of you. You can sense it's power, the
+raw strength of it embodied in it's gigantic paws. It snaps it's beak at you.
+~
+42 268730408 -1000 Y
+45 -14 -5 10d12+12500 2d8+50
+0 1500000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+#13012
+squirrel~
+The Squirrel~
+The small squirrel is sitting on a branch nearby.
+~
+Small, happy-looking squirrel is hopping in the trees, from branch to
+branch, and is chewing a nut.
+~
+204 0 250 Y
+0 20 6 1d4+2 1d2+0
+0 5
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+#13013
+pudding black~
+The Black Pudding~
+The Black Pudding is resting heavily on the floor.
+~
+The Black Pudding is a 8 feet wide lump of black sticky substance. When
+it occasionally moves, the floor sizzles underneath it. Small ripples go
+through the "body" of the pudding, sending tiny lumps of it around itself.
+~
+43 134217728 0 Y
+30 -10 0 100d12+13700 2d8+52
+0 1500000
+5 5 0
+68 0 0d0+0 0
+0 0 0 0
+#13014
+woman elf elven~
+The Elven Woman~
+The Elven Woman is watching over her children while they play.
+~
+Sitting in front of a hut on a small bench, the elven woman has a look
+of peace and restfulness on her face. The playing of her children 
+obviously brings joy to her.
+~
+138 0 1000 Y
+6 15 4 1d12+72 1d8+1
+0 1500
+8 6 2
+72 0 0d0+0 0
+0 0 0 0
+#13015
+child elf elven~
+An Elven Child~
+An innocent-looking elven child is playing with friends.
+~
+Always ready for some innocent mischief when the protective eye of the
+mother slips away. No matter how wild'n'playful, this child is polite and
+kind to his fellow elves. Humans have to just watch for their steps. *grin*
+~
+204 0 1000 Y
+3 18 7 1d12+35 1d7+0
+0 350
+8 8 2
+72 0 0d0+0 0
+0 0 0 0
+#13016
+mole~
+The Mole~
+Small mole is burrowing its way through the soil.
+~
+The small mole has just stuck it's head above ground and is looking at
+you curiously.
+~
+200 524288 0 Y
+1 20 9 1d12+10 1d5+0
+0 100
+5 5 0
+86 0 0d0+0 0
+0 0 0 0
+#13017
+treant~
+The Treant~
+The Treant is standing here, looking like a tree.
+~
+You are looking at a tree. No, wait! The tree limbs start moving and a
+face appears in the middle of the trunk. The "skin" is a thick, textured,
+brown bark. It says : 'Leave my trees at peace! *frown*'
+~
+11 269484160 500 Y
+30 -10 -20 100d10+9000 2d8+80
+0 850000
+8 8 0
+68 0 0d0+0 0
+0 0 0 0
+#13018
+piranha~
+The Piranha~
+The blood-thirsty piranha is eagerly trying to bite your leg off.
+~
+The small fish seems to be nothing but teeth, sharp and vicious teeth.
+The whole 10" body is silvery in color and has a saw-edged belly. Those
+teeth close in a scissor-bite dangerously close to your feet.
+~
+42 1867776 -250 Y
+8 12 3 1d8+37 1d8+14
+0 600
+8 8 0
+84 0 0d0+0 0
+0 0 0 0
+#13019
+elf elven master beastmaster~
+The Elven Beastmaster~
+The Elven Beastmaster is resting here, after a hard day of hunting.
+~
+Long silvery hair covers the sleeping face, but the stature of his
+muscular body hints of the explosive strength lying within his frame.
+Definitively a terrible opponent for any man, when awake. Obviously,
+hunting monsters pays off.
+~
+147467 268705920 1000 Y
+60 -20 -10 400d12+17450 2d8+110
+15000 2500000
+5 5 1
+72 0 0d0+0 0
+0 0 0 0
+#13020
+tree animated~
+The Animated Tree~
+The Animated Tree attacks you by swinging it's branches.
+~
+The tree has risen from the ground to walk on its roots, and to attack
+the unwary and violent visitors.
+~
+11 268435456 0 Y
+20 0 4 2d12+372 2d8+16
+0 5000
+8 8 0
+92 0 0d0+0 0
+0 0 0 0
+#0
+$~

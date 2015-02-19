@@ -1,0 +1,456 @@
+#1301
+The Moor~
+A grassy plain darkened by wisps of fog.  The moor stretches northward.  A
+path leads south into the forest.
+~
+13 4 2
+D0
+You see a great expanse of misty moor.~
+~
+0 0 1302
+D2
+You see a road in the Shire.~
+~
+0 0 1109
+S
+#1302
+Moor~
+A dried-out marsh, now barren of all vegetation and covered with a layer
+of dust about an inch thick.  You feel a warm breeze. You see a great iron
+gate to the north; the moor expands to the south. 
+~
+13 4 2
+D0
+You see a great iron gate.~
+~
+0 0 1303
+D2
+You see a foggy moor.~
+~
+0 0 1301
+S
+#1303
+Iron Gate~
+A huge iron gate rusted by years of corrosion has fallen from its hinges.
+It appears to be under repair.  A dark entrance lies north and the moor
+is to the south.
+~
+13 4 2
+D0
+The stone entryway to Canticle~~
+~
+0 0 1304
+D2
+A foggy, misty moor~
+~
+0 0 1302
+S
+#1304
+Entryway to Canticle~
+A foreboding entrance made entirely of perfectly cut granite stone.  An air 
+of decay and desolation surrounds you.  Maybe you should turn back.
+~
+13 8 0
+D0
+A beautiful blue hall~
+~
+0 0 1305
+D2
+The wrought Iron Gate~
+~
+0 0 1303
+S
+#1305
+Blue Hall~
+A well-decorated passageway colored entirely blue.  The walls appear to 
+have eyes.  You have the feeling you are being watched.
+~
+13 8 0
+D0
+A beautiful hall colored Light Blue~
+~
+0 0 1309
+D1
+The Hall of the Rooks~
+~
+0 0 1306
+D2
+A great stone entryway~
+~
+0 0 1304
+S
+#1306
+Rook Hall~
+A small damp hallway filled with eerie noises.  The floor is damp from 
+moisture which is leaking from the ceiling.
+~
+13 8 0
+D1
+The Rook Nook~
+~
+0 0 1307
+D3
+Blue Hall~
+~
+0 0 1305
+S
+#1307
+Rook Nook~
+The southeast corner canticle, the nook is a rather unpleasant place, the 
+floor worn by the constant pacing of the Rooks, cobwebs brush across your 
+face as you look around.
+~
+13 8 0
+D0
+The Bastille~
+~
+0 0 1308
+D3
+Rook Hall~
+~
+0 0 1306
+S
+#1308
+Bastille~
+A damp, dingy prison empty of windows.  A strange unpleasant feeling comes 
+over you.  You notice that the door has been locked behind you --
+you're trapped!!
+~
+13 12 0
+S
+#1309
+Light Blue Hall~
+A well-decorated passageway colored entirely blue.  The walls appear to 
+have eyes.  You have the feeling you are being watched.
+~
+13 12 0
+D0
+A beautiful blue hall~
+~
+0 0 1315
+D2
+A hall decorated totally in blue~
+~
+0 0 1305
+D3
+The Scullery~
+~
+1 -1 1310
+S
+#1310
+Scullery~
+A filthy eatery cluttered with dirty pans and plates.  The tables around 
+the room are warped and faded.  The smell of garlic overpowers you.
+~
+13 8 0
+D0
+Frump's Den~
+~
+0 0 1311
+D1
+Light Blue Hall~
+~
+0 0 1309
+D3
+Scullery~
+~
+0 0 1313
+S
+#1311
+Frump's Den~
+The Frump's meeting place, a stone lair fallen to decay.  The place is 
+littered with broken chairs.  It appears that someone lives here.
+~
+13 8 0
+D2
+Scullery~
+~
+0 0 1310
+D3
+Altar Room~
+~
+0 0 1312
+S
+#1312
+Altar Room~
+A darkened room with raised structures used for sacrifice.  The floor is 
+stained blood red and the smell is horrendous.  Mice are everywhere 
+scampering around.
+~
+13 8 0
+D1
+Frump's Den~
+~
+0 0 1311
+S
+#1313
+Scullery~
+You're in a storeroom, amidst spices, vegetables, and vast sacks of flour 
+and other provisions.  The air is thick with spice and garlic.
+~
+13 8 0
+D1
+Scullery~
+~
+0 0 1310
+D2
+The Jitney~
+~
+1 -1 1314
+S
+#1314
+The Jitney~
+A large kitchen filled with boiling caldrons.  A rat scurries across the 
+floor.  You wonder what's for dinner.  The smell of garlic overpowers you.
+~
+13 8 0
+D0
+Scullery~
+~
+0 0 1313
+S
+#1315
+Deep Blue Hall~
+A well-decorated passageway colored entirely blue.  The faded tapestries 
+on the walls only hint at the splendor which this hall once had.
+~
+13 12 0
+D0
+Dark Blue Hall~
+~
+0 0 1316
+D2
+Light Blue Hall~
+~
+0 0 1309
+S
+#1316
+Dark Blue Hall~
+A well-decorated passageway colored entirely blue.  The walls appear to 
+have eyes.  You have the feeling you are being watched.
+~
+13 8 0
+D0
+Black corridor~
+~
+0 0 1318
+D1
+Blue Cube~
+door~
+1 -1 1317
+D2
+Deep Blue Hall~
+~
+0 0 1315
+S
+#1317
+Blue Cube~
+A perfect cube set in blue, the hair on your neck stands straight as you 
+feel electricity in the air.  You may want to leave now.
+~
+13 8 0
+D3
+Dark Blue Hall~
+door~
+1 -1 1316
+S
+#1318
+Black Corridor~
+A dank, dusty corridor completely void of light.  The walls feel extremely 
+cold.  From the dust on the floor you can tell no one has walked this way 
+for a long time.
+~
+13 8 0
+D0
+Glass Walk~
+~
+0 0 1319
+D2
+Dark Blue Hall~
+~
+0 0 1316
+S
+#1319
+Glass Walk~
+The entire room appears made of glass.  Your reflection is distorted.  The 
+brilliance almost blinds you.
+~
+13 8 0
+D1
+Glass Walk~
+~
+0 0 1320
+D2
+Black Corridor~
+~
+0 0 1318
+D3
+Glass Walk~
+~
+0 0 1324
+S
+#1320
+Glass Walk~
+The entire room appears made of glass.  Your reflection is distorted.  The 
+brilliance almost blinds you.
+~
+13 8 0
+D1
+The Crystal Parapet~
+~
+0 0 1321
+D3
+The Glass Walk~
+~
+0 0 1319
+S
+#1321
+Crystal Parapet~
+A crystal wall built to protect the soldiers has been damaged by many wars 
+but stands firm.  From here you can see the surrounding forest.
+~
+13 8 0
+D3
+The Glass Walk~
+~
+0 0 1320
+D4
+The Upper Parapet~
+~
+0 0 1322
+S
+#1322
+Upper Parapet~
+A lofty perch on the wall, you become woozy as you realize your altitude.  
+Over the wall you see a beautiful view.
+~
+13 8 0
+D2
+The Rampart~
+~
+0 0 1323
+D5
+The Crystal Parapet~
+~
+0 0 1321
+S
+#1323
+Rampart~
+A battlement high up on Canticle's walls.  It has been used for centuries of 
+holy wars.  From here you can survey the entire countryside.
+~
+13 8 0
+D0
+The Upper Parapet~
+~
+0 0 1322
+S
+#1324
+Glass Walk~
+The entire room appears made of glass.  Your reflection is distorted.  The 
+brilliance almost blinds you.
+~
+13 8 0
+D1
+The Glass Walk~
+~
+0 0 1319
+D2
+Edificant Library~
+~
+0 0 1325
+D3
+The Mirror Room~
+~
+0 0 1326
+S
+#1325
+Edificant Library~
+The libraries collection of books, parchments, and artifacts fill the 
+entire room.  Most of the books are on potions and spell casting.
+~
+13 8 0
+D0
+The Glass Walk~
+~
+0 0 1324
+S
+#1326
+Mirror Room~
+The entire room is encased in mirrors.  As you gaze around, you see 
+yourself reflected a hundred times or more.  The magic mirror hangs on 
+the south wall.
+~
+13 8 0
+D1
+The Glass Walk~
+~
+0 0 1324
+D2
+In the Mirror~
+~
+0 0 1327
+S
+#1327
+In The Mirror~
+You have a strange distorted feeling.  You are inside a rainbow of mirrors, 
+and you wonder which one is the real you.
+~
+13 8 0
+D0
+The Mirror Room~
+~
+0 0 1326
+D2
+Bottom of Staircase~
+~
+0 0 1328
+S
+#1328
+Bottom of Staircase~
+A circular flowing granite staircase ascends the walls and leads into ominous
+darkness.  The skeletons of dead adventurers lie strewn about.  Behind you 
+is a beautiful magic mirror.
+~
+13 8 0
+D0
+In the Mirror~
+~
+0 0 3001
+D4
+Entrance to the Keep~
+~
+0 0 1329
+S
+#1329
+Entrance to the Keep~
+A strange foyer with satanic carvings on the wall.  The floor creaks 
+beneath your feet.  Strange noises and flashes of light come from the door 
+to the south.
+~
+13 8 0
+D2
+The Keep~
+door~
+2 1305 1330
+D5
+Bottom of Staircase~
+~
+0 0 1328
+S
+#1330
+The Keep~
+The Keep of Canticle, home of the Dark Overlord.  A huge throne room filled 
+with the odor of sulphur.  The floor is made of silver tile laid perfectly 
+in the shape of a dragon.  The heat is too much and the sweat drips off 
+your brow.  You see a huge wooden doorway to the north.
+~
+13 8 0
+D0
+Entrance to the Keep~
+door~
+2 1305 1329
+S
+#0
+$~
+

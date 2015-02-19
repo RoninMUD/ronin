@@ -1,0 +1,389 @@
+#2801
+broom~
+broom~
+A broom is lying on the ground.~
+~
+5 1024 8193
+0 2 7 7
+10 2000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#2802
+tigerskin skirt~
+a tigerskin skirt~
+A tigerskin skirt is lying on the ground.~
+~
+9 1024 33
+8 0 0 0
+8 1000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+#2803
+shinning necklace~
+a shinning necklace~
+A shinning necklace is lying on the ground.~
+~
+9 134218753 5
+6 0 0 0
+20 100000 13000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 20
+A
+18 1
+#2804
+shield honour~
+The Shield of Honour~
+The Shield of Honour is lying on the ground.~
+~
+9 134218752 513
+12 0 0 0
+30 50000 9000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 -1
+#2805
+ivory buckler~
+a ivory buckler~
+a ivory buckler is lying on the ground.~
+~
+9 1024 4097
+2 0 0 0
+10 4000 450
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+13 10
+#2806
+book songs~
+a book of songs~
+a book of songs is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+#2807
+book magic~
+a book of magic~
+a book of magic is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 5
+#2808
+book wars~
+a book of wars~
+a book of wars is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#2809
+book maths~
+a book of maths~
+a book of maths is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+#2810
+book languages~
+a book of languages~
+a book of languages is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 1
+#2811
+book jokes~
+a book of jokes~
+a book of jokes is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+#2812
+book history~
+a book of history~
+a book of history is lying on the ground.~
+~
+12 0 16385
+0 0 0 0
+5 500 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 5
+#2813
+apple~
+an apple~
+an apple is lying on the ground.~
+~
+19 0 1
+10 0 0 0
+1 4 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2814
+orange~
+an orange~
+an orange is lying on the ground.~
+~
+19 0 1
+10 0 0 0
+1 4 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2815
+pineapple~
+a pineapple~
+a pineapple is lying on the ground.~
+~
+19 0 1
+20 0 0 0
+2 10 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2816
+bananna~
+a bananna~
+a bananna is lying on the ground.~
+~
+19 0 1
+14 0 0 0
+1 8 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2817
+belt traveller~
+a traveller belt~
+a traveller belt is lying on the ground.~
+~
+15 0 2049
+100 0 0 0
+4 30 7
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2818
+large candle~
+a large candle~
+a large candle is lying on the ground.~
+~
+1 0 65537
+0 0 96 0
+1 35 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2819
+scroll teleport~
+a scroll of teleport~
+A scroll of teleport has careless been left here.~
+~
+2 64 16385
+20 2 -1 -1
+2 2000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2820
+scroll remove curse~
+a scroll of remove curse~
+A scroll of remove curse has careless been left here.~
+~
+2 64 16385
+20 35 -1 -1
+2 9000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2821
+potion invisibility~
+a potion of invisiblilty~
+A potion of invisibility is lying on the ground.~
+~
+10 268435520 16385
+20 29 0 0
+2 1000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

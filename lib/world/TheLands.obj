@@ -1,0 +1,453 @@
+#1901
+crystalline longsword~
+a crystalline longsword~
+A small buzzing noise is coming from a sword here.~
+~
+5 3138 8193
+0 4 4 3
+20 20000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 2
+#1902
+spear~
+an zyekian spear~
+An zyekian spear has been has been left here stuck in the ground.~
+~
+5 320 8193
+0 2 6 11
+1 1500 18
+50
+E
+spear~
+The spear is about seven foot long, and contains many small 
+runes.  It is obviously a good weapon, as well as a good walking 
+staff.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#1903
+garden hoe~
+a garden hoe~
+A garden hoe has been left on the ground here.~
+~
+5 0 8193
+0 1 8 3
+3 250 11
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1904
+vial emerald~
+an emerald colored vial~
+A small emerald colored vial has been left here.~
+~
+10 0 1
+15 15 16 22
+4 1000 199
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1905
+bread wheat~
+a loaf of wheat bread~
+A loaf of wheat bread sits here on a rock.~
+~
+19 0 1
+16 0 0 0
+1 35 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1906
+gaiters~
+a pair of leather gaiters~
+A pair of leather gaiters lie here.~
+~
+9 64 33
+6 0 0 0
+4 7599 100
+50
+E
+gaiters~
+These leg coverings look very comfortable, and provide
+good protection.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+#1907
+blackthorn shillelagh~
+a blackthorn shillelagh~
+A blackthorn shillelagh is propped against a log here.~
+~
+5 322 8193
+0 3 6 7
+15 25000 391
+50
+E
+shillelagh~
+It is a very large cudgel.  Maybe it would be a good weapon.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#1908
+steel mace~
+a large steel mace~
+A large steel mace is lying here.~
+~
+5 321 8193
+0 2 6 7
+14 5000 21
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#1909
+oak staff~
+an oaken staff~
+A staff has been left here.~
+~
+5 65 8193
+0 2 10 7
+5 10000 291
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1910
+falchion blued-steel~
+a blued-steel falchion~
+A long falchion rests on the ground here.~
+~
+5 64 8193
+0 3 4 3
+12 5000 199
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#1911
+belt leather~
+a leather belt~
+Scott's leather belt has been dropped here.~
+~
+9 2 2049
+8 0 0 0
+0 1000 199
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 2
+#1912
+blue vial~
+a deep blue vial~
+A deep blue vial sets on a shelf here.~
+~
+10 0 1
+15 27 17 -1
+1 8000 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1913
+red vial~
+a red vial~
+A small red vial rests here.~
+~
+10 0 1
+15 1 3 22
+1 10000 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1914
+light sphere~
+a light sphere~
+A glimmering sphere is here.~
+~
+1 195 16385
+0 0 -1 0
+60 5000 5
+50
+E
+sphere~
+It is a marble-like orb, containing a deep blue center.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -6
+#1916
+scroll~
+a neatly wrapped scroll~
+A scroll has been left here.~
+~
+2 0 1
+15 35 39 -1
+0 9009 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1918
+apple~
+a red apple~
+A bright red apple lies here.~
+~
+19 0 1
+6 0 0 0
+1 2 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1919
+tree~
+An apple tree~
+A large apple tree is here.~
+~
+15 0 0
+1000 5 -1 0
+100000 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1921
+wand~
+a wand of fireballs~
+A wand has been left here on the ground.~
+~
+3 65 16385
+20 2 2 26
+5 5000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1922
+chest~
+a chest~
+A large chest sits here.~
+~
+15 0 0
+1000 15 1923 0
+1200 0 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1923
+key~
+a shinny key~
+The key has been set on a rock here.~
+~
+18 0 16385
+2 0 0 0
+1 10000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1924
+bracelet~
+a silvery bracelet~
+A glinting bracelet lies on the ground here.~
+~
+11 3392 4097
+3 0 0 0
+1 20000 209
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#1925
+wine flask~
+a wine flask~
+A wine flask sets here.~
+~
+17 0 16385
+30 30 2 0
+12 90 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1926
+treasure coins~
+treasure~
+A large pile of golden coins is here.~
+~
+20 0 1
+6500 0 0 0
+1 6500 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1939
+key~
+a door key~
+A key has been left here.~
+~
+18 0 1
+2 0 0 0
+1 100 10000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

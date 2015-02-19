@@ -1,0 +1,1016 @@
+#1200
+The Chat Room~
+   You are lounging in a quiet cosy parlour, warmed by a gentle magical fire
+which twinkles happily in a warm fireplace.  There are no doors out.  Clearly
+the owner of this room needs none.
+~
+12 520 0
+S
+#1201
+Lost Treasure Trove~
+Here you can find some of the lost items that were in a mortals
+corpse when the world was reborn.
+~
+12 520 0
+S
+#1203
+The Immortal Kitchen~
+   An octagonal wooden table takes up most of the space in this room,
+even though it's shoved back into one corner.  Looking around, you
+realize that this place hasn't been cleaned since the move from the old
+UH site.  A large garbage can full of empty soup cans overflows onto the 
+floor, and it seems to be wriggling slightly, as though it's preparing
+to move on to greener pastures.  Next to the table is a small computer
+stand which supports an old XT, screen scrolling constantly with 
+logins, rents, stats, and system info.  The monitor looks as though
+someone's been putting out cigarettes on it, and empty beer bottles 
+have been stacked into a pyramid on top of the case.  Half-full pots
+of noodles are stacked next to the stand.
+~
+12 520 0
+D3
+~
+~
+0 -1 1212
+E
+table~
+This octagonal wooden table looks as though it's seen better 
+days. Underneath the area maps, pencil eraser bits, and old 
+5 1/4 floppies you can see that some of the gods here have nothing
+better to do with their time than carve initials into the wood.
+An SoBR has been stuck into the table, a reminder of days past, when
+that trusty old sword was one of the best weapons in the game.
+~
+E
+garbage~
+Better not let it see you looking...this garbage can seems to 
+like its privacy.
+~
+E
+stand~
+Damn, somebody's been throwing knives at this computer stand, or 
+maybe hitting it with a good length of chain...large pieces of wood
+are missing -- probably being used to prop up the Kludge rooms.
+~
+E
+computer~
+Monochrome monitor, slow processor, dime a dozen at the flea market.
+What's to see?  It's enough for running Telix and dikued, though.
+Is there a need for anything else?
+~
+E
+XT~
+Monochrome monitor, slow processor, dime a dozen at the flea market.
+What's to see?  It's enough for running Telix and dikued, though.
+Is there a need for anything else?
+~
+E
+noodles~
+Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
+~
+E
+pots~
+Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
+~
+E
+bottles~
+Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
+~
+E
+monitor~
+
+Lem chops you to pieces!
+
+Welcome to Ronin Diku
+
+0) Exit from DikuMud.
+1) Enter the game.
+2) Enter description.
+3) Read the background story
+
+Make your choice:
+~
+S
+#1204
+Quester's Forum~
+   It is here that the Immortals, Wizards and Deities gather to discuss
+and formulate a variety of quest ideas.  The room plays host to a large
+number of more generic quest items to be used by the dull and uninspired.
+Littered about the floor are numerous shards of paper with scrawlings of 
+failed ideas and completed quests.  On the wall there is a small plaque,
+etched on it are the names of questing champions.  
+~
+12 2568 0
+D1
+You see nothing special.
+~
+~
+0 -1 1212
+E
+plaque~
+A small bronze plaque hangs on the eastern wall.  On it are enscribed
+the names of morts who have competed in numerous quests and gained
+the high honor of questing champion.
+~
+S
+#1211
+Jor's Sitting Room~
+You are standing in Jor's sitting room.  Paintings hang on the
+wall, sculptures adorn the corners, and a large, cheery fire
+crackles and steams from the fireplace.  You see a great globe in
+the center of the room.  There are couches for people to sit here.
+From a large window to the East you see a beach where huge waves
+pound the shoreline.
+~
+12 520 0
+E
+arch~
+You never could figure out how these things stay together
+supporting all that weight.
+~
+E
+globe~
+As you peer at the globe, your attention seems to zoom in on one
+spot...it rushes closer and closer until you seem to see Midgaard.
+The picture in your mind continues to get closer until you can see
+people.  They are standing at a fountain drinking water.  Closer
+still and you zoom in on a fido walking by.  You can hear it snarl
+at the adventurers at the fountain.  Suddenly, the picture goes
+black, and you feel a sense of virtigo.  An angry flea is hopping
+around here.  You suddenly realize that you are looking at the back
+of a fido who has fleas.  Perhaps you need more practice with this
+globe.
+~
+E
+couch~
+The couch is large and cushy.  It is a deep azure.  You wonder who
+has sat there before and what might be left in the crevices between
+cushions.
+~
+E
+window~
+Outside the window is a glorious beach with huge waves pounding the
+shore.  Off to one side in the eel grass is a shed with a surfboard
+standing on its end.  As you begin to feel the beach beckon to you,
+you are stunned as the picture suddenly changes into a coral reef,
+70 feet below the surface!  You stare, mouth agape as the picture
+again shifts to a City - but like none you've ever seen before.
+Huge buildings reach out to the sky, with two identical towers
+dominating the scene.  Curious scents seem to eminate from the
+scene, not all of them pleasent.  As the picture shifts to a rain
+forest, you look away,awed by the beauty and complexity of the
+Window.
+~
+E
+fireplace~
+The cheery fireplace merrily crackles and hisses while flames dance
+about gleefully.  Warmth fills you as you move closer to the flame.
+~
+S
+#1212
+Immortal reception~
+  This sprawling room is where the gods of the realm come to read the
+boards, drink their coffee, and keep each other posted on the latest
+events in the mortal and ethereal realms.  A dilapidated couch sprawls along
+one wall, inviting the tired wizard to take a nap.  Looking down, you see
+that the floor is composed of a patchwork of mosaic tiling and large
+flagstones, much abused.  Off to the east is the kitchen, and to the west
+is a small room where quests are planned.   South of here is the Chat Room, 
+where some of the Immortals occasionally pass the time with their mortal 
+associates. North of here is the main Operations room.
+~
+12 520 0
+D0
+~
+~
+0 -1 1249
+D1
+~
+~
+0 -1 1203
+D2
+~
+door~
+1 -1 1200
+D3
+You see nothing special.
+~
+~
+0 -1 1204
+D4
+~
+~
+0 -1 12300
+D5
+~
+~
+0 -1 1255
+E
+floor~
+The mosaic on the floor depicts some mortals crawling along a 
+Moebius strip, endlessly picking up exp, dying, and getting 
+equipment along the way.
+~
+E
+couch~
+This broken-backed, sprung couch has been host and lover to many a WIZ
+waiting for mortals to complete a quest.  From the looks of it you
+could probably get enough coffee and food to last for days just from
+sucking on one of the stained cushions.
+~
+E
+iron~
+You see a large iron door.
+~
+S
+#1220
+The Hall of the Gods~
+   You are standing within a brilliantly illuminated hall of white marble,
+the meeting place of the Gods, where they gather to discuss matters
+of cosmic importance. The hall seems to radiate power from all directions, 
+possibly power that has been left-over by some divine presence.
+There are large pillars of white and black marble supporting a large dome
+shaped roof, upon which are engraved stellar constellations, the pillars
+might represent the gods of good and evil. A round circular pool is 
+glimmering at the exact center of the hall and as you gaze into its shifting 
+waters you can perceive images of people and places far away, possibly in 
+other realms, you distinguish a tiny image of yourself, gazing into a gleaming 
+pool inside a white hall.
+~
+12 536 0
+S
+#1221
+Zorak's Corpse Room and Tasselhoff's Troffy Chamber~
+  This Room is allmost filled whith stolen objects, every thing from coins to
+cloaks and weapons. There is also many hunting troffies of all thinkable crea-
+tures. In the floor is a Trap door made of Gold, and to the north is a dark
+portal. In one of the cornars lies a small rat snoring noisilly.
+  A desk stands against the wall, a glass of Tang and numerous ashtrays on
+it. Loud Screeching Weasel blasts out of a n ancient stereo system, harming
+the rat's delicate ears. Corpses lie strewn about, commingling in some
+strange harmony with the various troffies. A huge pile of them stands
+in the center of the room, quietly and odoriferously smouldering. One corpse
+in particular looks very familiar, a swarm of locusts buzzing angrily
+about it...
+~
+12 520 0
+D0
+A smoking hole is smashed through the wall here, a small curtain over it.
+~
+curtain~
+1 -1 1212
+D1
+A huge golden locust.
+~
+locust~
+1 -1 3054
+D5
+You see a golden trap door.
+~
+trap door gold golden~
+1 -1 3001
+E
+trap door gold golden~
+The golden trap door is trimmed whith silver.
+~
+E
+portal~~
+The portal is dark and lifeless.
+~~
+E
+rat~
+A small rat lies in the cornar, covered in white fur.
+~
+E
+corpse~
+The corpse clicks its mandibls and says 'Shhh! I'm in mufti!'
+~
+E
+troffy~
+It's a troffy of one of Tasselhoff's achievements.
+~
+E
+corpse~
+The corpse clicks its mandibles and says 'Shh! I'm in mufti!'
+~
+S
+#1225
+The PressRoom~
+This is where the world's newspaper is put together.  Tiny ink-monkeys run
+around, making sure the whole printing process is going smoothly.  A giant
+printing press sits on one side of the room, clanking away.   Occasionally a
+loud 'squeek' is heard, as an unfortunate monkey finds himself part of the
+daily news.
+~
+12 512 0
+S
+#1231
+Quack's Orbital Force Bubble~
+  You float in orbit around the blue and green planet we all call our home.
+The air up here is extremely thin and seems strangely stagnant and lacks
+all the usual smells you associate with civilization.  On your right you
+see a strange hexagonal machine that rotates slowly on its axis.  A steady
+humming noise can be heard coming from it and you feel strong vibrations
+emanating from somewhere deep within it.  Above you is the vastness of
+space. In the far distance you see a burning globe of fire that can only
+be the sun.
+~
+12 520 0
+E
+machine~
+It's a sattellite that is scanning the world below us for signs of
+intelligent life.  So far it's had no luck.
+~
+S
+#1234
+The Chapel on a meadow~
+  You are on a meadow filled with tiger lilies, magnolias and roses, and you
+can smell the scent of magnolia in the air. By the meadow, a small river
+flows slowly to a pond, where a pair of swans swim close to eachother. Next 
+to the pond is a small chapel, without walls, only four pillars holding the 
+roof, and there is a small altar underneath it.
+  On the shadows of the nearby forest, a small band of elven musicians sing
+beautiful songs, bringing joy into your heart.
+~
+12 520 0
+S
+#1239
+Prytan's Playpen~
+This is where Prytan brings puny mortals to practice his techniques for torture
+and oppression.  As you look around, you see many fascinating items that seem
+to project a malevolent aura.  You think to inquire as to what exactly what
+happens here, but then you decide you don't really want to know.
+~
+12 512 0
+S
+#1243
+Floating on Cloud 9~
+	You are in Something's sitting room.  Clouds form the walls and
+furniture, glowing with a pale internal light.  A fireplace with a small
+eternal flame is in a corner, and a couch is on the opposite wall.
+	Momentos from his time as a mortal fill the room, from the thick
+purple rug on the floor, to a painting of a purple penguin done by Picasso.
+	A doorway to the south leads back to the mortal realms so that
+visitors may freely leave.
+~
+12 584 0
+D2
+This doorway is literally part of the wall itself, only shown by a slightly
+brighter glow along the sides.
+~
+door~
+0 -1 3001
+E
+rug purple floor~
+This think soft rug covers almost the entire floor.  It is colored royal
+purple and was originally owned by Caesar.
+~
+E
+picture penguin picasso~
+This painting was made between his red and blue periods on a special
+comission from Something.  It shows the legendary Purple Penguin that
+caused the formation of the Purple Penguin Clan.
+~
+S
+#1246
+The Main Chamber of Ankh.~
+  You are standing in a cold stone chamber, the walls surrounding this
+lage chamber are covered in hieroglyphics. There ia a magnificent collection
+of vases, chariots, thrones, and jewels all about the room, to bad you can't
+take a little for yourself. In the corner of the room there is a large stone
+sarcophagus belonging to the great Egyption Pharaoh, Tutankhamen, but it
+seems that Ankh has claimed this great treasure for himself, it must be where
+he sleeps when you are not around. In the center of the room there is a
+large altar covered it blood and various other objects involved in an occult
+sacrifice, you feel sick at the gory sight of the blood stained altar and
+a little relief that you missed the ugly religious rite, or are you the 
+next victim for the altar.............
+~
+12 512 0
+E
+sarcophagus~
+Sitting here in the corner of the room is a sarcophagus made of solid
+gold, you can tell from the the image carved into the beautiful golden
+cover, that this has to be the sarcophagus of Tutankhamen.
+~
+E
+altar~
+With a closer glance at the blood stained altar, your stomach disagrees with
+you and you suddenly get a second look at your dinner.
+~
+S
+#1249
+The Operations Room~
+  This room is littered with paper.  Post-it notes are stuck
+all over the walls with illegible scribbles on them.  The
+wastebasket in the corner is overflowing with discarded
+tasks and forgotten ideas.  Amonst the chaos you see one 
+object of order - the board nailed to the northern wall.
+~
+12 2568 0
+D2
+~
+~
+0 -1 1212
+S
+#1250
+Inside the Crystal~
+   You are inside of a very large, transparent crystal.  Looking out
+through the walls, you can see the powerful sandstorm outside.  Protected
+from the harshness of the outside, you are mesmerized nevertheless, by
+the awesome and destructive forces acting outside.  There is a noticable 
+lack of furniture in here, and with the exception of a few scattered pillows
+and the intricate rug on the floor, you can see nothing at all of the
+creature comforts you would normally find in a person's home.  You feel
+completely at ease here, with the pale sandy colored light filtering
+through the crystal walls, and the delicate strains of some foreign
+music floating through the air.  You marvel at the beauty of this place,
+and you decide to yourself that this must truly be a little piece of
+heaven.
+~
+12 10824 0
+E
+crystal~
+The crystal walls and ceiling are simply amazing.  You stand in awe as you 
+watch the light catch and reflect off of the many faceted surfaces.  Upon 
+close inspection, you realize that a mere inch of crystal is all that keeps
+you apart from the terrible forces of nature without.
+~
+E
+rug~
+A very large, intricately woven rug covers a large portion of the floor
+inbside the crystal.  Woven with patterns depicting various desert scenes, 
+you are amazed at how lifelike it looks.  
+~
+E
+pillows~
+There are several, very comfortable looking pillows scattered here and there.
+Very intricately detailed, you are surprised by how comfortable they are.
+~
+E
+pillow~
+There are several, very comfortable looking pillows scattered here and there.
+Very intricately detailed, you are surprised by how comfortable they are.
+~
+S
+#1253
+In Thyas' bed~
+    You have crawled into Thyas' bed. You best hope he doesn't find you here
+(unless your a chick with some kickass hooters) cause he'll kick your ass.
+The sheets are warm, he must be around here somewhere, probably gone to get
+something to eat. This sure is a comfortable bed, well used no doubt. Best
+be gone before Thyas gets back.
+~
+12 512 0
+S
+#1255
+The News Center~
+   Here in the basement of the Imm suite is where the gods of the 
+realm go to check the mortal boards, seeing what interventions are
+needed, where a pat on the back is deserved, or where a comment is 
+necessary. The Idea room is to the north, the Immortals' office 
+is to the west, the Deities' office is south, and the Wizards' 
+office is to the east.
+~
+12 520 0
+D0
+~
+~
+0 -1 1259
+D1
+~
+~
+0 -1 1258
+D2
+~
+~
+0 -1 1257
+D3
+~
+~
+0 -1 1256
+D4
+~
+~
+0 -1 1212
+S
+#1256
+The Immortals' Office~
+   Here is where the Immortals of the Realm go to log their activities
+in hopes of advancing.  A tiny desk is crammed into one corner of the 
+room for all the Immortals to share.  
+~
+12 520 0
+D1
+~
+~
+0 -1 1255
+E
+desk~
+This desk looks much abused, and seems to be held together by 
+duct tape and chewing gum.  
+~
+S
+#1257
+The Deities' Office~
+   This office is a bit nicer than the Immortals' office, with a 
+larger desk and a window with a view of the Helventia Mountain
+range.
+~
+12 520 0
+D0
+~
+~
+0 -1 1255
+E
+desk~
+This looks to be a desk of Zyekian craftsmanship, well stained 
+and sturdy.
+~
+E
+window~
+Looking out the window, you get a glimpse of a cabin through
+the trees of the Helventia Mountains.
+~
+S
+#1258
+The Wizards' Office~
+   This spartan office has no furnishings at all, and would be
+completely featurless if not for the window simultaneously looking
+out into the Deities' Office.
+~
+12 520 0
+D3
+~
+~
+0 -1 1255
+E
+window~
+1257
+~
+S
+#1259
+Inner Sanctum~
+   This room is a carbon copy of the mortals' idea room.
+You've reached the holiest of places where mortals come to meditate on life,
+the universe and everything.  By pondering the workings of the world and how it
+can be made better for all, the true believer makes the busy gods' life that
+little bit easier.
+~
+12 520 0
+D2
+~
+~
+0 -1 1255
+S
+#1265
+On the John~
+  The tiles in front of you have almost black grout.... stained from
+aeons of mildew and dirt. Your mind wanders to other things, more pleasant
+things, as your body does what it does best: nasty, messy stuff. How
+on earth did you end up here? What did you eat to make you spend so
+much time in this very undignified position? Your time spent here could
+be so much more productively spent coding, writing code, or programming!
+So many options that this human condition takes from you every day of
+your life. 
+  As you grunt and moan, you study the long, dirty talons that pass
+among your kind as toenails. Time to clean those babies.
+~
+12 520 0
+D2
+~
+~
+0 -1 1212
+D5
+~
+~
+0 -1 3014
+S
+#1266
+Amongst the Heathens~
+  The Chrysalid throne of the locust ruler Eparchos gleams darkly here,
+his massive spear leaning against the bone arm-rests. A tremendous party
+seems to have just ended: as broken bottles, spilled food, dirty plates, and
+blood are strewn about or spilled on the marble floor. Portraits and statues
+of Eparchos himself fill this room, as well as the magically kept corpses
+of the artists....it seems that Eparchos is not a very forgiving ruler.
+  In a corner stands a huge, orange, glowing glass bottle which shows
+a continually changing video account of a certain demon's torments as
+it makes its way through the lower hells. This is Eparchos' main pride
+and joy: to watch the lesser demon Zorak who once possessed the ruler's
+corpse endure various tortures for his hubris.
+  Heathens cackle and glare at you as you wander this hall, wondering if
+you are merely another mortal or soon to become one of them.... the 
+blessed minions of Eparchos. They all wear the locust-crest of the ruler,
+and rattle their spears whenever his name is mentioned, ready to do battle
+for whatever reason they feel like at the time.
+  A small, plush chair sits facing the throne.... perhaps you should sit
+in it.
+~
+12 520 0
+D5
+The golden  trap door gleams prettily.
+~
+trap~
+1 -1 3001
+E
+corpse~
+This one is missing an ear....
+~
+E
+statue~
+This statue shows the ruler with the head of a mortal in his mandibles...
+~
+E
+crest~
+The crest the heathens wear is a green locust rampant on a red field.
+~
+E
+heathen~
+He bares his teeth at you an shakes his spear.
+~
+E
+chair~
+It looks rather comfy. In fact, it has your name engraved on it!
+~
+E
+bottle~
+You giggle as Zorak is put through some demonic indignity with a broom
+handle and a basket full of dead slugs...
+~
+E
+portrait~
+It looks rather like Eparchos.....smiling?
+~
+E
+spear~
+This spear is made from a massive Locust's leg, sharpened to a nasty point.
+~
+E
+throne~
+This throne buzzes madly..... it is made of a living swarm of locusts!
+~
+S
+#1267
+The Friendly Doctor's Office.~
+    You have entered what appears to be a doctor's office. The room is
+finely furnished. The carpet you are standing on looks very expensive, and most
+delicate, you wonder if you should remove your shoes. On the wall you see many
+plaques and certificates, showing this doctor's expertise in the field of
+psychiatry. The desk sits in front of the big window. It is a large desk, made
+from solid oak. On it is a yellow legal pad with many notes scribbled on it,
+a desk lamp and a nameplate. Behind the desk you look out the window and admire
+the view. Then you notice the huge hole in the glass...like a man jumped
+through it...
+~
+12 33288 0
+E
+carpet~
+It is a very expensive persian rug. You move slowly as you walk across it, not
+wanting to crush it.
+~
+E
+view~
+You gaze out the window and marvel at the view. From here you can see
+all of the Helventia Mountain range...and beyond.
+~
+E
+desk~
+The desk is a large oak one, with many drawers...one of them is open.
+~
+E
+drawer~
+You look into the drawer and see what appear to be marbles?
+~
+E
+window~
+There is a big hole in the middle of it, in the general shape of a man.
+~
+E
+notepad~
+As you thumb through the pages you see things scawled in nearly illegibly...
+The things you manage to make out read like "This guy is totally wacko!!"
+and "Why didn't i listen to my mother and become a dentist?" the very top
+page has "I JUST CAN'T TAKE IT ANYMORE!!!!" written across it and everything
+on it in big letters.
+~
+E
+nameplate~
+You can't tell what it used to read, because it's been scribbled over with
+crayon. It now reads "Dr. Sane."
+~
+S
+#1268
+Vader's Meditation Chamber.~
+You enter a room that has nothing in it at first glance.  When you look a
+little closer you see that there is only a rather large black object sitting
+off to one side.  The metal door slowly draws shut behind you as you feal your
+heart start to pound harder and harder.  Then, the large object opens and
+there sitting in his large black leather chair is Darth Vader.
+~
+12 33288 0
+S
+#1269
+The Bathroom at the End of Time~
+  You are in the legendary bathroom at the end of time.  In an unknown
+year, the universe was destroyed, leaving only this bathroom.  An open
+door in the south end of the bathroom allows you to see endless void of
+flowing colors beyond the bathroom.  Feroz has taken the bathroom for his
+home, and has a computer along one wall, and a large fridge in the corner.
+Since Feroz is god, he can come and go as he chooses, unfortunatly the
+normal person wouldn't have such an easy job.  Although maybe it wouldn't
+be too bad to be stuck here.  They do have running water...
+~
+12 41484 0
+S
+#1270
+Aphrael's Office~
+   As you enter the room, you are overwhelmed by the totality of chaos.
+Papers are flying everywhere, stirred by a breeze from an unseen open
+window.  A computer hums quietly, and you spot it atop a pile of papers,
+obviously doubling as a paperweight.  Near the massive cherry desk, you
+spot an overstuffed leather sofa, looking very much like a good place
+to take a nap.
+
+~
+12 520 0
+E
+window~
+You can't find it, but you can feel a chilly wind coming from somewhere.
+~
+E
+desk~
+A huge cherry rolltop, nicked and scratched from years of loving use.  Every
+pigeonhole is crammed with papers, and the top is littered with pop cans and
+spiral notebooks.
+~
+E
+couch~
+A huge couch, made of buttery soft cream-colored leather.  It looks
+incredibly comfortable, and large enough for more than one person to
+stretch out.
+~
+S
+#1275
+Indigo's Tower~
+A round room, with enormous windows on every wall. If you look out towards the
+north, you can see monstrous great mountains, covered in snow. Out the bay
+window to the east, you can see beautiful green rolling hills, with a private 
+lake. A massive mansion rests on one side of the lake, in beautiful Victorian 
+style. To the south, there is a forbidding jungle, where dense foliage and wild
+animals abound. Out the west window lies a lengthy beach, with a crystal blue 
+ocean pounding against the sand. A few daring surfers take their chance on the 
+white-cap waves. A small dock juts out, where a sailboat rests, waiting to be 
+used. The parts of the walls that aren't glass are painted sage green, with
+white trim around all the windows.  A gold ivy leaf pattern trims the wall at
+the top, near the ceiling, completing the effect.
+~
+12 8 0
+S
+#1277
+Forest of Hemp~
+ A gloriously fragrant forest of hemp greets the weary traveler with a haze
+of relaxing smoke. Several large pseudo-nests have been made on the ground to
+serve as a place for visitors to take a nap. Bubbling with a frothy dark amber
+liquid is a white marble fountain, looking oddly out of place amidst the thick
+foliage. A small, blue-winged, nearly invisible pixie named Kifa darts about
+cleaning abandoned mugs and chilling them instantly with her icy breath. This
+is clearly a place of deep meditation and spiritual enlightenment, only the
+most worthy are welcomed into this utopian paradise.
+~
+12 67150400 3
+S
+#1280
+Rist's private hideout.~
+You have entered Rist's private hideout. Nagfy's TV and laserdisk video with
+surround sound is standing in a corner. There are several chairs and a table
+around the TV. One of the chairs has no legs but it looks like its still in
+use. When you look up you see some old pizza. You wonder what its doing up
+there. On a wall you see a dartboard and there are a lot of tiny holes in the
+wall around the board. Up against another wall you see a broken door and behind
+another door you hear ping pong sounds. What a party it must have been.
+~
+12 584 0
+D0
+~
+~
+0 -1 3084
+D1
+~
+~
+0 -1 3074
+D5
+~
+~
+0 -1 3014
+E
+tv~
+When you look at the screen you see naked people moving up and down. You
+wonder if its some kind of new aerobic or something. Stranges sounds are
+comming out of the speakers and its comming from every where.
+~
+E
+table~
+You look at the table and you see some papers. When you look closer at the
+papers you see that its some sort of plans. Its HIA clans plans for taking over
+Ronin. Rist has the plans because he is HIA President.
+~
+E
+dart~
+You see a dartboard on the wall. There are 3 darts on the board and they are
+all standing in tripple 20. Excellent throwing you think. You also see all the
+tiny holes in the wall and think that there must be some kind of maggots in the
+wood.
+~
+E
+chair~
+You look at the chair that has no legs. You wonder what happened to is since
+it has been destroyed. When you touch the chair you feel that its still warm.
+Maybe Rist just sat in it?
+~
+S
+#1287
+In the Back of a Hearse~
+ 
+   You find yourself in the back of a moving hearse. It is fairly roomy and 
+comfortable with red velvet padding lining the walls all around you.
+The windows are all heavily tinted and all you can see when you try to look
+out them is your own reflection. When you face forward you can see the back
+of the ancient-looking driver who remains eerily silent. You don't see any
+coffins lying around, (or any furniture for that matter) but you can see
+plenty of neatly stacked paperwork in one corner and a couple of nearly
+overflowing garbage cans in another. It is obvious that someone has been 
+spending alot of time here. You can see that there is something scrawled
+in red ink on the ceiling directly overhead. Upon close study of the writing,
+you can see it reads 'Nosferatu wuz Here!', but begin to wonder if the words
+are really written in ink...
+ 
+~
+12 33288 0
+S
+#1289
+Liner's Casa en la Playa~
+  You find yourself lounging in a quaint little hut on a deserted
+beach.  Outside, the sunlight beats down on the bamboo walls, and
+a gentle breeze drifts warm puffs of sand into the open doorway.
+A faint coconut scent wafts in from the window.  And to top off
+this surreal scene of paradise, a computer, complete with modem
+hooked up and running lag-free, sits humming away in the corner.
+All that's missing are the island girls, but hey, look whose room
+this is...
+~
+12 520 0
+E
+picture~
+A striking, young goddess stands defiantly facing you, piercing your
+very soul with her ice-blue eyes.  Her golden locks seem to shimmer
+and fade into the blinding rays of sunlight behind her.  At the
+bottom of the photograph, a single letter K stands out in gold.
+~
+S
+#1290
+Inside Blink's Eyeball~
+   You find yourself inside an eyeball, gazing at the entire world around you.
+You bounce around on squishly puddles of goo and mushy tissues... Whee!  
+You find  this place really calm and relaxing.  You feel an inner peace touch
+your soul.  There is a mist of violet, purple, and blue surrounding you.  
+Despite the magic of this place, somewhere in the distance you hear Courtney 
+Love belting out the lyrics to "Violet", and there is a strange smell that is
+making you feel really COOL!  A strange mural of colours adorns the top part 
+of the eyeball.  This  really is a cool place!  There is a bean bag chair here,
+and a few really big funky coloured couches.  Maybe you should just kick back, 
+and have a good time while your visiting here.  There is a poster here, why not
+take a look?
+~
+12 512 0
+D0
+~
+~
+0 -1 20899
+D1
+~
+~
+0 -1 20899
+D2
+~
+~
+0 -1 20899
+D3
+~
+~
+0 -1 20899
+D4
+~
+~
+0 -1 20899
+D5
+~
+~
+0 -1 20899
+E
+poster~
+
+ \|/ ____ \|/
+ ~*-/ oO \-*~
+S
+#1296
+Mystik's Mortuary~
+  This room looks to be something out of a Dracula movie. On one side of the 
+room is a small work table, where Mystik can work on the unfortunate mortal 
+who gained his unfavorable attention. Along another wall is rows of mahogany 
+coffins, just waiting to be put to use by their creator. Unlike most 
+Mortuaries, you don't have to be dead to be sent here. In fact the only rule is
+that you are dead and in a coffin when you leave.
+~
+12 648 0
+E
+label~
+These tools are rated for Ninjas only.~
+E
+jar~
+This jar of tools looks like they could be even more painful than the rest.
+There is a label on the jar.~
+E
+table~
+Thier are myriad tools on this table. of to one side is a `bjar`h of 
+special instruments of pain with a label on it.~
+S
+#1297
+The Doobie Hemp House~
+You are stunned and overwhelmed by the scent and sight of this room. Everything
+seems to be made of hemp...it's as if the room is one great big bud!  Plants 
+grow all over the walls and furniture of this smoke filled heaven.  Sliteyed, 
+You wander aimlessly around the room carefully examining everything you come 
+upon. A collection of pipes and bongs of all different shapes and sizes lies on
+the table next to a bowl full of munchies.  In front of a comfy looking sofa is
+a huge round screen showing psychadelic videos.  Fluffy pillows have been 
+placed all around the room to make your stay more pleasant.  A couple of books
+and a stack of CDs are piled up on a stereo in the corner.  You notice one of 
+the titles of the books which reads, 'AIDS-is it man made?'.  A guitar, bongos
+and a harmonica are next to a mini-fridge filled with drinks and munchies to 
+soothen that dry mouth after a good session :) Inhaling all the smoke has 
+convinced you to stick around for a year or ten.
+~
+12 512 0
+S
+#1298
+Within a Translucent Dome~
+   You are standing inside a huge glass dome.  Looking out through the
+translucent wall, you see nothing but water surrounding this crystal sphere.
+Swimming about are various sea organisms and surrounding the ocean bottom are
+plant life galore -- very mesmerizing and pleasant to watch when bored.
+A huge comfy couch lies smack in the middle of the room, a television just
+a couple of feet away from it.  A thick persian rug covers the floor here,
+adding color and a sense of quality to this room.  Off to the side, there
+are unopened cans of beer, along with bags of chips waiting to be devoured.
+A CD player blasts your favorite hard rock tunes, making you mosh uncontroll-
+ably all over the place.  This is Jarldian's hang out spot, a nice place to
+visit -- but you wouldn't want to live to here.  The place leaks water all
+the time, bad reception for tv and high rent:)   
+~
+12 8776 0
+E
+couch~
+a comfortable looking lazy body model 19292323-B couch is resting smack 
+middle of the room.
+~
+E
+television~
+a state of the art television sits here, cable ready with all the channels.
+~
+E
+rug~
+a beautiful persian rug covers the floor here, many designs and frame of
+colors make it up.
+~
+E
+beer~
+a six pack of beer lies in the corner forgotten.
+~
+E
+chips~
+cool ranch chips lie here unopened.
+~
+E
+CD~
+a compact disc player stands rests on the rug here, blasting pantera at the 
+moment.
+~
+E
+cd~
+a compat disc player rests here on the rug, blasting pantera at the moment.
+~
+S
+#1299
+Cell 1299: Patient Sumo~
+  You are in a small, dank cell. Padding has been added to the walls to insure
+the the occupant doesn't hurt himself. In the far corner you spot a crumpled
+strait jacket that appears to have been escaped from recently. Scattered
+about the room in a haphazard fashion are piles of unfinished areas, no doubt
+the cause of this poor fellows insanity. Written on the walls in many
+different colors of crayons you see the words 'Welcome to my hell'.
+~
+12 8776 0
+S
+#0
+$~

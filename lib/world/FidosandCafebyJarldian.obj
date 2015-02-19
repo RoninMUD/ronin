@@ -1,0 +1,168 @@
+#3601
+candy~
+a candy~
+There is a candy on the ground.~
+~
+19 0 1
+10 0 0 0
+1 5 1
+50
+#3604
+ragged cloth~
+a ragged cloth~
+a ragged cloth is lying here, holes and dirt visible on it.~
+~
+12 524288 16385
+0 0 0 0
+10 10 10
+100
+#3605
+mineral water bottle~
+a bottle of mineral water~
+a bottle of pure mineral water is sitting here.~
+~
+17 0 1
+30 30 0 0
+10 200 20
+100
+#3606
+spritzer~
+a spritzer~
+a spritzer is sitting here.~
+~
+10 0 1
+30 112 35 0
+10 30000 2000
+100
+#3607
+can beer~
+a can of beer~
+a golden can of beer sits here.~
+~
+10 0 1
+30 28 28 0
+10 90000 9000
+65
+#3608
+coffee cup~
+a cup of coffee~
+a hot cup of coffee sits here.~
+~
+17 0 1
+20 20 12 0
+10 100 10
+100
+#3609
+shot vodka~
+a shot of vodka~
+a small shot of vodka sits here.~
+~
+10 0 1
+30 74 75 0
+10 200000 15000
+60
+#3610
+bouncer t-shirt~
+A Bouncer's T-Shirt~
+A wet t-shirt is lying on the ground here.~
+~
+9 0 9
+6 0 0 0
+10 10 10
+100
+#3611
+hot potato~
+a hot potato~
+a hot potato rolls around here waiting for your eager taste buds.~
+~
+19 524288 1
+40 0 0 0
+10 40 10
+100
+#3612
+menu sign~
+A floating menu~
+A large menu is floating in mid-air here.~
+~
+12 0 0
+0 0 0 0
+5000 10 10
+100
+E
+menu~
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+                          Restaurant du Midgaard 
+ -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ 
+                      Prices and specials of the day
+    ------                         ----------- 
+     Food                           Beverages
+    ------                         -----------
+    a plate of pasta   120 coins   a shot of vodka           240,000 coins
+    a rice cake         96 coins   a can of beer             108,000 coins
+    a raisin bread      72 coins   a spritzer                 34,000 coins
+    a hot potato        48 coins   a bottle of mineral water     300 coins
+    a muffin            24 coins   a cup of coffee               150 coins
+~
+#3613
+ivory table~
+a table made from ivory~
+a table made from ivory rests in the middle of the room here.~
+~
+12 0 0
+0 0 0 0
+2000 10 10
+100
+E
+table~
+Made from pure ivory, this table looks magnificient when shone in sunlight.
+Many designs are incribed onto it, making this a piece of art rather than
+an ordinary piece of furniture.
+~
+#3614
+plate of pasta~
+A large plate of pasta~
+A yummy plate of pasta is sitting here waiting to be devoured!~
+~
+19 524288 1
+50 0 0 0
+10 100 10
+100
+#3615
+rice cake~
+a rice cake~
+a rice cake is sitting here~
+~
+19 524288 1
+40 0 0 0
+10 80 10
+100
+#3616
+loaf raisin bread~
+a loaf of raisin bread~
+a golden loaf of raisin bread rests here.~
+~
+19 524288 1
+30 0 0 0
+10 60 10
+100
+#3620
+muffin~
+a muffin~
+a delicious looking muffin is rolling around here.~
+~
+19 524288 1
+10 0 0 0
+10 20 10
+100
+#3699
+chair wooden old~
+an old wooden chair~
+an old wooden chair rests in the center of this room.~
+~
+12 0 0
+0 0 0 0
+5000 10 10
+100
+#0
+$~

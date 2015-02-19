@@ -1,0 +1,2242 @@
+#7700
+Bottom of the moat~
+   You are at a corner on the bottom of a large moat.  The moat
+bottom consists of a muddy silt and sand mixture.  You can see
+a large metal grate here.  The large grate allows water to flow
+into some sort of old drainage system.  The water is so cold.  How
+can you get out of here?  The moat continues east south and up.
+~
+77 1 6
+D1
+~
+~
+0 -1 7701
+D2
+~
+~
+0 -1 7707
+D4
+~
+~
+0 -1 7741
+D5
+The large grate prevents access to the pipe.
+~
+grate~
+1 -1 792
+S
+#7701
+Bottom of the moat~
+   You find yourself swimming along the bottom of a deep moat.  The
+water is very cold and very murky.  The murky water surrounds you 
+in all directions and you wonder if you can ever make it out of 
+here.
+~
+77 1 6
+D1
+~
+~
+0 -1 7702
+D2
+~
+~
+0 -1 7708
+D3
+~
+~
+0 -1 7700
+D4
+~
+~
+0 -1 7742
+S
+#7702
+Bottom of the moat~
+   The cold murky water chills your bones.  With every stroke you
+make you realize that you are no closer to getting out of here.  The
+blanket of darkness that surrounds you in all directions leaves you
+with no idea of what direction to go next.
+~
+77 1 6
+D1
+~
+~
+0 -1 7703
+D2
+~
+~
+0 -1 7709
+D3
+~
+~
+0 -1 7701
+D4
+~
+~
+0 -1 7743
+S
+#7703
+Bottom of the moat~
+   You are swimming in murky water.  The moat bottom is very muddy
+and the water is very cold.  The murky water surrounds you in all
+directions as you frantically search for a way out.
+~
+77 1 6
+D1
+~
+~
+0 -1 7704
+D3
+~
+~
+0 -1 7702
+D4
+~
+~
+0 -1 7744
+S
+#7704
+Bottom of the moat~
+   You are swimming along the bottom of a large moat.  The moat
+bottom is covered with a deep mud.  The water is murky and cold.
+As you look around at the murky water that is surrounding you in
+all directions you wonder if you will make it out of this place.
+~
+77 1 6
+D1
+~
+~
+0 -1 7705
+D2
+~
+~
+0 -1 7710
+D3
+~
+~
+0 -1 7703
+D4
+~
+~
+0 -1 7745
+S
+#7705
+Bottom of the moat~
+   You are swimming in a moat.  The water is murky and cold.  You
+cannot wait to leave this bone chilling darkness.  The moat bottom
+is covered with silt and water surrounding you in all directions.
+~
+77 1 6
+D1
+~
+~
+0 -1 7706
+D2
+~
+~
+0 -1 7711
+D3
+~
+~
+0 -1 7704
+D4
+~
+~
+0 -1 7746
+S
+#7706
+Bottom of the moat~
+   You are at the corner of the moat.  You can tell this because
+you just broke your nose by swimming into the wall, this water is
+so murky.  The moat wall leads west and south.  The murky water
+surrounds you.
+~
+77 1 6
+D2
+~
+~
+0 -1 7712
+D3
+~
+~
+0 -1 7705
+D4
+~
+~
+0 -1 7747
+S
+#7707
+Bottom of the moat~
+   You are swimming along the bottom of a deep moat.  The water at
+the bottom is much more murky than the water above.  It must be
+because of the thick layer of silt that lines the moat floor.  The
+cold muddy water surrounds you in all directions.
+~
+77 1 6
+D0
+~
+~
+0 -1 7700
+D1
+~
+~
+0 -1 7708
+D2
+~
+~
+0 -1 7713
+D4
+~
+~
+0 -1 7748
+S
+#7708
+Bottom of the moat~
+   The moat bottom is very muddy.  The water is so cold.  You look
+around but cannot see your own hand in front of your face.  The murky
+water limits your vision to only inches.  The darkness surrounds you
+on all sides.
+~
+77 1 6
+D0
+~
+~
+0 -1 7701
+D1
+~
+~
+0 -1 7709
+D2
+~
+~
+0 -1 7714
+D3
+~
+~
+0 -1 7707
+S
+#7709
+Bottom of the moat~
+   You are in a corner at the bottom of the moat.  You can feel the
+wall leading north and west.  The water is so dirty down here, you
+use the wall for guidance as you try to make your way out of this 
+darkness.
+~
+77 1 6
+D0
+~
+~
+0 -1 7702
+D3
+~
+~
+0 -1 7708
+S
+#7710
+Bottom of the moat~
+   You find yourself in a corner at the bottom of a large moat.
+The water is cold and murky.  You can't see anything and you 
+wonder how you will get yourself out of this mess.  The murky
+darkness surrounds you on all sides.
+~
+77 1 6
+D0
+~
+~
+0 -1 7704
+D1
+~
+~
+0 -1 7711
+S
+#7711
+Bottom of the moat~
+   You are swimming through muddy water on the bottom of a large
+moat. The water is very cold and deep.  The mud from the soft
+bottom has made seeing any further than 2 feet in front of you
+impossible. You are surrounded by water on all sides.
+~
+77 1 6
+D0
+~
+~
+0 -1 7705
+D1
+~
+~
+0 -1 7712
+D2
+~
+~
+0 -1 7715
+D3
+~
+~
+0 -1 7710
+S
+#7712
+Bottom of the moat~
+   You are at the bottom of a large moat.  The water you are 
+submerged in is very cold and very murky.  The floor is covered 
+with a soft layer of silt and mud.  The dark water completely 
+impairs your vision in all directions.
+~
+77 1 6
+D0
+~
+~
+0 -1 7706
+D2
+~
+~
+0 -1 7716
+D3
+~
+~
+0 -1 7711
+D4
+~
+~
+0 -1 7749
+S
+#7713
+Bottom of the moat~
+   You are swimming in a very deep moat.  The cloudy water makes it
+hard to see anything.  The moat bottom is covered with a thick
+layer of silt and mud.  You look around to try and determine where
+to go next but the dark water surrounding you makes this impossible.
+~
+77 1 6
+D0
+~
+~
+0 -1 7707
+D1
+~
+~
+0 -1 7714
+D2
+~
+~
+0 -1 7717
+D4
+~
+~
+0 -1 7750
+S
+#7714
+Bottom of the moat~
+   You are in a very small corner.  The cold water surrounds you in 
+complete darkness.  The muddy bottom is covered with a thick layer
+of silt.  You feel the wall leading north and west.
+~
+77 1 6
+D0
+~
+~
+0 -1 7708
+D3
+~
+~
+0 -1 7713
+S
+#7715
+Bottom of the moat~
+   You find yourself in a cramped corner on the bottom of a large
+moat. The murky water is very cold, and so are you.  How will you
+get out of here.  The wall can lead you north or east.
+~
+77 1 6
+D0
+~
+~
+0 -1 7711
+D1
+~
+~
+0 -1 7716
+S
+#7716
+Bottom of the moat~
+   You are very cold.  The water in this deep moat chills you to the
+very core.  The murky water completely impairs your vision as you try
+to determine a way out of here.  The dark water surrounds you on all
+sides.
+~
+77 1 6
+D0
+~
+~
+0 -1 7712
+D2
+~
+~
+0 -1 7718
+D3
+~
+~
+0 -1 7715
+D4
+~
+~
+0 -1 7751
+S
+#7717
+Bottom of the moat~
+   You are swimming in very cold water.  The water is dirty and
+murky and that makes it impossible to see very much.  The floor is
+covered with a thick layer of fine silt.  The murky water surrounds
+you in all directions.
+~
+77 1 6
+D0
+~
+~
+0 -1 7713
+D2
+~
+~
+0 -1 7719
+D4
+~
+~
+0 -1 7752
+S
+#7718
+Bottom of the moat~
+   You are on the bottom of a very deep moat.  The water is cold and
+dirty. The fine silt that covers the bottom has been stirred up and 
+it is now impossible to see anything.  The murky water surrounds you
+in all directions.
+~
+77 1 6
+D0
+~
+~
+0 -1 7716
+D2
+~
+~
+0 -1 7720
+D4
+~
+~
+0 -1 7753
+S
+#7719
+Bottom of the moat~
+   You are swimming along the bottom of a moat.  The moat bottom is
+lined with a layer of fine silt.  The cold water makes you shiver.
+As you look around to try and see where you can go next you realize
+the water is too murky to see anything.
+~
+77 1 6
+D0
+~
+~
+0 -1 7717
+D2
+~
+~
+0 -1 7721
+D4
+~
+~
+0 -1 7754
+S
+#7720
+Bottom of the moat~
+   You are at the bottom of the cold murky moat.  The slick stone
+walls surround you to the east and west.  The heavy layer of silt on
+the floor of the moat is extremely thick.  The moat continues north
+and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7718
+D2
+~
+~
+0 -1 7722
+D4
+~
+~
+0 -1 7755
+S
+#7721
+Bottom of the moat~
+   You are very cold.  The icy water chills you to your bones.  The
+large stone walls tower up to the east and west of you.  The murky
+water flows to the north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7719
+D2
+~
+~
+0 -1 7723
+D4
+~
+~
+0 -1 7756
+S
+#7722
+Bottom of the moat~
+   The deep moat surrounds you.  The cold water sends a chill down
+your spine. The floor of the moat is lined with a heavy layer of mud
+and silt. The water flows north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7720
+D2
+~
+~
+0 -1 7726
+D4
+~
+~
+0 -1 7757
+S
+#7723
+Bottom of the moat~
+   You are at the bottom of a cold moat.  The cold murky water
+surrounds you from all directions.  The large stone slabs
+surrounding the moat rise to the surface high above.  The moat
+opens up to the east and it continues to the north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7721
+D1
+~
+~
+0 -1 7724
+D2
+~
+~
+0 -1 7727
+D4
+~
+~
+0 -1 7758
+S
+#7724
+Bottom of the moat~
+   You are at a small corner of a very large moat.  The space is
+very tight right here.  The stone slabs to the east and the north
+are also topped by another slab on the top.  The moat continues 
+west and south.
+~
+77 1 6
+D2
+~
+~
+0 -1 7728
+D3
+~
+~
+0 -1 7723
+S
+#7725
+Bottom of the moat~
+   The moat bottom is layered with a thick heavy silt.  The stone
+blocks that line the walls and ceiling surround you.  This corner is
+very tight.  The moat continues east and south.
+~
+77 1 6
+D1
+~
+~
+0 -1 7726
+D2
+~
+~
+0 -1 7731
+S
+#7726
+Bottom of the moat~
+   You find yourself at the bottom of a large moat.  The cold muddy
+water has an awful affect on your spirits. You look up towards the
+surface hoping to see sunlight but the dark waters let no light 
+pass. The moat flows north and south here and you notice a nook to
+the west.
+~
+77 1 6
+D0
+~
+~
+0 -1 7722
+D2
+~
+~
+0 -1 7732
+D3
+~
+~
+0 -1 7725
+D4
+~
+~
+0 -1 7759
+S
+#7727
+Bottom of the moat~
+   You are at the bottom of a large moat.  The floor is muddy, the 
+water is cold, it's just a moat.  The walls of the moat are large
+solid blocks of stone.  The moat continues north and south as you
+notice a small inlet to the east.
+~
+77 1 6
+D0
+~
+~
+0 -1 7723
+D1
+~
+~
+0 -1 7728
+D2
+~
+~
+0 -1 7733
+D4
+~
+~
+0 -1 7760
+S
+#7728
+Bottom of the moat~
+   You are in a deep moat.  The water is cold and so are you.  The
+muddy moat bottom is scattered with scaly skin and bones.  The large
+stone walls encase the deep moat completely.  The moat continues in
+all directions.
+~
+77 1 6
+D0
+~
+~
+0 -1 7724
+D1
+~
+~
+0 -1 7729
+D2
+~
+~
+0 -1 7734
+D3
+~
+~
+0 -1 7727
+S
+#7729
+Bottom of the moat~
+   You find yourself on the bottom of a moat.  The cold water sends
+a shiver down your spine.  Large stone slabs create a massive wall
+that surrounds you from all sides.  The Moat flows to the west and
+to the south.
+~
+77 1 6
+D2
+~
+~
+0 -1 7735
+D3
+~
+~
+0 -1 7728
+S
+#7730
+Bottom of the moat~
+   You are crowded in a tight corner at the bottom of a very deep
+moat. The walls surround you north and west and a heavy slab lies
+over your head.  The water is very cold and murky.  The moat
+continues east and south.
+~
+77 1 6
+D1
+~
+~
+0 -1 7731
+D2
+~
+~
+0 -1 7737
+S
+#7731
+Bottom of the moat~
+   You are on the bottom of a dark moat.  The cold water has chilled
+you to the bone.  The water is very murky and dark.  The moat 
+bottom is covered with a thick layer of mud.  The water continues in
+all directions.
+~
+77 1 6
+D0
+~
+~
+0 -1 7725
+D1
+~
+~
+0 -1 7732
+D2
+~
+~
+0 -1 7738
+D3
+~
+~
+0 -1 7730
+S
+#7732
+Bottom of the moat~
+    You find yourself at the bottom of a very deep moat.  The 
+surrounding water is freezing cold.  The muddy bottom is littered
+with scales and bones.  The deep stone moat leads north and south
+and you see a small space to the west.
+~
+77 1 6
+D0
+~
+~
+0 -1 7726
+D2
+~
+~
+0 -1 7739
+D3
+~
+~
+0 -1 7731
+D4
+~
+~
+0 -1 7761
+S
+#7733
+Bottom of the moat~
+   You are at the bottom corner of a very deep moat.  The cold
+water is very dark and murky.  You cannot see your hand in front
+of your face.  The large stone slabs lead to the surface on your
+west and south sides.  The water flows north and east.
+~
+77 1 6
+D0
+~
+~
+0 -1 7727
+D1
+~
+~
+0 -1 7734
+D4
+~
+~
+0 -1 7762
+S
+#7734
+Bottom of the moat~
+   You are swimming along the bottom of a very deep moat.  The
+murky water is very cold and so are you.  Heavy stone slabs line
+the sides of the moat and a thick layer of mud covers the floor.
+The moat continues east and west and you notice a small hole
+to the north.
+~
+77 1 6
+D0
+~
+~
+0 -1 7728
+D1
+~
+~
+0 -1 7735
+D3
+~
+~
+0 -1 7733
+D4
+~
+~
+0 -1 7763
+S
+#7735
+Bottom of the moat~
+   You are in a deep moat.  The moat bottom is covered with
+a heavy silt.  On top of the silt you notice bones and scales.
+The water is very cold and murky.  The water flows east and
+west and you notice a small nook to the north.
+~
+77 1 6
+D0
+~
+~
+0 -1 7729
+D1
+~
+~
+0 -1 7736
+D3
+~
+~
+0 -1 7734
+D4
+~
+~
+0 -1 7764
+S
+#7736
+Bottom of the moat~
+   You are at the bottom of a deep moat.  The cold water sends a 
+chill down your spine.  The muddy floor is covered with bones and
+scales. The large stone slabs lining the side of the moat are
+overwhelming. The moat continues east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7737
+D3
+~
+~
+0 -1 7735
+D4
+~
+~
+0 -1 7765
+S
+#7737
+Bottom of the moat~
+   You are in a moat.  The murky water is very cold.  The bottom
+is covered with a thick layer of mud and silt.  Large stone slabs
+line the walls.  The moat continues east and west and you notice a
+small space to the north.
+~
+77 1 6
+D0
+~
+~
+0 -1 7730
+D1
+~
+~
+0 -1 7738
+D3
+~
+~
+0 -1 7736
+D4
+~
+~
+0 -1 7766
+S
+#7738
+Bottom of the moat~
+   You are swimming along the bottom of a deep moat.  The dirty
+water is cold and very murky.  The large stone blocks lining the
+walls are massive.  The moat bottom is littered with scales and
+bones. The moat continues east and west and you notice a small
+nook to the north.
+~
+77 1 6
+D0
+~
+~
+0 -1 7731
+D1
+~
+~
+0 -1 7739
+D3
+~
+~
+0 -1 7737
+D4
+~
+~
+0 -1 7767
+S
+#7739
+Bottom of the moat~
+   You are on the bottom of a large moat.  The floor is covered with
+silt and the water is very murky.  When you run your hand along the
+wall you determine that the moat walls lead north and west.  You also
+notice that the slab on the eastern wall protrudes a little further
+than the others.
+~
+77 1 6
+D0
+~
+~
+0 -1 7732
+D1
+A loose limestone slab.
+~
+slab~
+8 -1 7740
+D3
+~
+~
+0 -1 7738
+D4
+~
+~
+0 -1 7768
+S
+#7740
+Secret tunnel~
+   You are in a tunnel burrowed through the mud.  The tunnel is a
+perfect cylinder.  The mud walls are packed very tightly.  The 
+tunnel continues down and you see a large slab to the west.
+~
+77 9 6
+D3
+A large limestone slab.
+~
+slab~
+8 -1 7739
+D5
+~
+~
+0 -1 7797
+S
+#7741
+Moat around the castle~
+   You are swimming at the corner of a very deep moat.  Large
+stone slabs line the walls.  The water is very cold and surrounds
+you in all directions.  The moat flows east and south.
+~
+77 1 6
+D1
+~
+~
+0 -1 7742
+D2
+~
+~
+0 -1 7748
+D4
+~
+~
+0 -1 7769
+D5
+~
+~
+0 -1 7700
+S
+#7742
+Moat around the castle~
+   You are swimming in very cold water.  The large stone slabs
+that line the moat sink deeper into the murky water.  The cold
+water sends a chill down your spine.  The moat flows east and
+west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7743
+D3
+~
+~
+0 -1 7741
+D4
+~
+~
+0 -1 7770
+D5
+~
+~
+0 -1 7701
+S
+#7743
+Moat around the castle~
+   You are in a deep moat.  The dirty water is very cold and
+smooth stone slabs stretch skyward.  The stone blocks are very
+large and must have been here for ages.  The moat continues
+east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7744
+D3
+~
+~
+0 -1 7742
+D4
+~
+~
+0 -1 7771
+D5
+~
+~
+0 -1 7702
+S
+#7744
+Moat around the castle~
+   The cold water of the moat sends a chill down your spine.  The
+water is very dirty and murky.  The large stone blocks surround
+the moat on all sides.  The heavy blocks must have taken years to
+place. The moat continues east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7745
+D3
+~
+~
+0 -1 7743
+D4
+~
+~
+0 -1 7772
+D5
+~
+~
+0 -1 7703
+S
+#7745
+Moat around the castle~
+   You find yourself in a very deep moat.  Dirty, murky water
+surrounds you in all directions.  The large stone slabs that line
+the deep moat are polished smooth from the motion of the thick
+water. The moat flows east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7746
+D3
+~
+~
+0 -1 7744
+D4
+~
+~
+0 -1 7773
+D5
+~
+~
+0 -1 7704
+S
+#7746
+Moat around the castle~
+   You are swimming in cold water in a large moat.  Stone slabs
+line the steep moat walls.  The stone blocks are massive.  The
+cold water is very dirty and vision in limited.  The large moat
+continues east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7747
+D3
+~
+~
+0 -1 7745
+D4
+~
+~
+0 -1 7774
+D5
+~
+~
+0 -1 7705
+S
+#7747
+Moat around the castle~
+   You are at a corner in a very large moat.  Large stone walls
+line the moat on all sides.  The deep water is cold and very
+murky. The stone blocks are massive.  The moat continues west
+and south.
+~
+77 1 6
+D2
+~
+~
+0 -1 7749
+D3
+~
+~
+0 -1 7746
+D4
+~
+~
+0 -1 7775
+D5
+~
+~
+0 -1 7706
+S
+#7748
+Moat around the castle~
+   You are swimming in dirty water in a very large moat.  The
+dirty water is also very cold.  The large moat is very deep
+and is lined with massive stone slabs.  The moat continues 
+north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7741
+D2
+~
+~
+0 -1 7750
+D4
+~
+~
+0 -1 7776
+D5
+~
+~
+0 -1 7707
+S
+#7749
+Moat around the castle~
+   You are swimming in a very deep moat.  The deep water is very cold
+and it sends a shiver up your spine.  The walls of the large moat are
+lined with large stone slabs.  The murky water makes it impossible
+to see much.  The moat flows north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7747
+D2
+~
+~
+0 -1 7751
+D4
+~
+~
+0 -1 7777
+D5
+~
+~
+0 -1 7712
+S
+#7750
+Moat around the castle~
+   You are swimming in very cold water in a very large moat.
+The water is murky and it makes it very hard to see very far
+in front of you.  The large stone blocks are polished smooth
+from years of exposure.  The moat flows  north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7748
+D2
+~
+~
+0 -1 7752
+D4
+~
+~
+0 -1 7778
+D5
+~
+~
+0 -1 7713
+S
+#7751
+Moat around the castle~
+   You are very cold.  The deep water you are swimming in is very
+cold. Massive stone blocks line the moat walls.  The stone blocks
+are polished smooth by the motion of the murky water.  The moat
+flows north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7749
+D2
+~
+~
+0 -1 7753
+D4
+~
+~
+0 -1 7779
+D5
+~
+~
+0 -1 7716
+S
+#7752
+Moat around the castle~
+   You are in a moat.  Large stone blocks line the moat walls
+and they extend up and down as far as you can see.  The water
+is very cold and murky.  The moat continues north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7750
+D2
+~
+~
+0 -1 7754
+D4
+~
+~
+0 -1 7780
+D5
+~
+~
+0 -1 7717
+S
+#7753
+Moat around the castle~
+   You are in a moat.  The murky water surrounding you is very 
+cold. The thick dirty water makes visibility zero.  The large 
+stone slabs that create the moat walls plunge deeper into the
+moat. The moat continues north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7751
+D2
+~
+~
+0 -1 7755
+D4
+~
+~
+0 -1 7781
+D5
+~
+~
+0 -1 7718
+S
+#7754
+Moat around the castle~
+   You are swimming in very cold water.  The moat is very well built
+and very large.  The stone blocks are huge.  The cold water sends a
+chill down your spine.  The stone surface is polished smooth from
+many years of water beating upon them.  The moat flows north and
+south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7752
+D2
+~
+~
+0 -1 7756
+D4
+~
+~
+0 -1 7782
+D5
+~
+~
+0 -1 7719
+S
+#7755
+Moat around the castle~
+   You are swimming in very cold water.  With every move you
+feel another chill run down your spine.  The moat is very wide
+and very deep.  Such a project must have taken years of hard
+work and labor.  The moat leads north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7753
+D2
+~
+~
+0 -1 7757
+D4
+~
+~
+0 -1 7783
+D5
+~
+~
+0 -1 7720
+S
+#7756
+Moat around the castle~
+   You are in a moat.  The large stone blocks on both sides of you
+extend as far as the murky water allows you to see.  The murky
+water is very cold and deep.  The moat continues north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7754
+D2
+~
+~
+0 -1 7758
+D4
+~
+~
+0 -1 7784
+D5
+~
+~
+0 -1 7721
+S
+#7757
+Moat around the castle~
+   You are swimming in very cold murky water.  The large moat
+is lined with massive stone blocks.  The stone blocks are huge
+and extremely smooth.  The cold murky water makes vision
+impossible. The moat continues north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7755
+D2
+~
+~
+0 -1 7759
+D4
+~
+~
+0 -1 7785
+D5
+~
+~
+0 -1 7722
+S
+#7758
+Moat around the castle~
+   You are swimming in a very deep moat.  The cold water sends a 
+shiver up your spine.  The deep water is also very murky and this 
+makes it very hard to see.  The large stone blocks that line the 
+walls are very worn from the elements.  The moat continues north 
+and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7756
+D2
+~
+~
+0 -1 7760
+D4
+~
+~
+0 -1 7786
+D5
+~
+~
+0 -1 7723
+S
+#7759
+Moat around the castle~
+   You are swimming in very cold water in a very deep moat.  Large
+stone blocks surround you on both sides.  The cold water is very 
+dirty and murky.  You find it hard to see anything in front of you.
+The moat continues north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7757
+D2
+~
+~
+0 -1 7761
+D4
+~
+~
+0 -1 7787
+D5
+~
+~
+0 -1 7726
+S
+#7760
+Moat around the castle~
+   You are in a moat.  The water is very cold and very murky.  The
+cold makes you shiver and the dirty water makes it impossible to see
+anything in the moat.  The large stone blocks that line the sides of
+the moat seem to extend forever.  The moat flows north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7758
+D2
+~
+~
+0 -1 7762
+D4
+~
+~
+0 -1 7788
+D5
+~
+~
+0 -1 7727
+S
+#7761
+Moat around the castle~
+   You are in a moat.  The water is cold and murky.  The stones
+that line the moat walls are massive.  The cold water sends a chill
+down your spine.  The moat continues north and south.
+~
+77 1 6
+D0
+~
+~
+0 -1 7759
+D2
+~
+~
+0 -1 7768
+D4
+~
+~
+0 -1 7789
+D5
+~
+~
+0 -1 7732
+S
+#7762
+Moat around the castle~
+   You find yourself at the corner of a large moat.  The water
+is very cold and murky.  Large stone slabs extend up and down
+as far as you can see in this dirty water.  The moat bends north 
+and east around the corner.
+~
+77 1 6
+D0
+~
+~
+0 -1 7760
+D1
+~
+~
+0 -1 7763
+D4
+~
+~
+0 -1 7790
+D5
+~
+~
+0 -1 7733
+S
+#7763
+Moat around the castle~
+   You find yourself in very cold water in a very large moat.  The
+moat is lined with massive stone slabs that appear to stretch out
+forever. The cold murky water makes vision impossible.  The moat
+continues east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7764
+D3
+~
+~
+0 -1 7762
+D4
+~
+~
+0 -1 7791
+D5
+~
+~
+0 -1 7734
+S
+#7764
+Moat around the castle~
+   You are swimming in a moat surrounded by large stone slabs.  The
+water in the moat is very cold and murky.  The murky water greatly
+impairs your vision.  The large stone blocks are polished smooth 
+from years of exposure.  The moat flows east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7765
+D3
+~
+~
+0 -1 7763
+D4
+~
+~
+0 -1 7792
+D5
+~
+~
+0 -1 7735
+S
+#7765
+Moat around the castle~
+   You are very cold.  The cold water from this murky moat has
+placed a chill into your bones.  The large stone blocks that line
+the moat walls are like nothing you have ever seen before.  The
+moat continues east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7766
+D3
+~
+~
+0 -1 7764
+D4
+~
+~
+0 -1 7793
+D5
+~
+~
+0 -1 7736
+S
+#7766
+Moat around the castle~
+   You are swimming in a large moat.  The moat is massive.  It must
+have taken years to build such a hole.  The water is very cold and
+murky. The stones used for its construction are larger than anything
+you could have imagined.  The moat flows east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7767
+D3
+~
+~
+0 -1 7765
+D4
+~
+~
+0 -1 7794
+D5
+~
+~
+0 -1 7737
+S
+#7767
+Moat around the castle~
+   You are swimming in very cold water in a very deep moat.  The
+water above and below you seems to reach out forever.  The large
+stone slabs that line the walls are just as overwhelming.  The moat
+flows east and west.
+~
+77 1 6
+D1
+~
+~
+0 -1 7768
+D3
+~
+~
+0 -1 7766
+D4
+~
+~
+0 -1 7795
+D5
+~
+~
+0 -1 7738
+S
+#7768
+Moat around the castle~
+   You are at a corner in a very large moat.  The cold water
+bends north and west around the corner.  The large stone slabs
+that line the walls here are more impressive than anything you
+have ever seen before.
+~
+77 1 6
+D0
+~
+~
+0 -1 7761
+D3
+~
+~
+0 -1 7767
+D4
+~
+~
+0 -1 7796
+D5
+~
+~
+0 -1 7739
+S
+#7769
+Moat around the castle~
+   You are at the corner of a very large moat.  The water is
+very deep and very cold.  The stone blocks lining the moat
+are huge.  You can see no sign of the bottom below you.  The
+moat flows east and south.
+~
+77 4 6
+D1
+~
+~
+0 -1 7770
+D2
+~
+~
+0 -1 7776
+D5
+~
+~
+0 -1 7741
+S
+#7770
+Moat around the castle~
+   You are up to your neck in very cold water.  The moat is very
+deep. Why are those blocks so slippery?  You wonder why anybody
+would go through the trouble of creating such a huge crater. The
+moat flows east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7771
+D3
+~
+~
+0 -1 7769
+D5
+~
+~
+0 -1 7742
+S
+#7771
+Moat around the castle~
+   You start to shiver as the cold water starts to take its
+hold on you.  This water is too cold!  The large stone blocks
+lining the moat are smooth and slippery.  It would be impossible
+to climb out.  The moat flows east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7772
+D3
+~
+~
+0 -1 7770
+D5
+~
+~
+0 -1 7743
+S
+#7772
+Moat around the castle~
+   Large stone blocks line the walls of the moat.  The water is
+very cold.  You look down and cannot see bottom, this moat must
+be deep.  The moat flows east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7773
+D3
+~
+~
+0 -1 7771
+D5
+~
+~
+0 -1 7744
+S
+#7773
+Moat around the castle~
+   The cold water chills your bones.  The water is very deep
+and the stone blocks are very slippery.  How are you going to
+get out of this place?  The moat flows east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7774
+D3
+~
+~
+0 -1 7772
+D5
+~
+~
+0 -1 7745
+S
+#7774
+Moat around the castle~
+   The moat is very cold.  How can you get out of this place?
+The smooth surface of the stone blocks makes climbing out of
+here impossible with frostbitten fingers.  The moat flows
+east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7775
+D3
+~
+~
+0 -1 7773
+D5
+~
+~
+0 -1 7746
+S
+#7775
+Moat around the castle~
+   You reach to corner of the moat and realize that the next
+side is just as inescapable as the side you left.  The stone
+blocks are very slippery.  The water is deep and cold.  This
+place sucks.  The moat continues west and south.
+~
+77 4 6
+D2
+~
+~
+0 -1 7777
+D3
+~
+~
+0 -1 7774
+D5
+~
+~
+0 -1 7747
+S
+#7776
+Moat around the castle~
+   The water is so cold!  You cannot feel your fingers or toes. The 
+large stones blocks surrounding the moat make it impossible to climb
+out. The moat flows north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7769
+D2
+~
+~
+0 -1 7778
+D5
+~
+~
+0 -1 7748
+S
+#7777
+Moat around the castle~
+   The water in the moat is very cold.  The moat is surrounded by 
+large stone blocks that line the walls.  The blocks are very 
+slippery.  You could try to climb out but your cold fingers would 
+never grip the smooth surface. The moat flows north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7775
+D2
+~
+~
+0 -1 7779
+D5
+~
+~
+0 -1 7749
+S
+#7778
+Moat around the castle~
+   You are swimming in a moat.  The water is so cold.  How are
+you going to make it out of here?  It must have taken the troll
+workers years of very hard labor to create this hole.  The moat
+flows north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7776
+D2
+~
+~
+0 -1 7780
+D5
+~
+~
+0 -1 7750
+S
+#7779
+Moat around the castle~
+   You are in a deep moat.  The water is very cold.  The large stone
+blocks that surround this pit are very smooth and slippery.  How did
+the trolls dig such a hole?  How could they place such stones?  The
+moat flows north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7777
+D2
+~
+~
+0 -1 7781
+D5
+~
+~
+0 -1 7751
+S
+#7780
+Moat around the castle~
+   The moat is very deep and very cold.  The stone blocks that
+surround the moat are large and very slippery.  How are you going
+to get out of here before you freeze to death?  The moat flows
+north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7778
+D2
+~
+~
+0 -1 7782
+D5
+~
+~
+0 -1 7752
+S
+#7781
+Moat around the castle~
+   The stone blocks lining this very deep moat are huge.  The water
+is so very cold.  The blocks are very smooth from years of wind and
+rain beating on them.  The stone surface is so smooth you would
+never be able to climb out.  The moat flows north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7779
+D2
+~
+~
+0 -1 7783
+D5
+~
+~
+0 -1 7753
+S
+#7782
+Moat around the castle~
+   You are in very deep water.  You have lost all feeling in your 
+fingers from the cold water.  The stone blocks lining the moat 
+prevent you from climbing out.  The moat continues north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7780
+D2
+~
+~
+0 -1 7784
+D5
+~
+~
+0 -1 7754
+S
+#7783
+Moat around the castle~
+   You are swimming in a deep moat.  The water is very cold and you
+are losing feeling in your fingers and toes.  You want to get out
+of here.  The stone blocks are too smooth to allow escape.  The moat
+continues north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7781
+D2
+~
+~
+0 -1 7785
+D5
+~
+~
+0 -1 7755
+S
+#7784
+Moat around the castle~
+   The cold water is really taking its toll on you, your fingers 
+have lost all feeling.   The water is so deep.  How long would it 
+take to dig such a hole?  The moat flows north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7782
+D2
+~
+~
+0 -1 7786
+D5
+~
+~
+0 -1 7756
+S
+#7785
+Moat around the castle~
+   The moat is flooded with very cold water.  The walls of the moat
+are lined with large stone blocks.  The stone blocks are very smooth
+and slippery.  You are so cold.  You wonder how you will get out of
+here. The moat flows north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7783
+D2
+~
+~
+0 -1 7787
+D5
+~
+~
+0 -1 7757
+S
+#7786
+Moat around the castle~
+   The moat is very deep.  The stone blocks on either side of the
+moat make escaping from this terrible place impossible.  Years of
+weather and fine craftsmanship have made the stone blocks marble
+smooth. The moat flows north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7784
+D2
+~
+~
+0 -1 7788
+D5
+~
+~
+0 -1 7758
+S
+#7787
+Moat around the castle~
+   You look at the stone blocks lining the walls of this very
+deep moat and wonder how you will ever get out.  The stone
+blocks are very smooth and gripping the slippery surface would
+be impossible. The moat continues north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7785
+D2
+~
+~
+0 -1 7789
+D5
+~
+~
+0 -1 7759
+S
+#7788
+Moat around the castle~
+   You are in a deep moat, the water is very cold.  The sides
+of the moat are lined with large stone blocks.  The large blocks
+are very smooth and slippery.  The moat continues north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7786
+D2
+~
+~
+0 -1 7790
+D5
+~
+~
+0 -1 7760
+S
+#7789
+Moat around the castle~
+   You are in a moat.  The water to very cold and very deep.  You
+look down and cannot see the bottom.  The moat is surrounded by
+stone blocks.  The blocks are very worn and weather-beaten.  The
+moat continues north and south.
+~
+77 4 6
+D0
+~
+~
+0 -1 7787
+D2
+~
+~
+0 -1 7796
+D5
+~
+~
+0 -1 7761
+S
+#7790
+Moat around the castle~
+   You are at the corner of a very large moat.  The water here is
+as cold as the moat is big.  You look around the corner only to see
+much the same as where you just came from, cold water.  The heavy
+blocks lining the side of the moat make climbing out a dream.  The
+moat flows north and east.
+~
+77 4 6
+D0
+~
+~
+0 -1 7788
+D1
+~
+~
+0 -1 7791
+D5
+~
+~
+0 -1 7762
+S
+#7791
+Moat around the castle~
+   You are in very cold water.  The moat is deep.  The stone blocks
+that line the moat are worn very smooth from years of erosion.  The
+smooth surface on the block makes climbing out impossible.  The moat
+flows east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7792
+D3
+~
+~
+0 -1 7790
+D5
+~
+~
+0 -1 7763
+S
+#7792
+Moat around the castle~
+   The stone blocks surrounding the moat are massive.  How did the
+builders manage to work with them?  The water in the moat is cold
+and very deep.  The moat continues east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7793
+D3
+~
+~
+0 -1 7791
+D5
+~
+~
+0 -1 7764
+S
+#7793
+Moat around the castle~
+   This water is so cold!  The stone blocks surrounding the moat are
+too slippery to allow escape.  Will you every leave this place?  This
+moat will not be a place to revisit.  The moat continues east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7794
+D3
+~
+~
+0 -1 7792
+D5
+~
+~
+0 -1 7765
+S
+#7794
+Moat around the castle~
+   The water is very deep and cold.  The large stone blocks are very
+smooth and slippery.  The trolls that built this moat must have
+worked for many years to dig a hole this size.  The moat flows east
+and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7795
+D3
+~
+~
+0 -1 7793
+D5
+~
+~
+0 -1 7766
+S
+#7795
+Moat around the castle~
+   You are in a moat.  The water is very cold and so are you.  The
+moat is surrounded with large stone blocks.  The blocks have been
+polished to a marble smooth finish from years of erosion.  The
+moat continues east and west.
+~
+77 4 6
+D1
+~
+~
+0 -1 7796
+D3
+~
+~
+0 -1 7794
+D5
+~
+~
+0 -1 7767
+S
+#7796
+Moat around the castle~
+   You have reached a corner of the moat.  You look back over your
+shoulder to realize the best is probably over.  The next side of the
+moat looks colder than the side you just left.  You close your eyes
+and imagine you are back in Midgaard resting in front of the Grunting
+Boar's fireplace.  The moat leads west and north.
+~
+77 4 6
+D0
+~
+~
+0 -1 7789
+D3
+~
+~
+0 -1 7795
+D5
+~
+~
+0 -1 7768
+S
+#7797
+Secret tunnel~
+   You are in a large tunnel in the mud.  The hard packed mud walls
+form a perfect cylindrical shape.  There is a light coming from the
+north and the exit up is completely dark.
+~
+77 9 0
+D0
+~
+~
+0 -1 7798
+D4
+~
+~
+0 -1 7740
+S
+#7798
+Outside a large lair~
+   You are in a small entrance room.  The tunnel to the west is 
+dark. There is an odd glow radiating from the large chamber to
+the east.
+~
+77 77 0
+D1
+~
+~
+0 -1 7799
+D2
+~
+~
+0 -1 7797
+S
+#7799
+Lair of the Lizard Shaman~
+   You are inside a large hole in the mud.  The mud is packed very
+tight and it appears that the walls were made many years ago.  There
+are strange symbols carved into them.  At the far end of the chamber
+you can see an altar made of stone.  It also has symbols carved into
+it. The room is lit by 4 old torches on each wall.  The only exit is
+west into the dark tunnel.
+~
+77 67108872 0
+D3
+~
+~
+0 -1 7798
+S
+#0
+$~

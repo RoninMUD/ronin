@@ -1,0 +1,166 @@
+#8001
+cop guard~
+Sonicity Cop~
+A Sonicity Cop is here, protecting his city.
+~
+~
+201 0 500 Y
+10 10 1 10d3+150 2d7+1
+1000 15000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8002
+quester~
+quester~
+A quester is standing here.
+~
+~
+72 0 500 Y
+8 12 6 10d3+80 2d7+1
+500 12000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8003
+leader~
+Cop's Leader~
+The Cop's Leader is standing in front of you.
+~
+He is a very tough guy.
+~
+10 8 1000 Y
+20 0 -2 10d3+1000 6d3+4
+2000 60000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8004
+prisoner~
+prisoner~
+A prisoner is standing here.
+~
+They are no good.
+~
+42 1048584 -1000 Y
+15 5 0 10d3+150 6d2+5
+5 7000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8005
+odey~
+Odey~
+Odey is standing here.
+~
+He has killed 100 people in 1 night, and he needed 3000 cops to catch him.
+~
+131115 128 -1000 Y
+25 -3 -3 100d3+2500 10d2+25
+5 150000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8006
+golem~
+golem~
+A golem is standing here.
+~
+You see a 7 feet high golem standing in front of you.
+~
+10 0 500 Y
+20 1 0 10d3+900 9d2+3
+1000 60000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8007
+shopkeeper~
+Sonicity Shopkeeper~
+A Sonicity Shopkeeper is standing here.
+~
+He is a honest man.
+~
+10 134217856 500 Y
+23 0 0 10d3+3000 10d2+5
+20000 90000
+8 8 1
+0 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#8008
+waiter~
+restaurant waiter~
+A restaurant waiter is standing here, ready to take your order.
+~
+He is a hardworking man.
+~
+10 134217856 500 Y
+20 0 0 10d3+4500 10d2+5
+5000 70000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#8009
+shopkeeper~
+Sonicity Shopkeeper~
+A Sonicity Shopkeeper is standing here.
+~
+He is a honest man.
+~
+10 134217856 500 Y
+23 0 0 10d3+3000 10d2+5
+20000 90000
+8 8 1
+0 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#8010
+shopkeeper~
+Sonicity Shopkeeper~
+A Sonicity Shopkeeper is standing here.
+~
+He is a honest man.
+~
+10 134217856 500 Y
+23 0 0 10d3+3000 10d2+5
+20000 90000
+8 8 1
+0 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#8011
+cop guard~
+Restaurant's guard~
+A Restaurant's guard is standing here protecting the restuarant.
+~
+The guard says 'due to the waiter here always die, so our boss asked us to protect here.'
+This is a very tough guard.
+~
+15 136 500 Y
+25 -3 -10 10d3+4000 20d1+5
+1000 150000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,757 @@
+#20100
+scroll papyrus ancient~
+ancient papyrus scroll~
+An ancient papyrus scroll rests here, covered in scrawl from a distant land.~
+~
+32 64 1
+20101 4485 12928 531
+2 23473 3626149
+11
+E
+scroll~
+
+ The papyrus scroll is covered with chinese characters,
+the language of the Shogun's domain in Daimyo.
+~
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+401
+#20101
+headband musashi legend~
+Musashi's Headband~
+A fine silk headband lies here, stained with sweat and blood.~
+~
+9 266400065 17
+9 -1 -1 -1
+7 333667 5807
+0
+E
+headband~
+
+ The silken white headband, spotted with blood, has seen
+much of the world. Musashi traveled far and wide in search
+of an equal to his swordsmanship, but never found one.
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 4
+A
+1 -1
+T
+18481
+#20106
+coins pile~
+A pile of coins~
+A huge pile of shiny gold coins are in the statue.~
+~
+20 134217728 1
+1000000 0 0 0
+10 10 10
+60
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20107
+Drums Panic~
+Drums of Panic~
+A strange set of runed drums is propped up against the wall here.
+~
+~
+4 82899462 16385
+30 5 3 100
+10 12500 750
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#20108
+Key Sun~
+Key of the Sun~
+A gleaming key lies here, made of pure light.~
+~
+18 524288 5
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20109
+Mace skull~
+A Jarldian-headed Mace~
+A stick with Jarldian's severed head mounted on it lies on the ground.~
+$r Mace bahs loudly as it flies through the air.~
+5 134217812 8193
+0 8 5 6
+22 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 5
+B
+1024
+#20111
+Statue hachiman~
+Statue of Hachiman~
+A very lifelike statue of the war god Hachiman watches you closely.~
+~
+15 1 0
+1000 15 20112 0
+675 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20112
+Key blood stained~
+A Blood Stained Key~
+A once shiny key, now covered in blood lies on the ground.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20130
+Boots Armored~
+Armored Boots~
+A pair of armored boots is lying on the ground.~
+~
+9 4257794 65
+12 0 0 0
+10 37500 12500
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+30 20
+#20131
+wand bone~
+A Cracked Bone Wand~
+A dry and cracked wand of bone lies on the ground.~
+~
+3 524352 16385
+0 7 7 0
+10 75000 12500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20132
+battlesuit jade battle suit armor~
+A Gleaming Jade Battlesuit~
+A suit of jade battle armor rests upon the ground here.~
+~
+9 134217794 9
+24 0 0 0
+10 100000 40000
+6
+E
+jade~
+Laid out on the floor before you is a very old and beautifully crafted suit
+of ornately carved and gold inlaid jade battle armor.  It pulses every now and
+then with an unusual greenish glow, enhancing even more the beauty of the
+translucent green stone from which it was made.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+19 5
+#20133
+Gauntlets Jade~
+Jade Gauntlets~
+You see a pair of gauntlets made from a greenish translucent stone.~
+~
+9 134217794 129
+7 0 0 0
+10 10 30000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 5
+A
+19 2
+#20134
+Throne Dragon Bone~
+Throne of Dragon Bones~
+A massive throne made from dragon bones towers above you.~
+~
+12 1 0
+0 0 0 0
+450 10 10
+100
+E
+bones~
+The dragon which provided the bones from which this throne is made must have 
+been a truly fearsome creature! The legs are made from vertebrae nearly as
+round as you are tall, made from what looks to be jade instead of bone, you
+gather that some sort of magic is present here. Its ribs have been ingeniously
+shaped with magic to form the seat, arms and back. The bones from the legs 
+extend out from either side of the throne and the dragon's huge gaping head is
+mounted at the top.  All in all, the whole structure makes you suddenly 
+insecure in your abilities as a warrior.
+~
+E
+throne~
+The dragon which provided the bones from which this throne is made must have 
+been a truly fearsome creature! The legs are made from vertebrae nearly as
+round as you are tall, made from what looks to be jade instead of bone, you
+gather that some sort of magic is present here. Its ribs have been ingeniously
+shaped with magic to form the seat, arms and back. The bones from the legs 
+extend out from either side of the throne and the dragon's huge gaping head is
+mounted at the top.  All in all, the whole structure makes you suddenly feel
+insecure in your abilities as a warrior.
+~
+E
+jade~
+The dragon which provided the bones from which this throne is made must have 
+been a truly fearsome creature! The legs are made from vertebrae nearly as
+round as you are tall, made from what looks to be jade instead of bone, you
+gather that some sort of magic is present here. Its ribs have been ingeniously
+shaped with magic to form the seat, arms and back. The bones from the legs 
+extend out from either side of the throne and the dragon's huge gaping head is
+mounted at the top.  All in all, the whole structure makes you suddenly feel
+insecure in your abilities as a warrior.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20135
+bracers jade dragon scale~
+Jade Dragon Bracers~
+A pair of green jade bracers carved with a coiled dragon rest upon the ground.~
+~
+9 134217794 257
+5 0 0 0
+10 10 30000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+48 20
+A
+19 2
+#20136
+plate breastplate jade~
+A Green Jade Breastplate~
+A shimmering green jade breastplate lies on the ground.~
+~
+9 134217794 9
+17 0 0 0
+10 10 30000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+19 1
+B
+8192
+#20137
+helm ornate carved wood~
+Helm of Lacquered Wood~
+An ornately carved helm made from exotic wood lies on the ground, surrounded in a peculiar crimson mist.~
+~
+9 239133186 16
+10 0 0 0
+10 37500 66666
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+13 -50
+#20138
+helm ornate carved wood~
+Helm of Lacquered Wood~
+An ornately carved helm made from exotic wood lies on the ground, surrounded in a peculiar crimson mist.~
+~
+9 239133186 17
+10 0 0 0
+10 37500 66666
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+13 -50
+#20142
+torch flickering~
+a flickering torch~
+An old torch hangs on the wall, on the verge of burning out.~
+~
+1 0 65537
+0 0 48 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20145
+Fan War~
+War Fan~
+On the ground lies an iron war fan, painted with a bright rising sun image.~
+$r fan snaps open suddenly and glows with a mystical aura.~
+5 142663744 24577
+0 10 2 3
+16 75000 550
+17
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+17 -7
+#20146
+band mokume gane ring~
+shimmering band of Mokume Gane~
+A band of metal made from laminated gold and silver lies on the ground, shimmering.~
+~
+11 266400768 3
+0 0 0 0
+1 25000 26000
+5
+E
+band mokume ring~
+
+  As you examine the ring closer, you notice that it's composed of
+several alternating layers of gold and silver, arranged to resemble
+wood grain.  As you turn it in the light, it sparkles as if imbued with
+some mystical force.
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+17 -5
+T
+14000
+#20147
+Ninjato sword~
+a Ninjato~
+Someone's battered and chipped ninja-to has been stuck in the ground.~
+~
+5 0 8193
+0 9 2 3
+10 350 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20167
+boat wooden~
+A small boat~
+A small boat is here, partially camouflaged by palm fronds and bushes.~
+~
+13 0 0
+0 0 0 0
+450 10 10
+97
+E
+boat~
+Looking inside the boat, you notice there is a full set of armor, a pair of
+matching swords, and an assortment of other deadly tools for defense. 
+However, A large hole in the bottom of the hull has rendered it useless. Seems
+whoever dragged it up into the foliage wasn't too particular about whether
+it survived the trip or not.
+~
+E
+small~
+Looking inside the boat, you notice there is a full set of armor, a pair of
+matching swords, and an assortment of other deadly tools for defense. 
+However, A large hole in the bottom of the hull has rendered it useless. Seems
+whoever dragged it up into the foliage wasn't too particular about whether
+it survived the trip or not.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20173
+tree cryptomeria giant~
+A giant cryptomeria tree~
+A gigantic cryptomeria tree stands here, untouched by the centuries.~
+~
+13 0 0
+0 0 0 0
+9999 10 10
+100
+E
+tree~
+This behemoth is about ten feet in diameter at the base, and reaches well
+over a hundred feet into the sky.  It was planted here by the first shogun many
+hundreds of years ago and is a symbol of the longevity of the shogun's 
+family.
+~
+E
+cryptomeria~
+This behemoth is about ten feet in diameter at the base, and reaches well
+over a hundred feet into the sky.  It was planted here by the first shogun many
+hundreds of years ago and is a symbol of the longevity of the shogun's 
+family.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20182
+shinai bamboo sword~
+A shinai~
+A stiff bamboo sword has been propped up against the wall here.~
+~
+5 0 8193
+0 1 2 3
+10 10 10
+45
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -5
+A
+18 -4
+#20184
+nunchaku nunchucks~
+A nunchaku~
+A pair of sticks attached to a short chain hangs from the wall here.~
+$r nunchaku whirls around making a strange whooshing sound!~
+5 0 8193
+0 3 6 7
+10 10 10
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+#20185
+ring yawata power band~
+Yawata's Ring of Power~
+A thick glowing chromium band has been foolishly abandoned here.~
+~
+9 266400274 3
+3 0 0 0
+5 18000 24000
+5
+E
+ring yawata band~
+
+  This ring had once belonged to Hachiman, the god of war. He fought
+viciously to protect this ring, and you remember the battle well.
+Though you were disappointed at being able to actually kill the being,
+you were more than happy to claim your prize.  As you feel the pure
+vitality that is emitted from this ring, you can't help but wonder
+if it was this that eventually made people think of him as a god,
+rather than his skill in battle.  The memory of his decapitated corpse
+at your feet makes you believe it was the former.  There are two small
+emeralds in the band that look almost like eyes.
+
+~
+E
+eyes~
+
+  As you examine the "eyes" more closely, you almost see a flicker of
+light in them.  Unsure if it was your imagination you look more closely
+and after another few seconds you see it again.  Feeling a growing sense
+of something watching you, you feel that you have perhaps underestimated
+Hachiman, and wonder if you might have to battle him again some day.
+
+~
+X
+~
+4 0 0
+M
+Your ring flashes emerald green as you slip it on your finger.~
+$n's ring flashes emerald green as it's slipped on $s finger.~
+~
+~
+A
+19 3
+A
+18 3
+A
+53 5
+T
+14000
+#20195
+throne smashed wood~
+A smashed wooden throne~
+You see an beautiful wooden throne that has been toppled over and smashed.~
+~
+13 0 0
+0 0 0 0
+300 10 10
+100
+E
+throne~
+It appears to have been very beautiful at one time, however it seems that 
+somebody has taken it upon themselves to smash it to bits.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20196
+ring signet~
+Signet Ring~
+A shiny ring with the shogun's seal lies in a pool of blood on the floor.~
+~
+15 0 3
+5 5 0 0
+10 10 10
+95
+E
+ring~
+It's a remarkably strong yet light metal ring with the shogun's personal
+crest emblazoned upon it, examining it closer you notice that you might
+be able to open it. Hmmmmm.....
+~
+E
+signet~
+It's a remarkably strong yet light metal ring with the shogun's personal
+crest emblazoned upon it, examining it closer you notice that you might
+be able to open it. Hmmmmm.....
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20197
+key small~
+an extremely small key~
+An extremely small key lies on the ground, barely noticeable.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#20198
+razor occam~
+Occam's Razor~
+An extremely sharp vorpal razor lies on the ground.~
+$r Razor splits $V in half instantly!~
+5 134742081 8193
+3 9 9 3
+13 75000 25000
+15
+E
+sting queen black~
+The sting has a slightly curved tip, and the thicker part of it is made of
+tougher, almost bonelike tissue, which makes it an excellent weapon, even
+without	any alterations.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+B
+268435456
+#20199
+multicharp food processor~
+`iMultiCharp`h(TM) `b2000`h Food Processor~
+A gore-covered food processor lies on the ground, humming loudly.~
+$r MultiCharp 2000 screams loudly as it crunches through the bones of $V!~
+5 134742081 8193
+3 7 5 11
+13 75000 25000
+15
+E
+sting queen black~
+The sting has a slightly curved tip, and the thicker part of it is made of
+tougher, almost bonelike tissue, which makes it an excellent weapon, even
+without	any alterations.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+B
+268435456
+#0
+$~

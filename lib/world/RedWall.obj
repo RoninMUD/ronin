@@ -1,0 +1,231 @@
+#200
+boat logboat~
+a logboat~
+You see a long light logboat.~
+~
+22 0 1
+0 0 0 0
+3 400 43
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#201
+axe wood wooden~
+a heavy wood axe~
+A large axe with a wooden handle sticks out of a piece of wood.~
+~
+5 134217729 8193
+0 4 4 3
+20 60000 14000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 4
+#202
+apron cook cooking~
+a cooking apron~
+A clean apron lies crumpled on the ground.~
+~
+9 131072 1025
+40 0 0 0
+3 12000 7000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+#203
+fishing pole~
+a fishing pole~
+A fishing pole with it's line stuck in a bush is on the ground here.~
+~
+5 1 8193
+0 3 5 2
+5 30000 2000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#204
+staff old oak ancient~
+an old staff~
+A ancient oak staff, carved by the seasons, lies here.~
+~
+5 42051 8193
+0 4 4 6
+13 34000 6667
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 3
+A
+18 4
+#205
+shirt bark barkskin heap~
+a barkskin shirt~
+A heap of bark sewn togther lies in a crumpled mass on the ground.~
+~
+9 1090 9
+24 0 0 0
+15 80000 414
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -14
+A
+24 -3
+#206
+lid pot pan shield~
+A large pot lid~
+A large pot lid is on the ground.~
+~
+9 134217792 513
+13 0 0 0
+14 4030 23
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+17 -3
+#207
+martin sword martins~
+Martin's sword~
+A long bright bladed sword has been carefully placed on the ground.~
+~
+5 134217729 8193
+0 4 5 3
+18 60000 14000
+50
+E
+sword martin martin's~
+Looking at the blade you begin to see a faint image of Martin himself.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+36 15
+A
+19 3
+#208
+pale robe white~
+a Pale White Robe~
+A magical robe hangs mysteriously in the air.~
+~
+9 134283585 9
+40 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+18 8
+B
+150994944
+#209
+biscuit~
+a biscuit~
+A hard nurishing biscuit carefully wrapped lies here.~
+~
+19 524288 1
+12 0 0 0
+1 67 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+32768
+#210
+spoon rusty~
+a Rusty Spoon~
+A small rusted spoon has been thrown on the ground.~
+$r Rusty Spoon enters $V's body and comes back with it's heart.~
+5 267493698 8193
+0 6 6 6
+13 3400 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 9
+A
+18 9
+B
+536870912
+#0
+$~

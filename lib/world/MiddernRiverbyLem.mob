@@ -1,0 +1,187 @@
+#16610
+Berbalang demon~
+The Berbalang~
+The Berbalang stands here guarding his domain.
+~
+The Berbalang is a deadly creature, even though it looks a bit
+undersized.  Covered with black, leathery skin, this gaunt 
+creature's eyes glow with the light of evil.
+~
+46 402915464 -1000 Y
+31 -8 -8 100d2+2000 3d10+3
+200000 250000
+8 8 1
+63 0 0d0+0 1
+6 3 15 0
+0 0 0 0
+K
+66666 16643 0 0 0 0 0
+#16620
+Black Dragon~
+The Black Dragon~
+The Black Dragon is hungry, you are her food, DINNER time
+~
+The Black Dragon is huge and strong...  Her hide is thick, hard,
+and jet black. She flaps wings, slaps her tail and the cavern shakes,
+as she leaps at you.
+~
+46 34603016 -1000 Y
+23 -2 2 50d2+950 3d6+5
+15000 68000
+8 8 0
+56 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16630
+Portal guard~
+The Portal guard~
+A Portal guard stands here to prevent creatures from leaving the depths.
+~
+A huge burly man stands here.  He tells you "Don't enter, or you will
+surely die." He is wearing full plate mail and carries some very nasty
+looking weapons.  He says "IF you do enter make sure you have a recall...
+You've been warned."
+~
+202 8 1000 Y
+10 10 10 50d3+10 2d8+2
+395 12000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16640
+priest cleric~
+A Priest~
+A Priest stands here uttering arcane words.
+~
+This Priest is a minion of the dread demon lord Berbalang.  Covered
+from head to toe with tatoos in unspeakable scripts, he is a minion
+of evil, nothing else.
+~
+79 8 0 Y
+10 10 10 50d3+10 2d6+2
+500 12000
+8 8 1
+2 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16660
+projection~
+a projection of Berbalang~
+The Projection of Berbalang stands here licking his wicked blade.
+~
+A huge projection of a leathery half-man half-bat creature is here.
+Berbalang has sent his spectre out to take care of troublemakers.
+~
+108 1048588 -1000 Y
+14 6 6 20d3+125 2d8+6
+450 25000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16670
+Elf warrior~
+a grey elven warrior~
+A grey-elf warrior stands here, guarding a doorway into the unknown.
+~
+A tall but slender man, with pointed ears and green almond eyes stands here
+mindlessly fingering his sword and muttering words in an arcane fashion.  
+He says in a rich baritone voice, "Please go away, I don't have time to 
+talk -- I must guard this portal with my life."
+~
+10 128 1000 Y
+15 5 5 2d12+165 2d6+6
+250 26000
+8 8 1
+72 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16680
+Drow maiden~
+the Drow Maiden~
+A female drow warrior stands here looking very displeased.
+~
+A female drow warrior is standing here balancing a dagger on her finger.
+She says in a high pitched squeal, "Leave now, or DIE!"  She then draws her
+weapons.  You'd better do something fast!
+~
+104 8 -1000 Y
+12 8 -2 1d10+120 2d6+4
+250 15000
+8 8 2
+99 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16690
+Aerial servant~
+the Aerial servant~
+An Aerial servant is here, racing madly about the room.
+~
+A legless humanoid made of sparkling blue smoke looks back at
+you with empty eye sockets.  It opens its slit of a mouth, and
+blows a fierce wind towards you.
+~
+131118 134512778 0 Y
+32 -8 -7 100d3+4000 13d3+10
+80000 300000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16692
+Elemental earth~
+A Earth Elemental~
+A Earth Elemental stands here, contorting his ugly face in a silent scream.
+~
+A man-like creature rises out of the ground, with fists the size of small
+boulders.  It doesn't appear to like you very much at all!
+~
+131118 98440 0 Y
+31 -8 -7 100d3+3800 8d2+18
+80000 290000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16694
+Elemental fire~
+A Fire Elemental~
+A Fire Elemental burns here, consuming all in sight.
+~
+A flickering flame stands before you, raging to consume...the world
+is tinder for its desire.
+~
+131118 402948104 0 Y
+30 -8 -7 50d3+3600 20d2+10
+80000 280000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#16696
+Elemental water~
+A Water Elemental~
+A Water Elemental rises out of the pool, it's not happy to see you!
+~
+A huge trembling mass of surface tension squirts you playfully.
+~
+131118 295050 0 Y
+29 -6 -7 80d3+3500 9d2+15
+80000 270000
+8 8 0
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

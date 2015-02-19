@@ -1,0 +1,117 @@
+#2108~
+-1
+-1
+3052
+2106
+2107
+1.000000
+0.300000
+2
+3
+4
+10
+0
+%s Haven't got that on storage!~
+%s You don't seem to have that.~
+%s I don't buy that, ... Try another shop please.~
+%s I can't afford it.~
+%s You can't afford it.~
+%s That'll be %d coins, please.~
+%s You'll get %d coins for it!~
+1
+1
+2108
+0
+2133
+0
+28
+0
+0
+#2109~
+-1
+-1
+-1
+2104
+2105
+1.000000
+0.500000
+5
+9
+0
+0
+0
+%s Haven't got that on storage!~
+%s You don't seem to have that.~
+%s I don't buy that, ... Try another shop please.~
+%s I can't afford it.~
+%s You can't afford it.~
+%s That'll be %d coins, please.~
+%s You'll get %d coins for that!~
+1
+1
+2109
+0
+2124
+0
+28
+0
+0
+#2110~
+-1
+-1
+2108
+2109
+2110
+1.000000
+0.100000
+0
+0
+0
+0
+0
+%s Haven't got that on storage!~
+%s You don't seem to have that.~
+%s I don't buy that, ... Try another shop please.~
+%s I can't afford it.~
+%s You can't afford it.~
+%s That'll be %d coins, please.~
+%s You'll get %d coins for it!~
+1
+1
+2110
+0
+2114
+0
+28
+0
+0
+#2111~
+2111
+3031
+3030
+3032
+3033
+1.000000
+0.400000
+1
+8
+15
+17
+18
+%s Haven't got that on storage!~
+%s You don't seem to have that.~
+%s I don't buy that, ... Try another shop please.~
+%s I can't afford it.~
+%s You can't afford it.~
+%s That'll be %d coins, please.~
+%s You'll get %d coins for it!~
+1
+1
+2111
+0
+2122
+0
+28
+0
+0
+$~

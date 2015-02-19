@@ -1,0 +1,76 @@
+#29900
+Custom Gear Central HQ~
+  Upon entering this room, please keep silent unless spoken to.
+Use a postcard and pen to describe the following necessary
+information of which the Gods need to create your vanitied item..
+Please use this format, exactly as shown (case sensitive for Name:) :
+
+Your name: <your name here>
+Orig. name: <name of the original object>
+
+Name: <keywords for the item to wield, wear, or get.. etc>
+Short: <descript you see when its in inventory or equipped, case sensitive>
+Long: <descript you see when it's on the ground>
+Action: <only for weapons - the descript the room sees when you type "kill target">
+Action_NT: <weapons - the descript room sees when you type "kill" w/o a target>
+Wear_Room: <descript room sees when you wear or wield the object>
+Wear_Self: <descript you see when you wear or wield the object>
+Remove_Room: <descript room sees when you remove the object to inventory>
+Remove_Self: <descript you see when you remove the object to inventory>
+Extras: <any other descript you wish to add with a keyword on the item or more>
+Stats: <only if obj is quested - list quest changes on obj from normal>
+
+example:
+
+Your name: Phantomsabre
+Orig. name: black sting of the queen
+
+Name: fang mankeyfang tooth
+Short: A Bloodied Fang of the Mankey
+Long: A foot-long broken tooth is lying here, covered in bloody pulp.
+Action: Phantomsabre's Mankey-Fang gnaws deftly at the Beastly Fido's neck!
+Action_NT: Phantomsabre creates a bloody mess as he flails a Fang around the room!
+Wear_Room: Phantomsabre melds the Mankey's Fang into his palm, ready to slash anything.
+Wear_Self: You brandish the bloody Mankey's Fang, preparing for battle.
+Remove_Room: Phantomsabre screams as the Mankey's Fang slices its way from his bloodied hand.
+Remove_Self: You scream in agony as the Fang slices its way from your hand.
+Extras: look fang/mankeyfang/tooth -
+        "A glorious fang extracted from the depths of the diseased mouth
+         of the Mankey.  It grants evil power to anyone who dares to hold
+         its lacerated form.  Blood still drips from the tip in tendrils
+         laced with the ebbing life of its last victim."
+
+       -look blood -
+        "This is the blood of some hapless victim eaten by the Mankey himself."
+
+~
+299 520 0
+D5
+The Temple Square
+~
+~
+0 -1 3005
+S
+#29999
+Hall of Vanity Stuff~
+  You are in the middle of what appears to be a long marble hallway that
+stretches off in either direction as far as the eye can see.  The highly
+polished marble walls glow with such a lustre that your reflection is shown
+as clearly as if you were looking in a pond.  Numerous finely worked bronze
+and silver candelabra hang from the vaulted ceiling, causing a strange
+aura to flicker about the room as their candles eternally burn with their 
+greenish flame.  Fluted alabaster columns stretch all the way up to the
+arch of the ceiling, and between each are mounted polished metal mounts,
+every one bearing a different type of exotic weapon or piece of armor.
+One in particular catches your eye, that being the one which has nothing
+on it, save for an engraved plaque with your name on it saying 'reserved'.
+
+~
+299 520 0
+E
+wall~
+You see your image reflected off the wall's hightly polished surface. Eek!
+~
+S
+#0
+$~

@@ -1,0 +1,184 @@
+#4700
+Electric Eel~
+an electric eel~
+An electric eel swims here, ready to take a bite out of your hide!
+~
+This eel is nearly six feet long!  It is covered with dark gray 
+scales and the sewage seems to have stained them in certain
+places.  It looks like it is a very mean fellow, but takes little
+notice of you.  The teeth on it do look very dangerous and small
+arcs of electricity can be seen every so often.
+~
+16456 2080 0 Y
+45 -15 2 100d5+1600 5d7+35
+1000 360000
+11 11 0
+84 2 2d125+750 2
+5 1 5 0
+1 1 5 37
+0 0 0 0
+K
+5000 0 0 0 0 0
+#4701
+Mound Garbage~
+A mound of garbage~
+A mound of garbage rises and attacks!
+~
+This mound of garbage looks utterly disgusting and smells worse than
+anything you have ever smelled before.  It has bits of trash and garbage
+composing its skin and the remains of old weapons and armor can be
+seen, sharp as ever.
+~
+40 268435616 0 Y
+40 -15 -5 10d10+1250 2d40+40
+75000 375000
+11 11 0
+87 8454152 1d1+1499 1
+1 6 10 192
+0 0 0 0
+K
+0 0 0 0 0 0
+#4702
+Slime Mass Large~
+a large slime covered mass~
+A large mass of slime floats here.
+~
+It's green and looks like a giant mound of slime.
+~
+12 67616 0 Y
+45 -25 10 2d400+1500 10d2+15
+25 250000
+8 8 0
+78 516 1d1+499 3
+1 1 5 33
+1 1 5 100
+1 1 5 8
+0 0 0 0
+K
+500 0 0 0 0 0
+#4703
+Voodoo Doll~
+a voodoo doll~
+A small doll lies here, waiting to attack an unfortunate victim.
+~
+This evil looking thing resembles a small doll crafted to look very much
+like a living being.  You almost swear you recognize the face, but as
+soon as you almost get there, it seems to swirl and take on a new image.
+There are obvious stitches covering its body and its eyes seem to look
+right through you.
+~
+2105354 402655272 -500 Y
+70 -35 -20 10d75+2750 2d50+25
+100000 525000
+8 8 0
+87 0 1d500+1500 4
+1 1 15 8
+1 1 5 172
+1 1 10 17
+1 1 75 218
+0 0 0 32
+K
+0 0 0 0 0 0
+#4704
+Halfling Zombie~
+A halfling zombie~
+A zombie that looks like a halfling wanders about.
+~
+This creature looks like an undead version of a halfling.  It is
+short and looks relatively weak, yet reeks of zombie flesh.  It
+moans occasionally and it's grey twisted flesh is only covered
+by some tattered rags.  It's mouth is stink.
+~
+12 285476864 0 Y
+30 -10 -5 1d500+600 3d7+15
+25 180000
+9 9 0
+52 8454276 1d1+99 1
+4 1 5 0
+0 0 1 32
+K
+0 0 0 0 0 0
+#4705
+Paladin Leoric~
+The Paladin Leoric~
+The faint outline of a holy knight hovers here, searching for something.
+~
+This shining figure looks like it is searching for someone, or something.
+His face has an expression of pure sadness and he gazes at you, longing to
+ask for help, yet no words come from him mouth.  From the faint outline
+of his body that is visible, he looks like one of the famous paladins of
+Midgaard that has met his untimely demise too soon.
+~
+16426 142878882 1000 Y
+42 -20 -10 2d150+1500 20d2+90
+250000 600000
+8 8 1
+7 8320 2d250+500 1
+1 6 3 140
+0 0 0 32
+K
+0 0 0 0 0 0
+#4706
+Garbage Golem~
+a garbage golem~
+A golem made of rotting garbage rises from the floor.
+~
+This golem is constructed from the various debris found within the sewers.
+It reeks of garbage and is completely silent and doesn't seem to like the
+fact that you stand before it.  The trash that composes its body has begun
+to rot and the mere thought of touching it makes you sick.
+~
+40 134219776 -250 Y
+35 -15 -10 2d750+400 3d40+40
+5000 270000
+8 8 0
+87 8454336 1d1+99 1
+6 1 5 0
+0 0 0 32
+K
+0 0 0 0 0 0
+#4707
+Cleric Werra Garbage~
+Werra the Cleric~
+A cleric is here, worshiping the god of garbage.
+~
+This cleric is dressed in dark green robes stained with garbage and raw
+sewage. Her symbol appears to be to the god of garbage and she smells as
+bad as the rest of this place.  Upon closer inspection, her face seems
+rotted, almost to the point of undead texture, yet she maintains some human
+features, such as hair and eyelids.
+~
+40 402655264 -1000 Y
+50 -5 0 10d25+4000 10d25+40
+400000 360000
+8 8 2
+2 440 2d250+2000 4
+1 6 5 28
+1 6 10 33
+1 6 5 93
+1 6 5 27
+0 2 0 0
+K
+0 0 0 0 0 0
+#4708
+Toxic Guardian~
+A toxic guardian~
+This pile of trash reeks of toxic fumes!
+~
+This pile of trash has been constructed to resemble a humanoid form.  It
+wears some basic armor and wields nothing but its fists.  Its construction
+reminds you of a scarecrow.  Needless to say, this fellow reeks of pure
+garbage.
+~
+2121736 268699680 -100 Y
+20 0 -7 1d250+1250 10d4+30
+5 300000
+8 8 1
+0 4 5d100+350 2
+1 1 10 33
+1 1 5 8
+0 0 0 32
+K
+0 0 0 0 0 0
+#0
+$~

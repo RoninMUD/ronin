@@ -1,0 +1,674 @@
+#11500
+candle~
+a candle~
+A candle sits on the ground, burning steadily.~
+~
+1 134217728 65537
+0 0 -1 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11501
+elemental crystal fire~
+the Elemental Crystal of Fire~
+A glowing red crystal lies on the ground here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11502
+elemental crystal air~
+the Elemental Crystal of Air~
+A glowing clear crystal lies on the ground here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11503
+elemental crystal water~
+the Elemental Crystal of Water~
+A glowing blue crystal lies on the ground here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11504
+elemental crystal earth~
+the Elemental Crystal of Earth~
+A glowing brown crystal lies on the ground here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11505
+prismatic staff~
+the Prismatic Staff~
+A staff of shifting crystalline colors rests here.~
+~
+12 0 16385
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11506
+wyvernspur~
+the Wyvernspur~
+A chunk of mummified wyvern meat rests here.~
+~
+12 134217728 16385
+0 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11507
+hammer lei kung warhammer~
+the Hammer of Lei Kung~
+A finely wrought hammer sits here.~
+$r Hammer glows red hot with rage as it smashes hard into $V!~
+5 168861696 8193
+0 5 5 7
+10 100000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+19 4
+#11508
+wyvern claws rfinger~
+wyvern's claws~
+
+A set of huge claws shouldn't be here.~
+~
+11 0 3
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+18 2
+#11509
+wyvern skin lfinger~
+wyvern's skin~
+A slab of wyvern skin shouldn't be here.~
+~
+11 0 3
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+18 2
+#11510
+wyvern scales neck1~
+wyvern's scales~
+A pile of wyvern's scales shouldn't be here.~
+~
+11 0 5
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+18 1
+#11511
+wyvern skin neck2~
+wyvern's skin~
+
+A slab of wyvern skin shouldn't be here.~
+~
+11 0 5
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+18 1
+#11512
+wyvern scales body~
+wyvern's scales~
+A pile of wyvern's scales shouldn't be here.~
+~
+11 0 9
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+18 1
+#11513
+wyvern head~
+wyvern's head~
+A wyvern's head shouldn't be here.~
+~
+11 0 17
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+18 1
+B
+32768
+#11514
+wyvern scales legs~
+wyvern's scales~
+A pile of wyvern's scales shouldn't be here.~
+~
+11 0 33
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+18 1
+#11515
+wyvern claws feet~
+wyvern's claws~
+A set of wyvern's claws shouldn't be here.~
+~
+11 0 65
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+18 1
+#11516
+wyvern scales hands~
+wyvern's scales~
+A pile of wyvern scales shouldn't be here.~
+~
+11 0 129
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+19 3
+#11517
+wyvern scales arms~
+wyvern's scales~
+A pile of wyvern scales shouldn't be here.~
+~
+11 0 257
+0 0 0 0
+5 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+19 3
+#11518
+wyvern horns shield~
+wyvern's horns~
+Wyvern's horns shouldn't be here.~
+~
+11 0 513
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+19 3
+B
+262144
+#11519
+wyvern wings about~
+wyvern's wings~
+A pair of wyvern's wings shouldn't be here.~
+~
+11 0 1025
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+19 3
+B
+16777216
+#11520
+wyvern scales waist~
+wyvern's scales~
+A pile of wyvern scales shouldn't be here.~
+~
+11 0 2049
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+19 2
+#11521
+wyvern spikes rwrist~
+wyvern's spikes~
+A set of wyvern's spikes shouldn't be here.~
+~
+11 0 4097
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+19 2
+#11522
+wyvern scales lwrist~
+wyvern's scales~
+A pile of wyvern scales shouldn't be here.~
+~
+11 0 4097
+0 0 0 0
+5 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+19 2
+#11523
+wyvern tail wield~
+wyvern's tail~
+A wyvern's tail shouldn't be here.~
+~
+5 0 8193
+0 7 5 6
+0 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -12
+A
+19 2
+#11524
+plate mail~
+The Plate Mail of Fei Lien~
+A suit of finely wrought plate mail lies here.~
+~
+9 168861696 9
+10 0 0 0
+20 50000 100000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#11525
+upper shard~
+the Upper Shard of Concordant Opposition~
+A pulsating shard of gray rock is here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11526
+upper shard~
+the Right Shard of Concordant Opposition~
+A pulsating shard of gray rock is here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11527
+upper shard~
+the Left Shard of Concordant Opposition~
+A pulsating shard of gray rock is here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11528
+upper shard~
+the Lower Shard of Concordant Opposition~
+A pulsating shard of gray rock is here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11529
+artifact binding~
+the Artifact of Binding~
+A twisted artifact lies here.~
+~
+12 0 16385
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11530
+artifact concordant opposition~
+the Artifact of Concordant Opposition~
+A four sided grey rock lies here.~
+~
+13 0 1
+0 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11531
+plate mail~
+The Plate Mail of Feng Po~
+A suit of finely wrought plate mail lies here.~
+~
+9 168861696 9
+0 0 0 0
+20 50000 100000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#11532
+war helm helmet~
+the War Helm of Chih Sung-Tzu~
+A finely wrought helmet rests here.~
+~
+9 0 17
+5 0 0 0
+10 50000 100000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 0
+A
+19 1
+B
+16777216
+#11533
+staff~
+the Staff of Shang-Ti~
+A finely wrought staff is on the ground here.~
+~
+1 0 65537
+0 0 -1 0
+1 1 1
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#0
+$~

@@ -1,0 +1,302 @@
+#2600
+rabbit~
+a rabbit~
+A cute rabbit is here.
+~
+A small rabbit, fluffy, and full or fur does not even seem to notice you.
+~
+72 0 500 S
+2 20 900 14d1+2 1d3+1
+10 200
+8 8 0
+#2601
+llama~
+A baby llama~
+A baby llama is here, nibbling on grass.
+~
+This llama looks as though it had a rough life!
+~
+10 0 500 S
+4 20 900 29d1+1 1d4+0
+50 500
+8 8 2
+#2603
+baby crocodile~
+A baby crocodile~
+A baby crocodile is here, looking for ducks to eat.
+~
+This little croc is not so little.  It has sharp teeth and looks mean!
+~
+10 0 0 S
+5 20 800 32d1+2 1d6+0
+200 750
+8 8 1
+#2604
+brontosaurus bronto~
+a baby brontosaurus~
+A baby brontosaurus is here, looking green and cute.
+~
+This bront has apparently stepped through a time machine!
+~
+10 0 200 S
+6 20 800 37d1+2 1d6+1
+100 1250
+8 8 2
+#2605
+black parrot~
+A norwegian black parrot~
+A norwegian black parrot is flying around here.
+~
+Caw... Caw!!
+~
+10 0 250 S
+4 20 900 24d1+0 1d4+0
+50 350
+9 9 0
+#2606
+fido mutt~
+a scruffy mutt~
+A scruffy mutt is here, digging for bones.
+~
+You see a small playful fido.
+~
+42 0 500 S
+3 20 900 20d1+0 1d3+1
+50 250
+8 8 1
+#2607
+fido dog~
+A frothing dog~
+A frothing dog is here, acting rabid.
+~
+You see a small dog that looks mad.
+~
+42 0 -100 S
+5 20 750 34d1+0 1d5+0
+100 950
+8 8 1
+#2608
+coyote~
+A starving coyote~
+A starving coyote is here, gnawing on a root.
+~
+This coyote would do anything for food, are you for dinner?
+~
+10 0 20 S
+7 20 700 68d1+0 1d8+0
+150 1600
+8 8 2
+#2609
+hyena~
+A laughing hyena~
+A laughing hyena is here, grinning and resting.
+~
+This canine has been hanging around looking for a few good corpses!
+~
+10 0 20 S
+7 20 700 45d1+5 1d8+0
+150 1450
+8 8 1
+#2610
+red parrot~
+A norwegian red parrot~
+A norwegian red parrot is here.
+~
+You see a colorful red parrot.
+~
+10 0 200 S
+6 20 750 42d1+0 1d5+0
+100 1100
+9 9 0
+#2611
+giant green parrot~
+A giant green parrot~
+A giant norwegian parrot is here moulting.
+~
+You see a large green parrot.  It is moulting and there are feathers
+flying everywhere!
+~
+10 0 200 S
+8 20 600 76d1+0 2d5+0
+350 4000
+9 9 0
+#2612
+black beetle~
+a black fire beetle~
+A black fire beetle is here.
+~
+This puny insect barely catches your attention.
+~
+10 0 250 S
+4 20 900 24d1+0 1d4+0
+50 350
+8 8 0
+#2613
+spider~
+A large spider~
+A large spider is here.
+~
+This spider is sucking the life out of a few poor moths.
+~
+10 0 250 S
+5 20 900 43d1+0 1d4+0
+50 950
+8 8 0
+#2614
+scorpion~
+A nasty scorpion~
+A nasty scorpion is here.
+~
+BEWARE it looks poisonous!
+~
+10 0 250 S
+7 20 700 79d1+0 2d5+0
+400 5000
+8 8 0
+#2615
+monkey~
+A spider monkey~
+A spider monkey is here, acting silly.
+~
+This primate has grown a large stomach, due to excessive feeding.
+~
+10 0 250 S
+5 20 900 43d1+0 1d4+0
+50 950
+8 8 1
+#2616
+chimp~
+A nasty chimp~
+A nasty chimp is here doing nasty things.
+~
+This chimp looks like it has not been treated very good.
+~
+10 0 250 S
+9 20 700 79d1+0 1d8+0
+500 4350
+8 8 1
+#2617
+gorilla~
+a big gorilla~
+A big gorilla is here, looking for food.
+~
+This ape show signs of power and strength.
+~
+10 0 250 S
+11 20 500 126d1+0 2d6+0
+500 10000
+8 8 2
+#2618
+lizard~
+A horned lizard~
+A horned lizard is here.
+~
+This is a lizard.. It has horns on it.. not that intersesting.
+~
+10 0 250 S
+5 20 900 39d1+0 1d4+0
+50 850
+8 8 0
+#2619
+python~
+A monty python~
+A monty python is here, dressed up as an old lady.
+~
+This is one wierd snake.  Rumor says that it was once a jester for the 
+mayor, but not that funny.
+~
+10 0 250 S
+9 20 700 79d1+0 1d8+0
+500 4350
+8 8 0
+#2620
+gila monster~
+A huge gila monster~
+A huge gila monster is here, beware of its poison!
+~
+BEWARE it looks poisonous!
+~
+10 0 250 S
+11 20 700 109d1+0 2d6+0
+500 9000
+8 8 0
+#2621
+brown bear~
+A brown bear~
+A brown bear is here.
+~
+Don't feed the bears!
+~
+74 0 250 S
+7 20 700 65d1+0 2d4+0
+400 3500
+8 8 1
+#2622
+black bear~
+a black bear~
+A black bear is here.
+~
+Don't feed the bears!
+~
+74 0 250 S
+10 20 700 110d1+0 2d6+0
+400 7500
+8 8 1
+#2623
+grizzly bear~
+a grizzly bear~
+A large grizzly bear is here.
+~
+Don't feed the bears!
+~
+74 0 250 S
+14 20 500 240d1+0 2d8+1
+750 16000
+8 8 1
+#2624
+bobcat~
+A bobcat~
+A bobcat is here.
+~
+This feline looks like large ally cat with no tail.
+~
+10 0 250 S
+5 20 700 55d1+0 1d6+0
+400 2000
+8 8 2
+#2625
+lion~
+A young lion~
+A young lion is here.
+~
+This cat looks tough.
+~
+10 0 250 S
+11 20 700 119d1+0 2d7+0
+400 8000
+8 8 2
+#2626
+tiger~
+A bengal tiger~
+A bengal tiger is here, roaring!
+~
+This cat looks real tough and hungry.
+~
+10 0 250 S
+16 20 700 390d1+0 3d6+0
+2500 30000
+8 8 1
+#2627
+zoo keeper~
+A zoo keeper~
+The zoo keeper is here, carrying bales and buckets.
+~
+You see the zoo inkeeper, he apparently is overworked but paid well
+by the mayor.
+~
+16588 0 500 S
+12 15 500 260d1+0 2d5+0
+1000 5250
+8 8 1
+#0
+$~

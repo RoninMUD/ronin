@@ -1,0 +1,59 @@
+#14512~
+-1
+-1
+-1
+14509
+14510
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s Oh dear, I don't sell that here!~
+%s Oh my, you don't have any such thing!~
+%s Oh gosh, I don't buy other people's things.~
+%s I seem to have run out of money!~
+%s My my, you can't afford this.~
+%s I hope you really enjoy eating this!~
+%s I don't buy things!~
+0
+0
+14512
+0
+14556
+0
+28
+0
+28
+#14511~
+-1
+-1
+-1
+14511
+14512
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s Sorry, I don't carry that.~
+%s You don't have anything like that.~
+%s We don't buy things here.~
+%s We don't buy things here.~
+%s Text if player hasn't got cash.~
+%s Thank you, enjoy you purchase.~
+%s Thank you.~
+0
+0
+14511
+0
+14555
+0
+28
+0
+28
+$~

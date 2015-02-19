@@ -1,0 +1,156 @@
+#6801
+bracers servitude~
+bracers of servitude~
+A pair of tarnished silver bracers lie here.~
+~
+9 513 257
+6 0 0 0
+9 10000 3000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 1
+#6802
+leg plates devotion~
+leg plates of devotion~
+A set of tarnished silver leg plates lie here.~
+~
+9 513 33
+7 0 0 0
+9 10000 3000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 5
+#6803
+buckler obeisance~
+buckler of obeisance~
+A tarnished silver buckler lies here.~
+~
+9 513 4097
+6 0 0 0
+7 10000 3000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#6804
+whip lash erishkigal~
+Erishkigal's old lash~
+A whip of black leather lies on the ground.~
+$r lash snaps with desire to inflict pain.~
+5 135266818 8193
+0 1 20 2
+20 35000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 10
+#6805
+breast plate thralldom~
+breast plate of thralldom~
+A tarnished silver breast plate lies here.~
+~
+9 134218241 9
+14 0 0 0
+50 40000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 -1
+#6806
+whip lash erishkigal~
+Erishkigal's lash~
+A whip of black leather lies on the ground.~
+$r lash snaps with desire to inflict pain.~
+5 134218242 8193
+0 1 20 2
+20 35000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 10
+A
+18 1
+#6807
+ring conqueror~
+The Ring of the Conqueror~
+A malevolent and powerful force emits from a ring on the ground here.~
+~
+9 259060246 3
+2 0 0 0
+4 5000 25000
+8
+E
+ring conqueror~
+
+  Crudely cast of the basest iron, this ring exudes an aura of powerful
+dark magic.  A brutally engraved signet depicts the foot of Nergal
+the Dark Lord descending upon Erishkigal's neck as Erishkigal writhes
+in pain and blissful agony.
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+A
+53 10
+T
+14000
+#0
+$~

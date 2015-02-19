@@ -1,0 +1,108 @@
+#3601
+yellow fido~
+The Yellow Fido~
+A Yellow Fido is standing here.
+~
+It is a level 1 fido.
+~
+72 0 0 X
+1 20 10 1d6+14 1d4+0
+100 300
+8 8 0
+0 0 0d0+0 0
+#3602
+blue fido~
+The Blue Fido~
+A Blue Fido is standing here.
+~
+It is a level 2 fido.
+~
+72 0 0 X
+2 18 10 1d6+19 1d5+0
+100 600
+8 8 0
+0 0 0d0+0 0
+#3603
+red fido~
+The Red Fido~
+A Red Fido is standing here.
+~
+It is a level 3 fido.
+~
+72 0 0 X
+3 17 8 1d6+30 1d7+0
+100 1200
+8 8 0
+0 0 0d0+0 0
+#3604
+guardian~
+guardian~
+Your guardian is here taking care of the low level players.
+~
+~
+89 128 1000 X
+30 1 -1000 5d10+5550 4d6+3
+1000 155000
+8 8 2
+0 0 0d0+0 0
+#3610
+Bouncer~
+a Bouncer~
+A huge bear of a man stands here with arms crossed, blocking your way.
+~
+A huge burly man stands tall before you, eyes gazing down trying to make you
+feel meek.  He is the bouncer of this luxurious establishment, guarding these
+doors making sure the right people go in and the wrong ones don't.  So don't
+mess with him, he looks like he has had a very bad day.
+~
+74 536905888 1000 X
+32 -10 -10 1d1+30000 10d50+90
+10000 10
+8 8 1
+0 0 0d0+0 0
+#3612
+Restaurant Attendant~
+A Restaurant Attendant~
+A Restaurant Attendant sits here diligently waiting on your next order.
+~
+Dressed in a nicely pressed suit, this elegant looking attendant sits here
+casually blowing bubble gum.  She waits here impatiently for you to order 
+something, but doesn't seen to care much because she gets paid whether or
+not you receive your food.
+~
+10 34848 1000 X
+35 0 -10 4d4+10000 1d1+40
+100 1
+8 8 2
+0 0 0d0+0 0
+#3613
+donald waiter~
+Donald the Waiter~
+A waiter is here, making sure that you are enjoying your stay.
+~
+A full suit and a pair of thick glasses droop slightly over his nose, this 
+clean-shaven man nods as if annoyed as he swiftly walks over and cleans 
+the tables.  He works long, hard hours -- an expression of boredom is 
+visible on his face, making you wonder if he deserves your tip or not.
+~
+72 0 1000 X
+31 0 0 1d2+1000 5d1+10
+1000 1000
+8 8 1
+0 0 0d0+0 0
+#3614
+beatrice waitress~
+Beatrice the Waitress~
+A waitress is standing here smiling broadly.
+~
+A bright smile beams on her cute face as she trips over her own feet.  
+Giggling at her own bad luck, Beatrice straightens out her formal dress 
+attire and proceeds to clean tables.
+~
+72 0 1000 X
+31 0 0 1d2+1000 5d1+10
+1000 1000
+8 8 2
+0 0 0d0+0 0
+#0
+$~

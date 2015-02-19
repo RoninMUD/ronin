@@ -1,0 +1,59 @@
+#7600
+Hall of Kludges~
+
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+76 576 0
+S
+#7601
+Main Deck~
+    You are now aboard a medium sized sailing vessel.  Although old, the
+boat appears to be very seaworthy.  Under you feet are planks slick with
+water.  Three large masts extend from the deck upward into the sky.
+Each mast holds a number of large sails that catch the wind and power
+this old boat.  Atop the main mast is what the sailors call the crows
+nest.  Below are the galley and the crews quarters.
+~
+76 64 0
+D0
+~
+~
+0 -1 0
+D1
+~
+~
+0 -1 0
+D2
+~
+~
+0 -1 0
+D3
+~
+~
+0 -1 0
+S
+#7699
+Hall of Kludges~
+
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+76 576 0
+S
+#0
+$~

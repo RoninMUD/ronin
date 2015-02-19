@@ -1,0 +1,2048 @@
+#1000
+shell carved pumpkin jackolantern~
+The shell of a carved pumpkin~
+A spooky Jack-O-Lantern's eyes follow you as you move.~
+~
+9 134217792 9
+30 0 0 0
+20 666666 66666
+10
+E
+shell~
+The crafting of makeshift pieces of equipment is the mark of a successful
+adventurer, or so they say.  It is obvious that the creator of this particular
+item didn't quite grasp the concept.  This helmet has been carved from the
+shell of an ordinary pumpkin, or so it would seem.  Dozens upon dozens of
+layers of thick lacquer have been applied inside and out, in an apparent
+attempt to keep the structure rigid and prevent it from decaying.  Two large
+eye holes have been cut into the shell, a bit off-kilter, and a jagged mouth
+greets observers in a macabre grin.  Though the entire headpiece looks rather
+ridiculous, it does offer a fair amount of protection to its wearer.  On top of
+that, it certainly adds a degree of intimidation-factor to whomever puts it on.
+~
+X
+~
+0 0 0
+M
+You plop the carved pumpkin shell upon your head, a few seeds falling out.~
+$n plops a carved pumpkin shell upon $s head, a few seeds falling out.~
+The world seems a little less spooky as you take the pumpkin shell off your head.~
+The world seems a little less spooky when $n takes $s pumpkin shell off $s head.~
+A
+52 33
+A
+19 5
+B
+128
+#1001
+witch broom~
+A witch's broom~
+An old, dusty broom leans here.~
+~
+22 134217792 16385
+0 0 0 0
+8 666666 66666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -33
+A
+53 19
+A
+19 6
+B
+16777276
+#1002
+pelt black cat~
+The pelt of a black cat~
+A small piece of short fur lies here.~
+~
+9 64 1029
+20 0 0 0
+2 666666 66666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 -6
+A
+18 6
+A
+53 6
+B
+8429568
+#1003
+skeletal hands~
+Skeletal Hands~
+A pile of small bones lies here.~
+~
+9 134217792 129
+10 0 0 0
+1 666666 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+52 -1
+A
+24 -1
+#1004
+veil ghost~
+Veil of a Ghost~
+A barely visible piece of fabric drifts in the breeze here.~
+~
+9 134217792 17
+0 0 0 0
+1 666666 666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+A
+24 1
+B
+42
+#1005
+shield locust brown hell~
+the Brown Hell Locust's Shield~
+A gigantic shield made of black insect chiton lies here.~
+~
+9 134217728 513
+30 -1 -1 -1
+20 1000000 10
+50
+X
+~
+0 0 0
+M
+You remember Baron Samedi's teachings, and proudly allow the locust swarm to shield you from harm.~
+$n does the unthinkable and allows a swarm of Brown Hell Locusts to envelop $s shield arm!~
+$n mutters some Creole voodoo, and the Brown Hell Locusts disperse chaotically, $s arm whole once more.~
+$n mutters some Creole voodoo, and the Brown Hell Locusts disperse chaotically, $s arm whole once more.~
+A
+19 5
+A
+18 5
+B
+8390784
+#1006
+sickle druid luthien~
+A Druid Sickle~
+A curved ebony hilted blade is lying here, glowing faintly in the moonlight...~
+$n chants faintly over $s Druid Sickle before slashing it wildly into $V, sprinkling blood in your face!~
+5 143715586 8193
+0 14 2 3
+21 75000 50000
+8
+E
+druid sickle~
+This Druid Sickle is forged in a damascene pattern with beautiful 24k ornate
+gold inlay of alchemical and druidic symbols making its way towards the tip
+on both sides of the curved blade. The blade is forged in a half-moon shape
+with a double edge towards the tip.
+
+The handle is pitch black, carved in ebony and polished to an extremely
+high finish. The handle has been ergonomically shaped to fit its owners hand
+perfectly. Celtic and typical animalistic druid motifs have been intricately
+carved into the handle, making it seem quite lively and at the same time
+providing and optimal grip - even with the hand soaked in blood and
+entwined in guts.
+
+The sheath is made in unicorn hide, stitched with spider-silk for optimal
+durability. Druidic motifs and Celtic patterns have intricately and
+painstakingly been carved into the sheath. An eagle feather is hanging
+from the pommel of the sickle, enabling the sickle to draw the powers
+of nature from its surroundings.
+~
+X
+$n starts chanting over $s Druid Sickle, but loses $s concentration, interrupting the ritual.~
+0 0 0
+M
+You smile lovingly as you gently draw your Druid Sickle from its exquisite sheath.~
+$n smiles lovingly as $e gently draws $s Druid Sickle from its exquisite sheath.~
+You kiss your Druid Sickle lovingly before carefully putting it back into its exquisite sheath.~
+$n kisses $s Druid Sickle lovingly before carefully putting it back into its exquisite sheath.~
+A
+19 4
+A
+52 15
+#1007
+helmet Easter egg eggshell shell~
+A brightly colored Easter Eggshell helmet.~
+A gift from the Easter Bunny, this eggshell helmet gleams brightly.~
+null~
+9 402653248 17
+20 -1 -1 -1
+2 10 10000
+10
+X
+~
+80 0 0
+M
+As your head slips into the eggshell you immediately feel safer.~
+As $n put on $s eggshell helmet a smile crosses $s face.~
+You sigh slightly as the safety of your Easter prize slips from your head.~
+As the eggshell helmet slides off $n a sigh of regret passes through $s lips.~
+A
+19 4
+A
+18 4
+B
+8396800
+#1008
+skull dayak trophy earendil~
+A Dayak Trophy Skull~
+An engraved human skull is lying on the ground here...~
+$n swings his Dayak Trophy Skull at $V's head, busting $V's head wide open!~
+5 134220800 24577
+0 5 1 11
+20 10000 10000
+10
+E
+skull dayak trophy~
+This Dayak Trophy Skull has been severed from the
+victim while it was still alive.  The skull has
+later been polished and carefully engraved with
+swirling symbols illustrating Aso, the Dragon
+Goddess. A restless spirit dwells within this
+skull.
+~
+X
+$n scratches $s head, mumbling quietly in a long-forgotten Dayak dialect.~
+0 0 0
+M
+The powers of Aso flows from the skull and through your fingers as you grab it by the eye-sockets...~
+$n mumbles quietly in a Dayak dialect as $e grabs $s Trophy Skull by the eye-sockets...~
+You struggle to let go of your Trophy Skull as the powers of Aso has a strong hold on you.~
+$n pulls $s fingers out from $s Trophy Skull's eye-sockets and puts it to rest.~
+A
+19 5
+A
+18 5
+#1009
+wreath flowers luthien~
+A Wreath of Flowers~
+A wreath of flowers has carelessly been left on the ground here...~
+~
+9 134221057 17
+9 0 0 0
+12 75000 36000
+10
+E
+wreath flowers~
+You are amazed to find so many flowers bound together.
+Blue, red, yellow, purple, and even some colours
+you've never seen before.  The smell is sweet, and
+the wreath is soft to the touch.  The wreath of
+flowers glows with a greenish hue.
+~
+X
+~
+0 0 0
+M
+Memories of a long lost childhood flows through your mind as you place the wreath of flowers on your head.~
+A gentle summer breeze suddenly envelops $n as $e places $s wreath of flowers on $s head.~
+Your childlike innocence leave you as you remove the wreath of flowers from your head.~
+The gentle summer breeze enveloping $n suddenly diminishes as $e removes $s wreath of flowers from $s head.~
+A
+1 1
+A
+19 2
+#1010
+belt eagle feathers hempquestprize~
+a belt of eagle feathers~
+A belt made from eagle feathers has been left here, smelling of ale.~
+~
+9 134217792 2049
+19 0 0 0
+11 2097593 28813
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+52 11
+B
+16777216
+#1011
+cloak goose down hempquestprize~
+a goose down traveling cloak~
+A warm traveling cloak made from goose down radiates a pale green aura.~
+~
+9 134217792 1025
+23 0 0 0
+11 2097593 28813
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+13 47
+B
+16777216
+#1012
+severed leg ungoliant unlight mana p11 prometheus~
+The Severed Appendages of Ungoliant the Unlight~
+Two dark spider legs lie here, sucking all light into themselves.~
+~
+9 134217792 257
+17 0 0 0
+11 2097593 28813
+0
+E
+severed leg ungoliant unlight~
+Severed from the mighty Unlight itself in a battle
+which ended with Prometheus fleeing the impossible
+fight, these legs still seem to twitch with power.
+~
+X
+~
+0 0 0
+M
+The light seems to fade from the world as Ungoliant's jet-black flesh touches yours.~
+Darkness cloaks $n as he twines the arms of Ungoliant the Unlight about $s own arms.~
+You hear the sound of a thousand spiders chittering as you remove Ungoliant's arms from your own.~
+A chittering madness fills the air as $n unbinds the arms of Ungoliant the Unlight from $s own.~
+A
+19 3
+A
+18 1
+A
+53 3
+B
+8
+#1013
+scorched abdomen shield~
+Scorched Abdomen~
+a black shell is lying here, glowing fiercely.~
+~
+9 135267905 513
+15 0 0 0
+10 50000 40000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#1014
+collarbone withered yevaud dam epi p15 prometheus~
+Bleached White Collarbone of Yevaud the Ancient~
+A withered bone lies here, bleached white.~
+~
+11 134217728 4097
+0 0 0 0
+2 12000 10000
+10
+E
+collarbone withered yevaud~
+This old bone is charred and cracked, having been through
+much since it was taken from the dragon Yevaud, spoiler of
+the realms of Midgaard and beyond.
+~
+X
+~
+0 0 0
+M
+Yevaud's collarbone burns as it grips your wrist.~
+$n lets out a scream as Yevaud's collarbone sears itself into $s flesh.~
+You tear Yevaud's collarbone from your flesh.~
+$n tears a bit of flesh off as $e pulls Yevaud's collarbone from $s wrist.~
+A
+19 5
+A
+18 4
+#1015
+collarbone scorched tiamat dam epi p16 prometheus~
+Scorched Black Collarbone of Tiamat the Colored~
+A scorched bone lies here, reflecting many colors.~
+~
+11 134217728 4097
+0 0 0 0
+2 12000 10000
+10
+E
+collarbone scorched tiamat~
+A thin crack runs through this bone where Prometheus'
+dagger split from the mighty neck of Tiamat, the Many
+Colored, scourge of the Seven Heavens.
+~
+X
+~
+0 0 0
+M
+Tiamat's collarbone sends out a burst of color as it grips your wrist.~
+A burst of color explodes out from $n's wrist as he dons the collarbone of Tiamat.~
+You pull Tiamat's collarbone from your wrist.~
+The world seems to lose a bit of color as $n removes Tiamat's collarbone.~
+A
+19 5
+A
+18 4
+#1016
+bracers witch witchking angmar dam epi p11~
+The Mithril Bracers of the Witch-King of Angmar~
+A pair of black bracers lies here, filled with torment.~
+~
+9 134217792 257
+12 0 0 0
+5 10 10
+10
+E
+bracers witch witchking angmar~
+The Lord of the Nazgul gifted these bracers to Prometheus
+after a mighty battle in which the mage saved the Dark
+One's unlife.
+~
+X
+~
+0 0 0
+M
+As you don your bracers your mind is suddenly filled with the locations of the Rings.~
+The beating of leathery wings can be heard as $n dons his bracers.~
+As you remove your bracers your mind clears.~
+As $n removes his bracers you feel a heavy weight lift from the room.~
+A
+19 5
+A
+13 25
+#1017
+pauldrons lycanthrope king~
+Pauldrons of the Lycanthrope King~
+Some heavy iron shoulder guards lay here, covered in a thick pelt of gray hair.~
+~
+9 134217792 257
+20 0 0 0
+15 66666 6666
+0
+X
+~
+0 0 0
+M
+As you buckle the pauldrons to your shoulders, you feel a rush of animal intensity.~
+As $n wears the pauldrons, you see a yellowish glint in $s eyes.~
+Your awareness level returns to normal as you remove the pauldrons.~
+The yellowish tinge fades from $n's eyes as $e removes the pauldrons.~
+A
+19 3
+A
+18 1
+#1018
+dalmatic bloodthirsty viovode~
+Dalmatic of the Bloodthirsty Viovode~
+An ornate, regal dalmatic lies here, caked in the blood of the innocent.~
+~
+9 134217796 1025
+40 0 0 0
+30 66666 6666
+0
+X
+~
+0 0 0
+M
+As you wrap the dalmatic around your body, you feel a distinct thirst for blood.~
+$n's incisors lengthen to a sharp point as $e dons the dalmatic.~
+Your pressing need to impale and drain the blood of your enemies subsides as you remove the dalmatic.~
+As $n removes the dalmatic, $s teeth regain their normal appearance.~
+A
+19 3
+A
+18 2
+B
+8
+#1019
+bolts neck reanimated madman~
+Neck Bolts of the Reanimated Madman~
+A pair of long bolts lies here, with green ichor dripping from the tips.~
+~
+9 134217793 5
+30 0 0 0
+20 66666 6666
+0
+X
+~
+0 0 0
+M
+You feel a slight pinch as you drive the bolts deep into your neck.~
+$n twitches slightly as $e drives the bolts into $s neck.~
+You hold your breath as you carefully remove the bolts from your neck.~
+The greenish appearance from $n's face fades as $e carefully removes the bolts from $s neck.~
+A
+19 5
+A
+18 4
+A
+53 10
+B
+134217728
+#1020
+shabti shabtis pharaoh belt lemon~
+Shabtis of the Mummified Pharaoh~
+Four shabtis lie here, secured in small pouches strung from a brilliant gold belt.~
+~
+11 134217792 2049
+0 0 0 0
+13 666666 66666
+0
+E
+shabti shabtis~
+A cursory glance tells you very little about this unique piece. Four small stone
+statues stored in four different stained fabrics hang from a linen belt, but it's
+clearly an ancient relic worthy of further examination.~
+X
+~
+0 0 0
+M
+You sling the linen belt around your waist, tie it off and wince as four hooks slide into your skin.~
+$n slings a linen belt around $s waist, appearing momentarily anguished as $e ties it off.~
+You carefully pry the four hooks out of your skin and untie the belt from around your waist.~
+$n breaths a small sigh of relief as $e unties and sheds a linen belt from $s waist.~
+A
+19 5
+A
+18 5
+A
+17 -20
+B
+32808
+#1021
+golden scale bahamut shield dam epi p12~
+A Shimmering Scale of Holy Bahamut the Platinum~
+An enormous golden scale lies here, glowing in the light.~
+~
+9 134217794 513
+15 0 0 0
+25 97500 17600
+25
+E
+scale golden bahamut~
+This scale was taken from the underbelly of Bahamut the
+Golden, Lord of the Gold Dragons, in an epic battle in
+which Prometheus scarcely escaped.
+~
+X
+~
+0 0 0
+M
+As you hold Bahamut's scale it seems to catch all the light in the room.~
+You are nearly blinded as $n holds the scale of Bahamut the Golden.~
+The room darkens slightly as you remove Bahamut's scale.~
+The room darkens as $n removes the scale of Bahamut the Golden.~
+A
+19 5
+A
+13 30
+#1022
+robe czarina lemon~
+a Czarina Robe~
+Lemon has dropped a beautiful robe here, please return it.~
+~
+9 134217728 1025
+10 -1 -1 -1
+20 6666666 6666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+53 15
+A
+19 4
+#1023
+spurs gallivespian lemon~
+Gallivespian Spurs~
+Lemon has left a set of miniature spurs here, please return them.~
+~
+9 134217730 524353
+10 0 0 0
+11 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+#1024
+sabatons steel shiny boots tyler~
+a pair of shiny, steel sabatons~
+Tyler has left his boots here, please return them for a large reward.~
+~
+9 110157888 65
+12 0 0 0
+12 60600 20200
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 2
+#1025
+hauberk coins shirt makena~
+a hauberk fashioned of golden coins~
+Makena left her hauberk here return it for a HUGE reward!~
+~
+9 1090 9
+24 0 0 0
+15 80000 414
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -14
+A
+24 -3
+#1026
+vambraces vambrace wootz steel sleeves makena~
+wootz steel vambraces~
+Makena left her vambraces here return it for a HUGE reward!~
+~
+9 0 257
+8 0 0 0
+10 10000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#1027
+snake writhing~
+a writhing snake~
+A snake is writhing on the ground.~
+~
+9 172016208 2049
+8 0 0 0
+5 333333 140000
+10
+E
+snake writhing~
+  The long thin snake is black with grey streaked scales. The teeth are bare
+and drip of poison. The snake is writhing in pain.
+~
+X
+~
+0 0 0
+M
+You grab the snake and knot it around your waist while it's writhing in pain.~
+$n knots a writhing snake around $s waist.~
+You unknot the snake which continues to writhe.~
+$n unknots a writhing snake from $s waist.~
+A
+13 15
+A
+19 2
+A
+18 1
+B
+8388608
+#1028
+cowl shadowmage lemon~
+cowl of the Shadowmage~
+Lemon has left a strange cowl here, please return it.~
+~
+9 134217732 17
+5 -1 -1 -1
+7 259857 11326
+0
+E
+cowl~
+A dark energy surrounds this unique piece, it is clearly a relic worth of further
+examination.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+A
+53 5
+#1029
+phylactery bean sidhe quest esar~
+Phylactery of the Bean-Sidhe~
+A black metallic disc wrapped up in chain lies here in a pile.~
+~
+9 134217732 2049
+10 -1 -1 -1
+5 356890 14501
+0
+E
+phylactery~
+A long, blackened chain is attached to a small metallic disc, adorned with
+nothing but a simple, gleaming ruby lodged firmly into center of its
+concave surface. Circling the edges of the disc are a series of faintly
+glowing runes, written in a forgotten language from an era long past, but
+seemingly maintaining all of their original arcane potency. What can be
+deciphered from the runes indicate that this object is some sort of prison,
+either for the spirit or soul of a powerful entity who has long since
+passed from this world, but whose puissance is channeled through a conduit
+of metaphysical energy that binds the phylactery to its owner.
+~
+X
+~
+0 0 0
+M
+You sling the phylactery's chain around your waist and it snaps together with a faint shriek.~
+A faint shriek is heard as $n snaps a black metallic chain together at $s waist.~
+An undulating moan emits from the phylactery as you detach one end of the chain.~
+An undulating moan can be heard as $n unfastens the chain from around $s waist.~
+A
+19 4
+A
+18 2
+A
+52 25
+B
+32768
+#1030
+nomad crucified humanshield~
+a crucified nomad~
+A nomad has been crudely crucified and left to rot here.~
+~
+9 134217732 513
+25 -1 -1 -1
+146 713262 24955
+0
+E
+nomad humanshield~
+Everyone knows nomads make the best tanks, the term "meat-shield" is hardly an
+unfamiliar moniker. Say what you will about the sick mind behind this makeshift
+shield but its creator's logic was sound: if a nomad makes a good tank, it stands
+to reason they would make an excellent shield. Still, you cannot help but wonder
+whether this unfortunate nomad was put to use after he died, or slaughtered for
+this purpose specifically.
+~
+X
+~
+0 0 0
+M
+You heft the dead nomad up with your shield arm, wobbling slightly under its weight.~
+$n hefts a dead nomad up with $s shield arm, wobbling under its weight.~
+You drop the crucified nomad unceremoniously to the ground and rub your aching shoulder.~
+$n drops the crucified nomad unceremoniously to the ground and rubs at $s shoulder.~
+A
+19 2
+A
+13 100
+A
+52 50
+#1031
+spaulders gargoyle chaos2010~
+Spaulders of the Gargoyles~
+Enormous stone spaulders have been left here, floating idly in the air.~
+~
+9 134217732 257
+15 -1 -1 -1
+42 99540 21100
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 2
+B
+16777216
+#1032
+exoskeleton bone armor hive queen esar~
+Exoskeleton of the Hive Queen~
+A set of blackened bone armor has been unceremoniously left on the ground.~
+~
+9 134217792 9
+30 0 0 0
+20 666666 66666
+10
+E
+exoskeleton bone armor hive queen esar~
+  This set of armor seems to be constructed almost entirely from the fragmented remains
+of the Hive Queen's exoskeleton.  The carefully reconstructed bone plates have been
+fashioned to resemble a set of plate mail armor, the surface of which is blackened from
+extended exposure to acid and flame.  Each plate has been connected to the next by a
+complex set of metallic hinges, seemingly made from darksteel or another metal of
+similar shade and texture.  Etched with acid and magic into the surface of each bone
+plate is a complex set of mystical runes that connect to form a pattern across the
+center chest plate of the armor.  Your eyes slowly become accustomed to the rythmic
+pulsing of the runes and you are able to make out what seems to be a design in the
+shape of the Hive Queen's deadly tail sting.
+~
+X
+~
+0 0 0
+M
+The hinges of your armor seem to magically snap into place, shaping the exoskeleton perfectly to your form.~
+$n meticulously dons a set of blackened bone armor that seems to magically shape itself to $s form.~
+You unlock the metallic hinges of your bone armor and the plates seem to expand as you slip out of it.~
+$n taps on a few metallic hinges of $s bone armor and it seems to magically expand as $e removes it.~
+A
+52 33
+A
+19 5
+B
+128
+#1033
+band mf bk d2 bul mog turkeyday2010~
+Bul-Kathos' Wedding Band~
+`dBul-Kathos' Wedding Band`h~
+~
+9 134217728 3
+5 -1 -1 -1
+7 11252010 112510
+0
+X
+~
+0 0 0
+M
+Fond memories of the late nineties spread over you as you wear Bul-Kathos' Wedding Band.~
+A look of nostalgia spreads on $n's face as $e wears Bul-Kathos' Wedding Band.~
+You remove Bul-Kathos' Wedding Band, and the concept of mf runs now terrify you once more.~
+$n mumbles something about an Expansion Disc as $e removes Bul-Kathos' Wedding Band.~
+A
+19 5
+A
+18 5
+A
+47 5
+B
+32768
+#1034
+vizard mask faceless esar turkeyday2010~
+Vizard of the Faceless~
+A nondescript mask was left face-down on the ground, undoubtedly missed.~
+~
+9 134217792 17
+11 -1 -1 -1
+11 811525 20211
+0
+E
+vizard~
+The epitome of a featureless facial decoration, this mask seems nothing
+more than an incomplete piece of work. Fashioned from what appears to be
+a bone-white layer of bleached animal skin stretched over a thin plate
+of porcelain, it lacks many key elements of a finished work. There are no
+eye-holes in the mask, no nose-holes for breathing, no mouth-hole for 
+speaking, it is simply an uninterrupted surface with slight hills and 
+valleys to wrap around a person's nose and mouth, dips where there eyes 
+should be. Intriguingly, the stitching at the outer edges of the mask 
+seems to be done in a particularly colorful shade of blue that seems to
+glimmer in the light, revealing a rather mystical quality that plants a
+seed of doubt in your mind regarding the seemingly innocuous nature of
+this finely crafted, yet wholly incomplete vizard.
+~
+X
+~
+0 0 0
+M
+As you place the mask on your face, you feel as though your identity vanishes into the wind.~
+$n places a nondescript mask on $s face and you can't seem to recognize $m anymore as $e vanishes in front of your eyes.~
+You slip the vizard from your face and feel a sense of relief as you recall who you really are.~
+An unrecognizable person fades into your vision as $e slips a mask off of $s face and reveals $mself as $n.~
+A
+19 3
+A
+18 1
+A
+45 3
+B
+1048576
+#1036
+chain twisted astral cords~
+Twisted Chain of Astral Cords~
+A small collection of silver cords lies in a disheveled pile on the floor.~
+~
+9 134217792 2049
+15 -1 -1 -1
+10 10 27650
+0
+E
+chain~
+Lacking the inherent luster and brilliance of a silver cord still linking
+the material body with an astral projection, this twisted collection of
+cords holds only a sliver of their original luminance. Vaguely glowing,
+each cord still contains a semi-potent source of the original life-force
+that once flowed through it, and bundled together form a mystical bond to
+imbue the chain's wearer with a portion of the life these cords once held.
+~
+X
+~
+0 0 0
+M
+You fasten the chain around your waist and it begins to rhythmically pulse with life.~
+As $n latches a twisted silver chain around $s waist, it slowly begins to pulse with life.~
+As you snap open the latch of your chain, you feel your life-force briefly give out.~
+$n unfastens the latch of $s chain belt and shrinks back momentarily as $e catches his breath.~
+A
+19 2
+A
+18 2
+A
+13 30
+#1037
+gloves arcanna juicyfruit~
+Arcanna's Gloves~
+Arcanna's gloves are here, waving at you!~
+~
+9 183562240 129
+5 -1 -1 -1
+10 50000 12000
+0
+X
+~
+0 0 0
+M
+Scorch's mom touches your no-no parts!~
+Scorch's mom touches your no-no parts!~
+You begin thrusting in a northeasterly direction.~
+$n begins thrusting in a northeasterly direction.~
+A
+19 3
+A
+46 10
+A
+17 -5
+#1038
+head shrunken peredhil~
+a Shrunken Head~
+A creepy looking tiny head rests on the ground here...~
+$n clashes into $V, froth foaming and eyes burning with pure Hatred!~
+5 134218240 24577
+0 5 1 11
+20 10000 10000
+10
+E
+shrunken head peredhil~
+This tiny little head, not much larger than a fist
+has been shrunk and dried in a tedious proccess
+over the course of several days. The head was
+severed while the victim was still alive in order
+to keep the Spirit trapped within. Although the
+head is small, the lips, nose and ears are still
+close to the same size as before the shrinking
+proccess was completed. The skin is hard and dry,
+and the eyes and mouth are sewn shut with crude
+thread in order to keep the spirit from escaping.
+~
+X
+$n starts performing a strange ritual using a Shrunken Head.~
+0 0 0
+M
+You grab a Shrunken Head, drawing Power from the Spirit within!~
+$n grabs a Shrunken Head, drawing Power from the Spirit within!~
+You neatly put away a Shrunken Head.~
+$n neatly puts away a Shrunken Head.~
+A
+19 5
+A
+18 5
+#1039
+ring vilya prometheus p2 gilgalad celebrimbor~
+The Gold-Banded and Sapphire Inlaid Ring, Vilya~
+A small gold ring lies here, a mighty gale roaring through it.~
+~
+11 134217728 3
+0 0 0 0
+5 555555 55555
+0
+E
+vilya~
+Forged by Celebrimbor, the Ring of Air, Vilya, is the most powerful of the Three.
+~
+X
+~
+0 0 0
+M
+You feel yourself battered by winds as you place Vilya on your finger.~
+$n is buffeted by mighty winds as $e places Vilya on $s finger.~
+The wind dies as you remove Vilya from your finger.~
+The wind suddenly dies as $n removes Vilya from $s finger.~
+A
+19 5
+A
+18 5
+A
+53 5
+B
+16777216
+#1040
+ring narya prometheus p3 cirdan celebrimbor~
+The Platinum-Banded and Ruby Inlaid Ring, Narya~
+A small platinum ring lies here, burning with dragon's flame.~
+~
+11 134217728 3
+0 0 0 0
+5 555555 55555
+0
+E
+narya~
+Forged by Celebrimbor, the Ring of Fire, Narya, was used to rekindle valor in the world.
+~
+X
+~
+0 0 0
+M
+You feel a scorching heat burn through you as you place Narya on your finger.~
+$n glows with the heat of dragon's heart as $e places Narya on $s finger.~
+You feel the dragon's flame fade as you remove Narya from your finger.~
+$n dims slightly as $e removes Narya from $his finger.~
+A
+19 5
+A
+18 5
+A
+53 5
+B
+16777216
+#1041
+tattered skin ancalagon dragon p13 prometheus~
+The Tattered, Dusky Skin of Ancalagon the Black~
+A long black dragon skin lies here, throbbing with the evil of Morgoth himself.~
+~
+9 64 1029
+20 -1 -1 -1
+2 666666 66666
+0
+X
+~
+0 0 0
+M
+You feel your breathing tighten as darkness overcomes you.~
+The world seems to darken as Ancalagon's skin envelops $n.~
+You can breathe easier.~
+The world seems a little lighter as $n removes ancalagon's skin.~
+A
+24 -6
+A
+18 6
+A
+53 6
+B
+8429568
+#1042
+armor bones glaurung p6 prometheus cloak hemp~
+Armor Forged of the Bones of Glaurung the First~
+A heap of bones, radiating with a golden light, sit here.~
+~
+9 134218049 9
+40 -1 -1 -1
+1 1 1
+0
+X
+~
+0 0 0
+M
+Your breath is knocked out as Glaurung's bones weld themselves to your body.~
+$n screams as the bones of Glaurung the First weld themselves to $s body.~
+Rending your own flesh, you pull Glaurung's bones from your body.~
+Tearing bits of $s flesh with it, $n pries the bones of Glaurung from $s body.~
+A
+19 8
+A
+18 8
+B
+150994944
+#1043
+pick runed svirfneblin war brutal ornate runes~
+A Runed Svirfneblin War Pick~
+A brutal-looking war pick, emblazoned with ornate runes, has been dropped here.~
+$r war pick slams deeply into $V, causing blood to spray everywhere!~
+5 134217795 8193
+0 5 7 11
+13 75000 25000
+10
+E
+pick runed svirfneblin war brutal ornate runes~
+Long ago, the Svirfneblin Miner-King Kikival commissioned this weapon to be
+forged for his dwarven ally, High-General Damagar.  The war pick is a favorite
+among the deep gnomes for its utility and familiarity, as it closely resembles
+the non-militarized versions used for everyday mining tasks.  This particular
+weapon was forged from a rare cache of invaluable ingots, refined from the ore
+of a giant meteorite found hundreds of meters beneath the surface.  By granting
+this weapon to Damagar, Kikival kept his promise that he would never forget his
+bravery or friendship.  Banded together against a common enemy, the drow, the
+two stalwart leaders defended their kingdoms.  Damagar had given the life of
+many of his soldiers, including his two sons, and lost an eye and a foot of his
+own.  How the weapon became lost to Damagar or his kin is now long forgotten.
+~
+E
+night quest~
+`pNight was here.`q
+~
+X
+$r war pick gleams with a silver light as it arcs through the air.~
+0 0 0
+M
+You heft your war pick over your shoulder, ready for whatever may come.~
+$n hefts $s war pick over $s shoulder, ready for whatever may come.~
+You sling your war pick across your back, no longer wielding it as a weapon.~
+$n slings $s war pick across $s back, no longer wielding it as a weapon.~
+A
+19 8
+A
+18 3
+#1044
+greaves giant hide flesh bone~
+greaves made from giant's hide~
+A set of geaves are here, made of dark gray flesh and white bone.~
+~
+9 134217728 33
+15 -1 -1 -1
+15 450250 45025
+0
+E
+greaves giant hide~
+It is said that in ages past, a dragon king ruled over much of these lands.  The
+dragon was so powerful, and so feared, that his servants would obey any of his
+orders, no matter their level of depravity.  The king was often prone to fits of
+jealousy and rage over the most trivial of matters.  As a powerful dragon, he
+could take the form of nearly any other creature, large or small.  One day the
+mad king learned of a beautiful giantess and sought to court her, desiring to
+make her his bride.  When he discovered she was already taken, he slipped deeper
+into madness.  It was then that he ordered both the lady giant and her husband
+slain.  In cruel vengeance, he had his best armorer create for him a set of
+mighty greaves, crafted from the flesh and bone of the slain lovers.  These
+greaves are now all that remain of both the dragon king's legacy and his
+unfortunate victims.
+~
+X
+~
+0 0 0
+M
+As you strap the greaves to your legs, a sense of sadness washes over you.~
+$n straps a set a greaves to $s legs, a look of sadness washing across $s face.~
+You unstrap the greaves from your legs, feeling a little more at ease.~
+$n unstraps a set of greaves from $s legs, looking a little more at ease.~
+A
+19 4
+A
+13 50
+A
+52 25
+B
+2048
+#1045
+lance mammoth tusk artoo quest~
+a lance tipped with a mammoth's tusk~
+A long lance, its tip made from a mammoth's tusk, has been dropped here.~
+$r lance strikes viciously at $V, its wicked tip seeking flesh!~
+5 134217728 8193
+31 8 5 11
+15 450250 45025
+0
+E
+lance mammoth tusk artoo quest~
+Runes and symbols swirl and glow all along the shaft of this lance.  An
+unending dance of shapes and patterns lead from its base to the mammoth tusk
+tip.  The weapon is clearly old, but the story of this ancient lance has been
+lost to time.  It has been well cared for and the shaft gleams with a inner
+warmth.  The fearsome tusk mounted on the end has been sharpened to a razor
+point that mysteriously shows no signs of wear.  A mighty warrior's weapon,
+this lance has seen the lives of many and looks as if it could see a thousand
+more.
+~
+X
+$r lance strikes out, seeking its next victim!~
+0 0 0
+M
+You heft your mighty lance, ready to make your foes regret their very existence.~
+$n hefts $s mighty lance, a fierce look washing over $s grim face.~
+In an act of mercy you unready your lance, holding it next to you at ease.~
+$n unreadies $s lance, holding it next to $mself at ease.~
+A
+19 4
+A
+13 50
+A
+52 25
+B
+8192
+#1046
+vambraces leviathan scale shimmering green~
+leviathan scale vambraces~
+A pair of shimmering green vambraces have been dropped here.~
+~
+9 134217728 257
+15 -1 -1 -1
+15 450250 45025
+0
+E
+vambraces leviathan scale~
+These armguards are crafted from the thick scales of a long-extinct beast of
+myth, the mighty leviathan.  The structure of the armor is composed of the
+fine leather of some beast, which has been tanned, cured and polished to an
+impossible sheen.  Bound to the exterior of the vambraces by an intricate weave
+of delicate silver bands are a multitude of shimmering green scales.  The scales
+are similar in size and shape to those of the largest of ancient wyrms, though
+they are much more flexible and smooth.  The shimmering surface of the scales
+almost seems to undulate in the light, emulating the ebb and flow of the tide of
+some now lost and forgotten shoreline.
+~
+X
+~
+0 0 0
+M
+You buckle the vambraces to your arms, their latent energy surging into you.~
+$n buckles a pair of shimmering green vambraces to $s arms.~
+You unbuckle the vambraces, their powers draining out of you almost immediately.~
+$n unbuckles a pair of shimmering green vambraces from $s arms.~
+A
+19 4
+A
+13 50
+A
+52 25
+B
+8388608
+#1047
+skullcap hedgehog hide~
+a hedgehog-hide skullcap~
+A simple skullcap crafted from the hide of a hedgehog has been dropped here.~
+~
+9 134217728 17
+15 -1 -1 -1
+11 1182011 11811
+0
+E
+skullcap hedgehog hide~
+Through the ages armor smiths have experimented with nearly every kind of
+animal hide for crafting into defensive garments.  One of the more peculiar
+experiments was performed by the halfling Jobot Faringsworth and involved the
+pelts of hedgehogs.  An untold number of hedgehogs were slaughtered, stripped
+of their skins and cooked into a tasty stew.  Jobot's first piece, a loincloth,
+did not turn out to be a popular item at all.  A second item was crafted and it
+too was discarded, for nobody could grip their weapons while wearing hedgehog-
+hide mittens.  Finally, in an act of desperation to save his name and his
+business, Jobot pieced together a fine skullcap from the remaining scraps he
+had at his disposal.  Though the idea was sound, the damage was done.  Jobot
+Faringsworth grew old and sick and passed away, destitute and alone.
+~
+X
+~
+0 0 0
+M
+You place the hedgehog-hide skullcap on your head, adjusting its fit slightly.~
+$n places $s hedgehog-hide skullcap on $s head, adjusting its fit slightly.~
+You stop using the skullcap, pricking yourself slightly on its quills.~
+$n stops using $s skullcap, pricking $mself slightly on its quills.~
+A
+19 3
+A
+18 2
+B
+4
+#1048
+belt plated platypus bills~
+a plated belt of platypus bills~
+A strange plated belt made from many platypus bills is here on the ground.~
+~
+9 134217728 2049
+30 -1 -1 -1
+11 1182011 11811
+0
+E
+belt plated platypus bills~
+It is said that Warlord Ganjo, a fairly chill warlord as far as military
+leaders go, found nothing more amusing or entertaining than his pet
+platypuses.  Unfortunately, he was also rather fickle and would often grow bored
+with this or that.  It was during one of these lulls of boredom that he came up
+with the rather brilliant, or so he thought, idea of platypus mortal combat.
+Thus began a strange time in his lands of faraway, a time of grooming and
+training one's platypus to the peak of its performance.  Spiked armors and
+bladed tail bands were crafted, all in the name of platypus gladiatorial
+games.  As each weaker animal fell, Ganjo had for himself collected the bill of
+the slain beast.  In the end, this too grew tiresome for the warlord, and the
+games were ended just as swiftly as they began.  To remember those days, Ganjo
+wore a belt crafted from those collected bills.  Warlord Ganjo was slain some
+months later by a proclaimer of platypus freedom.
+~
+X
+~
+0 0 0
+M
+The multitude of platypus bills on your belt clatter as you buckle it on.~
+The multitude of platypus bills on $n belt clatters as $s buckles it on.~
+You unbuckle your platypus bill belt, wary of its queer nature.~
+$n unbuckles $s platypus bill belt, looking wary of its queer nature.~
+A
+19 3
+A
+13 -100
+B
+16777216
+#1049
+crown drunk midgaard quest newyork~
+the crown of Midgaard's Drunk~
+A dangerous looking crown of wood, leather and rusted nails has been left here.~
+~
+9 134217728 17
+0 -1 -1 -1
+5 30000 10000
+0
+E
+crown~
+Midgaard's drunks are as legendary as its metaphysician, Grunting Boar Inn,
+and resting room clubs combined. Wandering the streets in drunken hazes, these
+fools have made a living off the scraps and donations of adventurers too tired
+to shove the smelly oafs away. Somehow, from the refuse and discard of a score
+of travelers and the help of a local smithy, this crown was formed. The origin
+of its power is still unknown but those miserable few who wear it seem to find
+a calm sanctuary of some sort as they stumble to and fro Midgaard's winesinks,
+taverns, and back alleys.
+~
+X
+~
+0 0 0
+M
+A euphoric sense of calm washes over you as you don the makeshift crown.~
+$n hurts $mself as $e places the crown atop his head, but appears thrilled.~
+You decide the sanctuary of taverns is overrated and remove your sot's crown.~
+$n yanks a wooden crown from $s head and seems to regain $s balance.~
+A
+17 10
+A
+19 2
+B
+128
+#1050
+jacket spiked street warrior quest newyork~
+spiked jacket of the street warrior~
+A spiked leather jacket has been left here, its owner gone missing.~
+~
+9 134217794 9
+24 -1 -1 -1
+15 80000 414
+0
+E
+jacket~
+This jacket has seen better and less violent days. Rough metal spikes protrude
+from the once-fine leather, fastened on in an apparent attempt to make it look
+more dangerous. Jagged scars in the hide of the garment hint at the many fights
+it has seen in the hands of its owner. The letters "I <3 NY" are stitched on
+the back of the jacket in a mix of red and gold threads
+perhaps "NY" are the
+initials of the ruffian the jacket belongs to? Though a bit gaudy and ragged,
+the jacket looks like it offers a good amount of protection and seems to have
+served its owner well.
+~
+X
+~
+0 0 0
+M
+As you slip on your spiked jacket you feel the sudden urge to fight!~
+$n looks ready to fight someone the moment $e slips it on!~
+You strip off your spiked jacket, feeling a little less rowdy.~
+$n strips off $s spiked jacket, looking a little less like trouble.~
+A
+17 -14
+A
+19 2
+B
+16777216
+#1051
+lantern azureflame esar quest~
+Lantern of the Azureflame~
+A silver lantern, oddly emitting no light, was left upturned on the ground.~
+~
+1 134219328 65537
+3 2 14246 -1
+43 1 41203
+0
+E
+lantern~
+Carefully crafted from a block of solidified ectoplasm, this lantern was
+molded from a sheet of pure silver; the smelted remnants of the Silver
+Sword of Gith. Captured inside the ectoplasm is the fabled Azureflame,
+created during a particularly unfortunate session of park-going alchemy,
+the result of an early experiment with lanterns, blue fire, toilet paper
+and severed human extremities. As a tribute to that fateful day, a bold
+trio of adventurers ventured into the depths of the Astral Plane in an
+attempt to harvest a medium in which the Azureflame could be stored and
+carried on a more permanent basis. However, after a less than fruitful
+skirmish with a roaming band of Githyanki, the trio retreated from the
+plane with their silver cords still in tact, and a handful of malleable
+ectoplasm taken from the rubble of a fallen astral construct.
+~
+X
+~
+0 0 0
+M
+You tap on the silver frame of the lantern and the Azureflame springs to life.~
+$n taps unceremoniously on $s lantern and flames within suddenly spring to life.~
+You stow your silver lantern and the Azureflame suddenly flickers out.~
+$n stashes $s lantern as the azure flames inside suddenly flicker out.~
+A
+19 5
+A
+18 3
+A
+52 13
+B
+12
+#1052
+caladbolg darksteel runeblade esar~
+the Darksteel Runeblade 'Caladbolg'~
+A blackened bastard sword decorated with dimly glowing runes lies here.~
+An arc of shadows trails Caladbolg as it plunges into $V.~
+5 13691392 8193
+68 6 6 12
+34 1629375 175666
+100
+E
+caladbolg runeblade~
+Finely crafted from a blackened metal as dark as onyx, this blade is
+etched from hilt to tip with a series of dimly glowing blue runes, the
+remnants of a long forgotten language. As stories would have it, this
+bastard sword began its life as an enormous tooth pulled from the
+gaping maw of an equally enormous beast. Shaven down to form the length
+of its blade, the ragged root of the canine was capped with steel to
+form a handle and it became quite a passable weapon. Though somewhat
+impractical due to its weight, it saw much use throughout an age, but
+eventually succumbed to wear as the bone was slowly chipped away. Due
+to its magical nature, even in its tattered form it would serve as the
+core to an even superior weapon. And thus, a blade was molded around it
+to create the weapon named Caladbolg, the name of the beast who bore
+the canine etched into its surface with an ancient, eldritch magic.
+~
+X
+$r bastard sword pulses a scintillating blue then fades to black.~
+0 0 0
+M
+You heft the tremendous runeblade in one hand and feel its strength course through you.~
+$n hefts a blackened sword in $s hand, brilliant blue runes flashing across the blade.~
+The runes across Caladbolg suddenly fade to black as you release your hold on the blade.~
+$n's blade suddenly dims and goes black as $e releases $s grip on the sword.~
+A
+19 8
+A
+18 -2
+A
+1 1
+#1053
+disk countenance damned esar~
+Countenance of the Damned~
+A disk forged from a glimmering crimson metal lies discarded here.~
+~
+5 134220352 24577
+0 5 1 11
+20 10000 10000
+100
+E
+countenance damned~
+Forged from a gleaming metal tinted a blood red, this disk seems to
+have captured the tortmented essence of the souls of the damned. Though
+it bears no marks to indicate what form of tools were used to craft it,
+one might wager a guess that from the realism of the impression
+sculpted into its surface, that some vile form of magic transplanted it
+from the unwilling victims depicted here now. As uncomfortable as that
+thought may be, the crimson disk seethes with abyssal power and seems
+to snatch at your willingness to take hold of it and bathe in whatever
+unholy energies it could bring to bear.
+~
+X
+~
+0 0 0
+M
+You take hold of the crimson disk and feel its abyssal power surge through you.~
+$n takes hold of a glimmering crimson disk and shudders momentarily in infernal bliss.~
+The crimson disk's unholy power ebbs out of you as your carefully release your grip.~
+$n breathes a momentary sigh of relief as $e releases $s grip on a glimmering metal disk.~
+A
+19 5
+A
+18 5
+#1054
+bracer emberfyre esar quest~
+an Emberfyre bracer~
+A smoldering pile of glowing magma lies abandoned on the floor.~
+~
+9 134217729 4097
+7 -1 -1 -1
+5 356890 14501
+0
+E
+bracer emberfyre~
+Forged in the fires of a magma lake on a far-flung section of an
+Elemental Plane of Fire, this bracer was the result of experiments
+performed by a mage named Kerleth. While Kerleth's inevitable downfall
+came at the hands of the very elements he spent his life learning to
+manipulate, his legacy would at least live on in the vast collection
+he managed to create. This is but one piece of that collection, pilfered
+from Kerleth's obsidian tower by a particularly clumsy thief. While said
+thief managed to escape the tower in one piece, it was a short-lived
+success, as the winged-demon that he had bargained with to gain entrance
+to the tower was none too pleased that he had returned almost empty
+handed, and set upon him with an infernal vengeance. When all was said
+and done, this piece of Kerleth's armory had found a new home: in a pile
+of ashen remains.
+~
+X
+~
+0 0 0
+M
+You clasp the bracer onto your wrist and reel in pain as the seething magma chars your flesh.~
+$n clasps a smoldering bracer to $s wrist and winces in pain as it sears $s flesh.~
+You breath a sigh of relief as you unclasp the bracer from your now-blackened flesh.~
+$n breathes a sigh of relief as $e unclasps a smoldering bracer from $s blackened wrist.~
+A
+19 5
+T
+42000
+B
+16777224
+#1055
+amontillado casque mog quest~
+the Casque of Amontillado~
+A wine barrel, seemingly converted into a helmet, protects the floor from attacks of impunity.~
+~
+9 134217728 17
+7 -1 -1 -1
+17 356890 14501
+0
+E
+casque amontillado~
+This barrel, once filled with a rare Amontillado vintage, was purchased in 1846 with the sole intent of
+luring poor Fortunato, whose thousand injuries to Montresor's person had finally ventured upon insult. 
+Peculiarly, it seems to have been converted into a helmet, likely on a punny whim.
+~
+X
+~
+0 0 0
+M
+Donning the Casque, you confidently shout 'NEMO ME IMPUNE LACESSIT!', but the sound reverberates through your skull.~
+$n carefully lifts a wine barrel over $s head, muffled Latin failing to emerge from within.~
+Removing the Casque of Amontillado, you feel immensely aware of those who would attack you out of impunity.~
+$n awkwardly removes a wine barrel from $s head, instantly appearing prone to attacks of impunity.~
+A
+19 3
+A
+52 58
+T
+42000
+B
+128
+#1056
+uruloki greaves dragon dam epi p8 prometheus quest~
+Burning-Hot Greaves Fashioned of Uruloki Scales~
+A pair of heavy dragon-scale greaves rest here.~
+~
+9 134217728 33
+11 -1 -1 -1
+17 356890 14501
+0
+E
+greaves uruloki~
+These greaves are made of layer over layer of dragon
+scale, each scale representing a mighty wyrm which
+fell to Prometheus' wrath.
+~
+X
+~
+0 0 0
+M
+You feel a heavy weight as you bind your greaves.~
+The scales of many great Uruloki glimmer in the light as $n dons $s greaves.~
+You feel as though a great weight has been lifted as you remove the greaves of the Uruloki.~
+As $n unbinds his greaves, their shimmering surface catches the light.~
+A
+19 3
+A
+13 202
+T
+42000
+#1057
+shield azure dragon rider blue~
+Shield of the Azure Dragon Rider~
+A round shield, crafted from the scales of an azure dragon, has been left here.~
+~
+9 65 513
+11 -1 -1 -1
+17 356890 14501
+0
+E
+night quest~
+`pNight was here.`q
+~
+E
+shield azure dragon rider blue~
+Though the design of this shield is simple, it is beautifully crafted from rare
+and high quality materials. Round in shape, the shield is nearly a meter in
+diameter and is slightly concave from the perspective of the wearer. The
+circumference of the shield is composed of a burnished silver metal,
+circumscribed with dark symbols of mysterious origin. The nearly impervious
+scales of an ancient blue wyrm form the main protective body of the shield. A
+metal disc is mounted at the center of the shield, five spokes connecting it to
+the outer ring. Attached to the back side of the shield is a simple grip and a
+pair of sturdy brown leather straps with heavy buckles. The shield bares little
+in the way of battle damage, yet it looks ancient and well-used at the same
+time; a testament to its superior craftsmanship. Capable of deflecting the
+mightiest of blows, this shield is deceptively light for its size, granting its
+wielder a high degree of mobility in the thick of battle.
+~
+X
+~
+0 0 0
+M
+As you equip the shield, a myriad of azure dragon scales shimmer on its surface.~
+As $n equips $s shield, a myriad of azure dragon scales shimmer on its surface.~
+You unequip the shield and strap it to your back in one swift action.~
+$n unequips $s shield and straps it to $s back in one swift action.~
+A
+19 3
+B
+32776
+#1085
+voucher midgaard casino prize~
+a Midgaard Casino prize voucher~
+a shiny, slightly crumpled golden ticket lies here~
+~
+8 0 1
+0 0 0 0
+1 1000000 10000000
+10
+E
+voucher midgaard casino prize~
+In your hands, you hold a shiny golden ticket. The ticket is made of a slick golden
+foil material, and its edges are cut into an elaborate wavy pattern. A long diatribe
+of legalese, written in graceful silvery lettering, fills much of the ticket. The blurb
+goes on and on about redemption rules, expiration dates and possible fines or
+imprisonment. Scrawled atop this, in crude childlike lettering, is the following: 
+Contact The Mayor for more information, - The Mayor
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+53 -50
+A
+21 -12
+A
+9 61
+#1086
+Shield Reindeer skin~
+a reindeer skin shield~
+a shield, covered with the dried skin of a reindeer, lies here.~
+~
+9 402655233 513
+20 -1 -1 -1
+60 40000 11000
+100
+X
+~
+0 0 0
+M
+$n strap on $s reindeer skin shield, blood oozing out as the straps tighten down.~
+$n straps a reindeer skin shield to $s arm, blood oozes down as the straps clamp down.~
+$n remove a reindeer skin shield from your arm, wiping up the blood that has oozed down from the skin.~
+$n removes a reindeer skin shield from $s arm, wiping up the blood that has dripped down from the skin.~
+A
+19 3
+A
+52 25
+A
+31 5
+B
+16777216
+#1087
+vertebrae drake cloud lemon~
+a gem-encrusted Cloud Drake's vertebrae~
+Lemon has left a bejeweled vertebrae here, please return it.~
+~
+9 402653184 4097
+8 -1 -1 -1
+3 50000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+19 4
+B
+16777216
+#1088
+nose red rudolph's~
+Rudolph's red nose~
+A bright red nose lies here, seemingly pulled out by the red and dripping roots.~
+~
+1 402653185 65537
+0 0 -1 -1
+10 11000 8000
+100
+X
+~
+0 0 0
+M
+$n grab hold of a glowing reindeer nose, blood oozing from the roots as you hold it high.~
+$n grabs hold of a glowing, red nose. Blood oozing between $s fingers as $e holds it high.~
+$n pry your stiff and blood encrusted fingers off from around Rudolph's nose.~
+$n pries $s stiff and blood encrusted fingers from around Rudolph's nose.~
+A
+19 3
+A
+18 3
+A
+52 25
+B
+16809984
+#1089
+pendant sorrow gemstone fine silver chain~
+Pendant of Sorrow~
+A simple gemstone pendant on a fine silver chain has been dropped here.~
+~
+9 180387906 5
+10 0 0 0
+15 95000 55000
+33
+E
+night~
+`pNight was here.`q
+~
+E
+pendant sorrow gemstone fine silver chain~
+A mortal jewelcrafter, by the name of Marius, was tasked with producing a pair
+of amulets for Zeus and Hera. The metal that composes the fine silver chain of
+the pendants was sourced from the same ingots used to forge the mighty hammer
+wielded by Thor. The gemstones used in the design are said to have formed from
+the only two teardrops shed by Hera over the death of Heracles. These amulets
+were stolen by some lesser god and were eventually lost to the sands of time.
+It is said that the gods that commissioned the pendants were so jealous of
+their perfection that they had Marius executed, lest he someday produce a piece
+of higher quality.
+~
+X
+~
+0 0 0
+M
+You shed a single tear as you wear the pendant around your neck.~
+$n sheds a single tear as $e wears the pendant around $s neck.~
+You feel a little less sad as you remove the pendant from around your neck.~
+$n looks a little less sad as $e removes the pendant from around $s neck.~
+A
+13 10
+A
+19 3
+A
+18 2
+#1090
+cloak smoldering shadows flame~
+A Smoldering Cloak of Shadows~
+A cloak composed of shadows and flame lies here in a smoldering heap.~
+~
+9 134348869 1025
+40 0 0 0
+3 12000 7000
+50
+E
+night~
+`pNight was here.`q
+~
+E
+cloak smoldering shadows flame~
+The cloak appears to flicker and fade, its presence in the physical realm a
+tenuous thing. The edges of the cape give it definition, as they smolder and
+glow with a dull reddish-orange light. It is said that cloaks such as these
+are created when a powerful demon is banished from this world, and are thought
+to be composed of the lingering essence of the creature. Perhaps they are just
+that, or perhaps they represent a sliver of a connection between this world and
+the lower planes. Nobody has dared to find out, lest the demon become aware of
+its loss and seek to reclaim its forgotten power.
+~
+X
+~
+0 0 0
+M
+You are enveloped by shadow and flame as you wrap the cloak about yourself.~
+$n is enveloped by shadow and flame as $e wraps $s cloak about $mself.~
+You breath easier as the oppressive presence of your cloak fades away.~
+$n breathes easier as the oppressive presence of $s cloak fades away.~
+A
+18 3
+A
+19 2
+#1091
+braided wolfram armband sancarms~
+A Braided Wolfram Armband~
+Braided strands of a silvery metal lie partially concealed on the ground.~
+~
+9 0 257
+8 -1 -1 -1
+10 10000 1000
+10
+X
+~
+0 0 0
+M
+You wrap a strand of braided metal around your arms.~
+$n wraps a shimmering braid of metal around $s upper arms.~
+You unwind the braided metal from your arms.~
+$n carefully unwinds the braided metal from $s arms.~
+A
+19 2
+B
+128
+#1092
+chain spiked nephilimis vindictae chaosprize~
+Nephilimis Vindictae~
+A writhing mass of spiked chains floats here, dripping with fresh, warm blood.~
+~
+26 134217798 8193
+2 2 19 11
+18 666 666666
+0
+E
+chain spiked nephilimis vindictae chaosprize~
+Made of the darkest black metal, this extremely long spiked chain sways menacingly, seemingly under its own power.
+
+Within the depths of its obsidian finish, a swirling sanguine mist reveals the faint form of a tortured face.  At the tips of the
+sharp spikes, the mist gives way to ropy tendrils, dripping as fresh blood to the floor.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 14
+A
+45 20
+#1093
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1094
+nothing~
+A jug of Moonshine!~
+A jug of home-brewed moonshine is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1095
+alcohol moonshine~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1096
+footprint Leo foot print~
+The ink foot print of Leo~
+There is a foot print on the ground here.~
+~
+9 0 135169
+15 -1 -1 -1
+7 2147483647 38
+1
+E
+footprint Leo foot print~
+It is the ink foot print of a new born babe.  In the birthing ceremony in some
+cultures, an ink footprint is placed on the forearm of an honored guest.  The
+wearer of this footprint has been blessed by a new father.  Judging by the
+power emanating from the footprint, a very powerful new father.
+~
+X
+~
+2 0 0
+M
+You hold your arm still while the nurse stamps it with Leo's foot.~
+$n holds $s arm still while the nurse stamps it with Leo's foot.~
+You scrub your arm vigorously to remove the foot print.~
+$n scrubs $s arm vigorously to remove the foot print.~
+A
+19 4
+A
+52 50
+A
+51 20
+T
+168
+#1097
+alcohol rum~
+A bottle of cheap rum.~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1098
+alcohol bourbon~
+A bottle of Bourbon.~
+A bottle of bourbon is lying here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1099
+alcohol brandy~
+A snifter filled with brandy.~
+A snifter filled with brandy is sitting here.~
+~
+10 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

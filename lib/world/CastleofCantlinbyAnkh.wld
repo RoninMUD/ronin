@@ -1,0 +1,573 @@
+#8401
+An Old Abandoned Road~
+        You find yourself on an old road, one that has not been used 
+for a while.  To the north you can see some sand dunes.  The road 
+continues to the south.
+~
+84 0 2
+D0
+~
+~
+0 -1 8344
+D2
+~
+~
+0 -1 8402
+S
+#8402
+An Old Abandoned Road~
+	You are at a bend in the road.  This road was once covered with 
+potholes and traffic, but now it is covered with grass and weeds. The 
+road continues north and west.
+~
+84 0 2
+D0
+~
+~
+0 -1 8401
+D3
+~
+~
+0 -1 8403
+S
+#8403
+An Old Abandoned Road~
+	You are on an old road traveling east and west.  Once this road
+flourished with activity, but now it is empty.  What could have happened
+to this place?
+~
+84 0 2
+D1
+~
+~
+0 -1 8402
+D3
+~
+~
+0 -1 8404
+S
+#8404
+Outside a Strange Stable~
+	You find yourself in front of a strange stable on an old road.
+You hear loud noises to the south as whatever is in the stable thrashes
+itself against the wall.  What could be in such a strange stable?  The
+road continues east and west.
+~
+84 0 2
+D1
+~
+~
+0 -1 8403
+D2
+An old heavy door.
+~
+door~
+2 8415 8405
+D3
+~
+~
+0 -1 8406
+S
+#8405
+The Strange Stable~
+	You find yourself inside an old horse-barn, now used to hold a 
+mighty dragon. The walls of this old stable where once lined with wood,
+but are now lined with steel!  From the big dents in the steel you can tell
+that the dragon is powerful!  The only exit is the road to the north.
+~
+84 136 0
+D0
+Steel plated door.
+~
+door~
+2 8415 8404
+S
+#8406
+The Road to an Abandoned Castle~
+	You are traveling on an old road that goes east and west.  The
+road seems to be getting a bit more use here than it did at the beginning. 
+It's obvious that somebody must still use this road to travel to the stable,
+but who? Or what?
+~
+84 0 2
+D1
+~
+~
+0 -1 8404
+D3
+~
+~
+0 -1 8407
+S
+#8407
+The Road to an Abandoned Castle~
+	You find yourself at a bend in the road, which continues
+south and east.  You see a small castle to the southwest, and an old
+sign stuck in the ground.
+~
+84 4 2
+D1
+~
+~
+0 -1 8406
+D2
+~
+~
+0 -1 8408
+E
+sign~
+
+
+
+	Welcome to the Castle Cantlin!
+
+~
+S
+#8408
+The Road to an Abandoned Castle~
+	You are traveling on an old road that leads north and south.  To 
+the south you can see the remains of an old drawbridge.  On the ground, 
+carved in the dirt, you see an eerie warning.
+~
+84 0 2
+D0
+~
+~
+0 -1 8407
+D2
+~
+~
+0 -1 8410
+E
+warning~
+
+
+
+	Look out, Cantlin is not as it was -- Aldor will destroy you!
+
+~
+S
+#8409
+An Old Hallway~
+	You are walking down an old hallway in an ominous-looking
+castle.  From the craftsmanship seen all about this old castle, you
+can tell that this was once a very happy place.  What could have 
+happened to change this place? The hall continues west and the entrance
+is to the south.
+~
+84 0 2
+D2
+~
+~
+0 -1 8411
+D3
+~
+~
+0 -1 8417
+S
+#8410
+In Front of the Abandoned Castle~
+	You are standing in front of an old castle.  This castle was
+once a thriving place but darkness looms, as the echoes of lost souls
+haunt the hallways.  The old drawbridge spans the moat leading west 
+to the empty castle and the road continues north.
+~
+84 0 2
+D0
+~
+~
+0 -1 8408
+D3
+~
+~
+0 -1 8411
+E
+drawbridge~
+
+	The drawbridge is old and rotten, but it seems to be held up 
+by some type of magical force.  It should hold you.
+~
+S
+#8411
+Inside the Castle~
+	You have just entered the castle Cantlin.  This small castle
+was once the home of the great King Edrick, but Edrick was overthrown
+and his castle lies in ruins.  The evil warlock Aldor has summoned the
+souls of the damned to do his bidding -- the task ahead of you is a hard 
+one, at best.  The outside of the castle is to the east as hallways 
+lead north, west, and south. 
+~
+84 0 2
+D0
+~
+~
+0 -1 8409
+D1
+~
+~
+0 -1 8410
+D2
+~
+~
+0 -1 8412
+D3
+~
+~
+0 -1 8416
+S
+#8412
+An Old Hallway~
+	You are walking down an old hallway in a strangely macabre castle.
+From the craftsmanship seen all about this old castle, you can tell 
+that this was once a very happy place.  What could have happened to 
+change it?  The hall continues west and the entrance is north, and 
+the kitchen is to the south.
+~
+84 0 2
+D0
+~
+~
+0 -1 8411
+D2
+~
+~
+0 -1 8413
+D3
+~
+~
+0 -1 8415
+S
+#8413
+A Dirty Kitchen~
+	You have entered a dirty kitchen, where Aldor's meals are 
+prepared.  The kitchen is very old and so are its appliances -- none
+of them work properly, but they all emit a magical glow.  You can 
+sense Aldor's magic at work.
+~
+84 0 2
+D0
+~
+~
+0 -1 8412
+E
+oven~
+	This is a very old oven which hasn't worked in years, but it
+glows with a magical light.
+~
+S
+#8414
+An Empty Dining room~
+	This old dining room hasn't been used in years.  Edrick
+himself was the last person to sit at the head of this table.  In its
+day this room must have been very elegant, with its chandelier and 
+large oak table.  The only exit is the hallway to the north.
+~
+84 0 2
+D0
+~
+~
+0 -1 8415
+E
+chandelier~
+	This old chandelier once brightened this room, but now it 
+stands as a sad reminder of better days gone by.
+~
+S
+#8415
+An Old Hallway~
+	You are walking down an old hallway in an ensorcelled castle.
+From the craftsmanship seen all about this old castle, you can tell 
+that this was once a very happy place.  What could have happened to 
+change it?  The hall continues east and the dining room is to the 
+south.
+~
+84 0 2
+D1
+~
+~
+0 -1 8412
+D2
+~
+~
+0 -1 8414
+S
+#8416
+An Old Hallway~
+	You are walking down an old hallway in a miasmatic castle.
+From the craftsmanship seen all about this old castle, you can tell 
+that this was once a very happy place.  What could have happened to 
+change it so drastically?  The hall continues east and west.
+~
+84 0 2
+D1
+~
+~
+0 -1 8411
+D3
+~
+~
+0 -1 8419
+S
+#8417
+An Old Hallway~
+	You are walking down an old hallway in a castle made frightening
+by its emptiness.  From the craftsmanship seen all about this old castle, 
+you can tell that this was once a very happy place.  What could have 
+happened to change it so?  The hall continues east, and to the west
+there is a dead end.
+~
+84 0 2
+D1
+~
+~
+0 -1 8409
+D3
+~
+~
+0 -1 8418
+S
+#8418
+At the End of an Old Hallway~
+	You are at the end of the hallway.  On the floor you notice a
+heavy stone trapdoor.  You wonder where it leads. The hallway continues
+to the east.
+~
+84 4 0
+D1
+~
+~
+0 -1 8417
+D5
+A heavy stone.
+~
+stone~
+2 8415 8431
+S
+#8419
+An Old Hallway~
+	You are walking down an old hallway in a very dank castle.
+From the craftsmanship seen all about this old castle, you can tell 
+that this was once a very happy place.  I wonder what happened to 
+change it?  The hall continues east and south.
+~
+84 0 2
+D1
+~
+~
+0 -1 8416
+D2
+~
+~
+0 -1 8420
+S
+#8420
+An Old Hallway~
+	From the craftsmanship seen all about this old castle, you 
+can tell that this was once a very happy place.  I wonder what happened 
+to change it?  The hall continues north and to the south you see an 
+old staircase.
+~
+84 0 2
+D0
+~
+~
+0 -1 8419
+D2
+~
+~
+0 -1 8421
+S
+#8421
+At the Foot of an Old Staircase~
+	You are at the foot of a large staircase.  In times gone by 
+this staircase would have been shining in the sunlight, but now
+its marble banisters are dull and dust covered.  The hallway is to the
+north and the stairs lead upwards to the second floor.
+~
+84 0 2
+D0
+~
+~
+0 -1 8420
+D4
+~
+~
+0 0 8422
+S
+#8422
+Second Floor Hallway~
+	This is the second floor of the castle.  The souls of the damned
+haunt the hallways up here, as they did on the first floor.  There is a
+strong feeling of evil and it sends shivers up your spine - Aldor
+must be near.  The main floor is below, and the hallway continues to the
+east.
+~
+84 0 4
+D1
+~
+~
+0 -1 8423
+D5
+~
+~
+0 0 8421
+S
+#8423
+Second Floor Hallway~
+	This is the second floor of the castle.  The souls of the damned
+haunt the hallways up here, as they did on the first floor.  There is a
+strong feeling of evil here and it sends shivers up your spine - Aldor
+must be near.  The offering chamber is east, and the hallway continues to 
+the north.
+~
+84 0 4
+D0
+~
+~
+0 -1 8425
+D1
+~
+~
+0 -1 8424
+D3
+~
+~
+0 0 8422
+S
+#8424
+Offering Chamber~
+	You find yourself in a room that was the queen's chamber while
+Edrick was in power.  Now it has been transformed into an offering chamber
+for the evil Aldor.  The lone priestess is constantly here, so as not
+to make the all-powerful Aldor mad.  The only exit from this horrible
+place is the hallway to the west.
+~
+84 0 4
+D3
+~
+~
+0 0 8423
+S
+#8425
+Second Floor Hallway~
+	This is the second floor of the castle. The souls of the damned
+haunt the hallways up here, as they did on the first floor.  There is a
+strong feeling of evil here and it sends shivers up your spine - Aldor
+must be near.  The chamber of Aldor is calling to you from the west, and 
+the hallway continues to the south. 
+~
+84 0 4
+D2
+~
+~
+0 -1 8423
+D3
+~
+~
+0 0 8426
+S
+#8426
+The Chamber of Aldor~
+	This was once the throne room for the great King Edrick.  Now
+the terrible Aldor has turned it into a chamber of the damned.
+Aldor must truly be an evil man: the room is covered in blood, and the
+remains of dead bodies litter the floor.  Let's hope you have better luck
+than his other challengers or you could be the next offering!  The only
+exit is the hallway to the east.
+~
+84 0 0
+D1
+~
+~
+0 0 8425
+S
+#8427
+A Dirty Cell~
+	Rats scamper about the floor of the cell as the few loyal
+followers of Edrick are here, chained to the walls.  I wonder what
+happened to Edrick?  The only exit from this cell is the room to
+the east.
+~
+84 8 0
+D1
+~
+~
+0 -1 8431
+S
+#8428
+A Dirty Cell~
+	Rats scamper about the floor of the cell as the few loyal
+followers of Edrick are here, chained to the walls.  I wonder what
+happened to Edrick?  The only exit from this cell is the room to
+the south.
+~
+84 8 0
+D2
+~
+~
+0 -1 8431
+S
+#8429
+A Dirty Cell~
+	Rats scamper about the floor of the cell as the few loyal
+followers of Edrick sit here, chained to the walls.  What could have
+happened to Edrick? The only exit from this cell is the room to
+the west.
+~
+84 8 0
+D3
+~
+~
+0 -1 8431
+S
+#8430
+A Dirty Cell~
+	Rats scamper about the floor of the cell as the few loyal
+followers of Edrick sit here, chained to the walls. What could have
+happened to Edrick?  You notice a strange skeleton on the floor.
+The only exit from this cell is the room to the north.
+~
+84 8 0
+D0
+~
+~
+0 0 8431
+S
+#8431
+A Rat-Infested Room~
+	This is the castle dungeon.  In the golden time of this castle
+these cells would have contained anyone who opposed Edrick, but now
+they contain his followers.  The evil Aldor must have locked them all
+up after he destroyed the great king.  The stairs lead up to the main 
+floor, while there are cells to the north, east, south, and west.
+~
+84 8 0
+D0
+~
+~
+0 -1 8428
+D1
+~
+~
+0 -1 8429
+D2
+~
+~
+0 0 8430
+D3
+~
+~
+0 0 8427
+D4
+A heavy stone block.
+~
+stone~
+2 8415 8418
+E
+cells~
+The cells contain the last followers of the great Edrick.
+~
+S
+#0
+$~
+

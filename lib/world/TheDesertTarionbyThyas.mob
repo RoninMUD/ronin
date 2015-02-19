@@ -1,0 +1,83 @@
+#10500
+dust snake~
+A small dust snake~
+A small snake wiggles in the sand here.
+~
+A tiny creature, the snake is of little threat to you.
+~
+104 0 0 Y
+25 7 -2 100d2+100 10d5+12
+1000 5000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10501
+scorpion tiny~
+a scorpion~
+A tiny scorpion scuttles in front of you.
+~
+Although its a miniscule creature, its sting can be very deadly!
+~
+104 0 0 Y
+24 9 0 20d5+120 5d6+20
+2000 2000
+8 8 1
+86 0 0d0+5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#10502
+tarion cavalier~
+A Tarion Cavalier~
+One of the lost Cavaliers from the ancient Tarion city is wandering the dunes.
+~
+
+  As you gaze upon this seemingly broken man, your eyes happen
+upon his faded blue stare.  He doesn't speak, merely nods your
+way and scans the horizon, perhaps still seeking his place in
+the Holy City of Tarion.  He is a part of the elite squadron
+loyal still to the lost city, disbanded when the great Sandstorm
+bore down and swallowed everything.  Perhaps you should leave
+him alone, as he moves to continue along the endless dunes.
+
+~
+16392 270464 750 Y
+60 -16 -8 10d99+13250 17d6+120
+200000 1950000
+8 8 1
+69 4619 1d1+1 2
+3 1 20 0
+9 3 15 0
+0 0 0 0
+T
+......A Tarion Cavalier exudes an abnormally strong presence!~
+K
+0 0 0 0 0 0 0
+#10503
+horse warhorse tarion charger~
+A Tarion War-Charger~
+A warhorse from the fabled line of Tarion stands silently here.
+~
+
+  This animal is a fine specimen, one of the few war-charger
+horses left from the ancient lost Tarion city.  They were bred
+for endurance, speed, and agility, and in the deep green eyes
+you can sense the power which this warhorse still commands.
+The art of War is its specialty, and it would hesitate at nothing
+to follow the commands of its master.
+
+~
+16648 262144 800 Y
+55 -14 -6 10d99+7790 16d8+101
+75000 1200000
+8 8 1
+86 939532287 1d1+1 2
+7 2 20 0
+10 1 15 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

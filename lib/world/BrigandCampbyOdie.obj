@@ -1,0 +1,218 @@
+#2101
+cloak deception~
+a cloak of deception~
+A shimmering red cloak lies here on the ground~
+~
+9 64 1025
+5 0 0 0
+3 2000 300
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+#2102
+belt holding~
+A belt of holding~
+A leather belt is lying on the ground.~
+~
+15 0 2049
+8000 0 0 0
+5 900 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -5
+#2103
+rapier~
+rapier~
+A polished rapier lies here on the ground.~
+~
+5 0 8193
+0 3 6 7
+16 7000 1800
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#2104
+leather girth leathergirth~
+a leather girth~
+A leather girth is lying on the ground.~
+~
+9 0 2049
+2 0 0 0
+2 500 50
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2105
+long bow~
+long bow~
+A long bow is lying on the ground.~
+~
+5 0 8193
+0 1 8 7
+11 890 80
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+#2106
+wand bless~
+a wand of bless~
+A wand of bless is lying on the ground.~
+~
+3 64 16385
+10 3 3 3
+10 1786 190
+99
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2107
+staff armor~
+a staff of armor~
+A staff of armor is lying on the ground.~
+~
+4 0 16385
+10 2 1 1
+10 2500 190
+99
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2108
+cookie~
+a cookie~
+A tasty `dbrown cookie `qhas been left here.~
+~
+19 0 1
+8 0 0 0
+1 7 7
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2109
+chocolate bar~
+a chocolate bar~
+A chocolate bar has been left here.~
+~
+19 0 1
+24 0 0 0
+1 20 10
+99
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2110
+bottle spring~
+a bottle~
+A bottle of spring has been left here.~
+~
+17 0 1
+30 30 0 0
+30 100 10
+99
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2111
+water waterbelt~
+a water belt~
+A water belt is lying on the ground.~
+~
+17 0 2049
+50 0 0 0
+5 10000 400
+99
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -5
+#2112
+well~
+a well~
+A small well is jutting out of the ground here.~
+~
+17 0 0
+8000 8000 16 0
+5000 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

@@ -1,0 +1,146 @@
+#6200
+frog~
+a frog~
+A hearty old frog is here, blissfully sitting.
+~
+It has often been written that frogs are very Zen creatures,
+always sitting, waiting, waiting for a fly to come their way,
+and this frog is no different.  Frogs are known to be able to 
+survive for ages in dry, enclosed spaces -- this one's probably
+been here for years, just waiting, sitting.
+~
+16398 8216 1000 Y
+20 0 -5 1d100+900 5d5+20
+0 1000
+6 6 1
+81 0 0d0+0 0
+0 0 0 0
+K
+5000 6220 0 0 0 0 0
+#6201
+the Unholy Deacon~
+the Unholy Deacon~
+The Unholy Deacon is standing here, lost in his own reality.
+~
+As you look into the swirling madness that is the unholy deacon's
+soul, your mortal body cries, 'Enough!' and turns to stone...
+Time to meet the Reaper.
+~
+147498 362684 -1000 Y
+40 -10 -5 10d100+5000 20d10+100
+80000 300000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#6202
+feral trapper~
+Feral Trapper~
+The Feral Trapper is here, incomprehensible hatred in his eyes.
+~
+Long, matted hair covers up all but the gleam of two hungry eyes staring
+back at you.  This trapper has definitely been living in the woods for 
+far too long, judging by the way he flares his nostrils at you, as though
+trying to get your scent.  Better watch out -- all living creatures do
+desperate things when they're hungry!
+~
+16558 270303360 0 Y
+45 -12 -10 50d70+4500 10d6+105
+0 400000
+8 8 1
+6 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#6203
+badger~
+the badger~
+A badger is here, watching you intently.
+~
+A small woodland creature, the badger has more trail-smarts than you'll
+ever come close to matching.  The badger's fine hair stands on end as
+you stare at it, and it freezes, tensing, getting ready to react to 
+whatever you do next.
+~
+142 819200 0 Y
+15 5 -1 10d2+850 2d8+30
+500 15000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#6204
+badger~
+the badger~
+A badger scuttles timidly out of your way.
+~
+This badger seems a little more timid than the others you've 
+seen in these mountains...maybe you should take it easy on
+him?
+~
+76 557056 0 Y
+6 14 -1 50d2+200 2d5+10
+400 4000
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#6205
+goat~
+the mountain goat~
+A huge mountain goat stands here, surveying his domain.
+~
+This huge mountain goat is quite a specimen.  Standing about 4 feet
+high at the shoulder, and about as long, he looks like he'd put up
+quite a fight.
+~
+72 294912 0 Y
+19 1 -2 5d50+850 2d20+30
+0 18000
+8 8 1
+91 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#6273
+ant lion~
+the ant lion~
+The ant lion bursts from the stones and grabs you in its mandibles!
+~
+The ant lion looks like a cross between a mole and a giant ant.
+Covered by a leathery exoskeleton, its beady eyes glare hungrily
+at you as its mandibles click together in anticipation and it
+reaches out for your touch with the bristles that cover its body.
+The ant lion's huge mandibles, silvery gray in color, each have
+a single barb to impale and hold the victim -- that's YOU!
+~
+16777262 537919656 -1000 Y
+53 -15 -15 10d300+10000 30d7+40
+20000 200000
+8 8 0
+76 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#6298
+cave bear~
+the cave bear~
+The Cave Bear is here, looking for a way out.
+~
+Covered with shaggy hair matted with dried blood, the cave bear
+looks back at you with mournful hatred in its eyes.  It almost
+seems sorry to have to slap your scalp loose from your head.
+~
+16793642 805601416 0 Y
+54 -14 -10 20d100+7000 3d12+70
+0 800000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,126 @@
+#7700
+typik bloody entrails lizard shaman~
+Typik's Bloody Entrails~
+A bloody pile of flesh and inards lies here.~
+~
+9 0 2049
+10 0 0 0
+10 72005 72005
+17
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+12 10
+A
+53 10
+#7701
+heavy crocodile skin~
+a heavy crocodile skin~
+A heavy crocodile skin lies here on the ground.~
+~
+30 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7702
+necklace teeth bones~
+a necklace of teeth and bones~
+A string of teeth and bones lies here.~
+~
+8 524288 5
+0 0 0 0
+1 15000 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#7703
+parchment muddy~
+a muddy parchment~
+A mud-slicked parchment awaits the Janitor's services.~
+~
+32 20 1
+7704 1608 13502 21208
+3 223 16127
+14
+E
+parchment~
+
+ Midgaard historians had been surprised to find that the
+sentient lizards had created a written language given that
+their speech is indecipherable to the human, elf, dwarf and
+halfling ear.
+ Unfortunately, very few have learned how to read the runic
+symbols or distinguish between the many, slight variations
+in hissing sounds that comprise the spoken language.
+
+ The muddy parchment is covered with a series of intricate
+symbols; none of which look the least bit familiar.
+~
+X
+~
+82 0 0
+M
+~
+~
+~
+~
+T
+11
+#7704
+kudzu knot tangle~
+a tangled knot of kudzu~
+A tangle of tuberous kudzu vine grows towards the sky.~
+~
+9 231784452 4097
+0 0 0 0
+9 18301 3511
+0
+E
+kudzu~
+
+ Although it appears quite mundane, this plant has actually
+been imbued with the magic of elven artisans. The wood elves
+are as much a part of nature as the trees, their enchanted
+armour reflects this kinship. The kudzu draws strength from
+the sun and the warmth of the flesh around which it binds.
+~
+X
+~
+4 0 0
+M
+~
+~
+You hack away some of the kudzu to pry the tuberous knot from your wrist.~
+$n hacks away some of the kudzu to pry the tuberous knot from $s wrist.~
+A
+19 1
+A
+52 5
+A
+14 0
+T
+34651
+#0
+$~

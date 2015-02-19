@@ -1,0 +1,105 @@
+#800
+Gold key~
+A shiny golden key.~
+A shiny gold key.~
+~
+18 0 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#801
+mask~
+Pharaoh's Death Mask ~
+Here is the death mask of the great pharaoh Tutankhamen.~
+~
+11 221264416 17
+0 0 0 0
+3 100 500
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 1
+A
+12 30
+B
+8
+#802
+sword healing~
+Sword of Healing~
+A Sword of Healing is stuck in the Ground.~
+~
+5 135266368 8193
+0 5 5 3
+9 1000 100
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 2
+#803
+leggings~
+Tattered Leggings~
+A pair of old tattered leggings lay on the ground.~
+~
+0 134217728 33
+0 0 0 0
+10 1000 200
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+12 10
+B
+16777216
+#804
+gloves~
+Tattered Gloves~
+A pair of old tattered gloves lie here on the ground.~
+~
+0 233846851 129
+0 0 0 0
+8 2000 1000
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+#0
+$~

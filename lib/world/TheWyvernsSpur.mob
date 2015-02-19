@@ -1,0 +1,253 @@
+#11500
+zombie~
+the zombie~
+A zombie shuffles about.
+~
+The zombie seems to have been living recently, as bits of rotten flesh still 
+fall from its limbs. It is a creature raised from the dead by an evil cleric, 
+bound to do that one's bidding.
+~
+10 32 -1000 Y
+22 6 2 300d2+100 3d6+5
+10000 60000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11501
+skeleton~
+the skeleton~
+A skeleton stands here silently.
+~
+The skeleton is made from nothing but bleach-white bones. It was once a 
+humanoid, as far as you can tell.
+~
+10 0 0 Y
+23 5 0 100d6+400 5d4+5
+10000 90000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11502
+holy ghost~
+the Holy Ghost~
+A holy ghost stands watch over the resting place of the dead.
+~
+The Holy Ghost is a spirit who was granted the right to stay in the prime
+material plane, existing as a ghost and protecting the interests of the gods
+of its alignmental plane.
+~
+10 128 1000 Y
+20 8 3 200d2+200 2d6+15
+0 100000
+9 9 0
+95 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11503
+lei kung~
+Lei Kung~
+Lei Kung is standing here.
+~
+Lei Kung appears to be a man with smoking black skin and eyes with pupils like
+lightning bolts. He has two large tusks and a huge nose. His red spotted wings
+span forty feet, and he wields a pitch black warhammer.
+~
+147499 268437664 0 Y
+40 -8 -4 0d0+3540 7d6+40
+50000 500000
+8 8 1
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11504
+fei lien~
+Fei Lien~
+Fei Lien is standing here.
+~
+Fei Lien is Count of the Wind. He is a man-shaped being riding a small
+windstorm, and wear a suit of finely wrought plate mail. His skin is jet
+black, his eyes blaze fire, and he wields a huge broadsword.
+~
+147499 2208 0 Y
+40 -8 -4 0d0+1500 2d10+60
+50000 250000
+9 9 1
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11505
+feng po~
+Feng Po~
+Feng Po is standing here.
+~
+Feng Po is Count of the Wind. He is a man-shaped being riding a small
+windstorm, and wear a suit of finely wrought plate mail. His skin is jet
+black, his eyes blaze fire, and he wields a huge broadsword.
+~
+147499 2208 0 Y
+40 -8 -6 0d0+1500 2d10+50
+50000 250000
+9 9 1
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11506
+chih sung-tzu~
+Chih Sung-Tzu~
+Chih Sung-Tzu is standing here.
+~
+Chih Sung-Tzu is Lord of Rain. He is a vewry muscular man, wearing a blue war
+helm. He rides a huge storm cloud, and is wearing a suit of terribly rusted
+scale mail.
+~
+147499 268437664 0 Y
+40 -8 -2 0d0+3880 3d10+50
+50000 500000
+9 9 1
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11507
+shang-ti~
+Shang-Ti~
+Shang-Ti is standing here.
+~
+Shang-Ti appears to be an aged man with a long white beard, dressed in 
+tattered robes.
+~
+147499 268437664 0 Y
+40 -8 -2 0d0+4000 3d12+50
+50000 500000
+8 8 1
+65 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11508
+moss monster~
+the moss monster~
+A moss monster hangs from the wall.
+~
+The moss monster is simply a large piece of living moss, most likely created
+magically.
+~
+44 0 0 Y
+20 8 0 100d5+200 20d5+0
+0 60000
+8 8 0
+92 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11509
+vegepygmy~
+the Vegepygmy~
+A vegepygmy is wandering about in search of food.
+~
+The vegepygmy is a being made from plant matter. It must have some way of
+getting sunlight to live....
+~
+44 0 0 Y
+20 8 0 100d3+200 10d10+0
+5000 60000
+8 8 0
+92 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11510
+guardian~
+the Guardian~
+The Guardian of Neutral Good stands here.
+~
+This vague figure watches over the prime material plane, reporting back to
+the gods of Elysium.
+~
+16395 128 500 Y
+25 1 -5 500d2+500 1d1+1
+15 20
+8 8 0
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11511
+guardian~
+the Guardian~
+The Guardian of Chaotic Neutrality stands here.
+~
+This vague figure watches over the prime material plane, reporting back to
+the gods of Limbo.
+~
+16395 128 0 Y
+25 1 -5 500d2+500 1d1+1
+15 20
+8 8 0
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11512
+guardian~
+the Guardian~
+The Guardian of Neutral Evil stands here.
+~
+This vague figure watches over the prime material plane, reporting back to
+the gods of Hades.
+~
+16395 128 -500 Y
+25 1 -5 500d2+500 1d1+1
+15 20
+8 8 0
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11513
+guardian~
+the Guardian~
+The Guardian of Lawful Neutralilty stands here.
+~
+This vague figure watches over the prime material plane, reporting back to
+the gods of Nirvana.
+~
+16395 128 0 Y
+25 1 -5 500d2+500 1d1+1
+15 20
+8 8 0
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11514
+wyvern~
+the Wyvern~
+A Wyvern is here, swishing its tail back and forth in anticipation of a meal.
+~
+To say that the wyvern is huge would be like saying that the Queen Ant is a
+little tough. You wonder how it manages to fit its massive body in such a
+confining cavern. Its tail bristles with spikes, and as it opens its great
+mouth to roar at you, you notice several rows of teeth the size and sharpness
+of longswords. There are scrapes in the floor where the wyvern must have been
+sharpening its nails, and it looks like that has been its main activity other
+than eating.
+~
+131113 268730368 0 Y
+48 -20 -10 1000d5+2500 5d7+100
+1000000 1000000
+6 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

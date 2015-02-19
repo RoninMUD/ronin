@@ -1,0 +1,2421 @@
+#27600
+Thickening Fog~
+  The fog begins to thicken to the point you can no
+longer see your hand in front of your face.  If there is 
+anything nasty up ahead, you will not be able to see it
+until it attacks you.
+~
+276 128 0
+D1
+~
+~
+0 -1 27673
+D3
+~
+~
+0 -1 27698
+S
+#27601
+An Overgrown Path~
+  It is difficult to see which way the path goes through this
+area.  It looks like it hasn't been used in years.  You wonder
+where it goes.
+~
+276 0 2
+D0
+~
+~
+0 -1 27196
+D3
+~
+~
+0 -1 27602
+S
+#27602
+Nearing the Jungle~
+  Ahhh! The jungle!  When you were a child your mother used to
+tell you stories of this place.  You had always considered
+them just tales to scare children.  You never dreamed this
+place really existed.  You find your mind wandering, wondering
+if those stories might be true.
+~
+276 0 2
+D1
+~
+~
+0 -1 27601
+D2
+~
+~
+0 -1 27603
+S
+#27603
+Entrance to the Jungle~
+  The grass has gotten thick and tall and you notice it is much
+more humid here than elsewhere.  In the distance you hear
+'oo oo oo AAA AAA AAA' and 'arOWW arOWW'.
+~
+276 4 2
+D0
+~
+~
+0 -1 27602
+D2
+~
+~
+0 -1 27605
+S
+#27604
+In the Jungle~
+  Sweat runs from your forehead down into your eyes, making it
+difficult to see.  You hear a low growling nearby, or do you?
+You can't see more than a few feet through the tall razor grass.
+~
+276 0 3
+D1
+~
+~
+0 -1 27605
+D2
+~
+~
+0 -1 27608
+S
+#27605
+Inside the Jungle~
+  The grass is now so thick you have to use your weapon to
+hack your way through.  Bamboo grows in a small swampy
+depression nearby.  The heat and humidity are punishing.
+What was that?  Is something slinking around in the
+tall grass?  You'd better be careful!
+~
+276 0 3
+D0
+~
+~
+0 -1 27603
+D1
+~
+~
+0 -1 27606
+D2
+~
+~
+0 -1 27609
+D3
+~
+~
+0 -1 27604
+S
+#27606
+In the Jungle~
+  Tall weeds choke the land here.  The humidity is tortuous.
+You would do almost anything for a nice refreshing glass
+of ice water.  Wait a second, is that growling you hear?
+~
+276 0 0
+D2
+~
+~
+0 -1 27610
+D3
+~
+~
+0 -1 27605
+S
+#27607
+Quicksand~
+   Quicksand! Quick - grab that overhanging branch!  Pull
+yourself up.  There, now you're safe.  You'd better watch
+your step around here.  You sure don't want to get stuck
+in this!
+~
+276 0 5
+D1
+~
+~
+0 -1 27608
+D2
+~
+~
+0 -1 27612
+S
+#27608
+Deep in the Jungle~
+  You just stepped into a mud puddle.  Now your feet are
+soaking wet and your shiny boots caked with a thick layer
+of gooey mud.  Damn horseflies!  *swat*  Well, there's one
+less of them now.
+~
+276 0 0
+D0
+~
+~
+0 -1 27604
+D1
+~
+~
+0 -1 27609
+D2
+~
+~
+0 -1 27613
+D3
+~
+~
+0 -1 27607
+E
+horseflies~
+They swarm all around you, getting into your eyes, nose and ears.  Very annoying.
+~
+E
+horseflies~
+They swarm all around you, getting into your eyes, nose and ears. Very annoying.
+~
+S
+#27609
+Reedy Area~
+  The ground is nothing but thick muck here and reeds
+grow in abundance.  You can't help but think that this
+would be good camouflage for tigers. I bet the tigers
+think so too.
+~
+276 0 0
+D0
+~
+~
+0 -1 27605
+D1
+~
+~
+0 -1 27610
+D2
+~
+~
+0 -1 27614
+D3
+~
+~
+0 -1 27608
+S
+#27610
+Swampy Reeds~
+  You wade into a swampier area overgrown with reeds.
+The ground is sometimes just damp and at other times
+the swampy water can be waist high.  The reeds are
+always taller than your head.  You can't see more than
+a few inches in this congested mire.
+~
+276 0 5
+D0
+~
+~
+0 -1 27606
+D1
+~
+~
+0 -1 27692
+D2
+~
+~
+0 -1 27615
+D3
+~
+~
+0 -1 27609
+S
+#27611
+In the Shady Trees~
+  The trees here grow so tall they blot out the Sun.
+You can't tell if its day or night anymore.  Lucky
+thing you brought along a light source.  Pesky moths
+crowd and flutter around the flame in an annoying
+fluttering fashion.  Every once in a while one will
+come too close and immolate himself in a puff of
+smoke.
+~
+276 1 3
+D1
+~
+~
+0 -1 27612
+D2
+~
+~
+0 -1 27617
+E
+moths~
+~
+E
+moths~
+The light grey insects flutter about your light source.
+~
+E
+moth~
+The light grey insects flutter about your light source.
+~
+S
+#27612
+Papaya Grove~
+  Wow!  A natural grove of papaya trees grows here!
+mmmm...papaya...*drool*.  You could store up on papayas
+here and ask the baker to make you a papaya pie when you
+get back to town.  Or you could just eat them fresh off
+the tree.  Deeeelicous!
+~
+276 0 3
+D0
+~
+~
+0 -1 27607
+D1
+~
+~
+0 -1 27613
+D2
+~
+~
+0 -1 27618
+D3
+~
+~
+0 -1 27611
+S
+#27613
+Deep in the Jungle~
+  Somewhere in the distance you hear the beat of jungle drums.
+You shiver for a moment, until you remember that you don't
+have to be afraid unless the drums stop.  And JUST THEN the
+drums STOP!  Uh oh.  You hope the natives are a reasonable
+people.
+~
+276 0 3
+D0
+~
+~
+0 -1 27608
+D1
+~
+~
+0 -1 27614
+D2
+~
+~
+0 -1 27619
+D3
+~
+~
+0 -1 27612
+S
+#27614
+Near the Native Village~
+  To the south is a native village.  From your hidden vantage
+point you can see a celebration of some sort going on.
+Should you try to get a closer look?  You wish you'd brought
+along some shiny beads to offer the natives as gifts.
+~
+276 0 3
+D0
+~
+~
+0 -1 27609
+D1
+~
+~
+0 -1 27615
+D2
+~
+~
+0 -1 27620
+D3
+~
+~
+0 -1 27613
+S
+#27615
+Watering Hole~
+  At last!  A place to quench your thirst.  The pool of
+water looks inviting why not go for a swim?  On second
+thought, what about the snakes and alligators that might
+be lurking around in there?  Maybe you'd better not swim
+after all.
+~
+276 0 2
+D0
+~
+~
+0 -1 27610
+D1
+~
+~
+0 -1 27693
+D2
+~
+~
+0 -1 27621
+D3
+~
+~
+0 -1 27614
+D5
+~
+~
+0 -1 27652
+E
+27693~
+~
+E
+hole~
+Inviting to drink from, refreshing to swim in.
+~
+E
+watering~
+Inviting to drink from, refreshing to swim in.
+~
+E
+water~
+Inviting to drink from, refreshing to swim in.
+~
+S
+#27616
+The Pygmy Camp~
+  You just stepped into a pygmy camp.  You see a kettle boiling
+over a tiny fire, centered in between a bunch of white tents.  Bamboo
+spears with wickedly barbed spearheads are stacked together in circles
+throughout the camp.  Be careful here, the pygmies are known to be extremely
+xenophobic and are dangerous when angered.
+~
+276 0 1
+D1
+~
+~
+0 -1 27617
+D3
+~
+~
+0 -1 27680
+E
+kettle~
+It is just about to come to a boil.
+~
+E
+rifle~
+They are stacked in little tepee shapes all over the place.
+~
+E
+rifles~
+They are stacked in little tepee shapes all over the place.
+~
+E
+tent~
+Big white tents with red 'rising sun' circles on them.
+~
+E
+tents~
+Big white tents with red 'rising sun' circles on them.
+~
+S
+#27617
+Deep in the Jungle~
+  Sweat stings your eyes as you swat at the parasitic jungle
+insects.  Why did you come here?  Wouldn't you feel more
+comfortable in a nice warm bed back in town?  The heat
+tempts you to lay down and take a siesta, and somehow you
+feel that this would be a safe place to do that.
+~
+276 4 3
+D0
+~
+~
+0 -1 27611
+D1
+~
+~
+0 -1 27618
+D2
+~
+~
+0 -1 27623
+D3
+~
+~
+0 -1 27616
+E
+insects~
+Yeah, this place is crawling with them.
+~
+E
+insect~
+Yeah, this place is crawling with them.
+~
+S
+#27618
+Somewhere in the Jungle~
+  Uh oh, you've lost your bearings.  Did you come here from the
+east or west?  You curse yourself for momentarily letting your
+guard down.  Well, too late to worry about it now.  You return
+to concentrating about what you're doing and move on.
+~
+276 0 3
+D0
+~
+~
+0 -1 27624
+D1
+~
+~
+0 -1 27617
+D2
+~
+~
+0 -1 27612
+D3
+~
+~
+0 -1 27619
+S
+#27619
+Steamy Jungle~
+  Steam rises off the lush plant growth, clouding the air.
+Golden sun rays beam through the tree canopy like pillars of
+fire. This tree looks easy enough to climb.  Maybe from up
+there you could see your house back in Midgaard!
+~
+276 0 3
+D0
+~
+~
+0 -1 27613
+D1
+~
+~
+0 -1 27620
+D2
+~
+~
+0 -1 27625
+D3
+~
+~
+0 -1 27618
+D4
+~
+tree~
+11 -1 27670
+E
+tree~
+Looks sturdy enough to support your weight and it has low-lying branches.
+~
+S
+#27620
+In the Native Village~
+  Primitive mud huts dot this clearing.  The natives seem
+friendly enough.  They all point at you and smile, rubbing
+their bellies.  This must be their way of saying 'Hi'.
+~
+276 0 1
+D0
+~
+~
+0 -1 27614
+D1
+~
+~
+0 -1 27621
+D2
+~
+~
+0 -1 27626
+D3
+~
+~
+0 -1 27619
+E
+hut~
+Made of mud and sticks.  Not very sturdy.
+~
+E
+huts~
+Made of mud and sticks.  Not very sturdy.
+~
+S
+#27621
+In the Native Village~
+  Ritual chanting and the sounds of a native dance fill the air.
+The drums beat out a catchy little tune, causing you to shuffle
+your feet along with the dancers. These natives sure are
+friendly!
+~
+276 0 1
+D0
+~
+~
+0 -1 27615
+D2
+~
+~
+0 -1 27627
+D3
+~
+~
+0 -1 27620
+S
+#27622
+Amongst the Rubble~
+  A huge ancient pillar has long ago fallen and shattered here.
+Its pieces lay strewn all over the area, none any larger than
+a human head.  Oh wait, that IS a ... you turn your eyes away
+in disgust.
+~
+276 0 3
+D1
+~
+~
+0 -1 27623
+D2
+~
+~
+0 -1 27628
+E
+head~
+Ants are already working away on it. Disgusting!
+~
+E
+ants~
+They're busy working away on the head.
+~
+S
+#27623
+Jungle Termite's Nest~
+  Jungle termites have built a 30 foot tall mound of earth here
+to live in.  The trees are thinned out a bit here, causing
+you to think these termites have been here for a long time.
+You see a hole big enough to enter through the top of the mound.
+~
+276 4 3
+D0
+~
+~
+0 -1 27617
+D1
+~
+~
+0 -1 27624
+D2
+~
+~
+0 -1 27629
+D3
+~
+~
+0 -1 27622
+D5
+~
+~
+0 -1 27683
+E
+mound~
+There is a hole at the top you can enter it through.
+~
+E
+nest~
+There is a hole at the top you can enter it through.
+~
+S
+#27624
+In the Jungle~
+  You hear a scream far in the distance - the scream of a howler
+monkey.  It sounds eerie, like a child's ghost.  At least you
+HOPE it was only a monkey!
+~
+276 0 3
+D0
+~
+~
+0 -1 27618
+D1
+~
+~
+0 -1 27625
+D2
+~
+~
+0 -1 27630
+D3
+~
+~
+0 -1 27623
+S
+#27625
+In the Jungle~
+  You just stepped into something not mentioned in polite company.
+Yuck!  Think of the size of the thing that dropped THIS here!  On
+second thought, perhaps its best not to.
+~
+276 0 3
+D0
+~
+~
+0 -1 27619
+D1
+~
+~
+0 -1 27626
+D2
+~
+~
+0 -1 27631
+D3
+~
+~
+0 -1 27624
+S
+#27626
+In the Native Village~
+  The smell of home cooking wafts in the warm jungle breeze through
+this festive tribal village.  The huts are all decorated with
+colorful strips of cloth.  It must be some sort of celebration.
+~
+276 0 1
+D0
+~
+~
+0 -1 27620
+D1
+~
+~
+0 -1 27627
+D2
+~
+~
+0 -1 27632
+D3
+~
+~
+0 -1 27625
+E
+hut~
+Made of dried mud and sticks.
+~
+E
+huts~
+Made of dried mud and sticks.
+~
+E
+cloth~
+Colorful strips of cloth are tied tightly to the huts.
+~
+S
+#27627
+The Big Kettle~
+  A gigantic iron kettle - large enough to fit a grown man - is
+filled with some sort of soup.  It quietly simmers away over a
+low flame.  It smells delicious.  I'm sure the natives wouldn't
+mind if you had a sip.
+~
+276 0 1
+D0
+~
+~
+0 -1 27621
+D2
+~
+~
+0 -1 27633
+D3
+~
+~
+0 -1 27626
+S
+#27628
+Ancient Temple~
+  You stumble into an overgrown temple.  You wonder what kind
+of religious rites were performed here, and then you shiver.
+Maybe that stone near the disfigured tree used to be the
+altar.  Broken pottery and shattered flint shards litter the
+ground.  The sculpture is astonishing, what little you can
+piece together.
+~
+276 0 1
+D0
+~
+~
+0 -1 27622
+D1
+~
+~
+0 -1 27629
+D2
+~
+~
+0 -1 27634
+E
+stone~
+A large yellow stone with a flat top.
+~
+E
+altar~
+A large yellow stone with a flat top.
+~
+E
+tree~
+Ancient, but hideously deformed.  What must its roots fed on when it was 
+young and still growing?
+~
+E
+tree~
+Ancient, but hideously deformed.  What must its roots
+have fed on when it was still young and growing?
+~
+E
+tree~
+Ancient, but hideously deformed.  What must its roots
+have fed on when it was young and still growing?
+~
+E
+shards~
+Useless shards of broken pottery.
+~
+E
+pottery~
+Useless shards of broken pottery.
+~
+E
+sculpture~
+A picture of a king riding a ... tiger?
+~
+E
+flint~
+Probably used to start the ritual fires of the temple.
+~
+S
+#27629
+Ruined City~
+  Huge, powerful trees grow over walkways and massive pyramids
+alike as monkeys play on the graves of sages long forgotten.
+A tear comes to your eye as you think of the disrespect these
+primates show.  Why not do something about it?
+~
+276 0 1
+D0
+~
+~
+0 -1 27623
+D1
+~
+~
+0 -1 27630
+D2
+~
+~
+0 -1 27635
+D3
+~
+~
+0 -1 27628
+E
+tree~
+Part of the natural erosion process. Someday all this will be gone.
+~
+E
+tree~
+Part of the natural erosion process. Someday these ruins will be gone.
+~
+E
+trees~
+Part of the natural erosion process. Someday these ruins will be gone.
+~
+E
+pyramids~
+Overgrown with plant life, but you can tell they are HUGE!
+~
+E
+pyramid~
+Overgrown with plant life, but you can tell they are HUGE!
+~
+S
+#27630
+Near the Ancient Ruins~
+  To the west you think you can make out some ancient ruins.
+What civilization built them, and what happened to them?
+Your mind boggles at the possibilities.  Did they flee the
+city ages ago in some prehistoric panic?  Or did they all
+die off in a horrendous plague?
+~
+276 0 3
+D0
+~
+~
+0 -1 27624
+D1
+~
+~
+0 -1 27631
+D3
+~
+~
+0 -1 27629
+S
+#27631
+Deep in the Jungle~
+  Mosquitos and horseflies swarm all around you.  Its all
+you can do to keep from dropping your gear while swatting
+them.  Your feet sink deep in the slime and muck which
+makes up the jungle floor in this area.
+~
+276 0 3
+D0
+~
+~
+0 -1 27625
+D1
+~
+~
+0 -1 27632
+D3
+~
+~
+0 -1 27630
+E
+mosquitos~
+They would eat you alive if you let them.
+~
+E
+horseflies~
+They would eat you alive if you let them.
+~
+E
+horsefly~
+They would eat you alive if you let them.
+~
+E
+mosquito~
+They would eat you alive if you let them.
+~
+S
+#27632
+Downwind of Village~
+  A delicious smell lazily winds its way through the thick
+undergrowth from a native village to the north.  You are
+sorely tempted to take the rest of the day off, feast with
+the primitives, hum their primitive songs and dance in their
+rhythmic tribal circles.  
+~
+276 0 3
+D0
+~
+~
+0 -1 27626
+D1
+~
+~
+0 -1 27633
+D3
+~
+~
+0 -1 27631
+S
+#27633
+Trampled Path~
+  This area is badly trampled - as if a large number of
+enormous creatures had passed by.  A wide dirt path has
+been pushed through the trees, full of odd circular tracks
+which lead off to the east.
+~
+276 0 1
+D0
+~
+~
+0 -1 27627
+D1
+~
+~
+0 -1 27671
+D3
+~
+~
+0 -1 27632
+E
+tracks~
+goddamit
+~
+E
+tracks~
+Almost perfect circles, several inches across. They head east.
+~
+S
+#27634
+Stone Head~
+  You stand next to a gigantic head, carved from stone.  Its
+features are disturbingly distorted.  You wonder why this
+lost civilization would have carved it.  If you make an effort,
+you just might be able to climb on top of the head to get a
+better view.
+~
+276 0 1
+D0
+~
+~
+0 -1 27628
+D1
+~
+~
+0 -1 27635
+D4
+~
+head~
+11 -1 27651
+E
+head~
+Gigantic, it would barely fit in your guild's 
+practice yard back in town
+~
+E
+head~
+Gigantic, it would barely fit in your guild's practice yard back in town.
+~
+S
+#27635
+Crumbling Ruins~
+  An earthquake must have destroyed all the ruins in this
+section of the city.  You can tell it must have been recent
+because the vegetation has not grown back yet.  You spy a
+break in the cliff face to the east.  The earthquake must have
+opened that up too.
+~
+276 0 3
+D0
+~
+~
+0 -1 27629
+D1
+~
+~
+0 -1 27636
+D3
+~
+~
+0 -1 27634
+S
+#27636
+Lost Valley~
+  You enter a lush, green valley.  You are suddenly reminded
+of prehistoric times as you examine the unfamiliar foliage.
+Why, this plant has been extinct for millions of years!  How
+could it be growing here?
+~
+276 4 0
+D1
+~
+~
+0 -1 27637
+D2
+~
+~
+0 -1 27640
+D3
+~
+~
+0 -1 27635
+E
+plant~
+Yup, its been extinct for millions of years.
+~
+S
+#27637
+In the Lost Valley~
+  Cliffs rise up to the north and east of you.  They are far
+too tall and steep to climb.  To the south and west the valley
+continues, following a river lazily meandering towards the south.
+~
+276 0 3
+D1
+~
+~
+0 -1 27638
+D2
+~
+~
+0 -1 27641
+D3
+~
+~
+0 -1 27636
+E
+cliffs~
+Jet black obsidian. Very slippery.
+~
+E
+cliff~
+Jet black obsidian. Very slippery.
+~
+E
+river~
+A slow moving, muddy river. It must be very old.
+~
+S
+#27638
+In the Lost Valley~
+  You surprise a proto-hominid, who bleats 'Yipe!' and scampers
+off into the underbrush.  You begin to question that you could
+ever have evolved from something like that.  The obsidian
+cliffs directly to the north are as smooth as glass.  If it
+were raining you could probably see yourself in them.
+~
+276 0 3
+D1
+~
+~
+0 -1 27639
+D2
+~
+~
+0 -1 27642
+D3
+~
+~
+0 -1 27637
+E
+cliff~
+Jet black obsidian. Very slippery.
+~
+E
+cliffs~
+Jet black obsidian. Very slippery.
+~
+S
+#27639
+In the Lost Valley~
+  A fog rises from a bog to the east.  You feel a sense of
+dread from that direction and decide you should avoid it.
+Something ancient and sinister must lurk there.
+~
+276 0 3
+D1
+~
+~
+0 -1 27698
+D2
+~
+~
+0 -1 27643
+D3
+~
+~
+0 -1 27638
+S
+#27640
+In the Lost Valley~
+  Plants you've never seen before!  Animals that have been
+extinct for millions of years!  Could this be the land that
+time forgot?
+~
+276 0 4
+D0
+~
+~
+0 -1 27636
+D1
+~
+~
+0 -1 27641
+E
+plant~
+They have been extinct for millions of years.
+~
+E
+plants~
+They have been extinct for millions of years.
+~
+S
+#27641
+In a Giant Footprint~
+  You look down and realize you are walking in a giant footprint.
+Three claw marks radiate away from the monstrosity.  You begin
+to feel a little nervous.  Maybe you should leave now.
+~
+276 0 4
+D0
+~
+~
+0 -1 27637
+D1
+~
+~
+0 -1 27642
+D2
+~
+~
+0 -1 27645
+D3
+~
+~
+0 -1 27640
+E
+footprint~
+Large enough to lie down in. Something really big wanders near here.
+~
+S
+#27642
+In the Lost Valley~
+  In the distance, in every direction, you see the steep rocky
+cliffs which ring this valley.  If it weren't for that
+earthquake, nobody would have ever found this place!
+~
+276 0 4
+D0
+~
+~
+0 -1 27638
+D1
+~
+~
+0 -1 27643
+D2
+~
+~
+0 -1 27646
+D3
+~
+~
+0 -1 27641
+S
+#27643
+Meaty Bones~
+  The skeleton of an immense creature lays in huge pieces here,
+as if torn up by a gigantic meat grinder.  Swathes of flesh
+are alive with flies.  The smell is more than you can bear.
+~
+276 0 4
+D0
+~
+~
+0 -1 27639
+D1
+~
+~
+0 -1 27644
+D2
+~
+~
+0 -1 27647
+D3
+~
+~
+0 -1 27642
+E
+bones~
+Ripped apart and strewn over a large area.  They look fairly fresh.
+~
+E
+skeleton~
+Ripped apart and strewn over a large area.  It looks like a fresh kill.
+~
+E
+remains~
+Ripped apart and strewn over a large area.  They look fairly fresh.
+~
+E
+flies~
+They form a dark, almost opaque cloud.  You're glad they're too busy eating
+the remains of the creature or they might be attacking you!
+~
+S
+#27644
+In the Lost Valley~
+  The soil here is rich and loamy, suggesting that this area
+should be ripe with teeming life.  The plants near here 
+compete greedily for sunlight, like a miniature battle in 
+very slow motion.  
+~
+276 0 0
+D2
+~
+~
+0 -1 27648
+D3
+~
+~
+0 -1 27643
+S
+#27645
+Scratches on Cliff Face~
+  A large, weathered arrow is scratched on the otherwise glass-
+like obsidian cliff face here.  It points back to the
+entrance to the valley.  Is it a warning?  You look closer and
+see its edges are stained with dried blood.
+~
+276 0 4
+D0
+~
+~
+0 -1 27641
+D1
+~
+~
+0 -1 27646
+E
+scratches~
+The arrow point to the valley entrance.
+~
+E
+arrow~
+The arrow points to the valley entrance.
+~
+E
+scratches~
+The arrow points to the valley entrance.
+~
+E
+blood~
+It is not fresh.
+~
+E
+cliff~
+Jet black obsidian. Very slippery.
+~
+E
+cliffs~
+Jet black obsidian. Very slippery.
+~
+S
+#27646
+In the Lost Valley~
+  You climb a rise and can see nearly the entire valley.  Large
+clumps of trees sweep over the landscape like a threadbare
+rug, climbing the mild swells of ground and sinking into the
+dells.  A wispy mist seems to cover everything.
+~
+276 0 4
+D0
+~
+~
+0 -1 27642
+D1
+~
+~
+0 -1 27647
+D3
+~
+~
+0 -1 27645
+S
+#27647
+In the Lost Valley~
+  You enter a bowl-shaped dale surrounded by the thick rain-
+forest.  Far overhead you see a...bird? - no that couldn't
+be a bird, its too big.  It must be a dark cloud.  But clouds
+don't fly in circles do they?
+~
+276 0 4
+D0
+~
+~
+0 -1 27643
+D1
+~
+~
+0 -1 27648
+D2
+~
+~
+0 -1 27649
+D3
+~
+~
+0 -1 27646
+E
+cloud~
+It seems to be moving in a circle. How odd.
+~
+E
+cloud~
+It seems to be moving in a circle. How odd. Maybe its not a cloud after all.
+~
+S
+#27648
+Crystal Formations~
+  Surrounding you are twinkling, towering shards of pink,
+white and blue crystals.  They jut out of the earth like
+dagger points straining towards the sky.  You are briefly
+struck by the beautiful sight.
+~
+276 0 4
+D0
+~
+~
+0 -1 27644
+D2
+~
+~
+0 -1 27650
+D3
+~
+~
+0 -1 27647
+E
+crystal~
+Taller than you, they sparkle in the light.
+~
+E
+crystals~
+Taller than you, they sparkle in the light.
+~
+S
+#27649
+In the Lost Valley~
+  You hear a monstrous "ROOOOAAAARRRR" from somewhere nearby...
+TOO near.  You notice you have been frozen in place, almost
+paralyzed by fear.  Then experience takes over and you are
+able to calm yourself.  Should you continue?
+~
+276 0 4
+D0
+~
+~
+0 -1 27647
+D1
+~
+~
+0 -1 27650
+S
+#27650
+Dead End in the Lost Valley~
+  To the south and east are impassable cliffs. The river which
+carved this valley disappears under the cliffs to the south.
+Looks like the only way out is the way you came in. But wait!
+You spot a few hands holds on the cliff face.  Maybe you can
+climb out.
+~
+276 0 4
+D0
+~
+~
+0 -1 27648
+D3
+~
+~
+0 -1 27649
+D4
+~
+cliff up~
+11 -1 27664
+E
+cliff~
+You may be able to climb it, but don't slip!
+~
+E
+cliffs~
+You may be able to climb it, but don't slip!
+~
+E
+face~
+You may be able to climb it, but don't slip!
+~
+E
+river~
+It disappears under the obsidian cliffs to the south.
+~
+S
+#27651
+On Top of the Head~
+  You gasp as you look at the majestic throne carved entirely
+out of one massive piece of jade.  A tree has grown around
+part of the throne, making it impossible to extricate.  Too
+bad since back in town it would fetch a pretty penny!
+~
+276 0 1
+D5
+~
+head~
+11 -1 27634
+E
+throne~
+The throne is inextricably enmeshed in a large tree.
+~
+E
+tree~
+The gigantic tree has grown around a large portion of the
+throne, making it difficult to sit on.
+~
+S
+#27652
+In the Watering Hole~
+  You take a deep breath and plunge in.  To the east you see
+an underwater tunnel.  Maybe you'll have enough oxygen to
+get to the end, but then again, maybe you won't.  You've got
+to ask yourself, do you feel lucky?
+~
+276 4 6
+D1
+~
+~
+0 -1 27653
+D4
+~
+~
+0 -1 27615
+S
+#27653
+The Underwater Tunnel~
+  You'll have to swim much faster than that if you don't
+want to drown!
+~
+276 392 6
+D1
+~
+~
+0 -1 27654
+D3
+~
+~
+0 -1 27652
+S
+#27654
+The Underwater Tunnel~
+  Swim! Swim faster! You feel the carbon dioxide building up
+in your lungs.  Maybe this wasn't such a good idea after all.
+~
+276 392 6
+D1
+~
+~
+0 -1 27655
+D3
+~
+~
+0 -1 27653
+S
+#27655
+In the Underwater Tunnel~
+  Forget it.  Turn back. I don't think you're going to make
+it. I thought you were a better swimmer than that!
+~
+276 392 6
+D1
+~
+~
+0 -1 27656
+D3
+~
+~
+0 -1 27654
+S
+#27656
+The End of the Tunnel~
+  The glow of light from above!  If you surface now you just
+might make it!
+~
+276 392 6
+D3
+~
+~
+0 -1 27655
+D4
+~
+~
+0 -1 27657
+S
+#27657
+Oxygen!~
+  WHUUUUHHHH! You take a deep breath of lovely oxygen.
+Sometimes you don't appreciate things until they're gone, eh?
+Odd fungus grows on the wall here, glowing softly.  Sandstone
+steps lead up to the east.
+~
+276 136 6
+D1
+~
+~
+0 -1 27659
+D4
+~
+~
+0 -1 27659
+D5
+~
+~
+0 -1 27674
+E
+fungus~
+It glows a soft orange color, enough to see by.
+~
+E
+steps~
+Hewn from the sandstone floors and walls of this natural cave.  They look
+like they have been used regularly and recently.
+~
+S
+#27658
+North Corridor~
+  More sickening carvings line the walls of this corridor,
+making you wretch.  What kind of a mind would create
+something like this, you wonder.  Perhaps its a question
+best not answered.  To the east you hear the barking of dogs.
+~
+276 137 0
+D1
+~
+~
+0 -1 27661
+D2
+~
+~
+0 -1 27659
+E
+carvings~
+Carved from the natural sandstone, they are very fragile.  They must be 
+fairly recent.
+~
+S
+#27659
+The Secret Temple~
+  A manmade cave is carved from the tan sandstone - its walls
+decorated with frescoes of torture and pain.  What cult lives
+here?  If you go further, maybe you will be their next sacri-
+ficial victim!  You must be very careful!
+~
+276 137 0
+D0
+~
+~
+0 -1 27658
+D2
+~
+~
+0 -1 27660
+D3
+~
+~
+0 -1 27657
+E
+frescoes~
+Etched into the sandstone walls, they represent dozens of sickening acts.
+~
+E
+cave~
+The walls and floor are now straight and regular.  It must have taken years
+to carve all of this out.
+~
+S
+#27660
+South Corridor~
+  Where are the priests to this odd temple?  It doesn't look
+like its been abandoned for long.  No spider webs hang in the
+corners.  No dust has gathered on the grotesque carvings on
+the walls.  Why then are there no caretakers?
+~
+276 137 0
+D0
+~
+~
+0 -1 27659
+D1
+~
+~
+0 -1 27663
+E
+carvings~
+More of those disgusting figures.  This must be a very evil place!
+~
+S
+#27661
+Above the Dog Pit~
+  Below you stretches a shallow pit.  Skeletons of what must
+have been children lay strewn all over the bottom. This explains
+those rumors about children disappearing that you've been
+hearing.  Your face grows cloudy thinking what a truly evil cult
+this must be.
+~
+276 137 0
+D2
+~
+~
+0 -1 27662
+D3
+~
+~
+0 -1 27658
+D5
+~
+~
+0 -1 27679
+E
+skeletons~
+You are too far away to examine them fully.
+~
+S
+#27662
+Blood Altar~
+  An altar, caked with dried blood, rises out of the sandstone
+floor before you.  The corpses of the priests of this cult
+litter the area, each a pale, deathly white; as if all the
+blood has been drained out of them.  Yes, they were successful
+in summoning their goddess.
+~
+276 137 0
+D0
+~
+~
+0 -1 27661
+D2
+~
+~
+0 -1 27663
+E
+altar~
+Fresh blood provides a slick layer for the thickness of dried blood caked
+underneath.  Here and there you can see a streaked, pleading hand print.
+~
+E
+corpses~
+All the blood has been sucked out of them.  Their skin is a pale bluish-
+white.
+~
+E
+corpse~
+All the blood has been sucked out of them.  Their skin is a pale bluish-
+white.
+~
+S
+#27663
+Pentagram Room~
+  The carvings abruptly switch from being a virtual
+instruction manual on the art of torture to dozens of large,
+overlapping pentagrams.  The walls, the cieling and the
+floor are covered in these dastardly symbols.
+~
+276 137 0
+D0
+~
+~
+0 -1 27662
+D3
+~
+~
+0 -1 27660
+E
+pentagrams~
+They cover all surfaces in insane, overlapping patterns.
+~
+E
+pentagram~
+They cover all surfaces in insane, overlapping patterns.
+~
+S
+#27664
+Climbing the Cliff~
+  The first handhold you try breaks off and you fall uninjured
+the three or four feet to the ground.  Should you be thankful
+or is this an omen?  The next handhold works and you are able
+to lift yourself a little way up the cliff.
+~
+276 4 5
+D4
+~
+cliff up~
+11 -1 27665
+D5
+~
+cliff down~
+11 -1 27650
+E
+handhold~
+It LOOKS sturdy enough...
+~
+S
+#27665
+Climbing the Cliff~
+  You begin to pant as you strain yourself to climb higher.
+Higher and higher you go as the ground slowly falls away
+beneath you.  You feel as if you've been climbing for hours.
+~
+276 0 5
+D4
+~
+cliff up~
+11 -1 27666
+D5
+~
+cliff down~
+11 -1 27664
+S
+#27666
+Farther Up the Cliff~
+  Will this cliff never end?  Are you even getting close to
+the top yet? You dare not raise your head to look for fear
+of falling the great distance back down to the ground.
+~
+276 0 5
+D4
+~
+cliff up~
+11 -1 27667
+D5
+~
+cliff down~
+11 -1 27665
+S
+#27667
+Climbing the Cliff Face~
+  The air is very thin here.  You begin to feel giddy.
+Better not lose your grip!  You are very close to the top
+now, just a few more handholds...
+~
+276 0 5
+D4
+~
+cliff up~
+11 -1 27668
+D5
+~
+cliff down~
+11 -1 27666
+S
+#27668
+The Pterodactyl's Aerie~
+  The view is stupefying.  You almost lose your grip when
+you look down. If you fell... *shudder*.  As you look
+around you realize that you were wrong - this is no way out
+of the valley.  To the east you see a gigantic nest.
+~
+276 0 5
+D1
+~
+~
+0 -1 27669
+D5
+~
+cliff down~
+11 -1 27667
+E
+down~
+You feel dizzy and begin to lose your grip! OH GOD! You barely regain
+your senses in time!
+~
+S
+#27669
+The Pteradactyl Nest~
+  The massive nest is littered with the rotting remains of
+all manner of creatures.  An unhatched pteradactyl egg lays
+snugly amongst the branches, twigs and broken bones.  If you
+could break it open you could tell your friends that you had
+a pteradactyl omelet for brunch!
+~
+276 0 5
+D3
+~
+~
+0 -1 27668
+E
+nest~
+Built of interwoven twigs and bones, large enough to lie down and sleep in.
+~
+S
+#27670
+A Carpet of Ants!~
+  Voracious army ants have been at work on this section of
+the tree canopy.  Huge gaps in the leaves speak volumes
+regarding the appetites of these insidious creatures.  Be
+glad you didn't run into them.
+~
+276 0 0
+D5
+~
+tree~
+11 -1 27619
+S
+#27671
+In the Ravine~
+  You tumble down the ravine, getting dirty and bruised in
+the process.  There's no way you can climb back up, its
+waaay too steep.  To the east you see a large number of
+bleached bones gleaming in the hot tropical sun.
+~
+276 4 4
+D1
+~
+~
+0 -1 27672
+D4
+~
+~
+0 -1 27671
+S
+#27672
+Elephant's Secret Graveyard~
+  The vast field of bones astounds you. But wait a second,
+these aren't HUMAN bones! They are elephant bones! If you
+could get all this ivory back to town maybe you could make
+a fortune! You've found the secret graveyard of the
+elephants!
+~
+276 0 4
+D0
+~
+~
+0 -1 27672
+D1
+~
+~
+0 -1 27672
+D2
+~
+~
+0 -1 27672
+D3
+~
+~
+0 -1 27672
+E
+bones~
+Bleached white by the Sun, scattered all over the place.
+~
+E
+bone~
+Bleached white by the Sun, scattered all over the place.
+~
+E
+ivory~
+Bleached white by the Sun, scattered all over the place.
+~
+S
+#27673
+Fog Bank~
+  The fog is so thick it is difficult to breathe.  It envelops
+you completely and sinks deep within your marrow.  Something
+ancient and horrible lives somewhere in here, you feel.
+~
+276 128 4
+D1
+~
+~
+0 -1 27699
+D3
+~
+~
+0 -1 27600
+S
+#27674
+Back into the Water~
+  You dive in, knowing you have just enough breathe to make it
+out.  But you can't dawdle, you must swim like you've never
+swum before!
+~
+276 392 6
+D3
+~
+~
+0 -1 27675
+D4
+~
+~
+0 -1 27657
+S
+#27675
+The Underwater Tunnel~
+  You wriggle like a fish through the chilling water, rushing,
+rushing to the end of the tunnel.  Your breath is beginning to
+run out.
+~
+276 392 6
+D1
+~
+~
+0 -1 27674
+D3
+~
+~
+0 -1 27676
+S
+#27676
+The Underwater Tunnel~
+  Hurry! Hurry! Swim! Swim! Your face is beginning to turn
+blue!  Will you make it?  This is no time to turn back!
+~
+276 392 6
+D1
+~
+~
+0 -1 27675
+D3
+~
+~
+0 -1 27677
+S
+#27677
+Nearing the Watering Hole~
+  Almost there!  Ahead, you can see the watering hole and
+you know that's where you must get to if you want to live!
+You have only moments left of precious life! HURRY!
+~
+276 392 6
+D1
+~
+~
+0 -1 27676
+D3
+~
+~
+0 -1 27678
+S
+#27678
+In the Watering Hole~
+  You can MAKE it! Surface NOW! Surface NOW!
+~
+276 384 6
+D1
+~
+~
+0 -1 27677
+D4
+~
+~
+0 -1 27615
+S
+#27679
+In the Dog Pit~
+  The stench of rot is almost overpowering as you lower
+yourself the short distance into the dog pit.  Not all of
+the remains are skeletal, you now see.  Some of them still
+have vile strips of flesh dangling nightmarishly.
+~
+276 137 0
+D4
+~
+~
+0 -1 27661
+E
+skeleton~
+Red, meaty flesh still clings to the bones.
+~
+E
+corpse~
+Red, meaty flesh still clings to the bones.
+~
+E
+corpses~
+Red, meaty flesh still clings to the bones.
+~
+E
+remains~
+Red, meaty flesh still clings to the bones.
+~
+S
+#27680
+In the Pygmy Camp~
+  You wander through the Pygmy camp, winding your way through the
+tents, stacks of firewood and collections of small, barbed spears.  It
+is a small camp by human standards, but then again Pygmies are only about
+four feet tall.
+~
+276 0 1
+D0
+~
+~
+0 -1 27681
+D1
+~
+~
+0 -1 27616
+E
+rifles~
+They are stacked in little teepee shapes all over the place.
+~
+E
+tents~
+Big white tents with red 'rising sun' circles on them.
+~
+E
+tent~
+Big white tents with red 'rising sun' circles on them.
+~
+E
+crates~
+Wooden crates stacked in neat columns.
+~
+E
+crate~
+Wooden crates stacked in neat columns.
+~
+S
+#27681
+Outside a small straw hut~
+  To the west lies a small straw hut.  The walls are made from baked
+clay that's hardened in the sun and the doorway west is covered by a
+curtain of beads which rustle slightly in the warm breeze.  Behind the
+house you see the jungle become impassable but there is a suggestion of
+overgrown fields and fences.
+~
+276 0 0
+D2
+~
+~
+0 -1 27680
+D3
+~
+~
+0 -1 27682
+S
+#27682
+Inside the Shaman's Hut~
+  The air in here is filled with a smoky aroma from all the herbs the
+pygmy shaman has thrown into the fire on the floor.  Scattered about you
+see totems and fetishes arranged in some pattern around the fireplace.
+Breathing becomes hard after awhile in here and your lungs need to work
+twice as hard simply to get enough air to keep you conscious.
+~
+276 8 0
+D1
+~
+~
+0 -1 27681
+E
+totem~
+It's some weird-looking metallic object with red paintings on it and
+the letters 'Coca Cola' all over it.
+~
+E
+fire~
+Ouch! It burns, it burns!!!
+~
+E
+fan~
+An electric cieling fan.  You could easily stop it with your hand.
+~
+S
+#27683
+Inside the Mound~
+  The pulpy, muddy dirt soils your clothes as you wriggle your
+way through the tight tunnels.  You can go in almost any
+direction from here.  Termites have been very busy building
+this nest!
+~
+276 265 5
+D0
+~
+~
+0 -1 27684
+D1
+~
+~
+0 -1 27685
+D2
+~
+~
+0 -1 27687
+D3
+~
+~
+0 -1 27686
+D4
+~
+~
+0 -1 27623
+S
+#27684
+Within the Mound~
+  The rich scent of loam permeates the air.  It is much cooler
+in this mound than it is outside in the jungle.  The humidity
+is more tolerable too.  Compared to the punishing conditions
+above, this termite nest actually seems like a nice place to
+settle down for a rest.
+~
+276 9 5
+D2
+~
+~
+0 -1 27683
+S
+#27685
+The Roots of a Tree~
+  The roots of a mighty tree reach down and clog the tunnel,
+making it impossible to go further in this direction.
+Evidence is clear that the termites are slowly working away at
+the roots, using their sharp mandibles to chop the roots
+bit-by-bit into termite food.
+~
+276 9 5
+D3
+~
+~
+0 -1 27683
+E
+roots~
+Some roots are as thin as string, others thicker than your leg.
+~
+S
+#27686
+Unfinished Tunnel~
+  The termites have not finished excavating here yet, but they
+intermittently dig away here, extending a tunnel farther to
+the west.  At the rate they are working they won't be done
+for years.  They may work hard but they're just tiny bugs
+after all.
+~
+276 9 5
+D1
+~
+~
+0 -1 27683
+S
+#27687
+The Rock Wall~
+  A big chunk of granite makes up the wall to the south of
+this chamber, forcing the termites to bend their tunnel to
+the west.  Scratches on the rock indicate a few scrawny
+termites had foolishly attempted to attack the granite with
+their mandibles. Wow, these bugs sure are stupid!
+~
+276 9 5
+D0
+~
+~
+0 -1 27683
+D3
+~
+~
+0 -1 27688
+E
+rock~
+It is granite. You can't tell how thick it is.
+~
+E
+granite~
+It is granite. You can't tell how thick it is.
+~
+S
+#27688
+In the Termite Nest~
+  The tunnel drops away sharply here.  You could slide
+down the moist earth on your belly here if you wanted.  Of
+course, that would soil your clothes.  But aren't they pretty
+much dirtied already?
+~
+276 9 5
+D1
+~
+~
+0 -1 27687
+D5
+~
+~
+0 -1 27689
+S
+#27689
+Bottom of the Slide~
+  Whoosh! That was fun!  But now your clothes are almost
+black with packed dirt and quite a bit of mud has found
+its way into your shirt.  When you get back to Midgaard
+you'll have to remember to go to the dry cleaners.
+~
+276 9 5
+D1
+~
+~
+0 -1 27690
+D2
+~
+~
+0 -1 27691
+D4
+~
+~
+0 -1 27688
+S
+#27690
+Egg Chamber~
+  This chamber houses all the unborn termites in the nest.
+There are old, discarded eggshells announcing the births
+of previous generations piled up deeply here.  As you walk,
+your feet sink several inches into the soft, white remains.
+~
+276 9 5
+D3
+~
+~
+0 -1 27689
+E
+eggshells~
+Long since discarded, they crumble in your hands.
+~
+S
+#27691
+Queen's Chamber~
+  The tunnel opens up into a much larger chamber.  Here's
+where all the CRUCIAL decisions for the termites are made,
+like where to dig and ...well... that's pretty much it.
+For a second there you were struck with a welling feeling 
+of awe, but that dissipated pretty quickly.
+~
+276 9 5
+D0
+~
+~
+0 -1 27689
+S
+#27692
+Among the Reeds~
+  Reeds grow as high as your waist as you wander through this
+swampy area.  The murky water is completely dark, which
+makes you wonder if any watering hole that might be near here
+would be safe to drink from.  Who knows what kinds of odd
+strains of bacteria thrive here.
+~
+276 0 5
+D1
+~
+~
+0 -1 27695
+D2
+~
+~
+0 -1 27693
+D3
+~
+~
+0 -1 27610
+S
+#27693
+Humid Swamp~
+  The Sun beats down on you as you move through the reeds.  Its
+heat slowly evaporates the thin water layer you slush through
+as you walk, making it even more humid than it was before.  You
+gasp and gulp at the air as theme songs to spaghetti westerns
+play unceasingly inside your mind.
+~
+276 0 5
+D0
+~
+~
+0 -1 27692
+D1
+~
+~
+0 -1 27696
+D2
+~
+~
+0 -1 27694
+D3
+~
+~
+0 -1 27615
+S
+#27694
+Rotting Jungle Swamp~
+  Dead reeds and trees populate the area, filling the air with
+a sickly sweet smell.  Big, healthy flies buzz around your
+head, occasionally trying to take a chunk out of your flesh.
+OWW!  One just did.
+~
+276 0 0
+D0
+~
+~
+0 -1 27693
+D1
+~
+~
+0 -1 27697
+E
+flies~
+They look mighty hungry!
+~
+E
+fly~
+It looks mighty hungry!
+~
+S
+#27695
+Tall Bamboo~
+  Towering rods of bamboo rise far over your head.  They grow
+thickly out of the ground, making all sorts of different
+angles with the warm, damp ground.  You can't see far enough
+around you to be sure you are alone here.
+~
+276 0 5
+D2
+~
+~
+0 -1 27696
+D3
+~
+~
+0 -1 27692
+S
+#27696
+In the Swampy Jungle~
+The heat, the humidity, the constant beating of the Sun on
+your head and back; its enough to make you wish you'd never
+chosen the life of the adventurer.  You could've had a normal
+life as a baker or a insurance salesman or something.  Why
+not look into buying that insurance shop when you get back to
+town?
+~
+276 0 5
+D0
+~
+~
+0 -1 27695
+D2
+~
+~
+0 -1 27697
+D3
+~
+~
+0 -1 27693
+S
+#27697
+Infested Backwater~
+  Green slime floats in clumps between the sickly-looking
+reeds.  The water is brackish and stinks of rot.  This
+water is probably infested with dysentery or yellow fever.
+You'd better leave before a mosquito bites you and transfers
+the disease.
+~
+276 0 5
+D0
+~
+~
+0 -1 27696
+D3
+~
+~
+0 -1 27694
+S
+#27698
+Sinister Fog~
+  You are enveloped by a thick grey fog.  The feeling of
+dread surrounds you and seems to permeate to the marrow
+of your bones.  You feel a strong urge to turn back - an
+urge so powerful you can barely overcome it.  You begin
+to shiver in the chill mist.
+~
+276 132 4
+D1
+~
+~
+0 -1 27600
+D3
+~
+~
+0 -1 27639
+S
+#27699
+El Diablo!~
+  El Diablo - the grandfather of all Tyrannosaurus Rex -
+has spread the carnage of centuries of his prey all over 
+this room.  YOU may be next!  Be very very careful here!
+There may be more here than meets the eye!
+~
+276 0 4
+D3
+~
+~
+0 -1 27673
+S
+#0
+$~
+

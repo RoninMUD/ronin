@@ -1,0 +1,937 @@
+#2998
+club guard~
+the Club Guard~
+A Club Guard is here guarding the club.
+~
+He will not let any non-memeber to get into the club.
+No matter who you are, he can kill you with a needle.
+~
+11 128 1000 Y
+30 -7 -10 1d10+15000 10d10+50
+50000 300000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+R
+0
+#2999
+shopkeeper~
+the Shopkeeper~
+A Shopkeeper is here cleaning the musical instrument.
+~
+This shopkeeper is a very tough old man.
+~
+11 134217856 900 Y
+30 -6 2 6d10+4390 1d8+12
+10000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3000
+wizard~
+the Wizard~
+A Wizard walks around behind the counter, talking to himself.
+~
+The wizard looks old and senile, and yet he looks like a very powerful
+wizard. He is equipped with fine clothing, and is wearing many fine
+rings and bracelets.
+~
+11 134217856 900 Y
+23 0 2 6d10+4390 1d8+12
+10000 80000
+8 8 1
+1 0 0d0+0 0
+0 0 0 0
+R
+0
+#3001
+baker~
+the Baker~
+The Baker looks at you calmly, wiping flour from his face with one hand.
+~
+A fat, nice looking baker. But you can see that he has many scars on his
+body.
+~
+10 134217856 900 Y
+23 0 2 6d10+8090 1d8+12
+2000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3002
+grocer~
+the Grocer~
+A grocer stands at the counter, with a slightly impatient look on his face.
+~
+A tall grocer, who moves two 200 pounds bag of flour around on his shoulders.
+~
+10 134217856 900 Y
+23 0 2 6d10+8090 1d8+12
+2000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3003
+weaponsmith~
+the Weaponsmith~
+A weaponsmith.
+~
+A young weaponsmith, who still has lots to learn.
+~
+11 134217856 900 Y
+23 0 2 6d10+8090 1d8+12
+20000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3004
+armourer~
+the Armourer~
+An Armourer stands here.
+~
+An old but very strong armourer, he has made more armours in his
+lifetime than you have ever seen.
+~
+10 134217856 900 Y
+23 0 2 6d10+8090 1d8+12
+20000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3005
+receptionist~
+the Receptionist~
+A receptionist stands in front of you, looking at you like you were the
+center of the universe.
+~
+You notice a tired look in her face.
+~
+10 0 900 Y
+51 -9 2 6d10+8390 1d8+12
+20000 80000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3006
+captain~
+the Captain~
+A retired Captain stands here, selling boats.
+~
+This Captain has eaten more sharks than you have killed peas.
+~
+10 128 900 Y
+23 0 2 6d10+4390 1d8+12
+20000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3007
+sailor~
+The Sailor~
+A Sailor stands here, waiting to help you.
+~
+He looks like a strong, fit sailor.
+~
+14 0 900 Y
+23 0 2 6d10+890 2d8+8
+2000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3010
+auctioneer~
+the Auctioneer~
+The Auctioneer is standing here holding an auction board.
+~
+He looks very old and tired, yet radiates an aura of strength.  His
+powerful voice echos through the room.
+~
+11 0 900 Y
+51 -9 2 6d10+28890 99d50+100
+2000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3011
+jeweler~
+the Midgaard Jeweler~
+The Jeweler of Midgaard stands here, a large grin on his face.
+~
+This obese and filthy person was chosen by the former Mayor to take care
+of Midgaard's tradebar business.  His bald head glistens with sweat and the
+air in here is heavy with the strong, musky odour of his huge body.  His
+rich clothing leads you to believe his business is thriving.
+~
+16394 297144 0 Y
+35 -15 10 1d1+31000 10d60+100
+100000 300000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+R
+0
+#3016
+shadowman~
+The shadowman~
+A shadowman is guarding the entrance.
+~
+He is a here protecting his guild.
+~
+14 128 800 Y
+23 2 4 6d10+890 2d8+8
+2000 80000
+8 8 1
+5 0 0d0+0 0
+0 0 0 0
+R
+0
+#3017
+forest walker~
+The forest walker~
+A forest walker is guarding the entrance.
+~
+He is a here protecting his guild.
+~
+14 128 800 Y
+23 2 4 6d10+890 2d8+8
+2000 80000
+8 8 1
+6 0 0d0+0 0
+0 0 0 0
+R
+0
+#3018
+guildmaster master~
+The Guildmaster~
+Your guildmaster is standing here.
+~
+This is your master. Big and strong with bulging muscles. Several scars
+across his body proves that he was using arms before you were born. He
+is very old and tired. Once upon a time, he was the master of the forest.
+~
+10 262272 1000 Y
+31 -8 0 6d10+1840 3d8+4
+8794 150000
+8 8 1
+6 0 0d0+0 2
+2 1 4 0
+9 1 4 0
+0 0 0 0
+R
+0
+#3019
+guildmaster master~
+the Guildmaster~
+Your guildmaster is standing here.
+~
+Even though your guildmaster looks old and tired she is still
+a skilled ninja that can kill you with a single blow.
+~
+10 262272 1000 Y
+31 -8 0 6d10+1840 3d8+4
+8794 180000
+8 8 2
+5 0 0d0+0 5
+2 1 4 0
+3 1 6 0
+7 1 5 0
+1 6 6 72
+1 1 3 104
+0 0 0 0
+R
+0
+#3020
+guildmaster master~
+The Guildmaster~
+Your guildmaster is standing here.
+~
+Even though your guildmaster looks old and tired, you can clearly see the
+vast amount of knowledge she posesses. She is wearing fine magic clothing,
+and you notice that she is surrounded by a blue shimmering aura.
+~
+10 128 1000 Y
+31 -8 0 6d10+1840 3d8+4
+8794 240000
+8 8 2
+1 0 1d20+800 9
+1 2 4 100
+1 1 20 10
+1 6 10 98
+1 1 8 136
+1 1 6 80
+1 1 7 111
+1 1 10 17
+1 1 12 5
+1 1 8 30
+0 0 0 0
+R
+0
+#3021
+guildmaster master~
+the Guildmaster~
+Your guildmaster is standing here.
+~
+You are in no doubt that this guildmaster is truly close to your god; he has
+a peaceful, loving look. You notice that he is surrounded by a white aura.
+~
+10 128 1000 Y
+31 -8 0 6d10+1840 3d8+4
+8794 210000
+8 8 1
+2 0 0d0+0 7
+1 1 4 81
+1 1 5 23
+1 6 9 16
+1 6 4 22
+1 6 4 4
+1 6 6 15
+1 6 3 85
+0 0 0 0
+R
+0
+#3022
+guildmaster master~
+the Guildmaster~
+Your guildmaster is standing here.
+~
+You realize that whenever your guildmaster moves, you fail to notice it -
+the way of the true thief. She is to be dressed in poor clothing, having
+the appearance of a beggar.
+~
+131082 128 1000 Y
+31 -8 0 6d10+1840 3d8+4
+8794 150000
+8 8 2
+3 0 0d0+0 0
+0 0 0 0
+R
+0
+#3023
+guildmaster master~
+the Guildmaster~
+Your guildmaster is standing here.
+~
+This is your master. Big and strong with bulging muscles. Several scars
+across his body proves that he was using arms before you were born. He
+has a calm look on his face.
+~
+10 262272 1000 Y
+31 -8 0 6d10+1840 3d8+4
+8794 150000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+R
+0
+#3024
+sorcerer~
+the Sorcerer~
+A sorcerer is guarding the entrance.
+~
+He is an experienced mage who has specialized in the field of Combat Magic.
+He is here to guard the Mage's Guild and his superior knowledge of offensive as
+well as defensive spells make him a deadly opponent.
+~
+14 128 800 Y
+31 -6 2 6d10+890 2d8+8
+2000 80000
+8 8 1
+1 0 0d0+0 4
+1 1 20 37
+1 1 25 32
+1 1 12 5
+1 1 8 8
+0 0 0 0
+R
+0
+#3025
+templar~
+The Knight Templar~
+A knight templar is guarding the entrance.
+~
+He is a specially trained warrior belonging to the military order of the Faith.
+His duty is to protect the faithful from persecution and infidel attacks and
+his religious devotion combined with his superior skill makes him a deadly
+opponent.
+~
+14 128 800 Y
+31 -6 2 6d10+890 2d8+8
+2000 80000
+8 8 1
+2 0 0d0+0 0
+0 0 0 0
+R
+0
+#3026
+assassin~
+The Assassin~
+An assassin is guarding the entrance.
+~
+He is a thief who has specialized in killing others as effectively as possible,
+using all sorts of weapons.  His superior knowledge of how and where to use
+them combined with his extraordinary stealth makes him a deadly opponent.
+~
+14 128 800 Y
+31 -4 4 6d10+890 2d8+8
+2000 80000
+8 8 1
+3 0 0d0+0 0
+0 0 0 0
+R
+0
+#3027
+knight~
+The Knight~
+A knight is guarding the entrance.
+~
+He is an expert warrior who has attained knighthood through countless
+chivalrous deeds.  His duty is to protect the Guild of Swordsmen and his
+extreme skill combined with his experience in warfare makes him a deadly
+opponent.
+~
+14 128 800 Y
+31 -8 0 6d10+890 2d8+8
+2000 80000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+R
+0
+#3028
+commander~
+Commander~
+A commander is standing here guarding the guild.
+~
+he is the commander of the Commando. This 6 feet height handsome
+muscleman is now guarding the entrance of the Commando's Guild.
+~
+14 128 800 Y
+31 -5 3 6d10+890 2d8+8
+2000 80000
+8 8 1
+11 0 0d0+0 0
+0 0 0 0
+R
+0
+#3029
+guildmaster master~
+The Guildmaster~
+Your guildmaster is standing here.
+~
+A giant muscleman who is wearing a very beautiful army suit.
+His past was just killing, he saw corpses more than you saw
+people.
+~
+10 128 1000 Y
+31 -8 0 6d10+2500 3d8+10
+8794 210000
+8 8 1
+11 0 0d0+0 3
+3 1 4 0
+1 1 3 26
+1 1 5 10
+0 0 0 0
+R
+0
+#3030
+percussionist~
+The Percussionist~
+A Percussionist is here guarding the guild.
+~
+He is very good at playing percussion instruments, but
+he is also very good at fighting.
+~
+14 128 800 Y
+31 -6 2 6d10+890 2d8+8
+2000 80000
+8 8 1
+10 0 0d0+0 0
+0 0 0 0
+R
+0
+#3031
+guildmaster master~
+the Guildmaster~
+Your guildmaster is standing here.
+~
+He is the person skilled in music. You can learn very good
+music from him.
+~
+10 128 1000 Y
+31 -8 0 6d10+2340 3d8+7
+8796 150000
+8 8 1
+10 0 0d0+0 0
+0 0 0 0
+R
+0
+#3032
+holy knight~
+The Holy Knight~
+A Holy Knight is here guarding the entrance.
+~
+He is the knight with courage, honour, courtesy,
+and loyalty.
+~
+14 128 800 Y
+32 -7 -6 6d10+890 2d8+12
+2000 80000
+8 8 1
+7 0 0d0+0 0
+0 0 0 0
+R
+0
+#3033
+guildmaster master~
+the Guildmaster~
+Your Guildmaster is standing here.
+~
+He is the Guildmaster of Paladin. From his strong eyes,
+you notice that he must be a very tough knight.
+~
+10 128 1000 Y
+31 -7 -6 6d10+2840 8d3+10
+12341 200000
+8 8 1
+7 0 0d0+0 0
+0 0 0 0
+R
+0
+#3034
+erratic knight~
+The Erratic Knight~
+An Erratic Knight is here guarding the entrance.
+~
+He is a knight who is irregular in behaviour and likely
+to do unusual or unexpected things.
+~
+14 128 -800 Y
+31 -7 -6 6d10+890 2d8+12
+2000 80000
+8 8 1
+8 0 0d0+0 0
+0 0 0 0
+R
+0
+#3035
+guildmaster master~
+The Guildmaster~
+Your Guildmaster is standing here.
+~
+He is the Guildmaster of Anti-Paladin. From his strong eyes,
+you notice that he must be a very tough knight.
+~
+10 128 -1000 Y
+31 -7 -6 6d10+2840 8d3+10
+12341 200000
+8 8 1
+8 0 0d0+0 0
+0 0 0 0
+R
+0
+#3036
+robot~
+The Robot~
+A Robot is here guarding the entrance.
+~
+A funny looking robot.
+~
+10 128 1000 Y
+32 -7 -8 50d5+6000 10d2+6
+50000 200000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+R
+0
+#3037
+super robot~
+The Super Robot~
+The Super Robot is standing here.
+~
+A funny looking robot, but very tough.
+~
+10 128 1000 Y
+34 -10 -10 100d10+16000 30d2+30
+500000 500000
+8 8 0
+0 0 0d0+0 0
+0 0 0 0
+R
+0
+#3040
+bartender~
+the Bartender~
+A Bartender watches you calmly, while he skillfully mixes a drink.
+~
+A tired looking Bartender who hates trouble in his bar.
+~
+10 128 900 Y
+23 0 2 6d10+2390 1d8+12
+2000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3041
+waiter~
+the Waiter~
+A waiter is going around from one place to another.
+~
+A tired looking waiter.
+~
+10 128 900 Y
+23 0 2 6d10+1390 1d8+12
+2000 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3042
+waiter~
+the Waiter~
+A man who in his young days was a famous sorcerer but now leads a quiet,
+peaceful life as a waiter.
+~
+~
+10 128 600 Y
+23 -1 2 6d10+1390 1d8+12
+2000 80000
+8 8 1
+1 0 0d0+0 3
+1 1 20 5
+1 1 20 32
+1 1 10 37
+0 0 0 0
+R
+0
+#3043
+waiter~
+the Waiter~
+A waiter who seems to have reach contact with God.
+~
+~
+10 128 600 Y
+23 -1 2 6d10+1390 1d8+12
+2000 80000
+8 8 1
+2 0 0d0+0 0
+0 0 0 0
+R
+0
+#3044
+waiter~
+the Waiter~
+A waiter who knows where all his costumers has their money.
+~
+~
+10 128 600 Y
+23 -1 2 6d10+1390 1d8+12
+2000 80000
+8 8 1
+3 0 0d0+0 0
+0 0 0 0
+R
+0
+#3045
+waiter~
+the Waiter~
+A waiter who easily could kill you, and still carry quite a few firebreathers.
+~
+~
+10 128 600 Y
+23 -1 2 6d10+1390 1d8+12
+2000 80000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+R
+0
+#3046
+filthy~
+Filthy~
+Filthy is standing here, eager to serve you a special drink.
+~
+Filthy looks real, ehm, dirty. He likes to keep his costumers happy,
+but do not mess with him or else he'll get upset.
+~
+10 0 600 Y
+23 -1 2 6d10+890 1d8+12
+2000 8000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3060
+cityguard guard~
+The Cityguard~
+A cityguard stands here.
+~
+A big, strong, helpful, trustworthy guard.
+~
+205 0 1000 Y
+10 10 2 1d12+123 1d8+3
+500 9000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+R
+0
+#3061
+janitor~
+The Janitor~
+A janitor is walking around, cleaning up.
+~
+~
+13 0 900 Y
+1 20 9 2d6+10 1d5+0
+34 100
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3062
+fido dog~
+The Beastly Fido~
+Beastly Fido is here.
+~
+Fido is a small dog that has a foul smell and pieces of rotted meat hanging
+around his teeth.
+~
+169 0 -200 Y
+0 20 10 1d6+4 1d4+0
+10 25
+8 8 1
+89 0 0d0+0 0
+0 0 0 0
+R
+0
+#3063
+mercenary~
+The Mercenary~
+A Mercenary waiting for a job.
+~
+He looks pretty mean.
+~
+12 0 -200 Y
+5 16 5 2d6+60 1d8+0
+47 900
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3064
+drunk~
+The Drunk~
+A singing, happy Drunk.
+~
+A drunk who seems to be too happy, and to carry too much money.
+~
+12 0 400 Y
+2 19 8 2d6+22 1d6+0
+85 200
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3065
+beggar~
+the Beggar~
+A beggar is here, asking for a few coins.
+~
+The beggar looks like she is fed up with life.
+~
+14 0 400 Y
+1 20 9 2d6+10 1d5+0
+0 100
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3066
+odif yltsaeb~
+the Odif Yltsaeb~
+Odif Yltsaeb is here, walking backwards.
+~
+Odif is a small god that has been reversed by some dog.
+~
+169 0 -200 Y
+0 20 10 1d6+4 1d4+0
+10 25
+8 8 1
+89 0 0d0+0 0
+0 0 0 0
+R
+0
+#3067
+cityguard guard~
+The Cityguard~
+A cityguard is here, guarding the gate.
+~
+A big, strong, helpful, trustworthy guard.
+~
+79 0 1000 Y
+10 10 2 1d12+123 1d8+3
+500 9000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3068
+cityguard guard~
+The Cityguard~
+A cityguard stands here, protecting the innocent.
+~
+A very big, strong, helpful, trustworthy guard.
+~
+201 0 1000 Y
+20 8 2 10d12+1000 10d2+5
+500 9000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+R
+0
+#3069
+vault guard~
+The Vault Guard~
+The Vault Guard stands here.
+~
+A tall, dark and handsome brute with brawns but no brains.  Imported
+directly from the far Kudzul-Ur jungles to the south, he knows no fear.
+He really doesn't, the tribe has no word for it.  He watches your every
+move out of the corner of his eye and you shiver ever so slightly at the
+thought of facing this monster of a man in combat.
+~
+16777226 536873088 500 Y
+35 -15 10 10d100+25000 2d100+100
+1 1
+8 8 1
+4 0 1d1+1 1
+9 1 40 0
+0 0 0 0
+R
+0
+#3090
+kitten~
+The Kitten~
+A small loyal Kitten is here.
+~
+The Kitten looks like a cute, little, fierce fighter.
+~
+14 0 400 Y
+1 20 9 1d6+11 1d4+0
+0 100
+8 8 0
+90 0 0d0+0 0
+0 0 0 0
+R
+0
+#3091
+puppy~
+the Puppy~
+A small loyal Puppy is here.
+~
+The Puppy looks like a cute, little, fierce fighter.
+~
+14 0 400 Y
+1 20 9 1d6+11 1d4+0
+0 100
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+R
+0
+#3092
+beagle~
+The Beagle~
+A small, quick, loyal Beagle is here.
+~
+The Beagle looks like a fierce fighter.
+~
+14 0 400 Y
+2 19 8 1d12+22 1d6+0
+0 200
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+R
+0
+#3093
+rottweiler~
+the Rottweiler~
+A large, loyal Rottweiler is here.
+~
+The Rottweiler looks like a strong, fierce fighter.
+~
+14 0 400 Y
+3 18 7 1d12+35 1d7+0
+0 800
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+R
+0
+#3094
+wolf~
+The Wolf~
+A large, trained Wolf is here.
+~
+The Wolf looks like a strong, fearless fighter.
+~
+14 33554432 0 Y
+4 17 6 1d12+47 1d8+0
+0 1600
+8 8 0
+89 0 0d0+0 0
+0 0 0 0
+R
+0
+#3095
+doctor naikrovek man healer~
+Doctor Naikrovek~
+Doctor Naikrovek is here fiddling with one of his mixtures.
+~
+Before you stands a very remarkable man.  He is tall and broad and has a
+growing bald spot on the top of his head.  He has a pencil thin moustache
+that seems to be charred at the edges.  He is wearing a long white
+doctors coat stained with various components, and a stethoscope hangs
+around his neck.  This man is one of the best doctors Midgaard has ever 
+seen. He is definatly someone whom you can trust your very life with!
+~
+10 402925696 1000 Y
+40 1 -100 130d30+10000 2d5+5
+2000 1000000
+8 8 1
+2 4224 999d1+1 0
+0 0 0 0
+R
+0
+#0
+$~

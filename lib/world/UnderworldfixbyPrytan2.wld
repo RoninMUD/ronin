@@ -1,0 +1,1882 @@
+#11100
+High Rock~
+   You are on a rock at the northern end of Rotted Road.  The trail
+continues east and west from here.
+~
+111 8 1
+D1
+A trail.
+~
+~
+0 -1 11099
+D2
+A decrepit road.
+~
+~
+0 -1 11098
+D3
+A trail.
+~
+~
+0 -1 11101
+S
+#11101
+A Murky Trail~
+   A murky trail winding its way in and east-west sort of fashion.
+Small rocks lie about, and everything is quiet.
+~
+111 9 0
+D1
+A trail.
+~
+~
+0 -1 11100
+D3
+A trail.
+~
+~
+0 -1 11102
+S
+#11102
+A Murky Trail~
+   A murky trail winding its way in and east-west sort of fashion.
+Small rocks lie about, and everything is quiet.
+~
+111 9 0
+D1
+A trail.
+~
+~
+0 -1 11101
+D3
+A trail.
+~
+~
+0 -1 11103
+S
+#11103
+A Murky Trail~
+   A murky trail winding its way in and east-west sort of fashion.
+Small rocks lie about, and everything is quiet.
+~
+111 9 0
+D1
+A trail.
+~
+~
+0 -1 11102
+D3
+A clearing.
+~
+~
+0 -1 11104
+S
+#11104
+Under the Swamp~
+   You are in a clearing under the swamp.  It is slightly damp from
+the water soaking through.  You appear to be at the western end of
+some trail.
+~
+111 9 2
+D1
+A trail.
+~
+~
+0 -1 11103
+D4
+A swamp.
+~
+~
+0 -1 11071
+S
+#11105
+Satan's Den~
+   The place is filled with all sorts of creatures, hopping about like
+mad!  A Mind flayer nearly knocks you over as he bounces by with a
+Lamia in his arms.  Are they dancing?  Must be this is some sort of
+dance club for the undead!  Fortunately for you, none of them choose
+to take notice of you at this time.
+~
+111 8 0
+D2
+A dark road.
+~
+~
+0 -1 11106
+D3
+A decrepit old road.
+~
+~
+0 -1 11094
+S
+#11106
+Dark Lane~
+   You are on a small dark road running east-west through the heart of
+the Underworld.  The road continues to the east, and an to the west is
+an intersection.  There is a dark building to the north, and you hear
+loud music (??) from within!
+~
+111 8 1
+D0
+The building appears to be a dance club.
+~
+~
+0 -1 11105
+D1
+A dark road continues.
+~
+~
+0 -1 11107
+D3
+An intersection.
+~
+~
+0 -1 11093
+S
+#11107
+Dark Lane~
+   You are on a small, dark road in the Underworld.  A huge, cardboard
+box is to the south, and the lane continues east and west from here.
+~
+111 8 1
+D1
+A dark road continues.
+~
+~
+0 -1 11108
+D2
+The box is big enough for a dozen people.
+~
+~
+0 -1 11109
+D3
+A dark road continues.
+~
+~
+0 -1 11106
+S
+#11108
+End of Dark Lane~
+   You are at the eastern end of the lane.  The only exit is back the
+way you came in.  This is quite an isolated place and you hope you
+don't run into any shady characters here.
+~
+111 8 1
+D1
+~
+~
+0 -1 11006
+D3
+The road continues.
+~
+~
+0 -1 11107
+S
+#11109
+Inside a Cardboard Box~
+   You are inside a cardboard box.  It looks like someone lives (or
+lived) here.  There are old socks and rotting food lying around.  In
+the corner is a small shredded mattress covered with newspapers.  The
+side of the mattress is dark red, and the floor feels sticky under your
+feet.
+~
+111 8 0
+D0
+The dark lane.
+~
+~
+0 -1 11107
+D3
+~
+~
+0 -1 11001
+S
+#11110
+Rotted Road~
+   The crumbling road continues south.  An intersection is north of
+here.  A spooky looking house is to the west.
+~
+111 8 1
+D0
+An intersection.
+~
+~
+0 -1 11093
+D2
+The road continues.
+~
+~
+0 -1 11111
+D3
+The house is hold, dark, and dirty.
+~
+~
+0 -1 11116
+S
+#11111
+Rotted Road~
+   The old, decrepit road continues north and south from here.  This
+appears to be a less populated area of town.
+~
+111 8 1
+D0
+The road continues.
+~
+~
+0 -1 11110
+D1
+~
+~
+0 -1 11000
+D2
+The end of the road.
+~
+~
+0 -1 11112
+S
+#11112
+Southern End of Rotted Road~
+   This is the end of the road.  You can turn around and go back
+toward the center of town again, or head west on a rocky ledge.
+~
+111 8 1
+D0
+The road continues.
+~
+~
+0 -1 11111
+D3
+The ledge looks narrow and quite high.
+~
+~
+0 -1 11113
+S
+#11113
+A Rocky Ledge~
+   The narrow ledge is quite high.  Small rocks lie everywhere and you
+should be careful not to trip on one, sending you to your death on the
+jagged rocks below.  A large bridge lies south of here.
+~
+111 8 4
+D1
+The end of the road.
+~
+~
+0 -1 11112
+D2
+The bridge looks very large.
+~
+~
+0 -1 11114
+E
+bridge~
+The bridge appears to have been constructed entirely out of bones.
+Probably the bones of people a little to curious about the Underworld!
+~
+S
+#11114
+The Bridge~
+   You are on a bridge constructed mostly of human bones.  You get a
+chill just walking on it, as if the souls of each who contributed to
+this bridge were shouting out in warning!
+~
+111 8 0
+D0
+The ledge.
+~
+~
+0 -1 11113
+D2
+A rope ladder leads of from the edge of a great ravine!
+~
+~
+0 -1 11115
+S
+#11115
+Edge of Ravine~
+   The ravine looks very dangerous.  It looks as though no one has
+ever made it to the bottom alive, or if they did, they surely didn't
+make it back up. There are hundreds of skeletons at the bottom, most
+shattered to small pieces.
+~
+111 8 4
+D0
+The bridge looks white and uneven, but sturdy.
+~
+~
+0 -1 11114
+D4
+You can't tell where the ladder leads.
+~
+~
+0 -1 11091
+E
+ladder rope~
+The ladder seems to have been made from human hair, but it looks
+sturdy.
+~
+S
+#11116
+A Spooky House~
+   Cob webs are everywhere.  The boards creek and groan whenever you
+move.  It is completely silent.  A large painting of a dark figure
+leans against one corner.
+~
+111 8 0
+D0
+A dark lane.
+~
+~
+0 -1 11117
+D1
+An old road.
+~
+~
+0 -1 11110
+D5
+A trap door!
+~
+trap door trapdoor~
+1 -1 11007
+E
+picture painting~
+The figure wears a long black cape.  He is leaning against a long,
+thin blade and his yellow eyes glare at you.  You can't stand to
+look at it anymore, but you can't seem to pull your eyes away from
+it!
+~
+S
+#11117
+Dark Lane~
+   You are on a dark road through the Underworld.  The lane continues
+west, while an intersection is east.  A dark house is to the south.
+~
+111 8 1
+D1
+An intersection, looking dangerous.
+~
+~
+0 -1 11093
+D2
+A the house looks quite spooky!
+~
+~
+0 -1 11116
+D3
+The lane continues.
+~
+~
+0 -1 11118
+S
+#11118
+Dark Lane~
+   You are on a dark east-west road.  Shadows loom around every
+corner.
+~
+111 8 0
+D1
+The lane continues.
+~
+~
+0 -1 11117
+D3
+The lane continues.
+~
+~
+0 -1 11119
+S
+#11119
+Dark Lane~
+   You are at the end of a dark lane.  A moat lies to the west and
+beyond the moat is a huge, black castle.  The road stretches out to
+the east and a drawbridge is to the south.
+~
+111 8 0
+D1
+The road continues.
+~
+~
+0 -1 11118
+D2
+The drawbridge lies south.
+~
+~
+0 -1 11121
+D3
+The moat is a dark greenish brown.
+~
+~
+0 -1 11120
+S
+#11120
+The Moat~
+   You are at the edge of a great greenish-brown moat.  The moat must
+be over a hundred feet deep, and periodically you see a large tail
+swish about near the surface.  Steam rises in patches and hovers at
+the surface of the water.
+~
+111 8 1
+D1
+The end of the lane.
+~
+~
+0 -1 11119
+S
+#11121
+The Drawbridge~
+   You are standing on the eastern portion of a HUGE drawbridge.
+Before you stands a gigantic, black castle.  It looks dark and
+uninviting and you can barely see shadowy figures circling the high
+pointy towers.
+~
+111 8 2
+D0
+A dark lane.
+~
+~
+0 -1 11119
+D3
+The drawbridge continues...
+~
+~
+0 -1 11122
+S
+#11122
+The Drawbridge~
+  You are standing on the western portion of a HUGE drawbridge.
+Standing this close to the castle you can't even see the top.  All you
+see is a gigantic black wall in front of you.  It seems to go on
+forever in every direction.  Directly in front of you is an oakwood
+door, about 9 feet tall.
+~
+111 8 2
+D1
+The drawbridge continues...
+~
+~
+0 -1 11121
+D3
+There is a door.
+~
+door oakwood~
+1 -1 11123
+E
+door~
+The door has the figure of a large, upright bat on it!
+~
+S
+#11123
+Castle Entrance~
+   You are in the entrance to the dark castle.  A great hall extends
+north and south from here.  A suit of black armor stands in the corner
+and you feel as you are being watched.
+~
+111 8 0
+D0
+The hall continues...
+~
+~
+0 -1 11133
+D1
+The door to the drawbridge.
+~
+door oakwood~
+1 -1 11122
+D2
+The hall continues...
+~
+~
+0 -1 11124
+S
+#11124
+The Great Hall~
+   You are in a large hall in the castle. The hall has a high, arched
+ceiling and armored knights line the walls.  The hall continues south.
+The castle entrance is to the north.  Rooms are off to the east and
+west.
+~
+111 8 0
+D0
+The entrance to the castle.
+~
+~
+0 -1 11123
+D1
+A closet.
+door closet~
+~
+1 -1 11125
+D2
+The great hall continues.
+~
+~
+0 -1 11128
+D3
+The room looks empty.
+~
+~
+0 -1 11126
+S
+#11125
+A Closet~
+   The closet is larger than you thought, but it still feels too
+small.  The only exit is west.
+~
+111 8 0
+D3
+The hall.
+door closet~
+~
+1 -1 11124
+S
+#11126
+An Empty Room~
+   The room is apparently not used.  There is no furniture, but there
+is quite a bit of dust.  The only exit is east.
+~
+111 8 0
+D1
+The hall.
+~
+~
+0 -1 11124
+S
+#11127
+Paladin's Gallery~
+   The room is filled with fine art and other collectibles.  There is
+a large mirror at one end of the room.  The only exit is east.
+~
+111 8 0
+D1
+The hall.
+~
+~
+0 -1 11128
+S
+#11128
+The Great Hall~
+   You are in the a large hall, running north-south.  A gallery lies
+west and a nasty-looking room is to the east.
+~
+111 8 0
+D0
+The hall continues.
+~
+~
+0 -1 11124
+D1
+A nasty-looking torture room.
+~
+~
+0 -1 11129
+D2
+The end of the hall.
+~
+~
+0 -1 11131
+D3
+A room full of paintings.~
+~
+0 -1 11127
+S
+#11129
+The Torture Room~
+   This is a room that was once used for torturing, and perhaps, it
+still is.  Stairs lead down into a dungeon.
+~
+111 8 0
+D3
+The hall.
+~
+~
+0 -1 11128
+D5
+Stairs lead down.
+~
+~
+0 -1 11132
+S
+#11130
+The Grand Dining Room~
+   There is a huge table here, made of a dark wood.  The table must be
+thirty feet long.  At one end of the table is a plate of food, steam
+rising from it.
+~
+111 8 0
+D1
+The end of the hall.
+~
+~
+0 -1 11131
+S
+#11131
+The End of The Great Hall~
+   You are at the end of the hall.  The dining room is to the west and
+the hall leads north.
+~
+111 8 0
+D0
+The hall continues.
+~
+~
+0 -1 11128
+D3
+The dining room.
+~
+~
+0 -1 11130
+S
+#11132
+Dungeon~
+   You are in the castle dungeon.  Bones lie everywhere.  You are
+thankful that you are here on your own free will.  There are three
+skeletons hanging by chains on the north wall.  A large bloodstain
+surrounds the stretching rack in the middle of the room.
+~
+111 8 0
+D4
+The torture room.
+~
+~
+0 -1 11129
+E
+rack~
+It is quite bloody.  There are shards of broken glass embedded
+along its length, to which shreds of flesh cling.~
+S
+#11133
+The Great Hall~
+   The hall continues north and south and the reading room is to the
+west.
+~
+111 8 0
+D0
+The hall.
+~
+~
+0 -1 11134
+D2
+The entrance.
+~
+~
+0 -1 11123
+D3
+There are a lot of books that way.
+~
+~
+0 -1 11137
+S
+#11134
+The End of the Great Hall~
+   You are at the northern end of the hall.  A small bedroom is to the
+east and the library is to the west.
+~
+111 8 0
+D1
+The bedroom appears unused.
+~
+~
+0 -1 11135
+D2
+The hall.
+~
+~
+0 -1 11133
+D3
+There are quite a few books.
+~
+~
+0 -1 11136
+S
+#11135
+A Small Bedroom~
+   You are in a small bedroom in the castle.  In the middle of the
+room is a large round bed.  It looks like it would be very nice place
+to rest.
+~
+111 8 0
+D3
+The end of the hall.
+~
+~
+0 -1 11134
+S
+#11136
+The Library~
+   There is a large set of shelves against the north wall.  There are
+hundreds of books here.  Just out of curiosity you knock on the wall.
+It sounds hollow!
+~
+111 8 0
+D0
+The shelves seem to move a bit.
+~
+secret shelves shelf book books case book-case~
+1 -1 11138
+D1
+The end of the hall.
+~
+~
+0 -1 11134
+D2
+The reading room.
+~
+~
+0 -1 11137
+S
+#11137
+The Reading Room~
+   The room is brightly lit by candles.  There is a large square table
+in the center of the room and large easy chairs are all around the
+room.
+~
+111 8 0
+D0
+The library.
+~
+~
+0 -1 11136
+D1
+The hall.
+~
+~
+0 -1 11133
+S
+#11138
+Behind the Book-Case~
+   You are in a secret passage behind the book case.  It is cool and
+dark.  The passage leads west.
+~
+111 8 0
+D2
+The back of the book-case.
+~
+secret shelves shelf book books case book-case~
+1 -1 11136
+D3
+A passage.
+~
+~
+0 -1 11139
+S
+#11139
+Secret Passage~
+   The passage goes east from here.  It also turns a corner and
+winds south.
+~
+111 8 0
+D1
+The passage.
+~
+~
+0 -1 11138
+D2
+The passage.
+~
+~
+0 -1 11140
+S
+#11140
+Secret Passage~
+   The passage continues north and south.
+~
+111 8 0
+D0
+~
+~
+0 -1 11139
+D2
+~
+~
+0 -1 11141
+S
+#11141
+Secret Passage~
+   The passage continues north. The practice shrine is to the south
+and there is an exit west.
+~
+111 8 0
+D0
+~
+~
+0 -1 11140
+D2
+~
+~
+0 -1 11145
+D3
+The court room.
+~
+~
+0 -1 11142
+S
+#11142
+Dark Knight's Court~
+   There is a large round table here and a huge steel door to the
+west.  There is writing on the door.  You sense that you are someplace
+that you really should not be.
+~
+111 8 0
+D1
+A passage.
+~
+~
+0 -1 11141
+D3
+The door has writing on it.
+~
+door steel~
+1 11142 11143
+E
+door steel~
+There is an inscription on the door:
+       PRIVATE LAIR
+            OF
+        B A T M A N
+~
+S
+#11143
+Throne of the Dark Knight~
+   There is a large golden throne against the west wall.  Against the
+south wall is a black cabinet, with a huge padlock hanging from it.
+The ceiling is low here, maybe ten feet high.  There are two large
+black statues--one on either side of the throne.
+~
+111 8 0
+E
+black cabinet~
+The cabinet is tall and black, with a shiny padlock made from a
+strange metal.  The cabinet looks like some sort of closet, probably
+containing some especially valuable clothing.
+~
+E
+statue~
+The statue is in the shape a huge bat, with long, strong arms and
+sharp claws.  The statue wears a long black cape.  It is about
+9 feet tall.
+~
+E
+throne~
+The throne is made for a large person, there are buttons all over
+the arm rests.
+~
+S
+#11144
+Weapons Room~
+   This is the room where the Dark Knight keeps his most prized
+weapons.  You must have been lucky to make it this far...as surely he
+has been watching you the whole time.
+~
+111 8 0
+D1
+~
+~
+0 -1 11145
+S
+#11145
+Practice Shrine~
+  This is some sort of practice room, bordering the weapons room.  The
+walls are severely scarred from mock battles (or were they?).
+~
+111 8 0
+D0
+~
+~
+0 -1 11141
+D2
+~
+~
+0 -1 11242
+D3
+~
+~
+0 -1 11144
+E
+West~
+2
+~
+S
+#11146
+Cavern Entrance~
+   The Underworld, which lies below, opens into I giant cavern here.
+Although the climb up was quite easy, it would be impossible to go
+back down.  This seems to be a somewhat less threatening place.
+~
+111 8 0
+D0
+~
+~
+0 -1 11147
+D1
+The cavern continues.
+~
+~
+0 -1 11041
+D3
+The cavern continues.
+~
+~
+0 -1 11029
+D4
+You see the park of Midgaard.
+~
+~
+0 -1 3114
+S
+#11147
+Outside the Lab~
+  You are outside a strange lab in the middle of the cavern.  What's
+so strange about it?  A large metal shack in the middle of an
+otherwise deserted cavern.  It seems to be the only artificial object
+in the entire region.
+~
+111 8 0
+D0
+The lab.
+~
+~
+0 -1 11148
+D1
+~
+~
+0 -1 11045
+D2
+~
+~
+0 -1 11146
+S
+#11148
+The Lab~
+   You are in a dark laboratory.  Whoever works here must have good
+night vision as it is surprisingly dark.  Body parts of strange
+creatures are scattered carelessly along a workbench on the north
+wall.
+~
+111 8 0
+D1
+~
+~
+0 -1 11149
+D2
+~
+~
+0 -1 11147
+S
+#11149
+The Trees~
+   The trees are thick here.  So much so as to block further passage.
+The trees continue to the south and you hear a loud buzzing from the
+east.
+~
+111 8 3
+D1
+There are quite a few bees.
+~
+~
+0 -1 11048
+D2
+The trees continue.
+~
+~
+0 -1 11049
+D3
+The lab.
+~
+~
+0 -1 11148
+S
+#11150
+Secret Tunnel~
+  The tunnel, apparently carved by hand, continues north and south.
+~
+111 9 0
+D0
+~
+~
+0 -1 11019
+D2
+~
+~
+0 -1 11151
+S
+#11151
+Secret Tunnel~
+  The tunnel, apparently carved by hand, continues north.  To the
+south is a small chamber.
+~
+111 9 0
+D0
+~
+~
+0 -1 11150
+D2
+~
+~
+0 -1 11152
+S
+#11152
+Secret Chamber~
+  You are in a small chamber hidden behind the wine rack.  A small
+hole is embedded into the north wall.  You could probably just squeeze
+yourself through it, IF you wanted to.
+~
+111 9 0
+D0
+The hole is big enough for you to fit in.
+~
+~
+0 -1 11151
+D3
+~
+wine rack door secret~
+1 -1 11153
+S
+#11153
+The Wine Cellar~
+  You have found the Dark Knight's private wine store.  A large rack
+on the eastern wall contains hundreds of bottles of vintage wine.  You
+try to take a bottle, but are instantly zapped.  You feel a draft
+coming from the east.
+~
+111 9 0
+D1
+The wine rack doesn't exactly appear stationary.
+~
+rack wine secret~
+1 -1 11152
+D2
+~
+~
+0 -1 11154
+D3
+~
+~
+0 -1 11168
+S
+#11154
+Narrow Passage~
+  You are on a narrow passage under the castle.  The aroma of fine
+wine drifts in from the north, while the passage continues to the
+south and west.
+~
+111 9 0
+D0
+~
+~
+0 -1 11153
+D2
+~
+~
+0 -1 11155
+D3
+~
+~
+0 -1 11168
+S
+#11155
+Narrow Passage~
+  You are on a north-south passage, lined with tiny, charred corpses.
+~
+111 9 0
+D0
+~
+~
+0 -1 11154
+D2
+~
+~
+0 -1 11156
+S
+#11156
+A Bend~
+  The passage bends to the east here, leading into a cold room.  To
+the north the passage continues.
+~
+111 9 0
+D0
+~
+~    ~
+0 -1 11155
+D3
+~
+~
+0 -1 11159
+S
+#11157
+The Skeleton Room~
+  Tiny skeletons lie all around, some are intact, but charred.  Others
+have been smashed to tiny pieces. There also quite a few larger
+skeletons, even a few human-like skeletons.
+as all four walls are severely scorched by fire.  On the floor is the
+outline of a pentagram, as though some force has traveled those patterns
+upon the ground here, over and over again.  The smell of burnt flesh 
+hangs heavy in the air.
+~
+111 9 0
+D0
+~
+~
+0 -1 11159
+D1
+~
+~
+0 -1 11230
+D3
+~
+~
+0 -1 11158
+S
+#11158
+A Drake's Nest~
+  You are standing right in the middle of a fire drake's nest.  Tiny,
+burned bodies lie about, mostly rats and an occasional beastly fido.
+Scraps from an unlucky warrior rest in the corner.
+quickly, as all four walls are scorched by fire.  On the floor is the burnt
+outline of a pentagram...the smell of burnt flesh lingers in the air.
+   This is a cold room.  However, it appears to frequently heat up rapidly,
+~
+111 9 0
+D1
+~
+~
+0 -1 11157
+S
+#11159
+A Cold Room~
+   This is a cold room.  However, it quite frequently heats up quickly,
+as evidenced by the scorch marks on the walls and ceiling.  On the floor
+is the burnt-in pattern of a pentagram, as though some force had 
+traveled those patterns in this room many times...the smell of burnt
+flesh hangs heavy in the air.
+~
+111 9 0
+D0
+~
+~
+0 -1 11160
+D1
+~
+~
+0 -1 11156
+D2
+~
+~
+0 -1 11157
+D5
+~
+~
+0 -1 5400
+S
+#11160
+A Passage~
+  A small passage leads to a tomb of some sort to the west.  You feel
+a cold wind coming from the south.
+~
+111 9 0
+D2
+~
+~
+0 -1 11159
+D3
+~
+~
+0 -1 11161
+S
+#11161
+A Tomb~
+  This is an unofficial tomb for many a creature.  You've never seen
+so many bones in your life.  Bones of fido's and rabbits, of rats and
+ducks.  Bones of warriors and mercenaries, of mages and thieves.
+Bones of bears.  Bones of hell hounds.  Bones of every creature
+imaginable.
+~
+111 9 0
+D0
+~
+~
+0 -1 11163
+D1
+~
+~
+0 -1 11160
+S
+#11162
+Narrow Passage~
+  This is a narrow passage in the cellar under the castle of the Dark
+Knight.  The passage continues east, and the cellar lies west.
+~
+111 9 0
+D1
+~
+~
+0 -1 11154
+D3
+~
+~
+0 -1 11164
+S
+#11163
+The Enchanted Cellar~
+  This room appears to have been added in the middle of the castle's
+cellar.  The entire room seems to have a magic glow to it.
+~
+111 8 0
+D0
+~
+~
+0 -1 11165
+D1
+~
+~
+0 -1 11162
+D2
+~
+~
+0 -1 11161
+D3
+~
+~
+0 -1 11164
+S
+#11164
+A Drake's Nest~
+  You are standing in the middle of a huge nest--the nest of a
+fire drake.  Bones of its prey litter the nest.  You reach down to
+examine a corpse and find that it is still quite warm.
+~
+111 9 0
+D1
+~
+~
+0 -1 11163
+S
+#11165
+West End of Castle's Cellar~
+  You are at the west end of the castle's cellar.  An addition to the
+cellar lies south and the main cellar is to the east.  The west wall
+appears to have an exit in it.  However the exit doesn't appear in
+good shape, and I doubt it has been used recently.
+~
+111 9 0
+D1
+~
+~
+0 -1 11167
+D2
+~
+~
+0 -1 11163
+D3
+As you gaze into the next room, you perceive an
+air of instability. The floors are sunken-in and large cracks run the width
+of the room. You notice the timbers in the ceiling are almost completely
+rotted through as you consider the saw-dust sifting down from a huge
+hole in the roof.~
+~
+0 -1 11166
+E
+exit~
+11166
+~
+S
+#11166
+A Collapsing Room~
+  The room you now find yourself in was, in better times, the
+recreational center of the castle.  But unfortunately for you, it
+hasn't been used or even visited for many, many years. The supporting
+beams in the ceiling look old and nearly rotted through.
+~
+111 8 0
+D1
+Floors look nasty.~
+~
+0 -1 11165
+S
+#11167
+Muddy Cellar~
+  The cellar is a bit muddy here, as if some large creature had
+recently worked its way through here, tracking huge amounts of mud
+with it.
+~
+111 9 0
+D0
+~
+~
+0 -1 11169
+D1
+~
+~
+0 -1 11168
+D3
+~
+~
+0 -1 11165
+S
+#11168
+The Castle's Cellar~
+  You are in the cellar of the castle of the Dark Knight.  The wine
+cellar is to the east.
+~
+111 9 0
+D0
+~
+~
+0 -1 11170
+D1
+~
+~
+0 -1 11153
+D3
+~
+~
+0 -1 11167
+S
+#11169
+A Dark Room~
+  This is a dark room, in the cellar of the castle.  The ceiling is
+quite high, maybe 50 feet above your head, and there is a large hole
+in the center of it.  You couldn't exit through it, but it looks like a
+creature of flight could, easily.
+~
+111 9 0
+D2
+~
+~
+0 -1 11167
+S
+#11170
+Cellar Entrance~
+  You are at the entrance to the cellar of the castle.  To the north
+is a door, through which is a stair well.  The cellar opens out to the
+south.
+~
+111 9 0
+D0
+~
+cellar door~
+1 -1 11172
+D2
+~
+~
+0 -1 11168
+S
+#11171
+A Stair Well~
+  You are at the top the steps leading down into the castle's cellar.
+The castle opens up to the north, and the crumbling stone steps lead
+down.
+~
+111 8 0
+D4
+~
+~
+0 -1 11242
+D5
+~
+~
+0 -1 11172
+S
+#11172
+A Stair Well~
+  You are at the bottom of the steps stretching between the castle and
+it's cellar.  The cellar door is to the south, and the steps lead up
+to the castle.
+~
+111 8 0
+D2
+~
+cellar door~
+1 -1 11170
+D4
+~
+~
+0 -1 11171
+S
+#11174
+Ancient Tunnel~
+  This is an ancient tunnel many miles below the town of Midgaard.
+The tunnels were carved centuries ago, perhaps by dwarves enslaved by
+a cruel taskmaster.  They are crumbling and smell old and musty.  A
+newer smell, however, overrides that old smell--the smell of a foul,
+barbaric creature.
+~
+111 9 0
+D1
+~
+~
+0 -1 11175
+D2
+~
+~
+0 -1 11176
+S
+#11175
+Ancient Tunnel~
+  This is an ancient tunnel many miles below the town of Midgaard.
+The tunnels were carved centuries ago, perhaps by dwarves enslaved by
+a cruel taskmaster.  They are crumbling and smell old and musty.  A
+newer smell, however, overrides that old smell--the smell of a foul
+barbaric creature.
+~
+111 9 0
+D2
+~
+~
+0 -1 11177
+D3
+~
+~
+0 -1 11174
+S
+#11176
+Ancient Tunnel~
+  This is an ancient tunnel many miles below the town of Midgaard.
+The tunnels were carved centuries ago, perhaps by dwarves enslaved by
+a cruel taskmaster.  They are crumbling and smell old and musty.  A
+newer smell, however, overrides that old smell, the smell of a foul,
+barbaric creature
+~
+111 9 0
+D0
+~
+~
+0 -1 11174
+D3
+~
+~
+0 -1 11226
+S
+#11177
+Candle Lit Entrance~
+  This is an entrance to what is apparently some sort of place of
+worship.  The entrance is lit with large black candles that burn
+extraordinarily bright.
+~
+111 8 0
+D0
+~
+~
+0 -1 11175
+D2
+~
+~
+0 -1 11178
+S
+#11178
+Temple of the Great Bat~
+  This is some sort of small shrine to a powerful warrior bat.  Feel
+free to pay your respects in any way you feel proper.
+~
+111 8 0
+D0
+~
+~
+0 -1 11177
+D3
+~
+~
+0 -1 11179
+S
+#11179
+Candle Lit Entrance~
+  This is an entrance to what is apparently some sort of place of
+worship.  The entrance is lit with large black candles that burn
+extraordinarily bright.
+~
+111 8 0
+D1
+~
+~
+0 -1 11178
+D2
+~
+~
+0 -1 11180
+S
+#11180
+Crawl Space~
+  You are in a tiny crawl space connecting the study room with the
+temple.  It must have either been meant to be a secret exit, or later
+expanded to a full tunnel.  In either event it takes a quite a bit of
+effort to move along, and it would be a terrible place to be trapped.
+~
+111 9 0
+D0
+~
+~
+0 -1 11179
+D2
+~
+~
+0 -1 11181
+D3
+~
+~
+0 -1 11182
+S
+#11181
+Crawl Space~
+  You are in a tiny crawl space connecting the study room with the
+temple.  It must have either been meant to be a secret exit, or later
+expanded to a full tunnel.  In either event it takes a quite a bit of
+effort to move along, and it would be a terrible place to be trapped.
+~
+111 9 0
+D0
+~
+~
+0 -1 11180
+D1
+~
+~
+0 -1 11192
+S
+#11182
+The Inner Square~
+  This is one of many rooms forming a ring around the entrance.  The
+rooms appear to be all one structure while most of the other rooms
+appear to have been added later, (or were perhaps there long before!)
+~
+111 9 0
+D0
+~
+~
+0 -1 11183
+D1
+~
+~
+0 -1 11180
+D2
+~
+~
+0 -1 11190
+D3
+~
+~
+0 -1 11187
+S
+#11183
+The Inner Square~
+  This is one of many rooms forming a ring around the entrance.  The
+rooms appear to be all one structure while most of the other rooms
+appear to have been added later, (or were perhaps there long before!)
+~
+111 9 0
+D2
+~
+~
+0 -1 11182
+D3
+~
+~
+0 -1 11184
+S
+#11184
+The Inner Square~
+  This is one of many rooms forming a ring around the entrance.  The
+rooms appear to be all one structure while most of the other rooms
+appear to have been added later, (or were perhaps there long before!)
+~
+111 9 0
+D0
+~
+~
+0 -1 11226
+D1
+~
+~
+0 -1 11183
+D2
+~
+~
+0 -1 11187
+D3
+~
+~
+0 -1 11185
+S
+#11185
+The Inner Square~
+  This is one of many rooms forming a ring around the entrance.  The
+rooms appear to be all one structure while most of the other rooms
+appear to have been added later, (or were perhaps there long before!)
+~
+111 9 0
+D1
+~
+~
+0 -1 11184
+D2
+~
+~
+0 -1 11186
+S
+#11186
+The Inner Square~
+  This is one of many rooms forming a ring around the entrance.  The
+rooms appear to be all one structure while most of the other rooms
+appear to have been added later, (or were perhaps there long before!)
+~
+111 9 0
+D0
+~
+~
+0 -1 11185
+D1
+~
+~
+0 -1 11187
+D2
+~
+~
+0 -1 11188
+D3
+~
+~
+0 -1 11229
+S
+#11187
+Old Marble Room~
+  This is a room constructed of the finest marble of Midgaard.  The
+walls, floor, and ceiling all reflect the light off of their polished
+surfaces.  You can almost see your reflection on the walls, they are
+so shiny.
+~
+111 9 0
+D0
+You see yourself reflected off the highly polished walls
+~
+~   ~
+0 -1 11184
+D1
+You see a creature looking remarkably like YOU!
+~
+~       ~
+0 -1 11182
+D2
+You catch a glimpse of yourself, reflected off of the wall.
+~
+~
+0 -1 11189
+D3
+"My, don't you look nice today!" you think as you see your own image.
+~
+~
+0 -1 11186
+D4
+You see someone upside down, looking at you.
+~
+~
+0 -1 11240
+E
+wall walls floor ceiling roof marble~
+You are surprised as you find yourself looking into someone elses face! OH...silly!
+That's just your reflection!
+~
+S
+#11188
+The Inner Square~
+  This is one of many rooms forming a ring around the entrance.  The
+rooms appear to be all one structure while most of the other rooms
+appear to have been added later, (or were perhaps there long before!)
+~
+111 9 0
+D0
+~
+~
+0 -1 11186
+D1
+~
+~
+0 -1 11189
+S
+#11189
+The Inner Square~
+  This is one of many rooms forming a ring around the entrance.  The
+rooms appear to be all one structure while most of the other rooms
+appear to have been added later, (or were perhaps there long before!)
+~
+111 9 0
+D0
+~
+~
+0 -1 11187
+D1
+~
+~
+0 -1 11190
+D2
+~
+~
+0 -1 11198
+D3
+~
+~
+0 -1 11188
+S
+#11190
+The Inner Square~
+  This is one of many rooms forming a ring around the entrance.  The
+rooms appear to be all one structure while most of the other rooms
+appear to have been added later, (or were perhaps there long before!)
+~
+111 9 0
+D0
+~
+~
+0 -1 11182
+D3
+~
+~
+0 -1 11189
+S
+#11192
+Study Room~
+  This is a room filled with books, similar to the library many
+stories above.  These books, however, seem much older, and would never
+dare be put on display in the castle library.  These books were meant
+only for powerful magicians practicing dark magic.
+~
+111 9 0
+D2
+~
+~
+0 -1 11193
+D3
+~
+~
+0 -1 11181
+S
+#11193
+Crawl Space~
+  This is another crawl space, this one connecting the study room to a
+small antechamber to the west.  It is quite a small tunnel, indeed,
+and whether it was meant as a hidden passage, or for a small creature
+may never be known.
+~
+111 9 0
+D0
+~
+~
+0 -1 11192
+D3
+~
+~
+0 -1 11194
+S
+#11194
+Crawl Space~
+  This is another crawl space, this one connecting the study room to a
+small antechamber to the west.  It is quite a small tunnel, indeed,
+and whether it was meant as a hidden passage, or for a small creature
+may never be known.
+~
+111 9 0
+D1
+~
+~
+0 -1 11193
+D3
+~
+~
+0 -1 11195
+S
+#11195
+Crawl Space~
+  This is another crawl space, this one connecting the study room to a
+small antechamber to the west.  It is quite a small tunnel, indeed,
+and whether it was meant as a hidden passage, or for a small creature
+may never be known.
+~
+111 9 0
+D1
+~
+~
+0 -1 11194
+D3
+~
+~
+0 -1 11196
+S
+#11196
+Crawl Space~
+  This is another crawl space, this one connecting the study room to a
+small antechamber to the west.  It is quite a small tunnel, indeed,
+and whether it was meant as a hidden passage, or for a small creature
+may never be known.
+~
+111 9 0
+D1
+~
+~
+0 -1 11195
+D3
+~
+~
+0 -1 11197
+S
+#11197
+Crawl Space~
+  This is another crawl space, this one connecting the study room to a
+small antechamber to the west.  It is quite a small tunnel, indeed,
+and whether it was meant as a hidden passage, or for a small creature
+may never be known.
+~
+111 9 0
+D0
+~
+~
+0 -1 11198
+D1
+~
+~
+0 -1 11196
+D3
+~
+~
+0 -1 11200
+S
+#11198
+A Tall Tunnel~
+  This is a huge tunnel.  You have no problem standing straight here.
+It appears to have once been considerably smaller, as it seems the
+roof seems to have been ferociously clawed or scorched from
+existence.  Loose dirt covers the floor.
+~
+111 9 0
+D0
+~
+~
+0 -1 11189
+D2
+~
+~
+0 -1 11197
+D3
+~
+~
+0 -1 11199
+S
+#11199
+A Tall Tunnel~
+  This is a huge tunnel.  You have no problem standing straight here.
+It appears to have once been considerably smaller, as it seems the
+roof seems to have been ferociously clawed or scorched from
+existence.  Loose dirt covers the floor.
+~
+111 9 0
+D1
+~
+~
+0 -1 11198
+D2
+~
+~
+0 -1 11200
+D3
+~
+~
+0 -1 11218
+S
+#0
+$~

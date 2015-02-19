@@ -1,0 +1,738 @@
+#26400
+tregannis tyrant~
+Tregannis the tyrant~
+Tregannis the tyrant stands here ready to inflict pain and torture.
+~
+This short dark man is one of the most vicious in the sultanate. He is the
+tyrant and the interrogator of all the poor souls who happen to fall into
+his clutches. He wears tight black leather pants and a black leather
+vest accompanied by a small black leather mask which covers his eyes.
+~
+16793706 805339304 -1000 Y
+55 -16 -20 10d20+25000 8d10+65
+1500000 1750000
+8 8 1
+69 0 0d0+0 1
+9 2 15 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26401
+vizier~
+The Grand Vizier~
+The Grand Vizier sits here writing in his book.
+~
+You see a small fat and bald man sweating away in the heat. He is the genius
+who manages all the affairs of tha Emir as well as all the trade in and out
+of Jal-Pur. He wears a simple white robe embroidered with platinum and silver
+sequins.
+~
+131308 537165994 300 Y
+50 -10 -10 12d10+6500 12d12+120
+0 900000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26402
+emir malik~
+The Emir of Jal-Pur~
+Malik, the great Emir of Jal-Pur is relaxing here.
+~
+His eminence the great Emir of the Sultanate is a stocky man with a long and
+thick moustache drooping over his lips. He wears rings on each of his fingers
+and a richly fashioned kaftan. He is a great fighter and a benefactor of his
+people, a just and righteous man.
+~
+16793674 268435584 1000 Y
+54 -14 0 100d4+14750 8d30+118
+100000 1500000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26403
+guide~
+The Guide~
+The Guide stands here protecting his blind mistress.
+~
+  You see a tall and well-built wrestler standing guard here. He is a mute 
+who has been chosen to protect the Oracle. He is bald and wears a dress made
+from the skin of a white panther. He seems to be unaffected by the pain and
+suffering his mistress is going through. 
+~
+16777258 939819176 1000 Y
+52 -12 -17 10d20+5500 20d8+60
+1 500000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26404
+seeress mistress~
+The Blind Seeress~
+The Blind Seeress writhes in agony, in the grip of a powerful vision.
+~
+  You see a frail and sickly woman dressed in rags and other scrappings
+picked up from the garbage. Her hair is totaly dishevelled and her face is
+sticky from her tears. She seems to be laughing and crying at the same time.
+Between these bouts, she writhes out in agony and screams out her prophecies.
+~
+10 536871040 1000 Y
+51 -10 -5 7d20+3000 10d10+100
+1 200000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26405
+statue demon~
+The Demon Statue~
+The Demon Statue stands here waiting to be worshipped by you !
+~
+  You see a large statue carved from fine red alabaster. The statue of the
+Demon-God of Jal-Pur stands here in grim silence waiting for worshippers
+to pay homage to it. The face of the statue is set in a diabolic grin and
+the eyes seem to follow your every move. Near the feet of the statue you
+can make out traces of blood and rotting bones and flesh - of humans !
+~
+10 268437634 0 Y
+52 -12 -20 100d8+8000 11d15+80
+1 800000
+8 8 1
+79 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26406
+bedouin jal~
+A Jal-Purian Bedouin~
+A Jal-Purian Bedouin stands here taking care of his business.
+~
+You see a simple man dressed in white desert robes and a flowing headdress.
+As he opens his mouth to spit in the sand, you glimpse at his teeth capped
+with pure gold. He seems to be minding his own business and does not seem to
+mind the heat nor does he acknowledge your presence.
+~
+16456 268992512 100 Y
+50 -12 -8 10d600+8500 10d4+55
+15000 955555
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26407
+suleyman soothsayer~
+Suleyman the Soothsayer~
+Suleyman the Soothsayer is here trying to make contact with ethereal beings.
+~
+  You see an old man with a hunched back and long white hair. Suleyman the
+Soothsayer is the most ancient Jal-Purian and his sayings are treated with
+respect. Suleyman has very thin watery eyes and he seems to be lost in his
+own dreams, mumbling to himself.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26408
+hassan~
+Hassan~
+Hassan is here tending to his horses.
+~
+  You see a tall and gentle man walking around tending his horses. He wears
+a brown robe and has long flowing black hair. Hassan talks to his horses
+like they actually understand him. He appears to be a very peaceful man as
+he turns towards you and offers you a saddle to try out some steeds.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26409
+jabal jeweller~
+Jabal the Jeweller~
+Jabal the Jeweller is here valuing some exquisite gemstones.
+~
+  You see a fat and greedy bald man seating behind the counter counting his
+gold coins. Jabal the Jeweller is known to have swindled many a traveller
+especially those who cannot identify fake gems. He wears expensive robes
+and a plethora of gold chains and necklaces. He seems to be eyeing your
+jewels very closely !
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26410
+magan~
+Magan~
+Magan stands here making some delicious sandwiches.
+~
+  You see a short stocky fellow with a small moustache making some cheese
+here. Magan has a flock of sheep and cows with whose milk he makes fresh 
+cheese for the Sultanate every morning. He wears a simple tunic with a white
+soiled apron over it. He seems to be enjoying his work and hums a light melody
+as he goes about it.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26411
+tarek tinker~
+Tarek the Tinker~
+Tarek the Tinker is here fixing some wierd contraption.
+~
+  You see an old man wearing a thick pince-nez on his nose bending over
+some weird contraption. He seems to be completely involved with what he is
+trying to repair and does not notice you. He is wearing an old robe and a
+pair of socks which don't match. There is a wild glint in his eyes.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26412
+abdul astrologer~
+Abdul the Astrologer~
+Abdul the Astrologer is here studying some celestial maps.
+~
+  You see an elderly gentleman dressed in white robes peering over some
+charts on the table. Abdul is the renowned astrologer around these parts and
+charges a pittance to advise all those who believe in the powers of the
+Zodiac. He gestures to you to come and have a look at something new that he
+has discovered on his charts.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26413
+ali~
+Ali the Carpet Salesman~
+Ali the Carpet Salesman is here dusting his fine carpets and shawls.
+~
+  Ali the carpet salesman is a very popular boy around these parts - a
+favorite of all the young maidens. He is a dashing lad in his teens wearing
+a tiny vest and a red hat. His charming smile and innocent eyes make you
+feel at ease with him and he uses this to his advantage as he tries to sell
+you a carpet.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26414
+casim cobbler~
+Casim the Cobbler~
+Casim the Cobbler is here fixing a sole onto a worn out shoe.
+~
+  You see a simple middle-aged man with strong arms and rugged hands. From
+his shabby attire you can make out how poor Casim really is. Casim seems
+to be humming a strange tune and his face lights up in a huge grin at the
+sight of a new customer. He tries to grab at your boots as you enter his shop.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26415
+fatima~
+Fatima the Fortune Teller~
+Fatima the Fortune Teller sits here gazing into the mists of her crystal ball.
+~
+  You see an old hag of a woman sitting here gazing into a crystal ball.
+Fatima the fortune-teller is a gypsy and an ugly one at that. She wears long
+purple robes with black symbols drawn into it. She is cock-eyed and seems
+to be drooling as she speaks. Her eyes seem to light up and she cackles as
+she observes something in her mystical ball.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26416
+das bartender~
+Das the Bartender~
+Das the Bartender is mixing some cool drinks behind the bar.
+~
+You see a simpleton of a man standing here mixing some refreshing drinks.
+He is wearing a loose-fitting apron. Das the Bartender is a slow-witted man
+who took to bartending because he could not learn any other trade. He stands
+here trying to look as if he really knows what he is doing.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26417
+nisha masseuse~
+Nisha the Masseuse~
+Nisha the Masseuse cracks her knuckles to give you a relaxing rub down.
+~
+  Your senses are inflamed as you see Nisha. She is an extremely sensuous
+woman wearing a skimpy little blouse and a wraparound towel skirt. She is
+an expert at giving all kinds of massages which she has learnt from her
+family members. She cracks her fingers and beckons you to lie down on the
+massage table to try out one of her famous rub downs.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26418
+bassoun barber~
+Bassoun the Barber~
+Bassoun the Barber stands here giving someone a quick haircut.
+~
+  Bassoun the barber is a lanky man with a balding scalp and neatly trimmed
+beard and moustache. He is the best coiffure in the Sultanate and also the
+biggest gossip around. If there's some news you want - he's the right person
+to get it from first-hand ! He wears a long white apron and has a pair of 
+scissors in his hands.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26419
+hama tobacconist~
+Hama the Tobacconist~
+Hama the Tobacconist is here arranging cigars in his humidor.
+~
+  You see a rotund man coughing away as he arranges his cigars and other
+smokeables. Hama the tobacconist has the best collection of tobacco in the
+Sultanate and it is said that the Grand Emir gets his cigars from here also.
+As you come closer you notice that Hama's lips are burnt black and his
+fingers are stained yellow from the nicotine.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26420
+kesh weaver~
+Kesh the Kaftan Weaver~
+Kesh the Kaftan Weaver sits here embroidering a gown.
+~
+  You see a handsome man standing behind the counter offering to show you
+his wares. Kesh is a kaftan weaver from some far off land and has a rare
+collection of exotic dresses and accessories for the rich. He wears a garb
+of china silk dyed in a bright orange color. On his head he wears a blue
+turban clasped together with a diamond brooch.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26421
+benu bellydancer~
+Benu the Bellydancer~
+Benu the Bellydancer is here performing a sensuous dance.
+~
+  Benu is the harlot of the Sultanate and quite an attractive one at that !
+She wears a skimpy dress made out of virtually transparent silk and a short
+veil for teasers. The drunken slobs swear that once she begins to move her
+hips to the music, no one can resist her seductive advances.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 2
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26422
+omar~
+Omar the Opium Dealer~
+Omar the Opium Dealer comes up and offers you a small pipe.
+~
+  You see a dirty and stinking thug before you. Omar is a man of little
+courtesy and he starts swearing at you as soon as he notices that you aren't
+one of his regular customers. Omar wears a dirty flea ridden kaftan and has
+a small dagger hidden into his belt.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26423
+kamal charioteer~
+Kamal the Charioteer~
+Kamal the Charioteer is here fixing a spoke onto a wheel.
+~
+  Kamal is a short and wiry young man. he is an expert at horse riding,
+chariot racing and jousting. He is an extremely agile gladiator himself. You
+see Kamal dressed in a plain red tunic with tall leather boots and a bronze
+helmet with green plumes in it.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26424
+fahad~
+Fahad the Kebab Maker~
+Fahad the Kebab Maker is here preparing Falafels.
+~
+  Fahad the falafel salesman and kebab maker extraordinaire stands here
+tending his stall. He is a young man wearing a white hat and a soiled red
+shirt. You feel dizzy as you see him flip a bunch of falafels over the grill
+and stick some kebabs into his oven at the same time.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26425
+zegna seamstress~
+Zegna the Seamstress~
+Zegna the Seamstress is here modeling a dress for her customers.
+~
+  Zegna is the expert seamstress of Jal-Pur and all the nobles get their
+garments stitched at her boutique. Though she is quite popular, no one has
+ever seen her. She wears a black flowing dress from her shoulders to her
+feet, and a long black veil covers her face. She seems to bow as you enter
+her humble shop.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26426
+hakkan slaver~
+Hakkan the Slaver~
+Hakkan the Slaver is here whipping and flaying his slaves into shape.
+~
+  Before you stands a huge and majestic man with bulging muscles. Hakkan
+the Slaver wears a short leather skirt held together with a silver belt.
+He cracks his whip and shouts at his slaves to get in line to present them
+to some nobles. He is bare chested and wears a pair of bronze gauntlets on
+his hands. 
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26427
+mustafa~
+Mustafa~
+Mustafa is here trying to mark a pair of dice.
+~
+  Mustafa is the owner of the local gambling establishment of the Sultanate.
+He is a scoundrel and a first rate cheater, not to be trusted at any game.
+Mustafa wears a green kaftan and some matching leggings. He seems to be
+leering at your armor as he sees you walk into his Dice Den.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26428
+peshtoon painter~
+Peshtoon the Painter~
+Peshtoon the Painter is here mixing some colors on his palette.
+~
+  You see an eccentric painter standing here trying to paint an abstract
+painting. Peshtoon stands here dressed in clothes which are splattered with
+all the colors of the rainbow. He turns his head to one side to study his
+latest masterpiece and then goes into a frenzy of slashing some artistic
+strokes on the canvas.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26429
+damar~
+Damar~
+Damar sits here watching over his dates and coconuts.
+~
+  You see a stout and jovial fellow shouting out greetings to all passers-by.
+Damar the date-salesman wears a bright pink robe with an electric blue
+turban on his head. He seems to be smiling constantly and offers you a
+juicy coconut to quench your thirst.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26430
+fawaz phrenologist phreno~
+Fawaz the Phrenologist~
+Fawaz the Phrenologist is here labeling some medicine vials and potions.
+~
+  You see a middle aged man of average height standing here studying some
+health charts. Fawaz the Phrenologist is a very successful healer around
+these parts but his medicine tastes most foul ! He wears some fancy charms
+around his wrists and neck and grabs your wrist to analyse your pulse.
+~
+10 268468360 -100 Y
+41 -13 -6 50d10+7900 10d4+14
+25000 1200000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26431
+bedouin jal~
+A Jal-Purian Bedouin~
+A Jal-Purian Bedouin stands here taking care of his business.
+~
+You see a simple man dressed in white desert robes and a flowing headdress.
+As he opens his mouth to spit in the sand, you glimpse at his teeth capped
+with pure gold. He seems to be minding his own business and does not seem to
+mind the heat nor does he acknowledge your presence.
+~
+16456 268992512 300 Y
+50 -13 -8 20d400+9000 20d2+60
+75000 1105000
+8 8 1
+69 0 0d0+0 3
+2 3 4 0
+4 3 4 0
+9 3 3 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#26475
+protector~
+The Protector of the Faith~
+The Protector of the Faith stands guard here.
+~
+You see the figure of a bald man, in a shining white armor. Once upon a time
+he was the Guru's right hand, but he has now forsaken the path of Dharma to
+assume the duties of protecting the Golden Pagoda from intruders. His face
+is grim and expressionless, and you cannot make out his age since his
+eyebrows are shaved.
+~
+74 268468264 0 Y
+31 -4 -10 10d14+5000 10d5+20
+0 600000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26476
+adept~
+The Adept~
+An Adept stands here contemplating the mysteries of the universe.
+~
+You see the mild and meek mannered adept standing here trying to delve into
+the mysteries of the universe. He is a small and frail bodied person who
+has turned to join this cult in an attempt to find happiness in his life.
+~
+74 268468264 500 Y
+32 -9 -10 10d20+12000 12d8+25
+0 850000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26477
+devotee~
+The Devotee~
+A Devotee stands here with his head bowed down in prayer.
+~
+You see a man dressed in a plain brown robe with a hood on his head. The
+hood covers his face completely and you feel that he has not noticed you
+coming into the room. He is fit and in very good shape.
+~
+16490 294952 -400 Y
+32 -10 -10 16d9+6000 10d5+20
+0 900000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26478
+devotee~
+The Devotee~
+A Devotee sits here studying some manuscripts.
+~
+You see a man dressed in a plain grey robe with a hood on his head. The hood
+is drawn back to reveal his ageless face. He is totally engrossed in his work
+and you feel that your entrance has escaped his notice. He has a serene
+smile on his face and seems to be in complete control of his emotions.
+~
+16458 294952 0 Y
+32 -11 0 16d9+6000 10d10+35
+0 900000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26479
+devotee~
+The Devotee~
+A Devotee is here practising some yoga rituals.
+~
+You see a man dressed in a plain yellow robe with a hood on his head. He is
+stretching out on the floor following some pattern of moves. Sweat trickles
+down his face as he puts himself through the same set of stances in an
+effort to perfect his control over the body.
+~
+18506 294952 400 Y
+32 -12 -8 16d9+6000 10d5+20
+0 900000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26480
+disciple~
+The Disciple~
+A Disciple is sitting here in a deep yoga trance.
+~
+You see the tall and lanky figure of the disciple who is infuriated at the
+distraction your intrusion has caused him. He is wearing nothing except a
+small red loincloth. He is one who has yet to learn forgiveness and will
+make you pay for your folly.
+~
+16490 134512680 -1000 Y
+45 -13 -10 25d8+11000 25d8+55
+0 1100000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26481
+healer~
+The Healer~
+The Healer is piercing his body with small needles here.
+~
+You see the naked body of a frail and gaunt man with a bald head. As he
+puts needles into various parts of his body, you see that all his muscles are
+very well toned. He appears grim, yet has a gentle expression on his face.
+~
+16458 134514728 1000 Y
+51 -15 -10 16d12+12500 8d30+75
+0 1000000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#26482
+magus~
+The Magus~
+The Magus stands here uttering strange mantras.
+~
+He is the last of the Mahayogis of this realm and the final remnant of the
+cult of Vasmakhai. He wears a black robe with strange symbols embroidered on
+it. He has pitch black skin and a long beard. You can feel fear building up
+in your heart as he makes strange gestures in the air with his fingers and
+conjures up the demons of hell to aid him in killing you.
+~
+16458 939821096 0 Y
+51 -15 -10 12d16+14100 6d14+80
+0 140000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

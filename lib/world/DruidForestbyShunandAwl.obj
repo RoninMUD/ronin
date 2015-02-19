@@ -1,0 +1,142 @@
+#24900
+wrap battle druidic cloak druid~
+druidic battle wrap~
+A cloak with moons and stars imprinted on it lies on the ground here.
+~
+~
+9 134218273 1025
+2 0 0 0
+7 30000 30000
+14
+E
+cloak~
+Little stars and moons appear on the cloak when you look closely.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 35
+A
+13 18
+B
+16
+#24901
+Dark Druid Buckler~
+Dark Druid's buckler~
+A dark buckler is lying here.~
+~
+9 259054113 4097
+0 0 0 0
+8 50000 10000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+A
+17 -10
+B
+8
+#24903
+gloves druid battle~
+Druidic battle gloves~
+A pair of brown and green gloves is lying here.~
+~
+9 183562240 129
+5 0 0 0
+10 50000 12000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+46 10
+A
+19 3
+#24904
+roots bracelet~
+Bracelet made from roots~
+A green and brown wooden bracelet is lying here, collecting dust.~
+~
+11 1 4097
+10 1 10 2
+15 12000 0
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+18 2
+#24905
+druid leaf green cloak~
+Druid's Leafy Green Cloak~
+A cloak that appears to be made of leaves is crumpled in the corner.~
+~
+9 134218753 1025
+9 28 10 2
+3 50000 50000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 7
+#24906
+avenger evil glass dagger blade~
+Evil Avenger~
+A glass blade with no hilt is lying here, reflecting sunlight.~
+~
+5 259059782 49153
+0 6 66 11
+7 35000 35000
+11
+E
+avenger~
+You are staring at your reflection in a glass blade with no
+hilt...and daydream back to the Anti-Paladin guildmaster's
+evil avenger, a hilt with no blade.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+27 10
+#0
+$~

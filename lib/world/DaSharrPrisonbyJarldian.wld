@@ -1,0 +1,2421 @@
+#4400
+A Stone Covered Path~
+   You see an ancient road that's been grown over by plants and stones covered
+with large quantities of dirt.  It seems this path hasn't been tended or used
+in quite some time and it just makes you wonder how anyone can forget a wide
+open route like this.  Perhaps this path wasn't forgotten, but just avoided?
+The road looks to be safe enough, but where it leads could be hazardous.  The
+stone of this road is carved in intricate details and patterns, possibly of
+dwarven origin.  The craftsmanship however is unmistakable, leaving you 
+at awe with one glance from afar and up close.  It looks to have survived 
+the test of time and can possibly tackle many more.  
+~
+44 0 0
+D0
+~
+~
+0 -1 4401
+D2
+~
+branches~
+8 -1 11322
+E
+branches~
+A set of branches that look like they can be moved, maybe you should give it a
+good shove?
+~
+S
+#4401
+A Stone Covered Path~
+   You see an ancient road that's been grown over by plants and stones covered
+with large quantities of dirt.  It seems this path hasn't been tended or used
+in quite some time and it just makes you wonder how anyone can forget a wide
+open route like this.  Perhaps this path wasn't forgotten, but just avoided?
+The road looks to be safe enough, but where it leads could be hazardous.  The
+stone of this road is carved in intricate details and patterns, possibly of
+dwarven origin.  The craftsmanship however is unmistakable, leaving you 
+at awe with one glance from afar and up close.  It looks to have survived 
+the test of time and can possibly tackle many more.  
+~
+44 0 0
+D0
+~
+~
+0 -1 4402
+D2
+~
+~
+0 -1 4400
+S
+#4402
+A Stone Covered Path~
+   You see an ancient road that's been grown over by plants and stones covered
+with large quantities of dirt.  It seems this path hasn't been tended or used
+in quite some time and it just makes you wonder how anyone can forget a wide
+open route like this.  Perhaps this path wasn't forgotten, but just avoided?
+The road looks to be safe enough, but where it leads could be hazardous.  The
+stone of this road is carved in intricate details and patterns, possibly of
+dwarven origin.  The craftsmanship however is unmistakable, leaving you 
+at awe with one glance from afar and up close.  It looks to have survived 
+the test of time and can possibly tackle many more.  
+~
+44 0 0
+D0
+~
+~
+0 -1 4403
+D2
+~
+~
+0 -1 4401
+S
+#4403
+A Stone Covered Path~
+   You see an ancient road that's been grown over by plants and stones covered
+with large quantities of dirt.  It seems this path hasn't been tended or used
+in quite some time and it just makes you wonder how anyone can forget a wide
+open route like this.  Perhaps this path wasn't forgotten, but just avoided?
+The road looks to be safe enough, but where it leads could be hazardous.  The
+stone of this road is carved in intricate details and patterns, possibly of
+dwarven origin.  The craftsmanship however is unmistakable, leaving you 
+at awe with one glance from afar and up close.  It looks to have survived 
+the test of time and can possibly tackle many more.  
+~
+44 0 0
+D0
+~
+~
+0 -1 4404
+D2
+~
+~
+0 -1 4402
+S
+#4404
+A Stone Covered Path~
+   You see an ancient road that's been grown over by plants and stones covered
+with large quantities of dirt.  It seems this path hasn't been tended or used
+in quite some time and it just makes you wonder how anyone can forget a wide
+open route like this.  Perhaps this path wasn't forgotten, but just avoided?
+The road looks to be safe enough, but where it leads could be hazardous.  The
+stone of this road is carved in intricate details and patterns, possibly of
+dwarven origin.  The craftsmanship however is unmistakable, leaving you 
+at awe with one glance from afar and up close.  It looks to have survived 
+the test of time and can possibly tackle many more.  
+~
+44 0 0
+D0
+~
+~
+0 -1 4405
+D2
+~
+~
+0 -1 4403
+S
+#4405
+Path to Da'Sharr~
+   A cold chill can be felt as you walk this path.  Local Gypsies call it
+the "Land of broken dreams" for the supposed horror that occurred in a place
+called Da'Sharr.  You have heard of it before, but it was told as a bedtime
+story from your parents a long time ago.  You recall the tale that spoke of
+sorrow, evil and corruption from a place that was supposedly a "land of 
+swift justice." Da'Sharr prison was a place that once represented justice 
+in the honorable sense.  But a greedy warden changed all that and brought 
+forth corruption to Da'Sharr.  Gypsies say the bottle and cash was his  
+undoing and also determined the fate of this prison one misty night.  
+That night, the warden, his goons and the area surrounding Da'Sharr had  
+vanished.  That was five hundred years ago, and apparently it has 
+returned the same way it left.  A thick mist covers the ground as you 
+walk, making it difficult to see the far distances.                     
+Exits leave north and south. 
+~
+44 0 0
+D0
+~
+~
+0 -1 4406
+D2
+~
+~
+0 -1 4404
+S
+#4406
+Path to Da'Sharr~
+   A cold chill can be felt as you walk this path.  Local Gypsies call it
+the "Land of broken dreams" for the supposed horror that occurred in a place
+called Da'Sharr.  You have heard of it before, but it was told as a bedtime
+story from your parents a long time ago.  You recall the tale that spoke of
+sorrow, evil and corruption from a place that was supposedly a "land of 
+swift justice." Da'Sharr prison was a place that once represented justice 
+in the honorable sense.  But a greedy warden changed all that and brought 
+forth corruption to Da'Sharr.  Gypsies say the bottle and cash was his  
+undoing and also determined the fate of this prison one misty night.  
+That night, the warden, his goons and the area surrounding Da'Sharr had  
+vanished.  That was five hundred years ago, and apparently it has 
+returned the same way it left.  A thick mist covers the ground as you 
+walk, making it difficult to see the far distances.                     
+Exits leave north and south. 
+~
+44 0 0
+D0
+~
+~
+0 -1 4407
+D2
+~
+~
+0 -1 4405
+S
+#4407
+Path to Da'Sharr~
+   A cold chill can be felt as you walk this path.  Local Gypsies call it
+the "Land of broken dreams" for the supposed horror that occurred in a place
+called Da'Sharr.  You have heard of it before, but it was told as a bedtime
+story from your parents a long time ago.  You recall the tale that spoke of
+sorrow, evil and corruption from a place that was supposedly a "land of 
+swift justice." Da'Sharr prison was a place that once represented justice 
+in the honorable sense.  But a greedy warden changed all that and brought 
+forth corruption to Da'Sharr.  Gypsies say the bottle and cash was his  
+undoing and also determined the fate of this prison one misty night.  
+That night, the warden, his goons and the area surrounding Da'Sharr had  
+vanished.  That was five hundred years ago, and apparently it has 
+returned the same way it left.  A thick mist covers the ground as you 
+walk, making it difficult to see the far distances.                     
+Exits leave north and south. 
+~
+44 0 0
+D0
+~
+~
+0 -1 4408
+D2
+~
+~
+0 -1 4406
+S
+#4408
+Path to Da'Sharr~
+   A cold chill can be felt as you walk this path.  Local Gypsies call it
+the "Land of broken dreams" for the supposed horror that occurred in a place
+called Da'Sharr.  You have heard of it before, but it was told as a bedtime
+story from your parents a long time ago.  You recall the tale that spoke of
+sorrow, evil and corruption from a place that was supposedly a "land of 
+swift justice." Da'Sharr prison was a place that once represented justice 
+in the honorable sense.  But a greedy warden changed all that and brought 
+forth corruption to Da'Sharr.  Gypsies say the bottle and cash was his  
+undoing and also determined the fate of this prison one misty night.  
+That night, the warden, his goons and the area surrounding Da'Sharr had  
+vanished.  That was five hundred years ago, and apparently it has 
+returned the same way it left.  A thick mist covers the ground as you 
+walk, making it difficult to see the far distances.                     
+Exits leave east and south. 
+~
+44 0 0
+D1
+~
+~
+0 -1 4409
+D2
+~
+~
+0 -1 4407
+S
+#4409
+Path to Da'Sharr~
+   A cold chill can be felt as you walk this path.  Local Gypsies call it
+the "Land of broken dreams" for the supposed horror that occurred in a place
+called Da'Sharr.  You have heard of it before, but it was told as a bedtime
+story from your parents a long time ago.  You recall the tale that spoke of
+sorrow, evil and corruption from a place that was supposedly a "land of 
+swift justice." Da'Sharr prison was a place that once represented justice 
+in the honorable sense.  But a greedy warden changed all that and brought 
+forth corruption to Da'Sharr.  Gypsies say the bottle and cash was his  
+undoing and also determined the fate of this prison one misty night.  
+That night, the warden, his goons and the area surrounding Da'Sharr had  
+vanished.  That was five hundred years ago, and apparently it has 
+returned the same way it left.  A thick mist covers the ground as you 
+walk, making it difficult to see the far distances.                     
+Exits leave north and west. 
+~
+44 4 0
+D0
+~
+~
+0 -1 4410
+D3
+~
+~
+0 -1 4408
+S
+#4410
+Grand Entrance to the Prison of Da'Sharr~
+Da'Sharr Prison.  You had heard legends about this place.  Supposedly 
+lost centuries ago in a "mysterious" fashion, it has mysteriously 
+re-appeared in this particular location.  Da'Sharr, five hundred years 
+ago had vanished out of thin air.  Carried away by a thin mist of cloud, 
+according to local gypsies at the time.  Over the years the tale of 
+Da'Sharr has been used to entertain inquiring customers for gold and 
+other valuables.  However, Da'Sharr was children's tale you've had heard
+and never thought it was real.  According to the story, Da'Sharr was a 
+prison corrupted by money, scandal and murder.  Prison guards who were 
+sworn to uphold the law, perverted it by cash.  Prisoners were beaten and 
+killed out of amusement and towns folk dragged into replace those that 
+had "expired" abruptly.  Above all, the warden of this facility was the 
+source of the corruption and evil.  No one saw him but, he let his guards 
+carry out his rein of terror.  There were many more tales, but detail of the 
+scandals were lost over time and supposedly the prison as well when it 
+had disappeared one misty night.
+~
+44 0 0
+D0
+~
+gate~
+2 4410 4411
+D2
+~
+~
+0 -1 4409
+S
+#4411
+Ground level of Da'Sharr~
+   Thunder crackles overhead, followed by flashes of lightning as you step
+through these prison gates.  It is fairly dark in here, nothing but a torch
+in each of the corridors--but your eyes adjust after about a few minutes 
+familiarizing yourself with the new environment.  Closer examination of the
+prison walls show ancient text engraved into the stone of it.  You cannot
+make out anything from it, but your best guess--if you had to give your best
+guess, a greeting to those who step through these doors for the first time.
+With that thought in mind, a hysterical laugher breaks through your train of
+thinking and echoes off these cold-stone walls.  A last look back, you see the
+bright sunshine of the day, while east and westward paths leave into bleak
+darkness.
+~
+44 12 0
+D1
+~
+~
+0 -1 4412
+D2
+~
+gate~
+2 4410 4410
+D3
+~
+~
+0 -1 4430
+E
+text~
+The writing on the wall says:
+
+shtaed ruoy ot emoclew, sloof emoclew!!
+~
+E
+ancient~
+The writing on the wall says:
+
+shtaed ruoy ot emoclew, sloof emoclew!!
+~
+S
+#4412
+Halls of Justice~
+   Thunder and lighting continues to crash overhead, along with sounds of
+a tremendous downpour of rain.  Strange, it was completely sunny before you
+came in here, not a cloud in the sky.  A thunderclap snaps you out of your
+trance, almost jumping into the nearby wall.  You feel quite content to be in
+here, rather than out there. Still, it puzzles you that 5 minutes ago the 
+weather was quite the opposite.  Looking up, you see a trickle of water 
+flowing downward from ceiling.  It appears age has caught up to the facility,
+and in dire need of renovations.  With that in mind, you promise to tell
+the person in charge these problems and a place where he can get a fair deal.
+Exits leave east and west.
+~
+44 8 0
+D1
+~
+~
+0 -1 4413
+D3
+~
+~
+0 -1 4411
+E
+trickle~
+a free-flowing trickle of water easily slides down the wall from the upper
+part of the ceiling.  It appears repairs are need to patch up quite a few
+leaks, and there are many of them. 
+~
+S
+#4413
+South-East End of Da'Sharr~
+   A faint torch burns with unearthly fire here, chilling the room instead of
+warming it.  You rub you hands, trying to stir up enough friction to keep
+yourself warm, as well as blowing on them to generate any kind of body heat.
+Thunder continues to crackle above and outside the complex, as if it's trying
+to make its presence felt.  Sounds of heavy rain beating against the stone can
+also be heard.  Water continues to trickle down these ancient walls as the 
+floors begin to collect a lot of the rain.  Scanning the area, there are exits
+leaving west, and a downward slope that leaves north.  Looking up, you see
+an old wooden door.
+~
+44 8 0
+D0
+~
+~
+0 -1 4414
+D3
+~
+~
+0 -1 4412
+D4
+~
+door~
+1 -1 4459
+E
+water~
+a pool of water is here collecting trickles from the ceiling.
+~
+E
+torch~
+an unearthly fire blazes from this torch that emits chilling cold rather
+than warming heat.  Obviously, this is something of a magical creation and
+not something natural.
+~
+S
+#4414
+Halls of Justice~
+   Thunderclaps seem more distant as you travel further into the complex.
+However, one thing's for sure -- its not getting any warmer.  It must be 
+below the freezing mark, because you can see your own breath and the 
+pools of water here are beginning to solidify.  Fighting off the intense 
+cold and reminding yourself to bring a fur coat next time, you move on.
+The path to the south slopes upward, while another path travels north.
+~
+44 8 0
+D0
+~
+~
+0 -1 4415
+D2
+~
+~
+0 -1 4413
+S
+#4415
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D0
+~
+~
+0 -1 4416
+D2
+~
+~
+0 -1 4414
+S
+#4416
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D0
+~
+~
+0 -1 4417
+D2
+~
+~
+0 -1 4415
+S
+#4417
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D0
+~
+~
+0 -1 4418
+D2
+~
+~
+0 -1 4416
+S
+#4418
+North-East End of Da'Sharr~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D2
+~
+~
+0 -1 4417
+D3
+~
+~
+0 -1 4419
+S
+#4419
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D0
+~
+~
+0 -1 4420
+D1
+~
+~
+0 -1 4418
+S
+#4420
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D2
+~
+~
+0 -1 4419
+D3
+~
+~
+0 -1 4421
+S
+#4421
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm. There is a long-ragged curtain to the north, 
+accompanied by some singing of what appears to be ancient Kislova, a 
+form of music centuries ago... Coming from the south, are sounds of 
+crashing pots and pans.
+~
+44 8 0
+D0
+~
+curtain~
+8 -1 4441
+D1
+~
+~
+0 -1 4420
+D2
+~
+door~
+1 -1 4431
+D3
+~
+~
+0 -1 4422
+S
+#4422
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D1
+~
+~
+0 -1 4421
+D2
+~
+~
+0 -1 4423
+S
+#4423
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D0
+~
+~
+0 -1 4422
+D3
+~
+~
+0 -1 4424
+S
+#4424
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D1
+~
+~
+0 -1 4423
+D2
+~
+~
+0 -1 4425
+S
+#4425
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D0
+~
+~
+0 -1 4424
+D2
+~
+~
+0 -1 4426
+S
+#4426
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D0
+~
+~
+0 -1 4425
+D2
+~
+~
+0 -1 4427
+S
+#4427
+Halls of Justice~
+   Walking along the path, you admire the detail of these ancient walls.
+Various designs and patterns are engraved in these stone blocks, closer 
+visual examination reveals it's true color to be dark green.  It seems dry 
+enough here, no leaks are present, or maybe the rain had just stopped?  
+However, it is a bit chilly here, continuous walking is the only way to 
+keep yourself warm.  The ground is surrounded by filth, trash and dirt -- A 
+roaches and other vermin's paradise.  You think they'd be nice enough to
+give you a clear path, but that isn't the case here.  Out of nowhere, a 
+shrieking laughter pieces through your thoughts and echoes through this 
+long corridor.  Turning around and looking ahead, eyes darting right and 
+left -- you don't see a thing.  Maybe it was just a figment of your 
+imagination?
+~
+44 8 0
+D0
+~
+~
+0 -1 4426
+D2
+~
+~
+0 -1 4428
+S
+#4428
+Halls of Justice~
+   Thunderclaps seem more distant as you travel further into the complex.
+However, one thing's for sure -- its not getting any warmer.  It must be 
+below the freezing mark, because you can see your own breath and the 
+pools of water here are beginning to solidify.  Fighting off the intense 
+cold and reminding yourself to bring a fur coat next time, you move on.
+The path to the south slopes upward, while another path travels north.
+~
+44 8 0
+D0
+~
+~
+0 -1 4427
+D2
+~
+~
+0 -1 4429
+S
+#4429
+South-West End of Da'Sharr~
+   A faint torch burns with unearthly fire here, chilling the room instead of
+warming it.  You rub you hands, trying to stir up enough friction to keep
+yourself warm, as well as blowing on them to generate any kind of body heat.
+Thunder continues to crackle above and outside the complex, as if it's trying
+to make its presence felt.  Sounds of heavy rain beating against the stone can
+also be heard.  Water continues to trickle down these ancient walls as the 
+floors begin to collect a lot of the rain.  Scanning the area, there are exits
+leaving east, and a downward slope that leaves north.  Looking up, you see
+an old wooden door.
+~
+44 8 0
+D0
+~
+~
+0 -1 4428
+D1
+~
+~
+0 -1 4430
+D4
+~
+door~
+1 -1 4453
+E
+water~
+a pool of water is here collecting trickles from the ceiling.
+~
+E
+torch~
+an unearthly fire blazes from this torch that emits chilling cold rather 
+than warming heat.  Obviously, this is something of a magical creation and 
+not something natural.
+~
+S
+#4430
+Halls of Justice~
+   Thunder and lighting continues to crash overhead, along with sounds of
+a tremendous downpour of rain.  Strange, it was completely sunny before you
+came in here, not a cloud in the sky.  A thunderclap snaps you out of your
+trance, almost jumping into the nearby wall.  You feel quite content to be in
+here, rather than out there. Still, it puzzles you that 5 minutes ago the 
+weather was quite the opposite.  Looking up, you see a trickle of water 
+flowing downward from ceiling.  It appears age has caught up to the facility,
+and in dire need of renovations.  With that in mind, you promise to tell
+the person in charge these problems and a place where he can get a fair deal.
+Exits leave east and west.
+~
+44 8 0
+D1
+~
+~
+0 -1 4411
+D3
+~
+~
+0 -1 4429
+E
+trickle~
+a free-flowing trickle of water easily slides down the wall from the upper
+part of the ceiling.  It appears repairs are need to patch up quite a few 
+leaks, and there are many of them.  
+~
+S
+#4431
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+~
+44 12 0
+D0
+~
+door~
+1 -1 4421
+D2
+~
+~
+0 -1 4432
+S
+#4432
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+~
+44 8 0
+D0
+~
+~
+0 -1 4431
+D1
+~
+~
+0 -1 4439
+D2
+~
+~
+0 -1 4437
+D3
+~
+~
+0 -1 4433
+S
+#4433
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+~
+44 8 0
+D1
+~
+~
+0 -1 4432
+D2
+~
+~
+0 -1 4434
+S
+#4434
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+~
+44 8 0
+D0
+~
+~
+0 -1 4433
+D1
+~
+~
+0 -1 4437
+D2
+~
+~
+0 -1 4435
+S
+#4435
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+~
+44 8 0
+D0
+~
+~
+0 -1 4434
+D1
+~
+~
+0 -1 4436
+S
+#4436
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+Moving aside one of the benches, you see an opening leaving down.
+~
+44 8 0
+D0
+~
+~
+0 -1 4437
+D1
+~
+~
+0 -1 4440
+D3
+~
+~
+0 -1 4435
+D5
+You see a set of stairs leading down to a dark passageway.
+~
+~
+0 -1 4480
+S
+#4437
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able to.
+Old benches surround the room, spiders and rodents crawl in, out and above 
+them.  Flies swarm overhead, looking for anything they can sink themselves 
+into.  Roaches roam freely on the ground, looking for any dropped scraps 
+of food the prisoners may have left for them.  A horrible odor comes
+from a pot here, making you quirk in repulsiveness.  The cook quickly 
+turns in your direction and screams, "What?! You don't like my forkin' 
+cooking?!"  Taking a spoonful of stew, the cook flings it at you but 
+misses.  In rage even more, he stamps on the ground and curses in many 
+different dialects, eyeing you viciously.  Realizing what you had done, 
+you apologize humbly and even offered to sample some of his food, only 
+to remind yourself for next time -- never make fun of a chef's work,
+no matter how bad it is.
+~
+44 8 0
+D0
+~
+~
+0 -1 4432
+D1
+~
+~
+0 -1 4438
+D2
+~
+~
+0 -1 4436
+D3
+~
+~
+0 -1 4434
+S
+#4438
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+~
+44 8 0
+D0
+~
+~
+0 -1 4439
+D2
+~
+~
+0 -1 4440
+D3
+~
+~
+0 -1 4437
+S
+#4439
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+~
+44 8 0
+D2
+~
+~
+0 -1 4438
+D3
+~
+~
+0 -1 4432
+S
+#4440
+Prison Cafeteria~
+   Dust-covered and maggot infected, this prison cafeteria would not pass a
+health-inspection test if given one.  You wonder how anyone can eat under
+these unsanitary conditions, because you know you wouldn't have been able 
+to.  Old benches surround the room, spiders and rodents crawl in, out and 
+above them. Flies swarm overhead, looking for anything they can sink 
+themselves into.  Roaches roam freely on the ground, looking for any 
+dropped scraps of food the prisoners may have left behind. From close-by, 
+you smell a horrible odor in the air, along with brief whistles here and there.
+~
+44 8 0
+D0
+~
+~
+0 -1 4438
+D3
+~
+~
+0 -1 4436
+S
+#4441
+Shower Stalls~
+   Moving aside a shower curtain, you stumble into this room.  Mildew and
+fungus line the cracks of these cement tiled walls -- which might have been 
+white at one time, but you cannot tell due to the fungal growth on it.  Roaches
+swarm plentiful here, as they crawl all over the place and all over you to your
+dismay.  You try valiantly to shake them off but that leads to no avail -- 
+getting rid of some would only be replaced by more later on. A moderate two 
+foot deep body of water is here, black in color and full of swimming 
+insects.  Dirt and trash are visible in the water, making you wonder if 
+all prison bathhouses share the same sanitary conditions as this one. 
+From nearby, you hear sounds of some pretty bad singing. 
+~
+44 12 0
+D1
+~
+~
+0 -1 4442
+D2
+~
+curtain~
+8 -1 4421
+D3
+~
+~
+0 -1 4445
+S
+#4442
+Shower Stalls~
+   Mildew and fungus line the cracks of these cement tiled walls -- which 
+might have been white at one time, but you cannot tell due to the fungal 
+growth on it.  Roaches swarm plentiful here, as they crawl all over the 
+place and all over you to your dismay.  You try valiantly to shake them 
+off but that leads to no avail -- getting rid of some would only be 
+replaced by more later on.  You hear sounds of some pretty bad singing. 
+~
+44 8 0
+D1
+~
+~
+0 -1 4443
+D3
+~
+~
+0 -1 4441
+S
+#4443
+Shower Stalls~
+   Mildew and fungus line the cracks of these cement tiled walls -- which 
+might have been white at one time, but you cannot tell due to the fungal 
+growth on it.  Roaches swarm plentiful here, as they crawl all over the 
+place and all over you to your dismay.  You try valiantly to shake them 
+off but that leads to no avail -- getting rid of some would only be 
+replaced by more later on.  You hear distant sounds of singing. 
+~
+44 8 0
+D2
+~
+door~
+2 4435 4444
+D3
+~
+~
+0 -1 4442
+S
+#4444
+The Latrine~
+   This is the where all the inmates take a dump.  It's not pretty, but 
+that's all the prison can afford...or so they say.  You would think 
+they'd build more facilities to cater to their immediate needs, but hey 
+they're prisoners--so who gives a damn anyway?  Everyone in the prison 
+stronghold shares this one john, even the guards use it from time to  
+time.  A sturdy-looking wooden seat rests in the middle of the room, 
+awaiting diligently to be serviced again.
+~
+44 9 0
+D0
+~
+door~
+2 4435 4443
+E
+hole~
+A sturdy-looking wooden seat covers the hole below.  Why don't you see what 
+lies beyond?
+~
+S
+#4445
+Shower Stalls~
+   Mildew and fungus line the cracks of these cement tiled walls -- which 
+might have been white at one time, but you cannot tell due to the fungal 
+growth on it.  Roaches swarm plentiful here, as they crawl all over the 
+place and all over you to your dismay.  You try valiantly to shake them 
+off but that leads to no avail -- getting rid of some would only be 
+replaced by more later on.  From nearby, you hear sounds of some pretty   
+bad singing. 
+~
+44 8 0
+D1
+~
+~
+0 -1 4441
+D3
+~
+~
+0 -1 4446
+S
+#4446
+Shower Stalls~
+   Mildew and fungus line the cracks of these cement tiled walls -- which 
+might have been white at one time, but you cannot tell due to the fungal 
+growth on it.  Roaches swarm plentiful here, as they crawl all over the 
+place and all over you to your dismay.  You try valiantly to shake them 
+off but that leads to no avail -- getting rid of some would only be 
+replaced by more later on.  From nearby, you hear sounds of some pretty   
+bad singing. 
+~
+44 8 0
+D1
+~
+~
+0 -1 4445
+D2
+~
+~
+0 -1 4447
+S
+#4447
+Shower Stalls~
+   Heavy cracks line the tiles here -- in dire need of renovations.  Roaches
+swarm on the ceiling and walls, prospering on these unsanitary conditions.
+From within this room, singing continues on loudly and continuously with no
+end in sight.  The source of all that racket is a man with his back turned
+against you.  You can't help but notice the bugs crawling all over his body,
+doesn't he notice them?  Or maybe he's just used to it.  In any case, he
+finally sees you and winks suggestively in your direction.
+~
+44 8 0
+D0
+~
+~
+0 -1 4446
+S
+#4448
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your
+hands and legs and soon you're afraid the rest of your body will go numb.
+You can only keep walking and hope the conditions will improve and not get
+any worse.  Cold iron bars guards the prison cell to the west.  Getting a
+closer look, you can't see much but pitch darkness.  You hear moans and cries,
+making you ponder whether or not to intervene and offer help.  Looking down
+this hall, you see only a single torch hanging at the center, shinning very 
+dimly at the moment.
+~
+44 8 0
+D2
+~
+~
+0 -1 4449
+D3
+~
+door~
+2 4483 4463
+S
+#4449
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your 
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get
+any worse.  The stone walls here are covered in deep frost and the ceiling  
+consists of a few patches of icicles.  Looking down this hall, you see only 
+a single torch hanging at the center, shinning very dimly at the moment.
+~
+44 8 0
+D0
+~
+~
+0 -1 4448
+D2
+~
+~
+0 -1 4450
+S
+#4450
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your 
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get
+any worse.  The stone walls here are covered in deep frost and the ceiling  
+consists of a few patches of icicles.  A dimly-lit torch is hanging on the
+wall here, looking nearly exhausted.
+~
+44 8 0
+D0
+~
+~
+0 -1 4449
+D1
+~
+~
+0 -1 4460
+D2
+~
+~
+0 -1 4451
+E
+torch~
+an almost exhausted torch hangs here on the wall.  It barely illuminates 
+enough for you see your own hands.
+~
+S
+#4451
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get  
+any worse.  Cold iron bars guards the prison cell to the west.  Getting a
+closer look, you can't see much but pitch darkness.  You hear moans and cries,
+making you ponder whether or not to intervene and offer help.  Looking down 
+this hall, you see only a single torch hanging at the center, shinning very
+dimly at the moment.       
+~
+44 8 0
+D0
+~
+~
+0 -1 4450
+D2
+~
+~
+0 -1 4452
+D3
+~
+door~
+2 4483 4464
+S
+#4452
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your 
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get
+any worse.  The stone walls here are covered in deep frost and the ceiling  
+consists of a few patches of icicles.  Looking down this hall, you see only 
+a single torch hanging at the center, shinning very dimly at the moment.
+~
+44 8 0
+D0
+~
+~
+0 -1 4451
+D2
+~
+~
+0 -1 4453
+S
+#4453
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your 
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get
+any worse.  The stone walls here are covered in deep frost and the ceiling  
+consists of a few patches of icicles.  Looking down this hall, you see only 
+a single torch hanging at the center, shinning very dimly at the moment.
+There is a door leading down, and a path travelling northward.
+~
+44 12 0
+D0
+~
+~
+0 -1 4452
+D5
+~
+door~
+1 -1 4429
+S
+#4454
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your  
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get  
+any worse.  Cold iron bars guards the prison cell to the east.  Getting a
+closer look, you can't see much but pitch darkness.  You do hear however, 
+distinct snarling and clawing within the shadows.  Looking down this hall,
+you see only a single torch hanging at the center, shinning very dimly     
+at the moment.           
+~
+44 8 0
+D1
+~
+door~
+2 4483 4465
+D2
+~
+~
+0 -1 4455
+S
+#4455
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your 
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get
+any worse.  The stone walls here are covered in deep frost and the ceiling  
+consists of a few patches of icicles.  Looking down this hall, you see only 
+a single torch hanging at the center, shinning very dimly at the moment.
+~
+44 8 0
+D0
+~
+~
+0 -1 4454
+D2
+~
+~
+0 -1 4456
+S
+#4456
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your 
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get
+any worse.  The stone walls here are covered in deep frost and the ceiling  
+consists of a few patches of icicles.  A dimly-lit torch is hanging on the
+wall here, looking nearly exhausted.
+~
+44 8 0
+D0
+~
+~
+0 -1 4455
+D2
+~
+~
+0 -1 4457
+D3
+~
+~
+0 -1 4462
+E
+torch~
+an almost exhausted torch hangs here on the wall.  It barely illuminates
+enough for you see your own hands.   
+~
+S
+#4457
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your  
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get  
+any worse.  Cold iron bars guards the prison cell to the east.  Getting a
+closer look, you can't see much but pitch darkness.  You do hear however, 
+distinct snarling and clawing within those shadows.  Looking down this hall,
+you see only a single torch hanging at the center, shinning very dimly     
+at the moment.           
+~
+44 8 0
+D0
+~
+~
+0 -1 4456
+D1
+~
+door~
+2 4483 4466
+D2
+~
+~
+0 -1 4458
+S
+#4458
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your 
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get
+any worse.  The stone walls here are covered in deep frost and the ceiling  
+consists of a few patches of icicles.  Looking down this hall, you see only 
+a single torch hanging at the center, shinning very dimly at the moment.
+~
+44 8 0
+D0
+~
+~
+0 -1 4457
+D2
+~
+~
+0 -1 4459
+S
+#4459
+Mezzanine level~
+   The sounds of thunder and rain are very distant right now.  However, the
+frosty cold air hasn't subsided a bit.  You have lost all feeling in your 
+hands and legs and soon you're afraid the rest of your body will go numb. 
+You can only keep walking and hope the conditions will improve and not get
+any worse.  The stone walls here are covered in deep frost and the ceiling  
+consists of a few patches of icicles.  Looking down this hall, you see only 
+a single torch hanging at the center, shinning very dimly at the moment.
+There is a door leading down, and a path travelling north.
+~
+44 12 0
+D0
+~
+~
+0 -1 4458
+D5
+~
+door~
+1 -1 4413
+S
+#4460
+Acoustic Hall~
+   Steep and loud steps echo through these halls.  The steps are of your
+own but, you can't believe how quiet everything's become all of the sudden.
+The thunder and lighting you heard earlier, is virtually non-existent.  The 
+only sounds you can hear at the moment are your own breathing and the 
+dripping of water from somewhere.  Feeling very uncomfortable and 
+frightened, you start screaming and raving incoherently -- just to stir up 
+some noise to kill the silence.  However, that doesn't seem to be a good 
+move because someone heard you -- approaching fast are sounds of footsteps.
+~
+44 8 0
+D1
+~
+~
+0 -1 4461
+D2
+~
+~
+0 -1 4467
+D3
+~
+~
+0 -1 4450
+S
+#4461
+Acoustic Hall~
+   Steep and loud steps echo through these halls.  The steps are of your
+own but, you can't believe how quiet everything's become all of the sudden.
+The thunder and lighting you heard earlier, is virtually non-existent.  The 
+only sounds you can hear at the moment are your own breathing and the 
+dripping of water from somewhere.  Feeling very uncomfortable and 
+frightened, you start screaming and raving incoherently -- just to stir up 
+some noise to kill the silence.  However, that doesn't seem to be a good 
+move because someone heard you -- approaching fast are sounds of footsteps.
+~
+44 8 0
+D0
+~
+~
+0 -1 4473
+D1
+~
+~
+0 -1 4462
+D3
+~
+~
+0 -1 4460
+S
+#4462
+Acoustic Hall~
+   Steep and loud steps echo through these halls.  The steps are of your
+own but, you can't believe how quiet everything's become all of the sudden.
+The thunder and lighting you heard earlier, is virtually non-existent.  The 
+only sounds you can hear at the moment are your own breathing and the 
+dripping of water from somewhere.  Feeling very uncomfortable and 
+frightened, you start screaming and raving incoherently -- just to stir up 
+some noise to kill the silence.  However, that doesn't seem to be a good 
+move because someone heard you -- approaching fast are sounds of footsteps.
+~
+44 8 0
+D1
+~
+~
+0 -1 4456
+D2
+~
+~
+0 -1 4470
+D3
+~
+~
+0 -1 4461
+S
+#4463
+A Prison Cell~
+   Dark, dank and roach infested, this room satisfies your own image of
+prison life.  There is are no windows, and the smell reeks of rotting flesh
+and a thick odor of urine.  Trying not to vomit, you place your hand over
+your mouth and swallow...HARD.  Cursing and muttering, you kick at a pile of
+bones laying at your feet.  Obviously, this person must have died from this 
+horrid smell.  Scanning around, you see a tin bowl you conclude must have been
+used for carrying food, and around it are maggots that liter the stone-pebbled
+ground.  A distinct groan comes from within the shadows, along with the sounds
+of rattling chains.
+~
+44 13 0
+D1
+~
+door~
+2 4483 4448
+E
+bones~
+there are a pile of human bones lying on the ground here -- shackled to the
+wall.
+~
+E
+bowl~
+a dull and dented bowl rests here, empty at the moment. 
+~
+S
+#4464
+A Prison Cell~
+   Dark, dank and roach infested, this room satisfies your own image of 
+prison life.  There is are no windows, and the smell reeks of rotting flesh 
+and a thick odor of urine.  Trying not to vomit, you place your hand over
+your mouth and swallow...HARD.  Cursing and muttering, you kick at a pile of
+bones laying at your feet.  Obviously, this person must have died from this
+horrid smell.  Scanning around, you see a tin bowl you conclude must have been
+used for carrying food, and around it are maggots that liter the stone-pebbled
+ground.  A distinct groan comes from within the shadows, along with the sounds
+of rattling chains.
+~
+44 13 0
+D1
+~
+door~
+2 4483 4451
+E
+bones~
+there are a pile of human bones lying on the ground here -- shackled to the 
+wall.
+~
+E
+bowl~
+a dull and dented bowl rests here, empty at the moment.
+~
+S
+#4465
+A Prison Cell~
+   Dark, dank and roach infested, this room satisfies your own image of 
+prison life.  There is are no windows, and the smell reeks of rotting flesh
+and a thick odor of urine.  Trying not to vomit, you place your hand over 
+your mouth and swallow...HARD.  To you misfortune, the deep aroma of the room
+is not the only thing you have to worry about.  Lurking in the shadows 
+somewhere, you hear a vicious growl accompanied by some sharp raking noises.
+Squinting hard, you try to make out the features of this monstrosity, but
+can't see a thing from where you're at.  How about getting a closer look?
+~
+44 13 0
+D3
+~
+door~
+2 4483 4454
+S
+#4466
+A Prison Cell~
+   Dark, dank and roach infested, this room satisfies your own image of
+prison life.  There is are no windows, and the smell reeks of rotting flesh
+and a thick odor of urine.  Trying not to vomit, you place your hand over
+your mouth and swallow...HARD.  To you misfortune, the deep aroma of the room
+is not the only thing you have to worry about.  Lurking in the shadows 
+somewhere, you hear a vicious growl accompanied by some sharp raking noises.
+Squinting hard, you try to make out the features of this monstrosity, but
+can't see a thing from where you're at.  How about getting a closer look?
+~
+44 13 0
+D3
+~
+door~
+2 4483 4457
+S
+#4467
+Brick Corridor~
+   This corridor is lined with huge bricks, covering the walls and ceiling.
+Dark and silent, this place makes you real edgy and nervous.  Flinching to
+your right, you hear squeaking noises scurrying away.  Sounds of dripping water
+stand out in the distance, echoing through these passageways.  Walking 
+close against the wall, you get a real feeling of the texture of the stone 
+bricks.  Jagged and brittle to the touch, the wall seems to crumble in your
+hands.  Without giving it much thought, you continue on.  The brick passage
+runs north and south.
+~
+44 12 0
+D0
+~
+~
+0 -1 4460
+D2
+~
+~
+0 -1 4468
+S
+#4468
+Brick Corridor~
+   You have arrived at the end of this brick passage.  A thick iron door
+stands before you, blocking your path south.  Getting a closer look at the
+iron door, you see words written in dark red -- the color of blood. You 
+cannot decipher them, but you get a gut feeling that these writings are
+probably a form of warning to those naive adventurers that might encounter them
+one day. There is a small rectangular opening in the door, probably used to
+place bits of food through.  Looking in, you see distinct movements and
+eyes that glow in the dark.  Getting another glance into the shadows, a strong
+pound from the other side of the door scares the living daylights out of you.
+A follow up lunge hits home, accompanied by a deep snarl.  Pondering 
+whether or not to proceed any further, you reminisce back to an old 
+Norwegian phrase, just so you can think of it in your head and not worry 
+about the other distractions surrounding you.  "A goat in hand, is better 
+than ten goats on the roof."  Hrmp, never knew what that meant, but you 
+mutter it under your breath anyway -- over and over again.
+~
+44 8 0
+D0
+~
+~
+0 -1 4467
+D2
+~
+door~
+2 4484 4469
+S
+#4469
+A Stone Cell~
+   This cell is entirely composed of cement rock. Iron shackles lie broken
+on the floor besides some fragments of what appears to be human bones.
+Pieces of the spine, a few fingers, rib cages and a skull -- are the ones 
+still moderately recognized.  The rest, probably dust by now or lying out of
+your line of vision... Suddenly, a dim light flickers within one of the skull's
+vacant sockets -- spinning into action a miraculous reformation.  Bones  
+begin to pile up, re-attaching themselves.  With the last piece, the 
+skull, floating gently towards the vacated spot between the two shoulder 
+blades --  it snaps into place with a crack, the sound of bone grinding 
+against bone.  The animate beast turns forward to face you.  Eyes glowing 
+with ecstasy, he looks hungry -- It's been awhile since he last feasted..
+~
+44 32777 0
+D0
+~
+door~
+2 4484 4468
+E
+ring~
+a large crystal eye flares with intensity as you hold it up.  It looks like
+a powerful piece of equipment, and looks great on your finger too!
+~
+E
+shackles~
+iron shackles liters the floor here broken, rust covering bits of the chain.
+~
+S
+#4470
+Brick Corridor~
+   This corridor is lined with huge bricks, covering the walls and ceiling.
+Dark and silent, this place makes you real edgy and nervous.  Flinching to
+your right, you hear squeaking noises scurrying away.  Sounds of dripping water
+stand out in the distance, echoing through these passageways.  Walking
+close against the wall, you get a real feeling of the texture of the stone 
+bricks.  Jagged and brittle to the touch, the wall seems to crumble in your
+hands.  Without giving it much thought, you continue on.  The brick passage
+runs north and south.   
+~
+44 12 0
+D0
+~
+~
+0 -1 4462
+D2
+~
+~
+0 -1 4471
+S
+#4471
+Brick Corridor~
+   You have arrived at the end of this brick passage.  A thick iron door
+stands before you, blocking your path south.  Getting a closer look at the
+iron door, you see words written in dark red -- the color of blood. You 
+cannot decipher them, but you get a gut feeling that these writings are
+probably a form of warning to those naive adventurers that might encounter them
+one day. There is a small rectangular opening in the door, probably used to
+place bits of food through.  Looking in, you see distinct movements and
+eyes that glow in the dark.  Getting another glance into the shadows, a strong
+pound from the other side of the door scares the living daylights out of you.
+A follow up lunge hits home, accompanied by a deep snarl.  Pondering 
+whether or not to proceed any further, you reminisce back to an old 
+Norwegian phrase, just so you can think of it in your head and not worry 
+about the other distractions surrounding you.  "A goat in hand, is better 
+than ten goats on the roof."  Hrmp, never knew what that meant, but you 
+mutter it under your breath anyway -- over and over again.
+~
+44 8 0
+D0
+~
+~
+0 -1 4470
+D2
+~
+door~
+2 4484 4472
+S
+#4472
+A Stone Cell~
+   This cell is entirely composed of cement rock.  Iron shackles hang from
+the wall here, waiting for some victims.  A bright ball of crystal energy
+crackles with power here, illuminating the room and every dark corner here.
+A man rests here in red flowing robes, face drawn in a trance.  He nod firmly
+in your direction, but does nothing else.  He returns to his caressing of his
+crystal ball, jotting a few notes down here and there. 
+~
+44 32777 0
+D0
+~
+door~
+2 4484 4471
+E
+shackles~
+These rusted iron shackles hang from the walls here, dangling.
+~
+S
+#4473
+Brick Corridor~
+   This corridor is lined with huge bricks, covering the walls and ceiling.
+Dark and silent, this place makes you real edgy and nervous.  Flinching to 
+your right, you hear squeaking noises scurrying away.  Sounds of dripping water
+stand out in the distance, echoing through these passageways.  Walking 
+close against the wall, you get a real feeling of the texture of the stone 
+bricks.  Jagged and brittle to the touch, the wall seems to crumble in your
+hands.  Without giving it much thought, you continue on.  The brick passage 
+runs north and south.     
+~
+44 12 0
+D0
+~
+~
+0 -1 4474
+D2
+~
+~
+0 -1 4461
+S
+#4474
+Brick Corridor~
+   This bricked corridor ends here, with the passage continuing upward.  Dark
+and silent, this place makes you real edgy and nervous.  Flinching to your
+right, you hear squeaking noises scurrying away.  Sounds of dripping water
+stand out in the distance, echoing through these tunnels.  Suddenly without
+warning, a deep pitched howl breaks out, chilling you to the bone. 
+Perhaps its wise if you moved on?  Exits are south and up.
+~
+44 8 0
+D2
+~
+~
+0 -1 4473
+D4
+You see a flight of stairs going up.
+~
+~
+0 -1 4475
+S
+#4475
+Burdened Passage~
+   Walking along this burdened passage, you can't help be feel encumbered..
+You feet drags along these floors like a ton of bricks!  Not to mention the 
+fact that your spine is about ready to snap in two from all this invisible
+weight.  You have the urge to remove all your equipment and free yourself, but
+realize they aren't the source of burden.  Sweating like crazy, you muscle
+it out and continue your venture.
+~
+44 8 0
+D2
+~
+~
+0 -1 4476
+D5
+You see a flight of stairs leading down towards a bricked corridor.
+~
+~
+0 -1 4474
+S
+#4476
+Burdened Passage~
+   Walking along this burdened passage, you can't help be feel encumbered..
+You feet drags along these floors like a ton of bricks!  Not to mention the 
+fact that your spine is about ready to snap in two from all this invisible
+weight.  You have the urge to remove all your equipment and free yourself, but
+realize they aren't the source of burden.  Sweating like crazy, you muscle
+it out and continue your venture.
+~
+44 8 0
+D0
+~
+~
+0 -1 4475
+D2
+~
+~
+0 -1 4477
+S
+#4477
+Burdened Passage~
+   Knuckles dragging along the ground, you can't help but feel like primate.
+The ground seems heavier and heavier every time you move forward.  Your face
+is completely covered with sweat, however wiping at them is a problem --
+you can barely lift your arms with each step.  Cursing and snarling 
+viciously, you lie on your back for a breather.  After a few minutes or 
+so, you reluctantly get up and move on.  Exits are north and south.
+~
+44 8 0
+D0
+~
+~
+0 -1 4476
+D2
+~
+~
+0 -1 4478
+S
+#4478
+Burdened Passage~
+  You are crawling on the ground at this point -- Exhausted and frustrated.
+Turning your head to look back, you see a trail of human sweat.  Reminding
+yourself to get in better shape, you get up and stand.  In your path is a door
+labeled "Warden's Office."  Fuming in rage, you are determined to give this
+warden a piece of your mind.  Beat-up old facilities, corrupt guards, killer
+cook!  Boy is he in for an earful!
+~
+44 8 0
+D0
+~
+~
+0 -1 4477
+D2
+~
+door~
+2 4484 4479
+S
+#4479
+Warden's Office~
+   You are standing in the office of the warden.  He don't see many people,
+and the ones that do...don't live long enough to brag about it.  This room 
+is neatly organized.  A desk is resting in the center and a brass coffin 
+lies in the corner -- the only visible furniture here.  A large painting 
+of the warden himself hangs on the wall, looking sophisticated and 
+respectable.  Opposite the wall of the painting, a long tapestry hangs 
+there.  There are no windows in this room, but a dimly lit candle sits 
+on the desk here, barely illuminating the room.  A long-faced man sits 
+comfortable in his chair, hands crossed and gazing at you with interest.
+He is the warden and master of this domain, but there is something more 
+about him than meets the eye...
+~
+44 32777 0
+D0
+~
+door~
+2 4484 4478
+E
+desk~
+a large oaken desk rests in the middle of this room, papers and inkblots 
+resting on it.  A nearly diminished wax candle lies in a pile here as well.
+~
+E
+painting~
+a large painting of the warden hangs on the wall, he is wearing a long black
+suit and a tie to boot.
+~
+E
+tapestry~
+a thick woven tapestry hangs on the wall here, with many sophisticated designs
+imprinted on it.  It features to what appears to be a hovering bat and it's
+victim -- the bat revealing its fangs and the its victim trying to valiantly 
+to escape.
+~
+E
+candle~
+a nearly diminished candle lies in its pile of wax here, looking ready to
+die out at any given moment.
+~
+S
+#4480
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits are 
+north and up.
+~
+44 13 0
+D0
+~
+~
+0 -1 4481
+D4
+You see stairs leading up to the prison cafeteria.
+~
+~
+0 -1 4436
+S
+#4481
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits are 
+south and west.
+~
+44 9 0
+D2
+~
+~
+0 -1 4480
+D3
+~
+~
+0 -1 4491
+S
+#4482
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two persons to
+pass through at a time.  A door closed stands in your way to the north, the 
+bronze plaque attached to it labeled "Le Capitan."  Sounds of crashing 
+furniture comes from behind this door, followed by a scream.  Roaches 
+crawl along the walls, some getting on your armour.  Flicking them off 
+with your fingers, you continue on.
+~
+44 9 0
+D0
+~
+door~
+1 -1 4483
+D2
+~
+~
+0 -1 4495
+S
+#4483
+Captain's Quarters~
+   A beer bottle flies past your face as soon as you enter.  Chairs, shelves
+and desks are turned over.  Papers litter the floor along with bottles of 
+alcohol in the dozens.  A real pissed off man stands here in his battle stance 
+snarling at you viciously.  He motions to his hounds and they charge you! 
+~
+44 13 0
+D2
+~
+door~
+1 -1 4482
+E
+bottle~
+a cracked bottle lies at your feet--labeled "Duff" beer.
+~
+E
+paper~
+papers fly in the air and all covered all over the floor.  
+~
+E
+books~
+there are various books lying on the floor here.  Among them are one of your
+favorites--"Gone with the wind and a spider man action comic!"
+~
+E
+shelves~
+shelves lie here overturned, books sprawling on the floor.
+~
+E
+desk~
+a turned over desk lies here.  One of the drawers are open, paper and all 
+assorted junk fly out and into the air.
+~
+E
+chairs~
+an old French chair lies here broken.  Looking at it, you notice its marksman-
+ship and quality.  Dark burgundy red in color along with a wax finish, this
+chair was probably priceless but now is worthless.
+~
+S
+#4484
+A Cramped Booth~
+   This office is neat and tidy.  Shelves line up against the walls, a desk
+rests in the center of the room along with a desk plant that brightens up
+the place.  Various keys of all sorts hang on the wall here, probably keys
+to its corresponding prison cell.  A dartboard can be seen in the back wall,
+used for amusement now and then.
+~
+44 12 0
+D0
+~
+~
+0 -1 4495
+E
+dart~
+a dartboard hangs on the back wall, with a picture of Rizzo in the center
+of the bull's eye.
+~
+E
+keys~
+various keys hang on the wall here. each key with a different label.
+~
+E
+plant~
+a brightly shining plant sits here on the desk, lighting up the room.
+~
+E
+desk~
+a large desk rests in the center of the room, with paper and a desk plant
+sitting brightly on it.
+~
+E
+shelves~
+shelves line the wall filled with files, books and trophies.
+~
+S
+#4485
+Stuck within a huge pipe~
+   Somehow the room has collapsed itself and you land in a huge pile of 
+human excrements.  Sitting in a four feet pile of human feces and other 
+waste products, you think to yourself "ah what the hell, it's been 
+a horrible day already." The aroma here reeks through your nostrils.  
+Holding your breath, you try not to take in any of the air.   Looking 
+around, you notice that you are sitting within a huge access pipe.  
+Mostly used for storing solid wastes -- it makes for an ideal escape 
+route if you wanted to bust out.  There are no visible exits, but there 
+is however, a ladder that leads down in the corner of this room.
+~
+44 9 0
+D5
+~
+~
+0 -1 4486
+E
+feces~
+brown and plenty of it, these solid waste products makes you want to pass out.
+~
+E
+ladder~
+a sturdy ladder is here in the corner, leading down somewhere.
+~
+S
+#4486
+A Marble Room~
+   You are in a large room, circular, lit by lovely, soft white light that
+emanates from the marble walls.  The floor beneath you is made of marble, 
+inlaid with runes that protect those who are virtuous and possess a heart of
+gold.  The ceiling arches overhead, a dome-like structure supported by delicate
+columns.  Embedded in the walls of the room are rows of faces you do not 
+recognize, but perhaps they guard the contents of the room?  In any case, 
+standing right in the middle--a large statue looms overhead on a pedestal, a
+bronze plaque infixed shinning with brilliance.  You feel safe here, however
+if you commit any violent acts in this holy sanctuary--prepare to be cleansed.
+~
+44 32777 0
+D3
+~
+Shaft~
+1 -1 4487
+E
+runes~
+swirling with power, these runes protect those who are saintly.
+~
+E
+columns~
+tall marble columns support the dome-structured room.
+~
+E
+faces~
+these faces are of those you do not recognize.  They are probably the 
+guardians of this holy place.
+~
+E
+pedestal~
+a marbled pedestal rests here in the middle of the room, engraved with a
+bronze plaque.  Standing tall on top is the lady of justice.
+~
+E
+plaque~
+it reads:
+This is Lady Justice.
+~
+E
+walls~
+these walls are made of pure white marble.  Staring in awe, you wonder
+who build this wondrous place?
+~
+S
+#4487
+A Giant Pipe~
+   This is a giant access pipe where all the sewage and garbage gets flushed
+to.  Thick piles of trash and waste products lie here on the side, while
+the liquid portions flow slowly westward.  Getting a closer look, you see
+roaches and other vermin, feasting heartily on these mounds.  Shuddering 
+at the thought, you look down this dark tunnel and see a faint light at the
+end of it.  A way out?  Possibly, there's only one way to find out.
+~
+44 9 0
+D3
+~
+~
+0 -1 4488
+S
+#4488
+A Giant Pipe~
+   This is a giant access pipe where all the sewage and garbage gets flushed
+to.  Thick piles of trash and waste products lie here on the side, while 
+the liquid portions flow slowly westward.  Getting a closer look, you see 
+roaches and other vermin, feasting heartily on these mounds.  Shuddering 
+at the thought, you look down this dark tunnel and see a faint light at the 
+end of it.  A way out?  Possibly, there's only one way to find out. 
+~
+44 9 0
+D1
+~
+~
+0 -1 4487
+D3
+~
+~
+0 -1 4489
+S
+#4489
+A Giant Pipe~
+   This is a giant access pipe where all the sewage and garbage gets flushed 
+to.  Thick piles of trash and waste products lie here on the side, while 
+the liquid portions flow slowly westward.  Getting a closer look, you see
+roaches and other vermin, feasting heartily on these mounds.  Shuddering  
+at the thought, you look down this dark tunnel and see a faint light at the 
+end of it.  A way out?  Possibly, there's only one way to find out.  
+~
+44 9 0
+D1
+~
+~
+0 -1 4488
+D3
+~
+~
+0 -1 4490
+S
+#4490
+A Giant Pipe~
+   This is a turn in the giant access pipe.  Thick piles of trash and waste 
+products lie here on the side, while murky liquids flow gently southward.
+Closer examination reveals roaches and other vermin, feasting heartily 
+on these mounds -- making you quirk in repulsiveness.  There is a giant 
+opening down at the end of this tunnel, the light inviting and alluring.  
+Maybe getting it's worth getting a closer look at?
+~
+44 9 0
+D1
+~
+~
+0 -1 4489
+D2
+~
+~
+0 -1 4499
+S
+#4491
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits travel 
+east and west.
+~
+44 9 0
+D1
+~
+~
+0 -1 4481
+D3
+~
+~
+0 -1 4492
+S
+#4492
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits are  
+north, east and west.
+~
+44 9 0
+D0
+~
+~
+0 -1 4496
+D1
+~
+~
+0 -1 4491
+D3
+~
+~
+0 -1 4493
+S
+#4493
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits travel 
+east and west.
+~
+44 9 0
+D1
+~
+~
+0 -1 4492
+D3
+~
+~
+0 -1 4494
+S
+#4494
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits travel 
+east and west.
+~
+44 9 0
+D1
+~
+~
+0 -1 4493
+D3
+~
+~
+0 -1 4495
+S
+#4495
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits are 
+north, east and south.
+~
+44 9 0
+D0
+~
+~
+0 -1 4482
+D1
+~
+~
+0 -1 4494
+D2
+~
+~
+0 -1 4484
+S
+#4496
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits run
+north and south.
+~
+44 9 0
+D0
+~
+~
+0 -1 4497
+D2
+~
+~
+0 -1 4492
+S
+#4497
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  Exits are
+east and south.
+~
+44 9 0
+D1
+~
+~
+0 -1 4498
+D2
+~
+~
+0 -1 4496
+S
+#4498
+A Narrow Hallway~
+   This is a very cramped hallway with barely enough room for two people to
+pass through at a time.  Trash and assortment of bottles also litter the 
+floor, making walking a bit adventurous.  What this place needs is a good 
+janitor!  Unfortunately, funds are scarce, making the need for such a 
+staff unrealistic... Sounds of dripping water vibrates through these 
+halls, punctuated now and then by a distant anguished scream.  The only 
+available exit leaves west.
+~
+44 9 0
+D3
+~
+~
+0 -1 4497
+S
+#4499
+End of the Pipe~
+   You have reached the end of this pipe, with water flowing out into the
+riverbank southward.  The visible moonlight beams in your eyes -- inviting 
+and definitely the most beautiful thing you'd ever seen.  After being 
+cooped up behind prison walls, the sight of such a clear night brings 
+tears to your eyes.  You throw your fists up in the air and scream in 
+triumph, boy does it feel good to be free.
+~
+44 0 0
+D0
+~
+~
+0 -1 4490
+D2
+~
+~
+0 -1 3058
+S
+#0
+$~

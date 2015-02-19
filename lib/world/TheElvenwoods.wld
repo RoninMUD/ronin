@@ -1,0 +1,452 @@
+#9000
+Up in a big tree~
+You are at the top of a very big tree. The entrance to the elven forest is
+covered by a very big leaf!
+~
+90 4 3
+D0
+~
+~
+0 -1 9001
+D5
+~
+~
+0 -1 8001
+S
+#9001
+Entrance to the Elven forest.~
+Huge green trees are everywhere. An enormous wooden gate rises up to the north.
+The gate is currently guarded by:
+~
+90 0 3
+D0
+~
+~
+0 -1 9002
+D2
+~
+~
+0 -1 9000
+S
+#9002
+Guarded path through the forest.~
+The path runs straight through the forest from south to north. You feel yourself 
+observed by someone. To the east you see a wooden door in a large tree, and to 
+the west you see a rope hanging down from a tree.
+~
+90 0 3
+D0
+~
+~
+0 -1 9007
+D1
+~
+~
+0 -1 9003
+D2
+~
+~
+0 -1 9001
+D4
+~
+~
+0 -1 9006
+S
+#9003
+Guard room.~
+In the north-east corner of this dimly lit room stands a large round stone table. 
+To the east and west you can see doors.
+~
+90 8 3
+D1
+~
+~
+0 -1 9004
+D3
+~
+~
+0 -1 9002
+D5
+the carpet is made of wool.~
+secret carpet wool~
+1 0 9005
+S
+#9004
+Guard chiefs bed room.~
+This room is apparently the chief of the elven guards bedroom. in a corner stands 
+a large bed and there is a door to the west.
+~
+90 8 3
+D3
+~
+~
+0 -1 9003
+S
+#9005
+Cellar.~
+In this damp cellar are some food and other things stored.
+~
+90 9 3
+D4
+~
+~
+1 -1 9003
+S
+#9006
+On the platform.~
+You are standing on a wooden platform above the entrance of the elven forest. 
+From here you can see as far as Midgaard.
+~
+90 4 5
+D5
+~
+~
+0 -1 9002
+S
+#9007
+Guarded path through the forest.~
+The path runs straight through the forest from south to north.
+~
+90 0 3
+D0
+~
+~
+0 -1 9008
+D2
+~
+~
+0 -1 9002
+S
+#9008
+Path crossing.~
+the path splits up into four paths, one in every direction. In the middle on 
+the crossing stands a gigantic stone obelisk with some runes on it.
+~
+90 0 3
+D0
+~
+~
+0 -1 9009
+D2
+~
+~
+0 -1 9007
+E
+runes obelisk stone~
+If you had been an old elven sage you might have known what the runes told, but 
+you are not, so this means nothing to you....
+~
+S
+#9009
+A fine path through the elven forest.~
+On both sides of this path is doors. Over the eastern door is a sign telling you 
+this must be the weapon shop, and over the western door is a similar sign telling 
+you it's the armory.
+~
+90 0 3
+D0
+~
+~
+0 -1 9012
+D1
+~
+~
+0 -1 9010
+D2
+~
+~
+0 -1 9008
+D3
+~
+~
+0 -1 9011
+S
+#9010
+The Elven Armory.~
+On the walls of this large room are fine elven armors hanging.
+~
+90 8 0
+D3
+~
+~
+0 -1 9009
+S
+#9011
+The Elven Weaponry.~
+On the counter and upon the walls hang fine weapons of elven quality.
+~
+90 8 0
+D1
+~
+~
+0 -1 9009
+S
+#9012
+A fine path through the elven forest.~
+On both sides of this path are doors. Over the eastern door is a sign 
+telling you this must be the magic shop of the elven village, and over 
+the western door is a similar sign telling you it's Quintors fine shop. 
+To the north the path continues.
+~
+90 0 3
+D0
+~
+~
+0 -1 9015
+D1
+~
+~
+0 -1 9014
+D2
+~
+~
+0 -1 9009
+D3
+~
+~
+0 -1 9013
+S
+#9013
+Quintors fine shop.~
+In this fine room you can see all kinds of equipment. Everything from bags 
+to torches can bee seen on the shelves.
+~
+90 8 0
+D1
+~
+~
+0 -1 9012
+S
+#9014
+The Magic Shop.~
+As you enter this store you feel a sensation in your stomach. There is something 
+wrong here or is it just the powers of all magic in here? All around this room 
+you see objects of different shapes and sizes.
+~
+90 8 0
+D3
+~
+~
+0 -1 9012
+S
+#9015
+The end of the fine path.~
+On both sides of this path are doors. Over the eastern door is a sign telling 
+you this must be the tavern of the village, and to the north you see a large 
+house, about two stores high.
+~
+90 0 3
+D0
+~
+~
+0 -1 9017
+D1
+~
+~
+0 -1 9016
+D2
+~
+~
+0 -1 9012
+S
+#9016
+The Tavern of Hope.~
+You are standing in the bar of the Tavern. The bar is set against the northern 
+wall, old elven writings, carvings and symbols cover its top. A fireplace is 
+built into the eastern wall, and through the door in the western wall you see 
+the fine path. This place really makes you feel at home.
+~
+90 8 0
+D3
+~
+~
+0 -1 9015
+D4
+~
+~
+0 -1 9090
+S
+#9017
+Inside the fine house.~
+You stand in a large foyer with large stairs leading up and doors to the east and west.
+~
+90 8 0
+D1
+~
+~
+0 -1 9019
+D2
+~
+~
+0 -1 9015
+D3
+~
+~
+0 -1 9018
+D4
+~
+~
+0 -1 9020
+S
+#9018
+Guard room.~
+This room looks much like a guard room, and it must be for in the room you can see:
+~
+90 8 0
+D1
+~
+~
+0 -1 9017
+S
+#9019
+Trophy room of the Elven King.~
+You stand in the trophy room of the King. On the walls of the room hunting trophies 
+and gifts of all sorts are hanging.
+~
+90 8 0
+D3
+~
+~
+0 -1 9017
+S
+#9020
+The grand stairs.~
+You are climbing up the grand stairs of the house. The stairs continue up and down.
+~
+90 8 0
+D4
+~
+~
+0 -1 9021
+D5
+~
+~
+0 -1 9017
+S
+#9021
+The upper floor of the house.~
+You are standing in a corridor leading to the east. On the north and south walls are doors.
+~
+90 8 0
+D0
+~
+~
+0 -1 9023
+D1
+~
+~
+0 -1 9022
+D2
+~
+~
+0 -1 9024
+D5
+~
+~
+0 -1 9020
+S
+#9022
+The corridor.~
+You are standing in a corridor with wooden floor and ceiling. To the north and to 
+the south are doors. To the east you see a window.
+~
+90 8 0
+D0
+~
+~
+0 -1 9026
+D2
+~
+~
+0 -1 9027
+D3
+~
+~
+0 -1 9021
+S
+#9023
+The Library.~
+Book shelves line the walls of this room. In the center of the room is a large desk 
+and some chairs. The shelves are filled with books and scrolls.
+~
+90 8 0
+D2
+~
+~
+0 -1 9021
+S
+#9024
+The Living room.~
+In this room you feel the warmth from the fireplace and there is some nice chairs in 
+front of the fireplace. You feel relaxed, why not rest a while?
+~
+90 8 0
+D0
+~
+~
+0 -1 9021
+S
+#9025
+Falling down to the ground.~
+IT'S NO GOOD!!! YOUR NOT A BIRD, YOU WILL NOW DIE SQUISHED ON THE 
+GROUND. ASK A WIZARD 
+TO GET A SPATULA!
+~
+90 518 0
+D3
+~
+~
+0 -1 9022
+E
+death_text~
+The force of your fall leaves you badly broken and unable to move.
+~
+S
+#9026
+Guards bed room.~
+This looks like an ordinary bed room with about twenty beds in it. There are no 
+other exits than the one to the south.
+~
+90 8 0
+D2
+~
+~
+0 -1 9022
+S
+#9027
+The Training room.~
+In the middle of this room there is some training equipment, and there are currently:
+~
+90 8 0
+D0
+~
+~
+0 -1 9022
+S
+#9090
+The Reception in the Tavern of the hope.~
+   You are standing in the reception.  The staircase leads down to the entrance hall. 
+There is a small sign on the counter.
+~
+90 12 0
+D5
+You see the Tavern of Hope.
+~
+~
+0 -1 9016
+E
+sign~
+Rooms are expensive but good!  You may:
+
+   Offer - get an offer on a room - Time is in real life days.
+   Rent  - Rent a room (saves your stuff, and quits the game),
+           minimum charge is one day.
+
+
+                          MY WAY OR THE HIGHWAY
+                             PAY YOUR RENT!
+                WE WON'T THINK TWICE BEFORE KICKING YOU OUT.
+~
+S
+#0
+$~

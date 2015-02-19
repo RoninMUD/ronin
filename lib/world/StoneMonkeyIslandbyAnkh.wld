@@ -1,0 +1,1223 @@
+#1600
+Ye Grande Hall of Kludges~
+   You have somehow found your way into a kludged room.  Hope you're
+a god or there is one available, 'cause there's no way out.
+~
+16 512 0
+S
+#1601
+Deserted Beach~
+  The sand here is so beautiful, it makes you wish you were on vacation.
+The white sand extends from the bright blue ocean to the tall palm trees
+lining the beach's edge.  The vegetation here is definitely tropical.  To
+the north you see the beautiful ocean, and to the south you see a thick
+jungle. The beach continues east, as it bends inwards to the west.
+~
+16 0 2
+D1
+~
+~
+0 0 1602
+D2
+~
+~
+0 0 1605
+D3
+~
+~
+0 0 1604
+S
+#1602
+Deserted Beach~
+  The sand here is so beautiful, it makes you wish you were on vacation.
+The white sand extends from the bright blue ocean to the tall palm trees
+lining the beach's edge.  The vegetation here is definitely tropical.  The
+palm tree growing on the beach's edge appears to be a great perch for the
+local parrots.  To the north you see the beautiful ocean, and to the south
+you see a thick jungle.  The beach continues east and west.
+~
+16 0 2
+D1
+~
+~
+0 -1 1603
+D2
+~
+~
+0 -1 1606
+D3
+~
+~
+0 -1 1601
+S
+#1603
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  The vegetation here is definitely tropical.  To 
+the north you see the beautiful ocean, and to the south you see a thick
+jungle.  The beach continues west, as it bends in the east.
+~
+16 0 2
+D1
+~
+~
+0 -1 1608
+D2
+~
+~
+0 -1 1607
+D3
+~
+~
+0 -1 1602
+S
+#1604
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  The vegetation here is definitely tropical.  To 
+the west you see the beautiful ocean, and to the east you see a thick
+jungle.  The beach continues south, as it bends to the north.
+~
+16 0 2
+D0
+~
+~
+0 -1 1601
+D1
+~
+~
+0 -1 1605
+D2
+~
+~
+0 -1 1609
+D3
+~
+~
+0 -1 7241
+S
+#1605
+Tangled Vines~
+  The jungle's vegetation is much more dense than it had appeared.  It's
+very easy for you to lose your way here.  You find it hard to fight your
+way through the tangled mess of vines.  The parrot sitting on the branch
+in front of you seems to be taunting you.  Everything here looks the same,
+vines to the north, vines to the south, west, and east.  Are you ever
+going to make it out of this place?
+~
+16 0 2
+D0
+~
+~
+0 -1 1601
+D1
+~
+~
+0 -1 1606
+D2
+~
+~
+0 0 1605
+D3
+~
+~
+0 -1 1604
+E
+parrot~
+The parrot is facing east.~
+S
+#1606
+Tangled Vines~
+  The jungle's vegetation is much more dense than it had appeared.  It's
+very easy for you to lose your way here.  You find it hard to fight your
+way through the tangled mess of vines.  The parrot sitting on the branch
+in front of you seems to be taunting you.  Everything here looks the same,
+vines to the north, vines to the south, west, and east.  Are you ever
+going to make it out of this place?
+~
+16 0 2
+D0
+~
+~
+0 -1 1602
+D1
+~
+~
+0 -1 1607
+D2
+~
+~
+0 0 1605
+D3
+~
+~
+0 0 1605
+E
+parrot~
+The parrot sits on the branch.~
+S
+#1607
+Tangled Vines~
+  The jungle's vegetation is much more dense than it had appeared.  It's
+very easy for you to lose your way here.  You find it hard to fight your
+way through the tangled mess of vines.  The parrot sitting on the branch
+in front of you seems to be taunting you.  Everything here looks the same,
+vines to the north, vines to the south, west, and east.  Are you ever
+going to make it out of this place? 
+~
+16 0 2
+D0
+~
+~
+0 -1 1603
+D1
+~
+~
+0 -1 1608
+D2
+~
+~
+0 -1 1612
+D3
+~
+~
+0 0 1605
+E
+parrot~
+The parrot is facing south.~
+S
+#1608
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  The parrots of these islands seem to love those
+palm trees.  The vegetation here is definitely tropical.  To the east you see 
+the beautiful ocean, and to the west you see a thick jungle.  The beach 
+continues south, as it bends to the north.
+~
+16 0 2
+D0
+~
+~
+0 -1 1603
+D2
+~
+~
+0 -1 1613
+D3
+~
+~
+0 -1 1607
+S
+#1609
+Deserted Beach~
+  The sand here is so beautiful, it makes you wish you were on vacation.
+The white sand extends from the bright blue ocean to the tall palm trees
+lining the beach's edge.  The vegetation here is definitely tropical.  To
+the west you see the beautiful ocean, and to the east you see a thick
+jungle. The beach continues north and south.
+~
+16 0 2
+D0
+~
+~
+0 -1 1604
+D1
+~
+~
+0 -1 1610
+D2
+~
+~
+0 -1 1614
+S
+#1610
+Tangled Vines~
+  The jungle vegetation is much more dense than it had appeared.  It's
+very easy for you to lose your way here.  You find it hard to fight your
+way through the tangled mess of vines.  The parrot sitting on the branch
+in front of you seems to be taunting you.  Everything here looks the same,
+vines to the north, vines to the south, west, and east.  Are you ever
+going to make it out of this place?
+~
+16 0 2
+D0
+~
+~
+0 0 1605
+D1
+~
+~
+0 -1 1611
+D2
+~
+~
+0 0 1605
+D3
+~
+~
+0 0 1609
+E
+parrot~
+The parrot is facing east.~
+S
+#1611
+Strange Opening in the Ground~
+   You finely managed to fight your way through the tangled mess of vines,
+and find yourself at the entrance to a strange passage.  The passage down  
+is blocked by a heavy gate.  The animals here seem to be more intelligent 
+than any you have ever experienced.  I wonder if that chimp holds the key 
+to this strange island.
+~
+16 0 2
+D0
+~
+~
+0 0 1605
+D1
+~
+~
+0 0 1605
+D2
+~
+~
+0 0 1605
+D3
+~
+~
+0 0 1605
+D5
+~
+gate~
+2 1602 1622
+S
+#1612
+Tangled Vines~
+   The jungle vegetation is much more dense than it had appeared.  It's
+very easy for you to lose your way here.  You find it hard to fight your
+way through the tangled mess of vines.  The parrot sitting on the branch 
+in front of you seems to be taunting you.  Everything here looks the same,
+vines to the north, vines to the south, west, and east.  Are you ever 
+gonna make it out of this place?
+~
+16 1 3
+D0
+~
+~
+0 0 1605
+D1
+~
+~
+0 0 1613
+D2
+~
+~
+0 -1 1617
+D3
+~
+~
+0 0 1605
+E
+parrot~
+The parrot sits on the branch.~
+S
+#1613
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  The vegetation here is definitely tropical.  To 
+the east you see the beautiful ocean, and to the west you see a thick
+jungle.  The beach continues north, and south.
+~
+16 0 3
+D0
+~
+~
+0 0 1608
+D2
+~
+~
+0 -1 1618
+D3
+~
+~
+0 -1 1612
+S
+#1614
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  I would not approach that palm tree or that 
+parrot may have your face.  The vegetation here is definitely tropical.  To 
+the west you see the beautiful ocean, and to the east you see a thick
+jungle.  The beach continues north, as it bends to the south.
+~
+16 0 3
+D0
+~
+~
+0 -1 1609
+D1
+~
+~
+0 -1 1615
+D2
+~
+~
+0 -1 1619
+S
+#1615
+Tangled Vines~
+   The jungle vegetation is much more dense than it had appeared.  It's
+very easy for you to lose your way here.  You find it hard to fight your
+way through the tangled mess of vines.  The parrot sitting on the branch 
+in front of you seems to be taunting you.  Everything here looks the same,
+vines to the north, vines to the south, west, and east.  Are you ever 
+gonna make it out of this place?
+~
+16 1 3
+D0
+~
+~
+0 -1 1610
+D1
+~
+~
+0 0 1605
+D2
+~
+~
+0 0 1619
+D3
+~
+~
+0 0 1614
+E
+parrot~
+The parrot is facing north.~
+S
+#1616
+Tangled Vines~
+   The jungle vegetation is much more dense than it had appeared.  It's
+very easy for you to lose your way here.  You find it hard to fight your
+way through the tangled mess of vines.  The parrot sitting on the branch 
+in front of you seems to be taunting you.  Everything here looks the same,
+vines to the north, vines to the south, west, and east.  Are you ever 
+gonna make it out of this place?
+~
+16 0 3
+D0
+~
+~
+0 0 1605
+D1
+~
+~
+0 0 1605
+D2
+~
+~
+0 -1 1620
+D3
+~
+~
+0 0 1615
+E
+parrot~
+The parrot sits on the branch.~
+S
+#1617
+Tangled Vines~
+   The jungle vegetation is much more dense than it had appeared.  It's
+very easy for you to lose your way here.  You find it hard to fight your
+way through the tangled mess of vines.  The parrot sitting on the branch 
+in front of you seems to be taunting you.  Everything here looks the same,
+vines to the north, vines to the south, west, and east.  Are you ever 
+gonna make it out of this place?
+~
+16 0 3
+D0
+~
+~
+0 0 1605
+D1
+~
+~
+0 -1 1618
+D2
+~
+~
+0 0 1621
+D3
+~
+~
+0 -1 1616
+E
+parrot~
+The parrot is facing west.~
+S
+#1618
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  The vegetation here is definitely tropical.  To 
+the east you see the beautiful ocean, and to the west you see a thick
+jungle.  The beach continues north, as it bends to the south.
+~
+16 0 3
+D0
+~
+~
+0 -1 1613
+D2
+~
+~
+0 0 1621
+D3
+~
+~
+0 0 1617
+S
+#1619
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  The vegetation here is definitely tropical.  To 
+the south you see the beautiful ocean, and to the north you see a thick
+jungle.  The beach continues east, as it bends to the west.
+~
+16 0 3
+D0
+~
+~
+0 0 1615
+D1
+~
+~
+0 0 1620
+D3
+~
+~
+0 -1 1614
+S
+#1620
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  The parrot perched in that tree seems to busy
+watching that turtle to bother with you.  The vegetation here is definitely 
+tropical.  To the south you see the beautiful ocean, and to the north you 
+see a thick jungle.  The beach continues east, and west.
+~
+16 0 3
+D0
+~
+~
+0 -1 1616
+D1
+~
+~
+0 -1 1621
+D3
+~
+~
+0 0 1619
+S
+#1621
+Deserted Beach~
+   The sand here is so beautiful, it makes you wish you were on vacation.  
+The white sand extends from the bright blue ocean to the tall palm trees 
+lining the beach's edge.  The vegetation here is definitely tropical.  You
+better watch where you are stepping, there are turtle eggs everywhere.  To 
+the south you see the beautiful ocean, and to the north you see a thick
+jungle.  The beach continues west, as it bends to the east.
+~
+16 0 3
+D0
+~
+~
+0 -1 1617
+D1
+~
+~
+0 0 1618
+D3
+~
+~
+0 0 1620
+S
+#1622
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  Above is the entrance that
+allowed your passage, as the path continues east.
+~
+16 9 3
+D1
+~
+~
+0 0 1623
+D4
+~
+gate~
+2 1602 1611
+S
+#1623
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  The path spirals to the
+west and to the south.
+~
+16 9 3
+D2
+~
+~
+0 -1 1624
+D3
+~
+~
+0 -1 1622
+S
+#1624
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  The paths spirals to the
+north and to the west.
+~
+16 9 3
+D0
+~
+~
+0 0 1623
+D3
+~
+~
+0 -1 1625
+S
+#1625
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  The path spirals to the
+north and to the east.
+~
+16 9 3
+D0
+~
+~
+0 0 1626
+D1
+~
+~
+0 -1 1624
+S
+#1626
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  The path spirals to the
+south and to the east.
+~
+16 9 3
+D1
+~
+~
+0 -1 1627
+D2
+~
+~
+0 -1 1625
+S
+#1627
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  The path spirals to the
+south and to the west.
+~
+16 8 3
+D2
+~
+~
+0 0 1628
+D3
+~
+~
+0 -1 1626
+S
+#1628
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  The path spirals to the
+north and to the west.
+~
+16 9 3
+D0
+~
+~
+0 0 1627
+D3
+~
+~
+0 -1 1629
+S
+#1629
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  The path spirals to the
+north and to the east.
+~
+16 9 3
+D0
+~
+~
+0 0 1630
+D1
+~
+~
+0 -1 1628
+S
+#1630
+Spiral Path~
+   As you look down the spiral path you become very disoriented.  The path
+seems to be turning, spinning faster and faster the harder you stare.  To
+ensure your safety you better keep your eyes up and ahead.  The path itself 
+is quite narrow and you must keep near its inside to ensure that you don't 
+slip off into the deep chasm on its outer side.  The path spirals to the
+south, as it appears to level off to the east.
+~
+16 9 3
+D1
+~
+~
+0 0 1631
+D2
+~
+~
+0 0 1629
+S
+#1631
+Bottom of the Spiral Path~
+   The spiral path that had so recently made you dizzy has now become a 
+straight and narrow tunnel.  You take a minute to get your headings before 
+you venture deeper into the unknown.  The tunnel walls south of you are 
+overgrown with vines that almost seem to clutch at you as you pass by.
+~
+16 13 3
+D2
+~
+~
+0 0 1632
+D3
+~
+~
+0 0 1630
+S
+#1632
+Vine Enveloped Tunnel~
+   The vines covering these tunnel walls are almost as heavy as the vines
+you experienced back on the surface.  Luckily for you there seems to be a 
+path leading through this tunnel.  The path in the vines leads north and 
+south as you venture deeper into the unknown.
+~
+16 9 3
+D0
+~
+~
+0 0 1631
+D2
+~
+~
+0 0 1633
+S
+#1633
+Vine Enveloped Tunnel~
+   The vines covering these tunnel walls are almost as heavy as the vines
+you experienced back on the surface.  Luckily for you there seems to be a 
+path leading through this tunnel.  The path in the vines leads north and 
+south as you venture deeper into the unknown.  To the south the vines become 
+thinner as a stone structure comes into view.
+~
+16 9 3
+D0
+~
+~
+0 -1 1632
+D2
+~
+~
+0 -1 1634
+S
+#1634
+Entrance to a Strange Temple~
+   You fight your way out of the tangled vines, and find yourself 
+standing in front of a strange underground temple.  The massive 
+stone pillars representing the doors are guarded by a large ape.
+The ape seems to realize that it is his job to block the entrance
+to this temple, and it is determined to do so.  The path leads to
+the north and the temple is to the south.
+~
+16 9 3
+D0
+~
+~
+0 -1 1633
+D2
+~
+~
+0 -1 1635
+S
+#1635
+Waiting Room of the Temple~
+   You are standing in the waiting room for this marvelous temple.
+The dull grey stone walls a covered in carvings of ape, monkeys,
+and chimps.  The strange thing is, the animals appear to be helping
+a strange looking man in all of the carvings.  The entrance to the
+temple is north and to the south the main archway can be seen.
+~
+16 9 3
+D0
+~
+~
+0 0 1634
+D2
+~
+~
+0 -1 1636
+S
+#1636
+Main Archway of the Temple~
+   The beautiful stone archway is covered in carvings and vines.  It
+is the most beautiful temple you have ever seen.  The primitive designs
+displayed on the pillars make you question if it was done by human hands.
+The waiting room is north, an empty room to the south, and the temple aisle 
+leads westwards.
+~
+16 8 3
+D0
+~
+~
+0 0 1635
+D2
+~
+~
+0 0 1637
+D3
+~
+~
+0 -1 1639
+S
+#1637
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room are covered in pictures of large apes fighting.  The only exit from
+this room is to the north.
+~
+16 8 3
+D0
+~
+~
+0 0 1636
+S
+#1638
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room are covered in pictures of large monkeys fighting.  The only exit from
+this room is to the south.
+~
+16 8 3
+D2
+~
+~
+0 0 1639
+S
+#1639
+Main Aisle of the Temple~
+   The main aisle of this temple is bounded by huge stone pillars.   
+Whoever built this temple was truly a wise man.  The huge pillars
+support the weight of the ground above while still adding to the overall 
+beauty of the place.  This temple must have been built by the gods, because no
+man could have the strength to move those pillars.  The engineers who 
+designed this had to have had some type of help.  A green carpet-like
+material covers the floor as the aisle continues east and west.
+~
+16 8 3
+D0
+~
+~
+0 0 1638
+D1
+~
+~
+0 -1 1636
+D2
+~
+~
+0 0 1640
+D3
+~
+~
+0 -1 1642
+S
+#1640
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room are covered in pictures of large chimps fighting.  The only exit from
+this room is to the north.
+~
+16 8 3
+D0
+~
+~
+0 0 1639
+S
+#1641
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from 
+praying and meditation to kung-fu training or sleeping.  The walls of this 
+room are covered with pictures of monks praying.  The only exit from this
+room is to the south.
+~
+16 8 3
+D2
+~
+~
+0 0 1642
+S
+#1642
+Main Aisle of the Temple~
+   The main aisle of this temple is bounded by huge stone pillars.  
+Whoever built this temple was truly a wise man.  The huge pillars
+support the weight of the ground while still adding to the overall beauty
+of the place.  This temple must have been built by the gods, because no
+man could have the strength to move those pillars.  The engineers who 
+designed this had to have had some type of help.  A green carpet-like
+material covers the floor as the aisle continues east and west.
+~
+16 8 3
+D0
+~
+~
+0 -1 1641
+D1
+~
+~
+0 0 1639
+D2
+~
+~
+0 0 1643
+D3
+~
+~
+0 -1 1645
+S
+#1643
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room are covered in pictures of monks meditating.  The only exit from
+this room is to the north.
+~
+16 8 3
+D0
+~
+~
+0 -1 1642
+S
+#1644
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room are covered in pictures of monks that appear to be talking to apes.  
+The only exit from this room is to the south.
+~
+16 8 3
+D2
+~
+~
+0 -1 1645
+S
+#1645
+Main Aisle of the Temple~
+   The main aisle of this temple is bounded by huge stone pillars.
+Whoever built this temple was truly a wise man.  The huge pillars
+support the weight of the ground while still adding to the overall beauty
+of the place.  This temple must have been built by the gods, because no
+man could have the strength to move those pillars.  The engineers who 
+designed this had to have had some type of help.  A green carpet-like
+material covers the floor as the aisle continues east and west.
+~
+16 8 3
+D0
+~
+~
+0 0 1644
+D1
+~
+~
+0 -1 1642
+D2
+~
+~
+0 0 1646
+D3
+~
+~
+0 -1 1648
+S
+#1646
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room are covered in pictures of great apes lifting huge pillars.  The only 
+exit from this room is to the north.
+~
+16 8 3
+D0
+~
+~
+0 0 1645
+S
+#1647
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room are show pictures of the monks and monkeys living in peace.  The 
+only exit from this room is to the south.
+~
+16 8 3
+D2
+~
+~
+0 0 1648
+S
+#1648
+Main Aisle of the Temple~
+   The main aisle of this temple is surrounded by huge stone pillars. 
+Whoever built this temple was truly a wise man.  The huge pillars
+support the weight of the ground while still adding to the overall beauty
+of the place.  This temple must have been built by the gods, because no
+man could have the strength to move those pillars.  The engineers who 
+designed this had to have had some type of help.  A green carpet-like
+material covers the floor as the aisle continues east and west.
+~
+16 8 3
+D0
+~
+~
+0 0 1647
+D1
+~
+~
+0 -1 1645
+D2
+~
+~
+0 0 1649
+D3
+~
+~
+0 -1 1651
+S
+#1649
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room show pictures of large apes protecting the monks.  The only exit from
+this room is to the north.
+~
+16 8 3
+D0
+~
+~
+0 0 1648
+S
+#1650
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room show pictures of a great man teaching the apes.  The only exit from
+this room is to the south.
+~
+16 8 3
+D2
+~
+~
+0 0 1651
+S
+#1651
+Main Aisle of the Temple~
+   The main aisle of this temple is bounded by huge stone pillars.  
+Whoever built this temple was truly a wise man.  The huge pillars
+support the weight of the ground while still adding to the overall beauty
+of the place.  This temple must have been built by the gods, because no
+man could have the strength to move those pillars.  The engineers who 
+designed this had to have had some type of help.  A green carpet-like
+material covers the floor as the aisle continues east and west.
+~
+16 8 3
+D0
+~
+~
+0 0 1650
+D1
+~
+~
+0 0 1648
+D2
+~
+~
+0 -1 1652
+D3
+~
+~
+0 -1 1653
+S
+#1652
+Empty Room~
+   This room is completely empty.  It appears to be a multi-purpose room.
+The monks of this strange temple could have used this for anything from
+praying and meditation, to kung-fu training or sleeping.  The walls of this
+room show pictures of a great man teaching the monks.  The only exit from
+this room is to the north.
+~
+16 8 3
+D0
+~
+~
+0 -1 1651
+S
+#1653
+Main Altar~
+   The altar is covered in sacrifices -- not the bloody type you have 
+become accustomed to, but rather an offering of fruits and grain.  It must 
+have something to do with the strong ties that the keepers of this shrine
+seem to have with the animals of the island.  The aisle of the temple is 
+to the east, and a small hallway leads west.
+~
+16 8 3
+D1
+~
+~
+0 0 1651
+D3
+~
+~
+0 0 1654
+S
+#1654
+Small Hallway~
+   The small hallway is very dark and compact.  It must lead to the
+priests chamber.  If all the monks are so talented in the ways of
+monkey style kung-fu, their master will certainly make quick work of
+you.  The hallway leads east and west.
+~
+16 8 3
+D1
+~
+~
+0 -1 1653
+D3
+~
+~
+0 0 1655
+S
+#1655
+Corner of the Hallway~
+   You find yourself in the corner of the small hallway.  The stone
+walls look as though they are closing in on you.  You're starting to fear
+the unknown at the end of the hallway more and more with each step.
+The hallway continues north and east.
+~
+16 8 3
+D0
+~
+~
+0 0 1656
+D1
+~
+~
+0 0 1654
+S
+#1656
+Outside the Priest's Sanctum~
+   You are now at the end of the hallway.  A heavy wooden door lies ahead 
+of you.  Should you open it?  What lies beyond?  The only way to find out is to
+be brave and open it.  You'd better hope you can handle whatever
+awaits you on the other side.  
+~
+16 0 2
+D0
+~
+door~
+1 0 1657
+D2
+~
+~
+0 0 1655
+S
+#1657
+Priest's Sanctum~
+   You have entered the priests sanctum.  A feeling of peace and serenity 
+enters you -- but what about all of those warnings?  The only exit from
+this room is the door to the south.
+~
+16 0 2
+D2
+~
+door~
+1 0 1656
+S
+#1699
+Hall of Kludged Monkeys~
+  Idols of Monkeys and Apes of all flavors are scattered and broken about
+this room, all surrounding a massive idol of an Egyptian Monkey wearing
+a huge sign around his neck which reads:
+              DON'T TOUCH ANYTHING
+              OR THE GREAT MONKEY WILL 
+              DEFECATE ON YOU
+               Think Yew.
+Kludged by Zorak, zone by Ankh. 1996
+~
+16 512 0
+S
+#0
+$~
+

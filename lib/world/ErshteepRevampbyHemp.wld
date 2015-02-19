@@ -1,0 +1,1361 @@
+#10000
+Jarve's Secret Casino~
+   Several round, felt-topped tables fill the room. The floor is littered
+with torn playing cards, broken mugs and glasses, stale beer, and a few
+sots passed out from their drunkenness. Jarve's illegal casino welcomes the
+filthiest and most deceitful adventurers that Orshingal allows within its
+city limits. Despite the strict no-gambling policy the mayors have always
+championed, Jarve keeps this place running because of the immense profits
+gained by swindling drunken gamblers. The tables and chairs seem pieced
+together with whatever woodscraps could be found, and exposed rusty nails
+threaten to snag an elbow or shin of anyone stumbling around blindly.
+~
+100 2658317 0
+D0
+~
+doorway~
+1 0 10036
+S
+#10001
+Ershteep Road~
+   A pebbled path carves its way through the forest which rises up to both
+the east and west. The forest has a fog that seems to have settled. Fortu-
+nately, the path is so well travelled that it is easy to navigate through
+the misty woods. The path continues north, and a billow of smoke rises above
+the treetops from some location far ahead.
+~
+100 4 3
+D0
+The path winds its way north through the dense forest.
+~
+~
+0 -1 10002
+D2
+Through the thinning forest the lane to Midgaard is just visible.
+~
+~
+0 -1 3503
+S
+#10002
+Ershteep Road~
+   The pathway winds further through the misty forest as it continues its
+way north toward Orshingal. In the distance, the faint outline of a small
+cottage is just barely visible through the low limbs of trees and the mist.
+The road back to Midgaard heads south from here.
+~
+100 0 3
+D0
+A pathway leading towards a cottage within the forest.
+~
+~
+0 -1 10003
+D2
+The pebbled path continues through the thinning forest.
+~
+~
+0 -1 10001
+S
+#10003
+Ershteep Road~
+   The well-kept pathway turns westwardly, and a small dirt path approaches
+a quiet cottage in a tiny clearing to the north. The great Enfan city of
+Orshingal thrives northwest of here. Ershteep Road leads on through the fog-
+laden forest toward the edge of the Enfans' realm.
+~
+100 0 3
+D0
+The entrance to a small cottage lies at the end of a dirt path.
+~
+~
+0 -1 10004
+D2
+A pebbled pathway winds through the forest.
+~
+~
+0 -1 10002
+D3
+The pebbled road to Ershteep leads west through the forest.
+~
+~
+0 -1 10005
+S
+#10004
+In front of a cottage~
+   A few flower beds decorate the front walk to the quaint cottage. A brick
+red door with 'Welcome' carved on its wooden surface beckons adventurers to
+come in and enjoy the warmth of a fire and quiet conversation. Smoke rises
+from the chimney, indicating someone must be inside tending the fire. Back
+to the south lies Ershteep Road, which leads to the Enfan city Orshingal.
+~
+100 0 3
+D0
+~
+door~
+1 -1 10052
+D2
+The dirt path leads back to Ershteep Road.
+~
+~
+0 -1 10003
+E
+painting picture~
+   A wonderfully crafted oil which depicts a scene outside a
+jewelers in a busy city street.
+~
+E
+lock grate~
+   A lock made of a fine metal seems to be locking the grate in
+place.
+~
+E
+fireplace~
+   It looks like an ordinary fireplace but then a lock on the
+grate catches your eye. You have a distinct feeling they key is
+not here!
+~
+S
+#10005
+Ershteep Road~
+   The pebbled path is barely wide enough for one human, the beings that
+frequent this place must be significantly thinner than humans and dwarves. 
+A cottage lies to the northeast of this forest, and the narrow road winds
+through the forest to the west toward Orshingal, the Enfan city.
+~
+100 0 3
+D1
+The pebbled Ershteep Road winds through the forest.
+~
+~
+0 -1 10003
+D3
+The pebbled road seems to jog northward.
+~
+~
+0 -1 10006
+S
+#10006
+Ershteep Road~
+   The path suddenly turns to the north as it reaches impassable brush to
+the west. Everything is quiet through the woods, only the soft sound of the
+pebbles shifting underfoot breaks the otherwise dead silence. A faint trace
+of smoke billows up from the cottage to the northeast, but soon that sight
+will also be swallowed by the mist of the forest.
+~
+100 0 3
+D0
+The pebbled path seems to turn westward again.
+~
+~
+0 -1 10007
+D1
+Ershteep Road continues through the thick misty forest.
+~
+~
+0 -1 10005
+S
+#10007
+Ershteep Road~
+   The path turns westward as it reaches yet another patch of impenetrable
+brush to the north and east. The path seems to widen to the west and the
+faint outline of huge city walls is just visible through the still hanging
+mist of the forest. Following Ershteep Road back south leads to Midgaard.
+~
+100 4 3
+D2
+The pebbled road winds through the misty forest.
+~
+~
+0 -1 10006
+D3
+The road seems to have wound its way into civilization.
+~
+~
+0 -1 10008
+S
+#10008
+Ershteep Road~
+   The road widens here to accomodate the congestion of heavy pedestrian
+traffic into the city. The westward path continues into the misty forest
+but to the north lie the gates of Orshingal. A tiny guard shack has been
+built on the western edge of the pebbled path, marking the entrance to the
+realm of the Enfans.
+~
+100 0 3
+D0
+A rickety bridge spans a small ravine north of here.
+~
+~
+0 -1 10010
+D1
+The path winds onward through the mist.
+~
+~
+0 -1 10007
+D3
+The path comes to an abrupt end.
+~
+~
+0 -1 10009
+E
+shack~
+ A simple ~
+E
+shack~
+ A simple wooden shanty rests at the base of some trees just
+to the side of Ershteep road.
+~
+S
+#10009
+Overgrown path~
+   The pathway that once continued further west has been swallowed by the
+ever advancing forest. A small mound of dirt punches its way through the
+middle of the path, almost like a burrow of some kind. The junction leading
+to Orshingal lies back to the east. Although it would be nice to continue
+on through the forest, it is simply impossible - the trees have become far
+too thick to permit any progress to the north, south, or west.
+~
+100 0 3
+D1
+The road emerges from the forest, leading north towards a city.
+~
+~
+0 -1 10008
+D5
+A burrow of some sort looks just large enough to crawl in.
+~
+burrow~
+9 -1 10021
+E
+burrow~
+ A burrow of ample size is visible just beneath the underbrush.
+~
+S
+#10010
+Rope Bridge~
+   A rickety looking bridge spans a small ravine over a rushing river.
+The bridge has clearly been in constant use for years, so there really
+should be no lingering doubts regarding its sturdiness. The massive gates
+to Orshingal lie just north of here, opening into the inner-city and the
+bustle of activity within. The guard shack at the edge of the Enfan realm
+stands just south of here along Ershteep Road.
+~
+100 0 1
+D0
+The pebbled path of Ershteep Road seems to continue beyond the ravine.
+~
+~
+0 -1 10011
+D2
+The junction of Ershteep Road hosting a small guard shack.
+~
+~
+0 -1 10008
+S
+#10011
+Outside the gates to Orshingal~
+   Large wooden gates mark the borders of the Enfan city.  From within the
+walls, the contented laughter and chatter of hundreds of cheery voices fil-
+ters out to these gates. The forest has thinned out dramatically, leaving
+only a few patches of trees around the walls. On the horizon to the east,
+the peaks of Helventia mountains rise up into the sky. The welcoming city
+of Orshingal lies through the gates ahead, while the rope bridge spanning
+the ravine is back to the south.
+~
+100 0 1
+D0
+Within the peaceful city of Orshingal.
+~
+gates~
+1 -1 10014
+D2
+A narrow rope bridge spanning a ravine.
+~
+~
+0 -1 10010
+E
+gates~
+Towering oak gates built centuries ago to protect the Enfans from intruders.
+~
+S
+#10012
+Enfan Lane~
+   Enfan Lane ends abruptly at the foot of the walls which have guarded
+Orshingal for centuries. There are considerably fewer people down here at
+the end of the lane than closer to the main roads through the city. Noises
+of things bubbling and churning echo forth from whatever lies through the
+small doorway south of here.
+~
+100 0 1
+D1
+A narrow lane lined by businesses and small houses.
+~
+~
+0 -1 10013
+D2
+The room is filled with a strange mist.
+~
+~
+0 -1 10020
+E
+door~
+A narrow wooden door with a rusted keyhole.
+~
+S
+#10013
+Enfan Lane~
+   Buildings erected from mud-bricks, wood, and stone line the street on
+both sides. The history of Orshingal can be traced by observing the many
+different architectural designs of this ancient, yet thriving city. Humans,
+elves, dwarves, halflings and enfans converse and shop happily as children
+play at their feet. The fresh smell of baked bread entices you to explore
+the bakery to the north.
+~
+100 0 1
+D0
+Many racks and cases of bread line the walls of a big room.
+~
+~
+0 -1 10017
+D1
+A fountain marking the intersection of two main roads.
+~
+~
+0 -1 10019
+D3
+The lane ends at the base of an enormous wall.
+~
+~
+0 -1 10012
+S
+#10014
+Inside the main gates of Orshingal~
+   Ershteep Road has widened considerably more than at the junction back
+in the forest, presumably to accomodate for even more pedestrian traffic
+throughout the city. Numerous small buildings line both sides of the road.
+An aura of peace and tranquility hangs in the air here. To the north, the
+intersection of Ershteep Road and Enfan Lane has created a large trampled
+square surrounding a large fountain.
+~
+100 0 1
+D0
+Ershteep Road ventures further into the Enfan city of Orshingal.
+~
+~
+0 -1 10019
+D2
+The massive gates of Orshingal separate the city from the forest.
+~
+gates~
+1 -1 10011
+E
+gates~
+Towering oak gates built centuries ago to protect the Enfans from intruders.
+~
+S
+#10015
+Enfan Lane~
+   Buildings erected from mud-bricks, wood, and stone line the street on
+both sides. The businesses on the eastern side of Ershteep Road seem modest
+in comparison to the more popular shops like the bakery and alchemy hut. 
+However, visitors are still welcomed with a smile and courteousness at all
+the street vendors and tiny shops along the lane. To the east, the lane
+ends at the base of the city walls.
+~
+100 0 1
+D1
+The lane ends at the base of an extensive wall.
+~
+~
+0 -1 10016
+D3
+An intersection of two roads.
+~
+~
+0 -1 10019
+S
+#10016
+Enfan Lane~
+   The lane comes to a sudden halt at the walls of Orshingal. Shops and
+tiny businesses this far away from Ershteep Road see few travellers, and
+even fewer buyers. Despite their relatively unfrequented livelihoods,
+the enfans seem to live comfortably and satisfyingly here. They welcome
+adventurers to sit and retell tales of the world beyond the walls of the
+fair city of Orshingal.
+~
+100 0 1
+D3
+A narrow road lined with houses and shops.
+~
+~
+0 -1 10015
+E
+door~
+A narrow wooden door with a rusted keyhole.
+~
+S
+#10017
+Bakery~
+   The wonderful smells of fresh-baked bread emplore you to buy some of
+this delightful Enfan specialty. This particular bakery has been owned by
+the same family of enfans for generations, taking great pride in their
+relatively famous reign as bakers. A small swinging door leads west, to
+what must be the kitchen where all the beautiful goods on display are made
+fresh daily.
+~
+100 67108936 1
+D2
+~
+~
+0 -1 10013
+D3
+~
+door~
+1 -1 10018
+S
+#10018
+Kitchen~
+   The tiny, busy confines of this room make it difficult to wander about
+and examine the kitchen in much detail. Bakers sidle by, without noticing
+your presence as anything but an obstacle. The bakers cannot be bothered by
+introductions as they hurriedly prepare dozens of tasty delicacies for the
+bakery storefront to the east.
+~
+100 67109128 1
+D1
+~
+door~
+1 -1 10017
+S
+#10019
+Crossing of Ershteep Road and Enfan Lane~
+   Thousands of tiny feet have ventured through this busy square within
+the walls of Orshingal. A humble fountain rests in the center of the large
+crossroads. Ershteep Road continues to run north-south through the walled
+city, while Enfan Lane extends east-west into Orshingal's commercial areas.
+Travellers brush by, some running underfoot, others strolling by casually
+enjoying the serenity of the city.
+~
+100 0 1
+D0
+Ershteep Road continues on through the city.
+~
+~
+0 -1 10025
+D1
+A narrow road lined by street vendors and houses.
+~
+~
+0 -1 10015
+D2
+The massive gates of Orshingal.
+~
+~
+0 -1 10014
+D3
+A narrow road lined by street vendors and houses.
+~
+~
+0 -1 10013
+S
+#10020
+Magic Shop~
+   Cauldrons, vials, beakers and urns line the shelves behind a rickety
+old countertop, separating buyers from the mysterious enfan mage that runs
+this shop. Steam and smoke billow from urns and pots throughout the room,
+releasing a vast array of smells ranging from Fido meat to Osquip brains.
+As you gaze around the room, others urge you to quickly decide and retreat
+back to the lane to make room for more customers.
+~
+100 67108936 1
+D0
+A busy lane lined with houses and shops.
+~
+~
+0 -1 10012
+S
+#10021
+Underground Burrow~
+   Dust and dirt constantly fall from the loose ceiling above, making it
+difficult to keep your eyes open without tearing up. Scurrying and clawing
+sounds echo off the walls of the small burrow. The makeshift tunnel seems
+to continue west, but the hole is entirely too small for anyone larger than
+a badger. Evidence of other tunnels and extensions of this burrow include
+fresh claw marks on the southern and northern walls. The air also has the
+acrid stench of musk, likely from whatever has been digging these burrows.
+~
+100 265 0
+D3
+The opening into the western tunnel simply does not appear big
+enough to accomodate humans.
+~
+jasdfjwisafd~
+9 -1 10022
+D4
+The vegetation of the overgrown pathway peeks through the burrow.
+~
+burrow~
+9 -1 10009
+S
+#10022
+Underground Burrow~
+   The uncomfortably narrow tunnel through the burrow impedes any progress
+down this particular extension. Scratches and claw marks cover the walls,
+testament to the animal who carved these tunnels. Even the cramped burrow
+back to the east seems spacious in comparison to this miniscule crawlspace.
+~
+100 33029 0
+D1
+~
+jasdfjwisafd~
+9 -1 10021
+S
+#10023
+Petrali Street~
+   A less-trafficked road than Enfan Lane, this cobbled road runs further
+west and east through a much more residential area of the Enfan city. Small
+homes, seemingly stacked upon one another, rise at least three stories high
+in some places, looking like quirky woodshop birdhouses. A small wooden
+sign, warped with age, directs travellers westward toward the entrance to
+the famous Enfan restaurant: Jarve's.
+~
+100 0 1
+D1
+~
+~
+0 -1 10026
+D3
+~
+~
+0 -1 10024
+E
+sign~
+Oy! Go to the fabled Enfan Restaurant, recently
+under new management.
+
+-Jarve
+~
+S
+#10024
+Petrali Street~
+   Small enfan children play happily in the street, running along the cob-
+blestones at breakneck speeds, nearly toppling the wandering tourists that
+found their way to this residential neighborhood of Orshingal. An overpow-
+ering mix of aromas pours forth from the restaurant onto the terrace south
+of here. To the west, the city wall rises high on the horizon, dwarfing the
+unusual Enfany residences.
+~
+100 0 1
+D1
+~
+~
+0 -1 10023
+D2
+~
+~
+0 -1 10034
+D3
+~
+~
+0 -1 10043
+S
+#10025
+Ershteep Road~
+   The cobblestone road meanders further through Orshingal. A continuous
+flow of pedestrians travel the road, carrying about their various errands
+within this famous walled city. The great central plaza of Orshingal at
+the crossroads of Ershteep Road and Petrali Street is just on the horizon
+to the north of here. Quiet bubbling from the fountain to the south echoes
+off the buildings lining Ershteep Road.
+~
+100 0 1
+D0
+~
+~
+0 -1 10026
+D2
+~
+~
+0 -1 10019
+S
+#10026
+Central Plaza~
+   The buildings of Orshingal have given way to a massive square of worn
+cobblestone at the center of the city. Petrali Street runs to the east and
+west of here - lined with numerous businesses, houses, and most notably,
+City Hall. The familiar faces of smiling enfans appear everywhere within
+the throngs of travellers. Elves, humans, dwarves, halflings, and enfans
+all live peacefully in close quarters with one another here. Rising above
+the buildings on the horizon, the walls of Orshingal protect the enfans
+from the north. Gates similar to those at the southern entrance mark the
+northern border of the Enfan realm, and the eerie beginning of the great
+dark forest.
+~
+100 0 1
+D0
+~
+~
+0 -1 10037
+D1
+~
+~
+0 -1 10027
+D2
+~
+~
+0 -1 10025
+D3
+~
+~
+0 -1 10023
+E
+symbols~
+Strange symbols all in yellow and black are written on the walls. You have
+never seen anything like it before in your life. The strangest thing is
+that you seem to think the symbols say something important.
+~
+S
+#10027
+Petrali Street~
+   This cobbled road meanders through a much more residential neighborhood
+of Orshingal than either Enfan Lane of Ershteep Road. However, this part-
+icular section of street seems more noticably tended to than those east of
+here. Orshingal's city hall lies north of here, and the doors constantly
+swing open and closed as people rush in and out throughout the day, either
+conducting affairs of state or simply visiting its lavish interior.
+~
+100 0 1
+D0
+~
+~
+0 -1 10029
+D1
+~
+~
+0 -1 10028
+D3
+~
+~
+0 -1 10026
+S
+#10028
+Petrali Street~
+   A less-trafficked road than Enfan Lane, this cobbled road runs further
+west and east through a much more residential area of the Enfan city. Many
+small homes seemingly stacked upon one another rise at least three stories
+in some places, looking like quirky woodshop birdhouses from afar. A chapel
+lies north of here, ancient and nearly forgotten by the citizens through
+time, as their focus has shifted towards tourism and more modern exploits.
+~
+100 0 1
+D0
+~
+~
+0 -1 10041
+D1
+~
+~
+0 -1 10044
+D3
+~
+~
+0 -1 10027
+S
+#10029
+The Main Foyer~
+   This building is incredibly more lavish and luxurious than any other
+within Orshingal. The foyer of the city hall is decorated with many exotic
+plants in expensive vases. Enfans bustle around, working hard to keep the
+city flowing smoothly as a community. A group of doors on the western wall
+leads to offices which are off-limits to all but the mayor and his staff.
+Some bookcases line the northern wall, and a beautifull carved group of
+wooden stairs leads up to a balcony above the foyer.
+~
+100 67108872 0
+D2
+~
+~
+0 -1 10027
+D4
+Spiral stairs lead up to a balcony and hallway above the foyer.
+~
+stairs~
+11 -1 10030
+E
+doors~
+ Sturdy wooden doors all of which read:
+
+     "Employees only - off limits to the public.
+        Thank you for your understanding."
+~
+E
+bookcases~
+Filled with books from numerous civilizations and books marking the
+history of enfans line the shelves of the wooden bookcases.
+~
+E
+stairs~
+The spiraling wooden stairs lead up to office-level balcony.
+~
+S
+#10030
+Balcony above the Foyer~
+   The balcony overlooks the bustling foyer below. Enfans escort various
+diplomats and ambassadors from other civilizations into the private offices
+to discuss politics. A large set of double doors to the east of here leads
+to the mayor's office, and the balcony extends to the west. The old, wooden
+stairs spiral downward back to the floor of the foyer. Portraits of previous
+Enfan mayors hang as a tribute to those who have shaped the enfan society
+into a thriving metropolis.
+~
+100 67108872 0
+D1
+~
+door~
+1 -1 10031
+D3
+~
+~
+0 -1 10032
+D5
+The spiraling stairs lead back down to the elegant foyer.
+~
+stairs~
+11 -1 10029
+E
+bones~
+The last remains of the weapon smith.
+~
+E
+stairs~
+The spiraling wooden stairs lead back down to the main foyer.
+~
+S
+#10031
+Mayor's Office~
+   Portraits cover every part of the walls in this magnificent office even
+to the point of overlapping in places. Small plaques beneath them reveal
+that they limn the entire history of mayors of Orshingal back to the days
+of its founding. Chests lie open with parchment and scrolls spilling over
+the edges and spilling onto the floor. Although the rest of Town Hall is a
+pillar of efficiency and cleanliness, this room is a complete disaster. The
+carpet is worn in a circle around the entire room, due to frantic pacing or
+some other form of frequent foot traffic.
+~
+100 67108876 0
+D3
+~
+door~
+1 -1 10030
+E
+desk~
+ The expertly carved desk is covered with piles of papers and
+feather pens.  It looks like a chaotic mess and jumble of enfan
+documents and books.  The cherry surface shows no signs of age
+despite the constant wear it endures.
+~
+S
+#10032
+Balcony above the Foyer~
+   The balcony overlooks the bustling foyer below. Enfans escort various
+diplomats and ambassadors from other civilizations into the private offices
+to discuss politics. A large meeting room to the north of here hosts many
+important discussions about the fate of the Enfans and Orshingal. A select
+few portraits of mayors from the various ages past cover the western wall.
+~
+100 67108872 0
+D0
+~
+door~
+1 -1 10033
+D1
+~
+~
+0 -1 10030
+S
+#10033
+Meeting Room~
+   An enormous oak table runs the full length of the room, surrounded by
+many cushioned seats adorned with gorgeous wood inlay and embroidery. For
+decades this has been the central political think-tank for Orshingal's past
+and present mayors. Bookshelves cover every wall from floor to ceiling,
+with breaks only for the door back to the balcony and one large window on
+the northern wall. The ceiling has an intricate mural of the nearby land,
+depicting Midgaard of olde, Welmar's castle, and the Enfan city as its main
+landmarks. Forest, which elves and other creatures are now known to occupy,
+cover the rest of the landscape as uncharted wilderness in the eyes of the
+artist's time.
+~
+100 67108872 0
+D2
+~
+door~
+1 -1 10032
+S
+#10034
+Restaurant Terrace~
+   Tables and chairs beneath the cloth awning on this cobbled terrace are
+constantly being filled by visitors to the city. This particular restaurant
+has a legendary reputation for exquisite dining and a very friendly owner.
+People often stop here for a quick drink and a break from the busy streets
+of Orshingal. The restaurant seems remarkably tidy, considering how many
+patrons trek through the terrace everyday. There appears to be even more
+seating inside the large building south of here.
+~
+100 0 1
+D0
+~
+~
+0 -1 10024
+D2
+~
+~
+0 -1 10035
+E
+grate~
+It looks unlocked.
+~
+S
+#10035
+Jarve's Classic Enfany Restaurant~
+   Dozens of tables occupy every possible meter of floorspace, even some
+strangely shelf-like balconies reached by old wooden staircases practically
+built into the walls. The newest part of the building seems to be a sign
+hanging prominently from the ceiling - its infantile scrawl reads simply:
+"Jarve's!". Fables of this place's popularity were clearly not exaggerated,
+the clientele around the room represents races from all over the realm:
+dwarves, elves, humans, shrouded adventurers and other races unfamiliar to
+all but the most world-travelled eyes. Loud clanking and sizzling sounds
+come from what must be the kitchen somewhere south of here, but no door or
+entry can be seen. Jovial and boisterous laughter bellows in from the bar
+east of here.
+~
+100 67108872 0
+D0
+~
+~
+0 -1 10034
+D1
+~
+curtain~
+8 -1 10036
+S
+#10036
+Jarve's Not-So-Secret Bar~
+   Nestled in what clearly used to be a storage locker, this bar reeks of
+its ales. There are no pretenses here, people come in to get drunk, and
+almost certainly do so. Despite its drunken atmosphere and the hammered
+sots scattered around the room - some resting their heads on tables or bar-
+stools, others still attempting to remain upright - the mood is amiable
+and kind. The room is quite cramped but still cozy, remarkably similar to
+the feel of the larger restaurant west of here. Shouts of thrilled ecstasy
+and loud groans of defeat resound from the doorway south of here.
+~
+100 557065 0
+D2
+~
+doorway~
+1 -1 10000
+D3
+Nothing special there...
+~
+curtain~
+8 -1 10035
+S
+#10037
+Northern Gates of Orshingal~
+   Looming ahead, the darkness of the great forest seems to swallow the
+cobbled pathway leading out of the city. These giant wooden gates mark the
+last safe outpost before venturing into the throes of the forest. Enfans
+harbor many superstitions about the forest, and the evil creatures rumoured
+to live there. The boisterous sounds of commerce echo off the walls and old
+gates, urging travellers to abandon the idea of exploring the wicked forest
+and instead return to the safety of the city. Branches from a nearby tree
+resemble a makeshift ladder leading to the top of the wall surrounding the
+city.
+~
+100 0 0
+D0
+~
+gates~
+1 -1 10038
+D2
+~
+~
+0 -1 10026
+D3
+The branches from an enormous tree stretch along the wall in
+such a way that they could provide ample footing for climbing.
+~
+branches~
+11 -1 10046
+E
+branches~
+ The branches from an enormous tree stretch along the wall in
+such a way that they could provide ample footing for climbing.
+~
+S
+#10038
+Cobbled Pathway through the Forest~
+   The gnarled branches and roots of the trees cast cold, gloomy shadows
+along the cobbled pathway. Here, outside the walls of Orshingal, the forest
+consumes everything. Piercing shrieks and roars echo through the trees in
+such a way that it becomes difficult to discern their point of origin. The
+pathway winds its way eastward, leading further into the darkness of the
+murky forest.
+~
+100 1 3
+D1
+~
+~
+0 -1 10039
+D2
+~
+gates~
+1 -1 10037
+E
+tree~
+Why not go and take a closer look yourself?
+~
+S
+#10039
+Cobbled Pathway through the Forest~
+   Wispy winds whisper through the trees causing you to jump with fear at
+each lingering step. The gnarled branches of trees begin to look alive as
+they stretch over the cobblestone pathway creating this disturbingly dark
+forest. It's difficult to tell where exactly this pathway leads. Somewhere
+to the southwest, the welcoming Enfan city stands like an oasis from the
+evil emanating through this dark forest.
+~
+100 1 3
+D1
+~
+~
+0 -1 10040
+D3
+~
+~
+0 -1 10038
+S
+#10040
+Cobbled Pathway through the Forest~
+   The cobbled pathway through the forest ends abruptly here. Brush has
+overgrown the remnants of an old pathway north to the point where it is
+almost impenetrable. Barely visible through the trees and leaves is the
+faint outline of a grand facade of a large building. The forest has all
+but consumed this path, but it widens to the west as it approaches the
+safety of Orshingal.
+~
+100 5 3
+D0
+~
+~
+0 -1 16500
+D3
+~
+~
+0 -1 10039
+S
+#10041
+Entrance to the Chapel~
+   The huge, arched, wooden doors of the church lie open awaiting faithful
+guests. Enfans and tourists alike bustle past the chapel seemingly unaware
+of its presence as they go about their business on the commercial streets.
+The once devout citizens of Orshingal have lost their faith through time,
+as it became more and more of a metropolis frequented by folk from abroad.
+An eerily spooky yet quiet howl sounds from inside the depths of the old
+church, as if the gods were solemnly crying out in desperate longing for
+the faith their previously loyal subjects once had.
+~
+100 0 1
+D0
+~
+~
+0 -1 10042
+D2
+~
+~
+0 -1 10028
+S
+#10042
+Enfan Chapel~
+   The vaulted ceiling above contains a beautiful kaleidoscopic stained
+glass skylight. Arches and an apse harken back to old architecture, the
+likes of which are unfound elsewhere in the city, suggesting this chapel's
+existence dates back to the dawn of the Enfan civilization here. The glass
+has become noticably denser at the bottom of each pane, as its viscous
+nature becomes apparent through time. The once colourful, vibrant, and
+hopeful religious figures in these windows seem dready and faithless as
+they stare down at the empty pews of the church.
+~
+100 67108952 1
+D2
+~
+~
+0 -1 10041
+D4
+A wooden ladder leads up to the rectory.
+~
+ladder~
+11 -1 10045
+E
+ladder~
+An old wooden ladder leads up into the rectory.
+~
+S
+#10043
+Petrali Street~
+   Here at the base of the city walls the housing seems even more slapdash
+and utilitarian. Right angles and basic architectural ideas on function
+must be completely lost on the poorer enfan citizens, as their houses lean
+ominously one direction or another. Tourists generally stop at Jarve's bar
+and restaurant east of here without venturing this far west, but still some
+small street vendors attempt to peddle strange merchandise from dilapidated
+carts along the cobblestone street.
+~
+100 0 1
+D1
+~
+~
+0 -1 10024
+S
+#10044
+Petrali Street~
+   Here at the base of the city walls, the housing seems even more slapdash
+and utilitarian. The basic tenants of architecture and construction are,
+apparently, completely lost on the poorer Orshingal citizens. Their strange
+houses teeter and sway with the slightest breeze, looming ominously above
+the street below. Poor street vendors attempt to scrape out a living on the
+occasional purchase from a lost tourist.
+~
+100 0 1
+D3
+~
+~
+0 -1 10028
+S
+#10045
+Rectory~
+   This once great chamber of Enfany church gospel has fallen into a state
+of sorrowful disrepair. The great organ whose melodious tunes carry into
+the streets, now bellows with deep, dark, haunting, tones. The creaking
+rafters and leaky ceiling overhead create a rather pathetic home to the
+discouraged priest, whose efforts to spread the Enfan faith have clearly
+failed. Howling wind through the warped wood ceiling parodies the woeful
+misery of the priest - now just a lonely preacher without a congregation.
+Some nights the eerie tunes of the organ still echo into the streets, as
+the priest's sadness is felt in the morose elegies he plays.
+~
+100 67141644 0
+D0
+~
+~
+0 -1 0
+D5
+The wooden ladder leads back to the church altar and pews.
+~
+ladder~
+11 -1 10042
+E
+ladder~
+The wooden ladder leads back to the church altar and pews.
+~
+S
+#10046
+Along the Walls of Orshingal~
+   From atop these walls you can see Midgaard far to the southwest and the
+plaza and streets of Orshingal bustling with activity just below. The dark
+forest rises high above your head, blocking any view to the north of here,
+other than the dense gnarled trees, home to many ferocious beasts. This
+narrow path along the wall continues westward, high above the ground below.
+The sturdy branches allow passage back to the gates at the northern side of
+Orshingal.
+~
+100 0 1
+D1
+~
+branches~
+11 -1 10037
+D3
+~
+~
+0 -1 10047
+S
+#10047
+Along the Walls of Orshingal~
+   From atop these walls you can see Midgaard far to the southwest. Enfans
+wander through their glorious city at the base of these walls, without the
+slightest hint of your presence far above their heads. A jumpable gap be-
+tween the wall and the nearest rooftop seems to be the only alternative to
+returning to the east along the wall.
+~
+100 0 1
+D1
+~
+~
+0 -1 10046
+D2
+There's a sizable gap between the city wall and rooftop to the south.
+~
+gap~
+10 -1 10048
+E
+gap~
+The distance between here and the rooftop is enough to
+make your stomach lurch, however, its definitely a
+jump-able distance.
+~
+S
+#10048
+On a Rooftop~
+   This secluded rooftop lacks access to any rooftops nearby. A forceful
+gust of wind threatens to pluck you from this rooftop perch above the city.
+Creaking boards draw your attention to a faint outline of a door set into
+the roof. From here it is a relatively small jump back to the narrow path
+along the wall.
+~
+100 0 1
+D0
+There's a sizable gap between this rooftop and the city wall.
+~
+gap~
+10 -1 10047
+D5
+~
+trapdoor~
+1 -1 10049
+E
+gap~
+The distance between here and the wall is enough to
+make your heart skip a beat, however, it's definitely
+doable.
+~
+S
+#10049
+A Dusty Attic~
+   Crates, barrels and boxes lie in jumbled heaps around the room. Cobwebs
+cover literally every surface, hanging from the rafters and sticking to
+your face as you walk. The soft pitter-patter of tiny mice scurrying about
+breaks the dead silence. A faint howl of the wind turns into high-pitched
+whistling as it flows through the cracks in the ceiling.
+~
+100 524297 0
+D4
+~
+trapdoor~
+1 -1 10048
+S
+#10050
+Hidden Stairs~
+   The ancient stone steps of this darkened stairwell extend downward in a
+dizzying, tight spiral. The musty air reeks of death and decay, the kind
+of rotten aroma found in catacombs left undisturbed for centuries. A faint
+howl reverberates off the stone walls, magnifying to an alarming volume. 
+Something dwells within this hallowed sanctuary.
+~
+100 13 0
+D2
+~
+~
+0 -1 0
+D5
+~
+~
+0 -1 10051
+S
+#10051
+Hidden Stairs~
+   The bottom of the stairwell arrives suddenly. All ambient light that
+may have crept in from the rectory's windows diffused in the spiraling
+staircase above. A smallish archway south of here opens into a consuming,
+inky blackness. The echo which haunted the steps above is oddly absent,
+but the musty odor has become even more overpowering.
+~
+100 13 0
+D2
+~
+~
+0 -1 10053
+D4
+~
+~
+0 -1 10050
+S
+#10052
+Inside a small cottage~
+   The cottage is decorated rather plainly, though a plush furry carpet
+covers much of the wood floor. Windows on the eastern and western walls
+peer into the depths of the misty forest. The smell of burning wood fills
+the air as heat from the fireplace warms the whole cottage. Simple wooden
+rocking chairs faces the western window, and a small table-for-two stands
+in the northeast corner. The atmosphere and furnishings make the quaint
+abode rather comfortable.
+~
+100 67108872 0
+D0
+~
+grate~
+2 10016 10059
+D2
+~
+door~
+1 -1 10004
+E
+chair~
+The mahogany rocking chair looks to have been crafted by a truly
+skilled carpenter.  Its curves seem perfect for someone about the
+size of a child.
+~
+S
+#10053
+Pagan Library~
+   Bindings and loose pages of books litter the floor, completely destroyed
+by neglect or purposeful vandalism. A large oaken table has been turned to
+splinters, crushed beneath an iron chandelier that must have fallen from
+the ceiling decades earlier. The scattered piles and heaps of scrolls and
+books represent the literature and mythology of an entire civilization, now
+forgotten. Enormous bookshelves standing at least four meters high line the
+walls to the east and west of here.
+~
+100 9 0
+D0
+~
+~
+0 -1 10051
+D1
+~
+~
+0 -1 10054
+D2
+~
+~
+0 -1 10056
+D3
+~
+~
+0 -1 10055
+E
+door~
+A plain wooden door
+~
+S
+#10054
+Underground Library's Eastern Shelves~
+   The enormous oaken shelves lie in ruins, toppled decades or centuries
+earlier. Scrolls lie open, their script glowing with a faint white light,
+oddly reminiscent of the writing seen on some Enfany shops in the city
+built upon these ruins. The library stacks seem to continue well into the
+darkness east of here, but the broken bookshelves prevent any passage in
+that direction. Judging by the amount of literature represented here, this
+civilization must have flourished for centuries before its downfall. Now,
+what was cleary once a great library is nothing more than an cold stone-
+walled tomb for books and parchment.
+~
+100 9 0
+D3
+~
+~
+0 -1 10053
+S
+#10055
+Underground Library's Western Shelves~
+   The enormous oaken shelves lie in ruins, toppled decades or centuries
+earlier. Books are strewn about, scrolls are torn, and parchment seems on
+the verge of crumbling to dust. Although the long row of library stacks
+continues well into the darkness west of here, there is no hope of passage
+- the way has been completely blocked by the broken oaken remnants of the
+once beautiful shelving. This once great library is nothing more than an
+eerie reminder of a society now faded from memory.
+~
+100 9 0
+D1
+~
+~
+0 -1 10053
+S
+#10056
+Pagan Library~
+   The floor here too is littered with crumbling parchment and tattered
+scrolls. Books lie in heaps, or open on the large oaken table filling much
+of the space between the stone walls. An iron chandelier above has waxy
+stalactites gripping to its underside. Beneath the scattered piles of lit-
+erature and mythology is a sturdy iron ring attached to what appears to be
+a trapdoor.
+~
+100 9 0
+D0
+~
+~
+0 -1 10053
+D5
+The smell of rot that poisons the air of this library, clearly
+emanates from whatever lies beneath the trapdoor.
+~
+trapdoor~
+1 -1 10057
+E
+door~
+A plain wooden door
+~
+S
+#10057
+Darkened Hallway~
+   The stench of death and decay is practically unbearable in this gloomy
+hallway. Two large doors to the east and west prevent access to the rotting
+horrors contained in these catacombs. Faint traces of candlelight from the
+north flicker on the cold stone of the walls and ceiling, urging travellers
+deeper into the dank dungeon-like bowels of this ancient building.
+~
+100 141 0
+D0
+~
+~
+0 -1 10058
+D1
+An enormous reinforced wooden door blocks entry into the catacombs.
+~
+door~
+1 -1 10058
+D3
+An enormous reinforced wooden door blocks entry into the catacombs.
+~
+door~
+1 -1 10058
+D4
+~
+trapdoor~
+1 -1 10056
+S
+#10058
+Altar to Pagan Gods~
+   Tall black candles drip wax upon the floor from several tarnished silver
+candelabras on the wall. An unfamiliar symbol is carved into the stone of
+the floor and seems to remain in the shadows despite the ample light from
+the candles. Scarred with scratches and chips a stone dais sits atop a bier
+near the northern wall. Coffin-sized holes in the wall contain the rotted
+corpses of some humanoids, now centuries old. The light changes slightly,
+revealing a frightening face, now emblazened on the north wall. Half-bird
+and half-man, its hooked beak extends over the stone dais as its eyes seem
+to absorb the candlelight to burn bright with fury.
+~
+100 67108872 0
+D2
+~
+~
+0 -1 10057
+S
+#10059
+Within the fireplace~
+   Thick layers of soot cover the walls and floor, and clouds of jet-black
+smoke fill the room, making it nearly impossible to see. The powerful heat
+from the fire makes this room an almost unbearable temperature. Staying
+here is probably not a good idea, the confines of the quaint cottage were
+much nicer and the cool air from its windows sounds especially welcoming.
+~
+100 4105 0
+D2
+~
+grate~
+2 10016 10052
+S
+#0
+$~

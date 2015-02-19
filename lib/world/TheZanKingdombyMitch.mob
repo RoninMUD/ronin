@@ -1,0 +1,489 @@
+#901
+priest creature zan~
+A cloaked priest~
+A cloaked priest is here chanting and staring at the center of the room.
+~
+This dark cloaked priest is fully covered in a long black cloak.
+No features can be made out about its body, but you can guess
+that it looks very similar to the guards outside the temple.  As
+you stare at it it does not even acknowledge your presence, and
+it may not even know you are there.
+~
+26 1 -300 Y
+30 -4 -6 200d2+1000 10d2+20
+4889 201500
+8 8 0
+0 0 36d6+100 1
+1 2 10 37
+0 0 0 0
+K
+0 0 0 0 0 0
+#902
+priest creature zan~
+A Sleepy Priest~
+A priest is lying here in bed, sleeping.
+~
+This sleeping priest looks quite easy and unintimidating,
+although if you wake him up he might be a bit cranky at
+you.
+~
+8 0 10 Y
+30 -3 -4 500d3+700 11d2+18
+0 255000
+4 4 0
+0 0 36d6+100 2
+1 3 15 5
+1 6 10 15
+0 0 0 0
+K
+0 0 0 0 0 0
+#903
+guard temple zan~
+A temple guard~
+There is a large imposing guard standing here, blocking entrance to the temple.
+~
+This is a large, dangerous looking guard.  He stands upright as
+a human would but unlike a human he has a very insectile head
+and arms.  His large mandibles look like they could crush
+through steel, he'd definitely put up a very good fight against
+any opponent.
+~
+67108874 268435456 -200 Y
+31 -2 -10 500d4+700 10d6+30
+30000 312000
+8 8 1
+0 0 36d4+100 2
+5 1 10 0
+6 3 15 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#904
+priest high urynder~
+The High Priest of Urynder~
+The High Priest of Urynder is here, trying to summon his god!
+~
+This is the High Priest of the lesser god Urynder.  It looks as
+though he has devoted his entire life to this ritual, and now
+he is finally realizing his dream.  As he continues in his
+summoning his eyes start to grow red, and he starts making
+strange noises.
+~
+42 0 -500 Y
+32 -7 -12 500d2+2000 2d16+30
+0 550000
+8 8 1
+0 0 36d12+100 3
+1 5 2 104
+1 1 10 26
+1 2 5 25
+0 0 0 0
+T
+......The High Priest has a frenzied look in his eyes!~
+K
+0 0 0 0 0 0
+#905
+urynder~
+Urynder~
+The Dark Lord Urynder sits on his dark throne here
+~
+The Dark Lord Urynder is the god of all the Zans.  Looking
+at him you cannot make out any features on him at all, it
+seems he is a large area of darkness in the shape of a man
+with dark wings sprouting from behind.  Across his whole
+body a thin blue smoke rises into the air, and every once
+in a while a small faint light moves within his dark body.
+~
+42 277086336 -1000 Y
+45 -7 -15 36d47+3500 12d12+10
+0 2000000
+8 8 1
+66 6476 40d8+100 2
+10 4 16 0
+1 5 10 106
+0 0 0 32
+R
+12
+K
+0 0 0 0 0 0
+#906
+guard city zan~
+A Zan City Guard~
+A City Guard lazing about at the gates.
+~
+A monstrous ant stands upright here, guarding a pair of gates.
+The guard has a huge pair of mandibles, with drool slowly
+oozing down them.  Its tiny arms are folded gently across
+its chest while it looks around with a rather spiritless
+expression on its face.
+~
+16398 268435456 0 Y
+31 -1 -10 300d2+1200 10d2+20
+27438 264000
+8 8 1
+0 0 35d4+100 1
+6 1 12 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#907
+breeder zan~
+A Large Breeder Zan~
+A Large Breeder is here, waiting for it's next meal.
+~
+A disgusting beast of a Zan is lying here.  It has an
+enormous belly, which just happens to be covered in a thick
+coating of slime.  Whenever any parts of it moves a large
+string of the slime flies off in the same direction.  Eggs
+pile up at the bottom of the breeder while it continually
+stuffs its face full of food.  Its tiny eyes dart in every
+direction as it examines its surroundings constantly.
+~
+266 0 0 Y
+30 1 -1 400d2+800 15d2+20
+0 210000
+5 5 2
+0 0 1d30+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#908
+baby zan infant~
+An infantile Zan~
+A little baby zan lies in a crib here.
+~
+It is always unfortunate when babies are ugly, but this one 
+is way beyond ugly.  It has a pool of nasty slime forming
+about its little body, which bubbles a little while the baby
+lies in it.
+~
+10 0 349 Y
+1 19 10 30d2+30 5d4+0
+0 1888
+8 8 0
+0 0 10d1+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#909
+child zan~
+A small zan child~
+A small zan child is here, playing with its toys happily.
+~
+This small child looks completely carefree, and not nearly
+as revolting as the rest of its kin.  The little Zan
+almost looks cute in an ugly sort of way.  He runs
+around the room playing with toys and being a seemingly
+normal child.
+~
+10 0 200 Y
+6 14 10 5d20+55 5d4+2
+15 4562
+8 8 1
+0 0 30d3+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#910
+adolescent zan~
+An Adolescent Zan~
+An Adolescent Zan stands here causing trouble.
+~
+This adolescent Zan is looking much more imposing than the children
+in the other room, but they still are not very intimidating.
+These Zans seem to have nothing to do so they end up
+causing all sorts of trouble. 
+
+~
+10 0 30 Y
+20 3 1 100d2+400 6d5+4
+2000 56023
+8 8 1
+0 0 10d2+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#911
+nurse zan~
+A Zan Nurse~
+A Zan Nurse is here rushing around caring for the young Zans.
+~
+This nurse looks like it is completely worn out. Its clothes
+are completely ragged and hang limply from its body.  It
+rushes around the room trying to tidy up a bit and keep
+everything in line, but it doesn't look as though much is
+getting done.
+~
+8 0 0 Y
+29 7 -1 100d4+800 7d5+10
+40 70000
+8 8 2
+0 0 6d33+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#912
+worker zan~
+An Overworked Worker~
+A Severely Overworked Worker is here working through exhaustion.
+~
+This poor creature looks as though he has never seen a day off. The look
+of weariness in him is almost enough to distract from his horrific
+features.  Even though he obviously works hard, the worker is
+grotesquely thin, almost as though he is simply wasting away.
+~
+8 0 40 Y
+30 -1 -7 300d2+1200 10d2+20
+7800 264000
+8 8 1
+0 0 34d6+100 2
+5 2 12 0
+6 1 7 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#913
+guard zan~
+The Zan Guard~
+A Zan Guard stands here laughing about his superiority.
+~
+A large Zan stands here, shouting orders and relaxing.  The guard
+looks after the workers in the mines, under direct order from the
+king and queen.  It looks as though the guards get much more food
+than the workers, since this one is much larger than most of the
+workers in the mines.
+~
+14 0 -200 Y
+31 -2 -11 400d4+900 13d3+21
+50000 315000
+8 8 1
+0 0 34d6+100 1
+5 2 15 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#914
+guard zan~
+An Angry Zan Guard~
+A Zan Guard is sitting here, angry at your presence.
+~
+A large Zan stands here, shouting orders and relaxing.  The guard
+looks after the workers in the mines, under direct order from the
+king and queen.  It looks as though the guards get much more food
+than the workers, since this one is much larger than most of the
+workers in the mines.
+~
+536870954 0 -200 Y
+31 -1 -10 400d4+900 10d3+18
+60000 315000
+8 8 1
+0 0 24d6+100 1
+6 2 12 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#915
+guard castle zan~
+A Castle Guard~
+A Castle Guard stands here blocking you off from any further travel.
+~
+This guard is probably the most trusted zan of them all. The
+king and queen do not seem to particularily care for their
+populous, but these ones they can actually deal with. Unlike the
+other Zans, this one has large bulging muscles that are clearly
+defined through his cloth armor.
+~
+536870922 0 -250 Y
+32 -9 -13 200d4+1600 14d3+21
+87000 400000
+8 8 1
+0 0 37d8+100 2
+5 2 10 0
+6 2 35 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#916
+servant zan~
+A Servant Zan~
+A Castle Servant is here, running around hurredly for the king and queen.
+~
+This poor creature is only a servant in title, he lives much
+more like a slave than anything else. As he runs around the
+room it looks as if he forgot what he was about to do because
+he is so nervous.
+~
+12 0 20 Y
+34 1 -2 36d36+700 10d2+20
+2 120000
+8 8 1
+0 0 34d8+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#917
+cook zan~
+A Zan Cook~
+A Zan Cook is here, rushing madly to prepare the next meal.
+~
+This Zan cook looks like an average chef, apart from the ugly
+face.  He is dressed in a white garb, with goofy pants on and
+a large fluffy chef hat.  He rushes around the room with a
+certain finesse that is rarely seen in the Zans.
+~
+10 0 0 Y
+30 5 -1 250d2+800 10d2+10
+0 150000
+8 8 1
+0 0 30d6+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#918
+king~
+The King of the Zans~
+An Ugly King is sitting here, watching his wealth grow.
+~
+The king of the Zans is not even a Zan at all, but an ugly
+man with a hunch back.  A large growth is protruding from
+his large, bent nose with a few hairs growing out of it.
+His hair is a long greasy mess that hangs loosely around
+his temples.  Huge bags hang loosely from under his eyes,
+and his eyes are completely bloodshot.  His limbs are quite
+tiny compared to his bulbous body, suggesting that he does
+not do much other than sit on his throne all day.
+~
+42 262144 -550 Y
+28 -7 -14 60d4+4000 20d3+40
+243550 500000
+8 8 1
+69 0 39d12+100 1
+3 7 10 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#919
+queen~
+The Queen of the Zans~
+The Queen of the Zans sits here, a dark fire glowing in her eyes.
+~
+he king of the Zans is not even a Zan at all, but an ugly
+man with a hunch back.  A large growth is protruding from
+his large, bent nose with a few hairs growing out of it.
+His hair is a long greasy mess that hangs loosely around
+his temples.  Huge bags hang loosely from under his eyes,
+and his eyes are completely bloodshot.  His limbs are
+incredibly disproportionate to the rest of his body,
+suggesting that he does not do much but sit on his throne
+all day.
+~
+536870922 268437632 -747 Y
+39 -9 -10 200d2+1500 30d2+15
+234576 870000
+8 8 2
+69 0 200d2+100 2
+1 1 15 82
+1 5 20 23
+0 0 1 0
+K
+0 0 0 0 0 0
+#920
+farmer erratic~
+An Erratic Farmer~
+An Erratic Farmer is here babbling about strange creatures.
+~
+The farmer standing here is a man of average build. He is 
+wearing a pair of overalls that are covered in mud, and
+he will not stop babbling.  As he continually babbles on
+it is unclear who he is actually trying to talk to
+though.
+~
+16398 0 0 Y
+1 19 5 36d20+600 10d2+0
+327 65000
+8 8 1
+0 0 1d1+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#921
+rebel zan~
+A Rebel Zan~
+A Rebel Zan is here plotting against his oppressors.
+~
+This Zan looks like he has been training to be a warrior for some
+time. It looks as though these rebels have found a way to live
+quite well while hiding.  He would certainly put up more of a fight
+than one of the malnurished workers.
+
+~
+8 0 100 Y
+32 -2 -8 300d3+1200 12d3+16
+23000 288000
+8 8 1
+0 0 35d6+100 1
+5 1 15 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#922
+leader rebel zan~
+The Zan Rebellion Leader~
+The Zan Rebellion Leader is here, waiting for a chance to strike.
+~
+The Zan Rebellion Leader sits here, planning out his next attack
+against the guards keeping his people in chains. By the look of
+him, he could finish off all the guards himself, but he most
+likely saves those duties for his rebels.
+~
+16394 277094400 -40 Y
+34 -2 -16 600d2+2800 12d3+18
+40000 450000
+8 8 1
+0 0 36d6+100 2
+3 2 10 0
+4 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#923
+rebel zan~
+A Rebel Zan~
+A Rebel Zan is here, barely getting by.
+~
+This Zan rebel is looking quite thin.  It seems these rebels are
+having a hard time getting enough food when they hide in these
+caves, although, that isn't much different from the ordinary
+workers. At least this one is fighting against the oppression.
+
+~
+8 0 40 Y
+30 0 -7 300d2+700 10d2+20
+0 172500
+8 8 1
+0 0 34d6+100 1
+5 1 7 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#924
+leader mine zan~
+The Zan Mine Leader~
+The Zan Mine Leader is here, screaming non stop at the workers.
+~
+This Zan is quite possibly the worst one yet.  Along with it's
+disfigured body it also is screaming without any signs of stopping
+By the way he is screaming you'd guess that he will be killed if
+they do not get this new found ore out fast enough.
+
+~
+16398 0 -100 Y
+34 -2 -12 300d2+1800 7d8+22
+30000 390000
+8 8 1
+0 0 35d6+100 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

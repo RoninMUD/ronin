@@ -1,0 +1,1140 @@
+#8600
+The Entrance to The Quest of the Holy Grail.~
+   You are standing at the entrance to The Quest of the Holy Grail. There are
+some lonely trees standing around here. To the west the road continues across
+a big field and to the east you can see the city Sonicity.
+~
+86 4 2
+D1
+~
+~
+0 -1 8024
+D3
+~
+~
+0 -1 8601
+S
+#8601
+A road going across the field.~
+   You are standing on a road going across a big field. There is a sign
+sitting on a tree here. To the north you can see a big road intersection and
+to the east you can see the entrance to The Quest of the Holy Grail.
+~
+86 4 2
+D0
+~
+~
+0 -1 8602
+D1
+~
+~
+0 -1 8600
+E
+sign~
+North of here starts the quest of the holy grail. It's very funny but it
+can also be dangerous. Enter at your own risk!
+~
+S
+#8602
+A road intersection.~
+   You are standing at a road intersection at a big field. To the north,
+east, west, and south roads continue over the field. Far away, you can see 
+a big forest in all directions but south.
+~
+86 0 3
+D0
+~
+~
+0 -1 8620
+D1
+~
+~
+0 -1 8630
+D2
+~
+~
+0 -1 8601
+D3
+~
+~
+0 -1 8603
+S
+#8603
+A road going across the field.~
+  You are standing on a road going across a large field. You can see a
+lonesome tree growing here. The exits are to the east and west.
+~
+86 0 2
+D1
+~
+~
+0 -1 8602
+D3
+~
+~
+0 -1 8604
+E
+nest~
+You can see that this is an african swallows nest because there are pieces of
+coconuts in it.
+~
+E
+tree~
+The tree is very old and almost dead. In the top of the tree you can see a
+swallows nest.
+~
+S
+#8604
+A road going across the field.~
+   You are standing on a road going across a big field. To the north you can
+see a big forest and the road turns into a path. To the east the road
+continues over the field.
+~
+86 0 2
+D0
+~
+~
+0 -1 8605
+D1
+~
+~
+0 -1 8603
+S
+#8605
+A path through the forest.~
+   You are standing on a path through the forest. To the south you can see a
+big field and the path turns into a road. To the west the path continues into
+the forest.
+~
+86 0 3
+D2
+~
+~
+0 -1 8604
+D3
+~
+~
+0 -1 8606
+S
+#8606
+A path through the forest.~
+   You are standing on a path through the forest. Around you grows big trees
+and their crowns form a roof over the path. The exits here are east and west.
+~
+86 0 3
+D1
+~
+~
+0 -1 8605
+D3
+~
+~
+0 -1 8607
+S
+#8607
+A path through the forest.~
+   You are standing on a path through the forest. Around you grows big trees
+and their crowns form a roof over the path. From the north-west you can here
+the sounds of a hard fight. To the east and to the west the path continues
+through the forest.
+~
+86 0 3
+D1
+A path through the forest.
+~
+~
+0 -1 8606
+D3
+A path through the forest.
+~
+~
+0 -1 8608
+S
+#8608
+A path through the forest.~
+   You are standing on a path through the forest. Around you grows big trees
+and their crowns form a roof over the path. To the north you can see a glade
+in the forest and to the east the path goes through the forest.
+~
+86 0 3
+D0
+~
+~
+0 -1 8609
+D1
+~
+~
+0 -1 8607
+S
+#8609
+The glade.~
+   You are in a glade in the forest. There is some blood on the ground and you
+can see that many battles have been fought here. To the north you can see a
+small wooden bridge. To the south a path leads into the forest.
+~
+86 0 3
+D0
+A small wooden bridge.
+~
+~
+0 -1 8610
+D2
+A path back into the forest.
+~
+~
+0 -1 8608
+S
+#8610
+The small wooden bridge.~
+   You are standing on a small wooden bridge going over a small river.  To 
+the south you can see a glade and to the north the path continues through 
+the forest.
+~
+86 0 3
+D0
+A path in the forest.
+~
+~
+0 -1 8611
+D2
+A glade in the forest.
+~
+~
+0 -1 8609
+S
+#8611
+A path through the forest.~
+   You are standing on a path through the forest. You see a few small trees
+nearby here. To the west the path gets wider and it turns into a road and to
+the south you see a small wooden bridge.
+~
+86 0 3
+D2
+~
+~
+0 -1 8610
+D3
+~
+~
+0 -1 8612
+S
+#8612
+A road through the forest.~
+   You are standing on a road going through the forest. To the north you can
+see the entrance to a small village and to the east the road continues
+through the forest.
+~
+86 0 3
+D0
+~
+~
+0 -1 8613
+D1
+~
+~
+0 -1 8611
+S
+#8613
+The entrance to a very small village.~
+   You are standing at the south entrance to a very small village. To the
+north lies the village center and you can hear upset voices coming from there.
+To the south the road continues into a forest.
+~
+86 0 1
+D0
+The village center.
+~
+~
+0 -1 8614
+D2
+~
+~
+0 -1 8612
+S
+#8614
+The village center.~
+   You are standing at the center of the village. In the middle of the center
+you can see a big balance. The exits here are north and south.
+~
+86 0 1
+D0
+The village entrance.
+~
+~
+0 -1 8615
+D2
+The village entrance.
+~
+~
+0 -1 8613
+E
+balance~
+It is a very big balance that is made of wood, it looks very old.
+~
+S
+#8615
+The entrance to a very small village.~
+   You are standing at the north entrance to a very small village. To
+the south lies the village center and to the north the road continues over a
+few hills.  A newt is running around on the ground here.
+~
+86 0 1
+D0
+~
+~
+0 -1 8616
+D2
+~
+~
+0 -1 8614
+E
+newt~
+When you look at the newt you realize that this must be a poor adventurer that
+has been turned into this newt, since there are no newts in this part of the
+country. The newt is far to fast for you to catch.
+~
+S
+#8616
+A road going over a few hills.~
+  You are standing on a road going over a few small hills. To the south
+you can see a small village and the east the road continues over the hills.
+A small game path leads west.
+~
+86 0 4
+D1
+~
+~
+0 -1 8617
+D2
+~
+~
+0 -1 8615
+D3
+~
+~
+0 -1 27195
+S
+#8617
+A road going over a few hills.~
+   You are standing on a road going over a few small hills. To the west you
+can see the road continue over the hills and to the north you can see a big
+fortress.
+~
+86 0 4
+D0
+~
+~
+0 -1 8618
+D3
+~
+~
+0 -1 8616
+S
+#8618
+In front of a big fortress.~
+  You are standing in front of a very big fortress. It is impossible to get
+into the fortress since the drawbridge is up. To the south a road goes over a
+few small hills and to the east you can see the entrance to a forest.
+~
+86 0 2
+D1
+~
+~
+0 -1 8619
+D2
+~
+~
+0 -1 8617
+E
+fortress~
+The fortress is very big and you can see that it is a french fortress since
+the french flag is waving at the top of the towers.
+~
+S
+#8619
+The entrance to a big forest.~
+  You are standing at the entrance to a very big forest. To the west you
+can see a big fortress. To the east a path goes into the forest.
+~
+86 0 3
+D1
+~
+~
+0 -1 8629
+D3
+~
+~
+0 -1 8618
+S
+#8620
+A road going across the field.~
+   You are standing on a road going across a big field. To the north you can
+see a big forest and to the south you can see a road intersection.
+~
+86 0 2
+D0
+~
+~
+0 -1 8621
+D2
+~
+~
+0 -1 8602
+S
+#8621
+In front of a big forest.~
+   You are standing in front of a big, very dense forest. To the north, 
+you see the road turning into a small path into the forest. To the south,
+you can see the road going across the field.
+~
+86 0 2
+D0
+~
+~
+0 -1 8622
+D2
+~
+~
+0 -1 8620
+S
+#8622
+Inside a very dense forest.~
+   You are standing in a big very dense forest. To the east, you see the 
+path continue into the forest. To the south, you can see the end of the
+forest.
+~
+86 0 3
+D1
+~
+~
+0 -1 8623
+D2
+~
+~
+0 -1 8621
+S
+#8623
+Inside a very dense forest.~
+   You are standing in a big, very dense forest. It is very quiet here and
+you start to feel very uncomfortable. You also notice that there aren't
+any animals here. There are three dead knights hanging on a tree here with
+a lance through them. The exits here are east and west.
+~
+86 0 3
+D1
+~
+~
+0 -1 8624
+D3
+~
+~
+0 -1 8622
+E
+knights~
+Its an awful mess. There are blood all over the knights and the lance must
+have been driven through them with a terrible force.
+~
+S
+#8624
+A glade in the forest.~
+   You are standing in a small glade in the forest. This is the glade of the
+knight with three heads and you realize that this is a very dangerous place.
+The exits here are west and north.
+~
+86 0 3
+D0
+~
+~
+0 -1 8625
+D3
+~
+~
+0 -1 8623
+S
+#8625
+A path through the forest.~
+   You are standing on a path going through the forest. To the south and to
+the north the path continues through the forest.
+~
+86 0 3
+D0
+~
+~
+0 -1 8626
+D2
+~
+~
+0 -1 8624
+S
+#8626
+A path through the forest.~
+   You are standing in a big, very dense forest. To the north, you can see
+an intersection in the forest. To the south, the path continues through
+the forest.
+~
+86 0 3
+D0
+~
+~
+0 -1 8627
+D2
+~
+~
+0 -1 8625
+S
+#8627
+An intersection in the forest.~
+   You are standing on an intersection in a big forest. You can see a huge
+larch growing here. Paths go through the forest in all directions from
+here.
+~
+86 0 3
+D0
+~
+~
+0 -1 8642
+D1
+~
+~
+0 -1 8641
+D2
+~
+~
+0 -1 8626
+D3
+~
+~
+0 -1 8628
+E
+larch~
+Carved into the larch is the text  "Lesson number one: The Larch".
+~
+S
+#8628
+Inside a forest.~
+   You are standing in a big forest. To the west, the path continues
+through the forest and to the east, you can see an intersection in the
+forest.
+~
+86 0 3
+D1
+~
+~
+0 -1 8627
+D3
+~
+~
+0 -1 8629
+S
+#8629
+Inside a forest.~
+  You are standing in a big forest. To the west, you can see the entrance
+and to the east, you can see the path continue deeper into the forest.
+~
+86 0 3
+D1
+~
+~
+0 -1 8628
+D3
+~
+~
+0 -1 8619
+S
+#8630
+A road going across the field.~
+   You are standing on a road going across a big field. To the north, the
+road continues over the field and to the west, you can see a road
+intersection.
+~
+86 0 2
+D0
+~
+~
+0 -1 8631
+D3
+~
+~
+0 -1 8602
+S
+#8631
+A road going across the field.~
+   You are standing on a road going across a big field. To the north, you
+can see a very big grass field and to the south, you can see the road
+continue over the field.
+~
+86 0 2
+D0
+~
+~
+0 -1 8632
+D2
+~
+~
+0 -1 8630
+S
+#8632
+A road going across a grass field.~
+   You are standing on a very big grass field. To the north, you can see a
+big castle and to the south, the road continues over the field.
+~
+86 0 2
+D0
+~
+~
+0 -1 8633
+D2
+~
+~
+0 -1 8631
+S
+#8633
+In front of a castle.~
+   You are standing in front of a castle. The many flags and flowers around
+the castle tells you that there is a wedding going on here. To the north you
+can enter the castle and to the west and south the road continues over the
+field.
+~
+86 4 2
+D0
+~
+~
+0 -1 8634
+D2
+~
+~
+0 -1 8632
+D3
+~
+~
+0 -1 8639
+S
+#8634
+The hallway of the castle.~
+   You are standing in the hallway of the castle. You can see lots of flowers
+and gifts around here. The walls are filled with paintings and the people here
+are very happy. To the north you can see a grand staircase, to the west lies a
+ballroom and to the south lies the entrance to the castle.
+~
+86 8 0
+D0
+~
+~
+0 -1 8636
+D2
+~
+~
+0 -1 8633
+D3
+~
+~
+0 -1 8635
+E
+flowers~
+There are lots of flowers lying around here but they wouldn't live for long if
+you took them with you.
+~
+E
+gifts~
+There are lots of wedding gifts here but they don't have any value for you.
+~
+E
+paintings~
+The paintings are very beautyful but the are hanging to high up on the walls
+for you to reach.
+~
+S
+#8635
+In the castle ballroom.~
+   You are standing in a big ballroom. It is very big here and you can see
+that it is a perfect place for dancing. In the roof you can see a huge
+chandelier. To the east lies the hallway of the castle.
+~
+86 8 0
+D1
+~
+~
+0 -1 8634
+E
+chandelier~
+The chandelier is very beautyful and filled with candles but its hanging to
+high up for you to reach.
+~
+S
+#8636
+In front of a staircase.~
+   You are standing in front of a big staircase. The staircase is made of
+stone and it looks very old. You can see a few torches hanging on the wall
+here. The exits here are up and south.
+~
+86 8 0
+D2
+~
+~
+0 -1 8634
+D4
+~
+~
+0 -1 8637
+E
+torches~
+The torches are lighting up the staircase but they are hanging to high up for
+you to reach.
+~
+S
+#8637
+On top of a staircase.~
+   You are standing in front of a big staircase. You can see a few torches
+hanging on the wall here. To the north you can see a door leading into a
+room and the other exit here is down the stairs.
+~
+86 8 0
+D0
+~
+~
+0 -1 8638
+D5
+~
+~
+0 -1 8636
+S
+#8638
+In the Princes room.~
+   This is the room of the Prince of this castle. You can see lots of papers
+and pencils here. There is something over this room that makes you feel very
+sad.
+~
+86 8 0
+D2
+~
+~
+0 -1 8637
+S
+#8639
+A road going across a grass field.~
+   You are standing on a very big field. You can see a big tree growing next
+to the road here. To the south you can see a big castle and to the north you
+can see the entrance to a forest.
+~
+86 0 2
+D0
+~
+~
+0 -1 8640
+D1
+~
+~
+0 -1 8633
+E
+nest~
+You see that this is the nest of an european swallow since there are no traces
+of coconuts in or around it.
+~
+E
+tree~
+It is a very big oak and on one of the branches you can see a nest.
+~
+S
+#8640
+In front of a forest.~
+   You are standing in front of a big forest. To the south you can see a road
+going over a very big field and to the north you can see a path going into the
+forest.
+~
+86 0 2
+D0
+~
+~
+0 -1 8641
+D2
+~
+~
+0 -1 8639
+S
+#8641
+A path through a forest.~
+   You are standing on a path going through the forest. To the west you can
+see a intersection in the forest and to the south you can see the entrance to
+the forest.
+~
+86 0 3
+D2
+~
+~
+0 -1 8640
+D3
+~
+~
+0 -1 8627
+S
+#8642
+A path through the forest.~
+   You are standing on a path going through a big forest. To the south you can
+see a intersection in the forest. To the north the forest seems to get more
+dense and more dusk.
+~
+86 0 3
+D0
+~
+~
+0 -1 8643
+D2
+~
+~
+0 -1 8627
+S
+#8643
+A path through a very dense forest.~
+   You are standing on a path going through a big forest. The forest is very
+dense here and there is a heavy fog lying here. You feel very uncomfortable 
+and you have a feeling that someone is watching you. The exits here are south
+and west.
+~
+86 0 3
+D2
+~
+~
+0 -1 8642
+D3
+~
+~
+0 -1 8644
+S
+#8644
+A path through a very dense forest.~
+   You are standing on a path going through a big forest. The forest is very
+dense here, and there is a heavy fog lying here. The exits here are east
+and north.
+~
+86 0 3
+D0
+~
+~
+0 -1 8645
+D1
+~
+~
+0 -1 8643
+S
+#8645
+A path through a very dense forest.~
+   You are standing on a path going through a big forest. The forest is very
+dense here and there is a heavy fog lying here. To the east the forest seems 
+to get a little lighter and to the south a path continues into the fog.
+~
+86 0 3
+D1
+~
+~
+0 -1 8646
+D2
+~
+~
+0 -1 8644
+S
+#8646
+A path through a very dense forest.~
+   You are standing on a path going through a big forest. To the east you can
+see the entrance to the forest and to the west the forest gets more dense.
+~
+86 0 3
+D1
+~
+~
+0 -1 8647
+D3
+~
+~
+0 -1 8645
+S
+#8647
+At the entrance to the forest.~
+   You are standing at the entrance to a very big forest. To the west a path
+goes into the forest and to the north you can see the foot of a big mountain.
+~
+86 0 3
+D0
+~
+~
+0 -1 8648
+D3
+~
+~
+0 -1 8646
+S
+#8648
+At the foot of a mountain.~
+   You are standing at the foot of a big mountain. To the north a path
+continues up in the mountain and to the south you can see the entrance to a
+big forest.
+~
+86 0 5
+D0
+~
+~
+0 -1 8649
+D2
+~
+~
+0 -1 8647
+S
+#8649
+A path going up a mountain.~
+   You are standing on a path going up a big mountain. From the top of the
+mountain you can hear big explosions. To the west you can see a deep ravine.
+To the north a path continues up the mountain and to the south you can see the
+bottom of the mountain.
+~
+86 0 5
+D0
+~
+~
+0 -1 8650
+D2
+~
+~
+0 -1 8648
+S
+#8650
+A path going up a mountain.~
+   You are standing on a path going up a big mountain. From the top of the
+mountain you can here big explosions. To the west you can see a deep ravine.
+To the east a path continues up the mountain and to the south a path goes down
+the mountain.
+~
+86 0 5
+D1
+~
+~
+0 -1 8651
+D2
+~
+~
+0 -1 8649
+S
+#8651
+At the top of the mountain.~
+   You are standing at the top of the mountain. To the north lies a big ravine
+and on the other side of it you can see another mountain. To the west a road
+goes down the mountain. To the east a road continues over the top.
+~
+86 0 5
+D1
+~
+~
+0 -1 8652
+D3
+~
+~
+0 -1 8650
+S
+#8652
+At the top of the mountain.~
+   You are standing at the top of the mountain. You have a feeling that there
+is something very dangerous to the north. To the north and to the west the road
+continues over the mountain.
+~
+86 0 5
+D0
+~
+~
+0 -1 8653
+D3
+~
+~
+0 -1 8651
+S
+#8653
+At the entrance to a big cave.~
+   You are standing the entrance to a very big cave. You feel very
+uncomfortable. To the north a small path leads into the cave and to the south a
+road continues over the top of the mountain.
+~
+86 0 5
+D0
+You think that you saw something small and white move in there.
+~
+~
+0 -1 8654
+D2
+~
+~
+0 -1 8652
+S
+#8654
+Inside a big cave.~
+   You are standing inside very big cave. You feel very uncomfortable here. To
+the west a small path leads into the cave and to the south a
+road continues over the top of the mountain.
+~
+86 1 5
+D2
+~
+~
+0 -1 8653
+D3
+~
+~
+0 -1 8655
+S
+#8655
+Inside a big cave.~
+   You are standing inside very big cave. You have the feeling that there was
+supposed to be a terrible monster here but that the designer of this area never
+finished it. To the east and to the north a path continues through the cave.
+~
+86 1 5
+D0
+~
+~
+0 -1 8656
+D1
+~
+~
+0 -1 8654
+S
+#8656
+Inside a big cave.~
+   You are standing inside very big cave. There is something carved into one
+of the walls here. To the south and to the north a path continues through the
+cave.
+~
+86 1 5
+D0
+~
+~
+0 -1 8657
+D2
+~
+~
+0 -1 8655
+E
+wall~
+Carved into the wall is the following: Here may be found the last words of
+Joseph of Arimathea. He who is valiant and pure of spirit may find the
+holy grail in the castle of AAAAAAAaaaaaaaaugh...
+~
+S
+#8657
+Inside a big cave.~
+   You are standing inside very big cave. You feel very uncomfortable
+here. To the west you can see the entrance to the cave and to the south a
+path continues through the cave.
+~
+86 1 5
+D2
+~
+~
+0 -1 8656
+D3
+~
+~
+0 -1 8658
+S
+#8658
+At the entrance to a big cave.~
+   You are standing at the entrance to a very big cave. You feel very
+uncomfortable here. To the west you can see the river of death floating very
+very far down. To the east a path goes into the cave and to the north a narrow
+path goes next to the river of death.
+~
+86 0 5
+D0
+~
+~
+0 -1 8659
+D1
+~
+~
+0 -1 8657
+S
+#8659
+A narrow path.~
+   You are standing at a narrow path. To the west you can see the river of
+death floating far far down. You better be careful so that you down fall down
+in it. To the north and south the path continues along the river.
+~
+86 0 5
+D0
+~
+~
+0 -1 8661
+D2
+~
+~
+0 -1 8658
+D3
+Far far down you see the river of death floating.
+~
+~
+0 -1 8660
+S
+#8660
+Down into the river of death.~
+   You fall and fall and fall down against the river of death. When you hit
+the river you can feel the cold water enveloping you and it sucks you down down
+down.....
+~
+86 2 5
+D1
+~
+~
+0 -1 8659
+E
+death_text~
+Dark water chokes your lungs, leaving you to flounder about without air.
+~
+S
+#8661
+A narrow path.~
+   You are standing on a narrow path. To the west you can see the river of
+death floating far far down. You better be careful so that you down fall down
+in it. To the north you can see a bridge over the river of death and to
+the south the path continues along the river.
+~
+86 0 5
+D0
+~
+~
+0 -1 8662
+D2
+~
+~
+0 -1 8659
+S
+#8662
+In front of a bridge~
+   You are standing in front of a bridge going over the river of death. But
+the bridge is very old and it seems very weak. To the west you can see the
+bridge and to the south a path leads back along the river.
+~
+86 0 5
+D2
+~
+~
+0 -1 8661
+D3
+The bridge doesn't look strong enough to support your weight! If you carry on
+your journey that way, you may fall down againist the river of death and DIE!
+~
+~
+0 -1 8663
+S
+#8663
+Down into the river of death.~
+   The bridge breaks apart under you and you fall and fall and fall down
+against the river of death. When you hit the river you can feel the cold water
+enveloping you and it sucks you down down down.....
+~
+86 2 5
+D1
+~
+~
+0 -1 8662
+E
+death_text~
+Dark water chokes your lungs, leaving you to flounder about without air.
+~
+S
+#0
+$~

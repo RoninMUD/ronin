@@ -1,0 +1,1641 @@
+#28700
+drink potion protein~
+protein drink~
+A protein drink has been left behind.~
+~
+10 402653184 1
+30 39 90 0
+10 20000 1000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28701
+drink protein potion double~
+double protein drink~
+A very strong protein drink was forgotten here.~
+~
+10 402653184 1
+30 39 39 90
+10 35000 1500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28702
+potion sleep rest~
+potion of rest~
+A potion of rest was forgotten here.~
+~
+10 402653184 1
+60 38 4 111
+10 12000 500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28703
+drink health potion~
+health drink~
+A health drink has been left behind.~
+~
+10 402653184 1
+30 140 74 75
+10 145000 15625
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28704
+potion cleansing~
+potion of cleansing~
+A potion of great value was forgotten here.~
+~
+10 0 1
+60 142 0 0
+10 45000 7500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28705
+potion holy holiness~
+potion of holiness~
+A potion of holiness has been left here.~
+~
+10 402653184 1
+60 88 0 0
+10 85000 20000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28706
+potion evil evilness~
+potion of evilness~
+A potion of evilness has been left here.~
+~
+10 402653184 1
+60 89 0 0
+10 85000 20000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28707
+bread loaf grain~
+loaf of multi-grain bread~
+A loaf of multi-grain bread was left here.~
+~
+19 0 1
+24 0 0 0
+10 11 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28708
+muffin grain~
+multi-grain muffin~
+A multi-grain muffin was left here.~
+~
+19 0 1
+12 0 0 0
+10 7 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28709
+wings wax pair~
+pair of wax wings~
+A pair of wax wings was forgotten here.~
+~
+9 402653184 257
+7 0 0 0
+10 59599 1200
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+16777216
+#28710
+wings wax pair deluxe~
+deluxe pair of wax wings~
+A deluxe pair of wax wings was left here.~
+~
+9 402653184 257
+7 0 0 0
+10 87599 5200
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 2
+A
+18 2
+B
+16777216
+#28711
+mug brew gods~
+Brew of the Gods~
+A mug full of a dark liquid remains here.~
+~
+17 403177472 1
+20 20 1 0
+10 7 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28712
+glass wine gods~
+Wine of the Gods~
+A glass of wine was left here.~
+~
+17 403177472 1
+20 20 2 0
+10 9 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28713
+ale gods glass~
+Ale of the Gods~
+A glass of ale was left here.~
+~
+17 403177472 1
+20 20 3 0
+10 12 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28714
+whisky gods glass~
+Whisky of the Gods~
+A glass of whisky was left here.~
+~
+17 403177472 1
+20 20 5 0
+10 14 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28715
+mail chain chainmail gold golden~
+solid gold chainmail~
+A shiny gold chainmail was left here.~
+~
+9 402653185 9
+9 0 0 0
+10 75000 6700
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+18 2
+#28716
+helmet war gold golden~
+solid gold war helmet~
+A bright golden war helmet is resting here.~
+~
+9 402653185 17
+5 0 0 0
+10 48000 2500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 2
+A
+5 2
+#28717
+shield gold golden~
+solid gold battle shield~
+A shiny gold shield was left behind here.~
+~
+9 402653185 513
+11 0 0 0
+10 59000 4500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 25
+A
+18 3
+#28718
+leggings chain gold golden~
+pure gold chain leggings~
+Some pure golden chain leggings sparkle here.~
+~
+9 402653185 33
+5 0 0 0
+10 95000 8000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+18 3
+#28719
+sleeves chain gold golden~
+pure gold chain sleeves~
+Some chain sleeves of pure gold sparkle here.~
+~
+9 402653185 257
+5 0 0 0
+10 125000 5000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 5
+A
+18 3
+#28720
+staff dark influence~
+The Staff of Dark Influence~
+A dark staff radiates a strange kind of power here.~
+~
+1 242227734 65537
+0 0 -1 0
+10 6666666 66666
+8
+E
+staff~
+    This staff is short, shiny, and pitch black without any flaws.
+Its polished surface reflects the light and the surroundings.
+Without this reflection, you somehow know that you wouldn't be
+able to see the staff at all, even in sunlight. It seems to hum
+with power in your hands and radiate pure evil. This is the
+staff of the evil itself, the ruler of the dead, Pluto.
+~
+X
+~
+0 0 0
+M
+As you hold the staff, a dark aura of power descends upon you.~
+As $n holds the Dark Staff, you can sense a dark aura of power surround $m.~
+As you struggle to remove the staff, you understand the power it held you under.~
+$n removes the staff and looks around dazedly, as if awakening from a dream.~
+A
+19 4
+A
+17 20
+A
+9 66
+B
+8388608
+#28721
+blade unholy sacrifice~
+The Blade of Unholy Sacrifice~
+A dark blade radiates evil here.~
+$r blade radiates and shimmers with pure evil as it seeks out it's target.~
+5 215018006 8193
+0 6 6 3
+10 6666666 66666
+8
+E
+blade~
+    This blade is a rusty shade of crimson red. The paint on it looks tacky
+and poorly done. Spots of dull silver shine through the layer. The blade
+itself is very sleek and VERY sharp. This sword has been places and done
+deeds that it is best not to even imagine.
+~
+X
+~
+0 0 0
+M
+As you wield the blade, you are overcome with malicious bloodlust.~
+As $n wield the blade, $s eyes gleam with evil intent.~
+As you drop the blade your head throbs from the weapons residual power.~
+$n struggles to drop the blade and bends over in agony.~
+A
+19 6
+A
+18 6
+A
+13 6
+B
+8
+#28722
+dagger knife gods~
+The Dagger of the Gods~
+A sparkling dagger of magnificent quality rests here.~
+$r dagger flies stealthfully at the back of the unworthy opponent.~
+5 402653184 8193
+0 4 5 11
+12 45000 1500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+5 1
+#28723
+sword blade gods~
+The Blade of the Gods~
+A sword of magnificent quality was left here.~
+$r blade swings with amazing precision at $V's vital organs.~
+5 402653184 8193
+0 4 5 3
+14 65000 3500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+2 1
+#28724
+mallet hammer gods~
+The Mallet of the Gods~
+A large hammer of magnificent quality was left behind here.~
+$r mallet swings mightily at the head of the unfortunate victim.~
+5 402653184 8193
+1 4 7 6
+16 85000 5500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+4 1
+#28725
+lyre golden gods~
+The Golden Lyre of the Gods~
+A golden lyre of magnificent quality is resting on the ground here.~
+~
+24 402653184 16385
+0 0 0 0
+10 35000 3500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+5 2
+#28726
+drum gods~
+The Drum of the Gods~
+A drum of magnificent quality has been left here.~
+~
+24 402653184 16385
+0 0 0 0
+10 35000 3500
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+4 2
+#28727
+key wax smaller~
+smaller wax key~
+A very small wax key is sitting on the ground.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28728
+key little wax~
+little wax key~
+A little wax key has been left behind here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28729
+key pitch black~
+pitch black key~
+A pitch black key is barely visible in the shadows.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28730
+key shiny little~
+shiny little key~
+A shiny little key has been left here.~
+~
+18 0 1
+1 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28731
+package~
+small package~
+Someone's left a small package here.~
+~
+15 0 1
+100 0 0 0
+6 500 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28732
+postcard~
+postcard~
+a postcard is lying on the ground.~
+~
+16 0 1
+0 0 0 0
+1 300 5
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28733
+pen~
+pen~
+A small pen is lying on the ground.~
+~
+21 0 1
+0 0 0 0
+1 50 2
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28734
+scroll recall~
+scroll of recall~
+A scroll has carelessly been left here.~
+~
+2 268435520 16385
+12 42 -1 -1
+4 2000 100
+100
+E
+scroll~
+The scroll has written a formulae of 'Word of Recall' upon it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28735
+scroll identify~
+scroll of identify~
+A scroll has carelessly been left here.~
+~
+2 268435520 16385
+12 71 -1 -1
+1 2000 50
+100
+E
+scroll identify~
+The scroll has a magic formula drawn upon it:
+     ???
+    ?   ?
+       ?
+      ?
+      ?
+      *
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28736
+lipstick bright red~
+Bright Red Lipstick~
+A stick of bright red lipstick has been left on the ground here.~
+~
+13 403177472 1
+0 0 0 0
+10 150 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28737
+powder jar green~
+A jar of bright green face powder~
+A jar of some strange green substance was dropped here.~
+~
+13 403177472 1
+0 0 0 0
+10 250 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28738
+can blue snake spray~
+A blue can of Snake Styling Spray(tm)~
+A blue can of some strange substance was dropped here.~
+~
+13 403177472 1
+0 0 0 0
+10 500 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28739
+wings wax melted~
+A pair of melted Wax Wings~
+A pair of blackened and melted wax wings were left here.~
+~
+9 248569856 257
+8 0 0 0
+10 565000 12675
+15
+E
+wings~
+    These are the wings that Icarus wore in his legendary escape from the
+Labyrinth and flew too close to the sun in. They are blackened and deformed
+now, with feathers sticking out in messy clumps. It is unclear whether they
+are capable of flight anymore, but they do seem to radiate a power that the
+new pairs of wax wings do not.
+~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+2 1
+A
+52 15
+B
+16777216
+#28740
+shield times~
+The Shield of All Times~
+A shield of some value was forgotten here.~
+~
+9 250621953 513
+5 0 0 0
+10 450670 8575
+15
+E
+shield~
+    This shield is all Cronus took with him as a reminder of his time spent
+on the peaks of Mount Olympus as King of all the Gods and all the universe.
+It is dull and dusty now, unshined and unused for the past centuries. Under
+that, however, you can sense a great power coming from this shield.
+~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+12 20
+A
+3 2
+A
+53 10
+B
+20
+#28741
+coin fate~
+The Coin of Fate~
+A shiny silver coin was forgotten here.~
+$r coin flips slowly through the air, deciding $V's fate.~
+5 134217728 24577
+6 5 1 6
+10 66666 666
+12
+E
+coin~
+    This coin was a payment to Charon by a lost soul in exchange for passage
+across the dreaded River Styx in the Underworld. It doesn't look like any
+standard monetary coin you have ever seen. On one side is a grinning, naked
+skull. On the other is a single glaring eye.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28742
+crown purity~
+The Crown of Purity~
+A magnificent, sparkling crown was dropped here.~
+~
+9 134217793 17
+0 0 0 0
+5 10 3333
+1
+E
+crown~
+This magnificent crown is only a fragment of what it can be. It is a piece
+of a great ancient crown of eld which was parted into 3 in ages past
+because of its extreme powers. Legends say that when all three sections
+of this powerful glam are reunited, put in a container with magical
+properties and set at the feet of the one true King of Kings, The
+crown that the ancients tore apart will be reformed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28743
+crown bravery~
+The Crown of Bravery~
+A magnificent, sparkling crown was dropped here.~
+~
+9 134217793 17
+0 0 0 0
+5 10 3333
+1
+E
+crown~
+This magnificent crown is only a fragment of what it can be. It is a piece
+of a great ancient crown of eld which was parted into 3 in ages past
+because of its extreme powers. Legends say that when all three sections
+of this powerful glam are reunited, put in a container with magical
+properties and set at the feet of the one true King of Kings, The
+crown that the ancients tore apart will be reformed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28744
+crown majesty~
+The Crown of Majesty~
+A magnificent, sparkling crown was dropped here.~
+~
+9 134217793 17
+0 0 0 0
+5 10 3333
+1
+E
+crown~
+This magnificent crown is only a fragment of what it can be. It is a piece
+of a great ancient crown of eld which was parted into 3 in ages past
+because of its extreme powers. Legends say that when all three sections
+of this powerful glam are reunited, put in a container with magical
+properties and set at the feet of the one true King of Kings, The
+crown that the ancients tore apart will be reformed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28745
+crown ancient kings~
+The Crown of Ancient Kings~
+A magnificent, sparkling crown was dropped here.~
+~
+9 177531969 17
+5 0 0 0
+5 10 3333
+10
+E
+crown~
+    This is the legendary crown made of many, the divided reunited, the
+Crown of Ancient Kings. The legens said that a great king died ages ago
+and split his crown into three smaller ones. Each of these was sent to a
+far kingdom and worn on the head of its king. In the future, when three
+more great kings came along and each wore a section of the crown a great
+warrior would come along, collect and reunite the crown. This hero will
+then be praised and wear it for all times.
+~
+X
+~
+0 0 0
+M
+As you wear this legendary crown, you can feel its power flow through you.~
+$n seems to glow with an aura of Majesty as $e wears the legendary crown.~
+Your confidence and bravery fade as you remove the ancient relic.~
+$n seems to fade a little as $e removes the sacred crown.~
+A
+19 3
+A
+18 3
+A
+13 -1
+B
+8192
+#28746
+armor hephaestus~
+Hephaestus' Armor of Enchantment~
+Some magical armor glitters on the ground here.~
+~
+9 134742017 9
+20 0 0 0
+25 10 10
+30
+E
+armor~
+    This magical armor came straight from Hephaestus' own forge near the
+peak of Mount Olympus and was one of his finest creations. It saw Achilles
+safely through the most difficult and bloody battles of the Trojan War.
+~
+X
+~
+7 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+A
+13 15
+T
+240
+B
+32768
+#28747
+fleece golden~
+The Golden Fleece~
+Some golden fur sits in a pile here.~
+~
+9 134742017 1025
+20 0 0 0
+5 10 10
+30
+E
+fleece~
+    This is the legendary Golden Fleece that Jason led the Argonauts to
+capture from the sacred golden ram. It is very soft to the touch yet you
+can sense it's magical powers. The hair is not merely yellow in color, it
+is really gold.
+~
+X
+~
+7 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+13 15
+T
+240
+B
+32
+#28748
+shield aegis~
+Aegis~
+A shield of some value was forgotten here.~
+~
+9 134742017 513
+20 0 0 0
+15 10 10
+30
+E
+aegis~
+    This is Athena's sacred shield, the Aegis. She gave it to Persius for
+protection when he went to do battle with Medusa, and with it he was able
+to defeat her. The shield is blindingly shiny and undented, made partly
+from gold and partly from silver.
+~
+X
+~
+7 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+13 15
+T
+240
+B
+524288
+#28749
+torch eternal fire~
+The Torch of Eternal Fire~
+A torch burns slowly on the ground here.~
+~
+1 134742017 65537
+1 1 -1 0
+3 10 10
+30
+E
+torch~
+    This is the sacred torch that Promethius stole from the gods to give
+to mortal men so they could continue to live. Zeus planned to let them die
+because Epimethius made them weak, but Promethius brought them the fire
+that sustained them. He paid for it dearly.
+~
+X
+~
+7 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 5
+A
+13 15
+T
+240
+B
+8
+#28750
+box pandora~
+Pandora's Box~
+A small and non-descript looking box was left here.~
+~
+15 134217730 16385
+8000 5 0 0
+1 10 5000
+1
+E
+box~
+    This is Pandora's legendary box, delivered to her by Hermes at
+Zeus' command. Despite her husbands pleading her not to, her
+curiosuty got the best of her and she opened it, spilling
+onto the world the hate, evil and death that will reign over
+them for all eternity. When she closed the box, some sort of
+magical power was left inside. Legend says that under the right
+circumstances, those powers can be used to create a powerful item
+to combat the very evils this box let loose.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28751
+fountain marble zeus gods~
+A huge marble fountain~
+A marble fountain with a statue of Zeus stands in the center of the square.~
+~
+17 403177536 0
+100000 100000 0 0
+1000 10 10
+100
+E
+fountain~
+    This is a huge, finely crafted fountain made of pure white marble. It
+is a set of several cascading round pools that each spill out on to the
+one below them. In the center of the top pool is a huge statue ot the
+King of all Gods and all the universe, Zeus. He is standing straight and
+tall, looking majestically off to the North, toward Olympus.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28752
+valentine heart~
+A bright, red, heart-shaped valentine~
+A large, red, paper heart is sitting on the ground here.~
+~
+8 403177472 513
+0 0 0 0
+1 3 10
+100
+E
+valentine~
+This valentine is very finely crafted. It is made of bright red paper
+cut into a heart shape, with small pink and purple hearts all around
+the inside of the large red one. The outside edges are trimmed with
+fine white lace. It has a soft, satiny feel to it. Whoever sent this
+must care for you very deeply!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28753
+box wax~
+A small, wax-covered box~
+A small box, covered in wax, is stuck to the floor here.~
+~
+15 403177472 0
+8000 5 0 0
+10000 10 10
+100
+E
+box~
+This small box was left on the floor some time ago and has since been
+sealed to the floor with wax drippings from the working table above
+it. It looks like it could still be opened.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28754
+map central~
+A Central Map~
+A rolled-up map was left here.~
+~
+12 0 1
+0 0 0 0
+1 100 5
+100
+E
+map~
+                               Temple Altar                El Museo
+                                    |                          |
+                Sprite    Theldon's |                          |
+                Village      Crypt--+                  Ershteep Village
+                   |                |                          |
+See WEST -----+-----+-------+----- Market ----------------------+--- See EAST
+             |             |      Square
+          Griffon          |         |-------+---+ 
+          Village          |         |       |   |  
+             |             |      Training   |   |             Galaxy
+             +--Evil       |       Ground    | Sailor---Ocean     / 
+               Outpost     |                 |                   / 
+                           |              Captain               /
+                           +--Underworld     |----------------Rift
+                         Zoo    Wasteland   See SOUTH
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28755
+map northeast~
+A NorthEast Map~
+A rolled-up map was left here.~
+~
+12 0 1
+0 0 0 0
+1 100 5
+100
+E
+map~
+           |--------+---Brigand Camp                             NN   N
+         Jal-Pur     \              \                            N N  N
+                      \              \                           N  N N
+       Cavern of    Helventia         +--Tarion Desert           N   NN
+       Lost Souls   Mountains---+              |                 N    N  
+ City of    |      _/           |              |                  ||
+Cornelius---------+         Eryndlyn          / \                 ||
+                  |                          /   Ancient          ||
+                Moria                       /     Sphinx          ||
+                  |                      Great          West <------------> East
+        Mystic    |                     Pyramid                   ||
+      Monastery   |                                               ||  
+ Crystal  |       |                                             South
+  Tower --+-------+-----Lorien 
+               See|East
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28756
+map south~
+A South Map~
+A rolled-up map was left here.~
+~
+12 0 1
+0 0 0 0
+1 100 5
+100
+E
+map~
+                          See Central | Ferry to Daimyo
+                           +----------+----------+
+                           |                     |
+                       Elemental Caves           +----- Wolf Kingdom
+                      /                          |
+                Berbalang                        |
+          Abyss                                  |
+            \                                    |    
+           Druids --------------------+----------+
+                                      |          
+                                   La Soudre            
+                                      |          
+                                 +-------------------+ 
+                     Pirate Ship                       \
+                                                        Stone Monkey Island~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28757
+map east~
+An East Map~
+A rolled-up map was left here.~
+~
+12 0 1
+0 0 0 0
+1 100 5
+100
+E
+map~
+                    See | NE              Zyekia                Sewers
+    Wyvern's Spur       |              /              \        /
+               |        |          The                |     King
+            Graveyard---+          Lands              |    Welmar's
+                        +--Morgoth   |                |     Castle
+                        |            |                |       |
+See MAP -----------------+---------Halfling Village----+-------|
+       Dwarven Kingdom -|                             |       | 
+         Da'Sharr       |                             |     Golden 
+          Prison        |  +--- Battlefield           |     Pagoda
+              \         +--+--- Elemental Canyon    Troll Village
+Castle         \        |  |
+Ravenloft    Village    |   \
+    |    +---  of   ----+    \
+    |----|   Barovia          Fire Newt Caves~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28758
+map west~
+A West Map~
+A rolled-up map was left here.~
+~
+12 0 1
+0 0 0 0
+1 100 5
+100
+E
+map~
+Vermilion's                              Dreadful---Ettin
+ Tower                 Haunted            Swamp    Village    Canticle
+ |                       House              |                /
+ |                 Zyca /     \     Monks   |          |---+
+Lost -+-+ Holy    Castle      |   Monestary |        Shire
+World |   Grail            Goblin      |    |          |
+      /    |         Elven Caves       |    |          |
+  Jungle   \          Town    |        |    |          |
+            +            \    +----+---+----+-+--------+---- See MAP
+            -+---Sonicity-----|                \   
+        Chess       |           \               Quickland  
+       Kingdom      |         Elven Woods                 
+                Sea of Love        |
+                    |            Forbidden Maze
+              See SOUTHWEST
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28759
+map southwest~
+A SouthWest Map~
+A rolled-up map was left here.~
+~
+12 0 1
+0 0 0 0
+1 100 5
+100
+E
+map~
+                         See WEST
+                            |
+                         Sea|of
+         Sandy Shore      Lo|ve
+                   \        |             +---------------+ 
+                    +-+     |             |               |   
+                       \    |             |               |
+       Twisted Dwarves--+--Beach----------Ivory Tower     +- Cthorr
+                            |                             |
+                            |                             |
+                         +--+                           Bluffs
+                         |
+                     +---+
+    Castle of       /    
+     Cantlin ------+  
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28760
+key small tarnished~
+A small tarnished key on a fine string~
+A small key, dulled with age, was forgotten here.~
+~
+18 0 1
+0 0 0 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28761
+pass travelers rest~
+A pass to the Traveler's Rest~
+A small slip of paper was forgotten here.~
+~
+12 134217728 16385
+0 0 0 0
+1 100000 5
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28762
+sandals winged hermes~
+The Legendary Winged Sandals~
+Hermes' legendary winged sandals were somehow left here.~
+~
+9 1 65
+5 0 0 0
+10 10000 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28763
+ring discord~
+The Ring of Discord~
+A ring with strange magical qualities was left here.~
+~
+9 259063105 3
+20 0 0 0
+6 1 73952
+1
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 10
+A
+18 10
+A
+13 50
+T
+5000
+B
+16777236
+#28764
+ring dissonance~
+The Ring of Dissonance~
+A ring with strange magical qualities was left here.~
+~
+9 263256598 3
+20 0 0 0
+6 1 29647
+1
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 10
+A
+18 10
+A
+13 50
+T
+5000
+B
+524308
+#28765
+feather waxy key~
+A waxy feather~
+A single waxy feather sits mysteriously in the corner here.~
+~
+12 524545 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+120
+#28766
+nail rusty key~
+A rusty nail~
+A lone rusty nail sits here, pointy end up, awaiting a victim.~
+~
+12 524308 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+120
+#28767
+cloud bit key~
+A bit of cloud~
+A wispy cloud floats lazily across your vision.~
+~
+12 524545 16385
+0 0 0 0
+10 10 10
+100
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+120
+#28768
+parchment wax daedalus pluto~
+wax-splattered parchment~
+A piece of parchment with brilliant azure lettering lies here.~
+~
+32 268959808 1
+28769 14010 25012 5108
+2 28657 17
+17
+E
+recipe parchment~
+
+ How this came into Pluto's possession is an epic tale of infighting
+among the immortals of Olympus. Globules of hardened wax splattered
+on the parchment suggest that Daedalus had a hand in the mischief.
+ The disorganized blue scrawl is littered with incomplete words and
+scribbled nonsense. Four distinct, separate groups of lettering seem
+to glow with a brilliant azure, standing out clearly against the dull
+blue ink covering the rest of the parchment.
+~
+E
+parchment~
+
+ How this came into Pluto's possession is an epic tale of
+infighting among the immortals of Olympus. Globules of wax
+splattered on the parchment suggest Daedalus had a hand in
+the mischief.
+ The disorganized blue scrawl is littered with incomplete
+words and scribbled nonsense. Four distinct, separate groups
+of lettering seem to glow with a brilliant azure, standing
+out clearly against the dull blue ink covering the rest of
+the parchment.
+~
+X
+~
+82 0 0
+M
+~
+~
+~
+~
+T
+17
+#28769
+bangle lapis lazuli~
+a lapis bangle~
+An azure bangle of polished stone rests here, forgotten.~
+~
+11 144764928 4097
+0 0 0 0
+41 1046527 60649
+0
+E
+bangle~
+
+ A brilliant blue rock has been cut and polished into a
+beautiful bangle.
+~
+X
+~
+5 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 3
+A
+53 2
+T
+13789
+#0
+$~

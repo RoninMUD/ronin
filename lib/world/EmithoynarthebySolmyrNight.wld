@@ -1,0 +1,1773 @@
+#26700
+Before a Large Arch~
+   A great arch spans the north-south path that runs beneath it.  Inscriptions
+adorn the arch in some ancient and forgotten language, dating back to the time
+of some long-ago civilization that existed here.  Although the arch is
+obviously very old it is still in perfect condition, as though time has had no
+effect upon it.  It almost seems like someone has been maintaining the
+structure for all these years, but who that might be is unclear.  The path
+wanders off to the south and seems to split off in the distance.  The
+surrounding landscape seems friendly enough, but any that pass beneath the arch
+feel a sense of fear and intimidation--a reminder to never underestimate this
+place.  Strange things might be found in the lands beyond that do not exist
+anywhere else.  It is said that all those that have come to this land and
+experienced what lies beyond have never returned to tell their tales.  What
+dangers lie ahead are unknown.  Will any who pass under this mighty arch live
+to talk about their experiences?  There is only one way to find out.
+~
+267 4 0
+D0
+To the north lies a river that cuts through a dark forest beyond.  The only
+way across is over a fallen log.
+~
+~
+0 -1 6121
+D2
+~
+~
+0 -1 26701
+S
+#26701
+Past the Arch~
+   A great arch spans the path to the north while it continues to the south.
+In the distance the trail appears to split off in three directions.  A constant
+heavy rain falls upon this place, making the ground muddy and hard to traverse.
+Some parts of the path are completely flooded and the only way to continue is
+to jump between the many rocks that protrude from the earth.  A very large rock
+that is covered in mud lies upon the ground to the east.  Upon closer
+inspection a hole covered with tangled branches leads into the rock and
+seems to offer some shelter against the rain.  The branches are covered in
+ragged thorns and are covered in what looks like blood.  Some kind of dark-
+green liquid oozes slowly out of the thorns, making them look very unfriendly
+to any that might disturb them.
+~
+267 0 0
+D0
+~
+~
+0 -1 26700
+D1
+A thick mass of branches covers the hole entrance to the east.
+~
+branches thorns~
+8 -1 26702
+D2
+~
+~
+0 -1 26703
+E
+hole~
+A dark hole leads beneath the rock to the east.  It is covered by a tangle of
+thick branches.
+~
+E
+branches thorns~
+The branches look dangerous if disturbed.  They cover a dark hole into a rock.
+~
+S
+#26702
+Inside the Rock~
+   The interior of the rock is not quite as large as it seems from the outside.
+While the stone itself is immense, the walls of this hole seem to close in
+about you in a most claustrophobic way.  The walls themselves are a deep blue
+in color, flecked with small red gems that sparkle in the light.  The only way
+out of here is the branch-covered hole to the west.  Other than offering some
+shelter from the constant rain outside, there does not seem to be anything
+interesting in here.
+~
+267 9 0
+D3
+A thick mass of branches covers the hole entrance to the west.
+~
+branches thorns~
+8 -1 26701
+E
+gems red~
+Some sort of semi-precious stone is embedded within the rock but is not easily
+dislodged.
+~
+S
+#26703
+Approaching the Split in the Path~
+   The ground here is much more dry than that in the north, perhaps due to
+better drainage or the plants that grow nearby.  The path splits to the south,
+traveling in three different directions.  To the north, a large arch can be
+seen towering over the trail.  The forest rises on both sides of the path and
+does not look very inviting to strangers.  A few tufts of grass grow along the
+side of the trail, thickening at one place.  A dark red fluid trickles out of
+the clump of grass and leaks onto the dry mud that you walk upon.  This has
+colored the mud a blend of dark red and brown.
+~
+267 0 0
+D0
+~
+~
+0 -1 26701
+D2
+~
+~
+0 -1 26704
+E
+blood red fluid grass mud~
+Upon closer inspection, the dark red fluid appears to be still-wet blood...
+~
+S
+#26704
+A Split in the Path~
+   The path splits at this point in three directions.  To the north a great
+arch can just be made out in the distance.  The mast of a large ship peaks over
+the horizon of a sandy beach that lies to the south.  The western path trails
+off in the distance, turning to the north and out of sight after some time.
+The trail to the east leads out onto a wide grassy field filled with flowers.
+The ground here is very flat and dry, unlike ground to the north.  There are
+some holes in the dirt with several types of vegetation growing out of them.
+One type of plant that grows here has a beautiful deep-purple color, its stalk
+is a bright-green green color that makes a striking contrast with the flower.
+The rest of the upper vegetation consists mostly of weeds and other
+uninteresting types of plants.
+~
+267 4 0
+D0
+~
+~
+0 -1 26703
+D1
+~
+~
+0 -1 26716
+D2
+~
+~
+0 -1 26705
+D3
+~
+~
+0 -1 26710
+S
+#26705
+Reaching the Beach~
+   The forest thins out a bit as it reaches sandier lands to the south.  A
+deserted ship lies out in the water farther in that direction, its tall mast
+plainly visible from here.  A small barge rests beached on the shore.  Many
+turtles surround the beach, looking quite lifeless.  To the north the path
+splits off in several directions.  The beach rolls on to the east and the west
+while the shore occupies the south.
+~
+267 0 0
+D0
+~
+~
+0 -1 26704
+D1
+~
+~
+0 -1 26706
+D2
+A small barge can be seen beached on the shore to the south.
+~
+~
+0 -1 26708
+D3
+~
+~
+0 -1 26707
+S
+#26706
+On the Beach~
+   The sand on this beach is bright white and fine-grained.  Some turtles walk
+about this area, seemingly not bothered by anything outside of their own
+mysterious lives.  The path ends here at a gully of rocks and trees, the only
+way to go is back to the west.  The ocean to the south is a most beautiful
+deep-blue color and the clear skies allow a long view out across the sea.  The
+mast of a large ship can be seen a ways out in the water to the southwest.
+~
+267 0 0
+D3
+~
+~
+0 -1 26705
+S
+#26707
+On the Beach~
+   The sand on this beach is bright white and fine-grained.  Some turtles walk
+about this area, seemingly not bothered by anything outside of their own
+mysterious lives.  The path ends here at a gully of rocks and trees, the only
+way to go is back to the east.  The ocean to the south is a most beautiful
+deep-blue color and the clear skies allow a long view out across the sea.  The
+mast of a large ship can be seen a ways out in the water to the southeast.
+~
+267 0 0
+D1
+~
+~
+0 -1 26705
+S
+#26708
+On a Barge~
+   The wooden planks of this barge creak in the gentle waves that wash against
+it and keep it beached on the shore.  The craft is in fairly poor condition as
+many of its floorboards have begun to rot and fall apart.  It is uncertain
+whether or not this vessel would survive a trip into the open sea.  It looks
+like it hasn't been used in a very long time.
+~
+267 4 0
+D0
+~
+~
+0 -1 26705
+D2
+~
+~
+0 -1 0
+S
+#26709
+Onboard an Old Ship~
+   Once aboard this vessel it is immediately noticeable that it is not nearly
+as large as it looks from the shore.  The ship is in a quite degraded state,
+much of it submerged beneath the water and unaccessible from the main deck.
+Nothing visible looks as if it could be used to row or float to shore safely so
+there does not seem to be any way back to land from here.  The mast still
+stands tall from the center of the ship but its sails have long since
+disappeared with the ages.  The boat has probably been stranded here for
+generation upon generation, serving as but a home for a flock of Albatross'.
+~
+267 0 0
+D0
+~
+~
+0 -1 0
+S
+#26710
+A Dry Path~
+   The path here is made from packed dry sand that has not been disturbed in
+some time.  The path continues to the west where it bends around a corner to
+the north.  To the east the path splits to the south, east and the north.  The
+forest here towers over the sides of the trail, the branches of its many trees
+casting dark shadows across the ground.  The leaves are a rusty brown color and
+the bark of the trees looks be to made of iron.  This place is very dark and
+quiet, any sounds being muffled by a thick mist coming from the west.
+~
+267 0 0
+D1
+~
+~
+0 -1 26704
+D3
+A thick blanket of mist shrouds the path to the west.
+~
+~
+0 -1 26711
+S
+#26711
+A Bend in the Dry Path~
+   The path turns to the north here, fading rapidly into the dense mist that
+drifts across the land from that direction.  The moist haze piles up in
+vaporous clumps anywhere it is obstructed or diverted from its southerly
+course.  The trail back to the east is dim and dark, overshadowed by the forest
+that grows close to it.  It is eerily silent here--the thick fog gobbling up
+any noise.
+~
+267 0 0
+D0
+The misty trail continues to the north.
+~
+~
+0 -1 26712
+D1
+The misty trail continues to the east.
+~
+~
+0 -1 26710
+S
+#26712
+Within the Dim Mist~
+   The world grows darker as the mists gather and swirl about this place.  The
+ground is hard underfoot and very little detail of the surroundings can be made
+out.  The fog is so dense that it becomes difficult to breath fresh air here.
+Brief glimpses of some towering shadows can be seen to the north when the mists
+clear up a little.  Where is it that this path might lead?
+~
+267 1 0
+D0
+Nothing can be made out through the mist to the north but a few tall shadows.
+~
+~
+0 -1 26713
+D2
+The misty trail continues to the south.
+~
+~
+0 -1 26711
+S
+#26713
+Approaching a House~
+   The mist clears abruptly before a set of mighty gates that blocks further
+travel along the path.  A large and very beautiful house lies on the other side
+of the gates.  Closer inspection of the barrier reveals a series of strange
+inscriptions and markings that cover the base of the iron structure.  A solid
+wall of mist nearly conceals the path that wanders away to the south.
+~
+267 0 0
+D0
+A set of massive iron gates have been constructed to block the path to the
+north when closed and locked tight.
+~
+gates~
+2 26705 26714
+D2
+A thick blanket of mist shrouds the path to the south.
+~
+~
+0 -1 26712
+E
+gate gates iron inscriptions markings~
+A set of tall iron gates blocks the path to the north.  The gates are covered
+in a strange form of archaic writing.
+~
+S
+#26714
+On the Stairs Before the House~
+   A massive flight of stairs leads from the path in front of the house up to a
+huge door made from some dark and tremendously hard wood.  The doorknob is
+crafted from a similarly dark metal, probably iron, and is extremely large and
+intricate.  As you approach the door it opens wide with a mighty slam!  A rush
+of stale air gusts out from the depths of the house, carrying with it strange
+sounds and a sense of unease.  More mysterious writing adorns the frame around
+the door, written in an ancient language long forgotten.  The darkness from
+within the dwelling seems to permeate the area and the earth trembles!
+~
+267 0 0
+D0
+A massive door occupies the top of the steps to the north.
+~
+door~
+1 -1 26715
+D2
+A huge set of towering gates keeps intruders out of this place.
+~
+gates~
+2 26705 26713
+S
+#26715
+The House of the Mighty King of Ancient Emithoynarthe~
+   The inside of the house is enormous and unusual, as the entire house
+consists of only a single massive room.  Countless paintings and tapestries
+line the walls, depicting scenes of great gods and battles of old. The frames
+of the paintings are marked with inscriptions written in a language that seems
+older than time itself--just looking at the writing evokes images of an age
+long past.  The great hall is devoid of any furniture other than a myriad array
+of art and other valuable artifacts.  A throne of bones occupies the far side
+of the room, its grey-white color a stark contrast to the dark that fills the
+rest of the room.  A small pot burns from behind the throne with a deep crimson
+flame that casts flickering shadows across the walls.  A chill and hauntingly
+ancient voice seems to roam the room, filling the house with a sense of dread.
+The door has slammed shut behind you, leaving no path for escape and you
+realize... the nightmare has just begun!
+~
+267 655368 0
+E
+paintings~
+Nearly all of the paintings portray intense bloody battles of ages long passed,
+when mighty beasts wandered the lands and destroyed all in their paths.  Oddly
+enough, the hero-figure in nearly all of the paintings appears to be the same
+huge man, dealing death to all around him.
+~
+E
+tapestries~
+The largest and most prominent tapestry dominates the entire far wall.  It
+appears to be some sort of family or noble crest that is of deep importance to
+the owner of this house.
+~
+E
+furniture~
+Almost none of the furniture looks be of much practical or comfortable use.
+They are mostly sharp and hard pieces crafted from gold and other precious
+metals.  Most of these are stands and small tables that support various
+artifacts upon their surfaces.
+~
+S
+#26716
+A Widening Path to a Field~
+   The path widens here as it strays away from the split to the west.  It
+wanders along to the east where it enters a large field.  There is more
+vegetation here than the previous parts of this land, each type of plant
+coloring the land with its own beautiful colors.  This place looks pristine and
+untouched for generations, the plants only known before in old myths and
+legends.  One such tale tells of an adventurer who brought one of these plants
+home with him.  He kept it safe and took great care of it and eventually grew
+old and passed away.  The plant lived on, healthy and ever-blossoming.  The
+story continues that the plant still lives in a hidden place, unaffected by
+time, where only the highest priests of the world may enter and gaze upon it.
+The forest thins out here as it opens onto the field, the trees standing tall
+and wide apart in their majestic glory.  It is impossible to guess how long
+these trees have been growing here, but they look ancient, even compared to the
+land itself.
+~
+267 4 0
+D1
+~
+~
+0 -1 26717
+D3
+~
+~
+0 -1 26704
+S
+#26717
+Entering a Field~
+   Here the path virtually disappears as it is consumed by thick grassy
+vegetation and a variety of other colorful plants and flowers.  The field
+widens out into the open to the east, away from the trees that shade this side.
+Several of the species of plants that grow here are unknown to the rest of the
+world and fill this place with a sense of exotic beauty.  There are many
+animals roaming about, grazing upon the flora that grows here so abundantly.
+These creatures are unlike anything else that walks the earth.  Some are small
+and move about quickly from place to place, seeking the choicest morsels, while
+others are large and ponderous, devouring everything in their path.  A sense of
+tranquility fills this place, touching all of the life that exists here in a
+magical way.
+~
+267 0 0
+D0
+~
+~
+0 -1 26718
+D1
+~
+~
+0 -1 26722
+D2
+~
+~
+0 -1 26719
+D3
+~
+~
+0 -1 26716
+S
+#26718
+On the Edge of a Grassy Field of Flowers~
+   This part of the field is heavily shaded by the dense forest that grows to
+the west and the north.  Fewer plants grow here because of the lower light
+level, which creates a sort of natural path that follows the edge of the
+clearing.  A few hearty varieties of plants grow in the shade, providing color
+even to this dim place.  One type of plant that grows here is a deep azure-blue
+color that can be found in other parts of the world.  It is said that it has
+healing properties that aid some, but cause ill effects in others.  There is
+very little grass-cover here beneath the forest shadows.  The forest blocks
+travel to the north and the west.
+~
+267 0 0
+D1
+~
+~
+0 -1 26720
+D2
+~
+~
+0 -1 26717
+S
+#26719
+On the Edge of a Grassy Field of Flowers~
+   This part of the field is heavily shaded by the dense forest that grows to
+the west and the south.  Fewer plants grow here because of the lower light
+level, which creates a sort of natural path that follows the edge of the
+clearing.  A few hearty varieties of plants grow in the shade, providing color
+even to this dim place.  One type of plant that grows here is a deep azure-blue
+color that can be found in other parts of the world.  It is said that it has
+healing properties that aid some, but cause ill effects in others.  There is
+very little grass-cover here beneath the forest shadows.  The forest blocks
+travel to the south and the west.
+~
+267 0 0
+D0
+~
+~
+0 -1 26717
+D1
+~
+~
+0 -1 26723
+S
+#26720
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+~
+267 0 0
+D0
+~
+~
+0 -1 26721
+D1
+~
+~
+0 -1 26726
+D2
+~
+~
+0 -1 26722
+D3
+~
+~
+0 -1 26718
+S
+#26721
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the north and the west.
+~
+267 0 0
+D1
+~
+~
+0 -1 26725
+D2
+~
+~
+0 -1 26720
+S
+#26722
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+~
+267 0 0
+D0
+~
+~
+0 -1 26720
+D1
+~
+~
+0 -1 26727
+D2
+~
+~
+0 -1 26723
+D3
+~
+~
+0 -1 26717
+S
+#26723
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+~
+267 0 0
+D0
+~
+~
+0 -1 26722
+D1
+~
+~
+0 -1 26728
+D2
+~
+~
+0 -1 26724
+D3
+~
+~
+0 -1 26719
+S
+#26724
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the south and the west.
+~
+267 0 0
+D0
+~
+~
+0 -1 26723
+D1
+~
+~
+0 -1 26729
+S
+#26725
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the north.
+~
+267 0 0
+D1
+~
+~
+0 -1 26730
+D2
+~
+~
+0 -1 26726
+D3
+~
+~
+0 -1 26721
+S
+#26726
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+~
+267 0 0
+D0
+~
+~
+0 -1 26725
+D1
+~
+~
+0 -1 26731
+D2
+~
+~
+0 -1 26727
+D3
+~
+~
+0 -1 26720
+S
+#26727
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+~
+267 0 0
+D0
+~
+~
+0 -1 26726
+D1
+~
+~
+0 -1 26732
+D2
+~
+~
+0 -1 26728
+D3
+~
+~
+0 -1 26722
+S
+#26728
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+~
+267 0 0
+D0
+~
+~
+0 -1 26727
+D1
+~
+~
+0 -1 26733
+D2
+~
+~
+0 -1 26729
+D3
+~
+~
+0 -1 26723
+S
+#26729
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the south.
+~
+267 0 0
+D0
+~
+~
+0 -1 26728
+D1
+~
+~
+0 -1 26734
+D3
+~
+~
+0 -1 26724
+S
+#26730
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the north.
+~
+267 0 0
+D1
+~
+~
+0 -1 26735
+D2
+~
+~
+0 -1 26731
+D3
+~
+~
+0 -1 26725
+S
+#26731
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+~
+267 0 0
+D0
+~
+~
+0 -1 26730
+D1
+~
+~
+0 -1 26736
+D2
+~
+~
+0 -1 26732
+D3
+~
+~
+0 -1 26726
+S
+#26732
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+   Strangely, one of the water holes here is empty.
+~
+267 0 0
+D0
+~
+~
+0 -1 26731
+D1
+~
+~
+0 -1 26737
+D2
+~
+~
+0 -1 26733
+D3
+~
+~
+0 -1 26727
+D5
+One of the water holes is empty and seems lead down into the ground below.
+~
+hole~
+9 -1 26740
+E
+hole water~
+One of the water holes is empty and seems lead down into the ground below.
+~
+S
+#26733
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field as it spreads out in every direction.
+~
+267 0 0
+D0
+~
+~
+0 -1 26732
+D1
+~
+~
+0 -1 26738
+D2
+~
+~
+0 -1 26734
+D3
+~
+~
+0 -1 26728
+S
+#26734
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the south.
+~
+267 0 0
+D0
+~
+~
+0 -1 26733
+D1
+~
+~
+0 -1 26739
+D3
+~
+~
+0 -1 26729
+S
+#26735
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the north and the east.
+~
+267 0 0
+D2
+~
+~
+0 -1 26736
+D3
+~
+~
+0 -1 26730
+S
+#26736
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the east.
+~
+267 0 0
+D0
+~
+~
+0 -1 26735
+D2
+~
+~
+0 -1 26737
+D3
+~
+~
+0 -1 26731
+S
+#26737
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the east.
+~
+267 0 0
+D0
+~
+~
+0 -1 26736
+D2
+~
+~
+0 -1 26738
+D3
+~
+~
+0 -1 26732
+S
+#26738
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the east.
+~
+267 0 0
+D0
+~
+~
+0 -1 26737
+D2
+~
+~
+0 -1 26739
+D3
+~
+~
+0 -1 26733
+S
+#26739
+On the Grassy Field of Flowers~
+   The field spreads out here, surrounded at its distant reaches by a ring of
+dense trees that make up a great and ancient forest.  The ground is covered by
+a thick carpet of tall grass.  A haze of color from a seemingly uncountable
+variety of flowers swirls about in the breeze, adding a magical touch to this
+amazing place.  Animals of all sorts walk about, grazing upon the abundant
+plant-life with seemingly insatiable hunger.  Some of these beasts are very
+large and ponderous, walking about slowly and consuming virtually everything in
+their path.  Yet other animals move around in herds from place to place,
+interacting in a social environment unknown to outsiders.  Some even smaller
+animals dart about the underbrush, difficult to catch a glimpse of from far
+away.  It seems that the number of animals that exist here, all consuming the
+vegetation, would quickly deplete the food supply--it is in fact quite the
+opposite as the plants seem to grow back as quickly as they are devoured.  This
+is a place of reincarnation where everything gets absorbed and replaced in the
+same amount in a perpetual cycle of life and death.  In addition to the
+abundant plant life there are also a large number of water holes that appear to
+always be full of crystal clear liquid.  All of this makes it no wonder there
+is such a large amount of animals in one place.  The forest stands tall around
+this great field to the south and the east.
+~
+267 0 0
+D0
+~
+~
+0 -1 26738
+D3
+~
+~
+0 -1 26734
+S
+#26740
+In a Dark Grotto~
+   Very little light trickles into this dark cavern, the only natural light
+coming from a small hole in the ceiling that could only be crawled through.
+The shadows by the walls are deep and scary, a place for dangerous things to
+lurk.  The walls are a pale grey in color and small rivulets of water trickle
+out from cracks that occur in several places along them.  Small pools of
+standing muddy water cover the floor, making the area slick and hard to
+traverse.  This cavern seems a very desolate and grim place, filled with
+unknown dangers.  The cavern travels to the north and the south here.
+~
+267 9 0
+D0
+~
+~
+0 -1 26742
+D2
+~
+~
+0 -1 26741
+D4
+A small hole in the dirt ceiling above seems to lead out into the open air.
+~
+hole~
+9 -1 26732
+S
+#26741
+In a Dark Grotto~
+   The shadows by the walls are deep and scary, a place for dangerous things to
+lurk.  The walls are a pale grey in color and small rivulets of water trickle
+out from cracks that occur in several places along them.  Small pools of
+standing muddy water cover the floor, making the area slick and hard to
+traverse.  This cavern seems a very desolate and grim place, filled with
+unknown dangers.  The cavern ends here as it comes from the north.
+~
+267 9 0
+D0
+~
+~
+0 -1 26740
+S
+#26742
+In a Dark Grotto~
+   The shadows by the walls are deep and scary, a place for dangerous things to
+lurk.  The walls are a pale grey in color and small rivulets of water trickle
+out from cracks that occur in several places along them.  Small pools of
+standing muddy water cover the floor, making the area slick and hard to
+traverse.  This cavern seems a very desolate and grim place, filled with
+unknown dangers.  The cavern travels to the east and the south here.
+~
+267 9 0
+D1
+~
+~
+0 -1 26743
+D2
+~
+~
+0 -1 26740
+S
+#26743
+In a Dark Grotto~
+   The shadows by the walls are deep and scary, a place for dangerous things to
+lurk.  The walls are a pale grey in color and small rivulets of water trickle
+out from cracks that occur in several places along them.  Small pools of
+standing muddy water cover the floor, making the area slick and hard to
+traverse.  This cavern seems a very desolate and grim place, filled with
+unknown dangers.  The cavern travels to the east and the west here.
+~
+267 9 0
+D1
+~
+~
+0 -1 26744
+D3
+~
+~
+0 -1 26742
+S
+#26744
+In a Dark Grotto~
+   The shadows by the walls are deep and scary, a place for dangerous things to
+lurk.  The walls are a pale grey in color and small rivulets of water trickle
+out from cracks that occur in several places along them.  Small pools of
+standing muddy water cover the floor, making the area slick and hard to
+traverse.  This cavern seems a very desolate and grim place, filled with
+unknown dangers.  The cavern ends here as it comes from the west.
+   A small hole in the floor is just barely visible.
+~
+267 9 0
+D3
+~
+~
+0 -1 26743
+D5
+A small and very muddy hole in the ground leads deeper into the earth.
+~
+hole~
+9 -1 26745
+S
+#26745
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+There is a hole in the ceiling that looks to be the right size for crawling
+through.  The tunnel leads to the north and the south.
+~
+267 9 0
+D0
+~
+~
+0 -1 26746
+D2
+~
+~
+0 -1 26747
+D4
+A small and very muddy hole in the ceiling leads up closer to the surface.
+~
+hole~
+9 -1 26744
+S
+#26746
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel ends here at the base of a rusty metal staircase that winds up into
+darkness, farther than the eye can see.  The tunnel travels back to the south.
+~
+267 9 0
+D2
+~
+~
+0 -1 26745
+D4
+A rusty metal staircase ascends into the darkness above.  It looks relatively
+stable though it is in fairly poor condition.
+~
+~
+0 -1 26754
+E
+staircase stairs metal rusty~
+A rusty metal staircase ascends into the darkness above.  It looks relatively
+stable though it is in fairly poor condition.
+~
+S
+#26747
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel leads to the north and the south.
+~
+267 9 0
+D0
+~
+~
+0 -1 26745
+D2
+~
+~
+0 -1 26748
+S
+#26748
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel leads to the north and the south.
+~
+267 9 0
+D0
+~
+~
+0 -1 26747
+D2
+~
+~
+0 -1 26749
+S
+#26749
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel splits up here, leading to the north, east and west.
+~
+267 9 0
+D0
+~
+~
+0 -1 26748
+D1
+~
+~
+0 -1 26750
+D3
+~
+~
+0 -1 26758
+S
+#26750
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel leads to the east and the west.
+~
+267 9 0
+D1
+~
+~
+0 -1 26751
+D3
+~
+~
+0 -1 26749
+S
+#26751
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel leads to the north and the west.
+~
+267 9 0
+D0
+~
+~
+0 -1 26752
+D3
+~
+~
+0 -1 26750
+S
+#26752
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel ends here as it comes from the north.
+   A small hole leads deeper down into the earth near the rear tunnel wall.
+~
+267 9 0
+D2
+~
+~
+0 -1 26751
+D5
+A small hole in the muddy floor leads into darkness below.
+~
+hole~
+9 -1 26753
+S
+#26753
+In the Creature's Den~
+   This place appears to be the den of some creature.  It is well-kept and
+filled with dry straw which is thick in some places and looks to be a nice
+resting place.  It becomes immediately obvious that most of the straw covering
+is a ruse, as any contact with the floor causes one to sink deep within mud and
+become stuck!  Whatever calls this place home has it set up as both a dwelling
+and a trap to capture its food.  The only exit appears to be back through a
+slimy hole in the ceiling.
+~
+267 131085 0
+D4
+~
+hole~
+9 -1 26752
+E
+floor straw mud~
+The floor is covered in dry straw, but upon a closer look it becomes obvious
+that the covering is a ruse to make the muddy floor look stable.
+~
+S
+#26754
+On the Staircase~
+   This is a very rusty and unstable staircase made from some ancient metal
+that has seen better decades.  The air is moist and thick and a stream of water
+runs down along the metal post that holds the structure in place, coming from
+some place far above.  Some of the steps are so badly ruined by time that they
+must be skipped over so as not to break through them and plummet to the depths
+below.  The railing is also in very poor shape and it would not be wise for
+anyone to trust their weight upon it.  The steps emit a terrible shriek
+whenever pressure is applied to them.
+~
+267 13 0
+D4
+The rusty staircase winds up into the darkness.
+~
+~
+0 -1 26755
+D5
+The bottom of the staircase can be seen below, ending in a dark tunnel.
+~
+~
+0 -1 26746
+S
+#26755
+On the Staircase~
+   The staircase continues to climb higher and higher.  The air here is drier
+than below and water no longer trickles down from above.  The cavern walls have
+given way to a more unnatural brick one to which the stairs have been riveted
+with reinforcing metal supports.  Many of the steps are so badly ruined by time
+that they must be skipped over so as not to break through them and plummet to
+the depths below.  The railing is also in very poor shape and it would not be
+wise for anyone to trust their weight upon it.  The steps emit a terrible
+shriek whenever pressure is applied to them.
+~
+267 9 0
+D4
+The rusty staircase winds up into the darkness.
+~
+~
+0 -1 26756
+D5
+The rusty staircase winds down into the darkness.
+~
+~
+0 -1 26754
+S
+#26756
+On the Staircase~
+   The staircase comes to an end here beneath a metal hatch in the ceiling.
+The air here is dry, as are the brick walls that surround this structure.  Many
+of the steps are so badly ruined by time that they must be skipped over so as
+not to break through them and plummet to the depths below.  The railing is also
+in very poor shape and it would not be wise for anyone to trust their weight
+upon it.  The steps emit a terrible shriek whenever pressure is applied to
+them.
+~
+267 13 0
+D4
+A small metal hatch set in the ceiling blocks off the top of the staircase.
+~
+hatch~
+1 -1 26757
+D5
+The rusty staircase winds down into the darkness.
+~
+~
+0 -1 26755
+E
+hatch metal ceiling~
+A small metal hatch set in the ceiling blocks off the top of the staircase.
+~
+S
+#26757
+At the Top of the Tower~
+   This is the top of the Great Tower of Emithoynarthe, a sentinel's outpost
+for surveying all of the lands of the Empire.  All that can be seen from here
+belongs to the Ancient King and it is the duty of the Tower Observer to watch
+and document all that goes on within this realm.  From here a great field of
+flowers can be seen to the southwest, its colors a dazzling rainbow upon a
+green backdrop.  The dense forest surrounds this place, broken only by thin
+trails and paths that run through it in a twisting maze of infinite dimensions.
+The tower is set high upon the top of a mountain that is located centrally
+within the King's Realm, a stone pinnacle representing the power and wealth of
+its ruler.  A telescope is mounted along the western railing that surrounds the
+tower-top and the railing itself is in perfect condition and is made from solid
+gold that gleams in the light.  A stone table is set beneath a small roof at
+the center of the tower which keeps the wind and the rain from disturbing the
+tomes and scrolls that rest upon it.  The hatch in the floor is the only way
+off of the tower.
+~
+267 67108864 0
+D5
+~
+hatch~
+1 -1 26756
+E
+telescope~
+The telescope is focused on the house of Emithoynarthe, who is the ancient lord
+of this land.  The house is an immense structure, dominating a whole section of
+the forest that has been cleared and cultivated for its use.  The house grounds
+consist of many flower-beds and trimmed shrubs that are a striking contrast to
+the natural surroundings.  A small and very thin trail winds its way through a
+patch of mist towards the lord's residence.
+
+~
+S
+#26758
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel leads to the east and the west.
+~
+267 9 0
+D1
+~
+~
+0 -1 26749
+D3
+~
+~
+0 -1 26759
+S
+#26759
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel leads to the north and the east.
+~
+267 9 0
+D0
+~
+~
+0 -1 26760
+D1
+~
+~
+0 -1 26758
+S
+#26760
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel leads to the north and the south.
+~
+267 9 0
+D0
+~
+~
+0 -1 26761
+D2
+~
+~
+0 -1 26759
+S
+#26761
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel leads to the north and the south.
+~
+267 9 0
+D0
+~
+~
+0 -1 26762
+D2
+~
+~
+0 -1 26760
+S
+#26762
+Deeper Within the Dark Grotto~
+   The deeper parts of these tunnels are much the same as the cavern above,
+though it is much darker and damper here.  A musty smell permeates the area, a
+mix between the scent of moist plant-life and the odder of decay.  The walls
+here are a much darker shade of grey and practically ooze with a muddy slime
+that covers them in a slick coating.  The entire ground is covered in dirty
+standing water that is several inches deep.  Shadows flicker about, seeming to
+almost have a life of their own, adding a sense of dread to this dark place.
+The tunnel ends here coming from the south.
+~
+267 9 0
+D2
+~
+~
+0 -1 26761
+S
+#26799
+Kludgified Room~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+267 33280 0
+S
+#0
+$~

@@ -1,0 +1,374 @@
+#11310
+master burgonmaster~
+Burgonmaster~
+The Burgonmaster is here, counting his money.
+~
+He's a fat old man, with an evil look in his eyes. Tax collectin is his job
+in Barovia, so he's used to fighting. You better be careful with him.
+~
+143 0 -200 Y
+15 10 2 3d10+300 3d4+6
+5000 25000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11311
+karen~
+Karen~
+Karen, burgonmaster's wife is cooking food for the family here.
+~
+She is weary, but beautiful woman. Cooking and child care are her jobs.
+~
+26 0 500 Y
+7 14 4 5d6+70 2d6+2
+100 6000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11312
+abel~
+Abel~
+Abel is here, playing with his toys.
+~
+Abel is a young boy, who seems to like his toys very much.
+~
+11 1048576 300 Y
+2 18 10 1d4+20 1d4+20
+1 300
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11313
+alys~
+Alys~
+Alys is here, playing with her toys.
+~
+Alys is a very cute little girl. She is the eldest of Burgonmaster's children,
+but still very young. It's her duty to look after her little brother, Abel.
+~
+11 1048576 400 Y
+3 17 8 1d4+25 1d4+2
+10 700
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11314
+barovian~
+barovian~
+A barovian is here, minding his own business.
+~
+The barovian looks older than he really is, and he has a weary look in his
+eyes. He is a honest worker, trying to bring up his children, and care for his
+wife.
+~
+72 0 100 Y
+5 15 5 2d8+40 2d4+1
+100 3000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11315
+farmer~
+farmer~
+A weary looking farmer is here, trying to get some rest from work.
+~
+The farmer works for long each day, and comes selling his vegetables and grain
+to get some money to buy something for his family.
+~
+72 0 200 Y
+6 14 5 2d8+50 2d5+0
+50 3500
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11316
+rabbit~
+rabbit~
+a small cute rabbit is here.
+~
+The rabbit looks cute, jumping here and there, eating something every now and
+then.
+~
+72 0 0 Y
+1 20 10 1d4+10 1d4+0
+0 300
+8 8 1
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11317
+deer~
+a deer~
+A deer is here, looking for something to eat.
+~
+The deer is looks a bit scared, and has beautiful fur and huge antlers.
+~
+72 0 0 Y
+4 16 8 1d8+40 1d6+1
+0 1800
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11318
+wolf~
+a wolf~
+a wolf is here, looking for something to kill.
+~
+The wolf looks like a normal wolf, with long teeth and fiery looks in its
+eyes.
+~
+72 524288 0 Y
+5 15 4 1d8+40 2d4+1
+0 2000
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11319
+gipsy~
+a gipsy~
+A gipsy is here, singing and dancing merrily.
+~
+The gipsy looks happy, he is enjoying his life while it lasts, dancing with
+his dear friends in this camp, away from all the death and cruelty outside.
+~
+15 0 300 Y
+7 13 4 1d8+60 2d4+0
+400 4000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11320
+seeress~
+The Seeress~
+The Seeress is here, waiting for your questions.
+~
+The Seeress is old and weary. She has told fortunes for people for ages and
+ages, and they rarely go wrong.
+~
+15 0 100 Y
+11 10 3 1d10+100 3d4+1
+3000 10000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11321
+skeleton~
+a skeleton~
+a skeleton is here, prepared to kill everything it sees.
+~
+This skeleton is one of Strahd's horrible creations, some flesh still rotting
+on its bones.
+~
+104 268697600 -700 Y
+35 1 0 10d10+800 8d10+5
+0 120000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11322
+zombie~
+a zombie~
+A zombie is here, ready to tear you apart !
+~
+This zombie has rotting flesh all over him, with worms twisting in it. He is
+created by Strahd, and is very powerful, beware !
+~
+104 268697608 -700 Y
+35 0 -2 10d10+1000 13d5+10
+0 145000
+8 8 0
+52 0 0d0+0 0
+0 2 0 0
+K
+0 0 0 0 0 0 0
+#11323
+ghoul~
+a ghoul~
+A ghoul is here, eating some old bones.
+~
+The ghoul looks hideous, half of his head has fallen off, and his guts are 
+hanging from his stomach. He is grinning insanely at you.
+~
+105 268697600 -700 Y
+39 -2 -3 1d100+1200 3d6+15
+15 200000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11324
+soth lord~
+Lord Soth~
+Lord Soth is here, raging madly.
+~
+You can hardly see anything except his burned and charred armor. Only his eyes
+flare in his skull. His bones are black, and you can see the black rose on his
+breast plate. He is the knight of the Black Rose. And he will kill you with 
+his touch, flee, while you still can.
+~
+147529 939786248 -1000 Y
+49 -12 -10 1d100+4500 3d8+40
+0 1500000
+8 8 1
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11325
+vampire~
+vampire~
+a pale looking vampire is here.
+~
+The vampire looks very pale, and he needs blood quick. You'll be his next 
+dinner, if you don't run away quick !
+~
+16495 269746312 -700 Y
+47 -6 -5 5d10+1600 5d5+35
+0 370000
+8 8 0
+54 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11326
+vampire strahd count~
+Strahd~
+The Count Strahd von Zarovich is here, looking over his domain.
+~
+Strahd is a cruel, vicious vampire, who rules this domain, Barovia. He drains
+blood from maidens, and turns them into slave vampires for him. He looks to
+know much about magic, and you better leave before he turns you into a toad.
+~
+16427 402917544 -1000 Y
+52 -12 -15 20d100+3900 7d7+50
+1000000 1500000
+8 8 1
+55 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11327
+jander vampire~
+Jander~
+Jander is here, trying to bring life to the garden.
+~
+Jander is an old vampire, but he's not evil, like most of his kind. He seems 
+to be very sad, like he has no meaning in life. He looks up at you, and tells
+you to leave this place quick, before Strahd finds you.
+~
+11 268697608 700 Y
+47 -8 -8 2d50+3000 6d5+30
+0 950440
+8 8 1
+55 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11328
+ghost~
+ghost~
+A ghost is floating here in its eternal agony.
+~
+The ghost looks just like a thick fog, nothing interesting in it. But he 
+solves people for breakfast, so be wary.
+~
+104 268699784 -900 Y
+46 -5 -5 5d20+1000 5d5+25
+0 260000
+9 9 0
+95 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11329
+bartender~
+bartender~
+Bartender is here, ready to serve you.
+~
+Bartender looks very friendly, but beware, he has big muscles, and he's used
+to getting rid of unwanted customers.
+~
+16394 402653320 0 Y
+26 -3 0 5d10+2500 5d5+10
+10000 100000
+8 8 1
+69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#11330
+vampire~
+vampire~
+a very angry looking vampire is here, ready to eat your entrails.
+~
+The vampire looks very pale, and he needs blood quick. You'll be his next 
+meal, if you don't run away quick !
+~
+16495 805568648 -700 Y
+50 -4 -5 5d10+1300 5d5+35
+0 400000
+8 8 0
+54 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11331
+barovian~
+barovian~
+A barovian is here, chatting merrily with his friends.
+~
+The barovian looks older than he really is, and he has a weary look in his
+eyes. He is a honest worker, trying to bring up his children, and care for his
+wife.
+~
+75 0 100 Y
+5 15 5 2d8+40 2d4+1
+100 3000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#11332
+vampire strahd count~
+Strahd~
+The Count Strahd von Zarovich is here, looking over his domain.
+~
+Strahd is a cruel, vicious vampire, who rules this domain, Barovia. He drains
+blood from maidens, and turns them into slave vampires for him. He looks to
+know much about magic, and you better leave before he turns you into a toad.
+~
+16427 402917544 -1000 Y
+52 -12 -15 30d100+25000 30d10+200
+1000000 1500000
+8 8 1
+55 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

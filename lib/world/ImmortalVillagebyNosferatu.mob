@@ -1,0 +1,800 @@
+#28700
+icarus immortal~
+Icarus~
+Icarus is here, pouting over his punishment.
+~
+    Icarus is the son of the great inventor Daedalus. He is known mostly
+for having flown too near the sun wearing his father's wax wings after
+using them to escape the labyrinth. The wings melted and he plummeted
+to his death. Now Daedalus punishes him in the afterlife by making him
+stay in this dark basement. Icarus looks sad and lonely, but he doesn't
+look like a weakling.
+~
+536887306 402950144 0 Y
+60 -20 -20 20d100+14000 20d20+80
+600000 1800999
+8 8 1
+67 62336 1d1+1 2
+9 3 10 0
+3 3 10 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28701
+typhon~
+Typhon~
+Typhon is standing here, blocking your path to Olympus.
+~
+    Typhon is a huge beastly creature who once defeated Zeus in combat.
+The legends say that Typhon defeated Zeus, severed his tendons so he
+couldn't walk, and left him to die. Zeus recovered over time and came
+back to beat Typhon by throwing a mountain on him. Typhon's fits from
+beneath the mountain caused an eruption of lava and ash. Now Typhon is
+back with a purpose, to keep the unworthy from entering the sacred path
+to Mount Olympus.
+~
+10 402917504 0 Y
+51 -20 10 100d100+25000 100d100+100
+1 1
+8 8 1
+66 1073741823 1d1+1 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28702
+immortal anonymous god~
+An anonymous Immortal~
+An anonymous Immortal is wandering around, enjoying the afterlife.
+~
+    This is one of those Immortalized to walk this beautiful place
+for eternity that you don't recall ever hearing of. Certainly the afterlife
+is open to those who weren't well known heroes in life. You can't help
+but wonder what this person did to earn their right to live here
+amongst those great divinities. He dosen't seem pre-occupied with
+such questions himself, however. He gives you a serene smile and continues
+about his business, whatever it may be.
+~
+16456 268435456 0 Y
+40 -10 -2 20d50+3500 4d7+8
+5500 500000
+8 8 1
+68 8 20d50+200 2
+9 2 5 0
+11 6 3 28
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28703
+pluto hades immortal god~
+Pluto~
+You can't see Pluto standing here!
+~
+    Pluto is the god of the dead, also known as Pater, Orcus, and Dis.
+~
+541077640 345800704 -1000 Y
+60 -20 -15 20d100+11500 25d25+25
+1000000 4000000
+8 8 1
+67 134230024 100d100+5000 9
+11 3 4 106
+11 3 4 136
+11 3 2 143
+11 3 7 141
+11 6 1 102
+11 3 4 26
+11 3 4 95
+11 3 4 100
+11 3 1 130
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28704
+charon skeleton pluto~
+Charon~
+Charon the underworldly ferryboat driver flashes you a ghastly grin.
+~
+    Charon is the skeletal ferryboat driver in the underworld. For a
+small fee he takes the dead across the many rivers the underworld
+contains. All you can see of this creepy looking fellow is the jutting
+chin-bone from beneath the large black hood of the robe he wears. His
+hands are hidden beneath the long sleeves. Charon flashes you a ghastly,
+evil grin before he attacks.
+~
+536887304 32896 -1000 Y
+51 -10 -15 5d25+4500 10d10+40
+100100 750000
+8 8 1
+53 28672 100d50+100 6
+6 3 10 0
+11 3 3 143
+11 3 3 17
+11 3 3 104
+11 3 3 105
+11 3 3 114
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28705
+cerberus dog pluto~
+Cerberus~
+Cerberus the three-headed guard dog breaks into a satanic howl.
+~
+    Cerberus is the ferocious 3-headed dog who guards the gates to hell.
+He allows only the dead to enter, and makes certain that they can't leave.
+Each of his heads is aimed in a different direction to make certain that
+he isn't missing anything. Cerberus has a mane and tail made of live,
+writhing snakes. Upon noticing your unwelcomed arrival he lets loose a
+blood-curdling howl and sets upon you.
+~
+536887304 262144 -1000 Y
+51 -10 -15 5d25+3000 10d10+60
+75666 750000
+8 8 1
+63 28672 100d50+100 7
+5 3 10 0
+8 3 6 0
+11 3 3 95
+11 3 3 139
+11 3 3 8
+11 3 3 5
+11 3 3 111
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28706
+follower pluto crazed~
+A crazed Pluto follower~
+A crazed Pluto follower is here worshiping his master.
+~
+The minions of the great Pluto. Invisible to the eye, but deadly.
+~
+536870920 67633152 -1000 Y
+35 0 10 5d20+100 5d7+5
+15000 10000
+8 8 1
+68 0 1d1+1 1
+6 3 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28707
+immortal anonymous god~
+An anonymous Immortal~
+An anonymous Immortal is wandering around, enjoying the afterlife.
+~
+    This is one of those Immortalized to walk this beautiful place
+for eternity that you don't recall ever hearing of. Certainly the afterlife
+is open to those who weren't well known heroes in life. You can't help
+but wonder what this person did to earn their right to live here
+amongst those great divinities. He dosen't seem pre-occupied with
+such questions himself, however. He gives you a serene smile and continues
+about his business, whatever it may be.
+~
+8 0 0 Y
+40 4 10 20d50+200 2d5+4
+1000 10000
+8 8 1
+68 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28708
+achilles hero immortal~
+Achilles~
+Achilles, the great hero of the Trojan War, stands proudly before you.
+~
+    Achilles was one of the greatest Greek heroes of the Trojan War. After
+being born to Peleus, the King of Thessaly and Thetis, a Sea Nymph he was
+dipped into the River Styx for strength and protection. The one part missed
+by the river was his heel by which he was held as he was dipped. This turned
+out to be his downfall. After he killed Hector, Troy's greatest warrior,
+Hector's brother Paris shot him in the heel with an arrow and killed him.
+~
+16392 268730408 1000 Y
+51 -20 -15 20d100+11000 5d25+55
+50000 1500000
+8 8 1
+66 28652 1d1+1 3
+9 3 10 0
+4 3 10 0
+2 3 10 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28709
+odysseus king hero immortal~
+King Odysseus~
+Odysseus, the legendary King of Ithaca, is standing here.
+~
+    Odysseus was one of the great adventuring heroes of all Greek
+legend. Odysseus was the King of Ithaca who fought hard in the Trojan
+War and fought harder to return home afterward. The 10 year odyssey
+of his journey home is one of the most widely told legends there is. He
+was forced to battle the will of the gods, escape a great cyclops, travel
+through the underworld itself in order to get back to Ithaca and his
+wife. Upon returning he slayed all the noblemen who had camped in
+his home, desperately trying to overtake the presumed-dead king's place.
+Odysseus is truly a brave and noble warrior, more deserving of fame in the
+afterlife then most.
+~
+16392 268697600 500 Y
+51 -15 -11 20d100+9000 5d25+50
+50000 1300000
+8 8 1
+66 671118080 100d1+500 3
+11 6 7 140
+11 3 5 136
+11 3 5 104
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28710
+perseus hero immortal~
+Perseus~
+Perseus, the great warrior of legend, stands here proudly.
+~
+    Perseus, son of the King of the Gods Zeus and a mortal woman named
+Danae, was one of the great warriors of legend. Among his great accomplishments
+were slaying the hiddeous gorgon Medusa, and rescuing the fair Andromeda from
+the great sea monster. He has always been a favorite of the goddess Athena,
+who helped him defeat Medusa. She gave him her shield, which he bears proudly.
+~
+16392 268697600 500 Y
+51 -20 -15 20d100+12500 5d25+60
+50000 1600000
+8 8 1
+66 10240 1d1+1 4
+4 3 8 0
+3 3 8 0
+7 3 8 0
+2 3 8 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28711
+oedipus hero immortal~
+Oedipus~
+The tragic legend Oedipus is looking sad and distracted here.
+~
+    Oedipus is a legendary tragic figure in greek lore. He was sent away to
+die as an infant by his father, who was told a prophecy that his son would
+kill him and marry his wife. His son didn't die but was found and raised.
+Eventually he found his way back to the city of his birth, and through a
+bizarre twist of fate ended up killing his father and marrying his mother.
+When he discovered this horrible fact, he tore his eyes out. He has them
+back in this immortal life, but there is still a sadness about him.
+~
+16520 268437504 0 Y
+51 -20 -15 20d100+9500 5d25+60
+75000 1650000
+8 8 1
+66 28672 1d1+1 4
+11 3 8 4
+11 3 8 33
+11 3 8 95
+11 3 8 141
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28712
+theseus king hero immortal~
+King Theseus~
+Theseus, the great King of Athens, stands before you.
+~
+    Theseus was a great King in early Athens. In those days Athens had to send
+out seven young men and seven young women each year as sacrifices to the
+great minotaur in Minos' labyrinth. Theseus, according to legend, decided
+to go for himself one year and defeated the beast. By the time he returned
+his father Aegeus was dead and he was crowned the new king. Theseus has a
+very noble and brave look to him.
+~
+8 128 500 Y
+51 -10 -5 20d100+7500 5d25+45
+50000 1400000
+8 8 1
+66 0 1d1+1 4
+11 3 3 143
+11 3 8 100
+11 3 5 105
+11 3 6 82
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28713
+chimera beast immortal~
+A chimera~
+A freakish, beastly chimera is snarling and coming in your direction.
+~
+    The chimera is a fire-breathing beast with the head of a lion,
+the body of a goat and the tail of a serpent. The original chimera terrorized
+the kingdom of Lycia until it was slain by the hero Bellerophon and his
+mount Pegasus. These chimera's are offspring of the original, created
+by Zeus to patrol this village and destroy those who have entered and don't
+belong. If you are in that category it might be wise to run away.
+~
+12611624 268697600 -1000 Y
+35 -15 -10 20d100+4000 5d25+35
+66 30000
+8 8 1
+63 24576 1d1+1 3
+11 2 8 26
+11 2 8 95
+11 5 5 83
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28714
+prometheus hero immortal~
+Prometheus~
+Prometheus, the bringer of fire, stands before you.
+~
+    Prometheus was a member of the Titans, who were overthrown from their
+place on Olympus by Zeus and his followers. Prometheus is known for saving
+humanity by stealing fire from the gods and giving it to mortals when Zeus
+planned to use the deprivation of fire to destroy them. Zeus punished him
+for this act by chaining him to a high peak and having a buzzard eat his
+liver every day, with it re-growing during the night.
+~
+16392 402915328 650 Y
+51 -15 -12 20d100+7500 5d25+45
+35000 1500000
+8 8 1
+66 12288 20d20+600 4
+11 3 6 5
+11 3 6 26
+11 3 6 93
+11 3 6 95
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28715
+drunk staggering immortal~
+A staggering, drunken Immortal~
+A staggering, drunken Immortal is swaying back and forth before you.
+~
+    This is one of the many Immortals that you haven't heard of. This
+particular one seems to have gotten a bit carried away with his merriment
+and is now more then a little drunk. He staggers and sways his way down the
+streets, occasionally stopping in this shop or that. He constantly spouts
+out bizarre statements that seem to have no meaning.
+~
+200 262144 0 Y
+35 5 10 30d5+150 5d5+5
+1 1
+8 8 1
+68 16384 1d1+1 0
+0 0 0 0
+T
+......A staggering, drunken Immortal belches fiercely!~
+K
+0 0 0 0 0 0 0
+#28716
+agamemnon king hero immortal~
+King Agamemnon~
+King Agamemnon is here, proudly surveying his surroundings.
+~
+    Agamemnon was the King of Mycenae, also known as Argos, and the leader
+of the great Greek Army that conquered Troy in the Trojan War. He was always
+known for being at odds with the great warrior Achilles. He stands before you
+now proudly, his head held high, with the look of a true King if you've ever
+seen one. Death has treated this legend quite well.
+~
+16392 272384 500 Y
+51 -10 -10 20d100+8000 5d25+40
+50000 1600000
+8 8 1
+66 4096 2d50+300 4
+11 3 8 141
+11 6 8 140
+11 3 8 4
+11 3 8 95
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28717
+jason hero immortal~
+Jason~
+The legendary hero Jason is standing here.
+~
+    Jason was a great Greek hero and led the group of adventurers called
+the Argonauts. Their capture of the Golden Fleece was one of the greatest
+accomplishments of legend. Jason left a quarrel with his brother over the
+throne of Iokolos to organize a band of around 50 warriors to search for
+the fleece on the distant island of Kolchis. Jason looks like a very brave
+and noble warrior.
+~
+16392 402915328 350 Y
+51 -20 -14 20d100+11000 5d25+45
+50000 1750000
+8 8 1
+66 20512 1d1+1 5
+2 3 7 0
+3 3 7 0
+4 3 7 0
+7 3 7 0
+9 3 4 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28718
+pandora immortal~
+Pandora~
+Pandora, the first woman created, stands before you.
+~
+    Before you stands Pandora, the first woman ever created. Zeus ordered
+Hephaestus to make her as punishment to men for getting fire from
+Promethius. Zeus gave Pandora to Promethius' brother Epimethius, knowing that
+he would mess up severly. Pandora is best known for opening the box that
+contained all the pains and evils of the world so that they could spread out
+and overtake mortal men. 
+~
+16392 264192 0 Y
+51 -10 -5 20d100+3000 5d25+15
+25000 725000
+8 8 2
+66 4096 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28719
+cronus titan god immortal~
+Cronus~
+Cronus, King of the Titans, is standing here.
+~
+    Cronus was the King of all Gods at one time, before he and his Titans
+were defeated and overthrown by his son Zeus. He always had a feeling this
+would happen, and so he ate all his children as they were born. His wife,
+Rhea, tricked him into eating a rock instead of his youngest son, Zeus, who
+then grew up and came back to kill him. He now resides below the city in
+this mock sewer system which is a very far cry from the peaks of Olympus
+he used to call home. It seems that living down here has made him angry.
+~
+536887306 268697728 -500 Y
+60 -20 -20 20d100+14500 20d20+95
+900000 2500000
+8 8 1
+67 0 50d50+1000 2
+4 2 7 0
+11 3 12 141
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28720
+heracles shop keeper~
+Heracles~
+Heracles stands here offering you a great deal on fitness products.
+~
+    Heracles is one of the greatest heroes in Greek history. He was born
+in Thebes, the son of a mortal princess Alcmene, and the god Zeus. This is
+the man who successfully completed the 12 tasks, including killing the fierce
+lion of Nemea and the deadly Hydra of Lerna, defeated Hippolyta, queen of the
+Amazons, and stealing the golden apples from the tree of life. He is also known
+for his adventures with the Argonauts. Heracles the great and mighty stands
+before you now, offering you top quality fitness products.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28721
+medusa shop keeper~
+Medusa~
+Medusa is here showing you how wonderfully her beauty products work.
+~
+    Medusa seems to have toned down her mortal stoning ways. Snakes
+writhe all over her head in place of hair, and her skin is green and
+scaly. She is wearing a flowered dress which might be cute on anyone
+else. She appears to be wearing some sort of smudged makeup on her
+face. It crosses your mind that only a lunatic would buy beauty from
+this foul creature.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 2
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28722
+midas shop keeper~
+Midas~
+Midas is here offering some lovely armors with the sparkle of pure gold.
+~
+    Midas was the King of Phrygia who was given any wish he desired by
+the god Dionysus after he helped a satyr in distress. Midas wished that
+everything he touched would turn into gold. His ability turned into a curse
+when he couldnt touch his food or his loved ones without them turning to
+gold. In the afterlife, however, it has turned into a terrific business
+venture.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28723
+dionysus shop keeper~
+Dionysus~
+Dionysus is here drinking merrily and offering you a bottle.
+~
+    Dionysus is the god of wine, drinking and drunkeness. He is associated
+with all the violent and unpredictable actions caused by excessive drinking.
+Dionysus is a satyr, a creature with the torso of a man and the lower body
+of a goat. He is the son of Zeus and the mortal princess Semele of Thebes.
+His hooves click on the counter merrily as he offers you a drink.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28724
+atlas shop keeper~
+Atlas~
+Atlas is here showing off his high quality maps.
+~
+    Atlas is a Titan, one of the group of gods which preceeded the
+Olympian gods which now reign over the universe. The Titans were lead by
+Zeus' father Chronos, who was banished and forgotten after the Titans
+were defeated. Atlas, who is also the brother of Promethius, was punished
+after the war by having to hold up the sky on his shoulders forever. His
+intimate knowledge of the world has made him a terrific map maker.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28725
+demeter shop keeper~
+Demeter~
+Demeter is here selling her freshly baked goods.
+~
+    Demeter is the goddess of the earth, agriculture, fertility and grain.
+She taught mortals the arts of farming, which allowed them to live and
+prosper. She is worshiped for good harvests. She now uses her talents to
+make wonderful breads for the immortals enjoyment.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 2
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28727
+aphrodite shop keeper~
+Aphrodite~
+Aphrodite is here offering the finest musical instruments in town.
+~
+    Aphrodite is the Goddess of Love and Beauty. She isn't, however,
+much of a business-person. She once ran a very successful business as
+the leading seller of Beauty Aids to the people of this Immortal Village.
+Medusa then started her own Beauty Aid stand and eventually put Aphrodite
+out of business. This is unbelievable considering the beauty of this goddess
+and the putrid ugliness of her adversary, but this is a strange place.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 2
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28728
+hermes shop keeper~
+Hermes~
+Hermes is here keeping track of everyones packages and postcards.
+~
+    Hermes is the messenger of the gods. He is the protector of travelers
+and brings good luck to businessmen and thieves. He now uses his skill in
+business and his messenger abilities to run this Immortal Post Office. He
+is wearing his trademark winged sandals and hat which aid his flying
+ability. 
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28729
+hypnos shop keeper~
+Hypnos~
+Hypnos is here offering you the miracle cure for insomnia.
+~
+     Hypnos is the god of sleep, and father of the dreams. He has the power
+to lull anyone to sleep, even the mightiest gods. He uses his powers now to
+help any immortal suffering from insomnia. Since this alone wasn't enough
+to keep a business thriving, he widened his market by introducing some
+other magic items. He looks at you now with great interest.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28730
+epimetheus shop keeper~
+Epimetheus~
+Epimetheus is here, offering up the finest in immortal arms.
+~
+    Epimetheus is the infamous brother of Prometheus.  He was given the task 
+of giving all of the creatures under Zeus unique gifts, which he fudged up
+when he ran out of goodies before he got to humans. Prometheus bailed him
+out by stealing fire for the humans, and was horribly punished for it.
+Epimetheus' punishment was to be married to the first woman, Pandora, and 
+to be party to her releasing all the pain and anguish that exists in the
+world from her infamous box. Now he runs this little shop in hopes that
+nothing more can go wrong for him.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 2
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28731
+hestia shop keeper~
+Hestia~
+Hestia is here offering the finest lodgings in town.
+~
+    Hestia is the goddess of the hearth and its fire. She is worshiped
+as the protector of the home, the family, the city and the state. She
+is a Titan, one of the first children of Cronus and Rhea. She is one
+of the most beloved and worshiped gods. Zeus allowed her to remain
+worshiped after he conquered the Titans because she vowed to remain
+a virgin.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 2
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28732
+daedalus shop keeper~
+Daedalus~
+Daedalus is here crafting a pair of wax wings.
+~
+    Daedalus was a skilled Athenian craftsman and inventor. Among his
+creations was the great labyrinth of King Minos. When Daedalus later
+incurred Minos' wrath he was imprisoned in this labyrinth with his son,
+Icarus. In order to escape the labyrinth Daedalus constructed wings of
+wax and feathers for him and his son to use to fly to safety. Despite
+his repeated warnings, his son flew to near the sun and fell to his death
+when the wax of his wings melted.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28733
+eros shop keeper~
+Eros~
+Eros is here selling valentines for you to send your friends (wink, nudge).
+~
+    Also known as Cupid in some circles, Eros is the god of love. Eros
+appears in the form he is known most for, as a fat, naked, flying infant.
+Eros has been using his powers to unite lovers for centuries, shooting
+them with his magic arrows. He smiles and winks at you knowingly, a very
+strange looking gesture coming from the face of an infant.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28734
+pegasus horse shop keeper~
+Pegasus~
+Pegasus is here, selling the best trained flying horses in the land.
+~
+    Pegasus is the famous winged horse who was born from Medusa and the
+great god Poseidon. Pegasus is known for many great adventures including
+flying to the top of Mount Olympus, where he carried Zeus' thunderbolts.
+Pegasus was often ridden by the famous mortal hero Belleraphon on many great
+adventures. He has settled down in the after-life, it seems, and now runs
+this mount stable where he leases out the services of his fellow winged horses.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+91 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28735
+bouncer pluto~
+An enormous bouncer~
+An enormous bouncer is here blocking the entrance to the club.
+~
+    Before you stands a massive beast of a man. You can only assume that
+he is in fact a man, because every ince of his body is covered by dark
+black robes. He stands in the doorway, leaving not an inch of room to
+pass by him. He looks like he could beat you senseless, yet he doesn't
+move to start a battle.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+68 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28736
+asclepeus shop keeper~
+Asclepeus~
+Asclepeus is here, offering you a healing touch.
+~
+    Asclepeus is the God of Healing, prayed to often in times of illness
+and plague. He is also the son of Apollo, the legendary Olympian God. He
+has decided to use his healing gifts in this place to help those who need
+healing, be it physical, emotional, or psychological. The place is empty
+at the moment and you can't help but wonder how the guy gets any business
+at all in this place.
+~
+16777226 805570592 0 Y
+40 -20 -100 32000d1+89 100d100+100
+500000 1000000
+8 8 1
+66 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28737
+horse winged pegasus mount~
+A winged horse~
+A magnificent white stallion with graceful, feathered wings stands here.
+~
+    This is one of the legendary flying horses. There was a time in history
+when this amazing breed of animal was all but extinct, the great Pegasus
+himself believes to be the last. Over time Pegasus brought the breed back
+to health, and now they are proud mounts and excellent fighters.
+~
+786698 16777216 0 Y
+29 -1 -5 1d8+500 1d29+5
+1 20000
+8 8 1
+91 0 1d1+1 2
+10 1 8 0
+2 1 7 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

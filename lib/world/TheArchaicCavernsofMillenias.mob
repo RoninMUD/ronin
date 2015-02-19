@@ -1,0 +1,154 @@
+#14300
+ferocious black worm~
+a Ferocious Black Worm~
+a Ferocious Black Worm slithers about, looking for its next meal!
+~
+  Covered in a thick scaly hide, this
+Ferocious Black Worm is well protected
+from the perils of the surrounding
+environment. Its hide is completely
+black, and its fangs are stained and
+yellow. Its eyes reflects the light
+from your torch, making them glisten
+and shine like the stars in the sky...
+~
+16488 134481922 -1000 Y
+49 -20 -5 1d1+6499 1d1+299
+0 1175000
+8 8 0
+98 16512 1d1+1 1
+5 3 20 0
+0 1 0 544
+R
+4
+T
+......a Ferocious Black Worm hisses and spits venom at you!~
+K
+20000 0 0 0 0 0 0
+#14301
+carapaced cave serpent~
+a Carapaced Cave Serpent~
+a Carapaced Cave Serpent creeps about, stalking its prey...
+~
+  This quite astonishing Serpent is
+extremely large, and its scaly body
+is nearly fossilized. Its color is
+a dirty grey, and moss grows uncon-
+trolably on its back. This old cave-
+dweller is surely a remnant of the
+past. Its eyes does not blink, and
+appears as almost blood-red rubies
+as they twinkle and sparkle whenever
+light hits their surface.
+~
+16488 296962 -50 Y
+50 -20 -5 1d1+6999 1d1+459
+0 1505000
+8 8 0
+80 147456 1d1+1 1
+5 2 20 0
+0 1 0 32
+R
+4
+T
+......a Carapaced Cave Serpent's eyes glows in the dark!~
+K
+30000 0 0 0 0 0 0
+#14302
+translucent spectral wyrm~
+a Translucent Spectral Wyrm~
+a Translucent Spectral Wyrm slithers here, hiding in plain sight!
+~
+  This large Wyrm appears to have
+evolved in complete isolation from
+the world above. It has lost all
+forms of pigmentation, and judging
+from its milky white eyes you'd
+guess that it is blind as well.
+Its sleek scaly body is transparent
+like crystal glass, and its innards
+are all glowing with a pale purple
+hue. Through the translucent hide
+you can see all of its glass-like
+bones and its cranium, as the light
+refracts through its bones and soft
+tissue.
+~
+16488 270394 0 Y
+50 -20 0 1d1+6999 1d1+679
+0 2205000
+8 8 0
+98 0 1d1+1 1
+5 3 20 0
+0 1 0 0
+R
+21
+T
+......a Translucent Spectral Wyrm glows with a fluorescent radiance!~
+K
+40000 0 0 0 0 0 0
+#14303
+daemonic pit viper~
+a Daemonic Pit Viper~
+a Daemonic Pit Viper is coiled on the ground, ready to rip you to shreads!
+~
+  This enormous Reptile cannot possibly
+be from this world! Its skin, bright red
+and its razor sharp scales adorning its
+sleek and muscular body makes this Fiend
+of a Pit Viper look as if its origins
+were from the burning pits if Hell itself!
+Its large fangs are stained yellow and
+brown, and its very breath is a whiff of
+sulfur! It would appear that this Viper
+also possesses primitive arms with sharp
+claws on its shriveled and twisted fingers.
+As this Daemonic creature looks straight
+into your eyes you feel a sharp sting in
+your chest. Its gaze penetrates you
+completely, making you feel weak and
+vulnerable...
+~
+40 297018 -1000 Y
+51 -19 -15 1d1+6999 1d1+879
+0 3150000
+8 8 0
+63 16512 1d1+1 4
+5 2 20 0
+6 2 20 0
+9 1 15 0
+1 2 10 106
+0 1 0 800
+R
+45
+T
+......a Daemonic Pit Viper's eyes burns with blood-lust!~
+T
+......a Daemonic Pit viper's split tounge hizzes aggressively!~
+K
+50000 0 0 0 0 0 0
+#14304
+a Brimstone Shadow~
+a Brimstone Shadow~
+a Brimstone Shadow drifts back and forth inbetween the rocky landscape.
+~
+  Fading in and out of existance,
+this fearsome silouette of a
+creature would strike fear in
+the heart of any man, or demi-god!
+~
+104 75538492 -1000 Y
+50 -20 -6 1d1+6665 1d1+1331
+666 3996000
+8 8 0
+63 24768 1d1+665 1
+1 2 15 203
+0 1 0 289
+R
+12
+T
+ .....a Brimstone Shadow reeks of sulfur!~
+K
+0 0 0 0 0 0 0
+#0
+$~

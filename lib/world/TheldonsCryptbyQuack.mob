@@ -1,0 +1,65 @@
+#29700
+primal clay blank~
+blank of primal clay~
+A blank of primal clay stands here, waiting to be shaped
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+#29701
+ghoul hungry~
+a hungry ghoul~
+A starving ghoul crawls along the ground here.
+~
+This ghoul clearly hasn't had a decent meal in ages.  His ribcage is
+sticking out, his eyes have all but disappeared into their sockets and
+he looks just about ready to croak.
+~
+14 268435456 -800 Y
+13 19 10 1d80+80 1d20+3
+15000 18000
+8 8 1
+52 0 1d1+1 2
+5 1 20 0
+6 1 20 0
+0 0 0 0
+#29702
+skeleton warrior~
+the skeleton~
+The skeletal form of an ancient warrior stands here.
+~
+The skeleton's bones are yellow and utterly devoid of meat.  It
+wears the tattered remnants of some clothing and uses its bony
+fingers as claws to rake out your eyes.
+~
+72 268468224 0 Y
+9 19 9 2d40+120 1d8+1
+0 11000
+8 8 1
+52 0 1d1+1 1
+6 1 20 0
+0 0 0 0
+#29703
+theldon the grim~
+the undead form of Theldon the Grim~
+The undead form of Theldon the Grim stands here.
+~
+You see before you the decayed remains of Theldon Wolfsbane.  This
+proud warrior is now reduced to a skeleton dressed in moldy rags
+that drip bits of flesh as he moves.
+~
+16394 268697600 800 Y
+21 8 4 4d10+1200 1d30+1
+50000 120000
+8 8 1
+53 0 1d1+1 2
+9 1 12 0
+4 1 10 0
+0 0 0 0
+#0
+$~

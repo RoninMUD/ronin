@@ -1,0 +1,994 @@
+#25300
+reaper grim death~
+The Grim Reaper~
+The Grim Reaper is swaying here in a slight breeze.
+~
+
+  The Grim Reaper is DEATH!  His flaming red eyes peer out at you from under
+the folds of his cavernous black cloak.  Clutched in his skeletal hands is the 
+Scythe of Death, which he uses to banish the chosen souls to the Planes of Hell.
+
+~
+11 151029768 0 Y
+70 0 -10 30000d30000+30000000 5d5+201
+10000 5
+9 9 0
+67 134223872 0d0+0 0
+0 0 0 352
+K
+0 0 0 0 0 0 0
+#25301
+minos devil~
+Minos~
+Minos is here judging the damned.
+~
+
+  Minos rules this Circle of Hell.  It is his duty to judge the souls of the 
+dead brought before him and send them to whichever circle of Hell he deems
+fit! He has the body of an enormous human and the head of a giant bull.  His
+tail is tipped with a huge spiked ball which he continually whips back and 
+forth with tremendous strength.
+
+~
+11 294920 -1000 Y
+55 -18 -15 50d5+39900 20d20+200
+350000 2000565
+8 8 1
+62 134238248 0d0+0 1
+3 1 100 0
+0 0 0 32
+K
+250000 25400 0 0 0 0 0
+#25302
+water weird~
+The Water Weird~
+The Water Weird is here guarding the River.
+~
+
+  The Water Weird looks like a huge serpentine form made entirely out of
+water.  The light seems to pass right through the body of this creature, and
+your weapons seem to have little effect!
+
+~
+43 1081352 -1000 Y
+44 -15 -7 3000d3+3015 2d20+180
+1000 920000
+11 11 0
+66 1073709112 0d0+0 0
+0 0 0 480
+R
+2
+K
+0 0 0 0 0 0 0
+#25303
+pagan virtuous~
+The Virtuous Pagan~
+The Virtuous Pagan is wandering the streets.
+~
+
+  These poor creatures do not enjoy a happy existence as they await judgement
+from the master of this place.
+
+~
+16456 32776 0 Y
+35 -12 -2 32d32+4400 10d2+140
+0 500000
+8 8 0
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25304
+souls damned~
+The Damned Souls~
+The Damned Souls wander aimlessly.
+~
+
+  The wailing of the damned is loudest from this cloud of seething souls.
+These souls are just beginning their descent into Hell!
+
+~
+16456 32776 -351 Y
+35 -10 -2 5d6+2995 2d8+89
+0 200000
+8 8 0
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25305
+lemure~
+The Lemure~
+The Lemure are shambling about.
+~
+
+  The Lemure resemble a crowd of humans melted from their proximity to
+Charybdis, Lord of Flame and Shadow.
+
+~
+18638 32776 -450 Y
+36 -16 -8 20d20+15000 2d8+120
+0 690900
+8 8 0
+62 0 0d0+0 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#25306
+wind devil~
+The Wind Devil~
+A Wind Devil is standing here guarding the cliff.
+~
+
+  The wind devil is a vaguely human form masked in a raging windstorm.  It
+seems to howl maliciously with the anticipation of beating down another of
+this place's residents.
+
+~
+536872971 32768 -750 Y
+58 -21 -20 23d15+49980 15d10+578
+1000001 3030303
+9 9 0
+62 134221864 0d0+0 1
+4 5 20 0
+0 0 0 32
+K
+500500 0 0 0 0 0 0
+#25307
+charybdis father flame~
+Charybdis, the Father of Flame~
+Charybdis, the Father of Flame stands here in a veil of bright firelight.
+~
+
+  Before you stands the ruler of the Second Circle.  Charybdis is the
+father of the minions and devils in the upper sections of Hell.  He was
+once right-hand man to Satan himself, but now finds his place here on
+his own tower built to worship Dis.  He is very powerful, able to call
+forth the energy of heat whenever he wishes.  Red skin covers his body,
+perhaps lending to his protection from the flaming torrent surrounding him.
+
+~
+536872971 40960 -1000 Y
+60 -19 -25 20d50+84890 20d6+750
+200001 5050505
+8 8 1
+63 939546543 0d0+0 3
+11 2 5 95
+11 3 6 106
+2 3 25 0
+0 0 0 510
+R
+4
+K
+2000000 0 0 0 0 0 0
+#25308
+glutton~
+a Glutton~
+A Glutton is here, half submerged in swamp muck.
+~
+
+  The folds of fat rolling down from the glutton's body make you feel ill.
+His six chins droop almost to his stomach, which has crushed his legs beneath
+him.  His eyes are set so deep into his face that you cannot see them.
+
+~
+16394 32776 -260 Y
+45 -12 10 50d9+2309 9d5+299
+10000 750000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+10000 0 0 0 0 0 0
+#25309
+nut health~
+a Health Nut~
+A Health Nut is here, complaining and whining.
+~
+
+  The health nut is here, paying too much attention to worldly matters.
+His biceps certainly are bigger than any remnant of heart or of mind that
+might have existed inside him, so now he can only whine to himself here
+in the Marsh of Styx.
+
+~
+16424 268730376 0 Y
+45 -13 -10 50d9+1245 9d5+209
+900 80000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+30000 0 0 0 0 0 0
+#25310
+imp devil~
+the Imp~
+An Imp flies about here doing mischief.
+~
+
+  The tiny imp has frail-looking wings and the most vile-looking grinning
+face you've seen.  Its ebon skin is smooth and glistens in the flickering
+light.
+
+~
+2088 294920 -780 Y
+51 -20 -11 20d5+10900 20d10+350
+60000 1600000
+9 9 0
+62 0 0d0+0 0
+0 0 0 0
+K
+500000 0 0 0 0 0 0
+#25311
+compound worker~
+The compound worker~
+The Compound Worker is here toiling away.
+~
+
+  The worker is a huge and heavily-muscled man.  The look of insanity and
+rage on his face suggests that he has been here for quite some time.  Perhaps
+it would be best if you just avoided him.
+
+~
+16427 805341320 -1000 Y
+50 -7 -10 1d1+15000 5d5+60
+0 500000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25312
+shift supervisor super~
+The Shift Supervisor~
+The Shift Supervisor is here ensuring that the workers keep up the pace.
+~
+
+The shift supervisor is a smaller sort of demon, but no-one gets to see his
+boss without first coming to him.
+
+~
+16427 134250632 0 Y
+50 -7 -8 1d1+3000 1d5+21
+50000 400000
+5 5 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25313
+belial supervisor super~
+Belial~
+Belial, Demon Supervisor of the 4th Circle is here.
+~
+
+  Behind the massive desk there is a huge demon.  He stands more than 15 feet
+tall and has oversized fangs that seem to glow red.  The stench from this
+denizen of hell is such that you wonder what he eats.
+
+~
+139305 295048 -1000 Y
+51 -7 -9 5d5+7000 20d19+120
+3000000 2000000
+8 8 1
+63 0 0d0+0 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#25314
+guard~
+The Guard~
+The Guard is here preventing the damned from leaving the lake.
+~
+
+  The guards are made up of soldiers from every possible walk of life,
+wielding weapons from every age.  Here, a Roman Legionnaire stands side by
+side with a member of the Waffen SS as they push a victim back into the lake.
+
+~
+43 285245448 -1000 Y
+53 -14 -5 24d5+11000 5d5+70
+50000 1200000
+9 9 0
+62 0 0d0+0 0
+0 0 0 0
+K
+100734 0 0 0 0 0 0
+#25315
+murderer~
+The murderer~
+The Murderer is here guarding his island.
+~
+
+  These men are crazed from an eternity of trying to stay out of the lake.  
+Wielding makeshift weapons, they try desperately to beat back the attacks of
+the newer damned as they struggle to gain the island.
+
+~
+16777259 16809992 -1000 Y
+54 -16 -5 2d60+1450 20d5+400
+15 999999
+9 9 1
+69 0 0d0+0 0
+0 0 0 0
+K
+15 0 0 0 0 0 0
+#25316
+geryon devil~
+Lord Geryon~
+The Lord Geryon, ruler of the Fifth Circle, stands here.
+~
+
+  Geryon stands before you in his demonic glory.  Wide leathery wings spread
+out from his thickly muscled body, making the huge room you are in seem small
+by comparison.  The thick skin of his hide seems virtually impregnable to
+your pitiful mortal weapons.  He is one of the greatest of all demons,
+a titan among them, and the keeper of the belt which carries him across the
+River Styx safely beyond the reach of Chiron's deadly bow.
+
+~
+536903691 303104 -1000 Y
+68 -25 -22 20d200+121111 20d29+400
+200000 18000009
+8 8 1
+63 939677880 0d0+0 0
+0 0 0 480
+R
+2
+K
+5000000 25406 0 0 0 0 0
+#25317
+damned soul~
+a Damned Soul~
+A damned soul wanders aimlessly.
+~
+
+  The damned soul wails and whines constantly as he pitifully attempts to
+slap away the burning flakes of ash that fall on him.
+
+~
+16394 32776 -349 Y
+53 -13 -4 20d20+7500 4d8+54
+40000 1100100
+8 8 1
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25318
+demon guard~
+the Demon Guard~
+A large winged demon is here guarding the bridge.
+~
+
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.
+
+~
+43 268468264 -1000 Y
+52 -22 -7 1000d12+12000 4d8+94
+5000 1200000
+8 8 1
+62 939546606 0d0+0 2
+10 1 10 0
+3 5 10 0
+0 0 0 510
+K
+45000 0 0 0 0 0 0
+#25319
+demon guard~
+the Demon Guard~
+A huge winged demon is here standing across the passage of the bridge.
+~
+
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.  His wings unfurl
+to show a span of greater than that of the bridge.
+
+~
+43 268476456 -1000 Y
+52 -25 -29 1000d15+23000 4d8+144
+5000 2400000
+8 8 1
+62 939546605 0d0+0 2
+3 5 10 0
+5 5 33 0
+0 0 0 510
+K
+45000 0 0 0 0 0 0
+#25320
+demon guard~
+the Demon Guard~
+A gigantic winged demon brandishes its dirty talons at you.
+~
+
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.  His wings are
+beating jointly as he flails dark, marred talons in the air before your
+tender eye-sockets.
+
+~
+43 268476456 -1000 Y
+52 -29 -9 1000d18+43000 10d9+320
+25000 5200000
+8 8 1
+62 939546607 0d0+0 3
+2 5 10 0
+3 1 7 0
+4 5 15 0
+0 0 1 508
+R
+4
+K
+89000 0 0 0 0 0 0
+#25321
+fayn daemon lord~
+The Daemon-Lord Fayn~
+The Daemon-Lord Fayn is here, cackling madly at you and brandishing his scythe.
+~
+
+  Fayn is an enormous daemon with huge leathery wings and what seems
+to be a giant sword clasped in his right hand.  Upon closer inspection, you
+see that it is actually his fingernail, almost 8 feet long and razor-sharp.
+This he uses to decapitate, disassemble, and dismember the hapless souls
+who circle around before him.
+
+~
+43 268476458 -1000 Y
+68 -22 -14 45d50+99998 10d45+120
+500000 8000000
+9 9 1
+63 939580909 0d0+0 1
+6 5 10 0
+0 0 1 504
+R
+492
+K
+3500000 25408 0 0 0 0 0
+#25322
+lizard~
+a Lizard~
+The lizard is here flittering around the melting room.
+~
+
+  The small greenish reptile looks at you with an almost human curiosity.
+You wonder how he got here, until he bites you, at which point you wonder
+where else you can send him, since he is already _in_ Hell!
+
+~
+42 32776 0 Y
+46 -15 -6 2d10+2000 5d5+15
+15 2000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+K
+15 0 0 0 0 0 0
+#25323
+flame~
+A Flame~
+The flame is here burning brightly.
+~
+
+  The flames flit back and forth, casting a strange glow about the pit.  As 
+they come close to you, you feel your flesh start to singe, and jump back.
+
+~
+42 32776 0 Y
+44 -15 -6 2d10+2000 5d5+15
+15 2000
+8 8 0
+64 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25324
+golden robe man~
+A Golden Robe~
+A Golden Robe is shuffling about here, straining under his heavy burden.
+~
+
+  This figure wears a robe of what appears to be solid gold.  The incredible
+weight of this garment seems to press the poor soul into the soil of the pit.
+Whatever his crimes when in the world of the living, he is certainly paying
+for them now.
+
+~
+16426 32776 -500 Y
+55 -20 -8 20d50+7000 4d7+90
+5005 900000
+8 8 1
+62 0 0d0+0 0
+0 0 0 0
+K
+2000104 0 0 0 0 0 0
+#25325
+diseased creature man~
+A Diseased Creature~
+A Diseased Creature is here, drool dripping from its chin.
+~
+
+  The diseased creature in front of you is totally repulsive.  Strips of flesh
+hang from its carcass, and the remaining skin is blotched and moldy.  As he 
+reaches for you, his fetid breath almost makes you swoon.
+
+~
+16426 32776 -550 Y
+56 -20 -7 10d20+5000 4d10+119
+40000 960000
+8 8 1
+62 0 0d0+0 1
+6 3 3 0
+0 0 0 0
+K
+5000 0 0 0 0 0 0
+#25326
+satan devil lucifer shaitan~
+Lucifer~
+Lucifer, Prince of Darkness towers over you.
+~
+
+  You see before you the Ultimate exemplar of Evil.  Embodying every
+aspect of vileness, he is known by many names:  Lucifer, Satan, Shaitan,
+Beelzebub among many.  The fallen angel glares with great amusement as
+he regards your miniscule form.  He holds every aspect of Evil within
+himself and knows no fear of a mere mortal such as yourself.  His giant
+wings spread and stretch to encompass you, displaying engorged veins and
+emanating a wave of intense heat.  Flashing teeth drip from his thin lips,
+bright white and keen on sampling your flesh.  Your eyes meet with his,
+cat-like and yellow with no discernable pupils.  This is his favored form,
+and as he gathers strength, he yawns in boredom and motions toward your
+demise.
+
+~
+131115 303144 -1000 Y
+70 -50 -30 999d66+166600 20d13+666
+1000000 25005005
+8 8 1
+63 134242287 0d0+0 4
+11 3 1 181
+11 3 3 203
+11 3 10 130
+11 3 15 95
+0 0 0 382
+R
+509
+K
+10000001 25315 25323 25412 25423 0 0
+#25327
+sorceress woodland~
+the Woodland Sorceress~
+The Woodland Sorceress appears here, directing her cunning gaze upon you.
+~
+
+  A demented wood-nymph with scarlet eyes regards you with a threatening
+glare.  This is the Woodland Sorceress;  her form is small, but infinite
+powers lie beneath her green-tinged skin.  She guards the exit beyond to
+the Lake of Blood and lower Hell itself.  With a flick of her wrist, she
+prepares to discontinue your mortal life.
+
+~
+604521162 278765628 -950 Y
+70 -35 -10 66d666+444444 25d88+5
+800000 24000000
+8 8 2
+63 134502636 9d5+32000 8
+1 3 2 218
+1 3 2 6
+1 3 3 135
+1 3 3 137
+1 3 5 172
+1 3 5 33
+1 3 6 8
+11 3 5 236
+0 0 1 352
+K
+8000000 25330 25430 0 0 0 0
+#25328
+sorceress woodland~
+the Woodland Sorceress~
+The Woodland Sorceress appears here, directing her cunning gaze upon you.
+~
+
+  A demented wood-nymph with scarlet eyes regards you with a threatening
+glare.  This is the Woodland Sorceress;  her form is small, but infinite
+powers lie beneath her green-tinged skin.  She guards the exit beyond to
+the Lake of Blood and lower Hell itself.  With a flick of her wrist, she
+prepares to discontinue your mortal life.
+
+~
+604521162 278765628 -950 Y
+70 -40 -30 999d888+1130000 50d88+5
+800000 24000000
+8 8 2
+63 134502636 9d5+32000 10
+1 3 5 203
+1 3 2 218
+1 3 2 6
+1 3 3 135
+1 3 3 137
+1 6 4 249
+1 3 4 236
+1 3 5 172
+1 3 5 33
+1 3 6 8
+0 0 0 32
+K
+8000000 0 0 0 0 0 0
+#25329
+ciacco hog figure~
+Ciacco the Hog~
+A horrendously obese figure squats in the muck.
+~
+
+  This squat being is barely recognizable in the guise of a human.
+He dribbles grease from pores around his plump lips, drooling spittle
+even now in this cold, damp marsh.  Ciacco was cast here for his
+devotion to the life of sloth and gluttony, now forced to eat his own
+kind as they gather in the swampy muck around him.
+
+~
+234 268468264 -300 Y
+58 -17 9 55d99+71000 5d8+211
+90000 811111
+8 8 1
+69 53248 1d1+1 2
+4 5 10 0
+3 5 19 0
+0 0 0 32
+R
+4
+K
+6500000 0 0 0 0 0 0
+#25330
+paolo man soul~
+Paolo~
+A soul of a human man spins about in a torrent of air.
+~
+
+  This is the soul of Paolo, a man whose guilt came in the form of a
+love consummated in adultery.  He has been banished here forever for
+his sins of lust with Francesca, his lover, forever to be caught up
+in a whirlwind.
+
+~
+74 32776 -150 Y
+45 -10 0 30d30+7300 5d8+33
+51000 265005
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25331
+francesca woman soul~
+Francesca~
+A soul of a human woman spins about in a torrent of air.
+~
+
+  This is the soul of Francesca, a young woman whose guilt came in
+the guise of love consummated in adultery.  She has been banished here
+forever after being accidentally killed by her husband when she was
+caught with her lover Paolo, now caught forever in a whirlwind.
+
+~
+74 32776 -150 Y
+45 -10 0 30d30+6500 5d9+35
+51000 266006
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25332
+harpy hellspawn~
+a Hellspawn Harpy~
+A hellspawn harpy flies about the forest, gnawing on souls.
+~
+
+  A strange hellish creature takes shape here before you, flashing
+bloodstained razors for teeth.  This is the offspring of Satan and
+the Woodland Sorceress, a minion of all evil and devourer of the
+suicidal souls.  Its eyes flit back and forth, taking in its next
+potential victim.
+
+~
+40 285509672 -800 Y
+51 -15 -6 20d50+5890 8d5+55
+0 901000
+8 8 1
+62 0 1d1+1 0
+0 0 0 0
+K
+20000 0 0 0 0 0 0
+#25333
+harpy hellspawn~
+a Hellspawn Harpy~
+A hellspawn harpy flies about the forest, gnawing on souls.
+~
+
+  A strange hellish creature takes shape here before you, flashing
+bloodstained razors for teeth.  This is the offspring of Satan and
+the Woodland Sorceress, a minion of all evil and devourer of the
+suicidal souls.  Its eyes flit back and forth, taking in its next
+potential victim.
+
+~
+42 285509672 -800 Y
+51 -15 -6 20d50+5890 9d9+1001
+0 701000
+8 8 1
+62 0 1d1+1 1
+6 5 100 0
+0 0 1 0
+K
+20000 0 0 0 0 0 0
+#25334
+shadow brimstone~
+A Brimstone Shadow~
+A tiny shadow melts along with a scent of brimstone, burning on the floor.
+~
+
+  It has no form, merely a void of darkness which consumes the souls
+of the damned here in Hell.  It is sent to do Satan's bidding and banish
+you to the pits where you belong.
+
+~
+553648232 337149960 -1000 Y
+70 -10 -14 5d90+1690 9d9+1110
+0 1245005
+8 8 1
+67 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#25335
+glutton~
+a Glutton~
+A Glutton is here, half submerged in swamp muck.
+~
+
+  The folds of fat rolling down from the glutton's body make you feel ill.
+Her six chins droop almost to her stomach, which has crushed her legs
+beneath her weight.  Her eyes are set so deep into her face that you
+cannot see them.
+
+~
+16394 32776 -260 Y
+45 -12 10 50d9+2309 9d5+299
+10000 750000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+10000 0 0 0 0 0 0
+#25336
+nut health~
+a Health Nut~
+A Health Nut is here, complaining and whining.
+~
+
+  The health nut is here for paying too much attention to worldly matters.
+She screams as her silicone breasts and fake lips melt from her now-leprous
+body, leaving only a blubbering mess here in the Marsh of Styx.
+
+~
+16424 268730376 0 Y
+45 -13 -10 50d9+1245 9d5+209
+900 80000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+30000 0 0 0 0 0 0
+#25337
+serpent winged~
+A Winged Serpent~
+A winged serpent glides swiftly towards you, intent on gouging your face!
+~
+
+  This is one of Lucifer's small pets, a 40-foot flying snake.  It hovers
+and glides around the pit, taking notice of each small detail in its
+surroundings with golden bright eyes.  The eyes settle on you just as you
+meet its gaze;  it flies speedily to greet you with fangs wide and drooling
+venom.
+
+~
+106 34824 -900 Y
+70 -20 -30 5d90+26090 10d9+303
+100 1000000
+8 8 1
+80 939548615 1d1+1 3
+8 2 10 0
+8 5 6 0
+5 3 6 0
+0 0 0 510
+R
+4
+K
+2500000 25325 25425 0 0 0 0
+#25338
+incubus demonspawn~
+A lustful incubus~
+A horrible little demon bounces around the room looking for a victim.
+~
+
+  A buff-looking little demonspawn covered in your own flesh and guts,
+it seems to have a bone to pick with you..  It flies around in the air
+and attempts to engage with you again in order to propogate itself.
+
+~
+17317900 17604650 -1000 Y
+51 -18 -1 30d10+3999 5d5+170
+20 259000
+9 9 1
+62 939530241 1d1+1 0
+0 0 0 64
+R
+4
+K
+50000 0 0 0 0 0 0
+#25339
+water weird~
+The Water Weird~
+The Water Weird is here guarding the River.
+~
+
+  The Water Weird looks like a huge serpentine form made entirely out of
+water.  The light seems to pass right through the body of this creature, and
+your weapons seem to have little effect!
+
+~
+43 1081352 -1000 Y
+44 -15 -7 3000d3+3015 2d20+180
+1000 920000
+11 11 0
+66 1073709112 0d0+0 0
+0 0 0 480
+R
+2
+K
+0 0 0 0 0 0 0
+#25340
+demon guard~
+the Demon Guard~
+A large winged demon is here guarding the bridge.
+~
+
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.
+
+~
+43 268468264 -1000 Y
+52 -22 -7 1000d12+12000 4d8+94
+5000 1200000
+8 8 1
+62 939546606 0d0+0 2
+10 1 10 0
+3 5 10 0
+0 0 0 510
+K
+45000 0 0 0 0 0 0
+#25341
+demon guard~
+the Demon Guard~
+A large winged demon is here guarding the bridge.
+~
+
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.
+
+~
+43 268468264 -1000 Y
+52 -22 -7 1000d12+12000 4d8+94
+5000 1200000
+8 8 1
+62 939546606 0d0+0 2
+10 1 10 0
+3 5 10 0
+0 0 0 510
+K
+45000 0 0 0 0 0 0
+#25342
+demon guard~
+the Demon Guard~
+A huge winged demon is here standing across the passage of the bridge.   
+~
+
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.  His wings unfurl
+to show a span of greater than that of the bridge.
+
+~
+43 268476456 -1000 Y
+52 -25 -29 1000d15+23000 4d8+144
+5000 2400000
+8 8 1
+62 939546605 0d0+0 2
+3 5 10 0
+5 5 33 0
+0 0 0 510
+K
+45000 0 0 0 0 0 0
+#25343
+demon guard~
+the Demon Guard~
+A huge winged demon is here standing across the passage of the bridge.   
+~
+  
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.  His wings unfurl
+to show a span of greater than that of the bridge.
+
+~
+43 268476456 -1000 Y
+52 -25 -29 1000d15+23000 4d8+144
+5000 2400000
+8 8 1
+62 939546605 0d0+0 2
+3 5 10 0
+5 5 33 0
+0 0 0 510
+K
+45000 0 0 0 0 0 0
+#25344
+demon guard~
+the Demon Guard~
+A gigantic winged demon brandishes its dirty talons at you.
+~
+
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.  His wings are
+beating jointly as he flails dark, marred talons in the air before your
+tender eye-sockets.  
+
+~
+43 268476456 -1000 Y
+52 -29 -9 1000d18+43000 10d9+320
+25000 5200000
+8 8 1
+62 939546607 0d0+0 3
+2 5 10 0
+3 1 7 0
+4 5 15 0
+0 0 1 508
+R
+4
+K
+89000 0 0 0 0 0 0
+#25345
+demon guard~
+the Demon Guard~
+A gigantic winged demon brandishes its dirty talons at you.
+~
+
+  The guard has leathery jet-black skin with spiked armor at his shoulders
+and a bleached skull on his head.  On his arm is buckled a disc with many
+razor edges, and he wields a wickedly pointed pitchfork.  His wings are
+beating jointly as he flails dark, marred talons in the air before your
+tender eye-sockets.  
+
+~
+43 268476456 -1000 Y
+52 -29 -9 1000d18+43000 10d9+320
+25000 5200000
+8 8 1
+62 939546607 0d0+0 3
+2 5 10 0
+3 1 7 0
+4 5 15 0
+0 0 1 508
+R
+4
+K
+89000 0 0 0 0 0 0
+#0
+$~

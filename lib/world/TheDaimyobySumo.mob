@@ -1,0 +1,397 @@
+#501
+Oni Greater~
+A Greater Oni~
+An enormous Oni leaps out of the shadows towards you!
+~
+This Oni is rather different from the small pink ones you've seen. Aside from
+its bluish skin color, it is more than twice as tall as the pink oni, and 
+its claws and fangs are much larger and deadly looking.
+~
+1065064 270278702 -1000 Y
+52 -12 -12 20d400+4500 2d45+50
+80000 645000
+8 8 1
+62 0 1d750+50 3
+2 4 40 0
+5 1 45 0
+1 2 25 25
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#506
+Farmer~
+Farmer~
+A shifty-looking farmer stands here, almost as if he's guarding something.
+~
+His dark eyes tell you he'd cut your throat as soon as look at you.
+Maybe it's best if you left him alone.
+~
+131086 0 -650 Y
+46 -6 10 100d75+2500 4d20+40
+15000 87500
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#508
+Tea Master~
+the Tea Master~
+The Tea Master is sitting here stirring his tea.
+~
+You see a very old man, older by far than anyone you know, but he still
+exudes a sense of strength and wisdom. You feel like he could answer any 
+question asked of him.
+~
+10 128 0 Y
+40 0 4 6d100+10 4d10+5
+5000 10000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#517
+Hanzo Hattori Ninja~
+Hanzo~
+A small man dressed in ninja's clothing is crouched in the shadows.
+~
+From his well-scarred face and arms, you can tell that he is well acquainted
+with the warrior arts and the pain that is inflicted by them. The cold stare
+he levels at you lets you know right away he doesn't give a damn if you live
+or die.
+~
+16426 270270624 0 Y
+52 -11 -9 50d150+500 4d8+50
+65000 625000
+8 8 1
+5 0 250d1+50 9
+3 2 20 0
+3 1 35 0
+9 2 15 0
+11 6 35 103
+4 3 20 0
+11 5 35 105
+2 4 25 0
+11 4 15 104
+7 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#525
+Kinshu weaponsmith~
+Kinshu the weaponsmith~
+Kinshu is standing here, ready to show you his weapons.
+~
+Kinshu's arms look as if they've been forged from the same steel he uses
+to make his weapons from, not a trace of weakness can be seen in his visage.
+He is perhaps one of the strongest men you've ever met.
+~
+10 2184 0 Y
+60 -16 3 30000d1+1 35d10+65
+25000 45000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#528
+Yoshi Cook Chef~
+Yoshi~
+Yoshi is standing here, cooking like a madman.
+~
+Yoshimitsu is a true master of the culinary arts. It is even rumored that he
+was the personal chef to the shogun.
+~
+10 2184 0 Y
+60 -9 10 30000d1+1 10d30+50
+50000 120000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#529
+ronin samurai drunk~
+a drunken ronin~
+A drunken ronin sits here, waiting for an excuse to make trouble.
+~
+He looks as if he was once an honorable warrior, but now is nothing more
+than a drunken ruffian.
+~
+11567118 0 0 Y
+32 8 10 20d100+75 4d5+9
+10000 110000
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#530
+villager peasant farmer~
+a peasant~
+A poor-looking peasant sits here enjoying his steaming bowl of noodles.
+~
+This fellow appears to be a very hard-working soul, the dirt under his 
+fingernails and the wild, unkempt mass of hair on his head tell you that
+all that matters to him is the completion of his day's work, in duty to
+the Shogun.
+~
+10 0 250 Y
+29 19 10 12d75+100 6d3+3
+6750 37500
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#540
+Tanoshi Wrestler~
+Tanoshi~
+Tanoshi the Sumo wrestler stands here, waiting for a challenger.
+~
+Standing before you is an incredibly fat man wearing only a skimpy loincloth
+around his waist.  His bloated arms and legs are the size of tree trunks, and 
+the swollen belly matches them in stature.  His hair is tied neatly into a 
+topknot, which is held in place by several pin-like sticks.  He scowls at you 
+and drops into the squat fighting position of the sumo wrestler, making the 
+earth tremble beneath your feet.
+~
+10 268435584 0 Y
+54 -11 -9 99d100+4000 8d9+80
+650000 875000
+8 8 1
+11 0 1d250+150 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#542
+tengu leaflet~
+a leaflet tengu~
+A small, frail-looking tengu stands here, seemingly frightened of you.
+~
+You see a small tengu, a part bird part man creature with wings and arms and
+a funny looking beak that is quite long.  He wears a small black hat on his
+head, as well as an unusual cloak made of feathers.
+~
+10 2 0 Y
+48 -4 1 1d500+2000 1d35+25
+15000 225000
+8 8 1
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#543
+Tengu birdman greater~
+A greater tengu~
+A very large tengu is here, waiting for another victim to play a trick on.
+~
+The tengu is a strange creature indeed, clearly of magical nature he has
+the body of a man, but the wings and head of a bird. around his neck is draped
+a rather unusual looking straw cloak.
+~
+19007566 32778 200 Y
+52 -8 -3 25d100+5000 3d15+35
+37500 450000
+8 8 1
+66 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#551
+master guard bushi~
+The Guard Master~
+The master of all the Shogun's guards is here, watching everything closely.
+~
+He stands before you confidently, knowing full well that any aggressive move
+against him will bring dozens of guards rushing to his aid.  He has served the
+Shogun many years and has worked his way through the ranks to become the master
+of all his guards.
+~
+74 268697728 0 Y
+49 -7 -7 1d5000+2500 1d55+40
+37500 375000
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#552
+Sojobo tengu king~
+Sojobo~
+Sojobo, king of the tengu, rests here upon his strange throne.
+~
+You see before you a venerable old tengu with a thick mane of white hair on
+his head, atop which he wears a small, round cap much like those worn by
+yamabushi priests.  His tiny, hummingbird-like feathers glimmer brightly in
+the dim light that is present here.  He looks right into your eyes and beams
+a warm smile.
+~
+131082 268708008 400 Y
+32 -11 10 50d100+5000 5d15+60
+77777 777777
+8 8 1
+67 0 10d250+100 4
+11 3 25 10
+1 3 32 81
+11 6 20 140
+1 2 35 93
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#554
+Oni Baby~
+A baby oni~
+A baby oni is here, tearing hungrily at the corpse.
+~
+Looking at it, what you notice most is the blood. Blood is dripping from
+its fangs and claws, and when it looks back at you all it sees is its next 
+meal.
+~
+90177546 262144 0 Y
+15 5 10 10d200+150 2d50+75
+1 75000
+8 8 0
+62 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#555
+Oni lesser~
+A Lesser Oni~
+A small Oni is here, picking its teeth and grinning at you.
+~
+You see a small ogre-like creature with small, blunt horns protruding from 
+its head, strange pinkish skin and three fingers and toes. It appears friendly
+enough, but then you notice the sharp claws and fangs which it seemed to
+be hiding.
+~
+335560776 269787138 -750 Y
+52 -11 -7 5d1000+2750 1d20+40
+25000 350000
+8 8 1
+62 0 0d0+0 2
+4 3 25 0
+5 2 35 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#571
+Crone Oni Old~
+The Oni Crone~
+An ancient oni female is here, preparing for her next dark ritual.
+~
+She is an ancient creature, her body twisted and deformed by centuries of
+exposure to strange and powerful magicks. Even though her physical form looks
+frail and unthreatening, you get the distinct impression that she could
+turn you into a smoking heap of ash with but a thought.
+~
+147560 939827368 -1000 Y
+56 -13 -14 55d175+9750 10d9+90
+750000 1750000
+8 8 2
+63 0 10d100+50 5
+1 3 7 143
+1 2 7 141
+1 2 15 136
+1 1 9 141
+1 6 3 102
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#585
+Arago Shadow Demon~
+Arago the Shadow Demon~
+You sense a tremendous demonic power in the room, waiting to strike!
+~
+Arago is indeed a fearsome looking creature. It stands about the size of
+an ogre. Blackened, charred skin hangs loosely on its body in wrinkled folds.
+Its eyes are bloodshot and blood flows from them where tears normally would.
+It has four long fangs, two extending upward nearly to its eyes, and two
+extending well below its chin. It emits a throaty growl and you truly wish
+you were anywhere but here!
+~
+67125292 956598316 -1000 Y
+70 -20 -20 15d1750+12500 3d125+85
+750000 2000000
+8 8 1
+63 4608 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#588
+guard bushi~
+a bushi guard~
+One of the shogun's elite bushi guards is here, eyeing you suspiciously.
+~
+You see a large and very muscular guard, he is armed with only a yari and a
+wakizashi, but he would still make a very dangerous foe.  He has sworn to
+protect the shogun at any cost and would gladly die to attain this end.
+~
+72 262144 0 Y
+46 0 -4 1d3000+300 1d22+35
+12500 262500
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#596
+monk priest sohei~
+a Sohei~
+A monk is here, striking the gong in a perfect rhythm.
+~
+You see a yamabushi, a travelling warrior-priest, dressed in the typical
+orange sash of monks, yet he carries a katana at his side. He has devoted
+his life to perfecting his skill and to the pursuit of reaching inner peace.
+~
+10 128 0 Y
+46 -4 2 5d1000+500 3d15+20
+1 270000
+8 8 1
+2 0 0d0+0 2
+4 2 65 0
+7 1 45 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#598
+shukenja grand priest~
+The grand shukenja~
+The grand shukenja, guardian of this temple, kneels here in meditation.
+~
+You see before you an ancient man who has fully devoted his life to the task
+of gaining knowledge and spiritual enlightenment. He wears the typical garb
+of a priest: a faded orange sash and straw sandals, hidden beneath his
+priestly garb you notice a suit of O-yoroi, the sacred armor of the samurai.
+~
+33554442 268435584 1000 Y
+55 -10 -4 15d1000+1000 5d15+30
+1 750000
+8 8 1
+2 0 0d0+0 3
+2 4 15 0
+4 3 10 0
+9 4 7 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#599
+apothecary old man~
+the Apothecary~
+An old man dressed in simple clothes stands here in silent contemplation.
+~
+You see an old withered up man, standing behind the counter mixing herbs into
+a strange concoction.
+~
+10 268732544 0 Y
+70 -12 -3 30000d1+1 50d10+100
+67500 87500
+8 8 1
+1 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

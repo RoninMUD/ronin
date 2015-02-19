@@ -1,0 +1,30 @@
+#13400
+The Podium of Air~
+You appear in mid-air, but some strange force holds you aloft. The
+height you're in is so great, that the ground isn't visible to you.
+If there is no ground below you? You feel a weak pushing motion
+guiding you towards north.
+~
+134 32768 3
+D0
+You feel a strange force compelling you northwards. It's the wind.
+~
+~
+0 -1 13403
+S
+#13403
+The Altar of Air~
+A gigantic whirlwind seems to be the center of everything here. The
+swirling winds and currents of air whisk you forth and back, but you
+can easily regain the control, just by thinking.
+~
+134 32768 3
+D2
+You feel a strange force compelling you southwards. It's the wind.
+~
+~
+0 -1 13400
+S
+#0
+$~
+

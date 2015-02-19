@@ -1,0 +1,1113 @@
+#14000
+Outside the main doors~
+The large wooden doors you are standing in front of, have almost a foreboding
+feeling to them. The strange sounds emanating from within make your spine
+shiver. You could still take the path back to the village.
+Suddenly, you see some movement in the upstairs window!
+~
+140 0 1
+D0
+You see a pair of wooden doors.
+~
+door large wooden~
+1 -1 14001
+D2
+You see a small path leading to the lake-side path.~
+~
+0 -1 10909
+E
+door main wooden~
+The large wooden doors that close off the main entrance to the house gleam
+in the light and strange shadows play on the door's polished surface.
+~
+E
+window upstairs upper~
+As you look up to the window, you could swear that there was someone standing
+in the window, but there's no-one there now. Only the darkness of the house
+remains.
+~
+S
+#14001
+In the great hall~
+This large chamber with hardly any furniture at all, has a high ceiling and in
+the walls high above the floor, you can see the balcony of the second floor
+running around the room. Directly ahead of you, you see a large painting of a
+elderly man. The chamber continues east and west, and you can see a stairway
+leading up to the east of you.
+~
+140 8 0
+D1
+You see the great hall.
+~
+~
+0 -1 14014
+D2
+You see a pair of wooden doors.
+~
+door large wooden~
+1 -1 14000
+D3
+You see the great hall.
+~
+~
+0 -1 14007
+E
+painting~
+The painting depicts a man of great charisma and good looks. He is sitting on
+a chair, smoking a pipe. In the painting, in the background, you can see a
+silvery mirror hanging on the wall of the room. At the very moment that the
+picture shows you, the mirror seems to reflect something dark and sinister.
+~
+S
+#14002
+Cloak room~
+In this small and dusty room, there are some old and tattered traveling cloaks
+hanging on pegs along the walls. Some cobwebs are hanging from corners and
+walls.
+~
+140 8 0
+D1
+You see the corridor.
+~
+~
+0 -1 14015
+S
+#14003
+The armory~
+This empty room obviously used to be some kind of armory, judging from the
+empty and broken weapons and armor racks. If there was anything valuable here
+it must have been looted ages ago, by some filthy thieves. There is a black
+door on the western wall.
+~
+140 8 0
+D3
+You see a black door blocking the doorway.
+~
+door black~
+1 -1 14006
+S
+#14004
+In the common room~
+This fairly large room is furnished with several sets of bunk beds,
+footlockers, a few chairs and a large table in the middle of the room. Most
+of the footlockers are broken and empty. Nothing of any value seems to be
+here.
+~
+140 8 0
+D1
+You see the foyer.
+~
+~
+0 -1 14016
+D3
+You see the corridor.
+~
+~
+0 -1 14005
+S
+#14005
+In the corridor~
+In these shadowy hallways, there isn't much left that is still alive. In the
+end of the corridor, on the northern wall, there is a huge painting. Two low
+doorways lead both east and west. The corridor leads south.
+~
+140 8 0
+D1
+You see the common room.
+~
+~
+0 -1 14004
+D2
+You see the corridor.
+~
+~
+0 -1 14006
+D3
+You see the bottom floor of the tower.
+~
+~
+0 -1 14011
+E
+painting~
+There are three young children in the painting, all of them very beautiful.
+With the luscious, green garden in the background, the painting looks almost
+like it would be from heaven.~
+S
+#14006
+In the corridor~
+You are standing in a dark corridor in the downstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor. To
+the south you see the corridor opening into a large hall.
+You see a black door on the eastern wall of the corridor.
+~
+140 8 0
+D0
+You see the corridor.
+~
+~
+0 -1 14005
+D1
+You see a black door.
+~
+door black~
+1 -1 14003
+D2
+You see the great hall.
+~
+~
+0 -1 14007
+S
+#14007
+In the western end of the great hall~
+This large chamber with hardly any furniture at all, has a high ceiling and in
+the walls high above the floor, you can see the balcony of the second floor
+running around the room. The chamber continues east, but you can see corridor
+leading north and a small door leading west.
+~
+140 8 0
+D0
+You see a corridor.
+~
+~
+0 -1 14006
+D1
+You see the great hall.
+~
+~
+0 -1 14001
+D3
+You see a small door.
+~
+door small~
+1 -1 14008
+S
+#14008
+Kitchen~
+This fairly spacious room is cluttered with typical grimy looking paraphernalia
+and furnishing with counters and cupboards suitable for a large household
+kitchen. There is a large table in the middle of the room. Small corridor
+leads to the north, and a small door leads to the east.
+~
+140 8 0
+D0
+You see a corridor.
+~
+~
+0 -1 14013
+D1
+You see a small door.
+~
+door small~
+1 -1 14007
+S
+#14009
+Servants' quarters~
+This small and almost crowded bedroom is furnished with a single wardrobe and
+six bunks. the mattresses in the bunks are filled with old, dry hay, and look
+thus hardly comfortable. There is a small, wooden door on the western wall.
+~
+140 8 0
+D3
+You see a wooden door.
+~
+door wooden~
+1 -1 14012
+S
+#14010
+Servants' quarters~
+This small and almost crowded bedroom is furnished with a single wardrobe and
+six bunks. the mattresses in the bunks are filled with old, dry hay, and look
+thus hardly comfortable. There is a small, wooden door on the western wall.
+~
+140 8 0
+D3
+You see a wooden door.
+~
+door wooden~
+1 -1 14013
+S
+#14011
+In the bottom of the tower~
+The bottom floor of the tower is unfurnished and bare. The cold stone floor
+beneath your feet sends slight shivers up your spine. There is an old stone
+stairway in the north-west corner, leading up to the top of the tower.
+A narrow corridor leads south and east.
+~
+140 8 0
+D1
+You see a corridor.
+~
+~
+0 -1 14005
+D2
+You see a corridor.
+~
+~
+0 -1 14012
+D4
+You see stairs going up.
+~
+~
+0 -1 14029
+S
+#14012
+In the corridor~
+You are standing in a dark corridor in the downstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor. To
+the north, you can see the bottom floor of the tower. 
+There is a wooden door on the eastern wall.
+~
+140 8 0
+D0
+You see the bottom floor of the tower.
+~
+~
+0 -1 14011
+D1
+You see a wooden door.
+~
+door wooden~
+1 -1 14010
+D2
+You see a corridor.
+~
+~
+0 -1 14013
+S
+#14013
+In the corridor~
+You are standing in a dark corridor in the downstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor. To
+the south you can see the kitchen.
+On the eastern wall, there is a wooden door.
+~
+140 8 0
+D0
+You see a corridor.
+~
+~
+0 -1 14012
+D1
+You see a wooden door.
+~
+door wooden~
+1 -1 14009
+D2
+You see the kitchen.
+~
+~
+0 -1 14008
+S
+#14014
+In the eastern end of the great hall~
+This large chamber with hardly any furniture at all, has a high ceiling and in
+the walls high above the floor, you can see the balcony of the second floor
+running around the room. The chamber continues west, and there is a small
+corridor leading north. There is a small stairway leading up to the balcony.
+~
+140 8 0
+D0
+You see a corridor.
+~
+~
+0 -1 14015
+D3
+You see the great hall.
+~
+~
+0 -1 14001
+D4
+You see the stairs leading to the balcony.
+~
+~
+0 -1 14044
+S
+#14015
+In the corridor~
+You are standing in a dark corridor in the downstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor. To
+the north, you can see the foyer.
+~
+140 8 0
+D0
+You can see the foyer.
+~
+~
+0 -1 14016
+D1
+You can see a corridor.
+~
+~
+0 -1 14019
+D2
+You see the great hall.
+~
+~
+0 -1 14014
+D3
+You see a cloak room.
+~
+~
+0 -1 14002
+S
+#14016
+Foyer~
+This is an empty room, if not counting the single tapestry hanging on the
+north wall. The rest of the room is filled with dust and cobwebs, but the
+tapestry is clean of it, strangely enough. There are great double doors to
+the east.
+~
+140 8 0
+D1
+You see great double doors.
+~
+door doors great double~
+1 -1 14017
+D2
+You see a corridor.
+~
+~
+0 -1 14015
+D3
+You see the common room.
+~
+~
+0 -1 14004
+E
+tapestry~
+The wall hanging pictures a dark-haired female warrior standing on a rocky
+outcropping. The banner she holds aloft sports a white Pegasus rampant on a
+blue field.
+~
+S
+#14017
+In the dining hall~
+You are standing in a large chamber with a large fireplace to the north. Two
+long wooden tables lined with chairs run the length of the room. The tables
+are marred by some ancient stains. There are great double doors leading west.
+~
+140 8 0
+D1
+You see the throne.
+~
+throne secret~
+2 14047 14024
+D2
+You see the nursery.
+~
+~
+0 -1 14018
+D3
+You see great double doors.
+~
+doors great double~
+1 -1 14016
+E
+stains table~
+The stains on the table are brownish, and after considering for a while, you
+are pretty certain of what they are. They are ancient stains of blood.
+~
+S
+#14018
+Nursery~
+Two cribs and a few tiny chairs furnish this rather empty room. There is an
+open toy chest in the middle of the room, and the toys from it are scattered
+all over the floor, with many of them broken. There are old, dried and bloody
+hand prints all over the walls.
+~
+140 8 0
+D0
+You see the dining hall.
+~
+~
+0 -1 14017
+D2
+You see a corridor.
+~
+~
+0 -1 14019
+S
+#14019
+In the corridor~
+You are standing in a dark corridor in the downstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor. To
+the north you can see the nursery.
+~
+140 8 0
+D0
+You see the nursery.
+~
+~
+0 -1 14018
+D1
+You see a corridor.
+~
+~
+0 -1 14022
+D2
+You see the sitting room.
+~
+~
+0 -1 14020
+D3
+You see a corridor.
+~
+~
+0 -1 14015
+S
+#14020
+Sitting room~
+This medium-sized room is comfortably furnished with stuffed chairs and
+couches, a few low tables and an empty bookshelf, or was. Nowadays it looks
+more like a room forgotten for a half a century. Dust and cobwebs are all over
+the place. There is a broken door on the north wall, leading in to the
+corridor.
+~
+140 12 0
+D0
+You see a corridor.
+~
+~
+0 -1 14019
+S
+#14021
+In the storeroom~
+This room is filled almost up to the ceiling with many kinds of boxes and
+crates of musty miscellany. Judging from all this nonperishable junk, this
+must have been a storeroom of some kind.
+There is an open doorway to the corridor in the north.
+~
+140 8 0
+D0
+You see a corridor.
+~
+~
+0 -1 14022
+S
+#14022
+In the corridor~
+You are standing in a dark corridor in the downstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor. To
+the east, you can see the stairway.
+~
+140 8 0
+D0
+You see a bathroom.
+~
+~
+0 -1 14023
+D1
+You see a stairway.
+~
+~
+0 -1 14025
+D2
+You see a storeroom.
+~
+~
+0 -1 14021
+D3
+You see a corridor.
+~
+~
+0 -1 14019
+S
+#14023
+In the bath~
+This is a rather large room, most of which is taken up by a large sunken bah
+full of foul, murky water. Stagnant smell floats everywhere in the room,
+making you feel a bit ill. There is something moving in the water of the bath.
+There is an open archway leading to the corridor in the south.
+~
+140 8 0
+D2
+You see a corridor.
+~
+~
+0 -1 14022
+S
+#14024
+In the secret chamber~
+You are standing in a small chamber filled with a candelabra and censers, all
+of which are fuming with strange incenses. Among the engravings on the walls,
+you notice a hidden outline of a door on the western wall.
+There are long, steep stairs descending into darkness.
+~
+140 8 0
+D3
+You see a barely visible door in the wall.
+~
+door hidden~
+2 14047 14017
+D5
+You see long stairs descending in to the tomb.
+~
+~
+0 -1 14061
+S
+#14025
+In the bottom of the stairwell~
+You are standing in the lower end of the stairway in the manor. The stairs are
+relatively wide, but steep. You would be better off watching where you step in
+these stairs. Who knows what there might be. There are some cracks in the 
+southern wall.
+~
+140 8 0
+D2
+~
+door hidden~
+2 14046 14026
+D3
+You see a corridor.
+~
+~
+0 -1 14022
+D4
+You see stairs leading up.
+~
+~
+0 -1 14050
+E
+wall walls crack crack~
+As you examine the walls, you suddenly notice the outline of a door on the 
+south wall.~
+S
+#14026
+Privy~
+This small room is completely bare and featureless, if not counting the dust
+and spider webs covering the walls and floor. You can see faint outlines of
+a door on the north wall.
+~
+140 8 0
+D0
+~
+door hidden~
+2 14046 14025
+S
+#14027
+In the top of the tower~
+You are standing in the top of this low tower in the corner of the manor. You
+can see the surrounding forest through the small windows located on all sides
+of the walls. This whole place looks deserted and empty.
+There is an iron hatch on the tower floor.
+~
+140 8 0
+D5
+You see an iron hatch.
+~
+hatch iron~
+1 -1 14029
+S
+#14028
+Within the Mirror~
+Being just drawn in to the mirror, you are still a bit confused. As you look
+around, you find yourself standing within a room with silvery walls. All light
+seems to be reflecting from them back to you ... and back and back again. The
+light makes your eyes sting and your head hurt. A shadowy gateway leads towards
+north.
+~
+140 521 0
+D0
+You see a dark room with shadows moving in there.
+~
+~
+0 -1 14070
+S
+#14029
+In the tower stairway~
+You are standing in the stairway of this stone tower on the north-western 
+corner of the manor. The stairs continue upwards until they meet an iron 
+hatch on the ceiling of the stairway.
+There is an iron door on the south wall.
+~
+140 8 0
+D2
+You see an iron door.
+~
+door iron~
+1 -1 14030
+D4
+~
+hatch iron~
+1 -1 14027
+D5
+~
+~
+0 -1 14011
+S
+#14030
+In a corridor~
+You are standing in a dark corridor in the upstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor.
+There is an iron door on the north wall.
+~
+140 8 0
+D0
+You can an iron door.
+~
+door iron~
+1 -1 14029
+D2
+You can see the corridor.
+~
+~
+0 -1 14031
+S
+#14031
+In a corridor~
+You are standing in a dark corridor in the upstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor. 
+There is a painted door to your east.
+~
+140 8 0
+D0
+~
+~
+0 -1 14030
+D1
+~
+door painted~
+1 -1 14035
+D2
+~
+~
+0 -1 14032
+S
+#14032
+In the Panorama Room~
+You are standing in a large room, with huge windows opening to the south.
+Through them, you can see the green luscious lawn opening in front of the
+house. There are some chairs arranged to face the windows, as if you could
+sit in them and watch the scenery.
+~
+140 648 0
+D0
+~
+~
+0 -1 14031
+S
+#14033
+Upstairs Bedroom~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D1
+~
+door blue~
+1 -1 14036
+S
+#14034
+Upstairs Bedroom~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D1
+~
+~
+0 -1 14037
+S
+#14035
+In the Balcony above the Great Hall~
+You are standing in the balcony above the great hall. The walls are lined with
+family portraits. Nearly all of them are stained with spatters of blood. As you
+look down to the great hall, you notice a shadow moving outside the outer wall
+windows.
+~
+140 8 0
+D1
+~
+~
+0 -1 14038
+D3
+~
+door painted~
+1 -1 14031
+E
+portraits~
+The portraits have been shredded beyond recognition, as if by claws of some
+wild animal.
+~
+S
+#14036
+In a corridor~
+You are standing in a dark corridor in the upstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor. 
+There is a yellow door on the eastern wall and a blue door on the western.
+~
+140 8 0
+D1
+~
+door yellow~
+1 -1 14039
+D2
+You can see the corridor.
+~
+~
+0 -1 14037
+D3
+~
+door blue~
+1 -1 14033
+S
+#14037
+In a corridor~
+You are standing in a dark corridor in the upstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor.
+~
+140 8 0
+D0
+You can see the corridor.
+~
+~
+0 -1 14036
+D1
+You can see an empty room.
+~
+~
+0 -1 14040
+D2
+You can see the balcony.
+~
+~
+0 -1 14038
+D3
+~
+~
+0 -1 14034
+S
+#14038
+In the Balcony above the Great Hall~
+You are standing in the balcony above the great hall. The walls are lined with
+family portraits. Nearly all of them are stained with spatters of blood. As you
+look down to the great hall, you notice a shadow moving outside the outer wall
+windows.
+~
+140 8 0
+D0
+~
+~
+0 -1 14037
+D1
+~
+~
+0 -1 14043
+D3
+~
+~
+0 -1 14035
+E
+portraits~
+The portraits have been shredded beyond recognition, as if by claws of some
+wild animal.
+~
+S
+#14039
+Upstairs Bedroom~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D3
+~
+door yellow~
+1 -1 14036
+S
+#14040
+The Upstairs Guest Room~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D3
+~
+~
+0 -1 14037
+S
+#14041
+Upstairs Bedroom~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D2
+~
+~
+0 -1 14042
+S
+#14042
+In a corridor~
+You are standing in a dark corridor in the upstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor.
+~
+140 8 0
+D0
+~
+~
+0 -1 14041
+D1
+~
+~
+0 -1 14046
+D2
+~
+~
+0 -1 14043
+S
+#14043
+In the Balcony above the Great Hall~
+You are standing in the balcony above the great hall. The walls are lined with
+family portraits. Nearly all of them are stained with spatters of blood. As you
+look down to the great hall, you notice a shadow moving outside the outer wall
+windows.
+You see a small door on the east wall.
+~
+140 8 0
+D0
+~
+~
+0 -1 14042
+D1
+You see a small door.
+~
+door small~
+1 -1 14047
+D2
+~
+~
+0 -1 14044
+D3
+~
+~
+0 -1 14038
+E
+portraits~
+The portraits have been shredded beyond recognition, as if by claws of some
+wild animal.
+~
+S
+#14044
+In the Balcony above the Great Hall~
+You are standing in the balcony above the great hall. The walls are lined with
+family portraits. Nearly all of them are stained with spatters of blood. As you
+look down to the great hall, you notice a shadow moving outside the outer wall
+windows.
+You see a small door on the east wall.
+~
+140 8 0
+D0
+~
+~
+0 -1 14043
+D1
+You see a small door.
+~
+door small~
+1 -1 14048
+D5
+~
+~
+0 -1 14014
+E
+portraits~
+The portraits have been shredded beyond recognition, as if by claws of some
+wild animal.
+~
+S
+#14045
+The Master Bedroom~
+The large bedroom you are standing in, is a near-perfect copy of the bedroom
+of your dreams. The wide double-bed with canopies and a nightstand made of
+the most beautiful teakwood are really precious works of art. 
+~
+140 8 0
+D1
+~
+door secret~
+2 14047 14049
+D2
+~
+~
+0 -1 14046
+E
+bed double~
+When searching for something from the bed, you discover a secret door in the
+east wall, behind the bed.~
+S
+#14046
+In a corridor~
+You are standing in a dark corridor in the upstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor.
+~
+140 8 0
+D0
+~
+~
+0 -1 14045
+D1
+~
+~
+0 -1 14050
+D2
+~
+~
+0 -1 14051
+D3
+~
+~
+0 -1 14042
+S
+#14047
+Upstairs Bedroom~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D3
+~
+door small~
+1 -1 14043
+S
+#14048
+Upstairs Bedroom~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D3
+~
+door small~
+1 -1 14044
+S
+#14049
+In the Hidden Chamber~
+You are standing in am empty chamber that seems to have been out of use for
+ages now. The dust lining the walls and corners is accompanied by strands of
+cobwebs. On the western wall, you can just make out the outline of the door
+leading to the bedroom. 
+~
+140 8 0
+D3
+~
+door secret~
+2 14047 14045
+S
+#14050
+In the Top of the Stairs~
+You are standing in the upper end of the stairway in the manor. The stairs are
+relatively wide, but steep. You would be better off watching where you step in
+descending these stairs. 
+~
+140 8 0
+D3
+~
+~
+0 -1 14046
+D5
+~
+~
+0 -1 14025
+S
+#14051
+In a corridor~
+You are standing in a dark corridor in the upstairs of the manor. As you are
+walking along in here, you notice the signs of age in the walls and floor.
+~
+140 8 0
+D0
+~
+~
+0 -1 14046
+D1
+~
+~
+0 -1 14053
+D2
+~
+~
+0 -1 14052
+S
+#14052
+The Upstairs Storage Room~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D0
+~
+~
+0 -1 14051
+S
+#14053
+The Upstairs Guest Room~
+You are standing in what seems to be one of the bedrooms of the manor. The
+large bed takes up most of the floor of the room, but there is just enough
+room for a night-stand and a large oak cupboard.
+~
+140 8 0
+D3
+~
+~
+0 -1 14051
+S
+#14061
+In the Tomb Entrance~
+You are standing inside a large hall, made completely out of white marble. 
+There are some torch-holders on the wall, but the torches in them, have gone
+out a long time ago. Through a dark doorway to the north, you can see a 
+circular hall.
+There is a flight of stairs going steeply up on the southern wall.
+~
+140 9 0
+D0
+~
+~
+0 -1 14062
+D4
+~
+~
+0 -1 14024
+S
+#14062
+In the Tomb of Ancestors~
+You are standing in a large circular hall with a huge marble podium on the
+middle of the floor. All around you, on the walls, there are bronze plaques
+with some writing on them.
+~
+140 13 0
+D2
+~
+~
+0 -1 14061
+E
+writing plague~
+The plagues bear names and dates from long ago. They all have a common family
+name, indicating that the plagues might act as tombstones for the deceased
+family members.
+~
+S
+#14070
+In the Room beyond the Mirror~
+You are standing in a room completely enshrouded in shadows. Although there is
+a little of light here, the constant playing of shadows on all surfaces makes
+your head spin. The only actual light coming from elsewhere is coming from a
+doorway in the south.
+~
+140 9 0
+D2
+You see some light coming from south.~
+~
+0 -1 14028
+S
+#0
+$~
+

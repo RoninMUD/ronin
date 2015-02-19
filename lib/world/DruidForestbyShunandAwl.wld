@@ -1,0 +1,1373 @@
+#24900
+A Swampy Landing~
+   A large swampy marsh dominates the area, constantly being fed water by
+the strong river to the east.  Muddy creatures roll about and frolic in 
+the mud. As you look around you, you begin to develop a sinking sensation,
+perhaps because you are slowly sinking into the muck that your boots
+rest upon.  A trail leads to the north.
+~
+249 0 3
+D0
+~
+~
+0 -1 24901
+D1
+~
+~
+0 -1 16681
+S
+#24901
+Path Along a Creek~
+   On the eastern side of this path a small creek flows sluggishly by.
+A few fresh water creatures dwell on the banks and bed of the creek.
+Trees and thick undergrowth block passage to the west.  A path runs 
+north and south along the creek.
+~
+249 0 3
+D0
+~
+~
+0 -1 24903
+D2
+~
+~
+0 -1 24900
+S
+#24902
+Clearing along the Path~
+  A strong sense of tranquility envelopes this place, a feeling of security
+which affects everyone who enters.  Trees surround the clearing with
+occasional branches hanging into the inner circle.  The tree line cuts
+sharply into the sky.  More clearing lies north and west, and a path heads
+off to the east.
+~
+249 0 3
+D0
+~
+~
+0 -1 24904
+D1
+~
+~
+0 -1 24903
+D3
+~
+~
+0 -1 24905
+S
+#24903
+Curve in the Path~
+   A gurgling creek slowly flows on the eastern side of the path.  The 
+creek continues north and south.  Trees stand tall and strong all around
+you, strung together by small spider webs which connect a few dead leaves 
+with twigs and grass.  You can hear the sounds of small forest creatures 
+going about their business. The path leads west and south.
+~
+249 0 3
+D2
+~
+~
+0 -1 24901
+D3
+~
+~
+0 -1 24902
+S
+#24904
+Clearing around the Path~
+   A strong sense of tranquility envelopes this place, a feeling of security
+affecting everyone who enters.  Trees surround the clearing, with 
+occasional branches hanging into the inner circle.  The tree line cuts
+sharply into the sky.  More clearing lies west and south.
+~
+249 0 3
+D2
+~
+~
+0 -1 24902
+D3
+~
+~
+0 -1 24906
+S
+#24905
+Clearing around the Path~
+   A strong sense of tranquility envelopes this place, a feeling of security
+affecting everyone who enters.  Trees surround the clearing, with 
+occasional branches hanging into the inner circle.  The tree line cuts
+sharply into the sky.  More clearing lies east and north.
+~
+249 0 3
+D0
+~
+~
+0 -1 24906
+D1
+~
+~
+0 -1 24902
+S
+#24906
+Clearing around the Path~
+   A strong sense of tranquility envelopes this place, a feeling of security
+affecting everyone who enters.  Trees surround the clearing, with 
+occasional branches hanging into the inner circle.  The tree line cuts
+sharply into the sky.  More clearing lies south and east.  A path leads 
+to the west.
+~
+249 0 3
+D1
+~
+~
+0 -1 24904
+D2
+~
+~
+0 -1 24905
+D3
+~
+~
+0 -1 24907
+S
+#24907
+Bend in the Path~
+   Light falls around you in a glistening haze as small insects crawl about
+on fallen trees in the woods.  Leaves create a rainbow of colors, red, 
+yellow, and green blending together to offer a gorgeous prismatic display 
+of the cycle of life.  A clearing lies to the east, and a dark path 
+leads south.
+~
+249 0 3
+D1
+~
+~
+0 -1 24906
+D2
+~
+~
+0 -1 24908
+S
+#24908
+Dark Path~
+   Many trees encroach upon this path's territory even though it is 
+fairly well traveled.  The terrain is bleak in every direction, even 
+where the trail leads.  Sounds of small forest critters bounce off the 
+trees around you.  The path leads north and south. Be sure you stay on 
+the trail, or you might get lost.
+~
+249 0 3
+D0
+~
+~
+0 -1 24907
+D2
+~
+~
+0 -1 24909
+E
+critter~
+You can't see him, but you know he's here.
+~
+S
+#24909
+Dark Clearing~
+   Light filters softly through the trees above as the sound of  
+bird song lilts eerily in the distance.  Trees stand all around you,
+seeming to watch you closely...unseen stares pierce your back no matter 
+which way you turn.  To the west you hear some sort of a chant.  To the 
+north and west a path extends through the forest.
+~
+249 0 3
+D0
+~
+~
+0 -1 24908
+D3
+~
+~
+0 -1 24910
+E
+tree~
+Upon closer inspection you see the trees don't REALLY have eyes...
+~
+S
+#24910
+Dark Clearing~
+   Light filters softly through the trees above as the sound of  
+bird song lilts eerily in the distance.  Trees stand all around you,
+seeming to watch you closely...unseen stares pierce your back no matter 
+which way you turn.  To the west you hear some sort of a chant.  The
+trail continues east and west.
+~
+249 0 3
+D1
+~
+~
+0 -1 24909
+D3
+~
+~
+0 -1 24911
+E
+tree~
+Upon closer inspection, you see that the trees don't REALLY have eyes!
+~
+S
+#24911
+Wooded Trail~
+   The clearing to the east has given way to a heavily wooded trail.  Thick
+brush surrounds you to the north and south.  You can hear the sounds of forest
+animals going about their daily business.  Overhead the trees rustle in the
+wind.  The trail continues west and east.
+~
+249 0 3
+D1
+~
+~
+0 -1 24910
+D3
+~
+~
+0 -1 24912
+S
+#24912
+Wooded Trail~
+   The foliage has become very dense around this part of the trail.  You
+can hear chattering from small forest animals foraging for food and other
+necessities of life.  Overhead the trees sway in the wind.  The trail
+continues west and east.
+~
+249 0 3
+D1
+~
+~
+0 -1 24911
+D3
+~
+~
+0 -1 24913
+S
+#24913
+Wooded Trail~
+   Thick brush covers the northern and southern boundaries of this trail.  You
+can hear chirping from birds and other forest animals going about they're 
+daily business.  Overhead the trees rustle in the wind.  The trail continues
+west and east.
+~
+249 0 3
+D1
+~
+~
+0 -1 24912
+D3
+~
+~
+0 -1 24914
+S
+#24914
+A Bend in the Wooded Trail~
+   The trail turns abruptly here.  A very thick tree leans out onto the path
+from the south, looming overhead.  Birds flying by above you swoop down
+occasionally to pick up some of the fallen twigs that crackle underfoot.
+Thick foliage blocks your vision to the west and south, and the trail
+leads north and east.
+~
+249 0 3
+D0
+~
+~
+0 -1 24915
+D1
+~
+~
+0 -1 24913
+E
+tree~
+This tree was once a splendid fir. Now it leans dangerously over the path,
+worm-eaten and windblown.
+~
+S
+#24915
+Wooded Trail~
+   Thick brush covers the western and eastern boundaries of this trail.  You
+can hear chirping from birds and other forest animals going about their
+daily business.  Overhead the trees whistle in the wind.  The trail continues
+to the north and south.
+~
+249 0 3
+D0
+~
+~
+0 -1 24916
+D2
+~
+~
+0 -1 24914
+S
+#24916
+A Bend in the Wooded Trail~
+   The trail turns sharply here.  A very thick tree leans out onto the path
+from the east, looming overhead.  Birds flying by above you swoop down
+occasionally to pick up some of the fallen twigs that crackle underfoot.
+The trail continues to the west and south.
+~
+249 0 3
+D2
+~
+~
+0 -1 24915
+D3
+~
+~
+0 -1 24917
+E
+tree~
+This massive tree looms dangerously over your head.
+~
+S
+#24917
+Log Cabin along a Path~
+   A wall of trees extending from the south blocks any movement in that 
+direction. To the north a looms a large log cabin.  There doesn't seem
+to be any sign of life in the cabin, but you can't be sure.  Perhaps 
+you should investigate...the trail continues west and east.
+~
+249 0 0
+D0
+You see the moss-covered door to the log cabin.
+~
+door~
+1 -1 24918
+D1
+~
+~
+0 -1 24916
+D3
+~
+~
+0 -1 24919
+E
+trees~
+A thick wall of trees interlaced with vines blocks your movement to the south.
+~
+E
+wall~
+A thick wall of trees interlaced with vines blocks your movement to the south.
+~
+E
+s~
+A massive wall of trees blocks your vision.
+~
+S
+#24918
+Log Cabin~
+   Dust covers everything in this cabin, yet cannot obscure what a cozy 
+place it is.  Looking around you, you see an oil lamp sitting on a table 
+in the center of the room, a fireplace along the eastern wall, and a 
+hand-woven rug on the floor.  There is more of the cabin to the west.  
+As you look that way you notice this cabin's one peculiarity:  there are 
+no windows...
+~
+249 4104 0
+D2
+You see the door to this large log cabin.
+~
+door~
+1 -1 24917
+D3
+~
+~
+0 -1 24920
+E
+lamp~
+The oil lamp looks as if it hasn't been used in years. The wick has been
+removed making its further use as a light source impossible.
+~
+E
+rug~
+The dust-covered rug has an intricate pattern of moons and stars woven into
+it. It seems to have been stitched from a plant material, not the usual wool.
+~
+E
+fireplace~
+The fireplace looks as if it hasn't been used in years.  Some odd-looking 
+ashes in the bottom of it indicate that wood was not the last thing to be 
+burned here.
+~
+S
+#24919
+Log Cabin along a Path~
+   A wall of trees extending from the south blocks any movement in that 
+direction. To the north a looms a large log cabin.  There doesn't seem
+to be any sign of life in the cabin, but you can't be sure.  Perhaps 
+you should investigate...the trail continues south and east.
+~
+249 0 0
+D1
+~
+~
+0 -1 24917
+D2
+~
+~
+0 -1 24921
+E
+wall~
+A thick wall of trees interlaced with vines blocks your movement to the south.
+~
+E
+trees~
+A thick wall of trees interlaced with vines blocks your movement to the south.
+~
+S
+#24920
+Log Cabin~
+   Dust covers everything here.  A chair leans against the west wall.
+As you peer through the murky air of the cabin, you observe that no 
+windows can be seen.  There is more of the cabin to the east.
+~
+249 4104 0
+D1
+~
+~
+0 -1 24918
+D5
+You see a trapdoor in the floor of the cabin.
+~
+trapdoor~
+1 -1 24999
+E
+chair~
+The chair has a handsome pattern carved into its surface, but it doesn't seem
+sturdy enough to support the weight of a human anymore.
+~
+E
+trapdoor~
+A trapdoor has been placed in the floor, you wonder where it leads.
+~
+S
+#24921
+A Dark Forest~
+  The brush covering the trail is very thick here.  You can hear the sounds
+of some sort of large hungry animal.  To the distant north, you spy a log
+cabin. You think for a moment that you should leave the animal alone and take
+refuge in the apparent safety of the structure, but your adventurous nature
+tells you to continue onward to the forest.  The trail continues to
+the north and west.
+~
+249 5 3
+D0
+~
+~
+0 -1 24919
+D3
+~
+~
+0 -1 24922
+S
+#24922
+A Dark Forest~
+  The brush continues to thicken here.  The animal sounds are growing louder
+and louder, to the point where they seem to be right on top of you.  Perhaps
+you should turn around and run back through the forest to the safety of
+civilization. Still, something compels you to find out exactly what is here.
+The trail continues to the north and east.
+~
+249 1 3
+D0
+~
+~
+0 -1 24923
+D1
+~
+~
+0 -1 24921
+S
+#24923
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D2
+~
+~
+0 -1 24922
+D3
+~
+~
+0 -1 24924
+S
+#24924
+A Dark Forest~
+   Your fear heightens as soon as you realize that you're lost in this thick
+foliage.  Trees and brush surround you on all sides, closing in on you.  You
+get the eerie feeling that the forest is watching you, hunting you.  You look
+back the way you came and see that the scene has changed.  You quicken your
+pace down the path to find some way out.  The path continues north, south,
+east and west.
+~
+249 1 3
+D0
+~
+~
+0 -1 24924
+D1
+~
+~
+0 -1 24924
+D2
+~
+~
+0 -1 24924
+D3
+~
+~
+0 -1 24925
+S
+#24925
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D1
+~
+~
+0 -1 24924
+D2
+~
+~
+0 -1 24926
+S
+#24926
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D0
+~
+~
+0 -1 24925
+D2
+~
+~
+0 -1 24927
+S
+#24927
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D0
+~
+~
+0 -1 24926
+D1
+~
+~
+0 -1 25922
+D3
+~
+~
+0 -1 24928
+S
+#24928
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D1
+~
+~
+0 -1 24927
+D3
+~
+~
+0 -1 24929
+S
+#24929
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D0
+~
+~
+0 -1 24930
+D1
+~
+~
+0 -1 24928
+D2
+~
+~
+0 -1 24925
+S
+#24930
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D0
+~
+~
+0 -1 24931
+D1
+~
+~
+0 -1 24926
+D2
+~
+~
+0 -1 24929
+S
+#24931
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D0
+~
+~
+0 -1 24932
+D2
+~
+~
+0 -1 24930
+D3
+~
+~
+0 -1 24923
+S
+#24932
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D0
+~
+~
+0 -1 24929
+D1
+~
+~
+0 -1 24933
+D2
+~
+~
+0 -1 24931
+S
+#24933
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D1
+~
+~
+0 -1 24934
+D2
+~
+~
+0 -1 24928
+D3
+~
+~
+0 -1 24932
+S
+#24934
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D0
+~
+~
+0 -1 24935
+D3
+~
+~
+0 -1 24933
+S
+#24935
+A Dark Forest~
+   Thick brush covers the trail here.  Close by are the sounds of a 
+predator tearing apart its latest kill.  As you blunder about in the 
+bushes, you touch something hard and muscular.  Your hand slowly retracts 
+and you decide that you had best pick a way and move -- QUICK!
+~
+249 1 3
+D0
+~
+~
+0 -1 24922
+D2
+~
+~
+0 -1 24934
+S
+#24936
+Secondary transporter room~
+  This room smells, feels, and looks very dangerous. Spikes are embedded in
+the ceiling and floor, and the room seems to be rotating very quickly.
+Lights flash on and off, blinding you, and you sense nasty things wandering
+around you.....
+~
+249 0 0
+S
+#24937
+Hall of Kludges~
+You stand in a room that is a practice in reverse flaucconihilisticism,
+the practice of making a concept irrelevant or obsolete.
+~
+249 576 0
+S
+#24968
+A Radiating Alcove of Trees~
+   Trees surround you in a semi-circle, singing and swaying in the wind.
+This is one of the most beautiful sights you've ever seen.  The grass here
+is deep green, and seems to be supporting your weight willingly, exalting your
+existence. The trees are humming a song in unison.  It's a song of joy and
+happiness, marked with a peculiar sad undertone.  You notice that the pristine
+beauty of this collection of life is violated by a large rock with a jagged
+opening in it.  A clearing lies to the west.
+~
+249 68 3
+D3
+~
+~
+0 -1 24970
+D5
+You see a jagged opening in the earth leading down into the unknown.
+~
+~
+0 -1 25003
+E
+rock~
+You see a large, rather ugly looking rock jutting from the ground with a
+jagged opening in it.
+~
+E
+opening~
+You see a jagged opening in the earth leading down into the unknown.
+~
+E
+jagged~
+You see a jagged opening in the earth leading down into the unknown.
+~
+S
+#24969
+Treasure Cave~
+   Gold, silver, jewels, gems, diamonds, and rubies have been dumped on
+the floor of this cave. Obviously this folk cares not for the rocks and
+minerals that normal men search, live, and die for.  It seems more likely
+that the trees and the animals that live on this world are more of a 
+treasure to this people.  The greatest treasure known to the world is the 
+small sapling glowing with a radiant light in the center of the room.
+~
+249 0 0
+D2
+~
+~
+0 -1 24970
+E
+sapling tree radiant small~
+You see the druids' most prized possession, a radiating sapling, in the center
+of the cave.  The druids value the richness of life over anything else in this
+world. While we're off fighting our battles for gold and material wealth,
+these people have found the true beauty and wealth in the world -- that of
+life itself.
+~
+S
+#24970
+Druid's Forest~
+   Weapons of every sort are scattered about, lying on the ground and 
+hanging from trees.  There is a large clearing in which you may walk 
+about.  Be careful where you roam, druids have many secrets and do not 
+take kindly to possible discovery...
+~
+249 0 3
+D0
+~
+~
+0 -1 24969
+D1
+~
+~
+0 -1 24968
+D2
+~
+~
+0 -1 24971
+S
+#24971
+A Strange Forest~
+   Trees groan and creak as they move in the wind, branches rubbing together.
+A sense of powerful life, dark and brooding, penetrates the feeling of 
+happiness you sensed in other parts of the forest.  You spy a clearing to the 
+north, very close to the center of this forest.  The path leads back through 
+the forest to the west, and north to the clearing.
+~
+249 4 3
+D0
+~
+~
+0 -1 24970
+D3
+~
+~
+0 -1 24972
+S
+#24972
+A Strange Forest~
+   The trees here are watching you, waiting for one tiny slip-up, one fatal 
+lapse in your perception that will allow them to close in.  A low murmur 
+surrounds you, and a jolt of unease and loneliness shoots up your spine.
+The trees and grass move around you, opening up the path to the east and 
+nearly blocking the path to the west.
+~
+249 0 3
+D1
+~
+~
+0 -1 24971
+D3
+~
+~
+0 -1 24973
+S
+#24973
+A Strange Forest~
+   The living trees and flowers seem to be whispering to you, beckoning you on
+deeper into the forest.  The Druids' power over nature is extraordinary, and 
+you can't stop wondering what secrets they hold and how they use them.  
+Through all the indistinguishable messages on the air, leading you onward, is 
+a deep, airy voice warning you to turn back now.  The path continues to the 
+west and east.
+~
+249 0 3
+D1
+~
+~
+0 -1 24972
+D3
+~
+~
+0 -1 24977
+S
+#24974
+A Strange Forest~
+   The trees, grass and flowers are moving about, almost like they were
+arranging themselves for your visual enjoyment.  You cannot stop looking
+around yourself to try to take all this beauty in at once.  A feeling of
+vertigo overwhelms you as you turn round and around looking at everything
+in one glance.  If the forest is this beautiful now, imagine what it is like
+at the center of all this magical power.  The path leads on to the north and
+east.
+~
+249 0 3
+D0
+~
+~
+0 -1 24975
+D1
+~
+~
+0 -1 24977
+S
+#24975
+A Strange Forest~
+   The glow from the forest seems to be increasing in intensity.  The 
+landscape around you is looking more and more surreal.  You wonder what 
+could be at the center of this place.  The path continues east and south.
+~
+249 0 3
+D1
+~
+~
+0 -1 24976
+D2
+~
+~
+0 -1 24974
+S
+#24976
+A Strange Forest~
+   The glow from the forest is very noticeable now.  You seem to be approaching
+the heart of the forest, where the Druids' magic is strongest.  Everything
+looks more alive than is naturally possible.  These people have a lot to teach
+the world, but if you remember correctly, they don't like intruders.  Perhaps
+things have changed.  The path continues west and south.
+~
+249 0 3
+D2
+~
+~
+0 -1 24977
+D3
+~
+~
+0 -1 24975
+S
+#24977
+A Strange Forest~
+   The path continues through this place of beauty.  You realize that this
+forest must be the residence of the Druids, a people that recognize the
+ultimate importance of nature.  Legend says that they don't like company, but
+a creation such as this should be shared with everyone.  The path leads north,
+south and east.
+~
+249 0 3
+D0
+~
+~
+0 -1 24976
+D1
+~
+~
+0 -1 24973
+D2
+~
+~
+0 -1 24978
+S
+#24978
+A Strange Forest~
+   As you venture farther into this forest, you see that the trees, bushes and
+grass seem to have a glow to them, as if they're creating their own light.
+It is very faint, but it seems to be that glow that's associated with magic.
+The caretakers of this place must use their magical abilities to nurture it
+to the perfection only Nature can achieve.  A path continues north and west.
+~
+249 0 3
+D0
+~
+~
+0 -1 24977
+D3
+~
+~
+0 -1 24979
+S
+#24979
+A Strange Forest~
+   The trees above seem to have an even more animated presence.  You now know
+that they are moving back and forth under their own power, and you've come to
+accept it.  This forest is unlike any other you've ever seen, and it thrills
+you to be witnessing its beauty.  The path continues east and west.
+~
+249 0 3
+D1
+~
+~
+0 -1 24978
+D3
+~
+~
+0 -1 24980
+S
+#24980
+A Strange Forest~
+`q The trees seem to be looking down on you from high, as if they can see you
+just as you can see them.  The path you walk on is perfectly tilled with no
+weeds growing out of it.  There are no broken branches on the ground from the
+swaying trees above, nor are there any signs of nature's life-death cycle.
+Everything is in bloom and growing.  This place is strangely perfect.  A path
+leads north and east, and there seems to be a clearing to the south which
+disturbs the perfect aura of this place.
+~
+249 0 3
+D0
+~
+~
+0 -1 24981
+D1
+~
+~
+0 -1 24979
+D2
+The clearing is unlike the forest, death eminates from it
+like a foul odor reeking from a freshly killed corpse.
+Entering the clearing might be a bad idea.
+~
+clearing~
+12 -1 4600
+S
+#24981
+A Strange Forest~
+   You have the feeling that something isn't right here.  Everything in this
+place is too perfect to be real.  Someone has to be taking care of this place,
+because this is simply not natural.  Perhaps you will run in to this person
+and commend them on creating such beauty.  A path leads north and south.
+~
+249 0 3
+D0
+~
+~
+0 -1 24982
+D2
+~
+~
+0 -1 24980
+S
+#24982
+A Strange Forest~
+   This is the most beautiful forest you've ever seen.  Everything is pure
+and pristine.  There doesn't appear to be any signs of death or decay in this
+place.  Whoever takes care of this place is a master of nature itself.  The
+path leads west and south.
+~
+249 0 3
+D2
+~
+~
+0 -1 24981
+D3
+~
+~
+0 -1 24983
+S
+#24983
+A Strange Forest~
+   All around you trees seem to move and sway by themselves...no breeze can be
+felt yet they still move.  Looking around you, you notice that everything is
+alive.  Not a single leaf is brown, not even a weed is bent over. A truly
+strange place.  A path leads north and east.
+~
+249 4 3
+D0
+~
+~
+0 -1 24984
+D1
+~
+~
+0 -1 24982
+S
+#24984
+The edge of a strange forest~
+   All around you trees seem to move and sway by themselves...no breeze 
+can be felt, yet still they move.  Looking around you, you notice that 
+everything is alive.  Not a single leaf is brown, not even a weed is 
+bent over. A truly strange place...a large stump juts from the ground 
+to the west, looking oddly incongruous with the rest of the living 
+forest.  A well-kept path leads to the south.
+~
+249 0 3
+D2
+~
+~
+0 -1 24983
+D5
+You see a large stump with an opening in it.
+~
+stump~
+1 -1 24985
+S
+#24985
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D0
+~
+~
+0 -1 24986
+D4
+You see a trapdoor in what looks like to be the bottom of a tree.
+~
+trapdoor~
+1 -1 24984
+S
+#24986
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D2
+~
+~
+0 -1 24985
+D3
+~
+~
+0 -1 24987
+S
+#24987
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D1
+~
+~
+0 -1 24986
+D3
+~
+~
+0 -1 24988
+S
+#24988
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D1
+~
+~
+0 -1 24987
+D2
+~
+~
+0 -1 24989
+S
+#24989
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D0
+~
+~
+0 -1 24988
+D3
+~
+~
+0 -1 24990
+S
+#24990
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D1
+~
+~
+0 -1 24989
+D3
+~
+~
+0 -1 24991
+S
+#24991
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D1
+~
+~
+0 -1 24990
+D3
+~
+~
+0 -1 24992
+S
+#24992
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D0
+~
+~
+0 -1 24994
+D1
+~
+~
+0 -1 24993
+D3
+~
+~
+0 -1 24997
+S
+#24993
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D1
+~
+~
+0 -1 24994
+D2
+~
+~
+0 -1 24991
+D3
+~
+~
+0 -1 24992
+S
+#24994
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D1
+~
+~
+0 -1 24995
+D2
+~
+~
+0 -1 24992
+D3
+~
+~
+0 -1 24996
+S
+#24995
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D0
+~
+~
+0 -1 24998
+D1
+~
+~
+0 -1 24996
+S
+#24996
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D0
+~
+~
+0 -1 24997
+D1
+~
+~
+0 -1 24994
+D3
+~
+~
+0 -1 24995
+S
+#24997
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D0
+~
+~
+0 -1 24998
+D2
+~
+~
+0 -1 24996
+S
+#24998
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D0
+~
+~
+0 -1 24999
+D2
+~
+~
+0 -1 24997
+S
+#24999
+A Dark Cavern~
+   Dark and dank, this cavern seems to hunger for light, but it's a void
+that will never be filled...there will never be enough light.  You can 
+hear the sound of dripping water in the distance.  You wonder if you 
+will ever see the Grubby Inn again.
+~
+249 9 5
+D2
+~
+~
+0 -1 24998
+D4
+You see a trapdoor on the ceiling of the cavern.  It must lead to daylight.
+~
+trapdoor~
+1 -1 24920
+S
+#0
+$~

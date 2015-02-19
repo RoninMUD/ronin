@@ -1,0 +1,691 @@
+#3900
+Main stable room ~
+  You've arrived at the busy stables of Midgaard where all kinds of mounts are
+catered for.  The smells of hay and other foodstuffs you can't quite identify
+permeate the air mixed with the familiar scent of fresh manure.
+A sturdy-looking wooden ladder leads up to the second floor where the flying
+mounts are kept and a large trapdoor in the middle of the floor presumably
+leads down into a cellar.
+~
+39 67108876 0
+D0
+~
+~
+0 -1 3044
+D2
+~
+~
+0 -1 3901
+D4
+~
+~
+0 -1 3903
+D5
+~
+trapdoor~
+1 -1 3905
+E
+trapdoor~
+You see a large heavy looking trapdoor in the floor.
+~
+S
+#3901
+Stalls~
+  The stables of Midgaard are famed throughout the world for quality mounts
+and low prices.  Looking around you realize that the rumors must be at least
+partially true for the animals kept in the immaculately clean stalls here are
+the finest you have seen in a long time.  Most of them are of the local
+variety but the Mayor prides himself on the handful of camels and elephants he
+has had brought from distant lands to the south.
+~
+39 67108872 0
+D0
+~
+~
+0 -1 3900
+E
+note~
+Note that the more expensive mounts can carry much more weight.  You should
+also note that the mounts have a mind of their own and will refuse to carry
+anyone that they don't approve of.
+~
+E
+sign~
+Mount commands are:
+ List - To get a list of available mounts
+ Buy <mount> <name> - To buy a mount
+ Ride <mount/name> - To ride your mount
+ Dismount - To stop riding your mount
+ Free - To dismiss your mount back to the stables
+~
+S
+#3902
+Mob storage~
+Here the land-based mobs for the stables are kept.
+~
+39 67109384 0
+S
+#3903
+Second floor of stables~
+  You see before you several large stalls to the west and east.  Each stall
+houses a flying mount of some kind. The entire southern wall has been knocked
+down to enable creatures to take off from the large wooden platform that
+has been added to the original design.
+~
+39 67108872 0
+D2
+~
+~
+0 -1 3907
+D5
+~
+~
+0 -1 3900
+E
+note~
+Note that the more expensive mounts can carry much more weight.  You should
+also note that the mounts have a mind of their own and will refuse to carry
+anyone that they don't approve of.
+~
+E
+sign~
+Mount commands are:
+ List - To get a list of available mounts 
+ Buy <mount> <name> - To buy a mount
+ Ride <mount/name> - To ride your mount
+ Dismount - To stop riding your mount
+ Free - To dismiss your mount back to the stables
+~
+S
+#3904
+Stable Flying Storage~
+This is the mob storage area for the stable flyers.
+~
+39 520 0
+S
+#3905
+Stable Cellar~
+  This dank old cellar seems to have been used for wine storage in the past, but
+it has been modified extensively to cater for its new occupants. Several large
+cages in here contain spiders, scorpions, and even a few large snails.  A huge 
+kennel against the west wall houses a couple of enormous lizards.  Beside
+it on a granite slab lies a motionless, bulky humanoid seemingly made from
+whatever body parts were available to its creator at the time.
+To the north you see a narrow winding tunnel. It glows with an eerie light
+seemingly coming from nowhere.
+~
+39 8 0
+D0
+~
+~
+0 -1 3909
+D4
+~
+trapdoor~
+1 -1 3900
+E
+note~
+Note that the more expensive mounts can carry much more weight.  You should
+also note that the mounts have a mind of their own and will refuse to carry
+anyone that they don't approve of.
+~
+E
+sign~
+Mount commands are:
+ List - To get a list of available mounts
+ Buy <mount> <name> - To buy a mount
+ Ride <mount/name> - To ride your mount
+ Dismount - To stop riding your mount
+ Free - To dismiss your mount back to the stables
+~
+S
+#3906
+Subterranean Storage~
+Here the subterranean mounts for the stables are kept.
+~
+39 520 0
+S
+#3907
+Landing Platform~
+  The platform overlooks the south-western part of Midgaard and offers a
+magnificent view over the training grounds, where less experienced
+adventurers gain valuable experience before embarking on more dangerous
+journeys. A bit further to the east are the docks of Midgaard which are the
+main trading route for merchants bringing exotic spices and goods from the
+far south. South of here the flows the Middern river from a great gash in
+the sky twisting and turning on its way to the ocean far away.
+~
+39 67108864 0
+D0
+~
+~
+0 -1 3903
+D4
+~
+~
+0 -1 3933
+S
+#3908
+Flying over Midgaard~
+  You soar about a hundred feet above Midgaard's busy marketplace.  Far below
+the streets bustle with activity as people go about their daily business.  From
+up here you can see for miles around.  To the north the majestic snow-covered
+peaks of the Helventia mountains dominate the landscape.  To the south you can
+see the docks of Midgaard and the Middern river as it twists and turns on its
+way to the sea.  Several laden barges are sailing upstream with precious 
+cargo in their holds.  To the west lies the forest of Haon-Dor where the elven
+druids hold sway and to the east is the small forest.  Due south from here are
+the Midgaard stables and the landing platform.
+~
+39 262144 1
+D2
+~
+~
+0 -1 3933
+D5
+~
+~
+0 -1 3014
+S
+#3909
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  To the south the
+tunnel slopes steeply upwards and a light can be seen at the far end.
+~
+39 8 0
+D1
+~
+~
+0 -1 3910
+D2
+~
+~
+0 -1 3905
+S
+#3910
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  The tunnel slopes
+slightly upwards to the west and seems to take a sharp turn a few yards ahead
+of you in that direction.  To the east the floor becomes more level and even.
+~
+39 8 0
+D1
+~
+~
+0 -1 3911
+D3
+~
+~
+0 -1 3909
+S
+#3911
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  As you glance
+around you notice some vague scrawling on the wall to your east.  In the
+faint light it appears to glow with and eerie radiance.  To the north you hear 
+the echos of movement and the sound of trickling water.
+~
+39 8 0
+D0
+~
+~
+0 -1 3912
+D1
+~
+secret~
+1 0 3931
+D3
+~
+~
+0 -1 3910
+E
+scrawling~
+Some of the letters have faded away with the passage of time but you make
+out: 'T ie es uil'  On further examination it looks like it was written in 
+blood!!
+~
+S
+#3912
+Narrow tunnel under Market Square~
+  You come to a junction in the tunnel.  Above you can be heard the muted
+sounds of people going about their daily business, blissfully ignorant of your
+passage beneath their feet.  Fresh air can be felt coming from the east and 
+west passages.
+~
+39 8 0
+D1
+~
+~
+0 -1 3919
+D2
+~
+~
+0 -1 3911
+D3
+~
+~
+0 -1 3913
+S
+#3913
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all  around you are 
+covered with some sort of luminous fungi which gives off just    
+enough light for you to able to make out your surroundings.  To your east the
+faint murmur of distant voices can be heard as well as the steady trickle of
+running water.
+~
+39 8 0
+D1
+~
+~
+0 -1 3912
+D3
+~
+~
+0 -1 3914
+S
+#3914
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+round you are covered with some sort of luminous fungi which gives off just 
+enough light for you to able to make out your surroundings.  On the wall to 
+your north is a large ironbound door.  It is covered with strange symbols that
+seem to radiate a powerful demeanor even to the naked eye.
+~
+39 8 0
+D0
+~
+door~
+3 -1 30032
+D1
+~
+~
+0 -1 3913
+D3
+~
+~
+0 -1 3915
+E
+symbols~
+As you touch them you get a sudden tingling feeling that passes immediately.
+Deciphering the symbols fully proves impossible.  What little you make out
+seems to speak of imprisonment, diabolical forces and great danger.
+~
+E
+door~
+As you touch the door you get a sudden tingling feeling that passes immediately.
+Deciphering the symbols fully proves impossible.  What little you make out
+seems to speak of imprisonment, diabolical forces and great danger.
+~
+S
+#3915
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all 
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  On the wall to 
+your south can be seen crude drawings of warriors and large animals (possibly
+bears) locked in battle.  It is hard to make out who is winning since the
+drawings are stationary.
+~
+39 8 0
+D1
+~
+~
+0 -1 3914
+D3
+~
+~
+0 -1 3916
+E
+drawings~
+They probably date back to the Ur-Thol people who were an ancient race of
+primitive hunter-gatherers.
+~
+S
+#3916
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  The floor starts
+sloping up to your west but becomes level and flat to the east.
+~
+39 8 0
+D1
+~
+~
+0 -1 3915
+D3
+~
+~
+0 -1 3917
+S
+#3917
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  The tunnel slopes
+steeply up the west here.  You can feel a fresh breeze coming from that
+direction.
+~
+39 8 0
+D1
+~
+~
+0 -1 3916
+D3
+~
+~
+0 -1 3918
+S
+#3918
+Narrow tunnel~
+  You come to the end of the tunnel which slopes steeply upwards here.  A brief
+glance outside reveals that you are at the edge of the forest west of Midgaard.
+The tunnel entrance is covered by vines which seem to have a life of their
+own, clawing at you as you peek through.  You may not be able to enter the
+tunnel from the outside once the vines close up on the tunnel mouth.
+~
+39 8 0
+D1
+~
+~
+0 -1 3917
+D4
+~
+~
+0 -1 6000
+S
+#3919
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  The floor here
+is covered with filth and garbage.  Looking up you notice a small hole in the
+ceiling that seems big enough to fit a hand into.
+~
+39 8 0
+D1
+~
+~
+0 -1 3920
+D3
+~
+~
+0 -1 3912
+E
+hole~
+You put a hand into it and grope around.  There is something in there that feels
+slimy to the touch and when you withdraw your hand you find that it is covered 
+in some green-brownish sticky stuff that you can't begin to imagine the origins
+of.
+~
+S
+#3920
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  The tunnel 
+gradually becomes narrower to the point where you have to stoop down so as not
+bang your head on the ceiling.  To the east the tunnel begins a slow ascent
+upwards while to the west it becomes level and smooth.
+~
+39 8 0
+D1
+~
+~
+0 -1 3921
+D3
+~
+~
+0 -1 3919
+S
+#3921
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  Written on the
+wall here in large garish letters are the words 'The Kraken lives!'.
+~
+39 8 0
+D1
+~
+~
+0 -1 3922
+D3
+~
+~
+0 -1 3920
+S
+#3922
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  The floor here is
+uneven and rough.  It's as if the builders of the tunnel weren't paying much
+attention to this part of it since the angles are all wrong.
+~
+39 8 0
+D1
+~
+~
+0 -1 3923
+D3
+~
+~
+0 -1 3921
+S
+#3923
+Narrow tunnel~
+  You travel along an old tunnel carved from the harsh granite.  The walls all
+around you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  The tunnel dips
+sharply to the west but levels out to the east.  The smell of fresh air drifts
+in on a slight breeze coming from the east.
+~
+39 8 0
+D1
+~
+~
+0 -1 3924
+D3
+~
+~
+0 -1 3922
+S
+#3924
+Narrow tunnel~
+  You come to the end of the tunnel which slopes sharply upwards here.  The
+tunnel mouth is completely covered by wild growth making it impossible to
+find the opening from the other side.  A faint light filters through and you
+can make out the city's eastern entrance by peeking through the brambles.
+~
+39 8 0
+D3
+~
+~
+0 -1 3923
+D4
+~
+~
+0 -1 3503
+S
+#3925
+Flying over Haon-Dor~
+  You skim the edge of the treetops.  Below you is the dark forest of Haon-Dor
+where the elven Beast Master is said to prowl.  To your north can be seen a
+small monastery on the edge of a huge dreadful swamp which stretches out into
+the distance.  North-west from here a lies a large lake shrouded in mist.
+To the west can be seen Sonicity and the gates of Midgaard lie some distance to
+your east.  Flying north past the swamp will take you over Zyca city.
+~
+39 0 3
+D0
+~
+~
+0 -1 3927
+D1
+~
+~
+0 -1 3908
+D3
+~
+~
+0 -1 3926
+S
+#3926
+Flying over Sonicity~
+  You swoop over the crowded streets of Sonicity.  The streets are filled
+with adventurers questing for the legendary Holy Grail rumored to be kept
+somewhere in the wild lands west of here.  South of here the Sea of Love
+stretches as far as the eye can see.  Flying back east would take you over the
+forest of Haon-Dor.
+~
+39 0 0
+D1
+~
+~
+0 -1 3925
+S
+#3927
+Flying over Zyca City~
+  You glide silently over the hushed streets of the city.  A few brave souls
+skulk about, trying hard not to be noticed by the Royal Guards that patrol the
+area. The tyranny of the Zyca King is known throughout the lands and it can be
+seen in the faces of the people you observe.  A large gloomy castle towers
+over the city.  You can fly back over the moor to the south.
+~
+39 0 0
+D2
+~
+~
+0 -1 3925
+S
+#3928
+Flying over the small forest~
+  You soar over the forest.  The smell of delicious pies makes you realize 
+that you are near the village of the halflings.  To the north beside a frozen
+lake you can just make out the frigid city of Cornelius.  Even further north
+the peaks of the Helventia mountains make further passage difficult.  To the
+east the spires of the Zyekian Citadel are visible above the trees.  Flying
+west will take you above Midgaard.
+~
+39 0 0
+D0
+~
+~
+0 -1 3930
+D1
+~
+~
+0 -1 3929
+D3
+~
+~
+0 -1 3908
+D5
+~
+~
+0 0 0
+S
+#3929
+Flying over the Zyekian Citadel~
+  You carefully steer your mount over the battlements of the citadel.  Guards
+eye you warily, but let you pass nonetheless.  Inside you see the war-torn
+populace readying their armor and weapons while at the same time trying to
+keep up some semblance of normal life.  Even the children bear weapons to some
+extent, and you wonder what they are fighting that demands so large an army to
+vanquish. Flying back west will take you to the more peaceful village of the
+halflings and the small forest.
+~
+39 0 0
+D3
+~
+~
+0 -1 3928
+S
+#3930
+Flying over Cornelius~
+  You fly across an icy lake on your way here.  Judging by the cracks in the ice
+passage across, it is perilous and should be avoided if at all possible.  Icy
+winds blow across the streets and keep all but the hardiest cooped up inside
+their homes.  Looking around, you notice several pelts have been hung to dry
+outside some of the buildings: evidently trappers make their winter homes here.
+~
+39 0 0
+D2
+~
+~
+0 -1 3928
+S
+#3931
+Secret entrance from Thieves Guild~
+  This secret passage is only known to the oldest of thieves and a handful of
+others. The concealed door to your west blends almost completely into the
+granite around it.  A narrow tunnel leads south into the darkness.
+~
+39 9 0
+D2
+~
+~
+0 -1 3932
+D3
+~
+secret~
+1 0 3911
+S
+#3932
+Climbing down the well~
+  You find yourself at the bottom of a dry well.  High above you can be seen
+the iron rungs of an old ladder but they are too high for you to reach from
+here. A small tunnel leads north from here into the darkness.
+~
+39 8 0
+D0
+~
+~
+0 -1 3931
+S
+#3933
+Flying over Stables~
+  You fly in slow circles around the landing platform.  Beggars and street
+urchins can be seen in the streets below.  To your north the Anti Paladin guild 
+stands with its cold grey walls.  Next to it the Ninja's have set up their
+guild, practicing martial arts and ancient fighting styles.  A steady rivalry
+between the two guilds keeps the grave diggers of Midgaard in steady business
+while the corpses pile up.  To the east of the Common Square lies the Thieves'
+Guild along with the Nomad's and Paladin's Guilds.
+~
+39 0 0
+D0
+~
+~
+0 -1 3908
+D5
+~
+~
+0 -1 3907
+S
+#3998
+warhorse heavy horse~
+  You're floating in mid-air over Midgaard.  You are completely surrounded by
+a transparent field of energy that resists all attempts to penetrate it and you
+realize you're never going to escape from here without help from the gods.
+Nice view though.
+~
+39 712 0
+S
+#3999
+Apocalypse Room~
+  You're floating in mid-air over Midgaard.  You are completely surrounded by
+a transparent field of energy that resists all attempts to penetrate it and you
+realize you're never going to escape from here without help from the gods.
+Nice view though.
+~
+39 712 0
+S
+#0
+$~

@@ -1,0 +1,638 @@
+#30000
+rod travel~
+The Rod of Travel~
+A shiny golden rod with a crystal ball on top lies here.~
+~
+4 524288 16385
+20 25 25 75
+6 20000 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 100
+A
+5 4
+#30001
+fountain~
+a small fountain~
+A small fountain stands in the middle of the room here.~
+~
+17 0 0
+10000 10000 1 0
+10 10 10
+100
+E
+fountain~
+It's a priceless artifact - a fountain of beer!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30002
+bloody executioners axe~
+a large bloody axe~
+A large bloody axe lies here abandoned.~
+~
+5 64 8193
+0 15 1 3
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30003
+sign~
+a faded sign~
+A faded sign lies on the floor here.~
+~
+0 0 0
+0 0 0 0
+10 10 10
+100
+E
+sign~
+The Labyrinth of Skelos : special rules that apply within
+----------------------------------------------------------
+- Killing other players is allowed in the labyrinth.
+- Stealing is not allowed.
+- Recall magic is blocked.
+- Teleporting in the labyrinth lands you somewhere else within.
+- You cannot summon into or out of the labyrinth.
+- Iceball spell works on other players.
+- Nomad traps work on players.
+- Disembowel can be used on players.
+- Spinkick works on players
+- The only way out of there is by dying, The Dungeonmaster is quite
+  ready to slay you for free.
+- No gold, stats or items are lost upon death, the player
+  returns to the Midgaard Morgue, stunned from the shock of near death.
+  Items which are destroyed otherwise are still destroyed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30004
+powderkeg powder keg~
+a powderkeg~
+A keg full of gunpowder stands here.~
+~
+7 537395200 16385
+0 0 0 0
+0 35000 0
+100
+E
+keg~
+It's an iron-shod keg made from the finest wood.  It's full of gunpowder.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30005
+mine landmine~
+a landmine~
+A landmine lies here, blinking rapidly.~
+~
+0 537395200 1
+0 0 0 0
+20 20000 0
+100
+E
+mine~
+It's one of those cheap ones filled with nails that burst upon contact.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30006
+smokebomb bomb smoke~
+a smokebomb~
+A volatile smokebomb sits on the ground here.~
+~
+8 537395200 1
+0 0 0 0
+1 10 10
+10
+E
+smokebomb~
+It's a large glass container filled with some murky liquid.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30007
+spoon rusty antirent~
+a Rusty Spoon~
+A small rusted spoon has been thrown on the ground.~
+$r Rusty Spoon enters $V's body and comes back with it's heart.~
+5 268960066 8193
+0 6 6 6
+13 3400 20
+50
+X
+~
+82 0 0
+M
+~
+~
+~
+~
+A
+19 9
+A
+18 9
+T
+800
+B
+536870912
+#30008
+plate uber tank antirent~
+The Ubertank Plate~
+A piece of crappy, rusty armor was kicked to the curb here.~
+~
+9 268960065 9
+70 0 0 0
+1 1 1
+50
+E
+plate~
+This is the Ubertank Plate, only to be touched by
+the most powerful of warriors, the tank. It was
+forged and used for ages by the Ubertank Clan,
+the greatest warrior tribe ever to walk the earth.
+~
+X
+~
+82 0 0
+M
+You feel yourself growing as you don the plate. The world below grows smaller.~
+$n grows to immense proportions as $e wears the Ubertank Plate.~
+You feel yourself shrinking to normal size again.~
+$n returns to normal size as the Ubertank Plate falls from $s body.~
+A
+13 500
+A
+24 10
+A
+52 100
+T
+800
+B
+262272
+#30009
+helmet crash test antirent~
+A Crash-Test Helmet~
+A battered helmet was forgotten here.~
+~
+9 268959746 17
+30 0 0 0
+10 10 10
+10
+E
+helmet~
+It is a non-descript white helmet with a black
+chin strap and a small glass visor. Dozens of small dents
+pit the sides and top. Clearly it has seen a lot of action.
+~
+X
+~
+82 0 0
+M
+You buckle on the Crash-Test Helmet and prepare for the onslaught.~
+$n buckles on the Crash-Test Helmet and gets ready to rumble.~
+You unbuckle the Crash-Test Helmet. Man, what a ride!~
+$n unbuckles $s Crash-Test Helmet and returns to real life.~
+A
+24 20
+A
+20 20
+A
+19 10
+T
+800
+B
+159951036
+#30010
+regenerator regen antirent~
+The Regenerator~
+Some odd object hums in the corner.~
+~
+9 268959810 16529
+30 0 0 0
+0 0 0
+0
+E
+regenerator~
+The Regenerator is an orb that rumbles and buzzes
+a deep bass hum as it swirls with cosmic power.
+~
+X
+~
+82 0 0
+M
+The deep hum of the Regenerator fills your body with its power.~
+$n begins to vibrate with the intense force of the Regenerator~
+Your teeth continue to chatter even after removing the Regenerator~
+$n is visibly shaken after losing the power of the Regenerator.~
+A
+53 150
+A
+52 250
+A
+19 10
+T
+800
+#30011
+can whoopass whoop ass antirent~
+A Can of Whoopass~
+A dented can was forgotten here.~
+~
+9 268959746 16385
+30 0 0 0
+10 10 10
+10
+E
+can~
+Well, it's a can. It seems to be full of a gooey
+substance called whoopass. Be careful not to get
+any on your armor.
+~
+X
+~
+82 0 0
+M
+The clouds part and a ray of pure light beams down onto the can of whoopass in your hands.~
+The clouds part, trumpets blare in the distance, and a beam of light touches the Can of Whoopass in $n's hand.~
+As you release the can, your feeling of divinity suddenly shrivels.~
+The room seems to darken and grow drab as $n relinquishes $s can.~
+A
+19 30
+A
+18 30
+A
+13 30
+T
+800
+B
+268435456
+#30012
+cloak caster choice antirent~
+The Cloak of Caster's Choice~
+A flowing cloak was lost here.~
+~
+9 268959746 1025
+30 0 0 0
+10 10 10
+10
+E
+cloak~
+This is a dark, swirling cloak that is only truly
+comfortable on the most powerful of casters. While
+they are away, however, you will have to do.
+~
+X
+~
+82 0 0
+M
+You feel your powers grow as you toss the cloak over your shoulder.~
+$n seems to grow in stature and menace as $e dons $s cloak.~
+You feel your energy slipping from you as you remove the cloak.~
+$n loses $s stature and menace as the cloak leaves $s back.~
+A
+12 500
+A
+53 100
+A
+19 10
+T
+800
+B
+2048
+#30013
+boots super dooper swift antirent~
+The Boots of Super Dooper Swiftliness~
+Some sleek looking footwear is resting in the corner here.~
+~
+9 268959746 65
+30 0 0 0
+10 10 10
+10
+E
+boots~
+These are the prized boots of super dooper swiftliness.
+You must be an amazing player (or a very lucky one) to
+have come across this great prize. 
+~
+X
+~
+82 0 0
+M
+You slip your feet into the boots and vanish.~
+$n slips into $s boots and vanishes into thin air.~
+You remove your boots and reappear to the world.~
+$n appears before you suddenly... barefoot.~
+A
+14 10000
+A
+19 10
+A
+18 10
+T
+800
+B
+68681730
+#30014
+toy gun~
+a toy gun~
+a toy gun is lying on the ground.~
+~
+6 805830656 16385
+3026 1 500 500
+10 8000 500
+100
+X
+~
+82 0 0
+M
+~
+~
+~
+~
+T
+60
+#30017
+recipe easy rusty spoon~
+an easy recipe for a Rusty Spoon~
+A simple recipe direct from the generous gods for a delicious item!~
+~
+32 0 1
+30007 20811 4802 7305
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30018
+recipe plain ubertank plate~
+a plain recipe for the Ubertank Plate~
+A simple recipe direct from the generous gods for a delicious item!~
+~
+32 0 1
+30008 3040 3056 10902
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30019
+recipe uninvolved crash test helmet~
+an uninvolved recipe for a Crash-Test Helmet~
+A simple recipe direct from the generous gods for a delicious item!~
+~
+32 0 1
+30009 4517 3059 3051
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30020
+recipe straightforward regenerator~
+a straightforward recipe for the Regenerator~
+A simple recipe direct from the generous gods for a delicious item!~
+~
+32 0 1
+30010 1914 14512 9419
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30021
+recipe piece cake can whoopass~
+a 'piece of cake' recipe for a Can of Whoopass~
+A simple recipe direct from the generous gods for a delicious item!~
+~
+32 0 1
+30011 3607 11312 11602
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30022
+recipe basic cloak caster choice~
+a basic recipe for the Cloak of Caster's Choice~
+A simple recipe direct from the generous gods for a delicious item!~
+~
+32 0 1
+30012 3043 4809 100
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30023
+recipe simple boots super dooper swift~
+a simple recipe for the Boots of Super Swiftliness~
+A simple recipe direct from the generous gods for a delicious item!~
+~
+32 0 1
+30013 5603 3053 11619
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30027
+recipe tricky rusty spoon~
+a tricky recipe for a Rusty Spoon~
+A complicated recipe direct from the stingy gods for a scrumptious item!~
+~
+32 0 1
+30007 8404 708 20848
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30028
+recipe complicated ubertank plate~
+a complicated recipe for the Ubertank Plate~
+A complicated recipe direct from the stingy gods for a scrumptious item!~
+~
+32 0 1
+30008 205 12016 12021
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30029
+recipe difficult crash test helmet~
+a difficult recipe for a Crash-Test Helmet~
+A complicated recipe direct from the stingy gods for a scrumptious item!~
+~
+32 0 1
+30009 20851 5605 17004
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30030
+recipe ambitious regenerator~
+an ambitious recipe for the Regenerator~
+A complicated recipe direct from the stingy gods for a scrumptious item!~
+~
+32 0 1
+30010 10908 6519 2022
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30031
+recipe fancy can whoopass~
+a fancy recipe for a Can of Whoopass~
+A complicated recipe direct from the stingy gods for a scrumptious item!~
+~
+32 0 1
+30011 11317 2721 6218
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30032
+recipe hard cloak caster choice~
+a hard recipe for the Cloak of Caster's Choice~
+A complicated recipe direct from the stingy gods for a scrumptious item!~
+~
+32 0 1
+30012 12027 2807 4603
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30033
+recipe tough boots super dooper swift~
+a tough recipe for the Boots of Super Swifliness~
+A complicated recipe direct from the stingy gods for a scrumptious item!~
+~
+32 0 1
+30013 4508 12031 9405
+3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

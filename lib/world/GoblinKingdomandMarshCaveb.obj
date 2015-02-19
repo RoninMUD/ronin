@@ -1,0 +1,447 @@
+#4501
+pick small miners miner~
+a small miner's pick~
+A small miner's pick has been left here in the dust.~
+~
+5 0 8193
+0 3 10 9
+10 5000 200
+100
+E
+pick small miners miner~
+This small miner's pick is nothing more than a round wooden shaft with a crude
+metal spike attached to one end.  It looks sturdy, if a bit dull, and has
+probably seen better days.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4502
+ram battering anti-personel~
+An Anti-Personel Battering Ram~
+Display 1: An Anti-Personel Battering Ram.~
+~
+12 524288 0
+0 0 0 0
+1000 0 0
+100
+E
+ram battering anti-personel~
+This ram was invented by the infamous weapons designer Grug.  It was first used
+during the goblin invasion in the year of Pity, though it was used to very
+minor success.  The primary problem with the weapon was that it took four
+goblins to lift the ram, and every time they managed to skewer someone on the
+end, the corpse would get stuck.  The rammers would then have to halt their
+charge and spend a few precious minutes trying to cut apart the corpse enough
+to extract the ram.  During this time the goblins were grossly undefended and
+were usually cut down quite quickly.  The ram was put into retirement a few
+hours after its first battle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4503
+catapult attack group launcher~
+The 'Up to Down' Attack Group Launcher~
+Display 2: The 'Up to Down' Attack Group Launcher.~
+~
+12 524288 0
+0 0 0 0
+1000 0 0
+100
+E
+catapult attack group launcher~
+This catapult was invented as a way for the goblin infantry to contend against
+many of the races that have such an advantage because of height.  The 'Up to
+Down Division' was created to attack from the air, under cover of a vanguard
+infantry attack.  The troops were loaded into the slinging basket at the end
+of the arm and then flung forward at an incredible rate.  The flung goblins
+wielded dual daggers and wore about 120 pounds of armor, and the entire
+process was usually greeted with a loud splattering sound when the troops
+dropped from the sky.  The artillery goblins generally did not have more than
+one opportunity to make such an attack, but if they did manage to hit
+something it would generate quite a mess.  This catapult was retired from
+service after the novelty wore off and the goblins began to realize that they
+lost more troops this way then during the more-than-common mass retreat.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4504
+key twisted bent metal~
+a twisted metal key~
+A twisted and bent metal key lies on the floor, half covered in dirt.~
+~
+18 0 1
+0 0 0 0
+1 0 0
+100
+E
+key twisted bent metal~
+This key has been misused, mistreated and ultimately neglected over time.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4505
+key massive iron~
+a massive iron key~
+A massive iron key lies here, covered in rust and filth.~
+~
+18 0 1
+0 0 0 0
+3 0 0
+75
+E
+key massive iron~
+This key has seen better days.  It is made from crude iron that has obviously
+been left in too many moist places for too long.  It is covered in rust and mud
+and who knows what else.  It smells bad too.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4506
+vial snarak blood~
+a vial of snarak blood~
+A small vial filled with a bloody-looking liquid rolls around on the ground.~
+~
+10 0 1
+15 15 15 0
+1 5000 500
+66
+E
+vial snarak blood~
+Though generally disgusting creatures, the blood of snaraks has some minor
+healing properties.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4507
+ring wonders marvelous silver green yellow~
+The Ring of Wonders~
+A marvelous silver ring with a green and yellow stone has been dropped here.~
+~
+11 65 3
+0 0 0 0
+1 25000 2500
+10
+E
+ring wonders marvelous silver green yellow~
+The ring is made up of a thick silver band mounted with a strange green and
+yellow stone that glows faintly with its own light.
+~
+X
+~
+0 0 0
+M
+You feel stronger as you slip The Ring of Wonders on your finger.~
+$n looks stronger as $e slips The Ring of Wonders on $s finger.~
+You feel weakened as you remove The Ring of Wonders from your finger.~
+$n appears weakened as $e removes The Ring of Wonders from $s finger.~
+A
+19 2
+A
+17 5
+A
+12 5
+#4508
+boots worn striding~
+Boots of Striding~
+A pair of worn, but extremely comfortable-looking, boots have been dropped here.~
+~
+9 2 65
+5 0 0 0
+2 30000 3000
+10
+E
+boots worn striding~
+These boots are very worn but well-loved and taken care of.  The wear they have
+received seems to have made them all the more comfortable, having worked all of
+the stiffness out of the leather.
+~
+X
+~
+0 0 0
+M
+Your steps seem lighter as you wear the Boots of Striding on your feet.~
+$n's steps seem lighter as $e wears the Boots of Striding on $s feet.~
+Your feet seem to drag and scuff after you remove the Boots of Striding.~
+$n's feet seem to drag and scuff after $e removes the Boots of Striding.~
+A
+14 100
+A
+13 10
+A
+52 5
+#4509
+slime chunk sticky dried~
+a chunk of sticky dried slime~
+A chunk of sticky dried slime rests here, gathering dust.~
+~
+19 0 1
+12 0 0 0
+1 0 0
+25
+E
+slime chunk sticky dried~
+It's green, smells bad, and has an icky texture... but it looks edible.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4510
+loincloth mushroom mushroom-top top molding~
+A Mushroom-Top Loincloth~
+A loincloth made from the top of a large mushroom lies here, molding.~
+~
+9 64 2049
+5 0 0 0
+3 5000 500
+10
+E
+loincloth mushroom mushroom-top top molding~
+As unlikely as it seems, someone has managed to fashion a rather
+stylish-looking loincloth from nothing but braided reeds and the top of a large
+mushroom.  Its looks may be deceiving however, as it appears to be rather moist
+and in the process of slowly decaying.  The word "squishy" comes to mind.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+18 2
+#4511
+prod carved rod root crackling energy crab~
+A Giant Crab Prod~
+A carved rod crafted from a root lies here, one end crackling with energy.~
+~
+3 67 16385
+20 10 10 30
+3 10000 1000
+10
+E
+prod carved rod root crackling energy crab~
+Closer inspection of this crude rod reveals a series of primitive carvings
+along its length, each depicting different scenes of various giant crabs
+scuttling about.  One end, the handle presumably, is thicker than the other,
+which crackles with blue electric energy.  Whatever its purpose, it is clearly
+magical and probably packs quite a punch.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4512
+sleeves scales black dragon~
+Sleeves of Black Dragon Scales~
+A set of sleeves made from the scales of a black dragon lie here.~
+~
+9 66 257
+5 0 0 0
+5 25000 2500
+10
+E
+sleeves scales black dragon~
+With very little adjustment, the scales from the forearms of a juvenile black
+dragon serve as extremely effective armwear.  Some of the innate magical energy
+of the slain dragon still lingers within the hard chitinous material, lending
+additional power to the wearer.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+53 3
+A
+52 3
+#4513
+treasure large pile coins gems~
+a large pile of treasure~
+A large pile of assorted coins and gems litters the floor, glowing brightly.~
+~
+20 1 1
+25000 0 0 0
+0 0 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4514
+ring tiny green woven bands metal pixie~
+A Pixie Ring~
+A tiny green ring crafted from woven bands of metal has been dropped here.~
+~
+11 97 3
+0 0 0 0
+1 10000 1000
+10
+E
+ring tiny green woven bands metal pixie~
+A series of green metal bands have been woven together in an intricate design
+to form the structure of this ring.  It glows with a faint light, hinting at
+some sort of magical powers contained within.  These types of rings are rumored
+to be a boon to those that deal in magical items and the art of 'acquiring'
+them.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 2
+A
+18 3
+B
+32792
+#4515
+key solid steel neck-chain coiled~
+a solid steel key~
+A solid steel key lies here, its neck-chain coiled around it.~
+~
+18 0 16389
+0 0 0 0
+1 0 0
+100
+E
+key solid steel neck-chain coiled~
+The key is of a simple design, cast from solid steel.  A sturdy metal chain
+has been affixed to one end to allow it to be worn around the neck for
+safe-keeping.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4516
+shirt chain rusty metal links~
+A Rusty Chain Shirt~
+A chain shirt made from rusty metal links lies here, covered in dust.~
+~
+9 64 9
+5 0 0 0
+50 1000 100
+50
+E
+shirt chain rusty metal links~
+This rusty chain shirt has certainly seen better days.  A small, but obvious
+hole has been punched in it by some piercing object long ago, probably retiring
+its use from its former owner.  There is nothing fancy about its design as it
+appears to be standard dwarven military issue.  Though it would offer meager
+protection to its wearer, it seems to still retain a trace amount of some old
+magical enchantment.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+32 5
+#4517
+helm heavily-rusted rusted horned~
+A Heavily-Rusted Horned Helm~
+A once-sturdy but now heavily-rusted horned helm decays away here.~
+~
+9 64 17
+2 0 0 0
+10 1000 100
+50
+E
+helm heavily-rusted rusted horned~
+The helm used to be a simple metal skull cap, with a pair of ivory horns
+attached to the top, but is of little protective use now.  One of the horns has
+been cloven in half, a large dent near the crown of the helm can be seen and
+the entire metal surface is covered in a fine layer of rust.  It is said that
+these types of helms were often held on with a leather strap and used by battle
+dwarves as an extra head-butting weapon; this leads one to question whether the
+large dent was caused by the wearer's opponent, or the wearer himself.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+A
+5 1
+A
+31 5
+#0
+$~

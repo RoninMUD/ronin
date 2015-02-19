@@ -1,0 +1,473 @@
+#8301
+sign~
+sign~
+A sign sticks out of the pebbles here.~
+~
+12 0 0
+0 0 0 0
+100000 10 10
+100
+E
+sign~
+   Theez eez Awr beech, do nawt coam hear!
+~
+E
+sign~
+    Theez is Awr Beech, go hoam!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8319
+hook silver tarnished~
+A tarnished silver hook~
+A small hook glints through its tarnish here.~
+$r tarnished silver hook rips into the soft flesh of $V's belly.~
+5 0 8193
+74 3 7 14
+10 20000 1000
+50
+E
+hook~
+This tarnished silver hook is encrusted in dried blood.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+2 1
+#8320
+pipe carved meerschaum~
+a carved meerschaum pipe~
+A long pipe carved of meerschaum lies here.~
+~
+7 0 49153
+6 10 0 0
+10 10000 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8321
+skeleton parrot~
+A Parrot's Skeleton~
+The skeleton of a tropical bird clutches a torn epaulette here.~
+~
+11 134217728 131077
+0 0 0 0
+10 10 1000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -1
+A
+19 1
+#8322
+hat pirate captain tricorn~
+the Pirate Captain's Hat~
+A tricorn hat lies in the dust here.~
+~
+9 0 17
+7 0 0 0
+6 1000 1000
+15
+E
+tricorn~
+A skull and crossbones are embroidered on the front of this tricorn
+pirate captain's hat.
+~
+E
+hat~
+A skull and crossbones are embroidered on the front of this tricorn
+pirate captain's hat.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -3
+A
+13 25
+#8323
+sponge cabin boy~
+the Cabin Boy's Sponge~
+A sponge lies here, reeking of vomit.~
+~
+12 0 16385
+0 0 0 0
+2 10 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 -3
+A
+12 5
+#8327
+pig head stick~
+A Pig's Head on a Stick~
+A pig's head on a stick is sticking out of the ground here.~
+~
+1 524352 65537
+0 0 0 0
+14 10 10
+10
+E
+pig~
+Flies buzz around this, the idol of the children of the bluffs.~
+E
+head~
+Flies buzz around this, the idol of the children of the bluffs.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 6
+#8333
+loincloth seaweed~
+a seaweed loincloth~
+A pile of seaweed lies here, sandfleas hopping around in it.~
+~
+9 0 2049
+1 1 2 1
+2 1000 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+1 1
+#8335
+gauntlet iron rusted~
+A Rusted Iron Gauntlet~
+A rusted iron gauntlet lies on the ground here.~
+~
+9 0 129
+4 0 0 0
+7 30000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+19 2
+#8336
+shawl fur white bear~
+White Bear-Fur Shawl~
+A pile of white fur lies here.~
+~
+9 13631489 1025
+7 0 0 0
+10 10000 1000
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 10
+#8337
+coat white long~
+a long white coat~
+A long white coat lies crumpled on the ground here.~
+~
+11 146800641 9
+0 0 0 0
+10 20000 4231
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+19 1
+#8338
+flask sewage raw~
+a flask of raw sewage~
+A small flask filled with a noxious fluid lies here, attracting flies.~
+~
+10 0 1
+35 132 33 42
+10 10 10000000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8351
+sign wooden~
+a wooden sign~
+A wooden sign sticks out of the ground here, you should probably read it.~
+~
+12 0 1
+0 0 0 0
+20000 10 10
+100
+E
+sign~
+Do not enter here for fear of your very life. Strange beasts of great
+power dwell within. Caution to the new adventurers, but there is
+rumored to be great treasure and fame awaiting those who conquer
+this awful place....
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8352
+pelt baboon black fur~
+a black Baboon's pelt~
+A heap of black fur lies on the ground here.~
+~
+9 4214784 1025
+9 0 0 0
+5 20000 2000
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+23 20
+A
+1 1
+#8354
+wings fire cockatiel~
+the Fire Cockatiel's Wings~
+A pair of shorn wings lie here, the plumage appearing on fire.~
+~
+11 134266945 257
+0 0 0 0
+2 40000 10000
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 12
+A
+3 1
+#8355
+toadstool orange~
+an orange toadstool~
+An orange toadstool lies in the dust here.~
+~
+19 0 16385
+24 0 0 0
+13 10 1
+90
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8356
+armor sparkling steel~
+sparkling steel armor~
+A suit of sparkling steel armor lies here.~
+~
+9 72368128 9
+11 0 0 0
+20 50000 10
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -4
+#8359
+ring copper millipede~
+the copper millipede ring~
+A small copper ring wrought into the shape of a millipede gleams here.~
+~
+11 0 3
+0 0 0 0
+3 10000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 5
+#8360
+shard glass broken~
+a shard of broken glass~
+A large shard of broken glass lies on the ground here.~
+~
+5 13635584 8193
+0 4 5 11
+10 2000 2000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 -2
+#8361
+staff granite~
+a Granite Staff~
+A reddish granite staff lies here.~
+~
+4 134217730 16385
+30 6 6 82
+4 25000 10000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8362
+pants dusty dust~
+dusty pants~
+A pair of dusty pants lie here, collecting dust.~
+~
+9 13631490 33
+4 0 0 0
+1 20 2000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+14 10
+#8398
+shield locust brown hell~
+the Brown Hell Locust's Shield~
+A gigantic shield made of black insect chiton lies here.~
+~
+9 134285840 513
+20 0 0 0
+20 1000000 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 5
+B
+8390784
+#0
+$~

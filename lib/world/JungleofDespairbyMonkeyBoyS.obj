@@ -1,0 +1,257 @@
+#27612
+papayas papaya bunch~
+a bunch of papayas~
+A bunch of papayas lay on the ground.~
+~
+19 0 1
+24 0 0 0
+7 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27615
+watering hole~
+the watering hole~
+A watering hole tempts you to take a swim.~
+~
+17 0 0
+100000 100000 0 0
+2000 10 10
+100
+E
+hole~
+Inviting to drink from, refreshing to swim in.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27621
+necklace shrunken heads~
+The necklace of shrunken heads~
+A necklace of shrunken heads lies here.~
+~
+11 2048 5
+0 0 0 0
+4 5000 75
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+A
+12 10
+#27627
+iron kettle~
+huge iron kettle~
+The kettle quietly simmers away here.~
+~
+17 0 0
+100 100 7 0
+6 4000 200
+100
+E
+iron~
+A gigantic iron kettle.
+~
+E
+kettle~
+A gigantic iron kettle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27634
+throne jade~
+A large jade throne~
+A large jade throne stands majestically here.~
+~
+8 0 0
+0 0 0 0
+10 1000000 10
+100
+E
+throne~
+The throne is inextricably enmeshed in an immense tree
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27651
+jade monkey~
+the jade monkey~
+A monkey-shaped charm made of jade lays here.
+~
+~
+1 64 65537
+0 0 -1 0
+2 5000 400
+25
+E
+monkey~
+A tiny figurine of a dancing monkey. Charming.
+~
+E
+jade~
+A tiny figurine of a dancing monkey. Charming.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+B
+32
+#27669
+pteradactyl egg~
+a pteradactyl egg~
+A huge speckled egg sits here.~
+(null)~
+15 0 1
+200 5 5 0
+3000 2000 500
+100
+E
+egg~
+The size of a soccer ball with odd speckly spots.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27670
+omelette Pteradactyl egg~
+A pteradactyl omelette~
+You see a tasty pteradactyl omelette, beckoning to you.~
+~
+19 0 1
+12 0 0 0
+2 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27672
+broken ivory~
+the bits of broken ivory~
+Bits of broken ivory are scattered around here.~
+~
+13 524800 1
+0 0 0 0
+31 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27682
+robe purple~
+A purple robe~
+A purple robe with strange symbols painted in blood on it lies here.~
+~
+9 264704 9
+10 0 0 0
+24 3000 200
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#27690
+egg termite~
+a termite egg~
+A termite egg lays half-buried here.~
+~
+19 524288 1
+4 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27698
+sign rotting~
+A Rotting Sign~
+A rotting wooden sign has been planted in the ground here.~
+~
+13 0 0
+0 0 0 0
+750 10 10
+100
+E
+sign~
+                               **WARNING**
+           Beyond this sign lies the jungle of despair, new
+           adventurers beware of the deadly creatures within!
+~
+E
+rotting~
+                               **WARNING**
+           Beyond this sign lies the jungle of despair, new
+           adventurers beware of the deadly creatures within!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

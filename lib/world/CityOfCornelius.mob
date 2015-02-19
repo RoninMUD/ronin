@@ -1,0 +1,95 @@
+#5601
+inhabitant~
+The inhabitant~
+An inhabitant is in his own house and sleeps like a pig here.
+~
+He is the commoner of the city of Cornelius, leave him alone
+because he is in a bad mood.
+~
+10 0 0 Y
+15 5 3 50d2+140 2d7+4
+2000 19290
+4 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5602
+polar bear~
+The Polar Bear~
+A polar bear is here looking for something to eat.
+~
+A white giant bear which usually lives in North Pole. It looks
+very angry.
+~
+42 33554440 -500 Y
+18 5 0 10d2+400 3d6+5
+100 36174
+8 8 0
+86 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5603
+cornelius guard~
+The Cornelius Guard~
+A Cornelius Guard is here protecting the City.
+~
+A very tough guard who is here to protect his city.
+~
+72 0 1000 Y
+20 2 -3 10d5+600 4d6+2
+10000 46329
+8 8 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5604
+drunk~
+The Drunk~
+A drunk is here sleeping like a pig.
+~
+A drunken and dissolve man.
+~
+74 0 200 Y
+10 10 8 10d2+80 1d16+1
+500 3662
+4 4 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#5605
+food shopkeeper~
+The Food ShopKeeper~
+The Food ShopKeeper is here frying a polar bear.
+~
+This man has a very greedy face.
+~
+10 0 300 Y
+20 2 -3 50d2+700 2d8+4
+15000 45000
+8 8 1
+79 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#5606
+wizard~
+The Wizard~
+A clever wizard is here making potions.
+~
+He is a very clever person and he can make some very powerful
+magic items.
+~
+10 0 300 Y
+20 2 -3 10d10+8000 2d8+4
+15000 45000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,241 @@
+#12300
+Board Central~
+   You have reached Board Central, the nexus for all development in
+the world of Ronin.  From here you can explore the changing face of
+classes, areas, online creation, and new features.
+   Class boards can be found to the east and west.  West for Wa, Cl,
+Mu, Th and Ni.  East for No, Pa, Ap, Ba and Co.  Area and Online
+creation boards are located to the north.  Discussion and
+implementation of new features is to the south.
+~
+123 520 0
+D0
+~
+~
+0 -1 12311
+D1
+~
+~
+0 -1 12306
+D2
+~
+~
+0 -1 12399
+D3
+~
+~
+0 -1 12301
+D5
+~
+~
+0 -1 1212
+S
+#12301
+Warrior Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Warrior class. To the north is the Cleric room,
+to the south is the Magic User room, up is the Thief room and
+finally down is the Ninja room. Board Central is to the east.
+~
+123 520 0
+D0
+~
+~
+0 -1 12302
+D1
+~
+~
+0 -1 12300
+D2
+~
+~
+0 -1 12303
+D4
+~
+~
+0 -1 12304
+D5
+~
+~
+0 -1 12305
+S
+#12302
+Cleric Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Cleric class.  To the south is the Warrior room.
+~
+123 520 0
+D2
+~
+~
+0 -1 12301
+S
+#12303
+Magic User Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Magic User class.  To the north is the Warrior room.
+~
+123 520 0
+D0
+~
+~
+0 -1 12301
+S
+#12304
+Thief Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Thief class.  Down is the Warrior room.
+~
+123 520 0
+D5
+~
+~
+0 -1 12301
+S
+#12305
+Ninja Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Ninja class.  Up is the Warrior room.
+~
+123 520 0
+D4
+~
+~
+0 -1 12301
+S
+#12306
+Nomad Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Nomad class. To the north is the Paladin room,
+to the south is the Anti-paladin room, up is the Bard room and
+finally down is the Commando room.  Board Central is to the west.
+~
+123 520 0
+D0
+~
+~
+0 -1 12307
+D2
+~
+~
+0 -1 12308
+D3
+~
+~
+0 -1 12300
+D4
+~
+~
+0 -1 12309
+D5
+~
+~
+0 -1 12310
+S
+#12307
+Paladin Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Paladin class.  To the south is the Nomad room.
+~
+123 520 0
+D2
+~
+~
+0 -1 12306
+S
+#12308
+Anti-Paladin Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Anti-paladin class.  To the north is the Nomad room.
+~
+123 520 0
+D0
+~
+~
+0 -1 12306
+S
+#12309
+Bard Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Bard class. Down in the Nomad room.
+~
+123 520 0
+D5
+~
+~
+0 -1 12306
+S
+#12310
+Commando Room~
+   This board room is reserved for the discussion and implementation
+of changes to the Commando class.  Up is the Nomad room.
+~
+123 520 0
+D4
+~
+~
+0 -1 12306
+S
+#12311
+Area Room~
+   This board room is reserved for the discussion and implementation
+of areas.  Farther north is a room specifically for the discussion
+and implementation of online creation.  Board Central is to the
+south.
+~
+123 520 0
+D0
+~
+~
+0 -1 12312
+D2
+~
+~
+0 -1 12300
+S
+#12312
+OLC Room~
+   This board room is reserved for the discussion and implementation
+of online creation.  The area board room is to the south.
+~
+123 520 0
+D2
+~
+~
+0 -1 12311
+S
+#12313
+Level 50~
+`q   This room is often the scene of contentious debate on what
+is due for each class of player as they move from level 30 to
+50.  Old bloodstains adorn the floor and walls from previous
+discussions that turned a little violent.
+~
+123 520 0
+E
+bloodstain bloodstains~
+The bloodstains vary in color from obviously dry dark red, to
+some which look bright red and still fresh!  Is that someones
+head over in the corner?
+~
+S
+#12399
+New Features~
+`q   This board room is reserved for the discussion and implementation
+of new features.  If a feature is large enough to warrant its own
+special board, one will be added to an unused direction for its
+development life.  Board Central is to the north.  A new board
+for level 50 discussion is to the south.
+~
+123 520 0
+D0
+~
+~
+0 -1 12300
+D2
+~
+~
+0 -1 12313
+S
+#0
+$~

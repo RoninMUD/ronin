@@ -1,0 +1,426 @@
+#26400
+invisible key~
+The Invisible Key~
+You can barely make out the faint outlines of an invisible key here.~
+~
+18 524320 16385
+0 0 0 0
+10 10 10
+100
+E
+invisible~
+key invisible~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26401
+ring jal-pur~
+The Ring Of Jal-Pur~
+You can see the huge Ring of Jal-Pur embedded into a stone block here.~
+~
+18 524288 0
+0 0 0 0
+900 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26402
+wand watoomb~
+The Wand of Watoomb~
+The Deathwand of Watoomb lies here swirling in the winds.~
+~
+12 134217793 16385
+8 0 0 0
+4 98000 11800
+18
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -2
+A
+18 -2
+B
+21504
+#26403
+mallet orcus~
+The Mallet of Orcus~
+A huge mallet lies here radiating evil.~
+$r Mallet of Orcus shimmers and throbs with an evil glow.~
+5 242266626 8193
+0 5 7 6
+28 90000 150000
+6
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#26404
+darksphere sphere ul~
+The Dark Sphere of Ul~
+A dark sphere floats in the air casting an evil glow all around it.~
+~
+1 134217729 65537
+2 2 -1 0
+4 1000000 65000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+#26405
+tattoo serpent coiled~
+A Coiled Serpent Tattoo~
+A piece of skin with a snake twirling around it lies here.~
+~
+9 149958659 257
+0 0 0 0
+3 87000 22000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+12 5
+#26406
+holey majestic cloak~
+A Holey Majestic Cloak~
+A majestic cloak made out of the finest white silk lies here.~
+~
+9 195099682 1025
+6 0 0 0
+2 87000 12000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+A
+19 2
+B
+32768
+#26407
+greaves valour~
+The Greaves of Valour~
+A champion's greaves lie here on the ground.~
+~
+9 159435778 33
+4 0 0 0
+4 19000 9000
+9
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+19 2
+#26408
+urn crackled black~
+A Crackled Black Urn~
+A crackled black urn made from dark alluvial soil has been left here.~
+~
+15 0 16385
+120 0 0 0
+2 300 300
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26409
+carpet flying~
+A Flying Carpet~
+An exquisitely embroidered carpet floats in the air here.~
+~
+22 65 16385
+0 0 0 0
+1 1100 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+B
+16777216
+#26410
+key rune~
+A Key with Moon Runes~
+A key with strange moon runes engraved in it glows faintly in the moonlight.~
+~
+18 524289 16385
+0 0 0 0
+1 1000000 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26411
+dice die ivory~
+lucky ivory die~
+An ancient looking twenty sided ivory die lies on the ground.~
+~
+8 134217792 16385
+0 0 0 0
+10 10 10
+30
+E
+die~
+You see an extremely old twenty sided die, its ivory surface yellowed with age
+and bearing many tiny cracks on its surface.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#26412
+band demonic aura~
+A Band of Demonic Aura~
+A band of swirling powers is hovering here, emanating a light purple glow.~
+~
+11 267432529 3
+0 0 0 0
+2 20000 21000
+5
+E
+band ring powers~
+
+  This band was obviously crafted by a demonic entity not of this realm.
+You are instantly hypnotized by fear as you look into the dark center of
+this band.  The center seems as if a dark, black portal to another dark
+realm.  The outer portion of this band is a purplish haze spiraling around
+the center.  It emanates an evil, yet mesmerizing purple glow.
+
+~
+X
+~
+4 0 0
+M
+You feel an evil force pulsating through your body.~
+$n shudders as an evil force pulsates through $s body.~
+The Band of Demonic Aura shakes violently as you try to remove it.~
+The Band of Demonic Aura shakes violently as $n tries to remove it.~
+A
+19 3
+A
+18 3
+A
+12 15
+T
+14000
+#26413
+ring signet mahamoti djinn~
+Lost Signet of Mahamoti Djinn~
+A mysterious glow emits from the jewel of a forgotten ring.~
+~
+11 267416641 3
+0 0 0 0
+1 25000 31500
+8
+E
+jewel~
+
+  A sparkling sapphire winks at you from the head of a tiny ring.
+
+~
+E
+ring signet mahamoti djinn~
+
+  This is the magical ring which once belonged to the great
+Mahamoti Djinn of the far reaching Jal Pur desert.  He was
+known for his practical jokes and good humor as well as
+the awesome power he commanded.  This jewel represents a
+small part of that power imparted and passed down throughout
+the Sultanate.
+
+~
+X
+~
+4 0 0
+M
+You feel a magical blue aura emerge from the signet.~
+$n is covered in a magical blue aura as $e wears the signet.~
+Your magical blue aura disappears as you remove the signet.~
+$n's magical blue aura disappears as $e removes the signet.~
+A
+19 3
+A
+18 4
+A
+53 15
+T
+14000
+#26475
+gloves siva~
+The Gloves Of Siva~
+A pair of white gloves have been kept in the corner here.~
+~
+9 134217794 129
+0 0 0 0
+3 12000 10000
+10
+E
+siva~
+You see a pair of white gloves soaked in blood.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+24 -10
+#26476
+jade ring~
+A Jade Ring~
+A ring made of opaque green stone has been left here.~
+~
+11 134217730 3
+0 0 0 0
+2 10000 1000
+20
+E
+jade~
+You see a beautiful ring with a small figure carved in jade, set in it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#26477
+mantle devotion~
+The Mantle of Devotion~
+A simple brown robe lies here glowing with a rainbow aura.~
+~
+9 217084737 1025
+0 0 0 0
+4 9001 13001
+8
+E
+devotion~
+The simple cloak has a soft multi-colored aura like a rainbow.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 30
+A
+19 2
+#26478
+ring signet sultan insignia~
+The Signet Ring of the Sultan~
+An insignia of the office of Vizier lies on the ground here.~
+~
+11 233894400 3
+0 0 0 0
+3 19000 27000
+6
+E
+ring insignia signet~
+
+  This ring was given to the Grand Vizier by the absent Sultan to signify
+his position and his control of the government in the Sultan's absence.
+It is a simple bronze ring with the a small square of gold on one side,
+containing the personal seal of the Sultan.  Though it seems a very
+simple ring, it carries authority over all of the Sultanate of Jal-Pur.
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+A
+52 8
+T
+14000
+#0
+$~

@@ -1,0 +1,1357 @@
+#5400
+The Landing~
+   You are on a weather beaten dock.  It appears ready to collapse.
+Evidently nobody has been around to take care of things.  There is
+a river of nothingness to your south.
+~
+54 4 2
+D0
+~
+~
+0 -1 5401
+D2
+~
+~
+0 -1 1824
+S
+#5401
+An Old Path~
+  You are on a north-south path.
+~
+54 0 4
+D0
+~
+~
+0 -1 5402
+D2
+~
+~
+0 -1 5400
+S
+#5402
+An Old Path~
+  You are on a north-south path.
+~
+54 0 4
+D0
+~
+~
+0 -1 5403
+D2
+~
+~
+0 -1 5401
+S
+#5403
+An Old Path~
+  You are on a north-south path in a very desolate area.
+~
+54 0 4
+D0
+~
+~
+0 -1 5404
+D2
+~
+~
+0 -1 5402
+S
+#5404
+An Old Path~
+  You are on a north-south path in an extremely barren part of the world.
+~
+54 4 4
+D0
+~
+~
+0 -1 5405
+D2
+~
+~
+0 -1 5403
+S
+#5405
+The Wasteland~
+  You are on a dry, barren wasteland.  There is little evidence of life
+here.  The ground is littered with bones, sticks, rocks, and other debris.
+Further north of here it looks even worse.  There is a SIGN here.
+~
+54 0 4
+D0
+~
+~
+0 -1 5410
+D2
+~
+~
+0 -1 5404
+E
+sign~
+The sign says:
+  BEWARE.  The Wasteland is a Dangerous Area.  It is controlled
+  by gangs of marauders and packs of hyenas.  Enter at your own
+  risk.  Nearly everything here is aggressive.  There is more
+  here than meets the eye.
+
+~
+S
+#5410
+The Wasteland~
+  You are in a bleak, desolate wasteland.
+~
+54 0 4
+D1
+~
+~
+0 -1 5411
+D2
+~
+~
+0 -1 5405
+D3
+~
+~
+0 -1 5414
+S
+#5411
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5418
+D1
+~
+~
+0 -1 5412
+D3
+~
+~
+0 -1 5410
+S
+#5412
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5419
+D1
+~
+~
+0 -1 5417
+D3
+~
+~
+0 -1 5411
+S
+#5413
+The Wasteland~
+  You are on a bleak, desolate wasteland.  Barely covered by the dirt are
+the outlines of an old well.
+~
+54 0 4
+D0
+~
+~
+0 -1 5422
+D1
+~
+~
+0 -1 5418
+D3
+~
+~
+0 -1 5416
+D5
+The cover is heavy, but can be moved.
+~
+cover~
+1 0 5441
+S
+#5414
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5416
+D1
+~
+~
+0 -1 5410
+D3
+~
+~
+0 -1 5415
+S
+#5415
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5417
+D1
+~
+~
+0 -1 5414
+D3
+~
+~
+0 -1 5419
+S
+#5416
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5421
+D1
+~
+~
+0 -1 5413
+D2
+~
+~
+0 -1 5414
+D3
+~
+~
+0 -1 5417
+S
+#5417
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5420
+D1
+~
+~
+0 -1 5416
+D2
+~
+~
+0 -1 5415
+D3
+~
+~
+0 -1 5412
+S
+#5418
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5423
+D1
+~
+~
+0 -1 5419
+D2
+~
+~
+0 -1 5411
+D3
+~
+~
+0 -1 5413
+S
+#5419
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5424
+D1
+~
+~
+0 -1 5415
+D2
+~
+~
+0 -1 5412
+D3
+~
+~
+0 -1 5418
+S
+#5420
+The Wasteland~
+  You are on a bleak, desolate wasteland.  To the west, a stone structure
+appears to be intact.
+~
+54 0 4
+D0
+~
+~
+0 -1 5431
+D1
+~
+~
+0 -1 5421
+D2
+~
+~
+0 -1 5417
+D3
+~
+door~
+1 0 5440
+S
+#5421
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5425
+D1
+~
+~
+0 -1 5422
+D2
+~
+~
+0 -1 5416
+D3
+~
+~
+0 -1 5420
+S
+#5422
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5426
+D1
+~
+~
+0 -1 5423
+D2
+~
+~
+0 -1 5413
+D3
+~
+~
+0 -1 5421
+S
+#5423
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5427
+D1
+~
+~
+0 -1 5424
+D2
+~
+~
+0 -1 5418
+D3
+~
+~
+0 -1 5422
+S
+#5424
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5432
+D2
+~
+~
+0 -1 5419
+D3
+~
+~
+0 -1 5423
+S
+#5425
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5428
+D1
+~
+~
+0 -1 5426
+D2
+~
+~
+0 -1 5421
+D3
+~
+~
+0 -1 5431
+S
+#5426
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D1
+~
+~
+0 -1 5427
+D2
+~
+~
+0 -1 5422
+D3
+~
+~
+0 -1 5425
+S
+#5427
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5429
+D1
+~
+~
+0 -1 5432
+D2
+~
+~
+0 -1 5423
+D3
+~
+~
+0 -1 5426
+S
+#5428
+The Wasteland~
+  You are on a bleak, desolate wasteland.  There is a building to the
+north.  To each side of the door is a plain Doric column.  You might
+want to think twice about entering.
+~
+54 0 4
+D0
+~
+door~
+1 0 5445
+D1
+~
+~
+0 -1 5429
+D3
+~
+~
+0 -1 5430
+S
+#5429
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5433
+D1
+~
+~
+0 -1 5434
+D2
+~
+~
+0 -1 5427
+D3
+~
+~
+0 -1 5428
+S
+#5430
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5434
+D1
+~
+~
+0 -1 5428
+D2
+~
+~
+0 -1 5425
+D3
+~
+~
+0 -1 5433
+D5
+~
+plate~
+1 0 5465
+S
+#5431
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5433
+D1
+~
+~
+0 -1 5425
+D2
+~
+~
+0 -1 5420
+D3
+~
+~
+0 -1 5434
+S
+#5432
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5434
+D1
+~
+~
+0 -1 5433
+D2
+~
+~
+0 -1 5424
+D3
+~
+~
+0 -1 5427
+S
+#5433
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5429
+D1
+~
+~
+0 -1 5430
+D2
+~
+~
+0 -1 5431
+D3
+~
+~
+0 -1 5432
+S
+#5434
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+54 0 4
+D0
+~
+~
+0 -1 5430
+D1
+~
+~
+0 -1 5431
+D2
+~
+~
+0 -1 5432
+D3
+~
+~
+0 -1 5429
+S
+#5435
+A Cavern~
+  You are in an underground cavern that extends west from here.  There
+is barely enough room to stand up straight.
+~
+54 9 3
+D3
+~
+~
+0 -1 5436
+D4
+~
+grate~
+1 0 5440
+S
+#5436
+A Cavern~
+  You are in an underground cavern.
+~
+54 9 3
+D1
+~
+~
+0 -1 5435
+D3
+~
+~
+0 -1 5437
+S
+#5437
+A Cavern~
+  You are in an underground cavern.
+~
+54 9 3
+D0
+~
+~
+0 -1 5438
+D1
+~
+~
+0 -1 5436
+D2
+~
+~
+0 -1 5439
+S
+#5438
+A Cavern~
+  You are in an underground cavern.
+~
+54 9 3
+D0
+~
+~
+0 -1 5439
+D2
+~
+~
+0 -1 5437
+S
+#5439
+A Cavern~
+  You are in an underground cavern.
+~
+54 9 3
+D0
+~
+~
+0 -1 5437
+D2
+~
+~
+0 -1 5438
+S
+#5440
+A Stone Shelter~
+  You are inside a stone shelter.  It may not protect you against the
+elements, but it should keep your enemies out.
+~
+54 12 0
+D1
+~
+door~
+1 0 5420
+D5
+~
+grate~
+1 0 5435
+S
+#5441
+On A Ledge In A Dry Well~
+  You are halfway down (or is it halfway up?) an old dry well.  The
+ledge here is big enough to hold several people.  There are a few
+Greek letters carved in the stone.
+~
+54 1 0
+D4
+~
+cover~
+1 0 5413
+D5
+~
+~
+0 -1 5442
+E
+letters~
+You see: chi alpha delta epsilon sigma ..
+~
+S
+#5442
+At The Bottom~
+  You are at the bottom of an old dry well.
+~
+54 129 0
+D4
+~
+~
+0 -1 5441
+S
+#5445
+In the Main Hall~
+   You are in the main hall of a large building.  There is a stairway
+leading down.  To the north you hear a dissonant screeching.   You feel a
+chill.
+~
+54 12 0
+D0
+~
+~
+0 -1 5449
+D2
+~
+door~
+1 0 5428
+D4
+~
+~
+0 -1 5480
+D5
+~
+~
+0 -1 5446
+S
+#5446
+The Tunnel~
+   You are at the northern extremity of a large north-south tunnel.
+~
+54 8 0
+D1
+~
+~
+0 -1 5470
+D2
+~
+~
+0 -1 5447
+D3
+~
+~
+0 -1 5461
+D4
+~
+~
+0 -1 5445
+S
+#5447
+The Tunnel~
+   You are in an extremely large north-south tunnel.
+There is a small opening to the east.
+~
+54 8 0
+D0
+~
+~
+0 -1 5446
+D1
+~
+~
+0 -1 5455
+D2
+~
+~
+0 -1 5448
+S
+#5448
+The Tunnel~
+   You are at the southern end of a huge north-south tunnel.
+~
+54 8 0
+D0
+~
+~
+0 -1 5447
+D2
+~
+door~
+1 0 5450
+D3
+~
+~
+0 -1 5495
+S
+#5449
+The Amphitheater~
+   You are in a large amphitheatre.  It might have been used for
+performances of some kind, a long time ago.
+~
+54 8 0
+D2
+~
+~
+0 -1 5445
+S
+#5450
+Where the Gorgons Dwell~
+   You are in a large, cold, damp room.  This is the room where the
+three Gorgons are usually found.
+~
+54 9 0
+D0
+~
+door~
+1 0 5448
+S
+#5451
+The Bath~
+   You are in the bath of Proserpina.  The floor and walls are made of
+marble.
+~
+54 8 0
+D2
+~
+curtain~
+1 0 5460
+S
+#5455
+A Peculiar Chamber~
+   You are in a chamber that is lit by an amber light.  There is a cage
+at the north end of the room.
+~
+54 8 0
+D0
+~
+cage~
+1 0 5456
+D1
+~
+~
+0 -1 5457
+D3
+~
+~
+0 -1 5447
+S
+#5456
+The Cage~
+   You are in a very sturdy cage.  The cage was obviously built to
+contain a powerful beast.
+~
+54 136 0
+D2
+~
+cage~
+1 0 5455
+S
+#5457
+Yet Another Hallway~
+   You're in yet another hallway.
+~
+54 8 0
+D2
+~
+~
+0 -1 5458
+D3
+~
+~
+0 -1 5455
+S
+#5458
+The Large Laboratory~
+   You're in a large laboratory.  The lab appears to have been the
+workplace of a primitive practicianer of the chemical arts.
+~
+54 8 0
+D0
+~
+~
+0 -1 5457
+S
+#5459
+Ante-chamber~
+   This is the waiting room that might have once been used by
+Proserpina, queen of the underworld, wife of Hades.
+~
+54 8 0
+D2
+~
+~
+0 -1 5463
+D3
+~
+door~
+1 0 5460
+S
+#5460
+The Parlor of Proserpina~
+   This room was the waiting room of mighty Proserpina, the wife of
+Hades, and the Queen of the Underworld.
+~
+54 8 0
+D0
+~
+curtain~
+1 0 5451
+D1
+~
+door~
+1 0 5459
+S
+#5461
+Another Large Hallway~
+   This is another large hallway.
+~
+54 8 0
+D1
+~
+~
+0 -1 5446
+D3
+~
+~
+0 -1 5462
+S
+#5462
+Another Large Hallway~
+   This is another large hallway.
+~
+54 8 0
+D1
+~
+~
+0 -1 5461
+D3
+~
+~
+0 -1 5463
+S
+#5463
+Another Large Hallway~
+   This is another large hallway.
+~
+54 8 0
+D0
+~
+~
+0 -1 5459
+D1
+~
+~
+0 -1 5462
+D3
+~
+~
+0 -1 5464
+S
+#5464
+The End of Hallway~
+   You are at the western end of a large hallway.
+~
+54 8 0
+D1
+~
+~
+0 -1 5463
+D2
+~
+door~
+1 0 5465
+S
+#5465
+A Small Chamber~
+   You are in a very small chamber.
+~
+54 12 0
+D0
+~
+door~
+1 0 5464
+D4
+There appears to be a moveable plate covering a hole in the ceiling.
+~
+plate~
+1 0 5430
+S
+#5470
+The East Wing~
+   You are in the main corridor of the east wing.
+~
+54 8 0
+D1
+~
+~
+0 -1 5471
+D3
+~
+~
+0 -1 5446
+S
+#5471
+The East Wing~
+   You are in the main corridor of the east wing.
+~
+54 8 0
+D1
+~
+~
+0 -1 5472
+D3
+~
+~
+0 -1 5470
+S
+#5472
+The East Wing~
+   You are in the main corridor of the east wing.
+~
+54 8 0
+D1
+~
+~
+0 -1 5473
+D3
+~
+~
+0 -1 5471
+S
+#5473
+The East Wing~
+   You are in the main corridor of the east wing.
+~
+54 8 0
+D2
+~
+door~
+0 -1 5475
+D3
+~
+~
+0 -1 5472
+S
+#5475
+Sanctuary of the Lesser Gods~
+   You are in the room used by the lesser gods of the underworld,
+Aeacus, Radamanthus, and Minos.  You can almost hear them plotting
+against Hades...
+~
+54 8 0
+D0
+~
+~
+0 -1 5473
+D2
+~
+door~
+1 0 5476
+S
+#5476
+The Library~
+   You are in the library.  There are no books here.  Perhaps the Lesser Gods
+who sit in judgement on poor souls are here?
+~
+54 8 0
+D0
+~
+door~
+1 0 5475
+S
+#5480
+On a Winding Stairway~
+   You are near the bottom of a long, winding stairway.
+~
+54 8 5
+D4
+~
+~
+0 -1 5481
+D5
+~
+~
+0 -1 5445
+S
+#5481
+On a Winding Stairway~
+   You are very near the bottom of a long, winding stairway.
+~
+54 8 5
+D4
+~
+~
+0 -1 5482
+D5
+~
+~
+0 -1 5480
+S
+#5482
+On a Winding Stairway~
+   You are near the bottom of a long, winding stairway.
+~
+54 8 5
+D4
+~
+~
+0 -1 5483
+D5
+~
+~
+0 -1 5481
+S
+#5483
+On a Winding Stairway~
+   You are on a long, winding stairway.  The stairway gets narrower
+as you approach the top.
+~
+54 8 5
+D4
+~
+~
+0 -1 5484
+D5
+~
+~
+0 -1 5482
+S
+#5484
+On a Winding Stairway~
+   You are near the top of a long, narrowing, winding stairway.
+~
+54 8 5
+D4
+~
+~
+0 -1 5485
+D5
+~
+~
+0 -1 5483
+S
+#5485
+On a Winding Stairway~
+   You are very near the top of a long, winding stairway.
+~
+54 8 5
+D4
+~
+~
+0 -1 5486
+D5
+~
+~
+0 -1 5484
+S
+#5486
+On a Winding Stairway~
+   You are very near the top of a long, winding stairway.  The
+stairway is very narrow here.
+~
+54 8 5
+D4
+~
+~
+0 -1 5487
+D5
+~
+~
+0 -1 5485
+S
+#5487
+On a Winding Stairway~
+   You are at the top of a long, winding stairway.  You see a door.
+~
+54 8 5
+D0
+~
+door~
+1 0 5488
+D5
+~
+~
+0 -1 5486
+S
+#5488
+On the Ramparts~
+   You are out in the open, high above the surrounding wasteland, which
+stretches for as for as the eye can see.  The wind is very strong up here.
+Perhaps not all of the howling you hear is due to the wind?
+~
+54 0 4
+D2
+~
+door~
+1 0 5487
+S
+#5489
+The Throne~
+   You are at the massive throne of Hades.  You might not have much
+time to read this.
+~
+54 0 4
+D2
+~
+~
+0 -1 5490
+S
+#5490
+An Underground Field~
+   You are in an expansive underground field.  There is a depression
+running through the field that might once have been a river.
+~
+54 0 2
+D0
+~
+~
+0 -1 5489
+D1
+~
+~
+0 -1 5491
+D2
+~
+~
+0 -1 5493
+S
+#5491
+An Underground Field~
+   You are in an expansive underground field.  There is a depression
+running through the field that might once have been a river.
+~
+54 0 2
+D0
+~
+~
+0 -1 5494
+D2
+~
+~
+0 -1 5492
+D3
+~
+~
+0 -1 5490
+S
+#5492
+An Underground Field~
+   You are in an expansive underground field.  There is a depression
+running through the field that might once have been a river.
+~
+54 0 2
+D0
+~
+~
+0 -1 5491
+D3
+~
+~
+0 -1 5493
+S
+#5493
+An Underground Field~
+   You are in an expansive underground field.  There is a depression
+running through the field that might once have been a river.
+~
+54 0 2
+D0
+~
+~
+0 -1 5490
+D1
+~
+~
+0 -1 5492
+D5
+You look into what seems to be a deep pit.
+~
+grate~
+2 5452 5496
+S
+#5494
+A Wider Passage~
+   You are in another one of those passages.
+~
+54 0 3
+D0
+~
+door~
+1 0 5495
+D2
+~
+~
+0 -1 5491
+S
+#5495
+An Alcove~
+   You have stepped into a small alcove, west of the large north-south
+tunnel.
+~
+54 0 3
+D1
+~
+~
+0 -1 5448
+D2
+~
+door~
+1 0 5494
+S
+#5496
+The Pit~
+   You are in a deep dark pit.  This place seems to be inhabited by a
+disgusting creature of some sort.
+~
+54 9 3
+D4
+It is a long way up, but you can make it.
+~
+grate~
+2 5452 5493
+S
+#0
+$~
+

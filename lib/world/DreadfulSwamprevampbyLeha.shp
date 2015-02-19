@@ -1,0 +1,59 @@
+#12098~
+-1
+12100
+12101
+3022
+19209
+1.600000
+0.600000
+5
+6
+7
+9
+12
+%s I don't have anything like that!~
+%s You don't have anything like that!~
+%s I don't buy such items.~
+%s Do I look like a Bank to you?~
+%s sorry, NO CREDIT !~
+%s Fine Deal! Just %d coins~
+%s Here you have %d coins for that rubbish.~
+0
+1
+12098
+0
+12095
+0
+28
+0
+0
+#12099~
+-1
+12119
+12120
+3052
+3050
+1.600000
+0.600000
+2
+3
+4
+10
+12
+%s I don't have anything like that!~
+%s You don't have anything like that!~
+%s I don't buy such items.~
+%s Do I look like a Bank to you?~
+%s sorry, NO CREDIT !~
+%s Fine Deal! Just %d coins~
+%s Here you have %d coins for that rubbish.~
+0
+1
+12099
+0
+12096
+0
+28
+0
+0
+$~

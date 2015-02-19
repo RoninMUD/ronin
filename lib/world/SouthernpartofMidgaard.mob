@@ -1,0 +1,166 @@
+#3100
+maid~
+the Maid~
+The Maid is waiting for your order.
+~
+She is very beautiful with golden hair, and deep blue eyes. A good reason
+for coming here more often.
+~
+10 0 1000 Y
+23 0 2 6d10+390 1d8+12
+2000 80000
+8 8 2
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3120
+sexton~
+the Sexton~
+A Sexton is sitting here, drinking hot tea.
+~
+The Sexton looks like he is relaxing after another gravedigging job.
+~
+10 0 800 Y
+3 18 7 2d6+35 1d7+0
+13 350
+6 6 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3121
+swan~
+the Swan~
+A swan is swimming around in the pond.
+~
+The white swan is very elegant.
+~
+10 0 1000 Y
+1 20 9 2d6+10 1d5+0
+0 100
+8 8 0
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3122
+duckling~
+the Duckling~
+A duckling is swimming around in the pond.
+~
+The duckling is adorable, it looks most of all like a tiny furball.
+~
+10 0 1000 Y
+1 20 10 1d1+0 1d1+0
+0 1
+8 8 0
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3123
+sparrow~
+the Sparrow~
+A sparrow is flapping around on the ground.
+~
+The sparrow looks like it is enjoying life.
+~
+200 0 1000 Y
+1 20 10 2d6+0 1d3+0
+0 25
+8 8 0
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3124
+duck~
+the Duck~
+A duck is here, quacking happily.
+~
+The duck is quite fat.  It looks like it is enjoying life.
+~
+72 0 1000 Y
+1 20 10 2d6+5 1d4+0
+0 75
+8 8 0
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3140
+chief~
+the Chief~
+The Chief Guard is looking very upset.
+~
+A very angry chief.
+~
+46 8 1000 Y
+17 4 1 1d12+1610 1d8+8
+0 28000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3141
+cityguard guard~
+the Cityguard~
+A cityguard stands here, looking very upset.
+~
+A big, strong, angry guard.
+~
+46 0 1000 Y
+10 10 2 1d12+123 1d8+3
+0 9000
+8 8 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3143
+mayor luxovious~
+Mayor Luxovious~
+A tall, stately, well dressed man is shaking hands here.
+~
+   A calm smile radiates from a smooth face. Dark blue eyes peering out from
+under thick eyebrows search quickly from side to side. Wide hands hang loosely
+at his sides, soft skin worn smooth from constantly shaking hands. Clean 
+polished shoes and a well cut suit fit his frame perfectly.
+~
+11 2176 900 Y
+20 0 2 6d10+1000 2d8+8
+1000 60000
+4 4 1
+69 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#3144
+gypsy donka~
+Donka the Gypsy~
+A raving old woman in strange clothes mutters to herself.
+~
+  A wiry but sturdy woman leans heavily on a hickory cane, her thumb
+gently strokes a disturbingly alert-looking eyeball which has been
+fused into the wood. Her small frame and unimposing presence bely her
+mischievous and cutthroat nomadic history. Adorned in gawdy jewelry
+and beads and clad in a ratty robe soaked in the stench of mold and
+decay she smirks at you from beneath a ragged scarf. There is nothing
+clueless or naive in those eyes; her cold distant stare bores into
+your soul revealing your most precious secrets and confidences to her
+entrancing gaze.
+~
+10 0 -420 Y
+57 -24 -6 343d55+2342 7d8+77
+56750 666
+8 8 2
+85 134236172 6d6+6 0
+0 0 0 336
+T
+......Donka the Gypsy is surrounded by a noxious cloud of funk.~
+K
+0 0 0 0 0 0 0
+#0
+$~

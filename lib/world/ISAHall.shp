@@ -1,0 +1,88 @@
+#27800~
+3050
+3052
+-1
+-1
+-1
+1.000000
+1.000000
+0
+0
+0
+0
+0
+No, I don't have it and don't care, go away.~
+%s What keeper says if seller doesn't have the item.~
+%s What keeper says if it doesn't buy that kind of item.~
+%s What keeper says if it doesn't have cash to buy an item.~
+Right, and you expect me to give it away? ha! get out.~
+%s There you go, now go away!~
+%s There you sold your worthless scroll, now go away!~
+0
+0
+27800
+0
+27835
+0
+28
+0
+0
+#27801~
+27820
+27821
+27822
+27823
+27824
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s I'm sorry, I don't have that, please consult with a lesser shop.~
+%s I'm sorry, I don't have that, please consult with a lesser shop.~
+%s I don't wish to buy that, it is beneath me.~
+invalid~
+%s I'm sorry, but as you can clearly see, I do not carry that.~
+%s Thank you for contributing %d gold to my shop, you won't be disappointed.~
+%s Don't worry, I will find somewhere to toss this. Good day.~
+0
+0
+27801
+0
+27834
+0
+28
+0
+0
+#27802~
+27810
+27811
+27812
+27813
+27814
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s Look, I'm dreadfully sorry, but I don't think I have that.~
+%s What keeper says if seller doesn't have the item.~
+%s What keeper says if it doesn't buy that kind of item.~
+%s Really, its to bad, but I don't think you have enough coins for that.~
+%s What keeper says if buyer doesn't have the cash.~
+%s Thanks, its always nice to know my foods aren't going to waste.~
+%s Thank you, I don't know where I will put this, but thanks anyway!~
+0
+0
+27802
+0
+27858
+0
+28
+0
+0
+$~

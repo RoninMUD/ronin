@@ -1,0 +1,150 @@
+#1601
+shield shell turtle~
+a Turtle's Shell~
+A Turtle's Shell is lying on the ground.~
+~
+9 134217728 513
+17 0 0 0
+30 12000 3000
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1602
+key stone~
+a stone key~
+A stone key is lying on the ground.~
+~
+18 0 16385
+2 0 0 0
+5 100 10000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1603
+femur bone~
+an Ape's Femur~
+The femur of a large ape lies here on the ground.~
+$r femur makes a whistling noise as it cuts the air.~
+5 134217729 8193
+0 6 4 7
+16 20000 13000
+10
+E
+femur~
+It's been gnawed thoroughly and appears to be very old.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1604
+hoop metal~
+a metal hoop~
+A metal hoop is lying on the ground.~
+~
+12 134217730 16385
+0 0 0 0
+4 2000 500
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+#1605
+ring vine~
+a Ring of Vines~
+A strange piece of vine is lying on the ground.~
+~
+11 134217728 3
+0 0 0 0
+4 2000 900
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#1606
+sandals vine~
+a pair of vine sandals~
+A pair of sandals are lying on the ground.~
+~
+9 134217728 65
+3 0 0 0
+5 3000 300
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 2
+#1607
+paw monkey~
+a monkey's paw~
+A severed paw is lying on the ground.~
+~
+4 67 16385
+30 1 1 83
+3 2000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1608
+sash vine~
+a woven vine sash~
+A length of vine lies on the ground.~
+~
+9 134217728 2049
+5 0 0 0
+4 2000 1000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+#0
+$~

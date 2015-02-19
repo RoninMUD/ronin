@@ -1,0 +1,133 @@
+#800
+Mummy~
+Ancient Mummy~
+Here stands an Ancient Mummy , his only purpose is to protect the SPHINX!
+~
+Here stands a mummy about 1000 years old. His wraps are tattered and torn
+from centuries of protecting the Spinhx from the likes of you!
+~
+147498 2048 0 Y
+40 -11 0 100d2+700 6d3+10
+20000 90000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#801
+Snake~
+a 200 year old snake~
+Crawling about the ground is a Two hundred year old snake
+~
+On the ground in front of you crawls a 200 year old snake. The snake appears
+to be unaffected by time. Although he has no arms or legs his attack can be
+lethal!
+~
+16428 262144 -100 Y
+20 0 0 100d1+300 5d2+8
+0 10000
+8 8 1
+80 0 0d0+0 0
+0 0 0 0
+K
+2000 0 0 0 0 0
+#802
+bat~
+Vampire bat~
+A vampire bat hangs from the ceiling.
+~
+Hanging from the ceiling is a vampire bat. His only source of food being unwary
+passer by's. So you best be careful!
+~
+104 0 0 Y
+23 13 0 100d2+300 4d3+5
+0 16000
+8 8 1
+54 0 0d0+0 0
+0 0 0 0
+K
+1000 0 0 0 0 0
+#803
+priest~
+An ancient Priest~
+An ancient egyptian priest is praying here.
+~
+Standing in front of you blocking your way is an ancient priest not less than
+1000 years old. From the looks of it you have intruded on something. 
+~
+10 2056 1000 Y
+45 -14 0 300d2+1000 10d2+12
+10000 250000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#804
+Tut~
+Tutankhamen~
+Here stands the mummy of Tutankhamen.
+~
+Here stands the mummy of the great pharaoh Tutankhamen. He is thousands of
+years old and really shows his age. He looks like an easy kill, but then
+things aren't always what they seem!
+~
+10 264320 -1000 Y
+51 -14 0 100d3+3800 4d3+22
+100000 200000
+8 8 1
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#805
+Mummy~
+First Ancient Mummy~
+Here stands the first mummy of the Sphinx.
+~
+This is the first mummy you have found in the Sphinx. His wraps are tattered
+and torn , and he appears to have been here for centuries!
+~
+42 2048 -100 Y
+50 -11 0 100d3+800 5d5+10
+20000 100000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#806
+mummy~
+Second Ancient Mummy~
+Here stands the second mummy of the Sphinx
+~
+Here stands the second ancient mummy. He is much like the first one you
+encountered. His wraps are tattered and torn from centuries of aging.
+~
+42 2048 -1000 Y
+35 -12 0 100d4+800 5d6+11
+24400 200000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#807
+mummy~
+Third Ancient Mummy~
+Here stands the third mummy of the Sphinx
+~
+You are looking at the third mummy of this ancient Sphinx. He looks much
+like the other mummies you have seen. He looks old and worn, but thousands
+of years has that affect.
+~
+42 2048 -1000 Y
+35 -12 0 100d4+800 5d6+20
+30000 250000
+8 8 1
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

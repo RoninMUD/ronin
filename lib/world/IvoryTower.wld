@@ -1,0 +1,922 @@
+#2801
+Entrance to the Ivory Tower~
+	It is the entrance to the Ivory Tower. The whole tower is made of
+ivory. There is an ivory staircase here. To your west is a beautiful beach.
+~
+28 12 1
+D3
+~
+~
+0 -1 8338
+D4
+~
+~
+0 -1 2802
+S
+#2802
+Ivory Staircase~
+	A very beautiful staircase. It connects the seclusion and the world.
+You can go up or down here.
+~
+28 12 1
+D4
+~
+~
+0 -1 2803
+D5
+~
+~
+0 -1 2801
+S
+#2803
+Ivory Staircase~
+	A very beautiful staircase. It connects the seclusion and the world.
+You can go up or down here.
+~
+28 12 1
+D4
+~
+~
+0 -1 2804
+D5
+~
+~
+0 -1 2802
+S
+#2804
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. There is
+an ivory staircase here.
+~
+28 8 1
+D0
+~
+~
+0 -1 2805
+D1
+~
+~
+0 -1 2819
+D2
+~
+~
+0 -1 2820
+D3
+~
+~
+0 -1 2811
+D5
+~
+~
+0 -1 2803
+S
+#2805
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2806
+D1
+~
+~
+0 -1 2818
+D2
+~
+~
+0 -1 2804
+D3
+~
+~
+0 -1 2810
+S
+#2806
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2807
+D1
+~
+~
+0 -1 2817
+D2
+~
+~
+0 -1 2805
+D3
+~
+~
+0 -1 2809
+S
+#2807
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D1
+~
+~
+0 -1 2816
+D2
+~
+~
+0 -1 2806
+D3
+~
+~
+0 -1 2808
+S
+#2808
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D1
+~
+~
+0 -1 2807
+D2
+~
+~
+0 -1 2809
+D3
+~
+~
+0 -1 2815
+S
+#2809
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2808
+D1
+~
+~
+0 -1 2806
+D2
+~
+~
+0 -1 2810
+D3
+~
+~
+0 -1 2814
+S
+#2810
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2809
+D1
+~
+~
+0 -1 2805
+D2
+~
+~
+0 -1 2811
+D3
+~
+~
+0 -1 2813
+S
+#2811
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2810
+D1
+~
+~
+0 -1 2804
+D2
+~
+~
+0 -1 2821
+D3
+~
+~
+0 -1 2812
+S
+#2812
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2813
+D1
+~
+~
+0 -1 2811
+D2
+~
+~
+0 -1 2822
+S
+#2813
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. The house
+of the retire knight is at your west.
+~
+28 8 1
+D0
+~
+~
+0 -1 2814
+D1
+~
+~
+0 -1 2810
+D2
+~
+~
+0 -1 2812
+D3
+~
+~
+0 -1 2845
+S
+#2814
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2815
+D1
+~
+~
+0 -1 2809
+D2
+~
+~
+0 -1 2813
+S
+#2815
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. The house
+of the teacher is at your west.
+~
+28 8 1
+D1
+~
+~
+0 -1 2808
+D2
+~
+~
+0 -1 2814
+D3
+~
+~
+0 -1 2846
+S
+#2816
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D1
+~
+~
+0 -1 2833
+D2
+~
+~
+0 -1 2817
+D3
+~
+~
+0 -1 2807
+S
+#2817
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2816
+D1
+~
+~
+0 -1 2834
+D2
+~
+~
+0 -1 2818
+D3
+~
+~
+0 -1 2806
+S
+#2818
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2817
+D1
+~
+~
+0 -1 2835
+D2
+~
+~
+0 -1 2819
+D3
+~
+~
+0 -1 2805
+S
+#2819
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2818
+D1
+~
+~
+0 -1 2836
+D2
+~
+~
+0 -1 2826
+D3
+~
+~
+0 -1 2804
+S
+#2820
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2804
+D1
+~
+~
+0 -1 2826
+D2
+~
+~
+0 -1 2825
+D3
+~
+~
+0 -1 2821
+S
+#2821
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2811
+D1
+~
+~
+0 -1 2820
+D2
+~
+~
+0 -1 2824
+D3
+~
+~
+0 -1 2822
+S
+#2822
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. There is
+a big chat room at your west.
+~
+28 8 1
+D0
+~
+~
+0 -1 2812
+D1
+~
+~
+0 -1 2821
+D2
+~
+~
+0 -1 2823
+D3
+~
+~
+0 -1 2847
+S
+#2823
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2822
+D1
+~
+~
+0 -1 2824
+D2
+~
+~
+0 -1 2831
+S
+#2824
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2821
+D1
+~
+~
+0 -1 2825
+D2
+~
+~
+0 -1 2830
+D3
+~
+~
+0 -1 2823
+S
+#2825
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2820
+D1
+~
+~
+0 -1 2827
+D2
+~
+~
+0 -1 2829
+D3
+~
+~
+0 -1 2824
+S
+#2826
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2819
+D1
+~
+~
+0 -1 2837
+D2
+~
+~
+0 -1 2827
+D3
+~
+~
+0 -1 2820
+S
+#2827
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2826
+D1
+~
+~
+0 -1 2838
+D2
+~
+~
+0 -1 2828
+D3
+~
+~
+0 -1 2825
+S
+#2828
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2827
+D1
+~
+~
+0 -1 2839
+D3
+~
+~
+0 -1 2829
+S
+#2829
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2825
+D1
+~
+~
+0 -1 2828
+D3
+~
+~
+0 -1 2830
+S
+#2830
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2824
+D1
+~
+~
+0 -1 2829
+D3
+~
+~
+0 -1 2831
+S
+#2831
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. There is
+a staircase at your west.
+~
+28 8 1
+D0
+~
+~
+0 -1 2823
+D1
+~
+~
+0 -1 2830
+D3
+~
+~
+0 -1 2832
+S
+#2832
+Ivory Staircase~
+	A very beautiful staircase. The top of the staircase is the
+house of the Wiseman.
+~
+28 8 1
+D1
+~
+~
+0 -1 2831
+D4
+~
+~
+0 -1 2850
+S
+#2833
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. There is a
+friendly reception at your east.
+~
+28 8 1
+D1
+~
+~
+0 -1 2840
+D2
+~
+~
+0 -1 2834
+D3
+~
+~
+0 -1 2816
+S
+#2834
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. There is
+a clinic at your east.
+~
+28 8 1
+D0
+~
+~
+0 -1 2833
+D1
+~
+~
+0 -1 2841
+D2
+~
+~
+0 -1 2835
+D3
+~
+~
+0 -1 2817
+S
+#2835
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. There is
+a food store at your east.
+~
+28 8 1
+D0
+~
+~
+0 -1 2834
+D1
+~
+~
+0 -1 2842
+D2
+~
+~
+0 -1 2836
+D3
+~
+~
+0 -1 2818
+S
+#2836
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. There is
+a general store at your east.
+~
+28 8 1
+D0
+~
+~
+0 -1 2835
+D1
+~
+~
+0 -1 2843
+D2
+~
+~
+0 -1 2837
+D3
+~
+~
+0 -1 2819
+S
+#2837
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion. There is
+a magic shop at your east.
+~
+28 8 1
+D0
+~
+~
+0 -1 2836
+D1
+~
+~
+0 -1 2844
+D2
+~
+~
+0 -1 2838
+D3
+~
+~
+0 -1 2826
+S
+#2838
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2837
+D2
+~
+~
+0 -1 2839
+D3
+~
+~
+0 -1 2827
+S
+#2839
+Ivory Plaza~
+	A very beautiful place. Everything is made of ivory. It is a
+completely peaceful place. A very good place for seclusion.
+~
+28 8 1
+D0
+~
+~
+0 -1 2838
+D3
+~
+~
+0 -1 2828
+S
+#2840
+Ivory Reception~
+	A very beautiful reception. Everything is made of ivory.
+It is a good place to rest. To your west is the Ivory Plaza.
+~
+28 8 1
+D3
+~
+~
+0 -1 2833
+S
+#2841
+Clinic~
+	There are many flasks here. They are filled with different
+color of liquids. To your west is the Ivory Plaza.
+~
+28 8 1
+D3
+~
+~
+0 -1 2834
+S
+#2842
+Food Store~
+	There are many fake foods on the table.
+The only exit is west here.
+~
+28 8 1
+D3
+~
+~
+0 -1 2835
+S
+#2843
+General Store~
+	There is a very good general store. You can buy good items
+here. There is a very big cupboard at the corner of the store.
+The only exit is west here.
+~
+28 8 1
+D3
+~
+~
+0 -1 2836
+S
+#2844
+Magic Shop~
+	There is a very famous magic shop. It's owner is a very clever
+man, so there are many good items here. To your west is the Ivory Plaza.
+~
+28 8 1
+D3
+~
+~
+0 -1 2837
+S
+#2845
+Knight's house~
+	A laconic house. Everything is made of Ivory here. There is a
+very big ivory bed at the center of the house. The only exit is east.
+~
+28 8 1
+D1
+~
+~
+0 -1 2813
+S
+#2846
+Teacher's house~
+	A very big house with thousands of books lie on the ivory floor.
+The only exit is east.
+~
+28 8 1
+D1
+~
+~
+0 -1 2815
+S
+#2847
+Ivory Chat room~
+	There are many comfortable sofas here. It is definitely a good
+place for chat. To your east is the Ivory Plaza.
+~
+28 8 1
+D1
+~
+~
+0 -1 2822
+S
+#2850
+House of the Wiseman~
+	Everything here is made of Ivory. There is an ivory staircase
+here. You can go to the Ivory Plaza through this staircase.
+The only exit is down here.
+~
+28 8 1
+D5
+~
+~
+0 -1 2832
+S
+#0
+$~

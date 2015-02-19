@@ -1,0 +1,594 @@
+#11200
+Antechamber~
+  This is a small entrance to a set of newly constructed rooms to the
+south.  Though small, the room is dazzlingly decorated.  The walls are
+solid gold, and the floor is covered by a huge Persian rug.  Large
+silver torch sockets line the walls, and the scene of some ancient
+fable is painted on the ceiling.
+~
+110 9 0
+D0
+~
+~
+0 -1 11199
+D1
+~
+~
+0 -1 11197
+D2
+~
+~
+0 -1 11213
+D3
+~
+~
+0 -1 11217
+S
+#11210
+New Laboratory~
+  You are what appears to be a newly constructed laboratory, a quite
+large laboratory.  Strange looking weapons and armor lie strewn about
+among horrid-looking body parts.  Large flasks filled with oddly
+colored liquids litter the place, as well.
+~
+110 9 0
+D2
+~
+~
+0 -1 11211
+D3
+~
+~
+0 -1 11213
+S
+#11211
+Potions Rack~
+  This is an extremely tiny room containing nothing more than a rack
+of flasks, some of which seem to filled with strange liquids.
+~
+110 9 0
+D0
+~
+~
+0 -1 11210
+D3
+~
+~
+0 -1 11212
+S
+#11212
+New Laboratory~
+  You are what appears to be a newly constructed laboratory, a quite
+large laboratory.  Strange looking weapons and armor lie strewn about
+among horrid-looking body parts.  Large flasks filled with oddly
+colored liquids litter the place, as well.
+~
+110 9 0
+D0
+~
+~
+0 -1 11213
+D1
+~
+~
+0 -1 11211
+D3
+~
+~
+0 -1 11214
+S
+#11213
+New Laboratory~
+  You are what appears to be a newly constructed laboratory, a quite
+large laboratory.  Strange looking weapons and armor lie strewn about
+among horrid-looking body parts.  Large flasks filled with oddly
+colored liquids litter the place, as well.
+~
+110 9 0
+D0
+~
+~
+0 -1 11200
+D1
+~
+~
+0 -1 11210
+D2
+~
+~
+0 -1 11212
+D3
+~
+~
+0 -1 11216
+S
+#11214
+New Laboratory~
+  You are what appears to be a newly constructed laboratory, a quite
+large laboratory.  Strange looking weapons and armor lie strewn about
+among horrid-looking body parts.  Large flasks filled with oddly
+colored liquids litter the place, as well.
+~
+110 9 0
+D0
+~
+~
+0 -1 11216
+D1
+~
+~
+0 -1 11212
+D3
+~
+~
+0 -1 11215
+S
+#11215
+Equipment Room~
+  This is a storage room for the lab.  It is quite large, but seems to
+be quite a mess.  It appears that someone has already pillaged this
+room.
+~
+110 9 0
+D1
+~
+~
+0 -1 11214
+S
+#11216
+New Laboratory~
+  You are what appears to be a newly constructed laboratory, a quite
+large laboratory.  Strange looking weapons and armor lie strewn about
+among horrid-looking body parts.  Large flasks filled with oddly
+colored liquids litter the place, as well.
+~
+110 9 0
+D1
+~
+~
+0 -1 11213
+D2
+~
+~
+0 -1 11214
+S
+#11217
+Stone Room~
+  The entire room is made of a rough stone.  The floor is an uneven
+shamble of stone and mortar.  Several large statues, stone of course,
+are scattered about.  The room is cold and drafty.
+~
+110 9 0
+D0
+~
+~
+0 -1 11218
+D1
+~
+~
+0 -1 11200
+S
+#11218
+An Archway~
+  Two tunnels meet here in a glorious archway, made of fine silver.  A
+large tunnel head off east while a somewhat smaller tunnel to the
+west, heads north.
+~
+110 9 0
+D1
+~
+~
+0 -1 11199
+D2
+~
+~
+0 -1 11217
+D3
+~
+~
+0 -1 11219
+S
+#11219
+South End of Straight Tunnel~
+  You are in a tunnel that runs straight in a north-south direction.
+The tunnel has smooth walls made of iron.
+~
+110 9 0
+D0
+~
+~
+0 -1 11220
+D1
+~
+~
+0 -1 11218
+S
+#11220
+Straight Tunnel~
+  You are in a tunnel that runs straight in a north-south direction.
+The tunnel has smooth walls made of iron.
+~
+110 9 0
+D0
+~
+~
+0 -1 11221
+D2
+~
+~
+0 -1 11219
+S
+#11221
+Straight Tunnel~
+  You are in a tunnel that runs straight in a north-south direction.
+The tunnel has smooth walls made of iron.
+~
+110 9 0
+D0
+~
+~
+0 -1 11222
+D2
+~
+~
+0 -1 11220
+S
+#11222
+Straight Tunnel~
+  You are in a tunnel that runs straight in a north-south direction.
+The tunnel has smooth walls made of iron.  A very small tunnel leads
+off to the east.
+~
+110 9 0
+D0
+~
+~
+0 -1 11223
+D1
+~
+~
+0 -1 11227
+D2
+~
+~
+0 -1 11221
+S
+#11223
+Straight Tunnel~
+  You are in a tunnel that runs straight in a north-south direction.
+The tunnel has smooth walls made of iron.
+~
+110 9 0
+D0
+~
+~
+0 -1 11224
+D2
+~
+~
+0 -1 11222
+S
+#11224
+North End of Straight Tunnel~
+  You are in a tunnel that runs straight in a north-south direction.
+The tunnel has smooth walls made of iron.
+~
+110 9 0
+D1
+~
+~
+0 -1 11225
+D2
+~
+~
+0 -1 11223
+S
+#11225
+Ancient Tunnel~
+  This is an ancient tunnel many miles below the town of Midgaard.
+The tunnels were carved centuries ago, perhaps by dwarves enslaved by
+a cruel taskmaster.  They are crumbling and smell old and musty.  A
+newer smell, however, overrides that old smell--the smell of a foul,
+barbaric creature.
+~
+110 9 0
+D1
+~
+~
+0 -1 11226
+D2
+~
+~
+0 -1 11229
+D3
+~
+~
+0 -1 11224
+S
+#11226
+Ancient Tunnel~
+  This is an ancient tunnel many miles below the town of Midgaard.
+The tunnels were carved centuries ago, perhaps by dwarves enslaved by
+a cruel taskmaster.  They are crumbling and smell old and musty.  A
+newer smell, however, overrides that old smell--the smell of a foul,
+barbaric creature.
+~
+110 9 0
+D1
+~
+~
+0 -1 11176
+D2
+~
+~
+0 -1 11184
+D3
+~
+~
+0 -1 11225
+S
+#11227
+Crawl Space~
+  You find yourself in another crawl space, this one connecting the
+inner square to a tunnel.
+~
+110 9 0
+D2
+~
+~
+0 -1 11228
+D3
+~
+~
+0 -1 11222
+S
+#11228
+Crawl Space~
+  You find yourself in another crawl space, this one connecting the
+inner square to a tunnel.
+~
+110 9 0
+D0
+~
+~
+0 -1 11227
+D1
+~
+~
+0 -1 11229
+S
+#11229
+Crawl Space~
+  You find yourself in another crawl space, this one connecting the
+inner square to a tunnel.
+~
+110 9 0
+D0
+~
+~
+0 -1 11225
+D1
+~
+~
+0 -1 11186
+D3
+~
+~
+0 -1 11228
+S
+#11230
+Entrance to the Lair of the Drakes~
+  This begins the small area the fire breathing drakes have chosen as
+their favorite place of residence.  While you WILL see them outside
+the lair, they prefer to wander here.
+~
+110 9 0
+D0
+~
+~
+0 -1 11231
+D3
+~
+~
+0 -1 11157
+S
+#11231
+Drake's Lair~
+  The ground is covered with small bones, and large chunks of
+excrement.  The walls are slightly scorched and there is a strong
+smell of singed flesh.
+~
+110 9 0
+D1
+~
+~
+0 -1 11232
+D2
+~
+~
+0 -1 11230
+S
+#11232
+Drake's Lair~
+  The ground is covered with small bones, and large chunks of
+excrement.  The walls are slightly scorched and there is a strong
+smell of singed flesh.
+~
+110 9 0
+D0
+~
+~
+0 -1 11236
+D1
+~
+~
+0 -1 11235
+D3
+~
+~
+0 -1 11231
+S
+#11233
+Drake's Lair~
+  The ground is covered with small bones, and large chunks of
+excrement.  The walls are slightly scorched and there is a strong
+smell of singed flesh.
+~
+110 9 0
+D0
+~
+~
+0 -1 11235
+D1
+~
+~
+0 -1 11234
+S
+#11234
+Drake's Lair~
+  The ground is covered with small bones, and large chunks of
+excrement.  The walls are slightly scorched and there is a strong
+smell of singed flesh.
+~
+110 9 0
+D0
+~
+~
+0 -1 11237
+D3
+~
+~
+0 -1 11233
+S
+#11235
+Drake's Lair~
+  The ground is covered with small bones, and large chunks of
+excrement.  The walls are slightly scorched and there is a strong
+smell of singed flesh.
+~
+110 9 0
+D2
+~
+~
+0 -1 11233
+D3
+~
+~
+0 -1 11232
+S
+#11236
+Drake's Lair~
+  The ground is covered with small bones, and large chunks of
+excrement.  The walls are slightly scorched and there is a strong
+smell of singed flesh.
+~
+110 9 0
+D1
+~
+~
+0 -1 11237
+D2
+~
+~
+0 -1 11232
+S
+#11237
+Drake's Lair~
+  The ground is covered with small bones, and large chunks of
+excrement.  The walls are slightly scorched and there is a strong
+smell of singed flesh.
+~
+110 9 0
+D0
+~
+~
+0 -1 11239
+D1
+~
+~
+0 -1 11238
+D2
+~
+~
+0 -1 11234
+D3
+~
+~
+0 -1 11236
+S
+#11238
+Drake's Food Store~
+  This is where the fire drakes usually take extra bits of food for
+storage.  You can usually find a roasted fido, or other goodies here.
+~
+110 9 0
+D3
+~
+~
+0 -1 11237
+S
+#11239
+Forbidden Way~
+  This is a path guarded by the drakes.  No mortal has ever been know
+to pass this way and return.
+~
+110 9 0
+D2
+~
+~
+0 -1 11237
+D3
+~
+~
+0 -1 11241
+S
+#11240
+Marble Steps~
+  Beautiful marble steps lead down into blackness.  They wonderful
+craftsmanship of the steps betrays the rotting horrors that lie below.
+~
+110 9 0
+D2
+~
+~
+0 -1 11241
+D5
+~
+~
+0 -1 11187
+S
+#11241
+Forbidden Way~
+  This is a path guarded by the drakes.  No mortal has ever been know
+to pass this way and return.
+~
+110 9 0
+D0
+~
+~
+0 -1 11240
+D1
+~
+~
+0 -1 11239
+S
+#11242
+Stair Room~
+  You are at the top of a set of steps leading down into darkness.  To
+the north is the practice shrine, and you hear the clink of metal on
+metal as a great battle continues nearby.  You can barely smell smoke
+coming from the stair well.
+~
+110 8 0
+D0
+~
+~
+0 -1 11145
+D5
+~
+~
+0 -1 11171
+S
+#0
+$~
+

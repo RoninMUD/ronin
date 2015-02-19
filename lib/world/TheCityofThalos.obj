@@ -1,0 +1,837 @@
+#5200
+ringmail vest~
+A ringmail vest~
+A vest made of iron rings lies heaped on the floor.~
+~
+9 65 9
+4 0 0 0
+60 12000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -1
+#5201
+helm iron~
+An iron helm~
+Here lies a small iron helm.~
+~
+9 0 17
+3 0 0 0
+10 5000 180
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -2
+#5202
+gauntlets iron~
+A pair of iron gauntlets~
+A pair of iron gauntlets rests on the ground.~
+~
+9 0 129
+2 0 0 0
+10 2200 900
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -3
+A
+19 1
+#5203
+sleeves iron~
+Some iron sleeves~
+A set of iron sleeves lies on the ground.~
+~
+9 0 257
+3 0 0 0
+10 2450 120
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -4
+A
+19 2
+#5204
+boots iron~
+A pair of iron boots~
+A pair of iron boots stands has been left here.~
+~
+9 0 65
+2 0 0 0
+6 800 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -1
+A
+2 -1
+#5205
+leggings iron~
+A set of iron leggings~
+A set of iron leggings lie here unattended.~
+~
+9 0 33
+3 0 0 0
+10 5400 210
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -3
+A
+2 -3
+#5206
+girth iron~
+An iron girth~
+A small iron girth lies at your feet.~
+~
+9 0 2049
+3 0 0 0
+6 4200 120
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5207
+breast plate iron~
+A battered iron breast plate~
+A battered iron breast plate lies here.~
+~
+9 0 9
+5 0 0 0
+125 13000 150
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -6
+#5208
+shield iron~
+A sturdy iron shield~
+A small, but sturdy, iron shield has been left here.~
+~
+9 192 513
+0 0 0 0
+5 1000 400
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -10
+A
+20 -2
+#5209
+shield black dark~
+A large black shield~
+A large black shield bearing the symbol of the Darkside rests here.~
+~
+9 0 513
+2 0 0 0
+3 1000 400
+50
+E
+shield~
+In the middle of the shield you see the symbol of the Darkside, a black fist with a blood-red aura shining behind it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5210
+potion black~
+A black potion~
+A jet black potion sits upright waiting to be taken.~
+~
+10 96 1
+16 4 36 39
+5 6000 1400
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5211
+potion orange~
+An orange potion~
+A small orange potion lies here.~
+~
+10 96 1
+20 44 -1 -1
+10 7500 2000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5213
+staff serpentine~
+A green serpentine staff~
+A green serpentine staff has been left here.~
+~
+4 96 16385
+15 2 2 23
+12 6600 1300
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5214
+ball quartz~
+A smooth quartz ball~
+A smooth quartz ball lies here gleeming.~
+~
+1 64 16385
+0 0 72 0
+30 3050 950
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5215
+scroll tattered~
+A tattered scroll~
+A worn and tattered scroll has been left here.~
+~
+2 64 1
+24 24 -1 -1
+15 11000 3400
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5216
+scroll bound~
+A bound scroll~
+A bound scroll of detection lies at your feet.~
+~
+2 64 1
+15 18 19 20
+15 4200 2100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5217
+flute silver~
+A silver flute~
+A brilliant silver flute glimmers from beneath a rock.~
+~
+4 65 16385
+17 1 1 7
+6 10500 35
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5218
+talisman demon~
+A demon-faced talisman~
+A demon-faced talisman glares at you angrily.~
+~
+9 193 5
+5 0 0 0
+11 7500 250
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 -10
+A
+2 -8
+#5219
+venison chunk~
+A chunk of venison~
+A large chunk of venison sits here ready to be eaten.~
+~
+19 0 1
+24 0 0 0
+20 100 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5220
+fountain cracked~
+a large cracked fountain~
+A large cracked fountain is here.~
+~
+17 0 0
+10 10 0 1
+0 0 0
+50
+E
+fountain~
+Some stagnent water lies in the bottom of the fountain.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5221
+two-handed two sword~
+A two-handed sword~
+A nice two-handed sword hangs on a hook in the wall.~
+~
+5 0 8193
+0 2 9 3
+24 55000 120
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#5222
+robe black silk~
+A black silk robe~
+A black silk robe lies heaped in one corner.~
+~
+9 0 1025
+1 0 0 0
+6 1300 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5223
+cloak green~
+A dark green cloak~
+A beautiful dark green cloak has been dropped by someone.~
+~
+9 65 1025
+0 0 0 0
+12 14500 220
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 5
+A
+17 -5
+#5224
+seal ebony~
+An engraved ebony seal~
+A small, engraved ebony seal is here.~
+~
+18 0 16385
+30 0 0 0
+2 500 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5225
+desk curved~
+the desk~
+A curved wooden desk is here.~
+~
+15 0 0
+100 13 5224 0
+0 0 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5226
+seal ivory~
+An engraved ivory seal~
+A small, engraved ivory seal lies here.~
+~
+18 0 16385
+31 0 0 0
+2 500 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5227
+cabinet glass~
+the glass cabinet~
+A glass cabinet covered in dust and smudges rests against the wall.~
+~
+15 0 0
+500 13 5226 0
+0 0 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5228
+arm rotted~
+A rotten arm~
+A rotted arm floats lazily by your feet.~
+~
+19 0 1
+50 0 0 1
+20 0 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5230
+stone pale blue~
+A pale blue stone~
+A pale blue stone sits here.~
+~
+8 64 16385
+0 0 0 0
+10 5500 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+#5231
+stone scarlet blue~
+A scarlet and blue stone~
+A pretty scarlet and blue stone has been dropped here.~
+~
+8 64 16385
+0 0 0 0
+10 5500 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+3 1
+#5232
+stone blue incandescent~
+A incandescent blue stone~
+A small incandescent blue stone lies here.~
+~
+8 64 16385
+0 0 0 0
+10 5500 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+#5233
+stone red deep~
+A deep red stone~
+Someone has left a deep red stone here.~
+~
+8 64 16385
+0 0 0 0
+10 5500 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+#5234
+stone pink~
+A pink stone~
+A tiny pink stone lies at your feet.~
+~
+8 64 16385
+0 0 0 0
+10 5500 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+#5235
+stone pearly white~
+A pearly white stone~
+This pearly white stone would probably sell for a good price.~
+~
+8 64 16385
+0 0 0 0
+10 8700 350
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 1
+#5236
+stone lavander pale~
+A pale lavander stone~
+A beautiful pale lavander stone lies here.~
+~
+8 192 16385
+0 0 0 0
+10 4300 170
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 -2
+#5237
+stone lavander green~
+A lavander and green stone~
+A stunning lavander and green stone rests on the ground.~
+~
+8 192 16385
+0 0 0 0
+10 4700 190
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+24 -4
+#5238
+stone rose dusty~
+A dusty rose stone~
+This stone is sort of a dusty rose color and very pretty.~
+~
+8 64 16385
+0 0 0 0
+10 9800 420
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -1
+#5239
+stone grey dull~
+A dull grey stone~
+You can barely make out a dull grey stone on the ground.~
+~
+8 0 16385
+0 0 0 0
+10 20 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5240
+stone purple vibrant~
+A vibrant purple stone~
+A stunningly vibrant purple stone attracts your attention.~
+~
+8 192 16385
+0 0 0 0
+10 10200 4500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 -20
+#5241
+stone pink green~
+A pink and green stone~
+A bright pink and green stone has been left here.~
+~
+8 192 16385
+0 0 0 0
+10 6600 2500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -5
+#5242
+stone green pale~
+A pale green stone~
+A pale green stone lies here collecting dust.~
+~
+8 192 16385
+0 0 0 0
+10 7100 2800
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -5
+#5243
+stone clear~
+A clear stone~
+A odd clear stone lies at your feet.~
+~
+8 192 16385
+0 0 0 0
+10 8900 3900
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 3
+#5244
+stone iridescent~
+An iridescent stone~
+A large iridescent stone has been left here.~
+~
+8 192 16385
+0 0 0 0
+10 3700 1500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 -100
+#5250
+mandolin~
+A mandolin~
+A mandolin lies against the wall.~
+~
+4 64 16385
+13 3 3 15
+20 3000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5251
+harp golden~
+A golden harp~
+A battered golden harp has been tipped over.~
+~
+4 64 16385
+18 1 1 6
+100 2500 670
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

@@ -1,0 +1,1834 @@
+#11000
+Blind Alley~
+   Garbage lies scattered everywhere, and shadows lurk amongst the
+clutter.  Who knows what's waiting for you around the corner?  A
+smaller alley branches off to the north.
+~
+110 8 0
+D0
+~
+~
+0 -1 11001
+D1
+~
+~
+0 -1 11002
+D3
+~
+~
+0 -1 11111
+S
+#11001
+A Small Alley~
+   The alley is small and grungy.  An evil-looking road is to the
+north and a larger alley is to the south.  The alley bends to the east
+and ends at a cardboard box.
+~
+110 8 0
+D0
+~
+~
+0 -1 11106
+D1
+~
+~
+0 -1 11109
+D2
+~
+~
+0 -1 11000
+S
+#11002
+Blind Alley~
+   The alley is long, with tall brick buildings on each side.  The
+buildings are in sad shape.  Chunks of brick litter the alley.  The
+buildings would offer good shelter, if it weren't for the fact that
+they are in serious danger of collapsing.
+~
+110 9 0
+D1
+~
+~
+0 -1 11003
+D3
+~
+~
+0 -1 11000
+S
+#11003
+Blind Alley~
+   As the alley continues, the garbage gets worse and worse.  When the
+wind blows just right you catch a fresh breath of air that almost
+burns the hair out of your nostrils.
+~
+110 9 0
+D1
+~
+~
+0 -1 11004
+D3
+~
+~
+0 -1 11002
+S
+#11004
+Bend in Blind Alley~
+   The Alley turns to the north here.  There is quite a bit more to
+the alley than you thought...it stretches out to the north and west
+from here.
+~
+110 9 0
+D0
+~
+~
+0 -1 11005
+D3
+~
+~
+0 -1 11003
+S
+#11005
+Blind Alley~
+   The alley continues for quite a ways to the north, but it looks
+like some sort of road to the north.  To the south you see a brick
+wall as the alley turns westward.
+~
+110 9 0
+D0
+~
+~
+0 -1 11006
+D2
+~
+~
+0 -1 11004
+S
+#11006
+Blind Alley~
+   This is the middle of the north-south portion of the alley.  Rotted
+Road begins here and runs westward.  An offensive smell waves in from
+the north, while the alley appears temptingly dangerous to the south.
+~
+110 9 0
+D2
+~
+~
+0 -1 11005
+D3
+~
+~
+0 -1 11108
+S
+#11007
+Stairs~
+   You are at the bottom of a set of shabby, old stairs made of
+rotting wood.  They creak and shift violently as you test them, but
+they should hold you.  Above you, there seems to be some sort of trap
+foot.  To the south a tiny hallway leads away.
+~
+110 8 0
+D2
+~
+~
+0 -1 11008
+D4
+~
+trap door trapdoor~
+1 -1 11116
+S
+#11008
+A Tiny Hall~
+  This is the begging of a tiny hallway.  You can barely squeeze
+yourself through it.  Stairs lie to the north and the hallway
+continues to the south.
+~
+110 8 0
+D0
+~
+~
+0 -1 11007
+D2
+~
+~
+0 -1 11009
+S
+#11009
+A Tiny Hall~
+  The hall turns sharply here.  The hall continues northward toward
+the steps, or to the east a short ways.
+~
+110 8 0
+D0
+~
+~
+0 -1 11008
+D1
+~
+~
+0 -1 11010
+S
+#11010
+A Tiny Hall~
+  The hall turns sharply here.  You can go a short ways to the west or
+down the hall to the north towards the cellar.
+~
+110 8 0
+D0
+~
+~
+0 -1 11011
+D3
+~
+~
+0 -1 11009
+S
+#11011
+A Tiny Hall~
+  This is the end of this petite hallway.  The cellar door lies north,
+and the hall stretches out to the south.
+~
+110 8 0
+D0
+~
+cellar door~
+1 -1 11012
+D2
+~
+~
+0 -1 11010
+S
+#11012
+The Cellar~
+  You are in the cellar of an old, spooky house.  The cellar is just
+as spooky as the house itself.  Rats scurry about amongst your feet,
+but you pay then no attention, as you fear you here breathing in the
+darkness.
+~
+110 9 0
+D0
+~
+~
+0 -1 11013
+D2
+~
+cellar door~
+1 -1 11011
+D3
+~
+~
+0 -1 11015
+S
+#11013
+The Cellar~
+  You are in the northeast corner of the cellar.  Rats scurry around
+your feet and you here the faint squeak of bats.
+~
+110 9 0
+D2
+~
+~
+0 -1 11012
+D3
+~
+~
+0 -1 11014
+S
+#11014
+The Cellar~
+  You are in the cellar of an old house.  It is dank, like any other
+cellar, but you have a constant chill running down your spine.
+~
+110 9 0
+D1
+~
+~
+0 -1 11013
+D2
+~
+~
+0 -1 11015
+S
+#11015
+The Dirty Cellar~
+  You are in a very dirty part of the cellar under a spooky house.  It
+looks like it might have been some sort of storage area, at one time,
+but everything is decayed beyond recognition, and some of the stuff
+appears slightly charred.
+~
+110 9 0
+D0
+~
+~
+0 -1 11014
+D1
+~
+~
+0 -1 11012
+D2
+~
+~
+0 -1 11017
+D3
+~
+~
+0 -1 11016
+S
+#11016
+The Cellar~
+  You are at the west end of the cellar.  The north and south walls,
+like all the other walls in the cellar, are roughly cut--quite jagged.
+The west wall, however, is quite smooth, though it is still covered
+with dirt and mold.
+~
+110 9 0
+D1
+~
+~
+0 -1 11015
+D2
+~
+~
+0 -1 11017
+D3
+You see a shiny spot on the wall.  It could be a door.
+~
+hidden secret door~
+1 -1 11018
+E
+hidden secret door west wall~
+The wall appears to be some sort of hidden door.
+~
+S
+#11017
+Southwest Corner~
+  This is a small corner, partially separated from the rest of the
+cellar.  The walls here are badly burned, and charred corpses lie
+everywhere.  The rooms stinks of burned flesh.
+~
+110 9 0
+D0
+~
+~
+0 -1 11016
+D1
+~
+~
+0 -1 11015
+S
+#11018
+Secret Tunnel~
+  You find yourself at the northern end of the secret tunnel.  A door
+is placed within the eastern wall, and the tunnel stretches out to the
+south.
+~
+110 9 0
+D1
+~
+door hidden secret~
+1 -1 11016
+D2
+~
+~
+0 -1 11019
+S
+#11019
+Secret Tunnel~
+  The tunnel appears to have been carved out by hand--a project taking
+many years of hard labor.  The tunnels continues north and south.
+~
+110 9 0
+D0
+~
+~
+0 -1 11018
+D2
+~
+~
+0 -1 11150
+S
+#11020
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D1
+An unfamiliar place...
+~
+~
+0 -1 11038
+S
+#11021
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D0
+An unfamiliar place...
+~
+~
+0 -1 11040
+D1
+An unfamiliar place...
+~
+~
+0 -1 11037
+D3
+An unfamiliar place...
+~
+~
+0 -1 11032
+S
+#11022
+In The Cavern~
+   This is yet another section of the cavern.  It looks like every
+other part of the cavern.  The only exit is south.
+~
+110 8 6
+D2
+The cavern continues.
+~
+~
+0 -1 11028
+S
+#11023
+The Cavern Swamp~
+   The ground here is extremely mushy--you are almost standing IN the
+swamp.  On the surface floats green slime, and you are constantly
+swatting at bugs. This would be a perfect breeding grounds for
+mosquitos.
+~
+110 8 6
+D1
+A small creek winds east from here.
+~
+~
+0 -1 11024
+S
+#11024
+The Cavern Creek~
+   You are near the lower end of the cavern.  A small creek winds
+westward from here.  The cavern opens up to the east.  The bugs are
+thick here.
+~
+110 8 0
+D1
+The lower cavern lies east.
+~
+~
+0 -1 11025
+D3
+It appears swampy to the west.
+~
+~
+0 -1 11023
+S
+#11025
+The Lower Cavern~
+   This section of the cavern is virtually empty. You do notice,
+however, that there are quite a few bugs here.
+~~
+110 8 0
+D0
+To the north is terrain very similar to where you now stand.
+~
+~
+0 -1 11026
+D3
+A creek runs west from here.
+~
+~
+0 -1 11024
+S
+#11026
+The Lower Cavern~
+   This section of the cavern is virtually empty. You do notice,
+however, that there are a few bugs around.
+~
+110 8 0
+D1
+The cavern widens to the east.
+~
+~
+0 -1 11027
+D2
+A similar terrain lies south.
+~
+~
+0 -1 11025
+S
+#11027
+In The Cavern~
+  You are in the caverns of the UnderWorld.  It seams quite a lonely
+place.  As you walk you hear the echo of your footsteps...or are they
+someone elses?
+~
+110 8 2
+D0
+To the north the cavern continues.
+~
+~
+0 -1 11029
+D3
+To the west, the lower cavern begins.
+~
+~
+0 -1 11026
+S
+#11028
+In The Cavern~
+   You are in the caverns of the UnderWorld.  It seams quite a lonely
+place.  As you walk you hear the echo or your footsteps..or are they
+someone elses?
+~
+110 8 2
+D0
+Looking north you see yet more of the cavern.
+~
+~
+0 -1 11022
+D1
+To the east the cavern continues.
+~
+~
+0 -1 11029
+S
+#11029
+In The Cavern~
+   Your are in the cavern.  The ground slopes slightly downwards in a
+southwestwardly direction.  The ground here does not feel as solid as
+it does in the upper cavern.
+~
+110 8 2
+D1
+The cavern continues.
+~
+~
+0 -1 11146
+D2
+The cavern continues.
+~
+~
+0 -1 11027
+D3
+The cavern continues.
+~
+~
+0 -1 11028
+S
+#11030
+Found~
+  You no longer feel lost. In fact, north of here is where you
+started!  You feel confident now.
+~
+110 8 2
+D0
+The cavern is to the north.
+~
+~
+0 -1 11146
+S
+#11031
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D1
+An unfamiliar place...
+~
+~
+0 -1 11039
+S
+#11032
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D0
+An unfamiliar place...
+~
+~
+0 -1 11040
+D1
+An unfamiliar place...
+~
+~
+0 -1 11021
+D2
+An unfamiliar place...
+~
+~
+0 -1 11033
+S
+#11033
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D0
+An unfamiliar place...
+~
+~
+0 -1 11032
+S
+#11034
+Lost~
+  You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D2
+A somewhat familiar place...
+~
+~
+0 -1 11030
+S
+#11035
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D0
+An unfamiliar place...
+~
+~
+0 -1 11037
+D1
+An unfamiliar place...
+~
+~
+0 -1 11034
+S
+#11036
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D3
+An unfamiliar place...
+~
+~
+0 -1 11037
+S
+#11037
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D0
+An unfamiliar place...
+~
+~
+0 -1 11020
+D2
+An unfamiliar place...
+~
+~
+0 -1 11035
+D3
+An unfamiliar place...
+~
+~
+0 -1 11021
+S
+#11038
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D2
+An unfamiliar place...
+~
+~
+0 -1 11036
+S
+#11039
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D1
+An unfamiliar place...
+~
+~
+0 -1 11040
+D2
+An unfamiliar place...
+~
+~
+0 -1 11032
+D3
+An unfamiliar place...
+~
+~
+0 -1 11031
+S
+#11040
+Lost~
+   You have no idea where you are!  You are completely lost.  Nothing
+looks familiar to you.
+~
+110 8 2
+D2
+An unfamiliar place...
+~
+~
+0 -1 11021
+D3
+An unfamiliar place...
+~
+~
+0 -1 11039
+S
+#11041
+In The Cavern~
+  You are at the edge of the Upper Cavern.  The ground slopes slightly
+upward here.  The cavern opens up to the northwest.
+~
+110 8 4
+D0
+The ground is higher.
+~
+~
+0 -1 11043
+D1
+The ground is higher.
+~
+~
+0 -1 11042
+D2
+You might get lost if you go there!
+~
+~
+0 -1 11039
+D3
+The cavern entrance is west.
+~
+~
+0 -1 11146
+S
+#11042
+The Upper Cavern~
+  You in the upper portion of the cavern.  From here you can see most
+of the lower cavern to the southeast.
+~
+110 8 4
+D0
+The cavern continues.
+~
+~
+0 -1 11044
+D2
+You might get lost if you there;  it doesn't look at all familiar.
+~
+~~
+0 -1 11040
+D3
+The edge of the Upper Cavern.
+~
+~
+0 -1 11041
+S
+#11043
+The Upper Cavern~
+  The cavern is really widening up.  The soil seems thick and rich
+here.
+~
+110 8 4
+D0
+The upper cavern.
+~
+~
+0 -1 11045
+D1
+The upper cavern.
+~
+~
+0 -1 11044
+D2
+The edge of the Upper Cavern.
+~
+~
+0 -1 11041
+S
+#11044
+The Upper Cavern~
+   You are still in the upper cavern.  Other than being slightly
+wider, it looks like every other section of cavern.
+~
+110 8 4
+D0
+~
+~
+0 -1 11046
+D2
+~
+~
+0 -1 11042
+D3
+~
+~
+0 -1 11043
+S
+#11045
+The Upper Cavern~
+   To the north you see trees.  Strange place for trees, but you trust
+your eyes.  Maybe you should take a closer look.
+~
+110 8 4
+D0
+You see a hoard of trees to the north.
+~
+~
+0 -1 11049
+D1
+The cavern continues.
+~
+~    ~
+0 -1 11046
+D2
+The cavern seems narrower in this direction.
+~
+~
+0 -1 11043
+D3
+The cavern continues.
+~
+~
+0 -1 11047
+S
+#11046
+The Upper Cavern~
+   To the north you see a large flat area.  It seems to be the highest
+point in the cavern.
+~
+110 8 4
+D0
+The ground rises steeply.
+~
+~
+0 -1 11047
+D2
+The cavern continues.
+~
+~
+0 -1 11044
+D3
+The cavern continues.
+~
+~
+0 -1 11045
+S
+#11047
+The High Point~
+   Boy! It sure is a long way back down to the main cavern!  This is a
+high flat section of the cavern.  You smell the sweet aroma of honey.
+~
+110 8 6
+D0
+There seam to be a lot of BEES in that direction!
+~
+~
+0 -1 11048
+D2
+Down to the cavern.
+~
+~
+0 -1 11046
+D3
+You see trees.
+~
+~
+0 -1 11049
+S
+#11048
+The Beehive~
+   There is a large egg-shaped beehive here.  It is dripping with
+honey, which seems to be glowing.  There is a pit below the hive where
+the honey drips to the ground.  You hear a loud buzzing from within
+the hive.
+~
+110 8 2
+D1
+There seem to be trees, of all things, to the east.
+~
+~
+0 -1 11049
+D2
+The flat ground continues to the south.
+~
+~
+0 -1 11047
+D3
+There seem to be trees, of all things, to the west.
+~
+~
+0 -1 11149
+S
+#11049
+The Trees~
+   You are surrounded by trees.  They don't look like ordinary trees,
+though.  These trees are purple, and although the leaves THERE ARE green,
+they are covered with a sticky, golden substance that, despite the
+trees' efforts to rejuvenate, seem to be dissolving the leaves.
+~
+110 8 2
+D0
+The trees continue.
+~
+~
+0 -1 11149
+D1
+The ground slopes steeply upward.
+~
+~
+0 -1 11047
+D2
+The cavern.
+~
+~
+0 -1 11045
+D3
+There seem to be quite a few BEES!
+~
+~
+0 -1 11048
+S
+#11050
+Entrance to the UnderWorld~
+   While you feel somewhat safe here at the entrance, you know in your
+heart that the UnderWorld is a cold, dark, evil place.  You feel that
+to continue will mean the end of you.  PLOP! A large drop of dirty
+water just dripped from the ceiling and landed right on your forehead!
+You can barely see light through tiny holes in the ceiling.
+~
+110 12 0
+D0
+It appears damp.
+~
+~
+0 -1 11066
+D1
+You see light to the east.
+~
+~
+0 -1 11051
+D2
+You see a faint red glow.
+~
+~
+0 -1 11083
+D3
+You see a tunnel to the west.
+~
+~
+0 -1 11076
+D4
+Amidst the bugs and pipes, there is a small hole.
+~
+~
+0 -1 11146
+S
+#11051
+The Lit Trail~
+   You are on a short, straight path.  It is brightly lit, although
+you can see no light sources.
+~
+110 8 2
+D0
+~
+~
+0 -1 11054
+D1
+The path is still brightly lit.
+~
+~
+0 -1 11052
+D3
+You see the UnderWorld entrance.
+~
+~
+0 -1 11050
+S
+#11052
+The Lit Trail~
+   You are in the middle of a short, straight path under the city of
+MidGaard.  The path is brightly lit.
+~
+110 8 2
+D1
+The path is still brightly lit.
+~
+~
+0 -1 11053
+D3
+The path is still brightly lit.
+~
+~
+0 -1 11051
+S
+#11053
+The Lit Trail~
+   You are at the end of a brightly lit path.  You hear the busy
+sounds of city life above.  There is a small chute leading up. If you
+work at it, you might be able to work your way up it.
+~
+110 12 2
+D3
+You see a brightly lit path.
+~
+~
+0 -1 11052
+D4
+You see the concourse.
+~
+~
+0 -1 3104
+S
+#11054
+NoWhere~
+  You are nowhere in particular.
+~
+110 8 2
+D1
+~
+~
+0 -1 11055
+D2
+You see a brightly lit path.
+~
+~
+0 -1 11051
+S
+#11055
+NoWhere~
+   You are nowhere in particular.  To the east is a place you really
+do NOT want to go.
+~
+110 8 2
+D0
+~
+~
+0 -1 11057
+D1
+You really, really do NOT want to go there!
+~
+~
+0 -1 11056
+D3
+~
+~
+0 -1 11054
+S
+#11056
+Nothingness~
+   There is ABSOLUTE NOTHING HERE!  Didn't I say that you didn't want
+to come here?
+~~
+110 12 2
+S
+#11057
+Nowhere~
+   You are nowhere in particular.
+~
+110 8 2
+D2
+~
+~
+0 -1 11055
+D3
+~
+~
+0 -1 11058
+S
+#11058
+Nowhere~
+   You are nowhere in particular.
+~
+110 8 2
+D0
+The wet path.
+~
+~
+0 -1 11059
+D1
+~
+~
+0 -1 11057
+D3
+The damp path. 
+~
+~
+0 -1 11067
+S
+#11059
+Wet Path~
+   You are on a wet path far below the city of MidGaard.  Your feet
+are getting soaked, and you hope that you don't get pneumonia!
+~
+110 8 3
+D0
+The ground slopes down and it is VERY wet!
+~
+~
+0 -1 11064
+D1
+It looks very wet.
+~
+~
+0 -1 11060
+D2
+~
+~
+0 -1 11058
+S
+#11060
+Wet Path~
+  You are on a wet path far below the city of MidGaard.  The water is
+now up to you knees...maybe you should turn back.
+~
+110 9 6
+D1
+There is a LOT of water.
+~
+~
+0 -1 11062
+D3
+It looks sell wet.
+~
+~
+0 -1 11059
+S
+#11062
+The Spring~
+   You are in a natural spring.  The water is up to your hips, and you
+dare not go in any further, as it will likely be well over your head.
+As you move about you step on something squishy.  The squishy objects
+are small round balls--they could be eggs of some sort.
+~
+110 9 6
+D0
+It looks mucky.
+~
+~
+0 -1 11063
+D3
+It is less wet.
+~
+~
+0 -1 11060
+S
+#11063
+The Mucky Path~
+   Your feet make a smacking sound when you pick them up.  The top two
+or three inches of the ground are REALLY gooey!  It is hard too walk
+though this stuff.
+~
+110 9 6
+D1
+It looks VERY wet.
+~
+~
+0 -1 11062
+D3
+The ground slopes down and it seems very wet!
+~
+~
+0 -1 11064
+S
+#11064
+The Leach Pit~
+  Ope! Now you've done it!
+  You have slid into a mucky, wet pit!  The water is up to your
+shoulders and you feel worm-like things sliding across your body!
+You wish like hell you hadn't ended up here!
+~
+110 9 6
+D0
+It is dark to the north.
+~
+~
+0 -1 11065
+D2
+It looks wet.
+~
+~
+0 -1 11059
+S
+#11065
+The Steel Cave~
+  The walls of this cave are made of some strange alloy.  The echo is
+unbelievable (and quite annoying!).
+~
+110 9 2
+D2
+Talk about MUCKY!
+~
+~
+0 -1 11064
+S
+#11066
+Damp Path~
+  The path here is rather damp and you feel danger lies ahead.
+~
+110 8 2
+D0
+The path is still slightly wet.
+~
+~
+0 -1 11067
+D2
+You see the entrance.
+~
+~
+0 -1 11050
+S
+#11067
+Damp Path~
+  It is dark and gloomy here, not to mention the heavy, dank air.
+Your armor is already turning a rusty reddish brown.  A large cave is
+to the west and the ground looks swampy to the north.
+~
+110 8 2
+D0
+The path suddenly turns swampy.
+~
+~
+0 -1 11068
+D1
+~
+~
+0 -1 11058
+D2
+The path is still damp.
+~
+~
+0 -1 11066
+D3
+A large cave.
+~
+~
+0 -1 11072
+S
+#11068
+Swampy Path~
+   The path here is rather swampy.  To the south it is dryer.  The
+path continues north.
+~
+110 8 2
+D0
+The path remains swampy.
+~
+~
+0 -1 11069
+D2
+The path is not so swampy.
+~
+~
+0 -1 11067
+S
+#11069
+Swampy Path~
+   The path is REALLY swampy here.  The path falls away into a dark
+pit to the east.  To the north is a swamp.
+~
+110 8 6
+D0
+The swamp is north.
+~
+~
+0 -1 11070
+D1
+You would not be able to climb the embankment back up here if you go in.
+~
+~
+0 -1 11064
+D2
+~
+~
+0 -1 11068
+S
+#11070
+The Swamp~
+   You are in a swamp.  The water comes up just past your waist.
+Small white specks float on top of the water.  Your feet slowly sink
+into the scum on the bottom, as you feel something slide across your
+legs.  Higher ground lies south, while the swamp only gets uglier to
+the west.
+~
+110 9 6
+D2
+It looks somewhat dryer.
+~
+~
+0 -1 11069
+D3
+It looks slimier.
+~
+~
+0 -1 11071
+S
+#11071
+The Slimy Swamp~
+   The swamp is really gooey here.  Large, rotten pieces of debris
+float about the surface cling to you as you move about.  You'd rather
+not think about what you just felt prick you on the leg!  The ground
+seems to be slowly sliding down towards the center of the swamp!
+~
+110 9 6
+D1
+It is swampy.
+~
+~
+0 -1 11070
+D5
+You can't see anything through the water and muck!
+~
+~
+0 -1 11104
+S
+#11072
+A Large Cave~
+   The room must 40 feet above your head.  It is entirely covered with
+stalagmites, which look like large TEETH ready to shred you into tiny
+bits!  Small bats cling to the ceiling and the ground is coated with
+(ugh! you know what!)
+~
+110 8 2
+D1
+It looks damp.
+~
+~
+0 -1 11067
+D3
+A small tunnel.
+~
+~
+0 -1 11073
+S
+#11073
+Small Tunnel~
+   The tunnel is small indeed--it is barely big enough for a large
+person to squeeze through.  The tunnel opens into a cave at each end,
+and a similar tunnel branches off south.
+~
+110 8 2
+D1
+A cave.
+~
+~
+0 -1 11072
+D2
+A misty tunnel.
+~
+~
+0 -1 11074
+D3
+A cave.
+~
+~
+0 -1 11078
+S
+#11074
+Small Misty Tunnel~
+   The tunnel is VERY small here.  A cold mist douses your face and
+your hands and knees ache, as you must crawl through the tunnel.  The
+tunnel continues north and south.  It opens up to the west.
+~
+110 8 2
+D0
+The tunnel continues.
+~
+~
+0 -1 11073
+D2
+The tunnel continues.
+~
+~
+0 -1 11075
+D3
+A nest of some sort.
+~
+~
+0 -1 11077
+S
+#11075
+The Misty Tunnel~
+   You are in a damp, misty tunnel.  A slight fog hovers inches above
+the ground.  The tunnel continues east and north.
+~
+110 8 2
+D0
+The tunnel grow narrower.
+~
+~
+0 -1 11074
+D1
+The misty tunnel.
+~
+~
+0 -1 11076
+S
+#11076
+The Misty Tunnel~
+  You are in a damp, misty tunnel.  A slight fog hovers inches above
+the ground.  You feel a draft from the east and the tunnel continues
+to the west.
+~
+110 8 2
+D1
+The entrance to the UnderWorld.
+~
+~
+0 -1 11050
+D2
+~
+~
+0 -1 11083
+D3
+The tunnel is misty.
+~
+~
+0 -1 11075
+S
+#11077
+Bug's Nest~
+   The tunnel is wider here with a high pocket in the ceiling.  The
+ground is littered with tiny corpses and you hear a faint buzzing from
+above.
+~
+110 8 2
+D0
+A cave
+~
+~
+0 -1 11078
+D1
+A tunnel.
+~
+~
+0 -1 11074
+D3
+The feeding grounds.
+~
+~
+0 -1 11079
+S
+#11078
+Bat Cave~
+   The cave is the size of a small castle.  Your head pounds from the
+screeching of thousands of bats and the thumping of their wings.  You
+duck periodically to avoid a black bomb swooping at your head out of
+nowhere!
+~
+110 8 2
+D1
+A cave.
+~
+~
+0 -1 11073
+D2
+A nest.
+~
+~
+0 -1 11077
+D3
+The feeding grounds.
+~
+~
+0 -1 11079
+S
+#11079
+The Feeding Grounds~
+   The ceiling is much lower here and the ground crunches under your
+feet.  Bats and bugs fill the air.
+~
+110 9 2
+D0
+It is dark.
+~
+~
+0 -1 11080
+D1
+There are a lot of bats.
+~
+~
+0 -1 11078
+D3
+It is dark.
+~
+~
+0 -1 11082
+S
+#11080
+A Dark Room~
+   The room is dark enough that you can hardly make anything out, even
+with the bright light you carry.  The room seems small to you, but
+it's really hard to tell.
+~
+110 9 0
+D2
+There are quite a few bugs and bats.
+~
+~
+0 -1 11079
+D3
+A red glow.
+~
+~
+0 -1 11081
+S
+#11081
+Red Room~
+   The room is glowing a dark red.  There seems to be a fire burning
+in one corner of the room, but it doesn't do much as far as light.
+You sense evil is near.
+~
+110 9 0
+D1
+It is dark.
+~
+~
+0 -1 11080
+D2
+It is dark.
+~
+~
+0 -1 11082
+S
+#11082
+A Dark Room~
+   The room is incredibly dark.  Even with your light, you can hardly
+see anything.  There are those red eyes glaring at you from the north?
+~
+110 9 0
+D0
+A red glow.
+~
+~
+0 -1 11081
+D1
+Darkness imprisons you.
+~
+~
+0 -1 11079
+S
+#11083
+Demon Way~
+   The walls seem to scowl at you.  As you look closer at the walls
+are made up of faces that THERE ARE scowling at you.  Fortunately for you,
+they have been imprisoned there for all eternity.
+~
+110 8 2
+D0
+The entrance.
+~
+~
+0 -1 11050
+D2
+More faces in the walls.
+~
+~
+0 -1 11084
+D3
+~
+~
+0 -1 11076
+S
+#11084
+Demon Way~
+   The walls, made of living (sort of) creatures writhe and twist as
+you walk by.  You pray to the powers that be, that you don't end up
+joining them.
+~
+110 9 2
+D0
+Faces in the walls.
+~
+~
+0 -1 11083
+D1
+A glowing red gate.
+~
+~
+0 -1 11085
+S
+#11085
+The Red Gate~
+   You are at a HUGE, red gate.  The gate must be at least 50 feet
+tall.  You feel compelled to enter them, though your instincts tell
+you to turn tail and high foot it out of here.
+~
+110 9 2
+D1
+An open yard.
+~
+~
+0 -1 11086
+D3
+Faces in the walls.
+~
+~
+0 -1 11084
+S
+#11086
+The Cursed Yard~
+   You are in a large yard.  The yard is glowing red, while
+surrounding areas are dark.  The ground feels very hot under your
+feet.
+~
+110 8 2
+D2
+A path.
+~
+~
+0 -1 11087
+D3
+The red gate.
+~
+~
+0 -1 11085
+S
+#11087
+The Damned Path~
+   You are on a path out of the yard.  The path continues east and
+south.
+~
+110 9 2
+D0
+The yard.
+~
+~
+0 -1 11086
+D1
+A path.
+~
+~
+0 -1 11088
+D2
+A path.
+~
+~
+0 -1 11089
+S
+#11088
+The Damned Path~
+   The path is dark and you feel evil surround you. The path continues
+west and south.
+~
+110 9 2
+D2
+A path.
+~
+~
+0 -1 11090
+D3
+A path.
+~
+~
+0 -1 11087
+S
+#11089
+The Damned Path~
+   The path is dark and you feel evil surround you. The path
+continues north and east.
+~
+110 9 2
+D0
+A path.
+~
+~
+0 -1 11087
+D1
+A path.
+~
+~
+0 -1 11090
+S
+#11090
+The Damned Path~
+   The path is dark and you feel evil surrounding you. The path
+continues north and west.  An enclosed area is to the south.
+~
+110 9 2
+D0
+A path.
+~
+~
+0 -1 11088
+D2
+An enclosed area.
+~
+~
+0 -1 11092
+D3
+A path.
+~
+~
+0 -1 11089
+S
+#11091
+By the Rope Ladder~
+   There is a rope ladder here leading into a hole in the ground.  You
+listen carefully, but you cant' hear a thing from below.  DEAD silence!
+Torches line the walls that tightly encircle the ladder.
+~
+110 8 0
+D1
+An enclosed area.
+~
+~
+0 -1 11092
+D5
+There is a hole in the ground.
+~
+~
+0 -1 11115
+E
+ladder rope~
+The ladder leads down.  It appears to have been crafted from...hair?!
+~
+S
+#11092
+The Pound~
+   The area is enclosed and mangled dog collars are strewn about. Huge
+portions of the fence have been chewed away and claw marks are visible
+on the ground.
+~
+110 9 2
+D0
+A path.
+~
+~
+0 -1 11090
+D3
+A rope ladder is visible.
+~
+~
+0 -1 11091
+S
+#11093
+Dangerous Intersection~
+   You find your self at a crossroads in the UnderWorld.  This is not
+the safest of places to be by any means.  You feel a scream rising
+from deep inside.
+~
+110 8 1
+D0
+A decrepit road.
+~
+~
+0 -1 11094
+D1
+A dark avenue.
+~
+~
+0 -1 11106
+D2
+A decrepit road.
+~
+~
+0 -1 11110
+D3
+A dark avenue.
+~
+~
+0 -1 11117
+S
+#11094
+Rotted Road~
+   The road is truly rotted!  You have to be careful not to twist your
+ankle!  The road crew apparently hasn't stopped by in a while.  Or if
+the HAVE, the never got as far as working on the road.
+~
+110 8 1
+D0
+A decrepit road.
+~
+~
+0 -1 11095
+D1
+A dance club.
+~
+~
+0 -1 11105
+D2
+An intersection.
+~
+~
+0 -1 11093
+S
+#11095
+Rotted Road~
+  You are on a north south road through the heart of the UnderWorld!
+It looks very lonely now.
+~
+110 8 1
+D0
+A decrepit road.
+~
+~
+0 -1 11098
+D2
+A decrepit road.
+~
+~
+0 -1 11094
+D3
+A storeroom.
+~
+~
+0 -1 11096
+S
+#11096
+The Store-Room~
+   A small store room, nothing special.  It looks abandoned and in bad
+shape, like everything else.
+~
+110 8 0
+D1
+A decrepit road.
+~
+~
+0 -1 11095
+S
+#11098
+Rotted Road~
+   The northern end of Rotted Road.  The road ends at the base of a
+large rock.  The road continues south.
+~
+110 8 1
+D0
+A large rock.
+~
+~
+0 -1 11100
+D2
+A decrepit road.
+~
+~
+0 -1 11095
+S
+#11099
+A Murky Trail~
+   This is the eastern end of a very murky trail.  A rock lies west of
+here.
+~
+110 8 0
+D3
+A rock.
+~
+~
+0 -1 11100
+S
+#0
+$~

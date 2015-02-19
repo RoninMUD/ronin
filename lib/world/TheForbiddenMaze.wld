@@ -1,0 +1,373 @@
+#13500
+A Tunnel Full Of Water~
+You are standing in a wide tunnel full of water. Small fishes and weed
+grows here. At the northern wall, there are the huge golden doors.
+~
+135 5 6
+D0
+You can see a huge golden door, closed with strange metal bolts.
+~
+door golden~
+2 -1 13501
+D4
+You can see light up ahead. Maybe you are coming to surface.
+~
+~
+0 -1 13014
+E
+door golden~
+The huge golden doors are locked with mystical bars and sigils.
+~
+S
+#13501
+A Circular Room Under Water~
+You are standing in a round room, with water up to approximately to
+your waist level. Slime floats on the water, and makes you feel sick.
+The passage continues north, and the golden doors are to the south.
+~
+135 13 6
+D0
+You can see a passage continuing northwards.
+~
+~
+0 -1 13503
+D2
+You can see huge golden double doors.
+~
+door golden~
+2 -1 13500
+E
+golden door~
+The huge golden doors are locked with mystical bars and sigils. There seems
+to be no way of opening them from this side.
+~
+S
+#13503
+An Upwards Passage~
+You are standing in a passage that is rising slightly and the slime
+and dripping water makes it very slippery. The walls have gigantic
+claw marks on them, like something had been tearing in to them. Your
+way northwards is blocked by a wooden door.
+~
+135 9 0
+D0
+You can see another slimy corridor.
+~
+door wooden~
+1 -1 13504
+D2
+You can see a passage going in to the water.
+~
+~
+0 -1 13501
+S
+#13504
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13505
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13512
+D2
+~
+door wooden~
+1 -1 13503
+D3
+You can see another slimy corridor.
+~
+~
+0 -1 13508
+S
+#13505
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13506
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13504
+D3
+You can see another slimy corridor.
+~
+~
+0 -1 13513
+S
+#13506
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever. The
+only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13507
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13514
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13505
+D3
+You can see another slimy corridor.
+~
+~
+0 -1 13510
+S
+#13507
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions. You are standing in front of a huge stone door
+leading north.
+~
+135 8 0
+D0
+Your sight is blocked by a door.
+~
+door stone~
+1 -1 13516
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13515
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13506
+D3
+You can see another slimy corridor.
+~
+~
+0 -1 13511
+S
+#13508
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13509
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13504
+S
+#13509
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13510
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13505
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13508
+S
+#13510
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13511
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13506
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13509
+S
+#13511
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13507
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13510
+S
+#13512
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13513
+D3
+You can see another slimy corridor.
+~
+~
+0 -1 13504
+S
+#13513
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13514
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13505
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13512
+S
+#13514
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D0
+You can see another slimy corridor.
+~
+~
+0 -1 13515
+D1
+You can see another slimy corridor.
+~
+~
+0 -1 13506
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13513
+S
+#13515
+The Maze~
+The sickly green walls are oozing with slime. The stench is nauseating,
+turning your stomach upside-down. The corridors seem to go on forever.
+The only good thing is the weak glow coming from the slime. Moaning sounds
+come from all directions.
+~
+135 8 0
+D2
+You can see another slimy corridor.
+~
+~
+0 -1 13514
+D3
+You can see another slimy corridor.
+~
+~
+0 -1 13507
+S
+#13516
+The Vault~
+You are standing in a huge chamber with glowing slime all over it. In
+the middle of the room is a huge podium, covered in slime. This place
+reeks of death and decay, but there is another smell, even more horrifying.
+~
+135 520 0
+D2
+You can see another slimy corridor.
+~
+door stone~
+1 -1 13507
+E
+slime~
+The slime glows in a sickly green light, making you feel uneasy and
+gives you the goose bumps.
+~
+E
+podium~
+A huge block of some stone, that has sometime in the distant past been
+milky white. Now it's tainted with blood and gore, burned with acid-like
+marks.
+~
+S
+#0
+$~
+

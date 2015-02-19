@@ -1,0 +1,1016 @@
+#300
+A smooth tunnel~
+   Dark, glassy walls curve smoothly to the floor. Condensation beads along
+the walls as tiny rivulets of water curl into the darkness. Warm bursts of
+steam float upwards through the tunnel carried along by wisps of air swirling
+through the gloom.
+   A small cleft in the wall leads east into the darkness, while the water
+slick walls curve downwards into the heavy blackness below.
+~
+3 0 0
+D1
+~
+~
+0 0 302
+D3
+~
+~
+0 0 444
+D5
+~
+~
+0 0 301
+S
+#301
+A smooth tunnel~
+   Darkness presses in from the glossy black walls. Steam and warm air rush
+quickly upwards, twisting and writhing through the tube shaped tunnels, rising
+higher and higher towards the surface. The faint smell of rotten eggs drifts
+along the curving tube, wafting lazily along the swirling rush of steam.
+   The dark tunnel twists deeper into the blackness, while the warm air moves
+up along twists and turns looking for the surface.
+~
+3 0 0
+D4
+~
+~
+0 0 300
+D5
+~
+~
+0 0 303
+S
+#302
+A crack in the wall~
+   Hot air blasts out of the cleft in the stone, rock faces ruptured and split
+from the overwhelming heat and water boiling below the surface. Clouds of steam
+pour from the porous rock filling the air with scalding water and swirling hot
+air.
+   The steam and air rush out of the cleft to the west, escaping into a tube
+shaped tunnel leading through the mountain.
+~
+3 0 0
+D3
+~
+~
+0 0 300
+S
+#303
+A smooth tunnel~
+   Tiny rivulets of water stream along the curved tunnel floor. Thick clouds
+of steam coalesce against the smooth, cool walls of the shaft. Dark, glassy
+rock glints wetly where the surface has melted and cooled, small scrapes mar
+the surface where some creature has passed by.
+   A circular shaft branches off to the north as the tunnel continues up and
+down through the mountain.
+~
+3 0 0
+D0
+~
+~
+0 0 305
+D4
+~
+~
+0 0 301
+D5
+~
+~
+0 0 304
+S
+#304
+A smooth tunnel~
+   Flickering orange and red glow deep inside the smooth, black walls of the
+rounded tunnel. Gusts of hot air carry swirls of steam and the faint stench of
+rotten eggs through the shaft, searching and twisting as it reaches for the
+surface. 
+   The dark walls twist to the west, while the steam rushes along the curved 
+walls upwards and out of sight.
+~
+3 0 0
+D3
+~
+~
+0 0 309
+D4
+~
+~
+0 0 303
+S
+#305
+A small, circular passage~
+   Dark porous rock sags and droops along the curving walls, heat radiates out
+in sudden blasts from the widening cracks in the floor. Steam and sulphur jet
+upwards in bursts of super heated water. Trickles of water drip slowly from the
+damp roof where condensation beads thickly before falling heavily to the 
+brittle rock.
+   The hot, fractured tunnel leads north, while south a circular tube works its
+way deep into the mountain.
+~
+3 0 0
+D0
+~
+~
+0 0 306
+D2
+~
+~
+0 0 303
+S
+#306
+A small, circular passage~
+   Low rumbles shake the floor as radiant heat glows white hot then subsides to
+a dark, fearsome red beneath the cracking rock. Jets of superheated water spray
+upwards as the floor trembles with ill concealed fury. 
+   The shaking tunnel leads south as the floor cracks and writhes, while to the
+east red hot rock illuminates a bend in the tunnel.
+~
+3 0 0
+D1
+~
+~
+0 0 307
+D2
+~
+~
+0 0 305
+S
+#307
+A small, circular passage~
+   Small rivers of molten rock slide slowly along the cracked and ruptured
+floor of the tunnel, carving smooth troughs as the heat liquifies the porous
+rock. Superheated bursts of steam spray upwards, showering pellets of rock and
+lava across the low, curved roof of the tunnel.
+   The tunnel dodges jets of steam and water as it bends back towards the west
+while south it widens into a circular room, as a small pool of lava eats away
+at the rocky shelf surrounding it.
+~
+3 0 0
+D2
+~
+~
+0 0 308
+D3
+~
+~
+0 0 306
+S
+#308
+A smooth walled, spherical chamber~
+   Chunks of falling rock splash into a roiling mass of liquid fire churning in
+the center of the chamber. Swirling lava laps gently against the thick rock
+shelf ringing the room, slowly wearing away the edges as bursts of steam erupt
+from the splits and cracks in the walls. 
+   A small, circular tube leads north away from the chamber.
+~
+3 0 0
+D0
+~
+~
+0 0 307
+S
+#309
+A smooth, curving tunnel~
+   Low rumbles shake the circular walls of the tunnel, the smooth polished
+walls glowing faintly as heat radiates up through the thick rock of the 
+mountain. Scrapes and scuffs mar the heat smoothed surface of the floor as tiny
+rivulets of steaming water rush their way deeper into the mountains base.
+   The tunnel curves to the east, steam and heat swirling upwards as they try
+to escape the confines of rock. To the south the tunnel bends upwards, twisting
+through the sweltering granite.
+~
+3 0 0
+D1
+~
+~
+0 0 304
+D2
+~
+~
+0 0 310
+S
+#310
+A smooth, curving tunnel~
+   Steam rises in large clouds from a pool of water filling the far corner of
+the tunnel as it bends upwards. Heat emanates from the cracked, black walls as
+flecks of lava and molten rock slide by deep in the mountain. 
+   The tunnel curves upwards deeper into the granite, while to the north the
+circular tube carves its way through the rock.
+~
+3 0 0
+D0
+~
+~
+0 0 309
+D4
+~
+~
+0 0 311
+S
+#311
+A smooth tunnel~
+   The stench of sulphur hangs densely in the air, bursts of superheated steam
+blasting the smell through the narrow, curved walls of the tunnel. Cracked rock
+lets hot air swirl up through the floor, as glowing pools of molten rock bubble
+up through small clefts near the base of the wall.
+   The smooth tunnel walls glint like black glass leading north while drifting
+downwards in a gentle curve below.
+~
+3 0 0
+D0
+~
+~
+0 0 312
+D5
+~
+~
+0 0 310
+S
+#312
+A smooth, curving tunnel~
+   Tremors shake the smooth walls of the tunnel, loud groans echo from deep in
+the mountain as liquid rock eats away at the rocky belly below. Radiant heat 
+glows deep inside the inky black walls, radiating red as the rock absorbs more
+and more of heat.
+   The tunnel curves eastwards, while south it slopes away deeper into the
+depths of the mountain.
+~
+3 0 0
+D1
+~
+~
+0 0 313
+D2
+~
+~
+0 0 311
+S
+#313
+A smooth, curving tunnel~
+   Steam gushes from a deep scar in the smooth, curved wall. Condensation 
+gathers on the wall, droplets rushing swiftly down to join a rushing stream of
+hot water swirling across the floor. 
+   The tunnel slopes quickly downwards, while the smooth walls curve west out
+of sight.
+~
+3 0 0
+D3
+~
+~
+0 0 312
+D5
+~
+~
+0 0 314
+S
+#314
+A dark, glassy, tube~
+  Dark reds and oranges fleck the glassy walls with light, radiating from the
+black depths of the walls, pulsing with rushes of heat. Bursts of sulphur and
+steam explode upwards as tremors in the ground cause new cracks to form and 
+close with startling regularity.
+   The tunnel winds upwards and downwards as it twists through the heart of
+mountain. 
+~
+3 0 0
+D4
+~
+~
+0 0 313
+D5
+~
+~
+0 0 315
+S
+#315
+A dark, glassy, tube~
+   Rivulets of water race down the glassy surface. The inky black stone is
+pockmarked with small bursts of red as liquid rock bubbles to the surface
+interrupting the rushing water in clouds of steam and bursts of cracking rock. 
+   The glinting blackness of the tube curves away deeper below while clouds of
+steam race upwards along the shaft searching for a way out.
+~
+3 0 0
+D4
+~
+~
+0 0 314
+D5
+~
+~
+0 0 316
+S
+#316
+A dark, glassy, tube~
+   Heat and steam pour off the walls as rushing water encounters violent pools
+of liquid rock bursting from clefts near the base of the walls. Smooth black
+walls curve gently upwards, steam condensing on the roof and rushing downwards
+in tiny rivulets of hot water.
+   The glassy tunnel curves to the west as steam rushes upwards through the
+heart of the mountain seeking an escape.
+~
+3 0 0
+D3
+~
+~
+0 0 317
+D4
+~
+~
+0 0 315
+S
+#317
+A dark, smoothly curving tunnel~
+   The glossy black walls sag and soften as the tunnel carves its way through
+the dark, solid granite. A section of the wall has fallen away exposing an
+expansive lake of rolling lava eating away at the underside of the belly of
+the mountain, slowly working its way upwards. Steam gushes from the tiny rivers
+of water working their way along the heat widened cracks in the floor.
+   The tunnel works its way east and west through the soft granite.
+~
+3 0 0
+D1
+~
+~
+0 0 316
+D3
+~
+~
+0 0 318
+S
+#318
+A wide, dark tunnel~
+   Molten rock slides down the smooth, curving walls of the tunnel working its
+way slowly across the floor. Heat radiates from the walls, choking the air and
+instantly incinerating anything that touches the walls or glowing lava. Flames
+flicker and flare briefly as if trying to extinguish any trace of air in the
+tunnels.
+   The tunnel curves northwards while to the east a gaping hole in the wall
+exposes a lake of fire.
+~
+3 0 0
+D0
+~
+~
+0 0 319
+D1
+~
+~
+0 0 317
+S
+#319
+A wide, branching, tunnel~
+   A whispering rush of cold air crashes about the tunnel through a rift in
+granite that travels upwards hundreds of feet to the snowy mountain side above.
+Rock cracks and groans as the cold air cools the glowing lava into cracked,
+curving formations. 
+   From the north and east blasts of heat rush into the tunnel to do combat
+with the cool air rushing downwards. To the south rivulets of molten rock ooze
+their way through the corridor incinerating everything in their path.
+~
+3 0 0
+D0
+~
+~
+0 0 321
+D1
+~
+~
+0 0 320
+D2
+~
+~
+0 0 318
+S
+#320
+A spherical chamber~
+   Chunks of falling rock splash into a roiling mass of liquid fire churning in
+the center of the chamber. Swirling lava laps gently against the thick rock
+shelf ringing the room, slowly wearing away the edges as bursts of steam erupt
+from the splits and cracks in the walls. 
+   To the east blasts of cold air vainly try to combat the permeating heat of
+the molten rock.
+~
+3 0 0
+D3
+~
+~
+0 0 319
+S
+#321
+A smooth, curving tunnel~
+   Inky black walls glint sharply as flickering pulses of heat turn sections of
+the floor, walls and ceiling orange and red. Streaks of ash and sweeping ridges
+mar the uniformity of the glassy floor, creating ridges and bumps as if 
+something disturbed the rock while it was still cooling. 
+   The tunnel curves sharply to the east, the flickering glow of fire dancing
+on the walls. To the south the tunnel widens, blasts of freezing air mingling
+with the swirling heat in a chaotic dance sweeping up and down the tunnels.
+~
+3 0 0
+D1
+~
+~
+0 0 322
+D2
+~
+~
+0 0 319
+S
+#322
+A smooth, curving tunnel~
+   Tremors deep in the earth shake the smoothly curving walls of the tunnel.
+Flares of heat and steam rise from the cracks each rumble opens along the base
+of the walls, superheated water blasting upwards to splash against the rounded
+ceiling. Pockets of rock collapse downwards, splashing faintly as they crash 
+into lakes of molten rock.
+   The tunnel curves out of sight downwards and to the west, hot air rushing 
+upwards as it seeks an escape. To the west a small bridge, black as ink, leads
+over a river of molten rock into a small spherical chamber. To the south a 
+small cleft in the rock is almost wide enough to enter.
+~
+3 0 0
+D1
+~
+~
+0 0 324
+D2
+~
+~
+0 0 325
+D3
+~
+~
+0 0 321
+D5
+~
+~
+0 0 323
+S
+#323
+A glowing, round tunnel~
+   Glowing red rock radiates heat in stiffling waves. Small pockets of lava
+bubble along the wall. Bursts of steam rise up the wall as rushing clouds of
+hot air blast their way along the curving tunnel.
+   The tunnel pushes deeper into the mountain below as steam and hot air rush
+upwards and out of sight. To the east a small chamber billows steam from its
+entrance.
+~
+3 0 0
+D1
+~
+~
+0 0 326
+D4
+~
+~
+0 0 322
+D5
+~
+~
+0 0 327
+S
+#324
+A small, spherical chamber~
+   Chunks of falling rock splash into a roiling mass of liquid fire churning in
+the center of the chamber. Swirling lava laps gently against the thick rock
+shelf ringing the room, slowly wearing away the edges as bursts of steam erupt
+from the splits and cracks in the walls. 
+   A small, inky black bridge arches its way over the lava to the west, leading
+into a small, circular tunnel.
+~
+3 0 0
+D3
+~
+~
+0 0 322
+S
+#325
+A small crevice in the wall~
+   Heat pours off the walls in pulsing waves as the rock shivers and trembles
+from the shaking ground. Creaks and groans sound deep in the walls as the rock
+face strains against the inexorable pull of gravity and heat. 
+   The cracked rock opens to the north into a tube shaped tunnel, blasts of
+hot air and steam rushing by.
+~
+3 0 0
+D0
+~
+~
+0 0 322
+S
+#326
+A small, steam filled chamber~
+   A rushing babble echos around the rounded walls of the chamber as a small
+underground stream pours from a crack in the high ceiling. The rushing water
+crashes across the floor of the chamber, colliding violently with the exposed
+pools of molten rock, clouds of steam rolling endlessly upwards and rushing 
+out of the cavern.
+   The clouds of steam burst westwards into the small, circular tunnel.
+~
+3 0 0
+D3
+~
+~
+0 0 323
+S
+#327
+A dimly glowing tunnel~
+   Tremors shake the black rock tunnel as it curves deeper into the mountain.
+The faint, flickering glow of flames pulse against the glinting walls, as waves
+of heat rush upwards seeking escape from the tunnels below. 
+   The tunnel splits three different ways, steam and heat billowing upwards
+while to the east and down the tunnels penetrate farther and farther towards
+the center of the mountain.
+~
+3 0 0
+D1
+~
+~
+0 0 329
+D2
+~
+~
+0 0 328
+D4
+~
+~
+0 0 323
+S
+#328
+A gentle bend in the tunnel~
+   Dark jagged chunks of rock meld into the seamless walls of the tunnel as
+it curves gently downwards. Pitted, broken holes litter the floor where molten
+rock has eaten away at the smooth surface. Blasts of heat wash through the
+tunnel, roaring upwards from the molten core far below.
+   The tunnel curves to the east as the blasts of hot air rush upwards seeking
+the open air far above.
+~
+3 0 0
+D0
+~
+~
+0 0 327
+D1
+~
+~
+0 0 330
+S
+#329
+A steam filled tube~
+   Writhing clouds of steam burst upwards as pockets of water trickle onto
+molten rock below the curved edges of the black walls. Rivulets of water rush
+downwards turning the smooth floor into a torrent of steaming water, searching
+for cracks and crevices in the inky blackness.
+   Blasts of steam explode upwards through the tube as it turns south, heat and
+smoke swirling through the tunnel as it heads westwards, working its way up
+throught the heart of the mountain.
+~
+3 0 0
+D2
+~
+~
+0 0 330
+D3
+~
+~
+0 0 327
+S
+#330
+A steam filled tube~
+   Water rushes down the sloping tunnel, crashing into small pools of molten
+rock that ooze down the red hot rock wall. Bursts of steam shoot upwards
+creating twisted rock sculptures as liquid granite solidifies and groans under
+the sudden temperature change.
+   The tunnel shaft continues in all directions, heat, steam and tremors
+fighting for control of the tube shaped shafts.
+~
+3 0 0
+D0
+~
+~
+0 0 329
+D1
+~
+~
+0 0 332
+D2
+~
+~
+0 0 331
+D3
+~
+~
+0 0 328
+S
+#331
+A steam filled tube~
+   Tremulous groans roar through the glinting black rock. Cracks form in the
+solid surface, as great gouts of steam explode outwards as the tunnel releases
+the pent up stress of tons of rock crushing down upon it.
+   The dark tunnel writhes its way north and east, clouds of steam and smoke
+rushing through the dark corridors searching for a way to escape the clutches
+of the mountain.
+~
+3 0 0
+D0
+~
+~
+0 0 330
+D1
+~
+~
+0 0 333
+S
+#332
+A warm, tube shaped tunnel~
+   Red and orange flicker behind the black gloss of the walls. Pulsing waves of
+heat blast through the tunnel, sulphur and ash carried along as the scorching
+temperatures rip through the narrow tunnel.
+   The tunnel runs east and west, the furnace like tube cutting through
+the mountains heart.
+~
+3 0 0
+D1
+~
+~
+0 0 334
+D3
+~
+~
+0 0 330
+S
+#333
+A steam filled tube~
+   Clouds of steam rush through the tunnels carried on the backs of furnace
+like blasts of heat. Beads of water coagulate and rush down the dimly glowing
+walls, gathering speed as they crash into the warm tunnel floor. Tiny rivers
+flow along the base of the wall, carrying the moisture deeper into the growling
+bowels of the mountain.
+   The hot, damp tunnel continues east and west, threading its way deeper and
+deeper into the crushing rock.
+~
+3 0 0
+D1
+~
+~
+0 0 335
+D3
+~
+~
+0 0 331
+S
+#334
+A warm, tube shaped tunnel~
+   Red and orange flicker behind the black gloss of the walls. Pulsing waves of
+heat blast through the tunnel, sulphur and ash carried along as the scorching
+temperatures rip through the narrow tunnel.
+   The tunnel runs east and west, the furnace like tube cutting through
+the mountains heart.
+~
+3 0 0
+D1
+~
+~
+0 0 336
+D3
+~
+~
+0 0 332
+S
+#335
+A steam filled tube~
+   Clouds of steam rush through the tunnels carried on the backs of furnace
+like blasts of heat. Beads of water coagulate and rush down the dimly glowing
+walls, gathering speed as they crash into the warm tunnel floor. Tiny rivers
+flow along the base of the wall, carrying the moisture deeper into the growling
+bowels of the mountain.
+   The hot, damp tunnel continues east and west, threading its way deeper and
+deeper into the crushing rock.
+~
+3 0 0
+D1
+~
+~
+0 0 337
+D3
+~
+~
+0 0 333
+S
+#336
+A warm, tube shaped tunnel~
+   Red and orange flicker behind the black gloss of the walls. Pulsing waves of
+heat blast through the tunnel, sulphur and ash carried along as the scorching
+temperatures rip through the narrow tunnel.
+   The tunnel runs east and west, the furnace like tube cutting through
+the mountains heart.
+~
+3 0 0
+D2
+~
+~
+0 0 337
+D3
+~
+~
+0 0 334
+S
+#337
+A small, steaming pool~
+   Rushing water pours through cracks in the wall, filling the center of the
+room with a steaming pool of sulphur laced water. Low creeping streams of lava
+bubble from the edges of the tunnel, oozing their way slowly towards the water,
+creating huge bursts of vapor that swirl through the tunnels as it trickles
+over the edge into the pool.
+   Clouds of steam and heat swirl through the tunnel exits to the north, south
+and west.
+~
+3 0 0
+D0
+~
+~
+0 0 336
+D3
+~
+~
+0 0 335
+D5
+~
+~
+0 0 338
+S
+#338
+A warm, tube shaped tunnel~
+    Molten rock sloughs off the glowing walls, oozing slowly towards the inky
+black tunnel floor. Blasts of heat waft through the tunnel carrying the stench
+of ash and sulphur swirling through the tube shaped hall. Loud groans and 
+cracks echo through the shaft as the mountain shifts and settles into the mass
+of liquid rock swirling around its roots.
+   Tube shaped tunnels lead north, east and south, boring deep through the base
+of the mountain.
+~
+3 0 0
+D1
+~
+~
+0 0 339
+D2
+~
+~
+0 0 341
+D4
+~
+~
+0 0 337
+S
+#339
+A warm, tube shaped tunnel~
+   Trickles of lava worm their way across the glowing floor. Waves of heat
+batter ceaselessly against the curving walls of the tunnel, pulsing through
+the shaft seeking a way out. Pulsing swirls of red and orange glow dimly deep
+inside the rock walls of the tube.
+   The tunnel bores its way through the rock to the south and west, worming its
+way deeper and deeper.
+~
+3 0 0
+D2
+~
+~
+0 0 340
+D3
+~
+~
+0 0 338
+S
+#340
+A warm, tube shaped tunnel~
+   Rumbling crashes and loud grinding, tearing noises echo dully through the
+floor of the chamber. The dark granite floor, awash in red and orange swirls,
+jumps and jitters as herculean forces try to crush and rend the stone passage.
+Blasts of heat wash through the passage twisting upwards along the shaft,
+carrying the scent of ash, charcoal and sulphur.
+   The tunel curves northwards, while to the west it burrows deeper into the
+mountainside.
+~
+3 0 0
+D0
+~
+~
+0 0 339
+D3
+~
+~
+0 0 341
+S
+#341
+A glowing, tube shaped tunnel~
+   Billows of steam, erupting geysers of scalding water and trickles of lava
+swirl through the conflux of tunnels. Exploding fragments of rock whirl through
+the tunnel as steam and heat force expanding rock to release its hold and shoot
+down the shaft. Chunks of lava slough down the sides of the wall, heat 
+blasting its way across the tunnel.
+   The circular shafts lead in all directions through the bowels of the
+mountain.
+~
+3 0 0
+D0
+~
+~
+0 0 338
+D1
+~
+~
+0 0 340
+D2
+~
+~
+0 0 343
+D3
+~
+~
+0 0 342
+S
+#342
+A lava filled chamber~
+   Chunks of falling rock splash into a roiling mass of liquid fire churning in
+the center of the chamber. Swirling lava laps gently against the thick rock
+shelf ringing the room, slowly wearing away the edges as bursts of steam erupt
+from the splits and cracks in the walls. 
+   A small tube slopes downwards towards a glowing tunnel below, intense heat
+blasting upwards, and swirling out through a small shaft to the east.
+~
+3 0 0
+D1
+~
+~
+0 0 341
+D5
+~
+~
+0 0 343
+S
+#343
+A glowing, tube shaped tunnel~
+   The heat from the walls and floor of the tunnel blast downwards, chunks of
+dried and incinerated rock floating downwards in a shower of white powder and
+blackened char. Wisps of steam float into the tunnel and are quickly forced 
+back towards the cooler tunnels above.
+   Heat blasts through the tunnels, north, south and upwards, the stench of
+sulphur and ash heavy in the air.
+~
+3 0 0
+D0
+~
+~
+0 0 341
+D2
+~
+~
+0 0 344
+D4
+~
+~
+0 0 342
+S
+#344
+A glowing, tube shaped tunnel~
+   Waves of heat radiate up the tunnel, the air shimmering in the furnace like
+temperatures. Liquid rock pushes its way through the granite floor, sliding
+slowly across the charred and broken rock, eating away at the heat cracked
+walls.
+   The tunnel continues through the mountain to the north and south, groans
+and grumbles shaking the tunnel as massive chunks of rock slide into the
+boiling lakes of fire.
+~
+3 0 0
+D0
+~
+~
+0 0 343
+D2
+~
+~
+0 0 345
+S
+#345
+A hot, bright, tube shaped tunnel~
+   Small flames dance above the cracked, soft rock floor, the very air igniting
+under the intense heat. Oozing lava and molten rock flow steadily from gaping
+wounds in the tunnel walls, trickling down along the floor. Small geysers of
+lava shoot up from the floor as the solid rock collapses downwards into the 
+swirling rock below.
+   The passage leads through the shimmering heat to the west while to the east
+the wall has collapsed and exposed a small chamber beyond.
+~
+3 0 0
+D0
+~
+~
+0 0 344
+D1
+~
+~
+0 0 346
+D3
+~
+~
+0 0 347
+S
+#346
+A molten crack in the wall~
+   Rock drips slowly downwards as it melts under the intense heat blasting it
+from all sides. Glinting chunks of glassy rock flow downwards, sparkling 
+briefly before disappearing in the widening pool of lava. The sagging walls
+crush down slowly as entire chamber threatens to sag down into the molten rock
+below.
+   The sagging walls to the west lead back to the heat blasted tunnel.
+~
+3 0 0
+D3
+~
+~
+0 0 345
+S
+#347
+A hot, bright, tube shaped tunnel~
+   Gouts of flame and molten rock erupt from the floor as the soft rock 
+collapses downwards. Tremors shake the loose walls, showering sparks and loose
+chunks of lava across the tunnel. Blasts of steam shoot downwards, quickly
+turning to hot dry air as the sky rocketing temperatures take hold.
+   The tunnel slides south while to the east waves of heat radiate off the
+circular walls.
+~
+3 0 0
+D1
+~
+~
+0 0 345
+D2
+~
+~
+0 0 348
+S
+#348
+A hot, bright, tube shaped tunnel~
+   A black, narrow path of glassy rock winds its way through a rapidly
+softening floor. Showers of lava blast upwards as molten rock streams down the
+walls and flows deeper into the mountain along the base of the walls. Tremors
+shake the floor, roaring and grumbling through the tunnel as the fiery hell
+tries to shake the roots of the mountain.
+   The black path leads east into a fiery wasteland of boiling rock and gouts
+of sulphur.
+~
+3 0 0
+D0
+~
+~
+0 0 347
+D1
+~
+~
+0 0 349
+S
+#349
+Entrance to a molten chamber~
+   A massive arch of roaring flame and geysers of lava looms above a small,
+arched footbridge of black, glass like rock. Rushing streams of molten rock
+stream beneath the arch, flowing quickly into a boiling lake beyond. Dripping
+flame streams from the ceiling as the tunnel crushes downwards, barely keeping
+its shape in the intense heat.
+   The bridge leads south into the center of the fiery room, while to the west
+the tunnel works its way back through the molten bowels of the mountain.
+~
+3 0 0
+D2
+~
+~
+0 0 350
+D3
+~
+~
+0 0 348
+S
+#350
+A molten chamber~
+   Black rock forms a small ledge overlooking a boiling lake of molten rock.
+Geysers of flame and explosive pillars of sulphurous gas shoot upwards blasting
+against the glowing red and white ceiling. Massive, soft chunks of rock slough
+off the wall, crashing into the boiling lake and sending waves of lava 
+splashing around the chamber. Intense heat blasts upwards, echoing the groans
+and grumbles of the mountain as it pushes outwards, seeking a way to escape.
+   The narrow black path leads northwards into the winding tunnels below the
+mountain.
+~
+3 0 0
+D0
+~
+~
+0 0 349
+D3
+~
+~
+0 -1 0
+S
+#0
+$~

@@ -1,0 +1,1536 @@
+SOCIALS
+
+Socials can be editted using the command social.  This command
+is SUP+ only.
+
+Usage:
+ social list
+        show <name>
+        sort
+        create <name>
+        delete <name>
+        edit <name> <hide/min/m1/m2/m3/m4/m5/m6/m7/m8>
+        load
+        save
+
+edit options:
+
+   hide <0/1>  - is the text shown if the character can't be seen 0=yes 1=no
+   min <pos #> - is the minimum position of the victim (OLCHELP POSITIONS)
+   m1 - Text to character if no argument
+   m2 - Text to others if no argument
+   m3 - Text to character if victim found
+   m4 - Text to others if victim found
+   m5 - Text to victim if victim found
+   m6 - Text to character if victim not found
+   m7 - Text to character if it is victim
+   m8 - Text to others if character is victim
+
+Variables for text:
+$n - Person performing the action
+$m - him/her for person performing the action
+$e - he/she  for person performing the action
+$s - his/her for person performing the action
+$N - victim of the action
+$M - him/her for victim of the action
+$E - he/she  for victim of the action
+$S - his/her for victim of the action
+
+#
+SHOPS
+
+Commands
+--------
+create shop # - Create shop
+edit shop # - Edit shop
+sdelete # - Delete the shop
+zshow s <zone #> - Lists shops in the zone
+stat s # - Stat the shop
+
+When creating a shop it is important to remember these guidelines.
+
+- The shop number and keeper number are the same.
+- The keeper must be loaded in the room specified in the shop file.
+- Any items the keeper is to sell must be loaded in the keepers inventory.
+- If the item should always load, set the repop rate to 100.
+- Any items the keeper supplies in unlimited quanities must be specified
+  in the shop file.
+- A shop can only produce up to 5 items in unlimited quantities.
+- Text for keeper speech must be preceeded with %s.
+- Text with gold amounts can include %d for the amount.
+- Reloading a zone without saving will overwrite any changes to the shop.
+
+Details about the variables in the shop are included in the edit shop
+command.
+
+See Also: CREATE EDIT ZSHOW STAT
+
+#
+SKIN
+
+Skins can be made from corpses using the skin command.
+When a character skins a corpse, whatever is in the corpse,
+the skin of the corpse and perhaps some hidden objects
+in the corpse are placed in the room.  A skin can then
+be traded into the fur trader in Midgaard in exchange
+for cash.
+
+The skin trading is meant to replace putting golds on
+mobs that logically wouldn't have gold.
+
+The hidden object part can be used to replace the zone
+commands for give and equip.  When creating the mob
+you can assign up to 5 virtual numbers of objects that
+might load when the corpse of that mob is skinned.  The
+chance of the item loading is the objects repop percent.
+
+Commands to edit mob skins are
+
+mskin # value/load1/load2/load3/load4/load5 #
+edit m # skin value/load1/load2/load3/load4/load5 #
+
+#
+BOARD
+
+You can create a TEMPORARY board for your area to make notes
+to yourself as you build.
+
+Simply create the obj, edit o # type BOARD
+and its now a board.
+
+If you want to set min read write and remove levels
+just edit the values of the board object.
+
+#
+RANDOM
+
+Any object with this flag will load with variable
+stats added/subtracted from its base stats.
+
+Random stats are Hps, Mana, Move, Damroll, Hitroll
+and Armor.
+
+Hps/Mana/Move/Armor will add/subtract +5 to -5.
+Damroll/Hitroll will add/subtract +2 to -2.
+
+For example a ring with base stats of +1 +1
+hitroll/damroll could load with -1 to +3 hitroll
+and -1 to +3 damroll.
+
+#
+DECAY
+
+Any object with the DECAY flag will slowly decay
+over time until its timer his 0, then the object
+disappears.
+
+To set the decay timer use the command
+
+edit o <num> timer <amt>.
+
+While equipped the object decays 2 points/tick.
+While in inventory, on the ground or in another
+object, the object decays 1 point/tick.
+
+While in rent, in a vault or carried/equipped
+by a mob, the object doesn't decay.
+
+#
+"OBJS" "OBJECTS"
+
+The following are a list of commands which are specifically meant for
+editting objects.
+
+  edit o <obj#> <options...> - old style obj commands.  All commands
+                               below can be used instead.
+
+  oclone  - clone an object
+  odelete - delete an object
+
+  All commands when typed by themselves offer additional help.
+
+  See Also: ZONES ROOMS MOBS
+
+#
+"ROOMS"
+
+The following are a list of commands which are specifically meant for
+editting rooms.
+
+  edit r <room#> <options...> - old style room commands.  All commands
+                                below can be used instead.
+
+  rname    - set the room name
+  rsect    - set the room sector
+  rflag    - set room flags
+  rextra   - set extra descriptions in the room
+  rdesc    - set the room description
+  rreset   - totally reset the room to default values
+
+  rlink    - set a one-way link to a room
+  runlink  - remove a one-way link to a room
+  dlink    - set a two-way link to a room
+  dunlink  - remove a two-way link to a room
+
+  exitname - set the exit name
+  exitdesc - set the exit description
+  exittype - set the exit type
+  exitkey  - set the key number for the exit
+
+  rshow    - search the mud for text in room names
+  rclone   - clone a room
+  rdelete  - delete a room
+
+  All commands when typed by themselves offer additional help.
+
+  See Also: ZONES OBJECTS MOBS
+
+#
+"ZONES"
+
+The following are a list of commands which are specifically meant for
+editting zone resets.
+
+  edit z <zone#> <options...> - old style zone commands.  All commands
+                                below can be used instead.
+
+  zone - set the zone number being editted
+  zname - set the zone name
+  zlife - set the length of time it takes the zone to reset
+  zmode - set the type of zone reset
+  zreset - force the reset of the zone now
+  zrange - define the zone range from bottom to top rooms
+
+  mput    - add a command to put a mob in a room
+  mfollow - add a command for a following mob
+  mride   - add a command for a rider mob
+  ogive   - add a command to give an object to a mob
+  oequip  - add a command to equip an object to a mob
+  otake   - add a command to take an object from a room
+  oput    - add a command to put an object in a room
+  oinsert - add a command to insert an object into an object
+  dreset  - add a command to reset a door open/closed/locked
+
+  cmddel  - delete a zone command
+  cmdlist - list the zone commands
+
+  zshow   - list mobs/objs/rooms in a zone
+  zbrief  - list brief stats on mobs/objs
+  lstat   - list the mobs currently loaded in the zone
+  rezone  - change the zone number
+
+  zfind   - search for zones
+
+  All commands when typed by themselves offer additional help.  The
+  new zone commands offer the advantage of not requiring "if" or "max"
+  numbers in the resets.
+
+  See Also: ROOMS OBJECTS MOBS
+
+#
+MOBS MOBILES
+
+The following are a list of commands which are specifically meant for
+editting mobs.
+
+  edit m <mob#> <options...> - old style mob commands.  All commands
+                               below can be used instead.
+
+  mname    - set the mob's name
+  mshort   - set the mob's short description
+  mlong    - set the mob's long description
+  mfull    - set the mob's full description
+
+  mlevel   - set the mob's level
+  mclass   - set the mob's class
+  msex     - set the mob's sex
+  mpos     - set the mob's position
+  mdefpos  - set the mob's default position
+  mgold    - set the amount of gold the mob has
+  mexp     - set the amount of experience the mob has
+
+  mact     - apply acts to the mob
+  maff     - apply affects to the mob
+  mimmune  - set mob immunities
+  marmor   - set the mob's armor
+  malign   - set the alignment of the mob
+
+  mhitroll - set the mob's hitroll
+  mdamage  - set the mob damage dice
+  mattack  - set mob attacks
+  attdel   - deletes mob attacks
+  mhps     - set the mob hit points
+  mmana    - set the mob mana points
+  mskin    - edit the skin values of a mob
+
+  mclone   - clone one mob to another
+  mreset   - reset the mob to all default values
+  mdelete  - delete the mob
+
+  All commands when typed by themselves offer additional help.
+
+  See Also: ROOMS OBJECTS ZONES
+
+#
+"COMMANDS"
+ create    load    save   edit    ostat   mstat
+ zshow     rshow   zlist  mclone  rclone  creation
+
+#
+"CREATE"
+
+Usage: create <room|object|mobile|zone> <number>
+
+ Creates a new entry in your zone file.  Before you can edit anything
+ you need to use this command. Create zone should only be done by
+ an IMP.  To create you need a create flag and be at least level DEI.
+
+SEE ALSO: EDIT LOAD SAVE
+
+#
+"LOAD"
+
+Usage: load zone <name of zone>
+       load (c)haracter <vnumber>
+       load (o)bject <vnumber>
+
+Used to load a zone to edit, mobs or objects.  Before you start working
+on a zone you should load it or else the changes will only not be saved
+to your work file when you use the 'save' command.  Only SUP+ can work
+on a zone without their name on it.
+
+SEE ALSO: EDIT SAVE CREATE "EDIT MOB" "EDIT OBJECT" "EDIT ROOM"
+
+#
+"SAVE"
+
+Usage: save <# of zone>
+
+ Saves all changes to zone <# of zone> to disk.
+
+SEE ALSO: EDIT LOAD CREATE
+
+#
+"EDIT"
+The edit command is used to manipulate all aspects of the zone file.
+
+SEE ALSO: "EDIT MOB" "EDIT OBJECT" "EDIT ROOM" "EDIT ZONE"
+
+#
+"SECTORS"
+
+ Sectors represent different terrain in the game.  The most common use
+for them is to have sectors that are NOSWIM_WATER that require a boat
+to pass through.
+
+Each sector type decreases move by a differing amount:
+  INSIDE (1), CITY(2), FOREST(3), FIELD(2), HILLS(4), MOUNTAIN(6),
+  SWIMMABLE WATER(4), NOSWIM WATER(1), DESERT(2), ARCTIC(5).
+
+The desert sector also gives damage to a thirsty character and the
+arctic sector will give damage if a character's movement points are 0.
+
+SEE ALSO: "EDIT ROOM" "ROOM FLAGS" ROOMS
+
+#
+"ROOM FLAGS"
+
+Usage: edit room <#> flags <add|remove> <all/flag/flags>
+   or  rflag
+
+ DARK           Needs a lightsource or infravision to see in or peek into
+ DEATH          Any mortal who enters here is killed instantly
+ NO MOB         No mobiles will wander into a room with this flag
+ INDOORS        No weather notices in a room with this flag
+ LAWFUL         Allows only SUP+ to enter a room with this flag (goto, at)
+ NEUTRAL        Does nothing
+ SAFE           Can't attack or summon anyone out of a room with this flag
+ NO MAGIC       Can't use spells, etc. here.  No summon or relocate either
+ TUNNEL         Only one player at a time can be in a room with this flag
+ PRIVATE        Can't summon/relocate to here if there are already 2 in room
+ LOCK           Room can't be entered by mortals
+ TRAP           A player who enters this room falls victim to a trap
+ ARENA          Killing a PC or stealing from a PC allowed (See PSTEAL/PKILL)
+ CLUB           Mana or HP's regenerate faster if PC is a member of #club
+ QUIET          Prevents mortals from using say or emote in that room
+ CHAOTIC        Blocks normal death and sends char to morgue with 1 hp
+ NO_BEAM        Prevents beamers/teleporters from entering that room
+ HAZARD         Kills some of the time.
+ MOVETRAP       Makes all move points drop to 0.
+ FLYING         You need to be flying to be in the room.
+ NO_PEEK        You can't peek into the room.
+ NO_SONG        Song's don't work in the room.
+ NO_REGEN       There is no regen in the room.
+ NO_QUAFF       You can't use potions in the room.
+ REV_REGEN      Regeneration is reversed.
+ DOUBLE_MANA    All casts need twice the mana.
+ HALF_CONC      Concentration for casting is 1/2.
+ LIT            You don't need a light to see in the room, even at night.
+ NO_ORB         Orbs won't work in the room.
+ QRTR_CONC      Concentration for casting is 1/4.
+ MANADRAIN      The room will drain a characters mana.
+
+SEE ALSO: "EDIT ROOM" "ROOM EXTRADESC" SECTORS ROOMS
+#
+"EDIT ROOM"
+
+Room editables are:
+flags, extradescription, sector, name, description, direction, reset
+
+SEE ALSO: DIRECTIONS SECTORS "ROOM FLAGS" "ROOM EXTRADESC" ROOMS
+
+#
+"DIRECTIONS"
+
+To be able to pass from one room to another it must have exits connecting
+them.  You will be able to hear if anyone dies in a room that connects with
+the one you are in even if no exit leads there.  Note that if you want to
+open or close doors you need to add it into the reset file.
+
+Usage:
+ edit room <#> direction <n|e|w|s|u|d> add/remove <room#> (to add/remove exit)
+ edit room <#> direction <n|e|w|s|u|d> change room <room#> (to change exit)
+ edit room <#> direction change key <key obj# | none>
+ edit room <#> direction <n|e|w|s|u|d> change type <normal|door|nopick|jump|
+move|crawl|climb|enter|lock_10/15/20/25/30>
+
+Exit types:
+
+set the exit type to MOVE and players type move <keyword>
+to open the exit.  These exits can only be closed, and are not
+lockable.  Think of them as a door.
+
+exit types JUMP, CRAWL, CLIMB and ENTER  the player types
+jump/crawl/climb/enter <keyword> to move through the exit.
+These exit types are totally invisible, and the room desc.
+would need to hint that the exit exists.
+
+See ROOMS for a list of alternate direction editting commands.
+
+SEE ALSO: "EDIT ROOM" "LOCK LEVELS" ROOMS
+
+#
+"MOB AFFECTS"
+
+edit mob <#> affect <add|remove> all, or a list of the following:
+
+ BLIND                  Mob is blind (-4 to hit)
+ INVISIBLE              Mob is invisible
+ DETECT-ALIGNMENT       Mob can detect alignment
+ DETECT-INVISIBLE       Mob can detect invisible beings
+ DETECT-MAGIC           Mob can see the blue aura of magical items
+ SENSE-LIFE             Mob can sense hidden lifeforms in room
+ HOLD                   Mob cannot run away until second round of combat
+ SANCTUARY              Mob has 'sanctuary' spell affecting it
+ CURSE                  Mob has a -1 to hit
+ SPHERE                 Mob has 'sphere' spell affecting it
+ POISON                 Mob loses 1 hp per round and cannot regenerate
+ PROTECT-EVIL           Mob is affected by 'protection from evil' spell
+ PARALYSIS              Mob is affected by 'paralyze' spell
+ INFRAVISION            Mob can see in DARK rooms (no -4 to hit there)
+ STATUE                 Mob is a statue (cannot move around)
+ SLEEP                  Mob is affected by 'sleep' spell
+ DODGE                  Mob can dodge some attacks, will sometimes switch
+                        targets when pummeled and it dodges.
+ SNEAK                  Mob doesn't generate movement descs
+ HIDE                   Mob is hidden
+ LEVITATE               Mob is levitating
+ IMINV                  Mob is affected by 'improve invisibility' spell
+ INVUL                  Mob is affected by 'invulnerability' spell
+ DUAL                   Mob has two attacks
+ FURY                   Mob is afected by 'fury' spell
+ FLY                    Mob is flying
+ SUBDUE                 Mob can be subdued
+ TRIPLE                 Mob has three attacks
+
+
+SEE ALSO: "EDIT MOB" "MOB ACTIONS" MOBS
+
+#
+"MOB ACTIONS"
+
+edit mob <#> action <add|remove> all, or a list of the following:
+
+ SENTINEL       Mob will not move around
+ SCAVENGER      Mob will pick up and wear/wield items dropped in room
+ ISNPC          Tells the code the mob is definately an NPC
+ NICE-THIEF     Mob won't mind a PC stealing from it
+ AGGRESSIVE     Mob will attack the last person in a group
+ STAY-ZONE      Mob will not leave it's native zone
+ WIMPY          Mob will try to flee as soon as it reaches 'awful'
+ SUBDUE         Mob has been subdued (See SUBDUE)
+ RIDE           Mob can be ridden
+ MOUNT          Mob is a mount
+ FLY            Mob can fly
+ MEMORY         Mob remembers anyone who's attacked it and will strike back
+ SHIELD         Mob cannot be affected by any spells at all
+ ARM            Mob cannot be disarmed
+ NO-TOKEN       Mob will not be able to get a random token
+ IGNORE-SPHERE  Mob will hit through any sphere
+
+ AGG(WA/NO/PA/AP/NI/CO/CL/TH/MU/BA)     Mob will attack specified class
+ AGGEVIL, AGGGOOD, AGGNEUT              Mob will attack specified alignment
+ AGGLEADER                              Mob will attack group leader
+ AGGRANDOM                              Mob will attack a random person
+
+The AGG-priority is as follows:
+ CL-MU-PA-NI-AP-CO-BA-TH-NO-WA-EVIL-GOOD-NEUTRAL
+ (AGGLEADER and AGGRANDOM override any other AGG actions.)
+
+ In addition, the alignment aggressiveness is checked within all others.
+ For example a mob with AGGWA, AGGEVIL will skip over a good warrior
+ to attack an evil one. (If there is no evil one, the other will still
+ be attacked.)
+
+SEE ALSO: "EDIT MOB" "MOB AFFECTS" MOBS
+
+#
+"MOB IMMUNITIES"
+
+A mob with the given immunity will take 0
+damage from any attack with that type of damage.
+
+FIRE                   SLASH
+ELECTRIC               WHIP
+POISON                 CLAW
+PUMMEL                 BITE
+KICK                   STING
+PUNCH                  CRUSH
+SLEEP                  HACK
+CHARM                  CHOP
+BLINDNESS              SLICE
+PARALYSIS              BACKSTAB
+DRAIN                  AMBUSH
+DISEMBOWEL             ASSAULT
+DISINTEGRATE           LOCATE
+CLAIR                  COLD
+SUMMON                 SOUND
+HIT                    CHEMICAL
+BLUDGEON               ACID
+PIERCE                 FEAR
+THROATSTRIKE           CIRCLE
+EXECUTE
+
+SEE ALSO: "EDIT MOB" "MOB RESISTANCES" MOBS
+#
+"MOB RESISTANCES"
+
+A mob with the given resistance will take
+25% to 75% of any attack with that type of
+damage.
+
+POISON
+PHYSICAL
+MAGICAL
+FIRE
+COLD
+ELECTRIC
+SOUND
+CHEMICAL
+ACID
+
+SEE ALSO: "EDIT MOB" "MOB IMMUNITIES" MOBS
+#
+"MOB ATTACKS" "EDIT MOB ATTACK"
+
+The attacks are defined as follows.
+
+Waitstate is the number of rounds before the next command
+is processed.
+
+No. Attack        Damage  Waitstate Mob    Waitstate Vict    Position Victim
+
+1  spell cast    varies         -               -             n/a
+2  kick          mob lvl        3               1             No Change
+3  pummel          10           2               2             Stunned
+4  punch         mob lvl*2      2               2             Sitting
+5  bite          mob lvl        2               1             No Change
+6  claw          mob lvl        3               3             No Change
+7  bash            1            2               2             Sitting
+8  Tailslam       lvl*2         3               2             Stunned
+9  disarm          0            2               0             Disarmed
+10 Trample        lvl*2         2               1             No Change
+11 spell skill   varies         -               -             n/a
+  (no mana used)
+
+SEE ALSO: MOBS
+#
+"EDIT MOB"
+
+Mobile editables include:
+act, affects, align, armor, damage, defaultpos, full, hitroll, position, short,
+sex, name, hp, exp, level, long, gold, reset, tagline, resist, skin.
+
+Usage:
+ edit mob <#> damage <#>d<#>+<#>                Don't make the dmg+ exceed 127
+ edit mob <#> hp <#>d<#>+<#>                    Max 32768 total hps
+ edit mob <#> hitroll <hitroll amount>
+ edit mob <#> armor <armor amount>
+ edit mob <#> alignment <-1000 to +1000>        -350 is evil, +350 is good
+ edit mob <#> gold <amount>
+ edit mob <#> experience <amount>               Divide by three for actual xp
+ edit mob <#> sex <female|male|neutral>         Desc says Her/His/It's
+ edit mob <#> level <0-LVLMAX>
+ edit mob <#> position <0-12>                   This is the current position
+ edit mob <#> defaultpos <0-12>                 This is what it becomes at reset
+ edit mob <#> reset                             Old stats are loaded again
+ edit mob <#> attack add/rem <#> <type> <target> <percent> <spell/0>
+ edit mob <#> immune add .....
+ edit mob <#> class <0-91>
+ edit mob <#> mana #d#+#
+ edit mob <#> tagline
+ edit mob <#> resist
+ edit mob <#> skin
+
+NOTE: at this time mob classes have little affect on mobs, but in the
+future they will be used for special items that (for example) give extra
+damage vs. mobs of a certain class.
+
+Mob descs are:
+ Full           Desctribes what's seen when someone looks at the mob
+ Long           What you see when you enter a room or type look
+ Short          Used in combat and interaction with the mob
+
+SEE ALSO: "MOB AFFECTS" "MOB ACTIONS" POSITIONS MOBS "MOB CLASSES"
+
+#
+"POSITIONS"
+
+Mob positions possible are:
+ 0)  Dead              4)  Sleeping    8)  Standing
+ 1)  Mortally Wounded  5)  Resting     9)  Flying
+ 2)  Incapacitated     6)  Sitting    10)  Riding
+ 3)  Stunned           7)  Fighting   11)  Swimming
+
+#
+"OBJECT EXTRADESC"
+
+Usage: edit obj <#> extra <add|remove> <keyword>
+
+ This command adds a description to an item that is displayed whenever
+ a player types 'examine <keyword>'.
+
+#
+"ROOM EXTRADESC"
+
+Usage: edit room <#> extra <add|remove> <keyword>
+
+ This command adds a description to a room that is displayed whenever
+ a player types 'examine <keyword>'.
+
+#
+"ACTIONDESC"
+
+Usage: edit object <#> extra <add|remove> <keyword>
+
+ This command adds a description to a weapon that is displayed whenever
+ a player types 'kill <keyword>'.
+
+#
+"VALUES" "OBJECT VALUES"
+
+Usage: edit object <#> values <n1> <n2> <n3> <n4>
+
+ For light sources:  <Color> <Type> <Hours,-1 is eternal> <not used>
+ For Scrolls and Potions:  <Level> <Spell 1> <Spell 2> <Spell 3>
+ For Staves and Wands:  <Level> <Max Charges> <Charges Left> <Spell>
+ For weapons:  <1 to cast blind> <dice number> <dice size> <type>
+ For guns:  <license no> <bullets left> <dice number> <dice size>
+ For thrown weapons:  <dice number> <dice size> <unused> <unused>
+ For armor:  <AC apply(positive better)> <unused> <unused> <unused>
+ For traps:  <spell> <hp's> <unused> <unused>
+ For containers:  <max contains> <how locked> <key #> <is corpse?>
+ For notes:  <tongue> <unused> <unused> <unused>
+ For drink containers:  <max contains> <now contains> <liquid> <poison>
+ For bullets:  <unused> <unused> <gun #> <unused>
+ For keys:  <keytype> <unused> <unused> <unused>
+ For food:  <feeds for how many hours> <unused> <unused> <poisoned>
+ For money:  <coins> <unused> <unused> <unused>
+ For lockpicks: <charges> <max charges> <unused> <unused>
+ For bows: <unused> <unused> <dice number> <dice size>
+ For arrows: <type> <max number> <number left> <unused>
+ For lockpicks: <num of picks> <max num of picks> <unused> <unused>
+ For boards: <min read lvl> <min write lvl> <min remove lvl> <unused>
+
+
+SEE ALSO: "EDIT OBJECT" "OBJECT TYPE" "OBJECT FLAGS" BITVECTORS OBJS
+
+#
+"TYPE" "OBJECT TYPE"
+
+Syntax: edit object <#> type <type> where <type>:
+
+ LIGHT, SCROLL, WAND, STAFF, WEAPON, FIRE WEAPON, MISSILE, TREASURE,
+ ARMOR, POTION, WORN, OTHER, TRASH, TRAP, CONTAINER, NOTE, LIQUID,
+ KEY, FOOD, MONEY, PEN, BOAT, BULLET, MUSICAL, LOCKPICK, 2H-WEAPON,
+ BOARD, SC_TOKEN, SKIN.
+
+#
+"OBJECT AFFECTS"
+
+An object can affect stats or skills.  If a negative number is desired just
+subtract the desired amount from 256.
+
+Usage: edit object <#> affects add <location> <amount>, where <location>:
+ NONE, STR, DEX, INT, WIS, CON, AGE, MANA, HIT, MOVE, ARMOR, HITROLL, DAMROLL,
+ SAVING_PARA, SAVING_ROD, SAVING_PETRI, SAVING_BREATH, SAVING_SPELL,
+ SKILL_SNEAK, SKILL_HIDE, SKILL_STEAL, SKILL_BACKSTAB, SKILL_PICKLOCK,
+ SKILL_KICK, SKILL_BASH, SKILL_RESCUE, SKILL_BLOCK, SKILL_KNOCK,
+ SKILL_PUNCH, SKILL_PARRY, SKILL_DUAL, SKILL_THROW, SKILL_DODGE,
+ SKILL_PEEK, SKILL_BUTCHER, SKILL_TRAP, SKILL_DISARM, SKILL_SUBDUE,
+ SKILL_CIRCLE, SKILL_TRIPLE, SKILL_PUMMEL, SKILL_AMBUSH, SKILL_ASSAULT,
+ SKILL_DISEMBOWEL, SKILL_BACKFLIP, HP_REGEN, MANA_REGEN.
+
+There is a maximum of 2 affects on each object.
+
+SEE ALSO: OBJS
+#
+"OBJECT FLAGS"
+
+Usage: edit object <#> flags <add|remove> all, or a list of the following:
+ GLOW, HUM, DARK, CLONE, EVIL, INVISIBLE, MAGIC, NODROP, BLESS, ANTI-GOOD,
+ ANTI-EVIL, ANTI-NEUTRAL, ANTI-WARRIOR, ANTI-CLERIC, ANTI-THIEF,
+ ANTI-MAGIC USER, ANTI-MORTAL, ANTI-MALE, ANTI-FEMALE, ANTI-RENT,
+ ANTI-NINJA, ANTI-NOMAD, ANTI-PALADIN, ANTI-ANTI-PALADIN, ANTI-AVATAR,
+ ANTI-BARD, ANTI-COMMANDO, LIMITED, ANTI-AUCTION, CHAOTIC, RANDOM,
+ ALL_DECAY, EQ_DECAY, NO_GIVE, NO_GIVE_MOB, NO_PUT, NO_TAKE_MOB,
+ NO_SCALP, NO_LOCATE.
+
+SEE ALSO: "EDIT OBJECT" BITVECTORS "OBJECT AFFECTS" "OBJECT TYPE" OBJS
+
+#
+"BITVECTORS"
+
+A player or mob using an item with bitvectors will be affected by it.
+
+Usage: edit object <#> bitvect <add|remove> all, or a list of the following:
+ BLIND                  Victim can't see (-4 to hit, +40 to AC)
+ INVISIBLE              Victim can only be seen with Det-Invisible or Sense Life
+ DETECT-ALIGNMENT       Victim can see alignments (red=evil, gold=good)
+ DETECT-INVISIBLE       Victim can see invisible objects and mobs
+ DETECT-MAGIC           Victim can see the blue aura surrounding magical items
+ SENSE-LIFE             Victim can sense hidden or invisible lifeforms in room
+ HOLD                   Victim cannot run away until second round
+ SANCTUARY              See SANCTUARY
+ CURSE                  Victim gets a -1 to hitrolls
+ SPHERE                 See SPHERE
+ POISON                 Victim loses 1 hp per tick and cannot regenerate
+ PROTECT-EVIL           See PROTECTION FROM EVIL
+ PARALYSIS              Victim gets a -5 to hitroll and +100 to AC
+ INFRAVISION            Victim can see in the dark (no -4 to hit in DARK rooms)
+ STATUE                 Victim is a statue(?)
+ SLEEP                  Victim is sleeping and cannot be woken up normally
+ DODGE                  Victim can dodge some attacks
+ SNEAK                  Victim doesn't generate a movement description
+ HIDE                   Victim is hidden (see HIDE)
+ LEVITATE               Victim is levitating (see LEVITATE)
+ IMINV                  See IMPROVE INVISIBILITY
+ INVUL                  See INVULNERABILITY
+ DUAL                   Victim gets two attacks
+ FURY                   Victim's damage is doubled
+ FLY                    Victim is flying.
+
+SEE ALSO: "EDIT OBJECT" "OBJECT VALUES" "OBJECT AFFECTS"
+
+#
+"EDIT OBJECT"
+
+Object editables include:
+wear, flags, weight, cost, rentcost, extradescription, actiondescription,
+affects, type, name, timer, repop, bitvect, short, long, reset,
+values, subclass_res, material, char_wear_desc, room_wear_desc,
+char_rem_desc, room_rem_desc.
+
+Usage:
+ edit object <#> cost <value>              Value in shops, etc.
+ edit object <#> weight <value>
+ edit object <#> rent <cost to rent>
+ edit object <#> repop <0-100%>            This sets the repop rate
+ edit object <#> timer <lifespan in hours> Item will disappear after this
+ edit object <#> reset                     Loads old stats for object again
+ edit object <#> values                    See OBJECT VALUES
+ edit object <#> subclass_res              See SUBCLASS RESTRICTIONS
+ edit object <#> material                  Not implemented yet
+ edit object <#> char_wear_desc            Text owner sees when wearing
+ edit object <#> room_wear_desc            Text room sees when wearing
+ edit object <#> char_rem_desc             Text owner sees when removing
+ edit object <#> room_rem_desc             Text room sees when removing
+
+SEE ALSO: "OBJECT WEIGHT" "OBJECT FLAGS" "OBJECT AFFECTS" BITVECTORS
+       "OBJECT TYPES" "OBJECT EXTRADESC" ACTIONDESC WEAR
+#
+"SUBCLASS RESTRICTIONS"
+
+ edit object <#> subclass_res <add|remove> all, or a list of the following
+
+ANTI_ENCHANTER, ANTI_ARCHMAGE, ANTI_DRUID, ANTI_TEMPLAR, ANTI_ROGUE,
+ANTI_BANDIT, ANTI_WARLORD, ANTI_GLADIATOR, ANTI_RONIN, ANTI_MYSTIC,
+ANTI_RANGER, ANTI_TRAPPER, ANTI_CAVALIER, ANTI_CRUSADER, ANTI_DEFILER,
+ANTI_INFIDEL, ANTI_BLADESINGER, ANTI_CHANTER, ANTI_LEGIONNAIRE,
+ANTI_MERCENARY.
+
+SEE ALSO: "EDIT OBJECT"
+#
+"WEAR"
+
+Used to determine where an item can be worn.  A TAKE flag is added by default
+to all objects.  Remove this if you do not want players to be able to pick up
+the item.
+
+Usage: edit object <#> wear <add|remove> all, or a list of the following:
+ TAKE, FINGER, NECK, BODY, HEAD, LEGS, FEET, HANDS, ARMS, SHIELD, ABOUT,
+ WAIST, WRIST, WIELD, HOLD, THROW, LIGHT-SOURCE, NO_REMOVE, NO_SCAVENGR.
+
+In the reset file use the following values:
+Equip positions:
+0) Special(torches)   5) Body     10) arms          15)  left wrist
+1) Right finger       6) Head     11) shield        16)  wield
+2) Left finger        7) Legs     12) about body    17)  held
+3) Neck position A    8) Feet     13) about waist
+4) Neck position B    9) Hands    14) right wrist
+
+SEE ALSO: "EDIT OBJECTS" "OBJECT VALUES" "OBJECT AFFECTS" BITVECTORS
+       "OBJECT FLAGS"
+#
+"CONTAINERS"
+
+edit o # value <max contain> <how locked> <key number>
+
+Where how locked is a comb of....
+CONT_CLOSEABLE      1
+CONT_PICKPROOF      2
+CONT_CLOSED         4
+CONT_LOCKED         8
+so for CLOSEABLE, PICKPROOF, CLOSED and locked the value is 15
+
+
+#
+"EDIT ZONE"
+
+A zone can have four modes: always (resets when lifespan is up), empty (resets
+when no PC is in the zone), never (only resets at bootup) or blocked (doesn't
+even load at bootup).
+
+The lifespan of a zone can be set with 'edit z <#> command life <lifespan>'
+
+To reset a zone fully (all items will load regardless of repop value) you
+can use 'edit z <#> reset full'.
+
+It's not wise to mess around with any of the other reset commands like 'name'
+or 'range', those are for administration purposes only.
+
+Reset commands:
+edit zone <#> command add <#> M <if flag> <mob #> <max allowed> <room #>
+edit zone <#> command add <#> F <if flag> <mob #> <max allowed> <room #>
+edit zone <#> command add <#> R <if flag> <mob #> <max allowed> <room #>
+edit zone <#> command add <#> E 1         <obj #> <max allowed> <pos(0-17)>
+edit zone <#> command add <#> G 1         <obj #> <max allowed>
+edit zone <#> command add <#> T <if flag> <obj #> <max allowed> <room #>
+edit zone <#> command add <#> O <if flag> <obj #> <max allowed> <room #>
+edit zone <#> command add <#> P 1         <obj #> <max allowed> <into obj#>
+edit zone <#> command add <#> D <if flag> <room#> <direction  > <state(0-2)>
+edit zone <#> command <add|change|delete> [arguments]
+edit zone <#> mode <always|empty|never|block>
+edit zone <#> <command|life|mode|name|creators|range|reset> [arguments]
+
+Zone commands can be added in any order you like.  The code will insert new
+commands into the file and not overwrite the older ones.
+
+SEE ALSO: DOORS WEAR ZRESET
+
+#
+"DOORS"
+
+Usage: edit z <#> com add <#> D <if flag> <room#> <direction> <state(0-2)>
+ Directions are 0=north, 1=east, 2=south, 3=west, 4=up and 5=down.
+ State is 0=open, 1=closed, 2=locked and closed.
+
+SEE ALSO: ZRESET
+
+#
+"ZRESET"
+
+To:
+ load a mob:               (M)ob    <if flag> <mob #> <max> <room#>
+ make a mob follow:        (F)ollow <if flag> <mob #> <max> <room#>
+ make a mob ride:          (R)ide   <if flag> <mob #> <max> <room#>
+ equip a mob               (E)quip     1      <obj #> <max> <pos(0-17)>
+ give a mob an item:       (G)ive      1      <obj #> <max>
+ take an item :            (T)ake   <if flag> <obj #> <max> <room#>
+ drop an item :          Dr(O)p     <if flag> <obj #> <max> <room#>
+ put an item into another: (P)ut       1      <obj #> <max> <into obj#>
+ manipulate doors:         (D)oor   <if flag> <room#> <direction> <state(0-2)>
+
+Care needs to be taken with the order of commands, i.e. you need to place the
+reset commands to equip, give, follow and ride immediately after the mob you
+wish to manipulate.
+
+SEE ALSO: WEAR DOORS
+
+#
+"LOCK LEVELS" "LOCK TYPES"
+
+lock_10/15/20/25/30
+   The player needs an ITEM_LOCKPICK to pick these, more on that
+   later.  However, if a player has one, the chances of picking a lock
+   of your level is 50%.  Example Lock_15 level 15 thief = 50% If you
+   than the lock % is lower.  Example lvl 5 player lock_30 = 1%.
+
+Still remember to load a key for the doors on a mob somewhere, and if
+you want the players to HAVE to kill a mob to get the key, use NOPICK.
+
+The item LOCKPICK works like a wand.  When you create this item (if you
+feel you need to have more lockpicks in the game), you specify number of picks
+on it and the max number of picks.  At a failed pick, the lockpick loses
+some strength and if the number of 'charges' reaches 0, the lockpick
+disintegrates.  A successful pick will restore the lockpick to its original
+condition.
+The lockpick item was necessary to prevent level 10s from doing #100 pick door
+on level 30 locks. Warriors can knock a lock up to level 20 and they don't need
+lockpicks, just move points.
+
+
+#
+"OBJECT WEIGHT"
+
+Each object has a weight value.  It is used to determine how much a character
+is carrying and if he is strong enough to wield a weapon of a certain weight.
+The Strength statistic needed to wield weapons are as follow.
+
+Strength        Weight
+-------------------
+9               10
+10              11
+11              12
+12              13
+13              14
+14              15
+15              16
+16              17
+17              18
+18              20
+18/01           22
+18/51           24
+18/76           26
+18/91           28
+18/100          30
+
+SEE ALSO: "OBJECT VALUES" WEAR "EDIT OBJECT"
+
+#
+"RCLONE"
+
+Usage: rclone <room #1> <room #2>  (Room 1 exists)
+ This command will copy the FLAGS and sector types of <room #1> into
+ <room #2>.  ETE+ also get the name, descript, and extradescs copied.
+
+
+SEE ALSO: MCLONE
+
+#
+"MCLONE"
+
+Usage: mclone <mob #1> <mob #2>  (Mobile 1 exists)
+ This command will copy <mob #1> into <mob#2>.  Useful if you want to
+ make several similar/identical monsters with different affects or acts.
+
+
+SEE ALSO: RCLONE
+
+#
+"ZLIST"
+
+Usage: zlist
+ This command will list the name and zone number of any zones loaded.
+
+#
+"ZSHOW"
+Usage: zshow <zone#> <o/m/r>
+ This command will list any objects, mobs or rooms in <zone#>
+
+#
+"RSHOW"
+Usage: rshow <searchstring>
+ This command will list any rooms whose name contains <searchstring>.
+
+#
+"OSTAT"
+Usage:
+ ostat <object vnumber>         Lists all stats for object <vnumber>
+ ostat <name>                   Lists all objects matching <name>
+ ostat t <object type>          Lists all objects of type <object type>
+ ostat f <object rnumber>       Lists the next 25 objects from <rnumber>
+ ostat b <object vnumber>       Lists all items with bitvector <object number>
+ ostat w <wear number>          Lists all items with wear number <wear number>
+
+SEE ALSO: ZSHOW MSTAT POSITIONS
+
+#
+"MSTAT"
+Usage:
+ mstat <mob number>             Lists all stats for mob <mob number>
+ mstat <mob name>               Lists all mobs with names matching <mob name>
+
+SEE ALSO: OSTAT ZSHOW
+
+#
+"OBJECT TYPES"
+
+ ITEM_LIGHT      1
+ ITEM_SCROLL     2
+ ITEM_WAND       3
+ ITEM_STAFF      4
+ ITEM_WEAPON     5
+ ITEM_FIREWEAPON 6
+ ITEM_MISSILE    7
+ ITEM_TREASURE   8
+ ITEM_ARMOR      9
+ ITEM_POTION    10
+ ITEM_WORN      11
+ ITEM_OTHER     12
+ ITEM_TRASH     13
+ ITEM_TRAP      14
+ ITEM_CONTAINER 15
+ ITEM_NOTE      16
+ ITEM_DRINKCON  17
+ ITEM_KEY       18
+ ITEM_FOOD      19
+ ITEM_MONEY     20
+ ITEM_PEN       21
+ ITEM_BOAT      22
+ ITEM_BULLET    23
+ ITEM_MUSICAL   24
+#
+"LIQUID TYPES"
+
+ LIQ_WATER      0
+ LIQ_BEER       1
+ LIQ_WINE       2
+ LIQ_ALE        3
+ LIQ_DARKALE    4
+ LIQ_WHISKY     5
+ LIQ_LEMONADE   6
+ LIQ_FIREBRT    7
+ LIQ_LOCALSPC   8
+ LIQ_SLIME      9
+ LIQ_MILK       10
+ LIQ_TEA        11
+ LIQ_COFFE      12
+ LIQ_BLOOD      13
+ LIQ_SALTWATER  14
+ LIQ_COKE       15
+ LIQ_STOUT      16
+ LIQ_VODKA      17
+ LIQ_RUM        18
+ LIQ_LIQUER     19
+ LIQ_CHAMPAGNE  20
+ LIQ_BOURBON    21
+ LIQ_TEQUILA    22
+ LIQ_CIDER      23
+ LIQ_URINE      24
+ LIQ_GIN        25
+ LIQ_MERLOT     26
+ LIQ_SCHNAPPS   27
+ LIQ_MOONSHINE  28
+ LIQ_PUS        29
+ LIQ_SHERBET    30
+ LIQ_COGNAC     31
+ LIQ_BRANDY     32
+ LIQ_SCOTCH     33
+ LIQ_KEFIR      34
+ LIQ_OUZO       35
+ LIQ_SAKI       36
+ LIQ_LAGER      37
+#
+"DIRECTION NUMBERS"
+
+ NORTH          0
+ EAST           1
+ SOUTH          2
+ WEST           3
+ UP             4
+ DOWN           5
+#
+"SECTOR TYPES"
+
+ SECT_INSIDE          0
+ SECT_CITY            1
+ SECT_FIELD           2
+ SECT_FOREST          3
+ SECT_HILLS           4
+ SECT_MOUNTAIN        5
+ SECT_WATER_SWIM      6
+ SECT_WATER_NOSWIM    7
+#
+"WEAR POSITIONS"
+
+ WEAR_LIGHT      0
+ WEAR_FINGER_R   1
+ WEAR_FINGER_L   2
+ WEAR_NECK_1     3
+ WEAR_NECK_2     4
+ WEAR_BODY       5
+ WEAR_HEAD       6
+ WEAR_LEGS       7
+ WEAR_FEET       8
+ WEAR_HANDS      9
+ WEAR_ARMS      10
+ WEAR_SHIELD    11
+ WEAR_ABOUT     12
+ WEAR_WAISTE    13
+ WEAR_WRIST_R   14
+ WEAR_WRIST_L   15
+ WIELD          16
+ HOLD           17
+#
+"MODIFIERS"
+
+ APPLY_NONE              0
+ APPLY_STR               1
+ APPLY_DEX               2
+ APPLY_INT               3
+ APPLY_WIS               4
+ APPLY_CON               5
+ APPLY_SEX               6
+ APPLY_CLASS             7
+ APPLY_LEVEL             8
+ APPLY_AGE               9
+ APPLY_CHAR_WEIGHT      10
+ APPLY_CHAR_HEIGHT      11
+ APPLY_MANA             12
+ APPLY_HIT              13
+ APPLY_MOVE             14
+ APPLY_GOLD             15
+ APPLY_EXP              16
+ APPLY_AC               17
+ APPLY_ARMOR            17
+ APPLY_HITROLL          18
+ APPLY_DAMROLL          19
+ APPLY_SAVING_PARA      20
+ APPLY_SAVING_ROD       21
+ APPLY_SAVING_PETRI     22
+ APPLY_SAVING_BREATH    23
+ APPLY_SAVING_SPELL     24
+ APPLY_SKILL_SNEAK      25
+ APPLY_SKILL_HIDE       26
+ APPLY_SKILL_STEAL      27
+ APPLY_SKILL_BACKSTAB   28
+ APPLY_SKILL_PICK_LOCK  29
+ APPLY_SKILL_KICK       30
+ APPLY_SKILL_BASH       31
+ APPLY_SKILL_RESCUE     32
+ APPLY_SKILL_BLOCK      33
+ APPLY_SKILL_KNOCK      34
+ APPLY_SKILL_PUNCH      35
+ APPLY_SKILL_PARRY      36
+ APPLY_SKILL_DUAL       37
+ APPLY_SKILL_THROW      38
+ APPLY_SKILL_DODGE      39
+ APPLY_SKILL_PEEK       40
+ APPLY_SKILL_BUTCHER    41
+ APPLY_SKILL_TRAP       42
+ APPLY_SKILL_DISARM     43
+ APPLY_SKILL_SUBDUE     44
+ APPLY_SKILL_CIRCLE     45
+ APPLY_SKILL_TRIPLE     46
+#
+"CLASS NUMBERS"
+
+ CLASS_MAGIC_USER    1
+ CLASS_CLERIC        2
+ CLASS_THIEF         3
+ CLASS_WARRIOR       4
+ CLASS_NINJA         5
+ CLASS_NOMAD         6
+ CLASS_PALADIN       7
+ CLASS_ANTI_PALADIN  8
+ CLASS_AVATAR        9
+ CLASS_BARD         10
+ CLASS_COMMANDO     11
+#
+"CLASS SEX"
+
+ SEX_NEUTRAL   0
+ SEX_MALE      1
+ SEX_FEMALE    2
+#
+"SPELL TYPES"
+
+     armor                           1
+     teleport                        2
+     bless                           3
+     blindness                       4
+     burning_hands                   5
+     call_lightning                  6
+     charm_person                    7
+     chill_touch                     8
+     clone                           9
+     colour_spray                    10
+     control_weather                 11
+     create_food                     12
+     create_water                    13
+     cure_blind                      14
+     cure_critic                     15
+     cure_light                      16
+     curse                           17
+     detect_alignment                18
+     detect_invisibility             19
+     detect_magic                    20
+     detect_poison                   21
+     dispel_evil                     22
+     earthquake                      23
+     enchant_weapon                  24
+     energy_drain                    25
+     fireball                        26
+     harm                            27
+     heal                            28
+     invisibility                    29
+     lightning_bolt                  30
+     locate_object                   31
+     magic_missile                   32
+     poison                          33
+     protection_from_evil            34
+     remove_curse                    35
+     sanctuary                       36
+     shocking_grasp                  37
+     sleep                           38
+     strength                        39
+     summon                          40
+     ventriloquate                   41
+     word_of_recall                  42
+     remove_poison                   43
+     sense_life                      44
+     identify                        71
+     cure_serious                    72
+     infravision                     73
+     regeneration                    74
+     vitality                        75
+     cure_light_spray                76
+     cure_serious_spray              77
+     cure_critic_spray               78
+     heal_spray                      79
+     death_spray                     80
+     holy_word                       81
+     iceball                         82
+     total_recall                    83
+     recharge                        84
+     miracle                         85
+     levitate                        86
+     mana_transfer                   87
+     holy_bless                      88
+     evil_bless                      89
+     satiate                         90
+     animate_dead                    91
+     great_miracle                   92
+     flamestrike                     93
+     spirit_levy                     94
+     lethal_fire                     95
+     hold                            96
+     sphere                          97
+     imp_invisibility                98
+     invulnerability                 99
+     fear                            100
+     forget                          101
+     fury                            102
+     endure                          103
+     blindness_dust                  104
+     poison_smoke                    105
+     hell_fire                       106
+     hypnotize                       107
+     recover_mana                    108
+     thunderball                     109
+     electric_shock                  110
+     paralyze                        111
+     remove_paralysis                112
+     dispel_good                     113
+     evil_word                       114
+     reappear                        115
+     reveal                          116
+     relocation                      117
+     locate_character                118
+     super_harm                      119
+     power_word_kill                 128
+     dispel_magic                    129
+     conflagration                   130
+     mass_invisibility               131
+     convergence                     132
+     enchant_armour                  133
+     disintegrate                    134
+     confusion                       135
+     vampiric_touch                  136
+     searing_orb                     137
+     clairvoyance                    138
+     firebreath                      139
+     layhands                        140
+     dispel sanctuary                141
+     disenchant                      142
+     petrify                         143
+     protection from good            145
+     remove improved invisibility    146
+     tremor                          179
+     shadow wraith                   180
+     devastation                     181
+     incendiary cloud                182
+     power of faith                  187
+     focus                           188
+     power of devotion               189
+     wrath of god                    190
+     disrupt sanctuary               191
+     fortification                   192
+     degenerate                      193
+     magic armament                  194
+     ethereal nature                 195
+     engage                          196
+     aid                             202
+     demonic thunder                 203
+     desecrate                       206
+     rimefang                        209
+     dark ritual                     210
+     blackmantle                     211
+     divine wind                     212
+     rejuvenation                    216
+     wall of thorns                  217
+     meteor                          218
+     luck                            224
+     warchant                        225
+     rally                           228
+     cloud of confusion              236
+     rage                            238
+     righteousness                   239
+     wrath of ancients               241
+     wither                          242
+     sanctify                        244
+     orb of protection               246
+     frost bolt                      248
+     iron skin                       249
+     distortion                      250
+     passdoor                        251
+     blade barrier                   252
+     might                           253
+
+#
+"SKILL TYPES"
+
+     SKILL_SNEAK                  45
+     SKILL_HIDE                   46
+     SKILL_STEAL                  47
+     SKILL_BACKSTAB               48
+     SKILL_PICK_LOCK              49
+     SKILL_KICK                   50
+     SKILL_BASH                   51
+     SKILL_RESCUE                 52
+     SKILL_BLOCK                  53
+     SKILL_KNOCK                  54
+     SKILL_PUNCH                  55
+     SKILL_PARRY                  56
+     SKILL_DUAL                   57
+     SKILL_THROW                  58
+     SKILL_DODGE                  59
+     SKILL_PEEK                   60
+     SKILL_BUTCHER                61
+     SKILL_TRAP                   62
+     SKILL_DISARM                 63
+     SKILL_SUBDUE                 64
+     SKILL_CIRCLE                 65
+     SKILL_TRIPLE                 66
+     SKILL_AMBUSH                 67
+     SKILL_SPIN_KICK              68
+     SKILL_ASSAULT                69
+
+#
+"WEAPON TYPES"
+
+     TYPE_WHIP                    0-2,4
+     TYPE_SLASH                   3
+     TYPE_STING                   5
+     TYPE_CRUSH                   6
+     TYPE_BLUDGEON                7
+     TYPE_CLAW                    8
+     TYPE_PIERCE                  9-11
+     TYPE_HACK                    12
+     TYPE_CHOP                    13
+     TYPE_SLICE                   14
+
+#
+"SAVING TYPES"
+
+     SAVING_PARA             0
+     SAVING_ROD              1
+     SAVING_PETRI            2
+     SAVING_BREATH           3
+     SAVING_SPELL            4
+
+#
+"CREATION"
+
+To get help on values type help followed by one of:
+
+     "OBJECT TYPES"
+     "LIQUID TYPES"
+     "DIRECTION NUMBERS"
+     "SECTOR TYPES"
+     "WEAR POSITIONS"
+     "MODIFIERS"
+     "CLASS NUMBERS"
+     "CLASS SEX"
+     "POSITION NUMBERS"
+     "SPELL TYPES"
+     "SKILL TYPES"
+     "WEAPON TYPES"
+     "SAVING TYPES"
+#
+"WINDOWS" "ROOM WINDOWS"
+
+This feature is attached to both object and room extradescriptions. Here's
+basically how it works.
+
+edit <r/o> # extra add <keyword>
+]room #
+]@
+When the player types look <keyword> they see the room whose number was
+placed in the extradescription.
+
+#
+"AC APPLY" "ARMOR APPLY"
+
+AC apply for various wear positions (excluded positions apply the value
+they are given)
+
+Lights: cant add ac (unless as an ARMOR affect)
+Finger: 0
+Body: 3x the value (3 ac is actually 9 ac, etc)
+Shield: 2x the value
+Wrists: 0
+
+#
+"DESCRIPTIONS" "OBJECT DESCRIPTIONS" "MOB DESCRIPTIONS"
+
+Object descs:
+
+Name: These are the keywords of an object, its usually a good idea to make
+the first word of the name field the noun of what the object is (f.x hammer)
+end name keywords with a @@ on the same line.
+
+Short: Name that appears when an item is in inventory or equipped, also
+must end with a @@ on the same line.
+
+Long: Description you see when an item is on the ground, end with a @@ on
+same line also.
+
+Mob descs:
+
+Name: Same as with objects, ettin should precede large, etc. End with @@
+on same line.
+
+Short: Desc you see while fighting or when someone forces the mob to gossip
+*grin* Best to add 'a' to the beginning of it so when in combat it looks
+more natural ---> you make a Large Ettin think twice..... End with @@ on
+same line.
+
+Long: Desc you see when you first enter a room and the mob is just
+standing there. End it with a @ on a blank line.
+
+Full: Desc you see when you look at the mob. End with @ on a blank line.
+
+#
+"WEAPON ATTACKS" "WEAPONS" "WEAPON VALUES"
+ed o # value <x> <# of dice> <die size> <type>, where x is one of the
+following:
+
+0: No attack
+1: Blind
+2: Poison
+3: Vampiric Touch
+4: Chill Touch
+5: Forget
+6: Curse
+7: Drain Mana
+8: Energy Drain
+21: Causes greater damage against Evil victims
+22: Causes greater damage against Neutral victims
+23: Causes greater damage against Good victims
+31: Causes greater damage against Magic Users
+32: Causes greater damage against Clerics
+33: Causes greater damage against Thieves
+34: Causes greater damage against Warriors
+35: Causes greater damage against Ninjas
+36: Causes greater damage against Nomads
+37: Causes greater damage against Paladins
+38: Causes greater damage against Anti-Paladins
+39: Causes greater damage against Avatars
+40: Causes greater damage against Bards
+41: Causes greater damage against Commandos
+
+numbers 51-99: see olchelp MOB CLASSES
+
+300+class number for a weapon that has greater damage
+when wielded by that class.
+
+Note: some mob classes are split into LESSER and GREATER types.  A weapon
+which affects the GREATER type will also affect the LESSER type, while the
+reverse isn't true.
+
+#
+"MOB CLASSES"
+OTHER                   0
+MAGIC USER              1
+CLERIC                  2
+THIEF                   3
+WARRIOR                 4
+NINJA                   5
+NOMAD                   6
+PALADIN                 7
+ANTI-PALADIN            8
+AVATAR                  9
+BARD                    10
+COMMANDO                11
+LICH                    51
+LESSER UNDEAD           52
+GREATER UNDEAD          53
+LESSER VAMPIRE          54
+GREATER VAMPIRE         55
+LESSER DRAGON           56
+GREATER DRAGON          57
+LESSER GIANT            58
+GREATER GIANT           59
+LESSER LYCANTHROPE      60
+GREATER LYCANTHROPE     61
+LESSER DEMON            62
+GREATER DEMON           63
+LESSER ELEMENTAL        64
+GREATER ELEMENTAL       65
+LESSER PLANAR           66
+GREATER PLANAR          67
+HUMANOID                68
+HUMAN                   69
+HALFLING                70
+DWARF                   71
+ELF                     72
+BERSERKER               73
+KENDER                  74
+TROLL                   75
+INSECTOID               76
+ARACHNOID               77
+FUNGUS                  78
+GOLEM                   79
+REPTILE                 80
+AMPHIBIAN               81
+DINOSAUR                82
+AVIAN                   83
+FISH                    84
+DOPPELGANGER            85
+ANIMAL                  86
+AUTOMATON               87
+SIMIAN                  88
+CANINE                  89
+FELINE                  90
+BOVINE                  91
+BLOB                    94
+GHOST                   95
+ORC                     96
+GARGOYLE                97
+INVERTIBRATE            98
+DROW                    99
+STATUE                 100
+
+#~

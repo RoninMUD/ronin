@@ -1,0 +1,563 @@
+#8601
+sword broad broadsword~
+a Huge Broadsword~
+A huge broadsword lies here collecting dust.~
+$r broadsword dives towards $V!~
+5 513 8193
+0 4 6 3
+18 30000 10000
+50
+X
+$n's broadsword wobbles about uncontrollably, searching for a victim!~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+#8602
+nut coconut~
+a Coconut~
+A coconut lies unbroken on the ground here.~
+~
+19 1 1
+12 0 0 0
+1 20 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8603
+holy grail~
+The Holy Grail~
+A grail of holy power emits hope into the atmosphere as it lies here.~
+~
+1 3 16385
+0 0 -1 0
+10 30000 15000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -6
+A
+18 2
+#8604
+phony nose~
+a Phony Nose~
+An ugly nose that is surely phony lies in the dirt here.~
+~
+9 131072 17
+5 0 0 0
+5 1000 100
+60
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+13 10
+#8605
+black helmet~
+a Helmet of the Black Knight~
+A helmet belonging to a powerful knight lies here on the ground.~
+~
+9 262144 17
+5 0 0 0
+10 5000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+13 15
+#8606
+sword~
+a Knights Sword~
+A sword with the markings of the king lies in the dirt and gravel.~
+$n's Sword of Knights emits a bright light as it plunges into $V!~
+5 1 8193
+0 2 9 3
+15 5000 1000
+50
+X
+$n can barely keep $s hands on $s Sword of Knights as it finds no victim.~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+19 3
+#8607
+wooden sword~
+a Wooden Sword~
+A sword made of wood lies here in the dirt.~
+$n's wooden sword thrusts towards $V!~
+5 1 8193
+0 2 9 3
+15 5000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#8608
+holy hand handgrenade grenade~
+a Holy Handgrenade~
+A glowing handgrenade emits the sense of much power as it lies here.~
+~
+7 3 49153
+2 40 0 0
+8 7000 700
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8609
+necklace death~
+a Necklace of Death~
+A necklace of deadly power lies on the ground here.~
+~
+9 515 5
+6 0 0 0
+10 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+13 10
+#8610
+shield black~
+Shield of the Black Knight~
+A shield that once belonged to a knight lies on the ground here.~
+~
+9 0 513
+7 0 0 0
+10 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+1 1
+#8611
+diamond necklace~
+a Diamond Necklace~
+A necklace is lying on the ground sparkling with light.~
+~
+8 0 5
+0 0 0 0
+5 15000 300
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+A
+3 1
+#8612
+helmet french~
+a French Helmet~
+A helmet with french design lies covered in muck here.~
+~
+9 0 17
+5 0 0 0
+10 5000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8613
+golden harp~
+a Golden Harp~
+A harp glistens with a golden hue through the dirt and muck on the ground.~
+~
+24 1 16385
+0 0 0 0
+5 5000 100
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+13 15
+#8614
+staff old~
+an Old Staff~
+A staff lies here looking very well aged.~
+~
+3 0 16385
+25 5 5 26
+10 3000 200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8615
+wooden cudgel~
+a Wooden Cudgel~
+A cudgel made from wood lies in the dirt here.~
+~
+5 0 8193
+0 4 6 7
+10 500 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+5 1
+#8616
+goat skull~
+a Goat's Skull~
+A skull which appears to be that of a goat, lies on the ground here.~
+~
+9 2 17
+5 0 0 0
+8 1000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+5 1
+#8617
+key wooden~
+a wooden key~
+A key made from wood lies on the ground covered in dirt.~
+~
+18 0 1
+0 0 0 0
+1 1000 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8618
+key silver trimmed dingo~
+a silver trimmed key~
+A key with silver trim lies at your feet.~
+~
+18 0 1
+0 0 0 0
+1 1000 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8619
+key golden trimmed zoot~
+a golden trimmed key~
+A key with golden trim lies at your feet.~
+~
+18 2 1
+0 0 0 0
+1 1000 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8620
+pink teddy~
+a Pink Teddy~
+A pink, feminine garment lies at your feet.~
+~
+9 134348800 9
+5 0 0 0
+3 1000 100
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 -10
+A
+5 2
+#8621
+lace gstring~
+a Lace G-String~
+A piece of lace string lies at your feet.~
+~
+9 134348800 2049
+0 0 0 0
+3 1000 100
+40
+X
+~
+0 0 0
+M
+You slip your legs into your dainty g-string, showing a little leg as you do.~
+$n slips $s legs inbetween the bits of string in $s g-string.~
+You bend over, giving the full moon as you remove your g-string.~
+$n bends over completely as $s g-string snaps off and flies into the air.~
+A
+4 1
+A
+3 1
+#8622
+garter cloth hoop~
+a tiny garter~
+A tiny hoop of cloth lies on the ground getting dirty.~
+~
+11 2 33
+0 0 0 0
+3 1000 100
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 1
+A
+3 1
+#8623
+clip board clipboard dainty~
+a Dainty Clipboard~
+An extremely small clipboard lies here covered with dirt.~
+~
+9 2 16385
+5 0 0 0
+5 1000 100
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+26 5
+A
+13 10
+#8624
+whip cat nine catonine tails tail~
+a Cat-O-Nine Tails~
+A whip with leather straps, lies spread out in the dirt before you.~
+$n's cat-o-nine tails licks through the air as it begins to spank $V!~
+5 2 8193
+0 4 5 4
+8 1000 100
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#8625
+potion healing pink~
+a dainty pink potion~
+A pink vial lies hidden under the dirt and gravel here.~
+~
+10 2 1
+50 28 0 0
+2 1000 100
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8626
+tree larch~
+a larch~
+A larch sits in the middle of the intersection, swaying in the breeze.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8627
+chest zoot~
+Zoot's Chest~
+A beautifully carved chest sits near the end of a huge bed.~
+~
+15 0 0
+0 15 8619 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8628
+chest dingo~
+Dingo's Chest~
+A rosewood chest decorates the floor near the end of a four-poster bed.~
+~
+15 0 0
+0 15 8618 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#8629
+board~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+27 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

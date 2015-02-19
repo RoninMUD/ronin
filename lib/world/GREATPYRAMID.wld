@@ -1,0 +1,827 @@
+#5700
+The rope to the Pyramid~
+   The rope stretches upwards to the pyramid.  However you notice as
+you climb that it seems to be fraying.  You should probably hurry.
+~
+57 0 5
+D4
+~
+~
+0 -1 5707
+D5
+~
+~
+0 -1 10531
+S
+#5701
+Sarcophagi of Akinra~
+You have entered a secret passage that leads down to a solemn chamber.
+Here lies the great coffin of Akinra !
+~
+57 9 0
+D4
+~
+coffin~
+2 5704 5704
+S
+#5702
+Altar of The Sun God Ra~
+A colorful altar dominates the center of this shrine. Paintings surround
+you paying homage to the great god Ra. A huge statue of the once omnipotent
+Pharaoh Akinra looms over a dias behind the altar. Hieroglyphic etchings
+cover the sandstone floor.
+A spiral stairway leads down.
+~
+57 1 0
+D4
+~
+~
+0 -1 5703
+D5
+~
+~
+0 -1 5704
+E
+translation~
+Great was the reign of Akinra. The ... God brought his empire much
+... and power. Since you are reading these writings you have already
+desecrated the ... of this holy place. So be warned: Leave now or be
+forever cursed. The greatest riches and relics of Akinra lay ... his tomb
+to be reclaimed in his ... reign. The Guardians of Akinra are not to be
+trifled with and will protect the tomb fiercely. Suffer defeat and ...
+~
+E
+etchings~
+Unfortunately you can't read ancient Egyptian.... however a faded ink 
+translation, apparently left by the owners of the grappling hook, is here.
+~
+S
+#5703
+West face of Pyramid~
+Winds test your footing as you stand here. A Sphinx facing east hasn't noticed
+your presence nor that of a grappling hook under its left paw. There is just
+room enough for you to stand on the ledge and walk around the sides. Someone
+has gained entrance to the tomb by removing some stones near his tail.
+~
+57 0 0
+D0
+~
+~
+0 -1 5705
+D2
+~
+~
+0 -1 5713
+D3
+You see the rope stretch over the edge~
+~
+0 -1 5707
+D5
+~
+~
+0 -1 5702
+S
+#5704
+Tomb of King Akinra~
+This is the tomb of the Great One. A cold feeling of death intrudes upon
+your being. Looking down the vaulted chamber you see a huge sarcophagus
+bearing the likeness of Akinra. Statues of kneeling worshipers face his
+tomb. You notice the bones of some daring adventurers, less fortunate 
+than you hope to be. One still grasps an ink pen in his right hand.
+Passages lead off in all directions.
+~
+57 9 0
+D0
+~
+~
+0 -1 5706
+D1
+You see a door here with no apparent keyhole.
+I trust you have a mage or thief with you.
+~
+door~
+1 0 5708
+D2
+~
+~
+0 -1 5710
+D3
+~
+~
+0 -1 5709
+D4
+Something or someone has magically blocked your way~
+nothing ~
+1 0 5702
+D5
+~
+Coffin~
+1 0 5701
+E
+up~
+Someone or something has magically blocked your way up.
+~
+E
+coffin~
+After brushing off some of the dust, a sapphire bracelet becomes visible
+engraved on the side of the coffin.
+~
+S
+#5705
+North face of Pyramid~
+Guess what... you see sand.
+~
+57 0 0
+D1
+~
+~
+0 -1 5712
+D3
+~
+~
+0 -1 5703
+D5
+You see a VERY long drop down.
+~
+~
+0 -1 5750
+S
+#5706
+Preparation room~
+This is one of the side rooms off of the tomb chamber.
+A table stands here covered with the tools of mummification.
+~
+57 9 0
+D2
+~
+~
+0 -1 5704
+S
+#5707
+The rope to the Pyramid~
+You have a good view from up here, hope you aren't afraid of heights. The
+rope continues up disappearing over a ledge. Looking over your shoulder
+you see the vast expanses of the desert stretching off to the horizon. Evil
+permeates the stones of the Pyramid. 
+The rope continues up and trails off below.
+~
+57 0 0
+D4
+~
+~
+0 -1 5703
+D5
+~
+~
+0 -1 5700
+S
+#5708
+Treasure room~
+Many of Akinra's most prized possessions lie here in ornately carved chests.
+~
+57 9 0
+D3
+~
+~
+0 -1 5704
+S
+#5709
+Passage to Tomb~
+This is a side room off of the main tomb chamber.
+A spiral staircase leads down into darkness.
+~
+57 9 0
+D1
+~
+~
+0 -1 5704
+D5
+~
+~
+0 -1 5711
+S
+#5710
+Storage room~
+This room is filled with religious artifacts... candles, robes, incense,
+and small stone daggers (too small to be useful).
+~
+57 9 0
+D0
+~
+~
+0 -1 5704
+S
+#5711
+Corridor~
+A mural of mosaic tiles line the walls depicting the empire of Akinra at
+its height of power. 
+Passages lead east west and south.
+~
+57 9 0
+D1
+~
+~
+0 -1 5718
+D2
+~
+~
+0 -1 5720
+D3
+~
+~
+0 -1 5715
+D4
+~
+~
+0 -1 5709
+S
+#5712
+East face of Pyramid~
+Sand, sand, and more sand... off into the distance you see a sandstorm.
+Is it heading this way ?
+~
+57 0 0
+D0
+~
+~
+0 -1 5705
+D2
+~
+~
+0 -1 5713
+D5
+You see a VERY long drop down. You will fall down and DIE !! RIP!!
+~
+~
+0 -1 5750
+S
+#5713
+South face of Pyramid~
+Heat beats down upon you. Looking out across the desert you see the ruins
+of a once great city to the south-west.
+~
+57 0 0
+D1
+~
+~
+0 -1 5712
+D3
+~
+~
+0 -1 5703
+D5
+You see a VERY long drop down. You will fall down and DIE !!  RIP!!
+~
+~
+0 -1 5750
+S
+#5714
+Guardian's Room~
+This room appears to have one purpose, to house the Stone Golem standing
+here. His last action seems to have been grasping a stone key.
+~
+57 9 0
+D2
+~
+door~
+1 -1 5715
+S
+#5715
+West Corridor~
+The corridor ends here. There are doors to the north and south, the
+corridor leaves east.
+~
+57 9 0
+D0
+~
+door~
+1 -1 5714
+D1
+~
+~
+0 -1 5711
+D2
+~
+south
+door~
+1 -1 5716
+S
+#5716
+Guardian's Room~
+This room is non-descript, save the clay spattered on the ground.
+~
+57 9 0
+D0
+~
+door~
+2 -1 5715
+S
+#5717
+Guardian's Room~
+This room pales in comparison to the others. The only noteworthy item
+here is the HUGE chair... and the golem sitting in it. He stands
+at your entrance.
+~
+57 9 0
+D2
+~
+door~
+1 -1 5718
+S
+#5718
+East Corridor~
+The corridor ends here with doors to the north and south.
+~
+57 9 0
+D0
+~
+door~
+1 -1 5717
+D2
+you see a large iron gate to the south.
+~
+gate~
+2 5700 5719
+D3
+~
+~
+0 -1 5711
+S
+#5719
+Room of Anubis~
+You have entered an ornately gilded throne room. Sitting upon the giant
+throne is the mighty figure of Anubis, wearing a glowing key on a chain
+about his neck.
+~
+57 9 0
+D0
+~
+gate~
+2 5700 5718
+S
+#5720
+Cul-de-sac~
+The murals continue into this room, but tell a different story.
+They show images of death and pain as demonic beings cruelly torture
+Egyptian heroes. The passage way ends and along the floor you notice
+an iron door set into the ground. The image of a horned devil adorns
+the handle.
+The only other way is north to the chamber.
+~
+57 9 0
+D0
+~
+~
+0 -1 5711
+D5
+The iron door looks unopenable without the proper key.
+The eyes of the horned devil glow slightly.
+~
+iron~
+2 5701 5734
+S
+#5721
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D2
+~
+~
+0 -1 5727
+D3
+The maze is very twisty here... your not sure where this leads to.
+~
+~
+0 -1 5721
+S
+#5722
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D1
+~
+~
+0 -1 5723
+S
+#5723
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D1
+~
+~
+0 -1 5724
+D3
+The maze continues here. You hear faint chanting and the sounds of
+slithering.
+~
+~
+0 -1 5722
+S
+#5724
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D1
+~
+~
+0 -1 5725
+D2
+~
+~
+0 -1 5730
+D3
+~
+~
+0 -1 5723
+S
+#5725
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D2
+The maze continues here. You hear a low guttural moaning from this direction.
+~
+~
+0 -1 5731
+D3
+~
+~
+0 -1 5724
+S
+#5726
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D1
+The maze continues to the east.
+~
+~
+0 -1 5727
+D2
+The maze continues to the south.
+~
+~
+0 -1 5732
+S
+#5727
+Maze ?~
+a bunch of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5721
+D1
+~
+~
+0 -1 5728
+D2
+~
+~
+0 -1 5733
+D3
+~
+~
+0 -1 5726
+S
+#5728
+Maze ?~
+A bunch of twisty passages that all look alike.~
+57 9 0
+D1
+~
+~
+0 -1 5729
+D2
+~
+~
+0 -1 5734
+D3
+~
+~
+0 -1 5727
+S
+#5729
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D3
+~
+~
+0 -1 5728
+S
+#5730
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5724
+D2
+~
+~
+0 -1 5736
+S
+#5731
+Dead End.~
+This corridor ends here, but a lonely Specter looks up as you enter. He 
+is carrying a sapphire bracelet. He looks into your eyes almost as if too
+say, "I'm sorry, but I have to kill you."
+~
+57 9 0
+D0
+~
+~
+0 -1 5725
+S
+#5732
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+The maze continues to the north.
+~
+~
+0 -1 5726
+D2
+The maze continues to the south.
+~
+~
+0 -1 5738
+S
+#5733
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5727
+D1
+~
+~
+0 -1 5734
+D2
+~
+~
+0 -1 5739
+S
+#5734
+Maze ?~
+You have entered the King's Labyrinth. Passages lead off in all
+directions. You think you hear movement nearby.
+~
+57 9 0
+D0
+~
+~
+0 -1 5728
+D1
+~
+~
+0 -1 5735
+D2
+~
+~
+0 -1 5740
+D3
+~
+~
+0 -1 5733
+D4
+~
+iron~
+2 5701 5720
+S
+#5735
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D2
+~
+~
+0 -1 5741
+D3
+~
+~
+0 -1 5734
+S
+#5736
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5730
+D1
+~
+~
+0 -1 5737
+D2
+~
+~
+0 -1 5742
+S
+#5737
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D2
+~
+~
+0 -1 5743
+D3
+~
+~
+0 -1 5736
+S
+#5738
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+The maze continues to the north.
+~
+~
+0 -1 5732
+D2
+The maze continues to the south. You hear faint sounds from this direction.
+~
+~
+0 -1 5744
+S
+#5739
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5733
+S
+#5740
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5734
+D2
+~
+~
+0 -1 5746
+S
+#5741
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5735
+S
+#5742
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5736
+D2
+~
+~
+0 -1 5748
+S
+#5743
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5737
+D2
+~
+~
+0 -1 5749
+S
+#5744
+Maze ?~
+A maze of twisty passages that all look alike. You think you might hear
+the sound of blowing wind from above.
+~
+57 9 0
+D0
+The maze continues to the north.
+~
+~
+0 -1 5738
+D4
+~
+door~
+1 0 10504
+S
+#5745
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 0 0
+D1
+~
+~
+0 -1 5746
+S
+#5746
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5740
+D1
+~
+~
+0 -1 5747
+D3
+~
+~
+0 -1 5745
+S
+#5747
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D1
+~
+~
+0 -1 5748
+D3
+~
+~
+0 -1 5746
+S
+#5748
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5742
+D3
+~
+~
+0 -1 5747
+S
+#5749
+Maze ?~
+A maze of twisty passages that all look alike.
+~
+57 9 0
+D0
+~
+~
+0 -1 5743
+S
+#5750
+Desert Floor.~
+For some strange reason you decided to jump off the pyramid.
+You're dead.
+~
+57 2 0
+E
+death_text~
+Your skull splits open on the sand, leaving you to bleed profusely.
+~
+S
+#0
+$~

@@ -1,0 +1,65 @@
+#28600
+A dimly lit tunnel~
+     This hidden tunnel is very dry and quiet. The only sound is your
+own echoing footfalls. As you leave the Traveler's Rest behind you the
+tunnel grows dark very quickly and you are left relying only on the
+flickering torchlight. The tunnel bends ahead and the warmth and
+safety of the Rest is above.
+~
+286 49677 0
+D0
+A dimly lit tunnel leads off to the North.
+~
+~
+0 -1 28601
+D4
+A plank can be opened to lead back into the Traveller's Rest.
+~
+plank~
+2 28760 28794
+S
+#28601
+A dimly lit tunnel~
+     The tunnel continues in darkness and utter silence. Even the
+steady thud of your own footfalls seems to have dropped in volume.
+The tunnel narrows substantially here, allowing only single-file
+travel. The low ceiling makes you hunch as you walk, squinting through
+the torchlight to see what lies ahead. There is another turn ahead and
+you can return toward safety to the South.
+~
+286 49933 0
+D1
+A dimly lit chamber lies to the East.
+~
+~
+0 -1 28602
+D2
+The tunnel leads back toward safety to the South.
+~
+~
+0 -1 28600
+S
+#28602
+The Chamber of Reflection~
+    The tunnel ends abruptly here in a small, dimly lit chamber. The
+walls are smooth and a small altar to Zeus is set up in the far
+corner. The flickering torchlight throws sinister shadows on the
+walls and makes it difficult to tell if this room is empty or not.
+You are surrounded by utter silence. You can still flee for safety
+to the West.
+~
+286 573965 0
+D3
+A dark tunnel leads out of the chamber.
+~
+~
+0 -1 28601
+S
+#28699
+A temporary name~
+A temporary description
+~
+286 512 0
+S
+#0
+$~

@@ -1,0 +1,1129 @@
+#2101
+Outside the Brigand Camp~
+ You are standing at the entrance to a makeshift wooden fortress.  The walls
+are some 30 feet high and made of huge vertically mounted logs sharpened at 
+the tops.  Before you are the massive gates serving as the main gates to the 
+camp.  The camp itself is well protected by the mountainous terrain and sits 
+on the edge of a great desert far off to the east.  The gate appears 
+unguarded and the central area of the fort, due south of here, appears to be 
+bustling with activity.
+~
+21 4 1
+D0
+~
+~
+0 -1 3209
+D2
+~
+~
+0 -1 2102
+D3
+~
+~
+0 -1 2166
+S
+#2102
+The Brigand Camp~
+  You have entered the brigand camp.  You are hardly surprised by the sight
+before you, as the interior is very similar to the rugged exterior.  The 
+plaza you now stand in is unpaved -- only dirt to walk upon.  Just south 
+of here you see a well which you assume provides the only source of
+water for the camp's inhabitants. Scattered along the wall on the 
+perimeter of the camp stands several buildings, all made of the familiar
+wooden logs.
+~
+21 0 1
+D0
+~
+~
+0 -1 2101
+D1
+~
+~
+0 -1 2106
+D2
+~
+~
+0 -1 2103
+D3
+~
+~
+0 -1 2104
+S
+#2103
+The Brigand Camp~
+  You are standing in the middle of the fortress marked only by a well 
+standing silently close by.  From here you can go any direction to different 
+ends of the plaza.
+~
+21 0 1
+D0
+~
+~
+0 -1 2102
+D1
+~
+~
+0 -1 2107
+D2
+~
+~
+0 -1 2108
+D3
+~
+~
+0 -1 2105
+S
+#2104
+The Brigand Camp~
+  You are now in the northwestern corner of the plaza.  From
+here you can see a road leading to a wooden tower rising above
+the fortress walls.  There are exits west and east, both leading to 
+another section of the plaza and west leading to the tower.
+~
+21 0 1
+D1
+~
+~
+0 -1 2102
+D3
+~
+~
+0 -1 2151
+S
+#2105
+The Brigand Camp~
+  You are now in the eastern section of the plaza.  To the west of here 
+there is another path leading to what looks like a shop of some kind. 
+To the east you can see a small well.
+~
+21 0 1
+D1
+~
+~
+0 -1 2103
+D3
+~
+~
+0 -1 2130
+S
+#2106
+The Brigand Camp~
+  This is the northeastern section of the plaza.  To the east is a 
+wooden watchtower, and to the west lies more of the plaza. 
+~
+21 0 1
+D1
+~
+~
+0 -1 2149
+D3
+~
+~
+0 -1 2102
+S
+#2107
+The Brigand Camp~
+  You are standing off to the east of the well. A hot wind blows in from 
+east...as your eyes strain to look past the sheltered fortress, you 
+see only the distorted horizon, twisted by the heat rising from the 
+desert you see off to the east.  From here you can go east toward the 
+desert or west to other sections of the plaza.
+~
+21 0 1
+D1
+~
+~
+0 -1 2125
+D3
+~
+~
+0 -1 2103
+S
+#2108
+The Brigand Camp~
+  You are at the southern end of the plaza.  South of here is a grass path
+connecting several buildings to the plaza you now stand in.  There are
+also exits to the east and west, both leading to different sections of the 
+plaza.
+~
+21 0 1
+D0
+~
+~
+0 -1 2103
+D1
+~
+~
+0 -1 2109
+D2
+~
+~
+0 -1 2111
+D3
+~
+~
+0 -1 2110
+S
+#2109
+The Brigand Camp~
+  You are in the southeastern corner of the brigand camp's plaza. To the  
+west of here is the rest of the plaza.
+~
+21 0 1
+D3
+~
+~
+0 -1 2108
+S
+#2110
+The Brigand Camp~
+  You stand now in the southwest corner of the plaza.  From here you see 
+a well-beaten path that looks like it has seen lots of use leading off to the 
+south.
+~
+21 0 1
+D1
+~
+~
+0 -1 2108
+D2
+~
+~
+0 -1 2134
+S
+#2111
+A Grassy Path~
+  This is a grassy path running north-south.  There is a wall of a 
+building at your east, and the aroma of fresh bread is in the air.  
+Well ahead of you to the south there is a house, although you are 
+unable to see it clearly at this distance.
+~
+21 0 1
+D0
+~
+~
+0 -1 2108
+D2
+~
+~
+0 -1 2112
+S
+#2112
+A Grassy Path~
+ You are now standing directly in front of the house that the path
+services.  It is probably a single-room dwelling, judging by the size
+of the home.  Just above the door you see a mounting of some sort 
+bearing 2 crossed swords and a symbol below it.  You are unsure
+what they mean but you guess that the man behind that door is highly
+respected.  There is also another building at the end of the path
+to the east.
+~
+21 0 1
+D0
+~
+~
+0 -1 2111
+D1
+~
+~
+0 0 2113
+D2
+~
+door~
+1 -1 2115
+S
+#2113
+A Grassy Path~
+  You stand in front of a building displaying the mark of the baker 
+over the door.  The baker seems to be doing quite well for himself, 
+judging by the fancy thatch work on the roof.  The entrance to the 
+bakery is via a door to the north.
+~
+21 0 1
+D0
+~
+door~
+1 -1 2114
+D3
+~
+~
+0 -1 2112
+S
+#2114
+The Bakery~
+  This is a small store with foodstuffs on sale.  Hanging on the walls
+you see various dried and salted goods which the brigands use as rations
+while traveling.
+~
+21 0 1
+D2
+~
+door~
+1 -1 2113
+S
+#2115
+The House of the Brigand Champion~
+  You have entered the brigand champion's home.  You notice a fire quietly
+burning in the fireplace, with a bubbling pot hung over the fire.  Looking
+around the room you see the picture of simplicity: a bed, a fireplace, and a 
+table.  Adorning the walls are several animal heads and awards giving 
+testament to the skill of the warrior who won them.
+~
+21 8 1
+D0
+~
+door~
+1 -1 2112
+S
+#2116
+Tower of Sadyra~
+  You are standing on the ground floor of Sadyra's tower.  The room is 
+circular and largely empty, nothing more than a table and some chairs 
+with a desk off to one side.  Stairs spiral up leading to the second story
+of the tower.
+~
+21 0 0
+D0
+~
+~
+0 0 2139
+D4
+~
+~
+0 0 2117
+S
+#2117
+Tower of Sadyra~
+  You have now entered the second story of the tower.  Scanning the 
+room you see shelves with various potions, instruments and other 
+objects magical.  This room must be a storage room of sorts.  As on 
+the first floor, there is a stone stairway giving access to the tower's 
+top floor.
+~
+21 0 0
+D4
+~
+~
+0 0 2140
+D5
+~
+~
+0 0 2116
+S
+#2118
+A Guard's Watchtower~
+  This is one of the three watchtowers that stand on the corners of the 
+fortress.  You guess the distance below to be around 40 feet below.  At this 
+height you are able to see for miles around the fortress.  The watchtower 
+itself is decorated by a single ballista, mounted on a swivel in one corner 
+of the tower.  The way down is through a hatch in the center of the floor 
+and down the ladder.
+~
+21 0 0
+D5
+~
+~
+0 0 2144
+S
+#2119
+A Guard Shack~
+  This is one of the two guard shacks that guard the entrance to the desert.
+Physically the inside of the shack is the picture of simplicity, with only a 
+table and two chairs.  The lone exit is through a doorway to the north.
+~
+21 0 0
+D0
+~
+~
+0 0 2128
+S
+#2120
+A dirt path~
+  This is a well traveled dirt path running north-south.  You can see
+two shops of some kind situated next to each other at the end of the road. 
+~
+21 0 1
+D0
+~
+~
+0 -1 2134
+D2
+~
+~
+0 -1 2121
+S
+#2121
+A dirt path~
+  This is a well-traveled dirt path running north-south.  You can see the 
+armor and weapon supplier's shop at the end of the road.  To the west, 
+you see the entrance to the camp's general store.
+~
+21 0 1
+D0
+~
+~
+0 -1 2120
+D2
+~
+~
+0 -1 2123
+D3
+~
+~
+0 0 2122
+S
+#2122
+General Store~
+  You have entered the general store.  You can't imagine how anyone
+finds anything they want in here, since there are countless items
+strewn about the room.  Perhaps the shopkeeper can help you find 
+what you are looking for.
+~
+21 0 1
+D1
+~
+~
+0 0 2121
+S
+#2123
+A dirt path~
+  This is a well-traveled dirt path running north.  West of here you see 
+a building with an anvil hanging over the door.  You have seen this sign 
+before of course as it denotes the mark of the blacksmith.  You can make 
+your way back to the main square of the fort by heading north.
+~
+21 0 1
+D0
+~
+~
+0 -1 2121
+D3
+~
+~
+0 0 2124
+S
+#2124
+The Weapon Shop~
+ You have entered the shop that supplies the instruments of war to the 
+camp.  Several racks of swords and spears adorn the wall behind the 
+counter and a countless variety of different armor hangs on the walls 
+and lies piled on the floor in front of the weapon racks.  The sole 
+exit lies to the east. 
+~
+21 8 1
+D1
+~
+~
+0 0 2123
+S
+#2125
+Cobblestone Road~
+  You have left the plaza behind and find yourself on a well-kept road 
+paved with cobblestones.  You feel the rush of dry, hot air blow in 
+from the south.  The road continues to the south and the plaza lies 
+to the west.
+~
+21 0 1
+D2
+~
+~
+0 0 2126
+D3
+~
+~
+0 -1 2107
+S
+#2126
+A Cobblestone Road~
+  With each step, the temperature seems to rise and that hot, dry wind 
+seems to blow harder.  You should take this opportunity to recheck your 
+water skins and make sure they are full.  The road runs north and south.
+~
+21 0 1
+D0
+~
+~
+0 0 2125
+D2
+~
+~
+0 0 2127
+S
+#2127
+A Cobblestone Road~
+  With each step the temperature seems to rise and that hot, dry wind 
+seems to blow harder.  You take this opportunity to recheck your 
+water skins and make sure they are full.  You can see the golden sands 
+of the desert through the gate directly to your east.  The road runs 
+runs north and south.
+~
+21 0 1
+D0
+~
+~
+0 0 2126
+D1
+~
+~
+0 -1 2128
+D2
+~
+~
+0 0 2141
+S
+#2128
+On the edge of the Desert~
+  It seems like the temperature has risen a hundred degrees since leaving the 
+sheltered fortress and the high Helventia mountains.  As you stand at the edge 
+of the desert you could swear that the mountains you see on the horizon are 
+only a days walk. You have been adventuring long enough to know that 
+the desert makes a long distance deceptively short, as what seems like a days' 
+walk can take weeks.  Your eyes straining, you see a pyramid and Sphinx off 
+in the distance but another look reveals nothing...you conclude that it must 
+have been a mirage.  You notice two guard shacks on either side of the path 
+into the desert -- one to the north and one to the south.  The desert is to 
+the east and you can return to the brigand camp through the gates swinging 
+open to the west.
+~
+21 0 1
+D0
+~
+~
+0 0 2129
+D1
+~
+~
+0 -1 10504
+D2
+~
+~
+0 0 2119
+D3
+~
+~
+0 -1 2127
+S
+#2129
+A Guard Shack~
+  This is one of the two guard shacks that guard the entrance to the desert.
+Physically the inside of the shack is the picture of simplicity, with only a 
+table and two chairs.  The lone exit is through a doorway to the south.
+~
+21 0 1
+D2
+~
+~
+0 0 2128
+S
+#2130
+Path to the Magic Shop~
+  This path is dry and dusty, and a strange tingle sends goose bumps up your
+back.  You can now see more clearly the building at the end of the path,
+and the arcane symbols over the door.  You recognize them to be magical 
+in nature.  The path runs east and west.
+~
+21 0 1
+D1
+~
+~
+0 -1 2105
+D3
+~
+~
+0 -1 2131
+S
+#2131
+Path to the Magic Shop~
+  This path is dry and dusty, and a strange tingle sends goose bumps up your
+spine.  You can now see more clearly the building at the end of the path 
+and the arcane symbols over the door.  You recognize them to be magical in 
+nature.  The path now takes a turn to the south, or you can return to the 
+plaza to the east.
+~
+21 0 1
+D1
+~
+~
+0 -1 2130
+D2
+~
+~
+0 0 2132
+S
+#2132
+Path to the Magic Shop~
+  This path is dry and dusty, and a strange tingle sends goose bumps up your
+spine.  You can now see more clearly the building at the end of the path 
+and the arcane symbols over the door.  You recognize them to be magical 
+in nature.  The entrance to the shop is directly east of here, and north 
+you can retrace your steps to the plaza.
+~
+21 0 1
+D0
+~
+~
+0 0 2131
+D1
+~
+~
+0 -1 2133
+S
+#2133
+Magic Shop~
+  The magic shop supplies the brigands those items of an arcane 
+nature that become necessary in combat from time to time.  Looking 
+around the room, what you see resembles a laboratory more than a shop.  
+There are various test tubes, flasks and bottles, all filled with 
+liquids and spell components of various sizes and colors.  The only 
+exit is west.
+~
+21 8 1
+D3
+~
+~
+0 0 2132
+S
+#2134
+A dirt path~
+This a well-trodden path that links several buildings to the rest of the 
+camp.  This is an intersection of sorts with paths leading south and west. 
+You can also return to the plaza which is to the north.
+~
+21 0 1
+D0
+~
+~
+0 0 2110
+D2
+~
+~
+0 0 2120
+D3
+~
+~
+0 -1 2135
+S
+#2135
+Path to the Tower~
+  The sparseness and rugged surroundings of the fortress would
+be a welcome sight now, you think as you look around you.  Although 
+you still haven't left the fortress walls you feel like you are in 
+a different place.  There is a chill in the air and there is no sound
+save for that of your own footsteps echoing from the rocky path.
+None of the trees have leaves, and the grass is yellow.  You are acutely 
+aware of the great evil that lies waiting for you at the end of the 
+path.  You walk on, gripping your sword tightly.  There are exits west
+and east.
+~
+21 0 1
+D1
+~
+~
+0 -1 2134
+D3
+~
+~
+0 -1 2136
+S
+#2136
+Path to the Tower~
+  The sparseness and rugged surroundings of the fortress would
+be a welcome sight now, you think as you look around you.  Although 
+you still haven't left the fortress walls you feel like you are in 
+a different place.  There is a chill in the air and there is no sound
+save for that of your own footsteps echoing from the rocky path.
+None of the trees have leaves, and the grass is yellow.  You are acutely 
+aware of the great evil that lies waiting for you at the end of the 
+path.  You walk on, gripping your sword tightly.  There are exits east 
+and south.
+~
+21 0 1
+D1
+~
+~
+0 -1 2135
+D2
+~
+~
+0 0 2137
+S
+#2137
+Path to the Tower~
+  The sparseness and rugged surroundings of the fortress would
+be a welcome sight now, you think as you look around you.  Although 
+you still haven't left the fortress walls you feel like you are in 
+different place.  There is a chill in the air and there is no sound
+save for that of your own footsteps echoing from the rocky path.
+None of the trees have leaves, and the grass is yellow.  You are acutely 
+aware of the great evil that lies waiting for you at the end of the 
+path.  You walk on, gripping your sword tightly.  The path continues
+to the north and south, and a building lies to the east.
+~
+21 0 1
+D0
+~
+~
+0 0 2136
+D1
+~
+~
+0 -1 2138
+D2
+~
+~
+0 -1 2139
+S
+#2138
+A Small Storehouse~
+  This is a small building used for storing various things.  It is currently
+empty save for a few crates lying haphazardly around the room.  The only way 
+out is to the west.
+~
+21 0 1
+D3
+~
+~
+0 0 2137
+S
+#2139
+Path to the Tower~
+  The winding path has now come to an end at a wooden tower.  Foul 
+looking smoke rises out of the small circular chimney jutting from the
+side of the tower.  The one entrance to the tower is a typical stout 
+wooden door at the base, on top of a small flight of stairs.  The tower 
+is about the same height as the surrounding walls, making it only one 
+storey.  You may enter the tower by going through the door to the south, 
+or follow the path back to the north.
+~
+21 0 1
+D0
+~
+~
+0 -1 2137
+D2
+~
+~
+0 0 2116
+S
+#2140
+Tower of Sadyra~
+  You have reached the top of the tower belonging to the Wizard Sadyra. 
+Sadyra has done much to increase the power of this band of brigands, 
+making them formidable opponents.  Looking around the circular room, you 
+see countless dusty tomes, written in a language you can't begin to 
+understand.  Lining shelves and numbering in the hundreds, you 
+see vials and jars containing various spell components.  The only way 
+in or out is by the stairs leading down.
+~
+21 8 1
+D5
+~
+~
+0 0 2117
+S
+#2141
+Cobblestone Road~
+  This is a well-traveled and well-made road that snakes its way
+up to what is easily the biggest house to be found in the compound.
+Trees line either side of the road, and you note that the grounds 
+are well kept. The road leads north and south leads back to the plaza.
+~
+21 0 1
+D0
+~
+~
+0 0 2127
+D2
+~
+~
+0 0 2142
+S
+#2142
+Cobblestone Road~
+  This is a well-traveled and well-made road that snakes its way up to 
+what is easily the biggest house to be found in the compound.  Trees 
+line either side of the road and the you note that the grounds are well 
+kept. The road leads north and south.  There is also a building to 
+the west.
+~
+21 0 4
+D0
+~
+~
+0 0 2141
+D2
+~
+~
+0 0 2144
+D3
+~
+~
+0 0 2143
+S
+#2143
+Stable~
+  This is where the various mounts of the brigands are housed. The 
+medium-sized wooden building consists of about a dozen or so stalls, 
+each a housing for an animal.  There is also plenty of feed lying in 
+piles in two of the corners.  There is an exit to the west.
+~
+21 0 1
+D1
+~
+~
+0 -1 2142
+D5
+A tiny hole is obscured by a pile of feed.
+~
+hole~
+9 -1 16983
+E
+hole~
+A tiny hole leading into a dark passage lies beneath the pile of feed.
+~
+S
+#2144
+Cobblestone Road~
+  This is a well-traveled and well-made road that snakes its way up to 
+what is easily the biggest house to be found in the compound.  Trees 
+line either side of the road and the you note that the grounds are well 
+kept. The road takes a turn west here: you can also return the way you 
+came to the north.  Above you stands one of the watchtowers, which you 
+can gain entry to by using the ladder leading up.
+~
+21 0 1
+D0
+~
+~
+0 0 2142
+D3
+~
+~
+0 -1 2145
+D4
+~
+~
+0 0 2118
+S
+#2145
+Cobblestone Road~
+  This is a well-traveled and well-made road that snakes its way
+up to what is easily the biggest house to be found in the compound.  
+Trees line either side of the road and you note that the grounds 
+are well kept. The road leads east and west.
+~
+21 0 1
+D1
+~
+~
+0 0 2144
+D3
+~
+~
+0 -1 2146
+S
+#2146
+Cobblestone Road~
+  You have now made your way up to the front of the palace of the brigand 
+leader.  Although the most elegant of the buildings contained in these 
+walls, the construction is still crude, wooden, and rugged.  There is a 
+flagpole decorating the top of the building, from which hangs the flag of 
+the brigands.  The same symbol on the flag, a rippled dagger dripping 
+blood, adorns the door to the south.  You can also go back the way you 
+came via the path to the east.
+~
+21 0 1
+D1
+~
+~
+0 -1 2145
+D2
+~
+~
+0 0 2147
+S
+#2147
+House of Kulzaren~
+  You have entered the house of the brigand leader Kulzaren.  This appears 
+to be little more than a waiting room for those requesting audience with 
+the leader.  There are several chairs in various places around the room,
+and a flight of stairs leads to the second floor.
+~
+21 0 1
+D0
+~
+~
+0 0 2146
+D4
+~
+~
+0 0 2148
+S
+#2148
+House of Kulzaren~
+  The room of the leader is like the other buildings -- sparse in its 
+furnishings.  There is a huge table with various maps strewn on it where 
+attacks are planned.  There is also much evidence of the riches the
+brigands have pillaged in the past.  Several chests and tapestries 
+lie haphazardly about the room.  In the far of the room, you see the 
+throne of Kulzaren, leader of the Brigands.
+~
+21 8 1
+D5
+~
+~
+0 0 2147
+S
+#2149
+A small road~
+  This is a small road that leads to the corner of the camp.  A 
+watchtower is directly above you.
+~
+21 0 1
+D3
+~
+~
+0 -1 2106
+D4
+~
+~
+0 0 2150
+S
+#2150
+A Guard's Watchtower~
+  This is one of the three watchtowers that stand in the corners of the 
+encampment.  You guess the distance to the ground to be about 40 feet 
+below.  At this height you are able to see for miles around the fortress.
+The watchtower itself is decorated by a single ballista mounted on a 
+swivel in one corner of the tower.  The way down is through a hatch in 
+the center of the floor and down the ladder.
+~
+21 8 1
+D5
+~
+~
+0 0 2149
+S
+#2151
+A small road~
+  This is a small well-traveled road running east-west that leads to a 
+tower of some sort.
+~
+21 0 1
+D1
+~
+~
+0 -1 2104
+D3
+~
+~
+0 -1 2152
+S
+#2152
+A small road~
+  You have come to the end of the road.  Above you, you can see the hatch 
+and a ladder leading up to it.  You can also return to the plaza to the east.
+~
+21 0 1
+D1
+~
+~
+0 -1 2151
+D4
+~
+~
+0 0 2153
+S
+#2153
+A Guard's Watchtower~
+  This is one of the three watchtowers that stand in the corners of the 
+fortress.  You guess the distance to the ground to be about 40 feet.
+At this height you are able to see for miles around the fortress.  The 
+watchtower itself is decorated by a single ballista mounted on a swivel 
+in one corner of the tower.  The way down is through a hatch in the center 
+of the floor and down the ladder.
+~
+21 8 1
+D5
+~
+~
+0 0 2152
+S
+#2160
+In the Badlands~
+  You are in the badlands between desert and mountain.  Here,
+tremendous winds have stripped away all growth save for scrub
+cacti that somehow manage to survive.  There is some sort of camp
+off to the northeast.
+~
+21 0 4
+D0
+~
+~
+0 -1 2161
+D2
+~
+~
+0 -1 6288
+S
+#2161
+In the Badlands~
+  You are in the badlands between desert and mountain.  Here,
+tremendous winds have stripped away all growth save for scrub
+cacti that somehow manage to survive.  There is some sort of
+camp off to the northeast.
+~
+21 0 4
+D0
+~
+~
+0 -1 2162
+D2
+~
+~
+0 -1 2160
+S
+#2162
+In the Badlands~
+   You are in the badlands between desert and mountain.  Here,
+tremendous winds have stripped away all growth save for scrub
+cacti that somehow manage to survive.  There is some sort of 
+camp off to the northeast.
+~
+21 0 4
+D1
+~
+~
+0 -1 2163
+D2
+~
+~
+0 -1 2161
+D3
+~
+~
+0 -1 2170
+S
+#2163
+In the Badlands~
+   You are in the badlands between desert and mountain.  Here,
+tremendous winds have stripped away all growth save for scrub
+cacti that somehow manage to survive.  There is some sort of
+camp off to the northeast.
+~
+21 0 4
+D1
+~
+~
+0 -1 2164
+D3
+~
+~
+0 -1 2162
+S
+#2164
+In the Badlands~
+   You are in the badlands between desert and mountain.  Here,
+tremendous winds have stripped away all growth save for scrub
+cacti that somehow manage to survive.  There is some sort of
+camp close by to the east.
+~
+21 0 4
+D1
+~
+~
+0 -1 2165
+D3
+~
+~
+0 -1 2163
+S
+#2165
+In the Badlands~
+   You are in the badlands between desert and mountain.  Here,
+tremendous winds have stripped away all growth save for scrub
+cacti that somehow manage to survive.  The camp to the east
+is very close, fortress walls looming over you, blocking the
+hot wind.
+~
+21 0 4
+D1
+~
+~
+0 -1 2166
+D3
+~
+~
+0 -1 2164
+S
+#2166
+Outside the Brigand Camp~
+   You are standing just east of a rugged-looking fortress.  
+Sharpened wooden logs make up the walls of the camp, keeping out
+invaders -- and the wind.
+~
+21 0 4
+D1
+~
+~
+0 -1 2101
+D3
+~
+~
+0 -1 2165
+S
+#2170
+In the Badlands~
+   You are in the badlands between desert and mountain.  Here, tremendous 
+winds combined with powerful sandstorms have stripped away all growth save 
+for scrub cacti that somehow manage to survive.  Off to the southwest
+across a vast sea of sand you notice the walls of a great city.
+~
+21 0 4
+D1
+~
+~
+0 -1 2162
+D3
+~
+~
+0 -1 2171
+S
+#2171
+In the Badlands~
+   You are in the badlands between desert and mountain.  Here, tremendous 
+winds combined with powerful sandstorms have stripped away all growth save 
+for scrub cacti that somehow manage to survive.  Off to the southwest
+across a vast sea of sand you notice the walls of a great city.
+~
+21 0 4
+D1
+~
+~
+0 -1 2170
+D3
+~
+~
+0 -1 2172
+S
+#2172
+Edge of the Jal Desert~
+   You are on the edge of a vast desert that lies a short distance to
+the south.  Extremely powerful sandstorms have blasted away any trace of
+vegetation here, leaving nothing but sand and more sand.  Across a blur 
+of mirages and whirling dust some distance to the south is more clearly
+visible the high walls of a large city.
+~
+21 0 4
+D1
+~
+~
+0 -1 2171
+D2
+~
+~
+0 -1 26400
+S
+#0
+$~

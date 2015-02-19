@@ -1,0 +1,1079 @@
+#5601
+Gravel Road~
+     The road is covered with many gravels. You feel very uncomfortable
+walking on it. When you look at your north, there is a very big Ice
+Mountain. To your south is a valley.
+~
+56 4 4
+D0
+~
+~
+0 -1 5602
+D2
+~
+~
+0 -1 4031
+S
+#5602
+At the Crossroads~
+   This road is covered with gravel to protect the ground from
+the wheels of the carts which used to roll over it day and night,
+carrying goods and supplies back and forth between the trapping
+community to the north and the city to the west.  A cave mouth
+opens up to the south, and to the west is the Ice Lake.
+~
+56 0 4
+D0
+~
+~
+0 -1 5670
+D2
+~
+~
+0 -1 5601
+D3
+~
+~
+0 -1 5603
+S
+#5603
+A small path~
+     The grass here is covered with a coating of ice. There is a big
+ice lake at your west. East is the gravel road.
+~
+56 0 4
+D1
+~
+~
+0 -1 5602
+D3
+~
+~
+0 -1 5604
+S
+#5604
+Lake Edge~
+     It is a very big ice lake. You feel very cold here. It is not a
+good idea to go to the lake at this time. You need to step on the ice
+if you need to go west. There is a small path to ice mountain at your
+east. There is a big sign here.
+~
+56 0 4
+D1
+~
+~
+0 -1 5603
+D3
+~
+~
+0 -1 5605
+E
+sign~
+
+The lake is not suitable for people to pass through yet.
+If you fall into the lake, probably you will freeze to death.
+~
+S
+#5605
+Ice Lake~
+     It is a very big lake. The lake is iced cover. You can some strange
+noise from the ice surface when you step on it. It is not a good idea to
+go back now.
+~
+56 0 4
+D1
+~
+~
+0 -1 5604
+D3
+~
+~
+0 -1 5606
+S
+#5606
+Ice Lake~
+     It is a very big lake. The lake is iced cover. You can some strange
+noise from the ice surface when you step on it. It is not a good idea to
+go back now. There is a big city at your west, but you are wondering you
+can reach there or not. The ice surface seems to be very weak. There is
+something on the ice surface.
+~
+56 0 4
+D1
+You saw some water bubbles coming out from the ice surface there.
+The ice surface there looks very weak!
+~
+~
+0 -1 5648
+D3
+~
+~
+0 -1 5607
+E
+surface~
+There is a big crack on the surface.
+~
+S
+#5607
+Lake Edge~
+     You feel very cold here. To your east is a very big ice lake and
+to your west is the gate to the City of Cornelius.  A thin trail lines
+the lake edge to the north. There is a big sign here blocking your way
+to the lake.
+~
+56 0 4
+D0
+A path twists along the edge of the ice lake toward a rock cliff.
+~
+~
+0 -1 16900
+D1
+An ice lake which looks very beautiful.
+~
+~
+0 -1 5606
+D3
+A big gate blocks your way to the city.
+~
+~
+0 -1 5608
+E
+sign~
+
+There are already many people fell into the lake and died, so it is not
+a good idea to walk on the lake now. Stay in the city and find a good place
+to have a beer.
+
+			Penguin Inn.
+
+~
+S
+#5608
+A Big Gate~
+    The City of Cornelius is sperated from the real world by this big gate.
+This gate is made of some very strong wood which covered by a thick coating
+of ice now. To the west is the City of Cornelius and to the east is the
+dangerous lake.
+~
+56 4 4
+D1
+The edge of the ice lake.
+~
+~
+0 -1 5607
+D3
+~
+gate~
+1 -1 5609
+E
+gate~
+It is a very strong wooden gate.
+~
+S
+#5609
+Main Street~
+     There are two side streets, one leads to north and one leads to south
+here. You can hear some screaming here. This ugly sounds nearly freeze your
+blood. The Main Street continues to the west direction. At your east is a
+big wooden gate. Outside the gate you glance a big ice lake.
+~
+56 0 2
+D0
+~
+~
+0 -1 5610
+D1
+~
+gate~
+1 -1 5608
+D2
+~
+~
+0 -1 5611
+D3
+~
+~
+0 -1 5624
+S
+#5610
+Side Street~
+     A small side street which leads to the northern guard house. There is
+some frying bear meat smell coming from your west. You glance a food store
+at your west. To your south is the Main Street.
+~
+56 0 2
+D0
+~
+~
+0 -1 5616
+D2
+~
+~
+0 -1 5609
+D3
+You see a food store over there.
+~
+~
+0 -1 5621
+S
+#5611
+Side Street~
+     A small side street which leads to the southern guard house. There is
+some strange smoke coming from your west. It looks like someone is boiling
+something there. To your north is the Main Street. There is a big house at
+your west.
+~
+56 0 2
+D0
+~
+~
+0 -1 5609
+D2
+~
+~
+0 -1 5612
+D3
+~
+~
+0 -1 5622
+S
+#5612
+Side Street~
+     The whole street is covered by snow and ice. You are freezing here.
+What you want now is a warm lovely house with a small fireplace in it.
+To your south is the end of the side street.
+~
+56 0 2
+D0
+~
+~
+0 -1 5611
+D2
+~
+~
+0 -1 5613
+D3
+~
+~
+0 -1 5623
+S
+#5613
+End of the Side Street~
+     It is the end of the Side Street. There is a very big guard house
+at your west. You are hearing the guard screaming here.
+~
+56 0 2
+D0
+~
+~
+0 -1 5612
+D3
+Big guard house.
+~
+~
+0 -1 5614
+S
+#5614
+Southern Guard House~
+     This is the southern guard house of the City of Cornelius. The house
+is made of stone. It is very uncomfortable when the icy wind comes through
+the cracks on the walls. There is a bedroom at your west.
+~
+56 8 0
+D1
+~
+~
+0 -1 5613
+D3
+~
+door~
+2 -1 5615
+S
+#5615
+Bedroom of the guards~
+     There are many huge beds here. The guards seem to be a giant, it is not
+a good idea to mess with them. There is a wooden table here with many playing
+cards on it. The only exit is east through a big wooden door.
+~
+56 8 0
+D1
+~
+door~
+2 -1 5614
+S
+#5616
+Side Street~
+     There is a famous bar at your west. You can smell the voka in the air
+here. The street leads to the north guard house. To your north is the end
+of the side street.
+~
+56 0 2
+D0
+~
+~
+0 -1 5617
+D2
+~
+~
+0 -1 5610
+D3
+~
+~
+0 -1 5620
+S
+#5617
+End of the Side Street~
+    It is the end of the side street. There is a big northern guard house
+at your west. A paved path leads north to the forest.
+~
+56 0 2
+D0
+A path leads north, where you can barely make out a small house.
+~
+~
+0 -1 2700
+D2
+~
+~
+0 -1 5616
+D3
+~
+~
+0 -1 5618
+S
+#5618
+Northern Guard House~
+     This is the northern guard house of the City of Cornelius. The house
+is made of strong wood. It is very uncomfortable when the icy wind comes
+through the cracks on the walls. There is a bedroom at your west.
+~
+56 8 0
+D1
+~
+~
+0 -1 5617
+D3
+~
+door~
+2 -1 5619
+S
+#5619
+Bedroom of the guards~
+     There are many huge beds here. The guards seem to be a giant, it is not
+a good idea to mess with them. There is a wooden table here with many dirty
+magazines on it. The only exit is east through a big wooden door.
+~
+56 8 0
+D1
+~
+door~
+2 -1 5618
+S
+#5620
+Penguin Inn~
+     There is a big fireplace in the middle of the inn, there are many people
+surrounding it, some of them are drinking, some of them are talking, some of
+them are singing, some of them are dancing and some of them are sleeping. It is
+a very good idea to have a beer or spirit here. The only exit is east.
+~
+56 8 0
+D1
+~
+~
+0 -1 5616
+S
+#5621
+Food Store~
+     It seems to be the most warmest house in the city. There is a very big
+fireplace in the middle of the house. There are some working sitting beside
+it and frying bear meat. There are many tables here and you can see some people
+sitting beside the table and eating hot noodles. The only exit is east here.
+~
+56 8 0
+D1
+~
+~
+0 -1 5610
+S
+#5622
+Magic Shop~
+     A standard magic shop, there is a big cupboard here which contain many
+expensive magic reagents in it. There is a small fireplace here and some workers
+are sitting beside it and boiling some mixtures. The only exit is east here.
+~
+56 8 0
+D1
+~
+~
+0 -1 5611
+S
+#5623
+Empty Shop~
+     There are many spider web here. There is a big hole on the floor.
+To your east is the Side Street.
+~
+56 12 0
+D1
+~
+~
+0 -1 5612
+D5
+~
+~
+0 -1 5649
+S
+#5624
+Main Street~
+     An icy road which leads to the garden of the city.
+~
+56 0 2
+D1
+~
+~
+0 -1 5609
+D3
+~
+~
+0 -1 5625
+S
+#5625
+Main Street~
+     It is the end of the main street. A garden is just at your west.
+You can hear some wild creatures growling. It may not be a good idea
+to go into the garden now.
+~
+56 4 2
+D1
+~
+~
+0 -1 5624
+D3
+~
+~
+0 -1 5626
+S
+#5626
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5627
+D1
+~
+~
+0 -1 5625
+D2
+~
+~
+0 -1 5635
+D3
+~
+~
+0 -1 5631
+S
+#5627
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5628
+D2
+~
+~
+0 -1 5626
+D3
+~
+~
+0 -1 5630
+S
+#5628
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D2
+~
+~
+0 -1 5627
+D3
+~
+~
+0 -1 5629
+S
+#5629
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D1
+~
+~
+0 -1 5628
+D2
+~
+~
+0 -1 5630
+D3
+~
+~
+0 -1 5632
+S
+#5630
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5629
+D1
+~
+~
+0 -1 5627
+D2
+~
+~
+0 -1 5631
+D3
+~
+~
+0 -1 5633
+S
+#5631
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5630
+D1
+~
+~
+0 -1 5626
+D2
+~
+~
+0 -1 5638
+D3
+~
+~
+0 -1 5634
+S
+#5632
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5647
+D1
+~
+~
+0 -1 5629
+D2
+~
+~
+0 -1 5633
+D3
+~
+~
+0 -1 5646
+S
+#5633
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5632
+D1
+~
+~
+0 -1 5630
+D2
+~
+~
+0 -1 5634
+D3
+~
+~
+0 -1 5645
+S
+#5634
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5633
+D1
+~
+~
+0 -1 5631
+D2
+~
+~
+0 -1 5639
+D3
+~
+~
+0 -1 5644
+S
+#5635
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5626
+D2
+~
+~
+0 -1 5636
+D3
+~
+~
+0 -1 5638
+S
+#5636
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5635
+D3
+~
+~
+0 -1 5637
+S
+#5637
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5638
+D1
+~
+~
+0 -1 5636
+D3
+~
+~
+0 -1 5640
+S
+#5638
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5631
+D1
+~
+~
+0 -1 5635
+D2
+~
+~
+0 -1 5637
+D3
+~
+~
+0 -1 5639
+S
+#5639
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5634
+D1
+~
+~
+0 -1 5638
+D2
+~
+~
+0 -1 5640
+D3
+~
+~
+0 -1 5643
+S
+#5640
+The City Garden~
+     It is a very big garden which is for the commoner to promenade here.
+There are many small stone houses next to the garden. You can feel that the
+ice under your feet is started to melt.
+~
+56 0 2
+D0
+~
+~
+0 -1 5639
+D1
+~
+~
+0 -1 5637
+D2
+~
+~
+0 -1 5642
+D3
+~
+~
+0 -1 5641
+S
+#5641
+A small stone house~
+    It is a lovely little stone house. There are many furnitures here which
+are all made of stone. You are freezing when the icy wind blows throught the
+cracks on the walls. The only exit is east.
+~
+56 8 0
+D1
+~
+~
+0 -1 5640
+S
+#5642
+A small stone house~
+    It is a lovely little stone house. There are many furnitures here which
+are all made of stone. You are freezing when the icy wind blows throught the
+cracks on the walls. The only exit is north.
+~
+56 8 0
+D0
+~
+~
+0 -1 5640
+S
+#5643
+A small stone house~
+    It is a lovely little stone house. There are many furnitures here which
+are all made of stone. You are freezing when the icy wind blows throught the
+cracks on the walls. The only exit is east.
+~
+56 8 0
+D1
+~
+~
+0 -1 5639
+S
+#5644
+A small stone house~
+    It is a lovely little stone house. There are many furnitures here which
+are all made of stone. You are freezing when the icy wind blows throught the
+cracks on the walls. The only exit is east.
+~
+56 8 0
+D1
+~
+~
+0 -1 5634
+S
+#5645
+A small stone house~
+    It is a lovely little stone house. There are many furnitures here which
+are all made of stone. You are freezing when the icy wind blows throught the
+cracks on the walls. The only exit is east.
+~
+56 8 0
+D1
+~
+~
+0 -1 5633
+S
+#5646
+A small stone house~
+    It is a lovely little stone house. There are many furnitures here which
+are all made of stone. You are freezing when the icy wind blows throught the
+cracks on the walls. The only exit is east.
+~
+56 8 0
+D1
+~
+~
+0 -1 5632
+S
+#5647
+A small stone house~
+    It is a lovely little stone house. There are many furnitures here which
+are all made of stone. You are freezing when the icy wind blows throught the
+cracks on the walls. The only exit is south.
+~
+56 8 0
+D2
+~
+~
+0 -1 5632
+S
+#5648
+Cracked Ice Surface~
+    When you steeped on the ice surface, it couldn't support your weight.
+OOOhhhhhhhhhhhh......... You fell into the cold cold cold ccccoooo.... water.
+~
+56 2 4
+E
+death_text~
+Hypothermia begins to set in, slowing your life functions to an eventual end.
+~
+S
+#5649
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D3
+~
+~
+0 -1 5650
+D4
+~
+~
+0 -1 5623
+S
+#5650
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D3
+~
+~
+0 -1 5651
+S
+#5651
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D3
+~
+~
+0 -1 5652
+S
+#5652
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D3
+~
+~
+0 -1 5653
+S
+#5653
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D3
+~
+~
+0 -1 5654
+S
+#5654
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D0
+~
+~
+0 -1 5655
+S
+#5655
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D3
+~
+~
+0 -1 5656
+S
+#5656
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D3
+~
+~
+0 -1 5657
+S
+#5657
+Secret Tunnel~
+    A dark little tunnel which leads to somewhere.
+~
+56 9 2
+D4
+~
+~
+0 -1 3001
+S
+#5670
+Gravel Road~
+   This road is covered with gravel to protect the ground from
+the wheels of the carts which used to roll over it day and night,
+carrying goods and supplies back and forth between the trapping
+community to the north and the city to the west.
+~
+56 0 4
+D0
+~
+~
+0 -1 5671
+D2
+~
+~
+0 -1 5602
+S
+#5671
+Gravel Road~
+   This road is covered with gravel to protect the ground from
+the wheels of the carts which used to roll over it day and night,
+carrying goods and supplies back and forth between the trapping
+community to the north and the city to the west.  The road heads
+higher into the hills as it wends its way northwards.
+~
+56 0 4
+D0
+~
+~
+0 -1 5672
+D2
+~
+~
+0 -1 5670
+S
+#5672
+Gravel Road~
+   This road is covered with gravel to protect the ground from
+the wheels of the carts which used to roll over it day and night,
+carrying goods and supplies back and forth between the trapping
+community to the north and the city to the west.  The road heads
+higher into the hills as it wends its way northwards.
+~
+56 0 4
+D0
+~
+~
+0 -1 5673
+D2
+~
+~
+0 -1 5671
+S
+#5673
+Gravel Road~
+   This road is covered with gravel to protect the ground from
+the wheels of the carts which used to roll over it day and night,
+carrying goods and supplies back and forth between the trapping
+community to the north and the city to the west.  The road heads
+higher into the hills as it wends its way northwards.
+~
+56 0 4
+D0
+~
+~
+0 -1 5674
+D2
+~
+~
+0 -1 5672
+S
+#5674
+Gravel Road~
+   This road is covered with gravel to protect the ground from 
+the wheels of the carts which used to roll over it day and night,
+carrying goods and supplies back and forth between the trapping
+community to the north and the city to the west.  The road heads
+higher into the hills as it wends its way northwards.
+~
+56 0 0
+D0
+~
+~
+0 -1 5675
+D2
+~
+~
+0 -1 5673
+S
+#5675
+A small path in the hills~
+   The Gravel Road tapers down into a small path here as you
+enter the less travelled parts of the hills.  To the north
+the hills spread out to east and west, and to the south lies
+the Gravel Road proper.
+~
+56 0 0
+D0
+~
+~
+0 -1 6204
+D2
+~
+~
+0 -1 5674
+S
+#0
+$~

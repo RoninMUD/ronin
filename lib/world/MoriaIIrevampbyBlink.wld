@@ -1,0 +1,813 @@
+#4100
+The Morian Tunnels~
+   You find yourself in the northeast end of these mines.  All of 
+the tunnels look the same to you, dark and dreary.  You can hear 
+the sound of water dripping from the walls.  You can see no signs of
+activity in this part of the mine.  Ever since the Orcish Occupation
+the Morians have fled the land, leaving behind their rich mines. 
+The Orcs are just now beginning to explore deeper into the mines, 
+perhaps they haven't gotten this far yet.
+~
+41 13 0
+D3
+~
+~
+0 0 4101
+S
+#4101
+A Long Tunnel~
+   You have entered into a long narrow tunnel.  As you look around you
+see that there has been little activity in this part of the mine for 
+quite a while.  As you make a quick search around you notice some strange
+runes carved into the wall.  You do not understand what the runes mean, 
+however they look Orcish.  Perhaps the Orcs have been here after all, yet
+you find it odd as to why they haven't started to mine it yet.  As you take
+another quick look around, you see that exits lie to either side of you, the 
+tunnel becomes wider as you progress west.
+~
+41 9 0
+D1
+~
+~
+0 0 4100
+D3
+~
+~
+0 0 4102
+E
+runes~
+              ___________
+              (_________)
+       =======| (!*^*!) | =======
+       =======|  -----  | =======
+       =======|   ---   | =======
+       =======|    -    | =======
+       =======|    -    | =======
+              \_________/
+~
+S
+#4102
+A Long Tunnel~
+   You continue along a narrow tunnel.  There is a strong wind pulling you
+to the west.  It is hard to tell if anything has happened in this part
+of the tunnel, there is sand and dirt blowing around making it very hard
+for you to see.  As you walk, your feet seem to echo again and again.  You
+begin to sense evil work here.  From what you can tell, the tunnel opens up
+even more at your west.
+~
+41 9 0
+D1
+~
+~
+0 0 4101
+D3
+~
+~
+0 0 4103
+S
+#4103
+A Raging Hurricane~
+   PANIC!  As you continue along the tunnels, the winds become so strong
+that you loose your footing and are pulled into the next room.  The 
+winds send you all around the room, beating you alongside the hard cave
+walls. You scream in terror as you feel like this will never stop.  
+Finally the wind drops and you fall to the ground.  Whatever just happened
+it was not natural.  There is a dark force and work, and it doesn't want you
+here.
+~
+41 9 0
+D1
+~
+~
+0 0 4102
+D2
+~
+~
+0 0 4106
+D3
+~
+~
+0 0 4104
+S
+#4104
+A Tunnel~
+   You find your way out of the hurricane and into a small, dead end tunnel.
+This place looks very confusing to you.  It seems that the only way to get
+out of here is to venture back into the hurricane.  You take one last look
+around, but see nothing else of interest.  Looks like you must go back.
+~
+41 9 0
+D1
+~
+~
+0 0 4103
+D3
+~
+boulder~
+8 0 4128
+E
+boulder~
+Its a large boulder, but you could probably move it.
+~
+S
+#4105
+The Marble Cave~
+   You venture deeper into the marble caves.  You are astounded by the 
+beauty of this place.  You are swept with a feeling of sorrow when 
+you think of how the Morians were exiled by the Orcs.  Maybe someday 
+the Morians will be able to come back to their mines and beautiful 
+tunnels, and continue to build an underground city like they wished.  
+~
+41 8 0
+D2
+~
+~
+0 0 4108
+D3
+~
+~
+0 0 4106
+E
+light gold golden~
+It looks good, but as you look closely you notice that it has no value.
+~
+S
+#4106
+A Marble Passage~
+   You enter into a beautiful marble passage.  You gaze around in awe at
+the beauty of this place.  Everything here is made of marble!  You find
+it hard to keep your footing here, the marble floor is so smooth its hard
+to keep a good grip.  You are now out of the mines.  These must be the tunnels
+the Morians used then they were not mining.  It is obvious that the Morians
+were great workers, the craftsmanship here is exceptional.
+~
+41 8 0
+D0
+~
+~
+0 0 4103
+D1
+~
+~
+0 0 4105
+D2
+~
+~
+0 0 4109
+D3
+~
+Cave~
+0 -1 4127
+E
+marble light stone~
+The marble is very neatly crafted.~
+S
+#4107
+The Morian Tunnels~
+   You continue on into the dark tunnels of Moria.  This part of the
+caves is no different from any other of the dark mines.  There has 
+been no work done to the caves in what seems to be years.  The walls
+and floor are made of hard packed mud and clay, long dried.  It is 
+extremely cold in these parts of the tunnels.  You can tell these
+tunnels haven't been mined yet.  Perhaps the Morians were about to
+start on them when the Orcs came and drove them out.  The darkness
+continues south and west.
+~
+41 9 0
+D2
+~
+~
+0 0 4113
+D3
+~
+~
+0 0 4108
+S
+#4108
+The Morian Tunnels~
+   You continue on into the caves.  This part of the caves
+is different from the rest.  There has been no work done
+to the caves.  Everything here is carved into clay and mud,
+there are tracks in the soft ground.  They look Orcish. This
+is probably just a passageway to another part of the mine.
+Maybe you should explore and find out.
+~
+41 8 0
+D0
+~
+~
+0 0 4105
+D1
+~
+~
+0 0 4107
+D3
+~
+~
+0 0 4109
+D5
+~
+~
+0 0 0
+E
+old brown dirty muck~
+The walls here a dirtier than the rest. How odd.~
+S
+#4109
+The Marble Cave~
+   You continue into the marble caves.  This passageway is adorned with
+ugly statues of ghouls and demons.  You wonder why the Morians would have
+made such statues, they were not known for their gothic artwork.  Unless 
+these statues were made since the Orcs have arrived.  The caves continue 
+north and east.  To the south there is a small tunnel.
+~
+41 8 0
+D0
+~
+~
+0 0 4106
+D1
+~
+~
+0 0 4108
+D2
+~
+~
+0 0 4114
+E
+statues~
+These are ornate statues of gothic monsters.
+~
+E
+tunnel~
+Its very small~
+S
+#4110
+The Dark Pit~
+   You enter into a very dark room.  You look around and
+see that there is a huge pit in the center of the room.
+As you go to inspect the pit, you lose your footing and
+begin to slide into the endless pit.  You grab on to a 
+loose plant growing from the ground, you can feel the plant
+slowly giving to your heavy weight.  You try to pull yourself
+back up to the ground, can you make it? Did you?
+~
+41 65549 0
+D3
+~
+~
+0 0 4111
+D5
+~
+~
+0 0 -1
+S
+#4111
+The Morian Tunnels~
+   As you continue walking around the tunnels you enter into a
+small cavern.  A chill passes through your body and you feel
+very afraid here.  You sense something wrong might happen.
+Perhaps it would be a good idea to turn back, besides you
+can't see anything else of interest here. 
+~
+41 9 0
+D1
+~
+~
+0 0 4110
+D3
+~
+~
+0 0 4112
+S
+#4112
+The Morian Tunnels~
+   You continue on into the dark tunnels of Moria.  This part of the
+caves is no different from any other of the dark mines.  There has 
+been no work done to the caves in what seems to be years.  The walls
+and floor are made of hard packed mud and clay, long dried.  It is 
+extremely cold in these parts of the tunnels.  You can tell these
+tunnels haven't been mined yet.
+~
+41 9 0
+D1
+~
+~
+0 0 4111
+D3
+~
+~
+0 0 4113
+S
+#4113
+The Morian Tunnels~
+   You continue on into the dark tunnels of Moria.  This part of the
+caves is no different from any other of the dark mines.  There has 
+been no work done to the caves in what seems to be years.  The walls
+and floor are made of hard packed mud and clay, long dried.  It is 
+extremely cold in these parts of the tunnels.  You can tell these
+tunnels haven't been mined yet. 
+~
+41 9 0
+D0
+~
+~
+0 0 4107
+D1
+~
+~
+0 0 4112
+D2
+~
+~
+0 0 4116
+S
+#4114
+A Small Tunnel~
+   You walk into a small tunnel.  The ceiling here is very low and
+you find yourself having to crouch down in several different places.
+The walls are covered in an odd green slime, and hundreds of bugs
+crawl around on the floor.  You feel sick and consider turning back
+the way you came.  You wonder why this tunnel was made by the Morians.
+If anything it would only make people not want to talk through it.
+You see a beautiful cave to the north, and a dim light shines from
+the west.
+~
+41 8 0
+D0
+~
+~
+0 0 4109
+D3
+~
+~
+0 0 4115
+E
+light gold golden~
+It looks good, but as you look closely you notice that it has no value.
+~
+S
+#4115
+The Moria Escape~
+   You enter into a dimly lit chamber.  There is a beam of light
+shining down from a hole in the ceiling.  You see the remains
+of a rope ladder on the ground here.  This must be the escape
+route the Morians used to leave their caves as the Orcs began
+to take over.  You see various pieces of what seems to be 
+Morian artifacts.  It must have been a long wait to get all of
+the Morians out through such a place.  As you look around the 
+room you can tell that has not been used in a very long time.
+There is an exit to your east.  You think you can probably make 
+your way up through the hole as well.
+~
+41 9 0
+D1
+~
+~
+0 0 4114
+D4
+~
+~
+0 0 4021
+E
+hole~
+There is a hole cut into the ceiling.  You can probably fit through it.
+~
+S
+#4116
+The Morian Tunnels~
+   You continue on into the dark tunnels of Moria.  This part of the
+caves is no different from any other of the dark mines.  There has 
+been no work done to the caves in what seems to be years.  The walls
+and floor are made of hard packed mud and clay, long dried.  It is 
+extremely cold in these parts of the tunnels.  You can tell these
+tunnels haven't been mined yet.  Perhaps the Morians were about to
+start on them when the Orcs came and drove them out.
+~
+41 9 0
+D0
+~
+~
+0 0 4113
+D2
+~
+~
+0 0 4120
+E
+light~
+Well you can't see where it comes from..
+~
+S
+#4117
+The secret tunnel~
+   As you continue walking, you enter into another dark  tunnel.  
+It is damp and dirty.  You can tell  that these tunnels were 
+built in a hurry, perhaps to get out of here fast.
+~
+41 9 0
+D0
+~
+~
+0 0 4114
+D2
+~
+~
+0 0 4122
+S
+#4118
+A Dark Room~
+   You leave the silvery brightness of the caves and enter into
+a cold dark room.  Water drips from the ceiling, and there is
+a mist covering the floor.  There are strange runes engraved
+all along the north wall.  They look very strange and magical.
+You can sense evil magic here.  You can hear a mystical chanting
+coming from what seems to be the north.  A closer inspection reveals
+that you can move one of the runes.  Maybe you should take a look
+and see what awaits on the other side of this rune.
+~
+41 8 0
+D0
+~
+rune~
+8 -1 4126
+D2
+~
+~
+0 0 4123
+D3
+~
+~
+0 0 4119
+E
+runes~
+There are magical runes carved into the wall.
+~
+E
+rune~
+A rune blocks the entrance north.
+~
+S
+#4119
+The Silver Caves~
+   You enter into a beautiful cave.  This entire cave is constructed
+from pure silver.  The silver is like mirrors, you see your reflection
+from all around the cave.  You begin to mistake what is real and what
+is not.  There are several torches burning high above your head.  They
+light the entire cave.  You stand for a moment and admire in awe the
+utter beauty of these caves.  
+~
+41 8 0
+D1
+~
+~
+0 0 4118
+D2
+~
+~
+0 0 4124
+D3
+~
+~
+0 0 4121
+S
+#4120
+The Morian Tunnels~
+   You continue on into the dark tunnels of Moria.  This part of the
+caves is no different from any other of the dark mines.  There has 
+been no work done to the caves in what seems to be years.  The walls
+and floor are made of hard packed mud and clay, long dried.  It is 
+extremely cold in these parts of the tunnels.  You can tell these
+tunnels haven't been mined yet. 
+~
+41 9 0
+D0
+~
+~
+0 0 4116
+D2
+~
+~
+0 0 4125
+E
+light~
+It nearly is enough to light the passage.
+~
+S
+#4121
+The Secret Tunnels~
+   As you continue walking, you enter into a dark little tunnel and
+notice that the wall behind you shifted and locked you in.  You 
+glance around quickly and see you are in a very small tunnel.  It
+is damp and dirty. 
+~
+41 9 0
+D3
+~
+~
+0 0 4122
+S
+#4122
+The Secret Tunnels~
+   As you continue walking, you enter into a dark little tunnel and
+notice that the wall behind you shifted and locked you in.  You 
+glance around quickly and see you are in a very small tunnel.  It
+is damp and dirty.  You can tell that these tunnels were built in
+a hurry, perhaps to get out of here fast.
+~
+41 9 0
+D0
+~
+~
+0 0 4117
+S
+#4123
+The Silver Caves~
+   You enter into a corner of these beautiful caves.  This entire
+cave is constructed from pure silver.  The silver is like mirrors,
+you see your reflection from all around the cave.  You begin to
+mistake what is real and what is not.  There are several torches
+burning high above your head.  They light the entire cave.  You 
+stand for a moment and admire in awe the utter beauty of these 
+caves.
+~
+41 8 0
+D0
+~
+~
+0 0 4118
+D3
+~
+~
+0 0 4124
+S
+#4124
+The Silver Caves~
+   You enter into a beautiful cave.  This entire cave is constructed
+from pure silver.  The silver is like mirrors, you see your reflection
+from all around the cave.  You begin to mistake what is real and what
+is not.  There are several torches burning high above your head.  They
+light the entire cave.  You stand for a moment and admire in awe the
+utter beauty of these caves.  To the west, there is darkness, to the 
+north and east you see more caves.
+~
+41 8 0
+D0
+~
+~
+0 0 4119
+D1
+~
+~
+0 0 4123
+D3
+~
+~
+0 0 4125
+S
+#4125
+The Morian Tunnels~
+   You continue on into the dark tunnels of Moria.  This part of the
+caves is no different from any other of the dark mines.  There has 
+been no work done to the caves in what seems to be years.  The walls
+and floor are made of hard packed mud and clay, long dried.  It is 
+extremely cold in these parts of the tunnels.  You can tell these
+tunnels haven't been mined yet.  Perhaps the Morians were about to
+start on them when the Orcs came and drove them out.  The darkness
+continues to the north and to the east you see a gentle light.
+~
+41 8 0
+D0
+~
+~
+0 0 4120
+D1
+~
+~
+0 0 4124
+S
+#4126
+A Room of Candles~
+   You enter into an elaborate room of candles.  The walls and floor of 
+the room are made of pure silver.  There are thousands of candles casting
+an eerie glow across  your face.  You can feel the magic pulsating from the
+depths of this room.  Evil lurks in every corner.  There is a strange circle
+painted on the floor in the center of the room.  You are overwhelmed by the 
+power here.  The only exit is to the south.
+~
+41 8 0
+D2
+~
+rune~
+8 0 4118
+E
+candle~
+There are thousands of candles all around this room. 
+~
+E
+circle~
+The circle is painted in blood at the center of the room.  It is for magical uses.
+~
+S
+#4127
+The Hall of Moria~
+   You enter into what once was a great hall.  This was a place where
+the miners would come during their breaks to relax and enjoy the beauty
+of the statues that were made in honor of the people whom aided Moria.
+This once was a sacred place, but now the Orcs have destroyed all the 
+Morian statues, but the dark creatures that now dominate this place have
+raised their own statue.
+~
+41 12 0
+D1
+door
+~
+~
+0 -1 4106
+S
+#4128
+The Outlook~
+   As you walk through the small passage that the boulder  blocked off, you
+enter onto a large ledge of marble rock. You stand shocked and amazed at
+the beautiful sight before you.  It is as if you were in another world.  
+Deep within the cave the Morians have carved out an entire big dome. You
+wonder what this dome was to be used for.  You take another  quick look 
+around, the entire cave is carved made of marble, silver, and gold.  The
+richness of this place is astounding. There is a beautiful spiral staircase
+going down from here  leading to the bottom of the domes floor. 
+
+~
+41 8 0
+D1
+~
+boulder~
+8 -1 4104
+D5
+~
+~
+0 -1 4129
+E
+boulder~
+Its a large boulder but you could probably move it.
+~
+S
+#4129
+A Spiral Staircase~
+   You begin your track to the bottom of the staircase.  You  are a very long
+ways up, as you look down you feel a bit  dizzy.  You take a quick look
+at your surroundings and find that the stairs are rather wide and are made
+of pure gold.  The Morians must have worked carefully on making this place. 
+Everything here is finely crafted.
+~
+41 8 0
+D4
+~
+~
+0 -1 4128
+D5
+~
+~
+0 -1 4130
+S
+#4130
+At the bottom of the Stairs~
+   You finally reach the bottom of these dangerous stairs.  You look around
+this large part of the cave and inspect a  small opening at the west end.
+There is an onyx path leading directly to it.  Maybe you should check it 
+out, unless you wanted to go back the way you came.  But you aren't afraid,
+are you?
+~
+41 8 0
+D3
+~
+~
+0 -1 4131
+D4
+~
+~
+0 -1 4129
+E
+path~
+Its a beautiful path made of onyx.
+~
+S
+#4131
+Entrance to an Onyx Cave~
+   You enter into a beautiful tunnel of dark onyx.  There are magical 
+torches lined up along the walls  casting an enchanting light over the 
+tunnel. The tunnel is quite wide, and there is plenty of room.   There 
+are carvings etched along the walls at certain intervals, they look Morian.
+Perhaps there are still Morians deep within these tunnels, as this place 
+looks untouched by the Orcs.  You feel very warm and  comfortable exploring 
+these tunnels.  There are exits to your east and west.
+~
+41 8 0
+D1
+~
+~
+0 -1 4130
+D3
+~
+~
+0 -1 4132
+E
+carvings~
+These carvings look to be Morian.  From what you can tell its some kind of map.
+~
+S
+#4132
+An Onyx Cave~
+   You walk into an elaborate cave of Onyx.  Everything here is made of light
+and dark onyx.  There are beautiful tapestries hanging from the walls, 
+and a beautiful rug on the floor.  It looks as if this place is being used.
+There a comfortable pillows in the corner of the cave, and a fire is burning
+in a make-shift fireplace on the north wall.  There are torches lighting the
+room from all sides.  There are exits east and west.
+~
+41 8 0
+D1
+~
+~
+0 -1 4131
+D3
+~
+~
+0 -1 4133
+E
+pillows~
+A lot of pillows are piled up over there, they look inviting.
+~
+E
+rug~
+A soft rug sits on the floor here.
+~
+E
+tapestries~
+Beautiful old tapestries adorn the walls here.
+~
+S
+#4133
+A Small Room~
+   You walk into a small room.  You take a brief look around and  notice that
+the entire room is covered in a black velvet carpet. There is a shimmering
+portal opened up in the center of the room. On either side of the portal is
+two large candles that burn very brightly. You wonder what this portal could
+possibly do.  You have a feeling that the Morian had something else planned 
+than running from the Orcs.
+~
+41 8 0
+D1
+~
+~
+0 -1 4132
+S
+#4150
+Grunting Boar Square~
+A temporary description
+~
+41 0 0
+D0
+~
+~
+0 -1 4151
+D2
+~
+~
+0 -1 4152
+D3
+~
+~
+0 -1 3007
+S
+#4151
+Club Grunting Boar~
+ The comfortable resting room of the club has wall-to-wall carpeting and
+seating arrangements for up to 80 people at once.  For the weary and tired there
+are several beds with silk sheets and bedclothes on them.  Mounted on the walls 
+here are many hunting trophies, many of which are from magnificent animals which
+you've never seen before. Amongst the greatest of them is the head of the great
+grunting boar,  which is reputed to have killed a dozen men before being felled.
+~
+41 0 0
+D2
+~
+~
+0 -1 4150
+S
+#4152
+The Grunting Boar Reception~
+A temporary description
+~
+41 0 0
+D0
+~
+~
+0 -1 4152
+S
+#4199
+A temporary name~
+A temporary description
+~
+41 512 0
+S
+#0
+$~

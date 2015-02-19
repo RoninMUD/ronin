@@ -1,0 +1,1973 @@
+#700
+Behind a pile of logs~
+   You find yourself behind a pile of logs, the halfling crew must have 
+uncovered a long lost path.  I wonder where it leads?  What could be at
+the end of this path?  You can see the forest to the north and the path
+continues to the east.
+~
+7 4 3
+D0
+You see nothing special.
+~
+door~
+0 -1 4857
+D1
+You see nothing special.
+~
+door~
+0 -1 701
+S
+#701
+Entrance to a dark tunnel~
+   The tunnel in front of you looks like it hasn't been used in years.  The
+roof of the cave seems to be caving in as you watch.  Is it safe to enter
+this tunnel?  The tunnel continues to the south and the wood pile can be
+seen to the west.
+~
+7 4 0
+D2
+You see nothing special.
+~
+door~
+0 -1 702
+D3
+You see nothing special.
+~
+door~
+0 -1 700
+S
+#702
+Dark tunnel~
+   The tunnel you have entered must be hundreds of years old.  The roof is
+covered with bats and the floor is covered in bat droppings.  The heavy
+stench of bat urine makes you wish that you had of taken a bigger breath
+of fresh air while you had the chance.  You hope this tunnel ends soon
+because you are starting to feel sick.  The light to the north can only be
+the entrance, and the dark tunnel continues to the south.
+~
+7 9 0
+D0
+You see nothing special.
+~
+door~
+0 -1 701
+D2
+You see nothing special.
+~
+door~
+0 -1 703
+S
+#703
+Dark tunnel~
+   The tunnel seems to be getting cramped as you proceed deeper into
+the darkness.  The place is covered with cobwebs and dust, nobody has been
+this way in years.  The tunnel continues north and south, to the south
+you see a pile of huge boulders.
+~
+7 9 0
+D0
+You see nothing special.
+~
+door~
+0 -1 702
+D2
+You see nothing special.
+~
+door~
+0 -1 704
+S
+#704
+Huge pile of boulders~
+   You find yourself at a pile of massive boulders, from the looks of things
+the boulders have come from the unstable roof.  At the top of the pile there
+is a small crack.  I wonder if it is possible to squeeze through?  The tunnel
+continues north and south.
+~
+7 9 0
+D0
+You see nothing special.
+~
+door~
+0 -1 703
+D2
+You see nothing special.
+~
+door~
+0 -1 705
+S
+#705
+Top of the pile of boulders~
+   This is the tightest place you have ever been before.  You are very glad
+that you never had that extra sitting at dinner or you might not have made
+it. The tunnel seems to get wider to the south much to your relief.  You
+were beginning to think that you were going to have to crawl on your hands 
+and knees forever. The tunnel continues north and south.
+~
+7 9 0
+D0
+You see nothing special.
+~
+door~
+0 -1 704
+D2
+You see nothing special.
+~
+door~
+0 -1 706
+D4
+The crack is very small, I wonder could you fit?
+~
+crack~
+9 -1 707
+S
+#706
+Dead end~
+   As you squeeze through the crack at the top of the boulder pile you find
+yourself falling about 15 feet to the ground.  How are you going to get out
+of here?  Lets hope you have recalls because there is no way in hell you can
+reach that exit again.  There is a small trickle of water flowing out of
+the cave wall, at least you won't die of thirst.  The only exit is the top
+of the boulder pile high above you.
+~
+7 141 0
+D1
+A small trickle of water flows out of the tunnel wall.
+~
+trickle~
+9 -1 742
+D4
+You see nothing special.
+~
+door~
+0 -1 705
+S
+#707
+Small crack in the ceiling~
+   You find yourself in a small crack in the ceiling, boy this place is very
+cramped.  You can hardly move in here.  The bats have left their mark around
+this place, the floors are covered with excrement and the roof is covered with
+claw marks.  The tunnel leads west.
+~
+7 9 0
+D3
+You see nothing special.
+~
+door~
+0 -1 708
+D5
+The crack is very small, I wonder could you fit?
+~
+crack~
+9 -1 705
+S
+#708
+Small tunnel~
+   You find yourself in a small tunnel, the walls here seem closer than any
+tunnel you have ever been in.  I hope you make it out of here before you pass 
+out.  The tunnel continues east and west.
+~
+7 9 0
+D1
+You see nothing special.
+~
+door~
+0 -1 707
+D3
+You see nothing special.
+~
+door~
+0 -1 709
+S
+#709
+Small tunnel~
+   The tunnel seems to be getting smaller and smaller and you begin to wonder
+how much further you can continue.  There seems to be an opening of some type
+to the south, and you hope that these cramped surroundings will be a thing of
+the past.  The tunnel continues east and south.
+~
+7 9 0
+D1
+You see nothing special.
+~
+door~
+0 -1 708
+D2
+You see nothing special.
+~
+door~
+0 -1 710
+S
+#710
+On the edge of a crevasse~
+   You find yourself standing on the edge of a great crevasse.  The crevasse
+has a path along the edge of it and seems to be bottomless.  The path leads
+north and south.
+~
+7 1 0
+D0
+You see nothing special.
+~
+door~
+0 -1 709
+D2
+You see nothing special.
+~
+door~
+0 -1 711
+S
+#711
+Path through a deep crevasse~
+   As you tiptoe along the edge of the crevasse you kick a stone over the
+edge and listen for it to hit bottom.  You wait a minute and hear nothing
+so you proceed with caution.  The path slants downward from north to south.
+~
+7 1 0
+D0
+You see nothing special.
+~
+door~
+0 -1 710
+D2
+You see nothing special.
+~
+door~
+0 -1 712
+S
+#712
+Path through a deep crevasse~
+   The path seems very old and untraveled, it looks as if you are the only
+person to travel this path in ages.  The paths leads from north to south as
+it's slope begins to increase.
+~
+7 1 0
+D0
+You see nothing special.
+~
+door~
+0 -1 711
+D2
+You see nothing special.
+~
+door~
+0 -1 713
+S
+#713
+Opening in the crevasse~
+   You find yourself at the end of the path, the crevasse opens up into 
+another world here!  To the north is the crevasse, but to the east is an 
+opening to a strange new place.  You must have traveled through an ancient 
+set of tunnels linking this place with your world.
+~
+7 1 0
+D0
+You see nothing special.
+~
+door~
+0 -1 712
+D1
+You see nothing special.
+~
+door~
+0 -1 714
+S
+#714
+Descending into the crevasse~
+   Before you is an ancient ladder descending into the crevasse.  The ladder
+is old, but it appears to be stable.  This strange new place is like nothing
+you have ever seen before.  The crevasse is west and a path can be seen below.
+~
+7 4 0
+D3
+You see nothing special.
+~
+door~
+0 -1 713
+D5
+You see nothing special.
+~
+door~
+0 -1 715
+S
+#715
+A well used path~
+   You are at the start of an old path.  The path is old, but it looks like it
+is still being used.  You wonder what could live down here?  There is an old
+ladder leading upwards and a path continuing south.
+~
+7 0 0
+D2
+You see nothing special.
+~
+door~
+0 -1 716
+D4
+You see nothing special.
+~
+door~
+0 -1 714
+S
+#716
+Well used path~
+   This path has seen better days, it is worn and full of mud holes.  Its a 
+good thing you have on your old clothes.  The path leads north and south.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 715
+D2
+You see nothing special.
+~
+door~
+0 -1 717
+S
+#717
+Entrance to the troll village~
+   You are at the entrance of a strange village.  What could live here?  The 
+path continues north and east.  This village looks very busy from the beating 
+that it's paths have taken.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 716
+D1
+You see nothing special.
+~
+door~
+0 -1 718
+S
+#718
+Path through village~
+   You find yourself on a very busy path in the troll village.  There are
+trolls running about all over the place doing their business.  The trolls 
+seem like a very hard working and friendly race.  The path continues to the
+south and east, the entrance to the village lies to the west.
+~
+7 0 1
+D1
+You see nothing special.
+~
+door~
+0 -1 719
+D2
+You see nothing special.
+~
+door~
+0 -1 723
+D3
+You see nothing special.
+~
+door~
+0 -1 717
+S
+#719
+Path through village~
+   You find yourself on a very busy path in the troll village, there are 
+trolls running about all over the place doing their business.  The trolls 
+seem like a very hard working and friendly race.  The path continues to the 
+south, west and east, to the north is a small forest.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 760
+D1
+You see nothing special.
+~
+door~
+0 -1 720
+D2
+You see nothing special.
+~
+door~
+0 -1 724
+D3
+You see nothing special.
+~
+door~
+0 -1 718
+S
+#720
+Path through village~
+   You find yourself on a very busy path in the troll village, there are 
+trolls running about all over the place doing their business.  The trolls 
+seem like a very hard working and friendly race.  The path continues south 
+and west, an old well can be seen to the east.
+~
+7 0 1
+D1
+You see nothing special.
+~
+door~
+0 -1 721
+D2
+You see nothing special.
+~
+door~
+0 -1 725
+D3
+You see nothing special.
+~
+door~
+0 -1 719
+S
+#721
+At a deep well~
+   You are at an old well, this well looks very deep.  The well seems to be 
+used a little, but the fountain still seems to be the main choice for water, 
+perhaps it's a social thing.  This place does not look like a social hangout.
+The path here is very worn and muddy so somebody must use it for something.  I
+wonder what it is used for?  The well has a heavy wooden cover with a solid 
+lock to prevent any little trolls from meeting an unforeseen demise.  The only
+exit is the path to the west.
+~
+7 4 1
+D3
+You see nothing special.
+~
+west~
+0 -1 720
+D5
+an old wooden cover with a strong lock prevents entry to the well
+~
+cover~
+2 705 743
+S
+#722
+Corner of village~
+   You are standing in the corner of a very busy village, there are trolls 
+running about everywhere.  Do these guys ever take a break?  With all this
+action you would expect to see a great city, but this village is very modest.
+What could they be working at?  The path continues east and west as you
+notice a bend in the path to the south.
+~
+7 0 1
+D1
+You see nothing special.
+~
+door~
+0 -1 723
+D2
+You see nothing special.
+~
+door~
+0 -1 727
+D3
+~
+~
+0 -1 793
+S
+#723
+Path through village~
+   You find yourself on a very busy path in the troll village, there are 
+trolls running about all over the place doing their business.  The trolls 
+seem like a very hard working and friendly race.  The path continues to the 
+north, east and south, the corner of the village lies to the west.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 718
+D1
+You see nothing special.
+~
+door~
+0 -1 724
+D2
+You see nothing special.
+~
+door~
+0 -1 728
+D3
+You see nothing special.
+~
+door~
+0 -1 722
+S
+#724
+Path through village~
+   You find yourself on a very busy path in the troll village, there are 
+trolls running about all over the place doing their business.  The trolls 
+seem like a very hard working and friendly race.  The path continues to the 
+north, west and east, to the south is the village center.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 719
+D1
+You see nothing special.
+~
+door~
+0 -1 725
+D2
+You see nothing special.
+~
+door~
+0 -1 729
+D3
+You see nothing special.
+~
+door~
+0 -1 723
+S
+#725
+Path through village~
+   You find yourself on a very busy path in the troll village, there are 
+trolls running about all over the place doing their business.  The trolls 
+seem like a very hard working and friendly race.  The path continues to the 
+north, south and west.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 720
+D2
+You see nothing special.
+~
+door~
+0 -1 730
+D3
+You see nothing special.
+~
+door~
+0 -1 724
+S
+#726
+Dirty tavern~
+   You are in the dirtiest bar you have ever seen.  The customers are filthy,
+the tables are filthy, the staff is filthy, oh well you get the idea.  The
+bar is placed against the northern wall, behind the bar is a big burly troll.
+The bartender looks at you and says "I don't want any trouble.".  Perhaps you
+better listen to him, because he could probably bounce you from here to 
+Midgaard. The only exit is south where you entered from
+~
+7 136 0
+D2
+You see nothing special.
+~
+door~
+0 -1 731
+E
+sign~
+The sign reads:
+BUY : buy a brew
+LIST : list of or finest ale
+~
+E
+sign~
+The sign reads:
+   BUY : buy an ale
+  LIST : list of our finest ales
+~
+S
+#727
+Corner of path~
+   You find yourself at a bend in a very busy path in the troll village, the 
+trolls are running about like ants.  You have to watch yourself because these
+trolls stop for nobody.  There are trees growing all along the edge of the 
+village.  The path continues north and east.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 722
+D1
+You see nothing special.
+~
+door~
+0 -1 728
+D2
+There is a odd looking branch sticking out of the bushes.
+~
+branch~
+8 -1 732
+S
+#728
+Path through village~
+   You find yourself on a very busy path in the troll village, there are 
+trolls running about all over the place doing their business.  The trolls seem
+like a very hard working and friendly race.  The path continues to the north,
+to the east lies the village center, south the corner of the village, and west
+is the corner of the path.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 723
+D1
+You see nothing special.
+~
+door~
+0 -1 729
+D2
+You see nothing special.
+~
+door~
+0 -1 733
+D3
+You see nothing special.
+~
+door~
+0 -1 727
+S
+#729
+Center of village~
+   You find yourself at the center of this strange city.  There is a beautiful
+marble fountain here, it appears as if this is where the elders of this race
+gather.  The fountain seems to be the hot spot of this village, there are 
+female trolls coming and going with their jugs, children playing in the
+fountain and older males sitting and talking.  The path continues east, west,
+south and north.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 724
+D1
+You see nothing special.
+~
+door~
+0 -1 730
+D2
+You see nothing special.
+~
+door~
+0 -1 734
+D3
+You see nothing special.
+~
+door~
+0 -1 728
+S
+#730
+Path through village~
+   You find yourself on a very busy path in the troll village, there are 
+trolls running about all over the place doing their business.  The trolls seem
+like a very hard working and friendly race.  The path continues north, to the
+east is the entrance to a tavern, west the village center, and to the south 
+you can see a small barter stand.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 725
+D1
+You see nothing special.
+~
+door~
+0 -1 731
+D2
+You see nothing special.
+~
+door~
+0 -1 735
+D3
+You see nothing special.
+~
+door~
+0 -1 729
+S
+#731
+Entrance to a tavern~
+   You are standing outside a dirty tavern.  The ground here is littered with
+garbage and broken bottles.  The trolls should learn how to slow down and
+clean up after themselves.  To the east you can see a large gate leading out
+of the village.  The trail to the east quickly vanishes into a heavy forest.  
+The path leads west while the tavern lies to the north.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 726
+D1
+~
+gate~
+2 713 776
+D3
+You see nothing special.
+~
+door~
+0 -1 730
+S
+#732
+Crawling through a hollow log~
+   You are crawling through a log.  The log is very small and cramped and you 
+can't wait till you wiggle the whole way through.  You see light to the north 
+and the south.
+~
+7 269 0
+D0
+The branch sticks out through a set of bushes.
+~
+branch~
+8 -1 727
+D2
+You see nothing special.
+~
+door~
+0 -1 737
+S
+#733
+Corner of village~
+   This is the corner of a very strange village, this village is not very big
+but it has to be the busiest village you have ever seen.  The trolls are great
+workers.  I wonder if you could get a couple to come home and paint your house
+for you?  The path continues north and east.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 728
+D1
+You see nothing special.
+~
+door~
+0 -1 734
+S
+#734
+Path through village~
+   You find yourself on a very busy path in the troll village, there are 
+trolls running about all over the place doing their business.  The trolls seem
+like a very hard working and friendly race.  To the east you see a small 
+barter stand, west is the corner of the village, to the north the village 
+center can be seen.
+~
+7 0 1
+D0
+You see nothing special.
+~
+door~
+0 -1 729
+D1
+You see nothing special.
+~
+door~
+0 -1 735
+D3
+You see nothing special.
+~
+door~
+0 -1 733
+S
+#735
+Small barter stand~
+   You are standing in front of a small barter stand.  A tiny troll stands 
+behind the stand selling his wares.  I wonder what he has for sale, or even 
+more importantly, what are his prices like?  I guess you will have to start 
+haggling with him and see. The path continues north and west.  There is a 
+sign on the stand.
+~
+7 128 1
+D0
+You see nothing special.
+~
+door~
+0 -1 730
+D3
+You see nothing special.
+~
+door~
+0 -1 734
+E
+sign~
+The sign reads:
+   BUY : buy an item
+  LIST : list of items
+ VALUE : value of an item
+  SELL : sell an item
+~
+S
+#736
+Hut of the troll hermit~
+   You are inside a very old hut.  The walls of this hut are covered in 
+cobwebs and the floor is covered in dust.  This place looks deserted, I wonder
+who lived here?  In a dark corner of the room you see an old bed made of 
+straw, in the center of the room there is a broken table with one chair.  Who
+ever lived here never had many guests.  The only exit is the path to the south.
+~
+7 9 0
+D2
+You see nothing special.
+~
+door~
+0 -1 741
+S
+#737
+Seldom used path~
+   You are on a small path, it has not seen a lot of use, you can barely pick
+out the trail.  This path has not been used in a while, I'd bet the trolls
+don't even know its here, because if they did it would certainly have more
+use than this.  I wonder where it leads?  The only exits are the hole in the
+log to your north and the path to your east.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 732
+D1
+You see nothing special.
+~
+door~
+0 -1 738
+S
+#738
+Seldom used path~
+   You are on a small path, it has not been used in a while, you can barely
+pick out the trail.  The trolls must know of this path.  I wonder where
+it leads?  The path continues east and west.
+~
+7 0 3
+D1
+You see nothing special.
+~
+door~
+0 -1 739
+D3
+You see nothing special.
+~
+door~
+0 -1 737
+S
+#739
+Seldom used path~
+   You are on a small path, it has not been used in a while, you can barely
+pick out the trail.  The trolls must know of this path.  I wonder where
+it leads? The path continues east and west.
+~
+7 0 3
+D1
+You see nothing special.
+~
+door~
+0 -1 740
+D3
+You see nothing special.
+~
+door~
+0 -1 738
+S
+#740
+Seldom used path~
+   You are on a small path, it has not been used in a while, you can barely
+pick out the trail.  The trolls must know of this path.  I wonder where
+it leads?  The path continues east and west.
+~
+7 0 3
+D1
+You see nothing special.
+~
+door~
+0 -1 741
+D3
+You see nothing special.
+~
+door~
+0 -1 739
+S
+#741
+Outside an old hut~
+   The small path has come to an end and you find yourself standing in front
+of an old hut.  I wonder if anybody still lives here?  The hut is very old
+and looks about to fall down.  Maybe we could get a couple of those big trolls
+to come and fix it up for you, you always wanted a summer home, but I wonder
+is it still empty?  The path leads west and the hut is north.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 736
+D3
+You see nothing special.
+~
+door~
+0 -1 740
+S
+#742
+Crystal clear pool~
+   You are in a small crack in the tunnel wall.  In the center of this 
+small chamber is a very tiny pool.  The pool seems to have magical powers
+of some kind because there are flowers thriving all about this dark cave.
+How can they grow without sunlight?  A small trickle of water from the 
+pool flows out into the tunnel.  This truly is a magical place.
+~
+7 9 0
+D3
+A small trickle of water flows out through the wall.
+~
+trickle~
+9 -1 706
+S
+#743
+Climbing on a rope~
+   You are climbing on a rope that descends into a deep well, the well looks
+very old and you hear strange noises coming from below.  I wonder what could
+be down there?  Why was the cover locked?  You can see the cover above you
+and nothing but darkness below.
+~
+7 13 0
+D4
+the bottom of an old wooden cover blocks the way upward
+~
+cover~
+1 -1 721
+D5
+You see nothing special.
+~
+door~
+0 -1 744
+S
+#744
+Climbing on a rope~
+   You are climbing on a rope that descends into a deep well, the well looks 
+very old and you hear strange noises coming from below.  I wonder what could 
+be down there?  Why was the cover locked?  You see the rope above you and 
+nothing but darkness below.
+~
+7 13 0
+D4
+You see nothing special.
+~
+door~
+0 -1 743
+D5
+You see nothing special.
+~
+door~
+0 -1 745
+S
+#745
+Bottom of the well~
+   You let go of the rope to find yourself standing in 4 feet of dirty water,
+the water is full of leaches and waste.  It looks as if the trolls use the 
+same water for drinking, bathing(if they do at all), and waste disposal.  The
+thought of that makes you sick and you almost add some waste of your own.  You
+hear strange noises coming from somewhere, but where?  The only exit is the
+rope that you climbed down here on.
+~
+7 13 0
+D3
+You notice a lose stone on the well wall.
+~
+stone~
+8 -1 746
+D4
+You see nothing special.
+~
+door~
+0 -1 744
+S
+#746
+Strange set of tunnels~
+   You push the block of stone away to reveal a strange set of tunnels, the
+tunnel too is full of leaches and waste.  The well is to the east and the
+tunnel continues to the west as the strange noises get louder.
+~
+7 9 0
+D1
+You notice a lose stone on the tunnel wall.
+~
+stone~
+8 -1 745
+D3
+You see nothing special.
+~
+door~
+0 -1 747
+S
+#747
+Strange set of tunnels~
+   As you wade through the waste filled water, the urge to puke gets stronger
+and stronger.  The leaches here are huge, and hopefully they will not take a
+liking to your skin.  The tunnel continues to the east, to the west you see
+a bend in the tunnel as the noises get louder.
+~
+7 9 0
+D1
+You see nothing special.
+~
+door~
+0 -1 746
+D3
+You see nothing special.
+~
+door~
+0 -1 748
+S
+#748
+Bend in the tunnel~
+   You find yourself up to your neck in dirty water, and at a bend in a very
+strange set of tunnels.  You are still not sure if the trolls are using these
+tunnels for drinking purposes or waste disposal, or both.  You shiver at the
+thought of the latter idea and head forward.  The tunnel continues east and
+south as the noises grow louder.
+~
+7 13 0
+D1
+You see nothing special.
+~
+door~
+0 -1 747
+D2
+You see nothing special.
+~
+door~
+0 -1 749
+S
+#749
+Strange set of tunnels~
+   As you wade through the waste filled water, the urge to puke gets stronger
+and stronger.  The leaches here are huge, and hopefully they will not take a
+liking to your skin.  To the north you see a bend in the tunnel and the tunnel
+continues to the south as the noises get louder.
+~
+7 9 0
+D0
+You see nothing special.
+~
+door~
+0 -1 748
+D2
+You see nothing special.
+~
+door~
+0 -1 750
+S
+#750
+Strange set of tunnels~
+   As you wade through the waste filled water, the urge to puke gets stronger
+and stronger.  The leaches here are huge, and hopefully they will not take a
+liking to your skin.  The tunnel continues to the north and you see a bend in
+the tunnel to the south as the noises get louder.
+~
+7 9 0
+D0
+You see nothing special.
+~
+door~
+0 -1 749
+D2
+You see nothing special.
+~
+door~
+0 -1 751
+S
+#751
+Bend in the tunnel~
+   You find yourself up to your neck in dirty water, and at a bend in a very
+strange set of tunnels.  You are still not sure if the trolls are using these
+tunnels for drinking purposes or waste disposal, or both.  You shiver at the
+thought of the latter idea and head forward.  The tunnel continues north and
+east as the noises grow louder.
+~
+7 13 0
+D0
+You see nothing special.
+~
+door~
+0 -1 750
+D1
+You see nothing special.
+~
+door~
+0 -1 752
+S
+#752
+Strange set of tunnels~
+   As you wade through the waste filled water, the urge to puke gets stronger
+and stronger.  The leaches here are huge, and hopefully they will not take a
+liking to your skin.  You notice a bend in the tunnel to the west and the east
+as the noises grow louder.
+~
+7 9 0
+D1
+You see nothing special.
+~
+door~
+0 -1 753
+D3
+You see nothing special.
+~
+door~
+0 -1 751
+S
+#753
+Bend in the tunnel~
+   You find yourself up to your neck in dirty water, and at a bend in a very
+strange set of tunnels.  You are still not sure if the trolls are using these
+tunnels for drinking purposes or waste disposal, or both.  You shiver at the
+thought of the latter idea and head forward.  You can feel cold water jetting
+at your feet from a crack in the old pipe.  The tunnel continues west and to
+the north the noises grow louder.
+~
+7 13 0
+D0
+You see nothing special.
+~
+door~
+0 -1 754
+D2
+Water flows into this tunnel from a crack in the pipe.
+~
+crack pipe~
+9 -1 784
+D3
+You see nothing special.
+~
+door~
+0 -1 752
+S
+#754
+Strange set of tunnels~
+   As you wade through the waste filled water, the urge to puke gets stronger
+and stronger.  The leaches here are huge, and hopefully they will not take a
+liking to your skin.  You notice a bend in the tunnel to the south and north
+as the noises grow louder.
+~
+7 9 0
+D0
+You see nothing special.
+~
+door~
+0 -1 755
+D2
+You see nothing special.
+~
+door~
+0 -1 753
+S
+#755
+Bend in the tunnel~
+   You find yourself up to your neck in dirty water, and at a bend in a very
+strange set of tunnels.  You are still not sure if the trolls are using these
+tunnels for drinking purposes or waste disposal, or both.  You shiver at the
+thought of the latter idea and head forward.  The tunnel continues south and
+you notice a bend in the tunnel to your west as the noises grow louder.
+~
+7 13 0
+D2
+You see nothing special.
+~
+door~
+0 -1 754
+D3
+You see nothing special.
+~
+door~
+0 -1 756
+S
+#756
+Bend in the tunnel~
+   You find yourself up to your neck in dirty water, and at a bend in a very
+strange set of tunnels.  You are still not sure if the trolls are using these
+tunnels for drinking purposes or waste disposal, or both.  You shiver at the
+thought of the latter idea and head forward.  To the east you see a bend in 
+the tunnel and the end of the tunnel is south as the noises grow louder.
+~
+7 13 0
+D1
+You see nothing special.
+~
+door~
+0 -1 755
+D2
+You see nothing special.
+~
+door~
+0 -1 757
+S
+#757
+End of the tunnel~
+   You find yourself at the end of this very strange tunnel, the screaming and
+hissing noises that you have been hearing are extremely loud now, and seem to
+be coming from directly above you.  The water at this end of the tunnel is not
+as deep as the rest, a strong gusher of water shoots up through an upwards
+passage from a hole in the tunnel floor.  The only exits are the tunnel to the
+north and the passage above.
+~
+7 13 0
+D0
+You see nothing special.
+~
+door~
+0 -1 756
+D4
+You see nothing special.
+~
+door~
+0 -1 758
+S
+#758
+Riding a gusher of water~
+  You try to climb up the passage and get caught in the gusher, you cannot go
+back down because the gusher is to strong, you might as well stay for the 
+ride, it looks kind of fun. Going uuuuppppppppppp!
+~
+7 1048717 0
+D4
+You see nothing special.
+~
+door~
+0 -1 759
+S
+#759
+A damp room under the fountain~
+   You find yourself in a very small room, the gusher passes directly through
+this room without slowing down.  You are very lucky to be out of the strong
+gusher because the exit above is very small, it looks like the gusher is the
+power behind the fountain you saw above.  The gusher is too strong to go back
+down, the only exit is up.
+~
+7 9 0
+D4
+You see nothing special.
+~
+door~
+0 -1 729
+S
+#760
+Trail through a small forest~
+   You leave the hustle and bustle of the village and enter a small forest, a
+narrow trail leads the way through this set of woods.  The trail is littered
+with garbage and there are some huts scattered along the edge of the trail,
+this looks like the slums of this tiny village.  The path continues north
+and south.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 761
+D2
+You see nothing special.
+~
+door~
+0 -1 719
+S
+#761
+Corner of the trail~
+   You are at the corner of a woodland trail, this is a strange set of woods,
+you have been in this area for a while and you have yet to see an animal of
+any type.  The trolls must not come this way very often, or they have no 
+desire to, it looks like the only trolls that frequent this area are the poor
+working class.  The trail continues south and east.
+~
+7 0 3
+D1
+You see nothing special.
+~
+door~
+0 -1 762
+D2
+You see nothing special.
+~
+door~
+0 -1 760
+S
+#762
+Trail through a small forest~
+   You find yourself traveling through a small trail on the outskirts of the
+village, this place is full of dirt and despair.  The woods surrounding the
+trail are dead and lifeless.  It is very clear that this is the slums of this
+tiny village.  The trail continues east and west, to the north you can see
+a dirty hut.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 772
+D1
+You see nothing special.
+~
+door~
+0 -1 763
+D3
+You see nothing special.
+~
+door~
+0 -1 761
+S
+#763
+Trail through a small forest~
+   You find yourself traveling through a small trail on the outskirts of the
+village, this place is full of dirt and despair.  The woods surrounding the
+trail are dead and lifeless.  It is very clear that this is the slums of this
+tiny village.  The trail continues east and west.
+~
+7 0 3
+D1
+You see nothing special.
+~
+door~
+0 -1 764
+D3
+You see nothing special.
+~
+door~
+0 -1 762
+S
+#764
+Trail through a small forest~
+   You find yourself traveling through a small trail on the outskirts of the
+village, this place is full of dirt and despair.  The woods surrounding the
+trail are dead and lifeless.  It is very clear that this is the slums of this
+tiny village.  The trail continues east and west, to the north you can see
+a dirty hut.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 773
+D1
+You see nothing special.
+~
+door~
+0 -1 765
+D3
+You see nothing special.
+~
+door~
+0 -1 763
+S
+#765
+Corner of the trail~
+   You are at the corner of a woodland trail, this is a strange set of woods,
+you have been in this area for a while and you have yet to see an animal of
+any type.  The trolls must not come this way very often, or they have no 
+desire to, it looks like the only trolls that frequent this area are the poor
+working class. The trail continues south and west.
+~
+7 0 3
+D2
+You see nothing special.
+~
+door~
+0 -1 766
+D3
+You see nothing special.
+~
+door~
+0 -1 764
+S
+#766
+Trail through a small forest~
+   You find yourself traveling through a small trail on the outskirts of the
+village, this place is full of dirt and despair.  The woods surrounding the
+trail are dead and lifeless.  It is very clear that this is the slums of this
+tiny village.  The trail continues north and south, to the east you can see
+a dirty hut.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 765
+D1
+You see nothing special.
+~
+door~
+0 -1 774
+D2
+You see nothing special.
+~
+door~
+0 -1 767
+S
+#767
+Trail through a small forest~
+   You find yourself traveling through a small trail on the outskirts of the
+village, this place is full of dirt and despair.  The woods surrounding the
+trail are dead and lifeless.  It is very clear that this is the slums of this
+tiny village.  The trail continues north and south.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 766
+D2
+You see nothing special.
+~
+door~
+0 -1 768
+S
+#768
+Trail through a small forest~
+   You find yourself traveling through a small trail on the outskirts of the
+village, this place is full of dirt and despair.  The woods surrounding the
+trail are dead and lifeless.  It is very clear that this is the slums of this
+tiny village.  The trail continues north and south, to the east you can see
+a dirty hut.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 767
+D1
+You see nothing special.
+~
+door~
+0 -1 775
+D2
+You see nothing special.
+~
+door~
+0 -1 769
+S
+#769
+End of the trail~
+   The small trail that you have been traveling on has quickly disappeared, 
+the woods are much thicker all of a sudden.  This is the end of the slums you
+guess. A thick set of woods block the way in all directions.  The only exit 
+is the trail to the north.
+~
+7 0 3
+D0
+You see nothing special.
+~
+door~
+0 -1 768
+D2
+a thick set of bushes block the way south
+~
+bush~
+8 -1 770
+S
+#770
+Outside a mysterious tent~
+   You find yourself in a clearing in some very heavy woods.  There is a tent
+to your east and you can still see the small forest to the north.  You see
+a very thick mist drifting out of the tent.  You wonder to yourself if you 
+are really welcome here?
+~
+7 4 3
+D0
+the bushes to the north are very thick
+~
+bush~
+8 -1 769
+D1
+You see nothing special.
+~
+door~
+0 -1 771
+S
+#771
+Inside the tent~
+   You find yourself inside a very large tent.  A large table sits in the
+middle of the room.  The walls of the tent are covered in bearskin and a 
+thick mist covers the floor.  On the table there is a crystal ball, some 
+cards, and a candle holder that appears to be made from a human skull.  The
+only exit is west.
+~
+7 8 0
+D3
+You see nothing special.
+~
+door~
+0 -1 770
+S
+#772
+Inside a dirty hut~
+   You are inside a very dirty hut, it is easy to tell that this place is
+poverty stricken.  In the corner is a small fireplace, a table with two old
+chairs is centered in the middle of the room, and the floor consists of some
+rotten wooden planks.  The only exit is the path to the south.
+~
+7 9 0
+D2
+You see nothing special.
+~
+door~
+0 -1 762
+D5
+A loose plank in a wooden section of the floor creaks beneath your feet.
+~
+plank~
+8 -1 16842
+E
+plank~
+A wooden plank covers up a small hole.
+~
+S
+#773
+Inside a dirty hut~
+   You are inside a very dirty hut, it is easy to tell that this place is
+poverty stricken.  In the corner is a small fireplace, a table with two old
+chairs is centered in the middle of the room, and the floor is just bare
+ground. The only exit is the path to the south.
+~
+7 9 0
+D2
+You see nothing special.
+~
+door~
+0 -1 764
+S
+#774
+Inside a dirty hut~
+   You are inside a very dirty hut, it is easy to tell that this place is
+poverty stricken.  In the corner is a small fireplace, a table with two old
+chairs is centered in the middle of the room, and the floor is just bare
+ground. The only exit is the path to the west.
+~
+7 9 0
+D3
+You see nothing special.
+~
+door~
+0 -1 766
+S
+#775
+Inside a dirty hut~
+    You are inside a very dirty hut, it is easy to tell that this place is
+poverty stricken.  In the corner is a small fireplace, a table with two old
+chairs is centered in the middle of the room, and the floor is just bare
+ground. The only exit is the path to the west.
+~
+7 9 0
+D3
+You see nothing special.
+~
+door~
+0 -1 768
+S
+#776
+Trail outside the village~
+   You find yourself outside the village gate.  The forest to the south
+is very dark, you can only guess as to what one might find lurking in the
+shadows. The cold wind blowing along the trail sends a chill up your 
+spine. The village lies to the west and the trail leads south into the
+dark forest.
+~
+7 0 3
+D2
+~
+~
+0 -1 777
+D3
+~
+gate~
+2 713 731
+S
+#777
+Trail through the deep woods~
+   You are on a trail in a very dark and gloomy forest.  The huge trees above
+block all the sunlight starving all other expected vegetation.  The forest is 
+cold and wet and you long for the moment to be out of these creepy woods.  The
+trail continues south and the forest entrance lies to the north.
+~
+7 1 3
+D0
+~
+~
+0 -1 776
+D2
+~
+~
+0 -1 778
+S
+#778
+Trail through the deep woods~
+   You are deep inside a terrible growth of trees.  The wind blows along the 
+trail and howls through the trees.  The forest floor is empty of life with 
+the exception of the large mushrooms and mosses growing on the roots of the 
+large trees.  The trail continues north and south.
+~
+7 1 3
+D0
+~
+~
+0 -1 777
+D2
+~
+~
+0 -1 779
+S
+#779
+A bend in the trail~
+   You find yourself at a bend in the trail.  An opening in the trees allows
+a small beam to enter from the sky above.  It's not summer in the Tarion
+desert but the dull beam of light seems to warm your very soul.  The trail
+continues north and south.
+~
+7 1 3
+D0
+~
+~
+0 -1 778
+D1
+~
+~
+0 -1 780
+S
+#780
+Trail through the deep woods~
+   You are very cold, the wind blowing along the trail feels like its blowing 
+from all directions.  These woods are so dark.  Your mind starts playing 
+tricks on you and you believe every shadow and twig is moving towards you.  
+The trail continues east and west.
+~
+7 1 3
+D1
+~
+~
+0 -1 781
+D3
+~
+~
+0 -1 779
+S
+#781
+A bend in the trail~
+   The trail bends here and you wonder what lies beyond the next corner.  Will
+you ever find your way out of this darkness?  The wind whistles through the 
+tree tops as you suck it in and move on.  The trail continues west and south.
+~
+7 1 3
+D2
+~
+~
+0 -1 782
+D3
+~
+~
+0 -1 780
+S
+#782
+Trail through the deep woods~
+   You are walking through a dark forest.  The large trees above create a
+heavy carpet that blocks any light from entering into the forest below.  The
+wind whistling along the trail is cold.  The trail bends to the north and
+the forest entrance can be seen to the south.
+~
+7 1 3
+D0
+~
+~
+0 -1 781
+D2
+~
+~
+0 -1 783
+S
+#783
+Before a large moat~
+   You find yourself in front of a large moat.  The large moat completely
+surrounds the large construction project to the south.  Across the moat you
+see what appears to be the early stages of a very large castle.  The lack 
+of a drawbridge makes you wonder how the workers get across the large moat.
+A trail leads north into a dark forest and the large moat to the south makes
+passage to the castle lot impossible.
+~
+7 0 3
+D0
+~
+~
+0 -1 782
+D2
+The deep moat prevents passage to the castle.
+~
+moat~
+10 -1 7772
+S
+#784
+Crawling through a pipe~
+   You are crawling through a dirty pipe.  The smell here is awful.  Why did 
+you climb in here in the first place?  The pipe is old and rusty.  The cold 
+water is making you shiver.  The pipe continues south and you notice a crack 
+in the pipe to the north.
+~
+7 9 0
+D0
+Water escapes through a crack into the tunnel to the north.
+~
+crack pipe~
+9 -1 753
+D2
+~
+~
+0 -1 785
+S
+#785
+Crawling through a pipe~
+   You are crawling through a pipe.  The water is cold and very dirty.  The
+smell in here is terrible.  The pipe is old and very rusty.  Where does this
+pipe lead?  What is its purpose?  The pipe continues north and south.
+~
+7 9 0
+D0
+~
+~
+0 -1 784
+D2
+~
+~
+0 -1 786
+S
+#786
+A bend in the pipe~
+   You are crawling around a bend in the old rusty pipe.  The dirty water 
+smells awful.  The water is very cold, you wonder how long your body can hold
+up under such cold conditions.  The pipe leads north and east.
+~
+7 265 0
+D0
+~
+~
+0 -1 785
+D1
+~
+~
+0 -1 787
+S
+#787
+Crawling through a pipe~
+   You are crawling through a pipe.  The water is very cold.  The smell
+of the toxic sludge makes you sick.  How do you get yourself into these
+things. The rust from the surrounding pipe has added a red tint to the
+mixture, you have never seen such a mess in your life.  The pipe flows
+east and west.
+~
+7 9 0
+D1
+~
+~
+0 -1 788
+D3
+~
+~
+0 -1 786
+S
+#788
+Crawling through a pipe~
+   You are so cold.  The chilling water has numbed all feeling in your finger 
+tips and toes.  The smell is making you sick.  The old pipe is small and you 
+are very constricted as you move.  The old pipe flows east and west.
+~
+7 9 0
+D1
+~
+~
+0 -1 789
+D3
+~
+~
+0 -1 787
+S
+#789
+Crawling through a pipe~
+   You an crawling through an old rusty pipe.  The water is cold, dirty and it 
+smells awful.  What is the purpose of this pipe and where does it lead?  The 
+pipe flows west and you notice a bend in the pipe to the east.
+~
+7 9 0
+D1
+~
+~
+0 -1 790
+D3
+~
+~
+0 -1 788
+S
+#790
+A bend in the pipe~
+   The bend in the pipe almost makes movement impossible, if it wasn't for
+the sludge and grime you would have been stuck for sure.  The old pipe has
+seen better days. The pipe continues west and south.
+~
+7 265 0
+D2
+~
+~
+0 -1 791
+D3
+~
+~
+0 -1 789
+S
+#791
+Crawling through a pipe~
+   The narrow pipe is very confining.  Every movement is limited.  You are 
+cold and don't know how much more of this you can take.  The pipe flows north
+and appears to open into a larger section to the south.
+~
+7 9 0
+D0
+~
+~
+0 -1 790
+D2
+~
+~
+0 -1 792
+S
+#792
+A drain under the moat~
+   You find yourself in a large drain under a large moat.  To the north
+you notice an opening to an old rusty pipe.  The moat above is protected by
+a large grate.  The cold water flows both ways through this drain.  The 
+sooner you get out of this place the better.
+~
+7 9 0
+D0
+~
+~
+0 -1 791
+D4
+The large grate prevents access to the moat.
+~
+grate~
+1 -1 7700
+S
+#793
+A well beaten path~
+   You are on a simple narrow trail just outside the troll village.  The
+village lies to the east and the trail leads north.  The path is well
+worn, the trolls must come this way often.
+~
+7 0 1
+D0
+~
+~
+0 -1 794
+D1
+~
+~
+0 -1 722
+S
+#794
+A bend in the path~
+   You are at a bend in the trail.  The simple path continues to the west
+and the south.  This looks like a very busy stretch of roadway.  The busy
+trolls can make any path look like that it seems.
+~
+7 0 0
+D2
+~
+~
+0 -1 793
+D3
+~
+~
+0 -1 795
+S
+#795
+A bend in the path~
+   You are rounding a turn on a small dirt trail.  The narrow path is very
+well used.  The trolls must frequent this area quite often.  The path bends
+east and south.
+~
+7 0 0
+D1
+~
+~
+0 -1 794
+D2
+~
+~
+0 -1 796
+S
+#796
+A well beaten path~
+   The trail is very narrow but well used.  Small bushes lie along the edge of
+the path.  The small path leads through a light forest and the scenery is 
+quite appealing to the eyes.  The path continues north and south.
+~
+7 0 0
+D0
+~
+~
+0 -1 795
+D2
+~
+~
+0 -1 797
+S
+#797
+A bend in the path~
+   The narrow path bends here.  This path has been used a lot over the years,
+it must be the worker trolls running around everywhere.  The path continues
+to the north and to the east.
+~
+7 0 0
+D0
+~
+~
+0 -1 796
+D1
+~
+~
+0 -1 798
+S
+#798
+A bend in the path~
+   You are at a bend in a small path.  The trail is really beaten down from
+the heavy traffic that passes this way.  There is a small hut to the south
+and the path continues west.
+~
+7 0 0
+D2
+~
+~
+0 -1 799
+D3
+~
+~
+0 -1 797
+S
+#799
+Hut of the troll foreman~
+   The hut is small and very messy.  At the back of the hut is a large desk
+covered with blueprints.  Crude stone tools lie all around the floor and hang
+from the walls.  The floor is very dirty and the place smells of sweat.  The
+windows on the side walls allow ample light into the workspace.  The only
+exit is the path to the north.
+~
+7 8 0
+D0
+~
+~
+0 -1 798
+S
+#0
+$~

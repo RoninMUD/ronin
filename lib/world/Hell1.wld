@@ -1,0 +1,2251 @@
+#25300
+The Path to the Reaper~
+   You are standing on a dimly lit path, sloping downwards into the gloom.
+Although your feet seem sure of you, the darkness makes you tremble with each
+step. Gravel and dirt seem to crawl over your shoes as you walk. Perhaps all
+that gravel isn't what it seems.
+~
+253 37145 0
+D4
+The dirt path leads up toward a winding cavern.
+~
+~
+0 -1 25391
+D5
+The dirt path to the Beyond lies humbly before you.
+~
+~
+0 0 25301
+S
+#25301
+The Reaper's Hold~
+   You are standing in a small cave. The room is dark, but from the center of
+the room, the darkness seems to glow from a patch of absolute blackness. A
+stench of smouldering flesh pervades the room, and a deathly chill grips 
+your bones.
+~
+253 134250521 0
+D4
+Salvation lies above and out of this horrible place.
+~
+~
+0 0 25300
+S
+#25302
+The Vestibule~
+   You are standing in the Vestibule at the entrance to the First Circle of
+Hell. There is a constant murmur in the air almost like a moaning wind. You
+listen closer and realize that it is actually the moaning of the damned. In
+the distance you see a river, and beyond that a city of some type.
+~
+253 36889 2
+D1
+A strange Plain spreads out before you.
+~
+~
+0 0 25303
+S
+#25303
+The Plain of Jars~
+   You are standing on a seemingly endless field. There are thousands upon 
+thousands of jars here, filled with all manner of human, and inhuman,
+specimens stretching in all directions as far as the eye can see. The 
+moaning of the damned continues unabated.
+~
+253 36888 2
+D2
+The Plain of Jars stretches onward.
+~
+~
+0 0 25304
+D3
+The Plain ends in a Vestibule to the west.
+~
+~
+0 0 25302
+E
+jars~
+
+  Tiny glass and crystalline jars filled with the intestines and
+fecal wastes, eyes, noses, and tongues of Hell's inhabitants lie
+spread neatly before you on this field.  Each is unique, like a
+snowflake, bearing a label of the date and name of the poor
+soul who once used the parts.
+
+~
+S
+#25304
+The Plain of Jars~
+   You are standing on a seemingly endless field. There are thousands upon 
+thousands of jars here, filled with all manner of human, and inhuman,
+specimens stretching in all directions as far as the eye can see. The   
+moaning of the damned continues unabated. 
+~
+253 36888 2
+D0
+The Plain of Jars stretches onward.
+~
+~
+0 0 25303
+D1
+The banks of a wine-colored river dip down to the east.
+~
+~
+0 0 25307
+D2
+The Plain of Jars stretches onward.
+~
+~
+0 0 25305
+E
+jars~
+
+  Tiny glass and crystalline jars filled with the intestines and
+fecal wastes, eyes, noses, and tongues of Hell's inhabitants lie
+spread neatly before you on this field.  Each is unique, like a
+snowflake, bearing a label of the date and name of the poor
+soul who once used the parts.
+
+~
+S
+#25305
+The Plain of Jars~
+   You are standing on a seemingly endless field. There are thousands upon 
+thousands of jars here, filled with all manner of human, and inhuman,  
+specimens stretching in all directions as far as the eye can see. The   
+moaning of the damned continues unabated. 
+~
+253 36888 2
+D0
+The Plain of Jars stretches onward.
+~
+~
+0 0 25304
+D1
+The banks of a wine-colored river dip down to the east.
+~
+~
+0 0 25308
+D2
+The Plain of Jars stretches onward.
+~
+~
+0 0 25306
+E
+jars~
+
+  Tiny glass and crystalline jars filled with the intestines and
+fecal wastes, eyes, noses, and tongues of Hell's inhabitants lie
+spread neatly before you on this field.  Each is unique, like a
+snowflake, bearing a label of the date and name of the poor
+soul who once used the parts.
+
+~
+S
+#25306
+The Plain of Jars~
+   You are standing on a seemingly endless field. There are thousands upon 
+thousands of jars here, filled with all manner of human, and inhuman,
+specimens stretching in all directions as far as the eye can see. The   
+moaning of the damned continues unabated. 
+~
+253 36888 2
+D0
+The Plain of Jars stretches onward.
+~
+~
+0 0 25305
+D1
+The banks of a wine-colored river dip down to the east.
+~
+~
+0 0 25309
+E
+jars~
+
+  Tiny glass and crystalline jars filled with the intestines and
+fecal wastes, eyes, noses, and tongues of Hell's inhabitants lie
+spread neatly before you on this field.  Each is unique, like a
+snowflake, bearing a label of the date and name of the poor
+soul who once used the parts.
+
+~
+S
+#25307
+The River Acheron~
+   You are standing on the banks of the river Acheron, the passage to the
+First Circle of Hell. An ungodly stench wafts off of its reddish waters,
+piercing your lungs with its putrescence. The powerful river occasionally
+surges into bone-breaking rapids, spitting forth the odd corpse or mutilated
+body part of the last individuals foolish enough to try crossing its
+threshold.
+~
+253 36888 6
+D0
+The River bends and spins in different abnormal directions, flowing everywhere.
+~
+~
+0 0 25307
+D1
+The River bends and spins in different abnormal directions, flowing everywhere.
+~
+~
+0 0 25307
+D2
+The River bends and spins in different abnormal directions, flowing everywhere.
+~
+~
+0 0 25308
+D3
+The Plain of Jars begins as the riverbanks climb upward.
+~
+~
+0 0 25304
+S
+#25308
+The River Acheron~
+   You are standing on the banks of the river Acheron, the passage to the
+First Circle  of Hell. An ungodly stench wafts off of its reddish waters,
+piercing your lungs with its putrescence. The powerful river occasionally
+surges into bone-breaking rapids, spitting forth the odd corpse or mutilated
+body part of the last individuals foolish enough to try crossing its
+threshold.  The river flows swiftly to the south. 
+~
+253 36888 6
+D0
+The River bends and spins in different abnormal directions, flowing everywhere.
+~
+~
+0 0 25307
+D1
+The banks push strangely into an unknown section of Upper Hell.
+~
+~
+0 0 25310
+D2
+The River bends and spins in different abnormal directions, flowing everywhere.
+~
+~
+0 0 25309
+D3
+The Plain of Jars begins as the riverbanks climb upward.
+~
+~
+0 0 25305
+S
+#25309
+The River Acheron~
+   You are standing on the banks of the river Acheron, the passage to the
+First Circle of Hell. An ungodly stench wafts off of its reddish waters,
+piercing your lungs with its putrescence. The powerful river occasionally
+surges into bone-breaking rapids, spitting forth the odd corpse or mutilated
+body part of the last individuals foolish enough to try crossing its
+threshold.
+~
+253 36888 6
+D0
+The River bends and spins in different abnormal directions, flowing everywhere.
+~
+~
+0 0 25308
+D1
+The banks push strangely into an unknown section of Upper Hell.
+~
+~
+0 0 25311
+D2
+The River bends and spins in different abnormal directions, flowing everywhere.
+~
+~
+0 0 25309
+D3
+The Plain of Jars begins as the riverbanks climb upward.
+~
+~
+0 0 25306
+S
+#25310
+The First Circle of Hell~
+   You are standing on a wide boulevard. Around you are the buildings
+occupied by the virtuous pagans, those souls who were not evil in their
+lifetimes, but did not believe in God. To the east, you can make out a large
+palace of some sort. The wailing of the damned grows louder as you
+approach it.
+~
+253 36888 1
+D2
+The boulevard of the First Pagan City pushes southward.
+~
+~
+0 0 25311
+S
+#25311
+The First Circle of Hell~
+   You are standing on a wide boulevard. Around you are the buildings
+occupied by the virtuous pagans, those souls who were not evil in their
+lifetimes, but did not believe in God. To the east, you can make out a large
+palace of some sort. The wailing of the damned grows louder as you
+approach it.
+~
+253 36888 1
+D0
+The boulevard of the First Pagan City pushes northward.
+~
+~
+0 0 25310
+D1
+The boulevard of the First Pagan City pushes eastward.
+~
+~
+0 0 25314
+D2
+The boulevard of the First Pagan City pushes southward.
+~
+~
+0 0 25312
+S
+#25312
+The First Circle of Hell~
+   You are standing on a wide boulevard. Around you are the buildings
+occupied by the virtuous pagans, those souls who were not evil in their
+lifetimes, but did not believe in God. To the east, you can make out a large
+palace of some sort. The wailing of the damned grows louder as you
+approach it.
+~
+253 36888 1
+D0
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25311
+D1
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25315
+D2
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25313
+S
+#25313
+The First Circle of Hell~
+   You are standing on a wide boulevard. Around you are the buildings
+occupied by the virtuous pagans, those souls who were not evil in their
+lifetimes, but did not believe in God. To the east, you can make out a large
+palace of some sort. The wailing of the damned grows louder as you
+approach it.
+~
+253 36888 1
+D0
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25312
+D1
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25316
+S
+#25314
+The First Circle of Hell~
+   You are standing on a wide boulevard. Around you are the buildings
+occupied by the virtuous pagans, those souls who were not evil in their
+lifetimes, but did not believe in God. To the east, you can make out a large
+palace of some sort. The wailing of the damned grows louder as you
+approach it.
+~
+253 36888 1
+D2
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25315
+D3
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25311
+S
+#25315
+The First Circle of Hell~
+   You are standing on a wide boulevard. Around you are the buildings
+occupied by the virtuous pagans, those souls who were not evil in their
+lifetimes, but did not believe in God. To the east, you can make out a large
+palace of some sort. The wailing of the damned grows louder as you
+approach it.
+~
+253 36888 1
+D0
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25314
+D2
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25316
+D3
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25312
+S
+#25316
+The First Circle of Hell~
+   You are standing outside the palace. The city continues away to the east
+and west. The wailing of the damned is louder still here. There are sounds
+emanating from the palace as if some large creature were destroying things.
+~
+253 36888 1
+D0
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25315
+D1
+The grand palace of Minos lies before you.
+~
+~
+0 0 25317
+D3
+The boulevard of the First Pagan City pushes onward.
+~
+~
+0 0 25313
+S
+#25317
+The Palace of Minos~
+   You are standing inside what seems to have once been a huge cavern. The
+walls are worn smooth with the passage of time, but are pitted and cracked as
+if some object or creature was slammed into them with incredible force.
+~
+253 134254621 0
+D3
+The palace of Minos empties out into the Pagan City to the west.
+~
+~
+0 0 25316
+D5
+A gateway to the lower levels of Hell is below you.
+~
+gateway~
+2 25322 25318
+E
+gateway~
+
+  This is a small gate reaching below the Palace and into the next Circle
+of Hell.  It appears to be jammed or locked in some way.
+
+~
+S
+#25318
+The Second Circle of Hell~
+   You are standing on the edge of a precipice overlooking a vast chasm. The 
+wailing of the damned is overwhelmed by the howling wind. You struggle to
+keep from falling over the edge. With each wail, it is as if a gust of wind
+comes up behind you, trying to push you over into the chasm.
+~
+253 32792 5
+D2
+The edge of the chasm continues.
+~
+~
+0 0 25319
+S
+#25319
+The Second Circle of Hell~
+   You are standing on the edge of a precipice overlooking a vast chasm. The 
+wailing of the damned is overwhelmed by the howl of the wind. Numerous
+wind devils flail about maliciously, seeking only to destroy.
+~
+253 36888 5
+D0
+The edge of the chasm continues.
+~
+~
+0 0 25318
+D2
+The edge of the chasm continues.
+~
+~
+0 0 25320
+S
+#25320
+The Second Circle of Hell~
+   You are standing on the edge of a precipice overlooking a vast chasm. The
+path winds tenuously around jagged pillars of rock that appear almost as if
+some mighty force had taken them and thrust them into the ground. Tiny dust
+devils wind about, whipping debris into your face and seemingly taunting you
+as you make your way. The wailing of the damned is overwhelmed by the howl
+of gale-force winds.
+~
+253 36888 5
+D0
+The edge of the chasm continues.
+~
+~
+0 0 25319
+D2
+The edge of the chasm continues.
+~
+~
+0 0 25321
+S
+#25321
+The Second Circle of Hell~
+   You are standing on the edge of a precipice overlooking a vast chasm. The
+path winds tenuously around jagged pillars of rock that appear almost as if
+some mighty force had taken them and thrust them into the ground. Tiny dust
+devils wind about, whipping debris into your face and seemingly taunting you
+as you make your way. The wailing of the damned is overwhelmed by the howl
+of gale-force winds.
+~
+253 36888 5
+D0
+The edge of the chasm continues.
+~
+~
+0 0 25320
+D2
+The edge of the chasm continues.
+~
+~
+0 0 25322
+S
+#25322
+The Second Circle of Hell~
+   You are standing on the edge of a precipice overlooking a vast chasm. The
+path winds tenuously around jagged pillars of rock that appear almost as if
+some mighty force had taken them and thrust them into the ground. Tiny dust
+devils wind about, whipping debris into your face and seemingly taunting you
+as you make your way. The wailing of the damned is overwhelmed by the howl
+of gale-force winds.
+~
+253 36888 5
+D0
+The edge of the chasm continues.
+~
+~
+0 0 25321
+D1
+A cliff looms to the east.
+~
+~
+0 0 25323
+S
+#25323
+The Second Circle of Hell~
+   You are standing at the base of an incredibly steep cliff overlooking a
+vast chasm. Looking out you can make out handholds along the cliff wall but
+you would need to be incredibly nimble to make the climb. There is a faint
+outline of a door on the wall to your north but there is no visible means of
+opening it.
+~
+253 36888 5
+D0
+There appears to be a door of some kind leading up to the next section.
+~
+slab~
+2 0 25325
+D1
+A small ledge reaches up toward the cliff overhang above.
+~
+ledge~
+11 0 25324
+D3
+The edge of the chasm pushes westward.
+~
+~
+0 0 25322
+E
+cliff~
+
+After close examination of the cliff wall, you note a small ledge that
+seems like the best place to try climbing.
+
+~
+E
+wall~
+
+After close examination of the cliff wall, you note a small ledge that
+seems like the best place to try climbing.
+
+~
+E
+outline door~
+
+  This appears to be a door of some kind leading up to the next section.
+
+~
+E
+slab~
+
+  It's a magical door in the stone here.
+
+~
+E
+ledge~
+
+  It's a small outcropping, perfect for a bit of quick climbing.
+
+~
+S
+#25324
+The Second Circle of Hell~
+   You are halfway to the top of the cliff. Jagged shards of basalt protrude
+seemingly randomly, making the handholds that much more treacherous than
+below. You can make out a ledge to the east if only you could climb that far.
+~
+253 134250520 5
+D1
+A small ledge leads up further toward the top of the cliff.
+~
+ledge~
+11 0 25325
+E
+ledge~
+
+  A second small ledge leads farther up the cliff to the next section.
+
+~
+S
+#25325
+The Second Circle of Hell~
+   You are standing on a very narrow ledge of shiny obsidian, the narrow
+precipice behind you looks even more intimidating from this vantage point.
+Sharp, pointed shards of rock on either side of the ledge enhance the
+importance of keeping your balance. Tiny lines of light give away a
+rectangular shape on the southern wall.
+~
+253 36888 5
+D1
+A precipice moves out beyond the chasm east.
+~
+~
+0 0 25326
+D2
+There appears to be a door of some kind leading down to the next section.
+~
+slab~
+2 -1 25323
+D3
+A ledge reaches down over the edge of the cliff below.
+~
+ledge~
+11 0 25324
+E
+outline door~
+
+  This appears to be a door of some kind leading down to the next section.
+
+~
+E
+slab~
+
+  It's a magical door in the stone here.
+
+~
+E
+ledge~
+
+  It's a small outcropping, perfect for a bit of quick climbing.
+
+~
+S
+#25326
+The Second Circle of Hell~
+   You are standing on the edge of a precipice overlooking a vast chasm. The 
+wailing of the damned is overwhelmed by the howling wind. You struggle to
+keep from falling over the edge. Random gusts of wind don't make your climb
+any easier.
+~
+253 36888 5
+D0
+A precipice moves out beyond the chasm north.
+~
+~
+0 0 25327
+D3
+A precipice moves out beyond the chasm west.
+~
+~
+0 0 25325
+S
+#25327
+The Second Circle of Hell~
+   You are standing on the edge of a precipice overlooking a vast chasm. The 
+wailing of the damned is overwhelmed by the howling wind. You struggle to
+keep from falling over the edge. Random gusts of wind don't make your climb
+any easier.
+~
+253 36888 5
+D0
+A precipice moves out beyond the chasm north.
+~
+~
+0 0 25328
+D2
+A precipice moves out beyond the chasm south.
+~
+~
+0 0 25326
+S
+#25328
+The Second Circle of Hell~
+   You are standing on the edge of a precipice overlooking a vast chasm. The 
+wailing of the damned is overwhelmed by the howling wind. You struggle to
+keep from falling over the edge. Random gusts of wind don't make your climb
+any easier.
+~
+253 36888 5
+D0
+A precipice moves out beyond the chasm north.
+~
+~
+0 0 25329
+D2
+A precipice moves out beyond the chasm south.
+~
+~
+0 0 25327
+S
+#25329
+The Second Circle of Hell~
+   The path wanders down from the precipice and into the Iron City of Dis.
+Foul creatures roam the city and dark shapes fill the sky. From the center
+of the city rises the Tower of Charybdis. Even from here you can feel the
+heat rising from the city.
+~
+253 36892 5
+D2
+A precipice moves out beyond the chasm south.
+~
+~
+0 0 25328
+D3
+The famed Iron City of Dis burns in the distance.
+~
+~
+0 0 25330
+S
+#25330
+The Iron City of Dis~
+   Cherry red buildings tower above you, their iron heated almost to the 
+point of melting. Screeches and howls echo eerily from the iron walls. 
+Dark shadows flit above you in the half-light. The Tower of Charybdis 
+looms close.
+~
+253 36888 1
+D1
+A path leads out of the city and down a precipice.
+~
+~
+0 0 25329
+D3
+The street continues toward the heart of Dis.
+~
+~
+0 0 25331
+S
+#25331
+The Iron City of Dis~
+   Cherry red buildings tower above you, their iron heated almost to the 
+point of melting. Screeches and howls echo eerily from the iron walls. 
+Dark shadows flit above you in the half-light. The Tower of Charybdis 
+looms close.
+~
+253 36888 1
+D1
+The street meanders on a path out of the city.
+~
+~
+0 0 25330
+D2
+The street continues toward the heart of Dis.
+~
+~
+0 0 25332
+S
+#25332
+The Iron City of Dis~
+   Cherry red buildings tower above you, their iron heated almost to the 
+point of melting. Screeches and howls echo eerily from the iron walls. 
+Dark shadows flit above you in the half-light. The Tower of Charybdis 
+looms close.
+~
+253 36888 1
+D0
+The street meanders on a path out of the city.
+~
+~
+0 0 25331
+D3
+A giant burning Tower stands at the center of Dis.
+~
+~
+0 0 25333
+S
+#25333
+The Iron Tower of Charybdis~
+   You are standing in the Iron Tower, home of Charybdis the Arch-Devil,
+Father of Shadow and Flame in the Second Circle of Hell. The dull gray walls
+rise above you to a dizzying height. Charred corpses litter the ground,
+evidence of Charybdis' malignant power.
+~
+253 134254621 0
+D1
+A street leads along some corners out of the heart of the City.
+~
+~
+0 0 25332
+D5
+A hole leads down into a cold, damp darkness below.
+~
+hole~
+9 0 25334
+E
+corpses~
+
+  The corpses of a thousand victims of Charybdis' fury line the floor
+around you in a strange blackened circle, giving audience to your
+possible demise.
+
+~
+E
+hole~
+
+  A large hole in the floor leads downward into cold darkness.
+
+~
+S
+#25334
+The Third Circle of Hell~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25335
+D2
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25342
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 -1 25335
+S
+#25335
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25336
+D2
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25343
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25334
+S
+#25336
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25337
+D2
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25344
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25335
+S
+#25337
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25338
+D2
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25345
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25336
+S
+#25338
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25339
+D2
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25346
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25337
+S
+#25339
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25340
+D2
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25347
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25338
+S
+#25340
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25341
+D2
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25348
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25339
+S
+#25341
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. There is a pathetic growth of some unidentifiable vegetation here.
+You are surrounded by a large swamp. Huge shapes litter the area, struggling
+feebly to escape the pull of the swamp. As you step, you feel the earth
+beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25334
+D2
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25349
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25340
+E
+growth vegetation~
+
+  A single balding head lies almost completely submerged here like
+a tiny island, sprouting moss and disgusting slimemolds in a
+human terrarium beneath your feet.
+
+~
+S
+#25342
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D0
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25334
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25343
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 -1 25343
+S
+#25343
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D0
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25335
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25344
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25342
+S
+#25344
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. There is a pathetic growth of some unidentifiable vegetation here.
+You are surrounded by a large swamp. Huge shapes litter the area, struggling
+feebly to escape the pull of the swamp. As you step, you feel the earth
+beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D0
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25336
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25345
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25343
+E
+growth vegetation~
+
+  A single balding head lies almost completely submerged here like
+a tiny island, sprouting moss and disgusting slimemolds in a
+human terrarium beneath your feet.
+
+~
+S
+#25345
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D0
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25337
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25346
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25344
+S
+#25346
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D0
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25338
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25347
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25345
+S
+#25347
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. You are surrounded by a large swamp. Huge shapes litter the area, 
+struggling feebly to escape the pull of the swamp. As you step, you feel the
+earth beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D0
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25339
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25348
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25346
+S
+#25348
+The Marsh of Styx~
+   This level of Hell is reserved for those who were gluttons and wasters as
+mortals. There is a pathetic growth of some unidentifiable vegetation here.
+You are surrounded by a large swamp. Huge shapes litter the area, struggling
+feebly to escape the pull of the swamp. As you step, you feel the earth
+beneath your feet ooze with the evil of this place.
+~
+253 36889 7
+D0
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25340
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25349
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25347
+E
+growth vegetation~
+
+  A single balding head lies almost completely submerged here like
+a tiny island, sprouting moss and disgusting slimemolds in a
+human terrarium beneath your feet.
+
+~
+S
+#25349
+The Marsh of Styx~
+   There is a large hole here in the center of the swamp, from which a foul
+stench emanates. It looks sturdy enough to climb down to the next circle. As
+you put your head near the hole, it almost seems to belch more stink, causing
+you to become nauseated. Most of the denizens of the swamp stay away from here
+for some reason. 
+~
+253 134254621 7
+D0
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25341
+D1
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25342
+D3
+The cold dampness of the murky Marsh of Styx extends to the horizon.
+~
+~
+0 0 25348
+D5
+A small hole in the marsh gives way, leading to an unknown section of Hell.
+~
+hole~
+9 -1 25445
+E
+hole~
+
+  A foul stink wafts out of the tiny hole in the marsh, signifying the
+next leg of your perilous trek.
+
+~
+S
+#25350
+Between the Gnarled Souls~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 561177 3
+D0
+The path extends north into the frayed forms of suicidal souls.
+~
+~
+0 -1 25351
+D2
+The path leads back toward the entrance of the Wood.
+~
+~
+0 -1 25447
+S
+#25351
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 36889 3
+D1
+The path through the Wood continues east.
+~
+~
+0 -1 25352
+D2
+The path curves to the south, leading toward the entrance of the Wood.
+~
+~
+0 -1 25350
+S
+#25352
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.  A light
+on a hill up ahead signifies a small clearing beyond some trees.
+~
+253 36889 3
+D3
+The path drifts back into the deep reaches of the Wood.
+~
+~
+0 -1 25351
+D4
+A short hill reaches up toward a clearing beyond the Wood.
+~
+~
+0 -1 25353
+S
+#25353
+Garden of Tumult~
+  Just behind a few smouldering souls, you find a patch of scorched
+earth.  This is a site of pure torture, where Satan himself is said
+to appear at the height of Reaping to sow his seeds of evil for a new
+season.  Nothing remotely good grows here now except for a few strands
+of devil-grass here and there.  Looking to the south, a strange fenceline
+encloses the path along one of the rows in the Garden.
+~
+253 36888 3
+D2
+The garden drifts south, narrowing down into a fencerow.
+~
+~
+0 -1 25354
+S
+#25354
+In the Rows of Sin~
+  Between the fenceposts, a row struggles along beneath the harsh red
+sky.  Spatters of blood and tattered cornhusks are strewn on the
+hardpan dirt.  The row is very narrow, allowing passage only to those
+who truly need punishment for the crimes of those in lower Hell.
+~
+253 37145 3
+D0
+The fencerow opens up abruptly to the north, expanding into the Garden.
+~
+~
+0 -1 25353
+D1
+The fencerow opens up abruptly to the east, expanding into the Garden.
+~
+~
+0 -1 25355
+S
+#25355
+Garden of Tumult~
+  Along a clearing, the wood begins again, taking new form from
+the tortured beings in the trees.  A scorched patch of cracked hardpan
+earth stretches out before you.  A lone set of fenceposts push
+staunchly northward deeper into the Garden.
+~
+253 36888 3
+D3
+The garden curves northwest, narrowing down into a fencerow.
+~
+~
+0 -1 25354
+D5
+A dark path leads among the souls below this hill, far into the Wood.
+~
+~
+0 -1 25494
+S
+#25356
+Between the Gnarled Souls~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 561177 3
+D0
+The path extends north into the frayed forms of suicidal souls.
+~
+~
+0 -1 25357
+D3
+The path leads back toward the entrance of the Wood.
+~
+~
+0 -1 25447
+S
+#25357
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 36889 3
+D1
+The path through the Wood continues east.
+~
+~
+0 -1 25358
+D2
+The path curves to the south, leading toward the entrance of the Wood.
+~
+~
+0 -1 25356
+S
+#25358
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.  A light
+on a hill up ahead signifies a small clearing beyond some trees.
+~
+253 36889 3
+D3
+The path drifts back into the deep reaches of the Wood.
+~
+~
+0 -1 25357
+D4
+A short hill reaches up toward a clearing beyond the Wood.
+~
+~
+0 -1 25359
+S
+#25359
+Garden of Tumult~
+  Just behind a few smouldering souls, you find a patch of scorched
+earth.  This is a site of pure torture, where Satan himself is said
+to appear at the height of Reaping to sow his seeds of evil for a new
+season.  Nothing remotely good grows here now except for a few strands
+of devil-grass here and there.  Looking to the south, a strange fenceline
+encloses the path along one of the rows in the Garden.
+~
+253 36888 3
+D2
+The garden drifts south, narrowing down into a fencerow.
+~
+~
+0 -1 25360
+S
+#25360
+In the Rows of Sin~
+  Between the fenceposts, a row struggles along beneath the harsh red
+sky.  Spatters of blood and tattered cornhusks are strewn on the
+hardpan dirt.  The row is very narrow, allowing passage only to those
+who truly need punishment for the crimes of those in lower Hell.
+~
+253 37145 3
+D0
+The fencerow opens up abruptly to the north, expanding into the Garden.
+~
+~
+0 -1 25359
+D1
+The fencerow opens up abruptly to the east, expanding into the Garden.
+~
+~
+0 -1 25361
+S
+#25361
+Garden of Tumult~
+  Along a clearing, the wood begins again, taking new form from
+the tortured beings in the trees.  A scorched patch of cracked hardpan
+earth stretches out before you.  A lone set of fenceposts push
+staunchly northward deeper into the Garden.
+~
+253 36888 3
+D3
+The garden curves northwest, narrowing down into a fencerow.
+~
+~
+0 -1 25360
+D5
+A dark path leads among the souls below this hill, far into the Wood.
+~
+~
+0 -1 25496
+S
+#25362
+Between the Gnarled Souls~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 561177 3
+D0
+The path extends north into the frayed forms of suicidal souls.
+~
+~
+0 -1 25363
+D2
+The path leads back toward the entrance of the Wood.
+~
+~
+0 -1 25447
+S
+#25363
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 36889 3
+D1
+The path through the Wood continues east.
+~
+~
+0 -1 25364
+D2
+The path curves to the south, leading toward the entrance of the Wood.
+~
+~
+0 -1 25362
+S
+#25364
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.  A light
+on a hill up ahead signifies a small clearing beyond some trees.
+~
+253 36889 3
+D3
+The path drifts back into the deep reaches of the Wood.
+~
+~
+0 -1 25363
+D4
+A short hill reaches up toward a clearing beyond the Wood.
+~
+~
+0 -1 25365
+S
+#25365
+Garden of Tumult~
+  Just behind a few smouldering souls, you find a patch of scorched
+earth.  This is a site of pure torture, where Satan himself is said
+to appear at the height of Reaping to sow his seeds of evil for a new
+season.  Nothing remotely good grows here now except for a few strands
+of devil-grass here and there.  Looking to the south, a strange fenceline
+encloses the path along one of the rows in the Garden.
+~
+253 36888 3
+D2
+The garden drifts south, narrowing down into a fencerow.
+~
+~
+0 -1 25366
+S
+#25366
+In the Rows of Sin~
+  Between the fenceposts, a row struggles along beneath the harsh red
+sky.  Spatters of blood and tattered cornhusks are strewn on the
+hardpan dirt.  The row is very narrow, allowing passage only to those
+who truly need punishment for the crimes of those in lower Hell.
+~
+253 37145 3
+D0
+The fencerow opens up abruptly to the north, expanding into the Garden.
+~
+~
+0 -1 25365
+D1
+The fencerow opens up abruptly to the east, expanding into the Garden.
+~
+~
+0 -1 25367
+S
+#25367
+Garden of Tumult~
+  Along a clearing, the wood begins again, taking new form from
+the tortured beings in the trees.  A scorched patch of cracked hardpan
+earth stretches out before you.  A lone set of fenceposts push
+staunchly northward deeper into the Garden.
+~
+253 36888 3
+D3
+The garden curves northwest, narrowing down into a fencerow.
+~
+~
+0 -1 25366
+D5
+A dark path leads among the souls below this hill, far into the Wood.
+~
+~
+0 -1 25491
+S
+#25368
+Between the Gnarled Souls~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 561177 3
+D0
+The path extends north into the frayed forms of suicidal souls.
+~
+~
+0 -1 25369
+D3
+The path leads back toward the entrance of the Wood.
+~
+~
+0 -1 25447
+S
+#25369
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 36889 3
+D1
+The path through the Wood continues east.
+~
+~
+0 -1 25370
+D2
+The path curves to the south, leading toward the entrance of the Wood.
+~
+~
+0 -1 25368
+S
+#25370
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.  A light
+on a hill up ahead signifies a small clearing beyond some trees.
+~
+253 36889 3
+D3
+The path drifts back into the deep reaches of the Wood.
+~
+~
+0 -1 25369
+D4
+A short hill reaches up toward a clearing beyond the Wood.
+~
+~
+0 -1 25371
+S
+#25371
+Garden of Tumult~
+  Just behind a few smouldering souls, you find a patch of scorched
+earth.  This is a site of pure torture, where Satan himself is said
+to appear at the height of Reaping to sow his seeds of evil for a new
+season.  Nothing remotely good grows here now except for a few strands
+of devil-grass here and there.  Looking to the south, a strange fenceline
+encloses the path along one of the rows in the Garden.
+~
+253 36888 3
+D2
+The garden drifts south, narrowing down into a fencerow.
+~
+~
+0 -1 25372
+S
+#25372
+In the Rows of Sin~
+  Between the fenceposts, a row struggles along beneath the harsh red
+sky.  Spatters of blood and tattered cornhusks are strewn on the
+hardpan dirt.  The row is very narrow, allowing passage only to those
+who truly need punishment for the crimes of those in lower Hell.
+~
+253 37145 3
+D0
+The fencerow opens up abruptly to the north, expanding into the Garden.
+~
+~
+0 -1 25371
+D1
+The fencerow opens up abruptly to the east, expanding into the Garden.
+~
+~
+0 -1 25373
+S
+#25373
+Garden of Tumult~
+  Along a clearing, the wood begins again, taking new form from
+the tortured beings in the trees.  A scorched patch of cracked hardpan
+earth stretches out before you.  A lone set of fenceposts push
+staunchly northward deeper into the Garden.
+~
+253 36888 3
+D3
+The garden curves northwest, narrowing down into a fencerow.
+~
+~
+0 -1 25372
+D5
+A dark path leads among the souls below this hill, far into the Wood.
+~
+~
+0 -1 25498
+S
+#25374
+Between the Gnarled Souls~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 561177 3
+D0
+The path extends north into the frayed forms of suicidal souls.
+~
+~
+0 -1 25375
+D2
+The path leads back toward the entrance of the Wood.
+~
+~
+0 -1 25447
+S
+#25375
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+253 36889 3
+D1
+The path through the Wood continues east.
+~
+~
+0 -1 25376
+D2
+The path curves to the south, leading toward the entrance of the Wood.
+~
+~
+0 -1 25374
+S
+#25376
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.  A light
+on a hill up ahead signifies a small clearing beyond some trees.
+~
+253 36889 3
+D3
+The path drifts back into the deep reaches of the Wood.
+~
+~
+0 -1 25375
+D4
+A short hill reaches up toward a clearing beyond the Wood.
+~
+~
+0 -1 25377
+S
+#25377
+Garden of Tumult~
+  Just behind a few smouldering souls, you find a patch of scorched
+earth.  This is a site of pure torture, where Satan himself is said
+to appear at the height of Reaping to sow his seeds of evil for a new
+season.  Nothing remotely good grows here now except for a few strands
+of devil-grass here and there.  Looking to the south, a strange fenceline
+encloses the path along one of the rows in the Garden.
+~
+253 36888 3
+D2
+The garden drifts south, narrowing down into a fencerow.
+~
+~
+0 -1 25378
+S
+#25378
+In the Rows of Sin~
+  Between the fenceposts, a row struggles along beneath the harsh red
+sky.  Spatters of blood and tattered cornhusks are strewn on the
+hardpan dirt.  The row is very narrow, allowing passage only to those
+who truly need punishment for the crimes of those in lower Hell.
+~
+253 37145 3
+D0
+The fencerow opens up abruptly to the north, expanding into the Garden.
+~
+~
+0 -1 25377
+D1
+The fencerow opens up abruptly to the east, expanding into the Garden.
+~
+~
+0 -1 25379
+S
+#25379
+Garden of Tumult~
+  Along a clearing, the wood begins again, taking new form from
+the tortured beings in the trees.  A scorched patch of cracked hardpan
+earth stretches out before you.  A lone set of fenceposts push
+staunchly northward deeper into the Garden.
+~
+253 36888 3
+D3
+The garden curves northwest, narrowing down into a fencerow.
+~
+~
+0 -1 25378
+D5
+A dark path leads among the souls below this hill, far into the Wood.
+~
+~
+0 -1 25489
+S
+#25380
+The Fifth Circle of Hell~
+  You have entered into an area of great heat. The fluids below seem to boil
+and bubble if only to make you feel more of their heat. To your north you can
+vaguely see pink steam rising off a lake. Circling the lake you make out
+throngs of armored men running about.
+~
+253 626716 0
+S
+#25381
+The Mind of Liner~
+There are only flies here.
+~
+253 33298 0
+S
+#25382
+A Shimmering Cavernous Pathway~
+  You find yourself exploring the depths of a tiny cavern drifting
+down into the bowels of the earth.  A dark path drifts in the gloomy
+surroundings, striating lines of shimmering heat crossing your vision.
+The very dirt beneath your feet seems to quiver with life as you step
+along the paths of the damned.
+~
+253 561437 0
+D0
+The wall is covered in strange arcane symbols, dusty and faded.
+~
+airjgopijarrf~
+10 -1 25381
+D1
+Piles of boulders seem to have been stacked here, blocking
+any possible advance beyond them.
+~
+airjgopijarrf~
+10 -1 25381
+D2
+A torrent of heat blocks your vision and further passage
+into this particular cavern.
+~
+airjgopijarrf~
+10 -1 25381
+D3
+The wall is covered in strange arcane symbols, dusty and faded.
+~
+airjgopijarrf~
+10 -1 25381
+D4
+A seal covers the tunnel leading up toward the mortal realm.
+
+~
+seal ivory~
+2 16643 16643
+D5
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25383
+S
+#25383
+The Path to the Reaper~
+  As you continue your hopeless journey, points of light appear in
+side-caverns around you.  Several tunnels drift to all points of the
+compass, allowing for misdirection if you do not take care.  A sulfuric
+stench drifts from the lower bowels of the cavern below.
+~
+253 561437 0
+D0
+Piles of boulders seem to have been stacked here, blocking
+any possible advance beyond them.
+~
+pioafjgiopjh~
+9 -1 25381
+D1
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25384
+D2
+Piles of boulders seem to have been stacked here, blocking
+any possible advance beyond them.
+~
+pioafjgiopjh~
+9 -1 25381
+D3
+The wall is covered in strange arcane symbols, dusty and faded.
+~
+pioafjgiopjh~
+9 -1 25381
+D4
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+D5
+Piles of boulders seem to have been stacked here, blocking
+any possible advance beyond them.
+~
+pioafjgiopjh~
+9 -1 25381
+S
+#25384
+The Path to the Reaper~
+  As you continue your hopeless journey, points of light appear in
+side-caverns around you.  Several tunnels drift to all points of the
+compass, allowing for misdirection if you do not take care.  A sulfuric
+stench drifts from the lower bowels of the cavern below.
+~
+253 561437 0
+D0
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25385
+D1
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+D2
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+D3
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25383
+D4
+The wall is covered in strange arcane symbols, dusty and faded.
+~
+lkajffogijah~
+9 -1 25381
+D5
+Piles of boulders seem to have been stacked here, blocking
+any possible advance beyond them.
+~
+lkajffogijah~
+9 -1 25381
+S
+#25385
+A Shimmering Cavernous Pathway~
+  You find yourself exploring the depths of a tiny cavern drifting
+down into the bowels of the earth.  A dark path drifts in the gloomy
+surroundings, striating lines of shimmering heat crossing your vision.
+The very dirt beneath your feet seems to quiver with life as you step
+along the paths of the damned.
+~
+253 561437 0
+D0
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25383
+D1
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25386
+D2
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25384
+D3
+A torrent of heat blocks your vision and further passage
+into this particular cavern.
+~
+aiohfdoijar~
+10 -1 25381
+D4
+The wall is covered in strange arcane symbols, dusty and faded.
+~
+aiohfdoijar~
+10 -1 25381
+D5
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+S
+#25386
+A Shimmering Cavernous Pathway~
+  You find yourself exploring the depths of a tiny cavern drifting
+down into the bowels of the earth.  A dark path drifts in the gloomy
+surroundings, striating lines of shimmering heat crossing your vision.
+The very dirt beneath your feet seems to quiver with life as you step
+along the paths of the damned.
+~
+253 561437 0
+D0
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25384
+D1
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+D2
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25383
+D3
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25385
+D4
+The wall is covered in strange arcane symbols, dusty and faded.
+~
+iopafdhoiadfhi~
+10 -1 25381
+D5
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25387
+S
+#25387
+The Path to the Reaper~
+  As you continue your hopeless journey, points of light appear in
+side-caverns around you.  Several tunnels drift to all points of the
+compass, allowing for misdirection if you do not take care.  A sulfuric
+stench drifts from the lower bowels of the cavern below.
+~
+253 561437 0
+D0
+Piles of boulders seem to have been stacked here, blocking
+any possible advance beyond them.
+~
+oiafhdoiadhf~
+9 -1 25381
+D1
+Piles of boulders seem to have been stacked here, blocking
+any possible advance beyond them.
+~
+oiafhdoiadhf~
+9 -1 25381
+D2
+A torrent of heat blocks your vision and further passage
+into this particular cavern.
+~
+oiafhdoiadhf~
+9 -1 25381
+D3
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25388
+D4
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25386
+D5
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25384
+S
+#25388
+A Shimmering Cavernous Pathway~
+  You find yourself exploring the depths of a tiny cavern drifting
+down into the bowels of the earth.  A dark path drifts in the gloomy
+surroundings, striating lines of shimmering heat crossing your vision.
+The very dirt beneath your feet seems to quiver with life as you step
+along the paths of the damned.
+~
+253 561437 0
+D0
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25383
+D1
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25387
+D2
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25385
+D3
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+D4
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+D5
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25389
+S
+#25389
+A Shimmering Cavernous Pathway~
+  You find yourself exploring the depths of a tiny cavern drifting
+down into the bowels of the earth.  A dark path drifts in the gloomy
+surroundings, striating lines of shimmering heat crossing your vision.
+The very dirt beneath your feet seems to quiver with life as you step
+along the paths of the damned.
+~
+253 561437 0
+D0
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25390
+D1
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25383
+D2
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25384
+D3
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+D4
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25388
+D5
+A torrent of heat blocks your vision and further passage
+into this particular cavern.
+~
+oiahodfighadf~
+9 -1 25381
+S
+#25390
+A Shimmering Cavernous Pathway~
+  You find yourself exploring the depths of a tiny cavern drifting
+down into the bowels of the earth.  A dark path drifts in the gloomy
+surroundings, striating lines of shimmering heat crossing your vision.
+The very dirt beneath your feet seems to quiver with life as you step
+along the paths of the damned.
+~
+253 561437 0
+D0
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25382
+D1
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25385
+D2
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25389
+D3
+Piles of boulders seem to have been stacked here, blocking
+any possible advance beyond them.
+~
+oiahdfogihad~
+10 -1 25381
+D4
+The wall is covered in strange arcane symbols, dusty and faded.
+~
+oiahdfogihad~
+10 -1 25381
+D5
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25391
+S
+#25391
+A Shimmering Cavernous Pathway~
+  You find yourself exploring the depths of a tiny cavern drifting
+down into the bowels of the earth.  A dark path drifts in the gloomy
+surroundings, striating lines of shimmering heat crossing your vision.
+The very dirt beneath your feet seems to quiver with life as you step
+along the paths of the damned.
+~
+253 561437 0
+D0
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25384
+D1
+A single boulder seems to have been dropped here, blocking
+any possible advance beyond them.
+~
+aoihfdoiasdfoi~
+10 -1 25381
+D2
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25383
+D3
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25387
+D4
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25390
+D5
+The dirt path toils further into the caverns.
+~
+~
+0 -1 25300
+S
+#0
+$~

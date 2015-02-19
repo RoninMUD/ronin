@@ -1,0 +1,311 @@
+#5800
+pistol~
+Strange pistol~
+A strange looking pistol is laying here.~
+~
+6 3 16385
+5800 4 2 20
+2 20000 5000
+25
+E
+pistol~
+The pistol looks like it is set on maximum stun.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5801
+suit silvery~
+Silvery Suit~
+A silvery suit has been left here.~
+~
+9 16777219 9
+10 0 0 0
+5 40000 5000
+25
+E
+suit silvery~
+It is a quite small suit, but luckily it is made of elastic material.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 5
+A
+18 1
+B
+16777216
+#5802
+utility belt~
+Utility belt~
+Someone has left an utility belt here.~
+~
+15 0 2049
+150 1 -1 0
+2 10000 2000
+25
+E
+utility belt~
+The belt seems to have many small pouches. Looks like you could fit lots of
+stuff in it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 1
+A
+3 1
+#5803
+hoopak staff long~
+A Hoopak~
+A peculiar looking long staff is laying here.~
+$r hoopak makes a strange kind of whirling noise.~
+5 134217792 8193
+0 4 8 11
+8 50000 15000
+20
+E
+hoopak~
+It is some kind of staff-sling.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+2 2
+A
+39 14
+#5804
+lederhosen leder hosen~
+Pair of red lederhosen~
+A pair of good old time red lederhosen has been left here.~
+~
+9 156500032 33
+9 0 0 0
+4 15000 8000
+20
+E
+lederhosen leder hosen~
+This is a pair of good old time lederhosen and they are red.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#5805
+velvet cloak black~
+Black Velvet Cloak~
+A black velvet cloak is laying here.~
+~
+9 134220480 1025
+16 0 0 0
+1 100000 12500
+20
+E
+velvet cloak~
+It is black velvet cloak with red silk lining.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 25
+A
+19 2
+B
+8
+#5806
+karsch symbol~
+The Unholy Symbol of Lord Karsch~
+A symbol is laying here, absorbing all the light.~
+~
+1 134217793 65537
+0 0 -1 0
+1 10000 20000
+20
+E
+symbol karsch~
+It is a black round disc with some runes in it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 3
+B
+36
+#5807
+suit silk~
+Silk Suit~
+A silk suit has been left here.~
+~
+9 134220288 9
+0 0 0 0
+1 20000 10000
+20
+E
+suit silk~
+It is a beautiful black silk suit.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 42
+A
+17 -19
+#5808
+pin shining~
+a shining pin~
+A shining pin has been left here.~
+~
+11 524291 261
+0 0 0 0
+1 500 500
+100
+E
+pin shining~
+It is a square shining pin. In it reads "HMS TopKnot".
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5809
+bratwurst wurst~
+bratwurst~
+A delicious looking sausage has been left here.~
+~
+19 0 24577
+24 0 0 0
+12 82 3
+50
+E
+bratwurst wurst~
+It is a long thick delicious looking sausage. Looking at it makes you hungry.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5810
+coffin~
+A wooden coffin~
+A wooden coffin is laying here.~
+~
+15 64 0
+10000 5 -1 0
+20 12000 10000
+100
+E
+coffin~
+It is an ordinary looking wooden coffin.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5811
+tube metal long base rotating box~
+A long metal tube~
+A long metal tube pointing to the hole in the globe is resting on a base.~
+~
+12 0 0
+0 0 0 0
+10000 1020102 300300
+100
+E
+tube metal long base rotating box~
+As you examine the curious tube you notice some switches and buttons on it.
+It looks like it once turned all around its base, but now it's stuck...
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#5812
+key small silver~
+a small silver key~
+A small silver key is lying on the floor.~
+~
+18 0 16385
+5812 0 0 0
+1 1000 1000
+100
+E
+key small silver~
+The key looks to fit in some small lock.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

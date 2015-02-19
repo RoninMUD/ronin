@@ -1,0 +1,619 @@
+#800
+The Entrance to the Sphinx~
+    You are standing in the entrance to the lost Egyptian sphinx. Inside it is
+rumored to hold countless treasures worthy of explorers like yourself. It is
+also said that this place is cursed and all who enter shall never return. You
+must now weigh the benefits and the risks and make a decision to go on or turn
+back!
+~
+8 13 0
+D0
+~
+~
+0 -1 10553
+D1
+~
+~
+0 -1 10526
+D2
+~
+~
+0 -1 801
+S
+#801
+Inside the Sphinx~
+      Now inside the Sphinx you become aware of the size and majesty of this
+creation. An amazing feet of engineering and construction, it is unbelievable
+that it was built thousands of years ago. To the north is the way you came
+in, to the south lies the unknown!!
+~
+8 9 0
+D0
+~
+~
+0 -1 800
+D2
+~
+~
+0 -1 802
+S
+#802
+A small glowing room~
+      This room glows with a strange bright light. It is a light you have
+never seen before. It is a thousand times as bright as your carried light
+source. Yet there is no indication of the source of the light.
+~
+8 9 0
+D0
+~
+~
+0 -1 801
+D1
+~
+~
+0 -1 803
+S
+#803
+Golden Hall~
+      You are standing at the beginning of a long hallway. The floor and
+walls are made of stone and covered in dust. Upon closer inspection one can
+make out some of the strange symbols carved in the wall.
+~
+8 9 0
+D2
+~
+~
+0 -1 804
+D3
+~
+~
+0 -1 802
+S
+#804
+Golden Hall~
+    Now further down a dark hallway there is still no end in sight. The walls
+are cleaner than in the other room and the hieroglyphics are easier to see.
+You can't help but feel that if you understood this thousand-year-old story
+you'd be a lot better off.
+~
+8 9 0
+D0
+~
+~
+0 -1 803
+D2
+~
+~
+0 -1 805
+S
+#805
+Golden Corner~
+    The hallway ends here and to the west is a small door to a dark room.
+From here you can't see what's inside, so there's only one way to find out,
+go in.
+~
+8 9 0
+D0
+~
+~
+0 -1 804
+D3
+~
+~
+0 -1 806
+S
+#806
+A Tiny Corner~
+Here is a tiny corner with very little light and a lot of bats. To the
+south is a door into a very dark room. All about your heads bats flutter
+and squeal.
+~
+8 0 0
+D1
+~
+~
+0 -1 805
+D2
+A large wooden doorway.
+~
+door~
+1 -1 807
+S
+#807
+The room of Decision~
+      You are standing in the room of decision, it is here that you must 
+make the choice to move on forward or go back. As of now your journey has 
+been easier than what awaits you. To the south you notice a room different
+than you have seen.
+~
+8 9 0
+D0
+A large wooden doorway.
+~
+door~
+1 -1 806
+D1
+~
+~
+0 -1 809
+D2
+A large wooden doorway.
+~
+door~
+1 -1 808
+S
+#808
+The First Tomb~
+      Here is the tomb of some Egyptian Pharaoh. The tomb is not glamorous 
+enough to suggest a great Pharaoh, but a Pharaoh non the less. All about
+the walls and floor are jewels and gold. The remains of those who came before
+you lie scattered about the floor. Wonder what KILLED them!!
+~
+8 8 0
+D0
+A large wooden doorway.
+~
+door~
+1 -1 807
+S
+#809
+The Passage~
+    This is a small passage through a stone wall, you can't see through to
+the other side. You must crawl through here though if you wish to travel
+further into the Sphinx.
+~
+8 9 0
+D1
+~
+~
+0 -1 810
+D3
+~
+~
+0 -1 807
+S
+#810
+End of the Passage~
+      You have reached the end of the passage through the wall. To the west
+there is a room that looks large enough to stand in. 
+~
+8 9 0
+D1
+~
+~
+0 -1 811
+D3
+~
+~
+0 -1 809
+S
+#811
+Entrance to a Tomb~
+    Crawling out of the cramped passage you now stand in a large room with
+exits to the north and south. To the south you see a room that looks familiar,
+a lot like the tomb you passed earlier.
+~
+8 9 0
+D0
+~
+~
+0 -1 812
+D2
+A large wooden doorway.
+~
+door~
+1 -1 813
+D3
+~
+~
+0 -1 810
+S
+#812
+Golden Corner~
+      You are standing in a stone room that is triangular in shape. All over
+the wall are carvings of animals and hunters. The pictures seem to recant the
+story of a great hunt and feast. To the west is a great hallway not unlike
+the one you entered through.
+~
+8 9 0
+D2
+~
+~
+0 -1 811
+D3
+~
+~
+0 -1 814
+S
+#813
+The Second Tomb~
+    This is the second tomb of the Sphinx. Again not the tomb of a great
+Pharaoh but the bounty that lays around exceeds any you have seen in your
+travels. The remains of those who were "fortunate" enough to get this far
+litter the floor.
+~
+8 9 0
+D0
+A large wooden doorway.
+~
+door~
+1 -1 811
+S
+#814
+Golden Hall~
+    The southern end of a great hallway, it looks like the one you passed
+through on the way into the Sphinx. This part of the hall looks much less
+used than any you have seen. Possibly due to the fact that few have stayed
+alive in here this long.
+~
+8 9 0
+D0
+~
+~
+0 -1 815
+D1
+~
+~
+0 -1 812
+S
+#815
+Golden Hall~
+    You have moved further along in the hall but little has changed. Drawings
+still cover the wall as the story of the hunt rages on.
+~
+8 9 0
+D0
+~
+~
+0 -1 816
+D2
+~
+~
+0 -1 814
+S
+#816
+Golden Hall~
+    You have moved further along in the hall but little has changed. Drawings
+still cover the wall as the story of the hunt rages on.
+~
+8 9 0
+D0
+~
+~
+0 -1 817
+D2
+~
+~
+0 -1 815
+S
+#817
+End of the Golden Hall~
+     You have reached the end of the Golden Hallway. To the east there is an 
+exit. To the north there is a set of stone stairs leading up to what you 
+assume to be the second level of this ancient Sphinx.
+~
+8 9 0
+D1
+~
+~
+0 -1 818
+D2
+~
+~
+0 -1 816
+D4
+A large stone is here.
+~
+stone~
+1 -1 821
+S
+#818
+Room of Prayer~
+      This is the Egyptian room of prayer. It is the place were the mortal
+Egyptians could pay homage to their immortal supremes. It makes you wonder
+have you paid due respect to your gods lately?
+~
+8 9 0
+D0
+~
+~
+0 -1 819
+D3
+~
+~
+0 -1 817
+S
+#819
+Entrance to The Third Tomb~
+    Here is the entrance to the third tomb of the Sphinx. The entrance is
+guarded by two huge statues. The darkness makes the room seem cold but those
+statues make you shiver, Brrrr !
+~
+8 9 0
+D0
+A large wooden doorway.
+~
+door~
+1 -1 820
+D2
+~
+~
+0 -1 818
+S
+#820
+The Third Tomb~
+    This is the third and final tomb on this floor of the Sphinx.  Another
+average tomb that has gotten your hopes up, where is it, where is the tomb
+of Tutankhaman?
+~
+8 9 0
+D2
+A large wooden doorway.
+~
+door~
+1 -1 819
+S
+#821
+Second Level of the Sphinx~
+    You have managed to climb to the second level of the Sphinx. Things here
+are in a much better state of affairs than that in the rooms below. This place
+is obviously well taken care of, but by who?
+~
+8 9 0
+D2
+~
+~
+0 -1 822
+D5
+A large stone is here.
+~
+stone~
+1 -1 817
+S
+#822
+Priest's Chamber~
+    You have intruded into the private room of an ancient Egyptian priest.
+From the looks of things you have interrupted something ancient and holy. All
+about the walls hang holy symbols made of pure gold. You can not help but feel
+this may be the beginning of something terrible, perhaps the end of your own
+unholy life.
+~
+8 9 0
+D0
+~
+~
+0 -1 821
+D2
+~
+~
+0 -1 823
+S
+#823
+The Room of Sacrifice~
+    This is the room where the high priest performs all the religious sacrifice
+required by his gods. Many a life has been taken in this room. Careful or yours
+may be next.
+~
+8 9 0
+D0
+~
+~
+0 -1 822
+D2
+~
+~
+0 -1 824
+S
+#824
+The High Altar~
+    This is the altar where the cremation of sacrifices took place. The smell of
+burning flesh still fills the air. The altar looks like it is in excellent
+condition, almost as if it is ready to be fired up for the next victim.
+~
+8 9 0
+D0
+~
+~
+0 -1 823
+D3
+A large wooden doorway.
+~
+door~
+1 800 825
+S
+#825
+Private Chamber~
+    You have passed into a private chamber of some important member of the
+ancient Egyptian society. All about the room is scattered priceless golden
+artifacts and stone tablets with writings you don't understand. You get the
+feeling that you should not be in here, but hey nobody comes here anymore,
+RIGHT?
+~
+8 9 0
+D0
+~
+~
+0 -1 826
+D1
+A large wooden doorway.
+~
+door~
+1 800 824
+S
+#826
+Passage~
+    You have managed to crawl into a tiny passage to the north and south. You
+can't see what awaits in either direction, so you must travel on to find out.
+~
+8 1 0
+D0
+~
+~
+0 -1 827
+D2
+~
+~
+0 -1 825
+S
+#827
+Small Stone Chamber~
+    This is a tiny stone chamber. There is no light and the air is very stale
+with a stench of something you can't quite put your finger on. You do remember
+the smell from somewhere though. Perhaps in a past life in another time.
+~
+8 9 0
+D0
+~
+~
+0 -1 828
+D2
+~
+~
+0 -1 826
+S
+#828
+Open Area~
+    You are standing in a vast open area. It is a wonderful break from the
+paralyzing crawling about you have been doing to get here. You hope that
+he rest of your journey will be this easy, but somehow you doubt it.
+~
+8 9 0
+D2
+~
+~
+0 -1 827
+D4
+~
+~
+0 -1 829
+S
+#829
+Head of The Sphinx~
+    Your journey thus far has brought you into the head of the Sphinx. You feel
+as though you are getting close to your goal but you also feel you should be
+extra careful up here, for who knows what danger lurks!
+~
+8 9 0
+D2
+~
+~
+0 -1 830
+D5
+~
+~
+0 -1 828
+S
+#830
+The Lost Hallway~
+    Aptly named the lost hallway, due to the fact that you are probably the
+first person to see it since it was closed by the Egyptians thousands of years
+ago. Untouched by humans for centuries, its only visitors are wandering spirits
+of the ages.
+~
+8 9 0
+D0
+~
+~
+0 -1 829
+D1
+~
+~
+0 -1 831
+S
+#831
+Further Along the Hallway~
+    You have traveled further along the lost hallway and have found an exit
+to the north. From here you cant make out where the door leads, if only there
+was more light.
+~
+8 9 0
+D0
+~
+~
+0 -1 832
+D3
+~
+~
+0 -1 830
+S
+#832
+Entrance to Stairs~
+    You have come upon a set of stairs leading upward into what appears
+to be the next level of the Sphinx. From your own modest calculations you
+should already be in its head. So what is up there?
+~
+8 9 0
+D2
+~
+~
+0 -1 831
+D4
+~
+~
+0 -1 833
+S
+#833
+Tut's Tomb~
+   You have found it ! This is the tomb of Tutankhaman, the great Egyptian
+Pharaoh. All about the room are scattered artifacts that his family believed
+he would need in his journey to the next life. In the corner there are
+some jars and next to them are some tiny statues. It would be wise not to
+touch anything, after all this place is rumored to be cursed. However after
+the journey you just undertook you feel you deserve something for your
+trouble.
+~
+8 9 0
+D3
+A stone tablet is here.
+~
+tablet~
+1 -1 834
+D5
+~
+~
+0 -1 832
+S
+#834
+Tut's Inner Tomb~
+    This is the room that contains the actual sarcophagus of Tut. To open the
+tomb would make you the only person to ever see the mummy of Tut. Inside the
+tomb there maybe things you desire but there may also be things you can't
+handle.
+~
+8 9 0
+D1
+Large stone tablets.
+~
+tablet~
+1 -1 833
+S
+#844
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+8 576 0
+S
+#899
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+8 576 0
+S
+#0
+$~

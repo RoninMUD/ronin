@@ -1,0 +1,246 @@
+#14000
+ghost father man figure~
+Matteus, The Ghost~
+A transparent figure of a man is looking out of the window.
+~
+As you look at the figure, you see the madness burning behind those glassy
+eyes. The man standing in front of you has obviously been dead for ages, but
+he isn't a corpse anymore. He has become one of those heinous creatures, 
+a ghost.
+~
+42 268468392 -1000 Y
+45 -13 -15 10d10+3450 2d10+90
+1966 450000
+8 8 1
+95 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14001
+apparition girl marianne~
+The Apparition of Marianne~
+An apparition of a beautiful, young girl is here, sleeping in the bed.
+~
+You see a truly beautiful girl sleeping peacefully on the large canopy bed,
+partly covered by the bluish silk covers. Her face is a bit pale and after
+looking at her for a while, you notice a slight transparency in her features.
+You can just barely make out the bed through her figure.
+~
+11 16809992 -300 Y
+30 -10 -5 20d10+2100 1d8+45
+1900 280000
+8 8 2
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14002
+apparition girl susanne~
+The Apparition of Susanne~
+An apparition of a girl is standing here, looking out and waiting.
+~
+You see a strikingly beautiful girl standing by the panorama window, looking
+outside. Her flowing robes make rustling noises as she shifts her position from
+time to time. Suddenly, just by looking at her, you notice that you can see the
+scenery outside the window, even where she is standing.
+~
+11 16809992 -300 Y
+30 -10 -5 10d20+2000 1d8+45
+1500 280000
+8 8 2
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14003
+apparition girl annette~
+The Apparition of Annette~
+An apparition of a young girl is sitting here, combing her long, flowing hair.
+~
+You see a young girl combing her hair in front of a largish table mirror. Her 
+long, flowing hair has already turned almost white, and the change has surely
+been a shock to her, happening at such a young age. Just as you are about to 
+leave, she turns and looks straight at you. Her eyes have lost their life, and
+the face is also a dead one.
+~
+43 16809992 -750 Y
+30 -10 -9 20d10+2400 1d8+58
+2700 340000
+8 8 2
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14004
+shadow dream presence~
+The Dream Shadow~
+A shadowy presense rises from the center of the room and surrounds you.
+~
+As you try to find something specific to look at, the shadows all around you 
+take several different shapes. Suddenly the shadows form a figure of a man clad
+in dark clothing, and in the next moment, it resembles a huge black bird. All
+the time, during the changes, there are enough of shadows to fill the room.
+~
+43 806649864 -1000 Y
+55 -15 -15 10d10+12500 8d10+110
+500000 1000000
+8 8 0
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14005
+guardian tomb ancient statue~
+The Guardian of the Tomb~
+An ancient statue stands in the room, guarding the way.
+~
+You are looking at a statue towering in the height of 8 feet. It is made of
+solid granite, and has rune inscribed metal bands here and there to keep the
+statue alive and unmarred by time.
+~
+131083 805306496 0 Y
+40 -10 -21 1d100+2700 2d10+110
+0 600000
+8 8 0
+59 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14006
+ghoul corpse~
+a ghoul~
+A decaying corpse is walking towards you, with its claws reaching out for you.
+~
+The ghoul is a creature of undeath, with it's reddishly glowing eyes and claws
+dripping with blood. You have heard of the paralyzing powers of these horrible
+creatures.
+~
+104 8 -1000 Y
+15 5 3 1d12+490 2d8+40
+0 45000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14007
+skeleton~
+a skeleton~
+A skeleton wearing tattered rags is reaching out with its bony claws at you.
+~
+The skeleton you're looking at, has bony claws and the fleshless grin on its
+skull. Laughing at you, even when its jaw bone has almost dropped, this undead
+attacks you.
+~
+104 8 -1000 Y
+10 10 5 10d12+300 2d8+10
+0 23900
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14008
+skeleton~
+a skeleton~
+A skeleton dripping with black water rises from the stagnant waters.
+~
+The skeleton you're looking at, has bony claws and the fleshless grin on its
+skull. Laughing at you, even when its jaw bone has almost dropped, this undead
+attacks you. The bones and tattered rags are dripping with stagnant water.
+~
+42 1048584 -1000 Y
+17 16 5 1d12+350 2d8+35
+0 28000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14009
+wraith undead khats~
+Wraith of Khats~
+A wraith emerges in front of you from the ether, and reaches out for you life.
+~
+You are looking at a suffering spirit of a man clad in tight leather outfit.
+It attacks you with both its shadowy arms, draining your life with it's mere 
+presence.
+~
+105 402653312 -1000 Y
+30 -10 -5 5d10+1440 2d8+45
+15 65000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14010
+wight creature~
+Wight~
+A withered looking wight is attacking you with a loud scream.
+~
+You are looking at a shriveled corpse of a human, with it's eyes glowing in 
+hellish red light. It reaches out at you with its clawed hands, making a low
+moaning noise at the same time.
+~
+73 134479872 -1000 Y
+18 3 -3 2d10+640 2d8+28
+0 90000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14011
+claw crawling hand~
+Crawling claw~
+A withered hand is scurrying towards you on the floor.
+~
+You see a severed hand scurrying to reach your legs. The only thing that scares
+you with the appearance of these hands, are the claws on those hands. The claws
+are razor sharp and long enough to tear your legs apart.
+~
+104 0 -1000 Y
+10 10 5 1d6+150 1d8+20
+15 12500
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14012
+image mirror~
+The Mirror Image~
+A Mirror Image is standing here.
+~
+You seem to be looking at someone very familiar. There is something so
+friendly and nice on that face, but at the same time it is twisted and
+corrupted, making shivers run through your spine.
+~
+43 32776 0 Y
+1 19 0 1d1+1 1d1+1
+15 20
+8 8 0
+68 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#14013
+shadow~
+A shadow~
+A shadow emerges from the darkness, and takes a wild slash at you.
+~
+The shape of that creature of darkness is not a very solid one. Anything that
+might resemble a face is located at approximately the same height as your
+own face. In the middle of that face there are two reddishly glowing orbs.
+~
+42 268697600 -1000 Y
+20 0 -15 1d20+600 2d8+20
+0 20000
+8 8 0
+52 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

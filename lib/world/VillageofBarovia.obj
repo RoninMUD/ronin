@@ -1,0 +1,383 @@
+#11310
+beer mug~
+beer mug~
+A beer mug is lying on the ground.~
+~
+17 256 1
+6 6 1 0
+5 50 5
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11311
+doll small~
+small doll~
+a small doll has been left here.~
+~
+5 0 25089
+0 1 2 7
+8 7000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+17 4
+#11312
+horse~
+small wooden horse~
+a small wooden horse has been left here.~
+~
+5 0 24577
+0 1 4 6
+7 10000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+17 4
+#11313
+ball crystal~
+a crystal ball~
+a shimmering crystal ball has been left here~
+~
+8 116404225 16385
+0 0 0 0
+15 20000 1000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+4 2
+#11314
+bracelet magic~
+bracelet of magic~
+a bracelet of magic has been left here.~
+~
+11 134217729 4097
+7 0 0 0
+5 60000 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 25
+A
+13 25
+#11315
+cloak~
+cloak of sadness~
+a torn cloak of sadness has been left here.~
+~
+9 134218753 1025
+7 0 0 0
+10 50000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+13 15
+#11316
+plate breast~
+breast plate of Black rose~
+a breast plate of Black rose has been left here.~
+~
+9 134220290 9
+10 0 0 0
+20 100000 15000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#11317
+sword black rose~
+sword of Black rose~
+a sword of Black rose is lying on there ground.~
+$r sword draws light from its surroundings, and darkens the world.~
+5 135266306 8193
+0 2 13 3
+11 140000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 6
+#11318
+pan~
+frying pan~
+a worn frying pan has been left here.~
+~
+5 132096 24577
+0 3 5 7
+8 10000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 3
+A
+19 2
+#11319
+shovel~
+a large shovel~
+a large shovel sticks from the ground here.~
+~
+5 0 8193
+0 2 4 3
+9 500 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#11320
+cloak~
+decaying cloak~
+a decaying cloak has been left to rot here.~
+~
+9 134217728 1025
+5 0 0 0
+8 10000 700
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+9 4
+#11321
+collar~
+decaying leather collar~
+a torn leather collar has been left to rot here.~
+~
+9 134217728 5
+4 0 0 0
+5 7000 500
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+9 3
+#11322
+helmet~
+decaying leather helmet~
+an old leather helmet has been left to rot here.~
+~
+9 134217728 17
+5 0 0 0
+6 10000 800
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+9 3
+#11323
+armor~
+decaying leather armor~
+a rotten leather armor lies on the ground here.~
+~
+9 134217728 9
+9 0 0 0
+12 13000 1200
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+9 3
+#11324
+boots~
+decaying leather boots~
+a pair of boots has been left to rot here.~
+~
+9 134217728 65
+5 0 0 0
+6 9000 900
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+9 3
+#11325
+gloves~
+decaying leather gloves~
+a pair of old leather gloves has been left to rot here.~
+~
+9 134217728 129
+5 0 0 0
+5 9000 900
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+9 3
+#11326
+leggings~
+decaying leather leggings~
+a pair of leather leggings has been left to rot here.~
+~
+9 134217728 33
+4 0 0 0
+5 10000 850
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+9 3
+#11327
+band veins pile ring~
+a band of twisted veins~
+A disgusting pile of blood veins wrapped into a band is lying here.~
+~
+11 200340052 3
+0 0 0 0
+3 12000 19500
+7
+E
+band pile veins~
+
+  This band of blood veins has been elaborately braided into an object that
+will fit perfectly on your finger.  When you pick it up you can feel some
+blood still inside the veins.  You are sure that only someone of pure evil
+and in the likeness of a vampire would wear something like this.
+
+~
+X
+~
+4 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 4
+A
+52 10
+T
+14000
+#0
+$~

@@ -1,0 +1,374 @@
+#14500
+fountain pearl~
+A Pearl Fountain~
+A Pearl Fountain adorns the centre of the square.~
+~
+17 134217729 0
+10000 10000 0 0
+10 10 10
+100
+E
+pearl~
+A beautiful fountain made from pearl rests here.~
+E
+fountain~
+A beautiful fountain made from pearl rests here.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14501
+hood pitch black~
+a pitch-black hood~
+A dark hood has been left here.~
+~
+9 166775315 17
+8 0 0 0
+12 300000 25000
+8
+E
+black~
+This hood is made from burlap, and radiates evil.~
+E
+pitch~
+This hood is made from burlap, and radiates evil.~
+E
+hood~
+This hood is made from burlap, and radiates evil.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 5
+A
+1 1
+#14502
+hell stick stinger~
+The Hell Stick~
+A long stick with a deadlty stinger on its end lies here.~
+stick unleashes hellish fury!~
+5 144763409 8193
+8 5 7 5
+15 10 5000
+10
+E
+hell~
+This is an evil stick with a deadly stinger at the end.~
+E
+stick~
+This is an evil stick with a deadly stinger at the end.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+17 30
+#14503
+amulet blood red~
+a Blood-Red Amulet~
+A blood-red amulet has been left here.~
+~
+9 243318786 5
+10 0 0 0
+10 10 5000
+12
+E
+red~
+This is a deep red amulet.~
+E
+blood~
+This is a deep red amulet.~
+E
+amulet~
+This is a deep red amulet.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+13 15
+#14504
+lantern blue flames~
+a Lantern of Blue Flames~
+A lantern with magical blue flames is burning here.~
+~
+1 134217793 65537
+1 1 -1 10
+10 10 45000
+13
+E
+flames~
+This is a magical lantern smothered in blue flames.~
+E
+blue~
+This is a magical lantern smothered in blue flames.~
+E
+lantern~
+This is a magical lantern smothered in blue flames.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 15
+A
+19 1
+#14505
+orb reversal~
+the Orb of Reversal~
+An odd-looking orb floats above the ground here.~
+~
+12 134742081 16385
+0 0 0 0
+10 10 10
+100
+E
+reversal~
+This orb has powerful magic properties.  However,
+you get the idea that it is somehow not yet...
+completed?~
+E
+orb~
+This orb has powerful magic properties.  However,
+you get the idea that it is somehow not yet...
+completed?~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14506
+orb wailing~
+the Orb of Wailing~
+An odd-looking orb floats about the ground here.~
+~
+12 134742080 16385
+0 0 0 0
+10 10 10
+100
+E
+wailing~
+This orb has powerful magic properties.  However,
+you get the idea that it is somehow not yet...
+completed?~
+E
+orb~
+This orb has powerful magic properties.  However,
+you get the idea that it is somehow not yet...
+completed?~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14507
+sandals sandal sorrow~
+Sandals of Sorrow~
+A pair of black sandals have been left here.~
+~
+9 138435137 65
+10 0 0 0
+4 10 43222
+100
+E
+sorrow~
+These are black leather sandals, woven with intricate
+patterns of black silk.  They look almost magical.~
+E
+sandals~
+These are black leather sandals, woven with intricate
+patterns of black silk.  They look almost magical.~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 1
+#14508
+orb magic removal~
+the Orb of Removal~
+A magical orb has been left here.~
+~
+12 524353 16385
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14509
+chocolate croissant~
+a Chocolate Croissant~
+A delicious croissant has been left here.~
+~
+19 0 1
+24 0 0 0
+10 12 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14510
+pecan pie~
+A Pecan Pie~
+A pecan pie lies on the ground here.~
+~
+19 0 1
+34 0 0 0
+10 22 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14511
+box storage store~
+A storage box~
+A compact box has been left here.~
+~
+15 0 16385
+100 0 0 0
+10 10 1000
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14512
+stone glowing magic~
+a glowing stone~
+A glowing stone is on the ground here.~
+~
+9 0 16385
+10 0 0 0
+10 90000 30000
+50
+E
+glowing~
+This appears to be a magical stone, it glows with arcane power.~
+E
+stone~
+This appears to be a magical stone, it glows with arcane power.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#14513
+telescope ornate~
+An Ornate Telescope~
+An ornate telescope is here, pointing towards the ocean.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+ornate~
+   Through the telescope, you get a breathtaking view of a rolling 
+ocean. The dark waves pound against some unknown shore.
+The sky is pitch-black and beautiful stars are twinkling brightly.
+Upon closer inspection, the stars seem to form the shape of a
+corpse surrounded by a ring of stars.  Three more circles 
+suddenly form, and begin to slowly close in on the ring, and in
+a bright flash the scene is no more.  You are left feeling 
+somewhat baffled.  What could this mean?
+~
+E
+telescope~
+   Through the telescope, you get a breathtaking view of a rolling 
+ocean. The dark waves pound against some unknown shore.
+The sky is pitch-black and beautiful stars are twinkling brightly.
+Upon closer inspection, the stars seem to form the shape of a
+corpse surrounded by a ring of stars.  Three more circles 
+suddenly form, and begin to slowly close in on the ring, and in
+a bright flash the scene is no more.  You are left feeling 
+somewhat baffled.  What could this mean?
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14514
+corpse keira banshee~
+The corpse of Keira the Banshee~
+The corpse of Keira the Banshee is lying here.~
+~
+15 524288 1
+100 0 0 0
+60 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

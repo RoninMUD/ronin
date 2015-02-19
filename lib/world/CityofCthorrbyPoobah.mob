@@ -1,0 +1,69 @@
+#6801
+larvae~
+the larvae~
+A larvae is here, squirming on the floor.
+~
+These larvae are anywhere from 1 to 4 feet long, in varying stages of
+development.  All have at least vaguely humanoid looking heads that are
+grossly mishapen.
+~
+232 524288 -500 Y
+10 10 3 2d8+360 3d6+8
+1000 12000
+8 8 0
+86 16384 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#6802
+bodyguard guard skeletal~
+Nergal's bodyguard~
+A diseased, skeletal figure stalks his lord's enemies.
+~
+Emaciated and putrifying, Nergal's bodyguards are hiddeous to behold.  
+Even more hiddeous is the fact that they blend with the night and move with
+a mystic silent grace.
+~
+131177 557064 -1000 Y
+23 2 -3 6d9+2200 5d4+15
+20000 60000
+8 8 0
+53 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#6803
+erishkigal~
+Erishkigal~
+Erishkigal, mistress of death, lays here contemplating you.
+~
+A beautiful shapely woman with dark hair and very pale skin.  The way her
+coal black eyes burn deep into your soul gives you the chills.
+~
+131179 32776 -1000 Y
+51 -6 -7 12d200+5000 5d10+58
+10000 300000
+8 8 2
+63 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#6804
+nergal lord~
+Nergal~
+Nergal, Lord of corruption stands here, oozing.
+~
+His stomach protrudes, bloated and white.  Open sores and pustules
+burst upon his skin, even as you look at him.  One touch of his skin is
+sure to bring about endless agony.
+~
+107 32904 -1000 Y
+52 -7 -9 12d200+7000 5d5+75
+100000 600000
+8 8 1
+63 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0
+#0
+$~

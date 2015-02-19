@@ -1,0 +1,1295 @@
+#2600
+Mayors Zoo Entrance~
+  Long ago, the Mayor of Midgaard donated a small zoo to his citizens.
+Since then, the zoo has grown in popularity and expanded, offering a
+large variety of exotic and local beasts for the citizens to enjoy
+watching and for the more bloodthirsty citizens to enjoy killing.  The
+city of Midgaard is to your north, and a path leads southwards into
+the great Midgaard Zoo.
+~
+26 4 1
+D0
+Midgaard Park lies to the north of here.~
+~
+0 0 3127
+D2
+~
+~
+0 0 2603
+S
+#2601
+The Petting Zoo~
+  This small part of the zoo is populated with smaller and tamer animals
+and hence is popular with children and younger people.  Many of the animals
+wander freely among the petting zoo, looking for attention.  You see a
+small bird cage in this corner of the petting zoo, with the door wide
+open for those that want to touch the birds.  The main part of the zoo
+is to your west.
+~
+26 8 0
+D0
+~
+~
+0 -1 2631
+D1
+~
+~
+0 -1 2633
+D3
+~
+~
+0 -1 2603
+E
+cage~
+This small cage is made of wire-like bars.  It offers no protection
+to the birds or people that the birds might bite.  It's mainly for
+show. The door is propped open so anybody can pet the birds.
+~
+S
+#2602
+Nursery~
+  This nursery is the home of the small little baby animals.  The zoo
+keepers keep the animals here until they mature, and then move them
+into the exhibits.  Most of the little animals here don't look very
+dangerous, but you can't understimate them, for any size crocodile
+could bite you.  You see the gate into the tree nursery to your west
+and the rest of the zoo to your east.
+~
+26 8 0
+D1
+~
+~
+0 -1 2603
+D3
+~
+gate~
+1 2607 2651
+E
+gate~
+The gate is about eight feet tall and made of heavy oak.  Evidently,
+the zoo keepers don't want people in the tree nursery as the gate is
+usually kept locked.  One of the zoo keepers probably as the key, but
+he might not be easy to find.
+~
+S
+#2603
+Main Zoo Path~
+  You are on a north-south path in the zoo.  The entrance to the zoo
+and the city of midgaard lie to your north.  To your west you see
+the nursery, where small baby animals are carefully taken care of until
+they grow into adults.  To your east is the petting zoo where some of
+the tamer animals make their home.  The main exhibits are on the path to
+your south.
+~
+26 8 0
+D0
+~
+~
+0 0 2600
+D1
+~
+~
+0 0 2601
+D2
+~
+~
+0 0 2604
+D3
+~
+~
+0 0 2602
+S
+#2604
+Main Zoo Path~
+  You are on the main path in the zoo.  To your north lies the
+entrance to the zoo, and to the south is the new annex path.  There
+are exhibits all along this road, you hear the sounds of barking
+and growling to your west, and hear squawking and bird calls to
+the east.
+~
+26 8 0
+D0
+~
+~
+0 0 2603
+D1
+~
+~
+0 0 2605
+D2
+~
+~
+0 0 2611
+D3
+~
+~
+0 0 2608
+S
+#2605
+Aviary~
+  The colorful birds found in the aviary are popular with zoo patrons
+The colorful birds found in the aviary are popular with zoo patrons
+home to small black parrots that are a breed indiginous to Norway.  The
+birds have nests in the trees high above you and spend most of their
+day eating or watching the patrons pass by and performing.  They also
+spend much of their day preening their feathers so they continue to
+look shiny and healthy.  The rest of the aviary is to your east and the
+main zoo path is to your west.
+~
+26 8 0
+D1
+~
+~
+0 0 2606
+D3
+~
+~
+0 0 2604
+S
+#2606
+Aviary~
+  This part of the aviary is home to the dazzling norwegian red
+parrots. Their bright red feathers make them very popular with
+children, although they do tend to get mad when bugged by patrons
+or taunted.  You can see a few feathers of the beautiful red
+plumage on the ground, most likely shed by one of the birds.  To
+your east is the home of the rare giant norweigan parrots, and to
+your west is the rest of the zoo.
+~
+26 8 0
+D1
+~
+~
+0 0 2607
+D3
+~
+~
+0 0 2605
+S
+#2607
+Aviary~
+  This part of the aviary holds the incredilby rare giant
+norwegian parrots.  The parrots are so large that trees can't
+support their giant nests, so they have to have their nests
+and eggs on the ground.  Since this leaves their eggs vulnerable
+to predators, they always carefully watch their nests in case
+somebody might try and steal their eggs.
+~
+26 8 0
+D3
+~
+~
+0 0 2606
+S
+#2608
+Canine exhibit~
+  This exhibit is home to a variety of dogs and their relatives.  Small
+mutts play in the dirt here, their faces and paws covered with dirt.
+They look really hungry.  On the ground, you can see several holes in
+several states of being filled and dug out.  The bones of whatever the
+small mutts eat lay scattered about, most of them in holes.  The little
+mutts like to bark and nip at visitors to the zoo, although their
+relatives can get pretty mean if they haven't been fed, so it might
+not be safe to continue to the west and see the other canines.  The
+main zoo path is to your east.
+~
+26 8 0
+D1
+~
+~
+0 0 2604
+D3
+~
+~
+0 0 2609
+E
+holes~
+Holes dot the exhibit, showing proof of the dogs that live here.  The
+holes are in several states of being dug out and filled.  In a few
+holes, you can see the bones of whatever animals the dogs eat.  You
+should walk carefully, so you don't trip it one of the holes.
+~
+E
+hole~
+Holes dot the exhibit, showing proof of the dogs that live here.  The
+holes are in several states of being dug out and filled.  In a few
+holes, you can see the bones of whatever animals the dogs eat.  You
+should walk carefully, so you don't trip it one of the holes.
+~
+S
+#2609
+Canine exhibit~
+  This exhibit is home to some of the larger breeds of domesticated
+dogs. This exhibit looks very unkempt.  Trash and rotting corpses
+cover the ground.  The zoo keepers probably don't clean it because
+they're afraid of the dogs, which seem to have contracted rabies and
+are now a menace to the zoo keepers and all of the zoo patrons.  The
+wild dog exhibit is to your west, and the rest of the zoo is to your
+east.
+~
+26 8 0
+D1
+~
+~
+0 0 2608
+D3
+~
+~
+0 0 2610
+S
+#2610
+Canine exhibit~
+  This large open exhibit is home to several breeds of wild dogs.  The dogs
+tend to do as they please and tend to eat what they please.  You can smell
+rotting flesh and see the half-eaten corpse of a gazelle in the tall grass.
+The dogs seem very interested in the few patrons that come to see them,
+hoping for a few scraps of food.  The zoo keepers try to only visit the
+coyotes and hyenas to feed them and then try to leave before the dogs start
+looking for dessert.  The other canine exhibits and the rest of the zoo is
+to your east.
+~
+26 8 0
+D1
+~
+~
+0 0 2609
+S
+#2611
+End of the Main Zoo Path~
+  You are on the main path in the zoo.  The path continues north towards
+the entrance of the zoo and the city of Midgaard.  A smaller path heads west
+towards the exhibits of the largest and most ferocious animals.  You
+can see monkeys at play to the south and hear the buzzing of insects to
+your east.
+~
+26 8 0
+D0
+~
+~
+0 0 2604
+D1
+~
+~
+0 0 2612
+D2
+~
+~
+0 0 2615
+D3
+~
+~
+0 0 2618
+S
+#2612
+The Bug Exhibit~
+  You are in the insect exhibit.  The exhibit continues to your east, and
+the main zoo path is to your west.  To your south is the zoo keeper's  work
+room and storage area.  In this part of the exhibit, small beetles crawl
+everywhere. They seem uninterested by you, and continue on with whatever
+they are doing.  They seem pretty boring, and you hope the other insects are
+more exciting.
+~
+26 8 0
+D1
+~
+~
+0 0 2613
+D2
+~
+~
+0 -1 2653
+D3
+~
+~
+0 0 2611
+S
+#2613
+The Bug Exhibit~
+  You are in the bug exhibit.  You see a large cage filled with scorpions
+to your east, and beetles to your west.  The rest of the zoo is to your
+west. This part of the exhibit is filled giant large spiders.  They creep
+and crawl over everything, and they give you the willies.  They're covered
+with fur and seem a lot more interested in your than the beetles are.
+The spiders are sort of scary and you're not sure you want to stay.
+~
+26 8 0
+D1
+~
+~
+0 0 2614
+D3
+~
+~
+0 0 2612
+S
+#2614
+The Bug Exhibit~
+  You are in the bug exhibit, which continues to your west.  This part
+of the exhibit is a large cage filled with scorpions.  They crawl around
+and menace you with their poisonous tails.  Be careful if you want to
+touch one, it might get mad and sting you.  The scorpions crawl around,
+eyeing you carefully, you wish that they were as uninterested in you
+as the beetles were.
+~
+26 8 0
+D3
+~
+~
+0 0 2613
+S
+#2615
+The Primate Exhibit~
+  You are in the primate exhibit.  The exhibit continues to your south
+and the main zoo path is to your north.  In this part of the exhibit is a
+cage containing several small spider monkeys.  They jump and climb around
+everywhere and they seem quite playful.  They seem really happy to have an
+audience there watching them.  The little brown furred creatures seem
+incredibly dexterous and your limbs hurt from just watching them swing
+around.
+~
+26 8 0
+D0
+~
+~
+0 0 2611
+D2
+~
+~
+0 0 2616
+S
+#2616
+The Primate Exhibit~
+  You are in the primate exhibit.  The exhibit continues to the south and
+north, and the rest of the zoo is to the north.  This part of the exhibit
+is filled with chimpanzees, which are slightly larger than spider monkeys,
+although still not as large as a human.  If the spider monkeys are a little
+playful, then these chimps are incredibly playful.  They do acrobatic acts,
+amazing stunts, and other things, all in the hope of getting some food from
+their audience.
+~
+26 8 0
+D0
+~
+~
+0 0 2615
+D2
+~
+~
+0 0 2617
+S
+#2617
+Primate exhibit~
+  You are in the primate exhibit.  The rest of the exhibit and zo are to
+your north.  This part of the exhibit holds the amazing gorillas.  The
+gorillas are incredibly huge and strong.  They look at you and study you
+warily. They seem to be deciding whether to attack you or to play a game
+with you.  You should be careful, they look big enough to rip out your
+arms.
+~
+26 8 0
+D0
+~
+~
+0 0 2616
+S
+#2618
+The East-West Zoo Path~
+  You are on the east-west zoo path.  To your north is a high wall and
+you can hear the barking of dogs behind it.  To your south is the reptile
+exhibit and the main zoo path is to your east.  To the path you are on
+right is about 5 feet across and is made of well trodden dirt.  The path
+continues to the west, where some of the most popular zoo exhibits are.
+~
+26 8 0
+D1
+~
+~
+0 0 2611
+D2
+~
+~
+0 0 2619
+D3
+~
+~
+0 0 2622
+E
+wall~
+This high wall is made of thick stone, and it would be extremely hard
+to climb over.  If you want to get to the canine exhibit, the entrance
+is the the east.
+~
+S
+#2619
+Mayor's lizard exhibit~
+  You are in the lizard exhibit.  The exhibits continues to the south,
+and the rest of the zoo is to your north.  This part of the exhibit is
+home to the horned lizards.  The lizards are kept in a large cage with
+magical lights that keep the lizards warm all year round.  The cold-blooded
+creatures tend to be apathetic unless it's feeding time.  If the lizards
+see anything get in the cage that they might eat, they become fearsome
+creatures known for their sharp fangs and giant claws.
+~
+26 8 0
+D0
+~
+~
+0 0 2618
+D2
+~
+~
+0 0 2620
+S
+#2620
+Mayor's lizard exhibit~
+  You are in the lizard exhibit, which continues to the north and
+south. This part of the exhibit is home to the infamous pythons.
+These pythons are some of the mayor's favorite creatures, and they
+have received extensive training.  The pythons can tell jokes, do skits,
+and are always willing to do a show if they get fed well.  At the current
+moment, the pythons are dressed up as old ladies, slithering about
+to the cheers of the crowd.
+~
+26 8 0
+D0
+~
+~
+0 0 2619
+D2
+~
+~
+0 0 2621
+S
+#2621
+Lizard exhibit~
+  You are in the lizard exhibit, which conintues to the north.  This
+end of the exhibit is home to the huge gila monsters.  These lizards
+are some of the biggest creatures you have ever seen.  They are well
+over ten feet long.  The gila monster crawl about, their tongues
+flicking into and out of their mouths, testing the air for food.  Gila
+monsters have been known to eat giant elk whole.  You wonder if they
+like to eat zoo patrons whole too; it could be an uncomfortable process
+to be eaten whole.
+~
+26 8 0
+D0
+~
+~
+0 0 2620
+S
+#2622
+The East-West Zoo Path~
+  You are on the east-west zoo path.  To your north is a high wall and
+you can hear barking dogs behind it.  To your south is the bear exhibit.
+The dirt path is well-trodden, although most of the traffic continues to
+the west or east, the bear exhibit not being one of the most popular
+exhibits. Even the zoo keepers try and stay away from the sometimes
+ferocious beasts.
+~
+26 8 0
+D1
+~
+~
+0 0 2618
+D2
+~
+~
+0 0 2623
+D3
+~
+~
+0 0 2626
+E
+wall~
+This high wall is made of thick stone, and it would be extremely hard
+to climb over.  If you want to get to the canine exhibit, the entrance
+is the the east.
+~
+S
+#2623
+Bear exhibit~
+  High walls to your east and west prevent the different types of animals
+from eating each other, which it appears as huge claw marks cover
+the walls.  Even the small brown bears are as just as big as you, and
+there teeth and claws are much bigger than yours.  To your north is the
+east-west zoo path, and the bear exhibit continues to the south.
+~
+26 8 0
+D0
+~
+~
+0 0 2622
+D2
+~
+~
+0 0 2624
+S
+#2624
+Bear exhibit~
+  High walls raise towards the sky on your east in west, and a path travels
+to your north and south.  A few sparsely spaced pine trees give shade to this
+part of the exhibit.  Medium sized bear tracks cross over the path in several
+places, although placing your own foot in the track reveals to you that a
+medium sized bear has feet much bigger than yours.  You can see large black
+shapes moving in the shadows, and occasionally obsidian eyes shine in your
+direction.
+~
+26 8 0
+D0
+~
+~
+0 0 2623
+D2
+~
+~
+0 0 2625
+S
+#2625
+Bear exhibit~
+  The warm sun beats down upon you and you avert your eyes towards the
+ground to notice your standing in the middle of a track that belongs to a
+very large bear.  Most humans believe that they are the top animals on
+the food chain, but these grizzly bears might make you think otherwise.
+Through breeding, Midgaard is now home to some of the largest bears in
+the world.  These grizzly bears stand seven feet tall at the shoulders,
+towering over you.  Escape is a thought, but tall walls prevent you from
+running in any direction except north into the pine forest inhabited by
+black bears.
+~
+26 8 0
+D0
+~
+~
+0 0 2624
+S
+#2626
+The East-West Zoo Path~
+  You are on the east-west zoo path.  You can see that numerous people turn
+south here to visit the feline exhibits.  The felines are one of the most
+popular exhibits, known across the land as magnificent beasts.  You can see
+the bobcat exhibit directly to the south, and the other felines exhibits
+further south.  To the path continues to your east and west.  To your west,
+you can see the path turn into a cobblestone road which signifies the most
+recent addition to the zoo.
+~
+26 8 0
+D1
+~
+~
+0 0 2622
+D2
+~
+~
+0 0 2627
+D3
+~
+~
+0 -1 2630
+S
+#2627
+Feline exhibit~
+  You are in the feline exhibit.  This part of the exhibit is home to
+the bobcats.  There is a large cage here, which contains several large
+trees and some sort of partly eaten carcass.  The fact that the carcass
+is only partly eaten makes you think, perhaps the bobcat have been getting
+some sort of food alternative.  They may be small cats, but they're still
+dangerous animals.
+~
+26 8 0
+D0
+~
+~
+0 0 2626
+D2
+~
+~
+0 0 2628
+S
+#2628
+Feline exhibit~
+  You are in the feline exhibit.  To your north are the bobcats and the mighty
+bengal tigers are to your south.  This part of the exhibit is home to the
+lions. Even though the lions that the zoo keeps are young lions, they're still
+fecorcious beasts.  Lions are notorious for protecting what they perceive as
+their territory, so it's best to let them be unless you want trouble.
+~
+26 8 0
+D0
+~
+~
+0 0 2627
+D2
+~
+~
+0 0 2629
+S
+#2629
+Feline exhibit~
+  This part of the feline exhibit holds the mayor's favorite animals, the
+tigers. Zoo patrons crowd around the huge cage to catch sight of one of the
+amazing beasts.  The cage is filled with jungle foliage, and occasionally,
+you can see one of the large orange and black striped cats moving behind the
+greenery. They're most likely watching you just as closely as the patrons
+are watching them.  Whenever a patron moves close to the cage, you can hear
+a dull roar coming from the foliage.  It sounds like the tigers are hungry.
+~
+26 8 0
+D0
+~
+~
+0 0 2628
+S
+#2630
+The East-West Zoo Path~
+  The wide path leaves lots of room for plenty of patrons to walk on.  The
+cobblestone is well worn from numerous visitors that have come to see all of
+the amazing animals.  The wide path continues to your west and east, and 
+there is a cold wind from the north, and a grassy field to your south.  This
+part of the zoo is the newest addition, and the exhibits are sure to have some
+of the newest in magical inventions, and also some of the most fearsome and
+exotic creatures known to man.
+~
+26 12 0
+D0
+~
+~
+0 -1 2640
+D1
+~
+~
+0 0 2626
+D2
+~
+~
+0 -1 2634
+D3
+~
+~
+0 -1 2644
+S
+#2631
+The Petting Zoo~
+  This small part of the zoo is populated with smaller and tamer animals
+and hence is popular with children and younger people.  Many of the animals
+wander freely among the petting zoo, looking for attention.  In this corner
+of the petting zoo is a rabbit hutch.  There is no fence about so the rabbits
+can be found throughout the zoo, looking for people to pet them.
+~
+26 8 0
+D1
+~
+~
+0 -1 2632
+D2
+~
+~
+0 -1 2601
+E
+hutch~
+This hutch is filled with soft sawdust and is the home of the rabbits
+that wander about the zoo.  They rabbits usually sleep in the hutch and
+eat in the hutch, but the rest of the day they are free to wander about
+the zoo.
+~
+S
+#2632
+The Petting Zoo~
+  This small part of the zoo is populated with smaller and tamer animals
+and hence is popular with children and younger people.  Many of the animals
+wander freely among the petting zoo, looking for attention.  You see a
+pen in this corner which contains some goats.  The goats seem incredibly
+small. They make weird goat noises and headbutt each other.
+~
+26 8 0
+D2
+~
+~
+0 -1 2633
+D3
+~
+~
+0 -1 2631
+S
+#2633
+The Petting Zoo~
+  This small part of the zoo is populated with smaller and tamer animals
+and hence is popular with children and younger people.  Many of the animals
+wander freely among the petting zoo, looking for attention.  You see a
+pen in this corner which contains llamas.  The llamas don't look very
+dangerous, but they do smell horrible.
+~
+26 8 0
+D0
+~
+~
+0 -1 2632
+D3
+~
+~
+0 -1 2601
+S
+#2634
+The Open Plains Exhibit~
+  Unlike the exhibits in the two older parts of the zoo, this exhibit has
+tried to show the animals in their most natural habitat.  No cages or fences
+bar the animals from travelling anywhere in the large grassy field that they
+want to.  Strange beasts from far-off worlds roam the fields, although all
+of the animals here are herbivores, so that the animals don't eat each other.
+Small deer, mighty elk, and the mysterious gazelle all gallop about in freedom
+here. It's an amazing wonder to see as long as they don't accidentally trample
+you in a mad rage.
+~
+26 0 0
+D0
+~
+~
+0 -1 2630
+D2
+~
+~
+0 -1 2635
+D3
+~
+~
+0 -1 2639
+S
+#2635
+The Open Plains Exhibit~
+  A few trees in this part of the exhibit offer the animals some shade and
+an alternative food source.  The trees themselves seem strange and alien to
+you. They are wispy trees with few leaves, but seem to fit in well with the
+tall grass and bounding gazelle, elk, and deer.  The open plains extend in
+all directions except to your east, where a high brick wall blocks off the
+feline exhibit.  You notice the animals try not to get too close to the wall
+because there are lions directly on the other side of the wall.
+~
+26 0 0
+D0
+~
+~
+0 -1 2634
+D2
+~
+~
+0 -1 2636
+D3
+~
+~
+0 -1 2638
+S
+#2636
+The Open Plains Exhibit~
+  The ground is a slightly higher elevation here then in the rest of the
+exhibit. This gives you a good view of the rest of the exhibit.  To your north
+and west, you have a clear view of the grassy fields and the trees and animals
+dispersed among them.  There is a wall to your east marking off the feline
+exhibit, and the main city wall prevents you from going further south.  The
+huge granite wall seems out of place among the fields, but it's a necessary
+precaution to keep the zoo animals in and the horrible monsters outside out.
+~
+26 0 0
+D0
+~
+~
+0 -1 2635
+D3
+~
+~
+0 -1 2637
+S
+#2637
+The Open Plains Exhibit~
+  The ground dips down slightly here, and raises up into a small hill to
+your east.  A fence prevents you from going further westwards.  A little bit
+of sand has blown underneath the fence, but it looks as though the zoo keepers
+clean up the sand every day, because the grass is still healthy.  The main wall
+of the city is to your south, and the plains extend to your north and east.  It
+appears as though the animals stay from the desert exhibit here.  At first, you
+think it's just the sand, but then you realize that the animals were right up
+next to the fence further north.  Perhaps there is something in the sand near
+here that the animals know about, and you don't.
+~
+26 0 0
+D0
+~
+~
+0 -1 2638
+D1
+~
+~
+0 -1 2636
+S
+#2638
+The Open Plains Exhibit~
+  Deer, elk, and gazelle all mingle freely here.  The seem content to
+lay in the sun or eat the tall grass that you are walking through.  The
+exhibit seems pretty full of animals, but they don't mind each other as
+long as there is enough grass for all of them to eat.  The grassy plains
+extend in all directions except to your west, where a tall fence marks
+off a sandy desert.  A bit of sand has blown under the fence, but there
+is still lots of definition between the two exhibits.
+~
+26 0 0
+D0
+~
+~
+0 -1 2639
+D1
+~
+~
+0 -1 2635
+D2
+~
+~
+0 -1 2637
+S
+#2639
+The Open Plains Exhibit~
+  Deer, elk, and gazelle freely wander around in the high grass here.  A
+few trees offer a little bit of shade, but animals prefer the open plains.
+The animals seem rather content with their lives, and rather oblivious to
+the humans that walk amongst them.  You can get up right next to
+some of the animals without startling them.  The plains continue
+to your south and west, and a fence marks off a desert to your west and
+the main zoo path to your north.
+~
+26 0 0
+D1
+~
+~
+0 -1 2634
+D2
+~
+~
+0 -1 2638
+S
+#2640
+The Arctic Exhibit~
+  This giant domed building extends 30 feet above you, giving plenty of
+room to the animals inside.  The zoo management is extremely pround of
+this magically chilled building.  The entire building is incredibly cold
+and you shiver from standing here.  In this part of the dome, you can
+see penguins at play.  There is a lake in the center of the dome with
+penguins in it, and you can walk around the lake to your west or north,
+or you can go back outside to the south.
+~
+26 8 9
+D0
+~
+~
+0 -1 2643
+D2
+~
+~
+0 -1 2630
+D3
+~
+~
+0 -1 2641
+S
+#2641
+The Arctic Exhibit~
+  You are in the southwest corner of the arctic exhibit.  The giant frosted
+white walls climb into the air above you in a large dome shape.  Inside,
+penguins frolic about make chirping noises and playing excitedly.  You see
+the den of an otter here, telling you that other creatures must also live
+in the dome.  The penguins seem very frightened of the otter, and flee from
+it whereever it goes.
+~
+26 8 9
+D0
+~
+~
+0 -1 2642
+D1
+~
+~
+0 -1 2640
+S
+#2642
+The Arctic Exhibit~
+  You are in the northwest corner of the arctic exhibit.  The cold numbs
+you, and makes your breath frosty, but the penguins seem to enjoy it.  The
+star attraction of the artic exhibit is in a reinforced cage in their
+corner of the exhibit.  Children gather around the polar bear cage, hoping
+to get a glimpse of the giant beast.  Several dead carcasses that lay in
+the cage show the fearsome brutality of the giant bear that dwells here.
+~
+26 8 9
+D1
+~
+~
+0 -1 2643
+D2
+~
+~
+0 -1 2641
+S
+#2643
+The Arctic Exhibit~
+  You are in the northeast corner of the arctic exhibit.  Penguins waddle
+around, playing in the ice and watching the patrons watch them.  There is
+a cage in this corner which contains a strange looking creature known as
+a yak.  This yak proundly struts about, thinking that it is the king
+of the world.  It has a long mane that brushes against the ground, and
+pointy looking hooves that climbing on rock and impaling patrons.
+~
+26 8 9
+D2
+~
+~
+0 -1 2640
+D3
+~
+~
+0 -1 2642
+S
+#2644
+The East-West Zoo Path~
+  You are on the wide cobblestone path still.  You can see a wall not
+far to your west which must signify the last two exhibits of the newest part
+of the zoo.  Over a tall fence to your south, you see a grassy field, and
+to your north is a large white building which radiates cold.  You are
+surrounded by animal sounds of exotic nature.  The two exhibits to your
+west appear less popular with the general populance compared to the exhibits
+to your east, which might have to do with either the exhibits being very
+dangerous, or very boring, but there is only one way to find out.
+~
+26 8 0
+D1
+~
+~
+0 -1 2630
+D3
+~
+~
+0 -1 2645
+S
+#2645
+End of the East-West Zoo Path~
+  This is the west most extent of the zoo, the main city wall of Midgaard
+prevents you from travelling any farther west.  The path you are on now is
+made of cobblestone that has been worn down slightly by foot traffic,
+although much less so than the cobblestone farther to your east.  To your
+north is a foul smelling swamp that's sure to leave you with a desire to
+take a bath if you dare enter it.  To your south, a sandy desert extends
+beyond the reach of your eyes.  The rest of the zoo is to the east.
+~
+26 12 0
+D0
+~
+~
+0 -1 2646
+D1
+~
+~
+0 -1 2644
+D2
+~
+~
+0 -1 2648
+S
+#2646
+The Swamp Exhibit~
+  A skinny path leads from the main part of the zoo into the rest of the swamp.
+On both sides is a a muddy murk.  Sickly looking green plants grow in
+the water, and ugly trees crawl up above your head in search of valuable
+sunlight. The shaded canopy is filled with small bugs, and it looks like
+something might be moving in the water.
+~
+26 0 0
+D0
+~
+~
+0 -1 2647
+D2
+~
+~
+0 -1 2645
+S
+#2647
+The Swamp Exhibit~
+  The skinny path which you stand on continues to your south, but ends
+abruptly to your north, where a fence has been erected and sign reads: "Risk
+of drowning and alligators beyond this point."  You notice a hole in the fence
+at water level, but it's too small for you to crawl through.  Tall trees keep
+the swamp shaded, and the path is muddly and slippery from the humidity.
+Every once and a while, it looks like something is swimming around in the
+water, but you can't make it our for sure.  Small mosquitos buzz around in the
+air, creating a nuisance for you.
+~
+26 0 0
+D2
+~
+~
+0 -1 2646
+E
+hole~
+This small hole is about ten inches across and extends only a few inches
+above the water level.  It appears as those the hole was made
+by something with extremely large teeth, but you can't be certain
+as the wooden fence is starting to rot from the humidity.
+~
+S
+#2648
+The Desert Exhibit~
+  The farther you travel from the cobblestone path to your north, the warmer
+it gets.  This part of the zoo is magically heated by one of the head zoo
+keepers best kept secrets, but many people speculate that it involves sucking
+all of the heat from the arctic exhibit and pumping it out here by some means.
+The desert appears to be mostly empty, except for a few tracks of small ants
+here, but you can see the tracks of larger animals to the south.
+~
+26 0 8
+D0
+~
+~
+0 -1 2645
+D2
+~
+~
+0 -1 2649
+S
+#2649
+The Desert Exhibit~
+  The sun beats down upon you, and the heat is incredible.  This part of the
+exhibit is devoid of plant life of any kind, as the zookeepers have yet to find
+plants that would grow here, if they wanted to come water them every day, which
+makes you look around and notice that there are no zookeepers anywhere around
+here. You see the tracks of some species of a reptile, and it appears to be
+a VERY large reptile.  Hopefully, the creature isn't around right now, because
+it has feet the size of your head.
+~
+26 0 8
+D0
+~
+~
+0 -1 2648
+D2
+~
+~
+0 -1 2650
+S
+#2650
+The Desert Exhibit~
+  The heat causes you to sweat profusely, and you wonder why anybody would
+put such a barren exhibit in a zoo.  You don't see any animals around at all
+except for the tracks of the extremely large reptile.  Then it dawns on you,
+perhaps the giant lizard ate all of the animals.  The thought causes you to
+shiver. You can see a swirl in the sand here, as though something has burrowed
+into the sand.  To your west and south is the main wall of the city, and you
+can see a grassy field beyond the fence to your east.  The desert continues
+to your north.
+~
+26 0 8
+D0
+~
+~
+0 -1 2649
+E
+swirl~
+The sand is warm to the touch from baking under the sun.  The sand, blown
+by the wind, has created little ridges of sand.  You notice very few human
+footprints, but you do see the tiny footprints of a few bugs and the 
+footprints of some large reptile.  You also notice a swirl in the sand.
+It would appear as though the aforementioned reptile has burrowed into the
+sand.
+~
+E
+sand~
+The sand is warm to the touch from baking under the sun.  The sand, blown
+by the wind, has created little ridges of sand.  You notice very few human
+footprints, but you do see the tiny footprints of a few bugs and the
+footprints of some large reptile.  You also notice a swirl in the sand.
+It would appear as though the aforementioned reptile has burrowed into the
+sand.
+~
+S
+#2651
+The Tree Nursery~
+  This is the part of the zoo where the zoo keepers painstakingly grow
+and manicure trees until the trees are transplanted in the city park or
+in the zoo.  The tree nursery continues to your west where you see a few
+much larger trees.  To your east in the animal nursery and the rest of
+the zoo.
+~
+26 0 0
+D1
+~
+gate~
+1 2607 2602
+D3
+~
+~
+0 -1 2652
+E
+gate~
+The gate is about eight feet tall and made of heavy oak.  Evidently,
+the zoo keepers don't want people in the tree nursery as the gate is
+usually kept locked.  One of the zoo keepers probably as the key, but
+he might not be easy to find.
+~
+S
+#2652
+The Tree Nursery~
+  This is the part of the zoo where the zoo keepers painstakingly grow
+and manicure trees.  Most of the trees are then moved to the city park or
+into the zoo, but you notice that several large trees here have stayed.
+The large trees cast a shade over you.  If trees were alive, you could swear
+that the trees are very angry looking and a wee bit dangerous to your health.
+The tree nursery continues to your east.
+~
+26 0 0
+D1
+~
+~
+0 -1 2651
+S
+#2653
+A Small Path~
+  This small path leads north and south.  High walls prevent you from travelling
+to the east or west.  The wall to the east appears to be the other wall of the
+zoo, while the wall to your west marks off the primate exhibit.  To your south,
+you see a moderate sized building with a sign on the door that reads:
+Employees Only. The buzzing of insects is close to your north.
+~
+26 0 0
+D0
+~
+~
+0 -1 2612
+D2
+~
+door~
+1 -1 2654
+E
+sign~
+The sign reads:
+Employees Only!
+~
+E
+door~
+You notice a sign on the door, it states:
+Employees Only!
+~
+S
+#2654
+The Zoo Keeper's Work Room~
+  This is the room where the zoo keeper's keep logs of the animals health and
+what they've eaten.  You can see several charts out on tables and several
+more posted on the walls.  On the west side of the room is a large window
+that fills the room with light and allows the zoo keeper's to watch the
+primate exhibit.  There is a door to the east that leads to the storage room
+and another door to the south that leads to the head zoo keeper's office.
+The entrance to the building and the rest of the zoo is to
+your north.
+~
+26 8 0
+D0
+~
+door~
+1 -1 2653
+D1
+~
+door~
+1 -1 2655
+D2
+~
+door~
+1 -1 2656
+E
+window~
+This window looks out on to the primate exhibit.  Unfortunately,
+your view is blocked by a monkey who seems to be sleeping in the
+windowsill.
+~
+E
+chart~
+Feeding Schedule
+6 am: penguins
+7 am: felines
+8 am: bears
+9 am: reptiles
+10 am: primates
+11 am: dogs
+noon: insects, penguins
+1 pm: felines, birds
+2 pm: bears
+3 pm: reptiles, nursery
+4 pm: petting zoo
+5 pm: primates
+6 pm: dogs
+~
+S
+#2655
+The Storage Closet~
+  Piles and piles of wooden crates fill this room, making it hard to move
+around. There is so little room between the boxes that only one person can
+fit in here at once.  Various smells come from the crates, some contain
+vegetables, others contain meats, and still others contain some
+sort of building supplies.  There are no windows in this room and it
+is rather dark.  You can hear some sort of noise like you aren't alone
+in the room.  The zoo keeper's work room is to the west.
+~
+26 265 0
+D3
+~
+door~
+1 -1 2654
+E
+boxes~
+The boxes closest too you all seem to be filled with various-sized pieces
+of wood.  Evidently, the zoo keepers are working on some construction
+projects. The crates seem to be filled with food.
+~
+E
+crates~
+The closest crate seem to be been broken open by some sort of animal, and
+you can see some meat inside it.  The meat doesn't smell very
+fresh, it's probably going to be for some sort of animal that doesn't
+care about the freshness of its meat.
+~
+S
+#2656
+The Head Zoo Keeper's Private Office~
+  This is where the head zoo keeper works.  There is a desk in the south end
+of the room, with papers stacked in neat piles.  A window on the west side
+of the room looks out onto the primate exhibit and allows sunlight into the
+room. Several pictures on the wall point out that the head zoo keeper's
+favorite animals are the tigers.  Next to the door is a row of nails where
+keys to several of the exhibits are kept.  The zoo keeper's work room is
+to the north.
+~
+26 8 0
+D0
+~
+door~
+1 -1 2654
+E
+nails~
+It looks like keys used to hang on these nails, but apparently
+somebody took them.  It was probably one of the zoo keepers.
+~
+E
+window~
+You look towards the window to find yourself startled by a monkey making
+a blowfish face on the window.  He then shortly makes several rude sounding
+noises and retreats away from the window, leaving a smear of drool as a
+momento for you.
+~
+E
+pictures~
+There are two pictures on the east wall of the room.  Both of the pictures
+are of a tiger.  In one picture, the tiger stands regal and majestic.
+In the other picture, the tiger is wearing a pink tutu.
+...It makes you wonder about the head zoo keeper.
+~
+S
+#2699
+A temporary name~
+A temporary description
+~
+26 512 0
+S
+#0
+$~

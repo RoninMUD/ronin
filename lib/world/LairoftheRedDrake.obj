@@ -1,0 +1,79 @@
+#300
+talon red dragon~
+The Talon of a Red Dragon~
+The long raking talon of a red dragon glows with an intense heat.~
+The talon flares white hot as $n sears the flesh of $V.~
+5 250615809 8193
+0 2 4 8
+25 10 110000
+6
+E
+talon red dragon~
+   Chunks of dried and rotten meat cling tenaciously to the long ivory talon.
+Long veins shoot through the off white hook, while a soft leather grip has been
+tightly sewn around the root. A small loop of leather dangles below the grip
+easily wrapped around the wrist to keep it from getting lost.
+~
+X
+~
+0 0 0
+M
+The talon glows white hot as you brandish it.~
+The curved talon of a red dragon flares white hot as $n wields it.~
+The talon fades to a dim glow as you hang it from your waist.~
+The talon of a red dragon dims to a dull red glow as $n hangs it from $s waist.~
+A
+53 10
+A
+19 16
+A
+18 5
+#301
+boots red dragon scale~
+a pair of red dragon scale boots~
+Boots forged from the scales of a mighty red dragon radiate intense heat here on the ground.~
+~
+9 48297985 65
+14 -1 -1 -1
+10 115000 11500
+6
+E
+boots red dragon scale~
+   Soft, supple leather lines the inside of these red scaled boots. Intricately
+woven scales from the hide of a red dragon are cunningly wrought together to
+form an impenetrable barrier over your toes. Gleaming red and radiating an
+intense heat these boots have stood the test of time.
+~
+X
+~
+0 0 0
+M
+Your feet begin to feel very warm as you slip the boots on.~
+$n's feet begin to steam as $e slips on a pair of red dragon scale boots.~
+Your feet feel cooler as soon as you slip the boots off.~
+$n slips off $s glowing red boots as a cloud of steam rises from $s feet.~
+A
+19 2
+A
+18 1
+A
+49 5
+#305
+fire wall flames~
+A wall of flame~
+An eruption of fire explodes upwards, blocking all exits.~
+~
+12 1 0
+0 0 0 0
+10 10 10
+10
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#0
+$~

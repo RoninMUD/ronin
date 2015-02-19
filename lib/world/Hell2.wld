@@ -1,0 +1,1964 @@
+#25400
+Outside the Compound~
+   You are standing outside a high mesh fence. The whine of machinery and gears
+almost covers the screams of the tormented. Clouds of noxious smoke belches
+forth from the stacks of numerous factories. This area of hell is reserved for
+those who abused the environment. There is a big sign on the gate here.
+~
+254 32796 1
+D1
+~
+gate~
+1 0 25401
+E
+sign~
+            RESTRICTED AREA! VIOLATORS WILL BE KILLED ON SIGHT!!
+         THOSE WITH PROPER PAPERS PROCEED TO GATE 3-134567 SECTOR G
+               PAPERS CAN BE OBTAINED FROM SHIFT SUPERVISOR
+         WARNING!! GUARDS ARE INSTRUCTED TO DESTROY ANYONE THEY SEE!
+~
+S
+#25401
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+~
+0 0 25402
+D3
+~
+gate~
+1 0 25400
+S
+#25402
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D0
+~
+~
+0 0 25403
+D1
+~
+~
+0 0 25412
+D2
+~
+~
+0 0 25408
+D3
+~
+~
+0 0 25401
+S
+#25403
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D0
+~
+~
+0 0 25404
+D2
+~
+~
+0 0 25402
+S
+#25404
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+~
+0 0 25405
+D2
+~
+~
+0 0 25403
+S
+#25405
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+~
+0 0 25406
+D3
+~
+~
+0 0 25404
+S
+#25406
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+~
+0 0 25407
+D3
+~
+~
+0 0 25405
+S
+#25407
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32796 1
+D1
+~
+~
+0 0 25407
+D3
+~
+~
+0 0 25406
+S
+#25408
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D0
+~
+~
+0 0 25402
+D2
+~
+~
+0 0 25409
+S
+#25409
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D0
+~
+~
+0 0 25408
+D1
+~
+~
+0 0 25410
+S
+#25410
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+door~
+0 0 25411
+D3
+~
+~
+0 0 25409
+S
+#25411
+The Fourth Circle of Hell~
+   You seem to be standing in some sort of control room. There are switches and
+levers all over the walls, but most are off. The room is surprisingly quiet
+after the constant hum of machinery. There is an electrical socket in the wall.
+~
+254 32796 1
+D1
+~
+~
+0 0 0
+D3
+~
+door~
+0 0 25410
+E
+socket~
+There is a standard electrical socket in the wall here.
+~
+E
+lever~
+Most of the levers are in the off position, their lights dimmed.
+~
+E
+switch~
+There are many different colored switches lining the wall.
+~
+S
+#25412
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+~
+0 0 25413
+D3
+~
+~
+0 0 25402
+S
+#25413
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+~
+0 0 25414
+D3
+~
+~
+0 0 25412
+S
+#25414
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+~
+0 0 25415
+D3
+~
+~
+0 0 25413
+S
+#25415
+The Fourth Circle of Hell~
+   The scream of the machinery is louder here, almost but not quite drowning
+out the wails of agony of those unfortunate enough to be caught in the dreadful
+machines of hell. Clouds of black oily smoke make the air virtually
+unbreathable to mortal lungs.
+~
+254 32792 1
+D1
+~
+~
+0 0 25415
+D3
+~
+~
+0 0 25414
+S
+#25416
+The Office of Belial~
+   You have entered the office of Belial, Demon Supervisor to this plane of
+hell. Whips of various shapes and sizes line the wall, their barbed ends coated
+in red ichor. A desk is covered with infinite work orders which the doomed
+souls can never hope to finish.
+~
+254 32792 1
+D3
+~
+ ~
+0 0 0
+D5
+~
+~
+0 0 25417
+S
+#25417
+The Fifth Circle of Hell~
+   You have entered into an area of great heat. The fluids below seem to boil
+and bubble if only to make you feel more of their heat. To your north you can
+vaguely see pink steam rising off a lake. Circling the lake you make out
+throngs of armored men running about.
+~
+254 561180 0
+D0
+The lake of boiling blood to the north steams violently.
+~
+~
+0 0 25418
+S
+#25418
+The Edge of the Lake~
+   The constant screaming of those around you is deafening. You are on the
+shore of a lake of what appears to be boiling blood. Its inhabitants are
+continually trying to escape the agony by climbing out, only to be beaten back
+by the sadistic guards surrounding the lake. There is a small island visible in
+the middle of the lake, with a milling crowd trying to keep from being pushed
+back into the lake.
+~
+254 36888 0
+D0
+The lake of boiling blood steams violently beyond this edge.
+~
+~
+0 0 25420
+D2
+A stand of trees lies off in the distance beyond this place and out
+of your reach.
+~
+~
+0 0 25417
+S
+#25419
+The Edge of the Lake~
+   The constant screaming of those around you is deafening. You are on the
+shore of a lake of what appears to be boiling blood. Its inhabitants are
+continually trying to escape the agony by climbing out, only to be beaten back
+by the sadistic guards surrounding the lake. There is a small island visible in
+the middle of the lake, with a milling crowd trying to keep from being pushed
+back into the lake.
+~
+254 36888 0
+D0
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25423
+D1
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25420
+S
+#25420
+The Lake of Boiling Blood~
+   You are knee deep in boiling blood. The searing agony here is unbearable.
+The smell of charred flesh mingles obscenely with the screams of others
+suffering the same fate. You panic to escape, as you feel the blood seep into
+your clothing and shoes.
+~
+254 36888 0
+D0
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25424
+D1
+The edge of the lake extends to the east.
+~
+~
+0 0 25421
+D2
+The edge of the lake creeps up to the south.
+~
+~
+0 0 25418
+D3
+The edge of the lake extends to the west.
+~
+~
+0 0 25419
+S
+#25421
+The Edge of the Lake~
+   The constant screaming of those around you is deafening. You are on the
+shore of a lake of what appears to be boiling blood. Its inhabitants are
+continually trying to escape the agony by climbing out, only to be beaten back
+by the sadistic guards surrounding the lake. There is a small island visible in
+the middle of the lake, with a milling crowd trying to keep from being pushed
+back into the lake.
+~
+254 36888 0
+D0
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25425
+D3
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25420
+S
+#25422
+The Edge of the Lake~
+   The constant screaming of those around you is deafening. You are on the
+shore of a lake of what appears to be boiling blood. Its inhabitants are
+continually trying to escape the agony by climbing out, only to be beaten back
+by the sadistic guards surrounding the lake. There is a small island visible in
+the middle of the lake, with a milling crowd trying to keep from being pushed
+back into the lake.
+~
+254 36888 0
+D1
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25423
+S
+#25423
+The Lake of Boiling Blood~
+   You are knee deep in boiling blood. The searing agony here is unbearable.
+The smell of charred flesh mingles obscenely with the screams of others
+suffering the same fate. You panic to escape, as you feel the blood seep into
+your clothing and shoes.
+~
+254 36888 0
+D0
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25427
+D1
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25424
+D2
+The edge of the lake creeps up to the south.
+~
+~
+0 0 25419
+D3
+The edge of the lake creeps up to the west.
+~
+~
+0 0 25422
+S
+#25424
+The Lake of Boiling Blood~
+   You are knee deep in boiling blood. The searing agony here is unbearable.
+The smell of charred flesh mingles obscenely with the screams of others
+suffering the same fate. You panic to escape, as you feel the blood seep into
+your clothing and shoes.
+~
+254 36888 0
+D0
+An island stands solemnly to the north at the center of the lake.
+~
+~
+0 0 25428
+D1
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25425
+D2
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25420
+D3
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25423
+S
+#25425
+The Lake of Boiling Blood~
+   You are knee deep in boiling blood. The searing agony here is unbearable.
+The smell of charred flesh mingles obscenely with the screams of others
+suffering the same fate. You panic to escape, as you feel the blood seep into
+your clothing and shoes.
+~
+254 36888 0
+D0
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25429
+D1
+The edge of the lake creeps up to the east.
+~
+~
+0 0 25426
+D2
+The edge of the lake creeps up to the south.
+~
+~
+0 0 25421
+D3
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25424
+S
+#25426
+The Edge of the Lake~
+   The constant screaming of those around you is deafening. You are on the
+shore of a lake of what appears to be boiling blood. Its inhabitants are
+continually trying to escape the agony by climbing out, only to be beaten back
+by the sadistic guards surrounding the lake. There is a small island visible in
+the middle of the lake, with a milling crowd trying to keep from being pushed
+back into the lake.
+~
+254 36888 0
+D3
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25425
+S
+#25427
+The Lake of Boiling Blood~
+   You are knee deep in boiling blood. The searing agony here is unbearable.
+The smell of charred flesh mingles obscenely with the screams of others
+suffering the same fate. You panic to escape, as you feel the blood seep into
+your clothing and shoes.
+~
+254 36888 0
+D0
+The edge of the lake creeps up to the north.
+~
+~
+0 0 25430
+D1
+An island stands solemnly to the east at the center of the lake.
+~
+~
+0 0 25428
+D2
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25423
+S
+#25428
+The Island~
+   You can see now that the island is made up of crippled bodies, flailing with
+what few limbs remain to worm away from this punishment. Its inhabitants wield
+makeshift weapons to protect their precarious positions of safety, at the
+expense of their victims.
+~
+254 134250520 0
+D0
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25431
+D1
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25429
+D2
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25424
+D3
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25427
+S
+#25429
+The Lake of Boiling Blood~
+   You are knee deep in boiling blood. The searing agony here is unbearable.
+The smell of charred flesh mingles obscenely with the screams of others
+suffering the same fate. You panic to escape, as you feel the blood seep into
+your clothing and shoes.
+~
+254 36888 0
+D0
+The edge of the lake creeps up to the north.
+~
+~
+0 0 25432
+D2
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25425
+D3
+An island stands solemnly to the west at the center of the lake.
+~
+~
+0 0 25428
+S
+#25430
+The Edge of the Lake~
+   The constant screaming of those around you is deafening. You are on the
+shore of a lake of what appears to be boiling blood. It's inhabitants are
+continually trying to escape the agony by climbing out, only to be beaten back
+by the sadistic guards surrounding the lake. There is a small island visible in
+the middle of the lake, with a milling crowd trying to keep from being pushed
+back into the lake.
+~
+254 36888 0
+D1
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25431
+D2
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25427
+S
+#25431
+The Lake of Boiling Blood~
+   You are knee deep in boiling blood. The searing agony here is unbearable.
+The smell of charred flesh mingles obscenely with the screams of others
+suffering the same fate. You panic to escape, as you feel the blood seep into
+your clothing and shoes.
+~
+254 36888 0
+D0
+Beyond the boiling lake, a grandiose cathedral towers on the northern
+edge, smoke drifting from its peaks.
+~
+~
+0 0 25433
+D1
+The edge of the lake creeps up to the east.
+~
+~
+0 0 25432
+D2
+An island stands solemnly to the south at the center of the lake.
+~
+~
+0 0 25428
+D3
+The edge of the lake creeps up to the west.
+~
+~
+0 0 25430
+S
+#25432
+The Edge of the Lake~
+   The constant screaming of those around you is deafening. You are on the
+shore of a lake of what appears to be boiling blood. It's inhabitants are
+continually trying to escape the agony by climbing out, only to be beaten back
+by the sadistic guards surrounding the lake. There is a small island visible in
+the middle of the lake, with a milling crowd trying to keep from being pushed
+back into the lake.
+~
+254 36888 0
+D2
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25429
+D3
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25431
+S
+#25433
+The Cathedral of Geryon~
+   You are in a huge room with high vaulted ceilings and stained glass windows
+depicting scenes of suffering and destruction. A huge black altar sits in the
+middle of the room, adorned with skulls and half-decayed bodies. There is a
+smell in the air of rotted meat and a musky animal odor.
+~
+254 134254621 0
+D2
+The screaming agony of people drowning in the lake forever drift toward you.
+~
+~
+0 0 25431
+D5
+A gaping hole in the floor plummets down into a chasm below the cathedral.
+~
+hole~
+11 0 25434
+E
+windows~
+
+  These glorious stained-glass windows stand higher than your sight,
+all the way to the rafters of this giant Cathedral.  They are made
+from glass blown from sand in the furthest pits of Hell, of a quality
+such as will never be surpassed.  The scenes within them depict every
+sin Man has ever had opportunity to commit.
+
+~
+E
+altar~
+
+  A horrible sacrificial altar built to Geryon, where sits a pile of
+sinews and carcasses of a few of the late sacrificees.
+
+~
+E
+hole~
+
+  A gaping hole pushes down toward a canyon below the Cathedral.
+
+~
+S
+#25434
+The Sixth Circle of Hell~
+   You are standing in a long narrow canyon. The floor of the canyon is gouged
+with a long track running its length. As you look closer down the canyon, you
+see the eerie glow of light that has been with you since the beginning. You
+hear a distant rumble like thunder, only it seems to be getting closer. 
+~
+254 32792 4
+D1
+The canyon pushes infinitely onward down into the depths of hell.
+~
+~
+0 0 25435
+S
+#25435
+The Sixth Circle of Hell~
+   You are standing in a long narrow canyon. The floor of the canyon is gouged
+with a long track running its length. As you look closer down the canyon, you
+see the eerie glow of light that has been with you since the beginning. You
+hear a distant rumble like thunder, only it seems to be getting closer. 
+~
+254 36888 4
+D1
+The canyon pushes infinitely onward down into the depths of hell.
+~
+~
+0 0 25436
+D3
+The canyon pushes up toward the darkness of an unknown end.
+~
+~
+0 0 25434
+S
+#25436
+The Sixth Circle of Hell~
+   You are standing in a long narrow canyon. The floor of the canyon is gouged
+with a long track running its length. As you look closer down the canyon, you
+see the eerie glow of light that has been with you since the beginning. You
+hear a distant rumble like thunder, only it seems to be getting closer. 
+~
+254 36888 4
+D1
+The canyon pushes infinitely onward down into the depths of hell.
+~
+~
+0 0 25437
+D3
+The canyon pushes up toward the darkness of an unknown end.
+~
+~
+0 0 25435
+S
+#25437
+The Sixth Circle of Hell~
+   You are standing in a long narrow canyon. The floor of the canyon is gouged
+with a long track running its length. As you look closer down the canyon, you
+see the eerie glow of light that has been with you since the beginning. You
+hear a distant rumble like thunder, only it seems to be getting closer. 
+~
+254 36888 4
+D1
+The canyon pushes infinitely onward down into the depths of hell.
+~
+~
+0 0 25438
+D3
+The canyon pushes up toward the darkness of an unknown end.
+~
+~
+0 0 25436
+S
+#25438
+The Sixth Circle of Hell~
+   You are standing in a long narrow canyon. The floor of the canyon is gouged
+with a long track running its length. As you look closer down the canyon, you
+see the eerie glow of light that has been with you since the beginning. You
+hear a distant rumble like thunder, only it seems to be getting closer. 
+~
+254 36888 4
+D1
+The canyon pushes infinitely onward down into the depths of hell.
+~
+~
+0 0 25439
+D3
+The canyon pushes up toward the darkness of an unknown end.
+~
+~
+0 0 25437
+S
+#25439
+The Sixth Circle of Hell~
+   You are standing in a long narrow canyon. The floor of the canyon is gouged
+with a long track running its length. As you look closer down the canyon, you
+see the eerie glow of light that has been with you since the beginning. You
+hear a distant rumble like thunder, only it seems to be getting closer. 
+~
+254 36888 4
+D1
+The canyon pushes infinitely onward down into the depths of hell.
+~
+~
+0 0 25440
+D3
+The canyon pushes up toward the darkness of an unknown end.
+~
+~
+0 0 25438
+S
+#25440
+The Sixth Circle of Hell~
+   You are standing in a long narrow canyon. The floor of the canyon is gouged
+with a long track running its length. As you look closer down the canyon, you
+see the eerie glow of light that has been with you since the beginning. You
+hear a distant rumble like thunder, only it seems to be getting closer. 
+~
+254 36888 4
+D1
+The canyon pushes infinitely onward down into the depths of hell.
+~
+~
+0 0 25441
+D3
+The canyon pushes up toward the darkness of an unknown end.
+~
+~
+0 0 25439
+S
+#25441
+The Sixth Circle of Hell~
+   You are standing in a long narrow canyon. The floor of the canyon is gouged
+with a long track running its length. You seem to have reached the eastern end
+of the canyon and can see an ever-brightening glow above you. You hear a
+distant rumble like thunder, only it seems to be getting closer. A pathway
+leads down and out of the cavern, toward the depths of Greater Hell. 
+~
+254 36888 4
+D3
+The canyon pushes up toward the darkness of an unknown end.
+~
+~
+0 0 25440
+D5
+Below the canyon, a wave of heat issues forth from the Seventh Circle.
+~
+~
+0 0 25500
+S
+#25442
+Floating in the Air over the River Styx~
+  Upon a non-existent breeze, you fly up across the famed River Styx.  The
+distinct upper circles fade from view behind you as the belt carries you down
+beyond a giant waterfall and along toward a gaping maw in the earth.  Beyond
+lies the Eighth Circle of Hell.  Billions of screaming souls echo upward
+in a constant din around you.
+~
+254 36889 0
+S
+#25443
+Floating in the Air over the River Styx~
+  You continue slowly to float up across the River Styx.  The distinct
+upper circles fade from view behind you as the belt carries you down
+beyond a giant waterfall and along toward a gaping maw in the earth.
+Beyond lies the Eighth Circle of Hell.  Billions of screaming souls echo
+upward in a constant din around you.  A daemon-centaur below sends arrows
+into the hapless souls trying to reach beyond the river to escape..
+Perhaps it's better you stay up here.
+~
+254 36889 0
+S
+#25444
+Floating in the Air over the River Styx~
+  You begin to float slowly downward at a safe enough distance from the
+arrow-wielding centaurs.  As you near it, the Eighth Circle widens and
+cracks open like a gangrenous wound.  Several gigantic pits ooze dark
+smoke and agonizing death before you, but land you must.
+~
+254 36889 0
+S
+#25445
+Approaching a Stand of Trees~
+  The area surrounding your path becomes significantly more dry as you
+continue your journey to the center of Hell.  A large forest appears
+on the horizon, engulfing the trail far ahead with its menacing girth.
+Patches of undergrowth also slowly creep in from behind and soon push
+you forward to your ultimate destination.  A forlorn cry sounds in
+the direction of the trees.
+~
+254 32797 3
+D1
+The path leads deeper into the Wood of the Suicides.
+~
+~
+0 -1 25446
+S
+#25446
+Entrance to the Fourth Circle of Hell~
+  Venturing farther, you soon encounter the edge of the enormous wood.
+A thin pathway darkens as it sneaks into the stand of trees, away from
+the threat of the brush behind you.  Cacophonous yells and agonizing
+screams are now evidently coming from deep within the forest itself.
+~
+254 36889 3
+D1
+The path leads deeper into the Wood of the Suicides.
+~
+~
+0 -1 25447
+D3
+The path leads out of the Wood toward an unknown end.
+~
+~
+0 -1 25445
+S
+#25447
+The Wood of the Suicides~
+  This is the beginning of the fourth circle, reserved for those souls
+who wore many facades in their lives as they endured their self-torment.
+Here, having made the ultimate choice to end their lives prematurely,
+they still endure torment, but only at the jaws of hellish harpies.
+These poor souls appear as gnarled trees making up this huge wood and
+are constantly being torn limb-from-limb and eaten by the harpies.
+Never again will they know peace.
+~
+254 36889 3
+D0
+The path leads deeper into the Wood of the Suicides.
+~
+~
+0 -1 25448
+D1
+The path leads deeper into the Wood of the Suicides.
+~
+~
+0 -1 25451
+D3
+The path leads out of the Wood toward an unknown end.
+~
+~
+0 -1 25446
+S
+#25448
+Between the Gnarled Souls~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+254 561177 3
+D0
+The path extends north into the frayed forms of suicidal souls.
+~
+~
+0 -1 25449
+D2
+The path leads back toward the entrance of the Wood.
+~
+~
+0 -1 25447
+S
+#25449
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+254 36889 3
+D1
+The path through the Wood continues east.
+~
+~
+0 -1 25450
+D2
+The path curves to the south, leading toward the entrance of the Wood.
+~
+~
+0 -1 25448
+S
+#25450
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.  A light
+on a hill up ahead signifies a small clearing beyond some trees.
+~
+254 36889 3
+D3
+The path drifts back into the deep reaches of the Wood.
+~
+~
+0 -1 25449
+D4
+A short hill reaches up toward a clearing beyond the Wood.
+~
+~
+0 -1 25454
+S
+#25451
+Between the Gnarled Souls~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+254 561177 3
+D0
+The path extends north into the frayed forms of suicidal souls.
+~
+~
+0 -1 25452
+D3
+The path leads back toward the entrance of the Wood.
+~
+~
+0 -1 25447
+S
+#25452
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.
+~
+254 36889 3
+D1
+The path through the Wood continues east.
+~
+~
+0 -1 25453
+D2
+The path curves to the south, leading toward the entrance of the Wood.
+~
+~
+0 -1 25451
+S
+#25453
+The Fourth Circle of Hell~
+  The path jaunts here and there around the screaming trees as some
+reach out their broken branches to beg for mercy.  They seem almost to
+warn of some greater evil that lies within the wood, until a pack of
+harpies begins tearing them with flaming sharp teeth.  The sky above
+is rampant with a smoky haze emitting from each burning soul.  A light
+on a hill up ahead signifies a small clearing beyond some trees.
+~
+254 36889 3
+D3
+The path drifts back into the deep reaches of the Wood.
+~
+~
+0 -1 25452
+D4
+A short hill reaches up toward a clearing beyond the Wood.
+~
+~
+0 -1 25457
+S
+#25454
+Garden of Tumult~
+  Just behind a few smouldering souls, you find a patch of scorched
+earth.  This is a site of pure torture, where Satan himself is said
+to appear at the height of Reaping to sow his seeds of evil for a new
+season.  Nothing remotely good grows here now except for a few strands
+of devil-grass here and there.  Looking to the south, a strange fenceline
+encloses the path along one of the rows in the Garden.
+~
+254 36888 3
+D2
+The garden drifts south, narrowing down into a fencerow.
+~
+~
+0 -1 25455
+S
+#25455
+In the Rows of Sin~
+  Between the fenceposts, a row struggles along beneath the harsh red
+sky.  Spatters of blood and tattered cornhusks are strewn on the
+hardpan dirt.  The row is very narrow, allowing passage only to those
+who truly need punishment for the crimes of those in lower Hell.
+~
+254 37145 3
+D0
+The fencerow opens up abruptly to the north, expanding into the Garden.
+~
+~
+0 -1 25454
+D1
+The fencerow opens up abruptly to the east, expanding into the Garden.
+~
+~
+0 -1 25456
+S
+#25456
+Garden of Tumult~
+  Along a clearing, the wood begins again, taking new form from
+the tortured beings in the trees.  A scorched patch of cracked hardpan
+earth stretches out before you.  A lone set of fenceposts push
+staunchly northward deeper into the Garden.
+~
+254 36888 3
+D3
+The garden curves northwest, narrowing down into a fencerow.
+~
+~
+0 -1 25455
+D5
+A dark path leads among the souls below this hill, far into the Wood.
+~
+~
+0 -1 25460
+S
+#25457
+Garden of Tumult~
+  Just behind a few smouldering souls, you find a patch of scorched
+earth.  This is a site of pure torture, where Satan himself is said
+to appear at the height of Reaping to sow his seeds of evil for a new
+season.  Nothing remotely good grows here now except for a few strands
+of devil-grass here and there.  Looking to the south, a strange fenceline
+encloses the path along one of the rows in the Garden.
+~
+254 36888 3
+D2
+The garden drifts south, narrowing down into a fencerow.
+~
+~
+0 -1 25458
+S
+#25458
+In the Rows of Sin~
+  Between the fenceposts, a row struggles along beneath the harsh red
+sky.  Spatters of blood and tattered cornhusks are strewn on the
+hardpan dirt.  The row is very narrow, allowing passage only to those
+who truly need punishment for the crimes of those in lower Hell.
+~
+254 37145 3
+D0
+The fencerow opens up abruptly to the north, expanding into the Garden.
+~
+~
+0 -1 25457
+D1
+The fencerow opens up abruptly to the east, expanding into the Garden.
+~
+~
+0 -1 25459
+S
+#25459
+Garden of Tumult~
+  Along a clearing, the wood begins again, taking new form from
+the tortured beings in the trees.  A scorched patch of cracked hardpan
+earth stretches out before you.  A lone set of fenceposts push
+staunchly northward deeper into the Garden.
+~
+254 36888 3
+D3
+The garden curves northwest, narrowing down into a fencerow.
+~
+~
+0 -1 25458
+D5
+A dark path leads among the souls below this hill, far into the Wood.
+~
+~
+0 -1 25461
+S
+#25460
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25462
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25355
+S
+#25461
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25462
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25456
+S
+#25462
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east toward a screaming throng of souls.
+~
+~
+0 -1 25463
+D3
+The pathway drifts up into a small copse of trees to the west.
+~
+~
+0 -1 25495
+S
+#25463
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D0
+The ashen pathway meanders north into the Wood.
+~
+~
+0 -1 25464
+D3
+The ashen pathway meanders west into the Wood.
+~
+~
+0 -1 25462
+S
+#25464
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east, deeper into the Wood.
+~
+~
+0 -1 25465
+D2
+The ashen pathway meanders south into the Wood.
+~
+~
+0 -1 25463
+S
+#25465
+A Path Lost Through the Wood~
+  The path diminishes to a minor cut through the brambles and now-silent
+forms of trees all around you.  A dead calm has permeated the wood here.
+Could it be that you have taken a wrong turn?  The ashen path drifts west,
+while a very small trail occurs to the north in the beaten underbrush.
+~
+254 557081 3
+D0
+A small opening in the brush pushes through to the north into a
+strangely-lit clearing.
+~
+~
+0 -1 25466
+D3
+A path seems to move that direction, although you don't know where it goes..
+~
+~
+0 -1 25464
+S
+#25466
+Cut Short from the Thread of Existence~
+  A blinding flash of speed hurtles out at you from between some trees,
+raising the alarm of the souls behind you.  Wailing trees and a sudden
+thunderous roar from above blare in your ears.  It appears that you have
+disturbed the great evil which births the harpies here in this den of
+torment.  The horrid screeching ceases instantly as a form takes shape
+before your face.
+~
+254 134774809 3
+D0
+A stench of blood and heat drifts to the north.
+~
+~
+0 -1 25417
+D2
+The forest extends into the southwest toward an ashen pathway.
+~
+~
+0 -1 25465
+S
+#25467
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25471
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25355
+S
+#25468
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25474
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25355
+S
+#25469
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25480
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25456
+S
+#25470
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25477
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25456
+S
+#25471
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east toward a screaming throng of souls.
+~
+~
+0 -1 25472
+D3
+The pathway drifts up into a small copse of trees to the west.
+~
+~
+0 -1 25497
+S
+#25472
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D0
+The ashen pathway meanders north into the Wood.
+~
+~
+0 -1 25473
+D3
+The ashen pathway meanders west into the Wood.
+~
+~
+0 -1 25471
+S
+#25473
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east, deeper into the Wood.
+~
+~
+0 -1 25483
+D2
+The ashen pathway meanders south into the Wood.
+~
+~
+0 -1 25472
+S
+#25474
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east toward a screaming throng of souls.
+~
+~
+0 -1 25475
+D3
+The pathway drifts up into a small copse of trees to the west.
+~
+~
+0 -1 25470
+S
+#25475
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D0
+The ashen pathway meanders north into the Wood.
+~
+~
+0 -1 25476
+D3
+The ashen pathway meanders west into the Wood.
+~
+~
+0 -1 25474
+S
+#25476
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east, deeper into the Wood.
+~
+~
+0 -1 25485
+D2
+The ashen pathway meanders south into the Wood.
+~
+~
+0 -1 25475
+S
+#25477
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east toward a screaming throng of souls.
+~
+~
+0 -1 25478
+D3
+The pathway drifts up into a small copse of trees to the west.
+~
+~
+0 -1 25467
+S
+#25478
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D0
+The ashen pathway meanders north into the Wood.
+~
+~
+0 -1 25479
+D3
+The ashen pathway meanders west into the Wood.
+~
+~
+0 -1 25477
+S
+#25479
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east, deeper into the Wood.
+~
+~
+0 -1 25484
+D2
+The ashen pathway meanders south into the Wood.
+~
+~
+0 -1 25478
+S
+#25480
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east toward a screaming throng of souls.
+~
+~
+0 -1 25481
+D3
+The pathway drifts up into a small copse of trees to the west.
+~
+~
+0 -1 25468
+S
+#25481
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D0
+The ashen pathway meanders north into the Wood.
+~
+~
+0 -1 25482
+D3
+The ashen pathway meanders west into the Wood.
+~
+~
+0 -1 25480
+S
+#25482
+An Ashen Pathway~
+  The harpies appear suddenly and lay waste to the pathetic hoards of
+gnarled trees, leaving only the ashen wake of their destruction.
+Minor squeals now issue from beneath your feet as you tread lightly
+on this gray path.  The scent of burning flesh is cloying and palpable
+to the northeast.
+~
+254 36889 3
+D1
+The ashen pathway meanders east, deeper into the Wood.
+~
+~
+0 -1 25486
+D2
+The ashen pathway meanders south into the Wood.
+~
+~
+0 -1 25481
+S
+#25483
+A Path Lost Through the Wood~
+  The path diminishes to a minor cut through the brambles and now-silent
+forms of trees all around you.  A dead calm has permeated the wood here.
+Could it be that you have taken a wrong turn?  The ashen path drifts west,
+while a very small trail is blocked to the north in the beaten underbrush.
+~
+254 557081 3
+D0
+The underbrush seems too thick to traverse here.
+~
+ioafjgoijiopasdjf~
+9 -1 25483
+D3
+A path seems to move that direction, although you don't know where it goes..
+~
+~
+0 -1 25473
+S
+#25484
+A Path Lost Through the Wood~
+  The path diminishes to a minor cut through the brambles and now-silent
+forms of trees all around you.  A dead calm has permeated the wood here.
+Could it be that you have taken a wrong turn?  The ashen path drifts west,
+while a very small trail is blocked to the north in the beaten underbrush.
+~
+254 557081 3
+D0
+The underbrush seems too thick to traverse here.
+~
+adsfgijhaosfig~
+9 -1 25484
+D3
+A path seems to move that direction, although you don't know where it goes..
+~
+~
+0 -1 25479
+S
+#25485
+A Path Lost Through the Wood~
+  The path diminishes to a minor cut through the brambles and now-silent
+forms of trees all around you.  A dead calm has permeated the wood here.
+Could it be that you have taken a wrong turn?  The ashen path drifts west,
+while a very small trail is blocked to the north in the beaten underbrush.
+~
+254 557081 3
+D0
+The underbrush seems too thick to traverse here.
+~
+adsfgiosfig~
+9 -1 25485
+D3
+A path seems to move that direction, although you don't know where it goes..
+~
+~
+0 -1 25482
+S
+#25486
+A Path Lost Through the Wood~
+  The path diminishes to a minor cut through the brambles and now-silent
+forms of trees all around you.  A dead calm has permeated the wood here.
+Could it be that you have taken a wrong turn?  The ashen path drifts west,
+while a very small trail is blocked to the north in the beaten underbrush.
+~
+254 557081 3
+D0
+The underbrush seems too thick to traverse here.
+~
+adsfiahgoigiosfig~
+9 -1 25486
+D3
+A path seems to move that direction, although you don't know where it goes..
+~
+~
+0 -1 25482
+S
+#25487
+A Path Lost Through the Wood~
+  The path diminishes to a minor cut through the brambles and now-silent
+forms of trees all around you.  A dead calm has permeated the wood here.
+Could it be that you have taken a wrong turn?  The ashen path drifts west,
+while a very small trail occurs to the north in the beaten underbrush.
+~
+254 557081 3
+D0
+A small opening in the brush pushes through to the north into a
+strangely-lit clearing.
+~
+~
+0 -1 25488
+D3
+A path seems to move that direction, although you don't know where it goes..
+~
+~
+0 -1 25479
+S
+#25488
+Cut Short from the Thread of Existence~
+  A blinding flash of speed hurtles out at you from between some trees,
+raising the alarm of the souls behind you.  Wailing trees and a sudden
+thunderous roar from above blare in your ears.  It appears that you have
+disturbed the great evil which births the harpies here in this den of
+torment.  The horrid screeching ceases instantly as a form takes shape
+before your face.
+~
+254 134774809 3
+D0
+A stench of blood and heat drifts to the north.
+~
+~
+0 -1 25380
+D2
+The forest extends into the southwest toward an ashen pathway.
+~
+~
+0 -1 25487
+S
+#25489
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25373
+S
+#25490
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25373
+S
+#25491
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25379
+S
+#25492
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25379
+S
+#25493
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25379
+S
+#25494
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25471
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25367
+S
+#25495
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25474
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25367
+S
+#25496
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25477
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25459
+S
+#25497
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D1
+A larger ash pathway drifts eastward and down deeper.
+~
+~
+0 -1 25480
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25459
+S
+#25498
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25361
+S
+#25499
+A Copse of Tormented Trees~
+  Deeper into the wood, a strange grouping of the trees leaps out to
+corral you and attempt to prevent any further progress.  They plead
+with unseen eyes, cry out with pained voices, and reach toward the
+sky in great lament for their deeds.  The greater path which toils
+ahead serves more to your potential agony.
+~
+254 557081 3
+D4
+The path leads up a hill and back toward a garden in dim light.
+~
+~
+0 -1 25361
+S
+#0
+$~

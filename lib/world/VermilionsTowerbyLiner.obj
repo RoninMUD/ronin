@@ -1,0 +1,910 @@
+#17002
+blade ruby vermilion~
+Vermilion's Blade~
+A ruby blade is lying here in a pool of congealed blood.~
+$r blade glows deep-scarlet as it sears the flesh from $V.~
+5 134218305 8193
+23 6 4 14
+14 50000 30000
+16
+E
+blade~
+A blade made of the finest ruby and inlaid in pure gold.  A hideous reflection
+of yourself winks at you as you examine the sinister blade.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 2
+#17003
+armor ruby plate~
+Ruby-Plated Armor~
+A suit of ruby armor is lying here, sparkling in the sun.~
+~
+9 134217730 9
+18 1 2 2
+15 25000 20000
+10
+E
+armor~
+An immaculately-polished suit of armor plated with ruby.  Its magical surface
+throws off a dazzling, crimson glow.  On the front, the lone figure of
+the Tower stands emblazoned in a shower of fire.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 10
+A
+1 2
+#17004
+bracelet runic~
+Runic Bracelet~
+A bracelet made of the runes of an Oracle lies here.~
+~
+11 134218785 4097
+5 28 10 0
+5 10000 5000
+10
+E
+bracelet~
+An intricate, ivory bracelet adorned with various intricate runes and symbols.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 5
+A
+12 15
+B
+8192
+#17005
+hood dark cloth~
+Hood of Darkness~
+A shadow is laying here, in the form of a cloth hood.~
+~
+9 140513856 17
+5 0 0 0
+3 50 5000
+20
+E
+hood~
+This hood appears to be made of a dark, wispy material not of this world.
+It shifts and billows in a nonexistant breeze.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 20
+A
+12 15
+#17006
+paper parchment~
+a parched paper~
+A piece of paper is lying here, with some scribblings on it.~
+~
+16 524288 1
+0 0 0 0
+1 10 10
+100
+E
+paper~
+From the High Counsel Chairman of the Crimson King, Sir Marten of MidWorld:
+My minions, brothers, sisters, and followers-
+
+  It has been called to my attention that intruders are on the way.  In this
+light, we must prepare for the worst.  A list of orders have been issued unto
+me by our highest King, Vermilion the First, and so unto you do I pass these
+commands.
+  1.  The entrance to the Tower is to be locked and guarded at all times.
+      Renewing the gate's flame spell is imperative and if not kept in
+      perfect working condition, the King will deal with the person(s)
+      personally.
+
+  2.  The keys to the Master's topmost chambers will be kept by the 3 most
+      powerful in our number.  Those wishing to apply for this honor must
+      bring a resume with at least 4 oustanding murders and assorted crimes
+      on their personal record.
+
+  3.  All halls and rooms within the Tower will be patrolled at ALL TIMES.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17007
+pedestal iron~
+An iron pedestal~
+A tall, iron pedestal stands here, displaying a large book.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+page2~
+  A note in the ancient High Speech to future generations.
+It looks like a lesson of some kind:
+"I do not shoot with my hand,
+     he who shoots with his hand has forgotten the face of his father.
+I do not aim with my hand,
+     he who aims with his hand has forgotten the face of his father.
+I aim with my eye.
+I do not kill with my gun,
+     he who kills with his gun has forgotten the face of his father.
+I kill with my heart."
+                    Ka         Ka-tet
+                        Destiny
+~
+E
+pedestal~
+This wrought-iron work of art stands alone, holding a grand book.
+~
+E
+book~
+  An immense, leather-bound volume of knowledge studied by the Lords
+of Light for centuries.  The cover carries a single emblazoned figure,
+that of the dark Tower.  Only two pages are legible, page1 and page2.
+~
+E
+page1~
+  Eons ago, the Great Old Ones fought viciously over the possession
+of the Universe.  A consensus was finally reached that none of them
+would retain control, but a single "chosen" being was to rule from
+the center under their authority.  The Universe was stretched between
+twelve concentric portals leading to End-World, and at the center, the
+thirteenth portal was to be guarded by a ruler from atop the Tower.
+At each portal was placed a Guardian:  Spider, Elephant, Rat,
+Kangaroo, Bear, Fish, Snake, Ape, Eagle, Turtle, Lion, and Bat all
+ruled their respective areas and kept Evil from entering the Portals.
+Among men on the Lower Planes of Reality were placed special beings,
+Lords of Light, human by appearance but supernatural in ability.
+They were set to recover the land if Evil ever forced its way in
+and took hold.  Since then, the world has moved on, and the gunslinger
+line continues.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17008
+statue spider~
+A statue of a spider~
+A gigantic spider dangles here from her web, frozen in time.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+spider~
+A statue of the once-magnificent Guardian spider.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17009
+statue elephant~
+A statue of an elephant~
+An enormous elephant appears to be frozen here in full charge.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+elephant~
+A statue of the once-magnificent Guardian elephant.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17010
+rose key~
+a dying rose~
+A lonely rose is growing here.~
+~
+18 524288 1
+0 0 0 0
+3 10 10
+100
+E
+rose~
+  A brilliantly sensuous rose, no different from the rest, but its mere
+presence here commands attention.  This rose has existed for all time, as
+the Tower has, and great care should be taken when such power is at work.
+Its aura seems to beckon you closer, and draws a shroud of peace about
+your soul.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17011
+statue rat~
+A statue of a huge rat~
+A statue of the Guardian Rat lies here, as if sleeping.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+rat~
+A statue of the once-magnificent Guardian rat.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17012
+statue kangaroo~
+A statue of a kangaroo~
+A kangaroo has been frozen here in mid-hop.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+kangaroo~
+A statue of the once-magnificent Guardian kangaroo.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17013
+statue bear~
+A statue of a grizzly bear~
+The snarling figure of a huge, angry bear stands before you.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+bear~
+A statue of the once-magnificent Guardian bear.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17014
+statue fish~
+A statue of a fish~
+A small pool contains the frozen figure of a great fish.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+fish~
+A statue of the once-magnificent Guardian fish.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17015
+statue snake~
+A statue of a snake~
+A stone snake slithers over your ankles.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+snake~
+A statue of the once-magnificent Guardian snake.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17016
+statue ape~
+A statue of an ape~
+A gargantuan ape stands solidly before you.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+ape~
+A statue of the once-magnificent Guardian ape.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17017
+statue eagle~
+A statue of an eagle~
+A glorious stone eagle soars overhead.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+eagle~
+A statue of the once-magnificent Guardian eagle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17018
+statue turtle~
+A statue of a turtle~
+A huge turtle slumbers here, the Guardian of faith and knowledge.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+turtle~
+A statue of the once-magnificent Guardian turtle.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17019
+statue lion~
+A statue of a lion~
+A fierce lion stands here, pawing the air in mid-roar.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+lion~
+A statue of the once-magnificent Guardian lion.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17020
+statue bat~
+A statue of a bat~
+A statue of a great Guardian bat hangs from a perch here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+bat~
+A statue of the once-magnificent Guardian bat.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17021
+scalpel jagged~
+A jagged scalpel~
+A jagged piece of metal shaped like a scalpel is lying here.~
+~
+5 134217730 8193
+0 5 4 11
+8 5000 5000
+30
+E
+scalpel~
+Flecks of rust and clotted blood adorn this gruesome blade.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+#17022
+crown ruby~
+A Ruby-Encrusted Crown~
+A small, ruby crown seems to have been misplaced here.~
+~
+9 140513857 17
+5 0 0 0
+8 80000 40000
+10
+E
+crown~
+A glittering, golden crown covered in crushed rubies and looking quite
+expensive.  It throws off a spectacular amount of light, blinding you
+for a moment.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+12 5
+#17023
+boots dune~
+Dune Boots~
+A pair of dusty boots lie here in a small pile of sand.~
+~
+9 134217792 65
+8 0 0 0
+5 500 450
+40
+E
+boots~
+These worn and dusty boots seem to suck all the moisture from the air.
+A cloud of dust puffs up from within them, causing you to think twice
+before placing them on your feet.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 20
+A
+18 2
+B
+16777216
+#17024
+hat wizard~
+A pointy wizard's hat~
+A tall wizard's hat sits here, covered in runes and arcane symbols.~
+~
+9 116420706 17
+6 0 0 0
+7 10000 9696
+20
+E
+hat~
+A fine velvet wizard's hat, complete with magical symbols and bent tip.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 25
+A
+24 10
+B
+4
+#17029
+key~
+a dull, red key~
+A dusty, red key is lying here.~
+~
+18 524288 1
+0 0 0 0
+3 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17030
+bracelet runic~
+Runic Bracelet~
+A bracelet made of the runes of an Oracle lies here.~
+~
+11 134218786 4097
+5 28 10 0
+5 10 5000
+10
+E
+bracelet~
+An intricate, ivory bracelet adorned with various intricate runes and symbols.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+9 -5
+B
+8192
+#17031
+desk~
+A battered desk~
+A battered desk is sitting here buried in scraps of paper.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+desk~
+This sad excuse for a piece of furniture is covered in paper and
+gouged with nasty messages.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17032
+slime hunk~
+a hunk of slime~
+A hunk of slime adorns the wall here, reflecting a wet, putrid glow.~
+~
+13 268959872 1
+5 0 0 0
+5 10 10
+100
+E
+slime~
+An oozing chunk of unspeakable origin.  It flows sluggishly about as you look
+at it, as if it were somehow alive.  A distinct, pungent odor emanates from it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17045
+diamond key~
+a diamond-shaped key~
+A tiny diamond glitters among the shadows here.~
+~
+18 524291 1
+0 0 0 0
+3 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17049
+bubble glass~
+a Transparent bubble~
+A strange bubble is floating here above the ground, giving off a dim glow.
+~
+~
+15 32 1
+1 5 -1 0
+9999 10 10
+100
+E
+bubble~
+This strange bubble was almost too transparent to notice, if it weren't for
+the glinting object inside, you might have left this room without a second
+thought.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17053
+key tarnished~
+a tarnished key~
+A key lay here, throwing off dull rays of light.~
+~
+18 524288 1
+0 0 0 0
+1 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17067
+grass blade~
+a blade of grass~
+A strange blade of grass is rooted here, emitting a faint green light.~
+~
+18 524289 1
+0 0 0 0
+3 10 10
+100
+E
+grass~
+This solitary blade of grass emits a deep, green aura of life.  As it slowly
+withers before you, you can't help but ache with sympathy.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17080
+silver harmonica~
+a Silver Harmonica~
+A silver harmonica is lying here, humming to itself.~
+~
+24 217116674 16385
+0 0 0 0
+5 10000 2500
+20
+E
+harmonica~
+A splendid, shining hunk of metal that produces the sweetest tones you have
+ever known.  The surface is exquisitely detailed with roses in each corner
+and your initials monogrammed in the center.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 15
+A
+13 10
+B
+40
+#17082
+jawbone bone key~
+A jawbone of an ass~
+A jawbone lies here decomposing, its owner long since dead.~
+~
+18 524288 1
+0 0 0 0
+5 10 10
+100
+E
+jawbone~
+The curve of this smooth, white remnant looks distinctly carved.  The
+rotting teeth left within their spaces seem to delineate a pattern, as
+if the entire bone were a key of some sort.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17094
+talisman orb key~
+a talismanic orb~
+A black glass orb is veiled in a shroud of darkness here.~
+~
+18 524290 1
+0 0 0 0
+8 10 10
+100
+E
+orb~
+Your distorted image is reflected off the flawlessly-curved surface.
+Within the orb, a cloudy image seems to form, then dissapates into shadow
+once more.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17097
+bone chalice cup~
+a chalice made of bone~
+A cup of bone lies here on the floor, gathering dust.~
+~
+17 134217728 16385
+200 200 13 1
+15 1000 1000
+50
+E
+chalice~
+A large cup crafted from the bone of some poor soul.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+4 3
+#17098
+tapestry~
+a flowing tapestry~
+A flowing tapestry lies in a pile here on the floor.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+tapestry~
+
+  Made of several tough cloth and silk patterned sections, this
+giant tapestry was placed here long ago to pay homage to the twelve
+Great Guardians of Existence.  Each one is represented in colorful
+detail, standing high and circling the thirteenth portal: the Tower
+itself.  The tower stands high within the center, the hub of a circle
+of eternity, the nexus of all space, time, and matter.  A thin coat
+of dust from the floor marrs its otherwise flawless existence.
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#17099
+tapestry~
+a flowing tapestry~
+An ancient, flowing tapestry adorns the wall before you.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+100
+E
+tapestry~
+
+  Made of several tough cloth and silk patterned sections, this
+giant tapestry has been attached here long ago to pay homage to
+the twelve Great Guardians of Existence.  Each one is represented
+in colorful detail, standing high and circling the thirteenth portal:
+the Tower itself.  The tower stands high within the center, the hub
+of a circle of eternity, the nexus of all space, time, and matter.
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

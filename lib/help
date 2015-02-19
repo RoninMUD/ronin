@@ -1,0 +1,29 @@
+*******************************************************************************
+Movement:                       * Communication:
+NORTH SOUTH EAST WEST UP DOWN   * SAY (') ASK WHISPER EMOTE
+LOOK EXITS ENTER LEAVE          * TELL REPLY 
+SLEEP WAKE REST SIT STAND       * GTELL
+(LOCK UNLOCK OPEN CLOSE)        * SHOUT YELL
+SUBDUE RIDE DISMOUNT CLIMB      * GOSSIP GF AUCTION CHAOS QUEST
+MOVE CRAWL JUMP                 *
+*******************************************************************************
+Objects:                        * Information: 
+GET DROP PUT GIVE WEAR GRAB     * SCORE HELP INFO WHO NEWS TIME WEATHER WHERE
+INVENTORY EQUIPMENT EXAMINE EAT * CONSIDER LEVELS WIZLIST CREDITS WIZHELP
+TASTE POUR WRITE DRINK SIP JUNK * REPORT GLANCE AFFECT EXAMINE READ PRACTICE
+SPLIT                           *
+*******************************************************************************
+Combat:                         * Utility:
+KILL WIELD FLEE ASSIST          * ! (REPEAT LAST COMMAND) BUG IDEA TYPO QUIT 
+(KICK BASH RESCUE BACKSTAB CAST)* SAVE BRIEF COMPACT NOKILL NOSUMMON NOMESSAGE
+THROW RELOAD SHOOT BLOCK        *
+VICIOUS                         *
+*******************************************************************************
+Further information available by HELP <keyword>, keyword being a command or 
+(for example) one of the following:
+
+SOCIAL SHOPS INNS MAP AREA SPELLS
+CLERIC WARRIOR THIEF MAGIC PALADIN ANTI-PALADIN NINJA NOMAD COMMANDO BARD
+
+Type HELP INDEX for a full list of available help.
+*******************************************************************************

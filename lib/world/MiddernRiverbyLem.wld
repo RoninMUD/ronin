@@ -1,0 +1,1114 @@
+#16600
+The Gash in the Sky~
+   High above you, a huge gash in the sky opens up to allow torrents of
+water to fall to earth.  Clearly this is the work of the gods, providing
+water for the people of Midgaard during the chaotic Breaking of the World.
+Strong elemental forces strain to close the gash in the sky and stop the
+flow of water, but are held in check by even more powerful magic.  The
+river runs east to the Levee from here. You can barely make out the
+bottom of a long set of stairs near the top.
+~
+166 0 1
+D1
+The Middern river turns south as you head east.~
+~
+0 0 16645
+D4
+~
+~
+0 -1 2072
+E
+gash~
+Endless torrents of water flow from the black gash in the sky.~
+S
+#16610
+The Tunnel~
+   This cave turns into a tunnel below you, heading into darkness.  The
+river flows at the north, and you can see trees on the other side of
+the river.  There is some sort of chanting drifting up from the tunnel.
+~
+166 12 2
+D0
+The river flows by to the north.~
+~
+0 0 16653
+D5
+You see darkness below you.~
+~
+0 -1 16611
+S
+#16611
+The dark tunnel~
+   The cave mouth is directly above you here, and the tunnel heads into 
+darkness to the south.  The walls of the tunnel are rough rock, probably
+from when the river used to run this way, before the Breaking.
+~
+166 1 0
+D2
+A cavern opens up to the south.~
+~
+0 0 16612
+D4
+The cave mouth is above you.~
+~
+0 -1 16610
+S
+#16612
+The Cavern~
+   This cavern is lit by glowing moss.  A well-worn path heads east
+toward what looks like a temple.  The tunnel to the north heads back
+to the Middern River.
+~
+166 9 0
+D0
+You see more tunnel to the north.~
+~
+0 0 16611
+D1
+There is a temple to the east.~
+~
+0 -1 16613
+E
+moss~
+The moss glows softly on the walls.~
+S
+#16613
+The Temple of Berbalang~
+   This is the temple of the Berbalang, where worshipers of the dread
+beast that lives below the earth come to pay homage to their dark demon
+lord.  A bloody sacrifice altar stands in the center of the room...it
+looks as though it's seen a lot of use, and often.
+~
+166 8 0
+D3
+A cavern lies to the west.~
+~
+0 -1 16612
+E
+altar~
+The altar is covered with blood and rotting human flesh, better not
+look too closely.~
+S
+#16615
+Tunnel in the riverbank~
+   This tunnel heads deep underground, cold breezes wafting up to meet you
+with a smell even a pig wouldn't enjoy.  The river runs softly by to the
+east, offering a more comfortable setting for adventure.  The tunnel moves
+into darkness to the west.
+~
+166 13 0
+D1
+The river runs softly by to the east.~
+~
+0 0 16649
+D3
+You see the cold and cobweb filled tunnel.~
+~
+0 -1 16616
+S
+#16616
+The Cobweb filled tunnel~
+   This tunnel is filled with cobwebs -- those spiders must've been busy!
+The cobwebs ignite off your torches as you pass by, clinging to your armor
+and throwing smoke in your eyes.  To the south lies a cavern, and to the
+east is the tunnel mouth on the riverbank.
+~
+166 9 0
+D1
+You see the tunnel mouth, opening onto the riverbank.~
+~
+0 -1 16615
+D2
+A mid-sized cavern is to the south.~
+~
+0 0 16617
+E
+cobwebs~
+As you bring your torch nearer for a good look at the cobwebs, they ignite,
+setting your hair on fire!  Better not look too closely :)~
+S
+#16617
+The Cavern~
+   This cavern is dank and dark, and only a little wider than the rest of 
+the tunnel.  The rotting remains of a giant spider lie near a cavern wall,
+and the bones lying about the floor lend one to believe that this was the
+spider's lair.  Tunnels head off to the north and south.
+~
+166 9 0
+D0
+You see a cobweb-filled tunnel to the north.~
+~
+0 0 16616
+D2
+A dark and damp tunnel lies to the south.~
+~
+0 -1 16618
+E
+spider remains bones~
+The rotting remains of a giant spider lie nearby, along with the bones of
+its victims.~
+S
+#16618
+The dark and damp Tunnel~
+   This tunnel looks like it was dug by some kind of arachnid, perhaps
+that spider in the cavern to the north.  You hear crunching sounds and
+when you look down, you see tons of dead baby spiders.  Whatever killed
+them must've been damned effective, since you are the only thing moving
+in this tunnel.  The tunnel continues to the east, and a cavern opens
+up to the north.
+~
+166 13 0
+D0
+You see a mid-sized cavern to the north.~
+~
+0 -1 16617
+D1
+The slick tunnel lies to the east.~
+~
+0 0 16619
+S
+#16619
+The Slick tunnel~
+   This tunnel is so smooth that a solid footing is hard to find, and 
+you slip and slide often as you move along.  A soft glow comes from the
+north, and you can hear the sound of men moving about at the source of
+the glow.  The tunnel continues to the west, and opens up onto a cavern
+at the north.
+~
+166 9 0
+D0
+A soft glow emanates from the north, and you can see men moving about.~
+~
+0 -1 16620
+D3
+You see more tunnel to the west.~
+~
+0 0 16618
+S
+#16620
+The Portal~
+   The tunnel opens out into a huge cavern here.  On the stone floor in 
+the center of the cavern is a glowing portal, mist swirling slowly inside.
+It looks a bit like a moon gate, but why are there guards here?  And why
+are they looking at you funny?  Perhaps the sign in the ground holds the
+answer to these questions.
+~
+166 8 0
+D2
+You see more tunnel to the south.~
+~
+0 0 16619
+D5
+A tunnel into the unknown...~
+portal~
+1 0 16621
+E
+sign~
+The sign reads:
+
+		    Do not cross through to the other
+		    side of the portal.  The guards
+		    won't stop you, but many have
+		    entered, and none have returned.
+			 You Have Been Warned.
+
+~
+E
+portal~
+Glowing darkly, a grey-colored mist swirls on the other side of the
+portal, giving the impression of something trying to escape onto this
+side of reality.~
+S
+#16621
+The Choking Mist~
+   You stand in the midst of a swirling fog that seems to coalesce into
+a smothering putty in the back of your throat every time you draw breath.
+The mist seems to be swirling up from beneath you, where a tunnel slopes
+off into the unknown.  More tunnels head in each of the cardinal 
+directions, and a rope ladder leads back up to the portal.
+~
+166 137 0
+D0
+You see a windy tunnel to the north.~
+~
+0 -1 16622
+D1
+A bed of hot coals lies to the east.~
+~
+0 -1 16624
+D2
+A damp passage drips with slime to the south.~
+~
+0 -1 16628
+D3
+A stone road leads off to the west.~
+~
+0 -1 16626
+D4
+You see a glowing portal at the top of the ladder.~
+portal~
+1 -1 16620
+D5
+You see only darkness below.~
+~
+0 -1 16631
+E
+ladder~
+A rope ladder leads back up to the portal.~
+E
+mist~
+How can you look at a mist?  Wait, was that a face you just saw...??!?!?!~
+S
+#16622
+The windy tunnel~
+   A strong wind blows from north to south here, coming from the cavern
+that lies to the north.  Dark swirls of fog somehow manage to seep in
+from the south, despite the strong wind in the opposite direction.  The
+tunnel runs north and south.
+~
+166 9 0
+D0
+A dark and windy cavern opens up to the north.~
+~
+0 -1 16623
+D2
+A swirling dark fog seeps in from the south.~
+~
+0 -1 16621
+S
+#16623
+The dark and windy cavern~
+   As you enter this cavern, you are suddenly surrounded by a whirling 
+coreolis maelstrom of chaotic force.  Cyclone whirlwinds rage against 
+each other for primacy here, picking up chunks of rock and sending them
+spinning into the wind, slamming back and forth without ever touching
+the ground.  There is no way to stand against the hurricane -- one can
+only hope to find the center.
+~
+166 9 0
+D2
+The windy tunnel lies to the south.~
+~
+0 -1 16622
+S
+#16624
+A bed of coals~
+   You are walking on a bed of coals.  Shimmering heat waves rise up
+around you, blocking the view above.  The heat seems to radiate more
+strongly from the east, while a black mist seeps in from the west.
+~
+166 8 0
+D1
+Shimmering heat waves block your view to the east.~
+~
+0 -1 16625
+D3
+You see a swirling black mist to the west.~
+~
+0 -1 16621
+S
+#16625
+In the Eternal Flames~
+   Flames burn here for eternity, magically feeding off of each other, 
+magnifying and re-magnifying their heat so much that they burn a pure
+white color, pure heat, brighter than the brightest heat lighting.  It
+seems a bit cooler to the west.
+~
+166 8 0
+D3
+A bed of hot coals lies to the west...it seems like a nice cool place.~
+~
+0 -1 16624
+S
+#16626
+The stone bridge~
+   This stone bridge spans a wide chasm of an empty, featureless void.
+To the west lies a platform of stone, surmounted by a stone archway, 
+and the bridge disappears in a swirling mist to the east.
+~
+166 9 0
+D1
+You see a swirling black mist to the east.~
+~
+0 -1 16621
+D3
+A stone platform lies to the west.~
+~
+0 -1 16627
+S
+#16627
+The stone platform~
+   This platform is formed of an almost fluid, shapeless stone.  Seismic
+tremors rumble continuously as the platform is first an oval, then a
+square, then a hexagon, and back to an oval once again.  A large stone
+archway rises up above you, shifting in disharmony with the platform.
+~
+166 9 0
+D1
+The stone bridge lies to the east.~
+~
+0 -1 16626
+S
+#16628
+The Damp passage~
+   A solid wall of humidity hits you full in the face as you step into
+this passage.  Slick walls, oily to the touch, run with condensation.
+The passageway runs north and south.
+~
+166 8 0
+D0
+You see a choking black mist to the north, blotting out the light.~
+~
+0 -1 16621
+D2
+A light mist falls softly to the south.~
+~
+0 -1 16629
+S
+#16629
+The Raining Mist~
+   A mist falls endlessly here, hitting the ground and circling back up
+to the ceiling of the cavern, only to fall once more.  Rainbow colors
+dance in the light, giving the lie to the blackness that seeps in from
+the north.
+~
+166 8 0
+D0
+You see a damp passage to the north.~
+~
+0 -1 16628
+D2
+The Pool of Tears lies to the south.~
+~
+0 -1 16630
+S
+#16630
+The Pool of Tears~
+   A rain of salty teardrops falls from a shapeless white mist that 
+hangs in the air above you, dripping down into the pool that lies in
+the center of this cavern.  Blood-warm, the teardrops are soft as they
+slowly slide down your cheeks and arms.  The only exit is to the north.
+~
+166 8 0
+D0
+The Raining Mist lies to the north.~
+~
+0 -1 16629
+S
+#16631
+Darkness~
+   Slowly you push your way through the choking mist into........
+
+			D A R K N E S S.        
+
+	      You can sense exits above and below you.
+
+~
+166 13 0
+D4
+You see a swirling dark mist above you.~
+~
+0 -1 16621
+D5
+You see a Dark Doorway below you.~
+~
+0 -1 16632
+S
+#16632
+The Dark Doorway~
+   This Dark room is guarded by some of the most powerful beings that
+exist in this realm of magic, the grey elves.  A heavy Gateway blocks
+passage to the east, locking out the unknown.  Darkness hovers above
+you, snuffing out the light.
+~
+166 9 0
+D1
+The Gateway to the unknown lies to the east.~
+Gateway~
+2 16625 16633
+D4
+You see only darkness above you.~
+~
+0 -1 16631
+S
+#16633
+The Antechamber to the Unknown~
+   This antechamber is the last refuge of earthly beings, a borderland
+between known and unknown.  Hues of purple, obsidian, blood red, violet,
+and amber color your vision as you gaze around this room, and heavy doors
+lie to the east and west.
+~
+166 9 0
+D1
+A large set of Double Doors is to the east.~
+Double doors~
+1 -1 16634
+D3
+The Gateway lies to the west.~
+Gateway~
+2 16625 16632
+S
+#16634
+A dark passage~
+   This dark passage heads into the unknown, dark walls channeling and 
+limiting travel to only two directions -- east and west.  Large, 
+solid-looking doors block passage in both directions.
+~
+166 13 0
+D1
+The Gate is to the east.~
+Gate~
+1 -1 16635
+D3
+Double doors stand to the west.~
+Double doors~
+1 -1 16633
+S
+#16635
+A dark passage~
+   This dark passage heads back west towards safety (safety?), and slopes
+downwards into the unknown.  Someone has been at work here, repairing the
+damage caused by the passage of travelers.
+~
+166 8 0
+D3
+A Gate lies to the west.~
+Gate~
+1 -1 16634
+D5
+You see a tunnel sloping downwards.~
+~
+1 -1 16636
+S
+#16636
+Dark tunnel into the unknown~
+   This tunnel heads downwards, almost sliding you further into the 
+earth, as though some force is pulling you, calling to you, tolling you
+there.  The tunnel looks even darker further down.
+~
+166 9 0
+D4
+You see more tunnel upwards...it looks a bit nicer there.~
+~
+1 -1 16635
+D5
+The tunnel heads deeper into the earth.~
+~
+0 -1 16637
+S
+#16637
+The dark tunnel into the unknown~
+   The tunnel is beginning to slope more sharply here, as though it
+was built to make travelers slide downwards.  Darkness blots out
+everything but fear.
+~
+166 9 0
+D4
+You see a dark tunnel.~
+~
+0 -1 16636
+D5
+You see a dark tunnel.~
+~
+0 -1 16638
+S
+#16638
+A dark tunnel into the unknown~
+   The tunnel slopes downwards, seemingly forever.  Something is scribbled
+here... "Turn Back!"
+~
+166 9 0
+D4
+You see a dark tunnel.~
+~
+0 -1 16637
+D5
+You see a dark tunnel.~
+~
+0 -1 16639
+S
+#16639
+The Long tunnel's end~
+   A dark tunnel leads upwards, and more tunnel slopes off to the south.
+There is a shimmering darkness in the air, a feeling of movement where 
+nothing should exist.  You can go south into the darkness or head back
+up to safety.
+~
+166 9 0
+D2
+The Abyssian Walk heads southwards.~
+~
+0 0 16640
+D4
+You see a tunnel sloping upwards, back towards safety.~
+~
+0 -1 16638
+S
+#16640
+The Abyssian Walk~
+   The tunnel is getting wider here, and a death-like smell permeates the
+air.  The smell seems to be coming from the south.  Whatever lies to
+the south, it probably won't be happy to see you.
+~
+166 8 0
+D0
+You see a turn in the tunnel to the north.~
+~
+0 0 16639
+D2
+You see the tower of the Berbalang to the south.~
+~
+0 0 16641
+S
+#16641
+The Berbalang's Tower~
+   The Berbalang's Tower looms above you, filling the air with a sense
+of hungry death.  The Abyssian Walk lies to the north, leading back to
+safety.
+~
+166 8 0
+D0
+You see the Abyssian Walk to the north.~
+~
+0 0 16640
+D2
+The Berbalang's Tower lies to the south.~
+~
+0 0 16642
+S
+#16642
+The Berbalang's Tower~
+   This tower reeks with the stink of death and hate.  A large platform 
+dominates the center of the tower, and would bear claw-marks from the
+Berbalang's nightmares, if a nightmare could have nightmares.  A large
+pit on one side of the tower seems to lead downwards.
+~
+166 8 0
+D0
+You see a tunnel outside the tower to the north.~
+~
+0 0 16641
+D5
+A large pit opens up, heading into the depths of the earth.~
+~
+0 -1 16643
+E
+platform~
+Huge and made from carved out of the bedrock, this platform seems to be
+designed for the Berbalang to die upon when it needs some rest.~
+S
+#16643
+The Opening~
+   You stand inside a deep pit beneath the Berbalang's Tower.  It seems
+like you should be able to head farther down into the earth from here,
+but a large ivory seal has been placed over the spot where the tunnel 
+entrance should be.
+~
+166 8 0
+D4
+You see the Berbalang's Tower.~
+~
+0 -1 16642
+D5
+A large ivory seal, magically free of dirt and filth, blocks
+passage downwards into the warm earth.
+
+~
+seal ivory~
+2 16643 25382
+E
+seal~
+Engraved upon the seal are the words:
+
+	       You do not know what horrors there be, until
+	       you venture down into the bowels of the earth.
+	       Upon this entrance I place a seal, so that none
+	       may pass and unleash the fury of the demons
+	       beneath.
+
+				-- Lem the Iron Fist
+
+~
+S
+#16644
+The swirling chaos~
+   You stand in the midst of a swirling chaos, a maelstrom of forces 
+spinning about you.  There is nowhere to go, and nothing to do.  You
+are trapped at the center of the world.
+~
+166 7053 0
+D4
+The Void hovers above you.~
+Vortex~
+0 -1 0
+S
+#16645
+The Middern River~
+   The river flows strongly here, running past the Levee, which is to
+the north.  This close to the city, the river is slightly polluted, but
+it looks cleaner to the south.  There is a huge gash in the sky to the 
+west, pouring water upon the earth so that mortals may drink and travel.
+~
+166 0 7
+D0
+The Levee is to the north.~
+~
+0 0 3049
+D2
+You see more river to the south.~
+~
+0 0 16646
+D3
+There is a huge gash in the sky to the west.~
+~
+0 0 16600
+S
+#16646
+The Middern River~
+   The river is beginning to settle down to its course here, with none
+of the strong currents that send boats spinning willy-nilly to the north.
+The banks are beginning to slope upwards a bit, as the river has already
+started to dig itself a new channel.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16645
+D2
+You see more river to the south.~
+~
+0 0 16647
+S
+#16647
+The Middern River~
+   The river is definitely settled down here, stolidly moving along with
+all the implacability of water flowing down towards the sea.  The banks
+on either sides are only slightly raised  above water level, as though
+the river hasn't been flowing this way for very long.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16646
+D1
+You see more river to the east.~
+~
+0 0 16648
+S
+#16648
+The Middern River~
+   The river's current slowly, inexorably plows along, pushing everything
+along with it.  The banks on either side are rising higher over the water
+further to the south.  The river runs west and south from here.
+~
+166 0 7
+D2
+You see more river to the south.~
+~
+0 0 16649
+D3
+You see more river to the west.~
+~
+0 0 16647
+S
+#16649
+The Middern River~
+   The river is heading through rocky country now, twisting and turning
+to find the lowest course to flow through.  High up on the western
+riverbank, a tunnel opens up onto an impenetrable darkness.  The river
+continues to east and north.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16648
+D1
+You see more river to the east.~
+~
+0 0 16650
+D3
+A dark tunnel mouth opens on the riverbank to the west.~
+~
+0 0 16615
+S
+#16650
+The Middern River~
+   The river is heading through some really rocky country now, and you
+can see cave mouths all along the banks.  To the south the light
+reflects off of an immense ocean.  The river runs west and south.
+~
+166 0 7
+D2
+You see more river to the south.~
+~
+0 0 16651
+D3
+You see more river to the west.~
+~
+0 0 16649
+S
+#16651
+The Middern River~
+   The current is strong here, and pushes hard towards the south.  To
+the north the river begins to twist and turn, following the lay of the
+land.  You can see a large cave on the eastern bank.  The river runs
+north and south.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16650
+D1
+You see a large cave mouth looking out over the river.~
+~
+0 0 16670
+D2
+You see more river to the south.~
+~
+0 0 16652
+S
+#16652
+The Middern River~
+   The river flows along, picking up speed and power as it moves farther
+south towards the ocean.  The land is a bit lower over on the eastern 
+banks, lightly dotted with small caves.  The river continues north and 
+south.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16651
+D2
+You see more river to the south.~
+~
+0 0 16653
+S
+#16653
+The Middern River~
+   The river is widening here, as the force of its passage erodes the land
+it flows through.  The land seems a bit greener to the western side of
+the river, with rocky caves on the opposite bank.  The river continues
+west and north.  There is a gaping tunnel mouth in the riverbank to the
+south, and a magical pool lies to the east.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16652
+D1
+You see a magical pool to the east.~
+~
+0 0 5001
+D2
+A large tunnel mouth opens up on the southern bank.~
+~
+0 0 16610
+D3
+You see more river to the west.~
+~
+0 0 16654
+S
+#16654
+The Middern River~
+   The vegetation on the western bank of the river is turning even more
+verdant, while to the east the caves are dwindling in number.  The river 
+continues east and south.
+~
+166 0 7
+D1
+You see more river to the east.~
+~
+0 0 16653
+D2
+You see more river to the south.~
+~
+0 0 16655
+D3
+You see the western bank of the river.~
+~
+0 0 16671
+S
+#16655
+The Middern River~
+   The river is growing more powerful here, widening out to make more space
+for its rushing passage.  On the eastern banks a light pine forest is
+beginning to take hold in the sandy soil, growing thicker farther to the
+south.  The river continues west and north.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16654
+D1
+~
+~
+0 -1 21000
+D3
+You see more river to the west.~
+~
+0 0 16656
+S
+#16656
+The Middern River~
+   The river continues along, heading due south from here for a while
+before turning to the west.  The eastern shore is beginning to look a bit
+marshy, and to the west a swampy forest is beginning to spring up.
+~
+166 0 7
+D1
+You see more river to the east.~
+~
+0 0 16655
+D2
+You see more river to the south.~
+~
+0 0 16657
+S
+#16657
+The Middern River~
+   The river is rushing along here, having discovered a straight downhill
+course to the ocean, at least enough to pick up some speed for a bit.
+The swampy forest to the west is beginning to close up tighter into itself,
+blocking your view of the land in that direction.  The river continues
+north and south.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16656
+D2
+The river looks a bit rougher to the south.~
+~
+0 0 16658
+S
+#16658
+The Middern River~
+   The river is slowing here, as it takes a westwards bend a little
+farther to the south, but still moves rapidly along.  The river continues
+south and north.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16657
+D2
+You see a bend in the river to the south.~
+~
+0 0 16659
+S
+#16659
+The Middern River~
+   The river slows here, turning to the west for a short piece and
+approaching the swampy forest that lies in that direction.  The
+river continues west and north, heading into a very swamp countryside
+to the southwest.
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16658
+D3
+You see more river to the west.~
+~
+0 0 16660
+S
+#16660
+The Middern River~
+   The river is heading into a swampy countryside, large, leafy trees
+looming overhead on either bank.  The smells of the sea are beginning
+to waft towards you from the south.  The ocean can't be far away.
+The river continues to the south and east.
+~
+166 0 7
+D1
+You see more river to the east.~
+~
+0 0 16659
+D2
+You see more river to the south.~
+~
+0 0 16661
+E
+trees~
+Large leafy trees hang over the river from each bank.~
+S
+#16661
+The Middern River~
+   The river is heading into a darkly forested swamp, with dense, heavy
+foliage to the west.  On the eastern side of the river, the country
+is more marshy, with tall reeds poking up from large pools of water.
+The river continues north and south. 
+~
+166 0 7
+D0
+You see more river to the north.~
+~
+0 0 16660
+D2
+You see more river to the south.~
+~
+0 0 16662
+D3
+You see the western bank of the Middern River.~
+~
+0 0 16680
+S
+#16662
+The Middern River~
+   The river is slowing here, stodgily spreading out into slow-moving
+channels that seep southwards towards the ocean.  A wide marsh is 
+forming to the south, and the river heads north.
+~
+166 0 7
+D0
+You see the Middern River to the north.~
+~
+0 0 16661
+D2
+The river spreads out into a marsh to the south.~
+~
+0 0 16663
+S
+#16663
+The Middern River~
+   The river can only barely be called that here, as the marsh begins
+to take over the countryside.  Only the slightest of currents flows
+here, increasingly hard to detect.
+~
+166 0 7
+D0
+You see the Middern River to the north, spreading out into marsh.~
+~
+0 0 16662
+D2
+The marsh lies to the south.~
+~
+0 0 16664
+S
+#16664
+The Marsh~
+   You have reached the end of the river here, as marsh spreads out to
+the east, west, and south.  The Middern River can be seen to the north,
+slowly flowing down to feed this marsh.  To the east and west, the marsh
+eventually wraps around to the south, feeding slowly into the ocean.
+~
+166 0 3
+D0
+You see the Middern River to the north.~
+~
+0 0 16663
+D2
+~
+~
+0 -1 7100
+S
+#16670
+Cave mouth on the eastern bank~
+   You stand just inside a cave that rests on the eastern bank of the
+Middern River.  A tunnel heads off to the east, from whence comes a heavy
+animal smell, along with the aromatic scent of rotten meat.  The river
+flows along to the west.
+~
+166 325 0
+D1
+You see a tunnel heading off to the east.~
+~
+0 0 9502
+D3
+You see the Middern River.~
+~
+0 0 16651
+S
+#16671
+West bank of the Middern River~
+   You stand now upon the western bank of the Middern River.  Lush 
+growth flourishes on either side of the trail heading west to a small
+village, and the river flows gently by to the east.
+~
+166 0 3
+D1
+You see the Middern River, flowing ponderously by.~
+~
+0 0 16654
+D3
+You see the path to a small city.~
+~
+0 0 16672
+S
+#16672
+Pile of Rubble~
+   This path runs straight through a lush forest, heading east back to
+the Middern River.  Crickets and birds chirp noisily in the forest, happy
+about something that is beyond our comprehension.  Before your feet, you
+see a pile of stones, rocks and boulders that seem to cover what appears
+to be a set of stairs at one point or another.  You cannot move it, or
+crawl underneath it, you can only stare and wonder at what it was or
+wasn't.
+~
+166 0 3
+D1
+You see the western bank of the Middern River.~
+~
+0 0 16671
+S
+#16680
+West bank of the Middern River~
+   You stand here on the west bank of the Middern River.  To the west,
+a trail heads into the darkness of the forest, and the river flows
+by to the east.  A small creek heads off of the river into the woods,
+as well.
+~
+166 0 3
+D1
+You see the Middern River to the east.~
+~
+0 0 16661
+D3
+A path heads into the woods to the west.~
+~
+0 0 16681
+S
+#16681
+A path into the forest~
+   This path heads into the swampy forest that looms to the west.  A
+small creek burbles along, fueled by the nearby Middern River.  Dank
+air tells you that you are getting close to the marsh...perhaps you'd
+better get back to the river?
+~
+166 0 3
+D1
+You see the west bank of the Middern River.~
+~
+0 0 16680
+D3
+~
+~
+0 -1 24900
+S
+#16699
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+166 576 0
+S
+#0
+$~

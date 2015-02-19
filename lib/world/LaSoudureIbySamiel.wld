@@ -1,0 +1,2168 @@
+#7100
+The Marsh~
+  The marsh here is not very deep at all. The Middern river continues
+to spread out here, and the current is barely noticeable. To the east
+and west the marsh continues, and, in the distant south, you can see
+a wide expanse of water that is so blue that it makes your eyes hurt.
+~
+71 4 4
+D0
+~
+~
+0 -1 16664
+D1
+~
+~
+0 -1 7102
+D2
+~
+~
+0 -1 7105
+D3
+~
+~
+0 -1 7101
+S
+#7101
+The Marsh~
+   To your east you can see the river pouring into the larger waters of
+Crystal Bay to the south.  The current from the river has stirred up the
+mud here, giving the marshes a sinister look.  Little creatures brush against
+your legs as you wade through the waters.
+~
+71 0 4
+D1
+~
+~
+0 -1 7100
+D2
+~
+~
+0 -1 7106
+S
+#7102
+The Marsh~
+   Even with a strong wind blowing in from the ocean to the south,
+there are huge clouds of tiny insects.  You marvel at the diversity
+of the life in these marshes.  To the south stretches the marshes, 
+and farther on is a great bay.
+~
+71 0 4
+D2
+~
+~
+0 -1 7104
+D3
+~
+~
+0 -1 7100
+S
+#7103
+The Shallow Marshes~
+   To the southeast you think you can see something moving on a 
+rock in the water.  Maybe it was just a trick of the light playing
+on the water, but you can never be too careful.  Your passage east 
+and south are blocked by a man-made jetty jutting from the shore.
+~
+71 0 5
+D2
+~
+~
+0 -1 7112
+D3
+~
+~
+0 -1 7104
+S
+#7104
+The Shallow Marshes~
+   You are startled as a fish jumps out of the water.  You marvel
+at its beauty as the sun reflects off the fish's scaly body.  As 
+quickly as it happened, the fish is gone, leaving your heart heavy
+with grief.
+~
+71 0 5
+D0
+~
+~
+0 -1 7102
+D1
+~
+~
+0 -1 7103
+D2
+~
+~
+0 -1 7111
+D3
+~
+~
+0 -1 7105
+S
+#7105
+The Shallow Marshes~
+   The reeds growing up through the marsh here reach heights of almost 
+eight feet tall.  As you peek through the occasional gaps, you can 
+see the Crystal Bay directly to your south.
+~
+71 0 5
+D0
+~
+~
+0 -1 7100
+D1
+~
+~
+0 -1 7104
+D2
+~
+~
+0 -1 7110
+D3
+~
+~
+0 -1 7106
+S
+#7106
+The Shallow Marshes~
+   The marshes here are filled with reeds, and they slap at your legs as 
+you try to make your way through them.  You see tiny animals swimming in the 
+waters here, and you marvel at how tiny their universe is.
+~
+71 0 5
+D0
+~
+~
+0 -1 7101
+D1
+~
+~
+0 -1 7105
+D2
+~
+~
+0 -1 7109
+D3
+~
+~
+0 -1 7107
+D5
+A loose barrier of reeds covers up a cavern entrance below.
+~
+reeds~
+9 -1 16859
+E
+reeds~
+A loose barrier of cattails and other swamp plants, they part
+easily as the wind crawls between them.
+~
+S
+#7107
+The Shallow Marshes~
+   As you trudge waist deep through the murky waters of the marsh, 
+you wonder how you'll ever get your armor clean.  You passage is 
+blocked to the west by the towering cliffs and to the north by some 
+very jagged looking rocks.  
+~
+71 0 5
+D1
+~
+~
+0 -1 7106
+D2
+~
+~
+0 -1 7108
+S
+#7108
+The Deep Marshes~
+  To the west the marshes run into solid cliffs of some unknown 
+rock.  Even looking up at those heights makes you dizzy.  To the south
+and east you can see still more of the marshes flowing into the bay.
+~
+71 0 5
+D0
+~
+~
+0 -1 7107
+D1
+~
+~
+0 -1 7109
+D2
+~
+~
+0 -1 7117
+S
+#7109
+The Deep Marshes~
+   The marsh here is very deep as it slowly spreads out into the 
+bay that lies directly south.  You notice that the current here is 
+in a state of flux, as the waves from the bay collide with the 
+slow moving current of the river.
+~
+71 0 5
+D0
+~
+~
+0 -1 7106
+D1
+~
+~
+0 -1 7110
+D2
+~
+~
+0 -1 7116
+D3
+~
+~
+0 -1 7108
+S
+#7110
+Crystal Bay~
+   To the north, east and west, this little inlet of the Crystal Bay 
+is surrounded by the marsh.  The waters here are still a little murky
+from the current of the Middern River flowing from the north.  To the 
+south the bay stretches wide and clear.
+~
+71 0 7
+D0
+~
+~
+0 -1 7105
+D1
+~
+~
+0 -1 7111
+D2
+~
+~
+0 -1 7115
+D3
+~
+~
+0 -1 7109
+S
+#7111
+The Deep Marshes~
+   The marsh here is very deep, making it almost impossible to stand
+on solid ground.  As you tread water, you wonder what that thing is that 
+is swimming by your leg.  Thinking it better not to find out, you look
+south and glimpse the broad expanses of the Crystal Bay.
+~
+71 0 5
+D0
+~
+~
+0 -1 7104
+D1
+~
+~
+0 -1 7112
+D2
+~
+~
+0 -1 7114
+D3
+~
+~
+0 -1 7110
+S
+#7112
+The Deep Marshes~
+   A flat rocks juts out of the water here.  As you inspect the 
+rock, you notice many bones of what must have once been fish.  You 
+wonder what kind of creature was feeding here, and when it will
+return.
+~
+71 0 5
+D0
+~
+~
+0 -1 7103
+D2
+~
+~
+0 -1 7113
+D3
+~
+~
+0 -1 7111
+S
+#7113
+The Deep Marshes~
+   The muddy waters of the marshes are disappearing before your eyes
+and are being replaced be the crystal waters of the bay.  In the distance
+can be seen the greater expanse of the ocean.
+~
+71 0 5
+D0
+~
+~
+0 -1 7112
+D2
+~
+~
+0 -1 7121
+D3
+~
+~
+0 -1 7114
+S
+#7114
+Crystal Bay~
+   To the north and east you can see more of the marsh, and farther east
+you can see where the jetty thrusts its way into the deeper waters of the 
+bay.  The jetty cuts out most of the waves, and the calm waters here set
+your mind at ease.
+~
+71 0 7
+D0
+~
+~
+0 -1 7111
+D1
+~
+~
+0 -1 7113
+D2
+~
+~
+0 -1 7120
+D3
+~
+~
+0 -1 7115
+S
+#7115
+Crystal Bay~
+   You are surrounded on all sides by the waters of the Crystal Bay.
+To the north, you can still see the dankness of the marsh, as they 
+appear almost sinister in comparison to the waters of the bay.  Every
+now and then, the shrill cry of some sea bird breaks the silence.
+see is a deep blue.  The waves roll gently, inducing you into a hypnotic
+state of peace and tranquility.
+~
+71 0 7
+D0
+~
+~
+0 -1 7110
+D1
+~
+~
+0 -1 7114
+D2
+~
+~
+0 -1 7119
+D3
+~
+~
+0 -1 7116
+S
+#7116
+Crystal Bay~
+   To the north the marsh continues, and to the west you can see where
+the cliffs have ranged to meet the waters.  You take a deep breath of the
+clean salty air, and wonder why you don't come here more often.
+~
+71 0 7
+D0
+~
+~
+0 -1 7109
+D1
+~
+~
+0 -1 7115
+D2
+~
+~
+0 -1 7118
+D3
+~
+~
+0 -1 7117
+S
+#7117
+The Deep Marshes~
+   Here the marshes run into the cliff walls that encircle these 
+marshes and the bay farther east.  You stare straight up at the 
+impenetrable cliffs, and you realize that trying to climb out of these
+murky waters is impossible.
+~
+71 0 5
+D0
+~
+~
+0 -1 7108
+D1
+~
+~
+0 -1 7116
+S
+#7118
+Crystal Bay~
+   The waters of the Crystal Bay glitter with a million sparkles as the sun
+reflects off the shimmering waters.  Surely this must be how its name came to
+be, for nothing could be as beautiful as the sight you now behold.
+~
+71 0 7
+D0
+~
+~
+0 -1 7116
+D1
+~
+~
+0 -1 7119
+D2
+~
+~
+0 -1 7118
+D3
+~
+~
+0 -1 7118
+S
+#7119
+Crystal Bay~
+   The waters of the Crystal Bay glitter with a million sparkles as the sun
+reflects off the shimmering waters.  Surely this must be how its name came to
+be, for nothing could be as beautiful as the sight you now behold.
+~
+71 0 7
+D0
+~
+~
+0 -1 7115
+D1
+~
+~
+0 -1 7120
+D2
+~
+~
+0 -1 7125
+D3
+~
+~
+0 -1 7118
+S
+#7120
+Crystal Bay~
+   The waters of the Crystal Bay glitter with a million sparkles as the sun
+reflects off the shimmering waters.  Surely this must be how its name came to
+be, for nothing could be as beautiful as the sight you now behold.
+~
+71 0 7
+D0
+~
+~
+0 -1 7114
+D1
+~
+~
+0 -1 7121
+D2
+~
+~
+0 -1 7124
+D3
+~
+~
+0 -1 7119
+S
+#7121
+Crystal Bay~
+   The waters of the Crystal Bay glitter with a million sparkles as the sun
+reflects off the shimmering waters.  Surely this must be how its name came to
+be, for nothing could be as beautiful as the sight you now behold.
+~
+71 0 6
+D0
+~
+~
+0 -1 7113
+D1
+~
+~
+0 -1 7121
+D2
+~
+~
+0 -1 7123
+D3
+~
+~
+0 -1 7120
+S
+#7122
+Crystal Bay~
+   The waters of the Crystal Bay glitter with a million sparkles as the sun
+reflects off the shimmering waters.  Surely this must be how its name came to
+be, for nothing could be as beautiful as the sight you now behold.
+~
+71 0 7
+D2
+~
+~
+0 -1 7129
+D3
+~
+~
+0 -1 7123
+S
+#7123
+Crystal Bay~
+   The waters of the Crystal Bay glitter with a million sparkles as the sun
+reflects off the shimmering waters.  Surely this must be how its name came to
+be, for nothing could be as beautiful as the sight you now behold.
+~
+71 0 7
+D0
+~
+~
+0 -1 7121
+D1
+~
+~
+0 -1 7122
+D2
+~
+~
+0 -1 7128
+D3
+~
+~
+0 -1 7124
+S
+#7124
+Crystal Bay~
+   The waters of the Crystal Bay glitter with a million sparkles as the sun
+reflects off the shimmering waters.  Surely this must be how its name came to
+be, for nothing could be as beautiful as the sight you now behold.
+~
+71 0 7
+D0
+~
+~
+0 -1 7120
+D1
+~
+~
+0 -1 7123
+D2
+~
+~
+0 -1 7127
+D3
+~
+~
+0 -1 7125
+S
+#7125
+Crystal Bay~
+   The waters of the Crystal Bay glitter with a million sparkles as the sun
+reflects off the shimmering waters.  Surely this must be how its name came to
+be, for nothing could be as beautiful as the sight you now behold.
+~
+71 0 7
+D0
+~
+~
+0 -1 7119
+D1
+~
+~
+0 -1 7124
+D2
+~
+~
+0 -1 7126
+D3
+~
+~
+0 -1 7125
+S
+#7126
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7125
+D1
+~
+~
+0 -1 7127
+D2
+~
+~
+0 -1 7131
+D3
+~
+~
+0 -1 7126
+S
+#7127
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7124
+D1
+~
+~
+0 -1 7128
+D2
+~
+~
+0 -1 7132
+D3
+~
+~
+0 -1 7126
+S
+#7128
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7123
+D1
+~
+~
+0 -1 7129
+D2
+~
+~
+0 -1 7133
+D3
+~
+~
+0 -1 7127
+S
+#7129
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7122
+D1
+~
+~
+0 -1 7130
+D2
+~
+~
+0 -1 7134
+D3
+~
+~
+0 -1 7128
+S
+#7130
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D1
+~
+~
+0 -1 7130
+D2
+~
+~
+0 -1 7135
+D3
+~
+~
+0 -1 7129
+S
+#7131
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7126
+D1
+~
+~
+0 -1 7132
+D2
+~
+~
+0 -1 7131
+D3
+~
+~
+0 -1 7131
+S
+#7132
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7127
+D1
+~
+~
+0 -1 7133
+D2
+~
+~
+0 -1 7140
+D3
+~
+~
+0 -1 7131
+S
+#7133
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7128
+D1
+~
+~
+0 -1 7134
+D2
+~
+~
+0 -1 7141
+D3
+~
+~
+0 -1 7132
+S
+#7134
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7129
+D1
+~
+~
+0 -1 7135
+D2
+~
+~
+0 -1 7142
+D3
+~
+~
+0 -1 7133
+S
+#7135
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7130
+D1
+~
+~
+0 -1 7136
+D2
+~
+~
+0 -1 7143
+D3
+~
+~
+0 -1 7134
+S
+#7136
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D1
+~
+~
+0 -1 7137
+D2
+~
+~
+0 -1 7144
+D3
+~
+~
+0 -1 7135
+S
+#7137
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D1
+~
+~
+0 -1 7138
+D2
+~
+~
+0 -1 7145
+D3
+~
+~
+0 -1 7136
+S
+#7138
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D1
+~
+~
+0 -1 7139
+D2
+~
+~
+0 -1 7146
+D3
+~
+~
+0 -1 7137
+S
+#7139
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D2
+~
+~
+0 -1 7147
+D3
+~
+~
+0 -1 7138
+S
+#7140
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7132
+D1
+~
+~
+0 -1 7141
+D2
+~
+~
+0 -1 7168
+D3
+~
+~
+0 -1 7140
+S
+#7141
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7133
+D1
+~
+~
+0 -1 7142
+D2
+~
+~
+0 -1 7167
+D3
+~
+~
+0 -1 7140
+S
+#7142
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7134
+D1
+~
+~
+0 -1 7143
+D2
+~
+~
+0 -1 7166
+D3
+~
+~
+0 -1 7141
+S
+#7143
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7135
+D1
+~
+~
+0 -1 7144
+D2
+~
+~
+0 -1 7165
+D3
+~
+~
+0 -1 7142
+S
+#7144
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7136
+D1
+~
+~
+0 -1 7145
+D2
+~
+~
+0 -1 7164
+D3
+~
+~
+0 -1 7143
+S
+#7145
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7137
+D1
+~
+~
+0 -1 7146
+D2
+~
+~
+0 -1 7163
+D3
+~
+~
+0 -1 7144
+S
+#7146
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7138
+D1
+~
+~
+0 -1 7147
+D2
+~
+~
+0 -1 7162
+D3
+~
+~
+0 -1 7145
+S
+#7147
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7139
+D1
+~
+~
+0 -1 7148
+D2
+~
+~
+0 -1 7161
+D3
+~
+~
+0 -1 7146
+S
+#7148
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D1
+~
+~
+0 -1 7149
+D2
+~
+~
+0 -1 7160
+D3
+~
+~
+0 -1 7147
+S
+#7149
+La Soudure~
+   The waters of La Soudure are much calmer here as the land reaches out
+its arms and encircles the water in a breathtaking cove.  To the east is a
+lonely looking island.
+~
+71 0 7
+D1
+~
+~
+0 -1 7150
+D2
+~
+~
+0 -1 7159
+D3
+~
+~
+0 -1 7148
+S
+#7150
+La Soudure~
+   The waters of La Soudure are much calmer here as the land reaches out
+its arms and encircles the water in a breathtaking cove.  To the east is a
+lonely looking island.
+~
+71 0 7
+D0
+~
+~
+0 -1 7155
+D1
+~
+~
+0 -1 7151
+D2
+~
+~
+0 -1 7158
+D3
+~
+~
+0 -1 7149
+S
+#7151
+La Soudure~
+   The waters of La Soudure are much calmer here as the land reaches out
+its arms and encircles the water in a breathtaking cove.  To the east is a
+lonely looking island.
+~
+71 0 7
+D0
+~
+~
+0 -1 7154
+D1
+~
+~
+0 -1 7152
+D2
+~
+~
+0 -1 7157
+D3
+~
+~
+0 -1 7150
+S
+#7152
+La Soudure~
+   To the east and to the northeast is the Desert Island, legendary home of
+many great treasures, hidden here to protect it from thieves.  Legend has 
+it that the Pirate who buried his treasure here laid a curse upon it, until
+the day he could return and claim it for his own.
+~
+71 4 7
+D0
+~
+~
+0 -1 7153
+D1
+~
+~
+0 -1 7514
+D2
+~
+~
+0 -1 7152
+D3
+~
+~
+0 -1 7151
+S
+#7153
+La Soudure~
+   To the east and south east is the Desert Island.  Legend has it that
+a ruthless Pirate Captain buried his treasure there to keep until he could
+return and lay claim to it.  The stories of the wealth supposedly buried
+there are beyond all imaginations.
+~
+71 4 7
+D0
+~
+~
+0 -1 7156
+D1
+~
+~
+0 -1 7511
+D2
+~
+~
+0 -1 7152
+D3
+~
+~
+0 -1 7154
+S
+#7154
+La Soudure~
+   The waters of La Soudure are much calmer here as the land reaches out
+its arms and encircles the water in a breathtaking cove.  To the east is a
+lonely looking island.
+~
+71 0 7
+D1
+~
+~
+0 -1 7153
+D2
+~
+~
+0 -1 7151
+D3
+~
+~
+0 -1 7155
+S
+#7155
+La Soudure~
+   The waters of La Soudure are much calmer here as the land reaches out
+its arms and encircles the water in a breathtaking cove.  To the east is a
+lonely looking island.
+~
+71 0 7
+D1
+~
+~
+0 -1 7154
+D2
+~
+~
+0 -1 7150
+S
+#7156
+La Soudure~
+   To the east and south east is the Desert Island.  Rumor has it that 
+a ruthless Pirate Captain buried his treasure there to keep until he could 
+return and lay claim to it.  
+~
+71 4 7
+D1
+~
+~
+0 -1 7508
+D2
+~
+~
+0 -1 7153
+S
+#7157
+La Soudure~
+   The waters of La Soudure are much calmer here as the land reaches out
+its arms and encircles the water in a breathtaking cove.  To the east is a
+lonely looking island.
+~
+71 0 7
+D0
+~
+~
+0 -1 7151
+D3
+~
+~
+0 -1 7158
+S
+#7158
+La Soudure~
+   The waters of La Soudure are much calmer here as the land reaches out
+its arms and encircles the water in a breathtaking cove.  To the east is a
+lonely looking island.
+~
+71 0 7
+D0
+~
+~
+0 -1 7150
+D1
+~
+~
+0 -1 7157
+D3
+~
+~
+0 -1 7159
+S
+#7159
+La Soudure~
+   The waters of La Soudure are much calmer here as the land reaches out
+its arms and encircles the water in a breathtaking cove.  To the east is a
+lonely looking island.
+~
+71 0 7
+D0
+~
+~
+0 -1 7149
+D1
+~
+~
+0 -1 7158
+D3
+~
+~
+0 -1 7160
+S
+#7160
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7148
+D1
+~
+~
+0 -1 7159
+D2
+~
+~
+0 -1 7175
+D3
+~
+~
+0 -1 7161
+S
+#7161
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7147
+D1
+~
+~
+0 -1 7160
+D2
+~
+~
+0 -1 7174
+D3
+~
+~
+0 -1 7162
+S
+#7162
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7146
+D1
+~
+~
+0 -1 7161
+D2
+~
+~
+0 -1 7162
+D3
+~
+~
+0 -1 7163
+S
+#7163
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7145
+D1
+~
+~
+0 -1 7162
+D2
+~
+~
+0 -1 7163
+D3
+~
+~
+0 -1 7164
+S
+#7164
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7144
+D1
+~
+~
+0 -1 7163
+D2
+~
+~
+0 -1 7164
+D3
+~
+~
+0 -1 7165
+S
+#7165
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7143
+D1
+~
+~
+0 -1 7164
+D2
+~
+~
+0 -1 7170
+D3
+~
+~
+0 -1 7166
+S
+#7166
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7142
+D1
+~
+~
+0 -1 7165
+D2
+~
+~
+0 -1 7169
+D3
+~
+~
+0 -1 7167
+S
+#7167
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7141
+D1
+~
+~
+0 -1 7166
+D2
+~
+~
+0 -1 7167
+D3
+~
+~
+0 -1 7168
+S
+#7168
+La Soudure~
+   Surely you could not wish a more beautiful setting.  The few golden
+tinted clouds streaking the east seem to have caught the glorious refulgence
+of the setting sun, as they drift in space towards the horizon.
+~
+71 0 7
+D0
+~
+~
+0 -1 7140
+D1
+~
+~
+0 -1 7167
+D2
+~
+~
+0 -1 7168
+D3
+~
+~
+0 -1 7168
+S
+#7169
+La Soudure~
+   To the east, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south and west
+can be seen the more serene, normal waters of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7166
+D1
+~
+~
+0 -1 7170
+D2
+~
+~
+0 -1 7181
+D3
+~
+~
+0 -1 7169
+S
+#7170
+La Soudure~
+   To the east, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south and west
+can be seen the more serene, normal waters of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7165
+D1
+~
+~
+0 -1 7171
+D2
+~
+~
+0 -1 7180
+D3
+~
+~
+0 -1 7169
+S
+#7171
+The Maelstrom~
+   You have been pulled into the whirling waters of this gigantic whirlpool.
+You try to escape its enormous pull, but instead you are sucked into ever
+maddening circles.
+~
+71 0 7
+D2
+~
+~
+0 -1 7179
+S
+#7172
+The Maelstrom~
+   You have been pulled into the whirling waters of this gigantic whirlpool.
+You try to escape its enormous pull, but instead you are sucked into ever
+maddening circles.
+~
+71 0 7
+D3
+~
+~
+0 -1 7171
+S
+#7173
+The Maelstrom~
+   You have been pulled into the whirling waters of this gigantic whirlpool.
+You try to escape its enormous pull, but instead you are sucked into ever
+maddening circles.
+~
+71 0 7
+D3
+~
+~
+0 -1 7172
+S
+#7174
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+~
+71 0 7
+D0
+~
+~
+0 -1 7161
+D1
+~
+~
+0 -1 7175
+D2
+~
+~
+0 -1 7176
+D3
+~
+~
+0 -1 7173
+S
+#7175
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+~
+71 0 7
+D0
+~
+~
+0 -1 7160
+D1
+~
+~
+0 -1 7175
+D2
+~
+~
+0 -1 7175
+D3
+~
+~
+0 -1 7174
+S
+#7176
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+~
+71 0 7
+D0
+~
+~
+0 -1 7174
+D1
+~
+~
+0 -1 7176
+D2
+~
+~
+0 -1 7186
+D3
+~
+~
+0 -1 7177
+S
+#7177
+The Maelstrom~
+   You have been pulled into the whirling waters of this gigantic whirlpool.
+You try to escape its enormous pull, but instead you are sucked into ever
+maddening circles.
+~
+71 0 7
+D0
+~
+~
+0 -1 7173
+S
+#7178
+The Center of the Maelstrom~
+   You are in the very center of this enormous maelstrom.  There is no escaping
+the pull of this enormous whirlpool.  As you realize the hopelessness of your
+situation a strange shimmer catches your eye and you look to the vortex of the
+torrent around you; there is a portal here.  Perhaps there is still hope yet
+for survival.
+~
+71 512 7
+D5
+At the vortex of the whirlpool there is a shimmering portal.
+~
+portal~
+2 7200 7256
+E
+portal~
+ A strange, frictionless and transparent surface blocks passage into the portal
+but there is a clear keyhole in the exact center, its shape unmistakably an X. Is
+it intended to mean "stay clear", or "treasure within"? There's only one way to
+know for certain...
+~
+S
+#7179
+The Maelstrom~
+   You have been pulled into the whirling waters of this gigantic whirlpool.
+You try to escape its enormous pull, but instead you are sucked into ever
+maddening circles.
+~
+71 0 7
+D2
+~
+~
+0 -1 7183
+S
+#7180
+La Soudure~
+   To the east, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south and west
+can be seen the more serene, normal waters of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7170
+D1
+~
+~
+0 -1 7179
+D2
+~
+~
+0 -1 7182
+D3
+~
+~
+0 -1 7181
+S
+#7181
+La Soudure~
+   To the east, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south and west
+can be seen the more serene, normal waters of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7169
+D1
+~
+~
+0 -1 7180
+D2
+~
+~
+0 -1 7181
+D3
+~
+~
+0 -1 7181
+S
+#7182
+La Soudure~
+   To the east, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south and west
+can be seen the more serene, normal waters of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7180
+D1
+~
+~
+0 -1 7183
+D2
+~
+~
+0 -1 7190
+D3
+~
+~
+0 -1 7182
+S
+#7183
+The Maelstrom~
+   You have been pulled into the whirling waters of this gigantic whirlpool.
+You try to escape its enormous pull, but instead you are sucked into ever
+maddening circles.
+~
+71 0 7
+D1
+~
+~
+0 -1 7184
+S
+#7184
+The Maelstrom~
+   You have been pulled into the whirling waters of this gigantic whirlpool.
+You try to escape its enormous pull, but instead you are sucked into ever
+maddening circles.
+~
+71 0 7
+D0
+~
+~
+0 -1 7178
+D1
+~
+~
+0 -1 7185
+S
+#7185
+The Maelstrom~
+   You have been pulled into the whirling waters of this gigantic whirlpool.
+You try to escape its enormous pull, but instead you are sucked into ever
+maddening circles.
+~
+71 0 7
+D0
+~
+~
+0 -1 7177
+S
+#7186
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+~
+71 0 7
+D0
+~
+~
+0 -1 7176
+D1
+~
+~
+0 -1 7187
+D2
+~
+~
+0 -1 7194
+D3
+~
+~
+0 -1 7185
+S
+#7187
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+~
+71 0 7
+D0
+~
+~
+0 -1 7187
+D1
+~
+~
+0 -1 7187
+D2
+~
+~
+0 -1 7195
+D3
+~
+~
+0 -1 7186
+S
+#7188
+La Soudure~
+   To the east, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south and west
+can be seen the more serene, normal waters of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7188
+D1
+~
+~
+0 -1 7189
+D2
+~
+~
+0 -1 7209
+D3
+~
+~
+0 -1 7188
+S
+#7189
+La Soudure~
+   To the east, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south and west
+can be seen the more serene, normal waters of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7189
+D1
+~
+~
+0 -1 7190
+D2
+~
+~
+0 -1 7208
+D3
+~
+~
+0 -1 7188
+S
+#7190
+La Soudure~
+   To the east, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south and west
+can be seen the more serene, normal waters of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7182
+D1
+~
+~
+0 -1 7191
+D2
+~
+~
+0 -1 7207
+D3
+~
+~
+0 -1 7189
+S
+#7191
+La Soudure~
+   To the north, an enormous maelstrom whirls monotonously, luring its prey
+before sucking it down to the bottom of the ocean.  To the south can be seen 
+of the breathtaking view of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7183
+D1
+~
+~
+0 -1 7192
+D2
+~
+~
+0 -1 7206
+D3
+~
+~
+0 -1 7190
+S
+#7192
+La Soudure~
+   To the north, an enormous maelstrom whirls monotonously, luring its 
+prey ever closer before swallowing it to the bottom of the ocean.  To the
+south you get a breathtaking view of La Soudure.
+~
+71 0 7
+D0
+~
+~
+0 -1 7184
+D1
+~
+~
+0 -1 7193
+D2
+~
+~
+0 -1 7205
+D3
+~
+~
+0 -1 7191
+S
+#7193
+La Soudure~
+   To the north, an enormous maelstrom whirls monotonously, drawing in
+its victims with a supernatural power.  To resist is futile, your only 
+chances of survival are to avoid this place.  To the south, La Soudure 
+stretches for as far as the eye can see.
+~
+71 0 7
+D0
+~
+~
+0 -1 7185
+D1
+~
+~
+0 -1 7194
+D2
+~
+~
+0 -1 7204
+D3
+~
+~
+0 -1 7192
+S
+#7194
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+~
+71 0 7
+D0
+~
+~
+0 -1 7186
+D1
+~
+~
+0 -1 7195
+D2
+~
+~
+0 -1 7203
+D3
+~
+~
+0 -1 7193
+S
+#7195
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+~
+71 0 7
+D0
+~
+~
+0 -1 7187
+D1
+~
+~
+0 -1 7196
+D2
+~
+~
+0 -1 7202
+D3
+~
+~
+0 -1 7194
+S
+#7196
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+~
+71 0 7
+D0
+~
+~
+0 -1 7196
+D1
+~
+~
+0 -1 7197
+D2
+~
+~
+0 -1 7201
+D3
+~
+~
+0 -1 7195
+S
+#7197
+La Soudure~
+   To the west, the supernatural pull of the maelstrom draws you ever closer.
+You wonder whether or not you could enter the whirlpool and make it out again.
+You decide that the risk is far too great, and continue on your journey.
+There's an island to the east, where some ships are anchored at the harbour.
+~
+71 0 7
+D0
+~
+~
+0 -1 7197
+D1
+~
+~
+0 -1 18504
+D2
+~
+~
+0 -1 7200
+D3
+~
+~
+0 -1 7196
+S
+#7199
+The Lair of the White Walrus~
+   The lair is scattered with the remains of many dead animals.  You look
+around, and notice that you are in some sort of undersea cavern.
+~
+71 0 7
+S
+#0
+$~

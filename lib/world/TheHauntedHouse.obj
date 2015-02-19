@@ -1,0 +1,1124 @@
+#14000
+mirror silver~
+a silver mirror~
+A great, oak-framed silver mirror is standing in the corner.~
+~
+12 0 0
+0 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14001
+bottle ink small~
+a small bottle of ink~
+A small bluish bottle full of ink sits on the table.~
+~
+3 0 16385
+20 1 1 4
+1 730 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14002
+cloak shadow~
+The Shadow Cloak~
+a cloak made of some strange black, swirling matter is lying here.~
+~
+9 134480480 1025
+10 0 0 0
+1 87950 24950
+15
+E
+cloak shadow~
+The shadowy cloak you hold in your hands seems to be slightly moving on its
+own accord. The fabric of the cloak seems like silk, but is even more smooth
+and light.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#14003
+orb shadow~
+The Shadow Orb~
+a ball of black, swirling matter is lying here.~
+~
+8 267661888 16385
+0 0 0 0
+1 175038 14700
+10
+E
+orb shadow~
+The Shadow orb is about 5" in diameter, a globe full of swirling, grey smoke.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 40
+#14004
+shadow plate~
+The Shadow Plate~
+A plate armor made of some black, swirling matter is lying on the ground.~
+~
+9 139520576 9
+0 0 0 0
+10 175000 21500
+15
+E
+plate shadow~
+The Shadow Plate seems to be glowing with a dim light, and it also feels warm
+to the touch.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+16777344
+#14005
+amulet phylactery agies~
+The Phylactery of Agies~
+a strange amulet is lying on the ground.~
+~
+8 96 5
+8 0 0 0
+1 7300 1900
+50
+E
+amulet phylactery agies~
+The phylactery seems to be very old. Its darkened edges and smooth surface
+of the silver center bear the weight of years on it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+9 7
+#14006
+skull~
+a skull~
+A human's skull is lying on the table.~
+~
+12 134217921 16385
+0 0 0 0
+1 1 1
+20
+E
+skull~
+Looking at the skull you hold in your hand makes you think of life and death.
+The real value of life has never actually dawned on to you.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -1
+A
+19 5
+#14007
+dagger bloody~
+A Bloody Dagger~
+A jeweled dagger with a bloody blade is lying on the ground.~
+$r Bloody Dagger pierces the skin and drinks the blood.~
+5 134220352 8193
+0 4 4 11
+12 36900 9500
+20
+E
+dagger bloody~
+As you examine the dagger, you notice a small drop of fresh blood on the edge.
+You are confused. It may have been that you were so enthralled in the blade 
+that you cut your own fingers. Your hands tremble as you hold the dagger in 
+your hands.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 7
+#14008
+bracelet rosette~
+a rosette bracelet~
+A bracelet made of lapiz lazuli stones is lying here.~
+~
+11 64 4097
+6 0 0 0
+1 5700 750
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14009
+bracelet carmoline~
+a carmoline bracelet~
+a carmoline bracelet is lying on the ground.~
+~
+11 96 4097
+6 0 0 0
+1 19000 3850
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14010
+bracelet lapiz lazuli~
+a lapiz lazuli bracelet~
+a bracelet has been dropped here.~
+~
+11 64 4097
+6 0 0 0
+1 39402 2550
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14011
+sword old rusty~
+a rusty old sword~
+An old sword is lying here, rust covering its blade.~
+~
+5 0 8193
+0 2 6 3
+14 1900 450
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 -2
+#14012
+scimitar broken~
+a broken scimitar~
+A broken scimitar is lying here, with its dull blade gleaming in the sun.~
+~
+5 0 8193
+0 2 8 3
+14 1900 450
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 -1
+#14013
+boots dusty old~
+a pair of dusty old boots~
+A pair of dusty old boots are lying on the floor.~
+~
+9 64 65
+3 0 0 0
+4 2500 175
+50
+E
+boots dusty old~
+These boots seem to be made for traveling.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 20
+#14014
+cloak old dusty~
+an old traveling cloak~
+A ragged, dusty traveling cloak has been dropped here.~
+~
+15 256 1025
+60 0 -1 0
+3 2402 177
+50
+E
+cloak old dusty~
+The old cloak seems to be full of all kinds of nice, small pockets.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14015
+cupboard wooden~
+a wooden cupboard~
+A wooden cupboard is standing in the corner.~
+~
+15 0 0
+250 5 -1 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14016
+locker footlocker broken~
+a broken footlocker~
+A broken footlocker made of wood is lying on the floor.~
+~
+15 0 1
+50 0 -1 0
+25 190 16
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14017
+throne stone~
+a stone throne~
+A huge stone throne is standing against the wall.~
+~
+12 0 0
+0 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14018
+paper page diary~
+a diary page~
+a small piece of paper is lying on the ground.~
+~
+12 0 1
+0 0 0 0
+1 1 1
+50
+E
+paper page diary~
+
+	12th of Dwinletton
+
+	He has come to me again, my secret friend. I am so disappointed that I
+	can't tell about him to my sisters. He says it would ruin our little
+	secret. Always when he comes, he tells me stories of faraway places and
+	secret things. I wish I could go with him someday. Today he promised to
+	bring me something from afar. We talked late in to the night, and then
+	he left, changing in to a handsome black bird, to fly away.
+
+	14th of Dwinletton
+
+	When I awoke in the morning, I found that he had brought me a gift. It
+	was wrapped in beautiful black cloth, and was tucked under my pillow.
+	I was awfully excited when I opened the red silk ribbon that tied it
+	together. There was a gem encrusted knife inside. It was so beautiful.
+	I was very happy, for my friend had kept his promise.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14019
+paper page diary~
+a diary page~
+a small piece of paper is lying on the ground.~
+~
+12 0 1
+0 0 0 0
+1 1 1
+50
+E
+paper page diary~
+
+	16th of Dwinletton
+
+	I had an awful nightmare last night, about huge black things with sharp
+	teeth. They came in to the house and killed everyone but me and ...
+	oh... I can't bear to remember it again. It was so horrible. I am glad
+	it was only a dream. 
+	I miss my friend, because he hasn't showed up since the day before 
+	yesterday, when he brought the gift.
+
+	17th of Dwinletton
+
+	I had that horrible nightmare again. This time my friend was there too,
+	trying to save me by talking to there heinous creatures. And it worked,
+	he just talked to them and they went away, to save me. Then suddenly I
+	woke up. I don't know what awakened me, but I swear there was something
+	in the room with me. I was so scared that I just closed my eyes and 
+	pretended to be asleep.
+
+	19th of Dwinletton
+
+	Something awful has happened. I awoke in the middle of the night in a
+	dreadful pool of blood. It was everywhere. I ran screaming from my 
+	room, but nobody answered. After a while I found my sisters and father,
+	but they were all dead. Killed in their sleep. With a knife, and when
+	I searched for my knife, it was missing.
+
+	20th of Dwinletton
+
+	I have thought about yesterday, and what happened then. Considering the
+	fact that I had 'slept' for almost a day, and my knife was missing, I
+	have come to the conclusion that I killed them. There just seems to be
+	no other solution. With this load on my conscience, I can't bear it any
+	longer. Goodbye, dear diary. God bless.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14020
+painting~
+a painting~
+An old painting with golden frames is hanging on the wall.~
+~
+15 0 0
+50 15 14030 0
+1 1 1
+100
+E
+painting~
+There are three young girls in the painting, each more beautiful than others,
+in her own ways. Standing behind the girls, there is an old man, with his hands
+resting on the shoulders of the girls.
+
+There is a small brass plaque nailed on the frame of the painting.
+~
+E
+plaque brass~
+The brass plaque reads, 'Baron Gunther Dounthun and his three daughters'.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14021
+shirt ragged dirty~
+a ragged, dirty shirt~
+A torn shirt is lying on the ground, with dirt all over it.~
+~
+9 0 9
+3 0 0 0
+1 100 25
+50
+E
+shirt ragged dirty~
+The shirt looks really dirty, and has some huge tears and holes in it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14022
+pants leather worn~
+a pair of well-worn leather pants~
+An almost worn-out pair of leather pants is lying on the ground.~
+~
+9 0 33
+3 0 0 0
+1 120 48
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14023
+potion silver~
+a silver potion~
+A potion of silver liquid is here.~
+~
+10 268435520 1
+30 19 20 18
+1 1320 1000
+50
+E
+potion silver~
+It is a glass potion filled with silvery liquid.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14024
+potion golden~
+a golden potion~
+A golden potion is lying on the ground.~
+~
+10 268435520 1
+30 36 -1 -1
+1 7530 9000
+50
+E
+potion golden~
+It is a glass potion filled with golden liquid.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14025
+potion platinum~
+a platinum potion~
+A platinum potion has been left here.~
+~
+10 0 1
+30 108 -1 -1
+1 19530 9000
+15
+E
+potion platinum~
+It is a glass potion filled with platinum liquid.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14026
+potion mithril~
+a mithril potion~
+A mithril colored potion is lying on the ground.~
+~
+10 0 1
+30 85 -1 -1
+1 1870 9000
+15
+E
+potion mithril~
+It is a glass potion filled with mithril-colored liquid.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14027
+hammer spiked koraths~
+Spiked Hammer of Koraths~
+A huge silver hammer is lying on the ground.~
+$r Spiked Hammer of Koraths slams in to $V with a mighty blow.~
+5 143974658 8193
+0 3 13 6
+25 68000 20000
+20
+E
+hammer koraths spiked~
+The huge hammer has some glowing runes on its head, and the sharp spike on
+the back side has a slight glow on it. The handle is made of adamantium and
+has some silvery engravings on it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 1
+#14028
+shield power ancient powers~
+Shield of Ancient Powers~
+An extremely heavy-looking shield is lying on the ground.~
+~
+9 142607426 513
+15 0 0 0
+25 97500 17600
+25
+E
+shield power ancients~
+The shield is made of some white metal that feels cool to the touch. On the 
+face of the shield, there is an engraving of a white unicorn rampant on a 
+field of green grass.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14029
+gloves alduin white~
+Gloves of Alduin~
+A pair of white gloves is lying here.~
+~
+9 134221056 129
+5 0 0 0
+6 173000 3790
+20
+E
+gloves alduin white~
+The gloves are made of the finest silk you have ever seen. On the back of the
+hand, there is a sown picture of a white unicorn, surrounded by some exquisite
+embroidery.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+#14030
+hexagon black shining~
+A Shining, Black Hexagon~
+A shining hexagon made of something black is lying on the ground.~
+~
+18 134217985 16385
+0 0 0 0
+1 1 1
+15
+E
+hexagon black shining~
+The black hexagon is made of shining, black stone. There are some strange runes
+on both sides of the stone plate.~
+E
+runes~
+You can't understand what the runes mean.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14031
+goblet silver~
+a silver goblet~
+A silver goblet is standing on the table.~
+~
+17 0 1
+3 0 0 0
+2 1500 1500
+50
+E
+goblet silver~
+The goblet may have held something at its time, but now it is empty. Only dust
+and dark stains remain on its surface.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14032
+shield rusty old~
+an old rusty shield~
+An old rusty shield is lying on the ground.~
+~
+9 0 513
+4 0 0 0
+5 1500 175
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14033
+cradle wooden~
+a child's wooden cradle~
+A wooden child's cradle is standing in the middle of the floor.~
+~
+15 0 1
+75 0 0 0
+200 1750 250
+50
+E
+cradle wooden~
+This is a child's cradle, but it has been a long time since a child was
+actually sleeping here.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14035
+chest iron reinforced~
+a reinforced iron chest~
+A reinforced iron chest is lying on the floor.~
+~
+15 0 1
+200 5 -1 0
+100 1000 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14036
+cross unholy black~
+An Unholy Cross~
+A black scorched cross is lying on the ground.~
+~
+12 134220357 16385
+0 0 0 0
+1 1500 66666
+10
+E
+cross unholy black~
+The cross has spikes and splinters sticking from it, in such a way that they
+pierce the skin in your hand as you hold it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+B
+21504
+#14037
+black scarf silver~
+a black scarf~
+a black scarf with silver lining is lying here.~
+~
+8 0 16385
+0 0 0 0
+1 1500 750
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14038
+shoe black hard leather~
+a black hard leather shoe~
+A black shoe made of hard leather has been dropped on the ground.~
+~
+7 0 49153
+5 6 0 0
+1 500 250
+50
+E
+shoe black hard leather~
+The hard-leather shoe you hold in your hand looks just about right for
+throwing at other people.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14039
+piece cloth black~
+a black piece of cloth~
+A black, dirty piece of cloth is lying on the floor.~
+~
+12 134217824 16385
+0 0 0 0
+4 76000 10000
+20
+E
+piece cloth black~
+The dirty piece of cloth you hold in your hand feels warm to the touch and 
+seems to be moving slightly as you examine it. Somehow, the air around the
+cloth seems a bit darker that elsewhere, as if it would be sucking the
+light in...~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14040
+fireplace large~
+a large fireplace~
+A large fireplace has been built on the northern wall.~
+~
+15 0 0
+500 0 -1 0
+1 1 1
+50
+E
+fireplace large~
+The large fireplace has seen better times in its life, but now it has simple
+decayed all over. The rims of the fireplace, where the bricks have pieces 
+broken off of them, is jagged and darkened. The blackened inside of the fire
+place has a pile of rubble inside it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14041
+rack wooden~
+a wooden weapons rack~
+A wooden weapons rack is standing against the south wall.~
+~
+15 0 0
+100 0 -1 0
+1 1 1
+50
+E
+rack wooden~
+The wooden rack used to contain weapons for the guards of the manor.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14042
+bed small~
+a small bed~
+A small bed is standing in the corner.~
+~
+12 0 0
+0 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14043
+stove metal black~
+a black metal stove~
+A large black stove made of metal is rusting away in here.~
+~
+15 0 0
+100 5 -1 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14044
+railing~
+a piece of railing~
+The railing runs along the edge of the balcony.~
+~
+12 0 0
+0 0 0 0
+1 1 1
+50
+E
+railing~
+The railing doesn't look to be in that good shape anymore. You maybe shouldn't
+lean on it, if you want to keep in good health.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14045
+statue khurash~
+the statue of khurash~
+The Statue of the mighty Khurash is standing on the floor.~
+~
+12 0 0
+0 0 0 0
+1 1 1
+50
+E
+statue khurash~
+The Statue of Khurash is made of pure white marble, and is about 6 feet tall.
+
+When you look at the statue of the huge man, you feel a bit uncertain about
+your own fighting ability and strength of your arm.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14046
+key small bronze~
+a small bronze key~
+A small bronze key has been dropped here.~
+~
+18 0 1
+14001 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14047
+key small silver~
+a small silver key~
+A small silver key has been dropped here.~
+~
+18 0 1
+14002 0 0 0
+1 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14048
+white marble coffin~
+a white marble coffin~
+There is a white marble coffin on the podium in the middle of the floor.~
+~
+15 0 0
+1000 15 14049 0
+1 1 1
+50
+E
+white marble coffin~
+The marble coffin probably weights more that a ton, as it seems to be
+at least 5" thick on each walls. The lid is locked to its place with 
+a white, metallic chain and lock.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14049
+key white~
+a white key~
+A beautiful white key has been left here.~
+~
+18 0 1
+0 0 0 0
+1 1 1
+50
+E
+key white~
+The white key is made of pure, white metal.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14050
+corpse shriveled~
+a shriveled corpse~
+There is a shriveled corpse lying on the ground.~
+~
+15 0 1
+100 0 -1 0
+200 1 1
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14051
+amulet small red~
+a small red amulet~
+A small amulet made of red stones has been dropped here.~
+~
+8 134217793 5
+0 0 0 0
+1 4711 999999
+100
+E
+amulet small red~
+The red amulet is made completely of some strange dull red stone, which glows
+with an inner light. There are some engravings on the stone.~
+E
+engravings~
+The engravings read ...
+
+	'Peace to him who lives among the thorns. Safe passage.'
+	
+... and beneath the engravings there is a crude drawing of a panther.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14053
+orb shadow~
+A Darkened Shadow Orb~
+A darkened ball of swirling matter has been placed here.~
+~
+8 155189824 16385
+0 0 0 0
+3 397250 36922
+1
+E
+orb shadow darkened~
+
+`p  The darkened orb is about a handlength in circumference, a
+globe filled with a vacuous darkness.`q
+
+~
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+12 60
+A
+53 2
+B
+8388608
+#0
+$~

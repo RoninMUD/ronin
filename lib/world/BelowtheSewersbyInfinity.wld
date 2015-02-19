@@ -1,0 +1,1423 @@
+#4700
+By a large sewage grate~
+   The sewers stop at this grate.  The flow of the raw sewage continues
+eastward through the grate and the sound of water indicates that there
+is probably a waterfall of sewage somewhere in the distance.  The walls
+here are carved from the earth and are slightly covered with a thin
+film from the fumes of the sewage passing through here.
+~
+47 9 0
+D1
+The grate is rusted heavily and hangs loosely on its hinges.
+~
+grate~
+1 -1 4701
+D3
+~
+~
+0 -1 4750
+E
+grate~
+The grate is rusted heavily and hangs loosely on its hinges.
+~
+E
+earth~
+It reeks of sewage.
+~
+E
+walls~
+They are made of dark earth and reek of sewage.
+~
+E
+grate~
+The grate is rusted heavily and hangs loosely on its hinges.
+~
+S
+#4701
+Inside a small sewage tunnel~
+   The flow of sewage comes from the west, passed the grate and
+continues on to the east.  The walls here seem more shaped by the
+sewage flow that by design, hinting that this area was not part
+of the original sewage system.  The tunnel gets very confined here
+and it is getting harder and harder to fit.  Loose roots hang from
+above and they too are covered with the sewage.
+~
+47 265 0
+D1
+~
+~
+0 -1 4702
+D3
+The grate is rusted heavily and hangs loosely on its hinges.
+~
+grate~
+1 -1 4700
+E
+walls~
+They seem to be hollowed from the flow of sewage rather than the
+construction of man.
+~
+E
+roots~
+Some of the roots are large and thick, but most are long and thin.
+~
+S
+#4702
+Inside a small sewage tunnel~
+   The tunnel continues eastward.  Fortunately, it does not seem to
+be getting any smaller at this point.  The wild rush of a waterfall
+echoes from the east.  The flow of sewage here seems to be increasing,
+indicating that the slope of the tunnel is taking a more severe dip
+downward.  Roots again hang from the ceiling and it is getting harder
+and harder to breathe due to the increasing smell from the river
+of raw sewage.
+~
+47 265 0
+D1
+~
+~
+0 -1 4703
+D3
+~
+~
+0 -1 4701
+E
+ceiling~
+Roots hang from above.
+~
+E
+sewage~
+The sludge is flowing at a fast pace and smells terrible!
+~
+E
+roots~
+The roots here all thick and strong.  The weaker roots must have
+rotted away.
+~
+S
+#4703
+The end of the small sewage tunnel~
+The tunnel ends its descent here at this waterfall of raw sewage.
+It flows down here and the sound of loud splashing can be heard from
+far below.  The only way out of this place is back through the tunnel
+to the west or to brave the depths of the opening below.  From the
+sound of the echoes, it sure seems like a long way down.
+~
+47 265 0
+D3
+~
+~
+0 -1 4702
+D5
+~
+~
+0 -1 4704
+S
+#4704
+Falling down a sewage shaft~
+   Raw sewage falls from above and gets all over everything!  The
+stench from this area is almost unbearable and mists from the bottom
+of the waterfall rise from below creating a vapor which makes it
+all the worse.  It is hard to see anything here besides the flow of
+the sewage.
+~
+47 262409 0
+D4
+~
+~
+0 -1 4703
+D5
+~
+~
+0 -1 4705
+E
+sewage~
+It looks dark and disgusting.  PUKE!
+~
+S
+#4705
+At the bottom of a sewage shaft~
+   The bottom of the waterfall of sewage is similar to any other
+waterfall in the world, save for the fact that it smells terrible.
+Mists rise from the impact in the small pool of rotten water that
+has collected here.  The depth of the water must be quite deep because
+the pool's area is so small.  Looking around, a small ladder made of
+roots has been constructed that leads back up the waterfall shaft.
+The floor here is completely covered with garbage and is similar to
+the famous dump of Midgaard.
+~
+47 265 0
+D1
+~
+~
+0 -1 4706
+D3
+~
+~
+0 -1 4712
+D4
+The ladder leads back up the waterfall shaft.
+~
+ladder~
+11 -1 4703
+E
+floor~
+It reminds you of your first trip to the Midgaard dump!
+~
+E
+ladder~
+It leads back up the waterfall shaft.
+~
+E
+pool~
+It is filled with the sewage that falls from above.
+~
+E
+mists~
+They make the room unbearable to smell.
+~
+S
+#4706
+A corner of a dark sewer tunnel~
+   This corner of the sewer tunnel leads south and west.  There is
+trash littering the ground and it is about six inches deep.  A
+constant dripping sound can be heard in the distance and the reek of
+the foul liquid at the bottom of the trash is almost unbearable.
+Small extensions of the earthen tunnel can be seen to the west.
+~
+47 265 0
+D2
+~
+~
+0 -1 4707
+D3
+~
+~
+0 -1 4705
+E
+trash~
+It consists of old rotted animal parts as well as just pure muck!
+~
+E
+liquid~
+It's hard to see, but you sure can smell it's foulness.
+~
+E
+extensions~
+They look like roots.
+~
+E
+roots~
+They seem to form a ladder going upwards to the west.
+~
+S
+#4707
+In a dark sewer tunnel~
+   The tunnel straightens out to a north-south passage, however,
+in either direction it seems to curve around to the east hinting
+that the tunnel is not a tunnel at all, but rather a circular
+passage of some sorts.  This section of the tunnel is not as
+garbage littered as the rest and there us a suspicious crack in
+the upper portion of one of the walls.
+~
+47 265 0
+D0
+~
+~
+0 -1 4706
+D2
+~
+~
+0 -1 4708
+D4
+~
+crack~
+9 -1 4748
+E
+crack~
+It looks almost big enough to crawl through.
+~
+E
+walls~
+There is a crack on the eastern upper wall.
+~
+S
+#4708
+A corner of a dark sewer tunnel~
+   The tunnel suddenly curves to the west here.  Small piles of
+garbage have been formed in this room, almost sculpted to the
+shape of small humaniod constructs.  An occasional movement can be
+seen in these piles but the sheer reek they produce prevents
+closer inspection.  From the west, the sound of pouring water can
+be heard.
+~
+47 265 0
+D0
+~
+~
+0 -1 4707
+D3
+~
+~
+0 -1 4709
+E
+piles~
+The piles look like small humanoids.
+~
+E
+garbage~
+It has been pushed into small piles.
+~
+E
+tunnel~
+It curves to the west here.
+~
+S
+#4709
+In a dark sewer tunnel~
+   The tunnel once again straightens out, but this time it goes
+in an east-west direction.  This portion of the tunnel is very
+similar to the rest of the tunnel except there is a massive grate
+to the north.  The sound of pouring liquid is very loud here and
+the source of the noise seems to be coming from within the grate.
+~
+47 265 0
+D0
+A massive grate is on the northern face of the tunnel.
+~
+grate~
+8 -1 4713
+D1
+~
+~
+0 -1 4708
+D3
+~
+~
+0 -1 4710
+E
+grate~
+The grate is constructed of iron and is quite rusty on the hinges.  It
+may be possible to move or open it.
+~
+S
+#4710
+A corner of a dark sewer tunnel~
+   The tunnel suddenly curves to the east here.  Small piles of
+garbage have been formed in this room, almost sculpted to the
+shape of small humanoid constructs.  An occasional movement can be
+seen in these piles but the sheer reek they produce prevents
+closer inspection.  From the east, the sound of pouring water can
+be heard.
+~
+47 265 0
+D0
+~
+~
+0 -1 4711
+D1
+~
+~
+0 -1 4709
+E
+tunnel~
+It curves to the east here.
+~
+E
+garbage~
+It has been pushed into small piles.
+~
+E
+piles~
+The piles look like small humanoids.
+~
+S
+#4711
+In a dark sewer tunnel~
+   The tunnel straightens out to a north-south passage, however,
+in either direction it seems to curve around to the east hinting
+that the tunnel is not a tunnel at all, but rather a circular
+passage of some sorts.  Regardless of the layout, there is still a
+great deal of trash here.  Fortunately, this part of the tunnel
+seems rather dry and smells a little bit better than the previous
+areas.  The constant dripping echoes throughout this tunnel and the
+occasional moan can be heard from somewhere below this place.
+~
+47 265 0
+D0
+~
+~
+0 -1 4712
+D2
+~
+~
+0 -1 4710
+E
+trash~
+It fills the room.
+~
+S
+#4712
+A corner of a dark sewer tunnel~
+   This corner of the sewer tunnel leads south and east.  There is
+trash littering the ground and it is about six inches deep.  A
+constant dripping sound can be heard in the distance and the reek of
+the foul liquid at the bottom of the trash is almost unbearable.
+Small extensions of the earthen tunnel can be seen to the east.
+~
+47 265 0
+D1
+~
+~
+0 -1 4705
+D2
+~
+~
+0 -1 4711
+E
+roots~
+They seem to form a ladder going upwards to the east.
+~
+E
+extensions~
+They look like roots.
+~
+E
+liquid~
+It's hard to see, but you sure can smell it's foulness.
+~
+E
+trash~
+It consists of old rotted animal parts as well as just pure muck!
+~
+S
+#4713
+Top of a large passage~
+   The sewer tunnel has transformed into a large passage that seems
+to be sloping downwards into darkness.  The garbage that littered
+the floor seems to flow down this passage.  In the distance the
+spashing of water can be heard and every so often, a soft moan
+rises from the depths below.  There is a very large grate in the
+floor.
+~
+47 265 0
+D2
+~
+grate~
+8 -1 4709
+D5
+~
+grate~
+1 -1 4714
+E
+grate~
+It is very large and blocks the way down, but it looks openable.
+~
+E
+garbage~
+It is flowing through the grate down the passage.
+~
+S
+#4714
+Descending the large passage~
+   The passage opens up into more of a cavern than a tunnel.  It
+continues to slope downwards and the slope is getting more and more
+intense.  The walls have eroded a lot here due to the constant flow
+of garbage that spills in from above.  There is a large grate going
+upwards.
+~
+47 265 0
+D4
+~
+grate~
+1 -1 4713
+D5
+~
+~
+0 -1 4715
+E
+grate~
+It can be opened or closed.
+~
+E
+garbage~
+It flows downward.
+~
+E
+walls~
+They are eroded and covered with slimy filth!
+~
+S
+#4715
+Descending the large passage~
+   The passage continues its plunge down and it is now getting hard
+to walk because the slope is getting very near a vertical drop.
+Small ledges and footholds litter the floor, with the constant flow
+of garbage flowing over them.  There is a small alcove to the west
+and the sound of spashing water is very loud here.
+~
+47 269 0
+D3
+~
+~
+0 -1 4743
+D4
+~
+~
+0 -1 4714
+D5
+~
+~
+0 -1 4716
+E
+alcove~
+It opens to the west.
+~
+E
+footholds~
+They are all over the floor and help with your footing.
+~
+E
+ledges~
+They are all over the floor and help with your footing.
+~
+S
+#4716
+The bottom of the large passage~
+   The bottom of the passage opens up to a small island of garbage
+surrounded by an ocean of raw sewage.  The stink here is the worst
+yet encountered.  The river of garbage that was flowing down makes
+a small waterfall-like sight that drains into the ocean of raw
+sewage.
+~
+47 265 0
+D0
+~
+~
+0 -1 4717
+D1
+~
+~
+0 -1 4719
+D2
+~
+~
+0 -1 4721
+D3
+~
+~
+0 -1 4723
+D4
+~
+~
+0 -1 4715
+E
+ocean~
+It is not an ocean of water, but raw sewage.
+~
+E
+river~
+It flows into the ocean.
+~
+E
+sewage~
+It smells terrible!
+~
+S
+#4717
+A pool of raw sewage~
+   Chunks of garbage float around in the neck deep pool of raw
+sewage.  The sewage is quite thick.  Occasionally, bubbles rise
+to the surface indicating that something may be lurking below
+the it.  A small island is to the south with a river of garbage
+flowing onto it from above.
+~
+47 265 6
+D1
+~
+~
+0 -1 4718
+D2
+~
+~
+0 -1 4716
+D3
+~
+~
+0 -1 4724
+E
+pool~
+It's made of raw sewage.
+~
+E
+island~
+It looks rather small.
+~
+E
+river~
+It flows not with water, but garbage.  Yuck!
+~
+S
+#4718
+A pool of raw sewage~
+   Chunks of garbage float around in the neck deep pool of raw
+sewage.  The sewage is quite thick.  Occasionally, bubbles rise
+to the surface indicating that something may be lurking below
+the it.  The pool seems to go on endlessly to the north and
+east, and it would be unwise to swim off in either of those
+directions.
+~
+47 265 6
+D2
+~
+~
+0 -1 4719
+D3
+~
+~
+0 -1 4717
+E
+pool~
+It is filled with raw sewage.
+~
+E
+sewage~
+It smells!
+~
+E
+bubbles~
+They go blip blip and occur at random intervals.
+~
+S
+#4719
+A pool of raw sewage~
+   This seems to be the cleanest section of the pool of sewage.
+Clean water drips from somewhere above and must be the reason
+for the condition of this portion of the pool.  All around,
+random bits of garbage float about and looking east, the
+pool seems to go on forever.  The waterfall of garbage can be
+seen and heard to the west.
+~
+47 265 6
+D0
+~
+~
+0 -1 4718
+D2
+~
+~
+0 -1 4720
+D3
+~
+~
+0 -1 4716
+E
+water~
+It is dripping from overhead.
+~
+E
+waterfall~
+It is to the west.
+~
+E
+pool~
+It goes on forever in the eastward direction.
+~
+S
+#4720
+A pool of raw sewage~
+   Chunks of garbage float around in the neck deep pool of raw
+sewage.  The sewage is quite thick the occasional bubbles rise
+to the surface indicating that something may be lurking below
+the it.  The pool seems to go on endlessly to the south and
+east, and it would be unwise to swim off in either of those
+directions.
+~
+47 265 6
+D0
+~
+~
+0 -1 4719
+D3
+~
+~
+0 -1 4721
+E
+sewage~
+It smells!
+~
+E
+pool~
+It is filled with raw sewage.
+~
+E
+bubbles~
+They go blip blip and occur at random intervals.
+~
+S
+#4721
+A pool of raw sewage~
+   There is a slight current pulling the waters in the pool to the
+south.  The island of trash is to the north and there is an erie
+silence here, as not even the familiar bubbles eminate from below
+the pools surface.  The current seems to grow stronger the longer
+you stand here.
+~
+47 265 6
+D0
+~
+~
+0 -1 4716
+D1
+~
+~
+0 -1 4720
+D2
+~
+~
+0 -1 4725
+D3
+~
+~
+0 -1 4722
+E
+pool~
+There is a current pulling you south.
+~
+E
+island~
+It is to the north and littered with garbage.
+~
+S
+#4722
+A pool of raw sewage~
+   Chunks of garbage float around in the neck deep pool of raw
+sewage.  The sewage is quite thick.  Occasionally, bubbles rise
+to the surface indicating that something may be lurking below
+the it.  The pool seems to go on endlessly to the south and
+west, and it would be unwise to swim off in either of those
+directions.
+~
+47 265 6
+D0
+~
+~
+0 -1 4723
+D1
+~
+~
+0 -1 4721
+E
+bubbles~
+They go blip blip and occur at random intervals.
+~
+E
+pool~
+It is filled with raw sewage.
+~
+E
+sewage~
+It smells!
+save 47
+l
+~
+E
+sewage~
+It smells!
+~
+S
+#4723
+A pool of raw sewage~
+   The pool is especially rancid in this section.  A thick green
+film covers the surface and smells terrible.  Chunks of garbage
+float by occasionally.  All around, random bits of trash float
+about and looking west, the pool seems to go on forever.  The
+waterfall of garbage can be seen and heard to the east.
+~
+47 265 6
+D0
+~
+~
+0 -1 4724
+D1
+~
+~
+0 -1 4716
+D2
+~
+~
+0 -1 4722
+E
+garbage~
+It floats all around.
+~
+E
+trash~
+They float all around.
+~
+E
+film~
+It's green, slimy, and smelly.
+~
+S
+#4724
+A pool of raw sewage~
+   Chunks of garbage float around in the murky pool of raw
+sewage.  The sewage is quite thick.  Occasionally, bubbles rise
+to the surface indicating that something may be lurking below
+the it.  The pool seems to go on endlessly to the north and
+west, and it would be unwise to swim off in either of those
+directions.  The pool here seems to be a lot deeper than the
+other sections and it is not possible to touch the bottom.
+~
+47 265 6
+D1
+~
+~
+0 -1 4717
+D2
+~
+~
+0 -1 4723
+D5
+It looks possible to jump further down into the pool.
+~
+pool~
+10 -1 4749
+E
+pool~
+You could possible jump pool to see what lies below the surface.
+~
+E
+bubbles~
+They go blip blip and occur at random intervals.
+~
+E
+sewage~
+It smells!
+~
+S
+#4725
+A pool of raw sewage~
+   The current from the north seems to go further down into the pool.
+There is a small whirlpool here sucking the awful waters below to unknown
+depths.  Looking down, there appears to be some sort of figures swimming
+around.  The pool itself continues on as far as the eye can see in all
+direction except north.
+~
+47 265 6
+D0
+~
+~
+0 -1 4721
+D5
+It looks possible to jump further down into the pool.
+~
+pool~
+10 -1 4726
+E
+figures~
+They look like fish of some sort, but could also be just piece of trash
+floating around.
+~
+E
+pool~
+It looks possible to jump further down into the pool.
+~
+S
+#4726
+Swimming in raw sewage~
+   `cThe pool was filled with stinky green water composed of pure sewage.
+It is a little cloudy and hard to see through, but the tunnel in which
+the sewage flows definately heads eastward.  A large rope dangles about,
+probably hung from above for any unfortunate soul who fell in this awful
+mess and needed to climb out.`q
+~
+47 265 6
+D1
+~
+~
+0 -1 4727
+D4
+~
+rope~
+11 -1 4725
+E
+rope~
+The rope is hung from above and climbing it would probably get you out
+of this awful sewage.
+~
+S
+#4727
+Swimming in raw sewage~
+   `cThe sewage continues its flow eastward, but there is an alcove to
+the north where some of the greenish water also flows.  It is getting
+very difficult to see here because the sewage seems thicker here, almost
+as if it is beginning to solidify.  Chunks of debris ocassionally float
+by and it seems like the tunnel is getting smaller and smaller.`q
+~
+47 265 6
+D0
+The alcove looks like a dead end, and there seems to be something
+large in the room, something like a net?
+~
+~
+0 -1 4741
+D1
+~
+~
+0 -1 4728
+D3
+~
+~
+0 -1 4726
+S
+#4728
+Swimming in raw sewage~
+   `cThe tunnel has now opened up to a small room which continues to
+the east.  Again, a small alcove opens up, this time to the south.  The
+awful green color of the sewage is now beginning to fade back to a more
+normal looking color of dirty water.  Various roots penetrate the room
+from the ceiling and an occasional slug like creature can be seen
+swimming about.`q
+~
+47 265 6
+D1
+~
+~
+0 -1 4729
+D2
+The alcove looks like a dead end, and there seems to be something
+large in the room, something like a net?
+~
+~
+0 -1 4742
+D3
+~
+~
+0 -1 4727
+E
+sewage~
+It's green and disgusting.
+~
+E
+roots~
+They hang down about two feet and look fairly old.
+~
+S
+#4729
+Swimming in raw sewage~
+   `cThe underwater tunnel has finally come to an end.  The greenish
+sewer water now flows back westward.  There is a large chain that is
+attached to the east wall that leads up through the ceiling through a
+small hole.  Garbage visibly floats around in the water and the floor
+is covered with piles of the filthy trash.`q
+~
+47 265 6
+D3
+~
+~
+0 -1 4728
+D4
+~
+chain~
+11 -1 4730
+E
+chain~
+It leads up and looks like a skilled climber could utilize it to
+escape this awful place.
+~
+E
+floor~
+It is covered with rotted garbage.
+~
+E
+garbage~
+It has a variety of trash, including some moldy pipeweed bread.
+~
+S
+#4730
+Another pool of raw sewage~
+   There is a small pool about eight feet in diameter of raw sewage.
+It looks is if it is pretty deep and seems to also go eastward.  This
+room is part of a gigantic cavern.  Far to the east two small light
+sources can be seen and in all other directions it is pitch black.
+There is also a large chain anchored to the floor on one end and
+hanging into the pool on the other.
+~
+47 265 6
+D0
+~
+~
+0 -1 4731
+D5
+~
+pool~
+10 -1 4729
+E
+pool~
+It looks deep enough to jump in.
+~
+E
+chain~
+Probably helps someone climb out of the pool.
+~
+E
+light~
+The light is probably coming from torches of some kind.
+~
+S
+#4731
+Approaching an underground cave~
+   The gigantic room seems to shrink down to a small cave to the
+east.  The pool of raw sewage can still be seen and heard in the
+distance.  The smell of rotted goodness fills the air. The cave
+entrance looks as if it is lit by two torches on either side of
+the main entrance.
+~
+47 265 0
+D1
+~
+~
+0 -1 4732
+D2
+~
+~
+0 -1 4730
+E
+pool~
+It is to the south and smells awful!
+~
+E
+torches~
+They look freshly lit, what could have lit them?
+~
+E
+entrance~
+It is lit by two torches.
+~
+S
+#4732
+The entrance to an underground cave~
+   There is a small cave opening that continues to lead to the
+east.  The once gigantic room has shrunk considerably into a
+small cave like opening.  Two large torches are mounted on either
+side of the opening and seem to burn the very garbage that litters
+this awful place.
+~
+47 67109128 0
+D1
+~
+~
+0 -1 4733
+D3
+~
+~
+0 -1 4731
+E
+torches~
+They burn the very garbage that collects here.
+~
+E
+opening~
+It leads east.
+~
+S
+#4733
+Inside a small underground cave~
+   The cave opening has led to this small cube like cavern.  It
+is not rough and jagged, like a normal cave should be, indicating
+that someone or something has dug this space out.  The small
+cave continues north and east, and the way back west is still lit
+by the burning torches.
+~
+47 67109128 0
+D0
+~
+~
+0 -1 4734
+D1
+~
+~
+0 -1 4736
+D3
+~
+~
+0 -1 4732
+S
+#4734
+Inside a small underground cave~
+   This is the north-western corner of the small cave.  It is
+as plain as the other sections, if not plainer.  There is nothing
+here, not even garbage.  The air stirs slightly, and a small
+breeze is coming in from the east.
+~
+47 265 0
+D1
+~
+~
+0 -1 4735
+D2
+~
+~
+0 -1 4733
+S
+#4735
+At the back corner of a small underground cave~
+   This section of the cave is completely different than the rest.
+It is decorated with paintings on the wall, curtains are draped
+up, and there is a large rug on the floor.  The air moves around
+in this place and the fresh air smells great.
+~
+47 265 0
+D2
+~
+~
+0 -1 4736
+D3
+~
+~
+0 -1 4734
+D5
+~
+rug~
+8 -1 4737
+E
+rug~
+It looks like it is covering up something.
+~
+E
+curtains~
+They are black and have green markings woven in them.
+~
+S
+#4736
+Inside a small underground cave~
+   The south-eastern corner of this cave is very similar to the
+rest, except for some small scratches in the wall.  The scratches
+form a random pattern which resembles holy markings.  A slight
+breeze comes in from the north.
+~
+47 265 0
+D0
+~
+~
+0 -1 4735
+D3
+~
+~
+0 -1 4733
+S
+#4737
+A secret tunnel deep below the sewers~
+   The area directly below the cave contains a small network of tunnels.
+There is a rug above that can either block or open the way back.  To the
+north, a gate can be seen with a small chest behind it.  Despite the
+remote location of this tunnel, garbage and trash have somehow found
+their way here all over the floor.
+~
+47 269 0
+D0
+~
+~
+0 -1 4738
+D4
+~
+rug~
+8 -1 4735
+E
+garbage~
+It litters the floor.
+~
+E
+trash~
+It litters the floor.
+~
+E
+chest~
+It is rather small and probably made of wood.
+~
+E
+gate~
+It looks clean!?!?
+~
+S
+#4738
+An intersection in the secret tunnel~
+   There is an intersection here, with the main tunnel continuing
+northward towards the gate and chest.  The passages east and west
+seem to curve around immediately and again, there is garbage and
+trash everywhere.
+~
+47 265 0
+D0
+~
+~
+0 -1 4739
+D1
+~
+~
+0 -1 4744
+D2
+~
+~
+0 -1 4737
+D3
+~
+~
+0 -1 4746
+E
+chest~
+It is directly north.
+~
+E
+gate~
+It is directly north.
+~
+E
+garbage~
+It is everywhere and smells really bad!
+~
+E
+trash~
+It is everywhere and smells really bad!
+~
+S
+#4739
+A secret tunnel deep below the sewers~
+   The tunnel ends here at a large iron gate that is painted black.
+Behind the gate it looks as if the tunnel suddenly becomes clean!
+The garbage which has covered the tunnel so far ceases at the gate
+and for some reason seems almost repelled by what lies behind the
+gate.  A small chest can also be seen behind the bars of the gate.
+The walls here are made of the same stone and are covered with
+various smelly substances.
+~
+47 265 0
+D0
+It is made of iron and painted black.
+~
+gate~
+2 4702 4740
+D2
+~
+~
+0 -1 4738
+E
+gate~
+It is made of iron and painted black.
+~
+E
+chest~
+It looks like it is made of wood and opened.
+~
+E
+walls~
+Smelly greenish brown filth covers the walls.
+~
+S
+#4740
+A great treasure room~
+   This room is unlike the previous sections of the tunnel.  It is
+clean and there is no garbage strewn about.  The gate to the south
+leads back to the rest of the trash filled tunnel and there appears
+to be no other entrances or exits from this place.  The walls are
+slightly cold to the touch and are made of some sort of stone.  There
+seems to be a strange aura surrounding this room, but then again,
+maybe it's the fact that this is the cleanest room in the tunnel.
+~
+47 265 0
+D2
+It is made of iron and painted black.
+~
+gate~
+2 4702 4739
+E
+gate~
+It is made of iron and painted black.
+~
+E
+walls~
+They are made of stone and are completely clean.
+~
+S
+#4741
+Drowning in raw sewage~
+   `cThe water here is very cloudy, making it very difficult to see.  There
+is some sort of netting floating around and it quickly entangles your body.
+Struggling, you try to free yourself from the netting and the cloudy green
+water slowly begins to dim as you gasp for air.  You continue your struggle
+until you can feel yourself begin to go unconscious.`q
+~
+47 65801 6
+D2
+~
+~
+0 -1 4727
+E
+netting~
+It surrounds your body and is made of a tight weave of rope.
+~
+S
+#4742
+Drowning in raw sewage~
+   `cThe water here is very cloudy, making it very difficult to see.  There
+is some sort of netting floating around and it quickly entangles your body.
+Struggling, you try to free yourself from the netting and the cloudy green
+water slowly begins to dim as you gasp for air.  You continue your struggle
+until you can feel yourself begin to go unconscious.`q
+~
+47 65801 6
+D0
+~
+~
+0 -1 4728
+E
+netting~
+It surrounds your body and is made of a tight weave of rope.
+~
+S
+#4743
+A small alcove in the large passage~
+   This small extension to the descending passage is about the size
+of a small room at the inn of Midgaard.  It seems to be shielded from
+the ever flowing garbage river, but still, some trash has gathered
+here, mostly old crates and boxes.
+~
+47 265 0
+D1
+~
+~
+0 -1 4715
+E
+boxes~
+Most are broken and opened and none contain anything of value.
+~
+E
+crates~
+They are rotted through and smell awful.
+~
+S
+#4744
+A secret tunnel deep below the sewers~
+   The eastern tunnel curves southward here.  The passage seems to
+dead end to the south and the way back west leads to the garbage
+filled intersection.  The constant dripping noise and the misplaced
+moans that echo through the passage indicate that something else
+is in the area.
+~
+47 265 0
+D2
+~
+~
+0 -1 4745
+D3
+~
+~
+0 -1 4738
+S
+#4745
+A secret tunnel deep below the sewers~
+   The tunnel ends here.  Piles and piles of refuse has built up here
+and this place is almost unbearable on the senses.  Even the walls seem
+to be made of garbage, almost like this passage was hollowed out from a
+mountain of trash.
+~
+47 265 0
+D0
+~
+~
+0 -1 4744
+S
+#4746
+A secret tunnel deep below the sewers~
+   The western tunnel curves northward here.  The passage seems to
+dead end to the north and the way back east leads to the garbage
+filled intersection.  The constant dripping noise and the misplaced
+moans that echo through the passage indicate that something else
+is in the area.
+~
+47 265 0
+D0
+~
+~
+0 -1 4747
+D1
+~
+~
+0 -1 4738
+S
+#4747
+A secret tunnel deep below the sewers~
+   The tunnel ends here.  Piles and piles of refuse have built up here
+and this place is almost unbearable on the senses.  Even the walls seem
+to be made of garbage, almost like this passage was hollowed out from a
+mountain of trash.
+~
+47 265 0
+D2
+~
+~
+0 -1 4746
+S
+#4748
+Secret place above a sewer tunnel~
+   The crack has lead upward and around to a small alcove above the
+sewer tunnel.  There is no garbage here and a slight breeze makes the
+air smell tolerable in this room.  The walls are very crude and not
+as shapen as the rest of the tunnel and small roots protrude from all
+parts of the room.  There is only one way out of this room, the crack
+which lead here.
+~
+47 265 0
+D5
+The crack leads downward and is big enough to crawl through.
+~
+crack~
+9 -1 4707
+E
+walls~
+They are crude and look as if made by some basic digging tool.
+~
+E
+crack~
+It leads downward and is big enough to crawl through.
+~
+S
+#4749
+Swimming in raw sewage~
+   Green sludge is all around.  It is nearly impossible to open
+your eyes because of the burning sensation the sludge causes, and
+because of this chunks of garbage bump into your body every now
+and then and the only sure way out of this place is back up from
+where you came.
+~
+47 265 6
+D4
+~
+~
+0 -1 4724
+E
+sludge~
+You can't see anything because you don't want to open your eyes.
+~
+S
+#4750
+Below the grate~
+This small passage beneath the sewers above leads to the east.  The
+flow of raw sewage pours in from the grate above and continues to flow
+eastward. Everything in this passage reeks of vileness and is covered
+in slime.
+~
+47 9 0
+D1
+~
+~
+0 -1 4700
+D4
+~
+grate~
+1 -1 20832
+S
+#0
+$~

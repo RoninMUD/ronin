@@ -1,0 +1,241 @@
+#4100
+blade black demon~
+A Black Demon's Blade~
+A dark blade lies here.~
+$r blade glows with an evil light.~
+5 2560 8193
+0 3 4 11
+8 10000 3500
+50
+E
+blade~
+You'll become as evil as the weapon, if you use it!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+#4101
+gloves~
+a pair of old battle gloves~
+Some gloves are here on the ground.~
+~
+9 512 129
+0 0 0 0
+1 1500 500
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+#4103
+slime mold~
+a green slime mold~
+A green slime mold is here. Stinks like sh**.~
+~
+19 0 1
+24 0 0 0
+1 20 8
+100
+E
+mold~
+This stuff is digusting!
+~
+E
+slime~
+This stuff is disgusting!
+~
+E
+smile mold~
+It wasn't mend to be food, - Certainly not for humans.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4104
+slime mold~
+green slime mold~
+A green slime mold is here. Stinks like sh**.~
+~
+19 0 1
+24 0 0 1
+1 20 8
+100
+E
+mold~
+This stuff is REALLY gross.
+~
+E
+slime~
+This stuff is REALLY gross.
+~
+E
+smile mold~
+It wasn't mend to be food, - Certainly not for humans.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4105
+gauntlets silver~
+Silver Gauntlets~
+A pair of gauntlets floats in the air here.~
+~
+11 268435458 129
+0 0 0 0
+1 20000 15000
+30
+E
+gauntlets~
+These look like powerful gauntlets.
+~
+E
+silver~
+These look like powerful gauntlets.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 1
+A
+19 1
+B
+16777216
+#4106
+dirty sweater~
+Dirty Sweater~
+A very dirty old sweater lies here in a puddle of sweat.~
+~
+9 2 9
+5 0 0 0
+5 10 1000
+30
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+1 2
+A
+13 5
+#4107
+pendant marble~
+A Marble Pendant~
+A marble pendant lies on the ground here.~
+~
+11 0 5
+1 0 0 0
+10 15000 10000
+40
+E
+marble~
+Its a beautiful marble pendant.
+~
+E
+pendant~
+Its a beautiful marble pendant.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 10
+A
+18 2
+#4108
+portal shimmering morian~
+A Shimmering Portal~
+A beautiful shimmering portal that reflects another world is here.~
+~
+12 0 0
+0 0 0 0
+10 10 10
+100
+E
+shimmering~
+You gaze into the rippling surface of this beautiful portal.
+Its rim is made from onyx with faces of ugly demons carved
+into the stone.  A faint glow surrounds the surface of the
+portal and you hear a gurggling sound, like that of water
+eminating from the portal.
+~
+E
+portal~
+You gaze into the rippling surface of this beautiful portal.
+Its rim is made from onyx with faces of ugly demons carved
+into the stone.  A faint glow surrounds the surface of the
+portal and you hear a gurggling sound, like that of water
+eminating from the portal.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#4109
+belt underground~
+A Belt of the Undergrounds~
+An old and worn-looking belt lies here.~
+~
+11 0 2049
+5 0 0 0
+15 50000 20000
+9
+E
+belt~
+Its a finely crafted leather belt.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 30
+#0
+$~

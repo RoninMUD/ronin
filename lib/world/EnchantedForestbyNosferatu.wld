@@ -1,0 +1,2254 @@
+#28500
+Entrance to the Enchanted Forest~
+    As you enter this section of forest a strange feeling sweeps over
+you. Somehow this forest is unlike any other that you have encountered in
+your travels. It seems to arouse all of your senses at once. There is a
+fresh sweet fragrance in the air that combines with the stunning beauty of
+the undisturbed forest to send you into a hypnotic state of comfort. This
+place seems to sweep all your cares away. You can almost hear a voice
+calling out to you, telling you to relax and forget all your worries. It
+tells you to let it all go and stay in this lovely place forever. The
+voice you hear is sweet and its proposition seems sweeter still. You
+wisely decide to move on with your journey before you can not stop yourself
+from taking that sweet voice up on its offer.
+~
+285 4 3
+D0
+~
+~
+0 -1 28501
+D2
+~
+~
+0 -1 28580
+S
+#28501
+A path through the Enchanted Forest~
+    As you continue on through this magnificent forest a new feeling
+begins to arise in you. You feel like you are being watched. As you look
+around yourself it almost seems as if everything in this place is alive.
+Not alive in the normal plant sense, but conscious. The whole forest seems
+to glitter and sparkle with life. The lovely voice continues speaking to
+you softly about living here forever in peace, but with your growing sense
+of paranoia, you also grow more sceptical of this voices true intensions. 
+Out of the corner of your eyes you can see something moving in the bushes.
+~
+285 0 3
+D0
+~
+~
+0 -1 28502
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28500
+D3
+~
+~
+0 -1 28543
+S
+#28502
+A split in the path~
+    This beautiful trail splits into two paths here. To the North-East
+you can see a fabulous glittering lake. The lake sparkles and shimmers
+like no other water you have ever seen. The temptation to move closer and
+touch it is almost overwhelming. The water is an almost etheral shade of
+deep green. The reflections from this lake seem bright enough to illuminate
+the entire forest. The two paths go around this lake on either side. As
+you look in other directions you notice that the forest off the path is
+dense, and if you stray from the trail you may end up lost. Is that what
+the softly calling voice is hoping for?
+~
+285 0 3
+D0
+~
+~
+0 -1 28503
+D1
+~
+~
+0 -1 28504
+D2
+~
+~
+0 -1 28501
+D3
+~
+~
+0 -1 28543
+S
+#28503
+A path through the Enchanted Forest~
+    You have chosen the path to the North instead of the one that ran to
+the East. This path is more narrow then the other, with thick brush
+running beside you on both sides of the path. Many of the limbs stick out
+far enough to scratch your face and arms. Despite the obstacles, the trail
+is definite, worn down all the way to bare dirt. To the North and East is
+a lovely bank of tall grass and weeds. Just beyond that you can see
+that deep green lake. It amazing sparkle and purity seem to beg you to
+jump in for just a short swim... but there is no time for that now...
+there are dangerous deeds ahead.
+~
+285 0 3
+D2
+~
+~
+0 -1 28502
+D3
+~
+~
+0 -1 28505
+S
+#28504
+A path through the Enchanted Forest~
+    You have chosen the path to the east instead of the one that ran to
+the north. This path is wider then the other, but a bit steeper going up a
+small hill and cluttered somewhat with ancient tree roots that are
+protruding up from the ground. They seem to be almost placed strategically
+to trip unwary travellers. To the north is a lovely bank of tall grass and
+weeds. Just beyond that to the north you can see that deep green lake. Its
+amazing sparkle and purity seem to beg you to jump in for just a short
+swim... but there is no time for that now... there are dangerous deeds
+ahead.
+~
+285 0 3
+D1
+~
+~
+0 -1 28511
+D2
+~
+~
+0 -1 28543
+D3
+~
+~
+0 -1 28502
+S
+#28505
+A path through the Enchanted Forest~
+     The dirt path continues on this flat path around the lake. From the
+North and East that spectacular lake continues to sparkle and wink at you
+from beyond a small bank of grass and weeds. You try to put your full
+concentration on keeping the branches that are sticking out from gouging
+out your eyes but that strange sweet voice feels like it is piercing your
+brain. Trying to ignore it or shut it out just dosen't work. Despite your
+preoccupation with branches, voice, and lake, there is still room in your
+thoughts for that growing paranoia as you continue to see movement from
+the corners of your eyes.
+~
+285 0 3
+D0
+~
+~
+0 -1 28506
+D1
+~
+~
+0 -1 28503
+D2
+~
+~
+0 -1 28543
+D3
+~
+~
+0 -1 28543
+S
+#28506
+A path through the Enchanted Forest~
+    The trail continues to the North and the brush continues to leave its
+marks on your face, arms and legs. You can hear something or someone
+moving in the near area. As you look around frantically to see who is
+there the sparkle of the lake catches your eyes from the East. To the
+West the forest calls to you still with that sweet voice. You are begining
+to realize now that there really is a voice out there speaking and it is
+not just something odd going on in your brain. At least thats what it
+seems to be. The path to the North seems to curve up ahead.
+~
+285 0 3
+D0
+~
+~
+0 -1 28507
+D2
+~
+~
+0 -1 28505
+D3
+~
+~
+0 -1 28543
+S
+#28507
+Moving deeper into the Enchanted Forest~
+    The forest seems to get darker as you proceed on the path through
+this thick brush. The trees overhead have grown closer together and block
+out most of the sun here. The darkness where you now stand seems to add
+to the brilliance and luster of the sparkling waters to the South and
+East. The dirt path turns East here, but you feel drawn North for some
+reason...
+~
+285 5 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28508
+D2
+~
+~
+0 -1 28506
+D3
+~
+~
+0 -1 28543
+S
+#28508
+A forgotten path deep in the Enchanted Forest~
+    The path continues around the beautiful lake. The forest and dense
+brush surrounding you is untouched by sunlight. The darkness here, even
+at mid-day is nearly complete. The only really lighted patch is the sparkling
+water that still seems to draw you from the South and East. The plant that
+seems to thrive the most here is moss. Almost every tree is blanketed with
+it. The path goes back to the West and continues around the lake to the
+North.
+~
+285 1 3
+D0
+~
+~
+0 -1 28509
+D3
+~
+~
+0 -1 28507
+S
+#28509
+A forgotten path deep in the Enchanted Forest~
+    The forest is dark and would be quite frightening if not for the
+comforting sparkle of that mystical water coming into the corner of your
+eye from the South and East. Even in the dark gloom of this place you
+feel like you belong here. Although disturbing, the thought is also very
+comforting. Your journey continues around the lake to the East or you
+can go back the way you came by the path to the South.
+~
+285 1 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28510
+D2
+~
+~
+0 -1 28508
+D3
+~
+~
+0 -1 28543
+S
+#28510
+A forgotten path deep in the Enchanted Forest~
+    The path continues around the beautiful lake. The forest and dense
+brush surrounding you is untouched by sunlight. The darkness here, even
+at mid-day is nearly complete. The only really lighted patch is the sparkling
+water that still seems to draw you from the South and East. The plant that
+seems to thrive the most here is moss. Almost every tree is blanketed with
+it. The path goes back to the West and continues around the lake to the
+North.
+~
+285 1 3
+D0
+~
+~
+0 -1 28522
+D3
+~
+~
+0 -1 28509
+S
+#28511
+A path through the Enchanted Forest~
+     The dirt path continues up this small hill. To the East you can see
+the hills peek and the path turning to the North. From the North that
+spectacular lake continues to sparkle and wink at you from beyond a small bank
+of grass and weeds. You try to put your full concentration on missing the
+roots sticking up all over but that strange sweet voice feels like it is
+piercing your brain. Trying to ignore it or shut it out just dosen't work.
+Despite your preoccupation with roots, voice, and lake, there is still room
+in your thoughts for that growing paranoia as you continue to see movement
+from the corners of your eyes.
+~
+285 0 3
+D1
+~
+~
+0 -1 28512
+D2
+~
+~
+0 -1 28543
+D3
+~
+~
+0 -1 28504
+S
+#28512
+A path through the Enchanted Forest~
+    The small hill reaches its peak here and the trail turns to the 
+North. You can hear something or someone moving in the near area. As you
+look around frantically to see who is there the sparkle of the lake
+catches your eyes from the North-West. To the South and East the forest
+calls to you still with that sweet voice. You are begining to realize now
+that there really is a voice out there speaking and it is not just
+something odd going on in your brain. At least thats what it seems to be.
+The path to the North slopes back down to the previous level of the trail.
+~
+285 0 3
+D0
+~
+~
+0 -1 28513
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28543
+D3
+~
+~
+0 -1 28511
+S
+#28513
+A path through the Enchanted Forest~
+   The path bends here as the lake bank turns, blocking you to the North 
+and West. You get your first full and unblocked view of this wondrous 
+body of water. It looks like there is another sky on the ground. The 
+reflection from this perfectly still water is like no other you have
+ever seen or even imagined. Looking at it gives you a strange feeling of
+thirst that you know your waterskin can't quench. Suddenly you jerk your
+head up and realize that you have been standing here gawking at the lake
+for several minutes. It seems almost as if the lake had...hypnotized you.
+You decide wisely to move on.
+~
+285 0 3
+D1
+~
+~
+0 -1 28514
+D2
+~
+~
+0 -1 28512
+S
+#28514
+A path through the Enchanted Forest~
+    As you continue walking on this trail around the lake, and trying
+to avoid looking at the water too much, you again notice movement around
+you. The bushes rustle on your left, a footstep sounds behind you. You
+remember hearing some folk stories of mythical forest creatures and begin
+to wonder if they were true. In a normal forest you would dismiss such
+noises as squirrels or deer. But in this place you haven't seen any of
+those normal forest creatures... Now what were the names of those strange
+creatures? Centyrs? Sataurs? No... that seems close but not quite
+right... The path continues to the North.
+~
+285 0 3
+D0
+~
+~
+0 -1 28515
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28543
+D3
+~
+~
+0 -1 28513
+S
+#28515
+A path through the Enchanted Forest~
+     You continue on walking the dirt path next to the lake. It continues
+to wink at you from the West as if it knows the joke and you don't. Despite
+having more success dealing with the lake you are still battling the roots
+sticking out of the ground to trip you and the paranoia of knowing that you
+are being watched. The path continues to the North and the forest seems to
+get darker ahead as the tree cover above you gets more dense. Something
+clearly moves to your East and you feel a sudden impulse to have a look.
+~
+285 0 3
+D0
+~
+~
+0 -1 28516
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28514
+S
+#28516
+A path through the Enchanted Forest~
+     You continue on walking the dirt path next to the lake. It continues
+to wink at you from the West and North as if it knows the joke and you
+don't. Despite having more success dealing with the lake you are still
+battling the roots sticking out of the ground to trip you and the paranoia
+of knowing that you are being watched. The path curves along the lake bank
+to the East and the forest seems to get darker ahead as the tree cover
+above you gets more dense.
+~
+285 0 3
+D1
+~
+~
+0 -1 28517
+D2
+~
+~
+0 -1 28515
+S
+#28517
+Moving Deeper into the Enchanted Forest~
+    The forest seems to get darker as you proceed on the path over the
+protruding tree roots. The trees overhead have grown closer together and
+block out most of the sun here. The darkness where you now stand seems to
+add to the brilliance and luster of the sparkling waters to the North and
+West. The dirt path continues North here, but you feel drawn South and
+East for some reason...
+~
+285 5 3
+D0
+~
+~
+0 -1 28518
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28543
+D3
+~
+~
+0 -1 28516
+S
+#28518
+A forgotten path deep in the Enchanted Forest~
+    The path continues around the beautiful lake. The forest and dense
+brush surrounding you is untouched by sunlight. The darkness here, even
+at mid-day is nearly complete. The only really lighted patch is the sparkling
+water that still seems to draw you from the West. The plant that seems to
+thrive the most here is moss. Almost every tree is blanketed with it. The
+path continues around the lake to the North.
+~
+285 1 3
+D0
+~
+~
+0 -1 28519
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28517
+S
+#28519
+A forgotten path deep in the Enchanted Forest~
+    The forest is dark and would be quite frightening if not for the
+comforting sparkle of that mystical water coming into the corner of your
+eye from the West. Even in the dark gloom of this place you feel like you
+belong here. Although disturbing, the thought is also very comforting.
+Your journey continues around the lake to the North or you can go back the
+way you came by the path to the South.
+~
+285 1 3
+D0
+~
+~
+0 -1 28520
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28518
+S
+#28520
+Where the trails meet~
+    This is where the two paths around the lake meet up again. To the
+South you can see a fairly wide path of bare earth, with lots of ancient
+tree roots sticking up out of the ground. To the West is a more narrow
+trail that is surrounded on both sides by thick brush. To the South-West
+you can get one final glimpse at that strange and beautiful lake. It still
+seems to call to you, but it's hold on your mind appears to be broken. To
+the East the path seems to widen a great deal and the sun can be seen
+through the trees overhead once again.
+~
+285 1 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28521
+D2
+~
+~
+0 -1 28519
+D3
+~
+~
+0 -1 28528
+S
+#28521
+A widening path through the Enchanted Forest~
+    This part of the forest is still quite dark but the sun is able to
+peek through the dense tree cover overhead to leave quite an amazing show.
+The few sun rays piercing this darkness and allowing some of the smaller
+plants to thrive are really very beautiful. The trail is much wider here
+and free of any hinderance to travelers. The path seems to have been stomped
+flat until all that was left was bare and very hard earth. It crosses your
+mind that it would take pretty large creatures to accomplish this, but only
+for a moment. This path continues North.
+~
+285 5 3
+D0
+~
+~
+0 -1 28529
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28543
+D3
+~
+~
+0 -1 28520
+S
+#28522
+A forgotten path deep in the Enchanted Forest~
+    The forest is dark and would be quite frightening if not for the
+comforting sparkle of that mystical water coming into the corner of your
+eye from the South and East. Even in the dark gloom of this place you
+feel like you belong here. Although disturbing, the thought is also very
+comforting. Your journey continues around the lake to the East or you
+can go back the way you came by the path to the South.
+~
+285 1 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28523
+D2
+~
+~
+0 -1 28510
+D3
+~
+~
+0 -1 28543
+S
+#28523
+A forgotten path deep in the Enchanted Forest~
+    The path continues around the beautiful lake. The forest and dense
+brush surrounding you is untouched by sunlight. The darkness here, even
+at mid-day is nearly complete. The only really lighted patch is the sparkling
+water that still seems to draw you from the South and East. The plant that
+seems to thrive the most here is moss. Almost every tree is blanketed with
+it. The path goes back to the West and continues around the lake to the
+North.
+~
+285 1 3
+D0
+~
+~
+0 -1 28524
+D3
+~
+~
+0 -1 28522
+S
+#28524
+A forgotten path deep in the Enchanted Forest~
+    The forest is dark and would be quite frightening if not for the
+comforting sparkle of that mystical water coming into the corner of your
+eye from the South and East. Even in the dark gloom of this place you
+feel like you belong here. Although disturbing, the thought is also very
+comforting. Your journey continues around the lake to the East or you
+can go back the way you came by the path to the South.
+~
+285 1 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28525
+D2
+~
+~
+0 -1 28523
+D3
+~
+~
+0 -1 28543
+S
+#28525
+A forgotten path deep in the Enchanted Forest~
+    You have finally reached the far side of this mystical lake. It
+still tries to draw you to it from the South, but the voice has faded.
+This part of the forest is quite dark but not quiet anymore. From the
+North you can hear a distant thrumming like feet pounding the earth.
+From the South, in the direction of the lake, you can hear a sweet
+melody on a flute. The path continues to the East.
+~
+285 1 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28526
+D3
+~
+~
+0 -1 28524
+S
+#28526
+A forgotten path deep in the Enchanted Forest~
+    You have finally reached the far side of this mystical lake. It
+still tries to draw you to it from the South, but the voice has faded.
+This part of the forest is quite dark but not quiet anymore. From the
+North you can hear a distant thrumming like feet pounding the earth.
+From the South, in the direction of the lake, you can hear a sweet
+melody on a flute. The path continues to the East. You can see a clearing
+in the weeds and grasses that surround the lake to the South.
+~
+285 1 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28528
+D2
+~
+~
+0 -1 28527
+D3
+~
+~
+0 -1 28525
+S
+#28527
+On the edge of the shimmering lake~
+    This is as close as you have gotten to this strange and beautiful
+body of water. You are standing right on the lake edge, in between patches
+of grass and weeds. This must be where all the forest creatures come to
+bathe and drink. You have also found in this place the origin of the
+flute playing that you were hearing. A funny looking creature with a man's
+torso and head atop a goat's body is standing on the edge of the lake
+playing a lovely melody. Directly to the South the lake draws you more
+strongly then ever before, not with a soft sweet voice now but almost with
+a strong unseen hand pushing you toward that sparkling water. You can return
+to the path to the North.
+~
+285 0 3
+D0
+~
+~
+0 -1 28526
+D2
+~
+~
+0 -1 28544
+S
+#28528
+A forgotten path deep in the Enchanted Forest~
+    You have finally reached the far side of this mystical lake. It
+still tries to draw you to it from the South, but the voice has faded.
+This part of the forest is quite dark but not quiet anymore. From the
+North you can hear a distant thrumming like feet pounding the earth.
+From the South, in the direction of the lake, you can hear a sweet
+melody on a flute. The path continues to the East.
+~
+285 1 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28520
+D3
+~
+~
+0 -1 28526
+S
+#28529
+A widening path through the Enchanted Forest~
+    This part of the forest is still quite dark but the sun is able to
+peek through the dense tree cover overhead to leave quite an amazing show.
+The few sun rays piercing this darkness and allowing some of the smaller
+plants to thrive are really very beautiful. The trail is much wider here
+and free of any hinderance to travelers. The path seems to have been stomped
+flat until all that was left was bare and very hard earth. It crosses your
+mind that it would take pretty large creatures to accomplish this, but only
+for a moment. This path continues North.
+~
+285 1 3
+D0
+~
+~
+0 -1 28530
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28521
+D3
+~
+~
+0 -1 28543
+S
+#28530
+A widening path in the Enchanted Forest~
+    This part of the forest is still quite dark but the sun is able to
+peek through the dense tree cover overhead to leave quite an amazing show.
+The few sun rays piercing this darkness and allowing some of the smaller
+plants to thrive are really very beautiful. The trail is much wider here
+and free of any hinderance to travelers. The path seems to have been stomped
+flat until all that was left was bare and very hard earth. It crosses your
+mind that it would take pretty large creatures to accomplish this, but only
+for a moment. The path takes a wide curve to the West here, and through
+the forest ahead you can see a bright patch of sunlight.
+~
+285 1 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28529
+D3
+~
+~
+0 -1 28531
+S
+#28531
+Nearing a clearing in the Enchanted Forest~
+    The thick tree cover overhead seems to be broken up some here.
+The trail is substabtially brighter now, but appears to be even more so up
+further ahead. To the East you can see the wide path that brought you here.
+To the South and West you can see thick tangles of brush growing between
+the tall and ancient trees which dominate this forest. To the North is a
+bright patch of sunlight where the trail seems to turn again.
+~
+285 0 3
+D0
+~
+~
+0 -1 28532
+D1
+~
+~
+0 -1 28530
+D2
+~
+~
+0 -1 28543
+D3
+~
+~
+0 -1 28543
+S
+#28532
+Entering a clearing in the Enchanted Forest~
+    The darkness of this forest ends here. Sunshine pours onto the path here
+from a huge clearing to the West. Lots of nice tall grass that couldn't
+survive under the dense tree cover is thriving in this place. You can
+see thick brush and darkness to the North and East, and a wide path
+leading back to the South.
+~
+285 0 3
+D0
+~
+~
+0 -1 28543
+D1
+~
+~
+0 -1 28543
+D2
+~
+~
+0 -1 28531
+D3
+~
+~
+0 -1 28533
+S
+#28533
+A clearing in the Enchanted Forest~
+    The sun shines down brightly on this field that is completely
+surrounded and hidden from mankind by the forest. The field is covered
+with tall green grasses which are about chest high on you. In some places
+the grass has been flattened by creatures walking and perhaps laying down
+for a nap. The grass gently bends and ripples around you with the
+light, refreshing breeze that is blowing. You can see the forest at a
+distance all around you but the clearing continues to the North and West.
+To the East is the path back into the forest.
+~
+285 0 3
+D0
+~
+~
+0 -1 28534
+D1
+~
+~
+0 -1 28532
+D3
+~
+~
+0 -1 28535
+S
+#28534
+A clearing in the Enchanted Forest~
+    The sun shines down brightly on this field that is completely
+surrounded and hidden from mankind by the forest. The field is covered
+with tall green grasses which are about chest high on you. In some places
+the grass has been flattened by creatures walking and perhaps laying down
+for a nap. The grass gently bends and ripples around you with the
+light, refreshing breeze that is blowing. You can see the forest at a
+distance all around you but the clearing continues to the South and West.
+~
+285 0 3
+D2
+~
+~
+0 -1 28533
+D3
+~
+~
+0 -1 28536
+S
+#28535
+A clearing in the Enchanted Forest~
+    The sun shines down brightly on this field that is completely
+surrounded and hidden from mankind by the forest. The field is covered
+with tall green grasses which are about chest high on you. In some places
+the grass has been flattened by creatures walking and perhaps laying down
+for a nap. The grass gently bends and ripples around you with the
+light, refreshing breeze that is blowing. You can see the forest at a
+distance all around you but the clearing continues to the North, East, and
+West.
+~
+285 0 3
+D0
+~
+~
+0 -1 28536
+D1
+~
+~
+0 -1 28533
+D3
+~
+~
+0 -1 28537
+S
+#28536
+A clearing in the Enchanted Forest~
+    The sun shines down brightly on this field that is completely
+surrounded and hidden from mankind by the forest. The field is covered
+with tall green grasses which are about chest high on you. In some places
+the grass has been flattened by creatures walking and perhaps laying down
+for a nap. The grass gently bends and ripples around you with the
+light, refreshing breeze that is blowing. You can see the forest at a
+distance all around you but the clearing continues to the South, East, and
+West.
+~
+285 0 3
+D1
+~
+~
+0 -1 28534
+D2
+~
+~
+0 -1 28535
+D3
+~
+~
+0 -1 28538
+S
+#28537
+A clearing in the Enchanted Forest~
+    The sun shines down brightly on this field that is completely
+surrounded and hidden from mankind by the forest. The field is covered
+with tall green grasses which are about chest high on you. In some places
+the grass has been flattened by creatures walking and perhaps laying down
+for a nap. The grass gently bends and ripples around you with the
+light, refreshing breeze that is blowing. You can see the forest at a
+distance all around you but the clearing continues to the North, East, and
+West.
+~
+285 0 3
+D0
+~
+~
+0 -1 28538
+D1
+~
+~
+0 -1 28535
+D3
+~
+~
+0 -1 28539
+S
+#28538
+A clearing in the Enchanted Forest~
+    The sun shines down brightly on this field that is completely
+surrounded and hidden from mankind by the forest. The field is covered
+with tall green grasses which are about chest high on you. In some places
+the grass has been flattened by creatures walking and perhaps laying down
+for a nap. The grass gently bends and ripples around you with the
+light, refreshing breeze that is blowing. You can see the forest at a
+distance all around you but the clearing continues to the South, East, and
+West. To the North you can see a seperate glade from this one.
+~
+285 0 3
+D0
+~
+~
+0 -1 28541
+D1
+~
+~
+0 -1 28536
+D2
+~
+~
+0 -1 28537
+D3
+~
+~
+0 -1 28540
+S
+#28539
+A clearing in the Enchanted Forest~
+    The sun shines down brightly on this field that is completely
+surrounded and hidden from mankind by the forest. The field is covered
+with tall green grasses which are about chest high on you. In some places
+the grass has been flattened by creatures walking and perhaps laying down
+for a nap. The grass gently bends and ripples around you with the
+light, refreshing breeze that is blowing. You can see the forest at a
+distance all around you but the clearing continues to the North and East.
+~
+285 0 3
+D0
+~
+~
+0 -1 28540
+D1
+~
+~
+0 -1 28537
+S
+#28540
+A clearing in the Enchanted Forest~
+    The sun shines down brightly on this field that is completely
+surrounded and hidden from mankind by the forest. The field is covered
+with tall green grasses which are about chest high on you. In some places
+the grass has been flattened by creatures walking and perhaps laying down
+for a nap. The grass gently bends and ripples around you with the
+light, refreshing breeze that is blowing. You can see the forest at a
+distance all around you but the clearing continues to the South and East.
+~
+285 0 3
+D1
+~
+~
+0 -1 28538
+D2
+~
+~
+0 -1 28539
+S
+#28541
+Entrance to an Enchanted Glade~
+    This glade is directly attatched to the clearing to the South, yet
+it is seperate and quite different from it in a way that you can feel but not
+explain. The ground here is covered with grass, but flattened grass. The
+strange thing about this is that the grass is all flattened so that the tips
+face the North. The way that they are flattened, not indented with any kind
+of footprint or track, also strikes you as odd. It is almost as though the
+grass were reaching to the North on its own, trying to get a better look at
+what lies ahead.
+~
+285 4 3
+D0
+~
+~
+0 -1 28542
+D2
+~
+~
+0 -1 28538
+S
+#28542
+The Gateway to the Unknown~
+    There is a strange circle of bare earth here surrounded by a wall of
+tall trees and shrubs. The only way in or out is the path to the South.
+All of the plant life outside this sacred circle seem to bend toward it
+as much as their roots allow them to. Overhead, the clouds swirl around
+a point in the sky directly over the circle. An ancient-looking man
+wearing crimson robes is standing here, maybe praying to his prefered
+higher power, maybe not. When he sees you walk into his sacred ring
+he turns his attentions from studying the sky to you. This seems to
+be not only the end of this enchanted forest but also the begining
+of something even more magical. It seems to be some sort of ancient
+gateway.
+~
+285 132 3
+D2
+~
+~
+0 -1 28541
+D4
+~
+~
+0 -1 28780
+S
+#28543
+Straying off the path....~
+     As you are in awe of the beauty surrounding you, your sense of
+direction falters and you wander off the trail. It isn't like you to get
+lost so easily! Is it possible that this forest has put you under a spell
+and caused you to lose your path? Regardless, your sense of direction
+returns as quickly as it left and you have found your way back to the spot
+in this strange forest where you first entered.
+~
+285 5 3
+D0
+~
+~
+0 -1 28500
+D1
+~
+~
+0 -1 28500
+D2
+~
+~
+0 -1 28500
+D3
+~
+~
+0 -1 28500
+S
+#28544
+The VERY DEEP middle of the Lake~
+    Although the lake is very clean and pure, it is also very deceptively
+deep. You are now in well over your head and you have to try to swim to
+shore. I truly hope you are a good swimmer! The part of you that lead you
+this far insists that the party has only just begun and you need to stick
+around. But your lungs, quickly filling up with water, disagree. Live or
+die.. You'd better make up your mind while the decision is still yours!
+The cold water pulls you slowly down down down down...
+~
+285 65536 6
+D0
+~
+~
+0 -1 28527
+S
+#28545
+Entering a light forest~
+   A wide trail opens up here, leading into a light forest area.
+The trees are tall and thick, but spaced out enough to allow
+sunlight to hit the ground all around them. Grass grows plentifully
+and from the sounds it seems that wildlife is plentiful here as well.
+The path continues to the North.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28546
+D2
+~
+~
+0 -1 28593
+S
+#28546
+A path through the forest~
+   The path continues into this beautiful forest. The sun shines
+brightly through the spaces between the trees and small forest creatures
+scurry here and there looking for food. The grass on the sides of the
+trail sways gently in the light breeze. The path continues to the
+North and heads toward civilization to the South.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28547
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28545
+S
+#28547
+A path through the forest~
+   A small stream burbles to the West and seems to block the path
+off in that direction. The trail bends to the East and continues
+in that direction. The forest remains bright and quiet. The only sounds
+come from the stream and some small creatures in the trees and bushes.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28548
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28546
+D3
+A small burbling stream runs across the path here, blocking it.
+~
+stream~
+10 -1 28559
+S
+#28548
+A path through the forest~
+   The forest continues on, full of life and light. The sun breaks
+through the spaces between tree-tops and feeds the thick grasses and
+shrubs that seem to be full of foraging forest creatures. Those creatures
+and the light breeze that ripples the grasses make up the only sounds
+in this peaceful place.The path continues to the East and West.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28549
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28547
+S
+#28549
+A path through the forest~
+   The continuing path through this lovely forest takes an abrupt turn
+to the North here as the East is blocked by two large fallen trees. The
+grass continues to sway gently in the light breeze and nothing seems to
+be of any particular danger in this place. The path goes on to the North
+and West.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28550
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28548
+S
+#28550
+A path through the forest~
+The path continues going deeper into this peaceful forest. The
+small creatures native to this place barely register your prescence
+before continuing about their business. Just ahead you can see that
+the trail turns again at another obstacle. The path continues to
+the North and South.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28551
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28549
+S
+#28551
+A path through the forest~
+The path is blocked to the North here by an enormous fallen tree.
+It looks like it must have fallen a great while ago. It is covered with
+thick, dark green moss. The path bends to the West to escape this obstacle,
+or returns to the South.
+~
+285 0 3
+D0
+A huge fallen tree blocks the path to the North.
+~
+tree~
+11 -1 28555
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28550
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28552
+S
+#28552
+A path through the forest~
+   This part of the path looks less used then the wider path that was
+blocked off by the fallen tree. It is more narrow and partly covered with
+grass that bends easily under your step. The sides of the trail are lined
+with grass and shrubs that rustle with the wind. It is extremely quiet
+here. The path bends to the North to avoid some overly thick brush to the
+West, and continues back to the East.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28553
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28551
+S
+#28553
+A path through the forest~
+   The path bends once again to the West, as if whoever made it was
+desperate to find something in that general direction. The forest seems
+to thicken a lot to the North, making travel a difficult prospect. There
+appears to be thick sticker bushes to the West, making you wonder how
+much longer it will be safe to proceed. The path continues to the West
+and to the South.
+~
+285 0 3
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28552
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28554
+S
+#28554
+The trail ends~
+   The path ends abruptly here, meeting with an impassable bunch of
+sticker bushes that would likely rip you to shreds if you even tried to
+proceed. The brush and trees are thick to the North and South, leaving
+a return to the East as the only real travel option.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28553
+S
+#28555
+A path through the forest~
+    The path opens up after the fallen tree that was blocking
+it to the South. This forgotten path you have discovered doesn't appear
+to have been used in a great while, but must have been used extensively
+at some point in time. The grass grows thick in the path but can't fully
+hide the obvious foot trail. The path continues to the North.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28556
+D2
+A huge fallen tree blocks the path to the South.
+~
+tree~
+11 -1 28551
+S
+#28556
+A path through the forest~
+   The path bends to the East here. After walking for so long you
+can't help but wonder what might meet you wherever this trail ends up.
+The forest gets slightly more dense as you go along and off in the distance
+You can see more shadowy patches then lighted ones. The path also returns
+to the South.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28557
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28555
+S
+#28557
+A path through the forest~
+  The end appears to be in sight. The path climbs a small hill and you
+won't know for sure what lies ahead until you crest it. But you can
+tell that the path must end soon because the trees ahead are much
+closer together. The path is bent to the North and returns to the West.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28558
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28556
+S
+#28558
+The trail ends~
+   The path ends abruptly here, having lost the battle with Mother
+Nature. The brush grows thick on all sides and the trees are closer
+together. Shadows loom in the distance and the path appears to have at one
+time lead to the North and West from here. Your only option now is to
+return to the South.
+~
+285 0 3
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28557
+S
+#28559
+A path through the forest~
+   The path is blocked to the East by a lightly burbling stream
+that flows gently Northward. The sound of the stream is soothing
+and, other then the gentle breeze through the grass and some small
+animals calling each other, makes up the only sound. The path continues
+to the North here, alongside the stream.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28560
+D1
+A small burbling stream runs across the path here, blocking it.
+~
+stream~
+10 -1 28547
+S
+#28560
+A path through the forest~
+   The forest is light and open here. The trees are tall and large
+but leave enough space between to let sunlight reach the ground. As
+a result the bushes and grasses grow all along the sides of this path.
+A stream flows gently along the East side of this path, and bends with
+the path to the West here. You can also return to the South.
+~
+285 0 3
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28559
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28561
+S
+#28561
+A path through the forest~
+   The stream and the path both bend back to the North here.
+The trail is a thin line of bare earth with wide patches of grass
+on each side and thick brush on the sides beyond that. You can hear the
+lively scurrying sounds of the small forest creatures searching for food.
+The path also returns to the East.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28562
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28560
+S
+#28562
+A path through the forest~
+   The stream continues to the North, passing under a small dam made
+of sticks and brush. The path turns to the West, leaving the narrow
+waterway. The sounds of the forest grow slightly louder as you continue
+deeper into it and it grows thicker. The path also returns to the South.
+~
+285 0 3
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28561
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28563
+S
+#28563
+A path through the forest~
+   A huge tree stump blocks the path to the North. As a result it
+continues running to the West. The forest is getting thicker as
+you move deeper but still seems mostly light. You notice large
+menacing shadows further into the woods and decide to stay on
+the trail. You can move back to the East.
+~
+285 0 3
+D0
+A massive tree trunk juts from the ground in the middle of the path.
+~
+trunk~
+11 -1 28568
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28562
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28564
+S
+#28564
+A path through the forest~
+    The path continues through this light forest area. The sounds
+of the forest continue to drone on in the background, almost becoming
+irritating in tandem with the forest silence. This path looks fairly
+promising, maybe it will lead you to a worthy destination.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28563
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28565
+S
+#28565
+A path through the forest~
+   The path twists and turns in this section of the forest, seemingly
+having trouble deciding in which direction to lead you. Thick sticker
+bushes sneak up quickly on the sides of the trail, narrowing your
+walking space. The path now leads you West, or you can return North.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28564
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28566
+S
+#28566
+A path through the forest~
+    The path takes another turn through a tight patch of sticker
+bushes to the South here. It doesn't look like a very safe fit,
+with the stickers poking from their vines jaggedly as if daring
+you to walk close enough for them to get at you. Yet somehow you
+have a feeling that there is something to the South that you need to
+see. You can return to the East.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28565
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28567
+S
+#28567
+The trail ends~
+   You walk through the jagged sticker bushes and they have their
+way with your clothing and your limbs. You come into the clearing on
+the other side with jagged strips of cloth missing from your shirt
+and pants and dozens of small bloody cuts on your face, arms and legs.
+The feeling of need to come in this direction seems to have been wrong
+for you see nothing here but a very narrow path back to the North.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28566
+D2
+Through the thick brush you can barely makeout the facade of a
+few buildings.
+~
+brush~
+9 -1 9301
+S
+#28568
+A path through the forest~
+   You continue on a hidden and little used path that leads
+further into this forest. The path gets darker as you move deeper into
+the woods, and the light sounds of small foraging forest creatures
+is replaced by the distant hoots of owls and the screech of a hawk.
+The path takes a sudden turn to the East and is blocked by a huge
+tree trunk to the South.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28569
+D2
+A massive tree trunk juts from the ground in the middle of the path.
+~
+trunk~
+11 -1 28563
+S
+#28569
+A path through the forest~
+   The path twists back toward the North here. The darkening
+woods around you prompt you to walk a little faster. There is still
+the unmistakable feeling that your destination is around the next
+corner. The woods are begining to look less like a nice picnic spot and
+more like some kind of maze...
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28570
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28568
+S
+#28570
+A path through the forest~
+   The path turns West here and you can see a fair stretch of
+path ahead in that direction. The East is blocked by an enormous
+hollow log. A nearby hoot from an owl sends a shiver down your
+spine. The friendliness of this place is leaving quickly. You
+could wisely turn back to the South.
+~
+285 0 3
+D1
+A large hollow log lying on the ground seems to block the path.
+~
+log~
+9 -1 28576
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28569
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28571
+S
+#28571
+A path through the forest~
+   This narrow trail is closely guarded on both sides by thick sticker
+bushes. The long vines seem to reach out at you with their jagged
+sharp points. Up ahead the path gets narrower still, but the sense that
+this trail leads somewhere is overwhelming. You can return to the East.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28570
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28572
+S
+#28572
+A path through the forest~
+   The space between you and the sticker bushes closes quickly. They
+seem to close in on you hungrily as you move toward your goal. A few of
+them reach in far enough to snag on your clothes, but none inflict any
+pain to you, yet. You can avoid the pain by returning East.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28571
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28573
+S
+#28573
+A path through the forest~
+   As you continue onward the bushes start scraping your arms and legs.
+You are forced to walk sideways to avoid as many gashes as possible.
+The trail turns slightly Northward here, through a very tight-fitting
+tunnel of stickerbushes. The stickers have closed in and blocked your
+vision to the East.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28574
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28572
+S
+#28574
+A path through the forest~
+   You can see nothing in any direction but stickerbushes. The
+stickers poke you from every side like needles. Every movement
+you make brings a new flare of pain as a sticker rakes across
+your skin. You can barely make out a tiny escape route to the
+West, and another to the South.
+~
+285 0 3
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28573
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28575
+S
+#28575
+A path through the forest~
+   The stickers are truly the kings of the forest in this place.
+They have taken over this trail completely and will let no man or
+beast pass through them. You bleed from tiny punctures and gashes all
+over your body. Looking around this spot, nothing is visible but an
+immense tangle of sticker covered vines. Even the view of the sky is
+blocked off by them. A very small path returning to the East seems
+to be the only way to proceed.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28574
+S
+#28576
+A path through the forest~
+    This well-hidden trail appears to have been lying unused for
+a great while. Thick grass grows wildly in a streak pointing
+Northward, surrounded by thick brush and massive trees on each side.
+The wild grass didn't get TOO wild though, it somehow stayed just short
+enough so it does not conceal this trail. A huge hollow log blocks
+your path back to the West.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28577
+D3
+A large hollow log lying on the ground seems to block the path.
+~
+log~
+9 -1 28570
+S
+#28577
+A path through the forest~
+   The trail makes a slight eastward turn here. It still seems as though
+the grass is pointing you toward your destination. After the difficulty
+of following some of the past trails in this forest, this one is
+suprisingly easy. No plants of any kind seem to be acting as a hindrance
+to you proceeding. You can return to the South.
+~
+285 0 3
+D1
+The forest seems to continue on infinitely to the East.
+~
+~
+0 -1 28578
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28576
+S
+#28578
+A path through the forest~
+   The trail bends back to the North and it appears that you have
+reached a fairly long stretch of trail, finally. The trail you walk
+on seems to be normal but something up ahead seems different. You
+can't quite place your finger on it but further ahead you sense that
+these woods won't be quite as normal anymore. You can continue to the
+North or return to the West.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28579
+D3
+Trees, bushes, trees, grass, and trees.
+~
+~
+0 -1 28577
+S
+#28579
+A path through the forest~
+   As you continue on this straight stretch of trail you continue
+to notice strange things up ahead. It seems to be overly bright in
+that direction, and everything seems to pulse with life-force. From
+this distance you can't tell if you ate a bad mushroom or if you
+are really seeing this. The grass has almost completely flattened out here,
+seemingly reaching out to the forest ahead. You can continue to the
+North or return to the South.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28580
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28578
+S
+#28580
+A path through the forest~
+   Now as you look around you notice that not only does the grass flatten
+toward the North, but all the trees seem to sway in that direction as well.
+Looking above you see clouds in the sky moving quickly in that direction
+as well. An omnious silence is all that reaches your ears. This place
+seems to radiate with energy coming from some point North of here. You
+can return to the South.
+~
+285 0 3
+D0
+The forest continues in this direction as far as the eye can see.
+~
+~
+0 -1 28500
+D2
+The forest continues unchanging in this direction.
+~
+~
+0 -1 28579
+S
+#28581
+The Northern Trail~
+    As you continue away from Midgaard the area continues to look more
+like a forest. The distant drones of city noise have almost ceased. Only
+a minor loud commotion pierces the silent forest path. This trail was once
+refered to regularly as 'The Great Road', but it has degenerated with disuse
+over time. You can feel the elevation of the trail raising slightly as it heads
+away from the lowlands and toward the massive mountains that line the Northern
+horizon. The trail continues to the North and returns to the South.
+~
+285 0 3
+D0
+~
+~
+0 -1 28582
+D2
+~
+~
+0 -1 28594
+D3
+~
+~
+0 -1 27543
+S
+#28582
+The Northern Trail~
+    The Northern Trail continues through the forests toward the distant
+mountains. The mountains gain in size and definition as you continue on.
+You can easilly see the high snow peaks, and the lower jagged lines are
+begining to show up more visibly. Some say that there is a land of snow
+and ice on the other side, others say there is a vast ocean. No one
+really knows what is there, however, as the Northern Mountains have been
+crossed by no man in memory. The path continues Northward.
+~
+285 0 3
+D0
+~
+~
+0 -1 28583
+D2
+~
+~
+0 -1 28581
+S
+#28583
+The Northern Trail~
+    The grade of this trail becomes steeper as you follow it to the North.
+It also continues to narrow. The trees have narrowed to within several
+feet on each side of the path. The forest is remarkably dense on both
+sides of the path. The sounds of the city from the South have disappeared
+completely. As far as this forest is concerned, There might never have
+been a city at all. The trail continues Northward.
+~
+285 0 3
+D0
+~
+~
+0 -1 28584
+D2
+~
+~
+0 -1 28582
+S
+#28584
+The Northern Trail~
+    The lush green and brown grasses sway gently in the breeze which
+reaches out from the North. The wind is very cold. Some old travelers
+call that cold breeze out of the Northern peaks 'the breath of ruin'.
+There are no records of how many travelers may have tried to brave the
+mountains and see the other side. There are only stories of grandfathers
+and great-grandfathers who left for the North and never returned. The
+trail continues to lead you toward the origin of that chilling breeze.
+~
+285 0 3
+D0
+~
+~
+0 -1 28585
+D2
+~
+~
+0 -1 28583
+S
+#28585
+The Northern Trail~
+    The trail has stopped narrowing but continues to grow steeper. The only
+sounds now are the wind whispering through the trees and grasses and some
+distant sounds of forest creatures doing their daily undertakings. The
+dense forest continues to line this trail which was once refered to as
+'The Great Road' as it leads Northward toward the distant, mountainous
+horizon.
+~
+285 0 3
+D0
+~
+~
+0 -1 28586
+D2
+~
+~
+0 -1 28584
+S
+#28586
+The Northern Trail~
+    The patches of grass in the trail have grown together to mostly
+overtake it.  There is still a very narrow dirt strip in the middle,
+and two slightly wider dirt strips on the sides which mark the old
+tracks of wagons which used 'The Great Road' in days long past. Where
+those folks might have been headed to or from remains a mystery. The
+trail continues leading toward the ever-growing mountains to the North,
+and returns toward civilization to the South.  To the east, you see
+a mysterious floating door.
+~
+285 0 3
+D0
+~
+~
+0 -1 28587
+D1
+The door appears to pulsate with magic.
+~
+door~
+1 -1 27551
+D2
+~
+~
+0 -1 28585
+S
+#28587
+The Northern Trail~
+    The elevation of the trail continues to grow as steadily as the size
+and clarity of the mountains on the horizon. The cold breeze blows
+continually, now swaying the ancient trees of this forest along with the
+grasses which line the trail. A small side trail breaks off of the main
+path to the West here. It looks very small and unused, making it likely
+that it leads nowhere. The Great Road continues unfalteringly Northward,
+and the great city of Midgaard is back to the South.
+~
+285 0 3
+D0
+~
+~
+0 -1 28588
+D2
+~
+~
+0 -1 28586
+D3
+~
+~
+0 -1 28589
+S
+#28588
+The Northern Trail~
+    The trail continues to grow steeper as it leads toward the mountains
+to the North. The trees which lined the path densely are begining to
+thin out noticably, a sign that the forest is turning into the hills
+that are the begining of the mountain range. The mountains are much closer
+now, and you can see why people don't cross them. The Great Road continues
+toward those peaks to the North and toward Midgaard to the South.
+~
+285 0 3
+D0
+~
+~
+0 -1 28597
+D2
+~
+~
+0 -1 28587
+S
+#28589
+A small side-path~
+    This is a narrow side-path that leads off the Northern Trail and
+into the dense woods that surround it. From the main trail this path
+didn't look like much of anything, but from here you can see that it
+does appear to lead on for a bit. The path leads deeper into the forest
+to the West, or back to the Northern Trail to the East.  To the south
+there is a low stone building with a MM carved into the door.
+~
+285 0 3
+D1
+~
+~
+0 -1 28587
+D2
+~
+door~
+1 -1 27536
+D3
+~
+~
+0 -1 28590
+S
+#28590
+A small side-path~
+    This narrow, winding trail leads you on through these dense woods.
+The only sounds are those of some far off forest creatures. The trees
+which surround you are very tall and full. The sky can only partially
+be viewed from here. The trail takes a turn to the North here to get
+around a patch of dense shrubs. You can head back to the main trail
+to the East.
+~
+285 0 3
+D0
+~
+~
+0 -1 28591
+D1
+~
+~
+0 -1 28589
+S
+#28591
+A small side-path~
+    The path continues on through the dense woods toward an unknown
+destination. The path isn't really much of a path at all, it is
+really just a thin strip of knee-high grass between the dense shrubs
+and trees which make up this forest. It doesn't look like this path
+is traveled much, if ever. It takes another turn here to the West,
+and doesn't look to head in that direction for long. You can check
+that out or head back toward the beaten path to the South.
+~
+285 0 3
+D2
+~
+~
+0 -1 28590
+D3
+~
+~
+0 -1 28592
+S
+#28592
+A small side-path~
+    The path appears to turn and open up slightly ahead. The path here is
+still very narrow, surrounded closely on both sides by dense shrubs and
+trees. The path itself is made up of fairly tall green and brown grass.
+You can follow the path to the West or head back for the city to the East.
+~
+285 0 3
+D1
+~
+~
+0 -1 28591
+D3
+~
+~
+0 -1 28593
+S
+#28593
+A small side-path~
+    The small path suddenly opens up greatly to the North of here. The
+trees and shrubs continue to surround the trail, but they fall back
+quite a bit here and look to thin out even more up ahead. You couldn't
+see this nice section of forest from the Northern Trail, but you can now.
+You can proceed into this new forest to the North or head back toward the
+Northern Trail and Midgaard to the East.
+~
+285 0 3
+D0
+~
+~
+0 -1 28545
+D1
+~
+~
+0 -1 28592
+S
+#28594
+The Northern Trail~
+    The sounds of the city to the South are fading to a low drone as
+you follow The Great Road to the North. The litter that was lining the
+path has mostly ceased. The path is lined by tall brown and green grasses
+now, only occasionally spotted by a rusting piece of armor or a pile of
+molding cloth. The trees continue to line the path more closely as you
+get further from Midgaard and their logging needs. The dirt path grows
+narrower and grass appears in patches on it. The distant mountain range
+grows on the horizon as you continue following the trail Northward.
+~
+285 0 3
+D0
+~
+~
+0 -1 28581
+D2
+~
+~
+0 -1 28595
+S
+#28595
+The Northern Trail~
+    The trees close in on the path as you continue following it to
+the North.  The litter on the sides of the road continues to appear
+in patches but lessens as you get further from the city. Also lessening
+as you move away is the crowd noise. It is still fairly loud but you can't
+make out individual voices anymore. Some distant mountain can be seen along
+the Northern horizon. The trail continues Northward. To the east you see a
+small glade.
+~
+285 0 3
+D0
+~
+~
+0 -1 28594
+D1
+~
+~
+0 -1 3093
+D2
+~
+~
+0 -1 28596
+S
+#28596
+Outside the Northern Gate~
+    A wide dirt path opens up outside the Northern Gates of the world's
+mightiest city here. You can hear the hustle and bustle of the marketplace
+close at your back. Bits of litter and rusted hunks of metal sit along the
+sides of this path. Tall grasses in browns and greens follow, and the scene is
+completed by the tall trees that line the path further off. This path, which
+is sometimes refered to as 'The Great Road' continues unhindered to the North.
+~
+285 0 3
+D0
+~
+~
+0 -1 28595
+D1
+You see a scrapyard full of random junk.
+~
+~
+0 -1 3030
+D2
+The Northern gate leading back into Midgaard.
+~
+gate~
+1 -1 3054
+S
+#28597
+The Northern Trail~
+    The forest thins rapidly as you continue on The Northern Trail. The
+elevation continues to rise as you leave the forest and enter the
+foothills which mark the begining of the great Northern mountains. The air
+gets continually colder and the cold wind picks up out of the North.
+The path leads on toward the mountains to the North and back toward town
+to the South.
+~
+285 0 3
+D0
+~
+~
+0 -1 28598
+D1
+~
+~
+0 -1 19000
+D2
+~
+~
+0 -1 28588
+S
+#28598
+The Northern Trail~
+    The path leads you on toward the mountains of the North, which are now
+extremely close at hand. They blot out the sky almost completely in that
+direction. The trail continues to rise in elevation, reaching up toward
+the base of those mountains. The trees thin out more and more quickly as you
+proceed, and the wind and the cold grow ever stronger. You can continue on
+this path to the North or head back toward Midgaard to the South.
+~
+285 0 3
+D0
+~
+~
+0 -1 28599
+D2
+~
+~
+0 -1 28597
+S
+#28599
+The Northern Trail~
+    The path ends here where the mountains of the North begin. Looking
+ahead and up you can see the high, snow-capped peaks of this amazing range.
+looking to the South you get a spectacular view of the forest and Midgaard
+and the lands beyond it. The trees have grown very far apart now and you can
+see that further ahead they cease to grow at all. The cold has gotten quite
+uncomfortable, driven on by the harsh freezing winds coming out of the North
+which some call 'the breath of ruin'. The Northern Trail, which was once called
+'The Gread Road', doesn't dare brave those peaks.
+~
+285 0 3
+D0
+~
+~
+0 -1 27700
+D2
+~
+~
+0 -1 28598
+S
+#0
+$~

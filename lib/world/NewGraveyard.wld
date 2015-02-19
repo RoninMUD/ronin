@@ -1,0 +1,572 @@
+#2501
+A path to the graveyard~
+You are approaching a horrible place, a death's door.  Watch out!
+~
+25 0 2
+D1
+~
+~
+0 0 4001
+D3
+~
+~
+0 0 2502
+S
+#2502
+Entrance to the graveyard~
+	The gate of the graveyard is broken down into pieces.
+~
+25 0 2
+D1
+~
+~
+0 0 2501
+D3
+~
+~
+0 0 2503
+S
+#2503
+At the graveyard~
+	You are at the graveyard. There is a shroud of mist surrounding you. Take care and good luck.
+~
+25 0 2
+D0
+~
+~
+0 0 2504
+D1
+~
+~
+0 0 2502
+D2
+~
+~
+0 0 2523
+D3
+~
+~
+0 0 2510
+S
+#2504
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2505
+D2
+~
+~
+0 0 2503
+D3
+~
+~
+0 0 2507
+S
+#2505
+The corner of the graveyard~
+	You are surrounded by a lot of tombs. You cannot hear anything, just a deathlike silence.  To the north is a small, unkempt estate. 
+~
+25 0 2
+D2
+~
+~
+0 0 2504
+D3
+~
+~
+0 0 2506
+S
+#2506
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D1
+~
+~
+0 0 2505
+D2
+~
+~
+0 0 2507
+D3
+~
+~
+0 0 2509
+S
+#2507
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2506
+D1
+~
+~
+0 0 2504
+D2
+~
+~
+0 0 2510
+D3
+~
+~
+0 0 2508
+S
+#2508
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2509
+D1
+~
+~
+0 0 2507
+D2
+~
+~
+0 0 2511
+S
+#2509
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D1
+~
+~
+0 0 2506
+D2
+~
+~
+0 0 2508
+D3
+~
+~
+0 0 2512
+S
+#2510
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2507
+D1
+~
+~
+0 0 2503
+D3
+~
+~
+0 0 2511
+S
+#2511
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2508
+D1
+~
+~
+0 0 2510
+D2
+~
+~
+0 0 2516
+D3
+~
+~
+0 0 2515
+S
+#2512
+Gate to the devil's home~
+	It is pitch dark, you cannot see anything in front of you.
+ A mysterious voice is telling you to leave in a sepulchral tone.
+~
+25 0 2
+D1
+~
+~
+0 0 2509
+D3
+~
+~
+0 0 2513
+S
+#2513
+A path to the devil's home~
+	You see a collapsed tumulus in front of you, you feel a slight chill in the wind.  
+~
+25 0 2
+D1
+~
+~
+0 0 2512
+D3
+~
+~
+0 0 2514
+S
+#2514
+Tumulus~
+	You are standing on some broken pieces of the tumulus.
+ There is big hole on the ground, you can hear a haunting echo coming out from it. 
+~
+25 0 2
+D0
+~
+~
+0 0 11500
+D1
+~
+~
+0 0 2513
+D5
+~
+~
+0 0 2530
+S
+#2515
+The corner of the graveyard~
+You are surrounded by a lot of tombs.   You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D1
+~
+~
+0 0 2511
+D2
+~
+~
+0 0 2517
+S
+#2516
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2511
+D3
+~
+~
+0 0 2517
+S
+#2517
+At the graveyard~
+	You are approaching a very strange looking house.
+Do you think anyone will have the guts to live here?
+You better leave before it is too late.
+~
+25 0 2
+D0
+~
+~
+0 0 2515
+D1
+~
+~
+0 0 2516
+D3
+~
+~
+0 0 2518
+S
+#2518
+Door to the house~
+	You see a sleazy house in front of you.
+There is a half-opened wooden door, your curiosity has made you to take a step forward.
+~
+25 0 2
+D1
+~
+~
+0 0 2517
+D3
+~
+~
+0 0 2519
+S
+#2519
+Inside the house~
+	It smells terrible here, you feel as if you have lost your soul. There are exits to north and west.
+~
+25 8 2
+D1
+~
+~
+0 0 2518
+D2
+~
+~
+0 0 2520
+D3
+~
+~
+0 0 2522
+S
+#2520
+Kitchen~
+	You can see a lot of dead bodies here, the smell of stale air is revolting.
+~
+25 8 2
+D0
+~
+~
+0 0 2519
+S
+#2521
+Pyrver`s Lab~
+	An empty room with no books, no flasks and no furniture. You feel odd and out of place here.
+A shiver runs down your back.
+~
+25 8 2
+D0
+~
+~
+2 2501 2522
+S
+#2522
+Pyrver's Bedroom~
+	The walls and ceiling are splashed with blood.
+~
+25 8 2
+D1
+~
+~
+0 0 2519
+D2
+~
+door~
+1 2501 2521
+S
+#2523
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2503
+D2
+~
+~
+0 0 2524
+S
+#2524
+At the graveyard~
+        You are surrounded by a lot of tombs.You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2523
+D2
+~
+~
+0 0 2525
+S
+#2525
+At the graveyard~
+You are surrounded by a lot of tombs.  You cannot hear anything, just a deathlike silence.
+~
+25 0 2
+D0
+~
+~
+0 0 2524
+D3
+~
+~
+0 0 2526
+S
+#2526
+Southern part of the graveyard~
+	There are many coffins lying around, you feel as if you have came out from one of them.
+~
+25 0 2
+D1
+~
+~
+0 0 2525
+D2
+~
+~
+0 0 2527
+D3
+~
+~
+0 0 2529
+S
+#2527
+Southern part of the graveyard~
+        There are many coffins lying around, you feel as if you have came out from one of them.
+~
+25 0 2
+D0
+~
+~
+0 0 2526
+D2
+~
+~
+0 0 2528
+D3
+~
+~
+0 0 2532
+S
+#2528
+Southern part of the graveyard~
+        There are many coffins lying around, you feel as if you have came out from one of them.
+~
+25 0 2
+D0
+~
+~
+0 0 2527
+S
+#2529
+Southern part of the graveyard~
+        There are many coffins lying around, you feel as if you have came out from one of them.
+~
+25 0 2
+D1
+~
+~
+0 0 2526
+D2
+~
+~
+0 0 2532
+S
+#2530
+Hole of the tumulus~
+	You hear a spooky echo from the surroundings. There is a sculpture of an Indian suttee standing here.
+~
+25 9 2
+D4
+~
+~
+0 0 2514
+D5
+~
+~
+0 0 2531
+S
+#2531
+End of the hole~
+	You are at the end of the hole.
+~
+25 9 2
+D4
+~
+~
+0 0 2530
+S
+#2532
+South-western part of the graveyard~
+	There is a large sculpture of a warrior here, holding a real crosier in its hands.
+There are exits to north, south, west and east.
+~
+25 0 2
+D0
+~
+~
+0 0 2529
+D1
+~
+~
+0 0 2527
+D2
+~
+~
+0 0 2533
+D3
+~
+~
+0 0 2534
+S
+#2533
+South-western part of the graveyard~
+	You are standing on some deep mud. The stale air around has left you feeling nauseous.
+This place is chilly and spooky, you certainly dislike it here.
+~
+25 0 2
+D0
+~
+~
+0 0 2532
+D3
+~
+~
+0 0 2535
+S
+#2534
+South-western part of the graveyard~
+        You are standing on some deep mud. The stale air around has left you feeling nauseous.
+This place is chilly and spooky, you certainly dislike it here.
+~
+25 0 2
+D1
+~
+~
+0 0 2532
+D2
+~
+~
+0 0 2535
+S
+#2535
+South-western part of the graveyard~
+        You are standing on some deep mud. The stale air around has left you feeling nauseous. 
+This place is chilly and spooky, you certainly dislike it here.
+~
+25 0 2
+D0
+~
+~
+0 0 2534
+D1
+~
+~
+0 0 2533
+D3
+~
+~
+0 0 2536
+S
+#2536
+The end of the graveyard~
+	This is the end of the road. The only way is to go back here, the only exit is to the east. 
+~
+25 1 2
+D1
+~
+~
+0 0 2535
+S
+#0
+$~

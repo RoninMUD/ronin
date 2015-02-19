@@ -1,0 +1,161 @@
+#28500
+centaur horse man~
+A centaur~
+A centaur is stomping proudly here, not taking notice to your presence.
+~
+    This mystical creature has the torso of a man on top of a complete
+horses body. He strides around on all four hooves and watches over the
+smaller forest creatures. Many centaurs were troublemakers and gave the
+breed a reputation for disorderly conduct. They got drunk, kidnapped
+maidens and started fights. Even so, people consider centaurs to be a 
+symbol of all that is good and right in the world. Although they are
+hidden from they untrained eye, centaurs don't hide from people. When you
+spot and approach him he stays standing stout and proud.
+~
+16456 270311424 200 Y
+34 -9 -8 20d50+2500 4d6+8
+8500 350000
+8 8 1
+91 0 1d1+1 2
+9 2 9 0
+4 2 12 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28501
+satyr goat man~
+A satyr~
+A satyr shyly hides from you in a bush nearby.
+~
+    From the waist down this amazing creature is a goat. Above the waist
+he is a very shy, kind and gentle man. Satyres are lovers of the forest
+who guard it's safety with their lives. They are held by the people as
+symbols of peace and good fortune.
+~
+16460 270311426 350 Y
+30 -2 -2 1d100+1200 3d5+6
+7500 150000
+8 8 1
+91 0 1d1+1 1
+2 2 12 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28502
+minotaur bull man~
+A minotaur~
+A minotaur stomps wildly, shaking the very ground you walk on.
+~
+    This creature is very powerful and intimidating. It has a bull's head
+atop the very large and strong body of a man. It stomps wildly on the
+ground causing the earth to tremble. Minotaurs are very teritorial and
+very easily angered. They are widely feared by mortal men and rumored to
+be the cause of most earthquakes.
+~
+16488 268730408 0 Y
+48 -13 -10 2d50+8000 1d20+40
+9500 810000
+8 8 1
+91 0 1d100+300 2
+10 3 13 0
+11 3 8 23
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28503
+deer~
+A deer~
+A wild deer stops grazing and eyes you suspiciously
+~
+This is a fully matured doe. She is very sleek and slender and
+without a scar or blemish. She appears to be doing very well in
+this forest area.
+~
+456 0 0 Y
+15 10 10 1d50+100 1d3+3
+0 300
+8 8 2
+91 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28504
+nymph fairy nyla~
+Nyla the Nymph~
+Nyla the Nymph is floating about the forest, humming a sweet tune.
+~
+Nyla is one of the many forest nymphs. The Nymphs are miniscule fairies
+who strive to protect the forest and the natural balance that exists in
+it. Nyla is the only fairy trusting enough to allow herself to be seen by
+mortals, while the rest of her kind hide in their natural environment. She
+has tiny translucent wings, a bright pinkish skintone, and bright yellow
+hair. She is wearing a tiny jeweled dress and matching tiara. She smiles
+at you brightly and continues on her way, humming merrily.
+~
+524428 16777218 0 Y
+15 10 10 1d50+200 1d11+1
+100 900
+8 8 2
+68 0 1d100+200 1
+1 2 50 32
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28505
+rabbit~
+A rabbit~
+A small rabbit is peeking out at you from under a shrub.
+~
+He is a small, grayish rabbit with both ears raised alertly. His nose
+twitches intermittently as he sizes you up as friend or foe.
+~
+200 0 0 Y
+10 15 10 1d50+50 1d2+3
+0 150
+8 8 1
+86 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28506
+pan god satyr master~
+Pan~
+Pan, the god of the forest, stands here playing a melody on his flute.
+~
+    Pan is the god of the forest. He protects the delicate balance of all
+the plants and creatures. He is a satyre himself, a man's torso on a
+goat's body, and he loves to stand on the bank of this mystical lake and
+play melodies on his special flute.
+~
+16777226 269264896 800 Y
+60 -20 -10 20d100+10000 4d18+30
+300000 1000000
+8 8 1
+10 0 1d100+700 1
+1 6 9 140
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#28507
+guard guardian~
+The Guardian of the Gateway~
+The Guardian of the Gateway is here, keeping the unworthy from passing.
+~
+    The Guardian of the Gateway wears a full crimson robe that
+covers all of the body that you assume him to have. His arms
+are folded before him with his hands hidden by the baggy sleeves.
+The hem of the robe reaches the ground, but dosent look at all
+soiled. He towers over you by a few feet. You can't tell by looking
+at him and the surroundings if he just got here or if he has been
+standing here for a thousand years.
+~
+16777226 264224 0 Y
+51 -20 -100 32000d1+89 2d100+100
+0 0
+8 8 1
+68 4096 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

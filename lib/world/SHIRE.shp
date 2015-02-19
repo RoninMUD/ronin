@@ -1,0 +1,146 @@
+#19~
+-1
+-1
+-1
+3032
+3031
+1.1
+.95
+0
+1
+15
+17
+19
+%s I've never heard of that.~
+%s I've never heard of that.~
+%s Please, this is a general store, not a flea market.~
+%s I'll take it for free - I can't give you enough gold.~
+%s Hmmm...you'd better check your wallet.~
+%s That costs %d. There you are!~
+%s Here's %d coins.~
+1
+0
+1118
+0
+1105
+0
+24
+0
+24
+#20~
+-1
+-1
+-1
+-1
+-1
+10
+.2
+0
+0
+5
+9
+12
+%s Are you trying to pull the wool over my eyes?~
+%s Scram kid!~
+%s I don't deal in that kind of merchandise.~
+%s Do I look like a bank to you?~
+%s Pay up or get out!~
+%s Give me %d coins.  Now beat it!~
+%s Fine, here's %d coins.  Thanks for nothing.~
+0
+0
+1120
+0
+1107
+0
+24
+0
+24
+#21~
+-1
+-1
+-1
+-1
+1103
+1
+1
+0
+0
+0
+0
+0
+%s You must be having a bad day.~
+%s I've never heard of that.  Tell me more about it.~
+%s I'm sorry - I don't buy that sort of thing.~
+%s Looks like I don't have enough gold.~
+%s Come back when you get some more money.~
+%s That will be %d coins.  Enjoy.~
+%s Bug.  Please report.~
+1
+0
+1119
+0
+1121
+0
+24
+0
+24
+#22~
+-1
+-1
+1110
+3002
+3100
+1
+1
+0
+0
+0
+0
+0
+%s Say what?~
+%s Say what?~
+%s I don't buy.~
+%s I can't afford that.~
+%s You can't afford that.~
+%s Your total is %d coins.~
+%s Bug.  Please report.~
+1
+0
+1113
+0
+1116
+0
+24
+0
+24
+#23~
+-1
+-1
+1110
+3002
+3100
+1
+1
+0
+0
+0
+0
+0
+%s Speak halfling, I can't understand you.~
+%s Speak halfling, I can't understand you.~
+%s Listen - I don't trade!~
+%s You're out of luck today - I don't have enough gold.~
+%s You're out of luck today - you don't have enough gold.~
+%s Your total comes to %d coins.~
+%s Bug.  Please report.~
+1
+0
+1130
+0
+1144
+0
+24
+0
+24
+$~

@@ -1,0 +1,26 @@
+#13200
+The Podium of Water~
+You are standing under water, submerged but not drowned, yet.
+~
+132 32768 3
+D4
+You can see a ladder leading up. *gasp* They are made of solid water.
+~
+~
+0 -1 13203
+S
+#13203
+The Water Altar~
+A huge waterfalls are dedicated to the very existence of Water, to
+serve as a make-shift altar.
+~
+132 32768 3
+D5
+You can see a ladder leading down. *gasp* They are made of solid water.
+~
+~
+0 -1 13200
+S
+#0
+$~
+

@@ -1,0 +1,484 @@
+#27600
+urine monkey~
+The urine monkey~
+The urine monkey relieves himself on your head.
+~
+I wonder why its called the 'urine monkey'.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27604
+red parrot~
+A red parrot~
+A red parrot is flying here.
+~
+A deep-red parrot with a yellow belly.  Vibrantly colorful.
+~
+8 0 0 Y
+6 15 1 42d1+6 1d5+0
+100 1100
+9 9 1
+0 0 0d0+0 0
+0 0 0 0
+#27605
+black beetle~
+A black beetle~
+A black beetle is crawling around here.
+~
+A small, black beetle.  Hardly worth noticing, really.
+~
+8 0 0 Y
+4 17 1 24d1+0 1d4+0
+100 500
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27606
+gila monster~
+A gila monster~
+A gila monster is slithering around here.
+~
+Big, green and scaly.  His toungue flickers in and out as he tastes the
+breeze.  He eyes you hungrily.
+~
+8 0 0 Y
+11 14 1 109d1+0 2d6+0
+5000 9000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27607
+A giant green parrot~
+A giant green parrot~
+A giant green parrot flies happily through the trees.
+~
+The size of a man, this parrot seems a throwback to prehistoric times.
+He is very happy to be flying around here in the jungle instead of trapped
+in a zoo.
+~
+8 0 0 Y
+8 16 1 76d1+0 2d5+0
+450 4500
+9 9 1
+0 0 0d0+0 0
+0 0 0 0
+#27608
+tarantula~
+A tarantula~
+A creepy tarantula is crawling here.
+~
+Big hairy spider the size of you hand.  Icky icky icky.
+~
+8 0 0 Y
+5 15 1 43d1+0 1d4+0
+100 1000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27609
+tiger bengal~
+A bengal tiger~
+A bengal tiger is prowling silently here.
+~
+The king of the jungle, he prowls in silence and strikes at will. 
+~
+8 1572864 0 Y
+16 10 1 1d75+650 2d5+12
+2500 50000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27615
+water snake~
+A water snake~
+A water snake undulates through the water.
+~
+The old water snake slithers through the water, looking for small rodents
+to eat.
+~
+10 0 0 Y
+10 15 1 79d1+0 1d7+1
+500 5000
+11 11 1
+0 0 0d0+0 0
+0 0 0 0
+#27616
+Pygmy sentry~
+a Pygmy sentry~
+A pygmy sentry patrols the area, looking for signs of intruders.
+~
+A tiny fellow, about 4 feet tall.  His pointy spear glints with poison.
+~
+10 0 0 Y
+15 11 3 1d650+75 1d20+7
+2000 20000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27618
+black parrot~
+A black parrot~
+A black parrot flies through the trees here.
+~
+His plumage is black as night.  You have never seen a bird like this before.
+~
+8 0 0 Y
+4 16 1 24d1+0 1d4+0
+150 450
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27620
+native~
+The native~
+A native is standing here.
+~
+He wears the feathers and skins of other jungle creatures.  He looks like he
+is in a very good mood for some reason.
+~
+10 0 0 Y
+12 9 1 260d1+1 2d5+10
+10 5200
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27628
+spider monkey~
+A spider monkey~
+A spider monkey is monkeying around here.
+~
+A small monkey with sharp claws and teeth.  He might be tougher than you 
+think!
+~
+10 0 0 Y
+5 18 1 43d1+0 1d4+0
+50 1000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27629
+chimp~
+A chimp~
+A chimp hops around and scratches himself here.
+~
+This monkey has a lot of fleas.  His friends pick them off of him and eat
+them.
+~
+10 0 0 Y
+9 15 1 79d1+0 1d8+1
+500 5000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27634
+small gorilla~
+The small gorilla~
+A small gorilla says 'ooo ooo ooo'
+~
+This gorilla one day will grow up to be a very BIG gorilla some day.
+~
+10 0 0 Y
+11 11 1 346d1+0 2d6+0
+500 10000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27635
+mountain gorilla~
+The mountain gorilla~
+A mountain gorilla pounds on his mighty chest!
+~
+The mountain gorilla stands on his hind legs and seems to boast of his
+great strength.
+~
+10 0 0 Y
+15 10 1 240d1+0 2d8+1
+1000 18000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27637
+triceratops~
+The triceratops~
+A gigantic triceratops is blankly grazing the tall grass here.
+~
+A mighty beast, and heavily armored.  He can gore you with those three
+horns that protrude from his head.
+~
+136 0 0 Y
+18 11 1 1d25+225 3d6+0
+300 22500
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27640
+mother brontosaurus~
+The mother brontosaurus~
+A mother brontosaurus eyes you warily.
+~
+The mother brontosaurus doesn't like you standing here.  You pose a threat
+to her children.
+~
+10 0 0 Y
+16 10 1 1d75+650 1d12+7
+300 47500
+8 8 2
+0 0 0d0+0 0
+0 0 0 0
+#27641
+baby brontosaurus~
+A baby brontosaurus~
+A baby brontosaurus snuggles close to his mom.
+~
+The baby brontosaurus is only a few weeks old and already he is bigger than
+you.  He depends on his mom to protect him.
+~
+10 0 0 Y
+6 19 5 39d1+0 1d5+0
+30 1250
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27643
+stegasaurus~
+The stegasaurus~
+A stegasaurus quietly chews the foliage here.
+~
+He pays no attention to you at all.  He only wants to be left alone so he
+can graze.
+~
+136 0 0 Y
+18 10 1 1d100+390 4d6+0
+300 42500
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27644
+gigantic venus flytrap~
+The venus flytrap~
+A gigantic venus flytrap grows here.
+~
+The soil isn't good enough to support a plant that's THIS big!
+It must be supplementing its diet in some way.
+~
+10 0 0 Y
+18 12 1 1d250+375 3d6+5
+2500 60000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27646
+giant dragonfly~
+The giant dragonfly~
+A giant dragonfly buzzes around here.
+~
+The dragonfly is the size of your arm.  He doesn't look too dangerous though.
+Maybe he's just curious about this stranger in his valley.
+~
+262408 16777216 0 Y
+8 19 1 55d1+0 1d5+1
+100 3000
+9 9 1
+0 0 0d0+0 0
+0 0 0 0
+#27648
+mastadon mammoth~
+The mastadon~
+A mastadon wanders lost.
+~
+The mastadon is lost.  In his thick fur coat he is very uncomfortable in 
+this jungle heat.
+~
+136 0 0 Y
+18 7 1 1d150+475 3d6+0
+300 57500
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27650
+Tyrannosaurus Rex~
+Tyrannosaurus Rex~
+The Tyrannosaurus Rex rampages here.
+~
+His mighty jaws boast razor-sharp teeth almost a foot long!  His legs can
+shred a man in an instant!  Be VERY afraid!
+~
+12 160 -750 Y
+30 -3 -3 2600d1+0 3d4+15
+1000 250000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27651
+king monkey monkeys~
+The King of the Monkeys~
+The King of the Monkeys is sitting here on his throne.
+~
+The King of the Monkeys has all the brains of a two-pound bag of oatmeal,
+but he thinks very highly of himself.  All the animals ignore him, but he
+doesn't care.  He is too vain to notice.
+~
+10 0 0 Y
+30 -5 0 4200d1+0 4d5+10
+50000 300000
+6 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27662
+blood goddess~
+The Blood Goddess~
+The Blood Goddess is raving in a fit of bloodlust here.
+~
+Her mouth glistens with the red blood of the priests, which runs in driblets
+down her chin.  Her eyes glare an evil black glow as she stares wildly at
+you in her fit of bloodlust.
+~
+46 128 -1000 Y
+30 -7 -3 1d750+2250 2d4+15
+47500 500000
+8 8 2
+0 0 0d0+0 0
+0 0 0 0
+#27668
+pteradactyl~
+The Pteradactyl~
+A pteradactyl watches you closely here.
+~
+Leathern wings spread out several meters in either direction.  The pteradactyl
+seems committed to some purpose you cannot guess.
+~
+10 0 0 Y
+26 -4 -3 2600d1+0 2d4+12
+300 240000
+8 8 2
+0 0 0d0+0 0
+0 0 0 0
+#27670
+army ant~
+The ant~
+An army ant is chewing on leaves here.
+~
+Tiny little insect, but a whole lot of them sure add up!
+~
+14 0 0 Y
+1 19 10 8d1+0 1d4+0
+10 500
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27679
+dog pit bull terrier~
+a pit bull~
+A fat pit bull gnaws on some bones here.
+~
+The pit bull terrier gnaws greedily at a corpse.  Maybe he will be gnawing 
+yours soon.
+~
+4110 0 0 Y
+15 14 5 34d1+0 1d5+1
+1500 1500
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27680
+pygmy warrior~
+a Pygmy Warrior~
+A pygmy warrior stands here with his spear pointed at YOU!
+~
+He needs rest after a long patrol in the jungle.
+~
+8 0 0 Y
+15 14 3 1d750+150 4d4+10
+2000 20000
+4 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27681
+pygmy sentry~
+a Pygmy sentry~
+A sleepy pygmy sentry stands guard here.
+~
+This stout little fellow looks very sleepy.  His pointy spear dips
+ever lower as you look at him and he seems to be almost falling
+asleep at the post.
+~
+10 0 0 Y
+15 12 3 1d550+150 3d7+5
+2000 20000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27682
+pygmy shaman~
+The Pygmy Shaman~
+The pygmy shaman rests here after a hard day of head shrinking.
+~
+He looks back at you with eyes like black coals, thinking to add you to his
+collection of shrunken heads that adorns his wall.
+~
+16394 268435456 -750 Y
+17 6 1 1d750+275 4d5+15
+12500 90000
+5 5 1
+0 0 0d0+0 1
+9 1 10 0
+0 0 0 0
+#27683
+termite~
+The termite~
+A busy termite is digging away here.
+~
+A small brown bug.  Barely worth noticing, really.
+~
+8 0 0 Y
+2 19 8 31d1+0 1d6+0
+10 200
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27689
+termite drone~
+The termite drone~
+A termite drone guards his queen.
+~
+The termite drone will fight to the death to protect his queen.
+~
+10 0 0 Y
+5 19 1 55d1+0 1d6+1
+250 2000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#27691
+queen termite~
+the queen termite~
+The queen termite debates matters of state here.
+~
+A small brown bug, just like all the other termites, but this one lays the
+eggs.
+~
+10 0 0 Y
+16 8 1 390d1+0 3d6+6
+1250 36000
+8 8 2
+0 0 0d0+0 0
+0 0 0 0
+#27699
+El Diablo~
+El Diablo~
+Fear strikes your heart as you gaze into the eyes of El Diablo!
+~
+Ancient and hungering, El Diablo plans to make YOU his next meal!
+~
+46 34858 -750 Y
+33 -13 -9 7500d1+0 4d10+30
+150000 600000
+8 8 1
+0 0 0d0+0 0
+0 0 0 0
+#0
+$~
