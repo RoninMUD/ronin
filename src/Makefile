@@ -108,7 +108,6 @@ OBJS_RONIN_SPEC = \
 	spec.dasharr.o \
 	spec.deathplay.o \
 	spec.desert.o \
-	spec.digsite.o \
 	spec.dionysus.o \
 	spec.dragonred.o \
 	spec.druids.o \
@@ -174,6 +173,7 @@ OBJS_RONIN_SPEC = \
 	subclass.skills.o
 
 OBJS_RONIN_SPEC_TEST = \
+	spec.digsite.o \
 	spec.luthienIV.o \
 	spec.workbench.o \
 	spec.WOT.o
