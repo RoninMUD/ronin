@@ -678,13 +678,8 @@ $N tells you, 'Current Quest Items available for Purchase:'\n\r\
                world[target].zone == world[real_room(3601)].zone || /* Cafe, by Jarldian */
                world[target].zone == world[real_room(6600)].zone || /* NewbieMist */
                world[target].zone == world[real_room(27800)].zone || /* ISAHall */
-               world[target].zone == world[real_room(200)].zone || /* Red Wall */
-               world[target].zone == world[real_room(9301)].zone || /* Loftwick */
-               world[target].zone == world[real_room(5200)].zone || /* The City of Thalos */
                world[target].zone == world[real_room(28700)].zone || /* Immortal Village, by Nosferatu */
                world[target].zone == world[real_room(26000)].zone || /* Quest Zone - not connected */
-               world[target].zone == world[real_room(300)].zone || /* Salamandstrom */
-               world[target].zone == world[real_room(400)].zone || /* Salamandstrom2 */
                world[target].zone == world[real_room(26200)].zone); /* Quest Zone - not connected */
 
 				qcard = read_object(35, VIRTUAL);

@@ -891,12 +891,31 @@ void check_token_mob() {
       goto_room=number(1,top_of_world);
       zone=inzone(world[goto_room].number);
 
-      if(zone==275 || zone==300 || zone==39 || zone==36 || zone==35 ||
-         zone==30 || zone==31 || zone==58 || zone==0 || zone==2 ||
-         zone==3 || zone==4 || zone==12 || zone==253 || zone==254 ||
-         zone==255 || zone==51 || zone==55 || zone==59 || zone==285 ||
-         zone==286 || zone==287 || zone==261 || zone==260 || zone==278 ||
-         zone==66 || zone==10 || zone==262 ||
+      if(zone==275 ||
+         zone==300 ||
+         zone==39  ||
+         zone==36  ||
+         zone==35  ||
+         zone==30  ||
+         zone==31  ||
+         zone==58  ||
+         zone==0   ||
+         zone==12  ||
+         zone==253 ||
+         zone==254 ||
+         zone==255 ||
+         zone==51  ||
+         zone==55  ||
+         zone==59  ||
+         zone==285 ||
+         zone==286 ||
+         zone==287 ||
+         zone==261 ||
+         zone==260 ||
+         zone==278 ||
+         zone==66  ||
+         zone==10  ||
+         zone==262 ||
          IS_SET(world[goto_room].room_flags, SAFE) ||
          IS_SET(world[goto_room].room_flags, PRIVATE) ||
          IS_SET(world[goto_room].room_flags, DEATH) ||
