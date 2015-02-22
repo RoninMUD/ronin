@@ -212,7 +212,7 @@ int binding_scroll (OBJ *obj, CHAR *ch, int cmd, char *arg) {
 int tonashi_wrestler(CHAR *mob, CHAR *ch, int cmd, char *arg) {
    CHAR *vict;
    struct descriptor_data *d;
-   int new_room, a_victim=FALSE,attack=FALSE;
+   int new_room = NOWHERE, a_victim=FALSE,attack=FALSE;
 
    if(!AWAKE(mob)) return FALSE;
 
@@ -452,7 +452,7 @@ int bone_wand (OBJ *wand, CHAR *ch, int cmd, char *arg) {
 int dm_arago (CHAR *arago, CHAR *ch, int cmd, char *arg) {
   CHAR *vict;
   int i;
-  int num;
+  int num = 0;
   struct descriptor_data *d;
 
   if(CHAR_REAL_ROOM(arago)!=real_room(NEW_ROOM)) return FALSE;
@@ -524,8 +524,8 @@ int arago_door(int room, CHAR *ch, int cmd, char *arg) {
 }
 
 int dm_hachiman(CHAR *mob,CHAR *ch, int cmd, char *arg) {
-   CHAR *vict,*dragon,*next_vict;
-   OBJ *obj;
+   CHAR *vict = NULL, *dragon = NULL, *next_vict = NULL;
+   OBJ *obj = NULL;
    char buf[MAX_INPUT_LENGTH];
 
    switch (cmd) {
@@ -648,9 +648,9 @@ int dm_hachiman(CHAR *mob,CHAR *ch, int cmd, char *arg) {
 
        if(!number(0,7)) {
          act("$n glows bright red in anger and begins chanting!",
-              1, mob, 0, vict, TO_ROOM);
+              1, mob, 0, 0, TO_ROOM);
          act("You chant an arcane mantra to slay these foolish nondeities.",
-              1, mob, 0, vict, TO_CHAR);
+              1, mob, 0, 0, TO_CHAR);
 
          for(vict = world[mob->in_room_r].people; vict;vict = next_vict) {
            next_vict = vict->next_in_room;
@@ -899,7 +899,7 @@ int dm_two_doors(int room, CHAR *ch, int cmd, char *arg) {
       send_to_char("You do not hold that item.\n\r",ch);
       return TRUE;
     }
-    if(!buf2) {
+    if(buf2[0] == '\0') {
       send_to_char("Use it where?\n\r",ch);
       return TRUE;
     }

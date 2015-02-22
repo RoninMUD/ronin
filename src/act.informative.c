@@ -154,8 +154,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode);
 /* Procedures related to 'look' */
 
 void argument_split_2(char *argument, char *first_arg, char *second_arg) {
-  int look_at, found, begin;
-  found = begin = 0;
+  int look_at, begin = 0;
 
   /* Find first non blank */
 
@@ -314,7 +313,7 @@ void show_obj_to_char(struct obj_data *object, struct char_data *ch,
    "fairly worn","very worn","slightly cracked","cracked",
    "about to crumble"};
   int val3,max_time;
-  bool found,isstatue=FALSE;
+  bool isstatue=FALSE;
 
   if ((mode == 0) && OBJ_DESCRIPTION(object))
     strcpy(buffer,OBJ_DESCRIPTION(object));
@@ -359,9 +358,8 @@ void show_obj_to_char(struct obj_data *object, struct char_data *ch,
   }
 
   if (mode != 3) {
-    found = FALSE;
     if (mode!=5 && GET_ITEM_TYPE(object)==ITEM_CONTAINER && object->obj_flags.value[3]) {
-      sprintf(buf1,buffer);
+      strncpy(buf1, buffer, sizeof(buf1));
       switch(object->obj_flags.cost) {
         case PC_CORPSE:
           max_time=MAX_PC_CORPSE_TIME; break;
@@ -385,36 +383,30 @@ void show_obj_to_char(struct obj_data *object, struct char_data *ch,
       val3=MIN(val3,9);
 
       if(isstatue)
-        sprintf(buffer,Dstatue[val3]);
+        strncpy(buffer, Dstatue[val3], sizeof(buffer));
        else
-        sprintf(buffer,Dcorpse[val3]);
+        strncpy(buffer, Dcorpse[val3], sizeof(buffer));
      if(val3!=9)   strcat(buffer, LOW(buf1));
 
     }
 
     if (GET_LEVEL(ch)>LEVEL_WIZ && diff_obj_stats(object)) {
       strcat(buffer,"(`iQUESTED`q)");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object,ITEM_INVISIBLE)) {
       strcat(buffer,"(invisible)");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object,ITEM_MAGIC) && IS_AFFECTED(ch,AFF_DETECT_MAGIC)) {
       strcat(buffer,"(blue)");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object,ITEM_GLOW)) {
       strcat(buffer,"(glowing)");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object,ITEM_HUM)) {
       strcat(buffer,"(humming)");
-      found = TRUE;
     }
     if (IS_OBJ_STAT(object,ITEM_CLONE)) {
       strcat(buffer,"(cloned)");
-      found = TRUE;
     }
   }
 
@@ -956,7 +948,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
     {
       sprintf(buffer, "WIZINFO: %s looks at %s", GET_NAME(ch), GET_SHORT(i));
       wizlog(buffer, GET_LEVEL(ch) + 1, 5);
-      log_f(buffer);
+      log_s(buffer);
     }
 
     if (IS_NPC(i) && (IS_AFFECTED(i, AFF_STATUE)) && (GET_LEVEL(ch) < LEVEL_IMM))
@@ -1024,7 +1016,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
         wizlog(buffer, LEVEL_IMM, 3);
       }
 
-      log_f(buffer);
+      log_s(buffer);
       deathlog(buffer);
       death_cry(ch);
 
@@ -1210,7 +1202,7 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
   int j, bits, temp,window;
   bool found;
   struct obj_data *tmp_object, *found_object;
-  struct char_data *tmp_char, *mp_char;
+  struct char_data *tmp_char;
   char *tmp_desc;
   char *decay_text[10]=
   {"like new","almost new","fairly new","slightly worn","worn",
@@ -1253,7 +1245,6 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
 
     found = FALSE;
     tmp_object = 0;
-    mp_char    = 0;
     tmp_desc   = 0;
 
     switch(keyword_no) {
@@ -1712,7 +1703,6 @@ void do_read(struct char_data *ch, char *argument, int cmd) {
 
 void do_examine(struct char_data *ch, char *argument, int cmd) {
   char name[MIL], buf[MIL+5];
-  int bits;
   struct char_data *tmp_char;
   struct obj_data *tmp_object;
 
@@ -1730,7 +1720,7 @@ void do_examine(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  bits = generic_find(name, FIND_OBJ_INV | FIND_OBJ_ROOM |
+  generic_find(name, FIND_OBJ_INV | FIND_OBJ_ROOM |
           FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
 
   if (tmp_object) {
@@ -1892,7 +1882,7 @@ void die(CHAR *ch)
   {
     sprintf(buf, "%s killed by Imminent Death.", GET_NAME(ch));
       wizlog(buf, LEVEL_IMM, 3);
-    log_f(buf);
+    log_s(buf);
     deathlog(buf);
 
     death_chk = 1;
@@ -1902,7 +1892,7 @@ void die(CHAR *ch)
   if (!IS_NPC(ch) && IS_SET(ch->specials.affected_by2, AFF_SEVERED) && GET_HIT(ch) >= 0)
   {
     sprintf(buf, "%s killed by massive body trama.", GET_NAME(ch));
-    log_f(buf);
+    log_s(buf);
     deathlog(buf);
     wizlog(buf, LEVEL_IMM, 3);
   }
@@ -2031,7 +2021,7 @@ void die(CHAR *ch)
     sprintf(buf,"WIZINFO: %s lost %d/%d hps and %d/%d mana.", GET_NAME(ch),
             hit_diff, ch->points.max_hit, mana_diff, ch->points.max_mana + 100);
     wizlog(buf, LEVEL_SUP, 3);
-    log_f(buf);
+    log_s(buf);
 
     ch->points.max_mana -= mana_diff;
     ch->points.max_mana = MAX(ch->points.max_mana, 0);
@@ -2295,7 +2285,7 @@ void do_help(struct char_data *ch, char *argument, int cmd) {
 
       fseek(help_fl, help_index[mid].pos, 0);
       for (;;) {
-        fgets(buf, 80, help_fl);
+        if (!fgets(buf, 80, help_fl)) break;
         if (*buf == '#') break;
         append_to_string_block(&sb, buf);
         if (buf[MAX(0, strnlen(buf, 80) - 1)] == '\n') {
@@ -2311,7 +2301,7 @@ void do_help(struct char_data *ch, char *argument, int cmd) {
       send_to_char("Here is the help entry closest to it alphabetically.\n\r",ch);
       fseek(help_fl, help_index[mid].pos, 0);
       for (;;) {
-        fgets(buf, 80, help_fl);
+        if (!fgets(buf, 80, help_fl)) break;
         if (*buf == '#') break;
         append_to_string_block(&sb, buf);
         if (buf[MAX(0, strnlen(buf, 80) - 1)] == '\n') {
@@ -2369,7 +2359,7 @@ void do_wizcmd(struct char_data *ch, char *argument)
   fseek(wizhelp_fl, wizhelp_index[mid].pos, 0);
   *buffer = '\0';
   for (;;) {
-    fgets(buf, 80, wizhelp_fl);
+    if (!fgets(buf, 80, wizhelp_fl)) break;
     if (*buf == '#')
       break;
     strcat(buffer, buf);
@@ -2501,7 +2491,7 @@ void do_olchelp(struct char_data *ch, char *argument, int cmd)
 
         fseek(olchelp_fl, olchelp_index[mid].pos, 0);
         for (;;) {
-          fgets(buf, 80, olchelp_fl);
+          if (!fgets(buf, 80, olchelp_fl)) break;
           if (*buf == '#')
             break;
           append_to_string_block(&sb,buf);
@@ -3216,7 +3206,7 @@ void do_where(struct char_data *ch, char *argument, int cmd)
          if(!strcmp(GET_NAME(i),"rashgugh") && GET_LEVEL(ch)>=LEVEL_IMM) {
            sprintf(buf,"WIZINFO: %s where'd Rashgugh.",GET_NAME(ch));
            wizlog(buf,LEVEL_IMP,5);
-           log_f(buf);
+           log_s(buf);
            *buf = '\0';
 /*           send_to_char("Couldn't find any such thing.\n\r",ch);
            destroy_string_block(&sb);
@@ -3257,7 +3247,7 @@ void do_where(struct char_data *ch, char *argument, int cmd)
           if(!found) {
             sprintf(buf, "WIZINFO: (%s) where object %s", GET_NAME(ch), name);
             wizlog(buf, GET_LEVEL(ch)+1, 5);
-            log_f(buf);
+            log_s(buf);
           }
 
           do_where_object(ch, k, number!=0, &sb);

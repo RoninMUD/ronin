@@ -262,7 +262,7 @@ int char_version(FILE *fl) {
   struct char_file_version char_version;
 
   if((fread(&char_version,sizeof(struct char_file_version),1,fl))!=1) {
-    log_string("Error Checking Char Version");
+    log_s("Error Checking Char Version");
     rewind(fl);
     return (0);
   }
@@ -287,7 +287,7 @@ int test_char(char *name, char *pwd) {
   if (!(fl = fopen(buf, "rb"))) {
     sprintf(buf,"%c : %s didnt have .dat file--new character : %c",
             UPPER(name[0]),name,UPPER(name[0]));
-    log_string(buf);
+    log_s(buf);
     return(0);
   }
 
@@ -296,34 +296,34 @@ int test_char(char *name, char *pwd) {
   switch(version) {
     case 2:
       if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
-      {log_string("Error Reading");fclose(fl);return (-1);}
+      {log_s("Error Reading");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_2.pwd);
       fclose(fl);
       return(char_data_2.level);
       break;
     case 3:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-      {log_string("Error Reading");fclose(fl);return (-1);}
+      {log_s("Error Reading");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_4.pwd);
       fclose(fl);
       return(char_data_4.level);
       break;
     case 4:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-      {log_string("Error Reading");fclose(fl);return (-1);}
+      {log_s("Error Reading");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_4.pwd);
       fclose(fl);
       return(char_data_4.level);
       break;
     case 5:
       if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
-      {log_string("Error Reading");fclose(fl);return (-1);}
+      {log_s("Error Reading");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_5.pwd);
       fclose(fl);
       return(char_data_5.level);
       break;
     default:
-      log_string("Error getting pfile version (test_char)");
+      log_s("Error getting pfile version (test_char)");
       fclose(fl);
   }
   return(-1);
@@ -358,7 +358,7 @@ void load_char(CHAR *ch) {
   if (!(fl = fopen(buf, "rb"))) {
     sprintf(buf,"%c : %s didnt have .dat file : %c",
             UPPER(tmp_name[0]),GET_NAME(ch),UPPER(tmp_name[0]));
-    log_string(buf);
+    log_s(buf);
     return;
   }
 
@@ -367,14 +367,14 @@ void load_char(CHAR *ch) {
   switch(version) {
     case 2:
       if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
-      {log_string("Error Reading rent file(load_char)");fclose(fl);return;}
+      {log_s("Error Reading rent file(load_char)");fclose(fl);return;}
       store_to_char_2(&char_data_2,ch);
       last_up=char_data_2.last_update;
       tot_cost=char_data_2.total_cost;
       break;
     case 3:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-      {log_string("Error Reading rent file(load_char)");fclose(fl);return;}
+      {log_s("Error Reading rent file(load_char)");fclose(fl);return;}
       store_to_char_4(&char_data_4,ch);
       last_up=char_data_4.last_update;
       tot_cost=char_data_4.total_cost;
@@ -385,20 +385,20 @@ void load_char(CHAR *ch) {
       break;
     case 4:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-      {log_string("Error Reading rent file(load_char)");fclose(fl);return;}
+      {log_s("Error Reading rent file(load_char)");fclose(fl);return;}
       store_to_char_4(&char_data_4,ch);
       last_up=char_data_4.last_update;
       tot_cost=char_data_4.total_cost;
       break;
     case 5:
       if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
-      {log_string("Error Reading rent file(load_char)");fclose(fl);return;}
+      {log_s("Error Reading rent file(load_char)");fclose(fl);return;}
       store_to_char_5(&char_data_5,ch);
       last_up=char_data_5.last_update;
       tot_cost=char_data_5.total_cost;
       break;
     default:
-      log_string("Error getting pfile version(load_char)");
+      log_s("Error getting pfile version(load_char)");
       return;
   }
 
@@ -604,7 +604,7 @@ void load_char(CHAR *ch) {
         send_to_char("You should be ashamed about it!\n\r", ch);
         GET_BANK(ch)=0;
         sprintf(buf,"%s didn't have enough for his/her rent! (%d coins)",GET_NAME(ch),rent);
-        log_string(buf);
+        log_s(buf);
         wizlog(buf, GET_LEVEL(ch), 3);
         deathlog(buf);
        ch->new.been_killed += 1;
@@ -616,7 +616,7 @@ void load_char(CHAR *ch) {
   /* New signal for recharging items in rent. Ranger Oct 98*/
   sprintf(buf,"%ld",time(0)-last_up);
   if(signal_char(ch,ch,MSG_OBJ_ENTERING_GAME,buf))
-    log_string("Error: Return TRUE from MSG_OBJ_ENTERING_GAME");
+    log_s("Error: Return TRUE from MSG_OBJ_ENTERING_GAME");
 
   ch->ver3.time_to_quest-=((int)(time(0)-last_up)/60);
   ch->ver3.time_to_quest=MAX(0,ch->ver3.time_to_quest);
@@ -1015,9 +1015,9 @@ void save_char(CHAR *ch, sh_int load_room) {
 
   sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
   if(!(fl=fopen(buf,"wb+"))) {
-    log_string("Problem opening file (save_char)");
+    log_s("Problem opening file (save_char)");
     sprintf(buf,"Error--can't open file %s for writing", buf);
-    log_string(buf);
+    log_s(buf);
     return;
   }
   for (i=0;i<MAX_WEAR;i++)
@@ -1058,7 +1058,7 @@ int receptionist(CHAR *recep,CHAR *ch, int cmd, char *arg) {
   int number(int from, int to);
 
   if(!recep) {
-    log_string("No receptionist.\n\r");
+    log_s("No receptionist.\n\r");
     produce_core();
   }
 
@@ -1142,7 +1142,7 @@ int receptionist(CHAR *recep,CHAR *ch, int cmd, char *arg) {
       sprintf(buf2, "%s(%d) has rent with %d coins and needs %d per day.",
               GET_NAME(ch), GET_LEVEL(ch), GET_GOLD(ch), cost_need(&cost));
       wizlog(buf2, GET_LEVEL(ch), 3);
-      log_string(buf2);
+      log_s(buf2);
 
 
 
@@ -1204,7 +1204,7 @@ void auto_rent(CHAR *ch) {
 
   if (cost.no_carried == 0) {
     sprintf(buf, "Autorent: %s didn't have eq to rent", GET_NAME(ch));
-    log_string(buf);
+    log_s(buf);
   }
 
   if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED)
@@ -1236,7 +1236,7 @@ void auto_rent(CHAR *ch) {
   strip_char(ch);
   extract_char(ch);
   sprintf(buf,"Autorent: %s with %d coins!",ch->player.name,ch->points.gold);
-  log_string(buf);
+  log_s(buf);
   if(ch->desc) {
     close_socket(ch->desc);
     ch->desc = 0;
@@ -1844,7 +1844,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
   }
 
   if ((i >= MAX_AFFECT) && af && af->next)
-    log_string("WARNING: OUT OF STORE ROOM FOR AFFECTED TYPES!!!");
+    log_s("WARNING: OUT OF STORE ROOM FOR AFFECTED TYPES!!!");
 
   /* New check for unusual increase in stats - Ranger May 98 */
   increase=ch->points.max_mana-ch->specials.prev_max_mana;
@@ -1852,21 +1852,21 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
     sprintf(buf,"PLRINFO: WARNING %s's mana just increased by %d. (Room %d)",
       GET_NAME(ch),increase,world[CHAR_REAL_ROOM(ch)].number);
     wizlog(buf,LEVEL_SUP,4);
-    log_string(buf);
+    log_s(buf);
   }
   increase=ch->points.max_hit-ch->specials.prev_max_hit;
   if(increase>39 && GET_LEVEL(ch)>1) {
     sprintf(buf,"PLRINFO: WARNING %s's hps just increased by %d. (Room %d)",
       GET_NAME(ch),increase,world[CHAR_REAL_ROOM(ch)].number);
     wizlog(buf,LEVEL_SUP,4);
-    log_string(buf);
+    log_s(buf);
   }
   increase=ch->points.max_move-ch->specials.prev_max_move;
   if(increase>30 && GET_LEVEL(ch)>1) {
     sprintf(buf,"PLRINFO: WARNING %s's move just increased by %d. (Room %d)",
       GET_NAME(ch),increase,world[CHAR_REAL_ROOM(ch)].number);
     wizlog(buf,LEVEL_SUP,4);
-    log_string(buf);
+    log_s(buf);
   }
 
   ch->specials.prev_max_mana=ch->points.max_mana;
@@ -1929,7 +1929,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
     if(str_cat(st->poofin, 0, 150, ch->player.poofin) == 150) {
       sprintf(buf, "BUG: too long ch->player.poofin %s",
         GET_NAME(ch));
-      log_string(buf);
+      log_s(buf);
       *st->poofin = '\0';
       free(ch->player.poofin);
       ch->player.poofin = 0;
@@ -2071,7 +2071,7 @@ void do_logoff_char(CHAR *ch, char *argument, int cmd) {
     send_to_char("Character logged off.\n\r",ch);
     sprintf(buf,"WIZINFO: %s logged off %s.",GET_NAME(ch),CAP(tmp_name));
     wizlog(buf,GET_LEVEL(ch)+1,5);
-    log_string(buf);
+    log_s(buf);
   } else send_to_char("Character not found.\n\r",ch);
 }
 
@@ -2139,22 +2139,22 @@ void do_logon_char(CHAR *ch, char *argument, int cmd) {
   switch(version) {
     case 2:
       if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
-      {log_string("Error Reading rent file(logon_char)");fclose(fl);return;}
+      {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
       break;
     case 3:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-      {log_string("Error Reading rent file(logon_char)");fclose(fl);return;}
+      {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
       break;
     case 4:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-      {log_string("Error Reading rent file(logon_char)");fclose(fl);return;}
+      {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
       break;
     case 5:
       if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
-      {log_string("Error Reading rent file(logon_char)");fclose(fl);return;}
+      {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
       break;
     default:
-      log_string("Error getting pfile version (logon_char)");
+      log_s("Error getting pfile version (logon_char)");
       return;
   }
 
@@ -2183,7 +2183,7 @@ void do_logon_char(CHAR *ch, char *argument, int cmd) {
       store_to_char_5(&char_data_5,vict);
       break;
     default:
-      log_string("Version number corrupted? (logon_char)");
+      log_s("Version number corrupted? (logon_char)");
       return;
   }
 
@@ -2214,6 +2214,6 @@ void do_logon_char(CHAR *ch, char *argument, int cmd) {
   send_to_char("Character loaded.\n\r",ch);
   sprintf(buf,"WIZINFO: %s logged on %s.",GET_NAME(ch),GET_NAME(vict));
   wizlog(buf,GET_LEVEL(ch)+1,5);
-  log_string(buf);
+  log_s(buf);
 }
 

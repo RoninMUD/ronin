@@ -2435,7 +2435,7 @@ void spell_total_recall(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
 
 void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   sh_int target;
-  int org_room,percent;
+  int percent;
   char buf[MIL];
 
   if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_SUM))
@@ -2522,8 +2522,6 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 
   act("$n disappears suddenly.",TRUE,victim,0,0,TO_ROOM);
-
-  org_room = CHAR_REAL_ROOM(victim);
 
   if(victim->specials.riding) stop_riding(victim,victim->specials.riding);
 
@@ -3933,7 +3931,7 @@ void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
             OBJ_SHORT(obj), world[CHAR_REAL_ROOM(ch)].name);
     extract_obj(obj);
     wizlog(buf, LEVEL_WIZ,6);
-    log_f(buf);
+    log_s(buf);
     return;
   }
 
@@ -3961,7 +3959,7 @@ void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
     act("You look at $N, and $E crumbles to dust.",FALSE,ch,0,vict,TO_CHAR);
     sprintf(buf,"%s disintegrates %s.",GET_NAME(ch), GET_SHORT(vict));
     wizlog(buf, LEVEL_WIZ,6);
-    log_f(buf);
+    log_s(buf);
 
     if(vict->questowner) {
       vict->questowner->questgiver=0;
@@ -4232,7 +4230,7 @@ void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     sprintf(buffer, "%s stoned by %s at %s (%d)", GET_NAME(ch), GET_NAME(victim),
           world[CHAR_REAL_ROOM(ch)].name,world[CHAR_REAL_ROOM(ch)].number);
     wizlog(buffer,LEVEL_IMM,4);
-    log_f(buffer);
+    log_s(buffer);
     deathlog(buffer);
     death_cry(ch);
 
@@ -4289,7 +4287,7 @@ void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
             world[CHAR_REAL_ROOM(ch)].name,world[CHAR_REAL_ROOM(ch)].number);
     wizlog(buffer, LEVEL_IMM, 3);
   }
-  log_f(buffer);
+  log_s(buffer);
   deathlog(buffer);
 
   death_cry(victim);

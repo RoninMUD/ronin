@@ -114,7 +114,7 @@ int boner (OBJ *sh, CHAR *ch, int cmd, char *arg)
 	       GET_NAME(tch), world[CHAR_REAL_ROOM(tch)].name,
 	       CHAR_VIRTUAL_ROOM(tch));
       wizlog(buf, LEVEL_WIZ, 6);
-      log_f(buf);
+      log_s(buf);
 
       stop_fighting (tch);
       unequip_char (tch, WEAR_SHIELD);
@@ -373,11 +373,11 @@ v_symbol (OBJ *sym, CHAR *ch, int cmd, char *arg)
   CHAR *tch,*temp;
   OBJ *tmp;
   char buf[MAX_INPUT_LENGTH],buf2[MAX_INPUT_LENGTH];
-  int i,symbol;
+  int i;
   void remove_item (CHAR*, OBJ*, int);
 
   if(!ch) return FALSE;
-  symbol = real_object (AK_SYM);
+
   if (!IS_MORTAL (ch) || sym->equipped_by != ch)
     return FALSE;
 

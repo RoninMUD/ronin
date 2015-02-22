@@ -206,7 +206,7 @@ void do_qfunction(CHAR* ch, char *arg, int cmd)
 
   arg=one_argument(arg,arg1);
 
-  if(arg1) {
+  if(arg1[0] != '\0') {
     if(is_abbrev(arg1, "where"))    function = FUNCT_WHERE;
     if(is_abbrev(arg1, "transfer")) function = FUNCT_TRANSFER;
     if(is_abbrev(arg1, "give"))     function = FUNCT_GIVE;
@@ -296,7 +296,7 @@ Usage: qf transfer <char>/<all>\n\r\
         sprintf (buf, "QSTINFO: %s transferred all to #%d for a quest.",
                  GET_NAME(ch), CHAR_VIRTUAL_ROOM(ch));
         wizlog(buf, GET_LEVEL(ch)+1, 4);
-        log_f(buf);
+        log_s(buf);
         return;
       }
 
@@ -319,7 +319,7 @@ Usage: qf transfer <char>/<all>\n\r\
             sprintf (buf, "QSTINFO: %s transferred %s to #%d for a quest.",
                      GET_NAME(ch), GET_NAME(victim),CHAR_VIRTUAL_ROOM(ch));
             wizlog(buf, GET_LEVEL(ch)+1, 4);
-            log_f(buf);
+            log_s(buf);
           } else {
             sprintf(buf,"%s requests you go to #%d for a quest.\n\r",
                    GET_NAME(ch), CHAR_VIRTUAL_ROOM(ch));
@@ -636,7 +636,7 @@ Usage: qf spread <num> <vnum>\n\r\
 
       sprintf(buf, "QSTINFO: %s spread %d of %d.",GET_NAME(ch),num,vnum);
       wizlog(buf, GET_LEVEL(ch)+1, 4);
-      log_f(buf);
+      log_s(buf);
 
       for(i=0;i<num;i++) {
         do {
@@ -726,7 +726,7 @@ Usage: qf token <char>\n\r\
 
       sprintf(buf, "QSTINFO: %s gave a token to %s.",GET_NAME(ch),GET_NAME(victim));
       wizlog(buf, GET_LEVEL(ch)+1, 4);
-      log_f(buf);
+      log_s(buf);
       act("You reward $N with a token.",0,ch,0,victim,TO_CHAR);
       act("$n rewards you with a token.",0,ch,0,victim,TO_VICT);
       act("$n rewards $N with a token.",0,ch,0,victim,TO_NOTVICT);
@@ -765,7 +765,7 @@ Usage: qf award <char> amount (amount can be negative)\n\r\
       }
       sprintf(buf, "QSTINFO: %s awarded %s with %d quest points.",GET_NAME(ch),GET_NAME(victim),vnum);
       wizlog(buf, GET_LEVEL(ch)+1, 4);
-      log_f(buf);
+      log_s(buf);
       write_board(3097,buf,"Filler Text");
 
       sprintf(buf,"You award $N with %d quest points.",vnum);act(buf,0,ch,0,victim,TO_CHAR);
@@ -803,7 +803,7 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
         }
         sprintf(buf, "QSTINFO: %s loads %d quest cards",GET_NAME(ch),vnum);
         wizlog(buf, GET_LEVEL(ch)+1, 4);
-        log_f(buf);
+        log_s(buf);
         while(vnum) {
           obj=read_object(35,VIRTUAL);
           obj_to_char(obj, ch);

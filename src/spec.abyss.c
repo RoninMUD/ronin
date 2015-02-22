@@ -150,7 +150,7 @@ void abyss_disarm(CHAR *mob, CHAR *vict)
   act("$N drop $S weapon.", 1,mob , 0, vict, TO_NOTVICT);
   act("You drop your weapon.", 1,mob , 0, vict, TO_VICT);
   sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),GET_NAME(vict),OBJ_SHORT(wield),world[CHAR_REAL_ROOM(vict)].number);
-  log_f(buf);
+  log_s(buf);
   unequip_char(vict, WIELD);
   obj_to_room(wield, CHAR_REAL_ROOM(vict));
   wield->log=1;
@@ -628,7 +628,7 @@ int kraken(CHAR *mob,CHAR *ch, int cmd, char *arg)
 				act("$N drops $S weapon.", 1, mob, 0, vict, TO_NOTVICT);
 				act("You drop your weapon.", 1, mob, 0, vict, TO_VICT);
 				sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),GET_NAME(vict),OBJ_SHORT(wield),world[CHAR_REAL_ROOM(vict)].number);
-  			log_f(buf);
+            log_s(buf);
 				unequip_char(vict, WIELD);
 				obj_to_room(wield, CHAR_REAL_ROOM(vict));
 				GET_POS(vict)=POSITION_SITTING;

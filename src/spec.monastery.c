@@ -428,7 +428,7 @@ int BottomlessPit (int room, CHAR *ch, int cmd, char *arg) {
                GET_NAME(ch), world[CHAR_REAL_ROOM(ch)].name,
                CHAR_VIRTUAL_ROOM(ch));
       wizlog(buf, LEVEL_WIZ, 4);/* wizlog and save_char - Sumo Jan98 */
-      log_f(buf);
+      log_s(buf);
       raw_kill(ch);
       break;
     }

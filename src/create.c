@@ -239,7 +239,7 @@ void do_create(CHAR* ch, char *arg, int cmd) {
 
   if(!check_olc_access(ch)) return;
   sscanf(arg, " %s %s ", arg1, arg2);
-  if(arg1) {
+  if(arg1[0] != '\0') {
     if(is_abbrev(arg1, "room"))
       creation = CREATE_ROOM;
     if(is_abbrev(arg1, "mobile"))
@@ -1071,7 +1071,7 @@ void edit_room(CHAR *ch, char *fargs)
   int zone;
   struct extra_descr_data *tmp_descr, **prev_descr_ptr, *tmp_descr1;
   sprintf(args, "%s", fargs);
-  if(args)
+  if(args[0] != '\0')
     {
     arg2 = strtok(args, " ");
     if(arg2)
@@ -3690,7 +3690,7 @@ edit zone <#> command change <#> D <if_flag> <room#> <direction  > <state(0-2)>\
 void edit_shop(CHAR *ch, char *fargs)
 {
   char args[MAX_STRING_LENGTH];
-  int i,edit,vshop,rshop=-1,option,zone,tmp;
+  int i,edit,vshop = -1,rshop=-1,option,zone,tmp;
   char *arg2;
 
   sprintf(args, "%s", fargs);
@@ -4050,7 +4050,7 @@ void do_edit(CHAR* ch, char *arg, int cmd) {
 #ifndef TEST_SITE
      sprintf(buf,"WIZINFO: %s edit %s",GET_NAME(ch),arg);
      wizlog(buf,LEVEL_IMP,5);
-     log_f(buf);
+     log_s(buf);
 #endif
      if(is_abbrev(arg1, "room"))
        edit = EDIT_ROOM;
@@ -4465,7 +4465,7 @@ void do_mclone(CHAR *ch, char *argument, int cmd) {
     i1 = real_mobile(number1);
 
     if (i1 == -1) {
-      log_string("Error in mclone, mob table corrupt.");
+      log_s("Error in mclone, mob table corrupt.");
       produce_core();
       return;
     }
@@ -4618,7 +4618,7 @@ void do_oclone(CHAR *ch, char *argument, int cmd) {
     obj_proto_table[i2].virtual=number2;
     i1 = real_object(number1);
     if (i1 == -1) {
-      log_string("Error in oclone, obj table corrupt.");
+      log_s("Error in oclone, obj table corrupt.");
       produce_core();
       return;
     }
@@ -4843,7 +4843,7 @@ void do_rezone(CHAR *ch, char *argument, int cmd) {
         break;
       default:
         sprintf(buf,"Undefd cmd in reset table; zone %d cmd %d.\n\r",j,i);
-        log_f(buf);
+        log_s(buf);
         produce_core();
         break;
     }
@@ -7657,7 +7657,7 @@ This zone command deletes the indicated command number.\n\r\n\r\
   Usage: `kcmddel`q <cmd#>\n\r\
      Ex: `kcmddel`q 7\n\r";
   char arg[MAX_INPUT_LENGTH];
-  int iMaxCommands=0,where,vzone,zone,vmob=-1;
+  int iMaxCommands=0,where,vzone,zone;
   if(!check_olc_access(ch)) return;
 
   argument=one_argument(argument,arg);
@@ -7684,11 +7684,6 @@ This zone command deletes the indicated command number.\n\r\n\r\
     send_to_char("`iThat reset command does not exist.`q\n\r", ch);
     return;
   }
-
-  if(zone_table[zone].cmd[where].command == 'M' ||
-     zone_table[zone].cmd[where].command == 'F' ||
-     zone_table[zone].cmd[where].command == 'R')
-    vmob=zone_table[zone].cmd[where].arg1;
 
   memmove(&zone_table[zone].cmd[where], &zone_table[zone].cmd[where+1],
           sizeof(struct reset_com) * (iMaxCommands - where));
@@ -9268,7 +9263,7 @@ void do_zpurge(CHAR *ch, char *argument, int cmd) {
 This zone command purges all mobs/objs from the specified zone.\n\r\n\r\
   Usage: `kzpurge`q <zone number>\n\r\
      Ex: `kzpurge`q 30\n\r\n\r";
-  int i,vzone,zone;
+  int i,vzone;
   struct char_data *vict, *next_v;
   struct obj_data *obj, *next_o;
 
@@ -9286,7 +9281,6 @@ This zone command purges all mobs/objs from the specified zone.\n\r\n\r\
     return;
   }
 
-  zone=real_zone(vzone);
   if(!check_zone(ch,vzone)) return;
   if(!check_zone_access(ch,vzone)) return;
 
@@ -9413,7 +9407,7 @@ This command changes the wear location of an object.\n\r\n\r\
 TAKE, FINGER, NECK, BODY, HEAD, LEGS, FEET, HANDS, ARMS, SHIELD, ABOUT,\n\r\
 WAIST, WRIST, WIELD, HOLD, THROW, LIGHT-SOURCE, NO_REMOVE, NO_SCAVENGE..\n\r\n\r";
   char arg[MAX_INPUT_LENGTH];
-  int vobj,robj,zone,remove,warn,nloc,ret;
+  int vobj,robj,zone,remove,warn,ret;
 
   if(!check_olc_access(ch)) return;
 
@@ -9445,7 +9439,6 @@ WAIST, WRIST, WIELD, HOLD, THROW, LIGHT-SOURCE, NO_REMOVE, NO_SCAVENGE..\n\r\n\r
   if(!check_zone(ch,zone)) return;
   if(!check_zone_access(ch,zone)) return;
 
-  nloc = 0;
   warn = 0;
 
   argument=one_argument(argument, arg);

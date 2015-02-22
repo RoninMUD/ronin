@@ -140,7 +140,7 @@ int wolf_options(CHAR *mob, CHAR *vict)
 	act("You drop your weapon.", 1, mob, 0, vict, TO_VICT);
 	/* Disarm log added by Solmyr 2009 */
 	sprintf(buf, "WIZINFO: %s disarms %s's %s at %d", GET_NAME(mob), GET_NAME(vict), OBJ_SHORT(wield), world[CHAR_REAL_ROOM(mob)].number);
-	log_f(buf);
+	log_s(buf);
 	wield->log = TRUE;
 	unequip_char(vict, WIELD);
 	obj_to_room(wield, CHAR_REAL_ROOM(vict));

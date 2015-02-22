@@ -406,7 +406,7 @@ int main(int argc, char **argv)
       break;
     case 'l':
       lawful = 1;
-      log_f("Lawful mode selected.");
+      log_s("Lawful mode selected.");
       break;
     case 'd':
       if (*(argv[pos] + 2)) {
@@ -416,24 +416,24 @@ int main(int argc, char **argv)
         dir = argv[pos];
       }
       else {
-        log_f("Directory arg expected after option -d.");
+        log_s("Directory arg expected after option -d.");
         produce_core();
       }
       break;
       case 's':
       no_specials = 1;
-      log_f("Suppressing assignment of special routines.");
+      log_s("Suppressing assignment of special routines.");
       break;
       case 'r':
       noroomdesc = TRUE;
-      log_f("No room descriptions.");
+      log_s("No room descriptions.");
       break;
       case 'e':
       noextradesc = TRUE;
-      log_f("No extra descriptions.");
+      log_s("No extra descriptions.");
       break;
     default:
-      log_f("Unknown option -% in argument string.",
+      log_f("Unknown option -%c in argument string.",
             *(argv[pos] + 1));
       break;
    }
@@ -447,7 +447,7 @@ int main(int argc, char **argv)
     produce_core();
    }
    else if ((port = atoi(argv[pos])) <= 1024) {
-    log_f("Illegal port #\n");
+    log_s("Illegal port #\n");
     produce_core();
    }
   }
@@ -457,7 +457,7 @@ int main(int argc, char **argv)
   log_f("Running game on port %d.", port);
 
   if (chdir(dir) < 0) {
-   log_f("chdir");
+   log_s("chdir");
    produce_core();
   }
 
@@ -482,17 +482,16 @@ void boot_slave( void )
        slave_socket = -1;
     }
 
-    log_f( "{BOOT} booting slave" );
-    log_f( "{BOOT} slave: ouch" );
+    log_s("{BOOT} booting slave");
+    log_s("{BOOT} slave: ouch");
 
     if( socketpair( AF_UNIX, SOCK_DGRAM, 0, sv ) < 0 ) {
-       log_f( "boot_slave: socketpair: ");
+       log_s("boot_slave: socketpair: ");
        return;
     }
     /* set to nonblocking */
     if( fcntl( sv[0], F_SETFL, FNDELAY ) == -1 ) {
-       log_f( "boot_slave: fcntl( F_SETFL, FNDELAY ): "
-            );
+       log_s("boot_slave: fcntl( F_SETFL, FNDELAY ): ");
        close(sv[0]);
        close(sv[1]);
        return;
@@ -500,7 +499,7 @@ void boot_slave( void )
     slave_pid = vfork();
     switch( slave_pid ) {
     case -1: /* error*/
-       log_f( "boot_slave: vfork");
+       log_s("boot_slave: vfork");
        close( sv[0] );
        close( sv[1] );
        return;
@@ -510,11 +509,11 @@ void boot_slave( void )
        close( 0 );
        close( 1 );
        if( dup2( sv[1], 0 ) == -1 ) {
-           log_f( "boot_slave: child: unable to dup stdin: ");
+           log_s("boot_slave: child: unable to dup stdin: ");
            produce_core();
        }
        if( dup2( sv[1], 1 ) == -1 ) {
-           log_f( "boot_slave: child: unable to dup stdout ");
+           log_s("boot_slave: child: unable to dup stdout ");
            produce_core();
        }
        for( i = 3; i < avail_descs; ++i ) {
@@ -527,7 +526,7 @@ void boot_slave( void )
        execlp( "../bin/roninslave", "../bin/roninslave", NULL );
 #endif
 
-       log_f( "boot_slave: child: unable to exec: ");
+       log_s("boot_slave: child: unable to exec: ");
        exit(1);
     }
     pidFile = fopen("slave.pid", "w");
@@ -539,7 +538,7 @@ void boot_slave( void )
     close( sv[1] );
 
     if( fcntl(sv[0], F_SETFL, FNDELAY ) == -1 ) {
-       log_f( "boot_slave: fcntl");
+       log_s("boot_slave: fcntl");
        close( sv[0] );
        return;
     }
@@ -633,7 +632,7 @@ void check_corpses(void) {
       if(j->obj_flags.cost!=PC_STATUE && j->obj_flags.cost!=PC_CORPSE) continue;
       obj=0;
       if(!(obj=read_object(16,VIRTUAL))) {
-        log_f("ERROR: Can't create Vobj 16");
+        log_s("ERROR: Can't create Vobj 16");
         return;
       }
       obj->obj_flags.value[3]=COUNT_RENTABLE_CONTENTS(j);
@@ -659,17 +658,17 @@ int run_the_game(int port) {
 
   descriptor_list = NULL;
 
-  log_f("Signal trapping.");
+  log_s("Signal trapping.");
   signal_setup();
 
 /* infinte loop signal */
 /* Why trap this - checkpointing in signals.c kills game if inf loop */
-  log_f("Trapping Signal 26 SIGVTALRM.");
+  log_s("Trapping Signal 26 SIGVTALRM.");
   signal(SIGVTALRM, SIG_IGN);
 
   if (!fCopyOver) /* If copyover mother_desc is already set up */
   {
-    log_f("Opening mother connection.");
+    log_s("Opening mother connection.");
     mother_desc = init_socket (port);
     boot_slave();
   }
@@ -696,7 +695,7 @@ int run_the_game(int port) {
    exit(52);            /* what's so great about HHGTTG, anyhow? */
   }
 
-  log_f("Normal termination of game.");
+  log_s("Normal termination of game.");
   close_logfile();
   return 0;
 }
@@ -712,7 +711,7 @@ void plrlog(void) {
 
   fl = fopen("plrlog", "a");
   if (!fl) {
-    log_f("Error cannot open plrlog file");
+    log_s("Error cannot open plrlog file");
     return;
   }
   for(d=descriptor_list; d; d=d->next)
@@ -773,7 +772,7 @@ int game_loop(int mother_desc)
   /* Logging of last command or signal from a crash - Ranger - Jan 2001 */
   last_command[0] = '\0';
   if(atexit(write_last_command) != 0) {
-    log_f ("install_other_handlers:atexit");
+    log_s("install_other_handlers:atexit");
     exit (1);
   }
   /* This is the seg fault signal - if the write_last_command itself creates a
@@ -837,7 +836,7 @@ int game_loop(int mother_desc)
 
     /* Poll (without blocking) for new input, output, and exceptions */
     if (select(maxdesc + 1, &input_set, &output_set, &exc_set, &null_time) < 0) {
-      log_f("SYSERR: Select poll");
+      log_s("SYSERR: Select poll");
       return(-1);
     }
 
@@ -850,7 +849,7 @@ int game_loop(int mother_desc)
     /* New connection? */
     if (FD_ISSET(mother_desc, &input_set))
       if (new_descriptor(mother_desc) < 0)
-        log_f("New connection");
+        log_s("New connection");
 
     /* kick out the freaky folks */
     for (point = descriptor_list; point; point = next_point) {
@@ -992,7 +991,7 @@ jump into command
 
     if (missed_pulses <= 0) {
       log_f("SYSERR: **BAD** MISSED_PULSES NONPOSITIVE (%d), TIME GOING BACKWARDS!!", missed_pulses);
-      log_f("SYSERR: GAME BEING REBOOTED");
+      log_s("SYSERR: GAME BEING REBOOTED");
       send_to_world("EMERGENCY REBOOT, be back in a few minutes.\n\r");
       cleanreboot = 1;
       missed_pulses = 1;
@@ -1040,7 +1039,7 @@ void heartbeat(int pulse) {
       if(point->timer>30) {
         sprintf(buf, "WIZINFO: Closing socket %d - idle at menu.", point->descriptor);
         wizlog(buf, LEVEL_IMM, 5);
-        log_f(buf);
+        log_s(buf);
         close_socket(point);
       }
     }
@@ -1076,7 +1075,7 @@ void heartbeat(int pulse) {
   }
 
   if(!(pulse%(120*PULSE_TICK))) { /* 10x ever 22 hrs */
-    log_f("Re-distributing Subclass Tokens");
+    log_s("Re-distributing Subclass Tokens");
     /* First extract them all */
     token_number=0;
     for(obj=object_list;obj;obj= next_obj) {
@@ -1102,7 +1101,7 @@ void heartbeat(int pulse) {
       if(distribute_token()) token_number--;
       loop++;
       if(loop>1000) {
-        log_f("Breaking loop re-distribute tokens");
+        log_s("Breaking loop re-distribute tokens");
         break;
       }
     }
@@ -1156,7 +1155,7 @@ int copyover_write(int same_room) {
   extern FILE *wizhelp_fl,*olchelp_fl,*help_fl;
 
   if(!(fl=fopen(COPYOVER_FILE, "w"))) {
-    log_f("Copyover file not writeable, aborted.");
+    log_s("Copyover file not writeable, aborted.");
     return FALSE;
   }
 
@@ -1219,10 +1218,10 @@ int copyover_write(int same_room) {
 */
   system("cp -pf ronin ../bin/ronin");
   execl("../bin/ronin", "/bin/ronin", buf2, buf, (char *) NULL);
-  log_f("hotboot:execl");
+  log_s("hotboot:execl");
   cleanshutdown = cleanreboot = 1;
   open_logfile();
-  log_f("Hotboot failed - Doing normal reboot");
+  log_s("Hotboot failed - Doing normal reboot");
   return FALSE;
 }
 
@@ -1232,17 +1231,17 @@ void copyover_recover(void) {
   struct char_file_u_5 char_data_5;
   struct char_file_u_4 char_data_4;
   struct char_file_u_2 char_data_2;
-  int desc,room,port,addr,version,last_desc=0;
+  int desc,room,port,addr,version=0,last_desc=0;
   FILE *fp,*fl;
   bool fOld,close_desc;
   char name[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
 
-  log_f("Copyover recovery initiated");
+  log_s("Copyover recovery initiated");
 
   fp = fopen (COPYOVER_FILE, "r");
 
   if (!fp) {
-    log_f("Copyover file not found. Exiting.\n\r");
+    log_s("Copyover file not found. Exiting.\n\r");
     exit (1);
   }
 
@@ -1284,22 +1283,22 @@ void copyover_recover(void) {
       switch(version) {
         case 2:
           if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
-          {log_f("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
+          {log_s("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
           break;
         case 3:
           if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-          {log_f("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
+          {log_s("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
           break;
         case 4:
           if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-          {log_f("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
+          {log_s("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
           break;
         case 5:
           if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
-          {log_f("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
+          {log_s("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
           break;
         default:
-          log_f("Error getting pfile version (copyover)");fclose(fl);
+          log_s("Error getting pfile version (copyover)");fclose(fl);
           fOld=FALSE;
       }
     }
@@ -1336,7 +1335,7 @@ void copyover_recover(void) {
           store_to_char_5(&char_data_5,d->character);
           break;
         default:
-          log_f("Version number corrupted? (copyover)");
+          log_s("Version number corrupted? (copyover)");
           fOld=FALSE;
       }
     }
@@ -1472,7 +1471,7 @@ int init_socket(int port)
   struct linger ld;
 
   if ((s = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-    log_f("Error creating socket");
+    log_s("Error creating socket");
     exit(1);
   }
 
@@ -1480,7 +1479,7 @@ int init_socket(int port)
 
   if (setsockopt (s, SOL_SOCKET, SO_REUSEADDR,
       (char *) &opt, sizeof (opt)) < 0) {
-   log_f("setsockopt REUSEADDR");
+   log_s("setsockopt REUSEADDR");
    exit (1);
   }
 
@@ -1488,7 +1487,7 @@ int init_socket(int port)
   ld.l_linger = 0;
 
   if (setsockopt(s, SOL_SOCKET, SO_LINGER, &ld, sizeof(ld)) < 0) {
-   log_f("setsockopt LINGER");
+   log_s("setsockopt LINGER");
    produce_core();
   }
   /* Clear the structure */
@@ -1499,7 +1498,7 @@ int init_socket(int port)
   sa.sin_addr.s_addr = htonl(INADDR_ANY);
 
   if (bind(s, (struct sockaddr *) &sa, sizeof(sa)) < 0) {
-    log_f("bind");
+    log_s("bind");
     close(s);
     exit(1);
   }
@@ -1512,7 +1511,7 @@ int new_connection(int s)
 {
   char buf[255];
   int i;
-  int t;
+  int t = -1;
   fd_set   ready_to_read;
   struct sockaddr_in isa;
 
@@ -1525,13 +1524,13 @@ int new_connection(int s)
   FD_SET(s,&ready_to_read);
   if(select(s+1,&ready_to_read,NULL,NULL,&null_time)<0)
     {
-    log_f("select error");
+    log_s("select error");
     produce_core();
     }
   if(FD_ISSET(s,&ready_to_read))
     {
     if ((t = accept(s, (struct sockaddr*)&isa, &i)) < 0) {
-      log_f("Accept");
+      log_s("Accept");
       return(-1);
       }
     nonblock(t);
@@ -1541,7 +1540,7 @@ int new_connection(int s)
        sprintf(buf, "%c%s\n", SLAVE_IPTONAME, inet_ntoa(isa.sin_addr));
        /* ask slave to do a hostname lookup for us */
        if( write( slave_socket, buf, strlen(buf) ) != strlen(buf) ) {
-           log_f( "{SLAVE} losing slave on write: ");
+           log_s("{SLAVE} losing slave on write: ");
            close( slave_socket );
            slave_socket = -1;
        }
@@ -1581,7 +1580,7 @@ int new_connection(int s)
     len = read(slave_socket, buf, 100);
     if( len < 0 ) {
        if( errno == EAGAIN || errno == EWOULDBLOCK ) return( -1 );
-       log_f( "{SLAVE} losing slave on read: ");
+       log_s("{SLAVE} losing slave on read: ");
        close( slave_socket );
        slave_socket = -1;
        return( -1 );
@@ -1617,7 +1616,7 @@ int new_connection(int s)
                  }
                }
              else
-               log_f( "{SLAVE}: userid not returned");
+               log_s("{SLAVE}: userid not returned");
              }
            }
          }
@@ -1639,7 +1638,7 @@ int new_connection(int s)
        return(0);
        break;
     default:
-       log_f( "{SLAVE} invalid: ");
+       log_s("{SLAVE} invalid: ");
        break;
     }
     return( -1 );
@@ -1669,7 +1668,7 @@ int new_descriptor(int s)
 
   size = sizeof(sock);
   if (getpeername(desc, (struct sockaddr *) &sock, &size) < 0) {
-   log_f("getpeername");
+   log_s("getpeername");
    peer_error=TRUE;
   }
 
@@ -1771,7 +1770,7 @@ int write_to_descriptor(int desc, char *txt)
   {
    thisround = write(desc, txt + sofar, total - sofar);
    if (thisround < 0) {
-    log_f("Write to socket");
+    log_s("Write to socket");
     return(-1);
    }
    sofar += thisround;
@@ -1799,12 +1798,12 @@ int process_input(struct descriptor_data *t)
    else
     if (thisround < 0)
      if (errno != EWOULDBLOCK) {
-      log_f("Read1 - ERROR");
+      log_s("Read1 - ERROR");
       return(-1);
      } else
       break;
     else {
-     log_f("EOF encountered on socket read.");
+     log_s("EOF encountered on socket read.");
      return(-1);
     }
   } while (!ISNEWL(*(t->buf + begin + sofar - 1)));
@@ -1876,7 +1875,7 @@ int process_input(struct descriptor_data *t)
 
 void close_sockets(int s)
 {
-  log_f("Closing all sockets.");
+  log_s("Closing all sockets.");
 
   while (descriptor_list)
    close_socket(descriptor_list);
@@ -1924,20 +1923,20 @@ void close_socket(struct descriptor_data *d)
       if(GET_LEVEL(d->character)<LEVEL_IMM) save_char(d->character, NOWHERE);;
       act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM);
       sprintf(buf, "Closing link to: %s(%d).", GET_NAME(d->character), GET_LEVEL(d->character));
-      log_f(buf);
+      log_s(buf);
       wizlog(buf, GET_LEVEL(d->character), 1);
       d->character->desc = 0;
       d->character->switched=0;
     } else {
       isa.sin_addr.s_addr = d->addr;
       sprintf(buf, "Losing player: %s[%s].", GET_NAME(d->character), (d->host && d->host[0] != '\0') ? d->host : inet_ntoa(isa.sin_addr));
-      log_f(buf);
+      log_s(buf);
       wizlog(buf, GET_LEVEL(d->character), 1);
       free_char(d->character);
     }
   }
   else
-   log_f("Losing descriptor without char.");
+   log_s("Losing descriptor without char.");
 
   if (next_to_process == d)            /* to avoid crashing the process loop */
    next_to_process = next_to_process->next;
@@ -1966,7 +1965,7 @@ void nonblock(int s)
   flags = fcntl(s, F_GETFL, 0);
   flags |= O_NONBLOCK;
   if (fcntl(s, F_SETFL, flags) < 0) {
-   log_f("Noblock");
+   log_s("Noblock");
    produce_core();
   }
 }
@@ -1996,7 +1995,7 @@ void comatose(int s)
   int workhours(void);
   int load(void);
 
-  log_f("Entering comatose state.");
+  log_s("Entering comatose state.");
 
   sigsetmask(sigmask(SIGUSR1) | sigmask(SIGUSR2) | sigmask(SIGINT) |
            sigmask(SIGPIPE) | sigmask(SIGALRM) | sigmask(SIGTERM) |
@@ -2010,12 +2009,12 @@ void comatose(int s)
   do {
    FD_SET(s, &input_set);
    if (select(64, &input_set, 0, 0, &timeout) < 0) {
-    log_f("coma select");
+    log_s("coma select");
     produce_core();
    }
    if (FD_ISSET(s, &input_set)) {
     if (load() < 6) {
-     log_f("Leaving coma with visitor.");
+     log_s("Leaving coma with visitor.");
      sigsetmask(0);
      return;
     }
@@ -2028,13 +2027,13 @@ void comatose(int s)
 
    tics = 1;
    if (workhours()) {
-    log_f("Working hours collision during coma. Exit.");
+    log_s("Working hours collision during coma. Exit.");
     produce_core();
    }
   }
   while (load() >= 6);
 
-  log_f("Leaving coma.");
+  log_s("Leaving coma.");
   sigsetmask(0);
 }
 
@@ -2352,10 +2351,10 @@ void act_by_type(char *str, int hide_invisible, struct char_data *ch,
           break;
       case '$': i = "$"; break;
       default:
-      /* log_f("Illegal $-code to act():"); */
+      /* log_s("Illegal $-code to act():"); */
       /* FOLLOWING LINE INSERTED BY LEM, APRIL 15, 1996 */
-       log_f("Illegal case called in act -- not reported for fear of crash");
-       log_f(str);
+       log_s("Illegal case called in act -- not reported for fear of crash");
+       log_s(str);
        break;
       }
       while ((*point = *(i++)))
@@ -2570,7 +2569,7 @@ int signal_world(CHAR *ch, int cmd, char* arg)
 {
 //  char buf[512];
 //  sprintf(buf, "signalling world with cmd=%d arg=%s", cmd, arg);
-//  log_f( buf );
+//  log_s( buf );
 
   int i = 0;
   int stop = FALSE;
@@ -2601,7 +2600,7 @@ int signal_world(CHAR *ch, int cmd, char* arg)
     }
   }
 
-  //log_f("done zone");
+  //log("done zone");
 
   return stop;
 }
@@ -2614,7 +2613,7 @@ int signal_zone(CHAR *ch, int zone,int cmd, char*arg)
   char buf[512];
 
   sprintf(buf, "signalling zone=%d with cmd=%d arg=%s", zone, cmd, arg);
-  log_f(buf);
+  log_s(buf);
   */
 
   int i = 0, start = 0, finish = 0;
@@ -2665,7 +2664,7 @@ int signal_room(int room, CHAR *ch,int cmd,char *arg)
 {
   char buf[512];
 //  sprintf(buf, " signalling room=%d (%s) with cmd=%d arg=%s", world[room].number, world[room].name, cmd, arg);
-  //log_f( buf );
+  //log( buf );
 
   CHAR *i;
   CHAR *next_person;
@@ -2884,7 +2883,7 @@ int signal_object(OBJ *obj, CHAR *ch, int cmd, char *arg)
 //  if( obj->item_number_v == 3095) return FALSE;
 //  char buf[512];
 //  sprintf(buf, "   signalling obj %d with cmd=%d and arg=%s", obj->item_number_v, cmd, arg);
-//  log_f( buf );
+//  log_s( buf );
   OBJ *tmp,*tmp_n;
   if (obj->item_number>=0)
       if (obj_proto_table[obj->item_number].func || obj->func)
@@ -3061,7 +3060,7 @@ void game_sleep(struct timeval *timeout)
 {
   if (select(0, (fd_set *) 0, (fd_set *) 0, (fd_set *) 0, timeout) < 0) {
     if (errno != EINTR) {
-      log_f("SYSERR: Select sleep");
+      log_s("SYSERR: Select sleep");
       exit(1);
     }
   }

@@ -108,10 +108,8 @@ char *fread_action(FILE *fl)
 
   for (;;)
   {
-    fgets(buf, MAX_STRING_LENGTH, fl);
-    if (feof(fl))
-    {
-      log_f("Fread_action - unexpected EOF.");
+    if(!fgets(buf, MAX_STRING_LENGTH, fl)) {
+      log_s("Fread_action - unexpected EOF.");
       produce_core();
     }
 
@@ -138,11 +136,11 @@ void boot_social_messages(void) {
  social_list_top=0;
 
   while(!feof(fl)) {
-    fscanf(fl, " %s ", buf1);
+    if(EOF == fscanf(fl, " %s ", buf1)) break;
     if(!strcmp(buf1,"-1")) break;
     soc_mess_list[social_list_top].cmd_text = str_dup(buf1);
-    fscanf(fl, " %d ", &hide);
-    fscanf(fl, " %d \n", &min_pos);
+    if(EOF == fscanf(fl, " %d ", &hide)) break;
+    if(EOF == fscanf(fl, " %d \n", &min_pos)) break;
 
     /* read the stuff */
     soc_mess_list[social_list_top].hide = hide;
@@ -301,7 +299,7 @@ void do_gf(CHAR *ch, char *arg, int cmd)
   if (!name[0] &&
     !action->others_no_arg)
   {
-    sprintf(buf2, action->char_no_arg);
+    strncpy(buf2, action->char_no_arg, sizeof(buf2));
     style = 1;
   }
   else
@@ -475,7 +473,7 @@ void do_wizact(CHAR *ch, char *arg, int cmd)
   if (!name[0] &&
       !action->others_no_arg)
   {
-    sprintf(buf2, action->char_no_arg);
+    strncpy(buf2, action->char_no_arg, sizeof(buf2));
     style = 1;
   }
   else
@@ -763,7 +761,7 @@ void boot_pose_messages(void)
 
   for (counter = 0;;counter++)
   {
-    fscanf(fl, " %d ", &pose_messages[counter].level);
+    if (EOF == fscanf(fl, " %d ", &pose_messages[counter].level)) break;
     if (pose_messages[counter].level < 0)
       break;
     for (class = 0;class < 11;class++)

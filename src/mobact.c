@@ -108,7 +108,7 @@ void mobile_activity(CHAR *ch)
             sprintf(buf,"WIZ: %s (%s) gets %s in the morgue.",GET_NAME(ch),GET_NAME(ch->master),OBJ_SHORT(best_obj));
           else
             sprintf(buf,"WIZ: %s (no master) gets %s in the morgue.",GET_NAME(ch),OBJ_SHORT(best_obj));
-          log_f(buf);
+          log_s(buf);
         }
         obj_from_room(best_obj);
         obj_to_char(best_obj, ch);

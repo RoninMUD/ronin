@@ -341,7 +341,7 @@ DemonBracelet (OBJ *obj,CHAR *ch, int cmd, char *arg) {
       error that actually added 80.  For now, the item just disappears.
 
       sprintf(buf,"WIZINFO: ELF - Screwed %s (%d)",GET_NAME(ch),ch->points.max_mana);
-      log_string(buf);
+      log_s(buf);
       ch->points.max_mana = MAX(0,ch->points.max_mana-500);
 */
       extract_obj(obj);
@@ -353,7 +353,7 @@ DemonBracelet (OBJ *obj,CHAR *ch, int cmd, char *arg) {
       This part added 20 perma mana, but due to miscalculation, actually added 120.
 
       sprintf(buf,"WIZINFO: ELF - Screwed %s (%d)",GET_NAME(ch),ch->points.max_mana);
-      log_string(buf);
+      log_s(buf);
       ch->points.max_mana = MAX(0,ch->points.max_mana-500);
 */
       extract_obj(obj);
@@ -514,14 +514,14 @@ Demon (CHAR *demon, CHAR *ch, int cmd, char *arg) {
       obj_to_room(ob,EXIT(demon,dir)->to_room_r);
       /* Added disarm log, Solmyr - 2009 */
       sprintf(buf, "WIZINFO: %s disarms %s's %s and puts it in room %d", GET_NAME(demon), GET_NAME(vict), OBJ_SHORT(ob), world[EXIT(demon,dir)->to_room_r].number);
-      log_string(buf);
+      log_s(buf);
       ob->log = TRUE;
     } else
     	{
       	obj_to_room (ob, CHAR_REAL_ROOM(demon));
       	/* Added disarm log, Solmyr - 2009 */
       	sprintf(buf, "WIZINFO: %s disarms %s's %s in room %d", GET_NAME(demon), GET_NAME(vict), OBJ_SHORT(ob), world[CHAR_REAL_ROOM(demon)].number);
-      	log_string(buf);
+      	log_s(buf);
       	ob->log = TRUE;
       }
 
@@ -746,7 +746,7 @@ Splash (CHAR *ch, CHAR *vict) {
 
   if(IS_MORTAL(vict)) {  /* Linerfix 110203 */
     sprintf(buf,"ObjLog: [ %s had %s extracted at %d ]",GET_NAME(vict),OBJ_SHORT(o),world[CHAR_REAL_ROOM(vict)].number);
-    log_string(buf);
+    log_s(buf);
   }
 }
 
@@ -909,7 +909,7 @@ Beastmaster (CHAR *bm, CHAR *ch, int cmd, char *arg) {
       unequip_char (vict, WIELD);
       obj_to_room (o, CHAR_REAL_ROOM(vict));
 	    sprintf(buf, "WIZINFO: %s disarms %s's %s at %d", GET_NAME(bm), GET_NAME(vict), OBJ_SHORT(o), world[CHAR_REAL_ROOM(bm)].number);
-	    log_string(buf);
+	    log_s(buf);
 	    o->log = TRUE;
     }
     break;

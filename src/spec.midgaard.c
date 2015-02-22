@@ -888,7 +888,7 @@ int dump(int room, CHAR *ch, int cmd, char *arg) {
       sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",GET_NAME(ch),OBJ_SHORT(k));
     else if(IS_NPC(ch))
       sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",MOB_SHORT(ch),OBJ_SHORT(k));
-    log_string(buf);
+    log_s(buf);
   }
 
   if (value) {
@@ -988,7 +988,7 @@ void obj_to_vault(struct obj_data *obj, FILE *fl, CHAR * ch,char pos, char *name
     sprintf(logit, "WIZINFO: %s stores %s in %s's vault.",
             GET_NAME(ch), OBJ_SHORT(obj),CAP(name));
     wizlog(logit, GET_LEVEL(ch)+1, 5);
-    log_string(logit);
+    log_s(logit);
   }
 
   if(COUNT_CONTENTS(obj)) {
@@ -2893,7 +2893,7 @@ switch (cmd) {
       free(message);
       obj=read_object(2,REAL);
       if(!obj){
-         log_string("Couldn't load a postcard.");
+         log_s("Couldn't load a postcard.");
          fclose(fd);
          return(TRUE);
       }
@@ -2960,20 +2960,20 @@ switch (cmd) {
            break;
          case 4:
            if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1) {
-             log_string("Error Reading rent file(postoffice)");
+             log_s("Error Reading rent file(postoffice)");
              fclose(fl);
              return TRUE;
            }
            break;
          case 5:
            if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1) {
-             log_string("Error Reading rent file(postoffice)");
+             log_s("Error Reading rent file(postoffice)");
              fclose(fl);
              return TRUE;
            }
            break;
          default:
-           log_string("Error getting pfile version (postoffice)");
+           log_s("Error getting pfile version (postoffice)");
            return TRUE;
        }
        CREATE(vict, CHAR, 1);
@@ -2991,7 +2991,7 @@ switch (cmd) {
            store_to_char_5(&char_data_5,vict);
            break;
          default:
-           log_string("Version number corrupted? (postcard to email copy)");
+           log_s("Version number corrupted? (postcard to email copy)");
            return TRUE;
        }
        fclose(fl);
@@ -3071,7 +3071,7 @@ switch (cmd) {
       if(GET_LEVEL(ch)>=LEVEL_IMM) {
         sprintf(test, "WIZINFO: %s gets a package.", GET_NAME(ch));
         wizlog(test, GET_LEVEL(ch)+1, 5);
-        log_string(test);
+        log_s(test);
       }
     }
     fclose(fd);
@@ -3139,7 +3139,7 @@ switch (cmd) {
      if(GET_LEVEL(ch)>=LEVEL_IMM) {
        sprintf(test, "WIZINFO: %s sent a package to %s", GET_NAME(ch), CAP(name));
        wizlog(test, GET_LEVEL(ch)+1, 5);
-       log_string(test);
+       log_s(test);
      }
     }
     return(TRUE);
@@ -5161,7 +5161,7 @@ int restguard(CHAR *mob,CHAR *ch, int cmd, char *arg)
 int teller(OBJ *obj,CHAR *ch, int cmd, char *arg)
 {
   char buf[MAX_STRING_LENGTH], number[MAX_STRING_LENGTH];
-  int num;
+  int num = 0;
 
   if ((cmd != CMD_BALANCE) && (cmd != CMD_WITHDRAW) && (cmd != CMD_DEPOSIT)) return(FALSE);
 

@@ -796,7 +796,7 @@ void read_zone_rating(void) {
 
   while(!feof(fl)) {
     i++;
-    fscanf(fl,"%d %d\n",&zrate[i].virtual,&zrate[i].rating);
+    if(EOF == fscanf(fl,"%d %d\n",&zrate[i].virtual,&zrate[i].rating)) continue;
     if(i>0 && zrate[i].virtual>0) top_zone_rating=i+1;
     if(i>=MAX_RATINGS) break;
   }

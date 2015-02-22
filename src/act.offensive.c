@@ -256,7 +256,7 @@ void do_hit(struct char_data *ch, char *argument, int cmd) {
   }
   if(ch->bot.misses>19) {
     sprintf(buf,"WARNING: %s has 20 kill/hit misses",GET_NAME(ch));
-    log_f(buf);
+    log_s(buf);
     ch->bot.misses=0;
   }
 }
@@ -363,7 +363,7 @@ void do_wound(struct char_data *ch, char *argument, int cmd) {
   }
 
   sprintf(name,"WIZINFO: %s wounds %s",GET_NAME(ch),GET_NAME(victim));
-  log_f(name);
+  log_s(name);
   if(!*number) dmg=GET_MAX_HIT(victim)/10;
   else dmg = atoi(number);
 
@@ -482,7 +482,7 @@ void do_backstab(struct char_data *ch, char *argument, int cmd)
   one_argument(argument, name);
 #endif
 
-  if ((GET_CLASS(ch) != CLASS_THIEF) && 
+  if ((GET_CLASS(ch) != CLASS_THIEF) &&
       (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
       (GET_CLASS(ch) != CLASS_AVATAR) &&
       (GET_LEVEL(ch) < LEVEL_IMM))
@@ -522,7 +522,7 @@ void do_backstab(struct char_data *ch, char *argument, int cmd)
   }
 
 #ifdef TEST_SITE
-  if (!is_abbrev(argument2, "blame") || !name2)
+  if (!is_abbrev(argument2, "blame") || (name2[0] == '\0'))
   {
     victim2 = ch;
   }

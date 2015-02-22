@@ -425,7 +425,7 @@ void command_interpreter(CHAR *ch, char *argument)
           cmd_info[index].num==CMD_NEWOLCR) {
           sprintf(buf,"WIZINFO: %s %s",GET_NAME(ch),command);
           wizlog(buf,GET_LEVEL(ch)+1,5);
-          log_f(buf);
+          log_s(buf);
        }
 #endif
        sprintf(last_command, "(Finished) [%5d] %s in [%5d] %s: %s",
@@ -528,9 +528,9 @@ int is_big_number(char *str)
    primary argument, following the sub-arg                  */
 char *one_argument(char *argument, char *first_arg )
 {
-  int found, begin, look_at;
+  int begin, look_at;
 
-  found = begin = 0;
+  begin = 0;
 
   do
   {
@@ -1365,7 +1365,7 @@ void nanny(struct descriptor_data *d, char *arg) {
       if(char_check==-1) {
         sprintf(buf,"PLRINFO: Error reading %s dat file",tmp_name);
         wizlog(buf,LEVEL_SUP,4);
-        log_f(buf);
+        log_s(buf);
         SEND_TO_Q("Encountered a problem reading your player file, try another.",d);
         SEND_TO_Q("Name: ", d);
         return;
@@ -1415,7 +1415,7 @@ void nanny(struct descriptor_data *d, char *arg) {
       if(newbie_ban) {
         SEND_TO_Q("Sorry, your site is prevented from creating new chars.\n\r\n\r", d);
         sprintf(buf,"PLRINFO: Newbie Ban From: %s [ %s ] %s (%s)",host_ip,d->host,d->userid,tmp_name);
-        log_f(buf);
+        log_s(buf);
         wizlog(buf,LEVEL_SUP,4);
         close_socket(d);
         return;
@@ -1470,7 +1470,7 @@ void nanny(struct descriptor_data *d, char *arg) {
         if (strncmp((char*)crypt(buf3, d->pwd), d->pwd, 10)) 
         {
           sprintf(buf, "Invalid password attempt for %s[%s].", d->name, (*d->host=='\0') ? host_ip : d->host);
-          log_f(buf);
+          log_s(buf);
           wizlog(buf, LEVEL_IMM, 1);
           write(d->descriptor, echo_on, 6);
           SEND_TO_Q("Wrong password.\n\r", d);
@@ -1531,7 +1531,7 @@ void nanny(struct descriptor_data *d, char *arg) {
             act("$n has reconnected.", TRUE, tmp_ch, 0, 0, TO_ROOM);
             if(*d->host=='\0') sprintf(buf, "%s[%s] has reconnected.", GET_NAME(d->character), host_ip);
             else sprintf(buf, "%s[%s] has reconnected.", GET_NAME(d->character), d->host);
-            log_f(buf);
+            log_s(buf);
             wizlog(buf, GET_LEVEL(d->character), 1);
             if((V_ROOM(tmp_ch)>25434 && V_ROOM(tmp_ch)<25442) ||
                (V_ROOM(tmp_ch)>25500 && V_ROOM(tmp_ch)<25515)) {
@@ -1542,7 +1542,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
         if(*d->host=='\0') sprintf(buf, "%s[%s] has connected.", GET_NAME(d->character), host_ip);
         else sprintf(buf, "%s[%s] has connected.", GET_NAME(d->character), d->host);
-        log_f(buf);
+        log_s(buf);
         wizlog(buf, GET_LEVEL(d->character), 1);
         if (GET_LEVEL(d->character) >=LEVEL_IMM)
           SEND_TO_Q(godmotd, d);
@@ -1744,7 +1744,7 @@ void nanny(struct descriptor_data *d, char *arg) {
           sprintf(buf, "%s [%s] new player.", GET_NAME(d->character),host_ip);
         else
           sprintf(buf, "%s [%s] new player.", GET_NAME(d->character),d->host);
-        log_f(buf);
+        log_s(buf);
         wizlog(buf, GET_LEVEL(d->character), 1);
         strcpy(tmp_name,GET_NAME(d->character));
         string_to_lower(tmp_name);

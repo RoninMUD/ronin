@@ -2123,7 +2123,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     sprintf(buf, "PLRINFO: %s just attacked %s; Killer flag set. (Room %d)",
             GET_NAME(ch), GET_NAME(victim), world[CHAR_REAL_ROOM(ch)].number);
     wizlog(buf, LEVEL_SUP, 4);
-    log_string(buf);
+    log_s(buf);
   }
 
 
@@ -2845,7 +2845,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
           world[CHAR_REAL_ROOM(victim)].name, world[CHAR_REAL_ROOM(victim)].number);
       }
 
-      log_string(buf);
+      log_s(buf);
       deathlog(buf);
 
       if ((CHAOSMODE || (IS_NPC(ch) && GET_LEVEL(victim) > 14)) && ch != victim)
@@ -4693,7 +4693,7 @@ void mob_attack(CHAR *mob) {
             act("$n kicks off $N's weapon.",FALSE, mob, 0, vict, TO_NOTVICT);
             sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
                     GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_string(buf);
+            log_s(buf);
             unequip_char(vict, WIELD);
             obj_to_room(wield, CHAR_REAL_ROOM(vict));
             wield->log=1;
@@ -4715,7 +4715,7 @@ void mob_attack(CHAR *mob) {
             act("$n kicks off $N's weapon.",FALSE, mob, 0, vict, TO_NOTVICT);
             sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
                     GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_string(buf);
+            log_s(buf);
             unequip_char(vict, WIELD);
             obj_to_room(wield, CHAR_REAL_ROOM(vict));
             wield->log=1;
@@ -4734,7 +4734,7 @@ void mob_attack(CHAR *mob) {
             act("$n kicks off $N's weapon.",FALSE, mob, 0, vict, TO_NOTVICT);
             sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
                     GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_string(buf);
+            log_s(buf);
             unequip_char(vict, WIELD);
             obj_to_room(wield, CHAR_REAL_ROOM(vict));
             wield->log=1;
@@ -4753,7 +4753,7 @@ void mob_attack(CHAR *mob) {
             act("$n kicks off $N's weapon.",FALSE, mob, 0, vict, TO_NOTVICT);
             sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
                     GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_string(buf);
+            log_s(buf);
             unequip_char(vict, WIELD);
             obj_to_room(wield, CHAR_REAL_ROOM(vict));
             wield->log=1;
@@ -4773,7 +4773,7 @@ void mob_attack(CHAR *mob) {
               act("$N kicks off your weapon.",FALSE, vict, 0, mob, TO_CHAR);
               sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
                     GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-              log_string(buf);
+              log_s(buf);
               unequip_char(vict, WIELD);
               obj_to_room(wield, CHAR_REAL_ROOM(vict));
               wield->log=1;
@@ -4794,7 +4794,7 @@ void mob_attack(CHAR *mob) {
               act("$N kicks off your weapon.",FALSE, vict, 0, mob, TO_CHAR);
               sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
                     GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-              log_string(buf);
+              log_s(buf);
               unequip_char(vict, WIELD);
               obj_to_room(wield, CHAR_REAL_ROOM(vict));
               wield->log=1;

@@ -1422,7 +1422,7 @@ int ench_crucifix(OBJ *obj, CHAR *ch, int cmd, char *arg) {
             GET_NAME(tch), world[CHAR_REAL_ROOM(tch)].name,
             CHAR_VIRTUAL_ROOM(tch));
     wizlog(buf, LEVEL_WIZ, 6);
-    log_f(buf);
+    log_s(buf);
 
     stop_fighting(tch);
     unequip_char(tch, WEAR_LIGHT);
@@ -1691,7 +1691,7 @@ int blade_unholy_sacrifice(OBJ *blade, CHAR *ch, int cmd, char *argument) {
 		switch(number(0,39))
 		{
 			case 0:
-	      act("Your blade whirls out of control and slashes everyone! Including you!", FALSE, ch, NULL, vict, TO_CHAR);
+	      act("Your blade whirls out of control and slashes everyone! Including you!", FALSE, ch, NULL, NULL, TO_CHAR);
 	      for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = tmp_vict)
 	      {
 					tmp_vict = vict->next_in_room;

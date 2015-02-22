@@ -317,7 +317,7 @@ void do_tap(struct char_data *ch, char *argument, int cmd)
       act("$n taps the ground three times.\n\rA hungry ghost appears suddenly and eats $N!",0,ch,0,vict,TO_NOTVICT);
       act("You tap the ground three times.\n\rA hungry ghost appears suddenly and eats $N!",0,ch,0,vict,TO_CHAR);
       sprintf(buf,"WIZLOG: %s taps %s in room %d.\n\r",GET_NAME(ch),GET_NAME(vict),CHAR_VIRTUAL_ROOM(ch));
-      log_f(buf);
+      log_s(buf);
       wizlog(buf,LEVEL_IMP,5);
       death_cry(vict);
       vict->new.been_killed += 1;
@@ -366,7 +366,7 @@ void do_tap(struct char_data *ch, char *argument, int cmd)
      sprintf (buf, "WIZINFO: %s tapped %s in #%d", GET_NAME(ch),
            OBJ_SHORT(temp), CHAR_VIRTUAL_ROOM(ch));
      wizlog(buf, GET_LEVEL(ch)+1, 5);
-     log_f(buf);
+     log_s(buf);
       }
 
       extract_obj(temp);
@@ -573,7 +573,7 @@ void do_eat(struct char_data *ch, char *argument, int cmd)
     sprintf (buf, "WIZINFO: %s ate %s in #%d", GET_NAME(ch),
           OBJ_SHORT(temp), CHAR_VIRTUAL_ROOM(ch));
     wizlog(buf, GET_LEVEL(ch)+1, 5);
-    log_f(buf);
+    log_s(buf);
   }
 
   extract_obj(temp);

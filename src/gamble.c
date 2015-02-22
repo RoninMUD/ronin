@@ -175,7 +175,7 @@ void intialize_lottery(void) {
   }
   fclose(fl);
   sprintf(buf, "  Lottery machine size: %d objects",l_mach.obj_num);
-  log_f(buf);
+  log_s(buf);
 }
 
 void save_lottery(void) {

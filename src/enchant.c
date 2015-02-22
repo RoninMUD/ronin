@@ -1702,7 +1702,7 @@ struct enchantment_type_5 *enchantment_remove(CHAR *victim,struct enchantment_ty
         *previous = next;
         if(tolog) {
           sprintf(buf,"PLRINFO: %s just had enchantment %s removed.",GET_NAME(victim),ench->name);
-          log_f(buf);
+          log_s(buf);
         }
         if(enchantment->name)
           free(enchantment->name);

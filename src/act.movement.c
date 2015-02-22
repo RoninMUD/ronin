@@ -104,7 +104,7 @@ int dt_or_hazard(CHAR *ch) {
     if(!IS_NPC(ch) && IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, HAZARD)) {
       sprintf(buf, "WIZINFO: %s fell into a HAZARD at %s (%d)", GET_NAME(ch),
               world[CHAR_REAL_ROOM(ch)].name,world[CHAR_REAL_ROOM(ch)].number);
-      log_f(buf);
+      log_s(buf);
       deathlog(buf);
       wizlog(buf,LEVEL_IMM,3);
     }
@@ -117,7 +117,7 @@ int dt_or_hazard(CHAR *ch) {
     if(!IS_NPC(ch)) {
       sprintf(buf, "WIZINFO: %s fell into a DT at %s (%d)", GET_NAME(ch),
               world[CHAR_REAL_ROOM(ch)].name,world[CHAR_REAL_ROOM(ch)].number);
-      log_f(buf);
+      log_s(buf);
       deathlog(buf);
       wizlog(buf,LEVEL_IMM,3);
     }
@@ -597,10 +597,6 @@ void do_peek(struct char_data *ch, char *argument, int cmd)
   char arg1[MAX_STRING_LENGTH];
   int keyword_no;
   int was_in, percent;
-  bool found;
-  struct obj_data *tmp_object;
-  struct char_data *tmp_char;
-  char *tmp_desc;
   char *keywords[]= {
     "north",
     "east",
@@ -639,11 +635,6 @@ void do_peek(struct char_data *ch, char *argument, int cmd)
         strcpy(arg2, arg1);
         }
     */
-
-    found = FALSE;
-    tmp_object = 0;
-    tmp_char         = 0;
-    tmp_desc         = 0;
 
     switch(keyword_no) {
       /* look <dir> */
@@ -998,7 +989,7 @@ void do_lock(struct char_data *ch, char *argument, int cmd)
       if (GET_LEVEL(ch) >= LEVEL_IMM) {
         sprintf (buf, "WIZINFO: %s locked %s", GET_NAME(ch), OBJ_SHORT(obj));
         wizlog(buf, GET_LEVEL(ch)+1, 5);
-        log_f(buf);
+        log_s(buf);
       }
       SET_BIT(obj->obj_flags.value[1], CONT_LOCKED);
       send_to_char("*Click*\n\r", ch);
@@ -1021,7 +1012,7 @@ void do_lock(struct char_data *ch, char *argument, int cmd)
         sprintf (buf, "WIZINFO: %s locked a door at %d",
                GET_NAME(ch), CHAR_VIRTUAL_ROOM(ch));
         wizlog(buf, GET_LEVEL(ch)+1, 5);
-        log_f(buf);
+        log_s(buf);
       }
       SET_BIT(EXIT(ch, door)->exit_info, EX_LOCKED);
       if (EXIT(ch, door)->keyword)
@@ -1083,7 +1074,7 @@ void do_unlock(struct char_data *ch, char *argument, int cmd)
       if (GET_LEVEL(ch) >= LEVEL_IMM) {
         sprintf (buf, "WIZINFO: %s unlocked %s", GET_NAME(ch), OBJ_SHORT(obj));
         wizlog(buf, GET_LEVEL(ch)+1, 5);
-        log_f(buf);
+        log_s(buf);
       }
       REMOVE_BIT(obj->obj_flags.value[1], CONT_LOCKED);
       send_to_char("*Click*\n\r", ch);
@@ -1106,7 +1097,7 @@ void do_unlock(struct char_data *ch, char *argument, int cmd)
         sprintf (buf, "WIZINFO: %s unlocked a door at %d",
                GET_NAME(ch), CHAR_VIRTUAL_ROOM(ch));
         wizlog(buf, GET_LEVEL(ch)+1, 5);
-        log_f(buf);
+        log_s(buf);
       }
       REMOVE_BIT(EXIT(ch, door)->exit_info, EX_LOCKED);
       if (EXIT(ch, door)->keyword)
@@ -1205,7 +1196,7 @@ void do_pick(struct char_data *ch, char *argument, int cmd) {
     if (GET_LEVEL(ch) >= LEVEL_IMM) {
       sprintf (buf, "WIZINFO: %s picked %s", GET_NAME(ch), OBJ_SHORT(obj));
       wizlog(buf, GET_LEVEL(ch), 5);
-      log_f(buf);
+      log_s(buf);
     }
 
     REMOVE_BIT(obj->obj_flags.value[1], CONT_LOCKED);
@@ -1269,7 +1260,7 @@ void do_pick(struct char_data *ch, char *argument, int cmd) {
       if (GET_LEVEL(ch) >= LEVEL_IMM) {
          sprintf (buf, "WIZINFO: %s picked a door at %d", GET_NAME(ch), CHAR_VIRTUAL_ROOM(ch));
          wizlog(buf, GET_LEVEL(ch), 5);
-         log_f(buf);
+         log_s(buf);
       }
 
       REMOVE_BIT(EXIT(ch, door)->exit_info, EX_LOCKED);
@@ -1402,7 +1393,7 @@ void do_knock(struct char_data *ch, char *argument, int cmd) {
           sprintf (buf, "WIZINFO: %s knocked a door open at %d",
                  GET_NAME(ch), CHAR_VIRTUAL_ROOM(ch));
           wizlog(buf, GET_LEVEL(ch)+1, 5);
-          log_f(buf);
+          log_s(buf);
         }
 
         REMOVE_BIT(EXIT(ch, door)->exit_info, EX_LOCKED);

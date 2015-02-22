@@ -436,7 +436,6 @@ int Night_Sword (OBJ *sword, CHAR *ch, int cmd, char *arg) {
   int chance;
   char buf[MAX_INPUT_LENGTH], name[256], name2[256], buf2[MIL];
   CHAR *victim, *targ, *owner, *holder;
-  OBJ *o;
 
   if(cmd==MSG_SHOW_AFFECT_TEXT) {
     if(!sword->equipped_by) return FALSE;
@@ -452,7 +451,6 @@ int Night_Sword (OBJ *sword, CHAR *ch, int cmd, char *arg) {
       if(number(0,10)!=0) return FALSE;
       act("You have been blasted by the awesome power of the Sword of Night!!",FALSE,victim,0,0,TO_CHAR);
       act("$n has been blasted by the Sword of Night!!",FALSE,victim,0,0,TO_NOTVICT);
-      o = EQ(victim,WIELD);
       extract_obj(unequip_char(victim,WIELD));
       damage(victim,victim,66666,TYPE_SLASH,DAM_NO_BLOCK);
       return FALSE;
@@ -462,11 +460,10 @@ int Night_Sword (OBJ *sword, CHAR *ch, int cmd, char *arg) {
       act("You have been blasted by the awesome power of the Sword of Night!!",FALSE,victim,0,0,TO_CHAR);
       act("$n has been blasted by the Sword of Night!!",FALSE,victim,0,0,TO_NOTVICT);
       if(IS_MORTAL(victim)) damage(victim,victim,number(110,190),TYPE_SLASH,DAM_NO_BLOCK);
-      o = EQ(victim,WIELD);
       unequip_char(victim,WIELD);
       obj_to_room(sword,CHAR_REAL_ROOM(victim));
       sprintf(buf,"[ %s had %s unwielded at %d ]",GET_NAME(victim),OBJ_SHORT(sword),world[CHAR_REAL_ROOM(victim)].number);
-      log_f(buf);
+      log_s(buf);
       return FALSE;
     }
   }
@@ -523,7 +520,7 @@ int Night_Sword (OBJ *sword, CHAR *ch, int cmd, char *arg) {
         if(IS_MORTAL(holder)) damage(holder,holder,number(110,190),TYPE_SLASH,DAM_NO_BLOCK);
         obj_from_char(sword);
         sprintf(buf2,"Hell Log: %s blasted by %s (Room %d)",GET_NAME(holder),OBJ_SHORT(sword),CHAR_VIRTUAL_ROOM(holder));
-        log_f(buf2);
+        log_s(buf2);
         save_char(holder, NOWHERE);
         obj_to_room(sword,CHAR_REAL_ROOM(holder));
         sword->log=1;
@@ -2689,7 +2686,7 @@ int Geryon(CHAR *s, CHAR *ch, int cmd, char *arg) {
                d=victim->desc;
                 if(d && d->connected==CON_PLYNG) {
                   sprintf(buf,"Hell Log: %s disarms %s's %s (Room %d).",GET_NAME(s),GET_NAME(victim),OBJ_SHORT(wield),world[CHAR_REAL_ROOM(victim)].number);
-                  log_f(buf);
+                  log_s(buf);
                   unequip_char(victim, WIELD);
                   obj_to_room(wield, CHAR_REAL_ROOM(victim));
                   wield->log=1;
@@ -4136,7 +4133,7 @@ int sin_envy(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg) {
         save_char(ench_ch, NOWHERE);
         save_char(act_ch, NOWHERE);
         sprintf(buf,"Hell Log - Envy : %s just gave %s to %s.",GET_NAME(ench_ch),OBJ_SHORT(junk),(IS_NPC(act_ch) ? MOB_SHORT(act_ch) : GET_NAME(act_ch)));
-        log_f(buf);
+        log_s(buf);
         junk->log=1;
       }
       break;
@@ -4154,7 +4151,7 @@ int sin_envy(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg) {
       obj_to_room (junk, CHAR_REAL_ROOM(ench_ch));
       save_char(ench_ch, NOWHERE);
       sprintf(buf,"Hell Log - Envy : %s just dropped %s.",GET_NAME(ench_ch),OBJ_SHORT(junk));
-      log_f(buf);
+      log_s(buf);
       junk->log=1;
       break;
 
@@ -4960,10 +4957,10 @@ int hell_ledge(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -5005,11 +5002,11 @@ int blood_lake(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
          obj->log=1;
-         log_f(buf);
+         log_s(buf);
 
          break;
       }
@@ -5058,10 +5055,10 @@ int boulders(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -5122,10 +5119,10 @@ int boulders2(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -5186,10 +5183,10 @@ int ouchie_flakes(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -5320,10 +5317,10 @@ int typos(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -5357,10 +5354,10 @@ int pit_spec(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -5397,10 +5394,10 @@ int spike_spec(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -5437,10 +5434,10 @@ int techno_spec(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf2,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf2);
+         log_s(buf2);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf2,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf2);
+         log_s(buf2);
          obj->log=1;
          break;
       }
@@ -5489,10 +5486,10 @@ int floating_rooms(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf3,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf3);
+         log_s(buf3);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf3,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf3);
+         log_s(buf3);
          obj->log=1;
          break;
       }
@@ -5758,10 +5755,10 @@ int hell_rooms(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf2,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf2);
+         log_s(buf2);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf2,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf2);
+         log_s(buf2);
          obj->log=1;
          break;
       }
@@ -5805,10 +5802,10 @@ int woods_a_spec(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -5876,10 +5873,10 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -6038,10 +6035,10 @@ int woods_c_spec(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }
@@ -6101,10 +6098,10 @@ int woods_d_spec(int room, CHAR *ch, int cmd, char *arg) {
          vroom=obj->in_room_v;
          obj_from_room(obj);
          sprintf(buf,"Hell Log: %s removed from room %d.",OBJ_SHORT(obj),vroom);
-         log_f(buf);
+         log_s(buf);
          obj_to_room(obj,real_room(REAPER_ROOM));
          sprintf(buf,"Hell Log: %s placed in Reaper's Hold.",OBJ_SHORT(obj));
-         log_f(buf);
+         log_s(buf);
          obj->log=1;
          break;
       }

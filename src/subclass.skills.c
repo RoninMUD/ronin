@@ -1505,7 +1505,7 @@ void do_batter(CHAR *ch, char *arg, int cmd)
 void do_charge(struct char_data *ch, char *argument, int cmd) {
   CHAR *leader,*victim;
   struct follow_type *Followers=NULL;
-  int percent,hps;
+  int percent;
   char name[256];
 
   if(!ch->skills) return;
@@ -1578,12 +1578,10 @@ void do_charge(struct char_data *ch, char *argument, int cmd) {
   act("$n leads a charge against $N!", FALSE, ch, 0, victim, TO_NOTVICT);
 
   /* charger hits */
-  hps=GET_HIT(victim);
   hit(ch,victim,SKILL_CHARGE);
   WAIT_STATE(ch, PULSE_VIOLENCE*2);
 
   if(!victim || CHAR_REAL_ROOM(victim)==NOWHERE) return;
-  /*if(GET_HIT(victim)>=hps) return;*/ /* this is a check for a missed charge */
 
   /* Go through the followers */
   for (Followers=leader->followers;Followers; Followers=Followers->next)

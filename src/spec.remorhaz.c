@@ -167,7 +167,7 @@ if (hydra_heads < (7 - mob->specials.timer) && mob->specials.timer < 7)
 
 int polar_bear(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
-    int new_room;
+    int new_room = NOWHERE;
     CHAR *vict;
     
     if(!mob->specials.fighting) return FALSE;

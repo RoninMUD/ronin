@@ -110,7 +110,7 @@ int druid_protector(CHAR *mob,CHAR *ch, int cmd, char *arg)
                    sprintf(buf, "WIZINFO: %s disarms %s's %s at %d",
                    GET_NAME(mob), GET_NAME(vict), OBJ_SHORT(wield),
                    world[CHAR_REAL_ROOM(mob)].number);
-                   log_f(buf);
+                   log_s(buf);
                    wield->log = TRUE;
                  }
               }
@@ -237,7 +237,7 @@ int druid_guardian(CHAR *mob,CHAR *ch, int cmd, char *arg)
             act("You kick the heathen's weapon of destruction from $S hand as $M reads.\n",
                 1, mob, 0, ch, TO_CHAR);
             sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),GET_NAME(ch),OBJ_SHORT(wield),world[CHAR_REAL_ROOM(ch)].number);
-            log_f(buf);
+            log_s(buf);
             wield->log = TRUE;
             unequip_char(ch, WIELD);
             obj_to_room(wield, CHAR_REAL_ROOM(ch));
@@ -276,7 +276,7 @@ int druid_guardian(CHAR *mob,CHAR *ch, int cmd, char *arg)
                 char_to_room(wolf, CHAR_REAL_ROOM(ch));
                 act("$n summons a friend from the shadows to assist him!",
                     1, mob, 0, ch, TO_ROOM);
-                damage(wolf, vict, 0, TYPE_UNDEFINED,DAM_NO_BLOCK);
+                damage(wolf, ch, 0, TYPE_UNDEFINED,DAM_NO_BLOCK);
             }
 
          }

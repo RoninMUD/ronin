@@ -60,9 +60,9 @@ void number_argument_interpreter(char *argument, int *number,
                          char *first_arg, char *second_arg )
 {
   bool number_ok  = TRUE;
-  int look_at, found, begin;
+  int look_at, begin;
 
-  found = begin = 0;
+  begin = 0;
 
   *number = 1;
 
@@ -140,7 +140,7 @@ void get(struct char_data *ch, struct obj_data *obj_object,
       if(!isname(GET_NAME(ch),OBJ_SHORT(sub_object))) {
         sprintf(buffer,"WIZ: %s get %s from %s",GET_NAME(ch),
                 OBJ_SHORT(obj_object),OBJ_SHORT(sub_object));
-        log_f(buffer);
+        log_s(buffer);
       }
     }
     /* get log from vaults - Ranger March 00 */
@@ -167,12 +167,12 @@ void get(struct char_data *ch, struct obj_data *obj_object,
        (obj_object->obj_flags.cost==PC_CORPSE ||
         obj_object->obj_flags.cost==PC_STATUE) ) {
       sprintf(buffer,"WIZ: %s gets %s.",GET_NAME(ch),OBJ_SHORT(obj_object));
-      log_f(buffer);
+      log_s(buffer);
     }
     /* Log getting eq from the morgue - Ranger June 97 */
     if(CHAR_VIRTUAL_ROOM(ch)==3088) {
       sprintf(buffer,"WIZ: %s gets %s in the morgue.",GET_NAME(ch),OBJ_SHORT(obj_object));
-      log_f(buffer);
+      log_s(buffer);
     }
     obj_from_room(obj_object);
     obj_to_char(obj_object, ch);
@@ -185,7 +185,7 @@ void get(struct char_data *ch, struct obj_data *obj_object,
     sprintf (buf, "WIZINFO: %s gets %s in %d", GET_NAME(ch),
            OBJ_SHORT(obj_object), CHAR_VIRTUAL_ROOM(ch));
     wizlog(buf, GET_LEVEL(ch)+1, 5);
-    log_f(buf);
+    log_s(buf);
   }
 
   if((obj_object->obj_flags.type_flag == ITEM_MONEY) &&
@@ -198,7 +198,7 @@ void get(struct char_data *ch, struct obj_data *obj_object,
     if(obj_object->obj_flags.value[0] > 1000000) { /* changed min to 1mil 031803 Liner */
       sprintf(buffer,"WIZ: Large transaction: %s gets %d coins",
             GET_NAME(ch),obj_object->obj_flags.value[0]);
-      log_f(buffer);
+      log_s(buffer);
     }
     extract_obj(obj_object);
   }
@@ -767,7 +767,7 @@ int drop_coins(struct char_data *ch, int amount)
   if(amount <= 0)
     {
       sprintf(buffer, "%s tried to drop negative coins.", GET_NAME(ch));
-      log_f(buffer);
+      log_s(buffer);
       return(0);
     }
   act("$n drops some gold.", FALSE, ch, 0, 0, TO_ROOM);
@@ -775,7 +775,7 @@ int drop_coins(struct char_data *ch, int amount)
   if(amount > 1000000) { /* changed min to 1 mil 031803 Liner */
     sprintf(buffer,"WIZ: Large transaction: %s drops %d coins",
             GET_NAME(ch), amount);
-    log_f(buffer);
+    log_s(buffer);
   }
 
   if(GET_LEVEL(ch) >= LEVEL_IMM) {
@@ -784,7 +784,7 @@ int drop_coins(struct char_data *ch, int amount)
           amount,
           world[CHAR_REAL_ROOM(ch)].number);
     wizlog(buffer, GET_LEVEL(ch)+1, 5);
-    log_f(buffer);
+    log_s(buffer);
   }
 
 
@@ -1337,13 +1337,13 @@ int give_coins_to(struct char_data *ch, int amount, struct char_data *vict)
   if(amount > 1000000) { /* changed min to 1 mil 031803 Liner */
     sprintf(buf,"WIZ: Large transaction: %s gives %d coins to %s",
           GET_NAME(ch),amount, GET_NAME(vict));
-    log_f(buf);
+    log_s(buf);
   }
   if(IS_IMMORTAL(ch)) {
     sprintf(buf, "WIZINFO: (%s) gives %d coins to %s\n\r",
             GET_NAME(ch), amount, GET_NAME(vict));
     wizlog(buf, GET_LEVEL(ch)+1, 5);
-    log_f(buf);
+    log_s(buf);
   }
 
   /* Lose gold only if you're an NPC or mortal */
@@ -1467,7 +1467,7 @@ void do_give(struct char_data *ch, char *argument, int cmd)
       if(IS_SET( vict->specials.pflag, PLR_THIEF) && !IS_NPC(vict))
       strcat(buf,"(thief)");
       wizlog(buf, GET_LEVEL(ch)+1, 5);
-      log_f(buf);
+      log_s(buf);
     }
   }
 }
