@@ -2541,7 +2541,6 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void spell_relocation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   sh_int target;
-  int org_room;
 
   if (IS_NPC(victim)) {
     send_to_char("You failed.\n\r", ch);
@@ -2566,8 +2565,6 @@ void spell_relocation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 
   act("$n disappears suddenly.",TRUE,ch,0,0,TO_ROOM);
-
-  org_room = CHAR_REAL_ROOM(ch);
 
   if(ch->specials.riding) stop_riding(ch,ch->specials.riding);
   if(ch->specials.rider) stop_riding(ch->specials.rider,ch);

@@ -406,7 +406,7 @@ char *str_cut(char *source,char *dest,int number) {
 
   if(strlen(source)>MAX_INPUT_LENGTH ||
     strlen(source)<number) return source;
-  sprintf(buf,source);
+  strncpy(buf,source,sizeof(buf));
   for(y=0;source[y];y++){
     buf[y]=source[y+number];
   }
@@ -1472,7 +1472,7 @@ void program_fork()
 
     /* Send input to the program (if any). */
     if (program_queue[0].input)
-      fprintf(process_in, program_queue[0].input);
+      fputs(program_queue[0].input, process_in);
 
     /* Get the file flags of from[0]. */
     flags = fcntl(from[0], F_GETFL);

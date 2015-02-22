@@ -466,7 +466,7 @@ struct obj_data
 #define QRTR_CONC   268435456
 #define MANADRAIN   536870912
 #define NO_SUM      1073741824
-#define ROOM_FINAL  2147483648
+#define ROOM_FINAL  2147483648u
 
 /* MANABURN - see commented in spell_parser.c */
 

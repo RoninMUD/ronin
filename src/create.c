@@ -3694,7 +3694,7 @@ void edit_shop(CHAR *ch, char *fargs)
   char *arg2;
 
   sprintf(args, "%s", fargs);
-  if(args)
+  if(*args)
     {
     arg2 = strtok(args, " ");
     if(arg2)

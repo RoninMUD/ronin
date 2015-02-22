@@ -314,7 +314,7 @@ int water_prince(CHAR *mob,CHAR *ch,int cmd,char *arg)
 
 int earth_king(CHAR *mob,CHAR *ch, int cmd, char *arg)
 {
-	CHAR *vict, *next_vict;
+	CHAR *vict = NULL, *next_vict = NULL;
 
 	if(cmd != MSG_MOBACT) return FALSE;
 	if(!mob->specials.fighting) return FALSE;

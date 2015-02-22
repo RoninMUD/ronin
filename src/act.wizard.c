@@ -4936,7 +4936,7 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
 {
   struct char_data *victim;
   char name[100], level[100];
-  int adv, newlevel=0, oldlevel,i;
+  int newlevel=0, oldlevel,i;
   char buf[250];
 
   void gain_exp(struct char_data *ch, int gain);
@@ -4960,12 +4960,12 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  if (!strcmp(GET_NAME(victim),"Lem") || 
-      !strcmp(GET_NAME(victim),"Sumo") || 
-      !strcmp(GET_NAME(victim),"Ranger") || 
-      !strcmp(GET_NAME(victim),"Liner") || 
+  if (!strcmp(GET_NAME(victim),"Lem") ||
+      !strcmp(GET_NAME(victim),"Sumo") ||
+      !strcmp(GET_NAME(victim),"Ranger") ||
+      !strcmp(GET_NAME(victim),"Liner") ||
       !strcmp(GET_NAME(victim),"Sane") ||
-      !strcmp(GET_NAME(victim),"Shun") ) 
+      !strcmp(GET_NAME(victim),"Shun") )
   {
     send_to_char("You cannot demote the active IMPs.\n\r",ch);
     return;
@@ -4976,9 +4976,7 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  if (GET_LEVEL(victim) == 0)
-    adv = 1;
-  else if (!*level) {
+  if (!*level) {
     send_to_char("You must supply a level number.\n\r", ch);
     return;
   } else {
@@ -4994,8 +4992,6 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
       send_to_char("This is a command to DEMOTE a player.\n\r", ch);
       return;
     }
-    adv = GET_LEVEL(victim) - newlevel;
-
   }
 
   GET_EXP(victim) = 0;
@@ -7095,8 +7091,8 @@ Usage: `kdlist`q <name> <death #> or.\n\r\
           }
           tmstr = asctime(localtime(&dfile.time_death));
           *(tmstr + strlen(tmstr) - 1) = '\0';
-          if(real_room(dfile.location)!=-1) sprintf(buf2,world[real_room(dfile.location)].name);
-          else sprintf(buf2,"Unknown");
+          if(real_room(dfile.location)!=-1) strncpy(buf2,world[real_room(dfile.location)].name,sizeof(buf2));
+          else strncpy(buf2,"Unknown",sizeof(buf2));
           sprintf(buf,"%d) : Location: %s (%d): Time: %s\n\r",
                   dfile.number,buf2,dfile.location,tmstr);
           append_to_string_block(&sb, buf);
@@ -7172,8 +7168,8 @@ Usage: `kdlist`q <name> <death #> or.\n\r\
           found=TRUE;
           tmstr = asctime(localtime(&dfile.time_death));
           *(tmstr + strlen(tmstr) - 1) = '\0';
-          if(real_room(dfile.location)!=-1) sprintf(buf2,world[real_room(dfile.location)].name);
-          else sprintf(buf2,"Unknown");
+          if(real_room(dfile.location)!=-1) strncpy(buf2,world[real_room(dfile.location)].name,sizeof(buf2));
+          else strncpy(buf2,"Unknown",sizeof(buf2));
           sprintf(buf,"%d) : Location: %s (%d): Time: %s\n\r",
                   dfile.number,buf2,dfile.location,tmstr);
           append_to_string_block(&sb, buf);
@@ -7684,11 +7680,11 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
           sprinttype(obj_proto_table[i].affected[x].location, apply_types, buf2);
           if(strstr(buf2,"SKILL")) {
          str_cut(buf2,buf4,6);
-         sprintf(buf2,buf4);
+         strncpy(buf2,buf4,sizeof(buf2));
          }
           if(strstr(buf2,"SAVING")) {
          str_cut(buf2,buf4,7);
-         sprintf(buf2,buf4);
+         strncpy(buf2,buf4,sizeof(buf2));
           }
           sprintf(buf, "%-9s %3d  ", buf2, obj_proto_table[i].affected[x].modifier);
           strcat(buf3, buf);

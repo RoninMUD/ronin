@@ -733,13 +733,12 @@ int
 mar_hatch (int room, CHAR *ch, int cmd, char *arg) {
   OBJ *block_on, *block_off;
   char buf[MAX_INPUT_LENGTH];
-  int block1, block2, bar_nr;
+  int block1, block2;
 
   if(!ch) return(FALSE);
 
   block1 = real_object (MAR_BLOCK_ONHATCH);
   block2 = real_object (MAR_BLOCK_OFFHATCH);
-  bar_nr = real_object (MAR_IRON_BAR);
 
   if (cmd != CMD_USE && cmd != CMD_OPEN && cmd != CMD_CLOSE)
     return FALSE;
@@ -1084,7 +1083,7 @@ mar_shield (OBJ *sh, CHAR *ch, int cmd, char *arg)
 	       GET_NAME(tch), world[CHAR_REAL_ROOM(tch)].name,
 	       CHAR_VIRTUAL_ROOM(tch));
       wizlog(buf, LEVEL_WIZ, 6);
-      log_f(buf);
+      log_s(buf);
 
       stop_fighting (tch);
       unequip_char (tch, WEAR_SHIELD);

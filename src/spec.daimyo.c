@@ -930,7 +930,7 @@ int dm_two_doors(int room, CHAR *ch, int cmd, char *arg) {
       send_to_char("You are not wearing the ring.\n\r",ch);
       return TRUE;
     }
-    if(!buf2) {
+    if(!*buf2) {
       send_to_char("Use it where?\n\r",ch);
       return TRUE;
     }

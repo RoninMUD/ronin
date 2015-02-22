@@ -456,7 +456,7 @@ void shop_kickout(CHAR *mob, CHAR *vict) {
 int shop_keeper(CHAR *keeper,CHAR *ch,int cmd,char *arg)
 {
   char argm[MAX_STRING_LENGTH];
-  int shop_nr;
+  int shop_nr = 0;
 
   /* Added shop kickout function - Ranger Feb 99 */
   if(cmd==MSG_MOBACT && keeper->specials.fighting) {

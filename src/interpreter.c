@@ -456,9 +456,7 @@ to a different type of mud.\n\r\n\r",ch);
 
 void argument_interpreter(char *argument,char *first_arg,char *second_arg )
 {
-  int look_at, found, begin;
-
-  found = begin = 0;
+  int look_at = 0, begin = 0;
 
   do
   {

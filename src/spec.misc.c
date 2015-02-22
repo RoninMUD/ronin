@@ -1408,7 +1408,7 @@ int onering_quest(OBJ *sh, CHAR *ch, int cmd, char *arg) {
                GET_NAME(tch), world[CHAR_REAL_ROOM(tch)].name,
                CHAR_VIRTUAL_ROOM(tch));
       wizlog(buf, LEVEL_WIZ, 6);
-      log_f(buf);
+      log_s(buf);
 
       stop_fighting (tch);
 

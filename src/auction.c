@@ -905,8 +905,6 @@ void do_bid(CHAR *ch, char *arg, int cmd)
 void check_auction(void) {
   char buf[MAX_STRING_LENGTH];
   int i, needsave;
-  time_t timenow;
-  timenow = time(0);
   needsave = FALSE;
 
   for(i = 0; i < MAX_OBJS_AUCTION; i++) {

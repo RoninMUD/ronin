@@ -362,7 +362,7 @@ int kiri_torin(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         obj_to_room(unequip_char(victim,pos),real_room(KIRI_VAULT));
         /* Added gearsteal log, Solmyr - 2009 */
         sprintf(buf, "WIZINFO: %s puts %s's %s in %d", GET_NAME(mob), GET_NAME(victim), OBJ_SHORT(obj), world[real_room(KIRI_VAULT)].number);
-        log_f(buf);
+        log_s(buf);
         obj->log = TRUE;
         act("$n's eyes glow with a fiendish red light as he grabs your $p!",1,mob,obj,victim,TO_VICT);
         act("$n's eyes glow with a fiendish red light!",1,mob,obj,victim,TO_NOTVICT);

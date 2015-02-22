@@ -202,6 +202,7 @@ static int slave_socket = -1;
 static bool fCopyOver;
 int port,mother_desc;
 struct timeval null_time;
+char* g_datadir = NULL;
 
 int get_from_q(struct txt_q *queue, char *dest);
 /* write_to_q is in comm.h for the macro */
@@ -349,11 +350,11 @@ void update_reboot(void) {
 int main(int argc, char **argv)
 {
   int pos = 1,tmp_num;
-  char *dir,tmp_txt[20];
+  char tmp_txt[20];
   FILE *fl;
 
   port = DFLT_PORT;
-  dir = DFLT_DIR;
+  g_datadir = DFLT_DIR;
 
   CHAOSMODE=0;
   GAMECHECK=0;
@@ -410,10 +411,10 @@ int main(int argc, char **argv)
       break;
     case 'd':
       if (*(argv[pos] + 2)) {
-        dir = argv[pos] + 2;
+        g_datadir = argv[pos] + 2;
       }
       else if (++pos < argc) {
-        dir = argv[pos];
+        g_datadir = argv[pos];
       }
       else {
         log_s("Directory arg expected after option -d.");
@@ -456,12 +457,12 @@ int main(int argc, char **argv)
 
   log_f("Running game on port %d.", port);
 
-  if (chdir(dir) < 0) {
+  if (chdir(g_datadir) < 0) {
    log_s("chdir");
    produce_core();
   }
 
-  log_f("Using %s as data directory.", dir);
+  log_f("Using %s as data directory.", g_datadir);
 
   slongrand(time(0));
   run_the_game(port);
@@ -1216,11 +1217,12 @@ int copyover_write(int same_room) {
   execl("../bin/ronin", "/bin/ronin", buf2, buf, (char *) NULL);
 #endif
 */
-  system("cp -pf ronin ../bin/ronin");
-  execl("../bin/ronin", "/bin/ronin", buf2, buf, (char *) NULL);
+  system("cp -pf obj/ronin bin/ronin");
+  execl("bin/ronin", "/bin/ronin", buf2, buf, (char *) NULL);
   log_s("hotboot:execl");
   cleanshutdown = cleanreboot = 1;
   open_logfile();
+  chdir(g_datadir);
   log_s("Hotboot failed - Doing normal reboot");
   return FALSE;
 }
@@ -1510,7 +1512,7 @@ int init_socket(int port)
 int new_connection(int s)
 {
   char buf[255];
-  int i;
+  socklen_t i;
   int t = -1;
   fd_set   ready_to_read;
   struct sockaddr_in isa;
@@ -1566,16 +1568,12 @@ int new_connection(int s)
  int get_slave_result( void )
 {
     char buf[ MSL +1 ]="";
-    char ch[2]="";
     char *userid, *token, *tmp;
     char *ascii_addr;
-    int local_port, remote_port;
+    int remote_port;
     struct descriptor_data *d;
     long addr;
     int len;
-
-    ch[0]=0;
-    ch[1]=0;
 
     len = read(slave_socket, buf, 100);
     if( len < 0 ) {
@@ -1600,7 +1598,6 @@ int new_connection(int s)
            tmp = strtok(NULL, ":");
            if(tmp)
              {
-             local_port = atoi(tmp);
              tmp = strtok(NULL, ":");
              tmp = strtok(NULL, ":");
              userid = strtok(NULL, "\n");
@@ -1646,9 +1643,9 @@ int new_connection(int s)
 
 int new_descriptor(int s)
 {
-  int desc,peer_error=FALSE;
+  int desc;
   struct descriptor_data *newd;
-  int size;
+  socklen_t size;
   bool total_ban=0;
   char buf[255],ip_txt[50],tmp[50];
   FILE *file;
@@ -1669,7 +1666,6 @@ int new_descriptor(int s)
   size = sizeof(sock);
   if (getpeername(desc, (struct sockaddr *) &sock, &size) < 0) {
    log_s("getpeername");
-   peer_error=TRUE;
   }
 
   sprintf(tmp,"%s", inet_ntoa(sock.sin_addr));

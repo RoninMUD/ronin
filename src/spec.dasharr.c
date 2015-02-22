@@ -252,7 +252,7 @@ int prison_warden(CHAR *warden, CHAR *ch, int cmd, char *arg) {
 
     object = ch->equipment[WIELD];
     one_argument(arg, buf);
-    if(!buf) return FALSE;  /* Just a little extra check - Ranger */
+    if(!*buf) return FALSE;  /* Just a little extra check - Ranger */
 
     if (is_stake_used) {
       if(!isname(buf, OBJ_NAME(object))) return FALSE;

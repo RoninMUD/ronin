@@ -267,7 +267,7 @@ void remeq(CHAR *victim, int pos) {
     unequip_char (victim, pos);
     obj_to_room (o, CHAR_REAL_ROOM(victim));
     sprintf(buf,"Hell Log: [ %s had %s removed at %d ]",GET_NAME(victim),OBJ_SHORT(o),world[CHAR_REAL_ROOM(victim)].number);
-    log_f (buf);
+    log_s(buf);
     o->log=1;
     save_char(victim,NOWHERE);
   }
@@ -377,14 +377,12 @@ int is_shop(CHAR *mob);
 
 
 int Unguis (OBJ *dagger, CHAR *ch, int cmd, char *arg) {
-  int found;
   CHAR *vict,*temp, *next_vict;
   int DONE = FALSE;
 
   if (!IS_MORTAL(ch)) return FALSE;
 
-  if (dagger == EQ(ch, WIELD)) found = WIELD;
-  else return FALSE;
+  if (dagger != EQ(ch, WIELD)) return FALSE;
 
   if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE) && (!CHAOSMODE)) return FALSE;
 
@@ -435,7 +433,7 @@ return DONE;
 int Night_Sword (OBJ *sword, CHAR *ch, int cmd, char *arg) {
   int chance;
   char buf[MAX_INPUT_LENGTH], name[256], name2[256], buf2[MIL];
-  CHAR *victim, *targ, *owner, *holder;
+  CHAR *victim = NULL, *targ = NULL, *owner = NULL, *holder = NULL;
 
   if(cmd==MSG_SHOW_AFFECT_TEXT) {
     if(!sword->equipped_by) return FALSE;
@@ -1125,7 +1123,7 @@ int Filthy_Bracelet(OBJ *obj,CHAR *ch, int cmd, char *argument) {
     enchantment_to_char(wearer, tmp_enchantment, FALSE);
     OBJ_SPEC(obj) = counter;
     sprintf(buf,"Hell Log Ench: [ %s just contracted Greasy Palms at %d ]",GET_NAME(wearer),world[CHAR_REAL_ROOM(wearer)].number);
-    log_f (buf);
+    log_s(buf);
     return FALSE;
   }
   return FALSE;
@@ -1133,7 +1131,7 @@ int Filthy_Bracelet(OBJ *obj,CHAR *ch, int cmd, char *argument) {
 
 
 int Ring_Agony (OBJ *ring, CHAR *ch, int cmd, char *arg) {
-  CHAR *vict, *owner, *holder;
+  CHAR *vict, *owner;
   char buf[MAX_INPUT_LENGTH];
   int counter=80;
 
@@ -1146,8 +1144,6 @@ int Ring_Agony (OBJ *ring, CHAR *ch, int cmd, char *arg) {
 
   if(ring->equipped_by && !IS_NPC(ring->equipped_by))  owner = ring->equipped_by;
 
-  if(ring->carried_by && !IS_NPC(ring->carried_by))  holder = ring->carried_by;
-
   if(ch==owner && cmd==CMD_REMOVE) {
     if(ch!=owner) return FALSE;
     if(!ring->equipped_by || owner!=ring->equipped_by) return FALSE;
@@ -1159,7 +1155,6 @@ int Ring_Agony (OBJ *ring, CHAR *ch, int cmd, char *arg) {
     if(ring == EQ(owner,WEAR_FINGER_L)) remeq(owner,WEAR_FINGER_L);
     else if(ring == EQ(owner,WEAR_FINGER_R)) remeq(owner,WEAR_FINGER_R);
     owner=0;
-    holder=0;
     return TRUE;
   }
 
@@ -1187,7 +1182,6 @@ int Ring_Agony (OBJ *ring, CHAR *ch, int cmd, char *arg) {
       else if(ring == EQ(vict,WEAR_FINGER_R)) remeq(vict,WEAR_FINGER_R);
       OBJ_SPEC(ring)=counter;
       owner=0;
-      holder=0;
       return FALSE;
     }
     if(OBJ_SPEC(ring) <= 20 && vict->specials.fighting && OBJ_SPEC(ring) > 0 && chance(3)) {
@@ -2412,8 +2406,8 @@ int Charybdis(CHAR *dis, CHAR *ch, int cmd, char *arg) {
           }
           break;
         case 4:
-          act("With a flourish of $s cape, $n melts the floor beneath your feet!",1,dis,0,victim,TO_ROOM);
-          act("With a flourish of your cape, you melt the floor beneath!",1,dis,0,victim,TO_CHAR);
+          act("With a flourish of $s cape, $n melts the floor beneath your feet!",1,dis,0,0,TO_ROOM);
+          act("With a flourish of your cape, you melt the floor beneath!",1,dis,0,0,TO_CHAR);
           for (victim = world[CHAR_REAL_ROOM(dis)].people; victim; victim = next_vict) {
             next_vict = victim->next_in_room;
             if(saves_spell(victim, SAVING_SPELL,GET_LEVEL(dis)))
@@ -2722,8 +2716,8 @@ int Geryon(CHAR *s, CHAR *ch, int cmd, char *arg) {
           }
           break;
         case 4:
-          act("$n begins frothing at the mouth and bites madly at your party!",1,s,0,victim,TO_ROOM);
-          act("You bite the hell out of everyone around you !!",1,s,0,victim,TO_CHAR);
+          act("$n begins frothing at the mouth and bites madly at your party!",1,s,0,0,TO_ROOM);
+          act("You bite the hell out of everyone around you !!",1,s,0,0,TO_CHAR);
           for(victim = world[CHAR_REAL_ROOM(s)].people; victim; victim = next_vict) {
             next_vict=victim->next_in_room;
             if(saves_spell(victim, SAVING_SPELL,GET_LEVEL(s)))
@@ -3032,7 +3026,7 @@ int diseased_creature(CHAR *mob ,CHAR *ch, int cmd, char *argument) {
     tmp_enchantment->func     = red_death;
     enchantment_to_char(vict, tmp_enchantment, FALSE);
     sprintf(buf,"Hell Log Ench: [ %s just contracted Red Death at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-    log_f (buf);
+    log_s(buf);
     }
   }
   return FALSE;
@@ -3136,7 +3130,7 @@ int lizard(CHAR *mob ,CHAR *ch, int cmd, char *argument) {
       act("$n begins to shrink and shift into a small lizard!",FALSE,vict,0,0,TO_ROOM);
       send_to_char("You feel rather strange, and suddenly realize you've shrunk and are covered in green scales!\n\r",vict);
       sprintf(buf,"Hell Log Ench: [ %s just contracted Lizard Lycanthropy at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-      log_f (buf);
+      log_s(buf);
       return FALSE;
     }
   }
@@ -3714,7 +3708,7 @@ int sin_lust(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg) {
         send_to_char("Congratulations! You're expecting!\n\r",ench_ch);
         if(IS_MORTAL(ench_ch)) {
           sprintf(buf2,"Hell Log Ench: [ %s just contracted 1st Pregnancy at %d ]",GET_NAME(ench_ch),world[CHAR_REAL_ROOM(ench_ch)].number);
-          log_f (buf2);
+          log_s(buf2);
         }
       }
       break;
@@ -3777,7 +3771,7 @@ int sin_lust(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg) {
         send_to_char("Congratulations! You're expecting!\n\r",ench_ch);
         if(IS_MORTAL(ench_ch)) {
           sprintf(buf2,"Hell Log Ench: [ %s just contracted 2nd Pregnancy at %d ]",GET_NAME(ench_ch),world[CHAR_REAL_ROOM(ench_ch)].number);
-          log_f (buf2);
+          log_s(buf2);
         }
       }
       break;
@@ -3840,7 +3834,7 @@ int sin_lust(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg) {
         send_to_char("Congratulations! You're expecting!\n\r",ench_ch);
         if(IS_MORTAL(ench_ch)) {
           sprintf(buf2,"Hell Log Ench: [ %s just contracted 3rd Pregnancy at %d ]",GET_NAME(ench_ch),world[CHAR_REAL_ROOM(ench_ch)].number);
-          log_f (buf2);
+          log_s(buf2);
         }
       }
       break;
@@ -3903,7 +3897,7 @@ int sin_lust(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg) {
         send_to_char("Congratulations! You're expecting!\n\r",ench_ch);
         if(IS_MORTAL(ench_ch)) {
           sprintf(buf2,"Hell Log Ench: [ %s just contracted 4th Pregnancy at %d ]",GET_NAME(ench_ch),world[CHAR_REAL_ROOM(ench_ch)].number);
-          log_f (buf2);
+          log_s(buf2);
         }
       }
       break;
@@ -4281,15 +4275,13 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
   ENCH *tmp_enchantment;
   char buf[MIL], buf2[MIL], buf3[MIL], buf4[MIL];
   OBJ *tmp, *tmp2;
-  int stingnum, num, dmg, i, room, qend, spl, attack=100, pop_percent, object, sword=0, reset=1;
+  int stingnum, num, dmg, i, qend, spl, attack=100, pop_percent, object, sword=0, reset=1;
   struct descriptor_data *d;
   struct char_data *victim, *next_vict;
   struct obj_data *obj;
   struct affected_type_5 af;
   char *tmp_string;
   char *skip_spaces (char*);
-
-  room=CHAR_REAL_ROOM(lucifer);
 
   if(lucifer && cmd==MSG_ZONE_RESET) {
 
@@ -4761,7 +4753,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
           act("$n has been touched by the Hand of Lucifer!\n\r",FALSE,vict,0,0,TO_ROOM);
           send_to_char("You feel rather strange and very nauseous.\n\r",vict);
           sprintf(buf4,"Hell Log Ench: [ %s just contracted WRATH at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-          log_f (buf4);
+          log_s(buf4);
           break;
 
         case 2:
@@ -4774,7 +4766,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
           act("$n has been touched by the Hand of Lucifer!\n\r",FALSE,vict,0,0,TO_ROOM);
           send_to_char("You feel rather strange and very nauseous.\n\r",vict);
           sprintf(buf4,"Hell Log Ench: [ %s just contracted LUST at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-          log_f (buf4);
+          log_s(buf4);
           break;
 
         case 3:
@@ -4787,7 +4779,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
           act("$n has been touched by the Hand of Lucifer!\n\r",FALSE,vict,0,0,TO_ROOM);
           send_to_char("You feel rather strange and very nauseous.\n\r",vict);
           sprintf(buf4,"Hell Log Ench: [ %s just contracted AVARICE at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-          log_f (buf4);
+          log_s(buf4);
           break;
 
         case 4:
@@ -4800,7 +4792,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
           act("$n has been touched by the Hand of Lucifer!\n\r",FALSE,vict,0,0,TO_ROOM);
           send_to_char("You feel rather strange and very nauseous.\n\r",vict);
           sprintf(buf4,"Hell Log Ench: [ %s just contracted GLUTTONY at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-          log_f (buf4);
+          log_s(buf4);
           break;
 
         case 5:
@@ -4813,7 +4805,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
           act("$n has been touched by the Hand of Lucifer!\n\r",FALSE,vict,0,0,TO_ROOM);
           send_to_char("You feel rather strange and very nauseous.\n\r",vict);
           sprintf(buf4,"Hell Log Ench: [ %s just contracted ENVY at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-          log_f (buf4);
+          log_s(buf4);
           break;
 
         case 6:
@@ -4830,7 +4822,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
           act("$n has been touched by the Hand of Lucifer!\n\r",FALSE,vict,0,0,TO_ROOM);
           send_to_char("You feel rather strange and very nauseous.\n\r",vict);
           sprintf(buf4,"Hell Log Ench: [ %s just contracted PRIDE at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-          log_f (buf4);
+          log_s(buf4);
 
           if(vict->specials.riding) stop_riding(vict,vict->specials.riding);
           char_from_room (vict);
@@ -4851,7 +4843,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
           act("$n has been touched by the Hand of Lucifer!\n\r",FALSE,vict,0,0,TO_ROOM);
           send_to_char("You feel rather strange and very nauseous.\n\r",vict);
           sprintf(buf4,"Hell Log Ench: [ %s just contracted SLOTH at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
-          log_f (buf4);
+          log_s(buf4);
           break;
 
         default:
@@ -5727,7 +5719,7 @@ int floating_rooms(int room, CHAR *ch, int cmd, char *arg) {
 
 
 int hell_rooms(int room, CHAR *ch, int cmd, char *arg) {
-  OBJ *obj, *next_obj;
+  OBJ *obj = NULL, *next_obj = NULL;
   char buf[MAX_INPUT_LENGTH], buf2[MIL];
   int v_room, vroom;
   v_room = world[room].number;
