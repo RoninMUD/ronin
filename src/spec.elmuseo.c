@@ -263,7 +263,7 @@ void mus_remeq(CHAR *victim, int pos) {
     unequip_char (victim, pos);
     obj_to_room (o, CHAR_REAL_ROOM(victim));
     sprintf(buf,"ELWAXO: [ %s had %s removed at %d ]",GET_NAME(victim),OBJ_SHORT(o),world[CHAR_REAL_ROOM(victim)].number);
-    log_f (buf);
+    log_s(buf);
     o->log=1;
     save_char(victim,NOWHERE);
   }
@@ -3496,7 +3496,7 @@ int mus_kimagee_hide(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   }
   char buf[MAX_INPUT_LENGTH];
   sprintf(buf,"ELWAXO: %s had Kimagee hide miracled at %d",GET_NAME(victim),world[CHAR_REAL_ROOM(victim)].number);
-  log_f(buf);
+   log_s(buf);
   extract_obj( unequip_char( victim, WEAR_ARMS ) );
   CHAR *ghost = read_mobile( MUS_FLAYED_KIMAGEE, VIRTUAL );
   char_to_room(ghost, CHAR_REAL_ROOM(victim));
@@ -3766,7 +3766,7 @@ int mus_elar_skull(OBJ *obj, CHAR *ch, int cmd, char *arg) {
             GET_NAME(tch), world[CHAR_REAL_ROOM(tch)].name,
             CHAR_VIRTUAL_ROOM(tch));
   wizlog(buf, LEVEL_WIZ, 6);
-  log_f(buf);
+  log_s(buf);
 
   stop_fighting (tch);
 

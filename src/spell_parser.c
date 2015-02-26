@@ -1456,7 +1456,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
        }
   } else {
     sprintf(buf,"WIZINFO: %s casts %s.",GET_NAME(ch),argument);
-    log_f(buf);
+    log_s(buf);
     wizlog(buf,GET_LEVEL(ch)+1,5);
   }
 

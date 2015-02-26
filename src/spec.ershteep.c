@@ -394,7 +394,7 @@ int ersh_calcifer(CHAR *calcifer, CHAR *ch, int cmd, char *arg)
     case CMD_CAST:
       if(ch && IS_MORTAL(ch))
       {
-        act("$n brightens and the floor ignites with blinding white flames.",0,calcifer,0,vict,TO_ROOM);
+        act("$n brightens and the floor ignites with blinding white flames.",0,calcifer,0,0,TO_ROOM);
         for(vict = world[CHAR_REAL_ROOM(calcifer)].people; vict; vict = next_vict)
         {
           next_vict = vict->next_in_room;
@@ -420,7 +420,7 @@ int ersh_calcifer(CHAR *calcifer, CHAR *ch, int cmd, char *arg)
 		    break;
 		  case 3:
           case 4:/* 10% burn all */
-            act("$n brightens and the floor ignites with blinding white flames.",0,calcifer,0,vict,TO_ROOM);
+            act("$n brightens and the floor ignites with blinding white flames.",0,calcifer,0,0,TO_ROOM);
             for(vict = world[CHAR_REAL_ROOM(calcifer)].people; vict; vict = next_vict)
             {
               next_vict = vict->next_in_room;

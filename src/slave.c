@@ -124,7 +124,7 @@ int query( char *orig_arg )
     host = strtok(arg, ",");
     port_pair = strtok(NULL, "\n");
 
-    hp = gethostbyname(arg);
+    hp = gethostbyname(host);
     if( hp == NULL ) {
        static struct hostent def;
        static struct in_addr defaddr;

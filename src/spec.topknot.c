@@ -584,7 +584,7 @@ tk_kender_steal (CHAR *ch)
 		      (IS_NPC(vict) ? MOB_SHORT(vict) :
 		       GET_NAME(vict)));
 	      /*wizlog(buf, LEVEL_WIZ, 6);*/
-	      log_f(buf);
+	      log_s(buf);
 	      loot->log=1;
 	      return 1;
 	    }
@@ -605,7 +605,7 @@ tk_kender_steal (CHAR *ch)
 			(IS_NPC(vict) ? MOB_SHORT(vict) :
 			 GET_NAME(vict)));
 		/*wizlog(buf, LEVEL_WIZ, 6);*/
-		log_f(buf);
+		log_s(buf);
     loot->log=1;
 		return 1;
 	      }
@@ -744,7 +744,7 @@ tk_kender_action (CHAR *ch)
       sprintf (buf, "%s just dropped %s in #%d",
 	       MOB_SHORT(ch), OBJ_SHORT(o_tmp), CHAR_VIRTUAL_ROOM(ch));
       /*wizlog(buf, LEVEL_WIZ, 6);*/
-      log_f(buf);
+      log_s(buf);
       return;
     }
 
@@ -758,7 +758,7 @@ tk_kender_action (CHAR *ch)
 	       MOB_SHORT(ch), OBJ_SHORT(o_tmp), PERS(c_tmp, ch),
 	       CHAR_VIRTUAL_ROOM(ch));
       /*wizlog(buf, LEVEL_WIZ, 6);*/
-      log_f(buf);
+      log_s(buf);
       return;
     }
 
@@ -1052,7 +1052,7 @@ tk_cannon (OBJ *cannon, CHAR *ch, int cmd, char *arg)
 	  dmg = number (1,3000);
 	  damage (vict, vict, dmg, TYPE_UNDEFINED,DAM_NO_BLOCK);
 	  sprintf (buf, "Kender:: [%s fired the cannon at %s for %d points.]\n\r", GET_NAME(ch), GET_NAME(vict), dmg);
-	  log_f(buf);
+	  log_s(buf);
 	}
       send_to_char ("You are stunned by the sound.\n\r",ch);
       WAIT_STATE (ch, 2 * PULSE_VIOLENCE);

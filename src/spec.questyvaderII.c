@@ -99,7 +99,7 @@ int CTF_mirror_room(int room, CHAR *ch, int cmd, char *arg, int obj)
 
 int CTF_die(int room, CHAR *ch, int cmd, char *arg, int transRoom)
 {
-    CHAR *tmp, *opp, *mob;
+    CHAR *tmp, *mob;
     OBJ *obj;
     char buf[MAX_LENGTH];
 
@@ -130,7 +130,7 @@ int CTF_die(int room, CHAR *ch, int cmd, char *arg, int transRoom)
             if (GET_OPPONENT(tmp) == ch)
                 stop_fighting(tmp);
 
-        act("$n screams as if his very life force is leaving $m, but it is suddenly silent as $e disappears.", FALSE, ch, 0, opp, TO_ROOM);
+        act("$n screams as if his very life force is leaving $m, but it is suddenly silent as $e disappears.", FALSE, ch, 0, 0, TO_ROOM);
         char_from_room(ch);
         char_to_room(ch, real_room(transRoom));
         GET_HIT(ch) = 1;

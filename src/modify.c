@@ -284,7 +284,7 @@ void do_string(struct char_data *ch, char *arg, int cmd)
     if(ch!=mob) {
       sprintf(buffer,"WIZINFO: (%s) string %s",GET_NAME(ch),arg);
       wizlog(buffer, GET_LEVEL(ch)+1, 5);
-      log_f(buffer);
+      log_s(buffer);
     }
 
     if(field==1 && (!*string) ) {
@@ -350,7 +350,7 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 
     sprintf(buffer,"WIZINFO: (%s) string %s",GET_NAME(ch),arg);
     wizlog(buffer, LEVEL_IMP, 5);
-    log_f(buffer);
+    log_s(buffer);
 
     if(field==1 && (!*string) ) {
       send_to_char("You must enter a name at the command line.\n\r",ch);
@@ -500,7 +500,7 @@ void do_setskill (struct char_data *ch, char *arg, int cmd) {
 
     sprintf(buf, "WIZINFO: %s setskill %s %d %d", GET_NAME(ch),
       GET_NAME(victim), skill_number, value_number);
-    log_f(buf);
+    log_s(buf);
     wizlog(buf, GET_LEVEL(ch), 5);
   }
 }
@@ -513,9 +513,9 @@ void do_setskill (struct char_data *ch, char *arg, int cmd) {
 
 char *one_word(char *argument, char *first_arg )
 {
-  int found, begin, look_at;
+  int begin, look_at;
 
-  found = begin = 0;
+  begin = 0;
 
   do
   {

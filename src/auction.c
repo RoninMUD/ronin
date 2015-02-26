@@ -206,7 +206,7 @@ void intialize_auction_board(void)
   }
   fclose(fl);
   sprintf(buf, "  Auction board size: %d and %d objects", k, A_Board.obj_num);
-  log_f(buf);
+  log_s(buf);
 }
 
 void save_auction(void)
@@ -385,7 +385,7 @@ void update_auction(CHAR *auctioneer)
           if (A_Board.auc[i].value > AUCTION_REDUCE) {
             sprintf(buf, "Auction Check: %s (MIN BID: %d coins) (%s) - Item reduced",
                 OBJ_SHORT(A_Board.auc[i].obj), A_Board.auc[i].value, A_Board.auc[i].owner);
-            log_f(buf);
+            log_s(buf);
             A_Board.auc[i].value=A_Board.auc[i].value*7/10;
     /* added by Sane 4-19  */
             if (A_Board.auc[i].value<1)(A_Board.auc[i].value=10000);
@@ -396,7 +396,7 @@ void update_auction(CHAR *auctioneer)
           } else {
             sprintf(buf, "Auction Check: %s (MIN BID: %d coins) (%s) - Item removed",
                 OBJ_SHORT(A_Board.auc[i].obj), A_Board.auc[i].value, A_Board.auc[i].owner);
-            log_f(buf);
+            log_s(buf);
 
             if(A_Board.auc[i].owner) free(A_Board.auc[i].owner);
             A_Board.auc[i].owner = 0;
@@ -443,7 +443,7 @@ void update_auction(CHAR *auctioneer)
         case AUCTION_COLLECT: {
           sprintf(buf, "Auction Check: (COLLECT: %d coins) (%s) - MAX_TIME exceeded - coins removed",
                 A_Board.auc[i].value, A_Board.auc[i].owner);
-          log_f(buf);
+          log_s(buf);
           if(A_Board.auc[i].owner) free(A_Board.auc[i].owner);
           A_Board.auc[i].owner = 0;
           if(A_Board.auc[i].last_bidder) free(A_Board.auc[i].last_bidder);
@@ -905,8 +905,6 @@ void do_bid(CHAR *ch, char *arg, int cmd)
 void check_auction(void) {
   char buf[MAX_STRING_LENGTH];
   int i, needsave;
-  time_t timenow;
-  timenow = time(0);
   needsave = FALSE;
 
   for(i = 0; i < MAX_OBJS_AUCTION; i++) {
@@ -915,7 +913,7 @@ void check_auction(void) {
         sprintf(buf, "Auction Check: %s (SOLD: %s %d coins) (%s) - Put back on block",
                 OBJ_SHORT(A_Board.auc[i].obj), A_Board.auc[i].last_bidder,
                 A_Board.auc[i].value, A_Board.auc[i].owner);
-        log_f(buf);
+        log_s(buf);
         free(A_Board.auc[i].last_bidder);
         A_Board.auc[i].last_bidder = 0;
         A_Board.auc[i].status = AUCTION_BIDS;
@@ -1017,7 +1015,7 @@ void auction_recover(CHAR *auctioneer, CHAR *ch, char *arg)
   act("$n gives you $p.", FALSE, auctioneer, A_Board.auc[number].obj, ch, TO_VICT);
   act("$n gives $p to $N.", FALSE, auctioneer, A_Board.auc[number].obj, ch, TO_NOTVICT);
   sprintf(buf,"WIZINFO: %s recovers %s (%d) from auction.",GET_NAME(ch),OBJ_SHORT(A_Board.auc[number].obj),number);
-  log_f(buf);
+  log_s(buf);
   wizlog(buf,GET_LEVEL(ch),5);
 
   obj_to_char(A_Board.auc[number].obj, ch);

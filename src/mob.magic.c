@@ -128,7 +128,7 @@ void spell_fire_breath(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         sprintf(buf,"ObjLog: %s just destroyed %s worn by %s",MOB_SHORT(ch),
           OBJ_SHORT(burn), GET_NAME(victim));
 	extract_obj(burn);
-        log_f(buf);
+        log_s(buf);
       }
     }
   }
@@ -185,7 +185,7 @@ void spell_frost_breath(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
         sprintf(buf,"ObjLog: %s just destroyed %s worn by %s",MOB_SHORT(ch),
           OBJ_SHORT(frozen), GET_NAME(victim));
 	extract_obj(frozen);
-        log_f(buf);
+        log_s(buf);
       }
     }
   }
@@ -228,7 +228,7 @@ void spell_acid_breath(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
      OBJ_SHORT(eq), GET_NAME(victim));
     unequip_char(victim, damaged);
     extract_obj(eq);
-    log_f(buf);
+    log_s(buf);
     return;
   }
 }

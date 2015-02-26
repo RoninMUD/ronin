@@ -157,7 +157,7 @@ void load_clan_file(void) {
   char temp[64];
 
   if (!(fl = fopen("clans", "r"))) {
-          log_f("Clan file not found (load_clan_file)");
+          log_s("Clan file not found (load_clan_file)");
           return;
   }
 
@@ -165,7 +165,7 @@ void load_clan_file(void) {
     fscanf(fl, "#%d\n", &clan_num);
     sprintf(temp,"Clan Number %d",clan_num);
     if(clan_num==-1) break;
-    log_f(temp);
+    log_s(temp);
     clan_top=clan_num;
     clan_list[clan_num].name=fread_action(fl);
     fscanf(fl, "%ld\n", &clan_list[clan_num].monthly_rent);
@@ -189,11 +189,11 @@ void save_clan_file(void) {
   int clan_num;
 
   if(!clan_top) {
-    log_f("No clans loaded (save_clan_file)");
+    log_s("No clans loaded (save_clan_file)");
     return;
   }
   if (!(fl = fopen("clans", "w"))) {
-          log_f("Unable to open for write to clan file");
+          log_s("Unable to open for write to clan file");
           return;
   }
 
@@ -240,7 +240,7 @@ void list_clan_file(struct char_data *ch,int clan_num) {
   FILE *fl;
 
   if(!clan_top) {
-    log_f("No clans loaded (list_clan_file)");
+    log_s("No clans loaded (list_clan_file)");
     send_to_char("The clan file is not currently loaded.\n\r",ch);
     return;
   }
@@ -616,22 +616,22 @@ Usage: clan add <name> <num>\n\r\
       switch(version) {
         case 2:
           if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
-          {log_f("Error Reading rent file(logon_char)");fclose(fl);return;}
+          {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
           break;
         case 3:
           if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-          {log_f("Error Reading rent file(logon_char)");fclose(fl);return;}
+          {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
           break;
         case 4:
           if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-          {log_f("Error Reading rent file(logon_char)");fclose(fl);return;}
+          {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
           break;
         case 5:
           if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
-          {log_f("Error Reading rent file(logon_char)");fclose(fl);return;}
+          {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
           break;
         default:
-          log_f("Error getting pfile version (logon_char)");
+          log_s("Error getting pfile version (logon_char)");
           return;
       }
 
@@ -660,7 +660,7 @@ Usage: clan add <name> <num>\n\r\
           store_to_char_5(&char_data_5,vict);
           break;
         default:
-          log_f("Version number corrupted? (logon_char)");
+          log_s("Version number corrupted? (logon_char)");
           return;
       }
 
@@ -778,22 +778,22 @@ Usage: clan add <name> <num>\n\r\
       switch(version) {
         case 2:
           if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
-          {log_f("Error Reading rent file(logon_char)");fclose(fl);return;}
+          {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
           break;
         case 3:
           if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-          {log_f("Error Reading rent file(logon_char)");fclose(fl);return;}
+          {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
           break;
         case 4:
           if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-          {log_f("Error Reading rent file(logon_char)");fclose(fl);return;}
+          {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
           break;
         case 5:
           if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
-          {log_f("Error Reading rent file(logon_char)");fclose(fl);return;}
+          {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
           break;
         default:
-          log_f("Error getting pfile version (logon_char)");
+          log_s("Error getting pfile version (logon_char)");
           return;
       }
 
@@ -822,7 +822,7 @@ Usage: clan add <name> <num>\n\r\
           store_to_char_5(&char_data_5,vict);
           break;
         default:
-          log_f("Version number corrupted? (logon_char)");
+          log_s("Version number corrupted? (logon_char)");
           return;
       }
 
@@ -1080,7 +1080,7 @@ int diabolik_ring(int room, CHAR *ch, int cmd, char *arg) {
 int diabolik_library(int room, CHAR *ch, int cmd, char *arg) {
   char buf[MAX_INPUT_LENGTH];
   OBJ *tmp;
-  int temp;
+  int temp = 0;
   if(!ch) return(FALSE);
   if (cmd != CMD_LOOK || !AWAKE (ch)) return FALSE;
   one_argument (arg,buf);

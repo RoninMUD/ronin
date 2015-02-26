@@ -392,7 +392,7 @@ void paper_reset_board() {
 
 int paper_display_msg(CHAR *ch, char *arg) {
   char number[MAX_INPUT_LENGTH], buffer[MAX_STRING_LENGTH];
-  int msg,tmp_msg;
+  int msg,tmp_msg = 0;
   bool next=FALSE;
 
   one_argument(arg, number);

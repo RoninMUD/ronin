@@ -175,7 +175,7 @@ void intialize_lottery(void) {
   }
   fclose(fl);
   sprintf(buf, "  Lottery machine size: %d objects",l_mach.obj_num);
-  log_f(buf);
+  log_s(buf);
 }
 
 void save_lottery(void) {
@@ -311,11 +311,10 @@ int adjust_ticket_strings(OBJ *obj) { /*Added Oct 98 Ranger */
   char *Tcolor[10]={
    "purple","brown","grey","white","cyan",
    "red","orange","green","yellow","blue"};
-  int lot,clr,ticket;
+  int lot,clr;
   if(!obj) return FALSE;
   if(obj->obj_flags.type_flag != ITEM_TICKET) return FALSE;
   lot=obj->obj_flags.value[0];
-  ticket=obj->obj_flags.value[1];
   /* Ticket extractions */
   if(lot>0 && lot<131) {
       extract_obj(obj);return FALSE;

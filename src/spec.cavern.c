@@ -201,7 +201,7 @@ int cs_coffinb_spec (int room, CHAR *ch, int cmd, char *arg) {
 
 void death_list(CHAR *ch);
 int cs_soul_spec(int room, CHAR *ch, int cmd, char *arg) {
-  int soul_room;
+  int soul_room = NOWHERE;
   char buf[MAX_STRING_LENGTH];
   CHAR *soul;
 

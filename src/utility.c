@@ -258,7 +258,7 @@ int number(int from, int to)
   randnum=(int)((longrand() % (to - from + 1)) + from);
   if(randnum<from || randnum>to) {
     sprintf(buf,"WIZINFO: Random Number beyond range. From: %d To: %d  Num: %d",from,to,randnum);
-    log_f(buf);
+    log_s(buf);
   }
   return randnum;
 }
@@ -406,7 +406,7 @@ char *str_cut(char *source,char *dest,int number) {
 
   if(strlen(source)>MAX_INPUT_LENGTH ||
     strlen(source)<number) return source;
-  sprintf(buf,source);
+  strncpy(buf,source,sizeof(buf));
   for(y=0;source[y];y++){
     buf[y]=source[y+number];
   }
@@ -548,7 +548,7 @@ int str_cat(char *s, int len, int maxlen, const char *append)
   *(s + len + i) = '\0';
 
   if(*(append + i) != '\0')
-    log_f("BUG: too long append string in str_cat");
+    log_s("BUG: too long append string in str_cat");
 
   return(len + i);
 }
@@ -614,7 +614,7 @@ char *str_upper(char *str)
 
 /* writes a string to the log */
 
-void log_string(char *str)
+void log_s(char *str)
 {
   long ct;
   char *tmstr;
@@ -624,7 +624,7 @@ void log_string(char *str)
   *(tmstr + strlen(tmstr) - 1) = '\0';
 
   if (logfile == NULL) {
-    puts("SYSERR: Using log_string() before stream was initialized!");
+    puts("SYSERR: Using log_s() before stream was initialized!");
     return;
   }
   fprintf(logfile, "%s :: %s\n", tmstr, str);
@@ -639,7 +639,7 @@ void log_f (char * fmt, ...)
   vsnprintf (buf, 2*MSL, fmt, args);
   va_end (args);
 
-  log_string (buf);
+  log_s(buf);
 }
 
 void deathlog(char *str)
@@ -1472,7 +1472,7 @@ void program_fork()
 
     /* Send input to the program (if any). */
     if (program_queue[0].input)
-      fprintf(process_in, program_queue[0].input);
+      fputs(program_queue[0].input, process_in);
 
     /* Get the file flags of from[0]. */
     flags = fcntl(from[0], F_GETFL);
@@ -1630,7 +1630,7 @@ struct char_data *get_ch_by_id(int num)
 }
 
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch) {
-  int index;
+  int index = 0;
 
   if(GET_OSTR(ch)!=18) index=GET_OSTR(ch);
 
@@ -1646,7 +1646,7 @@ int OSTRENGTH_APPLY_INDEX(struct char_data *ch) {
 }
 
 int STRENGTH_APPLY_INDEX(struct char_data *ch) {
-  int index;
+  int index = 0;
 
   if(GET_STR(ch)!=18) index=GET_STR(ch);
 

@@ -112,7 +112,7 @@ $State: Exp $
 
     if(IS_MORTAL(victim)) {  /* Linerfix 110203 */
       sprintf(buf,"ObjLog: [ %s had %s extracted at %d ]",GET_NAME(victim),OBJ_SHORT(eq),world[CHAR_REAL_ROOM(victim)].number);
-      log_f (buf);
+      log_s(buf);
     }
   }
    return FALSE;

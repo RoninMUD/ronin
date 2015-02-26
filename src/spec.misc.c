@@ -390,12 +390,19 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
   struct obj_data *tmp_object;
   int percent, bits, num;
   char buf[MIL];
-  CHAR *owner, *holder;
+  CHAR *holder = NULL;
+
+#ifdef CHAOS_2002
+  CHAR *owner = NULL;
+#endif
 
   if(IS_NPC(ch)) return FALSE;
 
-  if(gun->carried_by) 
+#ifdef CHAOS_2002
+  if(gun->carried_by)
     owner=gun->carried_by;
+#endif
+
   if(gun->equipped_by)
     holder=gun->equipped_by;
 
@@ -475,12 +482,11 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
 
           num = number(0,9);
 
-          if (IS_IMPLEMENTOR(holder))
-          {
+          if (IS_IMPLEMENTOR(holder)) {
             argument = one_argument(argument,buf);
             if(!strncasecmp(buf,"rape",4)) num = 7;
           }
-                    
+
           switch(num) {
             case 9:
               act("Your gun fires a volley of toilet paper rolls at $N, beating the life out of $M!",FALSE,holder,0,tmp_char,TO_CHAR);
@@ -583,7 +589,7 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
               }
               break;
             default:
-              break;            
+              break;
           }
           if (!IS_IMPLEMENTOR(holder)) WAIT_STATE(holder, PULSE_VIOLENCE*2);
           return TRUE;
@@ -1402,7 +1408,7 @@ int onering_quest(OBJ *sh, CHAR *ch, int cmd, char *arg) {
                GET_NAME(tch), world[CHAR_REAL_ROOM(tch)].name,
                CHAR_VIRTUAL_ROOM(tch));
       wizlog(buf, LEVEL_WIZ, 6);
-      log_f(buf);
+      log_s(buf);
 
       stop_fighting (tch);
 

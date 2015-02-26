@@ -69,7 +69,7 @@ save_vote (void) {
 
   if (!(fl = fopen (VOTE_FILE, "w"))) {
     sprintf (buf, "Error in saving votes (%s)...", VOTE_FILE);
-    log_f(buf);
+    log_s(buf);
     return;
   }
 
@@ -87,7 +87,7 @@ save_vote (void) {
   fclose (fl);
 
   sprintf (buf, "Saved all votes to %s ...", VOTE_FILE);
-  log_f(buf);
+  log_s(buf);
 }
 
 void read_vote (void) {
@@ -100,7 +100,7 @@ void read_vote (void) {
 
   if (!(fl = fopen (VOTE_FILE, "r"))) {
     sprintf (buf, "Didn't file %s in current directory...",VOTE_FILE);
-    log_f(buf);
+    log_s(buf);
     return;
   }
 
@@ -126,7 +126,7 @@ void read_vote (void) {
   fclose (fl);
 
   sprintf (buf, "Reading %s to update Voting Machine...",VOTE_FILE);
-  log_f(buf);
+  log_s(buf);
 }
 
 void
@@ -137,7 +137,7 @@ save_voters (void) {
 
   if (!(fl = fopen (VOTERS_FILE, "w"))) {
     sprintf (buf, "Error in saving voters (%s)...", VOTERS_FILE);
-    log_f(buf);
+    log_s(buf);
     return;
   }
 
@@ -151,7 +151,7 @@ save_voters (void) {
   fclose (fl);
 
   sprintf (buf, "Saved all voters to %s ...", VOTERS_FILE);
-  log_f(buf);
+  log_s(buf);
 }
 
 void
@@ -163,7 +163,7 @@ read_voters (void) {
 
   if (!(fl = fopen (VOTERS_FILE, "r"))) {
     sprintf (buf, "Didn't find %s in current directory ...", VOTERS_FILE);
-    log_f(buf);
+    log_s(buf);
     return;
   }
 
@@ -184,7 +184,7 @@ read_voters (void) {
   }
 
   sprintf (buf, "Reading %s to update Voting Machine...",VOTERS_FILE);
-  log_f(buf);
+  log_s(buf);
   fclose(fl);
 }
 

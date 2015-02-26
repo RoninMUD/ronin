@@ -822,7 +822,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd) {
     if(IS_SET(victim->specials.act, ACT_NICE_THIEF)) {
       sprintf(buf, "%s is a bloody thief.", GET_NAME(ch));
       do_shout(victim, buf, 0);
-      log_f(buf);
+      log_s(buf);
       send_to_char("Don't you ever do that again!\n\r", ch);
     } else {
       hit(victim, ch, TYPE_UNDEFINED);
@@ -2274,36 +2274,36 @@ copying to that address.\n\r\n\r\
 
   argument=one_argument(argument,arg);
   if(!*arg) {
-    printf_to_char(ch,usage);
+    send_to_char(usage, ch);
     return;
   }
 
   else if(is_abbrev(arg, "yes")) {
     SET_BIT(ch->specials.pflag, PLR_EMAIL);
-    printf_to_char(ch,"Postcard copying to email turned on.\n\r");
+    send_to_char("Postcard copying to email turned on.\n\r", ch);
     return;
   }
   else if(is_abbrev(arg, "no")) {
     REMOVE_BIT(ch->specials.pflag, PLR_EMAIL);
-    printf_to_char(ch,"Postcard copying to email turned off.\n\r");
+    send_to_char("Postcard copying to email turned off.\n\r", ch);
     return;
   }
   else if(is_abbrev(arg, "show")) {
-    printf_to_char(ch,"Current email address: %s\n\r",GET_EMAIL(ch));
+    printf_to_char(ch, "Current email address: %s\n\r",GET_EMAIL(ch));
     return;
   }
   else if(is_abbrev(arg, "set")) {
     argument=one_argument(argument,arg);
     if(!*arg) {
-      printf_to_char(ch,usage);
+      send_to_char(usage, ch);
       return;
     }
     sprintf(GET_EMAIL(ch),"%s",arg);
-    printf_to_char(ch,"Done\n\r");
+    send_to_char("Done\n\r", ch);
     return;
   }
   else {
-    printf_to_char(ch,usage);
+    send_to_char(usage, ch);
     return;
   }
 }

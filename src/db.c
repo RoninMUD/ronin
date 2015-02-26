@@ -2312,7 +2312,7 @@ void reset_zone(int zone, int full)
   char buf[256];
   struct char_data *mob=NULL,*tmpmob=NULL; /* tmpmob - Ranger June 96 */
   struct obj_data *obj, *obj_to;
-  int room, object, object_to, mobile,pop_bonus=4,num;
+  int room, object, object_to, mobile=0,pop_bonus=4,num;
 
 /* The following switch was added by Ranger to fix the zone reset when
      empty problem. */

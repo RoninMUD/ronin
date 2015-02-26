@@ -242,7 +242,7 @@ int strahd(CHAR *mob, CHAR *ch, int cmd, char *arg)
         wield = victim->equipment[WIELD];
         if(V_OBJ(wield)==11523) return FALSE;
         sprintf(buf,"WIZINFO: %s disarms %s's %s",GET_NAME(mob),GET_NAME(victim),OBJ_SHORT(wield));
-        log_f(buf);
+        log_s(buf);
         wield->log=1;
         obj_to_char(unequip_char(victim, WIELD), mob);
         act("$n bites you on the arm, and takes your weapon ! ",1,mob,0,victim,TO_VICT);

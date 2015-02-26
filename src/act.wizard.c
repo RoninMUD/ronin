@@ -431,7 +431,7 @@ Usage: `kwarn`q <name> [warning] or\n\r\
       return;
     }
     strcat(buf,"\n");
-    fprintf(fl,buf);
+    fputs(buf, fl);
     send_to_char("Warning logged.\n\r",ch);
     fclose(fl);
     return;
@@ -763,7 +763,7 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
 
   sprintf(buf, "WIZINFO: (%s) change object %s", GET_NAME(ch), argument);
   wizlog(buf, GET_LEVEL(ch)+1, 5);
-  log_f(buf);
+  log_s(buf);
 
   argument=one_argument(argument, buf);
 
@@ -1083,7 +1083,7 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
   sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
   if(!(fl=fopen(buf,"rb"))) {
     sprintf(buf,"Error--can't open file %s for updating pwd (read)", buf);
-    log_f(buf);
+    log_s(buf);
     return(FALSE);
   }
 
@@ -1093,7 +1093,7 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
     case 2:
       memset(&char_info_2,0,sizeof(char_info_2));
       if (fread(&char_info_2, sizeof(struct char_file_u_2), 1, fl) < 1) {
-        log_f("Error reading rent file (change_password).");
+        log_s("Error reading rent file (change_password).");
         produce_core();
       }
       fclose(fl);
@@ -1101,11 +1101,11 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
       sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
       if(!(fl=fopen(buf,"r+b"))) {
         sprintf(buf,"Error--can't open file %s for updating pwd (write)", buf);
-        log_f(buf);
+        log_s(buf);
         return(FALSE);
       }
       if (fwrite(&char_info_2, sizeof(struct char_file_u_2), 1, fl) < 1) {
-        log_f("Error writing rent file (change_password).");
+        log_s("Error writing rent file (change_password).");
         produce_core();
       }
       break;
@@ -1113,7 +1113,7 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
     case 4:
       memset(&char_info_4,0,sizeof(char_info_4));
       if (fread(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
-        log_f("Error reading rent file (change_password).");
+        log_s("Error reading rent file (change_password).");
         produce_core();
       }
       fclose(fl);
@@ -1121,18 +1121,18 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
       sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
       if(!(fl=fopen(buf,"r+b"))) {
         sprintf(buf,"Error--can't open file %s for updating pwd (write)", buf);
-        log_f(buf);
+        log_s(buf);
         return(FALSE);
       }
       if (fwrite(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
-        log_f("Error writing rent file (change_password).");
+        log_s("Error writing rent file (change_password).");
         produce_core();
       }
       break;
     case 5:
       memset(&char_info_5,0,sizeof(char_info_5));
       if (fread(&char_info_5, sizeof(struct char_file_u_5), 1, fl) < 1) {
-        log_f("Error reading rent file (change_password).");
+        log_s("Error reading rent file (change_password).");
         produce_core();
       }
       fclose(fl);
@@ -1140,16 +1140,16 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
       sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
       if(!(fl=fopen(buf,"r+b"))) {
         sprintf(buf,"Error--can't open file %s for updating pwd (write)", buf);
-        log_f(buf);
+        log_s(buf);
         return(FALSE);
       }
       if (fwrite(&char_info_5, sizeof(struct char_file_u_5), 1, fl) < 1) {
-        log_f("Error writing rent file (change_password).");
+        log_s("Error writing rent file (change_password).");
         produce_core();
       }
       break;
     default:
-      log_f("Error getting pfile version (change_pwd)");
+      log_s("Error getting pfile version (change_pwd)");
   }
   fclose(fl);
   return(TRUE);
@@ -1216,7 +1216,7 @@ void do_password(struct char_data *ch, char *argument, int cmdnum)
   else {
     if(GET_LEVEL(ch)>=LEVEL_SUP) {
       sprintf(buf,"WIZINFO: %s changed %s's password.",GET_NAME(ch),name);
-      log_f(buf);
+      log_s(buf);
     }
     send_to_char("Done.\n\r",ch);
   }
@@ -1281,7 +1281,7 @@ void do_plock(struct char_data *ch, char *argument, int cmd)
     case 2:
       memset(&char_info_2,0,sizeof(char_info_2));
       if (fread(&char_info_2, sizeof(struct char_file_u_2), 1, fl) < 1) {
-        log_f("Error reading rent file (lock).");
+        log_s("Error reading rent file (lock).");
         produce_core();
       }
       fclose(fl);
@@ -1293,7 +1293,7 @@ void do_plock(struct char_data *ch, char *argument, int cmd)
         return;
       }
       if (fwrite(&char_info_2, sizeof(struct char_file_u_2), 1, fl) < 1) {
-        log_f("Error writing rent file (lock).");
+        log_s("Error writing rent file (lock).");
         produce_core();
       }
       break;
@@ -1301,7 +1301,7 @@ void do_plock(struct char_data *ch, char *argument, int cmd)
     case 4:
       memset(&char_info_4,0,sizeof(char_info_4));
       if (fread(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
-        log_f("Error reading rent file (lock).");
+        log_s("Error reading rent file (lock).");
         produce_core();
       }
       fclose(fl);
@@ -1313,14 +1313,14 @@ void do_plock(struct char_data *ch, char *argument, int cmd)
         return;
       }
       if (fwrite(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
-        log_f("Error writing rent file (lock).");
+        log_s("Error writing rent file (lock).");
         produce_core();
       }
       break;
     case 5:
       memset(&char_info_5,0,sizeof(char_info_5));
       if (fread(&char_info_5, sizeof(struct char_file_u_5), 1, fl) < 1) {
-        log_f("Error reading rent file (lock).");
+        log_s("Error reading rent file (lock).");
         produce_core();
       }
       fclose(fl);
@@ -1332,12 +1332,12 @@ void do_plock(struct char_data *ch, char *argument, int cmd)
         return;
       }
       if (fwrite(&char_info_5, sizeof(struct char_file_u_5), 1, fl) < 1) {
-        log_f("Error writing rent file (lock).");
+        log_s("Error writing rent file (lock).");
         produce_core();
       }
       break;
     default:
-      log_f("Error getting pfile version (change_pwd)");
+      log_s("Error getting pfile version (change_pwd)");
       send_to_char("There was an error running this command.\n\r",ch);
       return;
   }
@@ -1553,11 +1553,11 @@ void dsearch(char *string, char *tmp)
       case 'R': strcpy(buf2, "$r"); break;
       case 'r': strcpy(buf2, "$r"); break;
       }
-      strcpy(buf, string);
+      strncpy(buf, string, sizeof(buf));
       buf[j] = '\0';
       strcpy(buf3, (string+j+2));
       sprintf(tmp, "%s%s%s" ,buf, buf2, buf3);
-      sprintf(string, tmp);
+      strcpy(string, tmp);
 
     }
   }
@@ -1831,7 +1831,7 @@ void do_release(CHAR *ch, char *argument, int cmd) {
         send_to_char(buf,ch);
         sprintf(buf, "WIZINFO: (%s) close socket #%d", GET_NAME(ch),sdesc);
         wizlog(buf, GET_LEVEL(ch), 5);
-        log_f(buf);
+        log_s(buf);
         close_socket(d);
         return;
       }
@@ -1853,7 +1853,7 @@ void do_release(CHAR *ch, char *argument, int cmd) {
             sprintf(buf,"Closing socket to descriptor #%d - %s\n\r",d->descriptor,GET_NAME(i));
             send_to_char(buf,ch);
             sprintf(buf, "WIZINFO: (%s) closed socket #%d - %s", GET_NAME(ch),d->descriptor,GET_NAME(i));
-            log_f(buf);
+            log_s(buf);
             wizlog(buf, GET_LEVEL(ch), 5);
             close_socket(d);
           }
@@ -2161,7 +2161,7 @@ void do_lecho(struct char_data *ch, char *argument, int cmd)
     sprintf(buf, "You echo '%s'\n\r", argument+i);
     send_to_char(buf, ch);
     sprintf(buf2,"WIZINFO: %s lechos '%s'",GET_NAME(ch),argument+i);
-    log_f(buf2);
+    log_s(buf2);
     wizlog(buf2, GET_LEVEL(ch)+1, 5);
   }
 }
@@ -2194,7 +2194,7 @@ void do_echo(struct char_data *ch, char *argument, int cmd)
     send_to_char(buf, ch);
 
     sprintf(buf2,"WIZINFO: %s echos '%s'",GET_NAME(ch),argument+i);
-    log_f(buf2);
+    log_s(buf2);
     wizlog(buf2, GET_LEVEL(ch)+1, 5);
   }
 
@@ -2388,7 +2388,7 @@ void do_trans(struct char_data *ch, char *argument, int cmd)
             CHAR_VIRTUAL_ROOM(victim),
             CHAR_VIRTUAL_ROOM(ch));
       wizlog(buf, GET_LEVEL(ch)+1, 5);
-      log_f(buf);
+      log_s(buf);
 
       target = CHAR_REAL_ROOM(ch);
       char_from_room(victim);
@@ -2413,7 +2413,7 @@ void do_trans(struct char_data *ch, char *argument, int cmd)
      sprintf (buf, "WIZINFO: %s transferred all to #%d",
            GET_NAME(ch), CHAR_VIRTUAL_ROOM(ch));
      wizlog(buf, GET_LEVEL(ch)+1, 5);
-     log_f(buf);
+     log_s(buf);
 
      target = CHAR_REAL_ROOM(ch);
      char_from_room(victim);
@@ -2531,12 +2531,12 @@ void do_at(struct char_data *ch, char *argument, int cmd)
   char_to_room(ch, location);
   if(is_abbrev(command,"look")) {
     sprintf(buf,"WIZINFO: %s at %s(%d): %s",GET_NAME(ch),loc_str,world[location].number,command);
-    log_f(buf);
+    log_s(buf);
     wizlog(buf,LEVEL_IMP,5);
   }
   if(GET_LEVEL(ch)<LEVEL_TEM && is_abbrev(command,"exit")) {
     sprintf(buf,"WIZINFO: %s at %s(%d): %s",GET_NAME(ch),loc_str,world[location].number,command);
-    log_f(buf);
+    log_s(buf);
     wizlog(buf,LEVEL_IMP,5);
   }
   command_interpreter(ch, command);
@@ -2625,7 +2625,7 @@ void do_goto(struct char_data *ch, char *argument, int cmd) {
 
   sprintf(skibuf, "WIZINFO: (%s) goto '%s' (Room # %d)", GET_NAME(ch), argument, world[location].number);
 /*  wizlog(skibuf, LEVEL_IMP, 5);*/
-  log_f(skibuf);
+  log_s(skibuf);
 
   if (!ch->player.poofin)
     act("$n appears with an ear-splitting bang.", TRUE, ch, 0,0,TO_ROOM);
@@ -2675,7 +2675,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
   } else {
     sprintf(buf,"WIZINFO: %s stat %s",GET_NAME(ch),argument);
     wizlog(buf, GET_LEVEL(ch)+1, 5);
-    log_f(buf);
+    log_s(buf);
   /* stats on room */
     if (is_abbrev(type, "room")) {
       i= atoi( arg1); /* Stat room in argument - Ranger May 96 */
@@ -3646,7 +3646,7 @@ void do_shutdown(struct char_data *ch, char *argument, int cmd)
 
   if (!strcmp(arg, "full") && (GET_LEVEL(ch)>LEVEL_SUP)) {
     sprintf(buf, "Shutdown by %s.", GET_NAME(ch) );
-    log_f(buf);
+    log_s(buf);
     cleanshutdown = 1;
   }
   else if (!strcmp(arg, "reboot")) {
@@ -3657,7 +3657,7 @@ void do_shutdown(struct char_data *ch, char *argument, int cmd)
     }
     sprintf(buf, "Reboot by %s.\n\r", GET_NAME(ch));
     send_to_all(buf);
-    log_f(buf);
+    log_s(buf);
     cleanshutdown = cleanreboot = 1;
   }
   else if (!strcmp(arg, "reset")) {
@@ -3673,7 +3673,7 @@ void do_shutdown(struct char_data *ch, char *argument, int cmd)
     REBOOT_AT=next_boot;
     sprintf(buf, "Reboot time reset to %d:00 hours.\n\r",REBOOT_AT);
     send_to_all(buf);
-    log_f(buf);
+    log_s(buf);
     next_boot=REBOOT_AT-2;
     if(next_boot<0) next_boot+=24;
     fl=fopen("reboot_time","w");
@@ -3712,7 +3712,7 @@ void do_shutdown(struct char_data *ch, char *argument, int cmd)
       disablereboot=0;
     }
     send_to_all(buf);
-    log_f(buf);
+    log_s(buf);
   }
   else if(!strcmp(arg,"hotboot")) {
     if(!copyover_write(0)) {
@@ -3797,7 +3797,7 @@ void do_snoop(struct char_data *ch, char *argument, int cmd)
   ch->desc->snoop.snooping = victim;
   victim->desc->snoop.snoop_by = ch;
   sprintf (buf,"WIZINFO: %s is snooping %s", GET_NAME(ch), GET_NAME(victim));
-  log_f(buf);
+  log_s(buf);
   wizlog(buf, GET_LEVEL(ch)+1, 5);
 
   return;
@@ -3856,7 +3856,7 @@ void do_mobswitch(struct char_data *ch, char *argument, int cmd)
       } else {
      send_to_char("Ok.\n\r", ch);
      sprintf (buf,"WIZINFO: %s switched to %s", GET_NAME(ch), GET_NAME(victim));
-     log_f(buf);
+     log_s(buf);
      wizlog(buf, GET_LEVEL(ch)+1, 5);
      ch->desc->character = victim;
      ch->desc->original = ch;
@@ -3932,7 +3932,7 @@ void do_force(struct char_data *ch, char *argument, int cmd)
     else {
       sprintf(logbuf,"WIZINFO: %s has forced %s to '%s'",
               GET_NAME(ch), GET_NAME(vict), to_force);
-      log_f(logbuf);
+      log_s(logbuf);
       wizlog(logbuf, GET_LEVEL(ch), 5);
       sprintf(buf, "$n has forced you to '%s'.", to_force);
       act(buf, FALSE, ch, 0, vict, TO_VICT);
@@ -4007,7 +4007,7 @@ void do_load(struct char_data *ch, char *argument, int cmd)
      sprintf(buf, "WIZINFO: (%s) load char (#%d) %d (%s)",
           GET_NAME(ch), world[CHAR_REAL_ROOM(ch)].number, number,
           GET_SHORT(mob));
-     log_f(buf);
+     log_s(buf);
      wizlog(buf,GET_LEVEL(ch)+1,5);
      break;
       case 2:  /* object */
@@ -4062,7 +4062,7 @@ void do_load(struct char_data *ch, char *argument, int cmd)
      sprintf(buf, "WIZINFO: (%s) load obj (#%d) %d (%s)",
           GET_NAME(ch), world[CHAR_REAL_ROOM(ch)].number, number,
           OBJ_SHORT(obj));
-     log_f(buf);
+     log_s(buf);
      wizlog(buf,GET_LEVEL(ch)+1,5);
       case 3:  /* load a zone */
        arg1 = strtok(NULL, "\0");
@@ -4080,7 +4080,7 @@ void do_load(struct char_data *ch, char *argument, int cmd)
                  send_to_char(buf,ch);
 
                  sprintf(buf, "WIZINFO: (%s) load zone [#%d] %s", GET_NAME(ch), zonenum, zone_table[i].name); /* Linerfix 10/27/03 */
-                 log_f(buf);
+                 log_s(buf);
                  wizlog(buf,GET_LEVEL(ch)+1,5);
 
                  break;
@@ -4111,7 +4111,7 @@ void initial_boot_area(char *name)
   FILE *zf=NULL, *mf=NULL, *of=NULL, *rf=NULL, *sf=NULL;
   char buf[100];
   char filename[35],path[15], *nameptr;
-  int i,vnum;
+  int i;
   nameptr = filename;
 
   for(i=0;i<MIN(32, strlen(name));i++)
@@ -4124,10 +4124,10 @@ void initial_boot_area(char *name)
   sprintf(path,"world/");
 
   /*first off, boot the zone */
-  if(filename)
+  if(filename[0] != '\0')
     {
     sprintf(buf, "Booting zone:  %s", filename);
-    log_f(buf);
+    log_s(buf);
       sprintf(buf, "%s%s.zon", path,filename);
       if((zf = fopen(buf, "r")))
      {
@@ -4140,7 +4140,7 @@ void initial_boot_area(char *name)
             sprintf(buf, "%s%s.obj", path,filename);
             if((of = fopen(buf, "r")))
               {
-                vnum=read_zone(zf);
+                read_zone(zf);
                 read_rooms(rf);
                 read_mobs(mf);
                 read_objs(of);
@@ -4152,15 +4152,15 @@ void initial_boot_area(char *name)
                 }
               }
             else
-              log_f("obj fopen");
+              log_s("obj fopen");
             fclose(mf);
           }
            else
-          log_f("mob fopen");
+          log_s("mob fopen");
            fclose(rf);
          }
        else
-         log_f("world fopen");
+         log_s("world fopen");
        fclose(zf);
      }
       else
@@ -4188,7 +4188,7 @@ int boot_area(char *name)
   *nameptr = 0;
 
   /*first off, boot the zone */
-  if(filename)
+  if(filename[0] != '\0')
     {
       sprintf(buf, "world/%s.zon", filename);
       if((zf = fopen(buf, "r")))
@@ -4215,7 +4215,7 @@ int boot_area(char *name)
                 }
                 /* Resetting specials - Ranger July 96 */
                 if (!no_specials) {
-                   log_f("Reassigning specials");
+                   log_s("Reassigning specials");
                   assign_mobiles(); /* includes shopkeeper assign */
                   assign_objects();
                   assign_rooms();
@@ -4244,7 +4244,7 @@ void do_purge(struct char_data *ch, char *argument, int cmd)
   sprintf (name, "WIZINFO: %s purges %s in #%d",
         GET_NAME(ch), argument, CHAR_VIRTUAL_ROOM(ch));
   wizlog(name, GET_LEVEL(ch)+1, 5);
-  log_f(name);
+  log_s(name);
 
   one_argument(argument, name);
 
@@ -4756,7 +4756,7 @@ Usage: class <victim> <num>\n\r\
   sprintf (buf, "WIZINFO: %s changed %s to class %2s",
            GET_NAME(ch), GET_NAME(victim), class_name[GET_CLASS(victim)]);
   wizlog(buf, GET_LEVEL(ch) + 1, 5);
-  log_f("%s", buf);
+  log_s(buf);
 }
 
 void do_club(struct char_data *ch, char *argument, int cmd)
@@ -4817,7 +4817,7 @@ void do_club(struct char_data *ch, char *argument, int cmd)
   sprintf (club, "WIZINFO: %s set %s's club to %d",
         GET_NAME(ch), GET_NAME(victim), newclub);
   wizlog(club, GET_LEVEL(ch)+1, 5);
-  log_f(club);
+  log_s(club);
 
   send_to_char("Done.\n\r", ch);
 
@@ -4881,7 +4881,7 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
   sprintf (buf2, "WIZINFO: %s advanced %s from %d to %d",
         GET_NAME(ch), GET_NAME(victim), GET_LEVEL(victim), newlevel);
   wizlog(buf2, GET_LEVEL(ch)+1, 5);
-  log_f(buf2);
+  log_s(buf2);
 
   if (((adv + GET_LEVEL(victim)) > LEVEL_ETE)
       && (GET_LEVEL(ch) < LEVEL_IMP)) {
@@ -4936,7 +4936,7 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
 {
   struct char_data *victim;
   char name[100], level[100];
-  int adv, newlevel=0, oldlevel,i;
+  int newlevel=0, oldlevel,i;
   char buf[250];
 
   void gain_exp(struct char_data *ch, int gain);
@@ -4960,12 +4960,12 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  if (!strcmp(GET_NAME(victim),"Lem") || 
-      !strcmp(GET_NAME(victim),"Sumo") || 
-      !strcmp(GET_NAME(victim),"Ranger") || 
-      !strcmp(GET_NAME(victim),"Liner") || 
+  if (!strcmp(GET_NAME(victim),"Lem") ||
+      !strcmp(GET_NAME(victim),"Sumo") ||
+      !strcmp(GET_NAME(victim),"Ranger") ||
+      !strcmp(GET_NAME(victim),"Liner") ||
       !strcmp(GET_NAME(victim),"Sane") ||
-      !strcmp(GET_NAME(victim),"Shun") ) 
+      !strcmp(GET_NAME(victim),"Shun") )
   {
     send_to_char("You cannot demote the active IMPs.\n\r",ch);
     return;
@@ -4976,9 +4976,7 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  if (GET_LEVEL(victim) == 0)
-    adv = 1;
-  else if (!*level) {
+  if (!*level) {
     send_to_char("You must supply a level number.\n\r", ch);
     return;
   } else {
@@ -4994,8 +4992,6 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
       send_to_char("This is a command to DEMOTE a player.\n\r", ch);
       return;
     }
-    adv = GET_LEVEL(victim) - newlevel;
-
   }
 
   GET_EXP(victim) = 0;
@@ -5030,7 +5026,7 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
   sprintf (buf, "WIZINFO: %s demoted %s from %d to %d",
         GET_NAME(ch), GET_NAME(victim), oldlevel, newlevel);
   wizlog(buf, GET_LEVEL(ch)+1, 5);
-  log_f(buf);
+  log_s(buf);
   send_to_char("Done.\n\r", ch);
   send_to_char("You have been demoted.\n\r",victim);
 }
@@ -5052,7 +5048,7 @@ void do_reroll(struct char_data *ch, char *argument, int cmd)
     else {
       sprintf (buf, "WIZINFO: %s rerolled %s", GET_NAME(ch), GET_NAME(victim));
       wizlog(buf, GET_LEVEL(ch)+1, 5);
-      log_f(buf);
+      log_s(buf);
 
       send_to_char("Rerolled...\n\r", ch);
       roll_abilities(victim);
@@ -5115,7 +5111,7 @@ void do_restore(struct char_data *ch, char *argument, int cmd)
             GET_NAME(ch), GET_NAME(victim),
             CHAR_VIRTUAL_ROOM(victim));
       wizlog(buf, GET_LEVEL(ch)+1, 5);
-      log_f(buf);
+      log_s(buf);
       send_to_char("Done.\n\r", ch);
       act("You have been fully healed by $N!", FALSE, victim, 0, ch, TO_CHAR);
     }
@@ -5151,7 +5147,7 @@ void do_punish(struct char_data *ch, char *argument, int cmd)
       sprintf (buf, "WIZINFO: %s punished %s",
             GET_NAME(ch), GET_NAME(victim));
       wizlog(buf, GET_LEVEL(ch)+1, 5);
-      log_f(buf);
+      log_s(buf);
       update_pos( victim );
       send_to_char("Done.\n\r", ch);
     }
@@ -5183,7 +5179,7 @@ void do_nogold(struct char_data *ch, char *argument, int cmd)
       sprintf (buf, "WIZINFO: %s nogold'ed %s",
           GET_NAME(ch), GET_NAME(victim));
       wizlog(buf, GET_LEVEL(ch)+1, 5);
-      log_f(buf);
+      log_s(buf);
     }
     send_to_char("Done.\n\r", ch);
   }
@@ -5221,7 +5217,7 @@ void do_noshout(struct char_data *ch, char *argument, int cmd)
     REMOVE_BIT(vict->specials.pflag, PLR_NOSHOUT);
     sprintf(buf2,"WIZINFO: %s removed %s's NOSHOUT",GET_NAME(ch),GET_NAME(vict));
     wizlog(buf2, GET_LEVEL(ch), 5);
-    log_f(buf2);
+    log_s(buf2);
   }
   else {
     send_to_char("The gods take away your ability to shout!\n\r", vict);
@@ -5229,7 +5225,7 @@ void do_noshout(struct char_data *ch, char *argument, int cmd)
     SET_BIT(vict->specials.pflag, PLR_NOSHOUT);
     sprintf(buf2,"WIZINFO: %s set %s's NOSHOUT",GET_NAME(ch),GET_NAME(vict));
     wizlog(buf2, GET_LEVEL(ch), 5);
-    log_f(buf2);
+    log_s(buf2);
   }
 }
 
@@ -5318,7 +5314,7 @@ subpts, qpts, remort_exp and death_exp\n\r";
 
   sprintf(logit,"WIZINFO: %s setstat %s",GET_NAME(ch),argument);
   wizlog(logit, GET_LEVEL(ch)+1, 5);
-  log_f(logit);
+  log_s(logit);
 
   if (!*name || !*buf || !*class || !*num /*|| !isdigit(*num)*/ ) {
     send_to_char(usage,ch);
@@ -5577,7 +5573,7 @@ void do_session(struct char_data *ch, char *argument, int cmd)
   sprintf (buf, "WIZINFO: %s added %d sessions to %s",
         GET_NAME(ch), atoi(number), GET_NAME(victim));
   wizlog(buf, GET_LEVEL(ch)+1, 5);
-  log_f(buf);
+  log_s(buf);
 
   victim->specials.spells_to_learn += atoi(number);
   send_to_char("Done.\n\r", ch);
@@ -5840,7 +5836,7 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
 
     sprintf(buf,"WIZINFO: %s ostat %d (%s)",GET_NAME(ch),number,proto->name);
     wizlog(buf, GET_LEVEL(ch)+1, 5);
-    log_f(buf);
+    log_s(buf);
 
     if(IS_SET(proto->obj_flags.extra_flags, ITEM_LIMITED) && GET_LEVEL(ch) < LEVEL_WIZ &&
        !isname(GET_NAME(ch),zone_table[real_zone(zonenum)].name) && !strstr(zone_table[real_zone(zonenum)].creators,GET_NAME(ch))) {
@@ -5923,7 +5919,7 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
   } else {
     sprintf(buf2,"WIZINFO: %s ostat %s %s",GET_NAME(ch),buf,argument);
     wizlog(buf2, GET_LEVEL(ch)+1, 5);
-    log_f(buf2);
+    log_s(buf2);
 
     one_argument(argument, buf2);
     init_string_block(&sb);
@@ -6459,7 +6455,7 @@ Usage: mstat ac(t) <ACT>\n\r\
 
     sprintf(buf,"WIZINFO: %s mstat %d (%s)",GET_NAME(ch),number,proto->name);
     wizlog(buf, LEVEL_IMP, 5);
-    log_f(buf);
+    log_s(buf);
 
     sprintf(buf, "Mobile name: [%s]\n\rR-number: [%d], V-number: [%d], In-game: [%d]\n\r",
          proto->name, r_number, proto->virtual, proto->number);
@@ -7095,8 +7091,8 @@ Usage: `kdlist`q <name> <death #> or.\n\r\
           }
           tmstr = asctime(localtime(&dfile.time_death));
           *(tmstr + strlen(tmstr) - 1) = '\0';
-          if(real_room(dfile.location)!=-1) sprintf(buf2,world[real_room(dfile.location)].name);
-          else sprintf(buf2,"Unknown");
+          if(real_room(dfile.location)!=-1) strncpy(buf2,world[real_room(dfile.location)].name,sizeof(buf2));
+          else strncpy(buf2,"Unknown",sizeof(buf2));
           sprintf(buf,"%d) : Location: %s (%d): Time: %s\n\r",
                   dfile.number,buf2,dfile.location,tmstr);
           append_to_string_block(&sb, buf);
@@ -7172,8 +7168,8 @@ Usage: `kdlist`q <name> <death #> or.\n\r\
           found=TRUE;
           tmstr = asctime(localtime(&dfile.time_death));
           *(tmstr + strlen(tmstr) - 1) = '\0';
-          if(real_room(dfile.location)!=-1) sprintf(buf2,world[real_room(dfile.location)].name);
-          else sprintf(buf2,"Unknown");
+          if(real_room(dfile.location)!=-1) strncpy(buf2,world[real_room(dfile.location)].name,sizeof(buf2));
+          else strncpy(buf2,"Unknown",sizeof(buf2));
           sprintf(buf,"%d) : Location: %s (%d): Time: %s\n\r",
                   dfile.number,buf2,dfile.location,tmstr);
           append_to_string_block(&sb, buf);
@@ -7343,7 +7339,7 @@ void do_reimb(CHAR *ch, char *argument, int cmd) {
             act("You have created $p!", FALSE, ch, obj, 0, TO_CHAR);
                sprintf(buf, "WIZINFO: (%s) load obj (#%d) %d (%s)",
                     GET_NAME(ch), world[CHAR_REAL_ROOM(ch)].number, V_OBJ(obj), OBJ_SHORT(obj));
-            log_f(buf);
+            log_s(buf);
           }
           else {
             extract_obj(obj);
@@ -7368,7 +7364,7 @@ void do_reimb(CHAR *ch, char *argument, int cmd) {
             act("You have created $p!", FALSE, ch, obj, 0, TO_CHAR);
                sprintf(buf, "WIZINFO: (%s) load obj (#%d) %d (%s)",
                     GET_NAME(ch), world[CHAR_REAL_ROOM(ch)].number, V_OBJ(obj), OBJ_SHORT(obj));
-            log_f(buf);
+            log_s(buf);
           }
           else {
             extract_obj(obj);
@@ -7393,7 +7389,7 @@ void do_reimb(CHAR *ch, char *argument, int cmd) {
             act("You have created $p!", FALSE, ch, obj, 0, TO_CHAR);
                sprintf(buf, "WIZINFO: (%s) load obj (#%d) %d (%s)",
                     GET_NAME(ch), world[CHAR_REAL_ROOM(ch)].number, V_OBJ(obj), OBJ_SHORT(obj));
-            log_f(buf);
+            log_s(buf);
           }
           else {
             extract_obj(obj);
@@ -7418,7 +7414,7 @@ void do_reimb(CHAR *ch, char *argument, int cmd) {
             act("You have created $p!", FALSE, ch, obj, 0, TO_CHAR);
                sprintf(buf, "WIZINFO: (%s) load obj (#%d) %d (%s)",
                     GET_NAME(ch), world[CHAR_REAL_ROOM(ch)].number, V_OBJ(obj), OBJ_SHORT(obj));
-            log_f(buf);
+            log_s(buf);
           }
           else {
             extract_obj(obj);
@@ -7684,11 +7680,11 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
           sprinttype(obj_proto_table[i].affected[x].location, apply_types, buf2);
           if(strstr(buf2,"SKILL")) {
          str_cut(buf2,buf4,6);
-         sprintf(buf2,buf4);
+         strncpy(buf2,buf4,sizeof(buf2));
          }
           if(strstr(buf2,"SAVING")) {
          str_cut(buf2,buf4,7);
-         sprintf(buf2,buf4);
+         strncpy(buf2,buf4,sizeof(buf2));
           }
           sprintf(buf, "%-9s %3d  ", buf2, obj_proto_table[i].affected[x].modifier);
           strcat(buf3, buf);
@@ -8015,7 +8011,7 @@ void do_doas(struct char_data *ch, char *argument, int cmd)
   }
   sprintf(arg,"WIZINFO: %s as %s: %s",GET_NAME(ch),GET_NAME(vict),argument);
   wizlog(arg,LEVEL_IMP,5);
-  log_f(arg);
+  log_s(arg);
 
   orig = vict->desc;
   vict->desc = ch->desc;
@@ -8120,7 +8116,7 @@ void do_deputize(struct char_data *ch, char *argument, int cmd)
     REMOVE_BIT(vict->specials.pflag, PLR_DEPUTY);
     sprintf(arg,"WIZINFO: %s removed %s from deputy status.",GET_NAME(ch),GET_NAME(vict));
     wizlog(arg,LEVEL_IMP,5);
-    log_f(arg);
+    log_s(arg);
     return;
   }
   else {
@@ -8129,7 +8125,7 @@ void do_deputize(struct char_data *ch, char *argument, int cmd)
     SET_BIT(vict->specials.pflag, PLR_DEPUTY);
     sprintf(arg,"WIZINFO: %s added %s to deputy status.",GET_NAME(ch),GET_NAME(vict));
     wizlog(arg,LEVEL_IMP,5);
-    log_f(arg);
+    log_s(arg);
     return;
   }
 }
@@ -8259,7 +8255,7 @@ Freeze has been extended to totally freeze mortals.\n\r", ch);
     act("You have unfrozen $N!",0,ch,0,vict,TO_CHAR);
     act("$n has unfrozen you!",0,ch,0,vict,TO_VICT);
     sprintf(buf,"WIZLOG: %s has unfrozen %s.",GET_NAME(ch),GET_NAME(vict));
-    log_f(buf);
+    log_s(buf);
     wizlog(buf,GET_LEVEL(ch),5);
     REMOVE_BIT(vict->new.imm_flags, WIZ_FREEZE);
   } else {
@@ -8268,7 +8264,7 @@ Freeze has been extended to totally freeze mortals.\n\r", ch);
     act("You have frozen $N!",0,ch,0,vict,TO_CHAR);
     act("$n has frozen you!",0,ch,0,vict,TO_VICT);
     sprintf(buf,"WIZLOG: %s has frozen %s.",GET_NAME(ch),GET_NAME(vict));
-    log_f(buf);
+    log_s(buf);
     wizlog(buf,GET_LEVEL(ch),5);
     SET_BIT(vict->new.imm_flags, WIZ_FREEZE);
   }
@@ -8393,7 +8389,7 @@ void do_rank(struct char_data *ch, char *argument, int cmd) {
       stop = enchantment_special(tmp_ench,vict,vict,MSG_DEAD,"");
     }
     sprintf(buf,"WIZLOG: %s has dropped %s a rank.",GET_NAME(ch),GET_NAME(vict));
-    log_f(buf);
+    log_s(buf);
     wizlog(buf,GET_LEVEL(ch),5);
     return;
   }
@@ -8491,7 +8487,7 @@ void do_rank(struct char_data *ch, char *argument, int cmd) {
   }
 
   sprintf(buf,"WIZLOG: %s has given rank %d to %s.",GET_NAME(ch),rank,GET_NAME(vict));
-  log_f(buf);
+  log_s(buf);
   wizlog(buf,GET_LEVEL(ch),5);
 }
 

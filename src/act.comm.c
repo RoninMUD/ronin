@@ -1417,7 +1417,6 @@ void do_reply(CHAR *ch, char *arg, int cmd)
 	char buf[MSL];
 	CHAR *temp_ch = NULL;
 	CHAR *listener = NULL;
-	int listener_level = 0;
 
 	if (IS_NPC(ch))
 	{
@@ -1482,9 +1481,6 @@ void do_reply(CHAR *ch, char *arg, int cmd)
 
 		return;
 	}
-
-	/* Store the level of the listening player for use later. */
-	listener_level = GET_LEVEL(temp_ch);
 
 	/* Allow a tell to a switched person to go to the mob.
 	   Ranger - September 98 (Assumed) */

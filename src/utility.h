@@ -78,7 +78,7 @@ char *PERS(CHAR *ch, CHAR*vict);
 char *POSSESS(CHAR *ch, CHAR*vict);
 char *CHCLR(CHAR *ch, int color);
 char *ENDCHCLR(CHAR *ch);
-void log_string(char *str);
+void log_s(char *str);
 void log_f(char * fmt, ...) __attribute__ ((format(printf,1,2)));
 void log_cmd(char *file,char *fmt, ...) __attribute__ ((format(printf,2,3)));
 void deathlog(char *str);

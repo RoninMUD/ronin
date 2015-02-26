@@ -338,7 +338,6 @@ int hemp_farmers(CHAR *mob,CHAR *ch,int cmd, char *argument) {
   char arg[MAX_INPUT_LENGTH];
   CHAR *vict=0;
   OBJ *obj=0;
-  int bits;
   if(cmd!=CMD_UNKNOWN) return FALSE;
   if(!ch) return FALSE;
 
@@ -347,7 +346,7 @@ int hemp_farmers(CHAR *mob,CHAR *ch,int cmd, char *argument) {
   if(strcmp(arg,"hug")) return FALSE;
   one_argument(argument,arg);
   if(!*arg) return FALSE;
-  bits=generic_find(arg,FIND_CHAR_ROOM,ch,&vict,&obj);
+  generic_find(arg,FIND_CHAR_ROOM,ch,&vict,&obj);
   if(!vict) return FALSE;
   if(vict!=mob) return FALSE;
   obj=read_object(V_MOB(mob),VIRTUAL);
@@ -474,7 +473,7 @@ int helmet_tarion(OBJ *ta, CHAR *ch, int cmd, char *arg) {
 
     sprintf (buf, "%s rescued %s from %s [%d].", OBJ_SHORT(ta),GET_NAME(tch),world[CHAR_REAL_ROOM(tch)].name,CHAR_VIRTUAL_ROOM(tch));
     wizlog (buf, LEVEL_WIZ, 6);
-    log_f(buf);
+    log_s(buf);
 
     stop_fighting (tch);
     unequip_char (tch, WEAR_HEAD);
@@ -549,7 +548,7 @@ int object_tracking(OBJ *trackobj, CHAR *ch, int cmd, char *arg) {  /* Linerfix 
   if(trackobj->log!=2) {
     act("$p will now be tracked.",FALSE,0,trackobj,0,TO_ROOM);
     sprintf(buf,"ObjLog: %s has entered the game.",OBJ_SHORT(trackobj));
-    log_f(buf);
+    log_s(buf);
     trackobj->log=2;
     return FALSE;
   }

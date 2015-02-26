@@ -268,7 +268,7 @@ int mykras_god(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
     object = ch->equipment[WIELD];
     one_argument(arg, buf);
-    if(!buf) return FALSE;
+    if(!*buf) return FALSE;
     if(!isname(buf, OBJ_NAME(object))) return FALSE;
     act("$n' godly power dissapates as you drive the ritual dagger in his flesh.  ",
                   1, mob, 0, ch, TO_VICT);

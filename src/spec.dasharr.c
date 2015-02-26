@@ -165,7 +165,6 @@ Mob#4486 - Lady Justice
 int prison_justice(CHAR *justice, CHAR *ch, int cmd, char *arg) {
 
   CHAR *vict=0, *next_vict;
-  OBJ *wield;
 
   if(cmd) return FALSE;
   if(!justice->specials.fighting) return FALSE;
@@ -196,7 +195,6 @@ int prison_justice(CHAR *justice, CHAR *ch, int cmd, char *arg) {
         for(vict = world[justice->in_room_r].people; vict;vict = next_vict) {
           next_vict = vict->next_in_room;
           if(vict != justice && EQ(vict, WIELD) && IS_MORTAL(vict)) {
-                wield = EQ(vict, WIELD);
                 act("You feel at ease as you sheath you weapon.",
                   1, justice, 0, vict, TO_VICT);
                obj_to_char(unequip_char(vict, WIELD), vict);
@@ -254,7 +252,7 @@ int prison_warden(CHAR *warden, CHAR *ch, int cmd, char *arg) {
 
     object = ch->equipment[WIELD];
     one_argument(arg, buf);
-    if(!buf) return FALSE;  /* Just a little extra check - Ranger */
+    if(!*buf) return FALSE;  /* Just a little extra check - Ranger */
 
     if (is_stake_used) {
       if(!isname(buf, OBJ_NAME(object))) return FALSE;
@@ -362,7 +360,7 @@ int prison_crystal_ball (OBJ *cb, CHAR *ch, int cmd, char *arg) {
   if(IS_NPC(ch)) return FALSE;
 
   one_argument(arg, buf);
-  if(!buf) return FALSE; /* check for look on cb added */
+  if(buf[0] == '\0') return FALSE; /* check for look on cb added */
 
   switch (cmd) {
     case CMD_LOOK:
@@ -407,7 +405,7 @@ int prison_noose(OBJ *noose, CHAR *ch, int cmd, char *arg) {
   vict=noose->equipped_by;
 
   one_argument(arg, buf);
-  if(!buf) return FALSE;
+  if(buf[0] == '\0') return FALSE;
 
   if (cmd==CMD_REMOVE && !number(0,3) )
   {

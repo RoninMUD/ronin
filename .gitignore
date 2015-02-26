@@ -4,6 +4,7 @@ syslogs/
 runlog
 syslog
 syslog.last
+corpselist
 lib/mail/
 lib/rent/
 lib/vault/

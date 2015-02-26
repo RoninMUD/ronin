@@ -353,7 +353,7 @@ int gp_decay_gear(OBJ *obj, CHAR *ch, int cmd, char *argument) {
 
 int gp_mirror_make(OBJ *obj ,CHAR *ch, int cmd, char *argument) {
   int mirror=FALSE, flask=FALSE;
-  OBJ *obj2;
+  OBJ *obj2 = NULL;
   char buf[MAX_INPUT_LENGTH];
 
   if(!ch) return FALSE;
@@ -380,7 +380,7 @@ int gp_mirror_make(OBJ *obj ,CHAR *ch, int cmd, char *argument) {
     extract_obj(obj);
     act("The flask of tears and the mirror magically fuse together\n\rleaving a dragon-like mirror in its place.",1,ch,0,0,TO_ROOM);
     act("The flask of tears and the mirror magically fuse together\n\rleaving a dragon-like mirror in its place.",1,ch,0,0,TO_CHAR);
-    extract_obj(obj2);
+    if (obj2) extract_obj(obj2);
     obj2=read_object(11710,VIRTUAL);
     obj_to_room(obj2,real_room(MIRROR_ROOM));
     return TRUE;
