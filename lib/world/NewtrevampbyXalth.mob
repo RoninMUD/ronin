@@ -65,7 +65,7 @@ His impressive thick tail lags behind him and his snout sticks out as he flicks
 his skinny tongue at you.  He wears a small jacket and leather gloves.  He also
 has a bandana around his head.
 ~
-76 32768 -400 Y
+76 32768 -100 Y
 10 10 6 4d100+100 3d3+2
 0 43333
 8 8 1
@@ -85,7 +85,7 @@ muscular structure is quite impressive.  He wears brown pants and a white
 vest.  His job is to guard against intruders like you.  His long snout sticks
 out about a foot long and his tail drags about two feet behind him.
 ~
-74 32768 -450 Y
+74 32768 -150 Y
 10 10 6 7d100+150 3d4+5
 0 65000
 8 8 1
@@ -106,7 +106,7 @@ known not for their strength but for their endurance and self-discipline.  She
 sees you and decides after she puts this bag of grain down you're gonna get
 hurt...
 ~
-74 32776 -400 Y
+74 32776 -100 Y
 10 10 6 4d100+100 3d3+2
 0 43333
 8 8 2
@@ -126,7 +126,7 @@ anything at all costs so that the children may survive.  She will force you to
 take her life before she quits.  She wields a weapon and stares at you very
 coldly.
 ~
-72 32768 -450 Y
+72 32768 -150 Y
 10 10 6 7d100+150 3d4+5
 0 65000
 8 8 2
@@ -146,7 +146,7 @@ anything to come between her and her time with the children.  She especially
 hates it when that interception isn't a fire newt of any kind.  You should
 probably leave before she sees you.
 ~
-42 32768 -355 Y
+42 32768 -50 Y
 11 13 6 100d4+100 3d3+2
 0 50000
 8 8 2
@@ -165,7 +165,7 @@ for he has never seen such a sight.  He stares at you trying to figure out what
 you are and whether or not to be afraid.  He decides you're friendly and comes
 over to play.  Then mother sees you...
 ~
-14 32768 -350 Y
+14 32768 50 Y
 5 15 8 2d200+50 1d5+3
 0 20000
 8 8 0
@@ -184,7 +184,7 @@ to make sure the guards and workers are doing their jobs and to make sure that
 someone doesn't get as far as you have.  Unfortunately they didn't do their
 jobs so he'll have to do it for them.
 ~
-42 32768 -500 Y
+42 32768 -200 Y
 11 9 2 4d200+150 3d4+5
 0 75000
 8 8 1
@@ -204,7 +204,7 @@ around here.  If something were to go wrong, he's the man to whom you'd have to
 answer. He doesn't look very nice.  He has many badges on his uniform and
 has a straight poker face.
 ~
-42 32768 -700 Y
+42 32768 -200 Y
 14 8 1 100d10+100 4d4+4
 0 91000
 8 8 1
@@ -226,7 +226,7 @@ The fire newt leader kills and eats the bad fire newts.  This is probably why
 they are so endured.  Resistance is futile for you can not run away from him..
 his men would catch you if he didn't.
 ~
-42 32904 -1000 Y
+42 32904 -250 Y
 19 10 0 100d7+500 3d5+5
 0 250000
 8 8 1
@@ -250,7 +250,7 @@ all live happily ever after that.  He isn't very big but he glows and is taking
 note of your every move.  You'd better watch your step around him for he may
 just know what he's doing.
 ~
-42 32776 -1000 Y
+42 32776 200 Y
 19 10 0 150d10+600 2d8+5
 0 200000
 8 8 1
@@ -290,7 +290,7 @@ claws are covered with blood.  It has a wingspan of about 10 meters.  Its
 two meter long beak is razor sharp and it opens its mouth and leads out a 
 shriek as you stare at it.
 ~
-42 32768 -1000 Y
+42 32768 100 Y
 28 1 0 500d7+800 6d4+5
 0 400000
 8 8 1
@@ -310,7 +310,7 @@ nostril.  He stares at you and pretends to attack as you shield yourself.  You
 then see him dart back into the shadows and you figure he must be checking you
 out before he attacks.
 ~
-42 32768 -1000 Y
+42 32768 100 Y
 25 3 1 1000d2+500 5d5+2
 0 275000
 8 8 1

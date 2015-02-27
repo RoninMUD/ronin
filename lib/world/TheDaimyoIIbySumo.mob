@@ -183,7 +183,7 @@ the tales told of his honor and prowess as a warrior. It is painfully
 apparent that you have angered him by your intrusion, and now he just seems
 intent on killing you.
 ~
-16991370 536872960 500 Y
+214154 536872960 500 Y
 53 -11 -1 100d50+14000 3d10+110
 500000 975000
 8 8 1
@@ -194,6 +194,8 @@ intent on killing you.
 7 2 15 0
 2 4 25 0
 0 0 0 0
+R
+4
 K
 0 0 0 0 0 0 0
 #20147
@@ -225,12 +227,14 @@ You see a middle-aged man, forty to fifty years of age, wearing a finely
 embroidered white silk kimono and a tall, pointed hat. He is absolutely 
 motionless, seeking nothing more than enlightenment.
 ~
-16777226 268435584 750 Y
+10 268435584 750 Y
 50 -10 4 9d1000+1750 2d30+50
 200 387500
 8 8 1
 2 0 0d0+0 0
 0 0 0 0
+R
+4
 K
 0 0 0 0 0 0 0
 #20165
@@ -296,7 +300,7 @@ You see before you a very strong and lithe man, his muscles toned to
 perfection from years of hard training.  Even though he is a great deal 
 shorter than you, he would still make a formidable opponent.
 ~
-16908298 268697632 1000 Y
+131082 268697632 1000 Y
 60 -13 -7 100d100+7500 7d15+50
 25000 387500
 8 8 1
@@ -305,6 +309,8 @@ shorter than you, he would still make a formidable opponent.
 4 2 45 0
 9 3 20 0
 0 1 0 0
+R
+4
 K
 0 0 0 0 0 0 0
 #0

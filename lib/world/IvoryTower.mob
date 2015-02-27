@@ -129,7 +129,7 @@ A Doctor is standing here.
 He is a very good doctor.
 ~
 74 128 1000 Y
-30 -7 -10 1000d3+20000 10d10+20
+30 -7 -10 100d3+10000 10d10+20
 100 600000
 8 8 1
 69 0 0d0+0 0

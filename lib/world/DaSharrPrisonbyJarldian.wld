@@ -305,13 +305,13 @@ D3
 ~
 0 -1 4430
 E
-text~
+ancient~
 The writing on the wall says:
 
 shtaed ruoy ot emoclew, sloof emoclew!!
 ~
 E
-ancient~
+text~
 The writing on the wall says:
 
 shtaed ruoy ot emoclew, sloof emoclew!!
@@ -372,14 +372,14 @@ D4
 door~
 1 -1 4459
 E
-water~
-a pool of water is here collecting trickles from the ceiling.
-~
-E
 torch~
 an unearthly fire blazes from this torch that emits chilling cold rather
 than warming heat.  Obviously, this is something of a magical creation and
 not something natural.
+~
+E
+water~
+a pool of water is here collecting trickles from the ceiling.
 ~
 S
 #4414
@@ -776,14 +776,14 @@ D4
 door~
 1 -1 4453
 E
-water~
-a pool of water is here collecting trickles from the ceiling.
-~
-E
 torch~
 an unearthly fire blazes from this torch that emits chilling cold rather 
 than warming heat.  Obviously, this is something of a magical creation and 
 not something natural.
+~
+E
+water~
+a pool of water is here collecting trickles from the ceiling.
 ~
 S
 #4430
@@ -1577,13 +1577,13 @@ D1
 door~
 2 4483 4448
 E
+bowl~
+a dull and dented bowl rests here, empty at the moment. 
+~
+E
 bones~
 there are a pile of human bones lying on the ground here -- shackled to the
 wall.
-~
-E
-bowl~
-a dull and dented bowl rests here, empty at the moment. 
 ~
 S
 #4464
@@ -1604,13 +1604,13 @@ D1
 door~
 2 4483 4451
 E
+bowl~
+a dull and dented bowl rests here, empty at the moment.
+~
+E
 bones~
 there are a pile of human bones lying on the ground here -- shackled to the 
 wall.
-~
-E
-bowl~
-a dull and dented bowl rests here, empty at the moment.
 ~
 S
 #4465
@@ -1716,13 +1716,13 @@ D0
 door~
 2 4484 4468
 E
+shackles~
+iron shackles liters the floor here broken, rust covering bits of the chain.
+~
+E
 ring~
 a large crystal eye flares with intensity as you hold it up.  It looks like
 a powerful piece of equipment, and looks great on your finger too!
-~
-E
-shackles~
-iron shackles liters the floor here broken, rust covering bits of the chain.
 ~
 S
 #4470
@@ -1931,14 +1931,9 @@ D0
 door~
 2 4484 4478
 E
-desk~
-a large oaken desk rests in the middle of this room, papers and inkblots 
-resting on it.  A nearly diminished wax candle lies in a pile here as well.
-~
-E
-painting~
-a large painting of the warden hangs on the wall, he is wearing a long black
-suit and a tie to boot.
+candle~
+a nearly diminished candle lies in its pile of wax here, looking ready to
+die out at any given moment.
 ~
 E
 tapestry~
@@ -1948,9 +1943,14 @@ victim -- the bat revealing its fangs and the its victim trying to valiantly
 to escape.
 ~
 E
-candle~
-a nearly diminished candle lies in its pile of wax here, looking ready to
-die out at any given moment.
+painting~
+a large painting of the warden hangs on the wall, he is wearing a long black
+suit and a tie to boot.
+~
+E
+desk~
+a large oaken desk rests in the middle of this room, papers and inkblots 
+resting on it.  A nearly diminished wax candle lies in a pile here as well.
 ~
 S
 #4480
@@ -2026,21 +2026,10 @@ D2
 door~
 1 -1 4482
 E
-bottle~
-a cracked bottle lies at your feet--labeled "Duff" beer.
-~
-E
-paper~
-papers fly in the air and all covered all over the floor.  
-~
-E
-books~
-there are various books lying on the floor here.  Among them are one of your
-favorites--"Gone with the wind and a spider man action comic!"
-~
-E
-shelves~
-shelves lie here overturned, books sprawling on the floor.
+chairs~
+an old French chair lies here broken.  Looking at it, you notice its marksman-
+ship and quality.  Dark burgundy red in color along with a wax finish, this
+chair was probably priceless but now is worthless.
 ~
 E
 desk~
@@ -2048,10 +2037,21 @@ a turned over desk lies here.  One of the drawers are open, paper and all
 assorted junk fly out and into the air.
 ~
 E
-chairs~
-an old French chair lies here broken.  Looking at it, you notice its marksman-
-ship and quality.  Dark burgundy red in color along with a wax finish, this
-chair was probably priceless but now is worthless.
+shelves~
+shelves lie here overturned, books sprawling on the floor.
+~
+E
+books~
+there are various books lying on the floor here.  Among them are one of your
+favorites--"Gone with the wind and a spider man action comic!"
+~
+E
+paper~
+papers fly in the air and all covered all over the floor.  
+~
+E
+bottle~
+a cracked bottle lies at your feet--labeled "Duff" beer.
 ~
 S
 #4484
@@ -2068,17 +2068,8 @@ D0
 ~
 0 -1 4495
 E
-dart~
-a dartboard hangs on the back wall, with a picture of Rizzo in the center
-of the bull's eye.
-~
-E
-keys~
-various keys hang on the wall here. each key with a different label.
-~
-E
-plant~
-a brightly shining plant sits here on the desk, lighting up the room.
+shelves~
+shelves line the wall filled with files, books and trophies.
 ~
 E
 desk~
@@ -2086,8 +2077,17 @@ a large desk rests in the center of the room, with paper and a desk plant
 sitting brightly on it.
 ~
 E
-shelves~
-shelves line the wall filled with files, books and trophies.
+plant~
+a brightly shining plant sits here on the desk, lighting up the room.
+~
+E
+keys~
+various keys hang on the wall here. each key with a different label.
+~
+E
+dart~
+a dartboard hangs on the back wall, with a picture of Rizzo in the center
+of the bull's eye.
 ~
 S
 #4485
@@ -2108,12 +2108,12 @@ D5
 ~
 0 -1 4486
 E
-feces~
-brown and plenty of it, these solid waste products makes you want to pass out.
-~
-E
 ladder~
 a sturdy ladder is here in the corner, leading down somewhere.
+~
+E
+feces~
+brown and plenty of it, these solid waste products makes you want to pass out.
 ~
 S
 #4486
@@ -2134,22 +2134,9 @@ D3
 Shaft~
 1 -1 4487
 E
-runes~
-swirling with power, these runes protect those who are saintly.
-~
-E
-columns~
-tall marble columns support the dome-structured room.
-~
-E
-faces~
-these faces are of those you do not recognize.  They are probably the 
-guardians of this holy place.
-~
-E
-pedestal~
-a marbled pedestal rests here in the middle of the room, engraved with a
-bronze plaque.  Standing tall on top is the lady of justice.
+walls~
+these walls are made of pure white marble.  Staring in awe, you wonder
+who build this wondrous place?
 ~
 E
 plaque~
@@ -2157,9 +2144,22 @@ it reads:
 This is Lady Justice.
 ~
 E
-walls~
-these walls are made of pure white marble.  Staring in awe, you wonder
-who build this wondrous place?
+pedestal~
+a marbled pedestal rests here in the middle of the room, engraved with a
+bronze plaque.  Standing tall on top is the lady of justice.
+~
+E
+faces~
+these faces are of those you do not recognize.  They are probably the 
+guardians of this holy place.
+~
+E
+columns~
+tall marble columns support the dome-structured room.
+~
+E
+runes~
+swirling with power, these runes protect those who are saintly.
 ~
 S
 #4487

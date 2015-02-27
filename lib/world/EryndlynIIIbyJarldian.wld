@@ -1417,6 +1417,38 @@ D2
 ~
 0 -1 5100
 S
+#5981
+Rushing Water~
+   SPLOOSH! The icy water threatens to paralyze you as your system tries
+to overcome the initial shock of the sudden submersion into this fast-
+moving aquaductal torrent. Unfortunately, the temperature and volume of
+the water is too much to overcome and you are quickly swept up like a wee
+twig and pulled beneath the surface...
+~
+59 10130049 7
+S
+#5982
+Riding the Submerged Aquaduct~
+   Everything is dark and cold and wet; you are submerged in an elaborate
+underground waterway. The drow engineers of this twisting aquaduct clearly
+never intended it to be used as a means of conveyance; riding the torrential
+current is proving to be extremely unpleasant as you are stuck in an airless
+tube for much of the journey and smashed into walls and jagged rocks as the
+system twists and turns its way ever downward.
+~
+59 9998977 7
+S
+#5983
+Riding the Submerged Aquaduct~
+   Everything is dark and cold and wet; you are submerged in an elaborate
+underground waterway. The drow engineers of this twisting aquaduct clearly
+never intended it to be used as a means of conveyance; riding the torrential
+current is proving to be extremely unpleasant as you are stuck in an airless
+tube for much of the journey and smashed into walls and jagged rocks as the
+system twists and turns its way ever downward.
+~
+59 9998977 7
+S
 #5998
 Rift in the Astral Plane~
    You seem to be inside some sort of 'tear' in the fabric of the astral 

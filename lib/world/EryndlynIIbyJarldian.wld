@@ -521,13 +521,16 @@ S
 #5523
 Cavern of the Driders~
    After that miraculous leap into the weak part of the muck, you arrive
-here at the base of a huge, but barren cavern.  Grabbing at your touch, you
-wave it around in hope of seeing the path ahead.  Alas, to no avail you 
-reason that the only way to find your way about is to move into the
-heart of this cavern.  For all you see is the pitch-darkness in the mouth
-of this passage and the moving red eyes that seem to await your journey.
-Fear consumes you and freezes all movement from your feet, but you have to 
-dig deep into your consciousness and bring out that adventurous courage.
+here at the base of a huge, but barren cavern. A torrent of icy water down
+the western wall sends a frosty spray into the air, chilling the already
+cold cavern. The water disappears into a narrow fissure in the rocky floor
+beneath you. Grabbing at your touch, you wave it around in hope of seeing
+the path ahead. Alas, to no avail you reason that the only way to find your
+way about is to move into the heart of this cavern.  For all you see is the
+pitch-darkness in the mouth of this passage and the moving red eyes that
+seem to await your journey. Fear consumes you and freezes all movement from 
+your feet, but you have to dig deep into your consciousness and bring out
+that adventurous courage.
 ~
 55 13 0
 D0
@@ -1958,6 +1961,15 @@ D4
 ~
 ~
 0 -1 5166
+D5
+The ramp descends downward in a slow spiral west of here, but peering
+over the ledge and into the darkness you hear the sound of rushing water.
+There is no way to accurately judge the distance from here to the bottom,
+suffice it to say, it's long enough to make you think twice before doing
+anything drastic.
+~
+ledge~
+10 -1 5981
 S
 #5591
 A Descending Cavern~

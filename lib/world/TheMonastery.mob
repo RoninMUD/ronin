@@ -15,7 +15,7 @@ and concentration, anything can be achieved.
 5 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12901
 mystic brother~
 The Mystic Brother~
@@ -32,7 +32,7 @@ mystic. As a brother, he has shaved his head to show the proper stoic attitude.
 5 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12902
 wind whirlwind huge~
 The Huge Whirlwind~
@@ -49,7 +49,7 @@ is its mental bonding to you, you must be prepared to suffer its wrath.
 66 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12904
 mystic ultimate~
 The Ultimate Mystic~
@@ -61,14 +61,16 @@ powers. The world as a place of the greedy and loathsome has almost ceased to
 exist for him. Nevertheless, He is still a mighty opponent, when he utilizes
 his talent for martial arts and the mental powers.
 ~
-16793611 269262856 0 Y
+16395 269262856 0 Y
 60 -13 -17 10d100+19000 6d8+120
 0 1650000
 8 5 1
 5 0 0d0+0 0
 0 0 0 0
+R
+4
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12905
 mystic great~
 The Great Mystic~
@@ -86,7 +88,7 @@ powers.
 5 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12906
 apparition~
 The Apparition~
@@ -104,7 +106,7 @@ decayed beyond being anything but dust.
 53 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12907
 maiden sacred~
 The Maiden~
@@ -123,7 +125,7 @@ want to do is to stay by her side.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12908
 haze dazzling~
 The Dazzling Haze~
@@ -140,7 +142,7 @@ relentless pursuit of combat.
 66 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12910
 daemon crystal~
 The Crystal Daemon~
@@ -160,7 +162,7 @@ twinkle with the light of life energy.
 R
 2
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12911
 kansatsu mystic brother elder~
 Brother Kansatsu~
@@ -177,7 +179,7 @@ constant meditation. His bald head trickles with sweat.
 5 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12912
 senjin mystic brother elder~
 Brother Senjin~
@@ -194,7 +196,7 @@ strength at all left in his impressive frame.
 5 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12913
 kenji mystic brother elder master~
 Brother Kenji~
@@ -212,7 +214,7 @@ master of both martial arts and armed combat.
 5 20608 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12914
 genshi mystic brother elder~
 Brother Genshi~
@@ -229,7 +231,7 @@ hastily he stuffs all edible down his gob.
 5 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12915
 kyoki mystic brother elder~
 Brother Kyoki~
@@ -247,7 +249,7 @@ faith.
 5 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12916
 yagyu mystic brother elder~
 Brother Yagyu~
@@ -264,7 +266,7 @@ muscles. His bold head gleams from sweat in this light.
 5 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #12920
 stalker invisible~
 The invisible stalker~
@@ -281,6 +283,6 @@ and charges towards you...
 3 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #0
 $~

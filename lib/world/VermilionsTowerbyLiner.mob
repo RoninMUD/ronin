@@ -8,9 +8,9 @@ scalpel. He intends to gut you and add your ears to the grisly necklace he
 wears about his filthy neck.  He cares not who you are.  You have dared to
 stumble upon his domain, and you shall face his wrath.
 ~
-147566 268730376 -1000 Y
-32 -5 0 20d10+2000 8d5+10
-50000 275000
+147566 268730376 -800 Y
+52 -12 0 20d20+22222 8d5+30
+150000 2750000
 8 8 1
 62 0 0d0+0 1
 9 2 15 0
@@ -29,13 +29,14 @@ at your unwanted presence here.  As supreme ruler of the tower, he must defend
 what he has rightfully stolen.  He begins to take his true form as he lashes
 out with the fury of all-powerful evil...
 ~
-655466 536871052 -1000 Y
-49 -11 -5 50d10+6868 6d5+35
-200000 1000000
+655466 805306508 -900 Y
+59 -22 -8 50d50+20000 6d5+35
+750000 10000000
 9 9 1
-63 4097 20d10+1200 2
+63 4097 20d10+1200 3
 1 1 30 95
 9 3 10 0
+1 7 15 106
 0 0 0 0
 T
 ......Vermilion is surrounded by a mist of bloody droplets!~
@@ -51,13 +52,15 @@ and scores of small, sharp teeth begin to grow out of the pit.  A deep growl
 begins issuing from the mouth.  Apparently, it is hungry.
 ~
 110 294922 0 Y
-30 -4 -2 18d9+2598 10d4+10
-0 300000
+45 -18 -6 18d18+18000 10d10+55
+0 3000000
 8 8 0
-62 8191 0d0+0 0
+62 8191 0d0+0 2
+5 2 30 0
+8 2 30 0
 0 0 0 0
 K
-1000 0 0 0 0 0 0
+100000 0 0 0 0 0 0
 #17004
 twixt bard man master~
 Twixt~
@@ -69,14 +72,15 @@ guarding the way into the higher reaches of the Tower.  Not one to
 cause trouble, he bids you a safe departure and farewell, providing you
 leave now...
 ~
-16458 262272 300 Y
-60 -8 2 10d5+2681 5d5+16
-100000 500000
+16458 268697728 300 Y
+50 -28 -15 50d50+16000 6d6+95
+500000 5000000
 8 8 1
-10 20608 5d10+700 2
+10 20608 5d10+700 3
 1 7 10 100
 1 6 30 28
-0 1 0 0
+1 3 15 95
+0 0 0 0
 K
 0 0 0 0 0 0 0
 #17005
@@ -89,15 +93,15 @@ spire of the tower.  He is less than cordial with you as he makes a hissing
 sound and tears holes in the air around him.  Perhaps you should come back 
 later when he might be in a better mood.
 ~
-106 538181768 -500 Y
-40 -10 -3 20d10+2400 7d6+6
-80000 600000
+106 269746312 -500 Y
+50 -15 -9 10d250+6000 12d12+12
+135000 2500000
 8 8 1
 69 6200 0d0+0 3
 4 2 20 0
 2 3 15 0
 3 1 20 0
-0 0 0 0
+0 0 9 0
 K
 0 0 0 0 0 0 0
 #17006
@@ -113,13 +117,15 @@ head. He sits here patiently waiting for his leave and contemplating other
 necromantic matters to pass the time.
 ~
 74 134217856 0 Y
-40 -10 -3 20d10+2900 10d5+6
-100000 600000
+50 -10 -3 50d50+8000 10d10+10
+760000 3000000
 9 9 1
-1 6087 20d10+500 3
+1 6087 20d20+500 5
 1 3 20 30
 1 5 20 105
 1 3 10 141
+1 2 20 110
+1 2 10 109
 0 0 0 0
 T
 ......Maerlyn is enveloped in a bright blue sphere!~
@@ -128,20 +134,22 @@ K
 #17007
 oracle spirit~
 The Oracle~
-A circle of ivory stones has been built here, a voice from within speaks...
-~
+A circle of ivory stones has been built here, a voice from within speaks...~
 The spirit residing within the protective circle is one of the ancient 
 fortune tellers from beyond time.  The Oracle was conjured here by some
 unknown force and left to guard against any potential intruders.  It seems
 to be protecting a strange orb within its grasp.
 ~
-74 134217736 1000 Y
-40 -10 -5 20d10+4977 5d9+16
-100000 600000
-6 6 2
-67 4096 20d10+1000 2
-1 6 20 140
-1 3 15 38
+74 402653192 800 Y
+46 -19 -5 20d20+10000 9d9+19
+185000 3000000
+8 8 2
+67 4096 20d10+1000 5
+1 3 15 212
+1 1 10 141
+1 7 20 104
+1 6 10 85
+1 6 80 36
 0 0 0 0
 K
 0 0 0 0 0 0 0
@@ -155,11 +163,12 @@ through its transparent, jelly-like skin.  The form of the body seems to be
 human, but it has been transformed by some unknown cause into this horrid
 thing. It is mumbling some alien words as it chases you.
 ~
-108 32768 0 Y
-20 2 1 20d10+916 4d5+15
-0 90000
+108 32768 100 Y
+41 -9 -1 20d20+7000 5d5+25
+0 1000000
 8 8 0
-68 0 0d0+0 0
+68 0 10d10+100 1
+1 2 15 10
 0 0 0 0
 K
 5000 0 0 0 0 0 0
@@ -172,12 +181,15 @@ This strange scurrying creature hides under his hood, running from place to
 place. All you can recognize are the flourescent, beady eyes peering out to
 regard you with curiousity.
 ~
-200 32768 0 Y
-18 6 3 10d5+600 4d5+8
-0 70000
+72 268468226 -200 Y
+44 -16 -8 20d50+3200 9d9+9
+0 1100000
 8 8 0
-68 0 0d0+0 0
+68 0 10d10+100 1
+1 6 10 238
 0 0 0 0
+R
+2
 K
 3000 0 0 0 0 0 0
 #17010
@@ -190,11 +202,12 @@ trespassing on his Master's territory.  He guards these halls, wandering
 aimlessly with no mind and no soul.
 ~
 16488 403210250 -600 Y
-40 -10 -8 10d8+3500 12d4+20
-25000 350000
+46 -17 -8 80d50+14000 20d10+20
+87500 3250000
 8 8 1
-62 0 0d0+0 0
-0 0 0 0
+62 0 0d0+0 1
+1 2 10 172
+0 0 1 0
 K
 0 0 0 0 0 0 0
 #17012
@@ -208,11 +221,12 @@ proudly before you, transparent gut hanging disgustingly below his belt.
 Although jelly-like, his skin is thick and tough, practically impervious to
 any attack.  He sneers at you as he looks you over.
 ~
-10 32904 0 Y
-35 -6 -5 20d10+1200 4d5+25
-10000 200000
+10 32904 150 Y
+41 -16 -5 42d42+4242 10d10+42
+97500 1200000
 8 8 0
-68 0 1d1+1 0
+68 0 10d10+100 1
+1 2 90 218
 0 0 0 0
 K
 0 0 0 0 0 0 0

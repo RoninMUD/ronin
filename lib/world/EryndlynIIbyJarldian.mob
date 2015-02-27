@@ -236,7 +236,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-2058 1048576 -500 Y
+2058 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -251,7 +251,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-4106 1048576 -500 Y
+4106 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -266,7 +266,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-8202 1048576 -500 Y
+8202 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -281,7 +281,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-32778 1048576 -500 Y
+32778 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -296,7 +296,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-65546 1048576 -500 Y
+65546 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -311,7 +311,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-1048586 1048576 -500 Y
+1048586 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -326,7 +326,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-2097162 1048576 -500 Y
+2097162 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -341,7 +341,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-4194314 1048576 -500 Y
+4194314 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -356,7 +356,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-8388618 1048576 -500 Y
+8388618 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -371,7 +371,7 @@ a skeletal form of a huge lizard lurks about in the water.
 ~
 Made from all bone, this little thing has a bone to pick with you.
 ~
-1034 1048576 -500 Y
+1034 1048576 -100 Y
 50 -10 0 10d10+150 10d10+15
 10 100000
 8 8 0
@@ -403,7 +403,7 @@ A disfigured form shambles into your walking path.
 ~
 You lock stares into the eyes of darkness as it stares at you back...
 ~
-335544334 268730412 -1000 Y
+335544334 268730412 -300 Y
 31 -7 0 5d5+3000 8d3+16
 100 8000
 8 8 0
@@ -420,7 +420,7 @@ A disfigured form shambles into your walking path.
 ~
 You lock stares into the eyes of darkness as it stares at you back...
 ~
-335544330 268730412 -1000 Y
+335544330 268730412 -300 Y
 31 -7 0 5d5+3000 8d3+16
 100 8000
 8 8 0
@@ -437,7 +437,7 @@ A disfigured form shambles into your walking path.
 ~
 You lock stares into the eyes of darkness as it stares at you back...
 ~
-42 268730412 -1000 Y
+42 268730412 -300 Y
 31 -7 0 5d5+3000 8d3+16
 100 8000
 8 8 0
@@ -489,7 +489,7 @@ A disfigured form shambles into your walking path.
 ~
 You lock stares into the eyes of darkness as it stares at you back...
 ~
-67108878 268730412 -1000 Y
+67108878 268730412 -300 Y
 31 -7 0 5d5+3000 8d3+16
 100 8000
 8 8 0

@@ -71,11 +71,11 @@ An emblem bearing the family crest of a drow family is here.~
 10 10000 5000
 9
 E
-emblem~
-There is crest of a drow family on this emblem.~
-E
 crest~
 The crest signifies the drow family Tzjar-Fey.~
+E
+emblem~
+There is crest of a drow family on this emblem.~
 X
 ~
 0 0 0
@@ -520,18 +520,18 @@ A Portal of Swirling Mists hovers around here.~
 10 10 10
 100
 E
-mists~
-Crackling Purple Haze and sparks of light flares from this rift in time and
-space. Looking in, you can almost see the other side of it, but you can
-make out what and where it is.  The portal looks stable enough to cross, maybe
-you should jump in? 
-~
-E
 portal~
 Crackling Purple Haze and sparks of light flares from this rift in time and
 space. Looking in, you can almost see the other side of it, but you can
 make out what and where it is.  The portal looks stable enough to cross, maybe
 you should jump in?
+~
+E
+mists~
+Crackling Purple Haze and sparks of light flares from this rift in time and
+space. Looking in, you can almost see the other side of it, but you can
+make out what and where it is.  The portal looks stable enough to cross, maybe
+you should jump in? 
 ~
 X
 ~
@@ -568,11 +568,6 @@ A round stone table with arcane runes chiselled into its surface rests here.~
 10 10 10
 100
 E
-runes~
-The runes seems to give the table a source of power.  It radiates with
-strength and seems to focus it's energies outward.
-~
-E
 table~
 This alluring table catches your eyes, it's runes and craftsmanship impressing
 you. It is a furniture of the highest quality and seems to be made from
@@ -580,6 +575,11 @@ an onyx, volcanic rock that is shaped and carved accordingly into this
 magnificent piece of artwork.  It's runes seems to give it some source
 of power, you feel it radiate angrily outward.  This table doesn't seem heavy
 and looks as if it can be moved.
+~
+E
+runes~
+The runes seems to give the table a source of power.  It radiates with
+strength and seems to focus it's energies outward.
 ~
 X
 ~
@@ -599,14 +599,14 @@ a piece of stone lies broken here.~
 15 10 10
 100
 E
-stone~
-A sparkling piece of rock catches your eye as it shines an azure light.
+gem~
+A sparkling piece of rock catches your eye as it shines an azure light. 
 Though it is only a broken fragment, it still has a visual appeal worth
 gazing at.  The stone looks extremely heavy and fixed into the ground.
 ~
 E
-gem~
-A sparkling piece of rock catches your eye as it shines an azure light. 
+stone~
+A sparkling piece of rock catches your eye as it shines an azure light.
 Though it is only a broken fragment, it still has a visual appeal worth
 gazing at.  The stone looks extremely heavy and fixed into the ground.
 ~
@@ -628,12 +628,12 @@ A rotting timber with roughly hewn handholds is propped against the wall.~
 10 10 10
 100
 E
-timber~
+rotting~
 Nearly rotted through, this chunk of ancient wood looks like it might
 support your weight, but not for very long.
 ~
 E
-rotting~
+timber~
 Nearly rotted through, this chunk of ancient wood looks like it might
 support your weight, but not for very long.
 ~
@@ -709,7 +709,7 @@ A Towering Onyx Pillar stands here, emitting a beam of orange haze.~
 5000 10 10
 100
 E
-pillar~
+narbondel~
 This tower pillar glows with brilliance and can be seen in any point of the 
 city. It is the timeclock of Eryndlyn, the only way the dark elves mark 
 the passage of time in a world that otherwise knew no days and no seasons.
@@ -719,7 +719,7 @@ on the surface.  At the end of each day, the mage repeats this process
 -- beginning the cycle anew.
 ~
 E
-narbondel~
+pillar~
 This tower pillar glows with brilliance and can be seen in any point of the 
 city. It is the timeclock of Eryndlyn, the only way the dark elves mark 
 the passage of time in a world that otherwise knew no days and no seasons.
@@ -746,20 +746,20 @@ A Black Globe of cloud and mists floats in the air here.~
 10 10 10
 100
 E
-black~
-Swirling clouds and mists fill this black globe.  It rotates clockwise
-consistently and seems to come alive the closer you get.  You can feel the
-power of this object radiate forward, however, not sure on how to harness
-it's power.  Evidently, this was meant for drow spellcasting and not meant 
-for anyone else.
-~
-E
 globe~
 Swirling clouds and mists fill this black globe.  It rotates clockwise
 consistently and seems to come alive the closer you get.  You can feel the
 power of this object radiate forward, however, not sure on how to harness
 it's power.  Evidently, this was meant for drow spellcasting and not meant
 for anyone else.  
+~
+E
+black~
+Swirling clouds and mists fill this black globe.  It rotates clockwise
+consistently and seems to come alive the closer you get.  You can feel the
+power of this object radiate forward, however, not sure on how to harness
+it's power.  Evidently, this was meant for drow spellcasting and not meant 
+for anyone else.
 ~
 X
 ~
@@ -819,18 +819,18 @@ You are standing in a pool of bubbling dark water.~
 10 10 10
 100
 E
-pool~
-Dark in color and illuminating in microcrystalline allure, this pool bubbles
-hungrily. Looking at the water, you can see lizards and all sorts of stuff 
-swimming in it, trying to avoid your outstretched hands.  There is a large 
-whirlpool in the center of the waters that looks very inviting...
-~
-E
 water~
 Dark in color and illuminating in microcrystalline allure, this pool bubbles
 hungrily. Looking at the water, you can see lizards and all sorts of stuff
 swimming in it, trying to avoid your outstretched hands.  There is a large 
 whirlpool in the center of the waters that looks very inviting... 
+~
+E
+pool~
+Dark in color and illuminating in microcrystalline allure, this pool bubbles
+hungrily. Looking at the water, you can see lizards and all sorts of stuff 
+swimming in it, trying to avoid your outstretched hands.  There is a large 
+whirlpool in the center of the waters that looks very inviting...
 ~
 X
 ~

@@ -144,12 +144,12 @@ A Statue of Peace is standing here.~
 10 10 10
 10
 E
-statue~
+peace~
 This statue appears to be keeping the surrounding area
 quiet and peaceful.
 ~
 E
-peace~
+statue~
 This statue appears to be keeping the surrounding area
 quiet and peaceful.
 ~
@@ -656,7 +656,7 @@ a questcard is lying on the ground.~
 100
 X
 ~
-0 0 0
+64 0 0
 M
 ~
 ~
