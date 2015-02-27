@@ -113,8 +113,9 @@ vulnerable...
 51 -19 -15 1d1+6999 1d1+879
 0 3150000
 8 8 0
-63 16512 1d1+1 3
+63 16512 1d1+1 4
 5 2 20 0
+6 2 20 0
 9 1 15 0
 1 2 10 106
 0 1 0 800
@@ -123,19 +124,19 @@ R
 T
 ......a Daemonic Pit Viper's eyes burns with blood-lust!~
 T
-......a Daemonic Pit viper's split tongue hisses aggressively!~
+......a Daemonic Pit viper's split tounge hisses aggressively!~
 K
 50000 0 0 0 0 0 0
 #14304
 a Brimstone Shadow~
 a Brimstone Shadow~
-`pa Brimstone Shadow drifts back and forth inbetween the rocky landscape.`q
+a Brimstone Shadow drifts back and forth inbetween the rocky landscape.
 ~
   Before your eyes appears a dustdevil made up of soot
 and sulfur. It seems to fade in and out if existance
 as if its not really there.
 ~
-104 75538494 -1000 Y
+104 75538492 -1000 Y
 50 -20 -6 1d1+6665 1d1+1331
 666 3996000
 8 8 0
@@ -145,323 +146,7 @@ as if its not really there.
 R
 12
 T
-`p......a Brimstone Shadow reeks of sulfur!`q~
-K
-0 0 0 0 0 0 0
-#14305
-a Fallen Angel~
-a Fallen Angel~
-`oa Fallen Angel hovers before the gate, its halo faded to a dim orange glow...
-~
-  With his majestic pose, this once
-faithful servant of God now guards
-this long forgotten entrance to
-the Infernal Pits for all eternity.
-Not unlike the Price of Darkness
-himself; this Angel was banished
-from the Heavens and condemned to
-eternal damnation in the pits of
-Hell. Lucifer has shown compassion
-with this one, and thus awarded him
-with lesser suffering.
-~
-72 276865084 -777 Y
-50 -20 -7 1d1+7776 1d1+1331
-0 3996000
-8 8 1
-63 24768 1d1+776 1
-1 2 15 190
-0 1 0 289
-R
-12
-T
-`o......a Fallen Angel's withered wings envelops the surroundings!`q~
-K
-0 0 0 0 0 0 0
-#14306
-bewildered whoremonger~
-a Whoremonger~
-a Bewildered Whoremonger staggers aimlessly about, his head lowered in shame.
-~
-  Frayed suit, perforated once black leather shoes. Neck tie
-worn down to but a stump of silk. His face looks down onto
-the ground; the expression evidently shameful of his sinful
-escapades. Unsteady he saunters along, kicking rocks as he
-slowly and aimlessly moves across the jagged plains...
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 1
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......a Bewildered Whoremonger lusts for a woman's affection!~
-K
-0 0 0 0 0 0 0
-#14307
-fliratious harlot~
-a Flirtatious Harlot~
-a Flirtatious Harlot struts around, looking for her next lay.
-~
- Holey and torn fishnet stockings, unkempt hair. Her abundant
-make-up has run down her face, making it look melted. Her 
-mini-skirt leaves little to the imagination, and the shear
-stench from her obviously strongly infected genitalia heeds
-warning not to get too close.
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 2
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......a Flirtatious Harlot's face is ridden with herpes!~
-K
-0 0 0 0 0 0 0
-#14308
-voracious whore~
-a Voracious Whore~
-a Voracious Whore calls out to you, revealing her disease ridden crotch.
-~
-The Whore pulls up her much too short mini-skirt, giving
-you a good glimpse of what she has to offer.
-`a.`q
-a Voracious Whore says 'Hello there Sailor! Lookin' for some company are we?'
-`a.`q
-A sharp whiff of old bile is carried by a sulfur wind straight
-into your nostrils provocing a gag reflex...
-`a.`q
-You puke.
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 2
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......a Voracious Whore's eyes gleam with promiscuousness!~
-K
-0 0 0 0 0 0 0
-#14309
-abusive father~
-an Abusive Father~
-an Abusive Father stumbles about, seeking forgiveness from his own child.
-~
-  Having been given too little attention from his own father;
-this apparent middle aged man has given a bit too MUCH attention
-to the child of his own. Unable to control his sick urges; this
-man has repeatedly abused his own daughter over the years
-between eight and sixteen. The results were a mentally damaged
-daughter who saw no escape but to kill her father and then herself.
-You wont find HER down here though...
-Now he wanders eternally, burdened by the everlasting grief of 
-what he has done.
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 1
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......an Abusive Father cries in regret of molesting his child!~
-K
-0 0 0 0 0 0 0
-#14310
-perverted mother~
-a Perverted Mother~
-a Perverted Mother saunters about, trying to shut the howling voices out.
-~
-  Having been given too much attention from her own father;
-this apparent middle aged woman has carried on the evil circle
-of abuse and satisfied her sick urges by taking sexual pleasure
-from her own son; resulting in a mentally damaged child who
-saw no escape but to kill his mother and then himself. Now she
-wanders eternally, burdened by the everlasting grief of what
-she has done.
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 2
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......a Perverted Mother weeps quietly in remembrance of her son!~
-K
-0 0 0 0 0 0 0
-#14311
-randy teenager~
-a Randy Teenager~
-a Randy Teenager is here, endulging himself in masturbation.
-~
-  Despite being told to sleep with his hands above his quilt;
-this boy has repeatedly and notoriously continued to please
-himself in spite of the bible's teachings. Having no one to
-fantasize about other than his own sister does not particularily
-help extenuate his transgressions either.
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 1
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......a Randy Teenager masturbates violently!~
-K
-0 0 0 0 0 0 0
-#14312
-randy teenager~
-a Randy Teenager~
-a Randy Teenager is here, endulging herself in masturbation.
-~
-  Despite being told to sleep with her hands above her quilt;
-this girl has repeatedly and notoriously continued to please
-herself in spite of the bible's teachings. Having no one to
-fantasize about other than her own brother does not particularily
-help extenuate her transgressions either.
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 2
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......a Randy Teenager masturbates violently!~
-K
-0 0 0 0 0 0 0
-#14313
-nymphomaniac~
-a Nymphomaniac~
-a Nymphomaniac is lying upon the ground, legs spread wide apart.
-~
-  This poor young woman is afflicted by an unusual strong sex-drive.
-Her previosly deviating sexual behaviour caught the attention of
-the authorities, and she was admitted to a mental institution
-diagnosed with hysteria and hyper-nyphomania. She finally met her
-end bleeding to death after repeatedly penetrating herself with an
-iron bar.
-`a.`q
-  Now she lies on the ground, thighs spread wide appart with a grim
-deamon between her legs. The demon plunges his jagged cock into
-her rotten crotch; tearing up boils and flesh in the process.
-The Nymphomaniac girl lets out moans and screams of pain and joy as
-the  persistant pumping of her less than inviting hole leaks puss,
-piss, blood and the caustic sperm of the deamon...
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 2
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......a Nymphomaniac is engaged in fornication with a deamon!~
-K
-0 0 0 0 0 0 0
-#14314
-fornicators~
-two Fornicators~
-two Fornicators are here, engaged in explicit infidelity!
-~
-  Little did the unknowlingly rejected housewife know that her husband
-was having a hot affair with the 17 year old babysitter from next door.
-It wasnt until one day she got home early from work that she found the
-two of them engaged on sadomasochistic sex in their very own marital bed.
-In a fit of rage she strangled the girl with a red gag-ball while the at
-the time chained up husband could but helplessly witness his wife put an
-end to his sins.
-`a.`q
-  After finishing the poor girl, she continued to sodomize her husband with
-a broken bottle of wine. Needless to say this brought a certain painful
-satisfaction to the man, although it eventually and inevitably caused his
-early demise.
-`a.`q
-  The couple is now joined in the afterlife here in Hell and condemned to
-eternal pursuit of orgasm without the possibility of actual release. Never
-being able to reach climax the couple weeps as they continue to penetrate
-eachothers bodily orifices until their genetalia are sore and bleeding
-from the lubeless friction.
-~
-74 8431676 -1000 Y
-50 -20 -6 1d1+6665 1d1+1331
-666 4050000
-8 8 0
-69 24768 1d1+665 2
-1 2 20 106
-1 2 15 203
-0 1 0 289
-R
-12
-T
-......two Fornicators moan with pleasure and pain!~
-K
-0 0 0 0 0 0 0
-#14315
-asmodaeus~
-Asmodaeus, the King of Demons~
-Asmodaeus, the King of Demons completely Dominates the room with his sharp Gaze!
-~
-  Resting upon a huge Infernal Dragon, this strong and dominating figure
-appears with three heads; the first like a bull, the second like a man,
-and the third like ram. He has the tail of a serpent, and from his mouth
-he issues flames of fire to those who defy him.
-~
-218120234 402688060 -1000 Y
-66 -20 -6 1d1+66665 1d1+1331
-6666666 17999982
-8 8 1
-63 134274247 1d1+6665 8
-1 2 35 209
-1 2 35 212
-1 2 35 248
-1 2 35 203
-1 2 30 110
-1 2 20 109
-1 2 15 181
-1 2 10 241
-0 3 1 958
-R
-440
-T
-......Asmodaeus, the King of Demons's eyes burn with sinful lust!~
+ .....a Brimstone Shadow reeks of sulfur!~
 K
 0 0 0 0 0 0 0
 #0
