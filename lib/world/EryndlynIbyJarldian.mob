@@ -15,7 +15,7 @@ are whipping posts for its master.
 96 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5101
 drow soldier guard~
 A drow soldier~
@@ -34,7 +34,7 @@ backstabbers and trots slowly with his lizard.
 99 0 100d100+600 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5102
 drow noble warrior~
 A Drow Noble~
@@ -52,7 +52,7 @@ the finest education in butchering 101.
 99 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5103
 drow arch-mage mage~
 The Arch-Mage of Tzjar-Fey~
@@ -74,7 +74,7 @@ he studies you calmly, trying to figure out how you got into his humble home.
 1 2 20 8
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5104
 drow priestess~
 The Drow Priestess of Dagoor~
@@ -94,7 +94,7 @@ Dagoor's omnipotent guidance.
 99 4288 100d100+5000 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5105
 drow apprentice~
 Drow apprentice~
@@ -115,7 +115,7 @@ practice.
 1 6 50 36
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5106
 drow weaponmaster zarc~
 Zarc Tzjar-Fey, Weaponmaster~
@@ -135,7 +135,7 @@ most feared in the realm of the drow.  Snarling fiercely at you, he charges!
 1 6 60 102
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5107
 drow matron mother lower~
 A Matron Mother~
@@ -144,15 +144,17 @@ A Matron Mother of a lower house is here, screaming out orders.
 Bellowing and screaming in rage, this matron mother does not look happy.  You
 have violated her house and now she will look to end your pitiful existence.
 ~
-16777259 41943048 -1000 Y
+43 41943048 -1000 Y
 55 -11 1 12d50+4800 10d8+40
 40000 600000
 8 8 2
 99 4096 100d100+1000 1
 1 2 30 32
 0 0 0 0
+R
+4
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5108
 drow matron mother first~
 Matron Tzjar-Fey~
@@ -175,7 +177,7 @@ fuming and diabolical, wondering why intruders are in her private chambers.
 1 6 25 28
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5109
 illithid~
 An Illithid~
@@ -198,7 +200,7 @@ are also known for their skill in magic and battle tactics.
 1 2 20 111
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5110
 goblin slave~
 Goblin Slave~
@@ -216,7 +218,7 @@ are whipping posts for its master.
 96 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5115
 drow patrol soldier~
 A Drow Soldier~
@@ -232,7 +234,7 @@ quickly moves into a well-rehearsed battle stance.
 99 0 100d100+50 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5116
 drow patrol cleric priestess~
 A Drow Priestess~
@@ -256,7 +258,7 @@ a few verses and waits for the right moment to unleash her fury.
 1 6 30 108
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5117
 darkmage mage drow wizard~
 A Drow Darkmage~
@@ -282,7 +284,7 @@ casts his spells, grabbing at a spell book under his arm.
 1 6 50 108
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5125
 drow matron mother third~
 Matron Yjaarm~
@@ -295,15 +297,17 @@ respected and has a nice complement of forces at her command.  However,
 Yjaarm has lost her fire and desire to fight -- a fault in her trait which
 could lead to her demise.
 ~
-16793642 813695104 -1000 Y
+16426 813695104 -1000 Y
 55 -11 0 50d5+9000 10d8+21
 80000 600000
 8 8 2
 99 4096 100d100+1000 1
 1 2 30 82
 0 0 0 0
+R
+4
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5126
 drow matron mother fourth~
 Matron Quehvar~
@@ -315,15 +319,17 @@ desire to move up in rank.  Known for her vicious fire in battle, she is
 also a persistent political figure in the drow ranks.  Most undoubtedly, 
 we can expect high things in the future from this dark elf.
 ~
-16793642 813695104 -1000 Y
+16426 813695104 -1000 Y
 55 -11 0 40d4+7500 10d7+19
 80000 600000
 8 8 2
 99 4096 100d100+1000 1
 1 2 30 26
 0 0 0 0
+R
+4
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5127
 drow matron mother second~
 Matron Zaboral-Hashal~
@@ -336,15 +342,17 @@ rank.  Laughing diabolically, she knows her time will come when she will
 reign at the very top. Chaos rules this society, friendship and peace are 
 irrelevant.
 ~
-16793642 813695104 0 Y
+16426 813695104 0 Y
 55 -11 0 50d4+9800 9d8+33
 80000 600000
 8 8 1
 99 4096 100d100+1000 1
 1 2 30 95
 0 0 0 0
+R
+4
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5132
 drow leader varrn~
 Varrn, Drow Patrol Leader~
@@ -363,7 +371,7 @@ to his patrol...
 9 7 25 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5140
 spider sentry first~
 A Spider Sentry~
@@ -381,7 +389,7 @@ give up his position of the gate.
 5 2 20 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5149
 myrlochar spider~
 Myrlochar~
@@ -403,7 +411,7 @@ strong enough to slay them.
 5 2 10 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5153
 svirfneblin deep gnome~
 A svirfneblin~
@@ -424,7 +432,7 @@ you cannot picture them as being violent.
 1 6 100 102
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5158
 rock elemental~
 A rock elemental~
@@ -442,7 +450,7 @@ arms crosses and standing tall -- this guardian looks very intimidating.
 1 6 100 99
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5167
 dwarf duergar merchant caravan~
 Duergar Dwarf~
@@ -460,7 +468,7 @@ products.
 71 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5168
 statue spider jade dagoor~
 Statue of Dagoor the Arachnid Queen~
@@ -480,7 +488,7 @@ moving, scanning the area for intruders and unwanted guests.
 87 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5169
 lizard huge~
 A Huge lizard~
@@ -499,7 +507,7 @@ kicking your ass.
 8 1 30 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5175
 rogue drow elf~
 A Drow Rogue~
@@ -518,7 +526,7 @@ next thought, this dark elf draws his weapons and greets your with a snarl.
 99 0 100d100+500 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5177
 Dgarzah Drow rogue Leader~
 Dgarzah, leader of Velkyn Velve~
@@ -539,7 +547,7 @@ reconsider fighting such a powerful foe.
 1 6 60 102
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5184
 spider sentry third~
 A Spider Sentry~
@@ -557,7 +565,7 @@ give up his position of the gate.
 5 2 20 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5187
 drow wizard yjarrm~
 Drow Wizard of Yjarrm~
@@ -574,7 +582,7 @@ feverishly conducts his experiments, hoping to revolutionize the world...
 1 2 50 30
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5189
 spider sentry fourth~
 A Spider Sentry~
@@ -592,7 +600,7 @@ give up his position of the gate.
 5 2 20 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5191
 spider sentry second~
 A Spider Sentry~
@@ -610,7 +618,7 @@ give up his position of the gate.
 5 2 20 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5197
 myconid mushroom~
 Myconid~
@@ -627,7 +635,7 @@ contentment from life.  They are impressively huge however, towering a good
 78 8 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5198
 drow guard elf~
 Drow Guard~
@@ -647,6 +655,6 @@ dark elf. Hopefully you will live this encounter, for they are a merciless race.
 99 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #0
 $~

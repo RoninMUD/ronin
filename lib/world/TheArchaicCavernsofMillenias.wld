@@ -468,6 +468,15 @@ maelstrom~
 10 -1 14331
 E
 maelstrom~
+  The maelstroem beneath the huge waterfall
+swirls and twirls with a furious force! You
+wouldnt want to get to close to that thing,
+not unless you have absolutely no regard
+for your own well being of course! Jumping
+into that thing would be pure suicide...
+~
+E
+maelstrom~
   The maelstrom beneath the huge waterfall
 swirls and twirls with a furious force! You
 wouldnt want to get to close to that thing,
@@ -475,15 +484,6 @@ not unless you have absolutely no regard
 for your own well being of course! Jumping
 into that thing would be suicide, pure and
 simple...
-~
-E
-maelstrom~
-  The maelstroem beneath the huge waterfall
-swirls and twirls with a furious force! You
-wouldnt want to get to close to that thing,
-not unless you have absolutely no regard
-for your own well being of course! Jumping
-into that thing would be pure suicide...
 ~
 S
 #14319
@@ -1195,15 +1195,6 @@ the inscribed warning above the gate.
 gate~
 12 -1 14345
 E
-gate~
-  Through the gates you catch a glimpse of
-a barren and desolate landscape filled with
-pillars of jagged rocks. Whirling winds
-whispers faint screams and words you cannot
-quite make out. One might be wise to heed
-the inscribed warning above the gate.
-~
-E
 inscription~
 The inscription is old and frayed by the constant friction of the sulfur winds:
 `a-`q
@@ -1213,6 +1204,15 @@ The inscription is old and frayed by the constant friction of the sulfur winds:
 `p*`q                                            `p*`q
 `p*`q    `oAbandon hope all ye who enter here      `p*`q
 `p**********************************************`q
+~
+E
+gate~
+  Through the gates you catch a glimpse of
+a barren and desolate landscape filled with
+pillars of jagged rocks. Whirling winds
+whispers faint screams and words you cannot
+quite make out. One might be wise to heed
+the inscribed warning above the gate.
 ~
 S
 #14345
@@ -1518,13 +1518,13 @@ D3
 0 -1 14357
 E
 gap~
-  The gap seems to be a small opening
+The gap seems to be a small opening
 between two boulders. It might be
 possible to open the gap further.
 ~
 E
 gap~
-The gap seems to be a small opening
+  The gap seems to be a small opening
 between two boulders. It might be
 possible to open the gap further.
 ~
@@ -1785,22 +1785,12 @@ something of great Dark and Magical Power!
 seal~
 8 -1 14367
 E
-onyx seal golden writings symbols~
-  The seal is made out of smooth onyx rock, and
-inlaid with what would appear to be 24k gold.
-The gold glows faintly in the dimness, and reveals
-the following letters:
-`a-`q
-        `p*****************************`q
-        `p* `kA `p- `kS `p- `kM `p- `kO `p- `kD `p- `kA `p- `kY `p*`q
-        `p*****************************`q
-`a-`q
-  The text is engraved in a circle surrounding the
-mysterious symbols in and around the center of the
-seal itself. Strange lines, with circles springing
-out of straight lines, with tail and horn-like
-features. This is by no doubt a seal hiding
-something of great Dark and Magical Power!
+s~
+The scree has completely blocked off the exit.
+~
+E
+south~
+The scree has completely blocked off the exit.
 ~
 E
 seal onyx golden writings~
@@ -1821,12 +1811,22 @@ features. This is by no doubt a seal hiding
 something of great Dark and Magical Power!
 ~
 E
-south~
-The scree has completely blocked off the exit.
-~
-E
-s~
-The scree has completely blocked off the exit.
+onyx seal golden writings symbols~
+  The seal is made out of smooth onyx rock, and
+inlaid with what would appear to be 24k gold.
+The gold glows faintly in the dimness, and reveals
+the following letters:
+`a-`q
+        `p*****************************`q
+        `p* `kA `p- `kS `p- `kM `p- `kO `p- `kD `p- `kA `p- `kY `p*`q
+        `p*****************************`q
+`a-`q
+  The text is engraved in a circle surrounding the
+mysterious symbols in and around the center of the
+seal itself. Strange lines, with circles springing
+out of straight lines, with tail and horn-like
+features. This is by no doubt a seal hiding
+something of great Dark and Magical Power!
 ~
 S
 #14367
@@ -1844,27 +1844,10 @@ Old; Asmodaeus, the King of Demons; one of the Seven Princes of Hell!
 ~
 143 201359360 0
 E
-harlot~
-Ah, you like that one eh? Dont stare for too long now. You dont wanna catch
-see-filis...
-~
-E
-harlots~
-Slender Harlots scurries into the shadowy corner of the room as you make your
-approach. It would appear they do not receive many visitors other than their
-insatiable Lord and Master Asmodaeus.
-~
-E
-lair~
-Are you blind?! You're standing in the MIDDLE of it! ... Idiot...
-~
-E
-fireplace~
-Ahhh, so nice and hot... And the dancing of the flames... Bewitching...
-~
-E
-bodyparts~
-Mmmm, yummy! You can really smell the iron content in the blood!
+banners~
+The ragged banners have been worn and torn in battles over the course of
+the ages. The banners represents the seventy two Legions of Amaymon; which
+Asmodaeus the Demon-King commands.
 ~
 E
 tables~
@@ -1875,10 +1858,27 @@ platter with pickled lady-fingers... still wearing engagement rings and
 various wedding bands...
 ~
 E
-banners~
-The ragged banners have been worn and torn in battles over the course of
-the ages. The banners represents the seventy two Legions of Amaymon; which
-Asmodaeus the Demon-King commands.
+bodyparts~
+Mmmm, yummy! You can really smell the iron content in the blood!
+~
+E
+fireplace~
+Ahhh, so nice and hot... And the dancing of the flames... Bewitching...
+~
+E
+lair~
+Are you blind?! You're standing in the MIDDLE of it! ... Idiot...
+~
+E
+harlots~
+Slender Harlots scurries into the shadowy corner of the room as you make your
+approach. It would appear they do not receive many visitors other than their
+insatiable Lord and Master Asmodaeus.
+~
+E
+harlot~
+Ah, you like that one eh? Dont stare for too long now. You dont wanna catch
+see-filis...
 ~
 S
 #14399

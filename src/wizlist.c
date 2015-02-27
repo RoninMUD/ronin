@@ -126,7 +126,12 @@ insert_wizlist_name (char *name, const char *filename) {
   FILE *fl;
 
   remove_wizlist_name (name);
-  fl = fopen (filename, "w+");
+  if (!(fl = fopen (filename, "r+"))) {
+    if (!(fl = fopen(filename, "w+"))) {
+      return;
+    }
+  }
+
   fseek (fl, 0L, SEEK_END);
   fprintf (fl, "%s\n", name);
   fclose (fl);

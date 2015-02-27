@@ -117,12 +117,14 @@ reaches out for your touch with the bristles that cover its body.
 The ant lion's huge mandibles, silvery gray in color, each have
 a single barb to impale and hold the victim -- that's YOU!
 ~
-16777262 537919656 -1000 Y
+46 537919656 -1000 Y
 53 -15 -15 10d300+10000 30d7+40
 20000 200000
 8 8 0
 76 0 0d0+0 0
 0 0 0 0
+R
+4
 K
 0 0 0 0 0 0 0
 #6298
@@ -134,12 +136,14 @@ Covered with shaggy hair matted with dried blood, the cave bear
 looks back at you with mournful hatred in its eyes.  It almost
 seems sorry to have to slap your scalp loose from your head.
 ~
-16793642 805601416 0 Y
+16426 805601416 0 Y
 54 -14 -10 20d100+7000 3d12+70
 0 800000
 8 8 0
 86 0 0d0+0 0
 0 0 0 0
+R
+4
 K
 0 0 0 0 0 0 0
 #0

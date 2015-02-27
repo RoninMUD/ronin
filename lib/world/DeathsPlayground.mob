@@ -9,7 +9,7 @@ of the gate, blocking any desire of further progression.  It is very smooth
 and is white and black speckled.  It grunts as it passes you, not even
 noticing your presence.
 ~
-10 134479872 -1000 Y
+10 134479872 -100 Y
 45 -8 -5 200d10+9000 10d2+15
 50000 1000000
 8 8 1
@@ -30,7 +30,7 @@ brown fur is nicely groomed and his tail flicks as he coldly gazes at you.
 The muscles in his legs prove that he could easily outrun you over any 
 terrain and his upper bust heaves as he breaths heavily and gallops about.
 ~
-104 32768 -1000 Y
+104 32768 -400 Y
 45 -10 -5 500d5+6150 20d4+10
 30000 900000
 8 8 1
@@ -50,7 +50,7 @@ see his razor-sharp teeth and his tongue, which falls out revealing that it
 is just about as long as his claws are.  His bright red eyes send fear into
 the hearts and minds of all mortals.
 ~
-40 32768 -1000 Y
+40 32768 -600 Y
 45 -10 -2 100d10+5800 7d5+40
 30000 900000
 8 8 1
@@ -70,7 +70,7 @@ covered in warts, and he hides his shame with nothing but a loincloth.  As he
 grooms himself with one hand, he scratches himself with another.  Although he
 is shorter than six feet, he sure looks as if he could tear you apart.
 ~
-44 0 -1000 Y
+44 0 -400 Y
 45 -10 -4 200d5+6350 50d2+0
 30000 1100000
 8 8 1
@@ -90,7 +90,7 @@ legs flex and can tell he'd put up quite a fight.  He whinnies and leaps over
 tombstones left and right.  As he gets up on his hind legs he towers over you
 as if he were on top of the world.
 ~
-40 0 -1000 Y
+40 0 -400 Y
 45 -10 -4 200d5+6100 10d5+16
 30000 700000
 8 8 1
@@ -109,7 +109,7 @@ person in tattered robes.  He moves quickly and as you glance at him he runs
 to hide behind something.  He stares at you in complete fear and just as 
 you decide he's harmless he attacks...
 ~
-40 0 -1000 Y
+40 0 -500 Y
 45 -15 -5 200d10+5300 10d7+25
 50000 950000
 8 8 1
@@ -128,7 +128,7 @@ from silk and his two fangs stick out of his mouth slightly, for time has
 withered his once youthful skin.  His blood-stained lips part as he drops his
 martini and opens his mouth widely to emit a loud hissing sound.
 ~
-40 0 -1000 Y
+40 0 -650 Y
 45 -10 -4 100d20+5300 8d10+26
 30000 900000
 8 8 1
@@ -144,7 +144,7 @@ A large root is sticking up out of the ground here.
    This enormous root stares back at you with glowing red eyes.  Unfortunately
 for you, you're screwed.  I hope you have someone to get your gear.
 ~
-536870954 402720896 -1000 Y
+536870954 402720896 -100 Y
 50 -20 0 200d10+11000 20d2+30
 200000 2500000
 8 8 1

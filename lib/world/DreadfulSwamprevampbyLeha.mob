@@ -168,7 +168,7 @@ eyes for intruders within his arena. With the slighter chitter of his mouth,
 strings of web can flow around anyone not meant to be here, capturing them
 for this guards next meal.
 ~
-16492 32776 -1000 Y
+16492 32776 -450 Y
 42 5 -5 10d100+4500 3d20+50
 0 494987
 8 8 1
@@ -260,7 +260,7 @@ muck of this swampy territory. Small beads for eyes peer from one end of
 this hideous thing. As you look a bit closer, you can see what appear to be
 fangs, proving that this is no ordinary dirt worm.
 ~
-16490 294922 -1000 Y
+16490 294922 -500 Y
 42 -8 0 12d34+5678 4d7+12
 0 750000
 8 8 1
@@ -319,7 +319,7 @@ of this monstrousity shows tears and rips all along his flank and arms. With
 another hideous scream, his wild eyes look upon you with victory.
 ~
 17000 268468232 -300 Y
-42 -8 -10 10d600+7500 8d4+12
+42 -8 -10 10d600+5500 8d4+12
 20000 750000
 8 8 1
 59 0 0d0+0 3
@@ -450,7 +450,7 @@ even though its huge size gives you that impression already. Its glistening
 skin is almost translucent under your light, letting you see its many veins
 as the swell and pump its blood through its body.
 ~
-16490 134512682 -900 Y
+16490 134512682 -550 Y
 51 -15 -10 10d100+9000 4d25+90
 0 1000000
 8 8 1

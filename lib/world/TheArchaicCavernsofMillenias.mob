@@ -12,7 +12,7 @@ yellow. Its eyes reflects the light
 from your torch, making them glisten
 and shine like the stars in the sky...
 ~
-16488 134481922 -1000 Y
+16488 134481922 -450 Y
 49 -20 -5 1d1+6499 1d1+299
 0 1175000
 8 8 0
@@ -109,7 +109,7 @@ your chest. Its gaze penetrates you
 completely, making you feel weak and
 vulnerable...
 ~
-40 297018 -1000 Y
+40 297018 -700 Y
 51 -19 -15 1d1+6999 1d1+879
 0 3150000
 8 8 0
@@ -121,9 +121,9 @@ vulnerable...
 R
 45
 T
-......a Daemonic Pit viper's split tongue hisses aggressively!~
-T
 ......a Daemonic Pit Viper's eyes burns with blood-lust!~
+T
+......a Daemonic Pit viper's split tongue hisses aggressively!~
 K
 50000 0 0 0 0 0 0
 #14304

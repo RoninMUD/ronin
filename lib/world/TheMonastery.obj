@@ -105,12 +105,12 @@ A strange looking rod made of metal is here.~
 10 100 5000
 50
 E
-rod metal~
-There are some strange runes on the rod.
-~
-E
 runes~
 The runes say 'Griout ah walqud'
+~
+E
+rod metal~
+There are some strange runes on the rod.
 ~
 X
 ~
@@ -201,6 +201,15 @@ A crystalline ring has been left here, shining with its luminous power.~
 4 25000 31000
 2
 E
+star~
+
+  The shape of a star, the sigil of Gemini, radiates twin beams of
+light from either side of its points to signify the duality behind
+its creation.  Bestowed upon the Daemon, the light is magnified to
+the infinite.. Good and Evil bestowed in one power.
+
+~
+E
 ring gemini~
 
   As you gaze into the many facets of this lustrous ring, reflections
@@ -209,15 +218,6 @@ the surrounding energy and magnify it many times on its own.  This
 is a piece of the enigma that is the Crystal Daemon, a shard of pure
 innocence.  The band is encrusted with crushed rubies the same as
 the Daemon's very eyes.
-
-~
-E
-star~
-
-  The shape of a star, the sigil of Gemini, radiates twin beams of
-light from either side of its points to signify the duality behind
-its creation.  Bestowed upon the Daemon, the light is magnified to
-the infinite.. Good and Evil bestowed in one power.
 
 ~
 X
@@ -246,14 +246,6 @@ A glowing band of spiritual powers lies here, waiting to be worshipped.~
 4 27500 32500
 5
 E
-inscription~
-
-     Only those with true understanding of existence and purity
-      of heart can purge the desire for material wealth.  Wear
-       this, and you will never know enlightenment.
-
-~
-E
 ring band holy spirits~
 
   Within the blue metallic band, swirls of creamy ivory permeate
@@ -263,6 +255,14 @@ is the insignia of one of the highest mystical beings, carried
 only to supplement his power and signify his completion of the
 training.  An inscription has been carved carefully into the
 inner surface of the band.
+
+~
+E
+inscription~
+
+     Only those with true understanding of existence and purity
+      of heart can purge the desire for material wealth.  Wear
+       this, and you will never know enlightenment.
 
 ~
 X
@@ -791,9 +791,10 @@ A statue of a mighty Oriental Dragon is standing here.~
 0 1 1
 50
 E
-writing~
-A word of warning. !! The Vulcanite is a very dangerous stone, very unstable
-and in the brink of explosion. Be careful.
+statue dragon~
+The Statue is of a mighty dragon, holding a puny, wretched human in its
+clawed feet. The scales of the dragon are made of pearls and glow with inner
+warmth. The statue seems to be watching you.
 ~
 E
 scales pearl pearls~
@@ -801,10 +802,9 @@ There is something written on the scales on the dragon's right wing. You have
 never seen so many pearls in same place.
 ~
 E
-statue dragon~
-The Statue is of a mighty dragon, holding a puny, wretched human in its
-clawed feet. The scales of the dragon are made of pearls and glow with inner
-warmth. The statue seems to be watching you.
+writing~
+A word of warning. !! The Vulcanite is a very dangerous stone, very unstable
+and in the brink of explosion. Be careful.
 ~
 X
 ~

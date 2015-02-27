@@ -1017,6 +1017,7 @@ void assign_command_pointers ( void )
   COMMANDO("mhitroll" ,CMD_NEWOLCM    ,POSITION_DEAD     ,do_mhitroll,LEVEL_OLC2);
   COMMANDO("mpos"     ,CMD_NEWOLCM    ,POSITION_DEAD     ,do_mpos    ,LEVEL_OLC2);
   COMMANDO("mdefpos"  ,CMD_NEWOLCM    ,POSITION_DEAD     ,do_mdefpos ,LEVEL_OLC2);
+  COMMANDO("mres"     ,CMD_NEWOLCM    ,POSITION_DEAD     ,do_mresist ,LEVEL_OLC2);
   COMMANDO("mreset"   ,CMD_NEWOLCM    ,POSITION_DEAD     ,do_mreset  ,LEVEL_OLC2);
   COMMANDO("mclone"   ,CMD_NEWOLCM    ,POSITION_DEAD     ,do_mclone  ,LEVEL_OLC2);
   COMMANDO("mclass"   ,CMD_NEWOLCM    ,POSITION_DEAD     ,do_mclass  ,LEVEL_OLC2);

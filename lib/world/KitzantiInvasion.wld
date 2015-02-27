@@ -23,18 +23,28 @@ idea.
 mouth~
 9 -1 4601
 E
-mouth~
-It looks stink, just like the mouthes of the halfling crews - and
-it smells as bad as it looks.
+forest~
+It abruptly stops here, where a giant corpse lies.
 ~
 E
-tracks~
-They do not appear to be human, but a smaller version, perhaps that
-of a halfling or gnome.
+trees~
+Some are broken and twisted, yet others remain undamaged.
+~
+E
+corpse~
+It is nearly one hundred times your size.
+~
+E
+corpse~
+It is nearly one hundred times your size and smells terrible.
+~
+E
+remains~
+Tattered rags cover the dead body.
 ~
 E
 face~
-It looks male and in bad shape.  This was an ugly, ugly humanoid.
+It looks male and in bad shape.
 ~
 E
 face~
@@ -42,27 +52,17 @@ It looks male and in bad shape.  This was an ugly, ugly man.
 ~
 E
 face~
-It looks male and in bad shape.
+It looks male and in bad shape.  This was an ugly, ugly humanoid.
 ~
 E
-remains~
-Tattered rags cover the dead body.
+tracks~
+They do not appear to be human, but a smaller version, perhaps that
+of a halfling or gnome.
 ~
 E
-corpse~
-It is nearly one hundred times your size and smells terrible.
-~
-E
-corpse~
-It is nearly one hundred times your size.
-~
-E
-trees~
-Some are broken and twisted, yet others remain undamaged.
-~
-E
-forest~
-It abruptly stops here, where a giant corpse lies.
+mouth~
+It looks stink, just like the mouthes of the halfling crews - and
+it smells as bad as it looks.
 ~
 S
 #4601
@@ -93,29 +93,16 @@ A rope dangles, leading down into the darkness.
 rope~
 11 -1 4602
 E
-tooth~
-It looks like it is on a swivel, almost like it opens up.
+flesh~
+It is rotten and beginning to decay off the skeletal remains.
+~
+E
+remains~
+The teeth are decaying and look like yellow, rotten wood.
 ~
 E
 teeth~
-The teeth are decaying and look like yellow, rotten wood.  However,
-one tooth looks slightly different than the rest.
-~
-E
-rope~
-It has been tied to a tooth and goes straight down into the darkness.
-~
-E
-esophagus~
-It looks dark and smells terrible.
-~
-E
-pit~
-It descends into darkness.
-~
-E
-skeleton~
-Pieces of the skeleton can be seen through the decaying flesh.
+The teeth are decaying and look like yellow, rotten wood.
 ~
 E
 lips~
@@ -123,16 +110,29 @@ They can hardly be called lips because they are sagging from their
 proper place.
 ~
 E
+skeleton~
+Pieces of the skeleton can be seen through the decaying flesh.
+~
+E
+pit~
+It descends into darkness.
+~
+E
+esophagus~
+It looks dark and smells terrible.
+~
+E
+rope~
+It has been tied to a tooth and goes straight down into the darkness.
+~
+E
 teeth~
-The teeth are decaying and look like yellow, rotten wood.
+The teeth are decaying and look like yellow, rotten wood.  However,
+one tooth looks slightly different than the rest.
 ~
 E
-remains~
-The teeth are decaying and look like yellow, rotten wood.
-~
-E
-flesh~
-It is rotten and beginning to decay off the skeletal remains.
+tooth~
+It looks like it is on a swivel, almost like it opens up.
 ~
 S
 #4602
@@ -157,20 +157,20 @@ The rope contines to descend down into the darkness.
 rope~
 11 -1 4603
 E
-flesh~
-It is rotten and stinks to high heaven.
-~
-E
-tunnel~
-It leads down.
+rope~
+It is getting harder to hold on due to the moisture here.
 ~
 E
 walls~
 They don't appear to be flesh, but made of entirely something else.
 ~
 E
-rope~
-It is getting harder to hold on due to the moisture here.
+tunnel~
+It leads down.
+~
+E
+flesh~
+It is rotten and stinks to high heaven.
 ~
 S
 #4603
@@ -197,16 +197,16 @@ The rope still continues down into the darkness.  The end must be near!
 rope~
 11 -1 4604
 E
-rope~
-It looks damp, almost wet.
+walls~
+They seem to be squeezing the life out of you!
 ~
 E
 daylight~
 A dull shine hits the wall about two inches above your head.
 ~
 E
-walls~
-They seem to be squeezing the life out of you!
+rope~
+It looks damp, almost wet.
 ~
 S
 #4604
@@ -247,28 +247,28 @@ D5
 ~
 0 -1 4609
 E
-cage~
-It doesn't really block anything and is made of bone.
-~
-E
-structure~
-It's a cage like object.
-~
-E
-domes~
-They look puffy and swelled up.
-~
-E
-mass~
-It is too dark to make out any detail.
+area~
+It slopes downward.
 ~
 E
 rope~
 It dangles here, your only way back up.
 ~
 E
-area~
-It slopes downward.
+mass~
+It is too dark to make out any detail.
+~
+E
+domes~
+They look puffy and swelled up.
+~
+E
+structure~
+It's a cage like object.
+~
+E
+cage~
+It doesn't really block anything and is made of bone.
 ~
 S
 #4605
@@ -286,52 +286,52 @@ D1
 ~
 0 -1 4604
 E
-strands~
-They dangle freely and when looked upon closer actually lead nowhere.
-~
-E
-sacks~
-The sacks are about two inches in diameter and occasionally twitch.
-~
-E
-sack~
-The sacks are about two inches in diameter and occasionally twitch.
-~
-E
-walls~
-They are lined with clusters of the sack like objects.
+room~
+It looks like a big puffy wineskin.
 ~
 E
 clusters~
 Each cluster contains about twenty of the small sacks.
 ~
 E
-room~
-It looks like a big puffy wineskin.
-~
-E
-strands~
-They dangle freely and when looked upon closer actually lead nowhere.
-~
-E
-sacks~
-The sacks are about two inches in diameter and occasionally twitch.
+walls~
+They are lined with clusters of the sack like objects.
 ~
 E
 sack~
 The sacks are about two inches in diameter and occasionally twitch.
 ~
 E
-walls~
-They are lined with clusters of the sack like objects.
+sacks~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+strands~
+They dangle freely and when looked upon closer actually lead nowhere.
+~
+E
+room~
+It looks like a big puffy wineskin.
 ~
 E
 clusters~
 Each cluster contains about twenty of the small sacks.
 ~
 E
-room~
-It looks like a big puffy wineskin.
+walls~
+They are lined with clusters of the sack like objects.
+~
+E
+sack~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+sacks~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+strands~
+They dangle freely and when looked upon closer actually lead nowhere.
 ~
 S
 #4606
@@ -349,33 +349,33 @@ D3
 ~
 0 -1 4604
 E
-point~
-It looks very sharp and is covered with dried blood.  It actually
-punctures several of the sacks.
-~
-E
-strands~
-They dangle freely and when looked upon closer actually lead nowhere.
-~
-E
-sacks~
-The sacks are about two inches in diameter and occasionally twitch.
-~
-E
-sack~
-The sacks are about two inches in diameter and occasionally twitch.
-~
-E
-walls~
-They are lined with clusters of the sack like objects.
+room~
+It looks like a big puffy wineskin.
 ~
 E
 clusters~
 Each cluster contains about twenty of the small sacks.
 ~
 E
-room~
-It looks like a big puffy wineskin.
+walls~
+They are lined with clusters of the sack like objects.
+~
+E
+sack~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+sacks~
+The sacks are about two inches in diameter and occasionally twitch.
+~
+E
+strands~
+They dangle freely and when looked upon closer actually lead nowhere.
+~
+E
+point~
+It looks very sharp and is covered with dried blood.  It actually
+punctures several of the sacks.
 ~
 S
 #4607
@@ -397,11 +397,15 @@ D2
 ~
 0 -1 4608
 E
-mass~
-It is rather large and looks disgusting.
+cage~
+It looms high above with protrusions descending to the floor.
 ~
 E
-room~
+ceiling~
+It is actually part of a tube heading toward the fleshy mass.
+~
+E
+floor~
 It is actually part of a tube heading toward the fleshy mass.
 ~
 E
@@ -409,16 +413,12 @@ tube~
 It heads toward the fleshy mass.
 ~
 E
-floor~
+room~
 It is actually part of a tube heading toward the fleshy mass.
 ~
 E
-ceiling~
-It is actually part of a tube heading toward the fleshy mass.
-~
-E
-cage~
-It looms high above with protrusions descending to the floor.
+mass~
+It is rather large and looks disgusting.
 ~
 S
 #4608
@@ -436,12 +436,12 @@ D0
 ~
 0 -1 4607
 E
-mass~
-It is covered with a green fuzzy substance that looks like mold.
-~
-E
 tubes~
 They are in a constricted state, too small to enter.
+~
+E
+mass~
+It is covered with a green fuzzy substance that looks like mold.
 ~
 S
 #4609
@@ -464,28 +464,28 @@ D5
 ~
 0 -1 4610
 E
-slime~
-It is clear.
-~
-E
-tunnel~
-The slope turns into the tunnel, which leads further down.
-~
-E
-floor~
-It is covered with a clear slime and smells bad.
-~
-E
-substance~
-The slime is clear.
+slope~
+It is very steep here, better watch your step!
 ~
 E
 walls~
 They are rough and covered with a clear slime.  They smell bad too.
 ~
 E
-slope~
-It is very steep here, better watch your step!
+substance~
+The slime is clear.
+~
+E
+floor~
+It is covered with a clear slime and smells bad.
+~
+E
+tunnel~
+The slope turns into the tunnel, which leads further down.
+~
+E
+slime~
+It is clear.
 ~
 S
 #4610
@@ -508,28 +508,28 @@ D5
 ~
 0 -1 4611
 E
-room~
-This is the biggest room you've seen inside this giant, rotting corpse.
-~
-E
-lining~
-It is wrinkled and looks like rotten flesh.  It smells terrible.
-~
-E
-pool~
-It is very far away and cannot be seen very well.
-~
-E
-ledges~
-They are made of torn sections of the fleshy walls.
+tunnel~
+It leads back up.
 ~
 E
 walls~
 They are decaying and smell awful.
 ~
 E
-tunnel~
-It leads back up.
+ledges~
+They are made of torn sections of the fleshy walls.
+~
+E
+pool~
+It is very far away and cannot be seen very well.
+~
+E
+lining~
+It is wrinkled and looks like rotten flesh.  It smells terrible.
+~
+E
+room~
+This is the biggest room you've seen inside this giant, rotting corpse.
 ~
 S
 #4611
@@ -567,20 +567,20 @@ D5
 ~
 0 -1 4616
 E
-pool~
-It looks rather large, but still no detail can be seen.
-~
-E
-openings~
-They are formed from tears in the wall.
+walls~
+They look wrinkled and disgusting.
 ~
 E
 tears~
 They create ledges of torn flesh and small openings in all directions.
 ~
 E
-walls~
-They look wrinkled and disgusting.
+openings~
+They are formed from tears in the wall.
+~
+E
+pool~
+It looks rather large, but still no detail can be seen.
 ~
 S
 #4612
@@ -597,12 +597,12 @@ D1
 ~
 0 -1 4611
 E
-tears~
-They look jagged and rather painful.
-~
-E
 alcove~
 It is carved from the wrinkled wall.
+~
+E
+tears~
+They look jagged and rather painful.
 ~
 S
 #4613
@@ -619,12 +619,12 @@ D3
 ~
 0 -1 4611
 E
-tears~
-They look jagged and rather painful.
-~
-E
 alcove~
 It is carved from the wrinkled wall.
+~
+E
+tears~
+They look jagged and rather painful.
 ~
 S
 #4614
@@ -641,12 +641,12 @@ D2
 ~
 0 -1 4611
 E
-tears~
-They look jagged and rather painful.
-~
-E
 alcove~
 It is carved from the wrinkled wall.
+~
+E
+tears~
+They look jagged and rather painful.
 ~
 S
 #4615
@@ -663,12 +663,12 @@ D0
 ~
 0 -1 4611
 E
-tears~
-They look jagged and rather painful.
-~
-E
 alcove~
 It is carved from the wrinkled wall.
+~
+E
+tears~
+They look jagged and rather painful.
 ~
 S
 #4616
@@ -709,14 +709,20 @@ and you can see a humanoid skeleton floating in it.
 ~
 0 -1 4622
 E
-acid~
-Foul odor rises from the deadly acidic pool.  A piece of flesh
-drops down from the wall and instantly dissolves.
+stomach~
+It is huge and expands in all directions.
 ~
 E
-pool~
-Foul odor rises from the deadly acidic pool.  A piece of flesh
-drops down from the wall and instantly dissolves.
+tears~
+They are rough and random, not accurate and precise.
+~
+E
+lining~
+It is very wrinkled and smells awful.
+~
+E
+walls~
+They are very wrinkled and smell awful.
 ~
 E
 skeletons~
@@ -724,20 +730,14 @@ They look to be about horse size and the flesh has been eaten
 off of them.
 ~
 E
-walls~
-They are very wrinkled and smell awful.
+pool~
+Foul odor rises from the deadly acidic pool.  A piece of flesh
+drops down from the wall and instantly dissolves.
 ~
 E
-lining~
-It is very wrinkled and smells awful.
-~
-E
-tears~
-They are rough and random, not accurate and precise.
-~
-E
-stomach~
-It is huge and expands in all directions.
+acid~
+Foul odor rises from the deadly acidic pool.  A piece of flesh
+drops down from the wall and instantly dissolves.
 ~
 S
 #4617
@@ -755,20 +755,20 @@ D1
 ~
 0 -1 4616
 E
-frame~
-It is probably a bone of some type.
-~
-E
-wall~
-It is rotten, wrinkled, and disgusting.
+ledge~
+It is larger than the previous four above.
 ~
 E
 lining~
 It is rotten, wrinkled, and disgusting.
 ~
 E
-ledge~
-It is larger than the previous four above.
+wall~
+It is rotten, wrinkled, and disgusting.
+~
+E
+frame~
+It is probably a bone of some type.
 ~
 S
 #4618
@@ -790,24 +790,24 @@ D3
 ~
 0 -1 4616
 E
-ledge~
-This one is different than the rest.  It is larger and deeper.
-~
-E
-tears~
-They are big and look painful.
-~
-E
-walls~
-They are lined with the same flesh as above.
+crystal~
+The crystal looks like the flesh in crystal form.  Wierd.
 ~
 E
 flesh~
 It has bits of crystal in it.
 ~
 E
-crystal~
-The crystal looks like the flesh in crystal form.  Wierd.
+walls~
+They are lined with the same flesh as above.
+~
+E
+tears~
+They are big and look painful.
+~
+E
+ledge~
+This one is different than the rest.  It is larger and deeper.
 ~
 S
 #4619
@@ -825,20 +825,20 @@ D2
 ~
 0 -1 4616
 E
-frame~
-It is probably a bone of some type.
-~
-E
-wall~
-It is rotten, wrinkled, and disgusting.
+ledge~
+It is larger than the previous four above.
 ~
 E
 lining~
 It is rotten, wrinkled, and disgusting.
 ~
 E
-ledge~
-It is larger than the previous four above.
+wall~
+It is rotten, wrinkled, and disgusting.
+~
+E
+frame~
+It is probably a bone of some type.
 ~
 S
 #4620
@@ -856,20 +856,20 @@ D0
 ~
 0 -1 4616
 E
-frame~
-It is probably a bone of some type.
-~
-E
-wall~
-It is rotten, wrinkled, and disgusting.
+ledge~
+It is larger than the previous four above.
 ~
 E
 lining~
 It is rotten, wrinkled, and disgusting.
 ~
 E
-ledge~
-It is larger than the previous four above.
+wall~
+It is rotten, wrinkled, and disgusting.
+~
+E
+frame~
+It is probably a bone of some type.
 ~
 S
 #4621
@@ -888,20 +888,20 @@ D2
 ~
 0 -1 4604
 E
-strands~
-They dangle and sway and are very disturbing to look at.
-~
-E
-strand~
-It is huge and seems to be the source of the crackling noise.
+walls~
+They are made of some sort of decaying flesh.  Icky.
 ~
 E
 floor~
 Some of the strands reach the fleshy floor.
 ~
 E
-walls~
-They are made of some sort of decaying flesh.  Icky.
+strand~
+It is huge and seems to be the source of the crackling noise.
+~
+E
+strands~
+They dangle and sway and are very disturbing to look at.
 ~
 S
 #4622
@@ -942,8 +942,9 @@ D5
 ~
 0 -1 4624
 E
-passage~
-It now heads down.
+crystal~
+It is the same color as the flesh, but has a crystal like quality
+about it.
 ~
 E
 walls~
@@ -951,9 +952,8 @@ They are no longer made of rotten flesh, but of some sort of
 crystal material.
 ~
 E
-crystal~
-It is the same color as the flesh, but has a crystal like quality
-about it.
+passage~
+It now heads down.
 ~
 S
 #4624
@@ -975,17 +975,17 @@ D4
 ~
 0 -1 4623
 E
-walls~
-Rather than the nasty rotted flesh, they are made of a crystal
-substance.
+substance~
+It looks like it is half rock and half crystal and all flesh color.
 ~
 E
 crystal~
 It looks like it is half rock and half crystal and all flesh color.
 ~
 E
-substance~
-It looks like it is half rock and half crystal and all flesh color.
+walls~
+Rather than the nasty rotted flesh, they are made of a crystal
+substance.
 ~
 S
 #4625
@@ -1028,24 +1028,24 @@ D3
 ~
 0 -1 4627
 E
-crystals~
-They are made of crystal and are rather dull.
-~
-E
-walls~
-They are made of crystal and are rather dull.
-~
-E
-pieces~
-They are about the size of small pebbles.
+tunnel~
+It leads north and west.
 ~
 E
 floor~
 It is worn and small fragments of crystal are scattered about.
 ~
 E
-tunnel~
-It leads north and west.
+pieces~
+They are about the size of small pebbles.
+~
+E
+walls~
+They are made of crystal and are rather dull.
+~
+E
+crystals~
+They are made of crystal and are rather dull.
 ~
 S
 #4627
@@ -1068,22 +1068,22 @@ D3
 ~
 0 -1 4628
 E
-writing~
-Hask3548sfhawd234ynvlv34.
-
-Hmm, make sense?
-~
-E
-floor~
-It is worn to the point it looks polished.
+tunnel~
+To the west it takes another turn.
 ~
 E
 scratches~
 They are actually some sort of writing.
 ~
 E
-tunnel~
-To the west it takes another turn.
+floor~
+It is worn to the point it looks polished.
+~
+E
+writing~
+Hask3548sfhawd234ynvlv34.
+
+Hmm, make sense?
 ~
 S
 #4628
@@ -1105,20 +1105,20 @@ D1
 ~
 0 -1 4627
 E
-floor~
-It is smooth and polished.
-~
-E
-ceiling~
-It is smooth and polished.
+walls~
+They are smooth and polished.
 ~
 E
 tunnel~
 It turns to the north.
 ~
 E
-walls~
-They are smooth and polished.
+ceiling~
+It is smooth and polished.
+~
+E
+floor~
+It is smooth and polished.
 ~
 S
 #4629
@@ -1140,12 +1140,12 @@ D5
 ~
 0 -1 4630
 E
-hole~
-It is big enough for a large person to fit through.
-~
-E
 walls~
 Again, they are polished and smooth.
+~
+E
+hole~
+It is big enough for a large person to fit through.
 ~
 S
 #4630
@@ -1167,12 +1167,12 @@ D5
 ~
 0 -1 4631
 E
-hole~
-It leads to the intersetion below.
-~
-E
 intersection~
 It spans off in three directions, north, west, and east.
+~
+E
+hole~
+It leads to the intersetion below.
 ~
 S
 #4631
@@ -1202,24 +1202,24 @@ D4
 ~
 0 -1 4630
 E
-material~
-It's made of the same material as the tunnel.
-~
-E
-tunnel~
-It has opened up into a hallway!
-~
-E
-ceiling~
-Yep, it's a ceiling.
+halls~
+They lead north, west, and east.
 ~
 E
 walls~
 They are about twenty feet apart.
 ~
 E
-halls~
-They lead north, west, and east.
+ceiling~
+Yep, it's a ceiling.
+~
+E
+tunnel~
+It has opened up into a hallway!
+~
+E
+material~
+It's made of the same material as the tunnel.
 ~
 S
 #4632
@@ -1241,8 +1241,12 @@ D3
 ~
 0 -1 4633
 E
-hallway~
-It takes a turn north ahead.
+line~
+It is about one half inch deep and extends down the hall.
+~
+E
+pattern~
+It looks like a straight line.
 ~
 E
 scratches~
@@ -1250,12 +1254,8 @@ They are seen every four inches, but when you go to touch them,
 you cannot even feel them, almost as if they don't exist.
 ~
 E
-pattern~
-It looks like a straight line.
-~
-E
-line~
-It is about one half inch deep and extends down the hall.
+hallway~
+It takes a turn north ahead.
 ~
 S
 #4633
@@ -1278,37 +1278,37 @@ D1
 ~
 0 -1 4632
 E
-scratches~
-Again, you cannot feel them, yet you can see them.
-~
-E
-line~
-It heads north.
-~
-E
-hallway~
-It goes north and east.
-~
-E
-walls~
-They are still made of the crystallized fleshy material.
-~
-E
-furniture~
-It looks to be made of the same substance the walls are.
-~
-E
-room~
-The room is to the north.
+table~
+It is not made of wood, but of the crystallized substance.  There
+is a small vase on the table.
 ~
 E
 vase~
 It's empty and somehow attached to the table!
 ~
 E
-table~
-It is not made of wood, but of the crystallized substance.  There
-is a small vase on the table.
+room~
+The room is to the north.
+~
+E
+furniture~
+It looks to be made of the same substance the walls are.
+~
+E
+walls~
+They are still made of the crystallized fleshy material.
+~
+E
+hallway~
+It goes north and east.
+~
+E
+line~
+It heads north.
+~
+E
+scratches~
+Again, you cannot feel them, yet you can see them.
 ~
 S
 #4634
@@ -1328,13 +1328,16 @@ D2
 ~
 0 -1 4633
 E
-objects~
-They look like devices to sit on, but not if you're human!
+floor~
+It takes a slight curve upward as it enters the room.
 ~
 E
-racks~
-Some look like weapon racks and other look like armor racks, no
-matter because they are all empty.
+stairs~
+They lead from the floor to the platform.
+~
+E
+platform~
+It is large and in the middle of the room.
 ~
 E
 rail~
@@ -1342,16 +1345,13 @@ The rail lines the platform, probably to keep things from falling
 off.
 ~
 E
-platform~
-It is large and in the middle of the room.
+racks~
+Some look like weapon racks and other look like armor racks, no
+matter because they are all empty.
 ~
 E
-stairs~
-They lead from the floor to the platform.
-~
-E
-floor~
-It takes a slight curve upward as it enters the room.
+objects~
+They look like devices to sit on, but not if you're human!
 ~
 S
 #4635
@@ -1373,11 +1373,11 @@ D2
 ~
 0 -1 4631
 E
-walls~
+wall~
 Somehow the flesh was turned into this wall, but how and by who?
 ~
 E
-wall~
+walls~
 Somehow the flesh was turned into this wall, but how and by who?
 ~
 S
@@ -1399,14 +1399,14 @@ D5
 carpet~
 8 -1 4637
 E
+floor~
+A large carpet is on the floor.
+~
+E
 carpet~
 It is black in color and is made of some sort of organic material.
 There are small indents on it almost like it was hiding something,
 but you'd have to move it to be sure.
-~
-E
-floor~
-A large carpet is on the floor.
 ~
 S
 #4637
@@ -1425,21 +1425,16 @@ A large carpet looks like it could cover the way out of this room.
 carpet~
 8 -1 4636
 E
-carpet~
-It looks like it can be moved to conceal this room.
+air~
+It glows unlike anything you have seen before.
 ~
 E
-shelves~
-There is one on each wall and they mostly contain junk.
+nail~
+It's green and fuzzy.  Wierd.
 ~
 E
-junk~
-It's junk, old pieces of metal, some rocks, even a picture of some
-gimpy looking fellow with bugs all over him.
-~
-E
-boxes~
-There is nothing of value in them.
+symbol~
+It looks to be a holy symbol of sorts.
 ~
 E
 items~
@@ -1447,16 +1442,21 @@ A wierd symbol, a piece of glowing air, and some green fuzzy
 looking nail are here, but you dare not touch them.
 ~
 E
-symbol~
-It looks to be a holy symbol of sorts.
+boxes~
+There is nothing of value in them.
 ~
 E
-nail~
-It's green and fuzzy.  Wierd.
+junk~
+It's junk, old pieces of metal, some rocks, even a picture of some
+gimpy looking fellow with bugs all over him.
 ~
 E
-air~
-It glows unlike anything you have seen before.
+shelves~
+There is one on each wall and they mostly contain junk.
+~
+E
+carpet~
+It looks like it can be moved to conceal this room.
 ~
 S
 #4638
@@ -1479,20 +1479,20 @@ D3
 ~
 0 -1 4631
 E
-walls~
-They look more like solid rock than crystallized flesh.
-~
-E
-crystal~
-It now resembles stone.
+hallway~
+It continues down.
 ~
 E
 slope~
 It continues down.
 ~
 E
-hallway~
-It continues down.
+crystal~
+It now resembles stone.
+~
+E
+walls~
+They look more like solid rock than crystallized flesh.
 ~
 S
 #4639
@@ -1513,16 +1513,16 @@ D3
 ~
 0 -1 4638
 E
-hallway~
-It goes east and west.
+runes~
+They look more like random symbols than actual writing.
 ~
 E
 walls~
 There are some runes on them.
 ~
 E
-runes~
-They look more like random symbols than actual writing.
+hallway~
+It goes east and west.
 ~
 S
 #4640
@@ -1545,20 +1545,20 @@ D3
 ~
 0 -1 4639
 E
-sphere~
-It glows a faint blue color.
-~
-E
-runes~
-Again, they don't look like they were meant to be writing.
+floor~
+It is made of a paper like substance, which is broken down into tiles.
 ~
 E
 walls~
 They contain runes and seem to be made of a paper like substance.
 ~
 E
-floor~
-It is made of a paper like substance, which is broken down into tiles.
+runes~
+Again, they don't look like they were meant to be writing.
+~
+E
+sphere~
+It glows a faint blue color.
 ~
 S
 #4641
@@ -1579,11 +1579,11 @@ D2
 ~
 0 -1 4642
 E
-runes~
-They are everywhere!
+sphere~
+It now looks like it is as high as the room is tall.
 ~
 E
-walls~
+ceiling~
 It looks and feels like a wasp's nest.
 ~
 E
@@ -1591,12 +1591,12 @@ floor~
 It looks and feels like a wasp's nest.
 ~
 E
-ceiling~
+walls~
 It looks and feels like a wasp's nest.
 ~
 E
-sphere~
-It now looks like it is as high as the room is tall.
+runes~
+They are everywhere!
 ~
 S
 #4642
@@ -1617,13 +1617,13 @@ D2
 ~
 0 -1 4643
 E
+scratches~
+They look like sword slashes, spear jab holes, and axe hacks.
+~
+E
 sphere~
 It is close enough to see that it looks big enough to surround a
 human sized victim.
-~
-E
-scratches~
-They look like sword slashes, spear jab holes, and axe hacks.
 ~
 S
 #4643
@@ -1646,24 +1646,24 @@ D2
 ~
 0 -1 4644
 E
-sphere~
-You have almost reached it!
-~
-E
-walls~
-They look blue when bathed with the light from the sphere.
-~
-E
-ceiling~
-It looks blue when bathed with the light from the sphere.
+gate~
+It is smashed on the floor, something obviously destroyed it.
 ~
 E
 floor~
 It looks blue when bathed with the light from the sphere.
 ~
 E
-gate~
-It is smashed on the floor, something obviously destroyed it.
+ceiling~
+It looks blue when bathed with the light from the sphere.
+~
+E
+walls~
+They look blue when bathed with the light from the sphere.
+~
+E
+sphere~
+You have almost reached it!
 ~
 S
 #4644
@@ -1680,13 +1680,13 @@ D0
 ~
 0 -1 4643
 E
-sphere~
-It is actually a portal.
-~
-E
 portal~
 It is large and fills the room, and you can see another world
 through it.
+~
+E
+sphere~
+It is actually a portal.
 ~
 S
 #4645
@@ -1704,7 +1704,11 @@ D3
 ~
 0 -1 4646
 E
-brain~
+walls~
+They are made of bone.
+~
+E
+organ~
 It looks like a folded mass of dead tissue.
 ~
 E
@@ -1712,12 +1716,8 @@ tissue~
 It is decaying.
 ~
 E
-organ~
+brain~
 It looks like a folded mass of dead tissue.
-~
-E
-walls~
-They are made of bone.
 ~
 S
 #4646
@@ -1737,28 +1737,28 @@ D5
 ~
 0 -1 4647
 E
-walls~
-They are made of bone.
-~
-E
-opening~
-It leads to another, bigger room.
-~
-E
-mass~
-It looks like a rotting brain.
-~
-E
-flesh~
-It looks like a rotting brain.
+slope~
+It leads to the room below.
 ~
 E
 floor~
 It is made of some sort of flesh, but seems solid.
 ~
 E
-slope~
-It leads to the room below.
+flesh~
+It looks like a rotting brain.
+~
+E
+mass~
+It looks like a rotting brain.
+~
+E
+opening~
+It leads to another, bigger room.
+~
+E
+walls~
+They are made of bone.
 ~
 S
 #4647
@@ -1783,25 +1783,25 @@ It might be possible to climb down.
 strand~
 11 -1 4648
 E
-opening~
-It looks like it leads to the area behind the optic nerve.
-~
-E
-strand~
-It is slime covered and leads to the room below.
-~
-E
-slime~
-It is colorless and odorless.
+crack~
+It is about half your size and filled in with a colorless and
+odorless slime.
 ~
 E
 walls~
 They are made of bone.
 ~
 E
-crack~
-It is about half your size and filled in with a colorless and
-odorless slime.
+slime~
+It is colorless and odorless.
+~
+E
+strand~
+It is slime covered and leads to the room below.
+~
+E
+opening~
+It looks like it leads to the area behind the optic nerve.
 ~
 S
 #4648
@@ -1825,12 +1825,23 @@ D5
 ~
 0 -1 4649
 E
-room~
-It opened up from the nasal passage.
+strand~
+It is rather large and is actually two strands stuck together with the
+slime which covers them.  Looking closer, it looks like it there is a
+portion of the strand which rises through an opening in the ceiling.
+You think it may be possible to climb it up.
 ~
 E
-openings~
-They look like large eye sockets.
+marks~
+The claw and bite marks look like an insect made them.
+~
+E
+walls~
+They are clean, but the claw and bite marks are everywhere.
+~
+E
+slime~
+It is clear and has no odor.
 ~
 E
 strand~
@@ -1838,23 +1849,12 @@ It is rather large and is actually two strands stuck together with
 the slime which covers them.
 ~
 E
-slime~
-It is clear and has no odor.
+openings~
+They look like large eye sockets.
 ~
 E
-walls~
-They are clean, but the claw and bite marks are everywhere.
-~
-E
-marks~
-The claw and bite marks look like an insect made them.
-~
-E
-strand~
-It is rather large and is actually two strands stuck together with the
-slime which covers them.  Looking closer, it looks like it there is a
-portion of the strand which rises through an opening in the ceiling.
-You think it may be possible to climb it up.
+room~
+It opened up from the nasal passage.
 ~
 S
 #4649
@@ -1876,8 +1876,20 @@ D5
 tooth~
 2 4606 4601
 E
-tunnel~
-It's the nasal passage.
+marks~
+The claw and bite marks look like an insect made them.
+~
+E
+marks~
+They look almost like an insect made them.
+~
+E
+hair~
+They are about three feet long and two inches in diameter.
+~
+E
+strands~
+They are about three feet long and two inches in diameter.
 ~
 E
 walls~
@@ -1885,20 +1897,8 @@ They are very clean, but there appears to be some sort of claw
 marks lining them followed by some bites.
 ~
 E
-strands~
-They are about three feet long and two inches in diameter.
-~
-E
-hair~
-They are about three feet long and two inches in diameter.
-~
-E
-marks~
-They look almost like an insect made them.
-~
-E
-marks~
-The claw and bite marks look like an insect made them.
+tunnel~
+It's the nasal passage.
 ~
 S
 #0
