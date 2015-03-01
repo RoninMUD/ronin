@@ -31,18 +31,17 @@ $State: Exp $
 #define TOTAL_ENCHANTMENTS 50
 
 #define ENCHANTO(nme,tpe,dration,mdifier,lcation,btvector,btvector2,fnc) { \
-                 if( (tpe) < TOTAL_ENCHANTMENTS )                \
-                  {                                              \
-                   enchantments[tpe].duration  = (dration);      \
-                   enchantments[tpe].modifier  = (mdifier);      \
-                   enchantments[tpe].location  = (lcation);      \
-                   enchantments[tpe].bitvector = (btvector);     \
-                   enchantments[tpe].bitvector2 = (btvector2);     \
-                   enchantments[tpe].func      = (fnc);          \
+                 if( (tpe) < TOTAL_ENCHANTMENTS )                 \
+                  {                                               \
+                   enchantments[tpe].duration  = (dration);       \
+                   enchantments[tpe].modifier  = (mdifier);       \
+                   enchantments[tpe].location  = (lcation);       \
+                   enchantments[tpe].bitvector = (btvector);      \
+                   enchantments[tpe].bitvector2 = (btvector2);    \
+                   enchantments[tpe].func      = (fnc);           \
                    enchantments[tpe].name      = strdup( (nme) ); \
-                  } else {                                       \
-                   log_f("enchantment out of range");              \
-                   log_f( (nme) );                                 \
+                  } else {                                        \
+                   log_f("Enchantment out of range %s", (nme));   \
                   }                                              }
 
 

@@ -256,8 +256,7 @@ int number(int from, int to)
   randnum=(int)((longrand() % (to - from + 1)) + from);
   if (randnum < from || randnum > to)
   {
-    sprintf(buf,"WIZINFO: Random Number beyond range. From: %d To: %d  Num: %d",from,to,randnum);
-    log_f(buf);
+    log_f("WIZINFO: Random Number beyond range. From: %d To: %d  Num: %d",from,to,randnum);
   }
 
   return randnum;

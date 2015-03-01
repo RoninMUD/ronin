@@ -96,8 +96,10 @@ int red_death(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 int lizard_bite(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 int greasy_palms(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 
+#ifdef TEST_SITE
 /* Digsite Enchantments */
 int toxic_fumes_ench(ENCH *ench, CHAR *ench_ch, CHAR *char_in_room, int cmd, char *arg);
+#endif
 
 /* Red Dragons Enchantments */
 int frightful_presence(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
@@ -1638,7 +1640,7 @@ int prophet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
 void assign_enchantments(void)
 {
-  log_f("Defining Enchantments");
+  log_s("Defining Enchantments");
   enchantments = (ENCH*)calloc(TOTAL_ENCHANTMENTS, sizeof(ENCH));
 
 /*         Name                               Enchant #            Dur,Mod, Location,              Bitvector            , Bitvect2, Function */
@@ -1700,7 +1702,9 @@ void assign_enchantments(void)
   ENCHANTO("Red Death"                      , ENCHANT_REDDEATH    , 30,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, red_death);
   ENCHANTO("Lizard Lycanthropy"             , ENCHANT_LIZARD      , 30,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, lizard_bite);
 
+#ifdef TEST_SITE
   ENCHANTO("Toxic Fumes"                    , ENCHANT_TOXICFUMES  , -1,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, toxic_fumes_ench);
+#endif
   ENCHANTO("Frightful Presence"             , ENCHANT_FRIGHTFUL   , 10, -5, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, frightful_presence);
   ENCHANTO("The Curse of the Lich"          , ENCHANT_LICH        ,  5, -5, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, lich_curse);
 /* These 3 were added by Quack for trial in early 1997.
@@ -1843,7 +1847,7 @@ void enchantment_remove(CHAR *victim, ENCH *enchantment, int tolog)
       if (tolog)
       {
         sprintf(buf, "PLRINFO: %s just had enchantment %s removed.", GET_NAME(victim), ench->name);
-        log_f(buf);
+        log_s(buf);
       }
 
       if (enchantment->name)

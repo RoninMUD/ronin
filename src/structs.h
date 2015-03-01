@@ -175,7 +175,7 @@ typedef char byte;
 #define ITEM_TICKET    28
 #define ITEM_SC_TOKEN  29
 #define ITEM_SKIN      30
-#define ITEM_SCALP     31
+#define ITEM_TROPHY    31
 #define ITEM_RECIPE    32
 #define ITEM_2FINGER   33 /* Project Dagger */
 #define ITEM_2NECK     34 /* Project Dagger */
@@ -243,7 +243,7 @@ typedef char byte;
 #define ITEM_NO_GIVE_MOB      16
 #define ITEM_NO_PUT           32
 #define ITEM_NO_TAKE_MOB      64
-#define ITEM_NO_SCALP         128
+#define ITEM_NO_TROPHY        128
 #define ITEM_NO_LOCATE        256
 #define ITEM_RANDOM_0         512
 #define ITEM_RANDOM_1         1024
@@ -581,6 +581,7 @@ struct room_data
 #define THIRST       2
 #define QUAFF        3
 /* Bitvector for 'affected_by' */
+#define AFF_NONE              0
 #define AFF_BLIND             1
 #define AFF_INVISIBLE         2
 #define AFF_DETECT_ALIGNMENT  4
