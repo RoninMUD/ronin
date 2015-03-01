@@ -2083,7 +2083,8 @@ void do_mantra(CHAR *ch, char *arg, int cmd)
     }
 
     GET_MANA(ch) = MAX(GET_MANA(ch) - 120, 0);
-    GET_HIT(victim) = MIN(GET_HIT(victim) + 500, GET_MAX_HIT(victim));
+    //GET_HIT(victim) = MIN(GET_HIT(victim) + 500, GET_MAX_HIT(victim));
+    magic_heal(victim, SKILL_MANTRA, 500, FALSE);
 
     heal = (GET_LEVEL(ch) + (5 * GET_WIS_APP(ch)));
 

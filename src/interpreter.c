@@ -945,10 +945,8 @@ void assign_command_pointers ( void )
   COMMANDO("email"    ,CMD_EMAIL      ,POSITION_RESTING  ,do_email, 1);
 /*  COMMANDO("playeravg",CMD_PLRAVG     ,POSITION_RESTING  ,do_playeravg, LEVEL_IMP);*/
   COMMANDO("idname"   ,CMD_IDNAME     ,POSITION_DEAD     ,do_idname, LEVEL_SUP); /* Ranger 05-Feb-04 */
-  
   COMMANDO("gf"       ,CMD_GF         ,POSITION_DEAD     ,do_gf, 0);
   COMMANDO("cunning"  ,CMD_CUNNING    ,POSITION_FIGHTING ,do_cunning, 50);
-  
   /* These next few are for the new exit types - Ranger Oct 96 */
   COMMANDO("move"     ,CMD_MOVE      ,POSITION_STANDING  ,do_move_keyword,1);
   COMMANDO("push"     ,CMD_MOVE      ,POSITION_STANDING  ,do_move_keyword,1);
@@ -966,8 +964,6 @@ void assign_command_pointers ( void )
   COMMANDO("backfist" ,CMD_BACKFIST  ,POSITION_FIGHTING  ,do_backfist,30);
   COMMANDO("mantra"   ,CMD_MANTRA    ,POSITION_FIGHTING  ,do_mantra,30);
   COMMANDO("banzai"   ,CMD_BANZAI    ,POSITION_FIGHTING  ,do_banzai,30);
-  /* COMMANDO("throatstrike",CMD_THROATSTRIKE,POSITION_FIGHTING  ,do_throatstrike,30); */ /* Disabled */
-  /*COMMANDO("execute"  ,CMD_EXECUTE   ,POSITION_FIGHTING  ,do_execute,30);*/
   COMMANDO("pray"     ,CMD_PRAY      ,POSITION_RESTING   ,do_pray,30);
   /*COMMANDO("evade"    ,CMD_EVADE     ,POSITION_FIGHTING  ,do_evade,30);*/
   /*COMMANDO("impair"   ,CMD_IMPAIR    ,POSITION_FIGHTING  ,do_impair,30);*/

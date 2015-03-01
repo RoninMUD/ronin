@@ -3821,63 +3821,57 @@ void do_mobswitch(struct char_data *ch, char *argument, int cmd)
 
   one_argument(argument, arg);
 
-  if (!*arg)
-  {
+  if (!*arg) {
     send_to_char("Switch with who?\n\r", ch);
   }
-  else
-  {
-    if (!(victim = get_char(arg)))
-    {
+  else {
+    if (!(victim = get_char(arg))) {
       send_to_char("They aren't here.\n\r", ch);
     }
-    else
-    {
-      if (ch == victim)
-      {
+    else {
+      if (ch == victim) {
         send_to_char("He he he... We are jolly funny today, eh?\n\r", ch);
-     return;
+        return;
       }
 
-      if (IS_NPC(victim))
-      {
-       zonenum=inzone(V_MOB(victim));
-
-       if(zone_locked(ch,zonenum)) return;
+      if (IS_NPC(victim)) {
+        zonenum=inzone(V_MOB(victim));
+        if(zone_locked(ch,zonenum)) return;
       }
 
       if (!ch->desc ||
           ch->desc->snoop.snoop_by ||
-          ch->desc->snoop.snooping)
-      {
-        if (ch->desc->snoop.snoop_by)
-        {
+          ch->desc->snoop.snooping) {
+        if (ch->desc->snoop.snoop_by) {
           send_to_char("Victim switched, snooping off.\n\r",ch->desc->snoop.snoop_by);
           ch->desc->snoop.snoop_by->desc->snoop.snooping=0;
           ch->desc->snoop.snoop_by=0;
         }
-        else
-        {
+        else {
           send_to_char("Mixing snoop and switch is bad for your health.\n\r", ch);
-       return;
+          return;
         }
       }
-      if (victim->desc && !IS_IMPLEMENTOR(ch))
-      {
+
+      if (victim->desc) {
         send_to_char("You can't do that; the body is already in use!\n\r", ch);
+        return;
       }
-      else
-      {
-     send_to_char("Ok.\n\r", ch);
-     sprintf (buf,"WIZINFO: %s switched to %s", GET_NAME(ch), GET_NAME(victim));
-     log_s(buf);
-     wizlog(buf, GET_LEVEL(ch)+1, 5);
-     ch->desc->character = victim;
-     ch->desc->original = ch;
-     victim->desc = ch->desc;
-     ch->switched = victim;
-     ch->desc = 0;
+
+      if (!IS_NPC(victim) && !IS_IMPLEMENTOR(ch)) {
+        send_to_char("You can't do that to another player!\n\r", ch);
+        return
       }
+
+      send_to_char("Ok.\n\r", ch);
+      sprintf (buf,"WIZINFO: %s switched to %s", GET_NAME(ch), GET_NAME(victim));
+      log_s(buf);
+      wizlog(buf, GET_LEVEL(ch)+1, 5);
+      ch->desc->character = victim;
+      ch->desc->original = ch;
+      victim->desc = ch->desc;
+      ch->switched = victim;
+      ch->desc = 0;
     }
   }
 }
@@ -4465,9 +4459,6 @@ void do_start(struct char_data *ch)
     ch->skills[SKILL_SNEAK].learned = 10;
     ch->skills[SKILL_HIDE].learned =  5;
     ch->skills[SKILL_STEAL].learned = 15;
-//#ifdef TEST_SITE
-//    ch->skills[SKILL_BLAME].learned = 5;
-//#endif
     ch->skills[SKILL_BACKSTAB].learned = 10;
     ch->skills[SKILL_PICK_LOCK].learned = 10;
     obj=read_object(6603,VIRTUAL);if(obj) obj_to_char(obj,ch);
@@ -4717,9 +4708,6 @@ Usage: class <victim> <num>\n\r\
         victim->skills[SKILL_STEAL].learned = 15;
         victim->skills[SKILL_BACKSTAB].learned = 10;
         victim->skills[SKILL_PICK_LOCK].learned = 10;
-//#ifdef TEST_SITE
-//        victim->skills[SKILL_BLAME].learned = 5;
-//#endif
         break;
 
       case CLASS_WARRIOR:

@@ -902,7 +902,7 @@ struct room_data
 #define  IMMUNE_CHEMICAL     8
 #define  IMMUNE_ACID         16
 #define  IMMUNE_FEAR         32
-#define  IMMUNE_THROATSTRIKE 64
+#define  IMMUNE_THROATSTRIKE 64  /* Not Used */
 #define  IMMUNE_CIRCLE       128
 #define  IMMUNE_EXECUTE      256 /* Not Used */
 #define  IMMUNE_STEAL        512

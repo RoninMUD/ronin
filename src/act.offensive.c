@@ -610,7 +610,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd)
 
   if (!ch->skills) return;
 
-  if ((GET_CLASS(ch) != CLASS_THIEF) && 
+  if ((GET_CLASS(ch) != CLASS_THIEF) &&
       (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
       (GET_CLASS(ch) != CLASS_AVATAR) &&
       (GET_LEVEL(ch) < LEVEL_IMM))
@@ -708,7 +708,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd)
       }
     }
 
-    skill_wait(ch, SKILL_BACKSTAB, 2);
+    skill_wait(ch, SKILL_BACKSTAB, 3);
   }
 }
 
@@ -965,14 +965,14 @@ void do_circle(CHAR *ch, char *argument, int cmd)
 
     return;
   }
-  
+
   check = number(1, 190) - GET_DEX_APP(ch);
 
   if (GET_POS(victim) < POSITION_RESTING)
   {
     check -= 49;
   }
-  
+
   if (GET_CLASS(ch) == CLASS_THIEF)
   {
     check -= (GET_LEVEL(ch) / 2);

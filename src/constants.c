@@ -1986,7 +1986,7 @@ const char *immune_bits2[] =  {
   "CHEMICAL",
   "ACID",
   "FEAR",
-  "THROATSTRIKE",
+  "<UNUSED>",
   "CIRCLE",
   "EXECUTE",
   "STEAL",
