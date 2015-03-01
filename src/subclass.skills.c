@@ -337,7 +337,7 @@ void do_retreat(struct char_data *ch, char *argument, int cmd) {
     if (CAN_GO(ch, attempt) &&
         !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH)) {
       if (!IS_NPC(ch->specials.fighting) && !ch->specials.rider &&
-          IS_SET(ch->specials.fighting->specials.pflag, PLR_BLOCK) &&
+          affected_by_spell(ch->specials.fighting, SKILL_BLOCK) &&
           ((number(1, 130) < ch->specials.fighting->skills[SKILL_BLOCK].learned) ||
           (check_subclass(ch->specials.fighting, SC_WARLORD, 1) && chance(80)))) {
         act("$N tried to retreat but $n blocked $S way!",

@@ -3688,7 +3688,6 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
   int dam = 0;
   int multi = 0;
   int reflect = 0;
-  bool success = TRUE;
   bool riposte = FALSE;
 
   if (IS_NPC(victim) &&
@@ -4031,25 +4030,11 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
     {
       case SKILL_BACKSTAB:
       case SKILL_ASSASSINATE:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL))
+        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
-          if (affected_by_spell(ch, SKILL_CUNNING) && GET_MANA(ch) >= 10)
-          {
-            act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
-            act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
-            act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
-
-            GET_MANA(ch) -= 10;
-
-            success = TRUE;
-          }
-          else if (!breakthrough(ch, victim, BT_INVUL))
-          {
-            success = FALSE;
-          }
+          damage(ch, victim, 0, SKILL_BACKSTAB, DAM_NO_BLOCK);
         }
-
-        if (success)
+        else
         {
           multi = backstab_mult[GET_LEVEL(ch)];
 
@@ -4061,32 +4046,18 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           dam *= MAX(1, multi);
           damage(ch, victim, dam, SKILL_BACKSTAB, DAM_NO_BLOCK);
         }
-        else
-        {
-          damage(ch, victim, 0, SKILL_BACKSTAB, DAM_NO_BLOCK);
-        }
         break;
 
       case SKILL_CIRCLE:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL))
+        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
-          if (affected_by_spell(ch, SKILL_CUNNING) && GET_MANA(ch) >= 10)
-          {
-            act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
-            act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
-            act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
+          act("$n's weapon makes contact with $N, but slides harmlessly off $S back.", FALSE, ch, 0, victim, TO_NOTVICT);
+          act("$n's weapon slides harmlessly off of your back.", FALSE, ch, 0, victim, TO_VICT);
+          act("Your weapon makes contact with $N, but slides harmlessly off $S back.", FALSE, ch, 0, victim, TO_CHAR);
 
-            GET_MANA(ch) -= 10;
-
-            success = TRUE;
-          }
-          else if (!breakthrough(ch, victim, BT_INVUL))
-          {
-            success = FALSE;
-          }
+          damage(ch, victim, 0, SKILL_CIRCLE, DAM_NO_BLOCK);
         }
-
-        if (success)
+        else
         {
           act("$n plunges $p deep into $N's back.", FALSE, ch, weapon, victim, TO_NOTVICT);
           act("$n plunges $p deep into your back.", FALSE, ch, weapon, victim, TO_VICT);
@@ -4095,18 +4066,10 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           dam *= circle_mult[GET_LEVEL(ch)];
           damage(ch, victim, dam, SKILL_CIRCLE, DAM_NO_BLOCK);
         }
-        else
-        {
-          act("$n's weapon makes contact with $N, but slides harmlessly off $S back.", FALSE, ch, 0, victim, TO_NOTVICT);
-          act("$n's weapon slides harmlessly off of your back.", FALSE, ch, 0, victim, TO_VICT);
-          act("Your weapon makes contact with $N, but slides harmlessly off $S back.", FALSE, ch, 0, victim, TO_CHAR);
-
-          damage(ch, victim, 0, SKILL_CIRCLE, DAM_NO_BLOCK);
-        }
         break;
 
       case SKILL_AMBUSH:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
+        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
           act("$n tries to ambush $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
           act("$n tries to ambush you, but fails.", FALSE, ch, 0, victim, TO_VICT);
@@ -4139,7 +4102,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         break;
 
       case SKILL_FLANK:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
+        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
           act("$n tries to flank $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
           act("$n tries to flank you, but fails.", FALSE, ch, 0, victim, TO_VICT);
@@ -4159,7 +4122,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         break;
 
       case SKILL_CHARGE:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
+        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
           act("$n tries to charge $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
           act("$n tries to charge you, but fails.", FALSE, ch, 0, victim, TO_VICT);
@@ -4179,7 +4142,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         break;
 
       case SKILL_ASSAULT:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
+        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
           act("$n tries to assault $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
           act("$n tries to assault you, but fails.", FALSE, ch, 0, victim, TO_VICT);
@@ -4213,7 +4176,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         break;
 
       case SKILL_BLITZ:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
+        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
           act("You try to blitz $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
           act("$N tries to blitz you, but fails.", FALSE, victim, 0, ch, TO_CHAR);
@@ -4255,7 +4218,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         break;
 
       case SKILL_LUNGE:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
+        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
           act("$n tries to lunge at $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
           act("$n tries to lunge at you, but fails.", FALSE, ch, 0, victim, TO_VICT);

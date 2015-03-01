@@ -270,12 +270,28 @@ bool chance(int num)
 }
 
 /* 50% true at same level, 0% true vict 10 above, 100% true vict 10 below */
-/* Bonuses by class added Nov 23/99*/
-bool breakthrough(CHAR *ch, CHAR *vict, int btype)
+/* Bonuses by class added Nov 23/99 */
+bool breakthrough(CHAR *ch, CHAR *victim, int btype)
 {
   int num = 0;
 
-  num = 50 + (GET_LEVEL(ch) - GET_LEVEL(vict)) * 5;
+  if (btype == BT_INVUL)
+  {
+    if (affected_by_spell(victim, SKILL_HOSTILE)) return TRUE;
+
+    if (GET_CLASS(ch) == CLASS_THIEF && GET_LEVEL(ch) >= 50 && affected_by_spell(ch, SKILL_CUNNING) && GET_MANA(ch) >= 10)
+    {
+      act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
+      act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
+
+      GET_MANA(ch) -= 10;
+
+      return TRUE;
+    }
+  }
+
+  num = 50 + (GET_LEVEL(ch) - GET_LEVEL(victim)) * 5;
 
   switch (GET_CLASS(ch))
   {

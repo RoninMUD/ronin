@@ -904,7 +904,7 @@ struct room_data
 #define  IMMUNE_FEAR         32
 #define  IMMUNE_THROATSTRIKE 64
 #define  IMMUNE_CIRCLE       128
-#define  IMMUNE_EXECUTE      256 /* Remove */
+#define  IMMUNE_EXECUTE      256 /* Not Used */
 #define  IMMUNE_STEAL        512
 
 /* For players : specials.pflag */
@@ -919,7 +919,7 @@ struct room_data
 #define PLR_NOSUMMON              256
 #define PLR_GOSSIP                512
 #define PLR_AUCTION               1024
-#define PLR_BLOCK                 2048
+#define PLR_BLOCK                 2048 /* Not Used */
 #define PLR_NOMESSAGE             4096
 #define PLR_SANES_VOCAL_CLUB      8192
 #define PLR_LEMS_LIQOUR_LOUNGE    16384

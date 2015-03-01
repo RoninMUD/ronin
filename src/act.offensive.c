@@ -166,29 +166,75 @@ void skill_wait(CHAR *ch, int skill, int wait)
 }
 
 
+//void do_block(CHAR *ch, char *argument, int cmd)
+//{
+//  if (IS_MORTAL(ch) &&
+//      GET_CLASS(ch) != CLASS_WARRIOR &&
+//      GET_CLASS(ch) != CLASS_PALADIN &&
+//      GET_CLASS(ch) != CLASS_AVATAR)
+//  {
+//    send_to_char("You don't know this skill.\n\r", ch);
+//
+//    return;
+//  }
+//
+//  if (IS_SET(GET_PFLAG(ch), PLR_BLOCK))
+//  {
+//    send_to_char("You will now let your victim flee.\n\r", ch);
+//
+//    REMOVE_BIT(GET_PFLAG(ch), PLR_BLOCK);
+//  }
+//  else
+//  {
+//    send_to_char("You will now block your enemies if they flee.\n\r", ch);
+//
+//    SET_BIT(GET_PFLAG(ch), PLR_BLOCK);
+//  }
+//}
+
+
 void do_block(CHAR *ch, char *argument, int cmd)
 {
+  AFF af;
+
+  if (!ch->skills) return;
+
   if (IS_MORTAL(ch) &&
       GET_CLASS(ch) != CLASS_WARRIOR &&
       GET_CLASS(ch) != CLASS_PALADIN &&
       GET_CLASS(ch) != CLASS_AVATAR)
   {
-    send_to_char("You don't know this skill.\n\r", ch);
+    send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (IS_SET(GET_PFLAG(ch), PLR_BLOCK))
+  if (affected_by_spell(ch, SKILL_BLOCK))
   {
     send_to_char("You will now let your victim flee.\n\r", ch);
 
-    REMOVE_BIT(GET_PFLAG(ch), PLR_BLOCK);
+    affect_from_char(ch, SKILL_BLOCK);
+
+    return;
+  }
+
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_BLOCK))
+  {
+    send_to_char("You failed to concentrate on blocking your enemies.\n\r", ch);
+
+    return;
   }
   else
   {
     send_to_char("You will now block your enemies if they flee.\n\r", ch);
 
-    SET_BIT(GET_PFLAG(ch), PLR_BLOCK);
+    af.type = SKILL_BLOCK;
+    af.duration = -1;
+    af.modifier = 0;
+    af.location = 0;
+    af.bitvector = 0;
+    af.bitvector2 = 0;
+    affect_to_char(ch, &af);
   }
 }
 
@@ -1173,7 +1219,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
     if(CAN_GO(ch, attempt) &&
        !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH)) {
       if(!IS_NPC(ch->specials.fighting) && !ch->specials.rider &&
-         IS_SET(ch->specials.fighting->specials.pflag, PLR_BLOCK) &&
+         affected_by_spell(ch->specials.fighting, SKILL_BLOCK) &&
          ( (number(1, 101) < ch->specials.fighting->skills[SKILL_BLOCK].learned) ||
            (check_subclass(ch->specials.fighting,SC_WARLORD,1) && chance(90)) ) ) {
         act("$N tried to flee but $n blocked $S way!",
