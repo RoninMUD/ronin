@@ -948,7 +948,6 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
 {20129,4}, /* Spectral Warlord */
 {20165,4}, /* black panther */
 {21203,4}, /* king morian moria ruler mandrial */
-{21205,4}, /* ulric advisor */
 {25018,4}, /* elemental water prince */
 {25019,4}, /* earth elemental king */
 {25020,4}, /* air elemental lord */
