@@ -699,7 +699,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd) {
 
   if (affected_by_spell(ch, SKILL_VEHEMENCE))
   {
-    percent -= 5 - (GET_DEX_APP(ch) / 2);
+    percent -= 5 + (GET_DEX_APP(ch) / 2);
   }
 
   if(GET_POS(victim) < POSITION_SLEEPING)

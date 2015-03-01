@@ -623,7 +623,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd)
 
   if (affected_by_spell(ch, SKILL_VEHEMENCE))
   {
-    check -= 5 - (GET_DEX_APP(ch) / 2);
+    check -= 5 + (GET_DEX_APP(ch) / 2);
   }
 
   if (check > GET_LEARNED(ch, SKILL_BACKSTAB) || IS_IMMUNE(victim, IMMUNE_BACKSTAB))
@@ -934,7 +934,7 @@ void do_circle(CHAR *ch, char *argument, int cmd)
 
   if (affected_by_spell(ch, SKILL_VEHEMENCE))
   {
-    check -= 5 - (GET_DEX_APP(ch) / 2);
+    check -= 5 + (GET_DEX_APP(ch) / 2);
   }
 
   set_pos = stack_position(victim, POSITION_RESTING);
@@ -989,7 +989,7 @@ void do_circle(CHAR *ch, char *argument, int cmd)
 
     if (affected_by_spell(ch, SKILL_VEHEMENCE))
     {
-      check -= 5 - (GET_DEX_APP(ch) / 2);
+      check -= 5 + (GET_DEX_APP(ch) / 2);
     }
 
     if (check < GET_LEARNED(ch, SKILL_TRIP))

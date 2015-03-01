@@ -3105,10 +3105,10 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     signal_char(ch, ch, MSG_DEATHCRY, "");
   }
 
-  if ((attacktype == SKILL_CIRCLE) && 
-      (dam > 0) && 
-	  (GET_LEVEL(ch) == 50) &&
-      (ch->skills[SKILL_TWIST].learned > (number(1, 129) - GET_DEX_APP(ch) - affected_by_spell(ch, SKILL_VEHEMENCE) ? (5 - (GET_DEX_APP(ch) / 2)) : 0)) &&
+  if ((attacktype == SKILL_CIRCLE) &&
+      (dam > 0) &&
+      (GET_LEVEL(ch) == 50) &&
+      (ch->skills[SKILL_TWIST].learned > (number(1, 129) - GET_DEX_APP(ch) - affected_by_spell(ch, SKILL_VEHEMENCE) ? (5 + (GET_DEX_APP(ch) / 2)) : 0)) &&
       (CHAR_REAL_ROOM(victim) == CHAR_REAL_ROOM(ch)))
   {
     damage(ch, victim, 250, SKILL_TWIST, DAM_NO_BLOCK);
