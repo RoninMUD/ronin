@@ -39,7 +39,6 @@ Added Spell Shroud of Existence (Good Align Commando Spell)
 Revision 2.0.0.1  2004/02/05 16:11:49  ronin
 Reinitialization of cvs archives
 
-
 Revision 2003/07/31 Ranger
 Check to allow mobs to be able to use subclass skills/spells added to
 check_subclass.
@@ -133,177 +132,171 @@ int check_sc_song_access(CHAR *ch, int s) {
   return FALSE;
 }
 
-int check_sc_access(CHAR *ch, int s) {
-  if(s<=165) return TRUE;
-  if(GET_LEVEL(ch)==LEVEL_IMP) return TRUE;
+int check_sc_access(CHAR *ch, int skill)
+{
+  if (skill <= 165) return TRUE;
+  if (GET_LEVEL(ch) >= LEVEL_SUP) return TRUE;
   if (IS_NPC(ch)) return TRUE;
 
-  switch(s) {
-    case SKILL_MEDITATE: /* Cleric - DRUID */
-      if(check_subclass(ch,SC_DRUID,1)) return TRUE;
-      if(check_subclass(ch,SC_TEMPLAR,1)) return TRUE;
-      if(check_subclass(ch,SC_CAVALIER,1)) return TRUE;
+  switch (skill)
+  {
+    case SKILL_MEDITATE:
+      if (check_subclass(ch, SC_DRUID, 1)) return TRUE;
+      if (check_subclass(ch, SC_TEMPLAR, 1)) return TRUE;
+      if (check_subclass(ch, SC_CAVALIER, 1)) return TRUE;
       break;
     case SPELL_CLARITY:
-      if(check_subclass(ch,SC_DRUID,2)) return TRUE;
+      if (check_subclass(ch, SC_DRUID, 2)) return TRUE;
       break;
     case SPELL_WALL_THORNS:
-      if(check_subclass(ch,SC_DRUID,3)) return TRUE;
+      if (check_subclass(ch, SC_DRUID, 3)) return TRUE;
       break;
     case SPELL_MAGIC_ARMAMENT:
-      if(check_subclass(ch,SC_DRUID,4)) return TRUE;
+      if (check_subclass(ch, SC_DRUID, 4)) return TRUE;
       break;
     case SPELL_DEGENERATE:
-      if(check_subclass(ch,SC_DRUID,5)) return TRUE;
+      if (check_subclass(ch, SC_DRUID, 5)) return TRUE;
       break;
-    case SPELL_MIGHT: /* Cleric - TEMPLAR : for SC1 see "Cleric - DRUID" */
-      if(check_subclass(ch,SC_TEMPLAR,2)) return TRUE;
-      if(check_subclass(ch,SC_CAVALIER,2)) return TRUE;
+    case SPELL_MIGHT:
+      if (check_subclass(ch, SC_TEMPLAR, 2)) return TRUE;
+      if (check_subclass(ch, SC_CAVALIER, 2)) return TRUE;
       break;
     case SPELL_SANCTIFY:
-      if(check_subclass(ch,SC_TEMPLAR,3)) return TRUE;
+      if (check_subclass(ch, SC_TEMPLAR, 3)) return TRUE;
       break;
     case SPELL_ORB_PROTECTION:
-      if(check_subclass(ch,SC_ARCHMAGE,2)) return TRUE;
-      if(check_subclass(ch,SC_TEMPLAR,4)) return TRUE;
+      if (check_subclass(ch, SC_ARCHMAGE, 2)) return TRUE;
+      if (check_subclass(ch, SC_TEMPLAR, 4)) return TRUE;
       break;
     case SPELL_FORTIFICATION:
-      if(check_subclass(ch,SC_TEMPLAR,5)) return TRUE;
+      if (check_subclass(ch, SC_TEMPLAR, 5)) return TRUE;
       break;
-    case SPELL_BLADE_BARRIER: /* Mage - ENCHANTER */
-      if(check_subclass(ch,SC_ENCHANTER,1)) return TRUE;
+    case SPELL_BLADE_BARRIER:
+      if (check_subclass(ch, SC_ENCHANTER, 1)) return TRUE;
       break;
     case SPELL_PASSDOOR:
-      if(check_subclass(ch,SC_ENCHANTER,2)) return TRUE;
+      if (check_subclass(ch, SC_ENCHANTER, 2)) return TRUE;
       break;
     case SPELL_ENGAGE:
-      if(check_subclass(ch,SC_ENCHANTER,3)) return TRUE;
+      if (check_subclass(ch, SC_ENCHANTER, 3)) return TRUE;
       break;
     case SPELL_ETHEREAL_NATURE:
-      if(check_subclass(ch,SC_ENCHANTER,4)) return TRUE;
+      if (check_subclass(ch, SC_ENCHANTER, 4)) return TRUE;
       break;
     case SPELL_DISRUPT_SANCT:
-      if(check_subclass(ch,SC_ENCHANTER,5)) return TRUE;
+      if (check_subclass(ch, SC_ENCHANTER, 5)) return TRUE;
       break;
-    case SPELL_METEOR: /* Mage - ARCHMAGE : for SC2 see "Cleric - TEMPLAR" */
-      if(check_subclass(ch,SC_ARCHMAGE,1)) return TRUE;
+    case SPELL_METEOR:
+      if (check_subclass(ch, SC_ARCHMAGE, 1)) return TRUE;
       break;
     case SPELL_FROSTBOLT:
-      if(check_subclass(ch,SC_ARCHMAGE,3)) return TRUE;
-      if(check_subclass(ch,SC_LEGIONNAIRE,4)) return TRUE;
+      if (check_subclass(ch, SC_ARCHMAGE, 3)) return TRUE;
+      if (check_subclass(ch, SC_LEGIONNAIRE, 4)) return TRUE;
       break;
     case SPELL_WRATH_ANCIENTS:
-      if(check_subclass(ch,SC_ARCHMAGE,4)) return TRUE;
+      if (check_subclass(ch, SC_ARCHMAGE, 4)) return TRUE;
       break;
     case SPELL_DISTORTION:
-      if(check_subclass(ch,SC_ARCHMAGE,5)) return TRUE;
+      if (check_subclass(ch, SC_ARCHMAGE, 5)) return TRUE;
       break;
-    case SKILL_BLITZ: /* Bard - BLADESINGER : for CHANTER and other SC#s see check_sc_song_access */
-      if(check_subclass(ch,SC_BLADESINGER,2)) return TRUE;
-      break;
-    case SKILL_SCAN: /* Nomad - TRAPPER */
-      if(check_subclass(ch,SC_BANDIT,1)) return TRUE;
-      if(check_subclass(ch,SC_TRAPPER,1)) return TRUE;
+    case SKILL_BLITZ:
+      if (check_subclass(ch, SC_BLADESINGER, 2)) return TRUE;
       break;
     case SKILL_CAMP:
-      if(check_subclass(ch,SC_TRAPPER,2)) return TRUE;
+      if (check_subclass(ch, SC_TRAPPER, 2)) return TRUE;
       break;
     case SKILL_BATTER:
-      if(check_subclass(ch,SC_TRAPPER,3)) return TRUE;
-      break;
-    case SKILL_SCALP:
-      if(check_subclass(ch,SC_TRAPPER,4)) return TRUE;
+      if (check_subclass(ch, SC_TRAPPER, 3)) return TRUE;
       break;
     case SKILL_FRENZY:
-      if(check_subclass(ch,SC_TRAPPER,5)) return TRUE;
+      if (check_subclass(ch, SC_TRAPPER, 5)) return TRUE;
       break;
-    case SKILL_AWARENESS: /* Nomad - RANGER */
-      if(check_subclass(ch,SC_RANGER,1)) return TRUE;
-      if(check_subclass(ch,SC_WARLORD,2)) return TRUE;
+    case SKILL_AWARENESS:
+      if (check_subclass(ch, SC_RANGER, 1)) return TRUE;
+      if (check_subclass(ch, SC_WARLORD, 2)) return TRUE;
       break;
     case SKILL_PROTECT:
-      if(check_subclass(ch,SC_CAVALIER,3)) return TRUE;
-      if(check_subclass(ch,SC_GLADIATOR,1)) return TRUE;
-      if(check_subclass(ch,SC_RANGER,2)) return TRUE;
+      if (check_subclass(ch, SC_CAVALIER, 3)) return TRUE;
+      if (check_subclass(ch, SC_GLADIATOR, 1)) return TRUE;
+      if (check_subclass(ch, SC_RANGER, 2)) return TRUE;
       break;
-    case SKILL_SWEEP:
-      if(check_subclass(ch,SC_RANGER,3)) return TRUE;
+    case SKILL_SWEEP: /* !PALADIN! Give to paladin subclass */
+      if (check_subclass(ch, SC_RANGER, 3)) return TRUE;
       break;
     case SKILL_BERSERK:
-      if(check_subclass(ch,SC_RANGER,4)) return TRUE;
+      if (check_subclass(ch, SC_RANGER, 4)) return TRUE;
       break;
     case SKILL_DEFEND:
-      if(check_subclass(ch,SC_WARLORD,4)) return TRUE;
-      if(check_subclass(ch,SC_RANGER,5)) return TRUE;
+      if (check_subclass(ch, SC_WARLORD, 4)) return TRUE;
+      if (check_subclass(ch, SC_RANGER, 5)) return TRUE;
       break;
-    case SKILL_FADE: /* Thief - ROGUE */
-      if(check_subclass(ch,SC_ROGUE,1)) return TRUE;
-      break;
-    case SKILL_EVADE:
-      if(check_subclass(ch,SC_ROGUE,2)) return TRUE;
-      break;
-    case SKILL_DIRTY_TRICKS:
-      if(check_subclass(ch,SC_ROGUE,3)) return TRUE;
-      break;
-    case SKILL_TRIP:
-      if(check_subclass(ch,SC_ROGUE,4)) return TRUE;
-      break;
-    case SKILL_EXECUTE:
-      if(check_subclass(ch,SC_ROGUE,5)) return TRUE;
-      if(check_subclass(ch,SC_MYSTIC,5)) return TRUE;
-      break;
-    case SKILL_RETREAT: /* Thief - BANDIT : for SC1 see "Nomad - TRAPPER" */
-      if(check_subclass(ch,SC_BANDIT,2)) return TRUE;
+    case SKILL_FADE:
+      if (check_subclass(ch, SC_BANDIT, 1)) return TRUE;
       break;
     case SKILL_IMPAIR:
-      if(check_subclass(ch,SC_BANDIT,3)) return TRUE;
-      if(IS_NPC(ch)) return TRUE;
+      if (check_subclass(ch, SC_BANDIT, 2)) return TRUE;
       break;
     case SKILL_CLOSE_COMBAT:
-      if(check_subclass(ch,SC_BANDIT,5)) return TRUE;
+      if (check_subclass(ch, SC_BANDIT, 4)) return TRUE;
       break;
-    case SKILL_SWITCH: /* Warrior - GLADIATOR : for SC1 see "Nomad - RANGER" */
-      if(check_subclass(ch,SC_GLADIATOR,2)) return TRUE;
-      if(check_subclass(ch,SC_CRUSADER,3)) return TRUE;
+    case SKILL_EVASION:
+      if (check_subclass(ch, SC_BANDIT, 5)) return TRUE;
+      break;
+    case SKILL_DIRTY_TRICKS:
+      if (check_subclass(ch, SC_ROGUE, 1)) return TRUE;
+      break;
+    case SKILL_TROPHY:
+      if (check_subclass(ch, SC_ROGUE, 2)) return TRUE;
+      if (check_subclass(ch, SC_TRAPPER, 4)) return TRUE;
+      break;
+    case SKILL_VEHEMENCE:
+      if (check_subclass(ch, SC_ROGUE, 3)) return TRUE;
+      break;
+    case SKILL_TRIP:
+      if (check_subclass(ch, SC_ROGUE, 4)) return TRUE;
+      break;
+    case SKILL_SWITCH: /* !PALADIN! */
+      if (check_subclass(ch, SC_GLADIATOR, 2)) return TRUE;
+      if (check_subclass(ch, SC_CRUSADER, 3)) return TRUE;
       break;
     case SKILL_FLANK:
-      if(check_subclass(ch,SC_GLADIATOR,3)) return TRUE;
+      if (check_subclass(ch, SC_GLADIATOR, 3)) return TRUE;
       break;
     case SKILL_HOSTILE:
-      if(check_subclass(ch,SC_GLADIATOR,4)) return TRUE;
+      if (check_subclass(ch, SC_GLADIATOR, 4)) return TRUE;
       break;
     case SKILL_HEADBUTT:
-      if(check_subclass(ch,SC_GLADIATOR,5)) return TRUE;
+      if (check_subclass(ch, SC_GLADIATOR, 5)) return TRUE;
       break;
-    case SKILL_CHARGE: /* Warrior - WARLORD : for SC2/4 see "Nomad - RANGER" */
-      if(check_subclass(ch,SC_WARLORD,5)) return TRUE;
+    case SKILL_CHARGE:
+      if (check_subclass(ch, SC_WARLORD, 5)) return TRUE;
       break;
-    case SPELL_IRONSKIN: /* Commando - MERCENARY */
-      if(check_subclass(ch,SC_MERCENARY,1)) return TRUE;
+    case SPELL_IRONSKIN:
+      if (check_subclass(ch, SC_MERCENARY, 1)) return TRUE;
       break;
     case SPELL_CLOUD_CONFUSION:
-      if(check_subclass(ch,SC_MERCENARY,2)) return TRUE;
+      if (check_subclass(ch, SC_MERCENARY, 2)) return TRUE;
       break;
     case SKILL_RIPOSTE:
-      if(check_subclass(ch,SC_MERCENARY,3)) return TRUE;
+      if (check_subclass(ch, SC_MERCENARY, 3)) return TRUE;
       break;
     case SPELL_TREMOR:
-      if(check_subclass(ch,SC_MERCENARY,4)) return TRUE;
+      if (check_subclass(ch, SC_MERCENARY, 4)) return TRUE;
       break;
     case SPELL_DEVASTATION:
-      if(check_subclass(ch,SC_MERCENARY,5)) return TRUE;
+      if (check_subclass(ch, SC_MERCENARY, 5)) return TRUE;
       break;
-    case SKILL_LUNGE: /* Commando - LEGIONNAIRE : for SC4 see "Mage - ARCHMAGE" */
-      if(check_subclass(ch,SC_LEGIONNAIRE,1)) return TRUE;
+    case SKILL_LUNGE:
+      if (check_subclass(ch, SC_LEGIONNAIRE, 1)) return TRUE;
       break;
     case SPELL_RIMEFANG:
-      if(check_subclass(ch,SC_LEGIONNAIRE,2)) return TRUE;
+      if (check_subclass(ch, SC_LEGIONNAIRE, 2)) return TRUE;
       break;
     case SKILL_CLOBBER:
-      if(check_subclass(ch,SC_LEGIONNAIRE,3)) return TRUE;
+      if (check_subclass(ch, SC_LEGIONNAIRE, 3)) return TRUE;
       break;
     case SPELL_INCENDIARY_CLOUD:
-      if(check_subclass(ch,SC_LEGIONNAIRE,5)) return TRUE;
+      if (check_subclass(ch, SC_LEGIONNAIRE, 5)) return TRUE;
       break;
     case SKILL_BACKFIST:
       if (check_subclass(ch, SC_RONIN, 2)) return TRUE;
@@ -329,55 +322,56 @@ int check_sc_access(CHAR *ch, int s) {
     case SPELL_TRANQUILITY:
       if (check_subclass(ch, SC_MYSTIC, 5)) return TRUE;
       break;
-    case SKILL_PRAY: /* Paladin - CRUSADER : for SC3 see "Warrior - GLADIATOR" */
-      if(check_subclass(ch,SC_CRUSADER,1)) return TRUE;
+    case SKILL_PRAY:
+      if (check_subclass(ch, SC_CRUSADER, 1)) return TRUE;
       break;
     case SPELL_RIGHTEOUSNESS:
-      if(check_subclass(ch,SC_CRUSADER,2)) return TRUE;
+      if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
       break;
     case SPELL_FOCUS:
-      if(check_subclass(ch,SC_CRUSADER,4)) return TRUE;
+      if (check_subclass(ch, SC_CRUSADER, 4)) return TRUE;
       break;
     case SPELL_POWER_OF_FAITH:
-      if(check_subclass(ch,SC_CRUSADER,5)) return TRUE;
+      if (check_subclass(ch, SC_CRUSADER, 5)) return TRUE;
       break;
-    case SPELL_WRATH_OF_GOD: /* Paladin - CAVALIER : for SC1 see "Cleric - DRUID" for SC2 see "Cleric - TEMPLAR" for SC3 see "Nomad - RANGER" */
-      if(check_subclass(ch,SC_CAVALIER,4)) return TRUE;
+    case SPELL_WRATH_OF_GOD:
+      if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
       break;
     case SPELL_POWER_OF_DEVOTION:
-      if(check_subclass(ch,SC_CAVALIER,5)) return TRUE;
+      if (check_subclass(ch, SC_CAVALIER, 5)) return TRUE;
       break;
     case SPELL_DARK_RITUAL:
-      if(check_subclass(ch,SC_DEFILER,1)) return TRUE;
+      if (check_subclass(ch, SC_DEFILER, 1)) return TRUE;
       break;
     case SPELL_BLACKMANTLE:
-      if(check_subclass(ch,SC_DEFILER,2)) return TRUE;
+      if (check_subclass(ch, SC_DEFILER, 2)) return TRUE;
       break;
     case SKILL_FEINT:
-      if(check_subclass(ch,SC_DEFILER,3)) return TRUE;
+      if (check_subclass(ch, SC_DEFILER, 3)) return TRUE;
       break;
     case SPELL_DESECRATE:
-      if(check_subclass(ch,SC_DEFILER,4)) return TRUE;
+      if (check_subclass(ch, SC_DEFILER, 4)) return TRUE;
       break;
     case SKILL_SHADOW_WALK:
-      if(check_subclass(ch,SC_DEFILER,5)) return TRUE;
+      if (check_subclass(ch, SC_DEFILER, 5)) return TRUE;
       break;
     case SKILL_ASSASSINATE:
-      if(check_subclass(ch,SC_INFIDEL,1)) return TRUE;
+      if (check_subclass(ch, SC_INFIDEL, 1)) return TRUE;
       break;
     case SKILL_VICTIMIZE:
-      if(check_subclass(ch,SC_INFIDEL,2)) return TRUE;
+      if (check_subclass(ch, SC_INFIDEL, 2)) return TRUE;
       break;
     case SPELL_RAGE:
-      if(check_subclass(ch,SC_INFIDEL,3)) return TRUE;
+      if (check_subclass(ch, SC_INFIDEL, 3)) return TRUE;
       break;
     case SPELL_DEMONIC_THUNDER:
-      if(check_subclass(ch,SC_INFIDEL,4)) return TRUE;
+      if (check_subclass(ch, SC_INFIDEL, 4)) return TRUE;
       break;
     case SPELL_SHADOW_WRAITH:
-      if(check_subclass(ch,SC_INFIDEL,5)) return TRUE;
+      if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
       break;
   }
+
   return FALSE;
 }
 
@@ -422,7 +416,7 @@ extern char *subclass_name[];
 void do_subclass(CHAR *ch, char *argument, int cmd) {
   CHAR *vict;
   char buf[MAX_INPUT_LENGTH];
-  int subclass=0,level,add=0;
+  int subclass=0,level=0,add=0;
 
   char Usage[]={"\
 Usage: subclass add <player> <subclass> <level>\n\r\
@@ -741,7 +735,6 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 }
 
 
-
 #define TOKEN_MOB 11
 #define MAX_RATINGS 120 /* Currently 115 zones */
 int token_mob_time;
@@ -924,7 +917,6 @@ void check_token_mob() {
 
       if(number(1,100)>zone_rating(zone)) /* zone rating check */
         goto_room=0;
-
     }
     char_to_room(mob,goto_room);
     obj_to_char(obj,mob);
@@ -1096,7 +1088,8 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
        !IS_AFFECTED(mob, AFF_HOLD)) {
       if (mob->specials.last_direction==door) {
         mob->specials.last_direction=-1;
-      } else {
+      }
+      else {
         mob->specials.last_direction=door;
         do_move(mob,"",++door);
       }

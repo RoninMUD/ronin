@@ -1144,7 +1144,7 @@ int diabolik_gargoyle (CHAR *garg, CHAR *ch, int cmd, char *arg) {
   if(!ch) return FALSE;
   if(cmd==MSG_ENTER && !check_clan_access(DIABOLIK_ACCESS,ch)) {
     act("$n bursts forth from its stony covering and attacks $N!",1,garg,0,ch,TO_NOTVICT);
-    act("You bursts forth from your stony covering and attack $N!",1,garg,0,ch,TO_CHAR);
+    act("You burst forth from your stony covering and attack $N!",1,garg,0,ch,TO_CHAR);
     act("$n bursts forth from its stony covering and attacks you!",1,garg,0,ch,TO_VICT);
     hit(garg, ch, TYPE_CLAW);
   }
