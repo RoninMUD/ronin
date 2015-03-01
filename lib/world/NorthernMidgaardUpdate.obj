@@ -1510,19 +1510,12 @@ A
 #3087
 board rewards~
 The Rewards Board~
-A golden flog-like creature with beady read eyes lies here, glinting with
-knowledge.~
+A gold-framed notice board hangs elegantly on the wall.~
 ~
-27 1 0
-54 54 54 0
+27 0 0
+0 0 0 0
 0 0 0
 100
-E
-idol~
-Use "Look AT " to see a listing of the messages. Use "Read
-<message number>" or "Remove <message number>" to read or remove
-a message, respectively.
-~
 X
 ~
 0 0 0
