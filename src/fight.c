@@ -1903,6 +1903,7 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim)
     ench.bitvector = 0;
     ench.bitvector2 = 0;
     ench.func = dirty_tricks_enchantment;
+
     enchantment_to_char(victim, &ench, FALSE);
   }
   else if (trick <= 50) /* 30% Chance Blind */
@@ -1920,9 +1921,12 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim)
     af.duration = 0;
     af.bitvector = AFF_BLIND;
     af.bitvector2 = 0;
+
     affect_to_char(victim, &af);
+
     af.location = APPLY_AC;
     af.modifier = +40; /* Make AC worse. */
+
     affect_to_char(victim, &af);
   }
   else /* 50% Chance Stun */
@@ -1949,10 +1953,8 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim)
       {
         GET_POS(victim) = set_pos;
 
-        if (!IS_IMPLEMENTOR(victim))
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE);
-        }
+        /* Can't use skill_wait() since this applies to victim. */
+        WAIT_STATE(victim, PULSE_VIOLENCE);
       }
     }
   }
@@ -2834,14 +2836,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
           !IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, CHAOTIC) && !CHAOSMODE
           && damtype != DAM_NO_BLOCK_NO_FLEE)
       {
-        if (check_sc_access(victim, SKILL_RETREAT))
-        {
-          do_retreat(victim, "", 0);
-        }
-        else
-        {
-          do_flee(victim, "", 0);
-        }
+        do_flee(victim, "", 0);
 
         /* There is a chance that the victim is no longer in the same
         ** room as the attacker, or even still alive.  In this case,

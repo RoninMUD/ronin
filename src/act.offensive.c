@@ -135,7 +135,7 @@ $State: Exp $
 #include "cmd.h"
 #include "mob.spells.h"
 #include "subclass.h"
-/* extern variables */
+#include "enchant.h"
 
 extern int CHAOSMODE;
 extern struct room_data *world;
@@ -166,33 +166,6 @@ void skill_wait(CHAR *ch, int skill, int wait)
 }
 
 
-//void do_block(CHAR *ch, char *argument, int cmd)
-//{
-//  if (IS_MORTAL(ch) &&
-//      GET_CLASS(ch) != CLASS_WARRIOR &&
-//      GET_CLASS(ch) != CLASS_PALADIN &&
-//      GET_CLASS(ch) != CLASS_AVATAR)
-//  {
-//    send_to_char("You don't know this skill.\n\r", ch);
-//
-//    return;
-//  }
-//
-//  if (IS_SET(GET_PFLAG(ch), PLR_BLOCK))
-//  {
-//    send_to_char("You will now let your victim flee.\n\r", ch);
-//
-//    REMOVE_BIT(GET_PFLAG(ch), PLR_BLOCK);
-//  }
-//  else
-//  {
-//    send_to_char("You will now block your enemies if they flee.\n\r", ch);
-//
-//    SET_BIT(GET_PFLAG(ch), PLR_BLOCK);
-//  }
-//}
-
-
 void do_block(CHAR *ch, char *argument, int cmd)
 {
   AFF af;
@@ -211,9 +184,9 @@ void do_block(CHAR *ch, char *argument, int cmd)
 
   if (affected_by_spell(ch, SKILL_BLOCK))
   {
-    send_to_char("You will now let your victim flee.\n\r", ch);
-
     affect_from_char(ch, SKILL_BLOCK);
+
+    send_to_char("You will now let your victim flee.\n\r", ch);
 
     return;
   }
@@ -221,20 +194,19 @@ void do_block(CHAR *ch, char *argument, int cmd)
   if (number(1, 85) > GET_LEARNED(ch, SKILL_BLOCK))
   {
     send_to_char("You failed to concentrate on blocking your enemies.\n\r", ch);
-
-    return;
   }
   else
   {
-    send_to_char("You will now block your enemies if they flee.\n\r", ch);
-
     af.type = SKILL_BLOCK;
     af.duration = -1;
     af.modifier = 0;
     af.location = 0;
     af.bitvector = 0;
     af.bitvector2 = 0;
+
     affect_to_char(ch, &af);
+
+    send_to_char("You will now block your enemies if they flee.\n\r", ch);
   }
 }
 
@@ -601,12 +573,18 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd)
 }
 
 
+int impair_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
+{
+  return FALSE;
+}
+
+
 void do_backstab(CHAR *ch, char *argument, int cmd)
 {
   CHAR *victim = NULL;
   char name[MIL];
   int check = 0;
-  AFF af;
+  ENCH ench;
 
   if (!ch->skills) return;
 
@@ -691,16 +669,19 @@ void do_backstab(CHAR *ch, char *argument, int cmd)
       /* Impair */
       if (!IS_NPC(ch) && check_subclass(ch, SC_BANDIT, 2) && chance(40 + GET_DEX_APP(ch)))
       {
-        af.type = SKILL_IMPAIR;
+        ench.name = strdup("Impaired");
+        ench.type = SKILL_IMPAIR;
         if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-          af.duration = 0;
+          ench.duration = 0;
         else
-          af.duration = 1;
-        af.modifier = 0;
-        af.location = 0;
-        af.bitvector = AFF_PARALYSIS;
-        af.bitvector2 = 0;
-        affect_to_char(victim, &af);
+          ench.duration = 1;
+        ench.location = 0;
+        ench.modifier = 0;
+        ench.bitvector = AFF_PARALYSIS;
+        ench.bitvector2 = 0;
+        ench.func = impair_enchantment;
+
+        enchantment_to_char(victim, &ench, FALSE);
 
         act("You nearly sever $N's spine with your backstab, temporarily paralyzing $M.", FALSE, ch, 0, victim, TO_CHAR);
         act("$n nearly severs your spine with $s backstab, temporarily paralyzing you.", FALSE, ch, 0, victim, TO_VICT);
@@ -916,7 +897,7 @@ void do_circle(CHAR *ch, char *argument, int cmd)
   char name[MIL];
   int check = 0;
   int set_pos = 0;
-  AFF af;
+  ENCH ench;
 
   if (!ch->skills) return;
 
@@ -1015,15 +996,16 @@ void do_circle(CHAR *ch, char *argument, int cmd)
       act("$n strikes a nerve in your back with $s attack, severely weakening you.", FALSE, ch, NULL, victim, TO_VICT);
       act("$n strikes a nerve in$N's back with $s attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-      af.type = SKILL_IMPAIR;
-      af.duration = 0;
-      af.bitvector = 0;
-      af.modifier = -2;
-      af.location = APPLY_HITROLL;
-      affect_to_char(victim, &af);
-      af.modifier = 30;
-      af.location = APPLY_AC;
-      affect_to_char(victim, &af);
+      ench.name = strdup("Dazed");
+      ench.type = SKILL_IMPAIR;
+      ench.duration = 0;
+      ench.location = 0;
+      ench.modifier = -2;
+      ench.bitvector = APPLY_HITROLL;
+      ench.bitvector2 = 0;
+      ench.func = impair_enchantment;
+
+      enchantment_to_char(victim, &ench, FALSE);
     }
 
     skill_wait(ch, SKILL_CIRCLE, 3);
@@ -2154,37 +2136,28 @@ void do_cunning(CHAR *ch, char *argument, int cmd)
 
   if (affected_by_spell(ch, SKILL_CUNNING))
   {
-    send_to_char("You relinquish your focus and feel notably less cunning.\n\r", ch);
-    act("$n dismisses the focus on $s enemies' defense and appears mildly obtuse.", TRUE, ch, 0, 0, TO_ROOM);
-
     affect_from_char(ch, SKILL_CUNNING);
 
-    skill_wait(ch, SKILL_CUNNING, 1);
+    send_to_char("You relinquish your focus and feel notably less cunning.\n\r", ch);
 
     return;
   }
 
   if (number(1, 85) > GET_LEARNED(ch, SKILL_CUNNING))
   {
-    send_to_char("You failed to focus on evading attacks.\n\r", ch);
-
-    skill_wait(ch, SKILL_CUNNING, 1);
-
-    return;
+    send_to_char("You aren't feeling particularly cunning at the moment.\n\r", ch);
   }
   else
   {
-    send_to_char("You focus on exploiting any weakness in your enemies' defenses and grow more cunning in the process.\n\r", ch);
-    act("$n focuses on pinpointing the faults in $s enemies' defenses.", TRUE, ch, 0, 0, TO_ROOM);
-
     af.type = SKILL_CUNNING;
     af.duration = -1;
     af.modifier = 0;
     af.location = 0;
     af.bitvector = 0;
     af.bitvector2 = 0;
+
     affect_to_char(ch, &af);
 
-    skill_wait(ch, SKILL_CUNNING, 1);
+    send_to_char("You focus on exploiting any weakness in your enemies' defenses and grow more cunning in the process.\n\r", ch);
   }
 }

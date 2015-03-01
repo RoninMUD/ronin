@@ -316,7 +316,7 @@ $State: Exp $
 #define CMD_PROTECT            301
 #define CMD_SUBCLASS           302
 #define CMD_WHIRLWIND          303
-#define CMD_RETREAT            304
+#define CMD_DIRTY_TRICKS       304 /* Used to be Retreat */
 #define CMD_BACKFIST           305
 #define CMD_PRAY               306
 #define CMD_BLITZ              307
@@ -330,7 +330,7 @@ $State: Exp $
 #define CMD_FADE               315
 #define CMD_EVADE              316
 #define CMD_HEROES             317
-#define CMD_IMPAIR             318
+#define CMD_IMPAIR             318 /* Not Used */
 #define CMD_SWEEP              319
 #define CMD_AQUEST             320
 #define CMD_DEFEND             321

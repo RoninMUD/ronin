@@ -960,7 +960,7 @@ void assign_command_pointers ( void )
   COMMANDO("meditate" ,CMD_MEDITATE  ,POSITION_RESTING   ,do_meditate,30);
   COMMANDO("protect"  ,CMD_PROTECT   ,POSITION_STANDING  ,do_protect,30);
   COMMANDO("subclass" ,CMD_SUBCLASS  ,POSITION_DEAD      ,do_subclass,LEVEL_SUP ); /* IMP adding/removing subclasses - Ranger Dec 98 */
-  COMMANDO("retreat"  ,CMD_RETREAT   ,POSITION_FIGHTING  ,do_retreat,30);
+  /*COMMANDO("retreat"  ,CMD_RETREAT   ,POSITION_FIGHTING  ,do_retreat,30);*/
   COMMANDO("backfist" ,CMD_BACKFIST  ,POSITION_FIGHTING  ,do_backfist,30);
   COMMANDO("mantra"   ,CMD_MANTRA    ,POSITION_FIGHTING  ,do_mantra,30);
   COMMANDO("banzai"   ,CMD_BANZAI    ,POSITION_FIGHTING  ,do_banzai,30);
@@ -973,12 +973,14 @@ void assign_command_pointers ( void )
   COMMANDO("flank"    ,CMD_FLANK     ,POSITION_STANDING  ,do_flank,30);
   COMMANDO("lunge"    ,CMD_LUNGE     ,POSITION_STANDING  ,do_lunge,30);
   /*COMMANDO("trip"     ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);*/
-  COMMANDO("evasion"  ,CMD_EVASION   ,POSITION_STANDING  ,do_evasion, 45); /* Used to be Cover */
+  COMMANDO("evasion"  ,CMD_EVASION   ,POSITION_STANDING  ,do_evasion, 30); /* Used to be Cover */
   COMMANDO("tigerkick",CMD_TIGERKICK ,POSITION_FIGHTING  ,do_tigerkick,30);
   COMMANDO("scan"     ,CMD_SCAN      ,POSITION_STANDING  ,do_scan,30);
   COMMANDO("camp"     ,CMD_CAMP      ,POSITION_STANDING  ,do_camp,30);
   COMMANDO("switch"   ,CMD_SWITCH    ,POSITION_FIGHTING  ,do_switch,30);
   COMMANDO("fade"     ,CMD_FADE      ,POSITION_FIGHTING  ,do_fade,30);
+  COMMANDO("dirty-tricks",CMD_DIRTY_TRICKS,POSITION_FIGHTING,do_dirty_tricks,30);
+  COMMANDO("trip  "   ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);
   COMMANDO("defend"   ,CMD_DEFEND    ,POSITION_STANDING  ,do_defend,30);
   COMMANDO("hostile"  ,CMD_HOSTILE   ,POSITION_STANDING  ,do_hostile,30);
   COMMANDO("frenzy"   ,CMD_FRENZY    ,POSITION_STANDING  ,do_frenzy,30);

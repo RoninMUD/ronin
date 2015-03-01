@@ -3860,7 +3860,7 @@ void do_mobswitch(struct char_data *ch, char *argument, int cmd)
 
       if (!IS_NPC(victim) && !IS_IMPLEMENTOR(ch)) {
         send_to_char("You can't do that to another player!\n\r", ch);
-        return
+        return;
       }
 
       send_to_char("Ok.\n\r", ch);

@@ -52,14 +52,15 @@ void do_vehemence(CHAR *ch, char *argument, int cmd);
 void do_meditate(CHAR *ch, char *argument, int cmd);
 void do_protect(CHAR *ch, char *argument, int cmd);
 void do_whirlwind(CHAR *ch, char *argument, int cmd);
-void do_retreat(CHAR *ch, char *argument, int cmd);
+/*void do_retreat(CHAR *ch, char *argument, int cmd);*/
 void do_backfist(CHAR *ch, char *argument, int cmd);
 void do_mantra(CHAR *ch, char *argument, int cmd);
 void do_banzai(CHAR *ch, char *argument, int cmd);
 void do_pray(CHAR *ch, char *argument, int cmd);
 /*void do_bandage(CHAR *ch, char *argument, int cmd);*/
 /*void do_evade(CHAR *ch, char *argument, int cmd);*/
-/*void do_trip(CHAR *ch, char *argument, int cmd);*/
+void do_trip(CHAR *ch, char *argument, int cmd);
+void do_dirty_tricks(CHAR *ch, char *argument, int cmd);
 void do_tigerkick(CHAR *ch, char *argument, int cmd);
 void do_scan(CHAR *ch, char *argument, int cmd);
 void do_camp(CHAR *ch, char *argument, int cmd);
