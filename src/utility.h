@@ -149,8 +149,7 @@ void move_chars_to_room (int frm, int to) ;
 int ISCARRYING_W(struct char_data *ch);
 int GETOBJ_WEIGHT(struct obj_data *obj);
 int CHAR_HAS_LEGS(struct char_data *ch);
-int CORPSE_HAS_SKIN(struct obj_data *obj);
-int CORPSE_HAS_SCALP(struct obj_data *obj);
+int CORPSE_HAS_TROPHY(struct obj_data *obj); /* Used to be CORPSE_HAS_SCALP */
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch);
 int STRENGTH_APPLY_INDEX(struct char_data *ch);
 int IS_GROUPED(struct char_data *ch,struct char_data *vict);
@@ -178,5 +177,7 @@ struct char_data *get_ch_by_name(char *chname);
 void add_program(struct program_info prg, struct char_data *ch);
 
 struct char_data *get_ch_by_id(int num);
+
+int get_weapon_type(OBJ *obj);
 
 #endif
