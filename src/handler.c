@@ -625,6 +625,11 @@ void char_from_room(struct char_data *ch)
       REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags,CLUB);
   }
 
+  if(affected_by_spell(ch,SKILL_FADE)) {
+    send_to_char("You become more visible.\n\r",ch);
+    affect_from_char(ch,SKILL_FADE);
+  }
+
   if (ch->equipment[WEAR_LIGHT])
     if (ch->equipment[WEAR_LIGHT]->obj_flags.type_flag == ITEM_LIGHT)
       if (ch->equipment[WEAR_LIGHT]->obj_flags.value[2]) /* Light is ON */

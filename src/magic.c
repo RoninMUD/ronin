@@ -15,7 +15,7 @@ $Id: magic.c,v 2.31 2005/01/25 21:48:58 ronin Exp $
 $Name:  $
 $Log: magic.c,v $
 Revision 2.32  2005/05/11 21:37:20  ronin
-Added SKILL_EVASION to not be disenchanted in spell_disenchant.
+Added SKILL_COVER to not be disenchanted in spell_disenchant.
 
 Revision 2.31  2005/01/25 21:48:58  ronin
 Added owner to clone spell.
@@ -1038,11 +1038,14 @@ void spell_blindness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     send_to_char("You have been blinded!\n\r", victim);
 
     af.type      = SPELL_BLINDNESS;
+    af.location  = APPLY_HITROLL;
+    /* Combat Zen */
+    if (check_subclass(victim, SC_RONIN, 4)) af.modifier = 0;
+    else af.modifier  = -4;  /* Make hitroll worse */
     if(ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
       af.duration  = 1;
     else
       af.duration  = 2;
-    af.location  = APPLY_HITROLL;
     af.bitvector = AFF_BLIND;
     af.bitvector2 = 0;
     affect_to_char(victim, &af);
@@ -1287,8 +1290,7 @@ void spell_cure_critic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 75), GET_MAX_HIT(victim));
-  magic_heal(victim, SPELL_CURE_CRITIC, MIN(10 + (level * 5), 75), FALSE);
+  GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 75), GET_MAX_HIT(victim));
   send_to_char("You feel better!\n\r", victim);
 
   update_pos(victim);
@@ -1389,8 +1391,7 @@ void spell_cure_serious(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  ///GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 45), GET_MAX_HIT(victim));
-  magic_heal(victim, SPELL_CURE_SERIOUS, MIN(10 + (level * 5), 45), FALSE);
+  GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 45), GET_MAX_HIT(victim));
   send_to_char("You feel better!\n\r", victim);
 
   update_pos(victim);
@@ -1413,8 +1414,7 @@ void spell_cure_light(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 30), GET_MAX_HIT(victim));
-  magic_heal(victim, SPELL_CURE_LIGHT, MIN(10 + (level * 5), 30), FALSE);
+  GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 30), GET_MAX_HIT(victim));
   send_to_char("You feel better!\n\r", victim);
 
   update_pos(victim);
@@ -1737,8 +1737,7 @@ void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(level * 5, 200), GET_MAX_HIT(victim));
-  magic_heal(victim, SPELL_HEAL, MIN(level * 5, 200), FALSE);
+  GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(level * 5, 200), GET_MAX_HIT(victim));
   send_to_char("A warm feeling fills your body.\n\r", victim);
 
   update_pos(victim);
@@ -1776,8 +1775,7 @@ void spell_layhands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(level * 10, 500), GET_MAX_HIT(victim));
-  magic_heal(victim, SPELL_LAYHANDS, MIN(level * 10, 500), FALSE);
+  GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(level * 10, 500), GET_MAX_HIT(victim));
   send_to_char("A healing power flows into your body.\n\r", victim);
 
   update_pos(victim);
@@ -2700,14 +2698,12 @@ void spell_miracle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
   {
-    //GET_HIT(victim) = MIN(GET_HIT(victim) + 1500, GET_MAX_HIT(victim));
-    magic_heal(victim, SPELL_MIRACLE, 1500, FALSE);
+    GET_HIT(victim) = MIN(GET_HIT(victim) + 1500, GET_MAX_HIT(victim));
     send_to_char("The magic of the miracle has been manipulated by the chaos around you.\n\r", victim);
   }
   else
   {
-    //GET_HIT(victim) = MIN(GET_HIT(victim) + 2000, GET_MAX_HIT(victim));
-    magic_heal(victim, SPELL_MIRACLE, 2000, FALSE);
+    GET_HIT(victim) = MIN(GET_HIT(victim) + 2000, GET_MAX_HIT(victim));
     send_to_char("Your life has been restored.\n\r", victim);
   }
 
@@ -2733,35 +2729,37 @@ void spell_recover_mana(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 /* void check_equipment(CHAR *ch); */
-void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  int heal = 0;
+void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  int mob_level, healpoints;
 
-  if (!(GET_ITEM_TYPE(obj) == ITEM_CONTAINER) || OBJ_VALUE3(obj) != 1)
-  {
+  if (!(GET_ITEM_TYPE(obj) == ITEM_CONTAINER) ||
+      (obj->obj_flags.value[3] != 1)) {
     send_to_char("You failed.\n\r", ch);
+    /* Object is not a corpse, or a container.      */
+  } else {
 
-    return;
-  }
-
-  if (OBJ_COST(obj) == PC_CORPSE && obj->contains)
-  {
+    if(obj->obj_flags.cost==PC_CORPSE && obj->contains) {
        send_to_char("The corpse has something in it.\n\r", ch);
-
        return;
     }
 
-  heal = OBJ_VALUE2(obj) * 3;
-  magic_heal(ch, SPELL_SPIRIT_LEVY, OBJ_VALUE2(obj) * 3, FALSE);
+    mob_level = obj->obj_flags.value[2];
+    healpoints = mob_level*3;
 
-  GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch) - heal);
+    if ((healpoints + GET_HIT(ch)) > hit_limit(ch))
+      GET_HIT(ch) = hit_limit(ch);
+    else
+      GET_HIT(ch) += healpoints;
 
+    GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch)-healpoints);
+
+    /* check_equipment(ch);   Linerfix 110203 */
     send_to_char("You absorb life energy from the dead.\n\r", ch);
     act("$n absorbs life energy from the dead.", TRUE, ch, 0, 0, TO_ROOM);
-
     extract_obj(obj);
     update_pos(ch);
   }
+}
 
 void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
@@ -3650,8 +3648,7 @@ void spell_vampiric_touch (ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (heal > 0)
   {
-    //GET_HIT(ch) += heal;
-    magic_heal(ch, SPELL_VAMPIRIC, heal, TRUE);
+    GET_HIT(ch) += heal;
     send_to_char("You feel the drained energy flowing into you.\n\r", ch);
   }
   else
@@ -4120,7 +4117,6 @@ void spell_quester (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
   free(ench.name);
  }
 */
-
 void spell_firebreath (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
   struct enchantment_type_5 ench;
 
@@ -4145,51 +4141,40 @@ void spell_firebreath (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
   free(ench.name);
 }
 
+void spell_regeneration (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
+  struct enchantment_type_5 ench;
 
-void spell_regeneration (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj)
-{
-  ENCH ench;
-
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != vict)
-  {
+  if(ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch!=vict) { /* Chaos03 */
     send_to_char("You cannot cast this spell on another player.\n\r",ch);
-
     return;
   }
 
-  if (ch != vict)
-  {
+  if(ch!=vict) {
     act("$N's skin turns green, and $E seems to bend toward the sun.",FALSE,ch,0,vict,TO_NOTVICT);
     act("Your skin turns green, and you feel an affinity for the shining sun.",FALSE,ch,0,vict,TO_VICT);
     act("$S skin turns green, and $E seems to bend toward the sun.",FALSE,ch,0,vict,TO_CHAR);
   }
-  else
-  {
+  else {
     act("$N's skin turns green, and $E seems to bend toward the sun.",FALSE,ch,0,vict,TO_NOTVICT);
     act("Your skin turns green, and you feel an affinity for the shining sun.",FALSE,0,0,vict,TO_VICT);
   }
-
-  memset(&ench, 0, sizeof(AFF));
+  memset(&ench,0,sizeof(struct enchantment_type_5));
   ench.name     = str_dup("Regeneration");
   enchantment_to_char(vict,&ench,TRUE);
   free(ench.name);
 }
 
+/* dispel sanct - Ranger sept 96 */
+void spell_dispel_sanct(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
-void spell_dispel_sanct(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (!affected_by_spell(victim, SPELL_SANCTUARY))
-  {
+  if(!affected_by_spell(victim, SPELL_SANCTUARY)) {
     send_to_char("Nothing happens.\n\r",ch);
-
     return;
   }
-
   affect_from_char(victim, SPELL_SANCTUARY);
   REMOVE_BIT(victim->specials.affected_by, AFF_SANCTUARY);
-
-  send_to_char("The white aura around your body fades.\n\r", victim);
   act("The white aura around $n's body fades.", TRUE, victim, 0, 0, TO_ROOM);
+  act("The white aura around your body fades.", TRUE, victim, 0, 0, TO_CHAR);
 }
 
 void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
@@ -4202,7 +4187,7 @@ void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       if(aff) {
         if(aff->type==SKILL_HOSTILE || aff->type==SKILL_DEFEND ||
            aff->type==SKILL_BERSERK || aff->type==SKILL_FADE ||
-           aff->type==SKILL_EVASION || /* Used to be Cover */
+           aff->type==SKILL_COVER ||  /* Linerfix 051105 */
            aff->type==SKILL_FRENZY || (aff->type==SPELL_BLESS && aff->duration==-1))
           continue;
         affect_from_char(victim, aff->type);
@@ -4218,8 +4203,7 @@ void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 
-void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
+void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   char buffer[MAX_INPUT_LENGTH];
   struct descriptor_data *d;
   long ct;
@@ -4310,7 +4294,6 @@ void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   return;
 }
 
-
 void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
   AFF af;
@@ -4318,6 +4301,7 @@ void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if (!affected_by_spell(victim, SPELL_HASTE))
   {
     af.type       = SPELL_HASTE;
+    af.duration   = 5;
     if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
       af.duration = 2;
     else
@@ -4326,7 +4310,6 @@ void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     af.location   = APPLY_NONE;
     af.bitvector  = AFF_DUAL;
     af.bitvector2 = 0;
-
     affect_to_char(victim, &af);
 
     send_to_char("Suddenly everything around you seems to slow down to a crawl.\n\r", victim);
@@ -4338,16 +4321,10 @@ void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-
-void spell_great_mana(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj)
-{
-  CHAR *tmp_victim = NULL;
-  CHAR *temp = NULL;
-
-  for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp)
-  {
+void spell_great_mana(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
+  CHAR *tmp_victim, *temp;
+  for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim;tmp_victim = temp) {
     temp = tmp_victim->next_in_room;
-
     spell_recover_mana(level, ch, tmp_victim, 0);
   }
 }
@@ -4626,45 +4603,33 @@ void spell_armageddon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   damage(ch, victim, dam, SPELL_ARMAGEDDON,DAM_MAGICAL);
 }
 */
+void spell_perceive(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  struct affected_type_5 af;
 
-
-void spell_perceive(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
-
-  if(affected_by_spell(victim, SPELL_PERCEIVE))
-  {
+  if(affected_by_spell(victim, SPELL_PERCEIVE)) {
     send_to_char("You are already affected by this spell.\n\r",ch);
-
     return;
   }
-
   af.type      = SPELL_PERCEIVE;
   af.duration  = 2*level;
   af.modifier  = 0;
   af.location  = APPLY_NONE;
   af.bitvector = 0;
   af.bitvector2 = 0;
-
   affect_to_char(victim, &af);
-
   send_to_char("Your eyes glow with unearthly light.\n\r", victim);
 }
 
+void spell_quick(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  struct affected_type_5 af;
 
-void spell_quick(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
-
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+  if(ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     send_to_char("The forces of Chaos disrupt your magic.\n\r",ch);
-
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_QUICK))
-  {
+  if (!affected_by_spell(victim, SPELL_QUICK)) {
+
     af.type      = SPELL_QUICK;
     af.duration  = 5;
     af.modifier  = 0;
@@ -4673,7 +4638,6 @@ void spell_quick(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     af.bitvector2 = 0;
 
     affect_to_char(victim, &af);
-
     send_to_char("Your thoughts begin to race.\n\r", victim);
     act("$n's mind begins to race.",FALSE,ch,0,0,TO_ROOM);
   }
@@ -4709,8 +4673,8 @@ void spell_rush(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_RUSH))
-  {
+  if (!affected_by_spell(victim, SPELL_RUSH)) {
+
     af.type      = SPELL_RUSH;
     af.duration  = 3;
     af.modifier  = 5;
@@ -4719,19 +4683,16 @@ void spell_rush(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     af.bitvector2 = 0;
 
     affect_to_char(victim, &af);
-
     send_to_char("Your pulse begins to race!!\n\r", victim);
     act("$n veins bulge and twist as $s movement speeds up!",FALSE,ch,0,0,TO_ROOM);
   }
 }
 
+void spell_blood_lust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  struct affected_type_5 af;
 
-void spell_blood_lust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+  if (!affected_by_spell(victim, SPELL_BLOOD_LUST)) {
 
-  if (!affected_by_spell(victim, SPELL_BLOOD_LUST))
-  {
      af.type      = SPELL_BLOOD_LUST;
      af.duration  = 3;
      af.modifier  = 0;
@@ -4740,12 +4701,10 @@ void spell_blood_lust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
      af.bitvector2 = 0;
 
     affect_to_char(victim, &af);
-
     send_to_char("Your body writhes with a gnawing hunger for blood!\n\r", victim);
     act("$n body writhes with a gnawing hunger for blood!",FALSE,ch,0,0,TO_ROOM);
   }
 }
-
 
 void spell_shroud_existence(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
@@ -4755,14 +4714,12 @@ void spell_shroud_existence(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
   {
     send_to_char("Behave yourself here please!\n", ch);
-
     return;
   }
 
   if (!(IS_GOOD(ch)))
   {
     send_to_char("Your malicious predilections for doing evil forbid the use of this spell!\n", ch);
-
     return;
   }
 
@@ -4771,7 +4728,6 @@ void spell_shroud_existence(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       (IS_AFFECTED(victim, AFF_CHARM) || (IS_MORTAL(victim) && IS_SET(ch->specials.pflag, PLR_NOKILL))))
   {
     act("You cannot cast this spell on $N.", FALSE, ch, NULL, victim, TO_CHAR);
-
     return;
   }
 
@@ -4796,9 +4752,7 @@ void spell_shroud_existence(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (heal > 0)
   {
-    //GET_HIT(ch) += heal;
-    magic_heal(ch, SPELL_EXISTENCE, heal, FALSE);
-
+    GET_HIT(ch) += heal;
     send_to_char("You feel new life flowing into you.\n\r", ch);
   }
   else
@@ -4810,7 +4764,6 @@ void spell_shroud_existence(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   damage(ch, victim, dam, SPELL_EXISTENCE, DAM_NO_BLOCK);
 }
-
 
 void spell_mystic_swiftness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
@@ -4825,6 +4778,7 @@ void spell_mystic_swiftness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (!affected_by_spell(ch, SPELL_MYSTIC_SWIFTNESS))
   {
+
     af.type       = SPELL_MYSTIC_SWIFTNESS;
     af.duration   = 4;
     af.modifier   = 0;
@@ -4838,7 +4792,6 @@ void spell_mystic_swiftness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     act("$n's hands blur with mystical speed!", TRUE, ch, 0, 0, TO_ROOM);
   }
 }
-
 
 void spell_wind_slash(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {

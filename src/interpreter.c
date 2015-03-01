@@ -589,25 +589,23 @@ int mob_special(CHAR *mob,CHAR *ch,int cmd,char *arg)
 {
   return ((*mob_proto_table[mob->nr].func)(mob, ch, cmd, arg));
 }
-
-int enchantment_special(struct enchantment_type_5 *enchantment, CHAR *mob, CHAR *ch, int cmd, char *arg)
+int enchantment_special(struct enchantment_type_5 *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg)
 {
-  if (!enchantment) return FALSE;
+  int Bool = FALSE;
+  if(!enchantment) return FALSE;
+  Bool = ((*enchantment->func)(enchantment,mob, ch, cmd, arg));
+  if(Bool) return TRUE;
 
-  if (((*enchantment->func)(enchantment, mob, ch, cmd, arg))) return TRUE;
-
-  if (cmd == MSG_TICK)
-  {
-    if (enchantment->duration && enchantment->duration > 0)
-    {
-      enchantment->duration--;
+  if(cmd == MSG_TICK) {
+    if (enchantment->duration) {
+      if(enchantment->duration>0) enchantment->duration--;
     }
-    else if (!enchantment_special(enchantment, mob, NULL, MSG_REMOVE_ENCH, NULL))
-    {
-      enchantment_remove(mob, enchantment, TRUE);
+    else {
+      if(!enchantment_special(enchantment,mob,NULL,MSG_REMOVE_ENCH,NULL))
+        enchantment = enchantment_remove(mob, enchantment,1);
     }
   }
-
+  if(!enchantment) return FALSE;
   return FALSE;
 }
 
@@ -794,7 +792,7 @@ void assign_command_pointers ( void )
   COMMANDO("kick"     ,CMD_KICK      ,POSITION_FIGHTING  ,do_kick,1);
   COMMANDO("practice" ,CMD_PRACTICE  ,POSITION_RESTING   ,do_practice,1);
   COMMANDO("examine"  ,CMD_EXAMINE   ,POSITION_RESTING   ,do_examine,1);
-  COMMANDO("take"     ,CMD_TAKE      ,POSITION_RESTING   ,do_get,1);
+  COMMANDO("take"     ,CMD_TAKE      ,POSITION_RESTING   ,do_get,1); /* TAKE */
   COMMANDO("'"        ,CMD_SAY       ,POSITION_RESTING   ,do_say,1);
   COMMANDO("use"      ,CMD_USE       ,POSITION_SITTING   ,do_use,1);
   COMMANDO("where"    ,CMD_WHERE     ,POSITION_DEAD      ,do_where,1);
@@ -945,9 +943,8 @@ void assign_command_pointers ( void )
   COMMANDO("email"    ,CMD_EMAIL      ,POSITION_RESTING  ,do_email, 1);
 /*  COMMANDO("playeravg",CMD_PLRAVG     ,POSITION_RESTING  ,do_playeravg, LEVEL_IMP);*/
   COMMANDO("idname"   ,CMD_IDNAME     ,POSITION_DEAD     ,do_idname, LEVEL_SUP); /* Ranger 05-Feb-04 */
-  
+  COMMANDO("cover"    ,CMD_COVER      ,POSITION_STANDING ,do_cover,50);
   COMMANDO("gf"       ,CMD_GF         ,POSITION_DEAD     ,do_gf, 0);
-  COMMANDO("cunning"  ,CMD_CUNNING    ,POSITION_FIGHTING ,do_cunning, 50);
   
   /* These next few are for the new exit types - Ranger Oct 96 */
   COMMANDO("move"     ,CMD_MOVE      ,POSITION_STANDING  ,do_move_keyword,1);
@@ -967,17 +964,15 @@ void assign_command_pointers ( void )
   COMMANDO("mantra"   ,CMD_MANTRA    ,POSITION_FIGHTING  ,do_mantra,30);
   COMMANDO("banzai"   ,CMD_BANZAI    ,POSITION_FIGHTING  ,do_banzai,30);
   /* COMMANDO("throatstrike",CMD_THROATSTRIKE,POSITION_FIGHTING  ,do_throatstrike,30); */ /* Disabled */
-  /*COMMANDO("execute"  ,CMD_EXECUTE   ,POSITION_FIGHTING  ,do_execute,30);*/
+  COMMANDO("execute"  ,CMD_EXECUTE   ,POSITION_FIGHTING  ,do_execute,30);
   COMMANDO("pray"     ,CMD_PRAY      ,POSITION_RESTING   ,do_pray,30);
-  /*COMMANDO("evade"    ,CMD_EVADE     ,POSITION_FIGHTING  ,do_evade,30);*/
-  /*COMMANDO("impair"   ,CMD_IMPAIR    ,POSITION_FIGHTING  ,do_impair,30);*/
-  COMMANDO("vehemence",CMD_VEHEMENCE ,POSITION_FIGHTING, do_vehemence, 30);
+  COMMANDO("evade"    ,CMD_EVADE     ,POSITION_FIGHTING  ,do_evade,30);
+  COMMANDO("impair"   ,CMD_IMPAIR    ,POSITION_FIGHTING  ,do_impair,30);
   COMMANDO("sweep"    ,CMD_SWEEP     ,POSITION_FIGHTING  ,do_sweep,30);
   COMMANDO("blitz"    ,CMD_BLITZ     ,POSITION_STANDING  ,do_blitz,30);
   COMMANDO("flank"    ,CMD_FLANK     ,POSITION_STANDING  ,do_flank,30);
   COMMANDO("lunge"    ,CMD_LUNGE     ,POSITION_STANDING  ,do_lunge,30);
-  /*COMMANDO("trip"     ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);*/
-  COMMANDO("evasion"  ,CMD_EVASION   ,POSITION_STANDING  ,do_evasion, 45); /* Used to be Cover */
+  COMMANDO("trip"     ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);
   COMMANDO("tigerkick",CMD_TIGERKICK ,POSITION_FIGHTING  ,do_tigerkick,30);
   COMMANDO("scan"     ,CMD_SCAN      ,POSITION_STANDING  ,do_scan,30);
   COMMANDO("camp"     ,CMD_CAMP      ,POSITION_STANDING  ,do_camp,30);
@@ -988,7 +983,7 @@ void assign_command_pointers ( void )
   COMMANDO("frenzy"   ,CMD_FRENZY    ,POSITION_STANDING  ,do_frenzy,30);
   COMMANDO("berserk"  ,CMD_BERSERK   ,POSITION_STANDING  ,do_berserk,30);
   COMMANDO("batter"   ,CMD_BATTER    ,POSITION_FIGHTING  ,do_batter,30);
-  COMMANDO("trophy"   ,CMD_TROPHY    ,POSITION_STANDING  ,do_trophy,30); /* Used to be Scalp */
+  COMMANDO("scalp"    ,CMD_SCALP     ,POSITION_STANDING  ,do_scalp,30);
   COMMANDO("charge"   ,CMD_CHARGE    ,POSITION_STANDING  ,do_charge,30);
   COMMANDO("headbutt" ,CMD_HEADBUTT  ,POSITION_FIGHTING  ,do_headbutt,30);
   COMMANDO("assassinate",CMD_ASSASSINATE ,POSITION_STANDING ,do_assassinate,30);

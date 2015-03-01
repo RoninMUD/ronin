@@ -225,8 +225,6 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
   fname(OBJ_NAME((obj))) : "something")
 
 #define OUTSIDE(ch) (!IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,INDOORS))
-#define IS_OUTSIDE(ch) (!IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, INDOORS))
-#define IS_INDOORS(ch) (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, INDOORS))
 
 #define EXIT(ch, door)  (world[CHAR_REAL_ROOM(ch)].dir_option[door])
 
@@ -267,8 +265,7 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define GET_NAT_HIT(ch) (ch->specials.org_hit)
 #define GET_NAT_MANA(ch) (100 + ch->specials.org_mana)
 #define GET_NAT_MOVE(ch) (100 + ch->specials.org_move)
-//#define GET_MOD_AC(ch) (affected_by_spell(ch, SKILL_DEFEND) ? MAX(-300, (ch->points.armor + dex_app[GET_DEX(ch)].defensive)) : MAX(-250, (ch->points.armor + dex_app[GET_DEX(ch)].defensive)))
-#define GET_MOD_AC(ch) (compute_ac(ch) * 10)
+#define GET_MOD_AC(ch) (affected_by_spell(ch, SKILL_DEFEND) ? MAX(-300, (ch->points.armor + dex_app[GET_DEX(ch)].defensive)) : MAX(-250, (ch->points.armor + dex_app[GET_DEX(ch)].defensive)))
 #define GET_EXP_TO_LEVEL(ch) (GET_LEVEL(ch) < LEVEL_IMP ? exp_table[GET_LEVEL(ch) + 1] - GET_EXP(ch) : 0)
 #define ZONE_NAME_CH(ch) (zone_table[real_zone(ch->specials.zone)].name)
 #define ZONE_NUM_CH(ch) (ch->specials.zone)
@@ -329,12 +326,6 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define GET_AFF(ch) (ch->specials.affected_by)
 #define GET_AFF2(ch) (ch->specials.affected_by2)
 #define OBJ_TYPE(obj) (obj->obj_flags.type_flag)
-#define GET_WEAPON(ch) (ch->equipment[WIELD])
-#define GET_DEX_APP(ch) (dex_app[GET_DEX(ch)].prac_bonus)
-#define GET_WIS_APP(ch) (wis_app[GET_WIS(ch)].bonus)
-#define GET_LEARNED(ch, skill) (ch->skills[skill].learned)
-#define IS_IMMUNE(ch, immunity) (IS_SET(ch->specials.immune, immunity))
-#define IS_IMMUNE2(ch, immunity) (IS_SET(ch->specials.immune2, immunity))
-#define GET_MASTER(ch) (ch->master)
-#define GET_RIDER(ch) (ch->specials.rider)
 #endif /* __UTILS_H__ */
+
+

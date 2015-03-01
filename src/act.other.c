@@ -113,7 +113,6 @@ extern struct descriptor_data *descriptor_list;
 extern struct obj_data *obj;
 extern struct room_data *world;
 extern struct dex_skill_type dex_app_skill[];
-extern struct dex_app_type dex_app[];
 extern struct spell_info_type spell_info[];
 extern int CHAOSMODE;
 extern int BAMDAY;
@@ -696,11 +695,6 @@ void do_steal(struct char_data *ch, char *argument, int cmd) {
 
   /* 101% is a complete failure */
   percent=number(1,101) - dex_app_skill[GET_DEX(ch)].p_pocket;
-
-  if (affected_by_spell(ch, SKILL_VEHEMENCE))
-  {
-    percent -= 5 - (GET_DEX_APP(ch) / 2);
-  }
 
   if(GET_POS(victim) < POSITION_SLEEPING)
     percent = -1; /* ALWAYS SUCCESS */

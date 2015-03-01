@@ -269,7 +269,7 @@ void stop_riding(struct char_data *ch,struct char_data *vict);
 void die(CHAR *ch);
 void brag(struct char_data *ch, struct char_data *victim);
 
-int trophy_bonus(CHAR *ch); /* Used to be scalp_bonus */
+int scalp_bonus(CHAR *ch);
 int close_combat_bonus(CHAR *ch,int type);
 void hit(CHAR *ch, CHAR *victim, int type);
 void dhit(CHAR *ch, CHAR *victim, int type);
@@ -1327,6 +1327,7 @@ char *replace_string(char *str, char *weapon)
 }
 
 
+
 void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
 {
   char *buf;
@@ -1688,7 +1689,7 @@ void victimize_action(CHAR *ch, CHAR *vict)
 
   if (!ch || !vict) return;
 
-  check = number(1, 170) - GET_DEX_APP(ch);
+  check = number(1, 170) - dex_app[GET_DEX(ch)].prac_bonus;
 
   if (check > ch->skills[SKILL_VICTIMIZE].learned) return;
 
@@ -1756,7 +1757,7 @@ void victimize_action(CHAR *ch, CHAR *vict)
       break;
     case 3:
       ench.location = APPLY_DAMROLL;
-      ench.modifier = -1 * ((GET_DAMROLL(vict) * number(5, 10)) / 100);
+      ench.modifier = -1 * (GET_DAMROLL(vict) * number(5, 10)) / 100;
       break;
   }
 
@@ -1779,7 +1780,7 @@ void shadow_walk_action(CHAR *ch, CHAR *vict)
 
   if (!ch->equipment[WIELD]) return;
 
-  check = number(1, 450) - (GET_DEX_APP(ch) * 5);
+  check = number(1, 450) - dex_app[GET_DEX(ch)].prac_bonus * 5;
 
   if (check > ch->skills[SKILL_SHADOW_WALK].learned) return;
 
@@ -1817,145 +1818,6 @@ void shadow_walk_action(CHAR *ch, CHAR *vict)
   act("$n steps into the shadows and attacks $N by surprise!", FALSE, ch, 0, vict, TO_NOTVICT);
 
   damage(ch, vict, dmg, SKILL_SHADOW_WALK, DAM_NO_BLOCK);
-}
-
-int dirty_tricks_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
-{
-  int set_pos = 0;
-
-  if (cmd != MSG_MOBACT) return FALSE;
-
-  act("Blood oozes from your gaping wound.", FALSE, enchanted_ch, 0, 0, TO_CHAR);
-  act("Blood oozes from $n's gaping wound.", TRUE, enchanted_ch, 0, 0, TO_ROOM);
-
-  set_pos = GET_POS(enchanted_ch);
-
-  damage(enchanted_ch, enchanted_ch, dice(3, 12), SKILL_DIRTY_TRICKS, DAM_NO_BLOCK);
-
-  GET_POS(enchanted_ch) = set_pos;
-
-  return FALSE;
-}
-
-void dirty_tricks_action(CHAR *ch, CHAR *victim)
-{
-  AFF af;
-  ENCH ench;
-  bool can_stab = TRUE;
-  bool can_blind = TRUE;
-  int trick = 0;
-  int set_pos = 0;
-
-  if (!ch || !victim) return;
-
-  if (!GET_WEAPON(ch) || affected_by_spell(victim, SKILL_DIRTY_TRICKS))
-  {
-    can_stab = FALSE;
-  }
-
-  if ((IS_NPC(victim) && IS_SET(victim->specials.immune, IMMUNE_BLINDNESS)) || IS_AFFECTED(victim, AFF_BLIND))
-  {
-    can_blind = FALSE;
-  }
-
-  if (!can_stab && can_blind)
-  {
-    if (number(1, 100) <= 40)
-    {
-      trick = 21;
-    }
-    else
-    {
-      trick = 51;
-    }
-  }
-  else if (can_stab && !can_blind)
-  {
-    if (number(1, 100) <= 35)
-    {
-      trick = 1;
-    }
-    else
-    {
-      trick = 51;
-    }
-  }
-  else if (!can_stab && !can_blind)
-  {
-    trick = 51;
-  }
-  else
-  {
-    trick = number(1, 100);
-  }
-
-  if (trick <= 20) /* 20% Chance Stab+Bleed (Requires Weapon)*/
-  {
-    act("You stab your weapon deeply into $N, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n stabs $s weapon deeply into you, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_VICT);
-    act("$n stabs $s weapon deeply into $N, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-    ench.name = strdup("Gaping Wound");
-    ench.type = SKILL_DIRTY_TRICKS;
-    ench.duration = 0;
-    ench.location = 0;
-    ench.modifier = 0;
-    ench.bitvector = 0;
-    ench.bitvector2 = 0;
-    ench.func = dirty_tricks_enchantment;
-    enchantment_to_char(victim, &ench, FALSE);
-  }
-  else if (trick <= 50) /* 30% Chance Blind */
-  {
-    act("You throw some blinding dust into $N's eyes.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n throws some blinding dust into your eyes.", FALSE, ch, 0, victim, TO_VICT);
-    act("$n throws blinding dust into $N's eyes.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-    act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
-    send_to_char("You have been blinded!\n\r", victim);
-
-    af.type = SPELL_BLINDNESS;
-    af.location = APPLY_HITROLL;
-    af.modifier = -4;  /* Make hitroll worse. */
-    af.duration = 0;
-    af.bitvector = AFF_BLIND;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
-    af.location = APPLY_AC;
-    af.modifier = +40; /* Make AC worse. */
-    affect_to_char(victim, &af);
-  }
-  else /* 50% Chance Stun */
-  {
-    if (AWAKE(victim) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
-    {
-      act("You kick $N savagely in the groin but $E seems unfazed.", FALSE, ch, 0, victim, TO_CHAR);
-      act("$n kicks you savagely in the groin but you feel unfazed.", FALSE, ch, 0, victim, TO_VICT);
-      act("$n kicks $N savagely in the groin but $E seems unfazed.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-      damage(ch, victim, 0, SKILL_DIRTY_TRICKS, DAM_NO_BLOCK);
-    }
-    else
-    {
-      act("You kick $N savagely in the groin, causing $M to double over in pain!", FALSE, ch, 0, victim, TO_CHAR);
-      act("$n kicks you savagely in the groin, causing you to double over in pain!", FALSE, ch, 0, victim, TO_VICT);
-      act("$n kicks $N savagely in the groin, causing $M to double over in pain!", FALSE, ch, 0, victim, TO_NOTVICT);
-
-      set_pos = stack_position(victim, POSITION_SITTING);
-
-      damage(ch, victim, 10, SKILL_DIRTY_TRICKS, DAM_NO_BLOCK);
-
-      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
-      {
-        GET_POS(victim) = set_pos;
-
-        if (!IS_IMPLEMENTOR(victim))
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE);
-        }
-      }
-    }
-  }
 }
 
 void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
@@ -2466,7 +2328,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
       str_index = MIN(STRENGTH_APPLY_INDEX(victim), OSTRENGTH_APPLY_INDEX(victim));
       max_reflect = str_app[str_index].todam;
       max_reflect += GET_DAMROLL(victim);
-      max_reflect += trophy_bonus(victim);
+      max_reflect += scalp_bonus(victim);
       max_reflect += close_combat_bonus(victim, 0);
 
       if (victim->equipment[WIELD])
@@ -2552,7 +2414,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     }
   }
 
-  if (affected_by_spell(victim, SKILL_EVASION))
+  if (affected_by_spell(victim, SKILL_COVER))
   {
     dam = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ?
             lround(dam * 0.80) : /* 20% reduction in chaos */
@@ -2580,7 +2442,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     str_index = MIN(STRENGTH_APPLY_INDEX(victim), OSTRENGTH_APPLY_INDEX(victim));
     max_reflect = str_app[str_index].todam;
     max_reflect += GET_DAMROLL(victim);
-    max_reflect += trophy_bonus(victim);
+    max_reflect += scalp_bonus(victim);
     max_reflect += close_combat_bonus(victim, 0);
 
     if (victim->equipment[WIELD])
@@ -2608,7 +2470,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     act("Some of your damage is reflected to you!", 0, ch, 0, victim, TO_CHAR);
   }
 
-  dam_text = dam; /* Need this varible to accurately reflect the hit strength. */
+  dam_text = dam; /* Need this varible to accurately reflect the hit strength*/
 
   if (dam > 0 && affected_by_spell(victim, SPELL_ORB_PROTECTION))
   {
@@ -2768,13 +2630,6 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
       }/*if*/
     }/*for*/
   }
-
-#ifdef TEST_SITE
-  if (!IS_NPC(victim))
-  {
-    printf_to_char(victim, "Damage Taken: %d\n\r", dam);
-  }
-#endif
 
   /* added checks to make sure positions change due to dam above - Liner 03/16/03 */
   switch (GET_POS(victim))
@@ -3108,7 +2963,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
   if ((attacktype == SKILL_CIRCLE) && 
       (dam > 0) && 
 	  (GET_LEVEL(ch) == 50) &&
-      (ch->skills[SKILL_TWIST].learned > (number(1, 129) - GET_DEX_APP(ch) - affected_by_spell(ch, SKILL_VEHEMENCE) ? (5 - (GET_DEX_APP(ch) / 2)) : 0)) &&
+      (ch->skills[SKILL_TWIST].learned > (number(1, 129) - dex_app[GET_DEX(ch)].prac_bonus)) &&
       (CHAR_REAL_ROOM(victim) == CHAR_REAL_ROOM(ch)))
   {
     damage(ch, victim, 250, SKILL_TWIST, DAM_NO_BLOCK);
@@ -3258,14 +3113,14 @@ int wpn_extra(CHAR *ch, CHAR *victim, OBJ *weapon)
   return dam;
 }
 
-int trophy_bonus(CHAR *ch)
+int scalp_bonus(CHAR *ch)
 {
   OBJ *tmp_obj = NULL;
   int bonus = 0;
 
   for (tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content)
   {
-    if (tmp_obj->obj_flags.type_flag == ITEM_TROPHY)
+    if (tmp_obj->obj_flags.type_flag == ITEM_SCALP)
     {
       bonus++;
     }
@@ -3280,28 +3135,27 @@ int close_combat_bonus(CHAR *ch, int type)
 {
   int bonus = 0;
 
-  if (!ch->skills || !check_subclass(ch, SC_BANDIT, 4)) return 0;
-
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_CLOSE_COMBAT)) return 0;
-
-  switch (type)
+  if (ch->skills &&
+      check_subclass(ch, SC_BANDIT, 5) &&
+      !OUTSIDE(ch))
   {
-    case 0:
-      if (IS_INDOORS(ch))
+    if (number(0, 200) < ch->skills[SKILL_CLOSE_COMBAT].learned)
+    {
+      switch (type)
       {
-        bonus = 5;
+        case 0:
+          bonus = 5;
+          break;
+
+        case 1:
+          bonus = -2;
+          break;
+
+        default:
+          bonus = 0;
+          break;
       }
-      else
-      {
-        bonus = 1;
-      }
-      break;
-    case 1:
-      bonus = -2;
-      break;
-    default:
-      bonus = 0;
-      break;
+    }
   }
 
   return bonus;
@@ -3312,7 +3166,6 @@ int calc_hitroll(CHAR *ch)
   int value = 0;
   int str_bonus = 0;
   OBJ* wielded = NULL;
-  AFF *aff = NULL;
 
   str_bonus = str_app[MAX(0,MIN(STRENGTH_APPLY_INDEX(ch), OSTRENGTH_APPLY_INDEX(ch)))].tohit;
 
@@ -3323,21 +3176,11 @@ int calc_hitroll(CHAR *ch)
 
   value += GET_HITROLL(ch);
   value += str_bonus;
-  value += close_combat_bonus(ch, 0);
-  value += trophy_bonus(ch);
+  value += scalp_bonus(ch);
 
   if (affected_by_spell(ch, SKILL_FRENZY))
   {
     value -= 10;
-  }
-
-  /* Combat Zen */
-  for (aff = ch->affected; aff; aff = aff->next)
-  {
-    if (aff->type == SPELL_BLINDNESS)
-    {
-      value += abs(aff->modifier);
-    }
   }
 
   return value;
@@ -3358,8 +3201,7 @@ int calc_damroll(CHAR *ch)
 
   value += GET_DAMROLL(ch);
   value += str_bonus;
-  value += close_combat_bonus(ch, 0);
-  value += trophy_bonus(ch);
+  value += scalp_bonus(ch);
 
   return value;
 }
@@ -3399,11 +3241,6 @@ int compute_ac(CHAR *ch)
   if (affected_by_spell(ch, SPELL_BLUR))
   {
     ch_ac -= (GET_LEVEL(ch) / 2);
-  }
-
-  if (affected_by_spell(ch, SKILL_VEHEMENCE))
-  {
-    ch_ac += 3; /* 30 AC Penalty */
   }
 
   if (!IS_NPC(ch))
@@ -3498,45 +3335,6 @@ int get_attack_type(CHAR *ch, OBJ *weapon)
   }
 
   return attack_type;
-}
-
-int stack_position(CHAR *ch, int target_position)
-{
-  int position = 0;
-
-  if (!ch) return POSITION_DEAD; // Assume dead if there is no character.
-
-  if (target_position <= POSITION_INCAP ||
-      target_position > POSITION_SITTING ||
-      GET_POS(ch) <= POSITION_INCAP ||
-      GET_POS(ch) > POSITION_SITTING)
-  {
-    position = MIN(target_position, GET_POS(ch)); // Don't stack position if better than sitting or incapacitated (or worse).
-  }
-  else
-  {
-    if (GET_POS(ch) == POSITION_STUNNED)
-    {
-      position = POSITION_INCAP;
-    }
-    else if (GET_POS(ch) == POSITION_RESTING || GET_POS(ch) == POSITION_SITTING)
-    {
-      if (target_position == POSITION_RESTING || target_position == POSITION_SITTING)
-      {
-        position = POSITION_STUNNED;
-      }
-      else
-      {
-        position = POSITION_INCAP;
-      }
-    }
-    else
-    {
-      position = MIN(target_position, GET_POS(ch));
-    }
-  }
-
-  return position;
 }
 
 int calc_position_damage(int position, int damage)
@@ -3660,6 +3458,14 @@ bool try_hit(CHAR *ch, CHAR *victim)
 
   if (!ch || !victim) return FALSE;
 
+  /* Trip always results in a miss. */
+  if (affected_by_spell(ch, SKILL_TRIP))
+  {
+    affect_from_char(ch, SKILL_TRIP);
+
+    return FALSE;
+  }
+
   if (!AWAKE(victim) ||
       IS_AFFECTED(victim, AFF_FURY) ||
       affected_by_spell(victim, SKILL_HOSTILE) ||
@@ -3688,7 +3494,6 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
   int dam = 0;
   int multi = 0;
   int reflect = 0;
-  bool success = TRUE;
   bool riposte = FALSE;
 
   if (IS_NPC(victim) &&
@@ -3788,12 +3593,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         check += GET_LEVEL(victim) / 2;
       }
 
-      if (affected_by_spell(ch, SKILL_VEHEMENCE))
-      {
-        check -= 70; /* 10% Penalty */
-      }
-
-      if (number(1, 700) - (GET_DEX_APP(victim) * 5) <= check)
+      if (number(1, 700) - (dex_app[GET_DEX(victim)].prac_bonus * 5) <= check)
       {
         switch (number(0, 3))
         {
@@ -4019,7 +3819,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
     }
 
     /* Combat Zen */
-    if (!IS_NPC(victim) && check_subclass(ch, SC_RONIN, 4)) return TRUE;
+    if (check_subclass(ch, SC_RONIN, 4)) return TRUE;
 
     return FALSE;
   }
@@ -4031,25 +3831,11 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
     {
       case SKILL_BACKSTAB:
       case SKILL_ASSASSINATE:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL))
+        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
-          if (affected_by_spell(ch, SKILL_CUNNING) && GET_MANA(ch) >= 10)
-          {
-            act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
-            act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
-            act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
-
-            GET_MANA(ch) -= 10;
-
-            success = TRUE;
-          }
-          else if (!breakthrough(ch, victim, BT_INVUL))
-          {
-            success = FALSE;
-          }
+          damage(ch, victim, 0, SKILL_BACKSTAB, DAM_NO_BLOCK);
         }
-
-        if (success)
+        else
         {
           multi = backstab_mult[GET_LEVEL(ch)];
 
@@ -4061,32 +3847,18 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           dam *= MAX(1, multi);
           damage(ch, victim, dam, SKILL_BACKSTAB, DAM_NO_BLOCK);
         }
-        else
-        {
-          damage(ch, victim, 0, SKILL_BACKSTAB, DAM_NO_BLOCK);
-        }
         break;
 
       case SKILL_CIRCLE:
-        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL))
+        if (!affected_by_spell(victim, SKILL_HOSTILE) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
         {
-          if (affected_by_spell(ch, SKILL_CUNNING) && GET_MANA(ch) >= 10)
-          {
-            act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
-            act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
-            act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
+          act("$n's weapon makes contact with $N, but slides harmlessly off $S back.", FALSE, ch, 0, victim, TO_NOTVICT);
+          act("$n's weapon slides harmlessly off of your back.", FALSE, ch, 0, victim, TO_VICT);
+          act("Your weapon makes contact with $N, but slides harmlessly off $S back.", FALSE, ch, 0, victim, TO_CHAR);
 
-            GET_MANA(ch) -= 10;
-
-            success = TRUE;
-          }
-          else if (!breakthrough(ch, victim, BT_INVUL))
-          {
-            success = FALSE;
-          }
+          damage(ch, victim, 0, SKILL_CIRCLE, DAM_NO_BLOCK);
         }
-
-        if (success)
+        else
         {
           act("$n plunges $p deep into $N's back.", FALSE, ch, weapon, victim, TO_NOTVICT);
           act("$n plunges $p deep into your back.", FALSE, ch, weapon, victim, TO_VICT);
@@ -4094,14 +3866,6 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
 
           dam *= circle_mult[GET_LEVEL(ch)];
           damage(ch, victim, dam, SKILL_CIRCLE, DAM_NO_BLOCK);
-        }
-        else
-        {
-          act("$n's weapon makes contact with $N, but slides harmlessly off $S back.", FALSE, ch, 0, victim, TO_NOTVICT);
-          act("$n's weapon slides harmlessly off of your back.", FALSE, ch, 0, victim, TO_VICT);
-          act("Your weapon makes contact with $N, but slides harmlessly off $S back.", FALSE, ch, 0, victim, TO_CHAR);
-
-          damage(ch, victim, 0, SKILL_CIRCLE, DAM_NO_BLOCK);
         }
         break;
 
@@ -4227,12 +3991,12 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           act("$n charges into the fray, wildly swinging $s weapon at you.", FALSE, ch, 0, victim, TO_VICT);
           act("You charge into the fray, wildly swinging your weapon at $N.", FALSE, ch, 0, victim, TO_CHAR);
 
-          if (GET_WEAPON(victim) && chance(20))
+          if (EQ(victim, WIELD) && chance(20))
           {
             disarm = unequip_char(victim, WIELD);
 
-            act("$n's $p is knocked from $s grasp.", FALSE, victim, disarm, 0, TO_ROOM);
-            act("Your $p is knocked from your grasp.", FALSE, victim, disarm, 0, TO_CHAR);
+            act("$n's $p is knocked from $s grasp.", 0 , victim, disarm, 0, TO_ROOM);
+            act("Your $p is knocked from your grasp.", 0, victim, disarm, 0, TO_CHAR);
 
             if (IS_SET(CHAR_ROOM_FLAGS(ch), CHAOTIC))
             {
@@ -4243,7 +4007,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
               log_f("WIZINFO: %s disarms %s's %s (Room %d)",
                     GET_NAME(ch), GET_NAME(victim), OBJ_NAME(disarm), V_ROOM(victim));
               obj_to_room(disarm, CHAR_REAL_ROOM(victim));
-              OBJ_LOG(disarm) = TRUE;
+              OBJ_LOG(disarm) = 1;
             }
 
             save_char(victim, NOWHERE);
@@ -4428,7 +4192,7 @@ void hit(CHAR *ch, CHAR *victim, int type)
       check = number(1, 370);
     }
 
-    check -= GET_DEX_APP(ch) * 5;
+    check -= dex_app[GET_DEX(ch)].prac_bonus * 5;
 
     if (check <= ch->skills[SKILL_DUAL].learned ||
         (IS_AFFECTED(ch, AFF_DUAL) &&
@@ -4491,7 +4255,7 @@ void dhit(CHAR *ch, CHAR *victim, int type)
       check = number(1, 300);
     }
 
-    check -= GET_DEX_APP(ch) * 5;
+    check -= dex_app[GET_DEX(ch)].prac_bonus * 5;
 
     if (check <= ch->skills[SKILL_TRIPLE].learned ||
         (IS_AFFECTED2(ch, AFF_TRIPLE) &&
@@ -4509,7 +4273,7 @@ void dhit(CHAR *ch, CHAR *victim, int type)
            affected_by_spell(ch, SPELL_MYSTIC_SWIFTNESS) &&
            !CHAOSMODE)
   {
-    if (number(1, 100) - GET_DEX_APP(ch) <= 50)
+    if (number(1, 100) - dex_app[GET_DEX(ch)].prac_bonus <= 50)
     {
       thit(ch, victim, TYPE_UNDEFINED);
     }
@@ -4554,7 +4318,7 @@ void thit(CHAR *ch, CHAR *victim, int type)
       check = number(1, 300);
     }
 
-    check -= GET_DEX_APP(ch) * 5;
+    check -= dex_app[GET_DEX(ch)].prac_bonus * 5;
 
     if (check <= ch->skills[SKILL_QUAD].learned ||
         (IS_AFFECTED2(ch, AFF_QUAD) &&
@@ -4590,14 +4354,13 @@ void qhit(CHAR *ch, CHAR *victim, int type)
 void perform_violence(void)
 {
   CHAR *ch = NULL;
-  CHAR *vict = NULL;
 
   for (ch = combat_list; ch; ch = combat_next_dude)
   {
     combat_next_dude = ch->next_fighting;
-    assert(vict = GET_OPPONENT(ch));
+    assert(GET_OPPONENT(ch));
 
-    if (AWAKE(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(vict))
+    if (AWAKE(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(GET_OPPONENT(ch)))
     {
       /* Linerfix - Makes MSG_VIOLENCE only signal to the room of Satan, Cryohydra, Shadowraith or Ancient Red Dragon. */
       if (V_ROOM(ch) == 25541 ||
@@ -4605,33 +4368,24 @@ void perform_violence(void)
           V_ROOM(ch) == 27748 ||
           V_ROOM(ch) == 17532)
       {
-        if (signal_char(ch, vict, MSG_VIOLENCE, "")) return;
+        if (signal_char(ch, GET_OPPONENT(ch), MSG_VIOLENCE, "")) return;
       }
 
-      /* Shadow-Walk is before hit() in order to take advantage of pummel, etc. */
       if (affected_by_spell(ch, SKILL_SHADOW_WALK))
       {
-        shadow_walk_action(ch, vict);
+        shadow_walk_action(ch, GET_OPPONENT(ch));
       }
 
-      hit(ch, vict, TYPE_UNDEFINED);
+      hit(ch, GET_OPPONENT(ch), TYPE_UNDEFINED);
 
-      /* These skills are applied after hit() in order to avoid consuming pummel, etc. */
       if (affected_by_spell(ch, SPELL_BLOOD_LUST))
       {
-        blood_lust_action(ch, vict);
+        blood_lust_action(ch, GET_OPPONENT(ch));
       }
 
       if (affected_by_spell(ch, SKILL_VICTIMIZE))
       {
-        victimize_action(ch, vict);
-      }
-
-      if (!IS_NPC(ch) &&
-          check_sc_access(ch, SKILL_DIRTY_TRICKS) &&
-          chance(10)) /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
-      {
-        dirty_tricks_action(ch, vict);
+        victimize_action(ch, GET_OPPONENT(ch));
       }
     }
     else /* Not in same room. */
@@ -4646,14 +4400,13 @@ void mob_attack(CHAR *MOB);
 void perform_mob_attack(void)
 {
   CHAR *ch = NULL;
-  CHAR *vict = NULL;
 
   for (ch = combat_list; ch; ch = combat_next_dude)
   {
     combat_next_dude = ch->next_fighting;
-    assert(vict = GET_OPPONENT(ch));
+    assert(ch->specials.fighting);
 
-    if (IS_NPC(ch) && AWAKE(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(vict))
+    if (IS_NPC(ch) && AWAKE(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(GET_OPPONENT(ch)))
     {
       mob_attack(ch);
     }

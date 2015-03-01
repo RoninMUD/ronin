@@ -490,7 +490,7 @@ void delete_wax_node( struct wax_object *node )
 // we can revisit this to be less stupid.
 int mus_waxen_equipment(OBJ *eq, CHAR *ch,int cmd,char *arg)
 {
-  int pos = 0, iEq;
+  int pos, iEq;
   if( cmd == MSG_TICK )
   {
     struct wax_object *wax = wax_objects;
@@ -3210,7 +3210,7 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
     if( contents->obj_flags.cost == PC_CORPSE && strstr( OBJ_SHORT( contents ), "Corpse of" ) && contents->obj_flags.timer == MAX_PC_CORPSE_TIME )
     {
       lem_ignore = TRUE;
-      mob_do( lem_instance, "trophy corpse" );
+      mob_do( lem_instance, "scalp corpse" );
       mob_do( lem_instance, "skin corpse" );
       empty_container( contents );
       mob_do( lem_instance, "butcher corpse" );
@@ -3279,7 +3279,7 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
     CHAR *vict = NULL;
     for(vict = world[lem_instance->in_room_r].people; vict; vict = vict->next_in_room)
     {
-      if(!IS_NPC(vict) && affected_by_spell(vict, SKILL_EVASION) && !enchanted_by(vict, ENCH_NAIAD_COWARDICE) )
+      if(!IS_NPC(vict) && affected_by_spell(vict, SKILL_COVER) && !enchanted_by(vict, ENCH_NAIAD_COWARDICE) )
       {
           char buf[512];
           sprintf(buf, "Fight me like a man, not a cowering wimp, %s!", vict->player.name );
