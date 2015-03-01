@@ -2200,173 +2200,234 @@ void send_to_room_except_two
 
 /* higher-level communication */
 void act_by_type(char *str, int hide_invisible, struct char_data *ch,
-      void *ob, void *vict_obj, int type,int type2)
+                 void *ob, void *vict_obj, int type, int type2)
 {
-  register char *strp, *point, *i=NULL;
+  register char *strp, *point, *i = NULL;
   struct char_data *to = NULL;
   struct obj_data  *obj = NULL;
   char buf[MSL];
-  if (!str) return;
-  if (!*str) return;
 
-  if(!ch) return;
-  if(CHAR_REAL_ROOM(ch)==NOWHERE) return;
+  if (!str || !*str || !ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
 
-  if(type==TO_OTHER) {to=(struct char_data *) ob;}
-  else obj=(struct obj_data *) ob;
+  if (type == TO_OTHER)
+    to = (struct char_data *) ob;
+  else obj = (struct obj_data *)
+    ob;
   if (type == TO_VICT)
     to = (struct char_data *) vict_obj;
   else if (type == TO_CHAR)
     to = ch;
-  else if (type!=TO_OTHER)
+  else if (type != TO_OTHER)
     to = world[CHAR_REAL_ROOM(ch)].people;
 
-  for (; to; to = to->next_in_room) {
-   if(hide_invisible==2 && IS_SET(to->specials.pflag, PLR_SUPERBRF)) continue;
-   if ( to->desc && ( (to!=ch) || (type==TO_CHAR) ) &&
-        (CAN_SEE(to, ch) || !hide_invisible) && (type==TO_CHAR || type==TO_VICT || GET_POS(to)!=POSITION_SLEEPING) &&
-      !((type == TO_NOTVICT) && (to == (struct char_data *) vict_obj))) {
-    for (strp = str, point = buf;;)
-     if (*strp == '$') {
-      switch (*(++strp)) {
-      case 'z':
-        if (ch == to)
-          i = "";
-        else
-          i = "s";
-        break;
-      case 'r':
-        if(ch==to) i="your";
-        else i=POSSESS(ch, to);
-        break;
-      case 'R':
-        if(!vict_obj) i="$R";
-        else {
-          if(to==vict_obj) i="your";
-          else i=POSSESS((struct char_data *) vict_obj, to);
-        }
-        break;
-      case 'i':
-        if (!ch) i="$i";
-        else i=PERS(ch, to);
-        break;
-      case 'I':
-        if(!vict_obj) i="$I";
-        else i=PERS((struct char_data *) vict_obj, to);
-        break;
-      case 'n':
-        if(ch==to) i="you";
-        else i=PERS(ch, to);
-        break;
-      case 'N':
-        if(!vict_obj) i="$N";
-        else {
-          if(to==vict_obj) i="you";
-          else i=PERS((struct char_data *) vict_obj, to);
-        }
-        break;
-      case 'm':
-        if(to==ch) i="you";
-        else i = HMHR(ch);
-        break;
-      case 'M':
-        if(!vict_obj) i="$M";
-        else {
-          if(to==vict_obj) i="you";
-          else i = HMHR((struct char_data *) vict_obj);
-        }
-        break;
-      case 's':
-        if(to==ch) i="your";
-        else i=HSHR(ch);
-        break;
-      case 'S':
-        if(!vict_obj) i="$S";
-        else {
-         if(to==vict_obj) i="you";
-         else i=HSHR((struct char_data *) vict_obj);
-        }
-        break;
-      case 'e':
-        if(to==ch) i="you";
-        else i=HSSH(ch);
-        break;
-      case 'E':
-        if(!vict_obj) i="$E";
-        else {
-          if(to==vict_obj) i="you";
-          else i=HSSH((struct char_data *) vict_obj);
-        }
-        break;
-      case 'o':
-        if(!obj) i="$o";
-        else i = OBJN(obj, to);
-        break;
-      case 'O':
-        if(!vict_obj) i="$O";
-        else i = OBJN((struct obj_data *) vict_obj, to);
-        break;
-      case 'q':
-        if(!obj) i="$q";
-        else i=OBJS2(obj, to);
-        break;
-      case 'Q':
-        if(!vict_obj) i="$Q";
-        else i=OBJS2((struct obj_data *) vict_obj, to);
-        break;
-      case 'p':
-          if(!obj) i="$p";
-          else i=OBJS(obj, to);
-          break;
-      case 'P':
-          if(!vict_obj) i="$P";
-          else i=OBJS((struct obj_data *) vict_obj, to);
-          break;
-      case 'a':
-          if(!obj) i="$a";
-          else i = SANA(obj);
-          break;
-      case 'A':
-          if(!vict_obj) i="$A";
-          else i = SANA((struct obj_data *) vict_obj);
-          break;
-      case 'T':
-          if(!vict_obj) i="$T";
-          else i = (char *) vict_obj;
-          break;
-      case 'F':
-          if(!vict_obj) i="$F";
-          else i = fname((char *) vict_obj);
-          break;
-      case 'V':
-          if(!vict_obj) i="no-one";
-          else {
-            if(to==vict_obj) i="you";
-            else i=PERS((struct char_data *) vict_obj, to);
-          }
-          break;
-      case '$': i = "$"; break;
-      default:
-      /* log_s("Illegal $-code to act():"); */
-      /* FOLLOWING LINE INSERTED BY LEM, APRIL 15, 1996 */
-       log_s("Illegal case called in act -- not reported for fear of crash");
-       log_s(str);
-       break;
-      }
-      while ((*point = *(i++)))
-      ++point;
-      ++strp;
-     }
-     else if (!(*(point++) = *(strp++)))
-      break;
+  for (; to; to = to->next_in_room)
+  {
+    if (hide_invisible == 2 && IS_SET(to->specials.pflag, PLR_SUPERBRF)) continue;
 
-    *(--point) = '\n';
-    *(++point) = '\r';
-    *(++point) = '\0';
-    send_to_char_by_type(CAP(buf),to,type2);
-   }
-   if ((type == TO_VICT) || (type == TO_CHAR) || (type == TO_OTHER))
-    return;
+    if (to->desc && ((to != ch) || (type == TO_CHAR)) &&
+        (CAN_SEE(to, ch) || !hide_invisible) && (type == TO_CHAR || type == TO_VICT || GET_POS(to) != POSITION_SLEEPING) &&
+        !((type == TO_NOTVICT) && (to == (struct char_data *) vict_obj)))
+    {
+      for (strp = str, point = buf;;)
+        if (*strp == '$')
+        {
+          switch (*(++strp))
+          {
+            case 'z':
+              if (ch == to)
+                i = "";
+              else
+                i = "s";
+              break;
+            case 'r':
+              if (ch == to)
+                i = "your";
+              else
+                i = POSSESS(ch, to);
+              break;
+            case 'R':
+              if (!vict_obj)
+                i = "$R";
+              else
+              {
+                if (to == vict_obj)
+                  i = "your";
+                else
+                  i = POSSESS((struct char_data *) vict_obj, to);
+              }
+              break;
+            case 'i':
+              if (!ch)
+                i = "$i";
+              else
+                i = PERS(ch, to);
+              break;
+            case 'I':
+              if (!vict_obj)
+                i = "$I";
+              else
+                i = PERS((struct char_data *) vict_obj, to);
+              break;
+            case 'n':
+              if (ch == to)
+                i = "you";
+              else
+                i = PERS(ch, to);
+              break;
+            case 'N':
+              if (!vict_obj)
+                i = "$N";
+              else
+              {
+                if (to == vict_obj)
+                  i = "you";
+                else
+                  i = PERS((struct char_data *) vict_obj, to);
+              }
+              break;
+            case 'm':
+              if (to == ch)
+                i = "you";
+              else
+                i = HMHR(ch);
+              break;
+            case 'M':
+              if (!vict_obj)
+                i = "$M";
+              else
+              {
+                if (to == vict_obj)
+                  i = "you";
+                else
+                  i = HMHR((struct char_data *) vict_obj);
+              }
+              break;
+            case 's':
+              if (to == ch)
+                i = "your";
+              else
+                i = HSHR(ch);
+              break;
+            case 'S':
+              if (!vict_obj) i = "$S";
+              else {
+                if (to == vict_obj) i = "you";
+                else i = HSHR((struct char_data *) vict_obj);
+              }
+              break;
+            case 'e':
+              if (to == ch)
+                i = "you";
+              else
+                i = HSSH(ch);
+              break;
+            case 'E':
+              if (!vict_obj)
+                i = "$E";
+              else
+              {
+                if (to == vict_obj)
+                  i = "you";
+                else
+                  i = HSSH((struct char_data *) vict_obj);
+              }
+              break;
+            case 'o':
+              if (!obj)
+                i = "$o";
+              else
+                i = OBJN(obj, to);
+              break;
+            case 'O':
+              if (!vict_obj)
+                i = "$O";
+              else
+                i = OBJN((struct obj_data *) vict_obj, to);
+              break;
+            case 'q':
+              if (!obj)
+                i = "$q";
+              else
+                i = OBJS2(obj, to);
+              break;
+            case 'Q':
+              if (!vict_obj)
+                i = "$Q";
+              else
+                i = OBJS2((struct obj_data *) vict_obj, to);
+              break;
+            case 'p':
+              if (!obj)
+                i = "$p";
+              else
+                i = OBJS(obj, to);
+              break;
+            case 'P':
+              if (!vict_obj)
+                i = "$P";
+              else
+                i = OBJS((struct obj_data *) vict_obj, to);
+              break;
+            case 'a':
+              if (!obj)
+                i = "$a";
+              else
+                i = SANA(obj);
+              break;
+            case 'A':
+              if (!vict_obj)
+                i = "$A";
+              else
+                i = SANA((struct obj_data *) vict_obj);
+              break;
+            case 'T':
+              if (!vict_obj)
+                i = "$T";
+              else
+                i = (char *)vict_obj;
+              break;
+            case 'F':
+              if (!vict_obj)
+                i = "$F";
+              else
+                i = fname((char *)vict_obj);
+              break;
+            case 'V':
+              if (!vict_obj)
+                i = "no-one";
+              else
+              {
+                if (to == vict_obj)
+                  i = "you";
+                else
+                  i = PERS((struct char_data *) vict_obj, to);
+              }
+              break;
+            case '$':
+              i = "$";
+              break;
+            default:
+              log_s("Illegal case called in act() Not reported for fear of crash.");
+              log_s(str);
+              break;
+          }
+
+          while ((*point = *(i++)))
+            ++point;
+          ++strp;
+        }
+        else if (!(*(point++) = *(strp++)))
+          break;
+
+      *(--point) = '\n';
+      *(++point) = '\r';
+      *(++point) = '\0';
+
+      send_to_char_by_type(CAP(buf), to, type2);
+    }
+
+    if ((type == TO_VICT) || (type == TO_CHAR) || (type == TO_OTHER))
+      return;
   }
 }
 
@@ -2775,7 +2836,8 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
         }
 
         send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
-        GET_HIT(ch) = MIN(GET_HIT(ch) + gain, GET_MAX_HIT(ch));
+        //GET_HIT(ch) = MIN(GET_HIT(ch) + gain, GET_MAX_HIT(ch));
+        magic_heal(ch, SPELL_REJUVENATION, gain, FALSE);
 
         if (chance(25))
         {

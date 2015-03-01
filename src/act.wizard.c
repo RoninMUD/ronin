@@ -3805,55 +3805,69 @@ void do_snoop(struct char_data *ch, char *argument, int cmd)
 
 void do_mobswitch(struct char_data *ch, char *argument, int cmd)
 {
-  char arg[MAX_STRING_LENGTH];
-  struct char_data *victim;
-  char buf[255];
-  int zonenum;
+  char arg[MSL];
+  char buf[MIL];
+  CHAR *victim = NULL;
+  int zonenum = 0;
 
   if(!check_god_access(ch,TRUE)) return;
   if(IS_NPC(ch)) return;
 
-  if (!IS_SET(ch->new.imm_flags, WIZ_QUEST)) {
+  if (!IS_SET(ch->new.imm_flags, WIZ_QUEST))
+  {
     send_to_char("You need a quest flag!\n\r", ch);
     return;
   }
 
   one_argument(argument, arg);
 
-  if (!*arg) {
+  if (!*arg)
+  {
     send_to_char("Switch with who?\n\r", ch);
-  } else {
+  }
+  else
+  {
     if (!(victim = get_char(arg)))
+    {
       send_to_char("They aren't here.\n\r", ch);
-    else {
-      if (ch == victim) {
-     send_to_char(
-               "He he he... We are jolly funny today, eh?\n\r", ch);
+    }
+    else
+    {
+      if (ch == victim)
+      {
+        send_to_char("He he he... We are jolly funny today, eh?\n\r", ch);
      return;
       }
-      if(IS_NPC(victim)) {
+
+      if (IS_NPC(victim))
+      {
        zonenum=inzone(V_MOB(victim));
+
        if(zone_locked(ch,zonenum)) return;
       }
 
-      if (!ch->desc || ch->desc->snoop.snoop_by
-       || ch->desc->snoop.snooping) {
-        if(ch->desc->snoop.snoop_by) {
+      if (!ch->desc ||
+          ch->desc->snoop.snoop_by ||
+          ch->desc->snoop.snooping)
+      {
+        if (ch->desc->snoop.snoop_by)
+        {
           send_to_char("Victim switched, snooping off.\n\r",ch->desc->snoop.snoop_by);
           ch->desc->snoop.snoop_by->desc->snoop.snooping=0;
           ch->desc->snoop.snoop_by=0;
         }
-        else {
-          send_to_char(
-               "Mixing snoop & switch is bad for your health.\n\r", ch);
+        else
+        {
+          send_to_char("Mixing snoop and switch is bad for your health.\n\r", ch);
        return;
         }
       }
-      if (victim->desc) {
-        send_to_char("You can't do that, the body is already in use!\n\r",ch);
-      } else if ((!IS_NPC(victim) && !IS_IMPLEMENTOR(ch))) {
-        send_to_char("You can't do that to a player.\n\r", ch);
-      } else {
+      if (victim->desc && !IS_IMPLEMENTOR(ch))
+      {
+        send_to_char("You can't do that; the body is already in use!\n\r", ch);
+      }
+      else
+      {
      send_to_char("Ok.\n\r", ch);
      sprintf (buf,"WIZINFO: %s switched to %s", GET_NAME(ch), GET_NAME(victim));
      log_s(buf);
@@ -3963,7 +3977,7 @@ void do_load(struct char_data *ch, char *argument, int cmd)
   struct obj_data *obj;
   char args[MAX_INPUT_LENGTH],buf[MAX_STRING_LENGTH];
   char *type, *arg1;
-  int i,number, r_num,tmp,zonenum;
+  int i,number = 0, r_num,tmp,zonenum;
   if (IS_NPC(ch)) return;
 
   if(!check_god_access(ch,FALSE)) return;
@@ -4451,9 +4465,9 @@ void do_start(struct char_data *ch)
     ch->skills[SKILL_SNEAK].learned = 10;
     ch->skills[SKILL_HIDE].learned =  5;
     ch->skills[SKILL_STEAL].learned = 15;
-#ifdef TEST_SITE
-    ch->skills[SKILL_BLAME].learned = 5;
-#endif
+//#ifdef TEST_SITE
+//    ch->skills[SKILL_BLAME].learned = 5;
+//#endif
     ch->skills[SKILL_BACKSTAB].learned = 10;
     ch->skills[SKILL_PICK_LOCK].learned = 10;
     obj=read_object(6603,VIRTUAL);if(obj) obj_to_char(obj,ch);
@@ -4703,9 +4717,9 @@ Usage: class <victim> <num>\n\r\
         victim->skills[SKILL_STEAL].learned = 15;
         victim->skills[SKILL_BACKSTAB].learned = 10;
         victim->skills[SKILL_PICK_LOCK].learned = 10;
-#ifdef TEST_SITE
-        victim->skills[SKILL_BLAME].learned = 5;
-#endif
+//#ifdef TEST_SITE
+//        victim->skills[SKILL_BLAME].learned = 5;
+//#endif
         break;
 
       case CLASS_WARRIOR:
@@ -4830,7 +4844,7 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
 {
   struct char_data *victim;
   char name[100], level[100], buf2[MAX_STRING_LENGTH];
-  int adv, newlevel;
+  int adv, newlevel = 0;
 
   if(!check_god_access(ch,TRUE)) return;
 

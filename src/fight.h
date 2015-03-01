@@ -58,6 +58,10 @@ void qhit(struct char_data *ch, struct char_data *victim, int type);
 void perform_violence(void);
 int calc_hitroll(struct char_data *ch);
 int calc_damroll(struct char_data *ch);
+int calc_position_damage(int position, int dam);
+int stack_position(struct char_data *ch, int target_position);
 bool try_hit(struct char_data *ch, struct char_data *victim);
+int compute_thaco(struct char_data *ch);
+int compute_ac(struct char_data *ch);
 
 #endif /* __FIGHT_H__ */

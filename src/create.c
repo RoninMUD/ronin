@@ -2186,7 +2186,7 @@ FIRE, ELECTRIC, POISON, PUMMEL, KICK, PUNCH, SLEEP,\r\n\
 CHARM, BLINDNESS, PARALYSIS, DRAIN, DISEMBOWEL, DISINTEGRATE, CLAIR,\r\n\
 SUMMON, HIT, BLUDGEON, PIERCE, SLASH, WHIP, CLAW, BITE, STING, CRUSH,\r\n\
 HACK, CHOP, SLICE, BACKSTAB, AMBUSH, ASSAULT, LOCATE, COLD, SOUND,\n\r\
-CHEMICAL, ACID, FEAR, THROATSTRIKE, CIRCLE, EXECUTE, STEAL.\r\n", ch);
+CHEMICAL, ACID, FEAR, CIRCLE, STEAL.\r\n", ch); /* Removed Throatstrike and Execute */
            }
          else
            {
@@ -7203,8 +7203,8 @@ Immunes are: `iFIRE, ELECTRIC, POISON, PUMMEL, KICK, PUNCH, SLEEP,\n\r\
              CHARM, BLINDNESS, PARALYSIS, DRAIN, DISEMBOWEL, DISINTEGRATE,\n\r\
              CLAIR, SUMMON, HIT, BLUDGEON, PIERCE, SLASH, WHIP, CLAW,\n\r\
              BITE, STING, CRUSH, HACK, CHOP, SLICE, BACKSTAB, AMBUSH,\n\r\
-             ASSAULT, LOCATE, COLD, SOUND, CHEMICAL, ACID, FEAR,THROATSTRIKE,\n\r\
-             CIRCLE, EXECUTE, STEAL.`q\n\r\n\r";
+             ASSAULT, LOCATE, COLD, SOUND, CHEMICAL, ACID, FEAR,\n\r\
+             CIRCLE, STEAL.`q\n\r\n\r"; /* Removed Throatstrike and Execute */
   char arg[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
   int vmob,rmob,zone,bitpos,immune;
   long bit;

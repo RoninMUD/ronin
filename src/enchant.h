@@ -126,7 +126,7 @@ int lord_enchantment(struct enchantment_type_5 *ench, CHAR *ch, CHAR *char_in_ro
 void assign_enchantments(void);
 struct enchantment_type_5 *get_enchantment(struct enchantment_type_5 *enchantment,int must_find);
 void enchantment_to_char(CHAR *victim,struct enchantment_type_5 *enchantment,int must_find);
-struct enchantment_type_5 *enchantment_remove(CHAR *victim,struct enchantment_type_5 *enchantment, int tolog);
+void enchantment_remove(CHAR *victim,struct enchantment_type_5 *enchantment, int tolog);
 int enchanted_by(CHAR *victim,char *enchantment_name);
 int enchanted_by_type(CHAR *victim, int type);
 int get_rank(CHAR *ch);

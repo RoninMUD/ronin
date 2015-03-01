@@ -60,12 +60,31 @@ $State: Exp $
 #include "spells.h"
 #include "handler.h"
 #include "utility.h"
+#include "limits.h"
+#include "subclass.h"
 
 /* Global data */
 
 extern int CHAOSMODE;
 extern struct room_data *world;
 extern struct char_data *character_list;
+
+void magic_heal(CHAR *ch, int spell, int heal, bool overheal)
+{
+  if (!ch) return;
+
+  if (!IS_NPC(ch) && check_subclass(ch, SC_BANDIT, 3))
+  {
+    heal = heal + (heal * number(10, 20)) / 100;
+  }
+
+  if (!overheal)
+  {
+    heal = MIN(heal, GET_MAX_HIT(ch) - GET_HIT(ch));
+  }
+
+  GET_HIT(ch) = GET_HIT(ch) + heal;
+}
 
 /* Extern functions */
 
