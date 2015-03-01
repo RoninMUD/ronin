@@ -690,7 +690,7 @@ This command is used for board message manipulation.\n\r\n\r\
       switch(board->vnumber) {
         case 3064: rnum=3087; break;
         case 3096: rnum=3084; break;
-        case 3092: rnum=3092; break;
+        case 3087: rnum=3092; break;
         case 3099: rnum=3054; break;
         case 3094: rnum=3038; break;
         case 1215: rnum=1249; break;
@@ -703,6 +703,7 @@ This command is used for board message manipulation.\n\r\n\r\
         case 3097: rnum=1220; break;
         case 6273: rnum=1265; break;
         case 3098: rnum=1212; break;
+        case 3092: rnum=0;    break;
       }
       if(board->msg_num)
         printf_to_char(ch,"%-5d %-20s: %-2d %s\n\r",
