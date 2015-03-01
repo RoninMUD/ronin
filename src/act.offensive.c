@@ -1296,7 +1296,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd)
       }
     }
 
-    if (!IS_IMPLEMENTOR(victim))
+    if (!IS_IMPLEMENTOR(ch))
     {
       WAIT_STATE(ch, PULSE_VIOLENCE * 2);
     }
