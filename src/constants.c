@@ -249,9 +249,7 @@ const char *spell_wear_off_msg[] = {
   "","","","","", /*155-159*/
   "","","",/*160-162*/
   "!twist!",
-  "!cunning!",
-  "!wind slash!",
-  "","","","","","", /* 166-171 */
+  "","","","","","","","", /* 164-171 */
   "You feel a little less weak.", /* 172 Debilitate */
   "!Mana Heal!",
   "",/*174*/
@@ -2679,17 +2677,19 @@ char *t_skills[] = {
   "dodge",
   "peek",
   "circle",
-  "trophy", /* Used to be Retreat */
-  "scan", /* Used to be Evade */
+  "retreat",
+  "evade",
   "trip",
-  "evasion", /* Used to be Scan*/
+  "scan",
   "fade",
   "dirty tricks",
   "impair",
   "close combat",
-  "vehemence", /* Used to be Execute */
+  "execute",
   "twist",
-  "cunning",
+#ifdef TEST_SITE
+  "blame",
+#endif
   "\n"
 };
 
@@ -2733,8 +2733,8 @@ char *nomad_skills[] = {
   "batter",
   "berserk",
   "frenzy",
-  "trophy", /* Used to be Scalp */
-  "evasion", /* Used to be Cover */
+  "scalp",
+  "cover",
   "\n"
 };
 

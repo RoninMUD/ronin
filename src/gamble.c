@@ -257,7 +257,7 @@ int lottery_access(CHAR *ch) {
 
 int lottery_look(CHAR *ch, char *arg) {
   char buf[MAX_INPUT_LENGTH];
-  int i,total = 0;
+  int i,total;
   struct string_block sb;
 
   one_argument( arg, buf);

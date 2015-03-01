@@ -43,12 +43,11 @@ $State: Exp $
 void do_victimize(CHAR *ch, char *argument, int cmd);
 void do_clobber(CHAR *ch, char *argument, int cmd);
 void do_throatstrike(CHAR *ch, char *argument, int cmd);
-/*void do_execute(CHAR *ch, char *argument, int cmd);*/
+void do_execute(CHAR *ch, char *argument, int cmd);
 void do_defend(CHAR *ch, char *argument, int cmd);
 void do_hostile(CHAR *ch, char *argument, int cmd);
 void do_sweep(CHAR *ch, char *argument, int cmd);
-/*void do_impair(CHAR *ch, char *argument, int cmd);*/
-void do_vehemence(CHAR *ch, char *argument, int cmd);
+void do_impair(CHAR *ch, char *argument, int cmd);
 void do_meditate(CHAR *ch, char *argument, int cmd);
 void do_protect(CHAR *ch, char *argument, int cmd);
 void do_whirlwind(CHAR *ch, char *argument, int cmd);
@@ -58,8 +57,8 @@ void do_mantra(CHAR *ch, char *argument, int cmd);
 void do_banzai(CHAR *ch, char *argument, int cmd);
 void do_pray(CHAR *ch, char *argument, int cmd);
 /*void do_bandage(CHAR *ch, char *argument, int cmd);*/
-/*void do_evade(CHAR *ch, char *argument, int cmd);*/
-/*void do_trip(CHAR *ch, char *argument, int cmd);*/
+void do_evade(CHAR *ch, char *argument, int cmd);
+void do_trip(CHAR *ch, char *argument, int cmd);
 void do_tigerkick(CHAR *ch, char *argument, int cmd);
 void do_scan(CHAR *ch, char *argument, int cmd);
 void do_camp(CHAR *ch, char *argument, int cmd);
@@ -70,13 +69,12 @@ void do_fade(CHAR *ch, char *argument, int cmd);
 void do_flank(CHAR *ch, char *argument, int cmd);
 void do_assassinate(CHAR *ch, char *argument, int cmd);
 void do_batter(CHAR *ch, char *argument, int cmd);
-void do_trophy(CHAR *ch, char *argument, int cmd);
+void do_scalp(CHAR *ch, char *argument, int cmd);
 void do_shadow_walk(CHAR *ch, char *argument, int cmd);
 void do_charge(CHAR *ch, char *argument, int cmd);
 void do_headbutt(CHAR *ch, char *argument, int cmd);
 void do_frenzy(CHAR *ch, char *argument, int cmd);
 void do_berserk(CHAR *ch, char *argument, int cmd);
-void do_evasion(CHAR *ch, char *argument, int cmd);
 /* End Subclass skill commands */
 
 /* New olc commands */
@@ -450,4 +448,4 @@ void stop_follower(CHAR *ch);
 void die_follower(CHAR *ch);
 void add_follower(CHAR *ch, CHAR *leader);
 void wear(CHAR *ch, OBJ *obj_object, int keyword);
-void do_cunning(CHAR *ch, char *argument, int cmd);
+void do_cover(CHAR *ch, char *argument, int cmd);

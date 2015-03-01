@@ -237,9 +237,7 @@ void list_skills_to_prac(CHAR *ch)
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
-          else if ((number == SKILL_SCAN) && (GET_LEVEL(ch) < 40)) continue;
-          else if ((number == SKILL_TWIST) && (GET_LEVEL(ch) < 45)) continue;
-          else if ((number == SKILL_CUNNING) && (GET_LEVEL(ch) < 50)) continue;
+          else if ((number == SKILL_TWIST) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
             sprintf(buf, "`n%-30s `k%-13s`q\n\r", t_skills[i], how_good(ch->skills[number].learned));
@@ -450,7 +448,7 @@ void practice_skill(CHAR *ch, int number)
   int learned = 0;
   int max_prac = 0;
 
-  if (number == 0 || number == 200)
+  if (number == 0)
   {
     send_to_char("`iThat skill wasn't found.`q\n\r", ch);
     return;
@@ -719,11 +717,6 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       {
         skill = old_search_block(t_skills[index], 0, strlen(t_skills[index]), spells, TRUE);
       }
-
-      if ((skill == SKILL_CUNNING) && (GET_LEVEL(ch) < 50))
-      {
-        index = -2;
-      }
       break;
 
     case CLASS_WARRIOR:
@@ -829,7 +822,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       return TRUE;
     }
 
-    if (spell > 165 && !check_sc_master(ch, mob))
+    if (spell > 200 && !check_sc_master(ch, mob))
     {
       send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
 
@@ -849,7 +842,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if (skill > 165 && !check_sc_master(ch, mob))
+  if ((skill > 200) && !check_sc_master(ch, mob))
   {
     send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
 

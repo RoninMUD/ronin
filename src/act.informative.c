@@ -479,7 +479,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
   {
     if (i->new.wizinv > GET_LEVEL(ch)) { return; }
 
-    if (((IS_AFFECTED(i, AFF_HIDE)) && GET_LEVEL(ch) < LEVEL_IMM && !affected_by_spell(ch, SPELL_PERCEIVE)) || !CAN_SEE(ch, i))
+    if (((IS_AFFECTED(i, AFF_HIDE) || affected_by_spell(i, SKILL_FADE)) && GET_LEVEL(ch) < LEVEL_IMM && !affected_by_spell(ch, SPELL_PERCEIVE)) || !CAN_SEE(ch, i))
     {
       if (i->specials.riding)
       {
