@@ -36,3 +36,4 @@ lib/slave.pid
 lib/names-*
 lib/wizlist
 lib/wizlist_inact
+lib/*.log

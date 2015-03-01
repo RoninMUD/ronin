@@ -752,14 +752,14 @@ south.
 ~
 0 -1 17030
 E
-wall~
-There seems to be a strange keyhole set into this cold, black stone...
-The inside of the hole is covered with a red, dusty residue.
-~
-E
 hole~
 It seems to be a concealed keyhole in the massive wall.  A dusty, red
 residue is visible within the hole.
+~
+E
+wall~
+There seems to be a strange keyhole set into this cold, black stone...
+The inside of the hole is covered with a red, dusty residue.
 ~
 S
 #17030
@@ -800,9 +800,9 @@ upward.
 stairs~
 11 -1 17032
 E
-stairway~
-This stairway looks like it may have been built ages ago.  Cobwebs trail
-from the splintered banister.
+wall~
+There seems to be a strange keyhole set into this cold, black stone...
+The inside of the hole is covered with a red, dusty residue.
 ~
 E
 stairs~
@@ -810,9 +810,9 @@ This stairway looks like it may have been built ages ago.  Cobwebs trail
 from the splintered banister.
 ~
 E
-wall~
-There seems to be a strange keyhole set into this cold, black stone...
-The inside of the hole is covered with a red, dusty residue.
+stairway~
+This stairway looks like it may have been built ages ago.  Cobwebs trail
+from the splintered banister.
 ~
 S
 #17032
@@ -836,19 +836,8 @@ A not-so-sturdy set of stairs lead down into a small, lit room.
 stairs~
 11 -1 17031
 E
-stairway~
-This stairway looks like it may have been built ages ago.  Cobwebs trail
-off of the splintered banister into the dim light below.
-~
-E
-stairs~
-This stairway looks like it may have been built ages ago.  Cobwebs trail
-off of the splintered banister into the dim light below.
-~
-E
-carpet~
-A scarlet cloth lining the cold, stone floor.  It's edges are threaded
-with gold and silver strands.
+stones~
+Eek! Your reflection winks at you!
 ~
 E
 statues~
@@ -856,8 +845,19 @@ These waist-high figures appear to have been carved from the same rock
 as the Tower.
 ~
 E
-stones~
-Eek! Your reflection winks at you!
+carpet~
+A scarlet cloth lining the cold, stone floor.  It's edges are threaded
+with gold and silver strands.
+~
+E
+stairs~
+This stairway looks like it may have been built ages ago.  Cobwebs trail
+off of the splintered banister into the dim light below.
+~
+E
+stairway~
+This stairway looks like it may have been built ages ago.  Cobwebs trail
+off of the splintered banister into the dim light below.
 ~
 S
 #17033
@@ -951,12 +951,12 @@ A heavy, stone door stands at the south, exhaling a cool breeze.
 door~
 1 -1 17037
 E
-chair~
-A dusty, wooden chair leans against the wall here.
-~
-E
 dust~
 A large pile of black dust, almost like soot, lays here beneath a chair.
+~
+E
+chair~
+A dusty, wooden chair leans against the wall here.
 ~
 S
 #17037
@@ -982,21 +982,21 @@ leading up to a hole in the roof above.
 rocks~
 11 -1 17038
 E
-footprints~
-A bloody trail leads up the pile of rocks above you.
-~
-E
-pile~
-A heap of rocks, perfect for climbing, leads up the wall to a hole above.
+blood~
+Pools of congealing, rotten blood splatter as droplets of water from
+above drip into them.  It appears to be human blood, and a lot of it.
 ~
 E
 rocks~
 A heap of rocks, perfect for climbing, leads up the wall to a hole above.
 ~
 E
-blood~
-Pools of congealing, rotten blood splatter as droplets of water from
-above drip into them.  It appears to be human blood, and a lot of it.
+pile~
+A heap of rocks, perfect for climbing, leads up the wall to a hole above.
+~
+E
+footprints~
+A bloody trail leads up the pile of rocks above you.
 ~
 S
 #17038
@@ -1065,13 +1065,13 @@ A balcony overlooking the horizon.
 ~
 0 -1 17039
 E
+footprints~
+A bloody trail leading around a corner and into the darkness of the east.
+~
+E
 bodies~
 Rotting rat corpses!  Maggots and entrails stream from the steaming
 flesh on the ground before you.
-~
-E
-footprints~
-A bloody trail leading around a corner and into the darkness of the east.
 ~
 S
 #17041
@@ -1095,12 +1095,12 @@ The hallway extends westward into the dark.
 ~
 0 -1 17040
 E
-chair~
-A dusty, wooden chair leans against the wall here.
-~
-E
 bones~
 A small heap of animal bones, the remains of an absent guard's meal perhaps.
+~
+E
+chair~
+A dusty, wooden chair leans against the wall here.
 ~
 S
 #17042
@@ -1150,13 +1150,13 @@ A huge, broken-down stairway leads to the upper chambers of the Tower.
 ~
 0 -1 17044
 E
-stairs~
-A long flight of decrepit stairs leads up into the unknown light above.
-~
-E
 webs~
 A network of natural twine spreads out before you, courtesy of the
 resident arachnid population.
+~
+E
+stairs~
+A long flight of decrepit stairs leads up into the unknown light above.
 ~
 S
 #17044
@@ -1183,15 +1183,15 @@ A large stairway plummets down into the depths of the east wing.
 ~
 0 -1 17043
 E
-stairway~
-A long flight of decrepit stairs leads down into the unknown darkness below.
-~
-E
 tapestry~
 This tapestry appears to document the last battle of Mid-World as the
 armies of Vermilion crushed the Tower's final defenders and claimed
 it as their own.  Shaded corpses litter an endless landscape, one for
 each rose, and a single entity stands surveying the destruction.
+~
+E
+stairway~
+A long flight of decrepit stairs leads down into the unknown darkness below.
 ~
 S
 #17045
@@ -1222,10 +1222,6 @@ A large tile mosaic is cut into the wall.
 mosaic~
 5 17045 17050
 E
-wall~
-A glittering, colorful mosaic bears closer inspection on the western wall.
-~
-E
 mosaic~
   This mosaic depicts a room full of precious gems and gold, a veritable
 room of wealth.  A creature swathed in scarlet garments stands over the
@@ -1234,6 +1230,10 @@ cringe in fear at the thought of the possible existence of such a being.
 At a closer examination, there seems to be something missing from the
 mural.  A space in the wall where a gem may have previously been
 perhaps...
+~
+E
+wall~
+A glittering, colorful mosaic bears closer inspection on the western wall.
 ~
 S
 #17046
@@ -1315,16 +1315,16 @@ A white door is sunken into the wall.
 door~
 1 -1 17048
 E
+door~
+An inconspicuous opening in the wall.
+~
+E
 bubble~
   As you gaze mesmerized into the bubble's surface, you notice a
 glinting object inside.  If it weren't for the tiny beam of light
 reflected by the strange treasure, you never would have noticed the
 bubble's presence at all.  A magical aura surrounds the object inside
 the bubble.
-~
-E
-door~
-An inconspicuous opening in the wall.
 ~
 S
 #17050
@@ -1348,10 +1348,6 @@ A large tile mosaic is cut into the wall.
 mosaic~
 5 17045 17045
 E
-wall~
-A glittering, colorful mosaic bears closer inspection on the eastern wall.
-~
-E
 mosaic~
   This mosaic shows a room full of precious gems and gold, a veritable
 vault of wealth.  A creature swathed in scarlet garments stands over the
@@ -1359,6 +1355,10 @@ scene, and an air of darkness and evil is evident by his presence.  You
 cringe in fear at the thought of the possible existence of such a being.
 At a closer examination, there seems to be something missing from the
 mural.  A space in the wall where a gem had previously been perhaps...
+~
+E
+wall~
+A glittering, colorful mosaic bears closer inspection on the eastern wall.
 ~
 S
 #17051
@@ -1500,16 +1500,16 @@ You notice a strange scaffold leading up out of the dome.
 scaffold~
 11 -1 17057
 E
+scaffold~
+It appears to be a wooden platform built as a temporary detour around
+the Portal.  It extends to a hole leading out of the dome.
+~
+E
 portal~
   A blue glowing portal stands here before you.  In this portal, you can
 see yourself from behind...  A feeling that you are being watched
 suddenly comes over you.  The portal seems to be magically sealed by
 some unknown power and impenetrable.
-~
-E
-scaffold~
-It appears to be a wooden platform built as a temporary detour around
-the Portal.  It extends to a hole leading out of the dome.
 ~
 S
 #17057
@@ -1647,13 +1647,13 @@ A stairway leads up to a some stone battlements.
 ~
 0 -1 17061
 E
+stairway~
+Steps have been carefully cut here from the surrounding stone.
+~
+E
 garden~
 A breathtaking spectacle of natural delight.  In the center of all the
 floral catastrophe stand two white roses, defiant against all.
-~
-E
-stairway~
-Steps have been carefully cut here from the surrounding stone.
 ~
 S
 #17063
@@ -1682,18 +1682,18 @@ A shimmering portal leading out of the Tower.
 Portal~
 2 -1 17063
 E
-portal~
-  A blue glowing portal stands here before you.  It seems to lead to
-another part of the Tower, but it is magically sealed and cannot be
-penetrated.
+moss~
+A fuzzy carpet of moss drapes over the walls and trees.
 ~
 E
 mushrooms~
 Gigantic fungi cling to the sides of the trees here in the moist air.
 ~
 E
-moss~
-A fuzzy carpet of moss drapes over the walls and trees.
+portal~
+  A blue glowing portal stands here before you.  It seems to lead to
+another part of the Tower, but it is magically sealed and cannot be
+penetrated.
 ~
 S
 #17064
@@ -1868,12 +1868,12 @@ An ivory staircase leads up into an ivory spire.
 ~
 0 -1 17071
 E
-staircase~
-A brilliant, ivory stairway leads upward into a white spire.
-~
-E
 turret~
 A glowing, white spire at the southern end of the Tower.
+~
+E
+staircase~
+A brilliant, ivory stairway leads upward into a white spire.
 ~
 S
 #17071
@@ -1959,12 +1959,12 @@ A dark stairway leads up into a black spire.
 ~
 0 -1 17075
 E
-staircase~
-A set of flowing, ebony stairs seem to push you upward into a black spire.
-~
-E
 turret~
 A dim, almost nonexistant spire at the western end of the Tower.
+~
+E
+staircase~
+A set of flowing, ebony stairs seem to push you upward into a black spire.
 ~
 S
 #17075
@@ -2051,12 +2051,12 @@ A gray staircase climbs upward to a gray spire.
 ~
 0 -1 17079
 E
-staircase~
-A mottled-gray staircase cut into the rock leads up into the turret.
-~
-E
 turret~
 A cloud-obscured, gray spire lying at the eastern end of the Tower.
+~
+E
+staircase~
+A mottled-gray staircase cut into the rock leads up into the turret.
 ~
 S
 #17079
@@ -2078,15 +2078,15 @@ A gray staircase descends to a narrow terrace below.
 ~
 0 -1 17078
 E
-staircase~
-A misty, gray staircase leads down toward a large building.
-~
-E
 shelves~
 These strange, tin-like shelves begin to creak and sway as a slight
 breeze picks up.  Hundreds and hundreds of manuals and books make
 their full weight known by the extreme bowing of the metal beneath
 them.  It seems like they should surely buckle under the pressure.
+~
+E
+staircase~
+A misty, gray staircase leads down toward a large building.
 ~
 S
 #17080
@@ -2110,6 +2110,10 @@ Thin cracks radiate about the ceiling, and a thin outline appears.
 ceiling~
 1 17080 17081
 E
+ceiling~
+A tiny square outline appears in the ceiling above your head.
+~
+E
 tapestry~
   Made of several tough cloth and silk patterned sections, this
 giant tapestry has been attached here long ago to pay homage to
@@ -2117,10 +2121,6 @@ the twelve Great Guardians of Existence.  Each one is represented
 in colorful detail, standing high and circling the thirteenth portal:
 the Tower itself.  The Tower stands high within the center, the hub
 of a circle of eternity, the nexus of all space, time, and matter.
-~
-E
-ceiling~
-A tiny square outline appears in the ceiling above your head.
 ~
 S
 #17081
@@ -2169,13 +2169,13 @@ A large stone blocks the entrance to a flaming, spiral staircase above.
 stone~
 2 17082 17083
 E
+staircase~
+A stairway seemingly rising on a plume of fire extends before you.
+~
+E
 stone~
 This stone hovers magically above you, blocking your way.
 A small keyhole is set in its smooth surface.
-~
-E
-staircase~
-A stairway seemingly rising on a plume of fire extends before you.
 ~
 S
 #17083
@@ -2462,12 +2462,12 @@ Tower.
 door~
 2 17094 17094
 E
-door~
-This tiny door leads down into the cool depths of the Tower.
-~
-E
 trail~
 A path of burning embers leads out of the spire to the east.
+~
+E
+door~
+This tiny door leads down into the cool depths of the Tower.
 ~
 S
 #17096
@@ -2555,12 +2555,12 @@ A ladder leads up the cavern wall to the foot of a large volcano.
 ladder~
 11 -1 27136
 E
-hole~
-A wide opening above you leads out into the welcome daylight.
-~
-E
 ladder~
 A makeshift ladder leads up out of the darkness.
+~
+E
+hole~
+A wide opening above you leads out into the welcome daylight.
 ~
 S
 #17099
