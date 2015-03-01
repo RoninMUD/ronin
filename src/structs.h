@@ -175,7 +175,7 @@ typedef char byte;
 #define ITEM_TICKET    28
 #define ITEM_SC_TOKEN  29
 #define ITEM_SKIN      30
-#define ITEM_TROPHY    31
+#define ITEM_TROPHY    31 /* Used to be ITEM_SCALP */
 #define ITEM_RECIPE    32
 #define ITEM_2FINGER   33 /* Project Dagger */
 #define ITEM_2NECK     34 /* Project Dagger */
@@ -243,7 +243,7 @@ typedef char byte;
 #define ITEM_NO_GIVE_MOB      16
 #define ITEM_NO_PUT           32
 #define ITEM_NO_TAKE_MOB      64
-#define ITEM_NO_TROPHY        128
+#define ITEM_NO_TROPHY        128 /* Used to be ITEM_NO_SCALP */
 #define ITEM_NO_LOCATE        256
 #define ITEM_RANDOM_0         512
 #define ITEM_RANDOM_1         1024
@@ -580,6 +580,7 @@ struct room_data
 #define FULL         1
 #define THIRST       2
 #define QUAFF        3
+
 /* Bitvector for 'affected_by' */
 #define AFF_NONE              0
 #define AFF_BLIND             1
@@ -903,7 +904,7 @@ struct room_data
 #define  IMMUNE_FEAR         32
 #define  IMMUNE_THROATSTRIKE 64
 #define  IMMUNE_CIRCLE       128
-#define  IMMUNE_EXECUTE      256
+#define  IMMUNE_EXECUTE      256 /* Remove */
 #define  IMMUNE_STEAL        512
 
 /* For players : specials.pflag */
@@ -1053,7 +1054,6 @@ struct char_point_data_all
 
 struct char_special_data
 {
-
   byte position;           /* Standing or ...                         */
   byte default_pos;        /* Default position for NPC                */
   unsigned long pflag;     /* flags for PLR flags                     */
@@ -1259,7 +1259,7 @@ struct char_data
   struct char_ability_data abilities;   /* Abilities                   */
   struct char_ability_data tmpabilities;/* The abilities we will use   */
   struct char_point_data_all points;        /* Points                      */
-  struct char_special_data specials;    /* Special plaing constants    */
+  struct char_special_data specials;    /* Special playing constants    */
   struct char_skill_data *skills;       /* Skills                      */
   struct char_new_data new;             /* New                         */
   struct char_ver3_data ver3;
