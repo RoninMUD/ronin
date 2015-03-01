@@ -703,6 +703,7 @@ This command is used for board message manipulation.\n\r\n\r\
         case 3097: rnum=1220; break;
         case 6273: rnum=1265; break;
         case 3098: rnum=1212; break;
+        case 3092: rnum=0;    break;
       }
       if(board->msg_num)
         printf_to_char(ch,"%-5d %-20s: %-2d %s\n\r",
