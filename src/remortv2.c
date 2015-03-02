@@ -1035,7 +1035,7 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
     for (vnum = RV2_TOKEN_MIN_VNUM; vnum <= RV2_TOKEN_MAX_VNUM; vnum++)
     {
       /* Modify the following if statement if we ever allow renames or avatars through the remort process. */
-      if (vnum == RV2_OBJ_TOKEN_NAME || vnum == RV2_OBJ_TOKEN_AVATAR) continue;
+      if (vnum == RV2_OBJ_TOKEN_NAME || vnum == RV2_OBJ_TOKEN_AVATAR || vnum == RV2_OBJ_TOKEN_NOMAD) continue;
 
       if (!(token = read_object(vnum, VIRTUAL)))
       {
@@ -1123,15 +1123,15 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
       if (GET_DEATH_LIMIT(ch)) GET_DEATH_LIMIT(ch)++;
 
       /* Log the remort. */
-      sprintf(buf, 
-              "WIZINFO: Remort committed for %s with %dhp %dmn %dmv, granting %lld remort exp (Total: %lld) in (#%d).",  
-              GET_NAME(ch),
-              GET_NAT_HIT(ch),
-              GET_NAT_MANA(ch),
-              GET_NAT_MOVE(ch),
-              remort_info.exp,
-              remort_info.exp + GET_REMORT_EXP(ch),
-              CHAR_VIRTUAL_ROOM(ch));
+      sprintf(buf,
+        "WIZINFO: Remort committed for %s with %dhp %dmn %dmv, granting %lld remort exp (Total: %lld) in (#%d).",  
+        GET_NAME(ch),
+        GET_NAT_HIT(ch),
+        GET_NAT_MANA(ch),
+        GET_NAT_MOVE(ch),
+        remort_info.exp,
+        remort_info.exp + GET_REMORT_EXP(ch),
+        CHAR_VIRTUAL_ROOM(ch));
       wizlog(buf, LEVEL_SUP, 5);
       log_f("%s", buf);
       death_list(ch);
