@@ -236,7 +236,7 @@ void do_hit(CHAR *ch, char *argument, int cmd)
   if (ch->bot.misses >= 20)
   {
     sprintf(buf, "WARNING: %s has 20 kill/hit misses", GET_NAME(ch));
-    log_f(buf);
+    log_s(buf);
 
     ch->bot.misses = 0;
   }
@@ -488,7 +488,7 @@ void do_wound(CHAR *ch, char *argument, int cmd)
   }
 
   sprintf(name, "WIZINFO: %s wounds %s", GET_NAME(ch), GET_NAME(victim));
-  log_f(name);
+  log_s(name);
 
   act("You gesture towards $N, tearing away some of $S lifeforce!\n\r", TRUE, ch, 0, victim, TO_CHAR);
   act("$n gestures towards you and drains away some of your lifeforce!\n\r", TRUE, ch, 0, victim, TO_VICT);
