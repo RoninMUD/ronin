@@ -1163,13 +1163,6 @@ int _parse_name(char *arg, char *name)
               balanced but has the enormous benefit of being able to wield\n\r\
               two weapons.  Ninjas are excellent hitters.\n\r\
 \n\r\
-6) Nomad      The best tank in the game.  The Nomad class has reduced cost\n\r\
-              for hit point metas and the fastest way to get a tank with\n\r\
-              tons of hit points is to create a Nomad.  They've got a good\n\r\
-              combination of useful skills as well.  Nomads also gain 5 natural\n\r\
-              armor for every 5 levels and an increased dodge percent for every\n\r\
-              10 levels.\n\r\
-\n\r\
 7) Paladin    A well balanced warrior class with good healing spells.\n\r\
               The Paladin's 'fury' spell makes it a popular choice as a\n\r\
               hitter.  Almost as good as a ninja when soloing.\n\r\
@@ -1661,6 +1654,12 @@ void nanny(struct descriptor_data *d, char *arg) {
           else STATE(d) = CON_RMOTD;
           break;
         case '6':
+          SEND_TO_Q("\n\rSorry that class is unavailble", d);
+          SEND_TO_Q(class_help, d);
+          SEND_TO_Q("\n\rSelect a class:\n\r", d);
+          SEND_TO_Q("\n\rClass :", d);
+          break;
+/*
           GET_CLASS(d->character) = CLASS_NOMAD;
           init_char(d->character);
           SEND_TO_Q(newbiemotd, d);
@@ -1669,6 +1668,7 @@ void nanny(struct descriptor_data *d, char *arg) {
           if (GAMECHECK == 1) STATE(d) = CON_AUTH;
           else STATE(d) = CON_RMOTD;
           break;
+*/
         case '7':
           GET_CLASS(d->character) = CLASS_PALADIN;
           init_char(d->character);

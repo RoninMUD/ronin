@@ -928,7 +928,7 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
     }
 
     /* We aren't allowing renames or avatars at this time, but it could be added in the future with little work. */
-    if (vnum == RV2_OBJ_TOKEN_NAME || vnum == RV2_OBJ_TOKEN_AVATAR)
+    if (vnum == RV2_OBJ_TOKEN_NAME || vnum == RV2_OBJ_TOKEN_AVATAR || vnum == RV2_OBJ_TOKEN_NOMAD)
     {
       send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot provide that which you request.'\n\r", ch);
 
