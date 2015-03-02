@@ -5540,7 +5540,7 @@ int floating_rooms(int room, CHAR *ch, int cmd, char *arg) {
         if (isname (buf, OBJ_NAME(o))) {
           act("You remove the belt and go plummeting to the ground below!!\n\r",0,ch,0,0,TO_CHAR);
           act("$n removes the belt, causing everyone to plummet to the ground below!!\n\r",0,ch,0,0,TO_ROOM);
-          obj_to_char(unequip_char(ch,WEAR_WAISTE),ch);
+          obj_to_char(unequip_char(ch,WEAR_WAIST),ch);
 
           for(vict= world[room].people;vict;vict = next_vict) {
             next_vict = vict->next_in_room;
@@ -5600,7 +5600,7 @@ int floating_rooms(int room, CHAR *ch, int cmd, char *arg) {
         one_argument (arg, buf);
         if (isname (buf, OBJ_NAME(o))) {
           send_to_char ("You remove the belt and go plummeting to the ground below!!\n\r",ch);
-          obj_to_char(unequip_char(ch,WEAR_WAISTE),ch);
+          obj_to_char(unequip_char(ch,WEAR_WAIST),ch);
 
           for(vict= world[room].people;vict;vict = next_vict) {
             next_vict = vict->next_in_room;
@@ -5659,7 +5659,7 @@ int floating_rooms(int room, CHAR *ch, int cmd, char *arg) {
         one_argument (arg, buf);
         if (isname (buf, OBJ_NAME(o))) {
           send_to_char ("You remove the belt and go plummeting to the ground below!!\n\r",ch);
-          obj_to_char(unequip_char(ch,WEAR_WAISTE),ch);
+          obj_to_char(unequip_char(ch,WEAR_WAIST),ch);
           char_from_room(ch);
           char_to_room(ch,real_room(BELT_TARGET));
 

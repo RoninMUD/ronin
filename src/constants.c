@@ -1512,7 +1512,7 @@ const char *wear_bits[] = {
   "ARMS",
   "SHIELD",
   "ABOUT",
-  "WAISTE",
+  "WAIST",
   "WRIST",
   "WIELD",
   "HOLD",

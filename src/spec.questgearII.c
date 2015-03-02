@@ -378,7 +378,7 @@ bleached completely white and the last is coated in a thin dusting of desert san
 			}
   		break;
   	case CMD_USE:
-  		if(!IS_NPC(owner) && owner && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by) && shabtis==EQ(owner,WEAR_WAISTE) && V_OBJ(shabtis)==QGII_SHABTIS)
+  		if(!IS_NPC(owner) && owner && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by) && shabtis==EQ(owner,WEAR_WAIST) && V_OBJ(shabtis)==QGII_SHABTIS)
   		{
 	  		one_argument(arg, buf);
 				if(!strncmp(buf, "swnu", MIL) || !strncmp(buf, "Swnu", MIL))
@@ -855,7 +855,7 @@ int qgII_phylactery(OBJ *phylactery, CHAR *owner, int cmd, char *arg)
 		  if((owner==phylactery->equipped_by || owner==phylactery->carried_by) && owner && !IS_NPC(owner))
 		  {
 	  		arg = one_argument(arg, buf);
-	  		if(AWAKE(owner) && phylactery==EQ(owner,WEAR_WAISTE) && V_OBJ(phylactery)==QGII_PHYLACTERY && !strncmp(buf, "wail", MIL))
+	  		if(AWAKE(owner) && phylactery==EQ(owner,WEAR_WAIST) && V_OBJ(phylactery)==QGII_PHYLACTERY && !strncmp(buf, "wail", MIL))
 	  		{
 					if(phylactery->spec_value > 0)
 					{
