@@ -637,7 +637,7 @@ void do_action(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  if((IS_AFFECTED(vict, AFF_HIDE) || affected_by_spell(vict, SKILL_FADE)) &&
+  if((IS_AFFECTED(vict, AFF_HIDE)) &&
      !affected_by_spell(ch, SPELL_PERCEIVE) && GET_LEVEL(ch)<LEVEL_IMM) {
     send_to_char(action->not_found, ch);
     send_to_char("\n\r", ch);

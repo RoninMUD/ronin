@@ -521,8 +521,6 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
       strcat(buf, " Q-PLAYER");
     if (IS_SET(ch->specials.pflag, PLR_QUIET))
       strcat(buf, " Q-QUIET");
-    if (IS_SET(ch->specials.pflag, PLR_BLOCK))
-      strcat(buf, " BLOCK");
     break;
   case SCQ_FLAGS:
     if (IS_SET(ch->specials.pflag, PLR_DEPUTY))
@@ -977,8 +975,6 @@ void do_score(CHAR *ch, char *argument, int cmd)
       send_to_char(" Q-PLAYER", ch);
     if (IS_SET(ch->specials.pflag, PLR_QUIET))
       send_to_char(" Q-QUIET", ch);
-    if (IS_SET(ch->specials.pflag, PLR_BLOCK))
-      send_to_char(" BLOCK", ch);
     send_to_char("\n\r", ch);
 
     if (GET_LEVEL(ch) >= LEVEL_IMM)
@@ -1247,8 +1243,6 @@ void do_score(CHAR *ch, char *argument, int cmd)
       send_to_char("Q-PLAYER ", ch);
     if (IS_SET(ch->specials.pflag, PLR_QUIET))
       send_to_char("Q-QUIET ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_BLOCK))
-      send_to_char("BLOCK", ch);
     send_to_char(" \n\r", ch);
 
     if (GET_LEVEL(ch) >= LEVEL_IMM)

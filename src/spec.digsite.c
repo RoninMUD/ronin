@@ -84,7 +84,7 @@ int dig_archaeologist_room(int room, CHAR *ch, int cmd, char *arg)
     act("$n gags as the toxic fumes begin to suffocate $m!",0,ch,0,0,TO_ROOM);
     act("\n\rYou gag as the toxic fumes begin to suffocate you!",0,ch,0,0,TO_CHAR);
     sprintf(buf,"Digsite Log Ench: [ %s is breathing TOXIC_FUMES at %d ]",GET_NAME(ch),world[CHAR_REAL_ROOM(ch)].number);
-    log_f(buf);
+    log_s(buf);
   }
   return FALSE;
 }

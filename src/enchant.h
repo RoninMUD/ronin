@@ -31,18 +31,17 @@ $State: Exp $
 #define TOTAL_ENCHANTMENTS 50
 
 #define ENCHANTO(nme,tpe,dration,mdifier,lcation,btvector,btvector2,fnc) { \
-                 if( (tpe) < TOTAL_ENCHANTMENTS )                \
-                  {                                              \
-                   enchantments[tpe].duration  = (dration);      \
-                   enchantments[tpe].modifier  = (mdifier);      \
-                   enchantments[tpe].location  = (lcation);      \
-                   enchantments[tpe].bitvector = (btvector);     \
-                   enchantments[tpe].bitvector2 = (btvector2);     \
-                   enchantments[tpe].func      = (fnc);          \
+                 if( (tpe) < TOTAL_ENCHANTMENTS )                 \
+                  {                                               \
+                   enchantments[tpe].duration  = (dration);       \
+                   enchantments[tpe].modifier  = (mdifier);       \
+                   enchantments[tpe].location  = (lcation);       \
+                   enchantments[tpe].bitvector = (btvector);      \
+                   enchantments[tpe].bitvector2 = (btvector2);    \
+                   enchantments[tpe].func      = (fnc);           \
                    enchantments[tpe].name      = strdup( (nme) ); \
-                  } else {                                       \
-                   log_f("enchantment out of range");              \
-                   log_f( (nme) );                                 \
+                  } else {                                        \
+                   log_f("Enchantment out of range %s", (nme));   \
                   }                                              }
 
 
@@ -126,7 +125,7 @@ int lord_enchantment(struct enchantment_type_5 *ench, CHAR *ch, CHAR *char_in_ro
 void assign_enchantments(void);
 struct enchantment_type_5 *get_enchantment(struct enchantment_type_5 *enchantment,int must_find);
 void enchantment_to_char(CHAR *victim,struct enchantment_type_5 *enchantment,int must_find);
-struct enchantment_type_5 *enchantment_remove(CHAR *victim,struct enchantment_type_5 *enchantment, int tolog);
+void enchantment_remove(CHAR *victim,struct enchantment_type_5 *enchantment, int tolog);
 int enchanted_by(CHAR *victim,char *enchantment_name);
 int enchanted_by_type(CHAR *victim, int type);
 int get_rank(CHAR *ch);
