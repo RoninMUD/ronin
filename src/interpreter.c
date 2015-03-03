@@ -596,14 +596,13 @@ int enchantment_special(struct enchantment_type_5 *enchantment, CHAR *mob, CHAR 
 
   if (((*enchantment->func)(enchantment, mob, ch, cmd, arg))) return TRUE;
 
-  if (cmd == MSG_TICK)
-  {
-    if (enchantment->duration && enchantment->duration > 0)
-    {
-      enchantment->duration--;
+  if (cmd == MSG_TICK) {
+    if (enchantment->duration) {
+       if (enchantment->duration > 0) {
+         enchantment->duration--;
+       }
     }
-    else if (!enchantment_special(enchantment, mob, NULL, MSG_REMOVE_ENCH, NULL))
-    {
+    else if (!enchantment_special(enchantment, mob, NULL, MSG_REMOVE_ENCH, NULL)) {
       enchantment_remove(mob, enchantment, TRUE);
     }
   }
