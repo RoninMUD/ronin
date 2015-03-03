@@ -684,7 +684,7 @@ This command is used for board message manipulation.\n\r\n\r\
       if(inzone(board->vnumber)==275) continue;
       if(inzone(board->vnumber)==278) continue;
       if(GET_LEVEL(ch)<LEVEL_SUP &&
-        (board->vnumber==3097 || board->vnumber==3087 || board->vnumber==6273)) continue;
+        (board->vnumber==3097 || board->vnumber==6273)) continue;
       if(GET_LEVEL(ch)<board->min_read) continue;
       rnum=board->vnumber;
       switch(board->vnumber) {

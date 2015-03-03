@@ -2072,7 +2072,7 @@ void die(CHAR *ch)
 
       sprintf(buf, "WIZINFO: Adding %lu Death Experience to %s's pool.", death_exp, GET_NAME(ch));
       wizlog(buf, LEVEL_SUP, 3);
-      log_f("%s", buf);
+      log_s(buf);
 
       send_to_char("\n\r\
 Suddenly, Immortalis' spirit intervenes and interrupts the Reaper's harvest!\n\r\
@@ -2312,7 +2312,7 @@ void do_help(struct char_data *ch, char *argument, int cmd) {
       destroy_string_block(&sb);
 
       if(!(fl=fopen("help_log","a"))) {
-        log_f("Error opening help_log file");
+        log_s("Error opening help_log file");
         return;
       }
       fprintf(fl,"%s\n",argument);
@@ -3013,7 +3013,7 @@ void do_wizlist(struct char_data *ch, char *argument, int cmd) {
     }
 
     if (!(wiz_in_fl = fopen (WIZLIST_INACTIVE_FILE, "w"))) {
-      log_f("   Could not open inactive wizlist.");
+      log_s("   Could not open inactive wizlist.");
     } else {
       create_inactive_wizlist (wiz_in_fl);
       file_to_string(WIZLIST_INACTIVE_FILE, wizlist_inactive);
@@ -3418,7 +3418,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
     case 2:
       memset(&char_info_2,0,sizeof(char_info_2));
       if(fread(&char_info_2, sizeof(struct char_file_u_2), 1, fl) < 1) {
-        log_f("Error reading rent file (do_whois).");
+        log_s("Error reading rent file (do_whois).");
         fclose(fl);
         return;
       }
@@ -3431,7 +3431,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
     case 3:
       memset(&char_info_4,0,sizeof(char_info_4));
       if(fread(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
-        log_f("Error reading rent file (do_whois).");
+        log_s("Error reading rent file (do_whois).");
         fclose(fl);
         return;
       }
@@ -3447,7 +3447,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
     case 4:
       memset(&char_info_4,0,sizeof(char_info_4));
       if(fread(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
-        log_f("Error reading rent file (do_whois).");
+        log_s("Error reading rent file (do_whois).");
         fclose(fl);
         return;
       }
@@ -3462,7 +3462,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
     case 5:
       memset(&char_info_5,0,sizeof(char_info_5));
       if(fread(&char_info_5, sizeof(struct char_file_u_5), 1, fl) < 1) {
-        log_f("Error reading rent file (do_whois).");
+        log_s("Error reading rent file (do_whois).");
         fclose(fl);
         return;
       }
@@ -3475,7 +3475,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
       sprintf(host,"%s",char_info_5.new.host);
       break;
     default:
-      log_f("Error getting pfile version (do_whois)");
+      log_s("Error getting pfile version (do_whois)");
       return;
   }
 

@@ -265,7 +265,7 @@ const char *spell_wear_off_msg[] = {
   "The cloud of fire surrounding you dies out.",/*182*/
   "!close combat!",/*183*/
   "!riposte!",/*184*/
-  "!scalp!",/*185*/
+  "!trophy!",/*185*/
   "!frenzy!",/*186*/
   "!power of faith!",/*187*/
   "Your focus lessens.",/*188*/
@@ -1495,7 +1495,7 @@ const char *item_types[] = {
   "TICKET",
   "SC_TOKEN",
   "SKIN",
-  "SCALP",
+  "TROPHY",
   "RECIPE",
   "\n"
 };
@@ -1566,7 +1566,7 @@ const char *extra_bits2[] = {
   "NO_GIVE_MOB",
   "NO_PUT",
   "NO_TAKE_MOB",
-  "NO_SCALP",
+  "NO_SCAVENGE",
   "NO_LOCATE",
   "RANDOM_0",
   "RANDOM_1",

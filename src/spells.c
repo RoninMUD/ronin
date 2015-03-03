@@ -83,6 +83,14 @@ void magic_heal(CHAR *ch, int spell, int heal, bool overheal)
     heal = MIN(heal, GET_MAX_HIT(ch) - GET_HIT(ch));
   }
 
+  if (affected_by_spell(ch, SPELL_DEGENERATE) &&
+      ((duration_of_spell(ch, SPELL_DEGENERATE) > 27) ||
+       ((duration_of_spell(ch, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))))
+  {
+    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", ch);
+    return;
+  }
+
   GET_HIT(ch) = GET_HIT(ch) + heal;
 }
 

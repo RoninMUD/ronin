@@ -236,7 +236,7 @@ void do_hit(CHAR *ch, char *argument, int cmd)
   if (ch->bot.misses >= 20)
   {
     sprintf(buf, "WARNING: %s has 20 kill/hit misses", GET_NAME(ch));
-    log_f(buf);
+    log_s(buf);
 
     ch->bot.misses = 0;
   }
@@ -488,7 +488,7 @@ void do_wound(CHAR *ch, char *argument, int cmd)
   }
 
   sprintf(name, "WIZINFO: %s wounds %s", GET_NAME(ch), GET_NAME(victim));
-  log_f(name);
+  log_s(name);
 
   act("You gesture towards $N, tearing away some of $S lifeforce!\n\r", TRUE, ch, 0, victim, TO_CHAR);
   act("$n gestures towards you and drains away some of your lifeforce!\n\r", TRUE, ch, 0, victim, TO_VICT);
@@ -994,7 +994,7 @@ void do_circle(CHAR *ch, char *argument, int cmd)
     {
       act("You strike a nerve in $N's back with your attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_CHAR);
       act("$n strikes a nerve in your back with $s attack, severely weakening you.", FALSE, ch, NULL, victim, TO_VICT);
-      act("$n strikes a nerve in$N's back with $s attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_NOTVICT);
+      act("$n strikes a nerve in $N's back with $s attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_NOTVICT);
 
       ench.name = strdup("Dazed");
       ench.type = SKILL_IMPAIR;
@@ -1011,7 +1011,7 @@ void do_circle(CHAR *ch, char *argument, int cmd)
     skill_wait(ch, SKILL_CIRCLE, 3);
   }
 
-  if (check_sc_access(ch, SKILL_TRIP))
+  if (check_sc_access(ch, SKILL_TRIP) && affected_by_spell(ch, SKILL_TRIP))
   {
     check = number(1, 101) - GET_DEX_APP(ch);
 

@@ -1750,10 +1750,9 @@ void do_mantra(CHAR *ch, char *arg, int cmd)
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > 27 || (duration_of_spell(victim, SPELL_DEGENERATE) > 9 && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
+       (duration_of_spell(victim, SPELL_DEGENERATE) > 9 && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))))) {
     send_to_char("The power of the skill fails to heal your degenerated body.\n\r", victim);
-
     return;
   }
 
@@ -2012,7 +2011,7 @@ void do_trophy(CHAR *ch, char *argument, int cmd)
     send_to_char("You harvest a trophy from the corpse.\n\r", ch);
     act("$n harvests a trophy from $p.", TRUE, ch, corpse, 0, TO_ROOM);
 
-    SET_BIT(OBJ_EXTRA_FLAGS(corpse), ITEM_NO_TROPHY);
+    SET_BIT(OBJ_EXTRA_FLAGS2(corpse), ITEM_NO_TROPHY);
   }
 }
 

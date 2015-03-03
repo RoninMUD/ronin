@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -27,5 +27,146 @@ A
 19 4
 B
 4
+#29601
+vambraces darksteel quest esar~
+a set of Darksteel vambraces~
+A set of midnight metallic armguards were discarded here.~
+~
+9 134217792 257
+8 0 0 0
+10 10000 1000
+10
+E
+vambraces~
+Crafted through an ancient method that relies on arcane forces to
+heat the steel and the brutal strength of beasts to forge the metal
+to shape, these vambraces have long survived the test of time. Forged
+from a material that has always been a rarity, if not a myth, this
+armor was enscribed with eldritch runes that contains the essence of
+shadows, powerful enchantments strong enough to bless the wearer with
+the ability to move outside of sight and sound.
+~
+X
+~
+0 0 0
+M
+You slide the darkened vambraces onto your arms, azure runes flashing briefly as they lock in place.~
+$n slides a pair of vambraces onto $s arms, brilliant runes flashing as they fasten to $m.~
+Your hand slides gently over the azure runes on your vambraces as they suddenly release their grip.~
+$n slides a hand across the surface of $s darkened vambraces as they slide gently off.~
+A
+19 4
+A
+18 3
+A
+45 4
+B
+8
+#29602
+greaves shadow quest esar~
+Greaves of the Shadow~
+A faint cloud of pitch-black darkness pools at the edge of vision.~
+~
+9 134217792 33
+8 0 0 0
+10 30000 3000
+10
+E
+greaves~
+Quite literally crafted from the very essence of shadow, calling this
+a piece of armor is quite the misnomer. Ancient eldritch magic cannot
+explain the means by which darkness itself is gathered and made
+tangible, yet the inexplicable is present before your very eyes. By
+whatever means these greaves were forged, they are no more something
+that is worn than something that remains unseen, concealing the user
+in a sheathe of pitch-black darkness that suffuses their being and
+creates an effect that makes them perpetually difficult to follow.
+~
+X
+~
+0 0 0
+M
+You conjure a sheathe of pitch-black darkness that envelops and causes you to fade briefly from view.~
+$n conjurs a blanketing cloud of darkness that surrounds $m briefly before fading away.~
+The shadows around you begin to flicker and suddenly vanish as you come into view.~
+Shadows at the edge of vision begin to flicker and vanish as $n comes into view.~
+A
+19 4
+A
+18 3
+A
+45 6
+#29603
+stone agrion ring quest esar~
+the Stone of Agrion~
+A small volcanic rock lies discarded, glimmering faintly in the light.~
+~
+11 134217793 3
+0 0 0 0
+1 16000 20000
+10
+E
+stone~
+The Stone of Agrion was forged by none other than the legendary High
+Alchemist of the former city of Darujhistan. Lost to war and tragedy,
+the famed city was overrun in the ravaging conquests of an Empress
+who has been forgotten by history. Yet Agrion's name remains, due to
+the unmatched feats of alchemy and blacksmithing he performed during
+his 287 year lifespan. This ring was crafted from a smoldering ember
+taken from Mount Esteri shortly after it had erupted and drowned the
+people of the Nermud Plains in living magma. It is but one of a pair
+forged by collecting the lost life essence of the Esterin people and
+masterfully chiseling the ring from molten rock.
+~
+X
+~
+0 0 0
+M
+You slip the chiseled ring over one finger as a flash of heat singes your skin.~
+$n slips a chiseled volcanic rock onto $s finger, a wisp of smoke following after.~
+You carefully pull the heated ring from your finger, traces of char left in its stead.~
+$n pulls a chiseled rock from $s finger, exposing a smoldered surface underneath.~
+A
+18 4
+A
+19 5
+A
+53 12
+#29604
+gauntlets darksteel quest esar~
+a pair of Darksteel gauntlets~
+A set of darkened metallic gauntlets lies piled upon one another.~
+~
+9 134217792 129
+8 0 0 0
+10 1000000 80000
+10
+E
+gauntlets~
+Crafted by master smiths from an age lost to legend, these gauntlets
+were forged for a cadre of battle-mages who eventually met a tragic
+end. Set upon by a particular vicious horde of abyssal demons, the
+squad of battle-mages had attempted to banish these outsiders to
+their home plane, only to be met with the mocking reality that they
+possessed only a fraction of the power necessary to do so. The
+reamins of these mages were haphazardly gathered by lesser minions
+and stored in a fetid pool of waste, only to eventually be discovered
+one day when a marauding squad of celestial avengers was performing
+a routine purge of the fourth circle of Hell.
+~
+X
+~
+0 0 0
+M
+You slide the darkened gauntlets onto your hands, azure runes flashing brightly.~
+$n slides a pair of rune-covered gauntlets onto $s hands, trembling with a rush of power.~
+You pull the gauntlets off one at a time, feeling drained as their power leaves you.~
+$n pulls $s gauntlets off one at a time, appearing physically weaker afterwards.~
+A
+19 4
+A
+18 3
+A
+53 12
 #0
 $~

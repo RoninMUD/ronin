@@ -2566,7 +2566,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     dam = lround(dam * 0.50);    /* half damage from poison */
   }
 
-  dam = MIN(dam, 10000);
+  dam = MIN(dam, 30000);
   dam = MAX(dam, 0);
 
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) && !IS_NPC(ch) && !IS_NPC(victim))
@@ -2661,9 +2661,18 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
   {
     if (affected_by_spell(victim, SPELL_DIVINE_INTERVENTION))
     {
-      GET_HIT(victim) = GET_MAX_HIT(victim);
-      act("$n's life has been restored by divine forces.", FALSE, victim, 0, 0, TO_ROOM);
-      act("Your life has been restored by divine forces.", FALSE, victim, 0, 0, TO_CHAR);
+      if (affected_by_spell(victim, SPELL_DEGENERATE) &&
+          ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
+          ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
+      {
+        send_to_char("The magic of the divine intervention fails to heal your degenerated body.\n\r", victim);
+      }
+      else {
+        GET_HIT(victim) = GET_MAX_HIT(victim);
+        act("$n's life has been restored by divine forces.", FALSE, victim, 0, 0, TO_ROOM);
+        act("Your life has been restored by divine forces.", FALSE, victim, 0, 0, TO_CHAR);
+      }
+
       affect_from_char(victim, SPELL_DIVINE_INTERVENTION);
       update_pos(victim);
     }
@@ -4587,6 +4596,7 @@ void perform_violence(void)
 
       if (!IS_NPC(ch) &&
           check_sc_access(ch, SKILL_DIRTY_TRICKS) &&
+          affected_by_spell(ch, SKILL_DIRTY_TRICKS) &&
           chance(10)) /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
       {
         dirty_tricks_action(ch, vict);
