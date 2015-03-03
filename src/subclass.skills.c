@@ -2012,7 +2012,7 @@ void do_trophy(CHAR *ch, char *argument, int cmd)
     send_to_char("You harvest a trophy from the corpse.\n\r", ch);
     act("$n harvests a trophy from $p.", TRUE, ch, corpse, 0, TO_ROOM);
 
-    SET_BIT(OBJ_EXTRA_FLAGS(corpse), ITEM_NO_TROPHY);
+    SET_BIT(OBJ_EXTRA_FLAGS2(corpse), ITEM_NO_TROPHY);
   }
 }
 

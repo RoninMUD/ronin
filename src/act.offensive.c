@@ -994,7 +994,7 @@ void do_circle(CHAR *ch, char *argument, int cmd)
     {
       act("You strike a nerve in $N's back with your attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_CHAR);
       act("$n strikes a nerve in your back with $s attack, severely weakening you.", FALSE, ch, NULL, victim, TO_VICT);
-      act("$n strikes a nerve in$N's back with $s attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_NOTVICT);
+      act("$n strikes a nerve in $N's back with $s attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_NOTVICT);
 
       ench.name = strdup("Dazed");
       ench.type = SKILL_IMPAIR;
@@ -1011,7 +1011,7 @@ void do_circle(CHAR *ch, char *argument, int cmd)
     skill_wait(ch, SKILL_CIRCLE, 3);
   }
 
-  if (check_sc_access(ch, SKILL_TRIP))
+  if (check_sc_access(ch, SKILL_TRIP) && affected_by_spell(ch, SKILL_TRIP))
   {
     check = number(1, 101) - GET_DEX_APP(ch);
 
