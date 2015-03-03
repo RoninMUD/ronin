@@ -1286,6 +1286,9 @@ int USE_MANA(CHAR *ch, int sn)
     case SPELL_FURY:
       mana = (GET_CLASS(ch) == CLASS_PALADIN && GET_LEVEL(ch) == 50 && !CHAOSMODE) ? 120 : spell_info[sn].min_usesmana;
       break;
+    case SPELL_DEGENERATE:
+      mana = 0;
+      break;
     default:
       mana = MAX(spell_info[sn].min_usesmana, 100 / (2 + GET_LEVEL(ch) - SPELL_LEVEL(ch, sn)));
       break;
@@ -2150,7 +2153,7 @@ void assign_spell_pointers(void)
   SPELLO(196, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_engage);
   SPELLO(195, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_ethereal_nature);
   SPELLO(194, 30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   60, TAR_SELF_ONLY,                                                                cast_magic_armament);
-  SPELLO(193, 30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_degenerate);
+  SPELLO(193, 30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,    0, TAR_SELF_ONLY,                                                                cast_degenerate);
   SPELLO(192, 30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_fortification);
   SPELLO(191, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_disrupt_sanct);
   SPELLO(190, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wrath_of_god);
