@@ -330,7 +330,7 @@ char *spells[]= {
   "divine intervention", /*150 - Void Sept 04 */
   "rush", /*151 - Void Sept 04 */
   "blood lust", /*152 - Void Oct 04 */
-  "cover", /*153 - Void Nov 04 */
+  "scan", /* 153 Used to be Cover */
   "mystic swiftness", /* 154 - Void Nov 04 */
   "",
   "",
@@ -341,7 +341,7 @@ char *spells[]= {
   "",                      /*161*/
   "",
   "twist",/*163 - Void Oct 04 */
-  "", /* 164 */
+  "cunning", /* 164 */
   "wind slash", /* 165 */ 
   "","","","","","",/* 166-171 */
   "debilitate", /* 172 */ 
@@ -350,14 +350,14 @@ char *spells[]= {
   "blur", /* 175 */
   "",/* 176 */
   "tranquility", /* 177 */
-  "execute",/*178*/
+  "vehemence", /* 178 Used to be Execute */
   "tremor", /*179*/
   "shadow wraith",/*180*/
   "devastation",/*181*/
   "incendiary cloud",/*182*/
   "close combat",/*183*/
   "riposte",/*184*/
-  "scalp",/*185*/
+  "trophy", /* 185 Used to be Cover */
   "frenzy",/*186*/
   "power of faith",/*187*/
   "focus",/*188*/
@@ -386,7 +386,7 @@ char *spells[]= {
   "blackmantle",/*211*/
   "divine wind",/*212*/
   "sweep",/*213*/
-  "impair",/*214*/
+  "impair", /* 214 No longer a command; can be removed. */
   "flank",/*215*/
   "rejuvenation",/*216*/
   "wall of thorns",/*217*/
@@ -399,7 +399,7 @@ char *spells[]= {
   "luck",/*224*/
   "warchant",/*225*/
   "rally",/*226*/
-  "scan",/*227*/
+  "evasion",/*227 Used to be Scan */
   "tigerkick",/*228*/
   "trip",/*229*/
   "dirty tricks",/*230*/

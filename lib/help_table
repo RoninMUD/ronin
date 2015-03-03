@@ -1517,17 +1517,17 @@ Skills: kick, bash, rescue, block, knock, punch, parry, dual, throw
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 THIEF
-
+ 
 Thieves are known to have some special skills that no other class offers.
-These skills can come in handy in many situations, such as picking locks and 
-'acquiring' things.  Thieves also get 2 natural armor points for every 5 
+These skills can come in handy in many situations, such as picking locks and
+'acquiring' things.  Thieves also get 2 natural armor points for every 5
 levels.
-
+ 
 You can improve your skills by using the practice command.
-
+ 
 Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick, throw,
-     twist.
-
+     twist, scan, cunning.
+ 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 CLERIC
@@ -1598,7 +1598,7 @@ additional practice % on dodge for every 10 levels.
 
 You can improve your skills by using the practice command.
 
-Skills: ambush, butcher, cover, disarm, dodge, kick, peek, pick, rescue, spin,
+Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
      subdue, throw, trap, disembowel.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
@@ -1666,7 +1666,7 @@ Bash          Y         Y    Y         Y         Y         Y
 Block                                            Y         Y
 Butcher                                     Y
 Circle                                                Y
-Cover                                       Y
+Cunning                                               Y
 Disarm                       Y              Y    Y
 Disembowel                                  Y
 Dodge              Y                   Y    Y         Y
@@ -1680,6 +1680,7 @@ Parry                                            Y         Y
 Pummel        Y              Y         Y         Y
 Punch                                                      Y
 Rescue                                      Y    Y         Y
+Scan                                                  Y
 Sneak         Y                        Y              Y
 Spin                                   Y    Y    Y         Y
 Steal         Y                                       Y
@@ -6424,14 +6425,11 @@ The subclass master for each player class is as follows:
 See Also: SUBCLASSES
 #
 SCAN
-
-Subclass Trapper: Level 1 (Nomad)
-Subclass Bandit: Level 1 (Thief)
-
+ 
+Class: Thief
+ 
 This skill allows the character to see who may be in surrounding
 rooms.
-
-See Also: SUBCLASSES TRAPPER BANDIT
 #
 AWARENESS
 
@@ -7030,62 +7028,61 @@ him/her stunned for 2 rounds.
 See Also: SUBCLASSES ENCHANTER
 #
 ROGUE
-
+ 
 Rogue is one of the Thief subclasses and is broken up
-into 5 levels.  At each level, the Rogue receives a
+into 5 levels.  At each level, the rogue receives a
 new or improved skill.  For help on each skill, just type
 HELP <name of skill>
-
+ 
 Level         Skill
-  1           FADE
-  2           EVADE
-  3           DIRTY TRICKS
+  1           DIRTY TRICKS
+  2           TROPHY
+  3           VEHEMENCE
   4           TRIP
-  5           EXECUTE
-
-Level 3 is not implemented yet.
-
+  5           QUICK RECOVERY
+ 
 See Also: SUBCLASSES BANDIT THIEF
 #
 BANDIT
-
+ 
 Bandit is one of the Thief subclasses and is broken up
 into 5 levels.  At each level, the bandit receives a
 new or improved skill.  For help on each skill, just type
 HELP <name of skill>
-
+ 
 Level         Skill
-  1           SCAN
-  2           RETREAT
-  3           IMPAIR
-  4           QUICK RECOVERY
-  5           CLOSE COMBAT
-
+  1           FADE
+  2           IMPAIR
+  3           ENERGY ATTUNEMENT
+  4           CLOSE COMBAT
+  5           EVASION
+ 
 See Also: SUBCLASSES ROGUE THIEF
 #
 FADE
-
-Subclass Rogue: Level 1 (Thief)
-
+ 
+Subclass Bandit: Level 1 (Thief)
+ 
 Usage: fade (toggles on/off)
-
-The Fade skill allows a Rogue to blend in with his/her
-surroundings giving an increase in the chance of a successful
-dodge.  However, this comes at a price of reduced hitroll and 
-inability to move from room to room.  The success of fade
-is dependent on how well the skill is practiced.
-
-See Also: SUBCLASSES ROGUE
+ 
+The fade skill allows a Bandit to blend in with his/her surroundings
+giving an increase in the chance of a successful dodge.  However,
+this comes at a price of reduced hitroll.  The success of fade is
+dependent on how well the skill is practiced.
+ 
+See also: SUBCLASSES BANDIT
 #
 "DIRTY TRICKS"
-
-Subclass Rogue: Level 3 (Thief)
-
-This set of skills is automatic for the Rogue.  With this
-subclass and the skill properly practiced, the Rogue does
-things like kicking dirt in the victims eyes for blindness,
-kicking in sensitive areas and stunning the victim, etc.
-
+ 
+Subclass Rogue: Level 1 (Thief)
+ 
+Usage: dirty-tricks (toggles on/off)
+ 
+This set of skills is automatic for the Rogue.  With this subclass and
+the skill properly practiced, the Rogue does things like throwing dirt in
+the victim's eyes for blindness, kicking in sensitive areas and dealing
+grievous wounds that cause the victim to bleed profusely.
+ 
 See Also: SUBCLASSES ROGUE
 #
 EVADE
@@ -7103,16 +7100,15 @@ the skill is practiced.
 See Also: SUBCLASSES ROGUE
 #
 TRIP
-
+ 
 Subclass Rogue: Level 4 (Thief)
-
-Tripping your opponent will make him/her miss their next hit,
-give you the chance of stabbing them in the back, and briefly
-stun them.  The Rogue has a 3 round lag after trying the trip.
-Some classes may be immune to tripping.  The success of trip
-is dependent on how well the skill is practiced and the level
-difference between the Rogue and the victim.
-
+ 
+Usage: trip (toggles on/off)
+ 
+When circling an enemy the Rogue has a chance to follow up their
+attack by tripping the victim, knocking them to the ground and causing
+them to take increased damage on the next attack made on the victim.
+ 
 See Also: SUBCLASSES ROGUE
 #
 EXECUTE
@@ -7147,16 +7143,16 @@ is dependent on how well the skill is practiced.
 See Also: SUBCLASSES BANDIT
 #
 IMPAIR
-
-Subclass Bandit: Level 3 (Thief)
-
-This skill is much like disarm in that it can get others
-to drop their weapons.  However, in addition to the disarm,
-the Bandit inflicts some minor damage to the victim.
-The success of impair is dependent on how well the
-skill is practiced.
-
-See Also: SUBCLASSES BANDIT
+ 
+Subclass Bandit: Level 2 (Thief)
+ 
+This skill allows a Bandit to apply various debuffs during combat.
+When using backstab, there is a chance that the target will be paralyzed
+and unable to flee from combat. When using circle, there is a chance that
+the target will be dazed and affected by +30 ARMOR and -2 HITROLL. The
+success of impair is dependent on how well the skill is practiced.
+ 
+See also: SUBCLASSES BANDIT
 #
 FLANK
 
@@ -7173,26 +7169,26 @@ skill is practiced.  A weapon is required.
 See Also: SUBCLASSES GLADIATOR
 #
 "QUICK RECOVERY"
-
-Subclass Bandit: Level 4 (Thief)
-
-Once the Bandit reaches this subclass level, he/she has
-the chance of getting 1 less round of lag on all skills.
-The success of getting the reduction is varies from 50%
-to 75% once the skill has been fully practiced.
-
-See Also: SUBCLASSES BANDIT
+ 
+Subclass Rogue: Level 5 (Thief)
+ 
+Once the Rogue reaches this subclass level, he/she has the chance of
+getting 1 less round of lag on all skills. The success of getting the
+reduction is varies from 50% to 75% once the skill has been fully
+practiced.
+ 
+See Also: SUBCLASSES ROGUE
 #
 "CLOSE COMBAT"
-
-Subclass Bandit: Level 5 (Thief)
-
-When fighting in close quarters (inside), the Bandit
-has a chance of increasing his/her damroll by 5,
-hitroll by 5 and ac by 20.  The success of gaining
-the increases at each hit is dependent on how well
-the skill is practiced.
-
+ 
+Subclass Bandit: Level 4 (Thief)
+ 
+The Bandit benefits from an increased combat awareness, granting him an
+increase of 1 hitroll, 1 damroll and 20 armor. When fighting in close
+quarters (inside), the Bandit has a chance of increasing his/her damroll
+by 4 and hitroll by 4.  The success of gaining the increases at each hit
+is dependent on how well the skill is practiced.
+ 
 See Also: SUBCLASSES BANDIT
 #
 GLADIATOR
@@ -8275,19 +8271,6 @@ While affected by Blood Lust the Anti-Paladin hungers for blood.  He/She
 can randomly bite the target.  Each bite has the chance to cause damage, 
 drain hit points, or drain mana.
 #
-"COVER"
-
-Class: Nomad
-
-Usage: cover (toggles on/off)
-
-When the Nomad is in this protective postion all damage afflicted by
-weapons or spells will be reduced by one quarter.   
-
-Unfortunately, since the Nomad is so intent on protecting themself
-the Nomad will miss more often.  If the Nomad is in combat, this
-cannot be turned on off.
-#
 "MYSTIC SWIFTNESS"
 
 Usage      : cast 'mystic swiftness' <self>
@@ -8390,6 +8373,67 @@ that best fits their style of play. Players are not penalized by changing
 their mind post-remort, and are simply required to regain any experience
 they had previously gathered in order to complete the process, restarting it
 at any time they see fit.
+#
+CUNNING
+ 
+Class: Thief
+ 
+Usage: cunning (toggles on/off)
+ 
+When affected by cunning the thief is able to expend magical energy in
+order to grant them the ability to break through the INVULNERABILITY
+spell. Each attempted use of circle or backstab will incur a cost of 10
+mana to the thief while cunning is enabled.
+#
+"ENERGY ATTUNEMENT"
+ 
+Subclass Bandit: Level 3 (Thief)
+ 
+When affected by healing magic, the Bandit will have the amount of
+healing done increased by 10% to 20%.
+ 
+See also: SUBCLASSES BANDIT
+#
+EVASION
+ 
+Subclass Bandit: Level 5 (Thief)
+ 
+Usage: evasion (toggles on/off)
+ 
+When the Bandit is in this protective postion all damage afflicted by
+weapons or spells will be reduced by one quarter.  
+ 
+Unfortunately, since the Bandit is so intent on protecting themself
+the Bandit will miss more often.  If the Bandit is in combat, this
+cannot be turned on off.
+ 
+See Also: SUBCLASSES BANDIT
+#
+TROPHY
+ 
+Subclass Rogue: Level 2 (Thief)
+ 
+The Rogue has the ability to take trophies from his victims. These
+trophies give whoever is carrying them a sense of power and increases
+both their hitroll and damroll by one for each trophy.  Unfortunately,
+the largest increase possible due to trophies is 2 hitroll/damroll and
+the trophies decay quickly.  However, the Rogue can give the trophies
+to whomever he/she wishes, making the Rogue extremely useful in a group.
+ 
+See Also: SUBCLASSES ROGUE
+#
+VEHEMENCE
+ 
+Subclass Rogue: Level 3 (Thief)
+ 
+Usage: vehemence (toggles on/off)
+ 
+When affected by vehemence the Rogue gains a slight increase to all of
+their skills. However, when in this state the Rogue suffers from a 10%
+penalty to their chance to dodge attacks. If the Rogue is in combat,
+this cannot be turned on off.
+ 
+See Also: SUBCLASSES ROGUE
 #~
 
 

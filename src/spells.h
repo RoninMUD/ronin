@@ -225,10 +225,10 @@ $State: Exp $
 #define SPELL_DIVINE_INTERVENTION   150 /* Void - Sept 04 */
 #define SPELL_RUSH                  151 /* Void - Sept 04 */
 #define SPELL_BLOOD_LUST            152 /* Void - Oct 04 */
-#define SKILL_COVER                 153 /* Void - Nov 04 */
+#define SKILL_SCAN                  153 /* Used to be Cover */
 #define SPELL_MYSTIC_SWIFTNESS      154 /* Void - Nov 04 */
 #define SKILL_TWIST                 163 /* Void - Oct 04 */
-#define SKILL_BLAME                 164 /* Sane - Apr 08 */
+#define SKILL_CUNNING               164
 #define SPELL_WIND_SLASH            165 /* Project Tsurugi */
 /*
 #define SPELL_QUESTER
@@ -295,12 +295,12 @@ $State: Exp $
 #define SKILL_DIRTY_TRICKS          230
 #define SKILL_TRIP                  229
 #define SKILL_TIGERKICK             228
-#define SKILL_SCAN                  227
+#define SKILL_EVASION               227 /* Used to be Scan */
 #define SPELL_RALLY                 226
 #define SPELL_WARCHANT              225
 #define SPELL_LUCK                  224
 #define SKILL_CAMP                  223
-#define SKILL_EVADE                 222
+/* 222 Used to be Evade */
 #define SKILL_FEINT                 221
 #define SKILL_AWARENESS             220
 #define SKILL_BERSERK               219
@@ -337,14 +337,14 @@ $State: Exp $
 #define SPELL_FOCUS                 188
 #define SPELL_POWER_OF_FAITH        187
 #define SKILL_FRENZY                186
-#define SKILL_SCALP                 185
+#define SKILL_TROPHY                185 /* Used to be Scalp */
 #define SKILL_RIPOSTE               184
 #define SKILL_CLOSE_COMBAT          183
 #define SPELL_INCENDIARY_CLOUD      182
 #define SPELL_DEVASTATION           181
 #define SPELL_SHADOW_WRAITH         180
 #define SPELL_TREMOR                179
-#define SKILL_EXECUTE               178
+#define SKILL_VEHEMENCE             178 /* Used to be Execute */
 #define SPELL_TRANQUILITY           177
 #define SPELL_BLUR                  175
 #define SKILL_CLOBBER               174
@@ -978,3 +978,5 @@ void spell_phase_door(ubyte level, struct char_data *ch,
 void cast_perceive(ubyte level, struct char_data *ch, char *arg, int type,struct char_data *victim, struct obj_data *tar_obj );
 void spell_perceive(ubyte level, struct char_data *ch, struct char_data *victim, struct obj_data *obj);
 void spell_wind_slash(ubyte level, struct char_data *ch, struct char_data *victim, struct obj_data *obj); /* Project Tsurugi */
+
+void magic_heal(struct char_data *ch, int spell, int heal, bool overheal);

@@ -153,27 +153,26 @@ long nextlongrand(long seed)
             lo &= RANMAX;
             ++lo;
       }
+
       return (long)lo;
 }
 
-long longrand(void) {
+long longrand(void)
+{
       randomnum = nextlongrand(randomnum);
+
       return randomnum;
 }
-
-
 
 int MIN(int a, int b)
 {
       return a < b ? a:b;
 }
 
-
 int MAX(int a, int b)
 {
       return a > b ? a:b;
 }
-
 
 char *PERS(CHAR *ch, CHAR*vict)
 {
@@ -241,86 +240,109 @@ char *ENDCHCLR(CHAR *ch) {
   return colorcode2;
 }
 
-/* creates a random number in interval [from;to] */
+/* Creates a random number in interval [from, to] (inclusive) */
 int number(int from, int to)
 {
-  int randnum,temp;
+  int randnum = 0, temp = 0;
   char buf[MSL];
 
-  if(from>to) {
+  if (from > to)
+  {
     temp = from;
     from = to;
     to = temp;
   }
 
-/*  return((random() % (to - from + 1)) + from);*/
-
   randnum=(int)((longrand() % (to - from + 1)) + from);
-  if(randnum<from || randnum>to) {
-    sprintf(buf,"WIZINFO: Random Number beyond range. From: %d To: %d  Num: %d",from,to,randnum);
+  if (randnum < from || randnum > to)
+  {
+    snprintf(buf, sizeof(buf), "WIZINFO: Random Number beyond range. From: %d To: %d  Num: %d", from, to, randnum);
     log_s(buf);
   }
+
   return randnum;
 }
 
-bool chance(int num) {
+bool chance(int num)
+{
   if(number(1,100)<=num) return TRUE;
+
   return FALSE;
 }
 
 /* 50% true at same level, 0% true vict 10 above, 100% true vict 10 below */
-/* Bonuses by class added Nov 23/99*/
-bool breakthrough(CHAR *ch, CHAR *vict,int btype) {
-  int num;
-  num=50+(GET_LEVEL(ch)-GET_LEVEL(vict))*5;
-  switch(GET_CLASS(ch)) {
+/* Bonuses by class added Nov 23/99 */
+bool breakthrough(CHAR *ch, CHAR *victim, int btype)
+{
+  int num = 0;
+
+  if (btype == BT_INVUL)
+  {
+    if (affected_by_spell(victim, SKILL_HOSTILE)) return TRUE;
+
+    if (GET_CLASS(ch) == CLASS_THIEF && GET_LEVEL(ch) >= 50 && affected_by_spell(ch, SKILL_CUNNING) && GET_MANA(ch) >= 10)
+    {
+      act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
+      act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
+
+      GET_MANA(ch) -= 10;
+
+      return TRUE;
+    }
+  }
+
+  num = 50 + (GET_LEVEL(ch) - GET_LEVEL(victim)) * 5;
+
+  switch (GET_CLASS(ch))
+  {
     case CLASS_CLERIC:
-      if(btype==BT_INVUL) num-=10;
-      if(btype==BT_SPHERE) num-=5;
+      if (btype == BT_INVUL) num -= 10;
+      if (btype == BT_SPHERE) num -= 5;
       break;
     case CLASS_MAGIC_USER:
-      if(btype==BT_INVUL) num-=10;
-      if(btype==BT_SPHERE) num+=10;
+      if (btype == BT_INVUL) num -= 10;
+      if (btype == BT_SPHERE) num += 10;
       break;
     case CLASS_WARRIOR:
-      if(btype==BT_INVUL) num+=10;
-      if(btype==BT_SPHERE) num-=10;
+      if (btype == BT_INVUL) num += 10;
+      if (btype == BT_SPHERE) num -= 10;
       break;
     case CLASS_NOMAD:
-      if(btype==BT_INVUL) num+=5;
-      if(btype==BT_SPHERE) num-=10;
+      if (btype == BT_INVUL) num += 5;
+      if (btype == BT_SPHERE) num -= 10;
       break;
     case CLASS_THIEF:
-      if(btype==BT_INVUL) num+=10;
-      if(btype==BT_SPHERE) num-=10;
+      if (btype == BT_INVUL) num += 10;
+      if (btype == BT_SPHERE) num -= 10;
       break;
     case CLASS_NINJA:
-      if(btype==BT_INVUL) num+=5;
-      if(btype==BT_SPHERE) num-=5;
+      if (btype == BT_INVUL) num += 5;
+      if (btype == BT_SPHERE) num -= 5;
       break;
     case CLASS_ANTI_PALADIN:
-      if(btype==BT_INVUL) num+=5;
-      if(btype==BT_SPHERE) num+=5;
+      if (btype == BT_INVUL) num += 5;
+      if (btype == BT_SPHERE) num += 5;
       break;
     case CLASS_PALADIN:
-      if(btype==BT_INVUL) num+=5;
-      if(btype==BT_SPHERE) num-=5;
+      if (btype == BT_INVUL) num += 5;
+      if (btype == BT_SPHERE) num -= 5;
       break;
     case CLASS_BARD:
-      if(btype==BT_INVUL) num+=5;
+      if (btype == BT_INVUL) num += 5;
       break;
     case CLASS_COMMANDO:
-      if(btype==BT_INVUL) num+=5;
-      if(btype==BT_SPHERE) num+=5;
+      if (btype == BT_INVUL) num += 5;
+      if (btype == BT_SPHERE) num += 5;
       break;
     default:
       break;
   }
 
-  if(number(1,100)<=num) return TRUE;
+  if (number(1, 100) <= num) return TRUE;
+
   return FALSE;
 }
-
 
 int GETOBJ_WEIGHT(struct obj_data *obj)
 {
@@ -364,22 +386,25 @@ int IS_LIGHT(int room) {
 
 char *string_to_lower(char *string)
 {
-  int i;
+  int i = 0;
+
   for (i=0;i<strlen(string);i++)
     {
       string[i] = LOWER(string[i]);
     }
-  return (string);
+
+  return string;
 }
 
 char *string_to_upper(char *string)
 {
-  int i;
+  int i = 0;
+
   for (i=0;i<strlen(string);i++)
     {
       string[i] = UPPER(string[i]);
     }
-  return (string);
+  return string;
 }
 
 int IS_CARRYING_W(struct char_data *ch)
@@ -387,17 +412,24 @@ int IS_CARRYING_W(struct char_data *ch)
   struct obj_data *tmp;
   int    tmp_weight=0;
   for(tmp=ch->carrying;tmp;tmp=tmp->next_content)
+  {
     tmp_weight += GETOBJ_WEIGHT(tmp);
-  return(tmp_weight);
+  }
+
+  return tmp_weight;
 }
 
 int IS_CARRYING_N(struct char_data *ch)
 {
   struct obj_data *tmp;
   int    i=0;
+
   for(tmp=ch->carrying;tmp;tmp=tmp->next_content)
+  {
     i++;
-  return(i);
+  }
+
+  return i;
 }
 
 char *str_cut(char *source,char *dest,int number) {
@@ -500,8 +532,10 @@ int COUNT_CONTENTS(struct obj_data *obj)
   struct obj_data *tmp;
   int    i=0;
   for(tmp=obj->contains;tmp;tmp=tmp->next_content)
+  {
     i++;
-  return(i);
+  }
+  return i;
 }
 
 int COUNT_RENTABLE_CONTENTS(struct obj_data *obj)
@@ -517,14 +551,13 @@ int COUNT_RENTABLE_CONTENTS(struct obj_data *obj)
 /* simulates dice roll */
 int dice(int number, int size)
 {
-  int r;
-  int sum = 0;
+  int r = 0, sum = 0;
 
-  if ((number < 1) || (size < 1))
-    return(0);
+  if (number < 1 || size < 1) return 0;
 
   for (r = 1; r <= number; r++) sum += ((random() % size)+1);
-  return(sum);
+
+  return sum;
 }
 
 /* Create a duplicate of a string */
@@ -533,24 +566,29 @@ char *str_dup(char *source)
   char *new;
 
   CREATE(new, char, strlen(source)+1);
-  return(strcpy(new, source));
+
+  return strcpy(new, source);
 }
 
 int str_cat(char *s, int len, int maxlen, const char *append)
 {
-  int i;
+  int i = 0;
 
   assert(len <= maxlen);
 
   for ( i = 0; len + i < maxlen - 1 && *(append + i) != '\0'; i++)
+  {
     *(s + len + i) = *(append + i);
+  }
 
   *(s + len + i) = '\0';
 
   if(*(append + i) != '\0')
-    log_s("BUG: too long append string in str_cat");
+  {
+    log_f("BUG: too long append string in str_cat");
+  }
 
-  return(len + i);
+  return len + i;
 }
 
 
@@ -558,42 +596,50 @@ int str_cat(char *s, int len, int maxlen, const char *append)
 /* scan 'till found different or end of both                 */
 int str_cmp(char *arg1, char *arg2)
 {
-  int chk, i;
+  int chk = 0, i = 0;
 
   if (!arg1)
-    return (-1);
+    return -1;
   if (!arg2)
-    return (1);
+    return 1;
 
   for (i = 0; *(arg1 + i) || *(arg2 + i); i++)
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i)))) {
+  {
+    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
+    {
       if (chk < 0)
-      return (-1);
+        return -1;
       else
-      return (1);
+        return 1;
     }
-  return(0);
+  }
+
+  return 0;
 }
 
 /* returns: 0 if equal, 1 if arg1 > arg2, -1 if arg1 < arg2  */
 /* scan 'till found different, end of both, or n reached     */
 int strn_cmp(char *arg1, char *arg2, int n)
 {
-  int chk, i;
+  int chk = 0, i = 0;
 
   if (!arg1)
-    return (-1);
+    return -1;
   if (!arg2)
-    return (1);
+    return 1;
+
   for (i = 0; (*(arg1 + i) || *(arg2 + i)) && (n>0); i++, n--)
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i)))) {
+  {
+    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
+    {
       if (chk < 0)
-      return (-1);
+        return -1;
       else
-      return (1);
+        return 1;
+    }
     }
 
-  return(0);
+  return 0;
 }
 
 /* changes the supplied string buffer to contain all uppercase chars */
@@ -603,7 +649,8 @@ char *str_upper(char *str)
 
   p = str;
 
-  while (*p) {
+  while (*p)
+  {
     *p = toupper(*p);
     p++;
   }
@@ -623,10 +670,12 @@ void log_s(char *str)
   tmstr = asctime(localtime(&ct));
   *(tmstr + strlen(tmstr) - 1) = '\0';
 
-  if (logfile == NULL) {
-    puts("SYSERR: Using log_s() before stream was initialized!");
+  if (logfile == NULL)
+  {
+    puts("SYSERR: Using log_string() before stream was initialized!");
     return;
   }
+
   fprintf(logfile, "%s :: %s\n", tmstr, str);
   fflush(logfile);
 }
@@ -635,6 +684,7 @@ void log_f (char * fmt, ...)
 {
   char buf [2*MSL];
   va_list args;
+
   va_start (args, fmt);
   vsnprintf (buf, 2*MSL, fmt, args);
   va_end (args);
@@ -928,15 +978,16 @@ struct char_data
   return( get_ch( virtual, ROOM, realroom ) );
 }
 
-int
-V_OBJ(struct obj_data *o) {
-  if((GET_ITEM_TYPE(o)==ITEM_CONTAINER) && (o->obj_flags.value[3])) /*corpse*/
-    return(0);
-  if(GET_ITEM_TYPE(o)==ITEM_SKIN)
-    return(0);
-  if(GET_ITEM_TYPE(o)==ITEM_SCALP)
-    return(0);
-    return( obj_proto_table[o->item_number].virtual );
+int V_OBJ(struct obj_data *obj)
+{
+  if (((GET_ITEM_TYPE(obj) == ITEM_CONTAINER) && OBJ_VALUE3(obj)) ||
+      (GET_ITEM_TYPE(obj) == ITEM_SKIN) ||
+      (GET_ITEM_TYPE(obj) == ITEM_TROPHY))
+  {
+    return 0;
+  }
+
+  return obj_proto_table[obj->item_number].virtual;
 }
 
 int
@@ -1290,10 +1341,13 @@ char *how_good(int percent)
 
 void check_equipment(struct char_data *ch)
 {
-   int i;
-   for(i=0;i<WIELD;i++) {
+   int i = 0;
+
+   for (i = 0; i < WIELD; i++)
+   {
      equip_char(ch,unequip_char(ch,i),i);
    }
+
    equip_char(ch,unequip_char(ch,HOLD),HOLD);
    equip_char(ch,unequip_char(ch,WIELD),WIELD);
    update_pos(ch);
@@ -1582,8 +1636,10 @@ int CHAR_HAS_LEGS(struct char_data *ch) {
   return TRUE;
 }
 
-int CORPSE_HAS_SCALP(struct obj_data *obj) {
-  switch(obj->obj_flags.material) {
+int CORPSE_HAS_TROPHY(struct obj_data *obj)
+{
+  switch(obj->obj_flags.material)
+  {
     case CLASS_LICH:
     case CLASS_LESSER_ELEMENTAL:
     case CLASS_GREATER_ELEMENTAL:
@@ -1598,6 +1654,7 @@ int CORPSE_HAS_SCALP(struct obj_data *obj) {
       return FALSE;
       break;
   }
+
   return TRUE;
 }
 
@@ -1715,3 +1772,29 @@ void WAIT_STATE(CHAR *ch,int cycle) {
   return;
 }
 
+int get_weapon_type(OBJ *obj)
+{
+  int w_type = TYPE_HIT;
+
+  switch (OBJ_VALUE3(obj))
+  {
+    case 0:
+    case 1:
+    case 2: w_type = TYPE_WHIP; break;
+    case 3: w_type = TYPE_SLASH; break;
+    case 4: w_type = TYPE_WHIP; break;
+    case 5: w_type = TYPE_STING; break;
+    case 6: w_type = TYPE_CRUSH; break;
+    case 7: w_type = TYPE_BLUDGEON; break;
+    case 8: w_type = TYPE_CLAW; break;
+    case 9:
+    case 10:
+    case 11: w_type = TYPE_PIERCE; break;
+    case 12: w_type = TYPE_HACK; break;
+    case 13: w_type = TYPE_CHOP; break;
+    case 14: w_type = TYPE_SLICE; break;
+    default: w_type = TYPE_HIT; break;
+  }
+
+  return w_type;
+}

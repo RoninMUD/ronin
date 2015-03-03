@@ -824,7 +824,8 @@ void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  GET_HIT(victim) = MIN(GET_HIT(victim) + 400, GET_MAX_HIT(victim));
+  //GET_HIT(victim) = MIN(GET_HIT(victim) + 400, GET_MAX_HIT(victim));
+  magic_heal(victim, SPELL_REJUVENATION, 400, FALSE);
   send_to_char("You feel much better!\n\r", victim);
 
   update_pos(victim);
@@ -1751,7 +1752,8 @@ void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   heal = MIN(heal, 1050);
   heal = MIN(GET_MAX_HIT(victim), heal + 50);
 
-  GET_HIT(victim) += heal;
+  //GET_HIT(victim) += heal;
+  magic_heal(victim, SPELL_POWER_OF_FAITH, heal, FALSE);
   GET_MANA(ch) -= mana;
 
   if (victim != ch)

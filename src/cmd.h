@@ -309,28 +309,28 @@ $State: Exp $
 #define CMD_SOCIAL             242
 #define CMD_EMAIL              243 /* Ranger - 19-Dec-03 */
 #define CMD_IDNAME             244 /* Ranger - 05-Feb-04 */
-#define CMD_COVER              245 /* Void - 16-NOV-04 */
+#define CMD_CUNNING            245 /* Used to be Cover */
 #define CMD_GF                 246 /* Gossip w/social action */
 
 #define CMD_MEDITATE           300 /* for subclasses */
 #define CMD_PROTECT            301
 #define CMD_SUBCLASS           302
 #define CMD_WHIRLWIND          303
-#define CMD_RETREAT            304
+#define CMD_DIRTY_TRICKS       304 /* Used to be Retreat */
 #define CMD_BACKFIST           305
 #define CMD_PRAY               306
 #define CMD_BLITZ              307
 #define CMD_FLANK              308
 #define CMD_TRIP               309
 #define CMD_TIGERKICK          310
-#define CMD_SCAN               311
+#define CMD_EVASION            311 /* Used to be Scan */
 #define CMD_CAMP               312
 #define CMD_LUNGE              313
 #define CMD_SWITCH             314
 #define CMD_FADE               315
 #define CMD_EVADE              316
 #define CMD_HEROES             317
-#define CMD_IMPAIR             318
+#define CMD_IMPAIR             318 /* Not Used */
 #define CMD_SWEEP              319
 #define CMD_AQUEST             320
 #define CMD_DEFEND             321
@@ -344,9 +344,9 @@ $State: Exp $
 #define CMD_BANZAI             329
 #define CMD_BERSERK            330
 #define CMD_FRENZY             331
-#define CMD_SCALP              332
-#define CMD_THROATSTRIKE       333
-#define CMD_EXECUTE            334
+#define CMD_TROPHY             332 /* Used to be Scalp */
+#define CMD_SCAN               333 /* Used to be Throatstrike */
+#define CMD_VEHEMENCE          334 /* Used to be Execute */
 
 #define CMD_HUNT               335
 #define CMD_PLRAVG             336

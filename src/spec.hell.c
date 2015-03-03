@@ -254,7 +254,7 @@ void block(CHAR *ch, CHAR *mob) {
 
 void remeq(CHAR *victim, int pos) {
   char buf[MAX_INPUT_LENGTH];
-  OBJ *o;
+  OBJ *o = NULL;
   struct descriptor_data *d;
 
   if(!victim) return;
@@ -275,7 +275,7 @@ void remeq(CHAR *victim, int pos) {
 
 
 void Slice(CHAR *s, CHAR *victim) {
-  char *body;
+  char *body = NULL;
   char buf[MAX_INPUT_LENGTH];
   struct descriptor_data *d;
   int i;

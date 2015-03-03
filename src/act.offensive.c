@@ -116,7 +116,6 @@ Addition of header lines.
 $State: Exp $
 */
 
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -136,262 +135,382 @@ $State: Exp $
 #include "cmd.h"
 #include "mob.spells.h"
 #include "subclass.h"
-/* extern variables */
+#include "enchant.h"
 
+extern int CHAOSMODE;
 extern struct room_data *world;
 extern struct descriptor_data *descriptor_list;
 extern struct char_data *character_list;
 extern struct room_data *world;
-extern int CHAOSMODE;
 extern struct dex_app_type dex_app[];
 extern struct int_app_type int_app[];
 
+int MAX_PRAC(CHAR *ch);
 void raw_kill(struct char_data *ch);
 int calc_position_damage(int position, int dam);
-int MAX_PRAC(CHAR *ch);
+int stack_position(CHAR *ch, int target_position);
 
-void do_block(struct char_data *ch, char *argument, int cmd)
+
+/* Do not use this function on victims; it is designed for skill users only. */
+void skill_wait(CHAR *ch, int skill, int wait)
 {
-  if ((GET_CLASS(ch) != CLASS_WARRIOR) && (GET_LEVEL(ch) < LEVEL_IMM) &&
-      (GET_CLASS(ch) != CLASS_PALADIN) && (GET_CLASS(ch) != CLASS_AVATAR)) {
-    send_to_char("You don't know this skill.\n\r", ch);
+  if (IS_IMPLEMENTOR(ch) || CHAR_REAL_ROOM(ch) == NOWHERE || wait < 1) return;
+
+  /* Quick Recovery */
+  if (check_subclass(ch, SC_ROGUE, 5) && wait > 1 && chance(number(50, 75)))
+  {
+    wait -= 1;
+  }
+
+  WAIT_STATE(ch, PULSE_VIOLENCE * wait);
+}
+
+
+void do_block(CHAR *ch, char *argument, int cmd)
+{
+  AFF af;
+
+  if (!ch->skills) return;
+
+  if (IS_MORTAL(ch) &&
+      GET_CLASS(ch) != CLASS_WARRIOR &&
+      GET_CLASS(ch) != CLASS_PALADIN &&
+      GET_CLASS(ch) != CLASS_AVATAR)
+  {
+    send_to_char("You do not have this skill.\n\r", ch);
+
     return;
   }
 
-  if IS_SET(ch->specials.pflag, PLR_BLOCK) {
-    REMOVE_BIT(ch->specials.pflag, PLR_BLOCK);
+  if (affected_by_spell(ch, SKILL_BLOCK))
+  {
+    affect_from_char(ch, SKILL_BLOCK);
+
     send_to_char("You will now let your victim flee.\n\r", ch);
+
+    return;
   }
-  else {
-    SET_BIT(ch->specials.pflag, PLR_BLOCK);
+
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_BLOCK))
+  {
+    send_to_char("You failed to concentrate on blocking your enemies.\n\r", ch);
+  }
+  else
+  {
+    af.type = SKILL_BLOCK;
+    af.duration = -1;
+    af.modifier = 0;
+    af.location = 0;
+    af.bitvector = 0;
+    af.bitvector2 = 0;
+
+    affect_to_char(ch, &af);
+
     send_to_char("You will now block your enemies if they flee.\n\r", ch);
   }
-
 }
 
 
-void do_hit(struct char_data *ch, char *argument, int cmd) {
-  char arg[MAX_STRING_LENGTH],buf[MAX_INPUT_LENGTH];
-  struct char_data *victim;
-  struct obj_data *wielded = 0;
-  one_argument(argument, arg);
-
-  if (*arg) {
-    victim = get_char_room_vis(ch, arg);
-    if(victim == ch && IS_NPC(ch)) victim=get_mortal_room_vis(ch, arg);
-    if (victim) {
-      if (victim == ch) {
-        send_to_char("You hit yourself..OUCH!.\n\r", ch);
-        act("$n hits $mself, and says OUCH!", FALSE, ch, 0, victim, TO_ROOM);
-      } else {
-        if (IS_AFFECTED(ch, AFF_CHARM) && (ch->master == victim)) {
-          act("$N is just such a good friend, you simply can't hit $M.",FALSE, ch,0,victim,TO_CHAR);
-          return;
-        }
-        if (IS_AFFECTED(ch, AFF_CHARM) && ch->equipment[WIELD] &&
-            IS_SET(ch->equipment[WIELD]->obj_flags.extra_flags, ITEM_ANTI_MORTAL)) { /* Linerfix 020803 */
-          send_to_char("Perhaps you shouldn't be using an ANTI-MORTAL weapon.\n\r", ch);
-          return;
-        }
-        if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
-          send_to_char("Behave yourself here please!\n\r", ch);
-          return;
-        }
-        if ((GET_POS(ch)>=POSITION_STANDING) && (victim != ch->specials.fighting)) {
-
-          /* magic weapon */
-          if (((CHAOSMODE && !victim->specials.fighting) || (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC)) || (IS_NPC(victim))) && /* Chaos03 */
-              ch->equipment[WIELD] &&
-              ch->equipment[WIELD]->obj_flags.value[0] != 0 &&
-              ch->equipment[WIELD]->obj_flags.value[0]<=20 && !number(0,3)) {
-            wielded = ch->equipment[WIELD];
-            switch((int)wielded->obj_flags.value[0]) {
-              case 1:
-                spell_blindness(30, ch, victim, 0);
-                break;
-              case 2:
-                if(!(IS_NPC(ch))) break;
-                spell_poison(30, ch, victim, 0);
-                break;
-              case 3:
-              if(chance(90)) break; /* makes it overall 2.5% on kill */
-                spell_vampiric_touch(30, ch, victim, 0);
-                break;
-              case 4:
-                spell_chill_touch(30, ch, victim, 0);
-                break;
-              case 5:
-                spell_forget(30, ch, victim, 0);
-                break;
-              case 6:
-                spell_curse(30, ch, victim, 0);
-                break;
-              case 7:
-              if(chance(96)) break; /* overall 1% on kill */
-                spell_mana_transfer(30, victim, ch, 0);
-                break;
-              case 8: /* to add energy drain thing */
-                break;
-              case 9:
-              if(chance(60)) break;
-                spell_power_word_kill(GET_LEVEL(ch), ch, victim, 0);
-                break;
-              default:
-                break;
-            }
-          }
-          hit(ch, victim, TYPE_UNDEFINED);
-          WAIT_STATE(ch, PULSE_VIOLENCE); /* HVORFOR DET?? (why??) */
-        } else {
-          send_to_char("You do the best you can!\n\r",ch);
-          if(!IS_NPC(ch)) ch->bot.misses++;
-        }
-      }
-    } else {
-     send_to_char("They aren't here.\n\r", ch);
-     ch->bot.misses++;
-    }
-  } else {
-      send_to_char("Hit who?\n\r", ch);
-  }
-  if(ch->bot.misses>19) {
-    sprintf(buf,"WARNING: %s has 20 kill/hit misses",GET_NAME(ch));
-    log_s(buf);
-    ch->bot.misses=0;
-  }
-}
-
-void do_kill(struct char_data *ch, char *argument, int cmd) {
-  char arg[MAX_STRING_LENGTH];
-  char buf[MAX_STRING_LENGTH];
-  struct char_data *victim;
-  struct obj_data *wielded = 0;
-  struct obj_data *held = 0;
+void do_hit(CHAR *ch, char *argument, int cmd)
+{
+  char arg[MSL];
+  char buf[MSL];
+  CHAR *victim = NULL;
 
   one_argument(argument, arg);
 
-  if (ch->equipment[WIELD]) {
-    wielded = ch->equipment[WIELD];
-    if (OBJ_ACTION(wielded)) {
-      victim=0;
-      if (*arg) victim = get_char_room_vis(ch, arg);
-      if(victim) {
-        sprintf(buf, "%s", OBJ_ACTION(wielded));
-        act(buf, FALSE,ch, 0,victim,TO_NOTVICT);
-        act(buf, FALSE,ch, 0,victim,TO_CHAR);
-      } else {
-        if(OBJ_ACTION_NT(wielded))
-          sprintf(buf, "%s", OBJ_ACTION_NT(wielded));
-        else
-          sprintf(buf, "%s", OBJ_ACTION(wielded));
-        act(buf, FALSE,ch, 0,0,TO_ROOM);
-        act(buf, FALSE,ch, 0,0,TO_CHAR);
-      }
-    }
-  }
-  if ((ch->equipment[HOLD]) && (GET_CLASS(ch) == CLASS_NINJA)) {
-    held = ch->equipment[HOLD];
-   if ((held->obj_flags.type_flag == ITEM_WEAPON)
-       && (OBJ_ACTION(held))) {
-     victim=0;
-     if (*arg) victim = get_char_room_vis(ch, arg);
-     if(victim) {
-       sprintf(buf, "%s", OBJ_ACTION(held));
-       act(buf, FALSE,ch, 0,victim,TO_NOTVICT);
-       act(buf, FALSE,ch, 0,victim,TO_CHAR);
-     } else {
-        if(OBJ_ACTION_NT(held))
-          sprintf(buf, "%s", OBJ_ACTION_NT(held));
-        else
-          sprintf(buf, "%s", OBJ_ACTION(held));
-        act(buf, FALSE,ch, 0,0,TO_ROOM);
-        act(buf, FALSE,ch, 0,0,TO_CHAR);
-     }
-   }
-  }
+  if (!*arg)
+  {
+    send_to_char("Hit who?\n\r", ch);
 
-  if ((GET_LEVEL(ch) < LEVEL_IMP) || IS_NPC(ch)) {
-    do_hit(ch, argument, 0);
     return;
   }
 
-  if (!*arg) {
-    send_to_char("Kill who?\n\r", ch);
-  }
-  else {
-    if (!(victim = get_char_room_vis(ch, arg)))
-      send_to_char("They aren't here.\n\r", ch);
+  victim = get_char_room_vis(ch, arg);
 
-    else
-      if (ch == victim)
-        send_to_char("Your mother would be so sad.. :(\n\r", ch);
-      else {
-       act("You chop $M to pieces! Ah! The blood!", FALSE, ch, 0, victim, TO_CHAR);
-       act("$N chops you to pieces!", FALSE, victim, 0, ch, TO_CHAR);
-       act("$n brutally slays $N", FALSE, ch, 0, victim, TO_NOTVICT);
-       signal_char(victim,ch,MSG_DIE,"");
-       divide_experience(ch,victim,1);
-       raw_kill(victim);
-      }
+  if (victim == ch && IS_NPC(ch))
+  {
+    victim = get_mortal_room_vis(ch, arg);
   }
+
+  if (ch->bot.misses >= 20)
+  {
+    sprintf(buf, "WARNING: %s has 20 kill/hit misses", GET_NAME(ch));
+    log_s(buf);
+
+    ch->bot.misses = 0;
+  }
+
+  if (!victim)
+  {
+    send_to_char("They aren't here.\n\r", ch);
+
+    ch->bot.misses++;
+
+    return;
+  }
+
+  if (victim == ch)
+  {
+    send_to_char("You hit yourself... OUCH!\n\r", ch);
+    act("$n hits $mself, and says 'OUCH!'", FALSE, ch, 0, victim, TO_ROOM);
+
+    return;
+  }
+
+  if (IS_AFFECTED(ch, AFF_CHARM) && GET_MASTER(ch) == victim)
+  {
+    act("$N is just such a good friend, you simply can't hit $M.", FALSE, ch, 0, victim, TO_CHAR);
+
+    return;
+  }
+
+  if (IS_AFFECTED(ch, AFF_CHARM) &&
+      GET_WEAPON(ch) &&
+      IS_SET(OBJ_EXTRA_FLAGS(GET_WEAPON(ch)), ITEM_ANTI_MORTAL))
+  {
+    send_to_char("Perhaps you shouldn't be using an ANTI-MORTAL weapon.\n\r", ch);
+
+    return;
+  }
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
+  {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
+  if (GET_POS(ch) < POSITION_STANDING || GET_OPPONENT(ch) == victim)
+  {
+    send_to_char("You do the best you can!\n\r", ch);
+
+    if (!IS_NPC(ch))
+    {
+      ch->bot.misses++;
+    }
+
+    return;
+  }
+
+  /* Magic Weapon */
+  if (((CHAOSMODE && !victim->specials.fighting) || (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC)) || (IS_NPC(victim))) &&
+      GET_WEAPON(ch) &&
+      OBJ_VALUE0(GET_WEAPON(ch)) != 0 &&
+      OBJ_VALUE0(GET_WEAPON(ch)) <= 20 &&
+      !number(0, 3))
+  {
+    switch (OBJ_VALUE0(GET_WEAPON(ch)))
+    {
+      case 1:
+        spell_blindness(30, ch, victim, 0);
+        break;
+      case 2:
+        if (!IS_NPC(ch)) break;
+        spell_poison(30, ch, victim, 0);
+        break;
+      case 3:
+        if (chance(90)) break; /* 2.5% chance on kill. */
+        spell_vampiric_touch(30, ch, victim, 0);
+        break;
+      case 4:
+        spell_chill_touch(30, ch, victim, 0);
+        break;
+      case 5:
+        spell_forget(30, ch, victim, 0);
+        break;
+      case 6:
+        spell_curse(30, ch, victim, 0);
+        break;
+      case 7:
+        if (chance(96)) break; /* 1% chance on kill. */
+        spell_mana_transfer(30, victim, ch, 0);
+        break;
+      case 8: /* TODO: Add energy drain. */
+        break;
+      case 9:
+        if (chance(60)) break; /* 15% chance on kill. */
+        spell_power_word_kill(GET_LEVEL(ch), ch, victim, 0);
+        break;
+      default:
+        break;
+    }
+  }
+
+  hit(ch, victim, TYPE_UNDEFINED);
+
+  WAIT_STATE(ch, PULSE_VIOLENCE);
 }
 
-void do_wound(struct char_data *ch, char *argument, int cmd) {
-  char usage_text[] = "Usage: wound <name> <damage>.\n\r";
-  char number[MAX_INPUT_LENGTH],name[MAX_INPUT_LENGTH];
-  CHAR *victim=FALSE;
-  unsigned int dmg=1;
 
-  if(IS_NPC(ch)) return;
+void do_kill(CHAR *ch, char *argument, int cmd)
+{
+  char arg[MSL];
+  char buf[MSL];
+  CHAR *victim = NULL;
+  OBJ *weapon = NULL;
 
-  if((GET_LEVEL(ch)<LEVEL_SUP) && !IS_SET(ch->new.imm_flags,WIZ_CREATE)){
-    send_to_char("You need a CREATE flag to use this command.\n\r",ch);
+  one_argument(argument, arg);
+
+  if ((weapon = GET_WEAPON(ch)))
+  {
+    if (OBJ_ACTION(weapon))
+    {
+      if (*arg && (victim = get_char_room_vis(ch, arg)))
+      {
+        sprintf(buf, "%s", OBJ_ACTION(weapon));
+
+        act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
+        act(buf, FALSE, ch, 0, victim, TO_CHAR);
+      }
+      else
+      {
+        if (OBJ_ACTION_NT(weapon))
+        {
+          sprintf(buf, "%s", OBJ_ACTION_NT(weapon));
+        }
+        else
+        {
+          sprintf(buf, "%s", OBJ_ACTION(weapon));
+        }
+
+        act(buf, FALSE, ch, 0, 0, TO_ROOM);
+        act(buf, FALSE, ch, 0, 0, TO_CHAR);
+      }
+    }
+  }
+
+  if (GET_CLASS(ch) == CLASS_NINJA && (weapon = EQ(ch, HOLD)))
+  {
+    if (GET_ITEM_TYPE(weapon) == ITEM_WEAPON && OBJ_ACTION(weapon))
+    {
+      if (*arg && (victim = get_char_room_vis(ch, arg)))
+      {
+        sprintf(buf, "%s", OBJ_ACTION(weapon));
+
+        act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
+        act(buf, FALSE, ch, 0, victim, TO_CHAR);
+      }
+      else
+      {
+        if (OBJ_ACTION_NT(weapon))
+        {
+          sprintf(buf, "%s", OBJ_ACTION_NT(weapon));
+        }
+        else
+        {
+          sprintf(buf, "%s", OBJ_ACTION(weapon));
+        }
+
+        act(buf, FALSE, ch, 0, 0, TO_ROOM);
+        act(buf, FALSE, ch, 0, 0, TO_CHAR);
+      }
+    }
+  }
+
+  if (IS_IMPLEMENTOR(ch))
+  {
+    if (!*arg)
+    {
+      send_to_char("Kill who?\n\r", ch);
+
+      return;
+    }
+
+    if (!(victim = get_char_room_vis(ch, arg)))
+    {
+      send_to_char("They aren't here.\n\r", ch);
+
+      return;
+    }
+
+    if (ch == victim)
+    {
+      send_to_char("Your mother would be so sad... :(\n\r", ch);
+
+      return;
+    }
+
+    act("You chop $M to pieces! Ah! The blood!", FALSE, ch, 0, victim, TO_CHAR);
+    act("$N chops you to pieces!", FALSE, ch, 0, victim, TO_VICT);
+    act("$n brutally slays $N", FALSE, ch, 0, victim, TO_NOTVICT);
+
+    signal_char(victim, ch, MSG_DIE, "");
+    divide_experience(ch, victim, TRUE);
+    raw_kill(victim);
+
+    return;
+  }
+
+  do_hit(ch, argument, 0);
+}
+
+
+void do_wound(CHAR *ch, char *argument, int cmd)
+{
+  char name[MIL];
+  char number[MIL];
+  CHAR *victim = NULL;
+  unsigned int dmg = 0;
+
+  if (IS_NPC(ch)) return;
+
+  if (GET_LEVEL(ch) < LEVEL_SUP && !IS_SET(GET_IMM_FLAGS(ch), WIZ_CREATE))
+  {
+    send_to_char("You need a CREATE flag to use this command.\n\r", ch);
+
     return;
   }
 
   argument_interpreter(argument, name, number);
-  if (!*name) {
-    send_to_char(usage_text,ch);
+
+  if (!*name)
+  {
+    send_to_char("Usage: wound <name> <damage>.\n\r", ch);
+
     return;
   }
 
-  victim = get_char_room_vis(ch, name);
+  if (!(victim = get_char_room_vis(ch, name)))
+  {
+    send_to_char("Eh!!? That person isn't here you know.\n\r", ch);
 
-  if(!victim) {
-    send_to_char("Eh!!? That person isn't here you know.\n\r",ch);
     return;
   }
 
-  sprintf(name,"WIZINFO: %s wounds %s",GET_NAME(ch),GET_NAME(victim));
+  if (!*number)
+  {
+    dmg = GET_MAX_HIT(victim) / 10;
+  }
+  else
+  {
+    dmg = atoi(number);
+  }
+
+  sprintf(name, "WIZINFO: %s wounds %s", GET_NAME(ch), GET_NAME(victim));
   log_s(name);
-  if(!*number) dmg=GET_MAX_HIT(victim)/10;
-  else dmg = atoi(number);
 
-  act("$n gestures slightly towards $N who screams in pain!\n\r",TRUE, ch, 0, victim, TO_NOTVICT);
-  act("$n gestures towards you and drains away some of your lifeforce!\n\r",TRUE, ch, 0, victim ,TO_VICT);
-  act("You gesture towards $N, tearing away some of $S lifeforce!\n\r",TRUE, ch, 0, victim, TO_CHAR);
+  act("You gesture towards $N, tearing away some of $S lifeforce!\n\r", TRUE, ch, 0, victim, TO_CHAR);
+  act("$n gestures towards you and drains away some of your lifeforce!\n\r", TRUE, ch, 0, victim, TO_VICT);
+  act("$n gestures slightly towards $N who screams in pain!\n\r", TRUE, ch, 0, victim, TO_NOTVICT);
 
-  /*  damage(victim,victim,dmg,TYPE_UNDEFINED,DAM_NO_BLOCK); */
-  GET_HIT(victim) = MAX(0,GET_HIT(victim) - dmg);
-
+  GET_HIT(victim) = MAX(0, GET_HIT(victim) - dmg);
 }
+
 
 void do_spin_kick(CHAR *ch, char *argument, int cmd)
 {
-  char name[MIL];
   CHAR *tmp_victim = NULL;
   CHAR *next_victim = NULL;
   int check = 0;
 
   if (!ch->skills) return;
 
-  one_argument(argument, name);
-
-  if ((GET_CLASS(ch) != CLASS_WARRIOR) &&
-      (GET_CLASS(ch) != CLASS_NINJA) &&
-      (GET_CLASS(ch) != CLASS_NOMAD) &&
-      (GET_CLASS(ch) != CLASS_PALADIN) &&
-      IS_MORTAL(ch))
+  if (IS_MORTAL(ch) &&
+      GET_CLASS(ch) != CLASS_WARRIOR &&
+      GET_CLASS(ch) != CLASS_NINJA &&
+      GET_CLASS(ch) != CLASS_NOMAD &&
+      GET_CLASS(ch) != CLASS_PALADIN)
   {
     send_to_char("You don't know this skill.\n\r", ch);
 
@@ -405,17 +524,17 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd)
     return;
   }
 
-  check = number(1, 101) - dex_app[GET_DEX(ch)].prac_bonus;
+  check = number(1, 101) - GET_DEX_APP(ch);
 
   if (affected_by_spell(ch, SPELL_BLUR))
   {
     check -= (GET_LEVEL(ch) / 10);
   }
 
-  if ((ch->skills[SKILL_KICK].learned < MAX_PRAC(ch) && (check > ch->skills[SKILL_KICK].learned) && (check > ch->skills[SKILL_SPIN_KICK].learned)) ||
-      (check > ch->skills[SKILL_SPIN_KICK].learned))
+  if ((GET_LEARNED(ch, SKILL_KICK) < MAX_PRAC(ch) && (check > GET_LEARNED(ch, SKILL_KICK)) && (check > GET_LEARNED(ch, SKILL_SPIN_KICK))) ||
+      check > GET_LEARNED(ch, SKILL_SPIN_KICK))
   {
-    if (!ch->specials.riding)
+    if (!GET_MOUNT(ch))
     {
       act("You try to do a spin-kick, but fail and hit your head on the ground.", FALSE, ch, 0, 0, TO_CHAR);
       act("$n tries to do a spin-kick, but fails and falls on the ground.", FALSE, ch, 0, 0, TO_ROOM);
@@ -428,7 +547,7 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd)
       act("$n tries to do a spin-kick, but fails.", FALSE, ch, 0, 0, TO_ROOM);
     }
 
-    WAIT_STATE(ch, PULSE_VIOLENCE * 3);
+    skill_wait(ch, SKILL_KICK, 3);
   }
   else
   {
@@ -449,38 +568,25 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd)
       damage(ch, tmp_victim, calc_position_damage(GET_POS(tmp_victim), MIN(GET_LEVEL(ch) * 2, 60)), TYPE_UNDEFINED, DAM_SKILL);
     }
 
-    WAIT_STATE(ch, PULSE_VIOLENCE * 4);
+    skill_wait(ch, SKILL_KICK, 4);
   }
 }
 
-void do_backstab(struct char_data *ch, char *argument, int cmd)
+
+int impair_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
+{
+  return FALSE;
+}
+
+
+void do_backstab(CHAR *ch, char *argument, int cmd)
 {
   CHAR *victim = NULL;
-
-#ifdef TEST_SITE
-  struct char_data *victim2;
-#endif
-
   char name[MIL];
+  int check = 0;
+  ENCH ench;
 
-#ifdef TEST_SITE
-  char name2[256];
-  char argument2[256];
-#endif
-
-  int percent = 0;
-  int recover = 70; /* Linerfix */
-
-  if (!ch->skills)
-    return;
-
-#ifdef TEST_SITE
-  argument = one_argument(argument, name);
-  argument = one_argument(argument, argument2);
-  argument = one_argument(argument, name2);
-#else
-  one_argument(argument, name);
-#endif
+  if (!ch->skills) return;
 
   if ((GET_CLASS(ch) != CLASS_THIEF) &&
       (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
@@ -488,120 +594,105 @@ void do_backstab(struct char_data *ch, char *argument, int cmd)
       (GET_LEVEL(ch) < LEVEL_IMM))
   {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
+
+  one_argument(argument, name);
 
   if (!(victim = get_char_room_vis(ch, name)))
   {
     send_to_char("Backstab who?\n\r", ch);
+
     return;
   }
 
   if (victim == ch)
   {
-    send_to_char("How can you sneak up on yourself?\n\r", ch);
+    send_to_char("How can you sneak up on yourself!?\n\r", ch);
+
     return;
   }
 
-  if (!ch->equipment[WIELD])
+  if (!GET_WEAPON(ch))
   {
-    send_to_char("You need to wield a weapon for it to be successful.\n\r",ch);
+    send_to_char("You need to wield a weapon to backstab someone.\n\r",ch);
+
     return;
   }
 
-  if (ch->equipment[WIELD]->obj_flags.value[3] != 11)
+  if (get_weapon_type(GET_WEAPON(ch)) != TYPE_PIERCE)
   {
-    send_to_char("Only piercing weapons can be used for backstabbing.\n\r",ch);
+    send_to_char("Only piercing weapons can be used for backstabbing.\n\r", ch);
+
     return;
   }
 
-  if (victim->specials.fighting && !check_subclass(ch, SC_INFIDEL, 1))
+  /* Assassinate */
+  if (GET_OPPONENT(victim) && !check_subclass(ch, SC_INFIDEL, 1))
   {
-    send_to_char("You can't backstab a fighting person, they're too alert!\n\r", ch);
+    send_to_char("You can't backstab someone engaged in combat, they're too alert!\n\r", ch);
+
     return;
   }
 
-#ifdef TEST_SITE
-  if (!is_abbrev(argument2, "blame") || (name2[0] == '\0'))
-  {
-    victim2 = ch;
-  }
-  else if (!(victim2 = get_char_room_vis(ch, name2)))
-  {
-    send_to_char("Blame who?\n\r", ch);
-    return;
-  }
-
-  if (!IS_NPC(victim))
-  {
-    /* don't allow them to blame another for backstabing a player */
-    victim2 = ch;
-  }
-  else
-  {
-    /* if the blame victim is a mob, 1/10 the success rate */
-    percent=number(1,IS_NPC(victim2) ? 1510 : 151)-int_app[GET_INT(ch)].conc+int_app[GET_INT(victim)].conc;
-
-    if (percent > ch->skills[SKILL_BLAME].learned)
-    {
-      //Failed blame
-      victim2 = ch;
-    }
-  }
-#endif
-
-  percent = number(1 , 151) - dex_app[GET_DEX(ch)].prac_bonus; /* 101% is a complete failure */
+  check = number(1, 151) - GET_DEX_APP(ch);
 
   if (affected_by_spell(ch, AFF_HIDE) ||
       affected_by_spell(ch, AFF_SNEAK) ||
       affected_by_spell(ch, SPELL_IMP_INVISIBLE))
   {
-    percent -= 5;
+    check -= 5;
   }
 
-  if ((AWAKE(victim) && (percent > ch->skills[SKILL_BACKSTAB].learned)) ||
-       IS_SET(victim->specials.immune, IMMUNE_BACKSTAB))
+  if (affected_by_spell(ch, SKILL_VEHEMENCE))
+  {
+    check -= 5 + (GET_DEX_APP(ch) / 2);
+  }
+
+  if (check > GET_LEARNED(ch, SKILL_BACKSTAB) || IS_IMMUNE(victim, IMMUNE_BACKSTAB))
   {
     damage(ch, victim, 0, SKILL_BACKSTAB, DAM_NO_BLOCK);
-#ifdef TEST_SITE
-    victim2 = chance(50) ? ch : victim2;
-    set_fighting(victim, victim2);
-    GET_POS(victim)=POSITION_FIGHTING;
-#endif
-    recover=number(50,75);                               /* Linerfix */
-    if(check_subclass(ch,SC_BANDIT,4) && chance(recover))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE);
-    }
-    else
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+
+    skill_wait(ch, SKILL_BACKSTAB, 2);
   }
   else
   {
-    if (victim->specials.fighting && check_subclass(ch, SC_INFIDEL, 1))
+    if (GET_OPPONENT(victim) && check_subclass(ch, SC_INFIDEL, 1))
     {
       hit(ch, victim, SKILL_ASSASSINATE);
     }
     else
     {
       hit(ch, victim, SKILL_BACKSTAB);
+
+      /* Impair */
+      if (!IS_NPC(ch) && check_subclass(ch, SC_BANDIT, 2) && chance(40 + GET_DEX_APP(ch)))
+      {
+        ench.name = strdup("Impaired");
+        ench.type = SKILL_IMPAIR;
+        if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
+          ench.duration = 0;
+        else
+          ench.duration = 1;
+        ench.location = 0;
+        ench.modifier = 0;
+        ench.bitvector = AFF_PARALYSIS;
+        ench.bitvector2 = 0;
+        ench.func = impair_enchantment;
+
+        enchantment_to_char(victim, &ench, FALSE);
+
+        act("You nearly sever $N's spine with your backstab, temporarily paralyzing $M.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n nearly severs your spine with $s backstab, temporarily paralyzing you.", FALSE, ch, 0, victim, TO_VICT);
+        act("$n nearly severs $N's spine with $s backstab, temporarily paralyzing $M.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
     }
-#ifdef TEST_SITE
-    set_fighting(victim, victim2);
-#endif
-    recover=number(50,75);                               /* Linerfix */
-    if(check_subclass(ch,SC_BANDIT,4) && chance(recover))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
-    else
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 3);
-    }
+
+    skill_wait(ch, SKILL_BACKSTAB, 3);
   }
 }
+
 
 void do_ambush(struct char_data *ch, char *argument, int cmd)
 {
@@ -640,7 +731,7 @@ void do_ambush(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  percent=number(1,151)-dex_app[GET_DEX(ch)].prac_bonus; /* 101% is a complete failure */
+  percent=number(1,151)-GET_DEX_APP(ch); /* 101% is a complete failure */
 
   if(world[CHAR_REAL_ROOM(ch)].sector_type == SECT_FIELD) percent = (percent-2); /* field advantage */
   if(world[CHAR_REAL_ROOM(ch)].sector_type == SECT_HILLS) percent = (percent-3); /* hills advantage */
@@ -663,6 +754,7 @@ void do_ambush(struct char_data *ch, char *argument, int cmd)
 
 }
 
+
 void do_assault(CHAR *ch, char *arg, int cmd)
 {
   char name[MIL];
@@ -675,57 +767,62 @@ void do_assault(CHAR *ch, char *arg, int cmd)
 
   one_argument(arg, name);
 
-  if (GET_CLASS(ch) != CLASS_NINJA &&
-      GET_CLASS(ch) != CLASS_COMMANDO &&
-      !IS_IMMORTAL(ch))
+  if (IS_MORTAL(ch) &&
+      GET_CLASS(ch) != CLASS_NINJA &&
+      GET_CLASS(ch) != CLASS_COMMANDO)
   {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
   if (!(victim = get_char_room_vis(ch, name)))
   {
     send_to_char("Assault who?\n\r", ch);
+
     return;
   }
 
   if (victim == ch)
   {
     send_to_char("How can you sneak up on yourself?\n\r", ch);
+
     return;
   }
 
-  if (IS_MORTAL(ch) &&
-      IS_IMMORTAL(victim))
+  if (IS_MORTAL(ch) && IS_IMMORTAL(victim))
   {
     send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+
     return;
   }
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
   {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  if (!EQ(ch, WIELD) || !IS_WEAPON(EQ(ch, WIELD)))
+  if (!GET_WEAPON(ch) || !IS_WEAPON(GET_WEAPON(ch)))
   {
     send_to_char("You need to wield a weapon for your assault to succeed.\n\r", ch);
+
     return;
   }
 
-  modifier -= dex_app[GET_DEX(ch)].prac_bonus;
+  modifier -= GET_DEX_APP(ch);
 
   if (affected_by_spell(ch, SPELL_BLUR))
   {
     modifier -= GET_LEVEL(ch) / 5;
   }
 
-  if (!IS_SET(victim->specials.immune, IMMUNE_ASSAULT))
+  if (IS_NPC(victim) && !IS_IMMUNE(victim, IMMUNE_ASSAULT))
   {
     if (AWAKE(victim))
     {
-      if (number(1, 151) + modifier <= ch->skills[SKILL_ASSAULT].learned)
+      if (number(1, 151) + modifier <= GET_LEARNED(ch, SKILL_ASSAULT))
       {
         assault = TRUE;
       }
@@ -733,7 +830,7 @@ void do_assault(CHAR *ch, char *arg, int cmd)
       /* Dual Assault */
       if (check_subclass(ch, SC_RONIN, 1))
       {
-        if (number(1, 151) + modifier <= ch->skills[SKILL_ASSAULT].learned)
+        if (number(1, 151) + modifier <= GET_LEARNED(ch, SKILL_ASSAULT))
         {
           dual_assault = TRUE;
         }
@@ -783,105 +880,153 @@ void do_assault(CHAR *ch, char *arg, int cmd)
     hit(victim, ch, TYPE_UNDEFINED);
   }
 
-  if (!IS_IMPLEMENTOR(ch))
+  if (assault || dual_assault)
   {
-    if (assault || dual_assault)
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 3);
-    }
-    else
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+    skill_wait(ch, SKILL_ASSAULT, 3);
+  }
+  else
+  {
+    skill_wait(ch, SKILL_ASSAULT, 2);
   }
 }
 
-void do_circle(struct char_data *ch, char *argument, int cmd)
-{
-  struct char_data *victim;
-  char name[256];
-  int percent;
-  int recover=70; /* Linerfix */
 
-  if(!ch->skills)
-    return;
+void do_circle(CHAR *ch, char *argument, int cmd)
+{
+  CHAR *victim = NULL;
+  char name[MIL];
+  int check = 0;
+  int set_pos = 0;
+  ENCH ench;
+
+  if (!ch->skills) return;
 
   one_argument(argument, name);
 
-  if ((GET_CLASS(ch) != CLASS_THIEF) && (GET_CLASS(ch) != CLASS_AVATAR) && (GET_LEVEL(ch) < LEVEL_IMM)) {
+  if (IS_MORTAL(ch) &&
+      GET_CLASS(ch) != CLASS_THIEF &&
+      GET_CLASS(ch) != CLASS_AVATAR)
+  {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
-  if (!(victim = get_char_room_vis(ch, name))) {
-   if (ch->specials.fighting) {
-     victim = ch->specials.fighting;
-   } else {
-     send_to_char("Circle who?\n\r", ch);
-     return;
-   }
-  }
+  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch)))
+  {
+    send_to_char("Circle who?\n\r", ch);
 
-  if (victim == ch) {
-    send_to_char("How can you sneak up on yourself?\n\r", ch);
     return;
   }
 
-  if (!ch->equipment[WIELD]) {
-    send_to_char("You need to wield a weapon, to make it a success.\n\r",ch);
+  if (victim == ch)
+  {
+    send_to_char("How can you sneak up on yourself!?\n\r", ch);
+
     return;
   }
 
-  if (ch->equipment[WIELD]->obj_flags.value[3] != 11) {
-    send_to_char("Only piercing weapons can be used for that.\n\r",ch);
+  if (!GET_WEAPON(ch))
+  {
+    send_to_char("You need to wield a weapon to circle behind someone and stab them in the back.\n\r", ch);
+
     return;
   }
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
+  if (get_weapon_type(GET_WEAPON(ch)) != TYPE_PIERCE)
+  {
+    send_to_char("Only piercing weapons can be used to stab soneone in the back.\n\r", ch);
+
+    return;
+  }
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
+  {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
-  
-  percent=number(1,190)-dex_app[GET_DEX(ch)].prac_bonus; /* 101% is a complete failure */
-  if(GET_POS(victim) < POSITION_RESTING){ /* if victim is sleep,stunned,incap,mortalw,or dead */
-    percent=(percent-49); /* same chance as landing an assault or backstab */
-  }
-  
-  if (GET_CLASS(ch)==CLASS_THIEF){
-     percent -= (GET_LEVEL(ch)/2);
-  }    
 
-  if ((percent > ch->skills[SKILL_CIRCLE].learned) ||
-      IS_SET(victim->specials.immune2,IMMUNE_CIRCLE)) {
-    damage(ch, victim, 0, SKILL_CIRCLE,DAM_NO_BLOCK);
-    act("$n slips quietly into the shadows, but $N notices as $e appears behind $M.",
-      FALSE, ch, 0, victim, TO_NOTVICT);
-    act("$n disappears from sight, but you notice as $e appears behind you.",
-      FALSE, ch, 0, victim, TO_VICT);
-    act("You slip quietly into the shadows, but $N notices as you appear behind $M.",
-      FALSE, ch, 0, victim, TO_CHAR);
-    recover=number(50,75);                                  /* Linerfix */
-    if(check_subclass(ch,SC_BANDIT,4) && chance(recover)) {
-      WAIT_STATE(ch, PULSE_VIOLENCE);
-    }
-    else {
-    WAIT_STATE(ch, PULSE_VIOLENCE*2);
-    }
+  check = number(1, 190) - GET_DEX_APP(ch);
+
+  if (GET_POS(victim) < POSITION_RESTING)
+  {
+    check -= 49;
   }
-  else {
-    act("$n vanishes into the shadows, suddenly appearing behind $N.",
-      FALSE, ch, 0, victim, TO_NOTVICT);
-    act("$n disappears into the shadows, vanishing completely from sight.",
-      FALSE, ch, 0, victim, TO_VICT);
-    act("You slip into the shadows and vanish, suddenly appearing behind $N.",
-      FALSE, ch, 0, victim, TO_CHAR);
-    hit(ch,victim,SKILL_CIRCLE);
-    recover=number(50,75);                                  /* Linerfix */
-    if(check_subclass(ch,SC_BANDIT,4) && chance(recover)) {
-      WAIT_STATE(ch, PULSE_VIOLENCE*2);
+
+  if (GET_CLASS(ch) == CLASS_THIEF)
+  {
+    check -= (GET_LEVEL(ch) / 2);
+  }
+
+  if (affected_by_spell(ch, SKILL_VEHEMENCE))
+  {
+    check -= 5 + (GET_DEX_APP(ch) / 2);
+  }
+
+  set_pos = stack_position(victim, POSITION_RESTING);
+
+  if (check > GET_LEARNED(ch, SKILL_CIRCLE) || (IS_NPC(victim) && IS_IMMUNE2(victim, IMMUNE_CIRCLE)))
+  {
+    act("$n slips quietly into the shadows, but $N notices as $e appears behind $M.", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("$n disappears from sight, but you notice as $e appears behind you.", FALSE, ch, 0, victim, TO_VICT);
+    act("You slip quietly into the shadows, but $N notices as you appear behind $M.", FALSE, ch, 0, victim, TO_CHAR);
+
+    damage(ch, victim, 0, SKILL_CIRCLE, DAM_NO_BLOCK);
+
+    skill_wait(ch, SKILL_CIRCLE, 2);
+  }
+  else
+  {
+    act("$n vanishes into the shadows, suddenly appearing behind $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("$n disappears into the shadows, vanishing completely from sight.", FALSE, ch, 0, victim, TO_VICT);
+    act("You slip into the shadows and vanish, suddenly appearing behind $N.", FALSE, ch, 0, victim, TO_CHAR);
+
+    hit(ch, victim, SKILL_CIRCLE);
+
+    if (GET_LEARNED(ch, SKILL_CIRCLE) < 80)
+    {
+      GET_LEARNED(ch, SKILL_CIRCLE) = MIN(GET_LEARNED(ch, SKILL_CIRCLE) + 2, 80);
     }
-    else {
-    WAIT_STATE(ch, PULSE_VIOLENCE*3);
+
+    /* Impair */
+    if (!IS_NPC(ch) && check_sc_access(ch, SKILL_IMPAIR) && chance(20 + (GET_DEX_APP(ch) / 2)))
+    {
+      act("You strike a nerve in $N's back with your attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_CHAR);
+      act("$n strikes a nerve in your back with $s attack, severely weakening you.", FALSE, ch, NULL, victim, TO_VICT);
+      act("$n strikes a nerve in $N's back with $s attack, severely weakening $M.", FALSE, ch, NULL, victim, TO_NOTVICT);
+
+      ench.name = strdup("Dazed");
+      ench.type = SKILL_IMPAIR;
+      ench.duration = 0;
+      ench.location = 0;
+      ench.modifier = -2;
+      ench.bitvector = APPLY_HITROLL;
+      ench.bitvector2 = 0;
+      ench.func = impair_enchantment;
+
+      enchantment_to_char(victim, &ench, FALSE);
+    }
+
+    skill_wait(ch, SKILL_CIRCLE, 3);
+  }
+
+  if (check_sc_access(ch, SKILL_TRIP) && affected_by_spell(ch, SKILL_TRIP))
+  {
+    check = number(1, 101) - GET_DEX_APP(ch);
+
+    if (affected_by_spell(ch, SKILL_VEHEMENCE))
+    {
+      check -= 5 + (GET_DEX_APP(ch) / 2);
+    }
+
+    if (check < GET_LEARNED(ch, SKILL_TRIP))
+    {
+      act("You trip $N, causing $M to become off-balanced.", FALSE, ch, NULL, victim, TO_CHAR);
+      act("$n trips you, causing you to become off-balanced.", FALSE, ch, NULL, victim, TO_VICT);
+      act("$n trips $N, causing $M to become off-balanced.", FALSE, ch, NULL, victim, TO_NOTVICT);
+
+      GET_POS(victim) = set_pos;
     }
   }
 }
@@ -1056,7 +1201,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
     if(CAN_GO(ch, attempt) &&
        !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH)) {
       if(!IS_NPC(ch->specials.fighting) && !ch->specials.rider &&
-         IS_SET(ch->specials.fighting->specials.pflag, PLR_BLOCK) &&
+         affected_by_spell(ch->specials.fighting, SKILL_BLOCK) &&
          ( (number(1, 101) < ch->specials.fighting->skills[SKILL_BLOCK].learned) ||
            (check_subclass(ch->specials.fighting,SC_WARLORD,1) && chance(90)) ) ) {
         act("$N tried to flee but $n blocked $S way!",
@@ -1165,6 +1310,7 @@ differences in ch and ch->specials.fighting */
   send_to_char("PANIC! You couldn't escape!\n\r", ch);
 }
 
+
 void do_pummel(CHAR *ch, char *arg, int cmd)
 {
   char name[MIL];
@@ -1174,134 +1320,112 @@ void do_pummel(CHAR *ch, char *arg, int cmd)
 
   if (!ch->skills) return;
 
-  if (GET_CLASS(ch) != CLASS_NINJA &&
+  if (IS_MORTAL(ch) &&
+      GET_CLASS(ch) != CLASS_NINJA &&
       GET_CLASS(ch) != CLASS_PALADIN &&
       GET_CLASS(ch) != CLASS_ANTI_PALADIN &&
-      GET_CLASS(ch) != CLASS_COMMANDO &&
-      IS_MORTAL(ch))
+      GET_CLASS(ch) != CLASS_COMMANDO)
   {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
   one_argument(arg, name);
 
-  if (!(victim = get_char_room_vis(ch, name)))
+  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch)))
   {
-    if (ch->specials.fighting)
-    {
-      victim = ch->specials.fighting;
-    }
-    else
-    {
-      send_to_char("Pummel who?\n\r", ch);
-      return;
-    }
+    send_to_char("Pummel who?\n\r", ch);
+
+    return;
   }
 
   if (victim == ch)
   {
     send_to_char("Aren't we funny today...\n\r", ch);
+
     return;
   }
-  else if (IS_MORTAL(ch) &&
-           IS_IMMORTAL(victim))
+
+  if (IS_MORTAL(ch) && IS_IMMORTAL(victim))
   {
     send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+
     return;
   }
-  else if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
   {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  if (!EQ(ch, WIELD) || !IS_WEAPON(EQ(ch, WIELD)))
+  if (!GET_WEAPON(ch) || !IS_WEAPON(GET_WEAPON(ch)))
   {
     send_to_char("You need to wield a weapon for your pummel to succeed.\n\r", ch);
+
     return;
   }
 
-  check = number(1, 121) - dex_app[GET_DEX(ch)].prac_bonus;
+  check = number(1, 121) - GET_DEX_APP(ch);
 
   if (affected_by_spell(ch, SPELL_BLUR))
   {
     check -= (GET_LEVEL(ch) / 10);
   }
 
-  if ((ch->skills[SKILL_BASH].learned < MAX_PRAC(ch) && (check > ch->skills[SKILL_BASH].learned) && (check > ch->skills[SKILL_PUMMEL].learned)) ||
-      check > ch->skills[SKILL_PUMMEL].learned ||
+  if ((GET_LEARNED(ch, SKILL_BASH) < MAX_PRAC(ch) && check > GET_LEARNED(ch, SKILL_BASH) && check > GET_LEARNED(ch, SKILL_PUMMEL)) ||
+      check > GET_LEARNED(ch, SKILL_PUMMEL) ||
       number(1, 18) > GET_DEX(ch))
   {
     act("You try to pummel $N, but miss.", FALSE, ch, NULL, victim, TO_CHAR);
     act("$n tried to pummel you, but missed.", FALSE, ch, NULL, victim, TO_VICT);
     act("$n tried to pummel $N, but missed.", FALSE, ch, NULL, victim, TO_NOTVICT);
+
     damage(ch, victim, 0, SKILL_PUMMEL, DAM_NO_BLOCK);
 
-    if (!IS_IMPLEMENTOR(ch))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+    skill_wait(ch, SKILL_PUMMEL, 2);
   }
   else
   {
-    if ((IS_NPC(victim) && IS_SET(victim->specials.immune, IMMUNE_PUMMEL)) ||
+    if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PUMMEL)) ||
         (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL)))
     {
       act("You pummel $N, but your pummel has no effect!", FALSE, ch, NULL, victim, TO_CHAR);
       act("$n pummels you, but $s pummel has no effect!", FALSE, ch, NULL, victim, TO_VICT);
       act("$n pummels $N, but $s pummel has no effect!", FALSE, ch, NULL, victim, TO_NOTVICT);
+
       damage(ch, victim, 0, SKILL_PUMMEL, DAM_NO_BLOCK);
     }
     else
     {
-      if ((GET_POS(victim) == POSITION_STUNNED) ||
-          (GET_POS(victim) == POSITION_RESTING) ||
-          (GET_POS(victim) == POSITION_SITTING))
-      {
-        set_pos = POSITION_INCAP;
-      }
-      else if (GET_POS(victim) > POSITION_STUNNED)
-      {
-        set_pos = POSITION_STUNNED;
-      }
-      else
-      {
-        set_pos = GET_POS(victim);
-      }
+      set_pos = stack_position(victim, POSITION_STUNNED);
 
       act("You pummel $N, and $N is stunned now!", FALSE, ch, NULL, victim, TO_CHAR);
       act("$n pummels you, and you are stunned now!", FALSE, ch, NULL, victim, TO_VICT);
       act("$n pummels $N, and $N is stunned now!", FALSE, ch, NULL, victim, TO_NOTVICT);
+
       damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_PUMMEL, DAM_NO_BLOCK);
 
-      if (ch->skills[SKILL_PUMMEL].learned < 80)
+      if (GET_LEARNED(ch, SKILL_PUMMEL) < 80)
       {
-        ch->skills[SKILL_PUMMEL].learned = MIN(ch->skills[SKILL_PUMMEL].learned + 2, 80);
+        GET_LEARNED(ch, SKILL_PUMMEL) = MIN(GET_LEARNED(ch, SKILL_PUMMEL) + 2, 80);
       }
 
-      if (CHAR_REAL_ROOM(victim) != NOWHERE &&
-          !IS_IMPLEMENTOR(victim))
+      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
       {
         GET_POS(victim) = set_pos;
 
-        if (CHAOSMODE)
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE * number(1, 2));
-        }
-        else
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE * 2);
-        }
+        /* Can't use skill_wait() since this applies to victim. */
+        WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(1, 2) : 2);
       }
     }
 
-    if (!IS_IMPLEMENTOR(ch))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+    skill_wait(ch, SKILL_PUMMEL, 2);
   }
 }
+
 
 void do_bash(CHAR *ch, char *arg, int cmd)
 {
@@ -1317,232 +1441,191 @@ void do_bash(CHAR *ch, char *arg, int cmd)
       IS_MORTAL(ch))
   {
     send_to_char("You don't know this skill yet.\n\r", ch);
+
     return;
   }
 
-  if (GET_CLASS(ch) != CLASS_CLERIC &&
+  if (IS_MORTAL(ch) &&
+      GET_CLASS(ch) != CLASS_CLERIC &&
       GET_CLASS(ch) != CLASS_WARRIOR &&
       GET_CLASS(ch) != CLASS_NINJA &&
       GET_CLASS(ch) != CLASS_PALADIN &&
       GET_CLASS(ch) != CLASS_ANTI_PALADIN &&
-      GET_CLASS(ch) != CLASS_COMMANDO &&
-      IS_MORTAL(ch))
+      GET_CLASS(ch) != CLASS_COMMANDO)
   {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
   one_argument(arg, name);
 
-  if (!(victim = get_char_room_vis(ch, name)))
+  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch)))
   {
-    if (ch->specials.fighting)
-    {
-      victim = ch->specials.fighting;
-    }
-    else
-    {
-      send_to_char("Bash who?\n\r", ch);
-      return;
-    }
+    send_to_char("Bash who?\n\r", ch);
+
+    return;
   }
 
   if (victim == ch)
   {
     send_to_char("Aren't we funny today...\n\r", ch);
+
     return;
   }
-  else if (IS_MORTAL(ch) &&
-           IS_IMMORTAL(victim))
+  else if (IS_MORTAL(ch) && IS_IMMORTAL(victim))
   {
     send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+
     return;
   }
-  else if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
   {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  if (!EQ(ch, WIELD) || !IS_WEAPON(EQ(ch, WIELD)))
+  if (!GET_WEAPON(ch) || !IS_WEAPON(GET_WEAPON(ch)))
   {
     send_to_char("You need to wield a weapon for your bash to succeed.\n\r", ch);
+
     return;
   }
 
-  check = number(1, 101) - dex_app[GET_DEX(ch)].prac_bonus;
+  check = number(1, 101) - GET_DEX_APP(ch);
 
   if (affected_by_spell(ch, SPELL_BLUR))
   {
     check -= (GET_LEVEL(ch) / 10);
   }
 
-  if (check > ch->skills[SKILL_BASH].learned)
+  if (check > GET_LEARNED(ch, SKILL_BASH))
   {
     damage(ch, victim, 0, SKILL_BASH, DAM_NO_BLOCK);
 
-    if (!IS_IMPLEMENTOR(victim))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+    skill_wait(ch, SKILL_BASH, 2);
   }
   else
   {
-    if ((IS_NPC(victim) && IS_SET(victim->specials.immune, IMMUNE_PUMMEL)) ||
+    if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PUMMEL)) ||
         (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL)))
     {
       damage(ch, victim, 0, SKILL_BASH, DAM_NO_BLOCK);
     }
     else
     {
-      if (GET_POS(victim) == POSITION_STUNNED)
-      {
-        set_pos = POSITION_INCAP;
-      }
-      else if ((GET_POS(victim) == POSITION_RESTING) ||
-               (GET_POS(victim) == POSITION_SITTING))
-      {
-        set_pos = POSITION_STUNNED;
-      }
-      else if (GET_POS(victim) > POSITION_RESTING)
-      {
-        set_pos = POSITION_RESTING;
-      }
-      else
-      {
-        set_pos = GET_POS(victim);
-      }
+      set_pos = stack_position(victim, POSITION_RESTING);
 
       damage(ch, victim, calc_position_damage(GET_POS(victim), number(1, GET_LEVEL(ch))), SKILL_BASH, DAM_NO_BLOCK);
 
-      if (ch->skills[SKILL_BASH].learned < 80)
+      if (GET_LEARNED(ch, SKILL_BASH) < 80)
       {
-        ch->skills[SKILL_BASH].learned = MIN(ch->skills[SKILL_BASH].learned + 2, 80);
+        GET_LEARNED(ch, SKILL_BASH) = MIN(GET_LEARNED(ch, SKILL_BASH) + 2, 80);
       }
 
-      if (CHAR_REAL_ROOM(victim) != NOWHERE &&
-          !IS_IMPLEMENTOR(victim))
+      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
       {
         GET_POS(victim) = set_pos;
 
-        if (CHAOSMODE)
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE * number(1, 2));
-        }
-        else
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE * 2);
-        }
+        /* Can't use skill_wait() since this applies to victim. */
+        WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(1, 2) : 2);
       }
     }
 
-    if (!IS_IMPLEMENTOR(victim))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+    skill_wait(ch, SKILL_BASH, 2);
   }
 }
+
 
 void do_punch(CHAR *ch, char *arg, int cmd)
 {
   char name[MIL];
   CHAR *victim = NULL;
   int check = 0;
+  int set_pos = 0;
 
   if (!ch->skills) return;
 
   one_argument(arg, name);
 
-  if ((GET_CLASS(ch) != CLASS_WARRIOR) &&
-      (GET_CLASS(ch) != CLASS_AVATAR) &&
-      IS_MORTAL(ch))
+  if (IS_MORTAL(ch) &&
+      GET_CLASS(ch) != CLASS_WARRIOR &&
+      GET_CLASS(ch) != CLASS_AVATAR)
   {
     send_to_char("You better leave all the martial arts to the fighters.\n\r", ch);
+
     return;
   }
 
-  if (!(victim = get_char_room_vis(ch, name)))
+  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch)))
   {
-    if (ch->specials.fighting)
-    {
-      victim = ch->specials.fighting;
-    }
-    else
-    {
-      send_to_char("Punch who?\n\r", ch);
-      return;
-    }
+    send_to_char("Punch who?\n\r", ch);
+
+    return;
   }
 
   if (victim == ch)
   {
     send_to_char("Aren't we funny today...\n\r", ch);
+
     return;
   }
-  else if (IS_MORTAL(ch) &&
-           IS_IMMORTAL(victim))
+
+  if (IS_MORTAL(ch) && IS_IMMORTAL(victim))
   {
     send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+
     return;
   }
-  else if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
   {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  check = number(1, 101) - dex_app[GET_DEX(ch)].prac_bonus - (GET_LEVEL(ch) / 20);
+  check = number(1, 101) - GET_DEX_APP(ch) - (GET_LEVEL(ch) / 20);
 
-  if (check > ch->skills[SKILL_PUNCH].learned)
+  if (check > GET_LEARNED(ch, SKILL_PUNCH))
   {
     damage(ch, victim, 0, SKILL_PUNCH, DAM_NO_BLOCK);
 
-    if (!IS_IMPLEMENTOR(ch))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+    skill_wait(ch, SKILL_PUNCH, 2);
   }
   else
   {
-    if ((IS_NPC(victim) && IS_SET(victim->specials.immune, IMMUNE_PUNCH)) ||
+    if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PUNCH)) ||
         (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL)))
     {
       damage(ch, victim, 0, SKILL_PUNCH, DAM_NO_BLOCK);
     }
     else
     {
+      set_pos = stack_position(victim, POSITION_SITTING);
+
       damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_PUNCH, DAM_NO_BLOCK);
 
-      if (ch->skills[SKILL_PUNCH].learned < 80)
+      if (GET_LEARNED(ch, SKILL_PUNCH) < 80)
       {
-        ch->skills[SKILL_PUNCH].learned = MIN(ch->skills[SKILL_PUNCH].learned + 2, 80);
+        GET_LEARNED(ch, SKILL_PUNCH) = MIN(GET_LEARNED(ch, SKILL_PUNCH) + 2, 80);
       }
 
-      if (CHAR_REAL_ROOM(victim) != NOWHERE &&
-          !IS_IMPLEMENTOR(victim))
+      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
       {
-        if (GET_POS(victim) > POSITION_SITTING)
-        {
-          GET_POS(victim) = POSITION_SITTING;
-        }
+        GET_POS(victim) = set_pos;
 
-        if (CHAOSMODE)
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE * number(1, 2));
-        }
-        else
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE * 2);
-        }
+        /* Can't use skill_wait() since this applies to victim. */
+        WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(1, 2) : 2);
       }
     }
 
-    if (!IS_IMPLEMENTOR(victim))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+    skill_wait(ch, SKILL_PUNCH, 2);
   }
 }
+
 
 void do_rescue(struct char_data *ch, char *argument, int cmd)
 {
@@ -1620,122 +1703,126 @@ void do_rescue(struct char_data *ch, char *argument, int cmd)
 }
 
 
-void do_assist(struct char_data *ch, char *argument, int cmd)
+void do_assist(CHAR *ch, char *argument, int cmd)
 {
-  struct char_data *victim, *tmp_ch;
-  char victim_name[240];
+  CHAR *victim = NULL;
+  CHAR *tmp_ch = NULL;
+  char name[MIL];
 
-  if(CHAOSMODE) {
-    send_to_char("Assist??  All you can think about is KILLING!!\n\r",ch);
+  if (CHAOSMODE)
+  {
+    send_to_char("Assist? All you can think about is KILLING!\n\r", ch);
+
     return;
   }
 
-  one_argument(argument, victim_name);
-
-  if (GET_POS(ch) == POSITION_FIGHTING ||
-      ch->specials.fighting) {
+  if (GET_POS(ch) == POSITION_FIGHTING || GET_OPPONENT(ch))
+  {
     send_to_char("You are fighting already!\n\r", ch);
+
     return;
   }
 
-  if (!(victim = get_char_room_vis(ch, victim_name))) {
+  one_argument(argument, name);
+
+  if (!(victim = get_char_room_vis(ch, name)))
+  {
     send_to_char("Who do you want to assist?\n\r", ch);
+
     return;
   }
 
-  if (victim == ch) {
+  if (victim == ch)
+  {
     send_to_char("What about fleeing instead?\n\r", ch);
+
     return;
   }
 
-  for (tmp_ch=world[CHAR_REAL_ROOM(ch)].people; tmp_ch &&
-       (tmp_ch->specials.fighting != victim);
-       tmp_ch=tmp_ch->next_in_room);
+  for (tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch && (GET_OPPONENT(tmp_ch) != victim); tmp_ch = tmp_ch->next_in_room);
 
-  if (!tmp_ch) {
+  if (!tmp_ch)
+  {
     act("But nobody is fighting $M?", FALSE, ch, 0, victim, TO_CHAR);
+
     return;
   }
 
-
-  send_to_char("You join the fight!\n\r", ch);
-  act("$N assists you!", FALSE, victim, 0, ch, TO_CHAR);
+  act("You join the fight!", FALSE, ch, 0, victim, TO_CHAR);
+  act("$n assists you!", FALSE, ch, 0, victim, TO_VICT);
   act("$n assists $N.", FALSE, ch, 0, victim, TO_NOTVICT);
 
   set_fighting(ch, tmp_ch);
 }
 
+
 void do_kick(CHAR *ch, char *arg, int cmd)
 {
   char name[MIL];
   CHAR *victim = NULL;
-  int check;
+  int check = 0;
 
   if (!ch->skills) return;
 
-  one_argument(arg, name);
-
-  if ((GET_CLASS(ch) != CLASS_WARRIOR) &&
-      (GET_CLASS(ch) != CLASS_PALADIN) &&
-      (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
-      (GET_CLASS(ch) != CLASS_COMMANDO) &&
-      (GET_CLASS(ch) != CLASS_NOMAD) &&
-      (GET_CLASS(ch) != CLASS_NINJA) &&
-      IS_MORTAL(ch))
+  if (IS_MORTAL(ch) &&
+      GET_CLASS(ch) != CLASS_WARRIOR &&
+      GET_CLASS(ch) != CLASS_PALADIN &&
+      GET_CLASS(ch) != CLASS_ANTI_PALADIN &&
+      GET_CLASS(ch) != CLASS_COMMANDO &&
+      GET_CLASS(ch) != CLASS_NOMAD &&
+      GET_CLASS(ch) != CLASS_NINJA)
   {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
-  if (!(victim = get_char_room_vis(ch, name)))
+  one_argument(arg, name);
+
+  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch)))
   {
-    if (ch->specials.fighting)
-    {
-      victim = ch->specials.fighting;
-    }
-    else
-    {
-      send_to_char("Kick who?\n\r", ch);
-      return;
-    }
+    send_to_char("Kick who?\n\r", ch);
+
+    return;
   }
 
   if (victim == ch)
   {
     send_to_char("Aren't we funny today...\n\r", ch);
-    return;
-  }
-  else if (IS_MORTAL(ch) &&
-           IS_IMMORTAL(victim))
-  {
-    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
-    return;
-  }
-  else if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
-  {
-    send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  check = ((10 - (GET_AC(victim) / 10)) * 2) + number(1, 101) - dex_app[GET_DEX(ch)].prac_bonus;
+  if (IS_MORTAL(ch) && IS_IMMORTAL(victim))
+  {
+    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+
+    return;
+  }
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
+  {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
+  check = ((10 - (GET_AC(victim) / 10)) * 2) + number(1, 101) - GET_DEX_APP(ch);
 
   if (affected_by_spell(ch, SPELL_BLUR))
   {
     check -= (GET_LEVEL(ch) / 10);
   }
 
-  if (check > ch->skills[SKILL_KICK].learned)
+  if (check > GET_LEARNED(ch, SKILL_KICK))
   {
     damage(ch, victim, 0, SKILL_KICK, DAM_NO_BLOCK);
 
-    if (!IS_IMPLEMENTOR(victim))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
+    skill_wait(ch, SKILL_KICK, 2);
   }
   else
   {
-    if ((IS_NPC(victim) && IS_SET(victim->specials.immune, IMMUNE_KICK)) ||
+    if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_KICK)) ||
         (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL)))
     {
       damage(ch, victim, 0, SKILL_KICK, DAM_NO_BLOCK);
@@ -1744,31 +1831,22 @@ void do_kick(CHAR *ch, char *arg, int cmd)
     {
       damage(ch, victim, calc_position_damage(GET_POS(victim), MIN(GET_LEVEL(ch), 30) * 2), SKILL_KICK, DAM_NO_BLOCK);
 
-      if (ch->skills[SKILL_KICK].learned < 80)
+      if (GET_LEARNED(ch, SKILL_KICK) < 80)
       {
-        ch->skills[SKILL_KICK].learned = MIN(ch->skills[SKILL_KICK].learned + 2, 80);
+        GET_LEARNED(ch, SKILL_KICK) = MIN(GET_LEARNED(ch, SKILL_KICK) + 2, 80);
       }
 
-      if (CHAR_REAL_ROOM(victim) != NOWHERE &&
-          !IS_IMPLEMENTOR(victim))
-      {
-        if (CHAOSMODE)
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE * number(1, 2));
-        }
-        else
-        {
-          WAIT_STATE(victim, PULSE_VIOLENCE * 2);
-        }
-      }
+      skill_wait(ch, SKILL_KICK, 2);
     }
 
-    if (!IS_IMPLEMENTOR(victim))
+    if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
     {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 3);
+      /* Can't use skill_wait() since this applies to victim. */
+      WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(2, 3) : 3);
     }
   }
 }
+
 
 void do_disarm(struct char_data *ch, char *argument, int cmd)
 {
@@ -1823,7 +1901,7 @@ void do_disarm(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  percent= number(1,200)-dex_app[GET_DEX(ch)].prac_bonus; /* 101% is a complete failure */
+  percent= number(1,200)-GET_DEX_APP(ch); /* 101% is a complete failure */
 
   if(GET_LEVEL(victim)<GET_LEVEL(ch))
     percent = percent - (GET_LEVEL(ch)-GET_LEVEL(victim));
@@ -1921,7 +1999,7 @@ void do_disembowel(struct char_data *ch, char *argument, int cmd)
   dam=2*GET_LEVEL(victim)+20;
 
   /* Skill roll + DEX check + 50/50 roll */
-  percent=number(1,101)-dex_app[GET_DEX(ch)].prac_bonus; /* 101% is a complete failure */
+  percent=number(1,101)-GET_DEX_APP(ch); /* 101% is a complete failure */
   percent2=GET_LEVEL(ch)+25;
   percent2=MIN(percent2,55);
   /* Easy rank addition here - for example for a Nomad
@@ -1972,101 +2050,114 @@ void do_disembowel(struct char_data *ch, char *argument, int cmd)
   WAIT_STATE(ch, PULSE_VIOLENCE);
 }
 
-void do_backflip(struct char_data *ch, char *argument, int cmd) {
-  struct char_data *victim;
-  char name[256];
-  int percent,percent2;
 
-  if(!ch->skills) return;
+void do_backflip(CHAR *ch, char *argument, int cmd)
+{
+  char name[MIL];
+  CHAR *victim = NULL;
+  int check = 0;
+  int percent = 0;
+
+  if (!ch->skills) return;
 
   one_argument(argument, name);
 
-  /* First some basic checks */
-  if ((GET_CLASS(ch) != CLASS_BARD) && (GET_LEVEL(ch) < LEVEL_IMM)) {
+  if (GET_CLASS(ch) != CLASS_BARD && IS_MORTAL(ch))
+  {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
-  if(GET_LEVEL(ch)<20) {
-    send_to_char("You are not a high enough level.\n\r",ch);
+  if (GET_LEVEL(ch) < 20)
+  {
+    send_to_char("You are not high enough level to use that skill.\n\r", ch);
+
     return;
   }
 
-  if (!(victim = get_char_room_vis(ch, name))) {
-   if (ch->specials.fighting) {
-     victim = ch->specials.fighting;
-   } else {
-     send_to_char("Who do you want to flip over?\n\r", ch);
-     return;
-   }
+  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch)))
+  {
+    send_to_char("Who do you want to flip over?\n\r", ch);
+
+    return;
   }
 
-  if (victim == ch) {
+  if (victim == ch)
+  {
     send_to_char("This could prove very interesting...\n\r", ch);
+
     return;
   }
 
-  /* Skill roll + DEX check + level roll */
-  percent=number(1,101)-dex_app[GET_DEX(ch)].prac_bonus; /* 101% is a complete failure */
-  percent2=GET_LEVEL(ch)+50;
-  percent2=MIN(percent2,90); /* upped from 85% to 90% max on 2nd roll */
-  /* Easy rank addition here - for example for a Bard
-  rank, just add an amount to percent2 to increase chance
-  of a backflip - Ranger */
-  if ((percent > ch->skills[SKILL_BACKFLIP].learned) ||
-      (number(1,18) > GET_DEX(ch)) || number(1,100)>percent2 ) {
-    act("As you spring, $N knocks you down!",0,ch,0,victim,TO_CHAR);
-    act("$n tries to spring over $N, but is knocked hard on $s back.",0,ch,0,victim,TO_NOTVICT);
-    act("As $n springs, you knock $m down!",1,ch,0,victim,TO_VICT);
-    WAIT_STATE(ch,PULSE_VIOLENCE*2);
-    return;
+  check = number(1, 101) - GET_DEX_APP(ch);
+  percent = MIN(GET_LEVEL(ch) + 50, 90); /* 10% failure at level 50. */
+
+  if (check > GET_LEARNED(ch, SKILL_BACKFLIP) ||
+      number(1, 18) > GET_DEX(ch) ||
+      number(1, 100) > percent)
+  {
+    act("As you spring, $N knocks you down!", FALSE, ch, 0, victim, TO_CHAR);
+    act("As $n springs, you knock $m down!", FALSE, ch, 0, victim, TO_VICT);
+    act("$n tries to spring over $N, but is knocked hard on $s back.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+    skill_wait(ch, SKILL_BACKFLIP, 2);
   }
+  else
+  {
+    if (GET_LEARNED(ch, SKILL_BACKFLIP) < 80)
+    {
+      GET_LEARNED(ch, SKILL_BACKFLIP) = MIN(GET_LEARNED(ch, SKILL_BACKFLIP) + 2, 80);
+    }
 
-  /* Skill roll successful */
+    act("With a mighty leap, you spring over $N!", 0, ch, 0, victim, TO_CHAR);
+    act("$n crouches low and springs over you!", 0, ch, 0, victim, TO_VICT);
+    act("With a mighty leap, $n springs over $N and lands behind $M!", 0, ch, 0, victim, TO_NOTVICT);
 
-  if(ch->skills[SKILL_BACKFLIP].learned < 80) ch->skills[SKILL_BACKFLIP].learned += 1;
-  act("With a mighty leap, you spring over $N!",0,ch,0,victim,TO_CHAR);
-  act("$n crouches low and springs over you!",0,ch,0,victim,TO_VICT);
-  act("With a mighty leap, $n springs over $N and lands behind $M!",0,ch,0,victim,TO_NOTVICT);
-  hit(ch, victim, SKILL_BACKFLIP);
-  WAIT_STATE(ch, PULSE_VIOLENCE*2);
+    hit(ch, victim, SKILL_BACKFLIP);
+
+    skill_wait(ch, SKILL_BACKFLIP, 2);
+  }
 }
 
-void do_cover(CHAR *ch, char *argument, int cmd) {
-  struct affected_type_5 af;
-  if(!ch->skills) return;
 
-  if(GET_CLASS(ch) != CLASS_NOMAD && GET_LEVEL(ch) < 50) {
-    send_to_char("You do not have this skill.\n\r",ch);
+void do_cunning(CHAR *ch, char *argument, int cmd)
+{
+  AFF af;
+
+  if (!ch->skills) return;
+
+  if (GET_CLASS(ch) != CLASS_THIEF || GET_LEVEL(ch) < 50)
+  {
+    send_to_char("You do not have this skill.\n\r", ch);
+
     return;
   }
-  if(ch->specials.fighting) {
-    send_to_char("You can't cover yourself while fighting.\n\r",ch);
+
+  if (affected_by_spell(ch, SKILL_CUNNING))
+  {
+    affect_from_char(ch, SKILL_CUNNING);
+
+    send_to_char("You relinquish your focus and feel notably less cunning.\n\r", ch);
+
     return;
   }
-  if(!affected_by_spell(ch, SKILL_COVER)) {
-    if(number(0,120)>ch->skills[SKILL_COVER].learned) {
-      send_to_char("You failed to protect yourself.\n\r",ch);
-      WAIT_STATE(ch,PULSE_VIOLENCE);
-      return;
-    }
-    af.type      = SKILL_COVER;
-    af.duration  = -1;
-    af.modifier  = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? -4 : -5;
-    af.location  = APPLY_HITROLL;
+
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_CUNNING))
+  {
+    send_to_char("You aren't feeling particularly cunning at the moment.\n\r", ch);
+  }
+  else
+  {
+    af.type = SKILL_CUNNING;
+    af.duration = -1;
+    af.modifier = 0;
+    af.location = 0;
     af.bitvector = 0;
     af.bitvector2 = 0;
+
     affect_to_char(ch, &af);
-    act("You place yourself in a protective position.",1,ch,0,0,TO_CHAR);
-    act("$n places $mself in a protective position.",1,ch,0,0,TO_ROOM);
-    WAIT_STATE(ch,PULSE_VIOLENCE);
-  }
-  else {
-    affect_from_char(ch,SKILL_COVER);
-    act("$n places $mself in a normal position.",1,ch,0,0,TO_ROOM);
-    act("You place yourself in a normal position.",1,ch,0,0,TO_CHAR);
-    WAIT_STATE(ch,PULSE_VIOLENCE);
+
+    send_to_char("You focus on exploiting any weakness in your enemies' defenses and grow more cunning in the process.\n\r", ch);
   }
 }
-
-
