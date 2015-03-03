@@ -1750,10 +1750,9 @@ void do_mantra(CHAR *ch, char *arg, int cmd)
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > 27 || (duration_of_spell(victim, SPELL_DEGENERATE) > 9 && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
+       (duration_of_spell(victim, SPELL_DEGENERATE) > 9 && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))))) {
     send_to_char("The power of the skill fails to heal your degenerated body.\n\r", victim);
-
     return;
   }
 

@@ -2791,23 +2791,26 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
           gain = ((gain * 12) / 10);
         }
 
-        send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
-        magic_heal(ch, SKILL_MANTRA, gain, FALSE);
+        if (affected_by_spell(ch, SPELL_DEGENERATE) &&
+            ((duration_of_spell(ch, SPELL_DEGENERATE) > 27) ||
+            ((duration_of_spell(ch, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))))) {
+          send_to_char("Your trance fails to heal your degenerated body.\n\r", ch);
+        }
+        else {
+          send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
+          magic_heal(ch, SKILL_MANTRA, gain, FALSE);
+        }
 
-        if (chance(25))
-        {
-          if (affected_by_spell(ch, SPELL_BLINDNESS))
-          {
+        if (chance(25)) {
+          if (affected_by_spell(ch, SPELL_BLINDNESS)) {
             send_to_char("You can see again.\n\r", ch);
             affect_from_char(ch, SPELL_BLINDNESS);
           }
-          else if (affected_by_spell(ch, SPELL_POISON))
-          {
+          else if (affected_by_spell(ch, SPELL_POISON)) {
             send_to_char("You feel better.\n\r", ch);
             affect_from_char(ch, SPELL_POISON);
           }
-          else if (affected_by_spell(ch, SPELL_PARALYSIS))
-          {
+          else if (affected_by_spell(ch, SPELL_PARALYSIS)) {
             send_to_char("You can move again.\n\r", ch);
             affect_from_char(ch, SPELL_PARALYSIS);
           }

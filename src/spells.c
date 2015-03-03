@@ -83,8 +83,7 @@ void magic_heal(CHAR *ch, int spell, int heal, bool overheal)
     heal = MIN(heal, GET_MAX_HIT(ch) - GET_HIT(ch));
   }
 
-  if ((spell != SKILL_MANTRA) &&
-      affected_by_spell(ch, SPELL_DEGENERATE) &&
+  if (affected_by_spell(ch, SPELL_DEGENERATE) &&
       ((duration_of_spell(ch, SPELL_DEGENERATE) > 27) ||
        ((duration_of_spell(ch, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))))
   {
