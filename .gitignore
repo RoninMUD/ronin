@@ -16,6 +16,9 @@ lib/runlog
 lib/syslog
 lib/syslog.last
 lib/allmobs.txt
+lib/bugs.old.Z
+lib/castlog
+lib/castmankey
 lib/clanlist.*
 lib/clans
 lib/gdb.*
@@ -29,9 +32,11 @@ lib/PURGED/
 lib/PURGEDNEWBIE/
 lib/TPURGE/
 lib/VAULTBACKUP/
+lib/VPURGED/
 lib/typos
 lib/reboot_time
 lib/plrlog
+lib/plrlog.last
 lib/slave.pid
 lib/names-*
 lib/wizlist
