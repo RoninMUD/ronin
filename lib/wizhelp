@@ -1063,7 +1063,7 @@ See also: FLAGS VALUES DRINKTYPES
  BLESS           256       ARMS         256     SPHERE           2048      
  ANTI_GOOD       512       SHIELD       512     POISON           4096      
  ANTI_EVIL       1024      ABOUT        1024    PROTECT-EVIL     8192      
- ANTI_NEUTRAL    2048      WAIST       2048    PARALYSIS        16384     
+ ANTI_NEUTRAL    2048      WAIST        2048    PARALYSIS        16384     
  ANTI_WARRIOR    4096      WRIST        4096    INFRAVISION      32768     
  ANTI_THIEF      8192      WIELD        8192    DODGE            262144    
  ANTI_CLERIC     16384     HOLD         16384   SNEAK            524288    
