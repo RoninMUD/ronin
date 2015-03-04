@@ -5931,16 +5931,16 @@ See Also: -
 #
 VANITY CUSTOM-GEAR
 
-If you wish "vanitize" or get custom equipment, it will cost you 25 million 
+If you wish "vanitize" or get custom equipment, it will cost you 50 million 
 coins per object you wish to get vanitized.  To get a piece of equipment 
 vanitized you must look for a SUPREME or an IMPLEMENTOR and supply them with
-the 25 million coins and the object you wish vanitized and they will be happy
-to vanitize it to your person liking.  Due to coding constraints, no spec-
-objects will be able to be vanitied, extraneous circumstances notwithstanding.
+the 50 million coins and the object you wish vanitized and they will be happy
+to vanitize it to your person liking.
+
+Items with special procedures may be vanitized for an additional quest token.
 
 Note: renaming an object after it's already been customized is free for two 
-weeks, and after that costs 10 million coins.  If the item changes owners, a 
-revanity would cost 25 million coins.
+weeks, and after that costs 10 million coins.
 
 See Also: -
 #
