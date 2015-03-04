@@ -193,7 +193,7 @@ typedef char byte;
 #define ITEM_WEAR_ARMS       256
 #define ITEM_WEAR_SHIELD     512
 #define ITEM_WEAR_ABOUT     1024
-#define ITEM_WEAR_WAISTE    2048
+#define ITEM_WEAR_WAIST    2048
 #define ITEM_WEAR_WRIST     4096
 #define ITEM_WIELD          8192
 #define ITEM_HOLD          16384
@@ -560,7 +560,7 @@ struct room_data
 #define WEAR_ARMS      10
 #define WEAR_SHIELD    11
 #define WEAR_ABOUT     12
-#define WEAR_WAISTE    13
+#define WEAR_WAIST    13
 #define WEAR_WRIST_R   14
 #define WEAR_WRIST_L   15
 #define WIELD          16
