@@ -327,8 +327,8 @@ int cathedral_deacon(CHAR *deacon, CHAR *ch, int cmd, char *arg)
 			gear_change(deacon, WEAR_NECK_1, STOLE_VIOLET, STOLE_WHITE, STOLE_RED, STOLE_BLACK, STOLE_GREEN);
 		if(deacon->equipment[WEAR_ABOUT])
 			gear_change(deacon, WEAR_ABOUT, DALMATIC_VIOLET, DALMATIC_WHITE, DALMATIC_RED, DALMATIC_BLACK, DALMATIC_GREEN);
-		if(deacon->equipment[WEAR_WAISTE])
-			gear_change(deacon, WEAR_WAISTE, CINTURE_VIOLET, CINTURE_WHITE, CINTURE_RED, CINTURE_BLACK, CINTURE_GREEN);
+		if(deacon->equipment[WEAR_WAIST])
+			gear_change(deacon, WEAR_WAIST, CINTURE_VIOLET, CINTURE_WHITE, CINTURE_RED, CINTURE_BLACK, CINTURE_GREEN);
 		return FALSE;
 	}
 	return FALSE;
@@ -343,8 +343,8 @@ int cathedral_priest(CHAR *priest, CHAR *ch, int cmd, char *arg)
 			gear_change(priest, WEAR_NECK_1, STOLE_VIOLET, STOLE_WHITE, STOLE_RED, STOLE_BLACK, STOLE_GREEN);
 		if(priest->equipment[WEAR_BODY])
 			gear_change(priest, WEAR_BODY, CHASUBLE_VIOLET, CHASUBLE_WHITE, CHASUBLE_RED, CHASUBLE_BLACK, CHASUBLE_GREEN);
-		if(priest->equipment[WEAR_WAISTE])
-			gear_change(priest, WEAR_WAISTE, CINTURE_VIOLET, CINTURE_WHITE, CINTURE_RED, CINTURE_BLACK, CINTURE_GREEN);
+		if(priest->equipment[WEAR_WAIST])
+			gear_change(priest, WEAR_WAIST, CINTURE_VIOLET, CINTURE_WHITE, CINTURE_RED, CINTURE_BLACK, CINTURE_GREEN);
 		return FALSE;
 	}
 	return FALSE;

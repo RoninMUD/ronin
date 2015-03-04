@@ -1306,8 +1306,8 @@ void wear(struct char_data *ch, struct obj_data *obj_object, int keyword)
     }
   } break;
   case 10: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_WAISTE)) {
-      if (ch->equipment[WEAR_WAISTE]) {
+    if (CAN_WEAR(obj_object,ITEM_WEAR_WAIST)) {
+      if (ch->equipment[WEAR_WAIST]) {
       send_to_char("You already wear something about your waist.\n\r",
                  ch);
       } else {
@@ -1315,7 +1315,7 @@ void wear(struct char_data *ch, struct obj_data *obj_object, int keyword)
       show_bitvector_wear(ch,obj_object);
       if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
       obj_from_char(obj_object);
-      equip_char(ch,  obj_object, WEAR_WAISTE);
+      equip_char(ch,  obj_object, WEAR_WAIST);
       }
     } else {
       send_to_char("You can't wear that about your waist.\n\r", ch);
@@ -1519,7 +1519,7 @@ void do_wear(struct char_data *ch, char *argument, int cmd) {
         if (CAN_WEAR(obj_object,ITEM_WEAR_FINGER)) keyword = 1;
         if (CAN_WEAR(obj_object,ITEM_WEAR_NECK)) keyword = 2;
         if (CAN_WEAR(obj_object,ITEM_WEAR_WRIST)) keyword = 11;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_WAISTE)) keyword = 10;
+        if (CAN_WEAR(obj_object,ITEM_WEAR_WAIST)) keyword = 10;
         if (CAN_WEAR(obj_object,ITEM_WEAR_ARMS)) keyword = 8;
         if (CAN_WEAR(obj_object,ITEM_WEAR_HANDS)) keyword = 7;
         if (CAN_WEAR(obj_object,ITEM_WEAR_FEET)) keyword = 6;
@@ -1549,7 +1549,7 @@ void do_wear(struct char_data *ch, char *argument, int cmd) {
      if (CAN_WEAR(obj_object,ITEM_WEAR_FINGER)) keyword = 1;
      if (CAN_WEAR(obj_object,ITEM_WEAR_NECK)) keyword = 2;
      if (CAN_WEAR(obj_object,ITEM_WEAR_WRIST)) keyword = 11;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_WAISTE)) keyword = 10;
+     if (CAN_WEAR(obj_object,ITEM_WEAR_WAIST)) keyword = 10;
      if (CAN_WEAR(obj_object,ITEM_WEAR_ARMS)) keyword = 8;
      if (CAN_WEAR(obj_object,ITEM_WEAR_HANDS)) keyword = 7;
      if (CAN_WEAR(obj_object,ITEM_WEAR_FEET)) keyword = 6;
@@ -1782,16 +1782,16 @@ remove <obj> or\n\r\
   }
 
   if(!strcmp(arg1,"waist")) {
-    if(ch->equipment[WEAR_WAISTE])
-      remove_item(ch, ch->equipment[WEAR_WAISTE], WEAR_WAISTE);
+    if(ch->equipment[WEAR_WAIST])
+      remove_item(ch, ch->equipment[WEAR_WAIST], WEAR_WAIST);
     else
       send_to_char("You aren't wearing anything around your waist.\n\r",ch);
     return;
   }
 
   if(!strcmp(arg1,"waiste")) {
-    if(ch->equipment[WEAR_WAISTE])
-      remove_item(ch, ch->equipment[WEAR_WAISTE], WEAR_WAISTE);
+    if(ch->equipment[WEAR_WAIST])
+      remove_item(ch, ch->equipment[WEAR_WAIST], WEAR_WAIST);
     else
       send_to_char("You aren't wearing anything around your waist.\n\r",ch);
     return;

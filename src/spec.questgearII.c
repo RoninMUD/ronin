@@ -380,7 +380,7 @@ bleached completely white and the last is coated in a thin dusting of desert san
       }
       break;
     case CMD_USE:
-      if(!IS_NPC(owner) && owner && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by) && shabtis==EQ(owner,WEAR_WAISTE) && V_OBJ(shabtis)==QGII_SHABTIS)
+      if(!IS_NPC(owner) && owner && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by) && shabtis==EQ(owner,WEAR_WAIST) && V_OBJ(shabtis)==QGII_SHABTIS)
       {
         one_argument(arg, buf);
         if(!strncmp(buf, "swnu", MIL) || !strncmp(buf, "Swnu", MIL))
@@ -524,9 +524,7 @@ tempest, it swiftly fades, leaving a battalion of dune cavaliers in a circle aro
 %s, who quickly charge, impaling %s and vanishing in one fell swoop.\n\r", PERS(owner,owner), HSHR(owner), GET_SHORT(vict), HMHR(vict));
               send_to_room_except_two(info_str, CHAR_REAL_ROOM(owner), owner, vict);
               send_to_char("Wawwwwwwwwwwwwwwwwwwwwwwwwwwwwwww!\n\r", vict);
-              damage(owner, vict, 3000, TYPE_UNDEFINED, DAM_PHYSICAL);
-              if(vict)
-                damage(owner, vict, 3000, TYPE_UNDEFINED, DAM_PHYSICAL);
+              damage(owner, vict, 6000, TYPE_UNDEFINED, DAM_PHYSICAL);
               /* reset the charge counter */
               shabtis->obj_flags.value[i] = shabtis_charge_nums[i][0];
               WAIT_STATE(owner, PULSE_VIOLENCE);
@@ -857,7 +855,7 @@ int qgII_phylactery(OBJ *phylactery, CHAR *owner, int cmd, char *arg)
       if((owner==phylactery->equipped_by || owner==phylactery->carried_by) && owner && !IS_NPC(owner))
       {
         arg = one_argument(arg, buf);
-        if(AWAKE(owner) && phylactery==EQ(owner,WEAR_WAISTE) && V_OBJ(phylactery)==QGII_PHYLACTERY && !strncmp(buf, "wail", MIL))
+        if(AWAKE(owner) && phylactery==EQ(owner,WEAR_WAIST) && V_OBJ(phylactery)==QGII_PHYLACTERY && !strncmp(buf, "wail", MIL))
         {
           if(phylactery->spec_value > 0)
           {

@@ -628,7 +628,7 @@ char check_plane_eq (CHAR *ch, int plane) {
   };
 
   static int needed[] = { BELT, STRIP, HELMET, TORCH };
-  static int we_locat[] = { WEAR_WAISTE, HOLD, WEAR_HEAD, WEAR_LIGHT };
+  static int we_locat[] = { WEAR_WAIST, HOLD, WEAR_HEAD, WEAR_LIGHT };
 
   if (is_wearing_obj(ch, needed[plane-1], we_locat[plane-1])) return TRUE;
 

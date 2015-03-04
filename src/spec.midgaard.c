@@ -1031,7 +1031,7 @@ int vault_filter(OBJ *obj,char *arg) {
   if(is_abbrev(buf, "arms"))         wear_pos   = ITEM_WEAR_ARMS;
   if(is_abbrev(buf, "shield"))       wear_pos   = ITEM_WEAR_SHIELD;
   if(is_abbrev(buf, "about"))        wear_pos   = ITEM_WEAR_ABOUT;
-  if(is_abbrev(buf, "waist"))        wear_pos   = ITEM_WEAR_WAISTE;
+  if(is_abbrev(buf, "waist"))        wear_pos   = ITEM_WEAR_WAIST;
   if(is_abbrev(buf, "wrist"))        wear_pos   = ITEM_WEAR_WRIST;
   if(is_abbrev(buf, "wield"))        wear_pos   = ITEM_WIELD;
   if(is_abbrev(buf, "hold"))         wear_pos   = ITEM_HOLD;
