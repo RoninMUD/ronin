@@ -8,13 +8,6 @@ A shining signet lays here tied to a tiny blue silk ribbon.~
 4 25000 29950
 5
 E
-ribbon~
-
-  This fine silk ribbon bears the mark of the great cavalier
-who owned it:  a strange squiggle in the shape of a P.
-
-~
-E
 signet tarion ring~
 
   It appears to be the seal of an ancient clan of knights,
@@ -23,6 +16,13 @@ Tarion.  This signet resembles the strength and servitude
 that all knights must have to become true heroes among men.
 
 "Of all virtues, may kindness and loyalty always serve first."
+
+~
+E
+ribbon~
+
+  This fine silk ribbon bears the mark of the great cavalier
+who owned it:  a strange squiggle in the shape of a P.
 
 ~
 X
@@ -108,7 +108,7 @@ horns at their heart.
 ~
 X
 ~
-1028 0 0
+1024 0 0
 M
 ~
 ~
@@ -119,8 +119,6 @@ A
 A
 18 1
 A
-1 -3
-T
-19273
+1 -2
 #0
 $~

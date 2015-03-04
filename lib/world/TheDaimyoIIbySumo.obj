@@ -41,7 +41,7 @@ of an equal to his swordsmanship, but never found one.
 ~
 X
 ~
-4 0 0
+0 0 0
 M
 ~
 ~
@@ -53,8 +53,6 @@ A
 18 4
 A
 1 -1
-T
-18481
 #20106
 coins pile~
 A pile of coins~
@@ -263,14 +261,14 @@ A massive throne made from dragon bones towers above you.~
 450 10 10
 100
 E
-jade~
+bones~
 The dragon which provided the bones from which this throne is made must have 
 been a truly fearsome creature! The legs are made from vertebrae nearly as
 round as you are tall, made from what looks to be jade instead of bone, you
 gather that some sort of magic is present here. Its ribs have been ingeniously
 shaped with magic to form the seat, arms and back. The bones from the legs 
 extend out from either side of the throne and the dragon's huge gaping head is
-mounted at the top.  All in all, the whole structure makes you suddenly feel
+mounted at the top.  All in all, the whole structure makes you suddenly 
 insecure in your abilities as a warrior.
 ~
 E
@@ -285,14 +283,14 @@ mounted at the top.  All in all, the whole structure makes you suddenly feel
 insecure in your abilities as a warrior.
 ~
 E
-bones~
+jade~
 The dragon which provided the bones from which this throne is made must have 
 been a truly fearsome creature! The legs are made from vertebrae nearly as
 round as you are tall, made from what looks to be jade instead of bone, you
 gather that some sort of magic is present here. Its ribs have been ingeniously
 shaped with magic to form the seat, arms and back. The bones from the legs 
 extend out from either side of the throne and the dragon's huge gaping head is
-mounted at the top.  All in all, the whole structure makes you suddenly 
+mounted at the top.  All in all, the whole structure makes you suddenly feel
 insecure in your abilities as a warrior.
 ~
 X
@@ -488,7 +486,7 @@ A small boat is here, partially camouflaged by palm fronds and bushes.~
 450 10 10
 97
 E
-small~
+boat~
 Looking inside the boat, you notice there is a full set of armor, a pair of
 matching swords, and an assortment of other deadly tools for defense. 
 However, A large hole in the bottom of the hull has rendered it useless. Seems
@@ -496,7 +494,7 @@ whoever dragged it up into the foliage wasn't too particular about whether
 it survived the trip or not.
 ~
 E
-boat~
+small~
 Looking inside the boat, you notice there is a full set of armor, a pair of
 matching swords, and an assortment of other deadly tools for defense. 
 However, A large hole in the bottom of the hull has rendered it useless. Seems
@@ -521,14 +519,14 @@ A gigantic cryptomeria tree stands here, untouched by the centuries.~
 9999 10 10
 100
 E
-cryptomeria~
+tree~
 This behemoth is about ten feet in diameter at the base, and reaches well
 over a hundred feet into the sky.  It was planted here by the first shogun many
 hundreds of years ago and is a symbol of the longevity of the shogun's 
 family.
 ~
 E
-tree~
+cryptomeria~
 This behemoth is about ten feet in diameter at the base, and reaches well
 over a hundred feet into the sky.  It was planted here by the first shogun many
 hundreds of years ago and is a symbol of the longevity of the shogun's 
@@ -592,16 +590,6 @@ A thick glowing chromium band has been foolishly abandoned here.~
 5 18000 24000
 5
 E
-eyes~
-
-  As you examine the "eyes" more closely, you almost see a flicker of
-light in them.  Unsure if it was your imagination you look more closely
-and after another few seconds you see it again.  Feeling a growing sense
-of something watching you, you feel that you have perhaps underestimated
-Hachiman, and wonder if you might have to battle him again some day.
-
-~
-E
 ring yawata band~
 
   This ring had once belonged to Hachiman, the god of war. He fought
@@ -613,6 +601,16 @@ if it was this that eventually made people think of him as a god,
 rather than his skill in battle.  The memory of his decapitated corpse
 at your feet makes you believe it was the former.  There are two small
 emeralds in the band that look almost like eyes.
+
+~
+E
+eyes~
+
+  As you examine the "eyes" more closely, you almost see a flicker of
+light in them.  Unsure if it was your imagination you look more closely
+and after another few seconds you see it again.  Feeling a growing sense
+of something watching you, you feel that you have perhaps underestimated
+Hachiman, and wonder if you might have to battle him again some day.
 
 ~
 X
@@ -663,13 +661,13 @@ A shiny ring with the shogun's seal lies in a pool of blood on the floor.~
 10 10 10
 95
 E
-signet~
+ring~
 It's a remarkably strong yet light metal ring with the shogun's personal
 crest emblazoned upon it, examining it closer you notice that you might
 be able to open it. Hmmmmm.....
 ~
 E
-ring~
+signet~
 It's a remarkably strong yet light metal ring with the shogun's personal
 crest emblazoned upon it, examining it closer you notice that you might
 be able to open it. Hmmmmm.....
