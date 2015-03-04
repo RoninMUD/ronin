@@ -318,7 +318,7 @@ void update_kudzu(OBJ *kudzu, int bSlowDecay)
 	kudzu->affected[1].modifier = 5 + hprgn_mod;
 
 	/* --- AC Modifications */
-	ac_mod = fabs(kudzu->affected[2].modifier/353);
+	ac_mod = MIN(25,fabs(kudzu->affected[2].modifier/353)); //AC maxed at 25, Hemp: 2015-03-05
 	kudzu->obj_flags.value[0] = ac_mod;
 }
 

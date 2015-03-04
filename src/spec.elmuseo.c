@@ -4369,7 +4369,7 @@ int mus_horse( CHAR *mob, CHAR *ch, int cmd, char *arg )
     int obj_load = MUS_BRIDLE1;
     if( chance(50) ) obj_load = MUS_BRIDLE2;
 
-    if( !EQ(mob, WEAR_WAISTE ) )
+    if( !EQ(mob, WEAR_WAIST ) )
     {
       OBJ * obj = read_object( obj_load, VIRTUAL );
       obj_to_char(obj,mob);

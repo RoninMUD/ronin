@@ -143,7 +143,7 @@ int green_beret(OBJ *beret, CHAR *ch, int cmd, char *arg)
 	      act("Your beret suddenly sprouts additional vegetation.",0,ch,0,0,TO_CHAR);
 	      break;
 	    case CLASS_NINJA:
-	      beret->affected[0].modifier=2;
+	      beret->affected[0].modifier=3;
 	      beret->affected[1].location=APPLY_HITROLL;
 	      beret->affected[1].modifier=2;
 	      beret->affected[2].location=APPLY_SKILL_PUMMEL;
@@ -153,7 +153,7 @@ int green_beret(OBJ *beret, CHAR *ch, int cmd, char *arg)
 	      act("The colors in your beret seem to shift to match your surroundings.",0,ch,0,0,TO_CHAR);
 	      break;
 	    case CLASS_THIEF:
-	      beret->affected[0].modifier=2;
+	      beret->affected[0].modifier=3;
 	      beret->affected[1].location=APPLY_SKILL_BACKSTAB;
 	      beret->affected[1].modifier=GET_LEVEL(ch)/6;
 	      beret->affected[2].location=APPLY_DEX;
@@ -163,7 +163,7 @@ int green_beret(OBJ *beret, CHAR *ch, int cmd, char *arg)
 	      act("A drooping fern sprouts from atop your beret, concealing your face.",0,ch,0,0,TO_CHAR);
 	      break;
 	    case CLASS_BARD:
-	      beret->affected[0].modifier=2;
+	      beret->affected[0].modifier=3;
 	      beret->affected[1].location=APPLY_HITROLL;
 	      beret->affected[1].modifier=1;
 	      beret->affected[2].location=APPLY_SKILL_BACKFLIP;
