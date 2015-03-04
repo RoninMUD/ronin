@@ -372,7 +372,6 @@ to hold the shabtis. These pouches are fashioned from a variety of material: woo
 leather, linen and silk. Each fabric is stained by a variety of unsettling sources:\n\r\
 one appears to be blood, another is some sort of viscous green liquid, the next is\n\r\
 bleached completely white and the last is coated in a thin dusting of desert sand.\n\r");
-<<<<<<< HEAD
 						send_to_char(info_str, owner);
 				}
 				else
@@ -389,24 +388,6 @@ bleached completely white and the last is coated in a thin dusting of desert san
 					if(shabtis->obj_flags.value[i] == 0)
 					{ /* if charged */
 						sprintf(info_str, "Using both hands, you shake the shabti of Swnu violently; an eerie whine emanates\n\r\
-=======
-            send_to_char(info_str, owner);
-        }
-        else
-          break; /* skip to normal examine procedure */
-        bReturn = TRUE;
-      }
-      break;
-    case CMD_USE:
-      if(!IS_NPC(owner) && owner && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by) && shabtis==EQ(owner,WEAR_WAISTE) && V_OBJ(shabtis)==QGII_SHABTIS)
-      {
-        one_argument(arg, buf);
-        if(!strncmp(buf, "swnu", MIL) || !strncmp(buf, "Swnu", MIL))
-        { i = 0; /* 0:Swnu - "Doctor" great mira */
-          if(shabtis->obj_flags.value[i] == 0)
-          { /* if charged */
-            sprintf(info_str, "Using both hands, you shake the shabti of Swnu violently; an eerie whine emanates\n\r\
->>>>>>> 5a51aa0596ed183f0a144ef6212910737b59f808
 from the statue's now gaping mouth followed by an eruption of fetid blood pouring\n\r\
 out towards the ground. In mid-air, the fountain of blood appears to both boil and\n\r\
 then burst into thin wisps of crimson gas spiraling upwards and arcing suddenly\n\r\
@@ -807,7 +788,6 @@ int qgII_phylactery(OBJ *phylactery, CHAR *owner, int cmd, char *arg)
 
   switch(cmd)
   {
-<<<<<<< HEAD
   	case MSG_TICK:
   		owner = phylactery->equipped_by;
   		if(!owner)
@@ -916,118 +896,7 @@ int qgII_phylactery(OBJ *phylactery, CHAR *owner, int cmd, char *arg)
 			break;
   	default:
   		break;
-	}
-=======
-    case MSG_TICK:
-      owner = phylactery->equipped_by;
-      if(!owner)
-        owner = phylactery->carried_by;
-      if(owner && !IS_NPC(owner))
-      {
-        if(phylactery->spec_value > PHYLACTERY_MAX_CHARGES) /* spec_value is # of "wail" charges */
-        {
-          phylactery->spec_value = PHYLACTERY_MAX_CHARGES; /* max of PHYLACTERY_MAX_CHARGES "wail" charges */
-        }
-        else if(phylactery->spec_value < PHYLACTERY_MAX_CHARGES)
-        {
-          phylactery->obj_flags.timer--; /* timer is time left until next recharge */
-          if(phylactery->obj_flags.timer <= 0)
-          {
-            act("A shrill wail boils to the surface of the phylactery, seeping out through the gleaming gem.", FALSE, owner, NULL, NULL, TO_CHAR);
-            act("A faint wail seeps out from within the phylactery around $n's waist.", FALSE, owner, NULL, NULL, TO_ROOM);
-            phylactery->spec_value++; /* add a "wail" charge */
-            if(phylactery->spec_value < PHYLACTERY_MAX_CHARGES)
-            {
-              phylactery->obj_flags.timer = PHYLACTERY_CHARGE_TIME; /* set time until next recharge */
-            }
-          }
-        }
-      }
-      break;
-    case MSG_OBJ_ENTERING_GAME:
-      if((owner==phylactery->equipped_by || owner==phylactery->carried_by) && owner && !IS_NPC(owner))
-      {
-        if(phylactery->spec_value == PHYLACTERY_MAX_CHARGES)
-          break; /* if phylactery charges are maxed, skip */
-        if(is_number(arg))
-          outTime = atoi(arg); /* outTime = time in seconds since last in-game */
-        else
-          break;
-        outTime /= 60; /* time in minutes since last in-game */
-        phylactery->obj_flags.timer -= outTime; /* update time until next recharge based on time since last in-game */
-        while (phylactery->obj_flags.timer <= 0 && phylactery->spec_value < PHYLACTERY_MAX_CHARGES)
-        { /* while time until next charge is less than 1, keep adding a charge and updating time to next charge - stop at PHYLACTERY_MAX_CHARGES (full) charges */
-          phylactery->spec_value++; /* add a charge if time since last in-game is greater than time to charge */
-          if(phylactery->spec_value < PHYLACTERY_MAX_CHARGES)
-            phylactery->obj_flags.timer += PHYLACTERY_CHARGE_TIME;
-          else
-            phylactery->obj_flags.timer = 0;
-        }
-      }
-      break;
-    case CMD_EXAMINE:
-      if((owner==phylactery->equipped_by || owner==phylactery->carried_by) && owner && !IS_NPC(owner))
-      {
-        one_argument(arg, buf);
-        if(AWAKE(owner) && phylactery && V_OBJ(phylactery)==QGII_PHYLACTERY && !strncmp(buf, "phylactery", MIL))
-        {
-          if(phylactery->spec_value <= 0)
-            send_to_char("The faint wailing that once issued from the phylactery has been silenced.\n\r\n\r", owner);
-          else if(phylactery->spec_value == 1)
-            send_to_char("A faint, shrill wail echoes from within the phylactery.\n\r", owner);
-          else if(phylactery->spec_value == 2)
-            send_to_char("A duet of keening wails issue forth from the phylactery.\n\r", owner);
-          else if(phylactery->spec_value >= 3)
-            send_to_char("A cacophony of keening wails erupts from the phylactery.\n\r", owner);
-          bReturn = TRUE;
-        }
-      }
-      break;
-    case CMD_UNKNOWN:
-      if((owner==phylactery->equipped_by || owner==phylactery->carried_by) && owner && !IS_NPC(owner))
-      {
-        arg = one_argument(arg, buf);
-        if(AWAKE(owner) && phylactery==EQ(owner,WEAR_WAISTE) && V_OBJ(phylactery)==QGII_PHYLACTERY && !strncmp(buf, "wail", MIL))
-        {
-          if(phylactery->spec_value > 0)
-          {
-            act("$n surges with puissance of the Bean-Sidhe and expels a keening wail!", FALSE, owner, NULL, NULL, TO_ROOM);
-            act("The spirit of the Bean-Sidhe erupts from within as you expel a keening wail!", FALSE, owner, NULL, NULL, TO_CHAR);
-            for(i = descriptor_list; i; i = i->next)
-            { /* display wail message to all characters in zone */
-              if(i->character != owner && !i->connected && (world[CHAR_REAL_ROOM(i->character)].zone == world[CHAR_REAL_ROOM(owner)].zone))
-                act("A shrieking wail echoes across the land.", FALSE, owner, NULL, i->character, TO_VICT);
-            }
-            for(vict = world[CHAR_REAL_ROOM(owner)].people; vict; vict = next_vict)
-            {
-              next_vict = vict->next_in_room;
-              if(!IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM)
-                continue; /* skip gods */
-              if(vict->master==owner || vict->specials.rider==owner)
-                continue; /* skip wailers charmies/pets/mount */
-              if(!ROOM_CHAOTIC(CHAR_REAL_ROOM(owner)) && (IS_MOUNT(vict) || !IS_NPC(vict) || vict->master || IS_AFFECTED(vict, AFF_CHARM)))
-                continue; /* skip mounts/PCs/pets/charmies in non-chaos rooms/mode */
-              stop_fighting(vict); /* stop the vict fighting so damage() will make the wailer tank against that vict */
-              damage(owner, vict, 333, TYPE_UNDEFINED, DAM_NO_BLOCK);
-            }
-            if(phylactery->spec_value == PHYLACTERY_MAX_CHARGES)
-              phylactery->obj_flags.timer = PHYLACTERY_CHARGE_TIME; /* start recharge timer - if charges were less than PHYLACTERY_MAX_CHARGES, should already have a running timer */
-            phylactery->spec_value--; /* remove a "wail" charge */
-            WAIT_STATE(owner, PULSE_VIOLENCE);
-          }
-          else
-          {
-            act("$n opens $s mouth wide but utters only a quiet whimper.", FALSE, owner, NULL, NULL, TO_ROOM);
-            act("You attempt a keening ululation but produce only a soft whimper.", FALSE, owner, NULL, NULL, TO_CHAR);
-          }
-          bReturn = TRUE;
-        }
-      }
-      break;
-    default:
-      break;
   }
->>>>>>> 5a51aa0596ed183f0a144ef6212910737b59f808
   return bReturn;
 }
 
