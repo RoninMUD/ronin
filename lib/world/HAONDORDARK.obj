@@ -36,15 +36,15 @@ A colossal tree blocks the way westwards.~
 0 0 0
 50
 E
+opening~
+The opening is far too narrow for you to squeeze through but it looks as if the
+tree is hollow.
+~
+E
 tree~
 This enourmous tree must be a thousand years old.  Its rough bark looks grey
 and pale and is decorated with scratches and clawmarks.  On its west side is a
 small opening just above ground level.
-~
-E
-opening~
-The opening is far too narrow for you to squeeze through but it looks as if the
-tree is hollow.
 ~
 X
 ~
@@ -363,7 +363,7 @@ wearer is a known friend of the forest realm.
 ~
 X
 ~
-4 0 0
+0 0 0
 M
 ~
 ~
@@ -371,7 +371,5 @@ As you remove the beret it returns to its original leafy form.~
 As $n removes the beret it returns to its original leafy form.~
 A
 19 3
-T
-22111
 #0
 $~

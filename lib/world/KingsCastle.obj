@@ -214,13 +214,13 @@ The royal banner has been firmly planted in the ground here!~
 100 25000 8000
 50
 E
+flag~
+On the flag is the symbol of King Welmar's house, the rampant stag.
+~
+E
 banner royal standard~
 It is large and very heavy. On top of it flutters King Welmar's flag
 proudly.
-~
-E
-flag~
-On the flag is the symbol of King Welmar's house, the rampant stag.
 ~
 X
 ~
@@ -295,17 +295,17 @@ There is a book lying here.~
 10 20 400
 50
 E
-book~
-It is a big book with a black cover. Printed with gold letters on the outside
-is the title:
-5~         'Sapowox's Book on Philosophy'
-~
-E
 text philosophy contents pages~
 Hmm, it starts:
 "Thou art only a Binary Object in an Abstract World."
 Then it goes on discussing a philosophy far beyond your capacity of
 understanding.
+~
+E
+book~
+It is a big book with a black cover. Printed with gold letters on the outside
+is the title:
+5~         'Sapowox's Book on Philosophy'
 ~
 X
 ~
@@ -396,7 +396,7 @@ A strange set of opal footwear rests here.~
 0
 X
 ~
-4 0 0
+0 0 0
 M
 ~
 ~
@@ -408,7 +408,5 @@ A
 18 2
 A
 14 95
-T
-4651
 #0
 $~

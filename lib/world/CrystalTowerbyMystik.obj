@@ -358,7 +358,7 @@ with mithril, forming a magnificently powerful shield.
 ~
 X
 ~
-4 0 0
+0 0 0
 M
 ~
 ~
@@ -369,9 +369,7 @@ A
 A
 18 4
 A
-52 14
-T
-17659
+52 21
 #17345
 parchment piece charred~
 a piece of charred parchment~
@@ -430,7 +428,7 @@ crafted with such a powerful magic at its heart.
 ~
 X
 $r firey tooth glows white hot then cools in an instant.~
-4 0 0
+0 0 0
 M
 ~
 ~
@@ -442,8 +440,6 @@ A
 18 5
 A
 45 7
-T
-22111
 #17371
 dragon horn light sceptre~
 Dragon Horn~
@@ -514,9 +510,21 @@ A parchment scroll is here.~
 1 5 1
 100
 E
-scroll~
-There are a couple pages to the scroll, one labelled page1, and the other
-page2.
+page2~
+
+Considering you relationship with one of the possible donors, I assume you will
+be looking for a Pyrolisk in short order.  Lastly, you need a mage to enchant 
+an Item to forge the object into the desired form.  To this end, I am making a 
+hammer as a gift to you and am enclosing the directions on its use, so that a 
+lesser mage can bind the magic to the item in question.  The main part to 
+remember is that once you put the components on the anvil, a mage must use the
+hammer to forge the components together.  This will release the spell I have 
+ingrained into the hammer and the object of you interest will be formed.
+  Also, many valuable items can be joined to form an even more valuable item.
+The only way to be figure out the right combination is by experimentation.
+
+                                                    Signed, Marcus
+
 ~
 E
 page1~
@@ -536,21 +544,9 @@ do, therefore I suggest the Canine tooth of an elder of one of the two
 species in question.  (continues on page 2)
 ~
 E
-page2~
-
-Considering you relationship with one of the possible donors, I assume you will
-be looking for a Pyrolisk in short order.  Lastly, you need a mage to enchant 
-an Item to forge the object into the desired form.  To this end, I am making a 
-hammer as a gift to you and am enclosing the directions on its use, so that a 
-lesser mage can bind the magic to the item in question.  The main part to 
-remember is that once you put the components on the anvil, a mage must use the
-hammer to forge the components together.  This will release the spell I have 
-ingrained into the hammer and the object of you interest will be formed.
-  Also, many valuable items can be joined to form an even more valuable item.
-The only way to be figure out the right combination is by experimentation.
-
-                                                    Signed, Marcus
-
+scroll~
+There are a couple pages to the scroll, one labelled page1, and the other
+page2.
 ~
 X
 ~
