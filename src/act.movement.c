@@ -360,11 +360,11 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
 
   if (GET_POS(ch) == POSITION_SWIMMING) {
     if (ch->player.poofout && GET_LEVEL(ch)<LEVEL_IMM) {
-       sprintf(tmp, "%s %s.", ch->player.poofout,dirs[cmd]);
+       snprintf(tmp, sizeof(tmp), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
     else
     {
-      sprintf(tmp, "$n swims %s.", dirs[cmd]);
+      snprintf(tmp, sizeof(tmp), "$n swims %s.", dirs[cmd]);
     }
     act(tmp, 2, ch, 0, 0, TO_ROOM);
   }
@@ -382,9 +382,9 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
        send_to_char("Your mount isn't able to move.\n\r",ch);
        return(FALSE);
     }
-    sprintf(tmp, "$n rides %s.", dirs[cmd]);
+    snprintf(tmp, sizeof(tmp), "$n rides %s.", dirs[cmd]);
     if (victim) {
-       if (GET_POS(victim)==POSITION_FLYING) sprintf(tmp, "$n flies %s.", dirs[cmd]);
+       if (GET_POS(victim)==POSITION_FLYING) snprintf(tmp, sizeof(tmp), "$n flies %s.", dirs[cmd]);
     }
     act(tmp, 2, ch, 0, 0, TO_ROOM);
   }
@@ -392,29 +392,29 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
     owner=ch->specials.rider;
     for(i = world[CHAR_REAL_ROOM(ch)].people; i ; i = i->next_in_room) {
       if(!(CAN_SEE(i,owner)) && (i!=owner) ) {
-        sprintf(tmp, "$n leaves %s.", dirs[cmd]);
-        if(GET_POS(ch)==POSITION_FLYING) sprintf(tmp, "$n flies %s.", dirs[cmd]);
+        snprintf(tmp, sizeof(tmp), "$n leaves %s.", dirs[cmd]);
+        if(GET_POS(ch)==POSITION_FLYING) snprintf(tmp, sizeof(tmp), "$n flies %s.", dirs[cmd]);
         act(tmp, 2, ch, 0, i, TO_VICT);
       }
     }
   }
   else if (!IS_AFFECTED(ch, AFF_SNEAK) && !IS_AFFECTED(ch, AFF_FLY)) {
     if(ch->player.poofout && GET_LEVEL(ch)<LEVEL_IMM) {
-      sprintf(tmp, "%s %s.",ch->player.poofout,dirs[cmd]);
+      snprintf(tmp, sizeof(tmp), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
     else {
-      sprintf(tmp, "$n leaves %s.", dirs[cmd]);
-      if(GET_HIT(ch) < (hit_limit(ch)/10)) sprintf(tmp, "$n crawls %s.", dirs[cmd]);
+      snprintf(tmp, sizeof(tmp), "$n leaves %s.", dirs[cmd]);
+      if(GET_HIT(ch) < (hit_limit(ch)/10)) snprintf(tmp, sizeof(tmp), "$n crawls %s.", dirs[cmd]);
     }
     act(tmp, 2, ch, 0,0,TO_ROOM);
   }
   else if (IS_AFFECTED(ch, AFF_FLY)) {
     if (ch->player.poofout && GET_LEVEL(ch)<LEVEL_IMM) {
-       sprintf(tmp, "%s %s.", ch->player.poofout,dirs[cmd]);
+       snprintf(tmp, sizeof(tmp), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
     else
     {
-      sprintf(tmp, "$n flies %s.", dirs[cmd]);
+      snprintf(tmp, sizeof(tmp), "$n flies %s.", dirs[cmd]);
     }
     act(tmp, 2, ch, 0, 0, TO_ROOM);
   }
