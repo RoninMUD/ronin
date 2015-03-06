@@ -3111,7 +3111,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
 
   if ((attacktype == SKILL_CIRCLE) &&
       (dam > 0) &&
-      (GET_LEVEL(ch) == 50) &&
+      (GET_LEVEL(ch) >= 45) &&
       (ch->skills[SKILL_TWIST].learned > (number(1, 129) - GET_DEX_APP(ch) - affected_by_spell(ch, SKILL_VEHEMENCE) ? (5 + (GET_DEX_APP(ch) / 2)) : 0)) &&
       (CHAR_REAL_ROOM(victim) == CHAR_REAL_ROOM(ch)))
   {
