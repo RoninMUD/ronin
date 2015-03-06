@@ -3286,8 +3286,6 @@ int close_combat_bonus(CHAR *ch, int type)
 
   if (!ch->skills || !check_subclass(ch, SC_BANDIT, 4)) return 0;
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_CLOSE_COMBAT)) return 0;
-
   switch (type)
   {
     case 0:
@@ -3393,35 +3391,30 @@ int compute_ac(CHAR *ch)
 
   ch_ac = (GET_AC(ch));
 
-  if (AWAKE(ch))
-  {
-    ch_ac += (dex_app[GET_DEX(ch)].defensive); //note: negative value, so this is "good" AC despite any += confusion
+  if (AWAKE(ch)) {
+    ch_ac += (dex_app[GET_DEX(ch)].defensive); // adds negative value
   }
 
-  ch_ac += close_combat_bonus(ch, 1); //note: negative value, so this is "good" AC despite any += confusion
+  ch_ac += close_combat_bonus(ch, 1); // adds negative value
 
-  if (affected_by_spell(ch, SPELL_BLUR))
-  {
+  if (affected_by_spell(ch, SPELL_BLUR)) {
     ch_ac -= (GET_LEVEL(ch) / 2);
   }
 
-  if (affected_by_spell(ch, SKILL_VEHEMENCE))
-  {
+  if (affected_by_spell(ch, SKILL_VEHEMENCE)) {
     ch_ac += 30; /* 30 AC Penalty */
   }
 
-  if (!IS_NPC(ch))
-  {
+  if (!IS_NPC(ch)) {
     if (affected_by_spell(ch, SKILL_DEFEND) &&
-        !affected_by_spell(ch, SKILL_BERSERK))
-    {
+        !affected_by_spell(ch, SKILL_BERSERK)) {
       ch_ac = MAX(-300, ch_ac);
     }
-    else
-    {
+    else {
       ch_ac = MAX(-250, ch_ac);
     }
   }
+
   return ch_ac;
 }
 

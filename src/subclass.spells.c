@@ -845,8 +845,11 @@ void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
   }
 }
 
+int stack_position(CHAR *ch, int target_position);
 void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
+  int set_pos = 0;
+
   if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
   {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
@@ -859,12 +862,12 @@ void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
+  set_pos = stack_position(victim, POSITION_RESTING);
+
   damage(ch, victim, 300, SPELL_DIVINE_WIND, DAM_MAGICAL);
 
-  if (CHAR_REAL_ROOM(victim) != NOWHERE &&
-      !IS_IMPLEMENTOR(victim))
-  {
-    GET_POS(victim) = POSITION_RESTING;
+  if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
+    GET_POS(victim) = set_pos;
   }
 }
 

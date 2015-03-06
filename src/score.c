@@ -439,6 +439,12 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
   case SCQ_EXP_TO_LEVEL:
     sprintf(buf, "%sXP to Level:%s %-13d",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP_TO_LEVEL(ch));
+    if (GET_LEVEL(ch) < LEVEL_MORT)
+      printf_to_char(ch, "   %sXP to Level:%s %-13d\n\r",
+      CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP_TO_LEVEL(ch));
+    else
+      printf_to_char(ch, "   %sXP to Level:%s Max Level\n\r",
+      CHCLR(ch, 7), ENDCHCLR(ch));
     break;
   case SCQ_REMORT_EXP:
     sprintf(buf, "%sRemort XP:%s %-13lld",
@@ -888,8 +894,12 @@ void do_score(CHAR *ch, char *argument, int cmd)
     else
       printf_to_char(ch, "%-2d       %-2d            ",
         GET_OWIS(ch), GET_WIS(ch));
-    printf_to_char(ch, "   %sXP to Level:%s %d\n\r",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP_TO_LEVEL(ch));
+    if (GET_LEVEL(ch) < LEVEL_MORT)
+      printf_to_char(ch, "   %sXP to Level:%s %d\n\r",
+        CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP_TO_LEVEL(ch));
+    else
+      printf_to_char(ch, "   %sXP to Level:%s Max Level\n\r",
+        CHCLR(ch, 7), ENDCHCLR(ch));
 
     printf_to_char(ch, " %sArmor Class:%s %+-13d ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_MOD_AC(ch));
