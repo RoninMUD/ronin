@@ -1319,7 +1319,7 @@ void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
 
   ch->player.time.logon = time(0);
 
-  for (i = 0; i <= MAX_TOUNGE - 1; i++)
+  for (i = 0; i <= MAX_TONGUE - 1; i++)
     ch->player.talks[i] = st->talks[i];
 
   ch->player.weight = st->weight;
@@ -1480,7 +1480,7 @@ void store_to_char_4(struct char_file_u_4 *st, CHAR *ch) {
 
   ch->player.time.logon = time(0);
 
-  for (i = 0; i <= MAX_TOUNGE - 1; i++)
+  for (i = 0; i <= MAX_TONGUE - 1; i++)
     ch->player.talks[i] = st->talks[i];
 
   ch->player.weight = st->weight;
@@ -1662,7 +1662,7 @@ void store_to_char_2(struct char_file_u_2 *st, CHAR *ch) {
 
   ch->player.time.logon = time(0);
 
-  for (i = 0; i <= MAX_TOUNGE - 1; i++)
+  for (i = 0; i <= MAX_TONGUE - 1; i++)
     ch->player.talks[i] = st->talks[i];
 
   ch->player.weight = st->weight;
@@ -1946,7 +1946,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
     }
 
 
-  for (i = 0; i <= MAX_TOUNGE - 1; i++)
+  for (i = 0; i <= MAX_TONGUE - 1; i++)
     st->talks[i] = ch->player.talks[i];
 
   for (i = 0; i <= MAX_SKILLS5 - 1; i++)
