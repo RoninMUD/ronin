@@ -845,6 +845,7 @@ void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
   }
 }
 
+int stack_position(CHAR *ch, int target_position);
 void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
   if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
@@ -861,10 +862,9 @@ void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   damage(ch, victim, 300, SPELL_DIVINE_WIND, DAM_MAGICAL);
 
-  if (CHAR_REAL_ROOM(victim) != NOWHERE &&
-      !IS_IMPLEMENTOR(victim))
+  if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
   {
-    GET_POS(victim) = POSITION_RESTING;
+    stack_position(victim, POSITION_RESTING);
   }
 }
 
