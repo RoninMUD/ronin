@@ -3111,7 +3111,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
 
   if ((attacktype == SKILL_CIRCLE) &&
       (dam > 0) &&
-      (GET_LEVEL(ch) == 50) &&
+      (GET_LEVEL(ch) >= 45) &&
       (ch->skills[SKILL_TWIST].learned > (number(1, 129) - GET_DEX_APP(ch) - affected_by_spell(ch, SKILL_VEHEMENCE) ? (5 + (GET_DEX_APP(ch) / 2)) : 0)) &&
       (CHAR_REAL_ROOM(victim) == CHAR_REAL_ROOM(ch)))
   {
@@ -3286,8 +3286,6 @@ int close_combat_bonus(CHAR *ch, int type)
 
   if (!ch->skills || !check_subclass(ch, SC_BANDIT, 4)) return 0;
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_CLOSE_COMBAT)) return 0;
-
   switch (type)
   {
     case 0:
@@ -3301,7 +3299,7 @@ int close_combat_bonus(CHAR *ch, int type)
       }
       break;
     case 1:
-      bonus = -2;
+      bonus = -20;
       break;
     default:
       bonus = 0;
@@ -3391,35 +3389,29 @@ int compute_ac(CHAR *ch)
 {
   int ch_ac = 0;
 
-  ch_ac = (GET_AC(ch) / 10);
+  ch_ac = (GET_AC(ch));
 
-  if (AWAKE(ch))
-  {
-    ch_ac += (dex_app[GET_DEX(ch)].defensive / 10);
+  if (AWAKE(ch)) {
+    ch_ac += (dex_app[GET_DEX(ch)].defensive); // adds negative value
   }
 
-  ch_ac += close_combat_bonus(ch, 1);
+  ch_ac += close_combat_bonus(ch, 1); // adds negative value
 
-  if (affected_by_spell(ch, SPELL_BLUR))
-  {
+  if (affected_by_spell(ch, SPELL_BLUR)) {
     ch_ac -= (GET_LEVEL(ch) / 2);
   }
 
-  if (affected_by_spell(ch, SKILL_VEHEMENCE))
-  {
-    ch_ac += 3; /* 30 AC Penalty */
+  if (affected_by_spell(ch, SKILL_VEHEMENCE)) {
+    ch_ac += 30; /* 30 AC Penalty */
   }
 
-  if (!IS_NPC(ch))
-  {
+  if (!IS_NPC(ch)) {
     if (affected_by_spell(ch, SKILL_DEFEND) &&
-        !affected_by_spell(ch, SKILL_BERSERK))
-    {
-      ch_ac = MAX(-30, ch_ac);
+        !affected_by_spell(ch, SKILL_BERSERK)) {
+      ch_ac = MAX(-300, ch_ac);
     }
-    else
-    {
-      ch_ac = MAX(-25, ch_ac);
+    else {
+      ch_ac = MAX(-250, ch_ac);
     }
   }
 
@@ -3677,7 +3669,7 @@ bool try_hit(CHAR *ch, CHAR *victim)
   if (check == 1) return FALSE; // 1 always results in a miss.
   else if (check == 20) return TRUE; // 20 always results in a hit.
 
-  if (compute_thaco(ch) - check > compute_ac(victim)) return FALSE;
+  if (compute_thaco(ch) - check > (compute_ac(victim) / 10)) return FALSE;
 
   return TRUE;
 }

@@ -999,9 +999,9 @@ void do_circle(CHAR *ch, char *argument, int cmd)
       ench.name = strdup("Dazed");
       ench.type = SKILL_IMPAIR;
       ench.duration = 0;
-      ench.location = 0;
+      ench.location = APPLY_HITROLL;
       ench.modifier = -2;
-      ench.bitvector = APPLY_HITROLL;
+      ench.bitvector = 0;
       ench.bitvector2 = 0;
       ench.func = impair_enchantment;
 

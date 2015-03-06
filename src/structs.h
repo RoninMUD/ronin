@@ -569,7 +569,7 @@ struct room_data
 
 /* For 'char_payer_data' */
 
-#define MAX_TOUNGE  3     /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
+#define MAX_TONGUE  3     /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 #define MAX_SKILLS4  255    /* All pfile versions up to 4 */
 #define MAX_SKILLS5  500    /* pfile version 5 */
 #define MAX_WEAR    18
@@ -994,7 +994,7 @@ struct char_player_data
   ubyte level;         /* PC / NPC s level                     */
   int hometown;       /* PC s Hometown (zone)                 */
 
-  bool talks[MAX_TOUNGE]; /* PC s Tounges 0 for NPC           */
+  bool talks[MAX_TONGUE]; /* PC s Tongues 0 for NPC           */
   struct time_data time; /* PC s AGE in days                 */
   ubyte weight;       /* PC / NPC s weight                    */
   ubyte height;       /* PC / NPC s height                    */
@@ -1464,7 +1464,7 @@ struct char_file_u_5
   char description[240];
   char poofin[150];
   char poofout[150];
-  bool talks[MAX_TOUNGE];
+  bool talks[MAX_TONGUE];
   int colors[MAX_COLORS];
   sh_int load_room;            /* Which room to place char in           */
 
@@ -1515,7 +1515,7 @@ struct char_file_u_4
   char description[240];
   char poofin[150];
   char poofout[150];
-  bool talks[MAX_TOUNGE];
+  bool talks[MAX_TONGUE];
   int colors[MAX_COLORS];
   sh_int load_room;            /* Which room to place char in           */
 
@@ -1565,7 +1565,7 @@ struct char_file_u_2
   char description[240];
   char poofin[150];
   char poofout[150];
-  bool talks[MAX_TOUNGE];
+  bool talks[MAX_TONGUE];
   int colors[MAX_COLORS];
   int special[10];
 

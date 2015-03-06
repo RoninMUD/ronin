@@ -2914,7 +2914,7 @@ void init_char(struct char_data *ch)
      ch->ver3.created=(timeStruct->tm_mon+1)*1000000+timeStruct->tm_mday*10000+
                        1900+timeStruct->tm_year;
 
-     for (i = 0; i < MAX_TOUNGE; i++)
+     for (i = 0; i < MAX_TONGUE; i++)
       ch->player.talks[i] = 0;
 
      GET_STR(ch) = 9;

@@ -236,9 +236,6 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_IMPAIR:
       if (check_subclass(ch, SC_BANDIT, 2)) return TRUE;
       break;
-    case SKILL_CLOSE_COMBAT:
-      if (check_subclass(ch, SC_BANDIT, 4)) return TRUE;
-      break;
     case SKILL_EVASION:
       if (check_subclass(ch, SC_BANDIT, 5)) return TRUE;
       break;

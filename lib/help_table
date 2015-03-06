@@ -7184,10 +7184,11 @@ See Also: SUBCLASSES ROGUE
 Subclass Bandit: Level 4 (Thief)
  
 The Bandit benefits from an increased combat awareness, granting him an
-increase of 1 hitroll, 1 damroll and 20 armor. When fighting in close
-quarters (inside), the Bandit has a chance of increasing his/her damroll
-by 4 and hitroll by 4.  The success of gaining the increases at each hit
-is dependent on how well the skill is practiced.
+increase of 1 hitroll, 1 damroll and 20 armor.  When fighting in close
+quarters (inside), the Bandit receives an additional increase of his/her
+damroll by 4 and hitroll by 4.
+
+This is an automatic skill and will apply to all hits.
  
 See Also: SUBCLASSES BANDIT
 #
@@ -7693,7 +7694,7 @@ Save        : -
 Mana Cost   : 0
 
 The Druid is able to sacrifice his/her health by absorbing hitpoints
-and converting them to mana at a 1-1 ratio.  All but 10 hitpoints
+and converting them to mana at a 1-2 ratio.  All but 10 hitpoints
 may be converted depending on how much mana the Druid needs restored.
 However, the Druid is unable to be healed by any means for a duration
 of 2 ticks after the cast and cannot use degenerate again for 30

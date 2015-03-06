@@ -339,7 +339,7 @@ $State: Exp $
 #define SKILL_FRENZY                186
 #define SKILL_TROPHY                185 /* Used to be Scalp */
 #define SKILL_RIPOSTE               184
-#define SKILL_CLOSE_COMBAT          183
+#define SKILL_UNUSED_183            183 /* Used to be close combat */
 #define SPELL_INCENDIARY_CLOUD      182
 #define SPELL_DEVASTATION           181
 #define SPELL_SHADOW_WRAITH         180

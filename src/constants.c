@@ -263,7 +263,7 @@ const char *spell_wear_off_msg[] = {
   "You shadow dissipates.",/*180 shadow wraith*/
   "!devastation!",/*181*/
   "The cloud of fire surrounding you dies out.",/*182*/
-  "!close combat!",/*183*/
+  "!unused183!",/*183*/
   "!riposte!",/*184*/
   "!trophy!",/*185*/
   "!frenzy!",/*186*/
@@ -2686,7 +2686,6 @@ char *t_skills[] = {
   "fade",
   "dirty tricks",
   "impair",
-  "close combat",
   "vehemence", /* Used to be Execute */
   "twist",
   "cunning",
