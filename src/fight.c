@@ -2566,7 +2566,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     dam = lround(dam * 0.50);    /* half damage from poison */
   }
 
-  dam = MIN(dam, 30000);
+  dam = MIN(dam, 10000);
   dam = MAX(dam, 0);
 
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) && !IS_NPC(ch) && !IS_NPC(victim))
@@ -2661,18 +2661,9 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
   {
     if (affected_by_spell(victim, SPELL_DIVINE_INTERVENTION))
     {
-      if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-          ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-          ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-      {
-        send_to_char("The magic of the divine intervention fails to heal your degenerated body.\n\r", victim);
-      }
-      else {
-        GET_HIT(victim) = GET_MAX_HIT(victim);
-        act("$n's life has been restored by divine forces.", FALSE, victim, 0, 0, TO_ROOM);
-        act("Your life has been restored by divine forces.", FALSE, victim, 0, 0, TO_CHAR);
-      }
-
+      GET_HIT(victim) = GET_MAX_HIT(victim);
+      act("$n's life has been restored by divine forces.", FALSE, victim, 0, 0, TO_ROOM);
+      act("Your life has been restored by divine forces.", FALSE, victim, 0, 0, TO_CHAR);
       affect_from_char(victim, SPELL_DIVINE_INTERVENTION);
       update_pos(victim);
     }
@@ -3301,7 +3292,7 @@ int close_combat_bonus(CHAR *ch, int type)
       }
       break;
     case 1:
-      bonus = -2;
+      bonus = -20;
       break;
     default:
       bonus = 0;
@@ -3391,14 +3382,14 @@ int compute_ac(CHAR *ch)
 {
   int ch_ac = 0;
 
-  ch_ac = (GET_AC(ch) / 10);
+  ch_ac = (GET_AC(ch));
 
   if (AWAKE(ch))
   {
-    ch_ac += (dex_app[GET_DEX(ch)].defensive / 10);
+    ch_ac += (dex_app[GET_DEX(ch)].defensive); //note: negative value, so this is "good" AC despite any += confusion
   }
 
-  ch_ac += close_combat_bonus(ch, 1);
+  ch_ac += close_combat_bonus(ch, 1); //note: negative value, so this is "good" AC despite any += confusion
 
   if (affected_by_spell(ch, SPELL_BLUR))
   {
@@ -3407,7 +3398,7 @@ int compute_ac(CHAR *ch)
 
   if (affected_by_spell(ch, SKILL_VEHEMENCE))
   {
-    ch_ac += 3; /* 30 AC Penalty */
+    ch_ac += 30; /* 30 AC Penalty */
   }
 
   if (!IS_NPC(ch))
@@ -3415,14 +3406,13 @@ int compute_ac(CHAR *ch)
     if (affected_by_spell(ch, SKILL_DEFEND) &&
         !affected_by_spell(ch, SKILL_BERSERK))
     {
-      ch_ac = MAX(-30, ch_ac);
+      ch_ac = MAX(-300, ch_ac);
     }
     else
     {
-      ch_ac = MAX(-25, ch_ac);
+      ch_ac = MAX(-250, ch_ac);
     }
   }
-
   return ch_ac;
 }
 
@@ -3677,7 +3667,7 @@ bool try_hit(CHAR *ch, CHAR *victim)
   if (check == 1) return FALSE; // 1 always results in a miss.
   else if (check == 20) return TRUE; // 20 always results in a hit.
 
-  if (compute_thaco(ch) - check > compute_ac(victim)) return FALSE;
+  if (compute_thaco(ch) - check > (compute_ac(victim) / 10)) return FALSE;
 
   return TRUE;
 }
@@ -4596,7 +4586,6 @@ void perform_violence(void)
 
       if (!IS_NPC(ch) &&
           check_sc_access(ch, SKILL_DIRTY_TRICKS) &&
-          affected_by_spell(ch, SKILL_DIRTY_TRICKS) &&
           chance(10)) /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
       {
         dirty_tricks_action(ch, vict);
