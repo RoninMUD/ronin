@@ -4595,6 +4595,7 @@ void perform_violence(void)
 
       if (!IS_NPC(ch) &&
           check_sc_access(ch, SKILL_DIRTY_TRICKS) &&
+          affected_by_spell(ch, SKILL_DIRTY_TRICKS) &&
           chance(10)) /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
       {
         dirty_tricks_action(ch, vict);
