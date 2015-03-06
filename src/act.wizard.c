@@ -3025,7 +3025,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
             j->obj_flags.value[2]);
        break;
      case ITEM_NOTE :
-       printf_to_char(ch,"Tounge : %d", j->obj_flags.value[0]);
+       printf_to_char(ch,"Tongue : %d", j->obj_flags.value[0]);
        break;
      case ITEM_KEY :
        printf_to_char(ch,"Keytype : %d", j->obj_flags.value[0]);
@@ -5753,7 +5753,7 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
          flags->value[3] ? "Yes" : "No");
     break;
   case ITEM_NOTE :
-    sprintf(str, "-Tounge : %d\n\r(not used: [%d] [%d] [%d])\n\r",
+    sprintf(str, "-Tongue : %d\n\r(not used: [%d] [%d] [%d])\n\r",
          flags->value[0],
          flags->value[1],
          flags->value[2],

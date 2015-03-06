@@ -866,9 +866,8 @@ void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   damage(ch, victim, 300, SPELL_DIVINE_WIND, DAM_MAGICAL);
 
-  if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
-  {
-    GET_POS(ch) = set_pos;
+  if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
+    GET_POS(victim) = set_pos;
   }
 }
 

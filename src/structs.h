@@ -994,7 +994,7 @@ struct char_player_data
   ubyte level;         /* PC / NPC s level                     */
   int hometown;       /* PC s Hometown (zone)                 */
 
-  bool talks[MAX_TONGUE]; /* PC s Tounges 0 for NPC           */
+  bool talks[MAX_TONGUE]; /* PC s Tongues 0 for NPC           */
   struct time_data time; /* PC s AGE in days                 */
   ubyte weight;       /* PC / NPC s weight                    */
   ubyte height;       /* PC / NPC s height                    */
