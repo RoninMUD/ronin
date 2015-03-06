@@ -355,7 +355,7 @@ char *spells[]= {
   "shadow wraith",/*180*/
   "devastation",/*181*/
   "incendiary cloud",/*182*/
-  "close combat",/*183*/
+  "",/*183*/
   "riposte",/*184*/
   "trophy", /* 185 Used to be Cover */
   "frenzy",/*186*/

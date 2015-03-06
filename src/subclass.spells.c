@@ -1484,9 +1484,9 @@ void spell_degenerate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     af.bitvector2 = 0;
     affect_to_char(ch, &af);
 
-    tmp = MIN(GET_HIT(ch) - 10, GET_MAX_MANA(ch) - GET_MANA(ch));
+    tmp = MIN(MAX(GET_HIT(ch) - 10, 0), (GET_MAX_MANA(ch) - GET_MANA(ch)) / 2);
     GET_HIT(ch) -= tmp;
-    GET_MANA(ch) = MIN(GET_MANA(ch) + tmp, GET_MAX_MANA(ch));
+    GET_MANA(ch) = MIN(GET_MANA(ch) + (tmp * 2), GET_MAX_MANA(ch));
   }
 }
 
