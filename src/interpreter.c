@@ -754,7 +754,7 @@ void assign_command_pointers ( void )
   COMMANDO("give"     ,CMD_GIVE      ,POSITION_RESTING   ,do_give,1);
   COMMANDO("quit"     ,CMD_QUIT      ,POSITION_DEAD      ,do_quit,1);
   COMMANDO("stat"     ,CMD_STAT      ,POSITION_DEAD      ,do_stat,LEVEL_IMM);
-  COMMANDO("setskill" ,CMD_SETSKILL  ,POSITION_DEAD     ,do_setskill,LEVEL_IMP);
+  COMMANDO("setskill" ,CMD_SETSKILL  ,POSITION_DEAD     ,do_setskill,LEVEL_SUP);
   COMMANDO("time"     ,CMD_TIME      ,POSITION_DEAD      ,do_time,1);
   COMMANDO("load"     ,CMD_LOAD      ,POSITION_DEAD      ,do_load,LEVEL_DEI);
   COMMANDO("purge"    ,CMD_PURGE     ,POSITION_DEAD      ,do_purge,LEVEL_DEI);
