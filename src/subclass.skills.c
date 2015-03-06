@@ -1749,13 +1749,6 @@ void do_mantra(CHAR *ch, char *arg, int cmd)
     return;
   }
 
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       (duration_of_spell(victim, SPELL_DEGENERATE) > 9 && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))))) {
-    send_to_char("The power of the skill fails to heal your degenerated body.\n\r", victim);
-    return;
-  }
-
   if (CHAOSMODE && victim != ch)
   {
     send_to_char("You cannot perform this skill on another player during chaos.\n\r", ch);
@@ -1765,8 +1758,14 @@ void do_mantra(CHAR *ch, char *arg, int cmd)
 
   check = number(1, 101) - GET_WIS_APP(ch);
 
-  if (check > GET_LEARNED(ch, SKILL_MANTRA))
-  {
+
+  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
+      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
+       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))))) {
+    check = 256; // auto fail
+  }
+
+  if (check > GET_LEARNED(ch, SKILL_MANTRA)) {
     if (victim != ch)
     {
       act("You chant your mantra to $N, but nothing happens.", FALSE, ch, 0, victim, TO_CHAR);
