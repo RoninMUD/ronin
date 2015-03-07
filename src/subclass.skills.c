@@ -314,9 +314,7 @@ void do_backfist(CHAR *ch, char *arg, int cmd)
   }
   else
   {
-    if (AWAKE(victim) &&
-        ((IS_NPC(victim) && IS_SET(victim->specials.immune2, SKILL_BACKFIST)) ||
-        (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))))
+    if (AWAKE(victim) && (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL)))
     {
       act("You backfist $N, but your backfist has no effect!", FALSE, ch, NULL, victim, TO_CHAR);
       act("$n backfists you, but $s backfist has no effect!", FALSE, ch, NULL, victim, TO_VICT);
@@ -1758,14 +1756,14 @@ void do_mantra(CHAR *ch, char *arg, int cmd)
 
   check = number(1, 101) - GET_WIS_APP(ch);
 
-
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
       ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
        ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))))) {
     check = 256; // auto fail
   }
 
-  if (check > GET_LEARNED(ch, SKILL_MANTRA)) {
+  if (check > GET_LEARNED(ch, SKILL_MANTRA))
+  {
     if (victim != ch)
     {
       act("You chant your mantra to $N, but nothing happens.", FALSE, ch, 0, victim, TO_CHAR);
