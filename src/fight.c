@@ -2373,11 +2373,6 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     GET_MANA(victim) = -100;
   }
 
-  if (dam > 0 && affected_by_spell(ch, SPELL_RIGHTEOUSNESS) && IS_EVIL(victim))
-  {
-    dam += 5;
-  }
-
   if (IS_AFFECTED(ch, AFF_FURY) &&
       (attacktype >= TYPE_HIT) &&
       (attacktype <= TYPE_SLICE))
@@ -2416,6 +2411,11 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
       !shadow)
   {
     dam += dam / 2;
+  }
+
+  if (dam > 0 && affected_by_spell(ch, SPELL_RIGHTEOUSNESS) && IS_EVIL(victim))
+  {
+    dam += 5;
   }
 
   /* New Invul code - Ranger Oct 99 */
