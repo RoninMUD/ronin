@@ -1432,6 +1432,12 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
       "With soul shattering force, $n's #W completely devastates $N.",
       "With soul shattering force, your #W completely devastates $N.",
       "With soul shattering force, $n's #W completely devastates you."
+    },
+
+    { /* > 550 */
+      "$n's cataclysmic #W pulverizes $N's flesh into a fine paste.",
+      "Your cataclysmic #W pulverizes $N's flesh into a fine paste.",
+      "$n's cataclysmic #W pulverizes your flesh into a fine paste."
     }
   };
 
@@ -1520,8 +1526,8 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
 
     { /* > 250 */
       "$N's bones crumble under $n's shadow's terrific hit.",
-      "$N's bones crumble under your terrific hit.",
-      "Your shadow's bones crumble under $n's shadow's terrific hit."
+      "$N's bones crumble under your shadow's terrific hit.",
+      "Your bones crumble under $n's shadow's terrific hit."
     },
 
     { /* > 350 */
@@ -1534,7 +1540,14 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
       "With soul shattering force, $n's shadow's hit completely devastates $N.",
       "With soul shattering force, your shadow's hit completely devastates $N.",
       "With soul shattering force, $n's shadow's hit completely devastates you."
+    },
+
+    { /* > 550 */
+      "$n's shadow's cataclysmic hit pulverizes $N's flesh into a fine paste.",
+      "Your shadow's cataclysmic hit pulverizes $N's flesh into a fine paste.",
+      "$n's shadow's cataclysmic hit pulverizes your flesh into a fine paste."
     }
+
   };
 
   if      (dam < 1)    index = 0;
@@ -1552,7 +1565,8 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
   else if (dam <= 250) index = 12;
   else if (dam <= 350) index = 13;
   else if (dam <= 450) index = 14;
-  else                 index = 15;
+  else if (dam <= 550) index = 15;
+  else                 index = 16;
 
   /* Change to base of table with text. */
   attack_type -= TYPE_HIT;
@@ -2359,10 +2373,14 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
     GET_MANA(victim) = -100;
   }
 
+  if (dam > 0 && affected_by_spell(ch, SPELL_RIGHTEOUSNESS) && IS_EVIL(victim))
+  {
+    dam += 5;
+  }
+
   if (IS_AFFECTED(ch, AFF_FURY) &&
       (attacktype >= TYPE_HIT) &&
-      (attacktype <= TYPE_SLICE) &&
-      !shadow)
+      (attacktype <= TYPE_SLICE))
   {
     if ((GET_LEVEL(ch) == 50) && (GET_CLASS(ch) == CLASS_PALADIN) && (GET_ALIGNMENT(ch) > 500) && !CHAOSMODE)
     {
@@ -2374,7 +2392,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
         dam = (dam * 23) / 10;
       else if (GET_ALIGNMENT(ch) > 600)
         dam = (dam * 22) / 10;
-      else 
+      else
         dam = (dam * 21) / 10;
     }
     else
@@ -2386,8 +2404,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
   if (!IS_AFFECTED(ch, AFF_FURY) &&
       (attacktype >= TYPE_HIT) &&
       (attacktype <= TYPE_SLICE) &&
-      affected_by_spell(ch, SPELL_RAGE) &&
-      !shadow)
+      affected_by_spell(ch, SPELL_RAGE))
   {
     dam += dam / 2;
   }
@@ -2399,11 +2416,6 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
       !shadow)
   {
     dam += dam / 2;
-  }
-
-  if (dam > 0 && affected_by_spell(ch, SPELL_RIGHTEOUSNESS) && IS_EVIL(victim))
-  {
-    dam += 5;
   }
 
   /* New Invul code - Ranger Oct 99 */
@@ -2665,7 +2677,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
           ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
           ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
       {
-        send_to_char("The magic of the divine intervention fails to heal your degenerated body.\n\r", victim);
+        send_to_char("The magic of the divine intervention fails to summon the gods to heal your degenerated body.\n\r", victim);
       }
       else {
         GET_HIT(victim) = GET_MAX_HIT(victim);
@@ -4033,12 +4045,6 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         else
         {
           multi = backstab_mult[GET_LEVEL(ch)];
-
-          if (type == SKILL_ASSASSINATE)
-          {
-            multi -= 2;
-          }
-
           dam *= MAX(1, multi);
           damage(ch, victim, dam, SKILL_BACKSTAB, DAM_NO_BLOCK);
         }

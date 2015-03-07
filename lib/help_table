@@ -6723,7 +6723,7 @@ Subclass Infidel: Level 1 (Anti-Paladin)
 Usage: assassinate <victim> <direction>
 
 This attack is used to quickly sneak into a room and perform a
-backstab attack on an unsuspecting victim.  An agressive victim
+backstab attack on an unsuspecting victim.  An aggressive victim
 doesn't have a chance to attack first.
 
 The Infidel must be sneaking to use this attack and the success is
@@ -6731,9 +6731,7 @@ dependent on how well the skill is practiced and the character's
 dexterity.
 
 This skill also allows an Infidel to use the backstab skill against a
-victim already in combat. However, the manouver is more difficult to
-accomplish than a standard backstab. As such, the multiplier of the
-attack is reduced by two in this situation.
+victim already in combat.
 
 See Also: SUBCLASSES INFIDEL
 #
@@ -6819,7 +6817,7 @@ but as more shadows are created, the chance of creating others
 decreases.
 
 A shadow can give a maximum of 1/2 the damage of the caster, and is
-unaffected by rage or fury.
+affected by either rage or fury.
 
 See Also: SUBCLASSES INFIDEL
 #
