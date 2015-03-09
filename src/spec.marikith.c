@@ -43,6 +43,7 @@ $State: Exp $
 extern struct time_info_data time_info;
 extern CHAR *character_list;
 extern char *spells[];
+extern OBJ  *object_list;
 
 extern int CHAOSMODE;
 
@@ -961,11 +962,21 @@ mar_egg (OBJ *egg, CHAR *ch, int cmd, char *arg)
 int
 mar_feather (OBJ *f, CHAR *ch, int cmd, char *arg)
 {
-  if(!ch)
-    return FALSE;
-  if (f->equipped_by == ch &&
-      obj_proto_table[f->item_number].number > MAR_FEATHER_LIMIT)
-    {
+  int count = 0;
+  OBJ *oi = NULL;
+
+  if(!ch) return FALSE;
+
+  if (f->equipped_by == ch) {
+
+    // count equipped feathers
+    for (oi = object_list; oi; oi = oi->next) {
+      if ((MAR_FEATHER == oi->item_number_v) && oi->equipped_by) {
+        count++;
+      }
+    }
+
+    if (MAR_FEATHER_LIMIT < count) {
       act ("$p bursts into bright flames and\n\rdisappears from your hands.",
 	   FALSE, ch, f, 0, TO_CHAR);
       act ("$p bursts into bright flames and\n\rdisappears from $n's hands.",
@@ -974,6 +985,8 @@ mar_feather (OBJ *f, CHAR *ch, int cmd, char *arg)
       obj_to_char (f, ch);
       extract_obj (f);
     }
+  }
+
   return FALSE;
 }
 
