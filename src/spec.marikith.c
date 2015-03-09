@@ -965,26 +965,24 @@ mar_feather (OBJ *f, CHAR *ch, int cmd, char *arg)
   int count = 0;
   OBJ *oi = NULL;
 
-  if(!ch) return FALSE;
+  if (MSG_MOBACT != cmd) return FALSE;
+  if (!(ch = f->equipped_by)) return FALSE;
 
-  if (f->equipped_by == ch) {
-
-    // count equipped feathers
-    for (oi = object_list; oi; oi = oi->next) {
-      if ((MAR_FEATHER == oi->item_number_v) && oi->equipped_by) {
-        count++;
-      }
+  // count equipped feathers
+  for (oi = object_list; oi; oi = oi->next) {
+    if ((MAR_FEATHER == oi->item_number_v) && oi->equipped_by) {
+      count++;
     }
+  }
 
-    if (MAR_FEATHER_LIMIT < count) {
-      act ("$p bursts into bright flames and\n\rdisappears from your hands.",
-	   FALSE, ch, f, 0, TO_CHAR);
-      act ("$p bursts into bright flames and\n\rdisappears from $n's hands.",
-	   FALSE, ch, f, 0, TO_ROOM);
-      unequip_char (ch, HOLD);
-      obj_to_char (f, ch);
-      extract_obj (f);
-    }
+  if (MAR_FEATHER_LIMIT < count) {
+    act("$p bursts into bright flames and\n\rdisappears from your hands.",
+      FALSE, ch, f, 0, TO_CHAR);
+    act ("$p bursts into bright flames and\n\rdisappears from $n's hands.",
+      FALSE, ch, f, 0, TO_ROOM);
+    unequip_char (ch, HOLD);
+    obj_to_char (f, ch);
+    extract_obj (f);
   }
 
   return FALSE;
