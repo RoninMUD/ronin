@@ -221,10 +221,6 @@ You see a beautiful but quiet plaza.
 ~
 0 -1 10916
 E
-tree~
-There is a big sign there.
-~
-E
 sign~
 There is something on it:
 
@@ -235,6 +231,10 @@ There is something on it:
      =========     ======   =====   ===== =
                         =
                    ======
+~
+E
+tree~
+There is a big sign there.
 ~
 S
 #10912
@@ -718,12 +718,12 @@ The great hall of the castle is over there.
 ~
 0 -1 10930
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10939
@@ -743,12 +743,12 @@ D3
 ~
 0 -1 10938
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10940
@@ -768,12 +768,12 @@ D3
 ~
 0 -1 10939
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10941
@@ -793,12 +793,12 @@ D2
 ~
 0 -1 10942
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10942
@@ -823,12 +823,12 @@ D3
 ~
 0 -1 10953
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10943
@@ -870,12 +870,12 @@ D3
 ~
 0 -1 10945
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10945
@@ -895,12 +895,12 @@ D2
 ~
 0 -1 10946
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10946
@@ -920,12 +920,12 @@ D2
 ~
 0 -1 10947
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10947
@@ -945,12 +945,12 @@ D1
 ~
 0 -1 10948
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10948
@@ -970,12 +970,12 @@ D3
 ~
 0 -1 10947
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10949
@@ -995,12 +995,12 @@ D3
 ~
 0 -1 10948
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10950
@@ -1020,12 +1020,12 @@ D3
 ~
 0 -1 10949
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10951
@@ -1045,12 +1045,12 @@ D3
 ~
 0 -1 10950
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10952
@@ -1070,12 +1070,12 @@ D3
 ~
 0 -1 10951
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10953
@@ -1095,12 +1095,12 @@ D2
 ~
 0 -1 10952
 E
-vessel vessels~
-A very heavy golden vessel with some beautiful flowers in it.
-~
-E
 paintings~
 You didn't recognize who were the people in the paintings.
+~
+E
+vessel vessels~
+A very heavy golden vessel with some beautiful flowers in it.
 ~
 S
 #10954
@@ -1706,12 +1706,12 @@ D2
 ~
 0 -1 10907
 E
-rocks trees~
-Dead trees stand behind the large rocks which line the trail here.
-~
-E
 tumbleweed tumbleweeds~
 Three tumbleweeds quickly blow across the path.
+~
+E
+rocks trees~
+Dead trees stand behind the large rocks which line the trail here.
 ~
 S
 #10986
@@ -1733,12 +1733,12 @@ D2
 ~
 0 -1 10985
 E
-pillars~
-Marble pillars for the sides of the path here, each pillar larger than the last.
-~
-E
 shreds cloth~
 A few red and white rags have been left by the side of the road.
+~
+E
+pillars~
+Marble pillars for the sides of the path here, each pillar larger than the last.
 ~
 S
 #10987
