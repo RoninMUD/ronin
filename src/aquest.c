@@ -653,7 +653,7 @@ $N tells you, 'Current Quest Items available for Purchase:'\n\r\
         act("$N tells you, 'To request a questcard hunt type AQUEST CARD <#>'", 0, ch, 0, mob, TO_CHAR);
         return TRUE;
       }
-      for(i = 0; i < 20; i++)
+      for(i = 0; i < 25; i++)
       {
         do
         {
