@@ -1418,7 +1418,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd)
         GET_POS(victim) = set_pos;
 
         /* Can't use skill_wait() since this applies to victim. */
-        WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(1, 2) : 2);
+        WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
       }
     }
 
@@ -1530,7 +1530,7 @@ void do_bash(CHAR *ch, char *arg, int cmd)
         GET_POS(victim) = set_pos;
 
         /* Can't use skill_wait() since this applies to victim. */
-        WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(1, 2) : 2);
+        WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
       }
     }
 
@@ -1618,7 +1618,7 @@ void do_punch(CHAR *ch, char *arg, int cmd)
         GET_POS(victim) = set_pos;
 
         /* Can't use skill_wait() since this applies to victim. */
-        WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(1, 2) : 2);
+        WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
       }
     }
 
@@ -1842,7 +1842,7 @@ void do_kick(CHAR *ch, char *arg, int cmd)
     if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
     {
       /* Can't use skill_wait() since this applies to victim. */
-      WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(2, 3) : 3);
+      WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(2, 3) : 3));
     }
   }
 }
