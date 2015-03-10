@@ -179,5 +179,6 @@ void add_program(struct program_info prg, struct char_data *ch);
 struct char_data *get_ch_by_id(int num);
 
 int get_weapon_type(OBJ *obj);
+const char const * get_weapon_type_desc(OBJ *obj);
 
 #endif

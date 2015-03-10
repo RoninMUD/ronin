@@ -1798,3 +1798,24 @@ int get_weapon_type(OBJ *obj)
 
   return w_type;
 }
+
+const char const *
+get_weapon_type_desc(OBJ *obj) {
+  char const * result = NULL;
+
+  switch (get_weapon_type(obj)) {
+    case TYPE_WHIP:     result = "Whip";     break;
+    case TYPE_SLASH:    result = "Slash";    break;
+    case TYPE_STING:    result = "Sting";    break;
+    case TYPE_CRUSH:    result = "Crush";    break;
+    case TYPE_BLUDGEON: result = "Bludgeon"; break;
+    case TYPE_CLAW:     result = "Claw";     break;
+    case TYPE_PIERCE:   result = "Pierce";   break;
+    case TYPE_HACK:     result = "Hack";     break;
+    case TYPE_CHOP:     result = "Chop";     break;
+    case TYPE_SLICE:    result = "Slice";    break;
+    default:            result = "Hit";      break;
+  }
+
+  return result;
+}

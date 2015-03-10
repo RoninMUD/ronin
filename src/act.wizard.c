@@ -756,7 +756,7 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
 {
   char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
   struct obj_data *obj;
-  int i=0, num=0, num2=0,tmp,which;
+  int i=0, num=0, num2=0,tmp,which = 0;
   unsigned long int bitv;
 
   if(!check_god_access(ch,TRUE)) return;
@@ -877,22 +877,26 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
        }
        else {
          tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), affected_bits, FALSE);
-         if(tmp == -1) {
+
+         if (tmp == -1) {
            tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), affected_bits2, FALSE);
-           if(tmp == -1) {
+
+           if (tmp == -1) {
              send_to_char("Affect flag not found.\n\r",ch);
              return;
            }
+
            which=1;
          }
 
          bitv=1<<(tmp-1);
-         if(!which) {
-           if(IS_SET(obj->obj_flags.bitvector,bitv)) REMOVE_BIT(obj->obj_flags.bitvector,bitv);
+
+         if (!which) {
+           if (IS_SET(obj->obj_flags.bitvector,bitv)) REMOVE_BIT(obj->obj_flags.bitvector,bitv);
            else SET_BIT(obj->obj_flags.bitvector,bitv);
          }
          else {
-           if(IS_SET(obj->obj_flags.bitvector2,bitv)) REMOVE_BIT(obj->obj_flags.bitvector2,bitv);
+           if (IS_SET(obj->obj_flags.bitvector2,bitv)) REMOVE_BIT(obj->obj_flags.bitvector2,bitv);
            else SET_BIT(obj->obj_flags.bitvector2,bitv);
          }
        }
@@ -2961,17 +2965,17 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
      case ITEM_WEAPON:
      case ITEM_2HWEAPON:
        if((j->obj_flags.value[0]>-1) && (j->obj_flags.value[0]<64))
-         printf_to_char(ch,"Extra : %s(%d)\n\rTodam : %dD%d\n\rType : %d",
+         printf_to_char(ch,"Extra : %s(%d)\n\rTodam : %dD%d\n\rType : %s (%d)",
             wpn_spc[j->obj_flags.value[0]],j->obj_flags.value[0], j->obj_flags.value[1],
-            j->obj_flags.value[2], j->obj_flags.value[3]);
+            j->obj_flags.value[2], get_weapon_type_desc(j), j->obj_flags.value[3]);
        else if((j->obj_flags.value[0]>300) && (j->obj_flags.value[0]<312))
-         printf_to_char(ch,"Extra : %s Weapon(%d)\n\rTodam : %dD%d\n\rType : %d",
+         printf_to_char(ch,"Extra : %s Weapon(%d)\n\rTodam : %dD%d\n\rType : %s (%d)",
             pc_class_types[j->obj_flags.value[0]-300],j->obj_flags.value[0], j->obj_flags.value[1],
-            j->obj_flags.value[2], j->obj_flags.value[3]);
+            j->obj_flags.value[2], get_weapon_type_desc(j), j->obj_flags.value[3]);
        else
-         printf_to_char(ch,"Extra : Out of range (%d)\n\rTodam : %dD%d\n\rType : %d",
+         printf_to_char(ch,"Extra : Out of range (%d)\n\rTodam : %dD%d\n\rType : %s (%d)",
             j->obj_flags.value[0], j->obj_flags.value[1],
-            j->obj_flags.value[2], j->obj_flags.value[3]);
+            j->obj_flags.value[2], get_weapon_type_desc(j), j->obj_flags.value[3]);
        break;
      case ITEM_FIREWEAPON :
        printf_to_char(ch,"License Number : %d\n\rNumber of bullets left : %d\n\rTodam: %dD%d\n\r",

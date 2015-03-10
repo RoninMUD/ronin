@@ -76,8 +76,7 @@ $State: Exp $
 
 
 #include <sys/types.h>
-
-#include "dmalloc.h"
+#include <dmalloc.h>
 
 typedef signed char sbyte;
 typedef unsigned char ubyte;
