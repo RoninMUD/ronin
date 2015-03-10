@@ -265,7 +265,8 @@ char *Color[]=
       "\x1B[1m\x1B[34m","Blue",
       "\x1B[1m\x1B[35m","Magenta",
       "\x1B[1m\x1B[36m","Cyan",
-      "\x1B[1m\x1B[37m","White"
+      "\x1B[1m\x1B[37m","White",
+      "\x1B[1m\x1B[30m","Drk Grey"
 
       };
 char *BKColor[]=

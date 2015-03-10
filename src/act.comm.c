@@ -352,7 +352,7 @@ void do_setcolor(CHAR *ch, char *arg, int cmd)
 		send_to_char(" 0 : Disable\n\r", ch);
 
 		/* Loop through the available colors, print out the code and show a sample of it. */
-		for(i = 1; i < 16; i++)
+		for(i = 1; i < 17; i++)
 		{
 			sprintf(buf," %s : `%sSAMPLE`q ", color_field_simple[i - 1], color_key[i - 1]);
 			send_to_char(buf, ch);
@@ -384,7 +384,7 @@ void do_setcolor(CHAR *ch, char *arg, int cmd)
 		}
 
 		/* Loop through the possible color fields and check if the field specified exists. */
-		for (i = 0; i < 16; i++)
+		for (i = 0; i < (MAX_COLORS-1); i++)
 		{
 			if (!str_cmp(field_name, color_field_simple[i]))
 			{
@@ -401,7 +401,7 @@ void do_setcolor(CHAR *ch, char *arg, int cmd)
 		}
 
 		/* Loop through the possible colors and check if the color specified exists. */
-		for (i = 0; i < 15; i++)
+		for (i = 0; i < 16; i++)
 		{
 			if (!str_cmp(field_color, color_field_simple[i]))
 			{
@@ -410,7 +410,7 @@ void do_setcolor(CHAR *ch, char *arg, int cmd)
 		}
 
 		/* Fixed color disable, Ranger - June 96 */
-		if (!strcmp(field_color, "0"))
+		if (!strcmp(field_color, "0") || !strcmp(field_color, "q"))
 		{
 			send_to_char("Color disabled.\n\r", ch);
 			set_color = 0;
