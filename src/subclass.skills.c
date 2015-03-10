@@ -1703,7 +1703,7 @@ void do_banzai(CHAR *ch, char *arg, int cmd)
 
     GET_MANA(ch) = MAX(GET_MANA(ch) - 75, 0);
 
-    skill_wait(ch, SKILL_BANZAI, 2);
+    skill_wait(ch, SKILL_BANZAI, 1);
   }
 }
 
