@@ -343,7 +343,7 @@ void do_backfist(CHAR *ch, char *arg, int cmd)
           GET_POS(victim) = set_pos;
 
           /* Can't use skill_wait() since this applies to victim. */
-          WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(1, 2) : 2);
+          WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
         }
       }
 
@@ -481,7 +481,7 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd)
         GET_POS(victim) = set_pos;
 
         /* Can't use skill_wait() since this applies to victim. */
-        WAIT_STATE(victim, PULSE_VIOLENCE * CHAOSMODE ? number(1, 2) : 2);
+        WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
       }
     }
 
