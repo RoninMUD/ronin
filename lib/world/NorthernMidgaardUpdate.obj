@@ -491,12 +491,12 @@ a short sword forged from high quality steel is stuck in the ground.~
 3 500 50
 100
 E
-sword small~
-The small sword seems to have an inscription of some sort.
-~
-E
 inscription~
 It says : May this sword be a good companion.
+~
+E
+sword small~
+The small sword seems to have an inscription of some sort.
 ~
 X
 ~
@@ -636,7 +636,7 @@ M
 ~
 ~
 #3029
-roggenbrot roll~
+roggenbrot roll brot~
 roggenbrot~
 a delicious roll of fresh roggenbrot sits here.~
 ~
@@ -1053,11 +1053,11 @@ a bottle of clear liquid has carelessly been left here ~
 3 60000 500
 100
 E
-potion~
+clear~
 NoName's Shop Production -- Bless Cure-Critic Sanctuary
 ~
 E
-clear~
+potion~
 NoName's Shop Production -- Bless Cure-Critic Sanctuary
 ~
 X
@@ -1078,11 +1078,11 @@ a bottle of holy liquid has carelessly been left here.~
 5 100000 10000
 100
 E
-bottle~
+holy~
 NoName's Shop Best Production -- ???
 ~
 E
-holy~
+bottle~
 NoName's Shop Best Production -- ???
 ~
 X
@@ -1103,11 +1103,11 @@ a bottle of red liquid has carelessly been left here ~
 3 500 500
 100
 E
-potion~
+red~
 NoName's Shop Production -- Cure Blind
 ~
 E
-red~
+potion~
 NoName's Shop Production -- Cure Blind
 ~
 X
@@ -1128,11 +1128,11 @@ a bottle of green liquid has carelessly been left here ~
 3 700 700
 100
 E
-potion~
+green~
 NoName's Shop Production -- Detect Evil, Magic and Poison
 ~
 E
-green~
+potion~
 NoName's Shop Production -- Detect Evil, Magic and Poison
 ~
 X
@@ -1195,11 +1195,11 @@ a bottle of white liquid has carelessly been left here ~
 3 10000 1000
 100
 E
-potion~
+white~
 NoName's Shop Production -- Remove Curse, Remove Posion, Sense Life
 ~
 E
-white~
+potion~
 NoName's Shop Production -- Remove Curse, Remove Posion, Sense Life
 ~
 X
@@ -1412,12 +1412,12 @@ A long rod with a hoop on the end lies here.~
 10 10 10
 100
 E
-hoop~
-   The hoop is made of strong rope and is attached to a wooden rod.
-~
-E
 rod~
    This is a long wooden rod with a hoop attached at one end.
+~
+E
+hoop~
+   The hoop is made of strong rope and is attached to a wooden rod.
 ~
 X
 ~
