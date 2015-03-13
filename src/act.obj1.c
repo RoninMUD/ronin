@@ -205,65 +205,51 @@ void get(struct char_data *ch, struct obj_data *obj_object,
   save_char(ch,NOWHERE);
 }
 
-int get_obj_from_object(struct char_data *ch, char *name,
-                  struct obj_data *sub_object)
-{
+int get_obj_from_object(struct char_data *ch, char *name, struct obj_data *sub_object) {
   struct obj_data *obj_object;
   int total=0;
 
-  if (GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER)
+  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+    if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) && 
+        (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))) {
+      printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
+      return(0);
+    } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) && 
+        (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))) {
+      printf_to_char(ch,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
+      return(0);
+    }
+    obj_object = get_obj_in_list_vis(ch, name, sub_object->contains);
+    if (obj_object)
     {
-      if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))
-      {
-        printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
-        return(0);
-      } /* if */
-      if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))
-      {
-        printf_to_char(ch,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
-        return(0);
-      } /* if */
-      obj_object = get_obj_in_list_vis(ch, name, sub_object->contains);
-      if (obj_object)
-      {
-        if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch)))
-          {
-            if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by==ch))
-            {
-              if (CAN_TAKE(ch,obj_object))
-                {
-                  get( ch, obj_object, sub_object, TRUE);
-                  total = 1;
-                }
-              else
-                {
-                  printf_to_char(ch, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
-                }
-            } else {
-            printf_to_char(ch,"%s : You can't carry that much weight.\n\r",
-                  fname(OBJ_NAME(obj_object)));
-            }
+      if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
+        if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by==ch)) {
+          if (CAN_TAKE(ch,obj_object)) {
+            get( ch, obj_object, sub_object, TRUE);
+            total = 1;
+          } else {
+            printf_to_char(ch, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
+          }
         } else {
-          printf_to_char(ch,"%s : You can't carry that many items.\n\r",
-                fname(OBJ_NAME(obj_object)));
+          printf_to_char(ch,"%s : You can't carry that much weight.\n\r", fname(OBJ_NAME(obj_object)));
         }
       } else {
-        if(isname("vault",OBJ_NAME(sub_object)))
-          printf_to_char(ch,"The vault does not contain the %s.\n\r",name);
-        else
-          printf_to_char(ch,"The %s does not contain the %s.\n\r",
-                         fname(OBJ_NAME(sub_object)), name);
+        printf_to_char(ch,"%s : You can't carry that many items.\n\r", fname(OBJ_NAME(obj_object)));
       }
+    } else {
+      if(isname("vault",OBJ_NAME(sub_object))) {
+        printf_to_char(ch,"The vault does not contain the %s.\n\r",name);
+      } else {
+        printf_to_char(ch,"The %s does not contain the %s.\n\r", fname(OBJ_NAME(sub_object)), name);
+      }
+    }
   } else {
-    printf_to_char(ch,"The %s is not a container.\n\r",
-          fname(OBJ_NAME(sub_object)));
+    printf_to_char(ch,"The %s is not a container.\n\r", fname(OBJ_NAME(sub_object)));
   }
   return(total);
 }
 
-int get_all_from_object(struct char_data *ch, char *name, bool alldot,
-                  struct obj_data *sub_object)
-{
+int get_all_from_object(struct char_data *ch, char *name, bool alldot, struct obj_data *sub_object) {
   char buffer[MAX_STRING_LENGTH];
   struct obj_data *remember=NULL;
   struct obj_data *obj_object, *next_obj;
@@ -272,17 +258,17 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot,
 
   assert(ch && sub_object);
 
-  if (GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) {
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))
-    {
+  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+    if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+        (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
-    } /* if */
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED)) {
+    } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+        (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))) {
       sprintf(buffer,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
       return(0);
-    } /* if */
+    }
     for(obj_object = sub_object->contains;
       obj_object;
       obj_object = next_obj) {
@@ -290,27 +276,29 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot,
 
       /* IF all.obj, only get those named "obj" */
       if (alldot && !isname( name, OBJ_NAME(obj_object)) ) {
-      continue;
-      } /* if */
+        continue;
+      }
 
       if (CAN_SEE_OBJ( ch, obj_object)) {
-      if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
-        if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by == ch)) {
-          if (CAN_TAKE(ch,obj_object)) {
-              if(obj_object->obj_flags.type_flag != ITEM_MONEY)
-              remember = obj_object;
-              else
+        if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
+          if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by == ch)) {
+            if (CAN_TAKE(ch,obj_object)) {
+              if(obj_object->obj_flags.type_flag != ITEM_MONEY) {
+                remember = obj_object;
+              } else {
                 remember = NULL;
-            get( ch, obj_object, sub_object, FALSE);
-            total++;
-          } else {
-            sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME( obj_object)));
-            send_to_char( buffer, ch);
-            fail = TRUE;
+              }
+              get( ch, obj_object, sub_object, FALSE);
+              total++;
+            } else {
+              sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME( obj_object)));
+              send_to_char( buffer, ch);
+              fail = TRUE;
+            }
           }
         } else {
           sprintf(buffer,"%s : You can't carry that much weight.\n\r",
-                fname(OBJ_NAME(obj_object)));
+              fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
           fail = TRUE;
         }
@@ -319,7 +307,6 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot,
               fname(OBJ_NAME(obj_object)));
         send_to_char(buffer, ch);
         fail = TRUE;
-      }
       }
     }
     if (!total && !fail) {
@@ -333,28 +320,26 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot,
             fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
       }
-    } else if(total == 1)
-      if(remember)
+    } else if(total == 1) {
+      if(remember) {
         act("$n gets $p.", TRUE, ch, remember, 0, TO_ROOM);
-      else
+      } else {
         act("$n gets some coins.", TRUE, ch, NULL, 0, TO_ROOM);
-    else if(total > 1 && total < 6)
+      }
+    } else if(total > 1 && total < 6) {
       act("$n gets some stuff from $p.",TRUE,ch,sub_object,0,TO_ROOM);
-    else if(total > 5)
-      act("$n gets a bunch of stuff from $p.",
-        TRUE,ch,sub_object,0,TO_ROOM);
+    } else if(total > 5) {
+      act("$n gets a bunch of stuff from $p.", TRUE,ch,sub_object,0,TO_ROOM);
+    }
     return(total);
   } else {
-    sprintf(buffer,"The %s is not a container.\n\r",
-          fname(OBJ_NAME(sub_object)));
+    sprintf(buffer,"The %s is not a container.\n\r", fname(OBJ_NAME(sub_object)));
     send_to_char(buffer, ch);
     return(0);
   }
 }
 
-int get_number_from_object(struct char_data *ch, char *name, int number,
-                           struct obj_data *sub_object)
-{
+int get_number_from_object(struct char_data *ch, char *name, int number, struct obj_data *sub_object) {
   char buffer[MAX_STRING_LENGTH];
   struct obj_data *remember=NULL;
   struct obj_data *obj_object, *next_obj;
@@ -366,68 +351,61 @@ int get_number_from_object(struct char_data *ch, char *name, int number,
   if(!number)
     return(0);
 
-  if (GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) {
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))
-    {
+  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+    if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE)) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
-    } /* if */
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED)) {
+    } else if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED)) {
       sprintf(buffer,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
       return(0);
-    } /* if */
+    }
     for(obj_object = sub_object->contains, total = 0;
-      obj_object && total < number;
-      obj_object = next_obj) {
+        obj_object && total < number;
+        obj_object = next_obj) {
       next_obj = obj_object->next_content;
 
       if (!isname( name, OBJ_NAME(obj_object)) ) {
-      continue;
-      } /* if */
+        continue;
+      }
 
       if (CAN_SEE_OBJ( ch, obj_object)) {
-      if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
-        if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by == ch)) {
-          if (CAN_TAKE(ch,obj_object)) {
-            get( ch, obj_object, sub_object, FALSE);
-            total++;
-            remember = obj_object;
+        if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
+          if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by == ch)) {
+            if (CAN_TAKE(ch,obj_object)) {
+              get( ch, obj_object, sub_object, FALSE);
+              total++;
+              remember = obj_object;
+            } else {
+              sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
+              send_to_char( buffer, ch);
+              fail = TRUE;
+            }
           } else {
-            sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
-            send_to_char( buffer, ch);
+            sprintf(buffer,"%s : You can't carry that much weight.\n\r", fname(OBJ_NAME(obj_object)));
+            send_to_char(buffer, ch);
             fail = TRUE;
           }
         } else {
-          sprintf(buffer,"%s : You can't carry that much weight.\n\r",
-                fname(OBJ_NAME(obj_object)));
+          sprintf(buffer,"%s : You can't carry that many items.\n\r", fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
           fail = TRUE;
         }
-      } else {
-        sprintf(buffer,"%s : You can't carry that many items.\n\r",
-              fname(OBJ_NAME(obj_object)));
-        send_to_char(buffer, ch);
-        fail = TRUE;
-      }
       }
     }
     if (!total && !fail) {
-      sprintf(buffer, "You don't see any %s in the %s.\n\r",
-            name,
-            fname(OBJ_NAME(sub_object)));
+      sprintf(buffer, "You don't see any %s in the %s.\n\r", name, fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
-    } else if(total == 1)
+    } else if(total == 1) {
       act("$n gets $p.", TRUE, ch, remember, 0, TO_ROOM);
-    else if(total > 1 && total < 6)
+    } else if(total > 1 && total < 6) {
       act("$n gets some stuff from $p.",TRUE,ch,sub_object,0,TO_ROOM);
-    else if(total > 5)
-      act("$n gets a bunch of stuff from $p.",
-        TRUE,ch,sub_object,0,TO_ROOM);
+    } else if(total > 5) {
+      act("$n gets a bunch of stuff from $p.", TRUE,ch,sub_object,0,TO_ROOM);
+    }
     return(total);
   } else {
-    sprintf(buffer,"The %s is not a container.\n\r",
-          fname(OBJ_NAME(sub_object)));
+    sprintf(buffer,"The %s is not a container.\n\r", fname(OBJ_NAME(sub_object)));
     send_to_char(buffer, ch);
     return(0);
   }
