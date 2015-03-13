@@ -685,7 +685,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if ((spell > 200) && !check_sc_master(ch, mob))
+  if ((spell > 200) && (spell != SPELL_REJUVENATION) && !check_sc_master(ch, mob))
   {
     send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
 
@@ -829,7 +829,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       return TRUE;
     }
 
-    if (spell > 165 && !check_sc_master(ch, mob))
+    if ((spell > 165) && (spell != SPELL_REJUVENATION) && !check_sc_master(ch, mob))
     {
       send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
 

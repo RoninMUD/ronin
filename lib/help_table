@@ -4505,18 +4505,27 @@ See help for:
        BARD SPELLS
 ----------------------------------------------------------
        (3) Detect Invisibility
+       (5) Armor
        (7) Vitality
-       (9) Identify
+       (9) Identify               (9) Fly
       (10) Locate Object
+      (11) Cure Critic
       (12) Fear
-      (13) Locate Character
-      (15) Forget
-      (17) Sleep
+      (13) Locate Character      (13) Blindness
+      (15) Forget                (15) Satiate
+      (17) Sleep                 (17) Color Spray
       (18) Charm Person
       (18) Hold Person
+      (19) Word of Recall
+      (21) Infravision
+      (23) Sanctuary
+      (24) Evil Word
       (25) Animate Dead
+      (26) Heal
+      (28) Lethal Fire
       (30) Mass Invisibility
       (45) Haste
+      (50) Rejuvenation
 
 Use HELP SONGS to see the bard's songs
 #

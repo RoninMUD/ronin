@@ -367,6 +367,9 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_SHADOW_WRAITH:
       if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
       break;
+    case SPELL_REJUVENATION:
+      return TRUE;
+      break;
   }
 
   return FALSE;
@@ -865,6 +868,63 @@ void initialize_token_mob() {
   return;
 }
 
+static int token_mob_target_room() {
+  int goto_room = 0;
+
+#ifndef TEST_SITE
+
+  int zone = 0;
+
+#endif
+
+  while(goto_room==0) {
+    goto_room=number(1,top_of_world);
+
+#ifndef TEST_SITE
+
+    zone=inzone(world[goto_room].number);
+
+    if(zone==275 ||
+       zone==300 ||
+       zone==39  ||
+       zone==36  ||
+       zone==35  ||
+       zone==30  ||
+       zone==31  ||
+       zone==58  ||
+       zone==0   ||
+       zone==12  ||
+       zone==253 ||
+       zone==254 ||
+       zone==255 ||
+       zone==51  ||
+       zone==55  ||
+       zone==59  ||
+       zone==285 ||
+       zone==286 ||
+       zone==287 ||
+       zone==261 ||
+       zone==260 ||
+       zone==278 ||
+       zone==66  ||
+       zone==10  ||
+       zone==262 ||
+       IS_SET(world[goto_room].room_flags, SAFE) ||
+       IS_SET(world[goto_room].room_flags, PRIVATE) ||
+       IS_SET(world[goto_room].room_flags, DEATH) ||
+       IS_SET(world[goto_room].room_flags, HAZARD))
+      goto_room=0;
+
+    if(number(1,100)>zone_rating(zone)) /* zone rating check */
+      goto_room=0;
+
+#endif
+
+  }
+
+  return goto_room;
+}
+
 void check_token_mob() {
 #ifndef TEST_SITE
   CHAR *mob;
@@ -877,47 +937,12 @@ void check_token_mob() {
     if(mob_proto_table[real_mobile(TOKEN_MOB)].number>0) return;
     if(!(mob=read_mobile(TOKEN_MOB,VIRTUAL))) return;
     if(!(obj=read_object(5,VIRTUAL))) return;
-    while(goto_room==0) {
-      goto_room=number(1,top_of_world);
-      zone=inzone(world[goto_room].number);
 
-      if(zone==275 ||
-         zone==300 ||
-         zone==39  ||
-         zone==36  ||
-         zone==35  ||
-         zone==30  ||
-         zone==31  ||
-         zone==58  ||
-         zone==0   ||
-         zone==12  ||
-         zone==253 ||
-         zone==254 ||
-         zone==255 ||
-         zone==51  ||
-         zone==55  ||
-         zone==59  ||
-         zone==285 ||
-         zone==286 ||
-         zone==287 ||
-         zone==261 ||
-         zone==260 ||
-         zone==278 ||
-         zone==66  ||
-         zone==10  ||
-         zone==262 ||
-         IS_SET(world[goto_room].room_flags, SAFE) ||
-         IS_SET(world[goto_room].room_flags, PRIVATE) ||
-         IS_SET(world[goto_room].room_flags, DEATH) ||
-         IS_SET(world[goto_room].room_flags, HAZARD))
-        goto_room=0;
-
-      if(number(1,100)>zone_rating(zone)) /* zone rating check */
-        goto_room=0;
-    }
+    goto_room = token_mob_target_room();
     char_to_room(mob,goto_room);
     obj_to_char(obj,mob);
     log_f("SUBLOG: Token mob placed in room %d.",world[goto_room].number);
+
     switch(number(0,3)) {
       case 1:
         do_yell(mob,"Death to all that oppose me!",CMD_YELL);
@@ -926,8 +951,8 @@ void check_token_mob() {
         do_yell(mob,"I have returned!",CMD_YELL);
         break;
       case 3:
-          do_yell(mob, "Yo, whassup?!", CMD_YELL);
-          break;
+        do_yell(mob, "Yo, whassup?!", CMD_YELL);
+        break;
       default:
         do_yell(mob,"Death to you all!",CMD_YELL);
         break;
@@ -942,7 +967,7 @@ int do_roomyell(CHAR* mob)
   char buf[MSL];
 
   /* yell something about the room name */
-  switch(number(8,19)) {
+  switch(number(8,21)) {
     case 8:
       sprintf(buf,"Come to %s, I want to spill your blood.",world[CHAR_REAL_ROOM(mob)].name);break;
     case 9:
@@ -972,6 +997,7 @@ int do_roomyell(CHAR* mob)
     default:
       sprintf(buf,"Why am I at %s and why am I in this handbasket?", world[CHAR_REAL_ROOM(mob)].name);break;
   }
+
   do_yell(mob,buf,CMD_YELL);
   return FALSE;
 }
@@ -995,9 +1021,9 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
     write_zone_rating();
     if(!ch || ch == mob) return FALSE;
     if (IS_NPC(ch))
-       sprintf(buf,"AHHHHHHHH, I curse you %s!",GET_SHORT(ch));
+      sprintf(buf,"AHHHHHHHH, I curse you %s!",GET_SHORT(ch));
     else
-       sprintf(buf,"AHHHHHHHH, I curse you %s!",GET_NAME(ch));
+      sprintf(buf,"AHHHHHHHH, I curse you %s!",GET_NAME(ch));
     do_yell(mob,buf,CMD_YELL);
     spell_curse(GET_LEVEL(mob),mob,ch,0);
     return FALSE;
@@ -1006,44 +1032,30 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
   if(cmd==MSG_TICK) { /* Beam away if still alive at 15 ticks */
     mob->specials.timer++;
     if (mob->specials.timer == 1)
-        do_roomyell(mob);
+      do_roomyell(mob);
 
     if(mob->specials.timer==8) {
       zone=inzone(CHAR_VIRTUAL_ROOM(mob));
       zone_rate(zone,1);
     }
+
     if(mob->specials.timer>=15 && !mob->specials.fighting) {
       /* if morts in the zone, don't beam */
       if(count_mortals_zone(mob,TRUE)) return FALSE;
-      while(goto_room==0) {
-        goto_room=number(1,top_of_world);
-        zone=inzone(world[goto_room].number);
-#ifndef TEST_SITE
-        if(zone==275 || zone==300 || zone==39 || zone==36 || zone==35 ||
-           zone==30 || zone==31 || zone==58 || zone==0 || zone==2 ||
-           zone==3 || zone==4 || zone==12 || zone==253 || zone==254 ||
-           zone==255 || zone==51 || zone==55 || zone==59 || zone==285 ||
-           zone==286 || zone==287 || zone==261 || zone==260 || zone==278 || zone==262 ||
-           IS_SET(world[goto_room].room_flags, SAFE) ||
-           IS_SET(world[goto_room].room_flags, PRIVATE) ||
-           IS_SET(world[goto_room].room_flags, DEATH) ||
-           IS_SET(world[goto_room].room_flags, HAZARD))
-          goto_room=0;
-        if(number(1,100)>zone_rating(zone)) /* zone rating check */
-          goto_room=0;
-#endif
+
+      goto_room = token_mob_target_room();
+
+      switch (number(1,4)) {
+        case 1:
+          do_yell(mob,"I don't like this place, I'm moving!",CMD_YELL); break;
+        case 2:
+          do_yell(mob,"Time to find some new real estate!", CMD_YELL); break;
+        case 3:
+          do_yell(mob, "I'm still looking for that elusive mudder!", CMD_YELL); break;
+        case 4:
+          do_yell(mob, "Well, if no one's here, I'm moving on!", CMD_YELL); break;
       }
-      switch (number(1,4))
-      {
-         case 1:
-            do_yell(mob,"I don't like this place, I'm moving!",CMD_YELL);break;
-         case 2:
-            do_yell(mob,"Time to find some new real estate!", CMD_YELL);break;
-         case 3:
-            do_yell(mob, "I'm still looking for that elusive mudder!", CMD_YELL);break;
-         case 4:
-            do_yell(mob, "Well, if no one's here, I'm moving on!", CMD_YELL);break;
-      }
+
       act("$n disappears in a puff of smoke.",0,mob,0,0,TO_ROOM);
       zone=inzone(CHAR_VIRTUAL_ROOM(mob));
       zone_rate(zone,2);
