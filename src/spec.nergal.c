@@ -186,48 +186,46 @@ int nergal_MazePoint(int room, CHAR *ch, int cmd, char *arg)
 int
 nergal_Lash (OBJ *lash, CHAR *ch, int cmd, char *arg) {
 
-  if(lash->equipped_by)
-    {
-    if(GET_CLASS(lash->equipped_by)==CLASS_NINJA)
-       {
-       if(lash->affected[0].modifier == 10)
-         {
+  if(lash->equipped_by) {
+/*
+    if(GET_CLASS(lash->equipped_by)==CLASS_NINJA) {
+       if(lash->affected[0].modifier == 10) {
          lash->equipped_by->points.damroll-=5;
          lash->affected[0].modifier = 5;
-         }
        }
-    else
+     }
+     else {
        lash->affected[0].modifier = 10;
-    switch(cmd)
-      {
+     }
+*/
+    switch(cmd) {
       case MSG_MOBACT:
-        if(!number(0,2))
-          {
-          if(lash->equipped_by->specials.fighting)
-            {
+        if(!number(0,2)) {
+          if(lash->equipped_by->specials.fighting) {
             act("$n lashes $N with a stinging blow!", 0, lash->equipped_by, 0,  lash->equipped_by->specials.fighting, TO_NOTVICT);
             act("$n lashes you with a stinging blow!", 0, lash->equipped_by, 0,  lash->equipped_by->specials.fighting, TO_VICT);
             act("You lash $N with a stinging blow!", 0, lash->equipped_by, 0,  lash->equipped_by->specials.fighting, TO_CHAR);
             GET_POS(lash->equipped_by->specials.fighting) = POSITION_STUNNED;
             WAIT_STATE(lash->equipped_by->specials.fighting, PULSE_VIOLENCE*2);
-            }
           }
+        }
         break;
-      }
+    }
   }
-  else
-    {
+
+/*
+  else {
     lash->affected[0].modifier = 10;
-    switch(cmd)
-      {
+    switch(cmd) {
       case CMD_WIELD:
         if(GET_CLASS(ch)==CLASS_NINJA)
            lash->affected[0].modifier = 5;
         else
            lash->affected[0].modifier = 10;
         break;
-      }
     }
+  }
+*/
 
   return FALSE;
 }
