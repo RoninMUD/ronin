@@ -76,7 +76,8 @@ $State: Exp $
 
 
 #include <sys/types.h>
-#include <dmalloc.h>
+
+#include "dmalloc.h"
 
 typedef signed char sbyte;
 typedef unsigned char ubyte;
@@ -179,6 +180,7 @@ typedef char byte;
 #define ITEM_2FINGER   33 /* Project Dagger */
 #define ITEM_2NECK     34 /* Project Dagger */
 #define ITEM_2WRIST    35 /* Project Dagger */
+#define ITEM_AQ_ORDER  36
 
 /* Bitvector For 'wear_flags' */
 #define ITEM_TAKE              1

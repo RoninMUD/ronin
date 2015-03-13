@@ -1104,6 +1104,7 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   (GET_ITEM_TYPE(obj) == ITEM_MISSILE) ||
   (GET_ITEM_TYPE(obj) == ITEM_MONEY) ||
   (GET_ITEM_TYPE(obj) == ITEM_RECIPE) ||
+  (GET_ITEM_TYPE(obj) == ITEM_AQ_ORDER) ||
   (GET_ITEM_TYPE(obj) == ITEM_KEY)) {
       act("$p exploded.", FALSE, ch, obj, 0, TO_ROOM);
       act("$p exploded.", FALSE, ch, obj, 0, TO_CHAR);
@@ -3191,6 +3192,15 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
                 );
             }
 
+            send_to_char(buf, ch);
+            break;
+
+        case ITEM_AQ_ORDER:
+            sprintf(buf, "This acquisition order is for the following items:\n\r   %s\n\r   %s\n\r   %s\n\r   %s\n\r",
+                real_object(obj->obj_flags.value[0]) >= 0 ? obj->obj_flags.value[0] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[0])].short_description : "nothing" : "something",
+                real_object(obj->obj_flags.value[1]) >= 0 ? obj->obj_flags.value[1] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[1])].short_description : "nothing" : "something",
+                real_object(obj->obj_flags.value[2]) >= 0 ? obj->obj_flags.value[2] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[2])].short_description : "nothing" : "something",
+                real_object(obj->obj_flags.value[3]) >= 0 ? obj->obj_flags.value[3] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[3])].short_description : "nothing" : "something");
             send_to_char(buf, ch);
             break;
 

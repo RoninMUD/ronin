@@ -1497,6 +1497,10 @@ const char *item_types[] = {
   "SKIN",
   "TROPHY",
   "RECIPE",
+  "2FINGER", // these were missing from here, but present in structs.h
+  "2NECK",   // resulted in mismatch between ITEM_* #s and numbers in this array
+  "2WRIST",  // same as above
+  "AQ_ORDER",
   "\n"
 };
 

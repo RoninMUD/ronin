@@ -1083,6 +1083,8 @@ int put_all_to(struct char_data *ch, char *allbuf, bool alldot,
   return(total);
 }
 
+extern struct idname_struct idname[MAX_ID]; // for acquisition orders
+
 void do_put(struct char_data *ch, char *argument, int cmd)
 {
   char buffer[MAX_STRING_LENGTH];
@@ -1117,20 +1119,69 @@ void do_put(struct char_data *ch, char *argument, int cmd)
     if(!to_object) {
       type = 2;
     } else {
-      if (GET_ITEM_TYPE(to_object) == ITEM_CONTAINER) {
+      switch (GET_ITEM_TYPE(to_object)) {
+	  case ITEM_CONTAINER:
         if (!IS_SET(to_object->obj_flags.value[1], CONT_CLOSED)) {
           alldot = is_all_dot(arg1, allbuf);
           if (!str_cmp(arg1, "all")){
-            type = 3;
+            type = 3; // put has "all"
           } else {
-            type = 4;
+            type = 4; // put does not have "all"
           }
         } else {
-          type = 5;
+          type = 5; // container is closed
         }
-      } else {
-        type = 6;
-      }
+		break;
+	  case ITEM_AQ_ORDER:
+      if (number == 1) {
+        obj_object = get_obj_in_list_vis(ch, arg1, ch->carrying);
+        if (obj_object) { // this is where it gets special for AQ_ORDER
+          if (V_OBJ(obj_object) == to_object->obj_flags.value[0] || // we only want to allow you to put things in the order that the order wants
+              V_OBJ(obj_object) == to_object->obj_flags.value[1] ||
+              V_OBJ(obj_object) == to_object->obj_flags.value[2] ||
+              V_OBJ(obj_object) == to_object->obj_flags.value[3]) {
+            total = put(ch, obj_object, to_object, TRUE);
+          } else {
+            sprintf(buffer, "The acquisition order for %s did not include %s.\n\r", idname[obj_object->ownerid[0]].name, OBJ_SHORT(obj_object));
+                send_to_char(buffer, ch);
+          }
+        } else {
+          sprintf(buffer, "You don't have the %s.\n\r", arg1);
+          send_to_char(buffer, ch);
+        }
+      } else {    
+        for(tmp_object = ch->carrying, total = 0;        
+            tmp_object && total < number;
+            tmp_object = next_obj) {
+          next_obj = tmp_object->next_content;
+          if (isname( arg1, OBJ_NAME(tmp_object)) && (CAN_SEE_OBJ(ch, tmp_object))) {
+            if ( put( ch, tmp_object, to_object, FALSE)) {
+              total++;
+            } else {
+              put( ch, tmp_object, to_object, TRUE);
+            }
+          found = TRUE;
+          }
+        }
+        if(!found) {
+          sprintf(buffer, "You don't see or have any %s.\n\r", arg1);
+          send_to_char(buffer, ch);
+        } else {
+          sprintf(buffer, "You put %d(%d) %s(s) to %s.\n\r", total, number, arg1, arg2);
+          send_to_char(buffer, ch);
+          if(total < 6) {
+            sprintf(buffer,"$n puts some %s in $o.", arg1);
+          } else {
+            sprintf(buffer,"$n puts a bunch of %s in $o.",arg1);
+          }
+          act(buffer, TRUE, ch, to_object, 0, TO_ROOM);
+        }
+      }    
+      break;
+	  default:
+        type = 6; // target of do_put is not a container-ish object
+		break;
+	  }
     }
   }
 
@@ -1143,7 +1194,7 @@ void do_put(struct char_data *ch, char *argument, int cmd)
     send_to_char(buffer, ch);
   } break;
   case 2: {
-    sprintf(buffer, "You dont have the %s.\n\r", arg2);
+    sprintf(buffer, "You don't have the %s.\n\r", arg2);
     send_to_char(buffer, ch);
   } break;
   case 3: {
@@ -1160,7 +1211,7 @@ void do_put(struct char_data *ch, char *argument, int cmd)
       if (obj_object) {
         total = put(ch, obj_object, to_object, TRUE);
       } else {
-      sprintf(buffer, "You dont have the %s.\n\r", arg1);
+      sprintf(buffer, "You don't have the %s.\n\r", arg1);
       send_to_char(buffer, ch);
       }
     } else {

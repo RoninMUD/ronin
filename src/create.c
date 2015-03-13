@@ -2562,6 +2562,9 @@ void edit_obj(CHAR *ch, char *fargs)
             case ITEM_RECIPE :
               send_to_char("For Recipes: <Creates> <Requires> <Requires> <Requires> (-1 for none)\n\r", ch);
             break;
+            case ITEM_AQ_ORDER :
+              send_to_char("For AQ Orders: <Requires> <Requires> <Requires> <Requires> (-1 for non)\n\r", ch);
+            break;
             case ITEM_SCROLL :
             case ITEM_POTION :
               send_to_char("For Scrolls and Potions:  <Level> <Spell1|0> <Spell2|0> <Spell3|0>\n\r", ch);
@@ -2637,7 +2640,8 @@ void edit_obj(CHAR *ch, char *fargs)
            send_to_char("edit object <#> type <type> where <type> is on of the following:\n\r\
 LIGHT, SCROLL, WAND, STAFF, WEAPON, FIRE WEAPON, MISSILE, TREASURE, ARMOR, \n\r\
 POTION, WORN, OTHER, TRASH, TRAP, CONTAINER, NOTE, LIQUID, KEY, FOOD, MONEY,\n\r\
-PEN, BOAT, BULLET, MUSICAL, LOCKPICK, 2H-WEAPON, BOARD, SC_TOKEN, SKIN, RECIPE.\n\r", ch);
+PEN, BOAT, BULLET, MUSICAL, LOCKPICK, 2H-WEAPON, BOARD, SC_TOKEN, SKIN, RECIPE,\n\r\
+AQ_ORDER.\n\r", ch);
          break;
       case EDIT_OBJ_AFFECTS:
          tmp1 = -1;
@@ -3904,7 +3908,8 @@ This is the number of the item the shop keeper will have in unlimited supply.\n\
       send_to_char("edit shop <#> trade_type 1/2/3/4/5 <type> where <type> is one of the following:\n\r\
 LIGHT, SCROLL, WAND, STAFF, WEAPON, FIRE WEAPON, MISSILE, TREASURE, ARMOR, \n\r\
 POTION, WORN, OTHER, TRASH, TRAP, CONTAINER, NOTE, LIQUID, KEY, FOOD, MONEY,\n\r\
-PEN, BOAT, BULLET, MUSICAL, LOCKPICK, 2H-WEAPON, BOARD, SC_TOKEN, SKIN, RECIPE, NONE.\n\r\
+PEN, BOAT, BULLET, MUSICAL, LOCKPICK, 2H-WEAPON, BOARD, SC_TOKEN, SKIN, RECIPE,\n\r\
+AQ_ORDER, NONE.\n\r\
 Note: This is the type of item the shop keeper will buy.\n\r", ch);
       break;
     case EDIT_SHOP_TEMPER1:
