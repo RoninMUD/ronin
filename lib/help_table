@@ -1375,7 +1375,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
        (18) Mana Transfer            (18) Sphere
        (18) Vampiric Touch           (18) Clairvoyance
        (19) Iceball                  (19) Dispel Magic
-       (20) Spirit Levy              (20) Mass Invisibility
+       (20) Spirit Levy
        (21) Hold Person              (21) Convergence
        (21) Enchant Armour
        (22) Animate Dead
@@ -4525,7 +4525,7 @@ See help for:
       (25) Animate Dead
       (26) Heal
       (28) Lethal Fire
-      (30) Mass Invisibility
+      (30) Invisibility
       (45) Haste
       (50) Rejuvenation
 
