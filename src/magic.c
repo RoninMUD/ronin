@@ -3196,11 +3196,12 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
             break;
 
         case ITEM_AQ_ORDER:
-            sprintf(buf, "If completed, worth %d.\n\r This acquisition order is for the following items:\n\r   %s\n\r   %s\n\r   %s\n\r   %s\n\r", OBJ_SPEC(obj),
+            sprintf(buf, "This acquisition order is for the following items:\n\r   %s\n\r   %s\n\r   %s\n\r   %s\n\rIf completed, worth %d quest points.\n\r ", 
                 real_object(obj->obj_flags.value[0]) >= 0 ? obj->obj_flags.value[0] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[0])].short_description : "nothing" : "something",
                 real_object(obj->obj_flags.value[1]) >= 0 ? obj->obj_flags.value[1] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[1])].short_description : "nothing" : "something",
                 real_object(obj->obj_flags.value[2]) >= 0 ? obj->obj_flags.value[2] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[2])].short_description : "nothing" : "something",
-                real_object(obj->obj_flags.value[3]) >= 0 ? obj->obj_flags.value[3] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[3])].short_description : "nothing" : "something");
+                real_object(obj->obj_flags.value[3]) >= 0 ? obj->obj_flags.value[3] >= 0 ? obj_proto_table[real_object(obj->obj_flags.value[3])].short_description : "nothing" : "something", 
+                OBJ_SPEC(obj));
             send_to_char(buf, ch);
             break;
 

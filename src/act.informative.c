@@ -1299,8 +1299,10 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
           fullness[temp],color_liquid[tmp_object->obj_flags.value[2]]);
         send_to_char(buffer, ch);
       }
-    } else if (GET_ITEM_TYPE(tmp_object) == ITEM_CONTAINER) {
-      if (!IS_SET(tmp_object->obj_flags.value[1],CONT_CLOSED)) {
+    } else if (GET_ITEM_TYPE(tmp_object) == ITEM_CONTAINER || 
+          GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
+      if (!IS_SET(tmp_object->obj_flags.value[1],CONT_CLOSED) ||
+          GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
         send_to_char(fname(OBJ_NAME(tmp_object)), ch);
         switch (bits) {
         case FIND_OBJ_INV :
