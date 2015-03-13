@@ -96,36 +96,36 @@ extern int TOKENCOUNT;
 int distribute_token(void);
 
 int check_sc_song_access(CHAR *ch, int s) {
-  if(s<=16) return TRUE;
+  if(s<=17) return TRUE;
   if(GET_LEVEL(ch)>=LEVEL_ETE) return TRUE;
   switch(s) {
-    case 17: /* song of remove poison*/
+    case 18: /* song of remove poison*/
       if(check_subclass(ch,SC_CHANTER,1)) return TRUE;
       break;
-    case 18: /* rally song*/
+    case 19: /* rally song*/
       if(check_subclass(ch,SC_BLADESINGER,1)) return TRUE;
       break;
-    case 19: /* warchant */
+    case 20: /* warchant */
       if(check_subclass(ch,SC_CHANTER,2)) return TRUE;
       break;
-    case 20: /* song of luck */
+    case 21: /* song of luck */
       if(check_subclass(ch,SC_CHANTER,3)) return TRUE;
       break;
-    case 21: /* rejuvenation song*/
+    case 22: /* rejuvenation song*/
       /* rejuvenation is now a class song */
       return TRUE;
       /*if(check_subclass(ch,SC_BLADESINGER,3)) return TRUE;*/
       break;
-    case 22: /* aid */
+    case 23: /* aid */
       if(check_subclass(ch,SC_CHANTER,4)) return TRUE;
       break;
-    case 23: /* protection evil good */
+    case 24: /* protection evil good */
       if(check_subclass(ch,SC_BLADESINGER,4)) return TRUE;
       break;
-    case 24: /* thunderball */
+    case 25: /* thunderball */
       if(check_subclass(ch,SC_BLADESINGER,5)) return TRUE;
       break;
-    case 25: /* sphere */
+    case 26: /* sphere */
       if(check_subclass(ch,SC_CHANTER,5)) return TRUE;
       break;
   }

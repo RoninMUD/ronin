@@ -2945,14 +2945,14 @@ ARMOR
 
 Usage       : cast 'armor' <victim>
 Accumulative: No
-Level       : Level 5 mage, 1 cleric, 2 paladin.
+Level       : Level 5 mage, 1 cleric, 2 paladin, 5 bard
 Duration    : 24 ticks
 Mana Cost   : 5 (cost will be higher at lower levels)
 
 The spellcaster calls upon the powers of the gods to protect the victim.  If 
 successful, the gods will provide protection improving the victim's AC by 10
 
-See Also: AC
+See Also: AC SONGS
 #
 ENDURE
 
@@ -2999,20 +2999,20 @@ Bless on an item currently has no defined action. It is only possible
 to bless non-evil items, and the object blessed may weigh no more
 than five pounds per level of caster.
 
-See Also: -
+See Also: SONGS
 #
 BLINDNESS
 
 Usage       : cast 'blindness' <victim>
 Accumulative: No.
-Level       : Level 8 mage,6 cleric,6 ninja,4 anti-paladin.
+Level       : Level 8 mage, 6 cleric, 6 ninja, 4 anti-paladin, 13 bard.
 Duration    : 2 ticks.
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 Blindness will blind a victim if it fails its saving throw. A blinded person 
 will have -4 penalty to both hitroll and AC.
 
-See Also: AC
+See Also: AC SONGS
 #
 "POWER WORD KILL"
 
@@ -3068,15 +3068,6 @@ that area. The raging fires will be much more heavily concentrated in the
 immediate vicinity of the victim(s), but everyone present will be subject
 to the immense heat of the fires. The players in the room shall also be
 hit for 200 hitpoints and the caster hit for 300.
-#
-"MASS INVISIBILITY"
-
-Usage      : cast 'mass invisibility'
-Level      : level 20 mage, level 30 bard.
-Duration   : 24 ticks
-Mana cost  : 100
-
-Works as invisibility but affects all mortals in the room.
 #
 CONVERGENCE
 
@@ -3223,14 +3214,14 @@ See Also: -
 
 Usage       : cast 'cure critic' <victim>
 Accumulative: -
-Level       : Level 9 cleric, 10 paladin.
+Level       : Level 9 cleric, 10 paladin, 11 bard.
 Duration    : Instantaneous
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 This spell cures 10+5*level of caster hit points of damage, for a
 maximum of 75 hit points.
 
-See Also: -
+See Also: SONGS
 #
 "CURE CRITIC SPRAY"
 
@@ -3327,13 +3318,13 @@ See Also: -
 
 Usage       : cast 'detect invisibility' [self]
 Accumulative: No
-Level       : Level 2 mage, 5 cleric,1 ninja,5 paladin,3 bard.
+Level       : Level 2 mage, 5 cleric, 1 ninja, 5 paladin, 3 bard.
 Duration    : level * 5 ticks.
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 This spell enables you to see invisible items and players.
 
-See Also: -
+See Also: SONGS
 #
 "DETECT MAGIC"
 
@@ -3399,7 +3390,7 @@ HEAL
 
 Usage       : cast 'heal' <victim>
 Accumulative: No
-Level       : Level 14 cleric, 29 ninja, 21 paladin.
+Level       : Level 14 cleric, 29 ninja, 21 paladin, 26 bard.
 Duration    : Instantaneous
 Mana Cost   : 50
 
@@ -3408,7 +3399,7 @@ healed.
 
 A victim who is blinded or stunned will also be cured by the heal spell.
 
-See Also: "Cure Blindness" "Heal Spray"
+See Also: "Cure Blindness" "Heal Spray" SONGS
 #
 "HEAL SPRAY"
 
@@ -3427,7 +3418,7 @@ See Also: "Cure Blindness" "Heal"
 FORGET
 
 Usage       : cast 'forget' <victim>
-Level       : Level 11 mage,14 anti-paladin,15 bard.
+Level       : Level 11 mage, 14 anti-paladin, 15 bard.
 Duration    : Instantaneous
 Mana Cost   : 15 (cost will be higher at lower levels)
 
@@ -3451,14 +3442,14 @@ INVISIBILITY
 
 Usage       : cast 'invisibility' <victim | object>
 Accumulative: No
-Level       : Level 4 mage, 7 ninja, 9 anti-paladin.
+Level       : Level 4 mage, 7 ninja, 9 anti-paladin, 30 bard.
 Duration    : 24 ticks, permanent on objects.
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 Self Explanatory.
 Attacking while invisible will immediately break the spell.
 
-See Also: "detect invisibility"
+See Also: "DETECT INVISIBILITY" SONGS
 #
 "IMPROVE INVISIBILITY" IMPY
 
@@ -3500,7 +3491,7 @@ and flee. This spell can be cast during battle.
 
 Usage       : cast 'locate object' <keyword>
 Accumulative: -
-Level       : Level 6 mage,10 cleric,14 ninja,17 paladin,10 bard.
+Level       : Level 6 mage, 10 cleric, 14 ninja, 17 paladin, 10 bard.
 Duration    : Instantaneous
 Mana Cost   : 20 (cost will be higher at lower levels)
 
@@ -3516,7 +3507,7 @@ See Also: -
 
 Usage       : cast 'locate character' <character>
 Accumulative: -
-Level       : Level 11 mage,14 cleric, 13 bard.
+Level       : Level 11 mage, 14 cleric, 13 bard.
 Duration    : Instantaneous
 Mana Cost   : 20 (cost will be higher at lower levels)
 
@@ -3597,14 +3588,14 @@ SANCTUARY
 
 Usage       : cast 'sanctuary' <victim>
 Accumulative: No
-Level       : Level 13 cleric, 20 paladin.
+Level       : Level 13 cleric, 20 paladin, 23 bard.
 Duration    : Level/5 ticks
 Mana Cost   : 50
 
 When protected by sanctuary, all damage afflicted on you by weapons or spells 
 will be halved.
 
-See Also:
+See Also: SONGS
 #
 SPHERE
 
@@ -3715,14 +3706,14 @@ See Also: -
 
 Usage       : cast 'word of recall'
 Accumulative: -
-Level       : Level 13 mage, 11 cleric, 19 ninja, 19 commando.
+Level       : Level 13 mage, 11 cleric, 19 ninja, 19 commando, 19 bard.
 Duration    : Instantaneous
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 The caster will be transferred back to his sanctuary (presently the
 Temple of Midgaard).
 
-See Also: -
+See Also: SONGS
 #
 SUMMON
 
@@ -3890,7 +3881,7 @@ See Also: SHOCKING GRASP
 Usage       : cast 'colour spray' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 11 mage, 10 commando.
+Level       : Level 11 mage, 10 commando, 17 bard.
 Save        : Versus spell for half damage.
 Mana Cost   : 23 (cost will be higher at lower levels)
 Old Damage done : 80
@@ -3898,7 +3889,7 @@ New Damage done : level/2 + (35 to 100)
 
 The caster throws beams of colours at the victim causing damage.
 
-See Also: LIGHTNING BOLT
+See Also: "LIGHTNING BOLT" SONGS
 #
 "ENERGY DRAIN"
 
@@ -3983,6 +3974,8 @@ New Damage done : level/2 + (180 to 230)
 Lethal fire sets the victim afire in burning blue flames.  This spell
 is much more powerful than iceball and there will be no saving throw
 for the victim.
+
+See also: SONGS
 #
 "THUNDERBALL"
 
@@ -4076,7 +4069,7 @@ See Also : Dispel Evil
 Usage       : cast 'evil word'
 Accumulative: -
 Duration    : Instantaneous
-Level       : level 23 cleric, 26 anti-paladin.
+Level       : level 23 cleric, 26 anti-paladin, 24 bard.
 Save        : Same as dispel good
 Mana Cost   : 80
 Damage Done : 130
@@ -4086,7 +4079,7 @@ gates of Hell to be opened in the vicinity.  The corruption of the pits
 of hell will stream forth and burn all those who do not acknowledge the
 dominance of the powers of darkness.
 
-See Also : Dispel Good
+See Also : "DISPEL GOOD" SONGS
 #
 "LAY HANDS"
 
@@ -4130,6 +4123,8 @@ Mana cost   : 25 (cost will be higher at lower levels)
 
 The caster gives a refreshing pick-me-up to the tired victim, restoring
 the victim's movement points to full.
+
+See also: SONGS
 #
 "MANA TRANSFER"
 
@@ -4153,14 +4148,16 @@ Mana Cost   : 30 (cost will be higher at lower levels)
 The caster asks for the blessing of the One True God to return his/her
 soul to the path of righteousness.
 #
-"SATIATE"
+SATIATE
 
 Usage       : cast 'satiate' <victim>
-Level       : Level 15 cleric.
+Level       : Level 15 cleric, 15 bard.
 Mana Cost   : 10 (cost will be higher at lower levels)
 
 This spell can fill your stomach to full for 24 ticks, and you can cast
 this spell on other players too.
+
+See also: SONGS
 #
 FURY
 
@@ -4378,11 +4375,13 @@ INFRAVISION
 Usage       : cast 'infravision' <victim>
 Accumulative: -
 Duration    : 30 + Level of Caster ticks
-Level       : Level 5 Mage, 5 Ninja, 11 Anti-Paladin.
+Level       : Level 5 Mage, 5 Ninja, 11 Anti-Paladin, 21 Bard.
 Mana Cost   : 20 (cost will be higher at lower levels)
 
 The victim of this spell gains the ability to see in the dark without
 a light source.
+
+See also: SONGS
 #
 PARALYZE
 
@@ -4423,12 +4422,14 @@ FLY
 
 Usage       : cast 'fly' <victim>
 Duration    : 12 ticks
-Level       : Level 10 mage.
+Level       : Level 10 mage, 9 bard
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 This spell allows players to fly over water and some other obstructions.
 Note that the spell doesn't bestow the power of flight upon you but rather
 makes you float in the air.
+
+See also: SONGS
 #
 "REMOVE PARALYSIS"
 
@@ -4474,6 +4475,7 @@ Songs work in NOMAGIC rooms also.
 
 Level Song's Name                       Mana    Spell
 -------------------------------------------------------------------
+ (3)  Somebody's Watching Me             30     (detect invisibility)
  (5)  Seal with a Kiss                   20     (armor)
  (7)  Like a Prayer                      20     (bless)
  (9)  One Day I will Fly Away            20     (fly)
@@ -4489,7 +4491,7 @@ Level Song's Name                       Mana    Spell
 (25)  Toy Soldier                        60     (animate-dead)
 (26)  Everything I do I do it for you    70     (heal)
 (28)  A View to a Kill                   80     (lethal fire)
-(30)  Spirits in the Material World      80     (mass invisibility)
+(30)  Spirits in the Material World      80     (invisibility)
 (50)  There is No Heart That Won't Heal  100    (rejuvenation)
 #
 SPELL SPELLS
@@ -4513,7 +4515,7 @@ See help for:
       (12) Fear
       (13) Locate Character      (13) Blindness
       (15) Forget                (15) Satiate
-      (17) Sleep                 (17) Color Spray
+      (17) Sleep                 (17) Colour Spray
       (18) Charm Person
       (18) Hold Person
       (19) Word of Recall
@@ -7852,12 +7854,15 @@ See Also: SUBCLASSES "BLADE SINGER"
 #
 REJUVENATION
 
-Level 50 Bard
+Usage       : cast 'rejuvenation' <victim>
+Accumulative: No
+Level       : Level 50 Bard.
+Duration    : Instantaneous
+Mana Cost   : 80
 
-This song will heal every character in the room with 400 hit points for 100 
-mana.
+This spell will heal the victim for a maximum of 400 hit points.
 
-See Also: SUBCLASSES "BLADE SINGER"
+See Also: SONGS
 #
 "WAR CHANT"
 

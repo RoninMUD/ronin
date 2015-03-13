@@ -516,6 +516,7 @@ int SPELL_LEVEL(struct char_data *ch, int sn)
 
 char *songs[] =
 {
+  "somebody's watching me",           /* detect invis */
   "seal with a kiss",                 /* armor */
   "like a prayer",                    /* bless */
   "one day I will fly away",          /* fly */
@@ -546,12 +547,12 @@ char *songs[] =
 
 int song_level[] =
 {
-  5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,30,30,30,30,30,50,30,30,30,30
+  3,5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,30,30,30,30,30,50,30,30,30,30
 };
 
 int song_mana[] =
 {
-  20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,80,40,75,60,100,100,150,100,400,200
+  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,80,40,75,60,100,100,150,100,400,200
 };
 
 char *skip_spaces(char *string);
@@ -659,15 +660,28 @@ void do_song(CHAR *ch, char *arg, int cmd)
 
   WAIT_STATE(ch, PULSE_VIOLENCE);
 
-  switch (song)
-  {
+  switch (song) {
     case 1:
+      act("$n sings 'I always feel like somebody's watching me...'", FALSE, ch, NULL, NULL, TO_ROOM);
+
+      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+        next_victim = tmp_victim->next_in_room;
+
+        if (ch != tmp_victim) {
+          spell_detect_invisibility(GET_LEVEL(ch), ch, tmp_victim, NULL);
+        }
+      }
+
+      spell_detect_invisibility(GET_LEVEL(ch), ch, ch, NULL);
+      break;
+
+    case 2:
       act("$n sings 'In a letter, sealed with a kiss...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
         next_victim = tmp_victim->next_in_room;
-	  
+
         if (ch != tmp_victim)
         {
           spell_armor(GET_LEVEL(ch), ch, tmp_victim, NULL);
@@ -677,7 +691,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_armor(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 2:
+    case 3:
       act("$n sings 'Like a prayer...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -693,7 +707,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_bless(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 3:
+    case 4:
       act("$n sings 'One day I will fly away...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -709,7 +723,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_fly(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 4:
+    case 5:
       act("$n sings 'We don't need another hero...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -723,9 +737,9 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
 
       spell_cure_critic(GET_LEVEL(ch), ch, ch, NULL);
-    break;
+      break;
 
-    case 5:
+    case 6:
       act("$n sings 'Smoke gets in your eyes...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -739,7 +753,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 6:
+    case 7:
       act("$n sings 'Now I save the best of me...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -755,7 +769,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_satiate(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 7:
+    case 8:
       act("$n sings 'I'm taking a ride with my best friend...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -771,7 +785,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_vitality(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 8:
+    case 9:
       act("$n sings 'Dangerous...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -785,7 +799,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 9:
+    case 10:
       act("$n sings 'We are the world, we are the children...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -801,7 +815,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_word_of_recall(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 10:
+    case 11:
       act("$n sings 'Carried away by moonlight shadow...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -817,7 +831,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_infravision(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 11:
+    case 12:
       act("$n sings 'It's been seven hours and fifteen days...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -833,7 +847,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_sanctuary(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 12:
+    case 13:
       act("$n sings 'Better the devil you know...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -847,7 +861,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 13:
+    case 14:
       act("$n sings 'Like toy soldiers...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_obj = world[CHAR_REAL_ROOM(ch)].contents; tmp_obj; tmp_obj = next_obj)
@@ -857,7 +871,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 14:
+    case 15:
       act("$n sings 'Everything I do, I do it for you...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -873,7 +887,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_heal(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 15:
+    case 16:
       act("$n sings 'Dance into the fire...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -887,7 +901,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 16:
+    case 17:
       act("$n sings 'We are spirits in the material world...'", FALSE, ch, NULL, NULL, TO_ROOM);
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -902,7 +916,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_invisibility(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 17:
+    case 18:
       act("$n sings 'Lifting shadows, off a dream...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -918,7 +932,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_remove_poison(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 18:
+    case 19:
       act("$n sings 'The brightest flame burns quickest...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -934,7 +948,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_rally(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 19:
+    case 20:
       act("$n sings 'Something takes a part of me...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -950,7 +964,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_warchant(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 20:
+    case 21:
       act("$n sings 'If I could change the world...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -966,7 +980,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_luck(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 21:
+    case 22:
       act("$n sings 'There is no heart that won't heal...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -982,7 +996,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_rejuvenation(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 22:
+    case 23:
       act("$n sings 'Hero of the day...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -998,7 +1012,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_aid(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 23:
+    case 24:
       act("$n sings 'Heaven beside you...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -1028,7 +1042,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 24:
+    case 25:
       act("$n sings 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -1042,7 +1056,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 25:
+    case 26:
       act("$n sings 'Quicker than a ray of light...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp = 0, tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp++, tmp_victim = tmp_victim->next_in_room);
@@ -2143,7 +2157,7 @@ void assign_spell_pointers(void)
   SPELLO(224, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_luck);
   SPELLO(218, 30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_meteor);
   SPELLO(217, 30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   80, TAR_IGNORE,                                                                   cast_wall_thorns);
-  SPELLO(216, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 50, 57,  100, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
+  SPELLO(216, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 50, 57,   80, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
   SPELLO(212, 30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   70, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_divine_wind);
   SPELLO(211, 30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_blackmantle);
   SPELLO(210, 30, POSITION_STANDING, 57, 57, 57, 57, 30, 57, 57, 57,   25, TAR_OBJ_ROOM,                                                                 cast_dark_ritual);
