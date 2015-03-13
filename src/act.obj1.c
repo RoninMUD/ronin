@@ -1000,8 +1000,8 @@ int put(CHAR *ch, OBJ *obj, OBJ *sub_obj, bool show)
 
   if (signal_object(obj, ch, MSG_OBJ_PUT, OBJ_NAME(sub_obj))) return TRUE;
 
-  if (((GETOBJ_WEIGHT(sub_obj) + GETOBJ_WEIGHT(obj)) >= OBJ_VALUE0(sub_obj)) ||
-      IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE))
+  if ((((GETOBJ_WEIGHT(sub_obj) + GETOBJ_WEIGHT(obj)) >= OBJ_VALUE0(sub_obj)) ||
+      IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE)) && GET_ITEM_TYPE(sub_obj) != ITEM_AQ_ORDER)
   {
     if (show)
     {
@@ -1120,7 +1120,7 @@ void do_put(struct char_data *ch, char *argument, int cmd)
       type = 2;
     } else {
       switch (GET_ITEM_TYPE(to_object)) {
-	  case ITEM_CONTAINER:
+      case ITEM_CONTAINER:
         if (!IS_SET(to_object->obj_flags.value[1], CONT_CLOSED)) {
           alldot = is_all_dot(arg1, allbuf);
           if (!str_cmp(arg1, "all")){
@@ -1131,57 +1131,59 @@ void do_put(struct char_data *ch, char *argument, int cmd)
         } else {
           type = 5; // container is closed
         }
-		break;
-	  case ITEM_AQ_ORDER:
-      if (number == 1) {
-        obj_object = get_obj_in_list_vis(ch, arg1, ch->carrying);
-        if (obj_object) { // this is where it gets special for AQ_ORDER
-          if (V_OBJ(obj_object) == to_object->obj_flags.value[0] || // we only want to allow you to put things in the order that the order wants
-              V_OBJ(obj_object) == to_object->obj_flags.value[1] ||
-              V_OBJ(obj_object) == to_object->obj_flags.value[2] ||
-              V_OBJ(obj_object) == to_object->obj_flags.value[3]) {
-            total = put(ch, obj_object, to_object, TRUE);
-          } else {
-            sprintf(buffer, "The acquisition order for %s did not include %s.\n\r", idname[obj_object->ownerid[0]].name, OBJ_SHORT(obj_object));
-                send_to_char(buffer, ch);
-          }
-        } else {
-          sprintf(buffer, "You don't have the %s.\n\r", arg1);
-          send_to_char(buffer, ch);
-        }
-      } else {    
-        for(tmp_object = ch->carrying, total = 0;        
-            tmp_object && total < number;
-            tmp_object = next_obj) {
-          next_obj = tmp_object->next_content;
-          if (isname( arg1, OBJ_NAME(tmp_object)) && (CAN_SEE_OBJ(ch, tmp_object))) {
-            if ( put( ch, tmp_object, to_object, FALSE)) {
-              total++;
-            } else {
-              put( ch, tmp_object, to_object, TRUE);
-            }
-          found = TRUE;
-          }
-        }
-        if(!found) {
-          sprintf(buffer, "You don't see or have any %s.\n\r", arg1);
-          send_to_char(buffer, ch);
-        } else {
-          sprintf(buffer, "You put %d(%d) %s(s) to %s.\n\r", total, number, arg1, arg2);
-          send_to_char(buffer, ch);
-          if(total < 6) {
-            sprintf(buffer,"$n puts some %s in $o.", arg1);
-          } else {
-            sprintf(buffer,"$n puts a bunch of %s in $o.",arg1);
-          }
-          act(buffer, TRUE, ch, to_object, 0, TO_ROOM);
-        }
-      }    
       break;
-	  default:
+      case ITEM_AQ_ORDER:
+        if (number == 1) {
+          obj_object = get_obj_in_list_vis(ch, arg1, ch->carrying);
+          if (obj_object) { // this is where it gets special for AQ_ORDER
+            if (V_OBJ(obj_object) == to_object->obj_flags.value[0] || // we only want to allow you to put things in the order that the order wants
+                V_OBJ(obj_object) == to_object->obj_flags.value[1] ||
+                V_OBJ(obj_object) == to_object->obj_flags.value[2] ||
+                V_OBJ(obj_object) == to_object->obj_flags.value[3]) {
+              total = put(ch, obj_object, to_object, TRUE);
+            } else {
+              sprintf(buffer, "This acquisition order did not include %s.\n\r", OBJ_SHORT(obj_object));
+              send_to_char(buffer, ch);
+            }
+          } else {
+            sprintf(buffer, "You don't have the %s.\n\r", arg1);
+            send_to_char(buffer, ch);
+          }
+        } else {    
+          for(tmp_object = ch->carrying, total = 0;        
+              tmp_object && total < number;
+              tmp_object = next_obj) {
+            next_obj = tmp_object->next_content;
+            if (isname( arg1, OBJ_NAME(tmp_object)) && (CAN_SEE_OBJ(ch, tmp_object))) {
+              if ( put( ch, tmp_object, to_object, FALSE)) {
+                total++;
+              } else {
+                put( ch, tmp_object, to_object, TRUE);
+              }
+              found = TRUE;
+            }
+          } 
+          
+          if(!found) {
+            sprintf(buffer, "You don't see or have any %s.\n\r", arg1);
+            send_to_char(buffer, ch);
+          } else {
+            sprintf(buffer, "You put %d(%d) %s(s) to %s.\n\r", total, number, arg1, arg2);
+            send_to_char(buffer, ch);
+            if(total < 6) {
+              sprintf(buffer,"$n puts some %s in $o.", arg1);
+            } else {
+              sprintf(buffer,"$n puts a bunch of %s in $o.",arg1);
+            }
+            act(buffer, TRUE, ch, to_object, 0, TO_ROOM);
+          } 
+        }
+        type = 7; // all cases handled here, type 7 is break;
+      break;
+      default:
         type = 6; // target of do_put is not a container-ish object
-		break;
-	  }
+      break;
+      }
     }
   }
 
@@ -1252,6 +1254,9 @@ void do_put(struct char_data *ch, char *argument, int cmd)
     sprintf(buffer,"The %s is not a container.\n\r", arg2);
     send_to_char(buffer, ch);
   } break;
+  case 7: { // AQ_ORDER, case handled there
+    break;
+  }
   default: {
     log_f("BUG: Wrong type in do_put!");
     produce_core();

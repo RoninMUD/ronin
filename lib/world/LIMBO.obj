@@ -144,12 +144,12 @@ A Statue of Peace is standing here.~
 10 10 10
 10
 E
-peace~
+statue~
 This statue appears to be keeping the surrounding area
 quiet and peaceful.
 ~
 E
-statue~
+peace~
 This statue appears to be keeping the surrounding area
 quiet and peaceful.
 ~
@@ -725,6 +725,30 @@ This token entitles the bearer to one free vanity, spec or no spec.~
 X
 ~
 0 0 0
+M
+~
+~
+~
+~
+#40
+acquisition order~
+an acquisition order~
+An infamous acquisition order has been left here.~
+~
+36 0 1
+0 0 0 0
+5 5 5
+0
+E
+order~
+A well-worn, faded tan canvas bag has a large blue patch sewn
+to it. The patch has been sewn over half-a-hundred times and
+had those stitches ripped out just as often. There are four
+hastily sewn lines of text detailing The Collector's wish list.
+~
+X
+~
+64 0 0
 M
 ~
 ~

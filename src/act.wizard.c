@@ -2949,7 +2949,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
            j->obj_flags.value[1], j->obj_flags.value[2], j->obj_flags.value[3]);
        break;
      case ITEM_AQ_ORDER :
-       printf_to_char(ch,"Need objects : %d, %d, %d, %d",
+       printf_to_char(ch,"Fulfillment Requires Objects : %d, %d, %d, %d",
            j->obj_flags.value[0], j->obj_flags.value[1], j->obj_flags.value[2], j->obj_flags.value[3]);
        break;
      case ITEM_WAND :
@@ -5654,7 +5654,7 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
          flags->value[3]);
     break;
   case ITEM_AQ_ORDER :
-    sprintf(str, "Fulfillment Requires: [%d] [%d] [%d] [%d]\n\r",
+    sprintf(str, "Fulfillment Requires Objects: [%d] [%d] [%d] [%d]\n\r",
          flags->value[0],
          flags->value[1],
          flags->value[2],
