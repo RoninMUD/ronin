@@ -685,10 +685,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if ((spell > 200) && (spell != SPELL_REJUVENATION) && !check_sc_master(ch, mob))
-  {
+  if ((spell > 200) &&
+      (spell != SPELL_REJUVENATION) &&
+      (spell != SKILL_CAMP) &&
+      !check_sc_master(ch, mob)) {
     send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
-
     return TRUE;
   }
 
@@ -803,6 +804,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       {
         index = -2;
       }
+
+      if ((skill == SKILL_CAMP) && (GET_LEVEL(ch) < 35)) {
+        index = -2;
+      }
+
       break;
 
     case CLASS_COMMANDO:
@@ -849,7 +855,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if (skill > 165 && !check_sc_master(ch, mob))
+  if (skill > 165 && (skill != SKILL_CAMP) && !check_sc_master(ch, mob))
   {
     send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
 

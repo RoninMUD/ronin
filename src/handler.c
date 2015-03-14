@@ -610,12 +610,12 @@ void char_from_room(struct char_data *ch)
   struct char_data *i;
 
   if (CHAR_REAL_ROOM(ch) == NOWHERE) {
-    log_f("NOWHERE extracting char from room (handler.c, char_from_room)");
+    log_s("NOWHERE extracting char from room (handler.c, char_from_room)");
     produce_core();
   }
 
   if(affected_by_spell(ch, SKILL_CAMP)) {
-    act("You quickly break camp.",1,ch,0,0,TO_CHAR);
+    act("You quickly break camp.\n\r",1,ch,0,0,TO_CHAR);
     act("$n quickly breaks camp.",1,ch,0,0,TO_ROOM);
     affect_from_char(ch,SKILL_CAMP);
     if(CHAR_VIRTUAL_ROOM(ch)!=3076 &&

@@ -2803,6 +2803,7 @@ char *bard_skills[] = {
   "dodge",
   "peek",
   "backflip",
+  "camp",
   "blitz",
   "\n"
 };
