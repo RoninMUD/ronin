@@ -840,10 +840,12 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
         act("......$n's sinister presence desecrates the surroundings.", FALSE, i, 0, ch, TO_VICT);
       }
 
+      /*
       if (affected_by_spell(i, SPELL_IRONSKIN))
       {
         act("......$n's skin is as hard and impervious as iron.", FALSE, i, 0, ch, TO_VICT);
       }
+      */
 
       if (affected_by_spell(i, SPELL_QUICK))
       {
