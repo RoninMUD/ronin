@@ -547,12 +547,12 @@ char *songs[] =
 
 int song_level[] =
 {
-  3,5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,30,30,30,30,30,50,30,30,30,30
+  18,5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,24,30,30,30,30,50,30,30,30,30
 };
 
 int song_mana[] =
 {
-  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,80,40,75,60,100,100,150,100,400,200
+  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,50,40,75,60,100,100,150,100,400,200
 };
 
 char *skip_spaces(char *string);
@@ -2049,7 +2049,7 @@ void assign_spell_pointers(void)
   SPELLO( 26, 30, POSITION_FIGHTING, 15, 51, 51, 51, 20, 15, 51, 15,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fireball);
   SPELLO( 27, 30, POSITION_FIGHTING, 51, 15, 51, 51, 51, 51, 51, 14,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_harm);
   SPELLO( 28, 30, POSITION_FIGHTING, 51, 14, 29, 21, 51, 15, 26, 51,   50, TAR_CHAR_ROOM,                                                                cast_heal);
-  SPELLO( 29, 30, POSITION_STANDING,  4, 51,  7, 51,  9,  6, 30, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
+  SPELLO( 29, 30, POSITION_STANDING,  4, 51,  7, 51,  9,  6, 8,  51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
   SPELLO( 30, 30, POSITION_FIGHTING,  9, 51, 51, 51, 12, 51, 51,  7,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lightning_bolt);
   SPELLO( 31, 30, POSITION_STANDING,  6, 10, 14, 17, 51,  8, 10, 51,   20, TAR_OBJ_WORLD,                                                                cast_locate_object);
   SPELLO( 32, 30, POSITION_FIGHTING,  1, 51, 51, 51,  1, 51, 51,  1,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_magic_missile);

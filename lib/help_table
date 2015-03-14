@@ -1557,7 +1557,7 @@ Use HELP BARD SPELLS to see the spells of the bard class.
 Note: In order to sing a song, the bard must be HOLDING an instrument.
       To sing a bard song you just type: song <songname>
 
-Skills: dodge peek pick backflip
+Skills: dodge peek pick backflip camp
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1665,6 +1665,7 @@ Backstab      Y                                       Y
 Bash          Y         Y    Y         Y         Y         Y
 Block                                            Y         Y
 Butcher                                     Y
+Camp               Y
 Circle                                                Y
 Cunning                                               Y
 Disarm                       Y              Y    Y
@@ -3442,7 +3443,7 @@ INVISIBILITY
 
 Usage       : cast 'invisibility' <victim | object>
 Accumulative: No
-Level       : Level 4 mage, 7 ninja, 9 anti-paladin, 30 bard.
+Level       : Level 4 mage, 7 ninja, 9 anti-paladin, 8 bard.
 Duration    : 24 ticks, permanent on objects.
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -4475,7 +4476,6 @@ Songs work in NOMAGIC rooms also.
 
 Level Song's Name                       Mana    Spell
 -------------------------------------------------------------------
- (3)  Somebody's Watching Me             30     (detect invisibility)
  (5)  Seal with a Kiss                   20     (armor)
  (7)  Like a Prayer                      20     (bless)
  (9)  One Day I will Fly Away            20     (fly)
@@ -4484,14 +4484,15 @@ Level Song's Name                       Mana    Spell
 (15)  Best Of Me                         25     (satiate)
 (16)  I'm Taking a Walk                  30     (vitality)
 (17)  Dangerous                          30     (colour spray)
+(18)  Somebody's Watching Me             30     (detect invisibility)
 (19)  We are the World                   30     (total recall)
 (21)  Moonlight Shadow                   30     (infravision)
 (23)  Nothing Compares to you            50     (sanctuary)
+(24)  Spirits in the Material World      50     (invisibility)
 (24)  Better than the Devil you Know     60     (evil word)
 (25)  Toy Soldier                        60     (animate-dead)
 (26)  Everything I do I do it for you    70     (heal)
 (28)  A View to a Kill                   80     (lethal fire)
-(30)  Spirits in the Material World      80     (invisibility)
 (50)  There is No Heart That Won't Heal  100    (rejuvenation)
 #
 SPELL SPELLS
@@ -4509,6 +4510,7 @@ See help for:
        (3) Detect Invisibility
        (5) Armor
        (7) Vitality
+       (8) Invisibility
        (9) Identify               (9) Fly
       (10) Locate Object
       (11) Cure Critic
@@ -4525,7 +4527,6 @@ See help for:
       (25) Animate Dead
       (26) Heal
       (28) Lethal Fire
-      (30) Invisibility
       (45) Haste
       (50) Rejuvenation
 
@@ -6509,13 +6510,16 @@ See Also: SUBCLASSES RANGER WARLORD
 #
 CAMP
 
+Class: Bard - Level 35
 Subclass Trapper: Level 2 (Nomad)
 
-The trapper has the unique ability to set up a camp with the same regeneration 
-properties of a resting room.  Characters will still need to become members of 
-a resting room to receive the benefits of resting in a camp.
+The Bard and Trapper have the ability to set up a camp with the same
+regeneration properties of a resting room.  Characters will still need to
+become members of a resting room to receive the benefits of resting in a camp.
 
-See Also: SUBCLASSES TRAPPER
+A camp cannot be set up in a room with a potentially deadly monster.
+
+See Also: BARD SUBCLASSES TRAPPER
 #
 SCALP
 
