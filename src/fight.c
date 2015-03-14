@@ -4445,15 +4445,15 @@ void dhit(CHAR *ch, CHAR *victim, int type)
     if (affected_by_spell(ch, SKILL_HOSTILE) ||
         affected_by_spell(ch, SPELL_RUSH))
     {
-      check = number(1, 200);
+      check = number(1, 190);
     }
     else if (check_subclass(ch, SC_WARLORD, 1))
     {
-      check = number(1, 270);
+      check = number(1, 235);
     }
     else
     {
-      check = number(1, 370);
+      check = number(1, 335);
     }
 
     check -= GET_DEX_APP(ch) * 5;
@@ -4512,7 +4512,7 @@ void thit(CHAR *ch, CHAR *victim, int type)
 
     if (affected_by_spell(ch, SKILL_HOSTILE))
     {
-      check = number(1, 200);
+      check = number(1, 180);
     }
     else
     {
