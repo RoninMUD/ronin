@@ -4386,7 +4386,7 @@ void hit(CHAR *ch, CHAR *victim, int type)
     if (affected_by_spell(ch, SKILL_HOSTILE) ||
         affected_by_spell(ch, SPELL_RUSH))
     {
-      check = number(1, 185);
+      check = number(1, 200);
     }
     else
     {
@@ -4445,7 +4445,7 @@ void dhit(CHAR *ch, CHAR *victim, int type)
     if (affected_by_spell(ch, SKILL_HOSTILE) ||
         affected_by_spell(ch, SPELL_RUSH))
     {
-      check = number(1, 150);
+      check = number(1, 200);
     }
     else if (check_subclass(ch, SC_WARLORD, 1))
     {
@@ -4453,7 +4453,7 @@ void dhit(CHAR *ch, CHAR *victim, int type)
     }
     else
     {
-      check = number(1, 300);
+      check = number(1, 370);
     }
 
     check -= GET_DEX_APP(ch) * 5;
