@@ -792,7 +792,8 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
     else if(is_abbrev(buf,"cost_day")) num=10;
     else if(is_abbrev(buf,"affected")) num=11;
     else if(is_abbrev(buf,"owner"))    num=12;
-
+    else if(is_abbrev(buf,"timer"))    num=13;
+    
     if (is_number(buf2))
       num2 = atoi(buf2);
     else {
@@ -911,6 +912,9 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
          argument=one_argument(argument, buf2);
        }
        send_to_char("Owners set/reset.  To individualize the obj for wear, be sure to set wear flag QUESTWEAR.\n\r",ch);
+       break;
+     case 13: // timer
+       obj->obj_flags.timer = num2;
        break;
      default:
        send_to_char("Wrong! Wrong! Wrong! Type wizhelp sos.\n\r", ch);
