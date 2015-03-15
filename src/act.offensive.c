@@ -828,7 +828,7 @@ void do_assault(CHAR *ch, char *arg, int cmd)
       }
 
       /* Dual Assault */
-      if (check_subclass(ch, SC_RONIN, 1))
+      if (check_subclass(ch, SC_RONIN, 3))
       {
         if (number(1, 151) + modifier <= GET_LEARNED(ch, SKILL_ASSAULT))
         {
@@ -841,7 +841,7 @@ void do_assault(CHAR *ch, char *arg, int cmd)
       assault = TRUE;
 
       /* Dual Assault */
-      if (check_subclass(ch, SC_RONIN, 1))
+      if (check_subclass(ch, SC_RONIN, 3))
       {
         dual_assault = TRUE;
       }
@@ -860,7 +860,7 @@ void do_assault(CHAR *ch, char *arg, int cmd)
   }
 
   /* Dual Assault */
-  if (check_subclass(ch, SC_RONIN, 1))
+  if (check_subclass(ch, SC_RONIN, 3))
   {
     if (!dual_assault)
     {
@@ -1406,7 +1406,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd)
       act("$n pummels you, and you are stunned now!", FALSE, ch, NULL, victim, TO_VICT);
       act("$n pummels $N, and $N is stunned now!", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_PUMMEL, DAM_NO_BLOCK);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_PUMMEL, DAM_PHYSICAL);
 
       if (GET_LEARNED(ch, SKILL_PUMMEL) < 80)
       {
@@ -1518,7 +1518,7 @@ void do_bash(CHAR *ch, char *arg, int cmd)
     {
       set_pos = stack_position(victim, POSITION_RESTING);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), number(1, GET_LEVEL(ch))), SKILL_BASH, DAM_NO_BLOCK);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), number(1, GET_LEVEL(ch))), SKILL_BASH, DAM_PHYSICAL);
 
       if (GET_LEARNED(ch, SKILL_BASH) < 80)
       {
@@ -1606,7 +1606,7 @@ void do_punch(CHAR *ch, char *arg, int cmd)
     {
       set_pos = stack_position(victim, POSITION_SITTING);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_PUNCH, DAM_NO_BLOCK);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_PUNCH, DAM_PHYSICAL);
 
       if (GET_LEARNED(ch, SKILL_PUNCH) < 80)
       {
@@ -1829,7 +1829,7 @@ void do_kick(CHAR *ch, char *arg, int cmd)
     }
     else
     {
-      damage(ch, victim, calc_position_damage(GET_POS(victim), MIN(GET_LEVEL(ch), 30) * 2), SKILL_KICK, DAM_NO_BLOCK);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), MIN(GET_LEVEL(ch), 30) * 2), SKILL_KICK, DAM_PHYSICAL);
 
       if (GET_LEARNED(ch, SKILL_KICK) < 80)
       {
@@ -1839,7 +1839,7 @@ void do_kick(CHAR *ch, char *arg, int cmd)
       skill_wait(ch, SKILL_KICK, 2);
     }
 
-    if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
+    if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim))
     {
       /* Can't use skill_wait() since this applies to victim. */
       WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(2, 3) : 3));

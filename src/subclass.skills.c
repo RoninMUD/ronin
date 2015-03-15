@@ -470,7 +470,7 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd)
     act("$n drives $s foot into your chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_VICT);
     act("$n drives $s foot into $N's chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-    damage(ch, victim, calc_position_damage(GET_POS(victim), (GET_LEVEL(ch) * 7) / 4), SKILL_TIGERKICK, DAM_NO_BLOCK);
+    damage(ch, victim, calc_position_damage(GET_POS(victim), (GET_LEVEL(ch) * 7) / 4), SKILL_TIGERKICK, DAM_PHYSICAL);
 
     if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
     {
@@ -1429,7 +1429,7 @@ void do_batter(CHAR *ch, char *arg, int cmd)
       act("$N pounds on you with $s fists.", FALSE, ch, 0, victim, TO_VICT);
       act("$n pounds on $N with $s fists.", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_BATTER, DAM_NO_BLOCK);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_BATTER, DAM_PHYSICAL);
 
       if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
       {
@@ -1631,7 +1631,7 @@ void do_headbutt(CHAR *ch, char *arg, int cmd)
       act("$n slams his forehead into your face!", FALSE, ch, NULL, victim, TO_VICT);
       act("$n slams $s forehead into $N's face!", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), 200), SKILL_HEADBUTT, DAM_NO_BLOCK);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), 200), SKILL_HEADBUTT, DAM_PHYSICAL);
 
       if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
       {
@@ -2108,7 +2108,7 @@ void do_clobber(CHAR *ch, char *arg, int cmd)
     act("You're clobbered by $n's windmilling fists!", FALSE, ch, NULL, victim, TO_VICT);
     act("$n clobbers $N with $s windmilling fists!", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-    damage(ch, victim, calc_position_damage(GET_POS(victim), number(GET_LEVEL(ch), GET_LEVEL(ch) * 4)), SKILL_CLOBBER, DAM_NO_BLOCK);
+    damage(ch, victim, calc_position_damage(GET_POS(victim), number(GET_LEVEL(ch), GET_LEVEL(ch) * 4)), SKILL_CLOBBER, DAM_PHYSICAL);
 
     if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
     {

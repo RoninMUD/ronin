@@ -1663,7 +1663,7 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
       act("$n viciously bites at you with $s fangs!", FALSE, ch, 0, vict, TO_VICT);
       act("You bite at $N viciously with your fangs!", FALSE, ch, 0, vict, TO_CHAR);
 
-      damage(ch, vict, 60, TYPE_UNDEFINED, DAM_NO_BLOCK);
+      damage(ch, vict, 60, TYPE_UNDEFINED, DAM_PHYSICAL);
       break;
 
     case 3:
@@ -1830,7 +1830,7 @@ void shadow_walk_action(CHAR *ch, CHAR *vict)
   act("$n steps into the shadows and attacks you by surprise!", FALSE, ch, 0, vict, TO_VICT);
   act("$n steps into the shadows and attacks $N by surprise!", FALSE, ch, 0, vict, TO_NOTVICT);
 
-  damage(ch, vict, dmg, SKILL_SHADOW_WALK, DAM_NO_BLOCK);
+  damage(ch, vict, dmg, get_attack_type(ch, ch->equipment[WIELD]), DAM_PHYSICAL);
 }
 
 int dirty_tricks_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
@@ -1844,7 +1844,7 @@ int dirty_tricks_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room,
 
   set_pos = GET_POS(enchanted_ch);
 
-  damage(enchanted_ch, enchanted_ch, dice(3, 12), SKILL_DIRTY_TRICKS, DAM_NO_BLOCK);
+  damage(enchanted_ch, enchanted_ch, dice(3, 12), SKILL_DIRTY_TRICKS, DAM_PHYSICAL);
 
   GET_POS(enchanted_ch) = set_pos;
 
@@ -1961,7 +1961,7 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim)
 
       set_pos = stack_position(victim, POSITION_SITTING);
 
-      damage(ch, victim, 10, SKILL_DIRTY_TRICKS, DAM_NO_BLOCK);
+      damage(ch, victim, 10, SKILL_DIRTY_TRICKS, DAM_PHYSICAL);
 
       if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
       {
@@ -2647,23 +2647,16 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
 
   if (ch != victim)
   {
-    gain_exp(ch, GET_LEVEL(victim) * dam / 4);
+    gain_exp(ch, (GET_LEVEL(victim) * dam) / 4);
 
     if (GET_REMORT_EXP(ch))
     {
-      if (GET_DEATH_EXP(ch))
-      {
-        rv2_gain_remort_exp(ch, (GET_LEVEL(victim) * dam / 4) / 2);
-      }
-      else
-      {
-        rv2_gain_remort_exp(ch, GET_LEVEL(victim) * dam / 4);
-      }
+      rv2_gain_remort_exp(ch, (GET_LEVEL(victim) * dam) / 4);
     }
 
     if (GET_DEATH_EXP(ch))
     {
-      gain_death_exp(ch, GET_LEVEL(victim) * dam / 4);
+      gain_death_exp(ch, (GET_LEVEL(victim) * dam) / 4);
     }
   }
 
@@ -2760,10 +2753,10 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
           act(messages->god_msg.victim_msg, FALSE, ch, ch->equipment[WIELD], victim, TO_VICT);
           act(messages->god_msg.room_msg, FALSE, ch, ch->equipment[WIELD], victim, TO_NOTVICT);
         }
-        else if ((dam != 0) || 
-                 ((attacktype == SKILL_PUNCH || 
+        else if ((dam != 0) ||
+                 ((attacktype == SKILL_PUNCH ||
                    attacktype == SKILL_BASH ||
-                   attacktype == SKILL_KICK) && 
+                   attacktype == SKILL_KICK) &&
                   odam > 0))
         {
           if (GET_POS(victim) == POSITION_DEAD)
@@ -2837,7 +2830,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
 
       /*
       if ((GET_HIT(victim) < victim->new.wimpy) &&
-          IS_SET(victim->specials.pflag, PLR_INSURANCE)) 
+          IS_SET(victim->specials.pflag, PLR_INSURANCE))
       {
         act("A guard arrives from a puff of smoke.", FALSE, victim, 0, 0,TO_ROOM);
         act("A guard arrives from a puff of smoke.", FALSE, victim, 0, 0,TO_CHAR);
@@ -2852,7 +2845,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
         return;
       }
       */
-	  
+
       if (GET_HIT(victim) < victim->new.wimpy &&
           !IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, CHAOTIC) && !CHAOSMODE
           && damtype != DAM_NO_BLOCK_NO_FLEE)
@@ -2895,8 +2888,8 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
       }
       else
       {
-        if ((!victim->ver3.bleed_limit && GET_HIT(victim) < (max_hit / 5)) ||
-            (victim->ver3.bleed_limit && GET_HIT(victim) < victim->ver3.bleed_limit))
+        if ((!victim->ver3.bleed_limit && (GET_HIT(victim) < (max_hit / 5))) ||
+            (victim->ver3.bleed_limit && (GET_HIT(victim) < victim->ver3.bleed_limit)))
         {
           act("You wish that your wounds would stop BLEEDING that much!",
               FALSE, victim, 0, 0, TO_CHAR);
@@ -2906,7 +2899,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
       break;
   }
 
-  if (!IS_NPC(victim) && !(victim->desc) && damtype != DAM_NO_BLOCK_NO_FLEE)
+  if (!IS_NPC(victim) && !(victim->desc) && (damtype != DAM_NO_BLOCK_NO_FLEE))
   {
     do_flee(victim, "", 0);
 
@@ -2916,7 +2909,6 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
       victim->specials.was_in_room = CHAR_REAL_ROOM(victim);
       char_from_room(victim);
       char_to_room(victim, 1);
-      /*      GET_HIT(victim)=1;*/
       GET_POS(victim) = POSITION_STUNNED;
     }
   }
@@ -3127,7 +3119,7 @@ void damage(CHAR* ch, CHAR* to_damage, int dam, int attacktype, int damtype)
       (ch->skills[SKILL_TWIST].learned > (number(1, 129) - GET_DEX_APP(ch) - affected_by_spell(ch, SKILL_VEHEMENCE) ? (5 + (GET_DEX_APP(ch) / 2)) : 0)) &&
       (CHAR_REAL_ROOM(victim) == CHAR_REAL_ROOM(ch)))
   {
-    damage(ch, victim, 250, SKILL_TWIST, DAM_NO_BLOCK);
+    damage(ch, victim, 250, SKILL_TWIST, DAM_PHYSICAL);
     act("$n gruesomely twists $s weapon in the flesh of $N.", TRUE, ch, 0, victim, TO_NOTVICT);
     act("You writhe in pain as $n twists his weapon in your back.", FALSE, ch, 0, victim, TO_VICT);
     act("You twist your weapon in the flesh of $N.", FALSE, ch, 0, victim, TO_CHAR);
@@ -3609,7 +3601,7 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon)
       if (GET_CLASS(ch) == CLASS_NINJA)
       {
         /* Combat Zen */
-        if (check_subclass(ch, SC_RONIN, 4))
+        if (check_subclass(ch, SC_RONIN, 1))
           dam += dice(4, 9);
         else if (GET_LEVEL(ch) > 27)
           dam += dice(5, 4);
@@ -3741,6 +3733,9 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         GET_POS(victim) = POSITION_FIGHTING;
       }
 
+      /* Combat Zen */
+      if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+
       return FALSE;
     }
   }
@@ -3792,7 +3787,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
 
       if (affected_by_spell(victim, SPELL_BLUR))
       {
-        check += GET_LEVEL(victim) / 2;
+        check += GET_LEVEL(victim);
       }
 
       if (affected_by_spell(ch, SKILL_VEHEMENCE))
@@ -3835,6 +3830,9 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           GET_POS(victim) = POSITION_FIGHTING;
         }
 
+        /* Combat Zen */
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+
         return FALSE;
       }
     }
@@ -3866,6 +3864,9 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           GET_POS(victim) = POSITION_FIGHTING;
         }
 
+        /* Combat Zen */
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+
         return FALSE;
       }
     }
@@ -3892,7 +3893,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           act("$n is scorched by $N's mantle of darkness as $e gets too close.", FALSE, ch, 0, victim, TO_NOTVICT);
           act("You are scorched by $N's mantle of darkness as you get too close!", FALSE, ch, 0, victim, TO_CHAR);
 
-          damage(victim, ch, reflect, TYPE_UNDEFINED, DAM_NO_BLOCK);
+          damage(victim, ch, reflect, TYPE_UNDEFINED, DAM_MAGICAL);
         }
 
         act("$n feints, preventing $N's attack. $n hits back!", FALSE, victim, 0, ch, TO_NOTVICT);
@@ -3900,6 +3901,9 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         act("You feint, preventing $N's attack. You hit back!", FALSE, victim, 0, ch, TO_CHAR);
 
         hit(victim, ch, SKILL_FEINT);
+
+        /* Combat Zen */
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
 
         return FALSE;
       }
@@ -4026,7 +4030,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
     }
 
     /* Combat Zen */
-    if (!IS_NPC(victim) && check_subclass(ch, SC_RONIN, 4)) return TRUE;
+    if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
 
     return FALSE;
   }
@@ -4046,7 +4050,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         {
           multi = backstab_mult[GET_LEVEL(ch)];
           dam *= MAX(1, multi);
-          damage(ch, victim, dam, SKILL_BACKSTAB, DAM_NO_BLOCK);
+          damage(ch, victim, dam, SKILL_BACKSTAB, DAM_PHYSICAL);
         }
         break;
 
@@ -4066,7 +4070,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           act("You plunge $p deep into $N's back.", FALSE, ch, weapon, victim, TO_CHAR);
 
           dam *= circle_mult[GET_LEVEL(ch)];
-          damage(ch, victim, dam, SKILL_CIRCLE, DAM_NO_BLOCK);
+          damage(ch, victim, dam, SKILL_CIRCLE, DAM_PHYSICAL);
         }
         break;
 
@@ -4099,7 +4103,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           }
 
           dam *= MAX(1, multi);
-          damage(ch, victim, dam, SKILL_AMBUSH, DAM_NO_BLOCK);
+          damage(ch, victim, dam, SKILL_AMBUSH, DAM_PHYSICAL);
         }
         break;
 
@@ -4119,7 +4123,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           act("You quickly move to $N's side and hits $M with a devastating blow.", FALSE, ch, 0, victim, TO_CHAR);
 
           dam *= GET_LEVEL(ch) / 10;
-          damage(ch, victim, dam, SKILL_FLANK, DAM_NO_BLOCK);
+          damage(ch, victim, dam, SKILL_FLANK, DAM_PHYSICAL);
         }
         break;
 
@@ -4139,7 +4143,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           act("With a bloodthirsty scream, you charge $N.", FALSE, ch, 0, victim, TO_CHAR);
 
           dam *= 2;
-          damage(ch, victim, dam, SKILL_CHARGE, DAM_NO_BLOCK);
+          damage(ch, victim, dam, SKILL_CHARGE, DAM_PHYSICAL);
         }
         break;
 
@@ -4161,7 +4165,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           multi = assault_mult[GET_LEVEL(ch)];
 
           /* Dual Assault */
-          if (check_subclass(ch, SC_RONIN, 1) && hit_num == 4)
+          if (check_subclass(ch, SC_RONIN, 3) && hit_num == 4)
           {
             multi -= 3;
           }
@@ -4173,7 +4177,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
             dam += dam / 2;
           }
 
-          damage(ch, victim, dam, SKILL_ASSAULT, DAM_NO_BLOCK);
+          damage(ch, victim, dam, SKILL_ASSAULT, DAM_PHYSICAL);
         }
         break;
 
@@ -4215,7 +4219,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           }
 
           dam = (dam * 3) / 2;
-          damage(ch, victim, dam, SKILL_BLITZ, DAM_NO_BLOCK);
+          damage(ch, victim, dam, SKILL_BLITZ, DAM_PHYSICAL);
         }
         break;
 
@@ -4235,23 +4239,24 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           act("You lunge forward with your weapon, impacting $N's hide!", FALSE, ch, 0, victim, TO_CHAR);
 
           dam *= (assault_mult[GET_LEVEL(ch)] * 5) / 4;
-          damage(ch, victim, dam, SKILL_LUNGE, DAM_NO_BLOCK);
+          damage(ch, victim, dam, SKILL_LUNGE, DAM_PHYSICAL);
         }
         break;
 
-      default:
-        if (type == SKILL_FEINT)
-        {
-          dam *= 2;
-        }
+      case SKILL_FEINT:
+        /* Because defiler no longer has shadows, Feint results in a doubled return attack */
+        dam *= 2;
+        damage(ch, victim, dam, attack_type, DAM_PHYSICAL);
+        break;
 
+      default:
         if (riposte)
         {
           dam = (dam * 8) / 10;
         }
 
         damage(ch, victim, dam, attack_type, DAM_PHYSICAL);
-      break;
+        break;
     }
 
     return TRUE;

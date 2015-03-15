@@ -300,7 +300,7 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_RONIN, 2)) return TRUE;
       break;
     case SPELL_BLUR:
-      if (check_subclass(ch, SC_RONIN, 3)) return TRUE;
+      if (check_subclass(ch, SC_RONIN, 4)) return TRUE;
       break;
     case SKILL_BANZAI:
       if (check_subclass(ch, SC_RONIN, 5)) return TRUE;

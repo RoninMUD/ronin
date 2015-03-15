@@ -6662,7 +6662,7 @@ Subclass Defiler: Level 3 (Anti-Paladin)
 This passive ability will allow the Defiler to occasionally perform a
 fake attack against an opponent.  This will prevent the opponent from
 landing an attack against the Defiler. In addition, the Defiler will
-make a full attack back against his/her opponent, exploiting the
+make a doubled attack back against his/her opponent, exploiting the
 opponent's miss.
 
 The success of this skill is based on how well it is practiced, and
@@ -7904,10 +7904,10 @@ level, the Ronin receives a new or improved skill or spell.  For help on each
 skill or spell, just type HELP <skill/spell name>.
 
 Level         Skill/Spell
-  1           DUAL ASSAULT
+  1           COMBAT ZEN
   2           BACKFIST
-  3           BLUR
-  4           COMBAT ZEN
+  3           DUAL ASSAULT
+  4           BLUR
   5           BANZAI
 
 See Also: SUBCLASSES MYSTIC NINJA
@@ -7929,7 +7929,7 @@ See Also: SUBCLASSES RONIN NINJA
 #
 "DUAL ASSAULT"
 
-Subclass Ronin: Level 1 (Ninja)
+Subclass Ronin: Level 3 (Ninja)
 
 Usage: assault <victim>
 
@@ -7977,7 +7977,7 @@ See Also: SUBCLASSES RONIN
 #
 BLUR
 
-Subclass Ronin: Level 3 (Ninja)
+Subclass Ronin: Level 4 (Ninja)
 
 Usage       : cast 'blur' <self only>
 Accumulative: no
@@ -7989,9 +7989,9 @@ to hit, but harder to defend against. While under the effects of Blur, the
 Ronin gains the following benefits, increasing the skill check success of
 the affected skills.
 
-+(Level / 2) to Dodge skill checks.
++(Level) to Dodge skill checks.
 +(Level / 5) to Assault (and Dual Assault) skill checks.
-+(level / 10) to all other skill checks.
++(Level / 10) to all other skill checks.
 
 Additionally, the Ronin's armor class is improved by (Level / 2).
 
@@ -7999,13 +7999,14 @@ See Also: SUBCLASSES RONIN
 #
 "COMBAT ZEN"
 
-Subclass Ronin: Level 4 (Ninja)
+Subclass Ronin: Level 1 (Ninja)
 
 Usage: Passive Skill
 
 The Ronin has become a weapon of war, an instrument of combat. If the he/she
 misses his/her first attack, the second attack is still attempted as it
-normally would be, as is the third if affected by Mystic Swiftness.
+normally would be, as is the third if affected by Mystic Swiftness.  This
+ability applies to attacks that are dodged, parried or otherwise avoided.
 
 The Ronin also will inflict significant barehand damage to victims when
 disarmed or not wielding a weapon (applies to either or both hands).
