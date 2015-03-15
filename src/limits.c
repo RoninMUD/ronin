@@ -386,7 +386,7 @@ int mana_gain(CHAR *ch)
   if (IS_AFFECTED(ch, AFF_POISON))
   {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 4))
+    if (check_subclass(ch, SC_RONIN, 1))
     {
       gain /= 8;
     }
@@ -459,7 +459,7 @@ int hit_gain(CHAR *ch)
     if (IS_AFFECTED(ch, AFF_POISON))
     {
       /* Combat Zen */
-      if (check_subclass(ch, SC_RONIN, 4))
+      if (check_subclass(ch, SC_RONIN, 1))
       {
         gain /= 4;
       }
@@ -580,7 +580,7 @@ int hit_gain(CHAR *ch)
   if (IS_AFFECTED(ch, AFF_POISON))
   {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 4))
+    if (check_subclass(ch, SC_RONIN, 1))
     {
       gain /= 4;
     }
@@ -680,7 +680,7 @@ int move_gain(CHAR *ch)
   if (IS_AFFECTED(ch, AFF_POISON))
   {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 4))
+    if (check_subclass(ch, SC_RONIN, 1))
     {
       gain /= 2;
     }
