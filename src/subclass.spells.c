@@ -779,7 +779,8 @@ void spell_wall_thorns(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if ((tmp = get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch))))
   {
-    send_to_char("There is already a wall of thorns here.\n\r", ch);
+    send_to_room("The thick wall of brambles recedes, allowing passage to the surrounding world.\n\r", CHAR_REAL_ROOM(ch));
+    extract_obj(tmp);
     return;
   }
 
