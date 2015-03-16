@@ -1142,7 +1142,12 @@ void do_put(struct char_data *ch, char *argument, int cmd)
       sprintf(buffer, "You cannot put %d all %s.\n\r", number, arg2);
       send_to_char(buffer, ch);
     } else {
-      total = put_all_to(ch, allbuf, alldot, to_object);
+      if (GET_ITEM_TYPE(to_object) == ITEM_AQ_ORDER && !alldot) {
+        sprintf(buffer,"You cannot put all into %s.\n\r",OBJ_SHORT(to_object));
+        send_to_char(buffer, ch);
+      } else {
+        total = put_all_to(ch, allbuf, alldot, to_object);
+      }
     }
   } break;
   case 4: { // AQ_ORDER or CONTAINER
