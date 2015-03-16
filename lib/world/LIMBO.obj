@@ -735,8 +735,8 @@ acquisition order~
 an acquisition order~
 An infamous acquisition order has been left here.~
 ~
-36 0 1
-0 0 0 0
+36 134217728 1
+0 -1 -1 -1
 5 5 5
 0
 E
@@ -748,7 +748,7 @@ hastily sewn lines of text detailing The Collector's wish list.
 ~
 X
 ~
-64 0 0
+96 0 0
 M
 ~
 ~

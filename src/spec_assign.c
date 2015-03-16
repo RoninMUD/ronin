@@ -163,6 +163,7 @@ void assign_digsite(void);
 void assign_luthienIV(void);
 void assign_workbench(void);
 void assign_WOT(void);
+void assign_aquest_special(void);
 #endif
 
 void assign_mobiles(void)
@@ -249,6 +250,7 @@ void assign_mobiles(void)
   assign_luthienIV();
   assign_workbench();
   assign_WOT();
+  assign_aquest_special();
 #endif
 }
 

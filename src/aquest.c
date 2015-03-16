@@ -46,6 +46,7 @@ $State: Exp $
 #include <ctype.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <time.h>
 
 #include "structs.h"
 #include "utils.h"
@@ -84,6 +85,7 @@ int check_guildmaster(CHAR *ch, CHAR *mob) {
 #define QUEST_BUY      6
 #define QUEST_CARD     7
 
+#define AQCARDS_SPREAD 25
 
 const int aq_card[] = {//should this be in constants.c?
  2, /* 1 aq point */
@@ -653,7 +655,7 @@ $N tells you, 'Current Quest Items available for Purchase:'\n\r\
         act("$N tells you, 'To request a questcard hunt type AQUEST CARD <#>'", 0, ch, 0, mob, TO_CHAR);
         return TRUE;
       }
-      for(i = 0; i < 25; i++)
+      for(i = 0; i < AQCARDS_SPREAD; i++)
       {
         do
         {
@@ -1051,4 +1053,115 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
     act(buf,0,ch,obj,mob,TO_CHAR);
     return TRUE;
   }*/
+}
+
+/* Object questing implemented through mob other than guildmaster in this case */
+
+#define TEMPLATE_AQORDER  40
+
+int aq_objs[][2]={ // { OBJ_vnum, value }
+  {1, 1}, // TEMP steak
+  {2, 2}, // TEMP beautiful rose
+  {3, 3}, // TEMP postcard
+  {4, 4}, // TEMP small package
+  {10,4}, // TEMP gold wedding band
+  {-1, -1} // PADDING
+};
+
+/*
+int generate_aq_order(CHAR *requester) {
+  time_t seconds = time(NULL);     // current time in seconds since Jan 1, 1970
+  int days = seconds / (60*60*24); // days since Jan 1, 1970 : seconds * minutes * hours = days
+  OBJ *aqorder;
+  char buf[MAX_INPUT_LENGTH];
+  int pick, j, i = 0, count = 0, value = 0; 
+
+  aqorder = read_object(TEMPLATE_AQORDER, VIRTUAL);
+  if(requester->ver3.id <= 0)
+    requester->ver3.id = generate_id();
+  aqorder->ownerid[0] = requester->ver3.id;   // tag the order with the requester's ID
+  sprintf(buf, "acquisition order %s", GET_NAME(requester));
+  aqorder->name = str_dup(buf);               // tag the item with the requester's name as a keyword
+  sprintf(buf, "an acquisition order for %s", GET_NAME(requester));
+  aqorder->short_description = str_dup(buf);  // change the short desc to include requester's name
+  sprintf(buf, "An infamous acquisition order, forgotten here by %s.", GET_NAME(requester));
+  aqorder->description = str_dup(buf);        // change the long desc to include requester's name
+  aqorder->log = 1;
+  
+  for (i; i < 4; i++) { // get an obj from our aq obj table, assign it to the aqorder value[]
+  {
+    while(count < 50) {
+      count++;
+      pick = number(0, (( sizeof(aq_objs) / sizeof(aq_objs[0]) ) - 2));
+      j = 0
+      for (j; j < i; j++) {
+        if (aqorder->flags.value[j] == aq_objs[pick][0]) 
+          continue; // if that object is already in the aqorder
+        // OPTION: add choice filter here
+          //  if(lh_opt==1 && mobs[pick][1]>1) continue; // solo
+          //  if(lh_opt==2 && mobs[pick][1]>3) continue; // low
+          //  if(lh_opt==3 && mobs[pick][1]<3) continue; // high
+          //  if((lh_opt==4 && mobs[pick][1]<2) || (lh_opt==4 && mobs[pick][1]>4)) continue; // mid
+      }
+      aqorder->flags.value[i] = aq_objs[pick][0];
+      value += aq_objs[pick][1];
+    }
+    OBJ_SPEC(aqorder) = value;   // tag the order with the value it's worth (returned in ID)
+    obj_to_char(aqorder, requester); 
+    return value;                // so we can tell them how much it'll be worth
+  }
+  wizlog("WIZINFO: AQ Order object assignment counter exceeded 50.",LEVEL_IMP,5);
+  log_f("WIZINFO: AQ Order object assignment counter exceeded 50.");
+  return FALSE;  
+} // end of generate_aq_order
+*/
+
+int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
+  ch = order->carried_by;
+  
+  // block methods of getting order onto another char and/or out of game
+  // exclude gods
+  if (cmd == CMD_GIVE) { // if target is PC w/o right charID
+  } else if (cmd == CMD_GET || cmd == CMD_TAKE) { // if picker-upper is PC w/o right charID
+  } else if (cmd == CMD_DONATE || cmd == CMD_DROP || cmd == CMD_JUNK || cmd == CMD_STORE) {
+  }
+  return FALSE;
+}
+
+int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
+  time_t seconds = time(NULL);     // current time in seconds since Jan 1, 1970
+  int days = seconds / (60*60*24); // days since Jan 1, 1970 : seconds * minutes * hours = days
+  
+  ch = aqobj->carried_by;
+
+  // to cover our bases here we need to tag: coming out of vaults, characters, loaded by a mob, appears when skinned, loaded by god
+  if (aqobj->obj_flags.timer == 0 &&
+      ((cmd == MSG_OBJ_ENTERING_GAME) ||        // covers coming out of vaults, rent
+      (cmd == MSG_OBJ_WORN) ||                  // covers popping and wearing
+      (cmd == MSG_BEING_REMOVED) ||             // covers already equipped
+      ((cmd == MSG_MOBACT) && IS_MORTAL(ch)) || // covers popping and holding
+      (cmd == MSG_GAVE_OBJ) ||                  // >
+      (cmd == MSG_OBJ_PUT) ||                   // everything else
+      (cmd == MSG_OBJ_DONATED))) {              // >
+    // set the timer as today's date
+    aqobj->obj_flags.timer = days;
+    //TESTING ---- need to test order on a mob, at mobact
+    //char buf[MAX_STRING_LENGTH];  
+    //sprintf(buf, "CMD was %d, Days is %d\n\r", cmd, days);
+    //send_to_world(buf);
+    //END TESTING
+  }  
+  return FALSE;
+}
+
+//int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
+//}
+
+void assign_aquest_special(void) {
+  int i;
+  
+  assign_obj( TEMPLATE_AQORDER, aq_obj_date_popped );
+  for (i = 0; i < ((sizeof(aq_objs) / sizeof(aq_objs[0]))); i++)
+    assign_obj( i, aq_obj_date_popped );
+  //assign_mob( COLLECTOR, aq_order_mob );
 }
