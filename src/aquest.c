@@ -70,6 +70,9 @@ extern struct obj_data  *object_list;
 extern int top_of_world;
 extern int top_of_zone_table;
 
+extern struct idname_struct idname[MAX_ID];
+extern void mob_do(CHAR* mob, char *arg);
+
 int check_guildmaster(CHAR *ch, CHAR *mob) {
   if(!ch) return TRUE;
   if(!IS_NPC(ch) && GET_CLASS(ch)==GET_CLASS(mob)) return TRUE;
@@ -1060,11 +1063,11 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
 #define TEMPLATE_AQORDER  40
 
 int aq_objs[][2]={ // { OBJ_vnum, value }
-  {1, 1}, // TEMP steak
-  {2, 2}, // TEMP beautiful rose
-  {3, 3}, // TEMP postcard
-  {4, 4}, // TEMP small package
-  {10,4}, // TEMP gold wedding band
+  {1, 2}, // TEMP steak
+  {3, 4}, // TEMP postcard
+  {5, 0}, // TEMP token
+  {6, 7}, // TEMP some silvery bullets
+  {8, 9}, // TEMP Statue of Peace
   {-1, -1} // PADDING
 };
 
@@ -1092,7 +1095,7 @@ int generate_aq_order(CHAR *requester) {
   {
     while(count < 50) {
       count++;
-      pick = number(0, (( sizeof(aq_objs) / sizeof(aq_objs[0]) ) - 2));
+      pick = number(0, NUMELEMS(aq_objs) - 2));
       j = 0
       for (j; j < i; j++) {
         if (aqorder->flags.value[j] == aq_objs[pick][0]) 
@@ -1129,8 +1132,8 @@ int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
 }
 
 int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
-  time_t seconds = time(NULL);     // current time in seconds since Jan 1, 1970
-  int days = seconds / (60*60*24); // days since Jan 1, 1970 : seconds * minutes * hours = days
+  time_t seconds;     
+  int days; 
   
   ch = aqobj->carried_by;
 
@@ -1144,7 +1147,10 @@ int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
       (cmd == MSG_OBJ_PUT) ||                   // everything else
       (cmd == MSG_OBJ_DONATED))) {              // >
     // set the timer as today's date
-    aqobj->obj_flags.timer = days;
+    seconds = time(NULL);           // current time in seconds since Jan 1, 1970
+    days = seconds / (60*60*24);    // days since Jan 1, 1970 : seconds * minutes * hours = days
+    aqobj->obj_flags.timer = days; 
+    
     //TESTING ---- need to test order on a mob, at mobact
     //char buf[MAX_STRING_LENGTH];  
     //sprintf(buf, "CMD was %d, Days is %d\n\r", cmd, days);
@@ -1154,14 +1160,209 @@ int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
   return FALSE;
 }
 
-//int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
-//}
+#define CENTRAL_PROCESSING      1277 // TESTING VALUE
+#define AQOBJ_SUCCESS_WAITTIME  3    // TESTING VALUE
+#define COLLECTOR               7    // TESTING VALUE
+
+int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
+  OBJ *order = NULL;
+  OBJ *obj = NULL, *next_obj  = NULL;
+  char buf[MAX_STRING_LENGTH];
+  int i, j, k, questvalue = 0;
+  int requirements[] = {-1, -1, -1, -1};
+  bool value_exists = FALSE;
+  bool found[4] = {FALSE, FALSE, FALSE, FALSE};
+  char *collectoraction[8] = {"groan","frustration","cod","fume",
+                              "blorf","roll","sneor","mumble"};
+  char *kendernames[9] = {"Karl","Dieter","Hans","Jurgen","Hilda",
+                          "Erwin","Herman","Eva","Marlene"};
+  char *kenderinsults[9] = {"fool","moron","idiot","bonehead",
+                            "nitwit","nincompoop","imbecile",
+                            "cotton-headed ninnymuggins","peabrain"};
+  
+  /*
+  if (cmd == ???) {
+    // placeholder, how will orders be picked up?
+  }
+  if (cmd == MSG_MOBACT) {
+    // add a teleport if he's fighting
+    // add a couple just flavor messages/behaviors
+  }*/
+  // process order delivery
+  if (cmd == MSG_GAVE_OBJ) {
+    order = get_obj_in_list_vis(collector, "order", collector->carrying);
+
+    if (order && GET_ITEM_TYPE(order) == ITEM_AQ_ORDER) {
+      
+      if ((order->ownerid[0] != ch->ver3.id) &&
+          (strcmp(idname[order->ownerid[0]].name, idname[ch->ver3.id].name))) { // handed in by non-owner
+        //TESTING
+        sprintf(buf, "OwnerID[0] = %d, ChID = %d, ChID->Name: %s\n\n\r", order->ownerid[0],
+            ch->ver3.id, idname[ch->ver3.id].name);
+        send_to_world(buf);
+        
+        sprintf(buf, "Where'd you get this? Did you kill 'em? Give it back to %s.", CAP(idname[order->ownerid[0]].name));
+        do_say(collector, buf, CMD_SAY);
+        obj_from_char(order);
+        obj_to_char(order, ch);
+        sprintf(buf,"%s hands %s back to %s, eyeing %s warily.",GET_SHORT(collector),
+            OBJ_SHORT(order),GET_NAME(ch),HMHR(ch));
+        act(buf,0,collector,0,ch,TO_NOTVICT);
+        sprintf(buf,"%s hands %s back to you warily.",GET_SHORT(collector),
+            OBJ_SHORT(order));
+        act(buf,0,collector,0,ch,TO_VICT);
+        return TRUE;
+      }
+      
+      for (i = 0; i < 4; i++) {
+        requirements[i] = order->obj_flags.value[i];
+        if(requirements[i] < 0) { // null (-1) requirement object
+          found[i] = TRUE;
+        } else {
+          for (obj = order->contains; obj; obj = next_obj) {
+            next_obj = obj->next_content;
+            
+            if (V_OBJ(obj) == requirements[i]) {
+              // required object found, but is it new enough?
+              if (obj->obj_flags.timer < order->obj_flags.timer) { 
+                // object was popped before order received
+                do_say(collector, "No, no, no - this won't do at all.", CMD_SAY);
+                sprintf(buf, "%s is too old, I need a new one!", CAP(OBJ_SHORT(obj)));
+                do_say(collector, buf, CMD_SAY);
+                obj_from_char(order);
+                obj_to_char(order, ch);
+                sprintf(buf,"%s gives %s back to %s disappointedly.",GET_SHORT(collector),
+                    OBJ_SHORT(order),GET_NAME(ch));
+                act(buf,0,collector,0,ch,TO_NOTVICT);
+                sprintf(buf,"%s gives %s back to you disappointedly.",GET_SHORT(collector),
+                    OBJ_SHORT(order));
+                act(buf,0,collector,0,ch,TO_VICT);                
+                return TRUE;
+              } else {
+                found[i] = TRUE;
+                value_exists = FALSE;
+                // OBJ_SPEC(order) is set initially by aq_generate_order() to be
+                //   the order's AQP value, for magic.c identify output;
+                //   but we'll count here anyway with aq_objs[][] current values 
+                for (k = 0; k < NUMELEMS(aq_objs); k++) {
+                  if (aq_objs[k][0] == V_OBJ(obj)) {  
+                    // TESTING
+                    sprintf(buf, "Obj #: %d, Value: %d, aq_objs[] Element: %d\n\n\r", 
+                        V_OBJ(obj), aq_objs[k][1], k);
+                    send_to_world(buf);
+                    
+                    value_exists = TRUE;
+                    questvalue += aq_objs[k][1];
+                  }
+                }
+                if(!value_exists) {
+                  // order included an object VNUM not in aq_objs[]
+                  sprintf(buf, "WIZINFO: AQ Order included object #: %d which \
+is not in aq_objs point value table.",
+                      V_OBJ(obj));
+                  wizlog(buf,LEVEL_SUP,5);
+                  log_f("%s",buf);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      if(found[0] && found[1] && found[2] && found[3]) { 
+        // fulfilled requirement objects!
+        switch(number(0,9)) {
+        case 0:
+          do_say(collector, "Splendid, truly marvelous! I'll send this on to Central Processing.", CMD_SAY);
+          break;
+        case 1:
+          do_say(collector, "And there was much rejoicing.", CMD_SAY);
+          break;
+        case 2:
+          do_say(collector, "Wow, you did it.", CMD_SAY);
+          break;
+        case 3:
+          do_say(collector, "I'm so used to failure, this is a welcome surprise.", CMD_SAY);
+          break;
+        default:
+          break;
+        }
+        
+        if (questvalue != OBJ_SPEC(order)) {
+          sprintf(buf, "The market is always influx my %s. This is worth %d points to me now.",
+              GET_SEX(ch) == SEX_MALE ? "boy" : "dear", questvalue);
+          do_say(collector, buf, CMD_SAY);
+        } else {
+          sprintf(buf, "Well done! Your %d points are well deserved %s.",
+              questvalue, GET_SEX(ch) == SEX_MALE ? "sir" : "madam");
+          do_say(collector, buf, CMD_SAY);
+        }
+        sprintf(buf, "%s casually points a strange pistol at the order\n\r\
+and it disappears before your very eyes!\n\n\r", GET_SHORT(collector));
+        send_to_room(buf, CHAR_REAL_ROOM(collector));
+      
+        // this is where it gets moved to another room to "hack" a wait timer
+        //   --- boots and crashes will reset wait timer, so be it
+        obj_from_char(order);
+        obj_to_room(order, real_room(CENTRAL_PROCESSING));
+        // now we're repurposing timer to countdown to next quest
+        order->obj_flags.timer = AQOBJ_SUCCESS_WAITTIME;
+        // ^^^ is a wait period even necessary?
+        
+        sprintf(buf,"%s completed an order for me, what a %s!", GET_NAME(ch),
+            GET_SEX(ch) == SEX_MALE ? "guy" : "gal");
+        do_quest(collector, buf, CMD_QUEST);
+        ch->ver3.quest_points += questvalue;
+        return FALSE;      
+      } else { // missing at least one object
+        mob_do(collector, collectoraction[number(0, NUMELEMS(collectoraction)-1)]);
+        for (j = 0; j < 4; j++) {
+          if(!found[j] && requirements[j] >= 0) { 
+            // generate annoyed response
+            sprintf(buf, "You're even %s than that %s %s. You didn't bring me %s!",
+                chance(50) ? "dumber" : "stupider",
+                kenderinsults[number(0, NUMELEMS(kenderinsults)-1 )],
+                kendernames[number(0, NUMELEMS(kendernames)-1 )],
+                real_object(requirements[j]) >= 0 ? obj_proto_table[real_object(requirements[j])].short_description : "something");
+            do_say(collector, buf, CMD_SAY);
+            break;
+          }
+        }
+        sprintf(buf,"Read the order more carefully, I don't have time for your tomfoolery %s.", GET_NAME(ch));
+        do_say(collector, buf, CMD_SAY);
+        obj_from_char(order);
+        obj_to_char(order, ch);
+        sprintf(buf,"%s tosses %s back to %s tiredly.",GET_SHORT(collector),
+            OBJ_SHORT(order),GET_NAME(ch));
+        act(buf,0,collector,0,ch,TO_NOTVICT);
+        sprintf(buf,"%s tosses %s back to you tiredly.",GET_SHORT(collector),
+            OBJ_SHORT(order));
+        act(buf,0,collector,0,ch,TO_VICT);        
+        return TRUE;
+      }
+    } else { // given non-AQ_ORDER
+      do_say(collector, "Thanks, I guess?", CMD_SAY);
+      return FALSE;
+    }
+  } // end "deliver order"
+  return FALSE;
+}
+
+/*
+int aq_order_processing_room (int room, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_TICK) {
+    //for each object in the room, if its an aq_order, OBJ_SPEC(order)--;
+    //   if OBJ_SPEC(order) == 0
+    //   "finish processing" - extract it from game, allows new to be picked up
+    
+  }
+}*/
 
 void assign_aquest_special(void) {
   int i;
   
   assign_obj( TEMPLATE_AQORDER, aq_obj_date_popped );
-  for (i = 0; i < ((sizeof(aq_objs) / sizeof(aq_objs[0]))); i++)
+  for (i = 0; i < NUMELEMS(aq_objs); i++)
     assign_obj( i, aq_obj_date_popped );
-  //assign_mob( COLLECTOR, aq_order_mob );
+  assign_mob( COLLECTOR, aq_order_mob );
 }
