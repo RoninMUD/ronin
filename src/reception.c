@@ -780,7 +780,8 @@ struct obj_data *store_to_obj_ver3(FILE *fl,CHAR *ch) {
       if(!adjust_ticket_strings(obj)) return 0;
     }
 
-    if(obj->obj_flags.type_flag == ITEM_CONTAINER) {
+    if((obj->obj_flags.type_flag == ITEM_CONTAINER) ||
+        (obj->obj_flags.type_flag == ITEM_AQ_ORDER)) {
       for(i=0;i<object.value[3];i++)
         obj_to_obj(store_to_obj_ver3(fl,ch),obj);
     }
