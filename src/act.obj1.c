@@ -1161,7 +1161,8 @@ void do_put(struct char_data *ch, char *argument, int cmd)
             V_OBJ(obj_object) == to_object->obj_flags.value[3])) {
           total = put(ch, obj_object, to_object, TRUE);
         } else { // is aq_order with no order match
-          sprintf(buffer, "This acquisition order did not include %s.\n\r", OBJ_SHORT(obj_object));
+          sprintf(buffer, "%s did not require %s.\n\r", CAP(OBJ_SHORT(to_object)), 
+              OBJ_SHORT(obj_object));
           send_to_char(buffer, ch);
         }
       } else {
