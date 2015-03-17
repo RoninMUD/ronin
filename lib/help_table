@@ -7762,6 +7762,10 @@ The Druid conjures up a handful of seeds which quickly grow to block all
 exits.  Any creatures in the room will be trapped, unable to flee. The wall
 isn't permanent and will dissolve in a short span of time.
 
+If cast while an existing wall is in the room, the Druid will use their
+powers of botanical pursuasion to encourage the wall to recede and dissolve
+immediately.
+
 See Also: SUBCLASSES DRUID
 #
 CLARITY
