@@ -930,7 +930,7 @@ void check_token_mob() {
 #ifndef TEST_SITE
   CHAR *mob;
   OBJ *obj;
-  int goto_room=0,zone;
+  int goto_room=0;
   if(CHAOSMODE) return;
   if(token_mob_time>0) token_mob_time--;
   if(token_mob_time<=0) {
