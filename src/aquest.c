@@ -72,6 +72,7 @@ extern int top_of_zone_table;
 
 extern struct idname_struct idname[MAX_ID];
 extern void mob_do(CHAR* mob, char *arg);
+extern OBJ  *object_list;
 
 int check_guildmaster(CHAR *ch, CHAR *mob) {
   if(!ch) return TRUE;
@@ -1061,72 +1062,372 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
 /* Object questing implemented through mob other than guildmaster in this case */
 
 #define TEMPLATE_AQORDER  40
+/*
+int aq_objs[][] = {
+  // {VNUM, value} // <short desc> <repop>
+  {104, 1} // a small stethoscope 50
+  {106, 1} // a small wand 50
+  {508, 1} // Porcelain Teacup 25
+  {709, 1} // A Heavy Stone Club 46
+  {1107,1,mithril axe,50},
+  {1108,1,the thain girth,50},
+  {1110,1,egg,50},
+  {1301,1,Silver Mask,50},
+  {1608,1,sash,20},
+  {1910,1,blue-steeled falchion,50},
+  {1918,1,apple,50},
+  {2021,1,ther Sceptre of Might,50},
+  {2101,1,a cloak of deception,25},
+  {2103,1,rapier,25},
+  {2305,1,white crosier,50},
+  {2310,1,black crosier,50},
+  {2502,1,wooden spear,50},
+  {2506,1,Black mask,50},
+  {2606,1,aligator sleeves,19},
+  {2700,1,cotton shirt,50},
+  {2806,1,book of songs,50},
+  {2807,1,book of magic,50},
+  {2808,1,book of wars,50},
+  {2809,1,book of mahs,50},
+  {2810,1,book of languages,50},
+  {2811,1,book of jokes,50},
+  {2812,1,book of history,50},
+  {2911,1,Borad Axe,15},
+  {2913,1,Large Spiked Chain Mace,15},
+  {3414,1,thin rapier,50},
+  {3425,1,auburn orb,50},
+  {3701,1,silver necklace,20},
+  {4051,1,Metal helmet,35},
+  {4100,1,Black Blade,50},
+  {4400,1,Long silk skirt,11},
+  {4812,1,Averland greatsword,50},
+  {4813,1,Ostermark greathammer,50},
+  {4814,1,Middenheim Greatdagger,50},
+  {5301,1,Ball of Faerie Fire,50},
+  {5508,1,Iron Shield,50},
+  {5601,1,Bear skin,50},
+  {5717,1,Tattered Wraping,50},
+  {5809,1,Bratwurst,50},
+  {6001,1,Boots,50},
+  {6112,1,Iron crown,50},
+  {6113,1,Iron Sceptre,50},
+  {7003,1,Evil Sabre,50},
+  {7310,1,Curved Sword,50},
+  {8011,1,sparkeling lightening sword,50},
+  {8202,1,Sealskin Jacket,50},
+  {8323,1,Sponge,50},
+  {8333,1,seaweed loincloth,50},
+  {8402,1,Aldors Dagger,17},
+  {8403,1,Chefs hat,25},
+  {8503,1,Suit,50},
+  {8510,1,Ragged sleeves,50},
+  {8602,1,coconut,100},
+  {8603,1,holy grail,10},
+  {8605,1,Black Helmet,50},
+  {8920,1,caviar,50},
+  {9004,1,twohanded mithril sword,10},
+  {9414,1,Platinum leg bands,50},
+  {9421,1,lodestone,50},
+  {9515,1,crystal staff,50},
+  {10903,1,steel ring,50},
+  {11062,1,Trident,50},
+  {11068,1,Black cape,50},
+  {11313,1,crystal ball,50},
+  {11315,1,Cloak of sadness,10},
+  {11618,1,Aman Robe,10},
+  {14008,1,Rosette bracelet,50},
+  {16620,1,a flaming whip,40},
+  {16681,1,Boots of waterwalking,50},
+  {19009,1,sweater,11},
+  {21316,1,Dwarven leg,10},
+  {26408,1,Crackled urn,10},
+  {26409,1,Flying carpet,10},
+  {26411,1,Ivory die,30},
+  {27100,1,Helmet of the centaurion,13},
+  {27621,1,Shuriken,35},
+  {28020,1,Stick of fungus powers,25},
+  {28506,1,Tiare,60},
+  {201,2,Barkskin shirt,58},
+  {543,2,Tengu cloak,7},
+  {593,2,An ancient journal,100},
+  {803,2,Leggings,30},
+  {910,2,Breastplate,17},
+  {1604,2,metal hoop,30},
+  {2023,2,Great dipper of the Skies,50},
+  {4053,2,Orcish Whip,20},
+  {4107,2,Mrble Pendant,40},
+  {4448,2,Oak Shield,18},
+  {4454,2,Engraved Breastplate,30},
+  {4464,2,iron shackels,20},
+  {4465,2,Were Badger Mane,21},
+  {4477,2,Adamantine scimitar,30},
+  {4508,2,Boots,10},
+  {4510,2,Loincloth,10},
+  {4700,2,Vodo Doll,3},
+  {4701,2,Gloves of Leoric,9},
+  {5200,2,Ringmail,50},
+  {5203,2,Iron Sleeves,50},
+  {5427,2,Shield of Pallas,560},
+  {5435,2,Jeweled ring,50},
+  {5436,2,Crown of dreams,50},
+  {5449,2,Sandals,50},
+  {5454,2,the brassard of the hydra,50},
+  {5455,2,Stange gauntlets,50},
+  {5802,2,Utility belt,25},
+  {6210,2,skirt,10},
+  {6506,2,Stick of fungus powers,50},
+  {6519,2,Pills,100},
+  {7334,2,Obsidian shard,10},
+  {7506,2,silk scarf,15},
+  {8335,2,Rusted iron gauntlets,50},
+  {8337,2,White coat,50},
+  {8406,2,Dragon scale belt,50},
+  {8513,2,Fishing line,50},
+  {9307,2,Dragon shield,50},
+  {9308,2,Skull Belt,50},
+  {9309,2,Arcane staff,50},
+  {9321,2,Arcane robe,50},
+  {9521,2,broken ring,50},
+  {10022,2,obsidian ring,5},
+  {10405,2,Eyeglass,65},
+  {10409,2,Colossal Claw,10},
+  {10410,2,Class hero Belt,30},
+  {11069,2,Black pants,50},
+  {11072,2,Black belt,40},
+  {11316,2,Breast plate,10},
+  {11507,2,Hammer of Lei Kung,10},
+  {11533,2,Staff of Shang-Ti,10},
+  {12026,2,Ring of Wazardry,50},
+  {12028,2,Snakeskin Belt,10},
+  {12035,2,Dragon skin leggings,50},
+  {12036,2,Dragon skin sleeves,50},
+  {12042,2,Blue gem,50},
+  {12201,2,Crystal lantern,50},
+  {12202,2,Crystal Shield,50},
+  {12911,2,Blue Silk shirt,50},
+  {13018,2,Wooden Seed,20},
+  {13019,2,Heart Amulet,20},
+  {14001,2,Bottle of Ink,50},
+  {14028,2,Shield of ancient Powers,25},
+  {14037,2,Silver black scarf,50},
+  {14503,2,blood red amulet,12},
+  {16508,2,Emerald Sash,43},
+  {16514,2,Wax breast plate,20},
+  {16807,2,a tattered shroud,22},
+  {16904,2,shattered headstone,100},
+  {17021,2,scalpel,30},
+  {20840,2,Shield of rotted flesh,12},
+  {20856,2,Slug Entrails,30},
+  {21321,2,Gleaming gauntlets,2},
+  {21322,2,Red scale mail,1},
+  {24900,2,Battle Wrap,14},
+  {25017,2,Sword of sharpness,50},
+  {25475,2,Gloves Of Siva,10},
+  {26576,2,Jade Ring,20},
+  {27103,2,Toga,75},
+  {27104,2,Cestus,23},
+  {27113,2,Dinosaur hide,23},
+  {27651,2,Jade Monkey,25},
+  {28503,2,Flute,15},
+  {702,3,baggy pants,10},
+  {3907,3,Tail of the celestial dragon,10},
+  {4604,3,Thivery Finger,10},
+  {4608,3,Parasite Fang,5},
+  {4704,3,Werra garbage Belt,5},
+  {5105,3,Jeweled scimitar,12},
+  {5110,3,Tome fo forbidden magic,8},
+  {5804,3,Lederhosen,20},
+  {5920,3,Myconid Blood,15},
+  {6208,3,Exoskeleton,10},
+  {6215,3,Bearskin sleeves,10},
+  {6217,3,Bone flute,8},
+  {6802,3,leg plates of devotion,50},
+  {6803,3,buckler of obeisance,50},
+  {7502,3,dueling pistol,50},
+  {7520,3,butchering knife,30},
+  {7701,3,heavy crocodile skin,100},
+  {8361,3,Granite staff,30},
+  {10905,3,Zyca arm plates,10},
+  {10908,3,Zyca orb,50},
+  {11314,3,Bracelet of Magic,10},
+  {11704,3,Slender mallet,100},
+  {11707,3,Blackened Parchment,100},
+  {12023,3,Banded Mail,25},
+  {12206,3,Ettin leg plates,50},
+  {12207,3,Ettin arm plates,50},
+  {12209,3,Black stone,50},
+  {12823,3,Tarion Badge,100},
+  {12915,3,Blue Silk garb,20},
+  {12929,3,Black silk hood,20},
+  {12932,3,Human skull on a chain,18},
+  {13025,3,Oak leaf Net,50},
+  {13101,3,Living flame,15},
+  {13201,3,Frozen water,15},
+  {13301,3,Stone heart,15},
+  {13401,3,Wispy cloud,15},
+  {13503,3,Crimson mask,30},
+  {13506,3,Armbands of  Creaz,20},
+  {13507,3,Platinum belt,20},
+  {14502,3,The Hell Stick,10},
+  {17023,3,dune boots,40},
+  {17024,3,Wizard hat,20},
+  {20147,3,Ninjato sword,100},
+  {21108,3,Leaf Shield,10},
+  {21205,3,Boots of stealth,10},
+  {21215,3,Golden Dagger,29},
+  {21217,3,Mallet,10},
+  {24904,3,Bracelet made from rootst,25},
+  {24905,3,Leaf Cloak,12},
+  {25016,3,Silver trident,50},
+  {25026,3,Soul Amulet,10},
+  {25027,3,Silver Circlet,50},
+  {27106,3,Gladius,9},
+  {27108,3,Staff of Magi,78},
+  {27110,3,Hunting knife,12},
+  {27720,3,Bandit Aromor,5},
+  {27721,3,Wristband,10},
+  {204,4,Spyglass,7},
+  {5109,4,Drow battle gauntlets,50},
+  {5111,4,Polished marble ring,13},
+  {5118,4,Black gloves,19},
+  {5175,4,Eyepatch,19},
+  {5197,4,Ball of Faerie Fire,10},
+  {5546,4,Long spiked Whip,10},
+  {12928,4,Silver Katana,8},
+  {13001,4,Elven Cloak,15},
+  {17002,4,Ruby blade,16},
+  {17309,4,pit fiend girdle,30},
+  {17321,4,Cube,50},
+  {17371,4,dragon sceptre,15},
+  {20107,4,Drums of Panic,35},
+  {20145,4,War Fan,17},
+  {21203,4,Mask of concentration,18},
+  {21210,4,Dragon scale belt,17},
+  {21214,4,Curved dagger,100},
+  {23006,4,Tooth,20},
+  {24906,4,Evil Avenger,11},
+  {25015,4,Two handed sword,50},
+  {25018,4,Crystal ring,10},
+  {26406,4,Holey majestic cloak,12},
+  {26578,4,Tortoise shield,8},
+  {26579,4,Loincloth of good omens,8},
+  {26711,4,Greatsword,8},
+  {27102,4,Bone mace,12},
+  {11702,5,Silver plate armor,11},
+  {11720,5,Dragon tooth,13},
+};
+*/
 
 int aq_objs[][2]={ // { OBJ_vnum, value }
-  {1, 2}, // TEMP steak
-  {3, 4}, // TEMP postcard
-  {5, 0}, // TEMP token
-  {6, 7}, // TEMP some silvery bullets
-  {8, 9}, // TEMP Statue of Peace
+  {1, 1}, 
+  {2, 1}, 
+  {3, 1}, 
+  {4, 1}, 
+  {5, 1},
+  {6, 2},
+  {7, 2},
+  {8, 2},
+  {10, 2},
+  {11, 2},
+  {12, 3},
+  {13, 3},
+  {14, 3},
+  {20, 4},
+  {21, 5},
   {-1, -1} // PADDING
 };
 
-/*
-int generate_aq_order(CHAR *requester) {
+char *kendernames[9] = {"Karl","Dieter","Hans","Jurgen","Hilda",
+                          "Erwin","Herman","Eva","Marlene"};
+                          
+int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   time_t seconds = time(NULL);     // current time in seconds since Jan 1, 1970
   int days = seconds / (60*60*24); // days since Jan 1, 1970 : seconds * minutes * hours = days
   OBJ *aqorder;
-  char buf[MAX_INPUT_LENGTH];
-  int pick, j, i = 0, count = 0, value = 0; 
+  bool assigned[4] = {FALSE, FALSE, FALSE, FALSE};
+  char buf[MAX_STRING_LENGTH];
+  int pick, i, count = 0, questvalue = 0; 
 
-  aqorder = read_object(TEMPLATE_AQORDER, VIRTUAL);
   if(requester->ver3.id <= 0)
     requester->ver3.id = generate_id();
+
+  aqorder = read_object(TEMPLATE_AQORDER, VIRTUAL);
+   
   aqorder->ownerid[0] = requester->ver3.id;   // tag the order with the requester's ID
-  sprintf(buf, "acquisition order %s", GET_NAME(requester));
-  aqorder->name = str_dup(buf);               // tag the item with the requester's name as a keyword
-  sprintf(buf, "an acquisition order for %s", GET_NAME(requester));
-  aqorder->short_description = str_dup(buf);  // change the short desc to include requester's name
+  //sprintf(buf, "acquisition order %s", GET_NAME(requester));
+  //aqorder->name = str_dup(buf);               // tag the item with the requester's name as a keyword
+  //sprintf(buf, "an acquisition order for %s", GET_NAME(requester));
+  //aqorder->short_description = str_dup(buf);  // change the short desc to include requester's name
   sprintf(buf, "An infamous acquisition order, forgotten here by %s.", GET_NAME(requester));
   aqorder->description = str_dup(buf);        // change the long desc to include requester's name
+  aqorder->obj_flags.timer = days;            // set the timer as today's date (for "newness" check)
   aqorder->log = 1;
-  
-  for (i; i < 4; i++) { // get an obj from our aq obj table, assign it to the aqorder value[]
-  {
-    while(count < 50) {
+ 
+  for (i = 0; i < 4; i++) { 
+    // get an obj from our aq_objs table, assign it to the aqorder value[i]
+    // TESTING
+    sprintf(buf, "Order Value[i] = %d\n\r", i);
+    send_to_world(buf);
+    while(count < 100) {
       count++;
-      pick = number(0, NUMELEMS(aq_objs) - 2));
-      j = 0
-      for (j; j < i; j++) {
-        if (aqorder->flags.value[j] == aq_objs[pick][0]) 
-          continue; // if that object is already in the aqorder
-        // OPTION: add choice filter here
-          //  if(lh_opt==1 && mobs[pick][1]>1) continue; // solo
-          //  if(lh_opt==2 && mobs[pick][1]>3) continue; // low
-          //  if(lh_opt==3 && mobs[pick][1]<3) continue; // high
-          //  if((lh_opt==4 && mobs[pick][1]<2) || (lh_opt==4 && mobs[pick][1]>4)) continue; // mid
-      }
-      aqorder->flags.value[i] = aq_objs[pick][0];
-      value += aq_objs[pick][1];
+      pick = number(0, NUMELEMS(aq_objs) - 2);
+      // TESTING
+      sprintf(buf, "lh_opt: %d, Pick: %d, Obj #: %d, Value: %d\n\r", lh_opt, pick, aq_objs[pick][0], aq_objs[pick][1]);
+      send_to_world(buf);
+      
+      if (aq_objs[pick][0] == aqorder->obj_flags.value[0]) continue;
+      if (aq_objs[pick][0] == aqorder->obj_flags.value[1]) continue;
+      if (aq_objs[pick][0] == aqorder->obj_flags.value[2]) continue;
+      if (aq_objs[pick][0] == aqorder->obj_flags.value[3]) continue;
+      if (lh_opt==1 && aq_objs[pick][1]>1) continue; // solo
+      if (lh_opt==2 && aq_objs[pick][1]>2) continue; // low
+      if (lh_opt==3 && aq_objs[pick][1]<3) continue; // high
+      if ((lh_opt==4 && aq_objs[pick][1]<2) || (lh_opt==4 && aq_objs[pick][1]>3)) continue; // mid
+      aqorder->obj_flags.value[i] = aq_objs[pick][0];
+      questvalue += aq_objs[pick][1];
+      assigned[i] = TRUE;
+      break;
     }
-    OBJ_SPEC(aqorder) = value;   // tag the order with the value it's worth (returned in ID)
-    obj_to_char(aqorder, requester); 
-    return value;                // so we can tell them how much it'll be worth
   }
-  wizlog("WIZINFO: AQ Order object assignment counter exceeded 50.",LEVEL_IMP,5);
-  log_f("WIZINFO: AQ Order object assignment counter exceeded 50.");
-  return FALSE;  
-} // end of generate_aq_order
-*/
+  if (assigned[0] && assigned[1] && assigned[2] && assigned[3]) {
+    // tag order with questvalue - visible in magic.c "identify"
+    OBJ_SPEC(aqorder) = questvalue;
+    
+    sprintf(buf, "Good luck %s, try to do a better job than %s.",
+        GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1 )]);
+    do_say(ordergiver, buf, CMD_SAY);
+    obj_to_char(aqorder, requester);
+    sprintf(buf, "%s gives %s to %s.", GET_SHORT(ordergiver),
+        OBJ_SHORT(aqorder), GET_NAME(requester));
+    act(buf,0,ordergiver,0,requester,TO_NOTVICT);
+    sprintf(buf, "%s gives %s to you.", GET_SHORT(ordergiver),
+        OBJ_SHORT(aqorder));
+    act(buf,0,ordergiver,0,requester,TO_VICT);
+  } else {
+    wizlog("WIZINFO: AQ Order object assignment counter exceeded 100.",LEVEL_IMP,5);
+    log_f("WIZINFO: AQ Order object assignment counter exceeded 100.");
+    return FALSE;
+  }
+  return TRUE;  
+} // end of generate_aq_order()
+
 
 int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
-  ch = order->carried_by;
-  
   // block methods of getting order onto another char and/or out of game
   // exclude gods
   if (cmd == CMD_GIVE) { // if target is PC w/o right charID
+    ch = order->carried_by;
+
   } else if (cmd == CMD_GET || cmd == CMD_TAKE) { // if picker-upper is PC w/o right charID
   } else if (cmd == CMD_DONATE || cmd == CMD_DROP || cmd == CMD_JUNK || cmd == CMD_STORE) {
+      
+        // this is where it gets moved to another room to "hack" a wait timer
+        //   --- boots and crashes will reset wait timer, so be it
+        //obj_from_char(order);
+        //obj_to_room(order, real_room(CENTRAL_PROCESSING));
+        // now we're repurposing timer to countdown to next quest
+        //order->obj_flags.timer = AQOBJ_SUCCESS_WAITTIME;
+        // ^^^ is a wait period even necessary?
   }
   return FALSE;
 }
@@ -1137,7 +1438,8 @@ int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
   
   ch = aqobj->carried_by;
 
-  // to cover our bases here we need to tag: coming out of vaults, characters, loaded by a mob, appears when skinned, loaded by god
+  // to cover our bases here we need to tag: coming out of vaults, 
+  //   characters, loaded by a mob, appears when skinned, loaded by god
   if (aqobj->obj_flags.timer == 0 &&
       ((cmd == MSG_OBJ_ENTERING_GAME) ||        // covers coming out of vaults, rent
       (cmd == MSG_OBJ_WORN) ||                  // covers popping and wearing
@@ -1146,16 +1448,9 @@ int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
       (cmd == MSG_GAVE_OBJ) ||                  // >
       (cmd == MSG_OBJ_PUT) ||                   // everything else
       (cmd == MSG_OBJ_DONATED))) {              // >
-    // set the timer as today's date
     seconds = time(NULL);           // current time in seconds since Jan 1, 1970
     days = seconds / (60*60*24);    // days since Jan 1, 1970 : seconds * minutes * hours = days
-    aqobj->obj_flags.timer = days; 
-    
-    //TESTING ---- need to test order on a mob, at mobact
-    //char buf[MAX_STRING_LENGTH];  
-    //sprintf(buf, "CMD was %d, Days is %d\n\r", cmd, days);
-    //send_to_world(buf);
-    //END TESTING
+    aqobj->obj_flags.timer = days;  // set the timer as today's date
   }  
   return FALSE;
 }
@@ -1168,47 +1463,113 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *order = NULL;
   OBJ *obj = NULL, *next_obj  = NULL;
   char buf[MAX_STRING_LENGTH];
-  int i, j, k, questvalue = 0;
+  char argument[MAX_INPUT_LENGTH];
+  int i, j, k, lh_opt = 0, questvalue = 0;
   int requirements[] = {-1, -1, -1, -1};
   bool value_exists = FALSE;
   bool found[4] = {FALSE, FALSE, FALSE, FALSE};
   char *collectoraction[8] = {"groan","frustration","cod","fume",
                               "blorf","roll","sneor","mumble"};
-  char *kendernames[9] = {"Karl","Dieter","Hans","Jurgen","Hilda",
-                          "Erwin","Herman","Eva","Marlene"};
   char *kenderinsults[9] = {"fool","moron","idiot","bonehead",
                             "nitwit","nincompoop","imbecile",
                             "cotton-headed ninnymuggins","peabrain"};
   
-  /*
-  if (cmd == ???) {
-    // placeholder, how will orders be picked up?
+  if (cmd == CMD_AQUEST) {
+    // process order request
+    arg = one_argument(arg, argument);
+    if (*argument) {
+      if (is_abbrev(argument,"order")) {
+        // check if already an order in game for that player
+        for (obj = object_list; obj; obj = obj->next) {
+          if ((TEMPLATE_AQORDER == V_OBJ(obj)) && (obj->ownerid[0] == ch->ver3.id)) {
+            sprintf(buf, "You've already got an order %s, I doubt you could handle more.",
+                GET_NAME(ch));
+            do_say(collector, buf, CMD_SAY);
+            return TRUE;
+          }
+        }
+        
+        arg = one_argument(arg, argument);
+        if (*argument) {
+          if (is_abbrev(argument,"solo")) lh_opt=1;
+          if (is_abbrev(argument,"low"))  lh_opt=2;
+          if (is_abbrev(argument,"high")) lh_opt=3;
+          if (is_abbrev(argument,"mid"))  lh_opt=4;
+        }
+        if (!generate_aq_order(ch, collector, lh_opt)) {
+          mob_do(collector, "shrug");
+          sprintf(buf, "Sorry %s, guess I couldn't find an order for you.",
+              GET_NAME(ch));
+          do_say(collector, buf, CMD_SAY);
+        }
+      return TRUE;
+      }
+    }
+  } // end "request order"
+  
+  if (cmd == MSG_MOBACT && count_mortals_room(collector, TRUE) > 0) {
+    // generic flavor
+    switch(number(0,49)) {
+    case 0:
+      mob_do(collector, "grumble");
+      break;
+    case 1:
+      sprintf(buf, "%s screams into a small device on %s arm, 'Would you please SHUT UP!'\n\r",
+          GET_SHORT(collector),HSHR(collector));
+      send_to_room(buf, CHAR_REAL_ROOM(collector));
+      mob_do(collector, "steam");
+      break;
+    case 2:
+      do_say(collector, "Looking for some quest points?", CMD_SAY);
+      break;
+    case 3:
+      do_say(collector, "I could always use the help of a moderately intelligent individual.", CMD_SAY);
+      break;
+    case 4:
+      sprintf(buf, "Ugh, %s is completely useless!", kendernames[number(0, NUMELEMS(kendernames)-1 )]);
+      do_say(collector, buf, CMD_SAY);
+      break;
+    case 5:
+      do_say(collector, "Argh, these orders are piling up.", CMD_SAY);
+      break;
+    case 6:
+      sprintf(buf, "You hear faint voices coming from a small device on %s's arm.\n\r",
+          GET_SHORT(collector));
+      send_to_room(buf, CHAR_REAL_ROOM(collector));
+      mob_do(collector, "roll");
+      break;
+    default:
+      break;
+    }
+    
+    if(collector->specials.fighting) {
+      do_say(collector, "What the heck are you doing? Skotty get me outta' here!", CMD_SAY);
+      sprintf(buf, "%s disappears in a beam of bright light.\n\r", GET_SHORT(collector));
+      send_to_room(buf, CHAR_REAL_ROOM(collector));
+      GET_HIT(collector) = GET_MAX_HIT(collector);
+      char_from_room(collector);
+      char_to_room(collector, real_room(number(3000,3072)));
+    }
   }
-  if (cmd == MSG_MOBACT) {
-    // add a teleport if he's fighting
-    // add a couple just flavor messages/behaviors
-  }*/
-  // process order delivery
+  
   if (cmd == MSG_GAVE_OBJ) {
+    // process order delivery
     order = get_obj_in_list_vis(collector, "order", collector->carrying);
 
     if (order && GET_ITEM_TYPE(order) == ITEM_AQ_ORDER) {
       
       if ((order->ownerid[0] != ch->ver3.id) &&
-          (strcmp(idname[order->ownerid[0]].name, idname[ch->ver3.id].name))) { // handed in by non-owner
-        //TESTING
-        sprintf(buf, "OwnerID[0] = %d, ChID = %d, ChID->Name: %s\n\n\r", order->ownerid[0],
-            ch->ver3.id, idname[ch->ver3.id].name);
-        send_to_world(buf);
-        
-        sprintf(buf, "Where'd you get this? Did you kill 'em? Give it back to %s.", CAP(idname[order->ownerid[0]].name));
+          (strcmp(idname[order->ownerid[0]].name, idname[ch->ver3.id].name))) {
+        // handed in by non-owner
+        sprintf(buf, "Where'd you get this? Did you kill 'em? Give it back to %s.",
+            CAP(idname[order->ownerid[0]].name));
         do_say(collector, buf, CMD_SAY);
         obj_from_char(order);
         obj_to_char(order, ch);
-        sprintf(buf,"%s hands %s back to %s, eyeing %s warily.",GET_SHORT(collector),
-            OBJ_SHORT(order),GET_NAME(ch),HMHR(ch));
+        sprintf(buf, "%s hands %s back to %s, eyeing %s warily.",
+            GET_SHORT(collector), OBJ_SHORT(order), GET_NAME(ch), HMHR(ch));
         act(buf,0,collector,0,ch,TO_NOTVICT);
-        sprintf(buf,"%s hands %s back to you warily.",GET_SHORT(collector),
+        sprintf(buf, "%s hands %s back to you warily.", GET_SHORT(collector),
             OBJ_SHORT(order));
         act(buf,0,collector,0,ch,TO_VICT);
         return TRUE;
@@ -1225,16 +1586,16 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
             if (V_OBJ(obj) == requirements[i]) {
               // required object found, but is it new enough?
               if (obj->obj_flags.timer < order->obj_flags.timer) { 
-                // object was popped before order received
+                // object was popped before order received : see aq_obj_date_popped()
                 do_say(collector, "No, no, no - this won't do at all.", CMD_SAY);
                 sprintf(buf, "%s is too old, I need a new one!", CAP(OBJ_SHORT(obj)));
                 do_say(collector, buf, CMD_SAY);
                 obj_from_char(order);
                 obj_to_char(order, ch);
-                sprintf(buf,"%s gives %s back to %s disappointedly.",GET_SHORT(collector),
-                    OBJ_SHORT(order),GET_NAME(ch));
+                sprintf(buf, "%s gives %s back to %s disappointedly.", GET_SHORT(collector),
+                    OBJ_SHORT(order), GET_NAME(ch));
                 act(buf,0,collector,0,ch,TO_NOTVICT);
-                sprintf(buf,"%s gives %s back to you disappointedly.",GET_SHORT(collector),
+                sprintf(buf, "%s gives %s back to you disappointedly.", GET_SHORT(collector),
                     OBJ_SHORT(order));
                 act(buf,0,collector,0,ch,TO_VICT);                
                 return TRUE;
@@ -1246,11 +1607,6 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
                 //   but we'll count here anyway with aq_objs[][] current values 
                 for (k = 0; k < NUMELEMS(aq_objs); k++) {
                   if (aq_objs[k][0] == V_OBJ(obj)) {  
-                    // TESTING
-                    sprintf(buf, "Obj #: %d, Value: %d, aq_objs[] Element: %d\n\n\r", 
-                        V_OBJ(obj), aq_objs[k][1], k);
-                    send_to_world(buf);
-                    
                     value_exists = TRUE;
                     questvalue += aq_objs[k][1];
                   }
@@ -1298,19 +1654,12 @@ is not in aq_objs point value table.",
           do_say(collector, buf, CMD_SAY);
         }
         sprintf(buf, "%s casually points a strange pistol at the order\n\r\
-and it disappears before your very eyes!\n\n\r", GET_SHORT(collector));
+and it disappears before your very eyes!\n\r", GET_SHORT(collector));
         send_to_room(buf, CHAR_REAL_ROOM(collector));
-      
-        // this is where it gets moved to another room to "hack" a wait timer
-        //   --- boots and crashes will reset wait timer, so be it
-        obj_from_char(order);
-        obj_to_room(order, real_room(CENTRAL_PROCESSING));
-        // now we're repurposing timer to countdown to next quest
-        order->obj_flags.timer = AQOBJ_SUCCESS_WAITTIME;
-        // ^^^ is a wait period even necessary?
         
-        sprintf(buf,"%s completed an order for me, what a %s!", GET_NAME(ch),
+        sprintf(buf, "%s completed an order for me, what a %s!", GET_NAME(ch),
             GET_SEX(ch) == SEX_MALE ? "guy" : "gal");
+        extract_obj(order);
         do_quest(collector, buf, CMD_QUEST);
         ch->ver3.quest_points += questvalue;
         return FALSE;      
@@ -1332,17 +1681,16 @@ and it disappears before your very eyes!\n\n\r", GET_SHORT(collector));
         do_say(collector, buf, CMD_SAY);
         obj_from_char(order);
         obj_to_char(order, ch);
-        sprintf(buf,"%s tosses %s back to %s tiredly.",GET_SHORT(collector),
+        sprintf(buf, "%s tosses %s back to %s tiredly.", GET_SHORT(collector),
             OBJ_SHORT(order),GET_NAME(ch));
         act(buf,0,collector,0,ch,TO_NOTVICT);
-        sprintf(buf,"%s tosses %s back to you tiredly.",GET_SHORT(collector),
+        sprintf(buf, "%s tosses %s back to you tiredly.", GET_SHORT(collector),
             OBJ_SHORT(order));
         act(buf,0,collector,0,ch,TO_VICT);        
         return TRUE;
       }
     } else { // given non-AQ_ORDER
       do_say(collector, "Thanks, I guess?", CMD_SAY);
-      return FALSE;
     }
   } // end "deliver order"
   return FALSE;
