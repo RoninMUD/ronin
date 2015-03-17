@@ -407,8 +407,8 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 void do_setskill (struct char_data *ch, char *arg, int cmd) {
   struct char_data *victim;
   int i, skill_number, value_number;
-  char buf[MAX_INPUT_LENGTH], buf2[MAX_INPUT_LENGTH];
-  char name[100], skill[100], value[100], pwd[100];
+  char buf[MAX_INPUT_LENGTH];
+  char name[100], skill[100], value[100];
   char buf3[MAX_INPUT_LENGTH];
   struct string_block sb;
 
@@ -418,8 +418,7 @@ void do_setskill (struct char_data *ch, char *arg, int cmd) {
   }
 
   half_chop(arg, name,100,buf,MIL);
-  half_chop(buf, skill,100, buf2,MIL);
-  argument_interpreter(buf2, value, pwd);
+  argument_interpreter(buf, skill, value);
 
   if (IS_NPC(ch)) return;
 
@@ -463,22 +462,16 @@ void do_setskill (struct char_data *ch, char *arg, int cmd) {
 
     for(i=1; i < MAX_SKILLS5 && *(spells[i]) !='\n';i++) {
       if (victim->skills[i].learned) {
-  sprintf(buf3,"%3d   %-35s   %3d percent\n\r", i, spells[i-1],
-    victim->skills[i].learned);
-  append_to_string_block(&sb, buf3);
+        sprintf(buf3,"%3d   %-35s   %3d percent\n\r", i, spells[i-1], victim->skills[i].learned);
+        append_to_string_block(&sb, buf3);
       }
-    } /* for */
+    }
     page_string_block (&sb, ch);
     destroy_string_block (&sb);
     return;
   } else {
     if (GET_LEVEL(ch) < LEVEL_SUP) {
       send_to_char("You need more power!\n\r", ch);
-      return;
-    }
-
-    if (strcmp(pwd, "ling") != 0) {
-      send_to_char("You try, but can't!!!\n\r", ch);
       return;
     }
 
@@ -490,8 +483,7 @@ void do_setskill (struct char_data *ch, char *arg, int cmd) {
     skill_number = atoi(skill);
     value_number = atoi(value);
 
-    if ((skill_number < 0) || (skill_number > MAX_SKILLS5) ||
-  (value_number < 0) || (value_number > 100)) {
+    if ((skill_number < 0) || (skill_number > MAX_SKILLS5) || (value_number < 0) || (value_number > 127)) {
       send_to_char("Bad values. \n\r", ch);
       return;
     }
