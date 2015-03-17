@@ -88,6 +88,7 @@ int check_guildmaster(CHAR *ch, CHAR *mob) {
 #define QUEST_LIST     5
 #define QUEST_BUY      6
 #define QUEST_CARD     7
+#define QUEST_ORDER    8
 
 #define AQCARDS_SPREAD 25
 
@@ -122,6 +123,7 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
                 complete - get credit for the quest\n\r\
                 info     - get info on current quest status\n\r\
                 quit     - quit your current quest\n\r\
+                order    - request an order (solo/low/mid/high optional)\n\r\
                 list     - list things to buy\n\r\
                 buy      - buy things with quest points\n\r";
   int option=0;
@@ -138,6 +140,7 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
   if(is_abbrev(arg,"list")) option=QUEST_LIST;
   if(is_abbrev(arg,"buy")) option=QUEST_BUY;
   if(is_abbrev(arg,"card")) option=QUEST_CARD;
+  if(is_abbrev(arg,"order")) option=QUEST_ORDER;
 
   switch(option) {
     case QUEST_STATUS:
@@ -226,6 +229,10 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
     case QUEST_BUY:
     case QUEST_CARD:
       send_to_char("You must return to your guildmaster.\n\r",ch);
+      return;
+      break;
+    case QUEST_ORDER:
+      send_to_char("You'll have to find someone who has those.\n\r",ch);
       return;
       break;
     default:
@@ -1347,7 +1354,8 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   bool assigned[4] = {FALSE, FALSE, FALSE, FALSE};
   char buf[MAX_STRING_LENGTH];
   int pick, i, count = 0, questvalue = 0; 
-
+  //struct extra_descr_data *desc, *tmp_desc;
+  
   if(requester->ver3.id <= 0)
     requester->ver3.id = generate_id();
 
@@ -1392,6 +1400,18 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   if (assigned[0] && assigned[1] && assigned[2] && assigned[3]) {
     // tag order with questvalue - visible in magic.c "identify"
     OBJ_SPEC(aqorder) = questvalue;
+    // create new extra_description "list" with the object names
+    /*tmp_desc->keyword = "list";
+    tmp_desc->next = obj_proto_table[aqorder].ex_description;
+    sprintf(buf, "The list reads:\n\r  %s\n\r  %s\n\r  %s\n\r  %s\n\r",
+      aqorder->obj_flags.value[0] >= 0 ? real_object(aqorder->obj_flags.value[0]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[0])].short_description : "something" : "nothing",
+      aqorder->obj_flags.value[1] >= 0 ? real_object(aqorder->obj_flags.value[1]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[1])].short_description : "something" : "nothing",
+      aqorder->obj_flags.value[2] >= 0 ? real_object(aqorder->obj_flags.value[2]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[2])].short_description : "something" : "nothing",
+      aqorder->obj_flags.value[3] >= 0 ? real_object(aqorder->obj_flags.value[3]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[3])].short_description : "something" : "nothing");
+    strcpy(buf, tmp_desc->description);
+    aqorder->ex_description = tmp_desc;
+    tmp_desc = NULL;
+    */
     
     sprintf(buf, "Good luck %s, try to do a better job than %s.",
         GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1 )]);
@@ -1464,7 +1484,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *obj = NULL, *next_obj  = NULL;
   char buf[MAX_STRING_LENGTH];
   char argument[MAX_INPUT_LENGTH];
-  int i, j, k, lh_opt = 0, questvalue = 0;
+  int i, j, k, tmp_value, lh_opt = 0, questvalue = 0;
   int requirements[] = {-1, -1, -1, -1};
   bool value_exists = FALSE;
   bool found[4] = {FALSE, FALSE, FALSE, FALSE};
@@ -1608,7 +1628,15 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
                 for (k = 0; k < NUMELEMS(aq_objs); k++) {
                   if (aq_objs[k][0] == V_OBJ(obj)) {  
                     value_exists = TRUE;
-                    questvalue += aq_objs[k][1];
+                    tmp_value = aq_objs[k][1];
+                    if (chance(25)) {
+                      // chance to double value of an object
+                      //TESTING
+                      sprintf(buf, "Doubled value for Obj #: %d\n\r", aq_objs[k][0]);
+                      send_to_world(buf);
+                      tmp_value *= 2;
+                    }                    
+                    questvalue += tmp_value;
                   }
                 }
                 if(!value_exists) {
@@ -1639,6 +1667,10 @@ is not in aq_objs point value table.",
           break;
         case 3:
           do_say(collector, "I'm so used to failure, this is a welcome surprise.", CMD_SAY);
+          break;
+        case 4:
+          do_say(collector, "I won't ask where any of this came from.", CMD_SAY);
+          mob_do(collector, "wink");
           break;
         default:
           break;
@@ -1711,6 +1743,6 @@ void assign_aquest_special(void) {
   
   assign_obj( TEMPLATE_AQORDER, aq_obj_date_popped );
   for (i = 0; i < NUMELEMS(aq_objs); i++)
-    assign_obj( i, aq_obj_date_popped );
+    assign_obj( aq_objs[i][0], aq_obj_date_popped );
   assign_mob( COLLECTOR, aq_order_mob );
 }
