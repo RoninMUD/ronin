@@ -1343,7 +1343,7 @@ int aq_objs[][2]={ // { OBJ_vnum, value }
 };
 
 #define SCRAPYARD               3030
-#define STORAGE_ROOM            5807
+#define STORAGE_ROOM            3054
 #define CENTRAL_PROCESSING      1277 // TESTING VALUE
 #define COLLECTOR               7    // TESTING VALUE
 #define TEMPLATE_AQORDER        40
@@ -1374,14 +1374,14 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   for (i = 0; i < 4; i++) { 
     // get an obj from our aq_objs table, assign it to the aqorder value[i]
     // TESTING
-    sprintf(buf, "Order Value[i] = %d\n\r", i);
-    send_to_world(buf);
+    //sprintf(buf, "Order Value[i] = %d\n\r", i);
+    //send_to_world(buf);
     while(count < 100) {
       count++;
       pick = number(0, NUMELEMS(aq_objs) - 2);
       // TESTING
-      sprintf(buf, "lh_opt: %d, Pick: %d, Obj #: %d, Value: %d\n\r", lh_opt, pick, aq_objs[pick][0], aq_objs[pick][1]);
-      send_to_world(buf);
+      //sprintf(buf, "lh_opt: %d, Pick: %d, Obj #: %d, Value: %d\n\r", lh_opt, pick, aq_objs[pick][0], aq_objs[pick][1]);
+      //send_to_world(buf);
       
       if (aq_objs[pick][0] == aqorder->obj_flags.value[0]) continue;
       if (aq_objs[pick][0] == aqorder->obj_flags.value[1]) continue;
@@ -1430,11 +1430,6 @@ int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
   // exclude gods
   
   if (cmd == MSG_CORPSE) {
-    // TESTING
-    sprintf(buf, "MSG_CORPSE received, %s at room %d\n\r",
-        GET_NAME(ch), V_ROOM(ch));
-    send_to_world(buf);
-    
     if (!(ch = order->carried_by)) return FALSE;
     sprintf(buf, "A glimmer of suspended lights appears in the middle of the room. \
 It is only there long enough for the nozzle of a strange pistol \
@@ -1449,11 +1444,6 @@ to materialize, fire, and beam %s elsewhere just before you expire.\n\r", OBJ_SH
     obj_to_room(order, real_room(STORAGE_ROOM));
     return FALSE;
   } else if (cmd == MSG_STONE) {
-    // TESTING
-    sprintf(buf, "MSG_STONE received, %s at room %d\n\r",
-        GET_NAME(ch), V_ROOM(ch));
-    send_to_world(buf);
-    
     if (!(ch = order->carried_by)) return FALSE;
     sprintf(buf, "A glimmer of suspended lights appears in the middle of the room. \
 It is only there long enough for the nozzle of a strange pistol \
@@ -1479,11 +1469,12 @@ to materialize, fire, and beam %s elsewhere just before you turn to stone.\n\r",
     switch (cmd) {
     case CMD_GIVE:
       if (!(order = get_obj_in_list_vis(ch, argument, ch->carrying))) return FALSE;
+      if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
       arg = one_argument(arg, argument);
       if (!*argument) return FALSE; // no argument after "give <order>"
       if (!(other = get_char_room_vis(ch, argument))) return FALSE;
       if (IS_MORTAL(other)) {
-        if (order->ownerid[0] != other->ver3.id) {
+        if ((order->ownerid[0] != other->ver3.id) && (order->ownerid[0] > 0)) {
           sprintf(buf, "Something prevents you from giving %s to %s.\n\r",
               OBJ_SHORT(order), GET_NAME(other));
           send_to_char(buf, ch);
@@ -1493,11 +1484,9 @@ to materialize, fire, and beam %s elsewhere just before you turn to stone.\n\r",
       break;
     case CMD_GET:
     case CMD_TAKE:
-      //TESTING
-      send_to_world("GET/TAKE case fired.\n\r");
-      
       if (!(order = get_obj_in_list_vis(ch, argument, world[CHAR_REAL_ROOM(ch)].contents))) return FALSE;
-      if (order->ownerid[0] != ch->ver3.id) {
+      if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
+      if ((order->ownerid[0] != ch->ver3.id) && (order->ownerid[0] > 0)) {
         sprintf(buf, "Something prevents you from %s %s.\n\r",
             cmd == CMD_GET ? "getting" : "taking", OBJ_SHORT(order));
         send_to_char(buf, ch);
@@ -1509,6 +1498,7 @@ to materialize, fire, and beam %s elsewhere just before you turn to stone.\n\r",
       //   but due to potential for clan vaults, I'm just leaving it
       //   as a broad case
       if (!(order = get_obj_in_list_vis(ch, argument, ch->carrying))) return FALSE;
+      if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
       sprintf(buf, "Something prevents you from storing %s.\n\r",
           OBJ_SHORT(order));
       send_to_char(buf, ch);
@@ -1521,6 +1511,7 @@ to materialize, fire, and beam %s elsewhere just before you turn to stone.\n\r",
     case CMD_DONATE:
     case CMD_JUNK:
       if (!(order = get_obj_in_list_vis(ch, argument, ch->carrying))) return FALSE;
+      if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
       if (mob_proto_table[real_mobile(COLLECTOR)].number < 1) {
         collector = read_mobile(COLLECTOR, VIRTUAL);
       } else {
@@ -1691,6 +1682,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
     if (order && GET_ITEM_TYPE(order) == ITEM_AQ_ORDER) {
       
       if ((order->ownerid[0] != ch->ver3.id) &&
+          (order->ownerid[0] > 0) &&
           (strcmp(idname[order->ownerid[0]].name, idname[ch->ver3.id].name))) {
         // handed in by non-owner
         sprintf(buf, "Where'd you get this? Did you kill 'em? Give it back to %s.",
@@ -1745,8 +1737,8 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
                     if (chance(25)) {
                       // chance to double value of an object
                       //TESTING
-                      sprintf(buf, "Doubled value for Obj #: %d\n\r", aq_objs[k][0]);
-                      send_to_world(buf);
+                      //sprintf(buf, "Doubled value for Obj #: %d\n\r", aq_objs[k][0]);
+                      //send_to_world(buf);
                       tmp_value *= 2;
                     }                    
                     questvalue += tmp_value;
