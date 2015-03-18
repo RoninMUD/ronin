@@ -1067,8 +1067,7 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
 }
 
 /* Object questing implemented through mob other than guildmaster in this case */
-/*
-int aq_objs[][] = {
+int aq_objs[][2] = {
   // {VNUM, value} // <short desc> <repop>
   {104, 1}, // A small stethoscope 50
   {106, 1}, // A small wand 50
@@ -1321,8 +1320,8 @@ int aq_objs[][] = {
   {11702, 5}, // A Silver Full Plate 11
   {11720, 5}  // a cracked dragon's tooth 13
 };
-*/
 
+/*
 int aq_objs[][2]={ // { OBJ_vnum, value }
   {1, 1}, 
   {2, 1}, 
@@ -1341,7 +1340,7 @@ int aq_objs[][2]={ // { OBJ_vnum, value }
   {21, 5},
   {-1, -1} // PADDING
 };
-
+*/
 #define SCRAPYARD               3030
 #define STORAGE_ROOM            3054
 #define CENTRAL_PROCESSING      1277 // TESTING VALUE
