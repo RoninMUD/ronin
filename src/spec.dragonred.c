@@ -1068,8 +1068,8 @@ int red_dragons_wings(OBJ *obj, CHAR *ch, int cmd, char *arg)
 			do_look(ch2, "", CMD_LOOK);
 		}
 
-		send_to_char("\n\r\n\rHaving flown up to the volcano ledge, the heavy wings falls out\n\r", ch);
-		send_to_char("of your reach and fall into the volcano crater.\n\r", ch);
+		send_to_char("\n\r\n\rHaving flown up to the volcano ledge, the heavy wings fall out\n\r", ch);
+		send_to_char("of your reach and tumble into the volcano crater.\n\r", ch);
 		extract_obj(unequip_char(ch, HOLD));
 		return TRUE;
 	}
