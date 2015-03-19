@@ -861,6 +861,8 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
   return TRUE;
 }
 
+#define STORAGE_ROOM    5807
+
 int dump(int room, CHAR *ch, int cmd, char *arg) {
   OBJ *k;
   char buf[100];
@@ -885,17 +887,30 @@ int dump(int room, CHAR *ch, int cmd, char *arg) {
 
   for(k = world[CHAR_REAL_ROOM(ch)].contents; k ;
       k = world[CHAR_REAL_ROOM(ch)].contents) {
-    sprintf(buf, "The %s vanishes in a puff of smoke.\n\r",rem_prefix(OBJ_SHORT(k)));
-    for(tmp_char = world[CHAR_REAL_ROOM(ch)].people; tmp_char;
-        tmp_char = tmp_char->next_in_room)
-      if (CAN_SEE_OBJ(tmp_char, k)) send_to_char(buf,tmp_char);
-    value += MAX(1, MIN(50, k->obj_flags.cost/10));
-    extract_obj(k);
-    if(IS_MORTAL(ch))
-      sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",GET_NAME(ch),OBJ_SHORT(k));
-    else if(IS_NPC(ch))
-      sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",MOB_SHORT(ch),OBJ_SHORT(k));
-    log_s(buf);
+    if (GET_ITEM_TYPE(k) == ITEM_AQ_ORDER) {
+      sprintf(buf, "%s vanishes in a brilliant flash of bright light.\n\r",
+          CAP(OBJ_SHORT(k)));
+      send_to_room(buf, CHAR_REAL_ROOM(ch));
+      obj_from_room(k);
+      obj_to_room(k, real_room(STORAGE_ROOM));
+    } else {
+      sprintf(buf, "The %s vanishes in a puff of smoke.\n\r", 
+          rem_prefix(OBJ_SHORT(k)));
+      for(tmp_char = world[CHAR_REAL_ROOM(ch)].people; tmp_char;
+          tmp_char = tmp_char->next_in_room) {
+        if (CAN_SEE_OBJ(tmp_char, k)) {
+          send_to_char(buf,tmp_char);
+        }
+      }
+      value += MAX(1, MIN(50, k->obj_flags.cost/10));
+      extract_obj(k);
+      if(IS_MORTAL(ch)) {
+        sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",GET_NAME(ch),OBJ_SHORT(k));
+      } else if(IS_NPC(ch)) {
+        sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",MOB_SHORT(ch),OBJ_SHORT(k));
+      }
+      log_s(buf);
+    }
   }
 
   if (value) {
