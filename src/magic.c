@@ -3919,7 +3919,7 @@ void spell_confusion (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
 
 void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   int v_lvl,c_lvl,ind;
-  OBJ *tmp, *next;
+  OBJ *tmp, *next, *tmp_c = NULL, *next_c = NULL;
   char buf[MAX_INPUT_LENGTH];
   int dam = 0;
 
@@ -3931,7 +3931,8 @@ void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   if (obj) {
     if(number(0,3) || GET_ITEM_TYPE(obj)==ITEM_CONTAINER ||
        V_OBJ(obj)==WALL_THORNS || V_OBJ(obj)==STATUE_PEACE ||
-       V_OBJ(obj)==ICE_WALL || V_OBJ(obj)==ICE_BLOCK) {
+       V_OBJ(obj)==ICE_WALL || V_OBJ(obj)==ICE_BLOCK ||
+       GET_ITEM_TYPE(obj)==ITEM_AQ_ORDER) {
       send_to_char ("Nothing happens.\n\r",ch);
       return;
     }
@@ -3964,7 +3965,22 @@ void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
       if (EQ(vict,ind)) extract_obj(unequip_char (vict, ind));
     for (tmp = vict->carrying;tmp;tmp = next) {
       next = tmp->next_content;
-      extract_obj(tmp);
+      // updated to unpack corpses which might contain an AQ_ORDER
+      //   and moves AQ_ORDERs to room - no free way to "quit" them
+      if(GET_ITEM_TYPE(tmp)==ITEM_AQ_ORDER) {
+        obj_from_char(tmp);
+        obj_to_room(tmp, CHAR_REAL_ROOM(vict));
+      } else if (IS_CORPSE(tmp)) {
+        for (tmp_c = tmp->contains; tmp_c; tmp_c = next_c) {
+          next_c = tmp_c->next_content;
+          obj_from_obj(tmp_c);
+          obj_to_char(tmp_c, vict);
+        }
+        extract_obj(tmp);
+        next = vict->carrying;
+      } else {
+        extract_obj(tmp);
+      }
     }
     act("$n looks at $N, and $E crumbles to dust.",FALSE,ch,0,vict,TO_ROOM);
     act("You look at $N, and $E crumbles to dust.",FALSE,ch,0,vict,TO_CHAR);
