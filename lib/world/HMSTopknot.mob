@@ -13,6 +13,8 @@ evilly at you. There seems to be some blood in his handkerchief.
 5 5 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5801
 slaphoff kender captain~
 Slaphoff the kender~
@@ -28,6 +30,8 @@ short fellow. When he sees you he greets you with wide smile and says :
 8 8 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5802
 heinrich kluge scotty kender lieutenant~
 Scotty the kender~
@@ -42,6 +46,8 @@ It must be some kind of inside joke. Scotty loves to beam things.
 8 8 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5803
 karl kender crewmember~
 Karl the kender~
@@ -56,6 +62,8 @@ He is wondering why his teeth are so dull and pockets so full.
 8 8 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5804
 dieter kender crewmember~
 Dieter the kender~
@@ -70,6 +78,8 @@ that he has in his chest. Dieter asks you for a snack.
 8 8 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5805
 hans kender crewmember~
 Hans the kender~
@@ -83,6 +93,8 @@ The kender grabs your arm and tells you " Hi, I'm Hans. Let's play something."
 8 8 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5806
 jurgen kender crewmember~
 Jurgen the kender~
@@ -97,6 +109,8 @@ away.
 8 8 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5807
 hilda kender crewmember~
 Hilda the kender~
@@ -110,6 +124,8 @@ Hilda is drinking some milk. She is preparing herself for a beauty contest.
 8 8 2
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5808
 erwin kender crewmember tactical_genius~
 Erwin the kender~
@@ -125,6 +141,8 @@ is planning an attack to somewhere. In his uniform there is a sign which says:
 8 8 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5809
 herman kender crewmember~
 Herman the kender~
@@ -139,6 +157,8 @@ Herman is planning to repair his vessel. He wants to return to Sithikus.
 8 8 1
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5810
 eva kender crewmember~
 Eva the kender~
@@ -153,6 +173,8 @@ mirror. The sign in her chest says " Eva ".
 8 8 2
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #5811
 marlene kender crewmember~
 Marlene the kender~
@@ -167,5 +189,28 @@ at you. She invites you to dance with her.
 8 8 2
 74 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
+#5812
+franz officer requisitions~
+Franz the Requisitions Officer~
+Franz the Requisitions Officer is in search of brave adventurers.
+~
+Franz has the wizened lines of an elder sage, but the youthful
+exuberance one has come to expect with kenders. His salt and
+pepper hair is pulled up into the traditional topknot revealing
+his pointy ears. Bright, childish eyes sparkle and dart curiously
+to any shiny objects in his periphery. A large sack made of jute
+is secured over his shoulders, full of what appear to be smaller
+canvas bags and other trinkets he may have borrowed.
+~
+520 136 0 Y
+49 -10 -10 100d100+5000 5d5+5
+1 1
+8 8 1
+74 4288 5d5+5 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
 #0
 $~

@@ -39,18 +39,18 @@ You see some burned trees in the west.
 ~
 0 0 5800
 E
-thing silvery object ship vessel~
-When you examine the thing closer you realize that it is some kind of ship.
-You wonder what it is doing here. There is some writing in the hull of the
-vessel.
+footprint prints footprints print~
+The footprints seem to be quite small, like children had been playing here.
 ~
 E
 writing text~
 It says: HMS TopKnot
 ~
 E
-footprint prints footprints print~
-The footprints seem to be quite small, like children had been playing here.
+thing silvery object ship vessel~
+When you examine the thing closer you realize that it is some kind of ship.
+You wonder what it is doing here. There is some writing in the hull of the
+vessel.
 ~
 S
 #5802
@@ -161,29 +161,29 @@ The door leads to the corridor.
 door~
 1 -1 5803
 E
-buttons~
-These are green square buttons.
-~
-E
-button~
-This is a red round button.
-~
-E
-lever~
-This is a small lever.
-~
-E
-rubble parts~
-There are many kinds of parts and rubble on the floor.
+machine~
+The machine seems to be badly damaged. All sorts of parts seem to have fallen
+to the floor. It is leaking some kind of black liquid.
 ~
 E
 liquid~
 The liquid is black and quite sticky and it tastes really awful.
 ~
 E
-machine~
-The machine seems to be badly damaged. All sorts of parts seem to have fallen
-to the floor. It is leaking some kind of black liquid.
+rubble parts~
+There are many kinds of parts and rubble on the floor.
+~
+E
+lever~
+This is a small lever.
+~
+E
+button~
+This is a red round button.
+~
+E
+buttons~
+These are green square buttons.
 ~
 S
 #5806
@@ -267,6 +267,19 @@ The door leads to the corridor.
 ~
 ~
 0 0 5803
+S
+#5812
+Central Processing~
+To an outside observer, this place is absolute chaos. Kenders
+appear and disappear in brief flashes of bright light, here for
+so little time it's hard to see what if anything they're doing.
+There are haphazard piles of canvas sacks piled all over, many
+empty, some full and stretched far beyond what you'd imagine was
+possible. A watermill type pulley system is carrying several of
+the full sacks up through the ceiling and out of view, to where
+and for what purpose you cannot know.
+~
+58 1073743000 0
 S
 #5858
 Inside the Coffin~
