@@ -2756,6 +2756,9 @@ void free_char(struct char_data *ch)
 /* release memory allocated for an obj struct */
 void free_obj(struct obj_data *obj)
 {
+  struct extra_descr_data *i_descr = NULL;
+  struct extra_descr_data *n_descr = NULL;
+
   if(obj->name)
     free(obj->name);
   if(obj->description)
@@ -2774,6 +2777,17 @@ void free_obj(struct obj_data *obj)
     free(obj->char_rem_desc);
   if(obj->room_rem_desc)
     free(obj->room_rem_desc);
+
+  if (obj->ex_description != obj_proto_table[obj->item_number].ex_description) {
+    for (i_descr = obj->ex_description; i_descr; i_descr = n_descr) {
+      n_descr = i_descr->next;
+      if (i_descr->keyword) free(i_descr->keyword);
+      if (i_descr->description) free(i_descr->description);
+      free(i_descr);
+    }
+    obj->ex_description = NULL;
+  }
+
   free(obj);
 }
 
