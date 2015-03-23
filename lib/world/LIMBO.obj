@@ -144,12 +144,12 @@ A Statue of Peace is standing here.~
 10 10 10
 10
 E
-statue~
+peace~
 This statue appears to be keeping the surrounding area
 quiet and peaceful.
 ~
 E
-peace~
+statue~
 This statue appears to be keeping the surrounding area
 quiet and peaceful.
 ~
@@ -731,7 +731,7 @@ M
 ~
 ~
 #40
-acquisition order~
+order acquisition~
 an acquisition order~
 An infamous acquisition order has been left here.~
 ~

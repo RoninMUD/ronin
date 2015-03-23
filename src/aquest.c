@@ -1318,36 +1318,14 @@ int aq_objs[][2] = {
   {26711, 4}, // The Greatsword of the Guard 8
   {27102, 4}, // A bone mace 12
   {11702, 5}, // A Silver Full Plate 11
-  {11720, 5},  // a cracked dragon's tooth 13
-  {-1, -1} // PADDING
+  {11720, 5}  // a cracked dragon's tooth 13
 };
 
-/*
-int aq_objs[][2]={ // { OBJ_vnum, value }
-  {1, 1}, 
-  {2, 1}, 
-  {3, 1}, 
-  {4, 1}, 
-  {5, 1},
-  {6, 2},
-  {7, 2},
-  {8, 2},
-  {10, 2},
-  {11, 2},
-  {12, 3},
-  {13, 3},
-  {14, 3},
-  {20, 4},
-  {21, 5},
-  {-1, -1} // PADDING
-};
-*/
-#define SCRAPYARD               3030
-#define STORAGE_ROOM            3054
+#define STORAGE_ROOM            5807
 #define CENTRAL_PROCESSING      1277 // TESTING VALUE
 #define COLLECTOR               7    // TESTING VALUE
 #define TEMPLATE_AQORDER        40
-#define AQ_ORDER_QUIT_TIME      3
+#define AQ_ORDER_QUIT_TIME      120
 
 char *kendernames[9] = {"Karl","Dieter","Hans","Jurgen","Hilda",
                           "Erwin","Herman","Eva","Marlene"};
@@ -1359,6 +1337,7 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   bool assigned[4] = {FALSE, FALSE, FALSE, FALSE};
   char buf[MAX_STRING_LENGTH];
   int pick, i, count = 0, questvalue = 0; 
+  struct extra_descr_data *tmp_descr;
   
   if(requester->ver3.id <= 0)
     requester->ver3.id = generate_id();
@@ -1368,20 +1347,16 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   aqorder->ownerid[0] = requester->ver3.id;   // tag the order with the requester's ID
   sprintf(buf, "An infamous acquisition order, forgotten here by %s.", GET_NAME(requester));
   aqorder->description = str_dup(buf);        // change the long desc to include requester's name
+  sprintf(buf, "%s's acquisition order", GET_NAME(requester));
+  aqorder->short_description = str_dup(buf);  // change the short desc to include requester's name
   aqorder->obj_flags.timer = days;            // set the timer as today's date (for "newness" check)
   aqorder->log = 1;
  
   for (i = 0; i < 4; i++) { 
     // get an obj from our aq_objs table, assign it to the aqorder value[i]
-    // TESTING
-    //sprintf(buf, "Order Value[i] = %d\n\r", i);
-    //send_to_world(buf);
     while(count < 100) {
       count++;
-      pick = number(0, NUMELEMS(aq_objs) - 2);
-      // TESTING
-      //sprintf(buf, "lh_opt: %d, Pick: %d, Obj #: %d, Value: %d\n\r", lh_opt, pick, aq_objs[pick][0], aq_objs[pick][1]);
-      //send_to_world(buf);
+      pick = number(0, NUMELEMS(aq_objs) - 1);
       
       if (aq_objs[pick][0] == aqorder->obj_flags.value[0]) continue;
       if (aq_objs[pick][0] == aqorder->obj_flags.value[1]) continue;
@@ -1401,6 +1376,22 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
     // tag order with questvalue - visible in magic.c "identify"
     OBJ_SPEC(aqorder) = questvalue;
     
+    // change the extra desc to include required objects
+    CREATE(tmp_descr, struct extra_descr_data, 1);
+    tmp_descr->keyword = str_dup("order");
+    sprintf(buf, "A well-worn, faded canvas bag has a large blue patch sewn\n\r\
+to it. The patch has been sewn over half-a-hundred times and\n\r\
+had those stitches ripped out just as many. There are four\n\r\
+hastily sewn lines of text detailing the kenders' wish list.\n\r\
+\n\r   %s\n\r   %s\n\r   %s\n\r   %s\n\r",
+        aqorder->obj_flags.value[0] >= 0 ? real_object(aqorder->obj_flags.value[0]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[0])].short_description : "something" : "nothing",
+        aqorder->obj_flags.value[1] >= 0 ? real_object(aqorder->obj_flags.value[1]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[1])].short_description : "something" : "nothing",
+        aqorder->obj_flags.value[2] >= 0 ? real_object(aqorder->obj_flags.value[2]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[2])].short_description : "something" : "nothing",
+        aqorder->obj_flags.value[3] >= 0 ? real_object(aqorder->obj_flags.value[3]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[3])].short_description : "something" : "nothing");
+    tmp_descr->description = str_dup(buf);
+    aqorder->ex_description = tmp_descr;
+    tmp_descr = NULL;
+
     sprintf(buf, "Good luck %s, try to do a better job than %s.",
         GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1 )]);
     do_say(ordergiver, buf, CMD_SAY);
@@ -1411,58 +1402,63 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
     sprintf(buf, "%s gives %s to you.", GET_SHORT(ordergiver),
         OBJ_SHORT(aqorder));
     act(buf,0,ordergiver,0,requester,TO_VICT);
+    return TRUE;
   } else {
     wizlog("WIZINFO: AQ Order object assignment counter exceeded 100.",LEVEL_IMP,5);
     log_f("WIZINFO: AQ Order object assignment counter exceeded 100.");
     return FALSE;
   }
-  return TRUE;  
+  return FALSE;
 } // end of generate_aq_order()
 
 int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
   char argument[MAX_INPUT_LENGTH];
   char buf[MAX_STRING_LENGTH];
+  char buf1[MAX_STRING_LENGTH];
+  char buf2[MAX_STRING_LENGTH];
+  struct extra_descr_data *tmp_descr;
   CHAR *collector = NULL;
   char *collectorinsult[8] = {"wimp","quitter","lame-o","goldbricker",
                               "pansy","slacker","chump","loser"};
-  // block methods of getting order onto another char and/or out of game
+  // block methods of getting order out of game and back again on non-owner
   //   since this would allow multiple orders for a character at once
-  // exclude gods
+  // "junk" only real method to quit an order
+  // Dump/Scrapyard workaround is in int dump()
 
-  ch = order->carried_by;
-  if(!ch || (V_OBJ(order) != TEMPLATE_AQORDER)) return FALSE;
-  
-  // ignore gods except for spoofed extra desc
-  if(!IS_NPC(ch) && GET_LEVEL(ch) >= LEVEL_IMM && cmd != CMD_LOOK) return FALSE;
+  if (ch != order->carried_by) return FALSE;
   
   switch(cmd) {
-  case CMD_LOOK:
-    // spoof an updated extra description which includes the required objects
-    arg = one_argument(arg, argument);
-    if (!*argument) return FALSE; // no argument after "look"
-    if (strcmp(argument, "order")) return FALSE; // something other than "order"
-    if (!(order = get_obj_in_list_vis(ch, argument, ch->carrying))) return FALSE;
-    sprintf(buf, "A well-worn, faded canvas bag has a large blue patch sewn\n\r\
+  case MSG_OBJ_ENTERING_GAME:
+    if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
+    // redo the short/long desc strings based on Owner
+    if (order->ownerid[0] > 0) {
+      sprintf(buf, "An infamous acquisition order, forgotten here by %s.", CAP(idname[order->ownerid[0]].name));
+      order->description = str_dup(buf);        // change the long desc to include requester's name
+      sprintf(buf, "%s's acquisition order", CAP(idname[order->ownerid[0]].name));
+      order->short_description = str_dup(buf);  // change the short desc to include requester's name
+
+      // change the extra desc to include required objects
+      CREATE(tmp_descr, struct extra_descr_data, 1);
+      tmp_descr->keyword = str_dup("order");
+      sprintf(buf, "A well-worn, faded canvas bag has a large blue patch sewn\n\r\
 to it. The patch has been sewn over half-a-hundred times and\n\r\
 had those stitches ripped out just as many. There are four\n\r\
 hastily sewn lines of text detailing the kenders' wish list.\n\r\
 \n\r   %s\n\r   %s\n\r   %s\n\r   %s\n\r",
-        order->obj_flags.value[0] >= 0 ? real_object(order->obj_flags.value[0]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[0])].short_description : "something" : "nothing",
-        order->obj_flags.value[1] >= 0 ? real_object(order->obj_flags.value[1]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[1])].short_description : "something" : "nothing",
-        order->obj_flags.value[2] >= 0 ? real_object(order->obj_flags.value[2]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[2])].short_description : "something" : "nothing",
-        order->obj_flags.value[3] >= 0 ? real_object(order->obj_flags.value[3]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[3])].short_description : "something" : "nothing");
-    send_to_char(buf, ch);
-    return TRUE;
+          order->obj_flags.value[0] >= 0 ? real_object(order->obj_flags.value[0]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[0])].short_description : "something" : "nothing",
+          order->obj_flags.value[1] >= 0 ? real_object(order->obj_flags.value[1]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[1])].short_description : "something" : "nothing",
+          order->obj_flags.value[2] >= 0 ? real_object(order->obj_flags.value[2]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[2])].short_description : "something" : "nothing",
+          order->obj_flags.value[3] >= 0 ? real_object(order->obj_flags.value[3]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[3])].short_description : "something" : "nothing");
+      tmp_descr->description = str_dup(buf);
+      order->ex_description = tmp_descr;
+      tmp_descr = NULL;
+    }
     break;
   case MSG_AUTORENT:
+    if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
     if ((order->ownerid[0] != ch->ver3.id) && (order->ownerid[0] > 0)) {
       obj_from_char(order);
       obj_to_room(order, real_room(STORAGE_ROOM));
-
-    //TESTING
-    sprintf(buf, "DEBUG: MSG_AUTORENT, Moved %s from %s.\n\r", OBJ_SHORT(order),
-        GET_NAME(ch));
-    send_to_world(buf);
 
       // want to have COLLECTOR send a quest message when he intercepts an
       //   autorent like this, so we find him or load him
@@ -1479,6 +1475,8 @@ facility for safekeeping.", GET_NAME(ch), OBJ_SHORT(order));
     }
     break;
   case CMD_RENT:
+    if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
+    if(!IS_NPC(ch) && GET_LEVEL(ch) >= LEVEL_IMM) return FALSE;
     if ((order->ownerid[0] != ch->ver3.id) && (order->ownerid[0] > 0)) {
       sprintf(buf, "Something prevents you from renting with %s.\n\r",
           OBJ_SHORT(order));
@@ -1487,21 +1485,26 @@ facility for safekeeping.", GET_NAME(ch), OBJ_SHORT(order));
     }
     break;
   case CMD_STORE:
+    if(!IS_NPC(ch) && GET_LEVEL(ch) >= LEVEL_IMM) return FALSE;
     // technically this will trigger anywhere and not just at vault
     //   but due to potential for clan vaults, I'm just leaving it
     //   as a broad case
     arg = one_argument(arg, argument);
-    if (!*argument) return FALSE; // no argument after "look"
+    if (!*argument) return FALSE; // no argument after "store"
     if (!(order = get_obj_in_list_vis(ch, argument, ch->carrying))) return FALSE;
+    if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
+
     sprintf(buf, "Something prevents you from storing %s.\n\r",
         OBJ_SHORT(order));
     send_to_char(buf, ch);
     return TRUE;
     break;
   case CMD_JUNK:
+    if(!IS_NPC(ch) && GET_LEVEL(ch) >= LEVEL_IMM) return FALSE;
     arg = one_argument(arg, argument);
-    if (!*argument) return FALSE; // no argument after "look"
+    if (!*argument) return FALSE; // no argument after "junk"
     if (!(order = get_obj_in_list_vis(ch, argument, ch->carrying))) return FALSE;
+    if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
 
     // want to have COLLECTOR send a quest message when he intercepts an
     //   junk like this, so we find him or load him
@@ -1510,16 +1513,34 @@ facility for safekeeping.", GET_NAME(ch), OBJ_SHORT(order));
     } else {
       collector = get_ch_world(COLLECTOR);
       if (!collector) return FALSE; // shouldn't be possible, but for safety
+      sprintf(buf, "%s disappears in a beam of bright light.\n\r", GET_SHORT(collector));
+      send_to_room(buf, CHAR_REAL_ROOM(collector));
       char_from_room(collector);
     }
     char_to_room(collector, CHAR_REAL_ROOM(ch));
     sprintf(buf, "%s appears in a corona of bright light and \
 points a strange pistol at %s, which disappears.\n\r", GET_SHORT(collector), OBJ_SHORT(order));
     send_to_room(buf, CHAR_REAL_ROOM(collector));
-    sprintf(buf, "I saw that %s, if you don't think you can handle the order I'll just \
+
+    if (order->ownerid[0] > 0 && // someone other than owner is junking
+        strcmp(idname[ch->ver3.id].name, idname[order->ownerid[0]].name)) {
+      sprintf(buf1, "Tsk tsk %s, doing %s's dirty work. ",
+          IS_NPC(ch) ? GET_SHORT(ch) : GET_NAME(ch),
+          CAP(idname[order->ownerid[0]].name));
+      sprintf(buf2, "If %s can't handle the order I'll just send it back to Central \
+Processing to be requeued, that %s.", 
+          CAP(idname[order->ownerid[0]].name),
+          collectorinsult[number(0, NUMELEMS(collectorinsult)-1 )]);
+      sprintf(buf, "%s %s", buf1, buf2);
+      // for some reason referencing CAP(idname[order->ownerid[0]].name)
+      //   twice in the same sprintf() creates a warning, so splitting it
+      //   up since warnings are annoying
+    } else {
+      sprintf(buf, "I saw that %s, if you don't think you can handle the order I'll just \
 send it back to Central Processing to be requeued... you %s.",
-        IS_NPC(ch) ? GET_SHORT(ch) : GET_NAME(ch),
-        collectorinsult[number(0, NUMELEMS(collectorinsult)-1 )]);
+          IS_NPC(ch) ? GET_SHORT(ch) : GET_NAME(ch),
+          collectorinsult[number(0, NUMELEMS(collectorinsult)-1 )]);
+    }
     do_quest(collector, buf, CMD_QUEST);
 
     // this is where it gets moved to another room to "hack" a wait timer
@@ -1533,7 +1554,7 @@ send it back to Central Processing to be requeued... you %s.",
     break;
   }
   return FALSE;
-}
+} // end of aq_order_obj()
 
 int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
   time_t seconds;     
@@ -1556,7 +1577,7 @@ int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
     aqobj->obj_flags.timer = days;  // set the timer as today's date
   }  
   return FALSE;
-}
+} // end of aq_obj_date_popped()
 
 int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *order = NULL;
@@ -1613,7 +1634,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
       mob_do(collector, "grumble");
       break;
     case 1:
-      sprintf(buf, "%s screams into a small device on %s arm, 'Would you please SHUT UP!'\n\r",
+      sprintf(buf, "%s screams into a small device on %s arm, 'Quit goofing around!'\n\r",
           GET_SHORT(collector),HSHR(collector));
       send_to_room(buf, CHAR_REAL_ROOM(collector));
       mob_do(collector, "steam");
@@ -1710,11 +1731,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
                   if (aq_objs[k][0] == V_OBJ(obj)) {  
                     value_exists = TRUE;
                     tmp_value = aq_objs[k][1];
-                    if (chance(25)) {
-                      // chance to double value of an object
-                      //TESTING
-                      //sprintf(buf, "Doubled value for Obj #: %d\n\r", aq_objs[k][0]);
-                      //send_to_world(buf);
+                    if (chance(2)) {
                       tmp_value *= 2;
                     }                    
                     questvalue += tmp_value;
@@ -1790,7 +1807,8 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
             break;
           }
         }
-        sprintf(buf,"Read the order more carefully, I don't have time for your tomfoolery %s.", GET_NAME(ch));
+        sprintf(buf,"Read the order more carefully, I don't have time for your %s %s.",
+            chance(50) ? "tomfoolery" : "nonsense", GET_NAME(ch));
         do_say(collector, buf, CMD_SAY);
         obj_from_char(order);
         obj_to_char(order, ch);
@@ -1807,7 +1825,7 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
     }
   } // end "deliver order"
   return FALSE;
-}
+} // end of aq_order_mob()
 
 int aq_order_central_processing_room (int room, CHAR *ch, int cmd, char *arg) {
   OBJ *obj, *next_obj;
@@ -1829,7 +1847,7 @@ int aq_order_central_processing_room (int room, CHAR *ch, int cmd, char *arg) {
     }
   }
   return FALSE;
-}
+} // end of aq_order_central_processing_room()
 
 void assign_aquest_special(void) {
   int i;
