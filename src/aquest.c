@@ -1322,8 +1322,8 @@ int aq_objs[][2] = {
 };
 
 #define STORAGE_ROOM            5807
-#define CENTRAL_PROCESSING      1277 // TESTING VALUE
-#define COLLECTOR               7    // TESTING VALUE
+#define CENTRAL_PROCESSING      5812
+#define COLLECTOR               5812
 #define TEMPLATE_AQORDER        40
 #define AQ_ORDER_QUIT_TIME      120
 
