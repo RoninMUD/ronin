@@ -99,7 +99,7 @@ extern int CHAOSMODE;
 extern struct room_data *world;
 extern struct char_data *character_list;
 extern struct dex_app_type dex_app[];
-extern struct wis_app_type wis_app[26];
+extern struct wis_app_type wis_app[];
 extern struct obj_data  *object_list;
 
 int calc_position_damage(int position, int dam);
@@ -188,7 +188,7 @@ void do_protect(CHAR *ch, char *argument, int cmd)
 
   if (IS_NPC(victim))
   {
-    send_to_char("Protect a mob? Impossible!\n\r", ch);
+    send_to_char("Protect a potential enemy? Impossible!\n\r", ch);
 
     return;
   }
@@ -196,11 +196,11 @@ void do_protect(CHAR *ch, char *argument, int cmd)
   if (ch == victim)
   {
     send_to_char("You just protect yourself.\n\r", ch);
-    act("$n just protects $mself.", FALSE, ch, 0, 0, TO_NOTVICT);
+    act("$n just protects $mself.", FALSE, ch, 0, ch->specials.protecting, TO_NOTVICT);
 
     if (ch->specials.protecting)
     {
-      act("$N stops protecting you.", FALSE, ch->specials.protecting, 0, ch, TO_CHAR);
+      act("$n stops protecting you.", FALSE, ch, 0, ch->specials.protecting, TO_VICT);
 
       ch->specials.protecting->specials.protect_by = 0;
     }
@@ -359,9 +359,16 @@ void do_pray(CHAR *ch, char *argument, int cmd)
 
   if (!ch->skills) return;
 
-  if (!check_sc_access(ch, SKILL_PRAY))
+  if (GET_CLASS(ch) != CLASS_PALADIN && IS_MORTAL(ch))
   {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (GET_LEVEL(ch) < 40)
+  {
+    send_to_char("You are not high enough level to use that skill.\n\r", ch);
 
     return;
   }
@@ -1012,6 +1019,108 @@ void do_switch(CHAR *ch, char *argument, int cmd)
 }
 
 
+void do_smite(CHAR *ch, char *argument, int cmd) {
+  CHAR *victim = NULL;
+  char name[MIL];
+  int check = 0;
+  int set_pos = 0;
+
+  if (!ch->skills) return;
+
+  if (!check_sc_access(ch, SKILL_SMITE)) {
+    send_to_char("You do not have this skill.\n\r", ch);
+
+    return;
+  }
+
+  one_argument(argument, name);
+
+  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+    send_to_char("Smite who?\n\r", ch);
+
+    return;
+  }
+
+  if (victim == ch) {
+    send_to_char("Aren't we funny today...\n\r", ch);
+
+    return;
+  }
+
+  if (IS_MORTAL(ch) && IS_IMMORTAL(victim)) {
+    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+
+    return;
+  }
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
+  if (!GET_WEAPON(ch) || !IS_WEAPON(GET_WEAPON(ch))) {
+    send_to_char("You need to wield a weapon for your smite to succeed.\n\r", ch);
+
+    return;
+  }
+
+  check = number(1, 111) - GET_DEX_APP(ch);
+
+  if (check > GET_LEARNED(ch, SKILL_SMITE)) {
+    act("You try to smite smite $M but your concentration falters.", 0, ch, 0, victim, TO_CHAR);
+    act("$n tries to smite you but $s concentration falters.", 0, ch, 0, victim, TO_VICT);
+    act("$n tries to smite $N but $s concentration falters.", 0, ch, 0, victim, TO_NOTVICT);
+
+    damage(ch, victim, 0, SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
+
+    skill_wait(ch, SKILL_SMITE, 2);
+  }
+  else {
+    if (victim != GET_OPPONENT(ch)) {
+      act("You call upon your divine energy and switch the focus of your attacks to $N.", 0, ch, 0, victim, TO_CHAR);
+      act("$n calls upon $s divine energy and switches the focus of $s attacks to you!", 0, ch, 0, victim, TO_VICT);
+      act("$n calls upon $s divine energy and switches the focus of $s attacks to $N.", 0, ch, 0, victim, TO_NOTVICT);
+    }
+
+    stop_fighting(ch);
+    set_fighting(ch, victim);
+
+    act("You raise your weapon high to smite $M with holy vengeance!", 0, ch, 0, victim, TO_CHAR);
+    act("$n raises $s weapon high to smite you with holy vengence!", 0, ch, 0, victim, TO_VICT);
+    act("$n raises $s weapon high to smite $N with holy vengeance!", 0, ch, 0, victim, TO_NOTVICT);
+
+    hit(ch, victim, TYPE_UNDEFINED);
+
+    GET_POS(victim) = stack_position(victim, POSITION_RESTING);
+
+    skill_wait(ch, SKILL_SMITE, 2);
+  }
+
+  /* Trusty Steed */
+  if (CHAR_REAL_ROOM(victim) != NOWHERE && affected_by_spell(ch, SKILL_TRUSTY_STEED) && (!IS_AFFECTED(victim, AFF_INVUL) || breakthrough(ch, victim, BT_INVUL))) {
+    check = number(1, 121) - GET_WIS_APP(ch);
+
+    if (!IS_NPC(ch) && check_subclass(ch, SC_CAVALIER, 2) && check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
+      if (GET_POS(victim) > POSITION_SITTING) {
+        set_pos = stack_position(victim, POSITION_SITTING);
+      }
+      else {
+        set_pos = stack_position(victim, POSITION_RESTING);
+      }
+
+      act("You summon forth your trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_CHAR);
+      act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", 0, ch, 0, victim, TO_VICT);
+      act("$n summons forth $s trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_NOTVICT);
+
+      damage(ch, victim, calc_position_damage(GET_POS(victim), (GET_LEVEL(ch) * 3) / 2), SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
+
+      GET_POS(victim) = set_pos;
+    }
+  }
+}
+
+
 void do_flank(CHAR *ch, char *argument, int cmd)
 {
   CHAR *victim = NULL;
@@ -1085,16 +1194,16 @@ void do_flank(CHAR *ch, char *argument, int cmd)
 }
 
 
-void do_sweep(CHAR *ch, char *argument, int cmd)
+/* Used to be Sweep */
+void do_zeal(CHAR *ch, char *argument, int cmd)
 {
   CHAR *temp = NULL;
   CHAR *tmp_victim = NULL;
-  char name[MIL];
   int check = 0;
 
   if (!ch->skills) return;
 
-  if (!check_sc_access(ch, SKILL_SWEEP))
+  if (!check_sc_access(ch, SKILL_ZEAL))
   {
     send_to_char("You do not have this skill.\n\r", ch);
 
@@ -1108,8 +1217,6 @@ void do_sweep(CHAR *ch, char *argument, int cmd)
     return;
   }
 
-  one_argument(argument, name);
-
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
   {
     send_to_char("Behave yourself here please!\n\r", ch);
@@ -1117,21 +1224,19 @@ void do_sweep(CHAR *ch, char *argument, int cmd)
     return;
   }
 
-  check = number(1, 131) - GET_DEX_APP(ch);
+  check = number(1, 101) - GET_DEX_APP(ch);
 
-  if (check > GET_LEARNED(ch, SKILL_SWEEP))
+  if (check > GET_LEARNED(ch, SKILL_ZEAL))
   {
-    act("You try to sweep around the room with your weapon, but fail.", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n tries to sweep around the room with $s weapon, but fail.", FALSE, ch, 0, 0, TO_ROOM);
+    act("You fail in your attempt to invoke divine wrath upon your foes.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n fails in an attempt to invoke divine wrath upon $s foes.", FALSE, ch, 0, 0, TO_ROOM);
 
-    skill_wait(ch, SKILL_SWEEP, 3);
-
-    return;
+    skill_wait(ch, SKILL_ZEAL, 2);
   }
   else
   {
-    act("You deftly sweep with your weapon.", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n deftly sweeps with $s weapon.", FALSE, ch, 0, 0, TO_ROOM);
+    act("You are empowered by a sense of divine zeal as you tear into your foes.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n is empowered by divine zeal and cleaves through $s foes.", FALSE, ch, 0, 0, TO_ROOM);
 
     for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp)
     {
@@ -1143,7 +1248,7 @@ void do_sweep(CHAR *ch, char *argument, int cmd)
       {
         hit(ch, tmp_victim, TYPE_UNDEFINED);
 
-        skill_wait(tmp_victim, SKILL_SWEEP, 2);
+        skill_wait(tmp_victim, SKILL_ZEAL, 2);
       }
       else if (IS_MORTAL(tmp_victim) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && !GET_OPPONENT(tmp_victim))
       {
@@ -1151,7 +1256,7 @@ void do_sweep(CHAR *ch, char *argument, int cmd)
       }
     }
 
-    skill_wait(ch, SKILL_SWEEP, 4);
+    skill_wait(ch, SKILL_ZEAL, 3);
   }
 }
 
@@ -2313,5 +2418,42 @@ void do_trip(CHAR *ch, char *argument, int cmd) {
     affect_to_char(ch, &af);
 
     send_to_char("You will try to trip your enemies when you circle around them.\n\r", ch);
+  }
+}
+
+
+void do_trusty_steed(CHAR *ch, char *argument, int cmd) {
+  AFF af;
+
+  if (!ch->skills) return;
+
+  if (!check_sc_access(ch, SKILL_TRUSTY_STEED)) {
+    send_to_char("You do not have this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (affected_by_spell(ch, SKILL_TRUSTY_STEED)) {
+    affect_from_char(ch, SKILL_TRUSTY_STEED);
+
+    send_to_char("You will no longer summon your trusty steed to aid you in battle.\n\r", ch);
+
+    return;
+  }
+
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
+    send_to_char("You fail to establish a spirit link with your trusty steed in the astral plane.\n\r", ch);
+  }
+  else {
+    af.type = SKILL_TRUSTY_STEED;
+    af.duration = -1;
+    af.modifier = 0;
+    af.location = 0;
+    af.bitvector = 0;
+    af.bitvector2 = 0;
+
+    affect_to_char(ch, &af);
+
+    send_to_char("You will summon your trusty steed when pummeling or smiting your foes.\n\r", ch);
   }
 }

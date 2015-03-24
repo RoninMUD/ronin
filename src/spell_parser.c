@@ -302,7 +302,7 @@ char *spells[]= {
   "great mana", /*god only*/
   "fartmouth",
   "perceive",
-  "",
+  "pray",
   "increase mana",
   "haste",
   "power word kill",
@@ -385,7 +385,7 @@ char *spells[]= {
   "dark ritual",/*210*/
   "blackmantle",/*211*/
   "divine wind",/*212*/
-  "sweep",/*213*/
+  "zeal",/*213*/
   "impair", /* 214 No longer a command; can be removed. */
   "flank",/*215*/
   "rejuvenation",/*216*/
@@ -394,7 +394,7 @@ char *spells[]= {
   "berserk",/*219*/
   "awareness",/*220*/
   "feint",/*221*/
-  "evade",/*222*/
+  "smite",/*222*/
   "camp",/*223*/
   "luck",/*224*/
   "warchant",/*225*/
@@ -404,7 +404,7 @@ char *spells[]= {
   "trip",/*229*/
   "dirty tricks",/*230*/
   "switch",/*231*/
-  "pray",/*232*/
+  "trusty steed",/*232*/
   "backfist",/*233*/
   "retreat",/*234*/
   "fade",/*235*/

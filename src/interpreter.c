@@ -963,11 +963,12 @@ void assign_command_pointers ( void )
   COMMANDO("backfist" ,CMD_BACKFIST  ,POSITION_FIGHTING  ,do_backfist,30);
   COMMANDO("mantra"   ,CMD_MANTRA    ,POSITION_FIGHTING  ,do_mantra,30);
   COMMANDO("banzai"   ,CMD_BANZAI    ,POSITION_FIGHTING  ,do_banzai,30);
-  COMMANDO("pray"     ,CMD_PRAY      ,POSITION_RESTING   ,do_pray,30);
+  COMMANDO("pray"     ,CMD_PRAY      ,POSITION_RESTING   ,do_pray,40);
+  COMMANDO("trusty-steed",CMD_TRUSTY_STEED,POSITION_FIGHTING,do_trusty_steed,30);
   /*COMMANDO("evade"    ,CMD_EVADE     ,POSITION_FIGHTING  ,do_evade,30);*/
   /*COMMANDO("impair"   ,CMD_IMPAIR    ,POSITION_FIGHTING  ,do_impair,30);*/
   COMMANDO("vehemence",CMD_VEHEMENCE ,POSITION_FIGHTING, do_vehemence, 30);
-  COMMANDO("sweep"    ,CMD_SWEEP     ,POSITION_FIGHTING  ,do_sweep,30);
+  COMMANDO("zeal"     ,CMD_ZEAL      ,POSITION_FIGHTING  ,do_zeal,30);
   COMMANDO("blitz"    ,CMD_BLITZ     ,POSITION_STANDING  ,do_blitz,30);
   COMMANDO("flank"    ,CMD_FLANK     ,POSITION_STANDING  ,do_flank,30);
   COMMANDO("lunge"    ,CMD_LUNGE     ,POSITION_STANDING  ,do_lunge,30);
@@ -977,6 +978,7 @@ void assign_command_pointers ( void )
   COMMANDO("scan"     ,CMD_SCAN      ,POSITION_STANDING  ,do_scan,30);
   COMMANDO("camp"     ,CMD_CAMP      ,POSITION_STANDING  ,do_camp,30);
   COMMANDO("switch"   ,CMD_SWITCH    ,POSITION_FIGHTING  ,do_switch,30);
+  COMMANDO("smite"    ,CMD_SMITE     ,POSITION_FIGHTING  ,do_smite,30);
   COMMANDO("fade"     ,CMD_FADE      ,POSITION_FIGHTING  ,do_fade,30);
   COMMANDO("dirty-tricks",CMD_DIRTY_TRICKS,POSITION_FIGHTING,do_dirty_tricks,30);
   COMMANDO("trip  "   ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);

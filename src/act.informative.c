@@ -795,6 +795,38 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
 
     if (!IS_SET(ch->specials.pflag, PLR_TAGBRF))
     {
+      for (stop = FALSE, aff = i->affected; stop == FALSE && aff; aff = aff->next)
+      {
+        if (aff->type == SPELL_WARCHANT && aff->location == APPLY_HITROLL && aff->modifier < 0)
+        {
+          act("......$n hears the sound of war!", FALSE, i, 0, ch, TO_VICT);
+
+          stop = TRUE;
+        }
+      }
+
+      for (stop = FALSE, aff = i->affected; stop == FALSE && aff; aff = aff->next) {
+        if (aff->type == SPELL_WRATH_OF_GOD && aff->location == APPLY_DAMROLL) {
+          if (aff->modifier <= -50) {
+            act("......$n is being crushed by the wrath of gods!", FALSE, i, 0, ch, TO_VICT);
+          }
+          else if (aff->modifier <= -40) {
+            act("......$n is tormented by a holy force of will!", FALSE, i, 0, ch, TO_VICT);
+          }
+          else if (aff->modifier <= -30) {
+            act("......$n is persecuted by celestial powers!", FALSE, i, 0, ch, TO_VICT);
+          }
+          else if (aff->modifier <= -20) {
+            act("......$n is oppressed by divine intervention.", FALSE, i, 0, ch, TO_VICT);
+          }
+          else {
+            act("......$n suffers from righteous indignation.", FALSE, i, 0, ch, TO_VICT);
+          }
+
+          stop = TRUE;
+        }
+      }
+
       if (affected_by_spell(i, SPELL_DIVINE_INTERVENTION))
       {
         act("......$n is sheltered from death by a divine aura.", FALSE, i, 0, ch, TO_VICT);
@@ -839,13 +871,6 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       {
         act("......$n's sinister presence desecrates the surroundings.", FALSE, i, 0, ch, TO_VICT);
       }
-
-      /*
-      if (affected_by_spell(i, SPELL_IRONSKIN))
-      {
-        act("......$n's skin is as hard and impervious as iron.", FALSE, i, 0, ch, TO_VICT);
-      }
-      */
 
       if (affected_by_spell(i, SPELL_QUICK))
       {
@@ -892,16 +917,6 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
         act("......$n's shadow stretches to the west.", FALSE, i, 0, ch, TO_VICT);
       }
 
-      for (stop = FALSE, aff = i->affected; stop == FALSE && aff; aff = aff->next)
-      {
-        if (aff->type == SPELL_WARCHANT && aff->location == APPLY_HITROLL && aff->modifier < 0)
-        {
-          act("......$n hears the sound of war!", FALSE, i, 0, ch, TO_VICT);
-
-          stop = TRUE;
-        }
-      }
-
       if (affected_by_spell(i, SPELL_BLINDNESS))
       {
         act("......$n stumbles about wildly!", FALSE, i, 0, ch, TO_VICT);
@@ -931,6 +946,13 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       {
         act("......$n is enveloped by a huge ball of flame!", FALSE, i, 0, ch, TO_VICT);
       }
+
+      /*
+      if (affected_by_spell(i, SPELL_IRONSKIN))
+      {
+      act("......$n's skin is as hard and impervious as iron.", FALSE, i, 0, ch, TO_VICT);
+      }
+      */
 
       if (IS_NPC(i))
       {
