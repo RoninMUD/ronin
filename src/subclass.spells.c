@@ -1791,7 +1791,7 @@ void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (victim != ch) {
     act("The power of your faith heals $N's body.", FALSE, ch, 0, victim, TO_CHAR);
     act("The power of $n's faith heals your body.", FALSE, ch, 0, victim, TO_VICT);
-    act("The power of $n's faith heals $N's body.", FALSE, ch, 0, victim, TO_VICT);
+    act("The power of $n's faith heals $N's body.", FALSE, ch, 0, victim, TO_NOTVICT);
   }
   else {
     send_to_char("The power of your faith heals your body.\n\r", ch);
