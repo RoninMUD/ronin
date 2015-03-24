@@ -3965,12 +3965,12 @@ void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
       if (EQ(vict,ind)) extract_obj(unequip_char (vict, ind));
     for (tmp = vict->carrying;tmp;tmp = next) {
       next = tmp->next_content;
-      // updated to unpack corpses which might contain an AQ_ORDER
+      // updated to unpack containers which might contain an AQ_ORDER
       //   and moves AQ_ORDERs to room - no free way to "quit" them
       if(GET_ITEM_TYPE(tmp)==ITEM_AQ_ORDER) {
         obj_from_char(tmp);
         obj_to_room(tmp, CHAR_REAL_ROOM(vict));
-      } else if (IS_CORPSE(tmp)) {
+      } else if (GET_ITEM_TYPE(tmp)==ITEM_CONTAINER) {
         for (tmp_c = tmp->contains; tmp_c; tmp_c = next_c) {
           next_c = tmp_c->next_content;
           obj_from_obj(tmp_c);
