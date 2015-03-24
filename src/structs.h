@@ -349,7 +349,6 @@ struct tagline_data
 
 #define MAX_OBJ_AFFECT 3         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
 #define OFILE_MAX_OBJ_AFFECT 2         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
-#define MAX_OBJ_SPELLS 10         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
 
 struct obj_flag_data
 {
@@ -368,6 +367,7 @@ struct obj_flag_data
   int extra_flags2;   /* More extras */
   int subclass_res;   /* Subclass restrictions */
   int material; /* Made of */
+  int popped;         /* Date stamp when object popped    */
 };
 
 /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
@@ -382,12 +382,6 @@ struct obj_affected_type {
   sh_int modifier;     /* How much it changes by              */
 };
 
-/* Addition for future obj only spells */
-struct obj_spell_type {
-  int type;            /* The type of spell that caused this      */
-  sh_int duration;      /* For how long its effects will last      */
-  struct obj_spell_type *next;
-};
 
 /* ======================== Structure for object ========================= */
 struct obj_data
@@ -402,8 +396,6 @@ struct obj_data
   struct obj_flag_data obj_flags;/* Object information               */
   struct obj_affected_type
       affected[MAX_OBJ_AFFECT];  /* Which abilities in PC to change  */
-  struct obj_spell_type
-      ospell[MAX_OBJ_SPELLS];  /* Which abilities in PC to change  */
 
   char *name;                    /* Title of object :get etc.        */
   char *description ;            /* When in room                     */
@@ -1404,7 +1396,7 @@ struct obj_file_elem_ver2
   byte position;
 };
 
-struct obj_file_elem_ver3 /* Addition of bitvector2 and ospell */
+struct obj_file_elem_ver3 /* Addition of bitvector2  */
 {
   sh_int version;
   sh_int item_number;
@@ -1423,7 +1415,8 @@ struct obj_file_elem_ver3 /* Addition of bitvector2 and ospell */
   long bitvector2;
   int spec_value;
   struct obj_affected_type affected[MAX_OBJ_AFFECT];
-  struct obj_spell_type ospell[MAX_OBJ_SPELLS];
+  int popped;
+  byte unused[116];
   byte position;
 };
 
@@ -1772,7 +1765,6 @@ struct obj_proto
   struct extra_descr_data *ex_description;
 
   struct obj_affected_type affected[MAX_OBJ_AFFECT];
-  struct obj_spell_type ospell[MAX_OBJ_SPELLS];
   char *action_description_nt;
   char *char_wear_desc;          /* What to write when worn */
   char *room_wear_desc;          /* What to write when worn */

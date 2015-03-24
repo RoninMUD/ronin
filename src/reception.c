@@ -683,8 +683,7 @@ void obj_to_store(struct obj_data *obj, FILE *fl, CHAR * ch, char pos, bool incl
 
 /* new obj saves for obj ver3 */
       object.bitvector2  =obj->obj_flags.bitvector2;
-      for(j=0;j<MAX_OBJ_SPELLS;j++)
-        object.ospell[j]=obj->ospell[j];
+      object.popped      =obj->obj_flags.popped;
 /* end new ver3 obj saves */
 
 /* New owner id */
@@ -762,9 +761,8 @@ struct obj_data *store_to_obj_ver3(FILE *fl,CHAR *ch) {
 /* end new obj reads */
 
 /* New ver3 reads */
-    obj->obj_flags.bitvector2  =object.bitvector2;
-    for(i=0;i<MAX_OBJ_SPELLS;i++)
-      obj->ospell[i]  =object.ospell[i];
+    obj->obj_flags.bitvector2   = object.bitvector2;
+    obj->obj_flags.popped       = object.popped;
 
 /* New ownerid field */
     obj->ownerid[0]             =object.ownerid[0];
@@ -837,10 +835,6 @@ struct obj_data *store_to_obj_ver2(FILE *fl,CHAR *ch) {
 
 /* New ver3 reads */
     obj->obj_flags.bitvector2  =0;
-    for(i=0;i<MAX_OBJ_SPELLS;i++) {
-      obj->ospell[i].type = 0;
-      obj->ospell[i].duration = 0;
-    }
 
 /* New ownerid field */
     obj->ownerid[0]             =object.ownerid[0];
@@ -913,10 +907,6 @@ struct obj_data *store_to_obj_ver1(FILE *fl,CHAR *ch) {
 
 /* New ver3 reads */
     obj->obj_flags.bitvector2  =0;
-    for(i=0;i<MAX_OBJ_SPELLS;i++) {
-      obj->ospell[i].type = 0;
-      obj->ospell[i].duration = 0;
-    }
 
     if (obj->obj_flags.type_flag == ITEM_TICKET) {
       if(!adjust_ticket_strings(obj)) return 0;

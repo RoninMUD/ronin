@@ -1,4 +1,4 @@
-/* ************************************************************************
+/*************************************************************************
 *  file: actwiz.c , Implementation of commands.           Part of DIKUMUD *
 *  Usage : Wizard Commands.                                               *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
@@ -2900,9 +2900,9 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
         printf_to_char(ch,"Repop Rate: %d\n\r",obj_proto_table[j->item_number].obj_flags.repop_percent);
      }
 
-     printf_to_char(ch,"Weight: %d, Value: %d, Cost/day: %d, Timer: %d Spec Value: %d\n\r",
+     printf_to_char(ch,"Weight: %d, Value: %d, Cost/day: %d, Timer: %d Spec Value: %d Popped: %d\n\r",
           j->obj_flags.weight,j->obj_flags.cost,
-          j->obj_flags.cost_per_day,  j->obj_flags.timer, j->spec_value);
+          j->obj_flags.cost_per_day,  j->obj_flags.timer, j->spec_value, j->obj_flags.popped);
 
      printf_to_char(ch,"Material Number: %d\n\r",j->obj_flags.material);
 
@@ -3098,13 +3098,6 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
        sprinttype(j->affected[i].location,apply_types,buf2);
        sprintf(buf,"    Affects : %s By %d\n\r", buf2,j->affected[i].modifier);
        send_to_char(buf, ch);
-     }
-     
-     if(j->ospell) {
-       send_to_char("\n\rAffecting Spells:\n\r--------------\n\r", ch);
-       for (oaff = j->ospell; oaff; oaff = oaff->next) {
-         printf_to_char(ch, "Spell #: %d\n\r     Expires in %3d ticks.\n\r",oaff->type,oaff->duration);
-       }
      }
       return;
       }
@@ -6868,10 +6861,8 @@ struct obj_data *dlist_to_obj_ver3(FILE *fl,int fail) {
       obj->affected[i]  =object.affected[i];
 /* end new obj reads */
 
-/* New ver3 reads */
-    obj->obj_flags.bitvector2  =object.bitvector2;
-    for(i=0;i<MAX_OBJ_SPELLS;i++)
-      obj->ospell[i]  =object.ospell[i];
+    obj->obj_flags.bitvector2   = object.bitvector2;
+    obj->obj_flags.popped       = object.popped;
 
 /* New ownerid field */
     obj->ownerid[0]             =object.ownerid[0];
