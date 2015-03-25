@@ -39,18 +39,18 @@ You see some burned trees in the west.
 ~
 0 0 5800
 E
-footprint prints footprints print~
-The footprints seem to be quite small, like children had been playing here.
+thing silvery object ship vessel~
+When you examine the thing closer you realize that it is some kind of ship.
+You wonder what it is doing here. There is some writing in the hull of the
+vessel.
 ~
 E
 writing text~
 It says: HMS TopKnot
 ~
 E
-thing silvery object ship vessel~
-When you examine the thing closer you realize that it is some kind of ship.
-You wonder what it is doing here. There is some writing in the hull of the
-vessel.
+footprint prints footprints print~
+The footprints seem to be quite small, like children had been playing here.
 ~
 S
 #5802
@@ -161,29 +161,29 @@ The door leads to the corridor.
 door~
 1 -1 5803
 E
-machine~
-The machine seems to be badly damaged. All sorts of parts seem to have fallen
-to the floor. It is leaking some kind of black liquid.
-~
-E
-liquid~
-The liquid is black and quite sticky and it tastes really awful.
-~
-E
-rubble parts~
-There are many kinds of parts and rubble on the floor.
-~
-E
-lever~
-This is a small lever.
+buttons~
+These are green square buttons.
 ~
 E
 button~
 This is a red round button.
 ~
 E
-buttons~
-These are green square buttons.
+lever~
+This is a small lever.
+~
+E
+rubble parts~
+There are many kinds of parts and rubble on the floor.
+~
+E
+liquid~
+The liquid is black and quite sticky and it tastes really awful.
+~
+E
+machine~
+The machine seems to be badly damaged. All sorts of parts seem to have fallen
+to the floor. It is leaking some kind of black liquid.
 ~
 S
 #5806
