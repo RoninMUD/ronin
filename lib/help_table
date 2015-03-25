@@ -345,10 +345,12 @@ and in the case of killing a mob, someone else killing it before
 you can.
 
 If a player is not up to doing a regular AUTOQUEST, there is a
-second format for the player to try known as AQCARDS.
+second format for the player to try known as AQCARDS. And as if
+that weren't enough options, there is also something known as
+an AQORDER.
 
-See Also: AQCARDS QCARDS "PLAYER QUEST" "IMMORTAL QUEST"
-"MUD QUEST"
+See Also: AQCARDS AQORDER QCARDS "PLAYER QUEST" "MUD QUEST"
+"IMMORTAL QUEST"
 #
 AQCARDS QCARDS
 
@@ -380,6 +382,66 @@ autoquest cards by casting "c 'locate object'<player name>".
 
 If a player is not up to doing a regular AQCARDS, there is a
 second format for the player to try known as AUTOQUESTS.
+
+See Also: AUTOQUEST AQUEST AUTOQUESTER "QUEST MACHINE"
+"MUD QUEST" "PLAYER QUEST" "IMMORTAL QUEST"
+#
+AQORDER FRANZ
+
+Ronin's Requisition Officer who goes by the name of Franz,
+offers a unique form of autoquest called an aqorder that he
+rewards with quest points.  These quest points can be used to
+buy subclass points, or even stat increases beyond 18.
+
+There are several levels of AQORDER quests, which determine the
+relative difficulty of the order you receive.  There is no time
+limit on the autoquest, but quitting the order (by junking the
+order) will incur a 2 hour penalty that is also cleared after a
+MUD reboot.
+
+In order to acquire an aqorder, you must first locate Franz, who
+generally wanders around Midgaard, but occasionally ventures
+outside of the city.  Once you find him, the appropriate commands
+to request an order are as follows:
+
+AQ ORDER SOLO - This will always give the player an order that
+utilizes low level, easy to acquire items, meant for low level
+and/or solo players. (1 point per object)
+
+AQ ORDER LOW - This will give the player an order that contains
+items from fairly easy areas, more difficult than SOLO orders or
+items with lower load rates, but more aimed at a low-mid level
+multi with moderate gear. (1-2 points per object)
+
+AQ ORDER MID - This will give the player an order that requires
+items found in mid-level and average difficulty areas or items
+from easier areas but with low load rates.  This level is aimed
+at multis with characters in the 45-50 level range that have a
+good amount of quality gear. (2-3 points per object)
+
+AQ ORDER HIGH - This will give the player an order that uses
+items with very low load rates, or from areas that require both
+high levels and good gear, as well as a more intimate knowledge
+of the MUD world.  This is recommended for players that are able
+to contend with the most difficult game content. (3+ points per
+object)
+
+AQ ORDER - This will give the player a random mix of items from
+all tiers of aqorder autoquests.
+
+The AQ Order itself is actually a special container meant to
+hold the items required to complete the aqorder itself.  Only
+the items listed on the order can be put into the order, and
+only items obtained after the order was issued can be put
+inside.  Once all of the required items have been placed in the
+aqorder container, return it to Franz and he will reward you
+based on the difficulty of the items present on the order.
+
+There is also a chance that the quest point reward will be
+increased upon successful turn-in of the aqorder, at the whim
+of Franz.  To quit an order you need only junk the order itself,
+but remember there is a 2 hour penalty before you can request a
+new one; and Franz might give you a hard time about it.
 
 See Also: AUTOQUEST AQUEST AUTOQUESTER "QUEST MACHINE"
 "MUD QUEST" "PLAYER QUEST" "IMMORTAL QUEST"
