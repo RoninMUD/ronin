@@ -982,6 +982,7 @@ void obj_to_vault(struct obj_data *obj, FILE *fl, CHAR * ch,char pos, char *name
 
 /* new obj saves for obj ver3 */
       object.bitvector2  =obj->obj_flags.bitvector2;
+      object.popped      = obj->obj_flags.popped;
 /* end new ver3 obj saves */
 
 /* New owner id */
