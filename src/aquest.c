@@ -1343,7 +1343,10 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
     requester->ver3.id = generate_id();
 
   aqorder = read_object(TEMPLATE_AQORDER, VIRTUAL);
-   
+
+  // cleanup first
+  DESTROY(aqorder->description);
+  DESTROY(aqorder->short_description);
   aqorder->ownerid[0] = requester->ver3.id;   // tag the order with the requester's ID
   sprintf(buf, "An infamous acquisition order, forgotten here by %s.", GET_NAME(requester));
   aqorder->description = str_dup(buf);        // change the long desc to include requester's name
@@ -1392,8 +1395,8 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
     aqorder->ex_description = tmp_descr;
     tmp_descr = NULL;
 
-    sprintf(buf, "Good luck %s, try to do a better job than %s.",
-        GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1 )]);
+    sprintf(buf, "Good luck %s, try to do a better job than %s, it'll be worth %d points if you can.",
+        GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1 )], questvalue);
     do_say(ordergiver, buf, CMD_SAY);
     obj_to_char(aqorder, requester);
     sprintf(buf, "%s gives %s to %s.", GET_SHORT(ordergiver),
@@ -1432,6 +1435,9 @@ int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
     if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
     // redo the short/long desc strings based on Owner
     if (order->ownerid[0] > 0) {
+      // cleanup first
+      DESTROY(order->description);
+      DESTROY(order->short_description);
       sprintf(buf, "An infamous acquisition order, forgotten here by %s.", CAP(idname[order->ownerid[0]].name));
       order->description = str_dup(buf);        // change the long desc to include requester's name
       sprintf(buf, "%s's acquisition order", CAP(idname[order->ownerid[0]].name));

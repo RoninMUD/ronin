@@ -1727,7 +1727,8 @@ void do_examine(struct char_data *ch, char *argument, int cmd) {
 
   if (tmp_object) {
     if ((GET_ITEM_TYPE(tmp_object)==ITEM_DRINKCON) ||
-  (GET_ITEM_TYPE(tmp_object)==ITEM_CONTAINER)) {
+        (GET_ITEM_TYPE(tmp_object)==ITEM_CONTAINER) ||
+        (GET_ITEM_TYPE(tmp_object)==ITEM_AQ_ORDER)) {
       send_to_char("When you look inside, you see:\n\r", ch);
       sprintf(buf,"in %s",argument);
       do_look(ch,buf,15);
