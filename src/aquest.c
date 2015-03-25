@@ -1331,8 +1331,6 @@ char *kendernames[9] = {"Karl","Dieter","Hans","Jurgen","Hilda",
                           "Erwin","Herman","Eva","Marlene"};
                           
 int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
-  time_t seconds = time(NULL);     // current time in seconds since Jan 1, 1970
-  int days = seconds / (60*60*24); // days since Jan 1, 1970 : seconds * minutes * hours = days
   OBJ *aqorder;
   bool assigned[4] = {FALSE, FALSE, FALSE, FALSE};
   char buf[MAX_STRING_LENGTH];
@@ -1352,7 +1350,6 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   aqorder->description = str_dup(buf);        // change the long desc to include requester's name
   sprintf(buf, "%s's acquisition order", GET_NAME(requester));
   aqorder->short_description = str_dup(buf);  // change the short desc to include requester's name
-  aqorder->obj_flags.timer = days;            // set the timer as today's date (for "newness" check)
   aqorder->log = 1;
  
   for (i = 0; i < 4; i++) { 
@@ -1553,7 +1550,8 @@ send it back to Central Processing to be requeued... you %s.",
     //   --- boots and crashes will cancel this, so be it
     obj_from_char(order);
     obj_to_room(order, real_room(CENTRAL_PROCESSING));
-    OBJ_SPEC(order) = AQ_ORDER_QUIT_TIME; // setup "hack" wait timer
+    order->obj_flags.timer = AQ_ORDER_QUIT_TIME; // setup "hack" wait timer
+    SET_BIT(order->obj_flags.extra_flags2, ITEM_ALL_DECAY);
     return TRUE;
     break;
   default:
@@ -1561,29 +1559,6 @@ send it back to Central Processing to be requeued... you %s.",
   }
   return FALSE;
 } // end of aq_order_obj()
-
-int aq_obj_date_popped (OBJ *aqobj, CHAR *ch, int cmd, char *arg) {
-  time_t seconds;     
-  int days; 
-  
-  ch = aqobj->carried_by;
-
-  // to cover our bases here we need to tag: coming out of vaults, 
-  //   characters, loaded by a mob, appears when skinned, loaded by god
-  if (aqobj->obj_flags.timer == 0 &&
-      ((cmd == MSG_OBJ_ENTERING_GAME) ||        // covers coming out of vaults, rent
-      (cmd == MSG_OBJ_WORN) ||                  // covers popping and wearing
-      (cmd == MSG_BEING_REMOVED) ||             // covers already equipped
-      ((cmd == MSG_MOBACT) && IS_MORTAL(ch)) || // covers popping and holding
-      (cmd == MSG_GAVE_OBJ) ||                  // >
-      (cmd == MSG_OBJ_PUT) ||                   // everything else
-      (cmd == MSG_OBJ_DONATED))) {              // >
-    seconds = time(NULL);           // current time in seconds since Jan 1, 1970
-    days = seconds / (60*60*24);    // days since Jan 1, 1970 : seconds * minutes * hours = days
-    aqobj->obj_flags.timer = days;  // set the timer as today's date
-  }  
-  return FALSE;
-} // end of aq_obj_date_popped()
 
 int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *order = NULL;
@@ -1712,10 +1687,10 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
             
             if (V_OBJ(obj) == requirements[i]) {
               // required object found, but is it new enough?
-              if (obj->obj_flags.timer < order->obj_flags.timer) { 
+              if (obj->obj_flags.popped < order->obj_flags.popped) {
                 // object was popped before order received : see aq_obj_date_popped()
                 do_say(collector, "No, no, no - this won't do at all.", CMD_SAY);
-                sprintf(buf, "%s is too old, I need a new one!", CAP(OBJ_SHORT(obj)));
+                sprintf(buf, "%s was popped too long ago, I need a new one!", CAP(OBJ_SHORT(obj)));
                 do_say(collector, buf, CMD_SAY);
                 obj_from_char(order);
                 obj_to_char(order, ch);
@@ -1833,34 +1808,7 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
   return FALSE;
 } // end of aq_order_mob()
 
-int aq_order_central_processing_room (int room, CHAR *ch, int cmd, char *arg) {
-  OBJ *obj, *next_obj;
-  if (cmd == MSG_TICK) {
-    //for each object in the room, if its an aq_order, OBJ_SPEC(order)--;
-    //   if OBJ_SPEC(order) == 0
-    //   "finish processing" - extract it from game, allows new to be picked up
-    if (world[room].contents) {
-      for (obj = world[room].contents; obj; obj = next_obj) {
-        next_obj = obj->next_content;
-        if (V_OBJ(obj) == TEMPLATE_AQORDER) {
-          if (OBJ_SPEC(obj) > 0) {
-            OBJ_SPEC(obj)--;
-          } else {
-            extract_obj(obj);
-          }
-        }
-      }
-    }
-  }
-  return FALSE;
-} // end of aq_order_central_processing_room()
-
 void assign_aquest_special(void) {
-  int i;
-  
-  assign_room( CENTRAL_PROCESSING, aq_order_central_processing_room );
   assign_obj( TEMPLATE_AQORDER, aq_order_obj );
-  for (i = 0; i < NUMELEMS(aq_objs); i++)
-    assign_obj( aq_objs[i][0], aq_obj_date_popped );
   assign_mob( COLLECTOR, aq_order_mob );
 }
