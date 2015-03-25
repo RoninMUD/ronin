@@ -793,6 +793,7 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
     else if(is_abbrev(buf,"affected")) num=11;
     else if(is_abbrev(buf,"owner"))    num=12;
     else if(is_abbrev(buf,"timer"))    num=13;
+    else if(is_abbrev(buf,"popped"))   num=14;
     
     if (is_number(buf2))
       num2 = atoi(buf2);
@@ -915,6 +916,9 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
        break;
      case 13: // timer
        obj->obj_flags.timer = num2;
+       break;
+     case 14: // popped
+       obj->obj_flags.popped = num2;
        break;
      default:
        send_to_char("Wrong! Wrong! Wrong! Type wizhelp sos.\n\r", ch);
