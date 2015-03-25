@@ -433,10 +433,6 @@ void create_obj(CHAR *ch, char *arg1) {
       obj_proto_table[i].affected[loc].location = APPLY_NONE;
       obj_proto_table[i].affected[loc].modifier = 0;
       }
-   for (loc = 0;(loc < MAX_OBJ_SPELLS); loc++) {
-      obj_proto_table[i].ospell[loc].type = 0;
-      obj_proto_table[i].ospell[loc].duration = 0;
-      }
    send_to_char("Object created.\n\r",ch);
    }
   else
@@ -3220,10 +3216,7 @@ Use @@ on same line.  Use '@@@' to remove it.\n\r",ch);
           obj_proto_table[object].affected[loc].location = APPLY_NONE;
           obj_proto_table[object].affected[loc].modifier = 0;
         }
-        for (loc = 0;(loc < MAX_OBJ_SPELLS); loc++) {
-          obj_proto_table[object].ospell[loc].type = 0;
-          obj_proto_table[object].ospell[loc].duration = 0;
-        }
+
         send_to_char("Done.\n\r",ch);
         break;
       default:
@@ -4715,10 +4708,7 @@ void do_oclone(CHAR *ch, char *argument, int cmd) {
       obj_proto_table[i2].affected[i].location = (int)obj_proto_table[i1].affected[i].location;
       obj_proto_table[i2].affected[i].modifier = (int)obj_proto_table[i1].affected[i].modifier;
     }
-    for (i = 0;(i < MAX_OBJ_SPELLS); i++) {
-      obj_proto_table[i2].ospell[i].type = (int)obj_proto_table[i1].ospell[i].type;
-      obj_proto_table[i2].ospell[i].duration = (int)obj_proto_table[i1].ospell[i].duration;
-    }
+
     log_cmd("oclone","  writing test.obj file");
     fl = fopen("test.obj","w");
     write_obj(fl, i2);

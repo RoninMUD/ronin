@@ -1048,13 +1048,13 @@ int red_dragons_wings(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
 	ch = obj->equipped_by;
 	if(!ch) return FALSE;
-	if(cmd == CMD_USE)
+	if(cmd == CMD_USE && obj == EQ(ch,HOLD))
 	{
 		if(CHAR_VIRTUAL_ROOM(ch) != PLATEAU_ROOM) return FALSE;
 		one_argument(arg, buf);
 		if(strncmp(buf, "wings", 5)) return FALSE;
 
-		act("You strecth out $p and take off through the hole in the ceiling.",0,ch,obj,0, TO_CHAR);
+		act("You stretch out $p and take off through the hole in the ceiling.",0,ch,obj,0, TO_CHAR);
 		act("$n stretches out $p and takes off through the hole in the ceiling.\n\r",0,ch,obj,0, TO_ROOM);
 
 		for(ch2 = world[real_room(PLATEAU_ROOM)].people; ch2; ch2 = next_char)
@@ -1068,9 +1068,9 @@ int red_dragons_wings(OBJ *obj, CHAR *ch, int cmd, char *arg)
 			do_look(ch2, "", CMD_LOOK);
 		}
 
-		send_to_char("\n\r\n\rHaving flown up to the volcano ledge, the heavy wings falls out\n\r", ch);
-		send_to_char("of your reach and fall into the volcano crater.\n\r", ch);
-		extract_obj(unequip_char(ch, WEAR_ARMS));
+		send_to_char("\n\r\n\rHaving flown up to the volcano ledge, the heavy wings fall out\n\r", ch);
+		send_to_char("of your reach and tumble into the volcano crater.\n\r", ch);
+		extract_obj(unequip_char(ch, HOLD));
 		return TRUE;
 	}
 	return FALSE;

@@ -779,7 +779,8 @@ void spell_wall_thorns(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if ((tmp = get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch))))
   {
-    send_to_char("There is already a wall of thorns here.\n\r", ch);
+    send_to_room("The thick wall of brambles recedes, allowing passage to the surrounding world.\n\r", CHAR_REAL_ROOM(ch));
+    extract_obj(tmp);
     return;
   }
 
@@ -1572,13 +1573,12 @@ void spell_disrupt_sanct(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void cast_wrath_of_god(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_wrath_of_god(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
-      if (victim)
+      if (victim) {
         spell_wrath_of_god(level, ch, victim, 0);
+      }
       break;
     default:
       log_f("Wrong type called in wrath of god!");
@@ -1586,34 +1586,60 @@ void cast_wrath_of_god(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim,
   }
 }
 
-void spell_wrath_of_god(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  extern void check_equipment(CHAR *ch);
+void spell_wrath_of_god(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  AFF af;
+  AFF *aff = NULL;
+  int hitroll_modifier = 0, damroll_modifier = 0;
 
-  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
+
     return;
   }
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  if (IS_GOOD(victim)) GET_ALIGNMENT(ch) -= 200;
-  else if (IS_NEUTRAL(victim)) GET_ALIGNMENT(ch) -= 100;
+  damage(ch, victim, 600, SPELL_WRATH_OF_GOD, DAM_MAGICAL);
 
-  check_equipment(ch);
+  if (affected_by_spell(victim, SPELL_WRATH_OF_GOD)) {
+    for (aff = victim->affected; aff; aff = aff->next)
+    {
+      if (aff->type == SPELL_WRATH_OF_GOD)
+      {
+        if (aff->location == APPLY_HITROLL) {
+          hitroll_modifier = MAX(aff->modifier - 1, -5);
+        }
+        else if (aff->location == APPLY_DAMROLL) {
+          damroll_modifier = MAX(aff->modifier - 10, -50);
+        }
+      }
+    }
+  }
+  else {
+    hitroll_modifier = -1;
+    damroll_modifier = -10;
+  }
 
-  damage(ch, victim, 800, SPELL_WRATH_OF_GOD, DAM_MAGICAL);
+  affect_from_char(victim, SPELL_WRATH_OF_GOD);
+
+  af.type       = SPELL_WRATH_OF_GOD;
+  af.duration   = 2;
+  af.modifier   = hitroll_modifier;
+  af.location   = APPLY_HITROLL;
+  af.bitvector  = AFF_NONE;
+  af.bitvector2 = AFF_NONE;
+  affect_to_char(victim, &af);
+  af.modifier   = damroll_modifier;
+  af.location   = APPLY_DAMROLL;
+  affect_to_char(victim, &af);
 }
 
-void cast_focus(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_focus(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_focus(level, ch, 0, 0);
       break;
@@ -1623,12 +1649,10 @@ void cast_focus(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *t
   }
 }
 
-void spell_focus(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
+void spell_focus(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   AFF af;
 
-  if (!affected_by_spell(ch, SPELL_FOCUS))
-  {
+  if (!affected_by_spell(ch, SPELL_FOCUS)) {
     send_to_char("You focus your thoughts.\n\r", ch);
 
     af.type       = SPELL_FOCUS;
@@ -1638,19 +1662,18 @@ void spell_focus(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       af.duration = 10;
     af.modifier   = 0;
     af.location   = APPLY_NONE;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
+    af.bitvector  = AFF_NONE;
+    af.bitvector2 = AFF_NONE;
     affect_to_char(ch, &af);
   }
 }
 
-void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
-      if (victim)
+      if (victim) {
         spell_power_of_devotion(level, ch, victim, 0);
+      }
       break;
     default:
       log_f("Wrong type called in power of devotion!");
@@ -1658,38 +1681,48 @@ void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *vi
   }
 }
 
-void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
+void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   AFF af;
 
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && victim != ch)
-  {
-    send_to_char("You cannot cast this spell on another player.\n\r", ch);
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && victim != ch) {
+    send_to_char("Things are too chaotic to cast this spell on another player.\n\r", ch);
+
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_POWER_OF_DEVOTION) &&
-      !affected_by_spell(victim, SPELL_SANCTUARY) &&
-      !IS_AFFECTED(victim, AFF_SANCTUARY))
-  {
-    send_to_char("You start glowing.\n\r", victim);
-    act("$n is surrounded by a bright white aura.", TRUE, victim, 0, 0, TO_ROOM);
+  if (!affected_by_spell(victim, SPELL_POWER_OF_DEVOTION)) {
+    send_to_char("You are enveloped in a bright white aura.\n\r", victim);
+    act("$n is enveloped in a bright white aura.", TRUE, victim, 0, 0, TO_ROOM);
 
     af.type       = SPELL_SANCTUARY;
     if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = (level / 8);
+      af.duration = level / 8;
     else
-      af.duration = (level / 4);
+      af.duration = level / 4;
     af.modifier   = 0;
     af.location   = APPLY_NONE;
     af.bitvector  = AFF_SANCTUARY;
-    af.bitvector2 = 0;
+    af.bitvector2 = AFF_NONE;
+
+    if (!affected_by_spell(victim, SPELL_SANCTUARY) &&
+        !IS_AFFECTED(victim, AFF_SANCTUARY)) {
     affect_to_char(victim, &af);
+    }
 
     af.type      = SPELL_POWER_OF_DEVOTION;
     af.modifier  = -15;
     af.location  = APPLY_AC;
-    af.bitvector = 0;
+    af.bitvector  = AFF_NONE;
+    affect_to_char(victim, &af);
+
+    af.modifier   = 3;
+    af.location   = APPLY_DAMROLL;
+    affect_to_char(victim, &af);
+    af.modifier   = 25;
+    af.location   = APPLY_HP_REGEN;
+    affect_to_char(victim, &af);
+    af.modifier   = 5;
+    af.location   = APPLY_MANA_REGEN;
     affect_to_char(victim, &af);
 
     af.modifier  = -1;
@@ -1706,13 +1739,12 @@ void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void cast_power_of_faith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_power_of_faith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
-      if (victim)
+      if (victim) {
         spell_power_of_faith(level, ch, victim, NULL);
+      }
       break;
     default:
       log_f("Wrong type called in power of faith!");
@@ -1720,24 +1752,23 @@ void cast_power_of_faith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victi
   }
 }
 
-void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
+void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int heal_max = 0;
   int mana_max = 0;
   int heal = 0;
   int mana = 0;
 
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && victim != ch)
-  {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && victim != ch) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
+
     return;
   }
   
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
       ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
+
     return;
   }
 
@@ -1746,8 +1777,7 @@ void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   mana_max = MIN(GET_MANA(ch), 70);
   mana_max = MAX(mana_max, 0);
 
-  while ((heal < heal_max) && (mana < mana_max))
-  {
+  while ((heal < heal_max) && (mana < mana_max)) {
     heal += 15;
     mana += 1;
   }
@@ -1755,17 +1785,15 @@ void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   heal = MIN(heal, 1050);
   heal = MIN(GET_MAX_HIT(victim), heal + 50);
 
-  //GET_HIT(victim) += heal;
   magic_heal(victim, SPELL_POWER_OF_FAITH, heal, FALSE);
   GET_MANA(ch) -= mana;
 
-  if (victim != ch)
-  {
+  if (victim != ch) {
     act("The power of your faith heals $N's body.", FALSE, ch, 0, victim, TO_CHAR);
     act("The power of $n's faith heals your body.", FALSE, ch, 0, victim, TO_VICT);
+    act("The power of $n's faith heals $N's body.", FALSE, ch, 0, victim, TO_NOTVICT);
   }
-  else
-  {
+  else {
     send_to_char("The power of your faith heals your body.\n\r", ch);
   }
 

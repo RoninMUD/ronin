@@ -153,13 +153,11 @@ void intialize_lottery(void) {
           obj->affected[j].location = (int)elem.obj_elem.affected[j].location;
           obj->affected[j].modifier = (int)elem.obj_elem.affected[j].modifier;
         }
-        
+
         /* new obj saves for obj ver3 */
         obj->obj_flags.bitvector2   = elem.obj_elem.bitvector2;
-        for(j=0;j<MAX_OBJ_SPELLS;j++)
-          obj->ospell[j] = elem.obj_elem.ospell[j];
         /* end new ver3 obj saves */
-        
+
       } else {
         log_f("Unknown object in lottery.");
         continue;
@@ -226,8 +224,6 @@ void save_lottery(void) {
 
 /* new obj saves for obj ver3 */
       elem.obj_elem.bitvector2  = l_mach.lotto[i].obj->obj_flags.bitvector2;
-      for(j=0;j<MAX_OBJ_SPELLS;j++)
-        elem.obj_elem.ospell[j]=l_mach.lotto[i].obj->ospell[j];
 /* end new ver3 obj saves */
 
     elem.obj_elem.ownerid[0] = 0;

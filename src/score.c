@@ -14,7 +14,7 @@ int calc_bhd(CHAR *ch)
 
   if (GET_CLASS(ch) == CLASS_NINJA)
   {
-    if (check_subclass(ch, SC_RONIN, 4))
+    if (check_subclass(ch, SC_RONIN, 1))
       damage = (4 * (1 + 9)) / 2;
     else if (GET_LEVEL(ch) > 27)
       damage = (5 * (1 + 4)) / 2;

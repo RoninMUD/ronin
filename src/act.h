@@ -46,7 +46,7 @@ void do_throatstrike(CHAR *ch, char *argument, int cmd);
 /*void do_execute(CHAR *ch, char *argument, int cmd);*/
 void do_defend(CHAR *ch, char *argument, int cmd);
 void do_hostile(CHAR *ch, char *argument, int cmd);
-void do_sweep(CHAR *ch, char *argument, int cmd);
+void do_zeal(CHAR *ch, char *argument, int cmd);
 /*void do_impair(CHAR *ch, char *argument, int cmd);*/
 void do_vehemence(CHAR *ch, char *argument, int cmd);
 void do_meditate(CHAR *ch, char *argument, int cmd);
@@ -57,6 +57,7 @@ void do_backfist(CHAR *ch, char *argument, int cmd);
 void do_mantra(CHAR *ch, char *argument, int cmd);
 void do_banzai(CHAR *ch, char *argument, int cmd);
 void do_pray(CHAR *ch, char *argument, int cmd);
+void do_trusty_steed(CHAR *ch, char *argument, int cmd);
 /*void do_bandage(CHAR *ch, char *argument, int cmd);*/
 /*void do_evade(CHAR *ch, char *argument, int cmd);*/
 void do_trip(CHAR *ch, char *argument, int cmd);
@@ -67,6 +68,7 @@ void do_camp(CHAR *ch, char *argument, int cmd);
 void do_blitz(CHAR *ch, char *argument, int cmd);
 void do_lunge(CHAR *ch, char *argument, int cmd);
 void do_switch(CHAR *ch, char *argument, int cmd);
+void do_smite(CHAR *ch, char *argument, int cmd);
 void do_fade(CHAR *ch, char *argument, int cmd);
 void do_flank(CHAR *ch, char *argument, int cmd);
 void do_assassinate(CHAR *ch, char *argument, int cmd);

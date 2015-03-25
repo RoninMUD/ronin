@@ -96,36 +96,36 @@ extern int TOKENCOUNT;
 int distribute_token(void);
 
 int check_sc_song_access(CHAR *ch, int s) {
-  if(s<=16) return TRUE;
+  if(s<=17) return TRUE;
   if(GET_LEVEL(ch)>=LEVEL_ETE) return TRUE;
   switch(s) {
-    case 17: /* song of remove poison*/
+    case 18: /* song of remove poison*/
       if(check_subclass(ch,SC_CHANTER,1)) return TRUE;
       break;
-    case 18: /* rally song*/
+    case 19: /* rally song*/
       if(check_subclass(ch,SC_BLADESINGER,1)) return TRUE;
       break;
-    case 19: /* warchant */
+    case 20: /* warchant */
       if(check_subclass(ch,SC_CHANTER,2)) return TRUE;
       break;
-    case 20: /* song of luck */
+    case 21: /* song of luck */
       if(check_subclass(ch,SC_CHANTER,3)) return TRUE;
       break;
-    case 21: /* rejuvenation song*/
+    case 22: /* rejuvenation song*/
       /* rejuvenation is now a class song */
       return TRUE;
       /*if(check_subclass(ch,SC_BLADESINGER,3)) return TRUE;*/
       break;
-    case 22: /* aid */
+    case 23: /* aid */
       if(check_subclass(ch,SC_CHANTER,4)) return TRUE;
       break;
-    case 23: /* protection evil good */
+    case 24: /* protection evil good */
       if(check_subclass(ch,SC_BLADESINGER,4)) return TRUE;
       break;
-    case 24: /* thunderball */
+    case 25: /* thunderball */
       if(check_subclass(ch,SC_BLADESINGER,5)) return TRUE;
       break;
-    case 25: /* sphere */
+    case 26: /* sphere */
       if(check_subclass(ch,SC_CHANTER,5)) return TRUE;
       break;
   }
@@ -159,7 +159,7 @@ int check_sc_access(CHAR *ch, int skill)
       break;
     case SPELL_MIGHT:
       if (check_subclass(ch, SC_TEMPLAR, 2)) return TRUE;
-      if (check_subclass(ch, SC_CAVALIER, 2)) return TRUE;
+      if (check_subclass(ch, SC_CAVALIER, 1)) return TRUE;
       break;
     case SPELL_SANCTIFY:
       if (check_subclass(ch, SC_TEMPLAR, 3)) return TRUE;
@@ -203,6 +203,7 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_BLADESINGER, 2)) return TRUE;
       break;
     case SKILL_CAMP:
+      if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 35)) return TRUE;
       if (check_subclass(ch, SC_TRAPPER, 2)) return TRUE;
       break;
     case SKILL_BATTER:
@@ -216,12 +217,12 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_WARLORD, 2)) return TRUE;
       break;
     case SKILL_PROTECT:
-      if (check_subclass(ch, SC_CAVALIER, 3)) return TRUE;
+      if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
       if (check_subclass(ch, SC_GLADIATOR, 1)) return TRUE;
       if (check_subclass(ch, SC_RANGER, 2)) return TRUE;
       break;
-    case SKILL_SWEEP: /* !PALADIN! Give to paladin subclass */
-      if (check_subclass(ch, SC_RANGER, 3)) return TRUE;
+    case SKILL_ZEAL:
+      if (check_subclass(ch, SC_CRUSADER, 4)) return TRUE;
       break;
     case SKILL_BERSERK:
       if (check_subclass(ch, SC_RANGER, 4)) return TRUE;
@@ -252,9 +253,11 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_TRIP:
       if (check_subclass(ch, SC_ROGUE, 4)) return TRUE;
       break;
-    case SKILL_SWITCH: /* !PALADIN! */
+    case SKILL_SWITCH:
       if (check_subclass(ch, SC_GLADIATOR, 2)) return TRUE;
-      if (check_subclass(ch, SC_CRUSADER, 3)) return TRUE;
+      break;
+    case SKILL_SMITE:
+      if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
       break;
     case SKILL_FLANK:
       if (check_subclass(ch, SC_GLADIATOR, 3)) return TRUE;
@@ -299,7 +302,7 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_RONIN, 2)) return TRUE;
       break;
     case SPELL_BLUR:
-      if (check_subclass(ch, SC_RONIN, 3)) return TRUE;
+      if (check_subclass(ch, SC_RONIN, 4)) return TRUE;
       break;
     case SKILL_BANZAI:
       if (check_subclass(ch, SC_RONIN, 5)) return TRUE;
@@ -319,20 +322,20 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_TRANQUILITY:
       if (check_subclass(ch, SC_MYSTIC, 5)) return TRUE;
       break;
-    case SKILL_PRAY:
+    case SPELL_RIGHTEOUSNESS:
       if (check_subclass(ch, SC_CRUSADER, 1)) return TRUE;
       break;
-    case SPELL_RIGHTEOUSNESS:
-      if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
-      break;
     case SPELL_FOCUS:
-      if (check_subclass(ch, SC_CRUSADER, 4)) return TRUE;
+      if (check_subclass(ch, SC_CRUSADER, 3)) return TRUE;
       break;
     case SPELL_POWER_OF_FAITH:
       if (check_subclass(ch, SC_CRUSADER, 5)) return TRUE;
       break;
+    case SKILL_TRUSTY_STEED:
+      if (check_subclass(ch, SC_CAVALIER, 2)) return TRUE;
+      break;
     case SPELL_WRATH_OF_GOD:
-      if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
+      if (check_subclass(ch, SC_CAVALIER, 3)) return TRUE;
       break;
     case SPELL_POWER_OF_DEVOTION:
       if (check_subclass(ch, SC_CAVALIER, 5)) return TRUE;
@@ -366,6 +369,9 @@ int check_sc_access(CHAR *ch, int skill)
       break;
     case SPELL_SHADOW_WRAITH:
       if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
+      break;
+    case SPELL_REJUVENATION:
+      return TRUE;
       break;
   }
 
@@ -865,11 +871,68 @@ void initialize_token_mob() {
   return;
 }
 
+static int token_mob_target_room() {
+  int goto_room = 0;
+
+#ifndef TEST_SITE
+
+  int zone = 0;
+
+#endif
+
+  while(goto_room==0) {
+    goto_room=number(1,top_of_world);
+
+#ifndef TEST_SITE
+
+    zone=inzone(world[goto_room].number);
+
+    if(zone==275 ||
+       zone==300 ||
+       zone==39  ||
+       zone==36  ||
+       zone==35  ||
+       zone==30  ||
+       zone==31  ||
+       zone==58  ||
+       zone==0   ||
+       zone==12  ||
+       zone==253 ||
+       zone==254 ||
+       zone==255 ||
+       zone==51  ||
+       zone==55  ||
+       zone==59  ||
+       zone==285 ||
+       zone==286 ||
+       zone==287 ||
+       zone==261 ||
+       zone==260 ||
+       zone==278 ||
+       zone==66  ||
+       zone==10  ||
+       zone==262 ||
+       IS_SET(world[goto_room].room_flags, SAFE) ||
+       IS_SET(world[goto_room].room_flags, PRIVATE) ||
+       IS_SET(world[goto_room].room_flags, DEATH) ||
+       IS_SET(world[goto_room].room_flags, HAZARD))
+      goto_room=0;
+
+    if(number(1,100)>zone_rating(zone)) /* zone rating check */
+      goto_room=0;
+
+#endif
+
+  }
+
+  return goto_room;
+}
+
 void check_token_mob() {
 #ifndef TEST_SITE
   CHAR *mob;
   OBJ *obj;
-  int goto_room=0,zone;
+  int goto_room=0;
   if(CHAOSMODE) return;
   if(token_mob_time>0) token_mob_time--;
   if(token_mob_time<=0) {
@@ -877,47 +940,12 @@ void check_token_mob() {
     if(mob_proto_table[real_mobile(TOKEN_MOB)].number>0) return;
     if(!(mob=read_mobile(TOKEN_MOB,VIRTUAL))) return;
     if(!(obj=read_object(5,VIRTUAL))) return;
-    while(goto_room==0) {
-      goto_room=number(1,top_of_world);
-      zone=inzone(world[goto_room].number);
 
-      if(zone==275 ||
-         zone==300 ||
-         zone==39  ||
-         zone==36  ||
-         zone==35  ||
-         zone==30  ||
-         zone==31  ||
-         zone==58  ||
-         zone==0   ||
-         zone==12  ||
-         zone==253 ||
-         zone==254 ||
-         zone==255 ||
-         zone==51  ||
-         zone==55  ||
-         zone==59  ||
-         zone==285 ||
-         zone==286 ||
-         zone==287 ||
-         zone==261 ||
-         zone==260 ||
-         zone==278 ||
-         zone==66  ||
-         zone==10  ||
-         zone==262 ||
-         IS_SET(world[goto_room].room_flags, SAFE) ||
-         IS_SET(world[goto_room].room_flags, PRIVATE) ||
-         IS_SET(world[goto_room].room_flags, DEATH) ||
-         IS_SET(world[goto_room].room_flags, HAZARD))
-        goto_room=0;
-
-      if(number(1,100)>zone_rating(zone)) /* zone rating check */
-        goto_room=0;
-    }
+    goto_room = token_mob_target_room();
     char_to_room(mob,goto_room);
     obj_to_char(obj,mob);
     log_f("SUBLOG: Token mob placed in room %d.",world[goto_room].number);
+
     switch(number(0,3)) {
       case 1:
         do_yell(mob,"Death to all that oppose me!",CMD_YELL);
@@ -926,8 +954,8 @@ void check_token_mob() {
         do_yell(mob,"I have returned!",CMD_YELL);
         break;
       case 3:
-          do_yell(mob, "Yo, whassup?!", CMD_YELL);
-          break;
+        do_yell(mob, "Yo, whassup?!", CMD_YELL);
+        break;
       default:
         do_yell(mob,"Death to you all!",CMD_YELL);
         break;
@@ -942,7 +970,7 @@ int do_roomyell(CHAR* mob)
   char buf[MSL];
 
   /* yell something about the room name */
-  switch(number(8,19)) {
+  switch(number(8,21)) {
     case 8:
       sprintf(buf,"Come to %s, I want to spill your blood.",world[CHAR_REAL_ROOM(mob)].name);break;
     case 9:
@@ -972,6 +1000,7 @@ int do_roomyell(CHAR* mob)
     default:
       sprintf(buf,"Why am I at %s and why am I in this handbasket?", world[CHAR_REAL_ROOM(mob)].name);break;
   }
+
   do_yell(mob,buf,CMD_YELL);
   return FALSE;
 }
@@ -995,9 +1024,9 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
     write_zone_rating();
     if(!ch || ch == mob) return FALSE;
     if (IS_NPC(ch))
-       sprintf(buf,"AHHHHHHHH, I curse you %s!",GET_SHORT(ch));
+      sprintf(buf,"AHHHHHHHH, I curse you %s!",GET_SHORT(ch));
     else
-       sprintf(buf,"AHHHHHHHH, I curse you %s!",GET_NAME(ch));
+      sprintf(buf,"AHHHHHHHH, I curse you %s!",GET_NAME(ch));
     do_yell(mob,buf,CMD_YELL);
     spell_curse(GET_LEVEL(mob),mob,ch,0);
     return FALSE;
@@ -1006,44 +1035,30 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
   if(cmd==MSG_TICK) { /* Beam away if still alive at 15 ticks */
     mob->specials.timer++;
     if (mob->specials.timer == 1)
-        do_roomyell(mob);
+      do_roomyell(mob);
 
     if(mob->specials.timer==8) {
       zone=inzone(CHAR_VIRTUAL_ROOM(mob));
       zone_rate(zone,1);
     }
+
     if(mob->specials.timer>=15 && !mob->specials.fighting) {
       /* if morts in the zone, don't beam */
       if(count_mortals_zone(mob,TRUE)) return FALSE;
-      while(goto_room==0) {
-        goto_room=number(1,top_of_world);
-        zone=inzone(world[goto_room].number);
-#ifndef TEST_SITE
-        if(zone==275 || zone==300 || zone==39 || zone==36 || zone==35 ||
-           zone==30 || zone==31 || zone==58 || zone==0 || zone==2 ||
-           zone==3 || zone==4 || zone==12 || zone==253 || zone==254 ||
-           zone==255 || zone==51 || zone==55 || zone==59 || zone==285 ||
-           zone==286 || zone==287 || zone==261 || zone==260 || zone==278 || zone==262 ||
-           IS_SET(world[goto_room].room_flags, SAFE) ||
-           IS_SET(world[goto_room].room_flags, PRIVATE) ||
-           IS_SET(world[goto_room].room_flags, DEATH) ||
-           IS_SET(world[goto_room].room_flags, HAZARD))
-          goto_room=0;
-        if(number(1,100)>zone_rating(zone)) /* zone rating check */
-          goto_room=0;
-#endif
+
+      goto_room = token_mob_target_room();
+
+      switch (number(1,4)) {
+        case 1:
+          do_yell(mob,"I don't like this place, I'm moving!",CMD_YELL); break;
+        case 2:
+          do_yell(mob,"Time to find some new real estate!", CMD_YELL); break;
+        case 3:
+          do_yell(mob, "I'm still looking for that elusive mudder!", CMD_YELL); break;
+        case 4:
+          do_yell(mob, "Well, if no one's here, I'm moving on!", CMD_YELL); break;
       }
-      switch (number(1,4))
-      {
-         case 1:
-            do_yell(mob,"I don't like this place, I'm moving!",CMD_YELL);break;
-         case 2:
-            do_yell(mob,"Time to find some new real estate!", CMD_YELL);break;
-         case 3:
-            do_yell(mob, "I'm still looking for that elusive mudder!", CMD_YELL);break;
-         case 4:
-            do_yell(mob, "Well, if no one's here, I'm moving on!", CMD_YELL);break;
-      }
+
       act("$n disappears in a puff of smoke.",0,mob,0,0,TO_ROOM);
       zone=inzone(CHAR_VIRTUAL_ROOM(mob));
       zone_rate(zone,2);

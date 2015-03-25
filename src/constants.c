@@ -216,7 +216,7 @@ const char *spell_wear_off_msg[] = {
   "!great mana!",
   "You finally get your hands on some mouthwash!",
   "Your depth of perception diminishes.",/*perceive*/
-  "! !",
+  "You stop praying.",
   "!increase mana!",
   "The speed of your movements slows down to normal.",   /* Quack - Feb 96 */
   "!power word kill!",
@@ -293,7 +293,7 @@ const char *spell_wear_off_msg[] = {
   "Your sinister presence diminishes.",/*210*/
   "Your mantle of darkness fades away.",/*211*/
   "!divine wind!",/*212*/
-  "!sweep!",/*213*/
+  "!zeal!",/*213*/
   "!impair!",/*214*/
   "!flank!",/*215*/
   "!rejuvenation!",/*216*/
@@ -302,7 +302,7 @@ const char *spell_wear_off_msg[] = {
   "!berserk!",/*219*/
   "!awareness!",/*220*/
   "!feint!",/*221*/
-  "!evade!",/*222*/
+  "!smite!",/*222*/
   "You break camp.",/*223*/
   "You don't feel as lucky.",/*224*/
   "You don't feel as safe.",/*225*/
@@ -312,7 +312,7 @@ const char *spell_wear_off_msg[] = {
   "!trip!",/*229*/
   "!dirty tricks!",/*230*/
   "!switch!",/*231*/
-  "You stop praying.",/*232*/
+  "!trusty steed!",/*232*/
   "!backfist!",/*233*/
   "!retreat!",/*234*/
   "You seem more visible.",/*235*/
@@ -322,7 +322,7 @@ const char *spell_wear_off_msg[] = {
   "Your sense of righteousness disappears.",/*239*/
   "!protect!",/*240*/
   "!wrath of ancients!",/*241*/
-  "", /*242*/
+  "!victimize!", /*242*/
   "You feel less focused.",/*243*/
   "!sanctify!",/*244*/
   "!blitz!",/*245*/
@@ -2731,7 +2731,7 @@ char *nomad_skills[] = {
   "scan",
   "awareness",
   "camp",
-  "sweep",
+  "zeal", /* Used to be Sweep */
   "defend",
   "batter",
   "berserk",
@@ -2750,10 +2750,11 @@ char *pal_skills[] = {
   "spin",
   "pummel",
   "parry",
-  "meditate",
   "pray",
-  "switch",
+  "trusty steed",
+  "smite",
   "protect",
+  "zeal",
   "\n"
 };
 
@@ -2807,6 +2808,7 @@ char *bard_skills[] = {
   "dodge",
   "peek",
   "backflip",
+  "camp",
   "blitz",
   "\n"
 };
