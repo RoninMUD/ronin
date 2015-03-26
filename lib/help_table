@@ -7550,7 +7550,7 @@ additional 2 damroll.
 
 See Also: SUBCLASSES CAVALIER TEMPLAR
 #
-TRUSTY STEED
+"TRUSTY STEED"
 
 Subclass Cavalier: Level 2 (Paladin)
 
@@ -8307,7 +8307,7 @@ This spell will also enhance the Commando's damage by 5.
 Class: Thief
 
 This skill gives the thief a chance for an extra attack during circle.  
-A successful twist can do upwards of 200 extra damage to the target.
+A successful twist will do 250 extra damage to the target.
 
 See Also : CIRCLE
 #
