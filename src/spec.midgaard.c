@@ -1771,7 +1771,7 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
         if (temp_obj == vault_obj) continue;
         if (alldot && !isname(allbuf, OBJ_NAME(temp_obj))) continue;
 
-        if (!IS_RENTABLE(temp_obj))
+        if (!IS_RENTABLE(temp_obj) || (GET_ITEM_TYPE(temp_obj) == ITEM_AQ_ORDER))
         {
           act("$n tells you 'You can't store $p in a vault.'", FALSE, vault_guard, temp_obj, ch, TO_VICT);
 
@@ -2877,7 +2877,8 @@ int total_cost_of_package(struct obj_data *obj) {
   struct obj_data *tmp;
   if(obj) {
     for(tmp = obj->contains;tmp;tmp=tmp->next_content) {
-      if((ITEM_SC_TOKEN==tmp->obj_flags.type_flag || IS_RENTABLE(tmp)) && cost !=-1) {
+      if((ITEM_SC_TOKEN==tmp->obj_flags.type_flag || IS_RENTABLE(tmp)) && (cost != -1) &&
+        (tmp->obj_flags.type_flag != ITEM_AQ_ORDER)) {
         if(total_cost_of_package(tmp)!=-1 && cost!=-1)
           cost += total_cost_of_package(tmp);
         else
