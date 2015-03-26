@@ -595,8 +595,6 @@ void obj_to_corpsefile(struct obj_data *obj, FILE *fl) {
 
 /* new obj saves for obj ver3 */
       object.bitvector2  =obj->obj_flags.bitvector2;
-      for(j=0;j<MAX_OBJ_SPELLS;j++)
-        object.ospell[j]=obj->ospell[j];
 /* end new ver3 obj saves */
 
 /* New owner id */

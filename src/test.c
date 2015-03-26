@@ -27,7 +27,6 @@ extern struct spell_info_type spell_info[MAX_SPL_LIST];
 
 
 void main() {
-  int mynum;
-  mynum = (number(0,3));
-  printf("%d\n",mynum);
+  printf("obj_file_elem_ver3: %d\n", sizeof(struct obj_file_elem_ver3));
+
 }

@@ -195,10 +195,8 @@ $State: Exp $
 #define SPELL_GREAT_MANA            122
 #define SMELL_FARTMOUTH             123
 #define SPELL_PERCEIVE              124
-/*
-125 free
-*/
-/* 126 increase mana */
+#define SKILL_PRAY                  125
+/* 126 Used to be Increase Mana */
 #define SPELL_HASTE                 127 /*  Quack - Feb 96 */
 #define SPELL_PW_KILL               128
 #define SPELL_DISPEL_MAGIC          129
@@ -290,7 +288,7 @@ $State: Exp $
 #define SKILL_FADE                  235
 #define SKILL_RETREAT               234
 #define SKILL_BACKFIST              233
-#define SKILL_PRAY                  232
+#define SKILL_TRUSTY_STEED          232 /* Used to be Pray */
 #define SKILL_SWITCH                231
 #define SKILL_DIRTY_TRICKS          230
 #define SKILL_TRIP                  229
@@ -300,7 +298,7 @@ $State: Exp $
 #define SPELL_WARCHANT              225
 #define SPELL_LUCK                  224
 #define SKILL_CAMP                  223
-/* 222 Used to be Evade */
+#define SKILL_SMITE                 222 /* Used to be Evade */
 #define SKILL_FEINT                 221
 #define SKILL_AWARENESS             220
 #define SKILL_BERSERK               219
@@ -309,7 +307,7 @@ $State: Exp $
 #define SPELL_REJUVENATION          216
 #define SKILL_FLANK                 215
 #define SKILL_IMPAIR                214
-#define SKILL_SWEEP                 213
+#define SKILL_ZEAL                  213 /* Used to be Sweep */
 #define SPELL_DIVINE_WIND           212
 #define SPELL_BLACKMANTLE           211
 #define SPELL_DARK_RITUAL           210

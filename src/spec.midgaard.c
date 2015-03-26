@@ -772,6 +772,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       {
         skill = old_search_block(pal_skills[index], 0, strlen(pal_skills[index]), spells, TRUE);
       }
+
+      if ((skill == SKILL_PRAY) && (GET_LEVEL(ch) < 40))
+      {
+        index = -2;
+      }
       break;
 
     case CLASS_ANTI_PALADIN:
@@ -977,8 +982,7 @@ void obj_to_vault(struct obj_data *obj, FILE *fl, CHAR * ch,char pos, char *name
 
 /* new obj saves for obj ver3 */
       object.bitvector2  =obj->obj_flags.bitvector2;
-      for(j=0;j<MAX_OBJ_SPELLS;j++)
-        object.ospell[j]=obj->ospell[j];
+      object.popped      = obj->obj_flags.popped;
 /* end new ver3 obj saves */
 
 /* New owner id */
@@ -4665,86 +4669,87 @@ int exploded(CHAR *mob, CHAR *ch, int cmd, char *arg)
   return FALSE;
 }
 
+#define MAGIC_USER_GUARD_ROOM 3017
+#define CLERIC_GUARD_ROOM 3004
+#define THIEF_GUARD_ROOM 3027
+#define WARRIOR_GUARD_ROOM 3021
+#define NINJA_GUARD_ROOM 3034
+#define NOMAD_GUARD_ROOM 3036
+#define ANTI_PALADIN_GUARD_ROOM 3065
+#define PALADIN_GUARD_ROOM 3063
+#define COMMANDO_GUARD_ROOM 3067
+#define BARD_GUARD_ROOM 3069
 int guild_guard(CHAR *mob,CHAR *ch, int cmd, char *arg)
 {
-  char buf[256], buf2[256];
+  bool block_movement = FALSE;
 
-  if (cmd>6 || cmd<1)
-    return FALSE;
+  if (cmd < CMD_NORTH || cmd > CMD_DOWN) return FALSE;
+  if (IS_IMMORTAL(ch)) return FALSE;
 
-  strcpy(buf,  "The guard humiliates you, and blocks your way.\n\r");
-  strcpy(buf2, "The guard humiliates $n, and blocks $s way.");
+  switch (CHAR_VIRTUAL_ROOM(ch)) {
+    case MAGIC_USER_GUARD_ROOM:
+      if (cmd == CMD_SOUTH && (GET_CLASS(ch) != CLASS_MAGIC_USER || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case CLERIC_GUARD_ROOM:
+      if (cmd == CMD_NORTH && (GET_CLASS(ch) != CLASS_CLERIC || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case THIEF_GUARD_ROOM:
+      if (cmd == CMD_EAST && (GET_CLASS(ch) != CLASS_THIEF || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case WARRIOR_GUARD_ROOM:
+      if (cmd == CMD_EAST && (GET_CLASS(ch) != CLASS_WARRIOR || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case NINJA_GUARD_ROOM:
+      if (cmd == CMD_WEST && (GET_CLASS(ch) != CLASS_NINJA || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case NOMAD_GUARD_ROOM:
+      if (cmd == CMD_EAST && (GET_CLASS(ch) != CLASS_NOMAD || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case ANTI_PALADIN_GUARD_ROOM:
+      if (cmd == CMD_NORTH && (GET_CLASS(ch) != CLASS_ANTI_PALADIN || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case PALADIN_GUARD_ROOM:
+      if (cmd == CMD_NORTH && (GET_CLASS(ch) != CLASS_PALADIN || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case COMMANDO_GUARD_ROOM:
+      if (cmd == CMD_EAST && (GET_CLASS(ch) != CLASS_COMMANDO || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    case BARD_GUARD_ROOM:
+      if (cmd == CMD_SOUTH && (GET_CLASS(ch) != CLASS_BARD || GET_POS(ch) == POSITION_RIDING)) {
+        block_movement = TRUE;
+    }
+      break;
+    default:
+      block_movement = FALSE;
+      break;
+    }
 
-  if ((CHAR_REAL_ROOM(ch) == real_room(3017)) && (cmd == CMD_SOUTH)) {
-    if (GET_CLASS(ch) != CLASS_MAGIC_USER || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3004)) && (cmd == CMD_NORTH)) {
-    if (GET_CLASS(ch) != CLASS_CLERIC || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3027)) && (cmd == CMD_EAST)) {
-    if (GET_CLASS(ch) != CLASS_THIEF || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3021)) && (cmd == CMD_EAST)) {
-    if (GET_CLASS(ch) != CLASS_WARRIOR || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3034)) && (cmd == CMD_WEST)) {
-    if (GET_CLASS(ch) != CLASS_NINJA || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3036)) && (cmd == CMD_EAST)) {
-    if (GET_CLASS(ch) != CLASS_NOMAD || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3072)) && (cmd == CMD_UP)) {
-    if (GET_CLASS(ch) != CLASS_AVATAR || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3065)) && (cmd == CMD_NORTH)) {
-    if (GET_CLASS(ch) != CLASS_ANTI_PALADIN || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3063)) && (cmd == CMD_NORTH)) {
-    if (GET_CLASS(ch) != CLASS_PALADIN || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3067)) && (cmd == CMD_EAST)) {
-    if (GET_CLASS(ch) != CLASS_COMMANDO || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3069)) && (cmd == CMD_SOUTH)) {
-    if (GET_CLASS(ch) != CLASS_BARD || GET_POS(ch) == POSITION_RIDING) {
-      act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(buf, ch);
-      return TRUE;
-    }
+  if (block_movement) {
+    send_to_char("The guard humiliates you, and blocks your way.\n\r", ch);
+    act("The guard humiliates $n, and blocks $s way.", FALSE, ch, 0, 0, TO_ROOM);
+
+    return TRUE;
   }
 
   return FALSE;
-
 }
 
 int membership(OBJ *obj,CHAR *ch, int cmd, char *arg)

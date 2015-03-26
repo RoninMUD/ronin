@@ -159,7 +159,7 @@ int check_sc_access(CHAR *ch, int skill)
       break;
     case SPELL_MIGHT:
       if (check_subclass(ch, SC_TEMPLAR, 2)) return TRUE;
-      if (check_subclass(ch, SC_CAVALIER, 2)) return TRUE;
+      if (check_subclass(ch, SC_CAVALIER, 1)) return TRUE;
       break;
     case SPELL_SANCTIFY:
       if (check_subclass(ch, SC_TEMPLAR, 3)) return TRUE;
@@ -217,12 +217,12 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_WARLORD, 2)) return TRUE;
       break;
     case SKILL_PROTECT:
-      if (check_subclass(ch, SC_CAVALIER, 3)) return TRUE;
+      if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
       if (check_subclass(ch, SC_GLADIATOR, 1)) return TRUE;
       if (check_subclass(ch, SC_RANGER, 2)) return TRUE;
       break;
-    case SKILL_SWEEP: /* !PALADIN! Give to paladin subclass */
-      if (check_subclass(ch, SC_RANGER, 3)) return TRUE;
+    case SKILL_ZEAL:
+      if (check_subclass(ch, SC_CRUSADER, 4)) return TRUE;
       break;
     case SKILL_BERSERK:
       if (check_subclass(ch, SC_RANGER, 4)) return TRUE;
@@ -253,9 +253,11 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_TRIP:
       if (check_subclass(ch, SC_ROGUE, 4)) return TRUE;
       break;
-    case SKILL_SWITCH: /* !PALADIN! */
+    case SKILL_SWITCH:
       if (check_subclass(ch, SC_GLADIATOR, 2)) return TRUE;
-      if (check_subclass(ch, SC_CRUSADER, 3)) return TRUE;
+      break;
+    case SKILL_SMITE:
+      if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
       break;
     case SKILL_FLANK:
       if (check_subclass(ch, SC_GLADIATOR, 3)) return TRUE;
@@ -320,20 +322,20 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_TRANQUILITY:
       if (check_subclass(ch, SC_MYSTIC, 5)) return TRUE;
       break;
-    case SKILL_PRAY:
+    case SPELL_RIGHTEOUSNESS:
       if (check_subclass(ch, SC_CRUSADER, 1)) return TRUE;
       break;
-    case SPELL_RIGHTEOUSNESS:
-      if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
-      break;
     case SPELL_FOCUS:
-      if (check_subclass(ch, SC_CRUSADER, 4)) return TRUE;
+      if (check_subclass(ch, SC_CRUSADER, 3)) return TRUE;
       break;
     case SPELL_POWER_OF_FAITH:
       if (check_subclass(ch, SC_CRUSADER, 5)) return TRUE;
       break;
+    case SKILL_TRUSTY_STEED:
+      if (check_subclass(ch, SC_CAVALIER, 2)) return TRUE;
+      break;
     case SPELL_WRATH_OF_GOD:
-      if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
+      if (check_subclass(ch, SC_CAVALIER, 3)) return TRUE;
       break;
     case SPELL_POWER_OF_DEVOTION:
       if (check_subclass(ch, SC_CAVALIER, 5)) return TRUE;

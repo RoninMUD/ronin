@@ -478,9 +478,8 @@ struct obj_data *corpsefile_to_obj(FILE *fl) {
 /* end new obj reads */
 
 /* new obj saves for obj ver3 */
-    obj->obj_flags.bitvector2  =object.bitvector2;
-    for(i=0;i<MAX_OBJ_SPELLS;i++)
-      obj->ospell[i]  =object.ospell[i];
+    obj->obj_flags.bitvector2   = object.bitvector2;
+    obj->obj_flags.popped       = object.popped;
 /* end new ver3 obj saves */
 
 /* New ownerid field */
@@ -1685,61 +1684,51 @@ struct obj_data *read_object(int nr, int type)
     obj->affected[i].modifier = obj_proto_table[nr].affected[i].modifier;
   }
 
-  for( i = 0 ; (i < MAX_OBJ_SPELLS); i++) {
-    obj->ospell[i].type = 0;
-    obj->ospell[i].duration = 0;
-  }
 
-    /* If RANDOM flag, assign random stats */
-    for (j = 0; j < MAX_OBJ_AFFECT; ++j)
-    {
-    	mod = 0;
-        if((IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM) /* All random */
-            || (
-                (j == 0 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_0)) /* First position random */
-                || (j == 1 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_1)) /* Second position random */
-                || (j == 2 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_2)) /* Third position random */
-                )
-            )
-/*          && obj->obj_flags.type_flag!=ITEM_WEAPON
-            && obj->obj_flags.type_flag!=ITEM_FIREWEAPON
-            && obj->obj_flags.type_flag!=ITEM_MISSILE
-            && obj->obj_flags.type_flag!=ITEM_2HWEAPON */
-            )
-        {
-            i = number(1, 100);
-            if (obj->affected[j].location == APPLY_ARMOR
-                || obj->affected[j].location == APPLY_MANA
-                || obj->affected[j].location == APPLY_HIT
-                || obj->affected[j].location == APPLY_MOVE)
-            {
-                if(i<3) mod=5; /*2%*/
-                else if(i<13) mod=2; /*10%*/
-                else if(i<89) mod=0; /*76%*/
-                else if(i<99) mod=-2; /*10%*/
-                else mod=-5; /*2%*/
-            }
-            if (obj->affected[j].location == APPLY_HP_REGEN
-                || obj->affected[j].location == APPLY_MANA_REGEN)
-            {
-                if(i<3) mod=5; /*2%*/
-                else if(i<13) mod=2; /*10%*/
-                else if(i<89) mod=0; /*76%*/
-                else if(i<99) mod=-2; /*10%*/
-                else mod=-5; /*2%*/
-            }
-            if (obj->affected[j].location == APPLY_HITROLL
-                || obj->affected[j].location == APPLY_DAMROLL)
-            {
-                if(i<3) mod = 2; /*2%*/
-                else if(i<13) mod = 1; /*10%*/
-                else if(i<89) mod = 0; /*76%*/
-                else if(i<99) mod = -1; /*10%*/
-                else mod = -2; /*2%*/
-            }
-            obj->affected[j].modifier += mod;
-        }
+  /* If RANDOM flag, assign random stats */
+  for (j = 0; j < MAX_OBJ_AFFECT; ++j) {
+
+    mod = 0;
+
+    if((IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM) || /* All random */
+        ((j == 0 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_0)) || /* First position random */
+         (j == 1 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_1)) || /* Second position random */
+         (j == 2 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_2))))) { /* Third position random */
+
+      i = number(1, 100);
+
+      if (obj->affected[j].location == APPLY_ARMOR ||
+          obj->affected[j].location == APPLY_MANA ||
+          obj->affected[j].location == APPLY_HIT ||
+          obj->affected[j].location == APPLY_MOVE) {
+        if(i<3) mod=5; /*2%*/
+        else if(i<13) mod=2; /*10%*/
+        else if(i<89) mod=0; /*76%*/
+        else if(i<99) mod=-2; /*10%*/
+        else mod=-5; /*2%*/
+      }
+
+      if (obj->affected[j].location == APPLY_HP_REGEN ||
+          obj->affected[j].location == APPLY_MANA_REGEN) {
+        if(i<3) mod=5; /*2%*/
+        else if(i<13) mod=2; /*10%*/
+        else if(i<89) mod=0; /*76%*/
+        else if(i<99) mod=-2; /*10%*/
+        else mod=-5; /*2%*/
+      }
+
+      if (obj->affected[j].location == APPLY_HITROLL ||
+          obj->affected[j].location == APPLY_DAMROLL) {
+        if(i<3) mod = 2; /*2%*/
+        else if(i<13) mod = 1; /*10%*/
+        else if(i<89) mod = 0; /*76%*/
+        else if(i<99) mod = -1; /*10%*/
+        else mod = -2; /*2%*/
+      }
+
+      obj->affected[j].modifier += mod;
     }
+  }
 
   obj->log = 0;
   obj->in_room = NOWHERE;
@@ -1757,7 +1746,7 @@ struct obj_data *read_object(int nr, int type)
 
   obj_proto_table[nr].number++;
 
-/* New ownerid field */
+  /* New ownerid field */
   obj->ownerid[0]             =0;
   obj->ownerid[1]             =0;
   obj->ownerid[2]             =0;
@@ -1767,7 +1756,9 @@ struct obj_data *read_object(int nr, int type)
   obj->ownerid[6]             =0;
   obj->ownerid[7]             =0;
 
-/* if board, initialize it */
+  obj->obj_flags.popped = time(NULL) / (60*60*24); /* current time in days since Jan 1, 1970 */
+
+  /* if board, initialize it */
   if(obj->obj_flags.type_flag==ITEM_BOARD) load_board(obj);
 
   return (obj);

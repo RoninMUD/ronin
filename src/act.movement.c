@@ -151,6 +151,9 @@ int dt_or_hazard(CHAR *ch) {
   return FALSE;
 }
 
+extern struct str_app_type str_app[];
+int special(struct char_data *ch, int cmd, char *arg);
+int signal_room(int room, CHAR *ch, int cmd, char *arg);
 int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
      /* Assumes,
       1. That there is no master and no followers.
@@ -164,7 +167,6 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
         added mount moving with rider - Ranger Aug 96
       */
 {
-  extern struct str_app_type str_app[];
   char tmp[80];
   int was_in;
   int org_room;
@@ -181,9 +183,6 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
 
   int can_carry_weight;
   int carrying_weight;
-
-  int special(struct char_data *ch, int cmd, char *arg);
-  int signal_room(int room, CHAR *ch,int cmd,char *arg);
 
   if(spec_check) {
     if (special(ch, cmd+1, ""))  /* Check for special routines (North is 1) */
@@ -269,7 +268,8 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
         if(ch->specials.rider) send_to_char("Your mount is not flying.\n\r",ch->specials.rider);
         return FALSE;
       }
-    } else {
+    }
+    else {
       if(!IS_AFFECTED(ch->specials.riding,AFF_FLY)) {
         send_to_char("Your mount is not flying.\n\r",ch);
         return FALSE;
@@ -325,7 +325,8 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
       /* Check for bridle */
       if(victim->equipment[WEAR_NECK_1]) {
          if(V_OBJ(victim->equipment[WEAR_NECK_1])==3900) need_movement--;
-      } else if (victim->equipment[WEAR_NECK_2]) {
+      }
+      else if (victim->equipment[WEAR_NECK_2]) {
          if(V_OBJ(victim->equipment[WEAR_NECK_2])==3900) need_movement--;
       }
       /* Check for saddle */
@@ -362,8 +363,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
     if (ch->player.poofout && GET_LEVEL(ch)<LEVEL_IMM) {
        snprintf(tmp, sizeof(tmp), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
-    else
-    {
+    else {
       snprintf(tmp, sizeof(tmp), "$n swims %s.", dirs[cmd]);
     }
     act(tmp, 2, ch, 0, 0, TO_ROOM);
@@ -412,8 +412,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
     if (ch->player.poofout && GET_LEVEL(ch)<LEVEL_IMM) {
        snprintf(tmp, sizeof(tmp), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
-    else
-    {
+    else {
       snprintf(tmp, sizeof(tmp), "$n flies %s.", dirs[cmd]);
     }
     act(tmp, 2, ch, 0, 0, TO_ROOM);
