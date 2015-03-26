@@ -902,6 +902,8 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
 {4465,3}, /* Gaarn were badger beast */
 {4466,3}, /* drow drider */
 {4483,3}, /* Captain Guard */
+{4601,3}, /* gigantic eye */
+{4605,3}, /* worm heart */
 {4608,3}, /* nose hair */
 {4706,3}, /* Garbage Golem */
 {6201,3}, /* the Unholy Deacon */
@@ -934,7 +936,6 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
 {703,4}, /* neyuv lizard assassin reptile */
 {4469,4}, /* animate skeleton */
 {4472,4}, /* Voldra Sage */
-{4601,4}, /* gigantic eye */
 {4612,4}, /* Kitzanti Captain Dark Purple */
 {4703,4}, /* voodoo doll */
 {4707,4}, /* Cleric Werra Garbage */
@@ -994,7 +995,6 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
 {26402,5}, /* emir malik */
 {26482,5}, /* magus */
 {27712,5}, /* bebilith stalker purple spider insect */
-{4605,6}, /* worm heart */
 {5125,6}, /* drow matron mother third */
 {5126,6}, /* drow matron mother fourth */
 {5127,6}, /* drow matron mother second */
