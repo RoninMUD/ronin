@@ -1457,6 +1457,17 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
       tmp_descr = NULL;
     }
     break;
+  case MSG_CORPSE:
+    // pop orders out when a corpse is made with a message
+    if (ch && (V_OBJ(order) == TEMPLATE_AQORDER)) {
+      obj_from_char(order);
+      obj_to_room(order, CHAR_REAL_ROOM(ch));
+      sprintf(buf, "Just as %s expires, %s drops %s.\n\r",
+          IS_NPC(ch) ? GET_SHORT(ch) : GET_NAME(ch),
+          HSSH(ch), OBJ_SHORT(order));
+      send_to_room(buf, CHAR_REAL_ROOM(ch));
+    }
+    break;
   case MSG_AUTORENT:
     if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
     if ((order->ownerid[0] != ch->ver3.id) && (order->ownerid[0] > 0)) {
