@@ -151,9 +151,7 @@ void add_obj_cost(CHAR *ch, struct obj_data *obj,struct obj_cost *cost) {
   /* Add cost for an item and it's contents, and next->contents */
 
   if (obj) {
-    if(obj->obj_flags.type_flag==ITEM_SC_TOKEN || IS_HEMP_FLAG(obj) ||
-      ((obj->obj_flags.type_flag==ITEM_AQ_ORDER) && (ch->ver3.id != obj->ownerid[0]) &&
-      (obj->ownerid[0] > 0))) {
+    if(obj->obj_flags.type_flag==ITEM_SC_TOKEN || IS_HEMP_FLAG(obj)) {
       sprintf(buf, "You can't rent %s !\n\r",fname(obj->name));
       send_to_char(buf, ch);
       add_obj_cost(ch, obj->contains, cost);

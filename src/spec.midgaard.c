@@ -2877,8 +2877,7 @@ int total_cost_of_package(struct obj_data *obj) {
   struct obj_data *tmp;
   if(obj) {
     for(tmp = obj->contains;tmp;tmp=tmp->next_content) {
-      if((ITEM_SC_TOKEN==tmp->obj_flags.type_flag || IS_RENTABLE(tmp)) && (cost != -1) &&
-        (tmp->obj_flags.type_flag != ITEM_AQ_ORDER)) {
+      if((ITEM_SC_TOKEN==tmp->obj_flags.type_flag || IS_RENTABLE(tmp)) && cost !=-1) {
         if(total_cost_of_package(tmp)!=-1 && cost!=-1)
           cost += total_cost_of_package(tmp);
         else
