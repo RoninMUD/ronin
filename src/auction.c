@@ -183,6 +183,7 @@ void intialize_auction_board(void)
     }
           /* new obj saves for obj ver3 */
           obj->obj_flags.bitvector2   = elem.obj_elem.bitvector2;
+          obj->obj_flags.popped       = elem.obj_elem.popped;
           /* end new ver3 obj saves */
 
 	  A_Board.obj_num++;
@@ -256,6 +257,7 @@ void save_auction(void)
 
 /* new obj saves for obj ver3 */
       elem.obj_elem.bitvector2  = A_Board.auc[i].obj->obj_flags.bitvector2;
+      elem.obj_elem.popped      = A_Board.auc[i].obj->obj_flags.popped;
 /* end new ver3 obj saves */
 
 /* New ownerid field */

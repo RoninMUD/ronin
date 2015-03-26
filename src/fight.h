@@ -47,10 +47,9 @@ void raw_kill(struct char_data *ch);
 void divide_experience(struct char_data *ch, struct char_data *victim, int none);
 void gain_exp(struct char_data *ch, int gain);
 char *replace_string(char *str, char *weapon);
-void dam_message(int dam, struct char_data *ch, struct char_data *victim,
-                 int w_type,int shadow);
-void damage(struct char_data *ch, struct char_data *victim,
-            int dam, int attacktype, int damtype);
+void dam_message(int dam, struct char_data *ch, struct char_data *victim, int w_type, int shadow);
+void process_death(struct char_data *ch, struct char_data *victim);
+int damage(struct char_data *ch, struct char_data *victim, int dmg, int attack_type, int damage_type);
 void hit(struct char_data *ch, struct char_data *victim, int type);
 void dhit(struct char_data *ch, struct char_data *victim, int type);
 void thit(struct char_data *ch, struct char_data *victim, int type);

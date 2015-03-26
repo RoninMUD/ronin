@@ -1092,22 +1092,23 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
 
     hit(ch, victim, TYPE_UNDEFINED);
 
-    GET_POS(victim) = stack_position(victim, POSITION_RESTING);
+    if ((CHAR_REAL_ROOM(victim) != NOWHERE) &&
+        (!IS_AFFECTED(victim, AFF_INVUL) || breakthrough(ch, victim, BT_INVUL))) {
+      GET_POS(victim) = stack_position(victim, POSITION_RESTING);
+    }
 
     skill_wait(ch, SKILL_SMITE, 2);
   }
 
+
   /* Trusty Steed */
-  if (CHAR_REAL_ROOM(victim) != NOWHERE && affected_by_spell(ch, SKILL_TRUSTY_STEED) && (!IS_AFFECTED(victim, AFF_INVUL) || breakthrough(ch, victim, BT_INVUL))) {
+  if ((CHAR_REAL_ROOM(victim) != NOWHERE) &&
+      affected_by_spell(ch, SKILL_TRUSTY_STEED) &&
+      (!IS_AFFECTED(victim, AFF_INVUL) || breakthrough(ch, victim, BT_INVUL))) {
     check = number(1, 121) - GET_WIS_APP(ch);
 
-    if (!IS_NPC(ch) && check_subclass(ch, SC_CAVALIER, 2) && check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
-      if (GET_POS(victim) > POSITION_SITTING) {
-        set_pos = stack_position(victim, POSITION_SITTING);
-      }
-      else {
-        set_pos = stack_position(victim, POSITION_RESTING);
-      }
+    if (check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
+      set_pos = stack_position(victim, POSITION_SITTING);
 
       act("You summon forth your trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_CHAR);
       act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", 0, ch, 0, victim, TO_VICT);

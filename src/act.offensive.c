@@ -1368,24 +1368,26 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
       }
     }
 
-    /* Trusty Steed */
-    if (CHAR_REAL_ROOM(victim) != NOWHERE && affected_by_spell(ch, SKILL_TRUSTY_STEED)) {
-      check = number(1, 121) - GET_WIS_APP(ch);
-
-      if (!IS_NPC(ch) && check_subclass(ch, SC_CAVALIER, 2) && check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
-        set_pos = stack_position(victim, POSITION_RESTING);
-
-        act("You summon forth your trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_CHAR);
-        act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", 0, ch, 0, victim, TO_VICT);
-        act("$n summons forth $s trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_NOTVICT);
-
-        damage(ch, victim, calc_position_damage(GET_POS(victim), (GET_LEVEL(ch) * 3) / 2), SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
-
-        GET_POS(victim) = set_pos;
-      }
-    }
-
     skill_wait(ch, SKILL_PUMMEL, 2);
+  }
+
+  /* Trusty Steed */
+  if ((CHAR_REAL_ROOM(victim) != NOWHERE) &&
+      affected_by_spell(ch, SKILL_TRUSTY_STEED) &&
+      (!IS_AFFECTED(victim, AFF_INVUL) || breakthrough(ch, victim, BT_INVUL))) {
+    check = number(1, 121) - GET_WIS_APP(ch);
+
+    if (check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
+      set_pos = stack_position(victim, POSITION_RESTING);
+
+      act("You summon forth your trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_CHAR);
+      act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", 0, ch, 0, victim, TO_VICT);
+      act("$n summons forth $s trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_NOTVICT);
+
+      damage(ch, victim, calc_position_damage(GET_POS(victim), (GET_LEVEL(ch) * 3) / 2), SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
+
+      GET_POS(victim) = set_pos;
+    }
   }
 }
 
