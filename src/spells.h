@@ -54,14 +54,16 @@ $State: Exp $
 #define MAX_BUF_LENGTH              240
 
 /* New damage types for skills/spells/specs - Ranger Oct 99 */
-#define DAM_NO_BLOCK                  0 /* Not blocked */
+#define DAM_NO_BLOCK                  0 /* Not Blocked */
 #define DAM_POISON                    1
 #define DAM_NO_BLOCK_NO_FLEE          2
 
-#define DAM_PHYSICAL                 10 /* 10-49 Blocked by Invul (10 at 20 dam or less)*/
+/* 10 through 49 are blocked by Invulnerability */
+#define DAM_PHYSICAL                 10 /* 20 damage or less is reduced to 0. */
 #define DAM_SKILL                    11
 
-#define DAM_MAGICAL                  50 /* 50+ Blocked by Sphere */
+/* 50+ are blocked by Sphere */
+#define DAM_MAGICAL                  50
 #define DAM_FIRE                     51
 #define DAM_COLD                     52
 #define DAM_ELECTRIC                 53
