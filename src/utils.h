@@ -37,7 +37,7 @@ $State: Exp $
 
 extern char *index(const char *s, int c);
 
-#define CHAR_REAL_ROOM(char_s)     (char_s ? (char_s)->in_room_r : -1)
+#define CHAR_REAL_ROOM(char_s)     (char_s ? (char_s)->in_room_r : NOWHERE)
 #define CHAR_VIRTUAL_ROOM(char_s)  (char_s ? (char_s)->in_room_v : 0)
 
 #define MOB_NAME(o)             ((o)->player.name ? (o)->player.name : mob_proto_table[(o)->nr].name)
@@ -337,4 +337,7 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define IS_IMMUNE2(ch, immunity) (IS_SET(ch->specials.immune2, immunity))
 #define GET_MASTER(ch) (ch->master)
 #define GET_RIDER(ch) (ch->specials.rider)
+
+#define SAME_ROOM(ch1, ch2) ((CHAR_REAL_ROOM(ch1) == CHAR_REAL_ROOM(ch2)) && (CHAR_REAL_ROOM(ch1) != NOWHERE))
+
 #endif /* __UTILS_H__ */

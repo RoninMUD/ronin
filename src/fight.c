@@ -4466,7 +4466,7 @@ void shadow_walk_action(CHAR *ch, CHAR *vict)
 
 
 int dirty_tricks_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
-  {
+{
   int set_pos = 0;
 
   if (cmd != MSG_MOBACT) return FALSE;
@@ -4481,11 +4481,11 @@ int dirty_tricks_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room,
   GET_POS(enchanted_ch) = set_pos;
 
   return FALSE;
-    }
+}
 
 
 void dirty_tricks_action(CHAR *ch, CHAR *victim)
-    {
+{
   AFF af;
   ENCH ench;
   bool can_stab = TRUE;
@@ -4495,49 +4495,38 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim)
 
   if (!ch || !victim) return;
 
-  if (!GET_WEAPON(ch) || affected_by_spell(victim, SKILL_DIRTY_TRICKS))
-    {
+  if (!GET_WEAPON(ch) || affected_by_spell(victim, SKILL_DIRTY_TRICKS)) {
     can_stab = FALSE;
-    }
+  }
 
-  if ((IS_NPC(victim) && IS_SET(victim->specials.immune, IMMUNE_BLINDNESS)) || IS_AFFECTED(victim, AFF_BLIND))
-    {
+  if ((IS_NPC(victim) && IS_SET(victim->specials.immune, IMMUNE_BLINDNESS)) || IS_AFFECTED(victim, AFF_BLIND)) {
     can_blind = FALSE;
-    }
+  }
 
-  if (!can_stab && can_blind)
-  {
-    if (number(1, 100) <= 40)
-    {
+  if (!can_stab && can_blind) {
+    if (number(1, 100) <= 40) {
       trick = 21;
     }
-    else
-    {
+    else {
       trick = 51;
+    }
   }
-  }
-  else if (can_stab && !can_blind)
-  {
-    if (number(1, 100) <= 35)
-    {
+  else if (can_stab && !can_blind) {
+    if (number(1, 100) <= 35) {
       trick = 1;
-}
-    else
-    {
+    }
+    else {
       trick = 51;
     }
   }
-  else if (!can_stab && !can_blind)
-    {
+  else if (!can_stab && !can_blind) {
     trick = 51;
-    }
-    else
-    {
+  }
+  else {
     trick = number(1, 100);
-    }
+  }
 
-  if (trick <= 20) /* 20% Chance Stab+Bleed (Requires Weapon)*/
-    {
+  if (trick <= 20) { /* 20% Chance Stab+Bleed (Requires Weapon)*/
     act("You stab your weapon deeply into $N, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n stabs $s weapon deeply into you, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_VICT);
     act("$n stabs $s weapon deeply into $N, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -4553,8 +4542,7 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim)
 
     enchantment_to_char(victim, &ench, FALSE);
   }
-  else if (trick <= 50) /* 30% Chance Blind */
-    {
+  else if (trick <= 50) { /* 30% Chance Blind */
     act("You throw some blinding dust into $N's eyes.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n throws some blinding dust into your eyes.", FALSE, ch, 0, victim, TO_VICT);
     act("$n throws blinding dust into $N's eyes.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -4576,18 +4564,15 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim)
 
     affect_to_char(victim, &af);
   }
-  else /* 50% Chance Stun */
-  {
-    if (AWAKE(victim) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
-    {
+  else { /* 50% Chance Stun */
+    if (AWAKE(victim) && IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL)) {
       act("You kick $N savagely in the groin but $E seems unfazed.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n kicks you savagely in the groin but you feel unfazed.", FALSE, ch, 0, victim, TO_VICT);
       act("$n kicks $N savagely in the groin but $E seems unfazed.", FALSE, ch, 0, victim, TO_NOTVICT);
 
       damage(ch, victim, 0, SKILL_DIRTY_TRICKS, DAM_NO_BLOCK);
     }
-    else
-    {
+    else {
       act("You kick $N savagely in the groin, causing $M to double over in pain!", FALSE, ch, 0, victim, TO_CHAR);
       act("$n kicks you savagely in the groin, causing you to double over in pain!", FALSE, ch, 0, victim, TO_VICT);
       act("$n kicks $N savagely in the groin, causing $M to double over in pain!", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -4596,90 +4581,74 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim)
 
       damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_DIRTY_TRICKS, DAM_PHYSICAL);
 
-      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
-    {
+      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;
 
         /* Can't use skill_wait() since this applies to victim. */
         WAIT_STATE(victim, PULSE_VIOLENCE);
-  }
+      }
     }
   }
 }
 
 
 /* control the fights going on */
-void perform_violence(void)
-{
+void perform_violence(void) {
   CHAR *ch = NULL;
   CHAR *vict = NULL;
 
-  for (ch = combat_list; ch; ch = combat_next_dude)
-  {
+  for (ch = combat_list; ch; ch = combat_next_dude) {
     combat_next_dude = ch->next_fighting;
     assert(vict = GET_OPPONENT(ch));
 
-    if (AWAKE(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(vict))
-    {
+    if (AWAKE(ch) && SAME_ROOM(ch, vict)) {
       /* Linerfix - Makes MSG_VIOLENCE only signal to the room of Satan, Cryohydra, Shadowraith or Ancient Red Dragon. */
       if (V_ROOM(ch) == 25541 ||
           V_ROOM(ch) == 23063 ||
           V_ROOM(ch) == 27748 ||
-          V_ROOM(ch) == 17532)
-      {
+          V_ROOM(ch) == 17532) {
         if (signal_char(ch, vict, MSG_VIOLENCE, "")) return;
       }
 
       /* Shadow-Walk is before hit() in order to take advantage of pummel, etc. */
-      if (CHAR_REAL_ROOM(vict) != NOWHERE) {
-        if (affected_by_spell(ch, SKILL_SHADOW_WALK)) {
+      if (affected_by_spell(ch, SKILL_SHADOW_WALK) && SAME_ROOM(ch, vict)) {
         shadow_walk_action(ch, vict);
       }
-      }
 
-      if (CHAR_REAL_ROOM(vict) != NOWHERE) {
-      hit(ch, vict, TYPE_UNDEFINED);
+      if (SAME_ROOM(ch, vict)) {
+        hit(ch, vict, TYPE_UNDEFINED);
       }
 
       /* These skills are applied after hit() in order to avoid consuming pummel, etc. */
-      if (CHAR_REAL_ROOM(vict) != NOWHERE) {
-        if (affected_by_spell(ch, SPELL_BLOOD_LUST)) {
+      if (affected_by_spell(ch, SPELL_BLOOD_LUST) && SAME_ROOM(ch, vict)) {
         blood_lust_action(ch, vict);
       }
 
-        if (affected_by_spell(ch, SKILL_VICTIMIZE)) {
+      if (affected_by_spell(ch, SKILL_VICTIMIZE) && SAME_ROOM(ch, vict)) {
         victimize_action(ch, vict);
       }
 
         /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
-      if (!IS_NPC(ch) &&
-          check_sc_access(ch, SKILL_DIRTY_TRICKS) &&
-          affected_by_spell(ch, SKILL_DIRTY_TRICKS) &&
-            chance(10)) {
+      if (affected_by_spell(ch, SKILL_DIRTY_TRICKS) && chance(10) && SAME_ROOM(ch, vict)) {
         dirty_tricks_action(ch, vict);
       }
     }
-    }
-    else /* Not in same room. */
-    {
+    else { /* Not in same room. */
       stop_fighting(ch);
     }
   }
 }
 
 void mob_attack(CHAR *MOB);
-void perform_mob_attack(void)
-{
+void perform_mob_attack(void) {
   CHAR *ch = NULL;
   CHAR *vict = NULL;
 
-  for (ch = combat_list; ch; ch = combat_next_dude)
-  {
+  for (ch = combat_list; ch; ch = combat_next_dude) {
     combat_next_dude = ch->next_fighting;
     assert(vict = GET_OPPONENT(ch));
 
-    if (IS_NPC(ch) && AWAKE(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(vict))
-    {
+    if (IS_NPC(ch) && AWAKE(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(vict)) {
       mob_attack(ch);
     }
   }

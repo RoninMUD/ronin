@@ -1613,7 +1613,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP PALADIN SPELLS to see the spells of the paladin.
 
-Skills: bash, block, disarm, kick, parry, pummel, rescue, spin.
+Skills: bash, block, disarm, kick, parry, pummel, rescue, spin, pray.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1678,6 +1678,7 @@ Knock                                                      Y
 Peek          Y    Y                        Y         Y
 Pick          Y    Y                        Y         Y
 Parry                                            Y         Y
+Pray                                             Y
 Pummel        Y              Y         Y         Y
 Punch                                                      Y
 Rescue                                      Y    Y         Y
@@ -1986,6 +1987,16 @@ will have a 90% chance to subdue a monster.
 A subdued monster can be ridden.
 
 See Also: STABLES
+#
+PRAY
+
+Class: Paladin
+
+This skill gives the Paladin a quick way to fix his alignment.  During prayer, 
+the Paladin is immobile, gaining 400 alignment points each tick until his 
+alignment reaches 1000.  If attacked during prayer, the Paladin will stop 
+praying and fight.  The success of the prayer depends on how well the skill
+is practiced.
 #
 SHOOT
 
@@ -6448,38 +6459,26 @@ AWARENESS
 Subclass Ranger: Level 1 (Nomad)
 Subclass Warlord: Level 2 (Warrior)
 
-This automatic skill gives the Ranger or Warlord a heightened sense of
-danger, allowing him/her to notice when a creature is about
-to attack and quickly get in the first hit.  Awareness isn't
-very effective when affected by fury or berserk.  The success
-of awareness is dependent on how well the skill is practiced.
+This automatic skill gives the Ranger or Warlord a heightened sense of danger,
+allowing him/her to notice when a creature is about to attack and quickly get
+in the first hit.  Awareness isn't very effective when affected by fury or
+berserk.  The success of awareness is dependent on how well the skill is
+practiced.
 
 See Also: SUBCLASSES RANGER WARLORD
 #
 PROTECT
 
-Subclass Ranger: Level 2 (Nomad)
 Subclass Gladiator: Level 1 (Warrior)
-Subclass Cavalier: Level 3 (Paladin)
+Subclass Crusader: Level 2 (Paladin)
 
-This skill gives the Ranger, Gladitator or Cavalier the ability
-to protect one member of their party from receiving damage. It is
-normally not possible to protect anyone while furied or berserk, but
-the Paladin has better control and has some limited success while
-furied.  The success of protect is dependent on how well the skill
-is practiced.
+This skill gives the Gladitator or Crusader the ability to protect one member
+of their party from receiving damage. It is normally not possible to protect
+anyone while furied or berserk, but the Paladin has better control and has
+some limited success while furied.  The success of protect is dependent on how
+well the skill is practiced.
 
-See Also: SUBCLASSES RANGER GLADIATOR CAVALIER
-#
-SWEEP
-
-Subclass Ranger: Level 3 (Nomad)
-
-The Ranger can whip around the room with his weapon, effectively striking every 
-creature in the room with a single hit.  The Ranger has a four-round delay to 
-recover from the sweep and all creatures hit require a two-round recovery time.
-
-See Also: SUBCLASSES RANGER
+See Also: SUBCLASSES GLADIATOR CRUSADER
 #
 BERSERK
 
@@ -6593,7 +6592,7 @@ HELP <name of skill>
 Level         Skill
   1           AWARENESS
   2           PROTECT
-  3           SWEEP
+  3           N/A
   4           BERSERK
   5           DEFEND
 
@@ -7290,7 +7289,7 @@ to hit a new victim, they continue to tank the original
 victim.  The success of switch is dependent on how well
 the skill is practiced.
 
-See Also: SUBCLASSES GLADIATOR CRUSADER "MOB SWITCH"
+See Also: SUBCLASSES GLADIATOR "MOB SWITCH"
 #
 HEADBUTT
 
@@ -7507,53 +7506,37 @@ See Also: SUBCLASSES MERCENARY
 #
 CAVALIER
 
-Cavalier is one of the Paladin subclasses and is broken up
-into 5 levels.  At each level, the Cavalier receives a
-new or improved skill or spell.  For help on each skill
-or spell, just type HELP <skill/spell name>
+Cavalier is one of the Paladin subclasses and is broken up into 5 levels.  At
+each level, the Cavalier receives a new or improved skill or spell.  For help
+on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           MEDITATE
-  2           MIGHT
-  3           PROTECT
-  4           WRATH OF GOD
+  1           MIGHT
+  2           TRUSTY STEED
+  3           WRATH OF GOD
+  4           SMITE
   5           POWER OF DEVOTION
 
 See Also: SUBCLASSES CRUSADER PALADIN
 #
 CRUSADER
 
-Crusader is one of the Paladin subclasses and is broken up
-into 5 levels.  At each level, the Crusader receives a
-new or improved skill or spell.  For help on each skill
-or spell, just type HELP <skill/spell name>
+Crusader is one of the Paladin subclasses and is broken up in to 5 levels.  At
+each level, the Crusader receives a new or improved skill or spell.  For help
+on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           PRAY
-  2           RIGHTEOUSNESS
-  3           SWITCH
-  4           FOCUS
+  1           RIGHTEOUSNESS
+  2           PROTECT
+  3           FOCUS
+  4           ZEAL
   5           POWER OF FAITH
 
 See Also: SUBCLASSES CAVALIER PALADIN
 #
-MEDITATE
-
-Subclass Cavalier: Level 1 (Paladin)
-Subclass Druid: Level 1 (Cleric)
-Subclass Templar: Level 1 (Cleric)
-
-During meditation, the Cavalier, Druid or Templar look inward and focus on 
-healing.  This prevents any commands from being processed for a duration of
-2 ticks, but will give an additional 60 hit points and 60 mana per tick for
-those 2 ticks.  Once meditation is complete, it cannot be achieved for
-another 30 ticks.
-
-See Also: SUBCLASSES CAVALIER DRUID TEMPLAR
-#
 MIGHT
 
-Subclass Cavalier: Level 2 (Paladin)
+Subclass Cavalier: Level 1 (Paladin)
 Subclass Templar: Level 2 (Cleric)
 
 Usage       : cast 'might' (self only)
@@ -7562,28 +7545,64 @@ Duration    : 20
 Save        : -
 Mana Cost   : 50
 
-The Cavalier or Templar draws strength from his/her faith, giving
-him/her an additional 2 damroll.
+The Cavalier or Templar draws strength from his/her faith, giving him/her an
+additional 2 damroll.
 
 See Also: SUBCLASSES CAVALIER TEMPLAR
 #
+TRUSTY STEED
+
+Subclass Cavalier: Level 2 (Paladin)
+
+Usage: trusty-steed (toggles on/off)
+
+When using pummel or smite against an enemy, the Crusader has a chance to
+follow up their attack by summoning an ethereal steed thar charges into
+their target dealing 1.5 times the Cavalier's level in damage and
+knocking them to the ground.
+
+Charging a target who is sitting or resting will cause them to become
+stunned, receiving 2x damage on the next attack.
+
+Charging a target who is stunned will cause them to become incapacitated,
+receiving 2.33x damage on the next attack.
+
+Cavaliers with Wisdom greater than 18 will receive a bonus to the chance
+to summon their magical steed.
+
+See Also: SUBCLASSES CAVALIER
+#
 "WRATH OF GOD"
 
-Subclass Cavalier: Level 4 (Paladin)
+Subclass Cavalier: Level 3 (Paladin)
 
 Usage       : cast 'wrath of god' <victim>
 Accumulative: no
 Duration    : -
 Save        : -
-Mana Cost   : 200
+Mana Cost   : 100
 
-The Cavalier calls down the power of his/her
-god to smite the victim with its wrath.  A
-full 800 damage is dealt to the victim regardless
-of the victim's alignment.  However, the Cavalier
-will lose 200 alignment points if the victim is
-good aligned and 100 alignment points if the victim
-is neutral.
+The Cavalier calls down the power of his/her god to smite
+the victim with its wrath.  600 damage is dealt to the
+victim and the targets DAMROLL is reduced by 10 and HITROLL
+is reduced by 1 for a duration of 2 ticks. This reduction
+can be stacked up to five times on a single target.
+
+See Also: SUBCLASSES CAVALIER
+#
+SMITE
+
+Subclass Cavalier: Level 4 (Paladin)
+
+Usage: smite <victim>
+
+This skill allows the Cavalier to channel their righteous fury against an
+enemy. In doing so, the Cavalier switches their target and performs a
+single attack against their enemy that knocks them down into a resting
+position.
+
+When smiting an enemy the Cavalier also has a chance to summon their 
+trusty steed against the target of their attack.
 
 See Also: SUBCLASSES CAVALIER
 #
@@ -7598,28 +7617,16 @@ Save        : -
 Mana Cost   : 100
 
 This is a multipurpose spell designed to protect the victim with a wide range 
-of affects.  The first is sanctuary, which is identical to the sanctuary spell, 
-the second is an additional -15 armor, and the final affect is +1 to all saving 
-throws.  Being able to cast this spell on others makes the Cavalier a great 
-defensive addition to any group.
+of affects.  First and foremost is sanctuary which is identical to the
+sanctuary spell. In addition the target receives an additional -15 ARMOR, +1 to
+all saving throws, +3 DAMROLL, +25 HP_REGEN and +5 MANA_REGEN. Being able to
+cast this spell on others makes the Cavalier a great addition to any group.
 
 See Also: SUBCLASSES CAVALIER
 #
-PRAY
-
-Subclass Crusader: Level 1 (Paladin)
-
-This skill gives the Crusader a quick way to fix his alignment.  During prayer, 
-the Crusader is immobile, gaining 400 alignment points each tick until his 
-alignment reaches 1000.  If attacked during prayer, the Crusader will stop 
-praying and fight.  The success of the prayer depends on how well the skill
-is practiced.
-
-See Also: SUBCLASSES CRUSADER
-#
 RIGHTEOUSNESS
 
-Subclass Crusader: Level 2 (Paladin)
+Subclass Crusader: Level 1 (Paladin)
 
 Usage       : cast 'righteousness' (self only)
 Accumulative: no
@@ -7634,7 +7641,7 @@ See Also: SUBCLASSES CRUSADER
 #
 FOCUS
 
-Subclass Crusader: Level 4 (Paladin)
+Subclass Crusader: Level 3 (Paladin)
 
 Usage       : cast 'focus' (self only)
 Accumulative: no
@@ -7642,9 +7649,19 @@ Duration    : 10
 Save        : -
 Mana Cost   : 50
 
-While affected by this spell, the Crusader is
-able to focus more clearly on spellcasting and
-get a concentration bonus of 10%.
+While affected by this spell, the Crusader is able to focus more clearly on
+spellcasting and get a concentration bonus of 10%.
+
+See Also: SUBCLASSES CRUSADER
+#
+ZEAL
+
+Subclass Crusader: Level 4 (Paladin)
+
+This skill allows the Crusader to channel divine fury into an attack that
+targets all mobs in the same room with a single hit.  The Crusader has a
+three-round delay to recover when successful and a two-round delay to
+recover on a failure. All creatures hit require a two-round recovery time.
 
 See Also: SUBCLASSES CRUSADER
 #
@@ -7696,25 +7713,18 @@ Level         Skill/Spell
 
 See Also: SUBCLASSES DRUID CLERIC
 #
-DEGENERATE
+MEDITATE
 
-Subclass Druid: Level 5 (Cleric)
+Subclass Druid: Level 1 (Cleric)
+Subclass Templar: Level 1 (Cleric)
 
-Usage       : cast 'degenerate' (self only)
-Accumulative: no
-Duration    : -
-Save        : -
-Mana Cost   : 0
+During meditation, the Druid or Templar look inward and focus on healing.
+This prevents any commands from being processed for a duration of 2 ticks,
+but will give an additional 60 hit points and 60 mana per tick for those 2
+ticks.  Once meditation is complete, it cannot be achieved for another 30
+ticks.
 
-The Druid is able to sacrifice his/her health by absorbing hitpoints
-and converting them to mana at a 1-2 ratio.  All but 10 hitpoints
-may be converted depending on how much mana the Druid needs restored.
-However, the Druid is unable to be healed by any means for a duration
-of 2 ticks after the cast and cannot use degenerate again for 30
-ticks. While this spell can give the Druid much more available
-mana, there is a large risk of death.
-
-See Also: SUBCLASSES DRUID
+See Also: SUBCLASSES DRUID TEMPLAR
 #
 SANCTIFY
 
@@ -7748,26 +7758,6 @@ victim will receive a damage reduction of 65%.
 
 See Also: SUBCLASSES TEMPLAR SANCTUARY
 #
-"WALL OF THORNS"
-
-Subclass Druid: Level 3 (Cleric)
-
-Usage       : cast 'wall of thorns'
-Accumulative: no
-Duration    : 5
-Save        : -
-Mana Cost   : 80
-
-The Druid conjures up a handful of seeds which quickly grow to block all 
-exits.  Any creatures in the room will be trapped, unable to flee. The wall
-isn't permanent and will dissolve in a short span of time.
-
-If cast while an existing wall is in the room, the Druid will use their
-powers of botanical pursuasion to encourage the wall to recede and dissolve
-immediately.
-
-See Also: SUBCLASSES DRUID
-#
 CLARITY
 
 Subclass Druid: Level 2 (Cleric)
@@ -7788,6 +7778,26 @@ always miss.
 
 See Also: SUBCLASSES DRUID
 #
+"WALL OF THORNS"
+
+Subclass Druid: Level 3 (Cleric)
+
+Usage       : cast 'wall of thorns'
+Accumulative: no
+Duration    : 5
+Save        : -
+Mana Cost   : 80
+
+The Druid conjures up a handful of seeds which quickly grow to block all 
+exits.  Any creatures in the room will be trapped, unable to flee. The wall
+isn't permanent and will dissolve in a short span of time.
+
+If cast while an existing wall is in the room, the Druid will use their
+powers of botanical pursuasion to encourage the wall to recede and dissolve
+immediately.
+
+See Also: SUBCLASSES DRUID
+#
 "MAGIC ARMAMENT"
 
 Subclass Druid: Level 4 (Cleric)
@@ -7802,6 +7812,26 @@ Where as Clarity prevents the Druid from landing any
 physical attacks, this spell will enhance the Druid's
 damage by 2d5.  This gives a maximum possible damage
 bonus of 10.
+
+See Also: SUBCLASSES DRUID
+#
+DEGENERATE
+
+Subclass Druid: Level 5 (Cleric)
+
+Usage       : cast 'degenerate' (self only)
+Accumulative: no
+Duration    : -
+Save        : -
+Mana Cost   : 0
+
+The Druid is able to sacrifice his/her health by absorbing hitpoints
+and converting them to mana at a 1-2 ratio.  All but 10 hitpoints
+may be converted depending on how much mana the Druid needs restored.
+However, the Druid is unable to be healed by any means for a duration
+of 2 ticks after the cast and cannot use degenerate again for 30
+ticks. While this spell can give the Druid much more available
+mana, there is a large risk of death.
 
 See Also: SUBCLASSES DRUID
 #
