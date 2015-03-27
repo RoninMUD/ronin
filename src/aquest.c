@@ -1069,107 +1069,96 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
 /* Object questing implemented through mob other than guildmaster in this case */
 int aq_objs[][2] = {
   // {VNUM, value} // <short desc> <repop>
+  {101, 1}, // A pair of glasses 50
+  {103, 1}, // a small hammer 50
   {104, 1}, // A small stethoscope 50
+  {105, 1}, // A pink potion 50
   {106, 1}, // A small wand 50
+  {200, 1}, // A curved rapier 15
   {508, 1}, // Porcelain Teacup 25
-  {543, 1}, // a Tengu Cloak of Straw 7
-  {709, 1}, // A Heavy Stone Club 46
-  {1107, 1}, // mithril a1e 50
+  {1101, 1}, // Sting 50
+  {1106, 1}, // elven bow 50
   {1108, 1}, // the thain girth 50
   {1110, 1}, // an egg 50
   {1301, 1}, // An ivory headband 50
-  {1608, 1}, // a woven vine sash 20
-  {1910, 1}, // a blued-steel falchion 50
-  {1918, 1}, // a red apple 50
-  {2021, 1}, // the Sceptre of Might 50
-  {2101, 1}, // a cloak of deception 25
-  {2103, 1}, // rapier 25
+  {1302, 1}, // A ruby wand 50
+  {1907, 1}, // a blackthorn shillelagh 50
+  {1914, 1}, // a light sphere 50
+  {2005, 1}, // An ugly skull of Draco 50
+  {2020, 1}, // the Ring of Dignity 50
   {2305, 1}, // a white crosier 50
   {2310, 1}, // a black crosier 50
   {2502, 1}, // wooden spear 50
   {2506, 1}, // a black mask 50
+  {2601, 1}, // giant wooden shield 20
+  {2606, 1}, // A pair of alligator hide sleeves 19
   {2700, 1}, // a ragged cotton shirt 50
+  {2702, 1}, // a small sharp knife 30
   {2806, 1}, // a book of songs 50
-  {2807, 1}, // a book of magic 50
-  {2808, 1}, // a book of wars 50
   {2809, 1}, // a book of maths 50
-  {2810, 1}, // a book of languages 50
   {2811, 1}, // a book of jokes 50
-  {2812, 1}, // a book of history 50
-  {2911, 1}, // A Large Broada1e 15
+  {2902, 1}, // A Goat's Milk Bladder 15
   {2913, 1}, // A Large Spiked Chain Mace 15
   {3414, 1}, // a whisper thin rapier 50
   {3425, 1}, // An auburn-colored orb 50
   {3701, 1}, // A Silver Necklace 20
+  {4000, 1}, // A Yellow Ring 30
   {4051, 1}, // a metal helmet 35
   {4100, 1}, // A Black Demon's Blade 50
-  {4400, 1}, // a long silk skirt 11
+  {4516, 1}, // A Rusty Chain Shirt 50
   {4812, 1}, // Averland greatsword 50
   {4813, 1}, // Ostermark greathammer 50
   {4814, 1}, // Middenheim greatdagger 50
-  {5301, 1}, // field rations 50
+  {5302, 1}, // a small iron ball 50
   {5601, 1}, // a bearskin 50
-  {5717, 1}, // A bit of wrapping 50
   {5809, 1}, // bratwurst 50
   {6001, 1}, // a chequered shirt 50
   {6112, 1}, // an iron crown 50
   {6113, 1}, // an iron sceptre 50
-  {6506, 1}, // long
+  {6511, 1}, // A golden dwarven ring 50
   {7003, 1}, // An evil sabre 50
   {7310, 1}, // A Curved sword 50
   {8011, 1}, // sparkling lightening sword 50
   {8202, 1}, // a sealskin jacket 50
   {8323, 1}, // the Cabin Boy's Sponge 50
   {8333, 1}, // a seaweed loincloth 50
-  {8402, 1}, // The Dagger of Aldor 17
-  {8403, 1}, // a chef's hat 25
+  {8407, 1}, // a steel bracelet 50
   {8503, 1}, // Feathers of the Kingfisher 50
   {8510, 1}, // Ragged Sleeves 50
-  {8602, 1}, // a Coconut 100
-  {8603, 1}, // The Holy Grail 10
   {8605, 1}, // a Helmet of the Black Knight 50
-  {8920, 1}, // some Russian caviar 50
-  {9004, 1}, // a Two-handed Mithril Sword 10
+  {8613, 1}, // a Golden Harp 40
   {9414, 1}, // some platinum leg bands 50
   {9421, 1}, // a lodestone 50
-  {9515, 1}, // A crystal  50
+  {9515, 1}, // A crystal staff 50
+  {10302, 1}, // a string of prayer beads 50
   {10903, 1}, // a steel ring 50
   {11062, 1}, // a devil's trident 50
   {11068, 1}, // a black cape 50
   {11313, 1}, // a crystal ball 50
-  {11315, 1}, // cloak of sadness 10
-  {11618, 1}, // The robe of Aman 10
-  {14008, 1}, // a rosette bracelet 50
-  {16514, 1}, // A hardened wa1 breast plate 20
   {16620, 1}, // a flaming whip 40
   {16681, 1}, // Boots of Water Walking 50
   {19009, 1}, // a wool sweater 11
   {20820, 1}, // Stick of Fungus Powers 25
-  {21316, 1}, // A Rotten Dwarven Leg 3
-  {26408, 1}, // A Crackled Black Urn 10
-  {26409, 1}, // A Flying Carpet 10
-  {26411, 1}, // lucky ivory die 30
-  {27100, 1}, // a Centurion's helmet 13
   {27621, 1}, // The necklace of shrunken heads 35
   {28506, 1}, // A Jeweled Tiara 60
-  {201, 2}, // A thick cudgel 58
-  {593, 2}, // An ancient journal 100
-  {803, 2}, // Tattered Leggings 30
-  {910, 2}, // The Rebel's Breastplate 17
+  {709, 2}, // A Heavy Stone Club 46
+  {804, 2}, // Tattered Gloves 30
+  {904, 2}, // A Black Pair of Boots 80
+  {908, 2}, // A Blood Red Cape 60
+  {911, 2}, // The Whip of Oppression 75
+  {1104, 2}, // a silvery cloak 10
+  {1601, 2}, // a Turtle's Shell 15
   {1604, 2}, // a metal hoop 30
-  {2023, 2}, // Great Dipper of the Skies 50
-  {2606, 2}, // A pair of alligator hide sleeves 19
+  {1605, 2}, // a Ring of Vines 15
+  {1608, 2}, // a woven vine sash 20
+  {2503, 2}, // a golden belt 10
+  {2803, 2}, // a shinning necklace 10
+  {3906, 2}, // Feather Sleeves 45
   {4053, 2}, // An Orcish Whip 20
+  {4105, 2}, // Silver Gauntlets 30
   {4107, 2}, // A Marble Pendant 40
-  {4448, 2}, // a shield made from solid oak 18
+  {4400, 2}, // a long silk skirt 11
   {4454, 2}, // An Engraved Eagle Breastplate 30
-  {4464, 2}, // iron shackles and chains 20
-  {4465, 2}, // A Were-Badger's Mane 21
-  {4477, 2}, // An Adamanite Scimitar 30
-  {4508, 2}, // Boots of Striding 10
-  {4510, 2}, // A Mushroom-Top Loincloth 10
-  {4700, 2}, // a small voodoo doll 3
-  {4701, 2}, // the loves of Leoric 9
   {5200, 2}, // A ringmail vest 50
   {5203, 2}, // Some iron sleeves 50
   {5208, 2}, // A sturdy iron shield 50
@@ -1179,153 +1168,307 @@ int aq_objs[][2] = {
   {5449, 2}, // a pair of sandals 50
   {5454, 2}, // the brassard of the hydra 50
   {5455, 2}, // A heavy metal wrist band 50
+  {5713, 2}, // a dagger of slicing 50
   {5802, 2}, // Utility belt 25
-  {6210, 2}, // a priest's skirt 10
-  {6519, 2}, // a box of birth control pills 50
   {7334, 2}, // An Obsidian shard. 10
-  {7506, 2}, // a silk scarf 15
+  {8201, 2}, // golden trident 10
+  {8321, 2}, // A Parrot's Skeleton 33
+  {8322, 2}, // the Pirate Captain's Hat 15
   {8335, 2}, // A Rusted Iron Gauntlet 50
-  {8337, 2}, // a long white coat 50
+  {8403, 2}, // a chef's hat 25
   {8406, 2}, // a Dragon's Scale 50
+  {8408, 2}, // a steel girdle 20
   {8513, 2}, // Fishing Line 50
+  {8616, 2}, // a Goat's Skull 50
+  {8624, 2}, // a Cat-O-Nine Tails 35
+  {9004, 2}, // a Two-handed Mithril Sword 10
   {9307, 2}, // Gold Dragon Shield 50
   {9308, 2}, // A black leather belt with dangling skulls 50
-  {9309, 2}, // A  with arcane symbols 50
+  {9309, 2}, // A staff with arcane symbols 50
   {9321, 2}, // An Arcane Runed Robe 50
   {9521, 2}, // a broken ring 50
-  {10022, 2}, // Obsidian Ring 5
+  {10000, 2}, // Pelt of Matted Fury 11
+  {10008, 2}, // a silver crest 13
   {10405, 2}, // a Magical Eyeglass 65
-  {10409, 2}, // Colossal Claw of the Greater Lycanthrope 10
   {10410, 2}, // Belt of the Class Hero 30
   {11069, 2}, // a pair of black pants 50
   {11072, 2}, // a black belt 40
-  {11316, 2}, // breast plate of Black rose 10
-  {11507, 2}, // the Hammer of Lei Kung 10
-  {11533, 2}, // the  of Shang-Ti 10
-  {12026, 2}, // Ring of Wizardry 50
-  {12028, 2}, // Snakeskin Belt 10
-  {12035, 2}, // dragon skin leggings 50
-  {12036, 2}, // dragon skin sleeves 50
-  {12042, 2}, // blue gem 50
-  {12201, 2}, // Crystal Lantern 50
-  {12202, 2}, // Crystal Shield 50
+  {11144, 2}, // a stiletto 35
+  {11315, 2}, // cloak of sadness 10
+  {11616, 2}, // a galvorn plate 50
   {12911, 2}, // a blue silk shirt 50
-  {12915, 2}, // a blue silk garb 20
-  {13018, 2}, // a wooden seed 20
+  {12932, 2}, // a human skull on a chain 18
   {13019, 2}, // a Heart-Shaped Amulet 20
-  {14001, 2}, // a small bottle of ink 50
-  {14028, 2}, // Shield of Ancient Powers 25
-  {14037, 2}, // a black scarf 50
-  {14503, 2}, // a Blood-Red Amulet 12
-  {16508, 2}, // An emerald muslin sash 43
-  {16807, 2}, // a tattered shroud 22
-  {16904, 2}, // A shattered headstone 100
-  {17021, 2}, // A jagged scalpel 30
-  {20840, 2}, // a shield of mottled flesh 12
+  {14008, 2}, // a rosette bracelet 50
+  {16637, 2}, // Berbalang's cloak 30
+  {19007, 2}, // a bear-tooth amulet 0
+  {20851, 2}, // A toupe 50
   {20856, 2}, // a bracelet of slug entrails 30
-  {21321, 2}, // A Pair of Gleaming Gauntlets 2
-  {21322, 2}, // A Suit of Red Scale Mail 1
-  {24900, 2}, // druidic battle wrap 14
-  {25017, 2}, // Sword of Sharpness 50
-  {26475, 2}, //  The Gloves Of Siva 10
-  {26476, 2}, //  A Jade Ring 20
-  {27103, 2}, // A white toga 75
-  {27104, 2}, // Cestus 23
-  {27113, 2}, // the thick hide of a dinosaur 23
+  {26411, 2}, // lucky ivory die 30
   {27651, 2}, // the jade monkey 25
-  {28503, 2}, // Pan's Flute 15
-  {702, 3}, // a pair of baggy pants 10
-  {3907, 3}, // The tail of the Celestial Dragon 10
+  {27682, 2}, // A purple robe 20
+  {27700, 2}, // An Ice Opal 25
+  {517, 3}, // Shuriken 45
+  {801, 3}, // Pharaoh's Death Mask 30
+  {803, 3}, // Tattered Leggings 30
+  {907, 3}, // A Set of Golden Bangles 40
+  {910, 3}, // The Rebel's Breastplate 17
+  {4109, 3}, // A Belt of the Undergrounds 9
+  {4448, 3}, // a shield made from solid oak 18
+  {4464, 3}, // iron shackles and chains 20
+  {4465, 3}, // A Were-Badger's Mane 21
+  {4477, 3}, // An Adamanite Scimitar 30
+  {4508, 3}, // Boots of Striding 10
+  {4510, 3}, // A Mushroom-Top Loincloth 10
   {4604, 3}, // the Finger of Thievery 10
-  {4608, 3}, // a Parasite's Fang 5
-  {4704, 3}, // Werra's Belt of Garbage 5
-  {5105, 3}, // a jeweled scimitar 12
-  {5110, 3}, // A tome of forbidden magic 8
-  {5804, 3}, // Pair of red lederhosen 20
-  {5920, 3}, // Myconid blood 15
-  {6208, 3}, // a chitonous exoskeleton 10
-  {6215, 3}, // a pair of bearskin sleeves 10
-  {6217, 3}, // a flute made of bone 8
   {6802, 3}, // leg plates of devotion 50
   {6803, 3}, // buckler of obeisance 50
   {7502, 3}, // a dueling pistol 50
-  {7520, 3}, // a butchering knife 30
+  {7506, 3}, // a silk scarf 15
   {7701, 3}, // a heavy crocodile skin 100
-  {8361, 3}, // a Granite  20
-  {10905, 3}, // a pair of Zyca arm plates 10
+  {8337, 3}, // a long white coat 50
+  {8402, 3}, // The Dagger of Aldor 17
+  {8603, 3}, // The Holy Grail 10
+  {8922, 3}, // a common recipe 3
+  {10018, 3}, // lime-green jerkin 3
+  {10021, 3}, // Wreath of Fire 13
+  {10409, 3}, // Colossal Claw of the Greater Lycanthrope 10
   {10908, 3}, // a Zyca Orb 50
-  {11314, 3}, // bracelet of magic 10
-  {11704, 3}, // a slender mallet 100
-  {11707, 3}, // A blackened parchment 100
-  {12023, 3}, // Dark Banded Mail 25
+  {11316, 3}, // breast plate of Black rose 10
+  {11507, 3}, // the Hammer of Lei Kung 10
+  {11524, 3}, // The Plate Mail of Fei Lien 10
+  {11533, 3}, // the Staff of Shang-Ti 10
+  {11618, 3}, // The robe of Aman 10
+  {12026, 3}, // Ring of Wizardry 50
+  {12033, 3}, // Stone Shield 50
+  {12035, 3}, // dragon skin leggings 50
+  {12036, 3}, // dragon skin sleeves 50
+  {12045, 3}, // glowing gem 50
+  {12201, 3}, // Crystal Lantern 50
+  {12202, 3}, // Crystal Shield 50
   {12206, 3}, // Ettin Leg Plates 50
   {12207, 3}, // Ettin Arm Plates 50
   {12209, 3}, // small black stone 50
-  {12823, 3}, // A Tarion Badge 100
   {12929, 3}, // a black silk hood 20
-  {12932, 3}, // a human skull on a chain 18
+  {13018, 3}, // a wooden seed 20
   {13025, 3}, // An Oak-Leaf Net 50
-  {13101, 3}, // a living flame 15
-  {13201, 3}, // a shard of frozen water 15
-  {13301, 3}, // a heart of stone 15
-  {13401, 3}, // a wispy cloud 15
   {13503, 3}, // crimson mask 30
-  {13506, 3}, // Glowing armbands of Creaz 20
-  {13507, 3}, // Ornate platinum belt 20
-  {14502, 3}, // The Hell Stick 10
+  {13504, 3}, // Black bracelet of Kgozt 20
+  {14027, 3}, // Spiked Hammer of Koraths 20
+  {14028, 3}, // Shield of Ancient Powers 25
+  {16507, 3}, // a bloody staff 35
+  {16508, 3}, // An emerald muslin sash 43
+  {16651, 3}, // a green potion 10
+  {16660, 3}, // A huge stone hammer 10
+  {16808, 3}, // an obsidian arrowhead 25
+  {16809, 3}, // an atlatl 20
+  {16807, 3}, // a tattered shroud 22
+  {16902, 3}, // A Web-strewn Shield 7
+  {16903, 3}, // A Web-strewn Plate 8
+  {17021, 3}, // A jagged scalpel 30
   {17023, 3}, // Dune Boots 40
-  {17024, 3}, // A pointy wizard's hat 20
+  {17300, 3}, // Frosted Bracelet 55
   {20147, 3}, // a Ninjato 100
-  {21108, 3}, // A giant leaf shield 10
-  {21205, 3}, // Boots of Stealth 10
+  {20825, 3}, // Wings of the Cloaker Lord 20
   {21215, 3}, // Golden Dagger 29
-  {21217, 3}, // the Mallet of the Underworld 10
+  {21305, 3}, // A broken sword 30
   {24904, 3}, // Bracelet made from roots 25
-  {24905, 3}, // Druid's Leafy Green Cloak 12
   {25016, 3}, // a Silver Trident 50
-  {25026, 3}, // the Soul Amulet 10
   {25027, 3}, // The Silver Circlet of Concentration 50
-  {27106, 3}, // Gladius 9
-  {27108, 3}, // a  of the Magi 78
-  {27110, 3}, // a hunting knife 12
-  {27720, 3}, // Banded Mail of the Bandit 5
-  {27721, 3}, // Wristband of the Assassin 10
+  {26408, 3}, // A Crackled Black Urn 10
+  {26409, 3}, // A Flying Carpet 10
+  {27108, 3}, // a Staff of the Magi 78
+  {27113, 3}, // the thick hide of a dinosaur 23
+  {27116, 3}, // The Shadowblade 32
+  {28503, 3}, // Pan's Flute 15
   {204, 4}, // A gleaming spyglass 7
-  {5109, 4}, // Drow Battle Gauntlets 50
-  {5111, 4}, // a polished marble ring 13
-  {5118, 4}, // a pair of black gloves 19
-  {5175, 4}, // an eyepatch 19
-  {5197, 4}, // Ball of Faerie Fire 10
-  {5546, 4}, // Long Spiked Whip 10
-  {12928, 4}, // a silver katana 8
-  {13001, 4}, // an Elven Cloak 15
-  {17002, 4}, // Vermilion's Blade 16
-  {17309, 4}, // Fiend's Girdle 30
+  {3907, 4}, // The tail of the Celestial Dragon 10
+  {5709, 4}, // The medallion of Akinra 10
+  {5711, 4}, // mercury's boots 10
+  {5804, 4}, // Pair of red lederhosen 20
+  {6208, 4}, // a chitonous exoskeleton 10
+  {6210, 4}, // a priest's skirt 10
+  {6215, 4}, // a pair of bearskin sleeves 10
+  {7520, 4}, // a butchering knife 30
+  {7509, 4}, // a pair of silk gloves 10
+  {7510, 4}, // a diamond ring 10
+  {7511, 4}, // a diamond bracelet 10
+  {7522, 4}, // a pair of white, flowing silk pants 10
+  {8362, 4}, // dusty pants 20
+  {10015, 4}, // an Ethereal Sash 3
+  {10022, 4}, // Obsidian Ring 5
+  {10027, 4}, // cloudy glass circlet 0
+  {10905, 4}, // a pair of Zyca arm plates 10
+  {10907, 4}, // a Zyca ring 10
+  {11506, 4}, // the Wyvernspur 50
+  {12028, 4}, // Snakeskin Belt 10
+  {12023, 4}, // Dark Banded Mail 25
+  {12032, 4}, // Adventurer's Cloak 33
+  {12040, 4}, // skin of salamander 33
+  {12915, 4}, // a blue silk garb 20
+  {13101, 4}, // a living flame 15
+  {13201, 4}, // a shard of frozen water 15
+  {13301, 4}, // a heart of stone 15
+  {13401, 4}, // a wispy cloud 15
+  {13506, 4}, // Glowing armbands of Creaz 20
+  {13507, 4}, // Ornate platinum belt 20
+  {14503, 4}, // a Blood-Red Amulet 12
+  {16512, 4}, // A Rusted Bucket 15
+  {16513, 4}, // A rotting bridle 15
+  {16514, 4}, // A hardened wax breast plate 20
+  {16530, 4}, // Filthy Slippers 75
+  {17024, 4}, // A pointy wizard's hat 20
+  {17080, 4}, // a Silver Harmonica 20
   {17321, 4}, // Cube of Awareness 50
-  {17371, 4}, // Dragon Horn 15
-  {20107, 4}, // Drums of Panic 35
-  {20145, 4}, // War Fan 17
-  {21203, 4}, // The Mask of Concentration 18
-  {21210, 4}, // a Dragon Scale Belt 17
-  {21214, 4}, // Thin
-  {23006, 4}, // a Razor-Sharp Tooth from the Remorhaz 20
-  {24906, 4}, // Evil Avenger 11
-  {25015, 4}, // A Flaming Two-Handed Sword 50
-  {25018, 4}, // A Crystal Ring 10
-  {26406, 4}, // A Holey Majestic Cloak 12
-  {26578, 4}, // A Tortoise Shell Shield 8
-  {26579, 4}, // The Loincloth of Good Omens 8
-  {26711, 4}, // The Greatsword of the Guard 8
-  {27102, 4}, // A bone mace 12
-  {11702, 5}, // A Silver Full Plate 11
-  {11720, 5}  // a cracked dragon's tooth 13
+  {20840, 4}, // a shield of mottled flesh 12
+  {21108, 4}, // A giant leaf shield 10
+  {21205, 4}, // Boots of Stealth 10
+  {21217, 4}, // the Mallet of the Underworld 10
+  {23008, 4}, // Pelt of the Glacial Polar Bear 5
+  {24900, 4}, // druidic battle wrap 14
+  {24901, 4}, // Dark Druid's buckler 15
+  {24905, 4}, // Druid's Leafy Green Cloak 12
+  {25007, 4}, // Silver Shield 10
+  {25010, 4}, // A Pair of Jeweled Gauntlets 10
+  {25011, 4}, // A Pitch-Black Cloak 20
+  {26475, 4}, // The Gloves Of Siva 10
+  {26476, 4}, // A Jade Ring 20
+  {26710, 4}, // A Transparent Cutlass 10
+  {27100, 4}, // a Centurion's helmet 13
+  {27104, 4}, // Cestus 23
+  {27110, 4}, // a hunting knife 12
+  {27123, 4}, // a wreath of true laurel 10
+  {27721, 4}, // Wristband of the Assassin 10
+  {518, 5}, // a shinobigawa 14
+  {802, 5}, // Sword of Healing 10
+  {4608, 5}, // a Parasite's Fang 5
+  {4701, 5}, // the Gloves of Leoric 9
+  {5109, 5}, // Drow Battle Gauntlets 50
+  {5111, 5}, // a polished marble ring 13
+  {5116, 5}, // a piwafwi cloak 13
+  {5175, 5}, // an eyepatch 19
+  {5920, 5}, // Myconid blood 15
+  {6217, 5}, // a flute made of bone 8
+  {11327, 5}, // a band of twisted veins 7
+  {12208, 5}, // Amulet of Ettins 10
+  {12211, 5}, // Ettins Cape 10
+  {12822, 5}, // the Scent of a Mankey 10
+  {12827, 5}, // A bag of MankeyBits 10
+  {12928, 5}, // a silver katana 8
+  {13001, 5}, // an Elven Cloak 15
+  {14002, 5}, // The Shadow Cloak 15
+  {14004, 5}, // The Shadow Plate 15
+  {16528, 5}, // A Stained Apron 20
+  {17309, 5}, // Fiend's Girdle 30
+  {20107, 5}, // Drums of Panic 35
+  {21110, 5}, // A sword made from bone 10
+  {21200, 5}, // Darkened Bone Ring 10
+  {21201, 5}, // Darkened Bone Plate 8
+  {21203, 5}, // The Mask of Concentration 18
+  {21314, 5}, // An Ornamental Belt 1
+  {21322, 5}, // A Suit of Red Scale Mail 1
+  {24906, 5}, // Evil Avenger 11
+  {25018, 5}, // A Crystal Ring 10
+  {25026, 5}, // the Soul Amulet 10
+  {27102, 5}, // A bone mace 12
+  {27106, 5}, // Gladius 9
+  {27712, 5}, // Basilisk Blood Potion 10
+  {27720, 5}, // Banded Mail of the Bandit 5
+  {704, 6}, // Mask of Lizard Powers 10
+  {707, 6}, // The Ring of Eternal Life 7
+  {4704, 6}, // Werra's Belt of Garbage 5
+  {5105, 6}, // a jeweled scimitar 12
+  {5197, 6}, // Ball of Faerie Fire 10
+  {12001, 6}, // golden breastplate 10
+  {12018, 6}, // golden leggings 10
+  {12020, 6}, // golden shield 10
+  {12901, 6}, // the Fung-Tai dagger 8
+  {12909, 6}, // a band of holy spirits 5
+  {13509, 6}, // Black cloak of Darkness 15
+  {14502, 6}, // The Hell Stick 10
+  {16529, 6}, // Wax Ring 12
+  {17002, 6}, // Vermilion's Blade 16
+  {17005, 6}, // Hood of Darkness 10
+  {17371, 6}, // Dragon Horn 15
+  {17396, 6}, // A mithril hammer 10
+  {20145, 6}, // War Fan 17
+  {21206, 6}, // Armlinks of Fire 15
+  {21210, 6}, // a Dragon Scale Belt 17
+  {21321, 6}, // A Pair of Gleaming Gauntlets 2
+  {26406, 6}, // A Holey Majestic Cloak 12
+  {26477, 6}, // The Mantle of Devotion 8
+  {700, 7}, // a dusty deck of Tarot Cards 10
+  {702, 7}, // a pair of baggy pants 10
+  {4700, 7}, // a small voodoo doll 3
+  {5546, 7}, // Long Spiked Whip 10
+  {7700, 7}, // Typik's Bloody Entrails 17
+  {11702, 7}, // A Silver Full Plate 11
+  {17322, 7}, // Dragon Highlord's Shield 10
+  {21207, 7}, // Black Demon's Talon 10
+  {21212, 7}, // The Stone Dragon's Shield 10
+  {26478, 7}, // The Signet Ring of the Sultan 6
+  {26578, 7}, // A Tortoise Shell Shield 8
+  {27722, 7}, // Talisman of the Desert Moon 5
+  {28739, 7}, // A pair of melted Wax Wings 15
+  {28740, 7}, // The Shield of All Times 15
+  {543, 8}, // a Tengu Cloak of Straw 7
+  {5110, 8}, // A tome of forbidden magic 8
+  {5582, 8}, // a silken cloak 11
+  {11720, 8}, // a cracked dragon's tooth 13
+  {13500, 8}, // a tooth-and-skull necklace 7
+  {14507, 8}, // Sandals of Sorrow 10
+  {17306, 8}, // Fiend's Necklace 8
+  {17372, 8}, // The Seal of the Drake 7
+  {20146, 8}, // shimmering band of Mokume Gane 5
+  {26713, 8}, // A Clean Red Cloak 5
+  {26714, 8}, // A Glowing Staff of Gnarled Wood 5
+  {28741, 8}, // The Coin of Fate 12
+  {4478, 10}, // A Pretty Noose 8
+  {4488, 10}, // Axe of Justice 10
+  {5198, 10}, // Flaming Mask 10
+  {7201, 10}, // a soul shard fragment 10
+  {16503, 10}, // the Dagger of Segretto 5
+  {16805, 10}, // Scythe of Execution 8
+  {16806, 10}, // A Bladed Lash 8
+  {21326, 10}, // The Left Gauntlet of Calaphas 10
+  {26402, 10}, // The Wand of Watoomb 18
+  {26579, 10}, // The Loincloth of Good Omens 8
+  {26711, 10}, // The Greatsword of the Guard 8
+  {5807, 15}, // Silk Suit 20
+  {11712, 15}, // Armor of Dark Angels 8
+  {26404, 15}, // The Dark Sphere of Ul 8
+  {27711, 15}, // A Carapace Shield 7
+  {571, 20}, // Ebon Armguards 5
+  {585, 20}, // Small Portal of Evil 7
+  {599, 20}, // The Gong of Unholy Wrath 8
+  {5580, 20}, // Scorched Abdomen 8
+  {20132, 20}, // A Gleaming Jade Battlesuit 6
+  {21329, 20}, // a swarm of angry beetles 4
+  {21330, 20}, // a mass of black, glistening thorns 5
+  {25300, 20}, // Tail of Minos 8
+  {26403, 20}, // The Mallet of Orcus 6
+  {26709, 20}, // The Grand Cape of Emithoynarthe 15
+  {26712, 20}, // Heavy Red Gloves 15
+  {26715, 20}, // Shimmering Metallic Greaves 15
+  {27724, 20}, // A Pair of Fine Leather Boots 3
+  {27726, 20}, // The Circlet of Devotion 4
+  {27727, 20}, // A Pair of Tactical Zyca Leg Plates 4
+  {28602, 20}, // Olympian Leg Plates 12
+  {28720, 20}, // The Staff of Dark Influence 8
+  {300, 25}, // The Talon of a Red Dragon 6
+  {301, 25}, // a pair of red dragon scale boots 6
+  {572, 25}, // An oaken root wand 3
+  {2716, 25}, // The black sting of the Queen 10
+  {6806, 25}, // Erishkigal's lash 9
+  {21309, 25} // A Rotting Otyugh Skin 2
 };
 
 #define STORAGE_ROOM            5807
 #define CENTRAL_PROCESSING      5812
 #define COLLECTOR               5812
 #define TEMPLATE_AQORDER        40
-#define AQ_ORDER_QUIT_TIME      120
+#define AQ_ORDER_QUIT_TIME      150
+#define AQ_ORDER_WAIT_TIME      30
 
 char *kendernames[9] = {"Karl","Dieter","Hans","Jurgen","Hilda",
                           "Erwin","Herman","Eva","Marlene"};
@@ -1784,6 +1927,13 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
         extract_obj(order);
         do_quest(collector, buf, CMD_QUEST);
         ch->ver3.quest_points += questvalue;
+
+        // this is where it gets moved to another room to "hack" a wait timer
+        //   --- boots and crashes will cancel this, so be it
+        obj_from_char(order);
+        obj_to_room(order, real_room(CENTRAL_PROCESSING));
+        order->obj_flags.timer = AQ_ORDER_WAIT_TIME; // setup "hack" wait timer
+        SET_BIT(order->obj_flags.extra_flags2, ITEM_ALL_DECAY);
         return FALSE;      
       } else { // missing at least one object
         mob_do(collector, collectoraction[number(0, NUMELEMS(collectoraction)-1)]);
