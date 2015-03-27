@@ -1,54 +1,8 @@
 /* ************************************************************************
-*  file: spells1.c , handling of magic.                   Part of DIKUMUD *
+*  file: spells.c , handling of magic.                    Part of DIKUMUD *
 *  Usage : Procedures handling all offensive magic.                       *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 **************************************************************************/
-
-/*
-$Author: void $
-$Date: 2004/11/19 17:20:33 $
-$Header: /home/ronin/cvs/ronin/spells.c,v 2.8 2004/11/19 17:20:33 void Exp $
-$Id: spells.c,v 2.8 2004/11/19 17:20:33 void Exp $
-$Name:  $
-$Log: spells.c,v $
-Revision 2.8  2004/11/19 17:20:33  void
-Changed name of lvl 50 ninja spell to mystic swiftness
-
-Revision 2.7  2004/11/19 14:47:21  void
-New Level 50 Ninja Spell (adds chance of 3rd hit)
-
-Revision 2.6  2004/10/21 17:08:22  void
-Added level 50 AP spell Blood Lust
-
-Revision 2.5  2004/09/29 22:56:13  void
-Spell Rush for Commando
-
-Revision 2.4  2004/09/28 14:28:01  void
-Added Level 50 Cleric Spell Divine Intervention
-
-Revision 2.3  2004/09/22 21:58:26  void
-Added level 50 Mage spell Quick (Allows for 2 casts in a single combat
-round)
-
-Revision 2.2  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
-
-Revision 2.1  2004/02/19 19:20:22  void
-Added Spell Shroud of Existence (Good Align Commando Spell)
-
-Revision 2.0.0.1  2004/02/05 16:11:45  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2002/10/27 11:59:36  ronin
-Vent fixed to show player rank, also fixed
-to show who is casting to imm+.
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <stdio.h>
 #include <string.h>
@@ -84,9 +38,7 @@ void magic_heal(CHAR *ch, int spell, int heal, bool overheal)
   }
 
   if (affected_by_spell(ch, SPELL_DEGENERATE) &&
-      ((duration_of_spell(ch, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(ch, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))))
-  {
+      (duration_of_spell(ch, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", ch);
     return;
   }

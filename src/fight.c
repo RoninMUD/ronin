@@ -1,4 +1,4 @@
-/* ************************************************************************
+/**************************************************************************
 *  File: fight.c , Combat module.                         Part of DIKUMUD *
 *  Usage: Combat system and messages.                                     *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
@@ -2188,8 +2188,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
     /* Divine Intervention doesn't work on actively Degenerated people. */
     if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-        duration_of_spell(victim, SPELL_DEGENERATE) > 27) {
-      send_to_char("Even the gods are powerless to intervene and heal your degenerated body.\n\r", victim);
+        (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
+      send_to_char("Your call to the gods to intervene and heal your degenerated body falls on deaf ears.\n\r", victim);
     }
     else {
       GET_HIT(victim) = GET_MAX_HIT(victim);
