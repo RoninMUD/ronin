@@ -7,65 +7,6 @@
 ** Do not distribute without permission.
 */
 
-/*
-$Author: void $
-$Date: 2004/10/21 17:08:23 $
-$Header: /home/ronin/cvs/ronin/subclass.c,v 2.7 2004/10/21 17:08:23 void Exp $
-$Id: subclass.c,v 2.7 2004/10/21 17:08:23 void Exp $
-$Name:  $
-$Log: subclass.c,v $
-Revision 2.7  2004/10/21 17:08:23  void
-Added level 50 AP spell Blood Lust
-
-Revision 2.6  2004/09/29 22:56:13  void
-Spell Rush for Commando
-
-Revision 2.5  2004/09/28 20:07:03  void
-Some more fixes to Divine Intervention
-
-Revision 2.4  2004/05/12 13:20:33  ronin
-Fix for Rashgugh to not pop in certain zones.  Previous fix prevented
-him from moving into certain zones.
-
-Revision 2.3  2004/05/05 12:38:27  ronin
-Added Olyumpus zones to those blocked from Rashgugh.
-
-Revision 2.2  2004/04/29 11:40:35  ronin
-Added Hell and Dagoor zones to those Rashgugh does not visit.
-
-Revision 2.1  2004/02/19 19:20:22  void
-Added Spell Shroud of Existence (Good Align Commando Spell)
-
-Revision 2.0.0.1  2004/02/05 16:11:49  ronin
-Reinitialization of cvs archives
-
-Revision 2003/07/31 Ranger
-Check to allow mobs to be able to use subclass skills/spells added to
-check_subclass.
-
-Revision 1.7  2003/02/11 13:25:03  ronin
-Replaced Twixt with Pan as bard sc master.
-
-Revision 1.6  2002/11/03 13:25:03  ronin
-Fix to add Merc level 4 to check_sc_access for FEINT.
-
-Revision 1.5  2002/04/27 05:55:03  ronin
-Fix to have twixt spec working and have twixt as subclass master.
-
-Revision 1.4  2002/04/16 18:00:11  ronin
-Fix to allow mobs to cast certain subclass spells and skills.
-The skills allowed are those that require an active command.
-No access is given to automatic skills.
-
-Revision 1.3  2002/04/15 03:25:35  ronin
-Update to allow mobs to use subclass spells.
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -731,7 +672,12 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         break;
       }
     }
-    distribute_token();
+
+    // don't redistribute the token if the maximum number are already in the game.
+    if (TOKENCOUNT > obj_proto_table[real_object(5)].number) {
+      distribute_token();
+    }
+
     return TRUE;
   }
   return FALSE;
