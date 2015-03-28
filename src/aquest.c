@@ -1550,23 +1550,22 @@ int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
       order->description = str_dup(buf);        // change the long desc to include requester's name
       sprintf(buf, "%s's acquisition order", CAP(idname[order->ownerid[0]].name));
       order->short_description = str_dup(buf);  // change the short desc to include requester's name
-
-      // change the extra desc to include required objects
-      CREATE(tmp_descr, struct extra_descr_data, 1);
-      tmp_descr->keyword = str_dup("order");
-      sprintf(buf, "A well-worn, faded canvas bag has a large blue patch sewn\n\r\
+    }
+    // change the extra desc to include required objects
+    CREATE(tmp_descr, struct extra_descr_data, 1);
+    tmp_descr->keyword = str_dup("order");
+    sprintf(buf, "A well-worn, faded canvas bag has a large blue patch sewn\n\r\
 to it. The patch has been sewn over half-a-hundred times and\n\r\
 had those stitches ripped out just as many. There are four\n\r\
 hastily sewn lines of text detailing the kenders' wish list.\n\r\
 \n\r   %s\n\r   %s\n\r   %s\n\r   %s\n\r",
-          order->obj_flags.value[0] >= 0 ? real_object(order->obj_flags.value[0]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[0])].short_description : "something" : "nothing",
-          order->obj_flags.value[1] >= 0 ? real_object(order->obj_flags.value[1]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[1])].short_description : "something" : "nothing",
-          order->obj_flags.value[2] >= 0 ? real_object(order->obj_flags.value[2]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[2])].short_description : "something" : "nothing",
-          order->obj_flags.value[3] >= 0 ? real_object(order->obj_flags.value[3]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[3])].short_description : "something" : "nothing");
-      tmp_descr->description = str_dup(buf);
-      order->ex_description = tmp_descr;
-      tmp_descr = NULL;
-    }
+        order->obj_flags.value[0] >= 0 ? real_object(order->obj_flags.value[0]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[0])].short_description : "something" : "nothing",
+        order->obj_flags.value[1] >= 0 ? real_object(order->obj_flags.value[1]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[1])].short_description : "something" : "nothing",
+        order->obj_flags.value[2] >= 0 ? real_object(order->obj_flags.value[2]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[2])].short_description : "something" : "nothing",
+        order->obj_flags.value[3] >= 0 ? real_object(order->obj_flags.value[3]) >= 0 ? obj_proto_table[real_object(order->obj_flags.value[3])].short_description : "something" : "nothing");
+    tmp_descr->description = str_dup(buf);
+    order->ex_description = tmp_descr;
+    tmp_descr = NULL;
     break;
   case MSG_CORPSE:
     // pop orders out when a corpse is made with a message
