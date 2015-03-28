@@ -1505,10 +1505,13 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
       if (aq_objs[pick][0] == aqorder->obj_flags.value[1]) continue;
       if (aq_objs[pick][0] == aqorder->obj_flags.value[2]) continue;
       if (aq_objs[pick][0] == aqorder->obj_flags.value[3]) continue;
-      if (lh_opt==1 && aq_objs[pick][1]>1) continue; // solo
-      if (lh_opt==2 && aq_objs[pick][1]>2) continue; // low
-      if (lh_opt==3 && aq_objs[pick][1]<3) continue; // high
-      if ((lh_opt==4 && aq_objs[pick][1]<2) || (lh_opt==4 && aq_objs[pick][1]>3)) continue; // mid
+      if (lh_opt == 0 && aq_objs[pick][1] > 8) continue;
+      if (lh_opt == 1 && aq_objs[pick][1] != 1) continue; // newbie
+      if (lh_opt == 2 && aq_objs[pick][1] != 2) continue; // low
+      if (lh_opt == 3 && aq_objs[pick][1] != 3) continue; // mid
+      if (lh_opt == 4 && aq_objs[pick][1] != 4) continue; // high
+      if (lh_opt == 5 && ((aq_objs[pick][1] < 4) || (aq_objs[pick][1] > 8))) continue; // veteran
+      if (lh_opt == 6 && aq_objs[pick][1] < 10) continue; // uber
       aqorder->obj_flags.value[i] = aq_objs[pick][0];
       questvalue += aq_objs[pick][1];
       assigned[i] = TRUE;
@@ -1746,12 +1749,22 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
         
         arg = one_argument(arg, argument);
         if (*argument) {
-          if (is_abbrev(argument,"solo")) lh_opt=1;
-          if (is_abbrev(argument,"low"))  lh_opt=2;
-          if (is_abbrev(argument,"high")) lh_opt=3;
-          if (is_abbrev(argument,"mid"))  lh_opt=4;
+          if (is_abbrev(argument,"newbie"))  lh_opt=1;
+          if (is_abbrev(argument,"low"))     lh_opt=2;
+          if (is_abbrev(argument,"mid"))     lh_opt=3;
+          if (is_abbrev(argument,"high"))    lh_opt=4;
+          if (is_abbrev(argument,"veteran")) lh_opt=5;
+          if (is_abbrev(argument,"uber"))    lh_opt=6;
         }
-        if (!generate_aq_order(ch, collector, lh_opt)) {
+        if (lh_opt == 1 && GET_LEVEL(ch) >= 40) {
+          mob_do(collector, "bah");
+          sprintf(buf, "I've been surrounded by slackers for years, I'm not interested in another one. \
+You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch));
+          do_say(collector, buf, CMD_SAY);
+        } else if (lh_opt == 6 && GET_LEVEL(ch) < 45) {
+          mob_do(collector, "rofl");
+          do_say(collector, "Not bloody likely. You couldn't handle that level of order pipsqueak.", CMD_SAY);
+        } else if (!generate_aq_order(ch, collector, lh_opt)) {
           mob_do(collector, "shrug");
           sprintf(buf, "Sorry %s, guess I couldn't find an order for you.",
               GET_NAME(ch));
@@ -1791,7 +1804,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
       sprintf(buf, "You hear faint voices coming from a small device on %s's arm.\n\r",
           GET_SHORT(collector));
       send_to_room(buf, CHAR_REAL_ROOM(collector));
-      mob_do(collector, "roll");
+      mob_do(collector, chance(50) ? "roll" : "ignore");
       break;
     default:
       break;
@@ -1814,8 +1827,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
     if (order && GET_ITEM_TYPE(order) == ITEM_AQ_ORDER) {
       
       if ((order->ownerid[0] != ch->ver3.id) &&
-          (order->ownerid[0] > 0) &&
-          (strcmp(idname[order->ownerid[0]].name, idname[ch->ver3.id].name))) {
+          (order->ownerid[0] > 0)) {
         // handed in by non-owner
         sprintf(buf, "Where'd you get this? Did you kill 'em? Give it back to %s.",
             CAP(idname[order->ownerid[0]].name));
@@ -1866,7 +1878,8 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
                   if (aq_objs[k][0] == V_OBJ(obj)) {  
                     value_exists = TRUE;
                     tmp_value = aq_objs[k][1];
-                    if (chance(2)) {
+                    if (chance( MIN(5, tmp_value) )) {
+                      // higher value has higher chance for doubling - reward trying harder
                       tmp_value *= 2;
                     }                    
                     questvalue += tmp_value;
@@ -1924,7 +1937,6 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
         
         sprintf(buf, "%s completed an order for me, what a %s!", GET_NAME(ch),
             GET_SEX(ch) == SEX_MALE ? "guy" : "gal");
-        extract_obj(order);
         do_quest(collector, buf, CMD_QUEST);
         ch->ver3.quest_points += questvalue;
 
