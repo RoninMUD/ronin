@@ -12,68 +12,6 @@
 ** Do not distribute without permission.
 */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:30 $
-$Header: /home/ronin/cvs/ronin/subclass.skills.c,v 2.4 2005/01/21 14:55:30 ronin Exp $
-$Id: subclass.skills.c,v 2.4 2005/01/21 14:55:30 ronin Exp $
-$Name:  $
-$Log: subclass.skills.c,v $
-Revision 2.4  2005/01/21 14:55:30  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.3  2004/11/16 05:05:03  ronin
-Chaos 2004 Update.
-
-Revision 2.2  2004/10/11 19:25:41  piggy
-Changed Fade hitroll penalty to be based on level, and remove AC bonus.
-
-Revision 2.1  2004/05/02 13:12:45  ronin
-Fix to stop assassinate from jumping over blocking mobs.
-
-Revision 2.0.0.1  2004/02/05 16:11:51  ronin
-Reinitialization of cvs archives
-
-
-Revision 6-Nov-03 Ranger
-Added disarm log to impair.
-
-Revision - 17-Oct-03 Liner
-mantra - check for degenerate before healing.
--adding checks for chaosmode to stop healing things.
-
-Revision - 03-Dec-02 Ranger
-switch - increased chance of a furied Pa to switch
-charge - fixed problem if successful charge lead, rest of group will charge
-
-Revision - 27-Nov-02 Ranger
-  charge: can't charge if mob is already fighting, fix to have leader charge,
-          some message changes
-
-Revision 1.6  2002/07/24 17:55:01  ronin
-Small fix to trip to check if victim is already affected by trip.
-Fix to reorder the logic of some checks in some skills so that
-messages received by the play makes more sense.
-Additional messages added to the protect skill.
-
-Revision 1.5  2002/06/18 14:32:20  ronin
-Adding divide_experience before raw_kill to ensure proper quest
-completion.  Addition of flag within divide_experience to force
-amount to 0 if required.
-
-Revision 1.4  2002/04/16 18:00:34  ronin
-Addition of IMMUNE_EXECUTE
-
-Revision 1.3  2002/03/31 07:54:09  ronin
-Fix of sweep skill affecting PCs in the room.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -1853,31 +1791,25 @@ void do_mantra(CHAR *ch, char *arg, int cmd)
     return;
   }
 
-  if (CHAOSMODE && victim != ch)
-  {
+  if (CHAOSMODE && (victim != ch)) {
     send_to_char("You cannot perform this skill on another player during chaos.\n\r", ch);
-
     return;
   }
 
   check = number(1, 101) - GET_WIS_APP(ch);
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))))) {
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     check = 256; // auto fail
   }
 
-  if (check > GET_LEARNED(ch, SKILL_MANTRA))
-  {
-    if (victim != ch)
-    {
+  if (check > GET_LEARNED(ch, SKILL_MANTRA)) {
+    if (victim != ch) {
       act("You chant your mantra to $N, but nothing happens.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n chants $s mantra to you, but nothing happens.", FALSE, ch, 0, victim, TO_VICT);
       act("$n chants $s mantra to $N, but nothing happens.", FALSE, ch, 0, victim, TO_NOTVICT);
     }
-    else
-    {
+    else {
       send_to_char("You chant softly to yourself with no noticeable affect.\n\r", ch);
       act("$n chants softly to $mself with no noticeable affect.", FALSE, ch, 0, 0, TO_ROOM);
     }
@@ -1886,22 +1818,18 @@ void do_mantra(CHAR *ch, char *arg, int cmd)
 
     skill_wait(ch, SKILL_MANTRA, 2);
   }
-  else
-  {
-    if (victim != ch)
-    {
+  else {
+    if (victim != ch) {
       act("You chant softly to $N, healing $S spirit and giving $M life.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n chants softly to you, healing your spirit and giving you life.", FALSE, ch, 0, victim, TO_VICT);
       act("$n chants softly to $N, healing $S spirit and giving $M life.", FALSE, ch, 0, victim, TO_NOTVICT);
     }
-    else
-    {
+    else {
       send_to_char("You chant softly, healing your spirit and giving yourself life.\n\r", ch);
       act("$n chants softly, healing $s spirit and giving $mself life.", FALSE, ch, 0, 0, TO_ROOM);
     }
 
     GET_MANA(ch) = MAX(GET_MANA(ch) - 120, 0);
-    //GET_HIT(victim) = MIN(GET_HIT(victim) + 500, GET_MAX_HIT(victim));
     magic_heal(victim, SKILL_MANTRA, 500, FALSE);
 
     heal = (GET_LEVEL(ch) + (5 * GET_WIS_APP(ch)));

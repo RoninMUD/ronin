@@ -4,163 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/* Added IMMUNE_FIRE/LIGHTNING/POISON/SLEEP/CHARM/BLINDNESS/DRAIN
-   Ranger Oct 96 */
-
-/*
-$Author: ronin $
-$Date: 2005/01/25 21:48:58 $
-$Header: /home/ronin/cvs/ronin/magic.c,v 2.31 2005/01/25 21:48:58 ronin Exp $
-$Id: magic.c,v 2.31 2005/01/25 21:48:58 ronin Exp $
-$Name:  $
-$Log: magic.c,v $
-Revision 2.32  2005/05/11 21:37:20  ronin
-Added SKILL_EVASION to not be disenchanted in spell_disenchant.
-
-Revision 2.31  2005/01/25 21:48:58  ronin
-Added owner to clone spell.
-
-Revision 2.30  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.29  2004/11/20 02:55:12  ronin
-Fixed mana regen amount on quick from 30 to 10.
-
-Revision 2.28  2004/11/19 17:20:33  void
-Changed name of lvl 50 ninja spell to mystic swiftness
-
-Revision 2.27  2004/11/19 14:47:21  void
-New Level 50 Ninja Spell (adds chance of 3rd hit)
-
-Revision 2.26  2004/11/16 05:11:52  ronin
-Chaos 2004 Update
-
-Revision 2.25  2004/11/15 22:29:10  void
-Made changes to Blood Lust, Twist, Quick, & Quad
-
-Revision 2.24  2004/11/13 17:17:14  void
-Added Mana_Regen to Spell Affects as well as Quick
-
-Revision 2.23  2004/10/21 17:08:22  void
-Added level 50 AP spell Blood Lust
-
-Revision 2.22  2004/10/06 12:02:04  ronin
-Fix for divine intervention not working in no-magic room.
-
-Revision 2.21  2004/09/29 22:56:12  void
-Spell Rush for Commando
-
-Revision 2.20  2004/09/29 15:44:31  void
-Some Final changes to Divine Intervention
-
-Revision 2.19  2004/09/28 17:14:05  void
-Made some minor changes to Divine Intervention
-
-Revision 2.18  2004/09/28 14:32:15  void
-Changed duration of Divine Intervention
-
-Revision 2.17  2004/09/28 14:28:00  void
-Added Level 50 Cleric Spell Divine Intervention
-
-Revision 2.16  2004/09/22 21:58:26  void
-Added level 50 Mage spell Quick (Allows for 2 casts in a single combat
-round)
-
-Revision 2.15  2004/09/13 21:35:37  void
-Bard - Haste, Paladin - Improved Fury
-
-Revision 2.14  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
-
-Revision 2.13  2004/05/01 11:57:04  ronin
-Addition of Owners field in spell_identify.
-
-Revision 2.12  2004/03/09 19:43:29  void
-Fixed permanent Bless on Paladins so it can not be disenchanted
-
-Revision 2.11  2004/03/03 13:24:58  ronin
-Fix to spell disenchant to prevent crash loops.
-
-Revision 2.10  2004/02/26 19:14:11  void
-Fixed Paralyze to make mob switch to the char that successfully paralyzed
-said mob
-
-Revision 2.9  2004/02/25 19:45:12  void
-Changed Flee code to reflect with hold person code
-
-
-Revision 2.7  2004/02/23 15:07:42  void
-Changed Paralyze to allow characters to paralyze moblies up to 10 levels above
-them.
-
-Changed hide to show message if successful or unsuccessful
-
-Revision 2.6  2004/02/19 19:20:22  void
-Added Spell Shroud of Existence (Good Align Commando Spell)
-
-Revision 2.5  2004/02/14 13:12:50  void
-Fixed a couple errors I made
-
-Revision 2.3  2004/02/13 14:30:01  Void
-Changed the Sleep and Paralyze spells to 1 tick duration in Chaos.
-
-Revision 2.2  2004/02/12 21:47:54  Void
-Modified Death Spray and Earthquake to affect Impy chars in Chaos
-
-Revision 2.1  2004/02/11 13:54:16  ronin
-Change to clone spell to block cloning of anti-rent items.
-Addition of braces in hell_fire to remove compile warning.
-
-Revision 2.0.0.1  2004/02/05 16:09:41  ronin
-Reinitialization of cvs archives
-
-Revision 1.12 2003/11/03 ronin
-Added check_equipment for all GET_ALIGN changes.
-COMMENTED OUT until we get a faster processor.
-
-Revision 1.11 2003/04/13 23:37:44  ronin
-Addition of pride enchantment check to recall and summon.
-
-Revision 1.10 2003/01/24 23:37:44  ronin
-Added dam limits to Power Word Kill, as well as tables for
-level differences between ch and vict.  Still a powerful spell.
--Changed disint aquest time from 30 to 25 mins.
-
-Revision 1.9  2002/12/27 23:37:44  ronin
-12/27/02 - Addition to disintegrate to make ICE_WALL and ICE_BLOCK
-un-disintegratable.
-
-Revision 1.8  2002/10/25 01:28:55  ronin
-Check for CHAOSMODE to disable enter messages in 3001.
-
-Revision - Addition to disintegrate to make WALL_THORNS and STATUE_PEACE un-
-disintegratable
-
-Revision 1.7  2002/07/24 17:53:41  ronin
-Disenchante modified to exclude some skills that use affects.
-
-Revision 1.6  2002/06/05 02:57:16  ronin
-Fix to allow bless song to work in battle.
-
-Revision 1.5  2002/04/27 05:46:57  ronin
-Addition of gluttony enchantment check to satiate.
-
-Revision 1.4  2002/04/13 14:39:51  ronin
-Fix so power word kill can be cast by a mob on a player.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -1273,22 +1116,17 @@ void spell_cure_blind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void spell_cure_critic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) &&
-      ch != victim)
-  {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
     return;
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 75), GET_MAX_HIT(victim));
   magic_heal(victim, SPELL_CURE_CRITIC, MIN(10 + (level * 5), 75), FALSE);
   send_to_char("You feel better!\n\r", victim);
 
@@ -1383,14 +1221,11 @@ void spell_cure_serious(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
     return;
   }
 
-  ///GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 45), GET_MAX_HIT(victim));
   magic_heal(victim, SPELL_CURE_SERIOUS, MIN(10 + (level * 5), 45), FALSE);
   send_to_char("You feel better!\n\r", victim);
 
@@ -1399,22 +1234,17 @@ void spell_cure_serious(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
 void spell_cure_light(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) &&
-      ch != victim)
-  {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
     return;
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(10 + (level * 5), 30), GET_MAX_HIT(victim));
   magic_heal(victim, SPELL_CURE_LIGHT, MIN(10 + (level * 5), 30), FALSE);
   send_to_char("You feel better!\n\r", victim);
 
@@ -1721,9 +1551,7 @@ void spell_fury(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
 void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  if (CHAOSMODE &&
-      ch != victim)
-  {
+  if (CHAOSMODE && ch != victim) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
     return;
   }
@@ -1731,14 +1559,11 @@ void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   spell_cure_blind(level, ch, victim, obj);
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(level * 5, 200), GET_MAX_HIT(victim));
   magic_heal(victim, SPELL_HEAL, MIN(level * 5, 200), FALSE);
   send_to_char("A warm feeling fills your body.\n\r", victim);
 
@@ -1762,22 +1587,17 @@ void spell_mana_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
 void spell_layhands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) &&
-      ch != victim)
-  {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
     return;
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + MIN(level * 10, 500), GET_MAX_HIT(victim));
   magic_heal(victim, SPELL_LAYHANDS, MIN(level * 10, 500), FALSE);
   send_to_char("A healing power flows into your body.\n\r", victim);
 
@@ -2684,30 +2504,22 @@ void spell_miracle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  if (CHAOSMODE &&
-      ch != victim)
-  {
+  if (CHAOSMODE && (ch != victim)) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
     return;
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
     return;
   }
 
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-  {
-    //GET_HIT(victim) = MIN(GET_HIT(victim) + 1500, GET_MAX_HIT(victim));
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
     magic_heal(victim, SPELL_MIRACLE, 1500, FALSE);
     send_to_char("The magic of the miracle has been manipulated by the chaos around you.\n\r", victim);
   }
-  else
-  {
-    //GET_HIT(victim) = MIN(GET_HIT(victim) + 2000, GET_MAX_HIT(victim));
+  else {
     magic_heal(victim, SPELL_MIRACLE, 2000, FALSE);
     send_to_char("Your life has been restored.\n\r", victim);
   }

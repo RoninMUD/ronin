@@ -12,67 +12,6 @@
 ** Do not distribute without permission.
 */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:30 $
-$Header: /home/ronin/cvs/ronin/subclass.spells.c,v 2.5 2005/01/21 14:55:30 ronin Exp $
-$Id: subclass.spells.c,v 2.5 2005/01/21 14:55:30 ronin Exp $
-$Name:  $
-$Log: subclass.spells.c,v $
-Revision 2.5  2005/01/21 14:55:30  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.4  2004/11/16 05:11:53  ronin
-Chaos 2004 Update
-
-Revision 2.3  2004/06/30 19:57:29  ronin
-Update of saving throw routine.
-
-Revision 2.2  2004/02/14 13:12:50  void
-Fixed a couple errors I made
-
-Revision 2.1  2004/02/14 00:17:53  void
-
-Changed Rimefang to affect impy/hidden chars in chaos.
-
-Revision 2.0.0.1  2004/02/05 16:11:56  ronin
-Reinitialization of cvs archives
-
-Revision 1.5 2003/11/03 ronin
-Added check_equipment for all GET_ALIGN changes.
-
-Revision - 14-Feb-03 Ranger
-Fixed cloud of confusion to not attack IMM+
-
-Revision - 03-Dec-02 Ranger
-Rimefang - removed saving vs spell on damage, removed level check, increased duration to 3
-Power of Faith - upped limit for healed to 700 and mana limit to 120
-
-Revision - 20-Nov-02 Ranger
-Removed damage messages from wrath_of_ancients, frost_bolt, divine_wind,
-demonic_thunder, wrath_of_god, devasation.  Messages move to messages file in lib and
-miss/death/god attack ones added.
-
-Revision - removed chance(75) from disrupt sanct - increase mana cost to 350
-
-Revision - additional heal message added to rejuvenation
-
-Revision 1.4  2002/06/18 14:31:08  ronin
-Change to allow divine wind castable against other players.
-
-Revision 1.3  2002/05/09 20:18:48  ronin
-Change of some text messages from TO_ROOM to TO_NOTVICT
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -818,14 +757,11 @@ void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-       ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))))
-  {
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
     return;
   }
 
-  //GET_HIT(victim) = MIN(GET_HIT(victim) + 400, GET_MAX_HIT(victim));
   magic_heal(victim, SPELL_REJUVENATION, 400, FALSE);
   send_to_char("You feel much better!\n\r", victim);
 
@@ -1475,10 +1411,7 @@ void spell_degenerate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     act("$n eats away at $s life force for a few precious mana points.", TRUE, ch, 0, 0, TO_ROOM);
 
     af.type       = SPELL_DEGENERATE;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 12;
-    else
-      af.duration = 30;
+    af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 12 : 30;
     af.modifier   = 0;
     af.location   = APPLY_NONE;
     af.bitvector  = 0;
@@ -1760,15 +1693,12 @@ void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && victim != ch) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
-
     return;
   }
-  
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 27) ||
-      ((duration_of_spell(victim, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
 
+  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
+      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
+    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
     return;
   }
 

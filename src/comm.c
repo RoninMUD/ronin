@@ -1,4 +1,4 @@
-/*  ************************************************************************
+/*************************************************************************
 *  File: comm.c , Communication module.                   Part of DIKUMUD *
 *  Usage: Communication, central game loop.                               *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
@@ -6,112 +6,6 @@
 *  Using *any* part of DikuMud without having read license.doc is         *
 *  violating our copyright.
 ************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:13:30 $
-$Header: /home/ronin/cvs/ronin/comm.c,v 2.4 2005/04/27 17:13:30 ronin Exp $
-$Id: comm.c,v 2.4 2005/04/27 17:13:30 ronin Exp $
-$Name:  $
-$Log: comm.c,v $
-Revision 2.4  2005/04/27 17:13:30  ronin
-Minor changes needed to compile on Slackware 10 for the new machine.
-
-Revision 2.3  2005/01/25 21:52:45  ronin
-Addition of BOOTFULL variable.
-
-Revision 2.2  2005/01/21 14:55:26  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.1  2004/03/04 17:23:57  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.0.0.1  2004/02/05 22:04:59  ronin
-Reinitialization of cvs archives
-
-
-Revision 31-Dec-03 Ranger
-Check for a descriptor_list before sorting to prevent crashing
-during a reboot process in copyover_write.
-
-Revision 24-Apr-03 Ranger
-Addition of reseting wizinfo level to copyover recover.
-
-Revision 15-Feb-03 Ranger
-Added a routine to reverse the descriptor list in copyover write for
-the who list not to be reversed after a hotboot
-
-Revision 26-Nov-02 Ranger
-Added a decrease in RM_BLOOD at a tick in signal_room
-
-Revision 25-Sep-02 Ranger
-Added a force reboot if time seemed to go backward
-Changed the missed over 30 secs of pulses, just do 30 secs to
-missed over 3 secs of pulses, just do 3 secs.
-
-Revision - uncommented out nasty_signal_handler
-
-Revision 1.14  2002/07/21 20:51:59  test
-Removed slave lookup for username of a player.  Virtually all computers
-do not allow username lookup on a port and its pointless to waste the
-cpu time.
-
-Revision 1.13  2002/07/20 16:51:51  ronin
-Some minor changes in the settings in the socket when a player
-connects.  Hopefully to solve the problem with being unable to
-close some player connections.
-
-Revision 1.12  2002/07/04 17:17:19  ronin
-Commented out the nasty_signal_handler, as it was causing
-an infinite loop.  There seems to be a problem with fopen
-(see do_warn in act.wizard.c also crashing us), but I don't
-have time right now to investigate.
-
-Revision 1.11  2002/07/03 03:39:07  ronin
-Fixed SO_REUSEADDR.  Mud should come up faster after a crash.
-
-Revision 1.10  2002/04/18 18:45:14  ronin
-Fix of syslog manipulation for test site.
-Addition of reboot_type.
-Addition of fclose for help files during hotboot.
-
-Revision 1.9  2002/04/17 18:38:12  ronin
-Fix to get syslog/plrlog backup working properly.
-
-Revision 1.8  2002/04/17 15:47:55  ronin
-Changed to do internal manipulation of syslog for hotboot fix.
-
-Revision 1.7  2002/03/31 16:58:03  ronin
-Uncommented calls to setsocket and added NEW_LINUX defineition to
-makefile.  When NEW_LINUX is defined the setsocket in comm.c is
-ignored.  Needed to stay in for compatibility with test site.
-
-Revision 1.6  2002/03/31 15:29:37  ronin
-Added #include <sys/time.h> to remove implicit declaration warning.
-
-Revision 1.5  2002/03/31 15:28:04  ronin
-Addition of braces to remove ambiguous else warning.
-
-Revision 1.4  2002/03/31 10:11:58  ronin
-Commented out setsocket.  It was giving an error during run time.
-Hopefully new linux will be able to release port for a reboot in
-a timely manner.
-
-Revision 1.3  2002/03/31 08:44:42  ronin
-Replaced #include <sys/time.h> with <time.h> to elminate several time
-warnings.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <sys/stat.h>
 #include <errno.h>
@@ -2791,8 +2685,7 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
         }
 
         if (affected_by_spell(ch, SPELL_DEGENERATE) &&
-            ((duration_of_spell(ch, SPELL_DEGENERATE) > 27) ||
-            ((duration_of_spell(ch, SPELL_DEGENERATE) > 9) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))))) {
+            (duration_of_spell(ch, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 9 : 27))) {
           send_to_char("Your trance fails to heal your degenerated body.\n\r", ch);
         }
         else {
