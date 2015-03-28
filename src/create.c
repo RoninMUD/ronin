@@ -1,88 +1,9 @@
-/*
-$Author: ronin $
-$Date: 2005/01/25 21:51:58 $
-$Header: /home/ronin/cvs/ronin/create.c,v 2.5 2005/01/25 21:51:58 ronin Exp $
-$Id: create.c,v 2.5 2005/01/25 21:51:58 ronin Exp $
-$Name:  $
-$Log: create.c,v $
-Revision 2.5  2005/01/25 21:51:58  ronin
-Added zone 295 to full zone save.
-
-Revision 2.4  2005/01/21 14:55:26  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.3  2004/12/29 17:32:07  ronin
-rclone - added return to fix done message if 2nd room already existed.
-maffect & edit mob - added QUAD to list
-
-Revision 2.2  2004/06/02 13:43:30  ronin
-Added mult_(stat) to write_zone, create_zone, cmdlist.
-Added zmult.
-
-Revision 2.1  2004/03/13 05:27:13  pyro
-updated for olc commands oname and owear
-
-Revision 2.0.0.1  2004/02/05 16:09:06  ronin
-Reinitialization of cvs archives
-
-
-Revision 31-Jul-03 Ranger
-Addition of take zone command to cmdlist routine.
-Added take zone command to edit_zone.
-Added take zone command to write_zone.
-Added otake command.
-
-Revision 10-Mar-03 Ranger
-Changed shop producing field to be a virtual number internally.
-
-Revision 06-Mar-03 Ranger
-Added remove() in save_zone to delete a shp file that had no shops in it.
-Added sdelete
-
-Revision 04-Mar-03 Ranger
-Addition of edit_shop
-
-Revision 03-Mar-03 Ranger
-Removal of write_room/obj/mob/zone in create routines.  Were added for testing
-purposes and are no longer needed there.
-Addition of write_shop in save_zone routine.
-
-Revision 27-Feb-02 Ranger
-Addition of shop option to do_create, addition of create_shop
-
-Revision 11-Dec-02 Ranger
-Addition of IMMUNE_STEAL
-
-Revision 1.7  2002/07/16 03:47:49  test
-Fix to save zone 294 (Custom Gear III) properly for the next
-boot.
-
-Revision 1.6  2002/05/29 04:59:17  ronin
-Addition to make a backup of zone 294 - Custom Gear III
-
-Revision 1.5  2002/04/16 18:00:34  ronin
-Addition of IMMUNE_EXECUTE
-
-Revision 1.4  2002/04/13 14:31:28  ronin
-Fix to append_text_room procedure.
-
-Revision 1.3  2002/03/30 17:49:03  ronin
-Fixed warnings:
-create.c: In function edit_zone':
-create.c:3172: warning: suggest explicit braces to avoid ambiguous else'
-create.c:3273: warning: suggest explicit braces to avoid ambiguous else'
-
-Revision 1.2  2002/03/30 17:37:04  ronin
-Fixed warning message
-create.c: In function do_create_save':
-create.c:664: warning: suggest explicit braces to avoid ambiguous else'
-
-$State: Exp $
+/* create.c
+**
+** Online creation routines
+**
+** Written for RoninMUD
 */
-
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -2559,7 +2480,7 @@ void edit_obj(CHAR *ch, char *fargs)
               send_to_char("For Recipes: <Creates> <Requires> <Requires> <Requires> (-1 for none)\n\r", ch);
             break;
             case ITEM_AQ_ORDER :
-              send_to_char("For AQ Orders: <Requires> <Requires> <Requires> <Requires> (-1 for non)\n\r", ch);
+              send_to_char("For AQ Orders: <Requires> <Requires> <Requires> <Requires> (-1 for none)\n\r", ch);
             break;
             case ITEM_SCROLL :
             case ITEM_POTION :

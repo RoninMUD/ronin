@@ -1,65 +1,8 @@
-/* ************************************************************************
+/**************************************************************************
 *  file: act.informative.c , Implementation of commands.  Part of DIKUMUD *
 *  Usage : Informative commands.                                          *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:25 $
-$Header: /home/ronin/cvs/ronin/act.informative.c,v 2.3 2005/01/21 14:55:25 ronin Exp $
-$Id: act.informative.c,v 2.3 2005/01/21 14:55:25 ronin Exp $
-$Name:  $
-$Log: act.informative.c,v $
-Revision 2.3  2005/01/21 14:55:25  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.2  2004/11/16 05:26:40  ronin
-DOS to UNIX conversion
-
-Revision 2.1  2004/11/16 04:46:36  ronin
-Chaos 2004 Update
-
-Revision 2.0.0.1  2004/02/05 16:08:28  ronin
-Reinitialization of cvs archives
-
-
-Revision 27-Jan-04 Ranger
-Update of do_read and do_examine, increase buffer size to prevent a crash.
-
-Revision 1.8  2003/06/01 03:56:43  ronin
-Addition of message text for distortion and sphere.
-
-Revision 1.7  2003/02/27 03:56:43  ronin
-Revision - Higher loss with deathlimit, factor 2-5 with a min of 3x.
-
-Revision - Addition of increase_blood to die routine.  Addition of blood messages
-to look_in_room. 26-Nov-02 Ranger
-
-Revision - fix to see items in donation room when clairing there
-Revision - fix to see impy with perceive in who list
-
-Revision 1.6  2002/06/06 03:56:43  ronin
-Fix to show -300 ac if affected by defend.
-
-Revision 1.5  2002/04/27 05:47:24  ronin
-Addition of message text for affect_rage.
-
-Revision 1.4  2002/04/18 04:07:30  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.3  2002/03/31 15:41:23  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <stdio.h>
 #include <string.h>
@@ -1323,7 +1266,7 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
           fullness[temp],color_liquid[tmp_object->obj_flags.value[2]]);
         send_to_char(buffer, ch);
       }
-    } else if (GET_ITEM_TYPE(tmp_object) == ITEM_CONTAINER || 
+    } else if (GET_ITEM_TYPE(tmp_object) == ITEM_CONTAINER ||
           GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
       if (!IS_SET(tmp_object->obj_flags.value[1],CONT_CLOSED) ||
           GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
@@ -2004,7 +1947,7 @@ void die(CHAR *ch)
     {
       mana_diff = 0;
     }
-    
+
     if (hit_chk || death_chk)
     {
       if (death_chk)
@@ -2092,7 +2035,7 @@ void die(CHAR *ch)
 
     if (death_exp)
     {
-      death_exp = lround((double)death_exp * DEATH_EXP_PERCENT); 
+      death_exp = lround((double)death_exp * DEATH_EXP_PERCENT);
 
       GET_DEATH_EXP(ch) += death_exp;
       imm_grace_add_enchant(ch);

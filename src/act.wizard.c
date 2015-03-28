@@ -1,119 +1,8 @@
-/*************************************************************************
+/**************************************************************************
 *  file: actwiz.c , Implementation of commands.           Part of DIKUMUD *
 *  Usage : Wizard Commands.                                               *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2005/01/25 21:52:45 $
-$Header: /home/ronin/cvs/ronin/act.wizard.c,v 2.9 2005/01/25 21:52:45 ronin Exp $
-$Id: act.wizard.c,v 2.9 2005/01/25 21:52:45 ronin Exp $
-$Name:  $
-$Log: act.wizard.c,v $
-Revision 2.9  2005/01/25 21:52:45  ronin
-Addition of BOOTFULL variable.
-
-Revision 2.8  2005/01/21 14:55:26  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.7  2004/09/30 15:57:00  ronin
-Fix in remove enchantment from MSG_DIE to MSG_DEAD
-
-Revision 2.6  2004/09/13 21:38:19  void
-sos
-
-Revision 2.5  2004/09/13 21:35:37  void
-Fixed sos to include mana_regen & hp_regen
-
-Revision 2.4  2004/06/02 13:42:08  ronin
-Added mult_(stat) to stat zone.
-Added mult_(stat) to do_stat mob.
-Added mult_(stat) to mstat.
-
-Revision 2.3  2004/03/08 21:01:16  ronin
-Addition of sos <obj> owner.
-Improved stat o showing owners.
-
-Revision 2.2  2004/03/04 17:23:57  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.1  2004/02/11 13:42:00  ronin
-Fix in idname to allow a name to be successfully searched more than once.
-
-Revision 2.0.0.1  2004/02/05 22:28:24  ronin
-Reinitialization of cvs archives
-
-
-Revision 05-Feb-04 Ranger
-Addition of do_idname
-
-Revision 19-Dec-03 Ranger
-Addition of email address and email forwarding toggle to do_stat.
-
-Revision 28-Oct-03 Ranger
-Addition of playeravg command for chaos night
-
-Revision 31-Jul-03 Ranger
-Addition of take zone command to show_zone_to_char.
-
-Revision 10-Mar-03 Ranger
-Changed producing field in shop to use virtual obj nums internally. (do_stat)
-
-Revision 27-Feb-03 Ranger
-Added zshow # shop to do_zshow routine
-
-Revision 25-Feb-03 Ranger
-Addition of read_shop to load zone and initial_boot routine.  Each
-zone will have its own shop file.
-
-Revision 28-Jan-03 Ranger
-Addition of vnum to boot_area so area loaders are given zone number
-even if zone name is not exact
-
-Revision 02-Dec-02 Ranger
-Addition of AC output to zbrief all mobiles, check for LEVEL_IMP
-
-Revision 1.11  2002/07/16 03:25:15  test
-Warn fixed with new dmalloc memory routine.
-
-Revision 1.10  2002/07/04 17:19:58  ronin
-Disabled do_warn again.  fopen seems to be the main
-problem...but that's just on a cursory glance.
-
-Revision 1.9  2002/06/06 04:02:24  ronin
-Mod to let DEI and ETE view warning logs without judge flag.
-
-Revision 1.8  2002/04/23 13:50:05  ronin
-Fix for warn usage message.
-
-Revision 1.7  2002/04/18 18:45:54  ronin
-Addition of reboot_type for normal or hotboot.
-
-Revision 1.6  2002/04/18 04:07:30  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.5  2002/04/17 14:26:22  ronin
-Addition of : to message of reset time.
-Replacement of hotboot option in shutdown.
-
-Revision 1.4  2002/04/16 17:59:21  ronin
-Addition of warn <#>.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <stdio.h>
 #include <string.h>
@@ -794,7 +683,7 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
     else if(is_abbrev(buf,"owner"))    num=12;
     else if(is_abbrev(buf,"timer"))    num=13;
     else if(is_abbrev(buf,"popped"))   num=14;
-    
+
     if (is_number(buf2))
       num2 = atoi(buf2);
     else {
@@ -2945,7 +2834,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
      }
      strcat(buf,"\n\r");
      send_to_char(buf, ch);
-     
+
      switch (j->obj_flags.type_flag) {
      case ITEM_LIGHT :
        printf_to_char(ch,"Colour : [%d]\n\rType : [%d]\n\rHours : [%d]",
@@ -6250,7 +6139,7 @@ void show_zone_to_char(CHAR *ch, int zoneNum)
            }
          break;
 
-/* Mount - Ranger June 96 */
+       /* Mount - Ranger June 96 */
        case 'R': /* add a mount */
          tab = 2;
          mobile  = real_mobile(zone->cmd[cmd_no].arg1);

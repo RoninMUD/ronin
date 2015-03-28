@@ -1,90 +1,8 @@
-/* ************************************************************************
+/**************************************************************************
 *  file: constants.c                                      Part of DIKUMUD *
 *  Usage: For constants used by the game.                                 *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2004/12/29 17:30:19 $
-$Header: /home/ronin/cvs/ronin/constants.c,v 2.17 2004/12/29 17:30:19 ronin Exp $
-$Id: constants.c,v 2.17 2004/12/29 17:30:19 ronin Exp $
-$Name:  $
-$Log: constants.c,v $
-Revision 2.17  2004/12/29 17:30:19  ronin
-Removed AFF_TWIST and AFF_COVER
-
-Revision 2.16  2004/11/19 17:20:33  void
-Changed name of lvl 50 ninja spell to mystic swiftness
-
-Revision 2.15  2004/11/19 14:47:20  void
-New Level 50 Ninja Spell (adds chance of 3rd hit)
-
-Revision 2.14  2004/11/17 19:21:52  void
-Added Nomad Skill Cover (1/2 Damage -10 Hitroll)
-
-Revision 2.13  2004/11/16 16:58:30  void
-Fixed Quad to only affect level 50 warriors
-
-Revision 2.12  2004/11/16 14:59:09  void
-Changed the damage multipliers on Ambush, Assault, Circle, & Backstab based
-on level.
-
-Revision 2.11  2004/11/15 22:29:10  void
-Made changes to Blood Lust, Twist, Quick, & Quad
-
-Revision 2.10  2004/10/21 17:08:22  void
-Added level 50 AP spell Blood Lust
-
-Revision 2.9  2004/10/20 12:36:36  ronin
-Fix of two minor typos.
-
-Revision 2.8  2004/09/29 22:56:12  void
-Spell Rush for Commando
-
-Revision 2.7  2004/09/29 16:59:01  void
-Added spells Quick and Divine Intervention
-
-Revision 2.6  2004/08/19 12:57:18  ronin
-Removed SKILL_QUAD from apply types list.
-
-Revision 2.5  2004/08/17 15:47:23  void
-*** empty log message ***
-
-Revision 2.3  2004/08/16 18:10:05  void
-Added Warrior Skill Quad
-
-Revision 2.2  2004/03/08 21:00:24  ronin
-Addition of QUESTWEAR to wear flags.
-
-Revision 2.1  2004/02/19 19:20:22  void
-Added Spell Shroud of Existence (Good Align Commando Spell)
-
-Revision 2.0.0.1  2004/02/05 16:09:00  ronin
-Reinitialization of cvs archives
-
-
-Revision 19-Dec-03 Ranger
-Added EMAIL to player_bits
-
-Revision 22-Feb-03 Liner
-Change of ambush mult to 7 over level 44 nomad, first reviews.
-
-Revision 23-Jan-03 Liner
-Changed back to Vamp Touch for 3rd wpn_spc
-
-Revision 11-Dec-02 Ranger
-Addition of IMMUNE_STEAL
-
-Revision 1.3  2002/04/16 18:00:34  ronin
-Addition of IMMUNE_EXECUTE
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include "structs.h"
 #include "limits.h"
@@ -383,6 +301,7 @@ const char *weekdays[7] = {
   "the day of the Great Gods",
   "the Day of the Sun"
 };
+
 const char *wpn_spc[] = {
 "None",					/* 0 */
 "Blind",				/* 1 */
@@ -486,6 +405,7 @@ const char *wpn_spc[] = {
 "Slay Drows",			/* 99 */
 "Slay Statues"			/* 100 */
 };
+
 const char *weapon_type[15] = {
   "Whip",       /* 0 */
   "Whip",
@@ -502,7 +422,8 @@ const char *weapon_type[15] = {
   "Hack",
   "Chop",
   "Slice"
-  };
+};
+
 const char *month_name[17] = {
   "Month of Winter",           /* 0 */
   "Month of the Winter Wolf",
@@ -524,19 +445,19 @@ const char *month_name[17] = {
 };
 
 const int sharp[] = {
-   0,
-   0,
-   0,
-   1,    /* Slashing */
-   0,
-   0,
-   0,
-   0,    /* Bludgeon */
-   0,
-   0,
-   0,
-   0
- };  /* Pierce   */
+  0,
+  0,
+  0,
+  1,    /* Slashing */
+  0,
+  0,
+  0,
+  0,    /* Bludgeon */
+  0,
+  0,
+  0,
+  0     /* Pierce   */
+};
 
 const char *where[] = {
   "<used as light>      ",
@@ -559,90 +480,88 @@ const char *where[] = {
   "<held>               "
 };
 
-const char *drinks[]=
-{
-"water",
-"beer",
-"wine",
-"ale",
-"dark ale",
-"whisky",
-"lemonade",
-"firebreather",
-"local speciality",
-"slime mold juice",
-"milk",
-"tea",
-"coffee",
-"blood",
-"salt water",
-"coca cola",
-"stout",
-"vodka",
-"rum",
-"liquer",
-"champagne",
-"bourbon",
-"tequila",
-"hard cider",
-"urine",
-"gin",
-"merlot",
-"schnapps",
-"moonshine",
-"pus",
-"sherbet",
-"cognac",
-"brandy",
-"scotch",
-"kefir",
-"ouzo",
-"saki",
-"lager",
-"\n"
+const char *drinks[]= {
+  "water",
+  "beer",
+  "wine",
+  "ale",
+  "dark ale",
+  "whisky",
+  "lemonade",
+  "firebreather",
+  "local speciality",
+  "slime mold juice",
+  "milk",
+  "tea",
+  "coffee",
+  "blood",
+  "salt water",
+  "coca cola",
+  "stout",
+  "vodka",
+  "rum",
+  "liquer",
+  "champagne",
+  "bourbon",
+  "tequila",
+  "hard cider",
+  "urine",
+  "gin",
+  "merlot",
+  "schnapps",
+  "moonshine",
+  "pus",
+  "sherbet",
+  "cognac",
+  "brandy",
+  "scotch",
+  "kefir",
+  "ouzo",
+  "saki",
+  "lager",
+  "\n"
 };
 
-const char *drinknames[]=
-{
-"water",
-"beer",
-"wine",
-"ale",
-"ale",
-"whisky",
-"lemonade",
-"firebreather",
-"local",
-"juice",
-"milk",
-"tea",
-"coffee",
-"blood",
-"salt",
-"cola",
-"stout",
-"vodka",
-"rum",
-"liquer",
-"champagne",
-"bourbon",
-"tequila",
-"cider",
-"urine",
-"gin",
-"merlot",
-"schnapps",
-"moonshine",
-"pus",
-"sherbet",
-"cognac",
-"brandy",
-"scotch",
-"kefir",
-"ouzo",
-"saki",
-"lager",
-"\n"
+const char *drinknames[]= {
+  "water",
+  "beer",
+  "wine",
+  "ale",
+  "ale",
+  "whisky",
+  "lemonade",
+  "firebreather",
+  "local",
+  "juice",
+  "milk",
+  "tea",
+  "coffee",
+  "blood",
+  "salt",
+  "cola",
+  "stout",
+  "vodka",
+  "rum",
+  "liquor",
+  "champagne",
+  "bourbon",
+  "tequila",
+  "cider",
+  "urine",
+  "gin",
+  "merlot",
+  "schnapps",
+  "moonshine",
+  "pus",
+  "sherbet",
+  "cognac",
+  "brandy",
+  "scotch",
+  "kefir",
+  "ouzo",
+  "saki",
+  "lager",
+  "\n"
 };
 
 /*Here are the affects. In the {A,B,C},
@@ -735,8 +654,7 @@ const char *color_liquid[]=
 };
 
 
-const char *fullness[] =
-{
+const char *fullness[] = {
   "less than half ",
   "about half ",
   "more than half ",
@@ -1497,9 +1415,9 @@ const char *item_types[] = {
   "SKIN",
   "TROPHY",
   "RECIPE",
-  "2FINGER", // Project Dagger ? 
-  "2NECK",   // these were missing from here, but present in structs.h
-  "2WRIST",  // resulted in mismatch between ITEM_* #s and numbers in this array
+  "2FINGER", // these were missing from here, but present in structs.h
+  "2NECK",   // and resulted in mismatch between ITEM_* #s
+  "2WRIST",  // and numbers in this array
   "AQ_ORDER",
   "\n"
 };
@@ -1579,26 +1497,26 @@ const char *extra_bits2[] = {
 };
 
 const char *subclass_res_bits[] = {
-	"ANTI_ENCHANTER",
-	"ANTI_ARCHMAGE",
-	"ANTI_DRUID",
-	"ANTI_TEMPLAR",
-	"ANTI_ROGUE",
-	"ANTI_BANDIT",
-	"ANTI_WARLORD",
-	"ANTI_GLADIATOR",
-	"ANTI_RONIN",
-	"ANTI_MYSTIC",
-	"ANTI_RANGER",
-	"ANTI_TRAPPER",
-	"ANTI_CAVALIER",
-	"ANTI_CRUSADER",
-	"ANTI_DEFILER",
-	"ANTI_INFIDEL",
-	"ANTI_BLADESINGER",
-	"ANTI_CHANTER",
-	"ANTI_LEGIONNAIRE",
-	"ANTI_MERCENARY",
+  "ANTI_ENCHANTER",
+  "ANTI_ARCHMAGE",
+  "ANTI_DRUID",
+  "ANTI_TEMPLAR",
+  "ANTI_ROGUE",
+  "ANTI_BANDIT",
+  "ANTI_WARLORD",
+  "ANTI_GLADIATOR",
+  "ANTI_RONIN",
+  "ANTI_MYSTIC",
+  "ANTI_RANGER",
+  "ANTI_TRAPPER",
+  "ANTI_CAVALIER",
+  "ANTI_CRUSADER",
+  "ANTI_DEFILER",
+  "ANTI_INFIDEL",
+  "ANTI_BLADESINGER",
+  "ANTI_CHANTER",
+  "ANTI_LEGIONNAIRE",
+  "ANTI_MERCENARY",
   "\n"
 };
 

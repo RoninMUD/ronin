@@ -14,26 +14,26 @@ Skins are wearable, but do decay after a period of time.
 #
 BRIBE
 
-For the most part, the lands of Ronin are free of corruption but 
-with the recent decline in morality more and more creatures are 
-becoming susceptible to bribery. It is said that both the 
-restaurant bouncer and the metaphysician have been known to give 
+For the most part, the lands of Ronin are free of corruption but
+with the recent decline in morality more and more creatures are
+becoming susceptible to bribery. It is said that both the
+restaurant bouncer and the metaphysician have been known to give
 you something for a little cash.
 #
 CONSTITUTION
 
-Constitution stands for health, physique and stamina.  A high 
-constitution score will increase your hit points when you advance 
-a level while a low score will subtract from any hit points 
+Constitution stands for health, physique and stamina.  A high
+constitution score will increase your hit points when you advance
+a level while a low score will subtract from any hit points
 gained for a level.
 
-A higher constitution also increased your regeneration rate.  At 
-25 constitution you will gain an extra 25 hit points/mana per 
+A higher constitution also increased your regeneration rate.  At
+25 constitution you will gain an extra 25 hit points/mana per
 tick.
 
-Constitution of 19 and above will reduce the damage taken each 
+Constitution of 19 and above will reduce the damage taken each
 hit.  At 25 constitution, damage taken is reduced by 20% if
-you're not affected by the sanctuary spell, and 10% if 
+you're not affected by the sanctuary spell, and 10% if
 you are affected by sanctuary.
 
 See Also: STATS META AQUEST SANCTUARY
@@ -41,17 +41,17 @@ See Also: STATS META AQUEST SANCTUARY
 #
 STRENGTH
 
-Strength determines your ability to carry equipment and wield 
-weapons.  Some weapons require a certain amount of strength to 
-wield.  High strength scores get a bonus to hit and damage rolls 
+Strength determines your ability to carry equipment and wield
+weapons.  Some weapons require a certain amount of strength to
+wield.  High strength scores get a bonus to hit and damage rolls
 while low scores get a penalty.
 
-After you have meta'd your strength to eighteen, you can meta 
-additional strength, one percent at a time.   If you have meta'd 
-your additional strength twenty times, your strength percent 
+After you have meta'd your strength to eighteen, you can meta
+additional strength, one percent at a time.   If you have meta'd
+your additional strength twenty times, your strength percent
 would be 20, notated as 18/20.
 
-Higher levels of strength percent result in damage and hitroll 
+Higher levels of strength percent result in damage and hitroll
 bonuses as shown below.
 
 ---------------------------------------------------------
@@ -60,11 +60,11 @@ bonuses as shown below.
 | HITROLL |   0   |  +1   |   0   |   0   | +1  |  +2   |
 ---------------------------------------------------------
 
-After 18/100 you can gain even more strength from your 
-guildmaster with quest points (see AQUEST).  This extra strength 
-of 19 and above come with even more hit and damage roll bonuses.  
-At the maximum 25 strength, a character can carry 1750 weight, 
-gets a total hit roll bonus of 7 and a total damage roll bonus of 
+After 18/100 you can gain even more strength from your
+guildmaster with quest points (see AQUEST).  This extra strength
+of 19 and above come with even more hit and damage roll bonuses.
+At the maximum 25 strength, a character can carry 1750 weight,
+gets a total hit roll bonus of 7 and a total damage roll bonus of
 14.
 
 SEE ALSO: STATS META AQUEST
@@ -72,7 +72,7 @@ SEE ALSO: STATS META AQUEST
 #
 INTELLIGENCE
 
-Intelligence stands for the ability to reason and learn new 
+Intelligence stands for the ability to reason and learn new
 things.  The higher your intelligence the easier it is for your
 character to practice.  Intelligence also affects your ability
 to cast spells.  A high intelligence would give the spellcaster
@@ -85,11 +85,11 @@ See Also: STATS META AQUEST
 #
 WISDOM
 
-Wisdom represents intuition and insight.  The higher your wisdom 
-score the more practice sessions you get when you advance in 
-level.  Wisdom also affects your ability to cast spells.  A high 
-wisdom will give a spellcaster an advantage.  When combined with 
-a high intelligence, a cleric or mage with 25 wisdom and 
+Wisdom represents intuition and insight.  The higher your wisdom
+score the more practice sessions you get when you advance in
+level.  Wisdom also affects your ability to cast spells.  A high
+wisdom will give a spellcaster an advantage.  When combined with
+a high intelligence, a cleric or mage with 25 wisdom and
 intelligence will virtually never lose concentration.
 
 See Also: STATS META AQUEST
@@ -97,17 +97,17 @@ See Also: STATS META AQUEST
 #
 STATS
 
-Your stats reflect your character's abilities.  You cannot see 
-your physical stats until you reach level 6.  Stats can be 
-increased by buying additional points from the metaphysician (see 
-META).  After getting the maximum stats in meta, stats can be 
-increased using quest points (see AQUEST) to buy the increase 
+Your stats reflect your character's abilities.  You cannot see
+your physical stats until you reach level 6.  Stats can be
+increased by buying additional points from the metaphysician (see
+META).  After getting the maximum stats in meta, stats can be
+increased using quest points (see AQUEST) to buy the increase
 from your guildmaster.
 
-Neither gear nor spells can increase stats above 18 but may 
-decrease them.  As an example, a player with 18 dexterity puts on 
-equipment with +2 dexterity.  The player's dexterity remains at 
-18. If the equipment had been -2 dexterity, the player's 
+Neither gear nor spells can increase stats above 18 but may
+decrease them.  As an example, a player with 18 dexterity puts on
+equipment with +2 dexterity.  The player's dexterity remains at
+18. If the equipment had been -2 dexterity, the player's
 dexterity would be 16.
 
 Check the help on each of the stats to see how they benefit you.
@@ -117,23 +117,23 @@ See Also: META AQUEST
 #
 DEXTERITY
 
-Dexterity represents agility, speed and hand-to-eye coordination.  
-The higher your dexterity score, the easier it will be for your 
-character to use skills that depend on agility or quickness, and 
-the number of items you can carry is larger.  Natural dexterity 
-also gives the player improved armor, making it more difficult to 
+Dexterity represents agility, speed and hand-to-eye coordination.
+The higher your dexterity score, the easier it will be for your
+character to use skills that depend on agility or quickness, and
+the number of items you can carry is larger.  Natural dexterity
+also gives the player improved armor, making it more difficult to
 be hit.
 
-Dexterity of 19 and above has a larger impact on the success of 
-skills.  At 25 dexterity, the player has a 10% bonus in skill 
+Dexterity of 19 and above has a larger impact on the success of
+skills.  At 25 dexterity, the player has a 10% bonus in skill
 success and a 30 ac bonus in armor.
 
 The skills affected by dexterity are:
 
   ambush    bash        dual    lunge      steal      twist
   assault   blitz       flank   pummel     sweep      quad
-  backfist  circle      hide    punch      tigerkick     
-  backflip  disarm      impair  sneak      trip 
+  backfist  circle      hide    punch      tigerkic
+  backflip  disarm      impair  sneak      trip
   backstab  disembowel  kick    spin_kick  triple
 
 See Also: STATS META AQUEST
@@ -141,19 +141,19 @@ See Also: STATS META AQUEST
 #
 "DICE DAMAGE" "DAMAGE DICE"
 
-Dice damage is the range of damage a certain weapon has.  For 
-example, 3d6 means you roll three six-sided dice and add them 
-together.  The range of the weapon's damage would be the minimum 
-possible roll to the maximum possible roll.  In the case of 3d6, 
+Dice damage is the range of damage a certain weapon has.  For
+example, 3d6 means you roll three six-sided dice and add them
+together.  The range of the weapon's damage would be the minimum
+possible roll to the maximum possible roll.  In the case of 3d6,
 the range would be 3 to 18.
 
-To figure the average damage of a weapon, use the following 
+To figure the average damage of a weapon, use the following
 formula, where the damage dice is XdY:
 
 (X * (Y+1))/2
 
-If there is additional damage, such as a DAMROLL +2 affect on the 
-weapon, add that after figuring the average, and that will give 
+If there is additional damage, such as a DAMROLL +2 affect on the
+weapon, add that after figuring the average, and that will give
 you the total average damage of the weapon.
 
 Example:  2d6+5 = 2(lowest roll) to 12(highest roll) +5 = 7(min dam)
@@ -161,8 +161,8 @@ Example:  2d6+5 = 2(lowest roll) to 12(highest roll) +5 = 7(min dam)
 #
 "ANTI-ANYTHING" ANTI
 
-Antis are flags on an item that prevent the use of that item by 
-certain classes or alignments.  Most items have some "anti" flags 
+Antis are flags on an item that prevent the use of that item by
+certain classes or alignments.  Most items have some "anti" flags
 on them.  There are a few items that have anti-auction or anti-
 rent flags, so you can not rent or auction those items.
 
@@ -170,8 +170,8 @@ SEE ALSO: EQUIPMENT INVENTORY
 #
 "AUCTION HALL"
 
-The Auction Hall is a place where you can auction off some of 
-your gear.  The Auctioneer only keeps a small percent of your 
+The Auction Hall is a place where you can auction off some of
+your gear.  The Auctioneer only keeps a small percent of your
 profit.  It is located south (s) and up (u) from Market Square.
 
 SEE ALSO: AUCTION
@@ -184,20 +184,20 @@ SEE ALSO: BOT
 #
 CANCEL CANCEL-MEMBERSHIP
 
-You can cancel a membership to one of Ronin's Clubs.  You do this 
-by typing 'buy cancel' or by buying a membership to another club.  
+You can cancel a membership to one of Ronin's Clubs.  You do this
+by typing 'buy cancel' or by buying a membership to another club.
 Remember you can only have a membership to one club.
 
 SEE ALSO: CLUBS MEMBERSHIP
 #
 FAQ
 
-There are a lot of FAQs, so we have posted them on our website.  
+There are a lot of FAQs, so we have posted them on our website.
 Check it out!     www.roninmud.org
 #
 FOUNTAIN
 
-Midgaard has a fountain for all to use.  It is located in Market 
+Midgaard has a fountain for all to use.  It is located in Market
 Square and can be used to drink from or to fill containers from.
 #
 FOURTHS
@@ -208,7 +208,7 @@ SEE ALSO: MULTI
 #
 GODLIST
 
-For a list of active gods, type 'wizlist' or check out our 
+For a list of active gods, type 'wizlist' or check out our
 website for a more complete list of active and inactive gods.
 www.roninmud.org
 
@@ -216,8 +216,8 @@ See also:  IMMORTING
 #
 SOCIALS
 
-Socials are actions that you can do to yourself or to another 
-player or mob.  For a complete list of all the socials type 'help 
+Socials are actions that you can do to yourself or to another
+player or mob.  For a complete list of all the socials type 'help
 social list'
 
 SEE ALSO: 'SOCIAL LIST'
@@ -230,24 +230,20 @@ SEE ALSO: INFO INFORMATION
 #
 "KILL FLAG"
 
-A kill flag is a flag you get if you kill another player. Beware 
-though, the Cityguards will be looking for you if you have one of 
+A kill flag is a flag you get if you kill another player. Beware
+though, the Cityguards will be looking for you if you have one of
 these flags.
 
 SEE ALSO: FLAG RULES
 #
 "BAM"
-(BIG ASS MULTI-WEEKEND)
+(BIG ASS MULTI)
 
-This is a very special weekend on RoninMud.  This weekend is 
-picked by the gods and allows you to play more than 3 characters 
-at a time, but no more than 5.
+This is a very time on RoninMud.  For the first week of every month the gods
+allow you to play more than 3 characters at a time, but no more than 5.
 
-BAM weekend occurs the 2nd weekend of every other month, starting 
-with February and lasts from 12:01 AM EST Saturday morning to 11:59 
-PM EST Sunday night - that's 48 hours.
-
-BAM weekend months: Feb Apr Jun Aug Oct Dec
+BAM starts at 12:01 AM US Pacific Time on the 1st of the month and runs through
+11:59 PM US Pacific Time on the 7th.  That's a full 7 days.
 
 All regular game rules still apply.
 
@@ -255,25 +251,25 @@ SEE ALSO: MULTI RULES INFO
 #
 RASHGUGH
 
-Rashgugh is a mob on RoninMud, but he is special.  He always 
-loads a subclass token, and yells about his location.  This way 
-everyone has a chance to kill him for his token.  Once you have 
-this token you can sell it or turn it in for a subclass point, 
+Rashgugh is a mob on RoninMud, but he is special.  He always
+loads a subclass token, and yells about his location.  This way
+everyone has a chance to kill him for his token.  Once you have
+this token you can sell it or turn it in for a subclass point,
 just be careful not to rent with it!
 
 SEE ALSO: SUBCLASSES, SUBCLASS TOKEN
 #
 "RESTING ROOM"
 
-Resting Rooms (RR) are clubs in Midgaard.  There are four of them 
+Resting Rooms (RR) are clubs in Midgaard.  There are four of them
 located a little north and up from Market Square.
 
 SEE ALSO: CLUBS
 #
 "TRAINING GROUND"
 
-The training ground is a place for lower level players (levels 1 
-through 5 typically).  It is located three (3) south (s) from 
+The training ground is a place for lower level players (levels 1
+through 5 typically).  It is located three (3) south (s) from
 Market Square.
 #
 "TWO-WEAPONS"
@@ -284,27 +280,27 @@ SEE ALSO: NINJA
 #
 ZMUD TINTIN SANETIN TELNET WINTIN
 
-These are programs you can use to connect to muds.  Zmud, Telnet, 
+These are programs you can use to connect to muds.  Zmud, Telnet,
 Wintin, and SaneTin are windows based, Tintin is unix based.
 
-Wintin and Sanetin are for the most part the same, except our 
-nice god Sane took Wintin and worked out a few of its bugs so it 
-works better.  Wintin is available at www.wintin.com, Sanetin is 
+Wintin and Sanetin are for the most part the same, except our
+nice god Sane took Wintin and worked out a few of its bugs so it
+works better.  Wintin is available at www.wintin.com, Sanetin is
 available on our website www.roninmud.org.  Click on downloads.
 
 Telnet comes with Windows.
 #
 AUTOQUEST AQUEST AUTOQUESTER "QUEST MACHINE" AQP "QUEST POINTS"
 
-Every class has a guildmaster who can send you on quests for 
-valuable quest points.  These quest points can be used to buy 
+Every class has a guildmaster who can send you on quests for
+valuable quest points.  These quest points can be used to buy
 various items such as subclass points.
 
 Ronin has several different levels of autoquests, you may
-request for whichever level you feel is appropriate.  You 
+request for whichever level you feel is appropriate.  You
 have 60 minutes to complete an autoquest.  Additionally, upon
 requesting an autoquest, there is a chance the guildmaster
-will offer an autoquest worth double quest points!  Here are 
+will offer an autoquest worth double quest points!  Here are
 the commands and descriptions for requesting the different
 levels:
 
@@ -320,28 +316,28 @@ worth 2 to 4 points
 AQUEST REQUEST HIGH - These autoquests are the hardest, and
 can be worth anywhere from 3 to 6 points.
 
-Note: Players level 24 or lower will have easier solo 
+Note: Players level 24 or lower will have easier solo
 autoquests than other players.
 
-If you don't like the quest or think it's too hard, you can quit 
-your quest by typing "AQUEST QUIT".  However you must wait 30 
+If you don't like the quest or think it's too hard, you can quit
+your quest by typing "AQUEST QUIT".  However you must wait 30
 ticks before being able to start a new quest.
 
-Once you complete your quest you must return to the guildmaster 
-to get credit for it.  At the guildmaster type "AQUEST COMPLETE" 
-and you'll earn the appropriate number of quest points for the 
+Once you complete your quest you must return to the guildmaster
+to get credit for it.  At the guildmaster type "AQUEST COMPLETE"
+and you'll earn the appropriate number of quest points for the
 quest.  After completing a quest, you must wait before starting
 another, the amount of time you have to wait is equal to the 20
-minus the amount of time it took to complete the quest, to a 
+minus the amount of time it took to complete the quest, to a
 minimum of five ticks.
 
 "AQUEST INFO" will give you your current quest status.
 "AQUEST LIST" will show you the items you can buy.
 "AQUEST BUY" is used to buy an item.
 
-There are other ways to have your quest end.  These include 
-running out of time, dying, quitting from the mud, renting, 
-and in the case of killing a mob, someone else killing it before 
+There are other ways to have your quest end.  These include
+running out of time, dying, quitting from the mud, renting,
+and in the case of killing a mob, someone else killing it before
 you can.
 
 If a player is not up to doing a regular AUTOQUEST, there is a
@@ -356,13 +352,13 @@ AQCARDS QCARDS
 
 Every class in ronin has a guildmaster who can send you on
 aqcard autoquests in order to earn skill points.  These quest
-points can be used to buy subclass points, or even stat 
+points can be used to buy subclass points, or even stat
 increases beyond 18.
 
 There are several levels of autoquest cards.  However, they
 all follow the same format.  When a player requests her
 aqcard quest with the appropriate command, 20 cards will be
-spread across Ronin.  The player must then find the 
+spread across Ronin.  The player must then find the
 appropriate number of cards and return them to his or her
 guildmaster for credit.  There is a chance on request that
 his or her guildmaster will double the quest point reward.
@@ -397,7 +393,7 @@ There are several levels of AQORDER quests, which determine the
 relative difficulty of the order you receive.  There is no time
 limit on the autoquest, but quitting the order (by junking the
 order) will incur a 2.5 hour penalty that is also cleared after
-a MUD reboot. 
+a MUD reboot.
 
 In order to acquire an aqorder, you must first locate Franz, who
 generally wanders around Midgaard, but occasionally ventures
@@ -586,20 +582,20 @@ See Also: "RECIPES" "MUD QUEST" "PLAYER QUEST" "IMMORTAL QUEST"
 #
 "REIMBURSEMENT"
 
-Ronin's reimbursement policy is simple.  Unless there is an 
+Ronin's reimbursement policy is simple.  Unless there is an
 incredibly good reason, we do not reimburse for anything.
 
 Some things we do NOT reimburse for include...
 
-o Dying and just leaving your corpse until reboot, intending to 
+o Dying and just leaving your corpse until reboot, intending to
 get reimbursed for it then.
 
-o Losing equipment in rent due to lack of gold.  Use the 1.5x 
+o Losing equipment in rent due to lack of gold.  Use the 1.5x
 rent in bank feature, it'll save you a lot of pain.
 
-o Dying just before a reboot at a location where it would be 
-impossible for anyone to collect the corpse in any reasonable 
-amount of time.  If you expect to die in a battle, it isn't wise 
+o Dying just before a reboot at a location where it would be
+impossible for anyone to collect the corpse in any reasonable
+amount of time.  If you expect to die in a battle, it isn't wise
 to attempt that battle 5 minutes before reboot.
 
 o Router lag, although unfortunate, is also out of our control and
@@ -610,8 +606,8 @@ o Giving gear to mobs, be they charmed mobs or otherwise, is done
 at your own risk.  This is under your own control and will
 therefore not be subject to reimbursement.
 
-Please remember that getting equipment reimbursed is not a right.  
-If the administrators feel you have a justified reason for a 
+Please remember that getting equipment reimbursed is not a right.
+If the administrators feel you have a justified reason for a
 reimbursement, you'll get one.
 #
 "HASTE"
@@ -623,16 +619,16 @@ Save        : -
 Duration    : 5 ticks
 Mana cost   : 120
 
-When affected by haste, the player is moving fairly quickly, 
-allowing him an automatic second attack during the fight. The 
+When affected by haste, the player is moving fairly quickly,
+allowing him an automatic second attack during the fight. The
 chance of its success depends on how well you learn it.
 #
 "CLASS PLACEMENT POINTS" "POINTS"
-Class placement points rank the top ten players in each class.  
-Points are gained by various means, such as leveling or gaining 
-mana and/or hit points.  Your base stats such as strength and 
-intelligence can also influence the number of points you receive.  
-You can see the top 10 players for each class at that class' 
+Class placement points rank the top ten players in each class.
+Points are gained by various means, such as leveling or gaining
+mana and/or hit points.  Your base stats such as strength and
+intelligence can also influence the number of points you receive.
+You can see the top 10 players for each class at that class'
 guildmaster.
 
 See Also: -
@@ -645,10 +641,10 @@ http://www.roninmud.org
 #
 HOSPITAL
 
-For those who are below level 16, there is a Nice new Hospital 
+For those who are below level 16, there is a Nice new Hospital
 located North, west, and up from Market square.
 
-The doctor will gladly exchange your gold for a healing or 
+The doctor will gladly exchange your gold for a healing or
 protection spell.
 #
 UNFOLLOW
@@ -661,122 +657,122 @@ See Also: FOLLOW REFOLLOW
 #
 LOTTERY
 
-The Midgaard lottery is a great way for the lucky to win cash and 
-equipment.  It is located in the southern section of Midgaard 
-near the concourse, just a few short moves from the Mayor's 
-office.  One of the many possible paths to take is 4w,5s,4e,s,e 
+The Midgaard lottery is a great way for the lucky to win cash and
+equipment.  It is located in the southern section of Midgaard
+near the concourse, just a few short moves from the Mayor's
+office.  One of the many possible paths to take is 4w,5s,4e,s,e
 from Market Square.
 
-Once you get to the lottery machine, look at it for basic 
-instructions and a list of things that are going to be drawn for.  
-When you purchase a ticket, that ticket is assigned a ticket 
-number, a lot number and a color.  To win, both numbers on the 
+Once you get to the lottery machine, look at it for basic
+instructions and a list of things that are going to be drawn for.
+When you purchase a ticket, that ticket is assigned a ticket
+number, a lot number and a color.  To win, both numbers on the
 ticket must match during the drawing.
 
-To move your tickets around in your inventory, both the color and 
-the lot number can be used.  For example, a red ticket with lot 
-number 4 can be put in a bag with the command "put red bag" or 
+To move your tickets around in your inventory, both the color and
+the lot number can be used.  For example, a red ticket with lot
+number 4 can be put in a bag with the command "put red bag" or
 "put lot4 bag".
 
-If you wanted to move the third ticket in your inventory it would 
+If you wanted to move the third ticket in your inventory it would
 be "put 3.red bag" or "put 3.lot4 bag".
 
-Players may buy an unlimited number of tickets assuming they have 
-the cash and storage space to do so.  Remember, the rent limit is 
-only 200 items, so a large number of tickets would need to be 
-stored in a vault or on another character.  It is possible to buy 
-multiple tickets at once and have a range of tickets on one 
+Players may buy an unlimited number of tickets assuming they have
+the cash and storage space to do so.  Remember, the rent limit is
+only 200 items, so a large number of tickets would need to be
+stored in a vault or on another character.  It is possible to buy
+multiple tickets at once and have a range of tickets on one
 object.
 #
 HOME
 
 Usage: home
 
-Until you reach level 10, you can type home and magically appear 
-in the Temple of Midgaard.  At level 10 and higher, you will need 
-to buy recall scrolls from the Magic shop, which is located 2 
+Until you reach level 10, you can type home and magically appear
+in the Temple of Midgaard.  At level 10 and higher, you will need
+to buy recall scrolls from the Magic shop, which is located 2
 west and 1 north from Market Square.
 #
 "COMPARISON COMMANDS"
 
 skills/spells/train
 
-We use the command PRACTICE.  Outside your guild, it shows what 
-you have learned.  Inside your guild, it shows what you can 
-learn. Find your guild by checking out the map you may have in 
+We use the command PRACTICE.  Outside your guild, it shows what
+you have learned.  Inside your guild, it shows what you can
+learn. Find your guild by checking out the map you may have in
 inventory.  Examples: practice, practice kick
 
 Note
 
-We use a board system where you type LOOK BOARD to see what 
-messages there are to read, and READ <number> to read a 
-particular message.  If you want to write on the board, simply 
+We use a board system where you type LOOK BOARD to see what
+messages there are to read, and READ <number> to read a
+particular message.  If you want to write on the board, simply
 type WRITE <subject line> and enter your message.
 
 target
 
-We don't have a target system here.  You need to specify the 
+We don't have a target system here.  You need to specify the
 target of each command.
 
 exp
-  
-Type SCORE to see your current experience.  Type LEVELS to see 
+
+Type SCORE to see your current experience.  Type LEVELS to see
 the experience you need for each level gain.
 
-If the command you tried isn't here, and you can't find something 
-comparable in these help files, please post a small message to 
+If the command you tried isn't here, and you can't find something
+comparable in these help files, please post a small message to
 the board located 3 north and 1 west from Market Square.
 #
 "INTRODUCTION"
 
-Welcome Adventurer, to the land of Ronin.  You have entered a 
-world where monsters plague the land, and the town of Midgaard is 
-in need of some young new adventurers to lend some brawn, book, 
-or slight of hand.  You have decided on a long journey to 
+Welcome Adventurer, to the land of Ronin.  You have entered a
+world where monsters plague the land, and the town of Midgaard is
+in need of some young new adventurers to lend some brawn, book,
+or slight of hand.  You have decided on a long journey to
 greatness.
 
-For the young adventurer there are many new things to learn.  The 
-donation room would be a good place to start.  Located just west 
-of the Temple of Midgaard, you can find some useful weapons and 
-equipment to aid you in future battles. Keep in mind that near 
-the Clerics' Guild is a hospital that will cure any wounds you 
+For the young adventurer there are many new things to learn.  The
+donation room would be a good place to start.  Located just west
+of the Temple of Midgaard, you can find some useful weapons and
+equipment to aid you in future battles. Keep in mind that near
+the Clerics' Guild is a hospital that will cure any wounds you
 may receive in battle for a very low price.
 
-Now, you can dare proceed to a small field just south of 
-Midgaard.  Located a distance south from the Market Square you 
-can battle some fearsome creatures to sharpen your swordsmanship 
-or scribe your magic books!  As you advance in your skills, you 
-may decide to take your adventures to the local zoo.  There are 
-many animals waiting to test your fighting skills.  This is 
+Now, you can dare proceed to a small field just south of
+Midgaard.  Located a distance south from the Market Square you
+can battle some fearsome creatures to sharpen your swordsmanship
+or scribe your magic books!  As you advance in your skills, you
+may decide to take your adventures to the local zoo.  There are
+many animals waiting to test your fighting skills.  This is
 located to the southwest of town.
 
-Once you feel very confident in abilities, you can proceed to 
-killing the fungi that roam the Welmar Sewers.  Located very far 
-east from town, you can follow the King's Road into the castle, 
-and down into the sewers.  You can battle the fungi that lurk 
+Once you feel very confident in abilities, you can proceed to
+killing the fungi that roam the Welmar Sewers.  Located very far
+east from town, you can follow the King's Road into the castle,
+and down into the sewers.  You can battle the fungi that lurk
 there.
 
-Once you finish these grueling tasks, you have started on your 
-path to becoming a fine young adventurer.  You must converse with 
-other adventurers, young and old alike.  You can share stories 
-and learn of new experiences, as well as of different places to 
-take your fighting skills.  Also, remember when in need of aid, 
-seek out a deputy, and he will surely help you.  Enjoy your 
+Once you finish these grueling tasks, you have started on your
+path to becoming a fine young adventurer.  You must converse with
+other adventurers, young and old alike.  You can share stories
+and learn of new experiences, as well as of different places to
+take your fighting skills.  Also, remember when in need of aid,
+seek out a deputy, and he will surely help you.  Enjoy your
 adventures, friend, and may the Gods be with you.
 #
 "INFORMATION"
 
 Multis are limited to 3 chars at a time.
 
-HELP PKILL AND PSTEAL, as you will be held responsible for 
-knowing the info contained therein.  Pkill and Psteal are limited 
-to those areas marked with a [*].  Corpse looting is always 
+HELP PKILL AND PSTEAL, as you will be held responsible for
+knowing the info contained therein.  Pkill and Psteal are limited
+to those areas marked with a [*].  Corpse looting is always
 illegal and will be treated with the harshest punishment.
 
-Character sharing and playing 4 multies is not permitted.  
-Playing a 4th is defined as any connection of a 4th character for 
-any reason other than exchanging eq.  Linkdead characters count. 
-If you take that 4th character out of the reception area, you are 
+Character sharing and playing 4 multies is not permitted.
+Playing a 4th is defined as any connection of a 4th character for
+any reason other than exchanging eq.  Linkdead characters count.
+If you take that 4th character out of the reception area, you are
 counted as playing that char. See HELP MULTI.
 
 Character trading is illegal.  See HELP TRADE.
@@ -825,7 +821,7 @@ HELP INDEX will provide you with all the available help topics.
 #
 CHANNEL
 
-This command will show you which channels you have on, or list the 
+This command will show you which channels you have on, or list the
 players on a particular channel.
 
 Usage: channel <gossip/quest/auction/chaos>
@@ -834,18 +830,18 @@ See Also: GOSSIP AUCTION QUEST CHAOS
 #
 CLANS
 
-Clans are usually a group of players that hang out together and decide to 
-become more organized as a group.  Normally they share equipment and vaults, 
+Clans are usually a group of players that hang out together and decide to
+become more organized as a group.  Normally they share equipment and vaults,
 and the more established clans have their own clan houses.
 
-The cost of forming an official clan recognized by the game 
+The cost of forming an official clan recognized by the game
 without a clan hall is 30 million coins.
 
 See Also: CLAN HOUSE
 #
 "CLAN HALL" "CLAN HOUSE"
 
-A clan has the option to buy its own little clan house.  All the members 
+A clan has the option to buy its own little clan house.  All the members
 need is the money and someone willing to make the house for them.
 
 The prices for a clan house are:
@@ -869,7 +865,7 @@ PRACTICE
 
 Use practice with your guild to improve your knowledge of skills and spells.
 
-Used outside your guild, practice shows you the skills and spells you know 
+Used outside your guild, practice shows you the skills and spells you know
 and how well you know them.
 #
 AFK BRB BOM ABBREVIATIONS
@@ -882,7 +878,7 @@ bom - Bracelet of Magic
 #
 NOSHOUT NSHOUT
 
-This is a powerful ability given to the gods.  It allows them to effectively 
+This is a powerful ability given to the gods.  It allows them to effectively
 prevent any mortal from communicating with others.
 
 Noshouts are given to mortals who are verbally abusive or spam frequently.
@@ -914,8 +910,8 @@ PST: EST-3:00 (Pacific)
 #
 BLEED
 
-When your hit points reach a certain level, you get a warning message in 
-capitals.  This warning message can either occur below 1/5 of your maximum 
+When your hit points reach a certain level, you get a warning message in
+capitals.  This warning message can either occur below 1/5 of your maximum
 hit points (default) or at a level you set yourself with the bleed command.
 
 Type: bleed <number> to set your desired level.
@@ -924,8 +920,8 @@ See Also: WIMPY
 #
 HUNGRY HUNGER THIRST THIRSTY
 
-If you are hungry or thirsty, the amount your hit points and mana increase each 
-tick is lower.  If you're over a certain age, your hit points and mana may 
+If you are hungry or thirsty, the amount your hit points and mana increase each
+tick is lower.  If you're over a certain age, your hit points and mana may
 actually decrease.  This decrease gets larger the older you are.
 
 However, it is impossible to starve to death.
@@ -934,49 +930,49 @@ See Also: AGE
 #
 BAN
 
-Helping a banned player connect to Ronin, or helping a banned player while in 
+Helping a banned player connect to Ronin, or helping a banned player while in
 the game is highly frowned upon.
 
-Any punishment for the breaking of this policy will be dependent on the level 
+Any punishment for the breaking of this policy will be dependent on the level
 of aid given.
 #
 BOTTING
 
-Botting is defined as using scripts and actions to have your characters play 
+Botting is defined as using scripts and actions to have your characters play
 the mud without any input from you.
 
-Botting is illegal on Ronin, and punishment can range from characters being 
-locked to a full ban.  The level of punishment depends on the level of the 
+Botting is illegal on Ronin, and punishment can range from characters being
+locked to a full ban.  The level of punishment depends on the level of the
 botting activity.
 
 The only legal actions are those for auto-loot, auto-split, auto-eat and auto-
-drink.  Auto-assists and auto-pummels fall under the bot category.  Please note 
-that aliases such as: #al {pum}{#20 pummel} are not actions and are not 
+drink.  Auto-assists and auto-pummels fall under the bot category.  Please note
+that aliases such as: #al {pum}{#20 pummel} are not actions and are not
 considered bots in any way.
 
 
-To ensure you are not using a bot, or even a semi-bot, do not use actions that 
-directly affect your characters.  Actions should only send text to your screen 
+To ensure you are not using a bot, or even a semi-bot, do not use actions that
+directly affect your characters.  Actions should only send text to your screen
 to alert you to a required response.
 #
 VICIOUS
 
-When in vicious mode, you will automatically kill mortally wounded creatures.  
+When in vicious mode, you will automatically kill mortally wounded creatures.
 Combat will not stop.
 
-For good aligned players, a small alignment decrease will happen each time you 
+For good aligned players, a small alignment decrease will happen each time you
 are vicious.
 #
 MOTD
 
 This shows the current message of the day for your level.
 
-If you are under level 6, you see the newbie motd. If you are not a god and 
+If you are under level 6, you see the newbie motd. If you are not a god and
 above level 6 you see the mortal motd.  If you are a god, you see the god
 
 motd.
 
-You can also view other motds by using the following commands. The god motd is 
+You can also view other motds by using the following commands. The god motd is
 only available to gods.
 
 'motd newbie' 'motd mortal'
@@ -1011,13 +1007,13 @@ Thou shall have fun and tell all thy friends about this realm.
 #
 TRADING TRADE
 
-Trading equipment is a great way to improve you characters and this practice is 
+Trading equipment is a great way to improve you characters and this practice is
 supported by Ronin.
 
-However, we frown on players selling equipment for real life money or trading 
+However, we frown on players selling equipment for real life money or trading
 equipment for real life items.  Players caught doing this will be locked.
 
-Trading or selling characters is also illegal.  Any character that has been 
+Trading or selling characters is also illegal.  Any character that has been
 traded to another player will be purged.
 #
 DEPUTY
@@ -1037,12 +1033,12 @@ GOSSIP
 Usage: gossip - turns gossip channel on/off
        gossip <message> - broadcasts your message to the gossip channel
 
-This is a communication channel that is broadcast to everyone who has the 
-channel turned on, no matter where he is.  This channel is very useful if you 
-get in trouble or if you just want to ask a question about something but you 
+This is a communication channel that is broadcast to everyone who has the
+channel turned on, no matter where he is.  This channel is very useful if you
+get in trouble or if you just want to ask a question about something but you
 aren't sure who would know the answer.  Thus you ask everyone at the same time.
-You do not gain the use of this channel until you have reached level 3.  You 
-also can lose the use of this channel if a god deems it necessary.  Just 
+You do not gain the use of this channel until you have reached level 3.  You
+also can lose the use of this channel if a god deems it necessary.  Just
 remember to keep your language clean and refrain from spamming people.
 
 Out of courtesy for your fellow mudders, please keep all gossips in English.
@@ -1053,20 +1049,20 @@ GF
 
 Usage: gf <action>
 
-This is just like typing a social action, except the actions occur on the 
+This is just like typing a social action, except the actions occur on the
 gossip channel.  You may also target anyone in the world with your action.
 
 See Also: GOSSIP
 #
 DEATH DEAD
 
-When you run out of hit points, you will die.  You will get more wounded until 
-you reach -10 hit points, at which point you actually die - so there is a 
+When you run out of hit points, you will die.  You will get more wounded until
+you reach -10 hit points, at which point you actually die - so there is a
 chance that you can get healed.  All spells that you were affected by before
 death are lost.
 
-It is also possible to lose some of your hit points or mana when you die.  How 
-much you lose depends on how much your class is over the hit point or mana 
+It is also possible to lose some of your hit points or mana when you die.  How
+much you lose depends on how much your class is over the hit point or mana
 limit given below.
 
    Class            Hp Limit       Mana Limit
@@ -1093,7 +1089,7 @@ jump crack
 #
 CLIMB
 
-This gets you up and down.  You might want to make sure that you have a firm 
+This gets you up and down.  You might want to make sure that you have a firm
 grip though.  Climbing can be REAL dangerous.
 
 Climb <object>
@@ -1101,7 +1097,7 @@ Climb ladder
 #
 CRAWL
 
-This helps you to get under obstacles, or in tight places.  Just make sure 
+This helps you to get under obstacles, or in tight places.  Just make sure
 they're not too tight.
 
 Crawl <object>
@@ -1143,8 +1139,8 @@ For the first time player of Ronin here are a few tips:
 If you're in trouble type HOME, this will bring you back to the temple.
 (HELP HOME)
 
-There's a donation room to the west of the Temple where you start.  Go there 
-and equip yourself for the adventures ahead.  When you can afford it you should 
+There's a donation room to the west of the Temple where you start.  Go there
+and equip yourself for the adventures ahead.  When you can afford it you should
 buy a recall scroll from the Magic Shop which is 2 west and 1 north from Market
 Square.  Having one will save your life.
 (See HELP SCROLL)
@@ -1156,67 +1152,67 @@ level 16 will get 1.5x the regeneration on all stats.
 We also provide a hospital for any player below level 16.  It can be
 found n,w,u from market square. (HELP HOSPITAL)
 
-We also have a voting booth located in Midgaard to be used by level 9 and 
-above. We encourage players to vote on the various issues in discussion, with 
+We also have a voting booth located in Midgaard to be used by level 9 and
+above. We encourage players to vote on the various issues in discussion, with
 one of their multis only, per topic.
 
-For the first 2-3 levels go south from the Market Square to the Training 
-Grounds and fight some weaker mobs.  Use the 'consider' command to find the 
+For the first 2-3 levels go south from the Market Square to the Training
+Grounds and fight some weaker mobs.  Use the 'consider' command to find the
 easiest mobs and start with them.
 
-After you've (hopefully) advanced a couple of times you should visit the 
+After you've (hopefully) advanced a couple of times you should visit the
 beautiful Midgaard Zoo which is located 4 west and 10 south from the Market.
 #
 "CHAOS NIGHT"
 
-A special competition that takes place on Halloween and is a fight to the death 
-between all players that are on.  The contest is hosted by Ronin's test site.  
+A special competition that takes place on Halloween and is a fight to the death
+between all players that are on.  The contest is hosted by Ronin's test site.
 A valuable prize is given to the last person alive.
 
 See Also: CHAOS "CHAOS ZONE"
 #
 ALIGNMENT EVIL-ALIGNMENT GOOD-ALIGNMENT NEUTRAL-ALIGNMENT
 
-Your alignment reflects your behaviour in the world.  By doing heroic deeds and 
-slaying evil monsters your alignment tends to rise towards good.  Someone who 
-continually slays innocents and wreaks havoc on the forces of law and order 
-will gradually turn towards evil.  All characters (Except Anti-Paladin/Paladin) 
+Your alignment reflects your behaviour in the world.  By doing heroic deeds and
+slaying evil monsters your alignment tends to rise towards good.  Someone who
+continually slays innocents and wreaks havoc on the forces of law and order
+will gradually turn towards evil.  All characters (Except Anti-Paladin/Paladin)
 start out neutral and will only be judged by their actions.
 #
 TANK BUFFER
 
-The tank or buffer is the character in the group that's being hit by the 
-monsters.  Usually this is the character with the most hit points.  Aggressive 
-monsters usually attack the last person in the group.  This position is often 
+The tank or buffer is the character in the group that's being hit by the
+monsters.  Usually this is the character with the most hit points.  Aggressive
+monsters usually attack the last person in the group.  This position is often
 referred to as 'the tank position'.
 #
 AGE
 
-Age affects your mana and hit point regeneration.  The closer you are to your 
-prime, the faster you regenerate.  After a certain age your regeneration starts 
-to go down again.  No one dies of old age on Ronin.  How old you are will also 
-affect how many hit points or mana points you will lose while hungry or 
+Age affects your mana and hit point regeneration.  The closer you are to your
+prime, the faster you regenerate.  After a certain age your regeneration starts
+to go down again.  No one dies of old age on Ronin.  How old you are will also
+affect how many hit points or mana points you will lose while hungry or
 thirsty.
 
-Age has changed.  Characters not having logged in since Mid July, 1998 will 
-find themselves about half the age they previously were.  Also, every 4 TICKS 
+Age has changed.  Characters not having logged in since Mid July, 1998 will
+find themselves about half the age they previously were.  Also, every 4 TICKS
 is now 1 mud hour and the meta man also has an option to increase age.
 
 See Also: HUNGRY THIRSTY
 #
 HITTER HITTERS
 
-A hitter is a character that is wearing as much damage equipment as possible in 
-order to do more damage.  In a trio of multis there is usually one hitter, a 
+A hitter is a character that is wearing as much damage equipment as possible in
+order to do more damage.  In a trio of multis there is usually one hitter, a
 tank and a healer.
 #
 MULTI MULTIS
 
-RoninMUD allows a single player to have three characters logged on at the same 
-time.  Note that a linkdead character counts towards this limit.  More than 
-three characters may only be logged on when all characters remain in the 
-reception or vault room for the SOLE purpose of exchanging equipment.  This 
-means that logging on more than three characters to have one of the chars cast 
+RoninMUD allows a single player to have three characters logged on at the same
+time.  Note that a linkdead character counts towards this limit.  More than
+three characters may only be logged on when all characters remain in the
+reception or vault room for the SOLE purpose of exchanging equipment.  This
+means that logging on more than three characters to have one of the chars cast
 a spell on your other characters while all are in reception is PROHIBITED.
 
           1st offense:  1 char locked for 10 days.
@@ -1228,23 +1224,23 @@ a spell on your other characters while all are in reception is PROHIBITED.
 #
 MANA MAGIC
 
-Mana represents the ability of a character to manipulate the magical forces in 
-the world.  Mana also represents power.  The more mana your character has the 
+Mana represents the ability of a character to manipulate the magical forces in
+the world.  Mana also represents power.  The more mana your character has the
 more powerful your spellcaster is.
 #
 HP HPS HITS HIT HITPOINTS
 
-Hit points represent your character's life force.  Damage you receive lowers 
-the number of hit points you have, and lowering them to -10 will result in your 
-death.  A character with many hit points, such as a high level nomad, will be 
-able to withstand a much stronger blow than a character such as a low level 
+Hit points represent your character's life force.  Damage you receive lowers
+the number of hit points you have, and lowering them to -10 will result in your
+death.  A character with many hit points, such as a high level nomad, will be
+able to withstand a much stronger blow than a character such as a low level
 mage.
 
 See also:  WIMPY
 #
 CLASSES CLASS
 
-There are currently 10 classes available to players on RoninMUD.  Here's a 
+There are currently 10 classes available to players on RoninMUD.  Here's a
 brief description of each:
 
 Anti-Paladin  A warrior-thief class.  An excellent balance of skills and
@@ -1472,13 +1468,13 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
 #
 STABLES
 
-The Midgaard stables provide the adventurer with a trustworthy mount.  These 
-mounts help you save energy and reduce the use of your movement points while 
-being ridden.  They also accept your orders and will be only too glad to assist 
+The Midgaard stables provide the adventurer with a trustworthy mount.  These
+mounts help you save energy and reduce the use of your movement points while
+being ridden.  They also accept your orders and will be only too glad to assist
 you.
 
-There are many types of mounts for all types of character levels and 
-alignments.  Just be sure to read the signs on the way in, since all sales 
+There are many types of mounts for all types of character levels and
+alignments.  Just be sure to read the signs on the way in, since all sales
 are final.
 
 The Stables can be found west of Common Square.
@@ -1501,13 +1497,13 @@ To see a listing of items available, type "look board."
 
 To identify items in auction see HELP IDENTIFY.
 
-The auctioneer will reduce items over a certain amount if they have been 
-available for over 2 days.  After the reboot, sold items that have not been 
+The auctioneer will reduce items over a certain amount if they have been
+available for over 2 days.  After the reboot, sold items that have not been
 picked up are returned to the board.
 
 After 4 days, the auctioneer takes any unclaimed coin.
 
-Auction is also used for the auction channel, and the command by itself toggles 
+Auction is also used for the auction channel, and the command by itself toggles
 the auction channel on and off.
 
 SEE ALSO: BID IDENTIFY TRADING GOSSIP CHAOS
@@ -1516,7 +1512,7 @@ BID
 
 Usage: bid <lot number> <amount>
 
-To bid on objects auctioned. To raise a bid it must be at least 1000 coins 
+To bid on objects auctioned. To raise a bid it must be at least 1000 coins
 higher than the last one.
 
 SEE ALSO: AUCTION IDENTIFY
@@ -1525,12 +1521,12 @@ IDENTIFY
 
 Usage: identify <lot number>
 
-This command will identify the object in auction.  The cost for 
+This command will identify the object in auction.  The cost for
 this service is 3500 coins.
 
 Additionally, there are identify scrolls that may be found in
 several magic shops across Ronin.  These scrolls may be used
-to identify items, players, and monsters.  Identifying a 
+to identify items, players, and monsters.  Identifying a
 monster will give detailed information about the monster, and
 is a wise tool to be used before attempting a new challenge.
 
@@ -1544,17 +1540,17 @@ By itself this command toggles the quest channel on and off.
 
 Using "quest flag", the player toggles his/her quest status on/off.
 
-The quest status is used by IMM+ to run quests.  Many functions are available 
-to the IMM+ that will affect you if you have your quest status on.  For this 
-reason, the quest status is automatically turned off during renting or 
+The quest status is used by IMM+ to run quests.  Many functions are available
+to the IMM+ that will affect you if you have your quest status on.  For this
+reason, the quest status is automatically turned off during renting or
 quitting.
 
 The quest channel will remain on through a rent or quit.
 #
 COLOR
 
-Color allows you to toggle color on and off as well as set the color attributes 
-for certain messages. You must have a VT100 or Ansi compatible terminal for 
+Color allows you to toggle color on and off as well as set the color attributes
+for certain messages. You must have a VT100 or Ansi compatible terminal for
 color to work. Usage:
   >Color
   Toggle Color on and off
@@ -1581,10 +1577,10 @@ SEE ALSO: DISPLAY
 #
 WARRIOR FIGHTER
 
-Warriors are known to have more strength than the average player. This makes 
-them better at hand-to-hand-combat, as they possess skills of violence and 
-fighting unequaled by the members of any other class. However, they lack the 
-ability to use magic of any sort.  Warriors also get 4 natural armor points for 
+Warriors are known to have more strength than the average player. This makes
+them better at hand-to-hand-combat, as they possess skills of violence and
+fighting unequaled by the members of any other class. However, they lack the
+ability to use magic of any sort.  Warriors also get 4 natural armor points for
 every 5 levels, and an additional practice % on parry for every 10 levels.
 
 You can improve your skills by using the practice command.
@@ -1610,8 +1606,8 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 CLERIC
 
-Clerics have an ancient taboo against carrying sharp weapons. Hence, they can 
-only wield bludgeoning weapons. This class gives you the wisdom of peace, 
+Clerics have an ancient taboo against carrying sharp weapons. Hence, they can
+only wield bludgeoning weapons. This class gives you the wisdom of peace,
 blessing and healing, though it is possible to learn more violent spells.
 
 You can improve your spells by using the practice command.
@@ -1624,7 +1620,7 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 BARD
 
-Bard is a class that can sing useful songs. Bards can be very beneficial to 
+Bard is a class that can sing useful songs. Bards can be very beneficial to
 groups since they can provide song and entertainment for the whole group.
 Bards are also able to cast some spells and possess some useful skills.
 
@@ -1641,7 +1637,7 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 MAGE
 
-This is the class of powerful and violent magic, but mages do not control 
+This is the class of powerful and violent magic, but mages do not control
 nature and therefore cannot bless or heal.
 
 You can improve your spells by using the practice command.
@@ -1654,9 +1650,9 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 NINJA
 
-Ninja is a very powerful class with good dex and con. They can cast spells and 
-have skills like sneak, hide, throw and dodge. They can wield two weapons. They 
-have good bare-hand damage too.  Ninjas can swim, so they don't need a boat to 
+Ninja is a very powerful class with good dex and con. They can cast spells and
+have skills like sneak, hide, throw and dodge. They can wield two weapons. They
+have good bare-hand damage too.  Ninjas can swim, so they don't need a boat to
 cross water.
 
 You can improve your spells and skills by using the practice command.
@@ -1669,9 +1665,9 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 NOMAD
 
-Nomad is a strongly recommended class with good con, str and dex.  They usually 
-have very good hit points too. They can't cast spells but they have good 
-skills.  Nomads also get 5 natural armor points for every 5 levels, and an 
+Nomad is a strongly recommended class with good con, str and dex.  They usually
+have very good hit points too. They can't cast spells but they have good
+skills.  Nomads also get 5 natural armor points for every 5 levels, and an
 additional practice % on dodge for every 10 levels.
 
 You can improve your skills by using the practice command.
@@ -1683,8 +1679,8 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 PALADIN
 
-This class must have a good alignment to cast spells. They have some warrior 
-skills, and some cleric spells as well as a few unique spells like 'fury' and 
+This class must have a good alignment to cast spells. They have some warrior
+skills, and some cleric spells as well as a few unique spells like 'fury' and
 'lay hands'.
 
 You can improve your spells and skills by using the practice command.
@@ -1697,7 +1693,7 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 ANTI-PALADIN
 
-This class must have an evil alignment to cast spells.  They have some thief 
+This class must have an evil alignment to cast spells.  They have some thief
 skills and some offensive spells.
 
 You can improve your spells and skills by using the practice command.
@@ -1710,9 +1706,9 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 COMMANDO
 
-This class represents a warrior-mage.  They have some warrior skills and most 
-of the offensive spells of the magic-user. Commandos also get 3 natural armor 
-points for every 5 levels
+This class represents a warrior-mage.  They have some warrior skills and most
+of the offensive spells of the magic-user. Commandos also get 3 natural armor
+points for every 5 levels.
 
 You can improve your spells and skills by using the practice command.
 
@@ -1729,7 +1725,7 @@ PASSWORD allows you to change the password for your character.
 Example:
      password <old password> <new password>
 
-NOTE: For those people concerned with snooping, all lines that begin with 
+NOTE: For those people concerned with snooping, all lines that begin with
 "pass" do not show up in snoop.
 #
 SKILLS
@@ -1783,7 +1779,7 @@ CIRCLE
 
 Class: Thief
 
-A skill similar to backstab, however it can be used during battle.  CIRCLE does 
+A skill similar to backstab, however it can be used during battle.  CIRCLE does
 the highest non-magic combat damage.
 #
 PICK
@@ -1834,21 +1830,21 @@ ASSAULT
 
 Class: Commando Ninja
 
-ASSAULT will surprise attack a mob doing extra damage. This is similar to 
+ASSAULT will surprise attack a mob doing extra damage. This is similar to
 BACKSTAB. The chance of a successful ASSAULT depends on how well you learn it.
 #
 BLOCK
 
 Class: Warrior Paladin
 
-BLOCK will toggle block on and off. When block is on you will attempt to block 
+BLOCK will toggle block on and off. When block is on you will attempt to block
 your target and keep it from fleeing.
 #
 DUAL
 
 Class: Warrior Commando
 
-A skill which gives an automatic second attack during the fight. The chance of 
+A skill which gives an automatic second attack during the fight. The chance of
 its success depends on how well you learn it.
 
 See Also : TRIPLE
@@ -1857,7 +1853,7 @@ TRIPLE
 
 Class: Warrior Commando
 
-A skill which gives an automatic third attack the during fight. The chance of its 
+A skill which gives an automatic third attack the during fight. The chance of its
 success depends on how well you learn it.
 
 See Also : DUAL
@@ -1866,7 +1862,7 @@ DISEMBOWEL
 
 Class: Nomad
 
-DISEMBOWEL is a special skill which allows a tanking Nomad to inflict extra 
+DISEMBOWEL is a special skill which allows a tanking Nomad to inflict extra
 damage onto a mob, when the mob is bleeding. There is a possibility of
 failing the disembowel routine, in which case, the mob will inflict extra
 damage to the Nomad.
@@ -1890,7 +1886,7 @@ SNEAK
 Class: Anti-Paladin Ninja Thief
 
 Used for sneaking (moving in and out of rooms without anyone taking notice).
-When you type sneak there is no way to know if you actually are sneaking. If 
+When you type sneak there is no way to know if you actually are sneaking. If
 you successfully sneak, you'll continue to sneak for a little while.
 
 Example:
@@ -1929,10 +1925,10 @@ KICK
 
 Class: Anti-Paladin Commando Ninja Nomad Paladin Warrior
 
-The success of a kick depends upon how well you learned the skill. The higher 
-your level, the harder you kick. There is one small catch - whenever you kick 
-and connect, you will be unable to type any command for three rounds of 
-'Violence'.  If you miss it is two rounds... so be sure that you do not need to 
+The success of a kick depends upon how well you learned the skill. The higher
+your level, the harder you kick. There is one small catch - whenever you kick
+and connect, you will be unable to type any command for three rounds of
+'Violence'.  If you miss it is two rounds... so be sure that you do not need to
 flee!
 
 Kick damage is limited to 60.
@@ -1954,7 +1950,7 @@ that hitting a person who is resting will inflict 1.5x damage.
 Bashing a person who is resting will cause them to become
 stunned, receiving 2x damage on the next attack.
 
-Bashing a person who is stunned will cause them to become 
+Bashing a person who is stunned will cause them to become
 incapacitated, receiving 2.33x damage on the next attack.
 
 See Also : RESCUE, KICK, PUMMEL
@@ -1963,17 +1959,17 @@ PUMMEL
 
 Class: Anti-Paladin Commando Ninja Paladin
 
-A successful pummel will do minor damage and stun that person for a round, 
-causing your next hit to do 2x damage.  You must first learn BASH to use this 
-skill.  The chance of a successful pummel depends on how well you learn it and 
+A successful pummel will do minor damage and stun that person for a round,
+causing your next hit to do 2x damage.  You must first learn BASH to use this
+skill.  The chance of a successful pummel depends on how well you learn it and
 how well you learn BASH.
 
-Pummeling a person who is resting or stunned will cause them to become 
+Pummeling a person who is resting or stunned will cause them to become
 incapacitated, receiving 2.33x damage on the next attack.
 
 Be forewarned...
 
-If you pummel a mobile that dodges, the mobile will switch from the tank to the 
+If you pummel a mobile that dodges, the mobile will switch from the tank to the
 next person to try to hit the mobile.
 
 Perhaps pummeling the Huge Queen Ant isn't such a good idea...
@@ -1984,10 +1980,10 @@ PUNCH
 
 Class: Warrior
 
-A successful punch can 'knock' that person over. The damage of the punch is 
+A successful punch can 'knock' that person over. The damage of the punch is
 (your level * 2) hit points.
 
-If you miss you lose your balance and fall, you will have to stand up before 
+If you miss you lose your balance and fall, you will have to stand up before
 you can move or do any other actions, unless you are tanking.
  
 A punch makes you unable to type commands for 2 rounds of violence.
@@ -1996,8 +1992,8 @@ RESCUE
 
 Class: Nomad Paladin Warrior Commando
 
-A rescue is an attempt to jump in front of your target, causing the monster 
-to hit you instead.  You can only shield your target from one monster per 
+A rescue is an attempt to jump in front of your target, causing the monster
+to hit you instead.  You can only shield your target from one monster per
 attempt. This is very useful when playing in a group.
 
 >rescue <victim>
@@ -2010,8 +2006,8 @@ Use steal to steal gold or items from people. The chance of not getting
 caught depends on how well you have practiced steal, and if the person
 is asleep.
 
-Due to misuse of the steal command, stealing from other players is strictly 
-regulated and requires that you have at least 1,250 XP points (See PSTEAL). 
+Due to misuse of the steal command, stealing from other players is strictly
+regulated and requires that you have at least 1,250 XP points (See PSTEAL).
 You can still steal from monsters at all levels.
 
 Example:
@@ -2028,10 +2024,10 @@ BACKSTAB
 Class: Anti-Paladin Thief
 
 A backstab is the attempt to sneak up on someone and place your dagger in his
-back at exactly the point where it does most damage.  A successful backstab 
+back at exactly the point where it does most damage.  A successful backstab
 gives a damage multiplier dependent on level.
 
-The chance of successfully backstabbing a person depends on how well you have 
+The chance of successfully backstabbing a person depends on how well you have
 practiced backstab at your guild. You can always backstab sleeping persons.
 #
 BUTCHER
@@ -2044,22 +2040,22 @@ DISARM
 
 Class: Commando Nomad Paladin
 
-Disarms the victim by kicking his weapon out of his hand. You cannot disarm 
+Disarms the victim by kicking his weapon out of his hand. You cannot disarm
 a victim who is more than six levels higher than you.
 #
 TRAP
 
 Class: Nomad
 
-To set a trap in the room.  If a monster (non-pc) enters the room it may fall 
+To set a trap in the room.  If a monster (non-pc) enters the room it may fall
 into it and cause 1/5 of its hit point damage.
 #
 SUBDUE
 
 Class: Nomad
 
-Subdue is a Nomad skill. The other classes can still subdue monsters but they 
-only have a 30% chance to succeed. If Nomad has very good in skill subdue they 
+Subdue is a Nomad skill. The other classes can still subdue monsters but they
+only have a 30% chance to succeed. If Nomad has very good in skill subdue they
 will have a 90% chance to subdue a monster.
 
 A subdued monster can be ridden.
@@ -2070,9 +2066,9 @@ PRAY
 
 Class: Paladin
 
-This skill gives the Paladin a quick way to fix his alignment.  During prayer, 
-the Paladin is immobile, gaining 400 alignment points each tick until his 
-alignment reaches 1000.  If attacked during prayer, the Paladin will stop 
+This skill gives the Paladin a quick way to fix his alignment.  During prayer,
+the Paladin is immobile, gaining 400 alignment points each tick until his
+alignment reaches 1000.  If attacked during prayer, the Paladin will stop
 praying and fight.  The success of the prayer depends on how well the skill
 is practiced.
 #
@@ -2080,7 +2076,7 @@ SHOOT
 
 Usage : shoot <victim>
 
-You need a fireweapon that is held to use shoot. The fireweapon also needs 
+You need a fireweapon that is held to use shoot. The fireweapon also needs
 bullets. Use reload to load the bullets into the gun.
 
 See Also : RELOAD
@@ -2148,7 +2144,7 @@ Low Level: Levels 1 - 15
 Mid Level: Levels 16 - 30
 High Level: Levels 31+
 
-NOTE: AREAS MARKED BY A % HAVE ONE OR MORE DEATH TRAPS IN THEM.  LEVEL 
+NOTE: AREAS MARKED BY A % HAVE ONE OR MORE DEATH TRAPS IN THEM.  LEVEL
 DESIGNATIONS REFER TO THE TYPICAL MONSTERS IN THE AREA, NOT ALL OF THEM.
 EXPLORE CAREFULLY.  THE LACK OF A % DOES NOT GUARANTEE NO DEATH TRAP.
 
@@ -2262,7 +2258,7 @@ You will help a person attack his/her enemy.
 #
 GTELL GT
 
-This acts as a Tell command but only members of your group can receive the 
+This acts as a Tell command but only members of your group can receive the
 message.
 
 Format: gtell 'something'
@@ -2323,7 +2319,7 @@ WIMPY
 
 Usage:  wimpy <number>
 
-When your hit points are lower than the number you set, you will automatically 
+When your hit points are lower than the number you set, you will automatically
 attempt to flee.
 
 See also : FLEE
@@ -2336,12 +2332,12 @@ See Also: QUAFF
 #
 WHO
 
-Lists the people currently in the game. Some people may choose to remain unseen 
-through invisibility. If given a number WHO lists people of that level and 
+Lists the people currently in the game. Some people may choose to remain unseen
+through invisibility. If given a number WHO lists people of that level and
 above.
 
 Example: who 25
-  
+
 Will list all people in the game with level 25 or higher.
 
 See also: WHOIS
@@ -2373,13 +2369,13 @@ inventory.
 DONATE DONATION
 
 Used to donate equipment to other players.  The item donated ends up in the
-Donation Room.  Note that taking items from there and auctioning them will get 
+Donation Room.  Note that taking items from there and auctioning them will get
 you into trouble with the gods.  You can also donate corpses, which will go to
 the morgue instead of the donation room.
 #
 SAVE
 
-Saves your persona. This includes experience points, strength, gold, and any 
+Saves your persona. This includes experience points, strength, gold, and any
 equipment you may have gathered.
 #
 INVENTORY
@@ -2412,9 +2408,9 @@ See also: REMOVE EQUIPMENT HOLD WIELD
 #
 WIELD
 
-When you get tired of bashing monsters with your fists you might consider 
-wielding a weapon.  Some heavy weapons require great strength to wield.  The 
-Ninja class has the ability to wield two weapons.  One will appear as being 
+When you get tired of bashing monsters with your fists you might consider
+wielding a weapon.  Some heavy weapons require great strength to wield.  The
+Ninja class has the ability to wield two weapons.  One will appear as being
 held while the other is wielded normally.
 
  Example : wield sword
@@ -2461,20 +2457,21 @@ If you consider communicating with other beings, you might be understood
 better if you start your sentences with either say, tell, whisper, shout,
 yell, gtell or gossip.
 
-The 'SAY' channel is only broadcast to everyone in the same room as the 
+The 'SAY' channel is only broadcast to everyone in the same room as the
 speaker.
 
 The 'TELL' channel is mainly for private conversations between two people
 and cannot be heard by anyone except the target specified. You may not be
 able to 'TELL' to someone who is sleeping.
 
-The 'WHISPER' channel is broadcast to only the specified target provided the 
-target is in the same room as the speaker. No one else in the room will be able 
-to hear this channel. You may communicate via this channel with people who are 
+The 'WHISPER' channel is broadcast to only the specified target provided the
+target is in the same room as the speaker. No one else in the room will be able
+to hear this channel. You may communicate via this channel with people who are
 asleep.
 
-The 'SHOUT' and 'YELL' channels are mainly emergency channels. It is not advisable 
-to abuse the freedom of these channels. Use only in case of dire emergency.
+The 'SHOUT' and 'YELL' channels are mainly emergency channels. It is not
+advisable to abuse the freedom of these channels. Use only in case of dire
+emergency.
 
 REPLY allows you to communicate with unseen people that talk to you.
 
@@ -2569,20 +2566,20 @@ If you tire of wearing some armor or wielding a weapon you can REMOVE it.
 
 Example : remove sword
 
-'Remove all' will remove all of your gear, and 'Remove head' would remove 
-whatever you are wearing on your head, and that works for all places for 
+'Remove all' will remove all of your gear, and 'Remove head' would remove
+whatever you are wearing on your head, and that works for all places for
 equipment.
 #
 SHOPS
 
-Shops are places where the adventurer may purchase equipment for his quests, 
-and where he may sell his treasure if he should manage to survive the perils 
-with his life and sanity intact. Many shops trade only in a specific type of 
+Shops are places where the adventurer may purchase equipment for his quests,
+and where he may sell his treasure if he should manage to survive the perils
+with his life and sanity intact. Many shops trade only in a specific type of
 merchandise. Thus, a baker may well refuse to buy your armor, even if it is
 of high quality!
 
-To some people, the prospect of obtaining the entire inventory of a shop by 
-murdering the keeper may appear tempting - but beware: The shopkeepers are 
+To some people, the prospect of obtaining the entire inventory of a shop by
+murdering the keeper may appear tempting - but beware: The shopkeepers are
 often rugged, capable men; roughened by years of trading and, indeed,
 surviving in a world where in the end the only certainty is death.
 
@@ -2598,28 +2595,28 @@ how good you already are at these.
 
 You can then use practice <skill>, to practice the appropriate skill.
 
-You can only practice a certain amount for each level you gain, and you do not 
+You can only practice a certain amount for each level you gain, and you do not
 have to save this, it can be accumulated.
 #
 EXITS
 
-Gives you a list of the obvious exits from your location. Of course, the less 
+Gives you a list of the obvious exits from your location. Of course, the less
 obvious ones won't show up here - you have to THINK in order to locate those.
 #
 LEAVE
 
-If you feel claustrophobic, typing 'leave' will make you use the nearest 
+If you feel claustrophobic, typing 'leave' will make you use the nearest
 obvious exit to the outside.
 #
 ENTER
 
-If you type 'enter' while you are outdoors, you'll enter any nearby shelter.  
+If you type 'enter' while you are outdoors, you'll enter any nearby shelter.
 You can also follow 'enter' with an argument; for example, 'enter window'.
 #
 TIME
 
-Gives you the current 'gametime'. Your initial reaction to the output of this 
-command may be one of surprise, but you'll get used to it. You'll have to, at 
+Gives you the current 'gametime'. Your initial reaction to the output of this
+command may be one of surprise, but you'll get used to it. You'll have to, at
 any rate, since certain things in the game depend on this particular notion
 of time; the opening hours of some shops for example. It also gives the local
 real time.
@@ -2672,20 +2669,21 @@ bug the entire game crashes when I type 'put bag in bag'
 idea make a restaurant in Midgaard
 typo 'sence' should be spelled 'sense'
 
-However, we prefer the use of the boards at the altar and west of the altar for 
+However, we prefer the use of the boards at the altar and west of the altar for
 these postings.
 #
 QUIT
 
-When you get tired of playing, you can leave the game by typing 'quit'.  To leave the game
-successfully without losing gear, a player must instead RENT.
+When you get tired of playing, you can leave the game by typing 'quit'.  To
+leave the game successfully without losing gear, a player must instead RENT.
+
 Note that you cannot quit while carrying any objects.
 
 See also: INN RENT
 #
 INN INNS RECEPTION
 
-Inns are places where the weary traveler may rest while the innkeeper looks 
+Inns are places where the weary traveler may rest while the innkeeper looks
 after his equipment and treasure. Specifically, you may use inns to store
 your gathered equipment while you are not playing the game (we all have to
 sleep sometimes, there is no shame in that).
@@ -2694,17 +2692,17 @@ See also: OFFER RENT
 #
 OFFER RENT
 
-For use in the receptions of inns. The command OFFER will make the innkeeper 
-tell you the cost of storing your carried items for one day. RENT will store 
-the items and make you leave the game. The next time you enter, you'll start 
-out in the reception where you left. The inn will store your items as long as 
-you are carrying enough gold to pay the rent. If your link dies rent money will 
-be taken from the gold you are carrying at the time, and if you can't afford 
-your rent when you next log on your equipment will be lost.  If you rent for 1 
+For use in the receptions of inns. The command OFFER will make the innkeeper
+tell you the cost of storing your carried items for one day. RENT will store
+the items and make you leave the game. The next time you enter, you'll start
+out in the reception where you left. The inn will store your items as long as
+you are carrying enough gold to pay the rent. If your link dies rent money will
+be taken from the gold you are carrying at the time, and if you can't afford
+your rent when you next log on your equipment will be lost.  If you rent for 1
 day (real time) your rent cost will be reduced to the cost of one day.
 
-In case you run out of cash-on-hand at any time, the receptionist will draw 
-funds from your bank account to pay for your rent. This is done automatically 
+In case you run out of cash-on-hand at any time, the receptionist will draw
+funds from your bank account to pay for your rent. This is done automatically
 but costs 1.5 times more than the regular rental charges.
 
 There is a rent limit of 200 items per character.
@@ -2718,15 +2716,16 @@ In SUMMARY:
   bank account.  If you still don't have enough, you LOSE your
   equipment.
 
-NOTE: The Midgaard Receptionist may be located North, East, and Up from Market Square.
+NOTE: The Midgaard Receptionist may be located North, East, and Up from Market
+Square.
 
 See also: INN
 #
 GET TAKE
 
-If you find something interesting on the ground, you may use 'get' to pick it 
+If you find something interesting on the ground, you may use 'get' to pick it
 up. Example: "get greatsword". If you are in a hurry, or if you just feel very
-greedy, you may type "get all". You can also use 'get' to extract objects from 
+greedy, you may type "get all". You can also use 'get' to extract objects from
 containers. Example: "get dagger from bag".
 
 See also: DROP PUT
@@ -2740,7 +2739,7 @@ See also: GET
 #
 EXAMINE
 
-May give you some valuable information about an item or allow you to look 
+May give you some valuable information about an item or allow you to look
 inside a container.
 
 See also: LOOK
@@ -2749,37 +2748,37 @@ TITLE
 
 Usage: title <new title>
 
-Allows you to change the message that is shown after your name in the 'who' 
+Allows you to change the message that is shown after your name in the 'who'
 list and when you type 'look' in a room.
 
 Just typing 'title' will toggle the default title when leveling on and off.
-This is useful for those who like to set their own titles and don't want it 
+This is useful for those who like to set their own titles and don't want it
 changed when they level.
 
 See Also: LEVELS
 #
 WRITE
 
-In order to write a note, you need a piece of blank paper (or similar), and a 
-pen of some sort. You can then type something like "write paper pen", whereupon 
+In order to write a note, you need a piece of blank paper (or similar), and a
+pen of some sort. You can then type something like "write paper pen", whereupon
 you'll be asked to type in your note at the keyboard.
 
-You can also write on a bulletin board by typing "write <message>" where 
-<message> is the title of your post. Whenever writing whether it be on a 
+You can also write on a bulletin board by typing "write <message>" where
+<message> is the title of your post. Whenever writing whether it be on a
 bulletin board or paper, the "@" character will terminate that writing.
 #
 POSTCARD
 
 In order to write on a postcard you must have a pen. You can then type
-"write postcard pen" and will be able to write your message on the postcard. 
+"write postcard pen" and will be able to write your message on the postcard.
 When you are finished with your message, type a "@" to terminate your writing.
 
 See Also: POST MAIL
 #
 MAIL
 
-You can send mail to other players by sending postcards through the mail.  The 
-Midgaard Post Office can be found 1 north and 1 up from Market Square.  The 
+You can send mail to other players by sending postcards through the mail.  The
+Midgaard Post Office can be found 1 north and 1 up from Market Square.  The
 postman will be happy to sell you postcards, pens, and packages. (Type LIST)
 
 To mail a postcard:
@@ -2792,7 +2791,7 @@ See Also: POSTCARD POST PACKAGE
 #
 POST PACKAGE
 
-At the Midgaard Post Office, you can send items in the mail to other players.  
+At the Midgaard Post Office, you can send items in the mail to other players.
 The post office is 1 north and 1 up from Market Square.
 
 To mail an item:
@@ -2800,7 +2799,7 @@ First buy a package (available at the post office - type LIST)
   Put your item in the package.
   Then just 'post <player>', it's that simple.
 
-You can also send money, by first converting it to precious items in the 
+You can also send money, by first converting it to precious items in the
 Midgaard Jeweler's shop and sending the item.
 
 See Also: MAIL POSTCARD JEWELER
@@ -2816,16 +2815,16 @@ See Also: POST VAULT
 #
 NEWS
 
-To read the news you need to buy a paper from the paperboy.  He's always 
+To read the news you need to buy a paper from the paperboy.  He's always
 hanging around Midgaard somewhere.
 #
 SLEEPING WAKE REST SIT STAND
 
-For changing your position. If you feel weary, it's probably a good idea to sit 
-and rest for awhile, or maybe even take a nap. One of the main reasons to sleep 
+For changing your position. If you feel weary, it's probably a good idea to sit
+and rest for awhile, or maybe even take a nap. One of the main reasons to sleep
 or rest or sit is to regenerate your mana, hit points and moves.
 
-While asleep, you still have the ability to use the channels, but you don't see 
+While asleep, you still have the ability to use the channels, but you don't see
 their output.
 #
 POUR
@@ -2851,7 +2850,7 @@ See Also: UNFOLLOW REFOLLOW
 #
 FLEE
 
-If you are in a fight and things are beginning to get a little uncomfortable 
+If you are in a fight and things are beginning to get a little uncomfortable
 (maybe you are dying), just type 'flee', and you will run blindly out of
 the room in a random direction.  Note that there must be at least one
 exit to flee through, and there's always the chance you may panic and be
@@ -2864,8 +2863,8 @@ The most powerful beings in existence.
 #
 GUILD
 
-The Guildhouse is the place where mortals may go to escape the troubles and 
-perils of a cruel world. Each guild is heavily guarded, so that only members 
+The Guildhouse is the place where mortals may go to escape the troubles and
+perils of a cruel world. Each guild is heavily guarded, so that only members
 may enter the building. Guilds are also the places where people come to
 learn and practice the skills of their trade.
 
@@ -2885,7 +2884,7 @@ Immortals may type 'where' without arguments to see where everybody is.
 #
 LEVELS
 
-Lists the levels of your class and the amount of experience points needed to 
+Lists the levels of your class and the amount of experience points needed to
 achieve them.
 #
 BRIEF
@@ -2928,8 +2927,8 @@ CONSIDER
 
 Usage : consider <monster>
 
-This command will compare your Level with the mob's level. You will then 
-receive a rough estimate, which is by no means exact. Consider does not take 
+This command will compare your Level with the mob's level. You will then
+receive a rough estimate, which is by no means exact. Consider does not take
 hit points, special attacks, or damage into account.  However,
 player's may buy scrolls of identify for more detailed information
 about a particular monster.
@@ -2941,8 +2940,8 @@ See Also: IDENTIFY
 #
 EXPERIENCE XP
 
-Whenever you kill a monster or a player, you earn experience points. When 
-enough experience points are earned, you gain a level. Things you should know 
+Whenever you kill a monster or a player, you earn experience points. When
+enough experience points are earned, you gain a level. Things you should know
 about experience points:
 
   * When damaging a monster, you get experience points.
@@ -2952,8 +2951,8 @@ about experience points:
     fewer experience points
 
 About Player Killing:
-We STRONGLY discourage you from killing other players.  Usually, a PKILL 
-(Player KILL) will make you VERY unpopular with other players and will make YOU 
+We STRONGLY discourage you from killing other players.  Usually, a PKILL
+(Player KILL) will make you VERY unpopular with other players and will make YOU
 the object of other pkillers, city guards, the jail master and the gods.
 
 (see help PKILL)
@@ -2964,18 +2963,18 @@ GROUP
 
 Usage : GROUP [player], GROUP ALL, GROUP
 
-If you are a group member, then you will share experience points for killing 
-monsters equally among the group. Experience points will only be shared among 
-group members that are in the same location at the time of the killing blow. 
-Sharing is regardless of whether the group members have been participating in 
+If you are a group member, then you will share experience points for killing
+monsters equally among the group. Experience points will only be shared among
+group members that are in the same location at the time of the killing blow.
+Sharing is regardless of whether the group members have been participating in
 the fight. 
 
 <GROUP [player}, GROUP ALL>
-To make a group, a "leader" must be selected. All members of the group must 
-then "follow" the leader using the follow command. The leader should NOT follow 
-anyone at all! The leader can now toggle group membership for each player in 
-the group, by using "group <player_name>". The leader should remember to 
-include himself in the group. Also, the leader can use GROUP ALL to make all 
+To make a group, a "leader" must be selected. All members of the group must
+then "follow" the leader using the follow command. The leader should NOT follow
+anyone at all! The leader can now toggle group membership for each player in
+the group, by using "group <player_name>". The leader should remember to
+include himself in the group. Also, the leader can use GROUP ALL to make all
 players following him, as well as himself, part of a group.
 
 <GROUP>
@@ -3011,7 +3010,7 @@ RECITE SCROLL SCROLLS
 Use : Recite <Scroll> [Target]
  or : rec <scroll> [Target]
 
-Is used to "read" a magical scroll. Target can be an object, character or 
+Is used to "read" a magical scroll. Target can be an object, character or
 nothing (which may be yourself).
 #
 
@@ -3020,11 +3019,11 @@ USE WAND STAFF STAVE STAVES STAFFS WANDS
 Use : Use <Staff>
       Use <Wand> <Target>
 
-Using staffs will automatically target everybody (or everything) in a room 
-except the caster. Therefore staffs are naturally very powerful, yet may be 
+Using staffs will automatically target everybody (or everything) in a room
+except the caster. Therefore staffs are naturally very powerful, yet may be
 very dangerous to use around other players.
 
-Using a wand requires that you point it at a target, which can be either a 
+Using a wand requires that you point it at a target, which can be either a
 character or an object.
 
 Both staffs and wands must be HELD to use! (Use the grab or hold
@@ -3039,7 +3038,7 @@ Level       : Level 5 mage, 1 cleric, 2 paladin, 5 bard
 Duration    : 24 ticks
 Mana Cost   : 5 (cost will be higher at lower levels)
 
-The spellcaster calls upon the powers of the gods to protect the victim.  If 
+The spellcaster calls upon the powers of the gods to protect the victim.  If
 successful, the gods will provide protection improving the victim's AC by 10
 
 See Also: AC SONGS
@@ -3099,7 +3098,7 @@ Level       : Level 8 mage, 6 cleric, 6 ninja, 4 anti-paladin, 13 bard.
 Duration    : 2 ticks.
 Mana Cost   : 15 (cost will be higher at lower levels)
 
-Blindness will blind a victim if it fails its saving throw. A blinded person 
+Blindness will blind a victim if it fails its saving throw. A blinded person
 will have -4 penalty to both hitroll and AC.
 
 See Also: AC SONGS
@@ -3123,9 +3122,9 @@ Usage      : cast 'regeneration' <victim>
 Level      : 28 mage.
 Mana cost  : 100
 
-Upon casting Regeneration, the caster fills the blood of the victim with 
-chlorophyll. The victim's skin will turn green and will be affected by 
-photosynthesis, gaining mana/hit points in relation to the height of the sun. 
+Upon casting Regeneration, the caster fills the blood of the victim with
+chlorophyll. The victim's skin will turn green and will be affected by
+photosynthesis, gaining mana/hit points in relation to the height of the sun.
 The maximum amount gained would be 100.
 #
 "DISPEL MAGIC"
@@ -3135,7 +3134,7 @@ Level      : level 19 mage, level 17 cleric.
 Save       : none
 Mana cost  : 20
 
-This spell can be cast either on objects of magical power such as potions, 
+This spell can be cast either on objects of magical power such as potions,
 scrolls and wands, which it will most certainly render powerless. The
 spell will also possibly remove some magical benefits or curses from a
 normally magical item.  When cast upon a person, it will use its own power
@@ -3215,7 +3214,7 @@ Level      : level 16 cleric
 Save       : none
 Mana cost  : 60
 
-A fairly powerful area effect spell which will destroy almost all flammable 
+A fairly powerful area effect spell which will destroy almost all flammable
 objects in the area of the spell.
 #
 CLAIRVOYANCE
@@ -3236,8 +3235,8 @@ Level       : Level 27 mage.
 Duration    : Instantaneous
 Mana Cost   : 100
 
-Clone allows the caster to make a copy of an object. As with genetic 
-degeneration in living things, the clone is not a perfect copy. Clone has 
+Clone allows the caster to make a copy of an object. As with genetic
+degeneration in living things, the clone is not a perfect copy. Clone has
 its limitations.
 
 See Also: -
@@ -3250,7 +3249,7 @@ Level       : Level 10 mage, 13 cleric, 11 ninja.
 Duration    : -
 Mana Cost   : 25 (cost will be higher at lower levels)
 
-This spell gives the caster control over the elements. This spell will change 
+This spell gives the caster control over the elements. This spell will change
 the "course" of the current weather. Example:
 
  > cast 'control wea' worse
@@ -3385,7 +3384,7 @@ Accumulative: No
 Duration    : 7 Days, permanent on objects.
 Mana Cost   : 20 (cost will be higher at lower levels)
 
-Curse, when cast on a person that fails the saving throw, will reduce the 
+Curse, when cast on a person that fails the saving throw, will reduce the
 hitroll by one for every ten levels and reduce the saving throw versus
 paralysation by one for every ten levels.
 
@@ -3399,7 +3398,7 @@ Level       : Level 4 mage, 4 cleric, 4 paladin, 5 anti-paladin.
 Duration    : level * 5 ticks.
 Mana Cost   : 25 (cost will be higher at lower levels)
 
-Detect alignment will enable you to see the red aura surrounding evil persons 
+Detect alignment will enable you to see the red aura surrounding evil persons
 and items or yellow aura surrounding good persons and items.
 
 See Also: -
@@ -3436,7 +3435,7 @@ Level       : Level 4 mage,2 cleric.
 Duration    : Instantaneous
 Mana Cost   : 5 (cost will be higher at lower levels)
 
-If cast on food or drinks (drink containers) you will be able to sense if 
+If cast on food or drinks (drink containers) you will be able to sense if
 it is poisoned.  If cast on a person you will be able to see if that
 person is poisoned.
 
@@ -3469,9 +3468,9 @@ Level    Hit Roll    Damage
 IMM+       +4         +4
 IMP        +5         +5
 
-Between levels 40 and 50, there is the possibility of enchanting with all 
-combinations between +3 +3 and +5 +5.  For example a +4 +3 enchant is possible, 
-so is a +4 +5, etc.  The closer a character is to level 50, the better the 
+Between levels 40 and 50, there is the possibility of enchanting with all
+combinations between +3 +3 and +5 +5.  For example a +4 +3 enchant is possible,
+so is a +4 +5, etc.  The closer a character is to level 50, the better the
 chance of getting +5 +5.
 
 See Also: -
@@ -3499,7 +3498,7 @@ Level       : Level 22 cleric.
 Duration    : Instantaneous
 Mana Cost   : 100
 
-Heal will heal all in the room for a maximum of 200 hit points. 
+Heal will heal all in the room for a maximum of 200 hit points.
 
 Any victim who is blinded or stunned will also be cured by the heal spell.
 
@@ -3512,7 +3511,7 @@ Level       : Level 11 mage, 14 anti-paladin, 15 bard.
 Duration    : Instantaneous
 Mana Cost   : 15 (cost will be higher at lower levels)
 
-Some monsters have a good memory and if a person were to leave a fight 
+Some monsters have a good memory and if a person were to leave a fight
 and come back later the monster would remember that person and attack.
 Forget will cause the monster to...uh...where was I?
 #
@@ -3524,8 +3523,8 @@ Save        : SAVE PARALYSIS
 Duration    : Level of the caster ticks
 Mana Cost   : 15 (cost will be higher at lower levels)
 
-Holds a person.  If the monster is aggressive, it will not attack other 
-players.  It will not move around the world.  If it gets attacked by the others 
+Holds a person.  If the monster is aggressive, it will not attack other
+players.  It will not move around the world.  If it gets attacked by the others
 it can only retreat at second round.
 #
 INVISIBILITY
@@ -3550,7 +3549,7 @@ Duration    : Level/10 ticks
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 You will not appear even if you are attacking.  Anyone who is less than level
-51 cannot see you.  Only people under the affects of the "sense life" spell 
+51 cannot see you.  Only people under the affects of the "sense life" spell
 or the "perceive" spell will be able to detect your presence. Improve
 Invisibility will also improve your AC by 40.
 
@@ -3601,7 +3600,7 @@ Level       : Level 11 mage, 14 cleric, 13 bard.
 Duration    : Instantaneous
 Mana Cost   : 20 (cost will be higher at lower levels)
 
-This spell enables the caster to locate where a character is. <character> can 
+This spell enables the caster to locate where a character is. <character> can
 be either a PC or NPC.
 #
 POISON
@@ -3613,10 +3612,10 @@ Save        : Negates
 Duration    : 2*level ticks, or permanent on food and drinks.
 Mana Cost   : 10 (cost will be higher at lower levels)
 
-Casting poison on food or drink (containers) will poison it. Eating poisoned 
+Casting poison on food or drink (containers) will poison it. Eating poisoned
 food or drinks will poison the person eating or drinking.
 
-A person who is poisoned will suffer 2 points of damage every hour, and gain 
+A person who is poisoned will suffer 2 points of damage every hour, and gain
 fewer points than usual.
 
 See Also: "detect poison" or "remove poison"
@@ -3644,8 +3643,8 @@ Level       : Level 6 cleric, Level 18 anti-paladin
 Duration    : 12 ticks
 Mana Cost   : 30 (cost will be higher at lower levels)
 
-If the monster is good and you are not, the damage of the mob will be 
-decreased by (10 + level self - level mob) with a maximum decrease of 10. 
+If the monster is good and you are not, the damage of the mob will be
+decreased by (10 + level self - level mob) with a maximum decrease of 10.
 This is an extremely powerful protection.
 
 See Also: PROTECTION FROM EVIL
@@ -3682,7 +3681,7 @@ Level       : Level 13 cleric, 20 paladin, 23 bard.
 Duration    : Level/5 ticks
 Mana Cost   : 50
 
-When protected by sanctuary, all damage afflicted on you by weapons or spells 
+When protected by sanctuary, all damage afflicted on you by weapons or spells
 will be halved.
 
 See Also: SONGS
@@ -3695,7 +3694,7 @@ Level       : Level 18 mage.
 Duration    : level / 2
 Mana Cost   : 50
 
-When protected by sphere, any aggressive monster that is 5 levels lower than 
+When protected by sphere, any aggressive monster that is 5 levels lower than
 you will not attack you.  No one can steal from you.
 
 If you are magically attacked by something the same level as you, you have
@@ -3725,7 +3724,7 @@ Duration    : level / 2
 Mana Cost   : 50
 
 When protected by this sphere no one can steal from you.  Any physical attack
-towards you that would cause less than 20 damage will miss.  Any aggressive 
+towards you that would cause less than 20 damage will miss.  Any aggressive
 monster that is 5 levels lower than you will not attack you.
 
 If you are physically attacked by something the same level as you, you have
@@ -3736,7 +3735,7 @@ is below you, your chance of blocking increases by 5%. If the attacker is
 10 levels above you, your sphere is useless, and if the attacker is 10 levels
 below you, your sphere in impenetrable.
 
-Classes get percentage bonus or percentage penalties against invulnerability as 
+Classes get percentage bonus or percentage penalties against invulnerability as
 follows:
 
    Cleric       -10             Nomad         +5
@@ -3768,7 +3767,7 @@ Level       : Level 7 mage.
 Duration    : Level ticks
 Mana Cost   : 10 (cost will be higher at lower levels)
 
-A person will gain 1 strength point per spell (2 points if level of caster is 
+A person will gain 1 strength point per spell (2 points if level of caster is
 Level 28 or above). Maximum strength is 18/100.
 
 See Also: -
@@ -3813,9 +3812,9 @@ Level       : Level 8 cleric, 18 paladin.
 Duration    : Instantaneous
 Mana Cost   : 50
 
-Will summon a person of the name spoken. It is possible to summon someone of 
-higher level than yourself.  However, the higher they are above you, the lower 
-your chance of succeeding.  If you attempt to summon a monster it will get a 
+Will summon a person of the name spoken. It is possible to summon someone of
+higher level than yourself.  However, the higher they are above you, the lower
+your chance of succeeding.  If you attempt to summon a monster it will get a
 saving throw. It is also not possible to summon anyone into arena zones.
 
 See Also: -
@@ -3828,12 +3827,12 @@ Level       : Level 14 mage, 18 bard.
 Duration    : (432/Intelligence points of victim) ticks
 Mana Cost   : 50
 
-It is not possible to charm anyone that is already charmed, if you're charmed 
-yourself, or if the person is higher level than you are. The person will get a  
-saving throw versus "paralysation". It is also not possible to charm anyone 
+It is not possible to charm anyone that is already charmed, if you're charmed
+yourself, or if the person is higher level than you are. The person will get a
+saving throw versus "paralysation". It is also not possible to charm anyone
 over level 30.
 
-A charmed person will follow you and not be able to attack you.  You can give 
+A charmed person will follow you and not be able to attack you.  You can give
 commands to a charmed person using the order command. 
 
 See Also: FOLLOW ORDER
@@ -3847,9 +3846,9 @@ Duration    : (level of the caster) ticks
 Save        : -
 Mana Cost   : 50
 
-The caster invokes the powers of ancient voodoo practices in an attempt to 
-raise the dead. If successful, the corpse will come back to life with (level of 
-the monster * 30) hp, and max damage per round will be (level of the monster + 
+The caster invokes the powers of ancient voodoo practices in an attempt to
+raise the dead. If successful, the corpse will come back to life with (level of
+the monster * 30) hp, and max damage per round will be (level of the monster +
 5).  The undead monster will follow the caster in (level of the caster) ticks.
 
 See Also: FOLLOW ORDER CHARM
@@ -3862,7 +3861,7 @@ Level       : Level 7 cleric, 10 ninja, 6 paladin
 Duration    : 5 * level
 Mana Cost   : 20 (cost will be higher at lower levels)
 
-This spell will enable you to sense hidden life forms in a room. Invisible 
+This spell will enable you to sense hidden life forms in a room. Invisible
 persons are also considered hidden.
 
 See Also: HIDE
@@ -3878,8 +3877,8 @@ Mana Cost   : 5 (cost will be higher at lower levels)
 Old Damage done : 10 to 6
 New Damage done : level/2 + (5 to 10)
 
-The caster magically conjures a missile and sends it flying at the victim. This 
-is the least powerful offensive mage spell. This spell does more damage at 
+The caster magically conjures a missile and sends it flying at the victim. This
+is the least powerful offensive mage spell. This spell does more damage at
 lower levels.
 
 See Also:
@@ -3928,7 +3927,7 @@ Mana Cost   : 17 (cost will be higher at lower levels)
 Old Damage done : 18 to 25
 New Damage done : level/2 + (15 to 50)
 
-The caster's hands become aflame and will burn the victim when it is touched. 
+The caster's hands become aflame and will burn the victim when it is touched.
 This spell is more powerful than the chill touch spell.
 
 See Also: CHILL TOUCH
@@ -3944,7 +3943,7 @@ Mana Cost   : 19 (cost will be higher at lower levels)
 Old Damage done : 33 to 40
 New Damage done : level/2 + (20 to 80)
 
-The caster generates an enormous static charge and imparts a shock to the 
+The caster generates an enormous static charge and imparts a shock to the
 victim. This spell is more powerful than the burning hands spell.
 
 See Also: BURNING HANDS
@@ -3960,8 +3959,8 @@ Mana Cost   : 20 (cost will be higher at lower levels)
 Old Damage done : 50 to 60
 New Damage done : level/2 + (30 to 120)
 
-The caster calls upon the powers of the Norse god Thor to use his powers to 
-hurl lightning at the victim. This spell is more powerful than the shocking 
+The caster calls upon the powers of the Norse god Thor to use his powers to
+hurl lightning at the victim. This spell is more powerful than the shocking
 grasp spell.
 
 See Also: SHOCKING GRASP
@@ -3991,9 +3990,9 @@ Save        : Versus spell for half damage.
 Mana Cost   : 35 (cost will be higher at lower levels)
 
 The caster uses wraith-like powers to drain the life-force from the victim.
-This spell does not do much damage, but victims failing their saving throws 
-will lose some hit points, mana and exp. You will gain this drained energy.  
-Beware that this spell is evil and will gradually draw the caster towards the 
+This spell does not do much damage, but victims failing their saving throws
+will lose some hit points, mana and exp. You will gain this drained energy.
+Beware that this spell is evil and will gradually draw the caster towards the
 dark powers.
 
 See Also: -
@@ -4025,8 +4024,8 @@ Mana Cost   : 30 (cost will be higher at lower levels)
 Old Damage done : About 130
 New Damage done : level/2 + (100 to 160)
 
-The caster calls upon the elements to conjure a huge ball of ice to freeze the 
-victim. This spell is more powerful than fireball and it will decrease the 
+The caster calls upon the elements to conjure a huge ball of ice to freeze the
+victim. This spell is more powerful than fireball and it will decrease the
 movement points of the victim by 30 each time.
 #
 REAPPEAR
@@ -4037,7 +4036,7 @@ Duration    : Instantaneous
 Level       : Level 10 mage.
 Mana Cost   : 20 (cost will be higher at lower levels)
 
-Reappear allows the caster to return invisible objects back to the visible 
+Reappear allows the caster to return invisible objects back to the visible
 world.
 #
 REVEAL
@@ -4092,8 +4091,8 @@ Save        : Versus spell for half damage.
 Mana Cost   : 100
 Damage done : 450 to 500
 
-The caster of this spell channels a powerful jolt of electricity through 
-himself and sends it coursing through the body of the victim.  This spell 
+The caster of this spell channels a powerful jolt of electricity through
+himself and sends it coursing through the body of the victim.  This spell
 is much more powerful than lethal fire.
 #
 EARTHQUAKE
@@ -4105,7 +4104,7 @@ Level       : Level 7 cleric, 6 commando.
 Save        : -
 Mana Cost   : 15 (cost will be higher at lower levels)
 
-The caster sends the earth shaking, causing damage to everyone in the room 
+The caster sends the earth shaking, causing damage to everyone in the room
 except the caster by 1d8+level_of_caster hit points.
 
 See Also: -
@@ -4117,10 +4116,10 @@ Accumulative: -
 Level       : level 18 cleric.
 Mana Cost   : 30 (cost will be higher at lower levels)
 
-Set in the future on the planet Mars, a man has his memory altered in order to 
+Set in the future on the planet Mars, a man has his memory altered in order to
 expose a ring of rebels...Oh wait..that was the movie...
 
-This spell will recall everyone in the room back to the temple including the 
+This spell will recall everyone in the room back to the temple including the
 caster.
 
 See Also : WORD OF RECALL
@@ -4134,8 +4133,8 @@ Level       : level 23 mage, 24 commando.
 Save        : -
 Mana Cost   : 80
 
-Rays of death will fly forth from the hands of the caster.  This spell will 
-damage everybody in the room except the caster and PC's by 120 + caster_level/2 
+Rays of death will fly forth from the hands of the caster.  This spell will
+damage everybody in the room except the caster and PC's by 120 + caster_level/2
 hit points.
 #
 "HOLY WORD"
@@ -4148,8 +4147,8 @@ Save        : Same as dispel evil
 Mana Cost   : 80
 Damage Done : 130
 
-The caster invokes the name of the One True God in the angelic tongue of the 
-Archons.  Any evil beings nearby are burned by the fires of dawn and wracked 
+The caster invokes the name of the One True God in the angelic tongue of the
+Archons.  Any evil beings nearby are burned by the fires of dawn and wracked
 with pain.
 
 See Also : Dispel Evil
@@ -4198,7 +4197,7 @@ Usage       : cast 'great miracle'
 Level       : level 30 cleric.
 Mana Cost   : 200
 
-The caster begs the merciful gods for a miracle.  If they deem the caster 
+The caster begs the merciful gods for a miracle.  If they deem the caster
 worthy the hit points of all PCs in the room will be restored for a
 maximum of 2000 hit points.
 
@@ -4285,12 +4284,12 @@ Level       : Level 10 cleric, 19 paladin.
 Save        : Special
 Mana Cost   : 25 (cost will be higher at lower levels)
 
-The caster calls upon the powers of the One True God to damage the unholy. 
+The caster calls upon the powers of the One True God to damage the unholy.
 This spell will only affect evil creatures. An evil person of level
 equal or less than caster will suffer 180 damage points. A victim
 greater than level 30 has reduced damage.
 
-If the victim is higher level than caster the spell will inflict 
+If the victim is higher level than caster the spell will inflict
 (caster_level)d4 damage points, saving throw versus half damage.
 
 See Also: Holy Word
@@ -4309,7 +4308,7 @@ pure of heart.  This spell will only affect good creatures. A good person
 of level equal to or less than caster will suffer 180 damage points.
 A victim greater than level 30 has reduced damage.
 
-If the victim is higher level than caster the spell will inflict 
+If the victim is higher level than caster the spell will inflict
 (caster_level)d4 damage points, saving throw versus half damage.
 
 See Also: -
@@ -4411,7 +4410,7 @@ Accumulative: -
 Level       : Level 28 mage
 Mana Cost   : 100
 
-The caster will receive a severe case of heartburn enabling the caster to 
+The caster will receive a severe case of heartburn enabling the caster to
 breathe fire at victims. Each breath will do the damage of approximately one
 Fireball. The spell will last for six breaths or six rounds.
 
@@ -4659,8 +4658,8 @@ Mana and hp:
 
 Minimum cost            2M
 
-Costs are different for each class. The more hit points or mana you have the 
-more it costs to meta. For example hit points are cheap for Nomads for a long 
+Costs are different for each class. The more hit points or mana you have the
+more it costs to meta. For example hit points are cheap for Nomads for a long
 time.
 
 Age:                    Exp & Gold cost vary depending on current age.
@@ -4704,13 +4703,13 @@ aggressive monsters.
 
 ***PLAYER KILLING IS ILLEGAL EXCEPT IN ARENA AREAS OR THE CHAOS ZONE.***
 
-Arena areas are marked by a [*] in the room name. All participants in a PKILL 
-must be AWARE of the nature of arena areas. No one can be led into an arena 
-area and be killed especially in the case of new players.  PKILLing outside an 
-arena area will get to a killer flag and the Jail Master will jail you. If you 
-are jailed you will not be able to rent your equipment nor can you get out 
-until your time is up. In any case, even if the PKILL is legal corpse robbing 
-is not legal. There is to be no corpse robbing at any time. Corpse robbing will 
+Arena areas are marked by a [*] in the room name. All participants in a PKILL
+must be AWARE of the nature of arena areas. No one can be led into an arena
+area and be killed especially in the case of new players.  PKILLing outside an
+arena area will get to a killer flag and the Jail Master will jail you. If you
+are jailed you will not be able to rent your equipment nor can you get out
+until your time is up. In any case, even if the PKILL is legal corpse robbing
+is not legal. There is to be no corpse robbing at any time. Corpse robbing will
 be dealt with accordingly by the Gods.
 
 To reiterate, LOOTING ANOTHER PLAYER'S CORPSE WILL NOT BE TOLERATED!!!
@@ -4726,8 +4725,8 @@ See Also: CHAOS "CHAOS ZONE"
 #
 CHAOS
 
-This is a communication channel that is broadcast to everyone who has the 
-channel turned on, no matter where they are.  This channel is used for players 
+This is a communication channel that is broadcast to everyone who has the
+channel turned on, no matter where they are.  This channel is used for players
 battling in the Chaos Zone.
 
 See Also: "CHAOS NIGHT" "CHAOS ZONE" GOSSIP
@@ -4744,8 +4743,8 @@ particularly useful for 'capture the flag' type quests.  This special
 equipment is only available to immortals, so you need not worry about
 any of your existing equipment staying behind.
 
-The Chaos Zone is located under the town of Midgaard and can be accessed 
-through a tunnel from the basement of the Midgaard Stables. 
+The Chaos Zone is located under the town of Midgaard and can be accessed
+through a tunnel from the basement of the Midgaard Stables.
 
 To exit the chaos zone, you must either die or quit the battle.
 
@@ -4761,8 +4760,8 @@ you in jail. If you go to jail you will not be able to rent your
 equipment, nor can you get out until your time is up. In any case corpse
 robbing is ABSOLUTELY ILLEGAL and will be dealt with accordingly by the Gods.
 
-These rules are enforced by the powers that be even with consent of the party 
-being thieved from.  Hence, don't try it to see what happens, as you'll end up 
+These rules are enforced by the powers that be even with consent of the party
+being thieved from.  Hence, don't try it to see what happens, as you'll end up
 in jail with a thief flag, unable to rent your equipment.
 
 Disarming a player in an arena or a Chaos Zone and keeping the weapon is
@@ -4773,9 +4772,9 @@ SQUIRE
 Spell Affects  -  none
 Other Affects  -  HITROLL +1
 
-With the rank listed above, you will also get a 15% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 5000000 experience 
-points, and have 1000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 15% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 5000000 experience
+points, and have 1000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4789,9 +4788,9 @@ Spell Affects  -  none
 Other Affects  -  +5 Block
 Required Rank  -  SQUIRE
 
-With the rank listed above, you will also get a 7.5% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 10000000 experience 
-points, and have 5000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 7.5% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 10000000 experience
+points, and have 5000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4805,9 +4804,9 @@ Spell Affects  -  sense life
 Other Affects  -  +5 Dual
 Required Rank  -  SWASHBUCKLER
 
-With the rank listed above, you will also get a 7.5% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 15000000 experience 
-points, and have 10000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 7.5% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 15000000 experience
+points, and have 10000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4820,10 +4819,10 @@ See Also: RANKS
 Spell Affects  -  Detect Alignment
 Other Affects  -  HITROLL +1
 
-With the rank listed above, you will also get a 10% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 5000000 
-experience points, and have 1000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 10% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 5000000
+experience points, and have 1000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4837,10 +4836,10 @@ Spell Affects  -  none
 Other Affects  -  +5 Block
 Required Rank  -  FIRST SWORD
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 10000000 
-experience points, and have 5000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 10000000
+experience points, and have 5000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4854,10 +4853,10 @@ Spell Affects  -  +5 concentration
 Other Affects  -  +5 Pummel
 Required Rank  -  JUSTICIAR
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 15000000 
-experience points, and have 10000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 15000000
+experience points, and have 10000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4870,10 +4869,10 @@ APPRENTICE
 Spell Affects  -  Detect Invisible
 Other Affects  -  none
 
-With the rank listed above, you will also get a 10% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 5000000 
-experience points, and have 1000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 10% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 5000000
+experience points, and have 1000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4887,10 +4886,10 @@ Spell Affects  -  detect magic
 Other Affects  -  +1 hitroll
 Required Rank  -  APPRENTICE
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 10000000 
-experience points, and have 5000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 10000000
+experience points, and have 5000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4904,10 +4903,10 @@ Spell Affects  -  fly
 Other Affects  -  +1 damroll
 Required Rank  -  WARLOCK
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 15000000 
-experience points, and have 10000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 15000000
+experience points, and have 10000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4920,10 +4919,10 @@ PRIVATE
 Spell Affects  -  none
 Other Affects  -  SKILL_DUAL +5
 
-With the rank listed above, you will also get a 10% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 5000000 
-experience points, and have 1000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 10% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 5000000
+experience points, and have 1000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4937,10 +4936,10 @@ Spell Affects  -  none
 Other Affects  -  +5 assault
 Required Rank  -  PRIVATE
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 10000000 
-experience points, and have 5000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 10000000
+experience points, and have 5000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4954,10 +4953,10 @@ Spell Affects  -  +5 concentration
 Other Affects  -  +5 Triple
 Required Rank  -  COMMODORE
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 15000000 
-experience points, and have 10000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 15000000
+experience points, and have 10000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4970,9 +4969,9 @@ WANDERER
 Spell Affects  -  Detect Magic
 Other Affects  -  SKILL_AMBUSH +5
 
-With the rank listed above, you will also get a 15% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 5000000 experience 
-points, and have 1000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 15% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 5000000 experience
+points, and have 1000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -4986,9 +4985,9 @@ Spell Affects  -  infravision
 Other Affects  -  +1 damroll
 Required Rank  -  WANDERER
 
-With the rank listed above, you will also get a 7.5% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 10000000 experience 
-points, and have 5000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 7.5% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 10000000 experience
+points, and have 5000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5002,9 +5001,9 @@ Spell Affects  -  Detect Invisible
 Other Affects  -  +5 disembowel
 Required Rank  -  FORESTER
 
-With the rank listed above, you will also get a 7.5% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 15000000 experience 
-points, and have 10000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 7.5% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 15000000 experience
+points, and have 10000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5017,10 +5016,10 @@ TSUME
 Spell Affects  -  Infravision
 Other Affects  -  none
 
-With the rank listed above, you will also get a 10% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 5000000 
-experience points, and have 1000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 10% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 5000000
+experience points, and have 1000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5034,10 +5033,10 @@ Spell Affects  -  sense life
 Other Affects  -  +5 Pummel
 Required Rank  -  TSUME
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 10000000 
-experience points, and have 5000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 10000000
+experience points, and have 5000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5051,10 +5050,10 @@ Spell Affects  -  +5 concentration
 Other Affects  -  +5 assault
 Required Rank  -  SHINOBI
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 15000000 
-experience points, and have 10000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 15000000
+experience points, and have 10000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5067,10 +5066,10 @@ MINSTREL
 Spell Affects  -  none
 Other Affects  -  HITROLL +1
 
-With the rank listed above, you will also get a 10% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 5000000 
-experience points, and have 1000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 10% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 5000000
+experience points, and have 1000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5084,10 +5083,10 @@ Spell Affects  -  sense life
 Other Affects  -  +1 damroll
 Required Rank  -  MINSTREL
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 10000000 
-experience points, and have 5000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 10000000
+experience points, and have 5000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5101,10 +5100,10 @@ Spell Affects  -  infravision
 Other Affects  -  +5 backflip
 Required Rank  -  POET
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 15000000 
-experience points, and have 10000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 15000000
+experience points, and have 10000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5117,10 +5116,10 @@ See Also: RANKS
 Spell Affects  -  none
 Other Affects  -  SKILL_BACKSTAB +5
 
-With the rank listed above, you will also get a 10% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 5000000 
-experience points, and have 1000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 10% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 5000000
+experience points, and have 1000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5134,10 +5133,10 @@ Spell Affects  -  infravision
 Other Affects  -  none
 Required Rank  -  EVIL MINION
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 10000000 
-experience points, and have 5000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 10000000
+experience points, and have 5000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5151,10 +5150,10 @@ Spell Affects  -  +5 concentration
 Other Affects  -  +1 damroll
 Required Rank  -  DARK WARDER
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 15000000 
-experience points, and have 10000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 15000000
+experience points, and have 10000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5167,10 +5166,10 @@ ACOLYTE
 Spell Affects  -  Sphere
 Other Affects  -  none
 
-With the rank listed above, you will also get a 10% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 5000000 
-experience points, and have 1000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 10% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 5000000
+experience points, and have 1000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5184,10 +5183,10 @@ Spell Affects  -  detect alignment
 Other Affects  -  +1 hitroll
 Required Rank  -  ACOLYTE
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 10000000 
-experience points, and have 5000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 10000000
+experience points, and have 5000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5201,10 +5200,10 @@ Spell Affects  -  sense life
 Other Affects  -  +1 damroll
 Required Rank  -  BISHOP
 
-With the rank listed above, you will also get a 5% regeneration rate bonus on 
-hit points, mana, and movement. To obtain this rank you must earn 15000000 
-experience points, and have 10000000 gold coins. When you have obtained these 
-numbers, you must then approach the Mayor of Midgaard, and ask him to promote 
+With the rank listed above, you will also get a 5% regeneration rate bonus on
+hit points, mana, and movement. To obtain this rank you must earn 15000000
+experience points, and have 10000000 gold coins. When you have obtained these
+numbers, you must then approach the Mayor of Midgaard, and ask him to promote
 you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5217,9 +5216,9 @@ HIGHWAYMAN
 Spell Affects  -  none
 Other Affects  -  SNEAK (permanent)
 
-With the rank listed above, you will also get a 15% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 5000000 experience 
-points, and have 1000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 15% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 5000000 experience
+points, and have 1000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5233,9 +5232,9 @@ Spell Affects  -  sense life
 Other Affects  -  +1 hitroll
 Required Rank  -  HIGHWAYMAN
 
-With the rank listed above, you will also get a 7.5% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 10000000 experience 
-points, and have 5000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 7.5% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 10000000 experience
+points, and have 5000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5249,9 +5248,9 @@ Spell Affects  -  infravision
 Other Affects  -  +5 circle
 Required Rank  -  BRIGAND
 
-With the rank listed above, you will also get a 7.5% regeneration rate bonus on 
-hit points and movement. To obtain this rank you must earn 15000000 experience 
-points, and have 10000000 gold coins. When you have obtained these numbers, you 
+With the rank listed above, you will also get a 7.5% regeneration rate bonus on
+hit points and movement. To obtain this rank you must earn 15000000 experience
+points, and have 10000000 gold coins. When you have obtained these numbers, you
 must then approach the Mayor of Midgaard, and ask him to promote you.
 
 NOTE: You will lose your rank if you die and have to pay the full
@@ -5295,7 +5294,7 @@ See Also: The Rank Names
 #
 AVATAR
 
-Avatars are the most powerful mortals in this realm, unfortunately they no 
+Avatars are the most powerful mortals in this realm, unfortunately they no
 longer roam among us. Avatars are a combination of the best spells and
 skills of Mages, Clerics, Thieves and Warriors and have excellent stats to
 complement these spells and skills. As a rule, Avatars are not allowed to
@@ -5339,9 +5338,9 @@ group with other classes and can only do so with other Avatars.
 #
 DT "DEATH TRAP"
 
-Death Traps are certain rooms or places on the mud that cause the player to die 
-almost instantly.  Corpses are retrievable from death traps but by entering to 
-retrieve one, the retriever is sure to die as well.  Careful timing with a 
+Death Traps are certain rooms or places on the mud that cause the player to die
+almost instantly.  Corpses are retrievable from death traps but by entering to
+retrieve one, the retriever is sure to die as well.  Careful timing with a
 recall or a summon is needed.
 
 Death Traps also take away experience and stats at double the normal
@@ -5351,18 +5350,18 @@ See Also: REIMB
 #
 "MOB SWITCH"
 
-Certain mobs have a tendency to 'switch' their targets. If a player other than 
-the buffer attacks these kinds of mobs with skills like pummel, punch, bash, or 
+Certain mobs have a tendency to 'switch' their targets. If a player other than
+the buffer attacks these kinds of mobs with skills like pummel, punch, bash, or
 kick during combat, the mob will hit the next person that is fighting.
 #
 CLUBS MEMBERSHIP
 
-Currently the mud has 5 Clubs located above the Temple of Midgaard. These clubs 
-give their members extra mana or hit point regeneration per tick. You can be a 
-member of only one club at a time, by buying membership at the respective Club 
-entrance. Membership Fees for the Clubs is 500000 gold coins.  
+Currently the mud has 5 Clubs located above the Temple of Midgaard. These clubs
+give their members extra mana or hit point regeneration per tick. You can be a
+member of only one club at a time, by buying membership at the respective Club
+entrance. Membership Fees for the Clubs is 500000 gold coins.
 
-Azoun's Fan Club and Caster's Fan Club are for Mana Regeneration, whereas 
+Azoun's Fan Club and Caster's Fan Club are for Mana Regeneration, whereas
 Noname's Fan Club and DeathAdder's Fan Club are for Hit point Regeneration.
 There is also a free Club for players below level 16 called Club Grunting Boar.
 
@@ -5370,8 +5369,8 @@ See Also: REGENERATION
 #
 ARENA
 
-Arena areas are those areas marked by an asterisk next to the room name (*). 
-These are the ONLY areas where it is permissible to kill other players or 
+Arena areas are those areas marked by an asterisk next to the room name (*).
+These are the ONLY areas where it is permissible to kill other players or
 PKILL. It is interesting to note that all area affecting spells and songs
 will affect all NPCs as well as players when casted in Arena Areas. Please
 note that corpse looting is still not allowed even in Arena Areas.
@@ -5391,8 +5390,8 @@ your screen. Currently the default display shows the hitpoints, mana and
 movement points of the player. You may toggle the addition of the character
 name before the stats, by using the command 'DISPLAY NAME'.
 
-At Ronin, we offer a specialized 'combat-only' display which shows the 
-condition of the buffer and the victim. This is probably the most important 
+At Ronin, we offer a specialized 'combat-only' display which shows the
+condition of the buffer and the victim. This is probably the most important
 detail that should be monitored by players.
 #
 VAULTS STORAGE
@@ -5499,9 +5498,9 @@ See also: IMMORTAL TEMPORAL WIZARD ETERNAL SUPREME IMPLEMENTOR GODS IMMORTING
 #
 TEMPORAL TEM
 
-The Temporal is the third level of godhood.  They are more experienced
-in administrative and building fields.  These gods also know a
-great deal about the MUD.
+The Temporal is the third level of godhood.  They are more experienced in
+administrative and building fields.  These gods also know a great deal about the
+MUD.
 
 See Also: GODS IMMORTAL DEITY WIZARD ETERNAL SUPREME IMPLEMENTOR IMMORTING
 #
@@ -5541,7 +5540,7 @@ Damage is the number of hit points removed during combat.
 #
 TINTIN
 
-Tintin is a popular mud client... a program that automates some of the 
+Tintin is a popular mud client... a program that automates some of the
 mechanics of gameplay.  To get more information about tintin, ask any
 mudder :)
 #
@@ -5669,8 +5668,8 @@ WEST
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
          1         2         3         4         5         6         7         8
 
-                    Death's Playground                              
-                             |                            
+                    Death's Playground
+                             |
  Vermilion's                 |   Keening--Dreadful---Ettin
   Tower                 Haunted            Swamp    Village    Canticle
   |                       House              |                /
@@ -5815,8 +5814,8 @@ See Also: -
 #
 MEMBERSHIP CLUB
 
-In the town of Midgaard there are five different clubs a player can join to 
-gain added bonuses to regeneration of hit points and/or mana.  Club Grunting 
+In the town of Midgaard there are five different clubs a player can join to
+gain added bonuses to regeneration of hit points and/or mana.  Club Grunting
 Boar is a free club for new players up the 20th level.
 
 There are also 4 other clubs one can join for a 500,000 coins fee.
@@ -5864,7 +5863,7 @@ EMOTE
 
 Usage: emote <action>
 
-Emotes allow you to create various phrases that allows you to express your 
+Emotes allow you to create various phrases that allows you to express your
 player's actions, feelings etc.
 
 See Also: SAY TELL WHISPER SHOUT ASK YELL REPLY
@@ -5875,7 +5874,7 @@ The town of Midgaard has various boards for its people.  They include:
 
 A Main Bulletin Board (where various mud functions, ideas, etc are placed)
 
-Adventurer's Boards (where players can talk to each other asking for 
+Adventurer's Boards (where players can talk to each other asking for
 assistance, etc)
 
 A Quest Board (where gods post upcoming quest announcements etc.)
@@ -5975,29 +5974,29 @@ See Also: HUNGER REGENERATION
 #
 MIDGAARD TOWN
 
-The town of Midgaard is the place in which every adventurer starts out in and 
-usually stays.  The town contains an auction hall where equipment is sold, 
-there are Clubs to join for added regeneration, and there is a donation room to 
-the west of the temple.  There are various shops where useful items can be  
-purchased, and there are also various other things in town such as the guild 
+The town of Midgaard is the place in which every adventurer starts out in and
+usually stays.  The town contains an auction hall where equipment is sold,
+there are Clubs to join for added regeneration, and there is a donation room to
+the west of the temple.  There are various shops where useful items can be
+purchased, and there are also various other things in town such as the guild
 masters for each class.
 
 See Also: GUILD AUCTION SHOPS CLUBS DONATE
 #
 PETS
 
-There is a shop located in town that will sell you a pet.  Pets can be grouped 
-and used as companions to adventure with you.  You can order your pets to do 
+There is a shop located in town that will sell you a pet.  Pets can be grouped
+and used as companions to adventure with you.  You can order your pets to do
 things for you and they usually prove quite reliable.
 
 See Also: ORDER
 #
 PETRIFY STONE STATUE
 
-There are certain monsters in the game that may turn a character to stone, 
-either by will or if the player looks at the monster.  When a player is turned 
-to stone, his statue will be left in that room and will contain all of the 
-character's equipment and gold.  Players will not lose stats or exp for being 
+There are certain monsters in the game that may turn a character to stone,
+either by will or if the player looks at the monster.  When a player is turned
+to stone, his statue will be left in that room and will contain all of the
+character's equipment and gold.  Players will not lose stats or exp for being
 stoned.
 
 See Also: -
@@ -6032,23 +6031,23 @@ See Also: -
 #
 VANITY CUSTOM-GEAR
 
-If you wish "vanitize" or get custom equipment, it will cost you 50 million 
-coins per object you wish to get vanitized.  To get a piece of equipment 
+If you wish "vanitize" or get custom equipment, it will cost you 50 million
+coins per object you wish to get vanitized.  To get a piece of equipment
 vanitized you must look for a SUPREME or an IMPLEMENTOR and supply them with
 the 50 million coins and the object you wish vanitized and they will be happy
 to vanitize it to your person liking.
 
 Items with special procedures may be vanitized for an additional quest token.
 
-Note: renaming an object after it's already been customized is free for two 
+Note: renaming an object after it's already been customized is free for two
 weeks, and after that costs 10 million coins.
 
 See Also: -
 #
 RONINMUD
 
-RoninMUD is an exciting MUD with beautifully crafted areas and a lot of fun 
-things to do.  We are always in the process of improving the MUD, so always 
+RoninMUD is an exciting MUD with beautifully crafted areas and a lot of fun
+things to do.  We are always in the process of improving the MUD, so always
 expect new and great things.  To learn more about the MUD, ask an Immortal or
 Deputy for assistance, or even ask our friendly players, They would be sure
 to help.
@@ -6057,13 +6056,13 @@ See Also: INDEX
 #
 CORPSE
 
-When a player dies his corpse is left in the room in which the character dies.  
-All the player's equipment and gold is left in the corpse, therefore someone 
-must return to the site of death and get the corpse.  If a corpse is donated it 
-will turn up in the morgue, which is located a couple west from the Temple of 
-Midgaard.  
+When a player dies his corpse is left in the room in which the character dies.
+All the player's equipment and gold is left in the corpse, therefore someone
+must return to the site of death and get the corpse.  If a corpse is donated it
+will turn up in the morgue, which is located a couple west from the Temple of
+Midgaard.
 
-If a player is under level 10 when he dies, his corpse will automatically go to 
+If a player is under level 10 when he dies, his corpse will automatically go to
 the morgue.
 
 See Also: MORGUE DEATH
@@ -6077,9 +6076,9 @@ See Also: DEATH CORPSE DONATION
 #
 WEAPONS
 
-A weapon is a very useful thing in RoninMUD.  Weapons usually give good damage 
-to characters that they don't get with their bare hands.  Therefore weapons are 
-an excellent addition to fighting the monsters of the land. 
+A weapon is a very useful thing in RoninMUD.  Weapons usually give good damage
+to characters that they don't get with their bare hands.  Therefore weapons are
+an excellent addition to fighting the monsters of the land.
 
 See Also: STAFF WAND SCROLL
 #
@@ -6103,48 +6102,48 @@ See Also: STAFF USE
 #
 CONCENTRATION
 
-Concentration is determined by how well a player can cast his/her spells without 
-losing his/her patience and breaking his/her determination.  When concentration is lost 
-you will lose half of the mana it normally takes to use the spell that you 
-tried to cast.  Concentration is naturally better for certain classes, however 
-the higher your intelligence and wisdom, the better you can cast spells.
+Concentration is determined by how well a player can cast his/her spells without
+losing his/her patience and breaking his/her determination.  When concentration
+is lost you will lose half of the mana it normally takes to use the spell that
+you tried to cast.  Concentration is naturally better for certain classes,
+however the higher your intelligence and wisdom, the better you can cast spells.
 
 See Also: INTELLIGENCE WISDOM
 #
 MOBILES MONSTERS
 
-Mobiles is another name used for monsters.  On the MUD there are many different 
-mobiles, or mobs, that a player can kill.  Some monsters are good to kill for 
-experience, or money, or equipment.  To find out where there are good monsters 
-to kill based on your level, ask an Immortal or a Deputy, and they will be 
+Mobiles is another name used for monsters.  On the MUD there are many different
+mobiles, or mobs, that a player can kill.  Some monsters are good to kill for
+experience, or money, or equipment.  To find out where there are good monsters
+to kill based on your level, ask an Immortal or a Deputy, and they will be
 happy to tell you some good places to look for stuff to kill.
 
 See Also: COMBAT EXPERIENCE MONEY
 #
 COMBAT BATTLE ATTACK FIGHTING
 
-Combat is one of the most important things on RoninMUD.  Players must learn 
-that there are various skills depending on classes that can help you out in 
-battle, as well as various pieces of equipment that will give you an edge in 
-battle.  Combat is how you earn experience points, gold, and equipment, 
+Combat is one of the most important things on RoninMUD.  Players must learn
+that there are various skills depending on classes that can help you out in
+battle, as well as various pieces of equipment that will give you an edge in
+battle.  Combat is how you earn experience points, gold, and equipment,
 depending on what you kill.
 
 See Also: MONSTERS KILL EXP MONEY
 #
 RECALL
 
-One of the most important things to remember is to always carry a scroll of 
-recall.  When these scrolls are recited they will magically teleport the player 
-back to the Temple of Midgaard saving them from death or being lost.  Scrolls 
-of recall can be purchased at the Wizard's Shop in Midgaard or at other places 
+One of the most important things to remember is to always carry a scroll of
+recall.  When these scrolls are recited they will magically teleport the player
+back to the Temple of Midgaard saving them from death or being lost.  Scrolls
+of recall can be purchased at the Wizard's Shop in Midgaard or at other places
 throughout the MUD.
 
 See Also: SCROLL RECITE
 #
 SCROLL
 
-Scrolls are used by being recited.  When the scroll is recited it casts the 
-spell written on it on the target.  Reciting a scroll can be done on yourself 
+Scrolls are used by being recited.  When the scroll is recited it casts the
+spell written on it on the target.  Reciting a scroll can be done on yourself
 or on another person.
 
 Self:   recite <scroll>
@@ -6163,36 +6162,36 @@ See Also: -
 #
 SEX
 
-There are two different sexes to choose from on RoninMUD.  There are no 
-attribute penalties for choosing different sexes, however some items in the 
-game may be ANTI-MALE or ANTI-FEMALE, meaning one of the sexes may not be able 
+There are two different sexes to choose from on RoninMUD.  There are no
+attribute penalties for choosing different sexes, however some items in the
+game may be ANTI-MALE or ANTI-FEMALE, meaning one of the sexes may not be able
 to wear it.
 
 See Also: MALE, FEMALE
 #
 MALE
 
-Male is one of the two sexes you can choose a character to become while 
-creating that character.  There will be no attribute bonus or loss for choosing 
-a male character, however some items in the game may be ANTI-MALE meaning a 
+Male is one of the two sexes you can choose a character to become while
+creating that character.  There will be no attribute bonus or loss for choosing
+a male character, however some items in the game may be ANTI-MALE meaning a
 male character cannot use it.
 
 See Also: SEX, FEMALE
 #
 FEMALE
 
-Female is one of the two sexes you can choose a character to become while 
-creating that character.  There will be no attribute bonus or loss for choosing 
-a female character, however some items in the game may be ANTI-FEMALE meaning a 
+Female is one of the two sexes you can choose a character to become while
+creating that character.  There will be no attribute bonus or loss for choosing
+a female character, however some items in the game may be ANTI-FEMALE meaning a
 female character cannot use it.
 
 See Also: SEX, MALE
 #
 FLAGS KILLER THIEF
 
-If a character has a (killer) or (thief) flag in their title, this means that 
-the character has violated a rule of the MUD and is now being watched over by 
-the valiant cityguards, and the Jail Master of Midgaard will ensure that he 
+If a character has a (killer) or (thief) flag in their title, this means that
+the character has violated a rule of the MUD and is now being watched over by
+the valiant cityguards, and the Jail Master of Midgaard will ensure that he
 stays out of town.  It is probably a good idea to stay away from these people.
 
 See Also: RULES
@@ -6207,8 +6206,8 @@ See Also: RECEPTION, VAULTS
 #
 HAZARD
 
-If a character enters a HAZARD room, then they have a 50% chance of dying 
-there.  They may then attempt to retrieve their corpse, however, it is a 
+If a character enters a HAZARD room, then they have a 50% chance of dying
+there.  They may then attempt to retrieve their corpse, however, it is a
 Dangerous task.
 
 See Also: "DEATH TRAP", DT
@@ -6227,7 +6226,7 @@ inventory clean!
 #
 Q-CHANNEL "QUEST CHANNEL"
 
-This is the channel used for those characters who are playing a quest to 
+This is the channel used for those characters who are playing a quest to
 communicate with each other, and the person running the quest. This
 channel should not be used to other reasons than questing, and please
 refrain from using vulgar language on ANY other public channel.
@@ -6250,9 +6249,8 @@ This is simply a way of telling people you will be "Away from Keyboard".
 #
 POSE POSES
 
-These are advanced emotes that are randomly shown from a large
-list.  As your level increases, the number of poses you can do
-also increases.
+These are advanced emotes that are randomly shown from a large list.  As your
+level increases, the number of poses you can do also increases.
 
 See Also: SOCIAL LIST, EMOTE
 #
@@ -6296,44 +6294,28 @@ and then when people look at you they will see the message.
 #
 NEWSPAPER
 
-The Ronin newspaper will inform keep you informed on any MUD related 
+The Ronin newspaper will inform keep you informed on any MUD related
 activities, simply locate the paperboy around Midgaard and he will
 sell you a paper for a very small fee.
-
-See Also: NEWSLETTER
-#
-NEWSLETTER
-
-The Ronin Newsletter is an online mailing list, via E-Mail, used to
-distribute fun and informative information to anyone who wishes to
-subscribe To it.
-
-If you wish to subscribe to it, simply send an e-mail to:
-majordomo@ronin.mux.net
-
-with the body 'subscribe ronin-news' and then follow the instructions that will 
-be sent to you.
-
-See Also: NEWSPAPER
 #
 ACTIONS
 
-Actions or Triggers are commonly used by players, however, they are not to be 
+Actions or Triggers are commonly used by players, however, they are not to be
 abused.
 
 See: BOTTING
 #
 SWIM
 
-Ninjas have the unique ability to swim in water under most conditions, 
-therefore they do not need a boat to cross bodies of water like other 
+Ninjas have the unique ability to swim in water under most conditions,
+therefore they do not need a boat to cross bodies of water like other
 characters.
 
 See Also: NINJA
 #
 FOOD DRINK
 
-Players must find or purchase food or drink at certain intervals during the 
+Players must find or purchase food or drink at certain intervals during the
 RoninMUD day.  If they do not eat or drink they will suffer minor penalties.
 
 See Also: HUNGER, THIRST
@@ -6370,8 +6352,8 @@ See Also: DAMROLL
 #
 DAMROLL
 
-Damroll affects the amount of damage a character can do to a monster upon 
-successfully landing a hit.  The higher the damroll, the harder the person will 
+Damroll affects the amount of damage a character can do to a monster upon
+successfully landing a hit.  The higher the damroll, the harder the person will
 hit the mob, and the lower it is, the less damage he will do.
 
 See Also: HITROLL
@@ -6387,13 +6369,13 @@ Certain players have been awarded with a "Walkin/Walkout".  This means
 that when they enter or leave a room a certain text will be displayed
 about that player.  A Walkin/Walkout is usually given as a quest prize.
 #
-DUMP
+SCRAPYARD DUMP
 
-The Midgaard dump is located 2 south of the Market Square.  If you have any old 
-items you want to get rid of simply drop them off here and they will be 
-disposed of.  Just make sure you only drop the things you don't want here!  If 
-you drop a corpse in the dump, the corpse (and everything in it) will be 
-destroyed, and cannot be recovered.
+The Midgaard Scrapyard is located 2 north and one east from the Temple of
+Midgaard.  If you have any old items you want to get rid of simply drop them off
+here and they will be disposed of.  Just make sure you only drop the things you
+don't want here!  If you drop a corpse in the dump, the corpse (and everything
+in it) will be destroyed, and cannot be recovered.
 #
 ADMINISTRATION ADMIN
 
@@ -6401,16 +6383,16 @@ These are the gods that are involved in the main functions of RoninMUD.
 #
 IDLE
 
-The idle time of a player can be seen by using the "whois" command.  This is 
+The idle time of a player can be seen by using the "whois" command.  This is
 the amount of time since the player last sent a command to The MUD.
 
 NOTE: Mortals cannot find out the idle time of gods.
 #
 VOTE "VOTING MACHINE"
 
-The Voting Machine is located in the Hall of Democracy, which is north, north, 
-west, and north of Market Square.   Here players can post new ideas that they 
-would like to see on the MUD, as well as vote for or against ideas that other 
+The Voting Machine is located in the Hall of Democracy, which is north, north,
+west, and north of Market Square.   Here players can post new ideas that they
+would like to see on the MUD, as well as vote for or against ideas that other
 players have submitted.
 #
 SUBCLASS "SUBCLASSES"
@@ -6435,8 +6417,8 @@ Anti-Paladin      DEFILER         INFIDEL
 Bard              BLADE SINGER    CHANTER
 Commando          LEGIONNAIRE     MERCENARY
 
-Each subclass is broken up into 5 levels.  To gain these levels, players must 
-redeem subclass points.  These points are obtained by various means, and the 
+Each subclass is broken up into 5 levels.  To gain these levels, players must
+redeem subclass points.  These points are obtained by various means, and the
 number required per level are as follows.
 
 Level       Points
@@ -6447,24 +6429,24 @@ Level       Points
   4           280
   5           350
 
-There is also a main level restriction on the ability to gain subclasses.  A 
+There is also a main level restriction on the ability to gain subclasses.  A
 character must be at least level 30 to obtain the first 2 subclasses, level 40
 to obtain the second 2, and level 45 to obtain the last.
 
 To gain a subclass go to your subclass master and
 say "choose <subclass name>".
 
-Subclasses are not yet fully implemented and are subject to possible change.  
-As a result, when there is a major change to a subclass, for a limited time 
-players will be given the opportunity to switch to or from that subclass 
+Subclasses are not yet fully implemented and are subject to possible change.
+As a result, when there is a major change to a subclass, for a limited time
+players will be given the opportunity to switch to or from that subclass
 without loss of level.
 
 See Also: "SUBCLASS POINTS" "SUBCLASS MASTERS"
 #
 "SUBCLASS POINTS"
 
-Subclass points are needed to advance to new subclass levels.  They can be 
-obtained in a number of ways, and cannot be traded.  The number of points per 
+Subclass points are needed to advance to new subclass levels.  They can be
+obtained in a number of ways, and cannot be traded.  The number of points per
 level are as follows:
 
 Level       Points
@@ -6481,19 +6463,19 @@ See Also: SUBCLASSES "SUBCLASS TOKENS"
 #
 "SUBCLASS TOKENS" TOKENS
 
-Subclass tokens can be given to the appropriate subclass master in return for 
-subclass points.  Tokens can be given away and traded but cannot be rented or 
+Subclass tokens can be given to the appropriate subclass master in return for
+subclass points.  Tokens can be given away and traded but cannot be rented or
 stored.  You must make use of the token before you rent or before there is a
 reboot.
 
-Tokens are normally randomly distributed on creatures at the beginning of every 
-reboot, and redistributed 5 times every 22 hours.  These tokens are unable to 
+Tokens are normally randomly distributed on creatures at the beginning of every
+reboot, and redistributed 5 times every 22 hours.  These tokens are unable to
 be located by magic or gods. They are found by pure luck.
 
-Every now and then, a creature will be given a token, and the creature will 
+Every now and then, a creature will be given a token, and the creature will
 yell that it has one.  The first character to kill the creature owns the token.
 
-To reimburse a token for subclass points, go to your subclass master and type 
+To reimburse a token for subclass points, go to your subclass master and type
 one of the following:
 
 give token master / <name of master>
@@ -6575,12 +6557,12 @@ DEFEND
 Subclass Ranger: Level 5 (Nomad)
 Subclass Warlord: Level 4 (Warrior)
 
-While in complete defensive mode, the Ranger or Warlord completely focuses his 
-mind on the movements of the creatures attacking him. This prevents the 
-Ranger/Warlord from doing anything but weak hits against the opponent, but 
-gives him an extra -100 armor and the ability to dodge or parry attacks with 
-more success.  With defend, the Ranger/Warlord can get up to -300 armor. This 
-is the ultimate tanking ability.  While fighting, the tank cannot change this 
+While in complete defensive mode, the Ranger or Warlord completely focuses his
+mind on the movements of the creatures attacking him. This prevents the
+Ranger/Warlord from doing anything but weak hits against the opponent, but
+gives him an extra -100 armor and the ability to dodge or parry attacks with
+more success.  With defend, the Ranger/Warlord can get up to -300 armor. This
+is the ultimate tanking ability.  While fighting, the tank cannot change this
 mode.
 
 See Also: SUBCLASSES RANGER WARLORD
@@ -6622,7 +6604,7 @@ Usage: batter <victim>
 The Trapper can use his/her fists in rapid succession
 to pound on the victim.  This skill can deal upwards
 of 2*Trapper level in damage.  After using this skill,
-the Trapper has to wait two rounds of violence.  
+the Trapper has to wait two rounds of violence.
 
 See Also: SUBCLASSES TRAPPER
 #
@@ -6973,8 +6955,8 @@ Duration    : 2
 Save        : -
 Mana Cost   : 100
 
-This spell weakens the victim's magic sphere allowing at least 1/2 of all spell 
-damage to get through.  When used in conjunction with high damage spells, most 
+This spell weakens the victim's magic sphere allowing at least 1/2 of all spell
+damage to get through.  When used in conjunction with high damage spells, most
 creatures don't live long.
 
 NOTE: Distortion can be cast regardless of the victim's level.
@@ -6992,10 +6974,10 @@ Duration    : 10
 Save        : -
 Mana Cost   : 50
 
-This is the ultimate spell to prevent an Archmage's or Templar's untimely death 
-due to low hit points.  While protected by this spell and taking damage, the 
-Archmage's/Templar's hit points will only be able to go as low as 200.  Then, 
-instead of removing hit points for damage, the Archmage's/Templar's mana will 
+This is the ultimate spell to prevent an Archmage's or Templar's untimely death
+due to low hit points.  While protected by this spell and taking damage, the
+Archmage's/Templar's hit points will only be able to go as low as 200.  Then,
+instead of removing hit points for damage, the Archmage's/Templar's mana will
 be removed at a rate of 1 mana point for every 2 damage taken.
 
 See Also: SUBCLASSES ARCHMAGE TEMPLAR
@@ -7012,8 +6994,8 @@ Save        : -
 Mana Cost   : 50
 Damage      : 350
 
-This spell is shared by both the Archmage and the Legionnaire. It is similar to 
-iceball, but the damage it produces is over double without the doubling of mana 
+This spell is shared by both the Archmage and the Legionnaire. It is similar to
+iceball, but the damage it produces is over double without the doubling of mana
 cost.
 
 See Also: SUBCLASSES ARCHMAGE LEGIONNAIRE
@@ -7028,8 +7010,8 @@ Duration    : -
 Save        : -
 Mana Cost   : 40
 
-This battle-starting spell causes the Enchanter to deal 5x his hit damage in 
-the first hit.  The Enchanter's weapon will also have a better chance of 
+This battle-starting spell causes the Enchanter to deal 5x his hit damage in
+the first hit.  The Enchanter's weapon will also have a better chance of
 specing.
 
 See Also: SUBCLASSES ENCHANTER
@@ -7044,8 +7026,8 @@ Duration    : 0-57 seconds (depends on timing)
 Save        : -
 Mana Cost   : 250
 
-This spell temporarily removes the victim's sanctuary, allowing the entire 
-group to deal full damage for the duration.  It can be cast on any victim but 
+This spell temporarily removes the victim's sanctuary, allowing the entire
+group to deal full damage for the duration.  It can be cast on any victim but
 has a certain degree of failure.
 
 See Also: SUBCLASSES ENCHANTER
@@ -7060,20 +7042,20 @@ Duration    : 30 ticks (only 1st tick is effective)
 Save        : -
 Mana Cost   : 100
 
-While affected by this spell, the Enchanter is not completely within the 
-physical plane of existence and therefore can not receive any physical damage.  
-However, the Enchanter can be damaged by spells and other special attacks.  
-Conversely, the Enchanter can not inflict any physical damage while in this 
+While affected by this spell, the Enchanter is not completely within the
+physical plane of existence and therefore can not receive any physical damage.
+However, the Enchanter can be damaged by spells and other special attacks.
+Conversely, the Enchanter can not inflict any physical damage while in this
 state and must depend on attack spells to kill.  It takes the Enchanter great
-effort to maintain this form and as a result can only cast ethereal nature once 
+effort to maintain this form and as a result can only cast ethereal nature once
 every 30 ticks.
 
 See Also: SUBCLASSES ENCHANTER
 #
 ENCHANTER
 
-Enchanter is one of the Mage subclasses and is broken up into 5 levels.  At 
-each level, the Enchanter receives a new or improved spell.  For help on each 
+Enchanter is one of the Mage subclasses and is broken up into 5 levels.  At
+each level, the Enchanter receives a new or improved spell.  For help on each
 spell, just type HELP <spell name>
 
 Level         Spell
@@ -7087,8 +7069,8 @@ See Also: SUBCLASSES ARCHMAGE MAGE
 #
 ARCHMAGE
 
-Archmage is one of the Mage subclasses and is broken up into 5 levels.  At each 
-level, the Archmage receives a new or improved spell.  For help on each spell, 
+Archmage is one of the Mage subclasses and is broken up into 5 levels.  At each
+level, the Archmage receives a new or improved spell.  For help on each spell,
 just type HELP <spell name>
 
 Level         Spell
@@ -7118,61 +7100,61 @@ him/her stunned for 2 rounds.
 See Also: SUBCLASSES ENCHANTER
 #
 ROGUE
- 
+
 Rogue is one of the Thief subclasses and is broken up
 into 5 levels.  At each level, the rogue receives a
 new or improved skill.  For help on each skill, just type
 HELP <name of skill>
- 
+
 Level         Skill
   1           DIRTY TRICKS
   2           TROPHY
   3           VEHEMENCE
   4           TRIP
   5           QUICK RECOVERY
- 
+
 See Also: SUBCLASSES BANDIT THIEF
 #
 BANDIT
- 
+
 Bandit is one of the Thief subclasses and is broken up
 into 5 levels.  At each level, the bandit receives a
 new or improved skill.  For help on each skill, just type
 HELP <name of skill>
- 
+
 Level         Skill
   1           FADE
   2           IMPAIR
   3           ENERGY ATTUNEMENT
   4           CLOSE COMBAT
   5           EVASION
- 
+
 See Also: SUBCLASSES ROGUE THIEF
 #
 FADE
- 
+
 Subclass Bandit: Level 1 (Thief)
- 
+
 Usage: fade (toggles on/off)
- 
+
 The fade skill allows a Bandit to blend in with his/her surroundings
 giving an increase in the chance of a successful dodge.  However,
 this comes at a price of reduced hitroll.  The success of fade is
 dependent on how well the skill is practiced.
- 
+
 See also: SUBCLASSES BANDIT
 #
 "DIRTY TRICKS"
- 
+
 Subclass Rogue: Level 1 (Thief)
- 
+
 Usage: dirty-tricks (toggles on/off)
- 
+
 This set of skills is automatic for the Rogue.  With this subclass and
 the skill properly practiced, the Rogue does things like throwing dirt in
 the victim's eyes for blindness, kicking in sensitive areas and dealing
 grievous wounds that cause the victim to bleed profusely.
- 
+
 See Also: SUBCLASSES ROGUE
 #
 EVADE
@@ -7190,15 +7172,15 @@ the skill is practiced.
 See Also: SUBCLASSES ROGUE
 #
 TRIP
- 
+
 Subclass Rogue: Level 4 (Thief)
- 
+
 Usage: trip (toggles on/off)
- 
+
 When circling an enemy the Rogue has a chance to follow up their
 attack by tripping the victim, knocking them to the ground and causing
 them to take increased damage on the next attack made on the victim.
- 
+
 See Also: SUBCLASSES ROGUE
 #
 EXECUTE
@@ -7233,15 +7215,15 @@ is dependent on how well the skill is practiced.
 See Also: SUBCLASSES BANDIT
 #
 IMPAIR
- 
+
 Subclass Bandit: Level 2 (Thief)
- 
+
 This skill allows a Bandit to apply various debuffs during combat.
 When using backstab, there is a chance that the target will be paralyzed
 and unable to flee from combat. When using circle, there is a chance that
 the target will be dazed and affected by +30 ARMOR and -2 HITROLL. The
 success of impair is dependent on how well the skill is practiced.
- 
+
 See also: SUBCLASSES BANDIT
 #
 FLANK
@@ -7259,33 +7241,33 @@ skill is practiced.  A weapon is required.
 See Also: SUBCLASSES GLADIATOR
 #
 "QUICK RECOVERY"
- 
+
 Subclass Rogue: Level 5 (Thief)
- 
+
 Once the Rogue reaches this subclass level, he/she has the chance of
 getting 1 less round of lag on all skills. The success of getting the
 reduction is varies from 50% to 75% once the skill has been fully
 practiced.
- 
+
 See Also: SUBCLASSES ROGUE
 #
 "CLOSE COMBAT"
- 
+
 Subclass Bandit: Level 4 (Thief)
- 
+
 The Bandit benefits from an increased combat awareness, granting him an
 increase of 1 hitroll, 1 damroll and 20 armor.  When fighting in close
 quarters (inside), the Bandit receives an additional increase of his/her
 damroll by 4 and hitroll by 4.
 
 This is an automatic skill and will apply to all hits.
- 
+
 See Also: SUBCLASSES BANDIT
 #
 GLADIATOR
 
-Gladiator is one of the Warrior subclasses and is broken up into 5 levels.  At 
-each level, the gladiator receives a new or improved skill.  For help on each 
+Gladiator is one of the Warrior subclasses and is broken up into 5 levels.  At
+each level, the gladiator receives a new or improved skill.  For help on each
 skill, just type HELP <name of skill>
 
 Level         Skill
@@ -7476,12 +7458,11 @@ Duration    :
 Save        : 1/2 vs. paralysis
 Mana Cost   : 150
 
-This extremely powerful room spell can cause serious
-damage to anything in the immediate vicinity.  The
-Legionnaire not only deals damage equal to five times
-his or her level, but also has a chance to paralyze 
-their victims.  During the winter, Rimefang will deal an
-additional 75 damage.
+This extremely powerful room spell can cause serious damage to anything in the
+immediate vicinity.  The Legionnaire not only deals damage equal to five times
+his or her level, but also has a chance to paralyze their victims.
+
+During the winter, Rimefang will deal an additional 75 damage.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7493,7 +7474,7 @@ With this skill, the mercenary has a chance to partially
 deflect incoming attacks made against him or her.  The
 damage deflected varies from 15% to 20%.  Additionally,
 the mercenary will get an attack back at their opponent
-with a chance of dual or triple.  The success of this 
+with a chance of dual or triple.  The success of this
 skill is dependent on how well it is practiced, and the
 characters dexterity.
 
@@ -7509,11 +7490,11 @@ Duration    : 8
 Save        : -
 Mana Cost   : 200
 
-This spell has two purposes.  One is to deal a high amount of damage in 
-one cast.  The other is to leave an effect that will deal decent damage 
-every tick. This is accomplished with a modest 600 damage initial attack 
-and another 100 damage a tick for 8 ticks.  This spell is the perfect way 
-to prevent a creature from regenerating when you are trying to kill it 
+This spell has two purposes.  One is to deal a high amount of damage in
+one cast.  The other is to leave an effect that will deal decent damage
+every tick. This is accomplished with a modest 600 damage initial attack
+and another 100 damage a tick for 8 ticks.  This spell is the perfect way
+to prevent a creature from regenerating when you are trying to kill it
 over multiple runs.
 
 See Also: SUBCLASSES LEGIONNAIRE
@@ -7545,7 +7526,7 @@ Duration    : 10
 Save        : -
 Mana Cost   : 50
 
-This defensive spell will lower the Mercenary's armor by 25, making him harder 
+This defensive spell will lower the Mercenary's armor by 25, making him harder
 to hit.
 
 See Also: SUBCLASSES MERCENARY
@@ -7679,7 +7660,7 @@ enemy. In doing so, the Cavalier switches their target and performs a
 single attack against their enemy that knocks them down into a resting
 position.
 
-When smiting an enemy the Cavalier also has a chance to summon their 
+When smiting an enemy the Cavalier also has a chance to summon their
 trusty steed against the target of their attack.
 
 See Also: SUBCLASSES CAVALIER
@@ -7694,7 +7675,7 @@ Duration    : level/4
 Save        : -
 Mana Cost   : 100
 
-This is a multipurpose spell designed to protect the victim with a wide range 
+This is a multipurpose spell designed to protect the victim with a wide range
 of affects.  First and foremost is sanctuary which is identical to the
 sanctuary spell. In addition the target receives an additional -15 ARMOR, +1 to
 all saving throws, +3 DAMROLL, +25 HP_REGEN and +5 MANA_REGEN. Being able to
@@ -7712,7 +7693,7 @@ Duration    : 10
 Save        : -
 Mana Cost   : 30
 
-This spell gives the Crusader a damage bonus against evil victims.  Every hit 
+This spell gives the Crusader a damage bonus against evil victims.  Every hit
 will have a damage increase of 5 versus evil while affected by this spell.
 
 See Also: SUBCLASSES CRUSADER
@@ -7753,18 +7734,18 @@ Duration    : -
 Save        : -
 Mana Cost   : varies
 
-The Crusader uses his power of divine faith to cure the most serious wounds of 
-the victim.  The cost of this spell varies depending on the amount of hit 
-points healed and is defined as 50+healed/15. However, even the most devote 
-Crusaders have limits and thus the maximum amount of healing power they can do 
+The Crusader uses his power of divine faith to cure the most serious wounds of
+the victim.  The cost of this spell varies depending on the amount of hit
+points healed and is defined as 50+healed/15. However, even the most devote
+Crusaders have limits and thus the maximum amount of healing power they can do
 is 1100 hit points for 120 mana.
 
 See Also: SUBCLASSES CRUSADER
 #
 DRUID
 
-Druid is one of the Cleric subclasses and is broken up into 5 levels.  At each 
-level, the Druid receives a new or improved skill or spell.  For help on each 
+Druid is one of the Cleric subclasses and is broken up into 5 levels.  At each
+level, the Druid receives a new or improved skill or spell.  For help on each
 skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
@@ -7778,8 +7759,8 @@ See Also: SUBCLASSES TEMPLAR CLERIC
 #
 TEMPLAR
 
-Templar is one of the Cleric subclasses and is broken up into 5 levels.  At 
-each level, the Templar receives a new or improved skill or spell.  For help on 
+Templar is one of the Cleric subclasses and is broken up into 5 levels.  At
+each level, the Templar receives a new or improved skill or spell.  For help on
 each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
@@ -7830,7 +7811,7 @@ Duration    : 10
 Save        : -
 Mana Cost   : 100
 
-This affect works in conjunction with sanctuary to give the victim even more 
+This affect works in conjunction with sanctuary to give the victim even more
 protection from damage. If affected by both sanctuary and fortification, the
 victim will receive a damage reduction of 65%.
 
@@ -7866,7 +7847,7 @@ Duration    : 5
 Save        : -
 Mana Cost   : 80
 
-The Druid conjures up a handful of seeds which quickly grow to block all 
+The Druid conjures up a handful of seeds which quickly grow to block all
 exits.  Any creatures in the room will be trapped, unable to flee. The wall
 isn't permanent and will dissolve in a short span of time.
 
@@ -7962,8 +7943,8 @@ BLITZ
 
 Subclass Blade Singer: Level 2 (Bard)
 
-This battle-starting skill gives the Blade Singer 1.5 times damage on the first 
-hit with a chance of disarming the victim.  The success of blitz is dependent 
+This battle-starting skill gives the Blade Singer 1.5 times damage on the first
+hit with a chance of disarming the victim.  The success of blitz is dependent
 on how well the skill is practiced.
 
 See Also: SUBCLASSES "BLADE SINGER"
@@ -7984,9 +7965,9 @@ See Also: SONGS
 
 Subclass Chanter: Level 2 (Bard)
 
-This song has two effects.  First, it increases all group member saving throws 
+This song has two effects.  First, it increases all group member saving throws
 by 2.  Second, it reduces all other character's hitrolls by 4.  The victim has
-a save vs. magic on the hitroll deduction.  The duration of the affect is 5, 
+a save vs. magic on the hitroll deduction.  The duration of the affect is 5,
 the mana cost is 60.
 
 See Also: SUBCLASSES CHANTER
@@ -7995,7 +7976,7 @@ LUCK
 
 Subclass Chanter: Level 3 (Bard)
 
-This song increases the party regen by 10 hit points and 10 mana each tick for 
+This song increases the party regen by 10 hit points and 10 mana each tick for
 5 ticks.  The cost is 100 mana.
 
 See Also: SUBCLASSES CHANTER
@@ -8004,15 +7985,15 @@ AID
 
 Subclass Chanter: Level 4 (Bard)
 
-This song increases the damage roll of every character in the room by 5 for a 
+This song increases the damage roll of every character in the room by 5 for a
 duration of 4 ticks.  The mana cost is 150.
 
 See Also: SUBCLASSES CHANTER
 #
 RONIN
 
-Ronin is one of the Ninja subclasses and is broken up into 5 levels.  At each 
-level, the Ronin receives a new or improved skill or spell.  For help on each 
+Ronin is one of the Ninja subclasses and is broken up into 5 levels.  At each
+level, the Ronin receives a new or improved skill or spell.  For help on each
 skill or spell, just type HELP <skill/spell name>.
 
 Level         Skill/Spell
@@ -8026,8 +8007,8 @@ See Also: SUBCLASSES MYSTIC NINJA
 #
 MYSTIC
 
-Mystic is one of the Ninja subclasses and is broken up into 5 levels.  At each 
-level, the Mystic receives a new or improved skill or spell.  For help on each 
+Mystic is one of the Ninja subclasses and is broken up into 5 levels.  At each
+level, the Mystic receives a new or improved skill or spell.  For help on each
 skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
@@ -8045,9 +8026,9 @@ Subclass Ronin: Level 3 (Ninja)
 
 Usage: assault <victim>
 
-The Ronin is practiced in the art of the quick draw of his/her weapons. By 
+The Ronin is practiced in the art of the quick draw of his/her weapons. By
 taking an enemy by surprise, the Ronin can assault the target with both
-weapons, as opposed to only the primary weapon (in the wielded equipment 
+weapons, as opposed to only the primary weapon (in the wielded equipment
 location). A standard assault check is made for each weapon, and each
 weapon's success is independent of the other. The second weapon inflicts
 slightly less damage, as outlined below.
@@ -8074,7 +8055,7 @@ Subclass Ronin: Level 2 (Ninja)
 
 Usage: backfist <victim>
 
-With this attack, the Ronin drives his or her fist into the victim. This 
+With this attack, the Ronin drives his or her fist into the victim. This
 skill inflicts damage equivalent to 1.25 times the Ronin's level, and
 knocks the victim into a stunned state.
 
@@ -8235,7 +8216,7 @@ If a more powerful Mystic applies mantra to a target already affected by the
 enchantment it will be replaced by the higher level enchantment and the
 duration will be refreshed.
 
-While affected by the "Mantra" enchantment, the character regains 
+While affected by the "Mantra" enchantment, the character regains
 "Level + (5 * Wisdom Bonus)" hit points every 10 seconds for a duration of
 100 seconds (there will be 10 healing "pulses").
 
@@ -8267,9 +8248,9 @@ spell is active.
 
 See Also: SUBCLASSES MYSTIC
 #
-"AC apply"
+"AC Apply"
 
-A positive AC apply will improve your armor. Items worn on body will improve 
+A positive AC apply will improve your armor. Items worn on body will improve
 your armor with 3x the items AC apply. Items worn as shields will provide 2x
 its AC apply. Items worn on other body parts will improve your armor with its
 AC apply.
@@ -8277,9 +8258,8 @@ AC apply.
 #
 DECAY
 
-Some items might have a decay flag. With time these items
-will weaken and in the end fall apart. Note that the time
-frame is quite long though.
+Some items might have a decay flag. With time these items will weaken and in the
+end fall apart.  Note that the time frame is quite long though.
 #
 WIZLIST
 
@@ -8331,9 +8311,9 @@ Level      : level 32 mage, 34 commando
 Save       : none
 Mana cost  : 40 + 2*level of caster
 
-The caster drains 9*level of caster hit points from the victim, and transfers 
-these hit points back to himself.  This spell doesn't work very well on 
-victims with sanctuary or invulnerability spells on them. This spell works 
+The caster drains 9*level of caster hit points from the victim, and transfers
+these hit points back to himself.  This spell doesn't work very well on
+victims with sanctuary or invulnerability spells on them. This spell works
 only if the caster is Good aligned.
 #
 "DIVINE INTERVENTION"
@@ -8344,16 +8324,16 @@ Save       : none
 Duration   : 8 ticks
 Mana cost  : 500
 
-The caster prays for divine protection for the target, while affected 
-if at any time the protected character would die, they are instead 
+The caster prays for divine protection for the target, while affected
+if at any time the protected character would die, they are instead
 immediately miracle'd and the spell affect is removed.
 #
 QUAD
 
 Class: Warrior
 
-A skill which gives an automatic forth attack during a fight. The 
-chance of its success depends on how well you learn it.
+A skill which gives an automatic forth attack during a fight. The chance of its
+success depends on how well you learn it.
 
 See Also : DUAL TRIPLE
 #
@@ -8384,7 +8364,8 @@ This spell will also enhance the Commando's damage by 5.
 
 Class: Thief
 
-This skill gives the thief a chance for an extra attack during circle.  
+This skill gives the thief a chance for an extra attack during circle.
+
 A successful twist will do 250 extra damage to the target.
 
 See Also : CIRCLE
@@ -8397,8 +8378,8 @@ Save       : none
 Duration   : 3 ticks
 Mana cost  : 100
 
-While affected by Blood Lust the Anti-Paladin hungers for blood.  He/She 
-can randomly bite the target.  Each bite has the chance to cause damage, 
+While affected by Blood Lust the Anti-Paladin hungers for blood.  He/She
+can randomly bite the target.  Each bite has the chance to cause damage,
 drain hit points, or drain mana.
 #
 "MYSTIC SWIFTNESS"
@@ -8505,64 +8486,64 @@ they had previously gathered in order to complete the process, restarting it
 at any time they see fit.
 #
 CUNNING
- 
+
 Class: Thief
- 
+
 Usage: cunning (toggles on/off)
- 
+
 When affected by cunning the thief is able to expend magical energy in
 order to grant them the ability to break through the INVULNERABILITY
 spell. Each attempted use of circle or backstab will incur a cost of 10
 mana to the thief while cunning is enabled.
 #
 "ENERGY ATTUNEMENT"
- 
+
 Subclass Bandit: Level 3 (Thief)
- 
+
 When affected by healing magic, the Bandit will have the amount of
 healing done increased by 10% to 20%.
- 
+
 See also: SUBCLASSES BANDIT
 #
 EVASION
- 
+
 Subclass Bandit: Level 5 (Thief)
- 
+
 Usage: evasion (toggles on/off)
- 
+
 When the Bandit is in this protective postion all damage afflicted by
-weapons or spells will be reduced by one quarter.  
- 
+weapons or spells will be reduced by one quarter.
+
 Unfortunately, since the Bandit is so intent on protecting themself
 the Bandit will miss more often.  If the Bandit is in combat, this
 cannot be turned on off.
- 
+
 See Also: SUBCLASSES BANDIT
 #
 TROPHY
- 
+
 Subclass Rogue: Level 2 (Thief)
- 
+
 The Rogue has the ability to take trophies from his victims. These
 trophies give whoever is carrying them a sense of power and increases
 both their hitroll and damroll by one for each trophy.  Unfortunately,
 the largest increase possible due to trophies is 2 hitroll/damroll and
 the trophies decay quickly.  However, the Rogue can give the trophies
 to whomever he/she wishes, making the Rogue extremely useful in a group.
- 
+
 See Also: SUBCLASSES ROGUE
 #
 VEHEMENCE
- 
+
 Subclass Rogue: Level 3 (Thief)
- 
+
 Usage: vehemence (toggles on/off)
- 
+
 When affected by vehemence the Rogue gains a slight increase to all of
 their skills. However, when in this state the Rogue suffers from a 10%
 penalty to their chance to dodge attacks. If the Rogue is in combat,
 this cannot be turned on off.
- 
+
 See Also: SUBCLASSES ROGUE
 #~
 

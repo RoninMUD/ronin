@@ -4,26 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:12:28 $
-$Header: /home/ronin/cvs/ronin/act.obj1.c,v 2.1 2005/04/27 17:12:28 ronin Exp $
-$Id: act.obj1.c,v 2.1 2005/04/27 17:12:28 ronin Exp $
-$Name:  $
-$Log: act.obj1.c,v $
-Revision 2.1  2005/04/27 17:12:28  ronin
-Addition of obj vnum to vault log.
-
-Revision 2.0.0.1  2004/02/05 16:08:33  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -210,11 +190,11 @@ int get_obj_from_object(struct char_data *ch, char *name, struct obj_data *sub_o
   int total=0;
 
   if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
-    if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) && 
+    if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
         (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
-    } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) && 
+    } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
         (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))) {
       printf_to_char(ch,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
@@ -1109,18 +1089,18 @@ void do_put(struct char_data *ch, char *argument, int cmd)
         } else {
           type = 5; // container is closed
         }
-      break;
+        break;
       case ITEM_AQ_ORDER:
         alldot = is_all_dot(arg1, allbuf);
         if (!str_cmp(arg1, "all")){
           type = 3; // put has "all"
         } else {
           type = 4; // put does not have "all"
-        }      
-      break;
+        }
+        break;
       default:
         type = 6; // target of do_put is not a container-ish object
-      break;
+        break;
       }
     }
   }
@@ -1161,19 +1141,18 @@ void do_put(struct char_data *ch, char *argument, int cmd)
             V_OBJ(obj_object) == to_object->obj_flags.value[3])) {
           total = put(ch, obj_object, to_object, TRUE);
         } else { // is aq_order with no order match
-          sprintf(buffer, "%s did not require %s.\n\r", CAP(OBJ_SHORT(to_object)), 
-              OBJ_SHORT(obj_object));
+          sprintf(buffer, "%s did not require %s.\n\r", CAP(OBJ_SHORT(to_object)), OBJ_SHORT(obj_object));
           send_to_char(buffer, ch);
         }
       } else {
-      sprintf(buffer, "You don't have the %s.\n\r", arg1);
-      send_to_char(buffer, ch);
+        sprintf(buffer, "You don't have the %s.\n\r", arg1);
+        send_to_char(buffer, ch);
       }
     } else {
       for(tmp_object = ch->carrying, total = 0;
         tmp_object && total < number;
         tmp_object = next_obj) {
-      next_obj = tmp_object->next_content;
+        next_obj = tmp_object->next_content;
         if (isname( arg1, OBJ_NAME(tmp_object)))
           if (CAN_SEE_OBJ(ch, tmp_object)) {
             if(put( ch, tmp_object, to_object, FALSE)) {

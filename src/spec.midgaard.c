@@ -897,18 +897,17 @@ int dump(int room, CHAR *ch, int cmd, char *arg) {
   do_drop(ch, arg, cmd);
   value = 0;
 
-  for(k = world[CHAR_REAL_ROOM(ch)].contents; k ;
-      k = world[CHAR_REAL_ROOM(ch)].contents) {
+  for(k = world[CHAR_REAL_ROOM(ch)].contents; k; k = world[CHAR_REAL_ROOM(ch)].contents) {
     // updated to unpack containers which might contain an AQ_ORDER
-    //   and moves AQ_ORDERs to Storage Room - no free way to "quit" them
+    // and moves AQ_ORDERs to Storage Room - no free way to "quit" them
     // also by unpacking containers, get poof message for all contents
     if (GET_ITEM_TYPE(k) == ITEM_AQ_ORDER) {
-      sprintf(buf, "%s vanishes in a brilliant flash of bright light.\n\r",
-          CAP(OBJ_SHORT(k)));
+      sprintf(buf, "%s vanishes in a brilliant flash of bright light.\n\r", CAP(OBJ_SHORT(k)));
       send_to_room(buf, CHAR_REAL_ROOM(ch));
       obj_from_room(k);
       obj_to_room(k, real_room(STORAGE_ROOM));
-    } else {
+    }
+    else {
       if (GET_ITEM_TYPE(k)==ITEM_CONTAINER) {
         for (tmp_c = k->contains; tmp_c; tmp_c = next_c) {
             next_c = tmp_c->next_content;
@@ -917,8 +916,7 @@ int dump(int room, CHAR *ch, int cmd, char *arg) {
         }
       }
 
-      sprintf(buf, "The %s vanishes in a puff of smoke.\n\r", 
-          rem_prefix(OBJ_SHORT(k)));
+      sprintf(buf, "The %s vanishes in a puff of smoke.\n\r", rem_prefix(OBJ_SHORT(k)));
       for(tmp_char = world[CHAR_REAL_ROOM(ch)].people; tmp_char;
           tmp_char = tmp_char->next_in_room) {
         if (CAN_SEE_OBJ(tmp_char, k)) {

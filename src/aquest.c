@@ -7,40 +7,6 @@
 ** Do not distribute without permission.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/05/05 20:40:57 $
-$Header: /home/ronin/cvs/ronin/aquest.c,v 2.1 2004/05/05 20:40:57 ronin Exp $
-$Id: aquest.c,v 2.1 2004/05/05 20:40:57 ronin Exp $
-$Name:  $
-$Log: aquest.c,v $
-Revision 2.1  2004/05/05 20:40:57  ronin
-Changed Greater Oni aquest to 4.
-Added 1% chance of getting a double aquest.
-
-Revision 2.0.0.1  2004/02/05 16:08:50  ronin
-Reinitialization of cvs archives
-
-Revision 1.5  2003/01/25 16:46:24  ronin
-Quest fail on quit lowered from 30 to 25 ticks.
-Revision - removed Pan from aquests, as he's now bard sc-master.
-
-Revision - chief of guards removed from aquest due to his fleeing
-Revision - increased attainable natural stats to 22
-
-Revision 1.4  2002/07/26 16:46:24  ronin
-Increased the point vale of the abyss mobs and a few others.
-
-Revision 1.3  2002/05/29 04:58:54  ronin
-Change of some aquest mobs and addition of 3 more.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -1045,25 +1011,6 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
   wizlog("WIZINFO: Quest counter exceeded 200",LEVEL_IMP,5);
   log_f("WIZINFO: Quest counter exceeded 200");
   return FALSE;
-
-/*  else {
-    Object questing not implemented.  If it is added must add a check
-    for someone else picking up the quest obj (or block anyone but the
-    quester from picking up the object)
-
-    obj=read_object(3,VIRTUAL);
-    obj_to_room(obj,CHAR_REAL_ROOM(mob));
-    ch->quest_level=1;
-    ch->questmob=0;
-    ch->questobj=obj;
-    ch->quest_status=QUEST_RUNNING;
-    obj->owned_by=ch;
-    ch->questgiver=mob;
-    ch->ver3.time_to_quest=60;
-    sprintf(buf,"$N tells you, 'Get the $q for %d quest point(s), in 60 ticks.'",ch->quest_level);
-    act(buf,0,ch,obj,mob,TO_CHAR);
-    return TRUE;
-  }*/
 }
 
 /* Object questing implemented through mob other than guildmaster in this case */
@@ -1470,16 +1417,25 @@ int aq_objs[][2] = {
 #define AQ_ORDER_QUIT_TIME      150
 #define AQ_ORDER_WAIT_TIME      30
 
-char *kendernames[9] = {"Karl","Dieter","Hans","Jurgen","Hilda",
-                          "Erwin","Herman","Eva","Marlene"};
-                          
+char *kendernames[] = {
+  "Karl",
+  "Dieter",
+  "Hans",
+  "Jurgen",
+  "Hilda",
+  "Erwin",
+  "Herman",
+  "Eva",
+  "Marlene"
+};
+
 int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   OBJ *aqorder;
   bool assigned[4] = {FALSE, FALSE, FALSE, FALSE};
   char buf[MAX_STRING_LENGTH];
-  int pick, i, count = 0, questvalue = 0; 
+  int pick, i, count = 0, questvalue = 0;
   struct extra_descr_data *tmp_descr;
-  
+
   if(requester->ver3.id <= 0)
     requester->ver3.id = generate_id();
 
@@ -1494,13 +1450,13 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   sprintf(buf, "%s's acquisition order", GET_NAME(requester));
   aqorder->short_description = str_dup(buf);  // change the short desc to include requester's name
   aqorder->log = 1;
- 
-  for (i = 0; i < 4; i++) { 
+
+  for (i = 0; i < 4; i++) {
     // get an obj from our aq_objs table, assign it to the aqorder value[i]
     while(count < 100) {
       count++;
       pick = number(0, NUMELEMS(aq_objs) - 1);
-      
+
       if (aq_objs[pick][0] == aqorder->obj_flags.value[0]) continue;
       if (aq_objs[pick][0] == aqorder->obj_flags.value[1]) continue;
       if (aq_objs[pick][0] == aqorder->obj_flags.value[2]) continue;
@@ -1521,7 +1477,7 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
   if (assigned[0] && assigned[1] && assigned[2] && assigned[3]) {
     // tag order with questvalue - visible in magic.c "identify"
     OBJ_SPEC(aqorder) = questvalue;
-    
+
     // change the extra desc to include required objects
     CREATE(tmp_descr, struct extra_descr_data, 1);
     tmp_descr->keyword = str_dup("order");
@@ -1555,7 +1511,7 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
     return FALSE;
   }
   return FALSE;
-} // end of generate_aq_order()
+}
 
 int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
   char argument[MAX_INPUT_LENGTH];
@@ -1564,15 +1520,24 @@ int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
   char buf2[MAX_STRING_LENGTH];
   struct extra_descr_data *tmp_descr;
   CHAR *collector = NULL;
-  char *collectorinsult[8] = {"wimp","quitter","lame-o","goldbricker",
-                              "pansy","slacker","chump","loser"};
+  char *collectorinsult[] = {
+    "wimp",
+    "quitter",
+    "lame-o",
+    "goldbricker",
+    "pansy",
+    "slacker",
+    "chump",
+    "loser"
+  };
+
   // block methods of getting order out of game and back again on non-owner
-  //   since this would allow multiple orders for a character at once
+  // since this would allow multiple orders for a character at once
   // "junk" only real method to quit an order
   // Dump/Scrapyard workaround is in int dump()
 
   if (ch != order->carried_by) return FALSE;
-  
+
   switch(cmd) {
   case MSG_OBJ_ENTERING_GAME:
     if (V_OBJ(order) != TEMPLATE_AQORDER) return FALSE;
@@ -1688,9 +1653,9 @@ points a strange pistol at %s, which disappears.\n\r", GET_SHORT(collector), OBJ
           IS_NPC(ch) ? GET_SHORT(ch) : GET_NAME(ch),
           CAP(idname[order->ownerid[0]].name));
       sprintf(buf2, "If %s can't handle the order I'll just send it back to Central \
-Processing to be requeued, that %s.", 
+Processing to be requeued, that %s.",
           CAP(idname[order->ownerid[0]].name),
-          collectorinsult[number(0, NUMELEMS(collectorinsult)-1 )]);
+          collectorinsult[number(0, NUMELEMS(collectorinsult)-1)]);
       sprintf(buf, "%s %s", buf1, buf2);
       // for some reason referencing CAP(idname[order->ownerid[0]].name)
       //   twice in the same sprintf() creates a warning, so splitting it
@@ -1699,8 +1664,9 @@ Processing to be requeued, that %s.",
       sprintf(buf, "I saw that %s, if you don't think you can handle the order I'll just \
 send it back to Central Processing to be requeued... you %s.",
           IS_NPC(ch) ? GET_SHORT(ch) : GET_NAME(ch),
-          collectorinsult[number(0, NUMELEMS(collectorinsult)-1 )]);
+          collectorinsult[number(0, NUMELEMS(collectorinsult)-1)]);
     }
+
     do_quest(collector, buf, CMD_QUEST);
 
     // this is where it gets moved to another room to "hack" a wait timer
@@ -1711,11 +1677,12 @@ send it back to Central Processing to be requeued... you %s.",
     SET_BIT(order->obj_flags.extra_flags2, ITEM_ALL_DECAY);
     return TRUE;
     break;
+
   default:
     break;
   }
   return FALSE;
-} // end of aq_order_obj()
+}
 
 int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *order = NULL;
@@ -1731,7 +1698,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
                             "nitwit","nincompoop","imbecile","dullard",
                             "cotton-headed ninnymuggins","peabrain"};
-  
+
   if (cmd == CMD_AQUEST) {
     // process order request
     arg = one_argument(arg, argument);
@@ -1746,8 +1713,9 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
             return TRUE;
           }
         }
-        
+
         arg = one_argument(arg, argument);
+
         if (*argument) {
           if (is_abbrev(argument,"newbie"))  lh_opt=1;
           if (is_abbrev(argument,"low"))     lh_opt=2;
@@ -1756,6 +1724,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
           if (is_abbrev(argument,"veteran")) lh_opt=5;
           if (is_abbrev(argument,"uber"))    lh_opt=6;
         }
+
         if (lh_opt == 1 && GET_LEVEL(ch) >= 40) {
           mob_do(collector, "bah");
           sprintf(buf, "I've been surrounded by slackers for years, I'm not interested in another one. \
@@ -1774,7 +1743,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
       }
     }
   } // end "request order"
-  
+
   if (cmd == MSG_MOBACT && count_mortals_room(collector, TRUE) > 0) {
     // generic flavor
     switch(number(0,49)) {
@@ -1809,9 +1778,9 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
     default:
       break;
     }
-    
+
     if(collector->specials.fighting) {
-      do_say(collector, "What the heck are you doing? Skotty get me outta' here!", CMD_SAY);
+      do_say(collector, "What the heck are you doing? Scotty get me outta' here!", CMD_SAY);
       sprintf(buf, "%s disappears in a beam of bright light.\n\r", GET_SHORT(collector));
       send_to_room(buf, CHAR_REAL_ROOM(collector));
       GET_HIT(collector) = GET_MAX_HIT(collector);
@@ -1819,13 +1788,13 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
       char_to_room(collector, real_room(number(3000,3072)));
     }
   }
-  
+
   if (cmd == MSG_GAVE_OBJ) {
     // process order delivery
     order = get_obj_in_list_vis(collector, "order", collector->carrying);
 
     if (order && GET_ITEM_TYPE(order) == ITEM_AQ_ORDER) {
-      
+
       if ((order->ownerid[0] != ch->ver3.id) &&
           (order->ownerid[0] > 0)) {
         // handed in by non-owner
@@ -1842,7 +1811,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
         act(buf,0,collector,0,ch,TO_VICT);
         return TRUE;
       }
-      
+
       for (i = 0; i < 4; i++) {
         requirements[i] = order->obj_flags.value[i];
         if(requirements[i] < 0) { // null (-1) requirement object
@@ -1850,7 +1819,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
         } else {
           for (obj = order->contains; obj; obj = next_obj) {
             next_obj = obj->next_content;
-            
+
             if (V_OBJ(obj) == requirements[i]) {
               // required object found, but is it new enough?
               if (obj->obj_flags.popped < order->obj_flags.popped) {
@@ -1865,7 +1834,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
                 act(buf,0,collector,0,ch,TO_NOTVICT);
                 sprintf(buf, "%s gives %s back to you disappointedly.", GET_SHORT(collector),
                     OBJ_SHORT(order));
-                act(buf,0,collector,0,ch,TO_VICT);                
+                act(buf,0,collector,0,ch,TO_VICT);
                 return TRUE;
               } else {
                 found[i] = TRUE;
@@ -1875,13 +1844,13 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
                 //   but we'll count here anyway with aq_objs[][] current values
                 //   also gives us a chance to award a double point bonus
                 for (k = 0; k < NUMELEMS(aq_objs); k++) {
-                  if (aq_objs[k][0] == V_OBJ(obj)) {  
+                  if (aq_objs[k][0] == V_OBJ(obj)) {
                     value_exists = TRUE;
                     tmp_value = aq_objs[k][1];
                     if (chance( MIN(5, tmp_value) )) {
                       // higher value has higher chance for doubling - reward trying harder
                       tmp_value *= 2;
-                    }                    
+                    }
                     questvalue += tmp_value;
                   }
                 }
@@ -1899,7 +1868,7 @@ is not in aq_objs point value table.",
         }
       }
 
-      if(found[0] && found[1] && found[2] && found[3]) { 
+      if(found[0] && found[1] && found[2] && found[3]) {
         // fulfilled requirement objects!
         switch(number(0,9)) {
         case 0:
@@ -1921,9 +1890,9 @@ is not in aq_objs point value table.",
         default:
           break;
         }
-        
+
         if (questvalue != OBJ_SPEC(order)) {
-          sprintf(buf, "The market is always influx my %s. This is worth %d points to me now.",
+          sprintf(buf, "The market is always in flux my %s. This is worth %d points to me now.",
               GET_SEX(ch) == SEX_MALE ? "boy" : "dear", questvalue);
           do_say(collector, buf, CMD_SAY);
         } else {
@@ -1934,7 +1903,7 @@ is not in aq_objs point value table.",
         sprintf(buf, "%s casually points a strange pistol at the order\n\r\
 and it disappears before your very eyes!\n\r", GET_SHORT(collector));
         send_to_room(buf, CHAR_REAL_ROOM(collector));
-        
+
         sprintf(buf, "%s completed an order for me, what a %s!", GET_NAME(ch),
             GET_SEX(ch) == SEX_MALE ? "guy" : "gal");
         do_quest(collector, buf, CMD_QUEST);
@@ -1946,11 +1915,11 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
         obj_to_room(order, real_room(CENTRAL_PROCESSING));
         order->obj_flags.timer = AQ_ORDER_WAIT_TIME; // setup "hack" wait timer
         SET_BIT(order->obj_flags.extra_flags2, ITEM_ALL_DECAY);
-        return FALSE;      
+        return FALSE;
       } else { // missing at least one object
         mob_do(collector, collectoraction[number(0, NUMELEMS(collectoraction)-1)]);
         for (j = 0; j < 4; j++) {
-          if(!found[j] && requirements[j] >= 0) { 
+          if(!found[j] && requirements[j] >= 0) {
             // generate annoyed response
             sprintf(buf, "You're even %s than that %s %s. You didn't bring me %s!",
                 chance(50) ? "dumber" : "stupider",
@@ -1971,7 +1940,7 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
         act(buf,0,collector,0,ch,TO_NOTVICT);
         sprintf(buf, "%s tosses %s back to you tiredly.", GET_SHORT(collector),
             OBJ_SHORT(order));
-        act(buf,0,collector,0,ch,TO_VICT);        
+        act(buf,0,collector,0,ch,TO_VICT);
         return TRUE;
       }
     } else { // given non-AQ_ORDER
