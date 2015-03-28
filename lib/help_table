@@ -396,34 +396,47 @@ buy subclass points, or even stat increases beyond 18.
 There are several levels of AQORDER quests, which determine the
 relative difficulty of the order you receive.  There is no time
 limit on the autoquest, but quitting the order (by junking the
-order) will incur a 2 hour penalty that is also cleared after a
-MUD reboot.
+order) will incur a 2.5 hour penalty that is also cleared after
+a MUD reboot. 
 
 In order to acquire an aqorder, you must first locate Franz, who
 generally wanders around Midgaard, but occasionally ventures
 outside of the city.  Once you find him, the appropriate commands
 to request an order are as follows:
 
-AQ ORDER SOLO - This will always give the player an order that
-utilizes low level, easy to acquire items, meant for low level
-and/or solo players. (1 point per object)
+AQ ORDER NEWBIE - This will always give the player an order that
+includes easy to acquire, high load rate items. It is available
+as an option only until level 40. (1 point per object)
 
 AQ ORDER LOW - This will give the player an order that contains
-items from fairly easy areas, more difficult than SOLO orders or
-items with lower load rates, but more aimed at a low-mid level
-multi with moderate gear. (1-2 points per object)
+items from fairly easy areas, more difficult than NEWBIE orders,
+or items with lower load rates, but more aimed at a low-mid level
+multi with moderate gear. (2 points per object)
 
 AQ ORDER MID - This will give the player an order that requires
 items found in mid-level and average difficulty areas or items
-from easier areas but with low load rates.  This level is aimed
+from harder areas but with high load rates.  This level is aimed
 at multis with characters in the 45-50 level range that have a
-good amount of quality gear. (2-3 points per object)
+good amount of quality gear. (3 points per object)
 
-AQ ORDER HIGH - This will give the player an order that uses
-items with very low load rates, or from areas that require both
-high levels and good gear, as well as a more intimate knowledge
-of the MUD world.  This is recommended for players that are able
-to contend with the most difficult game content. (3+ points per
+AQ ORDER HIGH - This will give the player an order that requires
+items with low load rates, or from areas that require both high
+levels and good gear, or hard to reach areas. This is recommended
+for players that are able to contend with most AQ REQUEST HIGH
+mobs. (4 points per object)
+
+AQ ORDER VETERAN - This will give the player an order that needs
+items with low load rates from very hard or very hard to reach
+areas which requires knowledge of the foe and the size to best
+them. This is recommended for players that can cruise AQ REQUEST
+HIGH mob content and may just want something challenging to do
+on the side. (4-8 points per object)
+
+AQ ORDER UBER - This will give the player an order that requires
+items with very low load rates from some of the most challenging
+mobs. Only the very burliest of multis could even dream of doing
+these alone, even on BAM. It is available as an option only to
+characters at or above level 45. (10, 15, 20, or 25 points per
 object)
 
 AQ ORDER - This will give the player a random mix of items from
@@ -435,13 +448,16 @@ the items listed on the order can be put into the order, and
 only items obtained after the order was issued can be put
 inside.  Once all of the required items have been placed in the
 aqorder container, return it to Franz and he will reward you
-based on the difficulty of the items present on the order.
+based on the difficulty of the items present on the order. There
+is a 30 minute wait period between completing an order and being
+able to get a new one.
 
 There is also a chance that the quest point reward will be
 increased upon successful turn-in of the aqorder, at the whim
-of Franz.  To quit an order you need only junk the order itself,
-but remember there is a 2 hour penalty before you can request a
-new one; and Franz might give you a hard time about it.
+of Franz. The more difficult the order, the higher the chance.
+To quit an order you need only junk the order itself, but keep
+in mind that there is a 2.5 hour penalty before you can request
+a new one; and Franz might give you a hard time about it.
 
 See Also: AUTOQUEST AQUEST AUTOQUESTER "QUEST MACHINE"
 "MUD QUEST" "PLAYER QUEST" "IMMORTAL QUEST"
