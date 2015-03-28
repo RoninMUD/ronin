@@ -900,17 +900,23 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
        }
        break;
      case 12: /* owner*/
-       for(i=0;i<8;i++) {
-         obj->ownerid[i]=0;
-         if(!*buf2) continue;
-         string_to_lower(buf2);
-         for(tmp=0;tmp<MAX_ID;tmp++) {
-           if(!strcasecmp(idname[tmp].name,buf2)) {
-             obj->ownerid[i]=tmp;
-             break;
-           }
+       if (!strcmp("0", buf2)) {// reset to no owners
+         for(i=0;i<8;i++) {
+           obj->ownerid[i] = 0;
          }
-         argument=one_argument(argument, buf2);
+       } else {
+         for(i=0;i<8;i++) {
+           obj->ownerid[i]=0;
+           if(!*buf2) continue;
+           string_to_lower(buf2);
+           for(tmp=0;tmp<MAX_ID;tmp++) {
+             if(!strcasecmp(idname[tmp].name,buf2)) {
+               obj->ownerid[i]=tmp;
+               break;
+             }
+           }
+           argument=one_argument(argument, buf2);
+         }
        }
        send_to_char("Owners set/reset.  To individualize the obj for wear, be sure to set wear flag QUESTWEAR.\n\r",ch);
        break;
