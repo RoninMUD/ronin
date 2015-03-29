@@ -377,9 +377,9 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
   }
   else {
     if (!breakthrough(ch, victim, BT_INVUL)) {
-      act("$N seems completely affected by your beautiful tigerkick.", FALSE, ch, 0, victim, TO_CHAR);
-      act("You feel completely affected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_VICT);
-      act("$N seems completely affected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("$N seems completely unaffected by your beautiful tigerkick.", FALSE, ch, 0, victim, TO_CHAR);
+      act("You feel completely unaffected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_VICT);
+      act("$N seems completely unaffected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_NOTVICT);
     }
     else {
       set_pos = stack_position(victim, POSITION_STUNNED);

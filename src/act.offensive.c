@@ -788,7 +788,7 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
       act("$n trips you, causing you to become off-balanced.", FALSE, ch, NULL, victim, TO_VICT);
       act("$n trips $N, causing $M to become off-balanced.", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-      if ((CHAR_REAL_ROOM(victim)) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
+      if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;
       }
     }
