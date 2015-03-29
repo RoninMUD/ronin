@@ -8166,9 +8166,13 @@ Subclass Mystic: Level 3 (Ninja)
 Usage: tigerkick <victim>
 
 The Mystic's kicks are so powerful that they inflict additional damage,
-knock the target into a resting position.
+knock the target into a stunned position. A successful tigerkick allows the
+mystic to draw some of the target's life-force, restoring a small portion
+of his/her mana. The greater the maximum health potential of the target,
+the greater the restoration.
 
-A tigerkick inflicts 1.75 times the Mystic's Level in damage.
+A tigerkick inflicts 1.75 times the Mystic's Level in damage. The maximum
+amount of mana that can be restored per successful kick is 10.
 
 This skill causes a 2 round input lag for the Mystic, regardless of success
 or failure.
