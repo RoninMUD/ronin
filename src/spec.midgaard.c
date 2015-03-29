@@ -47,13 +47,13 @@ extern struct time_info_data time_info;
 extern struct spell_info_type spell_info[MAX_SPL_LIST];
 extern char *spells[];
 extern struct int_app_type int_app[26];
-extern char *w_skills[];
-extern char *t_skills[];
-extern char *n_skills[];
+extern char *warrior_skills[];
+extern char *thief_skills[];
+extern char *ninja_skills[];
 extern char *nomad_skills[];
-extern char *pal_skills[];
-extern char *cl_skills[];
-extern char *antipal_skills[];
+extern char *paladin_skills[];
+extern char *cleric_skills[];
+extern char *anti_paladin_skills[];
 extern char *avatar_skills[];
 extern char *bard_skills[];
 extern char *commando_skills[];
@@ -154,27 +154,27 @@ void list_skills_to_prac(CHAR *ch)
       break;
 
       case CLASS_CLERIC:
-        if (*cl_skills[i] == '\n') done = TRUE;
+        if (*cleric_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(cl_skills[i], 0, strlen(cl_skills[i]), spells, TRUE);
+          number = old_search_block(cleric_skills[i], 0, strlen(cleric_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_BASH) && (GET_LEVEL(ch) < 35)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", cl_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-13s`q\n\r", cleric_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
           }
         }
         break;
 
       case CLASS_THIEF:
-        if (*t_skills[i] == '\n') done = TRUE;
+        if (*thief_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(t_skills[i], 0, strlen(t_skills[i]), spells, TRUE);
+          number = old_search_block(thief_skills[i], 0, strlen(thief_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
@@ -183,17 +183,17 @@ void list_skills_to_prac(CHAR *ch)
           else if ((number == SKILL_CUNNING) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", t_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-13s`q\n\r", thief_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
           }
         }
         break;
 
       case CLASS_WARRIOR:
-        if (*w_skills[i] == '\n') done = TRUE;
+        if (*warrior_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(w_skills[i], 0, strlen(w_skills[i]), spells, TRUE);
+          number = old_search_block(warrior_skills[i], 0, strlen(warrior_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
@@ -202,23 +202,23 @@ void list_skills_to_prac(CHAR *ch)
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", w_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-13s`q\n\r", warrior_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
           }
         }
         break;
 
       case CLASS_NINJA:
-        if (*n_skills[i] == '\n') done = TRUE;
+        if (*ninja_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(n_skills[i], 0, strlen(n_skills[i]), spells, TRUE);
+          number = old_search_block(ninja_skills[i], 0, strlen(ninja_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", n_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-13s`q\n\r", ninja_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
           }
         }
@@ -242,32 +242,32 @@ void list_skills_to_prac(CHAR *ch)
         break;
 
       case CLASS_PALADIN:
-        if (*pal_skills[i] == '\n') done = TRUE;
+        if (*paladin_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(pal_skills[i], 0, strlen(pal_skills[i]), spells, TRUE);
+          number = old_search_block(paladin_skills[i], 0, strlen(paladin_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", pal_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-13s`q\n\r", paladin_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
           }
         }
         break;
 
       case CLASS_ANTI_PALADIN:
-        if (*antipal_skills[i] == '\n') done = TRUE;
+        if (*anti_paladin_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(antipal_skills[i], 0, strlen(antipal_skills[i]), spells, TRUE);
+          number = old_search_block(anti_paladin_skills[i], 0, strlen(anti_paladin_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", antipal_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-13s`q\n\r", anti_paladin_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
           }
         }
@@ -642,11 +642,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     break;
 
     case CLASS_CLERIC:
-      index = search_block(arg, cl_skills, FALSE);
+      index = search_block(arg, cleric_skills, FALSE);
 
       if (index > -1)
       {
-        skill = old_search_block(cl_skills[index], 0, strlen(cl_skills[index]), spells, TRUE);
+        skill = old_search_block(cleric_skills[index], 0, strlen(cleric_skills[index]), spells, TRUE);
       }
 
       if ((skill == SKILL_BASH) && (GET_LEVEL(ch) < 35))
@@ -656,25 +656,26 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       break;
 
     case CLASS_THIEF:
-      index = search_block(arg, t_skills, FALSE);
+      index = search_block(arg, thief_skills, FALSE);
 
       if (index > -1)
       {
-        skill = old_search_block(t_skills[index], 0, strlen(t_skills[index]), spells, TRUE);
+        skill = old_search_block(thief_skills[index], 0, strlen(thief_skills[index]), spells, TRUE);
       }
 
-      if ((skill == SKILL_CUNNING) && (GET_LEVEL(ch) < 50))
+      if ((skill == SKILL_SCAN) && (GET_LEVEL(ch) < 35) ||
+          (skill == SKILL_CUNNING) && (GET_LEVEL(ch) < 50))
       {
         index = -2;
       }
       break;
 
     case CLASS_WARRIOR:
-      index = search_block(arg, w_skills, FALSE);
+      index = search_block(arg, warrior_skills, FALSE);
 
       if (index > -1)
       {
-        skill = old_search_block(w_skills[index], 0, strlen(w_skills[index]), spells, TRUE);
+        skill = old_search_block(warrior_skills[index], 0, strlen(warrior_skills[index]), spells, TRUE);
       }
 
       if (((skill == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) ||
@@ -685,11 +686,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       break;
 
     case CLASS_NINJA:
-      index = search_block(arg, n_skills, FALSE);
+      index = search_block(arg, ninja_skills, FALSE);
 
       if (index > -1)
       {
-        skill = old_search_block(n_skills[index], 0, strlen(n_skills[index]), spells, TRUE);
+        skill = old_search_block(ninja_skills[index], 0, strlen(ninja_skills[index]), spells, TRUE);
       }
       break;
 
@@ -708,11 +709,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       break;
 
     case CLASS_PALADIN:
-      index = search_block(arg, pal_skills, FALSE);
+      index = search_block(arg, paladin_skills, FALSE);
 
       if (index > -1)
       {
-        skill = old_search_block(pal_skills[index], 0, strlen(pal_skills[index]), spells, TRUE);
+        skill = old_search_block(paladin_skills[index], 0, strlen(paladin_skills[index]), spells, TRUE);
       }
 
       if ((skill == SKILL_PRAY) && (GET_LEVEL(ch) < 40))
@@ -722,11 +723,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       break;
 
     case CLASS_ANTI_PALADIN:
-      index = search_block(arg, antipal_skills, FALSE);
+      index = search_block(arg, anti_paladin_skills, FALSE);
 
       if (index > -1)
       {
-        skill = old_search_block(antipal_skills[index], 0, strlen(antipal_skills[index]), spells, TRUE);
+        skill = old_search_block(anti_paladin_skills[index], 0, strlen(anti_paladin_skills[index]), spells, TRUE);
       }
       break;
 
@@ -747,12 +748,9 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
         skill = old_search_block(bard_skills[index], 0, strlen(bard_skills[index]), spells, TRUE);
       }
 
-      if ((skill == SKILL_BACKFLIP) && (GET_LEVEL(ch) < 20))
+      if ((skill == SKILL_BACKFLIP) && (GET_LEVEL(ch) < 20) ||
+          (skill == SKILL_CAMP) && (GET_LEVEL(ch) < 35))
       {
-        index = -2;
-      }
-
-      if ((skill == SKILL_CAMP) && (GET_LEVEL(ch) < 35)) {
         index = -2;
       }
 
