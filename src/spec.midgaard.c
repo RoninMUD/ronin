@@ -748,8 +748,8 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
         skill = old_search_block(bard_skills[index], 0, strlen(bard_skills[index]), spells, TRUE);
       }
 
-      if ((skill == SKILL_BACKFLIP) && (GET_LEVEL(ch) < 20) ||
-          (skill == SKILL_CAMP) && (GET_LEVEL(ch) < 35))
+      if (((skill == SKILL_BACKFLIP) && (GET_LEVEL(ch) < 20)) ||
+          ((skill == SKILL_CAMP) && (GET_LEVEL(ch) < 35)))
       {
         index = -2;
       }
