@@ -663,8 +663,8 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
         skill = old_search_block(thief_skills[index], 0, strlen(thief_skills[index]), spells, TRUE);
       }
 
-      if ((skill == SKILL_SCAN) && (GET_LEVEL(ch) < 35) ||
-          (skill == SKILL_CUNNING) && (GET_LEVEL(ch) < 50))
+      if (((skill == SKILL_SCAN) && (GET_LEVEL(ch) < 35)) ||
+          ((skill == SKILL_CUNNING) && (GET_LEVEL(ch) < 50)))
       {
         index = -2;
       }
