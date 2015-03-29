@@ -1688,7 +1688,7 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *obj = NULL, *next_obj  = NULL;
   char buf[MAX_STRING_LENGTH];
   char argument[MAX_INPUT_LENGTH];
-  int i, j, k, tmp_value, lh_opt = 0, questvalue = 0;
+  int i, j, k, num_objects = 4, tmp_value, lh_opt = 0, questvalue = 0;
   int requirements[4] = {-1, -1, -1, -1};
   bool value_exists = FALSE;
   bool found[4] = {FALSE, FALSE, FALSE, FALSE};
@@ -1819,6 +1819,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
         requirements[i] = order->obj_flags.value[i];
         if(requirements[i] < 0) { // null (-1) requirement object
           found[i] = TRUE;
+          num_objects--;
         } else {
           for (obj = order->contains; obj; obj = next_obj) {
             next_obj = obj->next_content;
@@ -1871,7 +1872,7 @@ is not in aq_objs point value table.",
         }
       }
 
-      if (found[0] && found[1] && found[2] && found[3] && (COUNT_CONTENTS(order) == 4)) {
+      if (found[0] && found[1] && found[2] && found[3] && (COUNT_CONTENTS(order) == num_objects)) {
         // fulfilled requirement objects!
         switch(number(0,9)) {
         case 0:
@@ -1937,7 +1938,7 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
           sprintf(buf,"Read the order more carefully, I don't have time for your %s %s.",
               chance(50) ? "tomfoolery" : "nonsense", GET_NAME(ch));
           do_say(collector, buf, CMD_SAY);
-        } else if (COUNT_CONTENTS(order) != 4) { // more than 4 objects in order
+        } else if (COUNT_CONTENTS(order) != num_objects) { // more than 4 objects in order
           sprintf(buf, "thumbsdown %s", GET_NAME(ch));
           mob_do(collector, buf);
           sprintf(buf, "%s, are you trying to be as foolish as %s, or does it just come naturally? The number of the counting shall be 4.",
