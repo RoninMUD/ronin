@@ -1,43 +1,8 @@
-/* ************************************************************************
+/***************************************************************************
  *  file: spec_assign.c , Special module.                  Part of DIKUMUD *
  *  Usage: Procedures assigning function pointers.                         *
  *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
  ************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:41 $
-$Header: /home/ronin/cvs/ronin/spec_assign.c,v 2.0.0.1 2004/02/05 16:11:41 ronin Exp $
-$Id: spec_assign.c,v 2.0.0.1 2004/02/05 16:11:41 ronin Exp $
-$Name:  $
-$Log: spec_assign.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:41  ronin
-Reinitialization of cvs archives
-
-Revision 06/13/07 Sane
-Addition of assign_newbie
-
-Revision 05/02/03  Liner
-Addition of assign_emith.
-
-Revision 03-Mar-03 Ranger
-Moved boot_the_shops to db.c
-
-Revision 1.5  2002/12/26 22:54:09  ronin
-Addition of assign_invasion.
-
-Revision 1.4  2002/05/29 04:54:09  ronin
-Addition of assign_hell.
-
-Revision 1.3  2002/04/13 14:38:48  ronin
-Addition of new Troll Village update and Troll Castle Moat specs.
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <stdio.h>
 #include "structs.h"
@@ -156,6 +121,7 @@ void assign_haondor(void);
 void assign_mapmaker(void);
 void assign_vagabond(void);
 void assign_red_dragons(void);
+void assign_aquest_special(void);
 //void assign_wbw(void);
 #ifdef TEST_SITE
 void assign_questyvaderIV(void);
@@ -163,7 +129,6 @@ void assign_digsite(void);
 void assign_luthienIV(void);
 void assign_workbench(void);
 void assign_WOT(void);
-void assign_aquest_special(void);
 #endif
 
 void assign_mobiles(void)
@@ -244,13 +209,13 @@ void assign_mobiles(void)
   assign_mapmaker();
   assign_vagabond();
   assign_red_dragons();
+  assign_aquest_special();
 //  assign_wbw();
 #ifdef TEST_SITE
   assign_digsite();
   assign_luthienIV();
   assign_workbench();
   assign_WOT();
-  assign_aquest_special();
 #endif
 }
 
