@@ -1,79 +1,10 @@
-/* ************************************************************************
-*  file: structs.h , Structures        .                  Part of DIKUMUD *
+/**************************************************************************
+*  file: structs.h , Structures                           Part of DIKUMUD *
 *  Usage: Declarations of central data structures                         *
-************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:30 $
-$Header: /home/ronin/cvs/ronin/structs.h,v 2.7 2005/01/21 14:55:30 ronin Exp $
-$Id: structs.h,v 2.7 2005/01/21 14:55:30 ronin Exp $
-$Name:  $
-$Log: structs.h,v $
-Revision 2.7  2005/01/21 14:55:30  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.6  2004/12/29 17:30:57  ronin
-Removed AFF_TWIST and AFF_COVER
-
-Revision 2.5  2004/10/21 17:08:23  void
-Added level 50 AP spell Blood Lust
-
-Revision 2.4  2004/08/18 13:42:03  ronin
-Removal of APPLY_SKILL_QUAD, adjustment of order of AFF_QUAD.
-
-Revision 2.3  2004/08/17 15:37:49  void
-Added Warrior Skill Quad
-
-Revision 2.2  2004/03/08 20:58:43  ronin
-Addition of QUESTWEAR to wear flags.
-
-Revision 2.1  2004/03/04 17:23:58  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.0.0.1  2004/02/05 16:55:18  ronin
-Reinitialization of cvs archives
-
-
-Revision 05-Feb-03 Ranger
-Addition of id_name structure
-
-Revision 19-Dec-03 Ranger
-Addition of PLR_EMAIL to specials.pflag
-Change of registered_to[80] (unused) to email_addr[80] in
-ver3 data.  Keeping the same size of the variable allows
-us to keep the same pfile version.
-
-Revision 11-Dec-02 Ranger
-Addition of IMMUNE_STEAL
-
-Revision - Addition of byte blood to room structure - 26-Nov-02 Ranger
-
-Revision 1.5  2002/07/15 04:22:21  ronin
-Uncommented #include dmalloc.h to reinstall the dmalloc routines
-for debugging.  See libdmalloc.a.
-
-Revision 1.4  2002/04/16 18:00:34  ronin
-Addition of IMMUNE_EXECUTE
-
-Revision 1.3  2002/03/31 09:31:36  ronin
-Removed include to dmalloc.h. This linux version shouldn't need
-seperate malloc, free, etc to keep the game stable.
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
+***************************************************************************/
 
 #ifndef __STRUCTS_H__
 #define __STRUCTS_H__
-
 
 #include <sys/types.h>
 #include <dmalloc.h>
@@ -179,6 +110,7 @@ typedef char byte;
 #define ITEM_2FINGER   33 /* Project Dagger */
 #define ITEM_2NECK     34 /* Project Dagger */
 #define ITEM_2WRIST    35 /* Project Dagger */
+#define ITEM_AQ_ORDER  36
 
 /* Bitvector For 'wear_flags' */
 #define ITEM_TAKE              1
@@ -1144,8 +1076,8 @@ struct char_ver3_data {
   int time_to_quest; /* Ranger Feb 99 */
   int id; /* Ranger - Sep 00 */
   int death_timer; /* Used for imminent death */
-  long long int remort_exp; /* Remort EXP Pool */ 
-  unsigned long death_exp; /* Death Pool */ 
+  long long int remort_exp; /* Remort EXP Pool */
+  unsigned long death_exp; /* Death Pool */
 };
 
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */

@@ -4,26 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:12:28 $
-$Header: /home/ronin/cvs/ronin/act.obj1.c,v 2.1 2005/04/27 17:12:28 ronin Exp $
-$Id: act.obj1.c,v 2.1 2005/04/27 17:12:28 ronin Exp $
-$Name:  $
-$Log: act.obj1.c,v $
-Revision 2.1  2005/04/27 17:12:28  ronin
-Addition of obj vnum to vault log.
-
-Revision 2.0.0.1  2004/02/05 16:08:33  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -205,65 +185,51 @@ void get(struct char_data *ch, struct obj_data *obj_object,
   save_char(ch,NOWHERE);
 }
 
-int get_obj_from_object(struct char_data *ch, char *name,
-                  struct obj_data *sub_object)
-{
+int get_obj_from_object(struct char_data *ch, char *name, struct obj_data *sub_object) {
   struct obj_data *obj_object;
   int total=0;
 
-  if (GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER)
+  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+    if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+        (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))) {
+      printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
+      return(0);
+    } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+        (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))) {
+      printf_to_char(ch,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
+      return(0);
+    }
+    obj_object = get_obj_in_list_vis(ch, name, sub_object->contains);
+    if (obj_object)
     {
-      if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))
-      {
-        printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
-        return(0);
-      } /* if */
-      if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))
-      {
-        printf_to_char(ch,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
-        return(0);
-      } /* if */
-      obj_object = get_obj_in_list_vis(ch, name, sub_object->contains);
-      if (obj_object)
-      {
-        if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch)))
-          {
-            if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by==ch))
-            {
-              if (CAN_TAKE(ch,obj_object))
-                {
-                  get( ch, obj_object, sub_object, TRUE);
-                  total = 1;
-                }
-              else
-                {
-                  printf_to_char(ch, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
-                }
-            } else {
-            printf_to_char(ch,"%s : You can't carry that much weight.\n\r",
-                  fname(OBJ_NAME(obj_object)));
-            }
+      if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
+        if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by==ch)) {
+          if (CAN_TAKE(ch,obj_object)) {
+            get( ch, obj_object, sub_object, TRUE);
+            total = 1;
+          } else {
+            printf_to_char(ch, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
+          }
         } else {
-          printf_to_char(ch,"%s : You can't carry that many items.\n\r",
-                fname(OBJ_NAME(obj_object)));
+          printf_to_char(ch,"%s : You can't carry that much weight.\n\r", fname(OBJ_NAME(obj_object)));
         }
       } else {
-        if(isname("vault",OBJ_NAME(sub_object)))
-          printf_to_char(ch,"The vault does not contain the %s.\n\r",name);
-        else
-          printf_to_char(ch,"The %s does not contain the %s.\n\r",
-                         fname(OBJ_NAME(sub_object)), name);
+        printf_to_char(ch,"%s : You can't carry that many items.\n\r", fname(OBJ_NAME(obj_object)));
       }
+    } else {
+      if(isname("vault",OBJ_NAME(sub_object))) {
+        printf_to_char(ch,"The vault does not contain the %s.\n\r",name);
+      } else {
+        printf_to_char(ch,"The %s does not contain the %s.\n\r", fname(OBJ_NAME(sub_object)), name);
+      }
+    }
   } else {
-    printf_to_char(ch,"The %s is not a container.\n\r",
-          fname(OBJ_NAME(sub_object)));
+    printf_to_char(ch,"The %s is not a container.\n\r", fname(OBJ_NAME(sub_object)));
   }
   return(total);
 }
 
-int get_all_from_object(struct char_data *ch, char *name, bool alldot,
-                  struct obj_data *sub_object)
-{
+int get_all_from_object(struct char_data *ch, char *name, bool alldot, struct obj_data *sub_object) {
   char buffer[MAX_STRING_LENGTH];
   struct obj_data *remember=NULL;
   struct obj_data *obj_object, *next_obj;
@@ -272,17 +238,17 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot,
 
   assert(ch && sub_object);
 
-  if (GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) {
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))
-    {
+  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+    if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+        (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
-    } /* if */
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED)) {
+    } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+        (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))) {
       sprintf(buffer,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
       return(0);
-    } /* if */
+    }
     for(obj_object = sub_object->contains;
       obj_object;
       obj_object = next_obj) {
@@ -290,27 +256,29 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot,
 
       /* IF all.obj, only get those named "obj" */
       if (alldot && !isname( name, OBJ_NAME(obj_object)) ) {
-      continue;
-      } /* if */
+        continue;
+      }
 
       if (CAN_SEE_OBJ( ch, obj_object)) {
-      if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
-        if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by == ch)) {
-          if (CAN_TAKE(ch,obj_object)) {
-              if(obj_object->obj_flags.type_flag != ITEM_MONEY)
-              remember = obj_object;
-              else
+        if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
+          if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by == ch)) {
+            if (CAN_TAKE(ch,obj_object)) {
+              if(obj_object->obj_flags.type_flag != ITEM_MONEY) {
+                remember = obj_object;
+              } else {
                 remember = NULL;
-            get( ch, obj_object, sub_object, FALSE);
-            total++;
-          } else {
-            sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME( obj_object)));
-            send_to_char( buffer, ch);
-            fail = TRUE;
+              }
+              get( ch, obj_object, sub_object, FALSE);
+              total++;
+            } else {
+              sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME( obj_object)));
+              send_to_char( buffer, ch);
+              fail = TRUE;
+            }
           }
         } else {
           sprintf(buffer,"%s : You can't carry that much weight.\n\r",
-                fname(OBJ_NAME(obj_object)));
+              fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
           fail = TRUE;
         }
@@ -319,7 +287,6 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot,
               fname(OBJ_NAME(obj_object)));
         send_to_char(buffer, ch);
         fail = TRUE;
-      }
       }
     }
     if (!total && !fail) {
@@ -333,28 +300,26 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot,
             fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
       }
-    } else if(total == 1)
-      if(remember)
+    } else if(total == 1) {
+      if(remember) {
         act("$n gets $p.", TRUE, ch, remember, 0, TO_ROOM);
-      else
+      } else {
         act("$n gets some coins.", TRUE, ch, NULL, 0, TO_ROOM);
-    else if(total > 1 && total < 6)
+      }
+    } else if(total > 1 && total < 6) {
       act("$n gets some stuff from $p.",TRUE,ch,sub_object,0,TO_ROOM);
-    else if(total > 5)
-      act("$n gets a bunch of stuff from $p.",
-        TRUE,ch,sub_object,0,TO_ROOM);
+    } else if(total > 5) {
+      act("$n gets a bunch of stuff from $p.", TRUE,ch,sub_object,0,TO_ROOM);
+    }
     return(total);
   } else {
-    sprintf(buffer,"The %s is not a container.\n\r",
-          fname(OBJ_NAME(sub_object)));
+    sprintf(buffer,"The %s is not a container.\n\r", fname(OBJ_NAME(sub_object)));
     send_to_char(buffer, ch);
     return(0);
   }
 }
 
-int get_number_from_object(struct char_data *ch, char *name, int number,
-                           struct obj_data *sub_object)
-{
+int get_number_from_object(struct char_data *ch, char *name, int number, struct obj_data *sub_object) {
   char buffer[MAX_STRING_LENGTH];
   struct obj_data *remember=NULL;
   struct obj_data *obj_object, *next_obj;
@@ -366,68 +331,61 @@ int get_number_from_object(struct char_data *ch, char *name, int number,
   if(!number)
     return(0);
 
-  if (GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) {
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))
-    {
+  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+    if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE)) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
-    } /* if */
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED)) {
+    } else if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED)) {
       sprintf(buffer,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
       return(0);
-    } /* if */
+    }
     for(obj_object = sub_object->contains, total = 0;
-      obj_object && total < number;
-      obj_object = next_obj) {
+        obj_object && total < number;
+        obj_object = next_obj) {
       next_obj = obj_object->next_content;
 
       if (!isname( name, OBJ_NAME(obj_object)) ) {
-      continue;
-      } /* if */
+        continue;
+      }
 
       if (CAN_SEE_OBJ( ch, obj_object)) {
-      if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
-        if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by == ch)) {
-          if (CAN_TAKE(ch,obj_object)) {
-            get( ch, obj_object, sub_object, FALSE);
-            total++;
-            remember = obj_object;
+        if ((IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch))) {
+          if ((CAN_CARRY_OBJ(ch,obj_object)) || (sub_object->carried_by == ch)) {
+            if (CAN_TAKE(ch,obj_object)) {
+              get( ch, obj_object, sub_object, FALSE);
+              total++;
+              remember = obj_object;
+            } else {
+              sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
+              send_to_char( buffer, ch);
+              fail = TRUE;
+            }
           } else {
-            sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
-            send_to_char( buffer, ch);
+            sprintf(buffer,"%s : You can't carry that much weight.\n\r", fname(OBJ_NAME(obj_object)));
+            send_to_char(buffer, ch);
             fail = TRUE;
           }
         } else {
-          sprintf(buffer,"%s : You can't carry that much weight.\n\r",
-                fname(OBJ_NAME(obj_object)));
+          sprintf(buffer,"%s : You can't carry that many items.\n\r", fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
           fail = TRUE;
         }
-      } else {
-        sprintf(buffer,"%s : You can't carry that many items.\n\r",
-              fname(OBJ_NAME(obj_object)));
-        send_to_char(buffer, ch);
-        fail = TRUE;
-      }
       }
     }
     if (!total && !fail) {
-      sprintf(buffer, "You don't see any %s in the %s.\n\r",
-            name,
-            fname(OBJ_NAME(sub_object)));
+      sprintf(buffer, "You don't see any %s in the %s.\n\r", name, fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
-    } else if(total == 1)
+    } else if(total == 1) {
       act("$n gets $p.", TRUE, ch, remember, 0, TO_ROOM);
-    else if(total > 1 && total < 6)
+    } else if(total > 1 && total < 6) {
       act("$n gets some stuff from $p.",TRUE,ch,sub_object,0,TO_ROOM);
-    else if(total > 5)
-      act("$n gets a bunch of stuff from $p.",
-        TRUE,ch,sub_object,0,TO_ROOM);
+    } else if(total > 5) {
+      act("$n gets a bunch of stuff from $p.", TRUE,ch,sub_object,0,TO_ROOM);
+    }
     return(total);
   } else {
-    sprintf(buffer,"The %s is not a container.\n\r",
-          fname(OBJ_NAME(sub_object)));
+    sprintf(buffer,"The %s is not a container.\n\r", fname(OBJ_NAME(sub_object)));
     send_to_char(buffer, ch);
     return(0);
   }
@@ -1000,8 +958,8 @@ int put(CHAR *ch, OBJ *obj, OBJ *sub_obj, bool show)
 
   if (signal_object(obj, ch, MSG_OBJ_PUT, OBJ_NAME(sub_obj))) return TRUE;
 
-  if (((GETOBJ_WEIGHT(sub_obj) + GETOBJ_WEIGHT(obj)) >= OBJ_VALUE0(sub_obj)) ||
-      IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE))
+  if ((((GETOBJ_WEIGHT(sub_obj) + GETOBJ_WEIGHT(obj)) >= OBJ_VALUE0(sub_obj)) ||
+      IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE)) && GET_ITEM_TYPE(sub_obj) != ITEM_AQ_ORDER)
   {
     if (show)
     {
@@ -1083,6 +1041,8 @@ int put_all_to(struct char_data *ch, char *allbuf, bool alldot,
   return(total);
 }
 
+extern struct idname_struct idname[MAX_ID]; // for acquisition orders
+
 void do_put(struct char_data *ch, char *argument, int cmd)
 {
   char buffer[MAX_STRING_LENGTH];
@@ -1117,19 +1077,30 @@ void do_put(struct char_data *ch, char *argument, int cmd)
     if(!to_object) {
       type = 2;
     } else {
-      if (GET_ITEM_TYPE(to_object) == ITEM_CONTAINER) {
+      switch (GET_ITEM_TYPE(to_object)) {
+      case ITEM_CONTAINER:
         if (!IS_SET(to_object->obj_flags.value[1], CONT_CLOSED)) {
           alldot = is_all_dot(arg1, allbuf);
           if (!str_cmp(arg1, "all")){
-            type = 3;
+            type = 3; // put has "all"
           } else {
-            type = 4;
+            type = 4; // put does not have "all"
           }
         } else {
-          type = 5;
+          type = 5; // container is closed
         }
-      } else {
-        type = 6;
+        break;
+      case ITEM_AQ_ORDER:
+        alldot = is_all_dot(arg1, allbuf);
+        if (!str_cmp(arg1, "all")){
+          type = 3; // put has "all"
+        } else {
+          type = 4; // put does not have "all"
+        }
+        break;
+      default:
+        type = 6; // target of do_put is not a container-ish object
+        break;
       }
     }
   }
@@ -1143,7 +1114,7 @@ void do_put(struct char_data *ch, char *argument, int cmd)
     send_to_char(buffer, ch);
   } break;
   case 2: {
-    sprintf(buffer, "You dont have the %s.\n\r", arg2);
+    sprintf(buffer, "You don't have the %s.\n\r", arg2);
     send_to_char(buffer, ch);
   } break;
   case 3: {
@@ -1151,23 +1122,37 @@ void do_put(struct char_data *ch, char *argument, int cmd)
       sprintf(buffer, "You cannot put %d all %s.\n\r", number, arg2);
       send_to_char(buffer, ch);
     } else {
-      total = put_all_to(ch, allbuf, alldot, to_object);
+      if (GET_ITEM_TYPE(to_object) == ITEM_AQ_ORDER && !alldot) {
+        sprintf(buffer,"You cannot put all into %s.\n\r",OBJ_SHORT(to_object));
+        send_to_char(buffer, ch);
+      } else {
+        total = put_all_to(ch, allbuf, alldot, to_object);
+      }
     }
   } break;
-  case 4: {
+  case 4: { // AQ_ORDER or CONTAINER
     if (number == 1) {
       obj_object = get_obj_in_list_vis(ch, arg1, ch->carrying);
       if (obj_object) {
-        total = put(ch, obj_object, to_object, TRUE);
+        if (GET_ITEM_TYPE(to_object) == ITEM_CONTAINER ||
+            (V_OBJ(obj_object) == to_object->obj_flags.value[0] || // we only want to allow you to put things in acquisition order that the order wants
+            V_OBJ(obj_object) == to_object->obj_flags.value[1] ||
+            V_OBJ(obj_object) == to_object->obj_flags.value[2] ||
+            V_OBJ(obj_object) == to_object->obj_flags.value[3])) {
+          total = put(ch, obj_object, to_object, TRUE);
+        } else { // is aq_order with no order match
+          sprintf(buffer, "%s did not require %s.\n\r", CAP(OBJ_SHORT(to_object)), OBJ_SHORT(obj_object));
+          send_to_char(buffer, ch);
+        }
       } else {
-      sprintf(buffer, "You dont have the %s.\n\r", arg1);
-      send_to_char(buffer, ch);
+        sprintf(buffer, "You don't have the %s.\n\r", arg1);
+        send_to_char(buffer, ch);
       }
     } else {
       for(tmp_object = ch->carrying, total = 0;
         tmp_object && total < number;
         tmp_object = next_obj) {
-      next_obj = tmp_object->next_content;
+        next_obj = tmp_object->next_content;
         if (isname( arg1, OBJ_NAME(tmp_object)))
           if (CAN_SEE_OBJ(ch, tmp_object)) {
             if(put( ch, tmp_object, to_object, FALSE)) {

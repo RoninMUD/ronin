@@ -4,65 +4,6 @@
 **  Copyright (C) 1990, 1991 - see 'license.doc' for complete information.
 */
 
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:13:30 $
-$Header: /home/ronin/cvs/ronin/spec.midgaard.c,v 2.6 2005/04/27 17:13:30 ronin Exp $
-$Id: spec.midgaard.c,v 2.6 2005/04/27 17:13:30 ronin Exp $
-$Name:  $
-$Log: spec.midgaard.c,v $
-Revision 2.6  2005/04/27 17:13:30  ronin
-Minor changes needed to compile on Slackware 10 for the new machine.
-
-Revision 2.5  2005/01/21 14:55:29  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.4  2004/11/17 19:21:52  void
-Added Nomad Skill Cover (1/2 Damage -10 Hitroll)
-
-Revision 2.3  2004/08/18 17:49:17  void
-Fixed some problems with Quad.
-
-Revision 2.2  2004/08/17 15:37:49  void
-Added Warrior Skill Quad
-
-Revision 2.1  2004/03/04 17:23:58  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.0.0.1  2004/02/05 16:11:01  ronin
-Reinitialization of cvs archives
-
-
-Revision 20-Jan-04 Ranger
-Addition of senders email address if present to postcard
-forwarding by email.
-
-Revision 20-Dec-03 Ranger
-Addition of postcard forwarding by email.
-
-Revision 05/01/03 Liner
-Addition of log for stuff dropped in Dump.
-
-Revision 7-Mar-03 Ranger
-Upped warrior practice level to very good.
-
-Revision 1.4  2003/06/01  16:35:06  ronin
-Revision of DROP for hide_buyer so only skins are picked up.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <stdio.h>
 #include <string.h>
@@ -257,6 +198,7 @@ void list_skills_to_prac(CHAR *ch)
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
+          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) continue;
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
@@ -481,7 +423,7 @@ void practice_skill(CHAR *ch, int number)
     case SKILL_BASH:
       if (GET_CLASS(ch) == CLASS_CLERIC)
       {
-        max_prac -= 20;
+        max_prac -= 10;
       }
       break;
 
@@ -872,8 +814,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
   return TRUE;
 }
 
+#define STORAGE_ROOM    5807
+
 int dump(int room, CHAR *ch, int cmd, char *arg) {
   OBJ *k;
+  OBJ *tmp_c = NULL, *next_c = NULL;
   char buf[100];
   CHAR *tmp_char;
   int value=0;
@@ -894,19 +839,41 @@ int dump(int room, CHAR *ch, int cmd, char *arg) {
   do_drop(ch, arg, cmd);
   value = 0;
 
-  for(k = world[CHAR_REAL_ROOM(ch)].contents; k ;
-      k = world[CHAR_REAL_ROOM(ch)].contents) {
-    sprintf(buf, "The %s vanishes in a puff of smoke.\n\r",rem_prefix(OBJ_SHORT(k)));
-    for(tmp_char = world[CHAR_REAL_ROOM(ch)].people; tmp_char;
-        tmp_char = tmp_char->next_in_room)
-      if (CAN_SEE_OBJ(tmp_char, k)) send_to_char(buf,tmp_char);
-    value += MAX(1, MIN(50, k->obj_flags.cost/10));
-    extract_obj(k);
-    if(IS_MORTAL(ch))
-      sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",GET_NAME(ch),OBJ_SHORT(k));
-    else if(IS_NPC(ch))
-      sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",MOB_SHORT(ch),OBJ_SHORT(k));
-    log_s(buf);
+  for(k = world[CHAR_REAL_ROOM(ch)].contents; k; k = world[CHAR_REAL_ROOM(ch)].contents) {
+    // updated to unpack containers which might contain an AQ_ORDER
+    // and moves AQ_ORDERs to Storage Room - no free way to "quit" them
+    // also by unpacking containers, get poof message for all contents
+    if (GET_ITEM_TYPE(k) == ITEM_AQ_ORDER) {
+      sprintf(buf, "%s vanishes in a brilliant flash of bright light.\n\r", CAP(OBJ_SHORT(k)));
+      send_to_room(buf, CHAR_REAL_ROOM(ch));
+      obj_from_room(k);
+      obj_to_room(k, real_room(STORAGE_ROOM));
+    }
+    else {
+      if (GET_ITEM_TYPE(k)==ITEM_CONTAINER) {
+        for (tmp_c = k->contains; tmp_c; tmp_c = next_c) {
+            next_c = tmp_c->next_content;
+            obj_from_obj(tmp_c);
+            obj_to_room(tmp_c, CHAR_REAL_ROOM(ch));
+        }
+      }
+
+      sprintf(buf, "The %s vanishes in a puff of smoke.\n\r", rem_prefix(OBJ_SHORT(k)));
+      for(tmp_char = world[CHAR_REAL_ROOM(ch)].people; tmp_char;
+          tmp_char = tmp_char->next_in_room) {
+        if (CAN_SEE_OBJ(tmp_char, k)) {
+          send_to_char(buf,tmp_char);
+        }
+      }
+      value += MAX(1, MIN(50, k->obj_flags.cost/10));
+      extract_obj(k);
+      if(IS_MORTAL(ch)) {
+        sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",GET_NAME(ch),OBJ_SHORT(k));
+      } else if(IS_NPC(ch)) {
+        sprintf(buf,"DUMP: [ %s dropped %s at The Dump ]",MOB_SHORT(ch),OBJ_SHORT(k));
+      }
+      log_s(buf);
+    }
   }
 
   if (value) {
@@ -981,7 +948,7 @@ void obj_to_vault(struct obj_data *obj, FILE *fl, CHAR * ch,char pos, char *name
 /* end new obj saves */
 
 /* new obj saves for obj ver3 */
-      object.bitvector2  =obj->obj_flags.bitvector2;
+      object.bitvector2  = obj->obj_flags.bitvector2;
       object.popped      = obj->obj_flags.popped;
 /* end new ver3 obj saves */
 
@@ -1744,7 +1711,7 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
         if (temp_obj == vault_obj) continue;
         if (alldot && !isname(allbuf, OBJ_NAME(temp_obj))) continue;
 
-        if (!IS_RENTABLE(temp_obj))
+        if (!IS_RENTABLE(temp_obj) || (GET_ITEM_TYPE(temp_obj) == ITEM_AQ_ORDER))
         {
           act("$n tells you 'You can't store $p in a vault.'", FALSE, vault_guard, temp_obj, ch, TO_VICT);
 

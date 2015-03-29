@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Wall -m32 -Og -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
+CFLAGS = -g -Wall -Wno-unused-result -m32 -Og -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
 LFLAGS = -lm -lcrypt -ldmalloc
 OBJDIR = ../obj
 BINDIR = ../bin

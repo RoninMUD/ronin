@@ -694,7 +694,11 @@ void obj_to_store(struct obj_data *obj, FILE *fl, CHAR * ch, char pos, bool incl
       object.ownerid[4] =obj->ownerid[4];
       object.ownerid[5] =obj->ownerid[5];
       object.ownerid[6] =obj->ownerid[6];
-      object.ownerid[7] =obj->ownerid[7];
+      if (obj->obj_flags.type_flag != ITEM_AQ_ORDER) {
+        object.ownerid[7] =obj->ownerid[7];
+      } else { // hack our own container-like repacking using available field
+        object.ownerid[7] = (includeNoRent ? COUNT_CONTENTS(obj) : COUNT_RENTABLE_CONTENTS(obj));
+      }
 
       fwrite(&object, sizeof(object),1,fl);
     }
@@ -772,13 +776,19 @@ struct obj_data *store_to_obj_ver3(FILE *fl,CHAR *ch) {
     obj->ownerid[4]             =object.ownerid[4];
     obj->ownerid[5]             =object.ownerid[5];
     obj->ownerid[6]             =object.ownerid[6];
-    obj->ownerid[7]             =object.ownerid[7];
+    if (obj->obj_flags.type_flag != ITEM_AQ_ORDER) {
+      obj->ownerid[7]           =object.ownerid[7];
+    } else { // same "repacking" as is done for containers
+      for (i = 0; i < object.ownerid[7]; i++) {
+        obj_to_obj(store_to_obj_ver3(fl, ch), obj);
+      }
+    }
 
     if (obj->obj_flags.type_flag == ITEM_TICKET) {
       if(!adjust_ticket_strings(obj)) return 0;
     }
 
-    if(obj->obj_flags.type_flag == ITEM_CONTAINER) {
+    if (obj->obj_flags.type_flag == ITEM_CONTAINER) {
       for(i=0;i<object.value[3];i++)
         obj_to_obj(store_to_obj_ver3(fl,ch),obj);
     }

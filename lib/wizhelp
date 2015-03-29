@@ -1026,6 +1026,8 @@ SOS SETOBJSTAT
    11 - (affected)
          affected_bits (ex: sos item 11 FURY) WIZHELP FLAGS (or bitnum)
    12 - (owner)
+   13 - (timer) timer
+   14 - (popped) day popped
 
    For 2, 3 and 11, the bit is added if it isn't on the object
    and removed if it is.

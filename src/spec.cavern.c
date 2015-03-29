@@ -708,7 +708,9 @@ int cs_stone_spec(OBJ *stone, CHAR *ch, int cmd, char *arg) {
 
   if(number(0,3)) return FALSE;
   act("A lucky stone glows brightly and envelops you in a purple shroud.",1,vict,0,0,TO_CHAR);
-  act("A lucky stone glows brightly and envelops $n in a purple shroud.",1,vict,0,0,TO_ROOM);
+  if (GET_ZONE(vict) != 12) {
+    act("A lucky stone glows brightly and envelops $n in a purple shroud.", 1, vict, 0, 0, TO_ROOM);
+  }
 
   return FALSE;
 }

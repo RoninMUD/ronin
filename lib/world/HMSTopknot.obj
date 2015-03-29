@@ -307,5 +307,26 @@ M
 ~
 ~
 ~
+#5813
+pistol~
+Strange pistol~
+A strange looking pistol is laying here.~
+~
+6 3 16385
+5800 4 2 20
+2 20000 5000
+100
+E
+pistol~
+The pistol looks like it is set on maximum stun.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~
