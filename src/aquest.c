@@ -1706,8 +1706,12 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
         // check if already an order in game for that player
         for (obj = object_list; obj; obj = obj->next) {
           if ((TEMPLATE_AQORDER == V_OBJ(obj)) && (obj->ownerid[0] == ch->ver3.id)) {
-            sprintf(buf, "You've already got an order %s, I doubt you could handle more.",
-                GET_NAME(ch));
+            if (obj->in_room == real_room(CENTRAL_PROCESSING)) {
+              sprintf(buf, "Your previous order is still being processed %s, %s.", GET_NAME(ch),
+                  chance(33) ? chance(50) ? "hold your horses" : "take a chill pill" : "relax, I'm a professional");
+            } else {
+              sprintf(buf, "You've already got an order %s, I doubt you could handle more.", GET_NAME(ch));
+            }
             do_say(collector, buf, CMD_SAY);
             return TRUE;
           }
@@ -1821,7 +1825,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
 
             if (V_OBJ(obj) == requirements[i]) {
               // required object found, but is it new enough?
-              if (obj->obj_flags.popped < order->obj_flags.popped) {
+              if (obj->obj_flags.popped < (order->obj_flags.popped - 1)) {
                 // object was popped before order received : see aq_obj_date_popped()
                 do_say(collector, "No, no, no - this won't do at all.", CMD_SAY);
                 sprintf(buf, "%s was popped too long ago, I need a new one!", CAP(OBJ_SHORT(obj)));
@@ -1867,7 +1871,7 @@ is not in aq_objs point value table.",
         }
       }
 
-      if(found[0] && found[1] && found[2] && found[3]) {
+      if (found[0] && found[1] && found[2] && found[3] && (COUNT_CONTENTS(order) == 4)) {
         // fulfilled requirement objects!
         switch(number(0,9)) {
         case 0:
@@ -1915,23 +1919,31 @@ and it disappears before your very eyes!\n\r", GET_SHORT(collector));
         order->obj_flags.timer = AQ_ORDER_WAIT_TIME; // setup "hack" wait timer
         SET_BIT(order->obj_flags.extra_flags2, ITEM_ALL_DECAY);
         return FALSE;
-      } else { // missing at least one object
-        mob_do(collector, collectoraction[number(0, NUMELEMS(collectoraction)-1)]);
-        for (j = 0; j < 4; j++) {
-          if(!found[j] && requirements[j] >= 0) {
-            // generate annoyed response
-            sprintf(buf, "You're even %s than that %s %s. You didn't bring me %s!",
-                chance(50) ? "dumber" : "stupider",
-                kenderinsults[number(0, NUMELEMS(kenderinsults)-1 )],
-                kendernames[number(0, NUMELEMS(kendernames)-1 )],
-                real_object(requirements[j]) >= 0 ? obj_proto_table[real_object(requirements[j])].short_description : "something");
-            do_say(collector, buf, CMD_SAY);
-            break;
+      } else {
+        if (!found[0] || !found[1] || !found[2] || !found[3]) { // missing at least one object
+          mob_do(collector, collectoraction[number(0, NUMELEMS(collectoraction)-1)]);
+          for (j = 0; j < 4; j++) {
+            if(!found[j] && requirements[j] >= 0) {
+              // generate annoyed response
+              sprintf(buf, "You're even %s than that %s %s. You didn't bring me %s!",
+                  chance(50) ? "dumber" : "stupider",
+                  kenderinsults[number(0, NUMELEMS(kenderinsults)-1 )],
+                  kendernames[number(0, NUMELEMS(kendernames)-1 )],
+                  real_object(requirements[j]) >= 0 ? obj_proto_table[real_object(requirements[j])].short_description : "something");
+              do_say(collector, buf, CMD_SAY);
+              break;
+            }
           }
+          sprintf(buf,"Read the order more carefully, I don't have time for your %s %s.",
+              chance(50) ? "tomfoolery" : "nonsense", GET_NAME(ch));
+          do_say(collector, buf, CMD_SAY);
+        } else if (COUNT_CONTENTS(order) != 4) { // more than 4 objects in order
+          sprintf(buf, "thumbsdown %s", GET_NAME(ch));
+          mob_do(collector, buf);
+          sprintf(buf, "%s, are you trying to be as foolish as %s, or does it just come naturally? The number of the counting shall be 4.",
+              GET_NAME(ch), kendernames[number(0, NUMELEMS(kendernames)-1 )]);
+          do_say(collector, buf, CMD_SAY);
         }
-        sprintf(buf,"Read the order more carefully, I don't have time for your %s %s.",
-            chance(50) ? "tomfoolery" : "nonsense", GET_NAME(ch));
-        do_say(collector, buf, CMD_SAY);
         obj_from_char(order);
         obj_to_char(order, ch);
         sprintf(buf, "%s tosses %s back to %s tiredly.", GET_SHORT(collector),
