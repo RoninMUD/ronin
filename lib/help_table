@@ -1586,7 +1586,7 @@ every 5 levels, and an additional practice % on parry for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: kick, bash, rescue, block, knock, punch, parry, dual, throw
-     triple, spin, quad.
+     triple, spin, quad, disembowel.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1743,7 +1743,7 @@ Camp               Y
 Circle                                                Y
 Cunning                                               Y
 Disarm                       Y              Y    Y
-Disembowel                                  Y
+Disembowel                                  Y              Y
 Dodge              Y                   Y    Y         Y
 Dual                         Y                             Y
 Hide          Y                        Y              Y
@@ -1860,12 +1860,12 @@ See Also : DUAL
 #
 DISEMBOWEL
 
-Class: Nomad
+Class: Warrior Nomad
 
-DISEMBOWEL is a special skill which allows a tanking Nomad to inflict extra
+DISEMBOWEL is a special skill which allows a Warrior or Nomad to inflict extra
 damage onto a mob, when the mob is bleeding. There is a possibility of
 failing the disembowel routine, in which case, the mob will inflict extra
-damage to the Nomad.
+damage to the player.
 #
 PARRY
 
@@ -8013,8 +8013,8 @@ skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           DEBILITATE
-  2           TIGERKICK
-  3           DIVINE WIND
+  2           DIVINE WIND
+  3           TIGERKICK
   4           MANTRA
   5           TRANQUILITY
 
@@ -8057,7 +8057,8 @@ Usage: backfist <victim>
 
 With this attack, the Ronin drives his or her fist into the victim. This
 skill inflicts damage equivalent to 1.25 times the Ronin's level, and
-knocks the victim into a stunned state.
+knocks the victim into a stunned state. Backfist is not subject to the
+effects of Invulnerability.
 
 This skill causes a 2 round input lag for the Ronin, regardless of success
 or failure.
@@ -8160,12 +8161,12 @@ See Also: SUBCLASSES MYSTIC
 #
 TIGERKICK
 
-Subclass Mystic: Level 2 (Ninja)
+Subclass Mystic: Level 3 (Ninja)
 
 Usage: tigerkick <victim>
 
 The Mystic's kicks are so powerful that they inflict additional damage,
-knock the target into a resting position, and pierce invulnerability.
+knock the target into a resting position.
 
 A tigerkick inflicts 1.75 times the Mystic's Level in damage.
 
@@ -8180,11 +8181,11 @@ See Also: SUBCLASSES MYSTIC
 #
 "DIVINE WIND"
 
-Subclass Mystic: Level 3 (Ninja)
+Subclass Mystic: Level 2 (Ninja)
 
 Usage       : cast 'divine wind' <victim>
 Save        : none
-Mana Cost   : 70
+Mana Cost   : 65
 Damage      : 300
 
 This spell will inflict 300 damage to the victim with no saving throw and
@@ -8232,7 +8233,7 @@ Subclass Mystic: Level 5 (Ninja)
 
 Usage       : cast 'tranquility' <victim>
 Accumulative: no
-Duration    : 4
+Duration    : 5
 Mana Cost   : 35
 
 While under the effects of this spell, the Mystic channels his/her own

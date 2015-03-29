@@ -4,65 +4,6 @@
 **  Copyright (C) 1990, 1991 - see 'license.doc' for complete information.
 */
 
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:13:30 $
-$Header: /home/ronin/cvs/ronin/spec.midgaard.c,v 2.6 2005/04/27 17:13:30 ronin Exp $
-$Id: spec.midgaard.c,v 2.6 2005/04/27 17:13:30 ronin Exp $
-$Name:  $
-$Log: spec.midgaard.c,v $
-Revision 2.6  2005/04/27 17:13:30  ronin
-Minor changes needed to compile on Slackware 10 for the new machine.
-
-Revision 2.5  2005/01/21 14:55:29  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.4  2004/11/17 19:21:52  void
-Added Nomad Skill Cover (1/2 Damage -10 Hitroll)
-
-Revision 2.3  2004/08/18 17:49:17  void
-Fixed some problems with Quad.
-
-Revision 2.2  2004/08/17 15:37:49  void
-Added Warrior Skill Quad
-
-Revision 2.1  2004/03/04 17:23:58  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.0.0.1  2004/02/05 16:11:01  ronin
-Reinitialization of cvs archives
-
-
-Revision 20-Jan-04 Ranger
-Addition of senders email address if present to postcard
-forwarding by email.
-
-Revision 20-Dec-03 Ranger
-Addition of postcard forwarding by email.
-
-Revision 05/01/03 Liner
-Addition of log for stuff dropped in Dump.
-
-Revision 7-Mar-03 Ranger
-Upped warrior practice level to very good.
-
-Revision 1.4  2003/06/01  16:35:06  ronin
-Revision of DROP for hide_buyer so only skins are picked up.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <stdio.h>
 #include <string.h>
@@ -257,6 +198,7 @@ void list_skills_to_prac(CHAR *ch)
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
+          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) continue;
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
@@ -481,7 +423,7 @@ void practice_skill(CHAR *ch, int number)
     case SKILL_BASH:
       if (GET_CLASS(ch) == CLASS_CLERIC)
       {
-        max_prac -= 20;
+        max_prac -= 10;
       }
       break;
 

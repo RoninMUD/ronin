@@ -1549,9 +1549,8 @@ void spell_fury(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (CHAOSMODE && ch != victim) {
+void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (CHAOSMODE && (ch != victim)) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
     return;
   }

@@ -768,10 +768,8 @@ void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   update_pos(victim);
 }
 
-void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       if (victim)
         spell_divine_wind(level, ch, victim, 0);
@@ -783,19 +781,18 @@ void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
 }
 
 int stack_position(CHAR *ch, int target_position);
-void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
+void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int set_pos = 0;
 
-  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
+
     return;
   }
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
@@ -1975,40 +1972,36 @@ void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       if (victim)
         spell_tranquility(level, ch, victim, 0);
       break;
     default:
-       log_f("Wrong type called in tranquility!");
+      log_f("Wrong type called in tranquility!");
       break;
   }
 }
 
-void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
+void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   AFF af;
 
-  if (!affected_by_spell(victim, SPELL_TRANQUILITY))
-  {
+  if (!affected_by_spell(victim, SPELL_TRANQUILITY)) {
     send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", victim);
     act("$n is suddenly awash in a sense of tranquility.", TRUE, victim, 0, 0, TO_ROOM);
 
-    af.type       = SPELL_TRANQUILITY;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 2;
-    else
-      af.duration = 4;
-    af.modifier   = 2;
-    af.location   = APPLY_HITROLL;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
+    af.type = SPELL_TRANQUILITY;
+    af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 5;
+    af.modifier = 2;
+    af.location = APPLY_HITROLL;
+    af.bitvector = AFF_NONE;
+    af.bitvector2 = AFF_NONE;
+
     affect_to_char(victim, &af);
-    af.location   = APPLY_DAMROLL;
+
+    af.location = APPLY_DAMROLL;
+
     affect_to_char(victim, &af);
   }
 }

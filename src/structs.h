@@ -1,7 +1,7 @@
 /**************************************************************************
-*  file: structs.h , Structures        .                  Part of DIKUMUD *
+*  file: structs.h , Structures                           Part of DIKUMUD *
 *  Usage: Declarations of central data structures                         *
-************************************************************************* */
+***************************************************************************/
 
 #ifndef __STRUCTS_H__
 #define __STRUCTS_H__

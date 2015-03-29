@@ -2546,7 +2546,6 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
   char apt[3];
   struct affected_type_5 *aff;
   struct enchantment_type_5 *ench;
-  struct obj_spell_type *oaff;
   struct obj_data *wielded=0,*hold=0;
   char arg1[MAX_STRING_LENGTH],buf[2*MAX_STRING_LENGTH],buf2[MAX_STRING_LENGTH];
   char type[100];

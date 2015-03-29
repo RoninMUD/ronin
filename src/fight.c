@@ -218,19 +218,20 @@ void update_pos(CHAR *victim) {
 }
 
 
-/* start one char fighting another (yes, it is horrible, I know... )  */
+/* Start one char fighting another (yes, it is horrible, I know... ) */
 void set_fighting(CHAR *ch, CHAR *vict) {
   char buf[MSL];
 
   if (!ch) return;
-  if (ch->specials.fighting == vict) return;
+
+  if (GET_OPPONENT(ch) == vict) return;
 
   if (ch->specials.fighting) {
     ch->specials.fighting->specials.num_fighting--;
     ch->specials.num_fighting--;
   }
 
-  /* included to prevent double counting when the mob is the one starting the fight */
+  /* Included to prevent double counting when the mob is the one starting the fight. */
   if (IS_NPC(ch) && ch->specials.num_fighting) {
     ch->specials.num_fighting--;
   }
@@ -246,7 +247,7 @@ void set_fighting(CHAR *ch, CHAR *vict) {
   ch->specials.num_fighting++;
   ch->specials.max_num_fighting = MAX(ch->specials.max_num_fighting, ch->specials.num_fighting);
 
-  if (vict->specials.fighting != ch) {
+  if (GET_OPPONENT(vict) != ch) {
     vict->specials.num_fighting++;
     vict->specials.max_num_fighting = MAX(vict->specials.max_num_fighting, vict->specials.num_fighting);
   }
@@ -1700,7 +1701,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* Process Immunities and Resistances */
   if (IS_NPC(victim)) {
     /* specials.immune */
-    if (victim->specials.immune &&
+    if (GET_IMMUNE(victim) &&
         ((attack_type == TYPE_HIT && IS_IMMUNE(victim, IMMUNE_HIT)) ||
         (attack_type == TYPE_BLUDGEON && IS_IMMUNE(victim, IMMUNE_BLUDGEON)) ||
         (attack_type == TYPE_PIERCE && IS_IMMUNE(victim, IMMUNE_PIERCE)) ||
@@ -1720,7 +1721,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
 
     /* specials.immune2 */
-    if (victim->specials.immune2 &&
+    if (GET_IMMUNE2(victim) &&
         ((damage_type == DAM_SOUND && IS_IMMUNE2(victim, IMMUNE_COLD)) ||
         (damage_type == DAM_ACID && IS_IMMUNE2(victim, IMMUNE_SOUND)) ||
         (damage_type == DAM_CHEMICAL && IS_IMMUNE2(victim, IMMUNE_CHEMICAL)) ||
@@ -1729,7 +1730,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
 
     /* specials.resist */
-    if (victim->specials.resist &&
+    if (GET_RESIST(victim) &&
         ((damage_type == DAM_FIRE && IS_RESISTANT(victim, RESIST_FIRE)) ||
         (damage_type == DAM_ELECTRIC && IS_RESISTANT(victim, RESIST_ELECTRIC)) ||
         (damage_type == DAM_COLD && IS_RESISTANT(victim, RESIST_COLD)) ||

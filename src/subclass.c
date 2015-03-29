@@ -144,7 +144,6 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_BLADESINGER, 2)) return TRUE;
       break;
     case SKILL_CAMP:
-      if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 35)) return TRUE;
       if (check_subclass(ch, SC_TRAPPER, 2)) return TRUE;
       break;
     case SKILL_BATTER:
@@ -252,10 +251,10 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_MYSTIC, 1)) return TRUE;
       break;
     case SKILL_TIGERKICK:
-      if (check_subclass(ch, SC_MYSTIC, 2)) return TRUE;
+      if (check_subclass(ch, SC_MYSTIC, 3)) return TRUE;
       break;
     case SPELL_DIVINE_WIND:
-      if (check_subclass(ch, SC_MYSTIC, 3)) return TRUE;
+      if (check_subclass(ch, SC_MYSTIC, 2)) return TRUE;
       break;
     case SKILL_MANTRA:
       if (check_subclass(ch, SC_MYSTIC, 4)) return TRUE;

@@ -270,17 +270,29 @@ bool chance(int num)
   return FALSE;
 }
 
-/* 50% true at same level, 0% true vict 10 above, 100% true vict 10 below */
-/* Bonuses by class added Nov 23/99 */
-bool breakthrough(CHAR *ch, CHAR *victim, int btype)
-{
-  int num = 0;
 
-  if (btype == BT_INVUL)
+/* 50% chance when victim level is the same as the attacker.
+   100% chance when victim level is 10 levels or less than the attacker.
+   0% chance when victim level is 10 levels or higher than the attacker. */
+bool breakthrough(CHAR *ch, CHAR *victim, int breakthrough_type)
+{
+  int check = 0;
+
+  if ((breakthrough_type == BT_INVUL && !IS_AFFECTED(victim, AFF_INVUL)) ||
+      (breakthrough_type == BT_SPHERE && !IS_AFFECTED(victim, AFF_SPHERE))) {
+    return TRUE;
+  }
+
+  if (breakthrough_type == BT_INVUL)
   {
+    /* Invulnerability never applies to Hostile victims. */
     if (affected_by_spell(victim, SKILL_HOSTILE)) return TRUE;
 
-    if (GET_CLASS(ch) == CLASS_THIEF && GET_LEVEL(ch) >= 50 && affected_by_spell(ch, SKILL_CUNNING) && GET_MANA(ch) >= 10)
+    /* Thief Level 50: Cunning */
+    if (GET_CLASS(ch) == CLASS_THIEF &&
+        GET_LEVEL(ch) >= 50 &&
+        GET_MANA(ch) >= 10 &&
+        affected_by_spell(ch, SKILL_CUNNING))
     {
       act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
       act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
@@ -292,54 +304,55 @@ bool breakthrough(CHAR *ch, CHAR *victim, int btype)
     }
   }
 
-  num = 50 + (GET_LEVEL(ch) - GET_LEVEL(victim)) * 5;
+  check = 50 + ((GET_LEVEL(ch) - GET_LEVEL(victim)) * 5);
 
   switch (GET_CLASS(ch))
   {
     case CLASS_CLERIC:
-      if (btype == BT_INVUL) num -= 10;
-      if (btype == BT_SPHERE) num -= 5;
+      if (breakthrough_type == BT_INVUL) check -= 10;
+      else if (breakthrough_type == BT_SPHERE) check -= 5;
       break;
     case CLASS_MAGIC_USER:
-      if (btype == BT_INVUL) num -= 10;
-      if (btype == BT_SPHERE) num += 10;
+      if (breakthrough_type == BT_INVUL) check -= 10;
+      else if (breakthrough_type == BT_SPHERE) check += 10;
       break;
     case CLASS_WARRIOR:
-      if (btype == BT_INVUL) num += 10;
-      if (btype == BT_SPHERE) num -= 10;
+      if (breakthrough_type == BT_INVUL) check += 10;
+      else if (breakthrough_type == BT_SPHERE) check -= 10;
       break;
     case CLASS_NOMAD:
-      if (btype == BT_INVUL) num += 5;
-      if (btype == BT_SPHERE) num -= 10;
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check -= 10;
       break;
     case CLASS_THIEF:
-      if (btype == BT_INVUL) num += 10;
-      if (btype == BT_SPHERE) num -= 10;
+      if (breakthrough_type == BT_INVUL) check += 10;
+      else if (breakthrough_type == BT_SPHERE) check -= 10;
       break;
     case CLASS_NINJA:
-      if (btype == BT_INVUL) num += 5;
-      if (btype == BT_SPHERE) num -= 5;
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check -= 5;
       break;
     case CLASS_ANTI_PALADIN:
-      if (btype == BT_INVUL) num += 5;
-      if (btype == BT_SPHERE) num += 5;
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check += 5;
       break;
     case CLASS_PALADIN:
-      if (btype == BT_INVUL) num += 5;
-      if (btype == BT_SPHERE) num -= 5;
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check -= 5;
       break;
     case CLASS_BARD:
-      if (btype == BT_INVUL) num += 5;
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check += 5;
       break;
     case CLASS_COMMANDO:
-      if (btype == BT_INVUL) num += 5;
-      if (btype == BT_SPHERE) num += 5;
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check += 5;
       break;
     default:
       break;
   }
 
-  if (number(1, 100) <= num) return TRUE;
+  if (number(1, 100) <= check) return TRUE;
 
   return FALSE;
 }

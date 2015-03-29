@@ -2588,6 +2588,7 @@ char *w_skills[] = {
   "charge",
   "headbutt",
   "quad",
+  "disembowel",
   "\n",
 };
 
