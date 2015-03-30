@@ -1407,7 +1407,7 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (GET_OPPONENT(ch)) {
+  if (GET_OPPONENT(ch) == victim) {
     send_to_char("How can you rescue someone you are trying to kill?\n\r", ch);
 
     return;
@@ -1427,7 +1427,7 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  check = number(1, 101);
+  check = (IS_MORTAL(victim) && (GET_LEVEL(victim) < 16)) ? 0 : number(1, 101);
 
   if (check > GET_LEARNED(ch, SKILL_RESCUE)) {
     send_to_char("You fail the rescue.\n\r", ch);
