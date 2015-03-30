@@ -248,8 +248,6 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
     act("$n tries to backfist you but fails.", FALSE, ch, 0, victim, TO_VICT);
 
     damage(ch, victim, 0, SKILL_BACKFIST, DAM_SKILL);
-
-    skill_wait(ch, SKILL_BACKFIST, 2);
   }
   else {
     set_pos = stack_position(victim, POSITION_STUNNED);
@@ -266,9 +264,9 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
       /* Can't use skill_wait() since this applies to victim. */
       WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
     }
-
-    skill_wait(ch, SKILL_BACKFIST, 2);
   }
+
+  skill_wait(ch, SKILL_BACKFIST, 2);
 }
 
 
@@ -372,8 +370,6 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
     act("$n tries to tigerkick $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_TIGERKICK, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_TIGERKICK, 2);
   }
   else {
     if (!breakthrough(ch, victim, BT_INVUL)) {
@@ -398,10 +394,10 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
         /* Can't use skill_wait() since this applies to victim. */
         WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
       }
-
-      skill_wait(ch, SKILL_TIGERKICK, 2);
     }
   }
+
+  skill_wait(ch, SKILL_TIGERKICK, 2);
 }
 
 
@@ -656,15 +652,13 @@ void do_blitz(CHAR *ch, char *argument, int cmd)
     act("$n tries to blitz $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_BLITZ, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_BLITZ, 2);
   }
   else
   {
     hit(ch, victim, SKILL_BLITZ);
-
-    skill_wait(ch, SKILL_BLITZ, 2);
   }
+
+  skill_wait(ch, SKILL_BLITZ, 2);
 }
 
 
@@ -726,14 +720,12 @@ void do_lunge(CHAR *ch, char *argument, int cmd) {
     act("$n tries to lunge at $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_LUNGE, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_LUNGE, 2);
   }
   else {
     hit(ch, victim, SKILL_LUNGE);
-
-    skill_wait(ch, SKILL_LUNGE, 2);
   }
+
+  skill_wait(ch, SKILL_LUNGE, 2);
 }
 
 
@@ -884,8 +876,6 @@ void do_switch(CHAR *ch, char *argument, int cmd) {
 
   if ((check > GET_LEARNED(ch, SKILL_SWITCH)) || IS_AFFECTED(ch, AFF_FURY)) {
     send_to_char("You failed to switch.\n\r", ch);
-
-    skill_wait(ch, SKILL_SWITCH, 2);
   }
   else {
     act("$n switches $s fight to $N", 0, ch, 0, victim, TO_NOTVICT);
@@ -894,9 +884,9 @@ void do_switch(CHAR *ch, char *argument, int cmd) {
 
     stop_fighting(ch);
     set_fighting(ch, victim);
-
-    skill_wait(ch, SKILL_SWITCH, 2);
   }
+
+  skill_wait(ch, SKILL_SWITCH, 2);
 }
 
 
@@ -954,8 +944,6 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
     act("$n tries to smite $N but $s concentration falters.", 0, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_SMITE, 2);
   }
   else {
     if (victim != GET_OPPONENT(ch)) {
@@ -976,8 +964,6 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
     if ((CHAR_REAL_ROOM(victim) != NOWHERE) && breakthrough(ch, victim, BT_INVUL)) {
       GET_POS(victim) = stack_position(victim, POSITION_RESTING);
     }
-
-    skill_wait(ch, SKILL_SMITE, 2);
   }
 
   /* Trusty Steed */
@@ -995,9 +981,13 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
 
       damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
 
-      GET_POS(victim) = set_pos;
+      if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
+        GET_POS(victim) = set_pos;
+      }
     }
   }
+
+  skill_wait(ch, SKILL_SMITE, 2);
 }
 
 
@@ -1054,14 +1044,12 @@ void do_flank(CHAR *ch, char *argument, int cmd) {
     act("$n tries to flank $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_FLANK, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_FLANK, 2);
   }
   else {
     hit(ch, victim, SKILL_FLANK);
-
-    skill_wait(ch, SKILL_FLANK, 2);
   }
+
+  skill_wait(ch, SKILL_FLANK, 2);
 }
 
 
@@ -1727,7 +1715,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
 
     GET_MANA(ch) = MAX(GET_MANA(ch) - (mana_cost / 2), 0);
 
-    skill_wait(ch, SKILL_MANTRA, 2);
+    skill_wait(ch, SKILL_MANTRA, 1);
   }
   else {
     if (victim != ch) {
@@ -1762,7 +1750,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
 
     affect_to_char(victim, &af);
 
-    skill_wait(ch, SKILL_MANTRA, 2);
+    skill_wait(ch, SKILL_MANTRA, 1);
   }
 }
 
