@@ -132,9 +132,10 @@ The skills affected by dexterity are:
 
   ambush    bash        dual    lunge      steal      twist
   assault   blitz       flank   pummel     sweep      quad
-  backfist  circle      hide    punch      tigerkic
-  backflip  disarm      impair  sneak      trip
-  backstab  disembowel  kick    spin_kick  triple
+  backfist  circle      hide    punch      tigerkick  smite
+  backflip  disarm      impair  sneak      trip       zeal
+  backstab  disembowel  kick    spin kick  triple     banzai
+  headbutt
 
 See Also: STATS META AQUEST
           INTELLIGENCE WISDOM STRENGTH CONSTITUTION
@@ -1771,7 +1772,7 @@ SEE ALSO: CLASS CLASSES
 #
 BACKFLIP
 
-Class: Bard - Level 20
+Class: Bard  (Level 20)
 
 This ability allows the Bard to flip over an opponent, giving an extra attack.
 #
@@ -1851,7 +1852,7 @@ See Also : TRIPLE
 #
 TRIPLE
 
-Class: Warrior Commando
+Class: Warrior (Level 20), Commando (Level 20)
 
 A skill which gives an automatic third attack the during fight. The chance of its
 success depends on how well you learn it.
@@ -1860,12 +1861,12 @@ See Also : DUAL
 #
 DISEMBOWEL
 
-Class: Warrior Nomad
+Class: Nomad, Warrior (Level 40)
 
 DISEMBOWEL is a special skill which allows a Warrior or Nomad to inflict extra
-damage onto a mob, when the mob is bleeding. There is a possibility of
-failing the disembowel routine, in which case, the mob will inflict extra
-damage to the player.
+damage onto an opponent when the it is bleeding (10% health or less). There is
+a possibility of failing the disembowel, in which case the victim will strike
+back and inflict some damage to the player.
 #
 PARRY
 
@@ -1900,17 +1901,17 @@ HIDE
 Class: Anti-Paladin Ninja Thief
 
 When you type hide there is a chance that you will hide in the room. If
-hidden you can only be "sensed" by the "sense life" spell. Even if sensed
+hidden you can only be "sensed" by the "sense life" spell. Even if sensed,
 your identity will remain hidden.  Hide is broken by pressing return,
 regardless of whether you typed a command or not.
 
 Example:
 
   > hide
-  Ok.
-  >  (you wait for ex. 5 mins and remain hidden for 5 mins)
 
-  >  (You press enter and are no longer hidden)
+  >  (You wait for 5 minutes and remain hidden for 5 minutes.)
+
+  >  (You press enter and are no longer hidden,)
 #
 THROW
 
@@ -1937,7 +1938,7 @@ See Also : RESCUE, BASH
 #
 BASH
 
-Class: Anti-Paladin Cleric Commando Ninja Paladin Warrior
+Class: Anti-Paladin Commando Ninja Paladin Warrior, Cleric (Level 35)
 
 The success of a bash depends upon how well you learned it. To bash someone
 is to attempt to 'knock' that person over. If you succeed, you will inflict
@@ -1996,7 +1997,10 @@ A rescue is an attempt to jump in front of your target, causing the monster
 to hit you instead.  You can only shield your target from one monster per
 attempt. This is very useful when playing in a group.
 
->rescue <victim>
+Any class can automatically succeed at rescuing another player that is level
+15 or below.
+
+> rescue <victim>
 #
 STEAL
 
@@ -6509,7 +6513,7 @@ See Also: SUBCLASSES
 #
 SCAN
  
-Class: Thief
+Class: Thief (Level 35)
  
 This skill allows the character to see who may be in surrounding
 rooms.
@@ -6569,7 +6573,7 @@ See Also: SUBCLASSES RANGER WARLORD
 #
 CAMP
 
-Class: Bard - Level 35
+Class: Bard (Level 35)
 Subclass Trapper: Level 2 (Nomad)
 
 The Bard and Trapper have the ability to set up a camp with the same
@@ -8367,7 +8371,7 @@ This spell will also enhance the Commando's damage by 5.
 #
 "TWIST"
 
-Class: Thief
+Class: Thief (Level 45, Automatic)
 
 This skill gives the thief a chance for an extra attack during circle.
 
@@ -8492,7 +8496,7 @@ at any time they see fit.
 #
 CUNNING
 
-Class: Thief
+Class: Thief (Level 50)
 
 Usage: cunning (toggles on/off)
 

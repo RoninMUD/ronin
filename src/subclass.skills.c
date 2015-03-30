@@ -299,7 +299,7 @@ void do_pray(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (number(0, 85) > GET_LEARNED(ch, SKILL_PRAY)) {
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_PRAY)) {
     send_to_char("You failed to focus your thoughts in prayer.\n\r", ch);
   }
   else {
@@ -809,7 +809,7 @@ void do_vehemence(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (number(0, 85) > GET_LEARNED(ch, SKILL_VEHEMENCE)) {
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_VEHEMENCE)) {
     send_to_char("You are unable to fill yourself with a sense of vehemence.\n\r", ch);
   }
   else {
@@ -1056,6 +1056,7 @@ void do_flank(CHAR *ch, char *argument, int cmd) {
 /* Used to be Sweep */
 void do_zeal(CHAR *ch, char *argument, int cmd) {
   CHAR *tmp_victim = NULL;
+  CHAR *next_victim = NULL;
   int check = 0;
 
   if (!GET_SKILLS(ch)) return;
@@ -1090,7 +1091,9 @@ void do_zeal(CHAR *ch, char *argument, int cmd) {
     act("You are empowered by a sense of divine zeal as you tear into your foes.", FALSE, ch, 0, 0, TO_CHAR);
     act("$n is empowered by divine zeal and cleaves through $s foes.", FALSE, ch, 0, 0, TO_ROOM);
 
-    for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room) {
+    for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+      next_victim = tmp_victim->next_in_room;
+
       if (tmp_victim == ch) continue;
 
       if (IS_NPC(tmp_victim) && GET_RIDER(tmp_victim) != ch) {
@@ -1116,7 +1119,6 @@ void do_zeal(CHAR *ch, char *argument, int cmd) {
 
 
 void do_hostile(CHAR *ch, char *argument, int cmd) {
-  int check = 0;
   AFF af;
 
   if (!GET_SKILLS(ch)) return;
@@ -1142,9 +1144,7 @@ void do_hostile(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  check = number(1, 121) - GET_DEX_APP(ch);
-
-  if (check > GET_LEARNED(ch, SKILL_HOSTILE)) {
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_HOSTILE)) {
     send_to_char("You failed to get into the hostile stance.\n\r", ch);
   }
   else {
@@ -1164,7 +1164,6 @@ void do_hostile(CHAR *ch, char *argument, int cmd) {
 
 
 void do_defend(CHAR *ch, char *argument, int cmd) {
-  int check = 0;
   AFF af;
 
   if (!GET_SKILLS(ch)) return;
@@ -1190,9 +1189,7 @@ void do_defend(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  check = number(1, 121) - GET_DEX_APP(ch);
-
-  if (check > GET_LEARNED(ch, SKILL_DEFEND)) {
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_DEFEND)) {
     send_to_char("You failed to get into a defensive stance.\n\r", ch);
   }
   else {
@@ -1633,8 +1630,6 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     damage(ch, victim, 0, SKILL_BANZAI, DAM_NO_BLOCK);
 
     GET_MANA(ch) = MAX(GET_MANA(ch) - (mana_cost / 2), 0);
-
-    skill_wait(ch, SKILL_BANZAI, 2);
   }
   else {
     act("With a primal yell, you banzai charge $N.", FALSE, ch, 0, victim, TO_CHAR);
@@ -1648,9 +1643,9 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     }
 
     GET_MANA(ch) = MAX(GET_MANA(ch) - mana_cost, 0);
-
-    skill_wait(ch, SKILL_BANZAI, 1);
   }
+
+  skill_wait(ch, SKILL_BANZAI, 1);
 }
 
 
@@ -1714,8 +1709,6 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     }
 
     GET_MANA(ch) = MAX(GET_MANA(ch) - (mana_cost / 2), 0);
-
-    skill_wait(ch, SKILL_MANTRA, 1);
   }
   else {
     if (victim != ch) {
@@ -1735,7 +1728,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     modifier = (GET_LEVEL(ch) + (5 * GET_WIS_APP(ch)));
 
     for (tmp_af = victim->affected; tmp_af; tmp_af = tmp_af->next) {
-      if (tmp_af->type == SKILL_MANTRA && tmp_af->modifier >= modifier) {
+      if ((tmp_af->type) == SKILL_MANTRA && (tmp_af->modifier >= modifier)) {
         affect_from_char(victim, SKILL_MANTRA);
         break;
       }
@@ -1749,9 +1742,9 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     af.bitvector2 = AFF_NONE;
 
     affect_to_char(victim, &af);
-
-    skill_wait(ch, SKILL_MANTRA, 1);
   }
+
+  skill_wait(ch, SKILL_MANTRA, 1);
 }
 
 
@@ -1979,45 +1972,42 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
     damage(ch, victim, 0, SKILL_CLOBBER, DAM_NO_BLOCK);
 
     skill_wait(ch, SKILL_CLOBBER, 2);
-
-    return;
-  }
-
-  if (!breakthrough(ch, victim, BT_INVUL)) {
-    act("You clobber $N, but $E doesn't seem to mind!", FALSE, ch, NULL, victim, TO_CHAR);
-    act("$n tries to clobber you, but it feels more like a massage!", FALSE, ch, NULL, victim, TO_VICT);
-    act("$n clobbers $N, but $E doesn't seem to mind!", FALSE, ch, NULL, victim, TO_NOTVICT);
-
-    damage(ch, victim, 0, SKILL_CLOBBER, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_CLOBBER, chance(15) ? 3 : 2);
   }
   else {
-    num = number(1, 10);
+    if (!breakthrough(ch, victim, BT_INVUL)) {
+      act("You clobber $N, but $E doesn't seem to mind!", FALSE, ch, NULL, victim, TO_CHAR);
+      act("$n tries to clobber you, but it feels more like a massage!", FALSE, ch, NULL, victim, TO_VICT);
+      act("$n clobbers $N, but $E doesn't seem to mind!", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-    /* 20% chance of 2.50x damage on next hit. */
-    if (num <= 2) {
-      set_pos = POSITION_MORTALLYW;
+      damage(ch, victim, 0, SKILL_CLOBBER, DAM_NO_BLOCK);
     }
-    /* 40% chance of 2.33x damage on next hit. */
-    else if (num <= 6) {
-      set_pos = POSITION_INCAP;
-    }
-    /* 40% chance of 2.00x damage on next hit. */
     else {
-      set_pos = POSITION_STUNNED;
-    }
+      num = number(1, 10);
 
-    set_pos = stack_position(victim, set_pos);
+      /* 20% chance of 2.50x damage on next hit. */
+      if (num <= 2) {
+        set_pos = POSITION_MORTALLYW;
+      }
+      /* 40% chance of 2.33x damage on next hit. */
+      else if (num <= 6) {
+        set_pos = POSITION_INCAP;
+      }
+      /* 40% chance of 2.00x damage on next hit. */
+      else {
+        set_pos = POSITION_STUNNED;
+      }
 
-    act("You clobber $N with windmilling fists!", FALSE, ch, NULL, victim, TO_CHAR);
-    act("You're clobbered by $n's windmilling fists!", FALSE, ch, NULL, victim, TO_VICT);
-    act("$n clobbers $N with $s windmilling fists!", FALSE, ch, NULL, victim, TO_NOTVICT);
+      set_pos = stack_position(victim, set_pos);
 
-    damage(ch, victim, calc_position_damage(GET_POS(victim), number(GET_LEVEL(ch), GET_LEVEL(ch) * 4)), SKILL_CLOBBER, DAM_PHYSICAL);
+      act("You clobber $N with windmilling fists!", FALSE, ch, NULL, victim, TO_CHAR);
+      act("You're clobbered by $n's windmilling fists!", FALSE, ch, NULL, victim, TO_VICT);
+      act("$n clobbers $N with $s windmilling fists!", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-    if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
-      GET_POS(victim) = set_pos;
+      damage(ch, victim, calc_position_damage(GET_POS(victim), number(GET_LEVEL(ch), GET_LEVEL(ch) * 4)), SKILL_CLOBBER, DAM_PHYSICAL);
+
+      if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
+        GET_POS(victim) = set_pos;
+      }
     }
 
     skill_wait(ch, SKILL_CLOBBER, chance(15) ? 3 : 2);
@@ -2101,7 +2091,6 @@ void do_shadow_walk(CHAR *ch, char *argument, int cmd) {
 
 void do_evasion(CHAR *ch, char *argument, int cmd)
 {
-  int check = 0;
   AFF af;
 
   if (!GET_SKILLS(ch)) return;
@@ -2130,9 +2119,7 @@ void do_evasion(CHAR *ch, char *argument, int cmd)
     return;
   }
 
-  check = number(1, 121) - GET_DEX_APP(ch);
-
-  if (check > GET_LEARNED(ch, SKILL_EVASION)) {
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_EVASION)) {
     send_to_char("You failed to focus on evading attacks.\n\r", ch);
   }
   else
