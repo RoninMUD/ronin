@@ -1186,7 +1186,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
       act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", 0, ch, 0, victim, TO_VICT);
       act("$n summons forth $s trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_TRUSTY_STEED, DAM_PHYSICAL);
 
       if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;

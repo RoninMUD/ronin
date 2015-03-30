@@ -943,7 +943,7 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
     act("$n tries to smite you but $s concentration falters.", 0, ch, 0, victim, TO_VICT);
     act("$n tries to smite $N but $s concentration falters.", 0, ch, 0, victim, TO_NOTVICT);
 
-    damage(ch, victim, 0, SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
+    damage(ch, victim, 0, SKILL_SMITE, DAM_NO_BLOCK);
   }
   else {
     if (victim != GET_OPPONENT(ch)) {
@@ -979,7 +979,7 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
       act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", FALSE, ch, 0, victim, TO_VICT);
       act("$n summons forth $s trusty steed and it tramples $N with spiritual energy!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_TRUSTY_STEED, DAM_NO_BLOCK);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_TRUSTY_STEED, DAM_PHYSICAL);
 
       if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;
