@@ -16,7 +16,7 @@ const char *spell_wear_off_msg[] = {
   "!Burning Hands!",
   "!Call Lightning",
   "You feel more self-confident.",
-  "!Chill Touch!",
+  "You feel warm again.",
   "!Clone!",
   "!Color Spray!",
   "!Control Weather!",
