@@ -361,6 +361,7 @@ void do_wound(CHAR *ch, char *argument, int cmd) {
 
 void do_spin_kick(CHAR *ch, char *argument, int cmd) {
   CHAR *tmp_victim = NULL;
+  CHAR *next_victim = NULL;
   int check = 0;
 
   if (!GET_SKILLS(ch)) return;
@@ -406,7 +407,9 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
     send_to_char("Your spin-kick has generated a big whirl.\n\r", ch);
     act("$n's spin-kick has generated a big whirl.", FALSE, ch, 0, 0, TO_ROOM);
 
-    for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room) {
+    for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+      next_victim = tmp_victim->next_in_room;
+
       if ((tmp_victim == ch) ||
           (IS_NPC(tmp_victim) && (GET_RIDER(tmp_victim) == ch)) ||
           (IS_MORTAL(tmp_victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) ||
@@ -1140,8 +1143,6 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
     act("$n tried to pummel $N, but missed.", FALSE, ch, NULL, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_PUMMEL, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_PUMMEL, 2);
   }
   else {
     if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PUMMEL)) ||
@@ -1170,8 +1171,6 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
 
       auto_learn_skill(ch, SKILL_PUMMEL);
     }
-
-    skill_wait(ch, SKILL_PUMMEL, 2);
   }
 
   /* Trusty Steed */
@@ -1194,6 +1193,8 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
       }
     }
   }
+
+  skill_wait(ch, SKILL_PUMMEL, 2);
 }
 
 
@@ -1265,8 +1266,6 @@ void do_bash(CHAR *ch, char *arg, int cmd) {
 
   if (check > GET_LEARNED(ch, SKILL_BASH)) {
     damage(ch, victim, 0, SKILL_BASH, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_BASH, 2);
   }
   else {
     if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PUMMEL)) ||
@@ -1287,9 +1286,9 @@ void do_bash(CHAR *ch, char *arg, int cmd) {
         WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
       }
     }
-
-    skill_wait(ch, SKILL_BASH, 2);
   }
+
+  skill_wait(ch, SKILL_BASH, 2);
 }
 
 
@@ -1339,8 +1338,6 @@ void do_punch(CHAR *ch, char *arg, int cmd) {
 
   if (check > GET_LEARNED(ch, SKILL_PUNCH)) {
     damage(ch, victim, 0, SKILL_PUNCH, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_PUNCH, 2);
   }
   else {
     if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PUNCH)) ||
@@ -1361,9 +1358,9 @@ void do_punch(CHAR *ch, char *arg, int cmd) {
         WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
       }
     }
-
-    skill_wait(ch, SKILL_PUNCH, 2);
   }
+
+  skill_wait(ch, SKILL_PUNCH, 2);
 }
 
 
@@ -1562,8 +1559,6 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
 
   if (check > GET_LEARNED(ch, SKILL_KICK)) {
     damage(ch, victim, 0, SKILL_KICK, DAM_NO_BLOCK);
-
-    skill_wait(ch, SKILL_KICK, 2);
   }
   else {
     if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_KICK)) ||
@@ -1579,10 +1574,10 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
       if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
         WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(2, 3) : 3));
       }
-
-      skill_wait(ch, SKILL_KICK, 2);
     }
   }
+
+  skill_wait(ch, SKILL_KICK, 2);
 }
 
 
@@ -1759,8 +1754,6 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
     act("$n tries to disembowel $N, but stumbles over $s own feet! $N attacks back!", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(victim, ch, ((2 * GET_LEVEL(victim)) + 20), TYPE_UNDEFINED, DAM_SKILL);
-
-    skill_wait(ch, SKILL_DISEMBOWEL, 2);
   }
   else {
     if ((IS_NPC(victim) && IS_IMMUNE(ch, IMMUNE_DISEMBOWEL)) ||
@@ -1784,9 +1777,9 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
         SET_BIT(GET_IMMUNE(ch), IMMUNE_DISEMBOWEL);
       }
     }
-
-    skill_wait(ch, SKILL_DISEMBOWEL, 2);
   }
+
+  skill_wait(ch, SKILL_DISEMBOWEL, 2);
 }
 
 
@@ -1841,8 +1834,6 @@ void do_backflip(CHAR *ch, char *argument, int cmd) {
     act("As you spring, $N knocks you down!", FALSE, ch, 0, victim, TO_CHAR);
     act("As $n springs, you knock $m down!", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to spring over $N, but is knocked hard on $s back.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-    skill_wait(ch, SKILL_BACKFLIP, 2);
   }
   else {
     act("With a mighty leap, you spring over $N!", 0, ch, 0, victim, TO_CHAR);
@@ -1852,9 +1843,9 @@ void do_backflip(CHAR *ch, char *argument, int cmd) {
     hit(ch, victim, SKILL_BACKFLIP);
 
     auto_learn_skill(ch, SKILL_BACKFLIP);
-
-    skill_wait(ch, SKILL_BACKFLIP, 2);
   }
+
+  skill_wait(ch, SKILL_BACKFLIP, 2);
 }
 
 
