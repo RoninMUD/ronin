@@ -140,6 +140,8 @@ extern char *index(const char *s, int c);
 #define GET_LONG(ch)    (!IS_MOB(ch) ? "none" : MOB_LONG(ch))
 #define GET_SHORT(ch)    (!IS_MOB(ch) ? "none" : MOB_SHORT(ch))
 
+#define GET_DISP_NAME(ch) (!IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch))
+
 #define GET_TITLE(ch)   ((ch)->player.title)
 
 #define GET_EMAIL(ch)   ((ch)->ver3.email_addr)
