@@ -2962,8 +2962,8 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
            send_to_char(buf, ch);
         }
 
-        sprintf(buf,"Weight: %d, Value: %d, Rent Cost: %d\n\r",
-            GETOBJ_WEIGHT(obj), obj->obj_flags.cost, obj->obj_flags.cost_per_day);
+        sprintf(buf,"Weight: %d, Value: %d, Rent Cost: %d, Popped: %d\n\r",
+            GETOBJ_WEIGHT(obj), obj->obj_flags.cost, obj->obj_flags.cost_per_day, obj->obj_flags.popped);
         send_to_char(buf, ch);
 
         switch (GET_ITEM_TYPE(obj)) {

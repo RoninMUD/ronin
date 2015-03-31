@@ -1706,8 +1706,9 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
         for (obj = object_list; obj; obj = obj->next) {
           if ((TEMPLATE_AQORDER == V_OBJ(obj)) && (obj->ownerid[0] == ch->ver3.id)) {
             if (obj->in_room == real_room(CENTRAL_PROCESSING)) {
-              sprintf(buf, "Your previous order is still being processed %s, %s.", GET_NAME(ch),
-                  chance(33) ? chance(50) ? "hold your horses" : "take a chill pill" : "relax, I'm a professional");
+              mob_do(collector, "shrug");
+              sprintf(buf, "Your previous order is still being processed %s, it'll be another %d minutes or so. Longer if %s is working on it I suppose.",
+                  GET_NAME(ch), obj->obj_flags.timer, kendernames[number(0, NUMELEMS(kendernames)-1 )]);
             } else {
               sprintf(buf, "You've already got an order %s, I doubt you could handle more.", GET_NAME(ch));
             }
