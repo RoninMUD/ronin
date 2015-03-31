@@ -2075,6 +2075,8 @@ char *get_club_name(CHAR *ch)
     return "None";
 }
 
+/* Prints skill/spell affects from worn equipment, applied skills and
+   spells, and enchantments. */
 void do_affect(CHAR *ch, char *arg, int cmd) {
   int i = 0;
   OBJ *obj = NULL;
@@ -2086,138 +2088,172 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   bool affects[MAX_SPL_LIST] = { FALSE };
   bool eq_af = FALSE;
 
+  /* Get affects applied by worn equipment. */
   for (i = 0; i < MAX_WEAR; i++) {
     if (!(obj = EQ(ch, i))) continue;
 
+    /* Set a simple flag for use later that shows that there was
+       some equpment worn that applied an affect. */
     if (!eq_af &&
         (obj->obj_flags.bitvector || obj->obj_flags.bitvector2)) {
       eq_af = TRUE;
     }
 
     /* affected_by */
-    if (IS_SET(obj->obj_flags.bitvector, AFF_BLIND)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_BLIND) &&
+        IS_SET(ch->specials.affected_by, AFF_BLIND)) {
       equipment[SPELL_BLINDNESS] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_INVISIBLE)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INVISIBLE) &&
+        IS_SET(ch->specials.affected_by, AFF_INVISIBLE)) {
       equipment[SPELL_INVISIBLE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_ALIGNMENT)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_ALIGNMENT) &&
+        IS_SET(ch->specials.affected_by, AFF_DETECT_ALIGNMENT)) {
       equipment[SPELL_DETECT_ALIGNMENT] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_INVISIBLE)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_INVISIBLE) &&
+        IS_SET(ch->specials.affected_by, AFF_DETECT_INVISIBLE)) {
       equipment[SPELL_DETECT_INVISIBLE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_MAGIC)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_MAGIC) &&
+        IS_SET(ch->specials.affected_by, AFF_DETECT_MAGIC)) {
       equipment[SPELL_DETECT_MAGIC] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_SENSE_LIFE)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SENSE_LIFE) &&
+        IS_SET(ch->specials.affected_by, AFF_SENSE_LIFE)) {
       equipment[SPELL_SENSE_LIFE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_HOLD)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_HOLD) &&
+        IS_SET(ch->specials.affected_by, AFF_HOLD)) {
       equipment[SPELL_HOLD] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_SANCTUARY)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SANCTUARY) &&
+        IS_SET(ch->specials.affected_by, AFF_SANCTUARY)) {
       equipment[SPELL_SANCTUARY] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_CONFUSION)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CONFUSION) &&
+        IS_SET(ch->specials.affected_by, AFF_CONFUSION)) {
       equipment[SPELL_CONFUSION] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_CURSE)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CURSE) &&
+        IS_SET(ch->specials.affected_by, AFF_CURSE)) {
       equipment[SPELL_CURSE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_SPHERE)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SPHERE) &&
+        IS_SET(ch->specials.affected_by, AFF_SPHERE)) {
       equipment[SPELL_SPHERE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_POISON)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_POISON) &&
+        IS_SET(ch->specials.affected_by, AFF_POISON)) {
       equipment[SPELL_POISON] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_PROTECT_EVIL)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PROTECT_EVIL) &&
+        IS_SET(ch->specials.affected_by, AFF_PROTECT_EVIL)) {
       equipment[SPELL_PROTECT_FROM_EVIL] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_PARALYSIS)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PARALYSIS) &&
+        IS_SET(ch->specials.affected_by, AFF_PARALYSIS)) {
       equipment[SPELL_PARALYSIS] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_INFRAVISION)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INFRAVISION) &&
+        IS_SET(ch->specials.affected_by, AFF_INFRAVISION)) {
       equipment[SPELL_INFRAVISION] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_SLEEP)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SLEEP) &&
+        IS_SET(ch->specials.affected_by, AFF_SLEEP)) {
       equipment[SPELL_SLEEP] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_DODGE)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DODGE) &&
+        IS_SET(ch->specials.affected_by, AFF_DODGE)) {
       equipment[SKILL_DODGE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_SNEAK)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SNEAK) &&
+        IS_SET(ch->specials.affected_by, AFF_SNEAK)) {
       equipment[SKILL_SNEAK] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_HIDE)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_HIDE) &&
+        IS_SET(ch->specials.affected_by, AFF_HIDE)) {
       equipment[SKILL_HIDE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_ANIMATE)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_ANIMATE) &&
+        IS_SET(ch->specials.affected_by, AFF_ANIMATE)) {
       equipment[SPELL_ANIMATE_DEAD] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_CHARM)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CHARM) &&
+        IS_SET(ch->specials.affected_by, AFF_CHARM)) {
       equipment[SPELL_CHARM_PERSON] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_PROTECT_GOOD)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PROTECT_GOOD) &&
+        IS_SET(ch->specials.affected_by, AFF_PROTECT_GOOD)) {
       equipment[SPELL_PROTECT_FROM_GOOD] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_FLY)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_FLY) &&
+        IS_SET(ch->specials.affected_by, AFF_FLY)) {
       equipment[SPELL_FLY] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_IMINV)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_IMINV) &&
+        IS_SET(ch->specials.affected_by, AFF_IMINV)) {
       equipment[SPELL_IMP_INVISIBLE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_INVUL)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INVUL) &&
+        IS_SET(ch->specials.affected_by, AFF_INVUL)) {
       equipment[SPELL_INVUL] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_DUAL)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DUAL) &&
+        IS_SET(ch->specials.affected_by, AFF_DUAL)) {
       equipment[SKILL_DUAL] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector, AFF_FURY)) {
+    if (IS_SET(obj->obj_flags.bitvector, AFF_FURY) &&
+        IS_SET(ch->specials.affected_by, AFF_FURY)) {
       equipment[SPELL_FURY] = TRUE;
     }
 
     /* affected_by2 */
-    if (IS_SET(obj->obj_flags.bitvector2, AFF_TRIPLE)) {
+    if (IS_SET(obj->obj_flags.bitvector2, AFF_TRIPLE) &&
+        IS_SET(ch->specials.affected_by2, AFF_TRIPLE)) {
       equipment[SKILL_TRIPLE] = TRUE;
     }
 
-    if (IS_SET(obj->obj_flags.bitvector2, AFF_QUAD)) {
+    if (IS_SET(obj->obj_flags.bitvector2, AFF_QUAD) &&
+        IS_SET(ch->specials.affected_by2, AFF_QUAD)) {
       equipment[SKILL_QUAD] = TRUE;
     }
   }
 
+  /* Check if we need to actually print anything. */
   if (eq_af ||
       ch->affected ||
       ch->enchantments) {
     send_to_char("\n\rAffected by:\n\r-----------", ch);
 
+    /* Print skill/spell affects first. */
     if (ch->affected) {
       send_to_char("\n\r", ch);
 
@@ -2244,6 +2280,8 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       }
     }
 
+    /* Next, print enchantments. They are unique by name, so this is
+       a bit more simple than skill/spell affects. */
     if (ch->enchantments) {
       send_to_char("\n\r", ch);
 
@@ -2261,6 +2299,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       }
     }
 
+    /* Finally, print any affects from worn equipment. */
     if (eq_af) {
       send_to_char("\n\r", ch);
 
