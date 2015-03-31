@@ -1172,7 +1172,6 @@ int aq_objs[][2] = {
   {6803, 3}, // buckler of obeisance 50
   {7502, 3}, // a dueling pistol 50
   {7506, 3}, // a silk scarf 15
-  {7701, 3}, // a heavy crocodile skin 100
   {8337, 3}, // a long white coat 50
   {8402, 3}, // The Dagger of Aldor 17
   {8603, 3}, // The Holy Grail 10

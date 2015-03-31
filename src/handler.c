@@ -653,7 +653,7 @@ void char_to_room(struct char_data *ch, int room)
   if(room<0)
      room = 0;
   if (IS_SET(world[room].room_flags, LOCK) &&
-      (GET_LEVEL(ch) < LEVEL_IMP) &&
+      (GET_LEVEL(ch) < LEVEL_SUP) &&
       real_room(1212) != room &&
       real_room(3054) != room &&
       !isname(GET_NAME(ch),world[room].name)) {
