@@ -2075,25 +2075,49 @@ char *get_club_name(CHAR *ch)
     return "None";
 }
 
+#define AFF_SRC_AF 1
+#define AFF_SRC_EN 2
+#define AFF_SRC_EQ 3
+
+struct affect {
+  char name[MIL];
+  int duration;
+  int type;
+  int source;
+};
+
+int compare_affects(const void *affect1, const void *affect2) {
+  struct affect *af1 = (struct affect *)affect1;
+  struct affect *af2 = (struct affect *)affect2;
+
+  return strcmp(af1->name, af2->name);
+}
+
 /* Prints skill/spell affects from worn equipment, applied skills and
-   spells, and enchantments. */
+spells, and enchantments. */
 void do_affect(CHAR *ch, char *arg, int cmd) {
   int i = 0;
+  int count = 0;
+  int longest_str = 0;
   OBJ *obj = NULL;
   AFF *tmp_af = NULL;
   ENCH *tmp_ench = NULL;
-  char buf[MIL];
-  char buf2[MIL];
+  bool eq_af = FALSE;
   bool equipment[MAX_SPL_LIST] = { FALSE };
   bool affects[MAX_SPL_LIST] = { FALSE };
-  bool eq_af = FALSE;
+  struct affect af_list[MAX_SPL_LIST];
+  struct affect af_new;
+  char buf[MIL];
+  char buf2[MIL];
 
-  /* Get affects applied by worn equipment. */
+  /* Get affects applied by worn equipment. This is a bit messy
+  because these are bits set in a bitvector and don't directly
+  map to anything in spells[]. */
   for (i = 0; i < MAX_WEAR; i++) {
     if (!(obj = EQ(ch, i))) continue;
 
     /* Set a simple flag for use later that shows that there was
-       some equpment worn that applied an affect. */
+    some equpment worn that applied an affect. */
     if (!eq_af &&
         (obj->obj_flags.bitvector || obj->obj_flags.bitvector2)) {
       eq_af = TRUE;
@@ -2247,55 +2271,123 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     }
   }
 
-  /* Check if we need to actually print anything. */
+  /* Check if we actually need to print anything. */
   if (eq_af ||
       ch->affected ||
       ch->enchantments) {
-    send_to_char("\n\rAffected by:\n\r-----------", ch);
+    /* This variable keeps track of where we are in the list of affects. */
+    count = 0;
+    /* Clear the list just to be safe. */
+    memset(af_list, 0, sizeof(struct affect) * MAX_SPL_LIST);
 
-    /* Print skill/spell affects first. */
+    /* Process skill/spell affects. */
     if (ch->affected) {
-      send_to_char("\n\r", ch);
-
-      for (tmp_af = ch->affected; tmp_af; tmp_af = tmp_af->next) {
+      for (tmp_af = ch->affected; tmp_af && (count < MAX_SPL_LIST); tmp_af = tmp_af->next, count++) {
+        /* Only count the affect once, from either equipment, or 
+         applied skill/spell affects. */
         if (!equipment[tmp_af->type] && !affects[tmp_af->type]) {
           affects[tmp_af->type] = TRUE;
 
-          snprintf(buf, sizeof(buf), "'%s'", spells[tmp_af->type - 1]);
+          memset(&af_new, 0, sizeof(struct affect));
 
-          if (tmp_af->duration == -1) {
-            snprintf(buf2, sizeof(buf2), "Never Expires");
-          }
-          else {
-            if (tmp_af->type == SKILL_MANTRA) {
-              snprintf(buf2, sizeof(buf2), "Expires in: ~%3d Secs.", tmp_af->duration * 10);
-            }
-            else {
-              snprintf(buf2, sizeof(buf2), "Expires in: %4d Tick%s", tmp_af->duration, tmp_af->duration > 1 ? "s" : "");
-            }
-          }
+          strcpy(af_new.name, spells[tmp_af->type - 1]);
+          af_new.type = tmp_af->type;
+          af_new.duration = tmp_af->duration;
+          af_new.source = AFF_SRC_AF;
 
-          printf_to_char(ch, "Skill/Spell: %-34s %s\n\r", buf, buf2);
+          memcpy(&af_list[count], &af_new, sizeof(struct affect));
+
+          if (strlen(af_list[count].name) > longest_str) {
+            longest_str = strlen(af_list[count].name);
+          }
         }
       }
     }
 
-    /* Next, print enchantments. They are unique by name, so this is
-       a bit more simple than skill/spell affects. */
+    /* Process enchantments. */
     if (ch->enchantments) {
-      send_to_char("\n\r", ch);
+      for (tmp_ench = ch->enchantments; tmp_ench && (count < MAX_SPL_LIST); tmp_ench = tmp_ench->next, count++) {
+        memset(&af_new, 0, sizeof(struct affect));
 
-      for (tmp_ench = ch->enchantments; tmp_ench; tmp_ench = tmp_ench->next) {
-        snprintf(buf, sizeof(buf), "'%s'", tmp_ench->name);
+        strcpy(af_new.name, tmp_ench->name);
+        af_new.type = AFF_NONE;
+        af_new.duration = tmp_ench->duration;
+        af_new.source = AFF_SRC_EN;
 
-        if (tmp_ench->duration == -1) {
+        memcpy(&af_list[count], &af_new, sizeof(struct affect));
+
+        if (strlen(af_list[count].name) > longest_str) {
+          longest_str = strlen(af_list[count].name);
+        }
+      }
+    }
+
+    /* Process affects applied by equipment. */
+    if (eq_af) {
+      for (i = 0; (i < MAX_SPL_LIST) && (count < MAX_SPL_LIST); i++, count++) {
+        if (equipment[i]) {
+          memset(&af_new, 0, sizeof(struct affect));
+
+          strcpy(af_new.name, spells[i - 1]);
+          af_new.type = i;
+          af_new.duration = -1;
+          af_new.source = AFF_SRC_EQ;
+
+          memcpy(&af_list[count], &af_new, sizeof(struct affect));
+
+          if (strlen(af_list[count].name) > longest_str) {
+            longest_str = strlen(af_list[count].name);
+          }
+        }
+      }
+    }
+
+    /* Sort the list of applied affects alphabetically. */
+    qsort((void *)&af_list, MAX_SPL_LIST, sizeof(struct affect), compare_affects);
+
+    send_to_char("\n\rAffected by:\n\r-----------\n\r", ch);
+
+    /* Print skill/spell affects first. */
+    if (ch->affected) {
+      for (i = 0; i < MAX_SPL_LIST; i++) {
+        if (af_list[i].source != AFF_SRC_AF) continue;
+
+        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+
+        if (af_list[i].duration == -1) {
           snprintf(buf2, sizeof(buf2), "Never Expires");
         }
         else {
-          snprintf(buf2, sizeof(buf2), "Expires in: %4d Tick%s", tmp_ench->duration, tmp_ench->duration > 1 ? "s" : " ");
+          if (af_list[i].type == SKILL_MANTRA) {
+            snprintf(buf2, sizeof(buf2), "Expires in: ~%3d Secs.", af_list[i].duration * 10);
+          }
+          else {
+            snprintf(buf2, sizeof(buf2), "Expires in: %4d Tick%s", af_list[i].duration, af_list[i].duration > 1 ? "s" : "");
+          }
         }
 
-        printf_to_char(ch, "Enchantment: %-34s %s\n\r", buf, buf2);
+        printf_to_char(ch, "Skill/Spell: %-*s %s\n\r", longest_str + 2, buf, buf2);
+      }
+    }
+
+    /* Next, print enchantments. They are unique by name, so this is
+    a bit more simple than skill/spell affects. */
+    if (ch->enchantments) {
+      send_to_char("\n\r", ch);
+
+      for (i = 0; i < MAX_SPL_LIST; i++) {
+        if (af_list[i].source != AFF_SRC_EN) continue;
+
+        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+
+        if (af_list[i].duration == -1) {
+          snprintf(buf2, sizeof(buf2), "Never Expires");
+        }
+        else {
+          snprintf(buf2, sizeof(buf2), "Expires in: %4d Tick%s", af_list[i].duration, af_list[i].duration > 1 ? "s" : " ");
+        }
+
+        printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
       }
     }
 
@@ -2304,11 +2396,11 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       send_to_char("\n\r", ch);
 
       for (i = 0; i < MAX_SPL_LIST; i++) {
-        if (equipment[i]) {
-          snprintf(buf, sizeof(buf), "'%s'", spells[i - 1]);
+        if (af_list[i].source != AFF_SRC_EQ) continue;
 
-          printf_to_char(ch, "  Equipment: %-34s Never Expires\n\r", buf);
-        }
+        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+
+        printf_to_char(ch, "  Equipment: %-*s Never Expires\n\r", longest_str + 2, buf);
       }
     }
   }
