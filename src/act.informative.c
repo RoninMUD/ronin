@@ -76,6 +76,7 @@ extern char *BKColor[];
 extern int exp_table[58];
 extern char *pc_class_types[];
 extern struct dex_app_type dex_app[];
+extern char *spells[];
 
 /* extern functions */
 
@@ -2074,50 +2075,205 @@ char *get_club_name(CHAR *ch)
     return "None";
 }
 
-void do_affect(struct char_data *ch, char *argument, int cmd)
-{
-  extern char *spells[];
+void do_affect(CHAR *ch, char *arg, int cmd) {
+  int i = 0;
+  OBJ *obj = NULL;
   AFF *tmp_af = NULL;
   ENCH *tmp_ench = NULL;
-  char buf[MSL];
+  char buf[MIL];
+  char buf2[MIL];
+  bool equipment[MAX_SPL_LIST] = { FALSE };
+  bool affects[MAX_SPL_LIST] = { FALSE };
+  bool eq_af = FALSE;
 
-  if (ch->affected || ch->enchantments)
-  {
-    if (ch->affected)
-    {
-      send_to_char("\n\rAffecting Spells/Skills:\n\r-----------------------\n\r", ch);
+  for (i = 0; i < MAX_WEAR; i++) {
+    if (!(obj = EQ(ch, i))) continue;
 
-      for (tmp_af = ch->affected; tmp_af; tmp_af = tmp_af->next)
-      {
-        sprintf(buf, "      Spell/Skill : '%s'\n\r", spells[tmp_af->type - 1]);
-        send_to_char(buf, ch);
+    if (!eq_af &&
+        (obj->obj_flags.bitvector || obj->obj_flags.bitvector2)) {
+      eq_af = TRUE;
+    }
 
-        if (tmp_af->type == SKILL_MANTRA)
-        {
-          sprintf(buf, "            Expires in %3d seconds (approx.)\n\r", tmp_af->duration * 10);
+    /* affected_by */
+    if (IS_SET(obj->obj_flags.bitvector, AFF_BLIND)) {
+      equipment[SPELL_BLINDNESS] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INVISIBLE)) {
+      equipment[SPELL_INVISIBLE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_ALIGNMENT)) {
+      equipment[SPELL_DETECT_ALIGNMENT] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_INVISIBLE)) {
+      equipment[SPELL_DETECT_INVISIBLE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_MAGIC)) {
+      equipment[SPELL_DETECT_MAGIC] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SENSE_LIFE)) {
+      equipment[SPELL_SENSE_LIFE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_HOLD)) {
+      equipment[SPELL_HOLD] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SANCTUARY)) {
+      equipment[SPELL_SANCTUARY] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CONFUSION)) {
+      equipment[SPELL_CONFUSION] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CURSE)) {
+      equipment[SPELL_CURSE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SPHERE)) {
+      equipment[SPELL_SPHERE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_POISON)) {
+      equipment[SPELL_POISON] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PROTECT_EVIL)) {
+      equipment[SPELL_PROTECT_FROM_EVIL] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PARALYSIS)) {
+      equipment[SPELL_PARALYSIS] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INFRAVISION)) {
+      equipment[SPELL_INFRAVISION] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SLEEP)) {
+      equipment[SPELL_SLEEP] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DODGE)) {
+      equipment[SKILL_DODGE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SNEAK)) {
+      equipment[SKILL_SNEAK] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_HIDE)) {
+      equipment[SKILL_HIDE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_ANIMATE)) {
+      equipment[SPELL_ANIMATE_DEAD] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CHARM)) {
+      equipment[SPELL_CHARM_PERSON] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PROTECT_GOOD)) {
+      equipment[SPELL_PROTECT_FROM_GOOD] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_FLY)) {
+      equipment[SPELL_FLY] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_IMINV)) {
+      equipment[SPELL_IMP_INVISIBLE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INVUL)) {
+      equipment[SPELL_INVUL] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DUAL)) {
+      equipment[SKILL_DUAL] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_FURY)) {
+      equipment[SPELL_FURY] = TRUE;
+    }
+
+    /* affected_by2 */
+    if (IS_SET(obj->obj_flags.bitvector2, AFF_TRIPLE)) {
+      equipment[SKILL_TRIPLE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector2, AFF_QUAD)) {
+      equipment[SKILL_QUAD] = TRUE;
+    }
+  }
+
+  if (eq_af ||
+      ch->affected ||
+      ch->enchantments) {
+    send_to_char("\n\rAffected by:\n\r-----------", ch);
+
+    if (ch->affected) {
+      send_to_char("\n\r", ch);
+
+      for (tmp_af = ch->affected; tmp_af; tmp_af = tmp_af->next) {
+        if (!equipment[tmp_af->type] && !affects[tmp_af->type]) {
+          affects[tmp_af->type] = TRUE;
+
+          snprintf(buf, sizeof(buf), "'%s'", spells[tmp_af->type - 1]);
+
+          if (tmp_af->duration == -1) {
+            snprintf(buf2, sizeof(buf2), "Never Expires");
+          }
+          else {
+            if (tmp_af->type == SKILL_MANTRA) {
+              snprintf(buf2, sizeof(buf2), "Expires in: ~%3d Secs.", tmp_af->duration * 10);
+            }
+            else {
+              snprintf(buf2, sizeof(buf2), "Expires in: %4d Tick%s", tmp_af->duration, tmp_af->duration > 1 ? "s" : "");
+            }
+          }
+
+          printf_to_char(ch, "Skill/Spell: %-34s %s\n\r", buf, buf2);
         }
-        else
-        {
-          sprintf(buf, "            Expires in %3d ticks\n\r", tmp_af->duration);
-        }
-
-        send_to_char(buf, ch);
       }
     }
 
-    if (ch->enchantments)
-    {
-      send_to_char("\n\rEnchantments:\n\r------------\n\r", ch);
+    if (ch->enchantments) {
+      send_to_char("\n\r", ch);
 
-      for (tmp_ench = ch->enchantments; tmp_ench; tmp_ench = tmp_ench->next)
-      {
-        sprintf(buf,"     '%s'\n\r", tmp_ench->name);
-        send_to_char(buf,ch);
+      for (tmp_ench = ch->enchantments; tmp_ench; tmp_ench = tmp_ench->next) {
+        snprintf(buf, sizeof(buf), "'%s'", tmp_ench->name);
+
+        if (tmp_ench->duration == -1) {
+          snprintf(buf2, sizeof(buf2), "Never Expires");
+        }
+        else {
+          snprintf(buf2, sizeof(buf2), "Expires in: %4d Tick%s", tmp_ench->duration, tmp_ench->duration > 1 ? "s" : " ");
+        }
+
+        printf_to_char(ch, "Enchantment: %-34s %s\n\r", buf, buf2);
+      }
+    }
+
+    if (eq_af) {
+      send_to_char("\n\r", ch);
+
+      for (i = 0; i < MAX_SPL_LIST; i++) {
+        if (equipment[i]) {
+          snprintf(buf, sizeof(buf), "'%s'", spells[i - 1]);
+
+          printf_to_char(ch, "  Equipment: %-34s Never Expires\n\r", buf);
+        }
       }
     }
   }
-  else
-  {
+  else {
     send_to_char("You are not affected by any spell, skill or enchantment.\n\r", ch);
   }
 }

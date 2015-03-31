@@ -1768,6 +1768,7 @@ ENCH *get_enchantment(ENCH *enchantment, int must_find)
     ench->bitvector2 = enchantments[index].bitvector2;
     ench->type = index;
     ench->func = enchantments[index].func;
+    ench->duration = enchantments[index].duration;
   }
   else
   {

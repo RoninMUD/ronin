@@ -350,7 +350,6 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define GET_DESCRIPTOR(ch) (ch->desc)
 #define GET_WAS_IN_ROOM(ch) (ch->specials.was_in_room)
 #define GET_SKILLS(ch) (ch->skills)
-#define GET_AFFECTS(ch) (ch->affected)
 #define GET_PEOPLE(room) (world[room].people)
 #define GET_ROOM_FLAGS(room) (world[room].room_flags)
 #endif /* __UTILS_H__ */

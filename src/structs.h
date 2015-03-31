@@ -470,25 +470,24 @@ struct room_data
 
 /* If adding a position, check char_to_store in reception.c - Ranger Aug 96 */
 
-#define WEAR_LIGHT      0
-#define WEAR_FINGER_R   1
-#define WEAR_FINGER_L   2
-#define WEAR_NECK_1     3
-#define WEAR_NECK_2     4
-#define WEAR_BODY       5
-#define WEAR_HEAD       6
-#define WEAR_LEGS       7
-#define WEAR_FEET       8
-#define WEAR_HANDS      9
-#define WEAR_ARMS      10
-#define WEAR_SHIELD    11
-#define WEAR_ABOUT     12
+#define WEAR_LIGHT    0
+#define WEAR_FINGER_R 1
+#define WEAR_FINGER_L 2
+#define WEAR_NECK_1   3
+#define WEAR_NECK_2   4
+#define WEAR_BODY     5
+#define WEAR_HEAD     6
+#define WEAR_LEGS     7
+#define WEAR_FEET     8
+#define WEAR_HANDS    9
+#define WEAR_ARMS     10
+#define WEAR_SHIELD   11
+#define WEAR_ABOUT    12
 #define WEAR_WAIST    13
-#define WEAR_WRIST_R   14
-#define WEAR_WRIST_L   15
-#define WIELD          16
-#define HOLD           17
-
+#define WEAR_WRIST_R  14
+#define WEAR_WRIST_L  15
+#define WIELD         16
+#define HOLD          17
 
 /* For 'char_payer_data' */
 
@@ -505,6 +504,7 @@ struct room_data
 #define QUAFF        3
 
 /* Bitvector for 'affected_by' */
+/* Don't forget to update do_affect if you add something here. */
 #define AFF_NONE              0
 #define AFF_BLIND             1
 #define AFF_INVISIBLE         2
@@ -537,15 +537,16 @@ struct room_data
 #define AFF_DUAL              268435456
 #define AFF_FURY              536870912
 #define AFF_FINAL             1073741824
-/* modifiers to char's abilities */
 
-/* affected_by 2 */
+/* Bitvector for 'affected_by2' */
+/* Don't forget to update do_affect if you add something here. */
 #define AFF_TRIPLE            1
 #define AFF_IMMINENT_DEATH    2 /* also uses death_timer */
 #define AFF_SEVERED           4
 #define AFF_QUAD              8
 #define AFF2_FINAL            16
 
+/* modifiers to char's abilities */
 #define APPLY_NONE              0
 #define APPLY_STR               1
 #define APPLY_DEX               2
