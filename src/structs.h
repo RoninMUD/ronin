@@ -32,6 +32,8 @@ typedef char byte;
 #define MAX_USERID        50
 #define MAX_ATTS          10
 
+#define MAX_DNAME_LENGTH  20
+
 #define OPT_USEC      100000      /* 10 passes per second */
 #define PASSES_PER_SEC      (1000000 / OPT_USEC)
 #define RL_SEC            * PASSES_PER_SEC
