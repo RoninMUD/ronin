@@ -2099,6 +2099,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   int i = 0;
   int count = 0;
   int longest_str = 0;
+  int longest_dur = 0;
   OBJ *obj = NULL;
   AFF *tmp_af = NULL;
   ENCH *tmp_ench = NULL;
@@ -2283,8 +2284,8 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     /* Process skill/spell affects. */
     if (ch->affected) {
       for (tmp_af = ch->affected; tmp_af && (count < MAX_SPL_LIST); tmp_af = tmp_af->next, count++) {
-        /* Only count the affect once, from either equipment, or 
-         applied skill/spell affects. */
+        /* Only count the affect once, from either equipment, or
+        applied skill/spell affects. */
         if (!equipment[tmp_af->type] && !affects[tmp_af->type]) {
           affects[tmp_af->type] = TRUE;
 
@@ -2297,8 +2298,17 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
           memcpy(&af_list[count], &af_new, sizeof(struct affect));
 
+          /* Record the longest string for use in printing. */
           if (strlen(af_list[count].name) > longest_str) {
             longest_str = strlen(af_list[count].name);
+          }
+
+          /* Record the longest duration for use in printing. */
+          if (af_list[count].duration > longest_dur) {
+            /* SKILL_MANTRA length is multiplied by 100 instead of 10
+            to take into accout the ~ character. */
+            longest_dur = ((af_list[count].type == SKILL_MANTRA) ?
+                           (af_list[count].duration * 100) : af_list[count].duration);
           }
         }
       }
@@ -2316,8 +2326,14 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
         memcpy(&af_list[count], &af_new, sizeof(struct affect));
 
+        /* Record the longest string for use in printing. */
         if (strlen(af_list[count].name) > longest_str) {
           longest_str = strlen(af_list[count].name);
+        }
+
+        /* Record the longest duration for use in printing. */
+        if (af_list[count].duration > longest_dur) {
+          longest_dur = af_list[count].duration;
         }
       }
     }
@@ -2335,12 +2351,21 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
           memcpy(&af_list[count], &af_new, sizeof(struct affect));
 
+          /* Record the longest string for use in printing. */
           if (strlen(af_list[count].name) > longest_str) {
             longest_str = strlen(af_list[count].name);
+          }
+
+          /* Record the longest duration for use in printing. */
+          if (af_list[count].duration > longest_dur) {
+            longest_dur = af_list[count].duration;
           }
         }
       }
     }
+
+    /* Calculate the length of the longest duration for use in printing. */
+    longest_dur = (longest_dur == 0) ? 1 : (floor(log10(abs(longest_dur))) + 1);
 
     /* Sort the list of applied affects alphabetically. */
     qsort((void *)&af_list, MAX_SPL_LIST, sizeof(struct affect), compare_affects);
@@ -2359,10 +2384,12 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
         }
         else {
           if (af_list[i].type == SKILL_MANTRA) {
-            snprintf(buf2, sizeof(buf2), "Expires in: ~%3d Secs.", af_list[i].duration * 10);
+            snprintf(buf2, sizeof(buf2), "Expires in: ~%*d Secs.",
+                     ((longest_dur < 2) ? longest_dur : (longest_dur - 1)), (af_list[i].duration * 10));
           }
           else {
-            snprintf(buf2, sizeof(buf2), "Expires in: %4d Tick%s", af_list[i].duration, af_list[i].duration > 1 ? "s" : "");
+            snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
+                     longest_dur, af_list[i].duration, ((af_list[i].duration > 1) ? "s" : ""));
           }
         }
 
@@ -2384,7 +2411,8 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
           snprintf(buf2, sizeof(buf2), "Never Expires");
         }
         else {
-          snprintf(buf2, sizeof(buf2), "Expires in: %4d Tick%s", af_list[i].duration, af_list[i].duration > 1 ? "s" : " ");
+          snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
+                   longest_dur, af_list[i].duration, ((af_list[i].duration > 1) ? "s" : " "));
         }
 
         printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
