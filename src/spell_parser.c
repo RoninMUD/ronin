@@ -4,111 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:29 $
-$Header: /home/ronin/cvs/ronin/spell_parser.c,v 2.22 2005/01/21 14:55:29 ronin Exp $
-$Id: spell_parser.c,v 2.22 2005/01/21 14:55:29 ronin Exp $
-$Name:  $
-$Log: spell_parser.c,v $
-Revision 2.22  2005/01/21 14:55:29  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.21  2004/11/19 17:20:33  void
-Changed name of lvl 50 ninja spell to mystic swiftness
-
-Revision 2.20  2004/11/19 14:47:21  void
-New Level 50 Ninja Spell (adds chance of 3rd hit)
-
-Revision 2.19  2004/11/17 19:21:52  void
-Added Nomad Skill Cover (1/2 Damage -10 Hitroll)
-
-Revision 2.18  2004/11/16 05:05:03  ronin
-Chaos 2004 Update.
-
-Revision 2.17  2004/10/21 17:08:22  void
-Added level 50 AP spell Blood Lust
-
-Revision 2.16  2004/09/30 15:59:00  ronin
-Fixed mana reduction calc at level 50.
-
-Revision 2.15  2004/09/29 22:56:13  void
-Spell Rush for Commando
-
-Revision 2.14  2004/09/28 20:07:03  void
-Some more fixes to Divine Intervention
-
-Revision 2.13  2004/09/28 14:28:01  void
-Added Level 50 Cleric Spell Divine Intervention
-
-Revision 2.12  2004/09/22 21:58:26  void
-Added level 50 Mage spell Quick (Allows for 2 casts in a single combat
-round)
-
-Revision 2.11  2004/09/20 23:08:14  void
-Increased Fury mana cost from 60 to 150 @ level 50
-
-Revision 2.10  2004/09/20 15:01:13  void
-Added chance of 10% spell cost reduction @ 50
-
-Revision 2.9  2004/09/13 21:35:37  void
-Bard - Haste, Paladin - Improved Fury
-
-Revision 2.8  2004/08/16 18:13:36  void
-Added Warrior Skill Quad
-
-Revision 2.7  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
-
-Revision 2.6  2004/02/26 18:02:10  void
-Gave Mages Shroud of Existence Spell
-
-Revision 2.5  2004/02/19 19:20:22  void
-Added Spell Shroud of Existence (Good Align Commando Spell)
-
-Revision 2.4  2004/02/14 13:12:50  void
-Fixed a couple errors I made
-
-Revision 2.2  2004/02/12 21:48:42  Void
-Removed Detect Magic From Bard Spells
-
-Revision 2.1  2004/02/11 22:21:42  Void
-Changed Paladin spells
-removed forget
-removed cure serious spray
-changed super harm to level 32 spell
-
-Revision 2.0.0.1  2004/02/05 16:11:43  ronin
-Reinitialization of cvs archives
-
-
-Revision - changed mana cost of disrupt_sanct from 200 to 350 and increased
-success of cast in subclass.spells.c
-
-Revision - change of rejuvenation song words to There Is No Heart That Won't Heal
-
-Revision 1.6  2002/06/05 02:56:07  ronin
-Fix for power of faith to be castable in battle.
-
-Revision 1.5  2002/04/27 05:47:53  ronin
-Fix for signal MSG_SPELL_CAST.
-
-Revision 1.4  2002/04/23 13:50:28  ronin
-Addition of MSG_SPELL_CAST signal to caster.
-
-Revision 1.3  2002/04/18 18:44:14  ronin
-Fix to have mana deducted before the spell is cast.
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -2170,7 +2065,7 @@ void assign_spell_pointers(void)
   SPELLO(193, 30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,    0, TAR_SELF_ONLY,                                                                cast_degenerate);
   SPELLO(192, 30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_fortification);
   SPELLO(191, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_disrupt_sanct);
-  SPELLO(190, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wrath_of_god);
+  SPELLO(190, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wrath_of_god);
   SPELLO(189, 30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_power_of_devotion);
   SPELLO(188, 30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_focus);
   SPELLO(187, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_power_of_faith);
