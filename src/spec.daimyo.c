@@ -6,36 +6,6 @@
 ///
 */
 
-/*
-$Author: ronin $
-$Date: 2005/04/17 14:42:15 $
-$Header: /home/ronin/cvs/ronin/spec.daimyo.c,v 2.3 2005/04/17 14:42:15 ronin Exp $
-$Id: spec.daimyo.c,v 2.3 2005/04/17 14:42:15 ronin Exp $
-$Name:  $
-$Log: spec.daimyo.c,v $
-Revision 2.3  2005/04/17 14:42:15  ronin
-Fixed compile error.
-
-Revision 2.2  2005/02/14 16:31:42  ronin
-Update of battlesuit spec.
-
-Revision 2.1  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
-
-Revision 2.0.0.1  2004/02/05 16:10:23  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2003/01/25 07:42:15  ronin
-Losing vamp_touch, added mana trans spec
-to thorn.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -69,6 +39,7 @@ extern CHAR *character_list;
 #define HACHI_START_ROOM        20132
 #define BONE_WAND               20131
 #define JADE_HELM               20138
+#define NINJA_ROOM              20147
 
 #define TONASHI_WRESTLER          540
 #define SHOGUN_WARLORD          20145
@@ -281,22 +252,30 @@ int warlord(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       if (percent>20) return FALSE; /* Awful condition for ninja to rescue. */
 
       num_ninjas = 0;
-      for (ninja = world[CHAR_REAL_ROOM(mob)].people; ninja; ninja = ninja->next_in_room)  {
-	      if(IS_MOB(ninja)) {
-	        if(V_MOB(ninja)==NINJA_ASSASIN) num_ninjas = num_ninjas + 1;
-	      }
+      for (ninja = world[CHAR_REAL_ROOM(mob)].people; ninja; ninja = ninja->next_in_room) {
+        if(IS_MOB(ninja)) {
+          if(V_MOB(ninja)==NINJA_ASSASIN) num_ninjas = num_ninjas + 1;
+        }
       }
 
       if(num_ninjas < 6) {
-      	ninja = read_mobile(NINJA_ASSASIN,VIRTUAL);
-      	act("A black garbed ninja appears from the west, quickly draws his blade and attacks YOU!",
-             FALSE, mob, 0, ninja, TO_VICT);
-      	act("You appear from the west and attack $N!",
-	           FALSE, ninja, 0, vict, TO_CHAR);
-      	act("A black garbed ninja appears from the west and attacks $N!",
-	           FALSE, ninja, 0 , vict, TO_NOTVICT);
-      	char_to_room(ninja,CHAR_REAL_ROOM(vict));
-      	set_fighting(ninja,vict);
+        // pull in an existing ninja from the adjoining room
+        for (ninja = world[real_room(NINJA_ROOM)].people; ninja; ninja = ninja->next_in_room) {
+          if (IS_MOB(ninja) && (V_MOB(ninja) == NINJA_ASSASIN)) break;
+        }
+
+        if (ninja) {
+          char_from_room(ninja);
+        }
+        else {
+          ninja = read_mobile(NINJA_ASSASIN,VIRTUAL);
+        }
+
+        char_to_room(ninja, CHAR_REAL_ROOM(vict));
+        act("A black garbed ninja appears from the west, quickly draws his blade and attacks YOU!", FALSE, ninja, 0, vict, TO_VICT);
+        act("You appear from the west and attack $N!", FALSE, ninja, 0, vict, TO_CHAR);
+        act("A black garbed ninja appears from the west and attacks $N!", FALSE, ninja, 0, vict, TO_NOTVICT);
+        set_fighting(ninja, vict);
       }
       break;
    }
