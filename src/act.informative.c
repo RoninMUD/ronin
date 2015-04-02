@@ -76,6 +76,7 @@ extern char *BKColor[];
 extern int exp_table[58];
 extern char *pc_class_types[];
 extern struct dex_app_type dex_app[];
+extern char *spells[];
 
 /* extern functions */
 
@@ -2074,50 +2075,364 @@ char *get_club_name(CHAR *ch)
     return "None";
 }
 
-void do_affect(struct char_data *ch, char *argument, int cmd)
-{
-  extern char *spells[];
+#define AFF_SRC_AF 1
+#define AFF_SRC_EN 2
+#define AFF_SRC_EQ 3
+
+struct affect {
+  char name[MIL];
+  int duration;
+  int type;
+  int source;
+};
+
+int compare_affects(const void *affect1, const void *affect2) {
+  struct affect *af1 = (struct affect *)affect1;
+  struct affect *af2 = (struct affect *)affect2;
+
+  return strcmp(af1->name, af2->name);
+}
+
+/* Prints skill/spell affects from worn equipment, applied skills and
+spells, and enchantments. */
+void do_affect(CHAR *ch, char *arg, int cmd) {
+  int i = 0;
+  int count = 0;
+  int longest_str = 0;
+  int longest_dur = 0;
+  OBJ *obj = NULL;
   AFF *tmp_af = NULL;
   ENCH *tmp_ench = NULL;
-  char buf[MSL];
+  bool eq_af = FALSE;
+  bool equipment[MAX_SPL_LIST] = { FALSE };
+  bool affects[MAX_SPL_LIST] = { FALSE };
+  struct affect af_list[MAX_SPL_LIST];
+  struct affect af_new;
+  char buf[MIL];
+  char buf2[MIL];
 
-  if (ch->affected || ch->enchantments)
-  {
-    if (ch->affected)
-    {
-      send_to_char("\n\rAffecting Spells/Skills:\n\r-----------------------\n\r", ch);
+  /* Get affects applied by worn equipment. This is a bit messy
+  because these are bits set in a bitvector and don't directly
+  map to anything in spells[]. */
+  for (i = 0; i < MAX_WEAR; i++) {
+    if (!(obj = EQ(ch, i))) continue;
 
-      for (tmp_af = ch->affected; tmp_af; tmp_af = tmp_af->next)
-      {
-        sprintf(buf, "      Spell/Skill : '%s'\n\r", spells[tmp_af->type - 1]);
-        send_to_char(buf, ch);
+    /* Set a simple flag for use later that shows that there was
+    some equpment worn that applied an affect. */
+    if (!eq_af &&
+        (obj->obj_flags.bitvector || obj->obj_flags.bitvector2)) {
+      eq_af = TRUE;
+    }
 
-        if (tmp_af->type == SKILL_MANTRA)
-        {
-          sprintf(buf, "            Expires in %3d seconds (approx.)\n\r", tmp_af->duration * 10);
+    /* affected_by */
+    if (IS_SET(obj->obj_flags.bitvector, AFF_BLIND) &&
+        IS_SET(ch->specials.affected_by, AFF_BLIND)) {
+      equipment[SPELL_BLINDNESS] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INVISIBLE) &&
+        IS_SET(ch->specials.affected_by, AFF_INVISIBLE)) {
+      equipment[SPELL_INVISIBLE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_ALIGNMENT) &&
+        IS_SET(ch->specials.affected_by, AFF_DETECT_ALIGNMENT)) {
+      equipment[SPELL_DETECT_ALIGNMENT] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_INVISIBLE) &&
+        IS_SET(ch->specials.affected_by, AFF_DETECT_INVISIBLE)) {
+      equipment[SPELL_DETECT_INVISIBLE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DETECT_MAGIC) &&
+        IS_SET(ch->specials.affected_by, AFF_DETECT_MAGIC)) {
+      equipment[SPELL_DETECT_MAGIC] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SENSE_LIFE) &&
+        IS_SET(ch->specials.affected_by, AFF_SENSE_LIFE)) {
+      equipment[SPELL_SENSE_LIFE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_HOLD) &&
+        IS_SET(ch->specials.affected_by, AFF_HOLD)) {
+      equipment[SPELL_HOLD] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SANCTUARY) &&
+        IS_SET(ch->specials.affected_by, AFF_SANCTUARY)) {
+      equipment[SPELL_SANCTUARY] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CONFUSION) &&
+        IS_SET(ch->specials.affected_by, AFF_CONFUSION)) {
+      equipment[SPELL_CONFUSION] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CURSE) &&
+        IS_SET(ch->specials.affected_by, AFF_CURSE)) {
+      equipment[SPELL_CURSE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SPHERE) &&
+        IS_SET(ch->specials.affected_by, AFF_SPHERE)) {
+      equipment[SPELL_SPHERE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_POISON) &&
+        IS_SET(ch->specials.affected_by, AFF_POISON)) {
+      equipment[SPELL_POISON] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PROTECT_EVIL) &&
+        IS_SET(ch->specials.affected_by, AFF_PROTECT_EVIL)) {
+      equipment[SPELL_PROTECT_FROM_EVIL] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PARALYSIS) &&
+        IS_SET(ch->specials.affected_by, AFF_PARALYSIS)) {
+      equipment[SPELL_PARALYSIS] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INFRAVISION) &&
+        IS_SET(ch->specials.affected_by, AFF_INFRAVISION)) {
+      equipment[SPELL_INFRAVISION] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SLEEP) &&
+        IS_SET(ch->specials.affected_by, AFF_SLEEP)) {
+      equipment[SPELL_SLEEP] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DODGE) &&
+        IS_SET(ch->specials.affected_by, AFF_DODGE)) {
+      equipment[SKILL_DODGE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_SNEAK) &&
+        IS_SET(ch->specials.affected_by, AFF_SNEAK)) {
+      equipment[SKILL_SNEAK] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_HIDE) &&
+        IS_SET(ch->specials.affected_by, AFF_HIDE)) {
+      equipment[SKILL_HIDE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_ANIMATE) &&
+        IS_SET(ch->specials.affected_by, AFF_ANIMATE)) {
+      equipment[SPELL_ANIMATE_DEAD] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_CHARM) &&
+        IS_SET(ch->specials.affected_by, AFF_CHARM)) {
+      equipment[SPELL_CHARM_PERSON] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_PROTECT_GOOD) &&
+        IS_SET(ch->specials.affected_by, AFF_PROTECT_GOOD)) {
+      equipment[SPELL_PROTECT_FROM_GOOD] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_FLY) &&
+        IS_SET(ch->specials.affected_by, AFF_FLY)) {
+      equipment[SPELL_FLY] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_IMINV) &&
+        IS_SET(ch->specials.affected_by, AFF_IMINV)) {
+      equipment[SPELL_IMP_INVISIBLE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_INVUL) &&
+        IS_SET(ch->specials.affected_by, AFF_INVUL)) {
+      equipment[SPELL_INVUL] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_DUAL) &&
+        IS_SET(ch->specials.affected_by, AFF_DUAL)) {
+      equipment[SKILL_DUAL] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector, AFF_FURY) &&
+        IS_SET(ch->specials.affected_by, AFF_FURY)) {
+      equipment[SPELL_FURY] = TRUE;
+    }
+
+    /* affected_by2 */
+    if (IS_SET(obj->obj_flags.bitvector2, AFF_TRIPLE) &&
+        IS_SET(ch->specials.affected_by2, AFF_TRIPLE)) {
+      equipment[SKILL_TRIPLE] = TRUE;
+    }
+
+    if (IS_SET(obj->obj_flags.bitvector2, AFF_QUAD) &&
+        IS_SET(ch->specials.affected_by2, AFF_QUAD)) {
+      equipment[SKILL_QUAD] = TRUE;
+    }
+  }
+
+  /* Check if we actually need to print anything. */
+  if (eq_af ||
+      ch->affected ||
+      ch->enchantments) {
+    /* This variable keeps track of where we are in the list of affects. */
+    count = 0;
+    /* Clear the list just to be safe. */
+    memset(af_list, 0, sizeof(struct affect) * MAX_SPL_LIST);
+
+    /* Process skill/spell affects. */
+    if (ch->affected) {
+      for (tmp_af = ch->affected; tmp_af && (count < MAX_SPL_LIST); tmp_af = tmp_af->next, count++) {
+        /* Only count the affect once, from either equipment, or
+        applied skill/spell affects. */
+        if (!equipment[tmp_af->type] && !affects[tmp_af->type]) {
+          affects[tmp_af->type] = TRUE;
+
+          memset(&af_new, 0, sizeof(struct affect));
+
+          strcpy(af_new.name, spells[tmp_af->type - 1]);
+          af_new.type = tmp_af->type;
+          af_new.duration = tmp_af->duration;
+          af_new.source = AFF_SRC_AF;
+
+          memcpy(&af_list[count], &af_new, sizeof(struct affect));
+
+          /* Record the longest string for use in printing. */
+          if (strlen(af_list[count].name) > longest_str) {
+            longest_str = strlen(af_list[count].name);
+          }
+
+          /* Record the longest duration for use in printing. */
+          if (af_list[count].duration > longest_dur) {
+            /* SKILL_MANTRA length is multiplied by 100 instead of 10
+            to take into accout the ~ character. */
+            longest_dur = ((af_list[count].type == SKILL_MANTRA) ?
+                           (af_list[count].duration * 100) : af_list[count].duration);
+          }
         }
-        else
-        {
-          sprintf(buf, "            Expires in %3d ticks\n\r", tmp_af->duration);
-        }
-
-        send_to_char(buf, ch);
       }
     }
 
-    if (ch->enchantments)
-    {
-      send_to_char("\n\rEnchantments:\n\r------------\n\r", ch);
+    /* Process enchantments. */
+    if (ch->enchantments) {
+      for (tmp_ench = ch->enchantments; tmp_ench && (count < MAX_SPL_LIST); tmp_ench = tmp_ench->next, count++) {
+        memset(&af_new, 0, sizeof(struct affect));
 
-      for (tmp_ench = ch->enchantments; tmp_ench; tmp_ench = tmp_ench->next)
-      {
-        sprintf(buf,"     '%s'\n\r", tmp_ench->name);
-        send_to_char(buf,ch);
+        strcpy(af_new.name, tmp_ench->name);
+        af_new.type = AFF_NONE;
+        af_new.duration = tmp_ench->duration;
+        af_new.source = AFF_SRC_EN;
+
+        memcpy(&af_list[count], &af_new, sizeof(struct affect));
+
+        /* Record the longest string for use in printing. */
+        if (strlen(af_list[count].name) > longest_str) {
+          longest_str = strlen(af_list[count].name);
+        }
+
+        /* Record the longest duration for use in printing. */
+        if (af_list[count].duration > longest_dur) {
+          longest_dur = af_list[count].duration;
+        }
+      }
+    }
+
+    /* Process affects applied by equipment. */
+    if (eq_af) {
+      for (i = 0; (i < MAX_SPL_LIST) && (count < MAX_SPL_LIST); i++, count++) {
+        if (equipment[i]) {
+          memset(&af_new, 0, sizeof(struct affect));
+
+          strcpy(af_new.name, spells[i - 1]);
+          af_new.type = i;
+          af_new.duration = -1;
+          af_new.source = AFF_SRC_EQ;
+
+          memcpy(&af_list[count], &af_new, sizeof(struct affect));
+
+          /* Record the longest string for use in printing. */
+          if (strlen(af_list[count].name) > longest_str) {
+            longest_str = strlen(af_list[count].name);
+          }
+
+          /* Record the longest duration for use in printing. */
+          if (af_list[count].duration > longest_dur) {
+            longest_dur = af_list[count].duration;
+          }
+        }
+      }
+    }
+
+    /* Calculate the length of the longest duration for use in printing. */
+    longest_dur = (longest_dur == 0) ? 1 : (floor(log10(abs(longest_dur))) + 1);
+
+    /* Sort the list of applied affects alphabetically. */
+    qsort((void *)&af_list, MAX_SPL_LIST, sizeof(struct affect), compare_affects);
+
+    send_to_char("\n\rAffected by:\n\r-----------\n\r", ch);
+
+    /* Print skill/spell affects first. */
+    if (ch->affected) {
+      for (i = 0; i < MAX_SPL_LIST; i++) {
+        if (af_list[i].source != AFF_SRC_AF) continue;
+
+        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+
+        if (af_list[i].duration == -1) {
+          snprintf(buf2, sizeof(buf2), "Never Expires");
+        }
+        else {
+          if (af_list[i].type == SKILL_MANTRA) {
+            snprintf(buf2, sizeof(buf2), "Expires in: ~%*d Secs.",
+                     ((longest_dur < 2) ? longest_dur : (longest_dur - 1)), (af_list[i].duration * 10));
+          }
+          else {
+            snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
+                     longest_dur, af_list[i].duration, ((af_list[i].duration > 1) ? "s" : ""));
+          }
+        }
+
+        printf_to_char(ch, "Skill/Spell: %-*s %s\n\r", longest_str + 2, buf, buf2);
+      }
+    }
+
+    /* Next, print enchantments. They are unique by name, so this is
+    a bit more simple than skill/spell affects. */
+    if (ch->enchantments) {
+      send_to_char("\n\r", ch);
+
+      for (i = 0; i < MAX_SPL_LIST; i++) {
+        if (af_list[i].source != AFF_SRC_EN) continue;
+
+        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+
+        if (af_list[i].duration == -1) {
+          snprintf(buf2, sizeof(buf2), "Never Expires");
+        }
+        else {
+          snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
+                   longest_dur, af_list[i].duration, ((af_list[i].duration > 1) ? "s" : " "));
+        }
+
+        printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
+      }
+    }
+
+    /* Finally, print any affects from worn equipment. */
+    if (eq_af) {
+      send_to_char("\n\r", ch);
+
+      for (i = 0; i < MAX_SPL_LIST; i++) {
+        if (af_list[i].source != AFF_SRC_EQ) continue;
+
+        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+
+        printf_to_char(ch, "  Equipment: %-*s Never Expires\n\r", longest_str + 2, buf);
       }
     }
   }
-  else
-  {
+  else {
     send_to_char("You are not affected by any spell, skill or enchantment.\n\r", ch);
   }
 }

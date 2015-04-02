@@ -9,23 +9,6 @@
 ** Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:14 $
-$Header: /home/ronin/cvs/ronin/spec.boat.c,v 2.0.0.1 2004/02/05 16:10:14 ronin Exp $
-$Id: spec.boat.c,v 2.0.0.1 2004/02/05 16:10:14 ronin Exp $
-$Name:  $
-$Log: spec.boat.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:14  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -94,12 +77,14 @@ int sailing_vessel(CHAR *captain, CHAR *ch, int cmd, char *arg) {
 
       captain->specials.timer++;
 
+      if (captain->specials.timer < STOP_STONEMNKY) { captain->specials.timer = STOP_STONEMNKY; }
+
       if ((((captain->specials.timer+4)%4) == 0)) {
         sprintf(buf,"The boat is currently enroute %s.\n\r",position[captain->player.height-default_height]);
         sprintf(buf2,"The Old Captain says '%s'.\n\r",buf);
         send_to_room(buf2,real_room(BY_LEVEE));
-        send_to_room(buf,real_room(BY_WOLFCAVE));
-        send_to_room(buf,real_room(BY_DROWCITY));
+        //send_to_room(buf,real_room(BY_WOLFCAVE));
+        //send_to_room(buf,real_room(BY_DROWCITY));
         send_to_room(buf,real_room(BY_STNMNKY));
         send_to_room(buf,real_room(BY_DAIMYO));
         break;
@@ -201,6 +186,7 @@ int sailing_vessel(CHAR *captain, CHAR *ch, int cmd, char *arg) {
           send_to_room("Your vessel pulls up along side the dock near Stone Monkey Island.\n\r",real_room(BOAT));
           world[real_room(BOAT)].dir_option[SOUTH]->to_room_r = real_room(BY_STNMNKY);
           act("$n says 'Here we are again, jump out if ye wish.'",FALSE,captain,0,0,TO_ROOM);
+          captain->specials.timer = STOP_STONEMNKY + 1;
           break;
 
         case LEAVE_STONEMNKY2:
