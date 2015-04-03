@@ -2374,7 +2374,7 @@ void spell_relocation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, LAWFULL) ||
+  if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, LAWFUL) ||
       IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, LOCK) ||
       IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, CHAOTIC) ||
       (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, TUNNEL) && !CHAOSMODE) ||

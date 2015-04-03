@@ -35,7 +35,7 @@ Revision - Sending award logs to god board - Ranger 18-Dec-03
 
 Revision - Done messages added to qf qcard - Ranger 11/11/02
 
-Revision - LAWFULL rooms blocked from qf teleport
+Revision - LAWFUL rooms blocked from qf teleport
 
 Revision 1.2  2002/03/31 07:42:15  ronin
 Addition of header lines.
@@ -574,7 +574,7 @@ Usage: qf log <obj>/<all>\n\r\
         target=number(0, top_of_world);
       }
       while (IS_SET(world[target].room_flags, PRIVATE) ||
-             IS_SET(world[target].room_flags, LAWFULL) ||
+             IS_SET(world[target].room_flags, LAWFUL) ||
              IS_SET(world[target].room_flags, DEATH) ||
              IS_SET(world[target].room_flags, LOCK));
 

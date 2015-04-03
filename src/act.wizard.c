@@ -2421,7 +2421,7 @@ void do_at(struct char_data *ch, char *argument, int cmd)
   }
 
   /* a location has been found. */
-  if (IS_SET(world[location].room_flags, LAWFULL)&&(GET_LEVEL(ch)<LEVEL_ETE)) {
+  if (IS_SET(world[location].room_flags, LAWFUL)&&(GET_LEVEL(ch)<LEVEL_ETE)) {
     send_to_char("Sorry, your level is not high enough to go there!\n\r", ch);
     return;
   }
@@ -2508,7 +2508,7 @@ void do_goto(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (IS_SET(world[location].room_flags, LAWFULL)&&(GET_LEVEL(ch)<LEVEL_ETE)) {
+  if (IS_SET(world[location].room_flags, LAWFUL)&&(GET_LEVEL(ch)<LEVEL_ETE)) {
     send_to_char("Sorry, your level is not high enough to go there!\n\r", ch);
     return;
   }

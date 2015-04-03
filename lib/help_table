@@ -2252,7 +2252,18 @@ SEE ALSO : MAP NORTH NORTHEAST WEST SOUTHWEST SOUTH EAST
 #
 AFFECT
 
-Shows all the spells affecting you.
+Shows all skills, spells, and enchantments that are affecting you.
+
+Usage : affect <brief|old>
+
+The arguments 'brief' and 'old' are optional. The command 'affect' without
+either argument will display the most information and in a newer format.
+
+The command 'affect brief' will show only affects with a duration and will
+have a reduced amount of whitespace.
+
+The command 'affect old' will show the older style formatting with less
+information.
 #
 ASSIST
 
