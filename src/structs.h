@@ -364,7 +364,7 @@ struct obj_data
 #define DEATH       2
 #define NO_MOB      4
 #define INDOORS     8
-#define LAWFULL     16
+#define LAWFUL      16
 #define CHAOTIC     32
 #define SAFE        64
 #define NO_MAGIC    128

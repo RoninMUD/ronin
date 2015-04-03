@@ -354,4 +354,6 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define GET_SKILLS(ch) (ch->skills)
 #define GET_PEOPLE(room) (world[room].people)
 #define GET_ROOM_FLAGS(room) (world[room].room_flags)
+#define GET_OBJ_BITS(obj) (obj->obj_flags.bitvector)
+#define GET_OBJ_BITS2(obj) (obj->obj_flags.bitvector2)
 #endif /* __UTILS_H__ */
