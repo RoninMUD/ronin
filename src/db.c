@@ -4,79 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ***************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2005/01/25 21:52:45 $
-$Header: /home/ronin/cvs/ronin/db.c,v 2.6 2005/01/25 21:52:45 ronin Exp $
-$Id: db.c,v 2.6 2005/01/25 21:52:45 ronin Exp $
-$Name:  $
-$Log: db.c,v $
-Revision 2.6  2005/01/25 21:52:45  ronin
-Addition of BOOTFULL variable.
-
-Revision 2.5  2005/01/21 14:55:27  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.4  2004/08/13 12:37:39  ronin
-Moved Northern and Southern Midgaard (zone 30 & 31) to the end of
-the boot order so their boards would be first in the obj lists.
-
-Revision 2.3  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
-
-Revision 2.2  2004/06/02 13:41:08  ronin
-Added mult_(stat) to read_zone - field Y.
-Added mult_(stat) to read_mobile.
-
-Revision 2.1  2004/03/04 17:23:57  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.0.0.1  2004/02/05 18:57:21  ronin
-Reinitialization of cvs archives
-
-
-Revision 05-Feb-04 Ranger
-Added check_idname to init_char.
-Added write_idname, read_idname, check_idname
-Updated generate_id to check for MAX_ID
-
-Revision 6-Nov-03 Ranger
-Commented out SUBLOG in token redistribution to reduce syslog size.
-
-Revision 31-Jul-03 Ranger
-Added take (T) option to read_zone.
-Added take routine to reset_zone.
-
-Revision 03-Mar-03 Ranger
-Moved boot_the_shops from spec_assign.c to here
-
-Revision - 12-Feb-03 Ranger
-Added load_board to initialize a board object when its created in read_object
-
-Revision - Added return virtual_nr to read_zone to display zone
-number to area loader, even if name of zone isn't exact. Ranger 28-Jan-03
-
-Revision 1.5  2002/06/11 18:48:48  ronin
-Exception for hell zone in bamday repop calculation.
-
-Revision 1.4  2002/04/18 04:07:30  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -392,7 +319,7 @@ int distribute_token(void)
         zone != 35 && /*Training, by Nosferatu*/
         zone != 36 && /*Cafe, by Jarldian*/
         zone != 39 && /*Stables, by Ranger and Quack*/
-        zone != 58 && /*HSM Topknot*/
+        zone != 58 && /*HMS Topknot*/
         zone != 66 && /*NewbieMist*/
         zone != 69 && /*Quest Gear*/
         zone != 123 && /*Boards*/
@@ -403,6 +330,7 @@ int distribute_token(void)
         zone != 261 && /*Questy Nosferatu*/
         zone != 262 && /*Questy by Feroz*/
         zone != 275 && /*Clan Halls*/
+        zone != 278 && /*ISA Hall*/
         zone != 294 && /*Custom Gear III*/
         zone != 295 && /*Lottery Items*/
         zone != 298 && /*Custom Gear II*/
