@@ -165,7 +165,7 @@ int count_obj_in_room(int onum, int rnum)
 	OBJ *obj;
 	int i = 0;
 	
-	for(obj = world[real_room(rnum)].contents; obj; obj = obj->next_content)
+	for(obj = world[rnum].contents; obj; obj = obj->next_content)
 	{
 		if(onum == V_OBJ(obj)) i++;
 	}
