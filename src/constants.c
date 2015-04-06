@@ -2641,7 +2641,7 @@ char *warrior_skills[] = {
   "protect",      /* Gladiator SC1 */
   "switch",       /* Gladiator SC2 */
   "flank",        /* Gladiator SC3 */
-  "hostile"       /* Gladiator SC4 */
+  "hostile",      /* Gladiator SC4 */
   "headbutt",     /* Gladiator SC5 */
   "\n",
 };
