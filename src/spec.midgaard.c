@@ -139,14 +139,16 @@ void list_skills_to_prac(CHAR *ch)
   int i = 0;
   int done = FALSE;
   int number = 0;
+  int bonus = 0;
   char buf[MIL];
 
   send_to_char("\
 `nSkill Name                     `kHow Well     \n\r\
 `n------------------------------ `k-------------`q\n\r", ch);
 
-  for (i = 0; !done; i++)
-  {
+  for (i = 0; !done; i++) {
+    bonus = 0;
+
     switch (GET_CLASS(ch))
     {
       case CLASS_MAGIC_USER:
@@ -162,8 +164,7 @@ void list_skills_to_prac(CHAR *ch)
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_BASH) && (GET_LEVEL(ch) < 35)) continue;
-          else
-          {
+          else {
             sprintf(buf, "`n%-30s `k%-13s`q\n\r", cleric_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
           }
@@ -216,9 +217,14 @@ void list_skills_to_prac(CHAR *ch)
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
-          else
-          {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", ninja_skills[i], how_good(ch->skills[number].learned));
+          else {
+            if (((SKILL_MANTRA == number) || (SKILL_BANZAI == number)) &&
+                (ch->skills[number].learned > 0) &&
+                enchanted_by_type(ch, ENCHANT_SHOGUN)) {
+              bonus = 5;
+            }
+
+            sprintf(buf, "`n%-30s `k%-13s`q\n\r", ninja_skills[i], how_good(ch->skills[number].learned + bonus));
             send_to_char(buf, ch);
           }
         }

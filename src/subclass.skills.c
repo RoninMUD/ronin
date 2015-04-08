@@ -33,6 +33,7 @@
 #include "spec_assign.h"
 #include "mob.spells.h"
 #include "subclass.h"
+#include "enchant.h"
 
 extern int CHAOSMODE;
 extern struct room_data *world;
@@ -1620,7 +1621,7 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 101) - GET_DEX_APP(ch);
+  check = number(1, 101) - GET_DEX_APP(ch) - (enchanted_by_type(ch, ENCHANT_SHOGUN) ? 5 : 0);
 
   if (check > GET_LEARNED(ch, SKILL_BANZAI)) {
     act("You try to banzai charge $N but fail.", FALSE, ch, 0, victim, TO_CHAR);
@@ -1689,7 +1690,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 101) - GET_WIS_APP(ch);
+  check = number(1, 101) - GET_WIS_APP(ch) - (enchanted_by_type(ch, ENCHANT_SHOGUN) ? 5 : 0);
 
   /* Mantra automatically fails when used on a degenerated target. */
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
@@ -1727,8 +1728,11 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
 
     modifier = (GET_LEVEL(ch) + (5 * GET_WIS_APP(ch)));
 
+    // remove existing affect and replace with a refreshed version
     for (tmp_af = victim->affected; tmp_af; tmp_af = tmp_af->next) {
-      if ((tmp_af->type) == SKILL_MANTRA && (tmp_af->modifier >= modifier)) {
+      if (tmp_af->type == SKILL_MANTRA) {
+        // keep the highest of the caster's modifier or affected modifier
+        modifier = MAX(tmp_af->modifier, modifier);
         affect_from_char(victim, SKILL_MANTRA);
         break;
       }
