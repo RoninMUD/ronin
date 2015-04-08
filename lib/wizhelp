@@ -1037,16 +1037,16 @@ SOS SETOBJSTAT
      sos <item> extra limited
      sos <item> cost_day 1000
 
-   Apply types max of 2/object postions 0 and 1 (option 3)
+   Apply types max of 3/object postions 0, 1 and 2 (option 3)
 
-    str             height
-    dex             weight
-    int             hp
-    wis             mana  
-    con             hit
-    age             dam
-    move            ac
-    hp_regen        mana_regen   
+    str         height        skill_assault
+    dex         weight        skill_backflip
+    int         hp            skill_backstab
+    wis         mana          skill_circle
+    con         hit           skill_dodge
+    age         dam           skill_dual
+    move        ac            skill_parry
+    hp_regen    mana_regen    skill_triple
  
 See also: FLAGS VALUES DRINKTYPES
 #
