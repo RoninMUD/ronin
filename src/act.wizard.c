@@ -919,36 +919,40 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
         obj->affected[i].location = APPLY_HP_REGEN;
         obj->affected[i].modifier = num2;
       }
-      else if (!strcmp(buf, "skill_backstab")) {
-        obj->affected[i].location = APPLY_SKILL_BACKSTAB;
-        obj->affected[i].modifier = num2;
-      }
-      else if (!strcmp(buf, "skill_dual")) {
-        obj->affected[i].location = APPLY_SKILL_DUAL;
-        obj->affected[i].modifier = num2;
-      }
-      else if (!strcmp(buf, "skill_dodge")) {
-        obj->affected[i].location = APPLY_SKILL_DODGE;
-        obj->affected[i].modifier = num2;
-      }
-      else if (!strcmp(buf, "skill_circle")) {
-        obj->affected[i].location = APPLY_SKILL_CIRCLE;
-        obj->affected[i].modifier = num2;
-      }
-      else if (!strcmp(buf, "skill_triple")) {
-        obj->affected[i].location = APPLY_SKILL_TRIPLE;
-        obj->affected[i].modifier = num2;
-      }
-      else if (!strcmp(buf, "skill_assault")) {
+      else if (!strcmp(buf, "assault")) {
         obj->affected[i].location = APPLY_SKILL_ASSAULT;
         obj->affected[i].modifier = num2;
       }
-      else if (!strcmp(buf, "skill_backflip")) {
+      else if (!strcmp(buf, "backflip")) {
         obj->affected[i].location = APPLY_SKILL_BACKFLIP;
         obj->affected[i].modifier = num2;
       }
-      else if (!strcmp(buf, "skill_parry")) {
+      else if (!strcmp(buf, "backstab")) {
+        obj->affected[i].location = APPLY_SKILL_BACKSTAB;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "bash")) {
+        obj->affected[i].location = APPLY_SKILL_BASH;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "circle")) {
+        obj->affected[i].location = APPLY_SKILL_CIRCLE;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "dodge")) {
+        obj->affected[i].location = APPLY_SKILL_DODGE;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "dual")) {
+        obj->affected[i].location = APPLY_SKILL_DUAL;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "parry")) {
         obj->affected[i].location = APPLY_SKILL_PARRY;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "triple")) {
+        obj->affected[i].location = APPLY_SKILL_TRIPLE;
         obj->affected[i].modifier = num2;
       }
       else {
