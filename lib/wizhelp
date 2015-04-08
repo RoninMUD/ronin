@@ -1008,29 +1008,28 @@ SOS SETOBJSTAT
 
  Option 2 - always the value.
 
- Option 3 - is only used when option 1 is a specific affect.  Option 3
-            can be 0 or 1.  0 indicates the affect is the first affect
-            on the object, 1 indicates it is the second affect.
+ Option 3 - is only used when option 1 is a specific affect.  Option 3 can be 0,
+            1 or 2.  0 indicates the affect is the first affect on the object, 1
+            indicates it is the second affect, 2 indicates the third affect.
 
  Option 1
     1 - (type) type flag
     2 - (extra) extra flags (ex: sos item 2 LIMITED) WIZHELP FLAGS (or bitnum)
-    3 - (wear) wear flags  (ex: sos item 3 HEAD)    WIZHELP FLAGS (or bitnum)
-    4 - (value0) value 0     (values depend on type flag)
-    5 - (value1) value 1     (WIZHELP VALUES to see a chart)
+    3 - (wear) wear flags   (ex: sos item 3 HEAD)    WIZHELP FLAGS (or bitnum)
+    4 - (value0) value 0    (values depend on type flag)
+    5 - (value1) value 1    (WIZHELP VALUES to see a chart)
     6 - (value2) value 2
     7 - (value3) value 3
     8 - (weight) weight
     9 - (cost) cost
    10 - (cost_day) cost/day
-   11 - (affected)
-         affected_bits (ex: sos item 11 FURY) WIZHELP FLAGS (or bitnum)
+   11 - (affected) aff_bits (ex: sos item 11 FURY) WIZHELP FLAGS (or bitnum)
    12 - (owner)
    13 - (timer) timer
    14 - (popped) day popped
 
-   For 2, 3 and 11, the bit is added if it isn't on the object
-   and removed if it is.
+   For 2, 3 and 11, the bit is added if it isn't on the object and removed 
+   if it is.
    
    Other examples:
      sos <item> wear head
@@ -1039,14 +1038,14 @@ SOS SETOBJSTAT
 
    Apply types max of 3/object postions 0, 1 and 2 (option 3)
 
-    str         height        skill_assault
-    dex         weight        skill_backflip
-    int         hp            skill_backstab
-    wis         mana          skill_circle
-    con         hit           skill_dodge
-    age         dam           skill_dual
-    move        ac            skill_parry
-    hp_regen    mana_regen    skill_triple
+    str         height      assault     triple
+    dex         weight      backflip
+    int         hp          backstab
+    wis         mana        bash
+    con         hit         circle
+    age         dam         dodge
+    move        ac          dual
+    hp_regen    mana_regen  parry
  
 See also: FLAGS VALUES DRINKTYPES
 #
