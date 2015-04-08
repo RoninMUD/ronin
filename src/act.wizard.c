@@ -661,8 +661,10 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
       send_to_char("You don't seem to have anything like that.\n\r", ch);
       return;
     }
+
     argument=one_argument(argument, buf);
     argument=one_argument(argument, buf2);
+
     if (!*buf || !*buf2) {
       send_to_char("Where are the third and fourth argument please?\n\r", ch);
       return;
@@ -692,222 +694,276 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
         return;
       }
     }
-    if(num>0) {
-     switch (num) {
-     case 1:
-       obj->obj_flags.type_flag = num2;
-       break;
-     case 2:
-       which=0;
-       if(is_number(buf2)) {
-         num2=atoi(buf2);
-         obj->obj_flags.extra_flags=num2;
-       }
-       else {
-         tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), extra_bits, FALSE);
-         if(tmp == -1) {
-           tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), extra_bits2, FALSE);
-           if(tmp == -1) {
-             send_to_char("Extra flag not found.\n\r",ch);
-             return;
-           }
-           which=1;
-         }
-         bitv=1<<(tmp-1);
-         if(!which) {
-           if(IS_SET(obj->obj_flags.extra_flags,bitv)) REMOVE_BIT(obj->obj_flags.extra_flags,bitv);
-           else SET_BIT(obj->obj_flags.extra_flags,bitv);
-         }
-         else {
-           if(IS_SET(obj->obj_flags.extra_flags2,bitv)) REMOVE_BIT(obj->obj_flags.extra_flags2,bitv);
-           else SET_BIT(obj->obj_flags.extra_flags2,bitv);
-         }
-       }
-       break;
-     case 3:
-       if(is_number(buf2)) {
-         num2=atoi(buf2);
-         obj->obj_flags.wear_flags=num2;
-       }
-       else {
-         tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), wear_bits, FALSE);
-         if(tmp == -1) {
-           send_to_char("Wear flag not found.\n\r",ch);
-           return;
-         }
-         bitv=1<<(tmp-1);
-         if(IS_SET(obj->obj_flags.wear_flags,bitv)) REMOVE_BIT(obj->obj_flags.wear_flags,bitv);
-         else SET_BIT(obj->obj_flags.wear_flags,bitv);
-       }
-       break;
-     case 4:
-       obj->obj_flags.value[0] = num2;
-       break;
-     case 5:
-       obj->obj_flags.value[1] = num2;
-       break;
-     case 6:
-       obj->obj_flags.value[2] = num2;
-       break;
-     case 7:
-       obj->obj_flags.value[3] = num2;
-       break;
-     case 8:
-       obj->obj_flags.weight = num2;
-       break;
-     case 9:
-       obj->obj_flags.cost = num2;
-       break;
-     case 10:
-       obj->obj_flags.cost_per_day = num2;
-       break;
-     case 11:
-       if(is_number(buf2)) { /* Currently can only add bitvector as a number, must add bitvector2 as a name */
-         num2=atoi(buf2);
-         obj->obj_flags.bitvector=num2;
-       }
-       else {
-         tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), affected_bits, FALSE);
-         if(tmp == -1) {
-           tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), affected_bits2, FALSE);
-           if(tmp == -1) {
-             send_to_char("Affect flag not found.\n\r",ch);
-             return;
-           }
-           which=1;
-         }
 
-         bitv=1<<(tmp-1);
-         if(!which) {
-           if(IS_SET(obj->obj_flags.bitvector,bitv)) REMOVE_BIT(obj->obj_flags.bitvector,bitv);
-           else SET_BIT(obj->obj_flags.bitvector,bitv);
-         }
-         else {
-           if(IS_SET(obj->obj_flags.bitvector2,bitv)) REMOVE_BIT(obj->obj_flags.bitvector2,bitv);
-           else SET_BIT(obj->obj_flags.bitvector2,bitv);
-         }
-       }
-       break;
-     case 12: /* owner*/
-       if (!strcmp("0", buf2)) {// reset to no owners
-         for(i=0;i<8;i++) {
-           obj->ownerid[i] = 0;
-         }
-       } else {
-         for(i=0;i<8;i++) {
-           obj->ownerid[i]=0;
-           if(!*buf2) continue;
-           string_to_lower(buf2);
-           for(tmp=0;tmp<MAX_ID;tmp++) {
-             if(!strcasecmp(idname[tmp].name,buf2)) {
-               obj->ownerid[i]=tmp;
-               break;
-             }
-           }
-           argument=one_argument(argument, buf2);
-         }
-       }
-       send_to_char("Owners set/reset.  To individualize the obj for wear, be sure to set wear flag QUESTWEAR.\n\r",ch);
-       break;
-     case 13: // timer
-       obj->obj_flags.timer = num2;
-       break;
-     case 14: // popped
-       obj->obj_flags.popped = num2;
-       break;
-     default:
-       send_to_char("Wrong! Wrong! Wrong! Type wizhelp sos.\n\r", ch);
-       return;
-       break;
+    if(num>0) {
+      switch (num) {
+        case 1:
+          obj->obj_flags.type_flag = num2;
+          break;
+
+        case 2:
+          which=0;
+          if(is_number(buf2)) {
+            num2=atoi(buf2);
+            obj->obj_flags.extra_flags=num2;
+          }
+          else {
+            tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), extra_bits, FALSE);
+            if(tmp == -1) {
+              tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), extra_bits2, FALSE);
+              if(tmp == -1) {
+                send_to_char("Extra flag not found.\n\r",ch);
+                return;
+              }
+              which=1;
+            }
+            bitv=1<<(tmp-1);
+
+            if(!which) {
+              if(IS_SET(obj->obj_flags.extra_flags,bitv)) REMOVE_BIT(obj->obj_flags.extra_flags,bitv);
+              else SET_BIT(obj->obj_flags.extra_flags,bitv);
+            }
+            else {
+              if(IS_SET(obj->obj_flags.extra_flags2,bitv)) REMOVE_BIT(obj->obj_flags.extra_flags2,bitv);
+              else SET_BIT(obj->obj_flags.extra_flags2,bitv);
+            }
+          }
+          break;
+
+        case 3:
+          if(is_number(buf2)) {
+            num2=atoi(buf2);
+            obj->obj_flags.wear_flags=num2;
+          }
+          else {
+            tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), wear_bits, FALSE);
+            if(tmp == -1) {
+             send_to_char("Wear flag not found.\n\r",ch);
+             return;
+            }
+            bitv=1<<(tmp-1);
+            if(IS_SET(obj->obj_flags.wear_flags,bitv)) REMOVE_BIT(obj->obj_flags.wear_flags,bitv);
+           else SET_BIT(obj->obj_flags.wear_flags,bitv);
+          }
+          break;
+
+        case 4:
+          obj->obj_flags.value[0] = num2;
+          break;
+
+        case 5:
+          obj->obj_flags.value[1] = num2;
+          break;
+
+        case 6:
+          obj->obj_flags.value[2] = num2;
+          break;
+
+        case 7:
+          obj->obj_flags.value[3] = num2;
+          break;
+
+        case 8:
+          obj->obj_flags.weight = num2;
+          break;
+
+        case 9:
+          obj->obj_flags.cost = num2;
+          break;
+
+        case 10:
+          obj->obj_flags.cost_per_day = num2;
+          break;
+
+        case 11:
+          if(is_number(buf2)) { /* Currently can only add bitvector as a number, must add bitvector2 as a name */
+            num2=atoi(buf2);
+            obj->obj_flags.bitvector=num2;
+          }
+          else {
+            tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), affected_bits, FALSE);
+            if(tmp == -1) {
+              tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), affected_bits2, FALSE);
+              if(tmp == -1) {
+                send_to_char("Affect flag not found.\n\r",ch);
+                return;
+              }
+              which=1;
+            }
+
+            bitv=1<<(tmp-1);
+
+            if(!which) {
+              if(IS_SET(obj->obj_flags.bitvector,bitv)) REMOVE_BIT(obj->obj_flags.bitvector,bitv);
+              else SET_BIT(obj->obj_flags.bitvector,bitv);
+            }
+            else {
+              if(IS_SET(obj->obj_flags.bitvector2,bitv)) REMOVE_BIT(obj->obj_flags.bitvector2,bitv);
+              else SET_BIT(obj->obj_flags.bitvector2,bitv);
+            }
+          }
+          break;
+
+        case 12: /* owner*/
+          if (!strcmp("0", buf2)) {// reset to no owners
+            for(i=0;i<8;i++) {
+              obj->ownerid[i] = 0;
+            }
+          }
+          else {
+            for(i=0;i<8;i++) {
+              obj->ownerid[i]=0;
+              if(!*buf2) continue;
+              string_to_lower(buf2);
+              for(tmp=0;tmp<MAX_ID;tmp++) {
+                if(!strcasecmp(idname[tmp].name,buf2)) {
+                  obj->ownerid[i]=tmp;
+                  break;
+                }
+              }
+              argument=one_argument(argument, buf2);
+            }
+          }
+          send_to_char("Owners set/reset.  To individualize the obj for wear, be sure to set wear flag QUESTWEAR.\n\r",ch);
+          break;
+
+        case 13: // timer
+          obj->obj_flags.timer = num2;
+          break;
+
+        case 14: // popped
+          obj->obj_flags.popped = num2;
+          break;
+
+        default:
+          send_to_char("Wrong! Wrong! Wrong! Type wizhelp sos.\n\r", ch);
+          return;
+          break;
       }
-    } else if (*buf) {
-       argument=one_argument(argument, buf2);
-       if (isdigit(*buf2)) {
-         i = atoi(buf2);
-         if(i<0 || i>2) {
-           send_to_char("The fifth argument must be 0, 1 or 2.\n\r",ch);
-           return;
-         }
-       }
-       else {
-         send_to_char("For this case, the fifth argument must be 0 or 1.\n\r", ch);
-         return;
-       }
-       if (!strcmp(buf, "str")) {
-      obj->affected[i].location = APPLY_STR;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "dex")) {
-      obj->affected[i].location = APPLY_DEX;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "int")) {
-      obj->affected[i].location = APPLY_INT;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "wis")) {
-      obj->affected[i].location = APPLY_WIS;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "con")) {
-      obj->affected[i].location = APPLY_CON;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "age")) {
-      obj->affected[i].location = APPLY_AGE;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "weight")) {
-      obj->affected[i].location = APPLY_CHAR_WEIGHT;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "height")) {
-      obj->affected[i].location = APPLY_CHAR_HEIGHT;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "mana")) {
-      obj->affected[i].location = APPLY_MANA;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "hp")) {
-      obj->affected[i].location = APPLY_HIT;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "move")) {
-      obj->affected[i].location = APPLY_MOVE;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "ac") || !strcmp(buf, "armor")) {
-      obj->affected[i].location = APPLY_AC;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "hit")) {
-      obj->affected[i].location = APPLY_HITROLL;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "dam")) {
-      obj->affected[i].location = APPLY_DAMROLL;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "mana_regen")) {
-      obj->affected[i].location = APPLY_MANA_REGEN;
-      obj->affected[i].modifier = num2;
-       }
-       else if (!strcmp(buf, "hp_regen")) {
-      obj->affected[i].location = APPLY_HP_REGEN;
-      obj->affected[i].modifier = num2;
-       }  
-       else {
-      send_to_char("Sorry not on that field!\n\r", ch);
+    }
+    else if (*buf) {
+      argument=one_argument(argument, buf2);
+      if (isdigit(*buf2)) {
+        i = atoi(buf2);
+        if(i<0 || i>2) {
+          send_to_char("The fifth argument must be 0, 1 or 2.\n\r",ch);
+          return;
+        }
+      }
+      else {
+        send_to_char("For this case, the fifth argument must be 0 or 1.\n\r", ch);
+        return;
+      }
+
+      if (!strcmp(buf, "str")) {
+        obj->affected[i].location = APPLY_STR;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "dex")) {
+        obj->affected[i].location = APPLY_DEX;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "int")) {
+        obj->affected[i].location = APPLY_INT;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "wis")) {
+        obj->affected[i].location = APPLY_WIS;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "con")) {
+        obj->affected[i].location = APPLY_CON;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "age")) {
+        obj->affected[i].location = APPLY_AGE;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "weight")) {
+        obj->affected[i].location = APPLY_CHAR_WEIGHT;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "height")) {
+        obj->affected[i].location = APPLY_CHAR_HEIGHT;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "mana")) {
+        obj->affected[i].location = APPLY_MANA;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "hp")) {
+        obj->affected[i].location = APPLY_HIT;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "move")) {
+        obj->affected[i].location = APPLY_MOVE;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "ac") || !strcmp(buf, "armor")) {
+        obj->affected[i].location = APPLY_AC;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "hit")) {
+        obj->affected[i].location = APPLY_HITROLL;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "dam")) {
+        obj->affected[i].location = APPLY_DAMROLL;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "mana_regen")) {
+        obj->affected[i].location = APPLY_MANA_REGEN;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "hp_regen")) {
+        obj->affected[i].location = APPLY_HP_REGEN;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "skill_backstab")) {
+        obj->affected[i].location = APPLY_SKILL_BACKSTAB;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "skill_dual")) {
+        obj->affected[i].location = APPLY_SKILL_DUAL;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "skill_dodge")) {
+        obj->affected[i].location = APPLY_SKILL_DODGE;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "skill_circle")) {
+        obj->affected[i].location = APPLY_SKILL_CIRCLE;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "skill_triple")) {
+        obj->affected[i].location = APPLY_SKILL_TRIPLE;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "skill_assault")) {
+        obj->affected[i].location = APPLY_SKILL_ASSAULT;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "skill_backflip")) {
+        obj->affected[i].location = APPLY_SKILL_BACKFLIP;
+        obj->affected[i].modifier = num2;
+      }
+      else if (!strcmp(buf, "skill_parry")) {
+        obj->affected[i].location = APPLY_SKILL_PARRY;
+        obj->affected[i].modifier = num2;
+      }
+      else {
+        send_to_char("Sorry not on that field!\n\r", ch);
+        return;
+      }
+    }
+    else {
+      send_to_char("I don't understand your third argument!\n\r", ch);
       return;
-       }
-   } else {
-       send_to_char("I don't understand your third argument!\n\r", ch);
-       return;
-   }
-  } else {
-      send_to_char("On what object? Type wizhelp sos.\n\r", ch);
-      return;
+    }
+  }
+  else {
+    send_to_char("On what object? Type wizhelp sos.\n\r", ch);
+    return;
   }
 
   act("$n has retransformed $p!", FALSE, ch, obj, 0, TO_ROOM);
