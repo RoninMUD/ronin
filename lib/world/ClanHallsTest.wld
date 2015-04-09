@@ -1076,7 +1076,7 @@ troubles of the outside world fade away.  Here there is no war, no battles
 to be won, no tormented souls screaming for release.  Here there is only
 a peace far deeper than any you have ever known.
 ~
-301 8192 0
+301 40960 0
 D0
 ~
 ~
@@ -1125,10 +1125,30 @@ D0
 ~
 ~
 0 -1 30153
+D1
+To the east is the (shop).
+~
+shop~
+12 -1 30155
+D2
+To the south is the portal nexus.
+~
+nexus~
+12 -1 30157
+D3
+Through the portal to the west you can see the resting room of Prometheus (prom).
+~
+prom~
+12 -1 30158
 D4
 ~
 rest~
 9 -1 30157
+D5
+Through the downward portal you can see the Market Square (ms).
+~
+ms~
+12 -1 3014
 S
 #30155
 When Unicorns cry, everything cries~
@@ -1147,7 +1167,7 @@ Take me to you, imprison me, for I
 except you enthrall me, never shall be free
 nor ever chaste, except you ravish me.
 ~
-301 0 0
+301 32768 0
 D3
 ~
 ~
@@ -1171,14 +1191,16 @@ stable, and we fly over the fences. Resistance is senseless.
 Universe. Unitruth. Unicorn. 
 You see Market Square to the down.
 ~
-301 0 0
+301 32768 0
 D2
 ~
 ~
 0 -1 30153
 D4
+Holes within holes within holes.  Glistening treasures awaits.  Moistness unbounded.
+Holes within holes within holes.  Glistening treasures awaits.  Moistness unbounded.
 ~
-rest~
+hole~
 9 -1 30157
 D5
 ~
@@ -1198,17 +1220,17 @@ would not be punished.  Portals cover the walls, the floor, and the ceiling,
 each shimmering with a thousand colors, and showing a glimpse of a strange
 scene in the world beyond.
 ~
-301 8192 0
+301 40960 0
 D0
-This portal seems to lead to the private chambers of Tepir (ripet).
+The private resting chambers of Prometheus (prom).
 ~
-ripet~
+prom~
 12 -1 30158
 D1
-This portal seems to lead to the Metaman (meta).
+Through this shimmering portal you see the Mage's (guild).
 ~
-meta~
-12 -1 30156
+guild~
+12 -1 3019
 D2
 This portal seems to lead to the local store (shop).
 ~
@@ -1223,26 +1245,54 @@ D4
 This portal seems to lead to the reception (rent).
 ~
 rent~
-12 -1 30153
+1 -1 30153
 D5
-This portal seems to lead to the private chambers of Sloth (sloth).
+This portal leads to an abstracted resting chamber (rr).
 ~
-sloth~
+rr~
 12 -1 30154
 S
 #30158
-Resting Room Ripet: Affirmative~
-Affirmative.
+Elysium~
+`o   Kadmos, Laertes, Hymenaios, Eileithyia, Despoena, Ganymede,
+Tartarus, Tykhe, Urania, Stymphalian, Sisypush, Salmoneus, Sabazius,
+Sibyl, Spercheus, Sperkheios, Rhadamanthus, Penia, Pandemos,
+Podarke, Ploutos, Phospheros, Polyhymnia, Priapos, Proteus, Pyrrha,
+Orithyea, Ouranos, Okythoe, Oeagrus, Oannes, Obriareos, Orthrus, 
+Menoitos, Mormolykeia, Iphicles, Iacchus, Iapetos, Hrmaphroditus, 
+Hippolytta, Hyades, Hymenaeus, Hyppolyta, Eurystheus, Erynome, 
+Eumenides, Erichthoneus, Epimeliades, Enosichthon, Epimeliads, 
+Caenis, Charybdis, Chthonia, Clymene, Chiron, Bacchantes, Balius, 
+Boreads, Briareos, Alcyone, Amymome, Argeos, Atalanta, Attropus, 
+Autolycus, Amaltheia, Amarynthia, Aglauros, Aegle, Adephagia, 
+Adamanthea, Acheron, Agrotora, Kalliste, Kalliste, Kalliste, 
+Kalliste, Kalliste.
 ~
-301 8192 0
+301 40960 0
+D0
+To the north is the shop (shop).
+~
+shop~
+12 -1 30155
 D1
 ~
 ~
 0 -1 30153
-D4
+D3
+Through the portal on the western wall you see the Market Square (ms).
 ~
-rest~
-9 -1 30157
+ms~
+12 -1 3014
+D4
+On the ceiling is the portal nexus (nexus).
+~
+nexus~
+12 -1 30157
+D5
+The portal on the floor leads to the Resting Room (rr).
+~
+rr~
+12 -1 30154
 S
 #30160
 The Runed Obsidian Gateway of Umbra Inritus

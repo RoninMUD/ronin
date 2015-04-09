@@ -554,6 +554,84 @@ A Giant Grizzly Panda is squatting here.
 0 0 0 0
 K
 0 0 0 0 0 0 0
+
+
+#27553
+demure maiden receptionist girl~
+A Demure Maiden~
+A maiden stands here, her unicorn steed by her side.
+~
+This beautiful maiden has long flowing blonde hair, cascading down around
+her shoulders.  She wears a dress of cloud white, symbolizing the purity
+that has allowed her to tame such a noble beast.  She smiles at you as
+you approach, and gestures to show she has rooms you may rest in.
+~
+10 128 1000 Y
+60 19 10 500d500+5000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27554
+unicorn vault guard creature equus horse white~
+A Unicorn~
+A creature of untainted white, with a glorious spiraling horn stands here, guarding something.
+~
+The most noble Equus, this magnificent stallion stands with head held high,
+his wispy beard fluttering in the wind.  From his head protrudes a horn of
+unspeakable beauty, radiating with power and sensual energy.  His muscles
+ripple beneath his shimmering coat, and you cannot help but feel a bit in
+awe by the sheer majesty of this creature.
+~
+10 134219776 1000 Y
+60 19 10 500d500+5000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27555
+narwhal narwal beautiful shopkeeper shop~
+A Beautiful Narwhal~
+A beautiful narwhal floats in mid-air here, tidying her wares.
+~
+This medium-sized toothed whale seems quite content to be floating in the
+middle of the air, rather than in her natural Arctic environment.  Her lush
+silver skin reflects the light that drifts in from overhead, while her horn
+glimmers with a luminance of its own.  She appears to be restocking shelves
+with various wares that adventurers depend upon.
+~
+10 134219912 1000 Y
+60 19 10 200d500+10000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27556
+metaphysician meta massive bearicorn polar~
+A Massive Bearicorn~
+A Massive Bearicorn is here, ready to train you in the ways of war.
+~
+A Massive Bearicorn is here, ready to train you in the ways of war.
+This enormous snow-white creature stands nearly ten feet in length, with a
+massive four-foot spiraling horn protruding from its head.  It looks at you
+with an appraising eye, as though wondering what you could possibly want of
+it. Then it opens its massive jaw to let out a stretching yawn, revealing
+row upon row of incisors, before curling up and settling down for a nap.
+~
+10 134219904 1000 Y
+60 19 10 100d500+5000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
 #27576
 faelwen~
 Faelwen~

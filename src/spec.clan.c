@@ -15,57 +15,6 @@
 ** Not to be distributed without author's consent.
 */
 
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:13:30 $
-$Header: /home/ronin/cvs/ronin/spec.clan.c,v 2.6 2005/04/27 17:13:30 ronin Exp $
-$Id: spec.clan.c,v 2.6 2005/04/27 17:13:30 ronin Exp $
-$Name:  $
-$Log: spec.clan.c,v $
-Revision 2.6  2005/04/27 17:13:30  ronin
-Minor changes needed to compile on Slackware 10 for the new machine.
-
-Revision 2.5  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.4  2004/08/13 12:38:42  ronin
-Added ISA specs and board.
-
-Revision 2.2  2004/03/04 17:23:58  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.1  2004/02/12 01:47:39  ronin
-Fixed newbie clan meta man and receptionist.
-
-Revision 2.0.0.1  2004/02/05 16:10:20  ronin
-Reinitialization of cvs archives
-
-Revision 1.5  2003/01/26 04:07:31  ronin
-Added Tabby stuff, after changing max clans to 30.
-
-Revision - Fix to be able to remove players with mob names from a
-clan if they are not logged on. Ranger 26-Jan-03
-
-Revision 1.4  2002/11/10 04:07:31  ronin
-Adding more clan stuff.
-
-Revision - Fixed creation of clan list file. Ranger 12-Nov-02
-
-Revision 1.3  2002/04/18 04:07:31  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -2611,6 +2560,10 @@ void assign_clan(void) {
   assign_room(HE_ACCESS, he_block);
   assign_mob(27576, do_vault);
   assign_mob(27577, meta);
+  /* Unicorns */
+  assign_mob(27554, do_vault);
+  assign_mob(27553, receptionist);
+  assign_mob(27556, meta);
 }
 
 

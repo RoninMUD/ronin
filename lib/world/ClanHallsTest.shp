@@ -1,9 +1,9 @@
 #30155~
 3056
--1
--1
--1
--1
+3052
+3029
+3051
+3058
 1.000000
 1.000000
 0
@@ -11,13 +11,13 @@
 0
 0
 0
-%s What keeper says if it doesn't have the item.~
-%s What keeper says if seller doesn't have the item.~
-%s What keeper says if it doesn't buy that kind of item.~
-%s What keeper says if it doesn't have cash to buy an item.~
-%s What keeper says if buyer doesn't have the cash.~
-%s What keeper says after buyer gets item (Can include %d for amount).~
-%s What keeper says after it buys a sellers item (Can include %d for amount).~
+Oh. Dear. Idonothavethat. Item.~
+This ITEM is not to be found at this NARWHAL. Massively apologies.~
+Narwhals have no hands with which to buy.~
+Where dost thou thinketh a Narwhal would keep his GOLD COINS? I have no POCKETS.~
+Cannot buy. Does not computer.~
+It got a stupid ugly face. Its mouth is stink.~
+It got a stupid ugly face. Its mouth is stink.~
 0
 0
 30155

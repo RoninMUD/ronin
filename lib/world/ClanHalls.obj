@@ -672,6 +672,155 @@ M
 ~
 ~
 ~
+#27547
+cracked broken fountain filthy~
+A Cracked and Broken Fountain~
+A cracked and broken fountain sits here, the water filthy.~
+~
+17 0 0
+100000 100000 0 0
+300 10 10
+100
+E
+cracked broken fountain filthy~
+A thin layer of green scum sits on the water's surface here.  Dead bugs,
+floating leaves, and unidentifiable bits of jetsam float in the water,
+and a putrid, sulfurous stench rises from it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27548
+clean white fountain narwhal~
+A Clean White Fountain~
+An ivory-white fountain is here, with a statue of a narwhal spouting water.~
+~
+17 0 0
+100000 100000 0 0
+400 10 10
+100
+E
+clean white fountain narwhal~
+Crisp, clean water jets forth wildly from the horn of a carved narwhal,
+cascading down into an ivory-white basin.  This water looks refreshing,
+and there is a small seat to allow people to lean over and fill their
+own waterskins.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27549
+board tablet marble large~
+A Large Marble Tablet~
+A large tablet of pure white marble sits here, with some things carved in it.~
+~
+27 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27550
+rosewood chest beautiful~
+A Beautiful Rosewood Chest~
+An ornately decorated rosewood chest sits here, its lid open.~
+~
+15 0 0
+100000 0 -1 0
+10 10 10
+100
+E
+rosewood chest beautiful~
+This beautiful chest is decorated with carvings of unicorns, bears, and
+other incredible creatures.  The sweet smell of rosewood rises up from it,
+and its lid is wide open.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27551
+platinum chest heavy~
+A Shining Platinum Chest~
+A shining platinum chest sits here, its lid torn from its hinges.~
+~
+15 0 0
+100000 0 -1 0
+10 10 10
+100
+E
+platinum chest heavy~
+This chest is beautifully inlaid with rubies, diamonds, and sapphires, and
+the banding is made of a deep black onyx.  It is overflowing with a strange
+assortment of items, ranging widely in worth and rarity.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27552
+basket woven daffodil daffodils~
+a Handcrafted Basket of Yellow Daffodils~
+A lovely basket made of bright yellow daffodils sits here.~
+~
+15 0 1
+8000 0 -1 0
+1 10 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27553
+teat unicorn pure~
+The Lactating Teat of a Nearby Unicorn~
+A unicorn's teet is here, the unicorn must be close by!~
+~
+17 0 16385
+1000 1000 0 0
+3 10000 189
+100
+E
+teet unicorn pure~
+This milky-white teet even has a cute lil' white nipple on it. Pure
+refreshing hydration gushes from this supple mound. Nomnom.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #27554
 dusty book board~
 the board~

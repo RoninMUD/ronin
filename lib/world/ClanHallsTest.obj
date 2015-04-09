@@ -783,8 +783,8 @@ The Lactating Teat of a Nearby Unicorn~
 A unicorn's teet is here, the unicorn must be close by!~
 ~
 17 0 16385
-5000 5000 0 0
-1 1 1
+1000 1000 0 0
+3 10000 189
 100
 E
 teet unicorn pure~
@@ -822,7 +822,7 @@ A Cracked and Broken Fountain~
 A cracked and broken fountain sits here, the water filthy.~
 ~
 17 0 0
-100000 100000 9 -1
+100000 100000 0 0
 300 10 10
 100
 E
@@ -905,8 +905,8 @@ M
 ~
 #30151
 platinum chest heavy~
-A Heavy Platinum Chest~
-A shining platinum chest sits here, its lid torn from its hingest.~
+A Shining Platinum Chest~
+A shining platinum chest sits here, its lid torn from its hinges.~
 ~
 15 0 0
 100000 0 -1 0
@@ -928,20 +928,13 @@ M
 ~
 #30152
 basket woven daffodil daffodils~
-A Handcrafted Basket of Woven Yellow Daffodils~
-A beautiful basket sits here, woven of bright yellow daffodils.~
+a Handcrafted Basket of Yellow Daffodils~
+A lovely basket made of bright yellow daffodils sits here.~
 ~
-15 0 16385
-12000 0 0 -1
-1 10 1
-100
-E
-basket daffodil woven daffodils~
-This beautiful basket has been meticulously woven of fresh yellow daffodils.
-The flowers seem to be eternally fresh, and they let out a sweet and fragrant
-perfume.  Although the basket seems small, you suspect it can hold much more
-than is readily apparent.
-~
+15 0 1
+8000 0 -1 0
+1 10 5000
+10
 X
 ~
 0 0 0
