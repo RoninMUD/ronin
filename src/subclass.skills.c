@@ -1644,7 +1644,7 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
 
     if (SAME_ROOM(victim, ch) &&
         breakthrough(ch, victim, BT_INVUL) &&
-        check > GET_LEARNED(ch, SKILL_BANZAI)) {
+        (check <= GET_LEARNED(ch, SKILL_BANZAI))) {
       hit(ch, victim, SKILL_BANZAI);
     }
 
