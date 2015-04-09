@@ -427,7 +427,7 @@ const char *weapon_type[15] = {
   "Claw",     /*  8 */
   "Pierce",   /*  9 */
   "Pierce",   /* 10 */
-  "Pierce"    /* 11 */
+  "Pierce",   /* 11 */
   "Hack",     /* 12 */
   "Chop",     /* 13 */
   "Slice"     /* 14 */
