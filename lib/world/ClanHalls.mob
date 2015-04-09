@@ -216,75 +216,64 @@ K
 #27516
 kif gardener shopkeep~
 Kif, the Gardener~
-A rubber ducky floats happily amidst the suds and bubbles.
+A small pixie hovers about, busying herself in the garden.
 ~
-Yellow and cheery, the rubber ducky floats happily through these
-warm waters everyday as they are constantly refilled and heated.
-Despite that he smells rather fowl from spending too much time
-in the bath tub.  However, he greets bathers with his warm smile
-and squeaky personality.
+One of the Little Folk, this exuberant pixie works in happy
+service for the denizens of this fine hall. Her wage is paid
+in pizza, and her brethren look upon her status with awe. A
+faint green aura surrounds her foot-tall form and on her back
+is a pair of wings much like those of a dragonfly.
 ~
-8 128 555 Y
+8 128 0 Y
 51 19 10 20d20+4000 20d20+100
 0 0
-8 8 1
-86 0 20d20+100 0
+8 8 2
+64 0 20d20+100 0
 0 0 0 0
-T
-......A rubber ducky paddles through the bubbles quacking happily.~
 K
 0 0 0 0 0 0 0
 #27517
-reception~
-Rosales, the Entwife~
-Mond rests on his haunches faithfully awaiting the return of his masters.
+entwife receptionist reception~
+the last Entwife~
+A giant tree-like creature, clad in green and gray bark, stands here.
 ~
-Mond the lupine guardian eyes you carefully and steadily.  His hair
-is fading from pitch black to light grey in some areas, but he's agile
-and ferocious as ever.  For years he has guarded this hall diligently
-and each night his howl can be heard across the land as the moon creeps
-into the night sky.  His eyes illuminate the room with their incredible
-flourescence. Mond faithfully helps the followers of the Blood Moon
-maintain their chambers and is always here upon their arrival.  Despite
-his old age and apparently inactivity he's in perfect fighting condition
-should the situation require such action.
+Rumours abound that the Entwives were wiped out, but the creature
+before you stands as contrarian proof. She has enormous trunk-like
+legs, ending in seven toes, all covered in the same bark coloured
+skin as her trunk... torso... whatever. Despite the eradication of
+much of her kin she seems in relatively good spirits, aware of the
+ebb and flow of life. A loud creaking accompanies her cracking a
+smile and she welcomes you into the grand hall with grandmotherly
+warmth and kindness.
 ~
 74 262312 0 Y
-32 -12 -10 20d20+5000 20d20+50
-666 3
-8 8 1
-89 0 69d69+1 0
-0 0 0 0
-T
-......Mond, the Guardian of Blood Moon radiates a mystical aura.~
-T
-......Mond's sparkling emerald eyes glisten in the darkness.~
+51 19 0 1000d1000+1 1d1+0
+0 1
+8 8 2
+59 1073733631 69d69+1 0
+0 0 0 126
 K
 0 0 0 0 0 0 0
 #27518
-sativa entwife vault~
-Sativa, the Entwife~
-Luna, the temptress of the Moon waits patiently for fresh blood.
+echo dryad nymph vault~
+Echo, the Dryad~
+A pleasant looking tree nymph hums softly to herself as she prances about.
 ~
-Luna's tall figure radiates as you enter the small room she has made her
-boudoir and personal fun center.  Long luscious brown-red hair layers over
-her firm shoulders and back.  As you peer into her glowing forest green
-eyes she smiles back exposing blood-stained fangs.  This devilish vamp
-has welcomed many visitors but few leave as they came.  This is truly one
-temptress that should not be toyed with.  As you look away and gaze around
-the rest of the room she smiles evilly and examines your pitiful figure.
-It almost seems as if she's analyzing her prey...
-It's clear that ~
+Fair skinned and lithe, this oak tree nymph bears a pleasant beauty akin to
+that of the sun cresting over a hillside as it bathes a lush emerald vale
+in its morning light. A creature of the forest if there ever was, Echo bears
+a mischievous smile as she slowly, gracefully floats throughout the glade.
+Her features are that of the forest: bundles of hair striking strong
+association to the thin branches of a tree, skin occasionally textured with
+that of an oak's crinkled bark and dressed, if the word could be applied,
+in a thin veil of moss and leaves, covering just enough to peak curiosity.
+~
 74 262312 0 Y
-51 -13 -10 20d20+5000 20d20+50
-666 3
+51 19 0 1000d1000+1 1d1+0
+0 1
 8 8 2
-55 0 20d20+100 0
-0 0 0 0
-T
-......Luna playfully moves her tongue over her blood moistened fangs.~
-T
-......Luna radiates sensuality as she moves stealthily upon her bed.~
+64 1073733631 20d20+100 0
+0 0 0 126
 K
 0 0 0 0 0 0 0
 #27519
@@ -563,6 +552,84 @@ A Giant Grizzly Panda is squatting here.
 8 8 2
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
+
+
+#27553
+demure maiden receptionist girl~
+A Demure Maiden~
+A maiden stands here, her unicorn steed by her side.
+~
+This beautiful maiden has long flowing blonde hair, cascading down around
+her shoulders.  She wears a dress of cloud white, symbolizing the purity
+that has allowed her to tame such a noble beast.  She smiles at you as
+you approach, and gestures to show she has rooms you may rest in.
+~
+10 128 1000 Y
+60 19 10 500d500+5000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27554
+unicorn vault guard creature equus horse white~
+A Unicorn~
+A creature of untainted white, with a glorious spiraling horn stands here, guarding something.
+~
+The most noble Equus, this magnificent stallion stands with head held high,
+his wispy beard fluttering in the wind.  From his head protrudes a horn of
+unspeakable beauty, radiating with power and sensual energy.  His muscles
+ripple beneath his shimmering coat, and you cannot help but feel a bit in
+awe by the sheer majesty of this creature.
+~
+10 134219776 1000 Y
+60 19 10 500d500+5000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27555
+narwhal narwal beautiful shopkeeper shop~
+A Beautiful Narwhal~
+A beautiful narwhal floats in mid-air here, tidying her wares.
+~
+This medium-sized toothed whale seems quite content to be floating in the
+middle of the air, rather than in her natural Arctic environment.  Her lush
+silver skin reflects the light that drifts in from overhead, while her horn
+glimmers with a luminance of its own.  She appears to be restocking shelves
+with various wares that adventurers depend upon.
+~
+10 134219912 1000 Y
+60 19 10 200d500+10000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#27556
+metaphysician meta massive bearicorn polar~
+A Massive Bearicorn~
+A Massive Bearicorn is here, ready to train you in the ways of war.
+~
+A Massive Bearicorn is here, ready to train you in the ways of war.
+This enormous snow-white creature stands nearly ten feet in length, with a
+massive four-foot spiraling horn protruding from its head.  It looks at you
+with an appraising eye, as though wondering what you could possibly want of
+it. Then it opens its massive jaw to let out a stretching yawn, revealing
+row upon row of incisors, before curling up and settling down for a nap.
+~
+10 134219904 1000 Y
+60 19 10 100d500+5000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #27576

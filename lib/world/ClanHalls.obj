@@ -295,98 +295,6 @@ M
 ~
 ~
 ~
-#27516
-dragon marble fountain water~
-Marble, ruby-eyed dragon fountain~
-Red water pours from the mouth of a marble dragon fountain.~
-~
-17 64 0
-10000 10000 0 0
-500 10 10
-100
-E
-marble~
-Perched atop the beautiful marble crescent fountain is the
-magnificent ruby-eyed dragon.  Towering atleast five feet above
-your head his wings curl up to his sides, folding gently against
-his scaly body.  The rubies inlaid on his head sparkle more
-vibrantly than any you have seen before.  Beneath the solid
-marble you can imagine a fearsome beast.  However, as of now
-his mouth releases small trickles of water to the collecting
-pool beneath his taloned feet.  The sound of each droplet as it
-hits the water soothes your soul and relaxes your mind.~
-E
-fountain~
-Perched atop the beautiful marble crescent fountain is the
-magnificent ruby-eyed dragon.  Towering atleast five feet above
-your head his wings curl up to his sides, folding gently against
-his scaly body.  The rubies inlaid on his head sparkle more
-vibrantly than any you have seen before.  Beneath the solid
-marble you can imagine a fearsome beast.  However, as of now
-his mouth releases small trickles of water to the collecting
-pool beneath his taloned feet.  The sound of each droplet as it
-hits the water soothes your soul and relaxes your mind.~
-E
-dragon~
-Perched atop the beautiful marble crescent fountain is the
-magnificent ruby-eyed dragon.  Towering atleast five feet above
-your head his wings curl up to his sides, folding gently against
-his scaly body.  The rubies inlaid on his head sparkle more
-vibrantly than any you have seen before.  Beneath the solid
-marble you can imagine a fearsome beast.  However, as of now
-his mouth releases small trickles of water to the collecting
-pool beneath his taloned feet.  The sound of each droplet as it
-hits the water soothes your soul and relaxes your mind.~
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-#27517
-portal~
-Obsidian blood portal~
-An oval obsidian portal, swirling reds, rests gently on the floor.~
-~
-13 64 0
-0 0 0 0
-500 5000 999999
-100
-E
-portal~
-The obsidian portal rests majestically and dauntingly upon
-the floor.  Its numerous swirling reds are hypnotizing and
-yet beautiful at the same time.  A carved wolf's head adorns
-the top of the oval portal.  The watery appearance of the
-rotating colors is mystical and inviting.~
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-#27518
-tablet obsidian engravings board~
-smooth obsidian tablet~
-Delicate engravings adorn an obsidian tablet etched into the wall.
-~
-~
-27 0 0
-1 1 52 0
-500 10 10
-100
-X
-~
-0 0 0
-M
-~
-~
-~
-~
 #27519
 globe board~
 A Globe of Knowledge~
@@ -483,17 +391,9 @@ An enormous glass Hookah, with ornate gold inlay and multiple tubes.~
 100
 E
 hookah~
-
 A quick glance at the liquid in the hookah reveals that it has been
 far too long since this was last cleaned. The viscous liquid within
-has the ash and resin from literally hundreds of bowls.
-~
-E
-hookah~
-A quick glance at the liquid in the hookah reveals that it has been
-far too long since this was last cleaned. The viscous liquid within
-has the ash and resin from literally hundreds of bowls.
-~
+has the ash and resin from literally hundreds of bowls.~
 X
 ~
 0 0 0
@@ -550,25 +450,14 @@ M
 ~
 ~
 #27526
-orb gelatinous reflecting jello~
-gelatinous reflecting orb~
-Forming to fit between the imperfections on the ground lies an orb.~
+abba zaba~
+Abba-Zaba~
+A small bar of taffy was left here, wrapped in black and yellow checkered plastic.~
 ~
-8 0 16385
-0 0 0 0
+19 0 1
+16 0 0 0
 10 10 10
 100
-E
-orb~
-Absorbing and reflecting light all at once the jelly-like
-orb slithers around your hand.  The substance that this
-device was fashioned from is like nothing you've ever seen.
-Undulating as if an entire ocean is contained within its
-quasi-round shape, it rolls around freely in your palm.
-Though without texture, the silvery orb is cold to the
-touch. Every so often the glistening exterior becomes
-transparent and for an instant you catch a glimpse of a
-beautiful obsidian dome.~
 X
 ~
 0 0 0
@@ -583,7 +472,7 @@ A Juicy Coconut Half-Shell~
 Dripping tequila over it's moist sides is a perfect coconut half-shell.~
 ~
 17 0 1
-20 20 22 0
+30 30 22 0
 5 5 5
 100
 X
@@ -595,13 +484,30 @@ M
 ~
 ~
 #27528
-sack blackhole~
-sack fashioned of a blackhole~
-Sucking everything into its incredible depths is a famous "Blackhole Sack"~
+chocobo fat~
+Fat Chocobo~
+An adorable chocobo half slumps over on the ground, its bulbous body keeping it mildly upright.~
 ~
 15 0 1
 5000 0 0 0
 1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27529
+funyuns bag~
+a delectable bag of Funyuns~
+You see some water on the ground, a whole lotta water and.......Funyuns.~
+~
+19 0 1
+16 0 0 0
+10 10 10
 100
 X
 ~
@@ -757,6 +663,155 @@ A pure marble fountain brimming with a cool, clear liquid.~
 E
 fountain~
 It is very nice.  Made from fine white marble.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27547
+cracked broken fountain filthy~
+A Cracked and Broken Fountain~
+A cracked and broken fountain sits here, the water filthy.~
+~
+17 0 0
+100000 100000 0 0
+300 10 10
+100
+E
+cracked broken fountain filthy~
+A thin layer of green scum sits on the water's surface here.  Dead bugs,
+floating leaves, and unidentifiable bits of jetsam float in the water,
+and a putrid, sulfurous stench rises from it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27548
+clean white fountain narwhal~
+A Clean White Fountain~
+An ivory-white fountain is here, with a statue of a narwhal spouting water.~
+~
+17 0 0
+100000 100000 0 0
+400 10 10
+100
+E
+clean white fountain narwhal~
+Crisp, clean water jets forth wildly from the horn of a carved narwhal,
+cascading down into an ivory-white basin.  This water looks refreshing,
+and there is a small seat to allow people to lean over and fill their
+own waterskins.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27549
+board tablet marble large~
+A Large Marble Tablet~
+A large tablet of pure white marble sits here, with some things carved in it.~
+~
+27 0 0
+0 0 0 0
+10 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27550
+rosewood chest beautiful~
+A Beautiful Rosewood Chest~
+An ornately decorated rosewood chest sits here, its lid open.~
+~
+15 0 0
+100000 0 -1 0
+10 10 10
+100
+E
+rosewood chest beautiful~
+This beautiful chest is decorated with carvings of unicorns, bears, and
+other incredible creatures.  The sweet smell of rosewood rises up from it,
+and its lid is wide open.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27551
+platinum chest heavy~
+A Shining Platinum Chest~
+A shining platinum chest sits here, its lid torn from its hinges.~
+~
+15 0 0
+100000 0 -1 0
+10 10 10
+100
+E
+platinum chest heavy~
+This chest is beautifully inlaid with rubies, diamonds, and sapphires, and
+the banding is made of a deep black onyx.  It is overflowing with a strange
+assortment of items, ranging widely in worth and rarity.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27552
+basket woven daffodil daffodils~
+a Handcrafted Basket of Yellow Daffodils~
+A lovely basket made of bright yellow daffodils sits here.~
+~
+15 0 1
+8000 0 -1 0
+1 10 5000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#27553
+teat unicorn pure~
+The Lactating Teat of a Nearby Unicorn~
+A unicorn's teet is here, the unicorn must be close by!~
+~
+17 0 16385
+1000 1000 0 0
+3 10000 189
+100
+E
+teet unicorn pure~
+This milky-white teet even has a cute lil' white nipple on it. Pure
+refreshing hydration gushes from this supple mound. Nomnom.
 ~
 X
 ~
