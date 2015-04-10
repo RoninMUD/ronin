@@ -55,7 +55,7 @@ struct clan_data clan_list[MAX_CLANS];
  1 - Diabolik
  2 - Da Doobies - share with Diabolik
  3 - SOLO
- 4 - Vertigo
+ 4 - Blood Moon
  5 - Dark Legion
  6 - HIA
  7 - DraGonHeaRt
@@ -74,6 +74,7 @@ struct clan_data clan_list[MAX_CLANS];
 20 - CLAN OF BEAR
 21 - Jesuit Monger
 22 - . - Tabitha's clan
+23 - Bud
 */
 
 /* Boards */
@@ -97,6 +98,10 @@ struct clan_data clan_list[MAX_CLANS];
 #define TABBY_ACCESS     27592
 #define HELLIONS_ACCESS  27551
 #define HE_ACCESS        11601
+#define BUD_ACCESS       3077
+
+/* Entry rooms */
+#define BUD_ENTRANCE     27516
 
 int clan_top=0;
 char *fread_action(FILE *fl);
@@ -352,6 +357,8 @@ int check_clan_access(int room,struct char_data *ch) {
     case 22:
       if(room==TABBY_ACCESS) return TRUE;
       break;
+    case 23:
+      if (room == BUD_ACCESS) return TRUE;
 #ifdef TEST_SITE
     case 25:
       if (room == HELLIONS_ACCESS) return TRUE;
@@ -2469,6 +2476,32 @@ int talisman_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
   return TRUE;
 }
 
+/* Bud Access */
+static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
+  char buf[MAX_INPUT_LENGTH];
+  struct room_direction_data dir = {0};
+  struct room_direction_data* o_dir = NULL;
+
+  if (!ch || IS_NPC(ch) || !AWAKE(ch) || (cmd != CMD_ENTER)) return FALSE;
+
+  one_argument(arg, buf);
+
+  if (strncmp(buf, "hall", 4)) return FALSE;
+  if (!check_clan_access(BUD_ACCESS, ch)) return FALSE;
+
+  o_dir = world[room].dir_option[UP];
+  dir.to_room_r = real_room(BUD_ENTRANCE);
+
+  world[room].dir_option[UP] = &dir;
+
+  do_move(ch, "", CMD_UP);
+
+  world[room].dir_option[UP] = o_dir;
+
+  return TRUE;
+}
+
+
 #ifdef TEST_SITE
 int hellions_entrance(int room,CHAR *ch, int cmd, char *arg)
 {
@@ -2506,6 +2539,7 @@ void assign_clan(void) {
   assign_obj(27530,clan_recall_scroll);
 
   /* Bud */
+  assign_room(BUD_ACCESS, bud_entrance);
   assign_mob(27517, receptionist);
   assign_mob(27518, do_vault);
   //assign_obj(27526, bloodmoon_orb);

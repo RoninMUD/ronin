@@ -31,7 +31,7 @@ molar gorgo~
 Gorgo's Molar~
 An enormous blood-stained molar from a titanic beast.~
 $n smashes $V into a bloody pulp with $s Gorgo's Molar.~
-5 265336324 8193
+5 264287748 8193
 92 9 3 6
 31 2097593 66047
 0
@@ -46,7 +46,7 @@ was hardly an herbivore.
 ~
 X
 $n slam$z Gorgo's Molar into the ground, leaving a distinct toothmark.~
-5 0 0
+516 0 0
 M
 ~
 ~
@@ -65,13 +65,13 @@ skirt ebony black~
 A black lacquered ebony skirt~
 A pile of lacquered ebony lies here.~
 ~
-9 779235840 33
+9 241185280 33
 14 0 0 0
 20 30000 20000
-10
+25
 X
 ~
-0 0 0
+2048 0 0
 M
 ~
 ~
@@ -109,10 +109,10 @@ claw snake gembal black~
 a Gembal Snake's Claw~
 A tiny black claw lies on the ground here, dripping ichor.~
 ~
-5 250622466 16385
+5 250622978 16385
 0 2 2 8
 13 20000 20000
-10
+20
 X
 ~
 3072 0 0
@@ -122,7 +122,7 @@ M
 ~
 ~
 A
-19 4
+19 5
 A
 12 37
 A
@@ -254,10 +254,10 @@ nametag tomek tag goldtag~
 Tomek's Gold-plated Nametag~
 A burnished golden plate lies here, a name inscribed in it...~
 ~
-9 107004928 5
+9 241222656 5
 11 -1 -1 -1
 62 250000 23000
-5
+25
 E
 tomek nametag tag name~
 The inscription reads: "TOMEK".
@@ -273,26 +273,25 @@ M
 A
 19 3
 A
-13 51
-A
-2 -1
+13 5
 #16511
-a Fish-Ape's Scaly Hide~
+hide scale scaly fish ape~
 a Fish-Ape's Scaly Hide~
 The scaly hide of a creature from the southern regions of Vilosia is here.~
 ~
-9 48288768 9
+9 182502400 9
 31 -1 -1 -1
 36 10 45000
-7
+20
 E
 hide~
-The hide before you is deceptively weak-looking.  Hundreds of years
-of use has gi ven it a translucent quality that belies its powers.
+The hide before you is depectively weak-looking. Hundreds of
+years of use has given it a translucent quality that belies
+its powers.
 ~
 X
 ~
-2 0 0
+1024 0 0
 M
 ~
 ~
@@ -301,11 +300,9 @@ M
 A
 19 2
 A
-13 44
+52 13
 A
-1 -2
-T
-50000
+1 1
 #16512
 bucket rusted~
 A Rusted Bucket~
@@ -743,10 +740,10 @@ shawl human skin~
 A wrinkled shawl of human skin~
 A wrinkled pile of what looks to be human skin leaks a red mist here.~
 ~
-11 103954496 1025
+11 136316992 1025
 0 0 0 0
 5 10000 20000
-12
+20
 E
 skin~
 You feel a bit sick as you look at this unholy creation... it
@@ -765,16 +762,18 @@ pile of inhumanity, staining whatever it touches.
 ~
 X
 ~
-1026 0 0
+3588 0 0
 M
 ~
 ~
 ~
 ~
 A
+19 4
+A
 9 56
 A
-19 3
+17 -20
 T
 20000
 #16533
@@ -829,10 +828,10 @@ chain belly children bones~
 A belly chain of children's bones~
 A large chain of children's bones lies strung together here.~
 ~
-8 140538368 2049
+8 175170048 2049
 0 0 0 0
 10 10000 67342
-5
+20
 X
 ~
 2048 0 0
@@ -846,7 +845,7 @@ A
 A
 49 10
 A
-19 0
+19 1
 B
 32
 #16535
@@ -870,25 +869,25 @@ M
 necklace claws panther~
 Necklace of Panther Claws~
 A strange necklace of panther claws lies here.~
-~
-5 150090240 8197
+$r necklace whirls through the air, clawing at $V ferociously.~
+5 149959168 8197
 0 11 3 8
 4 20000 20000
-7
+20
 X
-~
-3072 0 0
+$r necklace whirls through the air, clawing at nothing menacingly.~
+3584 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 1
+19 2
 A
-12 36
+12 16
 A
-53 4
+53 2
 B
 8388608
 #16537
@@ -896,13 +895,13 @@ tomtom drum skin human tom~
 a Tomtom made of human skin~
 A small pair of drums lies in the dust here.~
 ~
-24 217248768 16385
+24 217117696 16385
 0 0 0 0
 19 30000 21092
 30
 X
 ~
-1024 0 0
+1536 0 0
 M
 ~
 ~
@@ -911,9 +910,9 @@ M
 A
 19 5
 A
-18 1
+18 3
 A
-53 4
+51 8
 B
 32768
 #16538
@@ -992,7 +991,7 @@ Tomek's Canine plunges deep into the throat of the victim!~
 5 13691392 8193
 68 6 6 12
 34 1629375 175666
-6
+25
 X
 ~
 1024 0 0
@@ -1029,10 +1028,10 @@ mukluks white fur~
 White Fur Mukluks~
 A pair of white fur mukluks lie on the floor here.~
 ~
-9 743634944 65
+9 206632960 65
 3 0 0 0
 5 20000 23212
-8
+25
 X
 ~
 0 0 0
@@ -1050,7 +1049,7 @@ staff icy~
 an Icy Staff~
 An icy rime-covered staff lies frozen to the ground here.~
 ~
-4 145898560 16385
+4 145767488 16385
 50 3 2 140
 10 10000 20000
 45
@@ -1066,18 +1065,20 @@ A
 19 -10
 A
 18 -10
+A
+12 -100
 #16554
 kerchief checkered~
 a checkered kerchief~
 A small piece of checkered cloth lies here.~
 ~
-11 217199616 17
+11 246428672 17
 0 0 0 0
 3 45000 10000
 24
 X
 ~
-2560 0 0
+512 0 0
 M
 ~
 ~
@@ -1086,40 +1087,40 @@ M
 A
 12 35
 A
-3 3
+19 2
 A
 53 4
 B
-32768
+8
 #16555
 blouse yellow cotton~
 a yellow cotton blouse~
 A yellow blouse lies in the dust here.~
 ~
-11 217199616 9
+11 217068544 9
 0 0 0 0
 8 25432 12543
-13
+20
 X
 ~
-3072 0 0
+512 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 2
+13 -100
 A
-12 26
+19 3
 A
 53 9
 #16556
 stick sharp wooden ga~
 a Ga Stick~
 A painted, sharpened wooden stick floats a few inches off the ground.~
-Ga Stick shrieks an unholy tune as it is swung through the air!~
-5 235985920 24577
+~
+5 235985920 16385
 1 6 3 11
 18 20320 20320
 17
@@ -1138,7 +1139,7 @@ of whomever it kills, growing stronger with each kill.
 ~
 X
 ~
-1024 0 0
+1536 0 0
 M
 ~
 ~
@@ -1148,8 +1149,6 @@ A
 19 6
 A
 18 2
-A
-28 3
 #16557
 book memoirs journal lemouro tracker~
 Lemouro the Tracker's Memoirs~
@@ -1257,18 +1256,14 @@ A white leather wristband lies on the floor here.~
 100
 X
 ~
-3072 0 0
+0 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 1
-A
-13 -59
-A
-12 41
+19 3
 B
 2
 #16559
@@ -1276,7 +1271,7 @@ wristband band tracker leather black~
 a black leather tracker's wristband~
 A large wristband made of black leather lies in the dust here.~
 ~
-9 717288448 4097
+9 183550976 4097
 8 -1 -1 -1
 11 76000 88000
 100
@@ -1291,9 +1286,9 @@ M
 A
 19 3
 A
-13 33
+37 8
 A
-2 1
+45 6
 B
 1048576
 #16560
@@ -1301,7 +1296,7 @@ leggings black fur~
 Black Fur Leggings~
 A pair of black fur leggings lie casually thrown on the ground.~
 ~
-9 174384128 33
+9 174121984 33
 6 0 0 0
 24 34000 35000
 100
@@ -1314,9 +1309,9 @@ M
 ~
 ~
 A
-19 3
+19 4
 A
-46 10
+46 6
 A
 13 31
 #16561
@@ -1324,13 +1319,13 @@ spear leaf bladed~
 a Leaf-Bladed Spear~
 A long, leaf-bladed spear lies stuck in the ground here.~
 Leaf-Bladed Spear whistles through the air as it swings to attack!~
-26 718334976 8193
+26 183553024 8193
 2 8 6 14
 32 734734 30000
 100
 X
 ~
-512 0 0
+3584 0 0
 M
 ~
 ~
@@ -1339,9 +1334,9 @@ M
 A
 18 2
 A
-48 20
+19 5
 A
-19 4
+17 -10
 #16562
 bridle rotting~
 A rotting bridle~
@@ -1437,7 +1432,7 @@ skull elar~
 the skull of an impudent minstrel~
 Staring sightlessly back at you is an overturned skull.~
 ~
-1 15741952 65537
+1 145798144 65537
 2 3 -1 -1
 7 5 57234
 100
@@ -1451,7 +1446,7 @@ thing quick about him.
 ~
 X
 ~
-0 0 0
+512 0 0
 M
 ~
 ~
@@ -1470,7 +1465,7 @@ antlers caribou~
 a massive set of caribou antlers~
 Spanning at least three feet, an imposing set of antlers have been left here.~
 ~
-9 45138944 513
+9 179356672 513
 3 -1 -1 -1
 237 672345 23742
 100
@@ -1489,11 +1484,11 @@ M
 ~
 ~
 A
-19 2
+19 3
 A
-18 -2
+1 1
 A
-13 41
+13 17
 #16568
 mittens panther fur~
 a cosy pair of mittens woven from panther fur~
@@ -1509,7 +1504,7 @@ Sure, they look ridiculous, but would YOU taunt their owner?
 ~
 X
 ~
-2048 0 0
+3072 0 0
 M
 ~
 ~
@@ -1531,10 +1526,10 @@ Brilliant white Kimagee fur snuggles into the ground.~
 9 35716096 257
 4 -1 -1 -1
 3 73553 257000
-15
+25
 X
 ~
-0 0 0
+2048 0 0
 M
 ~
 ~
@@ -1559,7 +1554,7 @@ Brilliant white Kimagee fur snuggles into the ground.~
 100
 X
 ~
-0 0 0
+2048 0 0
 M
 ~
 ~
