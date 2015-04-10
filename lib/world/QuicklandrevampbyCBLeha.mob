@@ -8,7 +8,7 @@ his motions is executed with  a remarkable speed which you can only pray he
 doesn't have the skill to put to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+4000 10d3+6
+31 -6 -1 1d1+4000 10d3+6
 15000 311011
 8 8 1
 3 0 0d0+0 0
@@ -25,7 +25,7 @@ of her motions is executed with a remarkable speed which you can only pray she
 doesn't have the skill to put to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+6000 10d3+6
+31 -6 -1 1d1+6000 10d3+6
 15000 311011
 8 8 2
 3 0 0d0+0 0
@@ -42,7 +42,7 @@ of his motions is executed with  a remarkable speed which you can only pray he
 doesn't have the skill to put to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+4200 10d3+6
+31 -6 -1 1d1+4200 10d3+6
 15000 311011
 8 8 1
 3 0 0d0+0 0
@@ -59,7 +59,7 @@ of her motions is executed with a remarkable speed which you can only pray she
 doesn't have the skill to put to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+5800 10d3+6
+31 -6 -1 1d1+5800 10d3+6
 15000 311011
 8 8 2
 3 0 0d0+0 0
@@ -76,7 +76,7 @@ of his motions is executed with remarkable speed and you can only pray he
 doesn't have the skill to use it to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+4400 10d3+6
+31 -6 -1 1d1+4400 10d3+6
 15000 311011
 8 8 1
 3 0 0d0+0 0
@@ -93,7 +93,7 @@ of her motions is executed with a remarkable speed which you can only pray she
 doesn't have the skill to put to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+5600 10d3+6
+31 -6 -1 1d1+5600 10d3+6
 15000 311011
 8 8 2
 3 0 0d0+0 0
@@ -110,7 +110,7 @@ of his motions is executed with remarkable speed and you can only pray he
 doesn't have the skill to use it to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+4600 10d3+6
+31 -6 -1 1d1+4600 10d3+6
 15000 311011
 8 8 1
 3 0 0d0+0 0
@@ -127,7 +127,7 @@ of her motions is executed with a remarkable speed which you can only pray she
 doesn't have the skill to put to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+5400 10d3+6
+31 -6 -1 1d1+5400 10d3+6
 15000 311011
 8 8 2
 3 0 0d0+0 0
@@ -144,7 +144,7 @@ of his motions is executed with remarkable speed and you can only pray he
 doesn't have the skill to use it to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+4800 10d3+6
+31 -6 -1 1d1+4800 10d3+6
 15000 311011
 8 8 1
 3 0 0d0+0 0
@@ -161,7 +161,7 @@ of her motions is executed with a remarkable speed which you can only pray she
 doesn't have the skill to put to great advantage in combat.
 ~
 67108936 262144 -100 Y
-31 4 1 1d1+5200 10d3+6
+31 -6 -1 1d1+5200 10d3+6
 15000 311011
 8 8 2
 3 0 0d0+0 0
@@ -178,7 +178,7 @@ snore noisily. When it sees you it cries out, "Please, rescue me! Take me back
 to my smial!"
 ~
 72 0 0 Y
-30 -4 3 1d100+2450 1d10+20
+31 -4 3 1d100+2450 1d10+20
 0 225225
 6 6 1
 69 0 0d0+0 0
@@ -227,12 +227,12 @@ A large green creature is hunched over in the dark.
 You see a large crocodile standing on two legs with the arms of a human. He
 has sharp claws and a large jaw, you don't feel getting near him is a wise idea.~
 104 524328 0 Y
-31 -2 2 1d500+6500 5d5+18
+34 -7 2 1d500+6500 5d5+18
 0 500000
 8 8 0
 60 0 0d0+0 2
-8 1 15 0
-5 2 20 0
+8 1 2 0
+5 2 2 0
 0 0 0 0
 K
 20000 0 0 0 0 0
@@ -245,11 +245,11 @@ You see a large scaly, green crocodile. It appears to be a normal crocodile,
 but when you look into its eyes there is an uncanny familiarity about them.
 ~
 72 0 0 Y
-31 -2 3 1d500+6500 5d5+23
+34 -7 3 1d500+6500 5d5+23
 0 500000
 6 6 0
 60 0 0d0+0 1
-8 1 20 0
+8 1 3 0
 0 0 0 0
 K
 30000 0 0 0 0 0
