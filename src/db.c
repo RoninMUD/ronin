@@ -1615,7 +1615,6 @@ struct obj_data *read_object(int nr, int type)
 
   /* If RANDOM flag, assign random stats */
   for (j = 0; j < MAX_OBJ_AFFECT; ++j) {
-
     mod = 0;
 
     if((IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM) || /* All random */
@@ -1625,35 +1624,50 @@ struct obj_data *read_object(int nr, int type)
 
       i = number(1, 100);
 
-      if (obj->affected[j].location == APPLY_ARMOR ||
-          obj->affected[j].location == APPLY_MANA ||
-          obj->affected[j].location == APPLY_HIT ||
-          obj->affected[j].location == APPLY_MOVE) {
-        if(i<3) mod=5; /*2%*/
-        else if(i<13) mod=2; /*10%*/
-        else if(i<89) mod=0; /*76%*/
-        else if(i<99) mod=-2; /*10%*/
-        else mod=-5; /*2%*/
+      if (obj->affected[j].location == APPLY_MOVE) {
+        // non-weighted distribution
+        mod = i;
+      } else if ((obj->affected[j].location == APPLY_HIT) || (obj->affected[j].location == APPLY_MANA)) {
+        // 50% non-weighted distribution
+        if (i > 50) mod = 0;
+        else mod = i;
+      } else if (obj->affected[j].location == APPLY_ARMOR) {
+        // weighted 0-10 distribution
+        if (i < 5)       mod = -10; // 4%
+        else if (i < 10) mod = -9;  // 5%
+        else if (i < 16) mod = -8;  // 6%
+        else if (i < 23) mod = -7;  // 7%
+        else if (i < 31) mod = -6;  // 8%
+        else if (i < 41) mod = -5;  // 10%
+        else if (i < 51) mod = -4;  // 10%
+        else if (i < 61) mod = -3;  // 10%
+        else if (i < 71) mod = -2;  // 10%
+        else if (i < 81) mod = -1;  // 10%
+        else             mod = 0;   // 20%
+      } else if (obj->affected[j].location == APPLY_HP_REGEN) {
+        // weighted distribution 0-30 (by 5s)
+        if (i < 6)       mod = 30;  // 5%
+        else if (i < 11) mod = 25;  // 5%
+        else if (i < 16) mod = 20;  // 5%
+        else if (i < 26) mod = 15;  // 10%
+        else if (i < 36) mod = 10;  // 10%
+        else if (i < 46) mod = 5;   // 10%
+        else             mod = 0;   // 55%
+      } else if (obj->affected[j].location == APPLY_MANA_REGEN) {
+        // weighted distribution 0-6
+        if (i < 6)       mod = 6;  // 5%
+        else if (i < 11) mod = 5;  // 5%
+        else if (i < 16) mod = 4;  // 5%
+        else if (i < 26) mod = 3;  // 10%
+        else if (i < 36) mod = 2;  // 10%
+        else if (i < 46) mod = 1;  // 10%
+        else             mod = 0;  // 55%
+      } else if (obj->affected[j].location == APPLY_HITROLL || obj->affected[j].location == APPLY_DAMROLL) {
+        // weighted distribution 0-2
+        if (i < 6)       mod = 2;  // 5%
+        else if (i < 21) mod = 1;  // 15%
+        else             mod = 0;  // 80%
       }
-
-      if (obj->affected[j].location == APPLY_HP_REGEN ||
-          obj->affected[j].location == APPLY_MANA_REGEN) {
-        if(i<3) mod=5; /*2%*/
-        else if(i<13) mod=2; /*10%*/
-        else if(i<89) mod=0; /*76%*/
-        else if(i<99) mod=-2; /*10%*/
-        else mod=-5; /*2%*/
-      }
-
-      if (obj->affected[j].location == APPLY_HITROLL ||
-          obj->affected[j].location == APPLY_DAMROLL) {
-        if(i<3) mod = 2; /*2%*/
-        else if(i<13) mod = 1; /*10%*/
-        else if(i<89) mod = 0; /*76%*/
-        else if(i<99) mod = -1; /*10%*/
-        else mod = -2; /*2%*/
-      }
-
       obj->affected[j].modifier += mod;
     }
   }
@@ -1675,14 +1689,14 @@ struct obj_data *read_object(int nr, int type)
   obj_proto_table[nr].number++;
 
   /* New ownerid field */
-  obj->ownerid[0]             =0;
-  obj->ownerid[1]             =0;
-  obj->ownerid[2]             =0;
-  obj->ownerid[3]             =0;
-  obj->ownerid[4]             =0;
-  obj->ownerid[5]             =0;
-  obj->ownerid[6]             =0;
-  obj->ownerid[7]             =0;
+  obj->ownerid[0] = 0;
+  obj->ownerid[1] = 0;
+  obj->ownerid[2] = 0;
+  obj->ownerid[3] = 0;
+  obj->ownerid[4] = 0;
+  obj->ownerid[5] = 0;
+  obj->ownerid[6] = 0;
+  obj->ownerid[7] = 0;
 
   obj->obj_flags.popped = time(NULL) / (60*60*24); /* current time in days since Jan 1, 1970 */
 
