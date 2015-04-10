@@ -50,9 +50,9 @@ gauntlet scaled dragon~
 The Scaled Gauntlet of the Dragon~
 A scaled gauntlet is left on the ground.~
 ~
-9 248566784 129
+9 180405248 129
 11 0 0 0
-6 200000 3000
+6 200000 5000
 23
 E
 gauntlet scaled dragon~
@@ -62,7 +62,7 @@ the abdominal scales protecting the belly of a red dragon.
 ~
 X
 ~
-4 0 0
+1024 0 0
 M
 ~
 ~
@@ -72,8 +72,8 @@ A
 19 3
 A
 52 8
-T
-999999
+A
+18 1
 #17503
 band golden dragon red~
 Golden Band of the Dragon~
@@ -89,7 +89,7 @@ band golden dragon red~
 ~
 X
 ~
-0 0 0
+2048 0 0
 M
 ~
 ~
@@ -106,10 +106,10 @@ talon dragon~
 The Talon of the Ancient Red Dragon~
 A red talon sticks out of the ground.~
 ~
-5 238084096 16385
+5 237027328 24577
 0 4 9 9
-11 400000 22500
-10
+31 400000 22500
+25
 E
 talon dragon~
   The sharp, two feet long talon is from the tip of an ancient dragon's
@@ -117,27 +117,29 @@ huge wings.
 ~
 X
 ~
-5 0 0
+3588 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 4
+19 5
 A
-18 5
+18 3
+A
+13 5
 T
-999999
+66666
 #17505
 skull dragon red~
 Dragon Skull~
 A large dragon skull lies here.~
 ~
-9 183554048 17
+9 182505472 17
 10 0 0 0
 50 1000000 100000
-10
+25
 E
 skull dragon red~
   A coke-grey skull emits a powerful presence of draconian power.  The skull
@@ -154,20 +156,22 @@ M
 ~
 ~
 A
-19 3
+19 4
 A
-18 3
+18 2
+A
+49 6
 T
-999999
+44444
 #17506
 boots gold plated~
 Gold-Plated Boots~
 Rays of gold gleam from a pair of boots.~
 ~
-9 248560640 65
-10 0 0 0
+9 243317760 65
+8 0 0 0
 15 1200000 65000
-10
+20
 E
 boots gold plated~
   A strong steel core is plated in gleaming gold and encrusted with emeralds
@@ -176,27 +180,27 @@ evoke a magical feeling from within.
 ~
 X
 ~
-0 0 0
+3072 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 2
+19 3
 A
-18 2
+18 0
 A
-24 -2
+12 5
 #17507
 gauntlets chain chained~
 Chained Gauntlets~
 A pair of silver chained gauntlets lie here.~
 ~
-9 250625024 129
+9 217070592 129
 0 0 0 0
 7 350000 33000
-10
+20
 E
 gauntlets chain chained~
   The gleaming shine of silver and the embellishing diamonds on this pair of
@@ -205,7 +209,7 @@ those who wear them.
 ~
 X
 ~
-0 0 0
+3072 0 0
 M
 ~
 ~
@@ -215,6 +219,8 @@ A
 19 3
 A
 53 2
+A
+13 -100
 #17508
 bracers blue diamond~
 Blue Diamond Bracers~
@@ -223,7 +229,7 @@ An azure shine emanates from a pair of bracers on the ground.~
 9 183513088 257
 0 0 0 0
 5 2220000 62000
-10
+15
 E
 bracers blue diamond~
   A magical power clings a set of blue diamonds together to make a pair of
@@ -232,7 +238,7 @@ bound together by the forces of holy nature.
 ~
 X
 ~
-0 0 0
+512 0 0
 M
 ~
 ~
@@ -252,23 +258,23 @@ A feathery frill is heaped up in a pile.~
 9 248561664 1025
 12 0 0 0
 12 542000 91000
-10
+20
 X
 ~
-4 0 0
+2052 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 2
+19 3
 A
 18 2
 A
 52 15
 T
-999999
+55555
 #17510
 boots scaled~
 Scaled Boots~
@@ -284,62 +290,6 @@ boots scaled~
 ~
 X
 ~
-4 0 0
-M
-~
-~
-~
-~
-A
-19 2
-T
-999999
-#17511
-scale abdominal dragon~
-Abdominal Scale of the Dragon~
-A large, slightly beige scale is thrust into the ground.~
-~
-9 249611264 513
-13 0 0 0
-28 835000 77500
-10
-E
-scale abdominal dragon~
-  The abdominal scale is from the belly of a red dragon.  The toughness of
-the scale reflects the power of the red dragon, and the greatness of those
-who were able to kill it.
-~
-X
-~
-4 0 0
-M
-~
-~
-~
-~
-A
-19 1
-A
-18 3
-T
-999999
-#17512
-cloak purpure king~
-The Purpure Cloak of the King~
-A wonderful pile of purpure lies here.~
-~
-11 245429248 1025
-0 0 0 0
-9 733000 101000
-10
-E
-cloak purpure king~
-  A thick purpure cloak falling from an ermine lining makes up this garment
-which was once worn by a great king.  A golden clasp embellished with
-emeralds binds the coat.
-~
-X
-~
 0 0 0
 M
 ~
@@ -349,25 +299,56 @@ M
 A
 19 2
 A
-18 2
+49 6
 A
-17 -5
-#17513
-sleeves dragonskin dragon~
-Red Dragonskin Sleeves~
-A pair of tough red sleeves lie here.~
+53 3
+#17511
+scale abdominal dragon~
+Abdominal Scale of the Dragon~
+A large, slightly beige scale is thrust into the ground.~
 ~
-9 249614336 257
-12 0 0 0
-8 360000 40000
-10
+9 249611264 513
+13 0 0 0
+28 835000 77500
+20
 E
-sleeves dragonskin dragon~
-  The tough skin from a red dragon is made into a powerful set of sleeves.
+scale abdominal dragon~
+  The abdominal scale is from the belly of a red dragon.  The toughness of
+the scale reflects the power of the red dragon, and the greatness of those
+who were able to kill it.
 ~
 X
 ~
-4 0 0
+3072 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 0
+A
+17 -2
+#17512
+cloak purpure king~
+The Purpure Cloak of the King~
+A wonderful pile of purpure lies here.~
+~
+11 211874816 1025
+0 0 0 0
+9 733000 101000
+15
+E
+cloak purpure king~
+  A thick purpure cloak falling from an ermine lining makes up this garment
+which was once worn by a great king.  A golden clasp embellished with
+emeralds binds the coat.
+~
+X
+~
+3072 0 0
 M
 ~
 ~
@@ -376,18 +357,45 @@ M
 A
 19 3
 A
-18 3
-T
-999999
+18 0
+A
+53 1
+#17513
+sleeves dragonskin dragon~
+Red Dragonskin Sleeves~
+A pair of tough red sleeves lie here.~
+~
+9 216059904 257
+12 0 0 0
+8 360000 40000
+25
+E
+sleeves dragonskin dragon~
+  The tough skin from a red dragon is made into a powerful set of sleeves.
+~
+X
+~
+2048 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+39 15
+A
+52 2
 #17514
 armour dragon scales~
 Red Dragon's Armour~
 An armour made of dragon scales rests here.~
 ~
-9 182501376 9
+9 148952064 9
 20 0 0 0
 42 2335000 196000
-10
+25
 E
 armour dragon scales~
   Dragon scales make up a tough piece of armour that is both strong and agile
@@ -395,7 +403,7 @@ at the same time, due to the unique properties of the scales.
 ~
 X
 ~
-4 0 0
+3072 0 0
 M
 ~
 ~
@@ -404,20 +412,18 @@ M
 A
 19 3
 A
-18 2
+53 2
 A
 17 -8
-T
-999999
 #17515
 claws dragon~
 The Dragon's Claws~
 A large set of blood-red claws lie here.~
 ~
-5 215019520 8193
+5 209772544 8193
 0 6 6 8
 32 650000 77000
-10
+25
 E
 claws dragon~
   The three huge claws from an Ancient Red Dragon's front leg are sharp
@@ -425,7 +431,7 @@ and powerful enough to tear through metal.
 ~
 X
 ~
-4 0 0
+3072 0 0
 M
 ~
 ~
@@ -434,27 +440,25 @@ M
 A
 19 6
 A
-18 3
+18 2
 A
 52 5
-T
-999999
 #17516
 leggings dragonskin dragon~
 Red Dragonskin Leggings~
 A pair of tough red leggings lie here.~
 ~
-9 250621952 33
+9 246427648 33
 9 0 0 0
 7 590000 35500
-10
+25
 E
 leggings dragonskin dragon~
   The tough skin from a red dragon is made into a powerful set of leggings.
 ~
 X
 ~
-4 0 0
+2048 0 0
 M
 ~
 ~
@@ -463,10 +467,8 @@ M
 A
 19 3
 A
-18 3
+9 99
 A
 53 3
-T
-999999
 #0
 $~
