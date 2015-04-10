@@ -246,8 +246,8 @@ He is a here protecting his guild.
 K
 0 0 0 0 0 0 0
 #3018
-Nomad Guildmaster Master ~
-The Nomad's Guildmaster~
+guildmaster master ~
+The Guildmaster~
 A wide shouldered man, wearing a leather jerkin and pants, stands quiet here.
 ~
    This is your master. Big and strong with bulging muscles. Several
@@ -269,7 +269,7 @@ K
 0 0 0 0 0 0 0
 #3019
 guildmaster master~
-the Guildmaster~
+The Guildmaster~
 Your guildmaster is standing here.
 ~
    Even though your guildmaster looks old and tired she is still
@@ -320,8 +320,8 @@ R
 K
 0 0 0 0 0 0 0
 #3021
-guildmaster cleric master~
-The Cleric's Guildmaster~
+guildmaster master~
+The Guildmaster~
 Head bowed, the Guildmaster of the Clerical order, prays in the rooms center.
 ~
    Peace and calm radiate from the benevolent face of this master of the
@@ -347,7 +347,7 @@ K
 0 0 0 0 0 0 0
 #3022
 guildmaster master~
-the Guildmaster~
+The Guildmaster~
 Your guildmaster is standing here.
 ~
    You realize that whenever your guildmaster moves, you fail to notice 
@@ -366,7 +366,7 @@ K
 0 0 0 0 0 0 0
 #3023
 guildmaster master~
-the Guildmaster~
+The Guildmaster~
 Your guildmaster is standing here.
 ~
    This is your master. Big and strong with bulging muscles. Several 
@@ -516,7 +516,7 @@ K
 0 0 0 0 0 0 0
 #3031
 guildmaster master~
-the Guildmaster~
+The Guildmaster~
 Your guildmaster is standing here.
 ~
    He is the person skilled in music. You can learn very good
@@ -550,7 +550,7 @@ K
 0 0 0 0 0 0 0
 #3033
 guildmaster master~
-the Guildmaster~
+The Guildmaster~
 Your Guildmaster is standing here.
 ~
    He is the Guildmaster of Paladin. From his strong eyes,
