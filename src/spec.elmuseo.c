@@ -953,7 +953,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
       act("You roar in savage triumph as you bite into $N's throat!",FALSE,mek,0,vict,TO_CHAR);
       damage(mek,vict,number(200,300),TYPE_UNDEFINED,DAM_PHYSICAL);
     }
-    return FALSE; /* returns TRUE for CMD_CLIMB, FALSE for everything else */
+    return FALSE;
   }
 
   if(cmd==MSG_TICK && !(mek->specials.fighting))
