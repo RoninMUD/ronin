@@ -914,35 +914,12 @@ int warek_spec( CHAR *gor )
 int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
   CHAR *vict = NULL, *vict1 = NULL, *vict2 = NULL, *vict3 = NULL, *vict4 = NULL, *vict5 = NULL, *next_vict = NULL;
   int i = 0, j = 0, f = 0, specnum = 0, num = 0;
-  OBJ *wield = NULL, *hold = NULL;
-  char buf[MAX_INPUT_LENGTH];
+  OBJ *wield = NULL;
 
   if( !mek )
     return FALSE;
 
-  if( (cmd==CMD_CAST || cmd==CMD_SONG || cmd==CMD_USE) && IS_MORTAL(ch) && chance(33) )
-  {
-		vict = ch;
-    act("$n deafens $N with a fearsome howl!", FALSE, mek, 0, vict, TO_NOTVICT );
-    act("$n deafens you with a fearsome howl!", FALSE, mek, 0, vict, TO_VICT );
-    act("You deafen $N with a fearsome howl!", FALSE, mek, 0, vict, TO_CHAR );
-
-		if(EQ(vict,HOLD) && IS_MORTAL(vict))
-		{
-			hold = EQ(vict,HOLD);
-			sprintf(buf, "This beast is terrifying! Overcome by shock, you drop %s.\n\r", OBJ_SHORT(hold) );
-			send_to_char(buf, vict);
-			sprintf(buf, "In the face of Tomek's terrifying, beastly nature %s drops %s.\n\r", GET_NAME(vict), OBJ_SHORT(hold));
-			send_to_room_except(buf, CHAR_REAL_ROOM(vict), vict);
-			log_f("ELWAXO: Tomek scared %s, %s dropped %s.", vict->player.name, HSSH(vict), OBJ_SHORT(hold) );
-			obj_to_room(unequip_char(vict,HOLD), CHAR_REAL_ROOM(vict));
-		}
-
-    damage(mek, ch, number(200,300),TYPE_UNDEFINED,DAM_PHYSICAL);
-    return FALSE;
-  }
-
-  if((cmd==CMD_CLIMB || cmd==CMD_FLEE || (cmd==CMD_WEST && !ch->specials.fighting) || cmd==CMD_RECITE) && IS_MORTAL(ch))
+  if((cmd==CMD_FLEE || (cmd==CMD_WEST && !ch->specials.fighting) || cmd==CMD_RECITE) && IS_MORTAL(ch))
   {
     vict = ch;
     if(chance(20))
@@ -967,16 +944,16 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
       act("$n screeches as he swipes his claws across your back.",FALSE,mek,0,vict,TO_VICT);
       act("$n screeches as he swipes his claws across $N's back.",FALSE,mek,0,vict,TO_NOTVICT);
       act("You screech loudly as you swipe your claws across $N's back.",FALSE,mek,0,vict,TO_CHAR);
-      damage(mek,vict,number(215,350),TYPE_UNDEFINED,DAM_PHYSICAL);
+      damage(mek,vict,number(100,200),TYPE_UNDEFINED,DAM_PHYSICAL);
     }
     else
     {
       act("$n roars in savage triumph as he bites into your throat!",FALSE,mek,0,vict,TO_VICT);
       act("$n roars in savage triumph as he bites into $N's throat!",FALSE,mek,0,vict,TO_NOTVICT);
       act("You roar in savage triumph as you bite into $N's throat!",FALSE,mek,0,vict,TO_CHAR);
-      damage(mek,vict,number(370,600),TYPE_UNDEFINED,DAM_PHYSICAL);
+      damage(mek,vict,number(200,300),TYPE_UNDEFINED,DAM_PHYSICAL);
     }
-    return cmd==CMD_CLIMB; /* returns TRUE for CMD_CLIMB, FALSE for everything else */
+    return FALSE; /* returns TRUE for CMD_CLIMB, FALSE for everything else */
   }
 
   if(cmd==MSG_TICK && !(mek->specials.fighting))
@@ -999,7 +976,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
   if(mek->specials.fighting)
   {
     specnum = 0;
-    f=number(1,50);
+    f=number(1,100);
     if(f < 10) specnum = 2;
     else if( f < 30) specnum = 1;
 
@@ -1009,7 +986,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
       switch(num)
       {
         case 0:
-          for(j=0; j<6; j++)
+          for(j=0; j<3; j++)
           {
             vict=get_random_victim_fighting(mek);
             if(vict && vict!=mek && CHAR_REAL_ROOM(vict)==CHAR_REAL_ROOM(mek))
@@ -1027,10 +1004,6 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
   							log_f("ELWAXO: %s's %s disarmed by Tomek.", vict->player.name, OBJ_SHORT(wield) );
   							obj_to_room(unequip_char(vict,WIELD), CHAR_REAL_ROOM( vict ) );
               }
-              else if(IS_MORTAL(vict))
-              {
-								do_flee(vict, "", 0);
-							}
             }
           }
           break;
@@ -1042,11 +1015,11 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
             next_vict = vict->next_in_room;
             if(saves_spell(vict, SAVING_SPELL,GET_LEVEL(mek)))
             {
-              damage(mek,vict,200,TYPE_UNDEFINED,DAM_NO_BLOCK);
+              damage(mek,vict,100,TYPE_UNDEFINED,DAM_NO_BLOCK);
             }
             else
             {
-              damage(mek,vict,350,TYPE_UNDEFINED,DAM_NO_BLOCK);
+              damage(mek,vict,200,TYPE_UNDEFINED,DAM_NO_BLOCK);
             }
           }
           break;
@@ -1070,7 +1043,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
             act("You are frozen by $n's icy breath!",FALSE,mek,0,vict2,TO_VICT);
             act("$N is frozen by $n's icy breath!",FALSE,mek,0,vict2,TO_NOTVICT);
             act("$N is frozen by your icy breath!",FALSE,mek,0,vict2,TO_CHAR);
-            damage(mek,vict2,175,TYPE_UNDEFINED,DAM_COLD);
+            damage(mek,vict2,150,TYPE_UNDEFINED,DAM_COLD);
             WAIT_STATE(vict2,number(1,3)*PULSE_VIOLENCE);
           }
 
@@ -1079,7 +1052,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
             act("You are frozen by $n's icy breath!",FALSE,mek,0,vict3,TO_VICT);
             act("$N is frozen by $n's icy breath!",FALSE,mek,0,vict3,TO_NOTVICT);
             act("$N is frozen by your icy breath!",FALSE,mek,0,vict3,TO_CHAR);
-            damage(mek,vict3,175,TYPE_UNDEFINED,DAM_COLD);
+            damage(mek,vict3,125,TYPE_UNDEFINED,DAM_COLD);
             WAIT_STATE(vict3,number(1,3)*PULSE_VIOLENCE);
           }
 
@@ -1088,7 +1061,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
             act("You are frozen by $n's icy breath!",FALSE,mek,0,vict3,TO_VICT);
             act("$N is frozen by $n's icy breath!",FALSE,mek,0,vict3,TO_NOTVICT);
             act("$N is frozen by your icy breath!",FALSE,mek,0,vict3,TO_CHAR);
-            damage(mek,vict4,175,TYPE_UNDEFINED,DAM_COLD);
+            damage(mek,vict4,100,TYPE_UNDEFINED,DAM_COLD);
             WAIT_STATE(vict4,number(1,3)*PULSE_VIOLENCE);
           }
 
@@ -1097,7 +1070,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
             act("You are frozen by $n's icy breath!",FALSE,mek,0,vict3,TO_VICT);
             act("$N is frozen by $n's icy breath!",FALSE,mek,0,vict3,TO_NOTVICT);
             act("$N is frozen by your icy breath!",FALSE,mek,0,vict3,TO_CHAR);
-            damage(mek,vict5,175,TYPE_UNDEFINED,DAM_COLD);
+            damage(mek,vict5,75,TYPE_UNDEFINED,DAM_COLD);
             WAIT_STATE(vict5,number(1,3)*PULSE_VIOLENCE);
           }
           break;
@@ -1112,13 +1085,13 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
             failcount++;
           }
 
-          if( vict1 != vict2 )
+          if( (vict1 != vict2) && (vict1 != mek->specials.fighting) )
           {
             act("Tomek picks up $n and throws $s at $N!",FALSE,vict1,0,vict2,TO_NOTVICT);
             act("Tomek picks you up and throws you at $N!",FALSE,vict1,0,vict2,TO_CHAR);
             act("Tomek picks up $n and throws $s at you!",FALSE,vict1,0,vict2,TO_VICT);
-            damage(mek,vict1,300,TYPE_UNDEFINED,DAM_PHYSICAL);
-            damage(mek,vict2,600,TYPE_UNDEFINED,DAM_NO_BLOCK);
+            damage(mek,vict1,200,TYPE_UNDEFINED,DAM_PHYSICAL);
+            damage(mek,vict2,400,TYPE_UNDEFINED,DAM_NO_BLOCK);
             stop_fighting(vict2);
             WAIT_STATE(vict1,2*PULSE_VIOLENCE);
             WAIT_STATE(vict2,3*PULSE_VIOLENCE);
@@ -1130,7 +1103,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
 			    act("$n grabs $N suddenly and hurls $S limp body at the glacial wall!",0,mek,0,vict,TO_NOTVICT);
 			    act("$N startles you! You grab $S fragile body and hurl it at the wall!",0,mek,0,vict,TO_CHAR);
 			    WAIT_STATE(vict,3*PULSE_VIOLENCE);
-			    damage(mek,vict,number(400,700),TYPE_UNDEFINED,DAM_NO_BLOCK);
+			    damage(mek,vict,250,TYPE_UNDEFINED,DAM_NO_BLOCK);
 			    break;
         default:
           break;
@@ -1141,6 +1114,7 @@ int mus_tomek_hemp(CHAR *mek, CHAR *ch, int cmd, char *arg) {
   return FALSE;
 }
 
+/*
 int mus_tomek_skeena (CHAR *tom, CHAR *ch, int cmd, char *arg) {
   if (!tom)
     return FALSE;
@@ -1161,11 +1135,11 @@ int mus_tomek_skeena (CHAR *tom, CHAR *ch, int cmd, char *arg) {
   }
 
   if((3*GET_MAX_HIT(tom)/5) <= GET_HIT(tom))
-  {   /* if > 60% hp */
+  {   // if > 60% hp
     REMOVE_BIT(tom->specials.act,ACT_SHIELD);
   }
   else
-  { /* if < 60% hp */
+  { // if < 60% hp
     SET_BIT(tom->specials.act,ACT_SHIELD);
   }
 
@@ -1209,6 +1183,7 @@ int mus_tomek_skeena (CHAR *tom, CHAR *ch, int cmd, char *arg) {
 
   return FALSE;
 }
+*/
 
 
 int mus_tomek (CHAR *tom, CHAR *ch, int cmd, char *arg) {
@@ -1216,13 +1191,13 @@ int mus_tomek (CHAR *tom, CHAR *ch, int cmd, char *arg) {
   // spec func for Tomek.
 
   if( real_tomek_func == NULL ) {
-      if(chance(50)) {
-        real_tomek_func = mus_tomek_skeena;
-        GET_ALIGNMENT(tom) = 2;
-      } else {
-        real_tomek_func = mus_tomek_hemp;
-        GET_ALIGNMENT(tom) = 1;
-      }
+    //if(chance(50)) {
+    //  real_tomek_func = mus_tomek_skeena;
+    //  GET_ALIGNMENT(tom) = 2;
+    //} else {
+    real_tomek_func = mus_tomek_hemp;
+    GET_ALIGNMENT(tom) = 1;
+    //}
   }
 
   if( cmd == MSG_DIE )
@@ -1389,12 +1364,24 @@ int mus_bill( CHAR *bill, CHAR *ch, int cmd, char *arg )
 
 int mus_leaf_spear(OBJ *spear, CHAR *ch,int cmd,char *arg)
 {
+  CHAR *vict = NULL;
+
   if( cmd == CMD_PRACTICE && ch == spear->equipped_by )
   {
     send_to_char( "You are unable to practice while wielding the heavy spear.\r\n", ch);
     return TRUE;
   }
 
+  CHAR *owner = spear->equipped_by;
+  if(cmd != MSG_MOBACT || !owner || !owner->specials.fighting) return FALSE;
+  //Only spec in forests
+  vict = owner->specials.fighting;
+  if((GET_HIT(owner)>-1) && (world[CHAR_REAL_ROOM(owner)].sector_type == SECT_FOREST) && vict) {
+    act("Guided through the forest by your spear, you leap toward $N.", 1, owner, 0, vict, TO_CHAR);
+    act("$n disappears into the forest momentarily before leaping toward you.", 1, owner, 0, vict, TO_VICT);
+    act("$n disappears into the forest momentarily before leaping toward $N.", 1, owner, 0, vict, TO_NOTVICT);
+    hit(owner, vict, TYPE_UNDEFINED);
+  }
   return FALSE;
 }
 
@@ -3237,7 +3224,7 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
       int lemobj;
       for( lemobj = 16558; lemobj < 16562; lemobj++ )
       {
-        if( chance(10) )
+        if( chance(20) )
         {
           tmp_obj = read_object( lemobj, VIRTUAL );
           obj_to_room( tmp_obj, CHAR_REAL_ROOM( lem_instance ) );
@@ -3245,7 +3232,7 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
       }
       for( lemobj = 16566; lemobj < 16569; lemobj++ )
       {
-        if( chance(10) )
+        if( chance(20) )
         {
           tmp_obj = read_object( lemobj, VIRTUAL );
           obj_to_room( tmp_obj, CHAR_REAL_ROOM( lem_instance ) );
@@ -3359,7 +3346,6 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
       }
     }
   }
-
   return FALSE;
 }
 
@@ -3548,7 +3534,7 @@ int mus_white_band(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   if( EQ(owner, WEAR_WRIST_R) && EQ(owner, WEAR_WRIST_L) && V_OBJ(EQ(owner, WEAR_WRIST_R)) == MUS_WHITE_BAND &&
       V_OBJ(EQ(owner, WEAR_WRIST_L)) == MUS_WHITE_BAND && EQ(owner, WEAR_WRIST_R) != obj) return FALSE;
 
-  int bonus = number(10, 15);
+  int bonus = number(8, 13);
   CHAR *vict = owner->specials.fighting;
   //Only spec outdoors
   int sector =  world[CHAR_REAL_ROOM(owner)].sector_type;
@@ -3678,7 +3664,7 @@ int mus_mittens(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   return FALSE;
 }
 // Antlers snag and fall off when you do a climb/crawl/jump
-// In fight, small chance to knock cloak/weapon off of someone
+// In fight, small chance to knock cloak/hold off of someone
 int mus_antlers(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   if(!obj->equipped_by) return FALSE;
 
@@ -3696,7 +3682,7 @@ int mus_antlers(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   if(cmd != MSG_MOBACT || !wearer->specials.fighting) return FALSE;
   if(number(1,300) != 1) return FALSE;
   int attempts = 0;
-  int positions[] = {WEAR_ABOUT, WIELD};
+  int positions[] = {WEAR_ABOUT, HOLD};
   for(attempts = 0; attempts < 5; attempts++) {
     CHAR *vict = get_random_victim(wearer);
     if(vict == NULL) continue;
@@ -3728,7 +3714,7 @@ int mus_elar_skull(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     CHAR *next_vict = NULL;
     for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = next_vict) {
       next_vict = vict->next_in_room;
-      if(vict != ch && GET_CLASS(vict) == CLASS_BARD && GET_POS(vict) >= POSITION_FIGHTING) {
+      if(vict != ch && GET_CLASS(vict) == CLASS_BARD && GET_POS(vict) >= POSITION_FIGHTING && GET_LEVEL(vict) < 56) {
         act("Lighting the skull scares $N!", 1, ch, 0, vict, TO_CHAR);
         act("Did you just see $n light a bard's skull on fire?!", 1, ch, 0, vict, TO_VICT);
         act("$N looks at $n fearfully!", 1, ch, 0, vict, TO_OTHER);
@@ -3754,6 +3740,12 @@ int mus_elar_skull(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   act ("$n's skull screams 'NOT AGAIN!'", TRUE, tch, obj, 0, TO_ROOM);
   act ("$n's skull screeches 'we are the world, we are the children....'.", TRUE, tch, obj, 0, TO_ROOM);
   send_to_char ("As you prepare to die, your skull screams 'NOT AGAIN!'\r\nand frantically sings a song.\n\r",tch);
+
+  //if a skull is 6dam, sorry, it is now capped at 5
+  if (obj->affected[0].modifier > 5) {
+    send_to_char("The piercing screech from the skull cracks itself slightly.", tch);
+    obj->affected[0].modifier = 5;
+  }
 
   GET_HIT (tch) = 1;
   GET_MANA (tch) = 0;
@@ -3790,8 +3782,8 @@ int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
   if(GET_CLASS(holder)!=CLASS_BARD) return FALSE;
   if(!holder->specials.fighting) return FALSE;
 
-  // Once every 2 hours if you were backflipping non stop
-  if(number(0,2400) != 1) return FALSE;
+  // Roughly once every 2 hours of backflipping
+  if(number(0,1000) != 1) return FALSE;
 
   act("You use your tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, holder->specials.fighting, TO_CHAR);
   act("$n beats you senseless with $s tomtom!", 1, ch, 0, holder->specials.fighting, TO_VICT);
@@ -3799,9 +3791,9 @@ int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
   for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp) {
     temp=tmp_victim->next_in_room;
     if (ch != tmp_victim)
-      spell_invulnerability(16, ch, tmp_victim, 0);
+      spell_haste(50, ch, tmp_victim, 0);
    }
-   spell_invulnerability(16, ch, ch, 0);
+   spell_haste(50, ch, ch, 0);
 
   return FALSE;
 }
@@ -3823,9 +3815,9 @@ int mus_mukluks(OBJ *obj, CHAR *ch,int cmd,char *arg)
   {
     send_to_char( "You burrow into your mukluks for warmth.\r\n", owner );
     obj->affected[0].location = APPLY_MANA_REGEN;
-    obj->affected[0].modifier = number(4,6);
+    obj->affected[0].modifier = number(14,20);
     obj->affected[1].location = APPLY_HP_REGEN;
-    obj->affected[1].modifier = number(4,6);
+    obj->affected[1].modifier = number(14,20);
     obj->affected[2].modifier = 2;
     obj->affected[2].location = APPLY_DAMROLL;
   }
@@ -3853,14 +3845,14 @@ char* cloak_conditions[] = {
 };
 
 
-// Cloak takes 17,000 ticks to degrade => 280 hours => 11 days of solid fighting
+// Cloak takes 60 ticks of solid fighting to degrade
 // Degrades faster if you are fighting with multiple people.
-#define NUM_TICKS 17400
+#define NUM_TICKS 60
 
 #define CTHORR_VALUE (NUM_TICKS+1)
 #define SOUDURE_VALUE (NUM_TICKS+2)
 #define CORNELIUS_VALUE (NUM_TICKS+3)
-#define TICKS_PER_DEGRADE 2900
+#define TICKS_PER_DEGRADE 10
 
 void change_cloak_condition( OBJ *cloak )
 {
@@ -3894,12 +3886,10 @@ int mus_cloak(OBJ *cloak, CHAR *ch,int cmd,char *arg)
       convert_to_la_soudure( cloak );
     else if( cloak->spec_value == CORNELIUS_VALUE )
       convert_to_cornelius( cloak );
+    else if( cloak->spec_value > CORNELIUS_VALUE )
+      change_cloak_condition( cloak );
     return FALSE;
   }
-
-  // Non-casters don't deserve mana.
-  if(owner && cmd == MSG_TICK && !is_caster(owner) )
-    GET_MANA(owner) = 0;
 
   if( cmd == MSG_MOBACT && owner && !IS_NPC( owner ) && cloak->spec_value == 0 )
   {
