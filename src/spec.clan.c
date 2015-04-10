@@ -2505,12 +2505,13 @@ void assign_clan(void) {
   assign_obj(27510,clan_pentagram); /* solo entrance */
   assign_obj(27530,clan_recall_scroll);
 
-  assign_mob(27517,receptionist); /* bloodmoon  */
-  assign_mob(27518,do_vault); /* bloodmoon vault */
-  assign_obj(27526,bloodmoon_orb);
-  assign_room(27520, bloodmoon_tub);
-  assign_room(27517, bloodmoon_main);
-  assign_room(27516, bloodmoon_statue);
+  /* Bud */
+  assign_mob(27517, receptionist);
+  assign_mob(27518, do_vault);
+  //assign_obj(27526, bloodmoon_orb);
+  //assign_room(27520, bloodmoon_tub);
+  //assign_room(27517, bloodmoon_main);
+  //assign_room(27516, bloodmoon_statue);
 
   assign_room(MM_ACCESS, mm_block);
   assign_room(27536, mm_portal);
@@ -2556,10 +2557,12 @@ void assign_clan(void) {
   assign_room(ICE_PALACE, ice_palace_spec);
   assign_room(ASSASSINS_PARADISE, assassins_paradise_spec);
   assign_room(TUNNEL_OF_ROOTS, tunnel_of_roots_spec);
+
   /* High Elves */
   assign_room(HE_ACCESS, he_block);
   assign_mob(27576, do_vault);
   assign_mob(27577, meta);
+
   /* Unicorns */
   assign_mob(27554, do_vault);
   assign_mob(27553, receptionist);
