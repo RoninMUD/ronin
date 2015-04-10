@@ -7444,7 +7444,7 @@ void do_mskin(CHAR *ch, char *argument, int cmd) {
   char usage[]="\
 This command allows you to assign a value to a mob's skin and also\n\r\
 have objects be found within the corpse after its skinned.\n\r\n\r\
-  Usage: `kmskin`q <mob#> value/load1/load2/load3/load4/load5 #\n\r\
+  Usage: `kmskin`q <mob#> value/load1/load2/load3/load4/load5/load6 #\n\r\
      Ex: `kmskin`q 3005 value 20000 (skin is worth 20000)\n\r\
      Ex: `kmskin`q 3005 load3 3052  (might get a recall scroll after skinning\n\r";
 
