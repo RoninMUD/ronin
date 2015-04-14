@@ -828,7 +828,7 @@ chain belly children bones~
 A belly chain of children's bones~
 A large chain of children's bones lies strung together here.~
 ~
-8 175170048 2049
+8 174121472 2049
 0 0 0 0
 10 10000 67342
 20
@@ -987,13 +987,13 @@ M
 canine tooth tomek~
 Tomek's Canine~
 A huge bloody tooth is lying on the ground here.~
-Tomek's Canine plunges deep into the throat of the victim!~
+$r Tomek's Canine plunges deep into the throat of $V.~
 5 13691392 8193
 68 6 6 12
 34 1629375 175666
 25
 X
-~
+$n swing$z $s Tomek's Canine around threateningly.~
 1024 0 0
 M
 ~
@@ -1078,7 +1078,7 @@ A small piece of checkered cloth lies here.~
 24
 X
 ~
-512 0 0
+1536 0 0
 M
 ~
 ~
@@ -1318,13 +1318,13 @@ A
 spear leaf bladed~
 a Leaf-Bladed Spear~
 A long, leaf-bladed spear lies stuck in the ground here.~
-Leaf-Bladed Spear whistles through the air as it swings to attack!~
+$r Leaf-Bladed Spear whistles through the air as $e swing$z to attack!~
 26 183553024 8193
 2 8 6 14
 32 734734 30000
 100
 X
-~
+$r Leaf-Bladed Spear whistles through the air harmlessly.~
 3584 0 0
 M
 ~
@@ -1338,10 +1338,9 @@ A
 A
 17 -10
 #16562
-bridle rotting~
-A rotting bridle~
-An ancient, rotting bridle is lying on the floor.
-~
+bridle decaying~
+A decaying bridle~
+An long-since rotten, now decaying bridle is lying on the floor.~
 ~
 0 524288 2049
 0 0 0 0
@@ -1349,7 +1348,7 @@ An ancient, rotting bridle is lying on the floor.
 0
 X
 ~
-2 1045311 0
+2 0 0
 M
 ~
 ~
@@ -1358,7 +1357,7 @@ M
 A
 13 -500
 T
-2400
+1200
 #16563
 sting~
 a shattered sting~
@@ -1477,7 +1476,7 @@ did not give them up easily.
 ~
 X
 ~
-2048 64 0
+2048 0 0
 M
 ~
 ~

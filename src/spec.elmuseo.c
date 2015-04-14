@@ -1362,14 +1362,33 @@ int mus_bill( CHAR *bill, CHAR *ch, int cmd, char *arg )
   return FALSE;
 }
 
-int mus_leaf_spear(OBJ *spear, CHAR *ch,int cmd,char *arg)
+int mus_leaf_spear(OBJ *spear, CHAR *ch, int cmd, char *arg)
 {
   CHAR *vict = NULL;
+  char buf[MAX_STRING_LENGTH];
 
-  if( cmd == CMD_PRACTICE && ch == spear->equipped_by )
-  {
-    send_to_char( "You are unable to practice while wielding the heavy spear.\r\n", ch);
-    return TRUE;
+  if (cmd == MSG_BEING_REMOVED) {
+    if (ch != spear->equipped_by) return FALSE;
+    if (!ch) return FALSE;
+    if (spear == EQ(ch,WIELD)) {
+      unequip_char(ch, WIELD);
+      spear->obj_flags.value[3] = 14; // revert to Slice
+      equip_char(ch, spear, WIELD);
+    }
+    return FALSE;
+  } else if (cmd == MSG_OBJ_WORN) {
+    if (GET_CLASS(ch) == CLASS_THIEF) {
+      sprintf(buf, "You alter your grip slightly on the %s.\n\r", OBJ_SHORT(spear));
+      send_to_char(buf, ch);
+      unequip_char(ch, WIELD);
+      spear->obj_flags.value[3] = 10; // change to Pierce
+      equip_char(ch, spear, WIELD);
+    } else { // just to be safe and for disarms
+      unequip_char(ch, WIELD);
+      spear->obj_flags.value[3] = 14; // revert to Slice
+      equip_char(ch, spear, WIELD);
+    }
+    return FALSE;
   }
 
   CHAR *owner = spear->equipped_by;
