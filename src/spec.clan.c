@@ -359,9 +359,11 @@ int check_clan_access(int room,struct char_data *ch) {
       break;
     case 23:
       if (room == BUD_ACCESS) return TRUE;
+      break;
 #ifdef TEST_SITE
     case 25:
       if (room == HELLIONS_ACCESS) return TRUE;
+      break;
 #endif
     default:
       break;
@@ -2478,15 +2480,11 @@ int talisman_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
 /* Bud Access */
 static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
-  char buf[MAX_INPUT_LENGTH];
   struct room_direction_data dir = {0};
   struct room_direction_data* o_dir = NULL;
+  static bool open = FALSE;
 
-  if (!ch || IS_NPC(ch) || !AWAKE(ch) || (cmd != CMD_ENTER)) return FALSE;
-
-  one_argument(arg, buf);
-
-  if (strncmp(buf, "hall", 4)) return FALSE;
+  if (!ch || IS_NPC(ch) || !AWAKE(ch) || (cmd != CMD_UP) || open) return FALSE;
   if (!check_clan_access(BUD_ACCESS, ch)) return FALSE;
 
   o_dir = world[room].dir_option[UP];
@@ -2494,9 +2492,13 @@ static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
 
   world[room].dir_option[UP] = &dir;
 
+  open = TRUE;
+
   do_move(ch, "", CMD_UP);
 
   world[room].dir_option[UP] = o_dir;
+
+  open = FALSE;
 
   return TRUE;
 }
