@@ -105,7 +105,7 @@ A
 talon dragon~
 The Talon of the Ancient Red Dragon~
 A red talon sticks out of the ground.~
-~
+The temperature of the air rises briefly as $r talon stabs $V.~
 5 237027328 24577
 0 4 9 9
 31 400000 22500
@@ -116,7 +116,7 @@ talon dragon~
 huge wings.
 ~
 X
-~
+$r talon superheats the air around $m before cooling once more.~
 3588 0 0
 M
 ~
@@ -365,7 +365,7 @@ sleeves dragonskin dragon~
 Red Dragonskin Sleeves~
 A pair of tough red sleeves lie here.~
 ~
-9 216059904 257
+9 216060928 257
 12 0 0 0
 8 360000 40000
 25
@@ -416,21 +416,27 @@ A
 A
 17 -8
 #17515
-claws dragon~
-The Dragon's Claws~
-A large set of blood-red claws lie here.~
-~
-5 209772544 8193
+gauntlet claws~
+Clawed Gauntlet of Therizon the Red~
+A blood-red clawed gauntlet of masterful craftsmanship, marked by a humming ruby.~
+$n rear$z back a taloned fist and savagely plunge$z it into $V.~
+5 209773570 8193
 0 6 6 8
 32 650000 77000
 25
 E
-claws dragon~
-  The three huge claws from an Ancient Red Dragon's front leg are sharp
-and powerful enough to tear through metal.
+gauntlet~
+Masterfully crafted from the claws of an ancient red dragon, this
+taloned gauntlet was forged to mimic the visual and functional
+aspects from whence it was derived. Each claw was meticulously
+shaved down, practically to their core and coated in a blood-red
+varnish, prior to being fastened to the posterior of the gauntlet.
+Embedded into the back of the gauntlet is an enormous, blackened
+ruby that nearly resembles the eye of a dragon and is continually
+emitting an eerie hum.
 ~
 X
-~
+$n rake$z the air with a taloned fist, savaging a nonexistent foe.~
 3072 0 0
 M
 ~
@@ -438,7 +444,7 @@ M
 ~
 ~
 A
-19 6
+19 8
 A
 18 2
 A
@@ -448,7 +454,7 @@ leggings dragonskin dragon~
 Red Dragonskin Leggings~
 A pair of tough red leggings lie here.~
 ~
-9 246427648 33
+9 246428672 33
 9 0 0 0
 7 590000 35500
 25
