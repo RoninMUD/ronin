@@ -171,13 +171,13 @@ A bloody staff is lying on the floor.~
 20 10 4000
 35
 E
-staff~
-Runes cover the surface of this wooden staff... runes inlaid with
+torch~
+Runes cover the surface of this wooden staff... runes inlaid with 
 dried blood...
 ~
 E
-torch~
-Runes cover the surface of this wooden staff... runes inlaid with 
+staff~
+Runes cover the surface of this wooden staff... runes inlaid with
 dried blood...
 ~
 X
@@ -202,7 +202,7 @@ A pile of emerald muslin lies crumpled in the corner here.~
 10 300000 300000
 43
 E
-sash~
+emerald~
 You see strange black runes crawling along the fabric of this
 beautiful sash.
 ~
@@ -212,7 +212,7 @@ You see strange black runes crawling along the fabric of this
 beautiful sash.
 ~
 E
-emerald~
+sash~
 You see strange black runes crawling along the fabric of this
 beautiful sash.
 ~
@@ -314,13 +314,13 @@ A Rusted Bucket lies turned on its side here, hardened wax on the handle.
 8 30000 3000
 15
 E
-bucket~
+helmet~
 This bucket has wax filling much of the interior, making it a snug fit.~
 E
 rusted~
 This bucket has wax filling much of the interior, making it a snug fit.~
 E
-helmet~
+bucket~
 This bucket has wax filling much of the interior, making it a snug fit.~
 X
 ~
@@ -345,11 +345,11 @@ An ancient, rotting bridle is lying on the floor.
 8 10000 900
 15
 E
-bridle~
+rotting~
 A leather bridle which has bits of hardened wax beaded up all over it.
 ~
 E
-rotting~
+bridle~
 A leather bridle which has bits of hardened wax beaded up all over it.
 ~
 X
@@ -745,7 +745,7 @@ A wrinkled pile of what looks to be human skin leaks a red mist here.~
 5 10000 20000
 20
 E
-shawl~
+skin~
 You feel a bit sick as you look at this unholy creation... it
 seems as if its creator skinned a human being for this shawl.
 In fact, judging by the small size of the shawl, it looks as if
@@ -753,7 +753,7 @@ the creator skinned a child! A strange red mist comes from this
 pile of inhumanity, staining whatever it touches.
 ~
 E
-skin~
+shawl~
 You feel a bit sick as you look at this unholy creation... it
 seems as if its creator skinned a human being for this shawl.
 In fact, judging by the small size of the shawl, it looks as if
@@ -786,11 +786,14 @@ A shiny disk of brass lies here, a name scratched into it...~
 20 250000 45000
 3
 E
-nametag~
-You gaze at this small brass disk in awe... you have finally
-gotten the nametag of Gorgo, the Fur Beast! If only half of the
-legends are true, you could soon be the ruler of the entire
-world! Or at least the ruler of the Ettin Village.
+name~
+There is a name scratched into this brass disk. Yes there is. In
+fact, the name is "Gorgo".
+~
+E
+gorgo~
+Yes... it does say Gorgo on it. Perhaps this means you ought
+to return it to the owner... alone.
 ~
 E
 tag~
@@ -800,14 +803,11 @@ legends are true, you could soon be the ruler of the entire
 world! Or at least the ruler of the Ettin Village.
 ~
 E
-gorgo~
-Yes... it does say Gorgo on it. Perhaps this means you ought
-to return it to the owner... alone.
-~
-E
-name~
-There is a name scratched into this brass disk. Yes there is. In
-fact, the name is "Gorgo".
+nametag~
+You gaze at this small brass disk in awe... you have finally
+gotten the nametag of Gorgo, the Fur Beast! If only half of the
+legends are true, you could soon be the ruler of the entire
+world! Or at least the ruler of the Ettin Village.
 ~
 X
 ~
@@ -1078,7 +1078,7 @@ A small piece of checkered cloth lies here.~
 24
 X
 ~
-512 0 0
+1536 0 0
 M
 ~
 ~
@@ -1125,17 +1125,17 @@ A painted, sharpened wooden stick floats a few inches off the ground.~
 18 20320 20320
 17
 E
-ga~
-The Ga Stick is a four foot long stick painted black with small
-red Rimmonite runes carved into it. It is said to possess the soul
-of whomever it kills, growing stronger with each kill.
-~
-E
 stick~
 This stick is the traditional weapon of the warriors of the House
 of Rimmon, and this one in particular looks like it was decorated
 by Rimmonite hands. Lemouro must have stolen it from a temple on
 one of his many raids in Southern Vilosia.
+~
+E
+ga~
+The Ga Stick is a four foot long stick painted black with small
+red Rimmonite runes carved into it. It is said to possess the soul
+of whomever it kills, growing stronger with each kill.
 ~
 X
 ~
@@ -1159,22 +1159,46 @@ A large book lies half open on the bench here.~
 14 500 10
 100
 E
-page59~
-was great, but Khallaq was a prize worth keeping. I couldn't bear
-to skin such a magnificent beast, so I placed him also in Kiri-
-Khan's hold.
-   Tomek had caught a few new scents in the jungle, so I captured
-a few more creatures to bring back with me, for the wife.
-  When I finally got home with my prizes, our shack in the woods
-had been destroyed by my fledgeling son. Seeking a place where
-we could raise our poor child in peace, I found a massive underground
-tunnel system near a glacier. I built cages for my prizes and
-a small cabin for my family. There were a few problems with a local
-sorcerer called Hakeem, but I showed him my knowledge of the fearsome
-Warek Beasts, which he called Fur Beasts, and he was grateful enough
-to not bother me. It seems, however, that he has ensorcelled the
-entrance to my home. I hope he does not think to hold Lemouro the
-Tracker at bay, for I am much older and wiser than he.
+book~
+These look like Lemouro's memoirs. He has written most of the book
+in some strange tongue, but page57, page58, and page59 seem to
+be written in a more local language.
+~
+E
+memoirs~
+These look like Lemouro's memoirs. He has written most of the book
+in some strange tongue, but page57, page58, and page59 seem to
+be written in a more local language.
+~
+E
+journal~
+These look like Lemouro's memoirs. He has written most of the book
+in some strange tongue, but page57, page58, and page59 seem to
+be written in a more local language.
+~
+E
+journal~
+These look like Lemouro's memoirs. He has written most of the book
+in some strange tongue, but page57, page58, and page59 seem to
+be written in a more local language.
+~
+E
+page57~
+When Timur was born, I flew into a rage. How could we have been
+so foolish as to dismiss the evil witch Quaratt's curses as mere
+foolishness? Especially Scratch Mama! She was a priestess to the 
+dark panther goddess! We should have known better.
+   After I calmed down, I began to scheme. Eighty years of being
+the best tracker and trapper in the known world are not achieved
+by brute strength and a thick head, no. I realized the thing Quaratt
+feared the most was captivity, so I knew what I had to do. I left
+Scratch Mama and Timur here at home and went south with Tomek. Oh,
+I knew where to look. The cat-bitch had moved to another part of
+the jungle, but nobody has ever escaped Lemouro, no. Not even a
+goddess could escape my talents.
+   The bitch put up a hell of a fight, but Tomek held her minions
+off long enough for me to net Quaratt. I placed her in the hold
+of Kiri-Khan's ship and went back to the jungle with Tomek.
 ~
 E
 page58~
@@ -1196,46 +1220,22 @@ and had Tomek guard me from downwind, I didn't want this ape beast
 just hiding out for years. It hid for only four days. The battle
 ~
 E
-page57~
-When Timur was born, I flew into a rage. How could we have been
-so foolish as to dismiss the evil witch Quaratt's curses as mere
-foolishness? Especially Scratch Mama! She was a priestess to the 
-dark panther goddess! We should have known better.
-   After I calmed down, I began to scheme. Eighty years of being
-the best tracker and trapper in the known world are not achieved
-by brute strength and a thick head, no. I realized the thing Quaratt
-feared the most was captivity, so I knew what I had to do. I left
-Scratch Mama and Timur here at home and went south with Tomek. Oh,
-I knew where to look. The cat-bitch had moved to another part of
-the jungle, but nobody has ever escaped Lemouro, no. Not even a
-goddess could escape my talents.
-   The bitch put up a hell of a fight, but Tomek held her minions
-off long enough for me to net Quaratt. I placed her in the hold
-of Kiri-Khan's ship and went back to the jungle with Tomek.
-~
-E
-journal~
-These look like Lemouro's memoirs. He has written most of the book
-in some strange tongue, but page57, page58, and page59 seem to
-be written in a more local language.
-~
-E
-journal~
-These look like Lemouro's memoirs. He has written most of the book
-in some strange tongue, but page57, page58, and page59 seem to
-be written in a more local language.
-~
-E
-memoirs~
-These look like Lemouro's memoirs. He has written most of the book
-in some strange tongue, but page57, page58, and page59 seem to
-be written in a more local language.
-~
-E
-book~
-These look like Lemouro's memoirs. He has written most of the book
-in some strange tongue, but page57, page58, and page59 seem to
-be written in a more local language.
+page59~
+was great, but Khallaq was a prize worth keeping. I couldn't bear
+to skin such a magnificent beast, so I placed him also in Kiri-
+Khan's hold.
+   Tomek had caught a few new scents in the jungle, so I captured
+a few more creatures to bring back with me, for the wife.
+  When I finally got home with my prizes, our shack in the woods
+had been destroyed by my fledgeling son. Seeking a place where
+we could raise our poor child in peace, I found a massive underground
+tunnel system near a glacier. I built cages for my prizes and
+a small cabin for my family. There were a few problems with a local
+sorcerer called Hakeem, but I showed him my knowledge of the fearsome
+Warek Beasts, which he called Fur Beasts, and he was grateful enough
+to not bother me. It seems, however, that he has ensorcelled the
+entrance to my home. I hope he does not think to hold Lemouro the
+Tracker at bay, for I am much older and wiser than he.
 ~
 X
 ~
