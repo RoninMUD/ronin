@@ -69,7 +69,7 @@ struct clan_data clan_list[MAX_CLANS];
 15 - MAMFA
 16 - ISA
 17 - Astral Warriors
-18 - MagE
+18 - Unicorns
 19 - Eternal Newbies
 20 - CLAN OF BEAR
 21 - Jesuit Monger
@@ -89,19 +89,21 @@ struct clan_data clan_list[MAX_CLANS];
 #define ISA_BOARD         27841
 
 /* Access Rooms */
-#define DIABOLIK_ACCESS  2902
-#define VERTIGO_ACCESS   27516
+#define DIABOLIK_ACCESS   2902
+#define VERTIGO_ACCESS    27516
 #define DARK_LEGION_ACCESS 27522
-#define SOLO_ACCESS 3065 /* room for pentagram to operate in */
-#define MM_ACCESS 28589
-#define ETERNAL_ACCESS   27538
-#define TABBY_ACCESS     27592
-#define HELLIONS_ACCESS  27551
-#define HE_ACCESS        11601
-#define BUD_ACCESS       3077
+#define SOLO_ACCESS       3065 /* room for pentagram to operate in */
+#define MM_ACCESS         28589
+#define ETERNAL_ACCESS    27538
+#define TABBY_ACCESS      27592
+#define HELLIONS_ACCESS   27551
+#define HE_ACCESS         11601
+#define BUD_ACCESS        3077
+#define UNICORNS_ACCESS   3019
 
 /* Entry rooms */
-#define BUD_ENTRANCE     27516
+#define BUD_ENTRANCE      27516
+#define UNICORNS_ENTRANCE 27553
 
 int clan_top=0;
 char *fread_action(FILE *fl);
@@ -326,7 +328,7 @@ int check_clan_board(int board,struct char_data *ch) {
   return FALSE;
 }
 
-int check_clan_access(int room,struct char_data *ch) {
+int check_clan_access(int room, struct char_data *ch) {
 
   if(GET_LEVEL(ch)>LEVEL_SUP) return TRUE;
   switch(ch->ver3.clan_num) {
@@ -350,6 +352,9 @@ int check_clan_access(int room,struct char_data *ch) {
     case 11:
     case 13:
       if(room==MM_ACCESS) return TRUE;
+      break;
+    case 18: // Unicorns
+      if (room == UNICORNS_ACCESS) return TRUE;
       break;
     case 19:
       if(room==ETERNAL_ACCESS) return TRUE;
@@ -2478,7 +2483,37 @@ int talisman_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
   return TRUE;
 }
 
-/* Bud Access */
+/*
+** Unicorns
+*/
+static int unicorns_entrance(int room, CHAR *ch, int cmd, char *arg) {
+  struct room_direction_data dir = {0};
+  struct room_direction_data* o_dir = NULL;
+  static bool open = FALSE;
+
+  if (!ch || IS_NPC(ch) || !AWAKE(ch) || (cmd != CMD_DOWN) || open) return FALSE;
+  if (!check_clan_access(UNICORNS_ACCESS, ch)) return FALSE;
+
+  o_dir = world[room].dir_option[DOWN];
+  dir.to_room_r = real_room(UNICORNS_ENTRANCE);
+
+  world[room].dir_option[DOWN] = &dir;
+
+  open = TRUE;
+
+  do_move(ch, "", CMD_DOWN);
+
+  world[room].dir_option[DOWN] = o_dir;
+
+  open = FALSE;
+
+  return TRUE;
+}
+
+
+/*
+** Bud
+*/
 static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
   struct room_direction_data dir = {0};
   struct room_direction_data* o_dir = NULL;
@@ -2600,6 +2635,7 @@ void assign_clan(void) {
   assign_mob(27577, meta);
 
   /* Unicorns */
+  assign_room(UNICORNS_ACCESS, unicorns_entrance);
   assign_mob(27554, do_vault);
   assign_mob(27553, receptionist);
   assign_mob(27556, meta);
