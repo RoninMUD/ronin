@@ -189,7 +189,7 @@ int tonashi_wrestler(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
    if(!mob->specials.fighting) return FALSE;
 
-   if(cmd==MSG_MOBACT) {
+   if((cmd==MSG_MOBACT) && (((GET_HIT(mob) * 100) / GET_MAX_HIT(mob)) > 10)) {
      vict = get_random_victim_fighting(mob);
      if(vict && vict!=mob->specials.fighting && !number(0,4)) a_victim=TRUE;
    }
