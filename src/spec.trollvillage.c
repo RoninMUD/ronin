@@ -182,7 +182,7 @@ int troll_hermit(CHAR *herm, CHAR *ch, int cmd, char *arg) {
 int troll_lizardassassin(CHAR *liz, CHAR *ch, int cmd, char *arg) {
   CHAR *victim,*temp;
 
-  if (cmd)
+  if (cmd != MSG_MOBACT)
     return FALSE;
 
   /* Neyuv hisses */
@@ -203,11 +203,11 @@ int troll_lizardassassin(CHAR *liz, CHAR *ch, int cmd, char *arg) {
       return FALSE;
     }
 
-    /* Neyuv sends chars through fountain (NOT Clerics or Tank) */
+    /* Neyuv sends chars through fountain when above 10% life (NOT tank) */
     for(victim = world[CHAR_REAL_ROOM(liz)].people; victim;     victim = temp) {
       temp = victim->next_in_room;  /* Added temp - Ranger June 96 */
-      if ((!number(0,9)) && (victim != liz->specials.fighting) &&
-          (GET_CLASS(victim) != CLASS_CLERIC) && (IS_MORTAL(victim))) {
+      if ((!number(0,9)) && (victim != liz->specials.fighting) && (IS_MORTAL(victim)) &&
+		  (((GET_HIT(liz) * 100) / GET_MAX_HIT(liz)) > 10)) {
         act("$n lets out a loud scream and pushes $N into the gusher.",1,liz,0,victim,TO_NOTVICT);
         act("$n lets out a loud scream and pushes you into the gusher.",1,liz,0,victim,TO_VICT);
         act("$N shoots out through the the hole in the ceiling!",1,liz,0,victim,TO_NOTVICT);
