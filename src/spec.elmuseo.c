@@ -3736,7 +3736,7 @@ int mus_elar_skull(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       if(vict != ch && GET_CLASS(vict) == CLASS_BARD && GET_POS(vict) >= POSITION_FIGHTING && GET_LEVEL(vict) < 56) {
         act("Lighting the skull scares $N!", 1, ch, 0, vict, TO_CHAR);
         act("Did you just see $n light a bard's skull on fire?!", 1, ch, 0, vict, TO_VICT);
-        act("$N looks at $n fearfully!", 1, ch, 0, vict, TO_OTHER);
+        act("$N looks at $n fearfully!", 1, ch, 0, vict, TO_NOTVICT);
         mob_do(vict, "flee");
       }
     }
@@ -3806,7 +3806,7 @@ int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
   act("You use your tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, holder->specials.fighting, TO_CHAR);
   act("$n beats you senseless with $s tomtom!", 1, ch, 0, holder->specials.fighting, TO_VICT);
-  act("$n uses $s tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, holder->specials.fighting, TO_OTHER);
+  act("$n uses $s tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, holder->specials.fighting, TO_NOTVICT);
   for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp) {
     temp=tmp_victim->next_in_room;
     if (ch != tmp_victim)
