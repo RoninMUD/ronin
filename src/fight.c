@@ -3758,6 +3758,13 @@ void hit(CHAR *ch, CHAR *victim, int type)
     return;
   }
   else if (!IS_NPC(ch) &&
+           GET_CLASS(ch) == CLASS_NINJA)
+  {
+    dhit(ch, victim, TYPE_UNDEFINED);
+
+    return;
+  }
+  else if (!IS_NPC(ch) &&
            (IS_SET(GET_AFF(ch), AFF_DUAL) ||
             (GET_CLASS(ch) == CLASS_WARRIOR ||
              GET_CLASS(ch) == CLASS_AVATAR ||
@@ -3784,13 +3791,6 @@ void hit(CHAR *ch, CHAR *victim, int type)
     {
       dhit(ch, victim, TYPE_UNDEFINED);
     }
-
-    return;
-  }
-  else if (!IS_NPC(ch) &&
-           GET_CLASS(ch) == CLASS_NINJA)
-  {
-    dhit(ch, victim, TYPE_UNDEFINED);
 
     return;
   }
