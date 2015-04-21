@@ -477,7 +477,7 @@ As $n wears the pauldrons, you see a yellowish glint in $s eyes.~
 Your awareness level returns to normal as you remove the pauldrons.~
 The yellowish tinge fades from $n's eyes as $e removes the pauldrons.~
 A
-19 3
+19 4
 A
 18 1
 #1018
@@ -498,9 +498,9 @@ $n's incisors lengthen to a sharp point as $e dons the dalmatic.~
 Your pressing need to impale and drain the blood of your enemies subsides as you remove the dalmatic.~
 As $n removes the dalmatic, $s teeth regain their normal appearance.~
 A
-19 3
+19 4
 A
-18 2
+18 3
 B
 8
 #1019
@@ -779,9 +779,9 @@ A
 A
 18 2
 A
-52 25
+53 5
 B
-32768
+16809984
 #1030
 nomad crucified humanshield~
 a crucified nomad~
@@ -832,7 +832,7 @@ M
 ~
 ~
 A
-19 3
+19 4
 A
 18 2
 B
@@ -938,6 +938,29 @@ A
 45 3
 B
 1048576
+#1035
+schynbalds kobold chaos2010~
+Schynbalds of the Kobold Lord~
+Some tattered leg guards were discarded in a pile, reeking of a peculiar scent.~
+~
+9 134217792 33
+20 0 0 0
+15 66666 6666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 1
+B
+32768
 #1036
 chain twisted astral cords~
 Twisted Chain of Astral Cords~
@@ -1143,6 +1166,10 @@ $r war pick slams deeply into $V, causing blood to spray everywhere!~
 13 75000 25000
 10
 E
+night quest~
+`pNight was here.`q
+~
+E
 pick runed svirfneblin war brutal ornate runes~
 Long ago, the Svirfneblin Miner-King Kikival commissioned this weapon to be
 forged for his dwarven ally, High-General Damagar.  The war pick is a favorite
@@ -1155,10 +1182,6 @@ bravery or friendship.  Banded together against a common enemy, the drow, the
 two stalwart leaders defended their kingdoms.  Damagar had given the life of
 many of his soldiers, including his two sons, and lost an eye and a foot of his
 own.  How the weapon became lost to Damagar or his kin is now long forgotten.
-~
-E
-night quest~
-`pNight was here.`q
 ~
 X
 $r war pick gleams with a silver light as it arcs through the air.~
@@ -1178,7 +1201,7 @@ greaves made from giant's hide~
 A set of geaves are here, made of dark gray flesh and white bone.~
 ~
 9 134217728 33
-15 -1 -1 -1
+25 0 0 0
 15 450250 45025
 0
 E
@@ -1205,7 +1228,7 @@ $n straps a set a greaves to $s legs, a look of sadness washing across $s face.~
 You unstrap the greaves from your legs, feeling a little more at ease.~
 $n unstraps a set of greaves from $s legs, looking a little more at ease.~
 A
-19 4
+19 5
 A
 13 50
 A
@@ -1245,7 +1268,7 @@ A
 A
 13 50
 A
-52 25
+52 45
 B
 8192
 #1046
@@ -1254,7 +1277,7 @@ leviathan scale vambraces~
 A pair of shimmering green vambraces have been dropped here.~
 ~
 9 134217728 257
-15 -1 -1 -1
+25 0 0 0
 15 450250 45025
 0
 E
@@ -1319,7 +1342,7 @@ $n stops using $s skullcap, pricking $mself slightly on its quills.~
 A
 19 3
 A
-18 2
+18 3
 B
 4
 #1048
@@ -1328,7 +1351,7 @@ a plated belt of platypus bills~
 A strange plated belt made from many platypus bills is here on the ground.~
 ~
 9 134217728 2049
-30 -1 -1 -1
+25 0 0 0
 11 1182011 11811
 0
 E
@@ -1651,10 +1674,6 @@ A round shield, crafted from the scales of an azure dragon, has been left here.~
 17 356890 14501
 0
 E
-night quest~
-`pNight was here.`q
-~
-E
 shield azure dragon rider blue~
 Though the design of this shield is simple, it is beautifully crafted from rare
 and high quality materials. Round in shape, the shield is nearly a meter in
@@ -1670,6 +1689,10 @@ time; a testament to its superior craftsmanship. Capable of deflecting the
 mightiest of blows, this shield is deceptively light for its size, granting its
 wielder a high degree of mobility in the thick of battle.
 ~
+E
+night quest~
+`pNight was here.`q
+~
 X
 ~
 0 0 0
@@ -1682,6 +1705,79 @@ A
 19 3
 B
 32776
+#1058
+glaive ghost~
+a Ghost Glaive~
+A translucent spear was discarded here, faintly pulsing in and out of view.~
+~
+7 0 16385
+6 66 0 0
+10 66666 6666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 6
+A
+38 15
+#1059
+hauberk armadillo~
+a Giant Armadillo Hauberk~
+A giant suit of armor constructed from a chitinous hide was left here.~
+~
+9 0 9
+23 0 0 0
+30 66666 6666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+52 50
+A
+12 50
+B
+32
+#1060
+gauntlet spiked gruumsh~
+The Spiked Gauntlet of Gruumsh~
+A single spiked gauntlet was discarded here, a malevolent aura emanating from within.~
+~
+9 0 129
+25 0 0 0
+20 66666 6666
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 6
+A
+53 5
+B
+8
 #1085
 voucher midgaard casino prize~
 a Midgaard Casino prize voucher~
@@ -1797,10 +1893,6 @@ A simple gemstone pendant on a fine silver chain has been dropped here.~
 15 95000 55000
 33
 E
-night~
-`pNight was here.`q
-~
-E
 pendant sorrow gemstone fine silver chain~
 A mortal jewelcrafter, by the name of Marius, was tasked with producing a pair
 of amulets for Zeus and Hera. The metal that composes the fine silver chain of
@@ -1811,6 +1903,10 @@ were stolen by some lesser god and were eventually lost to the sands of time.
 It is said that the gods that commissioned the pendants were so jealous of
 their perfection that they had Marius executed, lest he someday produce a piece
 of higher quality.
+~
+E
+night~
+`pNight was here.`q
 ~
 X
 ~
@@ -1836,10 +1932,6 @@ A cloak composed of shadows and flame lies here in a smoldering heap.~
 3 12000 7000
 50
 E
-night~
-`pNight was here.`q
-~
-E
 cloak smoldering shadows flame~
 The cloak appears to flicker and fade, its presence in the physical realm a
 tenuous thing. The edges of the cape give it definition, as they smolder and
@@ -1849,6 +1941,10 @@ to be composed of the lingering essence of the creature. Perhaps they are just
 that, or perhaps they represent a sliver of a connection between this world and
 the lower planes. Nobody has dared to find out, lest the demon become aware of
 its loss and seek to reclaim its forgotten power.
+~
+E
+night~
+`pNight was here.`q
 ~
 X
 ~

@@ -151,6 +151,31 @@ A tall, iron pedestal stands here, displaying a large book.~
 10 10 10
 100
 E
+page2~
+  A note in the ancient High Speech to future generations.
+It looks like a lesson of some kind:
+"I do not shoot with my hand,
+     he who shoots with his hand has forgotten the face of his father.
+I do not aim with my hand,
+     he who aims with his hand has forgotten the face of his father.
+I aim with my eye.
+I do not kill with my gun,
+     he who kills with his gun has forgotten the face of his father.
+I kill with my heart."
+                    Ka         Ka-tet
+                        Destiny
+~
+E
+pedestal~
+This wrought-iron work of art stands alone, holding a grand book.
+~
+E
+book~
+  An immense, leather-bound volume of knowledge studied by the Lords
+of Light for centuries.  The cover carries a single emblazoned figure,
+that of the dark Tower.  Only two pages are legible, page1 and page2.
+~
+E
 page1~
   Eons ago, the Great Old Ones fought viciously over the possession
 of the Universe.  A consensus was finally reached that none of them
@@ -166,31 +191,6 @@ Lords of Light, human by appearance but supernatural in ability.
 They were set to recover the land if Evil ever forced its way in
 and took hold.  Since then, the world has moved on, and the gunslinger
 line continues.
-~
-E
-book~
-  An immense, leather-bound volume of knowledge studied by the Lords
-of Light for centuries.  The cover carries a single emblazoned figure,
-that of the dark Tower.  Only two pages are legible, page1 and page2.
-~
-E
-pedestal~
-This wrought-iron work of art stands alone, holding a grand book.
-~
-E
-page2~
-  A note in the ancient High Speech to future generations.
-It looks like a lesson of some kind:
-"I do not shoot with my hand,
-     he who shoots with his hand has forgotten the face of his father.
-I do not aim with my hand,
-     he who aims with his hand has forgotten the face of his father.
-I aim with my eye.
-I do not kill with my gun,
-     he who kills with his gun has forgotten the face of his father.
-I kill with my heart."
-                    Ka         Ka-tet
-                        Destiny
 ~
 X
 ~
