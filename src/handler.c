@@ -1,55 +1,8 @@
-/* ************************************************************************
+/**************************************************************************
 *  file: handler.c , Handler module.                      Part of DIKUMUD *
 *  Usage: Various routines for moving about objects/players               *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:27 $
-$Header: /home/ronin/cvs/ronin/handler.c,v 2.5 2005/01/21 14:55:27 ronin Exp $
-$Id: handler.c,v 2.5 2005/01/21 14:55:27 ronin Exp $
-$Name:  $
-$Log: handler.c,v $
-Revision 2.5  2005/01/21 14:55:27  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.4  2004/08/17 15:37:49  void
-Added Warrior Skill Quad
-
-Revision 2.3  2004/08/16 18:40:36  void
-Added Warrior Skill Quad
-
-Revision 2.2  2004/03/18 13:35:37  ronin
-equip_char: Addition of zapped code for object quest ownership.
-
-Revision 2.1  2004/03/17 13:46:00  ronin
-extract_char: Fix to remove character from character_list even if
-character is being extracted from nowhere.
-
-Revision 2.0.0.1  2004/02/05 16:09:26  ronin
-Reinitialization of cvs archives
-
-
-Revision 6-Nov-03 Ranger
-Added some PC checks to SUBLOG and removed redunant SUBLOGs to reduce
-syslog size.
-
-Revision 22-May-03 Ranger
-Addition of get_char_vis_zone
-
-Revision 1.3  2002/04/18 04:07:31  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <string.h>
 #include <stdio.h>

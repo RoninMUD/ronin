@@ -12,22 +12,6 @@
 ///   Museo III Addon specs by Skeena - Dec 2010
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:30 $
-$Header: /home/ronin/cvs/ronin/spec.elmuseo.c,v 2.0.0.1 2004/02/05 16:10:30 ronin Exp $
-$Id: spec.elmuseo.c,v 2.0.0.1 2004/02/05 16:10:30 ronin Exp $
-$Name:  $
-$Log: spec.elmuseo.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:30  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

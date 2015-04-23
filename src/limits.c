@@ -4,10 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-Majority of limits.c code re-written by Night.
-*/
-
 /* Includes */
 
 #include <stdio.h>
@@ -1045,6 +1041,7 @@ void point_update(void)
         send_to_char("Your injuries prove too much, and you die.\n\r", ch);
       }
 
+      signal_char(ch, ch, MSG_DEAD, "");
       die(ch);
 
       continue;
@@ -1067,6 +1064,7 @@ void point_update(void)
           send_to_char("Your injuries prove too much, and you die.\n\r", ch);
         }
 
+        signal_char(ch, ch, MSG_DEAD, "");
         die(ch);
 
         continue;

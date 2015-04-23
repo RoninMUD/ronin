@@ -1837,9 +1837,9 @@ int gain_death_exp(CHAR *ch, int exp)
 #define DEATH_EXP_PERCENT .90
 void die(CHAR *ch)
 {
-                            /* mu   cl   th   wa   ni   no   pa   ap   av   ba   co */
-  const int hit_limit[11]  = {250, 250, 450, 500, 350, 600, 350, 350,   0, 300, 400};
-  const int mana_limit[11] = {500, 500, 100, 100, 350, 100, 350, 350, 100, 400, 350};
+                                /* mu   cl   th   wa   ni   no   pa   ap   av   ba   co */
+  const int hit_loss_limit[11]  = {250, 250, 450, 500, 350, 600, 350, 350,   0, 300, 400};
+  const int mana_loss_limit[11] = {500, 500, 100, 100, 350, 100, 350, 350, 100, 400, 350};
 
   char buf[MAX_INPUT_LENGTH];
   int i = 0, factor = 1, percent = 0, mana_chk = 0, hit_chk = 0, death_chk = 0, mana_diff = 0, hit_diff = 0;
@@ -1852,7 +1852,7 @@ void die(CHAR *ch)
   if (!IS_NPC(ch) && ch->specials.death_timer == 1 && GET_HIT(ch) >= 0)
   {
     sprintf(buf, "%s killed by Imminent Death.", GET_NAME(ch));
-      wizlog(buf, LEVEL_IMM, 3);
+    wizlog(buf, LEVEL_IMM, 3);
     log_s(buf);
     deathlog(buf);
 
@@ -1902,12 +1902,12 @@ void die(CHAR *ch)
 
   act("The Reaper appears and escorts $n to the afterlife!", FALSE, ch, 0, 0, TO_ROOM);
 
-  if (!IS_NPC(ch) && (ch->points.max_mana + 100) > mana_limit[GET_CLASS(ch) - 1])
+  if (!IS_NPC(ch) && (GET_NAT_MANA(ch) > mana_loss_limit[GET_CLASS(ch) - 1]))
   {
     mana_chk = TRUE;
   }
 
-  if (!IS_NPC(ch) && ch->points.max_hit > hit_limit[GET_CLASS(ch) - 1])
+  if (!IS_NPC(ch) && (GET_NAT_HIT(ch) > hit_loss_limit[GET_CLASS(ch) - 1]))
   {
     hit_chk = TRUE;
   }
@@ -1923,8 +1923,8 @@ void die(CHAR *ch)
     send_to_char("\n\r\n\rThe Reaper demands his toll for your passage through the underworld.\n\r", ch);
     send_to_char("Your soul burns as he tears some lifeforce from you.\n\r", ch);
 
-    mana_diff = ch->points.max_mana + 100 - mana_limit[GET_CLASS(ch) - 1];
-    hit_diff = ch->points.max_hit - hit_limit[GET_CLASS(ch) - 1];
+    mana_diff = GET_NAT_MANA(ch) - mana_loss_limit[GET_CLASS(ch) - 1];
+    hit_diff = GET_NAT_HIT(ch) - hit_loss_limit[GET_CLASS(ch) - 1];
     mana_diff = MAX(mana_diff, 0);
     hit_diff = MAX(hit_diff, 0);
 
@@ -1990,7 +1990,7 @@ void die(CHAR *ch)
     }
 
     sprintf(buf,"WIZINFO: %s lost %d/%d hps and %d/%d mana.", GET_NAME(ch),
-            hit_diff, ch->points.max_hit, mana_diff, ch->points.max_mana + 100);
+            hit_diff, GET_MAX_HIT(ch), mana_diff, GET_MAX_MANA(ch));
     wizlog(buf, LEVEL_SUP, 3);
     log_s(buf);
 
