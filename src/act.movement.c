@@ -1,49 +1,8 @@
-/* ************************************************************************
+/**************************************************************************
 *  file: act.movement.c , Implementation of commands      Part of DIKUMUD *
 *  Usage : Movement commands, close/open & lock/unlock doors.             *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2004/09/30 15:56:05 $
-$Header: /home/ronin/cvs/ronin/act.movement.c,v 2.2 2004/09/30 15:56:05 ronin Exp $
-$Id: act.movement.c,v 2.2 2004/09/30 15:56:05 ronin Exp $
-$Name:  $
-$Log: act.movement.c,v $
-Revision 2.2  2004/09/30 15:56:05  ronin
-Cooment out char_from_room in do_free (obj loss & god mobswitch problems)
-
-Revision 2.1  2004/03/09 17:20:43  ronin
-Addition of extract_char to do_free command to prevent crash on
-locating a free'd mount.
-
-Revision 2.0.0.1  2004/02/05 16:08:30  ronin
-Reinitialization of cvs archives
-
-Revision 1.6  2003/02/22 22:01:01  ronin
-In do_peek, removed fail by percent, made it 1,85 so people
-still have to prac it to full to get 100% rate.  Initial reviews.
-
-Revision 1.5  2003/01/02 22:01:01  ronin
-- added a check for 30+ duration on meditation in do_simple_move
-to allow people to move after 3 ticks.
-
-Revision - 2002/11/20 ranger - fixed arg size in do_free to prevent crashing
-due to buffer overflow.
-
-Revision 1.4  2002/10/17 22:01:09  ronin
-Added check for FLY rooms before do_jump,crawl,climb.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <stdio.h>
 #include <string.h>
@@ -114,7 +73,7 @@ int dt_or_hazard(CHAR *ch) {
     // permanently in raw_kill
 
     if(ch->specials.riding) {
-      signal_char(ch, ch, MSG_AUTORENT, "");
+      signal_char(ch->specials.riding, ch->specials.riding, MSG_AUTORENT, "");
       raw_kill(ch->specials.riding);
     }
 
