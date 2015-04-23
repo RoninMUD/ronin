@@ -108,7 +108,17 @@ int dt_or_hazard(CHAR *ch) {
       deathlog(buf);
       wizlog(buf,LEVEL_IMM,3);
     }
-    if(ch->specials.riding) raw_kill(ch->specials.riding);
+
+    // signal character and rider with MSG_AUTORENT, which is a terrible hack
+    // to have dynamic enchantments remove themselves and not save affects
+    // permanently in raw_kill
+
+    if(ch->specials.riding) {
+      signal_char(ch, ch, MSG_AUTORENT, "");
+      raw_kill(ch->specials.riding);
+    }
+
+    signal_char(ch, ch, MSG_AUTORENT, "");
     raw_kill(ch);
     return TRUE;
   }
