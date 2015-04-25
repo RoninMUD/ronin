@@ -49,7 +49,6 @@ extern struct descriptor_data *descriptor_list;
 
 /* Objects */
 
-#define QGII_BOLTS        1019
 #define QGII_SHABTIS      1020
 #define QGII_COWL         1028
 #define QGII_PHYLACTERY   1029
@@ -64,153 +63,6 @@ extern struct descriptor_data *descriptor_list;
 */
 
 /* Objects */
-
-int qgII_bolts(OBJ *obj, CHAR *ch, int cmd, char *arg)
-{
-  CHAR *owner;
-  OBJ *tmp, *tmp2;
-  char *argument;
-  char buf[MIL], buf2[MIL];
-  char* strBoltWearAll = "The complexity of the $o prevent your actions.";
-  char* strBoltWearOther = "The protrusions of the $o prevent anything else from being worn around your neck effectively.";
-
-  /* Bolts take up both neck positions */
-  if (cmd == CMD_WEAR)
-  {
-    /* Don't spec if no ch. */
-    if (!ch) return FALSE;
-    /* Don't spec if ch is not awake. */
-    if (!AWAKE(ch)) return FALSE;
-    /* Don't spec if obj is not equipped or carried by actor. */
-    if (!(owner = obj->carried_by))
-    {
-      if (!(owner = obj->equipped_by))
-      {
-        return FALSE;
-      }
-    }
-    /* Don't spec if actor is not the owner. */
-    if (ch != owner) return FALSE;
-
-    argument = arg;
-    argument = one_argument(argument, buf);
-    argument = one_argument(argument, buf2);
-
-    /* Return if no target. */
-    if (!*buf) return FALSE;
-
-    /* Prevent 'wear all' */
-    if (isname(buf, "all"))
-    {
-      act(strBoltWearAll, FALSE, owner, obj, 0, TO_CHAR);
-      return TRUE;
-    }
-    /* Do special checking to block special cases involving bolts. */
-    else
-    {
-      /* Return if we don't find an object matching args. */
-      if(!(tmp = get_obj_in_list_vis(owner, buf, owner->carrying))) return FALSE;
-
-     /* Arg targeted bolts. */
-      if (tmp == obj)
-      {
-        if (!((owner->equipment[WEAR_NECK_1] == 0) && (owner->equipment[WEAR_NECK_2] == 0)))
-        {
-          act(strBoltWearOther, FALSE, owner, obj, 0, TO_CHAR);
-          return TRUE;
-        }
-        else
-        {
-          return FALSE;
-        }
-      }
-      /* Arg matched some other object that can be worn about the neck. */
-      else if (CAN_WEAR(tmp, ITEM_WEAR_NECK))
-      {
-        if (!*buf2)
-        {
-          if ((tmp2 = owner->equipment[WEAR_NECK_1]) != 0)
-          {
-            if (V_OBJ(tmp2) == QGII_BOLTS)
-            {
-              act(strBoltWearOther, FALSE, owner, obj, 0, TO_CHAR);
-              return TRUE;
-            }
-          }
-          else if ((tmp2 = owner->equipment[WEAR_NECK_2]) != 0)
-          {
-            if (V_OBJ(tmp2) == QGII_BOLTS)
-            {
-              act(strBoltWearOther, FALSE, owner, obj, 0, TO_CHAR);
-              return TRUE;
-            }
-          }
-          else
-          {
-            return FALSE;
-          }
-        }
-        else if (isname(buf2, "neck"))
-        {
-          if ((tmp2 = owner->equipment[WEAR_NECK_1]) != 0)
-          {
-            if (V_OBJ(tmp2) == QGII_BOLTS)
-            {
-              act(strBoltWearOther, FALSE, owner, obj, 0, TO_CHAR);
-              return TRUE;
-            }
-          }
-          else if ((tmp2 = owner->equipment[WEAR_NECK_2]) != 0)
-          {
-            if (V_OBJ(tmp2) == QGII_BOLTS)
-            {
-              act(strBoltWearOther, FALSE, owner, obj, 0, TO_CHAR);
-              return TRUE;
-            }
-          }
-          else
-          {
-            return FALSE;
-          }
-        }
-        else
-        {
-          return FALSE;
-        }
-      }
-      else
-      {
-        return FALSE;
-      }
-    }
-
-    return FALSE;
-  }
-  /* Examine bolts to see if they're charged or not */
-  else if (cmd == CMD_EXAMINE)
-  {
-    /* Don't spec if no ch. */
-    if (!ch) return FALSE;
-    /* Don't spec if ch is not awake. */
-    if (!AWAKE(ch)) return FALSE;
-    /* Don't sepc if obj isn't found */
-    if (!obj) return FALSE;
-    /* Don't spec if obj isn't bolts */
-    if (V_OBJ(obj) != QGII_BOLTS) return FALSE;
-    if (*arg != 0) return FALSE;
-
-    act("Spec examine", FALSE, ch, obj, 0, TO_CHAR);
-    return TRUE;
-
-  }
-  /* Turn bolts while charged to gain enhanced stats */
-  else if (cmd == CMD_UNKNOWN)
-  {
-
-  }
-
-  return FALSE;
-}
 
 #define TEMPLE_OF_MIDGAARD                3001
 
@@ -1290,13 +1142,11 @@ int qgII_vindictae(OBJ *vindictae, CHAR *ch, int cmd, char *arg)
 
 void assign_questgearII(void)
 {
-/*  assign_obj(QGII_BOLTS,        qgII_bolts);
-*/
   assign_obj(QGII_SHABTIS,      qgII_shabtis);
   assign_obj(QGII_COWL,         qgII_cowl);
   assign_obj(QGII_PHYLACTERY,   qgII_phylactery);
   assign_obj(QGII_VIZARD,       qgII_vizard);
-  assign_obj(QGII_BULKATHOS,  qgII_bulkathos);
+  assign_obj(QGII_BULKATHOS,    qgII_bulkathos);
   assign_obj(QGII_VILYA,        qgII_vilya);
   assign_obj(QGII_NARYA,        qgII_narya);
   assign_obj(QGII_VINDICTAE,    qgII_vindictae);
