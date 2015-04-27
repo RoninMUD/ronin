@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -168,5 +168,74 @@ A
 18 3
 A
 53 12
+#29605
+gauntlets dusk shroud quest esar~
+Dusk Shroud Gauntlets~
+A pair of leather gauntlets shrouded in darkness lie discarded here.~
+~
+9 134217792 129
+8 -1 -1 -1
+10 1000000 80000
+10
+E
+gauntlets~
+Crafted from the remains of a ghastly apparition, frozen in physical form
+through some sort of malevolent alchemy. Rather than allowing the spirit to
+pass into the next world, its phase-shifted hide was carved into strips, as
+a leather crafter would handle the hide of an animal. Untold anguish must
+have been visited on the spirit in question as its very existence was torn
+asunder, a deep malevolence seems to seethe from within the confines of
+these gauntlets as you turn them over in your hands.
+~
+X
+~
+0 0 0
+M
+You pull the shrouded gloves onto your hands and feel seething wrath course through you.~
+$n pulls a pair of shrouded gloves onto $s hands as $s eyes flash with malevolent intent.~
+You carefully remove the shrouded gloves as a sense of calm washes over you.~
+$n slowly slides a pair of gloves from $s hands as $e expels a sigh of relief.~
+A
+19 4
+A
+28 4
+#29606
+carapace daemonic pit viper quest esar~
+a Pit Viper's Daemonic Carapace~
+The tattered hide of a vanquished demon was unceremoniously dumped here.~
+~
+9 134217792 513
+15 -1 -1 -1
+1 45000 15000
+10
+E
+carapace~
+Legendary beasts and champions have long held fear of the volcanic chambers
+of the daemonic Pit Viper. Many adventurers have ventured into the hallowed
+halls of the unholy depths of the earth in search of these creatures, only
+to be devoured completely by the denizens held within. Fewer still have
+managed to reach the deepest depths and come face to face with these
+nightmarish creatures, and even fewer have stood to face them and managed
+to walk away. One of those fierce combatants carried the enormous hide of
+this monstrous serpent, and through even fiercer sorcery, was able to
+craft it into the masterwork shield it is today. Fused with the unholy
+terror of the daemon it was created from, this carapace serves as both a
+substantial defense as well as the source of otherworldly powers to those
+who would choose to invoke irrevocable harm unto others.
+~
+X
+~
+0 0 0
+M
+You heft the carapace onto your arm and are nearly overwhelmed by a sense of insatiable fury.~
+$n hefts an enormous carapace onto $s arm and shudders with overwhelming urges.~
+Releasing your grip onto the carapace, a sense of sanity begins to creep back into your mind.~
+$n lowers the carapace from $s arm, closing his eyes briefly as $e regains composure.~
+A
+18 1
+A
+19 4
+A
+28 4
 #0
 $~
