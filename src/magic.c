@@ -938,25 +938,25 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if (obj) {
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_CLONE) ||
-  (GET_ITEM_TYPE(obj) == ITEM_STAFF) ||
-  (GET_ITEM_TYPE(obj) == ITEM_WAND) ||
-  (GET_ITEM_TYPE(obj) == ITEM_POTION) ||
-  (GET_ITEM_TYPE(obj) == ITEM_BULLET) ||
-  (GET_ITEM_TYPE(obj) == ITEM_SCROLL) ||
-  (GET_ITEM_TYPE(obj) == ITEM_FIREWEAPON) ||
-  (GET_ITEM_TYPE(obj) == ITEM_MISSILE) ||
-  (GET_ITEM_TYPE(obj) == ITEM_MONEY) ||
-  (GET_ITEM_TYPE(obj) == ITEM_RECIPE) ||
-  (GET_ITEM_TYPE(obj) == ITEM_AQ_ORDER) ||
-  (GET_ITEM_TYPE(obj) == ITEM_KEY)) {
+        (GET_ITEM_TYPE(obj) == ITEM_STAFF) ||
+        (GET_ITEM_TYPE(obj) == ITEM_WAND) ||
+        (GET_ITEM_TYPE(obj) == ITEM_POTION) ||
+        (GET_ITEM_TYPE(obj) == ITEM_BULLET) ||
+        (GET_ITEM_TYPE(obj) == ITEM_SCROLL) ||
+        (GET_ITEM_TYPE(obj) == ITEM_FIREWEAPON) ||
+        (GET_ITEM_TYPE(obj) == ITEM_MISSILE) ||
+        (GET_ITEM_TYPE(obj) == ITEM_MONEY) ||
+        (GET_ITEM_TYPE(obj) == ITEM_RECIPE) ||
+        (GET_ITEM_TYPE(obj) == ITEM_AQ_ORDER) ||
+        (GET_ITEM_TYPE(obj) == ITEM_KEY)) {
       act("$p exploded.", FALSE, ch, obj, 0, TO_ROOM);
       act("$p exploded.", FALSE, ch, obj, 0, TO_CHAR);
       extract_obj(obj);
 
       if (GET_LEVEL(ch) < LEVEL_IMM) {
-  dam = number(10,40);
-  send_to_char("You hurt yourself!\n\r", ch);
-  damage(ch, ch, dam, TYPE_UNDEFINED,DAM_NO_BLOCK);
+        dam = number(10,40);
+        send_to_char("You hurt yourself!\n\r", ch);
+        damage(ch, ch, dam, TYPE_UNDEFINED,DAM_NO_BLOCK);
       }
       return;
     }
@@ -968,6 +968,7 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     }
 
     clone = read_object(obj->item_number, REAL);
+
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_LIMITED) ||
         IS_SET(obj->obj_flags.extra_flags, ITEM_ANTI_RENT)) {
       send_to_char("You failed!\n\r", ch);
@@ -977,11 +978,15 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
     /* New check for a limited number of clones for objs with
        abnormal stats or from vanity zone - Ranger Oct 23/97 */
-    if(diff_obj_stats(obj) || (inzone(V_OBJ(obj))==299) || (inzone(V_OBJ(obj))==298) || (inzone(V_OBJ(obj))==294) || (inzone(V_OBJ(obj))==69) || (inzone(V_OBJ(obj))==10)) {
-      if((CAN_WEAR(obj,ITEM_WEAR_FINGER)) || (CAN_WEAR(obj,ITEM_WEAR_NECK))
-         || (CAN_WEAR(obj,ITEM_WEAR_WRIST))) {
-        if(obj_proto_table[obj->item_number].number>6) {
-          send_to_char("Only 5 clones of this object can be created.\n\r",ch);
+    if (diff_obj_stats(obj)       ||
+        (inzone(V_OBJ(obj))==299) ||
+        (inzone(V_OBJ(obj))==298) ||
+        (inzone(V_OBJ(obj))==294) ||
+        (inzone(V_OBJ(obj))==69)  ||
+        (inzone(V_OBJ(obj))==10)) {
+      if((CAN_WEAR(obj,ITEM_WEAR_FINGER)) || (CAN_WEAR(obj,ITEM_WEAR_NECK)) || (CAN_WEAR(obj,ITEM_WEAR_WRIST))) {
+        if(obj_proto_table[obj->item_number].number>9) {
+          send_to_char("Only 8 clones of this object can be created.\n\r",ch);
           extract_obj(clone);
           return;
         }

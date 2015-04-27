@@ -109,6 +109,7 @@ void list_spells_to_prac(CHAR *ch, int listall)
   if (enchanted_by_type(ch, ENCHANT_SHOGUN)) bonus = 5;
   else if (enchanted_by_type(ch, ENCHANT_LORDLADY)) bonus = 5;
   else if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY)) bonus = 5;
+  else if (enchanted_by_type(ch, ENCHANT_COMMANDER)) bonus = 5;
 
   sprintf(buf, "\
 `nSpell Name                      `kHow Well      `jMana Cost\n\r\
