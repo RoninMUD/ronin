@@ -816,8 +816,8 @@ void gain_exp(CHAR *ch, int gain)
         GET_EXP(ch) += gain;
       }
 
-      /* Log a warning if exp gain is over 10 million. */
-      if (gain > 10000000)
+      /* Log a warning if exp gain is over 25 million. */
+      if (gain > 25000000)
       {
         sprintf(buf, "PLRINFO: WARNING %s's exp just increased by %d. (Room %d)",
           GET_NAME(ch), gain, world[CHAR_REAL_ROOM(ch)].number);
@@ -869,8 +869,8 @@ void gain_exp_regardless(CHAR *ch, int gain)
     if (gain > 0 &&
         GET_LEVEL(ch) < LEVEL_IMP)
     {
-      /* Log a warning if exp gain is over 10 million. */
-      if (gain > 10000000)
+      /* Log a warning if exp gain is over 25 million. */
+      if (gain > 25000000)
       {
         sprintf(buf, "PLRINFO: WARNING %s's exp just increased by %d. (Room %d)",
           GET_NAME(ch), gain, world[CHAR_REAL_ROOM(ch)].number);
