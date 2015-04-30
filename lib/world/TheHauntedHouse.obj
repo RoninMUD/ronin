@@ -6,7 +6,7 @@ A great, oak-framed silver mirror is standing in the corner.~
 12 0 0
 0 0 0 0
 1 1 1
-50
+100
 X
 ~
 0 0 0
@@ -455,6 +455,9 @@ An old painting with golden frames is hanging on the wall.~
 1 1 1
 100
 E
+plaque brass~
+The brass plaque reads, 'Baron Gunther Dounthun and his three daughters'.~
+E
 painting~
 There are three young girls in the painting, each more beautiful than others,
 in her own ways. Standing behind the girls, there is an old man, with his hands
@@ -462,9 +465,6 @@ resting on the shoulders of the girls.
 
 There is a small brass plaque nailed on the frame of the painting.
 ~
-E
-plaque brass~
-The brass plaque reads, 'Baron Gunther Dounthun and his three daughters'.~
 X
 ~
 0 0 0
@@ -673,12 +673,12 @@ A shining hexagon made of something black is lying on the ground.~
 1 1 1
 15
 E
+runes~
+You can't understand what the runes mean.~
+E
 hexagon black shining~
 The black hexagon is made of shining, black stone. There are some strange runes
 on both sides of the stone plate.~
-E
-runes~
-You can't understand what the runes mean.~
 X
 ~
 0 0 0
@@ -1072,16 +1072,16 @@ A small amulet made of red stones has been dropped here.~
 1 4711 999999
 100
 E
-amulet small red~
-The red amulet is made completely of some strange dull red stone, which glows
-with an inner light. There are some engravings on the stone.~
-E
 engravings~
 The engravings read ...
 
 	'Peace to him who lives among the thorns. Safe passage.'
 	
 ... and beneath the engravings there is a crude drawing of a panther.~
+E
+amulet small red~
+The red amulet is made completely of some strange dull red stone, which glows
+with an inner light. There are some engravings on the stone.~
 X
 ~
 0 0 0
@@ -1098,7 +1098,7 @@ A darkened ball of swirling matter has been placed here.~
 8 155189824 16385
 0 0 0 0
 3 397250 36922
-1
+50
 E
 orb shadow darkened~
 
