@@ -16,15 +16,15 @@ You see a small path leading to the lake-side path.~
 ~
 0 -1 10909
 E
-door main wooden~
-The large wooden doors that close off the main entrance to the house gleam
-in the light and strange shadows play on the door's polished surface.
-~
-E
 window upstairs upper~
 As you look up to the window, you could swear that there was someone standing
 in the window, but there's no-one there now. Only the darkness of the house
 remains.
+~
+E
+door main wooden~
+The large wooden doors that close off the main entrance to the house gleam
+in the light and strange shadows play on the door's polished surface.
 ~
 S
 #14001
@@ -1110,4 +1110,3 @@ You see some light coming from south.~
 S
 #0
 $~
-

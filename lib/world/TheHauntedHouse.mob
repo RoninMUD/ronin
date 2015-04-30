@@ -15,7 +15,7 @@ a ghost.
 95 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14001
 apparition girl marianne~
 The Apparition of Marianne~
@@ -33,7 +33,7 @@ You can just barely make out the bed through her figure.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14002
 apparition girl susanne~
 The Apparition of Susanne~
@@ -51,7 +51,7 @@ scenery outside the window, even where she is standing.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14003
 apparition girl annette~
 The Apparition of Annette~
@@ -70,7 +70,7 @@ the face is also a dead one.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14004
 shadow dream presence~
 The Dream Shadow~
@@ -88,7 +88,7 @@ the time, during the changes, there are enough of shadows to fill the room.
 53 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14005
 guardian tomb ancient statue~
 The Guardian of the Tomb~
@@ -105,7 +105,7 @@ statue alive and unmarred by time.
 59 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14006
 ghoul corpse~
 a ghoul~
@@ -122,7 +122,7 @@ creatures.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14007
 skeleton~
 a skeleton~
@@ -139,7 +139,7 @@ attacks you.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14008
 skeleton~
 a skeleton~
@@ -156,7 +156,7 @@ attacks you. The bones and tattered rags are dripping with stagnant water.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14009
 wraith undead khats~
 Wraith of Khats~
@@ -173,7 +173,7 @@ presence.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14010
 wight creature~
 Wight~
@@ -190,7 +190,7 @@ moaning noise at the same time.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14011
 claw crawling hand~
 Crawling claw~
@@ -207,7 +207,7 @@ are razor sharp and long enough to tear your legs apart.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14012
 image mirror~
 The Mirror Image~
@@ -224,7 +224,7 @@ corrupted, making shivers run through your spine.
 68 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #14013
 shadow~
 A shadow~
@@ -241,6 +241,26 @@ own face. In the middle of that face there are two reddishly glowing orbs.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
+#14014
+shadow dream uber presence~
+Uber Dream Shadow~
+An oppressive shadow unfurls in the middle of the room and surrounds you.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+43 269778952 -1000 Y
+55 -25 -20 100d500+100000 20d20+300
+25000000 100000000
+8 8 0
+53 0 10d1+10000 3
+1 2 20 98
+1 2 20 42
+1 6 20 97
+0 0 1 0
+R
+6
+K
+0 14053 0 0 0 0 0
 #0
 $~
