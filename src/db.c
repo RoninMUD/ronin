@@ -235,35 +235,48 @@ void boot_db(void)
      read_voters();
 
      rebooting_check=1; /* For increased (use to reduce) load rate at reboot or crash - Ranger Oct 7/99 */
-     for (i = 0; i <= top_of_zone_table; i++)
-     {
-          if(zone_table[i].virtual==30) {
-            n_mid=i;
-            continue;
-          }
-          if(zone_table[i].virtual==31) {
-            s_mid=i;
-            continue;
-          }
-          log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
-               zone_table[i].name,
-               (i ? (zone_table[i - 1].top + 1) : 0),
-               zone_table[i].top);
-          reset_zone(i,BOOTFULL);
+
+     for (i = 0; i <= top_of_zone_table; i++) {
+       if(zone_table[i].virtual==30) {
+         n_mid=i;
+         continue;
+       }
+
+       if(zone_table[i].virtual==31) {
+         s_mid=i;
+         continue;
+       }
+
+       log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
+             zone_table[i].name,
+             (i ? (zone_table[i - 1].top + 1) : 0),
+             zone_table[i].top);
+
+       // send MSG_ZONE_RESET to zone rooms, and ignore return value to handle spec reset
+       signal_zone(NULL, zone_table[i].virtual, MSG_ZONE_RESET, "");
+       reset_zone(i,BOOTFULL);
      }
+
      if(n_mid) {
-          log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
-               zone_table[n_mid].name,
-               (n_mid ? (zone_table[n_mid - 1].top + 1) : 0),
-               zone_table[n_mid].top);
-          reset_zone(n_mid,BOOTFULL);
+       log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
+             zone_table[n_mid].name,
+             (n_mid ? (zone_table[n_mid - 1].top + 1) : 0),
+             zone_table[n_mid].top);
+
+       // send MSG_ZONE_RESET to zone rooms, and ignore return value to handle spec reset
+       signal_zone(NULL, zone_table[n_mid].virtual, MSG_ZONE_RESET, "");
+       reset_zone(n_mid,BOOTFULL);
      }
+
      if(s_mid) {
-          log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
-               zone_table[s_mid].name,
-               (s_mid ? (zone_table[s_mid - 1].top + 1) : 0),
-               zone_table[s_mid].top);
-          reset_zone(s_mid,BOOTFULL);
+       log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
+             zone_table[s_mid].name,
+             (s_mid ? (zone_table[s_mid - 1].top + 1) : 0),
+             zone_table[s_mid].top);
+
+       // send MSG_ZONE_RESET to zone rooms, and ignore return value to handle spec reset
+       signal_zone(NULL, zone_table[s_mid].virtual, MSG_ZONE_RESET, "");
+       reset_zone(s_mid,BOOTFULL);
      }
 
      rebooting_check=0;
