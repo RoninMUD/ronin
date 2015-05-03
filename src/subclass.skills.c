@@ -483,7 +483,7 @@ void do_scan(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (GET_LEVEL(ch) < 40) {
+  if (GET_LEVEL(ch) < 35) {
     send_to_char("You don't know this skill yet.\n\r", ch);
 
     return;

@@ -180,7 +180,7 @@ void list_skills_to_prac(CHAR *ch)
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
-          else if ((number == SKILL_SCAN) && (GET_LEVEL(ch) < 40)) continue;
+          else if ((number == SKILL_SCAN) && (GET_LEVEL(ch) < 35)) continue;
           else if ((number == SKILL_TWIST) && (GET_LEVEL(ch) < 45)) continue;
           else if ((number == SKILL_CUNNING) && (GET_LEVEL(ch) < 50)) continue;
           else
