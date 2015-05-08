@@ -995,14 +995,7 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
 
         if (GET_REMORT_EXP(tmp_char))
         {
-          if (GET_DEATH_EXP(tmp_char))
-          {
-            remort_exp = rv2_gain_remort_exp(tmp_char, experience / 2);
-          }
-          else
-          {
-            remort_exp = rv2_gain_remort_exp(tmp_char, experience);
-          }
+          remort_exp = rv2_gain_remort_exp(tmp_char, experience);
 
           printf_to_char(tmp_char, "You gained %d remort experience for the kill.\n\r", remort_exp);
         }
