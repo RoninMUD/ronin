@@ -56,6 +56,8 @@ extern struct descriptor_data *descriptor_list;
 #define QGII_VIZARD       1034
 #define QGII_VILYA        1039
 #define QGII_NARYA        1040
+#define QGII_ENLIL        1061
+#define QGII_ANU          1062
 #define QGII_VINDICTAE    1092
 
 /*
@@ -1070,6 +1072,322 @@ int qgII_narya(OBJ *narya, CHAR *owner, int cmd, char *arg)
   return bReturn;
 }
 
+
+
+/*
+** Unified spec for quest rings.  Each ring has its own
+** vnum and keywords so they may be used  while equipped.
+*/
+
+static const char const *ring_keyword(int vnum) {
+  switch (vnum) {
+    case QGII_NARYA:
+      return "narya";
+
+    default:
+      return "ring";
+  }
+}
+
+static void ring_act_charge(int vnum, CHAR *owner) {
+  switch (vnum) {
+    case QGII_NARYA:
+      act("You feel a surge of warmth as Narya's ruby glows a deeper shade of red.", FALSE, owner, NULL, NULL, TO_CHAR);
+      act("Some of the heat seems to leave your body as Narya's ruby glows a deeper shade of red.", FALSE, owner, NULL, NULL, TO_ROOM);
+      break;
+
+    default:
+      act("Your ring charges in some default manner.", FALSE, owner, NULL, NULL, TO_CHAR);
+      act("$r ring charges in some default manner.", FALSE, owner, NULL, NULL, TO_ROOM);
+      break;
+  }
+}
+
+static void ring_exa_empty(int vnum, CHAR *owner) {
+  switch (vnum) {
+    case QGII_NARYA:
+      send_to_char("Narya's ruby is faded to almost transparent clearness.\n\r", owner);
+      break;
+
+    default:
+      send_to_char("The ring has no charges that you can see.\n\r", owner);
+      break;
+  }
+}
+
+static void ring_exa_one(int vnum, CHAR *owner) {
+  switch (vnum) {
+    case QGII_NARYA:
+      send_to_char("Narya's ruby is the lightest of dusty roses.\n\r", owner);
+      break;
+
+    default:
+      send_to_char("The ring appears to have one charge.\n\r", owner);
+      break;
+  }
+}
+
+static void ring_exa_two(int vnum, CHAR *owner) {
+  switch (vnum) {
+    case QGII_NARYA:
+      send_to_char("Narya's ruby is a rich vermillion.\n\r", owner);
+      break;
+
+    default:
+      send_to_char("The ring appears to have two charges.\n\r", owner);
+      break;
+  }
+
+}
+
+static void ring_exa_full(int vnum, CHAR *owner) {
+  switch (vnum) {
+    case QGII_NARYA:
+      send_to_char("Narya's ruby is a deep carmine hue.\n\r", owner);
+      break;
+
+    default:
+      send_to_char("The ring appears to be fully charged.\n\r", owner);
+      break;
+  }
+}
+
+static void ring_act_twist(int vnum, CHAR *owner) {
+  switch (vnum) {
+    case QGII_NARYA:
+      act("You twist Narya on your finger and a searing heat radiates out from you.", FALSE, owner, NULL, NULL, TO_CHAR);
+      act("$n twists Narya on $s finger and a searing heat pulses out from $m.", FALSE, owner, NULL, NULL, TO_ROOM);
+      break;
+
+    default:
+      act("You twist the ring on your finger and it performs a great function.", FALSE, owner, NULL, NULL, TO_CHAR);
+      act("$n twists the ring on $s finger and it performs a great function.", FALSE, owner, NULL, NULL, TO_ROOM);
+      break;
+  }
+}
+
+static void ring_act_twist_uncharged(int vnum, CHAR *owner) {
+  switch (vnum) {
+    case QGII_NARYA:
+      act("You twist Narya on your finger and feel a soft throbbing of warmth.", FALSE, owner, NULL, NULL, TO_CHAR);
+      break;
+
+    default:
+      act("You twist the ring on your finger and nothing happens.", FALSE, owner, NULL, NULL, TO_CHAR);
+      break;
+  }
+}
+
+static void ring_act_heal(int vnum, CHAR *vict) {
+  switch (vnum) {
+    case QGII_NARYA:
+      act("The warmth of Narya comforts you, and you feel healed.", FALSE, vict, NULL, NULL, TO_CHAR);
+      act("A warm smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
+      break;
+
+    default:
+      act("The ring makes you feel healed.", FALSE, vict, NULL, NULL, TO_CHAR);
+      act("A warm smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
+      break;
+  }
+}
+
+static void ring_act_miracle(int vnum, CHAR *vict) {
+  switch (vnum) {
+    case QGII_NARYA:
+      act("A warmth suffuses your body, and you feel healed.", FALSE, vict, NULL, NULL, TO_CHAR);
+      act("A content smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
+      break;
+
+    default:
+      act("You feel a very well healed feeling.", FALSE, vict, NULL, NULL, TO_CHAR);
+      act("A content smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
+      break;
+  }
+}
+
+static void ring_act_haste(int vnum, CHAR *vict) {
+  switch (vnum) {
+    case QGII_NARYA:
+      act("You feel your blood pumping faster in your veins, giving you a burst of energy.", FALSE, vict, NULL, NULL, TO_CHAR);
+      act("$n flushes with the pulse of blood, and $s movements seem to speed.", FALSE, vict, NULL, NULL, TO_ROOM);
+      break;
+
+    default:
+      act("HASTE!", FALSE, vict, NULL, NULL, TO_CHAR);
+      act("$n looks faster.", FALSE, vict, NULL, NULL, TO_ROOM);
+      break;
+  }
+}
+static void ring_act_fury(int vnum, CHAR *vict) {
+  switch (vnum) {
+    case QGII_NARYA:
+      act("You feel your blood burn with dragon's fire, and a veil of red falls over the world.", FALSE, vict, NULL, NULL, TO_CHAR);
+      act("$n flushes a deep red, heat pulsing out from $s body.", FALSE, vict, NULL, NULL, TO_ROOM);
+      break;
+
+    default:
+      act("FURY!.", FALSE, vict, NULL, NULL, TO_CHAR);
+      act("$n appears much more furious.", FALSE, vict, NULL, NULL, TO_ROOM);
+      break;
+  }
+}
+
+int qgII_ring(OBJ *ring, CHAR *owner, int cmd, char *arg) {
+
+  const int RING_CHARGE_TIME = 96; /* 24 MUD hours */
+  const int RING_MAX_CHARGES = 3;
+
+  CHAR *vict = NULL, *next_vict = NULL;
+  char buf[MIL];
+  int bReturn = FALSE;
+  int outTime = 0;
+  int num = 0;
+  int vnum = V_OBJ(ring);
+
+  switch(cmd) {
+    case MSG_TICK:
+      owner = ring->equipped_by ? ring->equipped_by : ring->carried_by;
+
+      if (owner && !IS_NPC(owner)) {
+
+        if (ring->spec_value > RING_MAX_CHARGES) { /* spec_value is # of "twist" charges */
+          ring->spec_value = RING_MAX_CHARGES; /* max of RING_MAX_SPECS "twist" charges */
+        }
+        else if (ring->spec_value < RING_MAX_CHARGES) {
+          ring->obj_flags.timer--; /* timer is time left until next recharge */
+
+          if (ring->obj_flags.timer <= 0)
+          {
+            ring_act_charge(vnum, owner);
+            ring->spec_value++; /* add a "twist" charge */
+
+            if (ring->spec_value < RING_MAX_CHARGES) {
+              ring->obj_flags.timer = RING_CHARGE_TIME; /* set time until next recharge */
+            }
+          }
+        }
+      }
+      break;
+
+    case MSG_OBJ_ENTERING_GAME:
+      if ((owner==ring->equipped_by || owner==ring->carried_by) && owner && !IS_NPC(owner)) {
+        if (ring->spec_value == RING_MAX_CHARGES) {
+          break; /* if ring charges are maxed, skip */
+        }
+
+        if(is_number(arg)) {
+          outTime = atoi(arg); /* outTime = time in seconds since last in-game */
+        }
+        else {
+          break;
+        }
+
+        outTime /= 60; /* time in minutes since last in-game */
+        ring->obj_flags.timer -= outTime; /* update time until next recharge based on time since last in-game */
+
+        while (ring->obj_flags.timer <= 0 && ring->spec_value < RING_MAX_CHARGES) {
+          /* while time until next charge is less than 1, keep adding a charge and updating time to next charge - stop at RING_MAX_CHARGES (full) charges */
+          ring->spec_value++; /* add a charge if time since last in-game is greater than time to charge */
+          if (ring->spec_value < RING_MAX_CHARGES) {
+            ring->obj_flags.timer += RING_CHARGE_TIME;
+          }
+          else {
+            ring->obj_flags.timer = 0;
+          }
+        }
+      }
+      break;
+
+    case CMD_EXAMINE:
+      if ((owner==ring->equipped_by || owner==ring->carried_by) && owner && !IS_NPC(owner)) {
+        one_argument(arg, buf);
+
+        if (AWAKE(owner) && ring && !strncmp(buf, ring_keyword(vnum), MIL)) {
+          if (ring->spec_value <= 0) {
+            ring_exa_empty(vnum, owner);
+          }
+          else if(ring->spec_value == 1) {
+            ring_exa_one(vnum, owner);
+          }
+          else if(ring->spec_value == 2) {
+            ring_exa_two(vnum, owner);
+          }
+          else if(ring->spec_value >= 3) {
+            ring_exa_full(vnum, owner);
+          }
+
+          bReturn = TRUE;
+        }
+      }
+      break;
+
+    case CMD_UNKNOWN:
+      if ((owner==ring->equipped_by || owner==ring->carried_by) && owner && !IS_NPC(owner)) {
+        arg = one_argument(arg, buf);
+
+        if (AWAKE(owner) && (ring==EQ(owner, WEAR_FINGER_L) || ring==EQ(owner, WEAR_FINGER_R)) && !strncmp(buf, "twist", MIL)) {
+          one_argument(arg, buf);
+
+          if (!strncmp(buf, ring_keyword(vnum), MIL)) { /* command must be: "twist <ring keyword>" */
+
+            if(ring->spec_value > 0) {
+              ring_act_twist(vnum, owner);
+
+              for(vict = world[CHAR_REAL_ROOM(owner)].people; vict; vict = next_vict) {
+                next_vict = vict->next_in_room;
+                if(IS_NPC(vict)) continue; /* skip mobs */
+                if(!IS_MORTAL(vict)) continue; /* skip gods */
+
+                num = number(1,4);
+
+                switch(num) {
+                  case 1: /* triple heal */
+                    ring_act_heal(vnum, vict);
+                    spell_heal(50, vict, vict, 0);
+                    spell_heal(50, vict, vict, 0);
+                    spell_heal(50, vict, vict, 0);
+                    break;
+                  case 2: /* miracle */
+                    ring_act_miracle(vnum, vict);
+                    spell_miracle(50, vict, vict, 0);
+                    break;
+                  case 3: /* haste */
+                    ring_act_haste(vnum, vict);
+                    spell_haste(50, vict, vict, 0);
+                    break;
+                  case 4: /* fury */
+                    ring_act_fury(vnum, vict);
+                    spell_fury(50, vict, vict, 0);
+                    break;
+                  default:
+                    break;
+                }
+              }
+
+              if(ring->spec_value == RING_MAX_CHARGES) {
+                ring->obj_flags.timer = RING_CHARGE_TIME; /* start recharge timer - if charges were less than RING_MAX_CHARGES, should already have a running timer */
+              }
+
+              ring->spec_value--; /* remove a "twist" charge */
+              WAIT_STATE(owner, PULSE_VIOLENCE);
+            }
+            else {
+              ring_act_twist_uncharged(vnum, owner);
+            }
+
+            bReturn = TRUE;
+          }
+        }
+      }
+      break;
+
+    default:
+      break;
+  }
+  return bReturn;
+}
+
 #define VIND_MULTIPLIER_HIT     1.0
 #define VIND_MULTIPLIER_MANA    2.0
 #define VIND_MULTIPLIER_MOVE    0.1
@@ -1148,7 +1466,9 @@ void assign_questgearII(void)
   assign_obj(QGII_VIZARD,       qgII_vizard);
   assign_obj(QGII_BULKATHOS,    qgII_bulkathos);
   assign_obj(QGII_VILYA,        qgII_vilya);
-  assign_obj(QGII_NARYA,        qgII_narya);
+  assign_obj(QGII_NARYA,        qgII_ring);
+  assign_obj(QGII_ENLIL,        qgII_ring);
+  assign_obj(QGII_ANU,          qgII_ring);
   assign_obj(QGII_VINDICTAE,    qgII_vindictae);
 }
 
