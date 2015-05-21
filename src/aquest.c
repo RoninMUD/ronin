@@ -1868,7 +1868,20 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
                 sprintf(buf, "%s gives %s back to you disappointedly.", GET_SHORT(collector), OBJ_SHORT(order));
                 act(buf,0,collector,0,ch,TO_VICT);
                 return TRUE;
-              } else {
+              }
+              else if (obj->obj_flags.extra_flags & ITEM_CLONE) {
+                do_say(collector, "No, no, no - this won't do at all.", CMD_SAY);
+                sprintf(buf, "%s is a clone, and I don't take cheap knock-offs!", OBJ_SHORT(obj));
+                do_say(collector, buf, CMD_SAY);
+                obj_from_char(order);
+                obj_to_char(order, ch);
+                sprintf(buf, "%s gives %s back to %s disappointedly.", GET_SHORT(collector), OBJ_SHORT(order), GET_NAME(ch));
+                act(buf,0,collector,0,ch,TO_NOTVICT);
+                sprintf(buf, "%s gives %s back to you disappointedly.", GET_SHORT(collector), OBJ_SHORT(order));
+                act(buf,0,collector,0,ch,TO_VICT);
+                return TRUE;
+              }
+              else {
                 found[i] = TRUE;
                 value_exists = FALSE;
                 // OBJ_SPEC(order) is set initially by aq_generate_order() to be
