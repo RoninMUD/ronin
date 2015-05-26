@@ -645,7 +645,7 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
 {
   char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
   struct obj_data *obj;
-  int i=0, num=0, num2=0,tmp,which;
+  int i = 0, num = 0, num2 = 0, tmp =0, which = 0;
   unsigned long int bitv;
 
   if(!check_god_access(ch,TRUE)) return;
@@ -702,21 +702,24 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
           break;
 
         case 2:
-          which=0;
           if(is_number(buf2)) {
             num2=atoi(buf2);
             obj->obj_flags.extra_flags=num2;
           }
           else {
             tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), extra_bits, FALSE);
+
             if(tmp == -1) {
               tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), extra_bits2, FALSE);
+
               if(tmp == -1) {
                 send_to_char("Extra flag not found.\n\r",ch);
                 return;
               }
+
               which=1;
             }
+
             bitv=1<<(tmp-1);
 
             if(!which) {
@@ -737,13 +740,16 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
           }
           else {
             tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), wear_bits, FALSE);
+
             if(tmp == -1) {
              send_to_char("Wear flag not found.\n\r",ch);
              return;
             }
+
             bitv=1<<(tmp-1);
+
             if(IS_SET(obj->obj_flags.wear_flags,bitv)) REMOVE_BIT(obj->obj_flags.wear_flags,bitv);
-           else SET_BIT(obj->obj_flags.wear_flags,bitv);
+            else SET_BIT(obj->obj_flags.wear_flags,bitv);
           }
           break;
 
@@ -782,12 +788,15 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
           }
           else {
             tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), affected_bits, FALSE);
+
             if(tmp == -1) {
               tmp = old_search_block(string_to_upper(buf2), 0, strlen(buf2), affected_bits2, FALSE);
+
               if(tmp == -1) {
                 send_to_char("Affect flag not found.\n\r",ch);
                 return;
               }
+
               which=1;
             }
 
