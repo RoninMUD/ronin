@@ -940,7 +940,7 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
   check = number(1, 111) - GET_DEX_APP(ch);
 
   if (check > GET_LEARNED(ch, SKILL_SMITE)) {
-    act("You try to smite smite $M but your concentration falters.", 0, ch, 0, victim, TO_CHAR);
+    act("You try to smite $M but your concentration falters.", 0, ch, 0, victim, TO_CHAR);
     act("$n tries to smite you but $s concentration falters.", 0, ch, 0, victim, TO_VICT);
     act("$n tries to smite $N but $s concentration falters.", 0, ch, 0, victim, TO_NOTVICT);
 
