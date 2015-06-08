@@ -199,7 +199,7 @@ A
 A
 4 2
 B
-2048
+128
 #29409
 gauntlets steel shadowkiller chaosprize~
 Spiked Steel Gauntlets~
@@ -2503,34 +2503,31 @@ A
 A
 18 1
 #29495
-staff ironwood worn saros~
-a worn staff of Ironwood~
-Saros left this worn staff here, you should give it back to him, and he will give you a HUGE reward.~
-Gripping tightly, $n readies his staff to attack!~
-5 134217728 8193
-1 10 3 7
-13 20000 70000
-2
-E
-tail~
-
-  This is the bloodied remains of Minos, Judge of the First Circle of Hell.
-Its surface is tacky and lumped with the congealed blood of the former
-ruler, and it is just big enough to pack a wallop against any enemy.
-
+scratched gold shield aegis soot~
+Lightly Scratched Gold-Inlaid Aegis~
+A lightly scratched gold-patterned shield brilliantly reflects the
+sunlight.~
 ~
+9 250621953 513
+5 0 0 0
+10 450670 8575
+0
 X
-Gripping tightly, $n readies his staff to attack!~
+~
 0 0 0
 M
+You raise a shining golden shield to protect yourself.~
+$n raises a shining golden shield to protect $mself.~
 ~
 ~
-~
-~
-T
-6666
+A
+12 20
+A
+3 2
+A
+53 15
 B
-268435456
+20
 #29496
 armor ablative shadow tepir~
 Ablative Shadow Armor~
