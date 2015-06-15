@@ -1293,8 +1293,8 @@ void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
   ch->player.long_descr = 0;
 
   if (*st->title) {
-    CREATE(ch->player.title, char, strlen(st->title) + 1);
-    strcpy(ch->player.title, st->title);
+    CREATE(ch->player.title, char, strnlen(st->title, 80) + 1);
+    strncpy(ch->player.title, st->title, 80);
   }
   else GET_TITLE(ch) = 0;
 
@@ -1915,7 +1915,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
   st->pflag           = ch->specials.pflag;
 
   if (GET_TITLE(ch))
-    strcpy(st->title, GET_TITLE(ch));
+    strncpy(st->title, GET_TITLE(ch), 80);
   else
     *st->title = '\0';
 
