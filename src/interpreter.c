@@ -4,69 +4,6 @@
  *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
  ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:13:30 $
-$Header: /home/ronin/cvs/ronin/interpreter.c,v 2.8 2005/04/27 17:13:30 ronin Exp $
-$Id: interpreter.c,v 2.8 2005/04/27 17:13:30 ronin Exp $
-$Name:  $
-$Log: interpreter.c,v $
-Revision 2.8  2005/04/27 17:13:30  ronin
-Minor changes needed to compile on Slackware 10 for the new machine.
-
-Revision 2.7  2005/01/21 14:55:27  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.6  2004/11/17 19:21:52  void
-Added Nomad Skill Cover (1/2 Damage -10 Hitroll)
-
-Revision 2.5  2004/11/16 05:26:41  ronin
-DOS to UNIX conversion
-
-Revision 2.4  2004/11/16 04:55:17  ronin
-Commented out playeravg, lowered reindex to SUP
-
-Revision 2.3  2004/06/02 13:39:35  ronin
-Added zmult.
-
-Revision 2.2  2004/03/13 05:27:14  pyro
-updated for olc commands oname and owear
-
-Revision 2.1  2004/02/11 13:40:34  ronin
-idname command changed from LEVEL_WIZ to LEVEL_SUP.
-
-Revision 2.0.0.1  2004/02/05 16:09:33  ronin
-Reinitialization of cvs archives
-
-
-Revision 05-Feb-04 Ranger
-Addition of do_idname command
-
-Revision 19-Dec-03 Ranger
-Addition of email command
-
-Revision 22-May-03 Ranger
-Addition of hunt command (currently IMP only)
-
-Revision 10-Mar-03 Ranger
-Addition of social link to social command.
-
-Revision 12-Feb-03 Ranger
-Addition of do_board
-
-Revision 1.3  2002/10/14 21:16:28  ronin
-Addition of MSG_RECONNECT after player reconnect.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <string.h>
 #include <ctype.h>
 #include <stdio.h>
@@ -1842,6 +1779,12 @@ void nanny(struct descriptor_data *d, char *arg) {
                   char_to_room(d->character, real_room(3001));
                 }
               }
+
+              /* signal the character for objects entering game */
+              /* it is not sent if room is NOWHERE */
+              sprintf(buf, "%ld", 0L);
+              if(signal_char(d->character, d->character, MSG_OBJ_ENTERING_GAME, buf))
+                log_s("Error: Return TRUE from MSG_OBJ_ENTERING_GAME");
             }
             else {
               if (real_room(CHAR_VIRTUAL_ROOM(d->character)) > -1) {

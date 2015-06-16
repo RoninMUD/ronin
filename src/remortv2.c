@@ -1182,7 +1182,7 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
           case ENCHANT_PRIVATE:
           case ENCHANT_WANDERER:
           case ENCHANT_TSUME:
-          case ENCHANT_TRAVELER:
+          case ENCHANT_MINSTREL:
           case ENCHANT_MINION:
           case ENCHANT_ACOLYTE:
           case ENCHANT_HIGHWAYMAN:

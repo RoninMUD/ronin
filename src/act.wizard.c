@@ -5271,7 +5271,7 @@ void do_setstat(struct char_data *ch, char *argument, int cmd)
 Syntax : setstat <victim> <field> <value> <passwd>\n\r\
 Field can be: alignment, hp, mp, mana, bank, gold, str, add, dex,\n\r\
 con, int, wis, age, xp, sex, free_rent(imp), deathlimit,\n\r\
-subpts, qpts, remort_exp and death_exp\n\r";
+subpts, qpts, remort_exp, death_exp and questtime\n\r";
   int value = 0;
   unsigned long ulValue = 0UL;
   long long int big_value = 0;
@@ -5515,6 +5515,13 @@ Usage: -1  : Restore target's Death Experience enchantment (if it's missing).\n\
 
     return;
   }
+
+  if (strcmp(class, "questtime") == 0) {
+    vict->ver3.time_to_quest = value;
+    return;
+  }
+
+
   send_to_char ("Invalid field specified.\n\r", ch);
   return;
 
@@ -8372,47 +8379,47 @@ void do_rank(struct char_data *ch, char *argument, int cmd) {
   /*check ranks and add enough xp/gold */
 
   /* person already ranked to top level */
-  if(enchanted_by(vict,"The title of Sorcerer") ||
-     enchanted_by(vict,"The title of Prophet") ||
-     enchanted_by(vict,"The title of Shogun") ||
-     enchanted_by(vict,"The title of Knight") ||
-     enchanted_by(vict,"The title of Lord/Lady") ||
-     enchanted_by(vict,"The title of Tamer") ||
-     enchanted_by(vict,"The status of Assassin") ||
-     enchanted_by(vict,"The rank of Commander") ||
-     enchanted_by(vict,"The title of Dark Lord/Lady") ||
-     enchanted_by(vict,"The title of Conductor"))
+  if(enchanted_by_type(vict, ENCHANT_SORCERER) ||
+     enchanted_by_type(vict, ENCHANT_PROPHET) ||
+     enchanted_by_type(vict, ENCHANT_SHOGUN) ||
+     enchanted_by_type(vict, ENCHANT_KNIGHT) ||
+     enchanted_by_type(vict, ENCHANT_LORDLADY) ||
+     enchanted_by_type(vict, ENCHANT_TAMER) ||
+     enchanted_by_type(vict, ENCHANT_ASSASSIN) ||
+     enchanted_by_type(vict, ENCHANT_COMMANDER) ||
+     enchanted_by_type(vict, ENCHANT_DARKLORDLADY) ||
+     enchanted_by_type(vict, ENCHANT_CONDUCTOR))
   {
     act("$N has reached the highest rank already.",0,ch,0,vict,TO_CHAR);
     return;
   }
 
-  if(enchanted_by(vict,"The title of Warlock") ||
-     enchanted_by(vict,"The title of Bishop") ||
-     enchanted_by(vict,"The title of Shinobi") ||
-     enchanted_by(vict,"The title of Swashbuckler") ||
-     enchanted_by(vict,"The title of Justiciar") ||
-     enchanted_by(vict,"The title of Forester") ||
-     enchanted_by(vict,"The title of Dark Warder") ||
-     enchanted_by(vict,"The title of Poet") ||
-     enchanted_by(vict,"The rank of Commodore") ||
-     enchanted_by(vict,"The status of Brigand"))
+  if(enchanted_by_type(vict, ENCHANT_WARLOCK) ||
+     enchanted_by_type(vict, ENCHANT_BISHOP) ||
+     enchanted_by_type(vict, ENCHANT_SHINOBI) ||
+     enchanted_by_type(vict, ENCHANT_SWASHBUCKLER) ||
+     enchanted_by_type(vict, ENCHANT_JUSTICIAR) ||
+     enchanted_by_type(vict, ENCHANT_FORESTER) ||
+     enchanted_by_type(vict, ENCHANT_DARKWARDER) ||
+     enchanted_by_type(vict, ENCHANT_POET) ||
+     enchanted_by_type(vict, ENCHANT_COMMODORE) ||
+     enchanted_by_type(vict, ENCHANT_BRIGAND))
   {
     GET_GOLD(vict)+=10000000;
     GET_EXP(vict)+=15000000;
     rank=3;
   }
   else
-  if(enchanted_by(vict,"The title of Apprentice") ||
-     enchanted_by(vict,"The title of Acolyte") ||
-     enchanted_by(vict,"The title of Tsume") ||
-     enchanted_by(vict,"The title of Squire") ||
-     enchanted_by(vict,"The title of First Sword") ||
-     enchanted_by(vict,"The title of Wanderer") ||
-     enchanted_by(vict,"The title of Minion of Darkness") ||
-     enchanted_by(vict,"The title of Minstrel") ||
-     enchanted_by(vict,"The rank of Private") ||
-     enchanted_by(vict,"The status of Highwayman"))
+  if(enchanted_by_type(vict, ENCHANT_APPRENTICE) ||
+     enchanted_by_type(vict, ENCHANT_ACOLYTE) ||
+     enchanted_by_type(vict, ENCHANT_TSUME) ||
+     enchanted_by_type(vict, ENCHANT_SQUIRE) ||
+     enchanted_by_type(vict, ENCHANT_FIRSTSWORD) ||
+     enchanted_by_type(vict, ENCHANT_WANDERER) ||
+     enchanted_by_type(vict, ENCHANT_MINION) ||
+     enchanted_by_type(vict, ENCHANT_MINSTREL) ||
+     enchanted_by_type(vict, ENCHANT_PRIVATE) ||
+     enchanted_by_type(vict, ENCHANT_HIGHWAYMAN))
   {
     GET_GOLD(vict)+=5000000;
     GET_EXP(vict)+=10000000;

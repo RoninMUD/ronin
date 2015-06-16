@@ -1127,6 +1127,7 @@ void copyover_recover(void) {
   struct char_file_u_4 char_data_4;
   struct char_file_u_2 char_data_2;
   int desc,room,port,addr,version=0,last_desc=0;
+  long last_up = 0;
   FILE *fp,*fl;
   bool fOld,close_desc;
   char name[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
@@ -1179,18 +1180,22 @@ void copyover_recover(void) {
         case 2:
           if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
           {log_s("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
+          last_up=char_data_2.last_update;
           break;
         case 3:
           if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
           {log_s("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
+          last_up=char_data_4.last_update;
           break;
         case 4:
           if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
           {log_s("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
+          last_up=char_data_4.last_update;
           break;
         case 5:
           if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
           {log_s("Error Reading rent file(copyover)");fclose(fl);fOld=FALSE;}
+          last_up=char_data_5.last_update;
           break;
         default:
           log_s("Error getting pfile version (copyover)");fclose(fl);
@@ -1279,6 +1284,10 @@ void copyover_recover(void) {
       if(GET_LEVEL(d->character) >= LEVEL_IMM)
          d->wizinfo = GET_LEVEL(d->character);
 
+      sprintf(buf,"%ld",time(0)-last_up);
+      if(signal_char(d->character,d->character,MSG_OBJ_ENTERING_GAME,buf))
+        log_s("Error: Return TRUE from MSG_OBJ_ENTERING_GAME");
+
       d->connected = CON_PLYNG;
       do_look(d->character,"",CMD_LOOK);
       log_f("WIZINFO: Restored %s to room %d.",GET_NAME(d->character),room);
@@ -1307,11 +1316,11 @@ int get_from_q(struct txt_q *queue, char *dest)
   if (!queue->head)
     return(0);
 
-  strcpy(dest, queue->head->text);
+  strcpy(dest, queue->head->text ? queue->head->text : "");
   tmp = queue->head;
   queue->head = queue->head->next;
 
-  free(tmp->text);
+  if (tmp->text) free(tmp->text);
   free(tmp);
 
   return(1);
@@ -2989,9 +2998,9 @@ void no_signal_trap() {
 }
 
 void nasty_signal_handler (int no) {
-    signal(SIGSEGV, no_signal_trap);
+    signal(no, SIG_DFL);
     write_last_command();
-    exit(1);
+    kill(getpid(), no);
 }
 
 void write_board(int vnum,char *heading,char *message);
