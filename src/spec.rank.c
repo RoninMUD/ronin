@@ -109,13 +109,16 @@ void write_rank_board(int i) {
 void resort_board(int i) {
   int j,issorted;
   char temptxt[20];
+
+  memset(temptxt, 0, sizeof(temptxt));
+
   do {
     issorted = 1;
     for(j=0;j<14;j++)
       if(rank_board[i][j].ranking<rank_board[i][j+1].ranking) {
-        strcpy(temptxt,rank_board[i][j].name);
-        strcpy(rank_board[i][j].name,rank_board[i][j+1].name);
-        strcpy(rank_board[i][j+1].name,temptxt);
+        strncpy(temptxt, rank_board[i][j].name, sizeof(temptxt) - 1);
+        strncpy(rank_board[i][j].name, rank_board[i][j+1].name, FIELD_SIZE(rank_struct, name) - 1);
+        strncpy(rank_board[i][j+1].name, temptxt, FIELD_SIZE(rank_struct, name) - 1);
         SWITCH(rank_board[i][j].ranking,rank_board[i][j+1].ranking);
         SWITCH(rank_board[i][j].level,rank_board[i][j+1].level);
         SWITCH(rank_board[i][j].sc_level,rank_board[i][j+1].sc_level);
@@ -302,37 +305,36 @@ void rank_char(CHAR *ch) {
 
   ch->ver3.ranking+=20*graf(age(ch).year, 15,18,22,26,22,20,18);
 
-  if(enchanted_by(ch,"The title of Squire")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Swashbuckler")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The title of Knight")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The title of First Sword")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Justiciar")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The title of Lord/Lady")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The title of Apprentice")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Warlock")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The title of Sorcerer")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The rank of Private")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The rank of Commodore")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The rank of Commander")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The title of Wanderer")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Forester")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The title of Tamer")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The title of Tsume")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Shinobi")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The title of Shogun")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The title of Minstrel")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Poet")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The title of Conductor")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The title of Minion of Darkness")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Dark Warder")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The title of Dark Lord/Lady")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The title of Alcolyte")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Acolyte")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The title of Bishop")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The title of Prophet")) ch->ver3.ranking+=150;
-  if(enchanted_by(ch,"The status of Highwayman")) ch->ver3.ranking+=50;
-  if(enchanted_by(ch,"The status of Brigand")) ch->ver3.ranking+=100;
-  if(enchanted_by(ch,"The status of Assassin")) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_SQUIRE)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_SWASHBUCKLER)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_KNIGHT)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_FIRSTSWORD)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_JUSTICIAR)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_LORDLADY)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_APPRENTICE)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_WARLOCK)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_SORCERER)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_PRIVATE)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_COMMODORE)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_COMMANDER)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_WANDERER)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_FORESTER)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_TAMER)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_TSUME)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_SHINOBI)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_SHOGUN)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_MINSTREL)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_POET)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_MINION)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_DARKWARDER)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_ACOLYTE)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_BISHOP)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_PROPHET)) ch->ver3.ranking+=150;
+  if (enchanted_by_type(ch, ENCHANT_HIGHWAYMAN)) ch->ver3.ranking+=50;
+  if (enchanted_by_type(ch, ENCHANT_BRIGAND)) ch->ver3.ranking+=100;
+  if (enchanted_by_type(ch, ENCHANT_ASSASSIN)) ch->ver3.ranking+=150;
 
 /* Class Based */
   switch(GET_CLASS(ch)) {

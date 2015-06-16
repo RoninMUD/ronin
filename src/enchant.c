@@ -217,7 +217,7 @@ int squire_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Swashbuckler"))
+    if (!enchanted_by_type(ch, ENCHANT_SWASHBUCKLER))
     {
       strcat(arg, "Squire ");
 
@@ -228,8 +228,8 @@ int squire_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Squire") &&
-        !enchanted_by(ch, "The title of Swashbuckler") &&
+    if (enchanted_by_type(ch, ENCHANT_SQUIRE) &&
+        !enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       squire_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -263,7 +263,7 @@ int swashbuckler_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Knight"))
+    if (!enchanted_by_type(ch, ENCHANT_KNIGHT))
     {
       strcat(arg, "Swashbuckler ");
 
@@ -274,8 +274,8 @@ int swashbuckler_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Swashbuckler") &&
-        !enchanted_by(ch, "The title of Knight") &&
+    if (enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) &&
+        !enchanted_by_type(ch, ENCHANT_KNIGHT) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       swashbuckler_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -317,7 +317,7 @@ int knight_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Knight") &&
+    if (enchanted_by_type(ch, ENCHANT_KNIGHT) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       knight_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -353,7 +353,7 @@ int firstsword_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Justiciar"))
+    if (!enchanted_by_type(ch, ENCHANT_JUSTICIAR))
     {
       strcat(arg, "First Sword ");
 
@@ -364,8 +364,8 @@ int firstsword_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of First Sword") &&
-        !enchanted_by(ch, "The title of Justiciar") &&
+    if (enchanted_by_type(ch, ENCHANT_FIRSTSWORD) &&
+        !enchanted_by_type(ch, ENCHANT_JUSTICIAR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       firstsword_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -400,7 +400,7 @@ int justiciar_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Lord/Lady"))
+    if (!enchanted_by_type(ch, ENCHANT_LORDLADY))
     {
       strcat(arg, "Justiciar ");
 
@@ -411,8 +411,8 @@ int justiciar_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Justiciar") &&
-        !enchanted_by(ch, "The title of Lord/Lady") &&
+    if (enchanted_by_type(ch, ENCHANT_JUSTICIAR) &&
+        !enchanted_by_type(ch, ENCHANT_LORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       justiciar_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -457,7 +457,7 @@ int lordlady_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Lord/Lady") &&
+    if (enchanted_by_type(ch, ENCHANT_LORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       lordlady_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -494,7 +494,7 @@ int wanderer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Forester"))
+    if (!enchanted_by_type(ch, ENCHANT_FORESTER))
     {
       strcat(arg, "Wanderer ");
 
@@ -505,8 +505,8 @@ int wanderer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Wanderer") &&
-        !enchanted_by(ch, "The title of Forester") &&
+    if (enchanted_by_type(ch, ENCHANT_WANDERER) &&
+        !enchanted_by_type(ch, ENCHANT_FORESTER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       wanderer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -541,7 +541,7 @@ int forester_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Tamer"))
+    if (!enchanted_by_type(ch, ENCHANT_TAMER))
     {
       strcat(arg, "Forester ");
 
@@ -552,8 +552,8 @@ int forester_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Forester") &&
-        !enchanted_by(ch, "The title of Tamer") &&
+    if (enchanted_by_type(ch, ENCHANT_FORESTER) &&
+        !enchanted_by_type(ch, ENCHANT_TAMER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       forester_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -594,7 +594,7 @@ int tamer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Tamer") &&
+    if (enchanted_by_type(ch, ENCHANT_TAMER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       tamer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -630,7 +630,7 @@ int apprentice_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Warlock"))
+    if (!enchanted_by_type(ch, ENCHANT_WARLOCK))
     {
       strcat(arg, "Apprentice ");
 
@@ -641,8 +641,8 @@ int apprentice_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Apprentice") &&
-        !enchanted_by(ch, "The title of Warlock") &&
+    if (enchanted_by_type(ch, ENCHANT_APPRENTICE) &&
+        !enchanted_by_type(ch, ENCHANT_WARLOCK) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       apprentice_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -678,7 +678,7 @@ int warlock_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Sorcerer"))
+    if (!enchanted_by_type(ch, ENCHANT_SORCERER))
     {
       strcat(arg, "Warlock ");
 
@@ -689,8 +689,8 @@ int warlock_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Warlock") &&
-        !enchanted_by(ch, "The title of Sorcerer") &&
+    if (enchanted_by_type(ch, ENCHANT_WARLOCK) &&
+        !enchanted_by_type(ch, ENCHANT_SORCERER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       warlock_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -733,7 +733,7 @@ int sorcerer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Sorcerer") &&
+    if (enchanted_by_type(ch, ENCHANT_SORCERER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       sorcerer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -769,7 +769,7 @@ int minstrel_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Poet"))
+    if (!enchanted_by_type(ch, ENCHANT_POET))
     {
       strcat(arg, "Minstrel ");
 
@@ -780,8 +780,8 @@ int minstrel_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Minstrel") &&
-        !enchanted_by(ch, "The title of Poet") &&
+    if (enchanted_by_type(ch, ENCHANT_MINSTREL) &&
+        !enchanted_by_type(ch, ENCHANT_POET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       minstrel_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -817,7 +817,7 @@ int poet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *ar
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Conductor"))
+    if (!enchanted_by_type(ch, ENCHANT_CONDUCTOR))
     {
       strcat(arg, "Poet ");
 
@@ -828,8 +828,8 @@ int poet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *ar
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Poet") &&
-        !enchanted_by(ch, "The title of Conductor") &&
+    if (enchanted_by_type(ch, ENCHANT_POET) &&
+        !enchanted_by_type(ch, ENCHANT_CONDUCTOR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       poet_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -871,7 +871,7 @@ int conductor_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Conductor") &&
+    if (enchanted_by_type(ch, ENCHANT_CONDUCTOR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       conductor_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -908,7 +908,7 @@ int private_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The rank of Commodore"))
+    if (!enchanted_by_type(ch, ENCHANT_COMMODORE))
     {
       strcat(arg, "Private ");
 
@@ -920,8 +920,8 @@ int private_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The rank of Private") &&
-        !enchanted_by(ch, "The rank of Commodore") &&
+    if (enchanted_by_type(ch, ENCHANT_PRIVATE) &&
+        !enchanted_by_type(ch, ENCHANT_COMMODORE) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       private_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -957,7 +957,7 @@ int commodore_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The rank of Commander"))
+    if (!enchanted_by_type(ch, ENCHANT_COMMANDER))
     {
       strcat(arg, "Commodore ");
 
@@ -968,8 +968,8 @@ int commodore_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The rank of Commodore") &&
-        !enchanted_by(ch, "The rank of Commander") &&
+    if (enchanted_by_type(ch, ENCHANT_COMMODORE) &&
+        !enchanted_by_type(ch, ENCHANT_COMMANDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       commodore_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1012,7 +1012,7 @@ int commander_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The rank of Commander") &&
+    if (enchanted_by_type(ch, ENCHANT_COMMANDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       commander_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1049,7 +1049,7 @@ int highwayman_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The status of Brigand"))
+    if (!enchanted_by_type(ch, ENCHANT_BRIGAND))
     {
       strcat(arg, "Highwayman ");
 
@@ -1060,8 +1060,8 @@ int highwayman_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The status of Highwayman") &&
-        !enchanted_by(ch, "The status of Brigand") &&
+    if (enchanted_by_type(ch, ENCHANT_HIGHWAYMAN) &&
+        !enchanted_by_type(ch, ENCHANT_BRIGAND) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       highwayman_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1095,7 +1095,7 @@ int brigand_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The status of Assassin"))
+    if (!enchanted_by_type(ch, ENCHANT_ASSASSIN))
     {
       strcat(arg, "Brigand ");
 
@@ -1106,8 +1106,8 @@ int brigand_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The status of Brigand") &&
-        !enchanted_by(ch, "The status of Assassin") &&
+    if (enchanted_by_type(ch, ENCHANT_BRIGAND) &&
+        !enchanted_by_type(ch, ENCHANT_ASSASSIN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       brigand_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1149,7 +1149,7 @@ int assassin_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The status of Assassin") &&
+    if (enchanted_by_type(ch, ENCHANT_ASSASSIN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       assassin_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1185,7 +1185,7 @@ int minion_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Dark Warder"))
+    if (!enchanted_by_type(ch, ENCHANT_DARKWARDER))
     {
       strcat(arg, "Evil Minion ");
       return TRUE;
@@ -1195,8 +1195,8 @@ int minion_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Minion of Darkness") &&
-        !enchanted_by(ch, "The title of Dark Warder") &&
+    if (enchanted_by_type(ch, ENCHANT_MINION) &&
+        !enchanted_by_type(ch, ENCHANT_DARKWARDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       minion_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1232,7 +1232,7 @@ int darkwarder_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Dark Lord/Lady"))
+    if (!enchanted_by_type(ch, ENCHANT_DARKLORDLADY))
     {
       strcat(arg, "Dark Warder ");
 
@@ -1243,8 +1243,8 @@ int darkwarder_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Dark Warder") &&
-        !enchanted_by(ch, "The title of Dark Lord/Lady") &&
+    if (enchanted_by_type(ch, ENCHANT_DARKWARDER) &&
+        !enchanted_by_type(ch, ENCHANT_DARKLORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       darkwarder_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1290,7 +1290,7 @@ int darklordlady_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Dark Lord/Lady") &&
+    if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       darklordlady_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1327,7 +1327,7 @@ int tsume_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Shinobi"))
+    if (!enchanted_by_type(ch, ENCHANT_SHINOBI))
     {
       strcat(arg, "Tsume ");
 
@@ -1338,8 +1338,8 @@ int tsume_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Tsume") &&
-        !enchanted_by(ch, "The title of Shinobi") &&
+    if (enchanted_by_type(ch, ENCHANT_TSUME) &&
+        !enchanted_by_type(ch, ENCHANT_SHINOBI) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       tsume_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1375,7 +1375,7 @@ int shinobi_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Shogun"))
+    if (!enchanted_by_type(ch, ENCHANT_SHOGUN))
     {
       strcat(arg, "Shinobi ");
 
@@ -1386,8 +1386,8 @@ int shinobi_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Shinobi") &&
-        !enchanted_by(ch, "The title of Shogun") &&
+    if (enchanted_by_type(ch, ENCHANT_SHINOBI) &&
+        !enchanted_by_type(ch, ENCHANT_SHOGUN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       shinobi_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1430,7 +1430,7 @@ int shogun_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Shogun") &&
+    if (enchanted_by_type(ch, ENCHANT_SHOGUN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       shogun_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1467,7 +1467,7 @@ int acolyte_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Bishop"))
+    if (!enchanted_by_type(ch, ENCHANT_BISHOP))
     {
       strcat(arg, "Acolyte ");
 
@@ -1478,8 +1478,8 @@ int acolyte_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Acolyte") &&
-        !enchanted_by(ch, "The title of Bishop") &&
+    if (enchanted_by_type(ch, ENCHANT_ACOLYTE) &&
+        !enchanted_by_type(ch, ENCHANT_BISHOP) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       acolyte_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1515,7 +1515,7 @@ int bishop_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 {
   if (cmd == MSG_SHOW_PRETITLE)
   {
-    if (!enchanted_by(ch, "The title of Prophet"))
+    if (!enchanted_by_type(ch, ENCHANT_PROPHET))
     {
       strcat(arg, "Bishop ");
 
@@ -1526,8 +1526,8 @@ int bishop_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Bishop") &&
-        !enchanted_by(ch, "The title of Prophet") &&
+    if (enchanted_by_type(ch, ENCHANT_BISHOP) &&
+        !enchanted_by_type(ch, ENCHANT_PROPHET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       bishop_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1569,7 +1569,7 @@ int prophet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_DEAD)
   {
-    if (enchanted_by(ch, "The title of Prophet") &&
+    if (enchanted_by_type(ch, ENCHANT_PROPHET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       prophet_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
@@ -1638,7 +1638,7 @@ void assign_enchantments(void)
   ENCHANTO("The title of Shinobi"           , ENCHANT_SHINOBI     , -1,  5, APPLY_SKILL_PUMMEL    , AFF_SENSE_LIFE      , AFF_NONE, shinobi_enchantment);
   ENCHANTO("The title of Shogun"            , ENCHANT_SHOGUN      , -1,  5, APPLY_SKILL_ASSAULT   , AFF_NONE            , AFF_NONE, shogun_enchantment);
 
-  ENCHANTO("The title of Minstrel"          , ENCHANT_TRAVELER    , -1,  1, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, minstrel_enchantment);
+  ENCHANTO("The title of Minstrel"          , ENCHANT_MINSTREL    , -1,  1, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, minstrel_enchantment);
   ENCHANTO("The title of Poet"              , ENCHANT_POET        , -1,  1, APPLY_DAMROLL         , AFF_SENSE_LIFE      , AFF_NONE, poet_enchantment);
   ENCHANTO("The title of Conductor"         , ENCHANT_CONDUCTOR   , -1,  5, APPLY_SKILL_BACKFLIP  , AFF_INFRAVISION     , AFF_NONE, conductor_enchantment);
 
@@ -1765,7 +1765,7 @@ void enchantment_to_char(CHAR *victim, ENCH *enchantment, int must_find)
   {
     next = ench->next;
 
-    if (!strcmp(ench->name, new_ench->name))
+    if (ench->name && !strcmp(ench->name, new_ench->name))
     {
       enchantment_remove(victim, ench, TRUE);
       ench = NULL;
@@ -1837,7 +1837,7 @@ int enchanted_by(CHAR *ch, char *enchantment_name)
 
   for (ench = ch->enchantments; ench; ench = ench->next)
   {
-    if (!strcmp(ench->name, enchantment_name))
+    if (ench->name && !strcmp(ench->name, enchantment_name))
     {
       return TRUE;
     }
@@ -1878,7 +1878,7 @@ int get_rank(CHAR *ch)
       case ENCHANT_PRIVATE:
       case ENCHANT_WANDERER:
       case ENCHANT_TSUME:
-      case ENCHANT_TRAVELER:
+      case ENCHANT_MINSTREL:
       case ENCHANT_MINION:
       case ENCHANT_ACOLYTE:
       case ENCHANT_HIGHWAYMAN:
@@ -1947,7 +1947,7 @@ char *get_rank_name(CHAR *ch)
         case ENCHANT_TSUME:
           if (rank == 1) return "Tsume";
           break;
-        case ENCHANT_TRAVELER:
+        case ENCHANT_MINSTREL:
           if (rank == 1) return "Minstrel";
           break;
         case ENCHANT_MINION:

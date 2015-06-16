@@ -2959,7 +2959,7 @@ char *header_types[] = {
 /* who class not working atm - Ranger Nov 97 */
 void do_who(struct char_data *ch, char *argument, int cmd) {
   struct descriptor_data *d;
-  char buf[256], name[256], *p;
+  char buf[MAX_STRING_LENGTH], name[256], *p;
   char   f = 1,m = 1;
   char  s = 0;
   int  dep = 1,quest=1;

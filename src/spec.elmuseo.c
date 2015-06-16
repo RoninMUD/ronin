@@ -745,7 +745,7 @@ int mus_jenny (CHAR *jen, CHAR *ch, int cmd, char *arg) {
         }
 
         // Jenny`s a bit of a gold-digger.
-        if( enchanted_by(ch, "The title of Sorcerer" ) )
+        if (enchanted_by_type(ch, ENCHANT_SORCERER))
         {
           if( number(1,2) == 1 )
           {
@@ -764,9 +764,9 @@ int mus_jenny (CHAR *jen, CHAR *ch, int cmd, char *arg) {
           add_follower( jen, ch );
           return FALSE;
         }
-        else if( enchanted_by(ch, "The title of Warlock" ) || enchanted_by(ch, "The title of Apprentice" ))
+        else if (enchanted_by_type(ch, ENCHANT_WARLOCK) || enchanted_by_type(ch, ENCHANT_APPRENTICE))
         {
-          sprintf(buf, "Do I look like Jenny, the %s's Consort to you?!?", enchanted_by(ch, "The title of Warlock" ) ? "Warlock" : "Apprentice" );
+          sprintf(buf, "Do I look like Jenny, the %s's Consort to you?!?", enchanted_by_type(ch, ENCHANT_WARLOCK) ? "Warlock" : "Apprentice" );
           do_say(jen, buf, CMD_SOCIAL );
 
           sprintf(buf, "slap %s", ch->player.name );
@@ -2891,7 +2891,7 @@ int mus_timur(CHAR *mob, CHAR* ch, int cmd, char *arg )
           send_to_char( "You should probably leave that to the nomads.\r\n", ch );
           return TRUE;
         }
-        else if( !enchanted_by( ch, "The title of Tamer" ) )
+        else if (!enchanted_by_type(ch, ENCHANT_TAMER))
         {
           send_to_char( "You do not think your taming skills are up the task.\r\n", ch );
           return TRUE;

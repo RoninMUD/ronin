@@ -31,7 +31,7 @@ while 1
   endif
 
   tail -2 syslog.last >> runlog
-  echo "* Restarting game ($user) at `date`, status $status." >> runlog
+  echo "* Restarting game ($user) at `date`, status $tmp." >> runlog
   sleep 20
 end
    

@@ -1532,12 +1532,18 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   else WAIT_STATE(ch, PULSE_VIOLENCE);
 
   con_amt=0;
-  if(GET_CLASS(ch)==CLASS_PALADIN || GET_CLASS(ch)==CLASS_NINJA ||
-     GET_CLASS(ch)==CLASS_COMMANDO || GET_CLASS(ch)==CLASS_ANTI_PALADIN) {
-     if(enchanted_by(ch,"The title of Shogun") ||
-     enchanted_by(ch,"The rank of Commander") ||
-     enchanted_by(ch,"The title of Dark Lord/Lady") ||
-     enchanted_by(ch,"The title of Lord/Lady")) con_amt+=50;
+  if (GET_CLASS(ch)==CLASS_PALADIN ||
+      GET_CLASS(ch)==CLASS_NINJA ||
+      GET_CLASS(ch)==CLASS_COMMANDO ||
+      GET_CLASS(ch)==CLASS_ANTI_PALADIN ||
+      GET_CLASS(ch)==CLASS_BARD) {
+     if (enchanted_by_type(ch, ENCHANT_SHOGUN) ||
+         enchanted_by_type(ch, ENCHANT_COMMANDER) ||
+         enchanted_by_type(ch, ENCHANT_DARKLORDLADY) ||
+         enchanted_by_type(ch, ENCHANT_LORDLADY) ||
+         enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
+        con_amt+=50;
+     }
   }
 
   if(affected_by_spell(ch, SPELL_FOCUS)) con_amt+=100;

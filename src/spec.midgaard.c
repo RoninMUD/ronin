@@ -110,6 +110,7 @@ void list_spells_to_prac(CHAR *ch, int listall)
   else if (enchanted_by_type(ch, ENCHANT_LORDLADY)) bonus = 5;
   else if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY)) bonus = 5;
   else if (enchanted_by_type(ch, ENCHANT_COMMANDER)) bonus = 5;
+  else if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) bonus = 5;
 
   sprintf(buf, "\
 `nSpell Name                      `kHow Well      `jMana Cost\n\r\
@@ -3225,15 +3226,15 @@ void promote_mage(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The title of Sorcerer")) {
+  if (enchanted_by_type(ch, ENCHANT_SORCERER)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The title of Warlock")) {
+  else if (enchanted_by_type(ch, ENCHANT_WARLOCK)) {
     sprintf(title,"Sorcerer");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The title of Apprentice")) {
+  else if (enchanted_by_type(ch, ENCHANT_APPRENTICE)) {
     sprintf(title,"Warlock");
     exp=10000000;
     gold=5000000;
@@ -3320,15 +3321,15 @@ void promote_cleric(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The title of Prophet")) {
+  if (enchanted_by_type(ch, ENCHANT_PROPHET)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The title of Bishop")) {
+  else if (enchanted_by_type(ch, ENCHANT_BISHOP)) {
     sprintf(title,"Prophet");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The title of Acolyte")) {
+  else if(enchanted_by_type(ch, ENCHANT_ACOLYTE)) {
     sprintf(title,"Bishop");
     exp=10000000;
     gold=5000000;
@@ -3422,15 +3423,15 @@ void promote_ninja(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The title of Shogun")) {
+  if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The title of Shinobi")) {
+  else if (enchanted_by_type(ch, ENCHANT_SHINOBI)) {
     sprintf(title,"Shogun");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The title of Tsume")) {
+  else if (enchanted_by_type(ch, ENCHANT_TSUME)) {
     sprintf(title,"Shinobi");
     exp=10000000;
     gold=5000000;
@@ -3528,15 +3529,15 @@ void promote_warrior(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The title of Knight")) {
+  if (enchanted_by_type(ch, ENCHANT_KNIGHT)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The title of Swashbuckler")) {
+  else if (enchanted_by_type(ch, ENCHANT_SWASHBUCKLER)) {
     sprintf(title,"Knight");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The title of Squire")) {
+  else if (enchanted_by_type(ch, ENCHANT_SQUIRE)) {
     sprintf(title,"Swashbuckler");
     exp=10000000;
     gold=5000000;
@@ -3632,17 +3633,17 @@ void promote_paladin(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The title of Lord/Lady")) {
+  if (enchanted_by_type(ch, ENCHANT_LORDLADY)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The title of Justiciar")) {
+  else if (enchanted_by_type(ch, ENCHANT_JUSTICIAR)) {
     sprintf(title,"Lord/Lady");
     if(GET_SEX(ch)==SEX_FEMALE) sprintf(tmptitle,"Lady");
     else sprintf(tmptitle,"Lord");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The title of First Sword")) {
+  else if (enchanted_by_type(ch, ENCHANT_FIRSTSWORD)) {
     sprintf(title,"Justiciar");
     sprintf(tmptitle,"Justiciar");
     exp=10000000;
@@ -3755,15 +3756,15 @@ void promote_nomad(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The title of Tamer")) {
+  if (enchanted_by_type(ch, ENCHANT_TAMER)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The title of Forester")) {
+  else if (enchanted_by_type(ch, ENCHANT_FORESTER)) {
     sprintf(title,"Tamer");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The title of Wanderer")) {
+  else if (enchanted_by_type(ch, ENCHANT_WANDERER)) {
     sprintf(title,"Forester");
     exp=10000000;
     gold=5000000;
@@ -3858,17 +3859,17 @@ void promote_antipaladin(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The title of Dark Lord/Lady")) {
+  if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The title of Dark Warder")) {
+  else if (enchanted_by_type(ch, ENCHANT_DARKWARDER)) {
     sprintf(title,"Dark Lord/Lady");
     if(GET_SEX(ch)==SEX_FEMALE) sprintf(tmptitle,"Dark Lady");
     else sprintf(tmptitle,"Dark Lord");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The title of Minion of Darkness")) {
+  else if (enchanted_by_type(ch, ENCHANT_MINION)) {
     sprintf(title,"Dark Warder");
     sprintf(tmptitle,"Dark Warder");
     exp=10000000;
@@ -3966,15 +3967,15 @@ void promote_bard(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The title of Conductor")) {
+  if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The title of Poet")) {
+  else if (enchanted_by_type(ch, ENCHANT_POET)) {
     sprintf(title,"Conductor");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The title of Minstrel")) {
+  else if (enchanted_by_type(ch, ENCHANT_MINSTREL)) {
     sprintf(title,"Poet");
     exp=10000000;
     gold=5000000;
@@ -4078,15 +4079,15 @@ void promote_commando(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The rank of Commander")) {
+  if (enchanted_by_type(ch, ENCHANT_COMMANDER)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The rank of Commodore")) {
+  else if (enchanted_by_type(ch, ENCHANT_COMMODORE)) {
     sprintf(title,"Commander");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The rank of Private")) {
+  else if (enchanted_by_type(ch, ENCHANT_PRIVATE)) {
     sprintf(title,"Commodore");
     exp=10000000;
     gold=5000000;
@@ -4189,15 +4190,15 @@ void promote_thief(CHAR *promoter, CHAR *ch)
   struct enchantment_type_5 ench;
   int exp=0,gold;
 
-  if(enchanted_by(ch,"The status of Assassin")) {
+  if (enchanted_by_type(ch, ENCHANT_ASSASSIN)) {
     exp=0;
   }
-  else if(enchanted_by(ch,"The status of Brigand")) {
+  else if (enchanted_by_type(ch, ENCHANT_BRIGAND)) {
     sprintf(title,"Assassin");
     exp=15000000;
     gold=10000000;
   }
-  else if(enchanted_by(ch,"The status of Highwayman")) {
+  else if (enchanted_by_type(ch, ENCHANT_HIGHWAYMAN)) {
     sprintf(title,"Brigand");
     exp=10000000;
     gold=5000000;

@@ -1,53 +1,8 @@
-/* ************************************************************************
+/**************************************************************************
 *  File: reception.c, Special module for Inn's.           Part of DIKUMUD *
 *  Usage: Procedures handling saving/loading of player objects            *
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
-
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:28 $
-$Header: /home/ronin/cvs/ronin/reception.c,v 2.3 2005/01/21 14:55:28 ronin Exp $
-$Id: reception.c,v 2.3 2005/01/21 14:55:28 ronin Exp $
-$Name:  $
-$Log: reception.c,v $
-Revision 2.3  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.2  2004/03/04 17:23:58  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.0.0.1  2004/02/05 16:10:00  ronin
-Reinitialization of cvs archives
-
-
-Revision 05-Feb-04 Ranger
-Addition of check_id to logon.
-
-Revision 17-Mar-03 Ranger
-Addition of check to descriptor links to do_logon_char.  There was
-a problem with being able to logon a character idle at the menu.
-
-Revision 1.4  2002/04/18 04:07:31  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision - changed tics to ticks in aquest acts.
-
-Revision 1.3  2002/03/31 08:44:42  ronin
-Replaced #include <sys/time.h> with <time.h> to elminate several time
-warnings.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 
 #include <stdio.h>
 #include <time.h>
@@ -402,6 +357,8 @@ void load_char(CHAR *ch) {
       return;
   }
 
+#ifdef CHAOS2010
+
   if (CHAOSMODE && GET_LEVEL(ch)<LEVEL_IMM)
   {
     int max_hit = 1000, max_mana = 900, max_move = 900;
@@ -432,7 +389,7 @@ void load_char(CHAR *ch) {
     {
       ench_next = ench->next;
       affect_modify(ch, ench->location, ench->modifier, ench->bitvector,ench->bitvector2, FALSE);
-      
+
       if (((ENCHANT_SQUIRE <= ench->type) && (ENCHANT_CONDUCTOR >= ench->type)) ||
           (ENCHANT_REMORTV2 == ench->type) ||
           (ENCHANT_IMM_GRACE == ench->type))
@@ -459,7 +416,7 @@ void load_char(CHAR *ch) {
     ch->tmpabilities = ch->abilities;
 
     /* Normalize all char points */
-   
+
     switch (GET_CLASS(ch))
     {
       case CLASS_WARRIOR:
@@ -493,7 +450,7 @@ void load_char(CHAR *ch) {
     ch->points.max_hit   = max_hit;
     ch->points.move      = max_move;
     ch->points.max_move  = max_move;
-   
+
     ch->specials.prev_max_mana = max_mana;
     ch->specials.prev_max_hit  = max_hit;
     ch->specials.prev_max_move = max_move;
@@ -517,12 +474,12 @@ void load_char(CHAR *ch) {
     GET_WIS(ch) = MAX(0,MIN(GET_WIS(ch),GET_OWIS(ch)));
     GET_STR(ch) = MAX(0,MIN(GET_STR(ch),GET_OSTR(ch)));
 
-    if(GET_STR(ch)<18) 
+    if(GET_STR(ch)<18)
     {
       i=GET_ADD(ch)/10;
       GET_STR(ch)+=i;
       GET_ADD(ch)-=i*10;
-      if(GET_STR(ch)>18) 
+      if(GET_STR(ch)>18)
       {
         i=GET_ADD(ch)+((GET_STR(ch)-18)*10);
         GET_ADD(ch)=MIN(i, 100);
@@ -530,6 +487,8 @@ void load_char(CHAR *ch) {
       }
     }
   }
+
+#endif
 
   if(GET_LEVEL(ch)<LEVEL_IMM) rank_char(ch);
 
@@ -575,6 +534,7 @@ void load_char(CHAR *ch) {
     GET_HIT(ch) = MAX(GET_HIT(ch),GET_MAX_HIT(ch));
     GET_MOVE(ch) = MAX(GET_MOVE(ch),GET_MAX_MOVE(ch));
   }
+
   if(CHAR_REAL_ROOM(ch)!=NOWHERE) {
     if(last_up + 1*SECS_PER_REAL_DAY < time(0)) {
       timegold = (double)tot_cost;
@@ -613,6 +573,7 @@ void load_char(CHAR *ch) {
       }  else GET_BANK(ch)=GET_BANK(ch)-3*rent/2;
     } else GET_GOLD(ch)=GET_GOLD(ch)-rent;
   }
+
   /* New signal for recharging items in rent. Ranger Oct 98*/
   sprintf(buf,"%ld",time(0)-last_up);
   if(signal_char(ch,ch,MSG_OBJ_ENTERING_GAME,buf))
@@ -1454,8 +1415,8 @@ void store_to_char_4(struct char_file_u_4 *st, CHAR *ch) {
   ch->player.long_descr = 0;
 
   if (*st->title) {
-    CREATE(ch->player.title, char, strlen(st->title) + 1);
-    strcpy(ch->player.title, st->title);
+    CREATE(ch->player.title, char, strnlen(st->title, 80) + 1);
+    strncpy(ch->player.title, st->title, 80);
   }
   else GET_TITLE(ch) = 0;
 
@@ -1632,8 +1593,8 @@ void store_to_char_2(struct char_file_u_2 *st, CHAR *ch) {
   ch->player.long_descr = 0;
 
   if (*st->title) {
-    CREATE(ch->player.title, char, strlen(st->title) + 1);
-    strcpy(ch->player.title, st->title);
+    CREATE(ch->player.title, char, strnlen(st->title, 80) + 1);
+    strncpy(ch->player.title, st->title, 80);
   }
   else GET_TITLE(ch) = 0;
 
@@ -2085,6 +2046,7 @@ void do_logon_char(CHAR *ch, char *argument, int cmd) {
   CHAR *i, *next_dude,*vict;
   extern CHAR *character_list;
   struct descriptor_data *d;
+  long last_up = 0;
 
   if(IS_MOB(ch)) return;
 
@@ -2140,18 +2102,22 @@ void do_logon_char(CHAR *ch, char *argument, int cmd) {
     case 2:
       if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
       {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
+      last_up=char_data_2.last_update;
       break;
     case 3:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
       {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
+      last_up=char_data_4.last_update;
       break;
     case 4:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
       {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
+      last_up=char_data_4.last_update;
       break;
     case 5:
       if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
       {log_s("Error Reading rent file(logon_char)");fclose(fl);return;}
+      last_up=char_data_5.last_update;
       break;
     default:
       log_s("Error getting pfile version (logon_char)");
@@ -2205,6 +2171,11 @@ void do_logon_char(CHAR *ch, char *argument, int cmd) {
   }
 
   fclose(fl);
+
+  sprintf(buf,"%ld",time(0)-last_up);
+  if(signal_char(vict,vict,MSG_OBJ_ENTERING_GAME,buf))
+    log_s("Error: Return TRUE from MSG_OBJ_ENTERING_GAME");
+
   save_char(vict, NOWHERE);
   vict->next = character_list;
   character_list = vict;

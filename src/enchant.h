@@ -54,7 +54,7 @@ $State: Exp $
 #define ENCHANT_APPRENTICE    7
 #define ENCHANT_TSUME         8
 #define ENCHANT_WANDERER      9
-#define ENCHANT_TRAVELER     10
+#define ENCHANT_MINSTREL     10
 #define ENCHANT_MINION       11
 #define ENCHANT_PRIVATE      12
 #define ENCHANT_HIGHWAYMAN   13
