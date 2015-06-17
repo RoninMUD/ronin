@@ -303,7 +303,7 @@ void show_obj_to_char(struct obj_data *object, struct char_data *ch,
 
   if (mode != 3) {
     if (mode!=5 && GET_ITEM_TYPE(object)==ITEM_CONTAINER && object->obj_flags.value[3]) {
-      strncpy(buf1, buffer, sizeof(buf1));
+      strncpy(buf1, buffer, sizeof(buf1)-1);
       switch(object->obj_flags.cost) {
         case PC_CORPSE:
           max_time=MAX_PC_CORPSE_TIME; break;
@@ -2381,7 +2381,10 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       for (tmp_ench = ch->enchantments; tmp_ench && (count < MAX_SPL_LIST); tmp_ench = tmp_ench->next, count++) {
         memset(&af_new, 0, sizeof(struct affect));
 
-        strncpy(af_new.name, tmp_ench->name, FIELD_SIZE(affect, name)-1);
+        if (tmp_ench->name) {
+          strncpy(af_new.name, tmp_ench->name, FIELD_SIZE(affect, name) - 1);
+        }
+
         af_new.type = AFF_NONE;
         af_new.duration = tmp_ench->duration;
         af_new.source = AFF_SRC_EN;

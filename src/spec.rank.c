@@ -108,7 +108,8 @@ void write_rank_board(int i) {
 
 void resort_board(int i) {
   int j,issorted;
-  char temptxt[20];
+  char temptxt[FIELD_SIZE(rank_struct, name)];
+  size_t len = FIELD_SIZE(rank_struct, name) - 1;
 
   memset(temptxt, 0, sizeof(temptxt));
 
@@ -116,9 +117,9 @@ void resort_board(int i) {
     issorted = 1;
     for(j=0;j<14;j++)
       if(rank_board[i][j].ranking<rank_board[i][j+1].ranking) {
-        strncpy(temptxt, rank_board[i][j].name, sizeof(temptxt) - 1);
-        strncpy(rank_board[i][j].name, rank_board[i][j+1].name, FIELD_SIZE(rank_struct, name) - 1);
-        strncpy(rank_board[i][j+1].name, temptxt, FIELD_SIZE(rank_struct, name) - 1);
+        strncpy(temptxt, rank_board[i][j].name, len);
+        strncpy(rank_board[i][j].name, rank_board[i][j+1].name, len);
+        strncpy(rank_board[i][j+1].name, temptxt, len);
         SWITCH(rank_board[i][j].ranking,rank_board[i][j+1].ranking);
         SWITCH(rank_board[i][j].level,rank_board[i][j+1].level);
         SWITCH(rank_board[i][j].sc_level,rank_board[i][j+1].sc_level);
