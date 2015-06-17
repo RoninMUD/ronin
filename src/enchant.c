@@ -1694,7 +1694,7 @@ ENCH *get_enchantment(ENCH *enchantment, int must_find)
     {
       if (!enchantments[i].name || !enchantment->name) continue;
 
-      if (!strcmp(enchantments[i].name, enchantment->name)) 
+      if (!strcmp(enchantments[i].name, enchantment->name))
       {
         index = i;
       }
@@ -1707,7 +1707,7 @@ ENCH *get_enchantment(ENCH *enchantment, int must_find)
 
   if (index != -1)
   {
-    if (!enchantment->name)
+    if (!(enchantment->name))
     {
       ench->name = str_dup(enchantments[index].name);
     }

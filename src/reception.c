@@ -1254,24 +1254,24 @@ void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
   ch->player.long_descr = 0;
 
   if (*st->title) {
-    CREATE(ch->player.title, char, strnlen(st->title, 80) + 1);
-    strncpy(ch->player.title, st->title, 80);
+    CREATE(ch->player.title, char, strnlen(st->title, FIELD_SIZE(char_file_u_5, title)) + 1);
+    strncpy(ch->player.title, st->title, FIELD_SIZE(char_file_u_5, title));
   }
   else GET_TITLE(ch) = 0;
 
   if (*st->description) {
-    CREATE(ch->player.description, char, strlen(st->description) + 1);
-    strcpy(ch->player.description, st->description);
+    CREATE(ch->player.description, char, strnlen(st->description, FIELD_SIZE(char_file_u_5, description)) + 1);
+    strncpy(ch->player.description, st->description, FIELD_SIZE(char_file_u_5, description));
   } else ch->player.description = 0;
 
   if (*st->poofin) {
-    CREATE(ch->player.poofin, char, strlen(st->poofin) + 1);
-    strcpy(ch->player.poofin, st->poofin);
+    CREATE(ch->player.poofin, char, strnlen(st->poofin, FIELD_SIZE(char_file_u_5, poofin)) + 1);
+    strncpy(ch->player.poofin, st->poofin, FIELD_SIZE(char_file_u_5, poofin));
   } else ch->player.poofin = 0;
 
   if (*st->poofout) {
-    CREATE(ch->player.poofout, char, strlen(st->poofout) + 1);
-    strcpy(ch->player.poofout, st->poofout);
+    CREATE(ch->player.poofout, char, strnlen(st->poofout, FIELD_SIZE(char_file_u_5, poofout)) + 1);
+    strncpy(ch->player.poofout, st->poofout, FIELD_SIZE(char_file_u_5, poofout));
   } else ch->player.poofout = 0;
 
   ch->player.hometown = st->hometown;
@@ -1347,8 +1347,8 @@ void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
   ch->quest_status = 0;
   ch->quest_level = 0;
 
-  CREATE(ch->player.name, char, strlen(st->name) +1);
-  strcpy(ch->player.name, st->name);
+  CREATE(ch->player.name, char, strnlen(st->name, FIELD_SIZE(char_file_u_5, name)) + 1);
+  strncpy(ch->player.name, st->name, FIELD_SIZE(char_file_u_5, name));
 
   /* Not used as far as I can see (Michael) */
   for(i = 0; i <= 4; i++)
@@ -1386,7 +1386,7 @@ void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
       ench.bitvector= st->enchantments[i].bitvector;
       ench.bitvector2= st->enchantments[i].bitvector2;
       ench.func     = NULL;
-      enchantment_to_char(ch, &ench,TRUE);
+      enchantment_to_char(ch, &ench, TRUE);
       }
   }
   ch->in_room_v = st->load_room;

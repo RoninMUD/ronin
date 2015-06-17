@@ -576,11 +576,14 @@ int dice(int number, int size)
 /* Create a duplicate of a string */
 char *str_dup(char *source)
 {
-  char *new;
+  char *new = NULL;
+  size_t len = strnlen(source, MAX_STRING_LENGTH);
 
-  CREATE(new, char, strlen(source)+1);
+  if (!source) source = "";
 
-  return strcpy(new, source);
+  CREATE(new, char, len + 1);
+
+  return strncpy(new, source, len);
 }
 
 int str_cat(char *s, int len, int maxlen, const char *append)

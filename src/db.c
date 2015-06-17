@@ -1578,6 +1578,8 @@ struct obj_data *read_object(int nr, int type)
   int i,mod, j;
   char buf[100];
 
+  memset(buf, 0, sizeof(buf));
+
   i = nr;
   if (type == VIRTUAL)
     if ((nr = real_object(nr)) < 0) {
@@ -1590,7 +1592,7 @@ struct obj_data *read_object(int nr, int type)
   clear_object(obj);
 
   /* *** string data *** */
-  strcpy(buf,obj_proto_table[nr].name);
+  strncpy(buf, obj_proto_table[nr].name, sizeof(buf)-1);
   obj->name = str_dup(buf);
   /* *** numeric data *** */
 

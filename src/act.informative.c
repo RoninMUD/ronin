@@ -2381,7 +2381,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       for (tmp_ench = ch->enchantments; tmp_ench && (count < MAX_SPL_LIST); tmp_ench = tmp_ench->next, count++) {
         memset(&af_new, 0, sizeof(struct affect));
 
-        strcpy(af_new.name, tmp_ench->name);
+        strncpy(af_new.name, tmp_ench->name, FIELD_SIZE(affect, name)-1);
         af_new.type = AFF_NONE;
         af_new.duration = tmp_ench->duration;
         af_new.source = AFF_SRC_EN;

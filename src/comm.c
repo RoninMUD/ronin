@@ -671,7 +671,7 @@ int game_loop(int mother_desc)
   }
   /* This is the seg fault signal - if the write_last_command itself creates a
     sig fault, it will result in an infinite loop. */
-  signal(SIGSEGV, nasty_signal_handler);
+  /*signal(SIGSEGV, nasty_signal_handler); */
 
   /* Main loop */
   while (!cleanshutdown) {
