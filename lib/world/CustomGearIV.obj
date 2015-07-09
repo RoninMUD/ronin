@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -335,5 +335,95 @@ A
 53 6
 B
 8429568
+#29611
+greaves steel soot~
+Cold-Forged Steel Greaves~
+A sturdy pair of steel greaves have been unceremoniously abandoned here.~
+~
+9 134217728 524321
+8 0 0 0
+10 30000 3000
+10
+X
+~
+0 0 0
+M
+Your strap some sturdy steel greaves to your legs.~
+$n straps some sturdy steel greaves to $s legs.~
+You unbuckle a sturdy pair of greaves.~
+$n unbuckles a sturdy pair of greaves.~
+A
+19 2
+A
+53 9
+#29612
+bracer enchanted brass soot~
+An Enchanted Brass Bracer~
+A brass bracer lying here pulses with magical power.~
+~
+11 134217729 528385
+7 0 0 0
+5 60000 5000
+10
+X
+~
+0 0 0
+M
+Your whole body glows with magical power as you wear the bracer.~
+$n's while body glows with magical power as $e wears the bracer.~
+Your magical aura noticeably dims as you remove the bracer.~
+$n's magical aura noticeably dims as $e removes the bracer.~
+A
+12 25
+A
+13 25
+A
+53 9
+#29613
+vestment pyrite soot~
+A Pyrite-Studded Vestment~
+A lightly studded vestment is folded neatly nearby.~
+~
+9 134217795 524297
+12 0 0 0
+10 75000 25000
+50
+X
+~
+0 0 0
+M
+You quietly slip into your robes of office.~
+$n quietly dons $s robes of office.~
+You hastily remove your robes.~
+$n hastily removes $s robes.~
+A
+19 2
+A
+53 9
+#29614
+armband twisted wolfram soot~
+A Twisted Wolfram Armband~
+twisted strands of a slivery metal lie partially concealed on the ground.~
+~
+9 134217732 524545
+15 -1 -1 -1
+42 99540 21100
+0
+X
+~
+0 0 0
+M
+You wrap the strands of twisted metal around your arms.~
+$n wraps strands of twisted metal around $s arms.~
+You unwind the twisted metal from your arms.~
+$n carefully unwinds the strands of twisted metal from $s arms.~
+A
+19 4
+A
+18 2
+A
+53 9
+B
+16777216
 #0
 $~

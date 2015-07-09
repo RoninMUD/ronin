@@ -43,3 +43,4 @@ lib/wizlist
 lib/wizlist_inact
 lib/*.log
 lib/zone_rating
+lib/world/*.bak
