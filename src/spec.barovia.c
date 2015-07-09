@@ -785,6 +785,7 @@ void assign_barovia (void) {
 
   assign_obj(BAR_SWORD   ,  black_rose_sword);
   assign_obj(BAR_BRACELET, bracelet_of_magic);
+  assign_obj(29612       , bracelet_of_magic);
   assign_obj(BAR_DECAY1  ,  decaying_eq);
   assign_obj(BAR_DECAY2  ,  decaying_eq);
   assign_obj(BAR_DECAY3  ,  decaying_eq);
