@@ -1829,7 +1829,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
     // process order delivery
     order = get_obj_in_list_vis(collector, "order", collector->carrying);
 
-    if (order && GET_ITEM_TYPE(order) == ITEM_AQ_ORDER) {
+    if (order && (GET_ITEM_TYPE(order) == ITEM_AQ_ORDER)) {
       get_owner_name(order, name);
 
       if ((order->ownerid[0] != ch->ver3.id) && (order->ownerid[0] > 0)) {
