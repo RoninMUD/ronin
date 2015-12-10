@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -425,5 +425,169 @@ A
 53 9
 B
 16777216
+#29615
+ribbon feywaist~
+a wide, white ribbon~
+Fey has left her ribbon here.~
+~
+9 134225920 526337
+2 0 0 0
+10 10 8000
+5
+X
+~
+0 0 0
+M
+Forming a loose bow, you fasten a wide, white ribbon about your waist.~
+Forming a loose bow, $n fastens a wide, white ribbon about $s waist.~
+~
+~
+A
+19 2
+#29616
+tome feyshield~
+a leather-bound tome~
+Fey has left her tome here.~
+~
+9 134217795 524801
+15 0 0 0
+1 45000 15000
+50
+X
+~
+0 0 0
+M
+You open a leather-bound tome and begin to leaf through the pages.~
+$n opens a leather-bound tome and begins to leaf through the pages.~
+~
+~
+A
+18 1
+A
+19 1
+#29617
+hand god shield tylershield~
+God's right hand~
+Tyler has left God's hand here.~
+~
+9 196146242 524801
+10 0 0 0
+10 10000 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+B
+8
+#29618
+meteoric iron faulds~
+faulds meteoric iron tylerwaist~
+Tyler has left his faulds here.~
+~
+9 134225920 526337
+2 0 0 0
+10 10 8000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#29619
+tattoo tylerwrist~
+a tattoo of the Goddess Ma'at~
+Tyler has left his tattoo here.~
+~
+11 134217728 528385
+0 0 0 0
+2 12000 10000
+10
+X
+~
+0 0 0
+M
+A tattoo slowly fades into existence on your wrist.~
+A tattoo slowly fades into existence on $n's wrist.~
+The tattoo on your wrist slowly fades out of existence.~
+The tattoo on $n's wrist slowly fades out of existence.~
+A
+18 2
+A
+19 3
+#29620
+beads tylerwrist~
+a string of prayer beads~
+Tyler has left his beads here.~
+~
+11 134217728 528385
+0 0 0 0
+2 12000 10000
+10
+X
+~
+0 0 0
+M
+Deep in prayer, you fiddle with your prayer beads.~
+Deep in prayer, $n fiddles with $s prayer beads.~
+~
+~
+A
+18 2
+A
+19 3
+#29621
+sash ahrimanwaist~
+a spider silk sash~
+Ahriman has left his sash here.~
+~
+9 134225920 526337
+2 0 0 0
+10 10 8000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#29622
+feathers harpy shield makenashield~
+a handful of filthy harpy feathers~
+Makena has left her shield here.~
+~
+9 134217729 524801
+20 0 0 0
+12 2500 7500
+7
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 13
+A
+18 2
+A
+19 1
 #0
 $~
