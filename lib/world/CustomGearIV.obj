@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -464,7 +464,7 @@ $n opens a leather-bound tome and begins to leaf through the pages.~
 A
 18 1
 A
-19 1
+19 2
 #29617
 hand god shield tylershield~
 God's right hand~
@@ -589,5 +589,51 @@ A
 18 2
 A
 19 1
+#29623
+hat black ahriman ahrimanhead~
+a wide brimmed, black Spitzhut~
+Ahriman has left his hat here.~
+~
+9 134217728 524305
+5 0 0 0
+10 50000 100000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 0
+A
+19 2
+B
+16777216
+#29624
+crown saros saroshead~
+a liar's crown of shit~
+Saros has left his crown here.~
+~
+9 134217728 524305
+5 0 0 0
+10 50000 100000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 0
+A
+19 2
+B
+16777216
 #0
 $~
