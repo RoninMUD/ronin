@@ -635,5 +635,95 @@ A
 19 2
 B
 16777216
+#29625
+gloves kid white fey feyhands~
+a pair of embroidered, white kid gloves~
+Fey has left her white gloves here.~
+~
+9 134217794 524417
+8 0 0 0
+10 1000000 80000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+53 3
+#29626
+shawl wool vicuna fey feyabout~
+a vicuna wool shawl~
+Fey has left her wool shawl here.~
+~
+9 134217728 525313
+2 0 0 0
+1 250 25
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 1
+A
+53 3
+#29627
+tattoo fey feywrist~
+a tattoo of the Goddess Seshat~
+Fey has left her tattoo here?!~
+~
+11 134217728 528385
+0 0 0 0
+2 12000 10000
+10
+X
+~
+0 0 0
+M
+A tattoo slowly fades into existence on your wrist.~
+A tattoo slowly fades into existence on $n's wrist.~
+The tattoo on your wrist slowly fades out of existence.~
+The tattoo on $n's wrist slowly fades out of existence.~
+A
+18 2
+A
+19 2
+A
+53 3
+#29628
+bracelet charm fey feywrist~
+a silver charm bracelet~
+Fey has left her charm bracelet here.~
+~
+11 134217728 528385
+0 0 0 0
+2 12000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+A
+53 3
 #0
 $~
