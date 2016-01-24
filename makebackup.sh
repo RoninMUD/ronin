@@ -1,13 +1,15 @@
 #!/bin/bash
 TYPE=$(basename $PWD)
-PREFIX="../backup/$TYPE-$(date +%Y%m%d)"
+PREFIX="../backup/$(date +%Y%m%d)-$TYPE"
 BASEDIR="."
+EXT="tar.bz2"
+TAROPT="jcvf"
 
-if [ -f $PREFIX-base.tar.gz ] 
+if [ -f $PREFIX-base.$EXT ]
 then
-  echo "File $PREFIX-base.tar.gz already exists.  Skipping base backup..."
+  echo "File $PREFIX-base.$EXT already exists.  Skipping base backup..."
 else
-  tar zcvf $PREFIX-base.tar.gz \
+  tar $TAROPT $PREFIX-base.$EXT \
    --owner=ronin --group=ronin \
    --exclude=.svn \
    --exclude=.git \
@@ -53,11 +55,11 @@ else
    $BASEDIR/ bin/
 fi
 
-if [ -f $PREFIX-data.tar.gz ]
+if [ -f $PREFIX-data.$EXT ]
 then
-  echo "File $PREFIX-data.tar.gz already exists.  Skipping data backup..."
+  echo "File $PREFIX-data.$EXT already exists.  Skipping data backup..."
 else
-  tar zcvf $PREFIX-data.tar.gz \
+  tar $TAROPT $PREFIX-data.$EXT \
    --owner=ronin --group=ronin \
    --exclude=.svn \
    --exclude=.git \
@@ -89,11 +91,11 @@ else
    $BASEDIR/lib/wizlist*
 fi
 
-if [ -f $PREFIX-log.tar.gz ]
+if [ -f $PREFIX-log.$EXT ]
 then
-  echo "File $PREFIX-log.tar.gz already exists.  Skipping log backup..."
+  echo "File $PREFIX-log.$EXT already exists.  Skipping log backup..."
 else
-  tar zcvf $PREFIX-log.tar.gz \
+  tar $TAROPT $PREFIX-log.$EXT \
    --owner=ronin --group=ronin \
    --exclude=.svn \
    --exclude=.git \
