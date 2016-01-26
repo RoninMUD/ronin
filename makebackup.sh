@@ -1,6 +1,6 @@
 #!/bin/bash
 TYPE=$(basename $PWD)
-PREFIX="../backup/$(date +%Y%m%d)-$TYPE"
+PREFIX="../backup/$TYPE/$(date +%Y%m%d)-$TYPE"
 BASEDIR="."
 EXT="tar.bz2"
 TAROPT="jcvf"
