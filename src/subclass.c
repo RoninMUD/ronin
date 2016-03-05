@@ -179,6 +179,7 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_BANDIT, 2)) return TRUE;
       break;
     case SKILL_EVASION:
+      if ((GET_LEVEL(ch) >= 50) && (GET_CLASS(ch) == CLASS_NOMAD)) return TRUE;
       if (check_subclass(ch, SC_BANDIT, 5)) return TRUE;
       break;
     case SKILL_DIRTY_TRICKS:

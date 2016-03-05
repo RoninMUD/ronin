@@ -477,13 +477,14 @@ void do_scan(CHAR *ch, char *argument, int cmd) {
 
   if (!GET_SKILLS(ch)) return;
 
-  if (IS_MORTAL(ch) && (GET_CLASS(ch) != CLASS_THIEF)) {
+  if (IS_MORTAL(ch) &&
+      (GET_CLASS(ch) != CLASS_THIEF) &&
+      ((GET_CLASS(ch) != CLASS_NOMAD) || !check_subclass(ch, SC_TRAPPER, 1))) {
     send_to_char("You don't know this skill.\n\r", ch);
-
     return;
   }
 
-  if (GET_LEVEL(ch) < 35) {
+  if ((GET_CLASS(ch) == CLASS_THIEF) && GET_LEVEL(ch) < 35) {
     send_to_char("You don't know this skill yet.\n\r", ch);
 
     return;

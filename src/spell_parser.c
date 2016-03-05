@@ -383,29 +383,33 @@ void affect_update()
 
 int SPELL_LEVEL(struct char_data *ch, int sn)
 {
-  if (GET_CLASS(ch) == CLASS_NINJA)
-    {  return (spell_info[sn].min_level_ninja);
-      }
-  else if (GET_CLASS(ch) == CLASS_PALADIN)
-    {  return (spell_info[sn].min_level_paladin);
-      }
-  else if (GET_CLASS(ch) == CLASS_ANTI_PALADIN)
-    {  return (spell_info[sn].min_level_anti_paladin);
-      }
-  else if (GET_CLASS(ch) == CLASS_AVATAR)
-    {  return (spell_info[sn].min_level_avatar);
-      }
-  else if (GET_CLASS(ch) == CLASS_BARD)
-    {  return (spell_info[sn].min_level_bard);
-      }
-  else if (GET_CLASS(ch) == CLASS_MAGIC_USER)
-    {  return (spell_info[sn].min_level_magic);
-      }
-  else if (GET_CLASS(ch) == CLASS_COMMANDO)
-    {  return (spell_info[sn].min_level_commando);
-      }
-  else {
-    return (spell_info[sn]. min_level_cleric);
+  switch (GET_CLASS(ch)) {
+    case CLASS_NINJA:
+      return (spell_info[sn].min_level_ninja);
+
+    case CLASS_PALADIN:
+      return (spell_info[sn].min_level_paladin);
+
+    case CLASS_ANTI_PALADIN:
+      return (spell_info[sn].min_level_anti_paladin);
+
+    case CLASS_AVATAR:
+      return (spell_info[sn].min_level_avatar);
+
+    case CLASS_BARD:
+      return (spell_info[sn].min_level_bard);
+
+    case CLASS_MAGIC_USER:
+      return (spell_info[sn].min_level_magic);
+
+    case CLASS_COMMANDO:
+      return (spell_info[sn].min_level_commando);
+
+    case CLASS_CLERIC:
+      return (spell_info[sn]. min_level_cleric);
+
+    default:
+      return LEVEL_ETE;
   }
 }
 

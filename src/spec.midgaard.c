@@ -241,8 +241,8 @@ void list_skills_to_prac(CHAR *ch)
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) continue;
-          else
-          {
+          else if ((number == SKILL_SCAN) && !check_subclass(ch, SC_TRAPPER, 1)) continue;
+          else {
             sprintf(buf, "`n%-30s `k%-13s`q\n\r", nomad_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
           }
@@ -354,11 +354,8 @@ int practice_spell(CHAR *ch, int number)
 
     return TRUE;
   }
-  else if ((GET_LEVEL(ch) < SPELL_LEVEL(ch, number)) || !check_sc_access(ch, number))
-  {
-    send_to_char("`iYou do not know of this spell...`q\n\r", ch);
-
-    return TRUE;
+  else if ((GET_LEVEL(ch) < SPELL_LEVEL(ch, number)) || !check_sc_access(ch, number)) {
+    return FALSE;
   }
 
   if (ch->specials.spells_to_learn <= 0)
@@ -395,7 +392,7 @@ int practice_spell(CHAR *ch, int number)
   return TRUE;
 }
 
-void practice_skill(CHAR *ch, int number)
+int practice_skill(CHAR *ch, int number)
 {
   int learned = 0;
   int max_prac = 0;
@@ -403,17 +400,15 @@ void practice_skill(CHAR *ch, int number)
   if (number == 0 || number == 200)
   {
     send_to_char("`iThat skill wasn't found.`q\n\r", ch);
-    return;
+    return TRUE;
   }
   else if (ch->specials.spells_to_learn <= 0)
   {
     send_to_char("`iYou do not seem to be able to practice now.`q\n\r", ch);
-    return;
+    return TRUE;
   }
-  else if (!check_sc_access(ch, number))
-  {
-    send_to_char("`iYou do not know of this skill...`q\n\r", ch);
-    return;
+  else if (!check_sc_access(ch, number)) {
+    return FALSE;
   }
 
   learned = ch->skills[number].learned;
@@ -506,7 +501,7 @@ void practice_skill(CHAR *ch, int number)
   if (learned >= max_prac)
   {
     send_to_char("`iYou are already learned in this area.`q\n\r", ch);
-    return;
+    return TRUE;
   }
 
   send_to_char("`iYou practice for a while...`q\n\r", ch);
@@ -522,6 +517,8 @@ void practice_skill(CHAR *ch, int number)
   {
     send_to_char("`iYou are now learned in this area.`q\n\r", ch);
   }
+
+  return TRUE;
 }
 
 int quest_giver(CHAR *mob,CHAR *ch, int cmd, char *argument);
@@ -628,18 +625,8 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
   spell = old_search_block(arg, 0, strlen(arg), spells, FALSE);
 
-  if (spell == -1)
-  {
-    send_to_char("`iYou don't know of this spell.`q\n\r", ch);
-
-    return TRUE;
-  }
-
-  if ((spell > 200) &&
-      (spell != SPELL_REJUVENATION) &&
-      (spell != SKILL_CAMP) &&
-      !check_sc_master(ch, mob)) {
-    send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
+  if (spell == -1) {
+    act("`i$N shrugs, indicating that $E doesn't know what you're talking about.`q", FALSE, ch, 0, mob, TO_CHAR);
     return TRUE;
   }
 
@@ -710,10 +697,14 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
         skill = old_search_block(nomad_skills[index], 0, strlen(nomad_skills[index]), spells, TRUE);
       }
 
-      if ((skill == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20))
-      {
+      if (((skill == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) ||
+          ((skill == SKILL_EVASION) && (GET_LEVEL(ch) < 50))) {
         index = -2;
       }
+      else if ((skill == SKILL_SCAN) && !check_subclass(ch, SC_TRAPPER, 1)) {
+        index = -1;
+      }
+
       break;
 
     case CLASS_PALADIN:
@@ -779,44 +770,51 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       break;
   }
 
-  if (index == -1)
-  {
-    if (spell == -1)
-    {
-      send_to_char("`iYou don't know of this spell.`q\n\r", ch);
+  if (index == -1) {
 
+    if (spell == -1) {
+      act("`i$N shrugs, indicating that $E doesn't know what you're talking about.`q", FALSE, ch, 0, mob, TO_CHAR);
       return TRUE;
     }
 
-    if ((spell > 165) && (spell != SPELL_REJUVENATION) && !check_sc_master(ch, mob))
-    {
-      send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
-
+    if ((spell > 165) &&
+        check_sc_access(ch, spell) &&
+        ((GET_CLASS(ch) != CLASS_BARD) || (spell != SPELL_REJUVENATION)) &&
+        !check_sc_master(ch, mob)) {
+      act("`i$N tells you 'Your subclass master is the only one who can teach that spell.'`q", FALSE, ch, 0, mob, TO_CHAR);
       return TRUE;
     }
 
     if (practice_spell(ch, spell)) return TRUE;
 
-    send_to_char("`iYou don't know of this skill.`q\n\r", ch);
-
+    act("`i$N shrugs, indicating that $E doesn't know what you're talking about.`q", FALSE, ch, 0, mob, TO_CHAR);
     return TRUE;
   }
-  else if (index == -2)
-  {
-    send_to_char("`iYou can't practice this skill yet.`q\n\r", ch);
-
+  else if (index == -2) {
+    act("`i$N tells you 'Come back when you're more experienced.'`q", FALSE, ch, 0, mob, TO_CHAR);
     return TRUE;
   }
 
-  if (skill > 165 && (skill != SKILL_CAMP) && !check_sc_master(ch, mob))
-  {
-    send_to_char("You must practice in the presence of your subclass master.\n\r", ch);
-
+  if ((skill == SKILL_SCAN) &&
+      (GET_CLASS(ch) == CLASS_NOMAD) &&
+      check_subclass(ch, SC_TRAPPER, 1) &&
+      !check_sc_master(ch, mob)) {
+    act("`i$N tells you 'Go see your subclass master to practice that.'`q", FALSE, ch, 0, mob, TO_CHAR);
     return TRUE;
   }
 
-  practice_skill(ch, skill);
+  if ((skill > 165) &&
+      check_sc_access(ch, skill) &&
+      ((GET_CLASS(ch) != CLASS_BARD) || (skill != SKILL_CAMP)) &&
+      ((GET_CLASS(ch) != CLASS_NOMAD) || (skill != SKILL_EVASION)) &&
+      !check_sc_master(ch, mob)) {
+    act("`i$N tells you 'Go see your subclass master to practice that.'`q", FALSE, ch, 0, mob, TO_CHAR);
+    return TRUE;
+  }
 
+  if (practice_skill(ch, skill)) return TRUE;
+
+  act("`i$N shrugs, indicating that $E doesn't know what you're talking about.`q", FALSE, ch, 0, mob, TO_CHAR);
   return TRUE;
 }
 
