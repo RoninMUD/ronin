@@ -7923,6 +7923,11 @@ This command is for checking the core of a mud crash.\n\r\n\r\
     return;
   }
 
+  if(is_abbrev(arg, "create")) {
+    fl = 0;
+    *((int*)fl) = 0;
+  }
+
   if(is_abbrev(arg,"update")) {
     if (!(fl= fopen("core","r"))) {
       send_to_char("`iNo core file exists.`q\n\r",ch);
