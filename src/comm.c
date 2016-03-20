@@ -73,7 +73,6 @@ void init_descriptor (struct descriptor_data *newd, int desc);
 void game_sleep(struct timeval *timeout);
 void heartbeat(int pulse);
 void write_last_command(void);
-void nasty_signal_handler(int no);
 
 /* local globals */
 struct descriptor_data *descriptor_list, *next_to_process;
@@ -671,7 +670,6 @@ int game_loop(int mother_desc)
   }
   /* This is the seg fault signal - if the write_last_command itself creates a
     sig fault, it will result in an infinite loop. */
-  /*signal(SIGSEGV, nasty_signal_handler); */
 
   /* Main loop */
   while (!cleanshutdown) {
@@ -2991,16 +2989,6 @@ void write_last_command() {
     write (fd, last_command, strlen(last_command));
     write (fd, "\n", 1);
     close (fd);
-}
-
-void no_signal_trap() {
-
-}
-
-void nasty_signal_handler (int no) {
-    signal(no, SIG_DFL);
-    write_last_command();
-    kill(getpid(), no);
 }
 
 void write_board(int vnum,char *heading,char *message);
