@@ -725,5 +725,139 @@ A
 19 2
 A
 53 3
+#29629
+gloves fingerless chainmail saros saroshands~
+fingerless chainmail gloves~
+Saros has left his gloves here.~
+~
+9 134217794 524417
+8 0 0 0
+10 1000000 80000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+53 3
+#29630
+tattoo goddess serket saros saroswrist~
+a tattoo of the Goddess Serket~
+Saros has left his tattoo here.~
+~
+11 134217728 528385
+0 0 0 0
+2 12000 10000
+10
+X
+~
+0 0 0
+M
+A tattoo slowly fades into existence on your wrist.~
+A tattoo slowly fades into existence on $n's wrist.~
+The tattoo on your wrist slowly fades out of existence.~
+The tattoo on $n's wrist slowly fades out of existence.~
+A
+18 2
+A
+19 2
+A
+53 3
+#29631
+braid hemp simple saros saroswrist~
+a simple hemp braid~
+Saros has left his braid here.~
+~
+11 134217728 528385
+0 0 0 0
+2 12000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 2
+A
+53 3
+#29632
+pants woven sala salamander hair saros sarosleg~
+pants of woven salamander hair~
+Saros has left his pants here, uh oh!~
+~
+9 134217728 524321
+8 0 0 0
+10 30000 3000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 3
+#29633
+band ring aquamarine silver saros sarosring~
+an aquamarine set in a silver band~
+Saros has left his ring here.~
+~
+11 134217728 524291
+0 0 0 0
+1 16000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+A
+53 3
+#29634
+ring knuckle wyvern saros sarosring~
+a knuckle of the Wyvern~
+Saros has left his ring here.~
+~
+11 134217728 524291
+0 0 0 0
+1 16000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+A
+53 3
 #0
 $~
