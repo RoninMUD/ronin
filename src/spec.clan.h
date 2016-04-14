@@ -18,7 +18,7 @@ Addition of header lines.
 $State: Exp $
 */
 
-#define MAX_CLANS 30
+#define MAX_CLANS 40
 
 struct clan_data
 {

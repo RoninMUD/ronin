@@ -185,7 +185,7 @@ endif
 OBJS_RONIN_BASE := $(patsubst %, $(OBJDIR)/%, $(OBJS_RONIN_BASE))
 OBJS_RONIN_SPEC := $(patsubst %, $(OBJDIR)/%, $(OBJS_RONIN_SPEC))
 
-$(OBJS_RONIN_BASE) : structs.h utils.h comm.h interpreter.h handler.h db.h spells.h limits.h cmd.h enchant.h act.h
+$(OBJS_RONIN_BASE) : structs.h utils.h comm.h interpreter.h handler.h db.h spells.h limits.h cmd.h enchant.h act.h spec.clan.h
 $(OBJS_RONIN_SPEC) : structs.h utils.h comm.h interpreter.h handler.h db.h spells.h limits.h cmd.h enchant.h act.h spec_assign.h
 
 $(OBJDIR)/act.movement.o : subclass.h
@@ -202,7 +202,6 @@ $(OBJDIR)/meta.o : meta.h
 $(OBJDIR)/mobact.o : subclass.h
 $(OBJDIR)/remortv2.o : fight.h meta.h remortv2.h
 $(OBJDIR)/score.o : score.h
-$(OBJDIR)/spec.clan.o : spec.clan.h
 $(OBJDIR)/spec.elmuseo.o : subclass.h
 $(OBJDIR)/spec.midgaard.o : subclass.h
 $(OBJDIR)/spec.vote.o : spec.vote.h
