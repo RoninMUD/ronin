@@ -175,6 +175,7 @@ OBJS_RONIN_SPEC = \
 OBJS_RONIN_SPEC_TEST = \
 	spec.digsite.o \
 	spec.luthienIV.o \
+	spec.swordoftruth.o \
 	spec.workbench.o \
 	spec.WOT.o
 
