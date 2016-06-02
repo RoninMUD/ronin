@@ -947,5 +947,68 @@ A
 19 3
 A
 53 3
+#29639
+armor nothing plate body ahriman ahrimanbody~
+Nothing~
+Ahriman has left his armor here.~
+~
+9 134217827 524297
+12 0 0 0
+10 75000 25000
+50
+X
+~
+0 0 0
+M
+~
+$n flexes $s bluging torso muscles.~
+~
+$n relaxes $s bluging torso muscles.~
+A
+19 2
+A
+53 3
+#29640
+pants couatl scale leg ahriman ahrimanleg~
+couatl scale pants~
+Ahriman has left his pants here. HA!~
+~
+9 250638337 524321
+15 0 0 0
+10 823222 99999
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+53 3
+#29641
+gloves demon skin hands ahriman ahrimanhands~
+demon skin gloves~
+Ahriman has left his gloves here.~
+~
+9 134217794 524417
+8 0 0 0
+10 1000000 80000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+53 3
 #0
 $~
