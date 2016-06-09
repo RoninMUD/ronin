@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1008,6 +1008,27 @@ M
 ~
 A
 19 3
+A
+53 3
+#29642
+tunic body tattered brown saros sarosbody~
+a tattered, brown tunic~
+Saros has left his tunic here.~
+~
+9 134217795 524297
+12 0 0 0
+10 75000 25000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
 A
 53 3
 #0
