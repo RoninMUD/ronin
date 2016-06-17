@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1029,6 +1029,48 @@ M
 ~
 A
 19 2
+A
+53 3
+#29643
+sandals worn caligae saros feet sarosfeet~
+a pair of worn caligae sandals~
+Saros has left his sandals here.~
+~
+9 134217728 524353
+3 0 0 0
+4 60 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+53 3
+#29644
+boots black knee-high knee high fey feet feyfeet~
+some black knee-high boots~
+Fey has left her boots here.~
+~
+9 134217728 524353
+3 0 0 0
+4 60 20
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 1
 A
 53 3
 #0
