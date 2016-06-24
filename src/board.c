@@ -585,8 +585,8 @@ char *save_file(struct struct_board *board) {
 void write_board(int vnum,char *heading,char *message) {
   long ct;
   struct tm *timeStruct;
-  char tmstr[20];
-  char tempstring[75];
+  char tmstr[20] = {0};
+  char tempstring[75] = {0};
   struct struct_board *board=0;
   int found=0;\
   OBJ *obj;
@@ -641,8 +641,7 @@ void write_board(int vnum,char *heading,char *message) {
     return;
   }
 
-  sprintf(tempstring, "(autopost        ) %s : %s", tmstr,heading);
-  strcat(tempstring,"\0");
+  snprintf(tempstring, sizeof(tempstring), "(autopost        ) %s : %s", tmstr,heading);
   strcpy(board->heading[board->msg_num], tempstring);
 
   board->msgs[board->msg_num] = NULL;
