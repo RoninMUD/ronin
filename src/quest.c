@@ -766,7 +766,10 @@ Usage: qf award <char> amount (amount can be negative)\n\r\
       sprintf(buf, "QSTINFO: %s awarded %s with %d quest points.",GET_NAME(ch),GET_NAME(victim),vnum);
       wizlog(buf, GET_LEVEL(ch)+1, 4);
       log_s(buf);
-      write_board(3097,buf,"Filler Text");
+
+      if (!IS_IMPLEMENTOR(ch)) {
+        write_board(3097,"QF Award",buf);
+      }
 
       sprintf(buf,"You award $N with %d quest points.",vnum);act(buf,0,ch,0,victim,TO_CHAR);
       sprintf(buf,"$n awards you with %d quest points.",vnum);act(buf,0,ch,0,victim,TO_VICT);
