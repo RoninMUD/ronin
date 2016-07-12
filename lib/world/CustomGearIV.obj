@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1073,5 +1073,26 @@ A
 19 1
 A
 53 3
+#29645
+boots asp leather ahriman ahrimanfeet~
+a pair of asp leather boots~
+Ahriman has left his boots here.~
+~
+9 138435137 524353
+10 0 0 0
+4 10 43222
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
 #0
 $~
