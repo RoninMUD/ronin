@@ -944,6 +944,10 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
         obj->affected[i].location = APPLY_SKILL_BASH;
         obj->affected[i].modifier = num2;
       }
+      else if (!strcmp(buf, "block")) {
+        obj->affected[i].location = APPLY_SKILL_BLOCK;
+        obj->affected[i].modifier = num2;
+      }
       else if (!strcmp(buf, "circle")) {
         obj->affected[i].location = APPLY_SKILL_CIRCLE;
         obj->affected[i].modifier = num2;
