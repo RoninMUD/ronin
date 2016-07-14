@@ -1038,14 +1038,14 @@ SOS SETOBJSTAT
 
    Apply types max of 3/object postions 0, 1 and 2 (option 3)
 
-    str         height      assault     triple
-    dex         weight      backflip
+    str         height      assault     parry
+    dex         weight      backflip    triple
     int         hp          backstab
     wis         mana        bash
-    con         hit         circle
-    age         dam         dodge
-    move        ac          dual
-    hp_regen    mana_regen  parry
+    con         hit         block
+    age         dam         circle
+    move        ac          dodge
+    hp_regen    mana_regen  dual
  
 See also: FLAGS VALUES DRINKTYPES
 #
