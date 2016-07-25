@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1094,5 +1094,28 @@ A
 19 2
 A
 18 2
+#29646
+duster olive drab cloak makena makenaabout~
+an olive drab duster~
+Makena has left her cloak here.~
+~
+9 134348800 525313
+40 0 0 0
+3 12000 7000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 3
+A
+53 3
 #0
 $~
