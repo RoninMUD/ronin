@@ -1117,5 +1117,122 @@ A
 19 3
 A
 53 3
+#29647
+ring gyges ahriman ahrimanring~
+Ring of Gyges~
+Ahriman has left his ring here.~
+~
+11 134217728 524291
+0 0 0 0
+1 16000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+A
+53 3
+#29648
+ring thorns ahriman ahrimanring~
+a ring of thorns~
+Ahriman has left his ring here.~
+~
+11 134217728 524291
+0 0 0 0
+1 16000 20000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 3
+A
+53 3
+#29649
+bandages bandage dirty some ahriman ahrimanarms~
+some dirty bandages~
+Ahriman has left some dirty bandages here.~
+~
+9 250638400 524545
+5 0 0 0
+4 1000000 50000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+A
+53 3
+B
+16777216
+#29650
+tattoo goddess isis ahriman ahrimanwrist~
+a tattoo of the Goddess Isis~
+Ahriman has left his tattoo here.~
+~
+11 134217728 528385
+0 0 0 0
+2 12000 10000
+10
+X
+~
+0 0 0
+M
+A tattoo slowly fades into existence on your wrist.~
+A tattoo slowly fades into existence on $n's wrist.~
+The tattoo on your wrist slowly fades out of existence.~
+The tattoo on $n's wrist slowly fades out of existence.~
+A
+18 2
+A
+19 2
+A
+53 3
+#29651
+leech plump black viscid ahriman ahrimanwrist~
+a plump, viscid, black leech~
+Ahriman has left his leech here.~
+~
+11 134217728 528385
+0 0 0 0
+2 12000 10000
+10
+X
+~
+0 0 0
+M
+A black leech latches on to your forearm.~
+A black leech latches on to $n's forearm.~
+A black leech writhes and twists as you pull it from your forearm.~
+A black leech writhes and twists as $n pulls it from $s forearm.~
+A
+18 2
+A
+19 2
+A
+53 3
 #0
 $~
