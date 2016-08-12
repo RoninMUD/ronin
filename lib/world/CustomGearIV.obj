@@ -1234,5 +1234,175 @@ A
 19 2
 A
 53 3
+#29652
+band arm feathered caladrius saros sarosarms~
+a Caladrius feathered arm band~
+Saros has left his arm band here.~
+~
+9 134217728 524545
+8 0 0 0
+10 10000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 3
+#29653
+band arm platinum sleeves jeweled fey feyarms~
+a jeweled, platinum arm band~
+Fey has left her arm band here.~
+~
+9 134217728 524545
+8 0 0 0
+10 10000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 3
+#29654
+pants shadowleather leg makena makenaleg~
+shadowleather pants~
+Makena seems to has left her pants here, oh my.~
+~
+9 134217728 524321
+8 0 0 0
+10 30000 3000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 3
+#29655
+buckler golden king welmar makena makenawrist~
+golden buckler of King Welmar~
+Makena has left her buckler here.~
+~
+9 134217792 528385
+10 0 0 0
+3 500000 2000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+53 3
+#29656
+sunrod golden tyler tylerlight~
+a golden sunrod~
+Tyler has left her sunrod here.~
+~
+1 134217728 589825
+0 0 -1 0
+1 1 1
+10
+X
+~
+0 0 0
+M
+The tip of your golden sunrod begins to glow as you tap it sharply on the ground.~
+The tip of $n's golden sunrod begins to glow as $e taps it sharply on the ground.~
+The light from the tip of your golden sunrod flickers, then fades away.~
+The light from the tip of $n's golden sunrod flickers, then fades away.~
+A
+18 2
+A
+19 2
+A
+53 3
+#29657
+greaves gold gleaming tyler tylerleg~
+gleaming greaves of gold~
+Tyler has left her greaves here.~
+~
+9 134217728 524321
+8 0 0 0
+10 30000 3000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 3
+#29658
+gauntlets iron spiked tyler tylerhands~
+spiked iron gauntlets~
+Tyler has left her gauntlets here.~
+~
+9 134217794 524417
+8 0 0 0
+10 1000000 80000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+53 3
+#29659
+vambraces taenite tyler tylerarms~
+taenite vambraces~
+Tyler has left her vambraces here.~
+~
+9 134217728 524545
+8 0 0 0
+10 10000 1000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 3
 #0
 $~
