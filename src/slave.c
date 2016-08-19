@@ -205,10 +205,9 @@ int iptoname( char *arg )
     }
 
     hp = gethostbyaddr( &addr, sizeof(addr), AF_INET );
-    if( hp ) {
-       sprintf(buf, "%c%s %s\n", SLAVE_IPTONAME, arg, hp->h_name);
-       my_write( 1, buf, strlen(buf) );
-    }
+    sprintf(buf, "%c%s %s\n", SLAVE_IPTONAME, arg, (hp ? hp->h_name : arg));
+    my_write( 1, buf, strlen(buf) );
+
     return( 0 );
 }
 
