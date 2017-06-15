@@ -7260,9 +7260,9 @@ See Also: SUBCLASSES GLADIATOR
 Subclass Rogue: Level 5 (Thief)
 
 Once the Rogue reaches this subclass level, he/she has the chance of
-getting 1 less round of lag on all skills. The success of getting the
-reduction is varies from 50% to 75% once the skill has been fully
-practiced.
+getting 1 less round of lag on all skills. The chance of getting the
+reduction varies from 50% to 75%, and is not modified by any skill or
+attribute.
 
 See Also: SUBCLASSES ROGUE
 #

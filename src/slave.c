@@ -101,7 +101,7 @@ void wake_up(int x)
 
 void timeout_signal(int x)
 {
-/*    fprintf( stderr, "{SLAVE}'%s' 5 minute timeout\r\n", arg_for_errors );*/
+    /* fprintf( stderr, "{SLAVE}'%s' 5 minute timeout\r\n", arg_for_errors ); */
     exit( 1 );
 }
 
@@ -198,6 +198,8 @@ int iptoname( char *arg )
     struct hostent *hp;
     char buf[ MAX_STRING ];
 
+    arg_for_errors = arg;
+
     addr = inet_addr( arg );
     if( addr == -1 ) {
        fprintf( stderr, "%s is not a valid decimal ip address", arg );
@@ -239,7 +241,7 @@ int main( int argc, char **argv )
        memset(arg, 0, MAX_STRING);
        memset(tmp, 0, 31);
        len = my_read( 0, tmp, 31);
-         
+
        if( len < 0 ) {
          if( errno == EINTR )
            errno = 0;
@@ -250,7 +252,7 @@ int main( int argc, char **argv )
          strncpy(arg, tmp,len);
        }
 
-/*       fprintf(stderr,"\r\n{SLAVE}received: '%s'\r\n", arg );*/
+       /* fprintf(stderr,"\r\n{SLAVE}received: '%s'\r\n", arg ); */
 
        child_PID = fork();
        switch( child_PID ) {
@@ -268,8 +270,8 @@ int main( int argc, char **argv )
            case SLAVE_IPTONAME:
                exit( iptoname( arg+1 ) != 0 );
            default:
-/*               fprintf( stderr, "{SLAVE}invalid arg: %s\r\n", arg );*/
-                 break;
+               fprintf( stderr, "{SLAVE}invalid arg: %s\r\n", arg );
+               break;
            }
            break;
         default:

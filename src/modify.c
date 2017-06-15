@@ -181,10 +181,10 @@ void string_add(struct descriptor_data *d, char *str) {
 
   if (terminator) {
     REMOVE_BIT(d->character->specials.pflag,PLR_WRITING);
-    
+
     if (bMakeNull)
     {
-       /* 
+       /*
         * BUG: Need to check if d->str isn't filled in with
         * previous lines.  If so, make null should just act
         * as a normal terminator.
