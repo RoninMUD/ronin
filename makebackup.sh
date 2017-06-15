@@ -2,8 +2,8 @@
 TYPE=$(basename $PWD)
 PREFIX="../backup/$TYPE/$(date +%Y%m%d)-$TYPE"
 BASEDIR="."
-EXT="tar.bz2"
-TAROPT="jcvf"
+EXT="tar.xz"
+TAROPT="Jcvf"
 
 if [ -f $PREFIX-base.$EXT ]
 then

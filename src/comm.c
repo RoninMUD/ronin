@@ -88,7 +88,7 @@ int noroomdesc = 0;
 int noextradesc = 0;
 int uptime;
 int chreboot=0;
-int maxdesc, avail_descs;
+int maxdesc=0, avail_descs;
 int tics = 0;        /* for extern checkpointing */
 pid_t slave_pid;
 static int slave_socket = -1;
@@ -567,12 +567,12 @@ int run_the_game(int port) {
   }
   update_reboot();
 
-
   boot_db();
+
+  maxdesc = mother_desc; // initialize the top descriptor to the mother_desc before full boot and copyover
 
   if (fCopyOver)
     copyover_recover();
-
 
   game_loop(mother_desc);
 
@@ -647,8 +647,9 @@ int game_loop(int mother_desc)
 
   gettimeofday(&last_time,(struct timezone *) 0);
 
-  if (!fCopyOver)
-    maxdesc = mother_desc;
+  // 20170222 - Commented out, because maxdesc must be set for both copyover and full boot -- done in run_the_game
+  //if (!fCopyOver)
+  //  maxdesc = mother_desc;
   avail_descs = getdtablesize() - 2; /* !! Change if more needed !! */
 
   sigemptyset(&mask);
@@ -1409,8 +1410,7 @@ int init_socket(int port)
   return s;
 }
 
-int new_connection(int s)
-{
+int new_connection(int s) {
   char buf[255];
   socklen_t i;
   int t = -1;
@@ -1424,29 +1424,42 @@ int new_connection(int s)
 
   FD_ZERO(&ready_to_read);
   FD_SET(s,&ready_to_read);
-  if(select(s+1,&ready_to_read,NULL,NULL,&null_time)<0)
-    {
+
+  // log_f("{ACCEPT} new connection from %s, re-selecting for read on all sockets", inet_ntoa(isa.sin_addr));
+
+  if(select(s+1,&ready_to_read,NULL,NULL,&null_time)<0) {
     log_s("select error");
     produce_core();
-    }
-  if(FD_ISSET(s,&ready_to_read))
-    {
+  }
+
+  // log_s("{ACCEPT} checking new socket for read ready state");
+
+  if(FD_ISSET(s,&ready_to_read)) {
     if ((t = accept(s, (struct sockaddr*)&isa, &i)) < 0) {
       log_s("Accept");
       return(-1);
-      }
-    nonblock(t);
     }
-    /* this effectively sprintfs %u.%u.%u.%u with the inet addr */
-    if( slave_socket != -1 ) {
-       sprintf(buf, "%c%s\n", SLAVE_IPTONAME, inet_ntoa(isa.sin_addr));
-       /* ask slave to do a hostname lookup for us */
-       if( write( slave_socket, buf, strlen(buf) ) != strlen(buf) ) {
-           log_s("{SLAVE} losing slave on write: ");
-           close( slave_socket );
-           slave_socket = -1;
-       }
-       /* ask slave to do an identquery for us */
+
+    nonblock(t);
+
+    // log_f("{ACCEPT} accepted new connection from ip: %s", inet_ntoa(isa.sin_addr));
+  }
+
+  /* this effectively sprintfs %u.%u.%u.%u with the inet addr */
+  if (slave_socket != -1) {
+    sprintf(buf, "%c%s\n", SLAVE_IPTONAME, inet_ntoa(isa.sin_addr));
+
+    log_f("{ACCEPT} asking slave to resolve %s", inet_ntoa(isa.sin_addr));
+
+    /* ask slave to do a hostname lookup for us */
+    if (write( slave_socket, buf, strlen(buf) ) != strlen(buf)) {
+      log_s("{SLAVE} losing slave on write: ");
+      close( slave_socket );
+      slave_socket = -1;
+    }
+
+    /* ask slave to do an identquery for us */
+
 /*  Disabled - Virtually no machine now accepts username lookups.  Pointless
  to waste the cpu - Ranger
 
@@ -1458,7 +1471,7 @@ int new_connection(int s)
            slave_socket = -1;
        }
 */
-    }
+  }
 
   return(t);
 }
