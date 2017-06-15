@@ -526,7 +526,9 @@ int black_rose_sword(OBJ *obj,CHAR *ch, int cmd, char *argument)
     if(is_shop(vic)) return FALSE;
     /* Cast the spell on him */
 
+#ifndef TEST_SITE
     if(number(0,40) != 0) return FALSE;
+#endif
 
     act("A black cloud from the sword of Black Rose envelopes $n !",FALSE,ch,0,0,TO_ROOM);
     send_to_char("A black cloud from your sword envelopes you !\n\r",ch);
