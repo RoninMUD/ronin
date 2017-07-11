@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1404,5 +1404,47 @@ A
 19 2
 A
 53 3
+#29660
+necklace grotesque trophies neck makena makenaneck~
+a grotesque necklace of war trophies~
+Makena has left her necklace here.~
+~
+9 0 524293
+5 0 0 0
+10 1000 700
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+46 6
+#29661
+spyglass weathered neck makena makenaneck~
+a weathered spyglass~
+Makena has left her spyglass here.~
+~
+9 0 524293
+5 0 0 0
+10 1000 700
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+46 4
 #0
 $~
