@@ -1160,7 +1160,8 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
       set_pos = stack_position(victim, POSITION_STUNNED);
 
       if ((NULL != (hands = EQ(ch, WEAR_HANDS))) &&
-          (QGII_GRUUMSH == V_OBJ(hands))) {
+          (QGII_GRUUMSH == V_OBJ(hands)) &&
+          chance(15)) {
         set_pos = POSITION_MORTALLYW;
       }
 
