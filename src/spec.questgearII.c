@@ -1,6 +1,6 @@
 /*
 ** Special Procedure Module                    Orig. Date     2009/12/26
-**                                             Last Modified  2009/12/26
+**                                             Last Modified  2015/05/20
 **
 ** spec.questgearII.c --- specials for Quest Gear II (10)
 **
@@ -8,17 +8,6 @@
 ** Written for RoninMUD
 **
 */
-
-/*
-$Author$
-$Date$
-$Header$
-$Id$
-$Name$
-$Log$
-$State$
-*/
-
 
 #include <stdio.h>
 #include <string.h>
@@ -782,460 +771,172 @@ int qgII_vizard(OBJ *vizard, CHAR *owner, int cmd, char *arg)
   return bReturn;
 }
 
-#define VILYA_CHARGE_TIME      96 /* 24 MUD hours */
-#define VILYA_MAX_CHARGES      3
-
-int qgII_vilya(OBJ *vilya, CHAR *owner, int cmd, char *arg)
-{
-  CHAR *vict, *next_vict;
-  char buf[MIL];
-  int bReturn = FALSE;
-  int outTime = 0;
-  int num = 0;
-
-  switch(cmd)
-  {
-    case MSG_TICK:
-      owner = vilya->equipped_by;
-      if(!owner)
-        owner = vilya->carried_by;
-      if(owner && !IS_NPC(owner))
-      {
-        if(vilya->spec_value > VILYA_MAX_CHARGES) /* spec_value is # of "twist" charges */
-        {
-          vilya->spec_value = VILYA_MAX_CHARGES; /* max of VILYA_MAX_SPECS "twist" charges */
-        }
-        else if(vilya->spec_value < VILYA_MAX_CHARGES)
-        {
-          vilya->obj_flags.timer--; /* timer is time left until next recharge */
-          if(vilya->obj_flags.timer <= 0)
-          {
-            act("A rush of air passes over you, and Vilya's sapphire glows a deeper shade of blue.", FALSE, owner, NULL, NULL, TO_CHAR);
-            act("$n's ring draws in the winds, and it glows a deeper shade of blue.", FALSE, owner, NULL, NULL, TO_ROOM);
-            vilya->spec_value++; /* add a "twist" charge */
-            if(vilya->spec_value < VILYA_MAX_CHARGES)
-            {
-              vilya->obj_flags.timer = VILYA_CHARGE_TIME; /* set time until next recharge */
-            }
-          }
-        }
-      }
-      break;
-    case MSG_OBJ_ENTERING_GAME:
-      if((owner==vilya->equipped_by || owner==vilya->carried_by) && owner && !IS_NPC(owner))
-      {
-        if(vilya->spec_value == VILYA_MAX_CHARGES)
-          break; /* if vilya charges are maxed, skip */
-        if(is_number(arg))
-          outTime = atoi(arg); /* outTime = time in seconds since last in-game */
-        else
-          break;
-        outTime /= 60; /* time in minutes since last in-game */
-        vilya->obj_flags.timer -= outTime; /* update time until next recharge based on time since last in-game */
-        while (vilya->obj_flags.timer <= 0 && vilya->spec_value < VILYA_MAX_CHARGES)
-        { /* while time until next charge is less than 1, keep adding a charge and updating time to next charge - stop at VILYA_MAX_SPECS (full) charges */
-          vilya->spec_value++; /* add a charge if time since last in-game is greater than time to charge */
-          if(vilya->spec_value < VILYA_MAX_CHARGES)
-            vilya->obj_flags.timer += VILYA_CHARGE_TIME;
-          else
-            vilya->obj_flags.timer = 0;
-        }
-      }
-      break;
-    case CMD_EXAMINE:
-      if((owner==vilya->equipped_by || owner==vilya->carried_by) && owner && !IS_NPC(owner))
-      {
-        one_argument(arg, buf);
-        if(AWAKE(owner) && vilya && V_OBJ(vilya)==QGII_VILYA && !strncmp(buf, "vilya", MIL))
-        {
-          if(vilya->spec_value <= 0)
-            send_to_char("Vilya's sapphire is faded to almost transparent clearness.\n\r", owner);
-          else if(vilya->spec_value == 1)
-            send_to_char("Vilya's sapphire is the lightest of periwinkles.\n\r", owner);
-          else if(vilya->spec_value == 2)
-            send_to_char("Vilya's sapphire is a rich cerulean.\n\r", owner);
-          else if(vilya->spec_value >= 3)
-            send_to_char("Vilya's sapphire is a deep midnight hue.\n\r", owner);
-          bReturn = TRUE;
-        }
-      }
-      break;
-    case CMD_UNKNOWN:
-      if((owner==vilya->equipped_by || owner==vilya->carried_by) && owner && !IS_NPC(owner))
-      {
-        arg = one_argument(arg, buf);
-        if(AWAKE(owner) && (vilya==EQ(owner,WEAR_FINGER_L) || vilya==EQ(owner,WEAR_FINGER_R)) && V_OBJ(vilya)==QGII_VILYA && !strncmp(buf, "twist", MIL))
-        {
-          one_argument(arg, buf);
-          if(!strncmp(buf, "vilya", MIL)) /* command must be: "twist vilya" */
-          {
-            if(vilya->spec_value > 0)
-            {
-              act("You twist Vilya on your finger and a mighty wind rushes about you.", FALSE, owner, NULL, NULL, TO_CHAR);
-              act("$n twists Vilya on $s finger and a mighty wind rushes all about $m.", FALSE, owner, NULL, NULL, TO_ROOM);
-              for(vict = world[CHAR_REAL_ROOM(owner)].people; vict; vict = next_vict)
-              {
-                next_vict = vict->next_in_room;
-                if(IS_NPC(vict)) continue; /* skip mobs */
-                if(!IS_MORTAL(vict)) continue; /* skip gods */
-                num = number(1,4);
-                switch(num)
-                {
-                  case 1:/* triple heal */
-                    act("The wind blows over you calmly, and you feel at peace.", FALSE, vict, NULL, NULL, TO_CHAR);
-                    act("The wind blows over $n, and $e seems somehwat soothed.", FALSE, vict, NULL, NULL, TO_ROOM);
-                    spell_heal(50, vict, vict, 0);
-                    spell_heal(50, vict, vict, 0);
-                    spell_heal(50, vict, vict, 0);
-                    break;
-                  case 2:/* miracle */
-                    act("The wind blows over you gently, the smell of sweet nectar and freshly cut grass soothing your soul.", FALSE, vict, NULL, NULL, TO_CHAR);
-                    act("$n seems soothed by the breeze that passes over $m.", FALSE, vict, NULL, NULL, TO_ROOM);
-                    spell_miracle(50, vict, vict, 0);
-                    break;
-                  case 3:/* haste */
-                    act("You feel yourself borne up by the force of the gale, and feel a spring in your step.", FALSE, vict, NULL, NULL, TO_CHAR);
-                    act("The wind lifts $n slightly off the ground, and $e seems sprightlier.", FALSE, vict, NULL, NULL, TO_ROOM);
-                    spell_haste(50, vict, vict, 0);
-                    break;
-                  case 4:/* fury */
-                    act("You feel the wind blowing through you, a hurricane building within.", FALSE, vict, NULL, NULL, TO_CHAR);
-                    act("The wind seems to enter $n, and a hurricane builds behind $s eyes.", FALSE, vict, NULL, NULL, TO_ROOM);
-                    spell_fury(50, vict, vict, 0);
-                    break;
-                  default:
-                    break;
-                }
-              }
-              if(vilya->spec_value == VILYA_MAX_CHARGES)
-                vilya->obj_flags.timer = VILYA_CHARGE_TIME; /* start recharge timer - if charges were less than VILYA_MAX_SPECS, should already have a running timer */
-              vilya->spec_value--; /* remove a "twist" charge */
-              WAIT_STATE(owner, PULSE_VIOLENCE);
-            }
-            else
-            {
-              act("You twist Vilya on your finger and a light breeze rustles your hair.", FALSE, owner, NULL, NULL, TO_CHAR);
-            }
-            bReturn = TRUE;
-          }
-        }
-      }
-      break;
-    default:
-      break;
-  }
-  return bReturn;
-}
-
-#define NARYA_CHARGE_TIME      96 /* 24 MUD hours */
-#define NARYA_MAX_CHARGES      3
-
-int qgII_narya(OBJ *narya, CHAR *owner, int cmd, char *arg)
-{
-  CHAR *vict, *next_vict;
-  char buf[MIL];
-  int bReturn = FALSE;
-  int outTime = 0;
-  int num = 0;
-
-  switch(cmd)
-  {
-    case MSG_TICK:
-      owner = narya->equipped_by;
-      if(!owner)
-        owner = narya->carried_by;
-      if(owner && !IS_NPC(owner))
-      {
-        if(narya->spec_value > NARYA_MAX_CHARGES) /* spec_value is # of "twist" charges */
-        {
-          narya->spec_value = NARYA_MAX_CHARGES; /* max of NARYA_MAX_SPECS "twist" charges */
-        }
-        else if(narya->spec_value < NARYA_MAX_CHARGES)
-        {
-          narya->obj_flags.timer--; /* timer is time left until next recharge */
-          if(narya->obj_flags.timer <= 0)
-          {
-            act("You feel a surge of warmth as Narya's ruby glows a deeper shade of red.", FALSE, owner, NULL, NULL, TO_CHAR);
-            act("Some of the heat seems to leave your body as Narya's ruby glows a deeper shade of red.", FALSE, owner, NULL, NULL, TO_ROOM);
-            narya->spec_value++; /* add a "twist" charge */
-            if(narya->spec_value < NARYA_MAX_CHARGES)
-            {
-              narya->obj_flags.timer = NARYA_CHARGE_TIME; /* set time until next recharge */
-            }
-          }
-        }
-      }
-      break;
-    case MSG_OBJ_ENTERING_GAME:
-      if((owner==narya->equipped_by || owner==narya->carried_by) && owner && !IS_NPC(owner))
-      {
-        if(narya->spec_value == NARYA_MAX_CHARGES)
-          break; /* if narya charges are maxed, skip */
-        if(is_number(arg))
-          outTime = atoi(arg); /* outTime = time in seconds since last in-game */
-        else
-          break;
-        outTime /= 60; /* time in minutes since last in-game */
-        narya->obj_flags.timer -= outTime; /* update time until next recharge based on time since last in-game */
-        while (narya->obj_flags.timer <= 0 && narya->spec_value < NARYA_MAX_CHARGES)
-        { /* while time until next charge is less than 1, keep adding a charge and updating time to next charge - stop at NARYA_MAX_SPECS (full) charges */
-          narya->spec_value++; /* add a charge if time since last in-game is greater than time to charge */
-          if(narya->spec_value < NARYA_MAX_CHARGES)
-            narya->obj_flags.timer += NARYA_CHARGE_TIME;
-          else
-            narya->obj_flags.timer = 0;
-        }
-      }
-      break;
-    case CMD_EXAMINE:
-      if((owner==narya->equipped_by || owner==narya->carried_by) && owner && !IS_NPC(owner))
-      {
-        one_argument(arg, buf);
-        if(AWAKE(owner) && narya && V_OBJ(narya)==QGII_NARYA && !strncmp(buf, "narya", MIL))
-        {
-          if(narya->spec_value <= 0)
-            send_to_char("Narya's ruby is faded to almost transparent clearness.\n\r", owner);
-          else if(narya->spec_value == 1)
-            send_to_char("Narya's ruby is the lightest of dusty roses.\n\r", owner);
-          else if(narya->spec_value == 2)
-            send_to_char("Narya's ruby is a rich vermillion.\n\r", owner);
-          else if(narya->spec_value >= 3)
-            send_to_char("Narya's ruby is a deep carmine hue.\n\r", owner);
-          bReturn = TRUE;
-        }
-      }
-      break;
-    case CMD_UNKNOWN:
-      if((owner==narya->equipped_by || owner==narya->carried_by) && owner && !IS_NPC(owner))
-      {
-        arg = one_argument(arg, buf);
-        if(AWAKE(owner) && (narya==EQ(owner,WEAR_FINGER_L) || narya==EQ(owner,WEAR_FINGER_R)) && V_OBJ(narya)==QGII_NARYA && !strncmp(buf, "twist", MIL))
-        {
-          one_argument(arg, buf);
-          if(!strncmp(buf, "narya", MIL)) /* command must be: "twist narya" */
-          {
-            if(narya->spec_value > 0)
-            {
-              act("You twist Narya on your finger and a searing heat radiates out from you.", FALSE, owner, NULL, NULL, TO_CHAR);
-              act("$n twists Narya on $s finger and a searing heat pulses out from $m.", FALSE, owner, NULL, NULL, TO_ROOM);
-              for(vict = world[CHAR_REAL_ROOM(owner)].people; vict; vict = next_vict)
-              {
-                next_vict = vict->next_in_room;
-                if(IS_NPC(vict)) continue; /* skip mobs */
-                if(!IS_MORTAL(vict)) continue; /* skip gods */
-                num = number(1,4);
-                switch(num)
-                {
-                  case 1:/* triple heal */
-                    act("The warmth of Narya comforts you, and you feel healed.", FALSE, vict, NULL, NULL, TO_CHAR);
-                    act("A warm smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
-                    spell_heal(50, vict, vict, 0);
-                    spell_heal(50, vict, vict, 0);
-                    spell_heal(50, vict, vict, 0);
-                    break;
-                  case 2:/* miracle */
-                    act("A warmth suffuses your body, and you feel healed.", FALSE, vict, NULL, NULL, TO_CHAR);
-                    act("A content smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
-                    spell_miracle(50, vict, vict, 0);
-                    break;
-                  case 3:/* haste */
-                    act("You feel your blood pumping faster in your veins, giving you a burst of energy.", FALSE, vict, NULL, NULL, TO_CHAR);
-                    act("$n flushes with the pulse of blood, and $s movements seem to speed.", FALSE, vict, NULL, NULL, TO_ROOM);
-                    spell_haste(50, vict, vict, 0);
-                    break;
-                  case 4:/* fury */
-                    act("You feel your blood burn with dragon's fire, and a veil of red falls over the world.", FALSE, vict, NULL, NULL, TO_CHAR);
-                    act("$n flushes a deep red, heat pulsing out from $s body.", FALSE, vict, NULL, NULL, TO_ROOM);
-                    spell_fury(50, vict, vict, 0);
-                    break;
-                  default:
-                    break;
-                }
-              }
-              if(narya->spec_value == NARYA_MAX_CHARGES)
-                narya->obj_flags.timer = NARYA_CHARGE_TIME; /* start recharge timer - if charges were less than NARYA_MAX_SPECS, should already have a running timer */
-              narya->spec_value--; /* remove a "twist" charge */
-              WAIT_STATE(owner, PULSE_VIOLENCE);
-            }
-            else
-            {
-              act("You twist Narya on your finger and feel a soft throbbing of warmth.", FALSE, owner, NULL, NULL, TO_CHAR);
-            }
-            bReturn = TRUE;
-          }
-        }
-      }
-      break;
-    default:
-      break;
-  }
-  return bReturn;
-}
-
-
-
 /*
 ** Unified spec for quest rings.  Each ring has its own
 ** vnum and keywords so they may be used  while equipped.
 */
 
-static const char const *ring_keyword(int vnum) {
-  switch (vnum) {
-    case QGII_NARYA:
-      return "narya";
+typedef enum {
+  RING_STR_KEYWORD = 0,
+  RING_STR_CHARGE_TOCHAR,
+  RING_STR_CHARGE_TOROOM,
+  RING_STR_EXA_EMPTY,
+  RING_STR_EXA_ONE,
+  RING_STR_EXA_TWO,
+  RING_STR_EXA_FULL,
+  RING_STR_TWIST_TOCHAR,
+  RING_STR_TWIST_TOROOM,
+  RING_STR_TWIST_NOCHARGE,
+  RING_STR_HEAL_TOCHAR,
+  RING_STR_HEAL_TOROOM,
+  RING_STR_MIRA_TOCHAR,
+  RING_STR_MIRA_TOROOM,
+  RING_STR_HASTE_TOCHAR,
+  RING_STR_HASTE_TOROOM,
+  RING_STR_FURY_TOCHAR,
+  RING_STR_FURY_TOROOM,
+  RING_STR_COUNT
+} ring_string_id;
 
-    default:
-      return "ring";
+typedef enum {
+  RING_TYPE_VILYA = 0,
+  RING_TYPE_NARYA,
+  RING_TYPE_ENLIL,
+  RING_TYPE_ANU,
+  RING_TYPE_COUNT
+} ring_type;
+
+static const char const *ring_string_table[RING_TYPE_COUNT][RING_STR_COUNT] = {
+  { /* Vilya */
+    "vilya",
+    "A rush of air passes over you, and Vilya's sapphire glows a deeper shade of blue.",
+    "$n's ring draws in the winds, and it glows a deeper shade of blue.",
+    "Vilya's sapphire is faded to almost transparent clearness.",
+    "Vilya's sapphire is the lightest of periwinkles.",
+    "Vilya's sapphire is a rich cerulean.",
+    "Vilya's sapphire is a deep midnight hue.",
+    "You twist Vilya on your finger and a mighty wind rushes about you.",
+    "$n twists Vilya on $s finger and a mighty wind rushes all about $m.",
+    "You twist Vilya on your finger and a light breeze rustles your hair.",
+    "The wind blows over you calmly, and you feel at peace.",
+    "The wind blows over $n, and $e seems somehwat soothed.",
+    "The wind blows over you gently, the smell of sweet nectar and freshly cut grass soothing your soul.",
+    "$n seems soothed by the breeze that passes over $m.",
+    "You feel yourself borne up by the force of the gale, and feel a spring in your step.",
+    "The wind lifts $n slightly off the ground, and $e seems sprightlier.",
+    "You feel the wind blowing through you, a hurricane building within.",
+    "The wind seems to enter $n, and a hurricane builds behind $s eyes."
+  },
+  { /* Narya */
+    "narya",
+    "You feel a surge of warmth as Narya's ruby glows a deeper shade of red.",
+    "Some of the heat seems to leave your body as Narya's ruby glows a deeper shade of red.",
+    "Narya's ruby is faded to almost transparent clearness.",
+    "Narya's ruby is the lightest of dusty roses.",
+    "Narya's ruby is a rich vermillion.",
+    "Narya's ruby is a deep carmine hue.",
+    "You twist Narya on your finger and a searing heat radiates out from you.",
+    "$n twists Narya on $s finger and a searing heat pulses out from $m.",
+    "You twist Narya on your finger and feel a soft throbbing of warmth.",
+    "The warmth of Narya comforts you, and you feel healed.",
+    "A warm smile crosses $n's face.",
+    "A warmth suffuses your body, and you feel healed.",
+    "A content smile crosses $n's face.",
+    "You feel your blood pumping faster in your veins, giving you a burst of energy.",
+    "$n flushes with the pulse of blood, and $s movements seem to speed.",
+    "You feel your blood burn with dragon's fire, and a veil of red falls over the world.",
+    "$n flushes a deep red, heat pulsing out from $s body."
+  },
+  { /* Enlil */
+    "enlil",
+    "The ground beneath your feet rumbles as Enlil's topaz flashes a bright orange.",
+    "$n almost loses his footing as Enlil's topaz flashes a bright orange.",
+    "Enlil's topaz reveals the image of a desolate wasteland.",
+    "Enlil's topaz reveals the images of an idyllic rolling hill.",
+    "Enlil's topaz reveals the image of a mighty mountain.",
+    "Enlil's topaz reveals the image of a roaring, erupting volcano.",
+    "You twist Enlil on your finger and a violent shaking emanates from you.",
+    "$n twists Enlil on $s finger and a violent tremor nearly knocks $m over.",
+    "You twist Enlil on your finger and a minor rumbling knocks you slightly off balance.",
+    "A warm, restoring rain falls gently on your face.",
+    "A warm, restoring rain falls gently on $n's face.",
+    "A geyser suddenly erupts beneath your feet, bathing you in healing steam.",
+    "A geyser erupts beneath $n's feet, bathing $m in healing steam.",
+    "A powerful earthquake shakes you to your core, filling you with supernatural speed.",
+    "A powerful earthquake violently shakes $n, moving $m with intense speed.",
+    "Hot jets of magma erupt from every pore on your body, setting your soul on fire.",
+    "Glowing rock pours from $n, turning $m into a volcanic beast of fury and rage."
+  },
+  { /* Anu */
+    "anu",
+    "A beam of light warms your face, as Anu's diamond flashes a brilliant blue.",
+    "$n is bathed in sunlight as Anu's diamond flashes a brilliant blue.",
+    "Anu's diamond reveals the image of a dark, overcast rainy sky.",
+    "Anu's diamond reveals the image of a peaceful sunrise.",
+    "Anu's diamond reveals the image of the bright, hot sun.",
+    "Anu's diamond reveals the image of an omninous, total solar eclipse.",
+    "You twist Anu on your finger and a powerful gust of wind emanates from you.",
+    "$n twists Anu on $s finger and hurricane force winds nearly knock $m over.",
+    "You twist Anu on your finger and a pleasant breeze hits your face.",
+    "A sunbeam passes over your face, filling you with a pleasant warmth.",
+    "A pleasant sunbeam passes over $n's face.",
+    "The clouds part above your head and a ray of divine light bathes you in a healing glow.",
+    "The clouds part above $n's head and a ray of divine light bathes $n in a healing glow.",
+    "A strong wind envelops you, pushing you forward and speeding your actions.",
+    "A strong wind envelops $n, pushing $m foward and speeding $s actions.",
+    "An intense bright light erupts from your chest, filling you with the rage of a thousands suns.",
+    "$n explodes into a supernova of intense light, filling $s with unimaginable rage."
   }
+};
+
+static const char const *ring_string(int vnum, ring_string_id id) {
+  ring_type type = RING_TYPE_COUNT;
+  char const *result = NULL;
+
+  switch (vnum) {
+    case QGII_VILYA:
+      type = RING_TYPE_VILYA;
+      break;
+
+    case QGII_NARYA:
+      type = RING_TYPE_NARYA;
+      break;
+
+    case QGII_ENLIL:
+      type = RING_TYPE_ENLIL;
+      break;
+
+    case QGII_ANU:
+      type = RING_TYPE_ANU;
+      break;
+  }
+
+  if (type != RING_TYPE_COUNT) {
+    result = ring_string_table[type][id];
+  }
+
+  return result;
 }
 
-static void ring_act_charge(int vnum, CHAR *owner) {
-  switch (vnum) {
-    case QGII_NARYA:
-      act("You feel a surge of warmth as Narya's ruby glows a deeper shade of red.", FALSE, owner, NULL, NULL, TO_CHAR);
-      act("Some of the heat seems to leave your body as Narya's ruby glows a deeper shade of red.", FALSE, owner, NULL, NULL, TO_ROOM);
-      break;
+static void ring_act(int vnum, ring_string_id id, CHAR *target, int type) {
+  char const *str = NULL;
+  char buf[MAX_STRING_LENGTH+1];
 
-    default:
-      act("Your ring charges in some default manner.", FALSE, owner, NULL, NULL, TO_CHAR);
-      act("$r ring charges in some default manner.", FALSE, owner, NULL, NULL, TO_ROOM);
-      break;
-  }
-}
+  memset(buf, 0, sizeof(buf));
 
-static void ring_exa_empty(int vnum, CHAR *owner) {
-  switch (vnum) {
-    case QGII_NARYA:
-      send_to_char("Narya's ruby is faded to almost transparent clearness.\n\r", owner);
-      break;
+  if (!(str = ring_string(vnum, id))) return;
 
-    default:
-      send_to_char("The ring has no charges that you can see.\n\r", owner);
-      break;
-  }
-}
-
-static void ring_exa_one(int vnum, CHAR *owner) {
-  switch (vnum) {
-    case QGII_NARYA:
-      send_to_char("Narya's ruby is the lightest of dusty roses.\n\r", owner);
-      break;
-
-    default:
-      send_to_char("The ring appears to have one charge.\n\r", owner);
-      break;
-  }
-}
-
-static void ring_exa_two(int vnum, CHAR *owner) {
-  switch (vnum) {
-    case QGII_NARYA:
-      send_to_char("Narya's ruby is a rich vermillion.\n\r", owner);
-      break;
-
-    default:
-      send_to_char("The ring appears to have two charges.\n\r", owner);
-      break;
-  }
-
-}
-
-static void ring_exa_full(int vnum, CHAR *owner) {
-  switch (vnum) {
-    case QGII_NARYA:
-      send_to_char("Narya's ruby is a deep carmine hue.\n\r", owner);
-      break;
-
-    default:
-      send_to_char("The ring appears to be fully charged.\n\r", owner);
-      break;
-  }
-}
-
-static void ring_act_twist(int vnum, CHAR *owner) {
-  switch (vnum) {
-    case QGII_NARYA:
-      act("You twist Narya on your finger and a searing heat radiates out from you.", FALSE, owner, NULL, NULL, TO_CHAR);
-      act("$n twists Narya on $s finger and a searing heat pulses out from $m.", FALSE, owner, NULL, NULL, TO_ROOM);
-      break;
-
-    default:
-      act("You twist the ring on your finger and it performs a great function.", FALSE, owner, NULL, NULL, TO_CHAR);
-      act("$n twists the ring on $s finger and it performs a great function.", FALSE, owner, NULL, NULL, TO_ROOM);
-      break;
-  }
-}
-
-static void ring_act_twist_uncharged(int vnum, CHAR *owner) {
-  switch (vnum) {
-    case QGII_NARYA:
-      act("You twist Narya on your finger and feel a soft throbbing of warmth.", FALSE, owner, NULL, NULL, TO_CHAR);
-      break;
-
-    default:
-      act("You twist the ring on your finger and nothing happens.", FALSE, owner, NULL, NULL, TO_CHAR);
-      break;
-  }
-}
-
-static void ring_act_heal(int vnum, CHAR *vict) {
-  switch (vnum) {
-    case QGII_NARYA:
-      act("The warmth of Narya comforts you, and you feel healed.", FALSE, vict, NULL, NULL, TO_CHAR);
-      act("A warm smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
-      break;
-
-    default:
-      act("The ring makes you feel healed.", FALSE, vict, NULL, NULL, TO_CHAR);
-      act("A warm smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
-      break;
-  }
-}
-
-static void ring_act_miracle(int vnum, CHAR *vict) {
-  switch (vnum) {
-    case QGII_NARYA:
-      act("A warmth suffuses your body, and you feel healed.", FALSE, vict, NULL, NULL, TO_CHAR);
-      act("A content smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
-      break;
-
-    default:
-      act("You feel a very well healed feeling.", FALSE, vict, NULL, NULL, TO_CHAR);
-      act("A content smile crosses $n's face.", FALSE, vict, NULL, NULL, TO_ROOM);
-      break;
-  }
-}
-
-static void ring_act_haste(int vnum, CHAR *vict) {
-  switch (vnum) {
-    case QGII_NARYA:
-      act("You feel your blood pumping faster in your veins, giving you a burst of energy.", FALSE, vict, NULL, NULL, TO_CHAR);
-      act("$n flushes with the pulse of blood, and $s movements seem to speed.", FALSE, vict, NULL, NULL, TO_ROOM);
-      break;
-
-    default:
-      act("HASTE!", FALSE, vict, NULL, NULL, TO_CHAR);
-      act("$n looks faster.", FALSE, vict, NULL, NULL, TO_ROOM);
-      break;
-  }
-}
-static void ring_act_fury(int vnum, CHAR *vict) {
-  switch (vnum) {
-    case QGII_NARYA:
-      act("You feel your blood burn with dragon's fire, and a veil of red falls over the world.", FALSE, vict, NULL, NULL, TO_CHAR);
-      act("$n flushes a deep red, heat pulsing out from $s body.", FALSE, vict, NULL, NULL, TO_ROOM);
-      break;
-
-    default:
-      act("FURY!.", FALSE, vict, NULL, NULL, TO_CHAR);
-      act("$n appears much more furious.", FALSE, vict, NULL, NULL, TO_ROOM);
-      break;
-  }
+  strncpy(buf, str, MAX_STRING_LENGTH);
+  act(buf, FALSE, target, NULL, NULL, type);
 }
 
 int qgII_ring(OBJ *ring, CHAR *owner, int cmd, char *arg) {
 
+#ifdef TEST_SITE
+  const int RING_CHARGE_TIME = 1;
+#else
   const int RING_CHARGE_TIME = 96; /* 24 MUD hours */
+#endif
   const int RING_MAX_CHARGES = 3;
 
   CHAR *vict = NULL, *next_vict = NULL;
@@ -1259,7 +960,8 @@ int qgII_ring(OBJ *ring, CHAR *owner, int cmd, char *arg) {
 
           if (ring->obj_flags.timer <= 0)
           {
-            ring_act_charge(vnum, owner);
+            ring_act(vnum, RING_STR_CHARGE_TOCHAR, owner, TO_CHAR);
+            ring_act(vnum, RING_STR_CHARGE_TOROOM, owner, TO_ROOM);
             ring->spec_value++; /* add a "twist" charge */
 
             if (ring->spec_value < RING_MAX_CHARGES) {
@@ -1303,18 +1005,18 @@ int qgII_ring(OBJ *ring, CHAR *owner, int cmd, char *arg) {
       if ((owner==ring->equipped_by || owner==ring->carried_by) && owner && !IS_NPC(owner)) {
         one_argument(arg, buf);
 
-        if (AWAKE(owner) && ring && !strncmp(buf, ring_keyword(vnum), MIL)) {
+        if (AWAKE(owner) && ring && !strncmp(buf, ring_string(vnum, RING_STR_KEYWORD), MIL)) {
           if (ring->spec_value <= 0) {
-            ring_exa_empty(vnum, owner);
+            ring_act(vnum, RING_STR_EXA_EMPTY, owner, TO_CHAR);
           }
           else if(ring->spec_value == 1) {
-            ring_exa_one(vnum, owner);
+            ring_act(vnum, RING_STR_EXA_ONE, owner, TO_CHAR);
           }
           else if(ring->spec_value == 2) {
-            ring_exa_two(vnum, owner);
+            ring_act(vnum, RING_STR_EXA_TWO, owner, TO_CHAR);
           }
           else if(ring->spec_value >= 3) {
-            ring_exa_full(vnum, owner);
+            ring_act(vnum, RING_STR_EXA_FULL, owner, TO_CHAR);
           }
 
           bReturn = TRUE;
@@ -1329,35 +1031,41 @@ int qgII_ring(OBJ *ring, CHAR *owner, int cmd, char *arg) {
         if (AWAKE(owner) && (ring==EQ(owner, WEAR_FINGER_L) || ring==EQ(owner, WEAR_FINGER_R)) && !strncmp(buf, "twist", MIL)) {
           one_argument(arg, buf);
 
-          if (!strncmp(buf, ring_keyword(vnum), MIL)) { /* command must be: "twist <ring keyword>" */
+          if (!strncmp(buf, ring_string(vnum, RING_STR_KEYWORD), MIL)) { /* command must be: "twist <ring keyword>" */
 
             if(ring->spec_value > 0) {
-              ring_act_twist(vnum, owner);
+              ring_act(vnum, RING_STR_TWIST_TOCHAR, owner, TO_CHAR);
+              ring_act(vnum, RING_STR_TWIST_TOROOM, owner, TO_ROOM);
 
               for(vict = world[CHAR_REAL_ROOM(owner)].people; vict; vict = next_vict) {
                 next_vict = vict->next_in_room;
                 if(IS_NPC(vict)) continue; /* skip mobs */
+#ifndef TEST_SITE
                 if(!IS_MORTAL(vict)) continue; /* skip gods */
-
+#endif
                 num = number(1,4);
 
                 switch(num) {
                   case 1: /* triple heal */
-                    ring_act_heal(vnum, vict);
+                    ring_act(vnum, RING_STR_HEAL_TOCHAR, vict, TO_CHAR);
+                    ring_act(vnum, RING_STR_HEAL_TOROOM, vict, TO_ROOM);
                     spell_heal(50, vict, vict, 0);
                     spell_heal(50, vict, vict, 0);
                     spell_heal(50, vict, vict, 0);
                     break;
                   case 2: /* miracle */
-                    ring_act_miracle(vnum, vict);
+                    ring_act(vnum, RING_STR_MIRA_TOCHAR, vict, TO_CHAR);
+                    ring_act(vnum, RING_STR_MIRA_TOROOM, vict, TO_ROOM);
                     spell_miracle(50, vict, vict, 0);
                     break;
                   case 3: /* haste */
-                    ring_act_haste(vnum, vict);
+                    ring_act(vnum, RING_STR_HASTE_TOCHAR, vict, TO_CHAR);
+                    ring_act(vnum, RING_STR_HASTE_TOROOM, vict, TO_ROOM);
                     spell_haste(50, vict, vict, 0);
                     break;
                   case 4: /* fury */
-                    ring_act_fury(vnum, vict);
+                    ring_act(vnum, RING_STR_FURY_TOCHAR, vict, TO_CHAR);
+                    ring_act(vnum, RING_STR_FURY_TOROOM, vict, TO_ROOM);
                     spell_fury(50, vict, vict, 0);
                     break;
                   default:
@@ -1373,7 +1081,7 @@ int qgII_ring(OBJ *ring, CHAR *owner, int cmd, char *arg) {
               WAIT_STATE(owner, PULSE_VIOLENCE);
             }
             else {
-              ring_act_twist_uncharged(vnum, owner);
+              ring_act(vnum, RING_STR_TWIST_NOCHARGE, owner, TO_CHAR);
             }
 
             bReturn = TRUE;
@@ -1408,7 +1116,7 @@ int qgII_vindictae(OBJ *vindictae, CHAR *ch, int cmd, char *arg)
       ** Duplicate SoN night damage increase.
       */
 
-      if (wielder) 
+      if (wielder)
       {
         if (IS_NIGHT)
         {
@@ -1444,7 +1152,7 @@ int qgII_vindictae(OBJ *vindictae, CHAR *ch, int cmd, char *arg)
      */
 
      if (ch != wielder) break;
-     
+
      break;
 
 
@@ -1465,7 +1173,7 @@ void assign_questgearII(void)
   assign_obj(QGII_PHYLACTERY,   qgII_phylactery);
   assign_obj(QGII_VIZARD,       qgII_vizard);
   assign_obj(QGII_BULKATHOS,    qgII_bulkathos);
-  assign_obj(QGII_VILYA,        qgII_vilya);
+  assign_obj(QGII_VILYA,        qgII_ring);
   assign_obj(QGII_NARYA,        qgII_ring);
   assign_obj(QGII_ENLIL,        qgII_ring);
   assign_obj(QGII_ANU,          qgII_ring);
