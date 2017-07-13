@@ -4115,7 +4115,7 @@ Usage       : cast 'lethal fire' <victim>
 Accumulative: -
 Duration    : Instantaneous
 Level       : Level 24 mage, 27 commando, 28 bard.
-Save        : No saving throw.
+Save        : Versus spell for half damage.
 Mana Cost   : 50
 Old Damage done : 180 to 230
 New Damage done : level/2 + (180 to 230)
