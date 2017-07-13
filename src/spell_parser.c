@@ -418,7 +418,7 @@ char *songs[] =
   "somebody's watching me",           /* detect invis */
   "seal with a kiss",                 /* armor */
   "like a prayer",                    /* bless */
-  "one day I will fly away",          /* fly */
+  "one day i will fly away",          /* fly */
   "we don't need another hero",       /* cure critical */
   "smoke get in your eyes",           /* blindness */
   "best of me",                       /* statiate */

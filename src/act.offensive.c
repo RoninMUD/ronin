@@ -1079,6 +1079,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
   send_to_char("PANIC! You couldn't escape!\n\r", ch);
 }
 
+#define QGII_GRUUMSH 1060
 
 void do_pummel(CHAR *ch, char *arg, int cmd) {
   char name[MIL];
@@ -1154,7 +1155,15 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
       damage(ch, victim, 0, SKILL_PUMMEL, DAM_NO_BLOCK);
     }
     else {
+      OBJ *hands = NULL;
+
       set_pos = stack_position(victim, POSITION_STUNNED);
+
+      if ((NULL != (hands = EQ(ch, WEAR_HANDS))) &&
+          (QGII_GRUUMSH == V_OBJ(hands)) &&
+          chance(15)) {
+        set_pos = POSITION_MORTALLYW;
+      }
 
       act("You pummel $N, and $N is stunned now!", FALSE, ch, NULL, victim, TO_CHAR);
       act("$n pummels you, and you are stunned now!", FALSE, ch, NULL, victim, TO_VICT);

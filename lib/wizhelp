@@ -1027,6 +1027,7 @@ SOS SETOBJSTAT
    12 - (owner)
    13 - (timer) timer
    14 - (popped) day popped
+   15 - (specvalue) spec_value
 
    For 2, 3 and 11, the bit is added if it isn't on the object and removed 
    if it is.
