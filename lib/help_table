@@ -25,18 +25,26 @@ CONSTITUTION
 Constitution stands for health, physique and stamina.  A high
 constitution score will increase your hit points when you advance
 a level while a low score will subtract from any hit points
-gained for a level.
-
-A higher constitution also increased your regeneration rate.  At
-25 constitution you will gain an extra 25 hit points/mana per
-tick.
-
+gained for a level. A higher constitution also increases your
+regeneration (see REGENERATION) rate.
+ 
+After reaching 18 constitution (see META), you can gain even more
+dexterity from your guildmaster with quest points (see AQUEST).
 Constitution of 19 and above will reduce the damage taken each
-hit.  At 25 constitution, damage taken is reduced by 20% if
-you're not affected by the sanctuary spell, and 10% if
-you are affected by sanctuary.
+hit and provide addition regen per tick.
 
-See Also: STATS META AQUEST SANCTUARY
+  ------------------------------------------------------------
+  | CON     |  19  |  20  |  21  |  22  |  23  |  24  |  25  |
+  | DAM %   |   2  |   2  |   2  |   2  |   4  |   4  |   4  |
+  | REGEN   |   3  |   3  |   3  |   4  |   4  |   4  |   4  |
+  ------------------------------------------------------------
+
+At 25 constitution, the you have a total bonus of 25 hit points
+and mana regen per tick and damage taken is reduced by 20% if you
+are not affected by the sanctuary spell, and 10% if you are affected
+by sanctuary.
+
+See Also: STATS META AQUEST SANCTUARY REGENERATION
           INTELLIGENCE WISDOM STRENGTH DEXTERITY
 #
 STRENGTH
@@ -54,20 +62,29 @@ would be 20, notated as 18/20.
 Higher levels of strength percent result in damage and hitroll
 bonuses as shown below.
 
----------------------------------------------------------
-| STR%    | 01-50 | 51-75 | 76-90 | 91-99 | 100 | Total |
-| DAMAGE  |  +1   |   0   |  +1   |  +1   | +1  |  +4   |
-| HITROLL |   0   |  +1   |   0   |   0   | +1  |  +2   |
----------------------------------------------------------
+      ---------------------------------------------------
+      | STR%    | 01-50 | 51-75 | 76-90 | 91-99 |  100  |
+      | DAMAGE  |  +1   |   0   |  +1   |  +1   |   +1  |
+      | HITROLL |   0   |  +1   |   0   |   0   |   +1  |
+      ---------------------------------------------------
 
 After 18/100 you can gain even more strength from your
 guildmaster with quest points (see AQUEST).  This extra strength
-of 19 and above come with even more hit and damage roll bonuses.
-At the maximum 25 strength, a character can carry 1750 weight,
+of 19 and above comes with even more hit and damage roll bonuses.
+When wielding a two-handed weapon (see WIELD), damage bonuses
+from 19+ str are doubled.
+
+  ------------------------------------------------------------
+  | STR     |  19  |  20  |  21  |  22  |  23  |  24  |  25  |
+  | DAMAGE  |  +1  |  +1  |  +1  |  +1  |  +1  |  +1  |  +2  |
+  | HITROLL |   0  |   0  |  +1  |   0  |  +1  |  +1  |  +1  |
+  ------------------------------------------------------------
+
+At the maximum 25 strength, you can carry 1750 weight,
 gets a total hit roll bonus of 7 and a total damage roll bonus of
 14.
 
-SEE ALSO: STATS META AQUEST
+SEE ALSO: STATS META AQUEST WIELD
           INTELLIGENCE WISDOM CONSTITUTION DEXTERITY
 #
 INTELLIGENCE
@@ -77,10 +94,18 @@ things.  The higher your intelligence the easier it is for your
 character to practice.  Intelligence also affects your ability
 to cast spells.  A high intelligence would give the spellcaster
 an advantage.  When combined with a high wisdom, a cleric or mage
-with 25 wisdom and intelligence will virtually never lose
-concentration.
+with 25 wisdom and intelligence will almost never lose when
+casting (see CONCENTRATION).
 
-See Also: STATS META AQUEST
+After reaching 18 intelligence (see META), you can gain even more
+intelligence from your guildmaster with quest points (see AQUEST).
+
+  ------------------------------------------------------------
+  | INT     |  19  |  20  |  21  |  22  |  23  |  24  |  25  |
+  | CONC %  |   2  |   3  |   2  |   2  |   2  |   2  |   2  |
+  ------------------------------------------------------------
+
+See Also: STATS META AQUEST CONCENTRATION
           WISDOM STRENGTH CONSTITUTION DEXTERITY
 #
 WISDOM
@@ -90,9 +115,18 @@ score the more practice sessions you get when you advance in
 level.  Wisdom also affects your ability to cast spells.  A high
 wisdom will give a spellcaster an advantage.  When combined with
 a high intelligence, a cleric or mage with 25 wisdom and
-intelligence will virtually never lose concentration.
+intelligence will virtually never lose concentration when casting
+spells (see CONCENTRATION).
 
-See Also: STATS META AQUEST
+After reaching 18 wisdom (see META), you can gain even more
+wisdom from your guildmaster with quest points (see AQUEST).
+
+  ------------------------------------------------------------
+  | WIS     |  19  |  20  |  21  |  22  |  23  |  24  |  25  |
+  | CONC %  |   2  |   3  |   2  |   2  |   2  |   2  |   2  |
+  ------------------------------------------------------------
+
+See Also: STATS META AQUEST CONCENTRATION
           INTELLIGENCE STRENGTH CONSTITUTION DEXTERITY
 #
 STATS
@@ -121,12 +155,8 @@ Dexterity represents agility, speed and hand-to-eye coordination.
 The higher your dexterity score, the easier it will be for your
 character to use skills that depend on agility or quickness, and
 the number of items you can carry is larger.  Natural dexterity
-also gives the player improved armor, making it more difficult to
+also gives you improved armor, making it more difficult to
 be hit.
-
-Dexterity of 19 and above has a larger impact on the success of
-skills.  At 25 dexterity, the player has a 10% bonus in skill
-success and a 30 ac bonus in armor.
 
 The skills affected by dexterity are:
 
@@ -136,6 +166,18 @@ The skills affected by dexterity are:
   backflip  disarm      impair  sneak      trip       zeal
   backstab  disembowel  kick    spin kick  triple     banzai
   headbutt
+
+After reaching 18 dexterity (see META), you can gain even more
+dexterity from your guildmaster with quest points (see AQUEST).
+
+  ------------------------------------------------------------
+  | DEX     |  19  |  20  |  21  |  22  |  23  |  24  |  25  |
+  | ARMOR   |   3  |   3  |   3  |   4  |   4  |   4  |   4  |
+  | SKILL%  |   1  |   1  |   1  |   1  |   2  |   2  |   2  |
+  ------------------------------------------------------------
+
+At 25 dexterity, you have a total bonus of 40 ac and 10%
+skill success.
 
 See Also: STATS META AQUEST
           INTELLIGENCE WISDOM STRENGTH CONSTITUTION
@@ -2424,9 +2466,12 @@ See also: REMOVE EQUIPMENT HOLD WIELD
 WIELD
 
 When you get tired of bashing monsters with your fists you might consider
-wielding a weapon.  Some heavy weapons require great strength to wield.  The
-Ninja class has the ability to wield two weapons.  One will appear as being
-held while the other is wielded normally.
+wielding a weapon.  Weapons vary, some might require great strength to
+wield and some even require two hands to wield. When wielding a two-handed
+weapon, damage bonuses from 19+ strength are doubled (see STRENGTH).
+
+The Ninja class has the ability to wield two weapons.  One will appear as
+being held while the other is wielded normally.
 
  Example : wield sword
 
