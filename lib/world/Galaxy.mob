@@ -12,7 +12,7 @@ You will become him if you are not careful.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2002
 star~
 A beautiful star~
@@ -27,7 +27,7 @@ You can't tell what the star looks like, she is too bright!
 64 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2003
 nebula young~
 A young nebula~
@@ -42,7 +42,7 @@ It hasn't got a definite shape, it is just a cloud of mist.
 64 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2004
 comet speedy~
 A speedy comet~
@@ -57,7 +57,7 @@ You see the offspring of Halley's comet and it is here just to wipe everything o
 64 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2005
 red supergiant~
 A red supergiant~
@@ -72,7 +72,7 @@ You notice the giant is not as tough as his name sounds...Still he can be very p
 64 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2006
 white dwarf~
 A white dwarf~
@@ -87,7 +87,7 @@ Like the red giant,he is also appointed to stand guard for the galaxy.But someho
 64 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2007
 horsehead nebula~
 A horsehead nebula~
@@ -102,7 +102,7 @@ You can only make out its shape from the darkness.He was cursed to stay in here 
 64 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2008
 andromeda~
 The poor, yet pretty Andromeda~
@@ -117,7 +117,7 @@ She was once a princess of beauty. However, her beauty has led to A Goddess' jea
 65 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2009
 hercules~
 The mighty Hercules~
@@ -129,10 +129,12 @@ He has been put to do the Ten Labours-Ten immpossible tasks, by Hera, the queen 
 25 -4 -3 6d5+3000 10d2+7
 7500 190000
 8 8 1
-66 0 0d0+0 0
+66 0 0d0+0 2
+2 2 5 0
+7 2 5 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2010
 pegasus~
 The wild Pegasus~
@@ -147,7 +149,7 @@ It is the legendary horse with wings on its back.
 66 0 0d0+0 0
 0 0 0 0
 K
-5000 0 0 0 0 0
+5000 0 0 0 0 0 0
 #2011
 orion~
 Orion the hunter~
@@ -162,7 +164,7 @@ He is the lengendary hunter who almost defeated Taurus the bull, but got killed 
 66 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2012
 pleiades~
 The Pleiades~
@@ -177,7 +179,7 @@ These are the seven sisters of the Myths, and as for why they are here, noone kn
 66 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2013
 head draco~
 The Head of the Draco~
@@ -192,7 +194,7 @@ This evil-looking head is even larger than a giant. He is the last guardian befo
 67 0 0d0+0 0
 0 0 0 0
 K
-15000 0 0 0 0 0
+15000 0 0 0 0 0 0
 #2014
 baby draco~
 A baby draco~
@@ -207,7 +209,7 @@ You see a tiny creature which looks like a dragon except that its body resembles
 66 0 0d0+0 0
 0 0 0 0
 K
-4000 0 0 0 0 0
+4000 0 0 0 0 0 0
 #2015
 aries~
 Aries~
@@ -222,7 +224,7 @@ You see a white goat here, the first guardian of the Zodiac, also the ruler of S
 67 0 0d0+0 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #2016
 taurus~
 Taurus~
@@ -237,7 +239,7 @@ You see a wild-looking bull with a bad temper. He is well-built and looks like h
 67 0 0d0+0 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #2017
 gemini~
 Gemini~
@@ -252,7 +254,7 @@ As soon as you see him you know that he is the most perfect man you have seen. Y
 67 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2018
 gemini~
 Gemini~
@@ -267,7 +269,7 @@ As soon as you see him you see the most imperfect man you have ever seen. How ca
 67 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2019
 cancer~
 Cancer~
@@ -282,7 +284,7 @@ You see a gigantic crab(YES, it is bigger than you!) with a crushed shell. Legen
 67 0 0d0+0 0
 0 0 0 0
 K
-12000 0 0 0 0 0
+12000 0 0 0 0 0 0
 #2020
 leo~
 Leo~
@@ -297,7 +299,7 @@ His metallic skin means that he could be the one which was killed by Hercules du
 67 0 0d0+0 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #2021
 virgo~
 Virgo~
@@ -312,7 +314,7 @@ From what you have seen, you now realize that legends are legends, and Virgo may
 67 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2022
 libra~
 Libra~
@@ -327,7 +329,7 @@ He is a wise old man and can see people's thoughts through their eyes..Now all h
 67 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2023
 scorpio~
 Scorpio~
@@ -342,7 +344,7 @@ Ever since he killed Orion in the myths, he has been punished by having Sagittar
 67 0 0d0+0 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #2024
 sagittarius~
 Sagittarius~
@@ -357,7 +359,7 @@ He is a centaur and more, he is a well trained archer. Noone can escape his arro
 67 0 0d0+0 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #2025
 capricorn~
 Capricorn~
@@ -372,7 +374,7 @@ You see a mean-looking ram here. He used to be a fierce fighter in the ancient w
 67 0 0d0+0 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #2026
 aquarius~
 Aquarius~
@@ -387,7 +389,7 @@ The pretty Water Bearer is smiling at you, you think you'd better give her a han
 67 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2027
 pisces mermaid~
 Pisces the mermaid~
@@ -402,7 +404,7 @@ She has been forced to serve her husband, who had been cursed to turn into a fis
 68 0 0d0+0 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #2028
 pisces fish~
 Pisces the fish~
@@ -417,7 +419,7 @@ He was once a very handsome man but now has turned into an ugly big fish. So he 
 67 0 0d0+0 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #2029
 bear ursa major~
 Ursa Major the bear~
@@ -429,10 +431,12 @@ The Huge Bear which resides in the northern skies is here. You think you'd bette
 31 -8 -7 2d4+4000 5d5+3
 0 230000
 8 8 0
-67 0 0d0+0 0
+67 0 0d0+0 2
+7 2 8 0
+2 2 8 0
 0 0 0 0
 K
-15000 0 0 0 0 0
+15000 0 0 0 0 0 0
 #2030
 cassiopeia queen~
 Cassiopeia the Queen~
@@ -447,7 +451,7 @@ She is also the Queen of Dignity; facing her, you feel that all your dignity has
 67 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2031
 cepheus king~
 Cepheus the King~
@@ -462,7 +466,7 @@ He is the King of Might as well as of the Universe. You suddenly feel very weak 
 67 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #2032
 polaris polar star~
 Polaris, the polar star~
@@ -477,6 +481,6 @@ He is the Master of the Universe, the most powerful!  Even the King and the Quee
 65 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #0
 $~
