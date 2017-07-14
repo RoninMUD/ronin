@@ -881,11 +881,11 @@ static const char const *ring_string_table[RING_TYPE_COUNT][RING_STR_COUNT] = {
     "A sunbeam passes over your face, filling you with a pleasant warmth.",
     "A pleasant sunbeam passes over $n's face.",
     "The clouds part above your head and a ray of divine light bathes you in a healing glow.",
-    "The clouds part above $n's head and a ray of divine light bathes $n in a healing glow.",
+    "The clouds part above $n's head and a ray of divine light bathes $m in a healing glow.",
     "A strong wind envelops you, pushing you forward and speeding your actions.",
     "A strong wind envelops $n, pushing $m foward and speeding $s actions.",
     "An intense bright light erupts from your chest, filling you with the rage of a thousands suns.",
-    "$n explodes into a supernova of intense light, filling $s with unimaginable rage."
+    "$n explodes into a supernova of intense light, filling $m with unimaginable rage."
   }
 };
 
