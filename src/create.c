@@ -33,6 +33,7 @@
 #define EDIT_OBJ  4
 #define EDIT_SHOP 5
 
+#define LEN_EXTRADESC_MAX 2048
 
 extern char *Month[];
 extern OBJ*  object_list;
@@ -1045,7 +1046,7 @@ void edit_room(CHAR *ch, char *fargs)
              tmp_descr->keyword = str_dup(arg2);
              tmp_descr->next =world[room].ex_description;
              ch->desc->str = &tmp_descr->description;
-             ch->desc->max_str = 1024;
+             ch->desc->max_str = LEN_EXTRADESC_MAX;
              world[room].ex_description = tmp_descr;
              tmp_descr = NULL;
              }
@@ -2319,7 +2320,7 @@ void edit_obj(CHAR *ch, char *fargs)
   int edit,tmp,tmp1, tmp2,tmp3,loc,extra,found, iReadCount;
   char *arg2;
   int v_object=-1, object, zone;
- struct extra_descr_data *tmp_descr, **prev_descr_ptr, *tmp_descr1;
+  struct extra_descr_data *tmp_descr = NULL, **prev_descr_ptr = NULL, *tmp_descr1 = NULL;
   sprintf(args, "%s", fargs);
   arg2 = strtok(args, " ");
   if(arg2)
@@ -2405,7 +2406,6 @@ void edit_obj(CHAR *ch, char *fargs)
             {
             case 1:
              arg2 = strtok(NULL, "\0");
-             /*arg2 = strtok(NULL, " ");*/
              if(arg2)
              {
              send_to_char("Enter the extra description, terminate with @ on its own line.\n\r",ch);
@@ -2413,38 +2413,34 @@ void edit_obj(CHAR *ch, char *fargs)
              tmp_descr->keyword = str_dup(arg2);
              tmp_descr->next = obj_proto_table[object].ex_description;
              ch->desc->str = &tmp_descr->description;
-             ch->desc->max_str = 1024;
+             ch->desc->max_str = LEN_EXTRADESC_MAX;
              obj_proto_table[object].ex_description = tmp_descr;
              tmp_descr = NULL;
              }
              break;
            case 2:
              arg2 = strtok(NULL, "\0");
-             /*arg2 = strtok(NULL, " ");*/
-             if(arg2)
-             {
-             tmp_descr= obj_proto_table[object].ex_description;
-             prev_descr_ptr = &obj_proto_table[object].ex_description;
-             found=0;
-             while(tmp_descr)
-               {
-               if(!strcmp(tmp_descr->keyword, arg2))
-                 {/*delete that one*/
-                 *prev_descr_ptr = tmp_descr->next;
-                 if(tmp_descr->description)
-                   free(tmp_descr->description);
-                 if(tmp_descr->keyword)
-                   free(tmp_descr->keyword);
-                 tmp_descr1 = tmp_descr->next;
-                 free(tmp_descr);
-                 tmp_descr = tmp_descr1;
-                 send_to_char("Extra description deleted.\n\r",ch);
-                 found=1;
+             if(arg2) {
+               tmp_descr= obj_proto_table[object].ex_description;
+               prev_descr_ptr = &obj_proto_table[object].ex_description;
+               found=0;
+               while(tmp_descr) {
+                 if(!strcmp(tmp_descr->keyword, arg2)) {
+                   /*delete current tmp_descr*/
+                   *prev_descr_ptr = tmp_descr->next;
+                   if(tmp_descr->description)
+                     free(tmp_descr->description);
+                   if(tmp_descr->keyword)
+                     free(tmp_descr->keyword);
+                   tmp_descr1 = tmp_descr->next;
+                   free(tmp_descr);
+                   tmp_descr = tmp_descr1;
+                   send_to_char("Extra description deleted.\n\r",ch);
+                   found=1;
                  }
-               else
-                 {
-                 prev_descr_ptr = &tmp_descr->next;
-                 tmp_descr = tmp_descr->next;
+                 else {
+                   prev_descr_ptr = &tmp_descr->next;
+                   tmp_descr = tmp_descr->next;
                  }
                }
                if(!found) send_to_char("Extra description not found.\n\r",ch);
@@ -6029,7 +6025,7 @@ This command adds/removes an extra description from a room.\n\r\n\r\
     tmp_descr->keyword = str_dup(argument);
     tmp_descr->next =world[room].ex_description;
     ch->desc->str = &tmp_descr->description;
-    ch->desc->max_str = 1024;
+    ch->desc->max_str = LEN_EXTRADESC_MAX;
     world[room].ex_description = tmp_descr;
     tmp_descr = NULL;
     return;
