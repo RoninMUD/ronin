@@ -1618,10 +1618,8 @@ struct obj_data *read_object(int nr, int type)
   for(i=0;i<6;i++)
     obj->obj_flags.skin_vnum[i]=0;
 
-  /* *** extra descriptions *** */
 
-  obj->ex_description = obj_proto_table[nr].ex_description;
-
+  /* affects */
   for( i = 0 ; (i < MAX_OBJ_AFFECT); i++) {
     obj->affected[i].location = obj_proto_table[nr].affected[i].location;
     obj->affected[i].modifier = obj_proto_table[nr].affected[i].modifier;
@@ -2726,7 +2724,9 @@ void free_obj(struct obj_data *obj)
   if(obj->room_rem_desc)
     free(obj->room_rem_desc);
 
-  if (obj->ex_description != obj_proto_table[obj->item_number].ex_description) {
+
+  /* if object instance has overridden extra decs, delete them */
+  if (obj->ex_description) {
     for (i_descr = obj->ex_description; i_descr; i_descr = n_descr) {
       n_descr = i_descr->next;
       if (i_descr->keyword) free(i_descr->keyword);

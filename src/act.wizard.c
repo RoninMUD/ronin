@@ -2822,7 +2822,17 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
        }
        strcat(buf, "----------\n\r");
        send_to_char(buf, ch);
-     } else {
+     }
+     else if (obj_proto_table[j->item_number].ex_description) {
+       strcpy(buf, "Extra description keyword(s):\n\r----------\n\r");
+       for (desc = obj_proto_table[j->item_number].ex_description; desc; desc = desc->next) {
+         strcat(buf, desc->keyword);
+         strcat(buf, "\n\r");
+       }
+       strcat(buf, "----------\n\r");
+       send_to_char(buf, ch);
+     }
+     else {
        strcpy(buf,"Extra description keyword(s): None\n\r");
        send_to_char(buf, ch);
      }
