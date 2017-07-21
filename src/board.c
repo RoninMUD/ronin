@@ -70,7 +70,7 @@ $State: Exp $
 #define GOD_BOARD         3097
 #define ADVENTURER_BOARD  3096
 #define MORT_QUEST_BOARD  3094
-#define TOAD_BOARD        3087
+#define REWARDS_BOARD     3087
 #define IDEA_BOARD        3064
 #define IMM_LOG_BOARD     1210
 #define DEI_LOG_BOARD     1211
@@ -79,7 +79,6 @@ $State: Exp $
 #define FEEDBACK_BOARD    1214
 #define TODO_BOARD        1215
 #define KABOODLE_BOARD    6273
-#define DEPUTY_BOARD      3092
 #define DIABOLIK_BOARD    27504
 #define SOLO_BOARD        27511
 #define VERTIGO_BOARD     27518
@@ -515,12 +514,6 @@ int check_access(CHAR *ch,struct struct_board *board) {
       return FALSE;
     }
   }
-  if(vnum==DEPUTY_BOARD) {
-    if(!IS_SET(ch->specials.pflag,PLR_DEPUTY) && GET_LEVEL(ch)<LEVEL_WIZ) {
-      send_to_char("You don't have access to this board.\n\r",ch);
-      return FALSE;
-    }
-  }
   return TRUE;
 }
 
@@ -538,7 +531,7 @@ char *save_file(struct struct_board *board) {
       return "adv.messages";break;
     case MORT_QUEST_BOARD:
       return "mquest.messages";break;
-    case TOAD_BOARD:
+    case REWARDS_BOARD:
       return "toad.messages";break;
     case IDEA_BOARD:
       return "idea.messages";break;
@@ -550,8 +543,6 @@ char *save_file(struct struct_board *board) {
       return "wiz-log.messages";break;
     case QUEST_BOARD:
       return "quest.messages";break;
-    case DEPUTY_BOARD:
-      return "deputy.messages";break;
     case FEEDBACK_BOARD:
       return "feedbak.messages";break;
     case TODO_BOARD:
@@ -702,7 +693,6 @@ This command is used for board message manipulation.\n\r\n\r\
         case 3097: rnum=1220; break;
         case 6273: rnum=1265; break;
         case 3098: rnum=1212; break;
-        case 3092: rnum=0;    break;
       }
       if(board->msg_num)
         printf_to_char(ch,"%-5d %-20s: %-2d %s\n\r",
