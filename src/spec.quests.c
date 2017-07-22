@@ -543,7 +543,7 @@ int WHAP_SPEC(OBJ *WHAPMASTER, CHAR *ch, int cmd, char *arg) {
 int object_tracking(OBJ *trackobj, CHAR *ch, int cmd, char *arg) {  /* Linerfix 110303 */
   char buf[MAX_INPUT_LENGTH];
 
-  if(!cmd==MSG_OBJ_ENTERING_GAME) return FALSE;
+  if(cmd != MSG_OBJ_ENTERING_GAME) return FALSE;
 
   if(trackobj->log!=2) {
     act("$p will now be tracked.",FALSE,0,trackobj,0,TO_ROOM);

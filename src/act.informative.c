@@ -140,7 +140,7 @@ struct obj_data *get_object_in_equip_vis(struct char_data *ch,
 
 char *find_ex_description(char *word, struct extra_descr_data *list)
 {
-  struct extra_descr_data *i;
+  struct extra_descr_data *i = NULL;
 
   for (i = list; i; i = i->next)
     if (isname(word,i->keyword))
@@ -1182,7 +1182,16 @@ bool show_object_extra_desc(struct obj_data *obj, struct char_data *ch, char *ar
   int max_time = 0, decay = 0;
 
   if (ch && obj && CAN_SEE_OBJ(ch, obj)) {
-    list = obj->ex_description ? obj->ex_description : obj_proto_table[obj->item_number].ex_description;
+
+    if (obj->ex_description) {
+      list = obj->ex_description;
+    }
+    else {
+      list = obj_proto_table[obj->item_number].ex_description;
+    }
+
+    if (!list) return FALSE;
+
     desc = find_ex_description(arg, list);
 
     if (desc) {
@@ -1394,7 +1403,7 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
           /* Equipment Used */
 
           if (!found) {
-            for (j = 0; j< MAX_WEAR && !found; j++) {
+            for (j = 0; (j < MAX_WEAR) && !found; j++) {
               if (NULL != (tmp_object = ch->equipment[j])) {
                 found = show_object_extra_desc(tmp_object, ch, arg2);
               }

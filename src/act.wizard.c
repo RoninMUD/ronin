@@ -2815,7 +2815,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
           ((OBJ_DESCRIPTION(j)) ? OBJ_DESCRIPTION(j) : "None") );
      send_to_char(buf, ch);
      if (j->ex_description){
-       strcpy(buf, "Extra description keyword(s):\n\r----------\n\r");
+       strcpy(buf, "Extra description keyword(s) [Instance]:\n\r----------\n\r");
        for (desc = j->ex_description; desc; desc = desc->next) {
          strcat(buf, desc->keyword);
          strcat(buf, "\n\r");
@@ -2824,7 +2824,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
        send_to_char(buf, ch);
      }
      else if (obj_proto_table[j->item_number].ex_description) {
-       strcpy(buf, "Extra description keyword(s):\n\r----------\n\r");
+       strcpy(buf, "Extra description keyword(s) [Proto]:\n\r----------\n\r");
        for (desc = obj_proto_table[j->item_number].ex_description; desc; desc = desc->next) {
          strcat(buf, desc->keyword);
          strcat(buf, "\n\r");
