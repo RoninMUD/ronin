@@ -43,12 +43,11 @@ struct char_data *character_list = 0; /* global l-list of chars          */
 
 struct zone_data *zone_table;         /* table of reset data             */
 struct message_list fight_messages[MAX_MESSAGES]; /* fighting messages   */
-int top_of_p_table = 0;               /* ref to top of table             */
-int top_of_p_file = 0;
 extern int CHAOSMODE;
 extern int BAMDAY;
 extern int BOOTFULL;
 extern int TOKENCOUNT;
+extern char CREATEIMP[];
 
 char credits[MSL];      /* the Credits List                */
 char heroes[MSL];       /* the Heroes List                */
@@ -2854,10 +2853,12 @@ void init_char(struct char_data *ch)
 
      /* *** if this is our first player --- he be God *** */
 
-     if (top_of_p_table < 0)
-     {
-          GET_EXP(ch) = 2000000000;
-          GET_LEVEL(ch) = LEVEL_IMP;
+     if (CREATEIMP[0] && !strncasecmp(ch->player.name, CREATEIMP, sizeof(((struct char_player_data*)0)->name))) {
+       GET_EXP(ch) = 2000000000;
+       GET_LEVEL(ch) = LEVEL_IMP;
+       SET_BIT(ch->new.imm_flags, WIZ_TRUST);
+       SET_BIT(ch->new.imm_flags, WIZ_ACTIVE);
+       ch->points.max_hit = 100;
      }
 
      set_title(ch,NULL);
