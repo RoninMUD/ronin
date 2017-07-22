@@ -48,7 +48,6 @@ extern char *subclass_name[];
 extern struct clan_data clan_list[MAX_CLANS];
 extern int CHAOSMODE;
 extern int CHAOSDEATH;
-extern int top_of_p_table;
 extern int max_connects;
 extern int total_connects;
 extern struct str_app_type str_app[];
