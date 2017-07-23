@@ -2823,7 +2823,9 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
        strcat(buf, "----------\n\r");
        send_to_char(buf, ch);
      }
-     else if (obj_proto_table[j->item_number].ex_description) {
+     else if ((j->item_number >= 0) &&
+              (j->item_number <= top_of_objt) &&
+              obj_proto_table[j->item_number].ex_description) {
        strcpy(buf, "Extra description keyword(s) [Proto]:\n\r----------\n\r");
        for (desc = obj_proto_table[j->item_number].ex_description; desc; desc = desc->next) {
          strcat(buf, desc->keyword);
