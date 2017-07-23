@@ -76,6 +76,7 @@ extern int exp_table[58];
 extern char *pc_class_types[];
 extern struct dex_app_type dex_app[];
 extern char *spells[];
+extern int top_of_objt;
 
 /* extern functions */
 
@@ -1186,7 +1187,7 @@ bool show_object_extra_desc(struct obj_data *obj, struct char_data *ch, char *ar
     if (obj->ex_description) {
       list = obj->ex_description;
     }
-    else {
+    else if ((obj->item_number >= 0) && (obj->item_number <= top_of_objt)) {
       list = obj_proto_table[obj->item_number].ex_description;
     }
 
