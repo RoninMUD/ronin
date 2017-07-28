@@ -48,7 +48,6 @@ extern char *subclass_name[];
 extern struct clan_data clan_list[MAX_CLANS];
 extern int CHAOSMODE;
 extern int CHAOSDEATH;
-extern int top_of_p_table;
 extern int max_connects;
 extern int total_connects;
 extern struct str_app_type str_app[];
@@ -77,6 +76,7 @@ extern int exp_table[58];
 extern char *pc_class_types[];
 extern struct dex_app_type dex_app[];
 extern char *spells[];
+extern int top_of_objt;
 
 /* extern functions */
 
@@ -141,7 +141,7 @@ struct obj_data *get_object_in_equip_vis(struct char_data *ch,
 
 char *find_ex_description(char *word, struct extra_descr_data *list)
 {
-  struct extra_descr_data *i;
+  struct extra_descr_data *i = NULL;
 
   for (i = list; i; i = i->next)
     if (isname(word,i->keyword))
@@ -406,7 +406,6 @@ void list_obj_to_char(struct obj_data *list,
   if ((! found) && (show)) send_to_char("Nothing\n\r", ch);
 }
 
- /* Project Dagger */
 void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
 {
   char buffer[MSL];
@@ -1162,6 +1161,70 @@ void list_char_to_char(struct char_data *list,
 
 int check_extra_desc(CHAR *ch,char *tmp_desc);
 
+static const char const *decay_string_table[] = {
+  "like new",
+  "almost new",
+  "fairly new",
+  "slightly worn",
+  "worn",
+  "fairly worn",
+  "very worn",
+  "slightly cracked",
+  "cracked",
+  "about to crumble"
+};
+
+static const int decay_string_max = (int)(sizeof(decay_string_table)/sizeof(const char const*) - 1);
+
+bool show_object_extra_desc(struct obj_data *obj, struct char_data *ch, char *arg) {
+  struct extra_descr_data *list = NULL;
+  char *desc = NULL;
+  int window = 0;
+  int max_time = 0, decay = 0;
+
+  if (ch && obj && CAN_SEE_OBJ(ch, obj)) {
+
+    if (obj->ex_description) {
+      list = obj->ex_description;
+    }
+    else if ((obj->item_number >= 0) && (obj->item_number <= top_of_objt)) {
+      list = obj_proto_table[obj->item_number].ex_description;
+    }
+
+    if (!list) return FALSE;
+
+    desc = find_ex_description(arg, list);
+
+    if (desc) {
+      if (isdigit(*desc)) {
+        window=atoi(desc);
+        look_in_room(ch,window);
+      }
+      else {
+        page_string(ch->desc, desc, 1);
+        if(IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY) || IS_SET(obj->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
+          max_time=obj_proto_table[obj->item_number].obj_flags.timer;
+          if(max_time) {
+            decay=decay_string_max-10*obj->obj_flags.timer/max_time;
+          }
+          else {
+            decay=decay_string_max;
+          }
+
+          if(decay<0) {
+            decay=0;
+          }
+          decay=MIN(decay,decay_string_max);
+          printf_to_char(ch,"This item decays and seems %s.\n\r",decay_string_table[decay]);
+        }
+      }
+      return TRUE;
+   }
+ }
+
+ return FALSE;
+}
+
 void do_look(struct char_data *ch, char *argument, int cmd) {
   char buffer[MSL];
   char arg1[MSL];
@@ -1169,14 +1232,9 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
   int keyword_no;
   int j, bits, temp,window;
   bool found;
-  struct obj_data *tmp_object, *found_object;
-  struct char_data *tmp_char;
+  struct obj_data *tmp_object = NULL, *found_object = NULL;
+  struct char_data *tmp_char = NULL;
   char *tmp_desc;
-  char *decay_text[10]=
-  {"like new","almost new","fairly new","slightly worn","worn",
-   "fairly worn","very worn","slightly cracked","cracked",
-   "about to crumble"};
-  int val3,max_time;
 
   char *keywords[]= {
     "north",
@@ -1200,7 +1258,7 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
     send_to_char("You can't see anything, you're blind!\n\r", ch);
   else if (IS_DARK(CHAR_REAL_ROOM(ch)) &&
            !IS_AFFECTED(ch, AFF_INFRAVISION) &&
-     (GET_LEVEL(ch) < LEVEL_IMM))
+           (GET_LEVEL(ch) < LEVEL_IMM))
     send_to_char("It is pitch black...\n\r", ch);
   else {
     argument_split_2(argument,arg1,arg2);
@@ -1223,238 +1281,177 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
     case 3 :
     case 4 :
     case 5 : {
-      if (EXIT(ch, keyword_no)) {
-  if (EXIT(ch, keyword_no)->general_description) {
-    send_to_char(EXIT(ch, keyword_no)->
-           general_description, ch);
-  } else {
-    send_to_char("You see nothing special.\n\r", ch);
-  }
+        if (EXIT(ch, keyword_no)) {
+          if (EXIT(ch, keyword_no)->general_description) {
+            send_to_char(EXIT(ch, keyword_no)->general_description, ch);
+          }
+          else {
+            send_to_char("You see nothing special.\n\r", ch);
+          }
 
-  if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED) &&
-      (EXIT(ch, keyword_no)->keyword)) {
-    sprintf(buffer, "The %s is closed.\n\r",
-      fname(EXIT(ch, keyword_no)->keyword));
-    send_to_char(buffer, ch);
-  } else {
-    if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ISDOOR) &&
-        EXIT(ch, keyword_no)->keyword) {
-      sprintf(buffer, "The %s is open.\n\r",
-        fname(EXIT(ch, keyword_no)->keyword));
-      send_to_char(buffer, ch);
-    }
-  }
-      } else {
-  send_to_char("Nothing special there...\n\r", ch);
+          if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED) &&
+              (EXIT(ch, keyword_no)->keyword)) {
+            sprintf(buffer, "The %s is closed.\n\r", fname(EXIT(ch, keyword_no)->keyword));
+            send_to_char(buffer, ch);
+          }
+          else {
+            if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ISDOOR) &&
+                EXIT(ch, keyword_no)->keyword) {
+              sprintf(buffer, "The %s is open.\n\r", fname(EXIT(ch, keyword_no)->keyword));
+              send_to_char(buffer, ch);
+            }
+          }
+        }
+        else {
+          send_to_char("Nothing special there...\n\r", ch);
+        }
       }
-    } break;
+      break;
 
       /* look 'in'  */
     case 6: {
-      if (*arg2) {
-  /* Item carried */
+        if (*arg2) {
+          /* Item carried */
 
-  bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM |
-          FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
+          bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM |
+            FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
 
-  if (bits) { /* Found something */
-    if (GET_ITEM_TYPE(tmp_object)== ITEM_DRINKCON) {
-      if (tmp_object->obj_flags.value[1] <= 0) {
-        act("It is empty.", FALSE, ch, 0, 0, TO_CHAR);
-      } else {
-        temp=((tmp_object->obj_flags.value[1]*3)/tmp_object->obj_flags.value[0]);
-        sprintf(buffer,"It's %sfull of a %s liquid.\n\r",
-          fullness[temp],color_liquid[tmp_object->obj_flags.value[2]]);
-        send_to_char(buffer, ch);
-      }
-    } else if (GET_ITEM_TYPE(tmp_object) == ITEM_CONTAINER ||
-          GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
-      if (!IS_SET(tmp_object->obj_flags.value[1],CONT_CLOSED) ||
-          GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
-        send_to_char(fname(OBJ_NAME(tmp_object)), ch);
-        switch (bits) {
-        case FIND_OBJ_INV :
-    send_to_char(" (carried) : \n\r", ch);
-    break;
-        case FIND_OBJ_ROOM :
-    send_to_char(" (here) : \n\r", ch);
-    break;
-        case FIND_OBJ_EQUIP :
-    send_to_char(" (used) : \n\r", ch);
-    break;
+          if (bits) { /* Found something */
+            if (GET_ITEM_TYPE(tmp_object)== ITEM_DRINKCON) {
+              if (tmp_object->obj_flags.value[1] <= 0) {
+                act("It is empty.", FALSE, ch, 0, 0, TO_CHAR);
+              }
+              else {
+                temp=((tmp_object->obj_flags.value[1]*3)/tmp_object->obj_flags.value[0]);
+                sprintf(buffer,"It's %sfull of a %s liquid.\n\r",
+                        fullness[temp],color_liquid[tmp_object->obj_flags.value[2]]);
+                send_to_char(buffer, ch);
+              }
+            }
+            else if (GET_ITEM_TYPE(tmp_object) == ITEM_CONTAINER ||
+                     GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
+              if (!IS_SET(tmp_object->obj_flags.value[1],CONT_CLOSED) ||
+                  GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
+                send_to_char(fname(OBJ_NAME(tmp_object)), ch);
+                switch (bits) {
+                case FIND_OBJ_INV :
+                  send_to_char(" (carried) : \n\r", ch);
+                  break;
+                case FIND_OBJ_ROOM :
+                  send_to_char(" (here) : \n\r", ch);
+                  break;
+                case FIND_OBJ_EQUIP :
+                  send_to_char(" (used) : \n\r", ch);
+                  break;
+                }
+                list_obj_to_char(tmp_object->contains, ch, 2, TRUE);
+              }
+              else {
+                send_to_char("It is closed.\n\r", ch);
+              }
+            }
+            else {
+              send_to_char("That is not a container.\n\r", ch);
+            }
+          }
+          else { /* wrong argument */
+            send_to_char("You do not see that item here.\n\r", ch);
+          }
         }
-        list_obj_to_char(tmp_object->contains, ch, 2, TRUE);
-      } else
-        send_to_char("It is closed.\n\r", ch);
-    } else {
-      send_to_char("That is not a container.\n\r", ch);
-    }
-  } else { /* wrong argument */
-    send_to_char("You do not see that item here.\n\r", ch);
-  }
-      } else { /* no argument */
-  send_to_char("Look in what?!\n\r", ch);
+        else { /* no argument */
+          send_to_char("Look in what?!\n\r", ch);
+        }
       }
-    } break;
+      break;
 
       /* look 'at'  */
     case 7 : {
 
-      if (*arg2) {
-  bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM |
-          FIND_OBJ_EQUIP | FIND_CHAR_ROOM, ch, &tmp_char, &found_object);
-  if (tmp_char) {
-    if (ch != tmp_char) {
-      act("$n looks at you.", TRUE, ch, 0, tmp_char, TO_VICT);
-      act("$n looks at $N.", TRUE, ch, 0, tmp_char, TO_NOTVICT);
-    }
-    show_char_to_char(tmp_char, ch, 1);
-    return;
-  }
-
-  /* Search for Extra Descriptions in room and items */
-  /* Extra description in room?? */
-        /* Added window feature - Ranger August 96 */
-  if (!found) {
-    tmp_desc = find_ex_description(arg2, world[CHAR_REAL_ROOM(ch)].ex_description);
-    if (tmp_desc) {
-            sprintf(buffer,"$n looks at the %s.",arg2);
-            act(buffer,1,ch,0,0,TO_ROOM);
-            if(isdigit(*tmp_desc)) {
-              window=atoi(tmp_desc);
-              look_in_room(ch,window);
-              return;
+        if (*arg2) {
+          bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP | FIND_CHAR_ROOM,
+                              ch, &tmp_char, &found_object);
+          if (tmp_char) {
+            if (ch != tmp_char) {
+              act("$n looks at you.", TRUE, ch, 0, tmp_char, TO_VICT);
+              act("$n looks at $N.", TRUE, ch, 0, tmp_char, TO_NOTVICT);
             }
-            else page_string(ch->desc, tmp_desc, 0);
-      return; /* RETURN SINCE IT WAS A ROOM DESCRIPTION */
-      /* Old system was: found = TRUE; */
-    }
-  }
-
-  /* Search for extra descriptions in items */
-  /* Equipment Used */
-
-  if (!found) {
-    for (j = 0; j< MAX_WEAR && !found; j++) {
-      if (ch->equipment[j]) {
-        if (CAN_SEE_OBJ(ch,ch->equipment[j])) {
-    tmp_desc = find_ex_description(arg2,
-                 ch->equipment[j]->ex_description);
-    if (tmp_desc) {
-                  if(isdigit(*tmp_desc)) {
-                    window=atoi(tmp_desc);
-                    look_in_room(ch,window);
-                    return;
-                  }
-      else {
-       page_string(ch->desc, tmp_desc, 1);
-       if(IS_SET(ch->equipment[j]->obj_flags.extra_flags2, ITEM_ALL_DECAY) || IS_SET(ch->equipment[j]->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
-         max_time=obj_proto_table[ch->equipment[j]->item_number].obj_flags.timer;
-         if(max_time)
-           val3=9-10*ch->equipment[j]->obj_flags.timer/max_time;
-         else val3=9;
-         if(val3<0) val3=0;
-         val3=MIN(val3,9);
-         printf_to_char(ch,"This item decays and seems %s.\n\r",decay_text[val3]);
-       }
-      }
-      found = TRUE;
-    }
-        }
-      }
-    }
-  }
-
-  /* In inventory */
-
-  if (!found) {
-    for(tmp_object = ch->carrying;
-        tmp_object && !found;
-        tmp_object = tmp_object->next_content) {
-      if CAN_SEE_OBJ(ch, tmp_object) {
-        tmp_desc = find_ex_description(arg2,
-               tmp_object->ex_description);
-        if (tmp_desc) {
-                if(isdigit(*tmp_desc)) {
-                  window=atoi(tmp_desc);
-                  look_in_room(ch,window);
-                  return;
-                }
-    else {
-      page_string(ch->desc, tmp_desc, 1);
-       if(IS_SET(tmp_object->obj_flags.extra_flags2, ITEM_ALL_DECAY) || IS_SET(tmp_object->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
-         max_time=obj_proto_table[tmp_object->item_number].obj_flags.timer;
-         if(max_time)
-           val3=9-10*tmp_object->obj_flags.timer/max_time;
-         else val3=9;
-         if(val3<0) val3=0;
-         val3=MIN(val3,9);
-         printf_to_char(ch,"This item decays and seems %s.\n\r",decay_text[val3]);
-       }
-    }
-    found = TRUE;
-        }
-      }
-    }
-  }
-
-  /* Object In room */
-
-  if (!found) {
-    for(tmp_object = world[CHAR_REAL_ROOM(ch)].contents;
-        tmp_object && !found;
-        tmp_object = tmp_object->next_content) {
-      if CAN_SEE_OBJ(ch, tmp_object) {
-        tmp_desc = find_ex_description(arg2,
-               tmp_object->ex_description);
-        if (tmp_desc) {
-                if(isdigit(*tmp_desc)) {
-                  window=atoi(tmp_desc);
-                  look_in_room(ch,window);
-                  return;
-                }
-    else {
-      page_string(ch->desc, tmp_desc, 1);
-       if(IS_SET(tmp_object->obj_flags.extra_flags2, ITEM_ALL_DECAY) || IS_SET(tmp_object->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
-         max_time=obj_proto_table[tmp_object->item_number].obj_flags.timer;
-         if(max_time)
-           val3=9-10*tmp_object->obj_flags.timer/max_time;
-         else val3=9;
-         if(val3<0) val3=0;
-         val3=MIN(val3,9);
-         printf_to_char(ch,"This item decays and seems %s.\n\r",decay_text[val3]);
-       }
-
-    }
-    found = TRUE;
-        }
-      }
-    }
-  }
-
-  /* wrong argument */
-
-  if (bits) { /* If an object was found */
-    if (!found) {
-      show_obj_to_char(found_object, ch, 5,0); /* Show no-description */
+            show_char_to_char(tmp_char, ch, 1);
+            return;
           }
-    else
-      show_obj_to_char(found_object, ch, 6,0); /* Find hum, glow etc */
-  } else if (!found) {
-    send_to_char("You do not see that here.\n\r", ch);
-  }
-      } else {
-  /* no argument */
-  send_to_char("Look at what?\n\r", ch);
+
+          /* Search for Extra Descriptions in room and items */
+          /* Extra description in room?? */
+          /* Added window feature - Ranger August 96 */
+          if (!found) {
+            tmp_desc = find_ex_description(arg2, world[CHAR_REAL_ROOM(ch)].ex_description);
+            if (tmp_desc) {
+              sprintf(buffer,"$n looks at the %s.",arg2);
+              act(buffer,1,ch,0,0,TO_ROOM);
+              if(isdigit(*tmp_desc)) {
+                window=atoi(tmp_desc);
+                look_in_room(ch,window);
+                return;
+              }
+              else {
+                page_string(ch->desc, tmp_desc, 0);
+              }
+              return; /* RETURN SINCE IT WAS A ROOM DESCRIPTION */
+              /* Old system was: found = TRUE; */
+            }
+          }
+
+          /* Search for extra descriptions in items */
+          /* Equipment Used */
+
+          if (!found) {
+            for (j = 0; (j < MAX_WEAR) && !found; j++) {
+              if (NULL != (tmp_object = ch->equipment[j])) {
+                found = show_object_extra_desc(tmp_object, ch, arg2);
+              }
+            }
+          }
+
+          /* In inventory */
+
+          if (!found) {
+            for (tmp_object = ch->carrying; tmp_object && !found; tmp_object = tmp_object->next_content) {
+              found = show_object_extra_desc(tmp_object, ch, arg2);
+            }
+          }
+
+          /* Object In room */
+
+          if (!found) {
+            for(tmp_object = world[CHAR_REAL_ROOM(ch)].contents; tmp_object && !found; tmp_object = tmp_object->next_content) {
+              found = show_object_extra_desc(tmp_object, ch, arg2);
+            }
+          }
+
+          /* wrong argument */
+
+          if (bits) { /* If an object was found */
+            if (!found) {
+              show_obj_to_char(found_object, ch, 5,0); /* Show no-description */
+            }
+            else {
+              show_obj_to_char(found_object, ch, 6,0); /* Find hum, glow etc */
+            }
+          }
+          else if (!found) {
+            send_to_char("You do not see that here.\n\r", ch);
+          }
+        }
+        else {
+          /* no argument */
+          send_to_char("Look at what?\n\r", ch);
+        }
       }
-    } break;
+      break;
 
       /* look ''    */
-    case 8 : {
-
+    case 8 :
       look_in_room(ch,world[CHAR_REAL_ROOM(ch)].number);
-
-    } break;
+      break;
 
       /* wrong arg  */
     case -1 :

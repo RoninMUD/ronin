@@ -46,7 +46,6 @@ extern char motd[MAX_STRING_LENGTH];
 extern char godmotd[MAX_STRING_LENGTH];
 extern char newbiemotd[MAX_STRING_LENGTH];
 extern CHAR *character_list;
-extern int top_of_p_table;
 int max_connects=0;
 struct command_info cmd_info[MAX_CMD_LIST];
 extern char*   crypt __P((__const char *__key, __const char *__salt));

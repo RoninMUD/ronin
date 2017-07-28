@@ -223,6 +223,8 @@ int PULSECHECK;
 int CHAOSDEATH;
 int TOKENCOUNT;
 int DOUBLEXP;
+#define SZ_OPT_CREATEIMP "CREATEIMP:"
+char CREATEIMP[21];
 
 void update_reboot(void) {
   FILE *fl;
@@ -244,7 +246,7 @@ void update_reboot(void) {
 int main(int argc, char **argv)
 {
   int pos = 1,tmp_num;
-  char tmp_txt[20];
+  char tmp_txt[40];
   FILE *fl;
 
   port = DFLT_PORT;
@@ -270,6 +272,8 @@ int main(int argc, char **argv)
   disablereboot=0;
 #endif
 
+  memset(CREATEIMP, 0, sizeof(CREATEIMP));
+
   open_logfile();
 
   /* Option file addition - Ranger Sept 2000 */
@@ -289,6 +293,15 @@ int main(int argc, char **argv)
       if(!strcmp("CHAOSDEATH",tmp_txt))    CHAOSDEATH=tmp_num;
       if(!strcmp("TOKENCOUNT",tmp_txt))    TOKENCOUNT=tmp_num;
       if(!strcmp("DOUBLEXP",tmp_txt))      DOUBLEXP=tmp_num;
+
+      if(!strncmp(SZ_OPT_CREATEIMP, tmp_txt, sizeof(SZ_OPT_CREATEIMP) - 1)) {
+        if (tmp_num) {
+          size_t len = strlen(tmp_txt) - (sizeof(SZ_OPT_CREATEIMP) - 1);
+          if ((len > 0) && (len < sizeof(CREATEIMP))) {
+            strncpy(CREATEIMP, tmp_txt + (sizeof(SZ_OPT_CREATEIMP) - 1), len);
+          }
+        }
+      }
     }
     fclose(fl);
   }

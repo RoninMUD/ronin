@@ -43,12 +43,11 @@ struct char_data *character_list = 0; /* global l-list of chars          */
 
 struct zone_data *zone_table;         /* table of reset data             */
 struct message_list fight_messages[MAX_MESSAGES]; /* fighting messages   */
-int top_of_p_table = 0;               /* ref to top of table             */
-int top_of_p_file = 0;
 extern int CHAOSMODE;
 extern int BAMDAY;
 extern int BOOTFULL;
 extern int TOKENCOUNT;
+extern char CREATEIMP[];
 
 char credits[MSL];      /* the Credits List                */
 char heroes[MSL];       /* the Heroes List                */
@@ -1618,10 +1617,8 @@ struct obj_data *read_object(int nr, int type)
   for(i=0;i<6;i++)
     obj->obj_flags.skin_vnum[i]=0;
 
-  /* *** extra descriptions *** */
 
-  obj->ex_description = obj_proto_table[nr].ex_description;
-
+  /* affects */
   for( i = 0 ; (i < MAX_OBJ_AFFECT); i++) {
     obj->affected[i].location = obj_proto_table[nr].affected[i].location;
     obj->affected[i].modifier = obj_proto_table[nr].affected[i].modifier;
@@ -2726,7 +2723,9 @@ void free_obj(struct obj_data *obj)
   if(obj->room_rem_desc)
     free(obj->room_rem_desc);
 
-  if (obj->ex_description != obj_proto_table[obj->item_number].ex_description) {
+
+  /* if object instance has overridden extra decs, delete them */
+  if (obj->ex_description) {
     for (i_descr = obj->ex_description; i_descr; i_descr = n_descr) {
       n_descr = i_descr->next;
       if (i_descr->keyword) free(i_descr->keyword);
@@ -2854,10 +2853,12 @@ void init_char(struct char_data *ch)
 
      /* *** if this is our first player --- he be God *** */
 
-     if (top_of_p_table < 0)
-     {
-          GET_EXP(ch) = 2000000000;
-          GET_LEVEL(ch) = LEVEL_IMP;
+     if (CREATEIMP[0] && !strncasecmp(ch->player.name, CREATEIMP, sizeof(((struct char_player_data*)0)->name))) {
+       GET_EXP(ch) = 2000000000;
+       GET_LEVEL(ch) = LEVEL_IMP;
+       SET_BIT(ch->new.imm_flags, WIZ_TRUST);
+       SET_BIT(ch->new.imm_flags, WIZ_ACTIVE);
+       ch->points.max_hit = 100;
      }
 
      set_title(ch,NULL);

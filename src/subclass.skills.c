@@ -1115,7 +1115,7 @@ void do_zeal(CHAR *ch, char *argument, int cmd) {
       }
     }
 
-    skill_wait(ch, SKILL_ZEAL, 3);
+    skill_wait(ch, SKILL_ZEAL, 2);
   }
 }
 
