@@ -915,7 +915,7 @@ trouble finding what they want when they want it. There are bookshelves filled
 with books to cross-reference materials and notes, and there is a whole table
 full of notebooks and papers scribbled with formulas and figurings.
 ~
-209 67108873 0
+209 67108872 0
 D4
 The top of the tower, and the scientific observatory.
 ~
@@ -1806,7 +1806,7 @@ goddess of life and love, Natiana. Above the altar is a large painting
 of Natiana, a winged angel with compassion in her eyes and arms
 extended, welcoming all who would enter her presence.
 ~
-209 72 0
+209 8 0
 D0
 The Sanctuary lies to the north.
 ~
@@ -1863,7 +1863,7 @@ D3
 ~
 0 -1 20975
 D5
-This should not be seen. It should be replaced by a spec.
+The door is made of a dark colored wood, it absorbs the light from the blinding sun.
 ~
 door~
 1 -1 20961
@@ -1987,6 +1987,10 @@ you've been trudging through the desert.  Unforgiving heat makes you swelter in
 the sun, even the slightest breeze wouldn't be able to comfort you.
 ~
 209 0 8
+D1
+~
+~
+0 -1 2172
 D2
 ~
 ~

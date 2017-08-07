@@ -156,6 +156,7 @@ OBJS_RONIN_SPEC = \
 	spec.topknot.o \
 	spec.trollcastle-moat.o \
 	spec.trollvillage.o \
+	spec.tweefmanor.o \
 	spec.underworld.o \
 	spec.vagabond.o \
 	spec.vanity.o \
@@ -177,7 +178,7 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.luthienIV.o \
 	spec.swordoftruth.o \
 	spec.workbench.o \
-	spec.WOT.o
+	spec.WOT.o 
 
 ifeq ($(TYPE), test)
 	OBJS_RONIN_SPEC += $(OBJS_RONIN_SPEC_TEST)
