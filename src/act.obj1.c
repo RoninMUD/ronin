@@ -1471,11 +1471,15 @@ void do_split(struct char_data *ch, char *argument, int cmd) { /* Updated Dec 98
     return;
   }
   if(!is_number(buf)) {
-    send_to_char("Sorry, you can't do that!\n\r",ch);
-    return;
+    if(!strncmp(buf, "all.coins", MAX_INPUT_LENGTH)) amount=GET_GOLD(ch);
+    else {
+      send_to_char("Sorry, you can't do that!\n\r",ch);
+      return;
+    }
+  } else {
+    amount=atoi(buf);
   }
 
-  amount=atoi(buf);
   if (amount<=0) {
     send_to_char("Sorry, you can't do that!\n\r",ch);
     return;

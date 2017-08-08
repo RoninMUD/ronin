@@ -6172,6 +6172,7 @@ Split is a command used with in a group to equally split up a particular
 amount of gold to each person in the group.
 
 Usage: split <amount of gold>
+       split all.coins
 
 See Also: -
 #
