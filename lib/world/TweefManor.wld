@@ -87,9 +87,15 @@ and if you strain, you can hear music...
 vines~
 11 -1 20907
 E
-fans~
-Beautiful fans are spread across the wall in a massive collage.
-All are different, with varying sizes, designs, even color
+chandelier~
+The lovely piece of glasswork is shaped like a turtle, with 7 
+firey candles.  There seems to be a hole near the roof, large enough
+for a person to fit through. The vines that hang from the ceiling
+appear to grow from that hole.
+~
+E
+vines~
+The beautiful flower-producing vines look very strong, maybe they were fed steroids.
 ~
 E
 plants~
@@ -99,15 +105,9 @@ also look a little neglected, almost as if they hadn't been watered
 in a few weeks.
 ~
 E
-vines~
-The beautiful flower-producing vines look very strong, maybe they were fed steroids.
-~
-E
-chandelier~
-The lovely piece of glasswork is shaped like a turtle, with 7 
-firey candles.  There seems to be a hole near the roof, large enough
-for a person to fit through. The vines that hang from the ceiling
-appear to grow from that hole.
+fans~
+Beautiful fans are spread across the wall in a massive collage.
+All are different, with varying sizes, designs, even color
 ~
 S
 #20903
@@ -182,11 +182,21 @@ and this one.
 ~
 0 -1 20906
 E
-fresco~
-This mural is celebrating the joy-filled wedding of the Tweef King and 
-Queen, a great day in Tweef history.  The happy tweefs that stand around are
-enjoying this wonderful occasion, and even the ever-present guardian blarfs
-look like they're having a good time.
+couch~
+The comfortable looking couch beckons you, tempting you with soft cushions 
+and fluffy pillows.  The sides of the couch are torn to shreds, probably from 
+a pet's zealous nail-sharpening exercise.
+~
+E
+plant~
+The plant appears to be a miniature pansy, transplanted from a garden
+somewhere. It's blue and purple face blend with the colors of the room,
+and it's green leaves echo the color of the hall ahead of you.
+~
+E
+chandelier~
+The cerulean chandelier has 16 glowing candles that eerily resembles
+a mushroom.
 ~
 E
 painting~
@@ -196,21 +206,11 @@ enjoying this wonderful occasion, and even the ever-present guardian blarfs
 look like they're having a good time.
 ~
 E
-chandelier~
-The cerulean chandelier has 16 glowing candles that eerily resembles
-a mushroom.
-~
-E
-plant~
-The plant appears to be a miniature pansy, transplanted from a garden
-somewhere. It's blue and purple face blend with the colors of the room,
-and it's green leaves echo the color of the hall ahead of you.
-~
-E
-couch~
-The comfortable looking couch beckons you, tempting you with soft cushions 
-and fluffy pillows.  The sides of the couch are torn to shreds, probably from 
-a pet's zealous nail-sharpening exercise.
+fresco~
+This mural is celebrating the joy-filled wedding of the Tweef King and 
+Queen, a great day in Tweef history.  The happy tweefs that stand around are
+enjoying this wonderful occasion, and even the ever-present guardian blarfs
+look like they're having a good time.
 ~
 S
 #20906
@@ -372,17 +372,14 @@ D2
 ~
 0 -1 20901
 E
-book~
-You notice a paperback copy of "My Warrior, My Love", by a Blarf romance
-novelist, in the grass. You pick up the book and see the name "Larandi"
-printed on the inside cover. A page has been torn out of the middle of the
-book, and you begin reading. You stop reading almost immediately, as you feel
-your face turning bright red with embarrassment. You put the book down quickly.
+tree~
+A sturdy peach tree, with a knothole where a squirrel has attempted 
+to make its home.
 ~
 E
-willow~
-A large willow drapes its tendrils and leaves around the bench, providing
-moderate privacy for anyone beneath.
+trellis~
+A white painted wooden trellis creates the perfect place for the
+climbing rose to grow, and also accents the pathway that leads eastward.
 ~
 E
 bench~
@@ -391,14 +388,17 @@ the willow tree, it makes a perfect picnic bench, or a great place to
 read a book.
 ~
 E
-trellis~
-A white painted wooden trellis creates the perfect place for the
-climbing rose to grow, and also accents the pathway that leads eastward.
+willow~
+A large willow drapes its tendrils and leaves around the bench, providing
+moderate privacy for anyone beneath.
 ~
 E
-tree~
-A sturdy peach tree, with a knothole where a squirrel has attempted 
-to make its home.
+book~
+You notice a paperback copy of "My Warrior, My Love", by a Blarf romance
+novelist, in the grass. You pick up the book and see the name "Larandi"
+printed on the inside cover. A page has been torn out of the middle of the
+book, and you begin reading. You stop reading almost immediately, as you feel
+your face turning bright red with embarrassment. You put the book down quickly.
 ~
 S
 #20915
@@ -420,10 +420,10 @@ D3
 ~
 0 -1 20919
 E
-bullfrog~
-A very protective, father-like bullfrog, he seems to be guarding
-the ducklings nearby. His green tone blends him with the reeds that
-he sits in, and so he is almost invisible.
+swan~
+A stunningly beautiful swan, so pure white, there is not even a 
+single mark of discolor. She swims across the pond, as if patrolling,
+ever alert for any kind of danger.
 ~
 E
 ducklings~
@@ -432,10 +432,10 @@ brown feathers and little orange bills. One little ugly duckling swims
 by himself, further from the ducklings, but closer to the bullfrog.
 ~
 E
-swan~
-A stunningly beautiful swan, so pure white, there is not even a 
-single mark of discolor. She swims across the pond, as if patrolling,
-ever alert for any kind of danger.
+bullfrog~
+A very protective, father-like bullfrog, he seems to be guarding
+the ducklings nearby. His green tone blends him with the reeds that
+he sits in, and so he is almost invisible.
 ~
 S
 #20916
@@ -473,8 +473,24 @@ D2
 ~
 0 -1 20914
 E
-poppy~
-Bright red poppies are interspersed amoung tall green bushes that 
+snapdragons~
+    A bright array of red, orange, yellow and even a few purple 
+snapdragons are scattered through the garden.
+~
+E
+pansies~
+   Deep purple and yellow pansies are strategically growing throughout
+the garden to capture the small amount of sunshine that filters
+through the canopy of trees.
+~
+E
+gladiolus~
+   Lovely, tall gladiolus form rings around the base of the trees, 
+pretty yellows and pinks add color to the brown tree trunks.
+~
+E
+poppies~
+   Bright red poppies are interspersed amoung tall green bushes that 
 enclose this garden away from the world outside.
 ~
 E
@@ -484,25 +500,9 @@ there is a comfortable looking tire-swing hanging from a strong
 branch.
 ~
 E
-poppies~
-   Bright red poppies are interspersed amoung tall green bushes that 
+poppy~
+Bright red poppies are interspersed amoung tall green bushes that 
 enclose this garden away from the world outside.
-~
-E
-gladiolus~
-   Lovely, tall gladiolus form rings around the base of the trees, 
-pretty yellows and pinks add color to the brown tree trunks.
-~
-E
-pansies~
-   Deep purple and yellow pansies are strategically growing throughout
-the garden to capture the small amount of sunshine that filters
-through the canopy of trees.
-~
-E
-snapdragons~
-    A bright array of red, orange, yellow and even a few purple 
-snapdragons are scattered through the garden.
 ~
 S
 #20918
@@ -554,16 +554,27 @@ D3
 ~
 0 -1 20914
 E
-roses~
-     Sharp thorns protect the mini rose bushes that dot the garden. A
-few colors catch your eye, but the most beautiful in the garden is a 
-small plant with a light blue color.
+pansies~
+These familiar faces are popular in the gardens, and the ever-present
+purple theme dominates these pretty flowers.
 ~
 E
-irises~
-     The elegant irises stand as tall as they can in their miniature
-splendor, certainly more breathtaking than the dull roses on their
-green vines.
+violas~
+     Quaint purple flowers, smile delicately in between the clover
+leaves.
+~
+E
+clover~
+     The whole ground is carpeted with green clover leaves, white and
+purple flowers peek out, though rare. Luck strikes, and you see a 
+four leaf clover sticking out from under your shoe. You reach for it,
+but it suddenly isn't there...
+~
+E
+hyacinths~
+     Small bell-shaped flowers grow on short stems, sprouting here and
+there, in between bushes, decorating the plain green shrubbery with
+their purple majesty.
 ~
 E
 chrysanthemums~
@@ -574,27 +585,16 @@ their orange and white homeliness, stay away from the more beautiful
 roses, not wishing to be upstaged.
 ~
 E
-hyacinths~
-     Small bell-shaped flowers grow on short stems, sprouting here and
-there, in between bushes, decorating the plain green shrubbery with
-their purple majesty.
+irises~
+     The elegant irises stand as tall as they can in their miniature
+splendor, certainly more breathtaking than the dull roses on their
+green vines.
 ~
 E
-clover~
-     The whole ground is carpeted with green clover leaves, white and
-purple flowers peek out, though rare. Luck strikes, and you see a 
-four leaf clover sticking out from under your shoe. You reach for it,
-but it suddenly isn't there...
-~
-E
-violas~
-     Quaint purple flowers, smile delicately in between the clover
-leaves.
-~
-E
-pansies~
-These familiar faces are popular in the gardens, and the ever-present
-purple theme dominates these pretty flowers.
+roses~
+     Sharp thorns protect the mini rose bushes that dot the garden. A
+few colors catch your eye, but the most beautiful in the garden is a 
+small plant with a light blue color.
 ~
 S
 #20920
@@ -616,9 +616,9 @@ D3
 ~
 0 -1 20901
 E
-maples~
-Tall deciduous trees spread their leafless limbs toward the sky in
-silent praise to the goddess who created them.
+bows~
+The ribbony bows add bright color to the green branches and winter
+snow.
 ~
 E
 lights~
@@ -626,9 +626,9 @@ The red, blue, and yellow lights blink festively in this eternal
 winter.
 ~
 E
-bows~
-The ribbony bows add bright color to the green branches and winter
-snow.
+maples~
+Tall deciduous trees spread their leafless limbs toward the sky in
+silent praise to the goddess who created them.
 ~
 S
 #20921
@@ -647,24 +647,9 @@ D0
 ~
 0 -1 20915
 E
-carp~
-Very large goldfish with brightly colored scales and fins swim
-around you without a second glance.
-~
-E
-guppies~
-Tiny fish swim in the protection of the carp, hurrying in, out, up,
-down, and all around the larger fish.
-~
-E
-minnows~
-Tiny fish swim in the protection of the carp, hurrying in, out, up,
-down, and all around the larger fish.
-~
-E
-crabs~
-Little crabs bury themselves in the cool mud of the pond floor, and small
-shellfish hide in their homes, tucked away in the soft mud.
+ducks~
+For the most part you can only see their feet, paddling freely
+along. Occasionally one will dip their head, just to check on you.
 ~
 E
 shellfish~
@@ -672,9 +657,24 @@ Little crabs bury themselves in the cool mud of the pond floor, and small
 shellfish hide in their homes, tucked away in the soft mud.
 ~
 E
-ducks~
-For the most part you can only see their feet, paddling freely
-along. Occasionally one will dip their head, just to check on you.
+crabs~
+Little crabs bury themselves in the cool mud of the pond floor, and small
+shellfish hide in their homes, tucked away in the soft mud.
+~
+E
+minnows~
+Tiny fish swim in the protection of the carp, hurrying in, out, up,
+down, and all around the larger fish.
+~
+E
+guppies~
+Tiny fish swim in the protection of the carp, hurrying in, out, up,
+down, and all around the larger fish.
+~
+E
+carp~
+Very large goldfish with brightly colored scales and fins swim
+around you without a second glance.
 ~
 S
 #20922
@@ -1000,12 +1000,12 @@ The hallway leads back out to the main hall.
 doors~
 1 -1 20936
 E
-books~
+table~
 On the feature table, you see a book entitled "All You Need to Know to Travel
 Safely in Midgaard", "Caring for Your Shehanth", and "Holy Books of Natiana".
 ~
 E
-table~
+books~
 On the feature table, you see a book entitled "All You Need to Know to Travel
 Safely in Midgaard", "Caring for Your Shehanth", and "Holy Books of Natiana".
 ~
@@ -1080,19 +1080,9 @@ The hallway that leads to the banquet hall.
 ~
 0 -1 20937
 E
-supplies~
-Cupboards with pots and pans, dishes and kettles, are overflowing onto the
-floor, while spoons and other utensils are hanging on the walls, waiting
-for the right occasion.
-~
-E
-chairs~
-Piles upon piles of high backed wooden chairs are clustered into the corner of
-the room, unused.
-~
-E
-tables~
-Tables with dismantled legs are stacked against one wall, waiting to be used.
+food~
+On a table by the door servants are placing plates on trays that are to be
+taken to the feast.
 ~
 E
 plates~
@@ -1100,9 +1090,19 @@ Dirty dishes are piled up on the excess tables and counterspace, inclining you
 to believe there might be a feast in progress.
 ~
 E
-food~
-On a table by the door servants are placing plates on trays that are to be
-taken to the feast.
+tables~
+Tables with dismantled legs are stacked against one wall, waiting to be used.
+~
+E
+chairs~
+Piles upon piles of high backed wooden chairs are clustered into the corner of
+the room, unused.
+~
+E
+supplies~
+Cupboards with pots and pans, dishes and kettles, are overflowing onto the
+floor, while spoons and other utensils are hanging on the walls, waiting
+for the right occasion.
 ~
 S
 #20939
@@ -1135,15 +1135,15 @@ The kitchen pantry lies to the west.
 ~
 0 -1 20941
 E
+pot~
+A large batch of noodles seem to be boiling over, but nobody notices or 
+attempts to correct the problem.
+~
+E
 oven~
 The oven is big enough to cook a large dog inside.  It is probably used for
 the parties and feasts the royal life demands, mostly cooking extreme
 quantities of food.
-~
-E
-pot~
-A large batch of noodles seem to be boiling over, but nobody notices or 
-attempts to correct the problem.
 ~
 S
 #20940
@@ -1166,15 +1166,15 @@ D5
 ~
 0 -1 20904
 E
-bench~
-A few rats hide beneath the partially rotten bench, gnawing on scraps that
-fall through the floor.
-~
-E
 kegs~
 Great huge wine casks, untapped and bloated, seem to call your name.  There
 is a shelf near the first keg that contains all the things one would need
 to tap any keg in the room.
+~
+E
+bench~
+A few rats hide beneath the partially rotten bench, gnawing on scraps that
+fall through the floor.
 ~
 S
 #20941
@@ -1274,10 +1274,14 @@ The hall leads down to the kitchen.
 ~
 0 -1 20943
 E
-windows~
-The large windows overlook the roof to the kitchen where the King seems to have
-set up a putting green to use when he finds spare time.  It doesn't look to
-well used, he must have more important things to do, like run the manor.
+curtain~
+The curtain separates the waiting room from the hallway to the private quarters
+of the royal family.
+~
+E
+couch~
+The couch looks as if it was steam-cleaned yesterday, and the pink cushions
+have so much frilly lace they look like they'd fall apart when touched.
 ~
 E
 paintings~
@@ -1286,14 +1290,10 @@ of Larandi surrounded by her pets, and a third is of Larandi and Erton with
 their arms around one another sitting in the Rose Garden.
 ~
 E
-couch~
-The couch looks as if it was steam-cleaned yesterday, and the pink cushions
-have so much frilly lace they look like they'd fall apart when touched.
-~
-E
-curtain~
-The curtain separates the waiting room from the hallway to the private quarters
-of the royal family.
+windows~
+The large windows overlook the roof to the kitchen where the King seems to have
+set up a putting green to use when he finds spare time.  It doesn't look to
+well used, he must have more important things to do, like run the manor.
 ~
 S
 #20945
@@ -1318,20 +1318,20 @@ D3
 curtain~
 1 -1 20944
 E
-creature~
-You take a closer look at the creature, only to realize that it is your own
-reflection.
+paintings~
+The closest painting is of a desert sunset behind the Manor, and the one
+opposite is a sunrise from inside an oasis. The other paintings appear to be
+weather around the Manor, lightning striking, snow in the garden, and even
+hail pelting the balcony outside the throne room.
 ~
 E
 mirror~
 A horrible creature greets you with a smile from the confines of the mirror.
 ~
 E
-paintings~
-The closest painting is of a desert sunset behind the Manor, and the one
-opposite is a sunrise from inside an oasis. The other paintings appear to be
-weather around the Manor, lightning striking, snow in the garden, and even
-hail pelting the balcony outside the throne room.
+creature~
+You take a closer look at the creature, only to realize that it is your own
+reflection.
 ~
 S
 #20946
@@ -1354,11 +1354,9 @@ D3
 ~
 0 -1 20945
 E
-couch~
-The color of the couch is so dark that if the carpet were the same color, you
-wouldn't even be able to see it.  Cream pillows that do match the carpet are
-placed in the corners of the couch, and a reclining feature encourages you to
-put your feet up and rest.
+table~
+Under the glass of the table is a photo collage of Larandi while she was
+growing up, always under the supervision of her parents.
 ~
 E
 curtain~
@@ -1368,9 +1366,11 @@ thick, so you can't actually see into the bedroom, but you can hear a strange
 meowing sound.
 ~
 E
-table~
-Under the glass of the table is a photo collage of Larandi while she was
-growing up, always under the supervision of her parents.
+couch~
+The color of the couch is so dark that if the carpet were the same color, you
+wouldn't even be able to see it.  Cream pillows that do match the carpet are
+placed in the corners of the couch, and a reclining feature encourages you to
+put your feet up and rest.
 ~
 S
 #20947
@@ -1446,10 +1446,10 @@ The guest bedroom is through the opening to the west.
 door~
 1 -1 20950
 E
-window~
-The garden is filled with exotic plants and trees, you can see the variety
-of each part of the garden from here. With each different plants' special
-needs, the gardeners must have a difficult time with upkeep.
+doors~
+Expert workmanship has carved beautiful figures into the wood of the 
+doors. The animals are so lifelike you could almost believe they were
+real.
 ~
 E
 plants~
@@ -1457,10 +1457,10 @@ The tall ferns stand sentinel on either side of the doors, their bronzed
 pots look heavy, the servants must rarely move them while cleaning.
 ~
 E
-doors~
-Expert workmanship has carved beautiful figures into the wood of the 
-doors. The animals are so lifelike you could almost believe they were
-real.
+window~
+The garden is filled with exotic plants and trees, you can see the variety
+of each part of the garden from here. With each different plants' special
+needs, the gardeners must have a difficult time with upkeep.
 ~
 S
 #20950
@@ -1489,42 +1489,9 @@ The hallway lies to the east.
 door~
 1 -1 20949
 E
-n~
-hmm
-~
-E
-bed~
-The canopy is pulled back, since there is noone sleeping in the bed,
-but the fluffy pillows and warm blankets are a blatant invitation
-to rest your weary feet from your search.
-~
-E
-nightstand~
-A few drawers under the tea service, they would contain personal
-items, if a guest were staying in this room.
-~
-E
-service~
-The silver is polished and the tea is hot, the toast is buttered and
-the fruit is fresh, all pointing to an invitation to whet your
-appetite on royal food.
-~
-E
-tea~
-The silver is polished and the tea is hot, the toast is buttered and
-the fruit is fresh, all pointing to an invitation to whet your
-appetite on royal food.
-~
-E
-chest~
-This hope chest is probably full of family memories and is just set 
-here for decoration. It is locked closed, and you're pretty sure that
-there is no key.
-~
-E
-drawers~
-Each drawer would be full of clothes, if there were a guest in this
-room, but it is surprisingly empty.
+windows~
+You can see all the gardens that surround the manor, and you understand, by
+seeing the beauty of the land why the tweefs are a content people.
 ~
 E
 screen~
@@ -1533,9 +1500,42 @@ sides are different and make no sense. Vertical lines here, stars
 there, and there doesn't appear to be any sort of pattern.
 ~
 E
-windows~
-You can see all the gardens that surround the manor, and you understand, by
-seeing the beauty of the land why the tweefs are a content people.
+drawers~
+Each drawer would be full of clothes, if there were a guest in this
+room, but it is surprisingly empty.
+~
+E
+chest~
+This hope chest is probably full of family memories and is just set 
+here for decoration. It is locked closed, and you're pretty sure that
+there is no key.
+~
+E
+tea~
+The silver is polished and the tea is hot, the toast is buttered and
+the fruit is fresh, all pointing to an invitation to whet your
+appetite on royal food.
+~
+E
+service~
+The silver is polished and the tea is hot, the toast is buttered and
+the fruit is fresh, all pointing to an invitation to whet your
+appetite on royal food.
+~
+E
+nightstand~
+A few drawers under the tea service, they would contain personal
+items, if a guest were staying in this room.
+~
+E
+bed~
+The canopy is pulled back, since there is noone sleeping in the bed,
+but the fluffy pillows and warm blankets are a blatant invitation
+to rest your weary feet from your search.
+~
+E
+n~
+hmm
 ~
 S
 #20951
@@ -1560,15 +1560,15 @@ D2
 ~
 0 -1 20945
 E
+thumbtack~
+The red thumbtack is stuck in the dead center of each door, perhaps a symbol
+for something, like Do Not Enter, or Come Back Later.
+~
+E
 doors~
 The doors are extraordinarily decorative, although it is not unusual for
 royalty like the King and Queen to afford such luxuries in their private
 appartments.
-~
-E
-thumbtack~
-The red thumbtack is stuck in the dead center of each door, perhaps a symbol
-for something, like Do Not Enter, or Come Back Later.
 ~
 S
 #20952
@@ -1592,14 +1592,14 @@ D3
 doors~
 1 -1 20951
 E
-lampshades~
-Unusual black lampshades are embroidered with gold thread into intricate
-patterns that form silhouettes on the walls.
-~
-E
 bedspread~
 The ebony fabric is overlayed with golden thread, twisted into exotic
 shapes.
+~
+E
+lampshades~
+Unusual black lampshades are embroidered with gold thread into intricate
+patterns that form silhouettes on the walls.
 ~
 S
 #20953
@@ -1621,15 +1621,15 @@ You can see into the bedchambers of the royal tweef family.
 ~
 0 -1 20952
 E
-flowers~
-The distinct sun-colored flowers bring a merry feeling to the colorless
-marble.
-~
-E
 chairs~
 The black wrought iron chairs match the interior decor of the royal bedroom,
 and they have golden cushions covering the seat, to provide a more comfortable
 morning resting place.
+~
+E
+flowers~
+The distinct sun-colored flowers bring a merry feeling to the colorless
+marble.
 ~
 S
 #20954
@@ -1650,10 +1650,15 @@ D3
 curtain~
 1 -1 20946
 E
-cushion~
-This is a bed not meant to contain any normal sized animal. The pet Larandi
-keeps must be twice the size of a lynx, but it must be domesticated,
-if it sleeps here in the princess's bedroom.
+bed~
+The sheets and bed coverings have been recently uesd, they are twisted and
+half of them are hanging over the side. Pillows have been thrown haphazardly
+back onto the bed, to keep the floor clean.
+~
+E
+vanity~
+A large desk with a round mirror against the wall, it has drawers that are
+full of makeup, nail polish and other girlish affects.
 ~
 E
 closet~
@@ -1663,15 +1668,10 @@ inside of each door, so Larandi can make her clothing choices with a
 complete view of herself.
 ~
 E
-vanity~
-A large desk with a round mirror against the wall, it has drawers that are
-full of makeup, nail polish and other girlish affects.
-~
-E
-bed~
-The sheets and bed coverings have been recently uesd, they are twisted and
-half of them are hanging over the side. Pillows have been thrown haphazardly
-back onto the bed, to keep the floor clean.
+cushion~
+This is a bed not meant to contain any normal sized animal. The pet Larandi
+keeps must be twice the size of a lynx, but it must be domesticated,
+if it sleeps here in the princess's bedroom.
 ~
 S
 #20955
@@ -1698,14 +1698,14 @@ The red bricks continue south towards the temple.
 ~
 0 -1 20956
 E
-bench~
-A bench carved from a solid piece of stone, it's wide enough for two 
-people to sit on.
-~
-E
 bushes~
 Through the thinly leaved bushes, you catch glimpses of bright colored
 flowers.
+~
+E
+bench~
+A bench carved from a solid piece of stone, it's wide enough for two 
+people to sit on.
 ~
 S
 #20956
@@ -2174,9 +2174,9 @@ D2
 bushes~
 8 -1 20976
 E
-well~
-Limestone bricks make up the wall surrounding the well. A rope  rests on the
-ground beside the well, so you can draw water up to drink.
+vegetation~
+Small plants and bushes line the outside of the crystal water, a
+natural barrier to create privacy.
 ~
 E
 pool~
@@ -2184,9 +2184,9 @@ Just south of here, the deep blue water murmurs gently of the
 coolness and refreshment it can provide.
 ~
 E
-vegetation~
-Small plants and bushes line the outside of the crystal water, a
-natural barrier to create privacy.
+well~
+Limestone bricks make up the wall surrounding the well. A rope  rests on the
+ground beside the well, so you can draw water up to drink.
 ~
 S
 #20978
@@ -2477,15 +2477,17 @@ You can see the bedroom through the opening between the rooms.
 ~
 0 -1 20950
 E
-shower~
-A wide shower, with a small ledge for female guests to rest their foot on
-while shaving. There are courtesy bottles of shampoo and conditioner, as well
-as a fresh bar of soap.
+bath~
+A large jacuzzi style bathtub, big enough for at least six people.
 ~
 E
-guy~
-You spin around to defend yourself from the maniac behind you with the knife,
-but when you turn from the mirror, you can no longer see him.
+sink~
+An ivory porcelain sink with a silver faucet.
+~
+E
+cabinet~
+A cabinet juts out from the wall, containing tablets, medicines, and health
+herbs of all kinds.
 ~
 E
 mirror~
@@ -2494,17 +2496,15 @@ realize it's just your reflection. You can see the whole room in the mirror,
 and the evil looking guy with the large butcher knife behind you.
 ~
 E
-cabinet~
-A cabinet juts out from the wall, containing tablets, medicines, and health
-herbs of all kinds.
+guy~
+You spin around to defend yourself from the maniac behind you with the knife,
+but when you turn from the mirror, you can no longer see him.
 ~
 E
-sink~
-An ivory porcelain sink with a silver faucet.
-~
-E
-bath~
-A large jacuzzi style bathtub, big enough for at least six people.
+shower~
+A wide shower, with a small ledge for female guests to rest their foot on
+while shaving. There are courtesy bottles of shampoo and conditioner, as well
+as a fresh bar of soap.
 ~
 S
 #0
