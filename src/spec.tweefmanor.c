@@ -71,10 +71,9 @@ extern struct time_info_data time_info;
 
 /* "fill bucket well" empty is replaced with full                           */
 /* they can be holding or carrying the bucket                               */
-int tweef_bucket_empty(OBJ *bucket, CHAR *ch, int cmd, char *arg)
-{
+int tweef_bucket_empty(OBJ *bucket, CHAR *ch, int cmd, char *arg) {
   OBJ *new_bucket;
-  char buf[MAX_INPUT_LENGTH]; 
+  char buf[MAX_INPUT_LENGTH];
   bool bReturn = FALSE;
 
   if(ch && cmd==CMD_FILL && (bucket->carried_by || bucket->equipped_by)) //
@@ -82,11 +81,10 @@ int tweef_bucket_empty(OBJ *bucket, CHAR *ch, int cmd, char *arg)
     arg = one_argument(arg,buf);
     if(*buf && !strncmp(buf, "bucket", MAX_INPUT_LENGTH)) // fill bucket ...
     {
-      if(V_ROOM(ch)==WELL_ROOM)
-      { 
+      if(V_ROOM(ch)==WELL_ROOM) {
         one_argument(arg,buf);
         if(!*buf) send_to_char("Fill the bucket from where?\n\r",ch); // only entered: fill bucket
-        else if(!strncmp(buf, "well", MAX_INPUT_LENGTH)) 
+        else if(!strncmp(buf, "well", MAX_INPUT_LENGTH))
         { // fill bucket well
           act("$n fills a bucket with magic water from the well.",0,ch,0,0,TO_ROOM);
           act("You fill the bucket with magic water from the well.",0,ch,0,0,TO_CHAR);
@@ -109,9 +107,7 @@ int tweef_bucket_empty(OBJ *bucket, CHAR *ch, int cmd, char *arg)
 
 /* "pour bucket sand" to reveal entrance                                    */
 /* they can be holding or carrying the bucket                               */
-int tweef_bucket_full(OBJ *bucket, CHAR *ch, int cmd, char *arg)
-
-{
+int tweef_bucket_full(OBJ *bucket, CHAR *ch, int cmd, char *arg) {
   char buf[MAX_INPUT_LENGTH];
   bool bReturn = FALSE;
 
@@ -125,7 +121,7 @@ int tweef_bucket_full(OBJ *bucket, CHAR *ch, int cmd, char *arg)
       {
         one_argument(arg,buf);
         if(!*buf) send_to_char("Pour the bucket where?\n\r",ch); // only entered: pour bucket
-        else if(!strncmp(buf, "sand", MAX_INPUT_LENGTH)) 
+        else if(!strncmp(buf, "sand", MAX_INPUT_LENGTH))
         { // pour bucket sand
           if(world[real_room(DESERT_DOOR_ROOM)].dir_option[DOWN]->to_room_r == -1) //portal not open
           {
