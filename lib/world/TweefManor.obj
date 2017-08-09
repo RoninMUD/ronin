@@ -8,14 +8,14 @@ A bush of Indigo colored roses has been planted here.~
 10 10 10
 100
 E
-indigo~
+rose~
 An almost unreal shade of blue fleshes out the petals of the roses on this
 bush. A surprise comes when you notice the bush has no thorns at all. When
 you reach to pick a flower, the bush just bends and flexes back to its 
 original arrangement.
 ~
 E
-bush~
+indigo~
 An almost unreal shade of blue fleshes out the petals of the roses on this
 bush. A surprise comes when you notice the bush has no thorns at all. When
 you reach to pick a flower, the bush just bends and flexes back to its 
@@ -29,14 +29,14 @@ you reach to pick a flower, the bush just bends and flexes back to its
 original arrangement.
 ~
 E
-indigo~
+bush~
 An almost unreal shade of blue fleshes out the petals of the roses on this
 bush. A surprise comes when you notice the bush has no thorns at all. When
 you reach to pick a flower, the bush just bends and flexes back to its 
 original arrangement.
 ~
 E
-rose~
+indigo~
 An almost unreal shade of blue fleshes out the petals of the roses on this
 bush. A surprise comes when you notice the bush has no thorns at all. When
 you reach to pick a flower, the bush just bends and flexes back to its 
@@ -118,10 +118,10 @@ A small silver chain is draped over everything.~
 10 200000 1000
 22
 E
-belt~
+chain~
 A delicate chainlink belt, made of sterling silver.~
 E
-chain~
+belt~
 A delicate chainlink belt, made of sterling silver.~
 X
 ~
@@ -281,11 +281,11 @@ A model sits on a pedestal near the center of room.~
 9999 10 10
 10
 E
-model~
+orrery~
 The orrery makes a whiring sound, a large orb is at the center, smaller orbs slowly orbiting around it.
 ~
 E
-orrery~
+model~
 The orrery makes a whiring sound, a large orb is at the center, smaller orbs slowly orbiting around it.
 ~
 X
@@ -306,11 +306,11 @@ A fern-like plant stands here, slightly wilted.~
 9999 10 10
 10
 E
-plant~
+fern~
 It looks slightly wilted.
 ~
 E
-fern~
+plant~
 It looks slightly wilted.
 ~
 X
