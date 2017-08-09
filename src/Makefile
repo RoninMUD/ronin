@@ -178,7 +178,7 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.luthienIV.o \
 	spec.swordoftruth.o \
 	spec.workbench.o \
-	spec.WOT.o 
+	spec.WOT.o
 
 ifeq ($(TYPE), test)
 	OBJS_RONIN_SPEC += $(OBJS_RONIN_SPEC_TEST)

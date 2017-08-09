@@ -121,8 +121,8 @@ void assign_haondor(void);
 void assign_mapmaker(void);
 void assign_vagabond(void);
 void assign_red_dragons(void);
-void assign_aquest_special(void);
 void assign_tweefmanor(void);
+void assign_aquest_special(void);
 //void assign_wbw(void);
 #ifdef TEST_SITE
 void assign_questyvaderIV(void);
@@ -211,8 +211,8 @@ void assign_mobiles(void)
   assign_mapmaker();
   assign_vagabond();
   assign_red_dragons();
-  assign_aquest_special();
   assign_tweefmanor();
+  assign_aquest_special();
 //  assign_wbw();
 #ifdef TEST_SITE
   assign_digsite();
