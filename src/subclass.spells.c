@@ -1992,7 +1992,7 @@ void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     act("$n is suddenly awash in a sense of tranquility.", TRUE, victim, 0, 0, TO_ROOM);
 
     af.type = SPELL_TRANQUILITY;
-    af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 5;
+    af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 5 : 10;
     af.modifier = 2;
     af.location = APPLY_HITROLL;
     af.bitvector = AFF_NONE;

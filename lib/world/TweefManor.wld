@@ -1,0 +1,2511 @@
+#20900
+Alabaster Chamber~
+At this end of the hall, a pair of massive thrones regally watch over the manor.
+The pearly glow of the crystalline chandelier illuminates the opaque seashell
+curtains behind the thrones and the open arch to the balcony. The dazzling
+white tiles are interruped by the occasional silver-grey tile. Huge silver
+curtains are drawn away from the balcony door, that are obviously closed when
+the King wishes to have privacy. A soothing breeze drifts in from the balcony,
+and the chirping birds beckon you to come outside to enjoy the sunshine.
+~
+209 67108872 0
+D0
+~
+curtain~
+8 -1 20945
+D1
+The sunny balcony is made of pure marble, and the small green plants 
+that decorate it grow lively, the sunshine is their whole being.
+~
+~
+0 -1 20903
+D2
+A green haze seems to linger in the south, although you're still
+inside, the light has a very outdoors feeling, like growing grass.
+~
+~
+0 -1 20902
+D3
+~
+~
+0 -1 0
+E
+chandelier~
+The blazing white light that comes from the star shaped chandlier
+dazzles you as you count 19 flaming candles.
+~
+S
+#20901
+Les Jardins Rose~
+Many shades of color are found on the rose bushes in this part of the
+garden. The bushes are arranged in a circular fashion, up a small hill, with
+one bush being at the center of the hill. Assorted pinks, reds, and yellows
+make up the majority of the outer two or three rings, the inner rings being
+blue, peach, white varieties with color on just the edges of the petals, and
+even pure white.  The main attraction, though, at the center of all this
+finery, is the most beautiful shade of deep blue you've ever seen. It is
+almost purple in its depth of color, and it makes all other things in the 
+room seem slightly less beautiful.
+~
+209 0 2
+D0
+~
+~
+0 -1 20914
+D1
+~
+~
+0 -1 20920
+S
+#20902
+Verdigris Hall~
+In the malachite glow, the grass-like carpet looks so alive you want to take
+off your shoes and dance in the apparent coolness. Growing down from the
+ceiling, around the chandelier, are beautiful vines, with small budding flowers.
+Small green plants are being grown in burgundy clay pots that line the walls of
+the room. Behind the plants, hanging on the walls are some ornate fans, open to
+display their incredible artwork.
+~
+209 67108872 0
+D0
+The brightness that permeates the room directly in front of you lifts
+your spirits and gives you an urge to sing.
+~
+~
+0 -1 20900
+D2
+To the south, a very sky-like tinge affects the air, creating the
+sensation of flying.
+~
+~
+0 -1 20905
+D4
+Looking closer, you notice that the chandelier is hung through a hole
+in the ceiling, and through that hole you faintly see shadows dancing,
+and if you strain, you can hear music...
+~
+vines~
+11 -1 20907
+E
+fans~
+Beautiful fans are spread across the wall in a massive collage.
+All are different, with varying sizes, designs, even color
+~
+E
+plants~
+Some shriveled plants in tiny pots, they look like they could use a
+bigger container, or maybe they would rather be planted outside. They
+also look a little neglected, almost as if they hadn't been watered
+in a few weeks.
+~
+E
+vines~
+The beautiful flower-producing vines look very strong, maybe they were fed steroids.
+~
+E
+chandelier~
+The lovely piece of glasswork is shaped like a turtle, with 7 
+firey candles.  There seems to be a hole near the roof, large enough
+for a person to fit through. The vines that hang from the ceiling
+appear to grow from that hole.
+~
+S
+#20903
+A Marble Balcony~
+The dazzling blue sky greets your eyes, and a fresh breeze blows over the
+various flora that surrounds you, pleasing your senses. Ebony window boxes line
+the edge of the terrace, containing beautiful and sweetly scented flowers.  
+The trees that grow up to edge of the balcony are laden with fruit, and tempt
+you to pick a few from each tree.  The limbs look strong enough to hold your
+weight, but when you look over the edge, a large guard dog begins barking 
+ferociously up at you. 
+~
+209 67108864 1
+D3
+The bright light of the inside hall is cheerful and inviting.
+~
+~
+0 -1 20900
+D5
+The large tree appears to be able to support your weight, the sturdy
+limbs provide a way to balance and climb safely.
+~
+tree~
+11 -1 20914
+E
+tree~
+The large tree appears to be able to support your weight, the sturdy
+limbs provide a way to balance and climb safely.
+~
+S
+#20904
+Dank Cellar Stairs~
+Descending into the hidden depths of Tweefsmanor Hall, light
+seems to flee into the unreachable realms of silence. In contrast to 
+the colors of the world above, the only thing here is an inhuman 
+melancholia that spreads like a disease as thick as fog. Depressed 
+by the current atmosphere, your mind begins to wander to fanatical 
+thoughts of assassination.
+~
+209 9 0
+D4
+~
+~
+1 -1 20940
+D5
+It's too dark to see anything but black. But, you feel something
+under your feet. ~
+trapdoor~
+2 20946 20909
+S
+#20905
+Azure Hall~
+Under the pale nimbus of the powder blue chandelier you notice a marvelous 
+fresco covering the east wall from ceiling to floor. The magnificent painting
+depicts a wedding ceremony, probably of the King and Queen here at the Manor.
+Plush blue carpet stretches all around you, sinking slightly beneath your
+weight. A large couch is to your left, along with a small potted plant on 
+an end table.
+~
+209 67108872 0
+D0
+Such an extraordinary green haze right in front of your eyes, you'd 
+like to take a closer look.
+~
+~
+0 -1 20902
+D2
+A faint lavender mixes with the blue of the present room, and through
+the light you can see the intersection between the boring hallways
+and this one.
+~
+~
+0 -1 20906
+E
+fresco~
+This mural is celebrating the joy-filled wedding of the Tweef King and 
+Queen, a great day in Tweef history.  The happy tweefs that stand around are
+enjoying this wonderful occasion, and even the ever-present guardian blarfs
+look like they're having a good time.
+~
+E
+painting~
+This mural is celebrating the joy-filled wedding of the Tweef King and 
+Queen, a great day in Tweef history.  The happy tweefs that stand around are
+enjoying this wonderful occasion, and even the ever-present guardian blarfs
+look like they're having a good time.
+~
+E
+chandelier~
+The cerulean chandelier has 16 glowing candles that eerily resembles
+a mushroom.
+~
+E
+plant~
+The plant appears to be a miniature pansy, transplanted from a garden
+somewhere. It's blue and purple face blend with the colors of the room,
+and it's green leaves echo the color of the hall ahead of you.
+~
+E
+couch~
+The comfortable looking couch beckons you, tempting you with soft cushions 
+and fluffy pillows.  The sides of the couch are torn to shreds, probably from 
+a pet's zealous nail-sharpening exercise.
+~
+S
+#20906
+Royal Hall~
+The hall to the north extends so far you can barely see all the
+way down. It's lighted by four extraordinary chandeliers, not one 
+alike. Each is different in every aspect, even color. You stand in the 
+pale glow of a lavender chandelier, but blue intertwines and becomes
+prominent about twenty steps ahead. Past the blue is an opalescent 
+green, followed by an intense crystalline white at the end of the hall
+where you can almost make out two large thrones.
+~
+209 67108872 0
+D0
+A pale blue glow beckons you to walk the expanse of the hall.
+~
+~
+0 -1 20905
+D3
+A smaller hallway, and not quite as interesting as the one lit by
+the chandeliers.
+~
+~
+0 -1 20922
+E
+chandelier~
+The lavender chandelier is fashioned in a flower shape, with 6
+luminescent candles.
+~
+S
+#20907
+Above the Green Room~
+Above the haze of the green lights is a kind of weird dance hall that extends
+around the chandelier and up higher than you'd imagined. Little blarfs throw
+themselves around the floor excitedly, in a kind of strange worship to the
+emerald chandelier that hangs through a hole in the floor. The glorious warmth
+given off by the hanging glasspiece invites you to stay awhile and rest your
+weary feet.
+~
+209 67108872 0
+D0
+You can see where the music is coming from, and more dancers.
+~
+~
+0 -1 20912
+D5
+~
+hole~
+9 -1 20902
+E
+hole~
+This hole is where the vines grow from, looks like the only way down.~
+S
+#20909
+A Black Staircase~
+As the stairs spiral down, your melancholy gets deeper, and you
+begin to feel like there is no hope, even for you. The damp walls
+secrete a strange gel that sticks to you as you feel your way down the
+stairs. The deafening silence that pervades your mind triggers a
+nagging paranoia that could affect your judgement.
+~
+209 9 0
+D4
+The darkness prevails, but you know that the real world is still
+above you. ~
+trapdoor~
+2 20946 20904
+D5
+It's too dark to see anything.
+~
+~
+0 -1 20965
+E
+gel~
+A gluey substance drips off the dirt walls that line this damp stairwell.
+~
+S
+#20911
+Teinfort's Dungeon~
+A hideous throne of solid onyx with a blood red cloth draped casually
+across it is on a raised dais in the center of the room. All along the
+blood-spattered walls hangs a gruesome display of broken swords, mangled
+shields, and twisted armor belonging, possibly, to the warriors you've 
+seen attached to the walls in other rooms.
+~
+209 73 0
+D3
+~
+door~
+1 -1 20913
+D4
+Above the throne is a small opening, bigenough for a person to climb through,
+it could be a way out. You would have to climb the throne.
+~
+throne~
+11 -1 20964
+E
+throne~
+The large throne is made of a single chunk of black onyx, with blood red cloth
+draped over the hardbacked chair. Above the throne is a small opening, big
+enough for a person to climb through, it could be a way out.
+~
+S
+#20912
+The Blarf Orchestra Pit~
+Through the hanging bead curtain you can see a multitude of blarfs happily
+making music on their tiny instruments. The green haze that settles around
+the band is almost like a portal, like the band is not mortal but emphemeral.
+Emerald green chairs are set up facing the orchestra, but you find one in a
+corner, where you can observe the happenings around you. The crowd dances
+excitedly, as if being closer to the music somehow makes it better.
+~
+209 67108872 0
+D1
+~
+~
+0 -1 20916
+D2
+The main part of the dance hall, and the room with the chandelier.
+~
+~
+0 -1 20907
+S
+#20913
+The Cage~
+You find yourself in a large cage. The floor is dirty and littered
+with bits of bone and shattered armor. The bars are made of onyx
+and are coated in a sticky substance that might be blood, you can't
+be sure and certainly do not want to find out. A large door leads out
+of the cage.
+~
+209 0 0
+D1
+~
+door~
+1 -1 20911
+S
+#20914
+Les Jardins Belle~
+The flora that grows here astonishes you. Never before have you seen such 
+beautiful arrangements. The peace that exudes from this quiet garden embraces
+your whole being, encourages your soul, and calms your mind. A small stone 
+bench rests nearby, underneath a weeping willow. Yellow climbing rose vines 
+cling to an ivory trellis that leads the way to the pond. Another tree stands
+tall and proud near the wall of the palace, reaching towards the sky with
+sturdy limbs.
+~
+209 0 2
+D0
+~
+~
+0 -1 20917
+D1
+~
+~
+0 -1 20919
+D2
+~
+~
+0 -1 20901
+E
+book~
+You notice a paperback copy of "My Warrior, My Love", by a Blarf romance
+novelist, in the grass. You pick up the book and see the name "Larandi"
+printed on the inside cover. A page has been torn out of the middle of the
+book, and you begin reading. You stop reading almost immediately, as you feel
+your face turning bright red with embarrassment. You put the book down quickly.
+~
+E
+willow~
+A large willow drapes its tendrils and leaves around the bench, providing
+moderate privacy for anyone beneath.
+~
+E
+bench~
+A small stone bench, with ivy growing around its legs.  Resting under
+the willow tree, it makes a perfect picnic bench, or a great place to
+read a book.
+~
+E
+trellis~
+A white painted wooden trellis creates the perfect place for the
+climbing rose to grow, and also accents the pathway that leads eastward.
+~
+E
+tree~
+A sturdy peach tree, with a knothole where a squirrel has attempted 
+to make its home.
+~
+S
+#20915
+Near the Pond~
+A crystal green pond, with reeds and lilies floating around the
+edges. A few marble benches are nearby, trees grow over the expanse
+of lawn that surrounds the garden pond. A beautiful white swan sails
+delicately across the surface of the glassy water, she looks at you
+inquisitively. A few ducklings splash around the edge of the pond, and
+a croaking bullfrog keeps paternal watch.
+~
+209 0 2
+D2
+~
+~
+0 -1 20921
+D3
+~
+~
+0 -1 20919
+E
+bullfrog~
+A very protective, father-like bullfrog, he seems to be guarding
+the ducklings nearby. His green tone blends him with the reeds that
+he sits in, and so he is almost invisible.
+~
+E
+ducklings~
+Five or six ducklings splash around happily in the reeds, light
+brown feathers and little orange bills. One little ugly duckling swims
+by himself, further from the ducklings, but closer to the bullfrog.
+~
+E
+swan~
+A stunningly beautiful swan, so pure white, there is not even a 
+single mark of discolor. She swims across the pond, as if patrolling,
+ever alert for any kind of danger.
+~
+S
+#20916
+Blarf Dance Hall~
+The wooden floors are beautifully carved, each plank shows a different scene of
+Blarf daily life.  It's as if the Blarfs come here to dance and stomp on all the
+worries and hardships they're here to forget.  The music can be heard throughout
+the hall, amplified by tunnel-like exits. The shade cast by the green chandelier
+gives the room an aura of growth and life, and by the looks of the dancers the 
+light also provides unreserved stamina.
+~
+209 67108872 0
+D1
+More dance hall and more excited blarf dancers.
+~
+~
+0 -1 20981
+D3
+The room where you left the chandelier.
+~
+~
+0 -1 20912
+S
+#20917
+Les Jardins Nord~
+     The northern corner of the garden displays all kinds of flowers,
+in a collage of color unlike any mortal has ever seen. There are
+bright snapdragons, alluring pansies, decorative gladiolus, even a
+rare poppy or two.  More willow trees decorate this part of the garden,
+to produce a cool shade, a canopy to protect from the sun overhead.
+~
+209 0 2
+D2
+~
+~
+0 -1 20914
+E
+poppy~
+Bright red poppies are interspersed amoung tall green bushes that 
+enclose this garden away from the world outside.
+~
+E
+trees~
+   Large weeping willows grace the garden with refreshing shade, and
+there is a comfortable looking tire-swing hanging from a strong 
+branch.
+~
+E
+poppies~
+   Bright red poppies are interspersed amoung tall green bushes that 
+enclose this garden away from the world outside.
+~
+E
+gladiolus~
+   Lovely, tall gladiolus form rings around the base of the trees, 
+pretty yellows and pinks add color to the brown tree trunks.
+~
+E
+pansies~
+   Deep purple and yellow pansies are strategically growing throughout
+the garden to capture the small amount of sunshine that filters
+through the canopy of trees.
+~
+E
+snapdragons~
+    A bright array of red, orange, yellow and even a few purple 
+snapdragons are scattered through the garden.
+~
+S
+#20918
+Les Jardins Extremite~
+After being in the oasis, the harsh desert sun has finally disappeared to but
+a memory of what was. You have managed to wander into a beautiful garden that
+is astonishing, you can't imagine how something this amazing could survive
+so close to a place like the desert you just experienced.  There is something
+magical about this garden that relaxes you, and calms your senses, so you can 
+feel the harmony even within your soul. The small path continues north and 
+south.
+~
+209 0 2
+D0
+~
+~
+0 -1 20976
+D2
+The little path winds its way to the south.
+~
+~
+0 -1 20919
+S
+#20919
+Les Jardins Miniature~
+This part of the garden is full of small ground-cover flowers, violas and
+clover abound. There are a few miniature roses, and grape hyacinths that 
+flourish under small green bushes. Tiny pansies peek their faces out from under
+some overly-protective chrysanthemums, and a few baby irises spread their 
+sophistication and loveliness thoroughout the garden.
+~
+209 0 2
+D0
+The path winds through the garden to the north.
+~
+~
+0 -1 20918
+D1
+~
+~
+0 -1 20915
+D2
+The southern gardens seem a little chilly, but still peaceful.
+~
+~
+0 -1 20920
+D3
+~
+~
+0 -1 20914
+E
+roses~
+     Sharp thorns protect the mini rose bushes that dot the garden. A
+few colors catch your eye, but the most beautiful in the garden is a 
+small plant with a light blue color.
+~
+E
+irises~
+     The elegant irises stand as tall as they can in their miniature
+splendor, certainly more breathtaking than the dull roses on their
+green vines.
+~
+E
+chrysanthemums~
+     Very abundant, and only about those flowers with no natural
+protection, these large flowers seem out of place in this area of the
+garden, standing watch over the small flowers. They do, however, in
+their orange and white homeliness, stay away from the more beautiful 
+roses, not wishing to be upstaged.
+~
+E
+hyacinths~
+     Small bell-shaped flowers grow on short stems, sprouting here and
+there, in between bushes, decorating the plain green shrubbery with
+their purple majesty.
+~
+E
+clover~
+     The whole ground is carpeted with green clover leaves, white and
+purple flowers peek out, though rare. Luck strikes, and you see a 
+four leaf clover sticking out from under your shoe. You reach for it,
+but it suddenly isn't there...
+~
+E
+violas~
+     Quaint purple flowers, smile delicately in between the clover
+leaves.
+~
+E
+pansies~
+These familiar faces are popular in the gardens, and the ever-present
+purple theme dominates these pretty flowers.
+~
+S
+#20920
+Les Jardins Hiver~
+In the perpetual winter of this garden, snow covered fir trees have been decked
+out with red bows. Magical lights blink red, yellow, and blue in between the
+green branches. Leafless maples are outlined against the dark sky, matches by
+the tall evergreens in their star-like splendor. Delicate snowflakes float down
+froma cloudless sky, coming to rest on earth and on your eyelashes, making it
+difficult to see.
+~
+209 0 9
+D0
+~
+~
+0 -1 20919
+D3
+~
+~
+0 -1 20901
+E
+maples~
+Tall deciduous trees spread their leafless limbs toward the sky in
+silent praise to the goddess who created them.
+~
+E
+lights~
+The red, blue, and yellow lights blink festively in this eternal
+winter.
+~
+E
+bows~
+The ribbony bows add bright color to the green branches and winter
+snow.
+~
+S
+#20921
+In the Pond~
+As you splash under the cool surface of the pond you begin to wonder why you
+hadn't noticed the serenity of this world that is underwater. The muddy ground
+serves as a refuge for crabs and other shellfish. A nip at one of your toes
+tells you that you must have just stepped on someone's home. Ducks paddle 
+happily above your head, while birds swoop low and break the surface with their
+feet in hopes of catching their dinner. All in all it is a peaceful place, but
+as your lungs contract, burning for air, you feel you'd better return to land.
+~
+209 131212 6
+D0
+~
+~
+0 -1 20915
+E
+carp~
+Very large goldfish with brightly colored scales and fins swim
+around you without a second glance.
+~
+E
+guppies~
+Tiny fish swim in the protection of the carp, hurrying in, out, up,
+down, and all around the larger fish.
+~
+E
+minnows~
+Tiny fish swim in the protection of the carp, hurrying in, out, up,
+down, and all around the larger fish.
+~
+E
+crabs~
+Little crabs bury themselves in the cool mud of the pond floor, and small
+shellfish hide in their homes, tucked away in the soft mud.
+~
+E
+shellfish~
+Little crabs bury themselves in the cool mud of the pond floor, and small
+shellfish hide in their homes, tucked away in the soft mud.
+~
+E
+ducks~
+For the most part you can only see their feet, paddling freely
+along. Occasionally one will dip their head, just to check on you.
+~
+S
+#20922
+Manor Halls~
+The walls are bare and plain--it appears that anything that wasn't securely 
+bolted down has been stolen, unless this is the way the family chose to have
+their decor. There are no plants, and even the windows are bare, there are no
+curtains. There are a few places on the carpet that appear to have indents from
+where plants used to stand, but those too appear to be missing. Whoever the
+thieves are they have managed to keep these missing items a secret from the
+rest of the household.
+~
+209 67108872 0
+D1
+A hallway with lavender lighting.
+~
+~
+0 -1 20906
+D2
+The room outside the banquet hall.
+~
+~
+0 -1 20925
+D3
+More nondescript hallway lies to the west.
+~
+~
+0 -1 20924
+S
+#20923
+Through the Manor~
+An ordinary hallway, with high walls and a cathedral-like ceiling. The light
+cedar tones of the paneling reflect the light from the banquet hall to the
+south, and  the large hallway continues to the east. The plush silver carpet 
+sinks beneath your feet, and you notice a few thinly-leaved bushes growing out 
+of brown planters that are randomly scattered down the hall.
+~
+209 67108872 0
+D1
+The hallway leads to the kitchen.
+~
+~
+0 -1 20937
+D2
+The room outside the banquet hall.
+~
+~
+0 -1 20927
+E
+bushes~
+The dying bushes are scrawny, and the dirt they were growing in is parched. The
+servants seem to have neglected these poor plants.
+~
+S
+#20924
+Manor Halls~
+The walls are bare and plain--it appears that anything that wasn't securely
+bolted down has been stolen, unless this is the way the family chose to have
+their decor. There are no plants, although there are a few places in the carpet
+that appear to have indents from where plants used to stand. Even the windows
+are bare, there are no curtains. The servants go about their routine, 
+unconcerned about the missing items, they don't even appear to notice that
+anything is peculiar.
+~
+209 67108872 0
+D0
+An anteroom with many hallways leading out of it lies to the north.
+~
+~
+0 -1 20928
+D1
+As far as you can see, all you see is hallway.
+~
+~
+0 -1 20922
+S
+#20925
+Outside the Banquet Hall~
+There are no eye catching decorations to this room, except for a fairly large,
+completely closed door to the east.  The intricate design on the door has no
+rhyme or reason to it, but it is beautiful.  The gold inlay is stunning and
+it accents the gold threads through the ivory carpet. The sounds of clinking
+glasses and silverware on porcelain can be heard through the doors, but you 
+don't feel like you should intrude upon dinner.
+~
+209 67108872 0
+D0
+All you can see is hallway.
+~
+~
+0 -1 20922
+D1
+Through the door is the banquet hall for all dinner parties.
+~
+door~
+1 -1 20926
+S
+#20926
+Manor Banquet Hall~
+A long table with many seats for many guests, and filled to overflowing with 
+food that brings tears to the eyes to see. Each chair is made of solid gold,
+while the table is gold with jewels inlaid in the top. The plates are pure
+white china, with a leaf pattern made of platinum, and the cutlery is made of
+pure silver. The exquisite candlesticks are white gold, and the chandelier that
+hangs above the table appears to be made out of ruby, although the light is pure
+and white. A glass wall to the south appears to lead out into a garden, probably
+for after dinner entertainment.
+~
+209 67108872 0
+D1
+Through the door, the hallway leads to the kitchen.
+~
+door~
+1 -1 20927
+D2
+Through the glass door, you can see the garden path.
+~
+glass~
+1 -1 20955
+D3
+The door that guests come through, and leave by, unless going through the
+garden.
+~
+door~
+1 -1 20925
+S
+#20927
+Outside the Banquet Hall~
+The swinging doors to the west have not stopped since you entered the room.
+Although you haven't seen anyone go in or come out, the doors continue to swing
+in perpetual motion. The poor carpet has a track walked into it, with bare 
+spots from the north to the west doors, where servants have walked constantly, 
+either bringing food in or taking scraps out. The sounds of feasting tweefs 
+comes from behind the doors, and the smell of delicious food entices you to 
+join their meal.
+~
+209 67108872 0
+D0
+The hallway leading to the kitchen.
+~
+~
+0 -1 20923
+D3
+Through the door lies the banquet hall.
+~
+door~
+1 -1 20926
+S
+#20928
+Manor Halls~
+Halls extend in three directions, with the servant's quarters being to the west.
+The carpet here is flat and worn, because of the many feet that tread this path
+every morning and evening.  High windows let in light, but prevent you from
+seeing outside.
+~
+209 67108872 0
+D0
+The room to the north appears to have a set of stairs.
+~
+~
+0 -1 20929
+D1
+A room that appears to open into a library.
+~
+~
+0 -1 20936
+D2
+Plain old hallway lies to the south.
+~
+~
+0 -1 20924
+D3
+Through the door leads to the servant quarters.
+~
+door~
+1 -1 20933
+E
+tree~
+The tree is very branchy, but the low branches have been trimmed so noone can
+climb it. The bark on the lower part of the tree appears to have been stripped
+away by a pair of massive claws and you pray that anything big enough to do that
+kind of damage that lives inside is friendly.
+~
+S
+#20929
+Manor Halls~
+The stairs up lead to the tower of the tweef observatory. The room is fairly
+round, with the staircase shape being a typical spiral. There is a pole that 
+runs through the center of the stairwell. Diamond shaped windows lead the path
+along the stairs, and plants hang from the stairs above your head. If you
+accidentally hit one, you might upset some dirt which would lead to the house-
+keeper being very upset with you.
+~
+209 67108872 0
+D0
+You can see the bejewelled ivory columns to the north.
+~
+~
+0 -1 20961
+D2
+An intersection of hallways lies to the south.
+~
+~
+0 -1 20928
+D4
+The stairs lead up into some kind of observatory.
+~
+~
+0 -1 20930
+S
+#20930
+Stairs to the Observatory~
+The stairs appear to be in grave disrepair, making them a little creaky and a
+little unsafe. The walls are a bright white, with diamond shaped windows
+spaced evenly along the stairwell. Every other step has a different design
+embedded in the wood, the first is a ruby and emerald collage, the second is
+a sapphire and diamond ensemble, and they alternate to the top of the staircase.
+~
+209 67108872 0
+D4
+The stairs open up into what appears to be a laboratory.
+~
+~
+0 -1 20931
+D5
+The bottom of the stairs.
+~
+~
+0 -1 20929
+S
+#20931
+Manor Laboratory~
+The room juts away from the round staircase, giving it more room for all kinds
+of equipment. The long tables that line this room are covered in glass beakers,
+bunsen burners, and all other kinds of scientific bits and pieces. They look
+cluttered and yet strangely organized, the people who run this place have no
+trouble finding what they want when they want it. There are bookshelves filled
+with books to cross-reference materials and notes, and there is a whole table
+full of notebooks and papers scribbled with formulas and figurings.
+~
+209 67108872 0
+D4
+The top of the tower, and the scientific observatory.
+~
+~
+0 -1 20932
+D5
+Stairs spiral down further than you can see.
+~
+~
+0 -1 20930
+S
+#20932
+Manor Observatory~
+There is a large dome over the roof of this room, and there is a very large
+contraption set on a pedestal in the middle of this room. There is a box near to
+where you are standing, that has the some buttons, knobs and levers. There are
+more tables with notebooks and papers strewn all over it, and a bookshelf with
+many books and notebooks.
+~
+209 67108872 0
+D5
+The stairs lead down into the laboratory.
+~
+~
+0 -1 20931
+E
+box~
+A control box with many buttons and levers.
+~
+S
+#20933
+Servants Quarters~
+Row upon row of beds is all you see from this standpoint. There is a nightstand
+between every bed, and each one has a small downturned light above the head.
+Random things are placed on the various nightstands, a few have clocks, there
+are a few plants, even pictures of family and pets. The carpet is a light brown
+and the walls match perfectly. There is a large skylight over the whole expanse
+of the roof in here, which is designed to wake the servants when the sun comes
+up.
+~
+209 67108872 0
+D1
+The hallway from which other hallways extend.
+~
+door~
+1 -1 20928
+D2
+More living quarters for the friendly tweef servants.
+~
+~
+0 -1 20934
+S
+#20934
+Servants Quarters~
+This is what looks to be the servants dressing- and bath-room. There is a
+counter along one wall with a long mirror and several sinks, and there is a
+wall that divides the room. On the other side of the wall is a large closet,
+filled with the work uniforms of the happy tweef servants. The room is clean
+and tidy, the servants keep their quarters as spotless as the rest of the
+manor that they serve.
+~
+209 67108872 0
+D0
+The rest of the servants' quarters.
+~
+~
+0 -1 20933
+S
+#20935
+Manor Library~
+Cathedral style ceilings are the first thing to catch your eye in this room,
+followed closely by the rows and rows of shelves. There is a round table near 
+the door piled with books and a few comfortable chairs strategically placed
+nearby. As you wander down the aisles you almost trip over the books that have
+no place on the overflowing shelves. You feel completely at ease in this room,
+and you know you could spend days in here just looking at all of these books.
+~
+209 8 0
+D2
+The hallway leads back out to the main hall.
+~
+doors~
+1 -1 20936
+E
+books~
+On the feature table, you see a book entitled "All You Need to Know to Travel
+Safely in Midgaard", "Caring for Your Shehanth", and "Holy Books of Natiana".
+~
+E
+table~
+On the feature table, you see a book entitled "All You Need to Know to Travel
+Safely in Midgaard", "Caring for Your Shehanth", and "Holy Books of Natiana".
+~
+S
+#20936
+Manor Halls~
+This hallway is a short one, with large french doors to the north. A few
+fern-like plants stand in the corners, withering from lack of water. There is
+a large family portrait on one wall, with Larandi when she was still young. A
+wonderful sand colored carpet stretches beneath your feet, and the walls greet
+your eyes with a soft beige. A long window is positioned so high that you can't
+see out of it, but that light comes in.
+~
+209 67108872 0
+D0
+The room to the north is the manor library.
+~
+doors~
+1 -1 20935
+D3
+The hallway for the rest of the manor lies to the west.
+~
+~
+0 -1 20928
+E
+doors~
+Large french doors with decorative gold handles separate the library from 
+the hallway.
+~
+S
+#20937
+Through the Manor~
+The swinging door at the east end is in constant motion, with servants bustling
+in and out in preparation for a feast. This sparsely decorated room has a few
+planters with some green bushes, and the large windows on the south wall let in 
+light that almost blinds you as it reflects off the dazzling white walls. There 
+are hexagonal black tiles interspersed with the small white squares, creating a 
+nice effect. A few stains are visible, since food obviously travels through this
+room on the way to the banquet hall.
+~
+209 67108872 0
+D1
+The staging area for major banquets and parties.
+~
+~
+0 -1 20938
+D3
+The hallway continues out of sight.
+~
+~
+0 -1 20923
+S
+#20938
+Preparation Room~
+You walk into a room cluttered with tables, chairs, and numerous kitchen
+supplies. It appears to be a staging ground for any kind of feast that might be
+happening in the Manor.  There are scraps of food laying around on once-used
+plates, that the servants just haven't gotten around to washing yet, and there
+is fresh food, almost begging to be eaten. The smells that emanate from the
+north indicate that if you go through the door, you might just wind up in the
+chef's way...
+~
+209 67108872 0
+D0
+The main part of the kitchen is through the north door.
+~
+door~
+1 -1 20939
+D3
+The hallway that leads to the banquet hall.
+~
+~
+0 -1 20937
+E
+supplies~
+Cupboards with pots and pans, dishes and kettles, are overflowing onto the
+floor, while spoons and other utensils are hanging on the walls, waiting
+for the right occasion.
+~
+E
+chairs~
+Piles upon piles of high backed wooden chairs are clustered into the corner of
+the room, unused.
+~
+E
+tables~
+Tables with dismantled legs are stacked against one wall, waiting to be used.
+~
+E
+plates~
+Dirty dishes are piled up on the excess tables and counterspace, inclining you
+to believe there might be a feast in progress.
+~
+E
+food~
+On a table by the door servants are placing plates on trays that are to be
+taken to the feast.
+~
+S
+#20939
+Manor Kitchen~
+A steamy, smoky, smell-filled, and almost perfectly clean kitchen, with a
+massive oven, and other various kitchen affects. Pots and pans hang from the
+ceiling above the stove, while utensils are hanging from nails on the wall 
+next to it. White-with-blue-flecked tiles are embedded in the floor, and 
+complimenting blue curtains decorate the huge windows, that are all open
+to aid in ventilation of this well-used room. What appears to be a pantry
+connects to this room to the west, and the door to the south is in perpetual
+motion, while servants bustle in and out to be the perfect attendants for
+a feast. Something in a pot on the stove is bubbling over, but noone seems
+to notice, except you--you're beginning to be affected by the wonderful smells,
+and your stomach grumbles in anticipation.
+~
+209 67108872 0
+D0
+~
+~
+0 -1 20942
+D2
+The staging ground for major banquets and parties is to the south.
+~
+door~
+1 -1 20938
+D3
+The kitchen pantry lies to the west.
+~
+~
+0 -1 20941
+E
+oven~
+The oven is big enough to cook a large dog inside.  It is probably used for
+the parties and feasts the royal life demands, mostly cooking extreme
+quantities of food.
+~
+E
+pot~
+A large batch of noodles seem to be boiling over, but nobody notices or 
+attempts to correct the problem.
+~
+S
+#20940
+Wine Cellar~
+After your eyes become accustomed to the dim light from a few lanterns that 
+amazingly burn cool, you see row upon row of huge kegs. Most of them are 
+labelled, and those are the ones that you take the most interest in. There are 
+a few unfamiliar names, but most you recognize. The dirt floor is cool and the
+air is moist. You notice a small bench to the left and a set of stairs that
+seem to an even lower level of the manor. The stairway looks dark and you
+feel wary.
+~
+209 67108872 0
+D4
+~
+trapdoor~
+1 -1 20941
+D5
+~
+~
+0 -1 20904
+E
+bench~
+A few rats hide beneath the partially rotten bench, gnawing on scraps that
+fall through the floor.
+~
+E
+kegs~
+Great huge wine casks, untapped and bloated, seem to call your name.  There
+is a shelf near the first keg that contains all the things one would need
+to tap any keg in the room.
+~
+S
+#20941
+Manor Kitchen~
+A stocked pantry, with shelves lining the entire perimeter of the walls. Food
+seems to spill off the shelves, but there is no mess on the floor.  In the 
+center of the floor is a trapdoor, probably leading to the wine cellar, or more
+food. The room has no windows, but a ventilation fan whirrs quietly from the 
+ceiling, to keep the room cool and the food from spoiling.
+~
+209 67108872 0
+D1
+More of the kitchen lies to the east.
+~
+~
+0 -1 20939
+D5
+The trapdoor opens into the cellar.
+~
+trapdoor~
+1 -1 20940
+S
+#20942
+Manor Stairs~
+The base of a set of stairs that apparently leads up to the residence of the
+family. The stairs are covered with a dark burgundy carpeting, probably to 
+minimize stains from dropped food. These are the stairs the ones the cooks
+use to serve private meals to the family in their rooms. To the south, all
+the sounds of a busy kitchen are quite audible, but the stillness of
+everything up the stairs makes it quite intriguing.
+~
+209 67108872 0
+D2
+~
+~
+0 -1 20939
+D4
+The stairs lead up to more hallway.
+~
+~
+0 -1 20943
+S
+#20943
+Manor Halls~
+The landing at the top of the stairs is wide and bright. There are mirrors on
+each wall and an open skylight above you. The walls have been freshly painted,
+and the wood floor replaced, since this room takes much more traffic than most
+others in the manor. There is a ring of stones embedded in the floor in the
+center of the room, large grey stones accenting the light colored wood floor.
+eInside the circle, covered with glass, is turbulent water splashing and
+churning, making a beautiful centerpiece.
+~
+209 67108872 0
+D0
+The room where one waits for the royal family.
+~
+~
+0 -1 20944
+D5
+The stairs lead down to the kitchen.
+~
+~
+0 -1 20942
+E
+centerpiece~
+An underground fountain, it is covered with glass and ringed with stones,
+and accented by the light wood floor.
+~
+S
+#20944
+Entrance to Private Quarters~
+This is the outer waiting room to the royal chambers.  The cream and pastel pink
+decor is almost repulsive, making you think perhaps the royals don't want to be
+visited. The cream colored couch looks too clean to sit on, and the pink
+cushions are positively repugnant. There are a few amiable plants decorating the
+lounge area, and the wide windows let in plenty of light. Rosy pink walls 
+brighten the room, and there are a few paintings by famous tweef artists that
+hang with cream frames. The heavy cream curtain at the east end of this hall has
+not moved one inch, but you know that if you are to see the royals they are
+behind this curtain. The hall to the north leads to the guest chambers, and that
+is the only way you think you are supposed to go.
+~
+209 67108872 0
+D0
+The hallway leads to the guest quarters.
+~
+~
+0 -1 20947
+D1
+There is a hallway that leads to the royals' chambers.
+~
+curtain~
+8 -1 20945
+D2
+The hall leads down to the kitchen.
+~
+~
+0 -1 20943
+E
+windows~
+The large windows overlook the roof to the kitchen where the King seems to have
+set up a putting green to use when he finds spare time.  It doesn't look to
+well used, he must have more important things to do, like run the manor.
+~
+E
+paintings~
+One painting is of the King and Queen with Larandi as a little girl, another is
+of Larandi surrounded by her pets, and a third is of Larandi and Erton with
+their arms around one another sitting in the Rose Garden.
+~
+E
+couch~
+The couch looks as if it was steam-cleaned yesterday, and the pink cushions
+have so much frilly lace they look like they'd fall apart when touched.
+~
+E
+curtain~
+The curtain separates the waiting room from the hallway to the private quarters
+of the royal family.
+~
+S
+#20945
+Manor Halls~
+The pale carpet has been freshly cleaned by busy servants whose whole existance
+is to clean up after other people. There are a few lovely paintings hanging
+on the wall, and a potted plant or two placed intermittently down the hall. A
+wonderfully clean smell emanates from the walls that have been washed at least
+twice today, and a tall mirror sparkles neatly on the south wall.
+~
+209 67108872 0
+D0
+~
+~
+0 -1 20951
+D1
+~
+~
+0 -1 20946
+D3
+~
+curtain~
+1 -1 20944
+E
+creature~
+You take a closer look at the creature, only to realize that it is your own
+reflection.
+~
+E
+mirror~
+A horrible creature greets you with a smile from the confines of the mirror.
+~
+E
+paintings~
+The closest painting is of a desert sunset behind the Manor, and the one
+opposite is a sunrise from inside an oasis. The other paintings appear to be
+weather around the Manor, lightning striking, snow in the garden, and even
+hail pelting the balcony outside the throne room.
+~
+S
+#20946
+Outside Larandi's Boudoir~
+The inside waiting room of Princess Larandi's chamber, there is a blue-tinted
+curtain hanging in the east doorway.  A midnight blue couch and loveseat set
+decorates this room, and a cedar coffee table with a glass tabletop is the 
+centerpiece. The carpet is a plush cream color with a hint of blue that meshes
+nicely with the color of the furniture. There is a skylight in the roof that 
+lets in plenty of daylight when the sun is up, and all the moonlight she needs
+when it's not.
+~
+209 67108872 0
+D1
+~
+curtain~
+1 -1 20954
+D3
+~
+~
+0 -1 20945
+E
+couch~
+The color of the couch is so dark that if the carpet were the same color, you
+wouldn't even be able to see it.  Cream pillows that do match the carpet are
+placed in the corners of the couch, and a reclining feature encourages you to
+put your feet up and rest.
+~
+E
+curtain~
+The pale blue curtain blows gently in the breeze coming from inside Larandi's
+bedroom. It accents the couch and blends easily with the carpet. It is double
+thick, so you can't actually see into the bedroom, but you can hear a strange
+meowing sound.
+~
+E
+table~
+Under the glass of the table is a photo collage of Larandi while she was
+growing up, always under the supervision of her parents.
+~
+S
+#20947
+Manor Halls~
+The hall seems to slant slightly downward here, leading down to the guest
+bedroom, it must be at a lower elevation to keep guests from spying on the
+King and Queen.  There aren't any windows here, but the walls are lined with
+mirrors, probably for guests to make sure they're presentable when meeting
+the King and Queen.
+~
+209 67108872 0
+D0
+The hall to the north leads to the guest bedroom.
+~
+~
+0 -1 20949
+D2
+To the south is the waiting area for the royals.
+~
+~
+0 -1 20944
+E
+mirrors~
+The hideous reflection startles you so much you jump back in surprise. You
+calm down when at the realization that it's your reflection, not a hairy,
+two-headed monster.
+~
+S
+#20948
+Burning Sands~
+Miles upon miles of sand give no relief to the eyes, and you catch no glimpse of
+where you started your journey. The intense heat of the unforgiving sun beats
+down upon you, you feel weary of ever finding a refuge. A slight wind wisps through
+your clothes, shivers through your hair, and makes you feel all the more
+uncomfortable when it's gone.
+~
+209 0 0
+D0
+~
+~
+0 -1 20968
+D1
+~
+~
+0 -1 20971
+D2
+~
+~
+0 -1 20975
+D3
+~
+~
+0 -1 20962
+S
+#20949
+Outside the Guest Quarters~
+The hall comes to an end outside a set of french doors, on which are carved
+intricate designs of animals seen around the tweef domain.  The plush carpet
+and shell beige walls blend together, creating an image of continuity.  There
+are two fern plants in large bronzed pots, one on each side of the doors.
+A large window on the wall opposite the guest room overlooks the garden, and
+you can see the underside of the King and Queen's Balcony.
+~
+209 67108872 0
+D2
+The hallway continues south.
+~
+~
+0 -1 20947
+D3
+The guest bedroom is through the opening to the west.
+~
+door~
+1 -1 20950
+E
+window~
+The garden is filled with exotic plants and trees, you can see the variety
+of each part of the garden from here. With each different plants' special
+needs, the gardeners must have a difficult time with upkeep.
+~
+E
+plants~
+The tall ferns stand sentinel on either side of the doors, their bronzed
+pots look heavy, the servants must rarely move them while cleaning.
+~
+E
+doors~
+Expert workmanship has carved beautiful figures into the wood of the 
+doors. The animals are so lifelike you could almost believe they were
+real.
+~
+S
+#20950
+Guest Quarters~
+A large room with bay style windows that open over the beautiful Manor Gardens.
+The canopied bed that stands against one wall is lavishly decorated with ivory 
+and burgundy pillows, with a freshly changed look, as if the house was 
+expecting a visitor. A polished silver tea service waits on the nightstand, 
+with fruit and toast placed on the tray. A cedar hope chest stands at the foot
+of the bed, intricately carved with a floral design.  An identically carved 
+chest of drawers leans against another wall, and there is a color schemed ivory
+and burgundy screen placed facing the door to shield guests, as they dress, from
+unannounced visitors to their room. To the north you can see into the private 
+bathroom provided for the manor guests.
+~
+209 67108872 0
+D0
+Through swinging doors, made of desert ironwood, you can see the
+extention of the carpet and the ivory walls of the guest bathroom.
+~
+~
+0 -1 20999
+D1
+The hallway lies to the east.
+~
+door~
+1 -1 20949
+E
+n~
+hmm
+~
+E
+bed~
+The canopy is pulled back, since there is noone sleeping in the bed,
+but the fluffy pillows and warm blankets are a blatant invitation
+to rest your weary feet from your search.
+~
+E
+nightstand~
+A few drawers under the tea service, they would contain personal
+items, if a guest were staying in this room.
+~
+E
+service~
+The silver is polished and the tea is hot, the toast is buttered and
+the fruit is fresh, all pointing to an invitation to whet your
+appetite on royal food.
+~
+E
+tea~
+The silver is polished and the tea is hot, the toast is buttered and
+the fruit is fresh, all pointing to an invitation to whet your
+appetite on royal food.
+~
+E
+chest~
+This hope chest is probably full of family memories and is just set 
+here for decoration. It is locked closed, and you're pretty sure that
+there is no key.
+~
+E
+drawers~
+Each drawer would be full of clothes, if there were a guest in this
+room, but it is surprisingly empty.
+~
+E
+screen~
+A beautiful ivory screen with burgundy stiching, the designs on both
+sides are different and make no sense. Vertical lines here, stars
+there, and there doesn't appear to be any sort of pattern.
+~
+E
+windows~
+You can see all the gardens that surround the manor, and you understand, by
+seeing the beauty of the land why the tweefs are a content people.
+~
+S
+#20951
+Entrance to the Royal Chambers~
+The hall ends here, before the door to the bedroom of the king and queen. The
+door is closed firmly, and there is a red thumbtack stuck to the middle of
+each of the double doors. The hall is rather plain here, as if to distract
+you into thinking it isn't a very interesting part of the castle. White walls
+join the white carpet at the end of the hall, and there are no wall hangings
+or plants.
+~
+209 67108872 0
+D1
+The doors are extraordinarily decorative, although it is not unusual for
+royalty like the King and Queen to afford such luxuries in their private
+appartments.
+~
+doors~
+1 -1 20952
+D2
+~
+~
+0 -1 20945
+E
+doors~
+The doors are extraordinarily decorative, although it is not unusual for
+royalty like the King and Queen to afford such luxuries in their private
+appartments.
+~
+E
+thumbtack~
+The red thumbtack is stuck in the dead center of each door, perhaps a symbol
+for something, like Do Not Enter, or Come Back Later.
+~
+S
+#20952
+Royal Chambers~
+A plush ivory carpet covers the entire floor, and you notice immediately the
+vibrant gold of the bedframe, lamps, ceiling fan, picture frames and shelving
+in the entire room.  It is polished and shines brilliantly, and effectively
+contrasts the charcoal black fabric of the bedcovers and veil that separates
+the room from the balcony to the east. Tasteful and pretty lampshades are the
+same color as the bedspread, with thin strands of gold woven into delicate,
+creative patterns to create mood-setting shadows when the lights are low.
+~
+209 67108872 0
+D1
+Through the thin veil you can see the private balcony.
+~
+~
+0 -1 20953
+D3
+~
+doors~
+1 -1 20951
+E
+lampshades~
+Unusual black lampshades are embroidered with gold thread into intricate
+patterns that form silhouettes on the walls.
+~
+E
+bedspread~
+The ebony fabric is overlayed with golden thread, twisted into exotic
+shapes.
+~
+S
+#20953
+Royal Balcony~
+The private balcony of the King and Queen overlooks the entire tweef province.
+From here they can make their announcements, proclaim their holidays, or just
+plain watch their subjects. There are flower beds on this square marble 
+balcony, that the queen has decorated with marigolds and chrysanthemums for
+their bright yellow and orange to liven up the cold white marble. Artistically 
+created wrought iron chairs are placed close to the thin veil that separates 
+the balcony from the royal bedroom, so that early in the morning, the king and 
+queen can sit in the shade of their magnificent palace, but still in the 
+daylight to read the morning reports and drink their coffee.
+~
+209 67108864 1
+D3
+You can see into the bedchambers of the royal tweef family.
+~
+~
+0 -1 20952
+E
+flowers~
+The distinct sun-colored flowers bring a merry feeling to the colorless
+marble.
+~
+E
+chairs~
+The black wrought iron chairs match the interior decor of the royal bedroom,
+and they have golden cushions covering the seat, to provide a more comfortable
+morning resting place.
+~
+S
+#20954
+Larandi's Boudoir~
+On this side of the curtain, Larandi's bedroom is a veritable collage in
+itself. Sponged walls are pale yellow beneath an opal-like glaze. Her canopied
+bed is a mess of wispy curtains, a pastel yellow bedspread, and white, yellow,
+and lace pillows. Her massive cedar closet stands open, clothes torn out and
+lying everywhere but inside.  Much like any teenaged girl's room, her vanity
+is cluttered with makeup and hair accessories, notes "To Self", and other
+prioritized junk. An unusually large cushion is set next to the head of
+Larandi's bed, and a bowl with separate compartments for food and water is 
+on the floor nearby.
+~
+209 67108872 0
+D3
+~
+curtain~
+1 -1 20946
+E
+cushion~
+This is a bed not meant to contain any normal sized animal. The pet Larandi
+keeps must be twice the size of a lynx, but it must be domesticated,
+if it sleeps here in the princess's bedroom.
+~
+E
+closet~
+The doors are flung wide, clothes are draped over each door, and hang out
+of the drawers that are built inside. A full length mirror is hung on the
+inside of each door, so Larandi can make her clothing choices with a
+complete view of herself.
+~
+E
+vanity~
+A large desk with a round mirror against the wall, it has drawers that are
+full of makeup, nail polish and other girlish affects.
+~
+E
+bed~
+The sheets and bed coverings have been recently uesd, they are twisted and
+half of them are hanging over the side. Pillows have been thrown haphazardly
+back onto the bed, to keep the floor clean.
+~
+S
+#20955
+Garden Path~
+There is a red brick path running through the garden. It ends at the north by
+the glass door, and continues to the south and east through thick green 
+foliage. There are a few greystone benches, but there are so many trees that
+you couldn't sit in the sun. There is a mossy ground cover off the path, with
+light purple flowers that grow sporadically.
+~
+209 0 2
+D0
+You can see into the banquet hall of the tweef royal family.
+~
+glass~
+1 -1 20926
+D1
+~
+~
+0 -1 20985
+D2
+The red bricks continue south towards the temple.
+~
+~
+0 -1 20956
+E
+bench~
+A bench carved from a solid piece of stone, it's wide enough for two 
+people to sit on.
+~
+E
+bushes~
+Through the thinly leaved bushes, you catch glimpses of bright colored
+flowers.
+~
+S
+#20956
+Garden Path~
+A large fountain is the main attraction of the garden here, a winged cherub
+atop a tall post with his bow and quiver full of love-arrows. The heart motif
+is prevalent here, especially in the architecture of the massive temple you
+are standing in the shadow of.  Stairs lead from the east and west, to meet
+at the main floor of the temple. Ivy vines cover the marble facade of the
+temple like it is unkept, but the stairs are well worn with footsteps of the
+faithful tweefs who worship here.
+~
+209 0 2
+D0
+The path leads back to the manor.
+~
+~
+0 -1 20955
+D1
+A small white gate blocks the stairs to the temple. ~
+gate~
+2 20945 20958
+D3
+A small white gate blocks the stairs to the temple. ~
+gate~
+2 20945 20957
+S
+#20957
+Stairs to the Temple~
+These are the stairs that lead to the floor of the temple, they appear to be
+well used, by the devoted tweefs who come to pray.  The handrail is a carved
+chain of hearts, and the solid wall that connects the handrail to the stairs
+has gold, silver, and jewels inlaid in a repetitive heart pattern. A sweet
+flute melody with a piano counterpoint can be heard emanating from the temple.
+Understanding the peaceloving attitude of the tweefs, it is only natural that
+their god, or goddess, is one of love and harmony.
+~
+209 67108864 0
+D1
+The stairs lead back down into the garden.
+~
+gate~
+2 20945 20956
+D2
+The temple sanctuary is to the south.
+~
+~
+0 -1 20959
+S
+#20958
+Stairs to the Temple~
+These are the stairs that lead to the floor of the temple, they appear to be
+well used, by the devoted tweefs who come to pray.  The handrail is a carved
+chain of hearts, and the solid wall that connects the handrail to the stairs
+has gold, silver, and jewels inlaid in a repetitive heart pattern. A sweet
+flute melody with a piano counterpoint can be heard emanating from the temple.
+Understanding the peaceloving attitude of the tweefs, it is only natural that
+their god, or goddess, is one of love and harmony.
+~
+209 67108864 0
+D2
+The temple sanctuary is to the south.
+~
+~
+0 -1 20959
+D3
+The stairs lead back down into the garden.
+~
+gate~
+2 20945 20956
+S
+#20959
+Temple Sanctuary~
+Long benches line the sanctuary of this sacred building.  A few prostrate
+tweefs can be seen, humbly praying to their goddess of life and love,
+Natiana. The music from outside continues to be heard, but it comes from all
+around, not from one specific point.  The immense stained glass windows are
+beautifully decorative, hearts and ivy leaves intertwined, with all colors
+of the rainbow intermixed. The aisle down the center leads to an altar from
+which candles and incense sticks are burning.
+~
+209 67108872 0
+D0
+The garden lies to the north.
+~
+~
+0 -1 20956
+D2
+The Altar lies to the south.
+~
+~
+0 -1 20960
+S
+#20960
+Temple Altar~
+You approach a three-tiered altar, devoted entirely to the tweef
+goddess of life and love, Natiana. Above the altar is a large painting
+of Natiana, a winged angel with compassion in her eyes and arms
+extended, welcoming all who would enter her presence.
+~
+209 8 0
+D0
+The Sanctuary lies to the north.
+~
+~
+0 -1 20959
+E
+altar~
+Each tier holds different things, on the tier closest to the ground
+are the trinkets and money offerings from the servants and their
+families. The second tier holds the candles and incense offered by
+the middle class families. The third and final tier holds expensive
+perfumes, gold, silver and wealth of the upper class and royalty.
+~
+S
+#20961
+Grand Entrance~
+The cool marble tiles greet your hot, weary feet, and a fountain in the entry is
+a temptation for your thirsty body. There are large windows high above you, but 
+the harsh heat you left outside does not penetrate them. Marvelous ivory columns
+stand beside the fountain, holding up nothing. Standing there, they display not
+only the beauty of their craftsmanship, but also the exotic wealth of the people
+whose home this is. Jewels and treasures from all lands are imbedded in the ivory,
+even the sharpest knife could not dig them out.
+~
+209 67108872 0
+D2
+A hallway extends south and you can see a staircase.
+~
+~
+0 -1 20929
+S
+#20962
+Burning Sands~
+The relentless sun continues to create the waterfall of sweat down your back,
+and the endless sand tortures your feet with eternal heat. You come across a
+door, laying on the ground in the middle of nowhere.  If you lifted it, all you
+would see is more of the blinding sand echoing the heat of the sun overhead.
+~
+209 0 8
+D0
+~
+~
+0 -1 20963
+D1
+~
+~
+0 -1 20948
+D2
+~
+~
+0 -1 20972
+D3
+~
+~
+0 -1 20975
+D5
+The door is made of a dark colored wood, it absorbs the light from the blinding sun.
+~
+door~
+1 -1 20961
+E
+door~
+The door is made of a dark colored wood, it absorbs the light from the blinding
+sun.
+~
+S
+#20963
+Burning Sands~
+Miles upon miles of sand give no relief to the eyes, and you catch no glimpse of
+the ocean or the beach where you started your journey. The intense heat of the
+unforgiving sun beats down upon you, you feel weary of ever finding a refuge.
+A slight wind wisps through your clothes, shivers through your hair, and makes
+you feel all the more uncomfortable when it's gone.
+~
+209 0 8
+D0
+~
+~
+0 -1 20975
+D1
+~
+~
+0 -1 20973
+D2
+~
+~
+0 -1 20962
+D3
+~
+~
+0 -1 20980
+S
+#20964
+Out in the sunshine~
+After climbing through the dingy tunnel above the throne, you step into broad
+daylight, amidst trees and flowers. You hear lilting music, and songbirds,
+and you realize that you've escaped the terrible dungeon. The garden is
+defined, so you know you have not left the manor grounds, but you can't quite
+find your way out of this thick undergrowth that surrounds the small
+clearing.
+~
+209 0 2
+D3
+You catch a glimpse of more garden and a small path.
+~
+bush~
+8 -1 20955
+S
+#20965
+Immersed in the darkness~
+In the faint glow from your light, you can see the remains of prisoners
+chained to the walls, their faces contorted in agony. You sense a strong
+power coming from this area. Perhaps these shadows are victims of the evil
+that surrounds you and have been left here as a warning for hapless wanderers
+to not venture farther.
+~
+209 257 0
+D1
+It's too dark to see anything.
+~
+~
+0 -1 20966
+D3
+It's too dark to see anything.
+~
+~
+0 -1 20967
+D4
+It's too dark to see anything.
+~
+~
+0 -1 20909
+S
+#20966
+Immersed in the darkness~
+In the faint glow from your light, you can see the remains of prisoners
+chained to the walls, their faces contorted in agony. You sense a strong
+power coming from this area. Perhaps these shadows are victims of the evil
+that surrounds you and have been left here as a warning for hapless wanderers
+to not venture farther.
+~
+209 257 0
+D1
+It's too dark to see anything.
+~
+~
+0 -1 20967
+D3
+It's too dark to see anything.
+~
+~
+0 -1 20965
+S
+#20967
+Immersed in the darkness~
+In the faint glow from your light, you can see the remains of prisoners
+chained to the walls, their faces contorted in agony. You sense a strong
+power coming from this area. Perhaps these shadows are victims of the evil
+that surrounds you and have been left here as a warning for hapless wanderers
+to not venture farther.
+~
+209 257 0
+D1
+It's too dark to see anything.
+~
+~
+0 -1 20965
+D3
+It's too dark to see anything.
+~
+~
+0 -1 20966
+S
+#20968
+Wandering the Desert~
+The sand continues in every direction, you can't seem to remember how long
+you've been trudging through the desert.  Unforgiving heat makes you swelter in
+the sun, even the slightest breeze wouldn't be able to comfort you.
+~
+209 0 8
+D1
+~
+~
+0 -1 2172
+D2
+~
+~
+0 -1 20969
+D3
+~
+~
+0 -1 20974
+S
+#20969
+Endless Dunes~
+Dune upon dune of miserable sand stretches out as far as you can see. Heat
+waves in the distant cause visions of oases and refuge, they are the only thing
+that encourage you over the miles of desert sand.
+~
+209 0 8
+D0
+~
+~
+0 -1 20970
+D1
+~
+~
+0 -1 20974
+S
+#20970
+Burning Sands~
+Miles upon miles of sand give no relief to the eyes, and you catch no glimpse of
+the ocean or the beach where you started your journey. The intense heat of the
+unforgiving sun beats down upon you, you feel weary of ever finding a refuge.
+A slight wind wisps through your clothes, shivers through your hair, and makes
+you feel all the more uncomfortable when it's gone.
+~
+209 0 8
+D1
+~
+~
+0 -1 20969
+D2
+~
+~
+0 -1 20971
+S
+#20971
+Wandering the Desert~
+The sand continues in every direction, you can't seem to remember how long
+you've been trudging through the desert.  Unforgiving heat makes you swelter in
+the sun, even the slightest breeze wouldn't be able to comfort you.
+~
+209 0 8
+D0
+~
+~
+0 -1 20972
+D1
+~
+~
+0 -1 20968
+D3
+~
+~
+0 -1 20980
+S
+#20972
+Endless Dunes~
+Dune upon dune of miserable sand stretches out as far as you can see. Heat
+waves in the distant cause visions of oases and refuge, they are the only thing
+that encourage you over the miles of desert sand.
+~
+209 0 8
+D0
+~
+~
+0 -1 20948
+D1
+~
+~
+0 -1 20974
+D3
+~
+~
+0 -1 20973
+S
+#20973
+Burning Sands~
+Miles upon miles of sand give no relief to the eyes, and you catch no glimpse of
+where you started your journey. The intense heat of the unforgiving sun beats
+down upon you, you feel weary of ever finding a refuge. A slight wind wisps through
+your clothes, shivers through your hair, and makes you feel all the more
+uncomfortable when it's gone.
+~
+209 0 8
+D0
+~
+~
+0 -1 20973
+D1
+~
+~
+0 -1 20972
+D2
+~
+~
+0 -1 20973
+D3
+~
+~
+0 -1 20974
+S
+#20974
+Wandering the Desert~
+The sand continues in every direction, you can't seem to remember how long
+you've been trudging through the desert.  Unforgiving heat makes you swelter in
+the sun, even the slightest breeze wouldn't be able to comfort you.
+~
+209 0 8
+D0
+~
+~
+0 -1 20971
+D1
+~
+~
+0 -1 20975
+D2
+~
+~
+0 -1 20980
+D3
+~
+~
+0 -1 20969
+S
+#20975
+Endless Dunes~
+Dune upon dune of miserable sand stretches out as far as you can see. Heat
+waves in the distant cause visions of oases and refuge, they are the only thing
+that encourage you over the miles of desert sand.
+~
+209 0 8
+D0
+~
+~
+0 -1 20948
+D1
+~
+~
+0 -1 20962
+S
+#20976
+Through the Oasis~
+The cool water of the nearby pond beckons you, but it is still a little
+far off. There is a small path running through the trees, and the ferns waving
+in the breeze seem to beckon you to walk around and relax. Further along the
+path, the gardens that you can see are lush, beautiful and well maintained.
+~
+209 0 0
+D0
+~
+bushes~
+0 -1 20977
+D2
+The little path leads south to another part of the garden.
+~
+~
+0 -1 20918
+S
+#20977
+Paradise Oasis~
+Miraculously, the mirage you saw in the desert turns out to be real. The
+surrounding vegetation shields you from the desert, and tall palm trees shade
+you from the baking sun. Ferns grow under the trees, nesting dropped coconuts.
+~
+209 0 0
+D0
+~
+~
+0 -1 20978
+D2
+~
+bushes~
+8 -1 20976
+E
+well~
+Limestone bricks make up the wall surrounding the well. A rope  rests on the
+ground beside the well, so you can draw water up to drink.
+~
+E
+pool~
+Just south of here, the deep blue water murmurs gently of the
+coolness and refreshment it can provide.
+~
+E
+vegetation~
+Small plants and bushes line the outside of the crystal water, a
+natural barrier to create privacy.
+~
+S
+#20978
+Mirage or Miracle?~
+The scorching heat from the neverending sand makes waves in the distance
+wherever you look. Feeling light-headed, you stumble along until, once again,
+you see an oasis. The vision of cool water and surrounding trees wavers in the
+heat. Struggling to maintain control, you focus on the trees, almost daring 
+them to disappear. Hope grips you when you reach out and snatch a leaf off a
+tree.
+~
+209 0 0
+D0
+~
+~
+0 -1 20948
+D1
+~
+~
+0 -1 20979
+D2
+~
+~
+0 -1 20977
+D3
+~
+~
+0 -1 20980
+S
+#20979
+Burning Sands~
+Endless sand dunes greet your eyes as you wander aimlessly about this island.
+The beach has disappeared behind you and there appears to be no other
+landscape in sight. You hear a sound, like squawking birds from not far off,
+which brings a hope inside, there must be water nearby! The birds fade, but
+a comforting breath of wind drifts by, creating the sound of rustling leaves.
+~
+209 0 8
+D0
+~
+~
+0 -1 20972
+D1
+~
+~
+0 -1 20973
+D2
+~
+~
+0 -1 20972
+D3
+~
+~
+0 -1 20978
+S
+#20980
+Burning Sands~
+Endless sand dunes greet your eyes as you wander aimlessly about this island.
+The beach has disappeared behind you and there appears to be no other
+landscape in sight. You hear a sound, like squawking birds from not far off,
+which brings a hope inside, there must be water nearby! The birds fade, but
+a comforting breath of wind drifts by, creating the sound of rustling leaves.
+~
+209 67108864 8
+D0
+~
+~
+0 -1 20973
+D1
+~
+~
+0 -1 20963
+D2
+~
+~
+0 -1 20979
+D3
+~
+~
+0 -1 20978
+S
+#20981
+Blarf Dance Hall~
+The green glow fades to blacklighting creating a softer, more romantic mood. 
+Couples waltz around the room, a sea of movement, to the music being played a
+few rooms away. The cavernous rooms have incredible acoustics, so even the 
+quietest pieces can be heard. The far wall is covered by a large piece of 
+carpeting, to dampen sound and reduce echos. Upon closer inspection, the 
+carpeting reveals small clues of the Blarf lifestyle. The other walls are 
+decorated with wallpaper, a thick white stripe with gold embossed maple leaves, 
+bordered by two medium thick green stripes.
+~
+209 67108872 0
+D1
+The carpet is decorative and beautiful, and almost seems to flow
+with the music, as if there is nothing behind it...
+~
+carpeting~
+8 -1 20982
+D3
+The rest of the dance hall with the majority of the dancers.
+~
+~
+0 -1 20916
+E
+carpeting~
+The carpet is decorative and beautiful, and almost seems to flow
+with the music, as if there is nothing behind it...
+~
+S
+#20982
+Behind the curtains~
+As your eyes adjust to the lack of light here, you notice the walls have no
+texture, carving, or design. This is a strange occurrence, since the blarfs
+usually carve their whole lives into the floors and walls around them.
+~
+209 67108872 0
+D2
+~
+~
+0 -1 20983
+D3
+The dance hall for the blarfs is on the other side of the massive carpeting.
+~
+carpeting~
+8 -1 20981
+S
+#20983
+Guard's Secret Passage~
+As you wander the secret passages, you notice the carvings in the floor in this
+room. From what you can see, the blarfs are in charge of guarding the manor and
+the royal family. The passage you've been walking through is their way of
+getting from point to point without being seen in the manor.
+~
+209 67108872 0
+D0
+~
+~
+0 -1 20982
+D1
+~
+~
+0 -1 20984
+S
+#20984
+Guard's Secret Passage~
+The empty halls make it easy to hear the sounds coming from beneath your feet.
+You can hear servants bustling about, cleaning and doing other day-to-day
+chores, while the family pet runs around wreaking havoc. You realize that the
+walls here are plain to maximize the echo effect, so the blarfs would hear any
+cry for help from the tweefs they protect.
+~
+209 67108872 0
+D3
+~
+~
+0 -1 20983
+D5
+~
+trapdoor~
+1 -1 20944
+S
+#20985
+A mossy path~
+The red brick path winds through thick green foliage. There is a bench so you
+can relax and enjoy the fresh air. The mossy ground cover has small flowers
+that grow in between, it looks like it would be nice to wander in barefoot.
+~
+209 0 2
+D2
+~
+~
+0 -1 20986
+D3
+~
+~
+0 -1 20955
+S
+#20986
+A mossy path~
+The red brick path winds through thick green foliage. There is a bench so you
+can relax and enjoy the fresh air. The mossy ground cover has small flowers
+that grow in between, it looks like it would be nice to wander in barefoot.
+To the east you can see a small courtyard.
+~
+209 0 2
+D0
+~
+~
+0 -1 20985
+D1
+~
+~
+0 -1 20987
+S
+#20987
+A small courtyard~
+Square red bricks create a small courtyard in this lush garden. To the north
+you can see the manor, and the balcony from which the king and queen make their
+proclamations. Moss grows in between the bricks, and small white flowers bloom
+sporadically amongst the shrubs surrounding the courtyard.
+~
+209 0 1
+D0
+~
+~
+0 -1 20989
+D1
+~
+~
+0 -1 20988
+D3
+~
+~
+0 -1 20986
+S
+#20988
+A small courtyard~
+Square red bricks create a small courtyard in this lush garden. To the north
+you can see the manor, and the balcony from which the king and queen make their
+proclamations. Moss grows in between the bricks, and small white flowers bloom
+sporadically amongst the shrubs surrounding the courtyard.
+~
+209 0 1
+D0
+~
+~
+0 -1 20990
+D3
+~
+~
+0 -1 20987
+S
+#20989
+A small courtyard~
+Square red bricks create a small courtyard in this lush garden, right below the
+balcony of the king and queen.  None of the trees are tall enough to reach the
+edge, but they provide decent shade for when the king is making announcements.
+The moss grows in between the bricks and is kept neatly trimmed, in order to
+contrast the red brick.
+~
+209 0 1
+D1
+~
+~
+0 -1 20990
+D2
+~
+~
+0 -1 20987
+S
+#20990
+A small courtyard~
+Square red bricks create a small courtyard in this lush garden, right below the
+balcony of the king and queen.  None of the trees are tall enough to reach the
+edge, but they provide decent shade for when the king is making announcements.
+The moss grows in between the bricks and is kept neatly trimmed, in order to
+contrast the red brick.
+~
+209 0 1
+D2
+~
+~
+0 -1 20988
+D3
+~
+~
+0 -1 20989
+S
+#20999
+Guest Bathroom~
+In keeping with the same color scheme, the marvelous ivory bath is actually
+cut into the floor, and there is a compartment with bath supplies cut away right
+next to the spa. The floor is covered with the same burgundy carpet from the 
+bedroom. The sink and toilet are of the same ivory porcelain as the tub, and 
+are set with silver accessories.  There is a small medicine cabinet near the 
+sink, with a mirror on the wall close by. Right next to the mirror is a window 
+with a frosted effect, for privacy. It lets in enough natural light to see, but 
+keeps out unwanted eyes. The walls are ivory with a burgundy pearl splashed over
+the top, not covering the base coat, but accenting it.  There is a shower in a 
+corner, away from the massive spa-bath, and it sparkles clean like the rest of 
+the room, prepared for the next guest.
+~
+209 67108872 0
+D2
+You can see the bedroom through the opening between the rooms.
+~
+~
+0 -1 20950
+E
+shower~
+A wide shower, with a small ledge for female guests to rest their foot on
+while shaving. There are courtesy bottles of shampoo and conditioner, as well
+as a fresh bar of soap.
+~
+E
+guy~
+You spin around to defend yourself from the maniac behind you with the knife,
+but when you turn from the mirror, you can no longer see him.
+~
+E
+mirror~
+A hideous shape confronts you as you look into the mirror, but then you
+realize it's just your reflection. You can see the whole room in the mirror, 
+and the evil looking guy with the large butcher knife behind you.
+~
+E
+cabinet~
+A cabinet juts out from the wall, containing tablets, medicines, and health
+herbs of all kinds.
+~
+E
+sink~
+An ivory porcelain sink with a silver faucet.
+~
+E
+bath~
+A large jacuzzi style bathtub, big enough for at least six people.
+~
+S
+#0
+$~

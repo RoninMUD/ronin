@@ -6172,6 +6172,7 @@ Split is a command used with in a group to equally split up a particular
 amount of gold to each person in the group.
 
 Usage: split <amount of gold>
+       split all.coins
 
 See Also: -
 #
@@ -8252,7 +8253,7 @@ Subclass Mystic: Level 5 (Ninja)
 
 Usage       : cast 'tranquility' <victim>
 Accumulative: no
-Duration    : 5
+Duration    : 10
 Mana Cost   : 35
 
 While under the effects of this spell, the Mystic channels his/her own
