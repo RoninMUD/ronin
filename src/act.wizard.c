@@ -3899,8 +3899,8 @@ void do_force(struct char_data *ch, char *argument, int cmd)
 {
   struct descriptor_data *i;
   struct char_data *vict;
-  char name[100], to_force[MAX_INPUT_LENGTH],buf[100];
-  char logbuf[255];
+  char name[100], to_force[MAX_INPUT_LENGTH],buf[MAX_STRING_LENGTH];
+  char logbuf[MAX_STRING_LENGTH];
 
   if(!check_god_access(ch,TRUE)) return;
 

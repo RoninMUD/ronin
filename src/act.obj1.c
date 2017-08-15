@@ -1466,26 +1466,36 @@ void do_split(struct char_data *ch, char *argument, int cmd) { /* Updated Dec 98
   /* Initial Checks */
   amount = 0;
   one_argument(argument,buf);
+
   if(!*buf) {
     send_to_char("How much do you want to split?\n\r",ch);
     return;
   }
-  if(!is_number(buf)) {
-    send_to_char("Sorry, you can't do that!\n\r",ch);
-    return;
+
+  if (!is_number(buf)) {
+    if (!strncmp(buf, "all.coins", MAX_INPUT_LENGTH)) {
+      amount = GET_GOLD(ch);
+    }
+    else {
+      send_to_char("Sorry, you can't do that!\n\r",ch);
+      return;
+    }
+  }
+  else {
+    amount = atoi(buf);
   }
 
-  amount=atoi(buf);
   if (amount<=0) {
     send_to_char("Sorry, you can't do that!\n\r",ch);
     return;
   }
+
   if (GET_GOLD(ch)<amount) {
     send_to_char("You haven't got that many coins!\n\r",ch);
     return;
   }
 
-  if(!(k=ch->master)) k=ch; /* If ch doesn't have a master, ch must be the leader */
+  if (!(k=ch->master)) k=ch; /* If ch doesn't have a master, ch must be the leader */
 
   /* Check for same room */
   if(IS_AFFECTED(k, AFF_GROUP) && (CHAR_REAL_ROOM(k) == CHAR_REAL_ROOM(ch)))
@@ -1530,6 +1540,7 @@ void do_split(struct char_data *ch, char *argument, int cmd) { /* Updated Dec 98
     send_to_char(buf,k);
     save_char(k,NOWHERE);
   }
+
   sprintf(buf,"You give %d coins to each of your group members.\n\r",amount);
   send_to_char(buf,ch);
   save_char(ch, NOWHERE);
