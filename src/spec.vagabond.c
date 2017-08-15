@@ -51,6 +51,7 @@
 #define SPYGLASS_SPEC_CHANCE     70
 #define SPYGLASS_DISTANCE        3
 
+
 #define TALON_SPEC_1_CHANCE      5
 #define TALON_SPEC_1_DAMAGE      65
 #define TALON_SPEC_2_CHANCE      5
@@ -59,7 +60,7 @@
 #define TALON_SPEC_2_REGEN       20
 
 #define BOOTS_NORMAL_DAMROLL     2
-#define BOOOTS_SPEC_CHANCE       5
+#define BOOTS_SPEC_CHANCE        5
 #define BOOTS_SPEC_DAMROLL       4
 #define BOOTS_SPEC_DURATION      4
 
@@ -440,7 +441,7 @@ int talon_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
   FOL *follower = NULL;
   AFF af;
 
-  if (!obj || ch != obj->equipped_by || !(owner = obj->equipped_by)) return FALSE;
+  if (!obj || !(owner = obj->equipped_by)) return FALSE;
 
   if (cmd == MSG_TICK)
   {
@@ -509,7 +510,7 @@ int boots_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
   CHAR *owner = NULL;
 
-  if (!obj || ch != obj->equipped_by || !(owner = obj->equipped_by)) return FALSE;
+  if (!obj || !(owner = obj->equipped_by)) return FALSE;
 
   if (EQ(owner, WEAR_FEET) != obj) return FALSE;
 
@@ -548,7 +549,7 @@ int boots_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
       }
     }
 
-    if (!OBJ_SPEC(obj) && chance(BOOOTS_SPEC_CHANCE))
+    if (!OBJ_SPEC(obj) && chance(BOOTS_SPEC_CHANCE))
     {
       act("Your boots glow white-hot, imbuing you with draconic power!", FALSE, owner, 0, 0, TO_CHAR);
       act("$n's boots glow white-hot, imbuing $m with draconic power!", FALSE, owner, 0, 0, TO_ROOM);
