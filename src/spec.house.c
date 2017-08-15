@@ -52,6 +52,7 @@ $State: Exp $
 #include "act.h"
 #include "cmd.h"
 #include "spec_assign.h"
+#include "subclass.h"
 
 extern CHAR *character_list;
 extern struct time_info_data time_info;
@@ -362,7 +363,7 @@ int New_Orb_Spec(OBJ *orb, CHAR *ch,int cmd,char *arg) {
   one_argument(arg,buf);
   if(!isname(buf,OBJ_NAME(orb))) return FALSE;
 
-  if(orb == EQ(ch,HOLD)) {
+  if(is_caster(ch) && orb == EQ(ch,HOLD)) {
     if(orb->obj_flags.value[3]) {
       send_to_char("The darkened orb seems powerless!\n\r",ch);
       return TRUE;
@@ -722,6 +723,122 @@ MirrorRoom (int room, CHAR *ch,int cmd,char *arg) {
   return FALSE;
 }
 
+
+int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
+  CHAR *tch;
+  int drain = 0;
+  OBJ *light;
+  char buf[MAX_STRING_LENGTH];
+  struct affected_type_5 af;
+
+  if( cmd!=MSG_MOBACT || chance(50) || !(tch = get_random_victim(uber)) ) return FALSE;
+
+  switch (number(0,12)) {
+    case 0: 
+    case 1:
+    case 2: // Steal light source
+      act("$n swoops toward you and plunges your world into darkness.", FALSE,uber,0,tch,TO_VICT);
+      act("$n swoops toward $N and plunges $M into darkness.", FALSE,uber,0,tch,TO_NOTVICT);
+      act("You descend upon $N and plunge $M into darkness.", FALSE,uber,0,tch,TO_CHAR);
+      if (EQ(tch, WEAR_LIGHT)) {
+        light = tch->equipment[WEAR_LIGHT];
+        sprintf(buf, "WIZINFO: %s stole %s's light: %s", GET_SHORT(uber), GET_NAME(tch), OBJ_SHORT(light));
+        log_s(buf);
+        light->log=1;
+        obj_to_char(unequip_char(tch, WEAR_LIGHT), uber);
+        save_char(tch, NOWHERE);
+        act("Light is suddenly and simply absent from your world.  Darkness washes over you, darker than a Black Worm's tookus on a moonless prairie night.", FALSE,uber,0,tch,TO_VICT);
+      }
+      
+      if (affected_by_spell( tch, SPELL_INFRAVISION )) {
+        affect_from_char(tch, SPELL_INFRAVISION);
+      }
+      if (affected_by_spell( tch, SPELL_PERCEIVE )) {
+        affect_from_char(tch, SPELL_PERCEIVE);
+      }      
+      af.type = SPELL_BLINDNESS;
+      af.location = APPLY_HITROLL;
+      af.modifier = -8;
+      af.bitvector = AFF_BLIND;
+      af.bitvector2 = 0;
+      af.duration = 2;
+      affect_to_char (tch, &af);
+      break;
+    case 3:
+    case 4:
+    case 5: // Create an image
+      act("A shadowy appendage coalesces, constricts around $N and forces $M to face the mirror.", FALSE,uber,0,tch,TO_NOTVICT);
+      act("With a force of will you extend your presence into a lithe appendange which entwines $N and forces $M to face the mirror.", FALSE,uber,0,tch,TO_CHAR);
+      
+      if (!affected_by_spell( tch, SPELL_BLINDNESS )) { 
+        act("A shadowy appendage forms before your eyes, binds your limbs and body, and forces you to face the mirror.", FALSE,uber,0,tch,TO_VICT);
+        create_mirror_image(tch);
+      }
+      else { // if you can't see, you get a free pass
+        act("Stricken with blindness, you have no warning before a force suddenly binds your limbs and shoves you against a wall.", FALSE,uber,0,tch,TO_VICT);
+      }
+      break;
+    case 6: 
+    case 7:
+    case 8: // Cast a spell - poison smoke, cloud of confusion, or incendiary cloud
+    send_to_room("An assault of sound, some nether language, echoes around the room.\n\r", CHAR_REAL_ROOM(uber));
+      act("The sound itself seems to form into a cloud of shadow which envelops %N briefly, before dissipating.", FALSE,uber,0,tch,TO_NOTVICT);
+      act("The sound itself seems to form into a cloud of shadow which envelops you briefly, before dissipating.", FALSE,uber,0,tch,TO_VICT);
+      switch (number(1,3)) {
+        case 1:
+          if (!affected_by_spell( tch, SPELL_INCENDIARY_CLOUD )) {
+            af.type = SPELL_INCENDIARY_CLOUD;
+            af.duration = 8;
+            af.modifier = 0;
+            af.location = 0;
+            af.bitvector = 0;
+            af.bitvector2 = 0;
+            affect_to_char(tch, &af);
+            break;
+          } // carry on to SPELL_CLOUD_CONFUSION if affected by SPELL_INCENDIARY_CLOUD
+        case 2:
+          if(!affected_by_spell( tch, SPELL_CLOUD_CONFUSION )) {
+            af.type = SPELL_CLOUD_CONFUSION;
+            af.location = APPLY_HITROLL;
+            af.duration = number(2,6);
+            af.modifier = -(number(5, 8));
+            if (IS_NIGHT) af.modifier--;
+            af.bitvector  = 0;
+            af.bitvector2 = 0;
+            affect_to_char(tch, &af);        
+            break;
+          }  // carry on to SPELL_POISON  if affected by SPELL_CLOUD_CONFUSION
+        case 3:
+          af.type = SPELL_POISON;
+          af.duration = 111;
+          af.modifier = -5;
+          af.location = APPLY_STR;
+          af.bitvector = AFF_POISON;
+          af.bitvector2 = 0;
+          affect_to_char(tch, &af);
+          send_to_char("You feel sick throughout your body and soul.\n\r", tch);
+          break;
+        default:
+          break;
+      }
+      break;
+    case 9:  
+    case 10:
+    case 11:
+    case 12: // Drain and self-heal
+      act("$n spears you with a wispy tentacle which wriggles momentarily before retreating back into the shadowy mass.", FALSE,uber,0,tch,TO_VICT);
+      act("$n spears $N with a wispy tentacle which wriggles momentarily before retreating back into the shadowy mass.", FALSE,uber,0,tch,TO_NOTVICT);
+      act("You spears $N with a wispy tentacle which wriggles momentarily before retreating back into your shadowy mass.", FALSE,uber,0,tch,TO_CHAR);
+      send_to_char ("You feel your life force sapped away.\n",tch);
+      drain = number (200,300);
+      drain_mana_hit_mv(uber,tch,drain<<1,drain,0,TRUE,TRUE,FALSE);
+      GET_HIT(uber) = MIN( GET_MAX_HIT(uber), GET_HIT(uber) + (drain * 10));
+      break;
+    default:
+      break;
+  }
+  return FALSE;
+}
  /**********************************************************************\
  |* End Of the Special procedures for Haunted House                    *|
  \**********************************************************************/
@@ -738,6 +855,7 @@ MirrorRoom (int room, CHAR *ch,int cmd,char *arg) {
 #define SUSANNE               ITEM(ZONE_HOUSE,2)
 #define ANNETTE               ITEM(ZONE_HOUSE,3)
 #define DREAMSHADOW          ITEM(ZONE_HOUSE,4)
+#define UBERDREAM         ITEM(ZONE_HOUSE,14)
 #define GUARDIAN          ITEM(ZONE_HOUSE,5)
 #define WRAITH               ITEM(ZONE_HOUSE,9)
 #define WIGHT               ITEM(ZONE_HOUSE,10)
@@ -758,6 +876,7 @@ void assign_house (void) {
   assign_mob(SUSANNE  , Apparition);
   assign_mob(ANNETTE  , Apparition);
   assign_mob(DREAMSHADOW,   DreamShadow);
+  assign_mob(UBERDREAM,   uber_dream_shadow);
   assign_mob(WRAITH  , Wraith);
   assign_mob(WIGHT , Wight);
   assign_mob(GUARDIAN,   Guardian);
