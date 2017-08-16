@@ -12,6 +12,8 @@ It is waiting to be promoted to be a more important piece in its class.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2302
 white queen castle~
 white queen's castle~
@@ -26,6 +28,8 @@ Its job is to protect the Queen.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2303
 white queen knight~
 white queen's knight~
@@ -38,8 +42,11 @@ It has a head of a horse and a body of mankind, it might be a relative of the ce
 16 4 0 6d10+300 3d6+1
 1500 18000
 8 8 1
-87 0 0d0+0 0
+87 0 0d0+0 1
+7 1 5 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2304
 white queen bishop~
 white queen's bishop~
@@ -53,6 +60,8 @@ A happy bishop who can do everything in an incredibly quick motion.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2305
 white queen~
 white queen~
@@ -67,6 +76,8 @@ She is bad-tempered and gets mad easily, watch out!
 8 8 2
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2306
 white king~
 white king~
@@ -81,6 +92,8 @@ He gave all his power to the queen, yet he is still a very tough fighter.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2307
 white king castle~
 white king's castle~
@@ -95,6 +108,8 @@ Its job is to protect the king.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2308
 white king knight~
 white king's knight~
@@ -107,8 +122,11 @@ It has a head of a horse and a body of mankind, it might be a relative of the ce
 16 4 0 6d10+300 8d2+2
 1500 18000
 8 8 1
-87 0 0d0+0 0
+87 0 0d0+0 1
+7 1 5 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2309
 white king bishop~
 white king's bishop~
@@ -122,6 +140,8 @@ A happy bishop who can do everything in an incredibly quick motion.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2310
 black pawn~
 black pawn~
@@ -136,6 +156,8 @@ It is waiting to be promoted to be a more important piece in its class.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2311
 black queen castle~
 black queen's castle~
@@ -150,6 +172,8 @@ Its job is to protect the Queen.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2312
 black queen knight~
 black queen's knight~
@@ -162,8 +186,11 @@ It has a head of a horse and a body of mankind, it might be a relative of the ce
 16 4 0 6d10+300 8d2+2
 1500 18000
 8 8 1
-87 0 0d0+0 0
+87 0 0d0+0 1
+7 1 5 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2313
 black queen bishop~
 black queen's bishop~
@@ -177,6 +204,8 @@ A happy bishop who can do everything in an incredibly quick motion.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2314
 black queen~
 black queen~
@@ -191,6 +220,8 @@ She is bad-tempered and gets mad easily, watch out!
 8 8 2
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2315
 black king~
 black king~
@@ -205,6 +236,8 @@ He gave all his power to the queen, yet he is still a very tough fighter.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2316
 black king castle~
 black king's castle~
@@ -219,6 +252,8 @@ Its job is to protect the king.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2317
 black king knight~
 black king's knight~
@@ -231,8 +266,11 @@ It has a head of a horse and a body of mankind, it might be a relative of the ce
 16 4 0 6d10+300 8d2+2
 1500 18000
 8 8 1
-87 0 0d0+0 0
+87 0 0d0+0 1
+7 1 5 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #2318
 black king bishop~
 black king's bishop~
@@ -246,5 +284,7 @@ A happy bishop who can do everything in an incredibly quick motion.
 8 8 1
 87 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #0
 $~

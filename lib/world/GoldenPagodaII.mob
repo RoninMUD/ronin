@@ -15,6 +15,8 @@ else but here.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #26584
 enlightened~
 The Enlightened One~
@@ -30,5 +32,28 @@ chosen to remain amoung the mortals to guide them on the path of Karma.
 8 8 1
 66 8 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
+#26585
+enlightened uber~
+The Uber Enlightened One~
+The Uber Enlightened One sits here, folded blissfully like a pretzel.
+~
+The Uber Enlightened One sits here, his arms and legs twined about his lithe
+body in what must be a pose intended only for those who have reached complete
+Nirvana. Though it looks uncomfortable, he is bathed in a rainbow glow and
+wears a cheshire smile on his beaming face. He is here by choice, to guide
+the followers in his pagoda on their own path to enlightenment and teach them
+the ways of Karma.
+~
+74 268732552 1000 Y
+60 -25 -25 10d300+200000 20d20+200
+10000000 100000000
+8 8 1
+67 8 100d100+10000 1
+11 6 50 197
+0 0 1 0
+K
+0 0 0 0 0 0 0
 #0
 $~

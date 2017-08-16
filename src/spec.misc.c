@@ -736,41 +736,6 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
 
  }
 
- int bash_kick(CHAR *mob,CHAR *ch, int cmd, char *arg)
- {
-   CHAR *vict;
-   int num;
-
-   if (cmd) return FALSE;
-
-   if (GET_POS(mob) != POSITION_FIGHTING) return FALSE;
-
-
-   for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = vict->next_in_room )
-     if (vict->specials.fighting==mob && number(0,5)==0)
-       break;
-
-   if (!vict)
-     return FALSE;
-
-   num = number(0,1);
-
-   if (num == 0)
-     {	damage(mob, vict, 0, SKILL_KICK,DAM_NO_BLOCK);
-	 WAIT_STATE(vict, PULSE_VIOLENCE*2);
-	 WAIT_STATE(mob, PULSE_VIOLENCE*2);
-	 return FALSE;
-       }
-   else
-     {	damage(mob, vict, 0, SKILL_BASH,DAM_NO_BLOCK);
-	 GET_POS(vict) = POSITION_RESTING;
-	 WAIT_STATE(vict, PULSE_VIOLENCE*2);
-	 WAIT_STATE(mob, PULSE_VIOLENCE*2);
-	 return FALSE;
-       }
-
- }
-
  int drow_magic(CHAR *mob,CHAR *ch, int cmd, char *arg)
  {
    CHAR *vict;
@@ -1427,21 +1392,6 @@ int onering_quest(OBJ *sh, CHAR *ch, int cmd, char *arg) {
  \**********************************************************************/
 
 void assign_misc (void) {
-
-  assign_mob(2009,bash_kick); /* Galaxy */
-  assign_mob(2029,bash_kick); /* Galaxy */
-  assign_mob(2102,bash_kick); /* Brigand Camp, by Odie */
-  assign_mob(2303,bash_kick); /* Chess Kingdom */
-  assign_mob(2308,bash_kick); /* Chess Kingdom */
-  assign_mob(2312,bash_kick); /* Chess Kingdom */
-  assign_mob(2317,bash_kick); /* Chess Kingdom */
-  assign_mob(2803,bash_kick); /* Ivory Tower */
-  assign_mob(4505,bash_kick); /* Goblins */
-  assign_mob(5105,bash_kick); /* Drow City */
-  assign_mob(5106,bash_kick); /* Drow City */
-  assign_mob(5208,bash_kick); /* City of Thalos */
-  assign_mob(6201,bash_kick); /* Helventia Mountains by Lem */
-  assign_mob(8005,bash_kick); /* Sonicity */
 
   assign_mob(5103,drow_magic); /* Drow City */
   assign_mob(5104,drow_magic); /* Drow City */

@@ -1460,7 +1460,7 @@ A ring with strange magical qualities was left here.~
 9 259063105 3
 20 0 0 0
 6 1 73952
-1
+8
 X
 ~
 4 0 0
@@ -1487,7 +1487,7 @@ A ring with strange magical qualities was left here.~
 9 263256598 3
 20 0 0 0
 6 1 29647
-1
+8
 X
 ~
 4 0 0
@@ -1573,17 +1573,6 @@ A piece of parchment with brilliant azure lettering lies here.~
 2 28657 17
 17
 E
-recipe parchment~
-
- How this came into Pluto's possession is an epic tale of infighting
-among the immortals of Olympus. Globules of hardened wax splattered
-on the parchment suggest that Daedalus had a hand in the mischief.
- The disorganized blue scrawl is littered with incomplete words and
-scribbled nonsense. Four distinct, separate groups of lettering seem
-to glow with a brilliant azure, standing out clearly against the dull
-blue ink covering the rest of the parchment.
-~
-E
 parchment~
 
  How this came into Pluto's possession is an epic tale of
@@ -1595,6 +1584,17 @@ words and scribbled nonsense. Four distinct, separate groups
 of lettering seem to glow with a brilliant azure, standing
 out clearly against the dull blue ink covering the rest of
 the parchment.
+~
+E
+recipe parchment~
+
+ How this came into Pluto's possession is an epic tale of infighting
+among the immortals of Olympus. Globules of hardened wax splattered
+on the parchment suggest that Daedalus had a hand in the mischief.
+ The disorganized blue scrawl is littered with incomplete words and
+scribbled nonsense. Four distinct, separate groups of lettering seem
+to glow with a brilliant azure, standing out clearly against the dull
+blue ink covering the rest of the parchment.
 ~
 X
 ~

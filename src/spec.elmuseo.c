@@ -3893,6 +3893,7 @@ int mus_cloak(OBJ *cloak, CHAR *ch,int cmd,char *arg)
       change_cloak_condition( cloak );
     return FALSE;
   }
+/* Hemp 20170815 - this item doesn't need to be owner flagged, have a heart
 
   if( cmd == MSG_MOBACT && owner && !IS_NPC( owner ) && cloak->spec_value == 0 )
   {
@@ -3905,6 +3906,7 @@ int mus_cloak(OBJ *cloak, CHAR *ch,int cmd,char *arg)
     change_cloak_condition( cloak );
     return FALSE;
   }
+*/
   if( cmd == MSG_TICK && cloak->spec_value < NUM_TICKS && cloak->equipped_by && cloak->equipped_by->specials.fighting )
   {
     int modifier = 1;

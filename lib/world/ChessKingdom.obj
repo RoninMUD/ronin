@@ -7,6 +7,14 @@ a white castle's vest is lying on the ground.~
 8 0 0 0
 40 10000 500
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #2302
 white blade~
 white blade~
@@ -16,6 +24,14 @@ a white blade is lying on the ground.~
 0 3 6 3
 10 6000 500
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 19 1
 #2303
@@ -27,6 +43,14 @@ a white stole is lying on the ground.~
 3 0 0 0
 5 1000 200
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 2 1
 A
@@ -40,6 +64,14 @@ a white mitre is lying on the ground.~
 3 0 0 0
 20 20000 3000
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 4 1
 A
@@ -53,6 +85,14 @@ a white crosier is lying on the ground.~
 0 0 0 0
 30 10000 1000
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 3 2
 A
@@ -66,6 +106,14 @@ a black castle's vest is lying on the ground.~
 8 0 0 0
 40 10000 500
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #2307
 black blade~
 black blade~
@@ -75,6 +123,14 @@ a black blade is lying on the ground.~
 0 3 6 3
 10 6000 500
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 18 1
 #2308
@@ -86,6 +142,14 @@ a black stole is lying on the ground.~
 3 0 0 0
 5 1000 200
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 2 1
 A
@@ -99,6 +163,14 @@ a black mitre is lying on the ground.~
 3 0 0 0
 20 20000 3000
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 4 1
 A
@@ -112,6 +184,14 @@ a black crosier is lying on the ground.~
 0 0 0 0
 30 10000 1000
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 3 2
 A

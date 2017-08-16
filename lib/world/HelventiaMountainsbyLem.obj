@@ -390,12 +390,12 @@ A bone flute has been left here.~
 10 10000 2000
 8
 E
-bone~
+flute~
 You see a finely carved bone flute, highly polished around the
 finger holes.
 ~
 E
-flute~
+bone~
 You see a finely carved bone flute, highly polished around the
 finger holes.
 ~
@@ -444,11 +444,11 @@ Someone has left a seal-ring here.~
 5 10000 3500
 10
 E
-ring~
+seal~
 The ring you see before you is oddly engraved with an image of
 a snake eating its own tail, the world-snake, The Worm Ouroboros.~
 E
-seal~
+ring~
 The ring you see before you is oddly engraved with an image of
 a snake eating its own tail, the world-snake, The Worm Ouroboros.~
 X
