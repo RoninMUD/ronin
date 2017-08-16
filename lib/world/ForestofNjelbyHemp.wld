@@ -850,13 +850,6 @@ D2
 ~
 0 -1 2244
 E
-pedestal~
-There is a faint depression within the otherwise perfectly hewn stone. 
-Upon closer inspection you spot two large bootprints embedded in the
-stone, as if a weighty giant had over time etched its own stance into 
-the shiny, black rock.
-~
-E
 tapestry~
 Upon the western tapestry is a scene of a roiling sea with ominously
 dark clouds reaching long slender fingers of lightning down toward a
@@ -864,6 +857,13 @@ schooner getting tossed about in the waves. Opposite it is a tapestry
 that stretches all the way to the floor. A giant glacier looms large
 over an advancing army of armoured knights on horseback headed toward
 a fissure splitting the icy wall.
+~
+E
+pedestal~
+There is a faint depression within the otherwise perfectly hewn stone. 
+Upon closer inspection you spot two large bootprints embedded in the
+stone, as if a weighty giant had over time etched its own stance into 
+the shiny, black rock.
 ~
 S
 #2247
@@ -884,18 +884,18 @@ D2
 ~
 0 -1 2246
 E
-pedestal~
-There is a faint depression within the otherwise perfectly hewn stone. 
-Upon closer inspection you spot two large bootprints embedded in the
-stone, as if a weighty giant had over time etched its own stance into 
-the shiny, black rock.
-~
-E
 tapestry~
 The western tapestry depicts a landscape of giant rolling hills with
 flowers, sun shining, and small halfling-like creatures are scattered
 about farming and playing. Across from it is a desert tableau, in the
 distance two riders approach a walled city.
+~
+E
+pedestal~
+There is a faint depression within the otherwise perfectly hewn stone. 
+Upon closer inspection you spot two large bootprints embedded in the
+stone, as if a weighty giant had over time etched its own stance into 
+the shiny, black rock.
 ~
 S
 #2248

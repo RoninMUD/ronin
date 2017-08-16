@@ -54,7 +54,7 @@ A sketch is lying here.~
 32 0 1
 18706 5427 16590 12120
 10 10 10
-25
+5
 E
 sketch recipe~
 On the paper you see a sketch of a shield and notes on how to make it.
@@ -102,7 +102,7 @@ heroes shield~
 A Heroes Shield~
 A mighty shield is lying here.~
 ~
-9 42000384 513
+9 112245760 513
 2 -1 -1 -1
 32 20000 20000
 0
@@ -118,22 +118,20 @@ sky over a dark landscape filled with evil creatures.
 ~
 X
 ~
-3588 524352 0
+3584 0 0
 M
 Your hands shiver in excitement as you grab the Shield of Heroes.~
 $n wears $s Heroes Shield and cries out in excitement.~
 Your sense of heroism fades as you remove the shield.~
 $n puts away $s Heroes Shield.~
 A
-19 2
+19 0
 A
-18 2
+18 0
 A
-13 70
+53 -2
 T
 1000
-B
-8192
 #18799
 nothing~
 a bit of nothing~

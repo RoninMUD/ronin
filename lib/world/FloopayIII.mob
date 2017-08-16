@@ -77,23 +77,6 @@ Featureless and non-descript, the blank of primal clay waits for someone to brea
 0 0 0 0
 K
 0 0 0 0 0 0 0
-#7806
-bo trapper~
-Bo~
-Bo, the master trapper, is standing here.
-~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
-~
-8 268435584 0 Y
-55 -10 -25 55d12+24000 5d5+250
-3000000 6500000
-8 8 1
-6 4160 1d1+99 0
-0 0 0 352
-R
-511
-K
-0 0 0 0 0 0 0
 #7807
 horse~
 A Horse~
@@ -402,10 +385,9 @@ Featureless and non-descript, the blank of primal clay waits for someone to brea
 K
 0 0 0 0 0 0 0
 #7825
-faelynx warlord chief~
+faelynx chief guard~
 Faelynx~
-Faelynx, the King's Warlord, is standing here.
-~
+Faelynx, the King's Head Guard, is standing here.~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
 147466 268697760 500 Y

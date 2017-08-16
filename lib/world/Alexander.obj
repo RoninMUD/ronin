@@ -3,7 +3,7 @@ workbench~
 a workbench~
 A workbench filled with alchemy equipment is standing along the wall.~
 ~
-0 0 0
+15 0 0
 0 0 0 0
 10 10 10
 100
@@ -54,7 +54,7 @@ The cloak of an Archaeologist is laying here.~
 11 134217728 1025
 0 0 0 0
 3 15000 500000
-34
+5
 E
 cloak~
 The cloak is made of fine leather and has a symbol sown onto the back. 
@@ -63,7 +63,7 @@ is made with silver and gold threads.
 ~
 X
 ~
-4 0 0
+2 0 0
 M
 You wear an archaeologist's cloak~
 $n wears an archaeologist's cloak~
@@ -76,7 +76,7 @@ A
 A
 13 80
 T
-1200
+300
 #18503
 stone~
 A stone~
@@ -98,6 +98,8 @@ You grab a stone~
 $n grabs a stone~
 You stop holding a stone~
 $n stops holding a stone~
+A
+1 -1
 #18504
 bone~
 A bone~
@@ -133,7 +135,7 @@ A silver bracelet is laying here.~
 9 0 4097
 0 0 0 0
 3 10000 15000
-2
+12
 E
 bracelet silver~
 The bracelet is braided from 8 chords of silver
@@ -162,7 +164,7 @@ What looks like a pile of dust is laying here.~
 9 0 3
 0 0 0 0
 1 5000 7500
-20
+15
 E
 ring dusty~
 An old ring covered with dust.
@@ -176,18 +178,18 @@ $n gets $s hands dirty as $s puts on a dusty ring.~
 You remove the ring.~
 $n removes a ring from $s finger.~
 A
-18 3
+19 2
 A
-19 3
+18 1
 A
-13 75
+13 35
 #18507
 plates leg gilded~
 gilded leg plates~
 Some leg plates gilded with gold are lying here.~
 ~
 9 0 33
-4 0 0 0
+12 -1 -1 -1
 12 50000 20000
 18
 E
@@ -198,16 +200,18 @@ you. It's like they're from a lost civilization.
 ~
 X
 ~
-0 0 0
+3584 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 2
+19 0
 A
 13 15
+A
+52 33
 #18508
 old key~
 An old key.~
@@ -238,7 +242,7 @@ A well craftet helmet is lying on the ground.~
 9 127987712 17
 5 -1 -1 -1
 32 50000 35000
-25
+15
 E
 helmet helm king forgotten~
 The helm is dark brown with gold rimmed eyesockets. It extends down over
@@ -246,18 +250,18 @@ your neck protecting you from decapitation.
 ~
 X
 ~
-0 0 0
+1536 0 0
 M
 You wear the Helmet Of The Forgotten King on your head.~
 $n wears the Helmet Of The Forgotten King on $s head.~
 You remove the Helmet Of The Forgotten King from your head.~
 $n removes the Helmet Of The Forgotten King from $s head.~
 A
-19 2
+19 1
 A
 18 1
 A
-53 7
+53 5
 #18510
 Helm Of The Forgotten King~
 Helm Of The Forgotten King~
@@ -274,18 +278,18 @@ your neck protecting you from decapitation.
 ~
 X
 ~
-4 0 0
+1540 0 0
 M
 You wear the Helmet Of The Forgotten King on your head.~
 $n wears the Helmet Of The Forgotten King on $s head.~
 You remove the Helmet Of The Forgotten King from your head.~
 $n removes the Helmet Of The Forgotten King from $s head.~
 A
-19 3
+19 2
 A
 18 2
 A
-53 10
+53 7
 T
 4000
 #18511
@@ -310,19 +314,14 @@ M
 ~
 ~
 #18512
-black nightshade~
-a Black Nightshade Herb~
-A Black Nightshade Herb is left on the ground.~
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
 ~
-12 0 1
-5 -1 -1 -1
-1 5 50
+0 0 1
+0 0 0 0
+10 10 10
 10
-E
-herb black nightshade~
-  The herb is a well preserved leaf from the Black Nightshade plant, used 
-to make potions.
-~
 X
 ~
 0 0 0
@@ -332,18 +331,14 @@ M
 ~
 ~
 #18513
-Vial~
-a vial~
-A glass vial is left here.~
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
 ~
 0 0 1
 0 0 0 0
 10 10 10
 10
-E
-vial~
-  The glass vial is about a foot long. Its base wider than its top.
-~
 X
 ~
 0 0 0

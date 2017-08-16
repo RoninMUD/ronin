@@ -33,6 +33,50 @@ D3
 ~
 0 -1 1212
 E
+table~
+This octagonal wooden table looks as though it's seen better 
+days. Underneath the area maps, pencil eraser bits, and old 
+5 1/4 floppies you can see that some of the gods here have nothing
+better to do with their time than carve initials into the wood.
+An SoBR has been stuck into the table, a reminder of days past, when
+that trusty old sword was one of the best weapons in the game.
+~
+E
+garbage~
+Better not let it see you looking...this garbage can seems to 
+like its privacy.
+~
+E
+stand~
+Damn, somebody's been throwing knives at this computer stand, or 
+maybe hitting it with a good length of chain...large pieces of wood
+are missing -- probably being used to prop up the Kludge rooms.
+~
+E
+computer~
+Monochrome monitor, slow processor, dime a dozen at the flea market.
+What's to see?  It's enough for running Telix and dikued, though.
+Is there a need for anything else?
+~
+E
+XT~
+Monochrome monitor, slow processor, dime a dozen at the flea market.
+What's to see?  It's enough for running Telix and dikued, though.
+Is there a need for anything else?
+~
+E
+noodles~
+Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
+~
+E
+pots~
+Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
+~
+E
+bottles~
+Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
+~
+E
 monitor~
 
 Lem chops you to pieces!
@@ -45,50 +89,6 @@ Welcome to Ronin Diku
 3) Read the background story
 
 Make your choice:
-~
-E
-bottles~
-Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
-~
-E
-pots~
-Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
-~
-E
-noodles~
-Bass Pale Ale and Guinness with Raman noodles, there's nothing better.
-~
-E
-XT~
-Monochrome monitor, slow processor, dime a dozen at the flea market.
-What's to see?  It's enough for running Telix and dikued, though.
-Is there a need for anything else?
-~
-E
-computer~
-Monochrome monitor, slow processor, dime a dozen at the flea market.
-What's to see?  It's enough for running Telix and dikued, though.
-Is there a need for anything else?
-~
-E
-stand~
-Damn, somebody's been throwing knives at this computer stand, or 
-maybe hitting it with a good length of chain...large pieces of wood
-are missing -- probably being used to prop up the Kludge rooms.
-~
-E
-garbage~
-Better not let it see you looking...this garbage can seems to 
-like its privacy.
-~
-E
-table~
-This octagonal wooden table looks as though it's seen better 
-days. Underneath the area maps, pencil eraser bits, and old 
-5 1/4 floppies you can see that some of the gods here have nothing
-better to do with their time than carve initials into the wood.
-An SoBR has been stuck into the table, a reminder of days past, when
-that trusty old sword was one of the best weapons in the game.
 ~
 S
 #1204
@@ -124,9 +124,28 @@ pound the shoreline.
 ~
 12 520 0
 E
-fireplace~
-The cheery fireplace merrily crackles and hisses while flames dance
-about gleefully.  Warmth fills you as you move closer to the flame.
+arch~
+You never could figure out how these things stay together
+supporting all that weight.
+~
+E
+globe~
+As you peer at the globe, your attention seems to zoom in on one
+spot...it rushes closer and closer until you seem to see Midgaard.
+The picture in your mind continues to get closer until you can see
+people.  They are standing at a fountain drinking water.  Closer
+still and you zoom in on a fido walking by.  You can hear it snarl
+at the adventurers at the fountain.  Suddenly, the picture goes
+black, and you feel a sense of virtigo.  An angry flea is hopping
+around here.  You suddenly realize that you are looking at the back
+of a fido who has fleas.  Perhaps you need more practice with this
+globe.
+~
+E
+couch~
+The couch is large and cushy.  It is a deep azure.  You wonder who
+has sat there before and what might be left in the crevices between
+cushions.
 ~
 E
 window~
@@ -143,28 +162,9 @@ forest, you look away,awed by the beauty and complexity of the
 Window.
 ~
 E
-couch~
-The couch is large and cushy.  It is a deep azure.  You wonder who
-has sat there before and what might be left in the crevices between
-cushions.
-~
-E
-globe~
-As you peer at the globe, your attention seems to zoom in on one
-spot...it rushes closer and closer until you seem to see Midgaard.
-The picture in your mind continues to get closer until you can see
-people.  They are standing at a fountain drinking water.  Closer
-still and you zoom in on a fido walking by.  You can hear it snarl
-at the adventurers at the fountain.  Suddenly, the picture goes
-black, and you feel a sense of virtigo.  An angry flea is hopping
-around here.  You suddenly realize that you are looking at the back
-of a fido who has fleas.  Perhaps you need more practice with this
-globe.
-~
-E
-arch~
-You never could figure out how these things stay together
-supporting all that weight.
+fireplace~
+The cheery fireplace merrily crackles and hisses while flames dance
+about gleefully.  Warmth fills you as you move closer to the flame.
 ~
 S
 #1212
@@ -206,8 +206,10 @@ D5
 ~
 0 -1 1255
 E
-iron~
-You see a large iron door.
+floor~
+The mosaic on the floor depicts some mortals crawling along a 
+Moebius strip, endlessly picking up exp, dying, and getting 
+equipment along the way.
 ~
 E
 couch~
@@ -217,10 +219,8 @@ could probably get enough coffee and food to last for days just from
 sucking on one of the stained cushions.
 ~
 E
-floor~
-The mosaic on the floor depicts some mortals crawling along a 
-Moebius strip, endlessly picking up exp, dying, and getting 
-equipment along the way.
+iron~
+You see a large iron door.
 ~
 S
 #1220
@@ -270,8 +270,20 @@ You see a golden trap door.
 trap door gold golden~
 1 -1 3001
 E
+trap door gold golden~
+The golden trap door is trimmed whith silver.
+~
+E
+portal~~
+The portal is dark and lifeless.
+~~
+E
+rat~
+A small rat lies in the cornar, covered in white fur.
+~
+E
 corpse~
-The corpse clicks its mandibles and says 'Shh! I'm in mufti!'
+The corpse clicks its mandibls and says 'Shhh! I'm in mufti!'
 ~
 E
 troffy~
@@ -279,19 +291,7 @@ It's a troffy of one of Tasselhoff's achievements.
 ~
 E
 corpse~
-The corpse clicks its mandibls and says 'Shhh! I'm in mufti!'
-~
-E
-rat~
-A small rat lies in the cornar, covered in white fur.
-~
-E
-portal~~
-The portal is dark and lifeless.
-~~
-E
-trap door gold golden~
-The golden trap door is trimmed whith silver.
+The corpse clicks its mandibles and says 'Shh! I'm in mufti!'
 ~
 S
 #1225
@@ -361,15 +361,15 @@ brighter glow along the sides.
 door~
 0 -1 3001
 E
+rug purple floor~
+This think soft rug covers almost the entire floor.  It is colored royal
+purple and was originally owned by Caesar.
+~
+E
 picture penguin picasso~
 This painting was made between his red and blue periods on a special
 comission from Something.  It shows the legendary Purple Penguin that
 caused the formation of the Purple Penguin Clan.
-~
-E
-rug purple floor~
-This think soft rug covers almost the entire floor.  It is colored royal
-purple and was originally owned by Caesar.
 ~
 S
 #1246
@@ -388,15 +388,15 @@ next victim for the altar.............
 ~
 12 512 0
 E
-altar~
-With a closer glance at the blood stained altar, your stomach disagrees with
-you and you suddenly get a second look at your dinner.
-~
-E
 sarcophagus~
 Sitting here in the corner of the room is a sarcophagus made of solid
 gold, you can tell from the the image carved into the beautiful golden
 cover, that this has to be the sarcophagus of Tutankhamen.
+~
+E
+altar~
+With a closer glance at the blood stained altar, your stomach disagrees with
+you and you suddenly get a second look at your dinner.
 ~
 S
 #1249
@@ -430,14 +430,11 @@ heaven.
 ~
 12 10824 0
 E
-pillow~
-There are several, very comfortable looking pillows scattered here and there.
-Very intricately detailed, you are surprised by how comfortable they are.
-~
-E
-pillows~
-There are several, very comfortable looking pillows scattered here and there.
-Very intricately detailed, you are surprised by how comfortable they are.
+crystal~
+The crystal walls and ceiling are simply amazing.  You stand in awe as you 
+watch the light catch and reflect off of the many faceted surfaces.  Upon 
+close inspection, you realize that a mere inch of crystal is all that keeps
+you apart from the terrible forces of nature without.
 ~
 E
 rug~
@@ -446,11 +443,14 @@ inbside the crystal.  Woven with patterns depicting various desert scenes,
 you are amazed at how lifelike it looks.  
 ~
 E
-crystal~
-The crystal walls and ceiling are simply amazing.  You stand in awe as you 
-watch the light catch and reflect off of the many faceted surfaces.  Upon 
-close inspection, you realize that a mere inch of crystal is all that keeps
-you apart from the terrible forces of nature without.
+pillows~
+There are several, very comfortable looking pillows scattered here and there.
+Very intricately detailed, you are surprised by how comfortable they are.
+~
+E
+pillow~
+There are several, very comfortable looking pillows scattered here and there.
+Very intricately detailed, you are surprised by how comfortable they are.
 ~
 S
 #1253
@@ -523,14 +523,14 @@ D0
 ~
 0 -1 1255
 E
-window~
-Looking out the window, you get a glimpse of a cabin through
-the trees of the Helventia Mountains.
-~
-E
 desk~
 This looks to be a desk of Zyekian craftsmanship, well stained 
 and sturdy.
+~
+E
+window~
+Looking out the window, you get a glimpse of a cabin through
+the trees of the Helventia Mountains.
 ~
 S
 #1258
@@ -614,16 +614,24 @@ The golden  trap door gleams prettily.
 trap~
 1 -1 3001
 E
-throne~
-This throne buzzes madly..... it is made of a living swarm of locusts!
+corpse~
+This one is missing an ear....
 ~
 E
-spear~
-This spear is made from a massive Locust's leg, sharpened to a nasty point.
+statue~
+This statue shows the ruler with the head of a mortal in his mandibles...
 ~
 E
-portrait~
-It looks rather like Eparchos.....smiling?
+crest~
+The crest the heathens wear is a green locust rampant on a red field.
+~
+E
+heathen~
+He bares his teeth at you an shakes his spear.
+~
+E
+chair~
+It looks rather comfy. In fact, it has your name engraved on it!
 ~
 E
 bottle~
@@ -631,24 +639,16 @@ You giggle as Zorak is put through some demonic indignity with a broom
 handle and a basket full of dead slugs...
 ~
 E
-chair~
-It looks rather comfy. In fact, it has your name engraved on it!
+portrait~
+It looks rather like Eparchos.....smiling?
 ~
 E
-heathen~
-He bares his teeth at you an shakes his spear.
+spear~
+This spear is made from a massive Locust's leg, sharpened to a nasty point.
 ~
 E
-crest~
-The crest the heathens wear is a green locust rampant on a red field.
-~
-E
-statue~
-This statue shows the ruler with the head of a mortal in his mandibles...
-~
-E
-corpse~
-This one is missing an ear....
+throne~
+This throne buzzes madly..... it is made of a living swarm of locusts!
 ~
 S
 #1267
@@ -665,9 +665,26 @@ through it...
 ~
 12 33288 0
 E
-nameplate~
-You can't tell what it used to read, because it's been scribbled over with
-crayon. It now reads "Dr. Sane."
+carpet~
+It is a very expensive persian rug. You move slowly as you walk across it, not
+wanting to crush it.
+~
+E
+view~
+You gaze out the window and marvel at the view. From here you can see
+all of the Helventia Mountain range...and beyond.
+~
+E
+desk~
+The desk is a large oak one, with many drawers...one of them is open.
+~
+E
+drawer~
+You look into the drawer and see what appear to be marbles?
+~
+E
+window~
+There is a big hole in the middle of it, in the general shape of a man.
 ~
 E
 notepad~
@@ -678,26 +695,9 @@ page has "I JUST CAN'T TAKE IT ANYMORE!!!!" written across it and everything
 on it in big letters.
 ~
 E
-window~
-There is a big hole in the middle of it, in the general shape of a man.
-~
-E
-drawer~
-You look into the drawer and see what appear to be marbles?
-~
-E
-desk~
-The desk is a large oak one, with many drawers...one of them is open.
-~
-E
-view~
-You gaze out the window and marvel at the view. From here you can see
-all of the Helventia Mountain range...and beyond.
-~
-E
-carpet~
-It is a very expensive persian rug. You move slowly as you walk across it, not
-wanting to crush it.
+nameplate~
+You can't tell what it used to read, because it's been scribbled over with
+crayon. It now reads "Dr. Sane."
 ~
 S
 #1268
@@ -735,10 +735,8 @@ to take a nap.
 ~
 12 520 0
 E
-couch~
-A huge couch, made of buttery soft cream-colored leather.  It looks
-incredibly comfortable, and large enough for more than one person to
-stretch out.
+window~
+You can't find it, but you can feel a chilly wind coming from somewhere.
 ~
 E
 desk~
@@ -747,8 +745,10 @@ pigeonhole is crammed with papers, and the top is littered with pop cans and
 spiral notebooks.
 ~
 E
-window~
-You can't find it, but you can feel a chilly wind coming from somewhere.
+couch~
+A huge couch, made of buttery soft cream-colored leather.  It looks
+incredibly comfortable, and large enough for more than one person to
+stretch out.
 ~
 S
 #1275
@@ -804,10 +804,16 @@ D5
 ~
 0 -1 3014
 E
-chair~
-You look at the chair that has no legs. You wonder what happened to is since
-it has been destroyed. When you touch the chair you feel that its still warm.
-Maybe Rist just sat in it?
+tv~
+When you look at the screen you see naked people moving up and down. You
+wonder if its some kind of new aerobic or something. Stranges sounds are
+comming out of the speakers and its comming from every where.
+~
+E
+table~
+You look at the table and you see some papers. When you look closer at the
+papers you see that its some sort of plans. Its HIA clans plans for taking over
+Ronin. Rist has the plans because he is HIA President.
 ~
 E
 dart~
@@ -817,16 +823,10 @@ tiny holes in the wall and think that there must be some kind of maggots in the
 wood.
 ~
 E
-table~
-You look at the table and you see some papers. When you look closer at the
-papers you see that its some sort of plans. Its HIA clans plans for taking over
-Ronin. Rist has the plans because he is HIA President.
-~
-E
-tv~
-When you look at the screen you see naked people moving up and down. You
-wonder if its some kind of new aerobic or something. Stranges sounds are
-comming out of the speakers and its comming from every where.
+chair~
+You look at the chair that has no legs. You wonder what happened to is since
+it has been destroyed. When you touch the chair you feel that its still warm.
+Maybe Rist just sat in it?
 ~
 S
 #1287
@@ -924,16 +924,16 @@ that you are dead and in a coffin when you leave.
 ~
 12 648 0
 E
-table~
-Thier are myriad tools on this table. of to one side is a `bjar`h of 
-special instruments of pain with a label on it.~
+label~
+These tools are rated for Ninjas only.~
 E
 jar~
 This jar of tools looks like they could be even more painful than the rest.
 There is a label on the jar.~
 E
-label~
-These tools are rated for Ninjas only.~
+table~
+Thier are myriad tools on this table. of to one side is a `bjar`h of 
+special instruments of pain with a label on it.~
 S
 #1297
 The Doobie Hemp House~
@@ -970,21 +970,13 @@ the time, bad reception for tv and high rent:)
 ~
 12 8776 0
 E
-cd~
-a compat disc player rests here on the rug, blasting pantera at the moment.
+couch~
+a comfortable looking lazy body model 19292323-B couch is resting smack 
+middle of the room.
 ~
 E
-CD~
-a compact disc player stands rests on the rug here, blasting pantera at the 
-moment.
-~
-E
-chips~
-cool ranch chips lie here unopened.
-~
-E
-beer~
-a six pack of beer lies in the corner forgotten.
+television~
+a state of the art television sits here, cable ready with all the channels.
 ~
 E
 rug~
@@ -992,13 +984,21 @@ a beautiful persian rug covers the floor here, many designs and frame of
 colors make it up.
 ~
 E
-television~
-a state of the art television sits here, cable ready with all the channels.
+beer~
+a six pack of beer lies in the corner forgotten.
 ~
 E
-couch~
-a comfortable looking lazy body model 19292323-B couch is resting smack 
-middle of the room.
+chips~
+cool ranch chips lie here unopened.
+~
+E
+CD~
+a compact disc player stands rests on the rug here, blasting pantera at the 
+moment.
+~
+E
+cd~
+a compat disc player rests here on the rug, blasting pantera at the moment.
 ~
 S
 #1299

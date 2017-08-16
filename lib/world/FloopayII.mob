@@ -560,7 +560,7 @@ for himself.  However, his unique skill set and mastery in combat would make him
 quite the formidable foe.
 ~
 74 294396074 0 Y
-55 -30 -15 80d40+15000 10d10+200
+55 -30 -15 80d40+18000 10d10+200
 1500000 6000000
 8 8 1
 10 0 55d6+1200 0
@@ -645,7 +645,7 @@ others fled in terror.  He stands tall, and does not seemed threatened by your
 presence.
 ~
 74 276824192 -1000 Y
-55 -15 -25 55d12+16000 8d4+300
+55 -15 -25 55d12+20000 8d4+300
 1000000 6500000
 8 8 1
 11 0 55d6+2000 7

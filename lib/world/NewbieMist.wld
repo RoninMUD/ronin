@@ -258,32 +258,9 @@ You peer into a dark hole.
 hole~
 9 -1 6614
 E
-ladder~
-The ladder has been nailed helter-skelter to this tree, but it looks solid enough.
-~
-E
-ladder~
-The ladder has been nailed helter-skelter on this tree, but it looks solid enough.
-~
-E
-block~
-You see a big block of stone that looks like it could be moved.
-~
-E
 river~
-A small river flows here, and it seems you can jump it to reach someplace.
-~
-E
-block ladder river door~
-invalid~
-E
-block~
-A large block covers the doorway to the west.  It looks like
-it can be moved.~
-E
-ladder~
-A knotted rope ladder is hanging from the short roof above. 
-It looks like you could climb it with very little effort.
+A small river blocks your advance toward the east. One could
+easily jump over the shallow end.
 ~
 E
 river~
@@ -291,9 +268,32 @@ A smal river blocks your advance toward the east.  One could
 easily jump over the shallow end.
 ~
 E
+ladder~
+A knotted rope ladder is hanging from the short roof above. 
+It looks like you could climb it with very little effort.
+~
+E
+block~
+A large block covers the doorway to the west.  It looks like
+it can be moved.~
+E
+block ladder river door~
+invalid~
+E
 river~
-A small river blocks your advance toward the east. One could
-easily jump over the shallow end.
+A small river flows here, and it seems you can jump it to reach someplace.
+~
+E
+block~
+You see a big block of stone that looks like it could be moved.
+~
+E
+ladder~
+The ladder has been nailed helter-skelter on this tree, but it looks solid enough.
+~
+E
+ladder~
+The ladder has been nailed helter-skelter to this tree, but it looks solid enough.
 ~
 S
 #6613
@@ -357,9 +357,8 @@ A bit of vertigo hits you, as you realize you have to climb down that ladder.
 ladder~
 11 -1 6612
 E
-ladder~
-A hole in the floor has a rickety ladder hanging from it. 
-That must be how you exit from this cramped clubhouse!
+donos~
+Donos
 ~
 E
 ladder~
@@ -367,8 +366,9 @@ A hole in the floor has a rope ladder hanging from it.  That
 must be how you exit from this cramped clubhouse!
 ~
 E
-donos~
-Donos
+ladder~
+A hole in the floor has a rickety ladder hanging from it. 
+That must be how you exit from this cramped clubhouse!
 ~
 S
 #6617
@@ -414,11 +414,11 @@ You see the "Combat Training Room".
 0 -1 6617
 E
 door~
-An imposing door stands between you and the continuation of your learning.
+This imposing door stands between you and the continuation of your learning.
 ~
 E
 door~
-This imposing door stands between you and the continuation of your learning.
+An imposing door stands between you and the continuation of your learning.
 ~
 S
 #6619
@@ -445,19 +445,7 @@ desk~
 8 -1 3001
 E
 desk~
-Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
-~
-E
-desk~
-Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
-~
-E
-desk~
-Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
-~
-E
-desk~
-Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
+Gauging the desk's size and your strength, you figure you could move it aside easily enough.
 ~
 E
 floor~
@@ -465,7 +453,19 @@ Looking down at the floor where the desk is, you could swear it's covering some 
 ~
 E
 desk~
-Gauging the desk's size and your strength, you figure you could move it aside easily enough.
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
 ~
 S
 #6699
