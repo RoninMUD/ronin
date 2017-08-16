@@ -1157,62 +1157,62 @@ get_random_obj_eq (struct char_data *ch) {
   return FALSE;
 }
 
-/* mimics behavior of get_random_target(ch,FALSE,TRUE,FALSE,FALSE,FALSE) */
-struct char_data
-*get_random_victim( struct char_data *ch ) {
-  struct char_data *vict;
-  int num=0,tmp=0;
-  int number(int min, int max);
 
-  num = count_mortals_room( ch , FALSE );
-  if( num == 0 ) return NULL;
-  tmp = number (1,num);
-  num=0;
-
-  for( vict = world[CHAR_REAL_ROOM(ch)].people ; vict ; vict = vict->next_in_room ) {
-    if(IS_MORTAL(vict) && vict != ch && CAN_SEE(ch,vict)) num++;
-    if (tmp == num && IS_MORTAL(vict)) return vict;
-  }
-  return NULL;
-}
-
-struct char_data
-*get_random_target( struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool vict_canbe_ch )
-{
-  struct char_data *vict, *temp;
+struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool vict_canbe_ch) {
+  struct char_data *vict = NULL;
   int num=0,target_num=0;
 
   /* count # eligible targets in room */
-  for(temp = world[CHAR_REAL_ROOM(ch)].people; temp; temp = temp->next_in_room)
-  {
-    if(vict_canbe_pc && IS_MORTAL(temp) && (see_invis || CAN_SEE(ch,temp)))
-    {
-      if(vict_canbe_ch || (!vict_canbe_ch && temp!=ch)) num++;
+  for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+    if (ch == vict) {
+      /* can see yourself */
+      if (vict_canbe_ch) num++;
     }
-    else if((vict_canbe_mount || vict_canbe_npc) && IS_NPC(temp) && (see_invis || CAN_SEE(ch,temp)))
-    {
-  	  if(vict_canbe_mount || (!vict_canbe_mount && !IS_MOUNT(temp))) num++;
-	}
-  }/* end count # eligible targets in room */
+    else if (see_invis || CAN_SEE(ch,vict)) {
+      if (IS_MORTAL(vict)) {
+        if (vict_canbe_pc) num++;
+      }
+      else if (IS_NPC(vict)) {
+        if (IS_MOUNT(vict)) {
+          if (vict_canbe_mount) num++;
+        }
+        else if (vict_canbe_npc) num++;
+      }
+    }
+  } /* end count # eligible targets in room */
 
   if(num <= 0) return NULL;
+
   target_num = number(1,num);
   num=0;
 
   /* cycle back through eligible targets until target_num is reached */
-  for( vict = world[CHAR_REAL_ROOM(ch)].people ; vict ; vict = vict->next_in_room )
-  {
-    if(vict_canbe_pc && IS_MORTAL(temp) && (see_invis || CAN_SEE(ch,temp)))
-    {
-      if(vict_canbe_ch || (!vict_canbe_ch && temp!=ch)) num++;
+  for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+    if (ch == vict) {
+      /* can see yourself */
+      if (vict_canbe_ch) num++;
     }
-    else if((vict_canbe_mount || vict_canbe_npc) && IS_NPC(temp) && (see_invis || CAN_SEE(ch,temp)))
-    {
-  	  if(vict_canbe_mount || (!vict_canbe_mount && !IS_MOUNT(temp))) num++;
-	}
+    else if (see_invis || CAN_SEE(ch,vict)) {
+      if (IS_MORTAL(vict)) {
+        if (vict_canbe_pc) num++;
+      }
+      else if (IS_NPC(vict)) {
+        if (IS_MOUNT(vict)) {
+          if (vict_canbe_mount) num++;
+        }
+        else if (vict_canbe_npc) num++;
+      }
+    }
+
     if (target_num == num) return vict;
   }
+
   return NULL;
+}
+
+/* shortcut for get_random_target(ch,FALSE,TRUE,FALSE,TRUE,FALSE) */
+struct char_data * get_random_victim(struct char_data *ch) {
+  return get_random_target(ch, FALSE, TRUE, FALSE, TRUE, FALSE);
 }
 
 int
@@ -1227,58 +1227,59 @@ count_mortals_room_fighting (struct char_data *ch, bool see_invis) {
   return num;
 }
 
-/* mimics behavior of get_random_target_fighting(ch,FALSE,TRUE,FALSE,FALSE) */
-struct char_data
-*get_random_victim_fighting( struct char_data *ch ) {
-  struct char_data *vict;
-  int num=0,tmp=0;
-  int number(int min, int max);
-
-  num = count_mortals_room_fighting( ch , FALSE );
-  if( num == 0 ) return NULL;
-  tmp = number (1,num);
-  num=0;
-
-  for( vict = world[CHAR_REAL_ROOM(ch)].people ; vict ; vict = vict->next_in_room ) {
-    if(IS_MORTAL(vict) && vict != ch && CAN_SEE(ch,vict) &&
-       (ch==vict->specials.fighting)) num++;
-    if (tmp == num && IS_MORTAL(vict)) return vict;
-  }
-  return NULL;
-}
-
-struct char_data
-*get_random_target_fighting( struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount  ) {
-  struct char_data *vict, *temp;
+struct char_data * get_random_target_fighting(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount) {
+  struct char_data *vict = NULL;
   int num=0,target_num=0;
 
   /* count # eligible targets in room */
-  for(temp = world[CHAR_REAL_ROOM(ch)].people; temp; temp = temp->next_in_room)
-  {
-    if(vict_canbe_pc && IS_MORTAL(temp) && temp->specials.fighting && (temp!=ch) && (see_invis || CAN_SEE(ch,temp)))
-      num++;
-    else if((vict_canbe_mount || vict_canbe_npc) && IS_NPC(temp) && temp->specials.fighting && (see_invis || CAN_SEE(ch,temp)))
-    {
-  	  if(vict_canbe_mount || (!vict_canbe_mount && !IS_MOUNT(temp))) num++;
-	}
-  }/* end count # eligible targets in room */
+  for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+    if ((ch == vict) || (ch != vict->specials.fighting)) {
+      continue;
+    }
+    else if (see_invis || CAN_SEE(ch,vict)) {
+      if (IS_MORTAL(vict)) {
+        if (vict_canbe_pc) num++;
+      }
+      else if (IS_NPC(vict)) {
+        if (IS_MOUNT(vict)) {
+          if (vict_canbe_mount) num++;
+        }
+        else if (vict_canbe_npc) num++;
+      }
+    }
+  } /* end count # eligible targets in room */
 
   if(num <= 0) return NULL;
+
   target_num = number(1,num);
   num=0;
 
   /* cycle back through eligible targets until target_num is reached */
-  for( vict = world[CHAR_REAL_ROOM(ch)].people ; vict ; vict = vict->next_in_room )
-  {
-    if(vict_canbe_pc && IS_MORTAL(temp) && temp->specials.fighting && (temp!=ch) && (see_invis || CAN_SEE(ch,temp)))
-	  num++;
-    else if((vict_canbe_mount || vict_canbe_npc) && IS_NPC(temp) && temp->specials.fighting && (see_invis || CAN_SEE(ch,temp)))
-    {
-  	  if(vict_canbe_mount || (!vict_canbe_mount && !IS_MOUNT(temp))) num++;
-	}
+  for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+    if ((ch == vict) || (ch != vict->specials.fighting)) {
+      continue;
+    }
+    else if (see_invis || CAN_SEE(ch,vict)) {
+      if (IS_MORTAL(vict)) {
+        if (vict_canbe_pc) num++;
+      }
+      else if (IS_NPC(vict)) {
+        if (IS_MOUNT(vict)) {
+          if (vict_canbe_mount) num++;
+        }
+        else if (vict_canbe_npc) num++;
+      }
+    }
+
     if (target_num == num) return vict;
   }
+
   return NULL;
+}
+
+/* shortcut to  get_random_target_fighting(ch,FALSE,TRUE,FALSE,TRUE) */
+struct char_data * get_random_victim_fighting( struct char_data *ch ) {
+  return get_random_target_fighting(ch, FALSE, TRUE, FALSE, TRUE);
 }
 
 void

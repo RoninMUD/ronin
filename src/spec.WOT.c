@@ -34,10 +34,10 @@
 #define HUNTER 18702
 
 int wot_hunter(CHAR *hunter, CHAR *vict, int cmd, char *argument) {
-  int current_xp=GET_EXP(hunter);
+  if (!hunter) return FALSE;
 
   if(cmd==MSG_TICK) {
-    if(current_xp < 2700000) {
+    if(GET_EXP(hunter) < 2700000) {
       GET_EXP(hunter)+=12000;
     }
   }
@@ -54,11 +54,11 @@ int wot_hunter(CHAR *hunter, CHAR *vict, int cmd, char *argument) {
 #define MERCHANT 18700
 
 int wot_merchant(CHAR *merchant, CHAR *vict, int cmd, char *argument) {
-  int current_gold=GET_GOLD(merchant);
+  if (!merchant) return FALSE;
 
   if(cmd==MSG_TICK) {
-    if(current_gold < 2000000) {
-      GET_GOLD(merchant)+=10000;
+    if(GET_GOLD(merchant) < 2000000) {
+      GET_GOLD(merchant) += 10000;
     }
   }
 
@@ -80,7 +80,7 @@ int wot_army(CHAR *army, CHAR *vict, int cmd, char *argument) {
 
   if (!army || !army->specials.fighting || (cmd != MSG_MOBACT)) return FALSE;
 
-  if (number(0,9)==0) {  // 10% chance
+  if (chance(10)) {  // 10% chance
 
     vict = get_random_victim(army);
 
@@ -91,10 +91,12 @@ int wot_army(CHAR *army, CHAR *vict, int cmd, char *argument) {
 
       dam = MAX(400 + GET_AC(vict), 200);  // Having less (better) armor makes the attack do less damage. Having positive armor value increases it
       damage(army,vict,dam,TYPE_UNDEFINED,DAM_PHYSICAL);
+
+      GET_POS(vict) = POSITION_SITTING;
     }
   }
 
-  if (number(0,6)==0) {  // 14.2% chance
+  if (chance(15)) {  // 15% chance
 
     act("A large volley of arrows rain down all around you.",0,army,0,0,TO_ROOM);
 
@@ -112,13 +114,61 @@ int wot_army(CHAR *army, CHAR *vict, int cmd, char *argument) {
   return FALSE;
 }
 
+/* Specs for Elyas in WOT
+**
+** Elyas will try to summon a wolf to attack random char in room every
+** MOB_ACT with 50% chance of success
+*/
+
+
+#define ELYAS      18723
+#define WOLF       18724
+#define MAX_WOLVES 5
+
+int wot_elyas(CHAR *elyas, CHAR *vict, int cmd, char *argument) {
+  CHAR *wolf = NULL;
+  CHAR *next_wolf = NULL;
+  int num_wolves = 0;
+
+  if (!elyas || !AWAKE(elyas)) return FALSE;
+
+  if (cmd == MSG_MOBACT) {
+    if (elyas->specials.fighting &&
+        (vict = get_random_victim(elyas)) &&
+        chance(50)) {
+      /* 50% chance of summoning a wolf and have it ambush random char in room
+      (This spec will work pretty much like for the Tribune of Pompeii
+      only that wolf is going to ambush its target)
+      Text for the spec :
+      TO_VICT : Seemingly out of nowhere, a wolf emerges and charges you!
+      TO_ROOM : Seemingly out of nowhere, a wolf emerges and charges VICT!
+      TO_CHAR : As the fighters are occupied, you leave your cover and charges VICT. */
+
+      /* count wolves */
+      for (wolf = world[CHAR_REAL_ROOM(elyas)].people; wolf; wolf = next_wolf) {
+        next_wolf = wolf->next_in_room;
+        if (IS_MOB(wolf) && (V_MOB(wolf) == WOLF)) num_wolves++;
+      }
+
+      if (num_wolves < MAX_WOLVES) {
+        act("Seemingly out of nowhere, a wolf emerges and charges $N!", TRUE, elyas, 0, vict, TO_NOTVICT);
+        act("Seemingly out of nowhere, a wolf emerges and charges you!", TRUE, elyas, 0, vict, TO_VICT);
+        wolf = read_mobile(WOLF, VIRTUAL);
+        char_to_room(wolf, CHAR_REAL_ROOM(vict));
+        set_fighting(wolf, vict);
+      }
+    }
+  }
+
+  return FALSE;
+}
+
 
 /* Assign specs to mobs/objects */
-
 void assign_WOT() {
-  int i = 0;
-
-  assign_mob(HUNTER,   wot_hunter);
+  //int i = 0;
+  assign_mob(ELYAS, wot_elyas);
+  assign_mob(HUNTER, wot_hunter);
   assign_mob(MERCHANT, wot_merchant);
-  for (i = ARMY_START; i <= ARMY_END; i++) assign_mob(i, wot_army);
+  //for (i = ARMY_START; i <= ARMY_END; i++) assign_mob(i, wot_army);
 }

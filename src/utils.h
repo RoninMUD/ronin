@@ -58,7 +58,7 @@ extern char *index(const char *s, int c);
 #define GET_OPPONENT(ch)        ((ch) ? (ch)->specials.fighting : NULL)
 #define GET_ID(ch)              ((ch) ? (ch)->ver3.id : -1)
 #define GET_ZONE(ch)            (world[CHAR_REAL_ROOM(ch)].zone)
-#define IS_MORTAL(ch)           ((ch) ? !IS_NPC(ch) && GET_LEVEL(ch) < LEVEL_IMM : FALSE)
+#define IS_MORTAL(ch)           ((ch) ? (!IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_IMM)) : FALSE)
 
 #define ROOM_SPEC(rm)           (world[(rm)].spec_tmp)
 #define RM_BLOOD(rm)            (world[rm].blood)
