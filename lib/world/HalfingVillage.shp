@@ -85,4 +85,91 @@
 28
 0
 0
+#4819~
+4824
+4823
+-1
+-1
+-1
+1.000000
+1.000000
+9
+15
+5
+24
+8
+I have two items!  Count them, TWO!~
+You're trying to sell me what?~
+I'm sorry, I don't buy that.~
+Sorry, I can't afford that.~
+No freebies.~
+%s What keeper says after buyer gets item (Can include %d for amount).~
+%s What keeper says after it buys a sellers item (Can include %d for amount).~
+0
+0
+4819
+0
+4819
+0
+28
+0
+0
+#4820~
+4825
+4807
+4837
+-1
+-1
+1.500000
+0.500000
+19
+0
+0
+0
+0
+I'm sorry?  Did you say you wanted a leather backpack!?~
+You're kidding right?~
+I don't want that!~
+Sorry buddy, I don't have that kind of money!~
+I wish I could; but you don't have the gold.~
+Yes!  I'll take it!~
+Appreciate the business.~
+0
+0
+4820
+0
+4820
+0
+28
+0
+0
+#4821~
+-1
+-1
+-1
+-1
+-1
+1.250000
+0.500000
+0
+0
+0
+0
+0
+Don't have that, go somewhere else.~
+Don't tempt me, unless you're willing to deliver!~
+Take it somewhere else.~
+Heh?  You're kidding right?~
+Come back when you can afford it!~
+Oh, yes yes yes!~
+I agree, it's worth the price!~
+0
+0
+4821
+0
+4821
+24
+6
+0
+0
 $~

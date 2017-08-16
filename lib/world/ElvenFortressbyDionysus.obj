@@ -1,2 +1,415 @@
+#21401
+mushroom yellow chanterelle~
+A Yellow Chanterelle~
+A yellow chanterelle is here, pushing up through the loam.~
+~
+0 0 1
+5000 -1 -1 -1
+10 10 10
+8
+E
+mushroom chanterelle yellow~
+Soft and spongy, this mushroom gives off a vaguely fruity aroma.
+It's funnel-shaped caps are wrinkled underneath, and the long
+veins are filled with dark loam.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21402
+mushroom white~
+A White Mushroom~
+A small white mushroom has sprouted here.~
+~
+0 0 1
+500 -1 -1 -1
+10 10 10
+12
+E
+white mushroom~
+This pale white mushroom is small and round.  It has a firm texture,
+and virtually no odor.  It looks like an adorable little button.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21403
+mushroom oyster trumpet~
+An Oyster Mushroom~
+A greyish-brown trumpet shaped mushroom is here.~
+~
+0 0 1
+8000 -1 -1 -1
+10 10 10
+10
+E
+oyster mushroom~
+This greyish-brown mushroom smells vaguely of black pepper.
+The caps sprout out from whitish stems.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21404
+mushroom portobello portobella~
+A Portobello Mushroom~
+A wide-capped portobello mushroom grows here.~
+~
+0 0 1
+6000 -1 -1 -1
+10 10 10
+10
+E
+mushroom portobello~
+This meaty mushroom has a large cap, like an umbrella.  The stem is
+dense and woody feeling, but the cap feels soft and pliable.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21405
+mushroom shiitake~
+A Shiitake Mushroom~
+A cluster of small, tan shiitake mushrooms sprouts here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+E
+mushroom shiitake~
+This mushroom has a small umbrella cap, and smells of earth
+and smoke.  It is slightly pliable when you squeeze it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21406
+mushroom chanterelle white~
+A White Chanterelle~
+An enormous flowering white chanterelle mushroom grows here.~
+~
+0 0 1
+20000 -1 -1 -1
+10 10 10
+6
+E
+mushroom chanterelle white~
+This mushroom is broader and more sprawling than its yellow cousin.
+It has similar veins running the length of its underside, however,
+which are filled with dark earth.  It gives off a scent reminiscent
+of white pepper and tropical flowers.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21407
+mushroom morel~
+A Morel Mushroom~
+A strange honeycombed mushroom is barely visible peeking up through the dirt.~
+~
+0 0 1
+30000 -1 -1 -1
+10 10 10
+4
+E
+mushroom morel~
+This mushroom looks like it came from another plane, with strange
+honeycombed lattice all over its body.  It is already somewhat
+brittle, but has an incredibly enticing aroma.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21408
+mushroom enoki~
+A Cluster of Enoki~
+A cluster of incredibly fine white mushrooms grows here.~
+~
+0 0 1
+4000 -1 -1 -1
+10 10 10
+9
+E
+mushroom enoki~
+These white mushrooms almost look like bean sprouts, they are so thin.
+Small white caps cover each long, tendrilly stalk.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21409
+mushroom porcini bolete~
+A Massive King Bolete Mushroom~
+A massive mushroom, looking like a loaf of fresh-baked break, grows here.~
+~
+0 0 1
+40000 -1 -1 -1
+10 10 10
+5
+E
+mushroom bolete porcini~
+This mushroom looks like a loaf of fresh baked bread - there's simply
+no mistaking it for anything but a porcini.  It smells like sourdough
+bread as well, with a nutty aroma as well.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21410
+mushroom maitake chicken hen~
+A Hen of the Woods Mushroom~
+A mushroom that looks like an earthen flowering bouquet springs from the ground here.~
+~
+0 0 1
+6000 -1 -1 -1
+10 10 10
+9
+E
+mushroom maitake hen~
+The Hen of the Woods, or maitake, is a delicate flowering mushroom.  It
+looks like a designer could have crafted its beautiful shape, and the
+warm earthen tones makes it feel somewhat magical.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21411
+mushroom white truffle~
+A White Truffle~
+A round, white mushroom is buried just beneath the dirt here.~
+~
+0 0 1
+150000 -1 -1 -1
+10 10 10
+1
+E
+mushroom white truffle~
+This mushroom doesn't look like much - it is small and dirty - but
+you feel blessed to be holding it.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21412
+mushroom black truffle~
+A Black Truffle~
+A black mushroom is here, scarcely visible through the dirt.~
+~
+0 0 1
+90000 -1 -1 -1
+10 10 10
+2
+E
+mushroom black truffle~
+Like its more valuable white cousin, the black truffle is not much to look
+at.  A marbled black ball, it is nonetheless one of the most prized mushrooms
+in existence.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21413
+mushroom chanterelle yellowfoot winter~
+A Yellowfoot Mushroom~
+A cluster of tiny yellow chanterelles is growing here.~
+~
+0 0 1
+3000 -1 -1 -1
+10 10 10
+12
+E
+mushroom yellow chanterelle yellowfoot~
+The yellowfoot is a smaller, more common variety of chanterelle, found mostly
+in the winter.  It is somewhat dingy looking, with flecks coming off of the
+cap just by your handling, but it has a comforting aroma of wet forest floor.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21414
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21415
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21416
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21417
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21418
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21419
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21420
+nothing~
+a bit of nothing~
+There is a bit of nothing sitting here.~
+~
+0 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~

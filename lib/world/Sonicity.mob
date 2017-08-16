@@ -67,7 +67,9 @@ He has killed 100 people in 1 night, and he needed 3000 cops to catch him.
 25 -3 -3 100d3+2500 10d2+25
 5 150000
 8 8 1
-0 0 0d0+0 0
+0 0 0d0+0 2
+7 2 10 0
+2 2 10 0
 0 0 0 0
 K
 0 0 0 0 0 0 0

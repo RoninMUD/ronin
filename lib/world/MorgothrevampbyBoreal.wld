@@ -386,6 +386,10 @@ Morgoth Mountain~
 your grand view of the world and you can gaze forever in each direction.
 Nothing is alive up here, for this altitude cannot support life for very long.
 Maybe you should seek shelter?
+   As you enter the room, your nose wrinkles in disgust, and you almost
+vomit at the stench.  Blood coats ever wall in a thick, coppery blanket.
+Undying screams echo from the walls, and you feel that this is a plaec that
+has long been the home of torture and anguish.
 ~
 96 0 5
 D1
@@ -515,7 +519,7 @@ Morgoth Mountain~
 Peeking over the edge makes you feel queasy and lightheaded.  Time to go
 back down?
 ~
-96 0 5
+96 4 5
 D1
 ~
 ~
@@ -600,7 +604,7 @@ D1
 D5
 ~
 ~
-1 -1 9627
+0 -1 9627
 S
 #9632
 Top of the Lonely Tower~
@@ -614,6 +618,14 @@ D5
 ~
 ~
 0 -1 9628
+E
+south~
+Far to the south, you can make out the lights of what must
+surely be the Barovian revellers, carousing through the woods.
+A brave race of men, the Barovians brave the dangers of both
+the nearby Svalich Woods, and the demonic master who inhabits
+the nearby castle.
+~
 E
 e east castle welmar~
 Off to the east, you can make out the graceful spires of the
@@ -662,8 +674,9 @@ The Lost Temple of Morgoth~
 invalid~
 96 8 2
 D0
+A dark metal gate encased in the mountain stands before you.
 ~
-~
+gate~
 1 -1 9679
 D1
 A dimly lit hallway~
@@ -904,9 +917,10 @@ The sanctuary~
 S
 #9646
 The Altar~
-  You are standing next to an altar on a dias of steps.  From the ground
-you feel a strong draft coming up through the floors.  Stained blood covers
-the altar and the floor.  Blood?  From wounded people? ON AN ALTAR!?!?
+   You are standing next to a raised altar on a dais of steps.  Upon
+the altar, you see a book that has been stained darkly from years
+of use.  Preaching to his acolytes, the High Priest of Morgoth 
+espouses the holy word from here.
 ~
 96 8 2
 D0
@@ -914,11 +928,47 @@ The sanctuary~
 ~
 0 0 9643
 D5
-The Altar
+___________________   ___________________
+  .-/|         **        \ /        **         |\-.
+  ||||                    :                    ||||
+  ||||   From whence did  :   No my children,  ||||
+  ||||   our Lord come?   :   he is not of     ||||
+  ||||   Did he spring    :   this earth, but  ||||
+  ||||   from the earth,  :   is in fact the   ||||
+  ||||   or was he born   :   fount of all of  ||||
+  ||||   of the sky?      :   creation.        ||||
+  ||||                    :                    ||||
+  ||||                    :                    ||||
+  ||||                    :                    ||||
+  ||||                    :                    ||||
+  ||||___________________ : ___________________||||
+  ||/====================\:/====================\||
+  `--------------------- ___ --------------------''
 ~
-altar
+altar~
+8 9646 9648
+E
+altar book ~
+      ___________________   ___________________
+  .-/|         **        \ /        **         |\-.
+  ||||                    :                    ||||
+  ||||   From whence did  :   No my children,  ||||
+  ||||   our Lord come?   :   he is not of     ||||
+  ||||   Did he spring    :   this earth, but  ||||
+  ||||   from the earth,  :   is in fact the   ||||
+  ||||   or was he born   :   fount of all of  ||||
+  ||||   of the sky?      :   creation.        ||||
+  ||||                    :                    ||||
+  ||||                    :                    ||||
+  ||||                    :                    ||||
+  ||||                    :                    ||||
+  ||||___________________ : ___________________||||
+  ||/====================\:/====================\||
+  `--------------------- ___ --------------------''
 ~
-1 9646 9648
+E
+altar book ~
+invalid~
 S
 #9647
 The South Western Part of the Sanctuary~
@@ -944,19 +994,22 @@ mark them as slaves.  These are the souls that drew the short lots in life.
 ~
 96 9 2
 D4
-The altar
+The heavy stone altar above you blocks your way out of the pits.
 ~
-altar
-~
-2 9646 9646
+altar~
+8 9646 9646
 D5
+A rickety wooden ladder descends into the darkness below.
 ~
-~
-0 -1 9649
+ladder~
+11 -1 9649
 S
 #9649
-A temporary name~
-A temporary description
+A torchlit cavern~
+   You are standing in a vaulted cavern that stretches above you beyond
+the light.  Low flickering torches encircle the room, illuminating the 
+hollowness of this place.  You can hear animal noises nearby, and screams
+of inhuman pain, but alas, there is nothing to be seen.
 ~
 96 0 0
 D0
@@ -965,20 +1018,24 @@ D0
 0 -1 9650
 D1
 ~
-~
-0 -1 9656
+rocks~
+8 -1 9656
 D3
 ~
-~
-0 -1 9657
+rocks~
+8 -1 9657
 D4
+The rickety wooden ladder reaches above you into the dark.
 ~
-~
-0 -1 9648
+ladder~
+11 -1 9648
 S
 #9650
-A temporary name~
-A temporary description
+A torchlit passage~
+   A narrow hallway is carved through the stone of the mountain.  Torches 
+line both walls, dimly illuminating the passageway.  Very little can be
+seen other than the next torches, but a sense of dread seeps into your 
+very bones.
 ~
 96 0 0
 D0
@@ -991,11 +1048,10 @@ D2
 0 -1 9649
 S
 #9651
-Falling off of a cliff~
-     Congratulations!  You have just succeeded in throwing you and all your
-belongings off the highest spot in the entire known world.  What where you
-thinking?  Well, contemplate it as you fall 6.7 miles to your death.  But
-contemplate fast, the ground is rushing towards you.
+A torchlit passage~
+   The passageway continues in an unwavering line due north.  Up ahead you
+can see a larger room opening away from you.  There is a faint coppery
+smell in the air, but you can't quite place it.
 ~
 96 4 1
 D0
@@ -1008,12 +1064,11 @@ D2
 0 -1 9650
 S
 #9652
-The sacred altar~
-As you enter the room, your nose wrinkles in disgust, and you
-almost vomite at the stench.  Blood coats every wall, in a thick,
-coppery blanket.  Undying screams echo from the walls, and you feel
-that this is a place that has long been the home of torture and 
-anguish.
+The sacrificial altar~
+   As you enter the room, your nose wrinkles in digust and you almost vomit
+at the overpowering stench that permeates thee room.  There are bestial remains
+scattered about the altar in the middle of the floor, and the walls are
+coated with a thick blanket of blood.  
 ~
 96 0 0
 D1
@@ -1030,8 +1085,11 @@ D3
 0 -1 9660
 S
 #9653
-A temporary name~
-A temporary description
+the necropolis~
+   You are wandering through the buried necropolis of the most glorious heroes
+of the realm.  Bones are piled in all of the corners, but in the middle of the
+room is a well preserved corpses of some ancient person.  Perhaps a closer 
+inspection can reveal clues as to the identity of this fallen hero.
 ~
 96 0 0
 D2
@@ -1042,10 +1100,19 @@ D3
 ~
 ~
 0 -1 9652
+E
+corpse ~
+The rotting bones of the legendary bard Hhjj lie here. Memories
+of an ancient time remind you of how the world has moved on.
+~
 S
 #9654
-A temporary name~
-A temporary description
+the necropolis~
+   You are wandering through the buried necropolis of the most glorious heroes
+of the realm.  Bones are piled in all of the corners, but in the middle of the
+room is a well preserved corpses of some ancient person.  Perhaps a closer 
+inspection can reveal clues as to the identity of this fallen hero.  Set in the
+middle of the floor is a dark granite slab, engraved with an arcane symbol.
 ~
 96 0 0
 D0
@@ -1057,13 +1124,69 @@ D2
 ~
 0 -1 9655
 D5
+.....
+                   .d$$$$*$$$$$$bc
+                .d$P"    d$$    "*$$.
+               d$"      4$"$$      "$$.
+             4$P        $F ^$F       "$c
+            z$%        d$   3$        ^$L
+           4$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F
+           $$$F"""""""$F""""""$F"""""C$$*$
+          .$%"$$e    d$       3$   z$$"  $F
+          4$    *$$.4$"        $$d$P"    $$
+          4$      ^*$$.       .d$F       $$
+          4$       d$"$$c   z$$"3$       $F
+           $L     4$"  ^*$$$P"   $$     4$"
+           3$     $F   .d$P$$e   ^$F    $P
+            $$   d$  .$$"    "$$c 3$   d$
+             *$.4$"z$$"        ^*$$$$ $$
+              "$$$$P"             "$$$P
+                *$b.             .d$P"
+                  "$$$ec.....ze$$$"
+                      "**$$$**""
 ~
+symbol~
+8 -1 9661
+E
+symbol~
+.....
+                   .d$$$$*$$$$$$bc
+                .d$P"    d$$    "*$$.
+               d$"      4$"$$      "$$.
+             4$P        $F ^$F       "$c
+            z$%        d$   3$        ^$L
+           4$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F
+           $$$F"""""""$F""""""$F"""""C$$*$
+          .$%"$$e    d$       3$   z$$"  $F
+          4$    *$$.4$"        $$d$P"    $$
+          4$      ^*$$.       .d$F       $$
+          4$       d$"$$c   z$$"3$       $F
+           $L     4$"  ^*$$$P"   $$     4$"
+           3$     $F   .d$P$$e   ^$F    $P
+            $$   d$  .$$"    "$$c 3$   d$
+             *$.4$"z$$"        ^*$$$$ $$
+              "$$$$P"             "$$$P
+                *$b.             .d$P"
+                  "$$$ec.....ze$$$"
+                      "**$$$**""
 ~
-0 -1 9661
+E
+corpse~
+The rotting bones of the legendary anti-paladin Ribald lie here. Memories
+of an ancient time remind you of how the world has moved on.
+~
+E
+slab~
+A large stone slab lies here, with a roughly hewn pentragam on its
+surface.
+~
 S
 #9655
-A temporary name~
-A temporary description
+the necropolis~
+   You are wandering through the buried necropolis of the most glorious heroes
+of the realm.  Bones are piled in all of the corners, but in the middle of the
+room is a well preserved corpses of some ancient person.  Perhaps a closer 
+inspection can reveal clues as to the identity of this fallen hero.
 ~
 96 0 0
 D0
@@ -1074,10 +1197,18 @@ D2
 ~
 ~
 0 -1 9656
+E
+corpse~
+The rotting bones of the legendary warrior Horus lie here. Memories
+of an ancient time remind you of how the world has moved on.
+~
 S
 #9656
-A temporary name~
-A temporary description
+the necropolis~
+   You are wandering through the buried necropolis of the most glorious heroes
+of the realm.  Bones are piled in all of the corners, but in the middle of the
+room is a well preserved corpses of some ancient person.  Perhaps a closer 
+inspection can reveal clues as to the identity of this fallen hero.
 ~
 96 0 0
 D0
@@ -1086,12 +1217,20 @@ D0
 0 -1 9655
 D3
 ~
+rocks~
+8 -1 9649
+E
+corpse ~
+The rotting bones of the legendary commando Bert lie here. Memories
+of an ancient time remind you of how the world has moved on.
 ~
-0 -1 9649
 S
 #9657
-A temporary name~
-A temporary description
+the necropolis~
+   You are wandering through the buried necropolis of the most glorious heroes
+of the realm.  Bones are piled in all of the corners, but in the middle of the
+room is a well preserved corpses of some ancient person.  Perhaps a closer 
+inspection can reveal clues as to the identity of this fallen hero.
 ~
 96 0 0
 D0
@@ -1100,12 +1239,21 @@ D0
 0 -1 9658
 D1
 ~
+rocks~
+8 -1 9649
+E
+corpse~
+The rotting bones of the legendary warrior Raelyn lie here. Memories
+of an ancient time remind you of how the world has moved on.
 ~
-0 -1 9649
 S
 #9658
-A temporary name~
-A temporary description
+the necropolis~
+   You are wandering through the buried necropolis of the most glorious heroes
+of the realm.  Bones are piled in all of the corners, but in the middle of the
+room is a well preserved corpses of some ancient person.  Perhaps a closer 
+inspection can reveal clues as to the identity of this fallen hero.  Set in the
+middle of the floor is a dark granite slab, engraved with an arcane symbol.
 ~
 96 0 0
 D0
@@ -1117,13 +1265,46 @@ D2
 ~
 0 -1 9657
 D5
+.....
+                   .d$$$$*$$$$$$bc
+                .d$P"    d$$    "*$$.
+               d$"      4$"$$      "$$.
+             4$P        $F ^$F       "$c
+            z$%        d$   3$        ^$L
+           4$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F
+           $$$F"""""""$F""""""$F"""""C$$*$
+          .$%"$$e    d$       3$   z$$"  $F
+          4$    *$$.4$"        $$d$P"    $$
+          4$      ^*$$.       .d$F       $$
+          4$       d$"$$c   z$$"3$       $F
+           $L     4$"  ^*$$$P"   $$     4$"
+           3$     $F   .d$P$$e   ^$F    $P
+            $$   d$  .$$"    "$$c 3$   d$
+             *$.4$"z$$"        ^*$$$$ $$
+              "$$$$P"             "$$$P
+                *$b.             .d$P"
+                  "$$$ec.....ze$$$"
+                      "**$$$**""
 ~
+symbol~
+8 -1 9665
+E
+corpse~
+The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
+Memories of an ancient time remind you of how the world has moved on.
 ~
-0 -1 9665
+E
+slab~
+A large stone slab lies here, with a roughly hewn pentagram on its
+surface.
+~
 S
 #9659
-A temporary name~
-A temporary description
+the necropolis~
+   You are wandering through the buried necropolis of the most glorious heroes
+of the realm.  Bones are piled in all of the corners, but in the middle of the
+room is a well preserved corpses of some ancient person.  Perhaps a closer 
+inspection can reveal clues as to the identity of this fallen hero.
 ~
 96 0 0
 D0
@@ -1134,10 +1315,18 @@ D2
 ~
 ~
 0 -1 9658
+E
+corpse~
+The rotting bones of the legendary mage Frigga lie here.  Memories of an 
+ancient time remind you of how the world has moved on.
+~
 S
 #9660
-A temporary name~
-A temporary description
+the necropolis~
+   You are wandering through the buried necropolis of the most glorious heroes
+of the realm.  Bones are piled in all of the corners, but in the middle of the
+room is a well preserved corpses of some ancient person.  Perhaps a closer 
+inspection can reveal clues as to the identity of this fallen hero.
 ~
 96 0 0
 D1
@@ -1148,10 +1337,17 @@ D2
 ~
 ~
 0 -1 9659
+E
+corpse~
+The rotting bones of the legendary ninja Ironbeard lie here. Memories
+of an ancient time remind you of how the world has moved on.
+~
 S
 #9661
-A temporary name~
-A temporary description
+earthen decline~
+   Descending beneath the necropolis, you find yourself in a wide earthen
+tunnel, descending steaidly downwards.  With each setp you take, you can feel
+the earth closing in on you, trapping you with a deepending sense of dread.
 ~
 96 0 0
 D2
@@ -1164,8 +1360,11 @@ D4
 0 -1 9654
 S
 #9662
-A temporary name~
-A temporary description
+earthen decline~
+   The earthen ramp continues downward, taking a slight turn to the east.  
+Echoing up the tunnel from ahead, you can hear the sounds of creatures moving.
+Echoes of screams reverbrate dully from the walls, and you wonder what you 
+will find at the end of the ramp.
 ~
 96 0 0
 D0
@@ -1178,8 +1377,10 @@ D1
 0 -1 9663
 S
 #9663
-A temporary name~
-A temporary description
+earthen decline~
+   The earthen ramp continues downward, continuing on from here to the north.  
+The echoes from earlier are louder here, and you wonder what kind of creatures
+lurk in the darkness ahead.
 ~
 96 0 0
 D0
@@ -1192,8 +1393,12 @@ D3
 0 -1 9662
 S
 #9664
-A temporary name~
-A temporary description
+earthen decline~
+   The earthen ramp ends here at a large hole in the ground.  No
+light penetrates the darkness below, but there is now an overpowering
+smell to go along with the noises you've been hearing.  The smell 
+of blood is quite clear, and you begin to second guess your decision 
+to venture onward.
 ~
 96 0 0
 D2
@@ -1206,7 +1411,7 @@ D5
 0 -1 9673
 S
 #9665
-A temporary name~
+muddy decline~
 A temporary description
 ~
 96 0 0
@@ -1217,10 +1422,10 @@ D2
 D4
 ~
 ~
-0 -1 9658
+1 -1 9658
 S
 #9666
-A temporary name~
+muddy decline~
 A temporary description
 ~
 96 0 0
@@ -1234,7 +1439,7 @@ D3
 0 -1 9667
 S
 #9667
-A temporary name~
+muddy decline~
 A temporary description
 ~
 96 0 0
@@ -1248,7 +1453,7 @@ D1
 0 -1 9666
 S
 #9668
-A temporary name~
+muddy decline~
 A temporary description
 ~
 96 0 0
@@ -1262,7 +1467,7 @@ D5
 0 -1 9669
 S
 #9669
-A temporary name~
+golgothan ruins~
 A temporary description
 ~
 96 0 0
@@ -1274,9 +1479,13 @@ D4
 ~
 ~
 0 -1 9668
+D5
+~
+~
+1 -1 9690
 S
 #9670
-A temporary name~
+golgothan ruins~
 A temporary description
 ~
 96 0 0
@@ -1290,7 +1499,7 @@ D3
 0 -1 9669
 S
 #9671
-A temporary name~
+golgothan ruins~
 A temporary description
 ~
 96 0 0
@@ -1308,9 +1517,8 @@ D3
 0 -1 9670
 S
 #9672
-A temporary name~
-A temporary description
-~
+golgothan ruins~
+invalid~
 96 0 0
 D1
 ~
@@ -1320,9 +1528,13 @@ D3
 ~
 ~
 0 -1 9671
+D5
+~
+plate~
+8 -1 9684
 S
 #9673
-A temporary name~
+golgothan ruins~
 A temporary description
 ~
 96 0 0
@@ -1336,7 +1548,7 @@ D4
 0 -1 9664
 S
 #9674
-A temporary name~
+golgothan ruins~
 A temporary description
 ~
 96 0 0
@@ -1350,20 +1562,19 @@ D2
 0 -1 9675
 S
 #9675
-A temporary name~
-A temporary description
+the ossuary~
+   You stand in the middle of a room, surrounded by hundreds of 
+skeletons of various origins.  Some look human, others animal 
+and still others that resemble no creature you have ever seen.
+Piles of bones have been meticuously arranged in strange geometric 
+patterns which at first make no sense, but coalesce into a 
+meaningful form the longer you look.
 ~
 96 0 0
 D0
 ~
 ~
 0 -1 9674
-S
-#9676
-A temporary name~
-A temporary description
-~
-96 0 0
 S
 #9677
 A dusty cellar~
@@ -1424,8 +1635,9 @@ immovable as the mountain itself.
 ~
 96 9 0
 D2
+A dark metal gate encased in the mountain stands before you.
 ~
-door doors granite ~
+gate~
 1 -1 9633
 D4
 ~
@@ -1455,17 +1667,221 @@ D5
 nest condor~
 11 -1 9625
 S
-#9682
-A temporary name~
+#9684
+an earthen tunnel~
 A temporary description
 ~
 96 0 0
+D0
+~
+~
+0 -1 9685
+D4
+~
+~
+1 -1 9672
 S
-#9683
-A temporary name~
+#9685
+an earthen tunnel~
 A temporary description
 ~
 96 0 0
+D1
+~
+~
+0 -1 9686
+D2
+~
+~
+0 -1 9684
+S
+#9686
+an earthen tunnel~
+A temporary description
+~
+96 0 0
+D0
+~
+~
+0 -1 9687
+D3
+~
+~
+0 -1 9685
+S
+#9687
+an earthen tunnel~
+A temporary description
+~
+96 0 0
+D2
+~
+~
+0 -1 9686
+D5
+~
+~
+0 -1 9688
+S
+#9688
+an earthen tunnel~
+A temporary description
+~
+96 0 0
+D1
+~
+~
+0 -1 9689
+D4
+~
+~
+0 -1 9687
+S
+#9689
+an earthen tunnel~
+A temporary description
+~
+96 0 0
+D3
+~
+~
+0 -1 9688
+S
+#9690
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D4
+~
+~
+0 -1 9669
+D5
+~
+~
+0 -1 9691
+S
+#9691
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D4
+~
+~
+0 -1 9690
+D5
+~
+~
+0 -1 9692
+S
+#9692
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D3
+~
+~
+0 -1 9693
+D4
+~
+~
+0 -1 9691
+S
+#9693
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D1
+~
+~
+0 -1 9692
+D5
+~
+~
+0 -1 9694
+S
+#9694
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D4
+~
+~
+0 -1 9693
+D5
+~
+~
+0 -1 9695
+S
+#9695
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D2
+~
+~
+0 -1 9696
+D4
+~
+~
+0 -1 9694
+S
+#9696
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D0
+~
+~
+0 -1 9695
+D2
+~
+~
+0 -1 9697
+S
+#9697
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D0
+~
+~
+0 -1 9696
+D3
+~
+~
+0 -1 9698
+S
+#9698
+tunnel chiseled from ganite~
+A temporary description
+~
+96 0 0
+D1
+~
+~
+0 -1 9697
+D2
+~
+~
+0 -1 9699
+S
+#9699
+tunnel chiseled from granite~
+A temporary description
+~
+96 0 0
+D0
+~
+~
+0 -1 9698
 S
 #0
 $~

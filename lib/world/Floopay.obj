@@ -4,7 +4,7 @@ The Angelic Blade Azur~
 A dagger shaped like an angel is sitting here.~
 The Angelic Blade Azur glows with a blinding light as it is thrust forward into $V's heart!~
 5 216060226 24577
-63 5 7 10
+63 4 8 10
 15 50000 7500
 10
 X
@@ -16,7 +16,7 @@ $n feels the power of the heavens envelop $m as $e wields The Angelic Blade Azur
 $n feel the power of the heavens leave $m as $e remove The Angelic Blade Azur!~
 $n feels the power of the heavens leave $s as $e removes The Angelic Blade Azur!~
 A
-19 5
+19 9
 A
 18 5
 #3802
@@ -25,7 +25,7 @@ The Demonic Kris Jazr~
 A kris shaped like a demon is sitting here.~
 The Demonic Kris Jazr darkens as it is thrust into $V, consuming a portion of $s soul!~
 5 232820818 24577
-67 5 7 10
+63 4 8 10
 15 50000 7000
 10
 X
@@ -37,7 +37,7 @@ $n screams in agony as the pits of hell attempt to consume $m when $e wields The
 $n sigh in relief as the demons of hell release your soul once The Demonic Blade Jazr falls from your grasp.~
 $n sighs in relief as The Demonic Kris Jazr falls from $s grasp.~
 A
-19 5
+19 9
 A
 18 5
 #3803
@@ -60,9 +60,9 @@ $n's muscles relax as $e releases The Flaming Adamantite Halberd.~
 A
 19 7
 A
-17 -10
+17 -15
 A
-52 15
+52 25
 #3804
 armor dragon beetle~
 Dragon Beetle Hide Armor~
@@ -145,7 +145,7 @@ Some shiny dragon scales lie on the ground, boy are they shiny!~
 10
 X
 ~
-0 0 0
+1 0 0
 M
 You don A Cloak of Platinum Dragon Scales.~
 $n dons A Cloak of Platinum Dragon Scales.~
@@ -155,8 +155,6 @@ A
 19 2
 A
 53 5
-A
-52 5
 B
 16777248
 #3808
@@ -184,7 +182,7 @@ helmet helm crappy~
 A Very Crappy Helmet~
 An awful looking helmet lies here, unwanted.~
 A Very Crappy Helmet~
-9 0 17
+9 134217728 17
 6 -1 -1 -1
 10 5000 3500
 40
@@ -209,7 +207,7 @@ tablet dwarven~
 A tablet etched with dwarven runes~
 A tablet is lying here.~
 ~
-32 3 1
+32 134217731 1
 3804 3806 3842 3843
 30 750000 250000
 10
@@ -245,7 +243,7 @@ coin fan~
 Coin Fan~
 a coin lies here, ready to be turned into a fan.~
 ~
-8 524288 1
+8 134742016 1
 0 0 0 0
 10 10 10
 100
@@ -262,7 +260,7 @@ dagger sharp~
 A very sharp looking dagger~
 A very shart looking dagger is lying here, waiting to find a home!~
 A very sharp dagger flies into $V as $V screams in pain!~
-5 589824 8193
+5 134807552 8193
 0 10 10 9
 10 10 10
 100
@@ -281,7 +279,7 @@ watch gold~
 A Gold Watch~
 A golden pocket watch is lying here, tempting you to check the time.~
 ~
-8 524288 1
+8 134742016 1
 0 0 0 0
 10 10 10
 100
@@ -298,7 +296,7 @@ shield rusty~
 A Rusty Old Shield~
 A shield is lying here, chaffing rust off itself.~
 ~
-9 589824 513
+9 134807552 513
 0 6 4 14
 10 10 10
 100
@@ -317,7 +315,7 @@ mithril scrap~
 An oddly shaped scrap of mithril~
 An scrap of shiny metal is lying here.~
 ~
-8 524288 1
+8 134742016 1
 0 0 0 0
 10 10 10
 100
@@ -334,7 +332,7 @@ staff rotted~
 An Old Rotted Staff~
 A crappy wooden stick is lying here, feeling unwanted.~
 ~
-5 589824 8193
+5 134807552 8193
 0 4 10 7
 10 10 10
 100
@@ -357,7 +355,7 @@ hammer rusty~
 A Rusty Old Hammer~
 A heavily deteriorated hammer lies here.~
 ~
-5 589824 8193
+5 134807552 8193
 0 20 4 6
 10 10 10
 100
@@ -378,7 +376,7 @@ lighter~
 An old wooden lighter~
 A wooden lighter is here, ready to light itself on fire.~
 ~
-8 524288 1
+8 134742016 1
 0 0 0 0
 10 10 10
 100
@@ -940,7 +938,7 @@ handwraps arcane~
 Arcane Handwraps~
 A set of handwraps, with arcane symbols, have been cast aside here.~
 ~
-9 157315137 129
+9 224424001 129
 2 -1 -1 -1
 2 120000 100000
 100
@@ -959,68 +957,68 @@ A
 B
 16777218
 #3896
-nothing~
-a bit of nothing~
-There is a bit of nothing sitting here.~
+wooden armoire fancy~
+A Very Fancy Wooden Armoire~
+A Very Fancy Wooden Armoire is here.~
 ~
-0 0 1
-0 0 0 0
-10 10 10
-10
+15 134217728 0
+10 0 0 0
+10000 10 10
+100
 X
 ~
-0 0 0
+88 0 0
 M
 ~
 ~
 ~
 ~
 #3897
-nothing~
-a bit of nothing~
-There is a bit of nothing sitting here.~
+bed golden fancy~
+A Very Fancy Bed with Golden Bedposts~
+A Very Fancy Bed with Golden Bedposts is here.~
 ~
-0 0 1
-0 0 0 0
-10 10 10
-10
+15 134217728 0
+10 0 0 0
+10000 10 10
+100
 X
 ~
-0 0 0
+88 0 0
 M
 ~
 ~
 ~
 ~
 #3898
-nothing~
-a bit of nothing~
-There is a bit of nothing sitting here.~
+chest mithril fancy~
+A Very Fancy Mithril Chest~
+A Very Fancy Mithril Chest is here.~
 ~
-0 0 1
-0 0 0 0
-10 10 10
-10
+15 134217728 0
+10 0 0 0
+10000 10 10
+100
 X
 ~
-0 0 0
+88 0 0
 M
 ~
 ~
 ~
 ~
 #3899
-nothing~
-a bit of nothing~
-There is a bit of nothing sitting here.~
+rack weapon weaponrack fancy adamantine~
+A Very Fancy Adamantine Weapon Rack~
+A Very Fancy Adamantine Weapon Rack is here.~
 ~
-0 0 1
-0 0 0 0
-10 10 10
-10
+15 134217728 0
+10 0 0 0
+10000 10 10
+100
 X
 ~
-0 0 0
+88 0 0
 M
 ~
 ~

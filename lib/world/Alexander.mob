@@ -57,12 +57,15 @@ The master archaeologist is looking suspiciously at you.
 His coat is made of brown leather and has strange markings and symbols 
 on it. Some of them looks like the cavern wall near the entrance.
 ~
-16777226 0 200 Y
-50 -19 -15 10d10+40000 10d127+50
+16777226 134219776 200 Y
+55 -27 -15 50d50+80000 20d67+350
 4000000 4000000
 8 8 1
-68 0 1d1+3000 0
-0 0 0 0
+68 16640 1d1+3000 3
+1 6 5 102
+9 2 35 0
+1 6 10 36
+0 0 0 544
 K
 0 0 0 0 0 0 0
 #0

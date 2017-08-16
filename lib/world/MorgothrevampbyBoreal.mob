@@ -13,7 +13,7 @@ A large horned mountain goat is grazing peacefully here.
 86 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9610
 Wandering Mage~
 The wandering mage~
@@ -32,7 +32,7 @@ leaves his hands.
 1 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9615
 wolf bloody savage~
 A bloody, savage looking wolf~
@@ -60,7 +60,7 @@ A savage wolf crouches here amongst the rocks.
 90 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9619
 unicorn~
 The Unicorn~
@@ -79,7 +79,7 @@ with magical energy.
 86 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9622
 Trien~
 Trien~
@@ -98,7 +98,7 @@ evident.
 64 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9625
 Mother Condor~
 The giant mother condor~
@@ -132,7 +132,7 @@ A giant mother condor is here tending to her young ones.
 83 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9626
 Baby condor~
 The small baby condor~
@@ -148,7 +148,7 @@ A small baby condor is here chirping for food.
 83 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9630
 griffon~
 A magnificent griffon~
@@ -181,7 +181,7 @@ A magnificent griffon is sitting here, poised to strike.
 83 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9632
 hungry mangy rat~
 A hungry, mangy rat~
@@ -207,7 +207,7 @@ A hungry, mangy rat cringes in the corner.
 86 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9633
 cleric~
 A cleric of the white robes~
@@ -226,7 +226,7 @@ her through to the end.
 2 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9635
 Green cleric~
 A cleric of the green robes~
@@ -245,7 +245,7 @@ order grows in power.
 2 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9637
 Black cleric~
 A cleric of the black robes~
@@ -264,7 +264,7 @@ means are questionable.
 2 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9640
 felnor master~
 Felnor~
@@ -283,7 +283,7 @@ no qualms about his job, however, it was what he was raised to do.
 2 16512 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9645
 Slave~
 A sacrificial slave~
@@ -301,7 +301,7 @@ but are of no avail.  He is destined to die.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #9650
 Dindae tiger~
 Dindae~
@@ -319,6 +319,26 @@ him look alot more tame then he really is.
 90 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
+#9675
+necromancer~
+The necromancer~
+The dark necromancer is here conjuring his foul horde.
+~
+The master of the dark arts crouches here before you, working
+on his intricate conjuring.  Weaving his hands in intricate 
+patterns, you are almost hypnotized be the ease and grace with
+which he moves.  
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+T
+ ..... The dark necromancer weaves his hands in intricate patterns.~
+K
+0 0 0 0 0 0 0
 #0
 $~

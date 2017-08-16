@@ -1,5 +1,5 @@
 #1301
-silver mask~
+mask silver~
 A mask crafted from the purest silver.~
 Lying here on the ground is an exquisitely wrought mask of the finest silver.~
 ~
@@ -26,7 +26,7 @@ M
 A
 12 10
 #1302
-ruby wand~
+wand ruby~
 A wand fashioned from a single enormous ruby~
 A flickering ruby wand lies here in the dust.~
 ~
@@ -66,7 +66,7 @@ M
 ~
 ~
 #1304
-silver sword broadsword flame~
+broadsword sword broad flame silver~
 A silver broadsword, engulfed in flames.~
 A silver broadsword, completely engulfed in blue flames is here on the ground.~
 ~
@@ -94,7 +94,7 @@ A
 A
 19 1
 #1305
-keep key~
+key keep~
 The keep key~
 The keep key has been dropped here.~
 ~
@@ -111,7 +111,7 @@ M
 ~
 ~
 #1306
-old leather collar~
+collar old leather~
 An old leather collar~
 An old leather collar lies here.~
 ~
@@ -128,7 +128,7 @@ M
 ~
 ~
 #1307
-crack~
+crack wall~
 crack in the wall~
 ~
 ~
@@ -145,7 +145,7 @@ M
 ~
 ~
 #1308
-skeleton~
+skeleton human remains torso~
 The sawn off remains of a human torso lie here.~
 The decaying bones of a mutilated human torso are scattered here.~
 ~
@@ -189,7 +189,7 @@ M
 ~
 ~
 #1309
-blue rook key~
+key blue~
 A dull, blue key~
 An ordinary blue key lies here.~
 ~

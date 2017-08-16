@@ -53,10 +53,10 @@ A narrow hardpan roadway leads along the sandstone wall.
 ~
 0 -1 12808
 E
-wall~
-This giant barrier is a reminder of the forces which work here
-out in the wastelands.  It was built many centuries ago to hold
-out against the powerful desert winds.
+gate~
+One of the only structures left standing here, this gate is
+made of iron and heavy sandalwood, built strong to keep out
+any undesirables.
 ~
 E
 footprints~
@@ -65,10 +65,10 @@ roughly half the size of your own, and lead fairly regularly to
 both the east and west.
 ~
 E
-gate~
-One of the only structures left standing here, this gate is
-made of iron and heavy sandalwood, built strong to keep out
-any undesirables.
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands.  It was built many centuries ago to hold
+out against the powerful desert winds.
 ~
 S
 #12802
@@ -91,16 +91,16 @@ A narrow hardpan roadway leads along the sandstone wall.
 ~
 0 -1 12801
 E
-wall~
-This giant barrier is a reminder of the forces which work here
-out in the wastelands. It was built many centuries ago to hold
-out against the powerful desert winds.
-~
-E
 footprints~
 A set of flat, rounded prints in the sand before you.  Each is
 roughly half the size of your own, and leads fairly regularly to
 both the east and west.
+~
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands. It was built many centuries ago to hold
+out against the powerful desert winds.
 ~
 S
 #12803
@@ -123,16 +123,16 @@ A narrow hardpan roadway leads along the sandstone wall.
 ~
 0 -1 12802
 E
-wall~
-This giant barrier is a reminder of the forces which work here
-out in the wastelands. It was built many centuries ago to hold
-out against the powerful desert winds.
-~
-E
 footprints~
 A set of flat, rounded prints in the sand before you.  Each is
 roughly half the size of your own, and leads fairly regularly to
 both the east and west.
+~
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands. It was built many centuries ago to hold
+out against the powerful desert winds.
 ~
 S
 #12804
@@ -161,16 +161,16 @@ A narrow hardpan roadway leads along the sandstone wall.
 ~
 0 -1 12803
 E
-wall~
-This giant barrier is a reminder of the forces which work here
-out in the wastelands.  It was build many centuries ago to hold
-out against the powerful desert winds.
-~
-E
 footprints~
 A set of flat, rounded prints in the sand before you.  Each is
 roughly half the size of your own, and leads fairly regularly to
 both the east and west.
+~
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands.  It was build many centuries ago to hold
+out against the powerful desert winds.
 ~
 S
 #12805
@@ -195,16 +195,16 @@ A narrow hardpan roadway leads along the sandstone wall.
 ~
 0 -1 12804
 E
-wall~
-This giant barrier is a reminder of the forces which work here
-out in the wastelands.  It was build many centuries ago to hold
-out against the powerful desert winds.
-~
-E
 footprints~
 A set of flat, rounded prints in the sand before you.  Each is
 roughly half the size of your own, and leads fairly regularly to
 both the north and west.
+~
+E
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands.  It was build many centuries ago to hold
+out against the powerful desert winds.
 ~
 S
 #12806
@@ -286,10 +286,8 @@ The desert extends out down into some sand dunes.
 ~
 0 -1 12850
 E
-wall~
-This giant barrier is a reminder of the forces which work here
-out in the wastelands.  It was build many centuries ago to hold
-out against the powerful desert winds.
+blotches~
+This appears to be the mark of death, blood stained on the inner wall.
 ~
 E
 footprints~
@@ -298,8 +296,10 @@ roughly half the size of your own, and leads fairly regularly to
 both the east and north.
 ~
 E
-blotches~
-This appears to be the mark of death, blood stained on the inner wall.
+wall~
+This giant barrier is a reminder of the forces which work here
+out in the wastelands.  It was build many centuries ago to hold
+out against the powerful desert winds.
 ~
 S
 #12809
@@ -328,9 +328,8 @@ The desert extends out down into some sand dunes.
 ~
 0 -1 12850
 E
-streamers~
-These are decorations from a long-ago celebration, left up
-forever and never to be enjoyed.
+wall~
+A dull sandstone wall, just high enough to block any view east.
 ~
 E
 beams~
@@ -339,8 +338,9 @@ and the remains of the supports which lined the westward outer
 wall.
 ~
 E
-wall~
-A dull sandstone wall, just high enough to block any view east.
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
 ~
 S
 #12810
@@ -369,9 +369,8 @@ The remains of a large guardpost lay to the west.
 ~
 0 -1 12811
 E
-streamers~
-These are decorations from a long-ago celebration, left up
-forever and never to be enjoyed.
+wall~
+A dull sandstone wall, just high enough to block any view east.
 ~
 E
 beams~
@@ -380,8 +379,9 @@ and the remains of the supports which lined the westward outer
 wall.
 ~
 E
-wall~
-A dull sandstone wall, just high enough to block any view east.
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
 ~
 S
 #12811
@@ -493,9 +493,12 @@ The remains of a large guardpost lay to the west.
 ~
 0 -1 12812
 E
-streamers~
-These are decorations from a long-ago celebration, left up
-forever and never to be enjoyed.
+door~
+A non-descript door leading into the ruins of the Tarion Hall.
+~
+E
+wall~
+A dull sandstone wall, just high enough to block any view east.
 ~
 E
 beams~
@@ -504,12 +507,9 @@ and the remains of the supports which lined the westward outer
 wall.
 ~
 E
-wall~
-A dull sandstone wall, just high enough to block any view east.
-~
-E
-door~
-A non-descript door leading into the ruins of the Tarion Hall.
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
 ~
 S
 #12814
@@ -539,9 +539,8 @@ The desert extends out down into some sand dunes.
 ~
 0 -1 12850
 E
-streamers~
-These are decorations from a long-ago celebration, left up
-forever and never to be enjoyed.
+wall~
+A dull sandstone wall, just high enough to block any view east.
 ~
 E
 beams~
@@ -550,8 +549,9 @@ and the remains of the supports which lined the westward outer
 wall.
 ~
 E
-wall~
-A dull sandstone wall, just high enough to block any view east.
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
 ~
 S
 #12815
@@ -581,9 +581,8 @@ The desert extends out down into some sand dunes.
 ~
 0 -1 12850
 E
-streamers~
-These are decorations from a long-ago celebration, left up
-forever and never to be enjoyed.
+wall~
+A dull sandstone wall, just high enough to block any view east.
 ~
 E
 beams~
@@ -592,8 +591,9 @@ and the remains of the supports which lined the westward outer
 wall.
 ~
 E
-wall~
-A dull sandstone wall, just high enough to block any view east.
+streamers~
+These are decorations from a long-ago celebration, left up
+forever and never to be enjoyed.
 ~
 S
 #12816
@@ -633,14 +633,14 @@ A stairway leads down into a large meeting place below the street.
 ~
 0 -1 12817
 E
+footprints~
+The round footprints lead in another path disappearing in the east.
+~
+E
 pottery~
 Piles of broken pots and containers have been stashed against the
 walls on either side of the street, either blown there or put there
 by someone to leave a path..
-~
-E
-footprints~
-The round footprints lead in another path disappearing in the east.
 ~
 S
 #12817
@@ -661,12 +661,6 @@ The heat of the desert filters down with the light and dust.
 ~
 0 -1 12816
 E
-walls~
-The walls are fairly glowing with an ancient light still
-emanating from this place.  A credo has been chiseled into
-one, listing the virtues of the Tarion Guard.
-~
-E
 credo~
 
    - The forces of Good hail all here in our heart of Tarion -
@@ -675,6 +669,12 @@ credo~
     ...1000 years hence we have lived, and 1000 to come,
        we will still endure.
 
+~
+E
+walls~
+The walls are fairly glowing with an ancient light still
+emanating from this place.  A credo has been chiseled into
+one, listing the virtues of the Tarion Guard.
 ~
 S
 #12818
@@ -703,17 +703,17 @@ The sandy roadway continues west along the city's inner wall.
 ~
 0 -1 12816
 E
-bones~
-A dismantled drying corpse has been tossed by the wind and elements
-here, wearing only a tattered cloth.
+wall~
+A sandstone inner wall stands shielding the city to the south.
 ~
 E
 tracks~
 The footprints jumble up a bit as they spread along the corridor.
 ~
 E
-wall~
-A sandstone inner wall stands shielding the city to the south.
+bones~
+A dismantled drying corpse has been tossed by the wind and elements
+here, wearing only a tattered cloth.
 ~
 S
 #12819
@@ -743,17 +743,17 @@ The sandy roadway continues west along the city's inner wall.
 ~
 0 -1 12818
 E
-bones~
-A dismantled drying corpse has been tossed by the wind and elements
-here, wearing only a tattered cloth.
+wall~
+A sandstone inner wall stands shielding the city to the south.
 ~
 E
 tracks~
 The footprints jumble up a bit as they spread along the corridor.
 ~
 E
-wall~
-A sandstone inner wall stands shielding the city to the south.
+bones~
+A dismantled drying corpse has been tossed by the wind and elements
+here, wearing only a tattered cloth.
 ~
 S
 #12820
@@ -783,17 +783,17 @@ The sandy roadway continues west along the city's inner wall.
 ~
 0 -1 12819
 E
-bones~
-A dismantled drying corpse has been tossed by the wind and elements
-here, wearing only a tattered cloth.
+wall~
+A sandstone inner wall stands shielding the city to the south.
 ~
 E
 tracks~
 The footprints jumble up a bit as they spread along the corridor.
 ~
 E
-wall~
-A sandstone inner wall stands shielding the city to the south.
+bones~
+A dismantled drying corpse has been tossed by the wind and elements
+here, wearing only a tattered cloth.
 ~
 S
 #12821
@@ -827,13 +827,13 @@ The sandy roadway continues west along the city's inner wall.
 ~
 0 -1 12820
 E
+tracks~
+The footprints jumble up a bit as they spread along the corridor.
+~
+E
 bones~
 A dismantled drying corpse has been tossed by the wind and elements
 here, wearing only a tattered cloth.
-~
-E
-tracks~
-The footprints jumble up a bit as they spread along the corridor.
 ~
 S
 #12822
@@ -859,19 +859,8 @@ A roadway leads west through the sandy area toward a broken wall.
 ~
 0 -1 12821
 E
-walls~
-The walls close in to the northeast, providing momentary comfort
-in the shade.
-~
-E
-glyphs~
-  Strange pictures drawn in blood and cut into the soft sandstone
-here show the citizens being greeted with happiness beneath the sun
-on one side.  On the other, darkness has fallen with the moon
-shining brightly and small purple beings seem to be hauling someone
-from their home.  In the next picture, a great feast has been
-prepared, steam rising from the fresh corpse of the citizen as the
-centerpiece.
+tracks~
+Tiny trails spin about in the sand, showing no discernable direction.
 ~
 E
 scratchings~
@@ -884,8 +873,19 @@ prepared, steam rising from the fresh corpse of the citizen as the
 centerpiece.
 ~
 E
-tracks~
-Tiny trails spin about in the sand, showing no discernable direction.
+glyphs~
+  Strange pictures drawn in blood and cut into the soft sandstone
+here show the citizens being greeted with happiness beneath the sun
+on one side.  On the other, darkness has fallen with the moon
+shining brightly and small purple beings seem to be hauling someone
+from their home.  In the next picture, a great feast has been
+prepared, steam rising from the fresh corpse of the citizen as the
+centerpiece.
+~
+E
+walls~
+The walls close in to the northeast, providing momentary comfort
+in the shade.
 ~
 S
 #12823
@@ -941,9 +941,8 @@ platform.
 ladder~
 11 -1 12825
 E
-ladder~
-A rickety ladder built here to provide access to the Northeast
-watchtower, still standing after all these years of disuse.
+splotch~
+This appears to be the mark of death, blood stained on the outer wall.
 ~
 E
 tracks~
@@ -951,8 +950,9 @@ The pathway with the round footprints lead directly toward
 the ladder's base, ending there.
 ~
 E
-splotch~
-This appears to be the mark of death, blood stained on the outer wall.
+ladder~
+A rickety ladder built here to provide access to the Northeast
+watchtower, still standing after all these years of disuse.
 ~
 S
 #12825
@@ -972,18 +972,9 @@ Below the platform, a ladder drifts down the sandstone wall.
 ladder~
 11 -1 12824
 E
-inscription~
-
-  "Urph tzyae misaestz wah sakmnivikae tzyaewsaepfaes vumn tzyae
-    vmn'aetuw uv tzyaeimn kirtmnaet."
-
-                            *Sakmnivikae*
-
-~
-E
-altar~
-A gigantic granite surface, carved and worn by the ages,
-drenched in the blood of the sacrifice.
+utensils~
+Tiny knives and forks fashioned of gold sit carefully-placed at
+settings numbering perhaps 40, as if for dinner.
 ~
 E
 table~
@@ -991,9 +982,18 @@ A gigantic granite surface, carved and worn by the ages,
 drenched in the blood of the sacrifice.
 ~
 E
-utensils~
-Tiny knives and forks fashioned of gold sit carefully-placed at
-settings numbering perhaps 40, as if for dinner.
+altar~
+A gigantic granite surface, carved and worn by the ages,
+drenched in the blood of the sacrifice.
+~
+E
+inscription~
+
+  "Urph tzyae misaestz wah sakmnivikae tzyaewsaepfaes vumn tzyae
+    vmn'aetuw uv tzyaeimn kirtmnaet."
+
+                            *Sakmnivikae*
+
 ~
 S
 #12826
@@ -1032,26 +1032,11 @@ The doorway leads gracefully out into the blazing sun.
 door~
 1 -1 12813
 E
-door~
-A non-descript door leads out into the desert surrounding the hall.
-~
-E
-furniture~
-Some truly rare and beautiful pieces, mostly chairs and side-
-table sets, splintered and dulled by the passage of time.
-~
-E
-decorations~
-A few decorative pictures have been discarded all about the floor.
-~
-E
-pictures~
-One is of the former glory of the city, Tarion by night,
-lights blazing in a tiny area below a giant dark sky.
-~
-E
-trails~
-Tiny lines cross each other, winding along every surface.
+dome~
+A gargantuan dome, painted cobalt blue with darkening shades
+along the lower reaches.  Its surface is dotted with tiny
+marks to represent the stars, perhaps a scene from a summer
+evening.
 ~
 E
 statue~
@@ -1060,11 +1045,26 @@ the founder, Elliot Tarion.  He stands proud in a dressy
 uniform, staring blindly at an unknown horizon.
 ~
 E
-dome~
-A gargantuan dome, painted cobalt blue with darkening shades
-along the lower reaches.  Its surface is dotted with tiny
-marks to represent the stars, perhaps a scene from a summer
-evening.
+trails~
+Tiny lines cross each other, winding along every surface.
+~
+E
+pictures~
+One is of the former glory of the city, Tarion by night,
+lights blazing in a tiny area below a giant dark sky.
+~
+E
+decorations~
+A few decorative pictures have been discarded all about the floor.
+~
+E
+furniture~
+Some truly rare and beautiful pieces, mostly chairs and side-
+table sets, splintered and dulled by the passage of time.
+~
+E
+door~
+A non-descript door leads out into the desert surrounding the hall.
 ~
 S
 #12827
@@ -1093,8 +1093,8 @@ The hallway widens to meet the Hall's entrance chamber.
 ~
 0 -1 12826
 E
-sign~
-            `eTreasury`h
+door~
+It appears to be an oak door, jammed in by the surrounding rubble.
 ~
 E
 walls~
@@ -1103,8 +1103,8 @@ and polished to a high-gloss.  Although half of them have
 fallen, the rest appear to be almost new.
 ~
 E
-door~
-It appears to be an oak door, jammed in by the surrounding rubble.
+sign~
+            `eTreasury`h
 ~
 S
 #12828
@@ -1138,14 +1138,14 @@ A smaller hallway drifts west.
 ~
 0 -1 12827
 E
+door~
+It appears to be an oak door, also jammed in by the surrounding rubble.
+~
+E
 walls~
 Very impressive, these walls seem to be carved from granite
 and polished to a high-gloss.  Although half of them have
 fallen, the rest appear to be almost new.
-~
-E
-door~
-It appears to be an oak door, also jammed in by the surrounding rubble.
 ~
 S
 #12829
@@ -1178,9 +1178,8 @@ The rubble covers what used to be an office here.
 CHARP~
 9 -1 12837
 E
-sofas~
-A few war-torn bits of furniture which once lived as comfort
-pieces for waiting citizens.
+door~
+A small door with few marks on it stands intact here.
 ~
 E
 splinters~
@@ -1188,8 +1187,9 @@ Destroyed tables! Ack! Someone must have run through here with
 a chainsaw!
 ~
 E
-door~
-A small door with few marks on it stands intact here.
+sofas~
+A few war-torn bits of furniture which once lived as comfort
+pieces for waiting citizens.
 ~
 S
 #12830
@@ -1212,8 +1212,10 @@ A larger door on rusty hinges opens into a waiting chamber.
 door~
 1 -1 12829
 E
-door~
-A small door with few marks on it stands intact here.
+banisters~
+Strange markings adorn the wooden ceiling-banisters which
+have landed haphazardly here.  They appear to be scratches made
+by a small animal with long claws.
 ~
 E
 pile crystal~
@@ -1222,10 +1224,8 @@ here recently.  Shards of glass send tiny points of light
 from the windows into your eyes.
 ~
 E
-banisters~
-Strange markings adorn the wooden ceiling-banisters which
-have landed haphazardly here.  They appear to be scratches made
-by a small animal with long claws.
+door~
+A small door with few marks on it stands intact here.
 ~
 S
 #12831
@@ -1250,14 +1250,14 @@ A smaller hallway drifts east down a slight grade.
 ~
 0 -1 12832
 E
+floor~
+A spotless surface of tiled stone reaching down the hallway.
+~
+E
 walls~
 Very impressive, these walls seem to be carved from granite
 and polished to a high-gloss.  Although half of them have
 fallen, the rest appear to be almost new.
-~
-E
-floor~
-A spotless surface of tiled stone reaching down the hallway.
 ~
 S
 #12832
@@ -1292,14 +1292,11 @@ A smaller hallway drifts west.
 ~
 0 -1 12831
 E
-statue~
-This is a full-body statue of the first Mayor of Tarion,
-the founder, Elliot Tarion.  He stands proud in a dressy
-uniform, staring blindly at an unknown horizon.
-~
-E
-door~
-A tiny door swings creaking on its ancient hinges.
+abuttments figures ceiling~
+The ceiling here has a curiously classical design, featuring
+angelic figures sitting all along stone outcroppings above.
+Each is involved in varying degrees of happy action, frozen
+in time.
 ~
 E
 pile rubble~
@@ -1307,11 +1304,14 @@ The broken stone piles high up, teetering precariously and
 blocking your passage northward.
 ~
 E
-abuttments figures ceiling~
-The ceiling here has a curiously classical design, featuring
-angelic figures sitting all along stone outcroppings above.
-Each is involved in varying degrees of happy action, frozen
-in time.
+door~
+A tiny door swings creaking on its ancient hinges.
+~
+E
+statue~
+This is a full-body statue of the first Mayor of Tarion,
+the founder, Elliot Tarion.  He stands proud in a dressy
+uniform, staring blindly at an unknown horizon.
 ~
 S
 #12833
@@ -1332,17 +1332,10 @@ A small oak door opening into the hallway outside.
 door~
 1 -1 12832
 E
-door~
-A tiny door stands here creaking on its ancient hinges.
-~
-E
-chair~
-A very comfortable-looking leather upholstered seat.
-~
-E
-window~
-Beneath the small glass window, you encounter the southern skyline
-reaching far out beyond the wall toward an almost-green horizon.
+picture~
+It's a picture of a young couple, probably the clerk, being
+married near a flowing river in the middle of a pristine forest.
+Love extends everlasting into the most unlikely places.
 ~
 E
 desk~
@@ -1350,10 +1343,17 @@ An old cherry desk, clean as a whistle and piled with dust.
 A single picture sits tipped on its side here, also.
 ~
 E
-picture~
-It's a picture of a young couple, probably the clerk, being
-married near a flowing river in the middle of a pristine forest.
-Love extends everlasting into the most unlikely places.
+window~
+Beneath the small glass window, you encounter the southern skyline
+reaching far out beyond the wall toward an almost-green horizon.
+~
+E
+chair~
+A very comfortable-looking leather upholstered seat.
+~
+E
+door~
+A tiny door stands here creaking on its ancient hinges.
 ~
 S
 #12834
@@ -1377,19 +1377,19 @@ A small door leading into a smaller corridor west.
 door~
 1 -1 12832
 E
-walls~
-Very impressive, these walls seem to be carved from granite
-and polished to a high-gloss.  Although half of them have
-fallen, these are buckling slowly but still functional.
+path footprints~
+The path takes up here in the dust again, footprints almost-
+fresh and leading in a well-used line north and west.
 ~
 E
 door~
 A tiny door squeaks away on its ancient hinges.
 ~
 E
-path footprints~
-The path takes up here in the dust again, footprints almost-
-fresh and leading in a well-used line north and west.
+walls~
+Very impressive, these walls seem to be carved from granite
+and polished to a high-gloss.  Although half of them have
+fallen, these are buckling slowly but still functional.
 ~
 S
 #12835
@@ -1424,19 +1424,19 @@ A giant statue stands gaping across the center of the building.
 CHARP~
 9 -1 12837
 E
-facade~
-A large gold-plated wall of adornments, busts and faces pounded
-out, the ancestors of Tarion listed in glorious succession.
+figure~
+This is a full-body statue of the first Mayor of Tarion,
+the founder, Elliot Tarion.  He stands proud in a dressy
+uniform, staring blindly at an unknown horizon.
 ~
 E
 door~
 This portal leads into another room, filtering light forth.
 ~
 E
-figure~
-This is a full-body statue of the first Mayor of Tarion,
-the founder, Elliot Tarion.  He stands proud in a dressy
-uniform, staring blindly at an unknown horizon.
+facade~
+A large gold-plated wall of adornments, busts and faces pounded
+out, the ancestors of Tarion listed in glorious succession.
 ~
 S
 #12836
@@ -1467,10 +1467,8 @@ The worn oak door parts the way into the waiting chamber.
 door~
 1 -1 12835
 E
-pathway~
-An almost-rutted path worn into the ground here; a depression
-leading in a curving path straight toward the outside of the
-building.
+door~
+This portal leads into another room, filtering light forth.
 ~
 E
 backdrop~
@@ -1478,8 +1476,10 @@ A small wood-frame screen leans against the wall, once a
 folding shield against the sunlight, but now so much junk.
 ~
 E
-door~
-This portal leads into another room, filtering light forth.
+pathway~
+An almost-rutted path worn into the ground here; a depression
+leading in a curving path straight toward the outside of the
+building.
 ~
 S
 #12837
@@ -1516,23 +1516,10 @@ A dark cavern looms east, spewing screams of madness.
 ~
 0 -1 12839
 E
-cavern mouth~
-This is the entrance to a magical cavern, the Lair of the Beast,
-forbidden to all who cannot master the ancient Paktan tongue.
-~
-E
-tracks~
-The circular tracks appear very fresh here, almost dizzying
-as they dance about in perfect movement directly east.
-~
-E
-clothing~
-A few tatters lay swathed about the skeleton's legs, perhaps
-what used to be trousers.
-~
-E
-bones~
-Bleached and cracked from the sun's fury.
+wall~
+The inside of the sandstone wall on the eastern border of
+the City, this blocks any progress around this secret passage
+except to the strange cavern east.
 ~
 E
 remains~
@@ -1542,10 +1529,23 @@ to be slain by something beyond comprehension.  His teeth grin
 at you with grim defiance.
 ~
 E
-wall~
-The inside of the sandstone wall on the eastern border of
-the City, this blocks any progress around this secret passage
-except to the strange cavern east.
+bones~
+Bleached and cracked from the sun's fury.
+~
+E
+clothing~
+A few tatters lay swathed about the skeleton's legs, perhaps
+what used to be trousers.
+~
+E
+tracks~
+The circular tracks appear very fresh here, almost dizzying
+as they dance about in perfect movement directly east.
+~
+E
+cavern mouth~
+This is the entrance to a magical cavern, the Lair of the Beast,
+forbidden to all who cannot master the ancient Paktan tongue.
 ~
 S
 #12839
@@ -1575,18 +1575,18 @@ Try looking at the Paktan term for this direction.
 ~
 0 -1 12838
 E
-parboabae~
-An ancient dialect is read here and throughout these caverns,
-the native tongue of the Paktan beings, and must be understood
-in order to explore and move within them.
+suotzy~
+Tzyae kafaemnr taeskaerts tzu tzyae suotzy.
 ~
 E
 maestz~
 Tzyae mnoirs uv Tzamniur pah tzu tzyae maestz.
 ~
 E
-suotzy~
-Tzyae kafaemnr taeskaerts tzu tzyae suotzy.
+parboabae~
+An ancient dialect is read here and throughout these caverns,
+the native tongue of the Paktan beings, and must be understood
+in order to explore and move within them.
 ~
 S
 #12840
@@ -1611,28 +1611,28 @@ Try looking at the Paktan term for this direction.
 ~
 0 -1 12841
 E
-rumntzy~
-Ir tzyae rumntzy, tzyae aimn baetzs mamnwaemn as pibytz kuwaes ir.
-~
-E
-aeastz~
-Tzu tzyae aeastz piaes a mitaemn amnaea ir tzyae latzymah.
-~
-E
-vmnabwaertzs~
-Gaeotzivop liaekaes uv bpass-pikae stzuraes mnaevpaektz pibytz.
-~
-E
-mnukks~
-Tzirh laeggpaes tmnivtz apurb tzyae latzy.
+mapps~
+Tzyae mapps mnor tchabbaetph apurb, tmnillirb wuistzomnae.
 ~
 E
 latzy~
 Tzyis latzy allaemns tzu gae mnorrirb t'ael irtzu a yittaer amnaea.
 ~
 E
-mapps~
-Tzyae mapps mnor tchabbaetph apurb, tmnillirb wuistzomnae.
+mnukks~
+Tzirh laeggpaes tmnivtz apurb tzyae latzy.
+~
+E
+vmnabwaertzs~
+Gaeotzivop liaekaes uv bpass-pikae stzuraes mnaevpaektz pibytz.
+~
+E
+aeastz~
+Tzu tzyae aeastz piaes a mitaemn amnaea ir tzyae latzymah.
+~
+E
+rumntzy~
+Ir tzyae rumntzy, tzyae aimn baetzs mamnwaemn as pibytz kuwaes ir.
 ~
 S
 #12841
@@ -1665,8 +1665,27 @@ Try looking at the Paktan term for this direction.
 yupae~
 9 -1 12845
 E
-tumr~
-Tzyaemnae is a yupae ir tzyae bmnuort yaemnae.
+aeastz~
+Tzyae tzorraep ra'mnums tumr as itz paeats gaehurt tzyae tamnkraess.
+~
+E
+maestz~
+Tzyae tzorraep ra'mnums tumr as itz paeats gaehurt tzyae tamnkraess.
+~
+E
+yupae~
+A yupae ir tzyae kaertzaemn uv tzyae bmnuort puuks gib aeruoby tzu kmnamp
+tzymnuoby.
+~
+E
+saeatzs~
+Tzyaesae amnae tzyae lpakaes vumn app tzyae laktzatz slaektzatzumns
+myu kuwae tzu mitzraess tzyae bawaes.
+~
+E
+tmnullirbs~
+Wiriskopae lipaes uv kmnal piae stzmnaemr aguotz tzyae bmnuort,
+wustzph warkaeh-luul.
 ~
 E
 tzmnakks~
@@ -1675,27 +1694,8 @@ laktzatz myiky tzmnafaemnsae tzyae kafaemnrs.  Tzyaeh paeat tumr irtzu
 a yupae gaepum.
 ~
 E
-tmnullirbs~
-Wiriskopae lipaes uv kmnal piae stzmnaemr aguotz tzyae bmnuort,
-wustzph warkaeh-luul.
-~
-E
-saeatzs~
-Tzyaesae amnae tzyae lpakaes vumn app tzyae laktzatz slaektzatzumns
-myu kuwae tzu mitzraess tzyae bawaes.
-~
-E
-yupae~
-A yupae ir tzyae kaertzaemn uv tzyae bmnuort puuks gib aeruoby tzu kmnamp
-tzymnuoby.
-~
-E
-maestz~
-Tzyae tzorraep ra'mnums tumr as itz paeats gaehurt tzyae tamnkraess.
-~
-E
-aeastz~
-Tzyae tzorraep ra'mnums tumr as itz paeats gaehurt tzyae tamnkraess.
+tumr~
+Tzyaemnae is a yupae ir tzyae bmnuort yaemnae.
 ~
 S
 #12842
@@ -1720,28 +1720,28 @@ Try looking at the Paktan term for this direction.
 ~
 0 -1 12841
 E
-vmnabwaertzs~
-Gaeotzivop liaekaes uv bpass-pikae stzuraes mnaevpaektz pibytz.
-~
-E
-mnukks~
-Tzirh laeggpaes tmnivtz apurb tzyae latzy.
-~
-E
-maestz~
-Tzu tzyae maestz piaes a mitaemn amnaea ir tzyae latzymah.
-~
-E
-suotzy~
-Tzyae kafae olaers irtzu pibytz tzu tzyae suotzy.
+mapps~
+Tzyae mapps mnor tchabbaetph apurb, tmnillirb wuistzomnae.
 ~
 E
 latzy~
 Tzyis latzy allaemns tzu gae mnorrirb t'ael irtzu a yittaer amnaea.
 ~
 E
-mapps~
-Tzyae mapps mnor tchabbaetph apurb, tmnillirb wuistzomnae.
+suotzy~
+Tzyae kafae olaers irtzu pibytz tzu tzyae suotzy.
+~
+E
+maestz~
+Tzu tzyae maestz piaes a mitaemn amnaea ir tzyae latzymah.
+~
+E
+mnukks~
+Tzirh laeggpaes tmnivtz apurb tzyae latzy.
+~
+E
+vmnabwaertzs~
+Gaeotzivop liaekaes uv bpass-pikae stzuraes mnaevpaektz pibytz.
 ~
 S
 #12843
@@ -1768,9 +1768,9 @@ A snowy cove in a copse of trees appears ahead in the path.
 ~
 0 -1 12844
 E
-daisies~
-A dainty set of flowers, tipping gracefully toward you and away
-from the purple haze to the north.
+steam~
+It's a hot vapor rising up from whatever moisture is produced
+within this strange cave.
 ~
 E
 hole~
@@ -1778,9 +1778,9 @@ It appears to be a rectangular entrance cut into a hill pushing
 beneath the trees, completely out of the ordinary.
 ~
 E
-steam~
-It's a hot vapor rising up from whatever moisture is produced
-within this strange cave.
+daisies~
+A dainty set of flowers, tipping gracefully toward you and away
+from the purple haze to the north.
 ~
 S
 #12844
@@ -1806,13 +1806,13 @@ A large barren spot between the trees lies west.
 ~
 0 -1 12843
 E
-snowdrift~
-It looks just barely large enough to crawl through..
-~
-E
 trees~
 A huge number of beautifully diverse species of firs covers the
 sides of the cove in splendor.
+~
+E
+snowdrift~
+It looks just barely large enough to crawl through..
 ~
 S
 #12845
@@ -1839,8 +1839,12 @@ Try looking at the Paktan term for this direction.
 yupae~
 9 -1 12841
 E
-ol~
-A swapp yupae ulaers ol ufaemnyaeat.
+rumntzy~
+Tzu tzyae rumntzy, a tzirh tuumnmah puuws ir tzyae tamnk.
+~
+E
+yupae~
+A yupae ir tzyae kaeipirb puuks gib aeruoby tzu kmnamp tzymnuoby.
 ~
 E
 mapps~
@@ -1848,12 +1852,8 @@ Bmnaeatz gaeaws uv pibytz stzmnaeak vmnuw tzyaesae mapps, sallirb huomn
 aeraemnbh art kpaearsirb huo.
 ~
 E
-yupae~
-A yupae ir tzyae kaeipirb puuks gib aeruoby tzu kmnamp tzymnuoby.
-~
-E
-rumntzy~
-Tzu tzyae rumntzy, a tzirh tuumnmah puuws ir tzyae tamnk.
+ol~
+A swapp yupae ulaers ol ufaemnyaeat.
 ~
 S
 #12846
@@ -1881,21 +1881,21 @@ Try looking at the Paktan term for this direction.
 ~
 0 -1 12845
 E
-skopps~
-A bmnuol uv taekahirb skopps sitzs raeatzph stzakkaet abairstz tzyae mapp,
-suofaerimns vmnuw tzyae gmnafae art lomaemnvop Tzamniur Kafapiaemns.
-~
-E
-tuumnmah~
-Itz s'aews tzu gae laemnwaeraertzph ulaer, hiaeptirb tzu pibytz.
+suotzy~
+A bmn'aer art gpoae myimnpmirt smimnps ir tzyae suotzyaemnr lassabae.
 ~
 E
 rumntzy~
 Tzyae tuumnmah ulaers ol irtzu a syavtz uv gpirtirb pibytz.
 ~
 E
-suotzy~
-A bmn'aer art gpoae myimnpmirt smimnps ir tzyae suotzyaemnr lassabae.
+tuumnmah~
+Itz s'aews tzu gae laemnwaeraertzph ulaer, hiaeptirb tzu pibytz.
+~
+E
+skopps~
+A bmnuol uv taekahirb skopps sitzs raeatzph stzakkaet abairstz tzyae mapp,
+suofaerimns vmnuw tzyae gmnafae art lomaemnvop Tzamniur Kafapiaemns.
 ~
 S
 #12847
@@ -1922,12 +1922,9 @@ Try looking at the Paktan term for this direction.
 ~
 0 -1 12846
 E
-suotzy~
-A wiriskopae tuumnmah paeats uotz irtzu tzyae wabikap kafaemnr.
-~
-E
-tuumnmah~
-A swapp muutaer tuumnmah stzartirb mitae olaer.
+tzuhs~
+A waerabaemniae uv tzuhs pah ska'tzae'mnaet amnuort tzyae vpuumn,
+mumnr gh ufaemnosae.
 ~
 E
 yuosae~
@@ -1936,9 +1933,12 @@ a'mnifaet yaemnae tzu slmnaeat tzyae mipp uv Buut.  Itz mnaevpaektzs a
 fisabae uv irrokaerkae, kyiptyuut, art lomaemn.
 ~
 E
-tzuhs~
-A waerabaemniae uv tzuhs pah ska'tzae'mnaet amnuort tzyae vpuumn,
-mumnr gh ufaemnosae.
+tuumnmah~
+A swapp muutaer tuumnmah stzartirb mitae olaer.
+~
+E
+suotzy~
+A wiriskopae tuumnmah paeats uotz irtzu tzyae wabikap kafaemnr.
 ~
 S
 #12848
@@ -1972,14 +1972,14 @@ A large sandstone wall lies just beyond the bars of your cage.
 BORFBAHsneor~
 9 -1 12848
 E
-cage~
-It appears to be a durable, escape-proof cage.  It holds
-the refuse and remains of several dinners before you.
-~
-E
 pot~
 A large cast-iron cookpot, filled with stewing vegetables
 and a warm broth soon to be your bath..
+~
+E
+cage~
+It appears to be a durable, escape-proof cage.  It holds
+the refuse and remains of several dinners before you.
 ~
 S
 #12849
@@ -2010,14 +2010,14 @@ D3
 ~
 0 -1 12850
 E
-railing~
-A worn wooden rail, the last vestige of a gate that once ran
-across this northern entrance.
-~
-E
 sandbeds~
 Cracks and holes pick their way along the dusty hardpan here,
 attesting to the heat and dry quality of the air surrounding.
+~
+E
+railing~
+A worn wooden rail, the last vestige of a gate that once ran
+across this northern entrance.
 ~
 S
 #12850

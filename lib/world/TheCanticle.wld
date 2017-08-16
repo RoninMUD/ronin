@@ -144,16 +144,16 @@ underneath.
 stone~
 8 1309 1331
 E
-stone floor stones~
-As you look down at the scratched and scuffed floor, it appears
-that you might be able to move one of these stones, unveling a
-hidden mystery.
-~
-E
 puddle liquid~
 This unpleasant looking fluid on the floor has a slight green glow
 to it, and as you take a closer look, the smell of it almost 
 overwhelms you.
+~
+E
+stone floor stones~
+As you look down at the scratched and scuffed floor, it appears
+that you might be able to move one of these stones, unveling a
+hidden mystery.
 ~
 S
 #1309
@@ -755,12 +755,6 @@ D5
 ~
 ~
 0 -1 1322
-S
-#1345
-A temporary name~
-A temporary description
-~
-13 0 0
 S
 #1399
 Hall of Kludges~

@@ -517,6 +517,7 @@ int tc_stone_spec(OBJ *stone ,CHAR *ch, int cmd, char *argument) {
       stone->affected[0].modifier=2; /* Location 0 should be set as damroll */
       break;
     case 15:
+    default:
       stone->obj_flags.value[1]=9; /*damnodice*/
       stone->obj_flags.value[2]=5; /*damsizedice*/
       stone->affected[0].modifier=3; /* Location 0 should be set as damroll */

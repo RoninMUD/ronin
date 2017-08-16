@@ -5,10 +5,932 @@ A temporary description
 214 0 0
 S
 #21401
-A Wonderful Room~
+A Path Through the Forest~
+  Beautiful pine and juniper trees cluster around, creating a narrow pathway. 
+At ground level are bright red wild strawberries, and fragrant trillium dot the 
+forest floor.  Theres a strange quiet in this part of the forest, as though the 
+birds are listening in anticipation.  Even the bees seem to have ceased their 
+humming for some reason. Far to the east a massive tree juts above the canopy, 
+and dim movement is barely visible from here.
+~
+214 0 3
+D1
+~
+~
+0 -1 21402
+D3
+~
+~
+0 -1 21312
+S
+#21402
+A Dark Path Through the Forest~
 A temporary description
 ~
-214 0 0
+214 0 3
+D1
+~
+~
+0 -1 21403
+D3
+~
+~
+0 -1 21401
+S
+#21403
+An Oppressively Dark Path Through the Forest~
+A temporary description
+~
+214 0 3
+D1
+~
+~
+0 -1 21404
+D3
+~
+~
+0 -1 21402
+S
+#21404
+An Oppressively Dark Path Through the Forest~
+A temporary description
+~
+214 0 3
+D1
+~
+~
+0 -1 21405
+D3
+~
+~
+0 -1 21403
+S
+#21405
+A Dark Path Through the Forest~
+A temporary description
+~
+214 0 3
+D1
+~
+~
+0 -1 21406
+D3
+~
+~
+0 -1 21404
+S
+#21406
+A Thinning Forest~
+A temporary description
+~
+214 0 3
+D1
+~
+~
+0 -1 21415
+D3
+~
+~
+0 -1 21405
+S
+#21407
+A Dilapidated Old Hut~
+A temporary description
+~
+214 67108872 0
+D2
+~
+~
+0 -1 21408
+S
+#21408
+A Quiet Trail~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21407
+D1
+~
+~
+0 -1 21409
+S
+#21409
+A Quiet Trail~
+A temporary description
+~
+214 0 3
+D2
+~
+~
+0 -1 21410
+D3
+~
+~
+0 -1 21408
+S
+#21410
+A Quiet Trail~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21409
+D2
+~
+~
+0 -1 21412
+S
+#21411
+An Aspen Forest~
+A temporary description
+~
+214 0 3
+D1
+~
+~
+0 -1 21412
+D2
+~
+~
+0 -1 21415
+S
+#21412
+An Aspen Forest~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21410
+D1
+~
+~
+0 -1 21413
+D2
+~
+~
+0 -1 21416
+D3
+~
+~
+0 -1 21411
+S
+#21413
+An Aspen Forest~
+A temporary description
+~
+214 0 3
+D1
+~
+~
+0 -1 21414
+D2
+~
+~
+0 -1 21417
+D3
+~
+~
+0 -1 21412
+S
+#21414
+A Meadow at the Base of a Granite Wall~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21443
+D2
+~
+~
+0 -1 21418
+D3
+~
+~
+0 -1 21413
+S
+#21415
+An Aspen Forest~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21411
+D1
+~
+~
+0 -1 21416
+D2
+~
+~
+0 -1 21419
+D3
+~
+~
+0 -1 21406
+S
+#21416
+An Aspen Forest~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21412
+D1
+~
+~
+0 -1 21417
+D2
+~
+~
+0 -1 21420
+D3
+~
+~
+0 -1 21415
+S
+#21417
+Approaching an Enormous Redwood Tree~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21413
+D1
+~
+~
+0 -1 21418
+D2
+~
+~
+0 -1 21421
+D3
+~
+~
+0 -1 21416
+S
+#21418
+A Meadow at the Base of a Granite Wall~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21414
+D2
+~
+~
+0 -1 21422
+D3
+~
+~
+0 -1 21417
+S
+#21419
+An Aspen Forest~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21415
+D1
+~
+~
+0 -1 21420
+D2
+~
+~
+0 -1 21423
+S
+#21420
+Approaching an Enormous Redwood Tree~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21416
+D1
+~
+~
+0 -1 21421
+D2
+~
+~
+0 -1 21424
+D3
+~
+~
+0 -1 21419
+S
+#21421
+At the Base of an Enormous Redwood Tree~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21417
+D1
+~
+~
+0 -1 21422
+D2
+~
+~
+0 -1 21425
+D3
+~
+~
+0 -1 21420
+S
+#21422
+Approaching an Enormous Redwood Tree~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21418
+D2
+~
+~
+0 -1 21426
+D3
+~
+~
+0 -1 21421
+S
+#21423
+An Aspen Forest~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21419
+D1
+~
+~
+0 -1 21424
+D2
+~
+~
+0 -1 21427
+S
+#21424
+An Aspen Forest~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21420
+D1
+~
+~
+0 -1 21425
+D2
+~
+~
+0 -1 21428
+D3
+~
+~
+0 -1 21423
+S
+#21425
+Approaching an Enormous Redwood Tree~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21421
+D1
+~
+~
+0 -1 21426
+D2
+~
+~
+0 -1 21429
+D3
+~
+~
+0 -1 21424
+S
+#21426
+A Scorched Patch of Earth~
+A temporary description
+~
+214 0 8
+D0
+~
+~
+0 -1 21422
+D2
+~
+~
+0 -1 21430
+D3
+~
+~
+0 -1 21425
+S
+#21427
+A Dense Stand of Poplar Trees~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21423
+D1
+~
+~
+0 -1 21428
+S
+#21428
+A Dense Stand of Poplar Trees~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21424
+D1
+~
+~
+0 -1 21429
+D3
+~
+~
+0 -1 21427
+S
+#21429
+A Dense Stand of Poplar Trees~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21425
+D1
+~
+~
+0 -1 21430
+D3
+~
+~
+0 -1 21428
+S
+#21430
+An Aspen Forest by the Edge of a Mountain Stream~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21426
+D1
+~
+~
+0 -1 21431
+D3
+~
+~
+0 -1 21429
+S
+#21431
+A Mountain Stream~
+A temporary description
+~
+214 0 6
+D0
+~
+~
+0 -1 21432
+D3
+~
+~
+0 -1 21430
+S
+#21432
+A Mountain Stream~
+A temporary description
+~
+214 0 6
+D0
+~
+~
+0 -1 21433
+D2
+~
+~
+0 -1 21431
+S
+#21433
+A Mountain Stream~
+A temporary description
+~
+214 0 6
+D1
+~
+~
+0 -1 21434
+D2
+~
+~
+0 -1 21432
+S
+#21434
+A Small Rapid in the Mountain Stream~
+A temporary description
+~
+214 131072 6
+D2
+~
+~
+0 -1 21435
+D3
+~
+~
+0 -1 21433
+S
+#21435
+A Mountain Stream~
+A temporary description
+~
+214 0 6
+D0
+~
+~
+0 -1 21434
+D2
+~
+~
+0 -1 21436
+S
+#21436
+A Mountain Stream~
+A temporary description
+~
+214 0 6
+D0
+~
+~
+0 -1 21435
+D1
+~
+~
+0 -1 21437
+S
+#21437
+A Mountain Stream~
+A temporary description
+~
+214 0 6
+D0
+~
+~
+0 -1 21438
+D3
+~
+~
+0 -1 21436
+S
+#21438
+A Mountain Stream~
+A temporary description
+~
+214 0 6
+D1
+~
+~
+0 -1 21439
+D2
+~
+~
+0 -1 21437
+S
+#21439
+A Mountain Stream~
+A temporary description
+~
+214 0 6
+D2
+~
+~
+0 -1 21440
+D3
+~
+~
+0 -1 21438
+S
+#21440
+A Beavers Dam in the Mountain Stream~
+A temporary description
+~
+214 0 3
+D0
+~
+~
+0 -1 21439
+D5
+A mass of branches covers a tunnel of some sort.
+~
+branches~
+8 -1 21441
+S
+#21441
+Inside the Beavers Dam~
+A temporary description
+~
+214 8 0
+D1
+~
+~
+0 -1 21442
+D4
+~
+tunnel~
+9 -1 21440
+S
+#21442
+Inside the Beavers Dam~
+A temporary description
+~
+214 8 0
+D3
+~
+~
+0 -1 21441
+S
+#21443
+A Narrow Granite Pass~
+A temporary description
+~
+214 0 5
+D1
+~
+~
+0 -1 21444
+D2
+~
+~
+0 -1 21414
+S
+#21444
+A Narrow Granite Pass~
+A temporary description
+~
+214 0 5
+D1
+~
+~
+0 -1 21448
+D3
+~
+~
+0 -1 21443
+S
+#21445
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D1
+~
+~
+0 -1 21446
+D2
+~
+~
+0 -1 21448
+S
+#21446
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D1
+~
+~
+0 -1 21447
+D2
+~
+~
+0 -1 21449
+D3
+~
+~
+0 -1 21445
+S
+#21447
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D2
+~
+~
+0 -1 21450
+D3
+~
+~
+0 -1 21446
+S
+#21448
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D0
+~
+~
+0 -1 21445
+D1
+~
+~
+0 -1 21449
+D2
+~
+~
+0 -1 21451
+D3
+~
+~
+0 -1 21444
+S
+#21449
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D0
+~
+~
+0 -1 21446
+D1
+~
+~
+0 -1 21450
+D2
+~
+~
+0 -1 21452
+D3
+~
+~
+0 -1 21448
+S
+#21450
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D0
+~
+~
+0 -1 21447
+D1
+~
+~
+0 -1 21454
+D2
+~
+~
+0 -1 21453
+D3
+~
+~
+0 -1 21449
+S
+#21451
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D0
+~
+~
+0 -1 21448
+D1
+~
+~
+0 -1 21452
+S
+#21452
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D0
+~
+~
+0 -1 21449
+D1
+~
+~
+0 -1 21453
+D3
+~
+~
+0 -1 21451
+S
+#21453
+A Meadow of Wildflowers~
+A temporary description
+~
+214 0 2
+D0
+~
+~
+0 -1 21450
+D3
+~
+~
+0 -1 21452
+S
+#21454
+A Narrow Granite Pass~
+A temporary description
+~
+214 0 5
+D1
+~
+~
+0 -1 21455
+D3
+~
+~
+0 -1 21450
+S
+#21455
+A Narrow Granite Pass~
+A temporary description
+~
+214 0 5
+D0
+~
+~
+0 -1 21456
+D3
+~
+~
+0 -1 21454
+S
+#21456
+A Narrow Granite Pass~
+A temporary description
+~
+214 0 5
+D1
+~
+~
+0 -1 21457
+D2
+~
+~
+0 -1 21455
+S
+#21457
+A Rockslide in the Granite Pass~
+A temporary description
+~
+214 0 3
+D3
+~
+~
+0 -1 21456
 S
 #21499
 A temporary name~

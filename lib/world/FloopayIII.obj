@@ -270,69 +270,6 @@ M
 ~
 ~
 ~
-#7815
-story bo page~
-Story of Bo~
-There is a bit of nothing sitting here.~
-~
-0 0 1
-0 0 0 0
-10 10 10
-10
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-#7816
-buckler ironwood iron wood~
-Ironwood Buckler~
-An Ironwood Bucker is lying here, waiting to protect someone!~
-~
-9 114356224 513
-22 -1 -1 -1
-15 2000000 200000
-10
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 1
-A
-13 40
-A
-50 5
-B
-8396800
-#7817
-platemail plate mail mount~
-Mount Platemail~
-A set of mount platemail is lying here.~
-~
-9 65536 9
-12 -1 -1 -1
-20 150000 15000
-10
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-13 10
-A
-18 3
 #7818
 horseshoe shoe horse titanium~
 Titanium Horseshoe~
@@ -1489,13 +1426,13 @@ Creation creation sword longsword long~
 Creation~
 A longsword is stuck in the ground, emitting a wonderful aura.~
 ~
-5 671154531 8193
-0 1 200 14
+5 671088995 8193
+0 10 4 14
 30 5000000 400000
 100
 X
 ~
-0 0 0
+4 0 0
 M
 ~
 ~
@@ -1507,6 +1444,8 @@ A
 52 200
 A
 13 500
+T
+60
 B
 142878848
 #7872
@@ -1514,13 +1453,13 @@ Destruction destruction axe~
 Destruction~
 There is an axe stuck in the ground here, emitting an aura of disaster and mayhem.~
 ~
-5 671154551 8193
-8 1 400 13
+5 671089015 8193
+0 5 8 13
 30 5000000 400000
 100
 X
 ~
-0 0 0
+4 0 0
 M
 ~
 ~
@@ -1532,6 +1471,8 @@ A
 18 10
 A
 47 20
+T
+60
 B
 805306368
 C
@@ -1664,31 +1605,6 @@ M
 ~
 ~
 ~
-#7879
-Scarillious scarillious descendant~
-Descendant of Scarillious~
-A miniature giant hamster is scurrying about here.~
-~
-9 250667266 16385
-5 -1 -1 -1
-1 1800000 250000
-100
-X
-~
-0 1024 0
-M
-~
-~
-~
-~
-A
-19 6
-A
-18 4
-A
-50 6
-B
-1081376
 #7880
 bridle divine retribution~
 Bridle of Divine Retribution~
@@ -1709,8 +1625,6 @@ M
 A
 19 2
 A
-47 4
-A
 53 8
 #7881
 crown undead kings~
@@ -1730,11 +1644,11 @@ M
 ~
 ~
 A
-19 0
+19 3
 A
-53 0
+53 5
 A
-12 0
+12 100
 #7882
 wings demon lord~
 Wings of the Demon Lord~
@@ -1757,7 +1671,7 @@ A
 A
 18 1
 A
-53 2
+53 6
 B
 25198612
 #7883

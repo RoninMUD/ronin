@@ -19,6 +19,31 @@ A
 18 2
 A
 12 -20
+#9601
+. corpse~
+an ancient, decaying skeleton~
+an ancient, decaying skeleton~
+~
+15 0 0
+100 1 -1 0
+10 10 10
+10
+E
+skeleton~
+The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
+Memories of an ancient time remind you of how the world has moved on.
+~
+E
+decaying corpse~
+decaying corpse~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
 #9610
 horn~
 the horn of a unicorn~
@@ -30,7 +55,7 @@ The horn of a unicorn is glowing on the ground.~
 50
 X
 ~
-0 0 0
+64 0 0
 M
 ~
 ~
@@ -73,14 +98,23 @@ M
 A
 14 30
 #9632
-key platinum~
-A platinum key~
-A huge key made of pure platinum gleems brightly here.~
+small platinum key~
+a delicately forged platinum key~
+a delicately forged platinum key lies here on the ground.~
 ~
 18 0 16385
 2 0 0 0
 1 10 10000
 50
+E
+platinum key delicate~
+This key is truly the work of the dwarven masters of old.  Carved from
+brilliant platinum, it is a piece of art in it's own right.~
+E
+platinum key delicate~
+This key is truly the work of the dwarven masters of yore.  Carved from
+brilliant platinum, it is a piece of art in it's own right.
+~
 X
 ~
 0 0 0
