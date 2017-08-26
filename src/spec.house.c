@@ -731,7 +731,7 @@ int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
   char buf[MAX_STRING_LENGTH];
   struct affected_type_5 af;
 
-  if( cmd!=MSG_MOBACT || chance(50) || !(tch = get_random_victim(uber)) ) return FALSE;
+  if( cmd!=MSG_MOBACT || chance(35) || !(tch = get_random_victim(uber)) ) return FALSE;
 
   switch (number(0,12)) {
     case 0: 
@@ -782,7 +782,7 @@ int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
     case 7:
     case 8: // Cast a spell - poison smoke, cloud of confusion, or incendiary cloud
     send_to_room("An assault of sound, some nether language, echoes around the room.\n\r", CHAR_REAL_ROOM(uber));
-      act("The sound itself seems to form into a cloud of shadow which envelops %N briefly, before dissipating.", FALSE,uber,0,tch,TO_NOTVICT);
+      act("The sound itself seems to form into a cloud of shadow which envelops $N briefly, before dissipating.", FALSE,uber,0,tch,TO_NOTVICT);
       act("The sound itself seems to form into a cloud of shadow which envelops you briefly, before dissipating.", FALSE,uber,0,tch,TO_VICT);
       switch (number(1,3)) {
         case 1:
