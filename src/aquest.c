@@ -988,7 +988,7 @@ int generate_quest(CHAR *ch, CHAR *mob,int lh_opt) {
     if(GET_LEVEL(ch) < 25 && lh_opt==0 && mobs[pick][1] > 0) continue; /*newbie*/
     if(GET_LEVEL(ch) >=25 && mobs[pick][1] == 0) continue; /*non-newbie*/
     if(lh_opt==1 && mobs[pick][1]>1) continue; /*solo*/
-    if(lh_opt==2 && mobs[pick][1]>3) continue; /*low*/
+    if(lh_opt==2 && mobs[pick][1]>2) continue; /*low*/
     if(lh_opt==3 && mobs[pick][1]<3) continue; /*high*/
     if((lh_opt==4 && mobs[pick][1]<2) || (lh_opt==4 && mobs[pick][1]>4)) continue; /*mid*/
     ch->quest_level= (mobs[pick][1] == 0) ? 1 : mobs[pick][1];
