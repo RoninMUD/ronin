@@ -349,7 +349,7 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
   CHAR *foe, *next_vict;
   char buf[MAX_STRING_LENGTH];
   struct affected_type_5 af;
-  
+
   switch (cmd) {
     case MSG_MOBACT:
       vict = uber->specials.fighting;
@@ -361,7 +361,7 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
         }
         switch ( number( 1, 20 ) ) {
           case 1:
-          case 2: 
+          case 2:
           case 3:
           case 4:
           case 5: // disarm to inventory
@@ -375,7 +375,7 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
               }
             }
             break;
-          case 6: 
+          case 6:
           case 7: // recruit someone to aid uber
             foe = get_random_victim_fighting(uber);
             if ( vict != foe ) {
@@ -406,7 +406,7 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
                   af.bitvector2 = AFF_NONE;
                   affect_to_char(foe, &af);
                   send_to_char("You bow your head and search anew for inner peace.\n\r", foe);
-                  act("$n bows $s head and begins thoughtful meditation.", TRUE, foe, 0, 0, TO_ROOM);                  
+                  act("$n bows $s head and begins thoughtful meditation.", TRUE, foe, 0, 0, TO_ROOM);
                 }
               } else {
                 if ( affected_by_spell(foe, SKILL_MEDITATE) ) affect_from_char(foe, SKILL_MEDITATE);
@@ -419,7 +419,7 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
                   af.bitvector2 = AFF_NONE;
                   affect_to_char(foe, &af);
                   send_to_char("You gaze inward and focus on enlightenment.\n\r", foe);
-                  act("$n enters a deep, thoughtful trance.", TRUE, foe, 0, 0, TO_ROOM);                  
+                  act("$n enters a deep, thoughtful trance.", TRUE, foe, 0, 0, TO_ROOM);
                 }
               }
             }
@@ -452,8 +452,8 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
         return TRUE;
       }
       break;
-  }   
-  
+  }
+
   return FALSE;
 }
 
