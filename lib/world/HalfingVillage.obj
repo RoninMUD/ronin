@@ -402,12 +402,14 @@ A steel bracelet is lying on the floor.~
 10
 X
 ~
-0 0 0
+1 0 0
 M
 ~
 ~
 ~
 ~
+A
+13 8
 #4822
 necklace steel~
 Steel Necklace~
@@ -419,12 +421,16 @@ A steel necklace is lying here.~
 10
 X
 ~
-0 0 0
+1 0 0
 M
 ~
 ~
 ~
 ~
+A
+12 5
+A
+13 5
 #4823
 pie fruit fruitpie~
 A fruit pie~
