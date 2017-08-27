@@ -683,8 +683,8 @@ D4
 0 -1 4822
 S
 #4837
-Entryway to the Thieve's Guild~
-   The infamous Thieve's Guild.  Officially this place doesn't exist.  In fact, you've never 
+Entrance to the Thieves' Guild~
+   The infamous Thieves' Guild.  Officially this place doesn't exist.  In fact, you've never 
 actually heard of it.  No, wait, you're not even here.  You're definitely somewhere else.  But if
 you were here, you'd see that this place is extremely well lit, and looks like there has been
 celebration every night of the week.  From the Entryway, this place would be a great place to spend
@@ -707,7 +707,7 @@ D2
 S
 #4838
 Main Room~
-    The main room of this place that isn't the Thieve's Guild is decorated with various trophies.
+    The main room of this place that isn't the Thieves' Guild is decorated with various trophies.
 None of which are worth any value.  More than likely, all of the trophies contain stories that
 involve phrases like "You had to be there," and "No really, I swear that's how it happened".  The
 rest of the room contains empty tables with stains of what one hopes is wine; but who knows?  The
@@ -725,7 +725,7 @@ D3
 S
 #4839
 Main Room~
-    The main room of this place that isn't the Thieve's Guild is decorated with various trophies.
+    The main room of this place that isn't the Thieves' Guild is decorated with various trophies.
 None of which are worth any value.  More than likely, all of the trophies contain stories that
 involve phrases like "You had to be there," and "No really, I swear that's how it happened".  The
 rest of the room contains empty tables with stains of what one hopes is wine; but who knows?  The
@@ -798,6 +798,10 @@ D2
 ~
 ~
 0 -1 4867
+D3
+~
+~
+0 -1 3502
 S
 #4843
 Small Forest~
@@ -970,6 +974,11 @@ it is nothing; but perhaps further examination could reveal something.  The
 pathway continues to the south, as well as to the west.
 ~
 48 67108864 3
+D0
+The forest yields to a peaceful glade to the north.
+~
+~
+0 -1 1901
 D1
 If you are careful enough, it seems as if you can actually
 enter this thicket of vines.
@@ -1035,6 +1044,11 @@ D0
 ~
 ~
 0 -1 4854
+D1
+The King's Road begins to the east.
+~
+~
+0 -1 8901
 D2
 ~
 ~
@@ -1135,6 +1149,10 @@ D1
 ~
 ~
 0 -1 4859
+D2
+~
+~
+0 -1 700
 D3
 ~
 ~
@@ -1221,7 +1239,10 @@ D3
 S
 #4865
 Southwest Corner of a Small Forest~
-A temporary description
+    The Southwest Corner of the Small Forest seems relatively empty.  
+Much like the rest of the forest, it seems the guards and patrols have
+done an excellent job at making sure the forest remains safe for travelers
+and passerbys.  The forest continues to the north, as well as to the east.
 ~
 48 67108864 3
 D0
@@ -1381,7 +1402,7 @@ S
 A Hidden Pathway~
     This pathway would be almost impossible to spot from a distance.  Especially considering the deep
 crag located to the west.  The trees here are especially dense; but there seems to be a well used
-footpath that cuts between them.  The trail continues to the east.  The only other exit would be 
+footpath that cuts between them.  The pathway continues to the south.  The only other exit would be 
 across the crag to the west.
 ~
 48 67108865 3
@@ -1482,7 +1503,11 @@ trapdoor~
 S
 #4880
 A Well Furnished Hidden Chamber~
-A temporary description
+    The primary room of this chamber is furnished with couches, chairs,
+books, candles, and even new copies of the Midgaard Herald.  Nonetheless,
+though well furnished, the room looks as if it has been poorly maintained,
+and a thin layer of dust has settled over many surfaces.  The only obvious
+exits are out the way you came in. 
 ~
 48 1 0
 D4

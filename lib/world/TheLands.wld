@@ -12,7 +12,7 @@ D0
 D2
 ~
 ~
-0 -1 4849
+0 -1 4852
 S
 #1902
 The glade~
@@ -146,13 +146,13 @@ The path continues.~
 ~
 0 0 1910
 E
-twigs~
-Normal twigs from the trees.
-~
-E
 pebbles~
 They are small and smooth.  It appears that they were
 placed here by someone...or something.
+~
+E
+twigs~
+Normal twigs from the trees.
 ~
 S
 #1909
@@ -634,14 +634,14 @@ It looks very dark inside.~
 ~
 0 0 1938
 E
-wall~
-A carving is here, it seems to depict a large beast of some sort...
-     and people running from it....
-~
-E
 cave~
 The entrance has many weeds grown around it.  You see something carved 
 into one wall.
+~
+E
+wall~
+A carving is here, it seems to depict a large beast of some sort...
+     and people running from it....
 ~
 S
 #1937
@@ -970,12 +970,12 @@ D3
 ~
 0 0 1964
 E
-carts~
-They are full of various things to be traded today.
-~
-E
 bags~
 They are full of various things that will be traded today.
+~
+E
+carts~
+They are full of various things to be traded today.
 ~
 S
 #1956
@@ -1352,18 +1352,18 @@ D1
 ~
 0 0 1978
 E
-window~
-It is very large.  When you look outside you see that you are many feet 
-above sea level.  The ocean expands as far as the eye can see to the 
-north.  You can see why this place was chosen by the people, it's safety.
-~
-E
 tapestry~
 This tapestry depicts a great moving.  It shows a whole land of people 
 moving to a new and different home.  In another part of the tapestry it 
 shows that they have found a place to start their new home.  It is on 
 the edge of a great cliff.  Forests surround the area, and below the 
 cliff, a vast ocean.
+~
+E
+window~
+It is very large.  When you look outside you see that you are many feet 
+above sea level.  The ocean expands as far as the eye can see to the 
+north.  You can see why this place was chosen by the people, it's safety.
 ~
 S
 #1978
