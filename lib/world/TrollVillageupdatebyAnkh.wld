@@ -10,7 +10,7 @@ D0
 You see nothing special.
 ~
 door~
-0 -1 4857
+0 -1 4860
 D1
 You see nothing special.
 ~
@@ -564,14 +564,14 @@ door~
 E
 sign~
 The sign reads:
-BUY : buy a brew
-LIST : list of or finest ale
+   BUY : buy an ale
+  LIST : list of our finest ales
 ~
 E
 sign~
 The sign reads:
-   BUY : buy an ale
-  LIST : list of our finest ales
+BUY : buy a brew
+LIST : list of or finest ale
 ~
 S
 #727

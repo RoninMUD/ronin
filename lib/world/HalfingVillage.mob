@@ -98,7 +98,6 @@ averland~
 The Averland~
 The Averland stands here, reciting prayers to his goddess.
 ~
-
 The Averland stands here, dressed in yellow and black.  He is
 one of the few known halfling champions of this part.  A true
 knight by every definition of the word, he stands ever vigil
@@ -138,15 +137,15 @@ K
 0 0 0 0 0 0 0
 #4808
 middenheim~
-The Middenheim is standing here.~
-The Middenheim is standing here.
-O~
+The Middenheim~
+The Middenheim ist standing here.
+~
 The Middenheim was nobility of sorts once upon a time.  He
 dresses in blues and whites, with exotic and extravagant figures
 and painting about his equipment.  He is known as one of the
 halfling champions, despite the fact that he was banished from the
 Halfling Village for his creation and involvement of their
-notorious Thieve's Guild.
+notorious Thieves' Guild.
 ~
 131146 269746176 -1000 Y
 30 -2 2 200d2+1500 1d10+50
@@ -168,7 +167,7 @@ He is the teacher of the Bright College of Magic.  The
 Bright Wizard has dedicated much of his life to studying
 the elusive halfling goddess.  Going so far as to hire the
 infamous Middenheim to procure information.  However, despite
-his ties to the king of the Thieve's Guild, the Bright Wizard
+his ties to the king of the Thieves' Guild, the Bright Wizard
 is still highly respected among his colleagues.
 ~
 75 128 200 Y
@@ -315,7 +314,7 @@ A halfling rogue~
 A halfling rogue is here, looking to pick a fight!
 ~
 Halfling rogues are the scum of the halfling village, and
-the footsoldiers of the infamous Thieve's Guild.
+the footsoldiers of the infamous Thieves' Guild.
 ~
 106 262144 -200 Y
 30 10 0 200d2+1300 2d4+10
@@ -331,7 +330,7 @@ master guild~
 The Guild Master~
 The Guild Master is here, and he's not happy with you!
 ~
-The Guild Master was put in charge of the Thieve's Guild
+The Guild Master was put in charge of the Thieves' Guild
 shortly after Middenheim's disappearance.  He is extremely
 dangerous and unpredictable, and notorious throughout the
 Halfling Village.
@@ -468,7 +467,7 @@ A statue of some bovine matriarch is standing here.
 ~
 You instantly regret your decision to look at her!
 ~
-74 268435584 400 Y
+74 268501120 400 Y
 33 5 -5 20d10+2000 12d2+0
 120000 510000
 8 8 1
