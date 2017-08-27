@@ -376,7 +376,7 @@ A Huge Stone Dragon~
 A Huge Stone Dragon rises up from the rocks here.
 ~
 A massive stone dragon towers before you.  It lets out a tremendous
-roar that sounds like thunder.  You cower mecifully before it.  It
+roar that sounds like thunder.  You cower mercifully before it.  It
 has huge glowing red eyes and long dagger-like teeth.  You gawk
 in sheer terror and amazement.  Then your senses kick in and you
 realise its probably a good idea to get the hell out of here.
@@ -389,6 +389,27 @@ realise its probably a good idea to get the hell out of here.
 0 0 0 0
 K
 0 0 0 0 0 0 0
+#21220
+dragon stone rock uber~
+An Uber Stone Dragon~
+A stone dragon peers around, omnipotent and unconcerned.
+~
+A massive stone dragon towers above you.  Each claw easily large enough to
+grasp several horses.  It moves with incredible agility given the sheer size
+and immensity of the creature.  When it roars, the earth itself shivers and
+quakes.  This is an ancient being, countless centuries old, during which it
+probably faced far more capable and armed foes than yourself.
+~
+606218 134219904 0 Y
+60 -40 -30 50d300+100000 50d50+100
+35000000 100000000
+8 8 2
+57 125173760 10d10+50 0
+0 1 0 0
+R
+2
+K
+0 21228 0 0 0 0 0
 #21223
 thief morian thug~
 A Morian Thug~
