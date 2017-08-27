@@ -1714,6 +1714,16 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
   return FALSE;
 }
 
+// list of VNUMs of Uber bosses, and associated room VNUM
+int ubers[][2] = {
+  // {mob VNUM, room VNUM} // <spec file>
+  {12027, 12063}, // Queen Ant - <none>
+  {14014, 14070}, // Dream Shadow - spec.house.c
+  {21220, 21275}, // Huge Stone Dragon - spec.moria.c
+  {26585, 26582} // Enlightened One - spec.pagoda.c
+};
+
+
 int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *order = NULL;
   OBJ *obj = NULL, *next_obj  = NULL;
@@ -1729,6 +1739,10 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
                             "nitwit","nincompoop","imbecile","dullard",
                             "cotton-headed ninnymuggins","peabrain"};
+  CHAR *uber_mob = NULL;
+  char *collectorexclamation[7] = {"Attention","Zounds","Great Scott!","The Realm is doomed",
+                              "Blame Sane","Damn you Lovecraft","It is the end times"}; 
+  int uber_choice = 0, uber_room = 0;
 
   if (cmd == CMD_AQUEST) {
     // process order request
@@ -1998,8 +2012,35 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
       do_say(collector, "Thanks, I guess?", CMD_SAY);
     }
   }
+
+  CHAR *vict, *next_vict;
+  bool uber_found = FALSE;
+  // dawn of the Ubers - Hemp 2017-07-07
+  if (cmd == MSG_ZONE_RESET) {
+    if (chance(20)) {
+      // pick an Uber to load
+      uber_choice = number(0, NUMELEMS(ubers)-1);
+
+      uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
+      uber_room = ubers[uber_choice][1];
+      for( vict = world[real_room(uber_room)].people; vict; vict = next_vict ) {
+        // don't load if there already is one
+        next_vict = vict->next_in_room;
+        if( V_MOB(vict) == V_MOB(uber_mob) ) uber_found = TRUE;
+      }
+      if (!uber_found && uber_mob && uber_room) {
+        sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
+        send_to_room(buf, real_room(uber_room));
+        char_to_room(uber_mob, real_room(uber_room));
+        sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
+        do_quest(collector, buf, CMD_QUEST);
+       }
+    }
+  }
   return FALSE;
 }
+
+
 
 void assign_aquest_special(void) {
   assign_obj(TEMPLATE_AQORDER, aq_order_obj);

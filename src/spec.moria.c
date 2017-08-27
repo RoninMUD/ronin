@@ -377,6 +377,156 @@ int stone_dragon(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   return FALSE;
 }
 
+
+int uber_stone_dragon(CHAR *uber, CHAR *ch, int cmd, char *arg) {
+  CHAR *vict,*vict_n;
+  char buf[MAX_INPUT_LENGTH];
+  int i;
+  OBJ *shield = NULL, *wield = NULL;
+
+  if( cmd != MSG_MOBACT || !uber->specials.fighting) return FALSE;
+  
+  // when it first sets its SHIELD bit it will stone 3 random people
+  // when it gets below 80% hp it loses SHIELD and stones 3 random people again
+  if( IS_SET( uber->specials.act, ACT_AGGNO ) && ( ( 4*GET_MAX_HIT(uber)/5 ) > GET_HIT(uber) ) )
+  {   // if is <= 80% hp  and still has SHIELD
+    REMOVE_BIT( uber->specials.act, ACT_AGGNO );
+    sprintf( buf, "%s roars angrily, and a thundering crack of shattered stone echoes off the walls.\n\r", GET_SHORT(uber) );
+    send_to_room(buf, CHAR_REAL_ROOM(uber) );
+    for( i = 0; i < 3; i++ ) {
+      vict = get_random_victim(uber);
+      if( vict ) {
+         spell_petrify( GET_LEVEL(uber), uber, vict, 0);
+      }
+    }    
+  }
+  else if( ( 7*GET_MAX_HIT(uber)/10 ) <= GET_HIT(uber) ) 
+  { // if is > 70% hp
+    if( !IS_SET( uber->specials.act, ACT_SHIELD ) ) {
+      sprintf( buf, "%s roars loudly, causing the stone of the cavern and the earth to shiver and quake at its power.\n\r", GET_SHORT(uber) );
+      send_to_room(buf, CHAR_REAL_ROOM(uber) );
+      for( i = 0; i < 3; i++ ) {
+        vict = get_random_victim(uber);
+        if( vict ) {
+           spell_petrify( GET_LEVEL(uber), uber, vict, 0);
+        }
+      }
+      SET_BIT( uber->specials.act, ACT_SHIELD );
+    }
+  } 
+  
+  switch ( number(1,20) ) {
+    case 1:
+    case 2:
+    case 3: // damage and drop weapon/shield
+      vict = get_random_victim( uber );
+      if( vict ) {
+        act("$n seizes $N in a stone claw and brutally smashes $M into the cavern wall.",0,uber,0,vict,TO_NOTVICT);
+        act("You seize $N in a stone claw and brutally smash $M into the cavern wall.",0,uber,0,vict,TO_CHAR);
+        act("$n seizes you in a stone claw and brutally smashes you into the cavern wall.",0,uber,0,vict,TO_VICT);
+        if( EQ(vict, WEAR_SHIELD)) {
+          shield = vict->equipment[WEAR_SHIELD];
+          sprintf(buf, "WIZINFO: %s dropped %s in %d", GET_NAME(vict), OBJ_SHORT(shield), V_ROOM(vict) );
+          log_s(buf);
+          shield->log=1;
+          obj_to_room( unequip_char(vict, WEAR_SHIELD), CHAR_REAL_ROOM(vict) );
+          save_char(vict, NOWHERE);
+        }
+        if( EQ(vict, WIELD)) {
+          wield = vict->equipment[WIELD];
+          sprintf(buf, "WIZINFO: %s dropped %s in %d", GET_NAME(vict), OBJ_SHORT(wield), V_ROOM(vict) );
+          log_s(buf);
+          wield->log=1;
+          obj_to_room( unequip_char(vict, WIELD), CHAR_REAL_ROOM(vict) );
+          save_char(vict, NOWHERE);
+        }
+        
+        // create string messages to victim based on what was dropped
+        if( wield && shield ) {
+          sprintf( buf, "The force of the blow causes you to drop your %s and %s in stunned shock.\n\r", OBJ_SHORT(wield), OBJ_SHORT(shield) );
+        } else if ( wield ) {
+          sprintf( buf, "The force of the blow causes you to drop your %s in stunned shock.\n\r", OBJ_SHORT(wield) );
+        } else if ( shield ) {
+          sprintf( buf, "The force of the blow causes you to drop your %s in stunned shock.\n\r", OBJ_SHORT(shield) );
+        }
+        if ( wield || shield ) {
+          send_to_char( buf, vict );
+        }
+        damage(uber, vict, number(700,1000), TYPE_UNDEFINED, DAM_NO_BLOCK);
+        stop_fighting(vict);
+      }
+      break;
+    case 4:
+    case 5:
+    case 6:
+    case 7: // damage and stun
+      vict = get_random_victim( uber );
+      act("$n buffets $N mercilessly with a strong gust as it flaps its stony wings, before swiping at $M with a rocky claw.",0,uber,0,vict,TO_NOTVICT);
+      act("You buffet $N mercilessly with a strong gust as you flap your stony wings, before swiping at $M with a rocky claw.",0,uber,0,vict,TO_CHAR);
+      act("$n buffets you mercilessly with a strong gust as it flaps its stony wings, before swiping at you with a rocky claw.",0,uber,0,vict,TO_VICT);
+      damage(uber, vict, number(1000,1200), TYPE_UNDEFINED, DAM_NO_BLOCK);
+      GET_POS(vict) = POSITION_STUNNED;
+      WAIT_STATE( vict, PULSE_VIOLENCE * 5 );
+      break;
+    case 8:
+    case 9:
+    case 10: // room damage and sitting
+      act("$n sweeps its giant tail in a broad arc through the cavern.",0,uber,0,0,TO_ROOM);
+      act("You whip your tail around the cavern in a broad arc.",0,uber,0,0,TO_CHAR);
+      for( vict=world[CHAR_REAL_ROOM(uber)].people; vict; vict = vict_n ) {
+        vict_n = vict->next_in_room;
+        if( vict == uber ) continue;
+        if( ( !IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM ) || IS_NPC(vict) ) continue;
+        act("You are clipped by $n's enormous tail, which hits with the force of a cannonball.",0,uber,0,vict,TO_VICT);
+        damage(uber, vict, number(500,750), TYPE_UNDEFINED, DAM_NO_BLOCK);
+        GET_POS(vict) = POSITION_SITTING;
+      }  
+      break;
+    default:
+      break;
+  }
+  return FALSE;
+}
+
+#define MAUL_CHARGE   100
+
+int boulder_maul(OBJ *maul, CHAR *ch, int cmd, char *arg)
+{
+  CHAR *vict = NULL;
+  char buf[MAX_INPUT_LENGTH];
+  int strmod = 0, spec_chance = 0;
+  ch = maul->equipped_by;
+  
+  if(cmd==MSG_MOBACT  && ch && !IS_NPC(ch) && ch->specials.fighting) {
+	  // damage spec, charge builds up in about 5.5 ticks of fighting
+    vict = ch->specials.fighting;
+    OBJ_SPEC(maul)++;
+
+    if(OBJ_SPEC(maul) > MAUL_CHARGE) {
+      strcpy( buf, world[CHAR_REAL_ROOM(ch)].name );
+      spec_chance = 1 + ( ( OBJ_SPEC(maul) - MAUL_CHARGE ) / 5 );
+      
+      // increased likelihood in Mountain sector, and "cave"-like room
+      if( world[CHAR_REAL_ROOM(ch)].sector_type == SECT_MOUNTAIN ) {
+        spec_chance+=5;
+      }
+      if( strstr( string_to_lower( buf ), "cave" ) ) {
+        spec_chance+=5;
+      }
+      
+      if( chance( spec_chance ) ) {
+        act("$n lets out a thundering, inhuman roar, swinging $s maul with draconic-like strength.\n\r$n strikes $N with godly force, causing a small shockwave and spraying gore in every direction.",0,ch,0,vict,TO_NOTVICT);
+        act("You let out a thundering, inhuman roar, swinging your maul with draconic-like strength.\n\rYou strike $N with godly force, causing a small shockwave and spraying gore in every direction.",0,ch,0,vict,TO_CHAR);
+        act("$n lets out a thundering, inhuman roar, swinging $s maul with draconic-like strength.\n\r$n strikes you with godly force, causing a small shockwave and spraying gore in every direction.",0,ch,0,vict,TO_VICT);
+        strmod = GET_STR(ch) - 18;
+        damage(ch, vict, MIN (1250, 500 + ( strmod * number( 50, OBJ_SPEC(maul) ) ) ), TYPE_UNDEFINED, DAM_NO_BLOCK);
+        OBJ_SPEC(maul) = 0;
+      }
+    }
+  }
+  return FALSE;
+}
+
 /*when item #21213 is dropped at room# 21263 it will teleport everyone in
 there to room #21264*/
 int find_obj(int v_num, int virt_room); /* From spec.wyvern.c */
@@ -423,6 +573,8 @@ void assign_moria(void) {
   assign_mob(21219,stone_dragon);
   assign_mob(21217,jeweler);
   assign_mob(21214,postoffice);
+  assign_mob(21220,uber_stone_dragon);
   assign_obj(21213,moria_teleport_to_mykras);
+  assign_obj(21228,boulder_maul);
 }
 

@@ -46,14 +46,17 @@ wears a cheshire smile on his beaming face. He is here by choice, to guide
 the followers in his pagoda on their own path to enlightenment and teach them
 the ways of Karma.
 ~
-74 268732552 1000 Y
-60 -25 -25 10d300+200000 20d20+200
-10000000 100000000
+74 268468232 0 Y
+70 -18 -22 100d300+111111 20d20+200
+0 100000000
 8 8 1
-67 8 100d100+10000 1
-11 6 50 197
-0 0 1 0
+67 49208 100d100+10000 0
+0 0 9 0
+R
+6
+T
+......The Uber Enlightened One is at peace.~
 K
-0 0 0 0 0 0 0
+0 26582 0 0 0 0 0
 #0
 $~

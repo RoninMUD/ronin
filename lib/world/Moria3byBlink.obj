@@ -533,6 +533,40 @@ M
 ~
 ~
 ~
+#21228
+maul boulder dragonstone~
+Giant, Two-Handed Boulder Maul~
+An enormous, hewn boulder sits atop a shaft of forged gleaming metal.~
+$n swing$z $s giant maul into $V with a satisfying thud.~
+26 516 8193
+100 3 9 7
+32 27573955 28345
+15
+E
+maul~
+
+Hewn from the slain Stone Dragon's tail, this seemingly unremarkable boulder-
+headed hammer is a weapon fit for a god.  The craftmanship of the thing is
+incredible, somehow brilliantly counterbalancing the enormous stone while
+simultaneously decreasing the overall weight of the weapon.  Some of the
+strength of the dragon remains, deep within the heart of the titanic maul.
+~
+X
+$n swing$z $s giant maul with remarkable ease, causing a small shockwave.~
+3072 0 0
+M
+You brace yourself as you wield the enormous boulder maul, letting the weighty beast rest on your right shoulder.~
+$n visibly braces $sself as $e rests the enormous boulder maul over $s right shoulder.~
+With a sigh of relief, you heft your maul off your shoulder, it hits the floor with a quaking thud.~
+$n hefts $s maul from $s shoulder, the giant maul's head hits the floor with a quaking thud.~
+A
+19 16
+A
+18 2
+A
+52 -29
+B
+16
 #21298
 board~
 board~

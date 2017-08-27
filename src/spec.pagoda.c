@@ -345,6 +345,118 @@ int p_ring(OBJ *obj, CHAR *ch, int cmd, char *argument) {
   return FALSE;
 }
 
+int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
+  CHAR *foe, *next_vict;
+  char buf[MAX_STRING_LENGTH];
+  struct affected_type_5 af;
+  
+  switch (cmd) {
+    case MSG_MOBACT:
+      vict = uber->specials.fighting;
+      if ( vict ) {
+        // at <50% life EO will fury the tank
+        if( !affected_by_spell( vict, SPELL_FURY ) && ( ( GET_MAX_HIT(uber)/2 ) > GET_HIT(uber) ) ) {
+          do_say(uber, "A key skill in walking the path to enlightenment is channelling ones emotions.  You lack these skills, it is too easy to for your anger to control your actions.", CMD_SAY);
+          spell_fury(50, vict, vict, 0);
+        }
+        switch ( number( 1, 20 ) ) {
+          case 1:
+          case 2: 
+          case 3:
+          case 4:
+          case 5: // disarm to inventory
+            if ( chance (20) )
+              do_say(uber, "Reliance on weapons beyond your body and mind is holding you back.  Here, let me help you.", CMD_SAY);
+            for( vict = world[CHAR_REAL_ROOM(uber)].people; vict ; vict = next_vict ) {
+              next_vict = vict->next_in_room;
+              if(vict != uber && EQ(vict, WIELD) && IS_MORTAL(vict)) {
+                act("Without a conscious effort, you set your weapon aside.", 1, uber, 0, vict, TO_VICT);
+                obj_to_char( unequip_char(vict, WIELD), vict );
+              }
+            }
+            break;
+          case 6: 
+          case 7: // recruit someone to aid uber
+            foe = get_random_victim_fighting(uber);
+            if ( vict != foe ) {
+              sprintf( buf, "Enlightenment takes balance, and parity bears peace; %s, become yin.", IS_NPC(foe) ? GET_SHORT(foe) : GET_NAME(foe) );
+              do_say( uber, buf, CMD_SAY);
+              stop_fighting(foe);
+              hit(foe,vict,TYPE_UNDEFINED);
+            }
+            break;
+          case 8:
+          case 9:
+          case 10: // set evil to pray, neutral/holy to meditate
+            foe = get_random_victim_fighting(uber);
+            if ( vict != foe && !IS_NPC(foe) ) {
+              sprintf( buf, "Nirvana awaits, you must only take the time to seek it.  Relax %s, look inward.", GET_NAME(foe) );
+              do_say( uber, buf, CMD_SAY);
+              GET_MANA(foe) -= 420;
+              GET_MANA(foe) = MAX( 0, GET_MANA(foe) );
+              stop_fighting(foe);
+              GET_POS(foe) = POSITION_RESTING;
+              if ( IS_EVIL(foe) ) {
+                if ( !affected_by_spell( foe, SKILL_PRAY ) ) {
+                  af.type = SKILL_PRAY;
+                  af.duration = 2;
+                  af.modifier = 0;
+                  af.location = APPLY_NONE;
+                  af.bitvector = AFF_NONE;
+                  af.bitvector2 = AFF_NONE;
+                  affect_to_char(foe, &af);
+                  send_to_char("You bow your head and search anew for inner peace.\n\r", foe);
+                  act("$n bows $s head and begins thoughtful meditation.", TRUE, foe, 0, 0, TO_ROOM);                  
+                }
+              } else {
+                if ( affected_by_spell(foe, SKILL_MEDITATE) ) affect_from_char(foe, SKILL_MEDITATE);
+                if ( !affected_by_spell( foe, SKILL_MEDITATE ) ) {
+                  af.type = SKILL_MEDITATE;
+                  af.duration = 32;
+                  af.modifier = 0;
+                  af.location = APPLY_NONE;
+                  af.bitvector = AFF_NONE;
+                  af.bitvector2 = AFF_NONE;
+                  affect_to_char(foe, &af);
+                  send_to_char("You gaze inward and focus on enlightenment.\n\r", foe);
+                  act("$n enters a deep, thoughtful trance.", TRUE, foe, 0, 0, TO_ROOM);                  
+                }
+              }
+            }
+            break;
+          default:
+            break;
+        }
+      }
+      break;
+    case CMD_FLEE:
+      // can't flee, need to recall or be rescued or pummelled out of fight
+      // wimpy check added for spam reduction
+      do_say( uber, "In flight there is only ignorance, I will not let you turn your back to enlightenment now.", CMD_SAY);
+      if (vict->new.wimpy != 0) vict->new.wimpy = 0;
+      if (chance(42)) hit( uber, vict, TYPE_UNDEFINED);
+      return TRUE;
+      break;
+    case CMD_CIRCLE:
+    case CMD_ASSAULT:
+    case CMD_BACKSTAB:
+    case CMD_LUNGE:
+    case CMD_FLANK:
+      // at <40% life left hit-n-run tactics will cease to work
+      if( ( 2*GET_MAX_HIT(uber)/5 ) > GET_HIT(uber) && !vict->specials.fighting )  {
+        if ( chance( 20 ) )
+          do_say(uber, "I've had enough of your antics, face me, let us finish this nonsense.", CMD_SAY);
+        sprintf( buf, "%s sidesteps your telegraphed attack with ease.\n\r", GET_SHORT(uber) );
+        send_to_char( buf, vict );
+        WAIT_STATE(vict, 3 * PULSE_VIOLENCE);
+        return TRUE;
+      }
+      break;
+  }   
+  
+  return FALSE;
+}
+
 #define ZONE_PAGODA   26400
 #define ZONE_PAGODAII 26500
 #define PAGODA_PROTECTOR   ITEM(ZONE_PAGODA,   75)
@@ -361,6 +473,7 @@ int p_ring(OBJ *obj, CHAR *ch, int cmd, char *argument) {
 #define PAGODA_CLOAK       ITEM(ZONE_PAGODA,    6)
 #define PAGODA_DICE        ITEM(ZONE_PAGODA,   11)
 #define PAGODA_RING        ITEM(ZONE_PAGODA,    1)
+#define PAGODA_UBER_EO  ITEM(ZONE_PAGODAII, 85)
 
 void assign_pagoda (void) {
   assign_mob(PAGODA_PROTECTOR,   fanatic);
@@ -373,6 +486,7 @@ void assign_pagoda (void) {
   assign_mob(PAGODA_GURU,        fanatic);
   assign_mob(PAGODA_TYRANT,      p_tyrant);
   assign_mob(PAGODA_EMIR,        p_emir);
+  assign_mob(PAGODA_UBER_EO,      uber_eo);
   assign_obj(PAGODA_SPHERE,      p_sphere);
   assign_obj(PAGODA_WAND,        p_wand);
   assign_obj(PAGODA_DICE,        p_dice);
