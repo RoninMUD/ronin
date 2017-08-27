@@ -1,93 +1,114 @@
 #4801
-treeman~
-The treeman~
-The treeman is standing here in front of you.
+halfling guard~
+A halfling guard~
+A halfling guard is standing here.
 ~
-It is the combined of Tree and Rock. It got two long arm with big palm.
+There is a rather short halfling guard standing here,
+and acting as a protector of this small village.  Despite
+his size, he projects an aura of confidence.
 ~
-106 0 -200 Y
-23 1 0 4d6+800 5d3+4
-7500 90000
-8 8 0
-68 0 0d0+0 0
+72 294912 0 Y
+25 9 0 1d100+450 4d4+3
+10000 65000
+8 8 1
+70 16384 1d500+0 1
+2 1 5 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #4802
-carrion~
-The carrion~
-The carrion is flying here.
+halfling citizen~
+A halfling citizen~
+A halfling citizen is standing here.
 ~
-A giant bird with two long wings.
+Halfling citizens are known for their cheerful, carefree
+nature, and love of all things fattening.  They are also
+mischievous, agile, and surprisingly coordinated both in
+and out of combat.
 ~
-74 50331656 1000 Y
-20 2 3 5d10+500 2d12+1
-1000 60000
-9 9 0
-83 0 0d0+0 0
+72 262144 -40 Y
+15 17 5 400d1+0 4d4+0
+3000 30000
+8 8 1
+70 16384 1d100+0 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #4803
-rider~
-The carrion rider~
-The carrion rider is standing here.
+halfling worker~
+A halfling worker~
+A halfling worker is here, instead of getting any work done.
 ~
-A dwarf skeleton which is only 3 feet high with two green evil eyes.
-It is covered by a black cloak.
+Halfling workers are fairly common not only in their own,
+Halfling Village, but have been seen in other parts of the
+world as well.  Their size allows them to more easily access
+certain areas, and squeeze into places that other races just
+cannot.
 ~
-42 0 -500 Y
-20 2 3 5d10+500 2d6+15
-6000 65000
-8 8 0
-52 0 0d0+0 0
+72 262144 40 Y
+16 15 2 200d3+50 5d5+0
+6000 35000
+8 8 1
+70 16384 1d100+0 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #4804
-halfling magic pupil~
 The halfling magic pupil~
+A halfling magic pupil~
 The halfling magic pupil is studying here.
 ~
-A halfling pupil who is here studying the halfling magic.
+Halfling pupils spend almost their entire day practicing
+rudimentary magic taught to them by one of the three head
+halfling wizards, or their apprentices, in the hopes that they
+might become a respectable wizard themselves.
 ~
-74 0 1000 Y
-5 15 7 2d8+50 1d10+2
-300 2400
+74 0 200 Y
+15 15 2 2d8+50 1d4+0
+10000 30000
 8 8 1
-70 0 0d0+0 0
+70 16384 1d100+50 1
+1 1 10 32
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #4805
-halfling crew~
-The halfling crew~
-The halfling crew is working here.
+halfling priest~
+Halfling Priest~
+The Halfling Priest is standing here, reciting a prayer.
 ~
-A 3 feet high crew is looking back to you. It got a stupid ugly face.
-When it smiles, you discover that its mouth is stink. But they are
-peaceful and hard working.
+The Halfling Priest is one of the last remaining worshippers
+of the Halfling Goddess.  Few know her, or more accurately,
+or exactly what she is.  However, the priest remains vigilant
+in his worship.  In the hopes that she, or her champion, may
+return.
 ~
-76 0 1000 Y
-12 8 4 3d6+100 3d4+4
-800 12000
-8 8 0
-70 0 0d0+0 0
+74 0 100 Y
+30 10 0 250d2+1000 2d10+5
+36000 250000
+8 8 1
+70 16384 100d2+100 2
+1 2 10 10
+1 6 5 28
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #4806
 averland~
 The Averland~
-The Averland is standing here.
+The Averland stands here, reciting prayers to his goddess.
 ~
-He is dressed in yellow and black. He is wearing a big hat with feather on it.
+The Averland stands here, dressed in yellow and black.  He is
+one of the few known halfling champions of this part.  A true
+knight by every definition of the word, he stands ever vigil
+for his goddess's call.
 ~
-131146 128 1000 Y
-29 -2 -3 10d20+900 2d3+30
-20000 180000
+131146 268697728 1000 Y
+30 -2 -3 500d2+2100 2d10+20
+30000 480000
 8 8 1
-70 0 0d0+0 0
+70 16384 1d100+0 1
+4 1 20 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
@@ -96,30 +117,44 @@ ostermark~
 The Ostermark~
 The Ostermark is standing here.
 ~
-He is dressed in red and yellow. He is wearing a breast plate which
-a flying rabbit is painting on it.
+The Ostermark stands here, dressed in red and yellow.  He
+boasts a badge with a flying rabbit on it.  Known as one of
+the few true halfling champions.  Ostermark is a known hunter
+and poacher of wild and exotic game.  Ostermark was known for his
+love of the game, and cared little for trophies.  Instead, he
+preferred to sell his trophies to the black market, and use the
+money he received in doing so to fund his hunting expeditions.
 ~
-131146 2048 1000 Y
-29 -2 -3 10d20+900 2d3+30
-20000 180000
+131146 268697600 0 Y
+30 -2 0 500d2+2300 3d10+25
+30000 480000
 8 8 1
-70 0 0d0+0 0
-0 0 0 0
+70 16384 0d0+0 2
+4 1 20 0
+2 2 20 0
+0 0 1 0
 K
 0 0 0 0 0 0 0
 #4808
 middenheim~
 The Middenheim~
-The Middenheim is standing here.
-O~
-He is dressed in blue and white. There are some attractive
-figurative painting on his armour.
+The Middenheim ist standing here.
 ~
-131146 134217728 1000 Y
-29 -2 -3 10d20+900 2d3+30
-20000 180000
+The Middenheim was nobility of sorts once upon a time.  He
+dresses in blues and whites, with exotic and extravagant figures
+and painting about his equipment.  He is known as one of the
+halfling champions, despite the fact that he was banished from the
+Halfling Village for his creation and involvement of their
+notorious Thieves' Guild.
+~
+131146 269746176 -1000 Y
+30 -2 2 200d2+1500 1d10+50
+180000 480000
 8 8 1
-70 0 0d0+0 0
+70 16384 0d0+0 3
+3 2 20 0
+5 2 20 0
+7 2 20 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
@@ -128,14 +163,19 @@ bright wizard~
 The Bright Wizard~
 The Bright Wizard is standing here.
 ~
-He is the teacher of the Bright College of Magic, he has bright
-orange hair and heard.
+He is the teacher of the Bright College of Magic.  The
+Bright Wizard has dedicated much of his life to studying
+the elusive halfling goddess.  Going so far as to hire the
+infamous Middenheim to procure information.  However, despite
+his ties to the king of the Thieves' Guild, the Bright Wizard
+is still highly respected among his colleagues.
 ~
-75 0 1000 Y
-24 -2 -3 3d60+900 3d6+5
-15000 150000
+75 128 200 Y
+30 -2 -3 200d2+1500 4d6+5
+15000 480000
 8 8 1
-1 0 0d0+0 0
+1 16384 1d100+1000 1
+1 1 5 30
 0 0 0 0
 K
 0 0 0 0 0 0 0
@@ -144,15 +184,20 @@ celestial wizard~
 The Celestial Wizard~
 The Celestial Wizard is standing here.
 ~
-He is the teacher of the Celestial College of Magic, he is
-wearing a blue suit. He has some long yellow beard. Becareful!
-His Magic is very powerful!
+He is the teacher of the Celestial College of Magic.  He
+is a known frequenter of the halfling chapel, and is
+renowned for his love of magic, his dedication to his
+hometown, and his calming nature.  However, he is also a very
+competent wizard in his own regard and should not be taken
+lightly.
 ~
-75 0 1000 Y
-24 -2 -3 3d60+900 3d6+5
-15000 150000
+75 128 200 Y
+30 -2 -3 200d2+1500 4d6+5
+30000 480000
 8 8 1
-1 0 0d0+0 0
+1 16384 1d100+1000 2
+1 3 10 100
+1 1 15 32
 0 0 0 0
 K
 0 0 0 0 0 0 0
@@ -161,66 +206,274 @@ grey wizard~
 The Grey Wizard~
 The Grey Wizard is standing here.
 ~
-He is the teacher of the Grey College of Magic. He has a grey
-long beard and hair. He is wearing a Moody Blue Hat.
+The Grey Wizard is a shady figure among the college.  He is
+highly respected for his magical competence.  Though he is
+also slightly removed from his colleagues due to his personal
+choices and mannerisms.  
 ~
-75 0 1000 Y
-24 -2 -3 3d60+900 3d6+5
-15000 150000
+75 0 0 Y
+30 -2 -3 200d2+1500 3d6+5
+30000 210000
 8 8 1
-1 0 0d0+0 0
+1 16384 1d100+1000 2
+1 5 10 23
+1 1 15 32
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #4812
-halfling storekeeper~
-The halfling storekeeper~
-The Food Store Keeper is standing here.
+apprentice bright wizard~
+The Bright Wizard's Apprentice~
+The Bright Wizard's Apprentice is standing here.
 ~
-He is a hard working shopkeeper, he provided the best food for the
-halfling, although he is only 3 feet high, he is tough. He will
-protect his shop.
+The Bright Wizard's Apprentice is here.  She completely
+ignores you as she attends to straightening up the Bright
+Wizard's study.
 ~
-75 134217856 1000 Y
-27 -5 -10 10d10+5000 3d6+5
-1000 180000
-8 8 1
-70 0 0d0+0 0
+74 0 0 Y
+25 8 2 150d2+900 1d1+1
+21000 210000
+8 8 2
+1 16384 1d100+800 1
+1 2 10 32
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #4813
-halfling storekeeper~
-The halfling storekeeper~
-The Weapon Shopkeeper is standing here.
+apprentice grey wizard~
+The Grey Wizard's Apprentice~
+The Grey Wizard's Apprentice is standing here.
 ~
-He is a hard working shopkeeper, he provided the best weapon for the
-halfling, although he is only 3 feet high, he is tough. He will
-protect his shop.
+The Grey Wizard's Apprentice is standing here, working
+on his spells, practices, and studies.
 ~
-75 134217856 1000 Y
-27 -5 -10 10d10+9000 3d6+5
-30000 180000
+74 0 -20 Y
+25 8 2 150d2+900 1d8+7
+21000 210000
 8 8 1
-70 0 0d0+0 0
+1 16384 1d100+800 1
+1 2 10 32
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #4814
-halfling storekeeper~
-The halfling storekeeper~
-The Armour Shopkeeper is standing here.
+familiar celestial wizard imp flying~
+A small flying imp~
+The Celestial Wizard's familiar hovers here.
 ~
-He is a hard working shopkeeper, he provided the best armour for the
-halfling, although he is only 3 feet high, he is tough. He will
-protect his shop.
+This little demonic imp is the Celestial Wizard's Familiar.
+He doesn't have a name, but he's a fairly compelling reason
+why nobody fights or even comes to visit the Celestial Wizard.
 ~
-75 134217856 1000 Y
-27 -5 -10 10d10+9000 3d6+5
-30000 180000
+74 0 -400 Y
+25 10 2 150d2+900 1d8+7
+21000 250000
 8 8 1
-70 0 0d0+0 0
-0 1 0 0
+62 16384 1d100+800 1
+1 2 10 32
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4815
+beggar halfling~
+A halfling beggar~
+A halfling beggar is here, asking for coins.
+~
+A halfling beggar is here, begging for coins.  They
+are seen frequently around town.  Some actually make
+a decent living asking for money, others do not.
+~
+72 0 -80 Y
+15 18 5 400d1+0 4d4+0
+3000 30000
+8 8 1
+0 16384 1d100+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4816
+thug halfling~
+A halfling thug~
+A halfling thug is here, looking for money!
+~
+Halfling thugs rarely show their faces around town in the
+daytime.  However, they are always looking for a shakedown,
+especially when out-of-towners are around.
+~
+104 262144 -200 Y
+30 10 8 10d5+450 2d8+4
+9000 70000
+8 8 1
+70 16384 1d100+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4817
+rogue halfling~
+A halfling rogue~
+A halfling rogue is here, looking to pick a fight!
+~
+Halfling rogues are the scum of the halfling village, and
+the footsoldiers of the infamous Thieves' Guild.
+~
+106 262144 -200 Y
+30 10 0 200d2+1300 2d4+10
+21000 200000
+8 8 1
+70 16384 1d100+0 1
+4 2 5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4818
+master guild~
+The Guild Master~
+The Guild Master is here, and he's not happy with you!
+~
+The Guild Master was put in charge of the Thieves' Guild
+shortly after Middenheim's disappearance.  He is extremely
+dangerous and unpredictable, and notorious throughout the
+Halfling Village.
+~
+106 268697728 -400 Y
+30 5 0 500d2+2000 4d4+10
+90000 510000
+8 8 1
+70 16384 1d100+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4819
+baker halfling~
+The halfling baker~
+The halfling baker is here, baking.
+~
+The halfling baker is world famous.  Or, you know, he
+would be if people worldwide would try his baked goods.
+But they're pretty dang good, promise!
+~
+74 0 0 Y
+30 10 10 1d1000+900 1d10+5
+250000 30000
+8 8 1
+70 16384 1d100+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4820
+manager general store halfling~
+The halfling general store manager~
+The halfling general store manager is here, sell goods.
+~
+The halfling general store manager sells basic supplies to passer-bys
+and locals alike.
+~
+74 0 0 Y
+30 10 10 1d1000+900 1d10+5
+250000 30000
+8 8 1
+70 16384 1d100+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4821
+vendor black market~
+The Black Market Vendor~
+The Black Market Vendor is standing here.
+~
+The Halfling Black Market, until recently, was only rumored
+to have existed.  The modern Black Market sells goods from
+all over the world at high prices.  Though many will say that
+the price is definitely worthwhile.
+~
+74 0 0 Y
+30 10 10 1d1000+900 1d10+5
+1000000 30000
+8 8 1
+70 16384 1d100+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4822
+dog stray~
+The stray dog~
+A stray dog is wandering here, sniffing for scraps.
+~
+This stray dog is sniffing around, looking for food.  It's
+fur is matted, unkempt, and greasy.
+~
+72 0 20 Y
+15 18 10 10d2+390 4d4+0
+0 30000
+8 8 1
+89 16384 1d100+0 0
+0 0 0 0
+K
+3000 0 0 0 0 0 0
+#4823
+stag deer~
+A Stag~
+A stag is standing here.
+~
+A male deer is here, grazing.
+~
+72 0 0 Y
+30 10 0 10d2+490 8d2+0
+0 70000
+8 8 1
+86 16384 1d100+0 1
+7 1 5 0
+0 0 0 0
+K
+6000 0 0 0 0 0 0
+#4824
+bear grizzly~
+A Grizzly Bear~
+A Grizzly Bear is standing here.
+~
+This grizzly is relatively docile.  There seems to be something
+calming about this sanctuary that keeps it passive.
+~
+72 0 0 Y
+30 10 -1 10d10+1350 10d2+0
+0 210000
+8 8 1
+86 16384 1d100+0 1
+6 2 5 0
+0 0 0 0
+K
+12000 0 0 0 0 0 0
+#4825
+dog monstrous~
+A Monstrous Dog~
+A monstrous dog is here, growling at everything that moves.
+~
+This dog is well fed, huge, and pretty angry.
+~
+104 268697600 -100 Y
+30 9 0 10d10+1600 10d2+0
+0 360000
+8 8 1
+89 16384 1d100+0 2
+6 2 5 0
+10 4 10 0
+0 0 0 0
+K
+15000 0 0 0 0 0 0
+#4826
+queen cow matriarch bovine statue~
+The Cow Queen~
+A statue of some bovine matriarch is standing here.
+~
+You instantly regret your decision to look at her!
+~
+74 268501120 400 Y
+33 5 -5 20d10+2000 12d2+0
+120000 510000
+8 8 1
+100 16384 1d100+0 1
+10 4 10 0
+0 0 0 0
 K
 0 0 0 0 0 0 0
 #0

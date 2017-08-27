@@ -1,108 +1,96 @@
 #4801
-Entrance to the Halfling Village~
-	This is the entrance to the Halfling Village. There is quite a 
-number of small footprints on the ground. The halflings are a hard working 
-and friendly people, who will trust you as a good friend.
+The Western Gate of the Halfling Village~
+    The Western Gate of the Halfling is always open as a sign of good will towards
+any adventurers who choose to come this direction.  Guards, citizens, and various 
+other residents of the town will oftentimes wander out of the city to walk the 
+pathways of the small forest west of town.  The Halfling Main Street is located to
+the east, and heads towards the city center.
 ~
-48 0 1
-D0
-~
-~
-0 -1 4825
+48 67108868 1
 D1
 ~
 ~
 0 -1 4802
-D2
-~
-~
-0 -1 4807
 D3
 ~
 ~
-0 -1 4837
+0 -1 4842
 S
 #4802
-Halfling main street~
-	You are walking on the Halfling main street, where you spot some shops
-to the north, and some colleges to the south. 
+Halfling Main Street~
+    This particular portion of the Halfling Main Street is a hot spot among 
+adventurers and locals alike.  The smell of fruit, and pastry wafts it's way in
+from the north and seemingly overwhelms this section of main street and continues
+to waft in every direction.  North of here is the Halfling Bakery, to the west are
+the Village Gates, and Main Street continues to the east.
 ~
-48 0 1
+48 67108864 1
 D0
 ~
 ~
-0 -1 4826
+0 -1 4819
 D1
 ~
 ~
 0 -1 4803
-D2
-~
-~
-0 -1 4808
 D3
 ~
 ~
 0 -1 4801
 S
 #4803
-Halfling main street~
-        You are walking on the Halfling main street. You see small footprints
-on the ground, and in the distance the sound of halflings, laughing, is
-eminent - they seem to be very happy.
-To the north are some shops, and exits lead in all directions.
+Halfling Main Street~
+    Main street cuts through all the important tourist parts of town.  From the 
+chapel, to the famous Halfling Wizard Academy, and the even more famous Halfling
+Bakery.  It seems as if all of Main Street smells faintly of cooked fruit and pastry.
+To the north of here is the Halfling General Store, and Main Street continues to the 
+east, as well as to the west.
 ~
-48 0 1
+48 67108864 1
 D0
 ~
 ~
-0 -1 4827
+0 -1 4820
 D1
 ~
 ~
 0 -1 4804
-D2
-~
-~
-0 -1 4809
 D3
 ~
 ~
 0 -1 4802
 S
 #4804
-Halfling main street~
-	You are walking on the Halfling main street, where you see shops to
-the north and some colleges to the south. 
+Halfling Main Street~
+    Main street cuts through all the important tourist parts of town.  From the 
+chapel, to the famous Halfling Wizard Academy, and the even more famous Halfling
+Bakery.  It seems as if all of Main Street smells faintly of cooked fruit and pastry.
+To the east of here is the Central Plaza, and Main Street continues to the west.
 ~
-48 0 1
-D0
-~
-~
-0 -1 4828
+48 67108864 1
 D1
 ~
 ~
 0 -1 4805
-D2
-~
-~
-0 -1 4810
 D3
 ~
 ~
 0 -1 4803
 S
 #4805
-Halfling main street~
-        You are walking on the Halfling main street which is covered with lots
-of small footprints. To the north is a college of magic. 
+Halfling Central Plaza~
+    The Central Plaza is, obviously, located at the epicenter of the Halfling Village, 
+and probably sees the more foot traffic than any other area in town.  A faint smell
+of cooked fruit and pastries wafts in from the west, and a large amount of commotion
+can be heard from the south.  The path eastward leads to the small forest, and continues
+on to various kingdoms and pagodas, and the north holds the halfling chapel, as well as
+its Tavern and Back Alleyways.
 ~
-48 0 1
+48 67108864 1
 D0
 ~
 ~
-0 -1 4829
+0 -1 4809
 D1
 ~
 ~
@@ -110,23 +98,604 @@ D1
 D2
 ~
 ~
-0 -1 4811
+0 -1 4813
 D3
 ~
 ~
 0 -1 4804
 S
 #4806
-Halfling main street~
-        You are walking on the Halfling main street, noticing all the small
-footprints on it. Exits lead in all directions: north to a college of magic
-and east to the entrance of the Halfling Village.
+Halfling Main Street~
+    Main street cuts through all the important tourist parts of town.  From the 
+chapel, to the famous Halfling Wizard Academy, and the even more famous Halfling
+Bakery.  It seems as if all of Main Street smells faintly of cooked fruit and pastry.
+To the west of here is the Central Plaza, and Main Street continues to the east.
 ~
-48 0 1
+48 67108864 1
+D1
+~
+~
+0 -1 4807
+D3
+~
+~
+0 -1 4805
+S
+#4807
+Halfling Main Street~
+    Main street cuts through all the important tourist parts of town.  From the 
+chapel, to the famous Halfling Wizard Academy, and the even more famous Halfling
+Bakery.  It seems as if all of Main Street smells faintly of cooked fruit and pastry.
+The Eastern Gate is located to the east, and Main Street continues to the west.
+~
+48 67108864 1
+D1
+~
+~
+0 -1 4808
+D3
+~
+~
+0 -1 4806
+S
+#4808
+The Eastern Gate of the Halfling Village~
+    The Eastern Gate of the Halfling is always open as a sign of good will towards
+any adventurers who choose to come this direction.  Guards, citizens, and various 
+other residents of the town will oftentimes wander out of the city to walk the 
+pathways of the small forest east of town.  The Halfling Main Street is located to
+the west, and heads towards the city center.
+~
+48 67108868 1
+D1
+~
+~
+0 -1 4855
+D3
+~
+~
+0 -1 4807
+S
+#4809
+Halfling Main Street~
+    This portion of the mainstreet is relatively abandoned, and only very mildly smells
+of cooked fruit and pastry (unlike the rest of the Halfling Main Street).  Immediately to
+the east there is a grand looking door, which leads to the Halfling Chapel.  To the north
+is the back alleyway.  Most locals avoid that section of town, and advise others to do the
+same.  Finally, to the south lies the Central Plaza.
+~
+48 67108864 1
+D0
+~
+~
+0 -1 4810
+D1
+~
+door~
+7 4801 4881
+D2
+~
+~
+0 -1 4805
+S
+#4810
+Halfling Village Back Alley~
+    The Back Alley is very dimly lit, and there is almost no smell of cooked fruit or pastry.
+The chapel, various shops, fences, and trees have cast a permanent shadow over the area,
+leaving the area to be lit only by the artificial light of nearby buildings, and whatever
+miniscule amount of natural luminous filters its way through the various obstructions.  Main
+Street is located to the south, and the alley continues to the west.
+~
+48 67108864 1
+D2
+~
+~
+0 -1 4809
+D3
+~
+~
+0 -1 4811
+S
+#4811
+Halfling Village Back Alley~
+    The Back Alley is very dimly lit, and there is almost no smell of cooked fruit or pastry.
+The chapel, various shops, fences, and trees have cast a permanent shadow over the area,
+leaving the area to be lit only by the artificial light of nearby buildings, and whatever
+miniscule amount of natural luminous filters its way through the various obstructions.  The
+alley continues to the east and west.
+~
+48 67108864 1
+D1
+~
+~
+0 -1 4810
+D3
+~
+~
+0 -1 4812
+S
+#4812
+Halfling Village Back Alley~
+    The Back Alley is very dimly lit, though the fragrance in this section of the alley is
+moutwateringly unbearable.  The Halfling Bakery can be seen through some fences and trees to
+the south, and the various fragrances permeat this area with the sweet smells of cooked fruit
+and pastry.  Added to that is the supposedly closed Halfing Tavern located immedately to the
+west.  The alley continues to the east.
+~
+48 67108864 1
+D1
+~
+~
+0 -1 4811
+D3
+~
+~
+0 -1 4826
+S
+#4813
+Outside the Halfling Wizard College~
+    The Halfling Wizard Academy is renowned worldwide.  There is an immense amount of history associated
+with this place, and it has become a staple of the Halfling Village.  The front of the entryway to the
+south contains a symbol with three swirling colors.  Blue, White, and Grey.  Each representing the three 
+different Halfling Schools of magic.  To the north is the Central Plaza.
+~
+48 67108864 1
+D0
+~
+~
+0 -1 4805
+D2
+~
+~
+0 -1 4814
+S
+#4814
+Entrance to the Wizard's College~
+    The Entrance is a fairly large area.  The floor is decorated with a swirl of blue, white, and grey.
+At one point, the three colleges were seperate entities.  However, over time, the three joined under a
+single roof.  In the center of the floor, the three colors are wound the most tightly.  HOwever, they
+each separate as they spiral outwards.  The white breaks off to the western hallway, towards the 
+Celestial Academy.  The grey spirals off to the east, which holds the Study and the Grey Academy.  The
+blue uncoils to the south, towards the Bright Academy.  There is a doorway to the north, which leads to
+the Halfling Village.
+~
+48 67108868 0
+D0
+~
+~
+0 -1 4813
+D1
+~
+~
+0 -1 4815
+D2
+~
+~
+0 -1 4836
+D3
+~
+~
+0 -1 4824
+S
+#4815
+College Study~
+    Halfling pupils oftentimes gather at the College Study, as well as others who may be interested in
+entering the college.  The place is relatively quiet, and organized.  There is a grey line that trails
+through the center of the room.  Following the grey line to the west will lead to the College entrance
+Following the line to the south leads to the Grey Wizard's Academy.
+~
+48 67108864 0
+D2
+~
+~
+0 -1 4816
+D3
+~
+~
+0 -1 4814
+S
+#4816
+Grey Wizard's Academy~
+    The Grey Academy is run, obviously, by the Grey Wizard.  The Grey Wizard is the least known of the
+halfling wizards and, based on the state of his academy, one can imagine why.  The place is completely
+silent.  There are no tables or chairs, and no windows.  The chamber is dimly lit, and there are a
+litany of signs and warnings about keeping quiet at all times.  The only obvious exits are north, towards
+the College Study, and east, to the Grey Wizard's office.
+~
+48 67108864 0
+D0
+~
+~
+0 -1 4815
+D1
+~
+~
+0 -1 4817
+S
+#4817
+Grey Wizard's Office~
+    The Grey Wizard's office is....empty.  Well, not completely.  There are a few torches on the wall,
+two mats on the floor, and a some sort of odor permeating the room...and it's definitely not tobacco.
+The northern wall has a grey, unornamented door with a "Keep Out" sign posted on it.  The door has been
+bolted securely into place; but there are no signs of locks.  To the west is the Grey Wizard's Academy.
+~
+48 67108864 0
+D0
+~
+door~
+1 -1 4818
+D3
+~
+~
+0 -1 4816
+S
+#4818
+Grey Wizard's Casting Chamber~
+    The Grey Wizard's room is filled with various crystal balls, torches, sconces, and even a wooden
+table.  Oddly enough, everything is bolted firmly into place.  The floor is uneven, and seems almost
+as if it has shifted over and over again for some reason.  There is a large mat on the floor that is
+definitely not there for decoration; though it doesn't seem as if it is covering anything up.  The only
+obvious exit is to the south.
+~
+48 67108864 0
+D2
+~
+door~
+1 -1 4817
+S
+#4819
+The Halfling Bakery~
+    The Halfling Bakery is renowned worldwide, and with the aromas this room is putting out there is
+no wonder as to why!  The smell of cooked fruit and pastries floods the room with mouthwatering 
+goodness.  The room is kept relatively clean, and there are tables and chairs set out for various
+customers.  After looking around, it appears that this place only has two items on the menu.  The
+first being the fruit pies, which are obviously responsible for the various smells this heavenly
+place produces.  The second, however, are sherbet juice boxes.  It is said people travel from all
+over the world to buy these things by the dozens!  The only exit is south, to Main Street.
+~
+48 67108928 0
+D2
+~
+~
+0 -1 4802
+S
+#4820
+Halfling General Store~
+    The Halfling General Store was never quite a popular place.  They used to sell a whole variety of
+items, weapons, and various other goods.  HOwever, the only item they ever had any luck selling was
+leather backpacks.  As a result, that's all they are really known for carrying.  On certain days they
+will carry other objects; but leather backpacks are by far and a way their most popular item.  The
+only exit is south, back to Main Street.
+~
+48 67108928 0
+D2
+~
+~
+0 -1 4803
+S
+#4821
+The Black Market~
+    The Black Market is known by most; but few actually know its location.  While it, and anything
+purchased from it, is considered illegal; not many officials really investigate it.  The Black Market
+has an ever-changing list of goods and it is important to check back daily to see what is available.
+It should be noted, the Black Market doesn't restock its goods throughout the day, and everything
+there is first come-first served.  The only exit is to the west, back into the Undercity.
+~
+48 67109056 0
+D3
+~
+door~
+7 4804 4831
+S
+#4822
+Bright Wizard's Study~
+    Perhaps there was a small, localized earthquake, or a raging hurricane.  Obvioiusly there must
+be an explanation; because there is no way that a person would allow a room to enter this state of
+chaos and dissolution by choice!  There are papers, books, and furniture scattered around the room,
+as if someone had perpetually been searching for something they both needed, and had convinced 
+themselves they had to have immediately, if not sooner.  There is a door to the east, and a ladder
+leading down to the Bright Wizard's Academy.
+~
+48 67108864 0
+D1
+~
+door~
+1 -1 4823
+D5
+~
+~
+0 -1 4836
+S
+#4823
+Bright Wizard's Thinking Chamber~
+    The Thinking Chamber is...empty.  There are paintings of pastures, farmland, and a small forest
+in the distance.  All the furniture has been moved to the walls, and there is a faint, magical glow
+to the room.  The room was obviously designed to relieve stress, and hopefully stimulate the thought
+processes of whoever was in it.  It's surprisingly effective.  There is a door to the west that leads
+to the Bright Wizard's Study.
+~
+48 67108864 0
+D3
+~
+door~
+1 -1 4822
+S
+#4824
+Celestial Wizard's Academy~
+    The Celestial Wizard's academy oftentimes conjures up images of divinity, light, and calm.  To a
+degree, that is not wrong.  However, over the years the Celestial Wizard has compromised some of his
+ideals in the pursuit of the Halfling Goddess, along with the Bright Wizard and the Halfling Priest.
+He has supposedly gone so far as to confer with demons.  Nonetheless, the Celestial Wizard still 
+teaches and practices non-violent solutions to conflicts, and strives for peacefulness.  There is a
+staircase leading up to the Celestial Wizard's Meditation Room, as well as a hallway leading east,
+to the College Entrance.
+~
+48 67108864 0
+D1
+~
+~
+0 -1 4814
+D4
+~
+~
+0 -1 4825
+S
+#4825
+Celestial Wizard's Meditation Room~
+    The Meditation Room is decorated with ancient scriptures and paintings.  All of them in relation
+to the ever elusive Halfling Goddess, who disappeared long ago and hasn't been heard from since.  A
+small cult of followers still strive to discover her true identity, and where she fled to.  The
+Celestial Wizard is a known member of that cult.  The only obvious exit is down, to the Celestial
+Wizard's Academy.
+~
+48 67108864 0
+D5
+~
+~
+0 -1 4824
+S
+#4826
+Halfing Tavern~
+    Halfing Tavern is a long ago closed business from the Village.  Some believe the name was
+an accident that was never caught until after the sign had been made, and the creator was
+simply too lazy to go back and change it.  Others believe it to be a joking play off the term
+Halfling.  To this day, nobody knows.  However, the Tavern looks as if it has seen some sort
+of traffic, and it seems apparent that some of the locals have kept the place up, and apparently
+used to extra seating for their own purposes.  The trapdoor to the cellar remains closed, and 
+locked.  The only obvious exit is east, to the alley.
+~
+48 67108864 0
+D1
+~
+~
+0 -1 4812
+D5
+~
+trapdoor~
+7 4802 4827
+S
+#4827
+Entrance to the Halfling Undercity~
+    This room still bears a strong resemblance to that of a rather large storage cellar.  The
+southern wall, however, has been hollowed out and opens into an large, dark, open chamber.  A
+project this size would likely take years, if not decades to complete.  Nonetheless, it exists.
+The room itself is void of anything else interesting.  The only obvious exits are south, into
+the darkness, and up.
+~
+48 5 0
+D2
+~
+~
+0 -1 4829
+D4
+~
+trapdoor~
+7 4802 4826
+S
+#4828
+Halfling Undercity~
+    The Undercity is a horrible place.  It has absolutely no smells of cooked fruit or pastries!
+Only a monster, or horrible person would want to be down here.  Which explains a lot actually.
+This place just wreaks of crime, lawlessness, and a bit of urine.  There is no natural or
+artificial light in a place like this, and there is an unpleasant feeling to the place.  The
+Undercity continues to the east and south.
+~
+48 1 0
+D1
+~
+~
+0 -1 4829
+D2
+~
+~
+0 -1 4832
+S
+#4829
+Halfling Undercity~
+    The Undercity is a horrible place.  It has absolutely no smells of cooked fruit or pastries!
+Only a monster, or horrible person would want to be down here.  Which explains a lot actually.
+This place just wreaks of crime, lawlessness, and a bit of urine.  There is no natural or
+artificial light in a place like this, and there is an unpleasant feeling to the place.  The
+Entrance to the Undercity is located to the north, and the Undercity itself continues to the
+east, south, and west.
+~
+48 1 0
+D0
+~
+~
+0 -1 4827
+D1
+~
+~
+0 -1 4830
+D2
+~
+~
+0 -1 4833
+D3
+~
+~
+0 -1 4828
+S
+#4830
+Halfling Undercity~
+    The Undercity is a horrible place.  It has absolutely no smells of cooked fruit or pastries!
+Only a monster, or horrible person would want to be down here.  Which explains a lot actually.
+This place just wreaks of crime, lawlessness, and a bit of urine.  There is no natural or
+artificial light in a place like this, and there is an unpleasant feeling to the place.  The
+Undercity continues to the east, south, and west.
+~
+48 1 0
+D1
+~
+~
+0 -1 4831
+D2
+~
+~
+0 -1 4834
+D3
+~
+~
+0 -1 4829
+S
+#4831
+Halfling Undercity~
+    This corner of the Undercity seems different.  While it still remains incredibly dark, there
+is a barely visible outline of light located on the eastern wall.  Upon feeling it, it appears
+that there is some kind of door along this wall.  Further examination reveals a handle of sorts
+next to a keyhole.  The Undercity continues to the south, as well as to the west.
+~
+48 1 0
+D1
+~
+door~
+7 4804 4821
+D2
+~
+~
+0 -1 4835
+D3
+~
+~
+0 -1 4830
+S
+#4832
+Halfling Undercity~
+    The Undercity is a horrible place.  It has absolutely no smells of cooked fruit or pastries!
+Only a monster, or horrible person would want to be down here.  Which explains a lot actually.
+This place just wreaks of crime, lawlessness, and a bit of urine.  There is no natural or
+artificial light in a place like this, and there is an unpleasant feeling to the place.  The
+Undercity continues to the east, and north.
+~
+48 1 0
+D0
+~
+~
+0 -1 4828
+D1
+~
+~
+0 -1 4833
+S
+#4833
+Halfling Undercity~
+    The Undercity is a horrible place.  It has absolutely no smells of cooked fruit or pastries!
+Only a monster, or horrible person would want to be down here.  Which explains a lot actually.
+This place just wreaks of crime, lawlessness, and a bit of urine.  There is no natural or
+artificial light in a place like this, and there is an unpleasant feeling to the place.  The
+Undercity continues to the east, north, and west.
+~
+48 1 0
+D0
+~
+~
+0 -1 4829
+D1
+~
+~
+0 -1 4834
+D3
+~
+~
+0 -1 4832
+S
+#4834
+Halfling Undercity~
+    Noise can be heard from this section of the Undercity.  Not just a small amount either.  The
+other sections housed whispers, and the faint scuffing of boot on floor.  Here, however, there is
+commotion, fuss and, dare it be said, hubbub muffling through the southern wall.  A closer look
+shows signs of a door that would be fairly obvious if it weren't so incredibly dark.  Other than
+that, the undercity continues to the east, north, and west.
+~
+48 1 0
 D0
 ~
 ~
 0 -1 4830
+D1
+~
+~
+0 -1 4835
+D2
+~
+door~
+5 4806 4837
+D3
+~
+~
+0 -1 4833
+S
+#4835
+Halfling Undercity~
+    The Undercity is a horrible place.  It has absolutely no smells of cooked fruit or pastries!
+Only a monster, or horrible person would want to be down here.  Which explains a lot actually.
+This place just wreaks of crime, lawlessness, and a bit of urine.  There is no natural or
+artificial light in a place like this, and there is an unpleasant feeling to the place.  The
+Undercity continues to the north and west.
+~
+48 1 0
+D0
+~
+~
+0 -1 4831
+D3
+~
+~
+0 -1 4834
+S
+#4836
+Bright Wizard's Academy~
+    The Bright Wizard's Academy is decorated with random pictures, furniture, and scattered books.
+There is no chance that there is any methodology behind the madness that is this room's condition.  
+Various piles have been assorted by passing students, apprentices, and possibly locals in an attempt
+to apply some order to the chaos; but alas it is a lost cause.  There is a ladder leading upwards,
+to the Bright Wizard's Private Study, and the hallway leads north to the College entrance.
+~
+48 67108864 0
+D0
+~
+~
+0 -1 4814
+D4
+~
+~
+0 -1 4822
+S
+#4837
+Entrance to the Thieves' Guild~
+   The infamous Thieves' Guild.  Officially this place doesn't exist.  In fact, you've never 
+actually heard of it.  No, wait, you're not even here.  You're definitely somewhere else.  But if
+you were here, you'd see that this place is extremely well lit, and looks like there has been
+celebration every night of the week.  From the Entryway, this place would be a great place to spend
+time, you know, if such a place existed.  The room continues to the east and south.  The Undercity
+is located to the north.
+~
+48 67108864 0
+D0
+~
+door~
+5 4806 4834
 D1
 ~
 ~
@@ -134,780 +703,168 @@ D1
 D2
 ~
 ~
-0 -1 4812
-D3
-~
-~
-0 -1 4805
-S
-#4807
-Halfling plaza~
-        This is a peaceful area where you can sense no danger. Looking
-at all the footprints, you wonder if the halflings are too happy to bother
-washing their feet!
-There are shops and colleges somewhere in the neighborhood.
-~
-48 0 1
-D0
-~
-~
-0 -1 4801
-D1
-~
-~
-0 -1 4808
-D2
-~
-~
-0 -1 4818
-S
-#4808
-Halfling plaza~
-        Another tranquil part of the halfling village. The everlasting image
-of small halfling feet on the ground makes you stop to think that they must
-run around an awful lot to make a mess like this.
-Shops and colleges are close by.
-~
-48 0 1
-D0
-~
-~
-0 -1 4802
-D1
-~
-~
-0 -1 4809
-D2
-~
-~
-0 -1 4817
-D3
-~
-~
-0 -1 4807
-S
-#4809
-Halfling plaza~
-        Searching for a pattern in the multitude of small footprints on
-the ground makes you a bit dizzy - or maybe it's the aura of serenity,
-this place has, which has that effect on you?
-You are still close to the colleges and shops of this town.
-~
-48 0 1
-D0
-~
-~
-0 -1 4803
-D1
-~
-~
-0 -1 4810
-D2
-~
-~
-0 -1 4816
-D3
-~
-~
-0 -1 4808
-S
-#4810
-Halfling plaza~
-	The atmosphere of peace, calmness and happiness is so obvious it's
-starting to annoy you. How can the halflings stand living in a place as 
-sugar-coatedly sweet as this? Maybe that explains why people kill
-them all the time: fear of getting diabetes.
-~
-48 0 1
-D0
-~
-~
-0 -1 4804
-D1
-~
-~
-0 -1 4811
-D2
-~
-~
-0 -1 4815
-D3
-~
-~
-0 -1 4809
-S
-#4811
-Halfling plaza~
-	A sudden blood rush threatens to overwhelm you: the urge of killing and 
-molesting gets stronger by the minute, driven by the unbearable feeling of
-peace and tranquility, the joyful laughter of the halflings in the distance
-and all those inane footprints!!!
-~
-48 0 1
-D0
-~
-~
-0 -1 4805
-D1
-~
-~
-0 -1 4812
-D2
-~
-~
-0 -1 4814
-D3
-~
-~
-0 -1 4810
-S
-#4812
-Halfling plaza~
-	Around a nearby corner, you hear the happy sounds of the playing 
-halflings becoming screams of terror....Someone obviously felt like you,
-going insane with this air of friendliness, and decided to take action.
-~
-48 0 1
-D0
-~
-~
-0 -1 4806
-D2
-~
-~
-0 -1 4813
-D3
-~
-~
-0 -1 4811
-S
-#4813
-Halfling plaza~
-	Birds chirp and halflings giggle cheerfully, not far from here;
-this must be the perfect spot for a picnic.......and yet: a picnic wasn't
-really what you came here for, was it?
-The entrance to the Bright College of Magic is just south of here.
-~
-48 0 1
-D0
-~
-~
-0 -1 4812
-D2
-~
-~
-0 -1 4819
-D3
-~
-~
-0 -1 4814
-S
-#4814
-Halfling plaza~
-	To the south is the Bright College of Magic. As you look through
-the windows of the building, you see lots of small tables and a large 
-blackboard in the room. Didn't your mother ever tell you it isn't polite to
-peek through other folks windows?? Really!
-
-~
-48 0 1
-D0
-~
-~
-0 -1 4811
-D1
-~
-~
-0 -1 4813
-D3
-~
-~
-0 -1 4815
-S
-#4815
-Halfling plaza~
-	To the south is the Bright College of Magic. As you look through
-the windows of the building, you see lots of small tables and a large
-blackboard in the room. It's a good thing the college janitor isn't
-here to see you now; he'd paddle you for sure, you nosy rascal! 
-~
-48 0 1
-D0
-~
-~
-0 -1 4810
-D1
-~
-~
-0 -1 4814
-D3
-~
-~
-0 -1 4816
-S
-#4816
-Halfling plaza~
-	To the south is the Grey College of Magic. As you look through
-the windows of the building, you see lots of small tables and a large
-blackboard in the room. Hmmm...if you MUST gape like that, try to close your
-mouth just a bit!
-~
-48 0 1
-D0
-~
-~
-0 -1 4809
-D1
-~
-~
-0 -1 4815
-D3
-~
-~
-0 -1 4817
-S
-#4817
-Halfling plaza~
-	To the south is the Grey College of Magic. As you look through
-the windows of the building, you see lots of small tables and a large
-blackboard in the room. My, my - so big eyes for such a cute, little
-face.
-~
-48 0 1
-D0
-~
-~
-0 -1 4808
-D1
-~
-~
-0 -1 4816
-D3
-~
-~
-0 -1 4818
-S
-#4818
-Halfling plaza~
-	Beneath the dusty layer of halfling footprints, you barely make out
-the outlines of an abstract marble mosaic in white and blue; probably very
-beautiful when fully visible. To the south is the entrance to the Grey College
-of Magic. 
-~
-48 0 1
-D0
-~
-~
-0 -1 4807
-D1
-~
-~
-0 -1 4817
-D2
-~
-~
-0 -1 4822
-S
-#4819
-The entrance to the Bright College~
-	You're standing in an impressive archway, leading to one of the places
-where the halflings can study the art of magic.
-....i.e. if they believed in magic; so far the place hasn't had any graduates,
-but another reason why this is so is probably the extremely high
-death-rate amongst the students. A majestic tree towers before you.
-~
-48 0 1
-D0
-~
-~
-0 -1 4813
-D1
-~
-~
-0 -1 4811
-D3
-~
-~
-0 -1 4820
-S
-#4820
-The classroom of the Bright College~
-	The heavily bloodstained floor bears witness of a very recent massacre
-taking place here. Shocked pupils are putting back the knocked-over tables
-and scrubbing blood off the walls, still trembling and looking nervously 
-behind them now and again. To the east is the restroom of the teacher.
-~
-48 8 0
-D1
-~
-~
-0 -1 4819
-D3
-~
-~
-0 -1 4821
-S
-#4821
-The restroom of the Bright Wizard~
-	The air crackles crisply with the remnants of ancient, half-spoken
-spells as you enter. In the corner you notice a large bookshelf, filled with
-books of magic, halfling-size. You notice a sign on the wall, saying:
-"Search for the purity of perfection, not the perfection of purity".
-When you look through the windows, you can see the halfling plaza.
-~
-48 8 0
-D1
-~
-~
-0 -1 4820
-S
-#4822
-The entrance to the Grey College~
-	You're standing in an impressive archway, leading to one of the places
-where the halflings can study the art of magic.
-....i.e. if they believed in magic; so far the place hasn't had any graduates,
-but another reason why this is so is probably the extremely high
-death-rate amongst the students. A gigantic statue towers before you.
-~
-48 0 1
-D0
-~
-~
-0 -1 4818
-D1
-~
-~
-0 -1 4823
-S
-#4823
-The classroom of the Grey College~
-	The heavily bloodstained floor bears witness of a very recent massacre
-taking place here. Shocked pupils are putting back the knocked-over tables
-and scrubbing blood off the walls, still trembling and looking nervously 
-behind them now and again. To the east is the rest room of the teacher.
-~
-48 8 0
-D1
-~
-~
-0 -1 4824
-D3
-~
-~
-0 -1 4822
-S
-#4824
-The restroom of the Grey Wizard~
-	The air crackles crisply with the remnants of ancient, half-spoken
-spells as you enter. In the corner you notice a large bookshelf, filled with
-books of magic, halfling-size. You notice a sign on the wall, saying:
-"Search for the beauty of soul rather than the soul of beauty".
-When you look through the windows, you can see the halfling plaza.
-~
-48 8 0
-D3
-~
-~
-0 -1 4823
-S
-#4825
-Halfling plaza~
-	You stroll down the halfling plaza, humming "I'm going slightly mad",
-wondering if the halflings secret weapon is this atmosphere of total and utter
-peacefulness, driving intruders insane. That would explain why they, even
-unarmed, seem so happy and at ease!
-~
-48 0 1
-D0
-~
-~
-0 -1 4834
-D1
-~
-~
-0 -1 4826
-D2
-~
-~
-0 -1 4801
-S
-#4826
-Halfling plaza~
-	A sudden fit of paranoia hits you HARD!
-What if the halflings are testing your ability to resist mental attacks by
-overflowing you with all this happiness and tranquility?
-.....didn't you (in the corner of your eye) notice a group of halflings 
-dressed in white, making notes on small clipboards, mumbling and nodding 
-while watching you ?!?! North of here's the Weapon Shop.
-~
-48 0 1
-D0
-~
-~
-0 -1 4835
-D1
-~
-~
-0 -1 4827
-D2
-~
-~
-0 -1 4802
-D3
-~
-~
-0 -1 4825
-S
-#4827
-Halfling plaza~
-	Time seems to stop here as you fix your gaze on a point beneath the 
-ground and let your mind wander, considering all sorts of things e.g. if the 
-universe can be saddle shaped, yet infinite (doesn't shape imply finiteness?) 
-or if there's a being uglier than the Queen Spider...
-To the north is the famous armor shop.
-~
-48 0 1
-D0
-~
-~
-0 -1 4836
-D1
-~
-~
-0 -1 4828
-D2
-~
-~
-0 -1 4803
-D3
-~
-~
-0 -1 4826
-S
-#4828
-Halfling plaza~
-	To the north is a rather large building. As you look through
-the windows of the building, you see lots of small tables and a large
-blackboard in the room. Aren't you afraid someone might creep up on you 
-from behind as you stand there, totally consumed with staring?
-~
-48 0 1
-D1
-~
-~
-0 -1 4829
-D2
-~
-~
-0 -1 4804
-D3
-~
-~
-0 -1 4827
-S
-#4829
-Halfling plaza~
-	To the north is a rather large building. As you look through
-the windows of the building, you see lots of small tables and a large
-blackboard in the room. There's nothing like the "intelligent" look on 
-peoples faces when gaping, is there? Snap out of it!
-~
-48 0 1
-D1
-~
-~
-0 -1 4830
-D2
-~
-~
-0 -1 4805
-D3
-~
-~
-0 -1 4828
-S
-#4830
-Halfling plaza~
-	To your north is the entrance to the Celestial College of Magic.
-There is a big sign on the wall. When you look at the sign, it says :
-Welcome to the most powerful college in the world. Wow - talk about ego, folks!
-~
-48 0 1
-D0
-~
-~
-0 -1 4831
-D2
-~
-~
-0 -1 4806
-D3
-~
-~
-0 -1 4829
-S
-#4831
-The entrance to the Celestial College~
-	You're standing in an impressive archway, leading to one of the places
-where the halflings can study the art of magic.
-....i.e. if they believed in magic; so far the place hasn't had any graduates,
-but another reason why this is so, is probably the extremely high
-death-rate amongst the students. A rather huge, empty well stands before you.
-~
-48 0 1
-D2
-~
-~
-0 -1 4830
-D3
-~
-~
-0 -1 4832
-S
-#4832
-The classroom of the Celestial College~
-	The heavily bloodstained floor bears witness of a very recent massacre
-taking place here. Shocked pupils are putting back the knocked-over tables
-and scrubbing blood off the walls, still trembling and looking nervously 
-behind them now and again. To the east is the rest room of the teacher.
-~
-48 8 0
-D1
-~
-~
-0 -1 4831
-D3
-~
-~
-0 -1 4833
-S
-#4833
-The restroom of the Celestial Wizard~
-	The air crackles crisply with the remnants of ancient, half-spoken
-spells as you enter. In the corner you notice a large bookshelf, filled with
-books of magic, halfling-size. You notice a sign on the wall, saying:
-"Your goal is the state of oneness of being, not the being of oneness".
-When you look through the windows, you can see the halfling plaza.
-~
-48 8 0
-D1
-~
-~
-0 -1 4832
-S
-#4834
-The Food Store~
-	This is a very famous food store, known for it's tasty and fairly 
-cheap food. There's a sign on the wall, saying: "Welcome to the Food Store.
-Thieves will be killed, chopped into minced meat and sold at a favorable 
-price. Have a nice day!"
-~
-48 8 0
-D2
-~
-~
-0 -1 4825
-S
-#4835
-The Weapon Shop~
-	This establishment is well known for it's wide selection of small,
-but powerful weapons, skillfully crafted. A selection of weapons adorn the
-walls, admired by the constant flow of customers, paddling in and out.
-~
-48 8 0
-D2
-~
-~
-0 -1 4826
-S
-#4836
-The Armor Shop~
-	Looking at the selection of armor on the walls of the small shop,
-you wonder why it is so popular. Numerous people have said that this is an
-excellent shop, but you can't see the reason why!
-~
-48 8 0
-D2
-~
-~
-0 -1 4827
-S
-#4837
-The path to the Halfling Village~
-	You're standing on a path going east-west between the small, dark
-forest and the halfling village.
-~
-48 0 2
-D1
-~
-~
-0 -1 4801
-D3
-~
-~
 0 -1 4839
 S
 #4838
-The Entrance to the Halfling Village~
-	This is the eastern entrance of the Halfling Village. There is quite 
-a number of small footprints on the ground. The halflings are a hard working 
-and friendly people, who will trust you as a good friend.
+Main Room~
+    The main room of this place that isn't the Thieves' Guild is decorated with various trophies.
+None of which are worth any value.  More than likely, all of the trophies contain stories that
+involve phrases like "You had to be there," and "No really, I swear that's how it happened".  The
+rest of the room contains empty tables with stains of what one hopes is wine; but who knows?  The
+room continues to the south and west.
 ~
-48 0 1
-D1
-~
-~
-0 -1 4852
-D3
-~
-~
-0 -1 4806
-S
-#4839
-A small forest~
-	Standing in the dim light, under the many, heavy trees, you start to
-feel very uncomfortable about the situation. An urge to turn east and run
-into the security of the halfling plaza overwhelms you, but you calm 
-yourself enough to notice that the turning point is west of here, and the 
-road in the forest continues both in northern and southern directions.
-~
-48 1 3
-D0
+48 67108864 0
+D2
 ~
 ~
 0 -1 4840
-D1
-~
-~
-0 -1 4837
-D2
-~
-~
-0 -1 4864
 D3
 ~
 ~
-0 -1 3502
+0 -1 4837
 S
-#4840
-A small forest~
-	The feeling of being watched by something evil gets even stronger as
-you go deeper into the forest. Not much light is allowed to penetrate the
-web of leaf covered branches on the trees, towering high above you.
+#4839
+Main Room~
+    The main room of this place that isn't the Thieves' Guild is decorated with various trophies.
+None of which are worth any value.  More than likely, all of the trophies contain stories that
+involve phrases like "You had to be there," and "No really, I swear that's how it happened".  The
+rest of the room contains empty tables with stains of what one hopes is wine; but who knows?  The
+room continues to the south and west.
 ~
-48 1 3
+48 67108864 0
 D0
 ~
 ~
-0 -1 4841
-D2
+0 -1 4837
+D1
+~
+~
+0 -1 4840
+S
+#4840
+Main Room~
+    This portion of the main room is clear of clutter and holds far less trophies.  It might be for
+an important reason, such as to keep the door located on the eastern wall clear of clutter, or it
+might be kept clear for some other reason.  The door is relatively nice, but doesn't seem like it is
+locked, or even has a place for a lock.  The main room continues to the north and west.
+~
+48 67108864 0
+D0
+~
+~
+0 -1 4838
+D1
+~
+door~
+1 -1 4841
+D3
 ~
 ~
 0 -1 4839
 S
 #4841
-A small forest~
-	Walking silently and carefully on tiptoes through the leaves on the
-path going north-south, you try not to alarm any of the vast variety of 
-blood hungering monsters you can imagine hiding in the dark, waiting to rip 
-out YOUR throat just for the fun of it. To the north you barely see the 
-north-western corner of the forest in the dim light.
+Back Office~
+    The Back Office is decorated in various whites and blues.  The ceiling has been the phrase 
+"Middenheim was here!" etched into it, and various other phrases that can't be repeated are carved
+into walls around the room in the same carvewriting.  All the furniture seems new, and it is well
+lit.  Obviously this is where the head hancho stays, and can apparently be located for the entire
+day.  The only exit is back into the mysterious room to the west.
 ~
-48 1 3
+48 67108864 0
+D3
+~
+door~
+1 -1 4840
+S
+#4842
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting.  To the west is the Turning
+Point, to the east is the Halfling Village, and the forest continues to
+the north and south.
+~
+48 67108864 3
 D0
 ~
 ~
-0 -1 4842
-D2
-~
-~
-0 -1 4840
-S
-#4842
-The North-West Corner of the forest~
-	The impression of being painted bright purple hence attracting the
-attention of every single drooling, flesh eating monster with gigantic fangs 
-is so strong now you hardly dare breathing. It is well known that they prefer 
-hiding in badly lit corners, so this must be the perfect spot!
-Both the exit to the south and the one to the east seem very appealing to you.
-~
-48 1 3
+0 -1 4843
 D1
 ~
 ~
-0 -1 4843
+0 -1 4801
 D2
 ~
 ~
-0 -1 4841
+0 -1 4867
+D3
+~
+~
+0 -1 3502
 S
 #4843
-A small forest~
-	Shivering slightly, you try not to rustle the leaves as you move
-through them. The aura of evilness, surrounding this place, makes your
-throat feel very dry. Sensing danger everywhere makes you want to panic and
-run either west to the north-western corner of the forest, or east, just to
-get away.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.
 ~
-48 1 3
-D1
+48 67108864 3
+D0
 ~
 ~
 0 -1 4844
-D3
+D2
 ~
 ~
 0 -1 4842
 S
 #4844
-A small forest~
-	The darkness in the forest is so compact you have difficulties seeing
-anything even though you know the sun is shining brightly. You can't see any
-part of the sky; only the odd, dark greenish light which is what's left of the
-daylight after it being filtered down through the leaves.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.
 ~
-48 1 3
-D1
+48 67108864 3
+D0
 ~
 ~
 0 -1 4845
-D3
+D2
 ~
 ~
 0 -1 4843
 S
 #4845
-A small forest~
-	The spooky forest brings back memories of bedtime-stories your mother 
-used to tell you about man-eating creatures, lurking in the dark.
-...no wonder you left home at that young an age!
+Northwest Corner of a Small Forest~
+    The Northwest Corner of the Small Forest seems relatively empty.  
+Much like the rest of the forest, it seems the guards and patrols have
+done an excellent job at making sure the forest remains safe for travelers
+and passerbys.  The forest continues to the east, as well as to the south.
 ~
-48 1 3
+48 67108864 3
 D1
 ~
 ~
 0 -1 4846
-D3
+D2
 ~
 ~
 0 -1 4844
-D5
-~
-trapdoor~
-1 -1 4865
-E
-tree trees~
-There is a trapdoor on the tree.
-~
 S
 #4846
-A small forest~
-	A sudden rustle of leaves makes you spin around in a strangely jerking
-manner, as you attempt peering into the shadows. NO apparent enemy is in sight
-...but neither would a tap dancing moose be, as the veil of darkness conceals
-mostly anything further than a few inches away from your nose.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
 ~
-48 1 3
+48 67108864 3
 D1
 ~
 ~
@@ -918,13 +875,14 @@ D3
 0 -1 4845
 S
 #4847
-A small forest~
-	Walking as close to the center of the path (and hence as far from
-the trees towering on each side of it) as possible, you start singing 
-loudly to intimidate eventual assassins.
-...and boy, do YOU sound intimidating ?!?!
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
 ~
-48 1 3
+48 67108864 3
 D1
 ~
 ~
@@ -935,13 +893,14 @@ D3
 0 -1 4846
 S
 #4848
-A small forest~
-	You miss sitting in front of a cozy fire, drinking and joking with
-your friends somewhere safe! The sinister atmosphere makes you feel somewhat
-less the hero you boasted about being when you last visited the local inn.
-To the east is the north-eastern corner of the forest.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
 ~
-48 1 3
+48 67108864 3
 D1
 ~
 ~
@@ -952,20 +911,15 @@ D3
 0 -1 4847
 S
 #4849
-The North-East Corner of the forest~
-	The impression of being painted bright purple hence attracting the
-attention of every single drooling, flesh eating monster with gigantic fangs 
-is so strong now you hardly dare breathing. It is well known that they prefer 
-hiding in badly lit corners, so this must be the perfect spot!
-Both the exit to the south and the one to the west seem very appealing to you.
-North of here you notice a glade.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
 ~
-48 1 3
-D0
-~
-~
-0 -1 1901
-D2
+48 67108864 3
+D1
 ~
 ~
 0 -1 4850
@@ -975,57 +929,62 @@ D3
 0 -1 4848
 S
 #4850
-A small forest~
-	A touch of claustrophobia sneaks up on you in the dark: you briefly
-relive the horror and panic you felt as a child when you accidentally got 
-stuck in the chimney, playing "Orcs-attack-a-peaceful-village" with all
-your little friends.
-To the north is the north-eastern corner of the forest.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
 ~
-48 1 3
-D0
-~
-~
-0 -1 4849
-D2
-~
-~
-0 -1 4851
-S
-#4851
-A small forest~
-	The urge to shout "Are there any monsters hiding in the dark??"
-is overpowered by the fear of actually getting an answer! You just sneak on,
-trying to look as leaf colored as possible.
-~
-48 1 3
-D0
-~
-~
-0 -1 4850
-D2
-~
-~
-0 -1 4852
-S
-#4852
-A small forest~
-	The contrast between the halfling village and this place is almost
-tangible. This is the scariest place you've ever seen (or not seen) - your
-imagination makes the trees seem alive, reaching out with clawlike branches
-for your throat, as shadows are all you can make out in this darkness.
-To the west is the entrance to the halfling village. There is a King's Road
-at your east.
-~
-48 1 3
-D0
-~
-~
-0 -1 4851
+48 67108864 3
 D1
 ~
 ~
-0 -1 8901
+0 -1 4851
+D3
+~
+~
+0 -1 4849
+S
+#4851
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
+~
+48 67108864 3
+D1
+~
+~
+0 -1 4852
+D3
+~
+~
+0 -1 4850
+S
+#4852
+Northeast Corner of a Small Forest~
+    There is something different about the Northeast Corner of the Small
+Forest.  At first glanced, everything seemed to be more of the same.  However,
+the overgrown vines, trees, and foliage that normally prevents someone from
+traveling outside the paths seem to have been altered to the east.  Perhaps
+it is nothing; but perhaps further examination could reveal something.  The
+pathway continues to the south, as well as to the west.
+~
+48 67108864 3
+D0
+The forest yields to a peaceful glade to the north.
+~
+~
+0 -1 1901
+D1
+If you are careful enough, it seems as if you can actually
+enter this thicket of vines.
+~
+thicket~
+12 -1 4868
 D2
 ~
 ~
@@ -1033,16 +992,17 @@ D2
 D3
 ~
 ~
-0 -1 4838
+0 -1 4851
 S
 #4853
-A small forest~
-With your heart galloping away in your throat, making you feel like you'd
-choke on it if you coughed, you consider standing perfectly still for the
-rest of your life right on this spot, so nobody will notice your existence 
-and leave you be. Not much of a life, is it?
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.
 ~
-48 1 3
+48 67108864 3
 D0
 ~
 ~
@@ -1053,14 +1013,14 @@ D2
 0 -1 4854
 S
 #4854
-A small forest~
-	You calm yourself enough to force some blood back to your brain where 
-it's sorely needed. After all, nothing has attacked you yet, and there's not
-even the faintest trace of growling in the dark. Maybe you're panicking for
-nothing just because you can't see clearly...
-To the south is the south-eastern corner of the forest.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.
 ~
-48 1 3
+48 67108864 3
 D0
 ~
 ~
@@ -1071,94 +1031,102 @@ D2
 0 -1 4855
 S
 #4855
-The South-East Corner of the forest~
-	The impression of being painted bright purple hence attracting the
-attention of every single drooling, flesh eating monster with gigantic fangs 
-is so strong now you hardly dare breathing. It is well known that they prefer 
-hiding in badly lit corners, so this must be the perfect spot!
-Both the exit to the north and the one to the west seem very appealing to you.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.  The Halfling Village lies to the west, and the
+King's Road lies to the east.
 ~
-48 1 3
+48 67108864 3
 D0
 ~
 ~
 0 -1 4854
-D3
+D1
+The King's Road begins to the east.
+~
+~
+0 -1 8901
+D2
 ~
 ~
 0 -1 4856
+D3
+~
+~
+0 -1 4808
 S
 #4856
-A small forest~
-	The hero in you returns! Kicking up some dirt, you loudly swear to
-pulverize any monster who dares to blink at you, and spread it as fertilizer.
-With your head held high, you march boldly onwards!!
-To the east is the south-eastern corner of the forest.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.
 ~
-48 1 3
-D1
+48 67108864 3
+D0
 ~
 ~
 0 -1 4855
-D3
+D2
 ~
 ~
 0 -1 4857
 S
 #4857
-A small forest~
-	You grin to yourself as you consider chopping down a tree or two
-to make a decent fire. Heck, why not just put a torch to all this nice, dry
-firewood (disguised as gigantic, towering trees), letting the sun touch the
-ground for a change. The possibilities are endless, and you're the winner 
-no matter which one you choose.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.
 ~
-48 1 3
-D1
+48 67108864 3
+D0
 ~
 ~
 0 -1 4856
 D2
 ~
 ~
-0 -1 700
-D3
-~
-~
 0 -1 4858
-D5
-~
-trapdoor~
-1 -1 4867
-E
-tree trees~
-There is a trapdoor on the tree.~
 S
 #4858
-A small forest~
-	Feeling fairly relaxed with the situation, you tell yourself that the 
-only threat you face now is your imagination running wild, driving you insane
-with worrying. The darkness is overwhelming but not a threat to your health
-in itself.
+Southeast Corner of a Small Forest~
+    The Southeast Corner of the Small Forest looks similar to the rest of the
+small forest.  Overgrown brush blocks any attempt to travel further to the south.
+To the east, on the other hand, there seems to be a cliff, or crag of some sort.
+There may be a way around or means to travel that direction.  At the very least,
+it warrants some examination.  The path continues to the north, as well as to the
+west.
 ~
-48 1 3
-D1
+48 67108864 3
+D0
 ~
 ~
 0 -1 4857
+D1
+You can probably jump this crag with enough of a headstart.
+~
+crag~
+10 -1 4874
 D3
 ~
 ~
 0 -1 4859
 S
 #4859
-A small forest~
-	The hunters instinct takes over, making you sneak on with caution
-but without fear. As you start relying more on other senses than your vision,
-you realize keeping your head cold makes a world of difference; there really 
-is nothing to panic for.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
 ~
-48 1 3
+48 67108864 3
 D1
 ~
 ~
@@ -1169,39 +1137,36 @@ D3
 0 -1 4860
 S
 #4860
-A small forest~
-	Huge, dark brown trunks is all you can see around you as the dark-green
-light makes most shapes blurry. Every once in a while, one of the millions of
-leaves holding back the sun, falls down very gently like an enormous, dark
-snowflake, and makes you gasp in anxiety as it silently lands on your shoulder.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
 ~
-48 1 3
+48 67108864 3
 D1
 ~
 ~
 0 -1 4859
+D2
+~
+~
+0 -1 700
 D3
 ~
 ~
 0 -1 4861
-D5
-~
-trapdoor~
-1 -1 4866
-E
-tree trees~
-There is a trapdoor on the tree.
-~
 S
 #4861
-A small forest~
-	The feeling of being surrounded by something very evil in the 
-darkness gets stronger all the time. Your heart pounds madly beneath the
-armor as you walk against a heavy branch, and chop it in two without giving
-it a chance to fight back.
-To the west is the south west corner of the forest.
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
 ~
-48 1 3
+48 67108864 3
 D1
 ~
 ~
@@ -1212,103 +1177,396 @@ D3
 0 -1 4862
 S
 #4862
-The South-West corner of the forest~
-	The impression of being painted bright purple hence attracting the
-attention of every single drooling, flesh eating monster with gigantic fangs 
-is so strong now you hardly dare breathing. It is well known that they prefer 
-hiding in badly lit corners, so this must be the perfect spot!
-Both the exit to the north and the one to the east seem very appealing to you.
+Small Forest~
+    The small forest here seems about the same as usually.  There are hills, brush,
+vines, and various foliage blocking any passage to the north.  A large hill lies to
+the south.  At first, the bottom seems to simply be obscured by various plantation.
+Much like the rest of the forest.  When examined more closely, it looks like this
+brush was placed here for some reason.  It may require further examination.  The
+path continues to the east and west.
 ~
-48 1 3
-D0
-~
-~
-0 -1 4863
+48 67108864 3
 D1
 ~
 ~
 0 -1 4861
-S
-#4863
-A small forest~
-	Continuing through the darkness slowly with your hands stretched out
-in front of you, much like a sleepwalker, you wonder if you'll end up in a 
-wardrobe or maybe in the country where it's always winter and never Christmas.
-...didn't you catch a glimpse of a lamp post between the trees?
-To the south is the south-western corner of the forest.
-~
-48 1 3
-D0
-~
-~
-0 -1 4864
 D2
+There's a small, hidden tunnel at the base of the hill.  It
+looks tight, but you can probably crawl through it.
 ~
-~
-0 -1 4862
-S
-#4864
-A small forest~
-	A high-pitched noise, sounding like a scream, pierces the silence so
-abruptly your heart misses a couple of beats. It's impossible to establish if
-it came from a harmless owl, a slobbering hideous creature of the night, or 
-from an unlucky adventurer who was foolish enough to wander around in this 
-darkness and accidentally MET the previously mentioned creature!
-~
-48 1 3
-D0
-~
-~
-0 -1 4839
-D2
+tunnel~
+9 -1 4878
+D3
 ~
 ~
 0 -1 4863
 S
+#4863
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
+~
+48 67108864 3
+D1
+~
+~
+0 -1 4862
+D3
+~
+~
+0 -1 4864
+S
+#4864
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the east and west.
+~
+48 67108864 3
+D1
+~
+~
+0 -1 4863
+D3
+~
+~
+0 -1 4865
+S
 #4865
-The home of Averland~
-	You stumble into a hole in the ground which turns out to be the home
-of Averland the Hero. You don't doubt for a second that this title was given
-to him for a reason - the trophies on the walls: heads of adventurers who dared
-to challenge him, makes you pretty sure he's never lost a fight. Why he chose
-to live in this hole in the midst of this evil forest with close to no 
-furniture is somewhat of a mystery to you; the guy must LOVE danger!
+Southwest Corner of a Small Forest~
+    The Southwest Corner of the Small Forest seems relatively empty.  
+Much like the rest of the forest, it seems the guards and patrols have
+done an excellent job at making sure the forest remains safe for travelers
+and passerbys.  The forest continues to the north, as well as to the east.
 ~
-48 8 0
-D4
+48 67108864 3
+D0
 ~
 ~
-0 -1 4845
+0 -1 4866
+D1
+~
+~
+0 -1 4864
 S
 #4866
-The home of Ostermark~
-	You stumble into a hole in the ground which turns out to be the home
-of Ostermark the Hero. You don't doubt for a second that this title was given
-to him for a reason - the trophies on the walls: shields, taken from the 
-adventurers who dared to challenge him, makes you pretty sure he's never lost
-a fight. How he managed to get this amount of furniture crammed down into a 
-hole this size is somewhat of a mystery to you; the guy must LOVE loot!
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.
 ~
-48 8 0
-D4
+48 67108864 3
+D0
 ~
 ~
-0 -1 4860
+0 -1 4867
+D2
+~
+~
+0 -1 4865
 S
 #4867
-The home of Middenheim~
-	You stumble into a hole in the ground which turns out to be the home
-of Middenheim the Hero. You don't doubt for a second that this title was given
-to him for a reason - the trophies on the walls: swords, taken from the
-adventurers who dared to challenge him, makes you pretty sure he's never lost 
-a fight. The multitude of empty treasure coffins, scattered all around makes 
-you wonder: the guy must LOVE shopping!
+Small Forest~
+   The small forest was once a scary place among adventurers.  However,
+recent changes to the halfling's city guard has driven away most of the
+scarier monsters from the area.  These days, the small forest is a
+peaceful place to take a stroll or go hunting. The forest continues to 
+the north and south.
 ~
-48 8 0
+48 67108864 3
+D0
+~
+~
+0 -1 4842
+D2
+~
+~
+0 -1 4866
+S
+#4868
+Thicketed Pathway~
+    At first there is a bit of a struggle to clear through the vines, and brush.  However, after a bit
+of discomfort there is a path leading in multiple directions.  The pathway continues to the east.  To
+the west there is a thicket of vines that would take some maneuvering to get through.  However, it 
+definitely seems possible.
+~
+48 67108864 3
+D1
+~
+~
+0 -1 4869
+D3
+You should have no problem entering the thicket of vines to
+get back to the small forest.
+~
+thicket~
+12 -1 4852
+S
+#4869
+Thicketed Pathway~
+    The vines are annoying; but they are managable here.  However, the path seems to open up towards the
+southern side of the path.  A pleasant, and calming light radiates from the south and is, to say the
+least, very enticing.  To the west there appears to be nothing but a larger thicket of vines.
+~
+48 67108864 3
+D2
+~
+~
+0 -1 4870
+D3
+~
+~
+0 -1 4868
+S
+#4870
+Averland's Sanctuary~
+    The home of the legendary Averland, last remaining champion of the Halfling Goddess.  The sanctuary
+is illuminated with a calming light that is pleasant to the eyes.  The area is brustling with squirrels,
+rabbits, mice, and small birds.  There are also signs of larger wildlife throughout the area.  The
+sanctuary continues to the east and south.  There is a pathway, thicketed with vines, located to the
+north.
+~
+48 67108864 3
+D0
+~
+~
+0 -1 4869
+D1
+~
+~
+0 -1 4871
+D2
+~
+~
+0 -1 4872
+S
+#4871
+Averland's Sanctuary~
+    The home of the legendary Averland, last remaining champion of the Halfling Goddess.  The sanctuary
+is illuminated with a calming light that is pleasant to the eyes.  The area is brustling with squirrels,
+rabbits, mice, and small birds.  There are also signs of larger wildlife throughout the area.  The
+sanctuary continues to the south and west.
+~
+48 67108864 3
+D2
+~
+~
+0 -1 4873
+D3
+~
+~
+0 -1 4870
+S
+#4872
+Averland's Sanctuary~
+    The home of the legendary Averland, last remaining champion of the Halfling Goddess.  The sanctuary
+is illuminated with a calming light that is pleasant to the eyes.  The area is brustling with squirrels,
+rabbits, mice, and small birds.  There are also signs of larger wildlife throughout the area.  The
+sanctuary continues to the north and east.
+~
+48 67108864 3
+D0
+~
+~
+0 -1 4870
+D1
+~
+~
+0 -1 4873
+S
+#4873
+Averland's Sanctuary~
+    The home of the legendary Averland, last remaining champion of the Halfling Goddess.  The sanctuary
+is illuminated with a calming light that is pleasant to the eyes.  The area is brustling with squirrels,
+rabbits, mice, and small birds.  There are also signs of larger wildlife throughout the area.  The
+sanctuary continues to the north and west.
+~
+48 67108864 3
+D0
+~
+~
+0 -1 4871
+D3
+~
+~
+0 -1 4872
+S
+#4874
+A Hidden Pathway~
+    This pathway would be almost impossible to spot from a distance.  Especially considering the deep
+crag located to the west.  The trees here are especially dense; but there seems to be a well used
+footpath that cuts between them.  The pathway continues to the south.  The only other exit would be 
+across the crag to the west.
+~
+48 67108865 3
+D2
+~
+~
+0 -1 4875
+D3
+You can probably jump this crag with enough of a headstart.
+~
+crag~
+10 -1 4858
+S
+#4875
+A Hidden Pathway~
+    This pathway is completely obscured by trees, bushes, dead plantation, and roots.  After a bit of
+observation, however, a pathway can be found.  It seems the trail continues to the east, towards some
+sort of building.  The path also continues to the north.
+~
+48 1 3
+D0
+~
+~
+0 -1 4874
+D1
+~
+~
+0 -1 4876
+S
+#4876
+Outside the Home of Ostermark~
+    Amidst the dense pathways there is a medium sized clearing with a small home built on it.  In an
+area such as this, one would expect a shack or a temporary shelter.  However, there is an actual
+house built within the clearing.  There is no door, however, and above the open doorway there is a 
+symbol of a flying squirrel.  The entrance to the home lies to the south, and there is an obscured
+pathway located to the west.
+~
+48 1 3
+D2
+~
+~
+0 -1 4877
+D3
+~
+~
+0 -1 4875
+S
+#4877
+Home of Ostermark~
+    The inside of the house is relatively kept up.  Especially considering there are no actual doors
+or windows; but simply openings.  The room is decorated in reds and yellows, and it is pretty humbly
+decorated with a few furnishings.  It is mostly open space, with no walls large or tall enough to
+definitively separate one room from the next.  The only exit is out of the home, to the north.
+~
+48 67108864 0
+D0
+~
+~
+0 -1 4876
+S
+#4878
+Outside a Dusty Shack~
+    This area really only has one defining feature, and that is the dusty shack lying to the south.
+There is a large hill located to the north with a small tunnel at the base.  Also, the area isn't
+really filled with anything in particular.  There are some large animal footprints, leading out
+and around the shack as if something has been patrolling and keeping the area clear.  The only
+obvious exit is to the south.
+~
+48 524289 3
+D0
+You should have no issue crawling through the tunnel to get
+back to the small forest.
+~
+tunnel~
+9 -1 4862
+D2
+~
+~
+0 -1 4879
+S
+#4879
+A Bloody Shack~
+    The shack is filled with various bits and scraps of animals.  As if something had hunted,
+scavenged, or attacked anything that entered its territory and brought whatever pieces of its
+victim back to the shack to snack on.  It seems fairly obvious that this place is or was
+occupied by some sort of aggressive animal.  On the floor there is a metal trapdoor with a 
+lock on it.  The only obvious exit is north, outside of the shack.
+~
+48 1 0
+D0
+~
+~
+0 -1 4878
+D5
+~
+trapdoor~
+5 4803 4880
+S
+#4880
+A Well Furnished Hidden Chamber~
+    The primary room of this chamber is furnished with couches, chairs,
+books, candles, and even new copies of the Midgaard Herald.  Nonetheless,
+though well furnished, the room looks as if it has been poorly maintained,
+and a thin layer of dust has settled over many surfaces.  The only obvious
+exits are out the way you came in. 
+~
+48 1 0
 D4
 ~
+trapdoor~
+5 4803 4879
+S
+#4881
+Halfling Chapel~
+    The main chamber of the Halfling Chapel remains relatively unused.  Long ago the 
+Halfling Goddess disappeared, and much of her character has been shrouded in mystery.  The
+Averland is said to be the only living Halfling who still knows the true nature of the 
+missing goddess; but the Bright Wizard and Halfling Priest have spent a lifetime studying
+what little information of her can be found.  The main Altar lies to the east, and the 
+Main Street lies to the west.
 ~
-0 -1 4857
+48 67108864 0
+D1
+~
+~
+0 -1 4882
+D3
+~
+door~
+7 4801 4809
+S
+#4882
+Chapel Altar~
+    The Chapel Altar only really exists for aesthetics in modern day halfling society.  It
+is decorated with various halfling fruit pie wrappers and juice box containers.  The Altar
+currently appears to be housing romance novels and a small, multi-colored pool of solidified
+candle waxes.  Obviously, nobody was expecting guests...  There is a heavy, steel door with
+a giant lock on the floor behind the altar.  The only obvious exit is to the west.
+~
+48 67108864 0
+D3
+~
+~
+0 -1 4881
+D5
+~
+trapdoor~
+2 4805 4883
+S
+#4883
+Hidden Room Beneath the Altar~
+    This room is only remarkable only in the sense of how unbelievably unremarkable it is.  
+From the looks of the trapdoor and the staircase leading into this room, this place hasn't
+been visited in at least a decade or two.  However, the room itself is completely immaculate.
+There is not a spot of dust on the floor, and there are absolute no cracks, or markings
+anywhere in sight.  Save for one pedastal at the center of the room, there is no furniture or
+furnishing to be found.  Yet somehow, the room radiates with a soft, humming light.  The only
+way out is upwards, to the Altar.
+~
+48 67108864 0
+D4
+~
+trapdoor~
+2 4805 4882
 S
 #0
 $~
