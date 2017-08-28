@@ -2014,24 +2014,27 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
   }
 
   CHAR *vict, *next_vict;
-  bool uber_found = FALSE;
+  bool spawn_uber = TRUE;
   // dawn of the Ubers - Hemp 2017-07-07
   if (cmd == MSG_ZONE_RESET) {
-    if (chance(20)) {
+    if (chance(10)) {
       // pick an Uber to load
       uber_choice = number(0, NUMELEMS(ubers)-1);
-
-      uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
       uber_room = ubers[uber_choice][1];
+
       for( vict = world[real_room(uber_room)].people; vict; vict = next_vict ) {
-        // don't load if there already is one
+        // don't load if there already is one or a PC in room
         next_vict = vict->next_in_room;
-        if( V_MOB(vict) == V_MOB(uber_mob) ) uber_found = TRUE;
+        if( V_MOB(vict) == ubers[uber_choice][0] || !IS_NPC(vict) ) {
+          spawn_uber = FALSE;
+          break;
+        }
       }
-      if (!uber_found && uber_mob && uber_room) {
+      if (spawn_uber) {
+        uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
+        char_to_room(uber_mob, real_room(uber_room));
         sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
         send_to_room(buf, real_room(uber_room));
-        char_to_room(uber_mob, real_room(uber_room));
         sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
         do_quest(collector, buf, CMD_QUEST);
        }
