@@ -435,8 +435,8 @@ int uber_stone_dragon(CHAR *uber, CHAR *ch, int cmd, char *arg) {
     case 1:
     case 2:
     case 3: // damage and drop weapon/shield
-      vict = get_random_victim( uber );
-      if( vict ) {
+      vict = get_random_victim(uber);
+      if (vict) {
         act("$n seizes $N in a stone claw and brutally smashes $M into the cavern wall.",0,uber,0,vict,TO_NOTVICT);
         act("You seize $N in a stone claw and brutally smash $M into the cavern wall.",0,uber,0,vict,TO_CHAR);
         act("$n seizes you in a stone claw and brutally smashes you into the cavern wall.",0,uber,0,vict,TO_VICT);
@@ -458,14 +458,16 @@ int uber_stone_dragon(CHAR *uber, CHAR *ch, int cmd, char *arg) {
         }
 
         // create string messages to victim based on what was dropped
-        if( wield && shield ) {
+        if (wield && shield) {
           sprintf( buf, "The force of the blow causes you to drop your %s and %s in stunned shock.\n\r", OBJ_SHORT(wield), OBJ_SHORT(shield) );
-        } else if ( wield ) {
+        }
+        else if (wield) {
           sprintf( buf, "The force of the blow causes you to drop your %s in stunned shock.\n\r", OBJ_SHORT(wield) );
-        } else if ( shield ) {
+        }
+        else if (shield) {
           sprintf( buf, "The force of the blow causes you to drop your %s in stunned shock.\n\r", OBJ_SHORT(shield) );
         }
-        if ( wield || shield ) {
+        if (wield || shield) {
           send_to_char( buf, vict );
         }
         damage(uber, vict, number(700,1000), TYPE_UNDEFINED, DAM_NO_BLOCK);
@@ -476,13 +478,14 @@ int uber_stone_dragon(CHAR *uber, CHAR *ch, int cmd, char *arg) {
     case 5:
     case 6:
     case 7: // damage and stun
-      vict = get_random_victim( uber );
-      act("$n buffets $N mercilessly with a strong gust as it flaps its stony wings, before swiping at $M with a rocky claw.",0,uber,0,vict,TO_NOTVICT);
-      act("You buffet $N mercilessly with a strong gust as you flap your stony wings, before swiping at $M with a rocky claw.",0,uber,0,vict,TO_CHAR);
-      act("$n buffets you mercilessly with a strong gust as it flaps its stony wings, before swiping at you with a rocky claw.",0,uber,0,vict,TO_VICT);
-      damage(uber, vict, number(1000,1200), TYPE_UNDEFINED, DAM_NO_BLOCK);
-      GET_POS(vict) = POSITION_STUNNED;
-      WAIT_STATE( vict, PULSE_VIOLENCE * 5 );
+      if ((vict = get_random_victim(uber))) {
+        act("$n buffets $N mercilessly with a strong gust as it flaps its stony wings, before swiping at $M with a rocky claw.",0,uber,0,vict,TO_NOTVICT);
+        act("You buffet $N mercilessly with a strong gust as you flap your stony wings, before swiping at $M with a rocky claw.",0,uber,0,vict,TO_CHAR);
+        act("$n buffets you mercilessly with a strong gust as it flaps its stony wings, before swiping at you with a rocky claw.",0,uber,0,vict,TO_VICT);
+        damage(uber, vict, number(1000,1200), TYPE_UNDEFINED, DAM_NO_BLOCK);
+        GET_POS(vict) = POSITION_STUNNED;
+        WAIT_STATE(vict, PULSE_VIOLENCE * 5);
+      }
       break;
     case 8:
     case 9:
