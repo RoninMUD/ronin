@@ -368,7 +368,7 @@ int stone_dragon(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     for(vict=world[CHAR_REAL_ROOM(mob)].people;vict;vict=vict_n) {
       vict_n=vict->next_in_room;
       if(vict==mob) continue;
-      if(!IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM) continue;
+      if( ( !IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM ) || ( IS_NPC(vict) && V_MOB(vict)==21220 ) ) continue;
       act("You are crushed by huge boulders falling from the ceiling.",0,mob,0,vict,TO_VICT);
       damage(mob,vict,500,TYPE_UNDEFINED,DAM_NO_BLOCK);
     }
@@ -381,37 +381,53 @@ int stone_dragon(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 int uber_stone_dragon(CHAR *uber, CHAR *ch, int cmd, char *arg) {
   CHAR *vict,*vict_n;
   char buf[MAX_INPUT_LENGTH];
-  int i;
+  int i, statues;
   OBJ *shield = NULL, *wield = NULL;
+
+  if(cmd==MSG_DIE) {
+  // on boss death reward AQP
+    sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
+    send_to_room(buf, CHAR_REAL_ROOM(uber));
+    for(vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = vict_n)
+    {
+      vict_n = vict->next_in_room;
+      if ( IS_NPC(vict) || !IS_MORTAL(vict) ) continue;
+      int reward = 6;
+      sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward > 1 ? "points" : "point");
+      send_to_char(buf, vict);
+      vict->ver3.quest_points += reward;
+    }
+    return FALSE;
+  }
 
   if( cmd != MSG_MOBACT || !uber->specials.fighting) return FALSE;
 
-  // when it first sets its SHIELD bit it will stone 3 random people
-  // when it gets below 80% hp it loses SHIELD and stones 3 random people again
+  // when it gets below 80% hp it loses AGGNO and stones some people
+  // when it gets below 60% hp it sets SHIELD bit and stones some people
   if( IS_SET( uber->specials.act, ACT_AGGNO ) && ( ( 4*GET_MAX_HIT(uber)/5 ) > GET_HIT(uber) ) )
-  {   // if is <= 80% hp  and still has SHIELD
+  {   // if is <= 80% hp  and still has AGGNO
     REMOVE_BIT( uber->specials.act, ACT_AGGNO );
     sprintf( buf, "%s roars angrily, and a thundering crack of shattered stone echoes off the walls.\n\r", GET_SHORT(uber) );
     send_to_room(buf, CHAR_REAL_ROOM(uber) );
-    for( i = 0; i < 3; i++ ) {
+    statues = MIN ( count_mortals_room(uber, TRUE), number(1,4) );
+    for( i = 0; i < statues; i++ ) {
       vict = get_random_victim(uber);
       if( vict ) {
          spell_petrify( GET_LEVEL(uber), uber, vict, 0);
       }
     }
   }
-  else if( ( 7*GET_MAX_HIT(uber)/10 ) <= GET_HIT(uber) )
-  { // if is > 70% hp
-    if( !IS_SET( uber->specials.act, ACT_SHIELD ) ) {
-      sprintf( buf, "%s roars loudly, causing the stone of the cavern and the earth to shiver and quake at its power.\n\r", GET_SHORT(uber) );
-      send_to_room(buf, CHAR_REAL_ROOM(uber) );
-      for( i = 0; i < 3; i++ ) {
-        vict = get_random_victim(uber);
-        if( vict ) {
-           spell_petrify( GET_LEVEL(uber), uber, vict, 0);
-        }
+  else if( !IS_SET(uber->specials.act, ACT_SHIELD) && ( 3*GET_MAX_HIT(uber)/5 ) > GET_HIT(uber) )
+  { // if is < 60% hp and doesn't have SHIELD
+    SET_BIT( uber->specials.act, ACT_SHIELD );
+    sprintf( buf, "%s roars loudly, causing the stone of the cavern and the earth to shiver and quake at its power.\n\r", GET_SHORT(uber) );
+    send_to_room(buf, CHAR_REAL_ROOM(uber) );
+    statues = MIN ( count_mortals_room(uber, TRUE), number(2,5) );
+    for( i = 0; i < statues; i++ ) {
+      vict = get_random_victim(uber);
+      if( vict ) {
+        spell_petrify( GET_LEVEL(uber), uber, vict, 0);
       }
-      SET_BIT( uber->specials.act, ACT_SHIELD );
     }
   }
 
@@ -476,7 +492,7 @@ int uber_stone_dragon(CHAR *uber, CHAR *ch, int cmd, char *arg) {
       for( vict=world[CHAR_REAL_ROOM(uber)].people; vict; vict = vict_n ) {
         vict_n = vict->next_in_room;
         if( vict == uber ) continue;
-        if( ( !IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM ) || IS_NPC(vict) ) continue;
+        if( ( !IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM ) || ( IS_NPC(vict) && V_MOB(vict)==21219 ) ) continue;
         act("You are clipped by $n's enormous tail, which hits with the force of a cannonball.",0,uber,0,vict,TO_VICT);
         damage(uber, vict, number(500,750), TYPE_UNDEFINED, DAM_NO_BLOCK);
         GET_POS(vict) = POSITION_SITTING;
@@ -498,7 +514,7 @@ int boulder_maul(OBJ *maul, CHAR *ch, int cmd, char *arg)
   ch = maul->equipped_by;
 
   if(cmd==MSG_MOBACT  && ch && !IS_NPC(ch) && ch->specials.fighting) {
-    // damage spec, charge builds up in about 5.5 ticks of fighting
+  // damage spec, charge builds up in about 5.5 ticks of fighting
     vict = ch->specials.fighting;
     OBJ_SPEC(maul)++;
 
@@ -577,3 +593,4 @@ void assign_moria(void) {
   assign_obj(21213,moria_teleport_to_mykras);
   assign_obj(21228,boulder_maul);
 }
+

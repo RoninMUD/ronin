@@ -81,7 +81,7 @@ int p_emir(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
   if(!number(0,3)) {
     if(!(vict=get_random_victim(mob))) return FALSE;
-    if (vict!=mob->specials.fighting) spell_vanish (LEVEL_IMM,mob,vict,0);
+    if (vict!=mob->specials.fighting && ( GET_HIT(mob) > (1*GET_MAX_HIT(mob)/5) )) spell_vanish (LEVEL_IMM,mob,vict,0);
    }
 
 return FALSE;
@@ -354,12 +354,12 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
     case MSG_MOBACT:
       vict = uber->specials.fighting;
       if ( vict ) {
-        // at <50% life EO will fury the tank
-        if( !affected_by_spell( vict, SPELL_FURY ) && ( ( GET_MAX_HIT(uber)/2 ) > GET_HIT(uber) ) ) {
+        // at <70% life EO will fury the tank
+        if( !affected_by_spell( vict, SPELL_FURY ) && ( 7*( GET_MAX_HIT(uber)/10 ) > GET_HIT(uber) ) ) {
           do_say(uber, "A key skill in walking the path to enlightenment is channelling ones emotions.  You lack these skills, it is too easy to for your anger to control your actions.", CMD_SAY);
           spell_fury(50, vict, vict, 0);
         }
-        switch ( number( 1, 20 ) ) {
+        switch ( number( 1, 15 ) ) {
           case 1:
           case 2:
           case 3:
@@ -452,8 +452,20 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
         return TRUE;
       }
       break;
+    case MSG_DIE: // on boss death reward AQP
+      sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
+      send_to_room(buf, CHAR_REAL_ROOM(uber));
+      for(vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict)
+      {
+        next_vict = vict->next_in_room;
+        if ( IS_NPC(vict) || !IS_MORTAL(vict) ) continue;
+        int reward = 6;
+        sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward > 1 ? "points" : "point");
+        send_to_char(buf, vict);
+        vict->ver3.quest_points += reward;
+      }
+      break;
   }
-
   return FALSE;
 }
 

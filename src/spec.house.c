@@ -725,16 +725,32 @@ MirrorRoom (int room, CHAR *ch,int cmd,char *arg) {
 
 
 int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
-  CHAR *tch;
+  CHAR *tch, *vict, *next_vict;
   int drain = 0;
   OBJ *light;
   char buf[MAX_STRING_LENGTH];
   struct affected_type_5 af;
 
+  if (cmd==MSG_DIE) {
+  // on boss death reward AQP
+    sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
+    send_to_room(buf, CHAR_REAL_ROOM(uber));
+    for(vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict)
+    {
+      next_vict = vict->next_in_room;
+      if ( IS_NPC(vict) || !IS_MORTAL(vict) ) continue;
+      int reward = 6;
+      sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward > 1 ? "points" : "point");
+      send_to_char(buf, vict);
+      vict->ver3.quest_points += reward;
+    }
+    return FALSE;
+  }
+
   if( cmd!=MSG_MOBACT || chance(35) || !(tch = get_random_victim(uber)) ) return FALSE;
 
   switch (number(0,12)) {
-    case 0: 
+    case 0:
     case 1:
     case 2: // Steal light source
       act("$n swoops toward you and plunges your world into darkness.", FALSE,uber,0,tch,TO_VICT);
@@ -749,13 +765,13 @@ int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
         save_char(tch, NOWHERE);
         act("Light is suddenly and simply absent from your world.  Darkness washes over you, darker than a Black Worm's tookus on a moonless prairie night.", FALSE,uber,0,tch,TO_VICT);
       }
-      
+
       if (affected_by_spell( tch, SPELL_INFRAVISION )) {
         affect_from_char(tch, SPELL_INFRAVISION);
       }
       if (affected_by_spell( tch, SPELL_PERCEIVE )) {
         affect_from_char(tch, SPELL_PERCEIVE);
-      }      
+      }
       af.type = SPELL_BLINDNESS;
       af.location = APPLY_HITROLL;
       af.modifier = -8;
@@ -769,8 +785,8 @@ int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
     case 5: // Create an image
       act("A shadowy appendage coalesces, constricts around $N and forces $M to face the mirror.", FALSE,uber,0,tch,TO_NOTVICT);
       act("With a force of will you extend your presence into a lithe appendange which entwines $N and forces $M to face the mirror.", FALSE,uber,0,tch,TO_CHAR);
-      
-      if (!affected_by_spell( tch, SPELL_BLINDNESS )) { 
+
+      if (!affected_by_spell( tch, SPELL_BLINDNESS )) {
         act("A shadowy appendage forms before your eyes, binds your limbs and body, and forces you to face the mirror.", FALSE,uber,0,tch,TO_VICT);
         create_mirror_image(tch);
       }
@@ -778,7 +794,7 @@ int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
         act("Stricken with blindness, you have no warning before a force suddenly binds your limbs and shoves you against a wall.", FALSE,uber,0,tch,TO_VICT);
       }
       break;
-    case 6: 
+    case 6:
     case 7:
     case 8: // Cast a spell - poison smoke, cloud of confusion, or incendiary cloud
     send_to_room("An assault of sound, some nether language, echoes around the room.\n\r", CHAR_REAL_ROOM(uber));
@@ -805,7 +821,7 @@ int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
             if (IS_NIGHT) af.modifier--;
             af.bitvector  = 0;
             af.bitvector2 = 0;
-            affect_to_char(tch, &af);        
+            affect_to_char(tch, &af);
             break;
           }  // carry on to SPELL_POISON  if affected by SPELL_CLOUD_CONFUSION
         case 3:
@@ -822,7 +838,7 @@ int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
           break;
       }
       break;
-    case 9:  
+    case 9:
     case 10:
     case 11:
     case 12: // Drain and self-heal
