@@ -482,9 +482,9 @@ Apparition (CHAR *app, CHAR *ch,int cmd,char *arg) {
     act("$n opens her mouth in an unearthly wail...",FALSE,app,0,0,TO_ROOM);
     for (tch = world[CHAR_REAL_ROOM(app)].people; tch; tch = next) {
       next = tch->next_in_room;
-      if (IS_MORTAL(tch)) {
-     send_to_char("...and you feel your nerves failing you.\n",tch);
-     do_flee(tch,"",0);
+      if (IS_MORTAL(tch) && !affected_by_spell(tch, SPELL_TRANQUILITY)) {
+       send_to_char("...and you feel your nerves failing you.\n",tch);
+       do_flee(tch,"",0);
       }
     }
   }
