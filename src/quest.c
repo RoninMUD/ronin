@@ -767,7 +767,7 @@ Usage: qf award <char> amount (amount can be negative)\n\r\
       wizlog(buf, GET_LEVEL(ch)+1, 4);
       log_s(buf);
 
-      if (!IS_IMPLEMENTOR(ch)) {
+      if (!IS_SUPREME(ch)) {
         write_board(3097,"QF Award",buf);
       }
 
