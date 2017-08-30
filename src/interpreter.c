@@ -615,7 +615,7 @@ int special(CHAR *ch, int cmd, char *arg)
 #else
  #define LEVEL_OLC1 LEVEL_WIZ
  #define LEVEL_OLC2 LEVEL_ETE
- #define LEVEL_OLC3 LEVEL_IMP
+ #define LEVEL_OLC3 LEVEL_SUP
 #endif
 
 void assign_command_pointers ( void )
