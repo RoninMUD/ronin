@@ -378,9 +378,9 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
           case 6:
           case 7: // recruit someone to aid uber
             foe = get_random_victim_fighting(uber);
-            if ( vict != foe ) {
-              sprintf( buf, "Enlightenment takes balance, and parity bears peace; %s, become yin.", IS_NPC(foe) ? GET_SHORT(foe) : GET_NAME(foe) );
-              do_say( uber, buf, CMD_SAY);
+            if (foe && (vict != foe)) {
+              sprintf(buf, "Enlightenment takes balance, and parity bears peace; %s, become yin.", GET_DISP_NAME(foe));
+              do_say(uber, buf, CMD_SAY);
               stop_fighting(foe);
               hit(foe,vict,TYPE_UNDEFINED);
             }
@@ -389,7 +389,7 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
           case 9:
           case 10: // set evil to pray, neutral/holy to meditate
             foe = get_random_victim_fighting(uber);
-            if ( vict != foe && !IS_NPC(foe) ) {
+            if (foe && (vict != foe) && !IS_NPC(foe)) {
               sprintf( buf, "Nirvana awaits, you must only take the time to seek it.  Relax %s, look inward.", GET_NAME(foe) );
               do_say( uber, buf, CMD_SAY);
               GET_MANA(foe) -= 420;
