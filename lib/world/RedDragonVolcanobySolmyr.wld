@@ -87,6 +87,11 @@ chamber leading to a large, uneven plateau on the other side of
 the magma pit.
 ~
 175 557064 0
+D0
+The steep pit wall is rugged enough to support climbing.
+~
+wall~
+11 -1 17533
 D1
 A ridge runs along the chambers eastern wall.
 ~
@@ -133,6 +138,11 @@ A ridge runs along the chambers eastern wall.
 ~
 ~
 0 -1 17505
+D3
+It looks possible to jump from the ledge into the magma pit below.
+~
+ledge~
+10 -1 17533
 S
 #17507
 A Volcano Branch Pipe~
@@ -204,14 +214,14 @@ The cave is too dark to make out anything in particular.
 ~
 0 -1 17509
 E
-crack~
-The crack in the floor runs for about two meters.  It isn't
-particularly wide except for a hole on one side.
-~
-E
 hole~
 The hole is too small to crawl but it might be possible to
 wedge something into it.
+~
+E
+crack~
+The crack in the floor runs for about two meters.  It isn't
+particularly wide except for a hole on one side.
 ~
 S
 #17511
