@@ -7,7 +7,7 @@ Although a pretty big goblin, he does seem pretty docile.  He
 does not fear you, you question how much you can trust him.
 ~
 72 0 -200 Y
-50 -20 -2 4000d2+400 10d5+70
+50 -12 -2 4000d2+400 10d5+70
 15000 1000000
 8 8 1
 62 0 5d20+100 2
@@ -41,7 +41,7 @@ A giant of immense proportions is standing here.
 This nine foot giant towers above you, weighting to crush you like a bug!
 ~
 131114 402653312 -1000 Y
-55 -25 -10 100d100+20000 10d4+200
+55 -25 -10 100d100+20000 10d4+480
 500000 4500000
 8 8 1
 59 0 1d1+100 3
@@ -63,7 +63,7 @@ and hisses at you as you near her.  Although she seems pretty docile,
 she will protect her young at any cost!
 ~
 10 134228096 750 Y
-55 -30 -12 100d50+19000 100d2+50
+55 -20 -12 100d50+19000 100d2+50
 0 1000000
 8 8 2
 76 0 100d2+1000 3
@@ -90,7 +90,7 @@ appears to be interested in is chewing its boxes.
 1 2 20 26
 0 0 0 0
 K
-10000 0 0 0 0 0 0
+25000 0 0 0 0 0 0
 #3806
 massive spider~
 A Massive Spider~
@@ -99,14 +99,15 @@ A Massive Spider is standing here.
 This spider is not only giant, but it is massive!
 ~
 42 402653312 0 Y
-60 -40 10 500d4+19000 100d4+200
+60 -25 10 500d4+19000 100d4+200
 0 3000000
 8 8 1
-77 0 1d1+1 1
+77 0 1d1+1 2
 5 2 40 0
+10 5 5 0
 0 0 0 0
 K
-200000 0 0 0 0 0 0
+300000 3844 0 0 0 0 0
 #3807
 giant spider~
 A Giant Spider~
@@ -115,7 +116,7 @@ A Giant Spider is standing here.
 Although you may not describe it as massive.  It is, however, giant!
 ~
 42 0 0 Y
-55 -35 10 100d10+8000 30d5+90
+55 -15 10 100d10+8000 30d5+90
 0 1500000
 8 8 1
 77 0 1d1+1 1
@@ -136,7 +137,7 @@ he is the cause of it.  Standing just shy of seven feet tall, he glares down at 
 add your flesh to his already deformed body.
 ~
 131114 402915456 -1000 Y
-65 -45 -30 1000d2+26000 20d5+350
+65 -25 -30 1000d2+26000 20d5+350
 1 5000000
 8 8 1
 69 0 1d1+1 2
@@ -154,8 +155,8 @@ This short golden statue of a halfling stands here, holding his flintlock and da
 Just as you begin to observe him his hands seem to disappear, along with some 
 of your stuff!
 ~
-131082 679749760 0 Y
-50 -30 -20 50d6+9000 10d10+300
+10 679815296 0 Y
+50 -25 -20 50d6+9000 1d4+200
 1000000 4000000
 8 8 1
 3 0 1d1+100 1
@@ -172,8 +173,8 @@ You see a wooden statue of a short, fat gnome.  He bahs at you and looks
 rather annoyed that you are even here.  There is something strange about
 his mannerisms.
 ~
-131082 209717376 100 Y
-50 -30 -10 50d4+9000 10d4+100
+131082 209782912 100 Y
+50 -25 -10 50d4+9000 10d4+100
 1000000 4000000
 8 8 1
 1 0 50d4+5000 4
@@ -193,11 +194,13 @@ This short adamantine statue of a disgruntled dwarf stares back at you with his 
 He is obviously the meat shield of this rag tag group of tiny heroes.  Holding his halberd 
 tightly, a grin comes across his face as his gaze meets yours.
 ~
-131082 402925696 500 Y
+131082 402991232 500 Y
 50 -30 -40 50d12+15000 20d5+350
 1000000 4000000
 8 8 1
-6 0 1d1+100 0
+6 0 1d1+100 2
+4 3 20 0
+9 2 20 0
 0 1 0 0
 R
 511
@@ -211,11 +214,12 @@ A mithril statue of a dwarf stand here, ready to pound his enemies into submissi
 The mithril statue stands tall, an aura of righteousness flowing around him, you watch 
 as he holds his hammer and contemplates your next move. 
 ~
-10 402663552 1000 Y
+10 402729088 1000 Y
 50 -30 -35 50d8+12000 20d4+300
 1000000 4000000
 8 8 1
-2 0 50d4+5000 0
+2 0 50d4+5000 1
+7 2 50 0
 0 1 0 0
 K
 0 0 0 0 0 0 0

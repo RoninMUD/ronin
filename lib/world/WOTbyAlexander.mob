@@ -65,7 +65,7 @@ K
 #18705
 seeker~
 the Seeker~
-The Seeker is walking around tending his caravan.
+The Seeker is walking around, tending his caravan.
 ~
 The Seeker looks friendly, and smiles at you as you walk by.
 ~
@@ -82,14 +82,14 @@ guard queen member~
 a queen's guard~
 A memeber of the queen's guard is watching the gates to the city.
 ~
-  Long white collars hang down over his mail and plate, and his cloak 
-and undercoat are red. His conical helmet shines like silver, and thin red 
-streamers flutter beneath the head of his lance. A cage of steel bars 
-mask his face.
+  Long white collars hang down over his mail and plate, while his cloak 
+and undercoat have a bright red hue. His conical helmet shines like silver, 
+and thin red streamers flutter beneath the head of his lance. A cage of steel 
+bars mask his face.
 ~
 10 402653184 0 Y
 47 -15 -16 2d50+10000 5d5+210
-50000 2220000
+50000 2654321
 8 8 1
 7 0 4d4+500 0
 0 0 0 0
@@ -102,12 +102,12 @@ city guard~
 a city guard~
 A city guard is standing here, watching for signs of trouble.
 ~
-    An armed guard is wearing full armor painted in green and red. He keeps
+    An armed guard is wearing full armor, painted green and red. He keeps
 control of who enters the city.
 ~
 10 402653312 0 Y
-47 -11 -11 10d10+6000 5d30+200
-17500 2220000
+47 -15 -11 10d10+6000 5d30+200
+17500 2654321
 8 8 1
 4 0 3d3+300 0
 0 0 0 0
@@ -120,13 +120,13 @@ whitecloak~
 a Whitecloak~
 A Whitecloak is guarding the fortress.
 ~
-   The Whitecloak is wearing an armor polished to perfection with the 
-sunburst of the Children of the Light on the breast. A snow white cloak 
+  The Whitecloak is wearing armor, polished to perfection, with the 
+sunburst of the Children of the Light on the breast. A snow white cloak  
 hangs around his shoulders.
 ~
 10 402653184 800 Y
-47 -13 -14 10d10+12000 5d30+200
-20000 2220000
+47 -15 -14 10d10+12000 5d30+200
+20000 2654321
 8 8 1
 7 0 4d4+500 0
 0 0 0 0
@@ -139,11 +139,12 @@ city guard~
 a city guard~
 A city guard is standing here, watching for signs of trouble.
 ~
+    An armed guard is wearing full armor, painted green and red. He keeps
 control of who enters the city.
 ~
 10 402653184 0 Y
-47 -13 -11 10d10+12000 5d30+200
-17500 2220000
+47 -15 -11 10d10+12000 5d30+200
+17500 2654321
 8 8 1
 4 0 5d5+500 0
 0 0 0 0
@@ -156,11 +157,12 @@ city guard~
 a city guard~
 A city guard is standing here, watching for signs of trouble.
 ~
+    An armed guard is wearing full armor, painted green and red. He keeps
 control of who enters the city.
 ~
 10 402653184 0 Y
-47 -13 -11 10d10+12000 5d30+200
-17500 2220000
+47 -15 -11 10d10+12000 5d30+200
+17500 2654321
 8 8 1
 4 0 5d5+500 0
 0 0 0 0
@@ -173,11 +175,12 @@ city guard~
 a city guard~
 A city guard is standing here, watching for signs of trouble.
 ~
+    An armed guard is wearing full armor, painted green and red. He keeps
 control of who enters the city.
 ~
 10 402653184 0 Y
-47 -13 -11 10d10+12000 5d30+200
-17500 2220000
+47 -15 -11 10d10+12000 5d30+200
+17500 2654321
 8 8 1
 4 0 5d5+500 0
 0 0 0 0
@@ -190,11 +193,12 @@ city guard~
 a city guard~
 A city guard is standing here, watching for signs of trouble.
 ~
+    An armed guard is wearing full armor, painted green and red. He keeps
 control of who enters the city.
 ~
 10 402653184 0 Y
-47 -13 -11 10d10+12000 5d30+200
-17500 2220000
+47 -15 -11 10d10+12000 5d30+200
+17500 2654321
 8 8 1
 4 0 5d5+500 0
 0 0 0 0
@@ -207,11 +211,12 @@ city guard~
 a city guard~
 A city guard is standing here, watching for signs of trouble.
 ~
+    An armed guard is wearing full armor, painted green and red. He keeps
 control of who enters the city.
 ~
 10 402653184 0 Y
-47 -13 -11 10d10+12000 5d30+200
-17500 2220000
+47 -15 -11 10d10+12000 5d30+200
+17500 2654321
 8 8 1
 4 0 5d5+500 0
 0 0 0 0
@@ -224,11 +229,12 @@ city guard~
 a city guard~
 A city guard is standing here, watching for signs of trouble.
 ~
+    An armed guard is wearing full armor, painted green and red. He keeps
 control of who enters the city.
 ~
 10 402653184 0 Y
-47 -13 -11 10d10+12000 5d30+200
-17500 2220000
+47 -15 -11 10d10+12000 5d30+200
+17500 2654321
 8 8 1
 4 0 5d5+500 0
 0 0 0 0
@@ -241,11 +247,12 @@ city guard~
 a city guard~
 A city guard is standing here, watching for signs of trouble.
 ~
+    An armed guard is wearing full armor, painted green and red. He keeps
 control of who enters the city.
 ~
 10 402653184 0 Y
-47 -13 -11 10d10+12000 5d30+200
-17500 2220000
+47 -15 -11 10d10+12000 5d30+200
+17500 2654321
 8 8 1
 4 0 5d5+500 0
 0 0 0 0
@@ -253,102 +260,10 @@ R
 8
 K
 0 18705 0 0 0 0 0
-#18716
-tinker~
-a Tinker~
-A Tinker in colorful clothes is standing here.
-~
-  The Tinker is clothed in the colorful and patched garments.
-~
-10 32768 1000 Y
-20 19 0 10d10+1000 1d1+10
-30 10000
-8 8 1
-69 0 5d5+500 0
-0 0 0 0
-K
-0 0 0 0 0 0 0
-#18717
-tinker child~
-a Tinker child~
-A Tinker child is playing here.
-~
-  The Tinker child is running around playing with his friends. He wears
-the same bright colored clothes as the adults do.
-~
-10 32768 1000 Y
-10 19 0 10d10+300 1d1+0
-10 3000
-8 8 2
-69 0 5d5+500 0
-0 0 0 0
-K
-0 0 0 0 0 0 0
-#18718
-seeker~
-the Seeker~
-The Seeker is walking around tending his caravan.
-~
-The Seeker looks friendly, and smiles at you as you walk by.
-~
-8 32768 1000 Y
-30 19 0 10d10+2000 1d1+0
-100 100000
-8 8 1
-69 0 5d5+500 0
-0 0 0 0
-K
-0 0 0 0 0 0 0
-#18719
-tinker~
-a Tinker~
-A Tinker in colorful clothes is standing here.
-~
-  The Tinker is clothed in the colorful and patched garments.
-~
-10 32768 1000 Y
-20 19 0 10d10+1000 1d1+0
-30 10000
-8 8 1
-69 0 5d5+500 0
-0 0 0 0
-K
-0 0 0 0 0 0 0
-#18720
-tinker child~
-a Tinker child~
-A Tinker child is playing here.
-~
-  The Tinker child is running around playing with his friends. He wears
-the same bright colored clothes as the adults do.
-~
-10 32768 1000 Y
-10 19 0 10d10+300 1d1+0
-10 3000
-8 8 2
-69 0 5d5+500 0
-0 0 0 0
-K
-0 0 0 0 0 0 0
-#18721
-seeker~
-the Seeker~
-The Seeker is walking around tending his caravan.
-~
-The Seeker looks friendly, and smiles at you as you walk by.
-~
-8 32768 1000 Y
-30 19 0 10d10+2000 1d1+0
-100 100000
-8 8 1
-69 0 5d5+500 0
-0 0 0 0
-K
-0 0 0 0 0 0 0
 #18722
 luc man~
 Luc Mantear~
-Luc is standing here sharpening his blade.
+Luc is standing here, sharpening his blade.
 ~
 A tall man with dark reddish hair, Luc looks menacingly at you. He waers a brown
 traveling cloak over a well used plate armor. His boots are trimmed with fur
@@ -367,7 +282,7 @@ K
 #18723
 elyas man~
 Elyas Machera~
-Elyas is standing here seemingly unaware of you.
+Elyas is standing here, seemingly unaware of you.
 ~
 The man before you is in his 40s and grey is starting to show at the temples.
 What immediately strikes you about him, is his yellow eyes! What man has 
@@ -388,7 +303,7 @@ wolf~
 An angry Wolf~
 An angry wolf is crouching here, ready to pounce at you!
 ~
-The wolf is large, with thick gray fur. Several places on its body, the fur 
+  The wolf is large, with thick gray fur. In several places on its body, the fur 
 is missing and scars tell of previous fights. Teeth bared in a snarl, its
 menacing growl makes you think twice before attacking.
 ~

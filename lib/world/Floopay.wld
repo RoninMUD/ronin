@@ -849,11 +849,11 @@ D3
 0 -1 3847
 E
 curtain~
-This is a pristine curtain!
+This is a prestine curtain!
 ~
 E
 curtain~
-This is a prestine curtain!
+This is a pristine curtain!
 ~
 S
 #3849
@@ -1015,7 +1015,7 @@ trapdoor~
 D5
 ~
 wall~
-2 -1 3886
+2 3844 3886
 S
 #3859
 Bottom of the Dark Staircase~
@@ -1521,8 +1521,8 @@ point, it looks as if an army of monsters is climbing towards this position.  Th
 summit served as a last stand, one final heroic battle against overwhelming forces.
 It becomes apparent that this fountain tells a story of some brave adventurers.
 The world may be oblivious to their story, but this fountain tells some portion of
-their tale of bravery.  There is nothing above here but ceiling, which can practically
-be touched from this position.
+their tale of bravery.  There is nothing above here but ceiling, which seems to 
+have some sort of scribbling upon it.
 ~
 38 32776 0
 D5
@@ -1592,7 +1592,7 @@ escape whatever reality was being wrought outside.  The only exit is north.
 D0
 ~
 wall~
-1 -1 3874
+1 3844 3874
 S
 #3899
 A temporary name~

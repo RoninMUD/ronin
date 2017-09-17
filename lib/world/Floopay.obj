@@ -4,7 +4,7 @@ The Angelic Blade Azur~
 A dagger shaped like an angel is sitting here.~
 The Angelic Blade Azur glows with a blinding light as it is thrust forward into $V's heart!~
 5 216060226 24577
-63 4 8 10
+63 10 3 10
 15 50000 7500
 10
 X
@@ -16,7 +16,7 @@ $n feels the power of the heavens envelop $m as $e wields The Angelic Blade Azur
 $n feel the power of the heavens leave $m as $e remove The Angelic Blade Azur!~
 $n feels the power of the heavens leave $s as $e removes The Angelic Blade Azur!~
 A
-19 9
+19 7
 A
 18 5
 #3802
@@ -25,7 +25,7 @@ The Demonic Kris Jazr~
 A kris shaped like a demon is sitting here.~
 The Demonic Kris Jazr darkens as it is thrust into $V, consuming a portion of $s soul!~
 5 232820818 24577
-63 4 8 10
+67 10 3 10
 15 50000 7000
 10
 X
@@ -37,7 +37,7 @@ $n screams in agony as the pits of hell attempt to consume $m when $e wields The
 $n sigh in relief as the demons of hell release your soul once The Demonic Blade Jazr falls from your grasp.~
 $n sighs in relief as The Demonic Kris Jazr falls from $s grasp.~
 A
-19 9
+19 7
 A
 18 5
 #3803
@@ -46,7 +46,7 @@ A Flaming Adamantite Halberd~
 A large adamantite polearm is here, on fire!~
 $n slash $V, leaving a gaping cauterized wound!~
 26 176218369 8193
-334 10 4 3
+0 10 4 12
 31 250000 12500
 10
 X
@@ -117,7 +117,7 @@ Dragon Beetle Shell~
 The shell of a very large beetle is lying here.~
 ~
 9 168853824 513
-20 0 1078190080 135421454
+19 -1 -1 -1
 15 20000 5000
 25
 X
@@ -273,7 +273,7 @@ M
 ~
 ~
 A
-19 5
+19 10
 #3814
 watch gold~
 A Gold Watch~
@@ -415,7 +415,7 @@ The Hand of Max Knavy~
 A severed hand covered in needles is lying here, still twitching.~
 The Hand of Max Knavy clutches into a fist as $n swing$z at $V!~
 5 138471936 8193
-0 7 4 5
+3 7 4 5
 10 10 10
 25
 X
@@ -816,7 +816,7 @@ A chisel is lying here~
 18 524288 1
 0 0 0 0
 10 10 10
-10
+100
 X
 ~
 0 0 0
@@ -843,7 +843,7 @@ M
 ~
 ~
 #3846
-gold treasure~
+gold treasure stash coins~
 A large stash of coins~
 A large stash of coins is lying here, waiting to be claimed.~
 ~
@@ -860,7 +860,7 @@ M
 ~
 ~
 #3847
-gold stash~
+gold treasure salary~
 A small salary of gold~
 A small amount of gold is lying here.~
 ~
