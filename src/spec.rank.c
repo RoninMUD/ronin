@@ -210,8 +210,8 @@ These commands should not be necessary during normal operation.\n\r.";
 Herein lies a list of the best of the %s class seen among us\n\r\
 in most recent times.  Study them and strive to be as good as they.\n\r\n\r",pc_class_types[i+1]);
       send_to_char("\
-Name               |  Pts | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\r\
-==============================================================================\n\r",ch);
+Name               |  Pts  | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\r\
+===============================================================================\n\r",ch);
 
       for(j=0;j<10;j++) {
         if(rank_board[i][j].clan)
@@ -221,7 +221,7 @@ Name               |  Pts | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\
 
         days=(time(0)-rank_board[i][j].update_time)/SECS_PER_REAL_DAY;
         if(rank_board[i][j].ranking)
-          printf_to_char(ch,"%-19.19s| %4d |  %2d |  %1d | %4d | %4d | %-12.12s | %dd ago\n\r",
+          printf_to_char(ch,"%-19.19s| %5d |  %2d |  %1d | %4d | %4d | %-12.12s | %dd ago\n\r",
                   rank_board[i][j].name,
                   rank_board[i][j].ranking,
                   rank_board[i][j].level,
@@ -233,7 +233,7 @@ Name               |  Pts | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\
           send_to_char("None\n\r",ch);
       }
       send_to_char("\
-==============================================================================\n\r",ch);
+===============================================================================\n\r",ch);
     }
     return;
   }
@@ -243,22 +243,38 @@ Name               |  Pts | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\
 void update_rank_board(CHAR *ch) {
   int i,j,found=0,resort=0;
 
-  i=GET_CLASS(ch)-1;
-
-  for(j=0;j<15;j++) {
-    if(!strcmp(rank_board[i][j].name,GET_NAME(ch))) {
-      rank_board[i][j].ranking      =  ch->ver3.ranking;
-      rank_board[i][j].level        =  GET_LEVEL(ch);
-      rank_board[i][j].sc_level     =  ch->ver3.subclass_level;
-      rank_board[i][j].clan         =  ch->ver3.clan_num;
-      rank_board[i][j].hp           =  ch->specials.org_hit;
-      rank_board[i][j].mana         =  ch->specials.org_mana;
-      rank_board[i][j].update_time  =  time(0);
-      found=1;
-      resort=1;
+  /* search all boards and entries */
+  for(i=0;i<11;i++) {
+    for(j=0;j<15;j++) {
+      if(!strcmp(rank_board[i][j].name,GET_NAME(ch)) && i!=GET_CLASS(ch)-1) {
+        /* old entry: remove  */
+        strcpy(rank_board[i][j].name,"None");
+        rank_board[i][j].ranking       = 0;
+        rank_board[i][j].level         = 0;
+        rank_board[i][j].sc_level      = 0;
+        rank_board[i][j].hp            = 0;
+        rank_board[i][j].mana          = 0;
+        rank_board[i][j].update_time   = 0;
+        rank_board[i][j].clan          = 0;
+        resort=1;
+      } else if(!strcmp(rank_board[i][j].name,GET_NAME(ch)) && i==GET_CLASS(ch)-1) {
+        /* current entry: update */
+        rank_board[i][j].ranking      =  ch->ver3.ranking;
+        rank_board[i][j].level        =  GET_LEVEL(ch);
+        rank_board[i][j].sc_level     =  ch->ver3.subclass_level;
+        rank_board[i][j].clan         =  ch->ver3.clan_num;
+        rank_board[i][j].hp           =  ch->specials.org_hit;
+        rank_board[i][j].mana         =  ch->specials.org_mana;
+        rank_board[i][j].update_time  =  time(0);
+        found=1;
+        resort=1;
+      } 
     }
   }
 
+  i=GET_CLASS(ch)-1;
+
+  /* possible new entry */
   if(!found && ch->ver3.ranking>rank_board[i][14].ranking) {
     strcpy(rank_board[i][14].name,GET_NAME(ch));
     rank_board[i][14].ranking      =  ch->ver3.ranking;
@@ -276,6 +292,7 @@ void update_rank_board(CHAR *ch) {
     write_rank_board(i);
   }
 }
+
 
 /*
 Routine to rank a character - Ranger March 99
@@ -400,8 +417,8 @@ int rank_object(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 Herein lies a list of the best of the %s class seen among us\n\r\
 in most recent times.  Study them and strive to be as good as they.\n\r\n\r",pc_class_types[i+1]);
   send_to_char("\
-Name               |  Pts | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\r\
-==============================================================================\n\r",ch);
+Name               |  Pts  | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\r\
+===============================================================================\n\r",ch);
 
   for(j=0;j<10;j++) {
     if(rank_board[i][j].clan)
@@ -411,7 +428,7 @@ Name               |  Pts | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\
 
     days=(time(0)-rank_board[i][j].update_time)/SECS_PER_REAL_DAY;
     if(rank_board[i][j].ranking)
-      printf_to_char(ch,"%-19.19s| %4d |  %2d |  %1d | %4d | %4d | %-12.12s | %dd ago\n\r",
+      printf_to_char(ch,"%-19.19s| %5d |  %2d |  %1d | %4d | %4d | %-12.12s | %dd ago\n\r",
                 rank_board[i][j].name,
                 rank_board[i][j].ranking,
                 rank_board[i][j].level,
@@ -423,7 +440,7 @@ Name               |  Pts | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n\
       send_to_char("None\n\r",ch);
   }
   send_to_char("\
-==============================================================================\n\r",ch);
+===============================================================================\n\r",ch);
   if(GET_CLASS(ch)==i+1)
     printf_to_char(ch,"Your ranking .... %d.\n\r",ch->ver3.ranking);
   return TRUE;
