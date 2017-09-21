@@ -241,55 +241,60 @@ Name               |  Pts  | Lvl | Sc |  Hps | Mana | Clan         | Last Seen\n
 }
 
 void update_rank_board(CHAR *ch) {
-  int i,j,found=0,resort=0;
+  int i = 0, j = 0, found = 0, c = 0;
+  int resort[11] = {0};
+
+  c = GET_CLASS(ch)-1;
 
   /* search all boards and entries */
   for(i=0;i<11;i++) {
     for(j=0;j<15;j++) {
-      if(!strcmp(rank_board[i][j].name,GET_NAME(ch)) && i!=GET_CLASS(ch)-1) {
-        /* old entry: remove  */
-        strcpy(rank_board[i][j].name,"None");
-        rank_board[i][j].ranking       = 0;
-        rank_board[i][j].level         = 0;
-        rank_board[i][j].sc_level      = 0;
-        rank_board[i][j].hp            = 0;
-        rank_board[i][j].mana          = 0;
-        rank_board[i][j].update_time   = 0;
-        rank_board[i][j].clan          = 0;
-        resort=1;
-      } else if(!strcmp(rank_board[i][j].name,GET_NAME(ch)) && i==GET_CLASS(ch)-1) {
-        /* current entry: update */
-        rank_board[i][j].ranking      =  ch->ver3.ranking;
-        rank_board[i][j].level        =  GET_LEVEL(ch);
-        rank_board[i][j].sc_level     =  ch->ver3.subclass_level;
-        rank_board[i][j].clan         =  ch->ver3.clan_num;
-        rank_board[i][j].hp           =  ch->specials.org_hit;
-        rank_board[i][j].mana         =  ch->specials.org_mana;
-        rank_board[i][j].update_time  =  time(0);
-        found=1;
-        resort=1;
-      } 
+      if(!strcmp(rank_board[i][j].name,GET_NAME(ch))) {
+        if (c != i) {
+          /* old entry: remove  */
+          strcpy(rank_board[i][j].name,"None");
+          rank_board[i][j].ranking       = 0;
+          rank_board[i][j].level         = 0;
+          rank_board[i][j].sc_level      = 0;
+          rank_board[i][j].hp            = 0;
+          rank_board[i][j].mana          = 0;
+          rank_board[i][j].update_time   = 0;
+          rank_board[i][j].clan          = 0;
+          resort[i] = 1;
+        } else {
+          /* current entry: update */
+          rank_board[i][j].ranking      =  ch->ver3.ranking;
+          rank_board[i][j].level        =  GET_LEVEL(ch);
+          rank_board[i][j].sc_level     =  ch->ver3.subclass_level;
+          rank_board[i][j].clan         =  ch->ver3.clan_num;
+          rank_board[i][j].hp           =  ch->specials.org_hit;
+          rank_board[i][j].mana         =  ch->specials.org_mana;
+          rank_board[i][j].update_time  =  time(0);
+          found=1;
+          resort[i] = 1;
+        }
+      }
     }
   }
 
-  i=GET_CLASS(ch)-1;
-
   /* possible new entry */
-  if(!found && ch->ver3.ranking>rank_board[i][14].ranking) {
-    strcpy(rank_board[i][14].name,GET_NAME(ch));
-    rank_board[i][14].ranking      =  ch->ver3.ranking;
-    rank_board[i][14].level        =  GET_LEVEL(ch);
-    rank_board[i][14].sc_level     =  ch->ver3.subclass_level;
-    rank_board[i][14].clan         =  ch->ver3.clan_num;
-    rank_board[i][14].hp           =  ch->specials.org_hit;
-    rank_board[i][14].mana         =  ch->specials.org_mana;
-    rank_board[i][14].update_time  =  time(0);
-    resort=1;
+  if(!found && ch->ver3.ranking>rank_board[c][14].ranking) {
+    strcpy(rank_board[c][14].name,GET_NAME(ch));
+    rank_board[c][14].ranking      =  ch->ver3.ranking;
+    rank_board[c][14].level        =  GET_LEVEL(ch);
+    rank_board[c][14].sc_level     =  ch->ver3.subclass_level;
+    rank_board[c][14].clan         =  ch->ver3.clan_num;
+    rank_board[c][14].hp           =  ch->specials.org_hit;
+    rank_board[c][14].mana         =  ch->specials.org_mana;
+    rank_board[c][14].update_time  =  time(0);
+    resort[c] = 1;
   }
 
-  if(resort) {
-    resort_board(i);
-    write_rank_board(i);
+  for (i = 0; i < 11; i++) {
+    if(resort[i]) {
+      resort_board(i);
+      write_rank_board(i);
+    }
   }
 }
 
