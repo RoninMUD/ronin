@@ -74,7 +74,7 @@ A Boundary Warden Knife~
 A knife crafted for use by the Boundary Wardens~
 invalid~
 5 263168 1
-0 38 7 3
+0 7 4 10
 15 1400 6000
 33
 X
@@ -112,21 +112,19 @@ The Councilor's Headband~
 The First Councilor of Hartland's Headband~
 invalid~
 9 1024 17
-5 0 0 0
+11 -1 -1 -1
 10 10 35000
 45
 X
 ~
-1024 0 0
+512 0 0
 M
 You feel as if you can rule the world, as the headband graces your forehead.~
 $n feels like he can rule the world, as the headband graves $s forehead.~
 ~
 ~
 A
-17 12
-A
-19 3
+19 1
 A
 18 2
 #14206
@@ -135,46 +133,46 @@ Heart of the Land~
 A heart shaped ring.~
 ~
 9 0 3
-13 0 0 0
+7 -1 -1 -1
 10 10 50000
 34
 X
 ~
-0 0 0
+2560 0 0
 M
 You feel a ray of sunshine upon your face, and feel the warmth~
 $n feels a ray of sunshine on $s face, and seems to feel a little warmer.~
 ~
 ~
 A
-19 2
+19 0
 A
 12 30
 A
-53 9
+53 5
 #14207
 bounty ring land~
 Bounty of the Land~
 A rose shaped ring.~
 ~
 9 0 3
-13 0 0 0
+7 -1 -1 -1
 10 10 50000
 23
 X
 ~
-0 0 0
+2560 0 0
 M
 The ground beneath your feet suddenly turns to grass, and flowers sprout around your ankles.~
 The ground beneath $n's feet turns to grass, and flowers sprout around $s ankles.~
 ~
 ~
 A
-19 2
+19 0
 A
 13 30
 A
-52 9
+52 5
 B
 32768
 #14208
@@ -183,12 +181,12 @@ Councilor's Plate~
 A large black piece of Platemail with the Hartland Crest~
 ~
 9 1024 9
-38 0 0 0
+26 -1 -1 -1
 10 10 75000
 10
 X
 ~
-0 0 0
+1024 0 0
 M
 ~
 ~
@@ -197,7 +195,7 @@ M
 A
 18 3
 A
-19 3
+19 0
 A
 9 15
 #14209

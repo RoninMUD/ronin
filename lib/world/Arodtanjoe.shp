@@ -11,13 +11,13 @@
 0
 0
 0
-%s What keeper says if it doesn't have the item.~
+Sorry Friend, we dont have that in stock right now. ~
 %s What keeper says if seller doesn't have the item.~
-%s What keeper says if it doesn't buy that kind of item.~
-%s What keeper says if it doesn't have cash to buy an item.~
-%s What keeper says if buyer doesn't have the cash.~
-%s What keeper says after buyer gets item (Can include %d for amount).~
-%s What keeper says after it buys a sellers item (Can include %d for amount).~
+Im afraid i dont purchase that item. Try somewhere else.~
+I'm low on funds at the moment. Please come back later.~
+I'm afraid I dont purchase that item. Try somewhere else.~
+%s Thank you for your purchase.  Enjoy the equipment.~
+%s Thanks for the wares, ill update the stock.~
 0
 0
 14200

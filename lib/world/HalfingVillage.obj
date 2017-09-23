@@ -546,7 +546,7 @@ M
 ~
 ~
 A
-19 2
+19 4
 A
 12 25
 A
@@ -647,9 +647,9 @@ Platemail of Awesomeness~
 Some awesome platemail is lying here.  You should wear it.~
 ~
 9 524609 9
-25 -1 -1 -1
+28 -1 -1 -1
 10 400000 0
-3
+8
 X
 ~
 340 0 0
@@ -662,6 +662,8 @@ A
 13 200
 A
 52 50
+A
+18 6
 T
 120
 B
@@ -760,5 +762,72 @@ M
 ~
 ~
 ~
+#4838
+cachalot hide belt~
+A Cachalot Hide Belt~
+A hide belt is lying here.~
+~
+9 138985472 2049
+14 -1 -1 -1
+5 5000000 100000
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+T
+120
+#4839
+wristband white rhino rhinoceros bone wrist band~
+White Rhinoceros Bone Wristband~
+A wristband made of white rhino bones is lying here...~
+~
+9 140009472 4097
+12 -1 -1 -1
+1 6000000 75000
+4
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 2
+T
+120
+#4840
+robe queen cow bovine~
+The Cow Queen's Legendary Robe~
+A robe of bovine power radiates here.~
+~
+9 134742375 1037
+25 0 0 0
+25 1000000 10
+2
+X
+~
+5 0 0
+M
+~
+~
+~
+~
+A
+19 10
+A
+18 10
+A
+53 15
+T
+120
+B
+25206844
 #0
 $~
