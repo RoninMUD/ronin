@@ -5897,9 +5897,9 @@ is hungry or thirsty they will not regen as fast as normal.
 The maximum amount of mana points a player is able to regenerate while
 fighting is dependent on their class, and is capped as follows:
 
-Mage/Cleric - 120/round with all 3 ranks
-Bard/Commando - 100/round with all 3 ranks
-Ninja/Paladin/Anti-Paladin - 90/round with all 3 ranks
+Mage/Cleric - 120/tick with all 3 ranks
+Bard/Commando - 100/tick with all 3 ranks
+Ninja/Paladin/Anti-Paladin - 90/tick with all 3 ranks
 
 See also: AGE CONSTITUTION MEMBERSHIP CLUB HUNGER THIRST
 #
@@ -8206,7 +8206,7 @@ See Also: SUBCLASSES RONIN
 #
 DEBILITATE
 
-Subclass Ronin: Level 1 (Ninja)
+Subclass Mystic: Level 1 (Ninja)
 
 Usage       : cast 'debilitate' <victim>
 Accumulative: no

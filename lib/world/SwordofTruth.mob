@@ -41,7 +41,7 @@ vile things coming from the boundary.  He rules with an
 honest and just hand.
 ~
 33570890 134252712 -350 Y
-60 -35 -17 40d115+37000 47d28+350
+60 -35 -17 40d115+37000 47d28+175
 10000000 7000000
 8 8 1
 69 0 1d1+1 0
@@ -85,7 +85,7 @@ K
 0 0 0 0 0 0 0
 #14205
 fred gatekeeper ~
-Fred, the Gatekeeper ~
+Fred, the Gatekeeper~
 Fred, the Gatekeeper of Hartland stand vigilant.
 ~
 A tall man stands in front of you.  He stands vigilant, and watches
@@ -108,7 +108,7 @@ Hartland Town Patrol
 A grizzled veteran of the field, now protects his town from the evils beyond.
 ~
 74 268445696 250 Y
-55 -13 -6 50d40+8000 22d12+30
+55 -16 -6 50d40+8000 22d12+30
 100000 1250000
 8 8 1
 0 0 1d1+1 0
@@ -117,7 +117,7 @@ K
 0 0 0 0 0 0 0
 #14207
 gar beast long~
-A Long Tailed Gar ~
+A Long Tailed Gar~
 A Long Tailed Beast swats the flies that circle around it.
 ~
 A large beast stands before you. His wings spread out behind him
@@ -126,7 +126,7 @@ swishes behind him.  Large, red flies circle around his stomach,
 where the remains of some poor creature has been spread.
 ~
 536870922 0 200 Y
-38 2 15 1d1+5900 15d9+130
+38 -19 15 1d1+5900 15d9+130
 0 800000
 9 8 0
 0 4104 1d1+1 3
@@ -147,7 +147,7 @@ swishes behind him.  Large, red flies circle around his stomach,
 where the remains of some poor creature have been spread. 
 ~
 536870922 0 200 Y
-42 -3 15 1d1+7900 15d16+160
+42 -21 15 1d1+7900 15d16+160
 0 800000
 9 8 0
 0 4104 1d1+1 3
@@ -184,7 +184,7 @@ have been through a lot.  Her hazel eyes probe you, but she doesn't
 seem bothered by your presence.
 ~
 10 2176 350 Y
-55 -1 15 1d1+29500 38d20+150
+55 -24 15 1d1+29500 38d20+100
 5500000 3750000
 8 8 2
 4 0 50d50+500 3
@@ -207,7 +207,7 @@ moving; his guard is always up, and you have no chance of catching
 him off it.
 ~
 8 268437632 0 Y
-58 -4 14 1d1+36000 6d6+690
+58 -24 14 1d1+36000 6d6+490
 8500000 4000000
 8 8 1
 4 0 1d1+1 3
