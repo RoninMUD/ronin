@@ -2236,7 +2236,7 @@ void do_skin(struct char_data *ch, char *argument, int cmd)
   if(GET_CLASS(ch)==CLASS_NOMAD)
     skin->obj_flags.cost       = (corpse->obj_flags.cost_per_day)/100*number(105,110);
 
-  skin->obj_flags.timer        = 60;
+  skin->obj_flags.timer        = 120;
 
   skin->next = object_list;
   object_list = skin;
