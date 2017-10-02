@@ -886,6 +886,7 @@ void spell_blindness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     else
       af.duration  = 2;
     af.location  = APPLY_HITROLL;
+    af.modifier  = -4;
     af.bitvector = AFF_BLIND;
     af.bitvector2 = 0;
     affect_to_char(victim, &af);
