@@ -1,0 +1,222 @@
+#14200
+clerk~
+A General Store Clerk~
+A clerk stands behind the counter, eyeing you as you browse.
+~
+The Hartland general store clerk
+~
+10 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14201
+aide jason~
+Jason, the first councilor's aide~
+Jason, the first councilor's aide
+~
+A man in his early twenties, he was just appointed 
+to the position of "aide to the First Councilor." He
+is willing and very eager to prove his worth.
+~
+16394 2176 350 Y
+50 -23 -12 75d100+23000 34d34+130
+2000000 4500000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14202
+michael first councilor~
+Michael~
+Michael, the First Councilor of Hartland is standing here
+~
+Here stands the First Councilor of Hartland.   He is
+protecting his people from the monsters and other more
+vile things coming from the boundary.  He rules with an
+honest and just hand.
+~
+33570890 134252712 -350 Y
+60 -29 -17 40d115+37000 7d7+830
+10000000 7000000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14203
+servant ~
+First Councilor's Servant~
+A servant is here, moping the floors.
+~
+A servant for the First Councilor.
+~
+72 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14204
+boundary warden guard~
+Boundary Warden~
+Boundary Warden is standing here.
+~
+You see a man toughened by a long life of dedication.  He is well
+muscled, and looks ready to tear heads off if threatened.  He is covered
+in equipment designed for work in the shadows.  Rumor is, if a warden
+does not want to be seen, then he is not
+~
+16458 335579304 0 Y
+35 -14 -7 60d40+14000 6d4+350
+250000 1500000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+R
+17
+K
+0 0 0 0 0 0 0
+#14205
+fred gatekeeper ~
+Fred, the Gatekeeper~
+Fred, the Gatekeeper of Hartland stand vigilant.
+~
+A tall man stands in front of you.  He stands vigilant, and watches
+for any threat that could pose a danger to his town.  He watches
+you closely; but doesn't make any other movements.
+~
+74 134217888 0 Y
+28 -8 -9 25d85+10500 1d1+437
+212500 1750000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14206
+guard hartland~
+Hartland Guard~
+Hartland Town Patrol
+~
+A grizzled veteran of the field, now protects his town from the evils beyond.
+~
+74 268445696 250 Y
+55 -16 -6 50d40+8000 22d12+30
+100000 1250000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14207
+gar beast long~
+A Long Tailed Gar~
+A Long Tailed Beast swats the flies that circle around it.
+~
+A large beast stands before you. His wings spread out behind him
+and he glares down at you with his large, white fangs. A long tail
+swishes behind him.  Large, red flies circle around his stomach, 
+where the remains of some poor creature has been spread.
+~
+536870922 0 200 Y
+38 -18 15 1d1+5900 15d9+130
+0 800000
+9 8 0
+0 4104 1d1+1 3
+3 3 35 0
+4 2 25 0
+3 1 50 0
+0 0 0 128
+K
+600000 0 0 0 0 0 0
+#14208
+gar beast short~
+A Short Tailed Gar~
+A Short Tailed Beast swats the flies circling around it.
+~
+  A large beast stands before you.  His wings spread out behind him
+and he glares down at you with his large, white fangs.  A short tail
+swishes behind him.  Large, red flies circle around his stomach,
+where the remains of some poor creature have been spread. 
+~
+536870922 0 200 Y
+42 -21 15 1d1+7900 15d16+160
+0 800000
+9 8 0
+0 4104 1d1+1 3
+3 3 35 0
+4 2 25 0
+3 1 50 0
+0 0 0 128
+K
+1000000 0 0 0 0 0 0
+#14209
+Shar~
+Shar the Wisp~
+A Small Glowing Mass
+~
+A small glowing mass sits before you.  Its normal radiance seems
+to be fading.  The pace at which the radiance pulses also seems to be
+slowing. Its final moments are rough, so hopefully you can help.
+~
+10 671095936 0 Y
+1 19 0 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 9 0
+K
+0 0 0 0 0 0 0
+#14210
+Emma~
+Emma Brandstone~
+A tall woman is sweeping the floors
+~
+A tall woman stands before you.  Although she looks young, she seems to
+have been through a lot.  Her hazel eyes probe you, but she doesn't
+seem bothered by your presence.
+~
+10 2176 350 Y
+55 -24 15 1d1+29500 38d20+100
+5500000 3750000
+8 8 2
+4 0 50d50+500 2
+3 1 25 0
+1 6 30 187
+0 0 0 0
+R
+4
+K
+0 0 0 0 0 0 0
+#14211
+Chase~
+Chase Brandstone~
+A large burly man covered from head to toe in weapons.
+~
+A large man stand before you.  This is Chase, leader of the Boundary
+Wardens.  He stands straight, and upright.  His eyes are constantly
+moving; his guard is always up, and you have no chance of catching
+him off it.
+~
+8 268437632 0 Y
+58 -24 14 1d1+36000 6d6+490
+8500000 4000000
+8 8 1
+4 0 1d1+1 3
+4 2 45 0
+2 3 60 0
+3 1 50 0
+0 0 9 0
+R
+4
+K
+0 0 0 0 0 0 0
+#0
+$~

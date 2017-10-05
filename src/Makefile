@@ -151,6 +151,7 @@ OBJS_RONIN_SPEC = \
 	spec.sphinx.o \
 	spec.stable.o \
 	spec.swamp.o \
+	spec.swordoftruth.o \
 	spec.tarioncity.o \
 	spec.theldon.o \
 	spec.topknot.o \
@@ -176,7 +177,6 @@ OBJS_RONIN_SPEC = \
 OBJS_RONIN_SPEC_TEST = \
 	spec.digsite.o \
 	spec.luthienIV.o \
-	spec.swordoftruth.o \
 	spec.workbench.o \
 	spec.WOT.o
 
