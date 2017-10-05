@@ -41,7 +41,7 @@ vile things coming from the boundary.  He rules with an
 honest and just hand.
 ~
 33570890 134252712 -350 Y
-60 -35 -17 40d115+37000 47d28+175
+60 -29 -17 40d115+37000 7d7+830
 10000000 7000000
 8 8 1
 69 0 1d1+1 0
@@ -126,7 +126,7 @@ swishes behind him.  Large, red flies circle around his stomach,
 where the remains of some poor creature has been spread.
 ~
 536870922 0 200 Y
-38 -19 15 1d1+5900 15d9+130
+38 -18 15 1d1+5900 15d9+130
 0 800000
 9 8 0
 0 4104 1d1+1 3
@@ -187,8 +187,7 @@ seem bothered by your presence.
 55 -24 15 1d1+29500 38d20+100
 5500000 3750000
 8 8 2
-4 0 50d50+500 3
-2 5 35 0
+4 0 50d50+500 2
 3 1 25 0
 1 6 30 187
 0 0 0 0
