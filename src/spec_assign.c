@@ -124,13 +124,13 @@ void assign_red_dragons(void);
 void assign_tweefmanor(void);
 void assign_aquest_special(void);
 //void assign_wbw(void);
+void assign_swordoftruth(void);
 #ifdef TEST_SITE
 void assign_questyvaderIV(void);
 void assign_digsite(void);
 void assign_luthienIV(void);
 void assign_workbench(void);
 void assign_WOT(void);
-void assign_swordoftruth(void);
 #endif
 
 void assign_mobiles(void)
