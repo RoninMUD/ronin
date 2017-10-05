@@ -213,13 +213,13 @@ void assign_mobiles(void)
   assign_red_dragons();
   assign_tweefmanor();
   assign_aquest_special();
+  assign_swordoftruth();
 //  assign_wbw();
 #ifdef TEST_SITE
   assign_digsite();
   assign_luthienIV();
   assign_workbench();
   assign_WOT();
-  assign_swordoftruth();
 #endif
 }
 
