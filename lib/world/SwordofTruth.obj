@@ -264,8 +264,8 @@ belt warden~
 Boundary Warden Belt~
 A large belt with many loops and pouches~
 ~
-9 0 2049
-18 -1 -1 -1
+9 1024 2049
+10 -1 -1 -1
 10 10 8754
 45
 E
@@ -281,7 +281,7 @@ M
 ~
 ~
 A
-19 2
+19 1
 A
 18 2
 A
