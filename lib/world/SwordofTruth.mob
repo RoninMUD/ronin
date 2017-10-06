@@ -184,7 +184,7 @@ have been through a lot.  Her hazel eyes probe you, but she doesn't
 seem bothered by your presence.
 ~
 10 2176 350 Y
-55 -24 15 1d1+29500 38d20+100
+55 -24 15 1d1+29500 1d1+630
 5500000 3750000
 8 8 2
 4 0 50d50+500 2
@@ -206,7 +206,7 @@ moving; his guard is always up, and you have no chance of catching
 him off it.
 ~
 8 268437632 0 Y
-58 -24 14 1d1+36000 6d6+490
+58 -24 14 1d1+36000 6d6+680
 8500000 4000000
 8 8 1
 4 0 1d1+1 3
