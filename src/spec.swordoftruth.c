@@ -110,7 +110,7 @@ int sot_gatekeeper(CHAR *gatekeeper, CHAR *ch, int cmd, char *arg) {
 int sot_chase(CHAR *chase, CHAR *ch, int cmd, char *arg) {
   CHAR *vict, *next_vict;
 
-  if(cmd == MSG_MOBACT && chase->specials.fighting && chance(30))
+  if(cmd == MSG_MOBACT && chase->specials.fighting && chance(60))
   {
     if(chance(50)) {
       if(chase->equipment[WIELD] && V_OBJ(chase->equipment[WIELD]) == CHASE_MACE)
@@ -122,7 +122,7 @@ int sot_chase(CHAR *chase, CHAR *ch, int cmd, char *arg) {
           act("$n grabs a six bladed mace and spins around the room.",0,chase,0,0,TO_ROOM);
           act("The fine edges of six blades carve deeply into your flesh.",0,chase,0,vict,TO_VICT);
           act("$N screams as the blades of $r mace carve into $S flesh.",0,chase,0,vict,TO_NOTVICT);
-          damage(chase,vict,500,TYPE_UNDEFINED,DAM_SKILL);
+          damage(chase,vict,750,TYPE_UNDEFINED,DAM_SKILL);
         }
       }
     } else {
@@ -133,7 +133,7 @@ int sot_chase(CHAR *chase, CHAR *ch, int cmd, char *arg) {
         next_vict = vict->next_in_room;
         if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
         act("$n throws daggers as he spins and you are hit hard!",0,chase,0,vict,TO_VICT);
-        damage(chase,vict,600,TYPE_UNDEFINED,DAM_SKILL);
+        damage(chase,vict,900,TYPE_UNDEFINED,DAM_SKILL);
       }
     }
   }
@@ -146,7 +146,7 @@ int sot_emma(CHAR *emma, CHAR *ch, int cmd, char *arg) {
   char *missles[7] = {"a rolling pin","a frying pan","a loaf of bread","a kitchen knife","a dinner fork","a clay jar","a flower vase"};
   int missle;
 
-  if(cmd == MSG_MOBACT && emma->specials.fighting && chance(30))
+  if(cmd == MSG_MOBACT && emma->specials.fighting && chance(60))
   {
     vict = get_random_victim_fighting(emma);
     if (vict)
@@ -158,7 +158,7 @@ int sot_emma(CHAR *emma, CHAR *ch, int cmd, char *arg) {
       act(buf, FALSE, emma, NULL, vict, TO_NOTVICT);
       sprintf(buf, "You are stuck by %s!", missles[missle]);
       act(buf, FALSE, emma, NULL, vict, TO_VICT);
-      damage(emma,vict,400,TYPE_UNDEFINED,DAM_SKILL);
+      damage(emma,vict,600,TYPE_UNDEFINED,DAM_SKILL);
     }
   }
   return FALSE;
@@ -168,15 +168,15 @@ int sot_emma(CHAR *emma, CHAR *ch, int cmd, char *arg) {
 int sot_michael(CHAR *michael, CHAR *ch, int cmd, char *arg) {
   CHAR *vict, *next_vict;
 
-  if(cmd == MSG_MOBACT && michael->specials.fighting && chance(40))
+  if(cmd == MSG_MOBACT && michael->specials.fighting && chance(80))
   {
     act("$n shouts an oppressive order, causing your head to ache and your mind to wander.",0,michael,0,0,TO_ROOM);
     for(vict = world[CHAR_REAL_ROOM(michael)].people; vict; vict = next_vict)
     {
       next_vict = vict->next_in_room;
       if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-      damage(michael,vict,300,TYPE_UNDEFINED,DAM_SKILL);
-      WAIT_STATE(vict,PULSE_VIOLENCE*2);
+      damage(michael,vict,600,TYPE_UNDEFINED,DAM_SKILL);
+      WAIT_STATE(vict,PULSE_VIOLENCE*4);
     }
   }
   return FALSE;
@@ -194,8 +194,8 @@ int sot_gar(CHAR *gar, CHAR *ch, int cmd, char *arg) {
       act("$n grabs some bloodflies and throws them at you.",0,gar,0,vict,TO_VICT);
       act("$N is bitten by a bunch of small flies.",0,gar,0,vict,TO_NOTVICT);
       act("You are bitten by a bunch of small flies.",0,gar,0,vict,TO_VICT);
-      if(V_MOB(gar)==GAR_LONG_TAIL) damage(gar,vict,200,TYPE_UNDEFINED,DAM_SKILL);
-      else if(V_MOB(gar)==GAR_SHORT_TAIL) damage(gar,vict,100,TYPE_UNDEFINED,DAM_SKILL);
+      if(V_MOB(gar)==GAR_LONG_TAIL) damage(gar,vict,300,TYPE_UNDEFINED,DAM_SKILL);
+      else if(V_MOB(gar)==GAR_SHORT_TAIL) damage(gar,vict,300,TYPE_UNDEFINED,DAM_SKILL);
       //heal gar for 5%
       act("$n was healed!",0,gar,0,0,TO_ROOM);
       GET_HIT(gar)=MIN(GET_HIT(gar) + GET_MAX_HIT(gar)/20, GET_MAX_HIT(gar));

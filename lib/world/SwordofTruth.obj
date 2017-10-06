@@ -48,7 +48,7 @@ sleeves~
 Boundary Warden Sleeves~
 A worn pair of sleeves covered in mud~
 invalid~
-9 262144 257
+9 134479872 257
 7 -1 -1 -1
 5 15000 1200
 100
@@ -73,7 +73,7 @@ knife~
 A Boundary Warden Knife~
 A knife crafted for use by the Boundary Wardens~
 invalid~
-5 263168 1
+5 134480896 1
 0 7 4 10
 15 1400 6000
 33
@@ -111,7 +111,7 @@ headband~
 The Councilor's Headband~
 The First Councilor of Hartland's Headband~
 invalid~
-9 1024 17
+9 134218752 17
 11 -1 -1 -1
 10 10 35000
 45
@@ -132,7 +132,7 @@ heart ring land~
 Heart of the Land~
 A heart shaped ring.~
 ~
-9 0 3
+9 134217728 3
 7 -1 -1 -1
 10 10 50000
 34
@@ -145,17 +145,17 @@ $n feels a ray of sunshine on $s face, and seems to feel a little warmer.~
 ~
 ~
 A
-19 0
+19 1
 A
 12 30
 A
-53 5
+53 -2
 #14207
 bounty ring land~
 Bounty of the Land~
 A rose shaped ring.~
 ~
-9 0 3
+9 134217728 3
 7 -1 -1 -1
 10 10 50000
 23
@@ -168,11 +168,11 @@ The ground beneath $n's feet turns to grass, and flowers sprout around $s ankles
 ~
 ~
 A
-19 0
+19 1
 A
 13 30
 A
-52 5
+52 -2
 B
 32768
 #14208
@@ -180,7 +180,7 @@ plate councilors~
 Councilor's Plate~
 A large black piece of Platemail with the Hartland Crest~
 ~
-9 1024 9
+9 167830528 9
 26 -1 -1 -1
 10 10 75000
 10
@@ -196,12 +196,14 @@ A
 18 3
 A
 19 0
+A
+39 5
 #14209
 pouch small~
 A small concealable pouch~
 A small pouch sits on the ground almost blending into the background~
 null~
-15 0 1
+15 134217728 1
 20 0 0 0
 20 10 4
 25
@@ -218,7 +220,7 @@ knife~
 A large throwing knife~
 A large knife sits on the ground~
 $V crys out in pain as the knife hits $m~
-7 0 49153
+7 134217728 49153
 20 6 -1 -1
 1 70 70
 100
@@ -264,7 +266,7 @@ belt warden~
 Boundary Warden Belt~
 A large belt with many loops and pouches~
 ~
-9 1024 2049
+9 134218752 2049
 10 -1 -1 -1
 10 10 8754
 45
@@ -310,9 +312,9 @@ M
 ~
 ~
 A
-53 7
+53 4
 A
-52 7
+52 4
 A
 19 3
 B
