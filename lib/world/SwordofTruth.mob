@@ -23,7 +23,7 @@ to the position of "aide to the First Councilor." He
 is willing and very eager to prove his worth.
 ~
 16394 2176 350 Y
-50 -23 -12 75d100+23000 34d34+130
+50 -23 -12 75d100+23000 6d6+722
 2000000 4500000
 8 8 1
 69 0 1d1+1 0
@@ -49,7 +49,7 @@ honest and just hand.
 K
 0 0 0 0 0 0 0
 #14203
-servant ~
+servant~
 First Councilor's Servant~
 A servant is here, moping the floors.
 ~
@@ -74,7 +74,7 @@ in equipment designed for work in the shadows.  Rumor is, if a warden
 does not want to be seen, then he is not
 ~
 16458 335579304 0 Y
-35 -14 -7 60d40+14000 6d4+350
+55 -20 -13 60d40+14000 6d4+350
 250000 1500000
 8 8 1
 69 0 1d1+1 0
@@ -93,7 +93,7 @@ for any threat that could pose a danger to his town.  He watches
 you closely; but doesn't make any other movements.
 ~
 74 134217888 0 Y
-28 -8 -9 25d85+10500 1d1+437
+50 -8 -9 25d85+10500 1d1+437
 212500 1750000
 8 8 1
 69 0 1d1+1 0
@@ -103,13 +103,13 @@ K
 #14206
 guard hartland~
 Hartland Guard~
-Hartland Town Patrol
+The Hartland Town Patrol is on the move!
 ~
 A grizzled veteran of the field, now protects his town from the evils beyond.
 ~
 74 268445696 250 Y
-55 -16 -6 50d40+8000 22d12+30
-100000 1250000
+55 -14 -6 50d40+8000 4d4+170
+100000 1500000
 8 8 1
 0 0 1d1+1 0
 0 0 0 0
@@ -126,8 +126,8 @@ swishes behind him.  Large, red flies circle around his stomach,
 where the remains of some poor creature has been spread.
 ~
 536870922 0 200 Y
-38 -18 15 1d1+5900 15d9+130
-0 800000
+50 -18 15 1d1+5900 15d9+130
+0 1100000
 9 8 0
 0 4104 1d1+1 3
 3 3 35 0
@@ -147,8 +147,8 @@ swishes behind him.  Large, red flies circle around his stomach,
 where the remains of some poor creature have been spread. 
 ~
 536870922 0 200 Y
-42 -21 15 1d1+7900 15d16+160
-0 800000
+50 -21 15 1d1+7900 15d16+160
+0 1350000
 9 8 0
 0 4104 1d1+1 3
 3 3 35 0
@@ -216,6 +216,96 @@ him off it.
 0 0 9 0
 R
 4
+K
+0 0 0 0 0 0 0
+#14212
+guard hartland~
+Hartland Guard~
+The Hartland Town Patrol is on the move!
+~
+A grizzled veteran of the field, now protects his town from the evils beyond.
+~
+74 268445696 250 Y
+55 -14 -6 50d40+8000 4d4+170
+100000 1500000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14213
+guard hartland~
+Hartland Guard~
+The Hartland Town Patrol is on the move!
+~
+A grizzled veteran of the field, now protects his town from the evils beyond.
+~
+74 268445696 250 Y
+55 -14 -6 50d40+8000 4d4+170
+100000 1500000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14214
+guard hartland~
+Hartland Guard~
+The Hartland Town Patrol is on the move!
+~
+A grizzled veteran of the field, now protects his town from the evils beyond.
+~
+74 268445696 250 Y
+55 -14 -6 50d40+8000 4d4+170
+100000 1500000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14215
+guard hartland~
+Hartland Guard~
+The Hartland Town Patrol is on the move!
+~
+A grizzled veteran of the field, now protects his town from the evils beyond.
+~
+74 268445696 250 Y
+55 -14 -6 50d40+8000 4d4+170
+100000 1500000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14216
+guard hartland~
+Hartland Guard~
+The Hartland Town Patrol is on the move!
+~
+A grizzled veteran of the field, now protects his town from the evils beyond.
+~
+74 268445696 250 Y
+55 -14 -6 50d40+8000 4d4+170
+100000 1500000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14217
+guard hartland~
+Hartland Guard~
+The Hartland Town Patrol is on the move!
+~
+A grizzled veteran of the field, now protects his town from the evils beyond.
+~
+74 268445696 250 Y
+55 -14 -6 50d40+8000 4d4+170
+100000 1500000
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
 K
 0 0 0 0 0 0 0
 #0
