@@ -123,8 +123,8 @@ void assign_vagabond(void);
 void assign_red_dragons(void);
 void assign_tweefmanor(void);
 void assign_aquest_special(void);
-//void assign_wbw(void);
 void assign_swordoftruth(void);
+//void assign_wbw(void);
 #ifdef TEST_SITE
 void assign_questyvaderIV(void);
 void assign_digsite(void);
@@ -213,13 +213,13 @@ void assign_mobiles(void)
   assign_red_dragons();
   assign_tweefmanor();
   assign_aquest_special();
+  assign_swordoftruth();
 //  assign_wbw();
 #ifdef TEST_SITE
   assign_digsite();
   assign_luthienIV();
   assign_workbench();
   assign_WOT();
-  assign_swordoftruth();
 #endif
 }
 
