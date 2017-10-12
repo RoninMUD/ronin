@@ -1452,7 +1452,7 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
 
   for (i = 0; i < 4; i++) {
     // get an obj from our aq_objs table, assign it to the aqorder value[i]
-    while(count < 100) {
+    while(count < 200) {
       count++;
       pick = number(0, NUMELEMS(aq_objs) - 1);
 
@@ -1505,8 +1505,9 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
     act(buf,0,ordergiver,0,requester,TO_VICT);
     return TRUE;
   } else {
-    wizlog("WIZINFO: AQ Order object assignment counter exceeded 100.",LEVEL_IMP,5);
-    log_f("WIZINFO: AQ Order object assignment counter exceeded 100.");
+    wizlog("WIZINFO: AQ Order object assignment counter exceeded 200.",LEVEL_IMP,5);
+    log_f("WIZINFO: AQ Order object assignment counter exceeded 200.");
+    obj_to_room(aqorder, real_room(CENTRAL_PROCESSING));
     return FALSE;
   }
   return FALSE;
@@ -1525,7 +1526,7 @@ static void get_owner_name(OBJ *order, char *buf) {
     return;
   }
 
-  CAP(buf);
+  (void)CAP(buf);
 }
 
 
