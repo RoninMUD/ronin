@@ -135,8 +135,8 @@ int get_random_obj_eq (struct char_data *ch) ;
 struct char_data *get_random_victim( struct char_data *ch ) ;
 struct char_data *get_random_victim_fighting( struct char_data *ch ) ;
 
-struct char_data *get_random_target( struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool vict_canbe_ch ) ;
-struct char_data *get_random_target_fighting( struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount ) ;
+struct char_data *get_random_target( struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool vict_canbe_ch, bool see_imm ) ;
+struct char_data *get_random_target_fighting( struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool see_imm ) ;
 
 void move_eq_from_to (struct char_data *fch, struct char_data *tch) ;
 void move_inv_from_to (struct char_data *fch, struct char_data *tch) ;

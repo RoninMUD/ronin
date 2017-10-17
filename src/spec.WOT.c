@@ -1,7 +1,7 @@
 /* spec.WOT.c - Specs for Wheel of Time
 **
-** Written by Sephiroth for RoninMUD
-** Last Modification Date: JAN/2015
+** Written by Sephiroth and Shun for RoninMUD
+** Last Modification Date: OCT/2017
 */
 
 #include <stdio.h>
@@ -25,25 +25,16 @@
 #include "cmd.h"
 #include "spec_assign.h"
 
-/* Specs for hunters in WOT
-**
-** The hunter will have his exp amount increased
-** by 12.000 every minute if under 2.700.000.
+/*
+** Definitions
 */
-
-#define HUNTER 18702
-
-int wot_hunter(CHAR *hunter, CHAR *vict, int cmd, char *argument) {
-  if (!hunter) return FALSE;
-
-  if(cmd==MSG_TICK) {
-    if(GET_EXP(hunter) < 2700000) {
-      GET_EXP(hunter)+=12000;
-    }
-  }
-
-  return FALSE;
-}
+#ifdef TEST_SITE
+#define CHANCE_SAY 100
+#define CHANCE_EMO 100
+#else
+#define CHANCE_SAY 15
+#define CHANCE_EMO 10
+#endif
 
 /* Specs for merchants in WOT
 **
@@ -51,62 +42,298 @@ int wot_hunter(CHAR *hunter, CHAR *vict, int cmd, char *argument) {
 ** by 10.000 every minute if under 2.000.000.
 */
 
-#define MERCHANT 18700
+#define MERCHANT      18700
+#define MERCHANT_SIGH 2
 
-int wot_merchant(CHAR *merchant, CHAR *vict, int cmd, char *argument) {
-  if (!merchant) return FALSE;
+int wot_merchant(CHAR *mob, CHAR *vict, int cmd, char *argument) {
+  char buf[MIL] = { 0 };
+  size_t i = 0;
+
+  const char const *msg[] = {
+    "I wish the Aiel would reopen the traderoutes to the Waste. Grandpa always said that the silk trade was the most profitable.",
+    "Are you also heading to Tarvins Gap? I hear they are gathering an army there.",
+    "I wish I wasn't heading to Tarvins Gap. Thats where the Trollocs will invade first. They better hold off the invasion until I've unloaded my goods.",
+    "Trade is hard these days. All major cities are closed, and only a few are allowed to enter.",
+    "I have to make due trading in the smaller towns, while Gerarld has gotten his permit. Unfare I tell you!",
+    "I heard Tar Valon will be the first city to reopen their gates to normal trafic, but the city was still closed on my last visit."
+  };
+
+  if (!mob || !AWAKE(mob)) return FALSE;
+
+  if(cmd == MSG_TICK) {
+    if(GET_GOLD(mob) < 2000000) {
+      GET_GOLD(mob) += 10000;
+    }
+  }
+
+  if ((cmd == MSG_MOBACT) &&
+      !mob->specials.fighting &&
+      (vict = get_random_target(mob, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE)) &&
+      chance(CHANCE_EMO)) {
+    i = number(0, NUMELEMS(msg) - 1);
+
+    if (i == MERCHANT_SIGH) {
+      strncpy(buf, "sigh", sizeof(buf) - 1);
+      command_interpreter(mob, buf);
+    }
+
+    strncpy(buf, msg[i], sizeof(buf) - 1);
+    do_say(mob, buf, CMD_SAY);
+  }
+
+  return FALSE;
+}
+
+
+/* Specs for hunters in WOT
+**
+** The hunter will have his exp amount increased
+** by 12.000 every minute if under 2.700.000.
+*/
+
+#define HUNTER     18702
+
+int wot_hunter(CHAR *mob, CHAR *vict, int cmd, char *argument) {
+  char buf[MIL] = { 0 };
+  size_t i = 0;
+
+  const char const *msg[] = {
+    "To Tarvins Gap!",
+    "Stop following me! I will not lead you to the Horn of Valere. It's mine!",
+    "Hey! Stop following me!",
+    "Did you hear the news? Some army has made landfall in Ebu Dar! I'm heading north, that's for sure!"
+  };
+
+
+  if (!mob || !AWAKE(mob)) return FALSE;
 
   if(cmd==MSG_TICK) {
-    if(GET_GOLD(merchant) < 2000000) {
-      GET_GOLD(merchant) += 10000;
+    if(GET_EXP(mob) < 2700000) {
+      GET_EXP(mob)+=12000;
+    }
+  }
+
+  if ((cmd == MSG_MOBACT) &&
+      !mob->specials.fighting &&
+      (vict = get_random_target(mob, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE))) {
+
+    if (chance(CHANCE_SAY)) {
+      i = number(0, NUMELEMS(msg) - 1);
+      strncpy(buf, msg[i], sizeof(buf) - 1);
+      do_say(mob, buf, CMD_SAY);
     }
   }
 
   return FALSE;
 }
 
-/* Spec for all armies in WOT
-** 400 base damage single target, 10% chance
-** 300 base damage room spec, 14.2% chance
-** Both damages can be mitigated(to a degree) by having low armor
+
+/* Specs for tinker child in WOT
+**
+** The tinker child only has flavor text.
 */
 
-#define ARMY_START 18722
-#define ARMY_END   18733
+#define TINKER      18704
 
-int wot_army(CHAR *army, CHAR *vict, int cmd, char *argument) {
-  int dam = 0;
-  CHAR* next_vict = NULL;
+int wot_tinker(CHAR *mob, CHAR *vict, int cmd, char *argument) {
+  char buf[MIL] = { 0 };
+  size_t i = 0;
 
-  if (!army || !army->specials.fighting || (cmd != MSG_MOBACT)) return FALSE;
+  static const char const *msg[] = {
+    "Do you follow the way of the leaf? I never hit anybody. Carl did once and father almost abandoned him in Camelyn!",
+    "Hello!",
+    "You're weird!"
+  };
 
-  if (chance(10)) {  // 10% chance
+  if (!mob || !AWAKE(mob)) return FALSE;
 
-    vict = get_random_victim(army);
+  if ((cmd == MSG_MOBACT) &&
+      !mob->specials.fighting &&
+      (vict = get_random_target(mob, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE))) {
 
-    if (vict) {
-      act("A cavalry charge flanks you and hits you hard, making you fall to the ground.",0,army,0,vict,TO_VICT);
-      act("You charge $N and make $M fall to the ground.",0,army,0,vict,TO_CHAR);
-      act("A cavalry charge flanks $N and makes $M fall to the ground.",0,army,0,vict,TO_NOTVICT);
+    if (chance(CHANCE_SAY)) {
+      i = number(0, NUMELEMS(msg) - 1);
+      strncpy(buf, msg[i], sizeof(buf) - 1);
+      do_say(mob, buf, CMD_SAY);
+    }
 
-      dam = MAX(400 + GET_AC(vict), 200);  // Having less (better) armor makes the attack do less damage. Having positive armor value increases it
-      damage(army,vict,dam,TYPE_UNDEFINED,DAM_PHYSICAL);
+    if (chance(CHANCE_EMO)) {
+      switch (number(0,4)) {
+      case 0:
+        snprintf(buf, sizeof(buf) - 1, "point %s", GET_NAME(vict));
+        break;
+      case 1:
+        strncpy(buf, "dance", sizeof(buf) - 1);
+        break;
+      case 2:
+        snprintf(buf, sizeof(buf) - 1, "smile %s", GET_NAME(vict));
+        break;
+      case 3:
+        strncpy(buf, "tantrum", sizeof(buf) - 1);
+        break;
+      case 4:
+      default:
+        strncpy(buf, "giggle", sizeof(buf) - 1);
+        break;
+      };
 
-      GET_POS(vict) = POSITION_SITTING;
+      command_interpreter(mob, buf);
     }
   }
 
-  if (chance(15)) {  // 15% chance
+  return FALSE;
+}
 
-    act("A large volley of arrows rain down all around you.",0,army,0,0,TO_ROOM);
 
-    for(vict = world[CHAR_REAL_ROOM(army)].people; vict; vict = next_vict) {
+/* Specs for Seeker in WOT
+**
+** Seeker only has flavor text.
+*/
 
-      next_vict = vict->next_in_room;
+#define SEEKER      18705
 
-      if((vict != army) && IS_MORTAL(vict)) {
-        dam = MAX(300 + GET_AC(vict), 100);  // Having less (better) armor makes the attack do less damage. Having positive armor value increases it
-        damage(army,vict,dam,TYPE_UNDEFINED,DAM_PHYSICAL);
+int wot_seeker(CHAR *mob, CHAR *vict, int cmd, char *argument) {
+  char buf[MIL] = { 0 };
+  size_t i = 0;
+
+  const char const *msg[] = {
+    "Greetings stranger! Do you know the song?",
+    "Nobody remembers the song, but one day we will find it!",
+    "Welcome to our camp strangers. Please sit down and rest your feet while we get to know each other."
+  };
+
+  if (!mob || !AWAKE(mob)) return FALSE;
+
+  if ((cmd == MSG_MOBACT) &&
+      !mob->specials.fighting &&
+      (vict = get_random_target(mob, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE))) {
+
+    if (chance(CHANCE_SAY)) {
+      i = number(0, NUMELEMS(msg) - 1);
+      strncpy(buf, msg[i], sizeof(buf) - 1);
+      do_say(mob, buf, CMD_SAY);
+    }
+
+    if (chance(CHANCE_EMO)) {
+      buf[0] = '\0';
+
+      switch (number(0,3)) {
+      case 0:
+        snprintf(buf, sizeof(buf) - 1, "greet %s", GET_NAME(vict));
+        break;
+      case 1:
+        if ((vict = get_ch(TINKER, ROOM, CHAR_REAL_ROOM(mob)))) {
+          snprintf(buf, sizeof(buf) - 1, "ruffle %s", GET_NAME(vict));
+        }
+        break;
+      case 2:
+        snprintf(buf, sizeof(buf) - 1, "smile %s", GET_NAME(vict));
+        break;
+      case 3:
+      default:
+        /* handled by failsafe check later */
+        break;
+      };
+
+      /* hum if no other command set */
+      if (!buf[0]) {
+        strncpy(buf, "hum", sizeof(buf) - 1);
+      }
+
+      command_interpreter(mob, buf);
+    }
+  }
+
+  return FALSE;
+}
+
+
+/* Specs for cityguards in WOT
+**
+** The tinker child only has flavor text.
+*/
+
+#define GUARD_QUEEN      18706
+#define GUARD_1          18707
+#define GUARD_2          18709
+#define GUARD_3          18710
+#define GUARD_4          18711
+#define GUARD_5          18712
+#define GUARD_6          18713
+#define GUARD_7          18714
+#define GUARD_8          18715
+
+int wot_guard(CHAR *mob, CHAR *vict, int cmd, char *argument) {
+  char buf[MIL] = { 0 };
+  size_t i = 0;
+
+  static const char const *msg[] = {
+    "Halt! This city is closed for foreigners for the time being.",
+    "Hello travellers! The city is currently closed for foreigners.",
+    "Hold on strangers! We want no foreigners in the city at the moment. The gates are closed!"
+  };
+
+  if (!mob || !AWAKE(mob)) return FALSE;
+
+  if ((cmd == MSG_MOBACT) &&
+      (vict = get_random_target(mob, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE))) {
+
+    if (chance(CHANCE_SAY)) {
+      i = number(0, NUMELEMS(msg) - 1);
+      strncpy(buf, msg[i], sizeof(buf) - 1);
+      do_say(mob, buf, CMD_SAY);
+    }
+
+    if (chance(CHANCE_EMO)) {
+      snprintf(buf, sizeof(buf) - 1, "peer %s", GET_NAME(vict));
+      command_interpreter(mob, buf);
+    }
+  }
+
+  return FALSE;
+}
+
+
+/* Specs for whitecloak in WOT
+**
+** Whitecloak only has flavor text
+*/
+
+#define WHITECLOAK     18708
+
+int wot_whitecloak(CHAR *mob, CHAR *vict, int cmd, char *argument) {
+  char buf[MIL] = { 0 };
+  size_t i = 0;
+
+  const char const *msg_fight[] = {
+    "Die Darkfriend!",
+    "I sense the evil in you! Confess!",
+    "I will get the truth from you in the end!"
+  };
+
+  const char const *msg_notfight[] = {
+    "Do you walk in the light?",
+    "Do you fear the light?"
+  };
+
+
+  if (!mob || !AWAKE(mob)) return FALSE;
+
+  if ((cmd == MSG_MOBACT) &&
+      (vict = get_random_target(mob, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE))) {
+
+    if (mob->specials.fighting) {
+      if (chance(2 * CHANCE_SAY)) {
+        i = number(0, NUMELEMS(msg_fight) - 1);
+        strncpy(buf, msg_fight[i], sizeof(buf) - 1);
+        do_say(mob, buf, CMD_SAY);
+      }
+    }
+    else {
+      if (chance(CHANCE_SAY)) {
+        i = number(0, NUMELEMS(msg_notfight) - 1);
+        strncpy(buf, msg_notfight[i], sizeof(buf) - 1);
+        do_say(mob, buf, CMD_SAY);
       }
     }
   }
@@ -114,12 +341,12 @@ int wot_army(CHAR *army, CHAR *vict, int cmd, char *argument) {
   return FALSE;
 }
 
+
 /* Specs for Elyas in WOT
 **
 ** Elyas will try to summon a wolf to attack random char in room every
 ** MOB_ACT with 50% chance of success
 */
-
 
 #define ELYAS      18723
 #define WOLF       18724
@@ -163,12 +390,21 @@ int wot_elyas(CHAR *elyas, CHAR *vict, int cmd, char *argument) {
   return FALSE;
 }
 
-
 /* Assign specs to mobs/objects */
 void assign_WOT() {
-  //int i = 0;
-  assign_mob(ELYAS, wot_elyas);
-  assign_mob(HUNTER, wot_hunter);
-  assign_mob(MERCHANT, wot_merchant);
-  //for (i = ARMY_START; i <= ARMY_END; i++) assign_mob(i, wot_army);
+  assign_mob(MERCHANT,    wot_merchant);
+  assign_mob(HUNTER,      wot_hunter);
+  assign_mob(TINKER,      wot_tinker);
+  assign_mob(SEEKER,      wot_seeker);
+  assign_mob(GUARD_QUEEN, wot_guard);
+  assign_mob(GUARD_1,     wot_guard);
+  assign_mob(GUARD_2,     wot_guard);
+  assign_mob(GUARD_3,     wot_guard);
+  assign_mob(GUARD_4,     wot_guard);
+  assign_mob(GUARD_5,     wot_guard);
+  assign_mob(GUARD_6,     wot_guard);
+  assign_mob(GUARD_7,     wot_guard);
+  assign_mob(GUARD_8,     wot_guard);
+  assign_mob(WHITECLOAK,  wot_whitecloak);
+  assign_mob(ELYAS,       wot_elyas);
 }

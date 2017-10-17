@@ -1158,7 +1158,7 @@ get_random_obj_eq (struct char_data *ch) {
 }
 
 
-struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool vict_canbe_ch) {
+struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool vict_canbe_ch, bool see_imm) {
   struct char_data *vict = NULL;
   int num=0,target_num=0;
 
@@ -1169,7 +1169,7 @@ struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool 
       if (vict_canbe_ch) num++;
     }
     else if (see_invis || CAN_SEE(ch,vict)) {
-      if (IS_MORTAL(vict)) {
+      if (IS_MORTAL(vict) || (see_imm && IS_IMMORTAL(vict))) {
         if (vict_canbe_pc) num++;
       }
       else if (IS_NPC(vict)) {
@@ -1193,7 +1193,7 @@ struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool 
       if (vict_canbe_ch) num++;
     }
     else if (see_invis || CAN_SEE(ch,vict)) {
-      if (IS_MORTAL(vict)) {
+      if (IS_MORTAL(vict) || (see_imm && IS_IMMORTAL(vict))) {
         if (vict_canbe_pc) num++;
       }
       else if (IS_NPC(vict)) {
@@ -1212,7 +1212,7 @@ struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool 
 
 /* shortcut for get_random_target(ch,FALSE,TRUE,FALSE,TRUE,FALSE) */
 struct char_data * get_random_victim(struct char_data *ch) {
-  return get_random_target(ch, FALSE, TRUE, FALSE, TRUE, FALSE);
+  return get_random_target(ch, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE);
 }
 
 int
@@ -1227,7 +1227,7 @@ count_mortals_room_fighting (struct char_data *ch, bool see_invis) {
   return num;
 }
 
-struct char_data * get_random_target_fighting(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount) {
+struct char_data * get_random_target_fighting(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool see_imm) {
   struct char_data *vict = NULL;
   int num=0,target_num=0;
 
@@ -1237,7 +1237,7 @@ struct char_data * get_random_target_fighting(struct char_data *ch, bool see_inv
       continue;
     }
     else if (see_invis || CAN_SEE(ch,vict)) {
-      if (IS_MORTAL(vict)) {
+      if (IS_MORTAL(vict) || (see_imm && IS_IMMORTAL(vict))) {
         if (vict_canbe_pc) num++;
       }
       else if (IS_NPC(vict)) {
@@ -1260,7 +1260,7 @@ struct char_data * get_random_target_fighting(struct char_data *ch, bool see_inv
       continue;
     }
     else if (see_invis || CAN_SEE(ch,vict)) {
-      if (IS_MORTAL(vict)) {
+      if (IS_MORTAL(vict) || (see_imm && IS_IMMORTAL(vict))) {
         if (vict_canbe_pc) num++;
       }
       else if (IS_NPC(vict)) {
@@ -1279,7 +1279,7 @@ struct char_data * get_random_target_fighting(struct char_data *ch, bool see_inv
 
 /* shortcut to  get_random_target_fighting(ch,FALSE,TRUE,FALSE,TRUE) */
 struct char_data * get_random_victim_fighting( struct char_data *ch ) {
-  return get_random_target_fighting(ch, FALSE, TRUE, FALSE, TRUE);
+  return get_random_target_fighting(ch, FALSE, TRUE, FALSE, TRUE, FALSE);
 }
 
 void
