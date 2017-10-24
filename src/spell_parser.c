@@ -2019,10 +2019,10 @@ void assign_spell_pointers(void)
   SPELLO(117, 30, POSITION_STANDING, 27, 51, 51, 51, 51, 16, 51, 51,   50, TAR_CHAR_WORLD,                                                               cast_relocation);
   SPELLO(118, 30, POSITION_STANDING, 11, 14, 51, 51, 51, 11, 13, 51,   20, TAR_CHAR_WORLD,                                                               cast_locate_character);
   SPELLO(119, 30, POSITION_FIGHTING, 51, 27, 51, 32, 51, 51, 51, 51,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_super_harm);
-  SPELLO(121, 30, POSITION_STANDING, 55, 55, 55, 55, 55, 26, 55, 55,   25, TAR_OBJ_INV,                                                                  cast_legend_lore);
+  SPELLO(121, 30, POSITION_STANDING, 55, 55, 55, 55, 55, 55, 55, 55,   25, TAR_OBJ_INV,                                                                  cast_legend_lore);
   SPELLO(122, 30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_great_mana);
-  SPELLO(124, 30, POSITION_STANDING, 40, 57, 57, 57, 40, 40, 57, 57,   40, TAR_SELF_ONLY,                                                                cast_perceive);
-  SPELLO(127, 30, POSITION_FIGHTING, 55, 40, 55, 55, 55, 26, 45, 55,  120, TAR_SELF_ONLY,                                                                cast_haste);
+  SPELLO(124, 30, POSITION_STANDING, 40, 57, 57, 57, 40, 57, 57, 57,   40, TAR_SELF_ONLY,                                                                cast_perceive);
+  SPELLO(127, 30, POSITION_FIGHTING, 55, 40, 55, 55, 55, 55, 45, 55,  120, TAR_SELF_ONLY,                                                                cast_haste);
   SPELLO(128, 30, POSITION_FIGHTING, 26, 51, 51, 51, 51, 51, 51, 51,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_power_word_kill);
   SPELLO(129, 30, POSITION_STANDING, 19, 17, 51, 51, 51, 51, 51, 51,   50, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM,                                   cast_dispel_magic);
   SPELLO(130, 30, POSITION_FIGHTING, 30, 51, 51, 51, 51, 51, 51, 51,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_conflagration);
@@ -2033,7 +2033,7 @@ void assign_spell_pointers(void)
   SPELLO(136, 30, POSITION_FIGHTING, 18, 51, 51, 51, 24, 51, 51, 32,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_vampiric_touch);
   SPELLO(137, 30, POSITION_FIGHTING, 51, 16, 51, 51, 51, 51, 51, 51,   60, TAR_IGNORE,                                                                   cast_searing_orb);
   SPELLO(138, 30, POSITION_STANDING, 18, 16, 21, 51, 51, 51, 51, 51,   35, TAR_CHAR_WORLD,                                                               cast_clairvoyance);
-  SPELLO(139, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 27, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_firebreath);
+  SPELLO(139, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_firebreath);
   SPELLO(140, 30, POSITION_FIGHTING, 51, 51, 51, 15, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_layhands);
   SPELLO(141, 30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_dispel_sanct);
   SPELLO(142, 30, POSITION_FIGHTING, 52, 52, 52, 52, 52, 52, 52, 52,   50, TAR_CHAR_WORLD,                                                               cast_disenchant);
@@ -2043,9 +2043,9 @@ void assign_spell_pointers(void)
   SPELLO(147, 30, POSITION_FIGHTING, 32, 51, 51, 51, 51, 51, 51, 34,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_shroud_existence);
   SPELLO(149, 30, POSITION_FIGHTING, 50, 51, 51, 51, 51, 51, 51, 51,  100, TAR_SELF_ONLY,                                                                cast_quick);
   SPELLO(150, 30, POSITION_STANDING, 51, 50, 51, 51, 51, 51, 51, 51,  500, TAR_CHAR_ROOM,                                                                cast_divine_intervention);
-  SPELLO(151, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 40, 57, 50,  100, TAR_SELF_ONLY,                                                                cast_rush);
-  SPELLO(152, 30, POSITION_FIGHTING, 57, 57, 57, 57, 50, 41, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_blood_lust);
-  SPELLO(154, 30, POSITION_FIGHTING, 57, 57, 50, 57, 57, 42, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_mystic_swiftness);
+  SPELLO(151, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 50,  100, TAR_SELF_ONLY,                                                                cast_rush);
+  SPELLO(152, 30, POSITION_FIGHTING, 57, 57, 57, 57, 50, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_blood_lust);
+  SPELLO(154, 30, POSITION_FIGHTING, 57, 57, 50, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_mystic_swiftness);
   SPELLO(254, 30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_clarity);
   SPELLO(253, 30, POSITION_STANDING, 57, 30, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_might);
   SPELLO(252, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_blade_barrier);

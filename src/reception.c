@@ -22,6 +22,7 @@
 #include "utility.h"
 #include "reception.h"
 #include "enchant.h"
+#include "subclass.h"
 
 #define BUFFERSIZE 65535
 #ifdef TEST_SITE
@@ -35,6 +36,16 @@ int total_connects;
 extern int uptime;
 extern int CHAOSMODE;
 extern struct descriptor_data *descriptor_list;
+
+
+/* Chaos 2017 */
+extern struct spell_info_type spell_info[MAX_SPL_LIST];
+extern char *spells[];
+extern char *avatar_skills[];
+
+
+
+
 
 extern struct obj_data  *object_list;
 
@@ -357,7 +368,7 @@ void load_char(CHAR *ch) {
       return;
   }
 
-#ifdef CHAOS2010
+#ifdef CHAOS2017
 
   if (CHAOSMODE && GET_LEVEL(ch)<LEVEL_IMM)
   {
@@ -366,7 +377,8 @@ void load_char(CHAR *ch) {
     ENCH *ench = NULL, *ench_next = NULL, **ench_prev = NULL;
     int i = 0;
 
-    GET_LEVEL(ch) = 45;
+    GET_LEVEL(ch) = 50;
+    GET_CLASS(ch) = CLASS_AVATAR;
     GET_REMORT_EXP(ch) = 0LL;
     GET_DEATH_EXP(ch) = 0;
     GET_EXP(ch) = 0;
@@ -415,7 +427,7 @@ void load_char(CHAR *ch) {
 
     ch->tmpabilities = ch->abilities;
 
-    /* Normalize all char points */
+    /* Normalize all char points - 2017 not used */
 
     switch (GET_CLASS(ch))
     {
@@ -486,15 +498,44 @@ void load_char(CHAR *ch) {
         GET_STR(ch)=18;
       }
     }
-  }
+    /* set skills to 100 */
+    for (int done = FALSE,number = 0,i = 0; !done; i++) {
+      if (*avatar_skills[i] == '\n') done = TRUE;
+      else
+      {
+        number = old_search_block(avatar_skills[i], 0, strlen(avatar_skills[i]), spells, TRUE);
 
+        if (number == 0) continue;
+        else if (!check_sc_access(ch, number)) continue;
+        else
+        {
+          ch->skills[number].learned = 100;
+        }
+      }
+    }
+    /* set spells to 100 */
+    for (i = 0; *spells[i] != '\n'; i++)
+    {
+      if (!spell_info[i + 1].spell_pointer) continue;
+      else if ((ch->skills[i + 1].learned >= 85)) continue;
+      else
+      {
+        ch->skills[i+1].learned = 100;
+      }
+    }
+  }
 #endif
+
+
 
   if(GET_LEVEL(ch)<LEVEL_IMM) rank_char(ch);
 
   if(GET_LEVEL(ch)<LEVEL_SUP && IS_SET(ch->new.imm_flags, QUEST_INFO))
     REMOVE_BIT(ch->new.imm_flags, QUEST_INFO);
 
+/* CHAOS2017: no equipment */
+#ifndef CHAOS2017
+  
   while (!feof(fl)) {
     switch(obj_version(fl)) {
       case 3:
@@ -511,7 +552,10 @@ void load_char(CHAR *ch) {
         break;
     }
   }
+#endif
   fclose(fl);
+
+
 
   if(last_up<uptime) total_connects++;
 

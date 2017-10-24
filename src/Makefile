@@ -11,6 +11,10 @@ ifeq ($(TYPE), test)
 	CFLAGS += -DTEST_SITE
 endif
 
+ifeq ($(TYPE), chaos)
+	CFLAGS += -DCHAOS2017
+endif
+
 #
 # Generic Rules
 #
