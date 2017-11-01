@@ -80,52 +80,46 @@ void spell_reveal(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
 }
 
 void spell_paralyze(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  struct affected_type_5 af;
+  AFF af;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
     return;
   }
 
-  if (!IS_AFFECTED(victim, AFF_PARALYSIS)) {
-    if (saves_spell(victim, SAVING_PARA,level))
-      return;
+  if (affected_by_spell(victim, SPELL_PARALYSIS)) {
+    send_to_char("Someone tries to paralyze you AGAIN!\n\r", victim);
+    return;
+  }
 
-    if (!IS_MORTAL(victim))
-      return;
+  if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PARALYSIS)) return;
+  if ((GET_LEVEL(victim) - 10) > GET_LEVEL(ch)) return;
+  if (saves_spell(victim, SAVING_PARA, level)) return;
 
-    if (IS_NPC(victim) && IS_SET(victim->specials.immune,IMMUNE_PARALYSIS))
-      return;
+  af.type = SPELL_PARALYSIS;
 
-    if(GET_LEVEL(victim)-10>GET_LEVEL(ch)) return;
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
+    af.duration = 1;
+  else
+    af.duration = level;
+  af.modifier = +100;
+  af.location = APPLY_AC;
+  af.bitvector = AFF_PARALYSIS;
+  af.bitvector2 = 0;
+  affect_to_char(victim, &af);
 
-    af.type      = SPELL_PARALYSIS;
+  af.location = APPLY_HITROLL;
+  af.modifier = -5;
+  affect_to_char(victim, &af);
 
-    if(ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-      af.duration = 1;
-    else
-      af.duration  = level;
-    af.modifier  = +100;
-    af.location  = APPLY_AC;
-    af.bitvector = AFF_PARALYSIS;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
+  act("Your limbs freeze in place", FALSE, victim, 0, 0, TO_CHAR);
+  act("$n is paralyzed!", TRUE, victim, 0, 0, TO_ROOM);
 
-    af.location = APPLY_HITROLL;
-    af.modifier = -5;
-    affect_to_char(victim, &af);
-
-    act("Your limbs freeze in place",FALSE,victim,0,0,TO_CHAR);
-    act("$n is paralyzed!",TRUE,victim,0,0,TO_ROOM);
-
-    if (IS_NPC(victim)) {
-      act ("$n gets angry and attacks...",FALSE,victim,0,0,TO_ROOM);
-      stop_fighting(victim);
-      hit (victim, ch, TYPE_UNDEFINED);
-      return;
-    }
-  } else {
-    send_to_char("Someone tries to paralyze you AGAIN!\n\r",victim);
+  if (IS_NPC(victim)) {
+    act("$n gets angry and attacks...", FALSE, victim, 0, 0, TO_ROOM);
+    stop_fighting(victim);
+    hit(victim, ch, TYPE_UNDEFINED);
+    return;
   }
 }
 
@@ -1828,35 +1822,37 @@ void spell_locate_character(ubyte level, CHAR *ch, struct char_data *victim, OBJ
 */
 
 void spell_poison(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  struct affected_type_5 af;
+  AFF af;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
     return;
   }
-  if(IS_NPC(victim) && IS_SET(victim->specials.immune,IMMUNE_POISON)) return;
 
-  if (victim) {
+  if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) return;
+  if (saves_spell(victim, SAVING_PARA, level)) return;
 
-    if(!saves_spell(victim, SAVING_PARA,level)) {
-      af.type = SPELL_POISON;
-      if(ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-        af.duration = 1;
-      else
-        af.duration = level*2;
-      af.modifier = -3;
-      af.location = APPLY_STR;
-      af.bitvector = AFF_POISON;
-      af.bitvector2 = 0;
+  if (victim) { /* Character poison. */
+    af.type = SPELL_POISON;
 
-      affect_join(victim, &af, FALSE, FALSE);
-      send_to_char("You feel very sick.\n\r", victim);
-    }
-  } else { /* Object poison */
-    if ((obj->obj_flags.type_flag == ITEM_DRINKCON) ||
-        (obj->obj_flags.type_flag == ITEM_FOOD)) {
-      act("$p turns green!",FALSE,ch,obj,0,TO_CHAR);
-      obj->obj_flags.value[3] = 1;
+    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
+      af.duration = 1;
+    else
+      af.duration = (level * 2);
+    af.modifier = -3;
+    af.location = APPLY_STR;
+    af.bitvector = AFF_POISON;
+    af.bitvector2 = 0;
+
+    affect_join(victim, &af, FALSE, FALSE);
+
+    act("You feel very sick.", FALSE, victim, 0, 0, TO_CHAR);
+    act("$n looks very sick.", TRUE, victim, 0, 0, TO_ROOM);
+  }
+  else { /* Object poison. */
+    if (OBJ_TYPE(obj) == ITEM_DRINKCON || OBJ_TYPE(obj) == ITEM_FOOD) {
+      act("$p turns green!", FALSE, ch, obj, 0, TO_CHAR);
+      OBJ_VALUE3(obj) = 1;
     }
   }
 }
