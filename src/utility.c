@@ -1158,7 +1158,7 @@ get_random_obj_eq (struct char_data *ch) {
 }
 
 
-struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool vict_canbe_ch) {
+struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool vict_canbe_ch, bool see_imm) {
   struct char_data *vict = NULL;
   int num=0,target_num=0;
 
@@ -1169,7 +1169,7 @@ struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool 
       if (vict_canbe_ch) num++;
     }
     else if (see_invis || CAN_SEE(ch,vict)) {
-      if (IS_MORTAL(vict)) {
+      if (IS_MORTAL(vict) || (see_imm && IS_IMMORTAL(vict))) {
         if (vict_canbe_pc) num++;
       }
       else if (IS_NPC(vict)) {
@@ -1193,7 +1193,7 @@ struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool 
       if (vict_canbe_ch) num++;
     }
     else if (see_invis || CAN_SEE(ch,vict)) {
-      if (IS_MORTAL(vict)) {
+      if (IS_MORTAL(vict) || (see_imm && IS_IMMORTAL(vict))) {
         if (vict_canbe_pc) num++;
       }
       else if (IS_NPC(vict)) {
@@ -1212,7 +1212,7 @@ struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool 
 
 /* shortcut for get_random_target(ch,FALSE,TRUE,FALSE,TRUE,FALSE) */
 struct char_data * get_random_victim(struct char_data *ch) {
-  return get_random_target(ch, FALSE, TRUE, FALSE, TRUE, FALSE);
+  return get_random_target(ch, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE);
 }
 
 int
@@ -1227,7 +1227,7 @@ count_mortals_room_fighting (struct char_data *ch, bool see_invis) {
   return num;
 }
 
-struct char_data * get_random_target_fighting(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount) {
+struct char_data * get_random_target_fighting(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool see_imm) {
   struct char_data *vict = NULL;
   int num=0,target_num=0;
 
@@ -1237,7 +1237,7 @@ struct char_data * get_random_target_fighting(struct char_data *ch, bool see_inv
       continue;
     }
     else if (see_invis || CAN_SEE(ch,vict)) {
-      if (IS_MORTAL(vict)) {
+      if (IS_MORTAL(vict) || (see_imm && IS_IMMORTAL(vict))) {
         if (vict_canbe_pc) num++;
       }
       else if (IS_NPC(vict)) {
@@ -1260,7 +1260,7 @@ struct char_data * get_random_target_fighting(struct char_data *ch, bool see_inv
       continue;
     }
     else if (see_invis || CAN_SEE(ch,vict)) {
-      if (IS_MORTAL(vict)) {
+      if (IS_MORTAL(vict) || (see_imm && IS_IMMORTAL(vict))) {
         if (vict_canbe_pc) num++;
       }
       else if (IS_NPC(vict)) {
@@ -1279,7 +1279,7 @@ struct char_data * get_random_target_fighting(struct char_data *ch, bool see_inv
 
 /* shortcut to  get_random_target_fighting(ch,FALSE,TRUE,FALSE,TRUE) */
 struct char_data * get_random_victim_fighting( struct char_data *ch ) {
-  return get_random_target_fighting(ch, FALSE, TRUE, FALSE, TRUE);
+  return get_random_target_fighting(ch, FALSE, TRUE, FALSE, TRUE, FALSE);
 }
 
 void
@@ -1706,32 +1706,42 @@ struct char_data *get_ch_by_id(int num)
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch) {
   int index = 0;
 
-  if(GET_OSTR(ch)!=18) index=GET_OSTR(ch);
-
-  if(GET_OSTR(ch)==18) {
-    if(GET_OADD(ch)==100) index=30;
-    if(GET_OADD(ch)<=99)  index=29;
-    if(GET_OADD(ch)<=90)  index=28;
-    if(GET_OADD(ch)<=75)  index=27;
-    if(GET_OADD(ch)<=50)  index=26;
-    if(GET_OADD(ch)==0)   index=18;
+  if (GET_OSTR(ch) == 18) {
+    if (GET_OADD(ch) == 100) index = 30;
+    if (GET_OADD(ch) <= 99)  index = 29;
+    if (GET_OADD(ch) <= 90)  index = 28;
+    if (GET_OADD(ch) <= 75)  index = 27;
+    if (GET_OADD(ch) <= 50)  index = 26;
+    if (GET_OADD(ch) == 0)   index = 18;
   }
+  else if (index >= 0 && index <= 25) {
+    index = GET_OSTR(ch);
+  }
+  else {
+    index = 0;
+  }
+
   return index;
 }
 
 int STRENGTH_APPLY_INDEX(struct char_data *ch) {
   int index = 0;
 
-  if(GET_STR(ch)!=18) index=GET_STR(ch);
-
-  if(GET_STR(ch)==18) {
-    if(GET_ADD(ch)==100) index=30;
-    if(GET_ADD(ch)<=99)  index=29;
-    if(GET_ADD(ch)<=90)  index=28;
-    if(GET_ADD(ch)<=75)  index=27;
-    if(GET_ADD(ch)<=50)  index=26;
-    if(GET_ADD(ch)==0)   index=18;
+  if (GET_STR(ch) == 18) {
+    if (GET_ADD(ch) == 100) index = 30;
+    if (GET_ADD(ch) <= 99)  index = 29;
+    if (GET_ADD(ch) <= 90)  index = 28;
+    if (GET_ADD(ch) <= 75)  index = 27;
+    if (GET_ADD(ch) <= 50)  index = 26;
+    if (GET_ADD(ch) == 0)   index = 18;
   }
+  else if (index >= 0 && index <= 25) {
+    index = GET_STR(ch);
+  }
+  else {
+    index = 0;
+  }
+
   return index;
 }
 

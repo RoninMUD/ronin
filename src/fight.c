@@ -2615,7 +2615,7 @@ int calc_hitroll(CHAR *ch)
 
   if ((wielded = EQ(ch, WIELD)) && OBJ_TYPE(wielded) == ITEM_2HWEAPON)
   {
-    str_bonus = (str_bonus * 3) / 2;
+    str_bonus = ((str_bonus * 3) / 2);
   }
 
   value += GET_HITROLL(ch);
@@ -2629,11 +2629,13 @@ int calc_hitroll(CHAR *ch)
   }
 
   /* Combat Zen */
-  for (aff = ch->affected; aff; aff = aff->next)
-  {
-    if (aff->type == SPELL_BLINDNESS)
+  if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) {
+    for (aff = ch->affected; aff; aff = aff->next)
     {
-      value += abs(aff->modifier);
+      if (aff->type == SPELL_BLINDNESS && aff->location == APPLY_HITROLL)
+      {
+        value += abs(aff->modifier);
+      }
     }
   }
 
