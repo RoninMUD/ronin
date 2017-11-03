@@ -1706,32 +1706,42 @@ struct char_data *get_ch_by_id(int num)
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch) {
   int index = 0;
 
-  if(GET_OSTR(ch)!=18) index=GET_OSTR(ch);
-
-  if(GET_OSTR(ch)==18) {
-    if(GET_OADD(ch)==100) index=30;
-    if(GET_OADD(ch)<=99)  index=29;
-    if(GET_OADD(ch)<=90)  index=28;
-    if(GET_OADD(ch)<=75)  index=27;
-    if(GET_OADD(ch)<=50)  index=26;
-    if(GET_OADD(ch)==0)   index=18;
+  if (GET_OSTR(ch) == 18) {
+    if (GET_OADD(ch) == 100) index = 30;
+    if (GET_OADD(ch) <= 99)  index = 29;
+    if (GET_OADD(ch) <= 90)  index = 28;
+    if (GET_OADD(ch) <= 75)  index = 27;
+    if (GET_OADD(ch) <= 50)  index = 26;
+    if (GET_OADD(ch) == 0)   index = 18;
   }
+  else if (index >= 0 && index <= 25) {
+    index = GET_OSTR(ch);
+  }
+  else {
+    index = 0;
+  }
+
   return index;
 }
 
 int STRENGTH_APPLY_INDEX(struct char_data *ch) {
   int index = 0;
 
-  if(GET_STR(ch)!=18) index=GET_STR(ch);
-
-  if(GET_STR(ch)==18) {
-    if(GET_ADD(ch)==100) index=30;
-    if(GET_ADD(ch)<=99)  index=29;
-    if(GET_ADD(ch)<=90)  index=28;
-    if(GET_ADD(ch)<=75)  index=27;
-    if(GET_ADD(ch)<=50)  index=26;
-    if(GET_ADD(ch)==0)   index=18;
+  if (GET_STR(ch) == 18) {
+    if (GET_ADD(ch) == 100) index = 30;
+    if (GET_ADD(ch) <= 99)  index = 29;
+    if (GET_ADD(ch) <= 90)  index = 28;
+    if (GET_ADD(ch) <= 75)  index = 27;
+    if (GET_ADD(ch) <= 50)  index = 26;
+    if (GET_ADD(ch) == 0)   index = 18;
   }
+  else if (index >= 0 && index <= 25) {
+    index = GET_STR(ch);
+  }
+  else {
+    index = 0;
+  }
+
   return index;
 }
 
