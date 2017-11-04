@@ -252,11 +252,11 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_DEBILITATE:
       if (check_subclass(ch, SC_MYSTIC, 1)) return TRUE;
       break;
-    case SKILL_TIGERKICK:
-      if (check_subclass(ch, SC_MYSTIC, 3)) return TRUE;
-      break;
     case SPELL_DIVINE_WIND:
       if (check_subclass(ch, SC_MYSTIC, 2)) return TRUE;
+      break;
+    case SKILL_TIGERKICK:
+      if (check_subclass(ch, SC_MYSTIC, 3)) return TRUE;
       break;
     case SKILL_MANTRA:
       if (check_subclass(ch, SC_MYSTIC, 4)) return TRUE;
@@ -282,7 +282,7 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_POWER_OF_DEVOTION:
       if (check_subclass(ch, SC_CAVALIER, 5)) return TRUE;
       break;
-    case SPELL_DARK_RITUAL:
+    case SPELL_DESECRATE:
       if (check_subclass(ch, SC_DEFILER, 1)) return TRUE;
       break;
     case SPELL_BLACKMANTLE:
@@ -291,14 +291,11 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_FEINT:
       if (check_subclass(ch, SC_DEFILER, 3)) return TRUE;
       break;
-    case SPELL_DESECRATE:
+    case SPELL_WITHER:
       if (check_subclass(ch, SC_DEFILER, 4)) return TRUE;
       break;
-    case SKILL_SHADOW_WALK:
+    case SKILL_SHADOWSTEP:
       if (check_subclass(ch, SC_DEFILER, 5)) return TRUE;
-      break;
-    case SKILL_ASSASSINATE:
-      if (check_subclass(ch, SC_INFIDEL, 1)) return TRUE;
       break;
     case SKILL_VICTIMIZE:
       if (check_subclass(ch, SC_INFIDEL, 2)) return TRUE;
@@ -311,9 +308,6 @@ int check_sc_access(CHAR *ch, int skill)
       break;
     case SPELL_SHADOW_WRAITH:
       if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
-      break;
-    case SPELL_REJUVENATION:
-      return TRUE;
       break;
   }
 

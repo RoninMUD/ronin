@@ -102,7 +102,7 @@ const char *spell_wear_off_msg[] = {
   "!Animate Dead!",
   "!Great Miracle",
   "!Flamestrike!",
-  "!Spirit Levy!",
+  "The dark energy within you fades, diminishing your power.",
   "!Lethal Fire!",
   "You can move quickly now.",
   "Your golden sphere disappears.",
@@ -119,7 +119,7 @@ const char *spell_wear_off_msg[] = {
   "!recover mana!",
   "!thunderball!",
   "!electric shock!",
-  "The paralyzation wears off, you can move again",
+  "The paralyzation wears off and you can move again.",
   "!remove paralysis!",
   "!dispel good!",
   "!evil word!",
@@ -212,13 +212,13 @@ const char *spell_wear_off_msg[] = {
   "!charge!",/*201*/
   "You don't feel as powerful.",/*202*/
   "!demonic thunder!",/*203*/
-  "!shadow-walk!",/*204*/
+  "!shadowstep!", /* 204 Used to be Shadow-Walk */
   "!batter!",/*205*/
-  "You feel the need to desecrate another corpse.",/*206*/
+  "You feel the insatiable urge to desecrate another corpse.",/*206*/
   "You place yourself in a normal stance.", /*207 - defend*/
   "You place yourself in a normal stance.", /*208 - hostile*/
   "The paralyzation wears off, you can move again", /*209 - rimefang*/
-  "Your sinister presence diminishes.",/*210*/
+  "!wither!", /* 210 Used to be Dark Ritual */
   "Your mantle of darkness fades away.",/*211*/
   "!divine wind!",/*212*/
   "!zeal!",/*213*/
@@ -255,7 +255,7 @@ const char *spell_wear_off_msg[] = {
   "!sanctify!",/*244*/
   "!blitz!",/*245*/
   "Your little orb disappears.",/*246*/
-  "!assassinate!",/*247*/
+  "", /* 247 Used to be Assassinate */
   "!frostbolt!",/*248*/
   "Your skin turns softer.",/*249*/
   "Your sphere returns to normal.",/*250*/
@@ -2722,9 +2722,9 @@ char *anti_paladin_skills[] = {
   "pummel",
   "sneak",
   "steal",
+  "assassinate",  /* Level 45 */
   "feint",        /* Defiler SC3 */
-  "shadow-walk",  /* Defiler SC5 */
-  "assassinate",  /* Infidel SC1 */
+  "shadowstep",   /* Defiler SC5 Used to be Shadow-Walk */
   "victimize",    /* Infidel SC2 */
   "\n"
 };

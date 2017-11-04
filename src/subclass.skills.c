@@ -1210,85 +1210,6 @@ void do_defend(CHAR *ch, char *argument, int cmd) {
 }
 
 
-void do_assassinate(CHAR *ch, char *argument, int cmd) {
-  char name[MIL];
-  char buf[MIL];
-  int dir = NOWHERE;
-  int room = NOWHERE;
-  int check = 0;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_ASSASSINATE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
-
-    return;
-  }
-
-  if (GET_MOUNT(ch)) {
-    send_to_char("You must dismount first.\n\r", ch);
-
-    return;
-  }
-
-  if (!affected_by_spell(ch, AFF_HIDE) &&
-      !affected_by_spell(ch, AFF_SNEAK) &&
-      !affected_by_spell(ch, SPELL_INVISIBLE) &&
-      !affected_by_spell(ch, SPELL_IMP_INVISIBLE)) {
-    send_to_char("You need to be hiding, sneaking or invisible to succeed.\n\r", ch);
-
-    return;
-  }
-
-  argument = one_argument(argument, name);
-
-  if (!*name) {
-    send_to_char("Assassinate who?\n\r", ch);
-
-    return;
-  }
-
-  one_argument(argument, buf);
-
-  if (!*buf) {
-    send_to_char("What direction?\n\r", ch);
-
-    return;
-  }
-
-  if (is_abbrev(buf, "north")) dir = CMD_NORTH;
-  else if (is_abbrev(buf, "east")) dir = CMD_EAST;
-  else if (is_abbrev(buf, "south")) dir = CMD_SOUTH;
-  else if (is_abbrev(buf, "west")) dir = CMD_WEST;
-  else if (is_abbrev(buf, "up")) dir = CMD_UP;
-  else if (is_abbrev(buf, "down")) dir = CMD_DOWN;
-
-  if (dir == NOWHERE) {
-    send_to_char("What direction!?\n\r", ch);
-
-    return;
-  }
-
-  check = number(1, 111) - GET_DEX_APP(ch);
-
-  if (check > GET_LEARNED(ch, SKILL_ASSASSINATE)) {
-    send_to_char("You fail your assassination attempt.\n\r", ch);
-
-    skill_wait(ch, SKILL_ASSASSINATE, 2);
-
-    return;
-  }
-
-  room = CHAR_REAL_ROOM(ch);
-
-  do_move(ch, "", dir);
-
-  if (room != CHAR_REAL_ROOM(ch)) {
-    do_backstab(ch, name, CMD_BACKSTAB);
-  }
-}
-
-
 void do_batter(CHAR *ch, char *arg, int cmd)
 {
   char name[MIL];
@@ -2048,6 +1969,12 @@ void do_victimize(CHAR *ch, char *argument, int cmd) {
     send_to_char("You can't come up with any good taunts or threats.\n\r", ch);
   }
   else {
+    if (IS_GOOD(ch)) {
+      send_to_char("You are much too friendly to do that.\n\r", ch);
+
+      return;
+    }
+
     af.type = SKILL_VICTIMIZE;
     af.duration = -1;
     af.modifier = 0;
@@ -2062,30 +1989,30 @@ void do_victimize(CHAR *ch, char *argument, int cmd) {
 }
 
 
-void do_shadow_walk(CHAR *ch, char *argument, int cmd) {
+void do_shadowstep(CHAR *ch, char *argument, int cmd) {
   AFF af;
 
   if (!GET_SKILLS(ch)) return;
 
-  if (!check_sc_access(ch, SKILL_SHADOW_WALK)) {
+  if (!check_sc_access(ch, SKILL_SHADOWSTEP)) {
     send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_SHADOW_WALK)) {
-    affect_from_char(ch, SKILL_SHADOW_WALK);
+  if (affected_by_spell(ch, SKILL_SHADOWSTEP)) {
+    affect_from_char(ch, SKILL_SHADOWSTEP);
 
     send_to_char("You will no longer slip into the shadows to attack your victims.\n\r", ch);
 
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_SHADOW_WALK)) {
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_SHADOWSTEP)) {
     send_to_char("You can't seem to blend in with the shadows.\n\r", ch);
   }
   else {
-    af.type = SKILL_SHADOW_WALK;
+    af.type = SKILL_SHADOWSTEP;
     af.duration = -1;
     af.modifier = 0;
     af.location = APPLY_NONE;
@@ -2258,3 +2185,84 @@ void do_trusty_steed(CHAR *ch, char *argument, int cmd) {
     send_to_char("You will summon your trusty steed when pummeling or smiting your foes.\n\r", ch);
   }
 }
+
+
+/* Unused for now. - Night
+void do_voidstrike(CHAR *ch, char *argument, int cmd) {
+  char name[MIL];
+  CHAR *victim = NULL;
+  int check = 0;
+  int shadow_wraith_duration = 0;
+  int num_shadows = 0;
+  int gain = 0;
+
+  if (!GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_VOIDSTRIKE)) {
+    send_to_char("You do not have this skill.\n\r", ch);
+
+    return;
+  }
+
+  one_argument(argument, name);
+
+  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+    send_to_char("Voidstrike who?\n\r", ch);
+
+    return;
+  }
+
+  if (victim == ch) {
+    send_to_char("You aren't that insane... are you?\n\r", ch);
+
+    return;
+  }
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
+  if (IS_MORTAL(ch) && IS_IMMORTAL(victim)) {
+    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+
+    return;
+  }
+
+  check = number(1, 131) - GET_DEX_APP(ch);
+
+  if (check > GET_LEARNED(ch, SKILL_VOIDSTRIKE)) {
+    act("Your strike at $N is lost in the labrynthine whorls of the void.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n performs some arcane gesture directed towards you, without noticable effect.", FALSE, ch, NULL, victim, TO_VICT);
+    act("$n performs some arcane gesture directed towards $N, without noticable effect.", FALSE, ch, NULL, victim, TO_NOTVICT);
+
+    damage(ch, victim, 0, SKILL_VOIDSTRIKE, DAM_NO_BLOCK);
+  }
+  else {
+    act("You reach into the void and strike at $N's soul!", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n reaches into the void and strikes at your soul!", FALSE, ch, NULL, victim, TO_VICT);
+    act("$n reaches into the void and strikes at $N's soul!", FALSE, ch, NULL, victim, TO_NOTVICT);
+
+    hit(ch, victim, TYPE_UNDEFINED);
+
+    shadow_wraith_duration = duration_of_spell(ch, SPELL_SHADOW_WRAITH);
+    if (shadow_wraith_duration > 60) num_shadows = 4;
+    else if (shadow_wraith_duration > 40) num_shadows = 3;
+    else if (shadow_wraith_duration > 20) num_shadows = 2;
+    else if (shadow_wraith_duration > 0) num_shadows = 1;
+    else num_shadows = 0;
+
+    if (!number(0, 3)) {
+      gain = ((1 + num_shadows) * 2);
+      GET_HIT(ch) = MIN(GET_MAX_HIT(ch), (GET_HIT(ch) + gain));
+    }
+    else {
+      gain = ((1 + num_shadows) * 5);
+      GET_MANA(ch) = MIN(GET_MAX_MANA(ch), (GET_MANA(ch) + gain));
+    }
+  }
+
+  skill_wait(ch, SKILL_VOIDSTRIKE, 3);
+}
+*/

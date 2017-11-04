@@ -74,7 +74,7 @@ void do_flank(CHAR *ch, char *argument, int cmd);
 void do_assassinate(CHAR *ch, char *argument, int cmd);
 void do_batter(CHAR *ch, char *argument, int cmd);
 void do_trophy(CHAR *ch, char *argument, int cmd);
-void do_shadow_walk(CHAR *ch, char *argument, int cmd);
+void do_shadowstep(CHAR *ch, char *argument, int cmd);
 void do_charge(CHAR *ch, char *argument, int cmd);
 void do_headbutt(CHAR *ch, char *argument, int cmd);
 void do_frenzy(CHAR *ch, char *argument, int cmd);

@@ -36,6 +36,8 @@
 extern struct time_info_data time_info;
 extern struct room_data *world;
 extern struct char_data *character_list;
+extern struct int_app_type int_app[];
+extern struct wis_app_type wis_app[];
 extern int CHAOSMODE;
 
 void cast_rally(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
@@ -805,77 +807,6 @@ void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-void cast_dark_ritual(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      if (tar_obj)
-        spell_dark_ritual(level, ch, victim, tar_obj);
-      break;
-    default:
-      log_f("Wrong type called in dark ritual!");
-      break;
-  }
-}
-
-void spell_dark_ritual(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  extern void check_equipment(CHAR *ch);
-  int mob_level = 0;
-  int heal = 0;
-  AFF af;
-
-  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || obj->obj_flags.value[3] != 1)
-  {
-    /* Object is not a corpse, or a container. */
-    send_to_char("You must target a corpse to perform your dark ritual.\n\r", ch);
-
-    return;
-  }
-
-  if (obj->obj_flags.cost == PC_CORPSE && obj->contains)
-  {
-    /* The corpse is that of a PC and contains items (prevent griefing). */
-    send_to_char("The corpse has something in it.\n\r", ch);
-
-    return;
-  }
-
-  mob_level = obj->obj_flags.value[2];
-  heal = (mob_level * 9) / 2;
-
-  if ((heal + GET_HIT(ch)) > hit_limit(ch))
-    GET_HIT(ch) = hit_limit(ch);
-  else
-    GET_HIT(ch) += heal;
-
-  GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch) - heal);
-
-  if (!affected_by_spell(ch, SPELL_DARK_RITUAL) && (IS_NIGHT || IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, DARK)))
-  {
-    af.type       = SPELL_DARK_RITUAL;
-    af.duration   = 2;
-    af.modifier   = 2;
-    af.location   = APPLY_DAMROLL;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(ch, &af);
-    af.location   = APPLY_HITROLL;
-    affect_to_char(ch, &af);
-
-    send_to_char("You are surrounded by a sinister presence.\n\r", ch);
-  }
-
-  check_equipment(ch);
-
-  send_to_char("You perform a dark ritual and absorb life energy from the dead.\n\r", ch);
-  act("$n performs a dark ritual and absorbs life energy from the dead.", TRUE, ch, obj, 0, TO_ROOM);
-
-  extract_obj(obj);
-  update_pos(ch);
-}
-
 void cast_blackmantle(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
 {
   switch (type)
@@ -900,10 +831,7 @@ void spell_blackmantle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     act("$n is surrounded by an eerie mantle of darkness.", TRUE, ch, 0, 0, TO_ROOM);
 
     af.type       = SPELL_BLACKMANTLE;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 3;
-    else
-      af.duration = 10;
+    af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 9;
     af.modifier   = 0;
     af.location   = 0;
     af.bitvector  = 0;
@@ -1090,15 +1018,15 @@ void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   AFF af;
   int mob_level = 0;
 
-  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || obj->obj_flags.value[3] != 1)
+  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1)
   {
     /* Object is not a corpse, or a container. */
-    send_to_char("You must target a corpse in order to desecrate it.\n\r", ch);
+    send_to_char("You must target a corpse.\n\r", ch);
 
     return;
   }
 
-  if (obj->obj_flags.cost == PC_CORPSE && obj->contains)
+  if (OBJ_COST(obj) == PC_CORPSE && obj->contains)
   {
     /* The corpse is that of a PC and contains items (prevent griefing). */
     send_to_char("The corpse has something in it.\n\r", ch);
@@ -1106,33 +1034,30 @@ void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
+  mob_level = OBJ_VALUE2(obj);
+
   if (!affected_by_spell(ch, SPELL_DESECRATE))
   {
-    mob_level = obj->obj_flags.value[2];
-
     af.type        = SPELL_DESECRATE;
-    if(ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration  = 3;
-    else
-      af.duration  = 10;
-    af.modifier    = -mob_level;
-    af.location    = APPLY_AC;
+    af.duration    = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 7;
     af.bitvector   = 0;
     af.bitvector2  = 0;
+
+    af.location    = APPLY_AC;
+    af.modifier    = -(mob_level / 2);
     affect_to_char(ch, &af);
 
-    af.modifier    = mob_level;
     af.location    = APPLY_HP_REGEN;
+    af.modifier    = mob_level;
     affect_to_char(ch, &af);
   }
 
   act("You perform vile acts upon $p, desecrating it.", FALSE, ch, obj, 0, TO_CHAR);
   act("$n performs vile acts upon $p, desecrating it.", FALSE, ch, obj, 0, TO_ROOM);
 
-  check_equipment(ch);
-
   extract_obj(obj);
-  update_pos(ch);
+
+  check_equipment(ch);
 }
 
 void cast_demonic_thunder(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
@@ -1151,6 +1076,8 @@ void cast_demonic_thunder(ubyte level, CHAR *ch, char *arg, int type, CHAR *vict
 
 void spell_demonic_thunder(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
+  AFF af;
+
   if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
   {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
@@ -1164,6 +1091,25 @@ void spell_demonic_thunder(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 
   damage(ch, victim, 500, SPELL_DEMONIC_THUNDER, DAM_MAGICAL);
+
+  if (affected_by_spell(victim, SPELL_CURSE)) return;
+  if (saves_spell(victim, SAVING_SPELL, level + 10)) return;
+
+  af.type       = SPELL_CURSE;
+  af.duration   = (24 * 7);
+  af.bitvector  = AFF_CURSE;
+  af.bitvector2 = 0;
+
+  af.location = APPLY_HITROLL;
+  af.modifier   = -((GET_LEVEL(ch) - 3) / 9);
+  affect_to_char(victim, &af);
+
+  af.location   = APPLY_SAVING_PARA;
+  af.modifier = ((GET_LEVEL(ch) - 3) / 9);
+  affect_to_char(victim, &af);
+
+  act("$n briefly reveals a red aura!", FALSE, victim, 0, 0, TO_ROOM);
+  act("You feel very uncomfortable.", FALSE, victim, 0, 0, TO_CHAR);
 }
 
 void cast_aid(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
@@ -1824,6 +1770,9 @@ void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim
 void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
   AFF af;
+  int bonus = 0;
+
+  bonus = MAX(0, (int_app[GET_INT(ch)].conc + wis_app[GET_WIS(ch)].conc) / 10);
 
   if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 60) /* 4 shadows */
   {
@@ -1832,7 +1781,7 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
   else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 40) /* 3 shadows */
   {
-    if (chance(90))
+    if (chance(85 - bonus))
     {
       send_to_char("You failed to cast another shadow.\n\r", ch);
       return;
@@ -1840,7 +1789,7 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
   else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 20) /* 2 shadows */
   {
-    if (chance(75))
+    if (chance(70 - bonus))
     {
       send_to_char("You failed to cast another shadow.\n\r", ch);
       return;
@@ -1848,7 +1797,7 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
   else if (affected_by_spell(ch, SPELL_SHADOW_WRAITH)) /* 1 shadow */
   {
-    if (chance(60))
+    if (chance(55 - bonus))
     {
       send_to_char("You failed to cast another shadow.\n\r", ch);
       return;
@@ -1856,7 +1805,7 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
   else
   {
-    if (chance(45))
+    if (chance(40 - bonus))
     {
       send_to_char("You failed to cast a shadow.\n\r", ch);
       return;
@@ -1866,7 +1815,7 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   af.type       = SPELL_SHADOW_WRAITH;
   af.duration   = 20;
   af.modifier   = 0;
-  af.location   = APPLY_NONE;
+  af.location   = 0;
   af.bitvector  = 0;
   af.bitvector2 = 0;
   affect_join(ch, &af, FALSE, FALSE);
@@ -2004,4 +1953,83 @@ void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
     affect_to_char(victim, &af);
   }
+}
+
+void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
+{
+  switch (type)
+  {
+  case SPELL_TYPE_SPELL:
+    if (victim)
+      spell_wither(level, ch, victim, 0);
+    break;
+  default:
+    log_f("Wrong type called in wither!");
+    break;
+  }
+}
+
+void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
+{
+  AFF af;
+  int dam = 0;
+
+  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
+  {
+    send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
+    return;
+  }
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
+  {
+    send_to_char("Behave yourself here please!\n\r", ch);
+    return;
+  }
+
+  dam = 375;
+
+  if (saves_spell(victim, SAVING_SPELL, level)) dam /= 2;
+
+  damage(ch, victim, dam, SPELL_WITHER, DAM_MAGICAL);
+
+  if (!victim) return;
+  if (affected_by_spell(victim, AFF_PARALYSIS)) return;
+  if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PARALYSIS)) return;
+  if ((GET_LEVEL(victim) - 10) > GET_LEVEL(ch)) return;
+  if (saves_spell(victim, SAVING_PARA, level + 10)) return;
+
+  /* Apply Paralysis */
+  af.type       = SPELL_PARALYSIS;
+  af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
+  af.bitvector  = AFF_PARALYSIS;
+  af.bitvector2 = 0;
+
+  af.location   = APPLY_AC;
+  af.modifier   = +100;
+  affect_to_char(victim, &af);
+
+  af.location   = APPLY_HITROLL;
+  af.modifier   = -5;
+  affect_to_char(victim, &af);
+
+  act("Your limbs freeze in place!", FALSE, victim, 0, 0, TO_CHAR);
+  act("$n is paralyzed!", TRUE, victim, 0, 0, TO_ROOM);
+
+  /* Apply Poison */
+  if (!victim) return;
+  if (affected_by_spell(victim, AFF_POISON)) return;
+  if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) return;
+  if (saves_spell(victim, SAVING_PARA, level + 10)) return;
+
+  af.type       = SPELL_POISON;
+  af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : (level * 2);
+  af.bitvector  = AFF_POISON;
+  af.bitvector2 = 0;
+
+  af.location   = APPLY_STR;
+  af.modifier   = -3;
+  affect_join(victim, &af, FALSE, FALSE);
+
+  act("You feel very sick.", FALSE, victim, 0, 0, TO_CHAR);
+  act("$n looks very sick.", TRUE, victim, 0, 0, TO_ROOM);
 }

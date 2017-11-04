@@ -467,16 +467,28 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
   if ((get_weapon_type(GET_WEAPON(ch)) != TYPE_PIERCE) &&
       (get_weapon_type(GET_WEAPON(ch)) != TYPE_STING)) {
-    send_to_char("Only piercing weapons can be used for backstabbing.\n\r", ch);
+    send_to_char("Only pointy weapons can be used for backstabbing.\n\r", ch);
 
     return;
   }
 
   /* Assassinate */
-  if (GET_OPPONENT(victim) && !check_sc_access(ch, SKILL_ASSASSINATE)) {
-    send_to_char("You can't backstab someone engaged in combat, they're too alert!\n\r", ch);
+  if (GET_OPPONENT(victim))
+  {
+    if (!GET_LEARNED(ch, SKILL_ASSASSINATE)) {
+      send_to_char("You can't backstab someone engaged in combat; they're too alert!\n\r", ch);
 
-    return;
+      return;
+    }
+
+    if (IS_MORTAL(ch) &&
+        CAN_SEE(victim, ch) &&
+        !affected_by_spell(ch, SPELL_IMP_INVISIBLE) &&
+        !affected_by_spell(ch, SPELL_BLACKMANTLE)) {
+      act("Maybe if $E couldn't see you, or in the cover of darkness...", FALSE, ch, 0, victim, TO_CHAR);
+
+      return;
+    }
   }
 
   check = number(1, 151) - GET_DEX_APP(ch);
@@ -488,7 +500,8 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
     check -= 5;
   }
 
-  if (affected_by_spell(ch, SKILL_VEHEMENCE)) {
+  if (affected_by_spell(ch, SKILL_VEHEMENCE) ||
+      check_subclass(ch, SC_INFIDEL, 1)) {
     check -= 5 + (GET_DEX_APP(ch) / 2);
   }
 
@@ -500,7 +513,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   }
   else {
     /* Assassinate */
-    if (GET_OPPONENT(victim) && check_sc_access(ch, SKILL_ASSASSINATE)) {
+    if (GET_OPPONENT(victim)) {
       hit(ch, victim, SKILL_ASSASSINATE);
     }
     else {
@@ -510,6 +523,96 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
     auto_learn_skill(ch, SKILL_BACKSTAB);
 
     skill_wait(ch, SKILL_BACKSTAB, 3);
+  }
+}
+
+void do_assassinate(CHAR *ch, char *argument, int cmd) {
+  char name[MIL];
+  char buf[MIL];
+  int dir = NOWHERE;
+  int room = NOWHERE;
+  int check = 0;
+
+  if (!GET_SKILLS(ch)) return;
+
+  if (IS_MORTAL(ch) &&
+      (GET_CLASS(ch) != CLASS_ANTI_PALADIN)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_MORTAL(ch) &&
+      (GET_LEVEL(ch) < 45)) {
+    send_to_char("You don't know this skill yet.\n\r", ch);
+
+    return;
+  }
+
+  if (GET_MOUNT(ch)) {
+    send_to_char("You must dismount first.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_MORTAL(ch) &&
+      !IS_AFFECTED(ch, AFF_SNEAK) &&
+      !affected_by_spell(ch, SPELL_INVISIBLE) &&
+      !affected_by_spell(ch, SPELL_IMP_INVISIBLE)) {
+    send_to_char("You need to be sneaking or invisible to succeed.\n\r", ch);
+
+    return;
+  }
+
+  argument = one_argument(argument, name);
+
+  if (!*name) {
+    send_to_char("Assassinate who?\n\r", ch);
+
+    return;
+  }
+
+  one_argument(argument, buf);
+
+  if (!*buf) {
+    send_to_char("What direction?\n\r", ch);
+
+    return;
+  }
+
+  if (is_abbrev(buf, "north")) dir = CMD_NORTH;
+  else if (is_abbrev(buf, "east")) dir = CMD_EAST;
+  else if (is_abbrev(buf, "south")) dir = CMD_SOUTH;
+  else if (is_abbrev(buf, "west")) dir = CMD_WEST;
+  else if (is_abbrev(buf, "up")) dir = CMD_UP;
+  else if (is_abbrev(buf, "down")) dir = CMD_DOWN;
+
+  if (dir == NOWHERE) {
+    send_to_char("What direction!?\n\r", ch);
+
+    return;
+  }
+
+  check = number(1, 111) - GET_DEX_APP(ch);
+
+  if (check_subclass(ch, SC_INFIDEL, 1)) {
+    check -= 5;
+  }
+
+  if (check > GET_LEARNED(ch, SKILL_ASSASSINATE)) {
+    send_to_char("You fail your assassination attempt.\n\r", ch);
+
+    skill_wait(ch, SKILL_ASSASSINATE, 2);
+
+    return;
+  }
+
+  room = CHAR_REAL_ROOM(ch);
+
+  do_move(ch, "", dir);
+
+  if (room != CHAR_REAL_ROOM(ch)) {
+    do_backstab(ch, name, CMD_BACKSTAB);
   }
 }
 

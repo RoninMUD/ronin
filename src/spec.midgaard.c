@@ -273,6 +273,7 @@ void list_skills_to_prac(CHAR *ch)
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
+          else if ((number == SKILL_ASSASSINATE) && (GET_LEVEL(ch) < 45)) continue;
           else
           {
             sprintf(buf, "`n%-30s `k%-13s`q\n\r", anti_paladin_skills[i], how_good(ch->skills[number].learned));
@@ -727,6 +728,12 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       if (index > -1)
       {
         skill = old_search_block(anti_paladin_skills[index], 0, strlen(anti_paladin_skills[index]), spells, TRUE);
+      }
+      break;
+
+      if ((skill == SKILL_ASSASSINATE) && (GET_LEVEL(ch) < 45))
+      {
+        index = -2;
       }
       break;
 

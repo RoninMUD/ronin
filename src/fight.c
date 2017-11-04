@@ -1997,7 +1997,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       affected_by_spell(victim, SPELL_BLACKMANTLE)) {
     /* Blackmantle inflicts some damage even if the attacker misses. */
     if (dmg <= 0) {
-      reflect = GET_LEVEL(victim) / 5;
+      reflect = MIN(original_damage, GET_LEVEL(victim) / 5);
 
       act("$n is scorched by your mantle of darkness as $e gets too close.", FALSE, ch, 0, victim, TO_VICT);
       act("$n is scorched by $N's mantle of darkness as $e gets too close.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -3165,7 +3165,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         return FALSE;
       }
     }
-    else if (check_subclass(victim, SC_DEFILER, 3))
+    else if (check_sc_access(victim, SKILL_FEINT))
     {
       check = victim->skills[SKILL_FEINT].learned;
 
@@ -3203,7 +3203,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         return FALSE;
       }
     }
-    else if (check_subclass(victim, SC_MERCENARY, 3))
+    else if (check_sc_access(victim, SKILL_RIPOSTE))
     {
       check = victim->skills[SKILL_RIPOSTE].learned;
 
@@ -3815,7 +3815,7 @@ void dhit(CHAR *ch, CHAR *victim, int type)
        ((GET_CLASS(ch) == CLASS_WARRIOR ||
          GET_CLASS(ch) == CLASS_AVATAR ||
          GET_CLASS(ch) == CLASS_COMMANDO) &&
-        GET_LEVEL(ch) >= 20)))
+         GET_LEVEL(ch) >= 20)))
   {
     if (!ch->skills) return;
 
@@ -3930,6 +3930,8 @@ void qhit(CHAR *ch, CHAR *victim, int type)
 
 void blood_lust_action(CHAR *ch, CHAR *vict)
 {
+  int dmg = 0;
+
   if (!ch || !vict) return;
 
   switch(number(1, 20))
@@ -3940,7 +3942,11 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
       act("$n viciously bites at you with $s fangs!", FALSE, ch, 0, vict, TO_VICT);
       act("You bite at $N viciously with your fangs!", FALSE, ch, 0, vict, TO_CHAR);
 
-      damage(ch, vict, 60, TYPE_UNDEFINED, DAM_PHYSICAL);
+      dmg = 60;
+
+      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+
+      damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_PHYSICAL);
       break;
 
     case 3:
@@ -3948,9 +3954,13 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
       act("$n sinks $s fangs into your neck, draining your life!", FALSE, ch, 0, vict, TO_VICT);
       act("You sink your fangs into $N's neck, draining $S life!", FALSE, ch, 0, vict, TO_CHAR);
 
-      damage(ch, vict, 40, TYPE_UNDEFINED, DAM_MAGICAL);
-      GET_HIT(ch) += 40;
-      GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch) - 40);
+      dmg = 40;
+
+      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+
+      damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_MAGICAL);
+      magic_heal(ch, SPELL_BLOOD_LUST, dmg, TRUE);
+      GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch) - dmg);
       break;
 
     case 4:
@@ -3958,8 +3968,11 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
       act("$n bites at you savagely, draining your magical essence!", FALSE, ch, 0, vict, TO_VICT);
       act("You bite savagely at $N, draining $S magical essence!", FALSE, ch, 0, vict, TO_CHAR);
 
-      drain_mana_hit_mv(ch, vict, 20, 0, 0, TRUE, FALSE, FALSE);
-      GET_MANA(ch) = MIN(GET_MANA(ch), GET_MAX_MANA(ch));
+      dmg = 20;
+
+      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+
+      drain_mana_hit_mv(ch, vict, dmg, 0, 0, TRUE, FALSE, FALSE);
       break;
   }
 }
@@ -3980,6 +3993,8 @@ void victimize_action(CHAR *ch, CHAR *vict)
   int check = 0, debuff = 0;
 
   if (!ch || !vict) return;
+
+  if (IS_GOOD(ch)) return;
 
   check = number(1, 170) - GET_DEX_APP(ch);
 
@@ -4064,38 +4079,41 @@ void victimize_action(CHAR *ch, CHAR *vict)
 }
 
 
-void shadow_walk_action(CHAR *ch, CHAR *vict)
+void shadowstep_action(CHAR *ch, CHAR *vict)
 {
   int check = 0, dmg = 0;
   double multi = 2.0;
 
   if (!ch || !vict) return;
 
-  if (!ch->equipment[WIELD]) return;
+  if (!EQ(ch, WIELD)) return;
 
   check = number(1, 450) - (GET_DEX_APP(ch) * 5);
 
-  if (check > ch->skills[SKILL_SHADOW_WALK].learned) return;
+  if (check > GET_LEARNED(ch, SKILL_SHADOWSTEP)) return;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, LIT))
+  if (!IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK) &&
+      ((IS_DAY && OUTSIDE(ch)) || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), LIT)))
   {
     check += 50;
     multi -= 0.5;
   }
 
-  if (IS_NIGHT)
+  if (IS_NIGHT && IS_EVIL(ch))
   {
     check -= 25;
     multi += 0.5;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, DARK))
+  if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK))
   {
     check -= 25;
     multi += 0.5;
   }
 
-  if (affected_by_spell(ch, SPELL_IMP_INVISIBLE))
+  if (!CAN_SEE(vict, ch) ||
+      affected_by_spell(ch, SPELL_IMP_INVISIBLE) ||
+      affected_by_spell(ch, SPELL_BLACKMANTLE))
   {
     check -= 25;
     multi += 0.5;
@@ -4104,13 +4122,13 @@ void shadow_walk_action(CHAR *ch, CHAR *vict)
   if (multi < 1.5) multi = 1.5;
   else if (multi > 3.0) multi = 3.0;
 
-  dmg = (int)((double)calc_hit_damage(ch, vict, ch->equipment[WIELD]) * multi);
+  dmg = (int)((double)calc_hit_damage(ch, vict, EQ(ch, WIELD)) * multi);
 
   act("You step into the shadows and attack $N by surprise!", FALSE, ch, 0, vict, TO_CHAR);
   act("$n steps into the shadows and attacks you by surprise!", FALSE, ch, 0, vict, TO_VICT);
   act("$n steps into the shadows and attacks $N by surprise!", FALSE, ch, 0, vict, TO_NOTVICT);
 
-  damage(ch, vict, dmg, get_attack_type(ch, ch->equipment[WIELD]), DAM_PHYSICAL);
+  damage(ch, vict, dmg, get_attack_type(ch, EQ(ch, WIELD)), DAM_PHYSICAL);
 }
 
 
@@ -4262,9 +4280,9 @@ void perform_violence(void) {
         if (signal_char(ch, vict, MSG_VIOLENCE, "")) return;
       }
 
-      /* Shadow-Walk is before hit() in order to take advantage of pummel, etc. */
-      if (affected_by_spell(ch, SKILL_SHADOW_WALK) && SAME_ROOM(ch, vict)) {
-        shadow_walk_action(ch, vict);
+      /* Shadowstep is before hit() in order to take advantage of pummel, etc. */
+      if (affected_by_spell(ch, SKILL_SHADOWSTEP) && SAME_ROOM(ch, vict)) {
+        shadowstep_action(ch, vict);
       }
 
       if (SAME_ROOM(ch, vict)) {

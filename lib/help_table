@@ -153,14 +153,8 @@ the number of items you can carry is larger.  Natural dexterity
 also gives you improved armor, making it more difficult to
 be hit.
 
-The skills affected by dexterity are:
-
-  ambush    bash        dual    lunge      steal      twist
-  assault   blitz       flank   pummel     sweep      quad
-  backfist  circle      hide    punch      tigerkick  smite
-  backflip  disarm      impair  sneak      trip       zeal
-  backstab  disembowel  kick    spin kick  triple     banzai
-  headbutt
+Nearly all physical skills (e.g. bash, pummel, punch) are affected
+by your dexterity score.
 
 After reaching 18 dexterity (see META), you can gain even more
 dexterity from your guildmaster with quest points (see AQUEST).
@@ -188,14 +182,14 @@ the range would be 3 to 18.
 To figure the average damage of a weapon, use the following
 formula, where the damage dice is XdY:
 
-(X * (Y+1))/2
+(X * (Y + 1)) / 2
 
 If there is additional damage, such as a DAMROLL +2 affect on the
 weapon, add that after figuring the average, and that will give
 you the total average damage of the weapon.
 
 Example:  2d6+5 = 2(lowest roll) to 12(highest roll) +5 = 7(min dam)
-		  to 17(max dam) damage
+          to 17(max dam) damage
 #
 "ANTI-ANYTHING" ANTI
 
@@ -1396,22 +1390,22 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
 
         Anti-Paladin Spells
 -----------------------------------------------------------------------
-        (1) Magic Missile                (2) -
-        (3) Chill Touch                  (4) Blindness
-        (5) Detect Alignment             (6) Cure Light
-        (6) Poison                       (7) Teleport
-        (8) Curse                        (9) Invisibility
-       (10) Fear                        (11) Infravision
-       (12) Lightning Bolt              (13) -
-       (14) Forget                      (15) Energy Drain
-       (16) Poison Smoke                (17) Blindness Dust
-       (18) Protection from Good        (19) Sleep
-       (20) Fireball                    (21) Paralyze
-       (22) Dispel Good                 (23) Iceball
-       (24) Vampiric Touch              (25) Spirit Levy
-       (26) Evil Word                   (27) Hypnotize
-       (28) Hell Fire                   (29) Improve Invisibility
-                                             Remove Improve Invisibility
+        (1) Magic Missile                (2) Detect Poison
+        (3) Chill Touch                  (4) Detect Alignment
+        (5) Detect Invisibility          (6) Poison
+        (7) Blindness                    (8) Curse
+        (9) Invisibility                (10) Fear
+       (11) Infravision                 (12) Lightning Bolt
+       (13) Sense Life                  (14) Forget
+       (15) Energy Drain                (16) Poison Smoke
+       (17) Blindness Dust              (18) Protection from Good
+       (19) Sleep                       (20) Fireball
+       (21) Paralyze                    (22) Dispel Good
+       (23) Iceball                     (24) Vampiric Touch
+       (25) Spirit Levy                 (26) Evil Word
+       (27) Hypnotize                   (28) Hell Fire
+       (29) Improve Invisibility        (30) Power Word Kill
+            Remove Improve Invisibility
        (40) Perceive                    (50) Blood Lust
 #
 "CLERIC SPELLS"
@@ -1731,14 +1725,15 @@ See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 ANTI-PALADIN
 
-This class must have an evil alignment to cast spells.  They have some thief
-skills and some offensive spells.
+This class must have an evil alignment to cast spells.  They have some
+thief skills and some offensive spells.
 
 You can improve your spells and skills by using the practice command.
 
 Use HELP ANTI-PALADIN SPELLS to see the spells of the anti-paladin.
 
-Skills: backstab, bash, hide, kick, peek, pick, pummel, sneak, steal.
+Skills: backstab, bash, hide, kick, peek, pick, pummel, sneak, steal,
+        assassinate.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -3115,7 +3110,7 @@ TELEPORT
 
 Usage       : cast 'teleport' [self]
 Accumulative: -
-Level       : Level 8 mage, 7 anti-paladin.
+Level       : Level 8 mage.
 Duration    : Instant
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -3149,7 +3144,7 @@ BLINDNESS
 
 Usage       : cast 'blindness' <victim>
 Accumulative: No.
-Level       : Level 8 mage, 6 cleric, 6 ninja, 4 anti-paladin, 13 bard.
+Level       : Level 8 mage, 6 cleric, 6 ninja, 7 anti-paladin, 13 bard.
 Duration    : 2 ticks.
 Mana Cost   : 15 (cost will be higher at lower levels)
 
@@ -3161,7 +3156,7 @@ See Also: AC SONGS
 "POWER WORD KILL"
 
 Usage      : cast 'power word kill' <victim>
-Level      : Level 26 mage
+Level      : Level 26 mage, 30 anti-paladin.
 Save       : none
 Mana cost  : 100
 
@@ -3384,7 +3379,7 @@ See Also: Cure Critic
 
 Usage       : cast 'cure light' <victim>
 Accumulative: -
-Level       : Level 1 cleric, 4 ninja, 1 paladin, 6 anti-paladin.
+Level       : Level 1 cleric, 4 ninja, 1 paladin
 Duration    : Instantaneous
 Mana Cost   : 15 (cost will be higher at lower levels)
 
@@ -3462,7 +3457,8 @@ See Also: -
 
 Usage       : cast 'detect invisibility' [self]
 Accumulative: No
-Level       : Level 2 mage, 5 cleric, 1 ninja, 5 paladin, 3 bard.
+Level       : Level 2 mage, 5 cleric, 1 ninja, 5 paladin, 3 bard,
+              5 anti-paladin.
 Duration    : level * 5 ticks.
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -3679,7 +3675,7 @@ See Also: "detect poison" or "remove poison"
 
 Usage       : cast 'protection from evil' [self]
 Accumulative: No
-Level       : Level 6 cleric, 24 paladin
+Level       : Level 6 cleric, 24 paladin.
 Duration    : 12 ticks
 Mana Cost   : 30 (cost will be higher at lower levels)
 
@@ -3688,13 +3684,13 @@ mob will be decreased by: (10 + level self - level mob) with
 a maximum decrease of 10. This is an extremely powerful
 protection.
 
-See Also: PROTECTION FROM GOOD
+See Also: "PROTECTION FROM GOOD"
 #
 "PROTECTION FROM GOOD"
 
 Usage       : cast 'protection from good' [self]
 Accumulative: No
-Level       : Level 6 cleric, Level 18 anti-paladin
+Level       : Level 6 cleric, Level 18 anti-paladin.
 Duration    : 12 ticks
 Mana Cost   : 30 (cost will be higher at lower levels)
 
@@ -3702,7 +3698,7 @@ If the monster is good and you are not, the damage of the mob will be
 decreased by (10 + level self - level mob) with a maximum decrease of 10.
 This is an extremely powerful protection.
 
-See Also: PROTECTION FROM EVIL
+See Also: "PROTECTION FROM EVIL"
 #
 "REMOVE CURSE"
 
@@ -3726,7 +3722,7 @@ Mana Cost   : 25 (cost will be higher at lower levels)
 
 Will remove poison from the target.
 
-See Also: Poison "Poison Smoke"
+See Also: POISON "POISON SMOKE"
 #
 SANCTUARY
 
@@ -3912,7 +3908,7 @@ See Also: FOLLOW ORDER CHARM
 
 Usage       : cast 'sense life' [self]
 Accumulative: No
-Level       : Level 7 cleric, 10 ninja, 6 paladin
+Level       : Level 7 cleric, 10 ninja, 6 paladin, 13 anti-paladin.
 Duration    : 5 * level
 Mana Cost   : 20 (cost will be higher at lower levels)
 
@@ -3926,7 +3922,7 @@ See Also: HIDE
 Usage       : cast 'magic missile' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 1 mage, 1 anti-paladin,1 commando.
+Level       : Level 1 mage, 1 anti-paladin, 1 commando.
 Save        : Versus spell for half damage.
 Mana Cost   : 5 (cost will be higher at lower levels)
 Old Damage done : 10 to 6
@@ -4307,9 +4303,9 @@ FURY
 
 Usage       : cast 'fury' <self>
 Accumulative: -
-Duration    : 2 ticks, 4 ticks @ level 50
+Duration    : 2 ticks, 4 ticks at level 50
 Level       : Level 21 paladin.
-Mana Cost   : 60, 120 @ level 50
+Mana Cost   : 60, 120 at level 50
 
 This spell will fill your soul with fire and rage and will double your
 damage roll.  You cannot parry or dodge while under the influence of this
@@ -4373,7 +4369,7 @@ See Also: -
 Usage       : cast 'call lightning' <victim>
 Accumulative: -
 Duration    : Instant
-Level       : Level 12 cleric, 11 anti-paladin, 12 commando.
+Level       : Level 12 cleric, 12 commando.
 Save        : Versus spell for half damage.
 Mana Cost   : 20 (cost will be higher at lower levels)
 
@@ -4435,13 +4431,13 @@ Accumulative: -
 Duration    : Instantaneous
 Level       : Level 28 anti-paladin.
 Save        : -
-Mana Cost   : 130
-Damage Done : 200
+Mana Cost   : 110
+Damage Done : 200 (plus level / 2 damage to non-evil victims)
 
 The caster calls upon the Dark Unmentionable One to open the gates
-of hell and send forth the flames of despair to burn all victims in the
-room who are not evil. The caster will suffer the same fate be he/she
-not evil.
+of hell and send forth the flames of despair to burn all victims in
+the room.  Non-evil creatures affected by this spell suffer
+additional damage equal to half the caster's level.
 
 See Also: -
 #
@@ -6714,6 +6710,26 @@ Level         Skill
 
 See Also: SUBCLASSES TRAPPER NOMAD
 #
+ASSASSINATE
+
+Class: Anti-Paladin (Level 45)
+
+Usage: assassinate <victim> <direction>
+
+This attack is used to quickly sneak into a room and perform a
+backstab attack on an unsuspecting victim.  An aggressive victim
+doesn't have a chance to attack first.
+
+The Anti-Paladin must be sneaking, or invisible, to use this
+attack and the success is dependent on how well the skill is
+practiced and the character's dexterity.
+
+This skill also allows a sufficiently hidden, or invisible,
+Anti-Paladin to use the backstab skill against a victim already in
+combat.
+
+See Also: BACKSTAB
+#
 DEFILER
 
 Defiler is one of the Anti-Paladin subclasses and is broken up
@@ -6722,60 +6738,71 @@ new or improved skill or spell.  For help on each skill
 or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           BLACKMANTLE
-  2           DARK RITUAL
+  1           DESECRATE
+  2           BLACKMANTLE
   3           FEINT
-  4           DESECRATE
-  5           SHADOW-WALK
+  4           WITHER
+  5           SHADOWSTEP
 
 See Also: SUBCLASSES INFIDEL ANTI-PALADIN
 #
-BLACKMANTLE
+DESECRATE
 
 Subclass Defiler: Level 1 (Anti-Paladin)
 
-Usage       : cast 'blackmantle' (self only)
-Accumulative: no
-Duration    : 10
+Usage       : cast 'desecrate' <corpse>
+Accumulative: -
+Duration    : 7
 Save        : -
-Mana Cost   : 50
+Mana Cost   : 70
 
-While affected by this spell, up to 10% of all hit type damage is
-reflected back to the hitter.  The Defiler cannot reflect more damage
-than he/she could inflict in one hit.  This can be a very useful spell
-for both offense and defense.
+With this spell, the Defiler does the vilest thing imaginable with
+the corpse. This spell grants the Defiler a hit point regeneration
+bonus equal the level of the creature the corpse came from, and an
+armor bonus equal to half of its level.
 
-See Also: SUBCLASSES DEFILER
-#
-"DARK RITUAL"
-
-Subclass Defiler: Level 2 (Anti-Paladin)
-
-Usage       : cast 'dark ritual' <corpse>
-Accumulative: no (see below)
-Duration    : Instantaneous / 2 (see below)
-Save        : -
-Mana Cost   : 25
-
-This spell is similar to spirit levy in that it can absorb the life
-energy from a corpse.  The hit points that are recovered depend on
-the level of the dead creature.  This spell gives 50% more energy than
-spirit levy at less than double the mana cost.
-
-If the spell is cast at night time, or in a dark, unlit room, a bonus
-affect is applied to the caster, increasing his/her hitroll and damroll
-by +2 each for a duration of 3 ticks.
+While under by the effects of Desecrate, the Defiler's Spirit Levy
+spell will restore up to 50% more hit points per cast. In addition,
+when Spirit Levy is successfully used upon a corpse, the Defiler
+will receive a +2 bonus to his/her hitroll and damroll; this bonus
+effect has a duration of 2 ticks.
 
 This spell will destroy the corpse and anything within it.
 
-See Also: SUBCLASSES DEFILER
+See Also: SUBCLASSES DEFILER "SPIRIT LEVY" HITROLL DAMROLL
+#
+BLACKMANTLE
+
+Subclass Defiler: Level 2 (Anti-Paladin)
+
+Usage       : cast 'blackmantle' (self only)
+Accumulative: -
+Duration    : 9
+Save        : -
+Mana Cost   : 70
+
+While affected by this spell, up to 10% of all physical attack damage
+is reflected back to the attacker.  The Defiler cannot reflect more
+damage per attack reflected than he/she could inflict in one hit.
+
+While affected by the Blackmantle spell, the Defiler's Vampiric Touch
+spell will inflict and drain 10% more damage.  Additionally, the
+damage and drains inflicted by the Blood Lust spell is also increased
+by 10%.
+
+A Defiler that has learned the Assassinate skill can Backstab a
+victim already in combat, as if he/she could not be seen, when
+surrounded by this mantle of darkness.
+
+See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" BACKSTAB
+          ASSASSINATE
 #
 FEINT
 
 Subclass Defiler: Level 3 (Anti-Paladin)
 
 This passive ability will allow the Defiler to occasionally perform a
-fake attack against an opponent.  This will prevent the opponent from
+fake attack against an opponent. This will prevent the opponent from
 landing an attack against the Defiler. In addition, the Defiler will
 make a doubled attack back against his/her opponent, exploiting the
 opponent's miss.
@@ -6783,41 +6810,48 @@ opponent's miss.
 The success of this skill is based on how well it is practiced, and
 the character's dexterity.
 
+This is an automatic skill and is always in effect.
+
 See Also: SUBCLASSES DEFILER
 #
-DESECRATE
+WITHER
 
 Subclass Defiler: Level 4 (Anti-Paladin)
 
-Usage       : cast 'desecrate' <corpse>
-Accumulative: No
-Duration    : 10
-Save        : -
-Mana Cost   : 50
+Usage       : cast 'wither' <victim>
+Accumulative: -
+Duration    : Instantaneous / Level * 2  (Paralysis, Poison)
+Save        : vs. spell for 1/2 damage / Negates (Paralysis, Poison)
+Mana Cost   : 70
+Damage Done : 375
 
-With this spell, the Defiler does the vilest thing imaginable with the
-corpse and gains an armor and health regeneration bonus equal to the
-level of the creature the corpse came from.
+Wither is a spell that desecates the victim, inflicting harm, and
+weakening it. This powerful spell will deal damage to the target
+instantly, and has a chance to affect the target with lasting
+afflictions.
 
-This spell will destroy the corpse and anything within it.
+On a failed saving throw, the victim will be subjected to the
+effects of paralysis and poison. Each effect receieves its own save.
 
-See Also: SUBCLASSES DEFILER
+Sell Also: SUBCLASSES DEFILER PARALYSIS POISON
 #
-SHADOW-WALK
+SHADOWSTEP
 
 Subclass Defiler: Level 5 (Anti-Paladin)
 
-Usage: shadow-walk (toggles on/off)
+Usage: shadowstep (toggles on/off)
 
 The Defiler will occasionally step into the shadows during combat,
 only to re-appear behind his/her victim. The Defiler will attempt to
-stab the victim in the back for increased damage. The success and
-damage output of the skill varies depending on a number of factors. A
-Defiler affected by Improved Invisibility, fighting in a dark, unlit
-room, or during the night time will have an increased chance of
-success, and the skill will inflict more damage. Likewise, a Defiler
-attacking a victim during the day, or in a lit room will have a
-reduced chance of success, and the skill will inflict less damage.
+stab the victim in the back for increased damage.  The success and
+damage output of the skill varies depending on a number of factors.
+A Defiler that cannot be seen by his/her victim receieves a benefit,
+as does a one affected by the Blackmantle spell. A Defiler fighting
+in a dark room, or during the night time will have an increased
+chance of success, and the skill will inflict more damage. Likewise,
+a Defiler attacking a victim outside during the day, or in a lit room
+will have a reduced chance of success, and the skill will inflict
+less damage.
 
 The amount of damage inflicted ranges from 3x a normal hit for the
 most favorable conditions, to 1.5x a normal hit for the least
@@ -6828,7 +6862,7 @@ the character's dexterity.
 
 The use of this skill is automatic and can be toggled on or off.
 
-See Also: SUBCLASSES DEFILER
+See Also: SUBCLASSES DEFILER BLACKMANTLE
 #
 INFIDEL
 
@@ -6838,7 +6872,7 @@ new or improved skill or spell.  For help on each skill
 or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           ASSASSINATE
+  1           DARK PACT
   2           VICTIMIZE
   3           RAGE
   4           DEMONIC THUNDER
@@ -6846,24 +6880,28 @@ Level         Skill/Spell
 
 See Also: SUBCLASSES DEFILER ANTI-PALADIN
 #
-ASSASSINATE
+"DARK PACT"
 
 Subclass Infidel: Level 1 (Anti-Paladin)
 
-Usage: assassinate <victim> <direction>
+The Infidel makes a deal with some dark entity, trading a portion of
+his/her soul in exchange for supernatural powers.
 
-This attack is used to quickly sneak into a room and perform a
-backstab attack on an unsuspecting victim.  An aggressive victim
-doesn't have a chance to attack first.
+After making this pact, the Infidel no longer requires food or drink
+to sustain him/herself. Additionally, he/she always regenerates
+hit points, mana, and movement points at an optimal rate, regardless
+of age. Finally, the Infidel's regeneration rates are increased at
+all times, and are further increased during the night, or in a dark
+room.
 
-The Infidel must be sneaking to use this attack and the success is
-dependent on how well the skill is practiced and the character's
-dexterity.
+This weakening of the Infidel's soul makes him/her even more vicious
+and remorseless than before the pact was made.  He/she will more
+willinglly (and successfully) backstab his/her victims, and will
+carry out assassination attacks with particular cunning and cruelty.
 
-This skill also allows an Infidel to use the backstab skill against a
-victim already in combat.
+This is an automatic skill and is always in effect.
 
-See Also: SUBCLASSES INFIDEL
+See Also: SUBCLASSES INFIDEL FOOD DRINK HUNGER THIRST AGE REGENERATION
 #
 VICTIMIZE
 
@@ -6890,27 +6928,29 @@ affected by Victimize). The effects are non-cumulative. Multiple
 Infidels can apply penalties, but only penalties of different types,
 as penalty types do not stack.
 
+An Infidel that has a good alignment is unable to utilize this skill.
+
 The use of this skill is automatic and can be toggled on or off.
 
-See Also: SUBCLASSES INFIDEL
+See Also: SUBCLASSES INFIDEL "ARMOR CLASS" HITROLL DAMROLL TICK
 #
 RAGE
 
 Subclass Infidel: Level 3 (Anti-Paladin)
 
 Usage       : cast 'rage' (self only)
-Accumulative: no
+Accumulative: -
 Duration    : 3
 Save        : -
 Mana Cost   : 60
 
-This spell is quite similar to the Paladin fury spell.  It gives the
-Infidel a damage multiplier on every hit.  However, while fury gives
-a 2x damage multiplier, rage gives a multiplier of 1.5x.
+This spell is similar to the Paladin's Fury spell.  It gives the
+Infidel a damage multiplier on every hit.  However, while Fury gives
+a 2x damage multiplier, Rage gives a multiplier of 1.5x. Also,
+unlike Fury, there is only a 50% chance that an attack against a
+creature or player affected by Rage will be automatically hit.
 
-This does not affect backstab damage.
-
-See Also: SUBCLASSES INFIDEL
+See Also: SUBCLASSES INFIDEL FURY
 #
 "DEMONIC THUNDER"
 
@@ -6918,26 +6958,28 @@ Subclass Infidel: Level 4 (Anti-Paladin)
 
 Usage       : cast 'demonic thunder' <victim>
 Accumulative: -
-Duration    : -
-Save        : -
+Duration    : Instantaneous (Damage) / 7 days (Curse)
+Save        : None (Damage) / Versus spell negates (Curse)
 Mana Cost   : 100
 
-The Infidel summons the sounds of the souls of the
-damned and focuses them on the victim.  The result
-is a huge thunder of sound that no one can resist,
-dealing a full 500 damage to the victim.
+The Infidel summons the sounds of the souls of the damned and focuses
+them on the victim.  The result is a huge thunder of sound that
+cannot be resisted, dealing a full 500 damage to the victim.
 
-See Also: SUBCLASSES INFIDEL
+This spell also will curse the victim on a failed saving throw vs.
+spell.
+
+See Also: SUBCLASSES INFIDEL CURSE
 #
 "SHADOW WRAITH"
 
 Subclass Infidel: Level 5 (Anti-Paladin)
 
 Usage       : cast 'shadow wraith' (self only)
-Accumulative: yes (up to 4 shadows)
+Accumulative: Yes (up to 4 shadows)
 Duration    : 20 / shadow
 Save        : -
-Mana Cost   : 100
+Mana Cost   : 120
 
 The Infidel can attempt to create shadows of him/herself that will
 obey the Infidel's commands without question.  Up to 4 shadows may be
@@ -6946,10 +6988,13 @@ maintain.  The success of creating the first shadow is quite high,
 but as more shadows are created, the chance of creating others
 decreases.
 
-A shadow can give a maximum of 1/2 the damage of the caster, and is
-affected by either rage or fury.
+Each shadow deals a variable amount of damage, based on that of the
+caster's normal attack damage, expressed here as [damage].  The
+amount dealt varies from [damage / 6] to [damage / 2],  with an
+average of [damage / 4].  Shadow damage is improved by either Rage or
+Fury, with the most effective spell being applied.
 
-See Also: SUBCLASSES INFIDEL
+See Also: SUBCLASSES INFIDEL RAGE FURY
 #
 "BLADE BARRIER"
 

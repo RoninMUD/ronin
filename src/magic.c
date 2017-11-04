@@ -63,6 +63,7 @@ int dice(int number, int size);
 void stop_follower(CHAR *ch);
 void do_look(CHAR *ch, char *argument, int cmd);
 extern struct descriptor_data *descriptor_list;
+extern struct time_info_data time_info;
 
 /* Offensive Spells */
 
@@ -156,53 +157,41 @@ void spell_magic_missile(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_hell_fire(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  CHAR *tmp, *temp;
+  CHAR *tmp = NULL;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
     return;
   }
 
-  act("$n has summoned the fires of hell to burn here.",TRUE,ch,0,0,TO_ROOM);
-  act("You have summoned the fires of hell to burn here.",FALSE,ch,0,0,TO_CHAR);
+  act("You have summoned the fires of hell to burn here.", FALSE, ch, 0, 0, TO_CHAR);
+  act("$n has summoned the fires of hell to burn here.", TRUE, ch, 0, 0, TO_ROOM);
 
-  for(tmp = world[CHAR_REAL_ROOM(ch)].people;tmp; tmp = temp) {
-    temp = tmp->next_in_room;
-    if(IS_NPC(tmp) && IS_SET(tmp->specials.immune,IMMUNE_FIRE)) continue;
-    if(IS_NPC(ch) && !IS_NPC(tmp) && GET_LEVEL(tmp)>LEVEL_MORT)
-      continue;
-    if (ch != tmp && ( (IS_NPC(ch) ? !IS_NPC(tmp) : IS_NPC(tmp)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(tmp)) )) {
-        damage(ch, tmp, 200, SPELL_HELL_FIRE,DAM_FIRE);
-      }
+  for (tmp = world[CHAR_REAL_ROOM(ch)].people; tmp; tmp = tmp->next_in_room) {
+    if (IS_NPC(tmp) && IS_IMMUNE(tmp, IMMUNE_FIRE)) continue;
+    if (IS_NPC(ch) && !IS_NPC(tmp) && GET_LEVEL(tmp) > LEVEL_MORT) continue;
+    if (ch != tmp && ((IS_NPC(ch) ? !IS_NPC(tmp) : IS_NPC(tmp)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(tmp)))) {
+      damage(ch, tmp, IS_EVIL(tmp) ? 200 : (200 + GET_LEVEL(ch)), SPELL_HELL_FIRE, DAM_FIRE);
     }
-
-  if (!(IS_EVIL(ch)))
-    damage(ch, ch, 200, SPELL_HELL_FIRE,DAM_NO_BLOCK);
+  }
 }
 
 void spell_death_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  CHAR *temp_victim = NULL, *next_victim = NULL;
+  CHAR *tmp = NULL;
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
-
     return;
   }
 
   act("You throw out a spray of deadly rays of dark light.", FALSE, ch, 0, 0, TO_CHAR);
   act("There are many dark rays shooting out from $n's hand.", TRUE, ch, 0, 0, TO_ROOM);
 
-  for (temp_victim = world[CHAR_REAL_ROOM(ch)].people; temp_victim; temp_victim = next_victim)
-  {
-    next_victim = temp_victim->next_in_room;
-
-    if (IS_IMMORTAL(temp_victim)) continue;
-
-    if (ch != temp_victim && ((IS_NPC(ch) ? !IS_NPC(temp_victim) : IS_NPC(temp_victim)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_victim))))
-    {
-      damage(ch, temp_victim, (level / 2) + 120, SPELL_DEATH_SPRAY, DAM_MAGICAL);
+  for (tmp = world[CHAR_REAL_ROOM(ch)].people; tmp; tmp = tmp->next_in_room) {
+    if (IS_NPC(ch) && !IS_NPC(tmp) && GET_LEVEL(tmp) > LEVEL_MORT) continue;
+    if (ch != tmp && ((IS_NPC(ch) ? !IS_NPC(tmp) : IS_NPC(tmp)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(tmp)))) {
+      damage(ch, tmp, 120 + (level / 2), SPELL_DEATH_SPRAY, DAM_FIRE);
     }
   }
 }
@@ -869,26 +858,26 @@ void spell_blindness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  if (!saves_spell(victim, SAVING_SPELL,level) &&
-      !affected_by_spell(victim, SPELL_BLINDNESS)) {
-    act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
-    send_to_char("You have been blinded!\n\r", victim);
+  if (affected_by_spell(victim, SPELL_BLINDNESS)) return;
+  if (saves_spell(victim, SAVING_SPELL, level)) return;
 
-    af.type      = SPELL_BLINDNESS;
-    if(ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-      af.duration  = 1;
-    else
-      af.duration  = 2;
-    af.location  = APPLY_HITROLL;
-    af.modifier  = -4;
-    af.bitvector = AFF_BLIND;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
+  af.type      = SPELL_BLINDNESS;
+  if(ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
+    af.duration  = 1;
+  else
+    af.duration  = 2;
+  af.location  = APPLY_HITROLL;
+  af.modifier  = -4;
+  af.bitvector = AFF_BLIND;
+  af.bitvector2 = 0;
+  affect_to_char(victim, &af);
 
-    af.location = APPLY_AC;
-    af.modifier = +40; /* Make AC Worse! */
-    affect_to_char(victim, &af);
-  }
+  af.location = APPLY_AC;
+  af.modifier = +40; /* Make AC Worse! */
+  affect_to_char(victim, &af);
+
+  act("You have been blinded!", FALSE, victim, 0, 0, TO_CHAR);
+  act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
 
   if (CAN_SEE(victim, ch) && IS_NPC(victim)) {
     if (victim->specials.fighting) return; /* Linerfix 120303 */
@@ -2549,33 +2538,63 @@ void spell_recover_mana(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 /* void check_equipment(CHAR *ch); */
 void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
+  AFF af;
+  int mob_level = 0;
   int heal = 0;
 
-  if (!(GET_ITEM_TYPE(obj) == ITEM_CONTAINER) || OBJ_VALUE3(obj) != 1)
+  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1)
   {
-    send_to_char("You failed.\n\r", ch);
-
+    /* Object is not a corpse, or a container. */
+    send_to_char("You must target a corpse.\n\r", ch);
     return;
   }
 
   if (OBJ_COST(obj) == PC_CORPSE && obj->contains)
   {
-       send_to_char("The corpse has something in it.\n\r", ch);
+    /* The corpse is that of a PC and contains items (prevent griefing). */
+    send_to_char("The corpse has something in it.\n\r", ch);
+    return;
+  }
 
-       return;
-    }
+  mob_level = OBJ_VALUE2(obj);
 
-  heal = OBJ_VALUE2(obj) * 3;
-  magic_heal(ch, SPELL_SPIRIT_LEVY, OBJ_VALUE2(obj) * 3, FALSE);
+  heal = (mob_level * 3);
+
+  if (affected_by_spell(ch, SPELL_DESECRATE))
+  {
+    heal += ((heal * number(0, 5)) / 10);
+  }
+
+  magic_heal(ch, SPELL_SPIRIT_LEVY, heal, FALSE);
 
   GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch) - heal);
 
-    send_to_char("You absorb life energy from the dead.\n\r", ch);
-    act("$n absorbs life energy from the dead.", TRUE, ch, 0, 0, TO_ROOM);
+  send_to_char("You absorb life energy from the dead.\n\r", ch);
+  act("$n absorbs life energy from the dead.", TRUE, ch, 0, 0, TO_ROOM);
 
-    extract_obj(obj);
-    update_pos(ch);
+  if (affected_by_spell(ch, SPELL_DESECRATE) &&
+      !affected_by_spell(ch, SPELL_SPIRIT_LEVY))
+  {
+    af.type = SPELL_SPIRIT_LEVY;
+    af.duration = 1;
+    af.bitvector = 0;
+    af.bitvector2 = 0;
+
+    af.location = APPLY_DAMROLL;
+    af.modifier = 2;
+    affect_to_char(ch, &af);
+
+    af.location = APPLY_HITROLL;
+    af.modifier = 2;
+    affect_to_char(ch, &af);
+
+    send_to_char("You are filled with a dark energy that gives you strength.\n\r", ch);
   }
+
+  extract_obj(obj);
+
+  update_pos(ch);
+}
 
 void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
@@ -3428,10 +3447,9 @@ void spell_power_word_kill (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   }
 }
 
-void spell_vampiric_touch (ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
+void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  int dam = 0;
-  int heal = 0;
+  int dam = 0, heal = 0;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
   {
@@ -3464,6 +3482,8 @@ void spell_vampiric_touch (ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     dam *= 9;
   }
 
+  if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dam *= 1.1;
+
   if (IS_AFFECTED(victim, AFF_SPHERE) &&
       !breakthrough(ch, victim, BT_SPHERE))
   {
@@ -3474,7 +3494,6 @@ void spell_vampiric_touch (ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (heal > 0)
   {
-    //GET_HIT(ch) += heal;
     magic_heal(ch, SPELL_VAMPIRIC, heal, TRUE);
     send_to_char("You feel the drained energy flowing into you.\n\r", ch);
   }

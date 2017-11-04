@@ -29,7 +29,7 @@ void magic_heal(CHAR *ch, int spell, int heal, bool overheal)
 
   if (!IS_NPC(ch) && check_subclass(ch, SC_BANDIT, 3))
   {
-    heal = heal + (heal * number(10, 20)) / 100;
+    heal = heal + ((heal * number(10, 20)) / 100);
   }
 
   if (!overheal)
