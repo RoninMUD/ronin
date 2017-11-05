@@ -257,6 +257,7 @@ void list_skills_to_prac(CHAR *ch)
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
+          else if ((number == SKILL_PRAY) && (GET_LEVEL(ch) < 40)) continue;
           else
           {
             sprintf(buf, "`n%-30s `k%-13s`q\n\r", paladin_skills[i], how_good(ch->skills[number].learned));
