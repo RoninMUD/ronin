@@ -1512,7 +1512,7 @@ void do_split(struct char_data *ch, char *argument, int cmd) { /* Updated Dec 98
       no_members++;
 
   if(no_members==0) {
-    send_to_char("You can't split the money with yourself!.\n\r",ch);
+    send_to_char("You can't split the money with yourself!\n\r",ch);
     return;
   }
 

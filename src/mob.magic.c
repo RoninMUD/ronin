@@ -367,7 +367,7 @@ void spell_finger_of_death(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
      if (ch->specials.fighting) stop_fighting(ch);
 
      act("$n points a finger at $N and $E falls down dead!", FALSE, ch, 0, victim, TO_NOTVICT);
-     act("$n points a finger at you, you die in horrible agony!.", FALSE, ch, 0, victim, TO_VICT);
+     act("$n points a finger at you, you die in horrible agony!", FALSE, ch, 0, victim, TO_VICT);
      act("You point a finger at $N and $E falls down dead!", FALSE, ch, 0, victim, TO_CHAR);
      divide_experience(ch,victim,1);
      raw_kill(victim);

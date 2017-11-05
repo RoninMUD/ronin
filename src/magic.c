@@ -157,7 +157,7 @@ void spell_magic_missile(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_hell_fire(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  CHAR *tmp = NULL;
+  CHAR *tmp_victim = NULL, *next_victim = NULL;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
@@ -167,18 +167,19 @@ void spell_hell_fire(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   act("You have summoned the fires of hell to burn here.", FALSE, ch, 0, 0, TO_CHAR);
   act("$n has summoned the fires of hell to burn here.", TRUE, ch, 0, 0, TO_ROOM);
 
-  for (tmp = world[CHAR_REAL_ROOM(ch)].people; tmp; tmp = tmp->next_in_room) {
-    if (IS_NPC(tmp) && IS_IMMUNE(tmp, IMMUNE_FIRE)) continue;
-    if (IS_NPC(ch) && !IS_NPC(tmp) && GET_LEVEL(tmp) > LEVEL_MORT) continue;
-    if (ch != tmp && ((IS_NPC(ch) ? !IS_NPC(tmp) : IS_NPC(tmp)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(tmp)))) {
-      damage(ch, tmp, IS_EVIL(tmp) ? 200 : (200 + GET_LEVEL(ch)), SPELL_HELL_FIRE, DAM_FIRE);
+  for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+    next_victim = tmp_victim->next_in_room;
+    if (IS_NPC(tmp_victim) && IS_IMMUNE(tmp_victim, IMMUNE_FIRE)) continue;
+    if (IS_NPC(ch) && !IS_NPC(tmp_victim) && GET_LEVEL(tmp_victim) > LEVEL_MORT) continue;
+    if (ch != tmp_victim && ((IS_NPC(ch) ? !IS_NPC(tmp_victim) : IS_NPC(tmp_victim)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(tmp_victim)))) {
+      damage(ch, tmp_victim, IS_EVIL(tmp_victim) ? 200 : (200 + GET_LEVEL(ch)), SPELL_HELL_FIRE, DAM_FIRE);
     }
   }
 }
 
 void spell_death_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  CHAR *tmp = NULL;
+  CHAR *tmp_victim = NULL, *next_victim = NULL;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
@@ -188,10 +189,11 @@ void spell_death_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   act("You throw out a spray of deadly rays of dark light.", FALSE, ch, 0, 0, TO_CHAR);
   act("There are many dark rays shooting out from $n's hand.", TRUE, ch, 0, 0, TO_ROOM);
 
-  for (tmp = world[CHAR_REAL_ROOM(ch)].people; tmp; tmp = tmp->next_in_room) {
-    if (IS_NPC(ch) && !IS_NPC(tmp) && GET_LEVEL(tmp) > LEVEL_MORT) continue;
-    if (ch != tmp && ((IS_NPC(ch) ? !IS_NPC(tmp) : IS_NPC(tmp)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(tmp)))) {
-      damage(ch, tmp, 120 + (level / 2), SPELL_DEATH_SPRAY, DAM_FIRE);
+  for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+    next_victim = tmp_victim->next_in_room;
+    if (IS_NPC(ch) && !IS_NPC(tmp_victim) && GET_LEVEL(tmp_victim) > LEVEL_MORT) continue;
+    if (ch != tmp_victim && ((IS_NPC(ch) ? !IS_NPC(tmp_victim) : IS_NPC(tmp_victim)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(tmp_victim)))) {
+      damage(ch, tmp_victim, 120 + (level / 2), SPELL_DEATH_SPRAY, DAM_MAGICAL);
     }
   }
 }
@@ -571,7 +573,7 @@ void spell_dispel_evil(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     if ( saves_spell(victim, SAVING_SPELL,level) ) dam >>= 1;
   }
   if(ch==victim) {
-    act("Your dispel backfires and targets you!.",0,ch,0,0,TO_CHAR);
+    act("Your dispel backfires and targets you!",0,ch,0,0,TO_CHAR);
     act("$n's dispel backfires and targets $m.",0,ch,0,0,TO_ROOM);
   }
 
@@ -604,7 +606,7 @@ void spell_dispel_good(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     if ( saves_spell(victim, SAVING_SPELL,level) ) dam >>= 1;
   }
   if(ch==victim) {
-    act("Your dispel backfires and targets you!.",0,ch,0,0,TO_CHAR);
+    act("Your dispel backfires and targets you!",0,ch,0,0,TO_CHAR);
     act("$n's dispel backfires and targets $m.",0,ch,0,0,TO_ROOM);
   }
 
@@ -2188,7 +2190,7 @@ are riding them. (For Stables) Ranger April 1996 */
   if (IS_NPC(victim) && !(IS_AFFECTED(victim, AFF_CHARM)) ) return;
   if (victim->specials.rider) return;
   if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, CHAOTIC)) {
-    send_to_char("Chaotic energies disrupt your magic!.\n\r",ch);
+    send_to_char("Chaotic energies disrupt your magic!\n\r",ch);
     return;
    }
   mount=FALSE;
@@ -3449,7 +3451,7 @@ void spell_power_word_kill (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
 
 void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  int dam = 0, heal = 0;
+  int dam = 0, heal = 0, vict_orig_hp = 0;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
   {
@@ -3490,7 +3492,16 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     dam = 0;
   }
 
-  heal = MAX(0, MIN(GET_HIT(victim), IS_AFFECTED(victim, AFF_SANCTUARY) ? (dam / 2) : dam));
+  vict_orig_hp = GET_HIT(victim);
+
+  damage(ch, victim, dam, SPELL_VAMPIRIC, DAM_NO_BLOCK);
+
+  if (victim) {
+    heal = vict_orig_hp - MAX(GET_HIT(victim), 0);
+  }
+  else {
+    heal = vict_orig_hp;
+  }
 
   if (heal > 0)
   {
@@ -3503,8 +3514,6 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 
   update_pos(ch);
-
-  damage(ch, victim, dam, SPELL_VAMPIRIC, DAM_NO_BLOCK);
 }
 
 void spell_conflagration (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
@@ -3665,7 +3674,7 @@ void spell_dispel_magic (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
     act("You point at $p and it glows green.",FALSE,ch,obj,0,TO_CHAR);
 
     if (!IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC)) {
-      send_to_char ("There's no magic to dispel!.\n\r",ch);
+      send_to_char ("There's no magic to dispel!\n\r",ch);
       return;
     }
 

@@ -198,8 +198,8 @@ int gp_lotus(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   if(!mob->specials.fighting) return FALSE;
 
   if(GET_HIT(mob)<2000 && CHAR_VIRTUAL_ROOM(mob)!=11770) {
-    act("$n laughs manically, turns around and disappears!.",0,mob,0,0,TO_ROOM);
-    act("You laugh manically, turn around and disappear!.",0,mob,0,0,TO_CHAR);
+    act("$n laughs manically, turns around and disappears!",0,mob,0,0,TO_ROOM);
+    act("You laugh manically, turn around and disappear!",0,mob,0,0,TO_CHAR);
     stop_fighting(mob);
     char_from_room(mob);
     char_to_room(mob,real_room(11770));

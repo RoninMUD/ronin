@@ -291,8 +291,8 @@ int mana_gain(CHAR *ch)
     else return -10;
   }
 
-  if (GET_COND(ch, FULL) == 0 ||
-      GET_COND(ch, THIRST) == 0)
+  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
+      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
   {
     gain = 1 - GET_MANA(ch);
 
@@ -512,8 +512,8 @@ int hit_gain(CHAR *ch)
     else return -10;
   }
 
-  if (GET_COND(ch, FULL) == 0 ||
-      GET_COND(ch, THIRST) == 0)
+  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
+      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
   {
     gain = 1 - GET_HIT(ch);
 
@@ -705,7 +705,8 @@ int move_gain(CHAR *ch)
   }
 
   if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT))
+      (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT) &&
+      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
   {
     return 5;
   }
@@ -988,7 +989,9 @@ void gain_condition(CHAR *ch, int condition, int value)
 {
   int was_intoxicated = FALSE;
 
-  if (GET_COND(ch, condition) == -1 && condition != DRUNK) return;
+  if ((!IS_MORTAL(ch) || GET_CLASS(ch) == CLASS_AVATAR) &&
+      GET_COND(ch, condition) == -1 &&
+      condition != DRUNK) return;
 
   if (GET_COND(ch, DRUNK) > 0)
   {
@@ -998,6 +1001,13 @@ void gain_condition(CHAR *ch, int condition, int value)
   GET_COND(ch, condition) += value;
   GET_COND(ch, condition) = MAX(GET_COND(ch, condition), 0);
   GET_COND(ch, condition) = MIN(GET_COND(ch, condition), 24);
+
+  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+    /* Dark Pact */
+    if (GET_COND(ch, condition) == 0) {
+      GET_COND(ch, condition) = -1;
+    }
+  }
 
   if (GET_COND(ch, condition) == 0)
   {
@@ -1268,8 +1278,7 @@ void point_update(void)
     }
 
     if (GET_LEVEL(ch) > LEVEL_MORT ||
-        GET_CLASS(ch) == CLASS_AVATAR ||
-        (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) /* Dark Pact */
+        GET_CLASS(ch) == CLASS_AVATAR)
     {
       GET_COND(ch, FULL) = -1;
       GET_COND(ch, THIRST) = -1;

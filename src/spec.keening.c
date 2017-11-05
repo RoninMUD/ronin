@@ -201,7 +201,7 @@ int kg_eduard_magistrate(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   act("$n growls, 'You have angered me!!!", 1, mob, 0, 0, TO_NOTVICT);
   act("You growl, You have angered me!!!", 1, mob, 0, 0, TO_CHAR);
   act("Eduard the Magistrate grows and transforms into a deadly Were-Rat!", 1,mob, 0, 0, TO_NOTVICT);
-  act("You grow and transform into a deadly Were-Rat!.", 1, mob, 0, 0,TO_CHAR);
+  act("You grow and transform into a deadly Were-Rat!", 1, mob, 0, 0,TO_CHAR);
 
   newmob=read_mobile(14508,VIRTUAL);
   if(newmob) char_to_room(newmob,CHAR_REAL_ROOM(mob));

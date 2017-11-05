@@ -2060,7 +2060,7 @@ void do_killer(struct char_data *ch, char *argument, int cmd)
       REMOVE_BIT(ch->specials.pflag, PLR_KILL);
     }
     else {
-      send_to_char("You are a killer! Beware!.\n\r", ch);
+      send_to_char("You are a killer! Beware!\n\r", ch);
       SET_BIT(ch->specials.pflag, PLR_KILL);
     }
   else if (!generic_find(argument, FIND_CHAR_WORLD, ch, &vict, &dummy))
@@ -2101,7 +2101,7 @@ void do_thief(struct char_data *ch, char *argument, int cmd)
       send_to_char("You are no longer a thief.\n\r", ch);
       REMOVE_BIT(ch->specials.pflag, PLR_THIEF);
     } else {
-      send_to_char("You are a thief! Beware!.\n\r", ch);
+      send_to_char("You are a thief! Beware!\n\r", ch);
       SET_BIT(ch->specials.pflag, PLR_THIEF);
   } else if (!generic_find(argument, FIND_CHAR_WORLD, ch, &vict, &dummy))
     send_to_char("Couldn't find any such creature.\n\r", ch);

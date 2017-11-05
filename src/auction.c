@@ -628,7 +628,7 @@ void auction_auction(CHAR *auctioneer, CHAR *ch, char *arg)
       break;
 
   if(number == MAX_OBJS_AUCTION) {
-    act("$n tells you 'I'm sorry, but auction board is full :(", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you 'I'm sorry, but the auction board is full.", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
 
@@ -638,7 +638,7 @@ void auction_auction(CHAR *auctioneer, CHAR *ch, char *arg)
     return;
   }
   if(!( tmp_obj = get_obj_in_list_vis( ch, buf, ch->carrying))) {
-    act("$n tells you 'But you don't have that item!!.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you 'But you don't have that item!'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if((tmp_obj->obj_flags.type_flag == ITEM_FOOD) ||
@@ -654,7 +654,7 @@ void auction_auction(CHAR *auctioneer, CHAR *ch, char *arg)
 
   arg = one_argument(arg, buf);
   if(!*buf) {
-    act("$n asks from you 'What would be the starting bid ?'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n asks from you 'What would be the starting bid?'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if((start = atoi(buf)) < 1000) {
