@@ -3124,23 +3124,6 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           set_fighting(victim, ch);
           GET_POS(victim) = POSITION_FIGHTING;
         }
-        /*
-        else {
-          switch (type)
-          {
-          case SKILL_ASSASSINATE:
-          case SKILL_BACKSTAB:
-          case SKILL_AMBUSH:
-          case SKILL_FLANK:
-          case SKILL_CHARGE:
-          case SKILL_ASSAULT:
-          case SKILL_BLITZ:
-          case SKILL_LUNGE:
-            damage(victim, ch, 0, TYPE_UNDEFINED, DAM_NO_BLOCK);
-            break;
-          }
-        }
-        */
 
         /* Combat Zen */
         if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
@@ -3175,23 +3158,6 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           set_fighting(victim, ch);
           GET_POS(victim) = POSITION_FIGHTING;
         }
-        /*
-        else {
-          switch (type)
-          {
-          case SKILL_ASSASSINATE:
-          case SKILL_BACKSTAB:
-          case SKILL_AMBUSH:
-          case SKILL_FLANK:
-          case SKILL_CHARGE:
-          case SKILL_ASSAULT:
-          case SKILL_BLITZ:
-          case SKILL_LUNGE:
-            damage(victim, ch, 0, TYPE_UNDEFINED, DAM_NO_BLOCK);
-            break;
-          }
-        }
-        */
 
         /* Combat Zen */
         if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
