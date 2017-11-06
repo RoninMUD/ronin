@@ -891,6 +891,10 @@ void assign_command_pointers ( void )
   COMMANDO("climb"    ,CMD_CLIMB     ,POSITION_STANDING  ,do_climb,1);
   COMMANDO("crawl"    ,CMD_CRAWL     ,POSITION_STANDING  ,do_crawl,1);
 
+  COMMANDO("assassinate", CMD_ASSASSINATE, POSITION_STANDING, do_assassinate, 45);
+  COMMANDO("camp", CMD_CAMP, POSITION_STANDING, do_camp, 30);
+  COMMANDO("scan", CMD_SCAN, POSITION_STANDING, do_scan, 30);
+
   /* Subclass commands */
   COMMANDO("meditate" ,CMD_MEDITATE  ,POSITION_RESTING   ,do_meditate,30);
   COMMANDO("protect"  ,CMD_PROTECT   ,POSITION_STANDING  ,do_protect,30);
@@ -911,8 +915,6 @@ void assign_command_pointers ( void )
   /*COMMANDO("trip"     ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);*/
   COMMANDO("evasion"  ,CMD_EVASION   ,POSITION_STANDING  ,do_evasion, 30); /* Used to be Cover */
   COMMANDO("tigerkick",CMD_TIGERKICK ,POSITION_FIGHTING  ,do_tigerkick,30);
-  COMMANDO("scan"     ,CMD_SCAN      ,POSITION_STANDING  ,do_scan,30);
-  COMMANDO("camp"     ,CMD_CAMP      ,POSITION_STANDING  ,do_camp,30);
   COMMANDO("switch"   ,CMD_SWITCH    ,POSITION_FIGHTING  ,do_switch,30);
   COMMANDO("smite"    ,CMD_SMITE     ,POSITION_FIGHTING  ,do_smite,30);
   COMMANDO("fade"     ,CMD_FADE      ,POSITION_FIGHTING  ,do_fade,30);
@@ -926,11 +928,10 @@ void assign_command_pointers ( void )
   COMMANDO("trophy"   ,CMD_TROPHY    ,POSITION_STANDING  ,do_trophy,30); /* Used to be Scalp */
   COMMANDO("charge"   ,CMD_CHARGE    ,POSITION_STANDING  ,do_charge,30);
   COMMANDO("headbutt" ,CMD_HEADBUTT  ,POSITION_FIGHTING  ,do_headbutt,30);
-  COMMANDO("assassinate",CMD_ASSASSINATE ,POSITION_STANDING ,do_assassinate,30);
-  COMMANDO("shadow-walk",CMD_SHADOW_WALK ,POSITION_FIGHTING ,do_shadow_walk,30);
+  COMMANDO("shadowstep",CMD_SHADOWSTEP ,POSITION_FIGHTING ,do_shadowstep,30); /* Used to be Shadow-Walk */
   COMMANDO("clobber", CMD_CLOBBER    ,POSITION_FIGHTING  ,do_clobber,30);
   COMMANDO("victimize",CMD_VICTIMIZE ,POSITION_FIGHTING  ,do_victimize,30); /* Project Stiletto */
-
+  
   COMMANDO("rip"      ,CMD_RIP       ,POSITION_DEAD      ,do_rip,LEVEL_IMP ); /* Ranger - Feb 29,2000 */
 
   /* OLC Related Commands */

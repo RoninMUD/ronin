@@ -73,8 +73,6 @@ void cast_rejuvenation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim,
 void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
 void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_dark_ritual(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
-void spell_dark_ritual(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_blackmantle(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
 void spell_blackmantle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_rimefang(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
@@ -117,3 +115,5 @@ void cast_blur(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar
 void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj);
 void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);

@@ -940,7 +940,7 @@ int clan_recall_scroll(OBJ *scroll,CHAR *ch,int cmd,char *argument) {
     return TRUE;
   }
   if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, CHAOTIC)) {
-    send_to_char("Chaotic energies disrupt your magic!.\n\r",ch);
+    send_to_char("Chaotic energies disrupt your magic!\n\r",ch);
     return TRUE;
   }
 

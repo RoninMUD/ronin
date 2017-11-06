@@ -47,6 +47,7 @@ extern struct obj_data *object_list;
 extern struct room_data *world;
 
 extern struct time_info_data age(CHAR *ch);
+extern struct time_info_data time_info;
 
 extern int exp_table[58];
 extern struct title_type titles[11][58];
@@ -263,6 +264,7 @@ int mana_gain(CHAR *ch)
 {
   int gain = 0;
   int loss = 0;
+  int year = 0;
 
   if (IS_NPC(ch))
   {
@@ -289,8 +291,8 @@ int mana_gain(CHAR *ch)
     else return -10;
   }
 
-  if (GET_COND(ch, FULL) == 0 ||
-      GET_COND(ch, THIRST) == 0)
+  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
+      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
   {
     gain = 1 - GET_MANA(ch);
 
@@ -310,7 +312,15 @@ int mana_gain(CHAR *ch)
     return gain;
   }
 
-  gain = graf(age(ch).year, 9, 10, 12, 14, 12, 10, 9);
+  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+    /* Dark Pact */
+    year = 45; /* 45 is is right in the sweet spot. */
+  }
+  else {
+    year = age(ch).year;
+  }
+
+  gain = graf(year, 9, 10, 12, 14, 12, 10, 9);
 
   switch (GET_CLASS(ch))
   {
@@ -325,6 +335,16 @@ int mana_gain(CHAR *ch)
 
     case CLASS_ANTI_PALADIN:
     case CLASS_COMMANDO:
+      if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+        /* Dark Pact */
+        if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+          gain += 3;
+        }
+        else {
+          gain += 2;
+        }
+      }
+
       gain += 2;
       break;
 
@@ -411,6 +431,16 @@ int mana_gain(CHAR *ch)
       case CLASS_BARD:
       case CLASS_COMMANDO:
       case CLASS_NINJA:
+        if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+          /* Dark Pact */
+          if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+            gain += 5;
+          }
+          else {
+            gain += 2;
+          }
+        }
+
         gain += 5;
         break;
 
@@ -426,6 +456,7 @@ int hit_gain(CHAR *ch)
 {
   int gain = 0;
   int loss = 0;
+  int year = 0;
 
   if (IS_NPC(ch))
   {
@@ -481,8 +512,8 @@ int hit_gain(CHAR *ch)
     else return -10;
   }
 
-  if (GET_COND(ch, FULL) == 0 ||
-      GET_COND(ch, THIRST) == 0)
+  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
+      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
   {
     gain = 1 - GET_HIT(ch);
 
@@ -508,7 +539,15 @@ int hit_gain(CHAR *ch)
     return gain;
   }
 
-  gain = graf(age(ch).year, 12, 14, 16, 20, 16, 14, 12);
+  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+    /* Dark Pact */
+    year = 45; /* 45 is is right in the sweet spot. */
+  }
+  else {
+    year = age(ch).year;
+  }
+
+  gain = graf(year, 12, 14, 16, 20, 16, 14, 12);
 
   gain *= 2;
 
@@ -527,6 +566,16 @@ int hit_gain(CHAR *ch)
     case CLASS_ANTI_PALADIN:
     case CLASS_BARD:
     case CLASS_NINJA:
+      if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+        /* Dark Pact */
+        if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+          gain += 2;
+        }
+        else {
+          gain += 1;
+        }
+      }
+
       gain += 2;
       break;
 
@@ -612,6 +661,16 @@ int hit_gain(CHAR *ch)
       case CLASS_AVATAR:
       case CLASS_BARD:
       case CLASS_COMMANDO:
+        if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+          /* Dark Pact */
+          if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+            gain += 5;
+          }
+          else {
+            gain += 2;
+          }
+        }
+
         gain += 5;
         break;
 
@@ -631,6 +690,7 @@ int hit_gain(CHAR *ch)
 int move_gain(CHAR *ch)
 {
   int gain = 0;
+  int year = 0;
 
   if (IS_NPC(ch)) return (GET_LEVEL(ch));
 
@@ -645,12 +705,31 @@ int move_gain(CHAR *ch)
   }
 
   if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT))
+      (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT) &&
+      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
   {
     return 5;
   }
 
-  gain = graf(age(ch).year, 18, 21, 24, 26, 24, 21, 18);
+  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+    /* Dark Pact */
+    year = 45; /* 45 is is right in the sweet spot. */
+  }
+  else {
+    year = age(ch).year;
+  }
+
+  gain = graf(year, 18, 21, 24, 26, 24, 21, 18);
+
+  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+    /* Dark Pact */
+    if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+      gain += 10;
+    }
+    else {
+      gain += 5;
+    }
+  }
 
   switch (GET_POS(ch))
   {
@@ -910,7 +989,9 @@ void gain_condition(CHAR *ch, int condition, int value)
 {
   int was_intoxicated = FALSE;
 
-  if (GET_COND(ch, condition) == -1 && condition != DRUNK) return;
+  if ((!IS_MORTAL(ch) || GET_CLASS(ch) == CLASS_AVATAR) &&
+      GET_COND(ch, condition) == -1 &&
+      condition != DRUNK) return;
 
   if (GET_COND(ch, DRUNK) > 0)
   {
@@ -920,6 +1001,13 @@ void gain_condition(CHAR *ch, int condition, int value)
   GET_COND(ch, condition) += value;
   GET_COND(ch, condition) = MAX(GET_COND(ch, condition), 0);
   GET_COND(ch, condition) = MIN(GET_COND(ch, condition), 24);
+
+  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+    /* Dark Pact */
+    if (GET_COND(ch, condition) == 0) {
+      GET_COND(ch, condition) = -1;
+    }
+  }
 
   if (GET_COND(ch, condition) == 0)
   {

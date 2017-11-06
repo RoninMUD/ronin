@@ -207,7 +207,7 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define CAN_WEAR(obj, part) (IS_SET((obj)->obj_flags.wear_flags,part))
 
 #define CAN_CARRY_W(ch) (str_app[STRENGTH_APPLY_INDEX(ch)].carry_w)
-#define CAN_CARRY_N(ch) (5+GET_DEX(ch)/2+GET_LEVEL(ch)/2)
+#define CAN_CARRY_N(ch) (((5+GET_DEX(ch)/2+GET_LEVEL(ch)/2) < 20) ? 20 : (5+GET_DEX(ch)/2+GET_LEVEL(ch)/2))
 
 #define CAN_CARRY_OBJ(ch,obj)  \
    ((((IS_CARRYING_W(ch) + GETOBJ_WEIGHT(obj)) <= 3*CAN_CARRY_W(ch)) &&   \
@@ -352,7 +352,7 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define GET_DESCRIPTOR(ch) (ch->desc)
 #define GET_WAS_IN_ROOM(ch) (ch->specials.was_in_room)
 #define GET_SKILLS(ch) (ch->skills)
-#define GET_PEOPLE(room) (world[room].people)
+#define GET_ROOM_PEOPLE(room) (world[room].people)
 #define GET_ROOM_FLAGS(room) (world[room].room_flags)
 #define GET_OBJ_BITS(obj) (obj->obj_flags.bitvector)
 #define GET_OBJ_BITS2(obj) (obj->obj_flags.bitvector2)

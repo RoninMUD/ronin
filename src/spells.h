@@ -198,7 +198,7 @@ $State: Exp $
 #define SMELL_FARTMOUTH             123
 #define SPELL_PERCEIVE              124
 #define SKILL_PRAY                  125
-/* 126 Used to be Increase Mana */
+#define SKILL_ASSASSINATE           126 /* 126 Used to be Increase Mana */
 #define SPELL_HASTE                 127 /*  Quack - Feb 96 */
 #define SPELL_PW_KILL               128
 #define SPELL_DISPEL_MAGIC          129
@@ -230,6 +230,7 @@ $State: Exp $
 #define SKILL_TWIST                 163 /* Void - Oct 04 */
 #define SKILL_CUNNING               164
 #define SPELL_WIND_SLASH            165 /* Project Tsurugi */
+
 /*
 #define SPELL_QUESTER
 #define SPELL_SPIRITWRACK
@@ -275,7 +276,7 @@ $State: Exp $
 #define SPELL_DISTORTION            250
 #define SPELL_IRONSKIN              249
 #define SPELL_FROSTBOLT             248
-#define SKILL_ASSASSINATE           247
+#define SKILL_UNUSED_247            247 /* Used to be Assassinate */
 #define SPELL_ORB_PROTECTION        246
 #define SKILL_BLITZ                 245
 #define SPELL_SANCTIFY              244
@@ -312,13 +313,13 @@ $State: Exp $
 #define SKILL_ZEAL                  213 /* Used to be Sweep */
 #define SPELL_DIVINE_WIND           212
 #define SPELL_BLACKMANTLE           211
-#define SPELL_DARK_RITUAL           210
+#define SPELL_WITHER                210 /* Used to be Dark Ritual */
 #define SPELL_RIMEFANG              209
 #define SKILL_HOSTILE               208
 #define SKILL_DEFEND                207
 #define SPELL_DESECRATE             206
 #define SKILL_BATTER                205
-#define SKILL_SHADOW_WALK           204
+#define SKILL_SHADOWSTEP             204 /* Used to be Shadow-Walk */
 #define SPELL_DEMONIC_THUNDER       203
 #define SPELL_AID                   202
 #define SKILL_CHARGE                201
@@ -339,7 +340,7 @@ $State: Exp $
 #define SKILL_FRENZY                186
 #define SKILL_TROPHY                185 /* Used to be Scalp */
 #define SKILL_RIPOSTE               184
-#define SKILL_UNUSED_183            183 /* Used to be close combat */
+#define SKILL_UNUSED_183            183 /* Used to be Close Combat */
 #define SPELL_INCENDIARY_CLOUD      182
 #define SPELL_DEVASTATION           181
 #define SPELL_SHADOW_WRAITH         180
@@ -561,6 +562,7 @@ void cast_blood_lust( ubyte level, struct char_data *ch, char *arg, int si, stru
 void cast_mystic_swiftness( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_mana_heal( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_wind_slash(ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
+void cast_wither(ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 
 void spell_reappear(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);

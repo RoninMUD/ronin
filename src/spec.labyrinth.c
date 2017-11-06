@@ -232,7 +232,7 @@ int lab_portal(int room, CHAR *ch, int cmd, char *arg) {
   }
 
   act ("$n enters the portal and vanishes!", TRUE, ch, 0, 0, TO_ROOM);
-  send_to_char ("You enter the portal and are suddenly transported!.\n\r",ch);
+  send_to_char ("You enter the portal and are suddenly transported!\n\r",ch);
   char_from_room (ch);
   char_to_room (ch, real_room(LAB_ENTRANCE));
   if (!IS_NPC(ch)) sprintf(buf,"\n\rThe Dungeonmaster (chaos) [ ** %s has entered the Labyrinth ** ]\n\r\n\r ",GET_NAME(ch));
