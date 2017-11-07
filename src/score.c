@@ -99,11 +99,11 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
   case SCQ_RANK_NAME:
     if (get_rank(ch))
     {
-      sprintf(buf, "%s", get_rank_name(ch));
+      sprintf(buf2, "%s", get_rank_name(ch));
 
       sprintf(buf, "%sRank: [%s%d%s]%s %s",
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
-        CHCLR(ch, 7), ENDCHCLR(ch), string_to_upper(buf));
+        CHCLR(ch, 7), ENDCHCLR(ch), string_to_upper(buf2));
     }
     else
     {
