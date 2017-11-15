@@ -163,7 +163,7 @@ const char *spell_wear_off_msg[] = {
   "The gnawing hunger slowly fades.",
   "!cover!",
   "Your hands slow down.",
-  "", /* 155 */
+  "!coin toss!", /* 155 */
   "", /* 156 */
   "", /* 157 */
   "", /* 158 */
@@ -2607,10 +2607,11 @@ char *thief_skills[] = {
   "sneak",
   "steal",
   "throw",
+  "coin-toss",
   "scan",         /* Level 35 */
   "twist",        /* Level 45 */
   "cunning",      /* Level 50 */
-  "dirty tricks", /* Rogue SC1 */
+  "dirty-tricks", /* Rogue SC1 */
   "trophy",       /* Rogue SC2 */
   "vehemence",    /* Rogue SC3 */
   "trip",         /* Rogue SC4 */
@@ -2704,7 +2705,7 @@ char *paladin_skills[] = {
   "rescue",
   "spin",
   "pray",         /* Level 40 */
-  "trusty steed", /* Cavalier SC2 */
+  "trusty-steed", /* Cavalier SC2 */
   "smite",        /* Cavalier SC4 */
   "protect",      /* Crusader SC2 */
   "zeal",         /* Crusader SC4 */
