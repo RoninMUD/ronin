@@ -426,7 +426,7 @@ char *songs[] =
   "i'm taking a walk",                /* vitality */
   "dangerous",                        /* color spray */
   "we are the world",                 /* total recall */
-  "moonlight shadow",                 /* infravision */
+  "moonlight shadow",                 /* infra */
   "nothing compares to you",          /* santuary */
   "better than the devil you know",   /* evil word */
   "toy soldiers",                     /* animate dead */
@@ -434,40 +434,20 @@ char *songs[] =
   "a view to a kill",                 /* lethal fire */
   "spirits in the material world",    /* mass invis */
   "lifting shadows of a dream",       /* remove poison */
-  "there is no heart that won't heal",/* rejuvenation */
-  "when you're weary",                /* respite */
+  "brightest flame burns quickest",   /* rally */
   "something takes a part of me",     /* warchant */
   "if i could change the world",      /* luck */
+  "there is no heart that won't heal",/* rejuvenation */
   "hero of the day",                  /* aid */
-  "relax don't do it",                /* refresh */
+  "heaven beside you",                /* protection from evil/good */
+  "you've been thunderstruck",        /* thunderball */
+  "ray of light",                     /* sphere */
   "\n"
 };
 
 int song_level[] =
 {
-  18, /* detect invis */
-   5, /* armor */
-   7, /* bless */
-   9, /* cure critical */
-  11, /* blindness */
-  13, /* statiate */
-  15, /* vitality */
-  16, /* color spray */
-  17, /* total recall */
-  19, /* infravision */
-  21, /* santuary */
-  23, /* evil word */
-  24, /* animate dead */
-  25, /* heal */
-  26, /* lethal fire */
-  28, /* mass invis */
-  24, /* remove poison */
-  50, /* rejuvenation */
-  30, /* respite */
-  30, /* warchant */
-  30, /* luck */
-  30, /* aid */
-  30  /* refresh */
+  18,5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,24,30,30,30,30,50,30,30,30,30
 };
 
 int song_mana[] =

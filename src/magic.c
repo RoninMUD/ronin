@@ -4547,7 +4547,7 @@ void spell_quick(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void spell_divine_intervention2(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+void spell_divine_intervention(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   struct affected_type_5 af;
 
   if(ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
@@ -4736,59 +4736,4 @@ void spell_wind_slash(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       damage(ch, temp_victim, dam, SPELL_WIND_SLASH, DAM_MAGICAL);
     }
   }
-}
-
-void spell_divine_intervention(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  const int eligible_effects[] = {
-    SPELL_BLINDNESS,
-    SPELL_CHARM_PERSON,
-    SPELL_CHILL_TOUCH,
-    SPELL_CURSE,
-    SPELL_POISON,
-    SPELL_SLEEP,
-    SPELL_HOLD,
-    SPELL_PARALYSIS,
-    SMELL_FARTMOUTH,
-    SPELL_CONFUSION,
-    SPELL_DEBILITATE,
-    SPELL_INCENDIARY_CLOUD,
-    SPELL_WRATH_OF_GOD,
-    SPELL_WARCHANT,
-    SPELL_CLOUD_CONFUSION
-  };
-
-  AFF *aff = NULL;
-  int i = 0;
-  int eligible_victim_effects[sizeof(eligible_effects)];
-  int num_eligible_victim_effects = 0;
-  int effect_to_remove = 0;
-
-  memset(&eligible_victim_effects, 0, sizeof(eligible_victim_effects));
-
-  for (aff = victim->affected; aff; aff = aff->next)
-  {
-    for (i = 0; i < NUMELEMS(eligible_effects); i++) {
-      if (aff->type == eligible_effects[i])
-      {
-        /* Skip the War Chant buff. */
-        if ((aff->type == SPELL_WARCHANT) && (aff->location != APPLY_HITROLL)) continue;
-
-        num_eligible_victim_effects++;
-        eligible_victim_effects[num_eligible_victim_effects - 1] = aff->type;
-      }
-    }
-  }
-
-  if (num_eligible_victim_effects > 0) {
-    effect_to_remove = number(1, num_eligible_victim_effects);
-    affect_from_char(victim, eligible_victim_effects[effect_to_remove - 1]);
-
-    send_to_char("You are relieved of an affliction.\n\r", ch);
-  }
-  else {
-    send_to_char("You feel well.\n\r", ch);
-  }
-
-  act("$n looks relieved.", TRUE, ch, 0, 0, TO_ROOM);
 }
