@@ -7395,12 +7395,13 @@ See Also: SUBCLASSES ROGUE
 
 Subclass Bandit: Level 4 (Thief)
 
-The Bandit benefits from an increased combat awareness, granting him an
-increase of 1 hitroll, 1 damroll and 20 armor.  When fighting in close
-quarters (inside), the Bandit receives an additional increase of his/her
-damroll by 4 and hitroll by 4.
+The Bandit benefits from an increased combat awareness, granting him
+an increase of 1 hitroll, 1 damroll and 20 armor.  When fighting in
+close quarters (inside, in the city, or in the forest), the Bandit
+receives an additional increase of his/her damroll by 4 and hitroll
+by 4.
 
-This is an automatic skill and will apply to all hits.
+This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES BANDIT
 #

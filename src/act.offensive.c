@@ -2007,7 +2007,6 @@ void do_cunning(CHAR *ch, char *argument, int cmd) {
 void do_coin_toss(CHAR *ch, char *argument, int cmd) {
   CHAR *tmp_victim = NULL;
   CHAR *next_victim = NULL;
-  /*OBJ *coins_obj = NULL;*/
   char arg2[MIL];
   int check = 0;
   int wager = 0;
@@ -2081,15 +2080,6 @@ void do_coin_toss(CHAR *ch, char *argument, int cmd) {
     }
     else {
       send_to_char("Nobody was hit by your coins and they are hopelessly lost in the chaos.\n\r", ch);
-
-      /*
-      if (scattered_coins > 0) {
-        send_to_char("Nobody was hit by your coins and some of them fall to the floor.\n\r", ch);
-
-        coins_obj = create_money(scattered_coins);
-        obj_to_room(coins_obj, CHAR_REAL_ROOM(ch));
-      }
-      */
     }
   }
   else {
@@ -2121,15 +2111,6 @@ void do_coin_toss(CHAR *ch, char *argument, int cmd) {
     }
     else {
       send_to_char("Nobody was hit by your coins and they are hopelessly lost in the chaos.\n\r", ch);
-
-      /*
-      if (scattered_coins > 0) {
-        send_to_char("Nobody was hit by your coins and some of them fall to the floor.\n\r", ch);
-
-        coins_obj = create_money(scattered_coins);
-        obj_to_room(coins_obj, CHAR_REAL_ROOM(ch));
-      }
-      */
     }
   }
 

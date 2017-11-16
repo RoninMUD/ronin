@@ -711,6 +711,11 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       {
         act("......a shield of power emanates from an orb above $n's head!", FALSE, i, 0, ch, TO_VICT);
       }
+
+      if (affected_by_spell(i, SKILL_PRAY))
+      {
+        act("......$n is bowing $e head in prayer.", FALSE, i, 0, ch, TO_VICT);
+      }
     }
 
     if (IS_AFFECTED(i, AFF_SANCTUARY) && !affected_by_spell(i, SPELL_DISRUPT_SANCT))
