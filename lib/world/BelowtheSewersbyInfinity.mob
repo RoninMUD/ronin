@@ -18,7 +18,7 @@ arcs of electricity can be seen every so often.
 1 1 5 37
 0 0 0 0
 K
-5000 0 0 0 0 0
+5000 0 0 0 0 0 0
 #4701
 Mound Garbage~
 A mound of garbage~
@@ -37,7 +37,7 @@ seen, sharp as ever.
 1 6 10 192
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #4702
 Slime Mass Large~
 a large slime covered mass~
@@ -55,7 +55,7 @@ It's green and looks like a giant mound of slime.
 1 1 5 8
 0 0 0 0
 K
-500 0 0 0 0 0
+500 0 0 0 0 0 0
 #4703
 Voodoo Doll~
 a voodoo doll~
@@ -78,7 +78,7 @@ right through you.
 1 1 75 218
 0 0 0 32
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #4704
 Halfling Zombie~
 A halfling zombie~
@@ -97,7 +97,7 @@ by some tattered rags.  It's mouth is stink.
 4 1 5 0
 0 0 1 32
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #4705
 Paladin Leoric~
 The Paladin Leoric~
@@ -117,7 +117,7 @@ Midgaard that has met his untimely demise too soon.
 1 6 3 140
 0 0 0 32
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #4706
 Garbage Golem~
 a garbage golem~
@@ -136,7 +136,7 @@ to rot and the mere thought of touching it makes you sick.
 6 1 5 0
 0 0 0 32
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #4707
 Cleric Werra Garbage~
 Werra the Cleric~
@@ -154,12 +154,12 @@ features, such as hair and eyelids.
 8 8 2
 2 440 2d250+2000 4
 1 6 5 28
-1 6 10 33
-1 6 5 93
-1 6 5 27
+1 1 10 33
+1 1 5 27
+1 1 5 93
 0 2 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #4708
 Toxic Guardian~
 A toxic guardian~
@@ -179,6 +179,6 @@ garbage.
 1 1 5 8
 0 0 0 32
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #0
 $~
