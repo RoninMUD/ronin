@@ -312,6 +312,7 @@ $State: Exp $
 #define CMD_CUNNING            245 /* Used to be Cover */
 #define CMD_GF                 246 /* Gossip w/social action */
 #define CMD_PRAY               247
+#define CMD_COIN_TOSS          248
 
 #define CMD_MEDITATE           300 /* for subclasses */
 #define CMD_PROTECT            301

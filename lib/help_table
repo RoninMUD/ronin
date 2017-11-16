@@ -1632,7 +1632,7 @@ levels.
 You can improve your skills by using the practice command.
  
 Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick, throw,
-     twist, scan, cunning.
+     coin toss, twist, scan, cunning.
  
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1774,6 +1774,7 @@ Block                                            Y         Y
 Butcher                                     Y
 Camp               Y
 Circle                                                Y
+Coin Toss                                             Y
 Cunning                                               Y
 Disarm                       Y              Y    Y
 Disembowel                                  Y              Y
@@ -1814,6 +1815,44 @@ Class: Thief
 
 A skill similar to backstab, however it can be used during battle.  CIRCLE does
 the highest non-magic combat damage.
+#
+"COIN TOSS"
+
+Class: Thief
+
+Usage: coin-toss <wager>
+
+This skill allows the thief to toss coins about him/herself in a
+deadly attack, inflicting damage to all enemies in the room on a
+success. On a failure, some of the coins are snatched up by any
+enemies that are present. If the room was empty of opponents, the
+coins are lost as they fly about and roll away.
+
+The amount of damage inflicted by this skill is based on the amount
+of coins wagered when using the skill. If no amount of coins are
+wagered, or the wager is unintelligible, the minimum number of coins
+are automatically wagered. If you wager more than the maximum number
+of coins, the wager will not exceed the maximum (the extra coins are
+not lost or factored into the wager).
+
+The minimum number of coins that can be wagered is equal to 100 times
+the thief's level; the maximum number is equal to 1,000 times the
+thief's level.
+
+The damage caused by coin toss is equal to the following formula, with
+the minimum amount of damage being 10:
+
+damage = (2 * level) / (wager / max_wager)
+
+For example, a level 30 thief (min_wager = 3,000, max_wager = 30,000)
+that wagers 20,000 coins will inflict 40 damage to every opponent in
+the room on a success.
+
+Note: Commas are not supported in the amount wagered and will cause
+the minimum wager to be used.
+
+This skill causes a 2 round input lag for the thief, regardless of
+success or failure.
 #
 PICK
 
@@ -7642,9 +7681,9 @@ Duration    : -
 Save        : -
 Mana Cost   : 150
 
-With this spell, the Mercenary causes the ground
-to shake and heave violently causing 400 damage
-to everyone in the room.
+With this spell, the Mercenary causes the ground to shake and heave
+violently causing 400 damage to every opponent in the room, knocking
+them into a stunned state.
 
 See Also: SUBCLASSES MERCENARY
 #

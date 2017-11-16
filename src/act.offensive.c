@@ -483,6 +483,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
     if (IS_MORTAL(ch) &&
         CAN_SEE(victim, ch) &&
+        !affected_by_spell(ch, AFF_SNEAK) &&
         !affected_by_spell(ch, SPELL_IMP_INVISIBLE) &&
         !affected_by_spell(ch, SPELL_BLACKMANTLE)) {
       act("Maybe if $E couldn't see you, or in the cover of darkness...", FALSE, ch, 0, victim, TO_CHAR);
@@ -2001,4 +2002,136 @@ void do_cunning(CHAR *ch, char *argument, int cmd) {
 
     send_to_char("You focus on exploiting any weakness in your enemies' defenses and grow more cunning in the process.\n\r", ch);
   }
+}
+
+void do_coin_toss(CHAR *ch, char *argument, int cmd) {
+  CHAR *tmp_victim = NULL;
+  CHAR *next_victim = NULL;
+  /*OBJ *coins_obj = NULL;*/
+  char arg2[MIL];
+  int check = 0;
+  int wager = 0;
+  int min_wager = 0;
+  int max_wager = 0;
+  int num_mobs = 0;
+  int scattered_coins = 0;
+  double factor = 0.0;
+  int dmg = 0;
+
+  if (!GET_SKILLS(ch) || (GET_LEVEL(ch) < 1)) return;
+
+  if (IS_MORTAL(ch) && (GET_CLASS(ch) != CLASS_THIEF)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
+  one_argument(argument, arg2);
+
+  wager = atoi(arg2);
+
+  min_wager = (GET_LEVEL(ch) * 100);
+  max_wager = (GET_LEVEL(ch) * 1000);
+
+  if (wager < min_wager) {
+    wager = min_wager;
+  }
+  else if (wager > max_wager) {
+    wager = max_wager;
+  }
+
+  if (IS_MORTAL(ch) && (wager > GET_GOLD(ch))) {
+    send_to_char("You don't have enough coins for such a dastardly attack!\n\r", ch);
+
+    return;
+  }
+
+  GET_GOLD(ch) = MAX((GET_GOLD(ch) - wager), 0);
+  num_mobs = count_mobs_real_room(CHAR_REAL_ROOM(ch));
+  scattered_coins = ((wager * number(10, 25)) / 100);
+
+  check = (number(1, 101) - GET_DEX_APP(ch));
+
+  if (affected_by_spell(ch, SKILL_VEHEMENCE)) {
+    check -= (5 + (GET_DEX_APP(ch) / 2));
+  }
+
+  if (check > GET_LEARNED(ch, SKILL_COIN_TOSS)) {
+    send_to_char("You toss some coins in the air, somehow missing all of your targets.\n\r", ch);
+    act("$n tosses some coins in the air, scattering them about carelessly.", FALSE, ch, 0, 0, TO_ROOM);
+
+    if (num_mobs > 0) {
+      scattered_coins /= num_mobs;
+
+      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+        next_victim = tmp_victim->next_in_room;
+
+        if (IS_MOB(tmp_victim) && (scattered_coins > 0)) {
+          act("You snatch some of the coins thrown by $n!", FALSE, ch, 0, tmp_victim, TO_VICT);
+
+          GET_GOLD(tmp_victim) += scattered_coins;
+        }
+      }
+    }
+    else {
+      send_to_char("Nobody was hit by your coins and they are hopelessly lost in the chaos.\n\r", ch);
+
+      /*
+      if (scattered_coins > 0) {
+        send_to_char("Nobody was hit by your coins and some of them fall to the floor.\n\r", ch);
+
+        coins_obj = create_money(scattered_coins);
+        obj_to_room(coins_obj, CHAR_REAL_ROOM(ch));
+      }
+      */
+    }
+  }
+  else {
+    send_to_char("You toss a hail of coins about you with deadly precision.\n\r", ch);
+    act("$n tosses a hail of coins about $m with deadly precision.", FALSE, ch, 0, 0, TO_ROOM);
+
+    if (num_mobs > 0) {
+      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+        next_victim = tmp_victim->next_in_room;
+
+        if ((tmp_victim == ch) ||
+          (IS_IMMORTAL(tmp_victim)) ||
+          (IS_NPC(tmp_victim) && (GET_RIDER(tmp_victim) == ch)) ||
+          (IS_MORTAL(tmp_victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) ||
+          (IS_MORTAL(tmp_victim) && GET_OPPONENT(tmp_victim) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))) {
+          continue;
+        }
+
+        act("You are battered by a hail of coins thrown by $n!", FALSE, ch, 0, tmp_victim, TO_VICT);
+
+        if ((wager >= min_wager) && (wager <= max_wager)) {
+          factor = (wager / max_wager);
+        }
+
+        dmg = MAX(lround(((GET_LEVEL(ch) * 2) * factor)), 10);
+
+        damage(ch, tmp_victim, calc_position_damage(GET_POS(tmp_victim), dmg), TYPE_UNDEFINED, DAM_SKILL);
+      }
+    }
+    else {
+      send_to_char("Nobody was hit by your coins and they are hopelessly lost in the chaos.\n\r", ch);
+
+      /*
+      if (scattered_coins > 0) {
+        send_to_char("Nobody was hit by your coins and some of them fall to the floor.\n\r", ch);
+
+        coins_obj = create_money(scattered_coins);
+        obj_to_room(coins_obj, CHAR_REAL_ROOM(ch));
+      }
+      */
+    }
+  }
+
+  skill_wait(ch, SKILL_COIN_TOSS, 2);
 }

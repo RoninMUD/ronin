@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -426,7 +426,7 @@ A
 B
 16777216
 #29615
-ribbon feywaist~
+ribbon white wide fey feywaist~
 a wide, white ribbon~
 Fey has left her ribbon here.~
 ~
@@ -726,8 +726,8 @@ A
 A
 53 3
 #29629
-gloves fingerless chainmail saros saroshands~
-fingerless chainmail gloves~
+gloves leather meilichae saros saroshands~
+fingerless leather meilichae~
 Saros has left his gloves here.~
 ~
 9 134217794 524417
@@ -861,7 +861,7 @@ A
 53 3
 #29635
 ring mood fey feyring~
-a mood ring~
+a mood ring(glowing blue)~
 Fey has left her ring here.~
 ~
 11 134217728 524291
@@ -961,9 +961,9 @@ X
 0 0 0
 M
 ~
-$n flexes $s bluging torso muscles.~
+$n flexes $s bulging torso muscles.~
 ~
-$n relaxes $s bluging torso muscles.~
+$n relaxes $s bulging torso muscles.~
 A
 19 2
 A
@@ -1446,5 +1446,97 @@ A
 19 2
 A
 46 4
+#29662
+boots black leather steel toed makena makenafeet~
+steel-toed, black leather boots~
+Makena has left her boots here.~
+~
+9 138435137 524353
+10 0 0 0
+4 10 43222
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+53 3
+#29663
+tattoo goddess wadjet makena wrist makenawrist~
+a tattoo of the Goddess Wadjet~
+Makena has left her buckler here.~
+~
+11 150995457 528385
+7 0 0 0
+4 15000 10000
+20
+X
+~
+0 0 0
+M
+A tattoo slowly fades into existence on your wrist.~
+A tattoo slowly fades into existence on $n's wrist.~
+The tattoo on your wrist slowly fades out of existence.~
+The tattoo on $n's wrist slowly fades out of existence.~
+A
+19 3
+A
+37 10
+A
+53 3
+#29664
+buckler king welmar makena wrist makenawrist~
+golden buckler of King Welmar~
+Makena has left her buckler here.~
+~
+11 150995457 528385
+7 0 0 0
+4 15000 10000
+20
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+37 10
+A
+53 3
+#29665
+balaclava black makena makenahead~
+a black balaclava~
+Makena has left her balaclava here.~
+~
+9 134217728 524305
+5 0 0 0
+10 50000 100000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+19 2
+A
+53 3
+B
+16777216
 #0
 $~

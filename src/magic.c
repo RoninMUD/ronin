@@ -1820,10 +1820,10 @@ void spell_poison(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) return;
-  if (saves_spell(victim, SAVING_PARA, level)) return;
-
   if (victim) { /* Character poison. */
+    if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) return;
+    if (saves_spell(victim, SAVING_PARA, level)) return;
+
     af.type = SPELL_POISON;
 
     if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))

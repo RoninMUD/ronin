@@ -227,6 +227,7 @@ $State: Exp $
 #define SPELL_BLOOD_LUST            152 /* Void - Oct 04 */
 #define SKILL_SCAN                  153 /* Used to be Cover */
 #define SPELL_MYSTIC_SWIFTNESS      154 /* Void - Nov 04 */
+#define SKILL_COIN_TOSS             155
 #define SKILL_TWIST                 163 /* Void - Oct 04 */
 #define SKILL_CUNNING               164
 #define SPELL_WIND_SLASH            165 /* Project Tsurugi */
@@ -319,7 +320,7 @@ $State: Exp $
 #define SKILL_DEFEND                207
 #define SPELL_DESECRATE             206
 #define SKILL_BATTER                205
-#define SKILL_SHADOWSTEP             204 /* Used to be Shadow-Walk */
+#define SKILL_SHADOWSTEP            204 /* Used to be Shadow-Walk */
 #define SPELL_DEMONIC_THUNDER       203
 #define SPELL_AID                   202
 #define SKILL_CHARGE                201

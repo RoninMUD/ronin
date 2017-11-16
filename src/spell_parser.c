@@ -227,18 +227,19 @@ char *spells[]= {
   "blood lust", /*152 - Void Oct 04 */
   "scan", /* 153 Used to be Cover */
   "mystic swiftness", /* 154 - Void Nov 04 */
+  "coin-toss", /* 155 */
   "",
   "",
   "",
+  "", /*156-159*/
   "",
-  "", /*155-159*/
-  "",
-  "",                      /*161*/
+  "", /*161*/
   "",
   "twist",/*163 - Void Oct 04 */
   "cunning", /* 164 */
   "wind slash", /* 165 */ 
-  "","","","","","",/* 166-171 */
+  "", /* 166 */
+  "","","","","",/* 167-171 */
   "debilitate", /* 172 */ 
   "mana heal", /* 173 */
   "clobber", /* 174 - Hemp Nov 10 */
@@ -297,9 +298,9 @@ char *spells[]= {
   "evasion",/*227 Used to be Scan */
   "tigerkick",/*228*/
   "trip",/*229*/
-  "dirty tricks",/*230*/
+  "dirty-tricks",/*230*/
   "switch",/*231*/
-  "trusty steed",/*232*/
+  "trusty-steed",/*232*/
   "backfist",/*233*/
   "retreat",/*234*/
   "fade",/*235*/

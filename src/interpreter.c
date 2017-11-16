@@ -878,10 +878,10 @@ void assign_command_pointers ( void )
   COMMANDO("social"   ,CMD_SOCIAL     ,POSITION_DEAD     ,do_social, LEVEL_SUP);
   COMMANDO("hunt"     ,CMD_HUNT       ,POSITION_RESTING  ,do_hunt, LEVEL_IMP);
   COMMANDO("email"    ,CMD_EMAIL      ,POSITION_RESTING  ,do_email, 1);
-/*  COMMANDO("playeravg",CMD_PLRAVG     ,POSITION_RESTING  ,do_playeravg, LEVEL_IMP);*/
+  /* COMMANDO("playeravg",CMD_PLRAVG     ,POSITION_RESTING  ,do_playeravg, LEVEL_IMP);*/
   COMMANDO("idname"   ,CMD_IDNAME     ,POSITION_DEAD     ,do_idname, LEVEL_SUP); /* Ranger 05-Feb-04 */
   COMMANDO("gf"       ,CMD_GF         ,POSITION_DEAD     ,do_gf, 0);
-  COMMANDO("cunning"  ,CMD_CUNNING    ,POSITION_FIGHTING ,do_cunning, 50);
+  
   /* These next few are for the new exit types - Ranger Oct 96 */
   COMMANDO("move"     ,CMD_MOVE      ,POSITION_STANDING  ,do_move_keyword,1);
   COMMANDO("push"     ,CMD_MOVE      ,POSITION_STANDING  ,do_move_keyword,1);
@@ -893,6 +893,8 @@ void assign_command_pointers ( void )
 
   COMMANDO("assassinate", CMD_ASSASSINATE, POSITION_STANDING, do_assassinate, 45);
   COMMANDO("camp", CMD_CAMP, POSITION_STANDING, do_camp, 30);
+  COMMANDO("coin-toss", CMD_COIN_TOSS, POSITION_FIGHTING, do_coin_toss, 1);
+  COMMANDO("cunning", CMD_CUNNING, POSITION_FIGHTING, do_cunning, 50);
   COMMANDO("scan", CMD_SCAN, POSITION_STANDING, do_scan, 30);
 
   /* Subclass commands */
