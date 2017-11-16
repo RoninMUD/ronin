@@ -1141,10 +1141,6 @@ $r war pick slams deeply into $V, causing blood to spray everywhere!~
 13 75000 25000
 10
 E
-night quest~
-`pNight was here.`q
-~
-E
 pick runed svirfneblin war brutal ornate runes~
 Long ago, the Svirfneblin Miner-King Kikival commissioned this weapon to be
 forged for his dwarven ally, High-General Damagar.  The war pick is a favorite
@@ -1157,6 +1153,10 @@ bravery or friendship.  Banded together against a common enemy, the drow, the
 two stalwart leaders defended their kingdoms.  Damagar had given the life of
 many of his soldiers, including his two sons, and lost an eye and a foot of his
 own.  How the weapon became lost to Damagar or his kin is now long forgotten.
+~
+E
+night quest~
+`pNight was here.`q
 ~
 X
 $r war pick gleams with a silver light as it arcs through the air.~
@@ -1649,6 +1649,10 @@ A round shield, crafted from the scales of an azure dragon, has been left here.~
 17 356890 14501
 0
 E
+night quest~
+`pNight was here.`q
+~
+E
 shield azure dragon rider blue~
 Though the design of this shield is simple, it is beautifully crafted from rare
 and high quality materials. Round in shape, the shield is nearly a meter in
@@ -1663,10 +1667,6 @@ in the way of battle damage, yet it looks ancient and well-used at the same
 time; a testament to its superior craftsmanship. Capable of deflecting the
 mightiest of blows, this shield is deceptively light for its size, granting its
 wielder a high degree of mobility in the thick of battle.
-~
-E
-night quest~
-`pNight was here.`q
 ~
 X
 ~
@@ -1825,10 +1825,10 @@ X
 ~
 0 0 0
 M
-~
-~
-~
-~
+A circle of shadows coalesces around your finger as you wear the ring.~
+A circle of shadows coalesces about $r finger.~
+The shadows encircling your finger evaporate away as you remove the ring.~
+The shadows encircling $r finger evaporate away.~
 A
 18 4
 A
@@ -1948,6 +1948,10 @@ A simple gemstone pendant on a fine silver chain has been dropped here.~
 15 95000 55000
 33
 E
+night~
+`pNight was here.`q
+~
+E
 pendant sorrow gemstone fine silver chain~
 A mortal jewelcrafter, by the name of Marius, was tasked with producing a pair
 of amulets for Zeus and Hera. The metal that composes the fine silver chain of
@@ -1958,10 +1962,6 @@ were stolen by some lesser god and were eventually lost to the sands of time.
 It is said that the gods that commissioned the pendants were so jealous of
 their perfection that they had Marius executed, lest he someday produce a piece
 of higher quality.
-~
-E
-night~
-`pNight was here.`q
 ~
 X
 ~
@@ -1987,6 +1987,10 @@ A cloak composed of shadows and flame lies here in a smoldering heap.~
 3 12000 7000
 50
 E
+night~
+`pNight was here.`q
+~
+E
 cloak smoldering shadows flame~
 The cloak appears to flicker and fade, its presence in the physical realm a
 tenuous thing. The edges of the cape give it definition, as they smolder and
@@ -1996,10 +2000,6 @@ to be composed of the lingering essence of the creature. Perhaps they are just
 that, or perhaps they represent a sliver of a connection between this world and
 the lower planes. Nobody has dared to find out, lest the demon become aware of
 its loss and seek to reclaim its forgotten power.
-~
-E
-night~
-`pNight was here.`q
 ~
 X
 ~
