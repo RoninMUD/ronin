@@ -491,7 +491,7 @@ int kg_keira_corpse(OBJ *obj, CHAR *ch, int cmd, char *arg)
   CHAR *tmp_char = NULL;
   OBJ *tmp_obj = NULL;
 
-  if (cmd != CMD_BUTCHER && cmd != CMD_SKIN) return FALSE;
+  if ((cmd != CMD_BUTCHER) && (cmd != CMD_SKIN) && (cmd != CMD_TROPHY)) return FALSE;
   if (!ch) return FALSE;
 
   one_argument(arg, buf);
@@ -513,6 +513,11 @@ int kg_keira_corpse(OBJ *obj, CHAR *ch, int cmd, char *arg)
     case CMD_SKIN:
       act("The corpse shimmers brightly and repels your attempt at skinning it.", FALSE, ch, NULL, NULL, TO_CHAR);
       act("The corpse shimmers brightly and repels $n's attempt at skinning it.", TRUE, ch, NULL, NULL, TO_ROOM);
+    break;
+
+    case CMD_TROPHY:
+      act("The corpse shimmers brightly and repels your attempt at claiming a trophy.", FALSE, ch, NULL, NULL, TO_CHAR);
+      act("The corpse shimmers brightly and repels $n's attempt at claiming a trophy.", TRUE, ch, NULL, NULL, TO_ROOM);
     break;
   }
 
