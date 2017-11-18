@@ -300,6 +300,12 @@ void do_pray(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
+  if (GET_ALIGNMENT(ch) == 1000) {
+    send_to_char("You are already saintly.\n\r", ch);
+
+    return;
+  }
+
   if (number(1, 85) > GET_LEARNED(ch, SKILL_PRAY)) {
     send_to_char("You failed to focus your thoughts in prayer.\n\r", ch);
   }

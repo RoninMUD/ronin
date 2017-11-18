@@ -2584,7 +2584,10 @@ int close_combat_bonus(CHAR *ch, int type)
   switch (type)
   {
     case 0:
-      if (IS_INDOORS(ch))
+      if (IS_INDOORS(ch) ||
+          world[CHAR_REAL_ROOM(ch)].sector_type == SECT_INSIDE ||
+          world[CHAR_REAL_ROOM(ch)].sector_type == SECT_CITY ||
+          world[CHAR_REAL_ROOM(ch)].sector_type == SECT_FOREST)
       {
         bonus = 5;
       }
