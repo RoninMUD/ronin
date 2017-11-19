@@ -83,6 +83,11 @@ int imm_grace_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, in
 }
 
 
+int impair_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg) {
+  return FALSE;
+}
+
+
 int cold_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
 {
   char buf[MIL];

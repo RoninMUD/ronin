@@ -1630,30 +1630,31 @@ SEE ALSO: DISPLAY
 #
 WARRIOR FIGHTER
 
-Warriors are known to have more strength than the average player. This makes
-them better at hand-to-hand-combat, as they possess skills of violence and
-fighting unequaled by the members of any other class. However, they lack the
-ability to use magic of any sort.  Warriors also get 4 natural armor points for
-every 5 levels, and an additional practice % on parry for every 10 levels.
+Warriors are known to have more strength than the average character.
+This makes them better at hand-to-hand-combat, as they possess skills
+of violence and fighting unequaled by the members of any other class.
+However, they lack the ability to use magic of any sort.  Warriors
+also get 4 natural armor points for every 5 levels, and an additional
+practice % on parry for every 10 levels.
 
 You can improve your skills by using the practice command.
 
-Skills: kick, bash, rescue, block, knock, punch, parry, dual, throw
-     triple, spin, quad, disembowel.
+Skills: bash, block, dual, kick, knock, parry, punch, rescue, spin,
+     throw, triple, disembowel, quad.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 THIEF
  
-Thieves are known to have some special skills that no other class offers.
-These skills can come in handy in many situations, such as picking locks and
-'acquiring' things.  Thieves also get 2 natural armor points for every 5
-levels.
+Thieves are known to have some special skills that no other class
+offers. These skills can come in handy in many situations, such as
+picking locks and 'acquiring' things.  Thieves also get 2 natural
+armor points for every 5 levels.
  
 You can improve your skills by using the practice command.
  
-Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick, throw,
-     coin toss, twist, scan, cunning.
+Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick,
+     throw, coin toss, scan, twist, cunning.
  
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -7273,7 +7274,7 @@ HELP <name of skill>
 Level         Skill
   1           FADE
   2           IMPAIR
-  3           ENERGY ATTUNEMENT
+  3           ADRENALINE RUSH
   4           CLOSE COMBAT
   5           EVASION
 
@@ -8619,12 +8620,15 @@ order to grant them the ability to break through the INVULNERABILITY
 spell. Each attempted use of circle or backstab will incur a cost of 10
 mana to the thief while cunning is enabled.
 #
-"ENERGY ATTUNEMENT"
+"ADRENALINE RUSH"
 
 Subclass Bandit: Level 3 (Thief)
 
 When affected by healing magic, the Bandit will have the amount of
-healing done increased by 10% to 20%.
+healing done increased by 10% to 15%. In addition, the Bandit has an
+increased health regeneration rate when fighting. He/she will gain
+hit points equal to one fifth of his/her level every 10 seconds while
+engaged in combat.
 
 See also: SUBCLASSES BANDIT
 #

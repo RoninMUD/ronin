@@ -40,12 +40,6 @@ void raw_kill(struct char_data *ch);
 int calc_position_damage(int position, int dam);
 int stack_position(CHAR *ch, int target_position);
 
-
-int impair_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg) {
-  return FALSE;
-}
-
-
 /* Do not use this function on victims; it is designed for skill users only. */
 void skill_wait(CHAR *ch, int skill, int wait) {
   if (IS_IMPLEMENTOR(ch) || (CHAR_REAL_ROOM(ch) == NOWHERE) || (wait < 1)) return;
