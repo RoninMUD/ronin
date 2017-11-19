@@ -1650,7 +1650,7 @@ void assign_enchantments(void)
   ENCHANTO("The title of Bishop"            , ENCHANT_BISHOP      , -1,  1, APPLY_HITROLL         , AFF_DETECT_ALIGNMENT, AFF_NONE, bishop_enchantment);
   ENCHANTO("The title of Prophet"           , ENCHANT_PROPHET     , -1,  1, APPLY_DAMROLL         , AFF_SENSE_LIFE      , AFF_NONE, prophet_enchantment);
 
-  ENCHANTO("The status of Highwayman"       , ENCHANT_HIGHWAYMAN  , -1,  0, APPLY_NONE            , AFF_SNEAK           , AFF_NONE, highwayman_enchantment);
+  ENCHANTO("The status of Highwayman"       , ENCHANT_HIGHWAYMAN  , -1,  5, APPLY_SKILL_BACKSTAB  , AFF_NONE            , AFF_NONE, highwayman_enchantment);
   ENCHANTO("The status of Brigand"          , ENCHANT_BRIGAND     , -1,  1, APPLY_HITROLL         , AFF_SENSE_LIFE      , AFF_NONE, brigand_enchantment);
   ENCHANTO("The status of Assassin"         , ENCHANT_ASSASSIN    , -1,  5, APPLY_SKILL_CIRCLE    , AFF_INFRAVISION     , AFF_NONE, assassin_enchantment);
 
