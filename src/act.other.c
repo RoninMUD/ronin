@@ -531,7 +531,7 @@ void do_sneak(struct char_data *ch, char *argument, int cmd)
     af.bitvector2 = 0;
     affect_to_char(ch, &af);
 
-    send_to_char("You steal into the shadows and begin sneaking.\n\r", ch);
+    send_to_char("You slip into the shadows and begin sneaking.\n\r", ch);
     return;
   }
 }
@@ -871,9 +871,7 @@ void do_practice(CHAR *ch, char *arg, int cmd)
     case CLASS_CLERIC:
       showSpells = TRUE;
 
-      if (GET_LEVEL(ch) >= 35 ||
-        check_sc_access(ch, SKILL_MEDITATE))
-      {
+      if (GET_LEVEL(ch) >= 35 || check_sc_access(ch, SKILL_MEDITATE)) {
         showSkills = TRUE;
       }
       break;
@@ -895,18 +893,15 @@ void do_practice(CHAR *ch, char *arg, int cmd)
       break;
   }
 
-  if (showSkills)
-  {
+  if (showSkills) {
     list_skills_to_prac(ch);
   }
 
-  if (showSpells && showSkills)
-  {
+  if (showSpells && showSkills) {
     send_to_char("\n\r", ch);
   }
 
-  if (showSpells)
-  {
+  if (showSpells) {
     list_spells_to_prac(ch, TRUE);
   }
 }

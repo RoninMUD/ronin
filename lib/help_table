@@ -1726,7 +1726,7 @@ additional practice % on dodge for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
-     subdue, throw, trap, disembowel.
+     subdue, throw, trap, disembowel, evasion.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1754,7 +1754,7 @@ You can improve your spells and skills by using the practice command.
 Use HELP ANTI-PALADIN SPELLS to see the spells of the anti-paladin.
 
 Skills: backstab, bash, hide, kick, peek, pick, pummel, sneak, steal,
-        assassinate.
+     assassinate.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1928,7 +1928,7 @@ BACKSTAB. The chance of a successful ASSAULT depends on how well you learn it.
 #
 BLOCK
 
-Class: Warrior Paladin
+Class: Warrior Paladin Nomad (Ranger SC3)
 
 BLOCK will toggle block on and off. When block is on you will attempt to block
 your target and keep it from fleeing.
@@ -6694,21 +6694,6 @@ A camp cannot be set up in a room with a potentially deadly monster.
 
 See Also: BARD SUBCLASSES TRAPPER
 #
-SCALP
-
-Subclass Trapper: Level 4 (Nomad)
-
-The trapper has the ability to remove scalps from his victims.
-These scalps give whoever is carrying them a sense of power
-and increases both their hitroll and damroll by one for
-each scalp.  Unfortunately, the largest increase possible
-due to scalps is 2 hitroll/damroll and the scalps decay
-quickly.  However, the nomad can give the scalps to
-whomever he/she wishes, making the nomad extremely
-useful in a group.
-
-See Also: SUBCLASSES TRAPPER
-#
 BATTER
 
 Subclass Trapper: Level 3 (Nomad)
@@ -6751,7 +6736,7 @@ Level         Skill
   1           SCAN
   2           CAMP
   3           BATTER
-  4           SCALP
+  4           TROPHY
   5           FRENZY
 
 See Also: SUBCLASSES RANGER NOMAD
@@ -6766,7 +6751,7 @@ HELP <name of skill>
 Level         Skill
   1           AWARENESS
   2           PROTECT
-  3           N/A
+  3           BLOCK
   4           BERSERK
   5           DEFEND
 
@@ -8645,6 +8630,7 @@ See also: SUBCLASSES BANDIT
 #
 EVASION
 
+Class: Nomad (Level 50)
 Subclass Bandit: Level 5 (Thief)
 
 Usage: evasion (toggles on/off)
@@ -8656,11 +8642,12 @@ Unfortunately, since the Bandit is so intent on protecting themself
 the Bandit will miss more often.  If the Bandit is in combat, this
 cannot be turned on off.
 
-See Also: SUBCLASSES BANDIT
+See Also: SUBCLASSES BANDIT NOMAD
 #
 TROPHY
 
 Subclass Rogue: Level 2 (Thief)
+Subclass Trapper: Level 4 (Nomad)
 
 The Rogue has the ability to take trophies from his victims. These
 trophies give whoever is carrying them a sense of power and increases
@@ -8669,7 +8656,7 @@ the largest increase possible due to trophies is 2 hitroll/damroll and
 the trophies decay quickly.  However, the Rogue can give the trophies
 to whomever he/she wishes, making the Rogue extremely useful in a group.
 
-See Also: SUBCLASSES ROGUE
+See Also: SUBCLASSES ROGUE TRAPPER
 #
 VEHEMENCE
 

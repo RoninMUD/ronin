@@ -2684,7 +2684,7 @@ char *nomad_skills[] = {
   "scan",
   "awareness",
   "camp",
-  "zeal", /* Used to be Sweep */
+  "block", /* Used to be Sweep */
   "defend",
   "batter",
   "berserk",

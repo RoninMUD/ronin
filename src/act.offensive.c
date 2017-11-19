@@ -76,7 +76,8 @@ void do_block(CHAR *ch, char *argument, int cmd) {
   if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_WARRIOR) &&
       (GET_CLASS(ch) != CLASS_PALADIN) &&
-      (GET_CLASS(ch) != CLASS_AVATAR)) {
+      (GET_CLASS(ch) != CLASS_AVATAR) &&
+      !check_sc_access(ch, SKILL_BLOCK)) {
     send_to_char("You do not have this skill.\n\r", ch);
 
     return;

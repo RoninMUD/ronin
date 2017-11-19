@@ -201,7 +201,7 @@ void list_skills_to_prac(CHAR *ch)
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
-          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) continue;
+          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
@@ -241,7 +241,9 @@ void list_skills_to_prac(CHAR *ch)
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) continue;
+          else if ((number == SKILL_EVASION) && (GET_LEVEL(ch) < 50)) continue;
           else if ((number == SKILL_SCAN) && !check_subclass(ch, SC_TRAPPER, 1)) continue;
+          else if ((number == SKILL_BLOCK) && !check_subclass(ch, SC_RANGER, 3)) continue;
           else {
             sprintf(buf, "`n%-30s `k%-13s`q\n\r", nomad_skills[i], how_good(ch->skills[number].learned));
             send_to_char(buf, ch);
@@ -803,9 +805,10 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if ((skill == SKILL_SCAN) &&
-      (GET_CLASS(ch) == CLASS_NOMAD) &&
-      check_subclass(ch, SC_TRAPPER, 1) &&
+  if ((GET_CLASS(ch) == CLASS_NOMAD) &&
+      (((skill == SKILL_SCAN) && check_subclass(ch, SC_TRAPPER, 1)) ||
+       ((skill == SKILL_CAMP) && check_subclass(ch, SC_TRAPPER, 2)) ||
+       ((skill == SKILL_BLOCK) && check_subclass(ch, SC_RANGER, 3))) &&
       !check_sc_master(ch, mob)) {
     act("`i$N tells you 'Go see your subclass master to practice that.'`q", FALSE, ch, 0, mob, TO_CHAR);
     return TRUE;
