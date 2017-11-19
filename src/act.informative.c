@@ -1618,6 +1618,13 @@ void look_in_room(CHAR *ch, int vnum) {
      movement_loss[world[CHAR_REAL_ROOM(ch)].sector_type]);
     send_to_char(buffer,ch);
    }
+   else if (!(IS_SET(GET_PFLAG(ch), PLR_BRIEF) && IS_SET(GET_PFLAG(ch), PLR_SUPERBRF))) {
+     sprintf(buffer, "     Sector Type:  %s\n\r",
+       (world[CHAR_REAL_ROOM(ch)].sector_type < 6 || world[CHAR_REAL_ROOM(ch)].sector_type > 7 ?
+        sector_types[world[CHAR_REAL_ROOM(ch)].sector_type] :
+        "Water"));
+     send_to_char(buffer, ch);
+   }
 
    if(GET_LEVEL(ch)>LEVEL_WIZ) {
     send_to_char("     Extra Exits:",ch);

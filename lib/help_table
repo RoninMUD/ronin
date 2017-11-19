@@ -1,3 +1,24 @@
+"SECTOR TYPE"
+
+Every "room" in the game has a sector type that defines what kind of
+environment makes up the immediate surroundings. For example, if you
+are standing on the street in the middle of Midgaard, you would very
+likely be in the City sector type.
+
+Each sector type has certain characteristics, such as requiring
+different amounts of movement points to travel across the room. In
+general, the harsher the environment, the harder it is to move about.
+In addition, sector types may influence certain objects, monsters, or
+skills/spells.
+
+The possible sector types are: Arctic, City, Desert, Field, Forest,
+Hills, Inside, Mountains, and Water.
+
+Note: The sector type is not shown if you have enabled both the
+normal and super brief modes.
+
+See Also : "MOVEMENT POINTS" BRIEF
+#
 SKIN
 
 A skin can be made from a corpse using the SKIN command.  All
