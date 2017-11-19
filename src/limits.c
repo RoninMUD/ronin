@@ -1168,8 +1168,7 @@ void point_update(void)
       if (GET_ALIGNMENT(ch) >= 1000)
       {
         affect_from_char(ch, SKILL_PRAY);
-
-        WAIT_STATE(ch, PULSE_VIOLENCE);
+        send_to_char("You finish your prayers.\n\r", ch);
       }
     }
 

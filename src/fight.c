@@ -1681,6 +1681,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* If the victim is praying, interrupt them and apply a 2 round input lag. */
   if (affected_by_spell(victim, SKILL_PRAY)) {
     affect_from_char(victim, SKILL_PRAY);
+    send_to_char("Your prayers are interrupted and you are slightly confused.\n\r", ch);
     WAIT_STATE(victim, PULSE_VIOLENCE * 2);
   }
 
