@@ -441,7 +441,6 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
       (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
       (GET_CLASS(ch) != CLASS_AVATAR)) {
     send_to_char("You don't know this skill.\n\r", ch);
-
     return;
   }
 
@@ -449,26 +448,22 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
   if (!(victim = get_char_room_vis(ch, name))) {
     send_to_char("Backstab who?\n\r", ch);
-
     return;
   }
 
   if (victim == ch) {
     send_to_char("How can you sneak up on yourself!?\n\r", ch);
-
     return;
   }
 
   if (!GET_WEAPON(ch)) {
     send_to_char("You need to wield a weapon to backstab someone.\n\r", ch);
-
     return;
   }
 
   if ((get_weapon_type(GET_WEAPON(ch)) != TYPE_PIERCE) &&
       (get_weapon_type(GET_WEAPON(ch)) != TYPE_STING)) {
     send_to_char("Only pointy weapons can be used for backstabbing.\n\r", ch);
-
     return;
   }
 
@@ -477,7 +472,6 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   {
     if (!GET_LEARNED(ch, SKILL_ASSASSINATE)) {
       send_to_char("You can't backstab someone engaged in combat; they're too alert!\n\r", ch);
-
       return;
     }
 
@@ -487,14 +481,13 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
         !affected_by_spell(ch, SPELL_IMP_INVISIBLE) &&
         !affected_by_spell(ch, SPELL_BLACKMANTLE)) {
       act("Maybe if $E couldn't see you, or in the cover of darkness...", FALSE, ch, 0, victim, TO_CHAR);
-
       return;
     }
   }
 
-  check = number(1, 151) - GET_DEX_APP(ch);
+  check = (number(1, 151) - GET_DEX_APP(ch));
 
-  if (affected_by_spell(ch, AFF_HIDE) ||
+  if (!CAN_SEE(victim, ch) ||
       affected_by_spell(ch, AFF_SNEAK) ||
       affected_by_spell(ch, SPELL_INVISIBLE) ||
       affected_by_spell(ch, SPELL_IMP_INVISIBLE)) {
@@ -503,11 +496,11 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
   if (affected_by_spell(ch, SKILL_VEHEMENCE) ||
       check_subclass(ch, SC_INFIDEL, 1)) {
-    check -= 5 + (GET_DEX_APP(ch) / 2);
+    check -= (5 + (GET_DEX_APP(ch) / 2));
   }
 
-  if (AWAKE(victim) &&
-      ((check > GET_LEARNED(ch, SKILL_BACKSTAB)) || IS_IMMUNE(victim, IMMUNE_BACKSTAB))) {
+  if (IS_IMMUNE(victim, IMMUNE_BACKSTAB) ||
+      (AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_BACKSTAB)))) {
     damage(ch, victim, 0, SKILL_BACKSTAB, DAM_NO_BLOCK);
 
     skill_wait(ch, SKILL_BACKSTAB, 2);

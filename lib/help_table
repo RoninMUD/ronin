@@ -1957,9 +1957,9 @@ SNEAK
 
 Class: Anti-Paladin Ninja Thief
 
-Used for sneaking (moving in and out of rooms without anyone taking notice).
-When you type sneak there is no way to know if you actually are sneaking. If
-you successfully sneak, you'll continue to sneak for a little while.
+Used for sneaking (moving in and out of rooms without anyone taking
+notice). If you successfully sneak, you'll continue to sneak for a
+little while.
 
 Example:
 
@@ -1971,10 +1971,10 @@ HIDE
 
 Class: Anti-Paladin Ninja Thief
 
-When you type hide there is a chance that you will hide in the room. If
-hidden you can only be "sensed" by the "sense life" spell. Even if sensed,
-your identity will remain hidden.  Hide is broken by pressing return,
-regardless of whether you typed a command or not.
+When you type hide there is a chance that you will hide in the room.
+If hidden you can only be "sensed" by the "sense life" spell. Even if
+sensed, your identity will remain hidden.  Hide is broken by pressing
+enter/return, regardless of whether you typed a command or not.
 
 Example:
 
@@ -1982,7 +1982,9 @@ Example:
 
   >  (You wait for 5 minutes and remain hidden for 5 minutes.)
 
-  >  (You press enter and are no longer hidden,)
+  >  (You press enter/return and are no longer hidden.)
+
+See Also : SNEAK
 #
 THROW
 
