@@ -714,7 +714,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
 
       if (affected_by_spell(i, SKILL_PRAY))
       {
-        act("......$n is bowing $e head in prayer.", FALSE, i, 0, ch, TO_VICT);
+        act("......$n is bowing $s head in prayer.", FALSE, i, 0, ch, TO_VICT);
       }
     }
 
