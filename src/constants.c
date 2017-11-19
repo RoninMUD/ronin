@@ -133,8 +133,8 @@ const char *spell_wear_off_msg[] = {
   "!great mana!",
   "You finally get your hands on some mouthwash!",
   "Your depth of perception diminishes.",
-  "You stop praying.",
-  "!increase mana!",
+  "!pray!",
+  "!assassinate!",
   "The speed of your movements slows down to normal.",
   "!power word kill!",
   "!dispel magic!",
@@ -1929,9 +1929,9 @@ const char *immune_bits2[] =  {
   "CHEMICAL",
   "ACID",
   "FEAR",
-  "<UNUSED>",
+  "<UNUSED>", /* Not Used - Used to be IMMUNE_THROATSTRIKE */
   "CIRCLE",
-  "EXECUTE",
+  "<UNUSED>", /* Not Used - Used to be IMMUNE_EXECUTE */
   "STEAL",
   "\n"
 };
@@ -1992,10 +1992,10 @@ const char *player_bits[] = {
   "AUCTION",
   "BLOCK",
   "NOMESSAGE",
-  "NONAME-CLUB",
-  "D.ADDER-CLUB",
-  "CASTER-CLUB",
-  "AZOUN-CLUB",
+  "SANE-CLUB",
+  "LEM-CLUB",
+  "LINER-CLUB",
+  "RANGER-CLUB",
   "Q-PLAYER",
   "CHAOS",
   "DEPUTY",
@@ -2063,7 +2063,7 @@ const char *connected_types[]   =   {
   "Link Dead",
   "Change password",
   "Confirm new password",
-  "Waiting to allowin",
+  "Waiting for allowin",
   "\n"
 };
 
@@ -2684,7 +2684,7 @@ char *nomad_skills[] = {
   "scan",
   "awareness",
   "camp",
-  "zeal", /* Used to be Sweep */
+  "block", /* Used to be Sweep */
   "defend",
   "batter",
   "berserk",

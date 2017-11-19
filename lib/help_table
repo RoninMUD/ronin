@@ -1,3 +1,24 @@
+"SECTOR TYPE"
+
+Every "room" in the game has a sector type that defines what kind of
+environment makes up the immediate surroundings. For example, if you
+are standing on the street in the middle of Midgaard, you would very
+likely be in the City sector type.
+
+Each sector type has certain characteristics, such as requiring
+different amounts of movement points to travel across the room. In
+general, the harsher the environment, the harder it is to move about.
+In addition, sector types may influence certain objects, monsters, or
+skills/spells.
+
+The possible sector types are: Arctic, City, Desert, Field, Forest,
+Hills, Inside, Mountains, and Water.
+
+Note: The sector type is not shown if you have enabled both the
+normal and super brief modes.
+
+See Also : "MOVEMENT POINTS" BRIEF
+#
 SKIN
 
 A skin can be made from a corpse using the SKIN command.  All
@@ -1609,30 +1630,31 @@ SEE ALSO: DISPLAY
 #
 WARRIOR FIGHTER
 
-Warriors are known to have more strength than the average player. This makes
-them better at hand-to-hand-combat, as they possess skills of violence and
-fighting unequaled by the members of any other class. However, they lack the
-ability to use magic of any sort.  Warriors also get 4 natural armor points for
-every 5 levels, and an additional practice % on parry for every 10 levels.
+Warriors are known to have more strength than the average character.
+This makes them better at hand-to-hand-combat, as they possess skills
+of violence and fighting unequaled by the members of any other class.
+However, they lack the ability to use magic of any sort.  Warriors
+also get 4 natural armor points for every 5 levels, and an additional
+practice % on parry for every 10 levels.
 
 You can improve your skills by using the practice command.
 
-Skills: kick, bash, rescue, block, knock, punch, parry, dual, throw
-     triple, spin, quad, disembowel.
+Skills: bash, block, dual, kick, knock, parry, punch, rescue, spin,
+     throw, triple, disembowel, quad.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 THIEF
  
-Thieves are known to have some special skills that no other class offers.
-These skills can come in handy in many situations, such as picking locks and
-'acquiring' things.  Thieves also get 2 natural armor points for every 5
-levels.
+Thieves are known to have some special skills that no other class
+offers. These skills can come in handy in many situations, such as
+picking locks and 'acquiring' things.  Thieves also get 2 natural
+armor points for every 5 levels.
  
 You can improve your skills by using the practice command.
  
-Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick, throw,
-     coin toss, twist, scan, cunning.
+Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick,
+     throw, coin toss, scan, twist, cunning.
  
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1705,7 +1727,7 @@ additional practice % on dodge for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
-     subdue, throw, trap, disembowel.
+     subdue, throw, trap, disembowel, evasion.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1733,7 +1755,7 @@ You can improve your spells and skills by using the practice command.
 Use HELP ANTI-PALADIN SPELLS to see the spells of the anti-paladin.
 
 Skills: backstab, bash, hide, kick, peek, pick, pummel, sneak, steal,
-        assassinate.
+     assassinate.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1907,7 +1929,7 @@ BACKSTAB. The chance of a successful ASSAULT depends on how well you learn it.
 #
 BLOCK
 
-Class: Warrior Paladin
+Class: Warrior Paladin Nomad (Ranger SC3)
 
 BLOCK will toggle block on and off. When block is on you will attempt to block
 your target and keep it from fleeing.
@@ -1957,9 +1979,9 @@ SNEAK
 
 Class: Anti-Paladin Ninja Thief
 
-Used for sneaking (moving in and out of rooms without anyone taking notice).
-When you type sneak there is no way to know if you actually are sneaking. If
-you successfully sneak, you'll continue to sneak for a little while.
+Used for sneaking (moving in and out of rooms without anyone taking
+notice). If you successfully sneak, you'll continue to sneak for a
+little while.
 
 Example:
 
@@ -1971,10 +1993,10 @@ HIDE
 
 Class: Anti-Paladin Ninja Thief
 
-When you type hide there is a chance that you will hide in the room. If
-hidden you can only be "sensed" by the "sense life" spell. Even if sensed,
-your identity will remain hidden.  Hide is broken by pressing return,
-regardless of whether you typed a command or not.
+When you type hide there is a chance that you will hide in the room.
+If hidden you can only be "sensed" by the "sense life" spell. Even if
+sensed, your identity will remain hidden.  Hide is broken by pressing
+enter/return, regardless of whether you typed a command or not.
 
 Example:
 
@@ -1982,7 +2004,9 @@ Example:
 
   >  (You wait for 5 minutes and remain hidden for 5 minutes.)
 
-  >  (You press enter and are no longer hidden,)
+  >  (You press enter/return and are no longer hidden.)
+
+See Also : SNEAK
 #
 THROW
 
@@ -5304,7 +5328,7 @@ See Also: RANKS
 HIGHWAYMAN
 
 Spell Affects  -  none
-Other Affects  -  SNEAK (permanent)
+Other Affects  -  +5 backstab
 
 With the rank listed above, you will also get a 15% regeneration rate bonus on
 hit points and movement. To obtain this rank you must earn 5000000 experience
@@ -6671,21 +6695,6 @@ A camp cannot be set up in a room with a potentially deadly monster.
 
 See Also: BARD SUBCLASSES TRAPPER
 #
-SCALP
-
-Subclass Trapper: Level 4 (Nomad)
-
-The trapper has the ability to remove scalps from his victims.
-These scalps give whoever is carrying them a sense of power
-and increases both their hitroll and damroll by one for
-each scalp.  Unfortunately, the largest increase possible
-due to scalps is 2 hitroll/damroll and the scalps decay
-quickly.  However, the nomad can give the scalps to
-whomever he/she wishes, making the nomad extremely
-useful in a group.
-
-See Also: SUBCLASSES TRAPPER
-#
 BATTER
 
 Subclass Trapper: Level 3 (Nomad)
@@ -6728,7 +6737,7 @@ Level         Skill
   1           SCAN
   2           CAMP
   3           BATTER
-  4           SCALP
+  4           TROPHY
   5           FRENZY
 
 See Also: SUBCLASSES RANGER NOMAD
@@ -6743,7 +6752,7 @@ HELP <name of skill>
 Level         Skill
   1           AWARENESS
   2           PROTECT
-  3           N/A
+  3           BLOCK
   4           BERSERK
   5           DEFEND
 
@@ -7265,7 +7274,7 @@ HELP <name of skill>
 Level         Skill
   1           FADE
   2           IMPAIR
-  3           ENERGY ATTUNEMENT
+  3           ADRENALINE RUSH
   4           CLOSE COMBAT
   5           EVASION
 
@@ -7322,37 +7331,6 @@ attack by tripping the victim, knocking them to the ground and causing
 them to take increased damage on the next attack made on the victim.
 
 See Also: SUBCLASSES ROGUE
-#
-EXECUTE
-
-Subclass Rogue: Level 5 (Thief)
-Subclass Mystic: Level 5 (Ninja)
-
-During combat, the Rogue/Mystic has the choice to attempt to
-execute the victim which has the possibility of
-instantly killing.  While it is possible to successfully
-execute a victim at full hps, it is extremely
-unlikely.  As the victim receives damage and gets in
-worse shape, the chance of a successful execute
-will increase.  The Rogue/Mystic will have a 3 round lag each
-time the execute is attempted and if the execute fails,
-the victim can deal one hit worth of damage to the
-Rogue/Mystic.  The success of the execute is also dependent
-on how well the skill is practiced.
-
-See Also: SUBCLASSES MYSTIC
-#
-RETREAT
-
-Subclass Bandit: Level 2 (Thief)
-
-This skill is much like flee in that it allows the Bandit
-to escape combat and leave the room.  However, retreat
-has a higher success rate than flee, and there is no
-associated loss of experience.  The success of the retreat
-is dependent on how well the skill is practiced.
-
-See Also: SUBCLASSES BANDIT
 #
 IMPAIR
 
@@ -8642,17 +8620,21 @@ order to grant them the ability to break through the INVULNERABILITY
 spell. Each attempted use of circle or backstab will incur a cost of 10
 mana to the thief while cunning is enabled.
 #
-"ENERGY ATTUNEMENT"
+"ADRENALINE RUSH"
 
 Subclass Bandit: Level 3 (Thief)
 
 When affected by healing magic, the Bandit will have the amount of
-healing done increased by 10% to 20%.
+healing done increased by 10% to 15%. In addition, the Bandit has an
+increased health regeneration rate when fighting. He/she will gain
+hit points equal to one fifth of his/her level every 10 seconds while
+engaged in combat.
 
 See also: SUBCLASSES BANDIT
 #
 EVASION
 
+Class: Nomad (Level 50)
 Subclass Bandit: Level 5 (Thief)
 
 Usage: evasion (toggles on/off)
@@ -8664,11 +8646,12 @@ Unfortunately, since the Bandit is so intent on protecting themself
 the Bandit will miss more often.  If the Bandit is in combat, this
 cannot be turned on off.
 
-See Also: SUBCLASSES BANDIT
+See Also: SUBCLASSES BANDIT NOMAD
 #
 TROPHY
 
 Subclass Rogue: Level 2 (Thief)
+Subclass Trapper: Level 4 (Nomad)
 
 The Rogue has the ability to take trophies from his victims. These
 trophies give whoever is carrying them a sense of power and increases
@@ -8677,7 +8660,7 @@ the largest increase possible due to trophies is 2 hitroll/damroll and
 the trophies decay quickly.  However, the Rogue can give the trophies
 to whomever he/she wishes, making the Rogue extremely useful in a group.
 
-See Also: SUBCLASSES ROGUE
+See Also: SUBCLASSES ROGUE TRAPPER
 #
 VEHEMENCE
 

@@ -2717,8 +2717,10 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       send_to_char("...not for the mortal man.\n\r",ch);
 
     i=0;
+    /*
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_ANTI_MALE)) i+=2;
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_ANTI_FEMALE)) i+=2;
+    */
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_ANTI_WARRIOR)) i++;
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_ANTI_THIEF)) i++;
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_ANTI_MAGIC_USER)) i++;

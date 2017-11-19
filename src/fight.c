@@ -1681,6 +1681,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* If the victim is praying, interrupt them and apply a 2 round input lag. */
   if (affected_by_spell(victim, SKILL_PRAY)) {
     affect_from_char(victim, SKILL_PRAY);
+    send_to_char("Your prayers are interrupted and you are slightly confused.\n\r", ch);
     WAIT_STATE(victim, PULSE_VIOLENCE * 2);
   }
 
@@ -3352,18 +3353,14 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
               check_sc_access(ch, SKILL_IMPAIR) &&
               chance(40 + GET_DEX_APP(ch)))
           {
-            ench.name = strdup("Impaired");
+            ench.name = strdup("Impaired (Paralyzed)");
             ench.type = SKILL_IMPAIR;
-            if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-              ench.duration = 0;
-            else
-              ench.duration = 1;
-            ench.location = APPLY_NONE;
+            ench.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 0 : 2;
+            ench.location = 0;
             ench.modifier = 0;
             ench.bitvector = AFF_PARALYSIS;
-            ench.bitvector2 = AFF_NONE;
+            ench.bitvector2 = 0;
             ench.func = impair_enchantment;
-
             enchantment_to_char(victim, &ench, FALSE);
 
             special_message = TRUE;
@@ -3399,19 +3396,20 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
               CHAR_REAL_ROOM(victim) == CHAR_REAL_ROOM(ch) &&
               !IS_NPC(ch) &&
               check_sc_access(ch, SKILL_IMPAIR) &&
-              chance(20 + (GET_DEX_APP(ch) / 2)))
+              chance(20 + GET_DEX_APP(ch)))
           {
-            ench.name = strdup("Dazed (Armor Penalty)");
+            ench.name = strdup("Impaired (Armor Penalty)");
             ench.type = SKILL_IMPAIR;
-            ench.duration = 0;
-            ench.location = APPLY_ARMOR;
-            ench.modifier = 30;
-            ench.bitvector = AFF_NONE;
-            ench.bitvector2 = AFF_NONE;
+            ench.duration = 1;
+            ench.bitvector = 0;
+            ench.bitvector2 = 0;
             ench.func = impair_enchantment;
+
+            ench.location = APPLY_ARMOR;
+            ench.modifier = +30;
             enchantment_to_char(victim, &ench, FALSE);
 
-            ench.name = strdup("Dazed (Hitroll Penalty)");
+            ench.name = strdup("Impaired (Hitroll Penalty)");
             ench.location = APPLY_HITROLL;
             ench.modifier = -2;
             enchantment_to_char(victim, &ench, FALSE);

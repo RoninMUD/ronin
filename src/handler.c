@@ -759,8 +759,10 @@ void equip_char(struct char_data *ch, struct obj_data *obj, int pos)
       (IS_OBJ_STAT(obj, ITEM_ANTI_MAGIC_USER)  && (GET_CLASS(ch) == CLASS_MAGIC_USER))   ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_NINJA)       && (GET_CLASS(ch) == CLASS_NINJA))        ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_NOMAD)       && (GET_CLASS(ch) == CLASS_NOMAD))        ||
+      /*
       (IS_OBJ_STAT(obj, ITEM_ANTI_MALE)        && (GET_SEX(ch)   == SEX_MALE))           ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_FEMALE)      && (GET_SEX(ch)   == SEX_FEMALE))         ||
+      */
       (IS_OBJ_STAT(obj, ITEM_ANTI_PALADIN)     && (GET_CLASS(ch) == CLASS_PALADIN))      ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_ANTIPALADIN) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_AVATAR)      && (GET_CLASS(ch) == CLASS_AVATAR))       ||
@@ -911,8 +913,10 @@ int rent_equip_char(struct char_data *ch, struct obj_data *obj, int pos)
       (IS_OBJ_STAT(obj, ITEM_ANTI_MAGIC_USER) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_NINJA) && (GET_CLASS(ch) == CLASS_NINJA)) ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_NOMAD) && (GET_CLASS(ch) == CLASS_NOMAD)) ||
+      /*
       (IS_OBJ_STAT(obj, ITEM_ANTI_MALE) && (GET_SEX(ch) == SEX_MALE)) ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_FEMALE) && (GET_SEX(ch) == SEX_FEMALE)) ||
+      */
       (IS_OBJ_STAT(obj, ITEM_ANTI_PALADIN) && (GET_CLASS(ch) == CLASS_PALADIN)) ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_ANTIPALADIN) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) ||
       (IS_OBJ_STAT(obj, ITEM_ANTI_AVATAR) && (GET_CLASS(ch) == CLASS_AVATAR)) ||

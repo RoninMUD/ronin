@@ -42,6 +42,7 @@
 #include "slave.h"
 #include "spells.h"
 #include "reception.h"
+#include "subclass.h"
 
 #define DFLT_PORT 5000        /* default port */
 #define MAX_NAME_LENGTH 15
@@ -2701,9 +2702,9 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
 
   if (CHAR_REAL_ROOM(ch) == -1) return FALSE;
 
-  /* Mantra */
-  if (cmd == MSG_MOBACT)
+  if (cmd == MSG_MOBACT && !IS_NPC(ch))
   {
+    /* Mantra */
     for (tmp_af = ch->affected; tmp_af; tmp_af = af_next)
     {
       af_next = tmp_af->next;
@@ -2753,6 +2754,11 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
           affect_remove(ch, tmp_af);
         }
       }
+    }
+
+    /* Adrenaline Rush*/
+    if (check_subclass(ch, SC_BANDIT, 3)) {
+      GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
     }
   }
 

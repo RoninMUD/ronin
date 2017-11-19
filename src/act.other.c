@@ -490,80 +490,89 @@ void do_unknown(struct char_data *ch, char *argument, int cmd)
 
 void do_sneak(struct char_data *ch, char *argument, int cmd)
 {
-  struct affected_type_5 af;
-  byte percent;
+  AFF af;
+  int check = 0;
 
-  if(!ch->skills)
+  if (!GET_SKILLS(ch))
     return;
 
-  if ((GET_CLASS(ch) != CLASS_NINJA) &&
+  if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_THIEF) &&
-      (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
-      (GET_LEVEL(ch) < LEVEL_IMM)) {
+      (GET_CLASS(ch) != CLASS_NINJA) &&
+      (GET_CLASS(ch) != CLASS_ANTI_PALADIN)) {
     send_to_char("You don't know this skill.\n\r", ch);
+    return;
+  }
+
+  if (IS_AFFECTED(ch, AFF_SNEAK)) {
+    affect_from_char(ch, SKILL_SNEAK);
+    send_to_char("You no longer sneak about in the shadows.\n\r", ch);
     return;
   }
 
   send_to_char("Ok, you'll try to move silently for a while.\n\r", ch);
-  if(IS_AFFECTED(ch, AFF_SNEAK))
-    affect_from_char(ch, SKILL_SNEAK);
 
-  percent=number(1,101); /* 101% is a complete failure */
+  check = (number(1, 101) - dex_app_skill[GET_DEX(ch)].sneak);
 
-  if (affected_by_spell(ch, SPELL_BLUR))
-  {
-    percent -= (GET_LEVEL(ch) / 10);
+  if (affected_by_spell(ch, SPELL_BLUR)) {
+    check -= (GET_LEVEL(ch) / 10);
   }
 
-  if(percent > ch->skills[SKILL_SNEAK].learned +
-      dex_app_skill[GET_DEX(ch)].sneak)
+  if (check > GET_LEARNED(ch, SKILL_SNEAK)) {
+    send_to_char("You don't feel very sneaky right now.\n\r", ch);
     return;
+  }
+  else {
+    af.type       = SKILL_SNEAK;
+    af.duration   = GET_LEVEL(ch);
+    af.modifier   = 0;
+    af.location   = 0;
+    af.bitvector  = AFF_SNEAK;
+    af.bitvector2 = 0;
+    affect_to_char(ch, &af);
 
-     af.type = SKILL_SNEAK;
-     af.duration = GET_LEVEL(ch);
-     af.modifier = 0;
-     af.location = APPLY_NONE;
-     af.bitvector = AFF_SNEAK;
-     af.bitvector2 = 0;
-     affect_to_char(ch, &af);
+    send_to_char("You slip into the shadows and begin sneaking.\n\r", ch);
+    return;
+  }
 }
 
 void do_hide(struct char_data *ch, char *argument, int cmd)
 {
-  byte percent;
+  int check = 0;
 
-  if(!ch->skills)
-    return;
+  if (!GET_SKILLS(ch)) return;
 
-  if ((GET_CLASS(ch) != CLASS_NINJA) &&
+  if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_THIEF) &&
-      (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
-      (GET_LEVEL(ch) < LEVEL_IMM)) {
+      (GET_CLASS(ch) != CLASS_NINJA) &&
+      (GET_CLASS(ch) != CLASS_ANTI_PALADIN)) {
     send_to_char("You don't know this skill.\n\r", ch);
+    return;
+  }
+
+  if (IS_AFFECTED(ch, AFF_HIDE)) {
+    /* This will never actually get called, due to the way hide works. */
+    REMOVE_BIT(GET_AFF(ch), AFF_HIDE);
+    send_to_char("You are no longer hidden.\n\r", ch);
     return;
   }
 
   send_to_char("You attempt to hide yourself.\n\r", ch);
 
-  if(IS_AFFECTED(ch, AFF_HIDE))
-    REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
+  check = (number(1, 101) - dex_app_skill[GET_DEX(ch)].hide);
 
-  percent=number(1,101); /* 101% is a complete failure */
-
-  if (affected_by_spell(ch, SPELL_BLUR))
-  {
-    percent -= (GET_LEVEL(ch) / 10);
+  if (affected_by_spell(ch, SPELL_BLUR)) {
+    check -= (GET_LEVEL(ch) / 10);
   }
 
-  if(percent > ch->skills[SKILL_HIDE].learned +
-      dex_app_skill[GET_DEX(ch)].hide){
-   send_to_char("You failed to hide.\n\r",ch);
+  if (check > GET_LEARNED(ch, SKILL_HIDE)) {
+    send_to_char("You failed to hide.\n\r", ch);
     return;
   }
-
-  SET_BIT(ch->specials.affected_by, AFF_HIDE);
-  if(IS_AFFECTED(ch,AFF_HIDE)) {
-   send_to_char("You are now hidden.\n\r",ch);
+  else {
+    SET_BIT(GET_AFF(ch), AFF_HIDE);
+    send_to_char("You are now hidden.\n\r", ch);
+    return;
   }
 }
 
@@ -862,9 +871,7 @@ void do_practice(CHAR *ch, char *arg, int cmd)
     case CLASS_CLERIC:
       showSpells = TRUE;
 
-      if (GET_LEVEL(ch) >= 35 ||
-        check_sc_access(ch, SKILL_MEDITATE))
-      {
+      if (GET_LEVEL(ch) >= 35 || check_sc_access(ch, SKILL_MEDITATE)) {
         showSkills = TRUE;
       }
       break;
@@ -886,18 +893,15 @@ void do_practice(CHAR *ch, char *arg, int cmd)
       break;
   }
 
-  if (showSkills)
-  {
+  if (showSkills) {
     list_skills_to_prac(ch);
   }
 
-  if (showSpells && showSkills)
-  {
+  if (showSpells && showSkills) {
     send_to_char("\n\r", ch);
   }
 
-  if (showSpells)
-  {
+  if (showSpells) {
     list_spells_to_prac(ch, TRUE);
   }
 }

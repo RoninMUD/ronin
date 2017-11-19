@@ -714,7 +714,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
 
       if (affected_by_spell(i, SKILL_PRAY))
       {
-        act("......$n is bowing $e head in prayer.", FALSE, i, 0, ch, TO_VICT);
+        act("......$n is bowing $s head in prayer.", FALSE, i, 0, ch, TO_VICT);
       }
     }
 
@@ -1617,6 +1617,13 @@ void look_in_room(CHAR *ch, int vnum) {
      sector_types[world[CHAR_REAL_ROOM(ch)].sector_type],
      movement_loss[world[CHAR_REAL_ROOM(ch)].sector_type]);
     send_to_char(buffer,ch);
+   }
+   else if (!(IS_SET(GET_PFLAG(ch), PLR_BRIEF) && IS_SET(GET_PFLAG(ch), PLR_SUPERBRF))) {
+     sprintf(buffer, "     Sector Type:  %s\n\r",
+       (world[CHAR_REAL_ROOM(ch)].sector_type < 6 || world[CHAR_REAL_ROOM(ch)].sector_type > 7 ?
+        sector_types[world[CHAR_REAL_ROOM(ch)].sector_type] :
+        "Water"));
+     send_to_char(buffer, ch);
    }
 
    if(GET_LEVEL(ch)>LEVEL_WIZ) {
