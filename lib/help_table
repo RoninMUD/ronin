@@ -7346,37 +7346,6 @@ them to take increased damage on the next attack made on the victim.
 
 See Also: SUBCLASSES ROGUE
 #
-EXECUTE
-
-Subclass Rogue: Level 5 (Thief)
-Subclass Mystic: Level 5 (Ninja)
-
-During combat, the Rogue/Mystic has the choice to attempt to
-execute the victim which has the possibility of
-instantly killing.  While it is possible to successfully
-execute a victim at full hps, it is extremely
-unlikely.  As the victim receives damage and gets in
-worse shape, the chance of a successful execute
-will increase.  The Rogue/Mystic will have a 3 round lag each
-time the execute is attempted and if the execute fails,
-the victim can deal one hit worth of damage to the
-Rogue/Mystic.  The success of the execute is also dependent
-on how well the skill is practiced.
-
-See Also: SUBCLASSES MYSTIC
-#
-RETREAT
-
-Subclass Bandit: Level 2 (Thief)
-
-This skill is much like flee in that it allows the Bandit
-to escape combat and leave the room.  However, retreat
-has a higher success rate than flee, and there is no
-associated loss of experience.  The success of the retreat
-is dependent on how well the skill is practiced.
-
-See Also: SUBCLASSES BANDIT
-#
 IMPAIR
 
 Subclass Bandit: Level 2 (Thief)

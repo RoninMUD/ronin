@@ -621,7 +621,9 @@ struct room_data
 #define SC_CAVALIER        13 /* paladin */
 #define SC_CRUSADER        14
 #define SC_DEFILER         15 /* anti-paladin */
-#define SC_INFIDEL         16 /* skip 2 for Avatar position */
+#define SC_INFIDEL         16
+#define SC_AVATAR_1        17 /* avatar */
+#define SC_AVATAR_2        18
 #define SC_BLADESINGER     19 /* bard */
 #define SC_CHANTER         20
 #define SC_LEGIONNAIRE     21 /* commando */
@@ -828,9 +830,9 @@ struct room_data
 #define  IMMUNE_CHEMICAL     8
 #define  IMMUNE_ACID         16
 #define  IMMUNE_FEAR         32
-#define  IMMUNE_THROATSTRIKE 64  /* Not Used */
+#define  IMMUNE_2_UNUSED_64  64 /* Not Used - Used to be IMMUNE_THROATSTRIKE */
 #define  IMMUNE_CIRCLE       128
-#define  IMMUNE_EXECUTE      256 /* Not Used */
+#define  IMMUNE_2_UNUSED_256 256 /* Not Used - Used to be IMMUNE_EXECUTE */
 #define  IMMUNE_STEAL        512
 
 /* For players : specials.pflag */
@@ -841,11 +843,11 @@ struct room_data
 #define PLR_KILL                  16
 #define PLR_THIEF                 32
 #define PLR_NOKILL                64
-#define PLR_INSURANCE             128 /* Not Used */
+#define PLR_UNUSED_128            128 /* Not Used - Used to be PLR_INSURANCE */
 #define PLR_NOSUMMON              256
 #define PLR_GOSSIP                512
 #define PLR_AUCTION               1024
-#define PLR_BLOCK                 2048 /* Not Used */
+#define PLR_UNUSED_2048           2048 /* Not Used - Used to be PLR_BLOCK */
 #define PLR_NOMESSAGE             4096
 #define PLR_SANES_VOCAL_CLUB      8192
 #define PLR_LEMS_LIQOUR_LOUNGE    16384
