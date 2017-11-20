@@ -7812,10 +7812,12 @@ Duration    : 10
 Save        : -
 Mana Cost   : 30
 
-This spell gives the Crusader a damage bonus against evil victims.  Every hit
-will have a damage increase of 5 versus evil while affected by this spell.
+This spell gives the Crusader the following bonuses: +1 damroll,
++1 hitroll, -1 to all saving throws (this is a benefit), and it will
+cause the Crusader's melee attacks to deal an additional +1d6 damage
+against evil opponents.
 
-See Also: SUBCLASSES CRUSADER
+See Also: SUBCLASSES CRUSADER DAMROLL HITROLL
 #
 FOCUS
 

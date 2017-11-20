@@ -1955,8 +1955,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   if (dmg > 0 &&
       damage_type == DAM_PHYSICAL &&
       affected_by_spell(ch, SPELL_RIGHTEOUSNESS) &&
+      IS_GOOD(ch) &&
       IS_EVIL(victim)) {
-    dmg += 5;
+    dmg += dice(1, 6);
   }
 
   /* Invulnerability */
@@ -2016,8 +2017,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
       if (max_reflect > 0 &&
           affected_by_spell(victim, SPELL_RIGHTEOUSNESS) &&
+          IS_GOOD(victim) &&
           IS_EVIL(ch)) {
-        max_reflect += 5;
+        max_reflect += dice(1, 6);
       }
 
       reflect = MIN(max_reflect, dmg / 10);
@@ -2045,8 +2047,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     if (max_reflect > 0 &&
         damage_type == DAM_PHYSICAL &&
         affected_by_spell(victim, SPELL_RIGHTEOUSNESS) &&
+        IS_GOOD(victim) &&
         IS_EVIL(ch)) {
-      max_reflect += 5;
+      max_reflect += dice(1, 6);
     }
 
     reflect = MIN(max_reflect, dmg / 4);

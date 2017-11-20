@@ -81,7 +81,6 @@ $State: Exp $
 #define TICKET            17
 #define LOTTERY_MACHINE   18
 
-OBJ *lotto_machine=0;
 
 /* Lottery Routines */
 struct lottery_elem {
@@ -265,6 +264,7 @@ int lottery_look(CHAR *ch, char *arg) {
 Welcome to the Midgaard Lottery.\n\r\n\r\
 To buy a ticket on an item simply type buy <#> <amt>\n\r\
                                    ex: buy 0 5\n\r\
+To identify an item: identify <#> \n\r\
 More information can be gained by typing: HELP lottery\n\r\n\r");
 
   if(lottery_access(ch))
@@ -445,6 +445,33 @@ void lottery_put(CHAR *ch, char *arg) {
   save_lottery();
   save_char(ch, NOWHERE);
 }
+void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void lottery_identify(CHAR *ch, char *arg) {
+
+  char tmp[MAX_INPUT_LENGTH];
+  int number;
+
+  arg = one_argument(arg, tmp);
+  if(!*tmp) {
+    send_to_char("Usage: identify <object number>\n\r", ch);
+    return;
+  }
+
+  if(!is_number(tmp) ) {
+    send_to_char("Please indicate a proper object number.\n\r",ch);
+    return;
+  }
+
+  if((number = atoi(tmp)) < 0 ||
+     number >= MAX_OBJS_LOTTERY ||
+     !l_mach.lotto[number].obj) {
+    send_to_char("There isn't any such object number.\n\r",ch);
+    return;
+  }
+
+  spell_identify(GET_LEVEL(ch), ch, 0, l_mach.lotto[number].obj);
+}
+
 
 /* Assumes access has already been checked for */
 void lottery_recover(CHAR *ch, char *arg) {
@@ -593,11 +620,6 @@ int lottery_machine(OBJ *machine, CHAR *ch, int cmd, char *arg) {
   char buf[MAX_INPUT_LENGTH];
   int top;
 
-  if(cmd==MSG_TICK) {
-    if(!lotto_machine) lotto_machine=machine;
-    return FALSE;
-  }
-
   if(cmd==MSG_VIOLENCE) {
     if(machine->in_room==NOWHERE) return FALSE;
     if(!machine->obj_flags.value[0]) return FALSE;
@@ -612,6 +634,10 @@ int lottery_machine(OBJ *machine, CHAR *ch, int cmd, char *arg) {
   if(IS_NPC(ch)) return(FALSE);
 
   switch(cmd) {
+    case CMD_IDENTIFY:
+      lottery_identify(ch,arg);
+      return TRUE;
+      break;
     case CMD_LOOK:
       return(lottery_look(ch, arg));
       break;
