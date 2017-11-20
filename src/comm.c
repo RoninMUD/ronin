@@ -68,7 +68,6 @@ extern int top_of_mobt;            /* In db.c */
 extern int top_of_objt;            /* In db.c */
 extern struct time_info_data time_info;  /* In db.c */
 extern char help[];
-extern OBJ *lotto_machine; /* In gamble.c */
 void slongrand(unsigned long seed);
 void init_descriptor (struct descriptor_data *newd, int desc);
 void game_sleep(struct timeval *timeout);
@@ -141,6 +140,11 @@ FILE *logfile = NULL;    /* Where to send the log messages. */
 void open_logfile(void);
 void close_logfile(void);
 void backup_logfile(void);
+
+/* VNUM of items that are sent MSG_VIOLENCE */
+static int msg_violence_objects[1] = {
+  18,     /* Lottery Machine */
+};
 
 char *Color[]=
       {
@@ -963,7 +967,17 @@ void heartbeat(int pulse) {
     /* Moved flying part down - Ranger March 98 */
     /* Changed loop to top_of_fly - made it a pointer - Ranger Nov 98 */
     for (i = 0;i<top_of_flying; i++) flying_room(*(flying_rooms+i));
-    if(lotto_machine) signal_object(lotto_machine,0,MSG_VIOLENCE,"");
+    for (i = 0;i < NUMELEMS(msg_violence_objects);i++) /* array of objects to signal */
+    {
+      if (obj_proto_table[real_object(msg_violence_objects[i])].number >= 1) {
+
+        for (obj = object_list; obj; obj = obj->next) {
+          if (msg_violence_objects[i] == obj->item_number_v) {
+            signal_object(obj,0,MSG_VIOLENCE,"");
+          }
+        }
+      }
+    }
     perform_violence();
 
   }
