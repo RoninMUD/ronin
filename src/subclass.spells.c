@@ -296,10 +296,27 @@ void spell_righteousness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
     af.type       = SPELL_RIGHTEOUSNESS;
     af.duration   = 10;
-    af.modifier   = 0;
-    af.location   = 0;
     af.bitvector  = 0;
     af.bitvector2 = 0;
+
+    af.location   = APPLY_HITROLL;
+    af.modifier   = 1;
+    affect_to_char(ch, &af);
+
+    af.location   = APPLY_DAMROLL;
+    af.modifier   = 1;
+    affect_to_char(ch, &af);
+
+    af.modifier = -1;
+    af.location = APPLY_SAVING_PARA;
+    affect_to_char(ch, &af);
+    af.location = APPLY_SAVING_ROD;
+    affect_to_char(ch, &af);
+    af.location = APPLY_SAVING_PETRI;
+    affect_to_char(ch, &af);
+    af.location = APPLY_SAVING_BREATH;
+    affect_to_char(ch, &af);
+    af.location = APPLY_SAVING_SPELL;
     affect_to_char(ch, &af);
   }
 }
