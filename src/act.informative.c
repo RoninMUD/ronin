@@ -418,6 +418,9 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
   AFF *aff = NULL;
   bool stop = FALSE;
 
+  const int EMITH_CAPE_1 = 26709;
+  const int EMITH_CAPE_2 = 26719;
+
   if (mode == 0)
   {
     if (i->new.wizinv > GET_LEVEL(ch)) { return; }
@@ -1109,6 +1112,24 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
           {
             send_to_char(where[j], ch);
             show_obj_to_char(EQ(i, j), ch, 1, 0);
+
+            switch (j) {
+              case WEAR_NECK_1:
+                /* Emith cape uses both neck slots, similar to a 2-handed weapon. */
+                if (V_OBJ(EQ(i, j)) == EMITH_CAPE_1 || V_OBJ(EQ(i, j)) == EMITH_CAPE_2) {
+                  send_to_char(where[j], ch);
+                  send_to_char("********\n\r", ch);
+                  j++; /* Skip WEAR_NECK_2. This assumes WEAR_NECK_2 is always immediately after WEAR_NECK_1. */
+                }
+                break;
+              case WIELD:
+                if (OBJ_TYPE(EQ(i, j)) == ITEM_2HWEAPON) {
+                  send_to_char(where[j], ch);
+                  send_to_char("********\n\r", ch);
+                  j++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
+                }
+                break;
+            }
           }
         }
       }
@@ -3301,37 +3322,62 @@ void do_inventory(struct char_data *ch, char *argument, int cmd) {
   list_obj_to_char(ch->carrying, ch, 1, TRUE);
 }
 
+
 void do_equipment(struct char_data *ch, char *argument, int cmd)
 {
-  int j;
-  bool found=FALSE;
+  int equip_pos = 0;
+  bool found = FALSE;
+  OBJ *equipment = NULL;
+
+  const int EMITH_CAPE_1 = 26709;
+  const int EMITH_CAPE_2 = 26719;
 
   send_to_char("You are using:\n\r", ch);
-  for (j=0; j< MAX_WEAR; j++) {
-    if (ch->equipment[j]) {
-      found=TRUE;
-      if (CAN_SEE_OBJ(ch,ch->equipment[j])) {
-        send_to_char(where[j],ch);
-        show_obj_to_char(ch->equipment[j],ch,1,0);
-      } else {
-        send_to_char(where[j],ch);
-        send_to_char("Something.\n\r",ch);
-        found = TRUE;
+
+  for (equip_pos = 0; equip_pos < MAX_WEAR; equip_pos++) {
+    equipment = EQ(ch, equip_pos);
+
+    if (equipment) {
+      found = TRUE;
+
+      if (CAN_SEE_OBJ(ch, equipment)) {
+        send_to_char(where[equip_pos], ch);
+        show_obj_to_char(equipment, ch, 1, 0);
       }
-      if(j==WIELD && ch->equipment[j]->obj_flags.type_flag==ITEM_2HWEAPON) {
-        send_to_char(where[HOLD],ch);
-        send_to_char("********\n\r",ch);
-        j++;
+      else {
+        send_to_char(where[equip_pos], ch);
+        send_to_char("Something.\n\r", ch);
+      }
+
+      switch (equip_pos) {
+        case WEAR_NECK_1:
+          /* Emith cape uses both neck slots, similar to a 2-handed weapon. */
+          if (V_OBJ(equipment) == EMITH_CAPE_1 || V_OBJ(equipment) == EMITH_CAPE_2) {
+            send_to_char(where[WEAR_NECK_2], ch);
+            send_to_char("********\n\r", ch);
+            equip_pos++; /* Skip WEAR_NECK_2. This assumes WEAR_NECK_2 is always immediately after WEAR_NECK_1. */
+          }
+          break;
+        case WIELD:
+          if (OBJ_TYPE(equipment) == ITEM_2HWEAPON) {
+            send_to_char(where[HOLD], ch);
+            send_to_char("********\n\r", ch);
+            equip_pos++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
+          }
+          break;
       }
     }
     else {
-      if(GET_LEVEL(ch)<LEVEL_IMM) {
-        send_to_char(where[j],ch);
-        send_to_char("Nothing.\n\r",ch);
+      if (GET_LEVEL(ch) < LEVEL_IMM) {
+        send_to_char(where[equip_pos], ch);
+        send_to_char("Nothing.\n\r", ch);
       }
     }
   }
-  if(!found && GET_LEVEL(ch)>=LEVEL_IMM) send_to_char("Nothing.\n\r",ch);
+
+  if (!found && GET_LEVEL(ch) >= LEVEL_IMM) {
+    send_to_char("Nothing.\n\r", ch);
+  }
 }
 
 void do_credits(struct char_data *ch, char *argument, int cmd) {
