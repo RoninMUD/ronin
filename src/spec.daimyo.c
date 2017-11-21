@@ -67,6 +67,8 @@ extern CHAR *character_list;
 #define THORN_THOTH_VANITY        129
 #define ROOM_DOWN                 554
 #define ROOM_NORTH              20198
+#define UBER_MUSASHI            20109
+#define DM_KATANA                   20102
 void stop_riding(struct char_data *ch,struct char_data *vict);
 
 int dm_jade_helm(OBJ *obj, CHAR *ch,int cmd, char *arg) {
@@ -990,6 +992,212 @@ int dm_thorn(OBJ *obj,CHAR *ch, int cmd, char *argument) {
   return FALSE;
 }
 
+int dm_katana_skills[] = {
+  // list of obj_skill_flags that can be rolled
+  APPLY_SKILL_BACKFLIP,
+  APPLY_SKILL_PUMMEL,
+  APPLY_SKILL_ASSAULT,
+  APPLY_SKILL_PARRY,
+  APPLY_SKILL_DODGE,
+  APPLY_SKILL_DUAL,
+  APPLY_SKILL_TRIPLE
+  //APPLY_SKILL_THROW
+};
+
+void dm_katana_cleanse(CHAR *wielder, CHAR *target)
+{
+  bool effectBreak = FALSE;
+
+  act("$n moves with lightning quickness, swinging his blade at you with a precision strike.", FALSE, wielder, 0, target, TO_VICT);
+  act("$n moves with lightning quickness, swinging his blade at $N with a precision strike.", FALSE, wielder, 0, target, TO_NOTVICT);
+  act("You move with lightning quickness, swinging your blade at $N with a precision strike.", FALSE, wielder, 0, target, TO_CHAR);
+  if (affected_by_spell( target, SPELL_SANCTUARY )) {
+    affect_from_char(target, SPELL_SANCTUARY);
+    effectBreak = TRUE;
+  }
+  if (IS_NPC(target) && IS_SET( target->specials.affected_by, AFF_SANCTUARY )) {
+    REMOVE_BIT(target->specials.affected_by, AFF_SANCTUARY);
+    effectBreak = TRUE;
+  }
+  if (affected_by_spell( target, SPELL_ORB_PROTECTION )) {
+    affect_from_char(target, SPELL_ORB_PROTECTION);
+    effectBreak = TRUE;
+  }
+  if (affected_by_spell( target, SPELL_SPHERE )) {
+    affect_from_char(target, SPELL_SPHERE);
+    effectBreak = TRUE;
+  }
+  if (IS_NPC(target) && IS_SET( target->specials.affected_by, AFF_SPHERE )) {
+    REMOVE_BIT(target->specials.affected_by, AFF_SPHERE);
+    effectBreak = TRUE;
+  }
+  if (affected_by_spell( target, SPELL_INVUL )) {
+    affect_from_char(target, SPELL_INVUL);
+    effectBreak = TRUE;
+  }
+  if (IS_NPC(target) && IS_SET( target->specials.affected_by, AFF_INVUL )) {
+    REMOVE_BIT(target->specials.affected_by, AFF_INVUL);
+    effectBreak = TRUE;
+  }
+  if (affected_by_spell( target, SPELL_FORTIFICATION )) {
+    affect_from_char(target, SPELL_FORTIFICATION);
+    effectBreak = TRUE;
+  }
+  if (IS_NPC(target) && IS_SET(target->specials.act, ACT_SHIELD) ) {
+    REMOVE_BIT( target->specials.act, ACT_SHIELD );
+    effectBreak = TRUE;
+  }
+
+  if (effectBreak) {
+    act("$n's slash cuts through the magic protecting you!", FALSE, wielder, 0, target, TO_VICT);
+    act("$n's slash cuts through the magic protecting $N!", FALSE, wielder, 0, target, TO_NOTVICT);
+    act("Your slash cuts through the magic protecting $N!", FALSE, wielder, 0, target, TO_CHAR);
+  }
+}
+
+extern int top_of_world;
+
+int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
+{
+  CHAR *tank = NULL, *vict = NULL, *next_vict = NULL;
+  int kick_room = 0, i = 0, j = 0, dmg = 0;
+  char buf[MAX_STRING_LENGTH];
+  OBJ *obj = NULL;
+
+  if (cmd==MSG_TICK) {
+    // equip a katana if he doesn't have one
+    // HOLD slot so it doesn't impact his dmg dramatically
+    obj=EQ(uber, HOLD);
+    if (obj && ( V_OBJ(obj) != DM_KATANA )) obj_to_char( unequip_char(uber, HOLD), uber );
+    else if (!obj) {
+      obj=read_object(DM_KATANA, VIRTUAL);
+      equip_char(uber, obj, HOLD);
+    }
+    return FALSE;
+  }
+
+  if (cmd==MSG_DIE) {
+    // on boss death reward AQP
+    sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
+    send_to_room(buf, CHAR_REAL_ROOM(uber));
+    for(vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict)
+    {
+      next_vict = vict->next_in_room;
+      if ( IS_NPC(vict) || !IS_MORTAL(vict) ) continue;
+      int reward = 6;
+      sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward > 1 ? "points" : "point");
+      send_to_char(buf, vict);
+      vict->ver3.quest_points += reward;
+    }
+
+    //modify the katana: default is neutral ninja only
+    obj=EQ(uber, HOLD);
+    if (obj && ( V_OBJ(obj) == DM_KATANA ) ) {
+      send_to_room("Uber Musashi's katana gleams brightly, emitting a powerful thrum of force as he falls.\n\r", CHAR_REAL_ROOM(uber));
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_EVIL);
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_GOOD);
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_COMMANDO);
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_ANTIPALADIN);
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_BARD);
+      if(chance(60)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_WARRIOR);
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_PALADIN);
+      obj->affected[2].location = dm_katana_skills[ number(0, NUMELEMS(dm_katana_skills) - 1) ];
+      obj->affected[2].modifier = number(5,8);
+    }
+    return FALSE;
+  }
+
+  if (cmd==CMD_DISARM) {
+    obj=EQ(ch, WIELD);
+    if (obj) {
+      obj_to_room(unequip_char(ch, WIELD), real_room(576) );
+      sprintf(buf, "You attempt to disarm %s but find yourself the one left weaponless as %s casually tosses %s down the mountain.\n\r", GET_SHORT(uber), HSSH(uber), OBJ_SHORT(obj) );
+      send_to_char(buf, ch);
+      sprintf(buf, "WIZINFO: %s lost %s in %d", GET_NAME(ch), OBJ_SHORT(obj), 576 );
+      log_s(buf);
+    }
+    return TRUE;
+  }
+
+  if (cmd==MSG_MOBACT) {
+    tank = uber->specials.fighting;
+    if (tank) {
+      switch ( number(0,4) ) {
+        case 1:
+          kick_room = number(1, top_of_world);
+          if ( chance(33) )  kick_room = real_room(DM_PORTAL_INSIDE);
+          vict = get_random_victim(uber);
+          if (vict && kick_room) {
+            //cut hole in space-time, kick someone through: 67% completely random spot on MUD, 33% Inky Blackness behind Arago
+            act("$n executes a delicate series of strokes, slashing the air and tearing a hole in the fabric of space.", FALSE, uber, 0, vict, TO_ROOM);
+            act("Moving swiftly, $n positions $mself behind $N and kicks $M through the tear, which closes behind $M!", FALSE, uber, 0, vict, TO_NOTVICT);
+            act("Moving swiftly, $n positions $mself behind you and kicks you through the tear!", FALSE, uber, 0, vict, TO_VICT);
+            stop_fighting ( vict );
+            char_from_room( vict );
+            char_to_room ( vict, kick_room );
+            send_to_char("You look around but see no sign of the rip that brought you here.\n\r", vict);
+            do_look( vict, "", CMD_LOOK );
+          }
+          break;
+        case 2:
+        case 3:
+        case 4:
+          // perform 8-13 attacks to random victims in room
+          act("In the blink of an eye, $n scythes around the room with a series of quick, flashing strikes.", FALSE, uber, 0, vict, TO_ROOM);
+          j = number(8,13);
+          for ( i = 0; i < j; i++ ) {
+            vict = get_random_victim(uber);
+            if (vict) {
+              act("One of $n's strikes catches you as he whirls past in a deadly flurry of motion.", FALSE, uber, 0, vict, TO_VICT);
+              damage(uber, vict, number(200,500), TYPE_UNDEFINED, DAM_NO_BLOCK);
+            }
+          }
+          break;
+        default:
+          break;
+      }
+
+      if (tank) {
+        // strip tank and one random other of protective effects
+        dm_katana_cleanse(uber, tank);
+        // do damage - in essence to ignore impact of dodge/parry/AC and guarantee some dmg
+        dmg = number(700,1000);
+        if (IS_SET( tank->specials.affected_by, AFF_SANCTUARY )) dmg *= 2;
+        damage(uber, tank, dmg, TYPE_UNDEFINED, DAM_NO_BLOCK);
+      }
+
+      vict = get_random_victim_fighting(uber);
+      if ( vict && (vict != tank) && chance(33) ) {
+        dm_katana_cleanse(uber, vict);
+        damage(uber, vict, number(400,800), TYPE_UNDEFINED, DAM_NO_BLOCK);
+      }
+    }
+  }
+  return FALSE;
+}
+
+#define KATANA_CHARGE 120
+
+int dm_katana(OBJ *katana, CHAR *ch, int cmd, char *argument)
+{
+  CHAR *vict = NULL;
+  int spec_chance = 0;
+  ch = katana->equipped_by;
+
+  if(cmd==MSG_MOBACT  && ch && !IS_NPC(ch) && ch->specials.fighting) {
+    // chance to remove protective magic around target
+    vict = ch->specials.fighting;
+    OBJ_SPEC(katana)++;
+    spec_chance = MIN ( MAX(1, OBJ_SPEC(katana) - KATANA_CHARGE), 33 );
+    if( chance( spec_chance ) ) {
+      dm_katana_cleanse(ch, vict);
+      damage(ch, vict, number( 350, 500 ), TYPE_UNDEFINED, DAM_NO_BLOCK);
+      OBJ_SPEC(katana) = 0;
+    }
+  }
+  return FALSE;
+}
+
 void assign_daimyo(void) {
   assign_mob(TONASHI_WRESTLER, tonashi_wrestler);
   assign_mob(SHOGUN_WARLORD,   warlord);
@@ -1010,6 +1218,8 @@ void assign_daimyo(void) {
   assign_obj(JADE_HELM,        dm_jade_helm);
   assign_obj(THORN,            dm_thorn);
   assign_obj(THORN_THOTH_VANITY, dm_thorn);
+  assign_mob(UBER_MUSASHI,      dm_uber_musashi);
+  assign_obj(DM_KATANA,         dm_katana);
   assign_room(DM_PORTAL_INSIDE,dm_portal_inside);
   assign_room(DOOR_ROOM,       dm_two_doors);
   assign_room(ROOM_NORTH,      dm_exit_block);

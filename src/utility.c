@@ -65,6 +65,7 @@ $State: Exp $
 #include <sys/wait.h>
 #include <unistd.h>
 #include <ctype.h>
+#include <math.h>
 
 #include "structs.h"
 #include "utils.h"
@@ -1845,4 +1846,69 @@ get_weapon_type_desc(OBJ *obj) {
   }
 
   return result;
+}
+
+
+/* Takes a character object and an array of eligible effects and returns
+   an effect randomly from the array if the character is affected by it.
+   If there are no eligible effects found, this returns TYPE_UNDEFINED.
+   Note: You MUST terminate the array with -1 or bad things will happen. */
+int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
+  AFF *af = NULL;
+  int i = 0;
+  int list_size = 0;
+  int eligible_ch_effects[MAX_SPL_LIST];
+  int num_eligible_ch_effects = 0;
+
+  memset(&eligible_ch_effects, 0, sizeof(eligible_ch_effects));
+
+  /* Count the number of elements in the list of eligible effects. */
+  for (list_size = 0, i = 0; eligible_effects[i] != -1; list_size++, i++);
+
+  for (af = ch->affected; af; af = af->next)
+  {
+    for (i = 0; i < list_size; i++) {
+      if (af->type == eligible_effects[i])
+      {
+        num_eligible_ch_effects++;
+        eligible_ch_effects[num_eligible_ch_effects - 1] = af->type;
+      }
+    }
+  }
+
+  if (num_eligible_ch_effects > 0) {
+    return eligible_ch_effects[number(1, num_eligible_ch_effects) - 1];
+  }
+
+  return TYPE_UNDEFINED;
+}
+
+
+/* Takes a bit mask and and returns one of the set bits randomly.
+   This function assumes 32-bit integers are being used for masks.
+   Set the mask_size variable to the number of bits that make up
+   an integer, as well as the size of the eligible_bits array that
+   is used.
+   Note: This is currently unused and untested, but may be used in
+   a few places in the future. */
+int get_random_bit_from_mask(const int mask) {
+  int i = 0;
+  int flag = 0;
+  int mask_size = 32; /* Assumes 32-bit integers. */
+  int eligible_bits[32]; /* Assumes 32-bit integers. */
+  int num_eligible_bits = 0;
+
+  for (i = 0; i < mask_size; i++) {
+    flag = (1 << i);
+    if (IS_SET(mask, flag)) {
+      num_eligible_bits++;
+      eligible_bits[num_eligible_bits - 1] = flag;
+    }
+  }
+
+  if (num_eligible_bits > 0) {
+    return eligible_bits[number(1, num_eligible_bits) - 1];
+  }
+
+  return 0;
 }
