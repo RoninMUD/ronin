@@ -1849,11 +1849,12 @@ get_weapon_type_desc(OBJ *obj) {
 }
 
 
-/* Takes an array of eligible effect types and returns one randomly from the list.
+/* Takes a character object and an array of eligible effects and returns
+   an effect randomly from the array if the character is affected by it.
    If there are no eligible effects found, this returns TYPE_UNDEFINED.
-   Note: You _must_ terminate the list with -1 or bad things will happen. */
-int get_random_eligible_effect_type(CHAR *ch, const int eligible_effects[]) {
-  AFF *aff = NULL;
+   Note: You MUST terminate the array with -1 or bad things will happen. */
+int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
+  AFF *af = NULL;
   int i = 0;
   int list_size = 0;
   int eligible_ch_effects[MAX_SPL_LIST];
@@ -1861,15 +1862,16 @@ int get_random_eligible_effect_type(CHAR *ch, const int eligible_effects[]) {
 
   memset(&eligible_ch_effects, 0, sizeof(eligible_ch_effects));
 
+  /* Count the number of elements in the list of eligible effects. */
   for (list_size = 0, i = 0; eligible_effects[i] != -1; list_size++, i++);
 
-  for (aff = ch->affected; aff; aff = aff->next)
+  for (af = ch->affected; af; af = af->next)
   {
     for (i = 0; i < list_size; i++) {
-      if (aff->type == eligible_effects[i])
+      if (af->type == eligible_effects[i])
       {
         num_eligible_ch_effects++;
-        eligible_ch_effects[num_eligible_ch_effects - 1] = aff->type;
+        eligible_ch_effects[num_eligible_ch_effects - 1] = af->type;
       }
     }
   }
@@ -1883,9 +1885,12 @@ int get_random_eligible_effect_type(CHAR *ch, const int eligible_effects[]) {
 
 
 /* Takes a bit mask and and returns one of the set bits randomly.
-   This function assumes 32-bit integers are being used for masks. Set the
-   mask_size variable to the number of bits that make up an integer, as well
-   as the size of the eligible_bits array that is used. */
+   This function assumes 32-bit integers are being used for masks.
+   Set the mask_size variable to the number of bits that make up
+   an integer, as well as the size of the eligible_bits array that
+   is used.
+   Note: This is currently unused and untested, but may be used in
+   a few places in the future. */
 int get_random_bit_from_mask(const int mask) {
   int i = 0;
   int flag = 0;

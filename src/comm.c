@@ -2752,7 +2752,7 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
           }
         }
 
-        mantra_dispel = get_random_eligible_effect_type(ch, mantra_dispel_types);
+        mantra_dispel = get_random_eligible_effect(ch, mantra_dispel_types);
 
         if (mantra_dispel && chance(25)) {
           switch (mantra_dispel) {
