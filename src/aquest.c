@@ -1721,7 +1721,8 @@ int ubers[][2] = {
   {12027, 12063}, // Queen Ant - <none>
   {14014, 14070}, // Dream Shadow - spec.house.c
   {21220, 21275}, // Huge Stone Dragon - spec.moria.c
-  {26585, 26582} // Enlightened One - spec.pagoda.c
+  {26585, 26582}, // Enlightened One - spec.pagoda.c
+  {20109, 20108} // Musashi - spec.daimyo.c
 };
 
 
