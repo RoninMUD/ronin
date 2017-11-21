@@ -2771,7 +2771,7 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
     }
 
     /* Adrenaline Rush*/
-    if (check_subclass(ch, SC_BANDIT, 3)) {
+    if (GET_OPPONENT(ch) && check_subclass(ch, SC_BANDIT, 3)) {
       GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
     }
   }
