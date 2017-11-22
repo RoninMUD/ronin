@@ -34,28 +34,21 @@
 #define MANA_CO 1
 
 #define \
-SPELLO(nr,beat,pos,mlev,clev,nlev,plev,aplev,avlev,blev,colev,mana,tar,func) \
-{ spell_info[nr].spell_pointer = (func);    \
-    spell_info[nr].beats = (beat);            \
-    spell_info[nr].minimum_position = (pos);  \
-    spell_info[nr].min_usesmana = (mana);     \
-    spell_info[nr].min_level_cleric = (clev); \
-    spell_info[nr].min_level_magic = (mlev);  \
-    spell_info[nr].min_level_ninja = (nlev);  \
-    spell_info[nr].min_level_paladin = (plev);  \
-    spell_info[nr].min_level_anti_paladin = (aplev);  \
-    spell_info[nr].min_level_avatar = (avlev);  \
-    spell_info[nr].min_level_bard = (blev);  \
-    spell_info[nr].min_level_commando = (colev);  \
-    spell_info[nr].targets = (tar);           \
+SPELLO(nr, beat, pos, mlev, clev, nlev, plev, aplev, avlev, blev, colev, mana, tar, func) { \
+  spell_info[nr].spell_pointer = (func);           \
+  spell_info[nr].beats = (beat);                   \
+  spell_info[nr].minimum_position = (pos);         \
+  spell_info[nr].min_usesmana = (mana);            \
+  spell_info[nr].min_level_cleric = (clev);        \
+  spell_info[nr].min_level_magic = (mlev);         \
+  spell_info[nr].min_level_ninja = (nlev);         \
+  spell_info[nr].min_level_paladin = (plev);       \
+  spell_info[nr].min_level_anti_paladin = (aplev); \
+  spell_info[nr].min_level_avatar = (avlev);       \
+  spell_info[nr].min_level_bard = (blev);          \
+  spell_info[nr].min_level_commando = (colev);     \
+  spell_info[nr].targets = (tar);                  \
 }
-
-/* 100 is the MAX_MANA for a character */
-
-/* old use_mana
-#define USE_MANA(ch, sn)                            \
-  MAX(spell_info[sn].min_usesmana, 100/(2+GET_LEVEL(ch)-SPELL_LEVEL(ch,sn)))
-  */
 
 /* Global data */
 extern int CHAOSMODE;
@@ -66,283 +59,273 @@ extern char *spell_wear_off_msg[];
 extern struct wis_app_type wis_app[];
 extern struct int_app_type int_app[];
 
-
 /* Extern procedures */
-
 void set_fighting(CHAR *ch, CHAR *vict);
-struct spell_info_type spell_info[MAX_SPL_LIST+1];
+struct spell_info_type spell_info[MAX_SPL_LIST + 1];
 
-char *spells[]= {
-  "armor",               /* 1 */
-  "teleport",
-  "bless",
-  "blindness",
-  "burning hands",
-  "call lightning",
-  "charm person",
-  "chill touch",
-  "clone",
-  "colour spray",
-  "control weather",     /* 11 */
-  "create food",
-  "create water",
-  "cure blind",
-  "cure critic",
-  "cure light",
-  "curse",
-  "detect alignment",
-  "detect invisibility",
-  "detect magic",
-  "detect poison",       /* 21 */
-  "dispel evil",
-  "earthquake",
-  "enchant weapon",
-  "energy drain",
-  "fireball",
-  "harm",
-  "heal",
-  "invisibility",
-  "lightning bolt",
-  "locate object",      /* 31 */
-  "magic missile",
-  "poison",
-  "protection from evil",
-  "remove curse",
-  "sanctuary",
-  "shocking grasp",
-  "sleep",
-  "strength",
-  "summon",
-  "ventriloquate",      /* 41 */
-  "word of recall",
-  "remove poison",
-  "sense life",         /* 44 */
-  "sneak",        /* 45 */
-  "hide",
-  "steal",
-  "backstab",
-  "pick",
-  "kick",         /* 50 */
-  "bash",
-  "rescue",
-  "block",
-  "knock",
-  "punch",
-  "parry",
-  "dual",
-  "throw",
-  "dodge",
-  "peek",
-  "butcher",      /* 61 */
-  "trap",
-  "disarm",
-  "subdue",
-  "circle",
-  "triple",
-  "ambush",
-  "spin",
-  "assault",
-  "disembowel",
-  "identify",           /* 71 */
-  "cure serious",
-  "infravision",
-  "regeneration",
-  "vitality",
-  "cure light spray",
-  "cure serious spray",
-  "cure critic spray",
-  "heal spray",
-  "death spray",
-  "holy word",            /*81*/
-  "iceball",
-  "total recall",
-  "recharge",
-  "miracle",
-  "fly",
-  "mana transfer",
-  "holy bless",
-  "evil bless",
-  "satiate",
-  "animate dead",          /*91*/
-  "great miracle",
-  "flamestrike",
-  "spirit levy",
-  "lethal fire",
-  "hold",
-  "sphere",
-  "improved invisibility",
-  "invulnerability",
-  "fear",
-  "forget",           /*101*/
-  "fury",
-  "endure",
-  "blindness dust",
-  "poison smoke",
-  "hell fire",
-  "hypnotize",
-  "recover mana",
-  "thunderball",
-  "electric shock",
-  "paralyze",        /*111*/
-  "remove paralysis",
-  "dispel good",
-  "evil word",
-  "reappear",
-  "reveal",
-  "relocation",
-  "locate character",
-  "super harm",
-  "pummel", /* 120 */
-  "legend lore",
-  "great mana", /*god only*/
-  "fartmouth",
-  "perceive",
-  "pray",
-  "assassinate", /* 126 Used to be Increase Mana */
-  "haste",
-  "power word kill",
-  "dispel magic",
-  "conflagration",
-  "mass invisibility",     /*131*/
-  "convergence",
-  "enchant armour",
-  "disintegrate",
-  "confusion",
-  "vampiric touch",
-  "searing orb",
-  "clairvoyance",
-  "firebreath",
-  "lay hands",
-  "dispel sanctuary", /* Ranger - Sept 96 */     /*141*/
-  "disenchant", /* Quack - Oct 96 */
-  "petrify", /* Quack - Oct 96 */
-  "backflip", /* Ranger - July 97 */
-  "protection from good", /* 145 -  Sumo Dec 97 */
-  "remove improved invisibility",
-  "shroud of existence", /* 147 - Void Feb 04 */
-  "quad", /*148 - Void Aug 04 */
-  "quick", /*149 - Void Sept 04 */
-  "divine intervention", /*150 - Void Sept 04 */
-  "rush", /*151 - Void Sept 04 */
-  "blood lust", /*152 - Void Oct 04 */
-  "scan", /* 153 Used to be Cover */
-  "mystic swiftness", /* 154 - Void Nov 04 */
-  "coin-toss", /* 155 */
-  "",
-  "",
-  "",
-  "", /*156-159*/
-  "",
-  "", /*161*/
-  "",
-  "twist",/*163 - Void Oct 04 */
-  "cunning", /* 164 */
-  "wind slash", /* 165 */ 
-  "", /* 166 */
-  "","","","","",/* 167-171 */
-  "debilitate", /* 172 */ 
-  "mana heal", /* 173 */
-  "clobber", /* 174 - Hemp Nov 10 */
-  "blur", /* 175 */
-  "",/* 176 */
-  "tranquility", /* 177 */
-  "vehemence", /* 178 Used to be Execute */
-  "tremor", /*179*/
-  "shadow wraith",/*180*/
-  "devastation",/*181*/
-  "incendiary cloud",/*182*/
-  "",/*183*/
-  "riposte",/*184*/
-  "trophy", /* 185 Used to be Cover */
-  "frenzy",/*186*/
-  "power of faith",/*187*/
-  "focus",/*188*/
-  "power of devotion",/*189*/
-  "wrath of god",/*190*/
-  "disrupt sanctuary",/*191*/
-  "fortification",/*192*/
-  "degenerate",/*193*/
-  "magic armament",/*194*/
-  "ethereal nature",/*195*/
-  "engage",/*196*/
-  "mantra",/*197*/
-  "banzai",/*198*/
-  "headbutt", /*199*/
-  "",/*200 - skipped*/
-  "charge",/*201*/
-  "aid",/*202*/
-  "demonic thunder",/*203*/
-  "shadowstep", /* 204 Used to be Shadow-Walk */
-  "batter",/*205*/
-  "desecrate",/*206*/
-  "defend",/*207*/
-  "hostile",/*208*/
-  "rimefang",/*209*/
-  "wither", /* 210 Used to be Dark Ritual */
-  "blackmantle",/*211*/
-  "divine wind",/*212*/
-  "zeal",/*213*/
-  "impair", /* 214 No longer a command. */
-  "flank",/*215*/
-  "rejuvenation",/*216*/
-  "wall of thorns",/*217*/
-  "meteor",/*218*/
-  "berserk",/*219*/
-  "awareness",/*220*/
-  "feint",/*221*/
-  "smite",/*222*/
-  "camp",/*223*/
-  "luck",/*224*/
-  "warchant",/*225*/
-  "rally",/*226*/
-  "evasion",/*227 Used to be Scan */
-  "tigerkick",/*228*/
-  "trip",/*229*/
-  "dirty-tricks",/*230*/
-  "switch",/*231*/
-  "trusty-steed",/*232*/
-  "backfist",/*233*/
-  "retreat",/*234*/
-  "fade",/*235*/
-  "cloud of confusion",/*236*/
-  "lunge",/*237*/
-  "rage",/*238*/
-  "righteousness",/*239*/
-  "protect", /*240*/
-  "wrath of ancients",/*241*/
-  "victimize", /*242*/
-  "meditate",/*243*/
-  "sanctify",/*244*/
-  "blitz",/*245*/
-  "orb of protection",/*246*/
-  "", /* 247 Used to be Assassinate */
-  "frost bolt",/*248*/
-  "iron skin",/*249*/
-  "distortion",/*250*/
-  "passdoor",/*251*/
-  "blade barrier",/*252*/
-  "might", /*253*/
-  "clarity",/*254*/
-
-/*
-  "quest champion",
-  "spiritwrack",
-  "spectral blade",
-  "doppelganger",
-  "shapeshift",
-  "silence",
-  "tranquility",
-  "leech",
-  "armageddon",
-*/
+char *spells[] = {
+  "armor",                        /*   1 */
+  "teleport",                     /*   2 */
+  "bless",                        /*   3 */
+  "blindness",                    /*   4 */
+  "burning hands",                /*   5 */
+  "call lightning",               /*   6 */
+  "charm person",                 /*   7 */
+  "chill touch",                  /*   8 */
+  "clone",                        /*   9 */
+  "colour spray",                 /*  10 */
+  "control weather",              /*  11 */
+  "create food",                  /*  12 */
+  "create water",                 /*  13 */
+  "cure blind",                   /*  14 */
+  "cure critic",                  /*  15 */
+  "cure light",                   /*  16 */
+  "curse",                        /*  17 */
+  "detect alignment",             /*  18 */
+  "detect invisibility",          /*  19 */
+  "detect magic",                 /*  20 */
+  "detect poison",                /*  21 */
+  "dispel evil",                  /*  22 */
+  "earthquake",                   /*  23 */
+  "enchant weapon",               /*  24 */
+  "energy drain",                 /*  25 */
+  "fireball",                     /*  26 */
+  "harm",                         /*  27 */
+  "heal",                         /*  28 */
+  "invisibility",                 /*  29 */
+  "lightning bolt",               /*  30 */
+  "locate object",                /*  31 */
+  "magic missile",                /*  32 */
+  "poison",                       /*  33 */
+  "protection from evil",         /*  34 */
+  "remove curse",                 /*  35 */
+  "sanctuary",                    /*  36 */
+  "shocking grasp",               /*  37 */
+  "sleep",                        /*  38 */
+  "strength",                     /*  39 */
+  "summon",                       /*  40 */
+  "ventriloquate",                /*  41 */
+  "word of recall",               /*  42 */
+  "remove poison",                /*  43 */
+  "sense life",                   /*  44 */
+  "sneak",                        /*  45 */
+  "hide",                         /*  46 */
+  "steal",                        /*  47 */
+  "backstab",                     /*  48 */
+  "pick",                         /*  49 */
+  "kick",                         /*  50 */
+  "bash",                         /*  51 */
+  "rescue",                       /*  52 */
+  "block",                        /*  53 */
+  "knock",                        /*  54 */
+  "punch",                        /*  55 */
+  "parry",                        /*  56 */
+  "dual",                         /*  57 */
+  "throw",                        /*  58 */
+  "dodge",                        /*  59 */
+  "peek",                         /*  60 */
+  "butcher",                      /*  61 */
+  "trap",                         /*  62 */
+  "disarm",                       /*  63 */
+  "subdue",                       /*  64 */
+  "circle",                       /*  65 */
+  "triple",                       /*  66 */
+  "ambush",                       /*  67 */
+  "spin",                         /*  68 */
+  "assault",                      /*  69 */
+  "disembowel",                   /*  70 */
+  "identify",                     /*  71 */
+  "cure serious",                 /*  72 */
+  "infravision",                  /*  73 */
+  "regeneration",                 /*  74 */
+  "vitality",                     /*  75 */
+  "cure light spray",             /*  76 */
+  "cure serious spray",           /*  77 */
+  "cure critic spray",            /*  78 */
+  "heal spray",                   /*  79 */
+  "death spray",                  /*  80 */
+  "holy word",                    /*  81 */
+  "iceball",                      /*  82 */
+  "total recall",                 /*  83 */
+  "recharge",                     /*  84 */
+  "miracle",                      /*  85 */
+  "fly",                          /*  86 */
+  "mana transfer",                /*  87 */
+  "holy bless",                   /*  88 */
+  "evil bless",                   /*  89 */
+  "satiate",                      /*  90 */
+  "animate dead",                 /*  91 */
+  "great miracle",                /*  92 */
+  "flamestrike",                  /*  93 */
+  "spirit levy",                  /*  94 */
+  "lethal fire",                  /*  95 */
+  "hold",                         /*  96 */
+  "sphere",                       /*  97 */
+  "improved invisibility",        /*  98 */
+  "invulnerability",              /*  99 */
+  "fear",                         /* 100 */
+  "forget",                       /* 101 */
+  "fury",                         /* 102 */
+  "endure",                       /* 103 */
+  "blindness dust",               /* 104 */
+  "poison smoke",                 /* 105 */
+  "hell fire",                    /* 106 */
+  "hypnotize",                    /* 107 */
+  "recover mana",                 /* 108 */
+  "thunderball",                  /* 109 */
+  "electric shock",               /* 110 */
+  "paralyze",                     /* 111 */
+  "remove paralysis",             /* 112 */
+  "dispel good",                  /* 113 */
+  "evil word",                    /* 114 */
+  "reappear",                     /* 115 */
+  "reveal",                       /* 116 */
+  "relocation",                   /* 117 */
+  "locate character",             /* 118 */
+  "super harm",                   /* 119 */
+  "pummel",                       /* 120 */
+  "coin-toss",                    /* 121 */
+  "great mana",                   /* 122 */
+  "fartmouth",                    /* 123 */
+  "perceive",                     /* 124 */
+  "pray",                         /* 125 */
+  "assassinate",                  /* 126 */
+  "haste",                        /* 127 */
+  "power word kill",              /* 128 */
+  "dispel magic",                 /* 129 */
+  "conflagration",                /* 130 */
+  "mass invisibility",            /* 131 */
+  "convergence",                  /* 132 */
+  "enchant armour",               /* 133 */
+  "disintegrate",                 /* 134 */
+  "confusion",                    /* 135 */
+  "vampiric touch",               /* 136 */
+  "searing orb",                  /* 137 */
+  "clairvoyance",                 /* 138 */
+  "firebreath",                   /* 139 */
+  "lay hands",                    /* 140 */
+  "dispel sanctuary",             /* 141 */
+  "disenchant",                   /* 142 */
+  "petrify",                      /* 143 */
+  "backflip",                     /* 144 */
+  "protection from good",         /* 145 */
+  "remove improved invisibility", /* 146 */
+  "shroud of existence",          /* 147 */
+  "quad",                         /* 148 */
+  "quick",                        /* 149 */
+  "divine intervention",          /* 150 */
+  "rush",                         /* 151 */
+  "blood lust",                   /* 152 */
+  "scan",                         /* 153 */
+  "mystic swiftness",             /* 154 */
+  "legend lore",                  /* 155 */
+  "",                             /* 156 */
+  "",                             /* 157 */
+  "",                             /* 158 */
+  "",                             /* 159 */
+  "",                             /* 160 */
+  "",                             /* 161 */
+  "",                             /* 162 */
+  "twist",                        /* 163 */
+  "cunning",                      /* 164 */
+  "wind slash",                   /* 165 */
+  "",                             /* 166 */ /* Subclass Skills Start Here */
+  "",                             /* 167 */
+  "",                             /* 168 */
+  "",                             /* 169 */
+  "",                             /* 170 */
+  "",                             /* 171 */
+  "debilitate",                   /* 172 */
+  "mana heal",                    /* 173 */
+  "clobber",                      /* 174 */
+  "blur",                         /* 175 */
+  "",                             /* 176 */
+  "tranquility",                  /* 177 */
+  "vehemence",                    /* 178 */
+  "tremor",                       /* 179 */
+  "shadow wraith",                /* 180 */
+  "devastation",                  /* 181 */
+  "incendiary cloud",             /* 182 */
+  "",                             /* 183 */
+  "riposte",                      /* 184 */
+  "trophy",                       /* 185 */
+  "frenzy",                       /* 186 */
+  "power of faith",               /* 187 */
+  "focus",                        /* 188 */
+  "power of devotion",            /* 189 */
+  "wrath of god",                 /* 190 */
+  "disrupt sanctuary",            /* 191 */
+  "fortification",                /* 192 */
+  "degenerate",                   /* 193 */
+  "magic armament",               /* 194 */
+  "ethereal nature",              /* 195 */
+  "engage",                       /* 196 */
+  "mantra",                       /* 197 */
+  "banzai",                       /* 198 */
+  "headbutt",                     /* 199 */
+  "",                             /* 200 */
+  "charge",                       /* 201 */
+  "aid",                          /* 202 */
+  "demonic thunder",              /* 203 */
+  "shadowstep",                   /* 204 */
+  "batter",                       /* 205 */
+  "desecrate",                    /* 206 */
+  "defend",                       /* 207 */
+  "hostile",                      /* 208 */
+  "rimefang",                     /* 209 */
+  "wither",                       /* 210 */
+  "blackmantle",                  /* 211 */
+  "divine wind",                  /* 212 */
+  "zeal",                         /* 213 */
+  "impair",                       /* 214 */
+  "flank",                        /* 215 */
+  "rejuvenation",                 /* 216 */
+  "wall of thorns",               /* 217 */
+  "meteor",                       /* 218 */
+  "berserk",                      /* 219 */
+  "awareness",                    /* 220 */
+  "feint",                        /* 221 */
+  "smite",                        /* 222 */
+  "camp",                         /* 223 */
+  "luck",                         /* 224 */
+  "warchant",                     /* 225 */
+  "rally",                        /* 226 */
+  "evasion",                      /* 227 */
+  "tigerkick",                    /* 228 */
+  "trip",                         /* 229 */
+  "dirty-tricks",                 /* 230 */
+  "switch",                       /* 231 */
+  "trusty-steed",                 /* 232 */
+  "backfist",                     /* 233 */
+  "retreat",                      /* 234 */
+  "fade",                         /* 235 */
+  "cloud of confusion",           /* 236 */
+  "lunge",                        /* 237 */
+  "rage",                         /* 238 */
+  "righteousness",                /* 239 */
+  "protect",                      /* 240 */
+  "wrath of ancients",            /* 241 */
+  "victimize",                    /* 242 */
+  "meditate",                     /* 243 */
+  "sanctify",                     /* 244 */
+  "blitz",                        /* 245 */
+  "orb of protection",            /* 246 */
+  "",                             /* 247 */
+  "frost bolt",                   /* 248 */
+  "iron skin",                    /* 249 */
+  "distortion",                   /* 250 */
+  "passdoor",                     /* 251 */
+  "blade barrier",                /* 252 */
+  "might",                        /* 253 */
+  "clarity",                      /* 254 */
   "\n"
 };
 
 void affect_update()
 {
-  static CHAR *ch;
-  static AFF *tmp_af;
-  static AFF *af_next;
+  static CHAR *ch = NULL;
+  static AFF *tmp_af = NULL;
+  static AFF *af_next = NULL;
   char buf[MSL];
 
   for (ch = character_list; ch; ch = ch->next)
@@ -382,35 +365,28 @@ void affect_update()
   }
 }
 
-int SPELL_LEVEL(struct char_data *ch, int sn)
+
+int SPELL_LEVEL(struct char_data *ch, int spell_number)
 {
   switch (GET_CLASS(ch)) {
-    case CLASS_NINJA:
-      return (spell_info[sn].min_level_ninja);
-
-    case CLASS_PALADIN:
-      return (spell_info[sn].min_level_paladin);
-
-    case CLASS_ANTI_PALADIN:
-      return (spell_info[sn].min_level_anti_paladin);
-
-    case CLASS_AVATAR:
-      return (spell_info[sn].min_level_avatar);
-
-    case CLASS_BARD:
-      return (spell_info[sn].min_level_bard);
-
-    case CLASS_MAGIC_USER:
-      return (spell_info[sn].min_level_magic);
-
-    case CLASS_COMMANDO:
-      return (spell_info[sn].min_level_commando);
-
-    case CLASS_CLERIC:
-      return (spell_info[sn]. min_level_cleric);
-
-    default:
-      return LEVEL_ETE;
+  case CLASS_MAGIC_USER:
+    return (spell_info[spell_number].min_level_magic);
+  case CLASS_CLERIC:
+    return (spell_info[spell_number].min_level_cleric);
+  case CLASS_NINJA:
+    return (spell_info[spell_number].min_level_ninja);
+  case CLASS_PALADIN:
+    return (spell_info[spell_number].min_level_paladin);
+  case CLASS_ANTI_PALADIN:
+    return (spell_info[spell_number].min_level_anti_paladin);
+  case CLASS_AVATAR:
+    return (spell_info[spell_number].min_level_avatar);
+  case CLASS_BARD:
+    return (spell_info[spell_number].min_level_bard);
+  case CLASS_COMMANDO:
+    return (spell_info[spell_number].min_level_commando);
+  default:
+    return LEVEL_ETE;
   }
 }
 
@@ -986,79 +962,15 @@ void do_song(CHAR *ch, char *arg, int cmd)
   }
 }
 
-void clone_char(struct char_data *ch)
+void say_spell(struct char_data *ch, int si)
 {
-  /* buggy - crashes the game */
-  extern struct mob_proto *mob_proto_table;
-  struct char_data *clone;
-  struct affected_type_5 *af;
-  int i;
-
-  CREATE(clone, struct char_data, 1);
-
-
-  clear_char(clone);       /* Clear EVERYTHING! (ASSUMES CORRECT) */
-
-  clone->player    = ch->player;
-  clone->abilities = ch->abilities;
-
-  for (i=0; i<5; i++)
-    clone->specials.apply_saving_throw[i] = ch->specials.apply_saving_throw[i];
-
-  for (af=ch->affected; af; af = af->next)
-    affect_to_char(clone, af);
-
-  for (i=0; i<3; i++)
-    GET_COND(clone,i) = GET_COND(ch, i);
-
-  clone->points = ch->points;
-
-  /*  for (i=0; i<MAX_SKILLS; i++)
-  clone->skills[i] = ch->skills[i]; */
-
-  clone->skills = 0;
-
-  clone->specials = ch->specials;
-  clone->specials.fighting = 0;
-
-  clone->player.name = str_dup(GET_NAME(ch));
-
-  clone->player.short_descr =  str_dup(MOB_SHORT(ch));
-
-  clone->player.long_descr = str_dup(MOB_LONG(ch));
-
-  clone->player.description = 0;
-  /* REMEMBER EXTRA DESCRIPTIONS */
-
-  GET_TITLE(clone) = str_dup(GET_TITLE(ch));
-
-  clone->nr = ch->nr;
-
-  if (IS_NPC(clone))
-    mob_proto_table[clone->nr].number++;
-  else { /* Make PC's into NPC's */
-    clone->nr = -1;
-    SET_BIT(clone->specials.act, ACT_ISNPC);
-  }
-
-  clone->desc = 0;
-  clone->followers = 0;
-  clone->master = 0;
-
-  clone->next = character_list;
-  character_list = clone;
-
-  char_to_room(clone, CHAR_REAL_ROOM(ch));
-}
-
-void say_spell( struct char_data *ch, int si )
-{
-  char buf[MAX_STRING_LENGTH], splwd[MAX_BUF_LENGTH];
+  char buf[MAX_STRING_LENGTH];
   char buf2[MAX_STRING_LENGTH];
+  char splwd[240];
 
-  int j, offs;
-  struct char_data *temp_char;
-
+  int j = 0;
+  int offset = 0;
+  CHAR *temp_char = NULL;
 
   struct syllable {
     char org[10];
@@ -1067,13 +979,13 @@ void say_spell( struct char_data *ch, int si )
 
   struct syllable syls[] = {
     { " ", " " },
-    { "ar", "abra"   },
-    { "au", "kada"    },
+    { "ar", "abra" },
+    { "au", "kada" },
     { "bless", "fido" },
     { "blind", "nose" },
     { "bur", "mosa" },
     { "cu", "judi" },
-    { "de", "oculo"},
+    { "de", "oculo" },
     { "en", "unso" },
     { "id", "dhfj" },
     { "light", "dies" },
@@ -1083,98 +995,102 @@ void say_spell( struct char_data *ch, int si )
     { "ness", "lacri" },
     { "ning", "illa" },
     { "per", "duda" },
-    { "ra", "gru"   },
+    { "ra", "gru" },
     { "re", "candus" },
     { "son", "sabru" },
     { "tect", "infra" },
     { "tri", "cula" },
     { "ven", "nofo" },
-    {"a", "a"},{"b","b"},{"c","q"},{"d","e"},{"e","z"},{"f","y"},{"g","o"},
-    {"h", "p"},{"i","u"},{"j","y"},{"k","t"},{"l","r"},{"m","w"},{"n","i"},
-    {"o", "a"},{"p","s"},{"q","d"},{"r","f"},{"s","g"},{"t","h"},{"u","j"},
-    {"v", "z"},{"w","x"},{"x","n"},{"y","l"},{"z","k"}, {"",""}
+    { "a", "a" },{ "b", "b" },{ "c", "q" },{ "d", "e" },{ "e", "z" },
+    { "f", "y" },{ "g", "o" },{ "h", "p" },{ "i", "u" },{ "j", "y" },
+    { "k", "t" },{ "l", "r" },{ "m", "w" },{ "n", "i" },{ "o", "a" },
+    { "p", "s" },{ "q", "d" },{ "r", "f" },{ "s", "g" },{ "t", "h" },
+    { "u", "j" },{ "v", "z" },{ "w", "x" },{ "x", "n" },{ "y", "l" },
+    { "z", "k" },
+    { "", "" }
   };
 
-
-
   strcpy(buf, "");
-  strcpy(splwd, spells[si-1]);
+  strcpy(splwd, spells[si - 1]);
 
-  offs = 0;
-
-  while(*(splwd+offs)) {
-    for(j=0; *(syls[j].org); j++)
-      if (strncmp(syls[j].org, splwd+offs, strlen(syls[j].org))==0) {
-     strcat(buf, syls[j].new);
-     if (strlen(syls[j].org))
-       offs+=strlen(syls[j].org);
-     else
-       ++offs;
+  while (*(splwd + offset)) {
+    for (j = 0; *(syls[j].org); j++) {
+      if (strncmp(syls[j].org, (splwd + offset), strlen(syls[j].org)) == 0) {
+        strcat(buf, syls[j].new);
+        if (strlen(syls[j].org)) {
+          offset += strlen(syls[j].org);
+        }
+        else {
+          offset++;
+        }
       }
+    }
   }
 
-  if (GET_CLASS(ch) != CLASS_NINJA)
-    { sprintf(buf2,"$n utters the words, '%s'", buf);
-      sprintf(buf, "$n utters the words, '%s'", spells[si-1]);
-    }
-  else
-    { sprintf(buf2,"$n makes a mystic hand position and utters the words, '%s'", buf);
-      sprintf(buf,"$n makes a mystic hand position and utters the words, '%s'", spells[si-1]);
-    }
+  if (GET_CLASS(ch) != CLASS_NINJA) {
+    sprintf(buf2, "$n utters the words, '%s'", buf);
+    sprintf(buf, "$n utters the words, '%s'", spells[si - 1]);
+  }
+  else {
+    sprintf(buf2, "$n makes a mystic hand position and utters the words, '%s'", buf);
+    sprintf(buf, "$n makes a mystic hand position and utters the words, '%s'", spells[si - 1]);
+  }
 
-  for(temp_char = world[CHAR_REAL_ROOM(ch)].people;
-      temp_char;
-      temp_char = temp_char->next_in_room)
-    if(temp_char != ch) {
-      if (GET_CLASS(ch) == GET_CLASS(temp_char))
-     act(buf, FALSE, ch, 0, temp_char, TO_VICT);
-      else
-     act(buf2, FALSE, ch, 0, temp_char, TO_VICT);
+  for (temp_char = world[CHAR_REAL_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+    if (temp_char == ch) continue;
 
+    if (GET_CLASS(ch) == GET_CLASS(temp_char)) {
+      act(buf, FALSE, ch, 0, temp_char, TO_VICT);
     }
-
+    else {
+      act(buf2, FALSE, ch, 0, temp_char, TO_VICT);
+    }
+  }
 }
-
 
 const char save[11][5][2] = {
   /* Para     Rods     Petri    Breath   Spells */
-  { {16, 4}, {13, 1}, {15, 3}, {17, 4}, {14, 1} },    /* Mage */
-  { {11, 1}, {16, 3}, {14, 2}, {18, 5}, {17, 3} },    /* Cleric */
-  { {15, 6}, {16, 2}, {14, 3}, {18, 4}, {17, 4} },    /* Thief */
-  { {16, 1}, {18, 3}, {17, 1}, {20, 2}, {19, 3} },    /* Warrior */
-  { {15, 6}, {16, 2}, {14, 3}, {18, 5}, {17, 1} },    /* Ninja */
-  { {15, 6}, {16, 2}, {14, 3}, {18, 5}, {17, 1} },    /* Nomad */
-  { {15, 6}, {16, 2}, {14, 3}, {18, 5}, {17, 1} },    /* Paladin */
-  { {15, 6}, {16, 2}, {14, 3}, {18, 5}, {17, 1} },    /* Antipaladin */
-  { {15, 6}, {16, 2}, {14, 3}, {18, 5}, {17, 1} },    /* Avatar */
-  { {15, 6}, {16, 2}, {14, 3}, {18, 5}, {17, 1} },    /* Bard */
-  { {15, 6}, {16, 2}, {14, 3}, {18, 5}, {17, 1} }     /* Commando */
+  { { 16, 4 },{ 13, 1 },{ 15, 3 },{ 17, 4 },{ 14, 1 } }, /* Mage */
+  { { 11, 1 },{ 16, 3 },{ 14, 2 },{ 18, 5 },{ 17, 3 } }, /* Cleric */
+  { { 15, 6 },{ 16, 2 },{ 14, 3 },{ 18, 4 },{ 17, 4 } }, /* Thief */
+  { { 16, 1 },{ 18, 3 },{ 17, 1 },{ 20, 2 },{ 19, 3 } }, /* Warrior */
+  { { 15, 6 },{ 16, 2 },{ 14, 3 },{ 18, 5 },{ 17, 1 } }, /* Ninja */
+  { { 15, 6 },{ 16, 2 },{ 14, 3 },{ 18, 5 },{ 17, 1 } }, /* Nomad */
+  { { 15, 6 },{ 16, 2 },{ 14, 3 },{ 18, 5 },{ 17, 1 } }, /* Paladin */
+  { { 15, 6 },{ 16, 2 },{ 14, 3 },{ 18, 5 },{ 17, 1 } }, /* Antipaladin */
+  { { 15, 6 },{ 16, 2 },{ 14, 3 },{ 18, 5 },{ 17, 1 } }, /* Avatar */
+  { { 15, 6 },{ 16, 2 },{ 14, 3 },{ 18, 5 },{ 17, 1 } }, /* Bard */
+  { { 15, 6 },{ 16, 2 },{ 14, 3 },{ 18, 5 },{ 17, 1 } }  /* Commando */
 };
 
 bool saves_spell(struct char_data *ch, sh_int type, int level)
 {
-  int throw, class;
-  double chlevel, diff, total;
-  /* For PCs Negative apply_saving_throw makes saving throw better! */
-  /* For mobs, the saving throw is the mobs level - the higher the better */
+  int saving_throw = 0;
+  int ch_class = 0;
+  double ch_level = 0.0;
+  double diff = 0.0;
+  double total = 0.0;
 
-  throw = ch->specials.apply_saving_throw[type];
+  /* For PCs, a negative apply_saving_throw makes the saving throw better! */
+  /* For mobs, the saving throw is the mob's level; the higher the better. */
+  saving_throw = ch->specials.apply_saving_throw[type];
 
   if (!IS_NPC(ch)) {
-    if (GET_LEVEL(ch) >= LEVEL_IMM)
-      return(TRUE);
+    if (GET_LEVEL(ch) >= LEVEL_IMM) return TRUE;
 
-    class = GET_CLASS(ch)-1;
-    chlevel = ((double)GET_LEVEL(ch)) / ((double)LEVEL_IMM-1);
-    diff = chlevel*save[class][type][0]-save[class][type][1];
-    total = save[class][type][0] - diff;
-    throw += total;
+    ch_class = GET_CLASS(ch) - 1;
+    ch_level = ((double)GET_LEVEL(ch)) / ((double)LEVEL_IMM - 1);
+    diff = ch_level * save[ch_class][type][0] - save[ch_class][type][1];
+    total = save[ch_class][type][0] - diff;
+    saving_throw += total;
   }
   else {
-    throw=level-throw;
+    saving_throw = level - saving_throw;
   }
-  return(MAX(2,throw) < number(1,20));
+
+  return (MAX(2, saving_throw) < number(1, 20));
 }
+
 
 char *skip_spaces(char *string)
 {
@@ -1183,29 +1099,29 @@ char *skip_spaces(char *string)
   return string;
 }
 
-int USE_MANA(CHAR *ch, int sn)
+
+int USE_MANA(CHAR *ch, int spell_number)
 {
   int mana = 0;
 
-  switch (sn)
-  {
-    case SPELL_METEOR:
-      /* Shouldn't be subject to caster level calculation. */
-      mana = spell_info[sn].min_usesmana;
-      break;
-    case SPELL_VAMPIRIC:
-    case SPELL_EXISTENCE:
-      mana = 40 + (GET_LEVEL(ch) * 2);
-      break;
-    case SPELL_FURY:
-      mana = (GET_CLASS(ch) == CLASS_PALADIN && GET_LEVEL(ch) == 50 && !CHAOSMODE) ? 120 : spell_info[sn].min_usesmana;
-      break;
-    case SPELL_DEGENERATE:
-      mana = 0;
-      break;
-    default:
-      mana = MAX(spell_info[sn].min_usesmana, 100 / (2 + GET_LEVEL(ch) - SPELL_LEVEL(ch, sn)));
-      break;
+  switch (spell_number) {
+  case SPELL_METEOR:
+    /* Shouldn't be subject to caster level calculation. */
+    mana = spell_info[spell_number].min_usesmana;
+    break;
+  case SPELL_VAMPIRIC:
+  case SPELL_EXISTENCE:
+    mana = 40 + (GET_LEVEL(ch) * 2);
+    break;
+  case SPELL_FURY:
+    mana = ((GET_CLASS(ch) == CLASS_PALADIN) && (GET_LEVEL(ch) == 50) && !CHAOSMODE) ? 120 : spell_info[spell_number].min_usesmana;
+    break;
+  case SPELL_DEGENERATE:
+    mana = 0;
+    break;
+  default:
+    mana = MAX(spell_info[spell_number].min_usesmana, 100 / (2 + GET_LEVEL(ch) - SPELL_LEVEL(ch, spell_number)));
+    break;
   }
 
   return mana;

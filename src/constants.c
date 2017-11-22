@@ -129,7 +129,7 @@ const char *spell_wear_off_msg[] = {
   "!locate character!",
   "!super harm!",
   "!pummel!",
-  "!legend lore!",
+  "!coin-toss!",
   "!great mana!",
   "You finally get your hands on some mouthwash!",
   "Your depth of perception diminishes.",
@@ -163,7 +163,7 @@ const char *spell_wear_off_msg[] = {
   "The gnawing hunger slowly fades.",
   "!cover!",
   "Your hands slow down.",
-  "!coin toss!", /* 155 */
+  "!legend lore!", /* 155 */
   "", /* 156 */
   "", /* 157 */
   "", /* 158 */

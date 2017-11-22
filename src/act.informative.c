@@ -698,17 +698,15 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
 
     if (!IS_SET(ch->specials.pflag, PLR_TAGBRF))
     {
-      if (affected_by_spell(i, SKILL_CAMP))
-      {
-        act("......$n is camping here.", FALSE, i, 0, ch, TO_VICT);
-      }
-
       if (affected_by_spell(i, SMELL_FARTMOUTH))
       {
         act("......brown fumes waft from $n's mouth.", FALSE, i, 0, ch, TO_VICT);
       }
 
-      signal_char(i, ch, MSG_SHOW_AFFECT_TEXT, "");
+      if (affected_by_spell(i, SKILL_CAMP))
+      {
+        act("......$n is camping here.", FALSE, i, 0, ch, TO_VICT);
+      }
 
       if (affected_by_spell(i, SPELL_ORB_PROTECTION))
       {
@@ -719,6 +717,13 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       {
         act("......$n is bowing $s head in prayer.", FALSE, i, 0, ch, TO_VICT);
       }
+
+      if (affected_by_spell(i, SPELL_IRONSKIN))
+      {
+        act("......$n's skin is as hard and impervious as iron.", FALSE, i, 0, ch, TO_VICT);
+      }
+
+      signal_char(i, ch, MSG_SHOW_AFFECT_TEXT, "");
     }
 
     if (IS_AFFECTED(i, AFF_SANCTUARY) && !affected_by_spell(i, SPELL_DISRUPT_SANCT))
@@ -897,13 +902,6 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       {
         act("......$n is enveloped by a huge ball of flame!", FALSE, i, 0, ch, TO_VICT);
       }
-
-      /*
-      if (affected_by_spell(i, SPELL_IRONSKIN))
-      {
-      act("......$n's skin is as hard and impervious as iron.", FALSE, i, 0, ch, TO_VICT);
-      }
-      */
 
       if (IS_NPC(i))
       {
