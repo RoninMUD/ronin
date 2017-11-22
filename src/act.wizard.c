@@ -1858,14 +1858,18 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
   argument=one_argument(argument,arg);
 
   if(!*arg) {
-    send_to_char("Usage: gamemode wizlock (no new char creation)\n\r",ch);
-    send_to_char("                lock    (no mortals allowed in)\n\r",ch);
-    send_to_char("                check <reason>  (screens new chars)\n\r",ch);
-    if(GET_LEVEL(ch)>LEVEL_SUP)
-      send_to_char("                chaos   (chaos rules)\n\r",ch);
-      send_to_char("                bam     (BAM rules)\n\r",ch);
-      send_to_char("                pulse   (measure of machine lag)\n\r",ch);
-      send_to_char("                halt    (time stops)\n\r",ch);
+    send_to_char("Usage: gamemode wizlock         WIZ+ (no new char creation)\n\r",ch);
+    send_to_char("                lock            WIZ+ (no mortals allowed in)\n\r",ch);
+    send_to_char("                check <reason>  WIZ+ (screens new chars)\n\r",ch);
+    if(GET_LEVEL(ch)>LEVEL_ETE) {
+      send_to_char("                bam             SUP+ (BAM rules)\n\r",ch);
+    }
+    if(GET_LEVEL(ch)>LEVEL_SUP) {
+      send_to_char("                chaos           IMP  (chaos rules)\n\r",ch);
+      send_to_char("                pulse           IMP  (measure of machine lag)\n\r",ch);
+      send_to_char("                halt            IMP  (time stops)\n\r",ch);
+      send_to_char("                doublexp        IMP  (normal exp gain is doubled)\n\r",ch);
+    }
     return;
   }
 
@@ -1929,22 +1933,6 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if(is_abbrev(arg,"chaos") && GET_LEVEL(ch)>LEVEL_SUP) {
-    if ( CHAOSMODE == 0 ) {
-      sprintf(buf,"`i***** ENTERING CHAOS MODE *****\n\r\n\r***** ENTERING CHAOS MODE *****\n\r\n\r***** ENTERING CHAOS MODE *****`q\n\r\n\r");
-      CHAOSMODE = 1;
-    }
-    else {
-      sprintf(buf,"`i**** LEAVING CHAOS MODE *****`q\n\r");
-      CHAOSMODE = 0;
-    }
-    send_to_char(buf,ch);
-    for (e=descriptor_list;e;e=e->next)
-      if (e->character !=ch && !e->connected)
-        act(buf,0,ch,0,e->character,TO_VICT);
-    return;
-  }
-
   if(is_abbrev(arg,"bam") && GET_LEVEL(ch)>LEVEL_ETE) {
     if ( BAMDAY == 0 ) {
       sprintf(buf,"`iBAM Day started.\n\r`q");
@@ -1958,6 +1946,22 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     for (e=descriptor_list;e;e=e->next)
       if(e->character !=ch && !e->connected &&
          (GET_LEVEL(e->character) >= LEVEL_IMM))
+        act(buf,0,ch,0,e->character,TO_VICT);
+    return;
+  }
+
+  if(is_abbrev(arg,"chaos") && GET_LEVEL(ch)>LEVEL_SUP) {
+    if ( CHAOSMODE == 0 ) {
+      sprintf(buf,"`i***** ENTERING CHAOS MODE *****\n\r\n\r***** ENTERING CHAOS MODE *****\n\r\n\r***** ENTERING CHAOS MODE *****`q\n\r\n\r");
+      CHAOSMODE = 1;
+    }
+    else {
+      sprintf(buf,"`i**** LEAVING CHAOS MODE *****`q\n\r");
+      CHAOSMODE = 0;
+    }
+    send_to_char(buf,ch);
+    for (e=descriptor_list;e;e=e->next)
+      if (e->character !=ch && !e->connected)
         act(buf,0,ch,0,e->character,TO_VICT);
     return;
   }
@@ -1991,12 +1995,34 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  send_to_char("Usage: gamemode wizlock (no new char creation)\n\r",ch);
-  send_to_char("                lock    (no mortals allowed in)\n\r",ch);
-  send_to_char("                check   (screens new chars)\n\r",ch);
-  if(GET_LEVEL(ch)>LEVEL_SUP)
-    send_to_char("                chaos   (chaos rules)\n\r",ch);
-    send_to_char("                halt    (time stops)\n\r",ch);
+  if(is_abbrev(arg,"doublexp") && GET_LEVEL(ch)>LEVEL_SUP) {
+    if ( DOUBLEXP == 0 ) {
+      sprintf(buf,"`i***** DOUBLE EXPERIENCE MODE ENABLED!! *****\n\r\n\r***** DOUBLE EXPERIENCE MODE ENABLED!! *****\n\r\n\r***** DOUBLE EXPERIENCE MODE ENABLED!! *****`q\n\r\n\r");
+      DOUBLEXP = 1;
+    }
+    else {
+      sprintf(buf,"`i***** DOUBLE EXPERIENCE MODE DISABLED *****\n\r\n\r***** DOUBLE EXPERIENCE MODE DISABLED *****\n\r\n\r***** DOUBLE EXPERIENCE MODE DISABLED *****`q\n\r\n\r");
+      DOUBLEXP = 0;
+    }
+    send_to_char(buf,ch);
+    for (e=descriptor_list;e;e=e->next)
+      if (e->character !=ch && !e->connected)
+        act(buf,0,ch,0,e->character,TO_VICT);
+    return;
+  }
+  /* invalid parameter */
+  send_to_char("Usage: gamemode wizlock         WIZ+ (no new char creation)\n\r",ch);
+  send_to_char("                lock            WIZ+ (no mortals allowed in)\n\r",ch);
+  send_to_char("                check <reason>  WIZ+ (screens new chars)\n\r",ch);
+  if(GET_LEVEL(ch)>LEVEL_ETE) {
+    send_to_char("                bam             SUP+ (BAM rules)\n\r",ch);
+  }
+  if(GET_LEVEL(ch)>LEVEL_SUP) {
+    send_to_char("                chaos           IMP  (chaos rules)\n\r",ch);
+    send_to_char("                pulse           IMP  (measure of machine lag)\n\r",ch);
+    send_to_char("                halt            IMP  (time stops)\n\r",ch);
+    send_to_char("                doublexp        IMP  (normal exp gain is doubled)\n\r",ch);
+  }
   return;
 }
 
