@@ -1788,7 +1788,7 @@ void do_trophy(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (GET_ITEM_TYPE(corpse) != ITEM_CONTAINER && OBJ_VALUE3(corpse) != 1) {
+  if (GET_ITEM_TYPE(corpse) != ITEM_CONTAINER || (GET_ITEM_TYPE(corpse) == ITEM_CONTAINER && OBJ_VALUE3(corpse) != 1)) {
     send_to_char("That isn't a corpse.\n\r", ch);
 
     return;
