@@ -1947,7 +1947,7 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
       }
     }
 
-    skill_wait(ch, SKILL_CLOBBER, chance(15) ? 3 : 2);
+    skill_wait(ch, SKILL_CLOBBER, 2);
   }
 }
 
