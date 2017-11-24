@@ -63,6 +63,16 @@ D2
 ~
 0 0 11501
 E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
+~
+E
 writing wall~
 The writing on the wall reads:
 Next must you pass through fire, earth, water, and air.
@@ -71,16 +81,6 @@ This may be done without a fight,
 Simply by filling the crypt with light.
 One last thing and well will you fare.
 Let the room blaze, but leave corners bare.
-~
-E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
-coffin coffins~
-The coffins all appear to be finely wrought, each engraved carefully with the
-name of its inhabitant.
 ~
 S
 #11503
@@ -107,14 +107,14 @@ D3
 ~
 0 0 11502
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11504
@@ -141,14 +141,14 @@ D3
 ~
 0 0 11503
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11505
@@ -171,14 +171,14 @@ D3
 ~
 0 0 11504
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11506
@@ -205,14 +205,14 @@ D2
 ~
 0 0 11502
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11507
@@ -243,14 +243,14 @@ D3
 ~
 0 0 11506
 E
-coffin coffins~
-The coffins all appear to be finely wrought, each engraved carefully with the
-name of its inhabitant.
-~
-E
 floor runes~
 The runes on the floor appear magical in nature. There are many symbols of
 protection and wards, as far as you can tell.
+~
+E
+coffin coffins~
+The coffins all appear to be finely wrought, each engraved carefully with the
+name of its inhabitant.
 ~
 S
 #11508
@@ -281,14 +281,14 @@ D3
 ~
 0 0 11507
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11509
@@ -315,14 +315,14 @@ D3
 ~
 0 0 11508
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11510
@@ -349,14 +349,14 @@ D2
 ~
 0 0 11506
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11511
@@ -387,14 +387,14 @@ D3
 ~
 0 0 11510
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11512
@@ -425,14 +425,14 @@ D3
 ~
 0 0 11511
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11513
@@ -459,14 +459,14 @@ D3
 ~
 0 0 11512
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11514
@@ -489,14 +489,14 @@ D2
 ~
 0 0 11510
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11515
@@ -523,14 +523,14 @@ D3
 ~
 0 0 11514
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11516
@@ -557,14 +557,14 @@ D3
 ~
 0 0 11515
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11517
@@ -587,14 +587,14 @@ D3
 ~
 0 0 11516
 E
-floor runes~
-The runes on the floor appear magical in nature. There are many symbols of
-protection and wards, as far as you can tell.
-~
-E
 coffin coffins~
 The coffins all appear to be finely wrought, each engraved carefully with the
 name of its inhabitant.
+~
+E
+floor runes~
+The runes on the floor appear magical in nature. There are many symbols of
+protection and wards, as far as you can tell.
 ~
 S
 #11518
