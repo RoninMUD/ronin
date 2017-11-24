@@ -1560,10 +1560,11 @@ struct txt_q
 #define CON_EXDSCR  9
 #define CON_QCLASS  10
 #define CON_LDEAD   11
-#define CON_PWDNEW  12
-#define CON_PWDNCNF 13
+#define CON_PWDNEW  12 /* unused */
+#define CON_PWDNCNF 13 /* unused */
 #define CON_AUTH    14
-#define CON_HELP    15
+#define CON_HELP    15 /* unused */
+#define CON_QCOLOR  16
 
 struct snoop_data
 {
