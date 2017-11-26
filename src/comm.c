@@ -73,6 +73,7 @@ void init_descriptor (struct descriptor_data *newd, int desc);
 void game_sleep(struct timeval *timeout);
 void heartbeat(int pulse);
 void write_last_command(void);
+extern char *spell_wear_off_msg[];
 
 /* local globals */
 struct descriptor_data *descriptor_list, *next_to_process;
@@ -2678,6 +2679,90 @@ int signal_room(int room, CHAR *ch,int cmd,char *arg)
   return stop;
 }
 
+void pulse_mantra(CHAR *ch) {
+  const int mantra_dispel_types[] = {
+    SPELL_BLINDNESS,
+    SPELL_POISON,
+    SPELL_PARALYSIS,
+    -1
+  };
+
+  bool stop = FALSE;
+  int mantra_dispel = 0;
+  int gain = 0;
+  AFF *tmp_af = NULL;
+  AFF *next_af = NULL;
+
+  for (stop = FALSE, tmp_af = ch->affected; !stop && tmp_af; tmp_af = next_af) {
+    next_af = tmp_af->next;
+
+    if (tmp_af->type == SKILL_MANTRA) {
+      if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
+        gain = tmp_af->modifier;
+
+        if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
+          gain = ((gain * 12) / 10);
+        }
+
+        if (affected_by_spell(ch, SPELL_DEGENERATE) &&
+            (duration_of_spell(ch, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 9 : 27))) {
+          send_to_char("Your trance fails to heal your degenerated body.\n\r", ch);
+        }
+        else {
+          send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
+          magic_heal(ch, SKILL_MANTRA, gain, FALSE);
+        }
+      }
+
+      mantra_dispel = get_random_eligible_effect(ch, mantra_dispel_types);
+
+      if (mantra_dispel && chance(25)) {
+        switch (mantra_dispel) {
+        case SPELL_BLINDNESS:
+          if (affected_by_spell(ch, SPELL_BLINDNESS)) {
+            send_to_char("You can see again.\n\r", ch);
+            affect_from_char(ch, SPELL_BLINDNESS);
+          }
+          break;
+        case SPELL_POISON:
+          if (affected_by_spell(ch, SPELL_POISON)) {
+            send_to_char("You feel better.\n\r", ch);
+            affect_from_char(ch, SPELL_POISON);
+          }
+          break;
+        case SPELL_PARALYSIS:
+          if (affected_by_spell(ch, SPELL_PARALYSIS)) {
+            send_to_char("You can move again.\n\r", ch);
+            affect_from_char(ch, SPELL_PARALYSIS);
+          }
+          break;
+        }
+      }
+
+      tmp_af->duration--;
+
+      if (tmp_af->duration == 0) {
+        if (*spell_wear_off_msg[tmp_af->type]) {
+          printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
+        }
+
+        affect_remove(ch, tmp_af);
+      }
+
+      /* Break out of the loop, as we should only process one Mantra effect. */
+      stop = TRUE;
+    }
+  }
+}
+
+void pulse_adrenaline_rush(CHAR *ch) {
+  if (check_subclass(ch, SC_BANDIT, 3) &&
+      GET_HIT(ch) < GET_MAX_HIT(ch) &&
+      GET_OPPONENT(ch)) {
+    GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
+  }
+}
+
 int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
 {
   /*
@@ -2686,29 +2771,13 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
   log_f("%s", buf);
   */
 
-  extern char *spell_wear_off_msg[];
-
   bool stop = FALSE;
   int i = 0;
-  int gain = 0;
   int tmp_mana = 0;
   OBJ *tmp_obj = NULL;
   OBJ *next_obj = NULL;
   ENCH *tmp_ench = NULL;
   ENCH *next_ench = NULL;
-
-  /* Begin Mantra Variables */
-  const int mantra_dispel_types[] = {
-    SPELL_BLINDNESS,
-    SPELL_POISON,
-    SPELL_PARALYSIS,
-    -1
-  };
-
-  int mantra_dispel = 0;
-  AFF *tmp_af = NULL;
-  AFF *next_af = NULL;
-  /* End Mantra Variables */
 
   /* Sanity check, to make sure ch is OK. */
   if ((ch->nr >= 0) &&
@@ -2731,73 +2800,10 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
 
   if (cmd == MSG_MOBACT && !IS_NPC(ch)) {
     /* Mantra */
-    for (stop = FALSE, tmp_af = ch->affected; !stop && tmp_af; tmp_af = next_af) {
-      next_af = tmp_af->next;
-
-      if (tmp_af->type == SKILL_MANTRA) {
-        if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
-          gain = tmp_af->modifier;
-
-          if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-            gain = ((gain * 12) / 10);
-          }
-
-          if (affected_by_spell(ch, SPELL_DEGENERATE) &&
-              (duration_of_spell(ch, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 9 : 27))) {
-            send_to_char("Your trance fails to heal your degenerated body.\n\r", ch);
-          }
-          else {
-            send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
-            magic_heal(ch, SKILL_MANTRA, gain, FALSE);
-          }
-        }
-
-        mantra_dispel = get_random_eligible_effect(ch, mantra_dispel_types);
-
-        if (mantra_dispel && chance(25)) {
-          switch (mantra_dispel) {
-          case SPELL_BLINDNESS:
-            if (affected_by_spell(ch, SPELL_BLINDNESS)) {
-              send_to_char("You can see again.\n\r", ch);
-              affect_from_char(ch, SPELL_BLINDNESS);
-            }
-            break;
-          case SPELL_POISON:
-            if (affected_by_spell(ch, SPELL_POISON)) {
-              send_to_char("You feel better.\n\r", ch);
-              affect_from_char(ch, SPELL_POISON);
-            }
-            break;
-          case SPELL_PARALYSIS:
-            if (affected_by_spell(ch, SPELL_PARALYSIS)) {
-              send_to_char("You can move again.\n\r", ch);
-              affect_from_char(ch, SPELL_PARALYSIS);
-            }
-            break;
-          }
-        }
-
-        tmp_af->duration--;
-
-        if (tmp_af->duration == 0) {
-          if (*spell_wear_off_msg[tmp_af->type]) {
-            printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
-          }
-
-          affect_remove(ch, tmp_af);
-        }
-
-        /* Break out of the loop, as we should only process one Mantra effect. */
-        stop = TRUE;
-      }
-    }
+    pulse_mantra(ch);
 
     /* Adrenaline Rush */
-    if (check_subclass(ch, SC_BANDIT, 3) &&
-        GET_HIT(ch) < GET_MAX_HIT(ch) &&
-        GET_OPPONENT(ch)) {
-      GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
-    }
+    pulse_adrenaline_rush(ch);
   }
 
   if (IS_MORTAL(ch))
