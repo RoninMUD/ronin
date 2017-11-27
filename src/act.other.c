@@ -1011,105 +1011,133 @@ void do_typo(struct char_data *ch, char *argument, int cmd) {
 void do_brief(struct char_data *ch, char *argument, int cmd) {
   char arg[MAX_STRING_LENGTH];
 
-     if(IS_NPC(ch)) return;
+  if (IS_NPC(ch)) return;
 
   one_argument(argument, arg);
 
-  if(*arg) {
-
-    if(is_abbrev(arg,"all")) {
-      if(IS_SET(ch->specials.pflag, PLR_BRIEF)) {
-        send_to_char("All modes off.\n\r", ch);
-        REMOVE_BIT(ch->specials.pflag, PLR_BRIEF);
-        REMOVE_BIT(ch->specials.pflag, PLR_SUPERBRF);
-        REMOVE_BIT(ch->specials.pflag, PLR_TAGBRF);
-        REMOVE_BIT(ch->specials.pflag, PLR_FIGHTBRF);
+  if (*arg) {
+    if (is_abbrev(arg, "all")) {
+      if (IS_SET(GET_PFLAG(ch), PLR_BRIEF)) {
+        send_to_char("All brief modes off.\n\r", ch);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_BRIEF);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_SECTOR_BRIEF);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_SUPERBRF);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_TAGBRF);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_FIGHTBRF);
       }
       else {
-        send_to_char("All modes on.\n\r", ch);
-        SET_BIT(ch->specials.pflag, PLR_BRIEF);
-        SET_BIT(ch->specials.pflag, PLR_SUPERBRF);
-        SET_BIT(ch->specials.pflag, PLR_TAGBRF);
-        SET_BIT(ch->specials.pflag, PLR_FIGHTBRF);
+        send_to_char("All brief modes on.\n\r", ch);
+        SET_BIT(GET_PFLAG(ch), PLR_BRIEF);
+        SET_BIT(GET_PFLAG(ch), PLR_SECTOR_BRIEF);
+        SET_BIT(GET_PFLAG(ch), PLR_SUPERBRF);
+        SET_BIT(GET_PFLAG(ch), PLR_TAGBRF);
+        SET_BIT(GET_PFLAG(ch), PLR_FIGHTBRF);
       }
       return;
     }
 
-    if(is_abbrev(arg,"normal")) {
-      if(IS_SET(ch->specials.pflag, PLR_BRIEF)) {
+    if (is_abbrev(arg, "normal")) {
+      if (IS_SET(GET_PFLAG(ch), PLR_BRIEF)) {
         send_to_char("Brief mode off.\n\r", ch);
-        REMOVE_BIT(ch->specials.pflag, PLR_BRIEF);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_BRIEF);
       }
       else {
         send_to_char("Brief mode on.\n\r", ch);
-        SET_BIT(ch->specials.pflag, PLR_BRIEF);
+        SET_BIT(GET_PFLAG(ch), PLR_BRIEF);
       }
       return;
     }
 
-    if(is_abbrev(arg,"super")) {
-      if(IS_SET(ch->specials.pflag, PLR_SUPERBRF)) {
+    if (is_abbrev(arg, "sector")) {
+      if (IS_SET(GET_PFLAG(ch), PLR_SECTOR_BRIEF)) {
+        send_to_char("Sector brief mode off.\n\r", ch);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_SECTOR_BRIEF);
+      }
+      else {
+        send_to_char("Sector brief mode on.\n\r", ch);
+        SET_BIT(GET_PFLAG(ch), PLR_SECTOR_BRIEF);
+      }
+      return;
+    }
+
+    if (is_abbrev(arg, "super")) {
+      if (IS_SET(GET_PFLAG(ch), PLR_SUPERBRF)) {
         send_to_char("Super brief mode off.\n\r", ch);
-        REMOVE_BIT(ch->specials.pflag, PLR_SUPERBRF);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_SUPERBRF);
       }
       else {
         send_to_char("Super brief mode on.\n\r", ch);
-        SET_BIT(ch->specials.pflag, PLR_SUPERBRF);
+        SET_BIT(GET_PFLAG(ch), PLR_SUPERBRF);
       }
       return;
     }
 
-    if(is_abbrev(arg,"tagline")) {
-      if(IS_SET(ch->specials.pflag, PLR_TAGBRF)) {
+    if (is_abbrev(arg, "tagline")) {
+      if (IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
         send_to_char("Tagline brief mode off.\n\r", ch);
-        REMOVE_BIT(ch->specials.pflag, PLR_TAGBRF);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_TAGBRF);
       }
       else {
         send_to_char("Tagline brief mode on.\n\r", ch);
-        SET_BIT(ch->specials.pflag, PLR_TAGBRF);
+        SET_BIT(GET_PFLAG(ch), PLR_TAGBRF);
       }
       return;
     }
 
-    if(is_abbrev(arg,"fight")) {
-      if(IS_SET(ch->specials.pflag, PLR_FIGHTBRF)) {
+    if (is_abbrev(arg, "fight")) {
+      if (IS_SET(GET_PFLAG(ch), PLR_FIGHTBRF)) {
         send_to_char("Fight brief mode off.\n\r", ch);
-        REMOVE_BIT(ch->specials.pflag, PLR_FIGHTBRF);
+        REMOVE_BIT(GET_PFLAG(ch), PLR_FIGHTBRF);
       }
       else {
         send_to_char("Fight brief mode on.\n\r", ch);
-        SET_BIT(ch->specials.pflag, PLR_FIGHTBRF);
+        SET_BIT(GET_PFLAG(ch), PLR_FIGHTBRF);
       }
       return;
     }
 
-    if(is_abbrev(arg,"list")) {
-      if(IS_SET(ch->specials.pflag, PLR_BRIEF))
+    if (is_abbrev(arg, "list")) {
+      if (IS_SET(GET_PFLAG(ch), PLR_BRIEF)) {
         send_to_char("Brief mode:         ON\n\r", ch);
-      else
+      }
+      else {
         send_to_char("Brief mode:         OFF\n\r", ch);
-      if(IS_SET(ch->specials.pflag, PLR_SUPERBRF))
+      }
+      if (IS_SET(GET_PFLAG(ch), PLR_SECTOR_BRIEF)) {
+        send_to_char("Sector brief mode:  ON\n\r", ch);
+      }
+      else {
+        send_to_char("Sector brief mode:  OFF\n\r", ch);
+      }
+      if (IS_SET(GET_PFLAG(ch), PLR_SUPERBRF)) {
         send_to_char("Super brief mode:   ON\n\r", ch);
-      else
+      }
+      else {
         send_to_char("Super brief mode:   OFF\n\r", ch);
-      if(IS_SET(ch->specials.pflag, PLR_TAGBRF))
+      }
+      if (IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
         send_to_char("Tagline brief mode: ON\n\r", ch);
-      else
+      }
+      else {
         send_to_char("Tagline brief mode: OFF\n\r", ch);
-      if(IS_SET(ch->specials.pflag, PLR_FIGHTBRF))
+      }
+      if (IS_SET(GET_PFLAG(ch), PLR_FIGHTBRF)) {
         send_to_char("Fight brief mode:   ON\n\r", ch);
-      else
+      }
+      else {
         send_to_char("Fight brief mode:   OFF\n\r", ch);
+      }
       return;
     }
   }
 
-  send_to_char("Usage: brief normal  - no room descriptions\n\r",ch);
-  send_to_char("             super   - can't see players/movement\n\r",ch);
-  send_to_char("             tagline - hide taglines from look\n\r",ch);
-  send_to_char("             fight   - verbose hit messages for others\n\r",ch);
-  send_to_char("             list    - lists whats on and off\n\r",ch);
-  send_to_char("             all     - toggles all on/off according to normal setting\n\r\n\r",ch);
+  send_to_char("Usage: brief normal  - You will not see room descriptions.\n\r", ch);
+  send_to_char("             sector  - You will not see room sector types.\n\r", ch);
+  send_to_char("             super   - You will not see players/NPCs in rooms, or their movement.\n\r", ch);
+  send_to_char("             tagline - You will not see player/NPC taglines.\n\r", ch);
+  send_to_char("             fight   - You will not see verbose hit messages for other players.\n\r", ch);
+  send_to_char("             list    - Shows your active brief settings.\n\r", ch);
+  send_to_char("             all     - Toggles all breif modes on or off.\n\r\n\r", ch);
 }
 
 void do_compact(struct char_data *ch, char *argument, int cmd)
