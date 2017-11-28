@@ -3305,7 +3305,7 @@ void spell_animate_dead(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       mob->player.name = str_dup("undead");
     } break;
     case 10: {
-      mob->player.short_descr = str_dup("The Wight ");
+      mob->player.short_descr = str_dup("The Wight");
       mob->player.name = str_dup("wight");
     } break;
     case 11: {
