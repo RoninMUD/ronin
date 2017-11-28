@@ -7540,11 +7540,16 @@ Subclass Legionnaire: Level 1 (Commando)
 
 usage: lunge <target>
 
-The legionnaire can lunge at his/her victim at the start
-of a fight, dealing 25% more damage than an assault.
-The legionnaire will experience 2 rounds of lag, and
-the success of the lunge is dependent on how well the
-skill is practiced.  A weapon is required.
+The Legionnaire can lunge at his/her victim at the start of a fight,
+dealing 25% more damage than an Assault.  The user will experience 2
+rounds of lag, and the success of the lunge is dependent on how well
+the skill is practiced.  Similar to Assault, this skill can be used
+against a target that is already engaged in combat.
+
+A weapon is required.
+
+The success of this skill is based on how well it is practiced, and
+the character's Dexterity.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7554,17 +7559,18 @@ Subclass Legionnaire: Level 3 (Commando)
 
 usage: clobber <target>
 
-The legionnaire will attempt to strike an opponent with a
-devastating blow.  The damage dealt by this skill is equal
-to one to four times the commando's level.  Additionally,
-this skill will stun, incapacitate, or even mortally wound
-a target, making the next attack made against the target
-much more effective.  The user will experience two to three
-rounds of lag after use.  The success of this skill is based
-on how well it is practiced, and the user's dexterity.
+The Legionnaire will attempt to strike an opponent with a devastating
+blow.  The damage dealt by this skill is equal to one to four times
+the user's level.  Additionally, this skill will stun, incapacitate,
+or even mortally wound a target, making the next attack made against
+the target much more effective.  The user will experience two rounds
+of lag after use.
 
-Note: This will not bring the opponent down below 0 hit
-points if it knocks them to mortally wounded, it will
+The success of this skill is based on how well it is practiced, and
+the character's Dexterity.
+
+Note: The 'stun' effect of this skill will not bring the opponent down
+below 0 hit points if it knocks them to mortally wounded, it will
 merely put them in the mortally wounded position.
 
 See Also: SUBCLASSES LEGIONNAIRE
@@ -7575,13 +7581,15 @@ Subclass Legionnaire: Level 2 (Commando)
 
 Usage       : cast 'rimefang'
 Accumulative: no
-Duration    :
+Duration    : -
 Save        : 1/2 vs. paralysis
 Mana Cost   : 150
+Damage      : level * 5 (up to 250 at level 50)
 
-This extremely powerful room spell can cause serious damage to anything in the
-immediate vicinity.  The Legionnaire not only deals damage equal to five times
-his or her level, but also has a chance to paralyze their victims.
+This extremely powerful room spell can cause serious damage to
+anything in the immediate vicinity.  The Legionnaire not only deals
+damage equal to five times his/her level, but also has a chance to
+paralyze his/her victims.
 
 During the winter, Rimefang will deal an additional 75 damage.
 
@@ -7591,13 +7599,13 @@ RIPOSTE
 
 Subclass Mercenary: Level 3 (Commando)
 
-With this skill, the mercenary has a chance to partially
-deflect incoming attacks made against him or her.  The
-damage deflected varies from 15% to 20%.  Additionally,
-the mercenary will get an attack back at their opponent
-with a chance of dual or triple.  The success of this
-skill is dependent on how well it is practiced, and the
-characters dexterity.
+With this skill, the Mercenary has a chance to partially deflect
+incoming attacks made against him/her.  The damage deflected is equal
+to 20%.  Additionally, the mercenary will get an attack back at their
+opponent with a chance of a dual or triple hit.
+
+The success of this skill is dependent on how well it is practiced,
+and the character's Dexterity.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7610,13 +7618,14 @@ Accumulative: no
 Duration    : 8
 Save        : -
 Mana Cost   : 200
+Damage      : 600 + 100 damage per tick for duration
 
-This spell has two purposes.  One is to deal a high amount of damage in
-one cast.  The other is to leave an effect that will deal decent damage
-every tick. This is accomplished with a modest 600 damage initial attack
-and another 100 damage a tick for 8 ticks.  This spell is the perfect way
-to prevent a creature from regenerating when you are trying to kill it
-over multiple runs.
+This spell has two purposes.  One is to deal a high amount of damage
+in a single cast.  The other is to leave an effect that will deal
+decent damage every tick. This is accomplished with a modest 600
+damage initial attack and another 100 damage a tick for 8 ticks.  This
+spell is an effective way to prevent a creature from regenerating when
+you are trying to kill it over multiple runs.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7626,14 +7635,14 @@ Subclass Mercenary: Level 1 (Commando)
 
 Usage       : cast 'cloud of confusion'
 Accumulative: no
-Duration    : 1d5+1
+Duration    : 1d5 + 1
 Save        : -
 Mana Cost   : 100
 
-This spell affects everyone in the room not grouped with
-the Mercenary.  All victims will have their hitroll reduced
-by 5 to 8 (varies).  This spell will be more effective if
-cast at night.
+This spell affects everyone in the room not grouped with the
+Mercenary.  All victims will have their hitroll reduced by 5 to 8.
+
+This spell will be more effective if cast at night.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7647,8 +7656,8 @@ Duration    : 10
 Save        : -
 Mana Cost   : 50
 
-This defensive spell will lower the Mercenary's armor by 25, making him harder
-to hit.
+This defensive spell will lower the Mercenary's armor by 25, making
+him/her harder to hit.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7677,10 +7686,10 @@ Accumulative: no
 Duration    : -
 Save        : -
 Mana Cost   : 200
+Damage      : 1000 to 1200
 
-This powerful spell gives a bit more damage
-than the mage thunderball spell.  The Mercenary can
-expect to deal 1000-1200 damage to the victim.
+This powerful spell causes a bit more damage than the Mage's Thunderball
+spell.  The Mercenary can expect to deal 1000-1200 damage to the victim.
 
 See Also: SUBCLASSES MERCENARY
 #
