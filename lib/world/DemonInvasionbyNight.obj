@@ -898,6 +898,73 @@ M
 ~
 ~
 ~
+#27790
+lantern dark smoldering cinders~
+A Lantern of Smoldering Cinders~
+A dark lantern is here, smoldering quietly with an evil glow.~
+~
+1 134218327 65537
+0 0 0 0
+5 240000 160000
+100
+E
+lantern dark smoldering cinders~
+Made from the blackest iron is a lantern of purely evil origin.  This light-
+producing device has been crafted from metal that looks more twisted and warped
+than hammered or cast.  Glowing cinders smolder from within their metal cage,
+burning like a gateway into the deepest parts of hell.  When moved about, a
+small shower of hot sparks and embers is produced, which almost seem to 'try'
+to catch whatever they land on aflame.
+~
+X
+~
+0 0 0
+M
+You scream in agony as you grasp A Lantern of Smoldering Cinders!~
+$n screams in agony as $e grasps A Lantern of Smoldering Cinders!~
+You feel a sense of relief as you cease to use A Lantern of Smoldering Cinders.~
+$n looks relieved as $e ceases to use A Lantern of Smoldering Cinders.~
+A
+18 5
+A
+19 5
+A
+17 -10
+B
+32768
+#27791
+armor large ribcage wings winged demon~
+Winged Armor of the Demon~
+A large ribcage fashioned in the shape of armor with wings rests here.~
+~
+9 208695808 9
+20 0 0 0
+50 400000 120000
+3
+E
+armor large ribcage wings winged demon~
+This armor is a gruesome sight indeed, for it is made from the hollowed out
+chest-cavity of some foul demon.  Hardened black flesh stretches tautly over a
+large ribcage of jagged bone and a pair of large leathery bat-like wings
+protrude from the back of the armor and still seem to be functional.  Perhaps
+the most frightening thing about it is the fact that it is only a part of the
+original host and yet it still seems to be alive in some way as it pulses and
+flexes the remaining muscles in a slow but steady rhythm.
+~
+X
+~
+0 0 0
+M
+You strap on the Winged Armor of the Demon and flex your new set of wings.~
+$n straps on the Winged Armor of the Demon, and flexes $s new wings.~
+You alight upon the ground and remove your Winged Armor of the Demon.~
+$n alights upon the ground and removes $s Winged Armor of the Demon.~
+A
+13 20
+A
+19 2
+B
+16777216
 #27797
 page organ music discordant~
 a page of organ music~

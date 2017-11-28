@@ -27,9 +27,9 @@ B
 C
 9
 #14201
-key~
+key large~
 A large key~
-The key to the first councilor's chamber.~
+The key to the first councilor's chamber has been left here carelessly.~
 ~
 18 524288 1
 0 0 0 0
@@ -44,11 +44,11 @@ M
 ~
 ~
 #14202
-sleeves~
+sleeves boundary warden~
 Boundary Warden Sleeves~
-A worn pair of sleeves covered in mud~
+A worn pair of sleeves covered in mud are laying here, forgotten.~
 invalid~
-9 134479872 257
+9 134217728 257
 7 -1 -1 -1
 5 15000 1200
 100
@@ -69,11 +69,11 @@ A
 B
 48
 #14203
-knife~
+knife boundary warden~
 A Boundary Warden Knife~
-A knife crafted for use by the Boundary Wardens~
+A knife crafted for use by the Boundary Wardens has been left on the ground.~
 invalid~
-5 134480896 1
+5 134218752 1
 0 7 4 10
 15 1400 6000
 33
@@ -90,9 +90,9 @@ A
 A
 19 1
 #14204
-key~
+key large bent~
 A large, bent key~
-The Gate Key to Hartland~
+The Gate Key to Hartland is here, carelessly left on the ground.~
 ~
 18 524288 1
 0 0 0 0
@@ -107,9 +107,9 @@ M
 ~
 ~
 #14205
-headband~
+headband councilor councilors~
 The Councilor's Headband~
-The First Councilor of Hartland's Headband~
+The First Councilor of Hartland's Headband has been dropped here.~
 invalid~
 9 134218752 17
 11 -1 -1 -1
@@ -120,7 +120,7 @@ X
 512 0 0
 M
 You feel as if you can rule the world, as the headband graces your forehead.~
-$n feels like he can rule the world, as the headband graves $s forehead.~
+$n feels like $e can rule the world, as the headband graces $s forehead.~
 ~
 ~
 A
@@ -128,9 +128,9 @@ A
 A
 18 2
 #14206
-heart ring land~
+ring heart land~
 Heart of the Land~
-A heart shaped ring.~
+A heart shaped ring is here, reflecting the light.~
 ~
 9 134217728 3
 7 -1 -1 -1
@@ -140,7 +140,7 @@ X
 ~
 2560 0 0
 M
-You feel a ray of sunshine upon your face, and feel the warmth~
+You feel a ray of sunshine upon your face, and feel its warmth.~
 $n feels a ray of sunshine on $s face, and seems to feel a little warmer.~
 ~
 ~
@@ -151,9 +151,9 @@ A
 A
 53 -2
 #14207
-bounty ring land~
+ring bounty land rose~
 Bounty of the Land~
-A rose shaped ring.~
+A rose shaped ring is here, neglected by its owner.~
 ~
 9 134217728 3
 7 -1 -1 -1
@@ -176,9 +176,9 @@ A
 B
 32768
 #14208
-plate councilors~
+plate platemail large black councilor councilors~
 Councilor's Plate~
-A large black piece of Platemail with the Hartland Crest~
+A large, black piece of platemail with the Hartland Crest is here.~
 ~
 9 167830528 9
 26 -1 -1 -1
@@ -199,9 +199,9 @@ A
 A
 39 5
 #14209
-pouch small~
+pouch small concealable~
 A small concealable pouch~
-A small pouch sits on the ground almost blending into the background~
+A small pouch sits on the ground, almost blending into the background.~
 null~
 15 134217728 1
 20 0 0 0
@@ -216,16 +216,16 @@ M
 ~
 ~
 #14210
-knife~
+knife large throwing~
 A large throwing knife~
-A large knife sits on the ground~
-$V crys out in pain as the knife hits $m~
+A large knife sits on the ground.~
+$V cries out in pain as the knife hits $m!~
 7 134217728 49153
 20 6 -1 -1
 1 70 70
 100
 X
-$n stumbles and drops the knife and $e screams as it impales $m foot~
+$n stumbles and drops $s knife, screaming as it impales $s foot!~
 0 0 0
 M
 ~
@@ -233,11 +233,11 @@ M
 ~
 ~
 #14211
-mace bladed six~
+mace six bladed battle oak~
 A Six Bladed Battle Mace~
-A large, six bladed mace with a oak handle~
-$V screams as the blades embedded themselves in $m head~
-5 181723136 8193
+A large, six bladed mace with an oak handle is here, stuck in the ground.~
+$V screams as the blades of $r mace embed themselves in $V's head!~
+5 181460992 8193
 5 8 6 12
 32 10 89000
 10
@@ -246,7 +246,7 @@ Mace~
 A large mace with six embedded blades
 ~
 X
-~
+$r six bladed mace swings wildly through the air!~
 64 0 0
 M
 ~
@@ -262,9 +262,9 @@ A
 B
 32
 #14212
-belt warden~
+shawl silk emma emmas~
 Boundary Warden Belt~
-A large belt with many loops and pouches~
+A large belt with many loops and pouches has been dropped here in a heap.~
 ~
 9 134218752 2049
 10 -1 -1 -1
@@ -293,9 +293,9 @@ B
 #14213
 pendant rose~
 A Rose Pendant~
-A rose covered pendant~
+A rose covered pendant rests here, glistening beautifully.~
 ~
-1 134348800 65537
+1 134217728 65537
 0 0 -1 0
 10 3000 52973
 38
@@ -321,10 +321,10 @@ B
 32768
 #14214
 shawl~
-Emmas Shawl~
-A long elegant shawl made of the finest silk~
+Emma's Shawl~
+A long elegant shawl made of the finest silk has been dropped here.~
 ~
-9 134348833 1025
+9 134217761 1025
 9 -1 -1 -1
 10 10 28792
 53

@@ -63,12 +63,12 @@ An opening in the floor opens into a tunnel below.
 opening~
 9 -1 27703
 E
-opening~
-An opening in the floor opens into a tunnel below.
-~
-E
 boulder~
 A large boulder sits here and looks like it can just bearly be moved.
+~
+E
+opening~
+An opening in the floor opens into a tunnel below.
 ~
 S
 #27703
@@ -96,12 +96,12 @@ An opening in the ceiling opens into a small crevice behind some rocks.
 opening~
 9 -1 27702
 E
-moss fungus fungi cracks walls floor~
-Dark green moss and light brown fungi grows from cracks in the walls.
-~
-E
 opening~
 A small opening in the ceiling opens into a small crevice behind some rocks.
+~
+E
+moss fungus fungi cracks walls floor~
+Dark green moss and light brown fungi grows from cracks in the walls.
 ~
 S
 #27704
@@ -326,12 +326,12 @@ A small crack barely big enough to crawl through, leads into the chambers above.
 crack~
 9 -1 27707
 E
-waste meat~
-Needless to say, there are flies... lots of them...
-~
-E
 glyphs wall walls blood~
 Indecipherable pictures cover the walls and are written in blood.
+~
+E
+waste meat~
+Needless to say, there are flies... lots of them...
 ~
 S
 #27715
@@ -649,8 +649,12 @@ D3
 ~
 0 -1 27730
 E
-ravine fissure edge~
-The glacier ends abruptly and drops off into darkness below.
+foot footprints~
+
+Oooo
+\  |
+ | |
+  o
 ~
 E
 stones stone stack pile~
@@ -660,12 +664,8 @@ stones stone stack pile~
 (_____)
 ~
 E
-foot footprints~
-
-Oooo
-\  |
- | |
-  o
+ravine fissure edge~
+The glacier ends abruptly and drops off into darkness below.
 ~
 S
 #27730
@@ -1687,12 +1687,12 @@ D3
 ~
 0 -1 27775
 E
-parchment scraps writing~
-The writing seems to indicated battle strategies, plans and orders.
-~
-E
 table~
 The table is covered with scraps of what look like battle-plans and orders.
+~
+E
+parchment scraps writing~
+The writing seems to indicated battle strategies, plans and orders.
 ~
 S
 #27777
@@ -1722,13 +1722,12 @@ from the next.
 door~
 1 -1 27778
 E
-27777 vat~
-The vat is filled with liquid metal and radiates tremendous heat.
+27777 forge~
+A blazingly hot forge, used to melt the mined metal.
 ~
 E
-27777 hole opening portal~
-The opening in the stone floor looks just large enough for a small creature to
-crawl into or a bucket to come out of.
+27777 anvil~
+A large metal anvil, seemingly too large for a human to use practically.
 ~
 E
 27777 contraption ropes pulleys~
@@ -1737,12 +1736,13 @@ light.  It continually turns a wheel that pulls several ropes through a series
 of pulleys.
 ~
 E
-27777 anvil~
-A large metal anvil, seemingly too large for a human to use practically.
+27777 hole opening portal~
+The opening in the stone floor looks just large enough for a small creature to
+crawl into or a bucket to come out of.
 ~
 E
-27777 forge~
-A blazingly hot forge, used to melt the mined metal.
+27777 vat~
+The vat is filled with liquid metal and radiates tremendous heat.
 ~
 S
 #27778
@@ -1848,14 +1848,14 @@ D2
 ~
 0 -1 27780
 E
-scrawls pictures plans walls~
-Intricate battle-plans and pictures of attack targets fill the room.
-~
-E
 blood pools gore body parts mess floor~
 The amount of gore and variation of the body parts strewn about seems to
 indicate a large number of creatures were killed, maimed or mutilated in this
 room.
+~
+E
+scrawls pictures plans walls~
+Intricate battle-plans and pictures of attack targets fill the room.
 ~
 S
 #27782
