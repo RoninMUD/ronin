@@ -1488,22 +1488,30 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
 
 /* end of look */
 
+#define ROOM_IMMORTAL_KITCHEN 1203
+#define ROOM_DONATION_ROOM    3084
+
 /* looking in room pulled from case 8 in do_look and added here to
 simplify the addition of the window feature - Ranger Aug 96 */
-
 void look_in_room(CHAR *ch, int vnum) {
   char buffer[MSL];
-  char ebuf[MSL]="\0";
-  char dbuf[MSL]="\0";
-  int room,d,dd,i;
-  OBJ *obj;
-  char *keywords[]= {
+  char ebuf[MSL] = "\0";
+  char dbuf[MSL] = "\0";
+  int room;
+  int d;
+  int dd;
+  int i;
+  OBJ *obj = NULL;
+
+  char *keywords[] = {
     "north",
     "east",
     "south",
     "west",
     "up",
-    "down"};
+    "down"
+  };
+
   char *blood_messages[] = {
     "Should never see this.\n\r",
     "There's a little blood here.\n\r",
@@ -1516,22 +1524,26 @@ void look_in_room(CHAR *ch, int vnum) {
     "Even the spirits are revolted by the death and destruction!\n\r",
     "The Gods should show some mercy and cleanse this horrid place!\n\r",
     "So much blood has been shed here, you are drowning in it!\n\r",
-  "\n"
+    "\n"
   };
 
   room = real_room(vnum);
-  if (room==-1) {
-    send_to_char("All you see is an endless void.\n\r",ch);
+
+  if (room == -1) {
+    send_to_char("All you see is an endless void.\n\r", ch);
     return;
   }
 
-  COLOR(ch,3);
+  COLOR(ch, 3);
   send_to_char(world[room].name, ch);
   ENDCOLOR(ch);
-  if IS_SET(world[room].room_flags, ARENA) send_to_char(" [*]", ch);
+
+  if IS_SET(world[room].room_flags, ARENA) {
+    send_to_char(" [*]", ch);
+  }
 
   if (GET_LEVEL(ch) >= LEVEL_IMM) {
-    sprintf(buffer, " [%d] ",world[room].number);
+    sprintf(buffer, " [%d] ", world[room].number);
     send_to_char(buffer, ch);
 
     if (IS_SET(world[room].room_flags, LIT)) send_to_char("(LIT) ", ch);
@@ -1565,128 +1577,141 @@ void look_in_room(CHAR *ch, int vnum) {
     if (IS_SET(world[room].room_flags, NO_ORB)) send_to_char("(NO_ORB) ", ch);
     if (IS_SET(world[room].room_flags, MANADRAIN)) send_to_char("(MANADRAIN) ", ch);
     if (IS_SET(world[room].room_flags, NO_SUM)) send_to_char("(NO_SUM) ", ch);
-/*
-    if (IS_SET(world[room].room_flags, MANABURN)) send_to_char("(MANABURN) ", ch);
-*/
+    /*
+        if (IS_SET(world[room].room_flags, MANABURN)) send_to_char("(MANABURN) ", ch);
+    */
   }
+
   send_to_char("\n\r", ch);
 
   if (!IS_SET(ch->specials.pflag, PLR_BRIEF)) {
     send_to_char(world[room].description, ch);
-    if (RM_BLOOD(room) > 0)
-      send_to_char(blood_messages[(int)RM_BLOOD(room)],ch);
+    if (RM_BLOOD(room) > 0) {
+      send_to_char(blood_messages[(int)RM_BLOOD(room)], ch);
+    }
   }
 
-  send_to_char("   Obvious Exits:",ch);
-  dd=0;
-  COLOR(ch,4);
-  for(d=0;d<=5;d++) {
-    if(world[room].dir_option[d])  {
-      if(world[room].dir_option[d]->to_room_r!=NOWHERE &&
-         world[room].dir_option[d]->to_room_r!=real_room(0)
-          && !IS_SET(world[room].dir_option[d]->exit_info,EX_CLOSED)
-          && !IS_SET(world[room].dir_option[d]->exit_info,EX_CRAWL)
-          && !IS_SET(world[room].dir_option[d]->exit_info,EX_JUMP)
-          && !IS_SET(world[room].dir_option[d]->exit_info,EX_ENTER)
-          && !IS_SET(world[room].dir_option[d]->exit_info,EX_CLIMB)) {
+  dd = 0;
+  send_to_char("   Obvious Exits:", ch);
+  COLOR(ch, 4);
+  for (d = 0; d <= 5; d++) {
+    if (world[room].dir_option[d]) {
+      if ((world[room].dir_option[d]->to_room_r != NOWHERE) &&
+          (world[room].dir_option[d]->to_room_r != real_room(0)) &&
+          !IS_SET(world[room].dir_option[d]->exit_info, EX_CLOSED) &&
+          !IS_SET(world[room].dir_option[d]->exit_info, EX_CRAWL) &&
+          !IS_SET(world[room].dir_option[d]->exit_info, EX_JUMP) &&
+          !IS_SET(world[room].dir_option[d]->exit_info, EX_ENTER) &&
+          !IS_SET(world[room].dir_option[d]->exit_info, EX_CLIMB)) {
         dd++;
-        strcat(ebuf," [");
-        if(ch->colors[0]&& ch->colors[2]) {
-          strcat(ebuf,Color[(((ch->colors[2])*2)-2)]);
-          strcat(ebuf,BKColor[ch->colors[13]]);
+        strcat(ebuf, " [");
+        if (ch->colors[0] && ch->colors[2]) {
+          strcat(ebuf, Color[(((ch->colors[2]) * 2) - 2)]);
+          strcat(ebuf, BKColor[ch->colors[13]]);
         }
-        if(ch->colors[0]&& ch->colors[4]) {
-          strcat(ebuf,Color[(((ch->colors[4])*2)-2)]);
-          strcat(ebuf,BKColor[ch->colors[13]]);
+        if (ch->colors[0] && ch->colors[4]) {
+          strcat(ebuf, Color[(((ch->colors[4]) * 2) - 2)]);
+          strcat(ebuf, BKColor[ch->colors[13]]);
         }
-        strcat(ebuf,keywords[d]);
-        strcat(ebuf,"]");
+        strcat(ebuf, keywords[d]);
+        strcat(ebuf, "]");
       }
     }
   }
-  if(!dd) strcat(ebuf,"  None.\n\r");
-  else strcat(ebuf,"\n\r");
-  send_to_char(ebuf,ch);
+  if (!dd) {
+    strcat(ebuf, "  None.\n\r");
+  }
+  else {
+    strcat(ebuf, "\n\r");
+  }
+  send_to_char(ebuf, ch);
   ENDCOLOR(ch);
 
-  if(GET_LEVEL(ch)>LEVEL_WIZ) {
-    send_to_char("           Doors:",ch);
-    dd=0;
-    COLOR(ch,4);
-    for(d=0;d<=5;d++) {
-      if(world[room].dir_option[d])  {
-  if(world[room].dir_option[d]->to_room_r!=NOWHERE
-            && IS_SET(world[room].dir_option[d]->exit_info,EX_CLOSED)) {
+  if (GET_LEVEL(ch) > LEVEL_WIZ) {
+    dd = 0;
+    send_to_char("           Doors:", ch);
+    COLOR(ch, 4);
+    for (d = 0; d <= 5; d++) {
+      if (world[room].dir_option[d]) {
+        if ((world[room].dir_option[d]->to_room_r != NOWHERE) &&
+            (IS_SET(world[room].dir_option[d]->exit_info, EX_CLOSED))) {
           dd++;
-    strcat(dbuf," [");
-    strcat(dbuf,keywords[d]);
-    strcat(dbuf,"]");
-  }
+          strcat(dbuf, " [");
+          strcat(dbuf, keywords[d]);
+          strcat(dbuf, "]");
+        }
       }
     }
-
-    if(!dd) strcat(dbuf,"  None.\n\r");
-    else strcat(dbuf,"\n\r");
-    send_to_char(dbuf,ch);
+    if (!dd) {
+      strcat(dbuf, "  None.\n\r");
+    }
+    else {
+      strcat(dbuf, "\n\r");
+    }
+    send_to_char(dbuf, ch);
     ENDCOLOR(ch);
   }
 
-   if(GET_LEVEL(ch)>LEVEL_WIZ) {
-    sprintf(buffer,"     Sector Type:  %s (%d)\n\r",
-     sector_types[world[CHAR_REAL_ROOM(ch)].sector_type],
-     movement_loss[world[CHAR_REAL_ROOM(ch)].sector_type]);
-    send_to_char(buffer,ch);
-   }
-   else if (!(IS_SET(GET_PFLAG(ch), PLR_BRIEF) && IS_SET(GET_PFLAG(ch), PLR_SUPERBRF))) {
-     sprintf(buffer, "     Sector Type:  %s\n\r",
-       (world[CHAR_REAL_ROOM(ch)].sector_type < 6 || world[CHAR_REAL_ROOM(ch)].sector_type > 7 ?
-        sector_types[world[CHAR_REAL_ROOM(ch)].sector_type] :
-        "Water"));
-     send_to_char(buffer, ch);
-   }
+  if (GET_LEVEL(ch) > LEVEL_WIZ) {
+    sprintf(buffer, "     Sector Type:  %s (%d)\n\r",
+      sector_types[world[room].sector_type],
+      movement_loss[world[room].sector_type]);
+    send_to_char(buffer, ch);
+  }
+  else if (IS_IMMORTAL(ch) || (IS_MORTAL(ch) && !IS_SET(GET_PFLAG(ch), PLR_SECTOR_BRIEF))) {
+    sprintf(buffer, "     Sector Type:  %s\n\r",
+      ((world[room].sector_type < 6 || world[room].sector_type > 7) ? sector_types[world[room].sector_type] : "Water"));
+    send_to_char(buffer, ch);
+  }
 
-   if(GET_LEVEL(ch)>LEVEL_WIZ) {
-    send_to_char("     Extra Exits:",ch);
-    dd=0;
-    COLOR(ch,4);
-    strcpy(ebuf,"");
-    for(d=0;d<=5;d++) {
-     if(world[room].dir_option[d])  {
-      if((world[room].dir_option[d]->to_room_r!=NOWHERE &&
-         world[room].dir_option[d]->to_room_r!=real_room(0)) &&
-          (IS_SET(world[room].dir_option[d]->exit_info,EX_CRAWL) ||
-           IS_SET(world[room].dir_option[d]->exit_info,EX_JUMP) ||
-           IS_SET(world[room].dir_option[d]->exit_info,EX_ENTER) ||
-           IS_SET(world[room].dir_option[d]->exit_info,EX_CLIMB)) ) {
-  dd++;
-  strcat(ebuf," [");
-  strcat(ebuf,keywords[d]);
-  strcat(ebuf,"]");
+  if (GET_LEVEL(ch) > LEVEL_WIZ) {
+    dd = 0;
+    send_to_char("     Extra Exits:", ch);
+    COLOR(ch, 4);
+    strcpy(ebuf, "");
+    for (d = 0; d <= 5; d++) {
+      if (world[room].dir_option[d]) {
+        if (((world[room].dir_option[d]->to_room_r != NOWHERE) &&
+             (world[room].dir_option[d]->to_room_r != real_room(0))) &&
+             (IS_SET(world[room].dir_option[d]->exit_info, EX_CRAWL) ||
+              IS_SET(world[room].dir_option[d]->exit_info, EX_JUMP) ||
+              IS_SET(world[room].dir_option[d]->exit_info, EX_ENTER) ||
+              IS_SET(world[room].dir_option[d]->exit_info, EX_CLIMB))) {
+          dd++;
+          strcat(ebuf, " [");
+          strcat(ebuf, keywords[d]);
+          strcat(ebuf, "]");
+        }
       }
-     }
     }
-    if(!dd) strcat(ebuf,"  None.\n\r");
-    else strcat(ebuf,"\n\r");
-    send_to_char(ebuf,ch);
+    if (!dd) {
+      strcat(ebuf, "  None.\n\r");
+    }
+    else {
+      strcat(ebuf, "\n\r");
+    }
+    send_to_char(ebuf, ch);
     ENDCOLOR(ch);
   }
 
   if (!IS_SET(ch->specials.pflag, PLR_SUPERBRF)) {
-    if(world[room].number==3084) {
-      i=0;
-      for(obj=world[room].contents;obj;obj=obj->next_content) {
-        if(CAN_SEE_OBJ(ch,obj) && obj->obj_flags.type_flag!=ITEM_BOARD) i++;
+    if (world[room].number == ROOM_DONATION_ROOM) {
+      i = 0;
+      for (obj = world[room].contents; obj; obj = obj->next_content) {
+        if (CAN_SEE_OBJ(ch, obj) && OBJ_TYPE(obj) != ITEM_BOARD) i++;
       }
-      if(i)
-        printf_to_char(ch,"There are `i[%d]`q donated items here, use `i'LIST'`q to see them.\n\r",i);
-      send_to_char("[1] An Adventure bulletin board is mounted on a wall here.(glowing)\n\r",ch);
+      if (i) {
+        printf_to_char(ch, "There are `i[%d]`q donated items here, use `i'LIST'`q to see them.\n\r", i);
+      }
+      send_to_char("[1] An Adventure bulletin board is mounted on a wall here.(glowing)\n\r", ch);
     }
     else {
-      list_obj_to_char(world[room].contents, ch, 0,FALSE);
+      list_obj_to_char(world[room].contents, ch, 0, FALSE);
     }
-    if(world[room].number!=1203) list_char_to_char(world[room].people, ch, 0);
+    if (world[room].number != ROOM_IMMORTAL_KITCHEN) {
+      list_char_to_char(world[room].people, ch, 0);
+    }
   }
- return;
 }
 
 

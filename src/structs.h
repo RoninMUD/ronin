@@ -19,8 +19,8 @@ typedef char byte;
 #define BIT_POOF_IN  1
 #define BIT_POOF_OUT 2
 
-#define BT_INVUL    1
-#define BT_SPHERE   2
+#define BT_INVUL  1
+#define BT_SPHERE 2
 
 #define MAX_STRING_LENGTH 4096
 #define MAX_INPUT_LENGTH  255
@@ -34,9 +34,9 @@ typedef char byte;
 
 #define MAX_DNAME_LENGTH  20
 
-#define OPT_USEC      100000      /* 10 passes per second */
-#define PASSES_PER_SEC      (1000000 / OPT_USEC)
-#define RL_SEC            * PASSES_PER_SEC
+#define OPT_USEC         100000      /* 10 passes per second */
+#define PASSES_PER_SEC   (1000000 / OPT_USEC)
+#define RL_SEC           * PASSES_PER_SEC
 
 #define PULSE_ZONE      (60 RL_SEC)
 #define PULSE_MOBILE    (10 RL_SEC)
@@ -68,11 +68,11 @@ typedef char byte;
 #define CHAOS_CORPSE 5
 
 /* Keep times a multiple of 10 for the decay messages */
-#define MAX_NPC_CORPSE_TIME    10
-#define MAX_PC_CORPSE_TIME     60
-#define MAX_NPC_STATUE_TIME    30
-#define MAX_PC_STATUE_TIME     60
-#define MAX_CHAOS_CORPSE_TIME  20
+#define MAX_NPC_CORPSE_TIME   10
+#define MAX_PC_CORPSE_TIME    60
+#define MAX_NPC_STATUE_TIME   30
+#define MAX_PC_STATUE_TIME    60
+#define MAX_CHAOS_CORPSE_TIME 20
 
 /* The following defs are for obj_data  */
 
@@ -86,55 +86,55 @@ typedef char byte;
 #define ITEM_MISSILE    7
 #define ITEM_TREASURE   8
 #define ITEM_ARMOR      9
-#define ITEM_POTION    10
-#define ITEM_WORN      11
-#define ITEM_OTHER     12
-#define ITEM_TRASH     13
-#define ITEM_TRAP      14
-#define ITEM_CONTAINER 15
-#define ITEM_NOTE      16
-#define ITEM_DRINKCON  17
-#define ITEM_KEY       18
-#define ITEM_FOOD      19
-#define ITEM_MONEY     20
-#define ITEM_PEN       21
-#define ITEM_BOAT      22
-#define ITEM_BULLET    23
-#define ITEM_MUSICAL   24
-#define ITEM_LOCKPICK  25
-#define ITEM_2HWEAPON  26
-#define ITEM_BOARD     27
-#define ITEM_TICKET    28
-#define ITEM_SC_TOKEN  29
-#define ITEM_SKIN      30
-#define ITEM_TROPHY    31 /* Used to be ITEM_SCALP */
-#define ITEM_RECIPE    32
-#define ITEM_2FINGER   33 /* Project Dagger */
-#define ITEM_2NECK     34 /* Project Dagger */
-#define ITEM_2WRIST    35 /* Project Dagger */
-#define ITEM_AQ_ORDER  36
+#define ITEM_POTION     10
+#define ITEM_WORN       11
+#define ITEM_OTHER      12
+#define ITEM_TRASH      13
+#define ITEM_TRAP       14
+#define ITEM_CONTAINER  15
+#define ITEM_NOTE       16
+#define ITEM_DRINKCON   17
+#define ITEM_KEY        18
+#define ITEM_FOOD       19
+#define ITEM_MONEY      20
+#define ITEM_PEN        21
+#define ITEM_BOAT       22
+#define ITEM_BULLET     23
+#define ITEM_MUSICAL    24
+#define ITEM_LOCKPICK   25
+#define ITEM_2HWEAPON   26
+#define ITEM_BOARD      27
+#define ITEM_TICKET     28
+#define ITEM_SC_TOKEN   29
+#define ITEM_SKIN       30
+#define ITEM_TROPHY     31
+#define ITEM_RECIPE     32
+#define ITEM_2FINGER    33
+#define ITEM_2NECK      34
+#define ITEM_2WRIST     35
+#define ITEM_AQ_ORDER   36
 
 /* Bitvector For 'wear_flags' */
-#define ITEM_TAKE              1
-#define ITEM_WEAR_FINGER       2
-#define ITEM_WEAR_NECK         4
-#define ITEM_WEAR_BODY         8
-#define ITEM_WEAR_HEAD        16
-#define ITEM_WEAR_LEGS        32
-#define ITEM_WEAR_FEET        64
-#define ITEM_WEAR_HANDS      128
-#define ITEM_WEAR_ARMS       256
-#define ITEM_WEAR_SHIELD     512
-#define ITEM_WEAR_ABOUT     1024
-#define ITEM_WEAR_WAIST    2048
-#define ITEM_WEAR_WRIST     4096
-#define ITEM_WIELD          8192
-#define ITEM_HOLD          16384
-#define ITEM_THROW         32768
-#define ITEM_LIGHT_SOURCE  65536
-#define ITEM_NO_REMOVE     131072
-#define ITEM_NO_SCAVENGE   262144
-#define ITEM_QUESTWEAR     524288
+#define ITEM_TAKE         1
+#define ITEM_WEAR_FINGER  2
+#define ITEM_WEAR_NECK    4
+#define ITEM_WEAR_BODY    8
+#define ITEM_WEAR_HEAD    16
+#define ITEM_WEAR_LEGS    32
+#define ITEM_WEAR_FEET    64
+#define ITEM_WEAR_HANDS   128
+#define ITEM_WEAR_ARMS    256
+#define ITEM_WEAR_SHIELD  512
+#define ITEM_WEAR_ABOUT   1024
+#define ITEM_WEAR_WAIST   2048
+#define ITEM_WEAR_WRIST   4096
+#define ITEM_WIELD        8192
+#define ITEM_HOLD         16384
+#define ITEM_THROW        32768
+#define ITEM_LIGHT_SOURCE 65536
+#define ITEM_NO_REMOVE    131072
+#define ITEM_NO_SCAVENGE  262144
+#define ITEM_QUESTWEAR    524288
 
 /* Bitvector for 'extra_flags' */
 #define ITEM_GLOW             1
@@ -245,22 +245,21 @@ typedef char byte;
 #define LIQ_LAGER 37
 
 /* for containers  - value[1] */
+#define CONT_CLOSEABLE 1
+#define CONT_PICKPROOF 2
+#define CONT_CLOSED    4
+#define CONT_LOCKED    8
+#define CONT_NOREMOVE  16
 
-#define CONT_CLOSEABLE      1
-#define CONT_PICKPROOF      2
-#define CONT_CLOSED         4
-#define CONT_LOCKED         8
-#define CONT_NOREMOVE       16
-
-#define LEVEL_MORT   50 /* Max mortal level */
-#define LEVEL_IMM    51
-#define LEVEL_DEI    52
-#define LEVEL_TEM    53 /* Temporal */
-#define LEVEL_WIZ    54
-#define LEVEL_ETE    55 /* Eternal */
-#define LEVEL_SUP    56
-#define LEVEL_IMP    57
-#define LEVEL_MAX    70
+#define LEVEL_MORT 50 /* Max mortal level */
+#define LEVEL_IMM  51
+#define LEVEL_DEI  52
+#define LEVEL_TEM  53
+#define LEVEL_WIZ  54
+#define LEVEL_ETE  55
+#define LEVEL_SUP  56
+#define LEVEL_IMP  57
+#define LEVEL_MAX  70
 
 
 struct string_block {
@@ -281,7 +280,7 @@ struct tagline_data
   struct tagline_data *next; /* Next in list                     */
 };
 
-#define MAX_OBJ_AFFECT 3         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
+#define MAX_OBJ_AFFECT       3         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
 #define OFILE_MAX_OBJ_AFFECT 2         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
 
 struct obj_flag_data
@@ -355,11 +354,9 @@ struct obj_data
 /* ======================================================================= */
 
 /* The following defs are for room_data  */
-
 #define NOWHERE    -1    /* nil reference for room-database    */
 
-/* Bitvector For 'room_flags' */
-
+/* Bitvector for 'room_flags' */
 #define DARK        1
 #define DEATH       2
 #define NO_MOB      4
@@ -395,45 +392,41 @@ struct obj_data
 
 /* MANABURN - see commented in spell_parser.c */
 
-/* For 'dir_option' */
+/* Directions for 'dir_option' */
+#define NORTH 0
+#define EAST  1
+#define SOUTH 2
+#define WEST  3
+#define UP    4
+#define DOWN  5
 
-#define NORTH    0
-#define EAST     1
-#define SOUTH    2
-#define WEST     3
-#define UP       4
-#define DOWN     5
+/* Exit Flags for 'exit_info' */
+#define EX_ISDOOR    1
+#define EX_CLOSED    2
+#define EX_LOCKED    4
+#define EX_PICKPROOF 8
+#define EX_LOCK_10   16
+#define EX_LOCK_15   32
+#define EX_LOCK_20   64
+#define EX_LOCK_25   128
+#define EX_LOCK_30   256
+#define EX_CLIMB     512
+#define EX_JUMP      1024
+#define EX_MOVE      2048
+#define EX_CRAWL     4096
+#define EX_ENTER     8192
 
-
-/* Removed RSLOCKED RSCLOSED added LOCK 1-5 - Ranger July 96 */
-
-#define EX_ISDOOR     1
-#define EX_CLOSED     2
-#define EX_LOCKED     4
-#define EX_PICKPROOF  8
-#define EX_LOCK_10    16
-#define EX_LOCK_15    32
-#define EX_LOCK_20    64
-#define EX_LOCK_25    128
-#define EX_LOCK_30    256
-#define EX_CLIMB      512
-#define EX_JUMP       1024
-#define EX_MOVE       2048
-#define EX_CRAWL      4096
-#define EX_ENTER      8192
-
-/* For 'Sector types' */
-
-#define SECT_INSIDE          0
-#define SECT_CITY            1
-#define SECT_FIELD           2
-#define SECT_FOREST          3
-#define SECT_HILLS           4
-#define SECT_MOUNTAIN        5
-#define SECT_WATER_SWIM      6
-#define SECT_WATER_NOSWIM    7
-#define SECT_DESERT          8
-#define SECT_ARCTIC          9
+/* Sector Types for 'sector_type' */
+#define SECT_INSIDE       0
+#define SECT_CITY         1
+#define SECT_FIELD        2
+#define SECT_FOREST       3
+#define SECT_HILLS        4
+#define SECT_MOUNTAIN     5
+#define SECT_WATER_SWIM   6
+#define SECT_WATER_NOSWIM 7
+#define SECT_DESERT       8
+#define SECT_ARCTIC       9
 
 struct room_direction_data
 {
@@ -471,7 +464,6 @@ struct room_data
 /* For 'equipment' */
 
 /* If adding a position, check char_to_store in reception.c - Ranger Aug 96 */
-
 #define WEAR_LIGHT    0
 #define WEAR_FINGER_R 1
 #define WEAR_FINGER_L 2
@@ -492,73 +484,77 @@ struct room_data
 #define HOLD          17
 
 /* For 'char_payer_data' */
-
-#define MAX_TONGUE  3     /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
-#define MAX_SKILLS4  255    /* All pfile versions up to 4 */
-#define MAX_SKILLS5  500    /* pfile version 5 */
+#define MAX_TONGUE  3   /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
+#define MAX_SKILLS4 255 /* All pfile versions up to 4 */
+#define MAX_SKILLS5 500 /* pfile version 5 */
 #define MAX_WEAR    18
-#define MAX_AFFECT  40    /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
+#define MAX_AFFECT  40  /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 
-/* Predifined  conditions */
-#define DRUNK        0
-#define FULL         1
-#define THIRST       2
-#define QUAFF        3
+/* Predifined conditions */
+#define DRUNK  0
+#define FULL   1
+#define THIRST 2
+#define QUAFF  3
 
 /* Bitvector for 'affected_by' */
 /* Don't forget to update do_affect if you add something here. */
-#define AFF_NONE              0
-#define AFF_BLIND             1
-#define AFF_INVISIBLE         2
-#define AFF_DETECT_ALIGNMENT  4
-#define AFF_DETECT_INVISIBLE  8
-#define AFF_DETECT_MAGIC      16
-#define AFF_SENSE_LIFE        32
-#define AFF_HOLD              64
-#define AFF_SANCTUARY         128
-#define AFF_GROUP             256
-#define AFF_CONFUSION         512
-#define AFF_CURSE             1024
-#define AFF_SPHERE            2048
-#define AFF_POISON            4096
-#define AFF_PROTECT_EVIL      8192
-#define AFF_PARALYSIS         16384
-#define AFF_INFRAVISION       32768
-#define AFF_STATUE            65536
-#define AFF_SLEEP             131072
-#define AFF_DODGE             262144
-#define AFF_SNEAK             524288
-#define AFF_HIDE              1048576
-#define AFF_ANIMATE           2097152
-#define AFF_CHARM             4194304
-#define AFF_PROTECT_GOOD      8388608
-#define AFF_FLY               16777216
-#define AFF_SUBDUE            33554432
-#define AFF_IMINV             67108864
-#define AFF_INVUL             134217728
-#define AFF_DUAL              268435456
-#define AFF_FURY              536870912
-#define AFF_FINAL             1073741824
+#define AFF_NONE             0
+#define AFF_BLIND            1
+#define AFF_INVISIBLE        2
+#define AFF_DETECT_ALIGNMENT 4
+#define AFF_DETECT_INVISIBLE 8
+#define AFF_DETECT_MAGIC     16
+#define AFF_SENSE_LIFE       32
+#define AFF_HOLD             64
+#define AFF_SANCTUARY        128
+#define AFF_GROUP            256
+#define AFF_CONFUSION        512
+#define AFF_CURSE            1024
+#define AFF_SPHERE           2048
+#define AFF_POISON           4096
+#define AFF_PROTECT_EVIL     8192
+#define AFF_PARALYSIS        16384
+#define AFF_INFRAVISION      32768
+#define AFF_STATUE           65536
+#define AFF_SLEEP            131072
+#define AFF_DODGE            262144
+#define AFF_SNEAK            524288
+#define AFF_HIDE             1048576
+#define AFF_ANIMATE          2097152
+#define AFF_CHARM            4194304
+#define AFF_PROTECT_GOOD     8388608
+#define AFF_FLY              16777216
+#define AFF_SUBDUE           33554432
+#define AFF_IMINV            67108864
+#define AFF_INVUL            134217728
+#define AFF_DUAL             268435456
+#define AFF_FURY             536870912
+#define AFF_FINAL            1073741824
 
 /* Bitvector for 'affected_by2' */
 /* Don't forget to update do_affect if you add something here. */
-#define AFF_TRIPLE            1
-#define AFF_IMMINENT_DEATH    2 /* also uses death_timer */
-#define AFF_SEVERED           4
-#define AFF_QUAD              8
-#define AFF2_FINAL            16
+#define AFF_TRIPLE           1
+#define AFF_IMMINENT_DEATH   2 /* also uses death_timer */
+#define AFF_SEVERED          4
+#define AFF_QUAD             8
+#define AFF2_FINAL           16
+/* WIP - Night
+#define AFF_RIPOSTE          16
+#define AFF_FEINT            32
+#define AFF2_FINAL           64
+*/
 
 /* modifiers to char's abilities */
-#define APPLY_NONE              0
-#define APPLY_STR               1
-#define APPLY_DEX               2
-#define APPLY_INT               3
-#define APPLY_WIS               4
-#define APPLY_CON               5
-#define APPLY_SEX               6
-#define APPLY_CLASS             7
-#define APPLY_LEVEL             8
-#define APPLY_AGE               9
+#define APPLY_NONE             0
+#define APPLY_STR              1
+#define APPLY_DEX              2
+#define APPLY_INT              3
+#define APPLY_WIS              4
+#define APPLY_CON              5
+#define APPLY_SEX              6
+#define APPLY_CLASS            7
+#define APPLY_LEVEL            8
+#define APPLY_AGE              9
 #define APPLY_CHAR_WEIGHT      10
 #define APPLY_CHAR_HEIGHT      11
 #define APPLY_MANA             12
@@ -604,127 +600,135 @@ struct room_data
 #define APPLY_SKILL_BACKFLIP   51
 #define APPLY_HP_REGEN         52
 #define APPLY_MANA_REGEN       53
+/* WIP - Night
+#define APPLY_SKILL_BACKFIST   54
+#define APPLY_SKILL_TIGERKICK  55
+#define APPLY_SKILL_CLOBBER    56
+#define APPLY_SKILL_RIPOSTE    57
+#define APPLY_SKILL_FEINT      58
+#define APPLY_SKILL_LUNGE      59
+#define APPLY_SKILL_FLANK      60
+*/
 
 /* subclasses - Ranger March 98 */
-#define SC_ENCHANTER       1 /* mage */
-#define SC_ARCHMAGE        2
-#define SC_DRUID           3 /* cleric */
-#define SC_TEMPLAR         4
-#define SC_ROGUE           5 /* thief */
-#define SC_BANDIT          6
-#define SC_WARLORD         7 /* warrior */
-#define SC_GLADIATOR       8
-#define SC_RONIN           9 /* ninja */
-#define SC_MYSTIC          10
-#define SC_RANGER          11 /* nomad */
-#define SC_TRAPPER         12
-#define SC_CAVALIER        13 /* paladin */
-#define SC_CRUSADER        14
-#define SC_DEFILER         15 /* anti-paladin */
-#define SC_INFIDEL         16
-#define SC_AVATAR_1        17 /* avatar */
-#define SC_AVATAR_2        18
-#define SC_BLADESINGER     19 /* bard */
-#define SC_CHANTER         20
-#define SC_LEGIONNAIRE     21 /* commando */
-#define SC_MERCENARY       22
+#define SC_ENCHANTER   1  /* mage */
+#define SC_ARCHMAGE    2
+#define SC_DRUID       3  /* cleric */
+#define SC_TEMPLAR     4
+#define SC_ROGUE       5  /* thief */
+#define SC_BANDIT      6
+#define SC_WARLORD     7  /* warrior */
+#define SC_GLADIATOR   8
+#define SC_RONIN       9  /* ninja */
+#define SC_MYSTIC      10
+#define SC_RANGER      11 /* nomad */
+#define SC_TRAPPER     12
+#define SC_CAVALIER    13 /* paladin */
+#define SC_CRUSADER    14
+#define SC_DEFILER     15 /* anti-paladin */
+#define SC_INFIDEL     16
+#define SC_AVATAR_1    17 /* avatar */
+#define SC_AVATAR_2    18
+#define SC_BLADESINGER 19 /* bard */
+#define SC_CHANTER     20
+#define SC_LEGIONNAIRE 21 /* commando */
+#define SC_MERCENARY   22
 
 /* 'class' for PC's */
-#define CLASS_MAGIC_USER    1
-#define CLASS_CLERIC        2
-#define CLASS_THIEF         3
-#define CLASS_WARRIOR       4
-#define CLASS_NINJA         5
-#define CLASS_NOMAD         6
-#define CLASS_PALADIN       7
-#define CLASS_ANTI_PALADIN  8
-#define CLASS_AVATAR        9
-#define CLASS_BARD          10
-#define CLASS_COMMANDO      11
+#define CLASS_MAGIC_USER   1
+#define CLASS_CLERIC       2
+#define CLASS_THIEF        3
+#define CLASS_WARRIOR      4
+#define CLASS_NINJA        5
+#define CLASS_NOMAD        6
+#define CLASS_PALADIN      7
+#define CLASS_ANTI_PALADIN 8
+#define CLASS_AVATAR       9
+#define CLASS_BARD         10
+#define CLASS_COMMANDO     11
 
 /* 'class' for NPC's */
-#define CLASS_OTHER                 0
-#define CLASS_LICH                  51
-#define CLASS_LESSER_UNDEAD         52
-#define CLASS_GREATER_UNDEAD        53
-#define CLASS_LESSER_VAMPIRE        54
-#define CLASS_GREATER_VAMPIRE       55
-#define CLASS_LESSER_DRAGON         56
-#define CLASS_GREATER_DRAGON        57
-#define CLASS_LESSER_GIANT          58
-#define CLASS_GREATER_GIANT         59
-#define CLASS_LESSER_LYCANTHROPE    60
-#define CLASS_GREATER_LYCANTHROPE   61
-#define CLASS_LESSER_DEMON          62
-#define CLASS_GREATER_DEMON         63
-#define CLASS_LESSER_ELEMENTAL      64
-#define CLASS_GREATER_ELEMENTAL     65
-#define CLASS_LESSER_PLANAR         66
-#define CLASS_GREATER_PLANAR        67
-#define CLASS_HUMANOID              68
-#define CLASS_HUMAN                 69
-#define CLASS_HALFLING              70
-#define CLASS_DWARF                 71
-#define CLASS_ELF                   72
-#define CLASS_BERSERKER             73
-#define CLASS_KENDER                74
-#define CLASS_TROLL                 75
-#define CLASS_INSECTOID             76
-#define CLASS_ARACHNOID             77
-#define CLASS_FUNGUS                78
-#define CLASS_GOLEM                 79
-#define CLASS_REPTILE               80
-#define CLASS_AMPHIBIAN             81
-#define CLASS_DINOSAUR              82
-#define CLASS_AVIAN                 83
-#define CLASS_FISH                  84
-#define CLASS_DOPPELGANGER          85
-#define CLASS_ANIMAL                86
-#define CLASS_AUTOMATON             87
-#define CLASS_SIMIAN                88
-#define CLASS_CANINE                89
-#define CLASS_FELINE                90
-#define CLASS_BOVINE                91
-#define CLASS_PLANT                 92
-#define CLASS_RODENT                93
-#define CLASS_BLOB                  94
-#define CLASS_GHOST                 95
-#define CLASS_ORC                   96
-#define CLASS_GARGOYLE              97
-#define CLASS_INVERTIBRATE          98
-#define CLASS_DROW                  99
-#define CLASS_STATUE                100
-#define CLASS_MAX                   100
+#define CLASS_OTHER               0
+#define CLASS_LICH                51
+#define CLASS_LESSER_UNDEAD       52
+#define CLASS_GREATER_UNDEAD      53
+#define CLASS_LESSER_VAMPIRE      54
+#define CLASS_GREATER_VAMPIRE     55
+#define CLASS_LESSER_DRAGON       56
+#define CLASS_GREATER_DRAGON      57
+#define CLASS_LESSER_GIANT        58
+#define CLASS_GREATER_GIANT       59
+#define CLASS_LESSER_LYCANTHROPE  60
+#define CLASS_GREATER_LYCANTHROPE 61
+#define CLASS_LESSER_DEMON        62
+#define CLASS_GREATER_DEMON       63
+#define CLASS_LESSER_ELEMENTAL    64
+#define CLASS_GREATER_ELEMENTAL   65
+#define CLASS_LESSER_PLANAR       66
+#define CLASS_GREATER_PLANAR      67
+#define CLASS_HUMANOID            68
+#define CLASS_HUMAN               69
+#define CLASS_HALFLING            70
+#define CLASS_DWARF               71
+#define CLASS_ELF                 72
+#define CLASS_BERSERKER           73
+#define CLASS_KENDER              74
+#define CLASS_TROLL               75
+#define CLASS_INSECTOID           76
+#define CLASS_ARACHNOID           77
+#define CLASS_FUNGUS              78
+#define CLASS_GOLEM               79
+#define CLASS_REPTILE             80
+#define CLASS_AMPHIBIAN           81
+#define CLASS_DINOSAUR            82
+#define CLASS_AVIAN               83
+#define CLASS_FISH                84
+#define CLASS_DOPPELGANGER        85
+#define CLASS_ANIMAL              86
+#define CLASS_AUTOMATON           87
+#define CLASS_SIMIAN              88
+#define CLASS_CANINE              89
+#define CLASS_FELINE              90
+#define CLASS_BOVINE              91
+#define CLASS_PLANT               92
+#define CLASS_RODENT              93
+#define CLASS_BLOB                94
+#define CLASS_GHOST               95
+#define CLASS_ORC                 96
+#define CLASS_GARGOYLE            97
+#define CLASS_INVERTIBRATE        98
+#define CLASS_DROW                99
+#define CLASS_STATUE              100
+#define CLASS_MAX                 100
 
 /* sex */
-#define SEX_NEUTRAL   0
-#define SEX_MALE      1
-#define SEX_FEMALE    2
+#define SEX_NEUTRAL 0
+#define SEX_MALE    1
+#define SEX_FEMALE  2
 
 /* positions */
-#define POSITION_DEAD       0
-#define POSITION_MORTALLYW  1
-#define POSITION_INCAP      2
-#define POSITION_STUNNED    3
-#define POSITION_SLEEPING   4
-#define POSITION_RESTING    5
-#define POSITION_SITTING    6
-#define POSITION_FIGHTING   7
-#define POSITION_STANDING   8
-#define POSITION_FLYING     9
-#define POSITION_RIDING     10
-#define POSITION_SWIMMING   11
+#define POSITION_DEAD      0
+#define POSITION_MORTALLYW 1
+#define POSITION_INCAP     2
+#define POSITION_STUNNED   3
+#define POSITION_SLEEPING  4
+#define POSITION_RESTING   5
+#define POSITION_SITTING   6
+#define POSITION_FIGHTING  7
+#define POSITION_STANDING  8
+#define POSITION_FLYING    9
+#define POSITION_RIDING    10
+#define POSITION_SWIMMING  11
 
 /* for mobile actions: specials.act */
-#define ACT_SPEC         1     /* special routine to be called if exist   */
-#define ACT_SENTINEL     2     /* this mobile not to be moved             */
-#define ACT_SCAVENGER    4     /* pick up stuff lying around              */
-#define ACT_ISNPC        8     /* This bit is set for use with IS_NPC()   */
-#define ACT_NICE_THIEF  16     /* Set if a thief should NOT be killed     */
-#define ACT_AGGRESSIVE  32     /* Set if automatic attack on NPC's        */
-#define ACT_STAY_ZONE   64     /* MOB Must stay inside its own zone       */
-#define ACT_WIMPY      128     /* MOB Will flee when injured, and if      */
-                               /* aggressive only attack sleeping players */
+#define ACT_SPEC       1     /* special routine to be called if exist   */
+#define ACT_SENTINEL   2     /* this mobile not to be moved             */
+#define ACT_SCAVENGER  4     /* pick up stuff lying around              */
+#define ACT_ISNPC      8     /* This bit is set for use with IS_NPC()   */
+#define ACT_NICE_THIEF 16    /* Set if a thief should NOT be killed     */
+#define ACT_AGGRESSIVE 32    /* Set if automatic attack on NPC's        */
+#define ACT_STAY_ZONE  64    /* MOB Must stay inside its own zone       */
+#define ACT_WIMPY      128   /* MOB Will flee when injured, and if aggressive only attack sleeping players */
 #define ACT_SUBDUE     256
 #define ACT_OPEN_DOOR  512
 #define ACT_AGGWA      1024
@@ -735,14 +739,14 @@ struct room_data
 #define ACT_AGGNI      32768
 #define ACT_AGGNO      65536
 #define ACT_ARM        131072
-#define ACT_MOUNT      262144 /* Added ACT_MOUNT for stable mobs - Ranger April 96 */
-#define ACT_FLY        524288 /* Added ACT_FLY for stable flyers - Ranger April 96 */
-#define ACT_AGGPA      1048576 /* Added last AGG acts - Ranger */
+#define ACT_MOUNT      262144
+#define ACT_FLY        524288
+#define ACT_AGGPA      1048576
 #define ACT_AGGAP      2097152
 #define ACT_AGGBA      4194304
 #define ACT_AGGCO      8388608
-#define ACT_SHIELD     16777216 /* New magic block for mobs - Ranger May 96 */
-#define ACT_AGGEVIL    33554432 /* More aggressive flags - Ranger May 96 */
+#define ACT_SHIELD     16777216
+#define ACT_AGGEVIL    33554432
 #define ACT_AGGGOOD    67108864
 #define ACT_AGGNEUT    134217728
 #define ACT_AGGLEADER  268435456
@@ -753,8 +757,8 @@ struct room_data
 #define ACT_NO_TOKEN      1
 #define ACT_IGNORE_SPHERE 2
 #define ACT2_FINAL        4
-/* New mob attacks - specials.att_type[] */
 
+/* New mob attacks - specials.att_type[] */
 #define ATT_UNDEFINED    0  /* Never use undefined */
 #define ATT_SPELL_CAST   1
 #define ATT_KICK         2
@@ -770,7 +774,6 @@ struct room_data
 #define ATT_MAX         12
 
 /* Targets for attacks - special.att_target[] */
-
 #define TAR_UNDEFINED    0 /* doesn't attack anyone */
 #define TAR_BUFFER       1 /* the usual, attacks the one hitting the mob */
 #define TAR_RAN_GROUP    2 /* attacks at random from the buffers group   */
@@ -792,79 +795,79 @@ struct room_data
 #define RESIST_CHEMICAL      128
 #define RESIST_ACID          256
 
-#define  IMMUNE_FIRE         1
-#define  IMMUNE_ELECTRIC     2
-#define  IMMUNE_POISON       4
-#define  IMMUNE_PUMMEL       8
-#define  IMMUNE_KICK         16
-#define  IMMUNE_PUNCH        32
-#define  IMMUNE_SLEEP        64
-#define  IMMUNE_CHARM        128
-#define  IMMUNE_BLINDNESS    256
-#define  IMMUNE_PARALYSIS    512
-#define  IMMUNE_DRAIN        1024
-#define  IMMUNE_DISEMBOWEL   2048
-#define  IMMUNE_DISINTEGRATE 4096
-#define  IMMUNE_CLAIR        8192
-#define  IMMUNE_SUMMON       16384
-#define  IMMUNE_HIT          32768
-#define  IMMUNE_BLUDGEON     65536
-#define  IMMUNE_PIERCE       131072
-#define  IMMUNE_SLASH        262144
-#define  IMMUNE_WHIP         524288
-#define  IMMUNE_CLAW         1048576
-#define  IMMUNE_BITE         2097152
-#define  IMMUNE_STING        4194304
-#define  IMMUNE_CRUSH        8388608
-#define  IMMUNE_HACK         16777216
-#define  IMMUNE_CHOP         33554432
-#define  IMMUNE_SLICE        67108864
-#define  IMMUNE_BACKSTAB     134217728
-#define  IMMUNE_AMBUSH       268435456
-#define  IMMUNE_ASSAULT      536870912
+#define IMMUNE_FIRE         1
+#define IMMUNE_ELECTRIC     2
+#define IMMUNE_POISON       4
+#define IMMUNE_PUMMEL       8
+#define IMMUNE_KICK         16
+#define IMMUNE_PUNCH        32
+#define IMMUNE_SLEEP        64
+#define IMMUNE_CHARM        128
+#define IMMUNE_BLINDNESS    256
+#define IMMUNE_PARALYSIS    512
+#define IMMUNE_DRAIN        1024
+#define IMMUNE_DISEMBOWEL   2048
+#define IMMUNE_DISINTEGRATE 4096
+#define IMMUNE_CLAIR        8192
+#define IMMUNE_SUMMON       16384
+#define IMMUNE_HIT          32768
+#define IMMUNE_BLUDGEON     65536
+#define IMMUNE_PIERCE       131072
+#define IMMUNE_SLASH        262144
+#define IMMUNE_WHIP         524288
+#define IMMUNE_CLAW         1048576
+#define IMMUNE_BITE         2097152
+#define IMMUNE_STING        4194304
+#define IMMUNE_CRUSH        8388608
+#define IMMUNE_HACK         16777216
+#define IMMUNE_CHOP         33554432
+#define IMMUNE_SLICE        67108864
+#define IMMUNE_BACKSTAB     134217728
+#define IMMUNE_AMBUSH       268435456
+#define IMMUNE_ASSAULT      536870912
 
 /* immune2 */
-#define  IMMUNE_LOCATE       1
-#define  IMMUNE_COLD         2
-#define  IMMUNE_SOUND        4
-#define  IMMUNE_CHEMICAL     8
-#define  IMMUNE_ACID         16
-#define  IMMUNE_FEAR         32
-#define  IMMUNE_2_UNUSED_64  64 /* Not Used - Used to be IMMUNE_THROATSTRIKE */
-#define  IMMUNE_CIRCLE       128
-#define  IMMUNE_2_UNUSED_256 256 /* Not Used - Used to be IMMUNE_EXECUTE */
-#define  IMMUNE_STEAL        512
+#define IMMUNE_LOCATE       1
+#define IMMUNE_COLD         2
+#define IMMUNE_SOUND        4
+#define IMMUNE_CHEMICAL     8
+#define IMMUNE_ACID         16
+#define IMMUNE_FEAR         32
+#define IMMUNE_2_UNUSED_64  64
+#define IMMUNE_CIRCLE       128
+#define IMMUNE_2_UNUSED_256 256
+#define IMMUNE_STEAL        512
 
 /* For players : specials.pflag */
-#define PLR_BRIEF                 1
-#define PLR_NOSHOUT               2
-#define PLR_COMPACT               4
-#define PLR_WRITING               8
-#define PLR_KILL                  16
-#define PLR_THIEF                 32
-#define PLR_NOKILL                64
-#define PLR_UNUSED_128            128 /* Not Used - Used to be PLR_INSURANCE */
-#define PLR_NOSUMMON              256
-#define PLR_GOSSIP                512
-#define PLR_AUCTION               1024
-#define PLR_UNUSED_2048           2048 /* Not Used - Used to be PLR_BLOCK */
-#define PLR_NOMESSAGE             4096
-#define PLR_SANES_VOCAL_CLUB      8192
-#define PLR_LEMS_LIQOUR_LOUNGE    16384
-#define PLR_LINERS_LOUNGE         32768
-#define PLR_RANGERS_RELIQUARY     65536
-#define PLR_QUEST                 131072
-#define PLR_CHAOS                 262144
-#define PLR_DEPUTY                524288
-#define PLR_QUIET                 1048576 /* Ranger - June 96 */
-#define PLR_QUESTC                2097152
-#define PLR_SUPERBRF              4194304 /* Quack - March 97 */
-#define PLR_FIGHTBRF              8388608 /* Ranger Sept 97 */
-#define PLR_SKIPTITLE             16777216 /* Ranger Sept 97 */
-#define PLR_VICIOUS               33554432 /* Ranger Dec 97 */
-#define PLR_NOYELL                67108864 /* Ranger Aug 00 */
-#define PLR_EMAIL                 134217728 /* Ranger Dec 03 */
-#define PLR_TAGBRF                268435456
+#define PLR_BRIEF              1
+#define PLR_NOSHOUT            2
+#define PLR_COMPACT            4
+#define PLR_WRITING            8
+#define PLR_KILL               16
+#define PLR_THIEF              32
+#define PLR_NOKILL             64
+#define PLR_SECTOR_BRIEF       128
+#define PLR_NOSUMMON           256
+#define PLR_GOSSIP             512
+#define PLR_AUCTION            1024
+#define PLR_UNUSED_2048        2048
+#define PLR_NOMESSAGE          4096
+#define PLR_SANES_VOCAL_CLUB   8192
+#define PLR_LEMS_LIQOUR_LOUNGE 16384
+#define PLR_LINERS_LOUNGE      32768
+#define PLR_RANGERS_RELIQUARY  65536
+#define PLR_QUEST              131072
+#define PLR_CHAOS              262144
+#define PLR_DEPUTY             524288
+#define PLR_QUIET              1048576
+#define PLR_QUESTC             2097152
+#define PLR_SUPERBRF           4194304
+#define PLR_FIGHTBRF           8388608
+#define PLR_SKIPTITLE          16777216
+#define PLR_VICIOUS            33554432
+#define PLR_NOYELL             67108864
+#define PLR_EMAIL              134217728
+#define PLR_TAGBRF             268435456
 
 #define WIZ_TRUST       1
 #define WIZ_QUEST       2
@@ -879,11 +882,11 @@ struct room_data
 #define WIZ_CREATE      1024
 #define WIZ_LOG_SIX     2048
 #define QUEST_INFO      4096
-#define WIZ_JUDGE       8192  /* Ranger May 96 */
-#define WIZ_ACTIVE      16384 /* Ranger June 96 */
+#define WIZ_JUDGE       8192
+#define WIZ_ACTIVE      16384
 #define WIZ_WIZNET      32768
 #define WIZ_CHAOS       65536
-#define WIZ_SNOOP_BRIEF 131072 /* Ranger Jan 99 */
+#define WIZ_SNOOP_BRIEF 131072
 
 typedef struct MEMtMemoryRec {
    int id;
@@ -1547,23 +1550,24 @@ struct txt_q
 
 /* modes of connectedness */
 
-#define CON_CLOSE   -1
-#define CON_PLYNG   0
-#define CON_NME     1
-#define CON_NMECNF  2
-#define CON_PWDNRM  3
-#define CON_PWDGET  4
-#define CON_PWDCNF  5
-#define CON_QSEX    6
-#define CON_RMOTD   7
-#define CON_SLCT    8
-#define CON_EXDSCR  9
-#define CON_QCLASS  10
-#define CON_LDEAD   11
-#define CON_PWDNEW  12
-#define CON_PWDNCNF 13
-#define CON_AUTH    14
-#define CON_HELP    15
+#define CON_CLOSE     -1
+#define CON_PLYNG      0
+#define CON_NME        1
+#define CON_NMECNF     2
+#define CON_PWDNRM     3
+#define CON_PWDGET     4
+#define CON_PWDCNF     5
+#define CON_QSEX       6
+#define CON_RMOTD      7
+#define CON_SLCT       8
+#define CON_EXDSCR     9
+#define CON_QCLASS    10
+#define CON_LDEAD     11
+#define CON_UNUSED_13 12
+#define CON_UNUSED_12 13
+#define CON_AUTH      14
+#define CON_UNUSED_15 15
+#define CON_QCOLOR    16
 
 struct snoop_data
 {

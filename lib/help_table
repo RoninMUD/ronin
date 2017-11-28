@@ -14,8 +14,7 @@ skills/spells.
 The possible sector types are: Arctic, City, Desert, Field, Forest,
 Hills, Inside, Mountains, and Water.
 
-Note: The sector type is not shown if you have enabled both the
-normal and super brief modes.
+You can hide the sector type by turning on the sector brief mode.
 
 See Also : "MOVEMENT POINTS" BRIEF
 #
@@ -3013,6 +3012,9 @@ Normal:  You don't see the descriptions of the room you are in; only the
          but vital hints in the descriptions of the rooms. An extra peek
          at you surroundings could mean the difference between life and
          death!
+
+Sector:  You will not see room sector types then this brief mode is
+         turned on.
 
 Super:   You don't see the players/mobs in the room, or players/mobs
          leaving or entering the room.  For obvious reasons, this is only

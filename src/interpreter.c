@@ -1078,7 +1078,7 @@ int _parse_name(char *arg, char *name)
 #define class_help "\
 \n\r\
 1) Cleric     The powerhouse healing machine.  A party without a cleric\n\r\
-              is almost crippled.  Clerics have no skills, only spells.\n\r\
+              is almost crippled.  Clerics have very few physical skills.\n\r\
               They are limited to bludgeoning weapons only.\n\r\
 \n\r\
 2) Thief      Hitpoints are not as high as Nomads or Warriors, but thieves\n\r\
@@ -1552,46 +1552,39 @@ void nanny(struct descriptor_data *d, char *arg) {
       STATE(d) = CON_QCLASS;
       break;
 
-    case CON_QCLASS : {
+    case CON_QCLASS :
       /* skip whitespaces */
       for (; isspace(*arg); arg++);
       switch (*arg) {
-        case '4':
-          GET_CLASS(d->character) = CLASS_MAGIC_USER;
-          init_char(d->character);
-          /* create an entry in the file */
-          SEND_TO_Q(newbiemotd, d);
-          SEND_TO_Q(mu_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
-          break;
         case '1':
           GET_CLASS(d->character) = CLASS_CLERIC;
           init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
           SEND_TO_Q(cl_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
+          STATE(d) = CON_QCOLOR;
+          break;
+        case '2':
+          GET_CLASS(d->character) = CLASS_THIEF;
+          init_char(d->character);
+          SEND_TO_Q(th_intro, d);
+          STATE(d) = CON_QCOLOR;
           break;
         case '3':
           GET_CLASS(d->character) = CLASS_WARRIOR;
           init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
           SEND_TO_Q(wa_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
+          STATE(d) = CON_QCOLOR;
+          break;
+        case '4':
+          GET_CLASS(d->character) = CLASS_MAGIC_USER;
+          init_char(d->character);
+          SEND_TO_Q(mu_intro, d);
+          STATE(d) = CON_QCOLOR;
           break;
         case '5':
           GET_CLASS(d->character) = CLASS_NINJA;
           init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
           SEND_TO_Q(ni_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
+          STATE(d) = CON_QCOLOR;
           break;
         case '6':
           SEND_TO_Q("\n\rSorry that class is unavailble", d);
@@ -1599,89 +1592,72 @@ void nanny(struct descriptor_data *d, char *arg) {
           SEND_TO_Q("\n\rSelect a class:\n\r", d);
           SEND_TO_Q("\n\rClass :", d);
           break;
-/*
-          GET_CLASS(d->character) = CLASS_NOMAD;
-          init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
-          SEND_TO_Q(no_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
-          break;
-*/
         case '7':
           GET_CLASS(d->character) = CLASS_PALADIN;
           init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
           SEND_TO_Q(pa_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
+          STATE(d) = CON_QCOLOR;
           break;
         case '8':
           GET_CLASS(d->character) = CLASS_ANTI_PALADIN;
           init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
           SEND_TO_Q(ap_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
+          STATE(d) = CON_QCOLOR;
           break;
         case '9':
           GET_CLASS(d->character) = CLASS_BARD;
           init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
           SEND_TO_Q(ba_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
+          STATE(d) = CON_QCOLOR;
           break;
         case '0':
           GET_CLASS(d->character) = CLASS_COMMANDO;
           init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
           SEND_TO_Q(co_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
-          break;
-        case '2':
-          GET_CLASS(d->character) = CLASS_THIEF;
-          init_char(d->character);
-          SEND_TO_Q(newbiemotd, d);
-          SEND_TO_Q(th_intro, d);
-          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
-          else STATE(d) = CON_RMOTD;
+          STATE(d) = CON_QCOLOR;
           break;
         case '?':
           SEND_TO_Q(class_help, d);
           SEND_TO_Q("\n\rSelect a class:\n\r", d);
           SEND_TO_Q("\n\rClass :", d);
           break;
-        /*
-        case 'i':
-        case 'I':
-          if (!str_cmp(arg,"Disengaged")){
-            GET_EXP(d->character) = 2000000000;
-            GET_LEVEL(d->character) = LEVEL_IMP;
-            GET_COND(d->character, 0) = -1;
-            GET_COND(d->character, 1) = -1;
-            GET_COND(d->character, 2) = -1;
-            SEND_TO_Q("Implementator selected...\n\rClass :", d);
-            STATE(d) = CON_QCLASS;
-          } else {
-            SEND_TO_Q("\n\rThat's not a class.\n\rClass:", d);
-            STATE(d) = CON_QCLASS;
-          }
-          break;
-        */
         default :
           SEND_TO_Q("\n\rThat's not a class.\n\rClass:", d);
           STATE(d) = CON_QCLASS;
           break;
       } /* End Switch */
-      if (STATE(d) != CON_QCLASS) {
+      if (STATE(d) == CON_QCOLOR) SEND_TO_Q("\n\rWould you like to enable ANSI color (Y/N)?", d);
+      break;
+
+
+    case CON_QCOLOR:    /* query new user if they want color on*/
+      /* skip whitespaces */
+      for (; isspace(*arg); arg++);
+      switch (*arg) {
+        case 'y':
+        case 'Y':
+          d->character->colors[0] = 1;
+          SEND_TO_Q(newbiemotd, d);
+          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
+          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
+          else STATE(d) = CON_RMOTD;
+          break;
+        case 'n':
+        case 'N':
+          d->character->colors[0] = 0;
+          SEND_TO_Q(newbiemotd, d);
+          SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
+          if (GAMECHECK == 1) STATE(d) = CON_AUTH;
+          else STATE(d) = CON_RMOTD;
+          break;
+        default:
+          SEND_TO_Q("\n\rPlease type Yes or No", d);
+          return;
+          break;
+      }
+      if (STATE(d) != CON_QCOLOR) {
+
+        sprintf(d->character->new.host, "%s", d->host);
         if(*d->host=='\0')
           sprintf(buf, "%s [%s] new player.", GET_NAME(d->character),host_ip);
         else
@@ -1709,14 +1685,8 @@ void nanny(struct descriptor_data *d, char *arg) {
         sprintf(buf, "%s [%s] is waiting for an immortal to allow in.", GET_NAME(d->character),d->host);
         wizlog(buf, GET_LEVEL(d->character), 1);
       }
-      if (STATE(d) == CON_AUTH) d->character->player.hometown = 1;
+      if (STATE(d) == CON_AUTH) d->character->player.hometown = 1; /* do_allowin() in act.wizard.c sets this to 9 */
       else d->character->player.hometown = 9;
-      sprintf(d->character->new.host, "%s", d->host);
-    } break;
-
-    case CON_RMOTD:    /* read CR after printing motd  */
-      SEND_TO_Q(MENU, d);
-      STATE(d) = CON_SLCT;
       break;
 
     case CON_AUTH:
@@ -1728,6 +1698,11 @@ void nanny(struct descriptor_data *d, char *arg) {
         SEND_TO_Q("name you have chosen has some forbidden words in it.\n\r",d);
         SEND_TO_Q("Either try another name or wait for an Immortal to allow you in.\n\r",d);
       }
+      break;
+
+    case CON_RMOTD:    /* read CR after printing motd  */
+      SEND_TO_Q(MENU, d);
+      STATE(d) = CON_SLCT;
       break;
 
     case CON_SLCT:    /* get selection from main menu  */
@@ -1746,6 +1721,7 @@ void nanny(struct descriptor_data *d, char *arg) {
             d->character->player.hometown = 3;
             reset_char(d->character);
             d->prompt = d->character->new.prompt;
+
             if(!IS_SET(d->prompt, PROMPT_VICTIM_TEX) && GET_LEVEL(d->character) < LEVEL_SUP)
               SET_BIT(d->prompt, PROMPT_VICTIM_TEX);
             if(!IS_SET(d->prompt, PROMPT_BUFFER_TEX) && GET_LEVEL(d->character) < LEVEL_SUP)
@@ -1763,8 +1739,22 @@ void nanny(struct descriptor_data *d, char *arg) {
             if(d->character->ver3.clan_num) add_clanlist_name(d->character,d->character->ver3.clan_num);
             if (!GET_LEVEL(d->character))
             {
-               d->character->in_room_v = 6601; /*Newbie school*/
-               d->character->in_room_r = real_room(6601);
+              SET_BIT(d->prompt, PROMPT_NAME);
+              SET_BIT(d->prompt, PROMPT_HP);
+              SET_BIT(d->prompt, PROMPT_HP_MAX);
+              SET_BIT(d->prompt, PROMPT_HP_TEX);
+              SET_BIT(d->prompt, PROMPT_MANA);
+              SET_BIT(d->prompt, PROMPT_MANA_MAX);
+              SET_BIT(d->prompt, PROMPT_MANA_TEX);
+              SET_BIT(d->prompt, PROMPT_MOVE);
+              SET_BIT(d->prompt, PROMPT_MOVE_MAX);
+              SET_BIT(d->prompt, PROMPT_MOVE_TEX);
+              SET_BIT(d->prompt, PROMPT_BUFFER);
+              SET_BIT(d->prompt, PROMPT_BUFFER_TEX);
+              SET_BIT(d->prompt, PROMPT_VICTIM);
+              SET_BIT(d->prompt, PROMPT_VICTIM_TEX);
+              d->character->in_room_v = 6601; /*Newbie school*/
+              d->character->in_room_r = real_room(6601);
             }
             if (CHAR_REAL_ROOM(d->character) == NOWHERE) {
               if (GET_LEVEL(d->character) >= LEVEL_IMM) {

@@ -2064,6 +2064,8 @@ const char *connected_types[]   =   {
   "Change password",
   "Confirm new password",
   "Waiting for allowin",
+  "CON_HELP", /* unused */
+  "Enable color",
   "\n"
 };
 

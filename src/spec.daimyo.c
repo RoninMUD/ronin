@@ -1008,8 +1008,8 @@ void dm_katana_cleanse(CHAR *wielder, CHAR *target)
 {
   bool effectBreak = FALSE;
 
-  act("$n moves with lightning quickness, swinging his blade at you with a precision strike.", FALSE, wielder, 0, target, TO_VICT);
-  act("$n moves with lightning quickness, swinging his blade at $N with a precision strike.", FALSE, wielder, 0, target, TO_NOTVICT);
+  act("$n moves with lightning quickness, swinging $s blade at you with a precision strike.", FALSE, wielder, 0, target, TO_VICT);
+  act("$n moves with lightning quickness, swinging $s blade at $N with a precision strike.", FALSE, wielder, 0, target, TO_NOTVICT);
   act("You move with lightning quickness, swinging your blade at $N with a precision strike.", FALSE, wielder, 0, target, TO_CHAR);
   if (affected_by_spell( target, SPELL_SANCTUARY )) {
     affect_from_char(target, SPELL_SANCTUARY);

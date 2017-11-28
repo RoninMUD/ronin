@@ -342,12 +342,12 @@ void make_corpse(CHAR *ch)
   corpse->item_number = NOWHERE;
   corpse->in_room = NOWHERE;
   if(!IS_NPC(ch)) {
-    sprintf(buf,"corpse %s",GET_NAME(ch));
+    sprintf(buf,"corpse pcorpse %s",GET_NAME(ch));
     string_to_lower(buf);
     corpse->name = str_dup(buf);
   }
   else
-    corpse->name = str_dup("corpse");
+    corpse->name = str_dup("corpse mcorpse");
   sprintf(buf,"corpse of %s is lying here.",(IS_NPC(ch) ? MOB_SHORT(ch) : GET_NAME(ch)));
   corpse->description = str_dup(buf);
 
@@ -2115,7 +2115,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Bandit SC5: Evasion */
-  if (affected_by_spell(victim, SKILL_EVASION)) {
+  if ((damage_type == DAM_PHYSICAL || damage_type == DAM_SKILL) && affected_by_spell(victim, SKILL_EVASION)) {
     if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
       dmg = lround(dmg * 0.80); /* 20% reduction when Chaotic. */
     }
