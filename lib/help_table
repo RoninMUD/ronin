@@ -16,7 +16,7 @@ Hills, Inside, Mountains, and Water.
 
 You can hide the sector type by turning on the sector brief mode.
 
-See Also : "MOVEMENT POINTS" BRIEF
+See Also: "MOVEMENT POINTS" BRIEF
 #
 SKIN
 
@@ -664,7 +664,7 @@ reimbursement, you'll get one.
 #
 "HASTE"
 
-Usage       : cast 'haste' <self>
+Usage       : cast 'haste' (self only)
 Level       : level 40 cleric, 45 bard
 Accumulative: no
 Save        : -
@@ -1884,7 +1884,7 @@ For picking locks. Not all locks can be picked. Example:
 > pick door
 > pick safe
 
-See Also : OPEN, CLOSE, LOCK, UNLOCK
+See Also: OPEN, CLOSE, LOCK, UNLOCK
 #
 PEEK
 
@@ -1940,7 +1940,7 @@ Class: Warrior Commando
 A skill which gives an automatic second attack during the fight. The chance of
 its success depends on how well you learn it.
 
-See Also : TRIPLE
+See Also: TRIPLE
 #
 TRIPLE
 
@@ -1949,7 +1949,7 @@ Class: Warrior (Level 20), Commando (Level 20)
 A skill which gives an automatic third attack the during fight. The chance of its
 success depends on how well you learn it.
 
-See Also : DUAL
+See Also: DUAL
 #
 DISEMBOWEL
 
@@ -1986,7 +1986,7 @@ Example:
 
   > sneak
 
-See Also : HIDE
+See Also: HIDE
 #
 HIDE
 
@@ -2005,7 +2005,7 @@ Example:
 
   >  (You press enter/return and are no longer hidden.)
 
-See Also : SNEAK
+See Also: SNEAK
 #
 THROW
 
@@ -2028,7 +2028,7 @@ flee!
 
 Kick damage is limited to 60.
 
-See Also : RESCUE, BASH
+See Also: RESCUE, BASH
 #
 BASH
 
@@ -2048,7 +2048,7 @@ stunned, receiving 2x damage on the next attack.
 Bashing a person who is stunned will cause them to become
 incapacitated, receiving 2.33x damage on the next attack.
 
-See Also : RESCUE, KICK, PUMMEL
+See Also: RESCUE, KICK, PUMMEL
 #
 PUMMEL
 
@@ -2069,7 +2069,7 @@ next person to try to hit the mobile.
 
 Perhaps pummeling the Huge Queen Ant isn't such a good idea...
 
-See Also : BASH
+See Also: BASH
 #
 PUNCH
 
@@ -2177,7 +2177,7 @@ Usage : shoot <victim>
 You need a fireweapon that is held to use shoot. The fireweapon also needs
 bullets. Use reload to load the bullets into the gun.
 
-See Also : RELOAD
+See Also: RELOAD
 #
 SPAM
 
@@ -2342,7 +2342,7 @@ EXPLORE CAREFULLY.  THE LACK OF A % DOES NOT GUARANTEE NO DEATH TRAP.
 | *Labyrinth of Skelos* - (All levels - Player Killing Area)              |
 +.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.+
 
-SEE ALSO : MAP NORTH NORTHEAST WEST SOUTHWEST SOUTH EAST
+See Also: MAP NORTH NORTHEAST WEST SOUTHWEST SOUTH EAST
 #
 AFFECT
 
@@ -2406,7 +2406,7 @@ look to the south   (or just: look south)
 Note that if you LOOK AT CORPSE you will not see its inventory.
 To see what's inside a container (e.i. Corpse) use LOOK IN <OBJECT>.
 
-See also : EXAMINE or READ
+See Also: EXAMINE or READ
 #
 AC "ARMOR CLASS"
 
@@ -2431,7 +2431,7 @@ Usage:  wimpy <number>
 When your hit points are lower than the number you set, you will automatically
 attempt to flee.
 
-See also : FLEE
+See Also: FLEE
 #
 EAT DRINK SIP TASTE
 
@@ -2620,7 +2620,7 @@ something.
 Example : cast 'burning hands' <player>
    Note that the name of the spell must be enclosed by "'"s.
 
-See also : help on each individual spell, for example:
+See Also: help on each individual spell, for example:
   > help cure ligh
   > help ventri
   > help energy drain
@@ -3658,7 +3658,7 @@ See Also: "DETECT INVISIBILITY" SONGS
 #
 "IMPROVE INVISIBILITY" IMPY
 
-Usage       : cast 'improve invisibility' <self>
+Usage       : cast 'improve invisibility' (self only)
 Accumulative: No
 Level       : Level 25 mage, 29 anti-paladin.
 Duration    : Level/10 ticks
@@ -3673,7 +3673,7 @@ See Also: INVISIBILITY PERCEIVE
 #
 "REMOVE IMPROVED INVISIBILITY"
 
-Usage       : cast 'remove improved invisibility' <self only>
+Usage       : cast 'remove improved invisibility' (self only)
 Accumulative: No
 Level       : Level 25 mage, 29 anti-paladin.
 Mana Cost   : 20
@@ -3877,7 +3877,7 @@ See Also: -
 #
 "SPELL STRENGTH"
 
-Usage       : cast 'strength' <self>
+Usage       : cast 'strength' (self only)
 Accumulative: Yes (strength)
 Level       : Level 7 mage.
 Duration    : Level ticks
@@ -4030,7 +4030,7 @@ This spell is used to gain knowledge about the targeted item.
 
 Alternatively, scrolls of identify are available at the magic shop.
 
-SEE ALSO : IDENTIFY
+See Also: IDENTIFY
 #
 "BURNING HANDS"
 
@@ -4238,7 +4238,7 @@ expose a ring of rebels...Oh wait..that was the movie...
 This spell will recall everyone in the room back to the temple including the
 caster.
 
-See Also : WORD OF RECALL
+See Also: WORD OF RECALL
 #
 "DEATH SPRAY"
 
@@ -4267,7 +4267,7 @@ The caster invokes the name of the One True God in the angelic tongue of the
 Archons.  Any evil beings nearby are burned by the fires of dawn and wracked
 with pain.
 
-See Also : Dispel Evil
+See Also: Dispel Evil
 #
 "EVIL WORD"
 
@@ -4284,7 +4284,7 @@ gates of Hell to be opened in the vicinity.  The corruption of the pits
 of hell will stream forth and burn all those who do not acknowledge the
 dominance of the powers of darkness.
 
-See Also : "DISPEL GOOD" SONGS
+See Also: "DISPEL GOOD" SONGS
 #
 "LAY HANDS"
 
@@ -4317,7 +4317,7 @@ The caster begs the merciful gods for a miracle.  If they deem the caster
 worthy the hit points of all PCs in the room will be restored for a
 maximum of 2000 hit points.
 
-See Also : MIRACLE
+See Also: MIRACLE
 #
 VITALITY
 
@@ -4344,7 +4344,7 @@ lost during the process of transferring.
 #
 "HOLY BLESS"
 
-Usage      : cast 'holy bless' <self>
+Usage      : cast 'holy bless' (self only)
 Accumulative: yes
 Duration    : Instantaneous
 Level       : Level 19 cleric.
@@ -4366,7 +4366,7 @@ See also: SONGS
 #
 FURY
 
-Usage       : cast 'fury' <self>
+Usage       : cast 'fury' (self only)
 Accumulative: -
 Duration    : 2 ticks, 4 ticks at level 50
 Level       : Level 21 paladin.
@@ -4383,7 +4383,7 @@ a maximum of 2.5.
 #
 "EVIL BLESS"
 
-Usage      : cast 'evil bless' <self>
+Usage      : cast 'evil bless' (self only)
 Accumulative: yes
 Level       : Level 20 cleric.
 Mana Cost   : 30 (cost will be higher at lower levels)
@@ -7288,12 +7288,12 @@ Subclass Bandit: Level 1 (Thief)
 
 Usage: fade (toggles on/off)
 
-The fade skill allows a Bandit to blend in with his/her surroundings
-giving an increase in the chance of a successful dodge.  However,
-this comes at a price of reduced hitroll.  The success of fade is
-dependent on how well the skill is practiced.
+The fade skill allows the Bandit to blend in with their surroundings,
+increasing their chance of a successful dodge.  However, this comes at
+the cost of reduced hitroll.  The hitroll reduction is less severe the
+higher the Bandit's class level.
 
-See also: SUBCLASSES BANDIT
+See also: SUBCLASSES BANDIT DODGE HITROLL
 #
 "DIRTY TRICKS"
 
@@ -7301,26 +7301,13 @@ Subclass Rogue: Level 1 (Thief)
 
 Usage: dirty-tricks (toggles on/off)
 
-This set of skills is automatic for the Rogue.  With this subclass and
-the skill properly practiced, the Rogue does things like throwing dirt in
-the victim's eyes for blindness, kicking in sensitive areas and dealing
-grievous wounds that cause the victim to bleed profusely.
+When active, this skill is used automatically during combat.  Randomly
+throught out each fight, the Rogue does things like throwing dirt in
+the victim's eyes for blindness, kicking in sensitive areas to knock
+them to the ground, and inflicting grievous wounds that cause them to
+bleed profusely, causing damage over time.
 
-See Also: SUBCLASSES ROGUE
-#
-EVADE
-
-Subclass Rogue: Level 2 (Thief)
-
-Evade is a very dangerous skill.  It allows the Rogue to
-quietly step out of combat for a 3 round lag time.  However,
-if the Rogue is tanking for a group, the creature will
-attack the next person in the group to hit it.  This is
-more useful during solo killing or when the Rogue isn't
-tanking. The success of evade is dependent on how well
-the skill is practiced.
-
-See Also: SUBCLASSES ROGUE
+See Also: SUBCLASSES ROGUE BLINDNESS
 #
 TRIP
 
@@ -7328,9 +7315,9 @@ Subclass Rogue: Level 4 (Thief)
 
 Usage: trip (toggles on/off)
 
-When circling an enemy the Rogue has a chance to follow up their
-attack by tripping the victim, knocking them to the ground and causing
-them to take increased damage on the next attack made on the victim.
+When active and using Circle against an opponent, the Rogue has a
+chance to follow up their attack by tripping the victim, knocking them
+to the ground.
 
 See Also: SUBCLASSES ROGUE
 #
@@ -7338,13 +7325,17 @@ IMPAIR
 
 Subclass Bandit: Level 2 (Thief)
 
-This skill allows a Bandit to apply various debuffs during combat.
-When using backstab, there is a chance that the target will be paralyzed
-and unable to flee from combat. When using circle, there is a chance that
-the target will be dazed and affected by +30 ARMOR and -2 HITROLL. The
-success of impair is dependent on how well the skill is practiced.
+This skill gives the Bandit a chance to automatically apply various
+debuffs to their target when engaging in, and during combat.
 
-See also: SUBCLASSES BANDIT
+When using Backstab, there is a chance that the target will be
+paralyzed and unable to flee from combat.  When using Circle, there is
+a chance that the target will be dazed, causing them to receive a 30
+point penalty to their AC, and -2 penalty to their hitroll.
+
+This is an automatic skill and is always in effect.
+
+See also: SUBCLASSES BANDIT AC HITROLL
 #
 FLANK
 
@@ -7364,10 +7355,12 @@ See Also: SUBCLASSES GLADIATOR
 
 Subclass Rogue: Level 5 (Thief)
 
-Once the Rogue reaches this subclass level, he/she has the chance of
-getting 1 less round of lag on all skills. The chance of getting the
-reduction varies from 50% to 75%, and is not modified by any skill or
-attribute.
+Once the Rogue reaches this subclass level, they have a chance of
+being affected by 1 less round of lag on all skills.  The chance of
+receiving the reduction varies from 50% to 75%, and is not modified by
+any skill or attribute.
+
+This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES ROGUE
 #
@@ -7375,11 +7368,11 @@ See Also: SUBCLASSES ROGUE
 
 Subclass Bandit: Level 4 (Thief)
 
-The Bandit benefits from an increased combat awareness, granting him
-an increase of 1 hitroll, 1 damroll and 20 armor.  When fighting in
+The Bandit benefits from an increased combat awareness, granting them
+an increase of +1 hitroll, +1 damroll and -20 AC.  When fighting in
 close quarters (inside, in the city, or in the forest), the Bandit
-receives an additional increase of his/her damroll by 4 and hitroll
-by 4.
+receives an additional benefit, increasing the damroll and hitroll
+bonus to a total of +5 each.
 
 This is an automatic skill and is always in effect.
 
@@ -7540,16 +7533,15 @@ Subclass Legionnaire: Level 1 (Commando)
 
 usage: lunge <target>
 
-The Legionnaire can lunge at his/her victim at the start of a fight,
-dealing 25% more damage than an Assault.  The user will experience 2
-rounds of lag, and the success of the lunge is dependent on how well
-the skill is practiced.  Similar to Assault, this skill can be used
-against a target that is already engaged in combat.
-
-A weapon is required.
+With this skill, the Legionnaire can lunge at their target to start
+or join a fight, dealing 25% more damage than an Assault.  The user
+will experience 2 rounds of lag, and the success of the lunge is
+dependent on how well the skill is practiced.
 
 The success of this skill is based on how well it is practiced, and
 the character's Dexterity.
+
+Note: A weapon is required.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7584,7 +7576,7 @@ Accumulative: no
 Duration    : -
 Save        : 1/2 vs. paralysis
 Mana Cost   : 150
-Damage      : level * 5 (up to 250 at level 50)
+Damage      : 5 * caster level (up to 250 at level 50)
 
 This extremely powerful room spell can cause serious damage to
 anything in the immediate vicinity.  The Legionnaire not only deals
@@ -7600,9 +7592,9 @@ RIPOSTE
 Subclass Mercenary: Level 3 (Commando)
 
 With this skill, the Mercenary has a chance to partially deflect
-incoming attacks made against him/her.  The damage deflected is equal
-to 20%.  Additionally, the mercenary will get an attack back at their
-opponent with a chance of a dual or triple hit.
+incoming attacks made against them.  The damage deflected is equal to
+20%.  Additionally, the Mercenary will strike back back at their
+opponent, performing an attack with a chance of a Dual or Triple hit.
 
 The success of this skill is dependent on how well it is practiced,
 and the character's Dexterity.
@@ -7613,7 +7605,7 @@ See Also: SUBCLASSES MERCENARY
 
 Subclass Legionnaire: Level 5 (Commando)
 
-Usage       : cast 'incendiary cloud' <victim>
+Usage       : cast 'incendiary cloud' <target>
 Accumulative: no
 Duration    : 8
 Save        : -
@@ -7657,7 +7649,7 @@ Save        : -
 Mana Cost   : 50
 
 This defensive spell will lower the Mercenary's armor by 25, making
-him/her harder to hit.
+them harder to hit.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7672,8 +7664,8 @@ Save        : -
 Mana Cost   : 150
 
 With this spell, the Mercenary causes the ground to shake and heave
-violently causing 400 damage to every opponent in the room, knocking
-them into a stunned state.
+violently, inflicting 400 damage to every opponent in the room, and
+knocking them into a stunned state.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7688,8 +7680,9 @@ Save        : -
 Mana Cost   : 200
 Damage      : 1000 to 1200
 
-This powerful spell causes a bit more damage than the Mage's Thunderball
-spell.  The Mercenary can expect to deal 1000-1200 damage to the victim.
+This powerful spell causes a bit more damage than the Mage's
+Thunderball spell.  The Mercenary can expect to deal 1000 to 1200
+damage to their victim.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -8205,7 +8198,7 @@ BLUR
 
 Subclass Ronin: Level 4 (Ninja)
 
-Usage       : cast 'blur' <self only>
+Usage       : cast 'blur' (self only)
 Accumulative: no
 Duration    : Level / 6
 Mana Cost   : 100
@@ -8418,7 +8411,7 @@ copying to that address.
                show   - show current email address
                set <address> - sets email address
 #
-RECIPE RECIPES
+RECIPES
 
 There are certain items around Ronin known as Recipes.  If
 you come across one of these items, you may identify it to
@@ -8439,14 +8432,14 @@ However, she is a very special NPC.  Donka owns a very magical
 stew pot that she allows anybody to use.  With her stew pot,
 players may find and complete recipes to form powerful items.
 
-See Also: RECIPE RECIPES
+See Also: RECIPES
 #
 "SHROUD OF EXISTENCE"
 
 Usage      : cast 'shroud of existence' <victim>
 Level      : level 32 mage, 34 commando
 Save       : none
-Mana cost  : 40 + 2*level of caster
+Mana cost  : 40 + (2 * level of caster)
 
 The caster drains 9*level of caster hit points from the victim, and transfers
 these hit points back to himself.  This spell doesn't work very well on
@@ -8472,56 +8465,59 @@ Class: Warrior
 A skill which gives an automatic forth attack during a fight. The chance of its
 success depends on how well you learn it.
 
-See Also : DUAL TRIPLE
+See Also: DUAL TRIPLE
 #
 "QUICK"
 
-Usage      : cast 'quick' <self>
+Usage      : cast 'quick' (self only)
 Level      : level 50 mage
 Save       : none
 Duration   : 5 ticks
 Mana cost  : 100
 
-While affected by Quick the caster can cast twice in the same combat round.
+While affected by Quick, the caster can cast twice in the same combat round.
 #
 "RUSH"
 
-Usage       : cast 'rush' <self>
+Usage       : cast 'rush' (self only)
 Level       : level 50 commando
 Save        : -
 Duration    : 3 ticks
 Mana cost   : 100
 
-When the Commando is affected by rush, he/she has his/her number of
-successful duals and triples increased.
+When the Commando is affected by Rush, they will have their number of
+successful Dual and Triple attacks increased.
 
-This spell will also enhance the Commando's damage by 5.
+This spell will also enhance the Commando's damroll by 5.
+
+See Also: DUAL TRIPLE DAMROLL
 #
 "TWIST"
 
 Class: Thief (Level 45, Automatic)
 
-This skill gives the thief a chance for an extra attack during circle.
+This skill gives the thief a chance to inflict 250 extra damage after a
+successful Circle.
 
-A successful twist will do 250 extra damage to the target.
-
-See Also : CIRCLE
+See Also: CIRCLE
 #
 "BLOOD LUST"
 
-Usage      : cast 'blood lust' <self>
+Usage      : cast 'blood lust' (self only)
 Level      : level 50 anti-paladin
 Save       : none
 Duration   : 3 ticks
 Mana cost  : 100
 
-While affected by Blood Lust the Anti-Paladin hungers for blood.  He/She
-can randomly bite the target.  Each bite has the chance to cause damage,
-drain hit points, or drain mana.
+While affected by Blood Lust, the Anti-Paladin hungers for blood, and
+will randomly bite their victims during combat.  Each bite has the
+chance to cause damage, drain hit points, or drain mana.  This drain
+will cause the victim to lose the inflicted amount of points and for
+the caster to gain them.
 #
 "MYSTIC SWIFTNESS"
 
-Usage      : cast 'mystic swiftness' <self>
+Usage      : cast 'mystic swiftness' (self only)
 Level      : level 50 ninja
 Save       : none
 Duration   : 4 ticks
@@ -8628,36 +8624,40 @@ Class: Thief (Level 50)
 
 Usage: cunning (toggles on/off)
 
-When affected by cunning the thief is able to expend magical energy in
-order to grant them the ability to break through the INVULNERABILITY
-spell. Each attempted use of circle or backstab will incur a cost of 10
-mana to the thief while cunning is enabled.
+When affected by the Cunning skill, the thief is able to expend their
+energy (mana) in order to grant them the ability to break through the
+Invulnerability spell/affect.  Each attempted use of Circle or
+Backstab against such a protected target will incur a cost of 10 mana
+to the thief while Cunning is enabled.
+
+See Also: INVULNERABILITY CIRCLE BACKSTAB
 #
 "ADRENALINE RUSH"
 
 Subclass Bandit: Level 3 (Thief)
 
 When affected by healing magic, the Bandit will have the amount of
-healing done increased by 10% to 15%. In addition, the Bandit has an
-increased health regeneration rate when fighting. He/she will gain
-hit points equal to one fifth of his/her level every 10 seconds while
+healing received increased by 10% to 15%.  In addition, the Bandit has
+an increased health regeneration rate when fighting; they will gain
+hit points equal to one fifth of their level every 10 seconds while
 engaged in combat.
 
-See also: SUBCLASSES BANDIT
+See Also: SUBCLASSES BANDIT
 #
 EVASION
 
-Class: Nomad (Level 50)
 Subclass Bandit: Level 5 (Thief)
+Class: Nomad (Level 50)
 
 Usage: evasion (toggles on/off)
 
-When the Bandit is in this protective postion all damage afflicted by
-weapons or spells will be reduced by one quarter.
+When the Bandit/Nomad is in this protective postion, all damage
+inflicted by physical attacks (bare hand attacks, weapon attacks, and
+skills) will be reduced by one quarter.
 
-Unfortunately, since the Bandit is so intent on protecting themself
-the Bandit will miss more often.  If the Bandit is in combat, this
-cannot be turned on off.
+Unfortunately, since the Bandit/Nomad is so intent on protecting
+themselves, the will miss more often.  If the Bandit is in combat,
+this skill cannot be turned on or off.
 
 See Also: SUBCLASSES BANDIT NOMAD
 #
@@ -8666,14 +8666,15 @@ TROPHY
 Subclass Rogue: Level 2 (Thief)
 Subclass Trapper: Level 4 (Nomad)
 
-The Rogue has the ability to take trophies from his victims. These
-trophies give whoever is carrying them a sense of power and increases
-both their hitroll and damroll by one for each trophy.  Unfortunately,
-the largest increase possible due to trophies is 2 hitroll/damroll and
-the trophies decay quickly.  However, the Rogue can give the trophies
-to whomever he/she wishes, making the Rogue extremely useful in a group.
+The Rogue/Trapper has the ability to take trophies from his victims.
+These trophies give whoever is carrying them a sense of power and
+increases both their hitroll and damroll by one for each trophy.
+Unfortunately, the largest increase possible due to trophies is 2
+hitroll/damroll and the trophies decay quickly.  However, the
+Rogue/Trapper can give the trophies to whomever they wish, making them
+extremely useful in a group.
 
-See Also: SUBCLASSES ROGUE TRAPPER
+See Also: SUBCLASSES ROGUE TRAPPER HITROLL DAMROLL
 #
 VEHEMENCE
 
@@ -8681,14 +8682,10 @@ Subclass Rogue: Level 3 (Thief)
 
 Usage: vehemence (toggles on/off)
 
-When affected by vehemence the Rogue gains a slight increase to all of
-their skills. However, when in this state the Rogue suffers from a 10%
-penalty to their chance to dodge attacks. If the Rogue is in combat,
-this cannot be turned on off.
+When affected by Vehemence, the Rogue gains a slight increase to all of
+their skills.  However, when in this state, the Rogue suffers from a 10%
+penalty to their chance to dodge attacks.  If the Rogue is in combat,
+this skill cannot be turned on or off.
 
-See Also: SUBCLASSES ROGUE
+See Also: SUBCLASSES ROGUE DODGE
 #~
-
-
-
-
