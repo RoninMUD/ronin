@@ -487,7 +487,7 @@ int talon_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
       {
         group_member = follower->follower;
 
-        if (!group_member || group_member == owner || !IS_MORTAL(group_member)) continue;
+        if (!group_member || group_member == owner || !SAME_ROOM(group_member, owner) || !IS_MORTAL(group_member)) continue;
 
         if (IS_AFFECTED(group_member, AFF_GROUP) && !affected_by_spell(group_member, SPELL_REGENERATION))
         {
