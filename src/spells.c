@@ -2812,21 +2812,6 @@ void cast_perceive(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ 
   }
 }
 
-void cast_shroud_existence (ubyte level, CHAR *ch, char *arg, int type,
-			  CHAR *victim, OBJ *obj)
-/* Mana: 50  Drains energy and transfers to caster */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_shroud_existence(level,ch,victim,0);
-    break;
-  default:
-    log_f("cast_shroud_existence with wrong type!");
-    break;
-  }
-}
-
 void cast_quick(ubyte level, CHAR *ch, char *arg, int type,
 		CHAR *tar_ch, OBJ *tar_obj )
 /* Mana: 100 allows to cast twice in 1 round */

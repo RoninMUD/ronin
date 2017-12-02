@@ -545,7 +545,6 @@ void cast_disenchant( ubyte level, struct char_data *ch, char *arg, int si, stru
 void cast_petrify( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_protection_from_good( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_haste( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
-void cast_shroud_existence( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_quick( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_divine_intervention( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_rush( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
@@ -902,9 +901,6 @@ void spell_haste(ubyte level, struct char_data *ch,
 void spell_firebreath(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
 
-void spell_shroud_existence(ubyte level, struct char_data *ch,
-  struct char_data *victim, struct obj_data *obj);
-  
 void spell_quick(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj); 
   

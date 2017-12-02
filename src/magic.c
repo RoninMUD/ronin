@@ -3451,52 +3451,49 @@ void spell_power_word_kill (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   }
 }
 
-void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  int dam = 0, heal = 0, vict_orig_hp = 0;
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  int align_drain = 0;
+  int dam = 0;
+  int vict_orig_hp = 0;
+  int heal = 0;
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n", ch);
+
     return;
   }
 
-  if (!(IS_EVIL(ch)))
-  {
-    send_to_char("Your saintly predilections for doing good forbid the use of this spell!\n", ch);
-    return;
+  align_drain = 50;
+
+  if ((GET_ALIGNMENT(ch) > 0) && (GET_ALIGNMENT(victim) > 0)) {
+    align_drain += ((50 * ((double)GET_ALIGNMENT(ch) / 1000)) * ((double)GET_ALIGNMENT(victim) / 1000));
   }
+
+  GET_ALIGNMENT(ch) = MAX((GET_ALIGNMENT(ch) - align_drain), -1000);
 
   if (!ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) &&
-      !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, ARENA) &&
-      (IS_AFFECTED(victim, AFF_CHARM) || (IS_MORTAL(victim) && IS_SET(ch->specials.pflag, PLR_NOKILL))))
-  {
+      !IS_SET(CHAR_ROOM_FLAGS(ch), ARENA) &&
+      (IS_AFFECTED(victim, AFF_CHARM) || (IS_MORTAL(victim) && IS_SET(GET_PFLAG(ch), PLR_NOKILL)))) {
     act("You cannot cast this spell on $N.", FALSE, ch, NULL, victim, TO_CHAR);
+
     return;
   }
 
   dam = MIN(GET_LEVEL(ch), 50);
 
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     dam *= 5;
   }
-  else
-  {
+  else {
     dam *= 9;
   }
 
   if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dam *= 1.1;
 
-  if (IS_AFFECTED(victim, AFF_SPHERE) &&
-      !breakthrough(ch, victim, BT_SPHERE))
-  {
-    dam = 0;
-  }
-
   vict_orig_hp = GET_HIT(victim);
 
-  damage(ch, victim, dam, SPELL_VAMPIRIC, DAM_NO_BLOCK);
+  damage(ch, victim, dam, SPELL_VAMPIRIC, DAM_MAGICAL);
 
   if (victim) {
     heal = vict_orig_hp - MAX(GET_HIT(victim), 0);
@@ -3505,18 +3502,18 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     heal = vict_orig_hp;
   }
 
-  if (heal > 0)
-  {
+  if (heal > 0) {
     magic_heal(ch, SPELL_VAMPIRIC, heal, TRUE);
+
     send_to_char("You feel the drained energy flowing into you.\n\r", ch);
   }
-  else
-  {
+  else {
     send_to_char("No energy flows into you!\n\r", ch);
   }
 
   update_pos(ch);
 }
+
 
 void spell_conflagration (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   CHAR *tmp, *next;
@@ -4614,71 +4611,6 @@ void spell_blood_lust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     send_to_char("Your body writhes with a gnawing hunger for blood!\n\r", victim);
     act("$n body writhes with a gnawing hunger for blood!",FALSE,ch,0,0,TO_ROOM);
   }
-}
-
-
-void spell_shroud_existence(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  int dam = 0;
-  int heal = 0;
-
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
-    send_to_char("Behave yourself here please!\n", ch);
-
-    return;
-  }
-
-  if (!(IS_GOOD(ch)))
-  {
-    send_to_char("Your malicious predilections for doing evil forbid the use of this spell!\n", ch);
-
-    return;
-  }
-
-  if (!ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) &&
-      !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, ARENA) &&
-      (IS_AFFECTED(victim, AFF_CHARM) || (IS_MORTAL(victim) && IS_SET(ch->specials.pflag, PLR_NOKILL))))
-  {
-    act("You cannot cast this spell on $N.", FALSE, ch, NULL, victim, TO_CHAR);
-
-    return;
-  }
-
-  dam = MIN(GET_LEVEL(ch), 50);
-
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
-    dam *= 5;
-  }
-  else
-  {
-    dam *= 9;
-  }
-
-  if (IS_AFFECTED(victim, AFF_SPHERE) &&
-      !breakthrough(ch, victim, BT_SPHERE))
-  {
-    dam = 0;
-  }
-
-  heal = MAX(0, MIN(GET_HIT(victim), IS_AFFECTED(victim, AFF_SANCTUARY) ? (dam / 2) : dam));
-
-  if (heal > 0)
-  {
-    //GET_HIT(ch) += heal;
-    magic_heal(ch, SPELL_EXISTENCE, heal, FALSE);
-
-    send_to_char("You feel new life flowing into you.\n\r", ch);
-  }
-  else
-  {
-    send_to_char("No life flows into you!\n\r", ch);
-  }
-
-  update_pos(ch);
-
-  damage(ch, victim, dam, SPELL_EXISTENCE, DAM_NO_BLOCK);
 }
 
 

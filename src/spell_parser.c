@@ -210,7 +210,7 @@ char *spells[] = {
   "backflip",                     /* 144 */
   "protection from good",         /* 145 */
   "remove improved invisibility", /* 146 */
-  "shroud of existence",          /* 147 */
+  "",                             /* 147 */
   "quad",                         /* 148 */
   "quick",                        /* 149 */
   "divine intervention",          /* 150 */
@@ -1952,7 +1952,6 @@ void assign_spell_pointers(void)
   SPELLO(143, 30, POSITION_FIGHTING, 55, 55, 55, 55, 55, 55, 55, 55,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_petrify);
   SPELLO(145, 30, POSITION_STANDING, 51,  6, 51, 51, 18, 51, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_protection_from_good);
   SPELLO(146, 30, POSITION_STANDING, 25, 51, 51, 51, 29, 22, 51, 51,   20, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_remove_improved_invis);
-  SPELLO(147, 30, POSITION_FIGHTING, 32, 51, 51, 51, 51, 51, 51, 34,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_shroud_existence);
   SPELLO(149, 30, POSITION_FIGHTING, 50, 51, 51, 51, 51, 51, 51, 51,  100, TAR_SELF_ONLY,                                                                cast_quick);
   SPELLO(150, 30, POSITION_STANDING, 51, 50, 51, 51, 51, 51, 51, 51,  500, TAR_CHAR_ROOM,                                                                cast_divine_intervention);
   SPELLO(151, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 40, 57, 50,  100, TAR_SELF_ONLY,                                                                cast_rush);
