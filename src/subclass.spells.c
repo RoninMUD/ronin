@@ -180,65 +180,64 @@ void spell_warchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void cast_cloud_confusion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_cloud_confusion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_cloud_confusion(level, ch, 0, 0);
       break;
     default:
-      log_f("Wrong type called in cloud of confusion!");
+      log_f("Wrong type called in Cloud of Confusion!");
       break;
   }
 }
 
-void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
+void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   AFF af;
   CHAR *leader = NULL;
   CHAR *tmp_victim = NULL;
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  if (!IS_AFFECTED(ch, AFF_GROUP) || !ch->master)
+  if (!IS_AFFECTED(ch, AFF_GROUP) || !GET_MASTER(ch)) {
     leader = ch;
-  else
-    leader = ch->master;
+  }
+  else {
+    leader = GET_MASTER(ch);
+  }
 
   send_to_char("You whirl around, engulfing the area with a thick black cloud.\n\r", ch);
   act("$n whirls around, engulfing the area with a thick black cloud.", FALSE, ch, 0, 0, TO_ROOM);
 
-  for (victim = world[CHAR_REAL_ROOM(ch)].people; victim; victim = tmp_victim)
-  {
+  for (victim = world[CHAR_REAL_ROOM(ch)].people; victim; victim = tmp_victim) {
     tmp_victim = victim->next_in_room;
 
-    if (!IS_NPC(victim) && GET_LEVEL(victim) >= LEVEL_IMM) continue;
+    if (IS_IMMORTAL(victim)) continue;
+    if (victim == leader) continue;
+    if (GET_MASTER(victim) == leader) continue;
+    if (affected_by_spell(victim, SPELL_CLOUD_CONFUSION)) continue;
 
-    if (!affected_by_spell(victim, SPELL_CLOUD_CONFUSION) &&
-        victim != leader &&
-        victim->master != leader &&
-        (!IS_AFFECTED(victim, AFF_SPHERE) || breakthrough(ch, victim, BT_SPHERE)))
-    {
-      send_to_char("You feel disoriented.\n\r", victim);
+    send_to_char("You feel disoriented.\n\r", victim);
 
-      af.type       = SPELL_CLOUD_CONFUSION;
-      if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-        af.duration = 1;
-      else
-        af.duration = number(2, 6); /* variable duration */
-      af.modifier   = -(number(5, 8)); /* variable hitroll */
-      if (IS_NIGHT)
-        af.modifier--;
-      af.location   = APPLY_HITROLL;
-      af.bitvector  = 0;
-      af.bitvector2 = 0;
-      affect_to_char(victim, &af);
+    af.type       = SPELL_CLOUD_CONFUSION;
+    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
+      af.duration = 1;
     }
+    else {
+      af.duration = number(2, 6);
+    }
+    af.modifier   = -(number(5, 8));
+    if (IS_NIGHT) {
+      af.modifier -= 1;
+    }
+    af.location   = APPLY_HITROLL;
+    af.bitvector  = 0;
+    af.bitvector2 = 0;
+
+    affect_to_char(victim, &af);
   }
 }
 

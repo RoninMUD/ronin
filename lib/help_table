@@ -1346,177 +1346,177 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
 #
 "NINJA SPELLS"
 
-      Ninja Spells
-------------------------------------------------------------------
-      (1) Detect Invisible           (2) -
-      (3) Endure                     (4) Cure Light
-      (5) Infravision                (6) Blindness
-      (7) Invisibility               (9) Cure Blind
-     (10) Sense Life                (11) Control Weather
-     (12) Remove Poison             (14) Locate Object
-     (15) -                         (16) Blindness Dust
-     (16) Cure Serious              (17) Poison Smoke
-     (19) Word Of Recall            (20) -
-     (21) Clairvoyance              (22) Hypnotize
-     (24) Hold Person               (25) -
-     (26) -                         (27) Convergence
-     (29) Heal                      (30) Wind Slash
-     (50) Mystic Swiftness
+    Ninja Spells
+----------------------------------------------------------------------
+     (1) Detect Invisible               (2) -
+     (3) Endure                         (4) Cure Light
+     (5) Infravision                    (6) Blindness
+     (7) Invisibility                   (9) Cure Blind
+    (10) Sense Life                    (11) Control Weather
+    (12) Remove Poison                 (14) Locate Object
+    (15) -                             (16) Blindness Dust
+    (16) Cure Serious                  (17) Poison Smoke
+    (19) Word Of Recall                (20) -
+    (21) Clairvoyance                  (22) Hypnotize
+    (24) Hold Person                   (25) -
+    (26) -                             (27) Convergence
+    (29) Heal                          (30) Wind Slash
+    (50) Mystic Swiftness
 #
 "COMMANDO SPELLS"
 
-      Commando Spells
-------------------------------------------------------------------
-      (1) Magic Missile              (2) Chill Touch
-      (3) Burning Hands              (4) -
-      (5) Shocking Grasp             (6) Earthquake
-      (7) Lightning Bolt             (8) -
-      (9) -                         (10) Colour Spray
-     (11) -                         (12) Call Lightning
-     (14) Harm                      (15) Fireball
-     (16) -                         (17) -
-     (18) -                         (19) Word Of Recall
-     (20) Iceball                   (21) -
-     (22) -                         (23) -
-     (24) Death Spray               (25) -
-     (27) Lethal Fire               (28) Disintegrate
-     (29) Electric Shock            (32) Vampiric Touch
-     (34) Shroud of Existence       (50) Rush 
+    Commando Spells
+----------------------------------------------------------------------
+     (1) Magic Missile                  (2) Chill Touch
+     (3) Burning Hands                  (4) -
+     (5) Shocking Grasp                 (6) Earthquake
+     (7) Lightning Bolt                 (8) -
+     (9) -                             (10) Colour Spray
+    (11) -                             (12) Call Lightning
+    (14) Harm                          (15) Fireball
+    (16) -                             (17) -
+    (18) -                             (19) Word Of Recall
+    (20) Iceball                       (21) -
+    (22) -                             (23) -
+    (24) Death Spray                   (25) -
+    (27) Lethal Fire                   (28) Disintegrate
+    (29) Electric Shock                (32) Vampiric Touch
+    (50) Rush
 #
 "PALADIN SPELLS"
 
-        Paladin Spells
----------------------------------------------------------------------
-        (1) Cure Light                   (2) Armor
-        (3) Create Food                  (4) Detect Alignment
-        (4) Create Water                 (5) Cure Serious
-        (5) Detect Invisibility          (6) Bless
-        (6) Sense Life                   (7) Cure Blind
-        (7) -                            (8) -
-        (9) -                           (10) Cure Critic
-       (10) Flamestrike                 (11) -
-       (11) -                           (12) -
-       (14) Vitality, Remove Poison     (15) Lay Hands
-       (16) -                           (17) Locate Object
-       (18) Summon                      (19) Dispel Evil
-       (20) Sanctuary                   (21) Heal
-       (21) Fury                        (22) -
-       (23) -                           (24) Protection from Evil
-       (25) Holy Word                   (26) Hold Person
-       (27) -                           (28) -
-       (29) -                           (32) Super Harm
+    Paladin Spells
+----------------------------------------------------------------------
+     (1) Cure Light                     (2) Armor
+     (3) Create Food                    (4) Detect Alignment
+     (4) Create Water                   (5) Cure Serious
+     (5) Detect Invisibility            (6) Bless
+     (6) Sense Life                     (7) Cure Blind
+     (7) -                              (8) -
+     (9) -                             (10) Cure Critic
+    (10) Flamestrike                   (11) -
+    (11) -                             (12) -
+    (14) Vitality, Remove Poison       (15) Lay Hands
+    (16) -                             (17) Locate Object
+    (18) Summon                        (19) Dispel Evil
+    (20) Sanctuary                     (21) Heal
+    (21) Fury                          (22) -
+    (23) -                             (24) Protection from Evil
+    (25) Holy Word                     (26) Hold Person
+    (27) -                             (28) -
+    (29) -                             (32) Super Harm
 #
 "ANTI-PALADIN SPELLS"
 
-        Anti-Paladin Spells
------------------------------------------------------------------------
-        (1) Magic Missile                (2) Detect Poison
-        (3) Chill Touch                  (4) Detect Alignment
-        (5) Detect Invisibility          (6) Poison
-        (7) Blindness                    (8) Curse
-        (9) Invisibility                (10) Fear
-       (11) Infravision                 (12) Lightning Bolt
-       (13) Sense Life                  (14) Forget
-       (15) Energy Drain                (16) Poison Smoke
-       (17) Blindness Dust              (18) Protection from Good
-       (19) Sleep                       (20) Fireball
-       (21) Paralyze                    (22) Dispel Good
-       (23) Iceball                     (24) Vampiric Touch
-       (25) Spirit Levy                 (26) Evil Word
-       (27) Hypnotize                   (28) Hell Fire
-       (29) Improve Invisibility        (30) Power Word Kill
-            Remove Improve Invisibility
-       (40) Perceive                    (50) Blood Lust
+    Anti-Paladin Spells
+----------------------------------------------------------------------
+     (1) Magic Missile                  (2) Detect Poison
+     (3) Chill Touch                    (4) Detect Alignment
+     (5) Detect Invisibility            (6) Poison
+     (7) Blindness                      (8) Curse
+     (9) Invisibility                  (10) Fear
+    (11) Infravision                   (12) Lightning Bolt
+    (13) Sense Life                    (14) Forget
+    (15) Energy Drain                  (16) Poison Smoke
+    (17) Blindness Dust                (18) Protection from Good
+    (19) Sleep                         (20) Fireball
+    (21) Paralyze                      (22) Dispel Good
+    (23) Iceball                       (24) Vampiric Touch
+    (25) Spirit Levy                   (26) Evil Word
+    (27) Hypnotize                     (28) Hell Fire
+    (29) Improve Invisibility          (30) Power Word Kill
+         Remove Improve Invisibility
+    (40) Perceive                      (50) Blood Lust
 #
 "CLERIC SPELLS"
 
-        Cleric Spells
----------------------------------------------------------------
-        (1) Cure Light Wounds    (1) Armor
-        (2) Create Water         (2) Detect Poison
-        (3) Create Food          (3) Detect Magic
-        (4) Cure Blind           (4) Detect Alignment
-        (4) Cure Light Spray
-        (5) Bless                (5) Detect Invisible
-        (6) Blindness            (6) Protection from Evil
-        (6) Cure Serious         (6) Protection from Good
-        (7) Earthquake           (7) Sense Life
-        (8) Summon               (8) Poison
-        (9) Cure Critic          (9) Remove Poison
-       (10) Locate Object       (10) Dispel Evil
-       (10) Cure Serious Spray
-       (11) Word of Recall      (11) Flamestrike
-       (11) Dispel Good
-       (12) Call Lightning      (12) Remove Curse
-       (13) Control Weather     (13) Sanctuary
-       (13) Cure Critic Spray
-       (14) Heal                (14) Remove Paralysis
-       (14) Locate Character
-       (15) Harm                (15) Satiate
-       (16) Vitality            (16) Clairvoyance
-       (16) Searing Orb
-       (17) Dispel Magic
-       (18) Total Recall        (18) Mana Transfer
-       (19) Holy Bless
-       (20) Recharge            (20) Evil Bless
-       (21) -
-       (22) Heal Spray
-       (23) Holy Word           (23) Evil Word
-       (24) Animate Dead
-       (25) Miracle
-       (26) -
-       (27) Super Harm
-       (28) Invulnerability
-       (30) Great Miracle
-       (40) Haste               (50) Divine Intervention
+    Cleric Spells
+----------------------------------------------------------------------
+     (1) Cure Light Wounds              (1) Armor
+     (2) Create Water                   (2) Detect Poison
+     (3) Create Food                    (3) Detect Magic
+     (4) Cure Blind                     (4) Detect Alignment
+     (4) Cure Light Spray
+     (5) Bless                          (5) Detect Invisible
+     (6) Blindness                      (6) Protection from Evil
+     (6) Cure Serious                   (6) Protection from Good
+     (7) Earthquake                     (7) Sense Life
+     (8) Summon                         (8) Poison
+     (9) Cure Critic                    (9) Remove Poison
+    (10) Locate Object                 (10) Dispel Evil
+    (10) Cure Serious Spray
+    (11) Word of Recall                (11) Flamestrike
+    (11) Dispel Good
+    (12) Call Lightning                (12) Remove Curse
+    (13) Control Weather               (13) Sanctuary
+    (13) Cure Critic Spray
+    (14) Heal                          (14) Remove Paralysis
+    (14) Locate Character
+    (15) Harm                          (15) Satiate
+    (16) Vitality                      (16) Clairvoyance
+    (16) Searing Orb
+    (17) Dispel Magic
+    (18) Total Recall                  (18) Mana Transfer
+    (19) Holy Bless
+    (20) Recharge                      (20) Evil Bless
+    (21) -
+    (22) Heal Spray
+    (23) Holy Word                     (23) Evil Word
+    (24) Animate Dead
+    (25) Miracle
+    (26) -
+    (27) Super Harm
+    (28) Invulnerability
+    (30) Great Miracle
+    (40) Haste                         (50) Divine Intervention
 #
 "MAGE SPELLS"
 
-        Mage Spells
-----------------------------------------------------------------
-        (1) Magic Missile            (1) Ventriloquate
-        (2) Detect Magic             (2) Detect Invisible
-        (3) Chill Touch
-        (4) Invisibility             (4) Detect Alignment
-        (4) Detect Poison
-        (5) Burning Hands            (5) Armor
-        (5) Infravision
-        (6) Locate Object            (6) Reveal
-        (7) Shocking Grasp           (7) Strength (SPELL STRENGTH)
-        (7) Identify
-        (8) Blindness                (8) Teleport with Error
-        (8) Vitality
-        (9) Lightning Bolt           (9) Fear
-       (10) Control Weather          (10) Fly
-       (10) Reappear
-       (11) Colour Spray             (11) Forget
-       (11) Locate Character
-       (12) Enchant Weapon           (12) Curse
-       (13) Energy Drain             (13) Word of Recall
-       (13) Remove Curse
-       (14) Sleep                    (14) Charm Person
-       (15) Fireball
-       (16) -
-       (17) Recharge
-       (18) Mana Transfer            (18) Sphere
-       (18) Vampiric Touch           (18) Clairvoyance
-       (19) Iceball                  (19) Dispel Magic
-       (20) Spirit Levy
-       (21) Hold Person              (21) Convergence
-       (21) Enchant Armour
-       (22) Animate Dead
-       (23) Death Spray
-       (24) Lethal Fire
-       (25) Improve Invisibility
-            Remove Improved Invisibility
-       (26) Electric Shock           (26) Power Word Kill
-       (27) Clone                    (27) Disintegrate
-       (27) Relocate
-       (28) Thunderball              (28) Firebreath
-       (28) Regeneration (SPELL REGENERATION)
-       (29) Invulnerability          (29) Paralyze
-       (30) Conflagration            (32) Shroud of Existence
-       (40) Perceive                 (50) Quick
+    Mage Spells
+----------------------------------------------------------------------
+     (1) Magic Missile                  (1) Ventriloquate
+     (2) Detect Magic                   (2) Detect Invisible
+     (3) Chill Touch
+     (4) Invisibility                   (4) Detect Alignment
+     (4) Detect Poison
+     (5) Burning Hands                  (5) Armor
+     (5) Infravision
+     (6) Locate Object                  (6) Reveal
+     (7) Shocking Grasp                 (7) Strength (SPELL STRENGTH)
+     (7) Identify
+     (8) Blindness                      (8) Teleport with Error
+     (8) Vitality
+     (9) Lightning Bolt                 (9) Fear
+    (10) Control Weather               (10) Fly
+    (10) Reappear
+    (11) Colour Spray                  (11) Forget
+    (11) Locate Character
+    (12) Enchant Weapon                (12) Curse
+    (13) Energy Drain                  (13) Word of Recall
+    (13) Remove Curse
+    (14) Sleep                         (14) Charm Person
+    (15) Fireball
+    (16) -
+    (17) Recharge
+    (18) Mana Transfer                 (18) Sphere
+    (18) Vampiric Touch                (18) Clairvoyance
+    (19) Iceball                       (19) Dispel Magic
+    (20) Spirit Levy
+    (21) Hold Person                   (21) Convergence
+    (21) Enchant Armour
+    (22) Animate Dead
+    (23) Death Spray
+    (24) Lethal Fire
+    (25) Improve Invisibility
+         Remove Improved Invisibility
+    (26) Electric Shock                (26) Power Word Kill
+    (27) Clone                         (27) Disintegrate
+    (27) Relocate
+    (28) Thunderball                   (28) Firebreath
+    (28) Regeneration (SPELL REGENERATION)
+    (29) Invulnerability               (29) Paralyze
+    (30) Conflagration
+    (40) Perceive                      (50) Quick
 #
 STABLES
 
@@ -3315,12 +3315,17 @@ completely.
 Usage      : cast 'vampiric touch' <victim>
 Level      : level 18 mage, level 24 anti-paladin, level 32 commando
 Save       : none
-Mana cost  : 40 + 2*level of caster
+Mana cost  : 40 + (2 * level of caster)
+Damage     : 9 * level of caster (up to 450 at level 50)
 
-The caster drains 9*level of caster hit points from the victim, and transfers
-these hit points back to himself.  This spell doesn't work very well on
-victims with sanctuary or invulnerability spells on them.  This spell works
-only if the caster is Evil aligned.
+The caster inflicts damage to the victim and drains hit points from
+them, transferring these hit points back to themself.  Each cast of
+this spell against a victim will shift the caster's alignment towards
+evil by 50 points.  If the caster and the victim have positive
+alignments, the alignment shift towards evil will be greater the
+closer the caster and victim are to saintly (up to 100 total alignment
+change per cast).  This spell is less effective against targets
+affected by the Sanctuary or Sphere spells.
 #
 "SEARING ORB"
 
@@ -8434,18 +8439,6 @@ players may find and complete recipes to form powerful items.
 
 See Also: RECIPES
 #
-"SHROUD OF EXISTENCE"
-
-Usage      : cast 'shroud of existence' <victim>
-Level      : level 32 mage, 34 commando
-Save       : none
-Mana cost  : 40 + (2 * level of caster)
-
-The caster drains 9*level of caster hit points from the victim, and transfers
-these hit points back to himself.  This spell doesn't work very well on
-victims with sanctuary or invulnerability spells on them. This spell works
-only if the caster is Good aligned.
-#
 "DIVINE INTERVENTION"
 
 Usage      : cast 'divine intervention' <victim>
@@ -8626,7 +8619,7 @@ Usage: cunning (toggles on/off)
 
 When affected by the Cunning skill, the thief is able to expend their
 energy (mana) in order to grant them the ability to break through the
-Invulnerability spell/affect.  Each attempted use of Circle or
+Invulnerability spell/affect.  Each successful use of Circle or
 Backstab against such a protected target will incur a cost of 10 mana
 to the thief while Cunning is enabled.
 

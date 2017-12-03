@@ -155,7 +155,7 @@ const char *spell_wear_off_msg[] = {
   "!backflip!",
   "The chaotic aura around your body begins to weaken.",
   "!remove improved invisibility!",
-  "!shroud existence!",
+  "", /* 147 */
   "!quad!",
   "Your thoughts slow.",
   "You feel as if the gods have forsaken you!",

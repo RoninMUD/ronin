@@ -763,6 +763,16 @@ Usage: qf award <char> amount (amount can be negative)\n\r\
       else {
         vnum=atoi(arg1);
       }
+
+      if (vnum < 0 || vnum > 0) {
+        if(victim->ver3.quest_points+vnum <= -1) {
+          send_to_char("You cannot award that amount of negative points.\n\rThat amount would leave the charater with less than zero points.\n\r",ch);
+          return;
+        }
+      } else {
+        send_to_char("You cannot award zero points.\n\r",ch);
+        return;
+      }
       sprintf(buf, "QSTINFO: %s awarded %s with %d quest points.",GET_NAME(ch),GET_NAME(victim),vnum);
       wizlog(buf, GET_LEVEL(ch)+1, 4);
       log_s(buf);
