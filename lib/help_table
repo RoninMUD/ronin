@@ -3319,13 +3319,22 @@ Mana cost  : 40 + (2 * level of caster)
 Damage     : 9 * level of caster (up to 450 at level 50)
 
 The caster inflicts damage to the victim and drains hit points from
-them, transferring these hit points back to themself.  Each cast of
-this spell against a victim will shift the caster's alignment towards
-evil by 50 points.  If the caster and the victim have positive
+them, transferring these hit points back to themself.
+
+Each cast of this spell against a victim will normally shift the
+caster's alignment towards evil; however, the amount of alignment
+changed depends on the alignment of both the caster and the target.
+
+If the caster already has a negative alignment, the shift will be 50
+points towards evil.  If the caster and the target both have positive
 alignments, the alignment shift towards evil will be greater the
-closer the caster and victim are to saintly (up to 100 total alignment
-change per cast).  This spell is less effective against targets
-affected by the Sanctuary or Sphere spells.
+closer the caster and target are to saintly (up to 100 total alignment
+change per cast).  Finally, a good aligned caster using this spell
+against an evil target will have less of an alignment change, up to 0
+points if the caster is saintly and the target is prime evil.
+
+This spell is less effective against targets affected by the Sanctuary
+or Sphere spells.
 #
 "SEARING ORB"
 

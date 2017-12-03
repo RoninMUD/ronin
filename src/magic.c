@@ -3466,7 +3466,7 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   align_drain = 50;
 
-  if ((GET_ALIGNMENT(ch) > 0) && (GET_ALIGNMENT(victim) > 0)) {
+  if (GET_ALIGNMENT(ch) > 0) {
     align_drain += ((50 * ((double)GET_ALIGNMENT(ch) / 1000)) * ((double)GET_ALIGNMENT(victim) / 1000));
   }
 
