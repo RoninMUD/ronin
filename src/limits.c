@@ -49,7 +49,7 @@ extern struct room_data *world;
 extern struct time_info_data age(CHAR *ch);
 extern struct time_info_data time_info;
 
-extern int exp_table[58];
+extern const int exp_table[58];
 extern struct title_type titles[11][58];
 
 extern struct wis_app_type wis_app[];

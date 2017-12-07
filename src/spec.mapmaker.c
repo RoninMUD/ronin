@@ -34,7 +34,7 @@
 struct char_data *character_list;
 struct obj_data *object_list;
 
-extern int exp_table[58];
+extern const int exp_table[58];
 extern struct str_app_type str_app[];
 
 extern char *skip_spaces(char * string);

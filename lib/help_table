@@ -20,13 +20,13 @@ See Also: "MOVEMENT POINTS" BRIEF
 #
 SKIN
 
-A skin can be made from a corpse using the SKIN command.  All
-classes have this ability.
+A skin can be made from a corpse using the SKIN command.  All classes
+have this ability.
 
-Some skins may be valuable and be exchanged for cash at the
-fur trader just north of Midgaard.
+Some skins may be valuable and be exchanged for cash at the fur
+trader just north of Midgaard.
 
-In addition, when skinning a corpse, it is possible to find
+In addition, when skinning a corpse, it is possible to find and
 extract some useful items out of the corpse.  This is done
 automatically.
 
@@ -34,7 +34,7 @@ Skins are wearable, but do decay after a period of time.
 #
 BRIBE
 
-For the most part, the lands of Ronin are free of corruption but
+For the most part, the lands of Ronin are free of corruption, but
 with the recent decline in morality more and more creatures are
 becoming susceptible to bribery. It is said that both the
 restaurant bouncer and the metaphysician have been known to give
@@ -2540,28 +2540,61 @@ You can set your default score style by typing:
 
 score set <style> OR score set <number>
 
-Full: This is the default and recommended style. It will show you the full
-score output for your character.
+Full: This is the default and recommended style. It will show you the
+full score output for your character.
 
-Old: This is the old score style from back in the ancient days of Ronin's
-history. Some players may prefer this style for simplicity or for legacy
-client
-triggers.
+Old: This is the old score style from back in the ancient days of
+Ronin's history. Some players may prefer this style for simplicity or for
+legacy client triggers.
 
-Brief: This is a variant of the full score style that shows only the most
-commonly used information. This can be useful to check your character at a
-glance.
+Brief: This is a variant of the full score style that shows only the
+most commonly used information. This can be useful to check your
+character at a glance.
 
-You can view a score style without setting it as your default by typing:
+To view a score style without setting it as your default, use:
 
 score <style> OR score <number>
 
-Finally, you can view individual score elements using the query function:
+Finally, you can view individual score elements using the score query
+function:
 
 score query <element>
 
-For example, you can type 'score query qp' to see how many Quest Points you
-have earned.
+For example, you can type 'score query gold' to see how many gold
+coins you are carrying.
+
+See Also: "SCORE QUERY"
+#
+"SCORE QUERY"
+You can view individual score elements using the score query function:
+
+score query <element>
+
+Score elements:
+
+name, title, level, class, subclass_name, sc_name, subclass_level,
+sc_level, rank_name, rank_level, maximum_hit, max_hit, hit, hp,
+maximum_mana, max_mana, mana, maximum_movement, max_movement,
+movement, natural_hit, nat_hit, natural_hp, nat_hp, natural_mana,
+nat_mana, natural_movement, nat_movement, gain_hit, gain_hp, hit_gain,
+hp_gain, gain_mana, mana_gain, gain_movement, movement_gain,
+move_gain, current_strength, cur_strength, strength,
+current_dexterity, cur_dexterity, dexterity, current_constitution,
+cur_constitution, constitution, current_intelligence,
+cur_intelligence, intelligence, current_wisdom, cur_wisdom, wisdom,
+natural_strength, nat_strength, natural_dexterity, nat_dexterity,
+natural_constitution, nat_constitution, natural_intelligence,
+nat_intelligence, natural_wisdom, nat_wisdom, armor_class, ac, armor,
+wimpy_limit, bleed_limit, subclass_points, subclass_pts, scp,
+quest_points, qp, aqp, class_points, cpp, deaths, age, practices,
+average_damage, avg_damage, damroll, hitroll, alignment, experience,
+xp, exp_to_level, xp_to_level, remort_exp, remort_xp,
+remort_multiplier, death_exp, death_xp, gold, coins, money, bank_gold,
+bank_coins, bank_money, quest_timer, club, clan, guild, time_played,
+played, weight_carried, carried_weight, toggles, flags, death_limit,
+position, wizinv, editing_zone, zone
+
+See Also: SCORE
 #
 SAY TELL WHISPER SHOUT ASK YELL REPLY
 

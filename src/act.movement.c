@@ -306,7 +306,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
   }
 
   /* Combat Zen */
-  if (!(check_subclass(ch, SC_RONIN, 1) && chance(15))) {
+  if (!(check_subclass(ch, SC_RONIN, 1) && chance(50))) {
     if ((IS_AFFECTED(ch, AFF_PARALYSIS) ||
        IS_AFFECTED(ch, AFF_HOLD)) && (!riding)) {
       send_to_char("You are paralyzed, you can't move.\n\r",ch);

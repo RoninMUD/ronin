@@ -133,7 +133,7 @@ const char *spell_wear_off_msg[] = {
   "!great mana!",
   "You finally get your hands on some mouthwash!",
   "Your depth of perception diminishes.",
-  "!pray!",
+  "You finish your prayers.",
   "!assassinate!",
   "The speed of your movements slows down to normal.",
   "!power word kill!",
@@ -1314,7 +1314,7 @@ const struct title_type titles[11][58] =
                   {"the God","the Goddess"} }
 };
 
-int exp_table[58] = {
+int const exp_table[58] = {
   0,
   1,
   1850,

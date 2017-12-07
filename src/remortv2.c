@@ -31,9 +31,10 @@
 
 /* Externs */
 extern const char *pc_class_types[];
-extern int exp_table[58];
+extern const int exp_table[58];
 extern char *BKColor[];
 extern char *Color[];
+extern struct con_app_type con_app[];
 
 extern void advance_level(CHAR *ch);
 extern void death_list(CHAR *ch);
@@ -95,7 +96,9 @@ void rv2_sim_advance_level(CHAR *ch)
     break;
   }
 
-  ch->points.max_hit += gain;
+  adjust_hit_mana_move(ch, META_HIT, gain);
+
+  gain = 0;
 
   switch (GET_CLASS(ch))
   {
@@ -118,9 +121,9 @@ void rv2_sim_advance_level(CHAR *ch)
     break;
   }
 
-  ch->points.max_mana += gain;
+  adjust_hit_mana_move(ch, META_MANA, gain);
 
-  ch->points.max_move += 3;
+  adjust_hit_mana_move(ch, META_MOVE, 3);
 }
 
 /* Function used to maniplulate remort experience. Don't use this unless you know what you're doing. */
@@ -203,7 +206,7 @@ int rv2_gain_remort_exp(CHAR *ch, int exp)
 
   if (exp > GET_REMORT_EXP(ch)) exp = (int)GET_REMORT_EXP(ch);
 
-  rv2_adjust_remort_exp(ch, -1 * exp); /* Deduct the experience from the remort experience pool. */
+  rv2_adjust_remort_exp(ch, -exp); /* Deduct the experience from the remort experience pool. */
   gain_exp(ch, exp); /* Give the remort experience to the player. */
 
   return exp;
@@ -240,7 +243,7 @@ long long int rv2_meta_sim(CHAR *ch)
   sim->points.max_move = 0;
   sim->specials.org_move = 0;
 
-  /* Set the sim character's stats to the average stat to be used for simulation. */
+/* Set the sim character's stats to the average stat to be used for simulation. */
   GET_OSTR(sim) = MIN(GET_OSTR(ch), RV2_SIM_AVG_STAT);
   GET_OINT(sim) = MIN(GET_OINT(ch), RV2_SIM_AVG_STAT);
   GET_OWIS(sim) = MIN(GET_OWIS(ch), RV2_SIM_AVG_STAT);
@@ -248,15 +251,23 @@ long long int rv2_meta_sim(CHAR *ch)
   GET_OCON(sim) = MIN(GET_OCON(ch), RV2_SIM_AVG_STAT);
   GET_OADD(sim) = 0;
 
+  affect_total(sim);
+
   /* Calculate experience required for the player's level, and the average point gains from such levels. */
-  for (i = 0; GET_LEVEL(sim) < LEVEL_MORT && GET_LEVEL(sim) < GET_LEVEL(ch); i++, GET_LEVEL(sim)++)
+  for (i = 0; GET_LEVEL(sim) < LEVEL_MORT && GET_LEVEL(sim) < GET_LEVEL(ch); i++)
   {
     exp += rv2_adjust_remort_exp(sim, exp_table[GET_LEVEL(sim) + 1]);
 
     rv2_sim_advance_level(sim);
+    GET_LEVEL(sim)++;
 
     affect_total(sim);
   }
+
+  /* To prevent a "free exp" loophole, assume 18 Constitution stat (leveling gear) for HP purposes. */
+  adjust_hit_mana_move(sim, META_HIT, (GET_LEVEL(sim) * con_app[18].hitp));
+
+  affect_total(sim);
 
 #ifdef TEST_SITE
 
@@ -388,7 +399,7 @@ long long int rv2_meta_sim(CHAR *ch)
     stat_total += get_ability(ch, i);
   }
 
-  /* Calculate the number of metas required to match the player's stats if their stat total is above 80. */
+  /* Calculate the number of metas required to match the player's stats if their stat total is above 65. */
   i = 0;
   exp = 0;
   if (stat_total > (RV2_SIM_AVG_STAT * 5) || get_ability(ch, META_STR_ADD))
@@ -399,7 +410,7 @@ long long int rv2_meta_sim(CHAR *ch)
       {
         for (j = 0; get_ability(sim, i) < RV2_SIM_AVG_STAT; j++)
         {
-          exp += rv2_adjust_remort_exp(sim, -1 * meta_cost(sim, i));
+          exp += rv2_adjust_remort_exp(sim, -meta_cost(sim, i));
 
           adjust_ability(sim, i, 1);
 

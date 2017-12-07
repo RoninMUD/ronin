@@ -1042,8 +1042,9 @@ int vault_filter(OBJ *obj,char *arg) {
 
   if(wear_pos!=99 && CAN_WEAR(obj,wear_pos)) wearable=TRUE;
 
-  if(is_abbrev(buf, "wizard"))       class_wear = ITEM_ANTI_MAGIC_USER;
+  if(is_abbrev(buf, "magic-user"))   class_wear = ITEM_ANTI_MAGIC_USER;
   if(is_abbrev(buf, "mage"))         class_wear = ITEM_ANTI_MAGIC_USER;
+  if(is_abbrev(buf, "wizard"))       class_wear = ITEM_ANTI_MAGIC_USER;
   if(is_abbrev(buf, "cleric"))       class_wear = ITEM_ANTI_CLERIC;
   if(is_abbrev(buf, "thief"))        class_wear = ITEM_ANTI_THIEF;
   if(is_abbrev(buf, "warrior"))      class_wear = ITEM_ANTI_WARRIOR;
@@ -1051,6 +1052,7 @@ int vault_filter(OBJ *obj,char *arg) {
   if(is_abbrev(buf, "nomad"))        class_wear = ITEM_ANTI_NOMAD;
   if(is_abbrev(buf, "paladin"))      class_wear = ITEM_ANTI_PALADIN;
   if(is_abbrev(buf, "anti-paladin")) class_wear = ITEM_ANTI_ANTIPALADIN;
+  if(is_abbrev(buf, "ap"))           class_wear = ITEM_ANTI_ANTIPALADIN;
   if(is_abbrev(buf, "avatar"))       class_wear = ITEM_ANTI_AVATAR;
   if(is_abbrev(buf, "bard"))         class_wear = ITEM_ANTI_BARD;
   if(is_abbrev(buf, "commando"))     class_wear = ITEM_ANTI_COMMANDO;
@@ -5675,10 +5677,10 @@ int donation(int room,CHAR *ch, int cmd, char *arg) {
 Usage: list <all|keyword> or\n\r\
      light, finger, neck, body, head, legs, feet, hands,\n\r\
      arms, shield, about, waist, wrist, wield, hold, throw,\n\r\
-     wizard, cleric, thief, warrior, ninja, nomad, paladin,\n\r\
-     anti-paladin, avatar, bard, commando, evil, neutral, good.\n\r\
-     container, drink, boat, lockpick, recipe, key.\n\r\
-     potion, scroll, wand, staff.\n\r",ch);
+     magic-user, cleric, thief, warrior, ninja, nomad, paladin,\n\r\
+     anti-paladin, avatar, bard, commando, evil, neutral, good,\n\r\
+     container, drink, boat, lockpick, recipe, key, potion,\n\r\
+     scroll, wand, staff.\n\r",ch);
     send_to_char("You can also learn the stats of an item: identify <keyword>\n\r",ch);
     return TRUE;
   }
