@@ -31,7 +31,7 @@ extern int mana_gain(CHAR *ch);
 extern int move_gain(CHAR *ch);
 extern int check_subclass(CHAR *ch, int sub, int lvl);
 
-extern int exp_table[58];
+extern const int exp_table[58];
 extern char *pc_class_types[];
 extern char *subclass_name[];
 extern char *wiz_bits[];

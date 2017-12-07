@@ -72,7 +72,7 @@ extern char *fullness[];
 extern const struct title_type titles[11][58];
 extern char *Color[];
 extern char *BKColor[];
-extern int exp_table[58];
+extern const int exp_table[58];
 extern char *pc_class_types[];
 extern struct dex_app_type dex_app[];
 extern char *spells[];

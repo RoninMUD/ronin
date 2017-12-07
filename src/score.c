@@ -2,11 +2,11 @@
   score.c - Improved do_score() and related functions
 
   Written by Alan K. Miles for RoninMUD
-  Last Modification Date: 10/21/2012
+  Last Modification Date: 12/06/2017
 */
-/* Project Epee */
 
 #include "score.h"
+#include "cmd.h"
 
 int calc_bhd(CHAR *ch)
 {
@@ -68,12 +68,12 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
   switch (query)
   {
   case SCQ_NAME:
-    sprintf(buf, "%s%s%s",
-      CHCLR(ch, 7), GET_NAME(ch), ENDCHCLR(ch));
+    sprintf(buf, "%sName:%s %s",
+      CHCLR(ch, 7), ENDCHCLR(ch), GET_NAME(ch));
     break;
   case SCQ_TITLE:
-    sprintf(buf, "%s%s%s",
-      CHCLR(ch, 7), GET_TITLE(ch), ENDCHCLR(ch));
+    sprintf(buf, "%sTitle:%s %s",
+      CHCLR(ch, 7), ENDCHCLR(ch), GET_TITLE(ch));
     break;
   case SCQ_LEVEL:
   case SCQ_CLASS_NAME:
@@ -437,14 +437,12 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
       CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP(ch));
     break;
   case SCQ_EXP_TO_LEVEL:
-    sprintf(buf, "%sXP to Level:%s %-13d",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP_TO_LEVEL(ch));
     if (GET_LEVEL(ch) < LEVEL_MORT)
-      printf_to_char(ch, "   %sXP to Level:%s %-13d\n\r",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP_TO_LEVEL(ch));
+      sprintf(buf, "%sXP to Level:%s %-13d",
+        CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP_TO_LEVEL(ch));
     else
-      printf_to_char(ch, "   %sXP to Level:%s Max Level\n\r",
-      CHCLR(ch, 7), ENDCHCLR(ch));
+      sprintf(buf, "%sXP to Level:%s Max Level",
+        CHCLR(ch, 7), ENDCHCLR(ch));
     break;
   case SCQ_REMORT_EXP:
     sprintf(buf, "%sRemort XP:%s %-13lld",
@@ -704,7 +702,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
     {
       if (!*arg)
       {
-        send_to_char("Invalid query.\n\r", ch);
+        send_to_char("Invalid query. See HELP \"SCORE QUERY\" for more information.\n\r", ch);
 
         return;
       }
@@ -719,15 +717,15 @@ void do_score(CHAR *ch, char *argument, int cmd)
       else if (is_abbrev(arg, "subclass_level") || is_abbrev(arg, "sc_level")) query = SCQ_SC_LEVEL;
       else if (is_abbrev(arg, "rank_name")) query = SCQ_RANK_NAME;
       else if (is_abbrev(arg, "rank_level")) query = SCQ_RANK_LEVEL;
-      else if (is_abbrev(arg, "maximum_hit") || is_abbrev(arg, "max_hit") || is_abbrev(arg, "hit")) query = SCQ_MAX_HIT;
+      else if (is_abbrev(arg, "maximum_hit") || is_abbrev(arg, "max_hit") || is_abbrev(arg, "hit") || is_abbrev(arg, "hp")) query = SCQ_MAX_HIT;
       else if (is_abbrev(arg, "maximum_mana") || is_abbrev(arg, "max_mana") || is_abbrev(arg, "mana")) query = SCQ_MAX_MANA;
-      else if (is_abbrev(arg, "maximum_move") || is_abbrev(arg, "max_move") || is_abbrev(arg, "move")) query = SCQ_MAX_MOVE;
-      else if (is_abbrev(arg, "natural_hit") || is_abbrev(arg, "nat_hit")) query = SCQ_NAT_HIT;
+      else if (is_abbrev(arg, "maximum_movement") || is_abbrev(arg, "max_movement") || is_abbrev(arg, "movement")) query = SCQ_MAX_MOVE;
+      else if (is_abbrev(arg, "natural_hit") || is_abbrev(arg, "nat_hit") || is_abbrev(arg, "natural_hp") || is_abbrev(arg, "nat_hp")) query = SCQ_NAT_HIT;
       else if (is_abbrev(arg, "natural_mana") || is_abbrev(arg, "nat_mana")) query = SCQ_NAT_MANA;
-      else if (is_abbrev(arg, "natural_move") || is_abbrev(arg, "nat_move")) query = SCQ_NAT_MOVE;
-      else if (is_abbrev(arg, "gain_hit") || is_abbrev(arg, "hit_gain")) query = SCQ_HIT_GAIN;
+      else if (is_abbrev(arg, "natural_movement") || is_abbrev(arg, "nat_movement")) query = SCQ_NAT_MOVE;
+      else if (is_abbrev(arg, "gain_hit") || is_abbrev(arg, "gain_hp") || is_abbrev(arg, "hit_gain") || is_abbrev(arg, "hp_gain")) query = SCQ_HIT_GAIN;
       else if (is_abbrev(arg, "gain_mana") || is_abbrev(arg, "mana_gain")) query = SCQ_MANA_GAIN;
-      else if (is_abbrev(arg, "gain_move") || is_abbrev(arg, "move_gain")) query = SCQ_MOVE_GAIN;
+      else if (is_abbrev(arg, "gain_movement") || is_abbrev(arg, "movement_gain") || is_abbrev(arg, "move_gain")) query = SCQ_MOVE_GAIN;
       else if (is_abbrev(arg, "current_strength") || is_abbrev(arg, "cur_strength") || is_abbrev(arg, "strength")) query = SCQ_STR;
       else if (is_abbrev(arg, "current_dexterity") || is_abbrev(arg, "cur_dexterity") || is_abbrev(arg, "dexterity")) query = SCQ_DEX;
       else if (is_abbrev(arg, "current_constitution") || is_abbrev(arg, "cur_constitution") || is_abbrev(arg, "constitution")) query = SCQ_CON;
@@ -738,11 +736,11 @@ void do_score(CHAR *ch, char *argument, int cmd)
       else if (is_abbrev(arg, "natural_constitution") || is_abbrev(arg, "nat_constitution")) query = SCQ_OCON;
       else if (is_abbrev(arg, "natural_intelligence") || is_abbrev(arg, "nat_intelligence")) query = SCQ_OINT;
       else if (is_abbrev(arg, "natural_wisdom") || is_abbrev(arg, "nat_wisdom")) query = SCQ_OWIS;
-      else if (is_abbrev(arg, "armor_class") || is_abbrev(arg, "ac")) query = SCQ_MOD_AC;
+      else if (is_abbrev(arg, "armor_class") || is_abbrev(arg, "ac") || is_abbrev(arg, "armor")) query = SCQ_MOD_AC;
       else if (is_abbrev(arg, "wimpy_limit")) query = SCQ_WIMPY_LIMIT;
       else if (is_abbrev(arg, "bleed_limit")) query = SCQ_BLEED_LIMIT;
       else if (is_abbrev(arg, "subclass_points") || is_abbrev(arg, "subclass_pts") || is_abbrev(arg, "scp")) query = SCQ_SCP;
-      else if (is_abbrev(arg, "quest_points") || is_abbrev(arg, "qp")) query = SCQ_QP;
+      else if (is_abbrev(arg, "quest_points") || is_abbrev(arg, "qp") || is_abbrev(arg, "aqp")) query = SCQ_QP;
       else if (is_abbrev(arg, "class_points") || is_abbrev(arg, "cpp")) query = SCQ_RANKING;
       else if (is_abbrev(arg, "deaths")) query = SCQ_BEEN_KILLED;
       else if (is_abbrev(arg, "age")) query = SCQ_AGE;
@@ -756,19 +754,24 @@ void do_score(CHAR *ch, char *argument, int cmd)
       else if (is_abbrev(arg, "remort_exp") || is_abbrev(arg, "remort_xp")) query = SCQ_REMORT_EXP;
       else if (is_abbrev(arg, "remort_multiplier")) query = SCQ_REMORT_MULT;
       else if (is_abbrev(arg, "death_exp") || is_abbrev(arg, "death_xp")) query = SCQ_DEATH_EXP;
-      else if (is_abbrev(arg, "gold")) query = SCQ_GOLD;
-      else if (is_abbrev(arg, "bank_gold")) query = SCQ_BANK;
+      else if (is_abbrev(arg, "gold") || is_abbrev(arg, "coins") || is_abbrev(arg, "money")) query = SCQ_GOLD;
+      else if (is_abbrev(arg, "bank_gold") || is_abbrev(arg, "bank_coins") || is_abbrev(arg, "bank_money")) query = SCQ_BANK;
       else if (is_abbrev(arg, "quest_timer")) query = SCQ_QUEST_TIMER;
       else if (is_abbrev(arg, "club")) query = SCQ_CLUB;
       else if (is_abbrev(arg, "clan") || is_abbrev(arg, "guild")) query = SCQ_CLAN;
-      else if (is_abbrev(arg, "time_played") || is_abbrev(arg, "played") || is_abbrev(arg, "time")) query = SCQ_PLAY_TIME;
-      else if (is_abbrev(arg, "weight_carried")) query = SCQ_WEIGHT_CARRIED;
+      else if (is_abbrev(arg, "time_played") || is_abbrev(arg, "played")) query = SCQ_PLAY_TIME;
+      else if (is_abbrev(arg, "weight_carried") || is_abbrev(arg, "carried_weight")) query = SCQ_WEIGHT_CARRIED;
       else if (is_abbrev(arg, "toggles")) query = SCQ_TOGGLES;
       else if (is_abbrev(arg, "flags")) query = SCQ_FLAGS;
       else if (is_abbrev(arg, "death_limit")) query = SCQ_DEATH_LIMIT;
       else if (is_abbrev(arg, "position")) query = SCQ_POSITION;
       else if (is_abbrev(arg, "wizinv")) query = SCQ_WIZINV;
       else if (is_abbrev(arg, "editing_zone") || is_abbrev(arg, "zone")) query = SCQ_EDITING_ZONE;
+      else {
+        send_to_char("Invalid query. See HELP \"SCORE QUERY\" for more information.\n\r", ch);
+
+        return;
+      }
 
       score_query(ch, query, TRUE, TRUE);
 

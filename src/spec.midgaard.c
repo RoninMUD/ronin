@@ -1011,6 +1011,17 @@ int vault_filter(OBJ *obj,char *arg) {
   one_argument(arg,buf);
   if(!*buf) return FALSE;
 
+  if(is_abbrev(buf, "key") && obj->obj_flags.type_flag==ITEM_KEY) wearable=TRUE;
+  if(is_abbrev(buf, "boat") && obj->obj_flags.type_flag==ITEM_BOAT) wearable=TRUE;
+  if(is_abbrev(buf, "lockpick") && obj->obj_flags.type_flag==ITEM_LOCKPICK) wearable=TRUE;
+  if(is_abbrev(buf, "container") && obj->obj_flags.type_flag==ITEM_CONTAINER) wearable=TRUE;
+  if(is_abbrev(buf, "recipe") && obj->obj_flags.type_flag==ITEM_RECIPE) wearable=TRUE;
+  if(is_abbrev(buf, "potion") && obj->obj_flags.type_flag==ITEM_POTION) wearable=TRUE;
+  if(is_abbrev(buf, "scroll") && obj->obj_flags.type_flag==ITEM_SCROLL) wearable=TRUE;
+  if(is_abbrev(buf, "wand") && obj->obj_flags.type_flag==ITEM_WAND) wearable=TRUE;
+  if(is_abbrev(buf, "staff") && obj->obj_flags.type_flag==ITEM_STAFF) wearable=TRUE;
+  if(is_abbrev(buf, "drink") && obj->obj_flags.type_flag==ITEM_DRINKCON) wearable=TRUE;
+
   if(is_abbrev(buf, "light"))        wear_pos   = ITEM_LIGHT_SOURCE;
   if(is_abbrev(buf, "light") && obj->obj_flags.type_flag==ITEM_LIGHT) wearable=TRUE;
   if(is_abbrev(buf, "finger"))       wear_pos   = ITEM_WEAR_FINGER;
@@ -1031,8 +1042,9 @@ int vault_filter(OBJ *obj,char *arg) {
 
   if(wear_pos!=99 && CAN_WEAR(obj,wear_pos)) wearable=TRUE;
 
-  if(is_abbrev(buf, "wizard"))       class_wear = ITEM_ANTI_MAGIC_USER;
+  if(is_abbrev(buf, "magic-user"))   class_wear = ITEM_ANTI_MAGIC_USER;
   if(is_abbrev(buf, "mage"))         class_wear = ITEM_ANTI_MAGIC_USER;
+  if(is_abbrev(buf, "wizard"))       class_wear = ITEM_ANTI_MAGIC_USER;
   if(is_abbrev(buf, "cleric"))       class_wear = ITEM_ANTI_CLERIC;
   if(is_abbrev(buf, "thief"))        class_wear = ITEM_ANTI_THIEF;
   if(is_abbrev(buf, "warrior"))      class_wear = ITEM_ANTI_WARRIOR;
@@ -1040,6 +1052,7 @@ int vault_filter(OBJ *obj,char *arg) {
   if(is_abbrev(buf, "nomad"))        class_wear = ITEM_ANTI_NOMAD;
   if(is_abbrev(buf, "paladin"))      class_wear = ITEM_ANTI_PALADIN;
   if(is_abbrev(buf, "anti-paladin")) class_wear = ITEM_ANTI_ANTIPALADIN;
+  if(is_abbrev(buf, "ap"))           class_wear = ITEM_ANTI_ANTIPALADIN;
   if(is_abbrev(buf, "avatar"))       class_wear = ITEM_ANTI_AVATAR;
   if(is_abbrev(buf, "bard"))         class_wear = ITEM_ANTI_BARD;
   if(is_abbrev(buf, "commando"))     class_wear = ITEM_ANTI_COMMANDO;
@@ -1337,7 +1350,9 @@ light, finger, neck, body, head, legs, feet, hands,\n\r\
 arms, shield, about, waist, wrist, wield, hold, throw,\n\r\
 magic_user/mage/wizard, cleric, thief, warrior, ninja,\n\r\
 nomad, paladin, anti-paladin, avatar, bard, commando,\n\r\
-evil, neutral, good\n\r", ch);
+evil, neutral, good\n\r\
+container, drink, boat, lockpick, recipe.\n\r\
+potion, scroll, wand, staff.\n\r",ch);
 
     return TRUE;
   }
@@ -5577,18 +5592,96 @@ void list_obj_to_char(struct obj_data *list,struct char_data *ch, int mode,bool 
 
 /* Listing objs in the room is blocked by act.informative.c */
 int donation(int room,CHAR *ch, int cmd, char *arg) {
-  char buf[MAX_STRING_LENGTH];
+  OBJ *temp_obj = NULL;
+  OBJ *next_obj = NULL;
+  char buf[MSL];
+  char arg1[MIL];
+  char arg2[MIL];
+  char allbuf[MIL];
+  int number = 0;
+  int counter = 0;
+  int found = FALSE;
+
+  if(cmd == CMD_IDENTIFY)
+  {
+    number_argument_interpreter(arg, &number, arg1, arg2);
+    // arg1 is a number
+    if (!*arg1)
+    {
+      send_to_char("What item would you like to identify?\n\r", ch);
+      return TRUE;
+    }
+    else
+    {
+      // arg1 is 'all' or was 'all.' (and is now 'all')
+      if (!str_cmp(arg1, "all"))
+      {
+        send_to_char("You can't identify 'all' of something.\n\r", ch);
+        return TRUE;
+      }
+      else
+      {
+        // 'identify item' or 'identify 1 item'
+        if (number == 1)
+        {
+          temp_obj = get_obj_in_list_vis(ch, arg1, world[real_room(3084)].contents);
+          if (temp_obj)
+          {
+            found = TRUE;
+          }
+        }
+        else // 'identify x.arg1'
+        {
+          strcpy(allbuf, arg1);
+          for (temp_obj = world[real_room(3084)].contents; temp_obj && counter <= number; temp_obj = next_obj)
+          {
+            next_obj = temp_obj->next_content;
+            if (isname(arg1, OBJ_NAME(temp_obj)))
+            {
+              counter++;
+              if (counter == number)
+              {
+                found = TRUE;
+                break;
+              }
+            }
+          }
+        }
+      }
+    }
+    if (found && temp_obj)
+    {
+      if(GET_LEVEL(ch) > 30 )
+      {
+        send_to_char("It will cost 3500 coins...\n\r", ch);
+        if(!IS_IMPLEMENTOR(ch) && (3500 > GET_GOLD(ch)))
+        {
+          send_to_char("You do not have enough coins.\n\r", ch);
+          return TRUE;
+        } else {
+          if(!IS_IMPLEMENTOR(ch)) GET_GOLD(ch) -= 3500;
+        }
+      }
+      spell_identify(50, ch, 0, temp_obj);
+    } else {
+      send_to_char("You can't seem to find that item.\n\r", ch);
+    }
+    return TRUE;
+  }
 
   if(cmd!=CMD_LIST) return FALSE;
   if(!ch) return FALSE;
   one_argument(arg,buf);
   if(!*buf) {
     send_to_char("\
-list all/keyword or :\n\r\
+Usage: list <all|keyword> or\n\r\
      light, finger, neck, body, head, legs, feet, hands,\n\r\
      arms, shield, about, waist, wrist, wield, hold, throw,\n\r\
-     wizard, cleric, thief, warrior, ninja, nomad, paladin,\n\r\
-     anti-paladin, avatar, bard, commando, evil, neutral, good.\n\r",ch);
+     magic-user, cleric, thief, warrior, ninja, nomad, paladin,\n\r\
+     anti-paladin, avatar, bard, commando, evil, neutral, good,\n\r\
+     container, drink, boat, lockpick, recipe, key, potion,\n\r\
+     scroll, wand, staff.\n\r",ch);
+    send_to_char("You can also learn the stats of an item: identify <keyword>\n\r",ch);
     return TRUE;
   }
 

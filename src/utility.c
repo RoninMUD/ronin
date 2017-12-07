@@ -66,6 +66,8 @@ $State: Exp $
 #include <unistd.h>
 #include <ctype.h>
 #include <math.h>
+#include <stdint.h>
+#include <limits.h>
 
 #include "structs.h"
 #include "utils.h"
@@ -1884,32 +1886,28 @@ int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
 }
 
 
-/* Takes a bit mask and and returns one of the set bits randomly.
-   This function assumes 32-bit integers are being used for masks.
-   Set the mask_size variable to the number of bits that make up
-   an integer, as well as the size of the eligible_bits array that
-   is used.
-   Note: This is currently unused and untested, but may be used in
-   a few places in the future. */
-int get_random_set_bit_from_mask(const int mask) {
-  int i = 0;
-  int flag = 0;
-  int mask_size = 32; /* Assumes 32-bit integers. */
-  int eligible_bits[32]; /* Assumes 32-bit integers. */
-  int num_eligible_bits = 0;
+/* Takes a bit mask and and returns one of the set bits randomly,
+   or zero if no bits were set. */
+int get_random_set_bit_from_mask_t(const int32_t mask) {
+  const int32_t mask_size = (sizeof(int32_t) * CHAR_BIT);
+
+  int32_t i = 0;
+  int32_t flag = 0;
+  int32_t eligible_bits[mask_size];
+  int32_t num_eligible_bits = 0;
 
   if (mask == 0) return 0;
 
   for (i = 0; i < mask_size; i++) {
     flag = (1 << i);
     if (IS_SET(mask, flag)) {
+      eligible_bits[num_eligible_bits] = flag;
       num_eligible_bits++;
-      eligible_bits[num_eligible_bits - 1] = flag;
     }
   }
 
   if (num_eligible_bits > 0) {
-    return eligible_bits[number(1, num_eligible_bits) - 1];
+    return eligible_bits[number(0, num_eligible_bits - 1)];
   }
 
   return 0;
