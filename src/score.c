@@ -46,13 +46,10 @@ int calc_avg_damage(CHAR *ch, int weapon_slot)
 
   if (weapon_slot == WIELD || (weapon_slot == HOLD && GET_CLASS(ch) == CLASS_NINJA))
   {
-    if (ch->equipment[weapon_slot] && (ch->equipment[weapon_slot]->obj_flags.type_flag == ITEM_WEAPON || ch->equipment[weapon_slot]->obj_flags.type_flag == ITEM_2HWEAPON))
-    {
-      weapon = ch->equipment[weapon_slot];
+    weapon = EQ(ch, weapon_slot);
 
-      if (weapon)
-        damage = ((weapon->obj_flags.value[1] * (1 + weapon->obj_flags.value[2])) / 2);
-    }
+    if (weapon && (OBJ_TYPE(weapon) == ITEM_WEAPON || OBJ_TYPE(weapon) == ITEM_2HWEAPON))
+      damage = ((OBJ_VALUE1(weapon) * (1 + OBJ_VALUE2(weapon))) / 2);
     else
       calc_bhd(ch);
   }
@@ -65,25 +62,33 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
   char buf[MSL];
   char buf2[MSL];
 
+  sprintf(buf, "%s", "");
+  sprintf(buf2, "%s", "");
+
   switch (query)
   {
   case SCQ_NAME:
     sprintf(buf, "%sName:%s %s",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_NAME(ch));
+      CHCLR(ch, 7), ENDCHCLR(ch),
+      !IS_NPC(ch) ? GET_NAME(ch) ? GET_NAME(ch) : "(null)" : GET_SHORT(ch) ? GET_SHORT(ch) : "(null)");
     break;
   case SCQ_TITLE:
     sprintf(buf, "%sTitle:%s %s",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_TITLE(ch));
+      CHCLR(ch, 7), ENDCHCLR(ch),
+      GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
     break;
   case SCQ_LEVEL:
   case SCQ_CLASS_NAME:
     sprintf(buf, "%sLevel: [%s%d%s]%s %s",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch),
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_CLASS_NAME(ch));
+      CHCLR(ch, 7), ENDCHCLR(ch),
+      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) < CLASS_FINAL) ||
+       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MAX)) ?
+      GET_CLASS_NAME(ch) : "Undefined");
     break;
   case SCQ_SC_LEVEL:
   case SCQ_SC_NAME:
-    if (GET_SC(ch))
+    if (GET_SC(ch) > SC_NONE && GET_SC(ch) < SC_FINAL)
     {
     sprintf(buf, "%sSubclass: [%s%d%s]%s %s",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
@@ -402,8 +407,9 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
       CHCLR(ch, 7), ENDCHCLR(ch));
 
     if (GET_CLASS(ch) == CLASS_NINJA)
-      sprintf(buf2, "%d/%d (2nd Weapon)",
-        calc_damroll(ch) + calc_avg_damage(ch, WIELD), calc_damroll(ch) + calc_avg_damage(ch, HOLD));
+      sprintf(buf2, "%d / %d",
+        calc_damroll(ch) + calc_avg_damage(ch, WIELD),
+        calc_damroll(ch) + calc_avg_damage(ch, HOLD));
     else
       sprintf(buf2, "%d",
         calc_damroll(ch) + calc_avg_damage(ch, WIELD));
@@ -478,13 +484,13 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
     sprintf(buf, "%sMember of Club:%s ",
       CHCLR(ch, 7), ENDCHCLR(ch));
 
-    if (IS_SET(ch->specials.pflag, PLR_SANES_VOCAL_CLUB))
+    if (IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB))
       strcat(buf, "Sane's Vocal Club");
-    else if (IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE))
+    else if (IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE))
       strcat(buf, "Liner's Lounge");
-    else if (IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE))
+    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
       strcat(buf, "Lem's Liqour Lounge");
-    else if (IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY))
+    else if (IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY))
       strcat(buf, "Ranger's Reliquary");
     else
       strcat(buf, "None");
@@ -507,53 +513,68 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
     sprintf(buf, "%sToggles:%s",
       CHCLR(ch, 7), ENDCHCLR(ch));
 
-    if (IS_SET(ch->specials.pflag, PLR_NOKILL))
-      strcat(buf, " NO_KILL");
-    if (IS_SET(ch->specials.pflag, PLR_NOMESSAGE))
-      strcat(buf, " NO_MESSAGE");
-    if (IS_SET(ch->specials.pflag, PLR_NOSUMMON))
-      strcat(buf, " NO_SUMMON");
-    if (IS_SET(ch->specials.pflag, PLR_GOSSIP))
-      strcat(buf, " GOSSIP");
-    if (IS_SET(ch->specials.pflag, PLR_AUCTION))
-      strcat(buf, " AUCTION");
-    if (IS_SET(ch->specials.pflag, PLR_CHAOS))
-      strcat(buf, " CHAOS");
-    if (IS_SET(ch->specials.pflag, PLR_QUESTC))
-      strcat(buf, " Q-CHANNEL");
-    if (IS_SET(ch->specials.pflag, PLR_QUEST))
-      strcat(buf, " Q-PLAYER");
-    if (IS_SET(ch->specials.pflag, PLR_QUIET))
-      strcat(buf, " Q-QUIET");
+    if (!IS_NPC(ch) && GET_PFLAG(ch))
+    {
+      if (IS_SET(GET_PFLAG(ch), PLR_NOKILL))
+        strcat(buf, " NO_KILL");
+      if (IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE))
+        strcat(buf, " NO_MESSAGE");
+      if (IS_SET(GET_PFLAG(ch), PLR_NOSUMMON))
+        strcat(buf, " NO_SUMMON");
+      if (IS_SET(GET_PFLAG(ch), PLR_GOSSIP))
+        strcat(buf, " GOSSIP");
+      if (IS_SET(GET_PFLAG(ch), PLR_AUCTION))
+        strcat(buf, " AUCTION");
+      if (IS_SET(GET_PFLAG(ch), PLR_CHAOS))
+        strcat(buf, " CHAOS");
+      if (IS_SET(GET_PFLAG(ch), PLR_QUESTC))
+        strcat(buf, " Q-CHANNEL");
+      if (IS_SET(GET_PFLAG(ch), PLR_QUEST))
+        strcat(buf, " Q-PLAYER");
+      if (IS_SET(GET_PFLAG(ch), PLR_QUIET))
+        strcat(buf, " Q-QUIET");
+    }
+    else
+      strcat(buf, " None");
     break;
   case SCQ_FLAGS:
-    if (IS_SET(ch->specials.pflag, PLR_DEPUTY))
+    if (!IS_NPC(ch) &&
+        (IS_SET(GET_PFLAG(ch), PLR_DEPUTY) ||
+         GET_COND(ch, DRUNK) > 10 ||
+         IS_SET(GET_PFLAG(ch), PLR_KILL) ||
+         IS_SET(GET_PFLAG(ch), PLR_THIEF)))
     {
-      sprintf(buf2, "%sYou are a Midgaard Deputy.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
-      strcat(buf, buf2);
-    }
+      if (IS_SET(GET_PFLAG(ch), PLR_DEPUTY))
+      {
+        sprintf(buf2, "%sYou are a Midgaard Deputy.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch));
+        strcat(buf, buf2);
+      }
 
-    if (GET_COND(ch, DRUNK) > 10)
-    {
-      sprintf(buf2, "%sYou are intoxicated.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
-      strcat(buf, buf2);
-    }
+      if (GET_COND(ch, DRUNK) > 10)
+      {
+        sprintf(buf2, "%sYou are intoxicated.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch));
+        strcat(buf, buf2);
+      }
 
-    if (IS_SET(ch->specials.pflag, PLR_KILL))
-    {
-      sprintf(buf2, "%sYou are a killer.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
-      strcat(buf, buf2);
-    }
+      if (IS_SET(GET_PFLAG(ch), PLR_KILL))
+      {
+        sprintf(buf2, "%sYou are a killer.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch));
+        strcat(buf, buf2);
+      }
 
-    if (IS_SET(ch->specials.pflag, PLR_THIEF))
-    {
-      sprintf(buf2, "%sYou are a thief.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
-      strcat(buf, buf2);
+      if (IS_SET(GET_PFLAG(ch), PLR_THIEF))
+      {
+        sprintf(buf2, "%sYou are a thief.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch));
+        strcat(buf, buf2);
+      }
     }
+    else
+      sprintf(buf, "%sFlags:%s None\n\r",
+        CHCLR(ch, 7), ENDCHCLR(ch));
     break;
   case SCQ_DEATH_LIMIT:
     if (GET_DEATH_LIMIT(ch))
@@ -607,12 +628,16 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
         CHCLR(ch, 7), ENDCHCLR(ch));
       break;
     case POSITION_FIGHTING:
-      if (ch->specials.fighting)
+      if (GET_OPPONENT(ch))
         sprintf(buf, "%sYou are fighting %s.%s",
-          CHCLR(ch, 7), !IS_MOB(ch->specials.fighting) ? GET_NAME(ch->specials.fighting) : GET_SHORT(ch->specials.fighting), ENDCHCLR(ch));
+          CHCLR(ch, 7),
+          !IS_MOB(GET_OPPONENT(ch)) ?
+          GET_NAME(GET_OPPONENT(ch)) ? GET_NAME(GET_OPPONENT(ch)) : "(null)" :
+          GET_SHORT(GET_OPPONENT(ch)) ? GET_SHORT(GET_OPPONENT(ch)) : "(null)",
+          ENDCHCLR(ch));
       else
         sprintf(buf, "%sYou are fighting thin air.%s",
-        CHCLR(ch, 7), ENDCHCLR(ch));
+          CHCLR(ch, 7), ENDCHCLR(ch));
       break;
     case POSITION_STANDING:
       sprintf(buf, "%sYou are standing.%s",
@@ -625,24 +650,27 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
     }
     break;
   case SCQ_WIZINV:
-    if (GET_LEVEL(ch) >= LEVEL_IMM)
+    if (IS_IMMORTAL(ch))
       sprintf(buf, "%sInvisibility Level:%s %d",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_WIZINV(ch));
     else
-      sprintf(buf, "Invalid query.");
+      sprintf(buf, "This information is for gods only.");
     break;
   case SCQ_EDITING_ZONE:
-    if (GET_LEVEL(ch) >= LEVEL_IMM)
-    {
-      if (ZONE_NUM_CH(ch) != -1)
-          sprintf(buf, "%sEditting Zone:%s %d - %s",
-            CHCLR(ch, 7), ENDCHCLR(ch), ZONE_NUM_CH(ch), ZONE_NAME_CH(ch));
-    }
+    if (IS_IMMORTAL(ch))
+      if (ZONE_NUM_CH(ch) >= 0)
+        sprintf(buf, "%sEditting Zone:%s %d - %s",
+          CHCLR(ch, 7), ENDCHCLR(ch),
+          ZONE_NUM_CH(ch),
+          ZONE_NAME_CH(ch) ? ZONE_NAME_CH(ch) : "Undefined");
+      else
+        sprintf(buf, "%sEditting Zone:%s None",
+          CHCLR(ch, 7), ENDCHCLR(ch));
     else
-      sprintf(buf, "Invalid query.");
+      sprintf(buf, "This information is for gods only.");
     break;
   default:
-    sprintf(buf, "Invalid query.");
+    sprintf(buf, "Invalid query. See HELP \"SCORE QUERY\" for more information.");
   }
 
   if (new_line && query != SCQ_FLAGS)
@@ -781,12 +809,19 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
   if (style == 0)
   {
-    printf_to_char(ch, "%s%s %s%s\n\r",
-      CHCLR(ch, 7), GET_NAME(ch), GET_TITLE(ch), ENDCHCLR(ch));
+    printf_to_char(ch, "%s%s",
+      CHCLR(ch, 7),
+      !IS_NPC(ch) ? GET_NAME(ch) ? GET_NAME(ch) : "(null)" : GET_SHORT(ch) ? GET_SHORT(ch) : "(null)");
+    if (!IS_NPC(ch))
+      printf_to_char(ch, " %s",
+        GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
+    printf_to_char(ch, "%s\n\r", ENDCHCLR(ch));
     printf_to_char(ch, "%sLevel: [%s%d%s]%s %s",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch),
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_CLASS_NAME(ch));
-    if (GET_SC(ch))
+      CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch), CHCLR(ch, 7), ENDCHCLR(ch),
+      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) < CLASS_FINAL) ||
+       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MAX)) ?
+      GET_CLASS_NAME(ch) : "Undefined");
+    if (GET_SC(ch) > SC_NONE && GET_SC(ch) < SC_FINAL)
       printf_to_char(ch, "%s, Subclass: [%s%d%s]%s %s",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
@@ -821,8 +856,9 @@ void do_score(CHAR *ch, char *argument, int cmd)
     printf_to_char(ch, "%sAverage Damage:%s ",
       CHCLR(ch, 7), ENDCHCLR(ch));
     if (GET_CLASS(ch) == CLASS_NINJA)
-      printf_to_char(ch, "%d/%d (2nd Weapon)\n\r",
-        calc_damroll(ch) + calc_avg_damage(ch, WIELD), calc_damroll(ch) + calc_avg_damage(ch, HOLD));
+      printf_to_char(ch, "%d / %d\n\r",
+        calc_damroll(ch) + calc_avg_damage(ch, WIELD),
+        calc_damroll(ch) + calc_avg_damage(ch, HOLD));
     else
       printf_to_char(ch, "%d\n\r",
         calc_damroll(ch) + calc_avg_damage(ch, WIELD));
@@ -939,13 +975,13 @@ void do_score(CHAR *ch, char *argument, int cmd)
       CHCLR(ch, 7), ENDCHCLR(ch), GET_RANKING(ch));
     printf_to_char(ch, "%sMember of Club:%s ",
       CHCLR(ch, 7), ENDCHCLR(ch));
-    if (IS_SET(ch->specials.pflag, PLR_SANES_VOCAL_CLUB))
+    if (IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB))
       send_to_char("Sane's Vocal Club\n\r", ch);
-    else if (IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE))
+    else if (IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE))
       send_to_char("Liner's Lounge\n\r", ch);
-    else if (IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE))
+    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
       send_to_char("Lem's Liqour Lounge\n\r", ch);
-    else if (IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY))
+    else if (IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY))
       send_to_char("Ranger's Reliquary\n\r", ch);
     else
       send_to_char("None\n\r", ch);
@@ -968,29 +1004,38 @@ void do_score(CHAR *ch, char *argument, int cmd)
       CHCLR(ch, 7), ENDCHCLR(ch), IS_CARRYING_W(ch), CAN_CARRY_W(ch));
     send_to_char("\n\r", ch);
 
-    printf_to_char(ch, "%sToggles:%s",
-      CHCLR(ch, 7), ENDCHCLR(ch));
-    if (IS_SET(ch->specials.pflag, PLR_NOKILL))
-      send_to_char(" NO_KILL", ch);
-    if (IS_SET(ch->specials.pflag, PLR_NOMESSAGE))
-      send_to_char(" NO_MESSAGE", ch);
-    if (IS_SET(ch->specials.pflag, PLR_NOSUMMON))
-      send_to_char(" NO_SUMMON", ch);
-    if (IS_SET(ch->specials.pflag, PLR_GOSSIP))
-      send_to_char(" GOSSIP", ch);
-    if (IS_SET(ch->specials.pflag, PLR_AUCTION))
-      send_to_char(" AUCTION", ch);
-    if (IS_SET(ch->specials.pflag, PLR_CHAOS))
-      send_to_char(" CHAOS", ch);
-    if (IS_SET(ch->specials.pflag, PLR_QUESTC))
-      send_to_char(" Q-CHANNEL", ch);
-    if (IS_SET(ch->specials.pflag, PLR_QUEST))
-      send_to_char(" Q-PLAYER", ch);
-    if (IS_SET(ch->specials.pflag, PLR_QUIET))
-      send_to_char(" Q-QUIET", ch);
-    send_to_char("\n\r", ch);
+    if (!IS_NPC(ch))
+    {
+      printf_to_char(ch, "%sToggles:%s",
+        CHCLR(ch, 7), ENDCHCLR(ch));
 
-    if (GET_LEVEL(ch) >= LEVEL_IMM)
+      if (!IS_NPC(ch) && GET_PFLAG(ch))
+      {
+        if (IS_SET(GET_PFLAG(ch), PLR_NOKILL))
+          send_to_char(" NO_KILL", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE))
+          send_to_char(" NO_MESSAGE", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_NOSUMMON))
+          send_to_char(" NO_SUMMON", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_GOSSIP))
+          send_to_char(" GOSSIP", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_AUCTION))
+          send_to_char(" AUCTION", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_CHAOS))
+          send_to_char(" CHAOS", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_QUESTC))
+          send_to_char(" Q-CHANNEL", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_QUEST))
+          send_to_char(" Q-PLAYER", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_QUIET))
+          send_to_char(" Q-QUIET", ch);
+        send_to_char("\n\r", ch);
+      }
+      else
+        send_to_char(" None\n\r", ch);
+    }
+
+    if (IS_IMMORTAL(ch))
     {
       printf_to_char(ch, "%sWiz Flags:%s ",
         CHCLR(ch, 7), ENDCHCLR(ch));
@@ -1001,22 +1046,25 @@ void do_score(CHAR *ch, char *argument, int cmd)
       send_to_char(buf, ch);
     }
 
-    if (IS_SET(ch->specials.pflag, PLR_DEPUTY))
-      printf_to_char(ch, "%sYou are a Midgaard Deputy.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
-    if (GET_COND(ch, DRUNK) > 10)
-      printf_to_char(ch, "%sYou are intoxicated.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
-    if (IS_SET(ch->specials.pflag, PLR_KILL))
-      printf_to_char(ch, "%sYou are a killer.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
-    if (IS_SET(ch->specials.pflag, PLR_THIEF))
-      printf_to_char(ch, "%sYou are a thief.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
+    if (!IS_NPC(ch))
+    {
+      if (IS_SET(GET_PFLAG(ch), PLR_DEPUTY))
+        printf_to_char(ch, "%sYou are a Midgaard Deputy.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch));
+      if (GET_COND(ch, DRUNK) > 10)
+        printf_to_char(ch, "%sYou are intoxicated.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch));
+      if (IS_SET(GET_PFLAG(ch), PLR_KILL))
+        printf_to_char(ch, "%sYou are a killer.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch));
+      if (IS_SET(GET_PFLAG(ch), PLR_THIEF))
+        printf_to_char(ch, "%sYou are a thief.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch));
 
-    if (GET_DEATH_LIMIT(ch))
-      printf_to_char(ch, "%sAfter%s %d %sdeaths you will lose stats regardless.%s\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_LIMIT(ch), CHCLR(ch, 7), ENDCHCLR(ch));
+      if (GET_DEATH_LIMIT(ch))
+        printf_to_char(ch, "%sAfter%s %d %sdeaths you will lose stats regardless.%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_LIMIT(ch), CHCLR(ch, 7), ENDCHCLR(ch));
+    }
 
     switch (GET_POS(ch))
     {
@@ -1061,9 +1109,13 @@ void do_score(CHAR *ch, char *argument, int cmd)
           CHCLR(ch, 7), ENDCHCLR(ch));
         break;
       case POSITION_FIGHTING:
-        if (ch->specials.fighting)
+        if (GET_OPPONENT(ch))
           printf_to_char(ch, "%sYou are fighting %s.%s\n\r",
-            CHCLR(ch, 7), !IS_MOB(ch->specials.fighting) ? GET_NAME(ch->specials.fighting) : GET_SHORT(ch->specials.fighting), ENDCHCLR(ch));
+            CHCLR(ch, 7),
+            !IS_MOB(GET_OPPONENT(ch)) ?
+            GET_NAME(GET_OPPONENT(ch)) ? GET_NAME(GET_OPPONENT(ch)) : "(null)" :
+            GET_SHORT(GET_OPPONENT(ch)) ? GET_SHORT(GET_OPPONENT(ch)) : "(null)",
+            ENDCHCLR(ch));
         else
           printf_to_char(ch, "%sYou are fighting thin air.%s\n\r",
           CHCLR(ch, 7), ENDCHCLR(ch));
@@ -1078,26 +1130,31 @@ void do_score(CHAR *ch, char *argument, int cmd)
         break;
     }
 
-    if (GET_LEVEL(ch) >= LEVEL_IMM)
+    if (IS_IMMORTAL(ch))
     {
       printf_to_char(ch, "\n\r%sInvisibility Level:%s %d\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_WIZINV(ch));
 
-      if (ZONE_NUM_CH(ch) != -1)
-        printf_to_char(ch, "%sEditting Zone:%s %d - %s\n\r",
-          CHCLR(ch, 7), ENDCHCLR(ch), ZONE_NUM_CH(ch), ZONE_NAME_CH(ch));
+      if (ZONE_NUM_CH(ch) >= 0)
+        printf_to_char(ch, "%sEditting Zone:%s %d - %s%s\n\r",
+          CHCLR(ch, 7), ENDCHCLR(ch),
+          ZONE_NUM_CH(ch),
+          ZONE_NAME_CH(ch) ? ZONE_NAME_CH(ch) : "Undefined",
+          ENDCHCLR(ch));
     }
   }
   else if (style == 1)
   {
     printf_to_char(ch, "This ranks you as %s %s%s (level %d).\n\r",
-      GET_NAME(ch), GET_TITLE(ch), ENDCHCLR(ch), GET_LEVEL(ch));
+      GET_NAME(ch) ? GET_NAME(ch) : "(null)",
+      GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)",
+      ENDCHCLR(ch), GET_LEVEL(ch));
 
     printf_to_char(ch, "You are %d years old.%s\n\r",
       GET_AGE(ch), ((age(ch).month == 0) && (age(ch).day == 0)) ? " It's your birthday today." : "");
 
     printf_to_char(ch, "Your alignment is %d (-1000 to 1000) and your armor is %d (100 to %d).\n\r",
-      GET_ALIGNMENT(ch), GET_MOD_AC(ch), affected_by_spell(ch, SKILL_DEFEND) ? -300 : -250);
+      GET_ALIGNMENT(ch), GET_MOD_AC(ch), IS_NPC(ch) || affected_by_spell(ch, SKILL_DEFEND) ? -300 : -250);
 
     if (GET_ALIGNMENT(ch) >= 750)
       send_to_char("You are saintly.\n\r", ch);
@@ -1127,6 +1184,14 @@ void do_score(CHAR *ch, char *argument, int cmd)
     printf_to_char(ch, "You have %d(%d) hit, %d(%d) mana and %d(%d) movement points.\n\r",
       GET_HIT(ch), GET_MAX_HIT(ch), GET_MANA(ch), GET_MAX_MANA(ch), GET_MOVE(ch), GET_MAX_MOVE(ch));
 
+    if (GET_CLASS(ch) == CLASS_NINJA)
+      printf_to_char(ch, "Your average damage is %d / %d.\n\r",
+        calc_damroll(ch) + calc_avg_damage(ch, WIELD),
+        calc_damroll(ch) + calc_avg_damage(ch, HOLD));
+    else
+      printf_to_char(ch, "Your average damage is %d.\n\r",
+        calc_damroll(ch) + calc_avg_damage(ch, WIELD));
+
     if (GET_LEVEL(ch) > 5)
       printf_to_char(ch, "You are carrying %d weight, and the max weight without penalties is %d.\n\r",
         IS_CARRYING_W(ch), CAN_CARRY_W(ch));
@@ -1145,29 +1210,35 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     if (GET_REMORT_EXP(ch))
     {
-      printf_to_char(ch, "You have %lld remort experience to re-earn at a %dx multiplier.\n\r", GET_REMORT_EXP(ch), rv2_calc_remort_mult(ch));
+      printf_to_char(ch, "You have %lld remort experience to re-earn at a %dx multiplier.\n\r",
+        GET_REMORT_EXP(ch), rv2_calc_remort_mult(ch));
     }
 
     if (GET_DEATH_EXP(ch))
     {
-      printf_to_char(ch, "You have %lu death experience to re-earn at a 2x multiplier.\n\r", GET_DEATH_EXP(ch));
+      printf_to_char(ch, "You have %lu death experience to re-earn at a 2x multiplier.\n\r",
+        GET_DEATH_EXP(ch));
     }
 
     printf_to_char(ch, "You have %d class placement points.\n\r", GET_RANKING(ch));
     printf_to_char(ch, "You have %d quest points.\n\r", GET_QP(ch));
     printf_to_char(ch, "You have %d subclass points.\n\r", GET_SCP(ch));
 
-    if (GET_SC(ch))
-      printf_to_char(ch, "You are a level %d %s.\n\r", GET_SC_LEVEL(ch), GET_SC_NAME(ch));
+    if (GET_SC(ch) > SC_NONE && GET_SC(ch) < SC_FINAL)
+      printf_to_char(ch, "You are a level %d %s.\n\r",
+        GET_SC_LEVEL(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
 
-    if (IS_SET(ch->specials.pflag, PLR_DEPUTY))
-      send_to_char("You are a Midgaard Deputy.\n\r", ch);
-    if (GET_COND(ch, DRUNK) > 10)
-      send_to_char("You are intoxicated.\n\r", ch);
-    if (IS_SET(ch->specials.pflag, PLR_KILL))
-      send_to_char("You are a killer.\n\r", ch);
-    if (IS_SET(ch->specials.pflag, PLR_THIEF))
-      send_to_char("You are a thief.\n\r", ch);
+    if (!IS_NPC(ch))
+    {
+      if (IS_SET(GET_PFLAG(ch), PLR_DEPUTY))
+        send_to_char("You are a Midgaard Deputy.\n\r", ch);
+      if (GET_COND(ch, DRUNK) > 10)
+        send_to_char("You are intoxicated.\n\r", ch);
+      if (IS_SET(GET_PFLAG(ch), PLR_KILL))
+        send_to_char("You are a killer.\n\r", ch);
+      if (IS_SET(GET_PFLAG(ch), PLR_THIEF))
+        send_to_char("You are a thief.\n\r", ch);
+    }
 
     switch (GET_POS(ch))
     {
@@ -1202,9 +1273,11 @@ void do_score(CHAR *ch, char *argument, int cmd)
         send_to_char("You are swimming.\n\r", ch);
         break;
       case POSITION_FIGHTING:
-        if (ch->specials.fighting)
+        if (GET_OPPONENT(ch))
           printf_to_char(ch, "You are fighting %s.\n\r",
-            !IS_MOB(ch->specials.fighting) ? GET_NAME(ch->specials.fighting) : GET_SHORT(ch->specials.fighting));
+            !IS_MOB(GET_OPPONENT(ch)) ?
+            GET_NAME(GET_OPPONENT(ch)) ? GET_NAME(GET_OPPONENT(ch)) : "(null)" :
+            GET_SHORT(GET_OPPONENT(ch)) ? GET_SHORT(GET_OPPONENT(ch)) : "(null)");
         else
           send_to_char("You are fighting thin air.\n\r", ch);
         break;
@@ -1216,65 +1289,85 @@ void do_score(CHAR *ch, char *argument, int cmd)
         break;
     }
 
-    if (GET_WIMPY(ch) > 0)
-      printf_to_char(ch, "You will flee when you only have %d hit points.\n\r", GET_WIMPY(ch));
+    if (!IS_NPC(ch))
+    {
+      if (GET_WIMPY(ch) > 0)
+        printf_to_char(ch, "You will flee when you only have %d hit points.\n\r",
+          GET_WIMPY(ch));
 
-    if (GET_BLEED(ch) > 0)
-      printf_to_char(ch, "You will be warned about bleeding at %d hit points.\n\r", GET_BLEED(ch));
+      if (GET_BLEED(ch) > 0)
+        printf_to_char(ch, "You will be warned about bleeding at %d hit points.\n\r",
+          GET_BLEED(ch));
 
-    if (GET_DEATH_LIMIT(ch) > 0)
-      printf_to_char(ch, "After %d deaths you will lose stats regardless.\n\r", GET_DEATH_LIMIT(ch));
+      if (GET_DEATH_LIMIT(ch) > 0)
+        printf_to_char(ch, "After %d deaths you will lose stats regardless.\n\r",
+          GET_DEATH_LIMIT(ch));
 
-    if (IS_SET(ch->specials.pflag, PLR_SANES_VOCAL_CLUB))
-      send_to_char("You are a member of Sane's Vocal Club.\n\r", ch);
-    else if (IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE))
-      send_to_char("You are a member of Liner's Lounge.\n\r", ch);
-    else if (IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE))
-      send_to_char("You are a member of Lem's Liqour Lounge.\n\r", ch);
-    else if (IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY))
-      send_to_char("You are a member of Ranger's Reliquary.\n\r", ch);
+      if (IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB))
+        send_to_char("You are a member of Sane's Vocal Club.\n\r", ch);
+      else if (IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE))
+        send_to_char("You are a member of Liner's Lounge.\n\r", ch);
+      else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
+        send_to_char("You are a member of Lem's Liqour Lounge.\n\r", ch);
+      else if (IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY))
+        send_to_char("You are a member of Ranger's Reliquary.\n\r", ch);
 
-    if (GET_CLAN_NUM(ch))
-      printf_to_char(ch, "You are a member of %s.\n\r", GET_CLAN_NAME(ch));
+      if (GET_CLAN_NUM(ch))
+        printf_to_char(ch, "You are a member of %s.\n\r", GET_CLAN_NAME(ch));
 
-    send_to_char("You are affected by : ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_NOKILL))
-      send_to_char("NO_KILL ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_NOMESSAGE))
-      send_to_char("NO_MESSAGE ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_NOSUMMON))
-      send_to_char("NO_SUMMON ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_GOSSIP))
-      send_to_char("GOSSIP ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_AUCTION))
-      send_to_char("AUCTION ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_CHAOS))
-      send_to_char("CHAOS ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_QUESTC))
-      send_to_char("Q-CHANNEL ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_QUEST))
-      send_to_char("Q-PLAYER ", ch);
-    if (IS_SET(ch->specials.pflag, PLR_QUIET))
-      send_to_char("Q-QUIET ", ch);
-    send_to_char(" \n\r", ch);
+      if (GET_PFLAG(ch))
+      {
+        send_to_char("You are affected by : ", ch);
+        if (GET_PFLAG(ch))
+        {
+          if (IS_SET(GET_PFLAG(ch), PLR_NOKILL))
+            send_to_char("NO_KILL ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE))
+            send_to_char("NO_MESSAGE ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_NOSUMMON))
+            send_to_char("NO_SUMMON ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_GOSSIP))
+            send_to_char("GOSSIP ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_AUCTION))
+            send_to_char("AUCTION ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_CHAOS))
+            send_to_char("CHAOS ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_QUESTC))
+            send_to_char("Q-CHANNEL ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_QUEST))
+            send_to_char("Q-PLAYER ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_QUIET))
+            send_to_char("Q-QUIET ", ch);
+          send_to_char(" \n\r", ch);
+        }
+      }
+    }
 
-    if (GET_LEVEL(ch) >= LEVEL_IMM)
+    if (IS_IMMORTAL(ch))
     {
       printf_to_char(ch, "Your invisibility level is %d.\n\r", GET_WIZINV(ch));
 
-      if (ch->specials.zone != -1)
-        printf_to_char(ch, "Editting zone %d - %s.\n\r",
-          ZONE_NUM_CH(ch), ZONE_NAME_CH(ch));
+      if (ZONE_NUM_CH(ch) >= 0)
+        printf_to_char(ch, "You are editting zone %d - %s.\n\r",
+          ZONE_NUM_CH(ch), ZONE_NAME_CH(ch) ? ZONE_NAME_CH(ch) : "Undefined");
     }
   }
   else if (style == 2)
   {
-    printf_to_char(ch, "%s%s %s%s\n\r",
-      CHCLR(ch, 7), GET_NAME(ch), GET_TITLE(ch), ENDCHCLR(ch));
+    printf_to_char(ch, "%s%s",
+      CHCLR(ch, 7),
+      !IS_NPC(ch) ? GET_NAME(ch) ? GET_NAME(ch) : "(null)" : GET_SHORT(ch) ? GET_SHORT(ch) : "(null)");
+    if (!IS_NPC(ch))
+      printf_to_char(ch, " %s",
+        GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
+    printf_to_char(ch, "%s\n\r", ENDCHCLR(ch));
     printf_to_char(ch, "%sLevel: [%s%d%s]%s %s",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch),
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_CLASS_NAME(ch));
-    if (GET_SC(ch))
+      CHCLR(ch, 7), ENDCHCLR(ch),
+      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) < CLASS_FINAL) ||
+       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MAX)) ?
+      GET_CLASS_NAME(ch) : "Undefined");
+    if (GET_SC(ch) > SC_NONE && GET_SC(ch) < SC_FINAL)
       printf_to_char(ch, "%s, Subclass: [%s%d%s]%s %s",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
@@ -1330,7 +1423,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     printf_to_char(ch, "%sQuest Points:%s %-13d       ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_QP(ch));
-    printf_to_char(ch, "%sDeath XP:%s %lu\n\r",
+    printf_to_char(ch, "%sDeath XP:%s %lu (2x)\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch));
 
     printf_to_char(ch, "%sAge in Years:%s %-13d ",

@@ -611,6 +611,7 @@ struct room_data
 */
 
 /* subclasses - Ranger March 98 */
+#define SC_NONE        0
 #define SC_ENCHANTER   1  /* mage */
 #define SC_ARCHMAGE    2
 #define SC_DRUID       3  /* cleric */
@@ -633,8 +634,10 @@ struct room_data
 #define SC_CHANTER     20
 #define SC_LEGIONNAIRE 21 /* commando */
 #define SC_MERCENARY   22
+#define SC_FINAL       23
 
 /* 'class' for PC's */
+#define CLASS_NONE         0
 #define CLASS_MAGIC_USER   1
 #define CLASS_CLERIC       2
 #define CLASS_THIEF        3
@@ -646,6 +649,7 @@ struct room_data
 #define CLASS_AVATAR       9
 #define CLASS_BARD         10
 #define CLASS_COMMANDO     11
+#define CLASS_FINAL        12
 
 /* 'class' for NPC's */
 #define CLASS_OTHER               0
