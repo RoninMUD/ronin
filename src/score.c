@@ -794,7 +794,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       else if (is_abbrev(arg, "death_limit")) query = SCQ_DEATH_LIMIT;
       else if (is_abbrev(arg, "position")) query = SCQ_POSITION;
       else if (is_abbrev(arg, "wizinv")) query = SCQ_WIZINV;
-      else if (is_abbrev(arg, "editing_zone") || is_abbrev(arg, "zone")) query = SCQ_EDITING_ZONE;
+      else if (is_abbrev(arg, "editing_zone")) query = SCQ_EDITING_ZONE;
       else {
         send_to_char("Invalid query. See HELP \"SCORE QUERY\" for more information.\n\r", ch);
 
