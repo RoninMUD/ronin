@@ -8711,3 +8711,158 @@ SUP+ Only\n\r\
   }
   printf_to_char(ch,"Player: %s not found in id list.\n\r",CAP(buf));
 }
+
+void do_movestat(struct char_data *ch, char *arg, int cmd)
+{
+  struct char_data *source_char;
+  struct char_data *target_char;
+  char buf[MAX_INPUT_LENGTH];
+  char source_name[100],target_name[100];
+  char stat[100],amount[100];
+  char usage[]="\n\r\
+Syntax:       movestat <stat> <source> <target> <amount>\n\r\
+Stat can be:  scp, qp, remort\n\r\
+\n\r\
+Minimum amount to transfer is 700 mil remort experience.\n\r\
+Remort enchantment will be set/removed as necessary.\n\r";
+  int value = 0,yield = 0;
+  long long int big_value = 0;
+
+  if(!check_god_access(ch,TRUE)) return;
+
+  sprintf(buf,"WIZINFO: %s movestat %s",GET_NAME(ch),arg);
+  wizlog(buf, GET_LEVEL(ch)+1, 5);
+  log_s(buf);
+
+  if(!*arg) {
+    send_to_char(usage,ch);
+    return;
+  }
+
+  arg = one_argument(arg, stat);
+  arg = one_argument(arg, source_name);
+  arg = one_argument(arg, target_name);
+  arg = one_argument(arg, amount);
+
+  if (!*stat || !*source_name || !*source_name || !*amount ) {
+    send_to_char("`iInvalid syntax.\n\r",ch);
+    send_to_char(usage,ch);
+    return;
+  }
+  if (!(source_char = get_char_vis(ch, source_name))) {
+    send_to_char("`iSource character not found.\n\r",ch);
+    send_to_char(usage,ch);
+    return;
+  }
+  if (!(target_char = get_char_vis(ch, target_name))) {
+    send_to_char("`iTarget character not found.\n\r",ch);
+    send_to_char(usage,ch);
+    return;
+  }
+  if(IS_NPC(target_char) || IS_NPC(source_char)){
+    send_to_char("`iTarget and source characters cannot be NPCs.\n\r",ch);
+    send_to_char(usage,ch);
+    return;
+  }
+  if(target_char == source_char) {
+    send_to_char("`iTarget and source cannot be the same character.\n\r",ch);
+    send_to_char(usage,ch);
+    return;
+  }
+
+  if (is_abbrev(stat, "qp") || is_abbrev(stat, "aqpoints") || is_abbrev(stat, "questpoints") || is_abbrev(stat, "quest_points"))
+  {
+    value = atoi(amount);
+    if(value < 10) { //min 10 to transfer
+      send_to_char("`iA minimum transfer of 10 quest points is required.\n\r",ch);
+      send_to_char(usage,ch);
+      return;
+    }
+    if(source_char->ver3.quest_points < value) {
+      send_to_char("`iSource character does not have that amount of quest points.\n\r",ch);
+      send_to_char(usage,ch);
+    } else {
+      yield = value*0.8;
+      source_char->ver3.quest_points -= value;
+      sprintf(buf, "%d quest points were removed from %s.\n\r",value,GET_NAME(source_char));
+      send_to_char(buf, ch);
+      sprintf(buf, "%s removes %d of your quest points and transfers %d to %s. (20%% fee)\n\r",GET_NAME(ch),value,yield,GET_NAME(target_char));
+      send_to_char(buf, source_char);
+
+      target_char->ver3.quest_points += yield;
+      sprintf(buf, "%d quest points were transfered to %s.\n\r",yield,GET_NAME(target_char));
+      send_to_char(buf, ch);
+      sprintf(buf, "%s transfers %d quest points to you.\n\r",GET_NAME(ch),yield);
+      send_to_char(buf, target_char);
+    }
+    return;
+  }
+  if (is_abbrev(stat, "sc") || is_abbrev(stat, "scpoints") || is_abbrev(stat, "subclasspoints") || is_abbrev(stat, "subclass_points"))
+  {
+    value = atoi(amount);
+    if(value < 10) { //min 10 to transfer
+      send_to_char("`iA minimum transfer of 10 subclass points is required.\n\r",ch);
+      send_to_char(usage,ch);
+      return;
+    }
+    if(source_char->ver3.subclass_points < value) {
+      send_to_char("`iSource character does not have that amount of subclass points.\n\r",ch);
+      send_to_char(usage,ch);
+    } else {
+      yield = value*0.8;
+      source_char->ver3.subclass_points -= value;
+      sprintf(buf, "%d subclass points were removed from %s.\n\r",value,GET_NAME(source_char));
+      send_to_char(buf, ch);
+      sprintf(buf, "%s removes %d of your subclass points and transfers %d to %s. (20%% fee)\n\r",GET_NAME(ch),value,yield,GET_NAME(target_char));
+      send_to_char(buf, source_char);
+
+      target_char->ver3.subclass_points += yield;
+      sprintf(buf, "%d subclass points were transfered to %s.\n\r",yield,GET_NAME(target_char));
+      send_to_char(buf, ch);
+      sprintf(buf, "%s transfers %d subclass points to you.\n\r",GET_NAME(ch),yield);
+      send_to_char(buf, target_char);
+    }
+    return;
+  }
+  if (is_abbrev(stat, "remortxp") || is_abbrev(stat, "remortexp") || is_abbrev(stat, "remort_xp") || is_abbrev(stat, "remort_exp") || is_abbrev(stat, "remortpool") || is_abbrev(stat, "remort_pool"))
+  {
+    big_value = strtoll(amount, NULL, 10);
+    if(big_value < 700000000) { //min of 700mil to transfer
+      send_to_char("`iA minimum transfer of 700 mil remort experience is required.\n\r",ch);
+      send_to_char(usage,ch);
+      return;
+    }
+    if(source_char->ver3.remort_exp < big_value) {
+      send_to_char("`iSouce character does not have that amount of remort experience.\n\r",ch);
+      send_to_char(usage,ch);
+    } else {
+      source_char->ver3.remort_exp -= big_value;
+      sprintf(buf, "%lld remort experience was removed from %s.\n\r",big_value,GET_NAME(source_char));
+      send_to_char(buf, ch);
+      sprintf(buf, "%s removes %lld of your remort experience and transfers it to %s. (less a 20%% fee)\n\r",GET_NAME(ch),big_value,GET_NAME(target_char));
+      send_to_char(buf, source_char);
+
+      target_char->ver3.remort_exp += big_value*0.8;
+      sprintf(buf, "%lld remort experience was transfered to %s.\n\r",(long long int)(big_value*0.8),GET_NAME(target_char));
+      send_to_char(buf, ch);
+      sprintf(buf, "%s transfers %lld remort experience to you.\n\r",GET_NAME(ch),(long long int)(big_value*0.8));
+      send_to_char(buf, target_char);
+
+      /* set/remove remort enchantment */
+      if(source_char->ver3.remort_exp == 0) {
+        rv2_remove_enchant(source_char);
+        sprintf(buf, "%s's remort enchantment was turned off.\n\r",GET_NAME(source_char));
+        send_to_char(buf, ch);
+      }
+      if(target_char->ver3.remort_exp >= 1) {
+        sprintf(buf, "%s's remort enchantment was turned on.\n\r",GET_NAME(target_char));
+        send_to_char(buf, ch);
+        rv2_add_enchant(target_char);
+      }
+    }
+    return;
+  }
+  send_to_char ("`iInvalid field specified.\n\r", ch);
+  send_to_char(usage,ch);
+  return;
+} /* do_movestat */

@@ -1051,6 +1051,7 @@ void assign_command_pointers ( void )
   COMMANDO("zpurge"   ,CMD_NEWOLCZ    ,POSITION_DEAD     ,do_zpurge  ,LEVEL_OLC3);
   COMMANDO("zmult"    ,CMD_NEWOLCZ    ,POSITION_DEAD     ,do_zmult   ,LEVEL_OLC2);
   /* End OLC Related Commands */
+  COMMANDO("movestat" ,CMD_MOVESTAT   ,POSITION_DEAD     ,do_movestat,LEVEL_SUP);
 }
 
 /* *************************************************************************
