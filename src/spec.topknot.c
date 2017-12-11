@@ -8,31 +8,12 @@
 ///   Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:23 $
-$Header: /home/ronin/cvs/ronin/spec.topknot.c,v 2.0.0.1 2004/02/05 16:11:23 ronin Exp $
-$Id: spec.topknot.c,v 2.0.0.1 2004/02/05 16:11:23 ronin Exp $
-$Name:  $
-$Log: spec.topknot.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:23  ronin
-Reinitialization of cvs archives
-
-Revision 1.4  2002/05/09 20:16:48  ronin
-Symbol fix for zapping equipment as player gets evil.
-
-Revision 1.3  2002/03/31 07:54:55  ronin
-Fix to stop pin wearers from beaming out of a NO_BEAM room.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"
@@ -44,13 +25,6 @@ $State: Exp $
 #include "utility.h"
 #include "cmd.h"
 #include "spec_assign.h"
-
-extern Room *world;
-extern struct mob_proto *mob_proto_table;
-extern struct obj_proto *obj_proto_table;
-extern struct time_info_data time_info;
-extern CHAR *character_list;
-extern int CHAOSMODE;
 
 void stop_fighting (CHAR *);
 void hit (CHAR *, CHAR *, int);

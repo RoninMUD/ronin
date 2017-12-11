@@ -15,6 +15,7 @@
 
 /* Ronin Includes */
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "db.h"
 #include "cmd.h"
@@ -362,8 +363,6 @@ void spyglass_list_scanned_chars(CHAR *list, CHAR *ch, int distance, int dir)
 
 int spyglass_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
-  extern char *dirs[];
-
   CHAR *owner = NULL;
   char buf[MSL];
   int dir = 0, room = 0, exit_room = 0, distance = 0;

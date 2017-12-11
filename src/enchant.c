@@ -33,9 +33,6 @@
 #include "spells.h"
 #include "fight.h"
 
-extern struct time_info_data time_info;
-extern CHAR *character_list;
-extern struct room_data *world;
 extern int hit_limit(CHAR *ch);
 extern int mana_limit(CHAR *ch);
 extern int move_limit(CHAR *ch);

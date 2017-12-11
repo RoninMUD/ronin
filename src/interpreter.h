@@ -3,28 +3,12 @@
 *  Usage: Procedures interpreting user command                            *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:13:10 $
-$Header: /home/ronin/cvs/ronin/interpreter.h,v 2.0.0.1 2004/02/05 16:13:10 ronin Exp $
-$Id: interpreter.h,v 2.0.0.1 2004/02/05 16:13:10 ronin Exp $
-$Name:  $
-$Log: interpreter.h,v $
-Revision 2.0.0.1  2004/02/05 16:13:10  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 #ifndef __INTERPRETER_H__
 #define __INTERPRETER_H__
 
 void command_interpreter(struct char_data *ch, char *argument);
-int search_block(char *arg, char **list, bool exact);
-int old_search_block(char *argument,int begin,int length,char **list,int mode);
+int search_block(const char *arg, const char * const *list, bool exact);
+int old_search_block(const char *argument,int begin,int length, const char * const * const list,int mode);
 char lower( char c );
 void argument_interpreter(char *argument, char *first_arg, char *second_arg);
 char *one_argument(char *argument,char *first_arg);
@@ -43,5 +27,11 @@ struct command_info
         char *cmd_text;
         int  num;
 };
+
+extern int max_connects;
+extern int total_connects;
+extern char *unknownCMD[];
+extern struct command_info cmd_info[];
+extern char last_command[MSL];
 
 #endif /* __INTERPRETER_H__ */

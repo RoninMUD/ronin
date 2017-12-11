@@ -8,35 +8,6 @@ April 30/01
  Written by Ranger of RoninMUD
 */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:28 $
-$Header: /home/ronin/cvs/ronin/spec.enchanted.c,v 2.1 2005/01/21 14:55:28 ronin Exp $
-$Id: spec.enchanted.c,v 2.1 2005/01/21 14:55:28 ronin Exp $
-$Name:  $
-$Log: spec.enchanted.c,v $
-Revision 2.1  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.0.0.1  2004/02/05 16:10:34  ronin
-Reinitialization of cvs archives
-
-Revision 1.4 2003/11/03 ronin
-Added check_equipment for all GET_ALIGN changes.
-
-Revision 1.3  2002/03/31 16:46:26  ronin
-Added #include <stdlib.h> to remove implicit declaration warning.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -64,8 +35,6 @@ int shop_keeper(CHAR *keeper,CHAR *ch,int cmd,char *arg);
 #define PLUTO         28703
 #define ATHENA        28600
 #define GATEKEEPER    28507
-
-extern int CHAOSMODE;
 
 /*
 mob 28701 cant be attacked
@@ -1213,7 +1182,6 @@ int ench_pegasus(CHAR *mob,CHAR *ch,int cmd,char *argument) {
   return FALSE;
 }
 
-extern int CHAOSMODE;
 /* asclepius 28736 */
 int ench_asclepius(CHAR *mob,CHAR *ch,int cmd,char *argument) {
   CHAR *victim;

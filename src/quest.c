@@ -11,39 +11,6 @@
 ** Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/06/08 12:20:24 $
-$Header: /home/ronin/cvs/ronin/quest.c,v 2.3 2004/06/08 12:20:24 ronin Exp $
-$Id: quest.c,v 2.3 2004/06/08 12:20:24 ronin Exp $
-$Name:  $
-$Log: quest.c,v $
-Revision 2.3  2004/06/08 12:20:24  ronin
-Fixed qf spread.
-
-Revision 2.2  2004/05/05 12:40:15  ronin
-Addition of clan halls to zones blocked in qf spread.
-
-Revision 2.1  2004/03/02 15:29:36  ronin
-Addition to qf spread to stop spread in hell zones.
-
-Revision 2.0.0.1  2004/02/05 16:09:58  ronin
-Reinitialization of cvs archives
-
-
-Revision - Sending award logs to god board - Ranger 18-Dec-03
-
-Revision - Done messages added to qf qcard - Ranger 11/11/02
-
-Revision - LAWFUL rooms blocked from qf teleport
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -51,6 +18,7 @@ $State: Exp $
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -65,27 +33,14 @@ $State: Exp $
 #include "cmd.h"
 #include "act.h"
 #include "spec_assign.h"
+#include "quest.h"
 
-extern int CHAOSMODE;
-extern struct descriptor_data *descriptor_list;
-extern struct zone_data *zone_table;
-
-extern char *BKColor[];
-extern char *Color[];
-char *make_drunk(char *string, struct char_data *ch);
-extern int top_of_world;
-extern int top_of_zone_table;
-
-struct scoreboard_data
-{
-  char killer[80];
-  char killed[80];
-  char location[80];
-  char time_txt[80];
-};
-
+/* global data */
 struct scoreboard_data scores[101];
 int number_of_kills=0;
+
+/* declarations */
+char *make_drunk(char *string, struct char_data *ch);
 void write_board(int vnum,char *heading,char *message);
 
 void do_quest(CHAR *ch, char *argument, int cmd)

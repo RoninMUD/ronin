@@ -38,3 +38,4 @@ void list_clan_file(struct char_data *ch,int clan);
 int check_clan_board(int board,struct char_data *ch);
 int check_clan_access(int room,struct char_data *ch);
 
+extern struct clan_data clan_list[MAX_CLANS];

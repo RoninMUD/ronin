@@ -14,8 +14,9 @@ Majority of act.comm.c code re-written by Night.
 #include <string.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
-
+#include "db.h"
 #include "cmd.h"
 #include "comm.h"
 #include "handler.h"
@@ -25,13 +26,6 @@ Majority of act.comm.c code re-written by Night.
 
 
 /* Externs */
-
-extern int CHAOSMODE;
-
-extern char *BKColor[];
-extern char *Color[];
-
-extern struct descriptor_data *descriptor_list;
 
 extern char *skip_spaces(char * string);
 

@@ -2592,7 +2592,7 @@ xp, exp_to_level, xp_to_level, remort_exp, remort_xp,
 remort_multiplier, death_exp, death_xp, gold, coins, money, bank_gold,
 bank_coins, bank_money, quest_timer, club, clan, guild, time_played,
 played, weight_carried, carried_weight, toggles, flags, death_limit,
-position, wizinv, editing_zone, zone
+position, wizinv, editing_zone
 
 See Also: SCORE
 #

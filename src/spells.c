@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "db.h"
@@ -16,12 +17,6 @@
 #include "utility.h"
 #include "limits.h"
 #include "subclass.h"
-
-/* Global data */
-
-extern int CHAOSMODE;
-extern struct room_data *world;
-extern struct char_data *character_list;
 
 void magic_heal(CHAR *ch, int spell, int heal, bool overheal)
 {
@@ -125,7 +120,6 @@ void cast_call_lightning(ubyte level, CHAR *ch, char *arg, int type,
 /* Mana: 15 Damage: (level)d8 */
 {
   CHAR *tmp;
-  extern struct weather_data weather_info;
 
   switch (type) {
   case SPELL_TYPE_SPELL:
@@ -918,7 +912,6 @@ void cast_control_weather( ubyte level, CHAR *ch, char *arg, int type,
 /* Mana: 25 */
 {
   char buffer[MAX_STRING_LENGTH];
-  extern struct weather_data weather_info;
   level=MIN(level,30);
   switch (type) {
   case SPELL_TYPE_SPELL:

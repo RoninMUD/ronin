@@ -12,23 +12,6 @@
  *                                                                           *
  ****************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:05 $
-$Header: /home/ronin/cvs/ronin/spec.monkey.c,v 2.0.0.1 2004/02/05 16:11:05 ronin Exp $
-$Id: spec.monkey.c,v 2.0.0.1 2004/02/05 16:11:05 ronin Exp $
-$Name:  $
-$Log: spec.monkey.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:05  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -49,8 +32,6 @@ $State: Exp $
 #include "act.h"
 #include "reception.h"
 #include "spec_assign.h"
-
-extern struct time_info_data time_info;
 
 int monkey_parrot(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 

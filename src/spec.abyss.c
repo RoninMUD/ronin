@@ -2,71 +2,30 @@
   *  file: spec_procs.c , Special module.                   Part of DIKUMUD *
   *  Usage: Procedures handling special procedures for object/room/mobile   *
   *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
+  *	Revamp by Solmyr 2007-2009
   ************************************************************************* */
 
-/*
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-	Revamp by Solmyr 2007-2009
-	
-$Author: ronin $
-$Date: 2005/01/21 14:55:28 $
-$Header: /home/ronin/cvs/ronin/spec.abyss.c,v 2.3 2005/01/21 14:55:28 ronin Exp $
-$Id: spec.abyss.c,v 2.3 2005/01/21 14:55:28 ronin Exp $
-$Name:  $
-$Log: spec.abyss.c,v $
-
-Revision 2.3  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.2  2004/11/16 04:59:07  ronin
-Typo fix.
-
-Revision 2.1  2004/04/29 11:49:25  ronin
-Fix to AFF_HOLD spec to make it removable by remove_paralysis.
-
-Revision 2.0.0.1  2004/02/05 16:10:11  ronin
-Reinitialization of cvs archives
-
-
-Revision 6-Nov-03 Ranger
-Added room number to disarm log.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
- #include <stdio.h>
- #include <string.h>
- #include <ctype.h>
- #include <stdlib.h>
- #include <unistd.h>
-
- #include "structs.h"
- #include "utils.h"
- #include "comm.h"
- #include "interpreter.h"
- #include "handler.h"
- #include "db.h"
- #include "spells.h"
- #include "limits.h"
- #include "cmd.h"
- #include "utility.h"
- #include "fight.h"
- #include "act.h"
- #include "enchant.h"
- #include "reception.h"
- #include "spec_assign.h"
- /*   external vars  */
-
- extern CHAR *character_list;
- extern struct descriptor_data *descriptor_list;
- extern struct time_info_data time_info;
- extern struct spell_info_type spell_info[MAX_SPL_LIST];
+#include "structs.h"
+#include "utils.h"
+#include "comm.h"
+#include "interpreter.h"
+#include "handler.h"
+#include "db.h"
+#include "spells.h"
+#include "limits.h"
+#include "cmd.h"
+#include "utility.h"
+#include "fight.h"
+#include "act.h"
+#include "enchant.h"
+#include "reception.h"
+#include "spec_assign.h"
 
 #define ABYSS_ZONE      25000
 #define ABYSS_LICH      25000

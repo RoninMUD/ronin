@@ -4,55 +4,26 @@
   *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
   ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/06/30 19:57:28 $
-$Header: /home/ronin/cvs/ronin/spec.grail.c,v 2.1 2004/06/30 19:57:28 ronin Exp $
-$Id: spec.grail.c,v 2.1 2004/06/30 19:57:28 ronin Exp $
-$Name:  $
-$Log: spec.grail.c,v $
-Revision 2.1  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-Revision 2.0.0.1  2004/02/05 16:10:40  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2003/11/02  liner
-Addition of log for objects lost to rust monster.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
- #include <stdio.h>
- #include <string.h>
- #include <ctype.h>
- #include <stdlib.h>
- #include <unistd.h>
-
- #include "structs.h"
- #include "utils.h"
- #include "comm.h"
- #include "interpreter.h"
- #include "handler.h"
- #include "db.h"
- #include "spells.h"
- #include "limits.h"
- #include "cmd.h"
- #include "utility.h"
- #include "fight.h"
- #include "act.h"
- #include "reception.h"
- #include "spec_assign.h"
- /*   external vars  */
-
- extern CHAR *character_list;
- extern struct descriptor_data *descriptor_list;
- extern struct time_info_data time_info;
- extern struct spell_info_type spell_info[MAX_SPL_LIST];
+#include "structs.h"
+#include "utils.h"
+#include "comm.h"
+#include "interpreter.h"
+#include "handler.h"
+#include "db.h"
+#include "spells.h"
+#include "limits.h"
+#include "cmd.h"
+#include "utility.h"
+#include "fight.h"
+#include "act.h"
+#include "reception.h"
+#include "spec_assign.h"
 
  void npc_steal(CHAR *ch,CHAR *victim)
  {

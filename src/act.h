@@ -455,3 +455,4 @@ void add_follower(CHAR *ch, CHAR *leader);
 void wear(CHAR *ch, OBJ *obj_object, int keyword);
 void do_cunning(CHAR *ch, char *argument, int cmd);
 void do_coin_toss(CHAR *ch, char *arg, int cmd);
+void do_movestat(CHAR *ch, char *arg, int cmd);

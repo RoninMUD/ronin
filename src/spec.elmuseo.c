@@ -18,6 +18,7 @@
 #include <ctype.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "regex.h"
@@ -38,15 +39,6 @@
 //
 // External prototypes
 //
-extern struct descriptor_data *descriptor_list;
-extern struct time_info_data time_info;
-
-extern int CHAOSMODE;
-
-extern char *spells[];
-extern char *songs[];
-extern struct idname_struct idname[MAX_ID];
-
 extern void death_list(CHAR *ch);
 extern bool is_caster(CHAR *CH);
 extern int drop_object(CHAR *ch, OBJ *obj);
@@ -3009,7 +3001,7 @@ void extract_victim( char *arg, char *buffer )
 // If no spell found, returns -1.
 //
 // Adapted from spec.marikith.c; fixes memory leak.
-int extract_from_table( char *arg, char**table )
+int extract_from_table( char *arg, const char * const *table )
 {
   char *skip_spaces(char *);
 

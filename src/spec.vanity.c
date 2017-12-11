@@ -8,39 +8,12 @@
 ///
 */
 
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:13:30 $
-$Header: /home/ronin/cvs/ronin/spec.vanity.c,v 2.4 2005/04/27 17:13:30 ronin Exp $
-$Id: spec.vanity.c,v 2.4 2005/04/27 17:13:30 ronin Exp $
-$Name:  $
-$Log: spec.vanity.c,v $
-Revision 2.4  2005/04/27 17:13:30  ronin
-Minor changes needed to compile on Slackware 10 for the new machine.
-
-Revision 2.3  2005/02/14 16:31:17  ronin
-Addition of Tim's Tail
-
-Revision 2.2  2005/01/25 21:49:56  ronin
-Added TIM_TAIL
-
-Revision 2.1  2004/11/16 04:58:57  ronin
-Frenzy symbol.
-
-Revision 2.0.0.1  2004/02/05 16:11:29  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"
@@ -52,8 +25,6 @@ $State: Exp $
 #include "fight.h"
 #include "spec_assign.h"
 #include "interpreter.h"
-
-extern int CHAOSMODE;
 
 /* #define BRAND       29911 purged tan crap too */
 #define LANCE 	    29914

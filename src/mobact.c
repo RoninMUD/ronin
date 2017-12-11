@@ -4,26 +4,10 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:09:47 $
-$Header: /home/ronin/cvs/ronin/mobact.c,v 2.0.0.1 2004/02/05 16:09:47 ronin Exp $
-$Id: mobact.c,v 2.0.0.1 2004/02/05 16:09:47 ronin Exp $
-$Name:  $
-$Log: mobact.c,v $
-Revision 2.0.0.1  2004/02/05 16:09:47  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "spells.h"
 #include "utils.h"
 #include "db.h"
@@ -33,10 +17,6 @@ $State: Exp $
 #include "cmd.h"
 #include "act.h"
 #include "subclass.h"
-
-extern CHAR *character_list;
-extern struct str_app_type str_app[];
-extern int CHAOSMODE;
 
 void hit(CHAR *ch, CHAR *victim, int type);
 void do_kill(struct char_data *ch, char *argument, int cmd);

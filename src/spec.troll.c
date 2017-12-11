@@ -22,6 +22,7 @@
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -34,11 +35,9 @@
 #include "fight.h"
 #include "spec_assign.h"
 
-extern struct time_info_data time_info;
-
 #define STATUS_NORMAL  0
-#define STATUS_FLED    10 
-#define STATUS_READY   20 
+#define STATUS_FLED    10
+#define STATUS_READY   20
 
 int troll_gypsy(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   void do_say (CHAR*, char*, int);

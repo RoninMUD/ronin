@@ -18,6 +18,7 @@
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -32,13 +33,6 @@
 #include "spec_assign.h"
 #include "mob.spells.h"
 #include "subclass.h"
-
-extern struct time_info_data time_info;
-extern struct room_data *world;
-extern struct char_data *character_list;
-extern struct int_app_type int_app[];
-extern struct wis_app_type wis_app[];
-extern int CHAOSMODE;
 
 void cast_rally(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
 {
@@ -1182,7 +1176,6 @@ void cast_engage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
   extern int wpn_extra(CHAR *ch, CHAR *victim, OBJ *wielded);
-  extern struct str_app_type str_app[];
   int dam, w_type, str_index;
   OBJ *wielded = NULL;
 

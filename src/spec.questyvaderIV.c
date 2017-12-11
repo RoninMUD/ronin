@@ -18,7 +18,6 @@
 #include "fight.h"
 #include "spec_assign.h"
 #include "mob.spells.h"
-extern struct time_info_data time_info;
 
 #define MAX_LENGTH 1000
 

@@ -35,6 +35,7 @@ $State: Exp $
 #include <ctype.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"

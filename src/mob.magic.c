@@ -2,41 +2,6 @@
 *  file: mob.magic.c , Implementation of mob spells.      Part of DIKUMUD *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:28 $
-$Header: /home/ronin/cvs/ronin/mob.magic.c,v 2.2 2005/01/21 14:55:28 ronin Exp $
-$Id: mob.magic.c,v 2.2 2005/01/21 14:55:28 ronin Exp $
-$Name:  $
-$Log: mob.magic.c,v $
-Revision 2.2  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.1  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
-
-Revision 2.0.0.1  2004/02/05 16:09:46  ronin
-Reinitialization of cvs archives
-
-Revision 1.4  2003/11/02  liner
-Added "ObjLog:" to all the logs in which mobs extract
-objects with breath.
-
-Revision 1.3  2002/06/18 14:32:20  ronin
-Adding divide_experience before raw_kill to ensure proper quest
-completion.  Addition of flag within divide_experience to force
-amount to 0 if required.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -55,13 +20,6 @@ $State: Exp $
 #include "memory.h"
 #include "enchant.h"
 #include "mob.spells.h"
-
-/* Extern structures */
-
-extern Room *world;
-extern OBJ  *object_list;
-extern CHAR *character_list;
-extern int CHAOSMODE;
 
 /* Extern procedures */
 
@@ -283,7 +241,6 @@ void spell_lightning_breath(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void spell_vanish(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   struct affected_type_5 af;
-  extern int top_of_world;
   int to_room;
   int location;
   bool found = FALSE;

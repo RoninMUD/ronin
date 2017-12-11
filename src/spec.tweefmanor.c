@@ -1,7 +1,7 @@
 /*   spec.tweef.c - Specs for Tweef Manor by Indigo/Feroz/Kith
 
      Written by Kith for RoninMUD
-     Last Modification Date: August 07, 2017 
+     Last Modification Date: August 07, 2017
 
 */
 
@@ -10,7 +10,9 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -24,8 +26,6 @@
 #include "fight.h"
 #include "enchant.h"
 #include "spec_assign.h"
-
-extern struct time_info_data time_info;
 
 /* Zone */
 #define TWEEF_ZONE              209

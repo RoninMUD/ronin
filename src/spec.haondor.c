@@ -7,22 +7,12 @@
 ///   Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2009-06-01 14:55:29 $
-$Header: /home/ronin/cvs/ronin/spec.haondor.c,v 2.1 2005/01/21 14:55:29 ronin Exp $
-$Id: spec.haondor.c,v 2.1 2005/01/21 14:55:29 ronin Exp $
-$Name:  $
-$Log: spec.haondor.c,v $
-
-$State: Exp $
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"
@@ -34,8 +24,6 @@ $State: Exp $
 #include "cmd.h"
 #include "spec_assign.h"
 #include "enchant.h"
-
-extern struct time_info_data time_info;
 
 int green_beret(OBJ *beret, CHAR *ch, int cmd, char *arg)
 {

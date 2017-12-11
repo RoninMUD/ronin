@@ -9,30 +9,6 @@
 ///   Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/11/16 05:04:50 $
-$Header: /home/ronin/cvs/ronin/spec.druids.c,v 2.1 2004/11/16 05:04:50 ronin Exp $
-$Id: spec.druids.c,v 2.1 2004/11/16 05:04:50 ronin Exp $
-$Name:  $
-$Log: spec.druids.c,v $
-Revision 2.1  2004/11/16 05:04:50  ronin
-Typo fix.
-
-Revision 2.0.0.1  2004/02/05 16:10:27  ronin
-Reinitialization of cvs archives
-
-
-Revision 6-Nov-03 Ranger
-Added room number to guardian disarm log.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -54,7 +30,6 @@ $State: Exp $
 #define DRUID_WOLF   24904
 
 extern void do_say(CHAR*,char*,int);
-extern int CHAOSMODE;
 
 int druid_protector(CHAR *mob,CHAR *ch, int cmd, char *arg)
 {

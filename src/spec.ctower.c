@@ -6,22 +6,6 @@
 ///
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:21 $
-$Header: /home/ronin/cvs/ronin/spec.ctower.c,v 2.0.0.1 2004/02/05 16:10:21 ronin Exp $
-$Id: spec.ctower.c,v 2.0.0.1 2004/02/05 16:10:21 ronin Exp $
-$Name:  $
-$Log: spec.ctower.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:21  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -68,7 +52,6 @@ $State: Exp $
 #define PAN            17342
 #define DRAGON_TOOTH   17346
 
-extern int CHAOSMODE;
 void stop_riding(CHAR *ch,CHAR *vict);
 int is_shop(CHAR *mob);
 

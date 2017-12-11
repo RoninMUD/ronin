@@ -9,6 +9,7 @@
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -20,16 +21,9 @@
 #include "act.h"
 #include "cmd.h"
 #include "subclass.h"
+
 /*   external vars  */
 #define WALL_THORNS 34 /* In limbo */
-
-extern struct char_data *character_list;
-extern struct descriptor_data *descriptor_list;
-extern int rev_dir[];
-extern char *dirs[];
-extern int movement_loss[];
-extern struct descriptor_data *descriptor_list;
-extern int CHAOSMODE;
 
 /* external functs */
 
@@ -120,7 +114,6 @@ int dt_or_hazard(CHAR *ch) {
   return FALSE;
 }
 
-extern struct str_app_type str_app[];
 int special(struct char_data *ch, int cmd, char *arg);
 int signal_room(int room, CHAR *ch, int cmd, char *arg);
 int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
@@ -565,7 +558,7 @@ void do_peek(struct char_data *ch, char *argument, int cmd)
   char arg1[MAX_STRING_LENGTH];
   int keyword_no;
   int was_in, percent;
-  char *keywords[]= {
+  const char * const keywords[]= {
     "north",
     "east",
     "south",
@@ -660,7 +653,7 @@ void do_peek(struct char_data *ch, char *argument, int cmd)
 int find_door(struct char_data *ch, char *type, char *dir)
 {
   int door;
-  char *dirs[] =
+  const char * const dirs[] =
     {
       "north",
       "east",
