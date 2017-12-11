@@ -8,23 +8,6 @@
  *                                                                        *
  **************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:53 $
-$Header: /home/ronin/cvs/ronin/spec.labyrinth.c,v 2.0.0.1 2004/02/05 16:10:53 ronin Exp $
-$Id: spec.labyrinth.c,v 2.0.0.1 2004/02/05 16:10:53 ronin Exp $
-$Name:  $
-$Log: spec.labyrinth.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:53  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -32,6 +15,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -56,12 +40,6 @@ $State: Exp $
 #define BOTMAZE        30001
 #define TOPMAZE        30031
 #define BLOODWORM      30002
-
-
-extern struct descriptor_data *descriptor_list;
-extern char *Color[];
-extern char *BKColor[];
-extern int CHAOSMODE;
 
 int c_keg(OBJ *keg, CHAR *ch,int cmd, char *arg) {
   char arg1[MAX_INPUT_LENGTH];

@@ -18,6 +18,7 @@
 #include <errno.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -36,70 +37,18 @@
 #include "shop.h"
 #include "remortv2.h"
 
-/*   external vars  */
+/* external functs */
 
 #define MAX_STAT     25
-extern char *BKColor[];
-extern char *Color[];
 extern char*   crypt __P((__const char *__key, __const char *__salt));
-
-extern struct clan_data clan_list[MAX_CLANS];
-extern struct obj_data  *object_list;
-extern struct char_data *character_list;
-extern struct descriptor_data *descriptor_list;
-extern struct int_app_type int_app[58];
-extern struct wis_app_type wis_app[58];
-extern struct zone_data *zone_table;
-extern struct str_app_type str_app[];
-extern int top_of_mobt;
-extern int top_of_objt;
-extern int top_of_world;
-extern int top_of_zone_table; /* Ranger - June 96 */
 extern int insert_char_wizlist (struct char_data *ch);
-extern struct dex_app_type dex_app[];
-extern char *spells[];
-extern char *item_types[];
-extern char *wear_bits[];
-extern char *extra_bits[];
-extern char *extra_bits2[];
-extern char *subclass_res_bits[];
-extern char *drinks[];
-extern char *dirs[];
-extern struct zone_data *zone_table;
-extern char *room_bits[];
-extern char *exit_bits[];
-extern char *sector_types[];
-extern char *equipment_types[];
-extern char *affected_bits[];
-extern char *apply_types[];
-extern char *pc_class_types[];
-extern char *npc_class_types[];
-extern char *action_bits[];
-extern char *action_bits2[];
-extern char *player_bits[];
-extern char *position_types[];
-extern char *connected_types[];
-extern char *wiz_bits[];
-extern char *immune_bits[];
-extern char *immune_bits2[];
-extern char *resist_bits[];
-extern char *att_types[];
-extern char *att_targets[];
-extern char *wpn_spc[];
-extern char *subclass_name[];
-extern char *subclass_res_bits[];
-/* MAX_ID in db.h */
-extern struct idname_struct idname[MAX_ID];
 
-/* external functs */
 void stop_riding(struct char_data *ch,struct char_data *vict);
 void assign_mobiles(void); /* These 3 added by Ranger - July 96 */
 void assign_objects(void);
 void assign_rooms(void);
 int str_cmp(char *arg1, char *arg2);
 struct time_info_data age(struct char_data *ch);
-void sprinttype(int type, char *names[], char *result);
-void sprintbit(long vektor, char *names[], char *result);
 int mana_limit(struct char_data *ch);
 int hit_limit(struct char_data *ch);
 int move_limit(struct char_data *ch);
@@ -108,15 +57,6 @@ int hit_gain(struct char_data *ch);
 int move_gain(struct char_data *ch);
 int enchantment_special(struct enchantment_type_5 *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
 
-extern int WIZLOCK;
-extern int CHAOSMODE;
-extern int BAMDAY;
-extern int PULSECHECK;
-extern int GAMELOCK;
-extern int GAMECHECK;
-extern int GAMEHALT;
-extern int BOOTFULL;
-extern int DOUBLEXP;
 void do_look(struct char_data *ch, char *argument, int cmd);
 void dsearch(char *string, char *tmp);
 char *string_to_lower(char *string);
@@ -241,7 +181,6 @@ void do_handbook(struct char_data *ch, char *argument, int cmd) {
   }
 }
 
-extern char *Month[];
 extern char str_cut(char *source, char *dest, int number);
 
 int check_god_access(CHAR *ch, int active) {
@@ -995,7 +934,6 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
 
 void do_uptime(struct char_data *ch, char *argument, int cmd)
 {
-  extern int uptime;
   char buf[100];
   int hr=0, min=0, temp=0;
 
@@ -1678,7 +1616,6 @@ void do_walkout(struct char_data *ch, char *arg, int cmd)
 void do_world(struct char_data *ch, char *argument, int cmd)
 {
   char buf[MAX_STRING_LENGTH], buffer[16384];
-  extern int top_of_zone_table, number_of_shops;
   int zone_count;
 
   if(!check_god_access(ch,FALSE)) return;
@@ -1720,7 +1657,6 @@ char gamecheck_txt[MAX_STRING_LENGTH];
 
 void do_system(struct char_data *ch, char *argument, int cmd) {
   char buf[MAX_STRING_LENGTH];
-  extern int avail_descs, maxdesc,disablereboot,reboot_type;
   int count1=0,count2=0,count3=0;
   struct char_data *i_ch;
   struct obj_data *i_obj;
@@ -1793,7 +1729,6 @@ void do_release(CHAR *ch, char *argument, int cmd) {
   char buf[MAX_STRING_LENGTH];
   CHAR *i, *next_dude;
   int sdesc;
-  extern CHAR *character_list;
   struct descriptor_data *d=0;
 
   if(!check_god_access(ch,TRUE)) return;
@@ -2442,7 +2377,6 @@ void do_at(struct char_data *ch, char *argument, int cmd)
   int loc_nr, location, original_loc,zonenum;
   struct char_data *target_mob;
   struct obj_data *target_obj;
-  extern int top_of_world;
 
   if(!check_god_access(ch,FALSE)) return;
 
@@ -2566,7 +2500,6 @@ void do_goto(struct char_data *ch, char *argument, int cmd) {
   int loc_nr, location,zonenum;
   struct char_data *target_mob;
   struct obj_data *target_obj;
-  extern int top_of_world;
 
   if(!check_god_access(ch,FALSE)) return;
 
@@ -2646,7 +2579,6 @@ void do_goto(struct char_data *ch, char *argument, int cmd) {
 extern void show_zone_to_char(CHAR *ch, int zoneNum);
 void do_stat(struct char_data *ch, char *argument, int cmd)
 {
-  extern char *spells[];
   char apt[3];
   struct affected_type_5 *aff;
   struct enchantment_type_5 *ench;
@@ -2666,9 +2598,6 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
   long int mindam,maxdam,avgdam;
   bool found;
   struct sockaddr_in isa;
-  extern int number_of_shops;
-  extern struct shop_data *shop_index;
-
 
   if(!check_god_access(ch,FALSE)) return;
 
@@ -3645,7 +3574,6 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 int copyover_write(int same_room);
 void do_shutdown(struct char_data *ch, char *argument, int cmd)
 {
-  extern int cleanshutdown, cleanreboot,disablereboot,REBOOT_AT,reboot_type;
   char buf[100],arg[MAX_INPUT_LENGTH];
   struct char_data *i=0;
   int next_boot;
@@ -4198,8 +4126,6 @@ int boot_area(char *name)
   char buf[100];
   char filename[35], *nameptr;
   int i,vnum=-1; /* Exist replaced with vnum 28-Jan-03 for zone num display - Ranger*/
-  /* Exist & no_specials added by Ranger - July 96 */
-  extern int no_specials;
 
   nameptr = filename;
 
@@ -5646,10 +5572,6 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
   char buf1[245];
   char buf2[245];
   char buf3[245];
-  extern char *wpn_spc[];
-  extern char *weapon_type[];
-  extern char *spells[];
-  extern char *drinks[];
 
   *buf0 = '\0';
   *buf1 = '\0';
@@ -6459,12 +6381,6 @@ Usage: mstat ac(t) <ACT>\n\r\
   int r_number, number=-1,zonenum, i, found = 0,act,aff,immune,resist;
   long int mindam,maxdam,avgdam,tmp;
   struct string_block sb;
-  extern struct mob_proto *mob_proto_table;
-  extern char *spells[];
-  extern char *immune_bits[];
-  extern char *immune_bits2[];
-  extern char *att_types[];
-  extern char *att_targets[];
 
   argument=one_argument(argument, buf);
 
@@ -7482,7 +7398,6 @@ void do_rshow(struct char_data *ch, char *argument, int cmd) {
   char sects[MAX_INPUT_LENGTH],flags[MAX_INPUT_LENGTH],arg2[MAX_INPUT_LENGTH];
   int i, found = FALSE,flag_check=FALSE,tmp;
   char usage_text[] = "Usage: rshow <text> or rshow flag <flag>. Text must be at least 3 chars.\n\r";
-  extern struct room_data *world;
 
   if(!check_god_access(ch,FALSE)) return;
 
@@ -7554,8 +7469,6 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
   char buf[MAX_INPUT_LENGTH],buf2[MAX_INPUT_LENGTH], buf3[MAX_INPUT_LENGTH],buf4[MAX_INPUT_LENGTH];
   char num[100],type[100];
   struct extra_descr_data *desc;
-  extern struct obj_proto *obj_proto_table;
-  extern struct mob_proto *mob_proto_table;
   char usage_text[] = "Usage: zbrief <zone #> <mobile/object/room> <all mobile> (IMP Only).\n\r";
   char fu[]=" ",sa[]=" ",sp[]=" ",sh[]=" ",in[]=" ",du[]=" ",pe[]=" ",al[]=" ",dg[]=" ",ag[]=" ";
   FILE *fl;
@@ -7770,11 +7683,6 @@ void do_zshow(struct char_data *ch, char *argument, int cmd) {
   char buf2[MAX_INPUT_LENGTH],flags[MAX_INPUT_LENGTH];
   struct string_block sb;
   char num[100],type[100];
-  extern struct obj_proto *obj_proto_table;
-  extern struct room_data *world;
-  extern struct mob_proto *mob_proto_table;
-  extern int number_of_shops;
-  extern struct shop_data *shop_index;
   char usage_text[] = "Usage: zshow <zone #> <mobile/object/room/shop>.\n\r";
   bool show_repop=FALSE;
 
@@ -8060,7 +7968,6 @@ long int exp_per_hour(int i) {
   int j;
   float rounds_per_tank,extra_miracles,extra_rounds,rounds_to_kill,num_of_kills,rounds_plus_rest;
   long int hps,dam,exp,exp_per_hour;
-  extern struct mob_proto *mob_proto_table;
 
   if(mob_proto_table[i].exp<1) return 0;
 
@@ -8310,19 +8217,6 @@ void help_contents(struct help_index_element *help_index,char *contents, int top
 void boot_social_messages(void);
 
 void do_reindex(struct char_data *ch, char *argument, int cmd) {
-  extern int top_of_helpt,top_of_wizhelpt,top_of_olchelpt;
-  extern struct help_index_element *help_index,*wizhelp_index,*olchelp_index;
-  extern char helpcontents[3*MSL];
-  extern char wizhelpcontents[3*MSL];
-  extern char olchelpcontents[3*MSL];
-  extern FILE *help_fl,*wizhelp_fl,*olchelp_fl;
-  extern char credits[MAX_STRING_LENGTH];
-  extern char heroes[MAX_STRING_LENGTH];
-  extern char news[MAX_STRING_LENGTH];
-  extern char motd[MAX_STRING_LENGTH];
-  extern char newbiemotd[MAX_STRING_LENGTH];
-  extern char godmotd[MAX_STRING_LENGTH];
-  extern char help[MAX_STRING_LENGTH];
   char arg[MAX_INPUT_LENGTH];
   char usage[]={"\
 This command is for reindexing and reloading various\n\r\

@@ -43,11 +43,6 @@ struct char_data *character_list = 0; /* global l-list of chars          */
 
 struct zone_data *zone_table;         /* table of reset data             */
 struct message_list fight_messages[MAX_MESSAGES]; /* fighting messages   */
-extern int CHAOSMODE;
-extern int BAMDAY;
-extern int BOOTFULL;
-extern int TOKENCOUNT;
-extern char CREATEIMP[];
 
 char credits[MSL];      /* the Credits List                */
 char heroes[MSL];       /* the Heroes List                */
@@ -96,9 +91,6 @@ void initial_boot_area(char *name);
 void examine_last_command(void);
 
 /* external refs */
-extern struct descriptor_data *descriptor_list;
-extern int noroomdesc;
-extern int noextradesc;
 void read_vote(void);
 void read_voters (void);
 void load_messages(void);
@@ -132,7 +124,6 @@ void boot_db(void)
 {
      int i,token_number,loop=0,n_mid=0,s_mid=0;
      FILE *wiz_fl,*wiz_in_fl;
-     extern int no_specials;
 
      log_f("Boot db -- BEGIN.");
 
@@ -610,7 +601,6 @@ void reset_time(void)
 void update_time(void)
 {
      FILE *f1;
-     extern struct time_info_data time_info;
      long current_time;
 
      return;

@@ -6,29 +6,6 @@
 ** 09/20/02, check for chaotic rooms only. -Liner
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:16 $
-$Header: /home/ronin/cvs/ronin/spec.cavern.c,v 2.0.0.1 2004/02/05 16:10:16 ronin Exp $
-$Id: spec.cavern.c,v 2.0.0.1 2004/02/05 16:10:16 ronin Exp $
-$Name:  $
-$Log: spec.cavern.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:16  ronin
-Reinitialization of cvs archives
-
-Revision 1.4  2002/09/20 18:36:10  ronin
-Added check for CHAOTIC room to do the deathlist creation.
-
-Revision 1.3  2002/09/15 16:32:15  ronin
-Addition of deathlist creation for soul eq transfer in int cs_soul_spec.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -75,8 +52,6 @@ $State: Exp $
 #define SHOES       16811
 #define RING        16828
 #define GATESMAN    16812
-
-extern struct time_info_data time_info;
 
 int tajjo_ring(OBJ *ring, CHAR *ch, int cmd, char *arg) {
 

@@ -1,45 +1,4 @@
 /*
-$Author: ronin $
-$Date: 2005/04/27 17:13:30 $
-$Header: /home/ronin/cvs/ronin/spec.invasion.c,v 2.3 2005/04/27 17:13:30 ronin Exp $
-$Id: spec.invasion.c,v 2.3 2005/04/27 17:13:30 ronin Exp $
-$Name:  $
-$Log: spec.invasion.c,v $
-Revision 2.3  2005/04/27 17:13:30  ronin
-Minor changes needed to compile on Slackware 10 for the new machine.
-
-Revision 2.2  2005/01/21 14:55:29  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.1  2004/02/10 20:05:54  ronin
-Check added to prevent two non-existent mob vnums from being used in
-xykloqtium spec.
-
-Revision 2.0.0.1  2004/02/05 16:10:50  ronin
-Reinitialization of cvs archives
-
-Revision 1.6  2003/01/03 17:37:22  ronin
-Adding more fixes to tear_room, etc.
-
-Revision 1.5  2003/01/02 16:07:22  ronin
-Fixing xyklo and chaos specs.
-
-Revision 1.4  2002/12/27 23:35:22  ronin
-Fixing vexlok and ice wall disint specs.
-
-Revision 1.3  2002/12/27 12:33:15  ronin
-Fixing various specs, percentages, etc.
-
-Revision 1.2  2002/12/24 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-/*
   spec.invasion.c - Specs for Demon Invasion, by Night
 
   Written by Alan K. Miles for RoninMUD
@@ -55,6 +14,7 @@ $State: Exp $
 
 /* Ronin Includes */
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "db.h"
 #include "cmd.h"
@@ -68,10 +28,6 @@ $State: Exp $
 #include "spells.h"
 #include "act.h"
 #include "utility.h"
-
-/* Externs */
-extern struct time_info_data time_info;
-extern int CHAOSMODE;
 
 /* Defines */
 /* Rooms*/

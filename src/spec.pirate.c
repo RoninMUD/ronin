@@ -7,34 +7,12 @@
 ///   Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:29 $
-$Header: /home/ronin/cvs/ronin/spec.pirate.c,v 2.1 2005/01/21 14:55:29 ronin Exp $
-$Id: spec.pirate.c,v 2.1 2005/01/21 14:55:29 ronin Exp $
-$Name:  $
-$Log: spec.pirate.c,v $
-Revision 2.1  2005/01/21 14:55:29  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.0.0.1  2004/02/05 16:11:11  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"
@@ -45,8 +23,6 @@ $State: Exp $
 #include "utility.h"
 #include "cmd.h"
 #include "spec_assign.h"
-
-extern struct time_info_data time_info;
 
 void stop_fighting (CHAR *ch);
 void hit (CHAR *ch, CHAR *vict, int type);

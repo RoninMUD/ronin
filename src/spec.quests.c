@@ -6,40 +6,12 @@
 ///   Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:29 $
-$Header: /home/ronin/cvs/ronin/spec.quests.c,v 2.2 2005/01/21 14:55:29 ronin Exp $
-$Id: spec.quests.c,v 2.2 2005/01/21 14:55:29 ronin Exp $
-$Name:  $
-$Log: spec.quests.c,v $
-Revision 2.2  2005/01/21 14:55:29  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.1  2004/10/06 12:15:50  ronin
-Changed ugly fur coat to spec more often, but with less damage.
-
-Revision 2.0.0.1  2004/02/05 16:11:12  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2002/05/29 04:56:54  ronin
-Addition of whapmaster spec.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -53,7 +25,6 @@ $State: Exp $
 #include "act.h"
 #include "spec_assign.h"
 
-extern int CHAOSMODE;
 void stop_fighting (CHAR *);
 void hit (CHAR *, CHAR *, int);
 void do_look(CHAR *ch, char *argument, int cmd);
@@ -365,7 +336,6 @@ int xalth_mob(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   CHAR *vict=0,*tmp;
   OBJ *obj;
   int i,to_room;
-  extern int top_of_world;
 
   if(cmd==MSG_TICK) { /* mob beam routine */
     if(chance(66)) return FALSE;

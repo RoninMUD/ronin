@@ -15,63 +15,30 @@
 //            - added more specs for tyrant & emir Nov 18/96     Quack
 */
 
-/*
-$Author: ronin $
-$Date: 2004/06/30 19:57:28 $
-$Header: /home/ronin/cvs/ronin/spec.pagoda.c,v 2.3 2004/06/30 19:57:28 ronin Exp $
-$Id: spec.pagoda.c,v 2.3 2004/06/30 19:57:28 ronin Exp $
-$Name:  $
-$Log: spec.pagoda.c,v $
-Revision 2.3  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-Revision 2.2  2004/05/12 13:21:30  ronin
-Dice roll prize descriptions will only show up if the player rolling the
-quest dice has their quest flag turned on.
+#include "structs.h"
+#include "constants.h"
+#include "utils.h"
+#include "comm.h"
+#include "interpreter.h"
+#include "handler.h"
+#include "db.h"
+#include "spells.h"
+#include "limits.h"
+#include "cmd.h"
+#include "utility.h"
+#include "fight.h"
+#include "act.h"
+#include "reception.h"
+#include "spec_assign.h"
+#include "mob.spells.h"
 
-Revision 2.1  2004/05/05 20:40:17  ronin
-Added prize list with die roll display.
-
-Revision 2.0.0.1  2004/02/05 16:11:10  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2002/03/31 16:45:59  ronin
-Added bool to extern bool is_caster(CHAR *CH) to remove default to int
-declaration of is_caster.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
- #include <stdio.h>
- #include <string.h>
- #include <ctype.h>
- #include <stdlib.h>
- #include <unistd.h>
-
- #include "structs.h"
- #include "utils.h"
- #include "comm.h"
- #include "interpreter.h"
- #include "handler.h"
- #include "db.h"
- #include "spells.h"
- #include "limits.h"
- #include "cmd.h"
- #include "utility.h"
- #include "fight.h"
- #include "act.h"
- #include "reception.h"
- #include "spec_assign.h"
- #include "mob.spells.h"
- /*   external vars  */
-
- extern CHAR *character_list;
- extern bool is_caster(CHAR *CH);
- extern struct descriptor_data *descriptor_list;
- extern struct spell_info_type spell_info[MAX_SPL_LIST];
+extern bool is_caster(CHAR *CH);
 
 int p_emir(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   CHAR *vict=NULL;

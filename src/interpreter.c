@@ -19,7 +19,7 @@
 #include <unistd.h>
 
 #include "structs.h"
-
+#include "constants.h"
 #include "interpreter.h"
 #include "db.h"
 #include "utils.h"
@@ -41,23 +41,13 @@
 #define STATE(d) ((d)->connected)
 #define MAX_CMD_LIST 400
 
-extern char *BKColor[];
-extern char motd[MAX_STRING_LENGTH];
-extern char godmotd[MAX_STRING_LENGTH];
-extern char newbiemotd[MAX_STRING_LENGTH];
-extern CHAR *character_list;
 int max_connects=0;
 struct command_info cmd_info[MAX_CMD_LIST];
 extern char*   crypt __P((__const char *__key, __const char *__salt));
-extern int CHAOSMODE;
 
 char echo_on[]  = {IAC, WONT, TELOPT_ECHO, '\r', '\n', '\0'};
 char echo_off[] = {IAC, WILL, TELOPT_ECHO, '\0'};
 char last_command[MSL];
-
-extern int WIZLOCK;
-extern int GAMELOCK;
-extern int GAMECHECK;
 
 /* external fcntls */
 
@@ -127,7 +117,7 @@ char *unknownCMD[] = {
   };
 
 
-char *fill[]=
+const char * const fill[]=
 { "in",
   "from",
   "with",
@@ -138,7 +128,7 @@ char *fill[]=
   "\n"
 };
 
-char *ill_name[]=
+const char * const ill_name[]=
 { "up",
   "down",
   "north",
@@ -148,22 +138,30 @@ char *ill_name[]=
   "\n"
 };
 
-int search_block(char *arg, char **list, bool exact)
+int search_block(const char *arg, const char * const *list, bool exact)
 {
+  char buf[MAX_INPUT_LENGTH];
   register int i,l;
 
+  if (!arg) {
+    return -1;
+  }
+
+  strncpy(buf, arg, sizeof(buf)-1);
+  buf[sizeof(buf)-1] = '\0';
+
   /* Make into lower case, and get length of string */
-  for (l=0; *(arg+l); l++)
-     *(arg+l)=LOWER(*(arg+l));
+  for (l=0; *(buf+l); l++)
+     *(buf+l)=LOWER(*(buf+l));
   if (exact) {
    for(i=0; **(list+i) != '\n'; i++)
-    if (!strcmp(arg, *(list+i)))
+    if (!strcmp(buf, *(list+i)))
       return(i);
   } else {
     if (!l)
       l=1; /* Avoid "" to match the first available string */
       for(i=0; **(list+i) != '\n'; i++)
-       if (!strncmp(arg, *(list+i), l))
+       if (!strncmp(buf, *(list+i), l))
    return(i);
   }
   return(-1);
@@ -183,7 +181,7 @@ int determine_command(char *command,int length)
   return i;
 }
 
-int old_search_block(char *argument,int begin,int length,char **list,int mode)
+int old_search_block(const char *argument,int begin,int length,const char * const *list,int mode)
 {
   int guess, found, search;
 
@@ -213,7 +211,6 @@ int old_search_block(char *argument,int begin,int length,char **list,int mode)
 void command_interpreter(CHAR *ch, char *argument)
 {
   int index;
-  extern int no_specials;
   char *command,*args;
 #ifndef TEST_SITE
   char buf[MAX_STRING_LENGTH];
@@ -1254,8 +1251,6 @@ void nanny(struct descriptor_data *d, char *arg) {
   CHAR  *tmp_ch;
   struct obj_cost cost;
   struct descriptor_data *k, *e;
-  extern struct descriptor_data *descriptor_list;
-  extern struct char_data *character_list;
   struct sockaddr_in isa;
   void do_look(CHAR *ch, char *argument, int cmd);
 

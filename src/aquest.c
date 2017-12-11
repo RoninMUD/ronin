@@ -30,15 +30,7 @@
 #include "mob.spells.h"
 #include "subclass.h"
 
-extern struct descriptor_data *descriptor_list;
-
-extern struct obj_data  *object_list;
-extern int top_of_world;
-extern int top_of_zone_table;
-
-extern struct idname_struct idname[MAX_ID];
 extern void mob_do(CHAR* mob, char *arg);
-extern OBJ  *object_list;
 
 int check_guildmaster(CHAR *ch, CHAR *mob) {
   if(!ch) return TRUE;

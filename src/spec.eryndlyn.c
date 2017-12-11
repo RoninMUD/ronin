@@ -10,26 +10,6 @@
 ///  -Dec 2001 - added two vanity scythes-assigns to spec. -by Liner
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:35 $
-$Header: /home/ronin/cvs/ronin/spec.eryndlyn.c,v 2.0.0.1 2004/02/05 16:10:35 ronin Exp $
-$Id: spec.eryndlyn.c,v 2.0.0.1 2004/02/05 16:10:35 ronin Exp $
-$Name:  $
-$Log: spec.eryndlyn.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:35  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2002/05/09 20:19:46  ronin
-Relic message on tick made more random.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -51,11 +31,7 @@ $State: Exp $
 #include "act.h"
 #include "spec_assign.h"
 
-extern struct time_info_data time_info;
-extern struct char_data *character_list;
 void move_eq_from_to (struct char_data *fch, struct char_data *tch);
-extern OBJ *object_list;
-extern CHAR *character_list;
 
 /*************************
 MOB SPECS

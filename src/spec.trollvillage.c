@@ -23,32 +23,6 @@
 *
  ****************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:29 $
-$Header: /home/ronin/cvs/ronin/spec.trollvillage.c,v 2.1 2005/01/21 14:55:29 ronin Exp $
-$Id: spec.trollvillage.c,v 2.1 2005/01/21 14:55:29 ronin Exp $
-$Name:  $
-$Log: spec.trollvillage.c,v $
-Revision 2.1  2005/01/21 14:55:29  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.0.0.1  2004/02/05 16:11:26  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/04/15 03:26:36  ronin
-Update of acts and small changes to spec percentages.
-
-Revision 1.1  2002/04/13 14:41:05  ronin
-spec.troll.c replaced with spec.trollvillage.c.  spec.trollcastle-moat.c
-specs for a new area.
-
-$State: Exp $
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -56,6 +30,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -68,8 +43,6 @@ $State: Exp $
 #include "fight.h"
 #include "spec_assign.h"
 #include "act.h"
-
-extern struct time_info_data time_info;
 
 #define STATUS_NORMAL  0
 #define STATUS_FLED    10

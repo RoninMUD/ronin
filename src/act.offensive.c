@@ -10,6 +10,7 @@
 #include <math.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -25,15 +26,6 @@
 #include "mob.spells.h"
 #include "subclass.h"
 #include "enchant.h"
-
-extern int CHAOSMODE;
-extern struct room_data *world;
-extern struct descriptor_data *descriptor_list;
-extern struct char_data *character_list;
-extern struct room_data *world;
-extern struct dex_app_type dex_app[];
-extern struct int_app_type int_app[];
-extern struct wis_app_type wis_app[];
 
 int MAX_PRAC(CHAR *ch);
 void raw_kill(struct char_data *ch);

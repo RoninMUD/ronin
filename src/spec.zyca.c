@@ -13,6 +13,8 @@
 
 /* Ronin Includes */
 #include "structs.h"
+#include "constants.h"
+#include "db.h"
 #include "utils.h"
 #include "act.h"
 #include "cmd.h"

@@ -3,53 +3,6 @@
 *  Usage : Spells                                                         *
 ************************************************************************* */
 
-/*
-$Author: void $
-$Date: 2004/11/19 17:20:33 $
-$Header: /home/ronin/cvs/ronin/spells.h,v 2.10 2004/11/19 17:20:33 void Exp $
-$Id: spells.h,v 2.10 2004/11/19 17:20:33 void Exp $
-$Name:  $
-$Log: spells.h,v $
-Revision 2.10  2004/11/19 17:20:33  void
-Changed name of lvl 50 ninja spell to mystic swiftness
-
-Revision 2.9  2004/11/19 14:47:21  void
-New Level 50 Ninja Spell (adds chance of 3rd hit)
-
-Revision 2.8  2004/11/17 19:21:53  void
-Added Nomad Skill Cover (1/2 Damage -10 Hitroll)
-
-Revision 2.7  2004/10/21 17:08:22  void
-Added level 50 AP spell Blood Lust
-
-Revision 2.6  2004/09/29 22:56:13  void
-Spell Rush for Commando
-
-Revision 2.5  2004/09/28 14:28:01  void
-Added Level 50 Cleric Spell Divine Intervention
-
-Revision 2.4  2004/09/22 21:58:26  void
-Added level 50 Mage spell Quick (Allows for 2 casts in a single combat
-round)
-
-Revision 2.3  2004/08/17 15:37:49  void
-Added Warrior Skill Quad
-
-Revision 2.2  2004/06/30 19:57:29  ronin
-Update of saving throw routine.
-
-Revision 2.1  2004/02/19 19:20:22  void
-Added Spell Shroud of Existence (Good Align Commando Spell)
-
-Revision 2.0.0.1  2004/02/05 16:13:38  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 /* Damage types for skills/spells/specs. */
 #define DAM_NO_BLOCK                  0 /* Not Blocked */
 #define DAM_POISON                    1
@@ -969,3 +922,7 @@ void spell_perceive(ubyte level, struct char_data *ch, struct char_data *victim,
 void spell_wind_slash(ubyte level, struct char_data *ch, struct char_data *victim, struct obj_data *obj); /* Project Tsurugi */
 
 void magic_heal(struct char_data *ch, int spell, int heal, bool overheal);
+
+/* externals */
+
+extern struct spell_info_type spell_info[MAX_SPL_LIST+1];

@@ -3,23 +3,6 @@
  *   Special procedure module for Theldon's Crypt               *
  ****************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:21 $
-$Header: /home/ronin/cvs/ronin/spec.theldon.c,v 2.0.0.1 2004/02/05 16:11:21 ronin Exp $
-$Id: spec.theldon.c,v 2.0.0.1 2004/02/05 16:11:21 ronin Exp $
-$Name:  $
-$Log: spec.theldon.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:21  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -27,6 +10,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -46,7 +30,6 @@ $State: Exp $
 #define THELDONS_TOMB   ITEM(THELDON_ZONE,7)
 #define UNDEAD_THELDON  ITEM(THELDON_ZONE,3)
 
-extern struct time_info_data time_info;
 extern int find_obj(int v_num, int virt_room);
 
 /* The Axe of Theldon */

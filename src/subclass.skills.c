@@ -19,6 +19,7 @@
 #include <math.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -34,13 +35,6 @@
 #include "mob.spells.h"
 #include "subclass.h"
 #include "enchant.h"
-
-extern int CHAOSMODE;
-extern struct room_data *world;
-extern struct char_data *character_list;
-extern struct dex_app_type dex_app[];
-extern struct wis_app_type wis_app[];
-extern struct obj_data  *object_list;
 
 int calc_position_damage(int position, int dam);
 int stack_position(CHAR *ch, int target_position);

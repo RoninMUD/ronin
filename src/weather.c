@@ -8,6 +8,7 @@
 #include <string.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"
@@ -15,10 +16,6 @@
 #include "db.h"
 #include "weather.h"
 #include "utility.h"
-
-/* Externs */
-extern struct time_info_data time_info;
-extern struct weather_data weather_info;
 
 /* Prototypes */
 void weather_and_time(int mode);
@@ -85,8 +82,6 @@ void another_hour(int mode)
 
 void weather_change(void)
 {
-  extern char *dirs[];
-
   int diff = 0, change = 0;
   char buf[MSL];
 

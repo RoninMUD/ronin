@@ -85,8 +85,6 @@
 
 /* External structs */
 
-extern struct mob_proto *mob_proto_table;
-extern struct time_info_data time_info;
 struct char_data *get_random_vict(struct char_data *ch);
 
 /* Gear functions */
@@ -95,8 +93,7 @@ void gear_change(CHAR *mob, int wear_pos, int violObj, int whiteObj, int redObj,
 {
 	OBJ *obj = NULL;
 	bool violet = FALSE, white = FALSE, red = FALSE, black = FALSE, green = FALSE;
-	
-	if((obj = get_obj_in_list_num(real_object(violObj), mob->equipment[wear_pos])))
+  if((obj = get_obj_in_list_num(real_object(violObj), mob->equipment[wear_pos])))
 		violet = TRUE;
 	if((obj = get_obj_in_list_num(real_object(whiteObj), mob->equipment[wear_pos])))
 		white = TRUE;

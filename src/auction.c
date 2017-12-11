@@ -15,46 +15,6 @@
 May 98 - Lowered 50K to 30K
 */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:26 $
-$Header: /home/ronin/cvs/ronin/auction.c,v 2.2 2005/01/21 14:55:26 ronin Exp $
-$Id: auction.c,v 2.2 2005/01/21 14:55:26 ronin Exp $
-$Name:  $
-$Log: auction.c,v $
-Revision 2.2  2005/01/21 14:55:26  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.1  2004/03/04 17:23:57  ronin
-Addition of object file version 2 which includes 8 ownerid fields
-for addition of some objects only being able to be used by those
-owners.
-
-Revision 2.0.0.1  2004/02/05 16:08:53  ronin
-Reinitialization of cvs archives
-
-Revision 1.5  2002/04/18 04:07:30  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision - changed collection time for auction from 4 days to 20 days
-
-Revision 1.4  2002/03/31 16:46:42  ronin
-Added #include <string.h> to remove implicit declaration warning.
-
-Revision 1.3  2002/03/31 08:44:42  ronin
-Replaced #include <sys/time.h> with <time.h> to elminate several time
-warnings.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <strings.h>
 #include <time.h>
@@ -97,9 +57,6 @@ $State: Exp $
 #define CMD_look    15
 #define AUCTION_FILE "auction.data"
 
-extern CHAR *character_list;
-extern struct descriptor_data *descriptor_list;
-extern int CHAOSMODE;
 void auction_recover(CHAR *auctioneer, CHAR *ch, char *arg); /* Add Jan 2000 - Ranger */
 char *str_dup(char *source);
 

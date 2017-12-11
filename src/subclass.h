@@ -7,22 +7,8 @@
 ** Do not distribute without permission.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:13:41 $
-$Header: /home/ronin/cvs/ronin/subclass.h,v 2.0.0.1 2004/02/05 16:13:41 ronin Exp $
-$Id: subclass.h,v 2.0.0.1 2004/02/05 16:13:41 ronin Exp $
-$Name:  $
-$Log: subclass.h,v $
-Revision 2.0.0.1  2004/02/05 16:13:41  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
+#ifndef _SUBCLASS_H_
+#define _SUBCLASS_H_
 
 /* utility*/
 int check_sc_access(CHAR *ch,int s);
@@ -117,3 +103,7 @@ void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, O
 void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+
+extern int token_mob_time;
+
+#endif /* _SUBCLASS_H_ */

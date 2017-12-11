@@ -36,7 +36,6 @@
 #include "reception.h"
 #include "act.h"
 
-extern struct mob_proto *mob_proto_table;
 int do_vault(CHAR *mob,CHAR *ch,int cmd,char *arg);
 int receptionist(CHAR *mob, CHAR *ch, int cmd, char *arg);
 void do_look(struct char_data *ch, char *argument, int cmd);
@@ -47,7 +46,6 @@ void store_to_char_2(struct char_file_u_2 *st, CHAR *ch);
 void auto_rent(CHAR *ch);
 int char_version(FILE *fl);
 void rank_char(CHAR *ch);
-extern CHAR *character_list;
 struct clan_data clan_list[MAX_CLANS];
 #define SHERIFF_BADGE 6900
 
@@ -1639,10 +1637,6 @@ int he_block(int room, CHAR *ch, int cmd, char *arg)
   Written by Alan K. Miles for RoninMUD
   Last Modification Date: 01/30/2003
 */
-
-/* Externs */
-extern struct time_info_data time_info;
-
 
 /* Defines */
 

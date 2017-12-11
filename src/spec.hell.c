@@ -14,72 +14,6 @@
 *                                                                           *
 \***************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:28 $
-$Header: /home/ronin/cvs/ronin/spec.hell.c,v 2.3 2005/01/21 14:55:28 ronin Exp $
-$Id: spec.hell.c,v 2.3 2005/01/21 14:55:28 ronin Exp $
-$Name:  $
-$Log: spec.hell.c,v $
-Revision 2.3  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.2  2004/11/16 04:58:37  ronin
-Chaos 2004 Update
-
-Revision 2.1  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
-
-Revision 2.0.0.1  2004/02/05 16:10:45  ronin
-Reinitialization of cvs archives
-
-
-Revision 6-Nov-03 Ranger
-Added room number to disarm log.
-
-Revision 1.13 2003/11/03 ronin
-Added check_equipment for all GET_ALIGN changes.
-
-Revision 1.12 2003/02/08 22:22:22  ronin
-Added a check in night_sword for charmies wielding ANTI-MORTAL weapons.
-May have to limit anti-mortal gear later to anti-rent as well.
-
-Revision 1.11 2002/12/22 22:22:22  ronin
-Added lots of connect checks before any enchantment additions.
-
-Revision 1.10 2002/12/10 22:22:22  ronin
-Fixing Fayn again, blah.
-
-Revision 1.9  2002/10/13 23:13:22  ronin
-A ton of fixes for crashers.. logs to reaper and bridge_guards.
-
-Revision 1.8  2002/09/02 13:52:50  ronin
-Added tokens and steal fixes, fix to floating room, break on
-token.
-
-Revision 1.7  2002/06/18 14:32:20  ronin
-Adding divide_experience before raw_kill to ensure proper quest
-completion.  Addition of flag within divide_experience to force
-amount to 0 if required.
-
-Revision 1.6  2002/06/11 18:49:18  ronin
-More adjustments and fixes to hell specs.
-
-Revision 1.5  2002/06/05 02:56:56  ronin
-Various fixes to improve stability.
-
-Revision 1.4  2002/05/29 04:54:32  ronin
-Hell now an active area, most recent version of code added.
-
-
-$State: Exp $
-*/
-
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -87,6 +21,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -102,16 +37,6 @@ $State: Exp $
 #include "act.h"
 #include "spec_assign.h"
 #include "mob.spells.h"
-
-extern Room *world;
-extern int CHAOSMODE;
-extern char *spells[];
-extern struct mob_proto *mob_proto_table;
-extern struct obj_proto *obj_proto_table;
-extern struct time_info_data time_info;
-extern struct descriptor_data *descriptor_list;
-extern struct weather_data weather_info;
-extern struct spell_info_type spell_info[MAX_SPL_LIST+1];
 
 #define GRIM_REAPER          25300
 #define FAYN                 25321
@@ -829,7 +754,7 @@ int Flame_Cloak(OBJ *obj,CHAR *ch, int cmd, char *argument) {
 }
 
 
-char *geryon_song[] =
+const char * const geryon_song[] =
 {
   "ode to the big black demon i call my lord",	/* 1 */
   "\n",
@@ -5295,7 +5220,6 @@ int ouchie_flakes(int room, CHAR *ch, int cmd, char *arg) {
 
 
 int typos(int room, CHAR *ch, int cmd, char *arg) {
-  extern char *unknownCMD[];
   OBJ *obj, *next_obj;
   char buf[MIL];
   int vroom;

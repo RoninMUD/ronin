@@ -6,40 +6,10 @@
 */
 /* Project Epee */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+#ifndef _SCORE_H_
+#define _SCORE_H_
 
 #include "structs.h"
-#include "comm.h"
-#include "db.h"
-#include "fight.h"
-#include "handler.h"
-#include "interpreter.h"
-#include "limits.h"
-#include "spec.clan.h"
-#include "spells.h"
-#include "utility.h"
-#include "utils.h"
-#include "enchant.h"
-#include "remortv2.h"
-
-extern char *skip_spaces(char *string);
-extern int hit_gain(CHAR *ch);
-extern int mana_gain(CHAR *ch);
-extern int move_gain(CHAR *ch);
-extern int check_subclass(CHAR *ch, int sub, int lvl);
-
-extern const int exp_table[58];
-extern char *pc_class_types[];
-extern char *npc_class_types[];
-extern char *subclass_name[];
-extern char *wiz_bits[];
-extern struct str_app_type str_app[];
-extern struct dex_app_type dex_app[];
-extern struct clan_data clan_list[MAX_CLANS];
-extern struct zone_data *zone_table;
 
 #define SCQ_NAME           0
 #define SCQ_TITLE          1
@@ -104,3 +74,5 @@ int calc_bhd(CHAR *ch);
 int calc_avg_damage(CHAR *ch, int weapon_slot);
 void score_query(CHAR *ch, int query, bool opt_text, bool new_line);
 void do_score(CHAR *ch, char *argument, int cmd);
+
+#endif /* _SCORE_H_ */

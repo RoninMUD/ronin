@@ -6,22 +6,6 @@
 ** mods by Ranger
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:52 $
-$Header: /home/ronin/cvs/ronin/spec.keening.c,v 2.0.0.1 2004/02/05 16:10:52 ronin Exp $
-$Id: spec.keening.c,v 2.0.0.1 2004/02/05 16:10:52 ronin Exp $
-$Name:  $
-$Log: spec.keening.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:52  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -29,6 +13,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -43,8 +28,6 @@ $State: Exp $
 #include "act.h"
 #include "spec_assign.h"
 #include "mob.spells.h"
-
-extern struct obj_data  *object_list;
 
 #define MOB_ARAK_PRIEST  14509
 

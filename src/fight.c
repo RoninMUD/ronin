@@ -13,6 +13,7 @@
 #include <time.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "act.h"
@@ -27,50 +28,12 @@
 #include "memory.h"
 #include "limits.h"
 #include "enchant.h"
+#include "quest.h"
 
 /* Structures */
 
 CHAR *combat_list = 0;      /* head of l-list of fighting chars */
 CHAR *combat_next_dude = 0; /* Next dude global trick           */
-
-extern char *Color[];
-extern char *spells[];
-extern char *BKColor[];
-
-/* External structures */
-struct scoreboard_data
-{
-  char killer[80];
-  char killed[80];
-  char location[80];
-  char time_txt[80];
-};
-
-extern struct scoreboard_data scores[101];
-extern int number_of_kills;
-
-extern struct time_info_data time_info;
-extern struct obj_proto *obj_proto_table;
-
-extern struct message_list fight_messages[MAX_MESSAGES];
-
-extern struct char_data *character_list;
-extern struct descriptor_data *descriptor_list;
-extern struct obj_data  *object_list;
-
-extern int thaco[11][58];
-extern byte backstab_mult[58];
-extern byte circle_mult[58];
-extern byte ambush_mult[58];
-extern byte assault_mult[58];
-
-extern struct str_app_type str_app[];
-extern struct dex_app_type dex_app[];
-extern struct con_app_type con_app[];
-
-extern int CHAOSMODE;
-extern int CHAOSDEATH;
-extern int DOUBLEXP;
 
 /* External procedures */
 

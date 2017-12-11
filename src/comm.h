@@ -3,22 +3,8 @@
 *  Usage: Prototypes for the common functions in comm.c                   *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:13:04 $
-$Header: /home/ronin/cvs/ronin/comm.h,v 2.0.0.1 2004/02/05 16:13:04 ronin Exp $
-$Id: comm.h,v 2.0.0.1 2004/02/05 16:13:04 ronin Exp $
-$Name:  $
-$Log: comm.h,v $
-Revision 2.0.0.1  2004/02/05 16:13:04  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
+#ifndef _COMM_H_
+#define _COMM_H_
 
 #define COPYOVER_FILE "copyover.dat"
 
@@ -62,3 +48,25 @@ int signal_zone(struct char_data *ch, int zone,int cmd, char*arg);
 int write_to_descriptor(int desc, char *txt);
 void write_to_q(char *txt, struct txt_q *queue);
 #define SEND_TO_Q(messg, desc)  write_to_q((messg), &(desc)->output)
+
+extern struct descriptor_data *descriptor_list;
+extern int uptime;
+
+extern int tics;
+
+extern int TOKENCOUNT;
+extern int REBOOT_AT;
+extern int avail_descs;
+extern int maxdesc;
+extern int disablereboot;
+extern int reboot_type;
+extern int cleanshutdown;
+extern int cleanreboot;
+extern int chreboot;
+extern int no_specials;
+extern int noroomdesc;
+extern int noextradesc;
+extern int slow_death;
+extern char CREATEIMP[];
+
+#endif /* _COMM_H_ */

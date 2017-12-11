@@ -4,23 +4,6 @@
  * Small mod by Ranger                                                     *
  ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:09 $
-$Header: /home/ronin/cvs/ronin/spec.newt.c,v 2.0.0.1 2004/02/05 16:11:09 ronin Exp $
-$Id: spec.newt.c,v 2.0.0.1 2004/02/05 16:11:09 ronin Exp $
-$Name:  $
-$Log: spec.newt.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:09  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -43,7 +26,6 @@ $State: Exp $
 #include "spec_assign.h"
 
 int is_shop(CHAR *mob);
-extern int CHAOSMODE;
 
 int newt_spec(OBJ *obj,CHAR *ch, int cmd, char *argument) {
   CHAR *vict;

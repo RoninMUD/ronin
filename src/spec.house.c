@@ -1,35 +1,6 @@
-
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:29 $
-$Header: /home/ronin/cvs/ronin/spec.house.c,v 2.2 2005/01/21 14:55:29 ronin Exp $
-$Id: spec.house.c,v 2.2 2005/01/21 14:55:29 ronin Exp $
-$Name:  $
-$Log: spec.house.c,v $
-Revision 2.2  2005/01/21 14:55:29  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.1  2004/06/30 19:57:28  ronin
-Update of saving throw routine.
-
-Revision 2.0.0.1  2004/02/05 16:10:47  ronin
-Reinitialization of cvs archives
-
-Revision 1.4  2002/11/10 19:48:50  ronin
-Addition of longer wait times on orb during day
-or chance 50.  People soloing qa with em.
-
-Revision 1.3  2002/06/30 11:49:42  ronin
-Addition of check for maximum mana to prevent orb giving owners
-over and above their maximum mana.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
+/* spec.house.c
+**
+** Special procedures for the Haunted House
 */
 
 #include <stdio.h>
@@ -39,6 +10,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"
@@ -53,10 +25,6 @@ $State: Exp $
 #include "cmd.h"
 #include "spec_assign.h"
 #include "subclass.h"
-
-extern CHAR *character_list;
-extern struct time_info_data time_info;
-extern int CHAOSMODE;
 
 void hit (CHAR *ch,CHAR *tch,int type);
 bool is_caster (CHAR *ch);

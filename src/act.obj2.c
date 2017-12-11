@@ -4,53 +4,13 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:25 $
-$Header: /home/ronin/cvs/ronin/act.obj2.c,v 2.4 2005/01/21 14:55:25 ronin Exp $
-$Id: act.obj2.c,v 2.4 2005/01/21 14:55:25 ronin Exp $
-$Name:  $
-$Log: act.obj2.c,v $
-Revision 2.4  2005/01/21 14:55:25  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.3  2004/11/16 05:26:41  ronin
-DOS to UNIX conversion
-
-Revision 2.2  2004/11/16 04:46:07  ronin
-Typo fix.
-
-Revision 2.1  2004/05/12 13:23:17  ronin
-Added check_equipment call to wear all.
-
-Revision 2.0.0.1  2004/02/05 16:08:35  ronin
-Reinitialization of cvs archives
-
-Revision 1.5  2003/03/24 20:23:23  ronin
-Addition of check for donating chaotic items from chaos.
-
-Revision 1.4  2002/06/22 20:23:23  ronin
-Fix for rem lfinger crash bug.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -61,19 +21,9 @@ $State: Exp $
 #include "act.h"
 #include "limits.h"
 #include "cmd.h"
-/* extern variables */
 
-extern struct str_app_type str_app[];
-extern struct room_data *world;
-extern struct descriptor_data *descriptor_list;
-extern struct weather_data weather_info;
-extern struct room_data *world;
-extern char *drinks[];
-extern int drink_aff[][3];
-extern struct obj_proto *obj_proto_table;
-extern int signal_object(OBJ *obj, CHAR *ch, int cmd, char *arg);
 /* extern functions */
-
+extern int signal_object(OBJ *obj, CHAR *ch, int cmd, char *arg);
 struct obj_data *get_object_in_equip_vis(struct char_data *ch,char *arg,struct obj_data **equipment, int *j);
 char *str_dup(char *source);
 char *sstrdel(char *s, ...);
@@ -81,7 +31,6 @@ void raw_kill(struct char_data *ch);
 
 void name_from_drinkcon(struct obj_data *obj,int type) {
   char name[50],new_name[MAX_INPUT_LENGTH];
-  extern char *drinknames[];
 
   if(type < LIQ_WATER || type >LIQ_COKE) return;
   sprintf(name,"%s ",drinknames[type]);
@@ -100,7 +49,6 @@ void name_from_drinkcon(struct obj_data *obj,int type) {
 
 void name_to_drinkcon(struct obj_data *obj,int type) {
   char name[50],*new_name;
-  extern char *drinknames[];
 
   if(type < LIQ_WATER || type >LIQ_COKE) return;
   sprintf(name,"%s",drinknames[type]);
@@ -1492,7 +1440,7 @@ void do_wear(struct char_data *ch, char *argument, int cmd) {
   struct obj_data *obj_object;
   struct obj_data *next_obj;
   int keyword;
-  char *keywords[] = {
+  const char * const keywords[] = {
     "finger",
     "neck",
     "body",

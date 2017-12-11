@@ -5,36 +5,13 @@
 *  April 99 - Modified March 23/01 - upped to 15 to keep track of         *
 **************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2005/04/27 17:13:30 $
-$Header: /home/ronin/cvs/ronin/spec.rank.c,v 2.1 2005/04/27 17:13:30 ronin Exp $
-$Id: spec.rank.c,v 2.1 2005/04/27 17:13:30 ronin Exp $
-$Name:  $
-$Log: spec.rank.c,v $
-Revision 2.1  2005/04/27 17:13:30  ronin
-Minor changes needed to compile on Slackware 10 for the new machine.
-
-Revision 2.0.0.1  2004/02/05 16:11:14  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2002/03/31 08:44:42  ronin
-Replaced #include <sys/time.h> with <time.h> to elminate several time
-warnings.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -47,7 +24,6 @@ $State: Exp $
 #include "spec_assign.h"
 
 #define RANK_BOARD_DAYS  (365*SECS_PER_REAL_DAY)
-extern struct clan_data clan_list[MAX_CLANS];
 
 struct rank_struct
 {
@@ -62,7 +38,6 @@ struct rank_struct
 };
 
 struct rank_struct rank_board[11][15];
-extern char *pc_class_types[];
 
 void reset_rank_boards (void) {
   int i,j;

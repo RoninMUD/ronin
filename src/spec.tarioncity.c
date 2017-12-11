@@ -17,30 +17,6 @@
 ** finding loopholes in it.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:20 $
-$Header: /home/ronin/cvs/ronin/spec.tarioncity.c,v 2.0.0.1 2004/02/05 16:11:20 ronin Exp $
-$Id: spec.tarioncity.c,v 2.0.0.1 2004/02/05 16:11:20 ronin Exp $
-$Name:  $
-$Log: spec.tarioncity.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:20  ronin
-Reinitialization of cvs archives
-
-Revision 1.4  2003/11/03 ronin
-Fix to uneq/eq stone and suit when stats are
-changed on them.
-
-Revision 1.3  2002/06/05 02:57:49  ronin
-Fix to stop soitz from insta killing a mob.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -48,6 +24,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -78,8 +55,6 @@ $State: Exp $
 #define CLEANSING  12845
 #define CAVERNA    12839
 #define CAVERNB    12842
-
-extern struct time_info_data time_info;
 
 int tc_sign(OBJ *obj ,CHAR *ch, int cmd, char *argument) {
   int a=FALSE, b=FALSE, c=FALSE, d=FALSE, e=FALSE, f=FALSE, g=FALSE;

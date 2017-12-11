@@ -10,9 +10,6 @@
 #include "utility.h"
 #include "utils.h"
 #include "spec_assign.h"
-extern struct room_data *world;
-extern struct mob_proto *mob_proto_table;
-extern struct obj_proto *obj_proto_table;
 
 void assign_the_shopkeepers();
 

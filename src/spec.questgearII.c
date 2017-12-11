@@ -14,7 +14,9 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <math.h>
+
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"
@@ -29,9 +31,6 @@
 #include "act.h"
 #include "shop.h"
 
-extern int CHAOSMODE;
-
-extern struct descriptor_data *descriptor_list;
 /*
 ** Defines
 */

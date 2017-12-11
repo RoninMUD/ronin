@@ -4,27 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:13:08 $
-$Header: /home/ronin/cvs/ronin/fight.h,v 2.0.0.1 2004/02/05 16:13:08 ronin Exp $
-$Id: fight.h,v 2.0.0.1 2004/02/05 16:13:08 ronin Exp $
-$Name:  $
-$Log: fight.h,v $
-Revision 2.0.0.1  2004/02/05 16:13:08  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2002/06/18 14:32:20  ronin
-Adding divide_experience before raw_kill to ensure proper quest
-completion.  Addition of flag within divide_experience to force
-amount to 0 if required.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 #ifndef __FIGHT_H__
 #define __FIGHT_H__
 
@@ -62,5 +41,7 @@ int stack_position(struct char_data *ch, int target_position);
 bool try_hit(struct char_data *ch, struct char_data *victim);
 int compute_thaco(struct char_data *ch);
 int compute_ac(struct char_data *ch);
+
+extern struct char_data *combat_list;
 
 #endif /* __FIGHT_H__ */

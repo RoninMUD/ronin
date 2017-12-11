@@ -11,6 +11,7 @@
 #include <time.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "spells.h"
@@ -24,12 +25,9 @@
 #include "memory.h"
 #include "enchant.h"
 #include "subclass.h"
+#include "quest.h"
 
 /* Extern structures */
-
-extern Room *world;
-extern OBJ  *object_list;
-extern CHAR *character_list;
 
 #define MOB_ID_HP_ARRAY_MAX    10
 #define MOB_ID_DMG_ARRAY_MAX   9
@@ -37,22 +35,7 @@ extern CHAR *character_list;
 #define MOB_ID_MATT_ARRAY_MAX  4
 #define MOB_ID_SPEC_ARRAY_MAX  2
 
-struct scoreboard_data
-{
-  char killer[80];
-  char killed[80];
-  char location[80];
-  char time_txt[80];
-};
-
-extern struct scoreboard_data scores[101];
-extern int number_of_kills;
-extern struct idname_struct idname[MAX_ID];
-
 /* Extern procedures */
-extern char *subclass_res_bits[];
-extern int CHAOSMODE;
-extern int CHAOSDEATH;
 void stop_riding(struct char_data *ch,struct char_data *vict);
 void empty_all_containers (CHAR *ch);
 void make_statue (struct char_data *ch);
@@ -62,8 +45,6 @@ char *one_argument (char*, char*);
 int dice(int number, int size);
 void stop_follower(CHAR *ch);
 void do_look(CHAR *ch, char *argument, int cmd);
-extern struct descriptor_data *descriptor_list;
-extern struct time_info_data time_info;
 
 /* Offensive Spells */
 
@@ -658,8 +639,6 @@ void spell_holy_word(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
 void spell_call_lightning(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
   int dam;
 
-  extern struct weather_data weather_info;
-
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
     return;
@@ -753,7 +732,6 @@ void spell_armor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 int dt_or_hazard(CHAR *ch);
 void spell_teleport(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int to_room;
-  extern int top_of_world;      /* ref to the top element of world */
 
   if(CHAOSMODE) {
     send_to_char("The forces of Chaos absorb the magic.\n\r",ch);
@@ -1066,7 +1044,6 @@ void spell_create_food(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_create_water(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int water;
 
-  extern struct weather_data weather_info;
   void name_to_drinkcon(OBJ *obj,int type);
   void name_from_drinkcon(OBJ *obj,int type);
 
@@ -2606,8 +2583,6 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   int number(int, int);
 
 
-  extern char *spells[];
-
   const char *other_msg[] = { "greatly", "a little", "improve", "weaken" };
 
    const char *type_msg[] = {
@@ -2906,30 +2881,6 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     int val3,max_time;
 
     struct time_info_data age(CHAR *ch);
-
-    /* Spell Names */
-    extern char *spells[];
-
-    /* For Objects */
-    extern char *item_types[];
-    extern char *extra_bits[];
-    extern char *extra_bits2[];
-    extern char *apply_types[];
-    extern char *affected_bits[];
-    extern char *affected_bits2[];
-
-    extern char *pc_class_types[];
-    extern char *npc_class_types[];
-    extern char *wpn_spc[];
-    extern int mob_id_hp_int[];
-    extern char *mob_id_hp_text[];
-    extern int mob_id_dmg_int[];
-    extern char *mob_id_dmg_text[];
-    extern int mob_id_level_int[];
-    extern char *mob_id_level_text[];
-    extern int mob_id_matt_int[];
-    extern char *mob_id_matt_text[];
-    extern char *mob_id_spec[];
 
     if (obj) {
         send_to_char("You feel informed...\n\r", ch);
