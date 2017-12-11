@@ -30,7 +30,13 @@
 #include "remortv2.h"
 
 /* Externs */
+#ifdef TEST_SITE
+
 extern const char *pc_class_types[];
+extern const char *npc_class_types[];
+
+#endif
+
 extern const int exp_table[58];
 extern char *BKColor[];
 extern char *Color[];
