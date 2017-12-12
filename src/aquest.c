@@ -849,6 +849,10 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27700, 2 }, /* Mountain Yeti */
     { 28502, 2 }, /* minotaur bull man */
     { 5418, 2 }, /* hecate */
+    { 5425, 2 }, /* mass blob */
+    { 20901, 2 }, /* blarf Hero */
+    { 20923, 2 }, /* tweef king Vandimar */
+    { 20924, 2 }, /* tweef queen Larienne */
     { 922, 2 }, /* leader rebel zan */
     { 1915, 2 }, /* thrag beastman master */
     { 2030, 2 }, /* cepheus king */
@@ -856,6 +860,10 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 12915, 2 }, /* genshi mystic brother elder */
     { 12915, 2 }, /* kyoki mystic brother elder */
     { 12916, 2 }, /* yagyu mystic brother elder */
+    { 5420, 2 }, /* hades king */
+    { 204, 2 },  /* bugbear chief humanoid */
+    { 403, 2 }, /* kobold supervisor giant */
+    { 19011, 2 }, /* man-eater bear slagbjoern */
     { 701, 3 }, /* racti troll hermit */
     { 706, 3 }, /* juktoa troll foreman */
     { 3919, 3 }, /* celestial dragon */
@@ -895,16 +903,14 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 12023, 3 }, /* stone big */
     { 1261, 3 }, /* salamander sal */
     { 12025, 3 }, /* huge purple worm */
-    { 5420, 3 }, /* hades king */
-    { 5425, 3 }, /* mass blob */
-    { 20901, 3 }, /* blarf Hero */
-    { 20923, 3 }, /* tweef king Vandimar */
-    { 20924, 3 }, /* tweef queen Larienne */
-    { 204, 3 },  /* bugbear chief humanoid */
-    { 403, 3 }, /* kobold supervisor giant */
-    { 19011, 3 }, /* man-eater bear slagbjoern */
     { 21223, 3 }, /* thief morian thug */
     { 2702, 3 }, /* marikith elder */
+    { 21319, 3 }, /* ogre magi celil-gandil */
+    { 21320, 3 }, /* ogre magi fumbor */
+    { 21321, 3 }, /* ogre magi meldur */
+    { 21322, 3 }, /* ogre magi anawyn */
+    { 23007, 3 }, /* hydra cryohydra snake */
+    { 23009, 3 }, /* polar bear glacial */
     { 501, 4 }, /* Oni Greater */
     { 540, 4 }, /* Tanoshi Wrestler */
     { 552, 4 }, /* Sojobo tengu king */
@@ -949,6 +955,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27720, 4 }, /* myrdon thief rogue master */
     { 27721, 4 }, /* shadowraith ninja assassin jal pur */
     { 14509, 4 }, /* priest arak */
+    { 25000, 4 }, /* demi lich */
     { 700, 5 }, /* sakdul large troll gypsy */
     { 4600, 5 }, /* Neuron Beast Strands */
     { 5105, 5 }, /* drow apprentice */
@@ -974,6 +981,9 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27712, 5 }, /* bebilith stalker purple spider insect */
     { 204, 5 }, /* lookout vagabond scout leader */
     { 14205, 5 }, /* fred gatekeeper */
+    { 21204, 5 }, /* adrel sage magic */
+    { 21205, 5 }, /* ulric advisor */
+    { 23001, 5 }, /* remorhaz ice burrower */
     { 5125, 6 }, /* drow matron mother third */
     { 5126, 6 }, /* drow matron mother fourth */
     { 5127, 6 }, /* drow matron mother second */
@@ -993,6 +1003,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 14503, 6 }, /* ardaan inquisitor warrior */
     { 11701, 6 }, /* rhoden guardian */
     { 14205, 6 }, /* Modeuur the Vampire Warden */
+    { 21323, 6 }, /* ogre sorcerer eowadriendir */
     { -1, -1 } /* Array Termination Indicator. Make sure this is the final element in the list and both elements are set to -1. */
   };
 
