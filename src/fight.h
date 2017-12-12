@@ -41,6 +41,7 @@ int stack_position(struct char_data *ch, int target_position);
 bool try_hit(struct char_data *ch, struct char_data *victim);
 int compute_thaco(struct char_data *ch);
 int compute_ac(struct char_data *ch);
+bool mob_disarm(CHAR *mob, CHAR *victim, bool to_ground);
 
 extern struct char_data *combat_list;
 

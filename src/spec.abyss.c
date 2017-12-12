@@ -91,29 +91,21 @@ void abyss_bash(CHAR *mob, CHAR *vict)
   WAIT_STATE(vict,PULSE_VIOLENCE*3);
 }
 
-void abyss_disarm(CHAR *mob, CHAR *vict)
-{
-  char buf[MAX_INPUT_LENGTH];
-  OBJ *wield=NULL;
-  act("$n makes a full-circle-kick and kicks $N's hand", 1, mob, 0, vict, TO_NOTVICT);
-  act("$n makes a full-circle-kick and kicks your hand!", 1, mob, 0, vict, TO_VICT);
-  if(V_MOB(mob) == ABYSS_LORD)
-  	damage(mob, vict, number(60,100), TYPE_UNDEFINED, DAM_SKILL);
-  else
-  	damage(mob, vict, number(30,50), TYPE_UNDEFINED,DAM_SKILL);
-  if (vict->equipment[WIELD])
-    wield = vict->equipment[WIELD];
-  else
-    return;
-  if(V_OBJ(wield)==11523) return;
-  act("$N drop $S weapon.", 1,mob , 0, vict, TO_NOTVICT);
-  act("You drop your weapon.", 1,mob , 0, vict, TO_VICT);
-  sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),GET_NAME(vict),OBJ_SHORT(wield),world[CHAR_REAL_ROOM(vict)].number);
-  log_s(buf);
-  unequip_char(vict, WIELD);
-  obj_to_room(wield, CHAR_REAL_ROOM(vict));
-  wield->log=1;
-  save_char(vict,NOWHERE);
+void abyss_disarm(CHAR *mob, CHAR *vict) {
+  act("$n makes a full-circle-kick and kicks $N's hand", TRUE, mob, 0, vict, TO_NOTVICT);
+  act("$n makes a full-circle-kick and kicks your hand!", TRUE, mob, 0, vict, TO_VICT);
+
+  if (V_MOB(mob) == ABYSS_LORD) {
+    damage(mob, vict, number(60, 100), TYPE_UNDEFINED, DAM_SKILL);
+  }
+  else {
+    damage(mob, vict, number(30, 50), TYPE_UNDEFINED, DAM_SKILL);
+  }
+
+  if (mob_disarm(mob, vict, FALSE)) {
+    act("$N drops $S weapon.", TRUE, mob , 0, vict, TO_NOTVICT);
+    act("You drop your weapon.", TRUE, mob , 0, vict, TO_VICT);
+  }
 }
 
 
@@ -533,9 +525,7 @@ int crimson_death(CHAR *mob,CHAR *ch,int cmd,char *arg)
 
 int kraken(CHAR *mob,CHAR *ch, int cmd, char *arg)
 {
-	OBJ *wield=0;
 	CHAR *vict,*temp;
-	char buf[MAX_INPUT_LENGTH];
 
 	if(cmd != MSG_MOBACT) return FALSE;
 	if(!mob->specials.fighting) return FALSE;
@@ -579,17 +569,7 @@ int kraken(CHAR *mob,CHAR *ch, int cmd, char *arg)
 				act("$n jumps high into the sky and falls on $N", 1, mob, 0, vict, TO_NOTVICT);
 				act("$n jumps high into the sky and falls on YOU!", 1, mob, 0, vict, TO_VICT);
 				damage(mob, vict, number(120,150), TYPE_UNDEFINED,DAM_NO_BLOCK);
-				if(vict->equipment[WIELD])
-					wield = vict->equipment[WIELD];
-				else
-					return FALSE;
-					
-				act("$N drops $S weapon.", 1, mob, 0, vict, TO_NOTVICT);
-				act("You drop your weapon.", 1, mob, 0, vict, TO_VICT);
-				sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),GET_NAME(vict),OBJ_SHORT(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_s(buf);
-				unequip_char(vict, WIELD);
-				obj_to_room(wield, CHAR_REAL_ROOM(vict));
+        abyss_disarm(mob, vict);
 				GET_POS(vict)=POSITION_SITTING;
 				WAIT_STATE(vict,PULSE_VIOLENCE*3);
 				break;

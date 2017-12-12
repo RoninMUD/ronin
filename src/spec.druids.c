@@ -34,9 +34,7 @@ extern void do_say(CHAR*,char*,int);
 int druid_protector(CHAR *mob,CHAR *ch, int cmd, char *arg)
 {
    CHAR *vict, *next_vict;
-   OBJ *wield;
    int room;
-   char buf[MAX_INPUT_LENGTH];
 
    switch (cmd)
      {
@@ -73,21 +71,12 @@ int druid_protector(CHAR *mob,CHAR *ch, int cmd, char *arg)
                 damage(mob, vict, 100, TYPE_UNDEFINED,DAM_NO_BLOCK);
                 WAIT_STATE(vict,PULSE_VIOLENCE*2);
 
-                if(EQ(vict, WIELD)) {
-                   wield = EQ(vict, WIELD);
-                   act("The vines tear $N's weapon from $M grasp!",
-                        1, mob, 0, vict, TO_NOTVICT);
-                   act("The vines tear your weapon from your hands!",
-                        1, mob, 0, vict, TO_VICT);
-                   unequip_char(vict, WIELD);
-                   obj_to_room(wield, CHAR_REAL_ROOM(vict));
-                   /* Added disarm log, Solmyr - 2009 */
-                   sprintf(buf, "WIZINFO: %s disarms %s's %s at %d",
-                   GET_NAME(mob), GET_NAME(vict), OBJ_SHORT(wield),
-                   world[CHAR_REAL_ROOM(mob)].number);
-                   log_s(buf);
-                   wield->log = TRUE;
-                 }
+                if (mob_disarm(mob, vict, FALSE)) {
+                  act("The vines tear $N's weapon from $M grasp!",
+                    TRUE, mob, 0, vict, TO_NOTVICT);
+                  act("The vines tear your weapon from your hands!",
+                    TRUE, mob, 0, vict, TO_VICT);
+                }
               }
               break;
 

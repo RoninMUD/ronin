@@ -1025,41 +1025,38 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     aq_mob_num++;
   }
 
-  int pick = -1;
+  if (aq_mob_num > 0 && aq_mob_num <= NUMELEMS(aq_mob_temp_list)) {
+    int pick = number(0, aq_mob_num - 1);
+    CHAR *vict = aq_mob_temp_list[pick].mob;
 
-  if (aq_mob_num > 0) {
-    pick = number(0, aq_mob_num - 1);
+    if (!vict) return FALSE;
+
+    vict->questowner = ch;
+
+    ch->questgiver = mob;
+    ch->questobj = 0;
+    ch->questmob = vict;
+    ch->quest_level = aq_mob_temp_list[pick].quest_level == 0 ? 1 : aq_mob_temp_list[pick].quest_level;
+    ch->quest_status = QUEST_RUNNING;
+    ch->ver3.time_to_quest = 60;
+
+    char buf[MSL];
+
+    snprintf(buf, sizeof(buf), "$N tells you, 'Kill %s for %d quest point(s), in 60 ticks.'", GET_SHORT(vict), ch->quest_level);
+    act(buf, 0, ch, 0, mob, TO_CHAR);
+    snprintf(buf, sizeof(buf), "$N tells you, '%s can be found around %s'", GET_SHORT(vict), world[CHAR_REAL_ROOM(vict)].name);
+    act(buf, 0, ch, 0, mob, TO_CHAR);
+
+    if (chance(2)) {
+      act("$N tells you, 'Its your lucky day!  I'm going to double your quest point reward!'", 0, ch, 0, mob, TO_CHAR);
+
+      ch->quest_level *= 2;
+    }
+
+    return TRUE;
   }
 
-  CHAR *vict = aq_mob_temp_list[pick].mob;
-
-  if (aq_mob_num < 1 || pick < 0 || !vict) {
-    return FALSE;
-  }
-
-  vict->questowner = ch;
-
-  ch->questgiver = mob;
-  ch->questobj = 0;
-  ch->questmob = vict;
-  ch->quest_level = aq_mob_temp_list[pick].quest_level == 0 ? 1 : aq_mob_temp_list[pick].quest_level;
-  ch->quest_status = QUEST_RUNNING;
-  ch->ver3.time_to_quest = 60;
-
-  char buf[MSL];
-
-  snprintf(buf, sizeof(buf), "$N tells you, 'Kill %s for %d quest point(s), in 60 ticks.'", GET_SHORT(vict), ch->quest_level);
-  act(buf, 0, ch, 0, mob, TO_CHAR);
-  snprintf(buf, sizeof(buf), "$N tells you, '%s can be found around %s'", GET_SHORT(vict), world[CHAR_REAL_ROOM(vict)].name);
-  act(buf, 0, ch, 0, mob, TO_CHAR);
-
-  if (chance(2)) {
-    act("$N tells you, 'Its your lucky day!  I'm going to double your quest point reward!'", 0, ch, 0, mob, TO_CHAR);
-
-    ch->quest_level *= 2;
-  }
-
-  return TRUE;
+  return FALSE;
 }
 
 /* Object questing implemented through mob other than guildmaster in this case */
