@@ -1459,8 +1459,8 @@ const char *extra_bits[] = {
   "ANTI-MAGIC_USER",
   "ANTI-MORTAL",
   "ANTI-MALE",
-  "ANTI-FEMALE",
-  "ANTI-RENT",
+  "<UNUSED>",
+  "<UNUSED>",
   "ANTI-NINJA",
   "ANTI-NOMAD",
   "ANTI-PALADIN",
@@ -1929,9 +1929,9 @@ const char *immune_bits2[] =  {
   "CHEMICAL",
   "ACID",
   "FEAR",
-  "<UNUSED>", /* Not Used - Used to be IMMUNE_THROATSTRIKE */
+  "<UNUSED>",
   "CIRCLE",
-  "<UNUSED>", /* Not Used - Used to be IMMUNE_EXECUTE */
+  "<UNUSED>",
   "STEAL",
   "\n"
 };
