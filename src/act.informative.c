@@ -636,6 +636,13 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       {
         strcat(buffer, "[TARGET] ");
       }
+      else if (i->questowner && !IS_NPC(i->questowner) && GET_NAME(i->questowner))
+      {
+        strcpy(buffer, "[");
+        strcat(buffer, GET_NAME(i->questowner));
+        strcat(buffer, "'s TARGET] ");
+        strcat(buffer, CAP(GET_SHORT(i)));
+      }
 
       if (IS_SET(i->specials.affected_by2, AFF_SEVERED))
       {
