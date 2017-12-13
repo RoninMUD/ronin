@@ -638,7 +638,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       }
       else if (i->questowner && !IS_NPC(i->questowner) && GET_NAME(i->questowner))
       {
-        strcpy(buffer, "[");
+        strcat(buffer, "[");
         strcat(buffer, GET_NAME(i->questowner));
         strcat(buffer, "'s TARGET] ");
         strcat(buffer, CAP(GET_SHORT(i)));
