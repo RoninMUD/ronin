@@ -1565,7 +1565,6 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     check = number(1, 101) - GET_DEX_APP(ch) - (enchanted_by_type(ch, ENCHANT_SHOGUN) ? 5 : 0);
 
     if (SAME_ROOM(victim, ch) &&
-        breakthrough(ch, victim, BT_INVUL) &&
         (check <= GET_LEARNED(ch, SKILL_BANZAI))) {
       hit(ch, victim, SKILL_BANZAI);
     }
