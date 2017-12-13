@@ -812,11 +812,11 @@ D0
 ~
 0 -1 20138
 E
-light~
+peephole~
 20173
 ~
 E
-peephole~
+light~
 20173
 ~
 S
@@ -1038,14 +1038,14 @@ D3
 door~
 1 -1 20151
 E
-warrant~
+scroll~
 By imperial edict, the death of the ninja criminal Hanzo Hattori has been
 ordained. Any persons bringing proof of the death of this vicious outlaw 
 (the severed head of the criminal is preferred) shall be looked favorably 
 upon by our ruler.
 ~
 E
-scroll~
+warrant~
 By imperial edict, the death of the ninja criminal Hanzo Hattori has been
 ordained. Any persons bringing proof of the death of this vicious outlaw 
 (the severed head of the criminal is preferred) shall be looked favorably 
@@ -1333,14 +1333,14 @@ D2
 ~
 0 -1 20164
 E
-tracks~
-The dirt in which the tracks are found is just starting to become hard, so
-whatever large animal made these could still be around here.
-~
-E
 pit~
 Carefully concealed amongst the thick canopy of bushes and plants, you spy
 a deep pit, apparently meant for catching tigers.
+~
+E
+tracks~
+The dirt in which the tracks are found is just starting to become hard, so
+whatever large animal made these could still be around here.
 ~
 S
 #20166
@@ -1969,13 +1969,13 @@ D5
 floorboard~
 2 516 554
 E
-blood~
+floor~
 The pool of blood from some unknown person seems to be draining into a seam
 in the floor, however you notice that the blood abruptly stops on the other
 side of the seam, very strange.
 ~
 E
-floor~
+blood~
 The pool of blood from some unknown person seems to be draining into a seam
 in the floor, however you notice that the blood abruptly stops on the other
 side of the seam, very strange.

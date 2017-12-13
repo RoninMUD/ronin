@@ -4276,6 +4276,42 @@ void perform_violence(void) {
   }
 }
 
+
+bool mob_disarm(CHAR *mob, CHAR *victim, bool to_ground) {
+  const int WEAPON_WYVERN_SPUR = 11523;
+
+  char buf[MSL];
+  OBJ *weapon = NULL;
+
+  if (IS_IMMORTAL(victim)) return FALSE;
+
+  weapon = EQ(victim, WIELD);
+
+  if (!weapon) return FALSE;
+  if (V_OBJ(weapon) == WEAPON_WYVERN_SPUR) return FALSE;
+  if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, BT_INVUL)) return FALSE;
+
+  unequip_char(victim, WIELD);
+
+  if (to_ground) {
+    snprintf(buf, sizeof(buf), "WIZINFO: %s disarms %s's %s (Room %d)",
+      GET_NAME(mob), GET_NAME(victim), OBJ_NAME(weapon), world[CHAR_REAL_ROOM(victim)].number);
+    log_s(buf);
+
+    weapon->log = 1;
+
+    obj_to_room(weapon, CHAR_REAL_ROOM(victim));
+  }
+  else {
+    obj_to_char(weapon, victim);
+  }
+
+  save_char(victim, NOWHERE);
+
+  return TRUE;
+}
+
+
 void mob_attack(CHAR *MOB);
 void perform_mob_attack(void) {
   CHAR *ch = NULL;
@@ -4300,10 +4336,9 @@ void perform_mob_attack(void) {
 
 void mob_attack(CHAR *mob) {
 
-  int i,done=FALSE;
+  int i, done = FALSE;
   char buf[MAX_STRING_LENGTH];
-  CHAR *vict,*temp;
-  struct obj_data *wield = 0;
+  CHAR *vict, *temp;
 
   /* Some basic checks - most totally unnecessary, so sue me */
   if(!mob) return;
@@ -4556,138 +4591,101 @@ void mob_attack(CHAR *mob) {
     case ATT_DISARM:
       switch (mob->specials.att_target[i]) {
         case TAR_SELF:
-          /* This results in a continue, mobs don't disarm themselves */
+          /* This results in a continue; mobs don't disarm themselves. */
           continue;
           break;
         case TAR_BUFFER:
-          vict=mob->specials.fighting;
-          if(vict) {
-            if (vict->equipment[WIELD]) wield = vict->equipment[WIELD];
-            else continue;
-            if(IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(mob,vict,BT_INVUL)) continue;
-            if(V_OBJ(wield)==11523) continue;
-            act("You kick off $N's weapon.",FALSE,mob,0,vict,TO_CHAR);
-            act("$N kicks off your weapon.",FALSE, vict, 0, mob, TO_CHAR);
-            act("$n kicks off $N's weapon.",FALSE, mob, 0, vict, TO_NOTVICT);
-            sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
-                    GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_s(buf);
-            unequip_char(vict, WIELD);
-            obj_to_room(wield, CHAR_REAL_ROOM(vict));
-            wield->log=1;
-            save_char(vict,NOWHERE);
+          vict = GET_OPPONENT(mob);
+
+          if (vict && mob_disarm(mob, vict, FALSE)) {
+              act("You kick off $N's weapon.", FALSE, mob, 0, vict, TO_CHAR);
+              act("$N kicks off your weapon.", FALSE, vict, 0, mob, TO_CHAR);
+              act("$n kicks off $N's weapon.", FALSE, mob, 0, vict, TO_NOTVICT);
           }
           break;
         case TAR_LEADER:
-          vict=mob->specials.fighting;
-          if(vict->master) vict=vict->master;
-          if(CHAR_REAL_ROOM(mob)!=CHAR_REAL_ROOM(vict))
-            vict=get_random_victim_fighting(mob);
-          if(vict) {
-            if (vict->equipment[WIELD]) wield = vict->equipment[WIELD];
-            else continue;
-            if(IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(mob,vict,BT_INVUL)) continue;
-            if(V_OBJ(wield)==11523) continue;
-            act("You kick off $N's weapon.",FALSE,mob,0,vict,TO_CHAR);
-            act("$N kicks off your weapon.",FALSE, vict, 0, mob, TO_CHAR);
-            act("$n kicks off $N's weapon.",FALSE, mob, 0, vict, TO_NOTVICT);
-            sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
-                    GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_s(buf);
-            unequip_char(vict, WIELD);
-            obj_to_room(wield, CHAR_REAL_ROOM(vict));
-            wield->log=1;
-            save_char(vict,NOWHERE);
+          vict = GET_OPPONENT(mob);
+
+          if (GET_MASTER(vict)) {
+            vict = GET_MASTER(vict);
+          }
+
+          if (CHAR_REAL_ROOM(mob) != CHAR_REAL_ROOM(vict)) {
+            vict = get_random_victim_fighting(mob);
+          }
+
+          if (vict && mob_disarm(mob, vict, FALSE)) {
+              act("You kick off $N's weapon.", FALSE, mob, 0, vict, TO_CHAR);
+              act("$N kicks off your weapon.", FALSE, vict, 0, mob, TO_CHAR);
+              act("$n kicks off $N's weapon.", FALSE, mob, 0, vict, TO_NOTVICT);
           }
           break;
         case TAR_RAN_ROOM:
-          vict=get_random_victim(mob);
-          if(vict) {
-            if (vict->equipment[WIELD]) wield = vict->equipment[WIELD];
-            else continue;
-            if(IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(mob,vict,BT_INVUL)) continue;
-            if(V_OBJ(wield)==11523) continue;
-            act("You kick off $N's weapon.",FALSE,mob,0,vict,TO_CHAR);
-            act("$N kicks off your weapon.",FALSE, vict, 0, mob, TO_CHAR);
-            act("$n kicks off $N's weapon.",FALSE, mob, 0, vict, TO_NOTVICT);
-            sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
-                    GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_s(buf);
-            unequip_char(vict, WIELD);
-            obj_to_room(wield, CHAR_REAL_ROOM(vict));
-            wield->log=1;
-            save_char(vict,NOWHERE);
+          vict = get_random_victim(mob);
+
+          if (vict && mob_disarm(mob, vict, FALSE)) {
+              act("You kick off $N's weapon.", FALSE, mob, 0, vict, TO_CHAR);
+              act("$N kicks off your weapon.", FALSE, vict, 0, mob, TO_CHAR);
+              act("$n kicks off $N's weapon.", FALSE, mob, 0, vict, TO_NOTVICT);
           }
           break;
         case TAR_RAN_GROUP:
-          vict=get_random_victim_fighting(mob);
-          if(vict) {
-            if (vict->equipment[WIELD]) wield = vict->equipment[WIELD];
-            else continue;
-            if(IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(mob,vict,BT_INVUL)) continue;
-            if(V_OBJ(wield)==11523) continue;
-            act("You kick off $N's weapon.",FALSE,mob,0,vict,TO_CHAR);
-            act("$N kicks off your weapon.",FALSE, vict, 0, mob, TO_CHAR);
-            act("$n kicks off $N's weapon.",FALSE, mob, 0, vict, TO_NOTVICT);
-            sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
-                    GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_s(buf);
-            unequip_char(vict, WIELD);
-            obj_to_room(wield, CHAR_REAL_ROOM(vict));
-            wield->log=1;
-            save_char(vict,NOWHERE);
+          vict = get_random_victim_fighting(mob);
+
+          if (vict && mob_disarm(mob, vict, FALSE)) {
+              act("You kick off $N's weapon.", FALSE, mob, 0, vict, TO_CHAR);
+              act("$N kicks off your weapon.", FALSE, vict, 0, mob, TO_CHAR);
+              act("$n kicks off $N's weapon.", FALSE, mob, 0, vict, TO_NOTVICT);
           }
           break;
         case TAR_ROOM:
-          act("You spins wildly about the room.", FALSE, mob, 0, 0, TO_CHAR);
+          act("You spin wildly about the room.", FALSE, mob, 0, 0, TO_CHAR);
           act("$n spins wildly about the room.", FALSE, mob, 0, 0, TO_ROOM);
-          for (vict=world[CHAR_REAL_ROOM(mob)].people;vict;vict=temp) {
+
+          for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = temp) {
             temp = vict->next_in_room;
-            if(vict && !IS_NPC(vict) && GET_LEVEL(vict)<LEVEL_IMM
-               && vict!=mob && vict->equipment[WIELD]) {
-              wield = vict->equipment[WIELD];
-              if(IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(mob,vict,BT_INVUL)) continue;
-              if(V_OBJ(wield)==11523) continue;
-              act("$N kicks off your weapon.",FALSE, vict, 0, mob, TO_CHAR);
-              sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
-                    GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-              log_s(buf);
-              unequip_char(vict, WIELD);
-              obj_to_room(wield, CHAR_REAL_ROOM(vict));
-              wield->log=1;
-              save_char(vict,NOWHERE);
+
+            if (vict &&
+                vict != mob &&
+                !IS_NPC(vict) &&
+                vict->equipment[WIELD]) {
+              if (mob_disarm(mob, vict, FALSE)) {
+                act("You kick off $N's weapon.", FALSE, mob, 0, vict, TO_CHAR);
+                act("$N kicks off your weapon.", FALSE, vict, 0, mob, TO_CHAR);
+                act("$n kicks off $N's weapon.", FALSE, mob, 0, vict, TO_NOTVICT);
+              }
             }
           }
           break;
         case TAR_GROUP:
-          act("You spins wildly about the room.", FALSE, mob, 0, 0, TO_CHAR);
+          act("You spin wildly about the room.", FALSE, mob, 0, 0, TO_CHAR);
           act("$n spins wildly about the room.", FALSE, mob, 0, 0, TO_ROOM);
-          for (vict=world[CHAR_REAL_ROOM(mob)].people;vict;vict=temp) {
+
+          for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = temp) {
             temp = vict->next_in_room;
-            if(vict && !IS_NPC(vict) && GET_LEVEL(vict)<LEVEL_IMM && vict!=mob
-               && mob==vict->specials.fighting && vict->equipment[WIELD]) {
-              wield = vict->equipment[WIELD];
-              if(IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(mob,vict,BT_INVUL)) continue;
-              if(V_OBJ(wield)==11523) continue;
-              act("$N kicks off your weapon.",FALSE, vict, 0, mob, TO_CHAR);
-              sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),
-                    GET_NAME(vict),OBJ_NAME(wield),world[CHAR_REAL_ROOM(vict)].number);
-              log_s(buf);
-              unequip_char(vict, WIELD);
-              obj_to_room(wield, CHAR_REAL_ROOM(vict));
-              wield->log=1;
-              save_char(vict,NOWHERE);
+
+            if (vict &&
+                vict != mob &&
+                GET_OPPONENT(vict) == mob &&
+                !IS_NPC(vict) &&
+                vict->equipment[WIELD]) {
+              if (mob_disarm(mob, vict, FALSE)) {
+                act("You kick off $N's weapon.", FALSE, mob, 0, vict, TO_CHAR);
+                act("$N kicks off your weapon.", FALSE, vict, 0, mob, TO_CHAR);
+                act("$n kicks off $N's weapon.", FALSE, mob, 0, vict, TO_NOTVICT);
+              }
             }
           }
           break;
         default:
-          sprintf(buf,"WIZINFO: Invalid attack target (%d) called in attack (%d), mob %d.",
-          mob->specials.att_target[i],mob->specials.att_type[i],V_MOB(mob));
+          sprintf(buf, "WIZINFO: Invalid attack target (%d) called in attack (%d), mob %d.",
+            mob->specials.att_target[i], mob->specials.att_type[i], V_MOB(mob));
           wizlog(buf, LEVEL_SUP, 6);
           continue;
       }
-      mob->specials.att_timer=2;
-      done=TRUE;
+
+      mob->specials.att_timer = 2;
+      done = TRUE;
       break;
 /* Removed attack bash messages - they are in the message file
    Ranger March 98 */

@@ -134,5 +134,20 @@ stone creature. He stands here still guarding the city.
 0 0 0 0
 K
 0 0 0 0 0 0 0
+#5209
+mud golem~
+A golem, crafted from the mud of the river.~
+A golem fashioned out of mud stands guard here.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+8 0 0 Y
+1 19 10 1d1+1 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
 #0
 $~

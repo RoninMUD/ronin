@@ -57,9 +57,8 @@ int wolf_chew_toy(CHAR *mob)
 
 int wolf_options(CHAR *mob, CHAR *vict)
 {
-  OBJ *wield;
   int start,stop;
-  char buf[MAX_INPUT_LENGTH];
+
   if (isname("guard", GET_NAME(mob)))
     {
     start = 1; stop = 3;
@@ -110,17 +109,10 @@ int wolf_options(CHAR *mob, CHAR *vict)
         act("$n claws $N's hand!", 1, mob, 0, vict, TO_NOTVICT);
 	act("$n claws your hand!", 1, mob, 0, vict, TO_VICT);
 	damage(mob, vict, number(15,30), TYPE_UNDEFINED,DAM_SKILL);
-	if (vict->equipment[WIELD])
-	 wield = vict->equipment[WIELD];
-	else return FALSE;
-	act("$N drop $S weapon.", 1, mob, 0, vict, TO_NOTVICT);
-	act("You drop your weapon.", 1, mob, 0, vict, TO_VICT);
-	/* Disarm log added by Solmyr 2009 */
-	sprintf(buf, "WIZINFO: %s disarms %s's %s at %d", GET_NAME(mob), GET_NAME(vict), OBJ_SHORT(wield), world[CHAR_REAL_ROOM(mob)].number);
-	log_s(buf);
-	wield->log = TRUE;
-	unequip_char(vict, WIELD);
-	obj_to_room(wield, CHAR_REAL_ROOM(vict));
+  if (mob_disarm(mob, vict, FALSE)) {
+    act("$N drops $S weapon.", TRUE, mob, 0, vict, TO_NOTVICT);
+    act("You drop your weapon.", TRUE, mob, 0, vict, TO_VICT);
+  }
 	return FALSE;
      case 6: /* Lord & King */
 	act("$n bites $N's neck with $s huge mouth and sucks $S blood!", 1, mob, 0, vict, TO_NOTVICT);

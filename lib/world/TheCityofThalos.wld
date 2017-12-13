@@ -923,6 +923,18 @@ D5
 ~
 0 -1 5241
 S
+#5249
+Under a watchtower~
+    As you descend the ladder, the rotted rungs break sending you quickly
+to your demise far below on the city street. Splat.
+~
+52 2 1
+E
+death_text~
+The concussion from your fall leaves you with serious brain damage
+and likely death.
+~
+S
 #5250
 The Temple of Thalos~
     You stand within one of the most holy places in the realm. This
