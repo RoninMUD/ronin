@@ -94,15 +94,15 @@ rock~
 8 -1 21204
 E
 rock~
-You closely examine the opening in the rock.  You peer down into the opening 
-but it is too dark to see anything.  The opening is barely wide enough to fix one 
-person. It look rather interesting.
-~
-E
-rock~
 You closely examine the hole in the rock.  You peer down into the opening 
 but it is too dark to see.  The opening is barely wide enough to fix one 
 person. It look rather interesting
+~
+E
+rock~
+You closely examine the opening in the rock.  You peer down into the opening 
+but it is too dark to see anything.  The opening is barely wide enough to fix one 
+person. It look rather interesting.
 ~
 S
 #21204
@@ -349,11 +349,11 @@ D2
 ~
 0 -1 21214
 E
-ball~
+balls~
 A swirling orb of bright matter floats at the edges of the room.
 ~
 E
-balls~
+ball~
 A swirling orb of bright matter floats at the edges of the room.
 ~
 S
@@ -863,7 +863,7 @@ as well as some old books.  This place is obviously some kind of study
 or laboratory.  You get a chill standing here, it feels as if you should
 leave, fast.
 ~
-212 136 1
+212 33554440 1
 D5
 ~
 ~
@@ -920,7 +920,7 @@ here. There is a long burned out fire pit in the centre of the room.  You
 get a strong sense of danger lurking around.  You don't feel safe standing
 in this room, perhaps you should leave.
 ~
-212 136 1
+212 33554440 1
 D5
 ~
 ~
