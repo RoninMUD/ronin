@@ -92,7 +92,7 @@ to the floor.  You get the idea that this woman means business, its probably
 a good idea to get out of her way.
 ~
 16394 134219904 -1000 Y
-40 -20 10 50d40+21000 5d20+75
+40 -20 10 50d40+21000 10d30+100
 900100 1500000
 8 8 2
 69 0 20d20+300 0
@@ -111,7 +111,7 @@ look. You do not belong here, and it seems as if he is ready to throw you
 out.
 ~
 16426 134219904 -1000 Y
-40 -20 10 40d50+19000 5d9+60
+40 -20 10 40d50+19000 15d30+50
 400100 1800000
 8 8 1
 69 0 10d10+300 0
