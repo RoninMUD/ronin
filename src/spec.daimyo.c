@@ -1075,7 +1075,7 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
     {
       next_vict = vict->next_in_room;
       if ( IS_NPC(vict) || !IS_MORTAL(vict) ) continue;
-      int reward = 6;
+      int reward = 5;
       sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward > 1 ? "points" : "point");
       send_to_char(buf, vict);
       vict->ver3.quest_points += reward;
@@ -1136,6 +1136,11 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
           // perform 8-13 attacks to random victims in room
           act("In the blink of an eye, $n scythes around the room with a series of quick, flashing strikes.", FALSE, uber, 0, vict, TO_ROOM);
           j = number(8,13);
+          if (affected_by_spell(uber, SPELL_DISRUPT_SANCT) || !IS_SET( uber->specials.affected_by, AFF_SANCTUARY)) {
+            sprintf(buf, "%s unleashes a fierce battlecry, pressing the attack in spite of %s lowered defenes.\n\r", GET_SHORT(uber), HSHR(uber));
+            send_to_room(buf, CHAR_REAL_ROOM(uber));
+            j+=6;
+          }
           for ( i = 0; i < j; i++ ) {
             vict = get_random_victim(uber);
             if (vict) {

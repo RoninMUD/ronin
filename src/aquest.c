@@ -1805,7 +1805,8 @@ int ubers[][2] = {
   {14014, 14070}, // Dream Shadow - spec.house.c
   {21220, 21275}, // Huge Stone Dragon - spec.moria.c
   {26585, 26582}, // Enlightened One - spec.pagoda.c
-  {20109, 20108} // Musashi - spec.daimyo.c
+  {20109, 20109}, // Musashi - spec.daimyo.c
+  {11300, 11400} // Strahd - spec.barovia.c
 };
 
 
