@@ -145,12 +145,12 @@ D3
 ~
 0 -1 11704
 E
-statue~
-This is a granite statue of an old fat god.
-~
-E
 altar~
 A small altar has been made here.  A few flowers are resting on it.
+~
+E
+statue~
+This is a granite statue of an old fat god.
 ~
 S
 #11706
@@ -181,20 +181,20 @@ D3
 ~
 0 -1 11707
 E
-beam~
-A remarkable beam of light from the heavens, shines down upon the golden statue.
-~
-E
-light~
-A remarkable beam of light from the heavens, shines down upon the golden statue.
+statue~
+It is a statue of a beautiful woman, immortalized in gold.
 ~
 E
 woman~
 It is a statue of a beautiful woman, immortalized in gold
 ~
 E
-statue~
-It is a statue of a beautiful woman, immortalized in gold.
+light~
+A remarkable beam of light from the heavens, shines down upon the golden statue.
+~
+E
+beam~
+A remarkable beam of light from the heavens, shines down upon the golden statue.
 ~
 S
 #11707
@@ -226,12 +226,12 @@ D3
 ~
 0 -1 11708
 E
-bench~
-A small wooden bench is here.
-~
-E
 benches~
 A few small wooden benches have been placed here.
+~
+E
+bench~
+A small wooden bench is here.
 ~
 S
 #11708
@@ -312,16 +312,16 @@ D3
 ~
 0 -1 11709
 E
-flowers~
-Some lovely looking flowers have been planted here.
+chairs~
+Some old wooden chairs have been put here.
 ~
 E
 tools~
 Some old gardening tools have been left here.
 ~
 E
-chairs~
-Some old wooden chairs have been put here.
+flowers~
+Some lovely looking flowers have been planted here.
 ~
 S
 #11711
@@ -380,16 +380,16 @@ D3
 ~
 0 -1 11713
 E
-tree~
-This huge tree has some names carved into it.
+food~
+This food is half eaten, and slightly decaying.
 ~
 E
 bench~
 This is a long wooden bench.
 ~
 E
-food~
-This food is half eaten, and slightly decaying.
+tree~
+This huge tree has some names carved into it.
 ~
 S
 #11713
@@ -417,36 +417,36 @@ D3
 ~
 0 -1 11723
 E
-racks~
-Large iron racks are here, holding many deadly-looking weapons.
-~
-E
-weapons~
-These weapons look fierce and deadly.
-~
-E
-tools~
-These tools appear to be the ones used to make the weapons here.
-~
-E
-armour~
-This armour seems to be finely crafted.
-~
-E
-table~
-Hey, it's a big stone table!  Hit it with your axe!
-~
-E
-barrels~
-A few empty barrels are scattered about here.
+stools~
+These stools are made of granite.  They don't look very comfortable.
 ~
 E
 kegs~
 A few empty kegs are scattered about here.
 ~
 E
-stools~
-These stools are made of granite.  They don't look very comfortable.
+barrels~
+A few empty barrels are scattered about here.
+~
+E
+table~
+Hey, it's a big stone table!  Hit it with your axe!
+~
+E
+armour~
+This armour seems to be finely crafted.
+~
+E
+tools~
+These tools appear to be the ones used to make the weapons here.
+~
+E
+weapons~
+These weapons look fierce and deadly.
+~
+E
+racks~
+Large iron racks are here, holding many deadly-looking weapons.
 ~
 S
 #11714
@@ -605,12 +605,12 @@ D2
 ~
 0 -1 11721
 E
-mist~
-This purple mist is strange and heavy.
-~
-E
 flowers~
 These beautiful flowers are very delicate.
+~
+E
+mist~
+This purple mist is strange and heavy.
 ~
 S
 #11723
@@ -1071,12 +1071,12 @@ An iron staircase leads up.
 staircase~
 11 -1 11750
 E
-stairs~
-A winding iron staircase leads up.
-~
-E
 staircase~
 An iron staircase leads up from here.
+~
+E
+stairs~
+A winding iron staircase leads up.
 ~
 S
 #11748
@@ -1134,11 +1134,11 @@ An iron staircase leads down.
 staircase~
 11 -1 11747
 E
-stairs~
+staircase~
 An iron staircase leads down from here.
 ~
 E
-staircase~
+stairs~
 An iron staircase leads down from here.
 ~
 S
@@ -1434,15 +1434,15 @@ A beautiful oak staircase leads down from here.
 staircase~
 11 -1 11761
 E
-statue~
-This golden statue is stunningly beautiful.~
+staircase~
+A beautiful oak staircase leads down from here.
+~
 E
 dragon~
 This golden statue is stunningly beautiful.~
 E
-staircase~
-A beautiful oak staircase leads down from here.
-~
+statue~
+This golden statue is stunningly beautiful.~
 S
 #11765
 The Realm of the Dragon~
