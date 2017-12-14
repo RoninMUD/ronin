@@ -22,13 +22,13 @@ D3
 ~
 0 -1 11306
 E
-mist~
-It's the thickest mist you've ever seen !
-~
-E
 sign~
 Past the mist is the village of Barovia. Feel free to enter, they welcome
 all wanderers, and plead them to stay.
+~
+E
+mist~
+It's the thickest mist you've ever seen !
 ~
 S
 #11301
@@ -762,6 +762,34 @@ D3
 ~
 0 -1 11336
 S
+#11332
+The Svalich road~
+This road leads to the Castle of Strahd Von Zarovich on the mountain top.
+The road continues to the east and west.
+A warning sign is nailed to a pole here.
+~
+113 0 2
+D1
+~
+~
+0 -1 11345
+D3
+~
+~
+0 -1 11401
+E
+sign~
+Along this road you may find many dangerous monster created by Strahd. If
+you are not confident you can defeat them, turn back before it's too late.
+~
+E
+sign~
+
+Along this road you may find many dangerous monster created by
+Count Strahd. If you are not confident you can defeat them,
+please come back with someone who can.
+~
+S
 #11333
 The Church~
 This is the Church of Barovia, quite small for a church, but fulfils the
@@ -1020,7 +1048,7 @@ D1
 D3
 ~
 ~
-0 -1 11349
+0 -1 11332
 E
 castle~
 The castle looks very scary. You wonder if the Strahd is looking at you right
@@ -1068,27 +1096,6 @@ D3
 ~
 ~
 0 -1 11368
-S
-#11349
-The Svalich road~
-This road leads to the Castle of Strahd Von Zarovich on the mountain top.
-The road continues to the east and west.
-A warning sign is nailed to a pole here.
-~
-113 0 2
-D1
-~
-~
-0 -1 11345
-D3
-~
-~
-0 -1 11401
-E
-sign~
-Along this road you may find many dangerous monster created by Strahd. If
-you are not confident you can defeat them, turn back before it's too late.
-~
 S
 #11363
 The Burgonmaster's house~
@@ -1143,16 +1150,16 @@ D3
 ~
 0 -1 11363
 E
-table~
-The table is just a simple, ordinary table, without any oddities.
+bed~
+The bed looks quite comfortable
 ~
 E
 chair~
 It's a big and strong chair, no other could hold his weight.
 ~
 E
-bed~
-The bed looks quite comfortable
+table~
+The table is just a simple, ordinary table, without any oddities.
 ~
 S
 #11366
@@ -1182,13 +1189,13 @@ To the north is the seeresses wagon.
 D0
 ~
 ~
-0 -1 11369
+0 -1 11399
 D1
 ~
 ~
 0 -1 11347
 S
-#11369
+#11399
 The seeresses wagon~
 You are in the gypsy seeresses wagon. Many maps, paintings and herbs cover
 the walls. This is not a bit wagon, but comfortable enough for the gypsies.

@@ -1,3 +1,24 @@
+#11400
+The room above the tower~
+  This stone chamber exists in a pocket dimension, it has to, for there is
+no conceivable way such a giant space could be here above what is clearly 
+the pinnacle of Ravenloft's tower. An enormous copper pentagram has been set
+into the stone floor, the walls are lined with bookshelves brimming with
+dusty tomes. There are windows on each wall, lined with dark curtains, that
+look out over Barovia from a dizzying height, at least a few hundred feet.
+An intricately carved, wooden door leads out of the room to the west.
+~
+114 136351752 0
+D3
+~
+door~
+1 0 11499
+D5
+A sturdy wooden ladder leads back down to the top of Ravenloft's tower.
+~
+ladder~
+11 -1 11426
+S
 #11401
 The Svalich road~
 This road leads to the Castle of Strahd Von Zarovich on the mountaintop.
@@ -8,7 +29,7 @@ to the safety of Barovia.
 D1
 ~
 ~
-0 -1 11349
+0 -1 11332
 D2
 ~
 ~
@@ -359,6 +380,11 @@ from this tower, the gypsy camp, the burgomaster's home, the mist, to name
 a few places.
 ~
 114 8 1
+D4
+A sturdy wooden ladder leads up through a small opening in the ceiling; an attic perhaps?
+~
+ladder~
+11 -1 11400
 D5
 ~
 ~
@@ -543,6 +569,21 @@ coffin~
 The coffin looks quite ordinary, old but sturdy. You wonder why it is here...
 ~
 S
+#11499
+Bedchamber~
+  Upon entry an eerie feeling affects one's senses; there is an almost over-
+whelming desire to submit to... anything really: lust, exhaustion, blood,
+infinity, death. The bed, it calls to you, to dive into its comforts never
+to emerge again. Where is the charismatic master of this domain; where the
+furniture is centuries old, but neither cracked nor weathered, where clothes
+feel like shackles, where logic and wisdom are trivial afterthoughts to the
+pulse-racing thirst for passion.
+~
+114 612401192 0
+D1
+~
+door~
+3 0 11400
+S
 #0
 $~
-

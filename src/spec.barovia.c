@@ -46,6 +46,7 @@ $State: Exp $
 #include "limits.h"
 #include "cmd.h"
 #include "utility.h"
+#include "act.h"
 #include "fight.h"
 #include "spec_assign.h"
 extern struct time_info_data time_info;
@@ -744,6 +745,445 @@ int jander(CHAR *mob, CHAR *ch, int cmd, char *arg)
   return FALSE;
 }
 
+#define UBER_STRAHD       11300
+#define NAMELESS_ONE      11301
+#define SUPER_ZOMBIE         11302
+#define STRAHD_SPAWNROOM        11400
+#define STRAHD_BEDCHAMBER         11499
+#define STRAHD_TORTURECHAMBER         11431
+#define UBER_BOM          11300
+#define BAVARIA_BOTTOM          11300
+#define BAVARIA_TOP         11347
+
+extern void mob_do(CHAR* mob, char *arg);
+
+int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
+{
+  CHAR *vict = NULL, *next_vict = NULL, *nameless = NULL, *zombie = NULL;
+  char buf[MAX_STRING_LENGTH];
+  int num_specs = 0, drain = 0, num_dispels = 0, tele_room = 0, eq_slot = 0, num_charms = 0, zombie_count = 0;
+  OBJ *charm_obj = NULL, *obj = NULL;
+  static int form = 0;
+  struct affected_type_5 af;
+
+  switch (cmd) {
+    case MSG_TICK:
+      // regenerate 10% of HP every tick when not fighting
+      if (!uber->specials.fighting) {
+        if (GET_HIT(uber) < GET_MAX_HIT(uber)) {
+          GET_HIT(uber) = MIN(( GET_HIT(uber) + ( GET_MAX_HIT(uber) / 10 ) ), GET_MAX_HIT(uber));
+          sprintf(buf, "Bathed in an aura of darkness, %s regenerates some of %s wounds.\n\r", GET_SHORT(uber), HSHR(uber) );
+          send_to_room(buf, CHAR_REAL_ROOM(uber));
+        } else if (uber->carrying) {
+        //drop all "borrowed" equipment on the ground if full on HP
+          mob_do(uber, "yawn");
+          do_say(uber, "Filthy mortal trinkets, blech.", CMD_SAY);
+          mob_do(uber, "drop all");
+        } else {
+          // equip an uber-bom if he doesn't have one
+          obj=EQ(uber, WEAR_WRIST_L);
+          if (obj && ( V_OBJ(obj) != UBER_BOM )) obj_to_char( unequip_char(uber, WEAR_WRIST_L), uber );
+          else if (!obj) {
+            obj=read_object(UBER_BOM, VIRTUAL);
+            if(chance(60)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_EVIL);
+            if(chance(20)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_GOOD);
+            if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_PALADIN);
+            if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_BARD);
+            equip_char(uber, obj, WEAR_WRIST_L);
+          }
+        }
+      } else {
+        if (!affected_by_spell(uber, SPELL_BLACKMANTLE) && chance(20) ) {
+          af.type = SPELL_BLACKMANTLE;
+          af.duration = 1;
+          af.modifier = 0;
+          af.location = 0;
+          af.bitvector = 0;
+          af.bitvector2 = 0;
+          affect_to_char(uber, &af);
+          act("$n becomes enveloped in a swirling cloud of darkness!", TRUE, uber, 0, 0, TO_ROOM);
+        }
+      }
+      break;
+    case CMD_SONG:
+      if (ch && IS_MORTAL(ch) && chance(20) && ch->equipment[HOLD]->obj_flags.type_flag == ITEM_MUSICAL) {
+        do_say(uber, "Tatyana, is that you!?! You always had the most beautiful voice; at last, time and circumstance have brought you back to me!", CMD_SAY);
+        sprintf(buf, "%s swirls %s cloak around %s and %s disappears.", GET_SHORT(uber), HSHR(uber), GET_NAME(ch), HSSH(ch) );
+        act("$n swirls $s cloak around $N and they both disappear.  $n returns immediately, alone.",0,uber,0,ch,TO_NOTVICT);
+        act("$n swirls $s cloak around you and your surroundings vanish.",0,uber,0,ch,TO_CHAR);
+        if (GET_SEX(ch) == SEX_MALE) {
+          //trans to The Torture Chamber
+          do_shout(uber, "What - you're a man?!? You disgusting catfish, I'll deal with you later!", CMD_SHOUT);
+          stop_fighting(ch);
+          char_from_room(ch);
+          char_to_room(ch, real_room(STRAHD_TORTURECHAMBER));
+          do_look(ch, "", CMD_LOOK);
+          WAIT_STATE(ch, PULSE_VIOLENCE*5);
+        } else {
+          //protect the lady, trans to bedchamber and lock door
+          do_shout(uber, "Nothing will get between us this time my love, I will keep you safe.", CMD_SHOUT);
+          stop_fighting(ch);
+          char_from_room(ch);
+          char_to_room(ch, real_room(STRAHD_BEDCHAMBER));
+          if ( !IS_SET( world[real_room(STRAHD_BEDCHAMBER)].dir_option[EAST]->exit_info, EX_CLOSED ) ) {
+            //if door isn't closed, close it
+            SET_BIT(world[real_room(STRAHD_BEDCHAMBER)].dir_option[EAST]->exit_info, EX_CLOSED);
+          }
+          if ( !IS_SET( world[real_room(STRAHD_BEDCHAMBER)].dir_option[EAST]->exit_info, EX_LOCKED ) ) {
+            //if door isn't locked, lock it
+            SET_BIT(world[real_room(STRAHD_BEDCHAMBER)].dir_option[EAST]->exit_info, EX_LOCKED);
+          }
+          //now from the other side
+          if ( !IS_SET( world[real_room(STRAHD_SPAWNROOM)].dir_option[WEST]->exit_info, EX_CLOSED ) ) {
+            //if door isn't closed, close it
+            SET_BIT(world[real_room(STRAHD_SPAWNROOM)].dir_option[WEST]->exit_info, EX_CLOSED);
+          }
+          if ( !IS_SET( world[real_room(STRAHD_SPAWNROOM)].dir_option[WEST]->exit_info, EX_LOCKED ) ) {
+            //if door isn't locked, lock it
+            SET_BIT(world[real_room(STRAHD_SPAWNROOM)].dir_option[WEST]->exit_info, EX_LOCKED);
+          }
+          do_look(ch, "", CMD_LOOK);
+          WAIT_STATE(ch, PULSE_VIOLENCE*2);
+        }
+      }
+      break;
+    case CMD_CAST:
+      if (ch && IS_MORTAL(ch) && chance(50)) {
+        if (chance(25)) do_say(uber, "Aha, I too have a taste for magic!", CMD_SAY);
+        act("$n moves with blinding speed and is upon $N instantly, sinking $s fangs deep into $N's neck.",0,uber,0,ch,TO_NOTVICT);
+        act("You move with blinding speed and descend upon $N instantly, sinking your fangs deep into $S neck.",0,uber,0,ch,TO_CHAR);
+        act("The last syllable of your spell barely leaves your lips before $n descends upon you and sinks $s fangs deep into your neck!",0,uber,0,ch,TO_VICT);
+        drain = number (100,185);
+        //ignore sanc/orb_of_protection etc.; do 'drain' dmg, steal 50 mana, and 0 mv
+        drain_mana_hit_mv(uber, ch, 50, drain, 0, TRUE, TRUE, FALSE);
+        //at night restore additional HP to strahd
+        if(IS_NIGHT) GET_HIT(uber) = MIN( GET_MAX_HIT(uber), GET_HIT(uber) + 250);
+      }
+      break;
+    case CMD_ASSIST:
+      //if using "assist" command, and 'bewitched' (CHARMed), assist Strahd instead
+      if (ch && !ch->specials.fighting && affected_by_spell(ch, SPELL_CHARM_PERSON) && uber->specials.fighting) {
+        send_to_char("You're right, the handsome Count needs your help, attack!\n\r", ch);
+        vict = uber->specials.fighting;
+        hit(ch,vict,TYPE_HIT);
+        return TRUE;
+      }
+      break;
+    case MSG_MOBACT:
+      if (!uber->specials.fighting) break;
+      if (uber && form == 0 && ( GET_HIT(uber) < ( GET_MAX_HIT(uber) / 20 ) ) ) {
+        nameless = read_mobile(NAMELESS_ONE, VIRTUAL);
+        if (nameless) {
+          char_to_room(nameless, CHAR_REAL_ROOM(uber));
+          sprintf(buf, "NOOOOOOOOOOO! %s, we struck an accord, the pact was signed in blood, this cannot end now!", GET_SHORT(nameless));
+          do_yell(uber, buf, CMD_YELL);
+          sprintf(buf, "The air ripples and suddenly an enormous black shadow is here, it extends a withered skeletal hand toward %s.\n\r", GET_SHORT(uber));
+          send_to_room(buf, CHAR_REAL_ROOM(uber));
+          sprintf(buf, "%s's wounds ooze putrid black oil for a moment before reforming anew.\n\r%s seems to be completely healed!\n\n\r", GET_SHORT(uber), GET_SHORT(uber));
+          send_to_room(buf, CHAR_REAL_ROOM(uber));
+          do_shout(nameless, "`bNames have power, and you have used mine Strahd, do not dare use it again or I will deliver you an eternity of torment.", CMD_SHOUT);
+          act("$n disappears in an explosion of putrid black gunk.", TRUE, nameless, 0, 0, TO_ROOM);
+          for(vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict)
+          {
+            next_vict = vict->next_in_room;
+            if ( IS_NPC(vict) || !IS_MORTAL(vict) ) continue;
+            damage(nameless,vict,number(200,800),TYPE_UNDEFINED,DAM_POISON);
+            stop_fighting(vict);
+          }
+          extract_char(nameless);
+          GET_HIT(uber) = GET_MAX_HIT(uber);
+          form = 1;
+        }
+      }
+      num_specs = number(0,2);
+      if (IS_NIGHT) num_specs++;
+      if (form == 1) num_specs++;
+      if (affected_by_spell(uber, SPELL_DISRUPT_SANCT) || !IS_SET( uber->specials.affected_by, AFF_SANCTUARY)) {
+        sprintf(buf, "%s growls angrily, frustratingly exposed and vulnerable here in %s sanctuary.\n\r", GET_SHORT(uber), HSHR(uber));
+        send_to_room(buf, CHAR_REAL_ROOM(uber));
+        num_specs+=2;
+      }
+      bool charming_msg = TRUE;
+      for (int i = 0; i < num_specs; i++) {
+        switch (number(0,9)) {
+          case 0:
+          case 1:
+          //vampire wiles: charms target, if already charmed: characters attempt to hand over a piece of gear to Strahd
+            num_charms = number(1,2);
+            if (form == 1) num_charms++;
+            if (charming_msg) {
+              sprintf(buf, "The whites of %s's eyes darken, and an intense wave of dazzling charisma exudes from %s.\n\r", GET_SHORT(uber), HMHR(uber));
+              send_to_room(buf, CHAR_REAL_ROOM(uber));
+              charming_msg = FALSE;
+            }
+
+            for (int j = 0; j < num_charms; j++)
+            {
+              vict = get_random_victim(uber);
+              if (vict && IS_MORTAL(vict) && ( GET_CON(vict) < 20 || chance(25) ) ) {
+                if(!affected_by_spell( vict, SPELL_CHARM_PERSON )) {
+                  af.type = SPELL_CHARM_PERSON;
+                  af.location = 0;
+                  af.duration = 1;
+                  af.modifier = 0;
+                  af.bitvector  = AFF_CHARM;
+                  af.bitvector2 = 0;
+                  affect_to_char(vict, &af);
+                  act("You're bewitched by $n's charms.",0,uber,0,vict,TO_VICT);
+                  act("$N is bewitched by $n's charms.",0,uber,0,vict,TO_NOTVICT);
+                } else {
+                  //victim is already charmed, time to give away an item
+                  eq_slot = number(0, MAX_WEAR-1);
+                  if ( EQ(vict, eq_slot) ) {
+                    charm_obj = unequip_char(vict, eq_slot);
+                    obj_to_char(charm_obj, uber);
+                    check_equipment(vict);
+                    save_char(vict, NOWHERE);
+                    act("$N sighs longingly, then hastily removes $p and gives it to $n in adoration.",0,uber,charm_obj,vict,TO_NOTVICT);
+                    act("$N sighs longingly, then hastily removes $p and gives it to you in adoration.",0,uber,charm_obj,vict,TO_CHAR);
+                    act("You sigh longingly, then hastily remove $p and give it to $n in adoration.",0,uber,charm_obj,vict,TO_VICT);
+                    sprintf(buf, "WIZINFO: %s gave %s to %s in %d", GET_NAME(vict), OBJ_SHORT(charm_obj), GET_SHORT(uber), V_ROOM(vict) );
+                    log_s(buf);
+                  }
+                }
+                stop_fighting(vict);
+              }
+            }
+            break;
+          case 2:
+          //sleep & impy a target (non-tank) for 1 tick
+            vict = get_random_victim(uber);
+            if (vict && IS_MORTAL(vict) && vict != uber->specials.fighting) {
+              sprintf(buf, "whisper %s This is a taste of the afterlife, a whiff of existence on the other side; to be gone from here and in an eternal slumber where none of your friends can reach you.", GET_NAME(vict));
+              mob_do(uber, buf);
+              if(!affected_by_spell( vict, SPELL_SLEEP )) {
+                af.type = SPELL_SLEEP;
+                af.location = 0;
+                af.duration = 0;
+                if (form == 1) af.duration++;
+                af.modifier = 0;
+                af.bitvector  = 0;
+                af.bitvector2 = 0;
+                affect_to_char(vict, &af);
+              }
+              if(!affected_by_spell( vict, SPELL_IMP_INVISIBLE )) {
+                af.type = SPELL_IMP_INVISIBLE;
+                af.location = 0;
+                af.duration = 0;
+                if (IS_NIGHT) af.duration++;
+                af.modifier = 0;
+                af.bitvector  = 0;
+                af.bitvector2 = 0;
+                affect_to_char(vict, &af);
+                act("$n disappears without a trace, as if $e never existed.", TRUE, vict,0,0,TO_ROOM);
+              }
+              stop_fighting(vict);
+              GET_POS(vict) = POSITION_SLEEPING;
+            }
+            break;
+          case 3:
+            //summon super-zombie: stun spec and "brain eating" ( chill touch with massive -INT )
+            zombie_count = 0;
+            for(vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict)
+            {// count zombies
+              next_vict = vict->next_in_room;
+              if (IS_NPC(vict) && V_MOB(vict)==SUPER_ZOMBIE) zombie_count++;
+            }
+            if(zombie_count<3)
+            {
+              do_yell(uber, "Arise my friend, we have guests who need your attention!", CMD_YELL);
+              zombie = read_mobile(SUPER_ZOMBIE, VIRTUAL);
+              if (zombie) char_to_room(zombie, CHAR_REAL_ROOM(uber));
+              vict = get_random_victim(uber);
+              if (vict && IS_MORTAL(vict)) hit(zombie,vict,TYPE_HIT);
+            }
+            break;
+          case 4:
+          case 5:
+          case 6:
+          //room damage & blind & -5 STR
+            act("$n sends a wave of dark energy swirling through the room, sapping light and strength from the world.",0,uber,0,0,TO_ROOM);
+            act("You send a wave of dark energy into the fray.",0,uber,0,0,TO_CHAR);
+            for( vict=world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict )
+            {
+              next_vict = vict->next_in_room;
+              if( vict == uber || affected_by_spell( vict, SPELL_SLEEP )) continue;
+              if( ( !IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM ) || ( IS_NPC(vict) && V_MOB(vict)==SUPER_ZOMBIE ) ) continue;
+              damage(uber, vict, number(100,300), TYPE_UNDEFINED, DAM_NO_BLOCK);
+              if(!affected_by_spell( vict, SPELL_BLINDNESS )) {
+                af.type = SPELL_BLINDNESS;
+                af.duration = 1;
+                if (IS_NIGHT) af.duration++;
+                af.location = APPLY_STR;
+                af.modifier = -5;
+                af.bitvector  = AFF_BLIND;
+                af.bitvector2 = 0;
+                affect_to_char(vict, &af);
+              }
+            }
+            break;
+          case 7:
+          case 8:
+            //dispel some folk
+            num_dispels = 1;
+            if (IS_NIGHT) num_dispels++;
+            if (form == 1) num_dispels++;
+            for (int j = 0; j < num_dispels; j++)
+            {
+              vict = get_random_victim(uber);
+              if (vict && IS_MORTAL(vict) && !affected_by_spell( vict, SPELL_CHARM_PERSON ) && !affected_by_spell( vict, SPELL_SLEEP ) && !affected_by_spell( vict, SPELL_CHILL_TOUCH )) {
+              //don't dispel people that are: bewitched, sleep-impy, or brain-eaten
+                act("$n makes a contemptuous gesture in $N's direction while mumbling an incantation, 'tizsiztsalis megis a gyengeketum'.",0,uber,0,vict,TO_NOTVICT);
+                act("You make a contemptuous gesture in $N's direction while mumbling an incantation, 'tizsiztsalis megis a gyengeketum'.",0,uber,0,vict,TO_CHAR);
+                act("$n makes a contemptuous gesture in your direction while mumbling an incantation, 'tizsiztsalis megis a gyengeketum'.",0,uber,0,vict,TO_VICT);
+                spell_disenchant( GET_LEVEL(uber), uber, vict, 0 );
+              }
+            }
+            break;
+          case 9:
+            //trans someone to Barovia
+            tele_room = real_room( number(BAVARIA_BOTTOM, BAVARIA_TOP) );
+            vict = get_random_victim(uber);
+            if (vict && IS_MORTAL(vict) && tele_room) {
+              do_say(uber, "You bore me, go bother the village folk.", CMD_SAY);
+              act("$n glances piteously at $N, who disappears.",0,uber,0,vict,TO_NOTVICT);
+              act("You glances piteously at $N, who disappears.",0,uber,0,vict,TO_CHAR);
+              act("$n glances piteously at you, and suddenly you're elsewhere.",0,uber,0,vict,TO_VICT);
+              stop_fighting(vict);
+              char_from_room(vict);
+              char_to_room(vict, tele_room);
+              do_look(vict, "", CMD_LOOK);
+            }
+            break;
+          default:
+            break;
+        }
+      }
+      break;
+    case MSG_DIE:
+      // on boss death reward AQP
+      sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
+      send_to_room(buf, CHAR_REAL_ROOM(uber));
+      for(vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict)
+      {
+        next_vict = vict->next_in_room;
+        if ( IS_NPC(vict) || !IS_MORTAL(vict) ) continue;
+        int reward = 8;
+        sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward > 1 ? "points" : "point");
+        send_to_char(buf, vict);
+        vict->ver3.quest_points += reward;
+      }
+      break;
+    default:
+      break;
+  }
+  return FALSE;
+}
+
+
+int super_zombie(CHAR *zombie, CHAR *ch, int cmd, char *arg)
+{
+  CHAR *vict = NULL, *next_vict = NULL, *vict1 = NULL, *vict2 = NULL;
+  char buf[MAX_STRING_LENGTH];
+  struct affected_type_5 af;
+
+  if(cmd == MSG_MOBACT && zombie->specials.fighting) {
+    switch (number(0,5)) {
+      case 0:
+        //stun two people
+        vict1=get_random_victim(zombie);
+        vict2=get_random_victim(zombie);
+
+        int failcount = 0;
+        while(failcount < 10 && (vict2==vict1))
+        {
+          vict2=get_random_victim(zombie);
+          failcount++;
+        }
+
+        if(vict1 != vict2 && failcount < 10) {
+          for(vict = world[CHAR_REAL_ROOM(zombie)].people; vict; vict = next_vict)
+          {
+            next_vict = vict->next_in_room;
+            if ( IS_NPC(vict) ) continue;
+            //this is a little awkward here, no clean way for messaging the different people appropriately, writing our own logic rather than use act()
+            if (vict != vict1 && vict != vict2 && vict != zombie) {
+            //result for witnesses
+              sprintf(buf, "%s lifts %s off the floor in one swift movement, then proceeds to bludgeon %s repeatedly with %s human cudgel.\n\r", GET_SHORT(zombie), GET_NAME(vict1), GET_NAME(vict2), HMHR(zombie));
+              send_to_char(buf, vict);
+            } else if (vict == vict1) {
+            //result for "bludgeoner"
+              sprintf(buf, "%s lifts you off the floor in one swift movement, then proceeds to bludgeon %s, swinging you around like a human cudgel.\n\r", GET_SHORT(zombie), GET_NAME(vict2));
+              send_to_char(buf, vict);
+              damage(zombie,vict,number(200,400),TYPE_UNDEFINED,DAM_PHYSICAL);
+              stop_fighting(vict);
+              WAIT_STATE(vict, 2*PULSE_VIOLENCE);
+            } else if (vict == vict2) {
+            //result for "the bludgeoned"
+              sprintf(buf, "%s lifts %s off the floor in one swift movement, then proceeds to bludgeon you with %s body, swinging %s like a human cudgel.\n\r", GET_SHORT(zombie), GET_NAME(vict1), HSHR(vict1), HMHR(vict1));
+              send_to_char(buf, vict);
+              damage(zombie,vict2,number(400,1000),TYPE_UNDEFINED,DAM_PHYSICAL);
+              WAIT_STATE(vict, 3*PULSE_VIOLENCE);
+            } else {
+            //result for zombie
+              sprintf(buf, "You lift %s off the floor in one swift movement, swing %s like a human cudgel, then proceed to bludgeon %s.\n\r", GET_NAME(vict1), HMHR(vict1), GET_NAME(vict2));
+              send_to_char(buf, vict);
+            }
+          }
+        }
+        break;
+      case 1:
+      case 2:
+        //eat someone's brains
+        vict = get_random_victim(zombie);
+        if(vict && IS_MORTAL(vict)) {
+          if(chance(25)) do_shout(zombie, "BRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAINS!", CMD_SHOUT);
+          act("$n lunges forward with surprising agility, puts $N in a headlock, and calmly begins to eat $S brains.",0,zombie,0,vict,TO_NOTVICT);
+          act("You lunge forward with surprising agility, put $N in a headlock, and calmly begin to eat $S brains.",0,zombie,0,vict,TO_CHAR);
+          act("$n lunges forward with surprising agility, puts you in a headlock, and calmly begins to eat your brains.\n\rYou feel... weird.",0,zombie,0,vict,TO_VICT);
+          if(!affected_by_spell( vict, SPELL_CHILL_TOUCH )) {
+            af.type = SPELL_CHILL_TOUCH;
+            af.duration = 2;
+            af.location = APPLY_INT;
+            af.modifier = -10;
+            af.bitvector  = 0;
+            af.bitvector2 = 0;
+            affect_to_char(vict, &af);
+          }
+          damage(zombie,vict,number(200,500),TYPE_UNDEFINED,DAM_NO_BLOCK);
+        }
+        break;
+      case 3:
+        //do nothing
+      case 4:
+      case 5:
+      default:
+        break;
+    }
+  }
+  return FALSE;
+}
+
+
+int uber_bom(OBJ *obj, CHAR *ch, int cmd, char *argument)
+{
+  if (cmd == MSG_TICK) {
+    if (obj->equipped_by) {
+      if (GET_HIT(obj->equipped_by)>-1) {
+        //bom: range of 8-13 "hidden" regen instead of flat 10, doubles in CLUB, +5 in DARK
+        int regen = number(8,13);
+        if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(obj->equipped_by)), CLUB)) regen*=2;
+        if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(obj->equipped_by)), DARK)) regen+=5;
+        GET_HIT(obj->equipped_by) = MIN( GET_MAX_HIT(obj->equipped_by),
+        GET_HIT(obj->equipped_by)+regen);
+        GET_MANA(obj->equipped_by) = MIN( GET_MAX_MANA(obj->equipped_by),
+        GET_MANA(obj->equipped_by)+regen);
+      }
+    }
+  }
+  return FALSE;
+}
+
 /* ******************** End of Barovia & Castle of Ravenloft ****************** */
 
 
@@ -784,6 +1224,8 @@ void assign_barovia (void) {
   assign_mob(BAR_SOTH   ,   soth);
   assign_mob(BAR_GHOUL  ,   ghoul);
   assign_mob(11322      ,   b_zombie);
+  assign_mob(SUPER_ZOMBIE, super_zombie);
+  assign_mob(UBER_STRAHD, uber_strahd);
 
   assign_obj(BAR_SWORD   ,  black_rose_sword);
   assign_obj(BAR_BRACELET, bracelet_of_magic);
@@ -795,4 +1237,5 @@ void assign_barovia (void) {
   assign_obj(BAR_DECAY5  ,  decaying_eq);
   assign_obj(BAR_DECAY6  ,  decaying_eq);
   assign_obj(BAR_DECAY7  ,  decaying_eq);
+  assign_obj(UBER_BOM, uber_bom);
 }

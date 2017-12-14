@@ -1,26 +1,47 @@
 #11300
-claymore rose black~
-the Charred Claymore of the Black Rose Knights~
-A charred black claymore, marked by rose inlay, has fallen here.~
-$r claymore siphons light from its surroundings, and darkens the universe.~
-5 142663680 8193
-0 5 8 3
-30 10000000 25000
-50
+bracelet charm lover~
+a lover's charm bracelet~
+A charm bracelet, centuries old and a likely heirloom, was lost here.~
+~
+11 191903232 4097
+0 0 0 0
+2 2500 100
+100
 X
-$r claymore momentarily darkens the surroundings.~
-3072 0 0
+~
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 5
+19 2
 A
-18 3
+12 30
+B
+32
+#11301
+pentacle copper zarovich~
+a fine copper Pentacle~
+There is a bit of nothing sitting here.~
+~
+8 187720197 16385
+0 0 0 0
+10 10 10
+20
+X
+~
+1024 0 0
+M
+~
+~
+~
+~
 A
-52 -40
+19 7
+A
+18 1
 #11310
 beer mug~
 beer mug~
