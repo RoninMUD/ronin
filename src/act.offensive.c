@@ -464,7 +464,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
     if (IS_MORTAL(ch) &&
         CAN_SEE(victim, ch) &&
-        !affected_by_spell(ch, AFF_SNEAK) &&
+        !IS_AFFECTED(ch, AFF_SNEAK) &&
         !affected_by_spell(ch, SPELL_IMP_INVISIBLE) &&
         !affected_by_spell(ch, SPELL_BLACKMANTLE)) {
       act("Maybe if $E couldn't see you, or in the cover of darkness...", FALSE, ch, 0, victim, TO_CHAR);
@@ -475,7 +475,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   check = (number(1, 151) - GET_DEX_APP(ch));
 
   if (!CAN_SEE(victim, ch) ||
-      affected_by_spell(ch, AFF_SNEAK) ||
+      IS_AFFECTED(ch, AFF_SNEAK) ||
       affected_by_spell(ch, SPELL_INVISIBLE) ||
       affected_by_spell(ch, SPELL_IMP_INVISIBLE)) {
     check -= 5;
