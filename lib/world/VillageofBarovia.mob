@@ -1,28 +1,63 @@
 #11300
-soth uber lord~
-Uber Lord Soth~
-Uber Lord Soth is raging wildly, prepared to lay waste to any who confront him.
+uber strahd zarovich~
+Uber Strahd~
+Strahd von Zarovich the uber vampire is here, idly meddling in necromancy.
 ~
-You can hardly see any signs of the creature beneath a suit of burnt and
-charred armor. Two faint points of glowing menace burn from within a dark
-maw of shadow inside his helmet. An acid-etched rose is the only adornment
-on his otherwise plain, black, implacable breast plate. He is the ideal
-form of the being known as the Lord Soth, and he is here to destroy you.
+Gaze upon Strahd von Zarovich, one of the eldest vampires alive.  A master
+necromancer and ruler of Barovia, he has long dwelt in the castle Ravenloft.
+But this is no mere earthly vampire, this is a darkness-infused demi-god from
+beyond time and space.  Here, in his own pocket dimension he awaits the
+reincarnation of Tatyana - his ill-conceived, bittersweet desire - while he
+toils with the unholy arts of reanimation.
 ~
-147529 402653192 -1000 Y
-55 -30 -25 200d500+150000 20d20+300
-25000000 100000000
+536870986 402917512 -1000 Y
+70 -30 -20 500d200+100000 20d20+200
+25000000 125000000
 8 8 1
-53 75366400 10d1+20000 4
-1 2 60 181
-1 2 40 179
-1 6 50 249
-1 6 50 211
-0 0 9 0
+55 8507840 10d1+20000 0
+0 1 9 32
 R
 4
 K
-0 11300 11300 0 0 0 0
+0 11301 0 0 0 0 0
+#11301
+nameless~
+`pNameless One`q~
+A figure, veiled in `pshadow`q, stands tall with an inspiring presence.
+~
+The Nameless One - there is nothing else to know.
+~
+8 0 0 Y
+70 19 10 100d100+100000 1d1+1
+1 1
+8 8 1
+0 0 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#11302
+zombie super super-zombie~
+Super-Zombie~
+A slack-jawed corpse lumbers around aimlessly, groaning, arms outstretched.
+~
+A reanimated corpse of unknown age and origin, the only certainties are its
+mindlessness and odor.  It is difficult to know whether this was simply a
+convenience corpse for Strahd's experiments, from a local hospital perhaps,
+or, more sinister, a hapless traveller to Barovia who found oneself a brief
+pampered lifestyle in the castle Ravenloft.  Fortunately, none of that makes
+any difference, it would still try to eat your brains if it were your best
+and oldest friend.... Wait! Larry, is that you?
+~
+536870922 268435456 0 Y
+50 -15 -10 20d1000+5000 5d100+50
+0 5000000
+8 8 0
+53 1 1d1+1 0
+0 1 0 34
+R
+4
+K
+1000000 0 0 0 0 0 0
 #11310
 master burgonmaster~
 Burgonmaster~
@@ -315,7 +350,7 @@ K
 0 0 0 0 0 0 0
 #11328
 ghost~
-ghost~
+Ghost~
 A ghost is floating here in its eternal agony.
 ~
 The ghost looks just like a thick fog, nothing interesting in it. But he 

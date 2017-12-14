@@ -1,26 +1,63 @@
 #11300
-claymore rose black~
-the Charred Claymore of the Black Rose Knights~
-A charred black claymore, marked by rose inlay, has fallen here.~
-$r claymore siphons light from its surroundings, and darkens the universe.~
-5 142663680 8193
-0 5 8 3
-30 10000000 25000
-50
+bracelet charm lover~
+a lover's charm bracelet~
+A charm bracelet, centuries old and a likely heirloom, was lost here.~
+~
+11 191903232 4097
+0 0 0 0
+2 2500 100
+100
+E
+bracelet~
+
+Count Zarovich truly did love her, a love even mortals could claim to
+understand, but she could never see past what he was, and his jealousy
+only drove her away. This memento has been worn by Strahd ever since
+that fateful day when she plunged from the Ravenloft parapets; the ages
+spent upon his wrist have imbued the bracelet with powerful restorative
+magic.
+~
 X
-$r claymore momentarily darkens the surroundings.~
-3072 0 0
+~
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 5
+19 2
 A
-18 3
+12 30
+B
+32
+#11301
+pentacle copper zarovich~
+a fine copper Pentacle~
+An untarnished copper pentacle, attached to a simple black string.~
+~
+8 187720197 16385
+0 0 0 0
+10 10 10
+20
+E
+pentacle~
+
+Strahd's magical talisman, used to help channel the necromantic forces
+that powered his summoning and reanimation spells.
+~
+X
+~
+1024 0 0
+M
+~
+~
+~
+~
 A
-52 -40
+19 7
+A
+18 1
 #11310
 beer mug~
 beer mug~
