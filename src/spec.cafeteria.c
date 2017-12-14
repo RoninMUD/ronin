@@ -11,24 +11,6 @@
 ///   Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:15 $
-$Header: /home/ronin/cvs/ronin/spec.cafeteria.c,v 2.0.0.1 2004/02/05 16:10:15 ronin Exp $
-$Id: spec.cafeteria.c,v 2.0.0.1 2004/02/05 16:10:15 ronin Exp $
-$Name:  $
-$Log: spec.cafeteria.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:15  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -48,13 +30,6 @@ $State: Exp $
 #include "act.h"
 #include "spec_assign.h"
 
-extern struct time_info_data time_info;
-extern struct char_data *character_list;
-
-extern OBJ  *object_list;
-extern CHAR *character_list;
-
-
 #define ZONE_CAFETERIA     3600
 #define CAFE_BOUNCER       ITEM(ZONE_CAFETERIA,10)
 #define CAFE_ATTENDANT     ITEM(ZONE_CAFETERIA,12)
@@ -62,7 +37,6 @@ extern CHAR *character_list;
 #define CAFE_WAITRESS      ITEM(ZONE_CAFETERIA,14)
 
 #define NEW_ROOM           3600
-
 
 int cafe_bouncer (CHAR *mob, CHAR *ch, int cmd, char *arg)  {
 

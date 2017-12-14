@@ -5,8 +5,33 @@
   Last Modification Date: 12/06/2017
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#include "structs.h"
+#include "constants.h"
+#include "comm.h"
+#include "db.h"
+#include "fight.h"
+#include "handler.h"
+#include "interpreter.h"
+#include "limits.h"
+#include "spec.clan.h"
+#include "spells.h"
+#include "utility.h"
+#include "utils.h"
+#include "enchant.h"
+#include "remortv2.h"
 #include "score.h"
 #include "cmd.h"
+
+extern char *skip_spaces(char *string);
+extern int hit_gain(CHAR *ch);
+extern int mana_gain(CHAR *ch);
+extern int move_gain(CHAR *ch);
+extern int check_subclass(CHAR *ch, int sub, int lvl);
 
 int calc_bhd(CHAR *ch)
 {
@@ -794,7 +819,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       else if (is_abbrev(arg, "death_limit")) query = SCQ_DEATH_LIMIT;
       else if (is_abbrev(arg, "position")) query = SCQ_POSITION;
       else if (is_abbrev(arg, "wizinv")) query = SCQ_WIZINV;
-      else if (is_abbrev(arg, "editing_zone") || is_abbrev(arg, "zone")) query = SCQ_EDITING_ZONE;
+      else if (is_abbrev(arg, "editing_zone")) query = SCQ_EDITING_ZONE;
       else {
         send_to_char("Invalid query. See HELP \"SCORE QUERY\" for more information.\n\r", ch);
 

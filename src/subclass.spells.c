@@ -18,6 +18,7 @@
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -32,13 +33,6 @@
 #include "spec_assign.h"
 #include "mob.spells.h"
 #include "subclass.h"
-
-extern struct time_info_data time_info;
-extern struct room_data *world;
-extern struct char_data *character_list;
-extern struct int_app_type int_app[];
-extern struct wis_app_type wis_app[];
-extern int CHAOSMODE;
 
 void cast_rally(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
 {
@@ -1182,7 +1176,6 @@ void cast_engage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
   extern int wpn_extra(CHAR *ch, CHAR *victim, OBJ *wielded);
-  extern struct str_app_type str_app[];
   int dam, w_type, str_index;
   OBJ *wielded = NULL;
 
@@ -1940,8 +1933,7 @@ void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   switch (type) {
     case SPELL_TYPE_SPELL:
-      if (victim)
-        spell_tranquility(level, ch, victim, 0);
+      spell_tranquility(level, ch, 0, 0);
       break;
     default:
       log_f("Wrong type called in tranquility!");
@@ -1950,25 +1942,82 @@ void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
 }
 
 void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  CHAR *group_leader = NULL;
+  CHAR *group_member = NULL;
+  FOL *follower = NULL;
   AFF af;
 
-  if (!affected_by_spell(victim, SPELL_TRANQUILITY)) {
-    send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", victim);
-    act("$n is suddenly awash in a sense of tranquility.", TRUE, victim, 0, 0, TO_ROOM);
+  af.type       = SPELL_TRANQUILITY;
+  af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 6;
+  af.bitvector  = 0;
+  af.bitvector2 = 0;
 
-    af.type = SPELL_TRANQUILITY;
-    af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 5 : 10;
-    af.modifier = 2;
+  if (ch->master) {
+    /* Find the group leader. */
+    group_leader = ch->master;
+  }
+  else {
+    /* The acting character is the leader (or there is no group leader). */
+    group_leader = ch;
+  }
+
+  /* Apply the affects to the group leader first. */
+  if (group_leader != ch && IS_AFFECTED(group_leader, AFF_GROUP)) {
+    send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", group_leader);
+    act("$n is suddenly awash in a sense of tranquility.", TRUE, group_leader, 0, 0, TO_ROOM);
+
+    affect_from_char(group_leader, SPELL_TRANQUILITY);
+
     af.location = APPLY_HITROLL;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
+    af.modifier = 2;
 
-    affect_to_char(victim, &af);
+    affect_to_char(group_leader, &af);
 
     af.location = APPLY_DAMROLL;
+    af.modifier = 2;
 
-    affect_to_char(victim, &af);
+    affect_to_char(group_leader, &af);
   }
+
+  /* Loop through all of the group members of group_leader's group and apply the affects to them. */
+  for (follower = group_leader->followers; follower; follower = follower->next) {
+    group_member = follower->follower;
+
+    if (!group_member || group_member == ch || !SAME_ROOM(group_member, ch)) continue;
+
+    if (IS_AFFECTED(group_member, AFF_GROUP)) {
+      send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", group_member);
+      act("$n is suddenly awash in a sense of tranquility.", TRUE, group_member, 0, 0, TO_ROOM);
+
+      affect_from_char(group_member, SPELL_TRANQUILITY);
+
+      af.location = APPLY_HITROLL;
+      af.modifier = 2;
+
+      affect_to_char(group_member, &af);
+
+      af.location = APPLY_DAMROLL;
+      af.modifier = 2;
+
+      affect_to_char(group_member, &af);
+    }
+  }
+
+  /* Apply the affects to the caster. */
+  send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", ch);
+  act("$n is suddenly awash in a sense of tranquility.", TRUE, ch, 0, 0, TO_ROOM);
+
+  affect_from_char(ch, SPELL_TRANQUILITY);
+
+  af.location = APPLY_HITROLL;
+  af.modifier = 2;
+
+  affect_to_char(ch, &af);
+
+  af.location = APPLY_DAMROLL;
+  af.modifier = 2;
+
+  affect_to_char(ch, &af);
 }
 
 void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)

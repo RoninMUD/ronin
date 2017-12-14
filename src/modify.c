@@ -4,51 +4,14 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************ */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:28 $
-$Header: /home/ronin/cvs/ronin/modify.c,v 2.1 2005/01/21 14:55:28 ronin Exp $
-$Id: modify.c,v 2.1 2005/01/21 14:55:28 ronin Exp $
-$Name:  $
-$Log: modify.c,v $
-Revision 2.1  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.0.0.1  2004/02/05 16:09:49  ronin
-Reinitialization of cvs archives
-
-
-Revision 12-Mar-03 Ranger
-Addition of code in string_add to remove double $$.
-
-Revision 1.5  2002/04/18 18:45:54  ronin
-Addition of reboot_type for normal or hotboot.
-
-Revision 1.4  2002/04/18 04:07:31  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
-
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
 
-
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "interpreter.h"
 #include "handler.h"
@@ -63,13 +26,9 @@ $State: Exp $
 #define TP_OBJ     1
 #define TP_ERROR  2
 
-extern struct obj_proto *obj_proto_table;
-extern struct char_data *character_list;
-
 void show_string(struct descriptor_data *d, char *input);
-extern char *spells[];
 
-char *string_fields[] =
+const char * const string_fields[] =
 {
   "name",
   "short",
@@ -93,7 +52,7 @@ int length[] =
 
 
 
-char *skill_fields[] =
+const char * const skill_fields[] =
 {
   "learned",
   "affected",
@@ -670,8 +629,6 @@ void night_watchman(void)
   long tc;
   struct tm *t_info;
 
-  extern int cleanshutdown;
-
   void send_to_all(char *messg);
 
   tc = time(0);
@@ -698,7 +655,6 @@ void check_reboot(void) {
   struct tm *t_info;
   struct char_data *i,*boy=0;
   int min=0,next_hour;
-  extern int cleanshutdown, cleanreboot,chreboot,disablereboot,REBOOT_AT,uptime,reboot_type;
   void send_to_all(char *messg);
 
   if(disablereboot) return; /* Added by Ranger Sept 97 */
@@ -787,7 +743,6 @@ int load(void)
   int i, sum;
   static int previous[5];
   static int p_point = -1;
-  extern int slow_death;
 
   if (!(fl = fopen("/tmp/.sysline", "r")))
   {
@@ -849,9 +804,6 @@ char *nogames(void)
 
 void comatose(void)
 {
-  extern struct descriptor_data *descriptor_list;
-  extern int tics;
-
   void close_socket(struct descriptor_data *d);
 
   log_f("Entering comatose state");
@@ -890,8 +842,6 @@ void gr(int s)
     "WARNING: The game will close in 1 minute.\n\r"
    };
   static int wnr = 0;
-
-  extern int slow_death, cleanshutdown;
 
   void send_to_all(char *messg);
 

@@ -4,41 +4,12 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:26 $
-$Header: /home/ronin/cvs/ronin/act.social.c,v 2.1 2005/01/21 14:55:26 ronin Exp $
-$Id: act.social.c,v 2.1 2005/01/21 14:55:26 ronin Exp $
-$Name:  $
-$Log: act.social.c,v $
-Revision 2.1  2005/01/21 14:55:26  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.0.0.1  2004/02/05 16:08:40  ronin
-Reinitialization of cvs archives
-
-
-Revision 10-Mar-03 Ranger
-Addition of do_social for socials manipulation
-
-Revision 1.3  2002/04/18 04:07:30  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -49,20 +20,14 @@ $State: Exp $
 #include "utility.h"
 #include "modify.h"
 #include "utils.h"
-/* extern variables */
-extern char *BKColor[];
-extern char *Color[];
 
-extern struct room_data *world;
-extern struct descriptor_data *descriptor_list;
-extern struct room_data *world;
+/* Global Data */
+int social_list_top;
+
 /* extern functions */
-
 void parse_string(char *input, char *output, struct char_data *ch1,struct char_data *ch2, struct char_data *to);
 int action(int cmd);
 char *fread_action(FILE *fl);
-int social_list_top;
-
 extern char *skip_spaces(char *string);
 
 #define MAX_SOCIALS 500

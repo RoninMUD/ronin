@@ -13,24 +13,6 @@
  *             contact Thyas at : rdlewis@europa.cs.mun.ca                   *
  ****************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:15 $
-$Header: /home/ronin/cvs/ronin/spec.sphinx.c,v 2.0.0.1 2004/02/05 16:11:15 ronin Exp $
-$Id: spec.sphinx.c,v 2.0.0.1 2004/02/05 16:11:15 ronin Exp $
-$Name:  $
-$Log: spec.sphinx.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:15  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -51,7 +33,6 @@ $State: Exp $
 #include "spec_assign.h"
 
 /* Sword of Healing */
-extern int CHAOSMODE;
 int is_shop(CHAR *mob);
 
 int sword_of_healing(OBJ *obj,CHAR *ch, int cmd, char *argument)

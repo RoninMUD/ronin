@@ -10,6 +10,7 @@
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "comm.h"
 #include "handler.h"
 #include "db.h"
@@ -33,21 +34,6 @@
 
 int cc;
 int total_connects;
-extern int uptime;
-extern int CHAOSMODE;
-extern struct descriptor_data *descriptor_list;
-
-
-/* Chaos 2017 */
-extern struct spell_info_type spell_info[MAX_SPL_LIST];
-extern char *spells[];
-extern char *avatar_skills[];
-
-
-
-
-
-extern struct obj_data  *object_list;
 
 /* Extern functions */
 void store_to_char_5(struct char_file_u_5 *st, CHAR *ch); /* Latest version is 5 */
@@ -1252,7 +1238,6 @@ void auto_rent(CHAR *ch) {
 
 void autorent_all(void) {
   CHAR *i, *next_dude;
-  extern CHAR *character_list;
 
   for (i = character_list; i; i = next_dude) {
     next_dude = i->next;
@@ -1264,7 +1249,6 @@ void autorent_all(void) {
 
 void autosave_all(void) {
   CHAR *i, *next_dude;
-  extern CHAR *character_list;
 
   for (i = character_list; i; i = next_dude) {
     next_dude = i->next;
@@ -2059,7 +2043,6 @@ void do_crent(CHAR *ch, char *argument, int cmd)
 void do_logoff_char(CHAR *ch, char *argument, int cmd) {
   char tmp_name[50],ch_name[50],buf[MAX_INPUT_LENGTH];
   CHAR *i, *next_dude;
-  extern CHAR *character_list;
   int found=0;
   if(!check_god_access(ch,TRUE)) return;
 
@@ -2100,7 +2083,6 @@ void do_logon_char(CHAR *ch, char *argument, int cmd) {
   struct char_file_u_2 char_data_2;
   char buf[MAX_STRING_LENGTH],tmp_name[50],ch_name[50];
   CHAR *i, *next_dude,*vict;
-  extern CHAR *character_list;
   struct descriptor_data *d;
   long last_up = 0;
 

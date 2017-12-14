@@ -15,6 +15,7 @@
 
 /* Ronin Includes */
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "db.h"
 #include "cmd.h"
@@ -362,8 +363,6 @@ void spyglass_list_scanned_chars(CHAR *list, CHAR *ch, int distance, int dir)
 
 int spyglass_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
-  extern char *dirs[];
-
   CHAR *owner = NULL;
   char buf[MSL];
   int dir = 0, room = 0, exit_room = 0, distance = 0;
@@ -482,7 +481,16 @@ int talon_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
         group_leader = owner;
       }
 
-      /* Loop through all of the group members of group_leader's group. */
+      /* Apply the affect to the group leader if it's not the owner. */
+      if (group_leader != owner && IS_AFFECTED(group_leader, AFF_GROUP) && !affected_by_spell(group_leader, SPELL_REGENERATION)) {
+        act("$N is infused with a regenerative power!", FALSE, owner, 0, group_leader, TO_CHAR);
+        act("You are infused with a regenerative power!", FALSE, owner, 0, group_leader, TO_VICT);
+        act("$N is infused with a regenerative power!", FALSE, owner, 0, group_leader, TO_NOTVICT);
+
+        affect_to_char(group_leader, &af);
+      }
+
+      /* Loop through all of the group members of group_leader's group and apply the affect to them. */
       for (follower = group_leader->followers; follower; follower = follower->next)
       {
         group_member = follower->follower;

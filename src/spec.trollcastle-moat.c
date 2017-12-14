@@ -15,35 +15,6 @@
 *
  ****************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:24 $
-$Header: /home/ronin/cvs/ronin/spec.trollcastle-moat.c,v 2.0.0.1 2004/02/05 16:11:24 ronin Exp $
-$Id: spec.trollcastle-moat.c,v 2.0.0.1 2004/02/05 16:11:24 ronin Exp $
-$Name:  $
-$Log: spec.trollcastle-moat.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:24  ronin
-Reinitialization of cvs archives
-
-Revision 1.5  2002/05/29 04:57:45  ronin
-Yet another fix for lizard assist spec.
-
-Revision 1.4  2002/05/13 12:59:15  ronin
-Fix for lizardman assist spec.
-
-Revision 1.3  2002/05/09 20:16:07  ronin
-Fix to randomize mobs targets better.
-
-Revision 1.2  2002/04/15 03:26:36  ronin
-Update of acts and small changes to spec percentages.
-
-Revision 1.1  2002/04/13 14:41:05  ronin
-spec.troll.c replaced with spec.trollvillage.c.  spec.trollcastle-moat.c
-specs for a new area.
-
-$State: Exp $
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -52,6 +23,7 @@ $State: Exp $
 #include <math.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -65,8 +37,6 @@ $State: Exp $
 #include "spec_assign.h"
 #include "act.h"
 #include "enchant.h"
-
-extern struct time_info_data time_info;
 
 int troll_lizardapprentice(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 

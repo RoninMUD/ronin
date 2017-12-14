@@ -13,23 +13,6 @@
  *             contact Vishnu at : clay@nano.engr.mun.ca                     *
  ****************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:13 $
-$Header: /home/ronin/cvs/ronin/spec.barovia.c,v 2.0.0.1 2004/02/05 16:10:13 ronin Exp $
-$Id: spec.barovia.c,v 2.0.0.1 2004/02/05 16:10:13 ronin Exp $
-$Name:  $
-$Log: spec.barovia.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:13  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -49,8 +32,7 @@ $State: Exp $
 #include "act.h"
 #include "fight.h"
 #include "spec_assign.h"
-extern struct time_info_data time_info;
-extern int CHAOSMODE;
+
 /* Make one npc rescue another */
 
 int bar_do_npc_rescue (CHAR *ch_hero, CHAR *ch_victim) {

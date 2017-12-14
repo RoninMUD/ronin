@@ -28,6 +28,7 @@
 #include <stdarg.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -50,7 +51,6 @@
 
 #define STATE(d) ((d)->connected)
 #define LAST_COMMAND_FILE "last_command.txt"
-extern char last_command[MSL];
 
 extern int errno;    /* Why isn't this done in errno.h on alfa??? */
 int special(CHAR *ch, int cmd, char *arg);
@@ -60,20 +60,11 @@ int room_special(int room, CHAR *ch, int cmd, char *arg);
 int enchantment_special(struct enchantment_type_5 *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
 /* externs */
 
-extern struct room_data *world;        /* In db.c */
-extern int max_connects;
-extern int total_connects;
-extern int top_of_world;            /* In db.c */
-extern int top_of_mobt;            /* In db.c */
-extern int top_of_objt;            /* In db.c */
-extern struct time_info_data time_info;  /* In db.c */
-extern char help[];
 void slongrand(unsigned long seed);
 void init_descriptor (struct descriptor_data *newd, int desc);
 void game_sleep(struct timeval *timeout);
 void heartbeat(int pulse);
 void write_last_command(void);
-extern char *spell_wear_off_msg[];
 
 /* local globals */
 struct descriptor_data *descriptor_list, *next_to_process;
@@ -526,7 +517,6 @@ void obj_to_corpsefile(struct obj_data *obj, FILE *fl) {
        obj_to_corpsefile(tmp, fl);
   }
 }
-extern struct obj_data  *object_list;
 void check_corpses(void) {
   OBJ *j,*jj,*obj;
   FILE *fl;
@@ -639,8 +629,6 @@ void plrlog(void) {
 
 int get_slave_result(void);
 void flying_room(int room);
-extern int top_of_flying;
-extern int *flying_rooms;
 void process_program_output(void);
 
 /* Big change to make pulse change every 1/10 of a second
@@ -1074,7 +1062,6 @@ int copyover_write(int same_room) {
   int room;
   CHAR *i;
   FILE *fl;
-  extern FILE *wizhelp_fl,*olchelp_fl,*help_fl;
 
   if(!(fl=fopen(COPYOVER_FILE, "w"))) {
     log_s("Copyover file not writeable, aborted.");
@@ -1149,7 +1136,6 @@ int copyover_write(int same_room) {
 }
 
 void copyover_recover(void) {
-  extern struct char_data *character_list;
   struct descriptor_data *d;
   struct char_file_u_5 char_data_5;
   struct char_file_u_4 char_data_4;
@@ -2517,9 +2503,6 @@ void give_prompt(struct descriptor_data *point)
   }
 }
 
-extern struct zone_data *zone_table;
-extern int top_of_zone_table;
-
 int signal_world(CHAR *ch, int cmd, char* arg)
 {
 //  char buf[512];
@@ -2560,7 +2543,6 @@ int signal_world(CHAR *ch, int cmd, char* arg)
   return stop;
 }
 
-extern int top_of_world;
 
 int signal_zone(CHAR *ch, int zone,int cmd, char*arg)
 {

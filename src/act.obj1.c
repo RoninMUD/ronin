@@ -11,6 +11,7 @@
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -21,13 +22,6 @@
 #include "act.h"
 #include "limits.h"
 #include "cmd.h"
-
-/* extern variables */
-
-extern struct str_app_type str_app[];
-extern struct descriptor_data *descriptor_list;
-extern struct room_data *world;
-extern int CHAOSMODE;
 
 /* extern functions */
 
@@ -1040,8 +1034,6 @@ int put_all_to(struct char_data *ch, char *allbuf, bool alldot,
 
   return(total);
 }
-
-extern struct idname_struct idname[MAX_ID]; // for acquisition orders
 
 void do_put(struct char_data *ch, char *argument, int cmd)
 {

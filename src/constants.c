@@ -7,7 +7,7 @@
 #include "structs.h"
 #include "limits.h"
 
-const char *spell_wear_off_msg[] = {
+const char * const spell_wear_off_msg[] = {
   "RESERVED DB.C",
   "You feel less protected.",
   "!Teleport!",
@@ -474,7 +474,7 @@ const char *where[] = {
   "<held>               "
 };
 
-const char *drinks[]= {
+const char * const drinks[]= {
   "water",
   "beer",
   "wine",
@@ -1314,7 +1314,7 @@ const struct title_type titles[11][58] =
                   {"the God","the Goddess"} }
 };
 
-int const exp_table[58] = {
+const int exp_table[58] = {
   0,
   1,
   1850,
@@ -1375,7 +1375,7 @@ int const exp_table[58] = {
   1000000000 /*57*/
 };
 
-const char *item_types[] = {
+const char * const item_types[] = {
   "UNDEFINED",
   "LIGHT",
   "SCROLL",
@@ -1459,8 +1459,8 @@ const char *extra_bits[] = {
   "ANTI-MAGIC_USER",
   "ANTI-MORTAL",
   "ANTI-MALE",
-  "ANTI-FEMALE",
-  "ANTI-RENT",
+  "<UNUSED>",
+  "<UNUSED>",
   "ANTI-NINJA",
   "ANTI-NOMAD",
   "ANTI-PALADIN",
@@ -1567,7 +1567,7 @@ const char *exit_bits[] = {
   "\n"
 };
 
-const char *sector_types[] = {
+const char * const sector_types[] = {
   "Inside",
   "City",
   "Field",
@@ -1581,7 +1581,7 @@ const char *sector_types[] = {
   "\n"
 };
 
-const char *equipment_types[] = {
+const char * const equipment_types[] = {
   "Special",
   "Worn on right finger",
   "Worn on left finger",
@@ -1603,7 +1603,7 @@ const char *equipment_types[] = {
   "\n"
 };
 
-const char *affected_bits[] =  {
+const char * const affected_bits[] =  {
   "BLIND",
   "INVISIBLE",
   "DETECT-ALIGNMENT",
@@ -1637,7 +1637,7 @@ const char *affected_bits[] =  {
   "\n"
 };
 
-const char *affected_bits2[] =  {
+const char * const affected_bits2[] =  {
   "TRIPLE",
   "IMMINENT-DEATH",
   "SEVERED",
@@ -1645,7 +1645,7 @@ const char *affected_bits2[] =  {
   "\n"
 };
 
-const char *apply_types[] = {
+const char * const apply_types[] = {
   "NONE",
   "STR",
   "DEX",
@@ -1703,7 +1703,7 @@ const char *apply_types[] = {
   "\n"
 };
 
-const char *immortal_types[] = {
+const char * const immortal_types[] = {
   "Immortal",
   "Deity",
   "Temporal",
@@ -1714,7 +1714,7 @@ const char *immortal_types[] = {
   "\n"
 };
 
-const char *pc_class_types[] = {
+const char * const pc_class_types[] = {
   "UNDEFINED",
   "Magic User",
   "Cleric",
@@ -1730,7 +1730,7 @@ const char *pc_class_types[] = {
   "\n"
 };
 
-const char *npc_class_types[] = {
+const char * const npc_class_types[] = {
   "Normal",
   "Magic User",
   "Cleric",
@@ -1929,14 +1929,14 @@ const char *immune_bits2[] =  {
   "CHEMICAL",
   "ACID",
   "FEAR",
-  "<UNUSED>", /* Not Used - Used to be IMMUNE_THROATSTRIKE */
+  "<UNUSED>",
   "CIRCLE",
-  "<UNUSED>", /* Not Used - Used to be IMMUNE_EXECUTE */
+  "<UNUSED>",
   "STEAL",
   "\n"
 };
 
-const char *att_targets[] =  {
+const char * const att_targets[] =  {
   "NONE",
   "BUFFER",
   "RAN_GROUP",
@@ -1948,7 +1948,7 @@ const char *att_targets[] =  {
   "\n"
 };
 
-const char *att_types[] =  {
+const char * const att_types[] =  {
   "NONE",
   "SPELL CAST",
   "KICK",
@@ -1964,7 +1964,7 @@ const char *att_types[] =  {
   "\n"
 };
 
-const char *sector_types_i[] = {
+const char * const sector_types_i[] = {
   "INSIDE",
   "CITY",
   "FIELD",
@@ -1978,7 +1978,7 @@ const char *sector_types_i[] = {
   "\n"
 };
 
-const char *player_bits[] = {
+const char * const player_bits[] = {
   "BRIEF",
   "NOSHOUT",
   "COMPACT",
@@ -2010,7 +2010,7 @@ const char *player_bits[] = {
   "\n"
 };
 
-const char *wiz_bits[] = {
+const char * const wiz_bits[] = {
   "TRUST",
   "QUEST",
   "FREEZE",
@@ -2032,7 +2032,7 @@ const char *wiz_bits[] = {
   "\n"
 };
 
-const char *position_types[] = {
+const char * const position_types[] = {
   "Dead",
   "Mortally wounded",
   "Incapacitated",
@@ -2048,7 +2048,7 @@ const char *position_types[] = {
   "\n"
 };
 
-const char *connected_types[]   =   {
+const char * const connected_types[] = {
   "Playing",
   "Get name",
   "Confirm name",
@@ -2592,14 +2592,14 @@ struct wis_app_type wis_app[] = {
 };
 
 /* Cleric Skills */
-char *cleric_skills[] = {
+const char * const cleric_skills[] = {
   "bash",         /* Level 35 */
   "meditate",     /* Druid/Templar SC1 */
   "\n"
 };
 
 /* Thief Skills */
-char *thief_skills[] = {
+const char * const thief_skills[] = {
   "backstab",
   "circle",
   "dodge",
@@ -2624,7 +2624,7 @@ char *thief_skills[] = {
 };
 
 /* Warrior Skills */
-char *warrior_skills[] = {
+const char * const warrior_skills[] = {
   "bash",
   "block",
   "dual",
@@ -2650,7 +2650,7 @@ char *warrior_skills[] = {
 };
 
 /* Ninja Skills */
-char *ninja_skills[] = {
+const char * const ninja_skills[] = {
   "assault",
   "bash",
   "dodge",
@@ -2668,7 +2668,7 @@ char *ninja_skills[] = {
 };
 
 /* Nomad Skills */
-char *nomad_skills[] = {
+const char * const nomad_skills[] = {
   "pick",
   "throw",
   "dodge",
@@ -2697,7 +2697,7 @@ char *nomad_skills[] = {
 };
 
 /* Paladin Skills */
-char *paladin_skills[] = {
+const char * const paladin_skills[] = {
   "bash",
   "block",
   "disarm",
@@ -2715,7 +2715,7 @@ char *paladin_skills[] = {
 };
 
 /* Anti-Paladin Skills */
-char *anti_paladin_skills[] = {
+const char * const anti_paladin_skills[] = {
   "backstab",
   "bash",
   "hide",
@@ -2733,7 +2733,7 @@ char *anti_paladin_skills[] = {
 };
 
 /* Avatar Skills */
-char *avatar_skills[] = {
+const char * const avatar_skills[] = {
   "steal",
   "backstab",
   "pick",
@@ -2755,7 +2755,7 @@ char *avatar_skills[] = {
 };
 
 /* Bard Skills */
-char *bard_skills[] = {
+const char * const bard_skills[] = {
   "dodge",
   "peek",
   "pick",
@@ -2767,7 +2767,7 @@ char *bard_skills[] = {
 };
 
 /* Commando Skills */
-char *commando_skills[] = {
+const char * const commando_skills[] = {
   "assault",
   "bash",
   "disarm",
@@ -2783,7 +2783,7 @@ char *commando_skills[] = {
   "\n"
 };
 
-char *subclass_name[] = {
+const char * const subclass_name[] = {
   "ENCHANTER",
   "ARCHMAGE",
   "DRUID",

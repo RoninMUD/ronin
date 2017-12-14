@@ -4,55 +4,12 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:01 $
-$Header: /home/ronin/cvs/ronin/shop.c,v 2.0.0.1 2004/02/05 16:10:01 ronin Exp $
-$Id: shop.c,v 2.0.0.1 2004/02/05 16:10:01 ronin Exp $
-$Name:  $
-$Log: shop.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:01  ronin
-Reinitialization of cvs archives
-
-
-Revision 10-Mar-03 Ranger
-Shop producing now uses virtual numbers internally and checks the
-virtual number for the producing item. Previously, real obj numbers
-were getting messed up with OLC.
-
-Revision 04-Mar-03 Ranger
-Addition of routine to check to see if a shop has already been loaded
-and if so, replace the current shop with the read version.
-
-Revision 25-Feb-03 Ranger
-Moved code from boot_the_shops routine to a read_shop routine
-Each zone will have its own shop file.  boot_the_shops remains
-until all zones from tinyworld.shp can be moved to individual
-shop files.
-
-Revision 1.5  2002/06/18 14:32:20  ronin
-Adding divide_experience before raw_kill to ensure proper quest
-completion.  Addition of flag within divide_experience to force
-amount to 0 if required.
-
-Revision 1.4  2002/04/18 04:07:31  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "comm.h"
 #include "handler.h"
 #include "db.h"
@@ -66,9 +23,6 @@ $State: Exp $
 #include "utility.h"
 #include "shop.h"
 #include "spec_assign.h"
-
-extern struct str_app_type str_app[];
-extern int CHAOSMODE;
 
 char *fread_string(FILE *fl);
 
@@ -392,7 +346,6 @@ void shopping_list( char *arg, CHAR *ch,
 {
   char buf[MAX_STRING_LENGTH], buf2[100],buf3[100];
   struct obj_data *temp1;
-  extern char *drinks[];
   int found_obj;
 
   if(!(is_ok(keeper,ch,shop_nr)))

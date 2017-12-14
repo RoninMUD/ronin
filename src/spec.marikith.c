@@ -8,27 +8,12 @@
 ///   Using this code is not allowed without permission from originator.
 */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:10:57 $
-$Header: /home/ronin/cvs/ronin/spec.marikith.c,v 2.0.0.1 2004/02/05 16:10:57 ronin Exp $
-$Id: spec.marikith.c,v 2.0.0.1 2004/02/05 16:10:57 ronin Exp $
-$Name:  $
-$Log: spec.marikith.c,v $
-Revision 2.0.0.1  2004/02/05 16:10:57  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "handler.h"
@@ -40,12 +25,6 @@ $State: Exp $
 #include "fight.h"
 #include "spec_assign.h"
 #include "interpreter.h"
-extern struct time_info_data time_info;
-extern CHAR *character_list;
-extern char *spells[];
-extern OBJ  *object_list;
-
-extern int CHAOSMODE;
 
 void command_interpreter (CHAR *, char*);
 char *one_argument(char *, char *);

@@ -6,68 +6,28 @@
   *  Modified by Ranger May-96 Removing soom mob assignments and commenting *
   ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:03 $
-$Header: /home/ronin/cvs/ronin/spec.misc.c,v 2.0.0.1 2004/02/05 16:11:03 ronin Exp $
-$Id: spec.misc.c,v 2.0.0.1 2004/02/05 16:11:03 ronin Exp $
-$Name:  $
-$Log: spec.misc.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:03  ronin
-Reinitialization of cvs archives
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-May 12 -05 Removed wear spec from 29441
-
-Revision 1.7  2003/11/08 ronin
-Addition of 2003 chaos prize specs.
-
-Revision 1.6  2002/11/15 23:33:45  ronin
-Making sure that gun spec works, re-revision.
-
-Revision 1.5  2002/11/05 23:33:45  ronin
-Addition of chaos prize specs.
-
-Revision 1.4  2002/10/22 23:20:24  ronin
-Addition of chaos_gun_spec for Chaos '02.
-
-Revision 1.3  2002/04/18 04:15:44  ronin
-Removal of mob spec assigns for Loftwick mobs.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
- #include <stdio.h>
- #include <string.h>
- #include <ctype.h>
- #include <stdlib.h>
- #include <unistd.h>
-
- #include "structs.h"
- #include "utils.h"
- #include "comm.h"
- #include "interpreter.h"
- #include "handler.h"
- #include "db.h"
- #include "spells.h"
- #include "limits.h"
- #include "cmd.h"
- #include "utility.h"
- #include "fight.h"
- #include "act.h"
- #include "reception.h"
- #include "spec_assign.h"
- #include "mob.spells.h"
- /*   external vars  */
-
- extern CHAR *character_list;
- extern struct descriptor_data *descriptor_list;
- extern struct time_info_data time_info;
- extern struct spell_info_type spell_info[MAX_SPL_LIST];
- extern int CHAOSMODE;
+#include "structs.h"
+#include "constants.h"
+#include "utils.h"
+#include "comm.h"
+#include "interpreter.h"
+#include "handler.h"
+#include "db.h"
+#include "spells.h"
+#include "limits.h"
+#include "cmd.h"
+#include "utility.h"
+#include "fight.h"
+#include "act.h"
+#include "reception.h"
+#include "spec_assign.h"
+#include "mob.spells.h"
 
 struct char_data
 *get_random_v( struct char_data *ch ) {

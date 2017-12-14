@@ -10,7 +10,10 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "structs.h"
+#include "constants.h"
+#include "db.h"
 #include "limits.h"
 #include "utils.h"
 #include "spells.h"
@@ -40,20 +43,7 @@
 
 /* Externs */
 
-extern int CHAOSMODE;
-
-extern struct char_data *character_list;
-extern struct obj_data *object_list;
-extern struct room_data *world;
-
 extern struct time_info_data age(CHAR *ch);
-extern struct time_info_data time_info;
-
-extern const int exp_table[58];
-extern struct title_type titles[11][58];
-
-extern struct wis_app_type wis_app[];
-extern struct con_app_type con_app[];
 
 extern void auto_rent(CHAR *ch);
 extern void stop_riding(CHAR *ch, CHAR *vict);

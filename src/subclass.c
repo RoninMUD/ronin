@@ -14,6 +14,7 @@
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -29,11 +30,8 @@
 #include "mob.spells.h"
 #include "subclass.h"
 
-extern struct descriptor_data *descriptor_list;
 int check_subclass(CHAR *ch,int sub,int lvl);
 int check_god_access(CHAR *ch, int active);
-extern int CHAOSMODE;
-extern int TOKENCOUNT;
 int distribute_token(void);
 
 int check_sc_song_access(CHAR *ch, int s) {
@@ -353,7 +351,6 @@ void remove_subclass(CHAR *ch) {
   ch->ver3.subclass_level=0;
 }
 
-extern char *subclass_name[];
 void do_subclass(CHAR *ch, char *argument, int cmd) {
   CHAR *vict;
   char buf[MAX_INPUT_LENGTH];
@@ -684,7 +681,6 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 #define TOKEN_MOB 11
 #define MAX_RATINGS 120 /* Currently 115 zones */
 int token_mob_time;
-extern int top_of_world;
 
 struct zone_token_rating
 {
@@ -694,8 +690,6 @@ struct zone_token_rating
 
 struct zone_token_rating zrate[MAX_RATINGS];
 int top_zone_rating=0;
-extern int top_of_zone_table;
-extern struct zone_data *zone_table;
 
 void reset_zone_rating(void) {
   int i;

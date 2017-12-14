@@ -11,6 +11,7 @@
 #include <assert.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "db.h"
@@ -23,11 +24,7 @@
 #include "limits.h"
 #include "enchant.h"
 #include "subclass.h"
-
-extern int CHAOSMODE;
-extern struct obj_data  *object_list;
-extern struct char_data *character_list;
-extern struct descriptor_data *descriptor_list;
+#include "fight.h"
 
 /* External procedures */
 
@@ -733,7 +730,6 @@ void equip_char(struct char_data *ch, struct obj_data *obj, int pos)
 {
   int j,hit,owner_ok=0;
   char buf[MAX_INPUT_LENGTH];
-  extern struct str_app_type str_app[];
 
   assert(pos>=0 && pos<MAX_WEAR);
   assert(!(ch->equipment[pos]));
@@ -876,8 +872,6 @@ void equip_char(struct char_data *ch, struct obj_data *obj, int pos)
 int rent_equip_char(struct char_data *ch, struct obj_data *obj, int pos)
 {
   int j;
-
-  extern struct str_app_type str_app[];
 
   if (!obj)
      return(FALSE);
@@ -1523,7 +1517,6 @@ void update_char_objects( struct char_data *ch )
 
 
 /* Extract a ch completely from the world, and leave his stuff behind */
-extern int token_mob_time;
 void extract_char(struct char_data *ch)
 {
   struct obj_data *i;
@@ -1531,8 +1524,6 @@ void extract_char(struct char_data *ch)
   struct descriptor_data *t_desc;
   int l, was_in;
   char buf[MAX_INPUT_LENGTH];
-
-  extern struct char_data *combat_list;
 
   void do_return(struct char_data *ch, char *argument, int cmd);
   void affect_remove(struct char_data *ch, struct affected_type_5 *af);
@@ -2037,7 +2028,7 @@ struct obj_data *create_money( int amount )
 int generic_find(char *arg, int bitvector, struct char_data *ch,
                    struct char_data **tar_ch, struct obj_data **tar_obj)
 {
-  static char *ignore[] = {
+  static const char * const ignore[] = {
     "the",
     "in",
     "on",

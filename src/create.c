@@ -13,6 +13,7 @@
 
 #include "cmd.h"
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "shop.h"
 #include "db.h"
@@ -34,21 +35,6 @@
 #define EDIT_SHOP 5
 
 #define LEN_EXTRADESC_MAX 2048
-
-extern char *Month[];
-extern OBJ*  object_list;
-extern CHAR* character_list;
-extern int number_of_shops;
-extern struct shop_data *shop_index;
-extern int top_of_objt;
-extern int top_of_mobt;
-extern int top_of_world;
-extern int top_of_zone_table;
-extern struct zone_data *zone_table;
-extern char *equipment_types[];
-extern char *dirs[];
-extern char *extra_bits2[];
-extern char *subclass_res_bits[];
 
 void fix_mob_resets(int vmob,int j,int max);
 void create_obj(CHAR *ch, char *arg1);
@@ -1466,9 +1452,6 @@ void edit_mob(CHAR *ch, char *fargs)
   int v_mob=-1, mob, edit=-1, tmp, tmp1, tmp2, tmp3, tmp4, zone,i=0,num,act,aff,immune;
   char *arg2;
   struct tagline_data *tmp_tag, **prev_tag_ptr, *tmp_tag1;
-  extern char *immune_bits[];
-  extern char *immune_bits2[];
-  extern char *resist_bits[];
 
   sprintf(args, "%s", fargs);
   arg2 = strtok(args, " ");
@@ -2741,11 +2724,12 @@ WAIST, WRIST, WIELD, HOLD, THROW, LIGHT-SOURCE, NO_REMOVE, NO_SCAVENGE.\
            {
            send_to_char("edit object <#> flags <add|remove> all, or a list of the following:\r\n\
 GLOW, HUM, DARK, CLONE, EVIL, INVISIBLE, MAGIC, NODROP, BLESS, ANTI-GOOD,\n\r\
-ANTI-EVIL, ANTI-NEUTRAL, ANTI-WARRIOR, ANTI-CLERIC, ANTI-THIEF, \n\r\
-ANTI-MAGIC_USER, ANTI-MORTAL, ANTI-MALE, ANTI-FEMALE, ANTI-RENT,\n\r\
-ANTI-NINJA, ANTI-NOMAD, ANTI-PALADIN, ANTI-ANTI-PALADIN, ANTI-AVATAR,\n\r\
-ANTI-BARD, ANTI-COMMANDO, LIMITED, ANTI-AUCTION, CHAOTIC, RANDOM,\n\r\
-ALL_DECAY, EQ_DECAY, NO_GIVE, NO_GIVE_MOB, NO_PUT, NO_TAKE_MOB, NO_LOCATE, RANDOM_0, RANDOM_1, RANDOM_2.\n\r", ch);
+ANTI-EVIL, ANTI-NEUTRAL, ANTI-WARRIOR, ANTI-CLERIC, ANTI-THIEF,\n\r\
+ANTI-MAGIC_USER, ANTI-MORTAL, ANTI-RENT, ANTI-NINJA, ANTI-NOMAD,\n\r\
+ANTI-PALADIN, ANTI-ANTI-PALADIN, ANTI-AVATAR, ANTI-BARD,\n\r\
+ANTI-COMMANDO, LIMITED, ANTI-AUCTION, CHAOTIC, RANDOM, ALL_DECAY,\n\r\
+EQ_DECAY, NO_GIVE, NO_GIVE_MOB, NO_PUT, NO_TAKE_MOB, NO_LOCATE,\n\r\
+RANDOM_0, RANDOM_1, RANDOM_2.\n\r", ch);
            }
          else
            {
@@ -3167,7 +3151,6 @@ void edit_zone(CHAR *ch, char *fargs)
 {
   char args[MAX_INPUT_LENGTH],buf[MAX_STRING_LENGTH];
   struct reset_com tmp_reset;
-  extern char *dirs[];
   char *arg2;
   int edit = 0, delete = 1;
   int top, bottom, i,i2;
@@ -6678,7 +6661,6 @@ Also, the experience given to players is 1/3 the mobs experience.\n\r\n\r\
 }
 
 void do_mpos(CHAR *ch, char *argument, int cmd) {
-  extern char *position_types[];
   char usage[]="\
 This command allows you to change the mobs position.\n\r\
 Positions are as follows:\n\r\
@@ -6734,7 +6716,6 @@ Positions are as follows:\n\r\
 }
 
 void do_mdefpos(CHAR *ch, char *argument, int cmd) {
-  extern char *position_types[];
   char usage[]="\
 This command allows you to change the mobs default position.\n\r\
 Default positions are as follows:\n\r\
@@ -6868,7 +6849,6 @@ from scratch.\n\r\n\r\
 }
 
 void do_mclass(CHAR *ch, char *argument, int cmd) {
-  extern char *npc_class_types[];
   char usage[]="\
 This command allows you to change the mobs class.\n\r\
 For a list of classes use OLCHELP MOB CLASS.\n\r\n\r\
@@ -7105,8 +7085,6 @@ Acts are: `iSENTINEL, SCAVENGER, ISNPC, NICE-THIEF, AGGRESSIVE, STAY-ZONE,\n\r\
 }
 
 void do_mimmune(CHAR *ch, char *argument, int cmd) {
-  extern char *immune_bits[];
-  extern char *immune_bits2[];
   char usage[]="\
 This command toggles the mob immunities listed on/off.\n\r\n\r\
   Usage: `kmimmune`q <mob #> <list of immunitiess>/all/none\n\r\
@@ -7197,7 +7175,6 @@ Immunes are: `iFIRE, ELECTRIC, POISON, PUMMEL, KICK, PUNCH, SLEEP,\n\r\
 }
 
 void do_mresist(CHAR *ch, char *argument, int cmd) {
-  extern char *resist_bits[];
   char usage[]="\
 This command toggles the mob resistances listed on/off.\n\r\n\r\
   Usage: `kmresist`q <mob #> <list of immunitiess>/all/none\n\r\

@@ -30,7 +30,7 @@ clean :
 $(OBJDIR)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJDIR) : 
+$(OBJDIR) :
 	@mkdir -p $(OBJDIR)
 
 $(BINDIR) :
@@ -191,8 +191,8 @@ endif
 OBJS_RONIN_BASE := $(patsubst %, $(OBJDIR)/%, $(OBJS_RONIN_BASE))
 OBJS_RONIN_SPEC := $(patsubst %, $(OBJDIR)/%, $(OBJS_RONIN_SPEC))
 
-$(OBJS_RONIN_BASE) : structs.h utils.h comm.h interpreter.h handler.h db.h spells.h limits.h cmd.h enchant.h act.h spec.clan.h
-$(OBJS_RONIN_SPEC) : structs.h utils.h comm.h interpreter.h handler.h db.h spells.h limits.h cmd.h enchant.h act.h spec_assign.h
+$(OBJS_RONIN_BASE) : structs.h utils.h comm.h interpreter.h handler.h db.h spells.h limits.h cmd.h enchant.h act.h spec.clan.h constants.h quest.h
+$(OBJS_RONIN_SPEC) : structs.h utils.h comm.h interpreter.h handler.h db.h spells.h limits.h cmd.h enchant.h act.h spec_assign.h constants.h
 
 $(OBJDIR)/act.movement.o : subclass.h
 $(OBJDIR)/act.offensive.o : subclass.h
@@ -210,6 +210,7 @@ $(OBJDIR)/remortv2.o : fight.h meta.h remortv2.h
 $(OBJDIR)/score.o : score.h
 $(OBJDIR)/spec.elmuseo.o : subclass.h
 $(OBJDIR)/spec.midgaard.o : subclass.h
+$(OBJDIR)/spec.mapmaker.o : quest.h
 $(OBJDIR)/spec.vote.o : spec.vote.h
 $(OBJDIR)/spec.zyca.o : subclass.h
 $(OBJDIR)/spell_parser.o : subclass.h

@@ -4,53 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:30 $
-$Header: /home/ronin/cvs/ronin/utility.c,v 2.4 2005/01/21 14:55:30 ronin Exp $
-$Id: utility.c,v 2.4 2005/01/21 14:55:30 ronin Exp $
-$Name:  $
-$Log: utility.c,v $
-Revision 2.4  2005/01/21 14:55:30  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.3  2004/09/30 15:58:10  ronin
-Fixed V_OBJ to return 0 for ITEM_SKIN
-
-Revision 2.2  2004/05/12 13:22:40  ronin
-Added update_pos in check_equipment.
-
-Revision 2.1  2004/03/13 05:27:13  pyro
-updated for olc commands oname and owear
-
-Revision 2.0.0.1  2004/02/05 16:11:58  ronin
-Reinitialization of cvs archives
-
-
-Revision - fix to allow players with perceive to see invis too
-
-Revision - fix to see yourself in CAN_SEE proc
-
-Revision 1.5  2002/06/30 11:49:42  ronin
-Addition of check for maximum mana to prevent orb giving owners
-over and above their maximum mana.
-
-Revision 1.4  2002/04/17 15:47:55  ronin
-Changed to do internal manipulation of syslog for hotboot fix.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <errno.h>
 #include <stdio.h>
 #include <string.h>
@@ -70,6 +23,7 @@ $State: Exp $
 #include <limits.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "db.h"
 #include "handler.h"
@@ -79,17 +33,6 @@ $State: Exp $
 #include "comm.h"
 #include "cmd.h"
 #include "spells.h"
-
-extern struct time_data time_info;
-extern struct weather_data weather_info;
-extern int CHAOSMODE;
-extern char *BKColor[];
-extern char *Color[];
-
-extern struct room_data *world;
-extern struct obj_proto *obj_proto_table;
-extern struct char_data *character_list;
-extern struct mob_proto *mob_proto_table;
 
 extern FILE *logfile;
 void update_pos( struct char_data *ch );
@@ -734,8 +677,6 @@ void wizinfo(char *str, int level)
   char buf[MSL];
   struct descriptor_data *t;
 
-  extern struct descriptor_data *descriptor_list;
-
   strcpy(buf,"** ");
   strcat(buf, str);
   strcat(buf," **\n\r");
@@ -753,8 +694,6 @@ void wizlog(char *str, int level, int which)
 {
   char buf[MSL];
   struct descriptor_data *t;
-
-  extern struct descriptor_data *descriptor_list;
 
   level = MIN(LEVEL_IMP, level);
 
@@ -793,7 +732,7 @@ void wizlog(char *str, int level, int which)
 }
 
 
-void sprintbit(long vektor, char *names[], char *result)
+void sprintbit(long vektor, const char * const names[], char *result)
 {
   long nr;
 
@@ -818,7 +757,7 @@ void sprintbit(long vektor, char *names[], char *result)
     strcat(result, "NOBITS");
 }
 
-void sprinttype(int type, char *names[], char *result)
+void sprinttype(int type, const char * const names[], char *result)
 {
   int nr;
 
@@ -1476,7 +1415,6 @@ FILE *process_in;           /* Standart input for runned program             */
 struct char_data *get_ch_by_name(char *chname)
 {
   struct descriptor_data *d;
-  extern struct descriptor_data *descriptor_list;
 
   for (d = descriptor_list; d; d = d->next)
     if (d && !d->connected && d->character &&
@@ -1696,7 +1634,6 @@ int CAN_TAKE(struct char_data *ch,struct obj_data *obj) {
 struct char_data *get_ch_by_id(int num)
 {
   struct descriptor_data *d;
-  extern struct descriptor_data *descriptor_list;
 
   for (d = descriptor_list; d; d = d->next)
     if (d && !d->connected && d->character &&
@@ -1911,4 +1848,33 @@ int get_random_set_bit_from_mask_t(const int32_t mask) {
   }
 
   return 0;
+}
+
+
+/* Shuffle an array of integers. */
+void shuffle_int_array(int *array, size_t num_elems) {
+  if (num_elems > 1)   {
+    for (size_t i = 0; i < num_elems - 1; i++) {
+      size_t j = i + rand() / (RAND_MAX / (num_elems - i) + 1);
+      int t = array[j];
+      array[j] = array[i];
+      array[i] = t;
+    }
+  }
+}
+
+
+/* Shuffle a 2D array of integers. */
+void shuffle_2d_int_array(int (*array)[2], size_t num_elems) {
+  if (num_elems > 1)   {
+    for (size_t i = 0; i < num_elems - 1; i++) {
+      size_t j = i + rand() / (RAND_MAX / (num_elems - i) + 1);
+      int t0 = array[j][0];
+      int t1 = array[j][1];
+      array[j][0] = array[i][0];
+      array[j][1] = array[i][1];
+      array[i][0] = t0;
+      array[i][1] = t1;
+    }
+  }
 }

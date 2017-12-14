@@ -154,8 +154,8 @@ typedef char byte;
 #define ITEM_ANTI_CLERIC      16384
 #define ITEM_ANTI_MAGIC_USER  32768
 #define ITEM_ANTI_MORTAL      65536
-#define ITEM_ANTI_MALE        131072
-#define ITEM_ANTI_FEMALE      262144
+#define ITEM_UNUSED_131072    131072
+#define ITEM_UNUSED_262144    262144
 #define ITEM_ANTI_RENT        524288
 #define ITEM_ANTI_NINJA       1048576
 #define ITEM_ANTI_NOMAD       2097152

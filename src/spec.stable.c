@@ -9,23 +9,6 @@
  *                                                                        *
  **************************************************************************/
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:16 $
-$Header: /home/ronin/cvs/ronin/spec.stable.c,v 2.0.0.1 2004/02/05 16:11:16 ronin Exp $
-$Id: spec.stable.c,v 2.0.0.1 2004/02/05 16:11:16 ronin Exp $
-$Name:  $
-$Log: spec.stable.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:16  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -33,6 +16,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -46,9 +30,6 @@ $State: Exp $
 #include "fight.h"
 #include "spec_assign.h"
 #include "reception.h"
-
-extern struct time_info_data time_info;
-extern int CHAOSMODE;
 
 #define ZONE_STABLE  3900
 #define STABLE_BOY         ITEM(ZONE_STABLE, 1)
@@ -386,7 +367,6 @@ int flying_air(int room, CHAR *ch, int cmd, char *arg) {
 int fly_walk(CHAR *flyer, CHAR *ch, int cmd, char *arg) {
 
   int m_check(CHAR *mount, CHAR *ch, int cmd, char *arg);
-  extern struct weather_data weather_info;
   CHAR *owner = 0;
   int this_room, char_room;
   if (cmd) return FALSE;

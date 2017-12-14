@@ -26,13 +26,6 @@
 #include "act.h"
 #include "spec_assign.h"
 
-extern int CHAOSMODE;
-extern struct time_info_data time_info;
-extern struct char_data *character_list;
-extern struct mob_proto *mob_proto_table;
-extern OBJ  *object_list;
-extern CHAR *character_list;
-
 #define NEW_ROOM                  585
 #define SCROLL_ROOM               584
 #define HACHI_ROOM              20133
@@ -1054,8 +1047,6 @@ void dm_katana_cleanse(CHAR *wielder, CHAR *target)
     act("Your slash cuts through the magic protecting $N!", FALSE, wielder, 0, target, TO_CHAR);
   }
 }
-
-extern int top_of_world;
 
 int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
 {

@@ -16,6 +16,7 @@
 
 /* Ronin Includes */
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "db.h"
 #include "cmd.h"
@@ -31,11 +32,6 @@
 #include "utility.h"
 
 /* Externs */
-struct char_data *character_list;
-struct obj_data *object_list;
-
-extern const int exp_table[58];
-extern struct str_app_type str_app[];
 
 extern char *skip_spaces(char * string);
 void number_argument_interpreter(char *argument, int *number, char *first_arg, char *second_arg);

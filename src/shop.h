@@ -1,25 +1,14 @@
-
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:13:21 $
-$Header: /home/ronin/cvs/ronin/shop.h,v 2.0.0.1 2004/02/05 16:13:21 ronin Exp $
-$Id: shop.h,v 2.0.0.1 2004/02/05 16:13:21 ronin Exp $
-$Name:  $
-$Log: shop.h,v $
-Revision 2.0.0.1  2004/02/05 16:13:21  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
+/* shop.h
+**
+** Declares the Shop module
 */
+
+#ifndef _SHOP_H_
+#define _SHOP_H_
 
 #define SHOP_FILE "tinyworld.shp"
 #define MAX_TRADE 5
 #define MAX_PROD 5
-
-extern struct str_app_type str_app[];
 
 struct shop_data
 {
@@ -43,11 +32,7 @@ struct shop_data
 	int close1,close2;	/* When does the shop close?		*/
 };
 
-
-extern struct room_data *world;
-extern struct time_info_data time_info;
-
 extern struct shop_data *shop_index;
 extern int number_of_shops;
 
-
+#endif /* _SHOP_H_ */

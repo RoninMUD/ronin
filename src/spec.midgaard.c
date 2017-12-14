@@ -13,6 +13,7 @@
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -32,31 +33,8 @@
 
 char *Month[12]= {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
 
-/*   external vars  */
-extern int CHAOSMODE;
-/*
-#define USE_MANA(ch, sn)                            \
-  MAX(spell_info[sn].min_usesmana, 100/(2+GET_LEVEL(ch)-SPELL_LEVEL(ch,sn)))
-  */
-
 int USE_MANA(CHAR *ch, int sn);
 
-extern CHAR *character_list;
-extern struct descriptor_data *descriptor_list;
-extern struct time_info_data time_info;
-extern struct spell_info_type spell_info[MAX_SPL_LIST];
-extern char *spells[];
-extern struct int_app_type int_app[26];
-extern char *warrior_skills[];
-extern char *thief_skills[];
-extern char *ninja_skills[];
-extern char *nomad_skills[];
-extern char *paladin_skills[];
-extern char *cleric_skills[];
-extern char *anti_paladin_skills[];
-extern char *avatar_skills[];
-extern char *bard_skills[];
-extern char *commando_skills[];
 extern char *skip_spaces(char * string);
 extern int is_all_dot(char *arg, char *allbuf);
 

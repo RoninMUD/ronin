@@ -10,6 +10,7 @@
 #include <math.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -25,15 +26,6 @@
 #include "mob.spells.h"
 #include "subclass.h"
 #include "enchant.h"
-
-extern int CHAOSMODE;
-extern struct room_data *world;
-extern struct descriptor_data *descriptor_list;
-extern struct char_data *character_list;
-extern struct room_data *world;
-extern struct dex_app_type dex_app[];
-extern struct int_app_type int_app[];
-extern struct wis_app_type wis_app[];
 
 int MAX_PRAC(CHAR *ch);
 void raw_kill(struct char_data *ch);
@@ -472,7 +464,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
     if (IS_MORTAL(ch) &&
         CAN_SEE(victim, ch) &&
-        !affected_by_spell(ch, AFF_SNEAK) &&
+        !IS_AFFECTED(ch, AFF_SNEAK) &&
         !affected_by_spell(ch, SPELL_IMP_INVISIBLE) &&
         !affected_by_spell(ch, SPELL_BLACKMANTLE)) {
       act("Maybe if $E couldn't see you, or in the cover of darkness...", FALSE, ch, 0, victim, TO_CHAR);
@@ -483,7 +475,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   check = (number(1, 151) - GET_DEX_APP(ch));
 
   if (!CAN_SEE(victim, ch) ||
-      affected_by_spell(ch, AFF_SNEAK) ||
+      IS_AFFECTED(ch, AFF_SNEAK) ||
       affected_by_spell(ch, SPELL_INVISIBLE) ||
       affected_by_spell(ch, SPELL_IMP_INVISIBLE)) {
     check -= 5;

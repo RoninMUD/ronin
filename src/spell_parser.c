@@ -10,6 +10,7 @@
 #include <string.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "db.h"
@@ -50,20 +51,13 @@ SPELLO(nr, beat, pos, mlev, clev, nlev, plev, aplev, avlev, blev, colev, mana, t
   spell_info[nr].targets = (tar);                  \
 }
 
-/* Global data */
-extern int CHAOSMODE;
-
-extern struct room_data *world;
-extern struct char_data *character_list;
-extern char *spell_wear_off_msg[];
-extern struct wis_app_type wis_app[];
-extern struct int_app_type int_app[];
-
 /* Extern procedures */
 void set_fighting(CHAR *ch, CHAR *vict);
+
+/* Global Data */
 struct spell_info_type spell_info[MAX_SPL_LIST + 1];
 
-char *spells[] = {
+const char * const spells[] = {
   "armor",                        /*   1 */
   "teleport",                     /*   2 */
   "bless",                        /*   3 */
@@ -390,7 +384,7 @@ int SPELL_LEVEL(struct char_data *ch, int spell_number)
   }
 }
 
-char *songs[] =
+const char * const songs[] =
 {
   "somebody's watching me",           /* detect invis */
   "seal with a kiss",                 /* armor */
@@ -1993,7 +1987,7 @@ void assign_spell_pointers(void)
   SPELLO(181, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_devastation);
   SPELLO(180, 30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,  120, TAR_SELF_ONLY,                                                                cast_shadow_wraith);
   SPELLO(179, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_IGNORE,                                                                   cast_tremor);
-  SPELLO(177, 30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   35, TAR_CHAR_ROOM,                                                                cast_tranquility);
+  SPELLO(177, 30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,  150, TAR_IGNORE,                                                                   cast_tranquility);
   SPELLO(175, 30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_blur);
   SPELLO(173, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,   10, TAR_SELF_ONLY,                                                                cast_mana_heal);
   SPELLO(172, 30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_debilitate);

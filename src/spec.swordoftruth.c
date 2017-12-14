@@ -15,6 +15,7 @@
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -28,7 +29,6 @@
 #include "fight.h"
 #include "spec_assign.h"
 #include "mob.spells.h"
-extern struct time_info_data time_info;
 
 
 /* Rooms */

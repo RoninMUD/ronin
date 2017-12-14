@@ -3,30 +3,12 @@
 *  Usage: Loading/Saving chars booting world.                             *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/06/02 13:40:11 $
-$Header: /home/ronin/cvs/ronin/db.h,v 2.1 2004/06/02 13:40:11 ronin Exp $
-$Id: db.h,v 2.1 2004/06/02 13:40:11 ronin Exp $
-$Name:  $
-$Log: db.h,v $
-Revision 2.1  2004/06/02 13:40:11  ronin
-Added mult_(stat) to zone_data.
+#ifndef _DB_H_
+#define _DB_H_
 
-Revision 2.0.0.1  2004/02/05 16:13:05  ronin
-Reinitialization of cvs archives
+#include <stdio.h>
 
-
-Revision 5-Feb-04 Ranger
-Addition of MAX_ID
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
+#include "structs.h"
 
 /* data files used by the game system */
 
@@ -222,3 +204,66 @@ struct help_index_element
 	char *keyword;
 	long pos;
 };
+
+
+extern int WIZLOCK;
+extern int CHAOSMODE;
+extern int BAMDAY;
+extern int PULSECHECK;
+extern int GAMELOCK;
+extern int GAMECHECK;
+extern int GAMEHALT;
+extern int BOOTFULL;
+extern int DOUBLEXP;
+extern int CHAOSDEATH;
+
+extern struct idname_struct idname[MAX_ID];
+
+extern struct char_data *character_list;
+
+extern int top_of_zone_table;
+extern struct zone_data *zone_table;
+
+extern int top_of_world;
+extern struct room_data *world;
+
+extern int top_of_objt;
+extern struct obj_data  *object_list;
+extern struct obj_proto *obj_proto_table;
+
+extern int top_of_mobt;
+extern struct mob_proto *mob_proto_table;
+
+extern struct time_info_data time_info;
+extern struct weather_data weather_info;
+
+extern int top_of_helpt;
+extern struct help_index_element *help_index;
+extern char helpcontents[3*MSL];
+extern FILE *help_fl;
+
+extern int top_of_wizhelpt;
+extern struct help_index_element *wizhelp_index;
+extern char wizhelpcontents[3*MSL];
+extern FILE *wizhelp_fl;
+
+extern int top_of_olchelpt;
+extern struct help_index_element *olchelp_index;
+extern char olchelpcontents[3*MSL];
+extern FILE *olchelp_fl;
+
+extern char credits[MAX_STRING_LENGTH];
+extern char heroes[MAX_STRING_LENGTH];
+extern char news[MAX_STRING_LENGTH];
+extern char motd[MAX_STRING_LENGTH];
+extern char newbiemotd[MAX_STRING_LENGTH];
+extern char godmotd[MAX_STRING_LENGTH];
+extern char help[MAX_STRING_LENGTH];
+extern char info[];
+extern char wizlist[];
+extern char wizlist_inactive[];
+
+extern int top_of_flying;
+extern int *flying_rooms;
+
+#endif /* _DB_H_ */

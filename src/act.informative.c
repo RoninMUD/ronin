@@ -14,6 +14,7 @@
 #include <math.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -30,56 +31,12 @@
 #include "spec.clan.h"
 #include "enchant.h"
 #include "meta.h"
-
-/* extern variables */
-
-struct scoreboard_data
-{
-  char killer[80];
-  char killed[80];
-  char location[80];
-  char time_txt[80];
-};
-
-extern struct scoreboard_data scores[101];
-extern int number_of_kills;
-extern char *subclass_name[];
-
-extern struct clan_data clan_list[MAX_CLANS];
-extern int CHAOSMODE;
-extern int CHAOSDEATH;
-extern int max_connects;
-extern int total_connects;
-extern struct str_app_type str_app[];
-extern int movement_loss[];
-extern struct descriptor_data *descriptor_list;
-extern struct char_data *character_list;
-extern struct obj_data *object_list;
-extern int file_to_string (char *name, char *buf);
-extern int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) ;
-extern char credits[MSL];
-extern char heroes[MSL];
-extern char motd[MSL];
-extern char newbiemotd[MSL];
-extern char godmotd[MSL];
-extern char info[MSL];
-extern char wizlist[MSL];
-extern char wizlist_inactive[MAX_STRING_LENGTH];
-extern char *dirs[];
-extern char *where[];
-extern char *color_liquid[];
-extern char *fullness[];
-extern const struct title_type titles[11][58];
-extern char *Color[];
-extern char *BKColor[];
-extern const int exp_table[58];
-extern char *pc_class_types[];
-extern struct dex_app_type dex_app[];
-extern char *spells[];
-extern int top_of_objt;
+#include "quest.h"
 
 /* extern functions */
 
+extern int file_to_string (char *name, char *buf);
+extern int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) ;
 struct time_info_data age(struct char_data *ch);
 void page_string(struct descriptor_data *d, char *str, int keep_internal);
 void make_chaos_corpse(struct char_data *ch);
@@ -488,6 +445,13 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
           strcpy(buffer, "[TARGET] ");
           strcat(buffer, CAP(GET_SHORT(i)));
         }
+        else if (i->questowner && !IS_NPC(i->questowner) && GET_NAME(i->questowner))
+        {
+          strcpy(buffer, "[");
+          strcat(buffer, GET_NAME(i->questowner));
+          strcat(buffer, "'s TARGET] ");
+          strcat(buffer, CAP(GET_SHORT(i)));
+        }
         else
         {
           strcpy(buffer, CAP(GET_SHORT(i)));
@@ -671,6 +635,13 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       if (ch->questmob && ch->questmob == i)
       {
         strcat(buffer, "[TARGET] ");
+      }
+      else if (i->questowner && !IS_NPC(i->questowner) && GET_NAME(i->questowner))
+      {
+        strcat(buffer, "[");
+        strcat(buffer, GET_NAME(i->questowner));
+        strcat(buffer, "'s TARGET] ");
+        strcat(buffer, CAP(GET_SHORT(i)));
       }
 
       if (IS_SET(i->specials.affected_by2, AFF_SEVERED))
@@ -1260,7 +1231,7 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
   struct char_data *tmp_char = NULL;
   char *tmp_desc;
 
-  char *keywords[]= {
+  const char * const keywords[]= {
     "north",
     "east",
     "south",
@@ -2567,10 +2538,6 @@ void do_time(struct char_data *ch, char *argument, int cmd) {
   long ct;
   char buf[100], *suf, *tmstr;
   int weekday, day;
-  extern int REBOOT_AT;
-  extern struct time_info_data time_info;
-  extern const char *weekdays[];
-  extern const char *month_name[];
 
   sprintf(buf, "It is %d o'clock %s, on ",
     ((time_info.hours % 12 == 0) ? 12 : ((time_info.hours) % 12)),
@@ -2624,7 +2591,6 @@ void do_time(struct char_data *ch, char *argument, int cmd) {
 
 void do_weather(struct char_data *ch, char *argument, int cmd)
 {
-  extern struct weather_data weather_info;
   char buf[100];
   char *sky_look[4]= {
     "cloudless",
@@ -2646,12 +2612,7 @@ void do_weather(struct char_data *ch, char *argument, int cmd)
 void list_socials(struct char_data *ch);
 
 void do_help(struct char_data *ch, char *argument, int cmd) {
-  extern int top_of_helpt;
-  extern struct help_index_element *help_index;
-  extern char helpcontents[3*MSL];
-  extern FILE *help_fl;
   FILE *fl;
-  extern char help[MSL];
   struct string_block sb;
   int chk, bot, top, mid, minlen,i;
   char buf[MSL];
@@ -2739,11 +2700,6 @@ void do_help(struct char_data *ch, char *argument, int cmd) {
 
 void do_wizcmd(struct char_data *ch, char *argument)
 {
-  extern int top_of_wizhelpt;
-  extern struct help_index_element *wizhelp_index;
-  extern char wizhelpcontents[3*MSL];
-  extern FILE *wizhelp_fl;
-
   int chk, bot, top, mid, minlen;
   char buf[MSL], buffer[2*MSL];
 
@@ -2796,7 +2752,6 @@ void do_wizcmd(struct char_data *ch, char *argument)
 void do_wizhelp(struct char_data *ch, char *argument, int cmd) {
   char buf[MSL];
   int no, i,level,to_level,breakdown=0;
-  extern struct command_info cmd_info[];
 
   if (IS_NPC(ch)) return;
 
@@ -2861,11 +2816,6 @@ The following privileged commands are available up to level %d:",to_level);
 
 void do_olchelp(struct char_data *ch, char *argument, int cmd)
 {
-  extern struct command_info cmd_info[];
-  extern int top_of_olchelpt;
-  extern char olchelpcontents[3*MSL];
-  extern struct help_index_element *olchelp_index;
-  extern FILE *olchelp_fl;
   struct string_block sb;
   int chk, bot, top, mid, minlen,no,i;
   char buf[MSL];
@@ -3024,7 +2974,6 @@ void do_who(struct char_data *ch, char *argument, int cmd) {
   char  cl_type[3] = "--";
   int count = 0, count2 = 0, pos, level = 1, level2 = LEVEL_IMP;
   char ok;
-  extern char *subclass_name[];
 
   const char *god[] = {
     "IMM",   /* 0 == 51 */
@@ -3289,7 +3238,6 @@ void do_who(struct char_data *ch, char *argument, int cmd) {
   }
 }
 
-extern char *connected_types[];
 void do_users(struct char_data *ch, char *argument, int cmd)
 {
   char line[256],tmp[256],arg[MSL];
@@ -3795,8 +3743,6 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
   struct char_file_u_5 char_info_5;
   struct char_file_u_4 char_info_4;
   struct char_file_u_2 char_info_2;
-  extern char *immortal_types[];
-  extern char *subclass_name[];
 
   one_argument( argument, name);
 

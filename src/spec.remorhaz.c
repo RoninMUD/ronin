@@ -1,5 +1,5 @@
 /*
-    
+
     spec.remorhaz.c -
     specs for:  Glacial Tunnels of Remorhaz
     by:                 Commandoboy
@@ -29,7 +29,6 @@
 #include "fight.h"
 #include "spec_assign.h"
 #include "mob.spells.h"
-extern struct time_info_data time_info;
 
 #define ZONE_REMORHAZ 230
 #define BEAR_SOUTH    23078

@@ -9,6 +9,7 @@
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -20,16 +21,9 @@
 #include "act.h"
 #include "cmd.h"
 #include "subclass.h"
+
 /*   external vars  */
 #define WALL_THORNS 34 /* In limbo */
-
-extern struct char_data *character_list;
-extern struct descriptor_data *descriptor_list;
-extern int rev_dir[];
-extern char *dirs[];
-extern int movement_loss[];
-extern struct descriptor_data *descriptor_list;
-extern int CHAOSMODE;
 
 /* external functs */
 
@@ -120,7 +114,6 @@ int dt_or_hazard(CHAR *ch) {
   return FALSE;
 }
 
-extern struct str_app_type str_app[];
 int special(struct char_data *ch, int cmd, char *arg);
 int signal_room(int room, CHAR *ch, int cmd, char *arg);
 int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
@@ -565,7 +558,7 @@ void do_peek(struct char_data *ch, char *argument, int cmd)
   char arg1[MAX_STRING_LENGTH];
   int keyword_no;
   int was_in, percent;
-  char *keywords[]= {
+  const char * const keywords[]= {
     "north",
     "east",
     "south",
@@ -660,7 +653,7 @@ void do_peek(struct char_data *ch, char *argument, int cmd)
 int find_door(struct char_data *ch, char *type, char *dir)
 {
   int door;
-  char *dirs[] =
+  const char * const dirs[] =
     {
       "north",
       "east",
@@ -1642,45 +1635,55 @@ void do_wake(struct char_data *ch, char *argument, int cmd)
   struct char_data *tmp_char;
   char arg[MAX_STRING_LENGTH];
 
+  one_argument(argument, arg);
 
-  one_argument(argument,arg);
   if (*arg) {
     if (GET_POS(ch) == POSITION_SLEEPING) {
       act("You can't wake people up if you are asleep yourself!",
-        FALSE, ch,0,0,TO_CHAR);
-    } else {
+        FALSE, ch, 0, 0, TO_CHAR);
+    }
+    else {
       tmp_char = get_char_room_vis(ch, arg);
       if (tmp_char) {
-      if (tmp_char == ch) {
-        act("If you want to wake yourself up, just type 'wake'",
-            FALSE, ch,0,0,TO_CHAR);
-      } else {
-        if (GET_POS(tmp_char) == POSITION_SLEEPING) {
-          if (IS_AFFECTED(tmp_char, AFF_SLEEP)) {
-            act("You can not wake $M up!", FALSE, ch, 0, tmp_char, TO_CHAR);
-          } else {
-            act("You wake $M up.", FALSE, ch, 0, tmp_char, TO_CHAR);
-            GET_POS(tmp_char) = POSITION_SITTING;
-            act("You are awakened by $n.", FALSE, ch, 0, tmp_char, TO_VICT);
+        if (tmp_char == ch) {
+          act("If you want to wake yourself up, just type 'wake'",
+            FALSE, ch, 0, 0, TO_CHAR);
+        }
+        else {
+          if (GET_POS(tmp_char) == POSITION_SLEEPING) {
+            if (IS_AFFECTED(tmp_char, AFF_SLEEP) && !ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
+              act("You can not wake $M up!", FALSE, ch, 0, tmp_char, TO_CHAR);
+            }
+            else {
+              if (IS_AFFECTED(tmp_char, AFF_SLEEP)) {
+                affect_from_char(tmp_char, SPELL_SLEEP);
+              }
+              act("You wake $M up.", FALSE, ch, 0, tmp_char, TO_CHAR);
+              GET_POS(tmp_char) = POSITION_SITTING;
+              act("You are awakened by $n.", FALSE, ch, 0, tmp_char, TO_VICT);
+            }
           }
-        } else {
-          act("$N is already awake.",FALSE,ch,0,tmp_char, TO_CHAR);
+          else {
+            act("$N is already awake.", FALSE, ch, 0, tmp_char, TO_CHAR);
+          }
         }
       }
-      } else {
-      send_to_char("You do not see that person here.\n\r", ch);
+      else {
+        send_to_char("You do not see that person here.\n\r", ch);
       }
     }
-  } else {
-    if (IS_AFFECTED(ch,AFF_SLEEP)) {
+  }
+  else {
+    if (IS_AFFECTED(ch, AFF_SLEEP)) {
       send_to_char("You can't wake up!\n\r", ch);
-    } else {
+    }
+    else {
       if (GET_POS(ch) > POSITION_SLEEPING)
-      send_to_char("You are already awake...\n\r", ch);
+        send_to_char("You are already awake...\n\r", ch);
       else {
-      send_to_char("You wake, and sit up.\n\r", ch);
-      act("$n awakens.", TRUE, ch, 0, 0, TO_ROOM);
-      GET_POS(ch) = POSITION_SITTING;
+        send_to_char("You wake, and sit up.\n\r", ch);
+        act("$n awakens.", TRUE, ch, 0, 0, TO_ROOM);
+        GET_POS(ch) = POSITION_SITTING;
       }
     }
   }

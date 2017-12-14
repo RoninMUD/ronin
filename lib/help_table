@@ -2592,7 +2592,7 @@ xp, exp_to_level, xp_to_level, remort_exp, remort_xp,
 remort_multiplier, death_exp, death_xp, gold, coins, money, bank_gold,
 bank_coins, bank_money, quest_timer, club, clan, guild, time_played,
 played, weight_carried, carried_weight, toggles, flags, death_limit,
-position, wizinv, editing_zone, zone
+position, wizinv, editing_zone
 
 See Also: SCORE
 #
@@ -8198,26 +8198,27 @@ Subclass Ronin: Level 3 (Ninja)
 
 Usage: assault <victim>
 
-The Ronin is practiced in the art of the quick draw of his/her weapons. By
-taking an enemy by surprise, the Ronin can assault the target with both
-weapons, as opposed to only the primary weapon (in the wielded equipment
-location). A standard assault check is made for each weapon, and each
-weapon's success is independent of the other. The second weapon inflicts
-slightly less damage, as outlined below.
+The Ronin is practiced in the art of the quick draw of their
+weapons. By taking an enemy by surprise, the Ronin can assault the
+target with both weapons, as opposed to only the primary weapon (in
+the wielded equipment location). A standard assault check is made for
+each weapon, and each weapon's success is independent of the other.
+The second weapon inflicts slightly less damage, as outlined below.
 
-The first number listed applies to the wielded-weapon, the second to the
-held-weapon.
+The first number listed applies to the wielded-weapon, the second to
+the held-weapon.
 
-Level 30 Dual Assault: 5x + 2x
-Level 35 Dual Assault: 5x + 2.5x
-Level 40 Dual Assault: 6x + 3x
-Level 45 Dual Assault: 6x + 3.5x
-Level 50 Dual Assault: 7x + 4x
+  Level 30 Dual Assault: 5x + 2x
+  Level 35 Dual Assault: 5x + 2.5x
+  Level 40 Dual Assault: 6x + 3x
+  Level 45 Dual Assault: 6x + 3.5x
+  Level 50 Dual Assault: 7x + 4x
 
-This skill causes a 3 round input lag for the Ronin on a success, while a
-failure causes a 2 round input lag.
+This skill causes a 3 round input lag for the Ronin on a success,
+while a failure causes a 2 round input lag.
 
-The success of Dual Assault is dependent on how well the skill is practiced.
+The success of Dual Assault is dependent on how well the skill is
+practiced.
 
 See Also: SUBCLASSES RONIN
 #
@@ -8227,17 +8228,18 @@ Subclass Ronin: Level 2 (Ninja)
 
 Usage: backfist <victim>
 
-With this attack, the Ronin drives his or her fist into the victim. This
-skill inflicts damage equivalent to 1.25 times the Ronin's level, and
-knocks the victim into a stunned state. Backfist is not subject to the
-effects of Invulnerability.
+With this attack, the Ronin drives the back of their fist into the
+victim with deadly force. This skill inflicts damage equivalent to
+1.25 times the Ronin's level, and knocks the victim into a stunned
+state. Backfist is not subject to the effects of Invulnerability.
 
-This skill causes a 2 round input lag for the Ronin, regardless of success
-or failure.
+This skill causes a 2 round input lag for the Ronin, regardless of
+success or failure.
 
 A successful Backfist will stun the victim for 2 rounds.
 
-The success of Backfist is dependent on how well the skill is practiced.
+The success of Backfist is dependent on how well the skill is
+practiced.
 
 See Also: SUBCLASSES RONIN
 #
@@ -8250,16 +8252,15 @@ Accumulative: no
 Duration    : Level / 6
 Mana Cost   : 100
 
-The Ronin blurs him/herself out of reality, making him/her not only harder
-to hit, but harder to defend against. While under the effects of Blur, the
-Ronin gains the following benefits, increasing the skill check success of
-the affected skills.
+The Ronin blurs out of reality, making them not only harder to hit,
+but harder to defend against. While under the effects of Blur, the
+Ronin gains the following benefits, increasing the skill check
+success of the affected skills:
 
-+(Level) to Dodge skill checks.
-+(Level / 5) to Assault (and Dual Assault) skill checks.
-+(Level / 10) to all other skill checks.
-
-Additionally, the Ronin's armor class is improved by (Level / 2).
+  -(Level / 2) to the Ronin's armor class (this is a benefit).
+  +(Level) to Dodge skill checks.
+  +(Level / 5) to Assault and Dual Assault skill checks.
+  +(Level / 10) to all other skill checks.
 
 See Also: SUBCLASSES RONIN
 #
@@ -8269,17 +8270,19 @@ Subclass Ronin: Level 1 (Ninja)
 
 Usage: Passive Skill
 
-The Ronin has become a weapon of war, an instrument of combat. If the he/she
-misses his/her first attack, the second attack is still attempted as it
-normally would be, as is the third if affected by Mystic Swiftness.  This
-ability applies to attacks that are dodged, parried or otherwise avoided.
+The Ronin has become a weapon of war, an instrument of combat. If the
+they miss their first attack, the second attack is still attempted as
+it normally would be, as is the third if affected by Mystic
+Swiftness.  This also ability applies to attacks that are dodged,
+parried or otherwise avoided.
 
-The Ronin also will inflict significant barehand damage to victims when
-disarmed or not wielding a weapon (applies to either or both hands).
+The Ronin also will inflict significant barehand damage to victims
+when disarmed or not wielding a weapon (this applies to either or both
+hands).
 
-Additionally, the Ronin has the uncanny ability to rely on his/her other
-senses when the sense of sight is lost. While blind, the Ronin will not
-have any hit/damage penalties.
+Additionally, the Ronin has the uncanny ability to rely on his/her
+other senses when the sense of sight is lost. While blind, the Ronin
+will not have any hit/damage penalties.
 
 Finally, the Ronin has a higher resistance to poison damage, and has a
 chance to move while affected by paralysis.
@@ -8295,21 +8298,22 @@ Save        : -
 Mana Cost   : 75
 Damage      : 200 to 300
 
-Banzai is a skill that acts in some ways like a spell. This means the skill
-can be used in a no-magic room, but the skill also costs mana to use. Half
-the mana cost is consumed on a failure, just like a miss-cast spell. Banzai
-is unaffected by the standard concentration rate and is instead improved by
-the Ronin's dexterity modifier.
+Banzai is a skill that acts in some ways like a spell. This means the
+skill can be used in a no-magic room, but the skill also costs mana to
+use. Half the mana cost is consumed on a failure, just like a miscast
+spell. Banzai is unaffected by the standard concentration rate and is
+instead improved by the Ronin's dexterity modifier.
 
-The Ronin will hurl him/herself at his/her target in mystic fury, unleashing
-a flurry of attacks and a blast of mystic energy. The first component of this
-skill will inflict 200 to 300 damage to a target, with no saving throw. If a
-separate skill check successful, the ninja will also gain an extra round of
-attacks against the target, attacking with both weapons, with a chance for a
-third attack if affected by Mystic Swiftness.
+The Ronin will hurl him/herself at his/her target in mystic fury,
+unleashing a flurry of attacks and a blast of mystic energy. The first
+component of this skill will inflict 200 to 300 damage to a target,
+with no saving throw. If a separate skill check successful, the ninja
+will also gain an extra round of attacks against the target, attacking
+with both weapons, with a chance for a third attack if affected by
+Mystic Swiftness.
 
-This skill causes a 1 round input lag for the Ronin, regardless of success
-or failure.
+This skill causes a 1 round input lag for the Ronin, regardless of
+success or failure.
 
 The success of Banzai is dependent on how well the skill is practiced.
 
@@ -8325,9 +8329,8 @@ Duration    : 5
 Save        : none
 Mana Cost   : 20
 
-Anything affected by this spell has its hitroll reduced by 5, and its armor
-increased by 10, making it miss more often and easier to hit.  This spell is
-non-cumulative.
+Anything affected by this spell has its hitroll reduced by 5, and its
+armor increased by 10, making it miss more often and easier to hit.
 
 See Also: SUBCLASSES MYSTIC
 #
@@ -8337,21 +8340,23 @@ Subclass Mystic: Level 3 (Ninja)
 
 Usage: tigerkick <victim>
 
-The Mystic's kicks are so powerful that they inflict additional damage,
-knock the target into a stunned position. A successful tigerkick allows the
-mystic to draw some of the target's life-force, restoring a small portion
-of his/her mana. The greater the maximum health potential of the target,
-the greater the restoration.
+The Mystic's kicks are so powerful that they inflict additional
+damage, knock the target into a stunned position. A successful
+tigerkick allows the mystic to draw some of the target's life-force,
+restoring a small portion of his/her mana. The greater the maximum
+health potential of the target, the greater the restoration.
 
-A tigerkick inflicts 1.75 times the Mystic's Level in damage. The maximum
-amount of mana that can be restored per successful kick is 10.
+A tigerkick inflicts 1.75 times the Mystic's Level in damage. The
+maximum amount of mana that can be restored per successful kick is
+10.
 
-This skill causes a 2 round input lag for the Mystic, regardless of success
-or failure.
+This skill causes a 2 round input lag for the Mystic, regardless of
+success or failure.
 
 A successful Tigerkick will stun the victim for 2 rounds.
 
-The success of Tigerkick is dependent on how well the skill is practiced.
+The success of Tigerkick is dependent on how well the skill is
+practiced.
 
 See Also: SUBCLASSES MYSTIC
 #
@@ -8364,8 +8369,8 @@ Save        : none
 Mana Cost   : 65
 Damage      : 300
 
-This spell will inflict 300 damage to the victim with no saving throw and
-will also put the victim in a resting position.
+This spell will inflict 300 damage to the victim with no saving throw
+and will also put the victim in a resting position.
 
 Divine Wind is a direct translation of the word "kamikaze."
 
@@ -8380,26 +8385,26 @@ Accumulative: no
 Duration    : Instantaneous + 100 seconds.
 Mana Cost   : 120
 
-The Mystic channels his/her spiritual energy into a target, which will
-regenerate the target's wounds for a period of time.
+The Mystic channels his/her spiritual energy into a target, which
+will regenerate the target's wounds for a period of time.
 
 The immediate amount healed will be 500 hit points.
 
-The target will become affected by the "Mantra" enchantment.  If the target
-is already affected by the enchantment, the duration will be extended to the
-maximum duration of 100 seconds.
+The target will become affected by the "Mantra" enchantment.  If the
+target is already affected by the enchantment, the duration will be
+extended to the maximum duration of 100 seconds.
 
-If a more powerful Mystic applies mantra to a target already affected by the
-enchantment it will be replaced by the higher level enchantment and the
-duration will be refreshed.
+If a more powerful Mystic applies mantra to a target already affected
+by the enchantment it will be replaced by the higher level
+enchantment and the duration will be refreshed.
 
 While affected by the "Mantra" enchantment, the character regains
-"Level + (5 * Wisdom Bonus)" hit points every 10 seconds for a duration of
-100 seconds (there will be 10 healing "pulses").
+"Level + (5 * Wisdom Bonus)" hit points every 10 seconds for a
+duration of 100 seconds (there will be 10 healing "pulses").
 
-Additionally, during each healing "pulse", there is a 25% chance to dispel
-any one of the following status ailments from the target: blindness, poison
-or paralysis.
+Additionally, during each healing "pulse", there is a 25% chance to
+dispel any one of the following status ailments from the target:
+blindness, poison or paralysis.
 
 See Also: SUBCLASSES MYSTIC
 #
@@ -8407,23 +8412,29 @@ TRANQUILITY
 
 Subclass Mystic: Level 5 (Ninja)
 
-Usage       : cast 'tranquility' <victim>
+Usage       : cast 'tranquility'
 Accumulative: no
-Duration    : 10
-Mana Cost   : 35
+Duration    : 6
+Mana Cost   : 150
 
-While under the effects of this spell, the Mystic channels his/her own
-enlightenment to another, radiating an aura of tranquility that increases
-the focus of the target. While affected by Tranquility, the target will be
-immune to the effects of fear and will gain the following benefits while the
-spell is active.
+This is a group-wide spell that affects all members of the Mystic's
+group.  While under the effects of this spell, the Mystic channels
+their own enlightenment to others, radiating an aura of tranquility
+that increases the focus of those affected.
 
-+20% HP Regeneration Rate
-+20% Mantra Regeneration Rate (HELP MANTRA)
-+2 Hitroll
-+2 Damroll
+Subsequent casts of this spell will reset the duration of its effects
+to the maximum.
 
-See Also: SUBCLASSES MYSTIC
+Each character affected by Tranquility will be immune to the effects
+of fear and will gain the following benefits while the spell is
+active:
+
+  +20% HP Regeneration Rate
+  +20% Mantra Regeneration Rate (HELP MANTRA)
+  +2 Hitroll
+  +2 Damroll
+
+See Also: SUBCLASSES MYSTIC REGENERATION MANTRA HITROLL DAMROLL
 #
 "AC Apply"
 

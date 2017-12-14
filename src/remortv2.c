@@ -13,6 +13,7 @@
 
 /* Ronin Includes */
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "act.h"
 #include "cmd.h"
@@ -30,12 +31,6 @@
 #include "remortv2.h"
 
 /* Externs */
-extern const char *pc_class_types[];
-extern const int exp_table[58];
-extern char *BKColor[];
-extern char *Color[];
-extern struct con_app_type con_app[];
-
 extern void advance_level(CHAR *ch);
 extern void death_list(CHAR *ch);
 extern void imm_grace_remove_enchant(CHAR *ch);

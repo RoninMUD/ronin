@@ -4,56 +4,32 @@
   *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
   ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2004/02/05 16:11:35 $
-$Header: /home/ronin/cvs/ronin/spec.wolf.c,v 2.0.0.1 2004/02/05 16:11:35 ronin Exp $
-$Id: spec.wolf.c,v 2.0.0.1 2004/02/05 16:11:35 ronin Exp $
-$Name:  $
-$Log: spec.wolf.c,v $
-Revision 2.0.0.1  2004/02/05 16:11:35  ronin
-Reinitialization of cvs archives
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-Revision 1.2  2002/03/31 07:42:16  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
- #include <stdio.h>
- #include <string.h>
- #include <ctype.h>
- #include <stdlib.h>
- #include <unistd.h>
-
- #include "structs.h"
- #include "utils.h"
- #include "comm.h"
- #include "interpreter.h"
- #include "handler.h"
- #include "db.h"
- #include "spells.h"
- #include "limits.h"
- #include "cmd.h"
- #include "utility.h"
- #include "fight.h"
- #include "act.h"
- #include "reception.h"
+#include "structs.h"
+#include "constants.h"
+#include "utils.h"
+#include "comm.h"
+#include "interpreter.h"
+#include "handler.h"
+#include "db.h"
+#include "spells.h"
+#include "limits.h"
+#include "cmd.h"
+#include "utility.h"
+#include "fight.h"
+#include "act.h"
+#include "reception.h"
 #include "spec_assign.h"
- /*   external vars  */
 
- extern struct room_data *world;
- extern struct mob_proto *mob_proto_table;
- extern struct obj_proto *obj_proto_table;
- extern CHAR *character_list;
- extern struct descriptor_data *descriptor_list;
- extern struct time_info_data time_info;
- extern struct spell_info_type spell_info[MAX_SPL_LIST];
+/**********************************************************************\
+|* Special procedures for Wolf Cave by James Yung                     *|
+\**********************************************************************/
 
- /**********************************************************************\
- |* Special procedures for Wolf Cave by James Yung                     *|
- \**********************************************************************/
 int wolf_chew_toy(CHAR *mob)
 {
    OBJ *i,*temp,*next_obj,*tmp;
@@ -78,11 +54,11 @@ int wolf_chew_toy(CHAR *mob)
      }
    return FALSE;
 }
+
 int wolf_options(CHAR *mob, CHAR *vict)
 {
-  OBJ *wield;
   int start,stop;
-  char buf[MAX_INPUT_LENGTH];
+
   if (isname("guard", GET_NAME(mob)))
     {
     start = 1; stop = 3;
@@ -133,17 +109,10 @@ int wolf_options(CHAR *mob, CHAR *vict)
         act("$n claws $N's hand!", 1, mob, 0, vict, TO_NOTVICT);
 	act("$n claws your hand!", 1, mob, 0, vict, TO_VICT);
 	damage(mob, vict, number(15,30), TYPE_UNDEFINED,DAM_SKILL);
-	if (vict->equipment[WIELD])
-	 wield = vict->equipment[WIELD];
-	else return FALSE;
-	act("$N drop $S weapon.", 1, mob, 0, vict, TO_NOTVICT);
-	act("You drop your weapon.", 1, mob, 0, vict, TO_VICT);
-	/* Disarm log added by Solmyr 2009 */
-	sprintf(buf, "WIZINFO: %s disarms %s's %s at %d", GET_NAME(mob), GET_NAME(vict), OBJ_SHORT(wield), world[CHAR_REAL_ROOM(mob)].number);
-	log_s(buf);
-	wield->log = TRUE;
-	unequip_char(vict, WIELD);
-	obj_to_room(wield, CHAR_REAL_ROOM(vict));
+  if (mob_disarm(mob, vict, FALSE)) {
+    act("$N drops $S weapon.", TRUE, mob, 0, vict, TO_NOTVICT);
+    act("You drop your weapon.", TRUE, mob, 0, vict, TO_VICT);
+  }
 	return FALSE;
      case 6: /* Lord & King */
 	act("$n bites $N's neck with $s huge mouth and sucks $S blood!", 1, mob, 0, vict, TO_NOTVICT);

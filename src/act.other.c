@@ -5,85 +5,13 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:26 $
-$Header: /home/ronin/cvs/ronin/act.other.c,v 2.6 2005/01/21 14:55:26 ronin Exp $
-$Id: act.other.c,v 2.6 2005/01/21 14:55:26 ronin Exp $
-$Name:  $
-$Log: act.other.c,v $
-Revision 2.6  2005/01/21 14:55:26  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.5  2004/11/16 05:26:41  ronin
-DOS to UNIX conversion
-
-Revision 2.4  2004/11/16 04:53:56  ronin
-Chaos 2004 Update
-
-Revision 2.3  2004/03/12 19:05:26  void
-Editted skin skill to allow Nomads to Sell skins at a higher rate
-
-Revision 2.2  2004/02/26 22:39:01  void
-Changed throw skill to allow for multiple throws in same round
-
-Revision 2.1  2004/02/23 15:07:42  void
-Changed Paralyze to allow characters to paralyze moblies up to 10 levels above
-them.
-
-Changed hide to show message if successful or unsuccessful
-
-Revision 2.0.0.1  2004/02/05 16:08:39  ronin
-Reinitialization of cvs archives
-
-
-Revision 19-Dec-03 Ranger
-Addition of do_email.
-
-Revision 19-Mar-03 Liner
-Added log for thief flag being applied.
-
-Revision 1.8  2003/01/25 14:32:20  ronin
-Changed tics to ticks in aquest acts.
-
-Revision 11-Dec-02 Ranger
-Addition of IMMUNE_STEAL to do_steal
-
-Revision 1.7  2002/06/18 14:32:20  ronin
-Adding divide_experience before raw_kill to ensure proper quest
-completion.  Addition of flag within divide_experience to force
-amount to 0 if required.
-
-Revision 1.6  2002/05/11 13:15:32  ronin
-Fix for skin corpse decay amount.
-
-Revision 1.5  2002/05/09 20:17:43  ronin
-Skin fix to allow skinning by clerics.
-Skinning making corpse decay by 1/2 and then decayed
-corpse being unskinnable.
-
-Revision 1.4  2002/04/18 04:07:30  ronin
-Changing log output from perror to log_f for internal syslog manipulation.
-
-Revision 1.3  2002/03/31 16:35:06  ronin
-Added braces to remove ambiguous else warning.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -100,32 +28,13 @@ $State: Exp $
 #include "cmd.h"
 #include "subclass.h"
 
-/* extern variables */
-extern char *Color[];
-extern char *BKColor[];
+/* extern procedures */
 
 extern void do_create_save(CHAR *ch, char* arg);
 extern void do_practice(struct char_data *ch, char *arg, int cmd);
 extern int SPELL_LEVEL(struct char_data *ch, int sn);
-extern struct str_app_type str_app[];
-extern char *unknownCMD[];
-extern struct descriptor_data *descriptor_list;
-extern struct obj_data *obj;
-extern struct room_data *world;
-extern struct dex_skill_type dex_app_skill[];
-extern struct dex_app_type dex_app[];
-extern struct spell_info_type spell_info[];
-extern int CHAOSMODE;
-extern int BAMDAY;
-extern struct obj_data  *object_list;
 
-/*#define USE_MANA(ch,sn)\
-MAX(spell_info[sn].min_usesmana,100/(2+GET_LEVEL(ch)-SPELL_LEVEL(ch,sn)))
-*/
 int USE_MANA(CHAR *ch, int sn);
-
-
-/* extern procedures */
 
 void hit(struct char_data *ch, struct char_data *victim, int type);
 void do_shout(struct char_data *ch, char *argument, int cmd);

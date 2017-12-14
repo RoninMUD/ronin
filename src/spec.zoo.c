@@ -33,6 +33,7 @@ $State: Exp $
 #include <unistd.h>
 
 #include "structs.h"
+#include "constants.h"
 #include "utils.h"
 #include "comm.h"
 #include "interpreter.h"
@@ -46,9 +47,6 @@ $State: Exp $
 #include "fight.h"
 #include "spec_assign.h"
 #include "mob.spells.h"
-extern int CHAOSMODE;
-extern struct time_info_data time_info;
-extern struct str_app_type str_app[];
 
 /* vnum defines */
 #define SAND_BEAST          2644

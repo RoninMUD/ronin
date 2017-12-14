@@ -2,71 +2,30 @@
   *  file: spec_procs.c , Special module.                   Part of DIKUMUD *
   *  Usage: Procedures handling special procedures for object/room/mobile   *
   *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
+  *	Revamp by Solmyr 2007-2009
   ************************************************************************* */
 
-/*
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-	Revamp by Solmyr 2007-2009
-	
-$Author: ronin $
-$Date: 2005/01/21 14:55:28 $
-$Header: /home/ronin/cvs/ronin/spec.abyss.c,v 2.3 2005/01/21 14:55:28 ronin Exp $
-$Id: spec.abyss.c,v 2.3 2005/01/21 14:55:28 ronin Exp $
-$Name:  $
-$Log: spec.abyss.c,v $
-
-Revision 2.3  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.2  2004/11/16 04:59:07  ronin
-Typo fix.
-
-Revision 2.1  2004/04/29 11:49:25  ronin
-Fix to AFF_HOLD spec to make it removable by remove_paralysis.
-
-Revision 2.0.0.1  2004/02/05 16:10:11  ronin
-Reinitialization of cvs archives
-
-
-Revision 6-Nov-03 Ranger
-Added room number to disarm log.
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
- #include <stdio.h>
- #include <string.h>
- #include <ctype.h>
- #include <stdlib.h>
- #include <unistd.h>
-
- #include "structs.h"
- #include "utils.h"
- #include "comm.h"
- #include "interpreter.h"
- #include "handler.h"
- #include "db.h"
- #include "spells.h"
- #include "limits.h"
- #include "cmd.h"
- #include "utility.h"
- #include "fight.h"
- #include "act.h"
- #include "enchant.h"
- #include "reception.h"
- #include "spec_assign.h"
- /*   external vars  */
-
- extern CHAR *character_list;
- extern struct descriptor_data *descriptor_list;
- extern struct time_info_data time_info;
- extern struct spell_info_type spell_info[MAX_SPL_LIST];
+#include "structs.h"
+#include "utils.h"
+#include "comm.h"
+#include "interpreter.h"
+#include "handler.h"
+#include "db.h"
+#include "spells.h"
+#include "limits.h"
+#include "cmd.h"
+#include "utility.h"
+#include "fight.h"
+#include "act.h"
+#include "enchant.h"
+#include "reception.h"
+#include "spec_assign.h"
 
 #define ABYSS_ZONE      25000
 #define ABYSS_LICH      25000
@@ -132,29 +91,21 @@ void abyss_bash(CHAR *mob, CHAR *vict)
   WAIT_STATE(vict,PULSE_VIOLENCE*3);
 }
 
-void abyss_disarm(CHAR *mob, CHAR *vict)
-{
-  char buf[MAX_INPUT_LENGTH];
-  OBJ *wield=NULL;
-  act("$n makes a full-circle-kick and kicks $N's hand", 1, mob, 0, vict, TO_NOTVICT);
-  act("$n makes a full-circle-kick and kicks your hand!", 1, mob, 0, vict, TO_VICT);
-  if(V_MOB(mob) == ABYSS_LORD)
-  	damage(mob, vict, number(60,100), TYPE_UNDEFINED, DAM_SKILL);
-  else
-  	damage(mob, vict, number(30,50), TYPE_UNDEFINED,DAM_SKILL);
-  if (vict->equipment[WIELD])
-    wield = vict->equipment[WIELD];
-  else
-    return;
-  if(V_OBJ(wield)==11523) return;
-  act("$N drop $S weapon.", 1,mob , 0, vict, TO_NOTVICT);
-  act("You drop your weapon.", 1,mob , 0, vict, TO_VICT);
-  sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),GET_NAME(vict),OBJ_SHORT(wield),world[CHAR_REAL_ROOM(vict)].number);
-  log_s(buf);
-  unequip_char(vict, WIELD);
-  obj_to_room(wield, CHAR_REAL_ROOM(vict));
-  wield->log=1;
-  save_char(vict,NOWHERE);
+void abyss_disarm(CHAR *mob, CHAR *vict) {
+  act("$n makes a full-circle-kick and kicks $N's hand", TRUE, mob, 0, vict, TO_NOTVICT);
+  act("$n makes a full-circle-kick and kicks your hand!", TRUE, mob, 0, vict, TO_VICT);
+
+  if (V_MOB(mob) == ABYSS_LORD) {
+    damage(mob, vict, number(60, 100), TYPE_UNDEFINED, DAM_SKILL);
+  }
+  else {
+    damage(mob, vict, number(30, 50), TYPE_UNDEFINED, DAM_SKILL);
+  }
+
+  if (mob_disarm(mob, vict, FALSE)) {
+    act("$N drops $S weapon.", TRUE, mob , 0, vict, TO_NOTVICT);
+    act("You drop your weapon.", TRUE, mob , 0, vict, TO_VICT);
+  }
 }
 
 
@@ -574,9 +525,7 @@ int crimson_death(CHAR *mob,CHAR *ch,int cmd,char *arg)
 
 int kraken(CHAR *mob,CHAR *ch, int cmd, char *arg)
 {
-	OBJ *wield=0;
 	CHAR *vict,*temp;
-	char buf[MAX_INPUT_LENGTH];
 
 	if(cmd != MSG_MOBACT) return FALSE;
 	if(!mob->specials.fighting) return FALSE;
@@ -620,17 +569,7 @@ int kraken(CHAR *mob,CHAR *ch, int cmd, char *arg)
 				act("$n jumps high into the sky and falls on $N", 1, mob, 0, vict, TO_NOTVICT);
 				act("$n jumps high into the sky and falls on YOU!", 1, mob, 0, vict, TO_VICT);
 				damage(mob, vict, number(120,150), TYPE_UNDEFINED,DAM_NO_BLOCK);
-				if(vict->equipment[WIELD])
-					wield = vict->equipment[WIELD];
-				else
-					return FALSE;
-					
-				act("$N drops $S weapon.", 1, mob, 0, vict, TO_NOTVICT);
-				act("You drop your weapon.", 1, mob, 0, vict, TO_VICT);
-				sprintf(buf,"WIZINFO: %s disarms %s's %s (Room %d)",GET_NAME(mob),GET_NAME(vict),OBJ_SHORT(wield),world[CHAR_REAL_ROOM(vict)].number);
-            log_s(buf);
-				unequip_char(vict, WIELD);
-				obj_to_room(wield, CHAR_REAL_ROOM(vict));
+        abyss_disarm(mob, vict);
 				GET_POS(vict)=POSITION_SITTING;
 				WAIT_STATE(vict,PULSE_VIOLENCE*3);
 				break;

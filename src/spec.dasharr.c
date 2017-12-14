@@ -8,29 +8,6 @@
 ///   Last Update: May 1, 1998 - Ranger (Spirit Specs)
 */
 
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:28 $
-$Header: /home/ronin/cvs/ronin/spec.dasharr.c,v 2.1 2005/01/21 14:55:28 ronin Exp $
-$Id: spec.dasharr.c,v 2.1 2005/01/21 14:55:28 ronin Exp $
-$Name:  $
-$Log: spec.dasharr.c,v $
-Revision 2.1  2005/01/21 14:55:28  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.0.0.1  2004/02/05 16:10:24  ronin
-Reinitialization of cvs archives
-
-Revision 1.2  2002/03/31 07:42:15  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -399,7 +376,6 @@ int prison_noose(OBJ *noose, CHAR *ch, int cmd, char *arg) {
 
   CHAR *vict;
   char buf[MAX_STRING_LENGTH];
-  extern struct time_info_data time_info;
 
   if(!noose->equipped_by) return FALSE;
   vict=noose->equipped_by;
