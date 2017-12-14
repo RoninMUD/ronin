@@ -680,6 +680,7 @@ $N tells you, 'Current Quest Items available for Purchase:'\n\r\
 
 int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
   const int aq_mob_master_list[][2] = {
+    // { VNum, Level } // <name>
     { 110, 0 }, /* chief sprite */
     { 1100, 0 }, /* elven wizard */
     { 1116, 0 }, /* elven warrior */
@@ -1005,8 +1006,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27722, 6 }, /* shomed nomad hero tarion desert */
     { 14503, 6 }, /* ardaan inquisitor warrior */
     { 21323, 6 }, /* ogre sorcerer eowadriendir */
-    { 26706, 6 }, /* creature large hideous mutated rat yeti human */
-    { -1, -1 } /* Array Termination Indicator. Make sure this is the final element in the list and both elements are set to -1. */
+    { 26706, 6 } /* creature large hideous mutated rat yeti human */
   };
 
   struct aq_mob_list_t {
@@ -1014,32 +1014,35 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     int quest_level;
   };
 
-  struct aq_mob_list_t aq_mob_temp_list[NUMELEMS(aq_mob_master_list) - 1];
+  struct aq_mob_list_t aq_mob_temp_list[NUMELEMS(aq_mob_master_list)];
   int aq_mob_num = 0;
 
-  for (int i = 0; aq_mob_master_list[i][0] != -1 && aq_mob_master_list[i][1] != -1 && aq_mob_num < NUMELEMS(aq_mob_temp_list); i++) {
-    int quest_level = aq_mob_master_list[i][1];
+  for (int i = 0; i < NUMELEMS(aq_mob_master_list); i++) {
+    int aq_mob_quest_level = aq_mob_master_list[i][1];
 
-    if (lh_opt == 0 && GET_LEVEL(ch) < 25 && quest_level > 0) continue;  // newbie
-    if (lh_opt == 0 && GET_LEVEL(ch) >= 25 && quest_level < 1) continue; // non-newbie
-    if (lh_opt == 1 && quest_level > 1) continue;                        // solo
-    if (lh_opt == 2 && quest_level > 2) continue;                        // low
-    if (lh_opt == 3 && quest_level < 3) continue;                        // high
-    if (lh_opt == 4 && (quest_level < 2 || quest_level > 4)) continue;   // mid
+    if (lh_opt == 0 && GET_LEVEL(ch) < 25 && aq_mob_quest_level > 0) continue;  // newbie
+    if (lh_opt == 0 && GET_LEVEL(ch) >= 25 && aq_mob_quest_level < 1) continue; // non-newbie
+    if (lh_opt == 1 && aq_mob_quest_level > 1) continue;                        // solo
+    if (lh_opt == 2 && aq_mob_quest_level > 2) continue;                        // low
+    if (lh_opt == 3 && aq_mob_quest_level < 3) continue;                        // high
+    if (lh_opt == 4 && (aq_mob_quest_level < 2 || aq_mob_quest_level > 4)) continue;   // mid
 
-    CHAR *temp_vict = get_ch_world(aq_mob_master_list[i][0]);
+    int aq_mob_vnum = aq_mob_master_list[i][0];
+
+    CHAR *temp_vict = get_ch_world(aq_mob_vnum);
 
     if (!temp_vict) continue;
     if (temp_vict->questowner) continue;
 
     aq_mob_temp_list[aq_mob_num].mob = temp_vict;
-    aq_mob_temp_list[aq_mob_num].quest_level = quest_level;
+    aq_mob_temp_list[aq_mob_num].quest_level = aq_mob_quest_level;
 
     aq_mob_num++;
   }
 
   if (aq_mob_num > 0 && aq_mob_num <= NUMELEMS(aq_mob_temp_list)) {
     int pick = number(0, aq_mob_num - 1);
+
     CHAR *vict = aq_mob_temp_list[pick].mob;
 
     if (!vict) return FALSE;
@@ -1073,8 +1076,8 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
 }
 
 /* Object questing implemented through mob other than guildmaster in this case */
-int aq_objs[][2] = {
-  // {VNUM, value} // <short desc> <repop>
+const int aq_obj_master_list[][2] = {
+  // {VNum, Value} // <short desc> <repop>
   {101, 1}, // A pair of glasses 50
   {103, 1}, // a small hammer 50
   {104, 1}, // A small stethoscope 50
@@ -1475,7 +1478,7 @@ int aq_objs[][2] = {
 #define AQ_ORDER_QUIT_TIME      150
 #define AQ_ORDER_WAIT_TIME      30
 
-char *kendernames[] = {
+const char *kendernames[] = {
   "Karl",
   "Dieter",
   "Hans",
@@ -1488,55 +1491,69 @@ char *kendernames[] = {
 };
 
 int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
-  OBJ *aqorder;
-  bool assigned[4] = {FALSE, FALSE, FALSE, FALSE};
-  char buf[MAX_STRING_LENGTH];
-  int pick, i, count = 0, questvalue = 0;
-  struct extra_descr_data *tmp_descr;
-
-  if(requester->ver3.id <= 0)
+  if (requester->ver3.id <= 0) {
     requester->ver3.id = generate_id();
+  }
 
-  aqorder = read_object(TEMPLATE_AQORDER, VIRTUAL);
+  OBJ *aq_order = read_object(TEMPLATE_AQORDER, VIRTUAL);
 
   // cleanup first
-  DESTROY(aqorder->description);
-  DESTROY(aqorder->short_description);
-  aqorder->ownerid[0] = requester->ver3.id;   // tag the order with the requester's ID
+  DESTROY(aq_order->description);
+  DESTROY(aq_order->short_description);
+
+  aq_order->ownerid[0] = requester->ver3.id;   // tag the order with the requester's ID
+
+  char buf[MAX_STRING_LENGTH];
+
   sprintf(buf, "An infamous acquisition order, forgotten here by %s.", GET_NAME(requester));
-  aqorder->description = str_dup(buf);        // change the long desc to include requester's name
+  aq_order->description = str_dup(buf);        // change the long desc to include requester's name
+
   sprintf(buf, "%s's acquisition order", GET_NAME(requester));
-  aqorder->short_description = str_dup(buf);  // change the short desc to include requester's name
-  aqorder->log = 1;
+  aq_order->short_description = str_dup(buf);  // change the short desc to include requester's name
 
-  for (i = 0; i < 4; i++) {
-    // get an obj from our aq_objs table, assign it to the aqorder value[i]
-    while(count < 200) {
-      count++;
-      pick = number(0, NUMELEMS(aq_objs) - 1);
+  aq_order->log = 1;
 
-      if (aq_objs[pick][0] == aqorder->obj_flags.value[0]) continue;
-      if (aq_objs[pick][0] == aqorder->obj_flags.value[1]) continue;
-      if (aq_objs[pick][0] == aqorder->obj_flags.value[2]) continue;
-      if (aq_objs[pick][0] == aqorder->obj_flags.value[3]) continue;
-      if (lh_opt == 0 && aq_objs[pick][1] > 8) continue;
-      if (lh_opt == 1 && aq_objs[pick][1] != 1) continue; // newbie
-      if (lh_opt == 2 && aq_objs[pick][1] != 2) continue; // low
-      if (lh_opt == 3 && aq_objs[pick][1] != 3) continue; // mid
-      if (lh_opt == 4 && aq_objs[pick][1] != 4) continue; // high
-      if (lh_opt == 5 && ((aq_objs[pick][1] < 4) || (aq_objs[pick][1] > 8))) continue; // veteran
-      if (lh_opt == 6 && aq_objs[pick][1] < 10) continue; // uber
-      aqorder->obj_flags.value[i] = aq_objs[pick][0];
-      questvalue += aq_objs[pick][1];
-      assigned[i] = TRUE;
-      break;
-    }
+  int aq_obj_temp_list[NUMELEMS(aq_obj_master_list)][2];
+  int aq_obj_num = 0;
+
+  for (int i = 0; i < NUMELEMS(aq_obj_master_list); i++) {
+    int aq_obj_temp_vnum = aq_obj_master_list[i][0];
+    int aq_obj_temp_value = aq_obj_master_list[i][1];
+
+    if (lh_opt == 0 && aq_obj_temp_value > 8) continue;
+    if (lh_opt == 1 && aq_obj_temp_value != 1) continue; // newbie
+    if (lh_opt == 2 && aq_obj_temp_value != 2) continue; // low
+    if (lh_opt == 3 && aq_obj_temp_value != 3) continue; // mid
+    if (lh_opt == 4 && aq_obj_temp_value != 4) continue; // high
+    if (lh_opt == 5 && ((aq_obj_temp_value < 4) || (aq_obj_temp_value > 8))) continue; // veteran
+    if (lh_opt == 6 && aq_obj_temp_value < 10) continue; // uber
+
+    aq_obj_temp_list[aq_obj_num][0] = aq_obj_temp_vnum;
+    aq_obj_temp_list[aq_obj_num][1] = aq_obj_temp_value;
+
+    aq_obj_num++;
   }
-  if (assigned[0] && assigned[1] && assigned[2] && assigned[3]) {
+
+  /* We need at least 4 eligible objects and not more than the max number of objects (sanity check). */
+  if (aq_obj_num >= 4 || aq_obj_num <= NUMELEMS(aq_obj_temp_list)) {
+    /* Shuffle the array of eligible objects. We'll pick the first 4 below. */
+    shuffle_2d_int_array(aq_obj_temp_list, aq_obj_num);
+
+    int quest_value = 0;
+
+    for (int i = 0; i < 4; i++) {
+      int order_obj_vnum = aq_obj_temp_list[i][0];
+      int order_obj_value = aq_obj_temp_list[i][1];
+
+      aq_order->obj_flags.value[i] = order_obj_vnum;
+      quest_value += order_obj_value;
+    }
+
     // tag order with questvalue - visible in magic.c "identify"
-    OBJ_SPEC(aqorder) = questvalue;
+    OBJ_SPEC(aq_order) = quest_value;
 
     // change the extra desc to include required objects
+    struct extra_descr_data *tmp_descr;
     CREATE(tmp_descr, struct extra_descr_data, 1);
     tmp_descr->keyword = str_dup("order");
     sprintf(buf, "A well-worn, faded canvas bag has a large blue patch sewn\n\r\
@@ -1544,31 +1561,39 @@ to it. The patch has been sewn over half-a-hundred times and\n\r\
 had those stitches ripped out just as many. There are four\n\r\
 hastily sewn lines of text detailing the kenders' wish list.\n\r\
 \n\r   %s\n\r   %s\n\r   %s\n\r   %s\n\r",
-        aqorder->obj_flags.value[0] >= 0 ? real_object(aqorder->obj_flags.value[0]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[0])].short_description : "something" : "nothing",
-        aqorder->obj_flags.value[1] >= 0 ? real_object(aqorder->obj_flags.value[1]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[1])].short_description : "something" : "nothing",
-        aqorder->obj_flags.value[2] >= 0 ? real_object(aqorder->obj_flags.value[2]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[2])].short_description : "something" : "nothing",
-        aqorder->obj_flags.value[3] >= 0 ? real_object(aqorder->obj_flags.value[3]) >= 0 ? obj_proto_table[real_object(aqorder->obj_flags.value[3])].short_description : "something" : "nothing");
+      aq_order->obj_flags.value[0] >= 0 ? real_object(aq_order->obj_flags.value[0]) >= 0 ? obj_proto_table[real_object(aq_order->obj_flags.value[0])].short_description : "something" : "nothing",
+      aq_order->obj_flags.value[1] >= 0 ? real_object(aq_order->obj_flags.value[1]) >= 0 ? obj_proto_table[real_object(aq_order->obj_flags.value[1])].short_description : "something" : "nothing",
+      aq_order->obj_flags.value[2] >= 0 ? real_object(aq_order->obj_flags.value[2]) >= 0 ? obj_proto_table[real_object(aq_order->obj_flags.value[2])].short_description : "something" : "nothing",
+      aq_order->obj_flags.value[3] >= 0 ? real_object(aq_order->obj_flags.value[3]) >= 0 ? obj_proto_table[real_object(aq_order->obj_flags.value[3])].short_description : "something" : "nothing");
     tmp_descr->description = str_dup(buf);
-    aqorder->ex_description = tmp_descr;
+    aq_order->ex_description = tmp_descr;
     tmp_descr = NULL;
 
     sprintf(buf, "Good luck %s, try to do a better job than %s, it'll be worth %d points if you can.",
-        GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1 )], questvalue);
+      GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1 )], quest_value);
     do_say(ordergiver, buf, CMD_SAY);
-    obj_to_char(aqorder, requester);
+
+    obj_to_char(aq_order, requester);
+
     sprintf(buf, "%s gives %s to %s.", GET_SHORT(ordergiver),
-        OBJ_SHORT(aqorder), GET_NAME(requester));
-    act(buf,0,ordergiver,0,requester,TO_NOTVICT);
+      OBJ_SHORT(aq_order), GET_NAME(requester));
+    act(buf, 0, ordergiver, 0, requester, TO_NOTVICT);
+
     sprintf(buf, "%s gives %s to you.", GET_SHORT(ordergiver),
-        OBJ_SHORT(aqorder));
-    act(buf,0,ordergiver,0,requester,TO_VICT);
+      OBJ_SHORT(aq_order));
+    act(buf, 0, ordergiver, 0, requester, TO_VICT);
+
     return TRUE;
-  } else {
-    wizlog("WIZINFO: AQ Order object assignment counter exceeded 200.",LEVEL_IMP,5);
-    log_f("WIZINFO: AQ Order object assignment counter exceeded 200.");
-    obj_to_room(aqorder, real_room(CENTRAL_PROCESSING));
+  }
+  else {
+    wizlog("WIZINFO: AQ Order object assignment error.", LEVEL_IMP, 5);
+    log_f("WIZINFO: AQ Order object assignment error.");
+
+    obj_to_room(aq_order, real_room(CENTRAL_PROCESSING));
+
     return FALSE;
   }
+
   return FALSE;
 }
 
@@ -1588,8 +1613,7 @@ static void get_owner_name(OBJ *order, char *buf) {
   (void)CAP(buf);
 }
 
-
-int aq_order_obj (OBJ *order, CHAR *ch, int cmd, char *arg) {
+int aq_order_obj(OBJ *order, CHAR *ch, int cmd, char *arg) {
   char argument[MAX_INPUT_LENGTH];
   char buf[MAX_STRING_LENGTH];
   char name[MAX_DNAME_LENGTH];
@@ -1963,10 +1987,10 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
                 //   the order's AQP value, for magic.c identify output;
                 //   but we'll count here anyway with aq_objs[][] current values
                 //   also gives us a chance to award a double point bonus
-                for (k = 0; k < NUMELEMS(aq_objs); k++) {
-                  if (aq_objs[k][0] == V_OBJ(obj)) {
+                for (k = 0; k < NUMELEMS(aq_obj_master_list); k++) {
+                  if (aq_obj_master_list[k][0] == V_OBJ(obj)) {
                     value_exists = TRUE;
-                    tmp_value = aq_objs[k][1];
+                    tmp_value = aq_obj_master_list[k][1];
                     if (chance( MIN(5, tmp_value) )) {
                       // higher value has higher chance for doubling - reward trying harder
                       tmp_value *= 2;
