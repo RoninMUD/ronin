@@ -22,13 +22,13 @@ D3
 ~
 0 -1 11306
 E
+mist~
+It's the thickest mist you've ever seen !
+~
+E
 sign~
 Past the mist is the village of Barovia. Feel free to enter, they welcome
 all wanderers, and plead them to stay.
-~
-E
-mist~
-It's the thickest mist you've ever seen !
 ~
 S
 #11301
@@ -779,14 +779,9 @@ D3
 0 -1 11401
 E
 sign~
-Along this road you may find many dangerous monster created by Strahd. If
-you are not confident you can defeat them, turn back before it's too late.
-~
-E
-sign~
 
-Along this road you may find many dangerous monster created by
-Count Strahd. If you are not confident you can defeat them,
+Along this road you may find many dangerous monsters created
+by Count Strahd. If you are not confident you can defeat them,
 please come back with someone who can.
 ~
 S
@@ -1150,16 +1145,16 @@ D3
 ~
 0 -1 11363
 E
-bed~
-The bed looks quite comfortable
+table~
+The table is just a simple, ordinary table, without any oddities.
 ~
 E
 chair~
 It's a big and strong chair, no other could hold his weight.
 ~
 E
-table~
-The table is just a simple, ordinary table, without any oddities.
+bed~
+The bed looks quite comfortable
 ~
 S
 #11366
