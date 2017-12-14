@@ -116,12 +116,14 @@ seperate necks and heads lead out. Each head appears to be a formidable
 opponent and with such a massive body supporting them, this monster is a deadly
 combination.
 ~
-16777322 40 0 Y
+106 40 0 Y
 45 -12 -5 1d1000+4300 1d80+0
 0 1200000
 8 8 0
 80 1 1d1+1 0
 0 0 0 0
+R
+4
 K
 60000 0 0 0 0 0 0
 #23008

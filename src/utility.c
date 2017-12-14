@@ -1849,3 +1849,32 @@ int get_random_set_bit_from_mask_t(const int32_t mask) {
 
   return 0;
 }
+
+
+/* Shuffle an array of integers. */
+void shuffle_int_array(int *array, size_t num_elems) {
+  if (num_elems > 1)   {
+    for (size_t i = 0; i < num_elems - 1; i++) {
+      size_t j = i + rand() / (RAND_MAX / (num_elems - i) + 1);
+      int t = array[j];
+      array[j] = array[i];
+      array[i] = t;
+    }
+  }
+}
+
+
+/* Shuffle a 2D array of integers. */
+void shuffle_2d_int_array(int (*array)[2], size_t num_elems) {
+  if (num_elems > 1)   {
+    for (size_t i = 0; i < num_elems - 1; i++) {
+      size_t j = i + rand() / (RAND_MAX / (num_elems - i) + 1);
+      int t0 = array[j][0];
+      int t1 = array[j][1];
+      array[j][0] = array[i][0];
+      array[j][1] = array[i][1];
+      array[i][0] = t0;
+      array[i][1] = t1;
+    }
+  }
+}

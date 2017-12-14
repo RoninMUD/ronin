@@ -143,4 +143,7 @@ const char const * get_weapon_type_desc(OBJ *obj);
 int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_bit_from_mask(const int mask);
 
+void shuffle_int_array(int *array, size_t num_elems);
+void shuffle_2d_int_array(int (*array)[2], size_t num_elems);
+
 #endif

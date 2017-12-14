@@ -824,19 +824,17 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
     cummulative_levels = MAX(GET_LEVEL(ch), 1);
   }
 
-  /* Add bonus to xp for groups containing 4 or more players */
-
-  if (4 <= total_pcs)
-  {
+  /* Add bonus to xp for groups */
+  if (total_pcs >= 6) {
     /* Group XP Bonus:
     **
-    **   4 or more = 10%
-    **   7 or more = 20%
-    **   10 or more = 30%
-    **   every 3 adds an extra 10% up to a max of 100%
+    **   6 or more = 10%
+    **   11 or more = 20%
+    **   16 or more = 30%
+    **   Every 5 players adds an extra 10%, up to a max of 100%
     */
 
-    total_exp = ((total_exp * (10 + MIN(10,(((total_pcs-4)/3)+1)))) / 10);
+    total_exp = ((total_exp * (10 + MIN(10, (((total_pcs - 6) / 5) + 1)))) / 10);
   }
 
   /* Distribute the exp, based on their level */
