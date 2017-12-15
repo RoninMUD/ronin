@@ -309,6 +309,9 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_SHADOW_WRAITH:
       if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
       break;
+    case SPELL_REJUVENATION:
+      return TRUE;
+      break;
   }
 
   return FALSE;

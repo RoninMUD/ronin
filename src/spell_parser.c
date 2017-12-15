@@ -1891,7 +1891,7 @@ void assign_spell_pointers(void)
   SPELLO( 83, 30, POSITION_STANDING, 51, 18, 51, 51, 51, 13, 51, 51,   30, TAR_IGNORE,                                                                   cast_total_recall);
   SPELLO( 84, 30, POSITION_STANDING, 17, 20, 51, 51, 51, 16, 51, 51,   30, TAR_OBJ_INV,                                                                  cast_recharge);
   SPELLO( 85, 30, POSITION_FIGHTING, 51, 25, 51, 51, 51, 22, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_miracle);
-  SPELLO( 86, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  7, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_fly);
+  SPELLO( 86, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  7,  9, 51,   25, TAR_CHAR_ROOM,                                                                cast_fly);
   SPELLO( 87, 30, POSITION_FIGHTING, 18, 18, 51, 51, 51, 51, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_mana_transfer);
   SPELLO( 88, 30, POSITION_STANDING, 51, 19, 51, 51, 51, 17, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_holy_bless);
   SPELLO( 89, 30, POSITION_STANDING, 51, 20, 51, 51, 51, 18, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_evil_bless);
