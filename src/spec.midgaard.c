@@ -513,6 +513,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
   int skill = -1;
   int index = -1;
   OBJ *qcard = NULL;
+  int i = 0;
 
   arg = skip_spaces(arg);
 
@@ -603,6 +604,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     }
 
     return TRUE;
+  }
+
+  /* convert argument to lowercase */
+  for(i = 0; arg[i]; i++){
+    arg[i] = tolower(arg[i]);
   }
 
   spell = old_search_block(arg, 0, strlen(arg), spells, FALSE);
