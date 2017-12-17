@@ -3313,6 +3313,8 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         {
           /* Impair */
           if (CHAR_REAL_ROOM(victim) != NOWHERE &&
+              CHAR_REAL_ROOM(victim) == CHAR_REAL_ROOM(ch) &&
+              !IS_IMMUNE(victim, IMMUNE_PARALYSIS) &&
               !IS_NPC(ch) &&
               check_sc_access(ch, SKILL_IMPAIR) &&
               chance(40 + GET_DEX_APP(ch)))
@@ -3334,7 +3336,8 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           dam *= MAX(1, multi);
           damage(ch, victim, dam, SKILL_BACKSTAB, DAM_PHYSICAL);
 
-          if (special_message) {
+          if (CHAR_REAL_ROOM(victim) != NOWHERE &&
+              special_message) {
             act("You nearly sever $N's spine with your backstab, temporarily paralyzing $M.", FALSE, ch, 0, victim, TO_CHAR);
             act("$n nearly severs your spine with $s backstab, temporarily paralyzing you.", FALSE, ch, 0, victim, TO_VICT);
             act("$n nearly severs $N's spine with $s backstab, temporarily paralyzing $M.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -3388,7 +3391,8 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
           dam *= circle_mult[GET_LEVEL(ch)];
           damage(ch, victim, dam, SKILL_CIRCLE, DAM_PHYSICAL);
 
-          if (special_message) {
+          if (CHAR_REAL_ROOM(victim) != NOWHERE &&
+              special_message) {
             act("You strike a nerve in $N's back with your attack, severely weakening $M.", FALSE, ch, 0, victim, TO_CHAR);
             act("$n strikes a nerve in your back with $s attack, severely weakening you.", FALSE, ch, 0, victim, TO_VICT);
             act("$n strikes a nerve in $N's back with $s attack, severely weakening $M.", FALSE, ch, 0, victim, TO_NOTVICT);

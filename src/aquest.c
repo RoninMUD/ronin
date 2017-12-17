@@ -986,8 +986,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27712, 5 }, /* bebilith stalker purple spider insect */
     { 21204, 5 }, /* adrel sage magic */
     { 21205, 5 }, /* ulric advisor */
-    { 23001, 5 }, /* remorhaz ice burrower */
-    { 26707, 5 }, /* observer tower mage old man */
+    { 21323, 5 }, /* ogre sorcerer eowadriendir */
     { 5125, 6 }, /* drow matron mother third */
     { 5126, 6 }, /* drow matron mother fourth */
     { 5127, 6 }, /* drow matron mother second */
@@ -1005,8 +1004,9 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 26583, 6 }, /* guru */
     { 27722, 6 }, /* shomed nomad hero tarion desert */
     { 14503, 6 }, /* ardaan inquisitor warrior */
-    { 21323, 6 }, /* ogre sorcerer eowadriendir */
-    { 26706, 6 } /* creature large hideous mutated rat yeti human */
+    { 23001, 6 }, /* remorhaz ice burrower */
+    { 26706, 6 }, /* creature large hideous mutated rat yeti human */
+    { 26707, 6 } /* observer tower mage old man */
   };
 
   struct aq_mob_list_t {

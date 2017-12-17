@@ -613,99 +613,77 @@ mar_larvae (CHAR *larvae, CHAR *ch, int cmd, char *arg)
   return FALSE;
 }
 
-int
-mar_madman (CHAR *man, CHAR *ch, int cmd, char *arg)
-{
-  static int state = 0;
-  int key_nr;
-  OBJ *key;
+int mar_madman(CHAR *man, CHAR *ch, int cmd, char *arg) {
   char buf[MAX_INPUT_LENGTH];
-
-  key_nr = real_object (MAR_MADMAN_KEY);
+  static int state = 0;
 
   mar_block_check();
 
-  if (cmd)
-    return FALSE;
+  if (cmd) return FALSE;
 
-  if(GET_OPPONENT (man) || GET_POS(man) < POSITION_RESTING)
-    {
+  if (cmd == MSG_MOBACT) {
+    if (GET_OPPONENT(man) || GET_POS(man) <= POSITION_SLEEPING) {
       state = 0;
+
       return FALSE;
     }
 
-  switch (state++)
-    {
+    if (count_mortals_room(man, TRUE) < 1) return FALSE;
 
-    case 0:
-      sprintf (buf,"say From the blackness of the night...");
-      command_interpreter (man,buf);
-      break;
-
-    case 1:
-      sprintf (buf, "say those creatures of the darkness, they came...");
-      command_interpreter (man,buf);
-      break;
-
-    case 2:
-      sprintf (buf, "say Gone forever is the peace...");
-      command_interpreter (man,buf);
-      break;
-
-    case 3:
-      sprintf (buf, "say Weakened is my mortal frame and mind...");
-      command_interpreter (man,buf);
-      break;
-
-    case 4:
-      sprintf (buf, "say Never again shall I claim a victory!");
-      command_interpreter (man,buf);
-      break;
-
-    case 5:
-      sprintf (buf, "say Destroy the evil, and save the world of man...");
-      command_interpreter (man,buf);
-      break;
-
-    case 6:
-      sprintf (buf, "say Beware the darkness!");
-      command_interpreter (man,buf);
-      break;
-
-    case 7:
-      sprintf (buf, "say Venture down into the earth with great care, and...");
-      command_interpreter (man,buf);
-      break;
-
-    case 8:
-      sprintf (buf, "say Be careful, down there even the darkness has eyes!");
-      command_interpreter (man,buf);
-      break;
-
-    case 9:
-      sprintf (buf, "say The key...the key!");
-      command_interpreter (man,buf);
-      break;
-
-    case 10:
-      sprintf (buf, "say Use this on the lock, but then you are on your own!");
-      command_interpreter (man,buf);
-      break;
-
-    case 11:
-      if (obj_proto_table[key_nr].number < MAR_MADMAN_KEY_LIMIT)
-	{
-	  key = read_object (key_nr, REAL);
-	  obj_to_room (key, CHAR_REAL_ROOM(man));
-	  act ("$n drops $p.",FALSE,man,key,0,TO_ROOM);
-	}
-      break;
-
-    case 12:
-      sprintf (buf, "sleep");
-      command_interpreter (man,buf);
-      break;
+    switch (state++) {
+      case 0:
+        sprintf(buf, "say From the blackness of the night...");
+        command_interpreter(man, buf);
+        break;
+      case 1:
+        sprintf(buf, "say Those creatures of the darkness, they came...");
+        command_interpreter(man, buf);
+        break;
+      case 2:
+        sprintf(buf, "say Gone forever is the peace...");
+        command_interpreter(man, buf);
+        break;
+      case 3:
+        sprintf(buf, "say Weakened is my mortal frame and mind...");
+        command_interpreter(man, buf);
+        break;
+      case 4:
+        sprintf(buf, "say Never again shall I claim a victory!");
+        command_interpreter(man, buf);
+        break;
+      case 5:
+        sprintf(buf, "say Destroy the evil, and save the world of man...");
+        command_interpreter(man, buf);
+        break;
+      case 6:
+        sprintf(buf, "say Beware the darkness!");
+        command_interpreter(man, buf);
+        break;
+      case 7:
+        sprintf(buf, "say Venture down into the earth with great care, and...");
+        command_interpreter(man, buf);
+        break;
+      case 8:
+        sprintf(buf, "say Be careful, down there... even the darkness has eyes!");
+        command_interpreter(man, buf);
+        break;
+      case 9:
+        sprintf(buf, "say The key... the key!");
+        command_interpreter(man, buf);
+        break;
+      case 10:
+        sprintf(buf, "say Use the key on the lock, but then you are on your own!");
+        command_interpreter(man, buf);
+        break;
+      case 12:
+        sprintf(buf, "sleep");
+        command_interpreter(man, buf);
+        break;
     }
+
+    return FALSE;
+  }
+
   return FALSE;
 }
 
@@ -900,7 +878,7 @@ mar_slime (int room, CHAR *ch, int cmd, char *arg)
 {
   if(!ch)
     return(FALSE);
-  if (CMD_NORTH <= cmd && cmd <= CMD_DOWN && !number (0,3))
+  if (!IS_AFFECTED(ch, AFF_FLY) && CMD_NORTH <= cmd && cmd <= CMD_DOWN && !number (0,3))
     {
       act ("$n falls down on the slippery floor.",TRUE,ch,0,0,TO_ROOM);
       send_to_char ("You fall down because of the slippery ooze on the floor.",
